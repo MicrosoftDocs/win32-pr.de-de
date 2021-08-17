@@ -1,21 +1,21 @@
 ---
-description: Sfvm \_ GetDetailsOf kann geändert werden oder ist nicht verfügbar.
+description: SFVM \_ GETDETAILSOF kann geändert werden oder nicht verfügbar sein.
 ms.assetid: 46a81a7b-527c-4d41-8d25-ce65fd87416e
-title: SFVM_GETDETAILSOF Meldung (shlobj. h)
+title: SFVM_GETDETAILSOF Nachricht (Shlobj.h)
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 6170c0fc8dc29435b2c6f2bb033f30706ccb7b33
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: c6fd850a3f500a1d259ebdcae9e5c549ef76a8eab0d5e1d14c1385fbba8d27ca
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "104980217"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118048449"
 ---
-# <a name="sfvm_getdetailsof-message"></a>Sfvm \_ GetDetailsOf-Meldung
+# <a name="sfvm_getdetailsof-message"></a>SFVM \_ GETDETAILSOF-Nachricht
 
-\[**Sfvm \_ "GetDetailsOf** " ist für die Verwendung in den Betriebssystemen verfügbar, die im Abschnitt "Anforderungen" angegeben sind. Es kann in nachfolgenden Versionen geändert oder entfernt werden.\]
+\[**SFVM \_ GETDETAILSOF** ist für die Verwendung in den Betriebssystemen verfügbar, die im Abschnitt Anforderungen angegeben sind. Es kann in nachfolgenden Versionen geändert oder entfernt werden.\]
 
-Ermöglicht dem Rückruf Objekt, die Details für ein Element in einem Shellordner bereitzustellen. Verwenden Sie nur, wenn ein Rückruf [**von IShellFolder2:: GetDetailsOf**](/windows/desktop/api/shobjidl_core/nf-shobjidl_core-ishellfolder2-getdetailsof) fehlschlägt und keine [**ishelldetails:: GetDetailsOf**](/windows/win32/api/shlobj_core/nf-shlobj_core-ishelldetails-getdetailsof) -Methode zum Aufrufen verfügbar ist. Wird von [**ishellfolderviewcb:: messagesfvcb**](/windows/win32/api/shlobj_core/nf-shlobj_core-ishellfolderviewcb-messagesfvcb)verwendet.
+Ermöglicht dem Rückrufobjekt das Angeben der Details für ein Element in einem Shell-Ordner. Verwenden Sie nur, wenn ein Aufruf von [**IShellFolder2::GetDetailsOf**](/windows/desktop/api/shobjidl_core/nf-shobjidl_core-ishellfolder2-getdetailsof) fehlschlägt und keine [**IShellDetails::GetDetailsOf-Methode**](/windows/win32/api/shlobj_core/nf-shlobj_core-ishelldetails-getdetailsof) zum Aufrufen verfügbar ist. Wird von [**IShellFolderViewCB::MessageSFVCB**](/windows/win32/api/shlobj_core/nf-shlobj_core-ishellfolderviewcb-messagesfvcb)verwendet.
 
 
 ```C++
@@ -31,31 +31,31 @@ SFVM_GETDETAILSOF
 
 <dl> <dt>
 
-*icolumn* \[ in\]
+*iColumn* \[ In\]
 </dt> <dd>
 
-Die null basierte ID der Spalte.
+Die nullbasierte ID der Spalte.
 
 </dd> <dt>
 
-*PDI* \[ vorgenommen\]
+*pDi* \[ out\]
 </dt> <dd>
 
-Ein Zeiger auf eine [**detailsinfo**](/windows/desktop/api/shlobj_core/ns-shlobj_core-detailsinfo) -Struktur, die mit den angeforderten Informationen gefüllt ist.
+Ein Zeiger auf eine [**DETAILSINFO-Struktur,**](/windows/desktop/api/shlobj_core/ns-shlobj_core-detailsinfo) die mit den angeforderten Informationen gefüllt ist.
 
 </dd> </dl>
 
-## <a name="requirements"></a>Requirements (Anforderungen)
+## <a name="requirements"></a>Anforderungen
 
 
 
 | Anforderung | Wert |
 |-------------------------------------|-------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows XP \[ -Desktop-Apps\]<br/>                                         |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/>                                |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur XP-Desktop-Apps\]<br/>                                         |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                                |
 | Ende des Supports (Client)<br/>    | Windows XP mit SP2<br/>                                                      |
-| Ende des Supports (Server)<br/>    | Windows Server 2003<br/>                                                      |
-| Header<br/>                   | <dl> <dt>Shlobj. h</dt> </dl> |
+| Ende des Supports (Server)<br/>    | Windows Server 2003<br/>                                                      |
+| Header<br/>                   | <dl> <dt>Shlobj.h</dt> </dl> |
 
 
 

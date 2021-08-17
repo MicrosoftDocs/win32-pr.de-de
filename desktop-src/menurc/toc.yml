@@ -268,7 +268,7 @@
     - name: Tastaturkürzel
       href: keyboard-accelerators.md
       items:
-        - name: Informationen zu Tastaturbeschleunigungen
+        - name: Informationen zu Tastenkombinationen
           href: about-keyboard-accelerators.md
         - name: Verwenden von Tastenkombinationen
           href: using-keyboard-accelerators.md
@@ -436,7 +436,7 @@
             - name: Menüstrukturen
               href: menu-structures.md
               items:
-                - name: MMULTIXTMENU
+                - name: MDINEXTMENU
                   href: /windows/win32/api/Winuser/ns-winuser-mdinextmenu
                 - name: MENUBARINFO
                   href: /windows/win32/api/Winuser/ns-winuser-menubarinfo
@@ -463,7 +463,7 @@
           href: about-strings.md
         - name: Informationen zu Strsafe.h
           href: strsafe-ovw.md
-        - name: Zeichenfolgenreferenz
+        - name: Zeichenfolgenverweis
           href: string-reference.md
           items:
             - name: Zeichenfolgenfunktionen
@@ -692,7 +692,7 @@
                   href: auto3state-control.md
                 - name: AUTOCHECKBOX-Steuerelement
                   href: autocheckbox-control.md
-                - name: AUTOGRAMMBUTTON-Steuerelement
+                - name: AUTORADIOBUTTON-Steuerelement
                   href: autoradiobutton-control.md
                 - name: BITMAP-Ressource
                   href: bitmap-resource.md
@@ -730,9 +730,9 @@
                   href: groupbox-control.md
                 - name: HTML-Ressource
                   href: html-resource.md
-                - name: ICON-Ressource
+                - name: SYMBOLressource
                   href: icon-resource.md
-                - name: ICON-Steuerelement
+                - name: SYMBOL-Steuerelement
                   href: icon-control.md
                 - name: LANGUAGE-Anweisung
                   href: language-statement.md
@@ -770,7 +770,7 @@
                   href: stringtable-resource.md
                 - name: STYLE-Anweisung
                   href: style-statement.md
-                - name: User-Defined Ressource
+                - name: User-Defined-Ressource
                   href: user-defined-resource.md
                 - name: VERSION-Anweisung
                   href: version-statement.md
@@ -781,11 +781,11 @@
                       href: stringfileinfo-block.md
                     - name: VarFileInfo-Block
                       href: varfileinfo-block.md
-                - name: Allgemeine Steuerelementparameter
+                - name: Allgemeine Steuerungsparameter
                   href: common-control-parameters.md
                 - name: Allgemeine Ressourcenattribute
                   href: common-resource-attributes.md
-            - name: Beispieldatei Resource-Definition
+            - name: Beispieldatei für Resource-Definition
               href: sample-resource-definition-file.md
         - name: Verwenden des Ressourcencompilers (RC-Befehlszeile)
           href: using-rc-the-rc-command-line-.md

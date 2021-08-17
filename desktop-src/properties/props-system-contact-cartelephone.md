@@ -1,5 +1,5 @@
 ---
-description: Die Telefonnummer des Kontakts für das Auto.
+description: Telefonnummer des Autos des Kontakts.
 ms.assetid: ef7d6ac7-ef7e-463c-8408-60948802e9c5
 title: System.Contact.CarTelephone
 ms.topic: article
@@ -13,7 +13,7 @@ ms.locfileid: "118468395"
 ---
 # <a name="systemcontactcartelephone"></a>System.Contact.CarTelephone
 
-Die Telefonnummer des Kontakts für das Auto.
+Telefonnummer des Autos des Kontakts.
 
 ## <a name="windows-10-version-1703-windows-10-version-1607-windows-10-version-1511-windows-10-version-1507-windows-81-windows-8-windows-7-windows-vista"></a>Windows 10, Version 1703, Windows 10, Version 1607, Windows 10, Version 1511, Windows 10, Version 1507, Windows 8.1, Windows 8, Windows 7, Windows Vista
 

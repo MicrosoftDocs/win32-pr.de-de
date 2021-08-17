@@ -3,7 +3,7 @@ title: Windows Toucheingabe (Windows Touchprogrammierung)
 description: Dieser Abschnitt enthält Programmierverweise für Windows Toucheingabe.
 ms.assetid: 43f7e400-486d-4041-b78f-44655f6a6e9f
 keywords:
-- Windows Toucheingabe,Eingabe
+- Windows Toucheingabe, Eingabe
 ms.topic: article
 ms.date: 05/31/2018
 ms.openlocfilehash: 3f8ce384d67f9418a73c2e4a06c5749547e7a302369ddbb44f58926917466561

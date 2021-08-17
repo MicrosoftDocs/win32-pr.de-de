@@ -1,6 +1,6 @@
 ---
-title: Registrierungs auslöserbeispiel (XML)
-description: Der XML-Code in diesem Beispiel definiert einen Task, der den Editor startet, wenn der Task registriert wird.
+title: Beispiel für Registrierungstrigger (XML)
+description: Der XML-Code in diesem Beispiel definiert eine Aufgabe, die Editor, wenn der Task registriert wird.
 ms.assetid: 976b9767-635f-42a6-84f5-7e0203478594
 ms.topic: article
 ms.date: 05/31/2018
@@ -9,32 +9,32 @@ topic_type:
 api_name: ''
 api_type: ''
 api_location: ''
-ms.openlocfilehash: 09b9193f3b63f21464811609e8f5f19017539ecd
-ms.sourcegitcommit: 40dd8501397fc79a643deb528c6c57ac2e9726ce
+ms.openlocfilehash: b111f5c8c0801bb404e12cee20faf19208d7372d1a3980f7368c6efd2bcbfd35
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "106338238"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117759581"
 ---
-# <a name="registration-trigger-example-xml"></a>Registrierungs auslöserbeispiel (XML)
+# <a name="registration-trigger-example-xml"></a>Beispiel für Registrierungstrigger (XML)
 
-Der XML-Code in diesem Beispiel definiert einen Task, der den Editor startet, wenn der Task registriert wird.
+Der XML-Code in diesem Beispiel definiert eine Aufgabe, die Editor, wenn der Task registriert wird.
 
-Zum Registrieren einer Aufgabe, die in XML definiert ist, können Sie entweder die [**ITaskFolder:: RegisterTask**](/windows/desktop/api/taskschd/nf-taskschd-itaskfolder-registertask) -Funktion ([**taskfolder. RegisterTask**](taskfolder-registertask.md) für die Skripterstellung) oder das Befehlszeilen Tool Schtasks.exe verwenden. Wenn Sie das Schtasks.exe Tool (das sich im Verzeichnis "C: \\ Windows System32" befindet \\ ) verwenden, können Sie den folgenden Befehl verwenden, um den Task zu registrieren: **Schtasks/CREATE/XML** *<path to the XML file containing the task definition>* **/TN** *<task name>* .
-
-> [!Note]  
-> Wenn eine Aufgabe mit einem Registrierungs-ausgelöst wird, wird die Aufgabe ausgeführt, nachdem das Update ausgeführt wurde.
-
- 
-
-## <a name="to-define-a-task-to-start-notepad-on-registration"></a>So definieren Sie einen Task zum Starten von Notepad bei der Registrierung
-
-Im folgenden XML-Beispiel wird gezeigt, wie Sie eine Aufgabe mit einer einzelnen Ausführungs Aktion (Starten von Editor) definieren, einem einzelnen Registrierungsfehler, der die Aufgabe beim Registrieren startet, und mehreren anderen Task Einstellungen, die beeinflussen, wie die Aufgabe vom Taskplaner behandelt wird.
+Zum Registrieren einer Aufgabe, die in XML definiert ist, können Sie entweder die [**ITaskFolder::RegisterTask-Funktion**](/windows/desktop/api/taskschd/nf-taskschd-itaskfolder-registertask) ([**TaskFolder.RegisterTask**](taskfolder-registertask.md) für Skripterstellung) oder das Schtasks.exe-Befehlszeilentool verwenden. Wenn Sie das Schtasks.exe-Tool (im Verzeichnis C: Windows System32) verwenden, können Sie den folgenden Befehl verwenden, um die Aufgabe zu \\ \\ registrieren: **schtasks /create /XML** *<path to the XML file containing the task definition>* **/tn** *<task name>* .
 
 > [!Note]  
-> Wenn eine Aufgabe mit einem Registrierungs-ausgelöst wird, wird die Aufgabe ausgeführt, nachdem das Update ausgeführt wurde.
+> Wenn eine Aufgabe mit einem Registrierungstrigger aktualisiert wird, wird die Aufgabe nach dem Update ausgeführt.
 
- 
+ 
+
+## <a name="to-define-a-task-to-start-notepad-on-registration"></a>So definieren Sie eine Aufgabe, die bei Editor gestartet werden soll
+
+Das folgende XML-Beispiel zeigt, wie sie eine Aufgabe mit einer einzelnen Ausführungsaktion (ab Editor), einem einzelnen Registrierungstrigger, der die Aufgabe startet, wenn sie registriert wird, und mehreren anderen Aufgabeneinstellungen definiert, die sich darauf auswirken, wie der Task vom -Taskplaner.
+
+> [!Note]  
+> Wenn eine Aufgabe mit einem Registrierungstrigger aktualisiert wird, wird die Aufgabe nach dem Update ausgeführt.
+
+ 
 
 
 ```XML
@@ -75,27 +75,27 @@ the task is registered.
 
 
 
-## <a name="taskscheduler-schema-elements"></a>TaskScheduler-Schema Elemente
+## <a name="taskscheduler-schema-elements"></a>TaskScheduler-Schemaelemente
 
-Im folgenden finden Sie einige wichtige Elemente, die Sie beachten sollten, wenn Sie dieses Beispiel verwenden.
+Im Folgenden finden Sie einige wichtige Elemente, die Sie bei der Verwendung dieses Beispiels beachten sollten.
 
--   [**RegistrationInfo**](taskschedulerschema-registrationinfo-tasktype-element.md): enthält Registrierungsinformationen zum Task.
--   [**Trigger**](taskschedulerschema-triggers-tasktype-element.md): definiert den Trigger, der den Task startet.
--   [**Registration-Auslösers**](taskschedulerschema-registrationtrigger-triggergroup-element.md): definiert den Registrierungs--Timeout. In diesem Fall werden nur zwei untergeordnete Elemente verwendet: die Start-und endgrenzen, die angeben, wann der Auslöse Zeitpunkt aktiviert und deaktiviert wird.
--   [**Prinzipal**](taskschedulerschema-principal-principaltype-element.md): definiert den Sicherheitskontext, unter dem eine Aufgabe ausgeführt wird.
--   [**Einstellungen**](taskschedulerschema-settings-tasktype-element.md): definiert die Aufgaben Einstellungen, die der Taskplaner verwendet, um die Aufgabe auszuführen.
--   [**Aktionen**](taskschedulerschema-actions-tasktype-element.md): definiert die Aktionen, die von der Aufgabe durchführt werden. In diesem Fall wird der Editor ausgeführt.
+-   [**RegistrationInfo:**](taskschedulerschema-registrationinfo-tasktype-element.md)Enthält Registrierungsinformationen zum Task.
+-   [**Trigger:**](taskschedulerschema-triggers-tasktype-element.md)Definiert den Trigger, der die Aufgabe startet.
+-   [**RegistrationTrigger:**](taskschedulerschema-registrationtrigger-triggergroup-element.md)Definiert den Registrierungstrigger. In diesem Fall werden nur zwei untergeordnete Elemente verwendet: die Start- und Endgrenzen, die angeben, wann der Trigger aktiviert und deaktiviert wird.
+-   [**Prinzipal:**](taskschedulerschema-principal-principaltype-element.md)Definiert den Sicherheitskontext, unter dem ein Task ausgeführt wird.
+-   [**Einstellungen**](taskschedulerschema-settings-tasktype-element.md): Definiert die Aufgabeneinstellungen, die der Taskplaner zum Ausführen der Aufgabe verwendet.
+-   [**Aktionen:**](taskschedulerschema-actions-tasktype-element.md)Definiert die Aktionen, die der Task ausführt. In diesem Fall wird Editor.
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[Verwenden des Taskplaner](using-the-task-scheduler.md)
+[Verwenden der Taskplaner](using-the-task-scheduler.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

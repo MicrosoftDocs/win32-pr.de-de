@@ -1,27 +1,27 @@
 ---
-title: Informations Benachrichtigungen
-description: Bei den Verbindungs Zuständen, die als Running States bezeichnet werden, ist keine Aktion für den Benachrichtigungs Handler erforderlich, es sei denn, ein Fehler tritt auf
+title: Informationsbenachrichtigungen
+description: Für die Verbindungszustände, die als Ausführungszustände bezeichnet werden, ist keine Aktion des Benachrichtigungshandlers erforderlich, es sei denn, es tritt ein Fehler auf.
 ms.assetid: 3f5ea9e0-f75a-4b02-a0dc-86cb5012c242
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 8d6223c808309fcac3afc563f02c160412c80c88
-ms.sourcegitcommit: dc13cc13522097188392392d85f99de48a213984
+ms.openlocfilehash: 2f526dcd0cd52eaa15929f970debe3ba78788fdb7525e734ee2e26e348b32552
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "104472397"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117790994"
 ---
-# <a name="informational-notifications"></a>Informations Benachrichtigungen
+# <a name="informational-notifications"></a>Informationsbenachrichtigungen
 
-Bei den [Verbindungs Zuständen](connection-states.md) , die als Running States bezeichnet werden, ist keine Aktion für den Benachrichtigungs Handler erforderlich, es sei denn, ein Fehler tritt auf Die Ausführung von Zuständen erfolgt bei den Teilen des Verbindungs Vorgangs, die RAS automatisch verarbeitet, z. b. beim Herstellen einer Verbindung mit den erforderlichen Geräten, beim Authentifizieren des Benutzers und beim Warten auf einen Rückruf vom Remote Server. Bei der Benachrichtigung handelt es sich lediglich um einen Fortschrittsbericht an den Client.
+Für die [Verbindungszustände,](connection-states.md) die als Ausführungszustände bezeichnet werden, ist keine Aktion des Benachrichtigungshandlers erforderlich, es sei denn, es tritt ein Fehler auf. Ausführungszustände treten während der Teile des Verbindungsvorgangs auf, die RAS automatisch verarbeitet, z. B. beim Herstellen einer Verbindung mit den erforderlichen Geräten, beim Authentifizieren des Benutzers und beim Warten auf einen Rückruf vom Remoteserver. Die Benachrichtigung ist einfach ein Statusbericht an den Client.
 
-Der Client kann diese Informations Benachrichtigungen an den Benutzer übergeben. In einigen ausgelaufenden Zuständen möchte der Client möglicherweise zusätzliche Informationen anzeigen. Ein Benachrichtigungs Handler, der eine rascs \_ connectdevice-Benachrichtigung empfängt, kann beispielsweise die Funktion " [**rasgetconnectstatus**](/windows/desktop/api/Ras/nf-ras-rasgetconnectstatusa) " aufrufen, um den Namen und den Typ des Geräts abzurufen, mit dem eine Verbindung hergestellt wird. Ein weiteres Beispiel ist, wenn der Client eine in rascs \_ projizierte Benachrichtigung empfängt. Dies tritt auf, wenn die RAS-Projektionsphase des Verbindungs Vorgangs abgeschlossen wurde. Der Client kann die Funktion " [**rasgetprojectioninfo**](/previous-versions/windows/embedded/ms897107(v=msdn.10)) " aufrufen, um zusätzliche Informationen über die Projektion zu erhalten. Der Client kann diese Informationen verwenden, um den Benutzer darüber zu benachrichtigen, welche Netzwerkprotokolle von dieser Verbindung verwendet werden können.
+Der Client kann diese Informationsbenachrichtigungen an den Benutzer übergeben. In einigen Ausführungszuständen möchte der Client möglicherweise zusätzliche Informationen anzeigen. Beispielsweise kann ein Benachrichtigungshandler, der eine RASCS \_ ConnectDevice-Benachrichtigung empfängt, die [**RasGetConnectStatus-Funktion**](/windows/desktop/api/Ras/nf-ras-rasgetconnectstatusa) aufrufen, um den Namen und Typ des Geräts abzurufen, mit dem eine Verbindung hergestellt wird. Ein weiteres Beispiel ist, wenn der Client eine \_ rascs-projizierte Benachrichtigung empfängt. Dies tritt auf, wenn die RAS-Projektionsphase des Verbindungsvorgangs abgeschlossen wurde. Der Client kann die [**RasGetProjectionInfo-Funktion**](/previous-versions/windows/embedded/ms897107(v=msdn.10)) aufrufen, um zusätzliche Informationen zur Projektion abzurufen. Der Client kann diese Informationen verwenden, um den Benutzer darüber zu informieren, welche Netzwerkprotokolle von dieser Verbindung verwendet werden können.
 
-Sie sollten vermeiden, Code zu schreiben, der von der Reihenfolge oder dem Vorkommen bestimmter Informations Zustände abhängt, da dies zwischen den Plattformen variieren kann.
+Sie sollten vermeiden, Code zu schreiben, der von der Reihenfolge oder dem Vorkommen bestimmter Informationszustände abhängt, da dies je nach Plattform variieren kann.
 
- 
+ 
 
- 
+ 
 
 
 

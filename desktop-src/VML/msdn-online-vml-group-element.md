@@ -1,63 +1,63 @@
 ---
-title: VML-Gruppen Element
-description: VML-Gruppen Element
+title: VML-Gruppenelement
+description: VML-Gruppenelement
 ms.assetid: 536c2380-2583-4fe8-a92e-c539de209a70
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 33c128fddb5f070c9dbb6bbbd92c172cd58f5bce
-ms.sourcegitcommit: 592c9bbd22ba69802dc353bcb5eb30699f9e9403
+ms.openlocfilehash: 5fd68bf24d217310bf52998779396b4e0b72aef02073c3ad6d2a0d6566d30fc9
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "104390475"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117754597"
 ---
-# <a name="vml-group-element"></a>VML-Gruppen Element
+# <a name="vml-group-element"></a>VML-Gruppenelement
 
-In diesem Thema wird VML beschrieben, eine Funktion, die ab Windows Internet Explorer 9 veraltet ist. Webseiten und Anwendungen, die auf VML basieren, sollten zu SVG oder anderen allgemein unterstützten Standards migriert werden.
+In diesem Thema wird VML beschrieben, ein Feature, das ab Version 9 Windows Internet Explorer ist. Webseiten und Anwendungen, die auf VML basieren, sollten zu SVG oder anderen weit verbreiteten Standards migriert werden.
 
 > [!Note]  
-> Ab Dezember 2011 wurde dieses Thema archiviert. Daher wird er nicht mehr aktiv verwaltet. Weitere Informationen finden Sie unter [archivierte Inhalte](/previous-versions/windows/internet-explorer/ie-developer/). Informationen, Empfehlungen und Anleitungen zur aktuellen Version von Windows Internet Explorer finden Sie im [Internet Explorer Developer Center](https://msdn.microsoft.com/ie/).
+> Seit Dezember 2011 wurde dieses Thema archiviert. Daher wird sie nicht mehr aktiv verwaltet. Weitere Informationen finden Sie unter [Archivierter Inhalt.](/previous-versions/windows/internet-explorer/ie-developer/) Informationen, Empfehlungen und Anleitungen zur aktuellen Version von Windows Internet Explorer finden Sie im [Internet Explorer Developer Center.](https://msdn.microsoft.com/ie/)
 
- 
+ 
 
-Definiert eine Gruppe, die zum Erfassen von Formen verwendet werden kann.
+Definiert eine Gruppe, die zum Sammeln von Formen verwendet werden kann.
 
-Dieses Element unterstützt dieselben Attribute wie eine Form, mit Ausnahme der folgenden:
+Dieses Element unterstützt die gleichen Attribute wie eine Form, mit Ausnahme der folgenden:
 
--   **verbirgt**
+-   **Versteckte**
 -   **type**
--   **ADJ**
+-   **Adj**
 -   **path**
 -   **spid**
--   **Deck Kraft**
--   **Chromakey**
--   **Strichen gezeichnet**
--   **strokeColor**
--   **strokeweight**
--   **Füllen**
--   **FillColor**
--   **SPT**
+-   **Deckkraft**
+-   **key**
+-   **Streichelte**
+-   **strokecolor**
+-   **Strichgewicht**
+-   **Gefüllt**
+-   **Fillcolor**
+-   **spt**
 -   **ruleinitiator**
 -   **ruleproxy**
--   **Connector Type**
+-   **Connectortype**
 -   **bwmode**
 -   **bwpure**
 -   **bwnormal**
 -   **forcedash**
 -   **oleicon**
 -   **preferrelative**
--   **schieren**
+-   **Ole**
 
-Nur die folgenden unter Elemente können mit der **Gruppe** verwendet werden.
+Nur die folgenden Unterelemente können mit Group verwendet **werden.**
 
--   **Gruppieren**
--   **ShapeType**
--   **Form**
+-   **Gruppe**
+-   **Shape-Typ**
+-   **Formen**
 -   **Sperre**
 
 **Beispiel**
 
-Im folgenden Beispiel wird gezeigt, wie eine Gruppe definiert wird.
+Das folgende Beispiel zeigt, wie eine Gruppe definiert wird.
 
 
 ```HTML
@@ -92,6 +92,6 @@ Im folgenden Beispiel wird gezeigt, wie eine Gruppe definiert wird.
 
 
 
- 
+ 
 
- 
+ 

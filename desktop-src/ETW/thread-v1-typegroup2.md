@@ -1,5 +1,5 @@
 ---
-description: Diese Klasse ist die Ereignistyp Klasse für Thread Ende-Ereignisse. Die folgende Syntax wird durch den MOF-Code vereinfacht.
+description: Diese Klasse ist die Ereignistypklasse für Threadendereignisse. Die folgende Syntax wird durch einen MOF-Code vereinfacht.
 ms.assetid: c495bf22-04ce-4285-8e7e-152e4ab65823
 title: Thread_V1_TypeGroup2-Klasse
 ms.topic: reference
@@ -14,18 +14,18 @@ api_name:
 api_type:
 - NA
 api_location: ''
-ms.openlocfilehash: 3e56590127b2317813d7431a1cc646fbe76e35a9
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: d00e2d535cdc0fe14d2ae0f48fb7809f627b24fe19cdaff5d63750ee9b5f2c42
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104527290"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117814237"
 ---
-# <a name="thread_v1_typegroup2-class"></a>Thread \_ v1 \_ TypeGroup2-Klasse
+# <a name="thread_v1_typegroup2-class"></a>Thread \_ V1 \_ TypeGroup2-Klasse
 
-Diese Klasse ist die Ereignistyp Klasse für Thread Ende-Ereignisse.
+Diese Klasse ist die Ereignistypklasse für Threadendereignisse.
 
-Die folgende Syntax wird durch den MOF-Code vereinfacht.
+Die folgende Syntax wird durch einen MOF-Code vereinfacht.
 
 ## <a name="syntax"></a>Syntax
 
@@ -40,60 +40,60 @@ class Thread_V1_TypeGroup2 : Thread_V1
 
 ## <a name="members"></a>Member
 
-Die **Thread \_ v1 \_ TypeGroup2** -Klasse verfügt über diese Typen von Membern:
+Die **Klasse Thread \_ V1 \_ TypeGroup2** verfügt über die folgenden Membertypen:
 
 -   [Eigenschaften](#properties)
 
 ### <a name="properties"></a>Eigenschaften
 
-Die **Thread \_ v1 \_ TypeGroup2** -Klasse verfügt über diese Eigenschaften.
+Die **Klasse Thread \_ V1 \_ TypeGroup2** verfügt über diese Eigenschaften.
 
 <dl> <dt>
 
 ProcessId
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt32**
+Datentyp: **uint32**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: wmidataid (1)
+Qualifizierer: WmiDataId(1)
 </dt> </dl>
 
-Prozess Bezeichner des am Ereignis beteiligten Threads.
+Prozessbezeichner des threads, der am Ereignis beteiligt ist.
 
-**Windows Server 2003:** Enthält das Format ("x") Qualifizierer.
+**Windows Server 2003:** Enthält den Format("x")-Qualifizierer.
 
 </dd> <dt>
 
-Tthreadid
+TThreadId
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt32**
+Datentyp: **uint32**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: wmidataid (2)
+Qualifizierer: WmiDataId(2)
 </dt> </dl>
 
-Thread Bezeichner des am Ereignis beteiligten Threads.
+Threadbezeichner des Threads, der am Ereignis beteiligt ist.
 
-**Windows Server 2003:** Enthält das Format ("x") Qualifizierer.
+**Windows Server 2003:** Enthält den Format("x")-Qualifizierer.
 
 </dd> </dl>
 
-## <a name="requirements"></a>Requirements (Anforderungen)
+## <a name="requirements"></a>Anforderungen
 
 
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows XP \[ -Desktop-Apps\]<br/>          |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/> |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ XP-Desktop-Apps\]<br/>          |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/> |
 
 
 
@@ -101,7 +101,7 @@ Thread Bezeichner des am Ereignis beteiligten Threads.
 
 <dl> <dt>
 
-[**Thread \_ v1**](thread-v1.md)
+[**Thread \_ V1**](thread-v1.md)
 </dt> </dl>
 
  

@@ -1,9 +1,9 @@
 ---
-title: glgettexlevelparameteriv-Funktion (GL. h)
-description: Die Funktionen "glgettexlevelparameterfv" und "glgettexlevelparameteriv" geben Textur Parameterwerte für eine bestimmte Detailebene zurück. | glgettexlevelparameteriv-Funktion (GL. h)
+title: glGetTexLevelParameteriv-Funktion (Gl.h)
+description: Die Funktionen glGetTexLevelParameterfv und glGetTexLevelParameteriv geben Texturparameterwerte für eine bestimmte Detailebene zurück. | glGetTexLevelParameteriv-Funktion (Gl.h)
 ms.assetid: 536d7bc9-1599-47ff-8559-374f96f1d5f3
 keywords:
-- glgettexlevelparameteriv-Funktion OpenGL
+- glGetTexLevelParameteriv-Funktion OpenGL
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - DllExport
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: dfc0fa167eae842784e967538ff1539e0b43a6a2
-ms.sourcegitcommit: 92e74c99f8f4d097676959d0c317f533c2400a80
+ms.openlocfilehash: d3a52830d673516d38512c0763603a30bf66ad9a564d186c6988c0634027eb1e
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/09/2021
-ms.locfileid: "103961330"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118359766"
 ---
-# <a name="glgettexlevelparameteriv-function"></a>glgettexlevelparameteriv-Funktion
+# <a name="glgettexlevelparameteriv-function"></a>glGetTexLevelParameteriv-Funktion
 
-Die Funktionen " [**glgettexlevelparameterfv**](glgettexlevelparameterfv.md) " und " **glgettexlevelparameteriv** " geben Textur Parameterwerte für eine bestimmte Detailebene zurück.
+Die Funktionen [**glGetTexLevelParameterfv**](glgettexlevelparameterfv.md) und **glGetTexLevelParameteriv** geben Texturparameterwerte für eine bestimmte Detailebene zurück.
 
 ## <a name="syntax"></a>Syntax
 
@@ -46,37 +46,37 @@ void WINAPI glGetTexLevelParameteriv(
 *Ziel* 
 </dt> <dd>
 
-Der symbolische Name der Ziel Textur: GL \_ Texture \_ 1D, GL \_ Texture \_ 2D, GL \_ Proxy \_ Textur \_ 1D oder GL \_ \_ -Proxy Textur \_ 2D.
+Der symbolische Name der Zieltextur: GL \_ TEXTURE \_ 1D, GL \_ TEXTURE \_ 2D, GL \_ PROXY TEXTURE \_ \_ 1D oder GL \_ PROXY TEXTURE \_ \_ 2D.
 
 </dd> <dt>
 
 *level* 
 </dt> <dd>
 
-Die Detailstufe des gewünschten Bilds. Ebene 0 ist die Basis Image Ebene. Ebene *n* ist das *n*-te MipMap-Reduzierungs Bild.
+Die Detailebenennummer des gewünschten Bilds. Ebene 0 ist die Basisimageebene. Ebene *n* ist das Bild der *n-ten* Mipmapverringerung.
 
 </dd> <dt>
 
-*pName* 
+*pname* 
 </dt> <dd>
 
-Der symbolische Name eines Textur Parameters. Die folgenden Parameternamen werden akzeptiert.
+Der symbolische Name eines Texturparameters. Die folgenden Parameternamen werden akzeptiert.
 
 
 
 | Wert                                                                                                                                                                                                  | Bedeutung                                                                                                                                                                                                                                                                                           |
 |--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| <span id="GL_TEXTURE_WIDTH"></span><span id="gl_texture_width"></span><dl> <dt>**GL- \_ Textur \_ Breite**</dt> </dl>                                | Der Parameter *para* meters gibt einen einzelnen Wert zurück, der die Breite des Textur Bilds enthält. Dieser Wert enthält den Rahmen des Textur Bilds.<br/>                                                                                                                                          |
-| <span id="GL_TEXTURE_HEIGHT"></span><span id="gl_texture_height"></span><dl> <dt>**GL- \_ Textur \_ Höhe**</dt> </dl>                             | Der Parameter *para* meters gibt einen einzelnen Wert zurück, der die Höhe des Textur Bilds enthält. Dieser Wert enthält den Rahmen des Textur Bilds.<br/>                                                                                                                                         |
-| <span id="GL_TEXTURE_INTERNAL_FORMAT"></span><span id="gl_texture_internal_format"></span><dl> <dt>**Format der GL- \_ Textur \_ intern \_**</dt> </dl> | Der Parameter *para* meters gibt einen einzelnen Wert zurück, der das Texturformat der Textur beschreibt.<br/>                                                                                                                                                                                         |
-| <span id="GL_TEXTURE_BORDER"></span><span id="gl_texture_border"></span><dl> <dt>**GL- \_ Textur Rahmen \_**</dt> </dl>                             | Der Parameter *para* meters gibt einen einzelnen Wert zurück: die Breite des Rahmens des Textur Bilds in Pixel.<br/>                                                                                                                                                                                 |
-| <span id="GL_TEXTURE_RED_SIZE"></span><span id="gl_texture_red_size"></span><dl> <dt>**\_Größe der \_ \_ Größen Größe von GL**</dt> </dl>                      | Die interne speicherauflösung der roten Komponente eines Texels. Die Auflösung, die durch den OpenGL ausgewählt wird, ist eine genaue Entsprechung für die vom Benutzer angeforderte Auflösung mit dem Component-Argument [**glTexImage1D**](glteximage1d.md) oder [**glTexImage2D**](glteximage2d.md).<br/>       |
-| <span id="GL_TEXTURE_GREEN_SIZE"></span><span id="gl_texture_green_size"></span><dl> <dt>**GL- \_ Textur- \_ grün \_ Größe**</dt> </dl>                | Die interne speicherauflösung der grünen Komponente eines Texels. Die Auflösung, die durch den OpenGL ausgewählt wird, ist eine genaue Entsprechung für die vom Benutzer angeforderte Auflösung mit dem Component-Argument [**glTexImage1D**](glteximage1d.md) oder [**glTexImage2D**](glteximage2d.md).<br/>     |
-| <span id="GL_TEXTURE_BLUE_SIZE"></span><span id="gl_texture_blue_size"></span><dl> <dt>**GL- \_ Textur \_ blau- \_ Größe**</dt> </dl>                   | Die interne speicherauflösung der blauen Komponente eines Texels. Die Auflösung, die durch den OpenGL ausgewählt wird, ist eine genaue Entsprechung für die vom Benutzer angeforderte Auflösung mit dem Component-Argument [**glTexImage1D**](glteximage1d.md) oder [**glTexImage2D**](glteximage2d.md).<br/>      |
-| <span id="GL_TEXTURE_ALPHA_SIZE"></span><span id="gl_texture_alpha_size"></span><dl> <dt>**GL- \_ Textur \_ alpha \_ Größe**</dt> </dl>                | Die interne speicherauflösung der Alpha Komponente eines Texels. Die Auflösung, die durch den OpenGL ausgewählt wird, ist eine genaue Entsprechung für die vom Benutzer angeforderte Auflösung mit dem Component-Argument [**glTexImage1D**](glteximage1d.md) oder [**glTexImage2D**](glteximage2d.md).<br/>     |
-| <span id="GL_TEXTURE_LUMINANCE_SIZE"></span><span id="gl_texture_luminance_size"></span><dl> <dt>**GL- \_ Textur- \_ Beleuchtungs \_ Größe**</dt> </dl>    | Die interne speicherauflösung der Leuchtkraft Komponente eines Texels. Die Auflösung, die durch den OpenGL ausgewählt wird, ist eine genaue Entsprechung für die vom Benutzer angeforderte Auflösung mit dem Component-Argument [**glTexImage1D**](glteximage1d.md) oder [**glTexImage2D**](glteximage2d.md).<br/> |
-| <span id="GL_TEXTURE_INTENSITY_SIZE"></span><span id="gl_texture_intensity_size"></span><dl> <dt>**Größe der GL- \_ Textur \_ Intensität \_**</dt> </dl>    | Die interne speicherauflösung der Intensität-Komponente eines Texels. Die Auflösung, die durch den OpenGL ausgewählt wird, ist eine genaue Entsprechung für die vom Benutzer angeforderte Auflösung mit dem Component-Argument [**glTexImage1D**](glteximage1d.md) oder [**glTexImage2D**](glteximage2d.md).<br/> |
-| <span id="GL_TEXTURE_COMPONENTS"></span><span id="gl_texture_components"></span><dl> <dt>**GL- \_ Textur \_ Komponenten**</dt> </dl>                 | Der Parameter *para* meters gibt einen einzelnen Wert zurück: die Anzahl der Komponenten im Textur Bild.<br/>                                                                                                                                                                                          |
+| <span id="GL_TEXTURE_WIDTH"></span><span id="gl_texture_width"></span><dl> <dt>**GL \_ TEXTURE \_ WIDTH**</dt> </dl>                                | Der *parameter-Parameter* gibt einen einzelnen Wert zurück, der die Breite des Texturbilds enthält. Dieser Wert enthält den Rahmen des Texturbilds.<br/>                                                                                                                                          |
+| <span id="GL_TEXTURE_HEIGHT"></span><span id="gl_texture_height"></span><dl> <dt>**GL \_ TEXTURE \_ HEIGHT**</dt> </dl>                             | Der *parameter-Parameter* gibt einen einzelnen Wert zurück, der die Höhe des Texturbilds enthält. Dieser Wert enthält den Rahmen des Texturbilds.<br/>                                                                                                                                         |
+| <span id="GL_TEXTURE_INTERNAL_FORMAT"></span><span id="gl_texture_internal_format"></span><dl> <dt>**GL \_ TEXTURE \_ INTERNAL \_ FORMAT**</dt> </dl> | Der *parameter-Parameter* gibt einen einzelnen Wert zurück, der das Texelformat der Textur beschreibt.<br/>                                                                                                                                                                                         |
+| <span id="GL_TEXTURE_BORDER"></span><span id="gl_texture_border"></span><dl> <dt>**GL \_ TEXTURE \_ BORDER**</dt> </dl>                             | Der *parameter-Parameter* gibt einen einzelnen Wert zurück: die Breite des Rahmens des Texturbilds in Pixel.<br/>                                                                                                                                                                                 |
+| <span id="GL_TEXTURE_RED_SIZE"></span><span id="gl_texture_red_size"></span><dl> <dt>**GL \_ TEXTURE \_ RED \_ SIZE**</dt> </dl>                      | Die interne Speicherauflösung der roten Komponente eines Texels. Die von OpenGL ausgewählte Auflösung entspricht der auflösung, die vom Benutzer mit dem Komponentenargument [**glTexImage1D**](glteximage1d.md) oder [**glTexImage2D**](glteximage2d.md)angefordert wird.<br/>       |
+| <span id="GL_TEXTURE_GREEN_SIZE"></span><span id="gl_texture_green_size"></span><dl> <dt>**GL \_ TEXTURE \_ GREEN \_ SIZE**</dt> </dl>                | Die interne Speicherauflösung der grünen Komponente eines Texels. Die von OpenGL ausgewählte Auflösung entspricht der auflösung, die vom Benutzer mit dem Komponentenargument [**glTexImage1D**](glteximage1d.md) oder [**glTexImage2D**](glteximage2d.md)angefordert wird.<br/>     |
+| <span id="GL_TEXTURE_BLUE_SIZE"></span><span id="gl_texture_blue_size"></span><dl> <dt>**GL \_ TEXTURE \_ BLUE \_ SIZE**</dt> </dl>                   | Die interne Speicherauflösung der blauen Komponente eines Texels. Die von OpenGL ausgewählte Auflösung entspricht der auflösung, die vom Benutzer mit dem Komponentenargument [**glTexImage1D**](glteximage1d.md) oder [**glTexImage2D**](glteximage2d.md)angefordert wird.<br/>      |
+| <span id="GL_TEXTURE_ALPHA_SIZE"></span><span id="gl_texture_alpha_size"></span><dl> <dt>**GL \_ TEXTURE \_ ALPHA \_ SIZE**</dt> </dl>                | Die interne Speicherauflösung der Alphakomponente eines Texels. Die von OpenGL ausgewählte Auflösung entspricht der auflösung, die vom Benutzer mit dem Komponentenargument [**glTexImage1D**](glteximage1d.md) oder [**glTexImage2D**](glteximage2d.md)angefordert wird.<br/>     |
+| <span id="GL_TEXTURE_LUMINANCE_SIZE"></span><span id="gl_texture_luminance_size"></span><dl> <dt>**GL \_ TEXTURE \_ LUMINANCE \_ SIZE**</dt> </dl>    | Die interne Speicherauflösung der Leuchtdichtekomponente eines Texels. Die von OpenGL ausgewählte Auflösung entspricht der auflösung, die vom Benutzer mit dem Komponentenargument [**glTexImage1D**](glteximage1d.md) oder [**glTexImage2D**](glteximage2d.md)angefordert wird.<br/> |
+| <span id="GL_TEXTURE_INTENSITY_SIZE"></span><span id="gl_texture_intensity_size"></span><dl> <dt>**GL \_ \_ TEXTUR-INTENSITÄTSGRÖßE \_**</dt> </dl>    | Die interne Speicherauflösung der Intensitätskomponente eines Texels. Die von OpenGL ausgewählte Auflösung entspricht der auflösung, die vom Benutzer mit dem Komponentenargument [**glTexImage1D**](glteximage1d.md) oder [**glTexImage2D**](glteximage2d.md)angefordert wird.<br/> |
+| <span id="GL_TEXTURE_COMPONENTS"></span><span id="gl_texture_components"></span><dl> <dt>**GL \_ TEXTURE \_ COMPONENTS**</dt> </dl>                 | Der *parameter-Parameter* gibt einen einzelnen Wert zurück: die Anzahl der Komponenten im Texturbild.<br/>                                                                                                                                                                                          |
 
 
 
@@ -97,23 +97,23 @@ Diese Funktion gibt keinen Wert zurück.
 
 ## <a name="error-codes"></a>Fehlercodes
 
-Die folgenden Fehlercodes können von der Funktion " [**glgeterror**](glgeterror.md) " abgerufen werden.
+Die folgenden Fehlercodes können von der [**glGetError-Funktion**](glgeterror.md) abgerufen werden.
 
 
 
 | Name                                                                                                  | Bedeutung                                                                                                                               |
 |-------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------|
-| <dl> <dt>**GL \_ ungültige Aufzählung. \_**</dt> </dl>      | *target* oder *PName* war kein akzeptierter Wert.<br/>                                                                             |
-| <dl> <dt>**\_Ungültiger GL- \_ Wert**</dt> </dl>     | die *Ebene* ist kleiner als 0 (null) oder größer als *Log* 2 *(max)*, wobei *Max* der zurückgegebene Wert von GL \_ Max \_ texture size ist \_ .<br/>      |
-| <dl> <dt>**\_ungültiger \_ Vorgang**</dt> </dl> | Die Funktion wurde zwischen einem Aufruf von [**glBegin**](glbegin.md) und dem entsprechenden Aufruf von [**glEnd**](glend.md)aufgerufen.<br/> |
+| <dl> <dt>**GL \_ INVALID \_ ENUM**</dt> </dl>      | *target* oder *pname* war kein akzeptierter Wert.<br/>                                                                             |
+| <dl> <dt>**GL \_ UNGÜLTIGER \_ WERT**</dt> </dl>     | *level* ist kleiner als 0 (null) oder größer als *protokoll* 2 *(max)*, wobei *max* der zurückgegebene Wert von GL \_ MAX TEXTURE SIZE \_ \_ ist.<br/>      |
+| <dl> <dt>**GL \_ INVALID \_ OPERATION**</dt> </dl> | Die Funktion wurde zwischen einem Aufruf von [**glBegin**](glbegin.md) und dem entsprechenden Aufruf von [**glEnd**](glend.md)aufgerufen.<br/> |
 
 
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die Funktion " **glgettexlevelparameter** " *gibt in* parameterparameterwerten für eine bestimmte Detailstufe, die als *Ebene* angegeben ist, zurück. Der *Ziel* Parameter definiert die Ziel Textur, entweder GL \_ Texture \_ 1D, GL \_ Texture \_ 2D, GL \_ Proxy \_ Textur \_ 1D oder GL \_ -Proxy \_ Textur \_ 2D, um eindimensionale oder zweidimensionale Texturierung anzugeben. Der *PName* -Parameter gibt den Texture-Parameter an, dessen Wert oder Werte zurückgegeben werden.
+Die **glGetTexLevelParameter-Funktion** gibt in parameter-Texturparameterwerten für einen bestimmten Detailebenenwert zurück, der als *Ebene* angegeben ist.  Der *Zielparameter* definiert die Zieltextur, entweder GL \_ TEXTURE \_ 1D, GL \_ TEXTURE \_ 2D, GL \_ PROXY TEXTURE \_ \_ 1D oder GL \_ PROXY TEXTURE \_ \_ 2D, um eindimensionale oder zweidimensionale Textur anzugeben. Der *pname-Parameter* gibt den Texturparameter an, dessen Wert oder Werte zurückgegeben werden.
 
-Wenn ein Fehler generiert wird, wird keine Änderung am Inhalt von *para* Metern vorgenommen.
+Wenn ein Fehler generiert wird, wird keine Änderung am Inhalt der *Parameter* vorgenommen.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -123,13 +123,13 @@ Wenn ein Fehler generiert wird, wird keine Änderung am Inhalt von *para* Metern
 |-------------------------------------|-----------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[nur Desktop-Apps\]<br/>                              |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                                    |
-| Header<br/>                   | <dl> <dt>GL. h</dt> </dl>         |
-| Bibliothek<br/>                  | <dl> <dt>Opengl32. lib</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Gl.h</dt> </dl>         |
+| Bibliothek<br/>                  | <dl> <dt>Opengl32.lib</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Opengl32.dll</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
@@ -139,7 +139,7 @@ Wenn ein Fehler generiert wird, wird keine Änderung am Inhalt von *para* Metern
 [**glEnd**](glend.md)
 </dt> <dt>
 
-[**glgettexparameter**](glgettexparameter.md)
+[**glGetTexParameter**](glgettexparameter.md)
 </dt> <dt>
 
 [**glTexImage1D**](glteximage1d.md)
@@ -148,7 +148,7 @@ Wenn ein Fehler generiert wird, wird keine Änderung am Inhalt von *para* Metern
 [**glTexImage2D**](glteximage2d.md)
 </dt> <dt>
 
-[**gltexparameter**](gltexparameter-functions.md)
+[**glTexParameter**](gltexparameter-functions.md)
 </dt> </dl>
 
  

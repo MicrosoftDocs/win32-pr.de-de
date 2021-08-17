@@ -1,7 +1,7 @@
 ---
-description: Die capturefilter-Struktur enthält Erfassungs Filterdaten.
+description: Die CAPTUREFILTER-Struktur enthält Erfassungsfilterdaten.
 ms.assetid: 773187c6-31c7-4439-850d-1dd43d42f701
-title: Capturefilter-Struktur (Netmon. h)
+title: CAPTUREFILTER-Struktur (Netmon.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,16 +13,16 @@ api_type:
 - HeaderDef
 api_location:
 - Netmon.h
-ms.openlocfilehash: 129575ba401aed0e78f52695a49139f4143c9c87
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: de5ab95ab395d50afb41223a458342706da1df7434d524f21c230436b3b9c7b6
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106358563"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117796360"
 ---
-# <a name="capturefilter-structure"></a>Capturefilter-Struktur
+# <a name="capturefilter-structure"></a>CAPTUREFILTER-Struktur
 
-Die **capturefilter** -Struktur enthält Erfassungs Filterdaten.
+Die **CAPTUREFILTER-Struktur** enthält Erfassungsfilterdaten.
 
 ## <a name="syntax"></a>Syntax
 
@@ -48,19 +48,19 @@ typedef struct _CAPTUREFILTER {
 
 <dl> <dt>
 
-**Filterflags**
+**FilterFlags**
 </dt> <dd>
 
-Flags, die den Inhalt des Erfassungs Filters beschreiben.
+Flags, die den Inhalt des Erfassungsfilters beschreiben.
 
 
 
 | Wert                                                                                                                                                                                                                                                                                                   | Bedeutung                                             |
 |---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-----------------------------------------------------|
-| <span id="CAPTUREFILTER_FLAGS_INCLUDE_ALL_SAPS"></span><span id="capturefilter_flags_include_all_saps"></span><dl> <dt>**Capturefilter \_ Flags \_ enthalten \_ alle \_ SAPS**</dt> <dt>0x0001</dt> </dl>       | Schließt alle SAPS als akzeptable Frames ein.<br/>  |
-| <span id="CAPTUREFILTER_FLAGS_INCLUDE_ALL_ETYPES"></span><span id="capturefilter_flags_include_all_etypes"></span><dl> <dt>**Capturefilter \_ Flags \_ enthalten \_ alle \_ ETYPEs**</dt> <dt>0x0002</dt> </dl> | Alle ETYPEs als akzeptable Frames einschließen.<br/> |
-| <span id="CAPTUREFILTER_FLAGS_LOCAL_ONLY"></span><span id="capturefilter_flags_local_only"></span><dl> <dt>**Capturefilter \_ Flags \_ \_ nur lokal**</dt> <dt>0x0008</dt> </dl>                          | Kein P-Modus<br/>                                |
-| <span id="CAPTUREFILTER_FLAGS_KEEP_RAW"></span><span id="capturefilter_flags_keep_raw"></span><dl> <dt>**Capturefilter \_ Flags \_ behalten den \_ Rohdaten**</dt> - <dt>0x0020</dt> bei </dl>                                | Halten Sie SMT-und TokenRing-Mac-Frames<br/>      |
+| <span id="CAPTUREFILTER_FLAGS_INCLUDE_ALL_SAPS"></span><span id="capturefilter_flags_include_all_saps"></span><dl> <dt>**CAPTUREFILTER \_ FLAGS \_ UMFASSEN \_ ALLE \_ SAPS-0x0001**</dt> <dt></dt> </dl>       | Schließt alle SAPs als akzeptable Frames ein.<br/>  |
+| <span id="CAPTUREFILTER_FLAGS_INCLUDE_ALL_ETYPES"></span><span id="capturefilter_flags_include_all_etypes"></span><dl> <dt>**CAPTUREFILTER \_ FLAGS \_ INCLUDE \_ ALL \_ ETYPES**</dt> <dt>0x0002</dt> </dl> | Schließen Sie alle E-Datentypen als akzeptable Frames ein.<br/> |
+| <span id="CAPTUREFILTER_FLAGS_LOCAL_ONLY"></span><span id="capturefilter_flags_local_only"></span><dl> <dt>**CAPTUREFILTER \_ FLAGS \_ \_ LOCAL ONLY**</dt> <dt>0x0008</dt> </dl>                          | Kein P-Modus<br/>                                |
+| <span id="CAPTUREFILTER_FLAGS_KEEP_RAW"></span><span id="capturefilter_flags_keep_raw"></span><dl> <dt>**CAPTUREFILTER \_ FLAGS \_ KEEP \_ RAW**</dt> <dt>0x0020</dt> </dl>                                | Behalten Sie SMT- und Tokenring-MAC-Frames bei.<br/>      |
 
 
 
@@ -68,45 +68,45 @@ Flags, die den Inhalt des Erfassungs Filters beschreiben.
 
 </dd> <dt>
 
-**lpsaptable**
+**lpSapTable**
 </dt> <dd>
 
-Zeiger auf ein Array von SAP-Werten. Dieser Member gibt die SAP-Werte an, die für die Übergabe an den Treiber gültig sind. Wenn die capturefilter- \_ Flags \_ \_ alle \_ SAPS enthalten, wird dies zu einer Ausnahmeliste (einschließlich aller SAPS außer diesen).
+Zeiger auf ein Array von SAP-Werten. Dieser Member gibt die SAP-Werte an, die an den Treiber übergeben werden dürfen. Wenn CAPTUREFILTER \_ FLAGS \_ INCLUDE ALL \_ \_ SAPS festgelegt ist, wird dies zu einer Ausnahmeliste (einschließlich aller SAPS außer diesen).
 
 </dd> <dt>
 
-**lpeer typetable**
+**lpEtypeTable**
 </dt> <dd>
 
-Zeiger auf ein Array von ETYPE-Werten. Dies gibt die ETYPE-Werte an, die für die Übergabe an den Treiber gültig sind. Wenn die capturefilter- \_ Flags \_ \_ alle \_ ETYPEs festgelegt sind, wird dies zu einer Ausnahmeliste (alle ETYPEs mit Ausnahme dieser).
+Zeiger auf ein Array von Etype-Werten. Dies gibt die Etype-Werte an, die an den Treiber übergeben werden dürfen. Wenn CAPTUREFILTER \_ FLAGS \_ INCLUDE ALL \_ \_ ETYPES festgelegt ist, wird dies zu einer Ausnahmeliste (alle Etypes mit Ausnahme dieser einschließen).
 
 </dd> <dt>
 
-**NSAPs**
+**nSaps**
 </dt> <dd>
 
-Anzahl der SAPS in der SAP-Tabelle.
+Anzahl der SAPs in der SAP-Tabelle.
 
 </dd> <dt>
 
-**"ntypes"**
+**nEtypes**
 </dt> <dd>
 
-Anzahl der ETYPEs in der ETYPE-Tabelle.
+Anzahl der Etypes in der Etype-Tabelle.
 
 </dd> <dt>
 
-**Adresssstable**
+**AddressTable**
 </dt> <dd>
 
-Der Name der Adress Tabelle.
+Name der Adresstabelle.
 
 </dd> <dt>
 
-**Filter Expression**
+**Filterexpression**
 </dt> <dd>
 
-Eine Ausdrucks Struktur. Diese enthält den Muster Übereinstimmungs Teil des Erfassungs Filters.
+Eine EXPRESSION-Struktur. Dies enthält den Muster match-Teil des Erfassungsfilters.
 
 </dd> <dt>
 
@@ -117,10 +117,10 @@ Reserviert.
 
 </dd> <dt>
 
-**nframebytestokopie**
+**nFrameBytesToCopy**
 </dt> <dd>
 
-Wenn dieser Member nicht 0 ist, gibt er an, wie viele Bytes für jeden empfangenen Frame aufbewahrt werden. Wenn der Wert 0 ist, behalten Sie den gesamten Frame bei.
+Wenn dieser Member nicht 0 ist, gibt er an, wie viele Bytes für jeden empfangenen Frame beibehalten werden sollen. Wenn es 0 ist, behalten Sie den gesamten Frame bei.
 
 </dd> <dt>
 
@@ -131,9 +131,9 @@ Reserviert.
 
 </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die Kombination aus Flags, Werten und Ausdrücken bestimmt, welche Frames vom Treiber, der diese Strukturdaten verwendet, übermittelt werden. Weitere Informationen zum Implementieren einer **capturefilter** -Struktur finden Sie unter [Capture Filters](capture-filters.md)(Aufzeichnen von Filtern).
+Die Kombination aus Flags, Werten und Ausdrücken bestimmt, welche Frames vom Treiber übergeben werden, der diese Strukturdaten verwendet. Weitere Informationen zum Implementieren einer **CAPTUREFILTER-Struktur** finden Sie unter [Capture Filters](capture-filters.md).
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -143,27 +143,27 @@ Die Kombination aus Flags, Werten und Ausdrücken bestimmt, welche Frames vom Tr
 |-------------------------------------|-------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[nur Desktop-Apps\]<br/>                          |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                                |
-| Header<br/>                   | <dl> <dt>Netmon. h</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Netmon.h</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[Adresssstable](addresstable.md)
+[ADDRESSTABLE](addresstable.md)
 </dt> <dt>
 
-[Adresssspair](addresspair.md)
+[ADDRESSPAIR](addresspair.md)
 </dt> <dt>
 
-[Begriff](expression.md)
+[Ausdruck](expression.md)
 </dt> <dt>
 
-[Andexp](andexp.md)
+[ANDEXP](andexp.md)
 </dt> <dt>
 
-[Patternmatch](patternmatch.md)
+[PATTERNMATCH](patternmatch.md)
 </dt> </dl>
 
  

@@ -1,5 +1,5 @@
 ---
-description: Die SetMediaName-Methode gibt den Namen der Quelldatei an, die von diesem Quellobjekt dargestellt wird.
+description: Die SetMediaName-Methode gibt den Namen der Quelldatei an, die durch dieses Quellobjekt dargestellt wird.
 ms.assetid: 60307c87-9dce-4e60-b14b-07d2c8604dd8
 title: IAMTimelineSrc::SetMediaName-Methode (Qedit.h)
 ms.topic: reference
@@ -24,11 +24,11 @@ ms.locfileid: "118399217"
 # <a name="iamtimelinesrcsetmedianame-method"></a>IAMTimelineSrc::SetMediaName-Methode
 
 > [!Note]  
-> \[Veraltet. Diese API kann aus zukünftigen Releases von Windows entfernt werden.\]
+> \[Veraltet. Diese API wird möglicherweise aus zukünftigen Releases von Windows.\]
 
  
 
-Die -Methode gibt den Namen der Quelldatei an, `SetMediaName` die von diesem Quellobjekt dargestellt wird.
+Die `SetMediaName` -Methode gibt den Namen der Quelldatei an, die durch dieses Quellobjekt dargestellt wird.
 
 ## <a name="syntax"></a>Syntax
 
@@ -48,23 +48,23 @@ HRESULT SetMediaName(
 *newVal* 
 </dt> <dd>
 
-Zeichenfolge, die den Namen der Mediendatei angibt.
+Eine Zeichenfolge, die den Namen der Mediendatei angibt.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Wenn diese Methode erfolgreich ist, wird **S \_ OK** zurückgegeben. Andernfalls wird ein **HRESULT-Fehlercode** zurückgegeben.
+Wenn diese Methode erfolgreich ist, wird **S \_ OK zurückgegeben.** Andernfalls wird ein **HRESULT-Fehlercode** zurückgegeben.
 
 ## <a name="remarks"></a>Hinweise
 
 > [!Note]  
-> Die Headerdatei Qedit.h ist nicht mit Direct3D-Headern kompatibel, die höher als Version 7 sind.
+> Die Headerdatei Qedit.h ist nicht mit Direct3D-Headern nach Version 7 kompatibel.
 
  
 
 > [!Note]  
-> Laden Sie zum Abrufen von Qedit.h das [Microsoft Windows SDK-Update für Windows Vista und .NET Framework 3.0](https://msdn.microsoft.com/windowsvista/bb980924.aspx)herunter. Qedit.h ist im Microsoft Windows SDK für Windows 7 und .NET Framework 3.5 Service Pack 1 nicht verfügbar.
+> Um Qedit.h zu erhalten, laden Sie das Microsoft Windows SDK-Update für Windows Vista und [.NET Framework 3.0 herunter.](https://msdn.microsoft.com/windowsvista/bb980924.aspx) Qedit.h ist im Microsoft Windows SDK für Windows 7 und .NET Framework 3.5 Service Pack 1 nicht verfügbar.
 
  
 

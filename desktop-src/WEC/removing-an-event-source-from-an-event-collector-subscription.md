@@ -1,49 +1,49 @@
 ---
-title: Entfernen einer Ereignis Quelle aus einem vom Collector initiierten Abonnement
-description: Sie können eine Ereignis Quelle aus einem vom Collector initiierten Abonnement entfernen, ohne das gesamte Abonnement zu löschen.
+title: Entfernen einer Ereignisquelle aus einem vom Collector initiierten Abonnement
+description: Sie können eine Ereignisquelle aus einem vom Collector initiierten Abonnement entfernen, ohne das gesamte Abonnement zu löschen.
 ms.assetid: 6c9e0dbf-59a2-4db9-8fb8-0dbfda5cf38b
 ms.tgt_platform: multiple
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 303e0a708c2b52225af83475674e5f60d1a8418d
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: 46e155e4d8467722e9ac5eae04189ed3ba8333f65ec162ffb50f6b9268cf8a92
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "103856447"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117751041"
 ---
-# <a name="removing-an-event-source-from-a-collector-initiated-subscription"></a>Entfernen einer Ereignis Quelle aus einem vom Collector initiierten Abonnement
+# <a name="removing-an-event-source-from-a-collector-initiated-subscription"></a>Entfernen einer Ereignisquelle aus einem vom Collector initiierten Abonnement
 
-Sie können eine Ereignis Quelle aus einem vom Collector initiierten Abonnement entfernen, ohne das gesamte Abonnement zu löschen. Sie müssen die Adresse der Ereignis Quelle kennen, die Sie löschen möchten. Sie können die Adresse einer Ereignis Quelle ermitteln, die einem Abonnement zugeordnet ist, indem Sie das C++-Beispiel [anzeigen, das unter Anzeigen der Eigenschaften eines Ereignis Sammler Abonnements](displaying-the-properties-of-an-event-collector-subscription.md)angezeigt wird, oder Sie können den folgenden Befehl an der Eingabeaufforderung eingeben:
+Sie können eine Ereignisquelle aus einem vom Collector initiierten Abonnement entfernen, ohne das gesamte Abonnement zu löschen. Sie müssen die Adresse der Ereignisquelle kennen, die Sie löschen möchten. Sie finden die Adresse einer Ereignisquelle, die einem Abonnement zugeordnet ist, mithilfe des C++-Beispiels, das unter [Anzeigen der Eigenschaften eines Ereignissammlerabonnements](displaying-the-properties-of-an-event-collector-subscription.md)gezeigt wird, oder Sie können den folgenden Befehl an der Eingabeaufforderung eingeben:
 
-" **wecutil GS** " ( *Abonnement Name* )
+**wecutil gs** *SubscriptionName*
 
-Zum Auflisten der aktuellen Abonnements auf einem lokalen Computer können Sie das C++-Codebeispiel in Auflisten von [Event Collector-Abonnements](listing-event-collector-subscriptions.md)verwenden, oder Sie können den folgenden Befehl an der Eingabeaufforderung eingeben:
+Um die aktuellen Abonnements auf einem lokalen Computer aufzulisten, können Sie das C++-Codebeispiel verwenden, das unter [Listing Event Collector Subscriptions (Auflisten von Ereignissammlerabonnements)](listing-event-collector-subscriptions.md)gezeigt wird, oder Sie können den folgenden Befehl an der Eingabeaufforderung eingeben:
 
-**wecutil**
+**wecutil es**
 
 > [!Note]
 >
-> Sie können dieses Beispiel verwenden, um eine Ereignis Quelle aus einem vom Collector initiierten Abonnement zu entfernen, oder Sie können den folgenden Befehl an der Eingabeaufforderung eingeben:
+> Sie können dieses Beispiel verwenden, um eine Ereignisquelle aus einem collector-initiierten Abonnement zu entfernen, oder Sie können den folgenden Befehl an der Eingabeaufforderung eingeben:
 >
-> **wecutil SS** *Abonnement Name*  * */ESA: * * * eventsourceaddress* **/Res**
+> **wecutil ss** *SubscriptionName* **/mars:**_EventSourceAddress_ **/res**
 >
-> *Eventsourceaddress* kann entweder "localhost" für den lokalen Computer oder ein voll qualifizierter Domänen Name für einen Remote Computer sein.
+> *EventSourceAddress* kann entweder localhost für den lokalen Computer oder ein vollqualifizierter Domänenname für einen Remotecomputer sein.
 
- 
+ 
 
-In diesem Beispiel wird eine Reihe von Schritten zum Entfernen einer Ereignis Quelle aus einem vom Collector initiierten Abonnement befolgt.
+Dieses Beispiel folgt einer Reihe von Schritten zum Entfernen einer Ereignisquelle aus einem vom Collector initiierten Abonnement.
 
-**So entfernen Sie eine Ereignis Quelle aus einem vom Collector initiierten Abonnement**
+**So entfernen Sie eine Ereignisquelle aus einem collector-initiierten Abonnement**
 
-1.  Öffnen Sie das vorhandene Abonnement, indem Sie den Abonnement Namen und die Zugriffsrechte als Parameter für die [**ecopenabonnement**](/windows/desktop/api/Evcoll/nf-evcoll-ecopensubscription) -Funktion angeben. Weitere Informationen zu Zugriffsrechten finden Sie unter [**Windows-Ereignis Sammler Konstanten**](windows-event-collector-constants.md).
-2.  Rufen Sie das Ereignis Quellen Array des Abonnements ab, indem Sie die [**ecgetabonneptionproperty**](/windows/desktop/api/Evcoll/nf-evcoll-ecgetsubscriptionproperty) -Funktion aufrufen. Weitere Informationen zu Abonnement Eigenschaften, die abgerufen werden können, finden Sie unter der [**\_ \_ Eigenschaft \_ ID**](/windows/desktop/api/Evcoll/ne-evcoll-ec_subscription_property_id) -Enumeration für das EC-Abonnement.
-3.  Suchen Sie die angegebene Ereignis Quelle im Ereignis Quellen Array des Abonnements, indem Sie die [**ecgetobjectarrayproperty**](/windows/desktop/api/Evcoll/nf-evcoll-ecgetobjectarrayproperty) -Funktion aufrufen. Der Wert der **ecabonneptioneventsourceaddress** -Eigenschaft ist entweder "localhost" für den lokalen Computer oder ein voll qualifizierter Domänen Name für einen Remote Computer. Weitere Informationen zu Ereignis Quellen Eigenschaften, die abgerufen werden können, finden Sie unter der **\_ \_ Eigenschaft \_ ID** -Enumeration für das EC-Abonnement.
-4.  Löschen Sie die Ereignis Quelle aus dem Abonnement, indem Sie die [**ecremoveobjectarrayelement**](/windows/desktop/api/Evcoll/nf-evcoll-ecremoveobjectarrayelement) -Funktion aufrufen.
-5.  Speichern Sie das Abonnement, indem Sie die [**ecsavesub-**](/windows/desktop/api/Evcoll/nf-evcoll-ecsavesubscription) Funktion aufrufen.
-6.  Schließen Sie das Abonnement, indem Sie die [**ecclose**](/windows/desktop/api/Evcoll/nf-evcoll-ecclose) -Funktion aufrufen.
+1.  Öffnen Sie das vorhandene Abonnement, indem Sie den Abonnementnamen und die Zugriffsrechte als Parameter für die [**EcOpenSubscription-Funktion**](/windows/desktop/api/Evcoll/nf-evcoll-ecopensubscription) bereitstellen. Weitere Informationen zu Zugriffsrechten finden Sie unter [**Windows Event Collector-Konstanten.**](windows-event-collector-constants.md)
+2.  Rufen Sie das Ereignisquellenarray des Abonnements ab, indem Sie die [**EcGetSubscriptionProperty-Funktion**](/windows/desktop/api/Evcoll/nf-evcoll-ecgetsubscriptionproperty) aufrufen. Weitere Informationen zu Abonnementeigenschaften, die abgerufen werden können, finden Sie in der [**EC \_ SUBSCRIPTION PROPERTY \_ \_ ID-Enumeration.**](/windows/desktop/api/Evcoll/ne-evcoll-ec_subscription_property_id)
+3.  Suchen Sie im Ereignisquellenarray des Abonnements nach der angegebenen Ereignisquelle, indem Sie die [**EcGetObjectArrayProperty-Funktion**](/windows/desktop/api/Evcoll/nf-evcoll-ecgetobjectarrayproperty) aufrufen. Der Wert der **EcSubscriptionEventSourceAddress-Eigenschaft** ist entweder Localhost für den lokalen Computer oder ein vollqualifizierter Domänenname für einen Remotecomputer. Weitere Informationen zu Ereignisquelleneigenschaften, die abgerufen werden können, finden Sie in der **EC \_ SUBSCRIPTION PROPERTY \_ \_ ID-Enumeration.**
+4.  Löschen Sie die Ereignisquelle aus dem Abonnement, indem Sie die [**EcRemoveObjectArrayElement-Funktion**](/windows/desktop/api/Evcoll/nf-evcoll-ecremoveobjectarrayelement) aufrufen.
+5.  Speichern Sie das Abonnement, indem Sie die [**EcSaveSubscription-Funktion**](/windows/desktop/api/Evcoll/nf-evcoll-ecsavesubscription) aufrufen.
+6.  Schließen Sie das Abonnement, indem Sie die [**EcClose-Funktion**](/windows/desktop/api/Evcoll/nf-evcoll-ecclose) aufrufen.
 
-Im folgenden C++-Codebeispiel wird gezeigt, wie eine Ereignis Quelle aus einem Ereignis Sammler Abonnement entfernt wird.
+Das folgende C++-Codebeispiel zeigt, wie Sie eine Ereignisquelle aus einem Ereignissammlerabonnement entfernen.
 
 
 ```C++
@@ -319,18 +319,18 @@ DWORD GetEventSourceProperty(EC_OBJECT_ARRAY_PROPERTY_HANDLE hArray,
 
 <dl> <dt>
 
-[Anzeigen der Eigenschaften eines Ereignis Sammler Abonnements](displaying-the-properties-of-an-event-collector-subscription.md)
+[Anzeigen der Eigenschaften eines Ereignissammlerabonnements](displaying-the-properties-of-an-event-collector-subscription.md)
 </dt> <dt>
 
-[Auflisten von Event Collector-Abonnements](listing-event-collector-subscriptions.md)
+[Auflisten von Ereignissammlerabonnements](listing-event-collector-subscriptions.md)
 </dt> <dt>
 
-[Referenz zur Windows-Ereignis Sammlung](windows-event-collector-reference.md)
+[Windows Ereignissammlerreferenz](windows-event-collector-reference.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

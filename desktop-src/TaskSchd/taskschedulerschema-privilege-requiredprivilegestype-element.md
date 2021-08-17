@@ -1,9 +1,9 @@
 ---
-title: Berechtigungs Element ("Requirements dprivilegestype")
-description: Gibt das Recht einer Aufgabe an, verschiedene systembezogene Vorgänge auszuführen, z. b. das Herunterfahren des Systems, das Laden von Gerätetreibern oder das Ändern der Systemzeit.
+title: Privilege (requiredPrivilegesType)-Element
+description: Gibt das Recht eines Tasks an, verschiedene systembezogene Vorgänge auszuführen, z. B. das Herunterfahren des Systems, das Laden von Gerätetreibern oder das Ändern der Systemzeit.
 ms.assetid: d5585d1c-e121-4770-a13e-108158bc703e
 keywords:
-- Berechtigungs Element Taskplaner
+- Berechtigungselement Taskplaner
 topic_type:
 - apiref
 api_name:
@@ -13,16 +13,16 @@ api_type:
 ms.topic: reference
 ms.date: 05/31/2018
 api_location: ''
-ms.openlocfilehash: 55e9263ae9d02bb384bfbe56101ea82f98c2e076
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: f181c2dbe21e31c752a44a4a3b0e27abd0f9396939c9a9dcee3127f796760527
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104478387"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117758318"
 ---
-# <a name="privilege-requiredprivilegestype-element"></a>Berechtigungs Element ("Requirements dprivilegestype")
+# <a name="privilege-requiredprivilegestype-element"></a>Privilege (requiredPrivilegesType)-Element
 
-Gibt das Recht einer Aufgabe an, verschiedene systembezogene Vorgänge auszuführen, z. b. das Herunterfahren des Systems, das Laden von Gerätetreibern oder das Ändern der Systemzeit.
+Gibt das Recht eines Tasks an, verschiedene systembezogene Vorgänge auszuführen, z. B. das Herunterfahren des Systems, das Laden von Gerätetreibern oder das Ändern der Systemzeit.
 
 ``` syntax
 <xs:element name="Privilege"
@@ -32,25 +32,25 @@ Gibt das Recht einer Aufgabe an, verschiedene systembezogene Vorgänge auszufüh
  />
 ```
 
-Das **Privileg** -Element wird durch den komplexen Typ "Requirements [**dprivilegestype**](taskschedulerschema-requiredprivilegestype-complextype.md) " definiert.
+Das **Privilege-Element** wird durch den [**komplexen requiredPrivilegesType-Typ**](taskschedulerschema-requiredprivilegestype-complextype.md) definiert.
 
 ## <a name="parent-element"></a>Übergeordnetes Element
 
 
 
-| Element                                                                                             | Abgeleitet von                                                                             | BESCHREIBUNG                                                                        |
+| Element                                                                                             | Abgeleitet von                                                                             | Beschreibung                                                                        |
 |-----------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------|
-| [**Requirements-Privilegien**](taskschedulerschema-requiredprivileges-requiredprivilegestype-element.md) | [**Requirements dprivilegestype**](taskschedulerschema-requiredprivilegestype-complextype.md) | Enthält die Einstellungen, die der Taskplaner verwendet, um die Aufgabe auszuführen.<br/> |
+| [**RequiredPrivileges**](taskschedulerschema-requiredprivileges-requiredprivilegestype-element.md) | [**requiredPrivilegesType**](taskschedulerschema-requiredprivilegestype-complextype.md) | Enthält die Einstellungen, die der Taskplaner zum Ausführen der Aufgabe verwendet.<br/> |
 
 
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Bei der C++-Entwicklung erfolgt der Zugriff auf diese Informationen über die [**IPrincipal2:: Requirements dprivilege**](/windows/desktop/api/taskschd/nf-taskschd-iprincipal2-get_requiredprivilege) -Eigenschaft.
+Für die C++-Entwicklung erfolgt der Zugriff auf diese Informationen über die [**IPrincipal2::RequiredPrivilege-Eigenschaft.**](/windows/desktop/api/taskschd/nf-taskschd-iprincipal2-get_requiredprivilege)
 
 ## <a name="examples"></a>Beispiele
 
-Der folgende XML-Code definiert ein settings-Element, das das Recht eines Tasks angibt, verschiedene systembezogene Vorgänge auszuführen, z. b. das Herunterfahren des Systems, das Laden von Gerätetreibern oder das Ändern der Systemzeit.
+Der folgende XML-Code definiert ein Einstellungselement, das das Recht eines Tasks angibt, verschiedene systembezogene Vorgänge auszuführen, z. B. das Herunterfahren des Systems, das Laden von Gerätetreibern oder das Ändern der Systemzeit.
 
 
 ```XML
@@ -70,16 +70,16 @@ Der folgende XML-Code definiert ein settings-Element, das das Recht eines Tasks 
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows 7 \[ -Desktop-Apps\]<br/>              |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 R2 \[ -Desktop-Apps\]<br/> |
+| Unterstützte Mindestversion (Client)<br/> | nur Windows 7 \[ Desktop-Apps\]<br/>              |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server 2008 \[ R2-Desktop-Apps\]<br/> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[Schema Elemente Taskplaner](task-scheduler-schema-elements.md)
+[Taskplaner Schemaelemente](task-scheduler-schema-elements.md)
 </dt> </dl>
 
  

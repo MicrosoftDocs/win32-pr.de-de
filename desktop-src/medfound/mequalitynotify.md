@@ -1,35 +1,35 @@
 ---
-description: Bietet dem Quality Manager Feedback zur Wiedergabequalität.
+description: Gibt Dem Qualitätsmanager Feedback zur Wiedergabequalität.
 ms.assetid: 1b4b6a2d-411e-42d1-a44b-bb1928e1c063
-title: Mequalitynotify-Ereignis (mfobjects. h)
+title: MEQualityNotify-Ereignis (Mfobjects.h)
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 42d8f486bfebfd137ba341176af0fdad257776df
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 4dd019db55a0791ec5464cf67c7ee4d3e4a86f918efc2b4e87f4ddde2f3574ee
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104528271"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118061875"
 ---
-# <a name="mequalitynotify-event"></a>Mequalitynotify-Ereignis
+# <a name="mequalitynotify-event"></a>MEQualityNotify-Ereignis
 
-Bietet dem Quality Manager Feedback zur Wiedergabequalität.
+Gibt Dem Qualitätsmanager Feedback zur Wiedergabequalität.
 
 ## <a name="event-values"></a>Ereigniswerte
 
-Mögliche Werte, die von [**imfmediaevent:: GetValue**](/windows/desktop/api/mfobjects/nf-mfobjects-imfmediaevent-getvalue) abgerufen werden, sind folgende.
+Mögliche Werte, die von [**DERMEDIAEVENT::GetValue abgerufen werden,**](/windows/desktop/api/mfobjects/nf-mfobjects-imfmediaevent-getvalue) sind:
 
 
 
-| VARTYPE           | BESCHREIBUNG                         |
+| VARTYPE           | Beschreibung                         |
 |-------------------|-------------------------------------|
 | VT \_ I8<br/> | Siehe Hinweise.<br/> <br/> |
 
 
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Dieses Ereignis wird von einigen Pipeline Komponenten ausgelöst. Die Medien Sitzung leitet das Ereignis an den Quality Manager weiter, indem die [**imfqualitymanager:: notifyqualityevent**](/windows/desktop/api/mfidl/nf-mfidl-imfqualitymanager-notifyqualityevent) -Methode aufgerufen wird.
+Dieses Ereignis wird von einigen Pipelinekomponenten ausgelöst. Die Mediensitzung gibt das Ereignis an den Qualitäts-Manager weiter, indem die [**METHODE VORGESETZTEQualityManager::NotifyQualityEvent aufgerufen**](/windows/desktop/api/mfidl/nf-mfidl-imfqualitymanager-notifyqualityevent) wird.
 
 Der erweiterte Typ des Ereignisses gibt die Bedeutung der Ereignisdaten an.
 
@@ -37,16 +37,16 @@ Der erweiterte Typ des Ereignisses gibt die Bedeutung der Ereignisdaten an.
 
 | Erweiterter Typ                            | Ereignisdaten                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          |
 |------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Verarbeitungs Wartezeit für die MF- \_ Qualität \_ Benachrichtigen \_ \_ | Ungefähre Verarbeitungs Wartezeit, die von der Komponente eingeführt wurde, in 100-Nanosecond-Einheiten.<br/> Verarbeitungs Latenz ist die Latenzzeit, die eine Komponente in die Pipeline einführt, indem ein Beispiel verarbeitet wird. In einigen Fällen kann die Wartezeit nicht einfach durch Betrachtung der Aufrufe von [**imfqualitymanager:: notifyprocessinput**](/windows/desktop/api/mfidl/nf-mfidl-imfqualitymanager-notifyprocessinput) und [**imfqualitymanager:: notifyprocessoutput**](/windows/desktop/api/mfidl/nf-mfidl-imfqualitymanager-notifyprocessoutput)abgeleitet werden. Beispielsweise gibt es möglicherweise keine 1:1-Entsprechung zwischen Eingabe Beispielen und Ausgabe Beispielen. In diesem Fall sendet die Komponente möglicherweise ein mequalitynotify-Ereignis mit der Verarbeitungs Latenz. Wenn die Verarbeitungs Latenz geändert wird, kann die Komponente während des Streamings jederzeit ein neues Ereignis senden.<br/> |
-| Beispiel Verzögerung für die MF- \_ Qualitäts \_ Benachrichtigung \_ \_         | Verzögerungszeit für das Beispiel in 100-Nanosecond-Einheiten. Wenn der Wert positiv ist, war das Beispiel spät. Wenn der Wert negativ ist, war das Beispiel früh.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    |
+| MF \_ QUALITY \_ NOTIFY \_ PROCESSING \_ LATENCY | Die von der Komponente eingeführte ungefähre Verarbeitungslatenz in Einheiten von 100 Nanosekunden.<br/> Verarbeitungslatenz ist die Latenz, die eine Komponente in die Pipeline einläuft, indem sie ein Beispiel verarbeitet. In einigen Fällen kann die Latenz nicht einfach abgeleitet werden, indem die Aufrufe von [**ZUDRQualityManager::NotifyProcessInput**](/windows/desktop/api/mfidl/nf-mfidl-imfqualitymanager-notifyprocessinput) und [**ZUDRQualityManager::NotifyProcessOutput betrachtet werden.**](/windows/desktop/api/mfidl/nf-mfidl-imfqualitymanager-notifyprocessoutput) Beispielsweise gibt es möglicherweise keine 1:1-Entsprechung zwischen Eingabe- und Ausgabebeispielen. In diesem Fall kann die Komponente ein MEQualityNotify-Ereignis mit der Verarbeitungslatenz senden. Wenn sich die Verarbeitungslatenz ändert, kann die Komponente während des Streamings jederzeit ein neues Ereignis senden.<br/> |
+| MF \_ QUALITY \_ NOTIFY \_ SAMPLE \_ LAG         | Verzögerungszeit für das Beispiel in Einheiten von 100 Nanosekunden. Wenn der Wert positiv ist, war die Stichprobe zu spät. Wenn der Wert negativ ist, war die Stichprobe früh.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    |
 
 
 
  
 
-Um den erweiterten Typ abzurufen, nennen Sie [**imfmediaevent:: getextendedtype**](/windows/desktop/api/mfobjects/nf-mfobjects-imfmediaevent-getextendedtype).
+Um den erweiterten Typ zu erhalten, rufen [**Sie DANNMediaEvent::GetExtendedType auf.**](/windows/desktop/api/mfobjects/nf-mfobjects-imfmediaevent-getextendedtype)
 
-Pipeline Komponenten sind nicht erforderlich, um dieses Ereignis zu senden.
+Pipelinekomponenten sind zum Senden dieses Ereignisses nicht erforderlich.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -54,20 +54,20 @@ Pipeline Komponenten sind nicht erforderlich, um dieses Ereignis zu senden.
 
 | Anforderung | Wert |
 |-------------------------------------|----------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                                           |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/>                                                     |
-| Header<br/>                   | <dl> <dt>Mfobjects. h (Include mfdl. h)</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ Vista-Desktop-Apps\]<br/>                                                           |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/>                                                     |
+| Header<br/>                   | <dl> <dt>Mfobjects.h (einschließlich Mfidl.h)</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**IMF-Manager**](/windows/desktop/api/mfidl/nn-mfidl-imfqualitymanager)
+[**VERERBungsqualityManager**](/windows/desktop/api/mfidl/nn-mfidl-imfqualitymanager)
 </dt> <dt>
 
-[Ereignisse Media Foundation](media-foundation-events.md)
+[Media Foundation Ereignisse](media-foundation-events.md)
 </dt> </dl>
 
  

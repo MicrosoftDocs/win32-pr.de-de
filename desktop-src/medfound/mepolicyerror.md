@@ -1,43 +1,43 @@
 ---
-description: Wird von einer vertrauenswürdigen Ausgabe ausgelöst, wenn beim Erzwingen der Ausgabe Richtlinie ein Fehler auftritt.
+description: Wird von einer vertrauenswürdigen Ausgabe ausgelöst, wenn beim Erzwingen der Ausgaberichtlinie ein Fehler auftritt.
 ms.assetid: 0cc62915-1ed6-4d1d-9600-0dac0b9034e3
-title: Mepolicyerror-Ereignis (mfobjects. h)
+title: MEPolicyError-Ereignis (Mfobjects.h)
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 3b75083974ee0e76d7d8e21f0a2c83c2feee8d59
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: ce1f0d05b73ea295ea3282af5950d4a9a61f833f61463cd095848563e3858c39
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106348518"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117877547"
 ---
-# <a name="mepolicyerror-event"></a>Mepolicyerror-Ereignis
+# <a name="mepolicyerror-event"></a>MEPolicyError-Ereignis
 
-Wird von einer vertrauenswürdigen Ausgabe ausgelöst, wenn beim Erzwingen der Ausgabe Richtlinie ein Fehler auftritt.
+Wird von einer vertrauenswürdigen Ausgabe ausgelöst, wenn beim Erzwingen der Ausgaberichtlinie ein Fehler auftritt.
 
-Wenn die Medien Sitzung dieses Ereignis empfängt, beendet Sie die Wiedergabe und leitet das Ereignis an die Anwendung weiter.
+Wenn die Mediensitzung dieses Ereignis empfängt, beendet sie die Wiedergabe und leitet das Ereignis an die Anwendung weiter.
 
 ## <a name="event-values"></a>Ereigniswerte
 
-Mögliche Werte, die von [**imfmediaevent:: GetValue**](/windows/desktop/api/mfobjects/nf-mfobjects-imfmediaevent-getvalue) abgerufen werden, sind folgende.
+Mögliche Werte, die von [**DERMEDIAEVENT::GetValue**](/windows/desktop/api/mfobjects/nf-mfobjects-imfmediaevent-getvalue) abgerufen werden, sind:
 
 
 
-| VARTYPE              | BESCHREIBUNG                           |
+| VARTYPE              | Beschreibung                           |
 |----------------------|---------------------------------------|
-| VT \_ leer<br/> | Keine Ereignisdaten.<br/> <br/> |
+| VT \_ EMPTY<br/> | Keine Ereignisdaten.<br/> <br/> |
 
 
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Mögliche Werte, die von [**imfmediaevent:: GetStatus**](/windows/desktop/api/mfobjects/nf-mfobjects-imfmediaevent-getstatus) abgerufen werden, sind die folgenden.
+Mögliche Werte, die von [**DERMEDIAEVENT::GetStatus**](/windows/desktop/api/mfobjects/nf-mfobjects-imfmediaevent-getstatus) abgerufen werden, sind:
 
 
 
-| Wert                      | BESCHREIBUNG                                                    |
+| Wert                      | Beschreibung                                                    |
 |----------------------------|----------------------------------------------------------------|
-| MF \_ E- \_ Richtlinie \_ nicht unterstützt | Die vertrauenswürdige Ausgabe unterstützt die aktuelle Ausgabe Richtlinie nicht. |
+| MF \_ \_ E-RICHTLINIE \_ NICHT UNTERSTÜTZT | Die vertrauenswürdige Ausgabe unterstützt die aktuelle Ausgaberichtlinie nicht. |
 
 
 
@@ -49,17 +49,17 @@ Mögliche Werte, die von [**imfmediaevent:: GetStatus**](/windows/desktop/api/mf
 
 | Anforderung | Wert |
 |-------------------------------------|----------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                                           |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/>                                                     |
-| Header<br/>                   | <dl> <dt>Mfobjects. h (Include mfdl. h)</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur Vista-Desktop-Apps\]<br/>                                                           |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/>                                                     |
+| Header<br/>                   | <dl> <dt>Mfobjects.h (include Mfidl.h)</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[Ereignisse Media Foundation](media-foundation-events.md)
+[Media Foundation Ereignisse](media-foundation-events.md)
 </dt> </dl>
 
  

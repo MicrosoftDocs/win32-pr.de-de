@@ -1,5 +1,5 @@
 ---
-description: 'Weitere Informationen zu: Table.ToString-Methode'
+description: Weitere Informationen finden Sie unter Table.ToString-Methode.
 title: Table.ToString-Methode
 TOCTitle: 'ToString method '
 ms:assetid: M:Microsoft.Isam.Esent.Interop.Table.ToString
@@ -33,7 +33,7 @@ ms.locfileid: "118484726"
 ---
 # <a name="tabletostring-method"></a>Table.ToString-Methode
 
-Gibt eine [Zeichenfolge](/dotnet/api/system.string) zurück, die die aktuelle [Tabelle](./table-class.md)darstellt.
+Gibt eine [Zeichenfolge zurück,](/dotnet/api/system.string) die die aktuelle [Tabelle darstellt.](./table-class.md)
 
 **Namespace:**  [Microsoft.Isam.Esent.Interop](./microsoft.isam.esent.interop-namespace.md)  
 **Assembly:**  Microsoft.Isam.Esent.Interop (in Microsoft.Isam.Esent.Interop.dll)
@@ -57,7 +57,7 @@ public override string ToString()
 #### <a name="return-value"></a>Rückgabewert
 
 Typ: [System.String](/dotnet/api/system.string)  
-Eine [Zeichenfolge,](/dotnet/api/system.string) die die aktuelle [Tabelle](./table-class.md)darstellt.  
+Eine [Zeichenfolge,](/dotnet/api/system.string) die die aktuelle [Tabelle darstellt.](./table-class.md)  
 
 ## <a name="see-also"></a>Weitere Informationen
 
@@ -65,6 +65,6 @@ Eine [Zeichenfolge,](/dotnet/api/system.string) die die aktuelle [Tabelle](./tab
 
 [Table-Klasse](./table-class.md)
 
-[Tabellenmember](./table-members.md)
+[Tabellenmitglieder](./table-members.md)
 
 [Microsoft.Isam.Esent.Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)

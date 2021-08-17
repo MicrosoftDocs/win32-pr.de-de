@@ -1,11 +1,11 @@
 ---
-title: Iwmpwiedergabe getiteminfo-Methode
-description: Die getiteminfo-Methode gibt den Wert eines durch den Namen angegebenen Wiedergabelisten Attributs zurück.
+title: IWMPPlaylist getItemInfo-Methode
+description: Die getItemInfo-Methode gibt den Wert eines durch den Namen angegebenen Wiedergabelistenattributs zurück.
 ms.assetid: 62e882d6-66bb-450c-9700-b99d30dd42fa
 keywords:
-- getiteminfo-Methode, Windows Media Player
-- getiteminfo-Methode, Windows Media Player, iwmpwiedergabe-Schnittstelle
-- Iwmpwiedergabe Interface, Windows Media Player, getiteminfo-Methode
+- getItemInfo-Methode Windows Media Player
+- getItemInfo-Methode Windows Media Player , IWMPPlaylist-Schnittstelle
+- IWMPPlaylist-Schnittstelle Windows Media Player , getItemInfo-Methode
 topic_type:
 - apiref
 api_name:
@@ -16,16 +16,16 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: ced433b13f5af2d1df8c12dba023b7fbb55c5f7d
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 54e3ad24f12333dbc9db5baf977300d1755a9cecc60739504da05478d5acc48e
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106366814"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117745752"
 ---
-# <a name="iwmpplaylistgetiteminfo-method"></a>Iwmpwiedergabe:: getiteminfo-Methode
+# <a name="iwmpplaylistgetiteminfo-method"></a>IWMPPlaylist::getItemInfo-Methode
 
-Die **getiteminfo** -Methode gibt den Wert eines durch den Namen angegebenen Wiedergabelisten Attributs zurück.
+Die **getItemInfo-Methode** gibt den Wert eines durch den Namen angegebenen Wiedergabelistenattributs zurück.
 
 ## <a name="syntax"></a>Syntax
 
@@ -53,22 +53,22 @@ Implements IWMPPlaylist.getItemInfo
 
 <dl> <dt>
 
-*bstrinname* \[ in\]
+*bstrName* \[ In\]
 </dt> <dd>
 
-Ein **System. String** -Wert, der der Name des Wiedergabelisten Attributs ist.
+Eine **System.String,die** der Name des Wiedergabelistenattributs ist.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Ein **System. String** -Wert, der den Wert des Wiedergabelisten Attributs ist.
+Eine **System.String,** die der Wert des Wiedergabelistenattributs ist.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Vor der Verwendung dieser Methode müssen Sie über Lesezugriff auf die Bibliothek verfügen. Weitere Informationen finden Sie unter [Bibliotheks Zugriff](library-access.md).
+Bevor Sie diese Methode verwenden können, benötigen Sie Lesezugriff auf die Bibliothek. Weitere Informationen finden Sie unter [Bibliothekszugriff.](library-access.md)
 
-Einen Beispielcode, der diese Eigenschaft verwendet, finden Sie unter der [AttributeCount](wmplibiwmpplaylist-iwmpplaylist-attributecount--vb-and-c.md) -Eigenschaft.
+Beispielcode, der diese Eigenschaft verwendet, finden Sie in der [attributeCount-Eigenschaft.](wmplibiwmpplaylist-iwmpplaylist-attributecount--vb-and-c.md)
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -76,20 +76,20 @@ Einen Beispielcode, der diese Eigenschaft verwendet, finden Sie unter der [Attri
 
 | Anforderung | Wert |
 |----------------------|------------------------------------------------------------------------------------------------------------------------|
-| Version<br/>   | Windows Media Player 9-Serie oder höher<br/>                                                                      |
+| Version<br/>   | Windows Media Player 9er Serie oder höher<br/>                                                                      |
 | Namespace<br/> | **WMPLib**<br/>                                                                                                  |
 | Assembly<br/>  | <dl> <dt>Interop.WMPLib.dll (Interop.WMPLib.dll.dll)</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Iwmpwiedergabe-Schnittstelle (VB und c#)**](iwmpplaylist--vb-and-c.md)
+[**IWMPPlaylist-Schnittstelle (VB und C#)**](iwmpplaylist--vb-and-c.md)
 </dt> <dt>
 
-[**Iwmpwiedergabe. Einstellungs Verzeichnis (VB und c#)**](wmplibiwmpplaylist-iwmpplaylist-setiteminfo--vb-and-c.md)
+[**IWMPPlaylist.setItemInfo (VB und C#)**](wmplibiwmpplaylist-iwmpplaylist-setiteminfo--vb-and-c.md)
 </dt> </dl>
 
  

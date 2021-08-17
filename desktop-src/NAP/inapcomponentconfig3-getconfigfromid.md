@@ -1,11 +1,11 @@
 ---
-title: INapComponentConfig3 getconfigfromid-Methode (napcommon. h)
-description: Wird von System Integritätsprüfungen (SHVs) implementiert, um eine Möglichkeit zum Abrufen von Konfigurationsdaten für eine bestimmte Konfigurations-ID zu bieten.
+title: INapComponentConfig3 GetConfigFromID-Methode (NapCommon.h)
+description: Wird von System health validators (SHVs) implementiert, um eine Möglichkeit zum Abrufen von Konfigurationsdaten für eine bestimmte Konfigurations-ID zu bieten.
 ms.assetid: 5c91681d-16d6-42f3-b1e0-c4b6e7561a73
 keywords:
-- Getconfigfromid-Methode NAP
-- Getconfigfromid-Methode NAP, INapComponentConfig3-Schnittstelle
-- INapComponentConfig3 Interface NAP, getconfigfromid-Methode
+- GetConfigFromID-Methode NAP
+- GetConfigFromID-Methode NAP, INapComponentConfig3-Schnittstelle
+- INapComponentConfig3-Schnittstelle NAP, GetConfigFromID-Methode
 topic_type:
 - apiref
 api_name:
@@ -16,21 +16,21 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 7ce3a0e20f19c73271cdcba4070972649fe25aea
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 638704b5706b68b67f854a6a52b6c845be3fb757b596e9f5425f315c7d679fb3
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "103740937"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118368381"
 ---
-# <a name="inapcomponentconfig3getconfigfromid-method"></a>INapComponentConfig3:: getconfigfromid-Methode
+# <a name="inapcomponentconfig3getconfigfromid-method"></a>INapComponentConfig3::GetConfigFromID-Methode
 
 > [!Note]  
-> Die Netzwerk Zugriffsschutz-Plattform ist ab Windows 10 nicht verfügbar.
+> Die Netzwerkzugriffsschutz-Plattform ist ab dem Windows 10
 
  
 
-Die **getconfigfromid** -Methode wird von System Integritätsprüfungen (SHVs) implementiert, um eine Möglichkeit zum Abrufen von Konfigurationsdaten für eine bestimmte Konfigurations-ID zu bieten.
+Die **GetConfigFromID-Methode** wird von System health validators (SHVs) implementiert, um eine Möglichkeit zum Abrufen von Konfigurationsdaten für eine bestimmte Konfigurations-ID zu bieten.
 
 ## <a name="syntax"></a>Syntax
 
@@ -49,45 +49,45 @@ HRESULT GetConfigFromID(
 
 <dl> <dt>
 
-*ConfigID* \[ in\]
+*configID* \[ In\]
 </dt> <dd>
 
-Ein-Wert, der die Konfiguration darstellt. Wenn *ConfigID* den Wert **0** hat, sollte der SHV die Standard Konfigurationsdaten in *OutData* zurückgeben.
+Ein -Wert, der die Konfiguration darstellt. Wenn *ConfigID* **0 ist,** sollte die SHV die Standardkonfigurationsdaten in *outdata zurückgeben.*
 
 </dd> <dt>
 
-*Anzahl* \[ vorgenommen\]
+*count* \[ out\]
 </dt> <dd>
 
-Die Größe (in Bytes) der Konfigurationsdaten, die in *OutData* zurückgegeben werden.
+Die Größe der in outdata zurückgegebenen Konfigurationsdaten in *Bytes.*
 
 </dd> <dt>
 
-*OutData* \[ vorgenommen\]
+*outdata* \[ out\]
 </dt> <dd>
 
-Bei der Rückgabe ein Bytearray, das die von der *ConfigID* dargestellten Konfigurationsdaten enthält.
+Bei der Rückgabe ein BYTE-Array, das die durch ConfigID dargestellten *Konfigurationsdaten enthält.*
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt basierend auf dem Ergebnis dieses Vorgangs einen der folgenden Fehlercodes zurück.
+Gibt einen der folgenden Fehlercodes basierend auf dem Ergebnis dieses Vorgangs zurück.
 
 
 
 | Rückgabecode                                                                                                    | Beschreibung                             |
 |----------------------------------------------------------------------------------------------------------------|-----------------------------------------|
 | <dl> <dt>**S \_ OK**</dt> </dl>                          | Der Vorgang ist erfolgreich.<br/> |
-| <dl> <dt>**NAP- \_ E- \_ SHV- \_ Konfiguration \_ nicht \_ gefunden**</dt> </dl> | *ConfigID* kann nicht gefunden werden.<br/>  |
+| <dl> <dt>**NAP \_ E \_ \_ SHV-KONFIGURATION NICHT \_ \_ GEFUNDEN**</dt> </dl> | *ConfigID* wurde nicht gefunden.<br/>  |
 
 
 
  
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die [**newconfig**](inapcomponentconfig3-newconfig.md) -Methode muss verwendet werden, um Konfigurationsdaten für die *ConfigID* zuzuordnen, bevor diese Methode aufgerufen werden kann.
+Die [**NewConfig-Methode**](inapcomponentconfig3-newconfig.md) muss zum Zuordnen von Konfigurationsdaten für *ConfigID verwendet* werden, bevor diese Methode aufgerufen werden kann.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -96,13 +96,13 @@ Die [**newconfig**](inapcomponentconfig3-newconfig.md) -Methode muss verwendet w
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Nicht unterstützt<br/>                                                                |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 R2 \[ -Desktop-Apps\]<br/>                                  |
-| Header<br/>                   | <dl> <dt>Napcommon. h</dt> </dl>   |
-| IDL<br/>                      | <dl> <dt>Napcommon. idl</dt> </dl> |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server 2008 \[ R2-Desktop-Apps\]<br/>                                  |
+| Header<br/>                   | <dl> <dt>NapCommon.h</dt> </dl>   |
+| Idl<br/>                      | <dl> <dt>NapCommon.idl</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 

@@ -1,19 +1,19 @@
 ---
-description: Das erforderliche <propertyBag> Element gibt einen Satz von einer oder mehreren Eigenschaften an, die von diesem Speicherort Anbieter verwendet werden.
+description: Das erforderliche Element gibt einen Satz von Eigenschaften an, die <propertyBag> von diesem Speicherortanbieter verwendet werden.
 ms.assetid: 63f8f2e4-3b52-4d6e-8d3a-2e133aac0e86
-title: PropertyBag-Element (Suchconnector-Schema)
+title: propertyBag-Element (Suchconnectorschema)
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: e8fb9e80691e929f7fcceaff3dded4b99a242e92
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 50a8b888ba57fd71c892c61bc8b3f29a8ebc7f9e240162d0ecf6b3bbff41d2e1
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104041620"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118226480"
 ---
-# <a name="propertybag-element-search-connector-schema"></a>PropertyBag-Element (Suchconnector-Schema)
+# <a name="propertybag-element-search-connector-schema"></a>propertyBag-Element (Suchconnectorschema)
 
-Das erforderliche <propertyBag> Element gibt einen Satz von einer oder mehreren Eigenschaften an, die von diesem Speicherort Anbieter verwendet werden.
+Das erforderliche Element gibt einen Satz von Eigenschaften an, die <propertyBag> von diesem Speicherortanbieter verwendet werden.
 
 ## <a name="syntax"></a>Syntax
 
@@ -48,13 +48,13 @@ Das erforderliche <propertyBag> Element gibt einen Satz von einer oder mehreren 
 
 | Übergeordnetes Element                                                                                 | Untergeordnete Elemente                                                                                 |
 |------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------|
-| [locationprovider-Element (Suchconnector-Schema)](search-schema-sconn-locationprovider.md) | [Property-Element (Suchconnector-Schema)](search-schema-sconn-locationproviderproperty.md) |
+| [locationProvider-Element (Connectorschema suchen)](search-schema-sconn-locationprovider.md) | [property-Element (Search Connector Schema)](search-schema-sconn-locationproviderproperty.md) |
 
 
 
  
 
-## <a name="example-of-a-propertybag-element-and-property-elements"></a>Beispiel für ein PropertyBag-Element und Eigenschaften Elemente
+## <a name="example-of-a-propertybag-element-and-property-elements"></a>Beispiel für ein PropertyBag-Element und Eigenschaftenelemente
 
 
 ```

@@ -1,5 +1,5 @@
 ---
-description: Führt zwei Druck Tickets zusammen und gibt ein gültiges, brauchbares Druck Ticket zurück.
+description: Führt zwei Drucktickets zusammen und gibt ein gültiges, funktionsfähiges Druckticket zurück.
 ms.assetid: 4aa7b9de-abf2-4781-942e-0b992a6bffed
 title: MergeAndValidatePrintTicketThunk2-Funktion
 ms.topic: reference
@@ -13,18 +13,18 @@ api_type:
 - DllExport
 api_location:
 - prntvpt.dll
-ms.openlocfilehash: 4a21b9e505e39d64e8e0c696a3b8a6432a012d76
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 156a242d9aa017cc67106a39db6d86809e0ac6f464566205ead09f69fe1b3b7d
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106369047"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118471673"
 ---
 # <a name="mergeandvalidateprintticketthunk2-function"></a>MergeAndValidatePrintTicketThunk2-Funktion
 
-\[Diese Funktion wird nicht unterstützt und wird in zukünftigen Versionen von Windows möglicherweise deaktiviert oder gelöscht. [**Ptmergeandvalidateprintticket**](/windows/desktop/api/prntvpt/nf-prntvpt-ptmergeandvalidateprintticket) bietet entsprechende Funktionen und sollte stattdessen verwendet werden.\]
+\[Diese Funktion wird nicht unterstützt und kann in zukünftigen Versionen von Windows deaktiviert oder gelöscht werden. [**PTMergeAndValidatePrintTicket**](/windows/desktop/api/prntvpt/nf-prntvpt-ptmergeandvalidateprintticket) bietet entsprechende Funktionen und sollte stattdessen verwendet werden.\]
 
-Führt zwei Druck Tickets zusammen und gibt ein gültiges, brauchbares Druck Ticket zurück.
+Führt zwei Drucktickets zusammen und gibt ein gültiges, funktionsfähiges Druckticket zurück.
 
 ## <a name="syntax"></a>Syntax
 
@@ -49,72 +49,72 @@ HRESULT MergeAndValidatePrintTicketThunk2(
 
 <dl> <dt>
 
-*hprovider* \[ in\]
+*hProvider* \[ In\]
 </dt> <dd>
 
-Ein Handle für einen geöffneten Druck ticketanbieter. Dieses Handle wird von der [**bindptproviderthunk**](bindptproviderthunk.md) -Funktion zurückgegeben.
+Ein Handle für einen offenen Druckticketanbieter. Dieses Handle wird von der [**BindPTProviderThunk-Funktion**](bindptproviderthunk.md) zurückgegeben.
 
 </dd> <dt>
 
-*pbaseprintticket* \[ in\]
+*pBasePrintTicket* \[ In\]
 </dt> <dd>
 
-Der Puffer, der die grundlegenden Druck Ticketdaten enthält, wie im [Druck Schema](./printschema.md)beschrieben, in XML ausgedrückt.
+Der Puffer, der die Basisdaten des Drucktickets enthält, ausgedrückt in XML, wie im [Druckschema](./printschema.md)beschrieben.
 
 </dd> <dt>
 
-*baseprintticketlength* \[ in\]
+*basePrintTicketLength* \[ In\]
 </dt> <dd>
 
-Die Größe (in Bytes) des Puffers, auf den *pbaseprintticket* verweist.
+Die Größe des Puffers in Bytes, auf den *von pBasePrintTicket* verwiesen wird.
 
 </dd> <dt>
 
-*pdelta-PrintTicket* \[ in, optional\]
+*pDeltaPrintTicket* \[ in, optional\]
 </dt> <dd>
 
-Der Puffer, der das zu Merge Ende Druck Ticket enthält. Die Druck Ticketdaten werden in XML ausgedrückt, wie im [Print-Schema](./printschema.md)beschrieben. Der Wert dieses Parameters kann **null** sein.
+Der Puffer, der das zusammenzuführende Druckticket enthält. Die Druckticketdaten werden in XML ausgedrückt, wie im [Druckschema](./printschema.md)beschrieben. Der Wert dieses Parameters kann **NULL** sein.
 
 </dd> <dt>
 
-*Delta printticketlength* \[ in\]
+*deltaPrintTicketLength* \[ In\]
 </dt> <dd>
 
-Die Größe (in Bytes) des Puffers, auf den *pdelta-PrintTicket* verweist.
+Die Größe des Puffers in Bytes, auf den *pDeltaPrintTicket* verweist.
 
 </dd> <dt>
 
-*Bereich* \[ in\]
+*Bereich* \[ In\]
 </dt> <dd>
 
-Der-Wert, der angibt, ob der Bereich von *pdelta-PrintTicket* und *ppvalidatedprintticket* eine einzelne Seite, ein gesamtes Dokument oder alle Dokumente im Druckauftrag ist. Der Wert dieses Parameters muss ein Member der [**eprintticketscope**](/windows/desktop/api/prntvpt/ne-prntvpt-eprintticketscope) -Enumeration sein, die als **DWORD** umgewandelt wird.
+Der Wert, der angibt, ob der Bereich von *pDeltaPrintTicket* und *ppValidatedPrintTicket* eine einzelne Seite, ein gesamtes Dokument oder alle Dokumente im Druckauftrag ist. Der Wert dieses Parameters muss ein Member der [**EPrintTicketScope-Enumeration**](/windows/desktop/api/prntvpt/ne-prntvpt-eprintticketscope) sein, der in **ein DWORD-Element** umformt wird.
 
 </dd> <dt>
 
-*ppvalidatedprintticket* \[ vorgenommen\]
+*ppValidatedPrintTicket* \[ out\]
 </dt> <dd>
 
-Die Adresse des Puffers, der das zusammengeführte und validierte Druck Ticket enthält. Diese Funktion Ruft die [**CoTaskMemAlloc**](/windows/desktop/api/combaseapi/nf-combaseapi-cotaskmemalloc) -Funktion auf, um diesen Puffer zuzuordnen. Wenn der Puffer nicht mehr benötigt wird, muss der Aufrufer ihn durch Aufrufen von [**CoTaskMemFree**](/windows/desktop/api/combaseapi/nf-combaseapi-cotaskmemfree)freigeben.
+Die Adresse des Puffers, der das zusammengeführte und überprüfte Druckticket enthält. Diese Funktion ruft [**CoTaskMemAlloc**](/windows/desktop/api/combaseapi/nf-combaseapi-cotaskmemalloc) auf, um diesen Puffer zuzuordnen. Wenn der Puffer nicht mehr benötigt wird, muss der Aufrufer ihn durch Aufrufen von [**CoTaskMemFree**](/windows/desktop/api/combaseapi/nf-combaseapi-cotaskmemfree)freigeben.
 
 </dd> <dt>
 
-*pvalidatedprintticketlength* \[ vorgenommen\]
+*pValidatedPrintTicketLength* \[ out\]
 </dt> <dd>
 
-Die Größe des von *ppvalidatedprintticket* referenzierten Puffers in Bytes.
+Die Größe des Puffers in Bytes, auf den *ppValidatedPrintTicket* verweist.
 
 </dd> <dt>
 
-*pbstrauerrormessage* \[ Out, optional\]
+*pbstrErrorMessage* \[ out, optional\]
 </dt> <dd>
 
-Ein Zeiger auf eine Zeichenfolge, die angibt, was, wenn überhaupt, für das Druck Ticket in *pbaseprintticket* oder *pdelta Info Ticket* ungültig ist. Wenn beide gültig sind, ist dieser Wert **null**. Wenn *pbstrauerrormessage* bei Rückgabe der Funktion nicht **null** ist, muss der Aufrufer die Zeichenfolge mit [**SysFreeString**](/windows/win32/api/oleauto/nf-oleauto-sysfreestring)freigeben.
+Ein Zeiger auf eine Zeichenfolge, die angibt, was für das Druckticket in *pBasePrintTicket* oder *pDeltaPrintTicket* ungültig ist. Wenn beide gültig sind, ist dieser Wert **NULL.** Wenn *pbstrErrorMessage* nicht **NULL** ist, wenn die Funktion zurückgegeben wird, muss der Aufrufer die Zeichenfolge mit [**SysFreeString**](/windows/win32/api/oleauto/nf-oleauto-sysfreestring)freigeben.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Wenn die Methode erfolgreich ausgeführt wird, gibt Sie **S \_ OK** zurück; andernfalls wird ein **HRESULT** -Fehlercode zurückgegeben. Weitere Informationen zu COM-Fehlercodes finden Sie unter [Fehlerbehandlung](../com/error-handling-in-com.md).
+Wenn die Methode erfolgreich ausgeführt wird, wird **S \_ OK** zurückgegeben. Andernfalls wird ein **HRESULT-Fehlercode** zurückgegeben. Weitere Informationen zu COM-Fehlercodes finden Sie unter [Fehlerbehandlung.](../com/error-handling-in-com.md)
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -122,20 +122,20 @@ Wenn die Methode erfolgreich ausgeführt wird, gibt Sie **S \_ OK** zurück; and
 
 | Anforderung | Wert |
 |-------------------------------------|----------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows XP \[ -Desktop-Apps\]<br/>                                            |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/>                                   |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur XP-Desktop-Apps\]<br/>                                            |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                                   |
 | DLL<br/>                      | <dl> <dt>Prntvpt.dll</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[Druck Schema](./printschema.md)
+[Druckschema](./printschema.md)
 </dt> <dt>
 
-[**Ptmergeandvalidateprintticket**](/windows/desktop/api/prntvpt/nf-prntvpt-ptmergeandvalidateprintticket)
+[**PTMergeAndValidatePrintTicket**](/windows/desktop/api/prntvpt/nf-prntvpt-ptmergeandvalidateprintticket)
 </dt> <dt>
 
 [Drucken](printdocs-printing.md)

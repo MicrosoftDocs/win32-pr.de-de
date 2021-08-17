@@ -25,7 +25,7 @@ ms.locfileid: "118403489"
 ---
 # <a name="cbaseinputpinbreakconnect-method"></a>CBaseInputPin.BreakConnect-Methode
 
-Die `BreakConnect` -Methode gibt den Pin aus einer Verbindung frei.
+Die `BreakConnect` -Methode gibt den Pin von einer Verbindung frei.
 
 ## <a name="syntax"></a>Syntax
 
@@ -42,7 +42,7 @@ Diese Methode hat keine Parameter.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt S \_ OK zurück, wenn erfolgreich, oder einen **HRESULT-Wert,** der die Ursache des Fehlers angibt.
+Gibt S \_ OK zurück, wenn erfolgreich, oder ein **HRESULT-Wert,** der die Ursache des Fehlers angibt.
 
 ## <a name="remarks"></a>Hinweise
 

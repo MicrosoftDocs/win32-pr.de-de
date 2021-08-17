@@ -1,29 +1,29 @@
 ---
-description: X-Dateiformat, Lade- und Speicheroptionen.
+description: Optionen für X-Dateiformat, Laden und Speichern.
 ms.assetid: 813a2b4b-6577-4cdf-a2e6-e06870638354
 title: D3DXF
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: e230fc08ac4d7f8713959f2025f67262046ecea5
-ms.sourcegitcommit: b40a986d5ded926ae7617119cdd35d99b533bad9
+ms.openlocfilehash: d286ad4cf64133683de026893beb9fa081899e6b170e4b3adb478798eb4b3edf
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/24/2021
-ms.locfileid: "110343645"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118096075"
 ---
 # <a name="d3dxf"></a>D3DXF
 
-X-Dateiformat, Lade- und Speicheroptionen.
+Optionen für X-Dateiformat, Laden und Speichern.
 
 ## <a name="file-formats"></a>Dateiformate
 
-In der folgenden Tabelle wird der Typ der Dateidaten angegeben:
+Die folgende Tabelle gibt den Typ der Dateidaten an:
 
 
 
-| \#definiert für Das Dateiformat.     | Wert | BESCHREIBUNG                                                                                    |
+| \#defines für Das Dateiformat     | Wert | Beschreibung                                                                                    |
 |-------------------------------|-------|------------------------------------------------------------------------------------------------|
-| D3DXF \_ FILEFORMAT \_ BINARY     | 0     | Binärdatei im Legacyformat. Weitere Informationen [finden Sie unter X-Dateireferenz (Legacy).](dx9-graphics-reference-x-file.md) |
+| D3DXF \_ FILEFORMAT \_ BINARY     | 0     | Binärdatei im Legacyformat. Siehe [X-Dateireferenz (Legacy)](dx9-graphics-reference-x-file.md). |
 | D3DXF \_ FILEFORMAT \_ TEXT       | 1     | Textdatei.                                                                                     |
 | D3DXF \_ FILEFORMAT \_ COMPRESSED | 2     | Komprimierte Datei. Mit diesem Flag müssen Sie auch das Binärformat oder das Textformat angeben.   |
 
@@ -31,13 +31,13 @@ In der folgenden Tabelle wird der Typ der Dateidaten angegeben:
 
  
 
-## <a name="file-load-options"></a>Optionen zum Laden von Dateien
+## <a name="file-load-options"></a>Dateiladeoptionen
 
-In der folgenden Tabelle werden Optionen zum Laden von Dateien mit X-Dateien angegeben:
+In der folgenden Tabelle sind Dateiladeoptionen mit X-Dateien angegeben:
 
 
 
-| \#Definieren                      | Wert | BESCHREIBUNG                |
+| \#Definieren                      | Wert | Beschreibung                |
 |-------------------------------|-------|----------------------------|
 | D3DXF \_ FILELOAD \_ FromFile     | 0     | Laden von Daten aus einer Datei.     |
 | D3DXF \_ FILELOAD \_ FROMWFILE    | 1     | Laden von Daten aus einer Datei.     |
@@ -54,7 +54,7 @@ In der folgenden Tabelle werden Optionen zum Speichern und Laden von Dateien mit
 
 
 
-| \#Definieren                 | Wert | BESCHREIBUNG                    |
+| \#Definieren                 | Wert | Beschreibung                    |
 |--------------------------|-------|--------------------------------|
 | D3DXF \_ FILESAVE \_ TOFILE  | 0     | Speichern sie in einer Datei.                |
 | D3DXF \_ FILESAVE \_ TOWFILE | 1     | Speichern Sie in einer Breitzeichendatei. |

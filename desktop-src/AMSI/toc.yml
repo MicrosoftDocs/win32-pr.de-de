@@ -3,7 +3,7 @@
   items:
     - name: Wie AMSI hilft
       href: how-amsi-helps.md
-    - name: 'Zielgruppe für Entwickler, Beispiele'
+    - name: 'Entwicklergruppe, Beispiele'
       href: dev-audience.md
     - name: AMSI-Referenz
       href: antimalware-scan-interface-reference.md

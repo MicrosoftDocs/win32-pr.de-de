@@ -1,5 +1,5 @@
 ---
-description: 'Weitere Informationen finden Sie unter: JET_COLUMNDEF. ContentEquals-Methode'
+description: 'Erfahren Sie mehr über: JET_COLUMNDEF. ContentEquals-Methode'
 title: JET_COLUMNDEF. ContentEquals-Methode
 TOCTitle: 'ContentEquals method '
 ms:assetid: M:Microsoft.Isam.Esent.Interop.JET_COLUMNDEF.ContentEquals(Microsoft.Isam.Esent.Interop.JET_COLUMNDEF)
@@ -69,7 +69,7 @@ public bool ContentEquals(
 #### <a name="return-value"></a>Rückgabewert
 
 Typ: [System.Boolean](/dotnet/api/system.boolean)  
-TRUE, wenn die beiden Instanzen gleich sind.  
+True, wenn die beiden Instanzen gleich sind.  
 
 #### <a name="implements"></a>Implementiert
 
@@ -81,6 +81,6 @@ TRUE, wenn die beiden Instanzen gleich sind.
 
 [JET_COLUMNDEF-Klasse](./jet-columndef-class.md)
 
-[JET_COLUMNDEF Member](./jet-columndef-members.md)
+[JET_COLUMNDEF-Member](./jet-columndef-members.md)
 
 [Microsoft.Isam.Esent.Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)

@@ -1,17 +1,17 @@
 ---
-title: EAPHost-Supplicant-Strukturen
-description: Erfahren Sie mehr über die EAPHost Supplicant-API-Strukturen, wie z \_ . b. EAP \_ -Eigenschaften Array "req" und EAP- \_ Methode \_ \_ .
+title: EAPHost Supplicant-Strukturen
+description: Erfahren Sie mehr über die EAPHost Supplicant-API-Strukturen, z. B. EAP \_ CRED \_ REQ und EAP \_ METHOD PROPERTY \_ \_ ARRAY.
 ms.assetid: 77595f36-140d-4d8e-af8e-63e9de0031c4
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 7e7121e123fd790a54a95dafb59c080f435ca917
-ms.sourcegitcommit: b0ebdefc3dcd5c04bede94091833aa1015a2f95c
+ms.openlocfilehash: e6703070eabbc571927569f28c39109bbe1eda2f1c70b621982dde3ab4ac3a61
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/21/2020
-ms.locfileid: "104391003"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117904617"
 ---
-# <a name="eaphost-supplicant-structures"></a>EAPHost-Supplicant-Strukturen
+# <a name="eaphost-supplicant-structures"></a>EAPHost Supplicant-Strukturen
 
 Die EAPHost Supplicant-API-Strukturen lauten wie folgt.
 
@@ -19,27 +19,27 @@ Die EAPHost Supplicant-API-Strukturen lauten wie folgt.
 
 | Struktur                                                                        | BESCHREIBUNG                                                                                                          |
 |----------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------|
-| [**EAP- \_ Kred- \_ req**](eap-cred-req.md)                                           | Enthält sowohl die alten als auch die neuen EAP-Anmelde Informationen für einen Vorgang zum Ändern von Anmelde Informationen.                                    |
-| [**EAP-Benutzer \_ -e/a \_**](eap-cred-resp.md)                                         | Enthält sowohl die alten als auch die neuen EAP-Anmelde Informationen für einen Vorgang zum Ändern von Anmelde Informationen.                                    |
-| [**EAP- \_ \_ ablaufungsablauf- \_ req**](/windows/desktop/api/eaptypes/ns-eaptypes-eap_cred_expiry_req)                            | Enthält sowohl die alten als auch die neuen EAP-Anmelde Informationen für den Ablauf von Anmelde Informationen.                                     |
-| [**EAP- \_ \_ Ablaufs Ablauf (e) \_**](/previous-versions/windows/desktop/legacy/bb530539(v=vs.85))                      | Enthält sowohl die alten als auch die neuen EAP-Anmelde Informationen für die Ablauf Vorgänge der Anmelde Informationen.                                    |
-| [**EAP- \_ \_ Anmelde- \_ req**](eap-cred-logon-req.md)                              | Enthält EAP-Anmelde Informationen für die Netzwerk Authentifizierung.                                                                 |
-| [**EAP- \_ \_ Anmelde- \_ Anmeldedienst (e)**](eap-cred-logon-resp.md)                            | Enthält EAP-Anmelde Informationen für die Netzwerk Authentifizierung.                                                                 |
-| [**interaktive EAP- \_ \_ Benutzeroberflächen \_ Daten**](/windows/desktop/api/eaptypes/ns-eaptypes-eap_interactive_ui_data)                    | Enthält Konfigurationsinformationen für interaktive Benutzeroberflächen Komponenten, die auf einem EAP-Supplicant ausgelöst werden.            |
-| [**EAP- \_ Methoden \_ Eigenschaft**](/windows/desktop/api/EapTypes/ns-eaptypes-eap_method_property)                             | Windows 7 oder höher: stellt eine Methoden Eigenschaft dar.                                                                    |
-| [**\_ \_ Eigenschaften \_ Array der EAP-Methode**](/windows/desktop/api/EapTypes/ns-eaptypes-eap_method_property_array)                | Windows 7 oder höher: enthält ein Array von Methoden Eigenschaften Strukturen.                                                 |
-| [**Eigenschafts Wert der EAP- \_ Methode \_ \_**](/previous-versions/windows/desktop/api/EapTypes/ns-eaptypes-eap_method_property_value)                | Windows 7 oder höher: enthält einen Eigenschaften Wert der-Methode.                                                                |
-| [**Eigenschafts Wert der EAP- \_ Methode \_ \_ \_ bool**](/windows/desktop/api/EapTypes/ns-eaptypes-eap_method_property_value_bool)     | Windows 7 oder höher: enthält den Eigenschafts Wert einer booleschen Datentyp Methode.                                                 |
-| [**EAP- \_ Methoden- \_ Eigenschafts \_ Wert \_ DWORD**](/windows/desktop/api/EapTypes/ns-eaptypes-eap_method_property_value_dword)   | Windows 7 oder höher: enthält den Eigenschafts Wert einer DWORD-Datentyp Methode.                                                |
-| [**\_ \_ Eigenschaften \_ Wert- \_ Zeichenfolge der EAP-Methode**](/windows/desktop/api/EapTypes/ns-eaptypes-eap_method_property_value_string) | Windows 7 oder höher: enthält einen Eigenschafts Wert für eine Zeichen folgen-Datentyp Methode.                                               |
-| [**EAPHost-Authentifizierungs \_ \_ Informationen**](/windows/desktop/api/eaphostpeertypes/ns-eaphostpeertypes-eaphost_auth_info)                                 | Beschreibt die aktuellen Authentifizierungsinformationen in verschiedenen Phasen des EAP-Authentifizierungsprozesses.          |
-| [**Eaphostpeer-methodresult**](/windows/win32/api/eaphostpeertypes/ns-eaphostpeertypes-eaphostpeermethodresult)                       | Enthält die von EAPHost generierten Ergebnisdaten während einer Authentifizierungs Sitzung, die dann an eine EAP-Methode weitergegeben wird. |
-| [**Eaphostpeer-Napinfo**](/windows/win32/api/eaphostpeertypes/ns-eaphostpeertypes-eaphostpeermethodresult)                            | Windows 7 oder höher: enthält Informationen zum Netzwerk Zugriffsschutz (Network Access Protection, NAP) für einen EAP-Supplicant.                   |
+| [**EAP \_ CRED \_ REQ**](eap-cred-req.md)                                           | Enthält sowohl die alten als auch die neuen EAP-Anmeldeinformationen für Änderungsvorgänge für Anmeldeinformationen.                                    |
+| [**EAP \_ CRED \_ RESP**](eap-cred-resp.md)                                         | Enthält sowohl die alten als auch die neuen EAP-Anmeldeinformationen für Änderungsvorgänge für Anmeldeinformationen.                                    |
+| [**EAP \_ CRED \_ EXPIRY \_ REQ**](/windows/desktop/api/eaptypes/ns-eaptypes-eap_cred_expiry_req)                            | Enthält sowohl die alten als auch die neuen EAP-Anmeldeinformationen für Vorgänge zum Ablauf von Anmeldeinformationen.                                     |
+| [**EAP \_ CRED \_ EXPIRY \_ RESP**](/previous-versions/windows/desktop/legacy/bb530539(v=vs.85))                      | Enthält sowohl die alten als auch die neuen EAP-Anmeldeinformationen für Vorgänge zum Ablauf von Anmeldeinformationen.                                    |
+| [**REQ \_ DER EAP-CRED-ANMELDUNG \_ \_**](eap-cred-logon-req.md)                              | Enthält EAP-Anmeldeinformationen für die Netzwerkauthentifizierung.                                                                 |
+| [**EAP \_ CRED \_ LOGON \_ RESP**](eap-cred-logon-resp.md)                            | Enthält EAP-Anmeldeinformationen für die Netzwerkauthentifizierung.                                                                 |
+| [**INTERAKTIVE \_ \_ EAP-BENUTZEROBERFLÄCHENDATEN \_**](/windows/desktop/api/eaptypes/ns-eaptypes-eap_interactive_ui_data)                    | Enthält Konfigurationsinformationen für interaktive Benutzeroberflächenkomponenten, die auf einem EAP-Supplicant ausgelöst werden.            |
+| [**\_EAP-METHODENEIGENSCHAFT \_**](/windows/desktop/api/EapTypes/ns-eaptypes-eap_method_property)                             | Windows 7 oder höher: Stellt eine Methodeneigenschaft dar.                                                                    |
+| [**\_EIGENSCHAFTENARRAY DER EAP-METHODE \_ \_**](/windows/desktop/api/EapTypes/ns-eaptypes-eap_method_property_array)                | Windows 7 oder höher: Enthält ein Array von Methodeneigenschaftsstrukturen.                                                 |
+| [**\_ \_ EAP-METHODENEIGENSCHAFTSWERT \_**](/previous-versions/windows/desktop/api/EapTypes/ns-eaptypes-eap_method_property_value)                | Windows 7 oder höher: Enthält einen Methodeneigenschaftswert.                                                                |
+| [**\_EAP-METHODENEIGENSCHAFTSWERT \_ \_ \_ BOOL**](/windows/desktop/api/EapTypes/ns-eaptypes-eap_method_property_value_bool)     | Windows 7 oder höher: Enthält einen BOOL-Datentyp-Methodeneigenschaftswert.                                                 |
+| [**EAP \_ METHOD \_ PROPERTY \_ VALUE \_ DWORD**](/windows/desktop/api/EapTypes/ns-eaptypes-eap_method_property_value_dword)   | Windows 7 oder höher: Enthält einen Eigenschaftswert der DWORD-Datentypmethode.                                                |
+| [**EAP \_ METHOD \_ PROPERTY \_ VALUE \_ STRING**](/windows/desktop/api/EapTypes/ns-eaptypes-eap_method_property_value_string) | Windows 7 oder höher: Enthält einen Zeichenfolgendatentyp-Methodeneigenschaftswert.                                               |
+| [**\_EAPHOST-AUTHENTIFIZIERUNGSINFORMATIONEN \_**](/windows/desktop/api/eaphostpeertypes/ns-eaphostpeertypes-eaphost_auth_info)                                 | Beschreibt aktuelle Authentifizierungsinformationen in verschiedenen Phasen des EAP-Authentifizierungsprozesses.          |
+| [**EapHostPeerMethodResult**](/windows/win32/api/eaphostpeertypes/ns-eaphostpeertypes-eaphostpeermethodresult)                       | Enthält die Von EAPHost während einer Authentifizierungssitzung generierten Ergebnisdaten, die dann an eine EAP-Methode übergeben werden. |
+| [**EapHostPeerNapInfo**](/windows/win32/api/eaphostpeertypes/ns-eaphostpeertypes-eaphostpeermethodresult)                            | Windows 7 oder höher: Enthält die NAP-Informationen (Network Access Protection) zu einem EAP-Supplicant.                   |
 
 
 
- 
+ 
 
- 
+ 
 
- 
+ 

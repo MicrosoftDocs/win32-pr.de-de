@@ -20,18 +20,18 @@ api_type:
 - Schema
 api_location:
 - All
-ms.openlocfilehash: 5f305387a29d1d1569addafd127f53c98246e1a7
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: c248a437651396811f71c04e72dd8b209c5d10823f49d03abbe7e9d9ee6b6867
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "104216322"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118110197"
 ---
 # <a name="__securitydescriptor-class"></a>\_\_SecurityDescriptor-Klasse
 
-Die abstrakte System Klasse **\_ \_ securityDescriptor** stellt eine [*Sicherheits Beschreibung*](/windows/desktop/SecGloss/s-gly)dar.
+Die abstrakte **\_ \_ SecurityDescriptor-Systemklasse** stellt einen [*Sicherheitsdeskriptor*](/windows/desktop/SecGloss/s-gly)dar.
 
-Die folgende Syntax wird durch MOF-Code (Managed Object Format) vereinfacht und schließt alle geerbten Eigenschaften ein. Eigenschaften werden in alphabetischer Reihenfolge und nicht in der MOF-Reihenfolge aufgelistet.
+Die folgende Syntax wird durch MOF-Code (Managed Object Format) vereinfacht und schließt alle geerbten Eigenschaften ein. Eigenschaften werden in alphabetischer Reihenfolge und nicht in MOF-Reihenfolge aufgeführt.
 
 ## <a name="syntax"></a>Syntax
 
@@ -49,43 +49,43 @@ class __SecurityDescriptor
 
 ## <a name="members"></a>Member
 
-Die **\_ \_ securityDescriptor** -Klasse verfügt über diese Typen von Membern:
+Die **\_ \_ SecurityDescriptor-Klasse** verfügt über folgende Typen von Membern:
 
 -   [Eigenschaften](#properties)
 
 ### <a name="properties"></a>Eigenschaften
 
-Die **\_ \_ securityDescriptor** -Klasse verfügt über diese Eigenschaften.
+Die **\_ \_ SecurityDescriptor-Klasse** verfügt über diese Eigenschaften.
 
 <dl> <dt>
 
-**ControlFlags**
+**Controlflags**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt32**
+Datentyp: **uint32**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Bitflags, die Informationen über den Inhalt und das Format des Deskriptors bereitstellen. Eine Beschreibung der Flags finden Sie in der Eigenschaft " **ControlFlags** " in der Win32-Klasse " [**\_ securityDescriptor**](/previous-versions/windows/desktop/secrcw32prov/win32-securitydescriptor) ".
+Bitflags, die Informationen zum Inhalt und Format des Deskriptors bereitstellen. Eine Beschreibung der Flags finden Sie in der **ControlFlags-Eigenschaft** in der [**Win32 \_ SecurityDescriptor-Klasse.**](/previous-versions/windows/desktop/secrcw32prov/win32-securitydescriptor)
 
 </dd> <dt>
 
-**DACL**
+**Dacl**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **[**\_ \_ ACE**](--ace.md)** -Array
+Datentyp: **[**\_ \_ ACE-Array**](--ace.md)**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
 </dt> </dl>
 
-Ein Array von [**\_ \_ ACE**](--ace.md) -Einträgen, die den Zugriff auf das-Objekt angeben.
+Ein Array von [**\_ \_ ACE-Einträgen,**](--ace.md) die den Zugriff auf das Objekt angeben.
 
 </dd> <dt>
 
-**Gruppieren**
+**Gruppe**
 </dt> <dd> <dl> <dt>
 
 Datentyp: **[ **\_ \_ ACE**](--ace.md)**
@@ -94,7 +94,7 @@ Datentyp: **[ **\_ \_ ACE**](--ace.md)**
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-ACE, der den Vertrauens nehmer identifiziert, der die Gruppe des Objekts darstellt.
+ACE, der den Vertrauensnehmer identifiziert, der die Gruppe des Objekts darstellt.
 
 </dd> <dt>
 
@@ -107,11 +107,11 @@ Datentyp: **[ **\_ \_ ACE**](--ace.md)**
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-ACE, der den Vertrauens nehmer identifiziert, der den Besitzer des Objekts darstellt.
+ACE, der den Vertrauensnehmer identifiziert, der den Besitzer des Objekts darstellt.
 
 </dd> <dt>
 
-**SACL**
+**Sacl**
 </dt> <dd> <dl> <dt>
 
 Datentyp: **[ **\_ \_ ACE**](--ace.md)**
@@ -120,26 +120,26 @@ Datentyp: **[ **\_ \_ ACE**](--ace.md)**
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Ein Array von [**\_ \_ ACE**](--ace.md) -Einträgen, das Benutzer und Gruppen identifiziert, für die Überwachungsinformationen gesammelt werden.
+Ein Array von [**\_ \_ ACE-Einträgen,**](--ace.md) das Benutzer und Gruppen identifiziert, für die Überwachungsinformationen gesammelt werden.
 
 </dd> <dt>
 
-**\_Erstellungszeit**
+**TIME \_ CREATED**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt64**
+Datentyp: **uint64**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Uhrzeit im [CIM- \_ DateTime](cim-datetime.md) -Format, als die Sicherheits Beschreibung erstellt wurde.
+Uhrzeit im [CIM \_ DATETIME-Format,](cim-datetime.md) zu der der Sicherheitsdeskriptor erstellt wurde.
 
 </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Diese Klasse stellt Eigenschaften bereit, die von [**Win32 \_ securityDescriptor**](/previous-versions/windows/desktop/secrcw32prov/win32-securitydescriptor)geerbt werden. Weitere Informationen finden Sie unter [WMI-sicherheitsdeskriptorobjekte](wmi-security-descriptor-objects.md) und [Ändern der Zugriffssicherheit für Sicherungs fähige Objekte](changing-access-security-on-securable-objects.md). Weitere Informationen zu ACEs finden Sie unter [Access Control-Komponenten](/windows/desktop/SecAuthZ/access-control-components).
+Diese Klasse stellt Eigenschaften bereit, die von [**Win32 \_ SecurityDescriptor**](/previous-versions/windows/desktop/secrcw32prov/win32-securitydescriptor)geerbt werden. Weitere Informationen finden Sie unter [WMI-Sicherheitsbeschreibungsobjekte](wmi-security-descriptor-objects.md) und [Ändern der Zugriffssicherheit für sicherungsfähige Objekte.](changing-access-security-on-securable-objects.md) Weitere Informationen zu ACEs finden Sie unter [Access Control Components](/windows/desktop/SecAuthZ/access-control-components).
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -153,14 +153,14 @@ Diese Klasse stellt Eigenschaften bereit, die von [**Win32 \_ securityDescriptor
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[WMI-System Klassen](wmi-system-classes.md)
+[WMI-Systemklassen](wmi-system-classes.md)
 </dt> <dt>
 
-[**Win32- \_ securityDescriptor**](/previous-versions/windows/desktop/secrcw32prov/win32-securitydescriptor)
+[**Win32 \_ SecurityDescriptor**](/previous-versions/windows/desktop/secrcw32prov/win32-securitydescriptor)
 </dt> <dt>
 
 [Verwalten der WMI-Sicherheit](maintaining-wmi-security.md)

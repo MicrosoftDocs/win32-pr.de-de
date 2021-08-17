@@ -1,32 +1,32 @@
 ---
-description: Die Mid-Methode extrahiert eine Teil Zeichenfolge der Länge nCount-Zeichen aus einer Zeichenfolge Zeichenfolge, beginnend an der Position nfirst (null basiert). Die-Methode gibt eine Kopie der extrahierten Teil Zeichenfolge zurück.
+description: Die Mid-Methode extrahiert eine Teilzeichenfolge der Länge nCount-Zeichen aus einer CHString-Zeichenfolge, beginnend bei Position nFirst (nullbasiert). Die -Methode gibt eine Kopie der extrahierten Teilzeichenfolge zurück.
 audience: developer
 ms.assetid: 2036813b-f991-4ca3-95d3-8bbe858aae09
 ms.tgt_platform: multiple
-title: 'Chstring:: Mid-Methoden (chstring. h)'
+title: CHString::Mid-Methoden (ChString.h)
 ms.date: 07/02/2019
 ms.topic: reference
-ms.openlocfilehash: 5d05259128f80bcb21d00144d19002ca58ce39c1
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: cbe5b7fc6e3f0d4130e106217c46c82202c230f180dd4c90d09f90073dee08ce
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106349915"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118319842"
 ---
-# <a name="chstringmid-methods"></a>Chstring:: Mid-Methoden
+# <a name="chstringmid-methods"></a>CHString::Mid-Methoden
 
-\[Die [**chstring**](chstring.md) -Klasse ist Teil des WMI-Anbieter-Frameworks, das jetzt im Endzustand behandelt wird, und keine weiteren Entwicklungen, Verbesserungen oder Updates werden für nicht sicherheitsrelevante Probleme verfügbar sein, die diese Bibliotheken betreffen. Die [Mi-APIs](/previous-versions/windows/desktop/wmi_v2/windows-management-infrastructure) sollten für alle neuen Entwicklungen verwendet werden.\]
+\[Die [**CHString-Klasse**](chstring.md) ist Teil des WMI-Anbieterframeworks, das jetzt als endgültiger Zustand betrachtet wird. Für nicht sicherheitsrelevante Probleme, die sich auf diese Bibliotheken auswirken, sind keine weiteren Entwicklungen, Erweiterungen oder Updates verfügbar. Die [MI-APIs](/previous-versions/windows/desktop/wmi_v2/windows-management-infrastructure) sollten für alle Neuentwicklungen verwendet werden.\]
 
-Die **Mid** -Methode extrahiert eine Teil Zeichenfolge der Länge *nCount* -Zeichen [**aus einer Zeichenfolge Zeichenfolge**](chstring.md) , beginnend an der Position *nfirst* (null basiert). Die-Methode gibt eine Kopie der extrahierten Teil Zeichenfolge zurück.
+Die **Mid-Methode** extrahiert eine Teilzeichenfolge der Länge *nCount-Zeichen* aus einer [**CHString-Zeichenfolge,**](chstring.md) beginnend bei Position *nFirst* (nullbasiert). Die -Methode gibt eine Kopie der extrahierten Teilzeichenfolge zurück.
 
 ### <a name="overload-list"></a>Überladeliste
 
 
 
-| Methode                                        | BESCHREIBUNG                                                              |
+| Methode                                        | Beschreibung                                                              |
 |:----------------------------------------------|:-------------------------------------------------------------------------|
-| [**Mid (int, int)**](/windows/win32/api/chstring/nf-chstring-chstring-mid(int_int)) | Extrahiert eine Teil Zeichenfolge mit der angegebenen Länge und dem angegebenen Anfangspunkt.<br/> |
-| [**Mid (int)**](/windows/win32/api/chstring/nf-chstring-chstring-mid(int))         | Extrahiert eine Teil Zeichenfolge, beginnend bei int.<br/>                        |
+| [**Mid(int, int)**](/windows/win32/api/chstring/nf-chstring-chstring-mid(int_int)) | Extrahiert eine Teilzeichenfolge der angegebenen Länge und des Angegebenen Anfangspunkts.<br/> |
+| [**Mid(int)**](/windows/win32/api/chstring/nf-chstring-chstring-mid(int))         | Extrahiert eine Teilzeichenfolge, die bei int beginnt.<br/>                        |
 
 
 
@@ -38,8 +38,8 @@ Die **Mid** -Methode extrahiert eine Teil Zeichenfolge der Länge *nCount* -Zeic
 |-------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows Vista<br/>                                                                                                                                      |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2008<br/>                                                                                                                                |
-| Header<br/>                   | <dl> <dt>Chstring. h (Include-Datei "f")</dt> </dl>                                                    |
-| Bibliothek<br/>                  | <dl> <dt>Framedyn. lib</dt> </dl>                                                                       |
+| Header<br/>                   | <dl> <dt>ChString.h (include FwCommon.h)</dt> </dl>                                                    |
+| Bibliothek<br/>                  | <dl> <dt>FrameDyn.lib</dt> </dl>                                                                       |
 | DLL<br/>                      | <dl> <dt>FrameDynOS.dll; </dt> <dt>FrameDyn.dll</dt> </dl> |
 
 

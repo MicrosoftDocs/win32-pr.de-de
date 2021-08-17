@@ -1,24 +1,24 @@
 ---
-description: Die Peer Infrastruktur verwendet die folgenden allgemeinen Programmierungskonstrukte.
+description: Die Peerinfrastruktur verwendet die folgenden allgemeinen Programmierkonstrukte.
 ms.assetid: 09bdb2fc-9c38-4632-89bd-f9d9123d3b22
-title: Allgemeine Referenz zur Peer Infrastruktur
+title: Peerinfrastruktur – Allgemeine Referenz
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 999de1454c34b52e7951665a772c4f61a530802a
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 2792b1858561be64ec02938bfa98e4c03f5adfb24797d8f773867a3d2e53db8d
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104131685"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117794453"
 ---
-# <a name="peer-infrastructure-common-reference"></a>Allgemeine Referenz zur Peer Infrastruktur
+# <a name="peer-infrastructure-common-reference"></a>Peerinfrastruktur – Allgemeine Referenz
 
-Die Peer Infrastruktur verwendet die folgenden allgemeinen Programmierungskonstrukte.
+Die Peerinfrastruktur verwendet die folgenden allgemeinen Programmierkonstrukte.
 
 -   [Allgemeine Funktionen](common-functions.md)
 -   [Allgemeine Strukturen](common-structures.md)
 -   [Allgemeine Konstanten](common-enumerations.md)
--   [Allgemeine Rückgabe Codes](common-return-codes.md)
+-   [Allgemeine Rückgabecodes](common-return-codes.md)
 
  
 

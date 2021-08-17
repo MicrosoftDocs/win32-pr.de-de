@@ -1,7 +1,7 @@
 ---
 description: Legt die Methode fest, die aufgerufen wird, wenn die asynchrone Aktion abgeschlossen ist.
 ms.assetid: 632800E4-D02B-4D45-8A9B-B373AC938558
-title: Iasyncaction::p ut_Completed-Methode
+title: IAsyncAction::p ut_Completed-Methode
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,14 +13,14 @@ api_type:
 - COM
 api_location:
 - Windows.Foundation.idl
-ms.openlocfilehash: ec26401aeeed61445b0f244880864366fd5c6118
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: aff219d5e6847c64034eed1b057e300ea601eedaa8aa7a131f1467aeacc42422
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "103958937"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118323163"
 ---
-# <a name="iasyncactionput_completed-method"></a>Iasyncaction: Abgeschlossene:p UT- \_ Methode
+# <a name="iasyncactionput_completed-method"></a>IAsyncAction::p ut \_ Completed-Methode
 
 Legt die Methode fest, die aufgerufen wird, wenn die asynchrone Aktion abgeschlossen ist.
 
@@ -39,20 +39,20 @@ HRESULT put_Completed(
 
 <dl> <dt>
 
-*Handler* \[ vorgenommen\]
+*Handler* \[ out\]
 </dt> <dd>
 
-Geben Sie Folgendes ein: **[**asyncactioncompletedhandler**](asyncactioncompletedhandler.md) \** _
+Typ: **[ **AsyncActionCompletedHandler**](asyncactioncompletedhandler.md)\***
 
-Die Methode, die die Abschluss Benachrichtigung behandelt.
+Die Methode, die die Abschlussbenachrichtigung behandelt.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Type: _ *HRESULT**
+Typ: **HRESULT**
 
-Wenn diese Methode erfolgreich ausgeführt wird, gibt Sie **S \_ OK** zurück. Andernfalls wird ein **HRESULT** -Fehlercode zurückgegeben.
+Wenn diese Methode erfolgreich ist, wird **S \_ OK zurückgegeben.** Andernfalls wird ein **HRESULT-Fehlercode** zurückgegeben.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -62,11 +62,11 @@ Wenn diese Methode erfolgreich ausgeführt wird, gibt Sie **S \_ OK** zurück. A
 |-------------------------------------|---------------------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 8<br/>                                                                              |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2012<br/>                                                                    |
-| Header<br/>                   | <dl> <dt>Windows. Foundation. idl</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Windows. Foundation.idl</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 

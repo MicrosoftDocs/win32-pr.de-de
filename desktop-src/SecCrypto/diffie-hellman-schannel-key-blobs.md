@@ -1,26 +1,26 @@
 ---
-description: BLOB werden mit dem Diffie-Hellman/SChannel-Anbieter verwendet, um Schlüssel aus dem Kryptografiedienstanbieter (kryptografischen Service Provider, CSP) zu exportieren und Schlüssel in zu importieren.
+description: BLOBs werden mit dem Diffie-Hellman/Schannel-Anbieter verwendet, um Schlüssel aus dem Kryptografiedienstanbieter (Cryptographic Service Provider, CSP) zu exportieren und in diesen zu importieren.
 ms.assetid: ebb85b7c-204d-4b1c-86dc-5a03c8eda47b
-title: Diffie-Hellman/SChannel-Schlüsselblob
+title: Diffie-Hellman/Schannel Key BLOBs
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 65a76869c6c6239e17a5ae14921805a076c9381c
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 03c653e26f53611e8b00a1dae4e49df7084e6dc655d67f11550a430860fab12d
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "103756535"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117767694"
 ---
-# <a name="diffie-hellmanschannel-key-blobs"></a>Diffie-Hellman/SChannel-Schlüsselblob
+# <a name="diffie-hellmanschannel-key-blobs"></a>Diffie-Hellman/Schannel Key BLOBs
 
-[*BLOB*](../secgloss/b-gly.md) werden mit dem [*Diffie-Hellman*](../secgloss/d-gly.md) / [*SChannel*](../secgloss/s-gly.md) -Anbieter verwendet, um Schlüssel aus dem [*Kryptografiedienstanbieter (kryptografischen Service Provider*](../secgloss/c-gly.md) , CSP) zu exportieren und Schlüssel in zu importieren.
+[*BLOBs*](../secgloss/b-gly.md) werden mit dem [*Diffie-Hellman*](../secgloss/d-gly.md) / [*Schannel-Anbieter*](../secgloss/s-gly.md) verwendet, um Schlüssel aus dem [*Kryptografiedienstanbieter (Cryptographic Service Provider,*](../secgloss/c-gly.md) CSP) zu exportieren und in diesen zu importieren.
 
--   [Blobschlüssel für öffentliche Schlüssel](#public-key-blobs)
--   [Blobschlüssel für private Schlüssel](#private-key-blobs)
+-   [BLOBs mit öffentlichem Schlüssel](#public-key-blobs)
+-   [Private Schlüsselblobs](#private-key-blobs)
 
-## <a name="public-key-blobs"></a>Blobschlüssel für öffentliche Schlüssel
+## <a name="public-key-blobs"></a>BLOBs mit öffentlichem Schlüssel
 
-Geben Sie Diffie-Hellman [*BLOBs für öffentliche Schlüssel*](../secgloss/p-gly.md)den Wert **PublicKeyBlob** ein, mit dem der (G ^ X) mod P-Wert in einem Diffie-Hellman-Schlüsselaustausch ausgetauscht wird. Diese Schlüssel werden als Bytefolge im folgenden Format exportiert und importiert.
+Diffie-Hellman [*BLOBs*](../secgloss/p-gly.md)mit öffentlichem Schlüssel , geben Sie **PUBLICKEYBLOB** ein, werden verwendet, um den Mod P-Wert (G^X) in einem Diffie-Hellman Schlüsselaustausch auszutauschen. Diese Schlüssel werden als Bytesequenz im folgenden Format exportiert und importiert.
 
 ``` syntax
 PUBLICKEYSTRUC  publickeystruc;
@@ -28,23 +28,23 @@ DHPUBKEY        dhpubkey;
 BYTE            y[dhpubkey.bitlen/8]; // Where y = (G^X) mod P
 ```
 
-In der folgenden Tabelle werden die einzelnen Komponenten des [*Schlüssel-BLOBs*](../secgloss/k-gly.md)beschrieben.
+In der folgenden Tabelle werden die einzelnen Komponenten des [*Schlüssel-BLOB*](../secgloss/k-gly.md)beschrieben.
 
 
 
-| Feld          | BESCHREIBUNG                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     |
+| Feld          | Beschreibung                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     |
 |----------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| dhpubkey       | Eine [**dhpubkey**](/windows/win32/api/wincrypt/ns-wincrypt-dhpubkey) -Struktur. Der **Magic** -Member muss auf 0x31484400 festgelegt werden. Dieser Hexadezimalwert ist die [*ASCII*](../secgloss/a-gly.md) -Codierung von DH1.                                                                                                                                                                                                                                                                                                                                                      |
-| publickeystruc | Eine [**publickeystruc**](/windows/desktop/api/Wincrypt/ns-wincrypt-publickeystruc) -Struktur.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           |
-| Y              | Eine **Byte** Sequenz. Der y-Wert (G ^ X) mod P befindet sich direkt hinter der [**dhpubkey**](/windows/win32/api/wincrypt/ns-wincrypt-dhpubkey) -Struktur. Die Länge (in Byte) der Sequenz ist das **bitlen** -Element von **dhpubkey** , dividiert durch acht. Wenn die Länge der Daten, die sich aus der Berechnung von (G ^ X) mod P ergeben, mindestens ein Byte kürzer als P ist, das durch acht geteilt wird, müssen die Daten mit den erforderlichen Bytes (von NULL Wert) aufgefüllt werden, damit die Daten die gewünschte Länge haben ([*Little-Endian-*](../secgloss/l-gly.md) Format). |
+| dhpubkey       | Eine [**DHPUBKEY-Struktur.**](/windows/win32/api/wincrypt/ns-wincrypt-dhpubkey) Der **magic-Member** muss auf 0x31484400 festgelegt werden. Dieser Hexadezimalwert ist die [*ASCII-Codierung*](../secgloss/a-gly.md) von DH1.                                                                                                                                                                                                                                                                                                                                                      |
+| publickeystruc | Eine [**PUBLICKEYSTRUC-Struktur.**](/windows/desktop/api/Wincrypt/ns-wincrypt-publickeystruc)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           |
+| y              | Eine **BYTE-Sequenz.** Der y-Wert (G^X) mod P befindet sich direkt hinter der [**DHPUBKEY-Struktur.**](/windows/win32/api/wincrypt/ns-wincrypt-dhpubkey) Die Länge der Sequenz in Bytes ist der **Bitlenmember** von **DHPUBKEY** geteilt durch acht. Wenn die Länge der Daten, die sich aus der Berechnung von (G^X) mod P ergeben, ein oder mehrere Bytes kürzer als P dividiert durch acht ist, müssen die Daten mit den erforderlichen Bytes (null Wert) aufgefüllt werden, damit die Daten die gewünschte Länge [*(Little-Endian-Format)*](../secgloss/l-gly.md) erhalten. |
 
 
 
  
 
-## <a name="private-key-blobs"></a>Blobschlüssel für private Schlüssel
+## <a name="private-key-blobs"></a>Private Schlüsselblobs
 
-[*BLOBs für private Schlüssel*](../secgloss/p-gly.md)von d-h, Typ **privatekeyblob**, werden zum Exportieren und importieren privater Informationen eines D-H-Schlüssels verwendet. Diese Schlüssel werden als Bytefolge im folgenden Format exportiert und importiert.
+Private [*D-H-Schlüsselblobs*](../secgloss/p-gly.md)vom Typ **PRIVATEKEYBLOB** werden verwendet, um private Informationen eines D-H-Schlüssels zu exportieren und zu importieren. Diese Schlüssel werden als Bytesequenz im folgenden Format exportiert und importiert.
 
 ``` syntax
 PUBLICKEYSTRUC  publickeystruc;
@@ -54,24 +54,24 @@ BYTE            generator[dhpubkey.bitlen/8];
 BYTE            secret[dhpubkey.bitlen/8];
 ```
 
-In der folgenden Tabelle werden die einzelnen Komponenten des Schlüssel-BLOBs beschrieben.
+In der folgenden Tabelle werden die einzelnen Komponenten des Schlüsselblobs beschrieben.
 
 
 
-| Feld          | BESCHREIBUNG                                                                                                                                                                                                |
+| Feld          | Beschreibung                                                                                                                                                                                                |
 |----------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| dhpubkey       | Eine [**dhpubkey**](/windows/win32/api/wincrypt/ns-wincrypt-dhpubkey) -Struktur. Der **Magic** -Member muss auf 0x32484400 festgelegt werden. Dieser Hexadezimalwert ist die [*ASCII*](../secgloss/a-gly.md) -Codierung von DH2. |
-| Generator      | Eine **Byte** Sequenz. Der Generator G.                                                                                                                                                                      |
-| publickeystruc | Eine [**publickeystruc**](/windows/desktop/api/Wincrypt/ns-wincrypt-publickeystruc) -Struktur.                                                                                                                                                      |
-| wichtigsten          | Eine **Byte** Sequenz. Der primmodulus (P). Diese Daten müssen immer das signifikanteste Bit aufweisen, das auf eins festgelegt ist.                                                                    |
-| secret         | Eine **Byte** Sequenz. Der geheime Exponent X.                                                                                                                                                                |
+| dhpubkey       | Eine [**DHPUBKEY-Struktur.**](/windows/win32/api/wincrypt/ns-wincrypt-dhpubkey) Der **magic-Member** muss auf 0x32484400 festgelegt werden. Dieser Hexadezimalwert ist die [*ASCII-Codierung*](../secgloss/a-gly.md) von DH2. |
+| Generator      | Eine **BYTE-Sequenz.** Der Generator G.                                                                                                                                                                      |
+| publickeystruc | Eine [**PUBLICKEYSTRUC-Struktur.**](/windows/desktop/api/Wincrypt/ns-wincrypt-publickeystruc)                                                                                                                                                      |
+| Prime          | Eine **BYTE-Sequenz.** Der Primmodulus P. Für diese Daten muss immer das wichtigste Bit des wichtigsten Byte auf 1 festgelegt sein.                                                                    |
+| secret         | Eine **BYTE-Sequenz.** Der geheime Exponent X.                                                                                                                                                                |
 
 
 
  
 
 > [!Note]  
-> Der primwert, der Generator und der geheime Wert müssen immer dieselbe Länge haben (in Bytes). Wenn ein Wert ein Byte oder kürzer als der andere Wert ist, muss er mit der erforderlichen Anzahl von 0 Bytes aufgefüllt werden, damit diese identisch sind. Die Primzahl, der Generator und das Geheimnis liegen im [*Little-Endian-*](../secgloss/l-gly.md) Format vor.
+> Die Werte für Primzahl, Generator und Geheimnis müssen immer die gleiche Länge in Bytes aufweisen. Wenn ein Wert ein Byte oder kürzer als die anderen ist, muss er mit der erforderlichen Anzahl von 0 Bytes aufgefüllt werden, um sie gleich zu machen. Primzahl, Generator und Geheimnis liegen im [*Little-Endian-Format*](../secgloss/l-gly.md) vor.
 
  
 

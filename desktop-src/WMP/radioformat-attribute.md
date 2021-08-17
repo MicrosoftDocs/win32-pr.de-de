@@ -1,9 +1,9 @@
 ---
-title: Radioformat-Attribut
-description: Das Radioformat-Attribut ist eine Beschreibung des Inhaltstyps, der von der Radio Station bereitgestellt wird.
+title: RadioFormat-Attribut
+description: Das RadioFormat-Attribut ist eine Beschreibung des Inhaltstyps, der vom Radiosender bereitgestellt wird.
 ms.assetid: f614ea24-bd82-4efe-8240-400a62e5b5f2
 keywords:
-- Radioformat-Attribut Fenster Media Player
+- Windows Media Player des RadioFormat-Attributs
 topic_type:
 - apiref
 api_name:
@@ -12,26 +12,26 @@ api_type:
 - NA
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 37dd942521374abe029bed05d63d64b03a134316
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 5e1aa70f89d8f75f4e52472f463bcf5cac298a65a73e5b528b43398dbcc6802e
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106368593"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118333871"
 ---
-# <a name="radioformat-attribute"></a>Radioformat-Attribut
+# <a name="radioformat-attribute"></a>RadioFormat-Attribut
 
-Das **Radioformat** -Attribut ist eine Beschreibung des Inhaltstyps, der von der Radio Station bereitgestellt wird.
+Das **RadioFormat-Attribut** ist eine Beschreibung des Inhaltstyps, der vom Radiosender bereitgestellt wird.
 
 ## <a name="applies-to"></a>Gilt für
 
--   [Options Felder](radio-item-attributes.md)
+-   [Funkelemente](radio-item-attributes.md)
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Dieses Attribut ist nur in der-Bibliothek gespeichert.
+Dieses Attribut wird nur in der Bibliothek gespeichert.
 
-Um zu ermitteln, ob Sie den Wert dieses Attributs ändern können, verwenden Sie die [Media. isread onlyitem](media-isreadonlyitem.md) -Methode.
+Verwenden Sie die [Media.isReadOnlyItem-Methode,](media-isreadonlyitem.md) um zu bestimmen, ob Sie den Wert dieses Attributs ändern können.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -39,15 +39,15 @@ Um zu ermitteln, ob Sie den Wert dieses Attributs ändern können, verwenden Sie
 
 | Anforderung | Wert |
 |--------------------|-----------------------------------------------|
-| Version<br/> | Nur Windows Media Player 9-Serie<br/> |
+| Version<br/> | nur Windows Media Player 9er Serie<br/> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Attribut Verweis**](attribute-reference.md)
+[**Attributverweis**](attribute-reference.md)
 </dt> </dl>
 
  

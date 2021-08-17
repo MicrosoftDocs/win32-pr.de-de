@@ -73,7 +73,7 @@ Die **Win32 \_ DCOMApplicationSetting-Klasse** verfügt über diese Methoden.
 
 
 
-| Methode                                                                                                                        | BESCHREIBUNG                                                                                                                                                                                                                     |
+| Methode                                                                                                                        | Beschreibung                                                                                                                                                                                                                     |
 |:------------------------------------------------------------------------------------------------------------------------------|:--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | [**GetAccessSecurityDescriptor**](getaccesssecuritydescriptor-method-in-class-win32-dcomapplicationsetting.md)               | Ruft den Sicherheitsdeskriptor ab, der steuert, wer auf eine DCOM-Anwendung zugreifen darf.<br/>                                                                                                                              |
 | [**GetConfigurationSecurityDescriptor**](getconfigurationsecuritydescriptor-method-in-class-win32-dcomapplicationsetting.md) | Ruft den Sicherheitsdeskriptor ab, der steuert, wer eine DCOM-Anwendung konfigurieren darf.<br/>                                                                                                                           |
@@ -120,7 +120,7 @@ Zugriffstyp: Lesen/Schreiben
 Qualifizierer: [**MappingStrings**](/windows/desktop/WmiSdk/standard-qualifiers) ("Win32Registry \| HKEY \_ LOCAL MACHINE SOFTWARE Classes \_ \\ \\ \\ \\ \\ \\ AppID \\ \\ {GUID} \[ AuthenticationLevel \] ")
 </dt> </dl>
 
-Minimale Clientauthentifizierungsebene, die für diesen COM-Server erforderlich ist. Bei **NULL** werden die Standardwerte verwendet.
+Mindestens erforderliche Clientauthentifizierungsebene für diesen COM-Server. Bei **NULL** werden die Standardwerte verwendet.
 
 <dt>
 
@@ -164,7 +164,7 @@ Aufruf (die Authentifizierung wird nur zu Beginn jedes Aufrufs ausgeführt, wenn
 
 </dt> <dd>
 
-Paket (Authentifizierung wird für alle vom Client empfangenen Daten ausgeführt)
+Paket (Authentifizierung erfolgt für alle vom Client empfangenen Daten)
 
 </dd> <dt>
 
@@ -222,7 +222,7 @@ Zugriffstyp: Schreibgeschützt
 Qualifizierer: [**MappingStrings**](/windows/desktop/WmiSdk/standard-qualifiers) ("Win32Registry \| HKEY \_ LOCAL MACHINE SOFTWARE Classes \_ \\ \\ \\ \\ \\ \\ AppID \\ \\ {GUID} \[ DllSurrogate \] ")
 </dt> </dl>
 
-Name des benutzerdefinierten Ersatzzeichens, in dem die Prozess-DCOM-Anwendung aktiviert ist. Wenn dieser Wert **NULL ist** und **der UseSurrogate-Schlüssel** **TRUE** ist, stellt das System einen Ersatzprozess zur Anwendung.
+Name des benutzerdefinierten Ersatzzeichens, in dem die Prozess-DCOM-Anwendung aktiviert ist. Wenn dieser Wert **NULL und** der **UseSurrogate-Schlüssel** **TRUE** ist, stellt das System einen Ersatzprozess zur Anwendung.
 
 </dd> <dt>
 
@@ -269,7 +269,7 @@ Zugriffstyp: Schreibgeschützt
 Qualifizierer: [**MappingStrings**](/windows/desktop/WmiSdk/standard-qualifiers) ("Win32Registry \| HKEY \_ LOCAL MACHINE SOFTWARE Classes \_ \\ \\ \\ \\ \\ \\ AppID \\ \\ {GUID} \[ LocalService \] ")
 </dt> </dl>
 
-Name für die von der DCOM-Anwendung bereitgestellten Dienste.
+Name der von der DCOM-Anwendung bereitgestellten Dienste.
 
 </dd> <dt>
 
@@ -317,7 +317,7 @@ Zugriffstyp: Schreibgeschützt
 Qualifizierer: [**MappingStrings**](/windows/desktop/WmiSdk/standard-qualifiers) ("Win32Registry \| HKEY \_ LOCAL MACHINE SOFTWARE Classes \_ \\ \\ \\ \\ \\ \\ AppID \\ \\ {GUID} \[ ServiceParameters \] ")
 </dt> </dl>
 
-Befehlszeilenparameter, die an die DCOM-Anwendung übergeben werden. Dies ist nur gültig, wenn die Anwendung als Windows Dienst geschrieben wird.
+Befehlszeilenparameter, die an die DCOM-Anwendung übergeben werden. Dies ist nur gültig, wenn die Anwendung als Windows-basierter Dienst geschrieben wird.
 
 </dd> <dt>
 

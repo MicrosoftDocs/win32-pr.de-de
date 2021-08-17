@@ -1,7 +1,7 @@
 ---
-description: Ruft die Methode auf, die aufgerufen wird, wenn der angegebene asynchrone Vorgang den Status meldet.
+description: Ruft die Methode auf, die aufgerufen wird, wenn der angegebene asynchrone Vorgang den Fortschritt meldet.
 ms.assetid: FB60DDC0-7521-4999-8DD8-175556004198
-title: 'Iasyncoperationwithprogresscompletedhandler<TResult, tprogress>:: Aufrufen-Methode'
+title: IAsyncOperationWithProgressCompletedHandler<TResult,TProgress>::Invoke-Methode
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -12,16 +12,16 @@ api_name:
 api_type:
 - COM
 api_location: ''
-ms.openlocfilehash: 469686cbd96dedc7f816fdd1f482d3474362688e
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 141f79398e1f9f250b402df130daa728c8e2f0e5f78702d7866dbe9a202b5978
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104129236"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118323119"
 ---
-# <a name="iasyncoperationwithprogresscompletedhandlertresulttprogressinvoke-method"></a>Iasyncoperationwithprogresscompletedhandler<TResult, tprogress>:: Aufrufen-Methode
+# <a name="iasyncoperationwithprogresscompletedhandlertresulttprogressinvoke-method"></a>IAsyncOperationWithProgressCompletedHandler<TResult,TProgress>::Invoke-Methode
 
-Ruft die Methode auf, die aufgerufen wird, wenn der angegebene asynchrone Vorgang den Status meldet.
+Ruft die Methode auf, die aufgerufen wird, wenn der angegebene asynchrone Vorgang den Fortschritt meldet.
 
 ## <a name="syntax"></a>Syntax
 
@@ -38,10 +38,10 @@ HRESULT Invoke(
 
 <dl> <dt>
 
-*asyncinfo* \[ in\]
+*asyncInfo* \[ In\]
 </dt> <dd>
 
-Geben Sie Folgendes ein: **[**iasyncoperationwithprogress<TResult, tprogress>**](/previous-versions//br205807(v=vs.85)) \** _
+Typ: **[ **IAsyncOperationWithProgress<TResult,TProgress>**](/previous-versions//br205807(v=vs.85))\***
 
 Die asynchrone Aktion, die den Abschluss meldet.
 
@@ -49,9 +49,9 @@ Die asynchrone Aktion, die den Abschluss meldet.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Type: _ *HRESULT**
+Typ: **HRESULT**
 
-Wenn diese Methode erfolgreich ausgeführt wird, gibt Sie **S \_ OK** zurück. Andernfalls wird ein **HRESULT** -Fehlercode zurückgegeben.
+Wenn diese Methode erfolgreich ist, wird **S \_ OK zurückgegeben.** Andernfalls wird ein **HRESULT-Fehlercode** zurückgegeben.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -64,11 +64,11 @@ Wenn diese Methode erfolgreich ausgeführt wird, gibt Sie **S \_ OK** zurück. A
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Iasyncoperationwithprogresscompletedhandler<TResult, tprogress>**](/previous-versions//br205808(v=vs.85))
+[**IAsyncOperationWithProgressCompletedHandler<TResult,TProgress>**](/previous-versions//br205808(v=vs.85))
 </dt> </dl>
 
  

@@ -1,7 +1,7 @@
 - name: Ereignisablaufverfolgung
   href: event-tracing-portal.md
   items:
-    - name: Neues bei der Ereignisablaufverfolgung
+    - name: Neuerungen bei der Ereignisablaufverfolgung
       href: what-s-new-in-event-tracing.md
     - name: Informationen zur Ereignisablaufverfolgung
       href: about-event-tracing.md
@@ -19,7 +19,7 @@
             - name: Konfigurieren und Starten einer Ereignisablaufverfolgungssitzung
               href: configuring-and-starting-an-event-tracing-session.md
               items:
-                - name: 'Beispiel: Erstellen einer Sitzung und Aktivieren eines manifestbasierten oder klassischen Anbieters'
+                - name: 'Beispiel, das eine Sitzung erstellt und einen manifestbasierten oder klassischen Anbieter aktiviert'
                   href: example-that-creates-a-session-and-enables-a-manifest-based-provider.md
             - name: Konfigurieren und Starten einer SystemTraceProvider-Sitzung
               href: configuring-and-starting-a-systemtraceprovider-session.md
@@ -45,13 +45,13 @@
             - name: Schreiben von Ereignissen
               href: writing-events.md
               items:
-                - name: Schreiben von manifestbasierten Ereignissen
+                - name: Schreiben manifestbasierter Ereignisse
                   href: writing-manifest-based-events.md
                 - name: Schreiben von MOF-Ereignissen (klassisch)
                   href: tracing-events.md
                 - name: Schreiben von WPP-Ereignissen
                   href: windows-software-trace-preprocessor.md
-                - name: Abrufen einer Anbieter- und Klassen-GUID
+                - name: Abrufen eines Anbieters und einer Klassen-GUID
                   href: obtaining-a-provider-and-class-guid.md
                 - name: Anbietermerkmale
                   href: provider-traits.md
@@ -69,7 +69,7 @@
                   href: publishing-your-event-schema-for-a-manifest-base-provider.md
                 - name: Veröffentlichen des Ereignisschemas für einen klassischen Anbieter
                   href: publishing-your-event-schema-for-a-classic-provider.md
-        - name: Verwenden von Ereignissen
+        - name: Nutzen von Ereignissen
           href: consuming-events.md
           items:
             - name: Abrufen von Ereignisdaten
@@ -82,27 +82,27 @@
                   items:
                     - name: Verwenden von TdhFormatProperty zum Verarbeiten von Ereignisdaten
                       href: using-tdhformatproperty-to-consume-event-data.md
-                    - name: Verwenden von TdhGetProperty zum Verarbeiten von Ereignisdaten
+                    - name: Verwenden von TdhGetProperty zum Nutzen von Ereignisdaten
                       href: using-tdhgetproperty-to-consume-event-data.md
                     - name: Auflisten von Anbietern
                       href: enumerating-providers.md
                     - name: Abrufen von Ereignismetadaten
                       href: retrieving-event-metadata.md
-                - name: Abrufen von Ereignisdaten mit mof
+                - name: Abrufen von Ereignisdaten mit MOF
                   href: retrieving-event-data-using-mof.md
-            - name: Berechnen der CPU-Auslastung mithilfe von Ereignissen
+            - name: Verwenden von Ereignissen zum Berechnen der CPU-Auslastung
               href: using-events-to-calculate-cpu-usage.md
-    - name: Referenz zur Ereignisablaufverfolgung
+    - name: Ereignisablaufverfolgungsreferenz
       href: event-tracing-reference.md
       items:
-        - name: Ereignisablaufverfolgungskonst constants
+        - name: Ereignisablaufverfolgungskonstanten
           href: event-tracing-constants.md
           items:
-            - name: NT-Kernelprotokollierungskonst constants
+            - name: NT-Kernelprotokollierungskonstanten
               href: nt-kernel-logger-constants.md
-            - name: Konstanten im Protokollierungsmodus
+            - name: Protokollierungsmoduskonstanten
               href: logging-mode-constants.md
-        - name: Makros für die Ereignisablaufverfolgung
+        - name: Ereignisablaufverfolgungsmakros
           href: event-tracing-macros.md
           items:
             - name: EventDataDescCreate
@@ -445,7 +445,7 @@
                           href: udpip-v1-typegroup1.md
         - name: MOF-Qualifizierer für die Ereignisablaufverfolgung
           href: event-tracing-mof-qualifiers.md
-        - name: Tools für die Ereignisablaufverfolgung
+        - name: Ereignisablaufverfolgungstools
           href: event-tracing-tools.md
         - name: Beispiele für die Ereignisablaufverfolgung
           href: event-tracing-samples.md

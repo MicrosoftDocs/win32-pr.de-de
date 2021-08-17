@@ -13,14 +13,14 @@ ms.locfileid: "118479258"
 ---
 # <a name="fontstrikethru-property"></a>FontStrikeThru-Eigenschaft
 
-\[Microsoft Agent ist ab Version Windows 7 veraltet und möglicherweise in nachfolgenden Versionen von Windows.\]
+\[Der Microsoft-Agent ist ab Windows 7 veraltet und in nachfolgenden Versionen von Windows möglicherweise nicht mehr verfügbar.\]
 
 <dl> <dt>
 
 <span id="Description"></span><span id="description"></span><span id="DESCRIPTION"></span>**Beschreibung**
 </dt> <dd>
 
-Gibt den Schriftschnitt zurück, der derzeit im Wortsprechblasenfenster für das angegebene Zeichen angezeigt wird.
+Gibt den Schriftschnitt zurück, der derzeit im Sprechblasenfenster für das angegebene Zeichen angezeigt wird.
 
 </dd> <dt>
 
@@ -33,8 +33,8 @@ Gibt den Schriftschnitt zurück, der derzeit im Wortsprechblasenfenster für das
 
 | Wert     | BESCHREIBUNG                                             |
 |-----------|---------------------------------------------------------|
-| **True**  | Die Sprechblasenschriftart verwendet den Durchstreicheffekt.         |
-| **False** | Die Sprechblasenschriftart verwendet nicht den Durchstreicheffekt. |
+| **True**  | Die Sprechblasenschriftart verwendet den durchgestrichenen Effekt.         |
+| **False** | Die Sprechblasenschriftart verwendet nicht den durchgestrichenen Effekt. |
 
 
 
@@ -44,7 +44,7 @@ Gibt den Schriftschnitt zurück, der derzeit im Wortsprechblasenfenster für das
 
 ## <a name="remarks"></a>Hinweise
 
-Der Standardwert für die Schriftarteinstellungen der Wortsprechblase eines Zeichens wird im Microsoft Agent-Zeichen-Editor festgelegt. Darüber hinaus kann der Benutzer Schriftarteinstellungen für alle Zeichen im Microsoft Agent-Eigenschaftenblatt überschreiben.
+Der Standardwert für die Schriftarteinstellungen der Wortsprechblase eines Zeichens wird im Microsoft-Agent-Zeichen-Editor festgelegt. Darüber hinaus kann der Benutzer die Schriftarteinstellungen für alle Zeichen im Eigenschaftenblatt des Microsoft-Agents überschreiben.
 
  
 

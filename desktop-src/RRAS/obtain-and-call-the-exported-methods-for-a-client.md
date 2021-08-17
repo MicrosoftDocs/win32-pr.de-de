@@ -1,19 +1,19 @@
 ---
-title: Abrufen und Abrufen der exportierten Methoden für einen Client
-description: Der folgende Beispielcode zeigt, wie Sie eine Liste der von einem Client exportierten Methoden abrufen und wie Sie eine Methode für diesen Client aufrufen.
+title: Abrufen und Aufrufen der exportierten Methoden für einen Client
+description: Der folgende Beispielcode zeigt, wie sie eine Liste von Methoden abrufen, die ein Client exportiert hat, und wie eine Methode für diesen Client aufgerufen wird.
 ms.assetid: 55b2a03f-498c-4321-891b-747f4baea10d
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 2d9610922f9b0bffcacf477887103fea47e75de0
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: 0c8ffc39ea210537ed2248f374e3898464cb2be560fe09ef93a8f3acbdc380ee
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "104470796"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117790063"
 ---
-# <a name="obtain-and-call-the-exported-methods-for-a-client"></a>Abrufen und Abrufen der exportierten Methoden für einen Client
+# <a name="obtain-and-call-the-exported-methods-for-a-client"></a>Abrufen und Aufrufen der exportierten Methoden für einen Client
 
-Der folgende Beispielcode zeigt, wie Sie eine Liste der von einem Client exportierten Methoden abrufen und wie Sie eine Methode für diesen Client aufrufen.
+Der folgende Beispielcode zeigt, wie sie eine Liste von Methoden abrufen, die ein Client exportiert hat, und wie eine Methode für diesen Client aufgerufen wird.
 
 
 ```C++
@@ -184,9 +184,9 @@ int __cdecl main(){
 
 
 
- 
+ 
 
- 
+ 
 
 
 

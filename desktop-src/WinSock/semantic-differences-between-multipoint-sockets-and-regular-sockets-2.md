@@ -1,32 +1,32 @@
 ---
-title: Semantische Unterschiede zwischen Multipoint-Sockets und regulären Sockets
-description: Unterschiede zwischen c \_ -Stamm-Multipoint-Sockets und regulären Punkt-zu-Punkt-Sockets.
+title: Semantische Unterschiede zwischen Multipointsockets und regulären Sockets
+description: Unterschiede zwischen \_ C-Stamm-Multipointsockets und regulären Point-to-Point-Sockets.
 ms.assetid: fbadfde8-44dc-41ac-bd93-1a22c76ca321
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 04d95b2637a4f805cea5ee6f138cc6992080a238
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 06b30ff05c72fc43bf3f4e731242d9f22a2236e9f6fd275c382b57fb05d094cc
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106343822"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117740810"
 ---
-# <a name="semantic-differences-between-multipoint-sockets-and-regular-sockets"></a>Semantische Unterschiede zwischen Multipoint-Sockets und regulären Sockets
+# <a name="semantic-differences-between-multipoint-sockets-and-regular-sockets"></a>Semantische Unterschiede zwischen Multipointsockets und regulären Sockets
 
-Auf der Steuerungsebene gibt es einige bedeutende semantische Unterschiede zwischen einem c \_ -root-Socket und einem regulären Punkt-zu-Punkt-Socket:
+Auf der Steuerungsebene gibt es einige signifikante semantische Unterschiede zwischen einem c-Stammsocket und einem regulären \_ Point-to-Point-Socket:
 
--   Der c-Stamm \_ Socket kann in [**wsajoinleaf**](/windows/desktop/api/Winsock2/nf-winsock2-wsajoinleaf) verwendet werden, um ein neues Blatt zu verknüpfen.
--   Das Platzieren eines c-Stamm \_ Sockets in den Empfangsmodus (durch Aufrufen von " [**lauschen**](/windows/desktop/api/Winsock2/nf-winsock2-listen)") verhindert nicht, dass der c-Stamm \_ Socket in einem Aufruf von [**wsajoinleaf**](/windows/desktop/api/Winsock2/nf-winsock2-wsajoinleaf) zum Hinzufügen eines neuen Blatts oder zum Senden und empfangen von Multipoint-Daten verwendet wird.
--   Das Schließen eines c-Stamm \_ Sockets bewirkt, dass alle zugeordneten c- \_ Blatt Sockets eine Benachrichtigung über eine schließende FD erhalten \_ .
+-   Der \_ C-Stammsocket kann in [**WSAJoinLeaf verwendet**](/windows/desktop/api/Winsock2/nf-winsock2-wsajoinleaf) werden, um ein neues Blatt zu verbinden.
+-   Das Platzieren eines C-Stammsocket in den Lauschmodus (durch Aufrufen von listen) schließt nicht aus, dass der C-Stammsocket in einem Aufruf von \_ [](/windows/desktop/api/Winsock2/nf-winsock2-listen) \_ [**WSAJoinLeaf**](/windows/desktop/api/Winsock2/nf-winsock2-wsajoinleaf) verwendet wird, um ein neues Blatt hinzuzufügen, oder zum Senden und Empfangen von Multipointdaten.
+-   Das Schließen eines \_ C-Stammsocket bewirkt, dass alle zugeordneten \_ C-Blattsockes eine FD \_ CLOSE-Benachrichtigung erhalten.
 
-Es gibt keine semantischen Unterschiede zwischen einem c \_ -Blatt Socket und einem regulären Socket in der Steuerungsebene, mit dem Unterschied, dass der c \_ -Blatt Socket in [**wsajoinleaf**](/windows/desktop/api/Winsock2/nf-winsock2-wsajoinleaf)verwendet werden kann und die Verwendung des c- \_ Blatt Sockets in " [**lauschen**](/windows/desktop/api/Winsock2/nf-winsock2-listen) " anzeigt, dass nur Multipoint-Verbindungsanforderungen akzeptiert werden sollen.
+Es gibt keine semantischen Unterschiede zwischen einem C-Blattsocket und einem regulären Socket in der Steuerungsebene, außer dass der Blattsocket \_ c \_ in [**WSAJoinLeaf verwendet**](/windows/desktop/api/Winsock2/nf-winsock2-wsajoinleaf)werden kann, und die Verwendung von c leaf socket in listen gibt an, dass nur Multipoint-Verbindungsanforderungen akzeptiert werden \_ sollen. [](/windows/desktop/api/Winsock2/nf-winsock2-listen)
 
-In der Datenebene sind die semantischen Unterschiede zwischen dem d- \_ stammsocket und einem regulären Punkt-zu-Punkt-Socket:
+In der Datenebene sind die semantischen Unterschiede zwischen dem D-Stammsocket und einem regulären \_ Point-to-Point-Socket:
 
--   Die Daten, die auf dem d-Stamm Socket gesendet werden \_ , werden an alle Blätter in derselben Multipoint-Sitzung übermittelt.
--   Die im Stamm-Socket von d empfangenen Daten \_ können von einem der Blätter stammen.
+-   Die auf dem D-Stammsocket gesendeten \_ Daten werden an alle Blätter in derselben Multipointsitzung übermittelt.
+-   Die auf dem \_ D-Stammsocket empfangenen Daten können aus einem der Blätter kommen.
 
-Der d- \_ Blatt Socket in der Datenebene für das Stammverzeichnis weist keinen semantischen Unterschied vom regulären Socket auf, aber in der Datenebene, die keine Daten enthält, werden die Daten, die auf dem d-Blatt Socket gesendet werden, \_ an alle anderen Endknoten gesendet, und die empfangenen Daten können von beliebigen anderen Endknoten stammen. Wie bereits erwähnt, sind die Informationen darüber, ob der d- \_ Blatt Socket sich in einer Datenebene befindet, die sich in einem Stamm oder einem Datenblatt befindet, in der entsprechenden [**wsaprotocol \_**](/windows/win32/api/winsock2/ns-winsock2-wsaprotocol_infoa) -Informationsstruktur für den Socket enthalten
+Der Blattsocket auf der Datenebene mit Stamm hat keinen semantischen Unterschied zum regulären Socket. Auf der nicht entfernten Datenebene werden die auf dem Blattsocket gesendeten Daten jedoch an alle anderen Blattknoten gesendet, und die empfangenen Daten können von anderen Blattknoten \_ \_ sein. Wie bereits erwähnt, sind die Informationen darüber, ob sich der Blattsocket auf einer Stamm- oder Nicht-Stammdatenebene befindet, in der entsprechenden \_ [**WSAPROTOCOL \_ INFO-Struktur**](/windows/win32/api/winsock2/ns-winsock2-wsaprotocol_infoa) für den Socket enthalten.
 
  
 

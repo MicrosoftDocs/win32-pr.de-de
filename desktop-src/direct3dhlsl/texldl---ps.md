@@ -1,6 +1,6 @@
 ---
-title: texldl-PS
-description: Beispiel für eine Textur mit einem bestimmten Sampler. Die jeweilige MipMap-Detailebene, für die ein Sampling durchgeführt wird, muss als vierte Komponente der Textur Koordinate angegeben werden. | texldl-PS
+title: texldl - ps
+description: Beispiel für eine Textur mit einem bestimmten Sampler. Die bestimmte mipmap-Detailebene, für die Stichproben entnommen werden, muss als vierte Komponente der Texturkoordinate angegeben werden. | texldl - ps
 ms.assetid: f0ca8a1d-ac98-49ef-850a-c534e986c7ac
 ms.topic: reference
 ms.date: 05/31/2018
@@ -9,22 +9,22 @@ topic_type:
 api_name: ''
 api_type: ''
 api_location: ''
-ms.openlocfilehash: a6ab8a6f55ce5e069a01edb5d281bfe506c5fee6
-ms.sourcegitcommit: 92e74c99f8f4d097676959d0c317f533c2400a80
+ms.openlocfilehash: f66bc54f00e5eb560589429f1cb116183e165a36d90f5d560d8895678a2d5bad
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/09/2021
-ms.locfileid: "104981137"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117723177"
 ---
-# <a name="texldl---ps"></a>texldl-PS
+# <a name="texldl---ps"></a>texldl - ps
 
-Beispiel für eine Textur mit einem bestimmten Sampler. Die jeweilige MipMap-Detailebene, für die ein Sampling durchgeführt wird, muss als vierte Komponente der Textur Koordinate angegeben werden.
+Beispiel für eine Textur mit einem bestimmten Sampler. Die bestimmte mipmap-Detailebene, für die Stichproben entnommen werden, muss als vierte Komponente der Texturkoordinate angegeben werden.
 
 ## <a name="syntax"></a>Syntax
 
 
 
-| texldl DST, src0, Quelle1 |
+| texldl dst, src0, src1 |
 |------------------------|
 
 
@@ -33,15 +33,15 @@ Beispiel für eine Textur mit einem bestimmten Sampler. Die jeweilige MipMap-Det
 
 Hierbei gilt:
 
--   DST ist ein Ziel Register.
--   src0 ist ein Quell Register, das die Texturkoordinaten für das Textur Beispiel bereitstellt. Siehe [Texturkoordinaten Register](dx9-graphics-reference-asm-ps-registers-texture-coordinate.md).
--   Quelle1 identifiziert die Quell-Samplerregister \# , bei der \# angibt, welche Textur samplingnummer Stichproben geben soll. Der Sampler hat ihm eine Textur und einen Steuerelement Zustand zugeordnet, der durch die [**D3DSAMPLERSTATETYPE**](/windows/desktop/direct3d9/d3dsamplerstatetype) -Enumeration definiert ist (z \_ . b. D3DSAMP MinFilter).
+-   dst ist ein Zielregister.
+-   src0 ist ein Quellregister, das die Texturkoordinaten für das Texturbeispiel enthält. Weitere Informationen [finden Sie unter Texturkoordinatenregister.](dx9-graphics-reference-asm-ps-registers-texture-coordinate.md)
+-   src1 identifiziert das Quell-Samplerregister (s), wobei angibt, welche \# \# Texturs samplernummer entnommen werden soll. Der Sampler hat ihm eine Textur und einen Steuerelementzustand zugeordnet, die durch die [**D3DSAMPLERSTATETYPE-Enumeration**](/windows/desktop/direct3d9/d3dsamplerstatetype) definiert sind (z. B. D3DSAMP \_ MINFILTER).
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
 
 
-| Pixel-Shader-Versionen | 1\_1 | 1\_2 | 1 \_ 3 | 1\_4 | 2 \_ 0 | 2 \_ x | 2 \_ SW | 3 \_ 0 | 3 \_ SW |
+| Pixel-Shaderversionen | 1\_1 | 1\_2 | 1 \_ 3 | 1\_4 | 2 \_ 0 | 2 \_ x | 2 \_ sw | 3 \_ 0 | 3 \_ sw |
 |-----------------------|------|------|------|------|------|------|-------|------|-------|
 | texldl                |      |      |      |      |      |      |       | x    | x     |
 
@@ -49,11 +49,11 @@ Hierbei gilt:
 
  
 
-texldl sucht den Textur Satz in der Samplingphase, auf die von Quelle1 verwiesen wird. Die Detailebene wird aus src0. w ausgewählt. Dieser Wert kann negativ sein. in diesem Fall handelt es sich bei der ausgewählten Detailebene um die nullten (größte Karte) mit dem MagFilter. Da src0. w ein Gleit Komma Wert ist, wird der Bruchteil-Wert verwendet, um zwischen zwei MIP-Ebenen zu interpolieren (wenn MipFilter linear ist). Die samplerzustände mipmaplodbias und MaxMipLevel werden berücksichtigt. Weitere Informationen zu samplerzuständen finden Sie unter [**D3DSAMPLERSTATETYPE**](/windows/desktop/direct3d9/d3dsamplerstatetype).
+texldl sucht den Textursatz in der Samplerphase, auf die src1 verweist. Die Detailebene wird in src0.w ausgewählt. Dieser Wert kann negativ sein. In diesem Fall ist die ausgewählte Detailebene die nullte (größte Karte) mit dem MAGFILTER. Da src0.w ein Gleitkommawert ist, wird der Bruchwert verwendet, um zwischen zwei Mip-Ebenen zu interpolieren (wenn MIPFILTER LINEAR ist). Der Sampler gibt an, dass MIPMAPLODBIAS und MAXMIPLEVEL verwendet werden. Weitere Informationen zu Samplerzuständen finden Sie unter [**D3DSAMPLERSTATETYPE**](/windows/desktop/direct3d9/d3dsamplerstatetype).
 
-Wenn ein Shader-Programm eine Stichprobe von einem Sampler durchführt, der keinen Textur Satz hat, wird 0001 im Ziel Register abgerufen.
+Wenn ein Shaderprogramm Stichproben von einem Sampler ohne Textursatz entnommen hat, wird 0001 im Zielregister erhalten.
 
-Im folgenden finden Sie einen groben Algorithmus, dem das Referenzgerät folgt:
+Im Folgenden finden Sie einen groben Algorithmus, dem das Referenzgerät folgt:
 
 
 ```
@@ -79,25 +79,25 @@ else
 
 
 
-Begrenzungen
+Beschränkungen:
 
--   Die Texturkoordinaten sollten nicht nach Textur Größe skaliert werden.
--   DST muss ein [temporäres Register](dx9-graphics-reference-asm-ps-registers-temporary.md) (r \# ) sein.
--   DST kann einen Schreib Versuch akzeptieren. Siehe [Ziel Registrierung schreiben Mask](dx9-graphics-reference-asm-ps-registers-modifiers-write-mask.md).
--   Die Standardwerte für fehlende Komponenten sind entweder 0 oder 1 und hängen vom Textur Format ab.
--   Quelle1 muss ein [Sampler (Direct3D 9 ASM-PS)](dx9-graphics-reference-asm-ps-registers-sampler.md) sein \# . Quelle1 darf keinen Negation-Modifizierer verwenden (siehe [Ziel-Register Schreib Maske](dx9-graphics-reference-asm-ps-registers-modifiers-write-mask.md)). Quelle1 verwendet möglicherweise "Swizzle" (siehe [Quell Register "Schwenken](dx9-graphics-reference-asm-ps-registers-modifiers-source-register-swizzling.md)"), das nach dem Sampling angewendet wird, jedoch vor der Schreib Maske (siehe Ziel-Register Schreib Maske) berücksichtigt wird. Der Sampler muss am Anfang des Shader (mit [DCL- \_ samplertype (SM2, SM3-PS ASM)](dcl-samplertype---ps.md)) deklariert worden sein.
--   Die Anzahl der Koordinaten, die zum Ausführen des Textur Beispiels erforderlich sind, hängt davon ab, wie der Sampler deklariert wurde. Wenn Sie als Cube deklariert wurde, ist eine Textur Koordinate mit drei Komponenten erforderlich (. RGB). Die Validierung erzwingt, dass für die Tex-LDL bereitgestellte Koordinaten \_ für die für den Sampler deklarierte Textur Dimension ausreichend sind. Es ist jedoch nicht sichergestellt, dass die Anwendung tatsächlich eine Textur (über die API) mit Dimensionen festlegt, die der für den Sampler deklarierten Dimension entsprechen. In einem solchen Fall versucht die Laufzeit, Konflikte zu erkennen (möglicherweise nur im Debugmodus). Das Sampling einer Textur mit weniger Dimensionen, als in der Textur Koordinate vorhanden sind, wird zugelassen, und es wird davon ausgegangen, dass die zusätzlichen Texturkoordinaten Komponenten ignoriert werden. Umgekehrt ist das Sampling einer Textur mit mehr Dimensionen als in der Textur Koordinate nicht zulässig.
--   Wenn src0 (Textur Koordinate) [temporär registriert](dx9-graphics-reference-asm-ps-registers-temporary.md)ist, müssen die für die Suche (oben beschriebenen) erforderlichen Komponenten bereits geschrieben worden sein.
--   Die Stichprobenentnahme nicht signierter RGB-Texturen führt zu float-Werten zwischen 0,0 und 1,0.
--   Die Stichproben signierter Texturen führen zu float-Werten zwischen-1,0 und 1,0.
--   Beim Sampling von Gleit Komma Texturen bedeutet Float16, dass die Daten innerhalb von Max \_ . Float16 liegen. Float32 bedeutet, dass der maximale Bereich der Pipeline verwendet wird. Die Stichprobenentnahme außerhalb eines Bereichs ist nicht definiert.
--   Es gibt keine abhängige Lese Beschränkung.
+-   Die Texturkoordinaten sollten nicht nach Texturgröße skaliert werden.
+-   dst muss ein [temporäres Register](dx9-graphics-reference-asm-ps-registers-temporary.md) (r) \# sein.
+-   dst kann eine Schreibmaske akzeptieren. Weitere Informationen finden [Sie unter Zielregister-Schreibmaske.](dx9-graphics-reference-asm-ps-registers-modifiers-write-mask.md)
+-   Die Standardwerte für fehlende Komponenten sind entweder 0 oder 1 und hängen vom Texturformat ab.
+-   src1 muss ein [Sampler (Direct3D 9 asm-ps) (s)](dx9-graphics-reference-asm-ps-registers-sampler.md) \# sein. src1 verwendet möglicherweise keinen Negatmodifizierer (siehe [Zielregister-Schreibmaske](dx9-graphics-reference-asm-ps-registers-modifiers-write-mask.md)). src1 kann Swizzle verwenden (siehe Quellregister [Swizzling](dx9-graphics-reference-asm-ps-registers-modifiers-source-register-swizzling.md)), das nach der Stichprobenentnahme angewendet wird, aber bevor die Schreibmaske (siehe Zielregister-Schreibmaske) verwendet wird. Der Sampler muss am Anfang des Shaders deklariert worden sein [(mit dcl \_ samplerType (sm2, sm3 - ps asm).](dcl-samplertype---ps.md)
+-   Die Anzahl der Koordinaten, die zum Ausführen der Texturstichprobe erforderlich sind, hängt davon ab, wie der Sampler deklariert wurde. Wenn er als Cube deklariert wurde, ist eine Texturkoordinate mit drei Komponenten erforderlich (RGB). Die Validierung erzwingt, dass koordinaten, die für tex ldl bereitgestellt werden, für die \_ Texturdimension ausreichen, die für den Sampler deklariert wurde. Es ist jedoch nicht garantiert, dass die Anwendung tatsächlich eine Textur (über die API) mit Dimensionen fest legt, die der für den Sampler deklarierten Dimension entspricht. In einem solchen Fall versucht die Runtime, Nichtübereinstimmungen zu erkennen (möglicherweise nur beim Debuggen). Das Sampling einer Textur mit weniger Dimensionen als in der Texturkoordinate ist zulässig und wird davon ausgegangen, dass die zusätzlichen Texturkoordinatenkomponenten ignoriert werden. Umgekehrt ist das Sampling einer Textur mit mehr Dimensionen als in der Texturkoordinate unzulässig.
+-   Wenn src0 (Texturkoordinate) ["Temporary Register"](dx9-graphics-reference-asm-ps-registers-temporary.md)ist, müssen die komponenten, die für die Suche erforderlich sind (oben beschrieben), zuvor geschrieben worden sein.
+-   Das Sampling von RGB-Texturen ohne Vorzeichen führt zu Gleitkommawerten zwischen 0,0 und 1,0.
+-   Das Sampling signierter Texturen führt zu Gleitkommawerten zwischen -1,0 und 1,0.
+-   Beim Sampling von Gleitkommatexturen bedeutet Float16, dass die Daten innerhalb von MAX \_ FLOAT16 liegen. Float32 bedeutet, dass der maximale Bereich der Pipeline verwendet wird. Die Stichprobenentnahme außerhalb eines bereichs ist nicht definiert.
+-   Es gibt kein abhängiges Leselimit.
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[Pixelshaderanweisungen](dx9-graphics-reference-asm-ps-instructions.md)
+[Anweisungen für Pixel-Shader](dx9-graphics-reference-asm-ps-instructions.md)
 </dt> </dl>
 
  

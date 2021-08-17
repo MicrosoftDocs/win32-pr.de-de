@@ -4,12 +4,12 @@ description: Der folgende Beispielcode zeigt, wie Sie auf den nicht transparente
 ms.assetid: 9bf420a1-2d9b-4be9-bd96-c92023b0ed41
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 025d5dd7ec6a4ce26979c9640fa01c46454d4719
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: cf4f2059694559bd64ee1d337ee375683279116d57661cb59f89a101918d4c23
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "104037083"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117792057"
 ---
 # <a name="access-the-opaque-pointer-in-a-destination"></a>Zugreifen auf den nicht transparenten Zeiger in einem Ziel
 
@@ -85,9 +85,9 @@ ASSERT(Status == NO_ERROR);
 
 
 
- 
+ 
 
- 
+ 
 
 
 

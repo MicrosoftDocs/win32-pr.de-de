@@ -1,24 +1,24 @@
 ---
-description: Die icertpropertybackedup-Schnittstelle macht die folgenden Eigenschaften verfügbar.
+description: Die ICertPropertyBackedUp-Schnittstelle macht die folgenden Eigenschaften verfügbar.
 ms.assetid: 5CEFFEE5-0DE4-47B8-9556-32BADDE5DD1C
-title: Icertpropertybackedup-Eigenschaften
+title: ICertPropertyBackedUp-Eigenschaften
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 5e8ef7c06ca9f2efb61303372ba28d02f3a94d11
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 241dce3943daf4b863ddc089fd54b23fdbe2b61cbf8452ca6fbb5b28dbaa56cf
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "103960321"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117778959"
 ---
-# <a name="icertpropertybackedup-properties"></a>Icertpropertybackedup-Eigenschaften
+# <a name="icertpropertybackedup-properties"></a>ICertPropertyBackedUp-Eigenschaften
 
-Die [**icertpropertybackedup**](/windows/desktop/api/CertEnroll/nn-certenroll-icertpropertybackedup) -Schnittstelle macht die folgenden Eigenschaften verfügbar.
+Die [**ICertPropertyBackedUp-Schnittstelle**](/windows/desktop/api/CertEnroll/nn-certenroll-icertpropertybackedup) macht die folgenden Eigenschaften verfügbar.
 
 ## <a name="in-this-section"></a>In diesem Abschnitt
 
--   [**Backedupvalue (Eigenschaft)**](/windows/desktop/api/CertEnroll/nf-certenroll-icertpropertybackedup-get_backedupvalue)
--   [**Backeduptime (Eigenschaft)**](/windows/desktop/api/CertEnroll/nf-certenroll-icertpropertybackedup-get_backeduptime)
+-   [**BackedUpValue-Eigenschaft**](/windows/desktop/api/CertEnroll/nf-certenroll-icertpropertybackedup-get_backedupvalue)
+-   [**BackedUpTime-Eigenschaft**](/windows/desktop/api/CertEnroll/nf-certenroll-icertpropertybackedup-get_backeduptime)
 
  
 

@@ -1,5 +1,5 @@
 ---
-title: 'Rwbyteaddressbuffer:: Store-Funktion'
+title: RWByteAddressBuffer::Store-Funktion
 description: Legt einen Wert fest.
 ms.assetid: edfda955-602c-44f4-adc3-77b61c9dcd05
 keywords:
@@ -13,12 +13,12 @@ api_type:
 ms.topic: reference
 ms.date: 05/31/2018
 api_location: ''
-ms.openlocfilehash: 9e161e4fb64d09e41c6529954e63b2ace55207e9
-ms.sourcegitcommit: 476861130ea63675206d1f06e517059705b930ed
+ms.openlocfilehash: 5be699a28eea213b8847f32a3b66f53739a7db86ee5964bd97559a6d534fff6a
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/06/2019
-ms.locfileid: "104976225"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117724942"
 ---
 # <a name="store-function"></a>Store-Funktion
 
@@ -28,8 +28,8 @@ Legt einen Wert fest.
 
 ``` syntax
 void Store(
-  in uint address,
-  in uint value
+  in uint address,
+  in uint value
 );
 ```
 
@@ -37,21 +37,21 @@ void Store(
 
 <dl> <dt>
 
-*Adresse* \[ in\]
+*address* \[ In\]
 </dt> <dd>
 
 Typ: **uint**
 
-Die Eingabe Adresse in Byte, bei der es sich um ein Vielfaches von 4 handeln muss.
+Die Eingabeadresse in Bytes, die ein Vielfaches von 4 sein muss.
 
 </dd> <dt>
 
-*Wert* \[ in\]
+*value* \[ In\]
 </dt> <dd>
 
 Typ: **uint**
 
-Ein Eingabe Wert.
+Ein Eingabewert.
 
 </dd> </dl>
 
@@ -59,33 +59,33 @@ Ein Eingabe Wert.
 
 Diese Funktion gibt keinen Wert zurück.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Diese Funktion wird für die folgenden Typen von Shadern unterstützt:
+Diese Funktion wird für die folgenden Shadertypen unterstützt:
 
 
 
-| Scheitelpunkt | Hülle | Domain | Geometrie | Pixel | Compute |
+| Scheitelpunkt | Rumpf | Domain | Geometrie | Pixel | Compute |
 |--------|------|--------|----------|-------|---------|
 |        |      |        |          | x     | x       |
 
 
 
- 
+ 
 
 ## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[Rwbyteaddressbuffer](sm5-object-rwbyteaddressbuffer.md)
+[RWByteAddressBuffer](sm5-object-rwbyteaddressbuffer.md)
 </dt> <dt>
 
-[Shader-Modell 5](d3d11-graphics-reference-sm5.md)
+[Shadermodell 5](d3d11-graphics-reference-sm5.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

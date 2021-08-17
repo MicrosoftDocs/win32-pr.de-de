@@ -1,5 +1,5 @@
 ---
-description: Enthält Informationen über das Dialogfeld, das von der cryptuidlgselectcertificate-Funktion angezeigt wird.
+description: Enthält Informationen über das Dialogfeld, das von der CryptUIDlgSelectCertificate-Funktion angezeigt wird.
 ms.assetid: 073a67a0-427b-4b81-82a0-1bb0a216a335
 title: CRYPTUI_SELECTCERTIFICATE_STRUCT Struktur
 ms.topic: reference
@@ -14,16 +14,16 @@ api_name:
 api_type:
 - NA
 api_location: ''
-ms.openlocfilehash: 3db7e59006e964b7335a4a246fb63d7ca7b80577
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 1f8cc80f740e26ac2d067705c9aac9aee387b91e28cb057366587375c874ae0b
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106355395"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117768234"
 ---
-# <a name="cryptui_selectcertificate_struct-structure"></a>Cryptui \_ selectcertificate- \_ Struktur Struktur
+# <a name="cryptui_selectcertificate_struct-structure"></a>STRUKTUR DER CRYPTUI \_ \_ SELECTCERTIFICATE-STRUKTUR
 
-Die **cryptui \_ selectcertificate \_** -Struktur Struktur enthält Informationen zu dem Dialogfeld, das von der [**cryptuidlgselectcertificate**](cryptuidlgselectcertificate.md) -Funktion angezeigt wird.
+Die **Struktur CRYPTUI \_ SELECTCERTIFICATE \_ STRUCT** enthält Informationen über das Dialogfeld, das von der [**CryptUIDlgSelectCertificate-Funktion**](cryptuidlgselectcertificate.md) angezeigt wird.
 
 ## <a name="syntax"></a>Syntax
 
@@ -65,23 +65,23 @@ Die Größe (in Bytes) dieser Struktur.
 **hwndParent**
 </dt> <dd>
 
-Das Handle des übergeordneten Fensters des Dialog Felds. Wenn dieser Wert **null** ist, ist das übergeordnete Fenster das Standard Desktop Fenster.
+Das Handle des übergeordneten Fensters des Dialogfelds. Wenn dieser Wert **NULL** ist, ist das übergeordnete Fenster das Standarddesktopfenster.
 
 </dd> <dt>
 
 **dwFlags**
 </dt> <dd>
 
-Gibt zusätzliche Optionen für die [**cryptuidlgselectcertificate**](cryptuidlgselectcertificate.md) -Funktion an. Dies kann NULL oder ein bitweises **or** der folgenden Werte sein.
+Gibt zusätzliche Optionen für die [**CryptUIDlgSelectCertificate-Funktion**](cryptuidlgselectcertificate.md) an. Dies kann null oder ein bitweises **OR** der folgenden Werte sein.
 
 
 
 | Wert                                                                                                                                                                                                                                    | Bedeutung                                                                                                                                                                                                                                                                                                                                                                              |
 |------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| <span id="CRYPTUI_SELECTCERT_ADDFROMDS"></span><span id="cryptui_selectcert_addfromds"></span><dl> <dt>**cryptui \_ selectcert \_ addfromds**</dt> </dl>                              | Reserviert.<br/>                                                                                                                                                                                                                                                                                                                                                                 |
-| <span id="CRYPTUI_SELECTCERT_LEGACY"></span><span id="cryptui_selectcert_legacy"></span><dl> <dt>**cryptui \_ selectcert- \_ Legacy**</dt> </dl>                                       | Gibt an, dass das Legacy Dialogfeld angezeigt werden soll.<br/>                                                                                                                                                                                                                                                                                                                      |
-| <span id="CRYPTUI_SELECTCERT_MULTISELECT"></span><span id="cryptui_selectcert_multiselect"></span><dl> <dt>**cryptui \_ selectcert \_ MultiSelect**</dt> </dl>                        | Ermöglicht es dem Benutzer, mehr als ein Zertifikat im Dialogfeld auszuwählen. Wenn dieses Flag festgelegt ist, gibt die Funktion [**cryptuidlgselectcertificate**](cryptuidlgselectcertificate.md) immer **null** zurück. Der **hselectedcertstore** -Member dieser Struktur muss ein Handle für einen Zertifikat Speicher enthalten. Die Zertifikate, die vom Benutzer ausgewählt werden, werden diesem Speicher hinzugefügt.<br/> |
-| <span id="CRYPTUI_SELECTCERT_PUT_WINDOW_TOPMOST"></span><span id="cryptui_selectcert_put_window_topmost"></span><dl> <dt>**cryptui \_ selectcert \_ Put \_ Window \_ Top**</dt> </dl> | Erzwingt, dass die kryptografiebenutzeroberfläche das oberste Fenster auf dem Bildschirm ist.<br/>                                                                                                                                                                                                                                                                                                            |
+| <span id="CRYPTUI_SELECTCERT_ADDFROMDS"></span><span id="cryptui_selectcert_addfromds"></span><dl> <dt>**CRYPTUI \_ SELECTCERT \_ ADDFROMDS**</dt> </dl>                              | Reserviert.<br/>                                                                                                                                                                                                                                                                                                                                                                 |
+| <span id="CRYPTUI_SELECTCERT_LEGACY"></span><span id="cryptui_selectcert_legacy"></span><dl> <dt>**CRYPTUI \_ SELECTCERT \_ LEGACY**</dt> </dl>                                       | Gibt an, dass das Legacydialogfeld angezeigt werden soll.<br/>                                                                                                                                                                                                                                                                                                                      |
+| <span id="CRYPTUI_SELECTCERT_MULTISELECT"></span><span id="cryptui_selectcert_multiselect"></span><dl> <dt>**CRYPTUI \_ SELECTCERT \_ MULTISELECT**</dt> </dl>                        | Ermöglicht dem Benutzer, mehrere Zertifikate im Dialogfeld auszuwählen. Wenn dieses Flag festgelegt ist, gibt die [**CryptUIDlgSelectCertificate-Funktion**](cryptuidlgselectcertificate.md) immer **NULL** zurück. Der **hSelectedCertStore-Member** dieser Struktur muss ein Handle für einen Zertifikatspeicher enthalten. Die vom Benutzer ausgewählten Zertifikate werden diesem Speicher hinzugefügt.<br/> |
+| <span id="CRYPTUI_SELECTCERT_PUT_WINDOW_TOPMOST"></span><span id="cryptui_selectcert_put_window_topmost"></span><dl> <dt>**CRYPTUI \_ SELECTCERT \_ PUT \_ WINDOW \_ TOPMOST**</dt> </dl> | Erzwingt, dass die Kryptografie-Benutzeroberfläche das obere Fenster auf dem Bildschirm ist.<br/>                                                                                                                                                                                                                                                                                                            |
 
 
 
@@ -89,14 +89,14 @@ Gibt zusätzliche Optionen für die [**cryptuidlgselectcertificate**](cryptuidlg
 
 </dd> <dt>
 
-**sztitle**
+**szTitle**
 </dt> <dd>
 
-Der Anzeige Titel für das Dialogfeld. Wenn der Wert dieses Members **null** ist, wird der Standard Titel "Zertifikat auswählen" verwendet.
+Der Anzeigetitel für das Dialogfeld. Wenn der Wert dieses Members **NULL** ist, wird der Standardtitel "Zertifikat auswählen" verwendet.
 
 </dd> <dt>
 
-**dwdontusecolumn**
+**dwDontUseColumn**
 </dt> <dd>
 
 Flags, die kombiniert werden können, um Spalten der Anzeige auszuschließen.
@@ -105,12 +105,12 @@ Flags, die kombiniert werden können, um Spalten der Anzeige auszuschließen.
 
 | Wert                                                                                                                                                                                                                                                                                       | Bedeutung                                                |
 |---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|--------------------------------------------------------|
-| <span id="CRYPTUI_SELECT_ISSUEDTO_COLUMN"></span><span id="cryptui_select_issuedto_column"></span><dl> <dt>**Cryptui \_ \_IssuedTo- \_ Spalte**</dt> <dt>1 (0x1)</dt> auswählen </dl>             | **IssuedTo** -Informationen nicht anzeigen.<br/>    |
-| <span id="CRYPTUI_SELECT_ISSUEDBY_COLUMN"></span><span id="cryptui_select_issuedby_column"></span><dl> <dt>**Cryptui \_ Select \_ IssuedBy \_ Spalte**</dt> <dt>2 (0x2)</dt> </dl>             | **IssuedBy** -Informationen nicht anzeigen.<br/>    |
-| <span id="CRYPTUI_SELECT_INTENDEDUSE_COLUMN"></span><span id="cryptui_select_intendeduse_column"></span><dl> <dt>**Cryptui \_ \_Intendeduse- \_ Spalte**</dt> <dt>4 (0x4)</dt> auswählen </dl>    | Zeigen Sie keine **intendeduse** -Informationen an.<br/> |
-| <span id="CRYPTUI_SELECT_FRIENDLYNAME_COLUMN"></span><span id="cryptui_select_friendlyname_column"></span><dl> <dt>**Cryptui \_ Wählen Sie \_ FriendlyName \_ Column**</dt> <dt>8 (0x8)</dt> aus. </dl> | Zeigen Sie keine Namensinformationen an.<br/>            |
-| <span id="CRYPTUI_SELECT_LOCATION_COLUMN"></span><span id="cryptui_select_location_column"></span><dl> <dt>**Cryptui \_ \_Location \_ Column**</dt> <dt>16 (0x10)</dt> auswählen </dl>           | Zeigen Sie keine Standortinformationen an.<br/>        |
-| <span id="CRYPTUI_SELECT_EXPIRATION_COLUMN"></span><span id="cryptui_select_expiration_column"></span><dl> <dt>**Cryptui \_ \_Ablauf \_ Spalte**</dt> <dt>32 (0x20)</dt> auswählen </dl>     | Ablauf Informationen nicht anzeigen.<br/>      |
+| <span id="CRYPTUI_SELECT_ISSUEDTO_COLUMN"></span><span id="cryptui_select_issuedto_column"></span><dl> <dt>**CRYPTUI \_ SELECT \_ ISSUEDTO \_ COLUMN**</dt> <dt>1 (0x1)</dt> </dl>             | Zeigen Sie keine **ISSUEDTO-Informationen an.**<br/>    |
+| <span id="CRYPTUI_SELECT_ISSUEDBY_COLUMN"></span><span id="cryptui_select_issuedby_column"></span><dl> <dt>**CRYPTUI \_ SELECT \_ ISSUEDBY \_ COLUMN**</dt> <dt>2 (0x2)</dt> </dl>             | Zeigen Sie keine **ISSUEDBY-Informationen** an.<br/>    |
+| <span id="CRYPTUI_SELECT_INTENDEDUSE_COLUMN"></span><span id="cryptui_select_intendeduse_column"></span><dl> <dt>**CRYPTUI \_ SELECT \_ INTENDEDUSE \_ COLUMN**</dt> <dt>4 (0x4)</dt> </dl>    | Zeigen Sie keine **IntendedUse-Informationen** an.<br/> |
+| <span id="CRYPTUI_SELECT_FRIENDLYNAME_COLUMN"></span><span id="cryptui_select_friendlyname_column"></span><dl> <dt>**CRYPTUI \_ SELECT \_ FRIENDLYNAME \_ COLUMN**</dt> <dt>8 (0x8)</dt> </dl> | Zeigen Sie keine Namensinformationen an.<br/>            |
+| <span id="CRYPTUI_SELECT_LOCATION_COLUMN"></span><span id="cryptui_select_location_column"></span><dl> <dt>**CRYPTUI \_ SELECT \_ LOCATION \_ COLUMN**</dt> <dt>16 (0x10)</dt> </dl>           | Zeigen Sie keine Standortinformationen an.<br/>        |
+| <span id="CRYPTUI_SELECT_EXPIRATION_COLUMN"></span><span id="cryptui_select_expiration_column"></span><dl> <dt>**CRYPTUI \_ SELECT \_ EXPIRATION \_ COLUMN**</dt> <dt>32 (0x20)</dt> </dl>     | Es werden keine Ablaufinformationen angezeigt.<br/>      |
 
 
 
@@ -118,82 +118,82 @@ Flags, die kombiniert werden können, um Spalten der Anzeige auszuschließen.
 
 </dd> <dt>
 
-**szdisplaystring**
+**szDisplayString**
 </dt> <dd>
 
-Text, der im Dialogfeld angezeigt wird, um den Benutzer anzuweisen. Wenn der Wert dieses Members **null** ist, wird die Standard Zeichenfolge "wählen Sie ein Zertifikat aus, das Sie verwenden möchten" verwendet.
+Text, der im Dialogfeld angezeigt wird, um den Benutzer anzuweisen. Wenn der Wert dieses Members **NULL** ist, wird die Standardzeichenfolge "Wählen Sie ein Zertifikat aus, das Sie verwenden möchten" verwendet.
 
 </dd> <dt>
 
-**pfiltercallback**
+**pFilterCallback**
 </dt> <dd>
 
-Ein Zeiger auf eine [**pfncfilterproc**](/windows/desktop/api/Cryptuiapi/nc-cryptuiapi-pfncfilterproc) -Rückruffunktion, die die Zertifikate filtert, die im Dialogfeld angezeigt werden.
+Ein Zeiger auf eine [**PFNCFILTERPROC-Rückruffunktion,**](/windows/desktop/api/Cryptuiapi/nc-cryptuiapi-pfncfilterproc) die die im Dialogfeld angezeigten Zertifikate filtert.
 
 </dd> <dt>
 
-**pdisplaycallback**
+**pDisplayCallback**
 </dt> <dd>
 
-Ein Zeiger auf eine [**pfnccertdisplayproc**](pfnccertdisplayproc.md) -Rückruffunktion, die Zertifikate anzeigt, die der Benutzer zum anzeigen auswählt.
+Ein Zeiger auf eine [**PFNCCERTDISPLAYPROC-Rückruffunktion,**](pfnccertdisplayproc.md) die Zertifikate anzeigt, die der Benutzer zur Anzeige auswählt.
 
 </dd> <dt>
 
-**pvcallbackdata**
+**pvCallbackData**
 </dt> <dd>
 
-Zusätzliche Daten, die an die Rückruf Funktionen übergeben werden, die von den **pfiltercallback** -und **pdisplaycallback** -Membern angegeben werden.
+Zusätzliche Daten, die an die rückruffunktionen übergeben werden, die von den **Membern pFilterCallback** und **pDisplayCallback** angegeben werden.
 
 </dd> <dt>
 
-**cdisplaystores**
+**cDisplayStores**
 </dt> <dd>
 
-Die Anzahl der Zertifikat Speicher im **rghdisplaystores** -Array.
+Die Anzahl der Zertifikatspeicher im **Array rghDisplayStores.**
 
 </dd> <dt>
 
-**rghdisplaystores**
+**rghDisplayStores**
 </dt> <dd>
 
-Ein Zeiger auf ein Array von Stores, die Zertifikate enthalten, die im Dialogfeld zur Auswahl stehen.
+Ein Zeiger auf ein Array von Speichern, die zertifikate enthalten, die im Dialogfeld ausgewählt werden können.
 
 </dd> <dt>
 
-**cstores**
+**cStores**
 </dt> <dd>
 
-Die Anzahl der Zertifikat Speicher im **rghstores** -Array.
+Die Anzahl der Zertifikatspeicher im **Array rghStores.**
 
 </dd> <dt>
 
-**rghstores**
+**rghStores**
 </dt> <dd>
 
-Ein Zeiger auf ein Array von Zertifikat speichern, das beim Aufbau einer Zertifikat Kette durchsucht werden soll, und das Überprüfen der Vertrauenswürdigkeit für die im Dialogfeld angezeigten Zertifikate.
+Ein Zeiger auf ein Array von Zertifikatspeichern, die beim Erstellen einer Zertifikatkette und beim Überprüfen der Vertrauensstellung nach den im Dialogfeld angezeigten Zertifikaten durchsucht werden sollen.
 
 </dd> <dt>
 
-**cpropsheetpages**
+**cPropSheetPages**
 </dt> <dd>
 
-Die Anzahl der Eigenschaften Seiten im **rgpropsheetpages** -Array.
+Die Anzahl der Eigenschaftenseiten im **rgPropSheetPages-Array.**
 
 </dd> <dt>
 
-**rgpropsheetpages**
+**rgPropSheetPages**
 </dt> <dd>
 
-Ein Zeiger auf ein Array von **PROPSHEETPAGE** -Strukturen, die Eigenschaften Seiten darstellen, die an das Dialogfeld zum Anzeigen von Zertifikaten übermittelt werden, wenn ein Zertifikat für die Anzeige ausgewählt wird.
+Ein Zeiger auf ein Array von **PROPSHEETPAGE-Strukturen,** die Eigenschaftenseiten darstellen, die an das Dialogfeld zum Anzeigen des Zertifikats übergeben werden, wenn ein Zertifikat zum Anzeigen ausgewählt wird.
 
 </dd> <dt>
 
-**hselectedcertstore**
+**hSelectedCertStore**
 </dt> <dd>
 
-Ein Handle für einen vom Aufrufer erstellten Zertifikat Speicher. Die vom Benutzer ausgewählten Zertifikate werden diesem Speicher hinzugefügt. Wenn die Anzahl der Zertifikate in diesem Speicher vor und nach dem Aufruf von [**cryptuidlgselectcertificate**](cryptuidlgselectcertificate.md)identisch ist, hat der Benutzer das Dialogfeld geschlossen, ohne Zertifikate auszuwählen.
+Ein Handle für einen vom Aufrufer erstellten Zertifikatspeicher. Die vom Benutzer ausgewählten Zertifikate werden diesem Speicher hinzugefügt. Wenn die Anzahl der Zertifikate in diesem Speicher vor und nach dem Aufruf von [**CryptUIDlgSelectCertificate**](cryptuidlgselectcertificate.md)gleich ist, hat der Benutzer das Dialogfeld geschlossen, ohne Zertifikate auszuwählen.
 
-Dieser Member wird nicht verwendet, wenn der **dwFlags** -Member dieser Struktur das MultiSelect-Flag " **cryptui \_ selectcert \_** " nicht enthält.
+Dieser Member wird nicht verwendet, wenn der **dwFlags-Member** dieser Struktur das **CRYPTUI \_ SELECTCERT \_ MULTISELECT-Flag** nicht enthält.
 
 </dd> </dl>
 
@@ -203,17 +203,17 @@ Dieser Member wird nicht verwendet, wenn der **dwFlags** -Member dieser Struktur
 
 | Anforderung | Wert |
 |-------------------------------------|-----------------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows XP \[ -Desktop-Apps\]<br/>                                                                     |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/>                                                            |
-| Unicode- und ANSI-Name<br/>   | **Cryptui \_ Selectcertificate \_ structw** (Unicode) und **cryptui \_ selectcertificate \_ Structa** (ANSI)<br/> |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur XP-Desktop-Apps\]<br/>                                                                     |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                                                            |
+| Unicode- und ANSI-Name<br/>   | **CRYPTUI \_ SELECTCERTIFICATE \_ STRUCTW** (Unicode) und **CRYPTUI \_ SELECTCERTIFICATE \_ STRUCTA** (ANSI)<br/> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Cryptuidlgselectcertificate**](cryptuidlgselectcertificate.md)
+[**CryptUIDlgSelectCertificate**](cryptuidlgselectcertificate.md)
 </dt> </dl>
 
  

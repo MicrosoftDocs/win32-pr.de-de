@@ -1,9 +1,9 @@
 ---
-title: 'Texcube (HLSL-Referenz): Wählen Sie die MIP-Ebene aus.'
-description: Verwendet einen Farbverlauf, um die MIP-Ebene auszuwählen. | Texcube (HLSL-Referenz)
+title: 'texCUBE (HLSL-Referenz): Wählen Sie die MIP-Ebene aus.'
+description: Stichproben einer Würfeltextur mithilfe eines Farbverlaufs, um die Mipebene auszuwählen. | texCUBE (HLSL-Referenz)
 ms.assetid: 5615f48b-eb0a-4de7-a441-51ec3cecf6fd
 keywords:
-- Texcube HLSL
+- texCUBE HLSL
 topic_type:
 - apiref
 api_name:
@@ -13,20 +13,20 @@ api_type:
 ms.topic: reference
 ms.date: 05/31/2018
 api_location: ''
-ms.openlocfilehash: 6286b4fedb94b9fd5c84c76171e9478f06e16ce4
-ms.sourcegitcommit: 168d11879cb9fd89d26f826482725c0a626be00f
+ms.openlocfilehash: 4e236a17359f94adcb8b54d3af8b67df37b1fcb6aaf7e75e6f4dba298eaae7aa
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/16/2021
-ms.locfileid: "104982676"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117725658"
 ---
-# <a name="texcube-hlsl-reference---select-the-mip-level"></a>Texcube (HLSL-Referenz): Wählen Sie die MIP-Ebene aus.
+# <a name="texcube-hlsl-reference---select-the-mip-level"></a>texCUBE (HLSL-Referenz): Wählen Sie die MIP-Ebene aus.
 
-Verwendet einen Farbverlauf, um die MIP-Ebene auszuwählen.
+Stichproben einer Würfeltextur mithilfe eines Farbverlaufs, um die Mipebene auszuwählen.
 
 
 
-| Ret Texcube (s, t, DDX, ddY) |
+| ret texCUBE(s, t, ddx, ddy) |
 |-----------------------------|
 
 
@@ -37,12 +37,12 @@ Verwendet einen Farbverlauf, um die MIP-Ebene auszuwählen.
 
 
 
-| Element                                                         | BESCHREIBUNG                                                                  |
+| Element                                                         | Beschreibung                                                                  |
 |--------------------------------------------------------------|------------------------------------------------------------------------------|
-| <span id="s"></span><span id="S"></span>*Hymnen*<br/>       | \[im \] samplerzustand.<br/>                                         |
-| <span id="t"></span><span id="T"></span>*Bund*<br/>       | \[in \] der Textur Koordinate.<br/>                                    |
-| <span id="ddx"></span><span id="DDX"></span>*DDX*<br/> | \[\]die Änderungs Rate der Oberflächengeometrie in der x-Richtung.<br/> |
-| <span id="ddy"></span><span id="DDY"></span>*tziger*<br/> | \[\]die Änderungs Rate der Oberflächengeometrie in der y-Richtung.<br/> |
+| <span id="s"></span><span id="S"></span>*s*<br/>       | \[im \] Zustand "Sampler".<br/>                                         |
+| <span id="t"></span><span id="T"></span>*T*<br/>       | \[in \] Die Texturkoordinate.<br/>                                    |
+| <span id="ddx"></span><span id="DDX"></span>*Ddx*<br/> | \[in \] Änderungsrate der Oberflächengeometrie in x-Richtung.<br/> |
+| <span id="ddy"></span><span id="DDY"></span>*ddy*<br/> | \[in \] Änderungsrate der Oberflächengeometrie in y-Richtung.<br/> |
 
 
 
@@ -50,7 +50,7 @@ Verwendet einen Farbverlauf, um die MIP-Ebene auszuwählen.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Der Wert der Textur Daten.
+Der Wert der Texturdaten.
 
 ## <a name="type-description"></a>Typbeschreibung
 
@@ -58,41 +58,41 @@ Der Wert der Textur Daten.
 
 | Name | Ein/Aus | [**Vorlagentyp**](dx-graphics-hlsl-intrinsic-functions.md)                       | [**Komponententyp**](dx-graphics-hlsl-intrinsic-functions.md) | Size |
 |------|--------|-------------------------------------------------------------------------------------|----------------------------------------------------------------|------|
-| s    | in     | [**Objekt**](dx-graphics-hlsl-intrinsic-functions.md) | [samplercube](dx-graphics-hlsl-sampler.md)                    | 1    |
-| t    | in     | [**ve**](dx-graphics-hlsl-intrinsic-functions.md) | [**Hafen**](/windows/desktop/WinProg/windows-data-types)                        | 3    |
-| DDX  | in     | [**ve**](dx-graphics-hlsl-intrinsic-functions.md) | [**Hafen**](/windows/desktop/WinProg/windows-data-types)                        | 3    |
-| tziger  | in     | [**ve**](dx-graphics-hlsl-intrinsic-functions.md) | [**Hafen**](/windows/desktop/WinProg/windows-data-types)                        | 3    |
-| TZI  | out    | [**ve**](dx-graphics-hlsl-intrinsic-functions.md) | [**float**](/windows/desktop/WinProg/windows-data-types)                        | 4    |
+| s    | in     | [**Objekt (object)**](dx-graphics-hlsl-intrinsic-functions.md) | [samplerCUBE](dx-graphics-hlsl-sampler.md)                    | 1    |
+| t    | in     | [**Vektor**](dx-graphics-hlsl-intrinsic-functions.md) | [**schweben**](/windows/desktop/WinProg/windows-data-types)                        | 3    |
+| Ddx  | in     | [**Vektor**](dx-graphics-hlsl-intrinsic-functions.md) | [**schweben**](/windows/desktop/WinProg/windows-data-types)                        | 3    |
+| ddy  | in     | [**Vektor**](dx-graphics-hlsl-intrinsic-functions.md) | [**schweben**](/windows/desktop/WinProg/windows-data-types)                        | 3    |
+| Ret  | out    | [**Vektor**](dx-graphics-hlsl-intrinsic-functions.md) | [**float**](/windows/desktop/WinProg/windows-data-types)                        | 4    |
 
 
 
  
 
-## <a name="minimum-shader-model"></a>Minimaler Shader-Modell
+## <a name="minimum-shader-model"></a>Minimales Shadermodell
 
-Diese Funktion wird in den folgenden shadermodellen unterstützt.
+Diese Funktion wird in den folgenden Shadermodellen unterstützt.
 
 
 
 | Shadermodell                                              | Unterstützt                |
 |-----------------------------------------------------------|--------------------------|
 | [Shadermodell 4](dx-graphics-hlsl-sm4.md)                | Ja (nur Pixel-Shader)  |
-| [Shader-Modell 3 (DirectX HLSL)](dx-graphics-hlsl-sm3.md) | Ja (nur Pixel-Shader) |
-| [Shader-Modell 2 (DirectX HLSL)](dx-graphics-hlsl-sm2.md) | Ja (nur Pixel-Shader) |
-| [Shader-Modell 1 (DirectX HLSL)](dx-graphics-hlsl-sm1.md) | nein                       |
+| [Shadermodell 3 (DirectX HLSL)](dx-graphics-hlsl-sm3.md) | Ja (nur Pixel-Shader) |
+| [Shadermodell 2 (DirectX HLSL)](dx-graphics-hlsl-sm2.md) | Ja (nur Pixel-Shader) |
+| [Shadermodell 1 (DirectX HLSL)](dx-graphics-hlsl-sm1.md) | Nein                       |
 
 
 
  
 
-1.  Eine bedeutende Code Neuanordnung erfolgt, um Farbverlaufs Berechnungen außerhalb der Fluss Steuerung zu verschieben.
-2.  Wenn die D3DPSHADERCAPS2 \_ 0-Obergrenze mit D3DD3DPSHADERCAPS2 \_ 0 \_ gradientinstructions festgelegt ist, ordnet der Compiler diese Funktion texldd zu.
+1.  Eine erhebliche Code-Neuanordnung erfolgt, um Gradientenberechnungen außerhalb der Flusssteuerung zu verschieben.
+2.  Wenn die D3DPSHADERCAPS2 0-Obergrenze mit \_ D3DD3DPSHADERCAPS2 \_ 0 GRADIENTINSTRUCTIONS festgelegt ist, ordnet der Compiler diese Funktion \_ texldd zu.
 
 ## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Intrinsische Funktionen (DirectX HLSL)**](dx-graphics-hlsl-intrinsic-functions.md)
+[**Systeminterne Funktionen (DirectX HLSL)**](dx-graphics-hlsl-intrinsic-functions.md)
 </dt> </dl>
 
  

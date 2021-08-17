@@ -3,8 +3,8 @@ title: Funktionen (Windows Touchgesten)
 description: Dieser Abschnitt enthält Funktionen für Windows Touchgesten.
 ms.assetid: 830031d1-eb8d-45d4-b66e-3f4fbb96ae13
 keywords:
-- Windows Toucheingabe, Funktionen
-- Windows Toucheingabe, Gesten
+- Windows Touch,Funktionen
+- Windows Touch,Gesten
 - Gesten, Funktionen
 ms.topic: article
 ms.date: 05/31/2018
@@ -19,14 +19,14 @@ ms.locfileid: "118435381"
 
 Dieser Abschnitt enthält Funktionen für Windows Touchgesten.
 
-Die folgenden Funktionen werden für Windows Touchgesten verwendet.
+Die folgenden Funktionen werden für die Windows Touchgesten verwendet.
 
 
 
-| Funktion                                                 | Beschreibung                                                                                             |
+| Funktion                                                 | BESCHREIBUNG                                                                                             |
 |----------------------------------------------------------|---------------------------------------------------------------------------------------------------------|
-| [**CloseGestureInfoHandle**](/windows/desktop/api/winuser/nf-winuser-closegestureinfohandle) | Schließt die Ressourcen, die einem manuell abgerufenen Handle zugeordnet sind, mit einer Gesteninformationsstruktur.    |
-| [**GetGestureExtraArgs**](/windows/desktop/api/winuser/nf-winuser-getgestureextraargs)       | Ruft zusätzliche Informationen zu einer Geste aus dem [**GESTENINFO-Handle**](/windows/win32/api/winuser/ns-winuser-gestureinfo) ab.    |
+| [**CloseGestureInfoHandle**](/windows/desktop/api/winuser/nf-winuser-closegestureinfohandle) | Schließt die Einem manuell abgerufenen Handle zugeordneten Ressourcen für eine Gesteninformationsstruktur.    |
+| [**GetGestureExtraArgs**](/windows/desktop/api/winuser/nf-winuser-getgestureextraargs)       | Ruft zusätzliche Informationen zu einer Geste aus ihrem [**GESTUREINFO-Handle**](/windows/win32/api/winuser/ns-winuser-gestureinfo) ab.    |
 | [**GetGestureInfo**](/windows/desktop/api/winuser/nf-winuser-getgestureinfo)                 | Ruft manuell eine Gesteninformationsstruktur ab, wenn ein Handle für die Gesteninformationsstruktur angegeben wird. |
 | [**GetGestureConfig**](/windows/desktop/api/winuser/nf-winuser-getgestureconfig)             | Ruft die Gestenkonfigurationsinformationen für ein Fenster ab.                                           |
 | [**SetGestureConfig**](/windows/desktop/api/winuser/nf-winuser-setgestureconfig)             | Legt die Gestenkonfiguration für ein Fenster fest.                                                            |

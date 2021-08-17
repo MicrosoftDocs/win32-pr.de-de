@@ -1,7 +1,7 @@
 ---
-description: Links zur Dokumentation für die iazbizruleparameters-Interoperabilitäts Wrapper Methoden und-Eigenschaften.
+description: Links zur Dokumentation für die IAzBizRuleParameters-Interoperabilitätswrappermethoden und -eigenschaften.
 ms.assetid: 5aa05570-32d2-446d-b7c0-6d63e3d3feae
-title: Microsoft. Interop. Security. azrollen. iazbizruleparameters-Schnittstelle
+title: Microsoft.Interop.Security.AzRoles.IAzBizRuleParameters-Schnittstelle
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -27,37 +27,37 @@ api_type:
 - COM
 api_location:
 - Microsoft.Interop.Security.Azroles.dll
-ms.openlocfilehash: 6be82e0bc9012a5e12ca10a3154fcbcffb97c723
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: f650347da516f999955576532e5e7a82eb907596d90459c6d60cfde77ab1bba6
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106352009"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117781078"
 ---
-# <a name="microsoftinteropsecurityazrolesiazbizruleparameters-interface"></a>Microsoft. Interop. Security. azrollen. iazbizruleparameters-Schnittstelle
+# <a name="microsoftinteropsecurityazrolesiazbizruleparameters-interface"></a>Microsoft.Interop.Security.AzRoles.IAzBizRuleParameters-Schnittstelle
 
-Die **Microsoft. Interop. Security. azrollen. iazbizruleparameters** -Interoperabilitäts Wrapper-Methoden und-Eigenschaften sind unter der com-Version der-Methode oder der-Eigenschaft dokumentiert. Ein Link zur korrelierenden com-Dokumentation folgt den einzelnen Elementnamen.
+Die Interoperabilitätswrappermethoden und -eigenschaften von **Microsoft.Interop.Security.Azroles.IAzBizRuleParameters** sind unter der COM-Version der Methode oder Eigenschaft dokumentiert. Ein Link zur korrelierenden COM-Dokumentation folgt jedem Membernamen.
 
 ## <a name="members"></a>Member
 
-Die **Microsoft. Interop. Security. azrollen. iazbizruleparameters** -Schnittstelle verfügt über diese Typen von Membern:
+Die **Microsoft.Interop.Security.AzRoles.IAzBizRuleParameters-Schnittstelle** verfügt über diese Typen von Membern:
 
 -   [Methoden](#methods)
 -   [Eigenschaften](#properties)
 
 ### <a name="methods"></a>Methoden
 
-Die **Microsoft. Interop. Security. azrollen. iazbizruleparameters** -Schnittstelle verfügt über diese Methoden.
+Die **Microsoft.Interop.Security.AzRoles.IAzBizRuleParameters-Schnittstelle** verfügt über diese Methoden.
 
 
 
-| Methode                                                                        | BESCHREIBUNG                                                                                                 |
+| Methode                                                                        | Beschreibung                                                                                                 |
 |:------------------------------------------------------------------------------|:------------------------------------------------------------------------------------------------------------|
-| **Microsoft. Interop. Security. azrollen. iazbizruleparameters. AddParameter**      | [**Iazbizruleparameters:: AddParameter**](/windows/desktop/api/Azroles/nf-azroles-iazbizruleparameters-addparameter)<br/>           |
-| **Microsoft. Interop. Security. azrollen. iazbizruleparameters. AddParameters**     | [**Iazbizruleparameters:: AddParameters**](/windows/desktop/api/Azroles/nf-azroles-iazbizruleparameters-addparameters)<br/>         |
-| **Microsoft. Interop. Security. azrollen. iazbizruleparameters. GetParameterValue** | [**Iazbizruleparameters:: GetParameterValue**](/windows/desktop/api/Azroles/nf-azroles-iazbizruleparameters-getparametervalue)<br/> |
-| **Microsoft. Interop. Security. azrollen. iazbizruleparameters. Remove**            | [**Iazbizruleparameters:: Remove**](/windows/desktop/api/Azroles/nf-azroles-iazbizruleparameters-remove)<br/>                       |
-| **Microsoft. Interop. Security. azrollen. iazbizruleparameters. RemoveAll**         | [**Iazbizruleparameters:: RemoveAll**](/windows/desktop/api/Azroles/nf-azroles-iazbizruleparameters-removeall)<br/>                 |
+| **Microsoft.Interop.Security.Azroles.IAzBizRuleParameters.AddParameter**      | [**IAzBizRuleParameters::AddParameter**](/windows/desktop/api/Azroles/nf-azroles-iazbizruleparameters-addparameter)<br/>           |
+| **Microsoft.Interop.Security.Azroles.IAzBizRuleParameters.AddParameters**     | [**IAzBizRuleParameters::AddParameters**](/windows/desktop/api/Azroles/nf-azroles-iazbizruleparameters-addparameters)<br/>         |
+| **Microsoft.Interop.Security.Azroles.IAzBizRuleParameters.GetParameterValue** | [**IAzBizRuleParameters::GetParameterValue**](/windows/desktop/api/Azroles/nf-azroles-iazbizruleparameters-getparametervalue)<br/> |
+| **Microsoft.Interop.Security.Azroles.IAzBizRuleParameters.Remove**            | [**IAzBizRuleParameters::Remove**](/windows/desktop/api/Azroles/nf-azroles-iazbizruleparameters-remove)<br/>                       |
+| **Microsoft.Interop.Security.Azroles.IAzBizRuleParameters.RemoveAll**         | [**IAzBizRuleParameters::RemoveAll**](/windows/desktop/api/Azroles/nf-azroles-iazbizruleparameters-removeall)<br/>                 |
 
 
 
@@ -65,13 +65,13 @@ Die **Microsoft. Interop. Security. azrollen. iazbizruleparameters** -Schnittste
 
 ### <a name="properties"></a>Eigenschaften
 
-Die **Microsoft. Interop. Security. azrollen. iazbizruleparameters** -Schnittstelle verfügt über diese Eigenschaften.
+Die **Microsoft.Interop.Security.AzRoles.IAzBizRuleParameters-Schnittstelle** verfügt über diese Eigenschaften.
 
 
 
-| Eigenschaft                                                                     | Zugriffstyp          | BESCHREIBUNG                                                                                    |
+| Eigenschaft                                                                     | Zugriffstyp          | Beschreibung                                                                                    |
 |:-----------------------------------------------------------------------------|:---------------------|:-----------------------------------------------------------------------------------------------|
-| **Microsoft. Interop. Security. azrollen. iazbizruleparameters. Count**<br/> | Schreibgeschützt<br/> | [**Count-Eigenschaft von iazbizruleparameters**](/windows/desktop/api/Azroles/nf-azroles-iazbizruleparameters-get_count)<br/> |
+| **Microsoft.Interop.Security.Azroles.IAzBizRuleParameters.Count**<br/> | Schreibgeschützt<br/> | [**Count-Eigenschaft von IAzBizRuleParameters**](/windows/desktop/api/Azroles/nf-azroles-iazbizruleparameters-get_count)<br/> |
 
 
 

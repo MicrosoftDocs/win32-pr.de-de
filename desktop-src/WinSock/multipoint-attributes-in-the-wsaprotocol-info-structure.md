@@ -1,25 +1,25 @@
 ---
-title: Multipoint-Attribute in WSAPROTOCOL_INFO
-description: Zu den Multipoint-Attributen in der wsaprotocol- \_ Informationsstruktur gehören XP1 \_ -Unterstützung für \_ Multipoint-, XP1 \_ Multipoint \_ \_ -Steuerungsebene und XP1- \_ Multipoint- \_ Daten \_ Ebene.
+title: Multipointattribute in WSAPROTOCOL_INFO
+description: Zu den Multipointattributen in der WSAPROTOCOL \_ INFO-Struktur gehören XP1 \_ SUPPORT \_ MULTIPOINT, XP1 \_ MULTIPOINT \_ CONTROL PLANE und \_ XP1 \_ MULTIPOINT DATA \_ \_ PLANE.
 ms.assetid: f1bd5aa1-e705-4eaf-9436-fed0ea03f113
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: baedcd07f53db462eb090217b53d93a1a4aa8c34
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 1275b6da00258be10b071bc9b2399abaf5dd608583f3d81a0fdb16af493824ed
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "103751440"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117741104"
 ---
-# <a name="multipoint-attributes-in-wsaprotocol_info"></a>Multipoint-Attribute in WSAPROTOCOL_INFO
+# <a name="multipoint-attributes-in-wsaprotocol_info"></a>Multipointattribute in WSAPROTOCOL_INFO
 
-Drei Attribut Parameter sind in der [**wsaprotocol- \_ Informations**](/windows/win32/api/winsock2/ns-winsock2-wsaprotocol_infoa) Struktur definiert, um die unterschiedlichen Schemas zu unterscheiden, die im Steuerelement bzw. in den Daten Ebenen verwendet werden:
+In der [**WSAPROTOCOL \_ INFO-Struktur**](/windows/win32/api/winsock2/ns-winsock2-wsaprotocol_infoa) werden drei Attributparameter definiert, um die verschiedenen Schemas zu unterscheiden, die in der Steuerungs- bzw. Datenebene verwendet werden:
 
--   XP1 \_ Unterstützung \_ von Multipoint mit dem Wert 1 gibt an, dass dieser Protokolleintrag Multipoint-Kommunikation unterstützt und dass die folgenden beiden Parameter aussagekräftig sind.
--   \_Die Multipoint- \_ Steuerungsebene XP1 gibt an, \_ ob die Steuerungsebene einen Stamm (Wert = 1) oder einen nicht-Stamm (Wert = 0) hat.
--   Die XP1- \_ Multipoint- \_ Daten \_ Ebene gibt an, ob die Datenebene (Wert = 1) oder nicht als Stamm (Wert = 0) verankert ist.
+-   XP1 \_ SUPPORT \_ MULTIPOINT mit dem Wert 1 gibt an, dass dieser Protokolleintrag die Multipointkommunikation unterstützt und dass die folgenden beiden Parameter sinnvoll sind.
+-   XP1 \_ MULTIPOINT \_ CONTROL PLANE gibt \_ an, ob die Steuerungsebene root (Wert = 1) oder nicht gerootet (Wert = 0) ist.
+-   XP1 \_ MULTIPOINT \_ DATA PLANE gibt \_ an, ob die Datenebene stammgerootet (Wert = 1) oder nicht gerootet (Wert = 0) ist.
 
-Wenn ein Multipoint-Protokoll sowohl Stamm-als auch nicht-Stammdaten Ebenen unterstützt, sind zwei [**wsaprotocol- \_ Informations**](/windows/win32/api/winsock2/ns-winsock2-wsaprotocol_infoa) Einträge vorhanden.
+Zwei [**WSAPROTOCOL \_ INFO-Einträge**](/windows/win32/api/winsock2/ns-winsock2-wsaprotocol_infoa) würden vorhanden sein, wenn ein Multipointprotokoll sowohl root- als auch nicht rooted-Datenebenen unterstützt, jeweils einen Eintrag.
 
  
 

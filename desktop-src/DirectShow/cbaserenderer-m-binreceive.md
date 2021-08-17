@@ -1,7 +1,7 @@
 ---
-description: Flag, das angibt, ob der Filter einen RECEIVE-Befehl verarbeitet.
+description: Flag, das angibt, ob der Filter einen Empfangsaufruf verarbeitet.
 ms.assetid: 4b0d34c4-551a-4674-bda9-be67ed22d09b
-title: 'Cbaserenderer:: m_bInReceive Member (renbase. h)'
+title: CBaseRenderer::m_bInReceive-Member (Renbase.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,16 +16,16 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: c5bcc3666200630575cacfdebac769f25545a077
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 1059684d2c1905a7894294248f44f9ee97521d1e27ebc3be4a58d832603c642e
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106359651"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118403062"
 ---
-# <a name="cbaserendererm_binreceive-member"></a>Cbaserenderer:: m- \_ binreceive-Member
+# <a name="cbaserendererm_binreceive-member"></a>CBaseRenderer::m \_ bInReceive-Member
 
-Flag, das angibt, ob der Filter einen **Receive** -Befehl verarbeitet.
+Flag, das angibt, ob der Filter einen **Empfangsaufruf** verarbeitet.
 
 ## <a name="syntax"></a>Syntax
 
@@ -42,16 +42,16 @@ BOOL m_bInReceive;
 
 | Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Renbase. h (Include Streams. h)</dt> </dl>                                                                                   |
-| Bibliothek<br/> | <dl> " <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Renbase.h (include Streams.h)</dt> </dl>                                                                                   |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Verkaufsbuilds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Cbaserderderer-Klasse**](cbaserenderer.md)
+[**CBaseRenderer-Klasse**](cbaserenderer.md)
 </dt> </dl>
 
  

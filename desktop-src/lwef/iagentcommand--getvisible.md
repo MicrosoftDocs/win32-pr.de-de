@@ -13,7 +13,7 @@ ms.locfileid: "118477635"
 ---
 # <a name="iagentcommandgetvisible"></a>IAgentCommand::GetVisible
 
-\[Microsoft Agent ist ab Version Windows 7 veraltet und möglicherweise in nachfolgenden Versionen von Windows.\]
+\[Microsoft Agent ist ab Version Windows 7 veraltet und in nachfolgenden Versionen von Windows.\]
 
 ``` syntax
 HRESULT GetVisible(

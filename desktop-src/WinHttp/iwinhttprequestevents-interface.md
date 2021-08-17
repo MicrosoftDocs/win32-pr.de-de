@@ -1,7 +1,7 @@
 ---
-description: Stellt Ereignisse für Microsoft Windows HTTP-Dienste (WinHTTP) bereit.
+description: Stellt Ereignisse für Microsoft Windows HTTP Services (WinHTTP) bereit.
 ms.assetid: 0721d7f9-2e84-41a9-be52-89c8d638eb90
-title: Iwinhttprequestevents-Schnittstelle
+title: IWinHttpRequestEvents-Schnittstelle
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,54 +13,54 @@ api_type:
 - COM
 api_location:
 - HttpRequest.idl
-ms.openlocfilehash: 3cdd0bf10c0d4bd75351ddaab6e88ce7182850fd
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 42b8355de57ada064e57a129c77ba507a72028b1c38ce115e58db110f2ce976b
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106350865"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117744348"
 ---
-# <a name="iwinhttprequestevents-interface"></a>Iwinhttprequestevents-Schnittstelle
+# <a name="iwinhttprequestevents-interface"></a>IWinHttpRequestEvents-Schnittstelle
 
-Die **iwinhttprequestevents** -Schnittstelle stellt Ereignisse für [Microsoft Windows HTTP-Dienste (WinHTTP)](about-winhttp.md)bereit. Es werden nur Ereignis Methoden verwendet.
+Die **IWinHttpRequestEvents-Schnittstelle** stellt Ereignisse für [Microsoft Windows HTTP Services (WinHTTP)](about-winhttp.md)bereit. Es werden nur Ereignismethoden verwendet.
 
 ## <a name="members"></a>Member
 
-Die **iwinhttprequestevents** -Schnittstelle erbt von der [**IUnknown**](/windows/desktop/api/unknwn/nn-unknwn-iunknown) -Schnittstelle. **Iwinhttprequestevents** verfügt auch über die folgenden Typen von Membern:
+Die **IWinHttpRequestEvents-Schnittstelle** erbt von der [**IUnknown-Schnittstelle.**](/windows/desktop/api/unknwn/nn-unknwn-iunknown) **IWinHttpRequestEvents** verfügt auch über diese Typen von Membern:
 
 -   [Methoden](#methods)
 
 ### <a name="methods"></a>Methoden
 
-Die **iwinhttprequestevents** -Schnittstelle verfügt über diese Methoden.
+Die **IWinHttpRequestEvents-Schnittstelle** verfügt über diese Methoden.
 
 
 
-| Methode                                                                           | BESCHREIBUNG                                                          |
+| Methode                                                                           | Beschreibung                                                          |
 |:---------------------------------------------------------------------------------|:---------------------------------------------------------------------|
 | [**OnError**](iwinhttprequestevents-onerror.md)                                 | Tritt auf, wenn in der Anwendung ein Laufzeitfehler auftritt.<br/> |
-| [**Onresponondataavailable**](iwinhttprequestevents-onresponsedataavailable.md) | Tritt auf, wenn Daten aus der Antwort verfügbar sind.<br/>          |
-| [**Onresponendabgeschlossen**](iwinhttprequestevents-onresponsefinished.md)           | Tritt auf, wenn die Antwortdaten fertig sind.<br/>                |
-| [**Onresponse-Start**](iwinhttprequestevents-onresponsestart.md)                 | Tritt auf, wenn die Antwortdaten empfangen werden.<br/>      |
+| [**OnResponseDataAvailable**](iwinhttprequestevents-onresponsedataavailable.md) | Tritt ein, wenn Daten aus der Antwort verfügbar sind.<br/>          |
+| [**OnResponseFinished**](iwinhttprequestevents-onresponsefinished.md)           | Tritt ein, wenn die Antwortdaten abgeschlossen sind.<br/>                |
+| [**OnResponseStart**](iwinhttprequestevents-onresponsestart.md)                 | Tritt ein, wenn die Antwortdaten empfangen werden.<br/>      |
 
 
 
  
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
 Im folgenden Verfahren wird beschrieben, wie Sie sich für Benachrichtigungen registrieren.
 
-1.  Rufen Sie eine [IConnectionPointContainer](/windows/win32/api/ocidl/nn-ocidl-iconnectionpointcontainer) -Schnittstelle ab, indem Sie **QueryInterface** für ein [**iwinhttprequest**](iwinhttprequest-interface.md) -Objekt aufrufen.
-2.  Rufen Sie [FindConnectionPoint](/windows/win32/api/ocidl/nf-ocidl-iconnectionpointcontainer-findconnectionpoint) für die zurückgegebene Schnittstelle auf, und übergeben Sie **IID \_ iwinhttprequestevents** an *riid*.
-3.  Rufen Sie die [Empfehlung](/windows/win32/api/ocidl/nf-ocidl-iconnectionpoint-advise) auf dem zurückgegebenen Verbindungspunkt auf, und übergeben Sie einen Zeiger auf eine **IUnknown** -Schnittstelle für ein Objekt, das **iwinhttprequestevents** zu *Punk* implementiert.
+1.  Rufen Sie eine [IConnectionPointContainer-Schnittstelle](/windows/win32/api/ocidl/nn-ocidl-iconnectionpointcontainer) ab, indem **Sie QueryInterface** für ein [**IWinHttpRequest-Objekt**](iwinhttprequest-interface.md) aufrufen.
+2.  Rufen [Sie FindConnectionPoint](/windows/win32/api/ocidl/nf-ocidl-iconnectionpointcontainer-findconnectionpoint) für die zurückgegebene Schnittstelle auf, und übergeben Sie **IID \_ IWinHttpRequestEvents** an *riid*.
+3.  Rufen Sie [Advise](/windows/win32/api/ocidl/nf-ocidl-iconnectionpoint-advise) für den zurückgegebenen Verbindungspunkt auf, und übergeben Sie einen Zeiger auf eine **IUnknown-Schnittstelle** für ein Objekt, das **IWinHttpRequestEvents** in *pUnk* implementiert.
 
-Benachrichtigungen können beendet werden, indem Sie [Unrat](/windows/win32/api/ocidl/nf-ocidl-iconnectionpoint-unadvise) für den Verbindungspunkt aufrufen, der in Schritt 2 zurückgegeben wurde.
+Benachrichtigungen können beendet werden, indem [Unadvise](/windows/win32/api/ocidl/nf-ocidl-iconnectionpoint-unadvise) auf dem in Schritt 2 zurückgegebenen Verbindungspunkt aufgerufen wird.
 
-Informationen zum Anzeigen von Code, der für com-Benachrichtigungen registriert wird, finden Sie im Abschnitt Client des Artikels [com-Verbindungspunkte](/archive/msdn-magazine/2007/september/clr-inside-out-com-connection-points) .
+Informationen zum Anzeigen von Code, der sich für COM-Benachrichtigungen registriert, finden Sie im Abschnitt Client des Artikels [COM-Verbindungspunkte.](/archive/msdn-magazine/2007/september/clr-inside-out-com-connection-points)
 
 > [!Note]  
-> Informationen zu Windows XP und Windows 2000 finden Sie im Abschnitt [Lauf Zeitanforderungen](winhttp-start-page.md) auf der WinHTTP-Start Seite.
+> Informationen zu Windows XP und Windows 2000 finden Sie im Abschnitt [Laufzeitanforderungen](winhttp-start-page.md) der WinHTTP-Startseite.
 
  
 
@@ -70,18 +70,18 @@ Informationen zum Anzeigen von Code, der für com-Benachrichtigungen registriert
 
 | Anforderung | Wert |
 |-------------------------------------|--------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Windows XP, Windows 2000 Professional mit SP3 \[ Desktop-Apps\]<br/>            |
-| Unterstützte Mindestversion (Server)<br/> | Windows Server 2003, Windows 2000-Server mit \[ nur SP3-Desktop-Apps\]<br/>         |
-| Verteilbare Komponente<br/>          | WinHTTP 5,0 und Internet Explorer 5,01 oder höher unter Windows XP und Windows 2000.<br/> |
-| IDL<br/>                      | <dl> <dt>HttpRequest. idl</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows XP, Windows 2000 Professional nur mit \[ SP3-Desktop-Apps\]<br/>            |
+| Unterstützte Mindestversion (Server)<br/> | Windows Server 2003, Windows 2000 Server nur mit \[ SP3-Desktop-Apps\]<br/>         |
+| Verteilbare Komponente<br/>          | WinHTTP 5.0 und Internet Explorer 5.01 oder höher auf Windows XP und Windows 2000.<br/> |
+| Idl<br/>                      | <dl> <dt>HttpRequest.idl</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Iwinhttprequest**](iwinhttprequest-interface.md)
+[**IWinHttpRequest**](iwinhttprequest-interface.md)
 </dt> <dt>
 
 [WinHTTP-Versionen](winhttp-versions.md)

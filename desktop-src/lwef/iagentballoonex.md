@@ -13,7 +13,7 @@ ms.locfileid: "118478363"
 ---
 # <a name="iagentballoonex"></a>IAgentBalloonEx
 
-\[Der Microsoft-Agent ist ab Windows 7 veraltet und in nachfolgenden Versionen von Windows möglicherweise nicht mehr verfügbar.\]
+\[Microsoft Agent ist ab Version Windows 7 veraltet und in nachfolgenden Versionen von Windows.\]
 
 [**IAgentBalloonEx**](/windows/desktop/lwef/iagentballoon) wird von der **IAgentBalloon-Schnittstelle** abgeleitet. Sie enthält alle **IAgentBalloon-Methoden** und bietet Zugriff auf zusätzliche Funktionen.
 
@@ -23,10 +23,10 @@ ms.locfileid: "118478363"
 
 | IAgentBalloonEx-Methoden                                  | BESCHREIBUNG                                                        |
 |----------------------------------------------------------|--------------------------------------------------------------------|
-| [**Getstyle**](https://www.bing.com/search?q=**GetStyle**)                     | Gibt den Ausgabestil des Sprechblasens zurück.                           |
+| [**Getstyle**](https://www.bing.com/search?q=**GetStyle**)                     | Gibt den Ausgabestil des Wortsprechblasens zurück.                           |
 | [**Setstyle**](https://www.bing.com/search?q=**SetStyle**)                     | Legt den Ausgabestil des Wortsprechblasens fest.                              |
-| [**SetNumLines**](https://www.bing.com/search?q=**SetNumLines**)               | Legt die Ausgabe der Zahlenzeilen im Wortsprechblasen fest.                  |
-| [**SetNumCharsPerLine**](https://www.bing.com/search?q=**SetNumCharsPerLine**) | Legt die Anzahl der Zeichen pro Zeilenausgabe im Wortsprechblasen fest. |
+| [**SetNumLines**](https://www.bing.com/search?q=**SetNumLines**)               | Legt die Ausgabe der Zahlenzeilen im Wort balloon fest.                  |
+| [**SetNumCharsPerLine**](https://www.bing.com/search?q=**SetNumCharsPerLine**) | Legt die Anzahl der Zeichen pro Zeilenausgabe im Wort balloon fest. |
 
 
 

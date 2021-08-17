@@ -1,6 +1,6 @@
 ---
-title: Lit-vs
-description: Bietet partielle Unterstützung für Beleuchtung durch Berechnen von Beleuchtungs Koeffizienten aus zwei Punkt Produkten und einem Exponenten.
+title: lit – vs
+description: Bietet teilweise Unterstützung für die Beleuchtung, indem Die Lichtkoeffizienten aus zwei Punktprodukten und einem Exponenten berechnet werden.
 ms.assetid: e0ed1a75-6682-4d05-b0e5-dc65e201de98
 ms.topic: reference
 ms.date: 05/31/2018
@@ -9,46 +9,46 @@ topic_type:
 api_name: ''
 api_type: ''
 api_location: ''
-ms.openlocfilehash: 99c25c377ff6064a704d56b9e7b31d41b37117e5
-ms.sourcegitcommit: fe03c5d92ca6a0d66a114b2303e99c0a19241ffb
+ms.openlocfilehash: 3e5b5ff3451424251d778886af3841c673ce5a85d91022db9144c62574c16640
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "104976393"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118089323"
 ---
-# <a name="lit---vs"></a>Lit-vs
+# <a name="lit---vs"></a>lit – vs
 
-Bietet partielle Unterstützung für Beleuchtung durch Berechnen von Beleuchtungs Koeffizienten aus zwei Punkt Produkten und einem Exponenten.
+Bietet teilweise Unterstützung für die Beleuchtung, indem Die Lichtkoeffizienten aus zwei Punktprodukten und einem Exponenten berechnet werden.
 
 ## <a name="syntax"></a>Syntax
 
 
 
-| Lit DST, src |
+| lit dst, src |
 |--------------|
 
 
 
- 
+ 
 
 where
 
--   DST ist das Ziel Register.
--   src ist ein Quell Register.
+-   dst ist das Zielregister.
+-   src ist ein Quellregister.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
 
 
-| Vertex-Shader-Versionen | 1\_1 | 2 \_ 0 | 2 \_ x | 2 \_ SW | 3 \_ 0 | 3 \_ SW |
+| Vertex-Shaderversionen | 1\_1 | 2 \_ 0 | 2 \_ x | 2 \_ sw | 3 \_ 0 | 3 \_ sw |
 |------------------------|------|------|------|-------|------|-------|
-| gezündet                    | x    | x    | x    | x     | x    | x     |
+| Beleuchtet                    | x    | x    | x    | x     | x    | x     |
 
 
 
- 
+ 
 
-Es wird davon ausgegangen, dass der Quell Vektor die Werte enthält, die im folgenden Pseudocode angezeigt werden.
+Es wird davon ausgegangen, dass der Quellvektor die im folgenden Pseudocode gezeigten Werte enthält.
 
 
 ```
@@ -60,7 +60,7 @@ src.w = exponent   ; The value must be between -128.0 and 128.0
 
 
 
-Das folgende Code Fragment zeigt die ausgeführten Vorgänge.
+Das folgende Codefragment zeigt die ausgeführten Vorgänge.
 
 
 ```
@@ -89,20 +89,20 @@ if (src.x > 0)
 
 
 
-Die arithmetische Genauigkeit mit eingeschränkter Genauigkeit ist bei der Auswertung der y-Zielkomponente (dest. y) zulässig. Eine-Implementierung muss mindestens acht Bruch Bits im Power-Argument unterstützen. Punkt Produkte werden mit normalisierten Vektoren berechnet, und die Grenzwerte liegen zwischen-128 und 128.
+Arithmetik mit geringerer Genauigkeit ist bei der Auswertung der Zielkomponente y (dest.y) akzeptabel. Eine Implementierung muss mindestens acht Bruchbits im Potenzargument unterstützen. Punktprodukte werden mit normalisierten Vektoren berechnet, und die Klammergrenzwerte liegen zwischen -128 und 128.
 
-Der Fehler sollte mit einer Kombination aus [LogP-vs](logp---vs.md) und [Exp-vs](exp---vs.md) oder nicht mehr als ungefähr einem signifikanten Bit für eine 8-Bit-Farbkomponente übereinstimmen.
+Der Fehler sollte einer [Logp-/ vs.](logp---vs.md) [exp- vs-Kombination](exp---vs.md) oder nicht mehr als einem signifikanten Bit für eine 8-Bit-Farbkomponente entsprechen.
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[Vertex-shaderanweisungen](dx9-graphics-reference-asm-vs-instructions.md)
+[Vertex-Shaderanweisungen](dx9-graphics-reference-asm-vs-instructions.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

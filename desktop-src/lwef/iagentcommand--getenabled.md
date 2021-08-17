@@ -13,7 +13,7 @@ ms.locfileid: "118477655"
 ---
 # <a name="iagentcommandgetenabled"></a>IAgentCommand::GetEnabled
 
-\[Microsoft Agent ist ab Version Windows 7 veraltet und in nachfolgenden Versionen von Windows.\]
+\[Der Microsoft-Agent ist ab Windows 7 veraltet und in nachfolgenden Versionen von Windows möglicherweise nicht mehr verfügbar.\]
 
 ``` syntax
 HRESULT GetEnabled(
@@ -21,7 +21,7 @@ HRESULT GetEnabled(
 );
 ```
 
-Ruft den Wert der [**Enabled-Eigenschaft**](enabled-property.md) für einen [**Befehl ab.**](/windows/desktop/lwef/the-command-object)
+Ruft den Wert der [**Enabled-Eigenschaft**](enabled-property.md) für einen [**Befehl**](/windows/desktop/lwef/the-command-object)ab.
 
 -   Gibt S \_ OK zurück, um anzugeben, dass der Vorgang erfolgreich war.
 
@@ -30,13 +30,13 @@ Ruft den Wert der [**Enabled-Eigenschaft**](enabled-property.md) für einen [**B
 <span id="pbEnabled"></span><span id="pbenabled"></span><span id="PBENABLED"></span>*pbEnabled*
 </dt> <dd>
 
-Die Adresse einer Variablen, die **TRUE empfängt,** wenn [**der Befehl**](/windows/desktop/lwef/the-command-object) aktiviert ist, oder **False,** wenn sie deaktiviert ist. Ein **deaktivierter Befehl** kann nicht ausgewählt werden.
+Die Adresse einer Variablen, die **True** empfängt, wenn der [**Befehl**](/windows/desktop/lwef/the-command-object) aktiviert ist, oder **FALSE,** wenn sie deaktiviert ist. Ein **deaktivierter Befehl** kann nicht ausgewählt werden.
 
 </dd> </dl>
 
 ## <a name="see-also"></a>Weitere Informationen
 
-[**IAgentCommand::SetCaption**](iagentcommand--setcaption.md), [**IAgentCommand::SetVisible**](iagentcommand--setvisible.md), [**IAgentCommand::SetVoice**](iagentcommand--setvoice.md), [**IAgentCommands::Add**](iagentcommands--add.md), [**IAgentCommands::Insert**](iagentcommands--insert.md)
+[**IAgentCommand::SetCaption**](iagentcommand--setcaption.md), [**IAgentCommand::SetVisible**](iagentcommand--setvisible.md), [**IAgentCommand::SetVoice,**](iagentcommand--setvoice.md) [**IAgentCommands::Add**](iagentcommands--add.md), [**IAgentCommands::Insert**](iagentcommands--insert.md)
 
 
  

@@ -1,41 +1,41 @@
 ---
-description: Das Objekt "Swap DateTime" macht die folgenden Eigenschaften verfügbar.
+description: Das SWbemDateTime-Objekt macht die folgenden Eigenschaften verfügbar.
 ms.assetid: CE495B0E-5B2F-4F35-9DA3-052E79C8090E
 ms.tgt_platform: multiple
-title: Eigenschaften von "taubemdatetime"
+title: SWbemDateTime-Eigenschaften
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 9366dc9d6bac727885f563ce256790c2068c3293
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 6fadeddf190fc7c864e68d278e66bfa27c4a9bfd3b40a8df17b3bc7ec6563c72
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106352725"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117739407"
 ---
-# <a name="swbemdatetime-properties"></a>Eigenschaften von "taubemdatetime"
+# <a name="swbemdatetime-properties"></a>SWbemDateTime-Eigenschaften
 
-Das Objekt " [**Swap DateTime**](swbemdatetime.md) " macht die folgenden Eigenschaften verfügbar.
+Das [**SWbemDateTime-Objekt**](swbemdatetime.md) macht die folgenden Eigenschaften verfügbar.
 
 ## <a name="in-this-section"></a>In diesem Abschnitt
 
 -   [**Day-Eigenschaft**](swbemdatetime-day.md)
--   [**Dayangegebene-Eigenschaft**](swbemdatetime-dayspecified.md)
+-   [**DaySpecified-Eigenschaft**](swbemdatetime-dayspecified.md)
 -   [**Hours-Eigenschaft**](swbemdatetime-hours.md)
--   [**Hoursangegebene Eigenschaft**](swbemdatetime-hoursspecified.md)
--   [**Isinterval (Eigenschaft)**](swbemdatetime-isinterval.md)
--   [**Mikrosekunden (Eigenschaft)**](swbemdatetime-microseconds.md)
--   [**Eigenschaft ' mikrosecondsangegebene '**](swbemdatetime-microsecondsspecified.md)
--   [**Minuten (Eigenschaft)**](swbemdatetime-minutes.md)
--   [**Minutesangegebene (Eigenschaft)**](swbemdatetime-minutesspecified.md)
+-   [**HoursSpecified-Eigenschaft**](swbemdatetime-hoursspecified.md)
+-   [**IsInterval-Eigenschaft**](swbemdatetime-isinterval.md)
+-   [**Microseconds-Eigenschaft**](swbemdatetime-microseconds.md)
+-   [**MicrosecondsSpecified-Eigenschaft**](swbemdatetime-microsecondsspecified.md)
+-   [**Minutes-Eigenschaft**](swbemdatetime-minutes.md)
+-   [**MinutesSpecified-Eigenschaft**](swbemdatetime-minutesspecified.md)
 -   [**Month-Eigenschaft**](swbemdatetime-month.md)
--   [**Monthspezifizierte Eigenschaft**](swbemdatetime-monthspecified.md)
+-   [**MonthSpecified-Eigenschaft**](swbemdatetime-monthspecified.md)
 -   [**Seconds-Eigenschaft**](swbemdatetime-seconds.md)
--   [**Secondsspezifizierte Eigenschaft**](swbemdatetime-secondsspecified.md)
+-   [**SecondsSpecified-Eigenschaft**](swbemdatetime-secondsspecified.md)
 -   [**UTC-Eigenschaft**](swbemdatetime-utc.md)
--   [**Utcangegebene Eigenschaft**](swbemdatetime-utcspecified.md)
+-   [**UTCSpecified-Eigenschaft**](swbemdatetime-utcspecified.md)
 -   [**Value-Eigenschaft**](swbemdatetime-value.md)
 -   [**Year-Eigenschaft**](swbemdatetime-year.md)
--   [**Yearangegebene Eigenschaft**](swbemdatetime-yearspecified.md)
+-   [**YearSpecified-Eigenschaft**](swbemdatetime-yearspecified.md)
 
  
 

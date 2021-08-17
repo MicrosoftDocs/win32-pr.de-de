@@ -1,42 +1,42 @@
 ---
 title: Skalierungseffekt
-description: Verwenden Sie diesen Effekt, um ein Bild nach oben oder unten zu skalieren. Der Effekt hat sechs Skalierungs Modi nächster Nachbar, linear, kubisch, Multisample linear, anisotrope und High Quality kubisch.
+description: Verwenden Sie diesen Effekt, um ein Bild nach oben oder unten zu skalieren. Der Effekt verfügt über sechs Skalierungsmodi, die dem nächsten Nachbarn, linear, kubisch, multistichund linear, anisotrop und kubisch in hoher Qualität sind.
 ms.assetid: 99DFA8DB-384B-4F64-90A2-0D3D7E1ACF27
 keywords:
-- Skalierungs Effekt
+- Skalierungseffekt
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: ad3af77bc24db387fff0854e0432c270fa2ce6d5
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: d3a28e71dfb552a35bf138c245a82937bd600e61acd8b4a82b42cbc8d9d66a65
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104391830"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118003661"
 ---
 # <a name="scale-effect"></a>Skalierungseffekt
 
-Verwenden Sie diesen Effekt, um ein Bild nach oben oder unten zu skalieren. Der Effekt hat sechs Skalierungs Modi: nächster Nachbar, linear, kubisch, Multisample linear, anisotrope und High Quality kubisch.
+Verwenden Sie diesen Effekt, um ein Bild nach oben oder unten zu skalieren. Der Effekt hat sechs Skalierungsmodi: nächster Nachbar, linear, kubisch, multisamplingline, anisotrop und kubisch hoher Qualität.
 
 Die CLSID für diesen Effekt ist CLSID \_ D2D1Scale.
 
--   [Beispiel Bild](#example-image)
--   [Effekt Eigenschaften](#effect-properties)
-    -   [Rahmen Modi](#border-modes)
--   [Interpolations Modi](#interpolation-modes)
--   [Ausgabe Bitmap](#output-bitmap)
--   [Anforderungen](#requirements)
+-   [Beispielbild](#example-image)
+-   [Effect-Eigenschaften](#effect-properties)
+    -   [Rahmenmodi](#border-modes)
+-   [Interpolationsmodi](#interpolation-modes)
+-   [Ausgabebitmap](#output-bitmap)
+-   [Requirements](#requirements)
 -   [Zugehörige Themen](#related-topics)
 
 ## <a name="example-image"></a>Beispielbild
 
-Dieses Beispiel zeigt, wie der Skalierungs Effekt in den 2fachen der Eingabe vergrößert wird und auf die ursprüngliche Größe zugreift.
+Dieses Beispiel zeigt den Skalierungseffekt, der das Zweifache der Eingabe vergrößert und auf die ursprüngliche Größe zugeschnitten wird.
 
 
 
 | Vorher                                                     |
 |------------------------------------------------------------|
 | ![das Bild vor dem Effekt.](images/default-before.jpg) |
-| Nach                                                      |
+| Danach                                                      |
 | ![das Bild nach der Transformation.](images/22-scale.png)     |
 
 
@@ -60,7 +60,7 @@ m_d2dContext->EndDraw();
 
 
 
-## <a name="effect-properties"></a>Effekt Eigenschaften
+## <a name="effect-properties"></a>Effect-Eigenschaften
 
 
 
@@ -71,35 +71,35 @@ m_d2dContext->EndDraw();
 </colgroup>
 <thead>
 <tr class="header">
-<th>Anzeige Name und indexenumeration</th>
+<th>Anzeigename und Indexenumeration</th>
 <th>BESCHREIBUNG</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
 <td>Skalieren<br/> D2D1_SCALE_PROP_SCALE<br/></td>
-<td>Der Skalierungs Betrag in der X-und Y-Richtung als Verhältnis zwischen der Ausgabegröße und der Eingabe Größe. Diese Eigenschaft ist eine D2D1_VECTOR_2Fdefined wie: (X Scale, Y Scale). Die Skalierungs Beträge sind float, unitless und müssen positiv oder 0 sein.<br/> Der Typ ist D2D1_VECTOR_2F.<br/> Der Standardwert ist {1.0 f, 1.0 f}.<br/></td>
+<td>Die Skalierungsmenge in X- und Y-Richtung als Verhältnis der Ausgabegröße zur Eingabegröße. Diese Eigenschaft D2D1_VECTOR_2Fdefined wie: (X-Skalierung, Y-Skalierung). Die Skalierungsbeträge sind FLOAT, einheitenlos und müssen positiv oder 0 sein.<br/> Der Typ ist D2D1_VECTOR_2F.<br/> Der Standardwert ist {1.0f, 1.0f}.<br/></td>
 </tr>
 <tr class="even">
 <td>CenterPoint<br/> D2D1_SCALE_PROP_CENTER_POINT<br/></td>
-<td>Der Mittelpunkt der Bildskalierung. Diese Eigenschaft ist eine D2D1_VECTOR_2F, die wie folgt definiert ist: (Punkt X, Punkt Y). Die Einheiten befinden sich in Dips.<br/> Verwenden Sie die Mittelpunkt Eigenschaft, um einen anderen Punkt als die linke obere Ecke zu skalieren.<br/> Der Typ ist D2D1_VECTOR_2F.<br/> Der Standardwert ist {0,0 f, 0,0 f}.<br/></td>
+<td>Der Mittelpunkt der Bildskalierung. Diese Eigenschaft ist ein D2D1_VECTOR_2F definiert als : (Punkt X, Punkt Y). Die Einheiten befinden sich in DIPs.<br/> Verwenden Sie die Eigenschaft Mittelpunkt, um einen anderen Punkt als die linke obere Ecke zu skalieren.<br/> Der Typ ist D2D1_VECTOR_2F.<br/> Der Standardwert ist {0.0f, 0.0f}.<br/></td>
 </tr>
 <tr class="odd">
-<td>Bordermode<br/> D2D1_SCALE_PROP_BORDER_MODE<br/></td>
-<td>Der Modus, der verwendet wird, um den Rahmen des Bilds zu berechnen, weich oder hart. Weitere Informationen finden Sie unter <a href="#border-modes">Border Modes</a> . <br/> Der Typ ist D2D1_BORDER_MODE.<br/> Der Standardwert ist D2D1_BORDER_MODE_SOFT.<br/></td>
+<td>BorderMode<br/> D2D1_SCALE_PROP_BORDER_MODE<br/></td>
+<td>Der Modus, der zum Berechnen des Rahmens des Bilds verwendet wird( soft oder hard). Weitere Informationen finden Sie unter <a href="#border-modes">Border modes (Rahmenmodi).</a> <br/> Der Typ ist D2D1_BORDER_MODE.<br/> Der Standardwert ist D2D1_BORDER_MODE_SOFT.<br/></td>
 </tr>
 <tr class="even">
 <td>Schärfe<br/> D2D1_SCALE_PROP_SHARPNESS<br/></td>
-<td>Im hochwertigen kubischen Interpolations Modus ist die Schärfe des Skalierungs Filters ein Gleit Komma Wert zwischen 0 und 1. Die Werte sind unitless. Mit der Schärfe können Sie die Qualität eines Bilds anpassen, wenn Sie das Bild nach unten skalieren.<br/> Der Schärfe Faktor wirkt sich auf die Form des Kernels aus. Je höher der Schärfe Faktor, desto kleiner der Kernel.<br/>
+<td>Im kubischen Interpolationsmodus von hoher Qualität die Schärfestufe des Skalierungsfilters als Gleitkommawert zwischen 0 und 1. Die Werte sind einheitenlos. Sie können die Schärfe verwenden, um die Qualität eines Bilds anzupassen, wenn Sie das Bild herunterskalieren.<br/> Der Schärfefaktor wirkt sich auf die Form des Kernels aus. Je höher der Schärfefaktor, desto kleiner der Kernel.<br/>
 <blockquote>
 [!Note]<br />
-Diese Eigenschaft wirkt sich nur auf den hochwertigen kubischen Interpolations Modus aus.
+Diese Eigenschaft wirkt sich nur auf den kubischen Interpolationsmodus hoher Qualität aus.
 </blockquote>
-<br/> Der Typ ist "float".<br/> Der Standardwert ist 0,0 f.<br/></td>
+<br/> Der Typ ist FLOAT.<br/> Der Standardwert ist 0,0f.<br/></td>
 </tr>
 <tr class="odd">
-<td>InterpolationMode<br/> D2D1_SCALE_PROP_INTERPOLATION_MODE<br/></td>
-<td>Der Interpolations Modus, den der Effekt zum Skalieren des Bilds verwendet. Es gibt sechs Skalierungs Modi mit hoher Qualität und Geschwindigkeit. Weitere Informationen finden Sie unter <a href="#interpolation-modes">Interpolations Modi</a> . <br/> Der Typ ist D2D1_SCALE_INTERPOLATION_MODE.<br/> Der Standardwert ist D2D1_SCALE_INTERPOLATION_MODE_LINEAR.<br/></td>
+<td>Interpolationmode<br/> D2D1_SCALE_PROP_INTERPOLATION_MODE<br/></td>
+<td>Der Interpolationsmodus, den der Effekt zum Skalieren des Bilds verwendet. Es gibt sechs Skalierungsmodi, die in Qualität und Geschwindigkeit reichen. Weitere Informationen finden Sie <a href="#interpolation-modes">unter Interpolationsmodi.</a> <br/> Der Typ ist D2D1_SCALE_INTERPOLATION_MODE.<br/> Der Standardwert ist D2D1_SCALE_INTERPOLATION_MODE_LINEAR.<br/></td>
 </tr>
 </tbody>
 </table>
@@ -108,14 +108,14 @@ Diese Eigenschaft wirkt sich nur auf den hochwertigen kubischen Interpolations M
 
  
 
-### <a name="border-modes"></a>Rahmen Modi
+### <a name="border-modes"></a>Rahmenmodi
 
 
 
 | Name                     | BESCHREIBUNG                                                                                                                                                                                                                                                              |
 |--------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| D2D1 \_ Border \_ Mode \_ Soft | Der Effekt füllt das Eingabebild mit transparenten schwarzen Pixeln für Stichproben außerhalb der Eingabe Grenzen auf, wenn es den zuordnerkerntyp anwendet. Dadurch wird ein weicher Edge für das Bild erstellt, und im Prozess wird die Ausgabe Bitmap um die Größe des Kernels erweitert.<br/> |
-| D2D1 \_ Rahmen \_ Modus \_ hart | Die Auswirkung erweitert das Eingabebild durch eine Spiegelungs Typen-Rahmen Transformation für Beispiele außerhalb der Eingabe Grenzen. Die Größe der Ausgabe Bitmap entspricht der Größe der Eingabe Bitmap.<br/>                                                                       |
+| D2D1 \_ BORDER \_ MODE \_ SOFT | Durch den Effekt wird das Eingabebild mit transparenten schwarzen Pixeln für Stichproben außerhalb der Eingabegrenzen aufgefüllt, wenn der Konvolutionskernel angewendet wird. Dadurch wird ein weicher Rand für das Bild erstellt, und im Prozess wird die Ausgabebitmap um die Größe des Kernels erweitert.<br/> |
+| D2D1 \_ BORDER \_ MODE \_ HARD | Der Effekt erweitert das Eingabebild um eine Rahmentransformation des Spiegeltyps für Stichproben außerhalb der Eingabegrenzen. Die Größe der Ausgabebitmap entspricht der Größe der Eingabebitmap.<br/>                                                                       |
 
 
 
@@ -123,44 +123,44 @@ Diese Eigenschaft wirkt sich nur auf den hochwertigen kubischen Interpolations M
 
 \`
 
-## <a name="interpolation-modes"></a>Interpolations Modi
+## <a name="interpolation-modes"></a>Interpolationsmodi
 
 
 
 | Enumeration                                             | Beschreibung                                                                                                                                                                                          |
 |---------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| D2D1 \_ Scale \_ Interpolations \_ Modus \_ Nächster \_ Nachbar     | Verwendet den nächsten einzelnen Punkt und verwendet diesen. Dieser Modus verwendet weniger Verarbeitungszeit, gibt jedoch das niedrigste Qualitätsbild aus.                                                                           |
-| D2D1 \_ - \_ Interpolations \_ Modus \_ linear                | Verwendet ein vier-Punkt-Beispiel und eine lineare interpolung. Dieser Modus verwendet mehr Verarbeitungszeit als der nächstgelegene Nachbar Modus, gibt aber ein Image mit höherer Qualität aus.                                           |
-| D2D1 \_ - \_ Skalierungs Modus für Interpolations \_ Modus \_                 | Verwendet einen 16-beispielkubischen Kernel für Interpolationen. In diesem Modus wird die meiste Verarbeitungszeit verwendet, es wird jedoch ein Image mit höherer Qualität ausgegeben.                                                                        |
-| D2D1 \_ Scale \_ Interpolations \_ Modus \_ \_ Multisample \_ linear | Verwendet vier lineare Stichproben innerhalb eines einzelnen Pixels für eine gute Edge-Antialiasing. Dieser Modus eignet sich gut zum horizontalen Herunterskalieren um kleine Beträge in Bildern mit wenigen Pixeln.                                              |
-| D2D1 \_ Scale \_ Interpolations \_ Modus \_ anisotrope           | Verwendet anisotrope Filterung, um ein Muster entsprechend der transformierten Form der Bitmap zu modellieren.                                                                                                     |
-| D2D1 \_ Scale- \_ Interpolations \_ Modus \_ High \_ Quality \_ kubisch  | Verwendet einen kubischen Kernel mit hoher Qualität für eine Variable Größe, um das Abbild vorab zu skalieren, wenn eine downstreamingmatrix an der Transformationsmatrix beteiligt ist. Verwendet dann den kubischen Interpolations Modus für die endgültige Ausgabe. |
+| D2D1– \_ \_ SKALIERUNGSINTERPOLATIONSMODUS \_ \_ NÄCHSTER \_ NACHBAR     | Probieren Sie den nächstgelegenen einzelnen Punkt aus, und verwendet diesen. Dieser Modus verwendet weniger Verarbeitungszeit, gibt jedoch das Bild mit der niedrigsten Qualität aus.                                                                           |
+| D2D1– \_ \_ SKALIERUNGSINTERPOLATIONSMODUS \_ \_ LINEAR                | Verwendet eine Vier-Punkt-Stichprobe und lineare Interpolation. Dieser Modus verwendet mehr Verarbeitungszeit als der nächste Nachbarmodus, gibt jedoch ein Bild höherer Qualität aus.                                           |
+| \_ \_ D2D1–SKALIERUNGSINTERPOLATIONSMODUS \_ \_ KUBISCH                 | Verwendet einen kubischen Kernel mit 16 Beispielen für die Interpolation. Dieser Modus verwendet die meiste Verarbeitungszeit, gibt jedoch ein Bild höherer Qualität aus.                                                                        |
+| D2D1 \_ SCALE \_ INTERPOLATION \_ MODE \_ MULTI \_ SAMPLE \_ LINEAR | Verwendet vier lineare Stichproben innerhalb eines einzelnen Pixels für ein gutes Edge-Antialiasing. Dieser Modus eignet sich gut für das Herunterskalierung um kleine Mengen auf Bildern mit wenigen Pixeln.                                              |
+| D2D1 \_ SCALE \_ INTERPOLATION MODE \_ \_ ANISOTROP           | Verwendet anisotrope Filterung, um ein Muster entsprechend der transformierten Form der Bitmap abzubilden.                                                                                                     |
+| D2D1 \_ SCALE \_ INTERPOLATION MODE HIGH QUALITY \_ \_ \_ \_ KUBISCH  | Verwendet einen kubischen Kernel variabler Größe, um das Bild vorab herunterzuskalieren, wenn die Transformationsmatrix eine Downskalierung umfasst. Verwendet dann den kubischen Interpolationsmodus für die endgültige Ausgabe. |
 
 
 
  
 
 > [!Note]  
-> Wenn Sie keinen Modus auswählen, wird der Effekt standardmäßig auf den D2D1 \_ Scale \_ Interpolations \_ Modus \_ linear.
+> Wenn Sie keinen Modus auswählen, lautet der Effekt standardmäßig D2D1 \_ SCALE \_ INTERPOLATION \_ MODE \_ LINEAR.
 
  
 
 > [!Note]  
-> Der anisotrope-Modus generiert bei der Skalierung Mipmaps. Wenn Sie jedoch die **zwischengespeicherte** Eigenschaft für die Effekte, die für diesen Effekt eingegeben werden, auf true festlegen, werden die Mipmaps bei ausreichend kleinen Bildern nicht jedes Mal generiert.
+> Der Anisotropiemodus generiert bei der Skalierung Mipmaps. Wenn Sie jedoch die **Cached-Eigenschaft** für die Effekte, die für diesen Effekt eingegeben werden, auf TRUE festlegen, werden die Mipmaps nicht jedes Mal für ausreichend kleine Bilder generiert.
 
  
 
-## <a name="output-bitmap"></a>Ausgabe Bitmap
+## <a name="output-bitmap"></a>Ausgabebitmap
 
-Der Speicherort und die Größe der Ausgabe Bitmap sind abhängig vom angegebenen Skalierungsfaktor und dem Mittelpunkt.
+Die Position und Größe der Ausgabebitmap hängt vom angegebenen Skalierungsfaktor und dem Mittelpunkt ab.
 
-Mit dieser Formel können Sie die Größe der Ausgabe Bitmap berechnen:<dl> Bitmapsize? (Pixel) = Skalieren? \* Ursprüngliche Bitmapgröße? (Dips) \* (Userdpi/96)  
-Bitmapsize<sub>y</sub>(Pixel) =<sub>y</sub> \* ursprüngliche Bitmapgröße skalieren<sub>y</sub> (Dips) \* (userdpi/96)  
+Sie können die Größe der Ausgabebitmap mithilfe dieser Gleichung berechnen:<dl> BitmapSize? (Pixel)=Skalieren? \* Ursprüngliche Bitmapgröße? (DIPs) \* (UserDPI/96)  
+BitmapSize<sub>y</sub>(Pixels)=Scale<sub>y</sub> \* Original Bitmap Size<sub>y</sub> (DIPs) \* (UserDPI/96)  
 </dl>
 
-Der Effekt rundet Bruchteile von Pixeln auf das nächste ganze Pixel ab.
+Der Effekt rundet Bruchteile von Pixeln auf das nächste ganze Pixel auf.
 
-Der Speicherort der Bitmap ist (0,0) oder der Wert der Mittelpunkt Eigenschaft.
+Die Position der Bitmap ist (0, 0) oder der Wert der Mittelpunkteigenschaft.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -168,10 +168,10 @@ Der Speicherort der Bitmap ist (0,0) oder der Wert der Mittelpunkt Eigenschaft.
 
 | Anforderung | Wert |
 |--------------------------|------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client) | Windows 8 und Platt Form Update für Windows 7 \[ -Desktop-Apps für \| Windows Store-Apps\] |
-| Unterstützte Mindestversion (Server) | Windows 8 und Platt Form Update für Windows 7 \[ -Desktop-Apps für \| Windows Store-Apps\] |
-| Header                   | d2d1effects. h                                                                      |
-| Bibliothek                  | d2d1. lib, dxguid. lib                                                               |
+| Unterstützte Mindestversion (Client) | Windows 8 und Plattformupdate für Windows 7 \[ Desktop-Apps \| Windows Store Apps\] |
+| Unterstützte Mindestversion (Server) | Windows 8 und Plattformupdate für Windows 7 \[ Desktop-Apps \| Windows Store Apps\] |
+| Header                   | d2d1effects.h                                                                      |
+| Bibliothek                  | d2d1.lib, dxguid.lib                                                               |
 
 
 
