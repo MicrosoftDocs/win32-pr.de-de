@@ -18,7 +18,7 @@ ms.locfileid: "119452500"
 **Clients –** Windows 8.1  
 **Server –** Windows Server 2012 R2  
 
-## <a name="description"></a>BESCHREIBUNG
+## <a name="description"></a>Beschreibung
 
 Platzhalterdateien ermöglichen Es Benutzern, Microsoft OneDrive Dateien unabhängig von der Konnektivität anzuzeigen und zu verwalten. Platzhalterdateien stellen den OneDrive Namespace dar, auch wenn Dateien nicht lokal zwischengespeichert werden. Sie enthalten Dateimetadaten und Miniaturbilder von Fotos.
 
@@ -26,7 +26,7 @@ Platzhalterdateien ermöglichen Es Benutzern, Microsoft OneDrive Dateien unabhä
 
 Für Endbenutzer und Entwickler sehen Platzhalterdateien fast genauso aus und verhalten sich wie die lokalen Dateien.
 
-Wenn Ihre App das Dialogfeld "Allgemeine Datei" verwendet, um das Dateisystem aufzuzählen, ist ihre App nicht betroffen. Wenn der Benutzer versucht, die Datei über das allgemeine Dialogfeld /file zu öffnen, wird der Dateiinhalt heruntergeladen und an Ihre App übergeben.
+Wenn Ihre App das Dialogfeld "Allgemeine Datei" verwendet, um das Dateisystem aufzuzählen, ist Ihre App nicht betroffen. Wenn der Benutzer versucht, die Datei über das allgemeine Dialogfeld /file zu öffnen, wird der Dateiinhalt heruntergeladen und an Ihre App übergeben.
 
 Wenn Ihre App direkt auf das Dateisystem zugreift, kann Ihre App die Platzhalterdateien anhand der folgenden Richtlinien nutzen.
 

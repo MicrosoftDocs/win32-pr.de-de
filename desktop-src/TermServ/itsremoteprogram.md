@@ -1,11 +1,11 @@
 ---
-title: Itsremoteprogram-Schnittstelle
-description: Enthält Methoden zum Festlegen und Abrufen des RemoteApp-Modus und der Startparameter für ein RemoteApp-Programm, z. b. den Pfad der ausführbaren Datei und das Arbeitsverzeichnis.
+title: ITSRemoteProgram-Schnittstelle
+description: Enthält Methoden zum Festlegen und Abrufen des RemoteApp-Modus und der Startparameter für ein RemoteApp-Programm, z. B. den Pfad der ausführbaren Datei und des Arbeitsverzeichnisses.
 ms.assetid: c9eec63b-7162-4bf8-b5d5-8cadb971ef98
 ms.tgt_platform: multiple
 keywords:
-- Itsremoteprogram-Schnittstelle Remotedesktopdienste
-- Itsremoteprogram-Schnittstelle Remotedesktopdienste, beschrieben
+- ITSRemoteProgram-Schnittstelle Remotedesktopdienste
+- ITSRemoteProgram-Schnittstelle Remotedesktopdienste beschrieben
 topic_type:
 - apiref
 api_name:
@@ -16,33 +16,33 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: cfec99c109dfd3f69e22caf13071b77cd41f61bd
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: b719771f265347da59ce4d8c5990a5b9dc5a72315780def0fd3a34b108e18169
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104040749"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117756809"
 ---
-# <a name="itsremoteprogram-interface"></a>Itsremoteprogram-Schnittstelle
+# <a name="itsremoteprogram-interface"></a>ITSRemoteProgram-Schnittstelle
 
-Enthält Methoden zum Festlegen und Abrufen des RemoteApp-Modus und der Startparameter für ein RemoteApp-Programm, z. b. den Pfad der ausführbaren Datei und das Arbeitsverzeichnis.
+Enthält Methoden zum Festlegen und Abrufen des RemoteApp-Modus und der Startparameter für ein RemoteApp-Programm, z. B. den Pfad der ausführbaren Datei und des Arbeitsverzeichnisses.
 
 ## <a name="members"></a>Member
 
-Die **itsremoteprogram** -Schnittstelle erbt von der [**IDispatch**](/windows/win32/api/oaidl/nn-oaidl-idispatch) -Schnittstelle. **Itsremoteprogram** verfügt auch über die folgenden Typen von Membern:
+Die **ITSRemoteProgram-Schnittstelle** erbt von der [**IDispatch-Schnittstelle.**](/windows/win32/api/oaidl/nn-oaidl-idispatch) **ITSRemoteProgram** verfügt auch über diese Typen von Membern:
 
 -   [Methoden](#methods)
 -   [Eigenschaften](#properties)
 
 ### <a name="methods"></a>Methoden
 
-Die Schnittstelle **itsremoteprogram** verfügt über diese Methoden.
+Die **ITSRemoteProgram-Schnittstelle** verfügt über diese Methoden.
 
 
 
-| Methode                                                            | BESCHREIBUNG                                                              |
+| Methode                                                            | Beschreibung                                                              |
 |:------------------------------------------------------------------|:-------------------------------------------------------------------------|
-| [**Serverstartprogram**](itsremoteprogram-serverstartprogram.md) | Gibt ein RemoteApp-Programm an, das in der Remote Sitzung gestartet werden soll.<br/> |
+| [**ServerStartProgram**](itsremoteprogram-serverstartprogram.md) | Gibt ein RemoteApp-Programm an, das in der Remotesitzung gestartet werden soll.<br/> |
 
 
 
@@ -50,13 +50,13 @@ Die Schnittstelle **itsremoteprogram** verfügt über diese Methoden.
 
 ### <a name="properties"></a>Eigenschaften
 
-Die Schnittstelle **itsremoteprogram** verfügt über diese Eigenschaften.
+Die **ITSRemoteProgram-Schnittstelle** verfügt über diese Eigenschaften.
 
 
 
-| Eigenschaft                                                                   | Zugriffstyp           | BESCHREIBUNG                    |
+| Eigenschaft                                                                   | Zugriffstyp           | Beschreibung                    |
 |:---------------------------------------------------------------------------|:----------------------|:-------------------------------|
-| [**Remoteprogrammode**](itsremoteprogram-remoteprogrammode.md)<br/> | Lesen/Schreiben<br/> | Der RemoteApp-Modus.<br/> |
+| [**RemoteProgramMode**](itsremoteprogram-remoteprogrammode.md)<br/> | Lesen/Schreiben<br/> | Der RemoteApp-Modus.<br/> |
 
 
 
@@ -72,18 +72,18 @@ Die Schnittstelle **itsremoteprogram** verfügt über diese Eigenschaften.
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2008<br/>                                                         |
 | Typbibliothek<br/>             | <dl> <dt>MsTscAx.dll</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>MsTscAx.dll</dt> </dl> |
-| IID<br/>                      | IID \_ itsremoteprogram ist als FDD029F9-467A-4c49-8529-64B521DBD1B4 definiert.<br/>    |
+| IID<br/>                      | IID \_ ITSRemoteProgram ist als FDD029F9-467A-4c49-8529-64B521DBD1B4 definiert.<br/>    |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
 [**IDispatch**](/windows/win32/api/oaidl/nn-oaidl-idispatch)
 </dt> <dt>
 
-[Remotedesktop-Webverbindung Referenz](remote-desktop-web-connection-reference.md)
+[Remotedesktop-Webverbindung-Referenz](remote-desktop-web-connection-reference.md)
 </dt> </dl>
 
  

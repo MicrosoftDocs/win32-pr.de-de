@@ -1,24 +1,24 @@
 ---
-description: Profilekreationtype (in mbnprofileext)
+description: ProfileCreationType (in MBNProfileExt)
 MS-HAID: WWAN\_profile\_v4.element\_ProfileCreationType
 MSHAttr:
 - PreferredSiteName:MSDN
 - PreferredLib:/library/windows/desktop
-title: Profilekreationtype (in mbnprofileext)
+title: ProfileCreationType (in MBNProfileExt)
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: b56e09a18721bfa7d5f33d8e7511122f3d731f4a
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 798f5f300a712f4b614e73007e0d0237c19e41010335d469bd58521a29847805
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "103751953"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119358710"
 ---
-# <a name="span-idwwan_profile_v4element_profilecreationtypespanprofilecreationtype-in-mbnprofileext"></a><span id="WWAN_profile_v4.element_ProfileCreationType"></span>Profilekreationtype (in mbnprofileext)
+# <a name="span-idwwan_profile_v4element_profilecreationtypespanprofilecreationtype-in-mbnprofileext"></a><span id="WWAN_profile_v4.element_ProfileCreationType"></span>ProfileCreationType (in MBNProfileExt)
 
 Gibt den Ersteller des Profils an.
 
-Weitere Informationen zu diesem Element finden Sie in der Dokumentation für das v1 [**profilekreationtype**](./schema-profilecreationtype-mbnprofile-element.md) -Element.
+Weitere Informationen zu diesem Element finden Sie in der Dokumentation für das v1 [**ProfileCreationType-Element.**](./schema-profilecreationtype-mbnprofile-element.md)
 
 ## <a name="element-hierarchy"></a>Elementhierarchie
 
@@ -55,14 +55,14 @@ Keine.
 <thead>
 <tr class="header">
 <th>Übergeordnetes Element</th>
-<th>BESCHREIBUNG</th>
+<th>Beschreibung</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
 <td><a href="element-mbnprofileext.md">MBNProfileExt</a></td>
-<td><p>Das <strong>mbnprofileext</strong> -Element ist eine Erweiterung des früheren mbnprofile-Elements. Es identifiziert ein mobiles Breitband Profil mit einem umfassenderen Satz von Optionen als das mbnprofile-Element.</p>
-<p>Es kann mehr als ein mbnprofileext-Element in einem Profil geben, das Profileinstellungen für einen bestimmten Satz von Betriebszuständen beschreibt. Verwenden Sie das untergeordnete <a href="element-profileconditionedon.md"><strong>profileconditionedon</strong></a> -Element von <strong>mbnprofileext</strong> , um anzugeben, welche Betriebsbedingungen ein bestimmtes Profil zum aktiven Profil machen.</p></td>
+<td><p>Das <strong>MBNProfileExt-Element</strong> ist eine Erweiterung des früheren MBNProfile-Elements. Es identifiziert ein Mobile Broadband-Profil mit einem vielfältigeren Satz von Optionen als das MBNProfile-Element.</p>
+<p>Es kann mehrere MbnProfileExt-Elemente in einem Profil geben, die Profileinstellungen für einen bestimmten Satz von Betriebsbedingungen beschreiben. Verwenden Sie <a href="element-profileconditionedon.md"><strong>das untergeordnete ProfileConditionedOn-Element</strong></a> von <strong>MBNProfileExt,</strong> um anzugeben, welche Betriebsbedingungen ein bestimmtes Profil zum aktiven Profil machen.</p></td>
 </tr>
 </tbody>
 </table>
@@ -73,7 +73,7 @@ Keine.
 
 Die folgenden Elemente haben denselben Namen wie dieses Element, aber ihr Inhalt oder ihre Attribute sind anders.
 
--   **[Profilekreationtype (in "mudedmconfigprofile")](element-1-profilecreationtype.md)**
+-   **[ProfileCreationType (in ModemDMConfigProfile)](element-1-profilecreationtype.md)**
 
 ## <a name="requirements"></a>Anforderungen
 

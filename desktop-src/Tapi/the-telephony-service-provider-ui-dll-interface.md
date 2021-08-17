@@ -1,23 +1,23 @@
 ---
-description: In der Microsoft-telefonietelefonie werden Telefoniedienstanbieter in einem separaten Prozess von Telefonieanwendungen ausgeführt.
+description: In Microsoft-Telefonie werden Telefoniedienstanbieter in einem anderen Prozess als Telefonieanwendungen ausgeführt.
 ms.assetid: ccc40d3c-6764-469a-baac-fa625d664ea7
-title: UI-Dienstanbieter UI-DLL-Schnittstelle
+title: Die UI-DLL-Schnittstelle des Telefoniedienstanbieters
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: bdab33dd9c9630aed7d7aed168982cfac2daee2b
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: f6aea6dfd68773dcd96602803230bd160552eab1414135b75a3205a0fac88dd2
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106349204"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119403940"
 ---
-# <a name="the-telephony-service-provider-ui-dll-interface"></a>UI-Dienstanbieter UI-DLL-Schnittstelle
+# <a name="the-telephony-service-provider-ui-dll-interface"></a>Die UI-DLL-Schnittstelle des Telefoniedienstanbieters
 
-In der Microsoft-telefonietelefonie werden Telefoniedienstanbieter in einem separaten Prozess von Telefonieanwendungen ausgeführt. Dienstanbieter kommunizieren über die Telefonie-Dienstanbieter Schnittstelle (TSPI) mit tapisrv und führen Sie in Ihrem Prozess aus. Anwendungen stellen eine Schnittstelle zu TAPI dar, die im Anwendungskontext geladen werden.
+In Microsoft-Telefonie werden Telefoniedienstanbieter in einem anderen Prozess als Telefonieanwendungen ausgeführt. Dienstanbieter kommunizieren mit TAPISRV über die Telefonie-Dienstanbieterschnittstelle (Tspi) und führen sie in ihrem Prozess aus. -Anwendungsschnittstelle zu TAPI, die im Anwendungskontext geladen werden.
 
-Die Komponenten von TAPI verwenden verschiedene prozessübergreifende Kommunikationsmechanismen, um Funktionsanforderungen und Nachrichten zwischen Anwendungen und Dienstanbietern zu übermitteln. Die Anwendungen und die Dienstanbieter können nicht nur in separaten Prozessen ausgeführt werden, sondern auf vollständig getrennten Systemen. Dienstanbieter können daher keine Dialogfelder im Prozess oder sogar auf dem Computer anzeigen, auf dem Sie ausgeführt werden. Auf dem Computer, auf dem die Anwendung ausgeführt wird, muss die Benutzeroberfläche innerhalb des Anwendungs Kontexts aufgerufen werden.
+Die Komponenten von TAPI verwenden verschiedene prozessübergreifende Kommunikationsmechanismen, um Funktionsanforderungen und Nachrichten zwischen Anwendungen und Dienstanbietern zu übermitteln. Die Anwendungen und Dienstanbieter können nicht nur in separaten Prozessen ausgeführt werden, sondern auch auf vollständig separaten Systemen. Dienstanbieter können daher keine Dialogfelder im Prozess oder sogar auf dem Computer anzeigen, auf dem sie ausgeführt werden. Die Benutzeroberfläche muss innerhalb des Anwendungskontexts auf dem Computer aufgerufen werden, auf dem die Anwendung ausgeführt wird.
 
-In diesem Abschnitt wird der Mechanismus definiert, mit dem die Benutzeroberflächen Funktionen von Dienstanbietern geladen und innerhalb des Anwendungs Kontexts aufgerufen werden. Außerdem wird ein Mechanismus definiert, durch den Dienstanbieter die Dialogfelder im Anwendungskontext spontan öffnen können, wenn Sie von der Anwendung nicht anderweitig erwartet werden. Ein Beispiel für diesen letzteren Fall wäre das Dialogfeld **Talk/hangup** , das von einem Daten-Modem Dienstanbieter angezeigt wird, wenn das Modem als Einwählprogramm für interaktive Sprachanrufe verwendet wird, und der Benutzer muss aufgefordert werden, das Telefon zu übernehmen und den Dienstanbieter darüber zu informieren, wann er den Modem-OnHook platzieren soll.
+In diesem Abschnitt wird der Mechanismus definiert, mit dem Dienstanbieter-UI-Funktionen im Anwendungskontext geladen und aufgerufen werden. Außerdem wird ein Mechanismus definiert, mit dem Dienstanbieter Dialogfelder im Anwendungskontext öffnen können, wenn sie andernfalls von der Anwendung nicht erwartet werden. Ein Beispiel für diesen letzteren Fall wäre das Dialogfeld **Talk/Hangup,** das von einem Datenmodem-Dienstanbieter angezeigt wird, wenn das Modem als Wählhilfe für interaktive Sprachanrufe verwendet wird, und der Benutzer muss angewiesen werden, das Telefon abzuholen und den Dienstanbieter zu informieren, wann das Modem in denHook gestellt werden soll.
 
  
 

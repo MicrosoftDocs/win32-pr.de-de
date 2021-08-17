@@ -1,7 +1,7 @@
 ---
-description: Diese Klasse ist die übergeordnete Klasse für Split IO-Ereignisse. Die folgende Syntax wird durch den MOF-Code vereinfacht.
+description: Diese Klasse ist die übergeordnete Klasse für geteilte E/A-Ereignisse. Die folgende Syntax wird durch einen MOF-Code vereinfacht.
 ms.assetid: d65c5180-6f1a-45cc-bca8-eac13857d383
-title: Splitio-Klasse
+title: SplitIo-Klasse
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -12,18 +12,18 @@ api_name:
 api_type:
 - NA
 api_location: ''
-ms.openlocfilehash: f2efc14ce8804852f983ebe9dcb852c8c0669899
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 0268c3dfa778eb8694a81f57b9212b68bd6674e6c7de6324cdc297550745b2a2
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104978841"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119069720"
 ---
-# <a name="splitio-class"></a>Splitio-Klasse
+# <a name="splitio-class"></a>SplitIo-Klasse
 
-Diese Klasse ist die übergeordnete Klasse für Split IO-Ereignisse.
+Diese Klasse ist die übergeordnete Klasse für geteilte E/A-Ereignisse.
 
-Die folgende Syntax wird durch den MOF-Code vereinfacht.
+Die folgende Syntax wird durch einen MOF-Code vereinfacht.
 
 ## <a name="syntax"></a>Syntax
 
@@ -36,34 +36,34 @@ class SplitIo : MSNT_SystemTrace
 
 ## <a name="members"></a>Member
 
-Die **splitio** -Klasse definiert keine Member.
+Die **SplitIo-Klasse** definiert keine Member.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Um geteilte e/a-Ereignisse in einer NT-Kernel Protokollierungs Sitzung zu aktivieren, geben Sie das Flag für die Ablaufverfolgungsflag **\_ \_ \_ Split \_ IO** im **enableflags** -Member einer Eigenschaften Struktur der [**Ereignis Ablauf \_ Verfolgung \_**](/windows/win32/api/evntrace/ns-evntrace-event_trace_properties) beim Aufrufen der [**starttrace**](/windows/win32/api/evntrace/nf-evntrace-starttracea) -Funktion
+Um split IO-Ereignisse in einer NT Kernel-Protokollierungssitzung zu aktivieren, geben Sie das **EVENT TRACE FLAG SPLIT \_ \_ \_ \_ IO-Flag** im **EnableFlags-Member** einer [**EVENT TRACE \_ \_ PROPERTIES-Struktur**](/windows/win32/api/evntrace/ns-evntrace-event_trace_properties) an, wenn Sie die [**StartTrace-Funktion**](/windows/win32/api/evntrace/nf-evntrace-starttracea) aufrufen.
 
-Ereignisablaufverfolgungs-Consumer können eine spezielle Verarbeitung für Split IO-Ereignisse implementieren, indem Sie die [**settracecallback**](/windows/win32/api/evntrace/nf-evntrace-settracecallback) -Funktion aufrufen und [**splitioguid**](nt-kernel-logger-constants.md) als *pguid* -Parameter angeben. Verwenden Sie den folgenden Ereignistyp, um das tatsächliche Ereignis beim Verarbeiten von Ereignissen zu identifizieren.
+Consumer der Ereignisablaufverfolgung können eine spezielle Verarbeitung für split-E/A-Ereignisse implementieren, indem sie die [**SetTraceCallback-Funktion**](/windows/win32/api/evntrace/nf-evntrace-settracecallback) aufrufen und [**SplitIoGuid**](nt-kernel-logger-constants.md) als *pGuid-Parameter* angeben. Verwenden Sie den folgenden Ereignistyp, um das tatsächliche Ereignis beim Nutzen von Ereignissen zu identifizieren.
 
 
 
-| Ereignistyp           | BESCHREIBUNG                                                                                                |
+| Ereignistyp           | Beschreibung                                                                                                |
 |----------------------|------------------------------------------------------------------------------------------------------------|
-| Ereignistyp Wert, 32 | IO-Ereignis aufteilen. Die " [**splitio \_ Info**](splitio-info.md) MOF"-Klasse definiert die Ereignisdaten für dieses Ereignis. |
+| Ereignistypwert, 32 | Split E/A-Ereignis. Die [**SPLITIo \_ Info**](splitio-info.md) MOF-Klasse definiert die Ereignisdaten für dieses Ereignis. |
 
 
 
  
 
-Split IO-Ereignisse zeigen an, dass die e/a-Anforderungen aufgrund der zugrunde liegenden Spiegelung der Datenträger Hardware in mehrere e/a-Anforderungen aufgeteilt wurden
+Split E/A-Ereignisse geben an, dass die E/A-Anforderungen aufgrund der zugrunde liegenden Datenträgerhardware für die Spiegelung in mehrere Datenträger-E/A-Anforderungen aufgeteilt wurden.
 
-## <a name="requirements"></a>Requirements (Anforderungen)
+## <a name="requirements"></a>Anforderungen
 
 
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>       |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/> |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur Vista-Desktop-Apps\]<br/>       |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/> |
 
 
 

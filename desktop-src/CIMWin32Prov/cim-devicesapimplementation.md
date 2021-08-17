@@ -2,7 +2,7 @@
 description: Die CIM DeviceSAPImplementation-Klasse stellt eine Zuordnung zwischen einem Dienstzugriffspunkt (SAP) und seiner \_ Implementierung dar.
 ms.assetid: 6c059507-bfc0-4630-9b39-9c4bae2bf138
 ms.tgt_platform: multiple
-title: CIM_DeviceSAPImplementation -Klasse (CIMWin32-WMI-Anbieter)
+title: CIM_DeviceSAPImplementation -Klasse (CIMWin32 WMI-Anbieter)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -23,7 +23,7 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 08/11/2021
 ms.locfileid: "119321610"
 ---
-# <a name="cim_devicesapimplementation-class-cimwin32-wmi-providers"></a>CIM_DeviceSAPImplementation -Klasse (CIMWin32-WMI-Anbieter)
+# <a name="cim_devicesapimplementation-class-cimwin32-wmi-providers"></a>CIM_DeviceSAPImplementation -Klasse (CIMWin32 WMI-Anbieter)
 
 Die **CIM \_ DeviceSAPImplementation-Klasse** stellt eine Zuordnung zwischen einem Dienstzugriffspunkt (SAP) und seiner Implementierung dar. Wenn viele logische Geräte einem SAP zugeordnet sind, werden die Elemente zusammen verwendet, um den Zugriffspunkt zu ermöglichen. Wenn verschiedene Implementierungen eines SAP vorhanden sind, führt jede Implementierung zu einzelnen Instanziierungen des SAP-Objekts.
 
@@ -32,7 +32,7 @@ Die **CIM \_ DeviceSAPImplementation-Klasse** stellt eine Zuordnung zwischen ein
 
  
 
-Die folgende Syntax wird durch MOF-Code (Managed Object Format) vereinfacht und schließt alle geerbten Eigenschaften ein. Eigenschaften werden in alphabetischer Reihenfolge und nicht in MOF-Reihenfolge aufgelistet.
+Die folgende Syntax wird durch MOF-Code (Managed Object Format) vereinfacht und schließt alle geerbten Eigenschaften ein. Eigenschaften werden in alphabetischer Reihenfolge und nicht in MOF-Reihenfolge aufgeführt.
 
 ## <a name="syntax"></a>Syntax
 
@@ -66,7 +66,7 @@ Datentyp: **CIM \_ LogicalDevice**
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**Außerkraftsetzung**](/windows/desktop/WmiSdk/standard-qualifiers) ("Vorerst")
+Qualifizierer: [**Override**](/windows/desktop/WmiSdk/standard-qualifiers) ("Antecedent")
 </dt> </dl>
 
 Ein [**CIM \_ LogicalDevice,**](cim-logicaldevice.md) das das logische Gerät beschreibt.
@@ -82,7 +82,7 @@ Datentyp: **CIM \_ ServiceAccessPoint**
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**Außerkraftsetzung**](/windows/desktop/WmiSdk/standard-qualifiers) ("Abhängig")
+Qualifizierer: [**Überschreiben**](/windows/desktop/WmiSdk/standard-qualifiers) ("Abhängig")
 </dt> </dl>
 
 Ein [**CIM \_ ServiceAccessPoint,**](cim-serviceaccesspoint.md) der den dienstzugriffspunkt beschreibt, der mit dem logischen Gerät implementiert wurde.
@@ -93,7 +93,7 @@ Ein [**CIM \_ ServiceAccessPoint,**](cim-serviceaccesspoint.md) der den dienstzu
 
 WMI implementiert diese Klasse nicht.
 
-Die **CIM \_ DeviceSAPImplementation-Klasse** wird von der [**CIM-Abhängigkeit \_ abgeleitet.**](cim-dependency.md)
+Die **\_ CIM-Klasse DeviceSAPImplementation** wird von der [**CIM-Abhängigkeit \_ abgeleitet.**](cim-dependency.md)
 
 Diese Dokumentation wird von den CIM-Klassenbeschreibungen abgeleitet, die von DMTF veröffentlicht wurden. Microsoft hat möglicherweise Änderungen vorgenommen, um kleinere Fehler zu beheben, die Dokumentationsstandards des Microsoft SDK zu erfüllen oder weitere Informationen zur Verfügung zu stellen.
 

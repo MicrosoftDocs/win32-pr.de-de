@@ -1,10 +1,10 @@
 ---
-title: Readermodumfo-Struktur
-description: Enthält Informationen, die zum Initialisieren der doreadermode-Funktion erforderlich sind.
+title: READERMODEINFO-Struktur
+description: Enthält Informationen, die zum Initialisieren der DoReaderMode-Funktion erforderlich sind.
 ms.assetid: 7b9c73bc-b093-4592-befd-67508fb86fe0
 keywords:
-- Readermodeingefo-Struktur Windows-Steuerelemente
-- Preadermodeingefo-Struktur Zeiger-Windows-Steuerelemente
+- READERMODEINFO-Struktur Windows Controls
+- PREADERMODEINFO-Strukturzeiger Windows-Steuerelemente
 topic_type:
 - apiref
 api_name:
@@ -14,18 +14,18 @@ api_type:
 ms.topic: reference
 ms.date: 05/31/2018
 api_location: ''
-ms.openlocfilehash: 2dacf0fc59ef62447ca12b7a470689e13967d687
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 510dc7a763d50b42f06b2510e609e0bc7c3c6f31fa1f4c08393964cef75487fa
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104477853"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118169120"
 ---
-# <a name="readermodeinfo-structure"></a>Readermodumfo-Struktur
+# <a name="readermodeinfo-structure"></a>READERMODEINFO-Struktur
 
-\[**Readermodeinfo** wird durch Windows XP mit Service Pack 2 (SP2) unterstützt. Dies wird in nachfolgenden Versionen möglicherweise nicht unterstützt.\]
+\[**READERMODEINFO** wird über Windows XP mit Service Pack 2 (SP2) unterstützt. In nachfolgenden Versionen wird sie möglicherweise nicht unterstützt.\]
 
-Enthält Informationen, die zum Initialisieren der [**doreadermode**](doreadermode.md) -Funktion erforderlich sind.
+Enthält Informationen, die zum Initialisieren der [**DoReaderMode-Funktion**](doreadermode.md) erforderlich sind.
 
 ## <a name="syntax"></a>Syntax
 
@@ -48,25 +48,25 @@ typedef struct tagReaderModeInfo {
 
 <dl> <dt>
 
-**CBSIZE**
+**cbSize**
 </dt> <dd>
 
-Typ: **[ **uint**](/windows/desktop/WinProg/windows-data-types)**
+Typ: **[ **UINT**](/windows/desktop/WinProg/windows-data-types)**
 
 </dd> <dd>
 
-Erforderlich. Die Größe der-Struktur in Bytes. Legen Sie diesen Parameter auf **sizeof (readermode)** fest, bevor Sie " [**doreadermode**](doreadermode.md)" aufrufen.
+Erforderlich. Die Größe der -Struktur in Bytes. Legen Sie diesen Parameter auf **sizeof(READERMODE)** fest, bevor Sie [**DoReaderMode**](doreadermode.md)aufrufen.
 
 </dd> <dt>
 
-**HWND**
+**Hwnd**
 </dt> <dd>
 
 Typ: **[ **HWND**](/windows/desktop/WinProg/windows-data-types)**
 
 </dd> <dd>
 
-Erforderlich. Das Handle des Fensters, das für den Lesemodus verwendet werden soll.
+Erforderlich. Das Handle des Fensters, das für den Readermodus verwendet werden soll.
 
 </dd> <dt>
 
@@ -77,15 +77,15 @@ Typ: **[ **DWORD**](/windows/desktop/WinProg/windows-data-types)**
 
 </dd> <dd>
 
-Flags, mit denen die Funktionalität des Fensters "Lesemodus" angepasst wird. Dieser Parameter kann 0 sein. andernfalls ein oder mehrere der folgenden Werte.
+Flags, die die Funktionalität des Readermodusfensters anpassen. Dieser Parameter kann 0 sein. andernfalls einer oder mehrere der folgenden Werte.
 
 
 
 | Wert                                                                                                                                                                                                                                  | Bedeutung                                                                                                                                          |
 |----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------|
-| <span id="RMF_ZEROCURSOR"></span><span id="rmf_zerocursor"></span><dl> <dt>**RMF \_ NULL**</dt> <dt>0x01</dt> </dl>             | Legt den Cursor in der Mitte des Bereichs fest, der in der **Volksrepublik China** angegeben ist. Wenn dieses Flag nicht angegeben wird, bleibt die Cursorposition unverändert.<br/> |
-| <span id="RMF_VERTICALONLY"></span><span id="rmf_verticalonly"></span><dl> <dt>**RMF \_ Verticalonly**</dt> <dt>0x02</dt> </dl>       | Ermöglicht nur das vertikale Scrollen.<br/>                                                                                                       |
-| <span id="RMF_HORIZONTALONLY"></span><span id="rmf_horizontalonly"></span><dl> <dt>**RMF \_ Horizontalonly**</dt> <dt>0x04</dt> </dl> | Ermöglicht nur horizontales Scrollen.<br/>                                                                                                     |
+| <span id="RMF_ZEROCURSOR"></span><span id="rmf_zerocursor"></span><dl> <dt>**RMF \_ ZEROCURSOR**</dt> <dt>0x01</dt> </dl>             | Legt den Cursor in der Mitte des in **prc** angegebenen Bereichs fest. Wenn dieses Flag nicht angegeben ist, bleibt die Cursorposition unverändert.<br/> |
+| <span id="RMF_VERTICALONLY"></span><span id="rmf_verticalonly"></span><dl> <dt>**RMF \_ VERTICALONLY-0x02**</dt> <dt></dt> </dl>       | Lässt nur vertikales Scrollen zu.<br/>                                                                                                       |
+| <span id="RMF_HORIZONTALONLY"></span><span id="rmf_horizontalonly"></span><dl> <dt>**RMF \_ HORIZONTALONLY-0x04**</dt> <dt></dt> </dl> | Ermöglicht nur horizontales Scrollen.<br/>                                                                                                     |
 
 
 
@@ -93,36 +93,36 @@ Flags, mit denen die Funktionalität des Fensters "Lesemodus" angepasst wird. Di
 
 </dd> <dt>
 
-**PRC**
+**Vr china**
 </dt> <dd>
 
-Typ: **lprect**
+Typ: **LPRECT**
 
 </dd> <dd>
 
-Ein Zeiger auf eine [**Rect**](/previous-versions//dd162897(v=vs.85)) -Struktur, die den scrollbereich im Fenster "Lesemodus" angibt. Wenn dieser Member **null** ist, wird das gesamte Fenster als scrollbereich verwendet.
+Ein Zeiger auf eine [**RECT-Struktur,**](/previous-versions//dd162897(v=vs.85)) die den Bildlaufbereich im Readermodusfenster angibt. Wenn dieser Member **NULL** ist, wird das gesamte Fenster als Bildlaufbereich verwendet.
 
 </dd> <dt>
 
-**pfnscroll**
+**pfnScroll**
 </dt> <dd>
 
-Typ: **pfnreaderscroll**
+Typ: **PFNREADERSCROLL**
 
 </dd> <dd>
 
-Ein Zeiger auf eine Anwendungs definierte [*readerscroll*](readerscroll.md) -Rückruffunktion, mit der die Anwendung benachrichtigt wird, dass das Fenster in einer bestimmten Richtung gescrollt werden muss.
+Ein Zeiger auf eine anwendungsdefinierte [*ReaderScroll-Rückruffunktion, mit*](readerscroll.md) der die Anwendung benachrichtigt wird, dass das Fenster in einer bestimmten Richtung gescrollt werden muss.
 
 </dd> <dt>
 
 **fFlags**
 </dt> <dd>
 
-Typ: **pfnreadertranslatedispatch**
+Typ: **PFNREADERTRANSLATEDISPATCH**
 
 </dd> <dd>
 
-Ein Zeiger auf eine Anwendungs definierte [*translatedispatch*](translatedispatch.md) -Rückruffunktion, die verwendet wird, um die erste Benachrichtigung über alle an das Fenster des Lesemodus gesendeten Nachrichten zu erhalten.
+Ein Zeiger auf eine anwendungsdefinierte [*TranslateDispatch-Rückruffunktion, die*](translatedispatch.md) verwendet wird, um die erste Benachrichtigung über alle Nachrichten zu erhalten, die an das Readermodusfenster gesendet werden.
 
 </dd> <dt>
 
@@ -133,13 +133,13 @@ Typ: **[ **LPARAM**](/windows/desktop/WinProg/windows-data-types)**
 
 </dd> <dd>
 
-Zusätzliche Informationen, die von der Anwendung benötigt werden, die vom Aufrufer in der [*readerscroll*](readerscroll.md) -Rückruffunktion gelesen werden.
+Zusätzliche Informationen, die von der Anwendung benötigt werden und vom Aufrufer in der [*Rückruffunktion ReaderScroll*](readerscroll.md) gelesen werden.
 
 </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Diese Struktur ist in keinem öffentlichen Header deklariert. Um es zu verwenden, müssen Sie die oben gezeigte Deklaration in ihren eigenen Header einschließen.
+Diese Struktur wird in keinem öffentlichen Header deklariert. Um sie zu verwenden, müssen Sie die oben gezeigte Deklaration in Ihren eigenen Header einfügen.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -147,8 +147,8 @@ Diese Struktur ist in keinem öffentlichen Header deklariert. Um es zu verwenden
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista, Windows Vista \[ -Desktop-Apps\]<br/> |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/>          |
+| Unterstützte Mindestversion (Client)<br/> | Windows Vista, nur Windows \[ Vista-Desktop-Apps\]<br/> |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>          |
 
 
 

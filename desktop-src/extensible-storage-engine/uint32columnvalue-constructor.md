@@ -1,5 +1,5 @@
 ---
-description: 'Weitere Informationen finden Sie hier: UInt32ColumnValue-Konstruktor'
+description: 'Weitere Informationen zu: UInt32ColumnValue-Konstruktor'
 title: UInt32ColumnValue-Konstruktor
 TOCTitle: 'UInt32ColumnValue constructor '
 ms:assetid: M:Microsoft.Isam.Esent.Interop.UInt32ColumnValue.#ctor
@@ -24,17 +24,17 @@ api_type:
 api_location:
 - Microsoft.Isam.Esent.Interop.dll
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: b55231cb958dc7342d79db8173808a71f2997909
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: d4f5ecbcd9190dd966421710d8b1e5da68c425a6b21f9dc5d8b5f835723c3d77
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104526804"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117890142"
 ---
 # <a name="uint32columnvalue-constructor"></a>UInt32ColumnValue-Konstruktor
 
-**Namespace:**  [Microsoft. ISAM. ESENT. Interop](./microsoft.isam.esent.interop-namespace.md)  
-**Assembly:**  Microsoft. ISAM. ESENT. Interop (in Microsoft.Isam.Esent.Interop.dll)
+**Namespace:**  [Microsoft.Isam.Esent.Interop](./microsoft.isam.esent.interop-namespace.md)  
+**Assembly:**  Microsoft.Isam.Esent.Interop (in Microsoft.Isam.Esent.Interop.dll)
 
 ## <a name="syntax"></a>Syntax
 
@@ -50,12 +50,12 @@ Dim instance As New UInt32ColumnValue()
 public UInt32ColumnValue()
 ```
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
-#### <a name="reference"></a>Referenz
+#### <a name="reference"></a>Verweis
 
 [UInt32ColumnValue-Klasse](./uint32columnvalue-class.md)
 
 [UInt32ColumnValue-Member](./uint32columnvalue-members.md)
 
-[Microsoft. ISAM. ESENT. Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)
+[Microsoft.Isam.Esent.Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)

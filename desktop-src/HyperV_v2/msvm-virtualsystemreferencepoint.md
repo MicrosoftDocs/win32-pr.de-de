@@ -1,5 +1,5 @@
 ---
-description: Stellt einen Referenzpunkt für ein virtuelles System dar.
+description: Stellt einen Verweispunkt für ein virtuelles System dar.
 ms.assetid: b3ba4fa7-3b77-4a1d-ab8f-d38af12ab5dd
 title: Msvm_VirtualSystemReferencePoint-Klasse
 ms.topic: reference
@@ -20,16 +20,16 @@ api_type:
 - DllExport
 api_location:
 - vmms.exe
-ms.openlocfilehash: add160cf44a592462634704ddf783cd8f4084068
-ms.sourcegitcommit: c16214e53680dc71d1c07111b51f72b82a4512d8
+ms.openlocfilehash: 8d5faa54edc18aa025445a34574aa912a39a1322c91f4d1a7e94c740a493f2b3
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/03/2021
-ms.locfileid: "106353256"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119963510"
 ---
-# <a name="msvm_virtualsystemreferencepoint-class"></a>MSVM \_ virtualsystemreferencepoint-Klasse
+# <a name="msvm_virtualsystemreferencepoint-class"></a>Msvm \_ VirtualSystemReferencePoint-Klasse
 
-Stellt einen Referenzpunkt für ein virtuelles System dar.
+Stellt einen Verweispunkt für ein virtuelles System dar.
 
 Die folgende Syntax wurde aus MOF-Code (Managed Object Format, verwaltetes Objektformat) vereinfacht und enthält alle geerbten Eigenschaften.
 
@@ -51,158 +51,158 @@ class Msvm_VirtualSystemReferencePoint : CIM_ManagedElement
 
 ## <a name="members"></a>Member
 
-Die **MSVM \_ virtualsystemreferencepoint** -Klasse verfügt über diese Typen von Membern:
+Die **Msvm \_ VirtualSystemReferencePoint-Klasse** verfügt über diese Typen von Membern:
 
 -   [Eigenschaften](#properties)
 
 ### <a name="properties"></a>Eigenschaften
 
-Die **MSVM \_ virtualsystemreferencepoint** -Klasse verfügt über diese Eigenschaften.
+Die **Msvm \_ VirtualSystemReferencePoint-Klasse** verfügt über diese Eigenschaften.
 
 <dl> <dt>
 
 **ConsistencyLevel**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt16**
+Datentyp: **uint16**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
 </dt> </dl>
 
-Die Konsistenz Ebene des Bezugspunkts.
+Die Konsistenzebene des Verweispunkts.
 
 <dt>
 
 <span id="Application_Consistent"></span><span id="application_consistent"></span><span id="APPLICATION_CONSISTENT"></span>
 
-<span id="Application_Consistent"></span><span id="application_consistent"></span><span id="APPLICATION_CONSISTENT"></span>**Anwendungs konsistent** (1)
+<span id="Application_Consistent"></span><span id="application_consistent"></span><span id="APPLICATION_CONSISTENT"></span>**Anwendungskonsens** (1)
 
 
 </dt> <dd>
 
-Der Bezugspunkt gibt einen Zeitpunkt an, an dem sich das virtuelle System in einem Anwendungs konsistenten Zustand befunden hat.
+Der Verweispunkt gibt einen Zeitpunkt an, zu dem sich das virtuelle System im anwendungskonsistenten Zustand befand.
 
 </dd> <dt>
 
 <span id="Crash_Consistent"></span><span id="crash_consistent"></span><span id="CRASH_CONSISTENT"></span>
 
-<span id="Crash_Consistent"></span><span id="crash_consistent"></span><span id="CRASH_CONSISTENT"></span>**Absturz konsistent** (2)
+<span id="Crash_Consistent"></span><span id="crash_consistent"></span><span id="CRASH_CONSISTENT"></span>**Absturzkons konsistent** (2)
 
 
 </dt> <dd>
 
-Der Bezugspunkt gibt einen Zeitpunkt an, an dem sich das virtuelle System in einem Absturz konsistenten Zustand befunden hat.
+Der Verweispunkt gibt einen Zeitpunkt an, zu dem sich das virtuelle System im absturzkonsistenten Zustand befand.
 
 </dd> </dl>
 
 </dd> <dt>
 
-**Hasassociateddata**
+**HasAssociatedData**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **boolescher** Wert
+Datentyp: **boolescher Wert**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
 </dt> </dl>
 
-Auf **true** festgelegt, wenn der Verweis Punkt über zugeordnete Daten verfügt. Dies gilt nur für Protokoll basierte Referenzpunkte. Bei RCT-basierten Bezugspunkten wird **hasassociateddata** auf **false** festgelegt. Bei Protokoll basierten Referenzpunkten wird **hasassociateddata** , sobald das Protokoll verworfen wird, **false**.
+Wird auf **TRUE** festgelegt, wenn dem Verweispunkt Daten zugeordnet sind. Dies ist nur für protokollbasierte Verweispunkte gültig. Für RCT-basierte Verweispunkte wird **HasAssociatedData** auf **FALSE** festgelegt. Bei protokollbasierten Verweispunkten wird **HasAssociatedData** nach dem Verwerfen des Protokolls zu **false.**
 
 </dd> <dt>
 
 **InstanceID**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**Key**](/windows/desktop/WmiSdk/key-qualifier), [**override**](/windows/desktop/WmiSdk/standard-qualifiers) ("InstanceId"), [**maxlen**](/windows/desktop/WmiSdk/standard-qualifiers) (256)
+Qualifizierer: [**Schlüssel,**](/windows/desktop/WmiSdk/key-qualifier) [**Außerkraftsetzung**](/windows/desktop/WmiSdk/standard-qualifiers) ("InstanceID"), [**MaxLen**](/windows/desktop/WmiSdk/standard-qualifiers) (256)
 </dt> </dl>
 
-Eindeutige Identifikation eines Referenzpunkt Objekts.
+Eindeutige Identifikation eines Verweispunktobjekts.
 
 </dd> <dt>
 
-**Referencepointtype**
+**ReferencePointType**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt16**
+Datentyp: **uint16**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
 </dt> </dl>
 
-Gibt den Typ des Bezugspunkts an.
+Gibt den Typ des Verweispunkts an.
 
 <dt>
 
 <span id="Log_based"></span><span id="log_based"></span><span id="LOG_BASED"></span>
 
-<span id="Log_based"></span><span id="log_based"></span><span id="LOG_BASED"></span>**Protokoll basiert** (1)
+<span id="Log_based"></span><span id="log_based"></span><span id="LOG_BASED"></span>**Protokollbasiert** (1)
 
 
 </dt> <dd>
 
-Protokoll Nachverfolgung für Hyper-V-Replikate.
+Hyper-V-Replikatprotokollnachverfolgung.
 
 </dd> <dt>
 
 <span id="RCT_based"></span><span id="rct_based"></span><span id="RCT_BASED"></span>
 
-<span id="RCT_based"></span><span id="rct_based"></span><span id="RCT_BASED"></span>**RCT basiert** (2)
+<span id="RCT_based"></span><span id="rct_based"></span><span id="RCT_BASED"></span>**RCT-basiert** (2)
 
 
 </dt> <dd>
 
-Basierend auf robusten Änderungsnachverfolgung von virtuellen Datenträgern.
+Basierend auf resilienten Änderungsnachverfolgung virtueller Datenträger.
 
 </dd> </dl>
 
 </dd> <dt>
 
-**Resilientchangetrackingidentifier**
+**ResilientChangeTrackingIdentifiers**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichen** folgen Array
+Datentyp: **Zeichenfolgenarray**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Ein Array von RCT-IDs, die den virtuellen Datenträgern der VM zum Zeitpunkt der Erstellung dieses Bezugspunkts entsprechen. Dieses Feld ist nur für RCT-basierte Referenzpunkte gültig.
+Ein Array von RCT-IDs, die den virtuellen Datenträgern des virtuellen Computers zum Zeitpunkt der Erstellung dieses Referenzpunkts entsprechen. Dieses Feld ist nur für RCT-basierte Verweispunkte gültig.
 
 </dd> <dt>
 
-**Virtualdiskidentifier**
+**VirtualDiskIdentifiers**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichen** folgen Array
+Datentyp: **Zeichenfolgenarray**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Ein Array von WMI-Instanz-IDs, die den virtuellen Datenträgern der VM zum Zeitpunkt der Erstellung dieses Bezugspunkts entsprechen. Diesen virtuellen Datenträgern sind RCT-IDs zugeordnet.
+Ein Array von WMI-Instanz-IDs, die den virtuellen Datenträgern des virtuellen Computers zum Zeitpunkt der Erstellung dieses Referenzpunkts entsprechen. Diesen virtuellen Datenträgern sind RCT-IDs zugeordnet.
 
 </dd> <dt>
 
-**Virtualsystemidentifier**
+**VirtualSystemIdentifier**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**Key**](/windows/desktop/WmiSdk/key-qualifier), [**modelkorrespondenz**](/windows/desktop/WmiSdk/standard-qualifiers) ("[**CIM \_ Computersystem**](cim-computersystem.md).**Name**")
+Qualifizierer: [**Schlüssel**](/windows/desktop/WmiSdk/key-qualifier), [**ModelCorrespondence**](/windows/desktop/WmiSdk/standard-qualifiers) ("[**CIM \_ ComputerSystem**](cim-computersystem.md).**Name**")
 </dt> </dl>
 
-Der Name des [**CIM- \_ Computer Systems**](cim-computersystem.md) , zu dem dieser Bezugspunkt gehört.
+Der Name des [**\_ CIM-Computersystems,**](cim-computersystem.md) zu dem dieser Verweispunkt gehört.
 
 </dd> </dl>
 
@@ -212,19 +212,19 @@ Der Name des [**CIM- \_ Computer Systems**](cim-computersystem.md) , zu dem dies
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows 10 \[ -Desktop-Apps\]<br/>                                                             |
+| Unterstützte Mindestversion (Client)<br/> | \[Windows 10 Nur Desktop-Apps\]<br/>                                                             |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2016<br/>                                                                          |
-| Namespace<br/>                | \\Stammvirtualisierung \\ v2<br/>                                                                     |
-| MOF<br/>                      | <dl> <dt>Windowsvirtualization. v2. MOF</dt> </dl> |
+| Namespace<br/>                | \\Root-Virtualisierung \\ v2<br/>                                                                     |
+| MOF<br/>                      | <dl> <dt>WindowsVirtualization.V2.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Vmms.exe</dt> </dl>                     |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**CIM- \_ managedelta**](cim-managedelement.md)
+[**CIM \_ ManagedElement**](cim-managedelement.md)
 </dt> </dl>
 
  

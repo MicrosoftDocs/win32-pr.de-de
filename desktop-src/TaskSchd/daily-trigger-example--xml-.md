@@ -1,6 +1,6 @@
 ---
-title: Beispiel für das tägliche Beispiel (XML)
-description: Der XML-Code in diesem Beispiel definiert einen Task, der den Notepad täglich um 8 00 Uhr startet.
+title: Beispiel für einen täglichen Trigger (XML)
+description: Der XML-Code in diesem Beispiel definiert einen Task, Editor täglich um 8:00 Uhr beginnt.
 ms.assetid: b7818071-12b6-41df-85b9-282c08cf6e31
 ms.topic: article
 ms.date: 05/31/2018
@@ -9,22 +9,22 @@ topic_type:
 api_name: ''
 api_type: ''
 api_location: ''
-ms.openlocfilehash: fe673a764e6e7e4e3ae5089022da2232821d9184
-ms.sourcegitcommit: 40dd8501397fc79a643deb528c6c57ac2e9726ce
+ms.openlocfilehash: cd98ada9a69f694d59262682317b7e5be91509b4862f8b896e22b7b0deac2167
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "103719985"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119139503"
 ---
-# <a name="daily-trigger-example-xml"></a>Beispiel für das tägliche Beispiel (XML)
+# <a name="daily-trigger-example-xml"></a>Beispiel für einen täglichen Trigger (XML)
 
-Der XML-Code in diesem Beispiel definiert einen Task, der den Notepad täglich um 8:00 Uhr startet. Das Beispiel zeigt auch, wie Sie ein Wiederholungsmuster für den-Vorgang festlegen, um die Aufgabe zu wiederholen.
+Der XML-Code in diesem Beispiel definiert einen Task, Editor täglich um 8:00 Uhr gestartet wird. Das Beispiel zeigt auch, wie ein Wiederholungsmuster für den Trigger festgelegt wird, um die Aufgabe zu wiederholen.
 
-Zum Registrieren einer Aufgabe, die in XML definiert ist, können Sie entweder die [**ITaskFolder:: RegisterTask**](/windows/desktop/api/taskschd/nf-taskschd-itaskfolder-registertask) -Funktion ([**taskfolder. RegisterTask**](taskfolder-registertask.md) für die Skripterstellung) oder das Befehlszeilen Tool Schtasks.exe verwenden. Wenn Sie das Schtasks.exe Tool (das sich im Verzeichnis "C: \\ Windows System32" befindet \\ ) verwenden, können Sie den folgenden Befehl verwenden, um den Task zu registrieren: **Schtasks/CREATE/XML** *<path to the XML file containing the task definition>* **/TN** *<task name>* .
+Zum Registrieren einer aufgabe, die in XML definiert ist, können Sie entweder die [**ITaskFolder::RegisterTask-Funktion**](/windows/desktop/api/taskschd/nf-taskschd-itaskfolder-registertask) ([**TaskFolder.RegisterTask**](taskfolder-registertask.md) für Skripterstellung) oder das Schtasks.exe-Befehlszeilentool verwenden. Wenn Sie das Schtasks.exe-Tool (im Verzeichnis C: Windows System32) verwenden, können Sie den folgenden Befehl verwenden, um die Aufgabe zu \\ \\ registrieren: **schtasks /create /XML** *<path to the XML file containing the task definition>* **/tn** *<task name>* .
 
-## <a name="to-define-a-task-to-start-notepad-every-day-at-800-am"></a>So definieren Sie einen Task zum Starten von Notepad täglich um 8:00 Uhr
+## <a name="to-define-a-task-to-start-notepad-every-day-at-800-am"></a>So definieren Sie eine Aufgabe, die Editor täglich um 8:00 Uhr gestartet werden soll
 
-Das folgende XML-Beispiel zeigt, wie Sie eine Aufgabe mit einer einzelnen Ausführungs Aktion (Starten von Editor), einem einzelnen Kalender-Triggern (startet die Aufgabe täglich um 8:00 Uhr) und mehreren anderen Aufgaben Einstellungen definieren, die beeinflussen, wie die Aufgabe von Taskplaner behandelt wird.
+Das folgende XML-Beispiel zeigt, wie Sie eine Aufgabe mit einer einzelnen Ausführungsaktion (ab Editor), einem einzelnen Kalendertrigger (startet die Aufgabe täglich um 8:00 Uhr) und mehreren anderen Aufgabeneinstellungen definieren, die beeinflussen, wie die Aufgabe von Taskplaner.
 
 
 ```XML
@@ -73,45 +73,45 @@ This sample schedules a task to start on a daily basis.
 
 
 
-## <a name="taskscheduler-schema-elements"></a>TaskScheduler-Schema Elemente
+## <a name="taskscheduler-schema-elements"></a>TaskScheduler-Schemaelemente
 
-Im folgenden finden Sie einige wichtige Elemente, die Sie beachten sollten, wenn Sie dieses Beispiel verwenden.
+Im Folgenden finden Sie einige wichtige Elemente, die Sie bei der Verwendung dieses Beispiels beachten sollten.
 
 -   [**RegistrationInfo**](taskschedulerschema-registrationinfo-tasktype-element.md)
 
-    Enthält Registrierungsinformationen über den Task.
+    Enthält Registrierungsinformationen zum Task.
 
 -   [**Trigger**](taskschedulerschema-triggers-tasktype-element.md)
 
-    Definiert den-Typ, der den Task startet.
+    Definiert den Trigger, der die Aufgabe startet.
 
--   [**Calendarausgelöst**](taskschedulerschema-calendartrigger-triggergroup-element.md)
+-   [**CalendarTrigger**](taskschedulerschema-calendartrigger-triggergroup-element.md)
 
-    Definiert den täglichen Kalender-Auslösers. In diesem Fall werden vier untergeordnete Elemente verwendet: die Start-und endgrenzen, die angeben, wann der-Auslösers aktiviert und deaktiviert wird, den täglichen Zeitplan und das Wiederholungsmuster für den Task. Das [**StartBoundary**](taskschedulerschema-startboundary-triggerbasetype-element.md) -Element ist ein erforderliches Element für Kalender Trigger.
+    Definiert den täglichen Kalendertrigger. In diesem Fall werden vier untergeordnete Elemente verwendet: die Start- und Endgrenzen, die angeben, wann der Trigger aktiviert und deaktiviert wird, den täglichen Zeitplan und das Wiederholungsmuster für die Aufgabe. Das [**StartBoundary-Element**](taskschedulerschema-startboundary-triggerbasetype-element.md) ist ein erforderliches Element für Kalendertrigger.
 
--   [**Schedulebyday**](taskschedulerschema-schedulebyday-calendartriggertype-element.md)
+-   [**ScheduleByDay**](taskschedulerschema-schedulebyday-calendartriggertype-element.md)
 
-    Definiert den täglichen Zeitplan. In diesem Fall wird das Intervall so festgelegt, dass die Aufgabe jeden Tag durchgeführt wird.
+    Definiert den täglichen Zeitplan. In diesem Fall wird das Intervall so festgelegt, dass die Aufgabe täglich ausgeführt wird.
 
--   [**Prinzipal**](taskschedulerschema-principal-principaltype-element.md): definiert den Sicherheitskontext, unter dem eine Aufgabe ausgeführt wird.
+-   [**Prinzipal:**](taskschedulerschema-principal-principaltype-element.md)Definiert den Sicherheitskontext, unter dem ein Task ausgeführt wird.
 -   [**Einstellungen**](taskschedulerschema-settings-tasktype-element.md)
 
-    Definiert die Aufgaben Einstellungen, die Taskplaner verwendet, um die Aufgabe auszuführen.
+    Definiert die Aufgabeneinstellungen, die Taskplaner zum Ausführen der Aufgabe verwendet.
 
 -   [**Aktionen**](taskschedulerschema-actions-tasktype-element.md)
 
-    Definiert die Aktionen, die vom Task ausgeführt werden (in diesem Fall wird Notepad ausgeführt).
+    Definiert die Aktionen, die der Task ausführt (in diesem Fall die Ausführung Editor).
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[Verwenden des Taskplaner](using-the-task-scheduler.md)
+[Verwenden der Taskplaner](using-the-task-scheduler.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

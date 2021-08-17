@@ -5,7 +5,7 @@ ms.assetid: af61057e-95be-4290-83da-a63f01ead476
 keywords:
 - Ändern der DNS-Methode
 - Modify method DNS , MicrosoftDNS_TXTType class
-- MicrosoftDNS_TXTType Dns-Klasse, Modify-Methode
+- MicrosoftDNS_TXTType-Klasse DNS, Modify-Methode
 topic_type:
 - apiref
 api_name:

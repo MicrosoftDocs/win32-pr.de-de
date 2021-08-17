@@ -14,18 +14,18 @@ api_type:
 api_location:
 - InkDiv.dll
 - InkDiv.dll.dll
-ms.openlocfilehash: be4045e01ac890471536d95768668b633d8f2249
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 2c6a176b5878b7aaee4a0e51a5a366302b13a1a643453ad2c6d57e103362c4fb
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106362599"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118966819"
 ---
 # <a name="setlineheight-function"></a>SetLineHeight-Funktion
 
-Legt die [**LineHeight**](/windows/win32/api/msinkaut15/nf-msinkaut15-iinkdivider-get_lineheight) -Eigenschaft für das [**InkDivider**](inkdivider-class.md) -Objekt fest.
+Legt die [**LineHeight-Eigenschaft**](/windows/win32/api/msinkaut15/nf-msinkaut15-iinkdivider-get_lineheight) für das [**InkDivider-Objekt**](inkdivider-class.md) fest.
 
-Diese Hilfsfunktion ist nicht für die Verwendung durch den Anwendungscode vorgesehen.
+Diese Hilfsfunktion ist nicht für die Verwendung durch Anwendungscode vorgesehen.
 
 ## <a name="syntax"></a>Syntax
 
@@ -43,17 +43,17 @@ HRESULT WINAPI SetLineHeight(
 
 <dl> <dt>
 
-*hdivider* \[ in\]
+*hDivider* \[ In\]
 </dt> <dd>
 
-Ein Handle für das [**InkDivider**](inkdivider-class.md) -Objekt.
+Ein Handle für das [**InkDivider-Objekt.**](inkdivider-class.md)
 
 </dd> <dt>
 
-*llineheight* \[ in\]
+*lLineHeight* \[ In\]
 </dt> <dd>
 
-Die [**LineHeight**](/windows/win32/api/msinkaut15/nf-msinkaut15-iinkdivider-get_lineheight) -Eigenschaft des [**InkDivider**](inkdivider-class.md) -Objekts in HIMETRIC-Einheiten.
+Die [**LineHeight-Eigenschaft**](/windows/win32/api/msinkaut15/nf-msinkaut15-iinkdivider-get_lineheight) des [**InkDivider-Objekts**](inkdivider-class.md) in HIMETRIC-Einheiten.
 
 </dd> </dl>
 
@@ -66,7 +66,7 @@ Diese Funktion kann einen dieser Werte zurückgeben.
 | Rückgabecode                                                                                  | Beschreibung                                     |
 |----------------------------------------------------------------------------------------------|-------------------------------------------------|
 | <dl> <dt>**S \_ OK**</dt> </dl>         | Die Funktion wurde erfolgreich ausgeführt.<br/>              |
-| <dl> <dt>**E \_ invalidArg**</dt> </dl> | Der *pdivider* -Parameter ist ungültig.<br/> |
+| <dl> <dt>**E \_ INVALIDARG**</dt> </dl> | Der *pDivider-Parameter* ist ungültig.<br/> |
 
 
 
@@ -78,7 +78,7 @@ Diese Funktion kann einen dieser Werte zurückgeben.
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows XP Tablet PC Edition \[ Desktop-Apps\]<br/>                         |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur Desktop-Apps der XP Tablet PC Edition \[\]<br/>                         |
 | Unterstützte Mindestversion (Server)<br/> | Nicht unterstützt<br/>                                                             |
 | Bibliothek<br/>                  | <dl> <dt>InkDiv.dll</dt> </dl> |
 

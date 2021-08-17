@@ -73,14 +73,14 @@ api_type:
 - DllExport
 api_location:
 - vmms.exe
-ms.openlocfilehash: 2787abbacfe4220b135544eecd3aeb7e86596c81
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: fb57c7b96a6e2cd1839f4d830074bb69d742aef688325a37d61b67589d026436
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "103958741"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119147893"
 ---
-# <a name="msvm_virtualsystemsettingdata-class"></a>MSVM \_ virtualsystemsettingdata-Klasse
+# <a name="msvm_virtualsystemsettingdata-class"></a>Msvm \_ VirtualSystemSettingData-Klasse
 
 Stellt die virtualisierungsspezifischen Einstellungen für einen virtuellen Computer dar.
 
@@ -157,59 +157,59 @@ class Msvm_VirtualSystemSettingData : CIM_VirtualSystemSettingData
 
 ## <a name="members"></a>Member
 
-Die **MSVM \_ virtualsystemsettingdata** -Klasse verfügt über diese Typen von Membern:
+Die **Msvm \_ VirtualSystemSettingData-Klasse** verfügt über die folgenden Membertypen:
 
 -   [Eigenschaften](#properties)
 
 ### <a name="properties"></a>Eigenschaften
 
-Die **MSVM \_ virtualsystemsettingdata** -Klasse verfügt über diese Eigenschaften.
+Die **Msvm \_ VirtualSystemSettingData-Klasse** verfügt über diese Eigenschaften.
 
 <dl> <dt>
 
-**Additionalherstellungsinformationen**
+**AdditionalRecoveryInformation**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
 </dt> </dl>
 
-Alle zusätzlichen Informationen, die für die Wiederherstellungs Aktion bereitgestellt werden. Die Bedeutung dieser Eigenschaft wird durch die Aktion in **automatikrecoveryaction** definiert. Wenn **automatikrecoveryaction** den Wert 0 ("None") oder 1 ("Restart") hat, ist dieser Wert **null**. Wenn **automatidecoveryaction** den Wert 2 hat ("Momentaufnahme wiederherstellen"), ist dies der Objekt Pfad zu einer Momentaufnahme, die bei einem Fehler des Arbeitsprozesses der virtuellen Maschine angewendet werden soll.
+Alle zusätzlichen Informationen, die für die Wiederherstellungsaktion bereitgestellt werden. Die Bedeutung dieser Eigenschaft wird durch die Aktion in **AutomaticRecoveryAction definiert.** Wenn **AutomaticRecoveryAction** 0 ("None") oder 1 ("Restart") ist, ist dieser Wert **NULL.** Wenn **AutomaticRecoveryAction** den Wert 2 ("Auf Momentaufnahme wiederherstellen") beträgt, ist dies der Objektpfad zu einer Momentaufnahme, die bei einem Fehler des Workerprozesses des virtuellen Computers angewendet werden sollte.
 
 </dd> <dt>
 
-**Allowfullscsicommandset**
+**AllowFullSCSICommandSet**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **boolescher** Wert
+Datentyp: **boolescher Wert**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
 </dt> </dl>
 
-**True** , wenn SCSI-Befehle vom Gast Betriebssystem an Pass-Through-Datenträger übergeben werden. andernfalls **false**. **True** gibt an, dass SCSI-Befehle, die vom Gast Betriebssystem an Pass-Through-Datenträger ausgegeben werden, nicht gefiltert werden. Es wird empfohlen, die SCSI-Filterung für Produktions Bereitstellungen zu aktivieren.
+**TRUE,** wenn SCSI-Befehle aus dem Gastbetriebssystem an Pass-Through-Datenträger übergeben werden. andernfalls **False.** True **gibt an,** dass SCSI-Befehle, die vom Gastbetriebssystem an Pass-Through-Datenträger ausgegeben werden, nicht gefiltert werden. Es wird empfohlen, die SCSI-Filterung für Produktionsbereitstellungen aktiviert zu lassen.
 
 </dd> <dt>
 
-**Allowreducedf | dundancy**
+**AllowReducedFcRedundancy**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **boolescher** Wert
+Datentyp: **boolescher Wert**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
 </dt> </dl>
 
-Gibt an, ob die Live Migration eines virtuellen Computers, der mit einem virtuellen Fibre Channel Adapter konfiguriert ist, zu einem Zielcomputer zulässig ist, der möglicherweise über keine oder reduzierten Pfad zum Ziel Fibre Channel Geräten verfügt. Diese Eigenschaft sollte nach einer Live Migration gelöscht werden.
+Gibt an, ob die Livemigration eines virtuellen Computers, der mit einem virtuellen Fibre Channel-Adapter konfiguriert ist, auf einen Zielcomputer zulässig ist, der möglicherweise keine oder nur eingeschränkte Pfade zu den Zielcomputern Fibre Channel hat. Diese Eigenschaft sollte nach einer Livemigration entfernt werden.
 
 
 
 | Wert                                                                            | Bedeutung                                                                                                                                                                                                                                                |
 |----------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| <dl> <dt>False</dt> </dl> | Der virtuelle Computer kann nicht auf einen Zielcomputer migriert werden, der möglicherweise keine oder weniger Pfade zum Ziel Fibre Channel Geräten hat.<br/>                                                                                                     |
-| <dl> <dt>True</dt> </dl>  | Der virtuelle Computer kann Live zu einem Zielcomputer migriert werden, der möglicherweise keine oder weniger Pfade zum Ziel Fibre Channel Geräten hat. Das Gast Betriebssystem verliert möglicherweise die Konnektivität mit dem Speicher und kann sich auf unvorhersehbare Weise Verhalten.<br/> |
+| <dl> <dt>False</dt> </dl> | Der virtuelle Computer kann nicht live zu einem Zielcomputer migriert werden, der möglicherweise keine oder nur eingeschränkte Pfade zum Zielcomputer auf Fibre Channel hat.<br/>                                                                                                     |
+| <dl> <dt>True</dt> </dl>  | Der virtuelle Computer kann live zu einem Zielcomputer migriert werden, der möglicherweise keine oder nur eingeschränkte Pfade zum Zielcomputer Fibre Channel hat. Das Gastbetriebssystem verliert möglicherweise die Verbindung mit dem Speicher und verhält sich möglicherweise unvorhersehbar.<br/> |
 
 
 
@@ -220,7 +220,7 @@ Gibt an, ob die Live Migration eines virtuellen Computers, der mit einem virtuel
 **Architektur**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
@@ -229,7 +229,7 @@ Zugriffstyp: Schreibgeschützt
 Die Architektur dieses Systems.
 
 > [!Note]  
-> Hinzugefügt in Windows 10, Version 1709.
+> Hinzugefügt in Windows 10 Version 1709.
 
  
 
@@ -251,19 +251,19 @@ Die Architektur dieses Systems.
 
 </dd> <dt>
 
-**Automaticcriticalerroraction**
+**AutomaticCriticalErrorAction**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt16**
+Datentyp: **uint16**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
 </dt> </dl>
 
-Gibt die Aktion an, die auf dem virtuellen Computer ausgeführt werden soll, wenn ein kritischer Fehler auftritt, z. b. Speicher Trennung.
+Identifiziert die Aktion, die auf dem virtuellen Computer ausgeführt werden soll, wenn ein kritischer Fehler auftritt, z. B. die Trennung der Speichertrennung.
 
 > [!Note]  
-> In Windows 10 und Windows Server 2016 hinzugefügt.
+> Hinzugefügt in Windows 10 und Windows Server 2016.
 
  
 
@@ -276,56 +276,56 @@ Gibt die Aktion an, die auf dem virtuellen Computer ausgeführt werden soll, wen
 
 </dt> <dd>
 
-Für kritische Fehlerbedingungen wird keine spezielle Aktion ausgeführt.
+Für kritische Fehlerbedingungen wird keine spezifische Aktion ergriffen.
 
 </dd> <dt>
 
 <span id="Pause_Resume"></span><span id="pause_resume"></span><span id="PAUSE_RESUME"></span>
 
-<span id="Pause_Resume"></span><span id="pause_resume"></span><span id="PAUSE_RESUME"></span>Fortsetzung **anhalten (1** )
+<span id="Pause_Resume"></span><span id="pause_resume"></span><span id="PAUSE_RESUME"></span>**Fortsetzen anhalten** (1)
 
 
 </dt> <dd>
 
-Bewirkt, dass der virtuelle Computer angehalten und automatisch fortgesetzt wird, wenn der kritische Fehlerzustand behoben ist.
+Bewirkt, dass der virtuelle Computer angehalten und automatisch fortgesetzt wird, wenn der kritische Fehlerzustand behoben wird.
 
 </dd> </dl>
 
 </dd> <dt>
 
-**Automaticcriticalerroraktiontimeout**
+**AutomaticCriticalErrorActionTimeout**
 </dt> <dd> <dl> <dt>
 
-**Datentyp: DateTime**
+Datentyp: **datetime**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
 </dt> <dt>
 
-Qualifizierer: [**Untertyp**](/windows/desktop/WmiSdk/standard-wmi-qualifiers) ("Intervall")
+Qualifizierer: [**Untertyp**](/windows/desktop/WmiSdk/standard-wmi-qualifiers) ("interval")
 </dt> </dl>
 
-Gibt die maximale Dauer an, für die die **automaticcriticalerroraction** ausgeführt wird, um den kritischen Fehler zu beheben. Dies gilt nur, wenn der Wert der **automaticcriticalerroraction** -Eigenschaft nicht 0 (None) ist. Nach Ablauf des Timeouts wird der virtuelle Computer ausgeschaltet. Der Wert wird auf die nächste Minute aufgerundet. Der Wert 0 bedeutet, dass der virtuelle Computer sofort ausgeschaltet werden sollte, wenn er auf einen kritischen Fehlerzustand stößt.
+Gibt die maximale Dauer an, für die **die AutomaticCriticalErrorAction** ausgeführt wird, um den kritischen Fehler zu beheben. Dies gilt nur, wenn der Wert der **AutomaticCriticalErrorAction-Eigenschaft** nicht 0 (None) ist. Nach Ablauf des Timeouts wird die VM ausgeschaltet. Der Wert wird auf die nächste Minute aufgerundet. Der Wert 0 impliziert, dass die VM sofort ausgeschaltet werden sollte, wenn eine kritische Fehlerbedingung auftritt.
 
 > [!Note]  
-> In Windows 10 und Windows Server 2016 hinzugefügt.
+> Hinzugefügt in Windows 10 und Windows Server 2016.
 
  
 
 </dd> <dt>
 
-**Automatikrecoveryaction**
+**AutomaticRecoveryAction**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt16**
+Datentyp: **uint16**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Die für den virtuellen Computer auszuführende Aktion, wenn die von der virtuellen Maschine ausgeführte Software ausfällt. Fehler sind in diesem Fall ein Fehler, der von der Host Plattform erkannt werden kann, z. b. eine nicht unter brechbare Bedingung für den Wartezustand. Diese Eigenschaft wird von [**CIM \_ virtualsystemsettingdata**](/previous-versions//cc136954(v=vs.85))geerbt.
+Aktion, die für den virtuellen Computer ausgeführt werden soll, wenn die vom virtuellen Computer ausgeführte Software ausfällt. Fehler sind in diesem Fall ein Fehler, der von der Hostplattform erkannt werden kann, z. B. eine nicht unterbrechungsfreie Wartezustandsbedingung. Diese Eigenschaft wird von [**CIM \_ VirtualSystemSettingData geerbt.**](/previous-versions//cc136954(v=vs.85))
 
-Dies kann einer der folgenden Werte sein:
+Dies kann einer der folgenden Werte sein.
 
 
 
@@ -333,8 +333,8 @@ Dies kann einer der folgenden Werte sein:
 |-------------------------------------------------------------------------------------|--------------------------------|
 | <dl> <dt>2</dt> </dl>        | Keine.<br/>               |
 | <dl> <dt>3</dt> </dl>        | Neu starten<br/>            |
-| <dl> <dt>4</dt> </dl>        | Momentaufnahme wiederherstellen.<br/> |
-| <dl> <dt>5.. 32768</dt> </dl> | Reserviert.<br/>           |
+| <dl> <dt>4</dt> </dl>        | Wiederherstellen der Momentaufnahme.<br/> |
+| <dl> <dt>5..32768</dt> </dl> | Reserviert.<br/>           |
 
 
 
@@ -342,27 +342,27 @@ Dies kann einer der folgenden Werte sein:
 
 </dd> <dt>
 
-**Automaticshutdownaction**
+**AutomaticShutdownAction**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt16**
+Datentyp: **uint16**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Aktion, die beim Herunterfahren des Hosts für die virtuelle Maschine ausgeführt werden soll. Diese Eigenschaft wird von [**CIM \_ virtualsystemsettingdata**](/previous-versions//cc136954(v=vs.85))geerbt.
+Aktion, die für den virtuellen Computer ausgeführt werden soll, wenn der Host heruntergefahren wird. Diese Eigenschaft wird von [**CIM \_ VirtualSystemSettingData geerbt.**](/previous-versions//cc136954(v=vs.85))
 
-Dies kann einer der folgenden Werte sein:
+Dies kann einer der folgenden Werte sein.
 
 
 
 | Wert                                                                               | Bedeutung                |
 |-------------------------------------------------------------------------------------|------------------------|
 | <dl> <dt>2</dt> </dl>        | Ausschalten.<br/>   |
-| <dl> <dt>3</dt> </dl>        | Speichern Sie den Zustand.<br/> |
+| <dl> <dt>3</dt> </dl>        | Speichern des Zustands.<br/> |
 | <dl> <dt>4</dt> </dl>        | Herunterfahren<br/>   |
-| <dl> <dt>5.. 32768</dt> </dl> | Reserviert.<br/>   |
+| <dl> <dt>5..32768</dt> </dl> | Reserviert.<br/>   |
 
 
 
@@ -370,45 +370,45 @@ Dies kann einer der folgenden Werte sein:
 
 </dd> <dt>
 
-**Automaticsnapshotsenabled**
+**AutomaticSnapshotsEnabled**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **boolescher** Wert
+Datentyp: **boolescher Wert**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
 </dt> </dl>
 
-Gibt an, ob für diesen virtuellen Computer automatische Momentaufnahmen aktiviert werden sollen.
+Gibt an, ob für diesen virtuellen Computer automatische Momentaufnahmen aktiviert sein sollen.
 
 > [!Note]  
-> Hinzugefügt in Windows 10, Version 1709.
+> Hinzugefügt in Windows 10 Version 1709.
 
  
 
 </dd> <dt>
 
-**Automaticstartupaction**
+**AutomaticStartupAction**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt16**
+Datentyp: **uint16**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Aktion, die für den virtuellen Computer ausgeführt werden soll, wenn der Host gestartet wird. Diese Eigenschaft wird von [**CIM \_ virtualsystemsettingdata**](/previous-versions//cc136954(v=vs.85))geerbt.
+Aktion, die für den virtuellen Computer ausgeführt werden soll, wenn der Host gestartet wird. Diese Eigenschaft wird von [**CIM \_ VirtualSystemSettingData geerbt.**](/previous-versions//cc136954(v=vs.85))
 
-Dies kann einer der folgenden Werte sein:
+Dies kann einer der folgenden Werte sein.
 
 
 
 | Wert                                                                               | Bedeutung                                  |
 |-------------------------------------------------------------------------------------|------------------------------------------|
 | <dl> <dt>2</dt> </dl>        | Keine.<br/>                         |
-| <dl> <dt>3</dt> </dl>        | Neu starten, wenn zuvor aktiv.<br/> |
-| <dl> <dt>4</dt> </dl>        | Immer starten.<br/>                 |
-| <dl> <dt>5.. 32768</dt> </dl> | Reserviert.<br/>                     |
+| <dl> <dt>3</dt> </dl>        | Starten Sie neu, wenn sie zuvor aktiv waren.<br/> |
+| <dl> <dt>4</dt> </dl>        | Starten Sie immer.<br/>                 |
+| <dl> <dt>5..32768</dt> </dl> | Reserviert.<br/>                     |
 
 
 
@@ -416,75 +416,75 @@ Dies kann einer der folgenden Werte sein:
 
 </dd> <dt>
 
-**Automaticstartupactiondelay**
+**AutomaticStartupActionDelay**
 </dt> <dd> <dl> <dt>
 
-**Datentyp: DateTime**
+Datentyp: **datetime**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Die Verzögerungszeit, bevor der virtuelle Computer automatisch gestartet wird. Diese Eigenschaft wird von [**CIM \_ virtualsystemsettingdata**](/previous-versions//cc136954(v=vs.85))geerbt.
+Die Verzögerung bis zum automatischen Start des virtuellen Computers. Diese Eigenschaft wird von [**CIM \_ VirtualSystemSettingData geerbt.**](/previous-versions//cc136954(v=vs.85))
 
 </dd> <dt>
 
-**Automaticstartupactionsequencenumschlag**
+**AutomaticStartupActionSequenceNumber**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt16**
+Datentyp: **uint16**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Eine Zahl, die die relative Sequenz der Aktivierung virtueller Maschinen angibt, wenn das Host System gestartet wird. Eine niedrigere Zahl deutet auf eine frühere Aktivierung hin. Wenn eine oder mehrere Konfigurationen denselben Wert aufweisen, ist die Sequenz implementierungsabhängig. Der Wert 0 gibt an, dass die Sequenz implementierungsabhängig ist. Diese Eigenschaft wird von [**CIM \_ virtualsystemsettingdata**](/previous-versions//cc136954(v=vs.85))geerbt.
+Eine Zahl, die die relative Sequenz der Aktivierung virtueller Computer angibt, wenn das Hostsystem gestartet wird. Eine niedrigere Zahl gibt eine frühere Aktivierung an. Wenn eine oder mehrere Konfigurationen den gleichen Wert anzeigen, ist die Sequenz von der Implementierung abhängig. Der Wert 0 gibt an, dass die Sequenz implementierungsabhängig ist. Diese Eigenschaft wird von [**CIM \_ VirtualSystemSettingData geerbt.**](/previous-versions//cc136954(v=vs.85))
 
 </dd> <dt>
 
-**Baseboardserialnumber**
+**BaseBoardSerialNumber**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
 </dt> </dl>
 
-Die Seriennummer des Basis Boards für die virtuelle Maschine.
+Die Seriennummer des Basisboards für den virtuellen Computer.
 
 </dd> <dt>
 
-**Biosguid**
+**BIOSGUID**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
 </dt> </dl>
 
-Der Globally Unique Identifier für das BIOS der virtuellen Maschine.
+Der global eindeutige Bezeichner für das BIOS des virtuellen Computers.
 
 </dd> <dt>
 
-**Biosnumlock**
+**BIOSNumLock**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **boolescher** Wert
+Datentyp: **boolescher Wert**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
 </dt> </dl>
 
-**True** , wenn der NUM-Sperr Schlüssel vom BIOS auf ON festgelegt ist. **False** , wenn der NUM-Sperr Schlüssel vom BIOS auf OFF festgelegt ist.
+**TRUE,** wenn der Num-Sperrschlüssel vom BIOS auf on festgelegt ist; **FALSE,** wenn die Num-Sperre durch das BIOS auf off festgelegt ist.
 
 </dd> <dt>
 
 **BIOSSerialNumber**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
@@ -494,19 +494,19 @@ Die Seriennummer des BIOS für den virtuellen Computer.
 
 </dd> <dt>
 
-**"Bootorder"**
+**BootOrder**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt16** Array
+Datentyp: **uint16 array**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
 </dt> <dt>
 
-Qualifizierer: [**arrayType**](/windows/desktop/WmiSdk/standard-qualifiers) ("indiziert"), [**Max**](/windows/desktop/WmiSdk/standard-qualifiers) (4)
+Qualifizierer: [**ArrayType**](/windows/desktop/WmiSdk/standard-qualifiers) ("Indexed"), [**MAX**](/windows/desktop/WmiSdk/standard-qualifiers) (4)
 </dt> </dl>
 
-Die Start Reihenfolge, die innerhalb des BIOS der virtuellen Maschine festgelegt ist. Diese Eigenschaft ist ein Array von Werten, **booterder** \[ 0 \] bis **bootor** \[ 3 ( \] inklusiv), wobei jeder Wert ein Gerät angibt, von dem aus gestartet werden soll. Jeder der vier Werte im Array muss festgelegt werden und darf nicht mit einem anderen Wert im Array identisch sein. Der virtuelle Computer versucht zunächst, über das Gerät zu starten, das durch den ersten Wert im Array angegeben wird. Wenn dieses Gerät keinen Startsektor enthält, versucht die virtuelle Maschine, vom nächsten Gerät zu starten, das von der **bootorder** -Eigenschaft angegeben wird, und so weiter. Wenn kein im **bootor** angegebener Gerät einen Startsektor enthält, kann der virtuelle Computer nicht gestartet werden. Der Standardwert für eine virtuelle Maschine ist \[ 0, 1, 2, 3 \] .
+Die startbasierte Reihenfolge, die im BIOS des virtuellen Computers festgelegt ist. Diese Eigenschaft ist ein Array von Werten, **BootOrder** \[ 0 \] bis **BootOrder** 3 , einschließlich , wobei jeder Wert ein Gerät angibt, von dem \[ aus gestartet werden \] soll. Jeder der vier Werte im Array muss festgelegt werden und darf nicht mit einem anderen Wert im Array identisch sein. Der virtuelle Computer versucht zunächst, von dem Gerät aus zu starten, das durch den ersten Wert im Array angegeben wird. Wenn dieses Gerät keinen Startsektor enthält, versucht der virtuelle Computer, von dem nächsten Gerät aus zu starten, das von der **BootOrder-Eigenschaft** angegeben wird, und so weiter. Wenn kein in der **BootOrder** angegebenes Gerät einen Startsektor enthält, kann der virtuelle Computer nicht gestartet werden. Der Standardwert für einen virtuellen Computer ist \[ 0, 1, 2, \] 3.
 
 <dt>
 
@@ -517,7 +517,7 @@ Die Start Reihenfolge, die innerhalb des BIOS der virtuellen Maschine festgelegt
 
 </dt> <dd>
 
-Der virtuelle Computer wird versuchen, von der Diskette innerhalb des Disketten Laufwerks zu starten.
+Der virtuelle Computer versucht, von der Diskette auf dem Diskettenlaufwerk zu starten.
 
 </dd> <dt>
 
@@ -528,7 +528,7 @@ Der virtuelle Computer wird versuchen, von der Diskette innerhalb des Disketten 
 
 </dt> <dd>
 
-Der virtuelle Computer versucht, von der ersten CD oder DVD-Festplatte zu starten, die mit einem Startsektor gefunden wurde.
+Der virtuelle Computer versucht, von der ersten CD- oder DVD-Festplatte zu starten, die mit einem Startsektor gefunden wurde.
 
 </dd> <dt>
 
@@ -539,7 +539,7 @@ Der virtuelle Computer versucht, von der ersten CD oder DVD-Festplatte zu starte
 
 </dt> <dd>
 
-Der virtuelle Computer versucht, vom ersten Festplattenlaufwerk aus zu starten, das sich in einem Startsektor befand.
+Der virtuelle Computer versucht, von der ersten Festplatte aus zu starten, die mit einem Startsektor gefunden wurde.
 
 </dd> <dt>
 
@@ -563,116 +563,116 @@ Der virtuelle Computer versucht, PXE aus dem Netzwerk zu starten.
 
 <span id="Reserved"></span><span id="reserved"></span><span id="RESERVED"></span>
 
-<span id="Reserved"></span><span id="reserved"></span><span id="RESERVED"></span>**Reserviert** (5.. 65535)
+<span id="Reserved"></span><span id="reserved"></span><span id="RESERVED"></span>**Reserviert** (5..65535)
 
 
 </dt> <dd></dd> </dl>
 
 </dd> <dt>
 
-**Bootsourceorder**
+**BootSourceOrder**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichen** folgen Array
+Datentyp: **Zeichenfolgenarray**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
 </dt> </dl>
 
-Die Start Quell Reihenfolge für den virtuellen Computer.
+Die Reihenfolge der Startquelle für den virtuellen Computer.
 
-**Windows 8.1:** Dieser Wert wird bis Windows 8.1 und Windows Server 2012 R2 nicht unterstützt.
+**Windows 8.1:** Dieser Wert wird erst unterstützt, wenn Windows 8.1 und Windows Server 2012 R2.
 
 </dd> <dt>
 
 **Caption**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Eine kurze Beschreibung des-Objekts. Diese Eigenschaft wird von [**CIM \_ managedelta**](/previous-versions/windows/desktop/iscsitarg/cim-managedelement)geerbt.
+Eine kurze Beschreibung des -Objekts. Diese Eigenschaft wird von [**CIM \_ ManagedElement geerbt.**](/previous-versions/windows/desktop/iscsitarg/cim-managedelement)
 
 </dd> <dt>
 
-**Chassisassettag**
+**ChassisAssetTag**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
 </dt> </dl>
 
-Das Bestands Kennzeichen des Chassis für den virtuellen Computer.
+Das Assettag des Gehäuses für den virtuellen Computer.
 
 </dd> <dt>
 
-**Chassisserialnumber**
+**ChassisSerialNumber**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
 </dt> </dl>
 
-Die Seriennummer des Chassis für den virtuellen Computer.
+Die Seriennummer des Gehäuses für den virtuellen Computer.
 
 </dd> <dt>
 
-**Configurationdataroot**
+**ConfigurationDataRoot**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Der Pfad eines Verzeichnisses, in dem Informationen zur Konfiguration der virtuellen Maschine gespeichert werden. Diese Eigenschaft wird von [**CIM \_ virtualsystemsettingdata**](/previous-versions//cc136954(v=vs.85))geerbt.
+Der Pfad eines Verzeichnisses, in dem Informationen zur Konfiguration des virtuellen Computers gespeichert werden. Diese Eigenschaft wird von [**CIM \_ VirtualSystemSettingData geerbt.**](/previous-versions//cc136954(v=vs.85))
 
 </dd> <dt>
 
 **ConfigurationFile**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Der relative Pfad und der Dateiname einer Datei, in der Informationen zur Konfiguration der virtuellen Maschine gespeichert werden. Dieser Pfad ist relativ zur **configurationdataroot** -Eigenschaft. Diese Eigenschaft wird von [**CIM \_ virtualsystemsettingdata**](/previous-versions//cc136954(v=vs.85))geerbt.
+Der relative Pfad und Dateiname einer Datei, in der Informationen zur Konfiguration des virtuellen Computers gespeichert werden. Dieser Pfad ist relativ zur **ConfigurationDataRoot-Eigenschaft.** Diese Eigenschaft wird von [**CIM \_ VirtualSystemSettingData geerbt.**](/previous-versions//cc136954(v=vs.85))
 
 </dd> <dt>
 
 **ConfigurationID**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Der eindeutige Bezeichner der Konfiguration der virtuellen Maschine. Diese Eigenschaft wird von [**CIM \_ virtualsystemsettingdata**](/previous-versions//cc136954(v=vs.85))geerbt.
+Der eindeutige Bezeichner der Konfiguration des virtuellen Computers. Diese Eigenschaft wird von [**CIM \_ VirtualSystemSettingData geerbt.**](/previous-versions//cc136954(v=vs.85))
 
 </dd> <dt>
 
-**Consolemode**
+**ConsoleMode**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt16**
+Datentyp: **uint16**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
 </dt> </dl>
 
-Identifiziert den Konsolenmodus für die VM.
+Identifiziert den Konsolenmodus für den virtuellen Computer.
 
 > [!Note]  
 > Diese Eigenschaft wurde in Windows 10 und Windows Server 2016 hinzugefügt.
@@ -711,55 +711,55 @@ Identifiziert den Konsolenmodus für die VM.
 
 </dd> <dt>
 
-**CreationTime**
+**Creationtime**
 </dt> <dd> <dl> <dt>
 
-**Datentyp: DateTime**
+Datentyp: **datetime**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Das Datum und die Uhrzeit der Erstellung der Einstellungen für die virtuelle Maschine. Wenn dieses-Objekt die aktuellen Einstellungen für die virtuelle Maschine darstellt, ist dieser Wert die Zeit, zu der das System erstellt wurde. Wenn dieses-Objekt die Momentaufnahme Einstellungen für die virtuelle Maschine darstellt, ist dieser Wert die Zeit, zu der die Momentaufnahme erstellt wurde. Diese Eigenschaft wird von [**CIM \_ virtualsystemsettingdata**](/previous-versions//cc136954(v=vs.85))geerbt.
+Das Datum und die Uhrzeit, zu der die Einstellungen für den virtuellen Computer erstellt wurden. Wenn dieses Objekt die aktuellen Einstellungen für den virtuellen Computer darstellt, ist dieser Wert der Zeitpunkt, zu dem das System erstellt wurde. Wenn dieses Objekt die Momentaufnahmeeinstellungen für den virtuellen Computer darstellt, ist dieser Wert der Zeitpunkt, zu dem die Momentaufnahme erstellt wurde. Diese Eigenschaft wird von [**CIM \_ VirtualSystemSettingData**](/previous-versions//cc136954(v=vs.85))geerbt.
 
 </dd> <dt>
 
-**"Debug-channelid"**
+**DebugChannelId**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt32**
+Datentyp: **uint32**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
 </dt> </dl>
 
-Der Kanal Bezeichner, der zum Debuggen des virtuellen Computers mit dem Unified Debugger verwendet wird.
+Der Kanalbezeichner, der zum Debuggen des virtuellen Computers mithilfe des einheitlichen Debuggers verwendet wird.
 
 </dd> <dt>
 
-**Debugport**
+**DebugPort**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt32**
+Datentyp: **uint32**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
 </dt> </dl>
 
-Der TCP/IP-Port, der zum Debuggen des virtuellen Computers verwendet wird.
+Der TCP/IP-Port, der zum Debuggen des virtuellen Computers mit synthetischem Debuggen verwendet wird.
 
 </dd> <dt>
 
-**"Debug-portenabled"**
+**DebugPortEnabled**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt16**
+Datentyp: **uint16**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
 </dt> </dl>
 
-Gibt an, ob der virtuelle Computer synthetisches Debuggen verwendet. Dies kann einer der folgenden Werte sein:
+Gibt an, ob der virtuelle Computer synthetisches Debuggen verwendet. Dies kann einer der folgenden Werte sein.
 
 <dt>
 
@@ -772,14 +772,14 @@ Gibt an, ob der virtuelle Computer synthetisches Debuggen verwendet. Dies kann e
 
 <span id="On"></span><span id="on"></span><span id="ON"></span>
 
-<span id="On"></span><span id="on"></span><span id="ON"></span>Ein **(1** )
+<span id="On"></span><span id="on"></span><span id="ON"></span>**Ein** (1)
 
 
 </dt> <dd></dd> <dt>
 
 <span id="OnAutoAssigned"></span><span id="onautoassigned"></span><span id="ONAUTOASSIGNED"></span>
 
-<span id="OnAutoAssigned"></span><span id="onautoassigned"></span><span id="ONAUTOASSIGNED"></span>**Onautoassigned** (2)
+<span id="OnAutoAssigned"></span><span id="onautoassigned"></span><span id="ONAUTOASSIGNED"></span>**OnAutoAssigned** (2)
 
 
 </dt> <dd>
@@ -793,20 +793,20 @@ Automatisch zugewiesen
 **Beschreibung**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Eine Beschreibung des -Objekts. Diese Eigenschaft wird von [**CIM \_ managedelta**](/previous-versions/windows/desktop/iscsitarg/cim-managedelement)geerbt und ist immer auf einen der folgenden Werte festgelegt.
+Eine Beschreibung des -Objekts. Diese Eigenschaft wird von [**CIM \_ ManagedElement**](/previous-versions/windows/desktop/iscsitarg/cim-managedelement)geerbt und immer auf einen der folgenden Werte festgelegt.
 
 
 
 | Wert                                                                                                                  | Bedeutung                                               |
 |------------------------------------------------------------------------------------------------------------------------|-------------------------------------------------------|
-| <dl> <dt>"Aktive Einstellungen für den virtuellen Computer"</dt> </dl>   | Diese Instanz verweist auf einen virtuellen Computer.<br/> |
-| <dl> <dt>"Momentaufnahme Einstellungen für den virtuellen Computer"</dt> </dl> | Diese Instanz verweist auf eine Momentaufnahme.<br/>        |
+| <dl> <dt>"Aktive Einstellungen für den virtuellen Computer"</dt> </dl>   | Diese Instanz bezieht sich auf einen virtuellen Computer.<br/> |
+| <dl> <dt>"Momentaufnahmeeinstellungen für den virtuellen Computer"</dt> </dl> | Diese Instanz verweist auf eine Momentaufnahme.<br/>        |
 
 
 
@@ -817,29 +817,29 @@ Eine Beschreibung des -Objekts. Diese Eigenschaft wird von [**CIM \_ managedelta
 **ElementName**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Ein Anzeige Name für das-Objekt. Diese Eigenschaft wird von [**CIM \_ virtualsystemsettingdata**](/previous-versions//cc136954(v=vs.85))geerbt und wird immer auf den anzeigen Amen für den Computer festgelegt. Dieser Name darf nicht länger als 100 Zeichen sein.
+Ein Anzeigename für das Objekt. Diese Eigenschaft wird von [**CIM \_ VirtualSystemSettingData**](/previous-versions//cc136954(v=vs.85))geerbt und immer auf den Anzeigenamen für den Computer festgelegt. Dieser Name darf 100 Zeichen nicht überschreiten.
 
 </dd> <dt>
 
-**Enhancedsessiontransporttype**
+**EnhancedSessionTransportType**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt16**
+Datentyp: **uint16**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
 </dt> </dl>
 
-Gibt den Transporttyp an, der beim Herstellen einer Verbindung mit einer erweiterten Sitzung verwendet wird.
+Gibt den Transporttyp an, der beim Herstellen einer Verbindung mit einer erweiterten Sitzung verwendet werden soll.
 
 > [!Note]  
-> Diese Eigenschaft wurde in Windows 10, Version 1803, hinzugefügt.
+> Diese Eigenschaft wurde in Windows 10 Version 1803 hinzugefügt.
 
  
 
@@ -847,7 +847,7 @@ Gibt den Transporttyp an, der beim Herstellen einer Verbindung mit einer erweite
 
 <span id="VMBus_Pipe"></span><span id="vmbus_pipe"></span><span id="VMBUS_PIPE"></span>
 
-**VMBus-Pipe** (0)
+**VMBus Pipe** (0)
 
 
 </dt> <dd></dd> <dt>
@@ -861,16 +861,16 @@ Gibt den Transporttyp an, der beim Herstellen einer Verbindung mit einer erweite
 
 </dd> <dt>
 
-**Guestcontrolledcachetypes**
+**GuestControlledCacheTypes**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **boolescher** Wert
+Datentyp: **boolescher Wert**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
 </dt> </dl>
 
-Gibt an, ob der Gast Cache Typen steuern kann.
+Gibt an, ob der Gast Cachetypen steuern kann.
 
 > [!Note]  
 > In Windows 10 und Windows Server 2016 hinzugefügt.
@@ -879,77 +879,77 @@ Gibt an, ob der Gast Cache Typen steuern kann.
 
 </dd> <dt>
 
-**Gueststatedataroot**
+**GuestStateDataRoot**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Dateipfad eines Verzeichnisses, in dem Informationen über den Gast Lauf Zeit Zustand gespeichert werden.
+Dateipfad eines Verzeichnisses, in dem Informationen zum Zustand der Gastruntime gespeichert werden.
 
 > [!Note]  
-> Hinzugefügt in Windows 10, Version 1709.
+> Hinzugefügt in Windows 10 Version 1709.
 
  
 
 </dd> <dt>
 
-**Gueststatefile**
+**GuestStateFile**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Dateipfad einer Datei, in der Informationen über den Gast Lauf Zeit Zustand gespeichert werden. Ein relativer Pfad wird an den Wert der **gueststatedataroot** -Eigenschaft angefügt.
+Dateipfad einer Datei, in der Informationen zum Zustand der Gastruntime gespeichert werden. Ein relativer Pfad wird an den Wert der **GuestStateDataRoot-Eigenschaft** angefügt.
 
 > [!Note]  
-> Hinzugefügt in Windows 10, Version 1709.
+> Hinzugefügt in Windows 10 Version 1709.
 
  
 
 </dd> <dt>
 
-**Highmmiogapsize**
+**HighMmioGapSize**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt64**
+Datentyp: **uint64**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
 </dt> </dl>
 
-Die Größe des oberen (über 4 GB) Memory-Mapped e/a-GAP in MB
+Die Größe von High (über 4 GB) Memory-Mapped E/A-Lücke in MB
 
 > [!Note]  
-> Diese Eigenschaft wurde in Windows 10, Version 1703, hinzugefügt.
+> Diese Eigenschaft wurde in Windows 10 Version 1703 hinzugefügt.
 
  
 
 </dd> <dt>
 
-**Incrementalbackupabled**
+**IncrementalBackupEnabled**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **boolescher** Wert
+Datentyp: **boolescher Wert**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
 </dt> </dl>
 
-Gibt an, ob die Hyper-V-VSS Writer die das inkrementelle sichern dieser virtuellen Maschine unterstützt.
+Gibt an, ob der Hyper-V VSS Writer das Erstellen inkrementeller Sicherungen dieses virtuellen Computers unterstützt.
 
 </dd> <dt>
 
 **InstanceID**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
@@ -962,19 +962,19 @@ Identifiziert eine Instanz dieser Klasse eindeutig. Diese Eigenschaft wird von [
 
 </dd> <dt>
 
-**Isautomaticsnapshot**
+**IsAutomaticSnapshot**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **boolescher** Wert
+Datentyp: **boolescher Wert**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Gibt an, ob es sich um eine für den Benutzer automatisch erstellte Momentaufnahme handelt.
+Gibt an, ob es sich um eine Momentaufnahme handelt, die automatisch für den Benutzer erstellt wird.
 
 > [!Note]  
-> Hinzugefügt in Windows 10, Version 1709.
+> Hinzugefügt in Windows 10 Version 1709.
 
  
 
@@ -983,68 +983,68 @@ Gibt an, ob es sich um eine für den Benutzer automatisch erstellte Momentaufnah
 **IsSaved**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **boolescher** Wert
+Datentyp: **boolescher Wert**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-**True** , wenn die Konfiguration einen Verweis auf eine gespeicherte Zustands Datei enthält. andernfalls **false**. Dies deutet nicht darauf hin, dass eine solche Datei vorhanden ist, sondern nur, dass die Konfiguration eine Datei angibt.
+**TRUE,** wenn die Konfiguration einen Verweis auf eine gespeicherte Zustandsdatei enthält. Andernfalls **FALSE.** Dies gibt nicht das Vorhandensein einer solchen Datei an, sondern nur, dass die Konfiguration eine Datei angibt.
 
 </dd> <dt>
 
-**Lockondisconnect**
+**LockOnDisconnect**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **boolescher** Wert
+Datentyp: **boolescher Wert**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
 </dt> </dl>
 
-Sperren Sie die Konsole, wenn Sie die Verbindung mit VMConnect trennen.
+Sperren Sie die Konsole, wenn Sie die Verbindung mit vmconnect trennen.
 
 > [!Note]  
-> In Windows 10 und Windows Server 2016 hinzugefügt.
+> Hinzugefügt in Windows 10 und Windows Server 2016.
 
  
 
 </dd> <dt>
 
-**Logdataroot**
+**LogDataRoot**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Der Pfad eines Verzeichnisses, in dem Protokollinformationen für den virtuellen Computer gespeichert werden. Diese Eigenschaft wird von [**CIM \_ virtualsystemsettingdata**](/previous-versions//cc136954(v=vs.85))geerbt.
+Der Pfad eines Verzeichnisses, in dem Protokollinformationen für den virtuellen Computer gespeichert werden. Diese Eigenschaft wird von [**CIM \_ VirtualSystemSettingData geerbt.**](/previous-versions//cc136954(v=vs.85))
 
 </dd> <dt>
 
-**Lowmmiogapsize**
+**LowMmioGapSize**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt64**
+Datentyp: **uint64**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
 </dt> </dl>
 
-Hiermit wird die Größe der ersten MMIO-Lücke für einen virtuellen Computer (VM) in Megabyte konfiguriert.
+Konfiguriert die Größe der ersten MMIO-Lücke für einen virtuellen Computer (VM) in Megabyte.
 
-**Windows 8.1:** Dieser Wert wird bis Windows 8.1 und Windows Server 2012 R2 nicht unterstützt.
+**Windows 8.1:** Dieser Wert wird erst unterstützt, wenn Windows 8.1 und Windows Server 2012 R2.
 
 Bereich: 128 3584
 
 </dd> <dt>
 
-**Network bootpreferredprotocol**
+**NetworkBootPreferredProtocol**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt16**
+Datentyp: **uint16**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
@@ -1052,7 +1052,7 @@ Zugriffstyp: Lesen/Schreiben
 
 Bestimmt, ob das bevorzugte Protokoll für den PXE-Start IPv4 oder IPv6 ist.
 
-**Windows 8.1:** Dieser Wert wird bis Windows 8.1 und Windows Server 2012 R2 nicht unterstützt.
+**Windows 8.1:** Dieser Wert wird erst unterstützt, wenn Windows 8.1 und Windows Server 2012 R2.
 
 <dt>
 
@@ -1072,170 +1072,170 @@ Bestimmt, ob das bevorzugte Protokoll für den PXE-Start IPv4 oder IPv6 ist.
 
 </dd> <dt>
 
-**Hinweise**
+**Notizen**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichen** folgen Array
+Datentyp: **Zeichenfolgenarray**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Vom Benutzer bereitgestellte Hinweise zum virtuellen Computer. Diese Eigenschaft wird von [**CIM \_ virtualsystemsettingdata**](/previous-versions//cc136954(v=vs.85))geerbt.
+Vom Benutzer bereitgestellte Hinweise im Zusammenhang mit dem virtuellen Computer. Diese Eigenschaft wird von [**CIM \_ VirtualSystemSettingData geerbt.**](/previous-versions//cc136954(v=vs.85))
 
 </dd> <dt>
 
 **Parent**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Wenn diese Instanz kein System darstellt, das auf einer Momentaufnahme einer virtuellen Maschine basiert, ist diese Eigenschaft **null**. Andernfalls enthält die Eigenschaft den Objekt Pfad des **MSVM \_ virtualsystemsettingdata** -Objekts, auf dem diese Instanz basiert. Beim Erstellen einer Momentaufnahme Struktur Hierarchie für den virtuellen Computer verweist diese Eigenschaft auf das Objekt, von dem die aktuelle Instanz abgeleitet wird (die aktuelle Instanz ist der untergeordnete Knoten, und das Objekt, auf das in dieser Eigenschaft verwiesen wird, ist der übergeordnete Knoten.)
+Wenn diese Instanz kein System basierend auf einer Momentaufnahme eines virtuellen Computers repräsentiert, ist diese Eigenschaft **NULL.** Andernfalls enthält die -Eigenschaft den Objektpfad des **Msvm \_ VirtualSystemSettingData-Objekts,** auf dem diese Instanz basiert. Beim Erstellen einer Momentaufnahmestrukturhierarchie für den virtuellen Computer verweist diese Eigenschaft auf das Objekt, von dem die aktuelle Instanz abgeleitet wird (die aktuelle Instanz ist der untergeordnete Knoten, und das Objekt, auf das in dieser Eigenschaft verwiesen wird, ist der übergeordnete Knoten.)
 
 </dd> <dt>
 
-**Paket Paket**
+**ParentPackage**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
 </dt> </dl>
 
-Wenn es sich um einen Container handelt, ist dies der Pfad zum MSVM- \_ containerpackage, auf dem dieses System basiert.
+Wenn es sich bei diesem System um einen Container handelt, ist dies der Pfad zu dem Msvm \_ ContainerPackage, auf dem dieses System basiert.
 
 > [!Note]  
-> In Windows 10 hinzugefügt entfernt in Windows 10, Version 1703.
+> Hinzugefügt in Windows 10; wurde in Windows 10 Version 1703 entfernt.
 
  
 
 </dd> <dt>
 
-**Pauseafterbootfailure**
+**PauseAfterBootFailure**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **boolescher** Wert
+Datentyp: **boolescher Wert**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
 </dt> </dl>
 
-Gibt an, ob das BIOS nach jedem Fehler beim Start Eintrag angehalten wird, wenn der Benutzer eine Taste drückt. **True** , wenn das BIOS angehalten wird. andernfalls **false**.
+Gibt an, ob das BIOS nach jedem Starteintragsfehler angehalten wird, der darauf wartet, dass der Benutzer eine Taste drückt. **TRUE,** wenn das BIOS angehalten wird; andernfalls **False.**
 
-**Windows 8.1:** Dieser Wert wird bis Windows 8.1 und Windows Server 2012 R2 nicht unterstützt.
+**Windows 8.1:** Dieser Wert wird erst unterstützt, wenn Windows 8.1 und Windows Server 2012 R2.
 
 </dd> <dt>
 
-**Wiederherstellbare Datei**
+**RecoveryFile**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Der vollständige Pfad einer Datei, in der Wiederherstellungs bezogene Informationen für den virtuellen Computer gespeichert werden. Diese Eigenschaft wird von [**CIM \_ virtualsystemsettingdata**](/previous-versions//cc136954(v=vs.85))geerbt.
+Der vollständige Pfad einer Datei, in der wiederherstellungsbezogene Informationen für den virtuellen Computer gespeichert werden. Diese Eigenschaft wird von [**CIM \_ VirtualSystemSettingData geerbt.**](/previous-versions//cc136954(v=vs.85))
 
 </dd> <dt>
 
-**"Securebootenabled"**
+**SecureBootEnabled**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **boolescher** Wert
+Datentyp: **boolescher Wert**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
 </dt> </dl>
 
-Gibt an, ob der sichere Start für den virtuellen Computer (VM) aktiviert ist. **True** , wenn aktiviert; andernfalls **false**.
+Gibt an, ob der sichere Start für den virtuellen Computer (VM) aktiviert ist. **True,** wenn aktiviert; andernfalls **False.**
 
 > [!Note]  
-> Der sichere Start kann nur für VMS der Generation 2 aktiviert werden.
+> Der sichere Start kann nur für VMs der Generation 2 aktiviert werden.
 
  
 
-**Windows 8.1:** Dieser Wert wird bis Windows 8.1 und Windows Server 2012 R2 nicht unterstützt.
+**Windows 8.1:** Dieser Wert wird erst unterstützt, wenn Windows 8.1 und Windows Server 2012 R2.
 
 </dd> <dt>
 
-**Secureboottemplateid**
+**SecureBootTemplateId**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
 </dt> </dl>
 
-Der Global eindeutige Bezeichner der Vorlage mit den Anfangs-Werten von UEFI-Variablen für den sicheren Start.
+Der global eindeutige Bezeichner der Vorlage von Initialwerten von Variablen im Zusammenhang mit UEFI Secure Boot.
 
-Dabei handelt es sich um eine schreibgeschützte Eigenschaft, die jedoch mithilfe der [**modifyvirtualsystem**](https://www.bing.com/search?q=**ModifyVirtualSystem**) -Methode der [**MSVM \_ virtualsystemmanagementservice**](msvm-virtualsystemmanagementservice.md) -Klasse geändert werden kann.
+Dies ist eine schreibgeschützte Eigenschaft, die jedoch mithilfe der [**ModifyVirtualSystem-Methode**](https://www.bing.com/search?q=**ModifyVirtualSystem**) der [**Msvm \_ VirtualSystemManagementService-Klasse geändert werden**](msvm-virtualsystemmanagementservice.md) kann.
 
 > [!Note]  
-> In Windows 10 und Windows Server 2016 hinzugefügt.
+> Hinzugefügt in Windows 10 und Windows Server 2016.
 
  
 
 </dd> <dt>
 
-**Snapshotdataroot**
+**SnapshotDataRoot**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Der Pfad eines Verzeichnisses, in dem Informationen zu den Momentaufnahmen der virtuellen Maschine gespeichert werden. Diese Eigenschaft wird von [**CIM \_ virtualsystemsettingdata**](/previous-versions//cc136954(v=vs.85))geerbt.
+Der Pfad eines Verzeichnisses, in dem Informationen zu den Momentaufnahmen des virtuellen Computers gespeichert werden. Diese Eigenschaft wird von [**CIM \_ VirtualSystemSettingData geerbt.**](/previous-versions//cc136954(v=vs.85))
 
 </dd> <dt>
 
-**Suspenddataroot**
+**SuspendDataRoot**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Der Pfad eines Verzeichnisses, in dem Informationen zu den Informationen zum Aussetzen der virtuellen Maschine gespeichert werden. Diese Eigenschaft wird von [**CIM \_ virtualsystemsettingdata**](/previous-versions//cc136954(v=vs.85))geerbt.
+Der Pfad eines Verzeichnisses, in dem Informationen zu den informationen zum Angehalten des virtuellen Computers gespeichert werden. Diese Eigenschaft wird von [**CIM \_ VirtualSystemSettingData geerbt.**](/previous-versions//cc136954(v=vs.85))
 
 </dd> <dt>
 
-**Austauschen von Daten**
+**SwapFileDataRoot**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Der Pfad eines Verzeichnisses, in dem die Auslagerungs Dateien für den virtuellen Computer gespeichert werden. Diese Eigenschaft wird von [**CIM \_ virtualsystemsettingdata**](/previous-versions//cc136954(v=vs.85))geerbt.
+Der Pfad eines Verzeichnisses, in dem Auslagerungsdateien für den virtuellen Computer gespeichert werden. Diese Eigenschaft wird von [**CIM \_ VirtualSystemSettingData geerbt.**](/previous-versions//cc136954(v=vs.85))
 
 </dd> <dt>
 
-**Usersnapshottype**
+**UserSnapshotType**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt16**
+Datentyp: **uint16**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
 </dt> </dl>
 
-Gibt den Typ der benutzerdefinierten Momentaufnahme an.
+Gibt den benutzerdefinierten Momentaufnahmetyp an.
 
 > [!Note]  
-> In Windows 10 und Windows Server 2016 hinzugefügt.
+> Hinzugefügt in Windows 10 und Windows Server 2016.
 
  
 
@@ -1248,29 +1248,29 @@ Gibt den Typ der benutzerdefinierten Momentaufnahme an.
 
 </dt> <dd>
 
-Hiermit wird die Erstellung einer Momentaufnahme deaktiviert.
+Deaktivieren Sie die Erstellung von Momentaufnahmen.
 
 </dd> <dt>
 
 <span id="ProductionFallbackToTest"></span><span id="productionfallbacktotest"></span><span id="PRODUCTIONFALLBACKTOTEST"></span>
 
-<span id="ProductionFallbackToTest"></span><span id="productionfallbacktotest"></span><span id="PRODUCTIONFALLBACKTOTEST"></span>**Productionfallbacktetest** (3)
+<span id="ProductionFallbackToTest"></span><span id="productionfallbacktotest"></span><span id="PRODUCTIONFALLBACKTOTEST"></span>**ProductionFallbackToTest** (3)
 
 
 </dt> <dd>
 
-Daten konsistente Momentaufnahme für die Verwendung in der Produktionsumgebung. Führt eine Momentaufnahme mit einem Anwendungs Zustand aus, wenn die Möglichkeit zum Erstellen einer Daten konsistenten Momentaufnahme nicht verfügbar ist.
+Daten konsistente Momentaufnahme für die Verwendung in der Produktionsumgebung. Führt eine Momentaufnahme mit anwendungsstatus aus, wenn die Möglichkeit zum Erstellen einer daten konsistenten Momentaufnahme nicht verfügbar ist.
 
 </dd> <dt>
 
 <span id="ProductionNoFallback"></span><span id="productionnofallback"></span><span id="PRODUCTIONNOFALLBACK"></span>
 
-<span id="ProductionNoFallback"></span><span id="productionnofallback"></span><span id="PRODUCTIONNOFALLBACK"></span>**Productionnofallback** (4)
+<span id="ProductionNoFallback"></span><span id="productionnofallback"></span><span id="PRODUCTIONNOFALLBACK"></span>**ProductionNoFallback** (4)
 
 
 </dt> <dd>
 
-Daten konsistente Momentaufnahme für die Verwendung in der Produktionsumgebung. Erstellt keine Momentaufnahme mit dem Anwendungs Zustand, wenn keine Daten konsistente Momentaufnahme erstellt werden kann.
+Daten konsistente Momentaufnahme für die Verwendung in der Produktionsumgebung. Erstellt keine Momentaufnahme mit anwendungsstatus, wenn es nicht möglich ist, eine daten konsistente Momentaufnahme zu erstellen.
 
 </dd> <dt>
 
@@ -1281,7 +1281,7 @@ Daten konsistente Momentaufnahme für die Verwendung in der Produktionsumgebung.
 
 </dt> <dd>
 
-Momentaufnahme, die Arbeitsspeicher-und Geräteinformationen zu Test-und Entwicklungszwecken enthält.
+Momentaufnahme, die Speicher- und Geräteinformationen für Test- und Entwicklungsziele enthält.
 
 </dd> </dl>
 
@@ -1290,103 +1290,103 @@ Momentaufnahme, die Arbeitsspeicher-und Geräteinformationen zu Test-und Entwick
 **Version**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Die Version des virtuellen Computers im Format "Major. Minor", z. b. "2,0".
+Die Version des virtuellen Computers im Format "major.minor", z.B. "2.0".
 
 </dd> <dt>
 
-**Virtualnumaaktivierte**
+**VirtualNumaEnabled**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **boolescher** Wert
+Datentyp: **boolescher Wert**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
 </dt> <dt>
 
-Qualifizierer: [**modelcorrespondence**](/windows/desktop/WmiSdk/standard-qualifiers) ("[**MSVM \_ processorsettingdata**](msvm-processorsettingdata.md).**Maxprocessorspernumanode**","[**MSVM \_ memorysettingdata**](msvm-memorysettingdata.md).**Maxmemoryblockspernumanode**")
+Qualifizierer: [**ModelCorrespondence**](/windows/desktop/WmiSdk/standard-qualifiers) ("[**Msvm \_ ProcessorSettingData**](msvm-processorsettingdata.md).**MaxProcessorsPerNumaNode**", "[**Msvm \_ MemorySettingData**](msvm-memorysettingdata.md).**MaxMemoryBlocksPerNumaNode**")
 </dt> </dl>
 
-**True** , wenn virtuelle NUMA-Knoten (Non-Uniform Memory Access, nicht einheitlicher Speicherzugriff) in den virtuellen Computer projiziert werden. **False** , wenn der virtuelle Computer über einen einzelnen Knoten verfügt. **True** gibt an, dass die Anzahl der virtuellen NUMA-Knoten, die in den virtuellen Computer projiziert werden, von den Werten der Eigenschaften [**MSVM \_ processorsettingdata. maxprocessorspernumanode**](msvm-processorsettingdata.md) und [**MSVM \_ memorysettingdata. maxmemoryblockspernumanode**](msvm-memorysettingdata.md) bestimmt wird.
+**True,** wenn virtuelle NUMA-Knoten (Non-Uniform Memory Access) in den virtuellen Computer projiziert werden. **False,** wenn der virtuelle Computer einen einzelnen Knoten hat. True **gibt** an, dass die Anzahl der in den virtuellen Computer projizierten virtuellen NUMA-Knoten anhand der Werte der [**Eigenschaften Msvm \_ ProcessorSettingData.MaxProcessorsPerNumaNode**](msvm-processorsettingdata.md) und [**Msvm \_ MemorySettingData.MaxMemoryBlocksPerNumaNode**](msvm-memorysettingdata.md) bestimmt wird.
 
 </dd> <dt>
 
-**Virtualsystemidentifier**
+**VirtualSystemIdentifier**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: über [**Schreiben**](/windows/desktop/WmiSdk/standard-qualifiers) ("CIM \_ virtualsystemsettingdata. virtualsystedentifier"), [**modelkorrespondenz**](/windows/desktop/WmiSdk/standard-qualifiers) ("[**CIM \_ Computersystem**](cim-computersystem.md).**Name**")
+Qualifizierer: [**Überschreiben**](/windows/desktop/WmiSdk/standard-qualifiers) ("CIM \_ VirtualSystemSettingData.VirtualSystemIdentifier"), [**ModelCorrespondence**](/windows/desktop/WmiSdk/standard-qualifiers) ("[**CIM \_ ComputerSystem**](cim-computersystem.md).**Name**")
 </dt> </dl>
 
-Der Name des [**CIM \_ Computersystem**](/windows/desktop/CIMWin32Prov/cim-computersystem) -Objekts, zu dem diese Einstellungsdaten gehören. Diese Eigenschaft ist eine außer Kraft Setzung von [**CIM \_ virtualsystemsettingdata**](/previous-versions//cc136954(v=vs.85)).
+Der Name des [**CIM \_ ComputerSystem-Objekts,**](/windows/desktop/CIMWin32Prov/cim-computersystem) zu dem diese Einstellungsdaten gehören. Diese Eigenschaft ist eine Außerkraftsetzung von [**CIM \_ VirtualSystemSettingData**](/previous-versions//cc136954(v=vs.85)).
 
 </dd> <dt>
 
 **VirtualSystemSubType**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Gültige Werte für diese Eigenschaft sind Microsoft: Hyper-v: SubType: 1 und Microsoft: Hyper-v: SubType: 2. Eine VM der Generation 1 ist Untertyp 1. Eine VM der Generation 2 ist der Untertyp 2.
+Die gültigen Werte für diese Eigenschaft sind Microsoft:Hyper-V:SubType:1 und Microsoft:Hyper-V:SubType:2. Ein virtueller Computer der Generation 1 ist der Untertyp 1. Ein virtueller Computer der Generation 2 ist der Untertyp 2.
 
-**Windows 8.1:** Dieser Wert wird bis Windows 8.1 und Windows Server 2012 R2 nicht unterstützt.
+**Windows 8.1:** Dieser Wert wird erst Windows 8.1 und Windows Server 2012 R2 unterstützt.
 
 <dt>
 
 <span id="Microsoft_Hyper-V_SubType_1"></span><span id="microsoft_hyper-v_subtype_1"></span><span id="MICROSOFT_HYPER-V_SUBTYPE_1"></span>
 
-**Microsoft: Hyper-v: Untertyp: 1** ("Microsoft: Hyper-v: SubType: 1")
+**Microsoft:Hyper-V:SubType:1** ("Microsoft:Hyper-V:SubType:1")
 
 
 </dt> <dd></dd> <dt>
 
 <span id="Microsoft_Hyper-V_SubType_2"></span><span id="microsoft_hyper-v_subtype_2"></span><span id="MICROSOFT_HYPER-V_SUBTYPE_2"></span>
 
-**Microsoft: Hyper-v: SubType: 2** ("Microsoft: Hyper-v: SubType: 2")
+**Microsoft:Hyper-V:SubType:2** ("Microsoft:Hyper-V:SubType:2")
 
 
 </dt> <dd></dd> </dl>
 
 </dd> <dt>
 
-**Virtualsystemtype**
+**VirtualSystemType**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Gibt den Typ der virtuellen Maschine an, die die Einstellungsdaten darstellen. Diese Eigenschaft wird von der [**CIM \_ virtualsystemsettingdata**](/previous-versions//cc136954(v=vs.85)) -Klasse geerbt. Dabei handelt es sich um einen der folgenden Werte.
+Gibt den Typ des virtuellen Computers an, den die Einstellungsdaten darstellen. Diese Eigenschaft wird von der [**CIM \_ VirtualSystemSettingData-Klasse**](/previous-versions//cc136954(v=vs.85)) geerbt. Dies ist einer der folgenden Werte.
 
 
 
 | Wert                                                                                                                                 | Bedeutung                                              |
 |---------------------------------------------------------------------------------------------------------------------------------------|------------------------------------------------------|
-| <dl> <dt>"Microsoft: Hyper-V: System: realisiert"</dt> </dl>                        | Ein realisierter virtueller Computer.<br/>               |
-| <dl> <dt>"Microsoft: Hyper-V: System: geplant"</dt> </dl>                         | Eine geplante virtuelle Maschine.<br/>                |
-| <dl> <dt>"Microsoft: Hyper-V: Snapshot: realisiert"</dt> </dl>                      | Eine Momentaufnahme eines erkannten virtuellen Computers.<br/> |
-| <dl> <dt>"Microsoft: Hyper-V: Snapshot: Recovery"</dt> </dl>                      | Eine Momentaufnahme eines virtuellen Wiederherstellungs Computers.<br/> |
-| <dl> <dt>"Microsoft: Hyper-V: Snapshot: geplant"</dt> </dl>                       | Eine Momentaufnahme eines geplanten virtuellen Computers.<br/>  |
-| <dl> <dt>"Microsoft: Hyper-V: Snapshot: Missing"</dt> </dl>                       | Eine fehlende Momentaufnahme.<br/>                       |
-| <dl> <dt>"Microsoft: Hyper-V: Snapshot: Replica: Standard"</dt> </dl>              | Eine zeitbasierte Replikations Punkt Momentaufnahme.<br/>  |
-| <dl> <dt>"Microsoft: Hyper-V: Snapshot: Replica: applicationkonsistentes"</dt> </dl> | Eine VSS-Replikations Punkt Momentaufnahme.<br/>         |
-| <dl> <dt>"Microsoft: Hyper-V: Snapshot: Replica: plannedfailover"</dt> </dl>       | Eine geplante Replikations Momentaufnahme.<br/>           |
+| <dl> <dt>"Microsoft:Hyper-V:System:Realized"</dt> </dl>                        | Ein realisierter virtueller Computer.<br/>               |
+| <dl> <dt>"Microsoft:Hyper-V:System:Planned"</dt> </dl>                         | Ein geplanter virtueller Computer.<br/>                |
+| <dl> <dt>"Microsoft:Hyper-V:Snapshot:Realized"</dt> </dl>                      | Eine Momentaufnahme eines realisierten virtuellen Computers.<br/> |
+| <dl> <dt>"Microsoft:Hyper-V:Snapshot:Recovery"</dt> </dl>                      | Eine Momentaufnahme eines virtuellen Wiederherstellungscomputers.<br/> |
+| <dl> <dt>"Microsoft:Hyper-V:Snapshot:Planned"</dt> </dl>                       | Eine Momentaufnahme eines geplanten virtuellen Computers.<br/>  |
+| <dl> <dt>"Microsoft:Hyper-V:Snapshot:Missing"</dt> </dl>                       | Eine fehlende Momentaufnahme.<br/>                       |
+| <dl> <dt>"Microsoft:Hyper-V:Snapshot:Replica:Standard"</dt> </dl>              | Eine zeitbasierte Replikationspunktmomentaufnahme.<br/>  |
+| <dl> <dt>"Microsoft:Hyper-V:Snapshot:Replica:ApplicationConsistent"</dt> </dl> | Eine Momentaufnahme des VSS-Replikationspunkts.<br/>         |
+| <dl> <dt>"Microsoft:Hyper-V:Snapshot:Replica:PlannedFailover"</dt> </dl>       | Eine geplante Replikationsmomentaufnahme.<br/>           |
 
 
 
@@ -1394,9 +1394,9 @@ Gibt den Typ der virtuellen Maschine an, die die Einstellungsdaten darstellen. D
 
 </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Der Zugriff auf die **MSVM \_ virtualsystemsettingdata** -Klasse kann durch die UAC-Filterung eingeschränkt werden. Weitere Informationen finden Sie unter [Benutzerkontensteuerung und WMI](/windows/desktop/WmiSdk/user-account-control-and-wmi).
+Der Zugriff auf die **Msvm \_ VirtualSystemSettingData-Klasse** kann durch die UAC-Filterung eingeschränkt werden. Weitere Informationen finden Sie unter [Benutzerkontensteuerung und WMI.](/windows/desktop/WmiSdk/user-account-control-and-wmi)
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -1404,25 +1404,25 @@ Der Zugriff auf die **MSVM \_ virtualsystemsettingdata** -Klasse kann durch die 
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows 8 \[ -Desktop-Apps\]<br/>                                                              |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2012 \[ -Desktop-Apps\]<br/>                                                    |
-| Namespace<br/>                | \\Stammvirtualisierung \\ v2<br/>                                                                     |
-| MOF<br/>                      | <dl> <dt>Windowsvirtualization. v2. MOF</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | \[Windows 8 Nur Desktop-Apps\]<br/>                                                              |
+| Unterstützte Mindestversion (Server)<br/> | \[Windows Server 2012 Nur Desktop-Apps\]<br/>                                                    |
+| Namespace<br/>                | Root \\ Virtualization \\ V2<br/>                                                                     |
+| MOF<br/>                      | <dl> <dt>WindowsVirtualization.V2.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Vmms.exe</dt> </dl>                     |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**CIM \_ virtualsystemsettingdata**](cim-virtualsystemsettingdata.md)
+[**CIM \_ VirtualSystemSettingData**](cim-virtualsystemsettingdata.md)
 </dt> <dt>
 
-[**CIM \_ virtualsystemsettingdata**](/previous-versions//cc136954(v=vs.85))
+[**CIM \_ VirtualSystemSettingData**](/previous-versions//cc136954(v=vs.85))
 </dt> <dt>
 
-[Klassen des virtuellen Systems](virtual-system-classes.md)
+[Virtuelle Systemklassen](virtual-system-classes.md)
 </dt> </dl>
 
  

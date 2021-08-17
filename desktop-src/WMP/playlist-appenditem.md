@@ -3,9 +3,9 @@ title: Playlist.appendItem-Methode
 description: Die appendItem-Methode fügt am Ende der Wiedergabeliste ein Medienelement hinzu.
 ms.assetid: cc956491-7936-49e7-90ca-1f71e03448cd
 keywords:
-- appendItem-Methode Windows Media Player
+- appendItem-Windows Media Player
 - appendItem-Methode Windows Media Player , Playlist-Klasse
-- Wiedergabelistenklasse Windows Media Player , appendItem-Methode
+- Playlist-Klasse Windows Media Player , appendItem-Methode
 topic_type:
 - apiref
 api_name:
@@ -42,7 +42,7 @@ Playlist.appendItem(
 
 <dl> <dt>
 
-*Element* \[ In\]
+*item* \[ In\]
 </dt> <dd>
 
 **Medienobjekt,** das hinzugefügt werden soll.
@@ -55,11 +55,11 @@ Diese Methode gibt keinen Wert zurück.
 
 ## <a name="remarks"></a>Hinweise
 
-Um diese Methode verwenden zu können, ist vollzugriff auf die Bibliothek erforderlich. Weitere Informationen finden Sie unter [Bibliothekszugriff.](library-access.md)
+Um diese Methode verwenden zu können, ist Vollzugriff auf die Bibliothek erforderlich. Weitere Informationen finden Sie unter [Bibliothekszugriff.](library-access.md)
 
 ## <a name="examples"></a>Beispiele
 
-Im folgenden JScript Beispiel wird *Playlist* verwendet. **appendItem** zum Hinzufügen des aktuellen Medienelements zur Wiedergabeliste mit dem Namen "ThreeList". Das **Player-Objekt** wurde mit ID="Player" erstellt.
+Im folgenden beispiel JScript Wiedergabeliste *verwendet.* **appendItem zum** Hinzufügen des aktuellen Medienelements zur Wiedergabeliste mit dem Namen "ThreeList". Das **Player-Objekt** wurde mit ID="Player" erstellt.
 
 
 ```JScript

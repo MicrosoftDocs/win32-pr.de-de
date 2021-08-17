@@ -1,12 +1,12 @@
 ---
-title: IMsRdpClientNonScriptable5 disableconnectionbar (Eigenschaft)
-description: Gibt an, ob das Remotedesktop ActiveX-Steuerelement die Verbindungs Leiste deaktivieren soll.
+title: IMsRdpClientNonScriptable5 DisableConnectionBar-Eigenschaft
+description: Gibt an, ob das Remotedesktop ActiveX-Steuerelement die Verbindungsleiste deaktivieren soll.
 ms.assetid: 82c57b93-f976-43e6-97f9-3602bf97e466
 ms.tgt_platform: multiple
 keywords:
-- Disableconnectionbar-Eigenschaft Remotedesktopdienste
-- Disableconnectionbar-Eigenschaft Remotedesktopdienste, IMsRdpClientNonScriptable5-Schnittstelle
-- IMsRdpClientNonScriptable5 Interface Remotedesktopdienste, disableconnectionbar (Eigenschaft)
+- DisableConnectionBar-Eigenschaft Remotedesktopdienste
+- DisableConnectionBar-Eigenschaft Remotedesktopdienste , IMsRdpClientNonScriptable5-Schnittstelle
+- IMsRdpClientNonScriptable5-Schnittstelle Remotedesktopdienste , DisableConnectionBar-Eigenschaft
 topic_type:
 - apiref
 api_name:
@@ -18,16 +18,16 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: a129d4781db69a564eecbca3a715c3c5ccf1a9cc
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 4f74fce650eb82514538eed7066b937c29f8618aba1eab7531f3bdb7e1127da5
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104519236"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119138743"
 ---
-# <a name="imsrdpclientnonscriptable5disableconnectionbar-property"></a>IMsRdpClientNonScriptable5::D isableconnectionbar-Eigenschaft
+# <a name="imsrdpclientnonscriptable5disableconnectionbar-property"></a>IMsRdpClientNonScriptable5::D isableConnectionBar-Eigenschaft
 
-Gibt an, ob das Remotedesktop ActiveX-Steuerelement die Verbindungs Leiste deaktivieren soll. Wenn diese Eigenschaft **Variant \_ true** enthält, sollte die Verbindungs Leiste deaktiviert werden. Wenn diese Eigenschaft **Variant \_ false** enthält, muss die Verbindungs Leiste aktiviert werden.
+Gibt an, ob das Remotedesktop ActiveX-Steuerelement die Verbindungsleiste deaktivieren soll. Wenn diese Eigenschaft **VARIANT \_ TRUE** enthält, sollte die Verbindungsleiste deaktiviert werden. Wenn diese Eigenschaft **VARIANT \_ FALSE** enthält, sollte die Verbindungsleiste aktiviert werden.
 
 Diese Eigenschaft ist lesegeschützt.
 
@@ -44,7 +44,7 @@ HRESULT put_DisableConnectionBar(
 
 ## <a name="property-value"></a>Eigenschaftswert
 
-Gibt den neuen Eigenschafts Wert an.
+Gibt den neuen Eigenschaftswert an.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -56,11 +56,11 @@ Gibt den neuen Eigenschafts Wert an.
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2008 R2<br/>                                                             |
 | Typbibliothek<br/>             | <dl> <dt>MsTscAx.dll</dt> </dl>        |
 | DLL<br/>                      | <dl> <dt>MsTscAx.dll</dt> </dl>        |
-| IID<br/>                      | IID \_ IMsRdpClientNonScriptable5 ist als 4f 6996d5-d7b1-412c-b0ff-063718566907 definiert.<br/> |
+| IID<br/>                      | \_IID-IMsRdpClientNonScriptable5 ist als 4f6996d5-d7b1-412c-b0ff-063718566907 definiert.<br/> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 

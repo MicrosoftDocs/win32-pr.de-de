@@ -1,41 +1,41 @@
 ---
-description: Veranschaulicht die Verwendung der Funktionen cryptmsgopentoencode, cryptmsgopentodecode und cryptmsgupdate mit der CMSG-Daten \_ Strom \_ Informationsstruktur zum Codieren und Decodieren einer Nachricht mithilfe der Streamingfunktionen dieser Funktionen.
+description: Veranschaulicht die Verwendung der Funktionen CryptMsgOpenToEncode, CryptMsgOpenToDecode und CryptMsgUpdate mit der CMSG STREAM INFO-Struktur zum Codieren und Decodieren einer Nachricht mithilfe der Streamingfunktionen dieser \_ \_ Funktionen.
 ms.assetid: 6c9c0509-1ad9-42cd-9589-e77752df6739
-title: 'Beispiel-C-Programm: Codieren und Decodieren einer Nachricht mithilfe eines Streams'
+title: 'C-Beispielprogramm: Codieren und Decodieren einer Nachricht mithilfe eines Streams'
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 962420bfba05caabb272419e305ee01f76d39c63
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: eef428d7c6c0b175623bfa4811c4043bcd7bdaef3e05afea24a288f6629b8e0c
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "103754177"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117765652"
 ---
-# <a name="example-c-program-encoding-and-decoding-a-message-using-a-stream"></a>Beispiel-C-Programm: Codieren und Decodieren einer Nachricht mithilfe eines Streams
+# <a name="example-c-program-encoding-and-decoding-a-message-using-a-stream"></a>C-Beispielprogramm: Codieren und Decodieren einer Nachricht mithilfe eines Streams
 
-Im folgenden Beispiel wird veranschaulicht, wie die Funktionen [**cryptmsgopentoencode**](/windows/desktop/api/Wincrypt/nf-wincrypt-cryptmsgopentoencode), [**cryptmsgopentodecode**](/windows/desktop/api/Wincrypt/nf-wincrypt-cryptmsgopentodecode)und [**cryptmsgupdate**](/windows/desktop/api/Wincrypt/nf-wincrypt-cryptmsgupdate) mit der [**CMSG-Daten \_ Strom \_ Informations**](/windows/desktop/api/Wincrypt/ns-wincrypt-cmsg_stream_info) Struktur zum Codieren und Decodieren einer Nachricht mithilfe der Streamingfunktionen dieser Funktionen verwendet werden.
+Im folgenden Beispiel wird veranschaulicht, wie die [**Funktionen CryptMsgOpenToEncode,**](/windows/desktop/api/Wincrypt/nf-wincrypt-cryptmsgopentoencode) [**CryptMsgOpenToDecode**](/windows/desktop/api/Wincrypt/nf-wincrypt-cryptmsgopentodecode)und [**CryptMsgUpdate**](/windows/desktop/api/Wincrypt/nf-wincrypt-cryptmsgupdate) mit der [**CMSG \_ STREAM \_ INFO-Struktur**](/windows/desktop/api/Wincrypt/ns-wincrypt-cmsg_stream_info) verwendet werden, um eine Nachricht mithilfe der Streamingfunktionen dieser Funktionen zu codieren und zu decodieren.
 
-Das Signieren und Codieren einer Nachricht gewährleistet nicht den Datenschutz für diese Nachricht. Stattdessen wird die Authentizität der Nachricht sichergestellt. Da die Nachricht mit dem privaten Schlüssel des Absenders signiert ist und der Empfänger der Nachricht die Signatur mit dem [*öffentlichen Schlüssel*](../secgloss/p-gly.md) des Absenders entschlüsselt (verfügbar über das Zertifikat, das zusammen mit der Nachricht gesendet wird), kann der Empfänger sicher sein, dass die Nachricht von der Person oder Entität gesendet wurde, die dem Zertifikat zugeordnet ist, und dass die Nachricht nach der Signierung nicht geändert wurde.
+Das Signieren und Codieren einer Nachricht gewährleistet nicht den Datenschutz für diese Nachricht. Stattdessen wird die Authentizität der Nachricht sichergestellt. Da die Nachricht mit dem privaten Schlüssel des Absenders signiert ist, kann der [](../secgloss/p-gly.md) Empfänger sicherstellen, dass die Nachricht von der Person oder Entität gesendet wurde, die dem Zertifikat zugeordnet ist, und dass die Nachricht nach der Signatur nicht geändert wurde, wenn der Empfänger die Signatur mit dem öffentlichen Schlüssel des Absenders entschlüsselt (verfügbar über das Zertifikat, das zusammen mit der Nachricht gesendet wird).
 
-Dieser Teil der Codierungs Signierung dieses Beispiels veranschaulicht die folgenden Aufgaben und kryptoapi-Funktionen:
+Dieser Codierungssignaturteil dieses Beispiels veranschaulicht die folgenden Aufgaben und CryptoAPI-Funktionen:
 
--   Öffnen eines Zertifikat Speicher mithilfe von " [**certopendstore**](/windows/desktop/api/Wincrypt/nf-wincrypt-certopenstore)".
--   Abrufen eines Zertifikats mit einem bestimmten Antragsteller Namen mithilfe von " [**certfindcertifikateinstore**](/windows/desktop/api/Wincrypt/nf-wincrypt-certfindcertificateinstore)".
--   Der Antragsteller Name eines Zertifikats wird mithilfe von [**certgetnamestring**](/windows/desktop/api/Wincrypt/nf-wincrypt-certgetnamestringa)abgerufen und gedruckt.
--   Das Handle für einen Kryptografieanbieter, der einen privaten Schlüssel mit der [**CryptAcquireCertificatePrivateKey**](/windows/desktop/api/Wincrypt/nf-wincrypt-cryptacquirecertificateprivatekey) -Funktion bereitstellen kann.
--   Initialisieren der [**CMSG- \_ signierten \_ \_**](/windows/desktop/api/Wincrypt/ns-wincrypt-cmsg_signed_encode_info) Informationen und der [**CMSG-Daten \_ Strom \_ Info**](/windows/desktop/api/Wincrypt/ns-wincrypt-cmsg_stream_info) -Strukturen, die in einem Rückruf von [**cryptmsgopentoencode**](/windows/desktop/api/Wincrypt/nf-wincrypt-cryptmsgopentoencode)verwendet werden sollen.
--   Signieren und Codieren einer Nachricht mithilfe von [**cryptmsgopentoencode**](/windows/desktop/api/Wincrypt/nf-wincrypt-cryptmsgopentoencode) und [**cryptmsgupdate**](/windows/desktop/api/Wincrypt/nf-wincrypt-cryptmsgupdate).
--   Implementieren einer streamcallback-Funktion, die eine codierte und signierte Nachricht in einem beliebigen permanenten Format speichern kann, z. b. beim Schreiben in eine Datei.
+-   Öffnen eines Zertifikatspeichers [**mithilfe von CertOpenStore.**](/windows/desktop/api/Wincrypt/nf-wincrypt-certopenstore)
+-   Abrufen eines Zertifikats mit einem bestimmten Betreffnamen mithilfe von [**CertFindCertificateInStore**](/windows/desktop/api/Wincrypt/nf-wincrypt-certfindcertificateinstore).
+-   Abrufen und Drucken des Zertifikatsnamens [**mithilfe von CertGetNameString**](/windows/desktop/api/Wincrypt/nf-wincrypt-certgetnamestringa).
+-   Abrufen des Handle an einen Kryptografieanbieter, der einen privaten Schlüssel mit der [**CryptAcquireCertificatePrivateKey-Funktion bereitstellen**](/windows/desktop/api/Wincrypt/nf-wincrypt-cryptacquirecertificateprivatekey) kann.
+-   Initialisieren der [**CMSG \_ SIGNED \_ ENCODE \_ INFO-**](/windows/desktop/api/Wincrypt/ns-wincrypt-cmsg_signed_encode_info) und [**CMSG \_ STREAM \_ INFO-Strukturen,**](/windows/desktop/api/Wincrypt/ns-wincrypt-cmsg_stream_info) die in einem Aufruf von [**CryptMsgOpenToEncode verwendet werden sollen.**](/windows/desktop/api/Wincrypt/nf-wincrypt-cryptmsgopentoencode)
+-   Signieren und Codieren einer Nachricht mit [**CryptMsgOpenToEncode**](/windows/desktop/api/Wincrypt/nf-wincrypt-cryptmsgopentoencode) und [**CryptMsgUpdate**](/windows/desktop/api/Wincrypt/nf-wincrypt-cryptmsgupdate).
+-   Implementieren einer Streamrückruffunktion, die eine codierte und signierte Nachricht in einem beliebigen persistenten Format speichern kann, z. B. schreiben sie in eine Datei.
 
-Der Decodierungs Teil dieses Beispiels veranschaulicht die folgenden Aufgaben und kryptoapi-Funktionen:
+Der Decodierungsteil dieses Beispiels veranschaulicht die folgenden Aufgaben und CryptoAPI-Funktionen:
 
--   Initialisieren einer [**CMSG-Daten \_ Strom- \_ Informations**](/windows/desktop/api/Wincrypt/ns-wincrypt-cmsg_stream_info) Struktur, die in einem Rückruf von [**cryptmsgopentodecode**](/windows/desktop/api/Wincrypt/nf-wincrypt-cryptmsgopentodecode)verwendet werden soll.
--   Implementieren einer streamcallback-Funktion, die eine decodierte Nachricht in einem beliebigen permanenten Format speichern kann, z. b. beim Drucken auf dem Bildschirm.
--   Lesen einer codierten Nachricht aus einer Datei und Decodieren der Nachricht mithilfe von [**cryptmsgupdate**](/windows/desktop/api/Wincrypt/nf-wincrypt-cryptmsgupdate).
+-   Initialisieren einer [**CMSG \_ STREAM \_ INFO-Struktur,**](/windows/desktop/api/Wincrypt/ns-wincrypt-cmsg_stream_info) die in einem Aufruf von [**CryptMsgOpenToDecode verwendet werden soll.**](/windows/desktop/api/Wincrypt/nf-wincrypt-cryptmsgopentodecode)
+-   Implementieren einer Streamrückruffunktion, die eine decodierte Nachricht in einem beliebigen persistenten Format speichern kann, z. B. zum Drucken auf dem Bildschirm.
+-   Lesen einer codierten Nachricht aus einer Datei und Decodieren der Nachricht mithilfe von [**CryptMsgUpdate**](/windows/desktop/api/Wincrypt/nf-wincrypt-cryptmsgupdate).
 
-Ein Beispiel für die Ausführung dieser Vorgänge ohne Verwendung eines streamrückrufs finden Sie [unter Beispiel C-Programm: Signieren, codieren, decodieren und Überprüfen einer Nachricht](example-c-program-signing-encoding-decoding-and-verifying-a-message.md).
+Ein Beispiel zum Ausführen dieser Vorgänge ohne Streamrückruf finden Sie unter [Beispiel C-Programm: Signieren, Codieren, Decodieren](example-c-program-signing-encoding-decoding-and-verifying-a-message.md)und Überprüfen einer Nachricht.
 
-In diesem Beispiel wird die Funktion " [**myhanderror**](myhandleerror.md)" verwendet. Der Code für diese Funktion ist im Beispiel enthalten. Der Code für diese und andere Hilfsfunktionen wird auch unter [allgemeine \_ \_ Funktionen](general-purpose-functions.md)aufgeführt.
+In diesem Beispiel wird die [**MyHandleError-Funktion verwendet.**](myhandleerror.md) Code für diese Funktion ist im Beispiel enthalten. Der Code für diese und andere Hilfsfunktionen ist auch unter [Allgemeine \_ Funktionen \_ aufgeführt.](general-purpose-functions.md)
 
 
 ```C++

@@ -33,7 +33,7 @@ Das **TextureCubeArray-Objekt** verfügt über diese Methoden.
 
 
 
-| Methode                                                           | Beschreibung                                                                                                                                              |
+| Methode                                                           | BESCHREIBUNG                                                                                                                                              |
 |:-----------------------------------------------------------------|:---------------------------------------------------------------------------------------------------------------------------------------------------------|
 | [**versammeln**](texturecubearray-gather.md)                         | Gibt die vier Texelwerte zurück, die in einem bilinealen Filtervorgang verwendet werden.<br/>                                                                |
 | [**GatherAlpha**](texturecubearray-gatheralpha.md)               | Gibt die Alphakomponenten der vier Texelwerte zurück, die in einem bilinealen Filtervorgang verwendet werden.<br/>                                        |
@@ -66,7 +66,7 @@ Dieses Objekt wird in den folgenden Shadermodellen unterstützt.
 
 | Shadermodell                                                                | Unterstützt |
 |-----------------------------------------------------------------------------|-----------|
-| [Shadermodell 5](d3d11-graphics-reference-sm5.md) und höher– Shadermodelle | ja       |
+| [Shadermodell 5](d3d11-graphics-reference-sm5.md) und höher– Shadermodelle | Ja       |
 
 
 

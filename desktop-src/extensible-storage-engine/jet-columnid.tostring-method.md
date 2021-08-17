@@ -1,6 +1,6 @@
 ---
-description: 'Weitere Informationen finden Sie hier: JET_COLUMNID. Methode "destring"'
-title: JET_COLUMNID. Methode "destring"
+description: 'Weitere Informationen finden Sie unter: JET_COLUMNID. ToString-Methode'
+title: JET_COLUMNID. ToString-Methode
 TOCTitle: 'ToString method '
 ms:assetid: M:Microsoft.Isam.Esent.Interop.JET_COLUMNID.ToString
 ms:mtpsurl: https://msdn.microsoft.com/library/microsoft.isam.esent.interop.jet_columnid.tostring(v=EXCHG.10)
@@ -20,19 +20,19 @@ api_type:
 api_location:
 - Microsoft.Isam.Esent.Interop.dll
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: b0136ef3f38111b3c42f996c7fce368bd204ba69
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 093cc7fd4a85d2715e47e21a116f3f8451ce59918577fe6ca8d9604d4f571bb6
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106368797"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119968425"
 ---
-# <a name="jet_columnidtostring-method"></a>JET_COLUMNID. Methode "destring"
+# <a name="jet_columnidtostring-method"></a>JET_COLUMNID. ToString-Methode
 
-Generiert eine Zeichen folgen Darstellung der-Struktur.
+Generiert eine Zeichenfolgendarstellung der -Struktur.
 
-**Namespace:**  [Microsoft. ISAM. ESENT. Interop](./microsoft.isam.esent.interop-namespace.md)  
-**Assembly:**  Microsoft. ISAM. ESENT. Interop (in Microsoft.Isam.Esent.Interop.dll)
+**Namespace:**  [Microsoft.Isam.Esent.Interop](./microsoft.isam.esent.interop-namespace.md)  
+**Assembly:**  Microsoft.Isam.Esent.Interop (in Microsoft.Isam.Esent.Interop.dll)
 
 ## <a name="syntax"></a>Syntax
 
@@ -52,17 +52,17 @@ public override string ToString()
 
 #### <a name="return-value"></a>Rückgabewert
 
-Typ: [System. String](/dotnet/api/system.string)  
-Die-Struktur als Zeichenfolge.  
+Typ: [System.String](/dotnet/api/system.string)  
+Die -Struktur als Zeichenfolge.  
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
-#### <a name="reference"></a>Referenz
+#### <a name="reference"></a>Verweis
 
-[JET_COLUMNID Struktur](./jet-columnid-structure.md)
+[JET_COLUMNID-Struktur](./jet-columnid-structure.md)
 
-[Mitglieder JET_COLUMNID](./jet-columnid-members.md)
+[JET_COLUMNID Mitglieder](./jet-columnid-members.md)
 
-[Überladung von ""](./jet-columnid.tostring-method2.md)
+[ToString-Überladung](./jet-columnid.tostring-method2.md)
 
-[Microsoft. ISAM. ESENT. Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)
+[Microsoft.Isam.Esent.Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)

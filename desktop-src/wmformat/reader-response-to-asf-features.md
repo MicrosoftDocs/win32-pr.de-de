@@ -1,36 +1,36 @@
 ---
-title: Reader-Antwort auf ASF-Features
-description: Reader-Antwort auf ASF-Features
+title: Leserantwort auf ASF-Features
+description: Leserantwort auf ASF-Features
 ms.assetid: 0cf800ca-63e8-47e2-a2fc-7ba6789fb4bb
 keywords:
-- Windows Media-Format-SDK, Leser Antworten auf ASF-Features
-- Advanced Systems Format (ASF), Leser Antworten auf Features
-- ASF (Advanced Systems Format), Reader-Antworten auf Features
-- Antworten von Antworten auf ASF-Features
+- Windows Medienformat-SDK, Leserantworten auf ASF-Features
+- Advanced Systems Format (ASF), Leserantworten auf Features
+- ASF (Advanced Systems Format), Leserantworten auf Features
+- Leserantworten auf ASF-Features
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 291752d2d011fbc8b0a3e5211c5d8926f94b1cbd
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: 8b8b8b64649388af6186155009f2a47b0f2b2c96cc42645e64dbb04f3054d7c3
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "106339203"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119084497"
 ---
-# <a name="reader-response-to-asf-features"></a>Reader-Antwort auf ASF-Features
+# <a name="reader-response-to-asf-features"></a>Leserantwort auf ASF-Features
 
-Die meisten der besonderen Features der ASF-Datei können in Dateien so festgelegt werden, dass Sie mit benutzerdefinierten Spielanwendungen interagieren, die für die Handhabung vorgesehen sind Einige der Features verfügen jedoch über integrierte Unterstützung im Reader-Objekt.
+Die meisten speziellen ASF-Dateifeatures können in Dateien festgelegt werden, um mit benutzerdefinierten Wiedergabeanwendungen zu interagieren, die für deren Verarbeitung entwickelt wurden. Einige der Features verfügen jedoch über integrierte Unterstützung im Readerobjekt.
 
-Das Reader-Objekt wählt automatisch Streams aus Sätzen aus, die sich durch die Bitrate gegenseitig ausschließen. Dieser Sonderfall wird als mehrfache Bitrate (Multiple Bitrate, MBR) bezeichnet. Der vom Reader auswählt Stream basiert auf der Bitrate des Streams. Die streamnummer und die Reihenfolge, in der Sie dem gegenseitigen Ausschluss Objekt hinzugefügt wurde, sind für die automatische Auswahl irrelevant. Wenn eine Datei mehr als einen Satz von Streams enthält, die sich gegenseitig von der Bitrate ausschließen, wählt der Reader Streams basierend auf der Berechnung der optimalen Nutzung der verfügbaren Bandbreite aus.
+Das Readerobjekt wählt automatisch Streams aus Sätzen aus, die sich durch die Bitrate gegenseitig ausschließen. Dieser Sonderfall wird als Multiple Bit Rate (MBR) bezeichnet. Der vom Reader ausgewählte Stream basiert auf der Bitrate des Streams. Die Streamnummer und die Reihenfolge, in der sie dem gegenseitigen Ausschlussobjekt hinzugefügt wurde, sind für die automatische Auswahl irrelevant. Wenn eine Datei mehrere Streams enthält, die sich durch die Bitrate gegenseitig ausschließen, wählt der Reader Streams basierend auf der Berechnung der besten Nutzung der verfügbaren Bandbreite aus.
 
-Der sprachbasierte gegenseitige Ausschluss wird vor der Wiedergabe mithilfe einer Ausgabe Einstellung festgelegt. Wenn Sie sowohl den sprach-als auch den Bitrate-basierten gegenseitigen Ausschluss kombinieren, sollten Sie die Bitrate-basierten, sich gegenseitig exklusiven Datenströme nach Sprache gruppieren und dann die Gruppen nach Sprache ausschließen. Der Reader prüft zuerst die Sprache und bestimmt dann, welche Bitrate verwendet werden soll.
+Der sprachbasierte gegenseitige Ausschluss wird vor der Wiedergabe mithilfe einer Ausgabeeinstellung festgelegt. Wenn Sie sowohl sprachbasierte als auch bitratenbasierten gegenseitigen Ausschluss kombinieren, sollten Sie die bitratenbasierten, sich gegenseitig ausschließenden Datenströme nach Sprache gruppieren und die Gruppen dann nach Sprache ausschließen. Der Reader überprüft zuerst die Sprache und bestimmt dann, welche Bitrate verwendet werden soll.
 
-Die streampriorisierung wird mithilfe eines Arrays von Datensätzen festgelegt. Die Datensätze im Array sind in absteigender Reihenfolge der Priorität. Der letzte Datenstrom im Array ist der erste, der vom Reader gelöscht wird.
+Die Streampriorisierung wird mithilfe eines Arrays von Datensätzen festgelegt. Die Datensätze im Array befinden sich in absteigender Reihenfolge der Priorität. Der letzte Stream im Array ist der erste, der vom Reader gelöscht wird.
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[**Funktionen der ASF-Datei**](asf-file-features.md)
+[**ASF-Dateifeatures**](asf-file-features.md)
 </dt> <dt>
 
 [**Gegenseitiger Ausschluss**](mutual-exclusion.md)
@@ -39,9 +39,9 @@ Die streampriorisierung wird mithilfe eines Arrays von Datensätzen festgelegt. 
 [**Streampriorisierung**](stream-prioritization.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

@@ -1,34 +1,34 @@
 ---
-title: Vorgehensweise beim Abschneiden mit einem Rechteck Clip-Objekt
-description: In diesem Thema wird veranschaulicht, wie ein Rechteck Clip-Objekt verwendet wird, um eine visuelle Struktur oder eine visuelle Struktur zu schneiden
+title: Beschneiden mit einem Rechteck-Clipobjekt
+description: In diesem Thema wird veranschaulicht, wie sie ein Rechteck-Clip-Objekt verwenden, um eine visuelle oder visuelle Struktur zu beschneiden.
 ms.assetid: 377EF49A-F9F2-4A72-9D22-DEC33803AD0D
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 0d26019f37949b0111ee9b5958fa3fba2c9507cb
-ms.sourcegitcommit: 73417d55867c804274a55abe5ca71bcba7006119
+ms.openlocfilehash: 10386f3e99dead7fff04a57463c2ee753bd1d712e9a59e6b928136c32f25ae75
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/20/2020
-ms.locfileid: "104039820"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119119098"
 ---
-# <a name="how-to-clip-with-a-rectangle-clip-object"></a>Vorgehensweise beim Abschneiden mit einem Rechteck Clip-Objekt
+# <a name="how-to-clip-with-a-rectangle-clip-object"></a>Beschneiden mit einem Rechteck-Clipobjekt
 
 > [!NOTE]
-> Für apps unter Windows 10 wird die Verwendung von Windows. UI. Composition-APIs anstelle von directcomposition empfohlen. Weitere Informationen finden Sie unter [modernisieren ihrer Desktop-App mithilfe der visuellen Ebene](/windows/uwp/composition/visual-layer-in-desktop-apps).
+> Für Apps auf Windows 10 empfehlen wir die Verwendung von Windows.UI.Composition-APIs anstelle von DirectComposition. Weitere Informationen finden Sie unter [Modernisieren Ihrer Desktop-App mithilfe der visuellen Ebene.](/windows/uwp/composition/visual-layer-in-desktop-apps)
 
-In diesem Thema wird veranschaulicht, wie ein Rechteck Clip-Objekt verwendet wird, um eine visuelle Struktur oder eine visuelle Struktur zu schneiden
+In diesem Thema wird veranschaulicht, wie sie ein Rechteck-Clip-Objekt verwenden, um eine visuelle oder visuelle Struktur zu beschneiden.
 
-Im Beispiel in diesem Thema wird ein rechteckiger Clip definiert, der an der Mausposition zentriert ist, und der Clip wird auf ein visuelles Element angewendet, das im Client Bereich des Kompositions Zielfensters zentriert ist. Dieser Screenshot zeigt das Ergebnis der Anwendung des Rechteck Clip Objekts auf das visuelle Element.
+Das Beispiel in diesem Thema definiert einen rechteckigen Clip, der an der Mausposition zentriert ist, und wendet den Clip auf ein Visual an, das im Clientbereich des Kompositionszielfensters zentriert ist. Dieser Screenshot zeigt das Ergebnis der Anwendung des Rechteck-Clipobjekts auf das Visual.
 
-![Ergebnis der Anwendung eines Rechteck Clip Objekts auf ein visuelles Element](images/clipwithrectangleclipobject.png)
+![Ergebnis der Anwendung eines Rechteck-Clipobjekts auf ein Visual](images/clipwithrectangleclipobject.png)
 
-## <a name="what-you-need-to-know"></a>Was Sie wissen müssen
+## <a name="what-you-need-to-know"></a>Wichtige Informationen
 
 ### <a name="technologies"></a>Technologien
 
 -   [DirectComposition](directcomposition-portal.md)
 -   [Direct3D 11-Grafik](/windows/desktop/direct3d11/atoc-dx-graphics-direct3d-11)
--   [DirectX-Grafik Infrastruktur (DXGI)](/windows/desktop/direct3ddxgi/dx-graphics-dxgi)
+-   [DirectX Graphic Infrastructure (DXGI)](/windows/desktop/direct3ddxgi/dx-graphics-dxgi)
 
 ### <a name="prerequisites"></a>Voraussetzungen
 
@@ -38,16 +38,16 @@ Im Beispiel in diesem Thema wird ein rechteckiger Clip definiert, der an der Mau
 
 ## <a name="instructions"></a>Anweisungen
 
-### <a name="step-1-initialize-directcomposition-objects"></a>Schritt 1: Initialisieren von directcomposition-Objekten
+### <a name="step-1-initialize-directcomposition-objects"></a>Schritt 1: Initialisieren von DirectComposition-Objekten
 
-1.  Erstellen Sie das Geräte Objekt und das Kompositions Zielobjekt.
-2.  Erstellen Sie ein visuelles Element, legen Sie seinen Inhalt fest, und fügen Sie es der visuellen Struktur hinzu.
+1.  Erstellen Sie das Geräteobjekt und das Kompositionszielobjekt.
+2.  Erstellen Sie ein Visual, legen Sie dessen Inhalt fest, und fügen Sie es der visuellen Struktur hinzu.
 
-Weitere Informationen finden Sie unter [Initialisieren von directcomposition](initialize-directcomposition.md).
+Weitere Informationen finden Sie unter [Initialisieren von DirectComposition.](initialize-directcomposition.md)
 
-### <a name="step-2-create-the-rectangle-clip-object"></a>Schritt 2: Erstellen des Rechteck Clip-Objekts
+### <a name="step-2-create-the-rectangle-clip-object"></a>Schritt 2: Erstellen des Rechteck-Clipobjekts
 
-Verwenden Sie die [**idcompositiondevice::**](/windows/win32/api/dcomp/nf-dcomp-idcompositiondevice-createrectangleclip) up-Methode, um eine Instanz des Rechteck Clip Objekts zu erstellen.
+Verwenden Sie [**die IDCompositionDevice::CreateRectangleClip-Methode,**](/windows/win32/api/dcomp/nf-dcomp-idcompositiondevice-createrectangleclip) um eine Instanz des Rechteck-Clipobjekts zu erstellen.
 
 
 ```C++
@@ -62,11 +62,11 @@ Verwenden Sie die [**idcompositiondevice::**](/windows/win32/api/dcomp/nf-dcomp-
 
 
 
-### <a name="step-3-set-the-properties-of-the-rectangle-clip-object"></a>Schritt 3: Festlegen der Eigenschaften des Rechteck Clip Objekts
+### <a name="step-3-set-the-properties-of-the-rectangle-clip-object"></a>Schritt 3: Festlegen der Eigenschaften des Rechteck-Clipobjekts
 
-Rufen Sie die Methoden der [**idcompositionrechgleclip**](/windows/win32/api/dcomp/nn-dcomp-idcompositionrectangleclip) -Schnittstelle des Rechteck Clip Objekts auf, um die Eigenschaften des Clip Rechtecks festzulegen.
+Rufen Sie die Methoden der [**IDCompositionRectangleClip-Schnittstelle**](/windows/win32/api/dcomp/nn-dcomp-idcompositionrectangleclip) des Rechteckclipobjekts auf, um die Eigenschaften des Cliprechtecks zu festlegen.
 
-Im folgenden Beispiel wird ein Clip Rechteck definiert, das um die aktuelle Mausposition zentriert ist. Die `m_offsetX` -und-Element `m_offsetY` Variablen enthalten die Werte der OffsetX-Eigenschaft und der OffsetY-Eigenschaft des visuellen Elements.
+Im folgenden Beispiel wird ein Cliprechteck definiert, das um die aktuelle Mausposition zentriert ist. Die `m_offsetX` `m_offsetY` Membervariablen und enthalten die Werte der OffsetX- und OffsetY-Eigenschaften des Visuals.
 
 
 ```C++
@@ -89,16 +89,16 @@ Im folgenden Beispiel wird ein Clip Rechteck definiert, das um die aktuelle Maus
 
 
 
-Beachten Sie, dass die [**idcompositionrechgleclip**](/windows/win32/api/dcomp/nn-dcomp-idcompositionrectangleclip) -Schnittstelle die folgenden Methoden zum Definieren eines Clip Rechtecks mit abgerundeten Ecken umfasst:
+Beachten Sie, dass die [**IDCompositionRectangleClip-Schnittstelle**](/windows/win32/api/dcomp/nn-dcomp-idcompositionrectangleclip) die folgenden Methoden zum Definieren eines Cliprechtecks mit abgerundeten Ecken enthält:
 
--   [**Settopleftradius x**](/windows/win32/api/dcomp/nf-dcomp-idcompositionrectangleclip-settopleftradiusx(float))
--   [**Settopleftradius y**](/windows/win32/api/dcomp/nf-dcomp-idcompositionrectangleclip-settopleftradiusy(float))
--   [**Settoprightradius x**](/windows/win32/api/dcomp/nf-dcomp-idcompositionrectangleclip-settoprightradiusx(float))
--   [**Settoprightradius y**](/windows/win32/api/dcomp/nf-dcomp-idcompositionrectangleclip-settoprightradiusy(float))
+-   [**SetTopLeftRadiusX**](/windows/win32/api/dcomp/nf-dcomp-idcompositionrectangleclip-settopleftradiusx(float))
+-   [**SetTopLeftRadiusY**](/windows/win32/api/dcomp/nf-dcomp-idcompositionrectangleclip-settopleftradiusy(float))
+-   [**SetTopRightRadiusX**](/windows/win32/api/dcomp/nf-dcomp-idcompositionrectangleclip-settoprightradiusx(float))
+-   [**SetTopRightRadiusY**](/windows/win32/api/dcomp/nf-dcomp-idcompositionrectangleclip-settoprightradiusy(float))
 
-### <a name="step-4-set-the-clip-property-of-the-visual"></a>Schritt 4: Festlegen der Clip-Eigenschaft des visuellen Elements
+### <a name="step-4-set-the-clip-property-of-the-visual"></a>Schritt 4: Festlegen der Clip-Eigenschaft des Visuals
 
-Verwenden Sie die [**idcompositionvisual:: SetClip**](/windows/win32/api/dcomp/nf-dcomp-idcompositionvisual-setclip(idcompositionclip)) -Methode, um die Clip-Eigenschaft des visuellen Elements dem Rechteck Clip-Objekt zuzuordnen.
+Verwenden Sie [**die IDCompositionVisual::SetClip-Methode,**](/windows/win32/api/dcomp/nf-dcomp-idcompositionvisual-setclip(idcompositionclip)) um die Clip-Eigenschaft des Visuals dem Rechteck-Clipobjekt zu zuordnen.
 
 
 ```C++
@@ -112,9 +112,9 @@ Verwenden Sie die [**idcompositionvisual:: SetClip**](/windows/win32/api/dcomp/n
 
 
 
-### <a name="step-5-commit-the-composition"></a>Schritt 5: Commit der Komposition ausführen
+### <a name="step-5-commit-the-composition"></a>Schritt 5: Commit der Komposition
 
-Rufen Sie die [**idcompositiondevice:: Commit**](/windows/win32/api/dcomp/nf-dcomp-idcompositiondevice-commit) -Methode auf, um einen Commit für den Batch der Befehle an Microsoft directcomposition zur Verarbeitung auszuführen. Das Ergebnis der Anwendung des Clip Rechtecks wird im Zielfenster angezeigt.
+Rufen Sie die [**IDCompositionDevice::Commit-Methode auf,**](/windows/win32/api/dcomp/nf-dcomp-idcompositiondevice-commit) um den Batch von Befehlen zur Verarbeitung an Microsoft DirectComposition zu commiten. Das Ergebnis der Anwendung des Cliprechtecks wird im Zielfenster angezeigt.
 
 
 ```C++
@@ -127,9 +127,9 @@ Rufen Sie die [**idcompositiondevice:: Commit**](/windows/win32/api/dcomp/nf-dco
 
 
 
-### <a name="step-6-free-the-directcomposition-objects"></a>Schritt 6: Freigeben der directcomposition-Objekte
+### <a name="step-6-free-the-directcomposition-objects"></a>Schritt 6: Freisetzung der DirectComposition-Objekte
 
-Stellen Sie sicher, dass Sie das Rechteck Clip-Objekt freigeben, wenn Sie es nicht mehr benötigen, sowie das Geräte Objekt, das Kompositions Zielobjekt und alle visuellen Objekte. Im folgenden Beispiel wird das Anwendungs definierte [**saferelease**](/windows/desktop/medfound/saferelease) -Makro aufgerufen, um die directcomposition-Objekte freizugeben.
+Achten Sie darauf, das Rechteck-Clipobjekt frei zu geben, wenn Sie es nicht mehr benötigen, sowie das Geräteobjekt, das Kompositionszielobjekt und alle visuellen Objekte. Das folgende Beispiel ruft das anwendungsdefinierte [**SafeRelease-Makro**](/windows/desktop/medfound/saferelease) auf, um die DirectComposition-Objekte frei zu geben.
 
 
 ```C++
@@ -150,6 +150,6 @@ Stellen Sie sicher, dass Sie das Rechteck Clip-Objekt freigeben, wenn Sie es nic
 [Freistellen](clipping.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 

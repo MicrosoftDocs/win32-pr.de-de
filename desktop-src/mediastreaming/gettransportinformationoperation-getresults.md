@@ -1,11 +1,11 @@
 ---
-title: Gettransportinformationoperation GetResults-Methode
-description: Gibt die Ergebnisse des asynchronen Vorgangs zurück, der von gettransportinformationasync gestartet wurde.
+title: GetTransportInformationOperation GetResults-Methode
+description: Gibt die Ergebnisse des asynchronen Vorgangs zurück, der von GetTransportInformationAsync gestartet wurde.
 ms.assetid: 8CC6641E-C1E6-4C64-90EC-4120ECB54135
 keywords:
-- GetResults-Methode Medien Streaming-API
-- GetResults-Methode Medien Streaming-API, gettransportinformationoperation-Schnittstelle
-- Gettransportinformationoperation-Schnittstelle Medien Streaming-API, GetResults-Methode
+- 'GetResults-Methode: Medienstreaming-API'
+- 'GetResults-Methode: Medienstreaming-API, GetTransportInformationOperation-Schnittstelle'
+- GetTransportInformationOperation-Schnittstelle Medienstreaming-API , GetResults-Methode
 topic_type:
 - apiref
 api_name:
@@ -15,16 +15,16 @@ api_type:
 ms.topic: reference
 ms.date: 05/31/2018
 api_location: ''
-ms.openlocfilehash: 17f846a5824ed07bcaf849a540429eaabe46f3d2
-ms.sourcegitcommit: ebd3ce6908ff865f1ef66f2fc96769be0aad82e1
+ms.openlocfilehash: 2bbcc6345a09d0553df240c57e50b4498618be76cc75814f268892aa6e0b4dc2
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/19/2020
-ms.locfileid: "104390260"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119100634"
 ---
-# <a name="gettransportinformationoperationgetresults-method"></a>Gettransportinformationoperation:: GetResults-Methode
+# <a name="gettransportinformationoperationgetresults-method"></a>GetTransportInformationOperation::GetResults-Methode
 
-Gibt die Ergebnisse des asynchronen Vorgangs zurück, der von [**gettransportinformationasync**](/previous-versions/windows/desktop/api/windows.media.streaming/nf-windows-media-streaming-imediarenderer-gettransportinformationasync)gestartet wurde.
+Gibt die Ergebnisse des asynchronen Vorgangs zurück, der von [**GetTransportInformationAsync**](/previous-versions/windows/desktop/api/windows.media.streaming/nf-windows-media-streaming-imediarenderer-gettransportinformationasync)gestartet wurde.
 
 ## <a name="syntax"></a>Syntax
 
@@ -41,16 +41,16 @@ HRESULT GetResults(
 
 <dl> <dt>
 
-*Wert* \[ Out, retval\]
+*wert* \[ out, retval\]
 </dt> <dd>
 
-Ein Verweis auf eine [**Transportinformation**](/previous-versions/windows/desktop/api/windows.media.streaming/ns-windows-media-streaming-transportinformation) -Struktur, die die Ergebnisse des Vorgangs enthält.
+Ein Verweis auf eine [**TransportInformation-Struktur,**](/previous-versions/windows/desktop/api/windows.media.streaming/ns-windows-media-streaming-transportinformation) die die Ergebnisse des Vorgangs enthält.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Die-Methode gibt ein **HRESULT** zurück. Mögliches Werte (aber nicht die Einzigen) sind die in der folgenden Tabelle.
+Die Methode gibt ein **HRESULT** zurück. Mögliches Werte (aber nicht die Einzigen) sind die in der folgenden Tabelle.
 
 
 
@@ -62,15 +62,15 @@ Die-Methode gibt ein **HRESULT** zurück. Mögliches Werte (aber nicht die Einzi
 
  
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die **GetResults** -Methode wird in der Regel vom Ereignishandler aufgerufen, der durch Festlegen der [**abgeschlossenen**](gettransportinformationoperation-completed.md) Eigenschaft registriert wurde.
+Die **GetResults-Methode** wird in der Regel über den Ereignishandler aufgerufen, der durch Festlegen der [**Completed-Eigenschaft**](gettransportinformationoperation-completed.md) registriert wurde.
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Gettransportinformationoperation**](gettransportinformationoperation.md)
+[**GetTransportInformationOperation**](gettransportinformationoperation.md)
 </dt> </dl>
 
  

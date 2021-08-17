@@ -40,7 +40,7 @@ Definiert das untergeordnete Element und [](taskschedulerschema-week-weekstype-e
 
 
 
-| Element                                                    | type                                                        | BESCHREIBUNG                                             |
+| Element                                                    | type                                                        | Beschreibung                                             |
 |------------------------------------------------------------|-------------------------------------------------------------|---------------------------------------------------------|
 | [**Woche**](taskschedulerschema-week-weekstype-element.md) | [**weekType**](taskschedulerschema-weektype-simpletype.md) | Gibt die Woche an, in der der Task ausgeführt wird.<br/> |
 

@@ -1,24 +1,24 @@
 ---
-title: Size-Attribut (Fill) (VML)
-description: Size-Attribut (Fill) (VML)
+title: Size-Attribut (Fill)(VML)
+description: Size-Attribut (Fill)(VML)
 ms.assetid: a84d2d81-0f6f-4011-867d-516225a314aa
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: d1eea5638d619853857499cc317517dfc5ffc762
-ms.sourcegitcommit: 592c9bbd22ba69802dc353bcb5eb30699f9e9403
+ms.openlocfilehash: b26568151961fb2186f8cf49ae25d9f2835665b8fd52a96a4d3a79e954c50ec6
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "103948804"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117754145"
 ---
-# <a name="size-attribute-fillvml"></a>Size-Attribut (Fill) (VML)
+# <a name="size-attribute-fillvml"></a>Size-Attribut (Fill)(VML)
 
-In diesem Thema wird VML beschrieben, eine Funktion, die ab Windows Internet Explorer 9 veraltet ist. Webseiten und Anwendungen, die auf VML basieren, sollten zu SVG oder anderen allgemein unterstützten Standards migriert werden.
+In diesem Thema wird VML beschrieben, ein Feature, das ab Version 9 Windows Internet Explorer ist. Webseiten und Anwendungen, die auf VML basieren, sollten zu SVG oder anderen weit verbreiteten Standards migriert werden.
 
 > [!Note]  
-> Ab Dezember 2011 wurde dieses Thema archiviert. Daher wird er nicht mehr aktiv verwaltet. Weitere Informationen finden Sie unter [archivierte Inhalte](/previous-versions/windows/internet-explorer/ie-developer/). Informationen, Empfehlungen und Anleitungen zur aktuellen Version von Windows Internet Explorer finden Sie im [Internet Explorer Developer Center](https://msdn.microsoft.com/ie/).
+> Seit Dezember 2011 wurde dieses Thema archiviert. Daher wird sie nicht mehr aktiv verwaltet. Weitere Informationen finden Sie unter [Archivierter Inhalt.](/previous-versions/windows/internet-explorer/ie-developer/) Informationen, Empfehlungen und Anleitungen zur aktuellen Version von Windows Internet Explorer finden Sie im [Internet Explorer Developer Center.](https://msdn.microsoft.com/ie/)
 
- 
+ 
 
 Definiert die Größe des Bilds für die Füllung. Lese-/Schreibzugriff. [VgVector2D](msdn-online-vml-ivgvector2d-data-type.md) .
 
@@ -28,23 +28,23 @@ Definiert die Größe des Bilds für die Füllung. Lese-/Schreibzugriff. [VgVect
 
 **Tagsyntax**
 
-<v: *Element* size = " *Expression* " >
+<v: *element* size="-Ausdruck "> 
 
-**Skript Syntax**
+**Skriptsyntax**
 
-*Element* . Size = "*Ausdruck * * *"**
+*element* .size="*expression**"**
 
-*Ausdruck* = *Element*. Size
+*expression* = *Element*.size
 
 **Anmerkungen**
 
-Der Standardwert ist die Größe des ursprünglichen Bilds. Größen, die größer als der shapewert sind, zeigen eine vergrößerte, aber abgeschnittene Version des Bilds an.
+Der Standardwert ist die Größe des ursprünglichen Bilds. Größen, die größer als die Form sind, zeigen eine vergrößerte, aber abgeschnittene Version des Bilds an.
 
-*VML-Standard Attribut*
+*VML-Standardattribut*
 
 **Beispiel**
 
-Obwohl die ursprüngliche Größe des Bilds 50-bis-50 Punkte beträgt, wird das Bild als 10-bis-10-Bild in der Mitte der Füllung angezeigt.
+Obwohl die ursprüngliche Größe des Bilds 50 mal 50 Punkte beträgt, wird das Bild als 10-mal-10-Bild in der Mitte der Füllung angezeigt.
 
 
 ```HTML
@@ -59,6 +59,6 @@ Obwohl die ursprüngliche Größe des Bilds 50-bis-50 Punkte beträgt, wird das 
 
 
 
- 
+ 
 
- 
+ 

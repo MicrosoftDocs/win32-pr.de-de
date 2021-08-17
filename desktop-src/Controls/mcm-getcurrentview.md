@@ -1,5 +1,5 @@
 ---
-title: MCM_GETCURRENTVIEW Meldung (Commctrl.h)
+title: MCM_GETCURRENTVIEW-Nachricht (Commctrl.h)
 description: Ruft die aktuelle Ansicht des Kalenders ab. Sie können diese Nachricht explizit oder mithilfe des MonthCal \_ GetCurrentView-Makros senden.
 ms.assetid: 9c42ebf6-611e-4e50-9dcc-cf7fd63b32eb
 keywords:

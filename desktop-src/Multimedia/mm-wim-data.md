@@ -1,9 +1,9 @@
 ---
-title: MM_WIM_DATA Meldung (MMSYSTEM. h)
-description: Die mm \_ \_ -WIM-Daten Nachricht wird an ein Fenster gesendet, wenn Waveform-Audiodaten im Eingabepuffer vorhanden sind und der Puffer an die Anwendung zurückgegeben wird. Die Nachricht kann entweder gesendet werden, wenn der Puffer voll ist oder nachdem die waveinreset-Funktion aufgerufen wurde.
+title: MM_WIM_DATA Meldung (Mmsystem.h)
+description: Die MM \_ WIM \_ DATA-Nachricht wird an ein Fenster gesendet, wenn waveform-audio-Daten im Eingabepuffer vorhanden sind und der Puffer an die Anwendung zurückgegeben wird. Die Nachricht kann entweder gesendet werden, wenn der Puffer voll ist oder nachdem die waveInReset-Funktion aufgerufen wurde.
 ms.assetid: 14298153-ea2f-40b7-bca7-196f4e6c1155
 keywords:
-- MM_WIM_DATA-Nachricht (Multimedia)
+- MM_WIM_DATA nachricht Windows Multimedia
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: c663d669635116500bc8aa7e7fdc994cdccd6dfe
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: b8b209e59032c0da4c875a316008c889cf064ae7d8bc48f5c621125a06582673
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "106338793"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119065470"
 ---
-# <a name="mm_wim_data-message"></a>MM- \_ WIM- \_ Daten Nachricht
+# <a name="mm_wim_data-message"></a>MM \_ WIM \_ DATA-Nachricht
 
-Die **mm- \_ WIM- \_ Daten** Nachricht wird an ein Fenster gesendet, wenn Waveform-Audiodaten im Eingabepuffer vorhanden sind und der Puffer an die Anwendung zurückgegeben wird. Die Nachricht kann entweder gesendet werden, wenn der Puffer voll ist oder nachdem die [**waveinreset**](/windows/win32/api/mmeapi/nf-mmeapi-waveinreset) -Funktion aufgerufen wurde.
+Die **MM \_ WIM \_ DATA-Nachricht** wird an ein Fenster gesendet, wenn waveform-audio-Daten im Eingabepuffer vorhanden sind und der Puffer an die Anwendung zurückgegeben wird. Die Nachricht kann entweder gesendet werden, wenn der Puffer voll ist oder nachdem die [**waveInReset-Funktion**](/windows/win32/api/mmeapi/nf-mmeapi-waveinreset) aufgerufen wurde.
 
 
 ```C++
@@ -38,17 +38,17 @@ lParam = (LONG) lpwvhdr
 
 <dl> <dt>
 
-<span id="hInputDev"></span><span id="hinputdev"></span><span id="HINPUTDEV"></span>*hinputdev*
+<span id="hInputDev"></span><span id="hinputdev"></span><span id="HINPUTDEV"></span>*hInputDev*
 </dt> <dd>
 
-Handle für das Waveform-Audioeingabegerät, das die Daten empfangen hat.
+Handle für das Waveform-Audio-Eingabegerät, das die Daten empfangen hat.
 
 </dd> <dt>
 
 <span id="lpwvhdr"></span><span id="LPWVHDR"></span>*lpwvhdr*
 </dt> <dd>
 
-Zeiger auf eine [**wavehdr**](/windows/win32/api/mmeapi/ns-mmeapi-wavehdr) -Struktur, die den Puffer identifiziert, der die Daten enthält.
+Zeiger auf eine [**WAVEHDR-Struktur,**](/windows/win32/api/mmeapi/ns-mmeapi-wavehdr) die den Puffer identifiziert, der die Daten enthält.
 
 </dd> </dl>
 
@@ -56,9 +56,9 @@ Zeiger auf eine [**wavehdr**](/windows/win32/api/mmeapi/ns-mmeapi-wavehdr) -Stru
 
 Diese Meldung gibt keinen Wert zurück.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Der zurückgegebene Puffer ist möglicherweise nicht voll. Verwenden Sie den **dwbyteslock** -Member der [**wavehdr**](/windows/win32/api/mmeapi/ns-mmeapi-wavehdr) -Struktur, die von *LPARAM* angegeben wird, um die Anzahl von Bytes zu bestimmen, die im zurückgegebenen Puffer aufgezeichnet wurden.
+Der zurückgegebene Puffer ist möglicherweise nicht voll. Verwenden Sie den **dwBytesRecorded-Member** der [**WAVEHDR-Struktur,**](/windows/win32/api/mmeapi/ns-mmeapi-wavehdr) die von *lParam* angegeben wird, um die Anzahl der bytes zu bestimmen, die im zurückgegebenen Puffer aufgezeichnet werden.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -68,18 +68,18 @@ Der zurückgegebene Puffer ist möglicherweise nicht voll. Verwenden Sie den **d
 |-------------------------------------|-----------------------------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[nur Desktop-Apps\]<br/>                                                |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                                                      |
-| Header<br/>                   | <dl> <dt>MMSYSTEM. h (Include Windows. h)</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Mmsystem.h (include Windows.h)</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[Waveform-Audiodatei](waveform-audio.md)
+[Waveform-Audio](waveform-audio.md)
 </dt> <dt>
 
-[Wellenform Meldungen](waveform-messages.md)
+[Wellenformnachrichten](waveform-messages.md)
 </dt> </dl>
 
  

@@ -21,9 +21,9 @@ ICE97 gibt die folgenden Warnungen aus.
 
 
 
-| ICE97-Warnung                                                                                                                                                                    | BESCHREIBUNG                                                               |
+| ICE97-Warnung                                                                                                                                                                    | Beschreibung                                                               |
 |----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------|
-| Diese Komponente \[ 1 \] installiert die freigegebene Komponente im selben Verzeichnis \[ 2 wie eine \] andere, wodurch Komponentenregeln unterbrochen werden, wenn beide (oder mehrere) Komponenten für die Installation ausgewählt sind. | Zwei Komponenten dürfen eine freigegebene Komponente nicht im gleichen Verzeichnis isolieren. |
+| Diese Komponente \[ 1 \] installiert die freigegebene Komponente in demselben Verzeichnis \[ 2 wie ein \] anderes, wodurch Komponentenregeln unterbrochen werden, wenn beide (oder mehrere) Komponenten für die Installation ausgewählt sind. | Zwei Komponenten dürfen eine freigegebene Komponente nicht im gleichen Verzeichnis isolieren. |
 
 
 

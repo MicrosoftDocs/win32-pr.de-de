@@ -1,37 +1,37 @@
 ---
-title: Aria-Rollen Fehler für Elemente mit Ereignis Handlern
-description: Aria-Rollen Fehler für Elemente mit Ereignis Handlern
+title: ARIA-Rollenfehler für Elemente mit Ereignishandlern
+description: ARIA-Rollenfehler für Elemente mit Ereignishandlern
 ms.assetid: 20BB874A-874B-4266-9C7B-49C07D4146DA
 keywords:
-- Ariacontainerroleerrormessage
+- AriaContainerRoleErrorMessage
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: eede416392e8b4cb644938242a9975238118ff07
-ms.sourcegitcommit: 773fa6257ead6c74154ad3cf46d21e49adc900aa
+ms.openlocfilehash: 0cebaa2e6f4526d0a1e820e60adc1d28439d3f361c7ffb58a0c4d855861ea46d
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/09/2020
-ms.locfileid: "104391156"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119133993"
 ---
-# <a name="aria-role-error-for-elements-with-event-handlers"></a>Aria-Rollen Fehler für Elemente mit Ereignis Handlern
+# <a name="aria-role-error-for-elements-with-event-handlers"></a>ARIA-Rollenfehler für Elemente mit Ereignishandlern
 
 ## <a name="text"></a>Text
 
-Das Element hat einen Ereignishandler, aber eine gültige Rolle "WAI-ARIA" ist nicht definiert.
+Das -Element verfügt über einen Ereignishandler, aber die gültige ROLLE "TS-ARIA" ist nicht definiert.
 
 ## <a name="type"></a>type
 
 Fehler
 
-## <a name="description"></a>BESCHREIBUNG
+## <a name="description"></a>Beschreibung
 
-Dieser Fehler gilt für Elemente, die nicht über eine implizite webanbarrierefreiheits Initiative verfügen, die über die Rolle "Ria-Aria" verfügt.
+Dieser Fehler gilt für Elemente, die nicht über die implizite Rolle Web Accessibility Initiative - Accessible Rich Internet Applications (TS-ARIA) verfügen.
 
-Dieser Fehler zeigt an, dass ein Element über einen Maus-oder Tastaturereignis Handler verfügt (**Klicken Sie auf**, **MouseDown**, **MouseUp**, **MouseMove**, **mouseout**, **MouseOver**, **KeyUp**, **KeyDown** oder **KeyPress**), aber nicht das [**Role**](https://developer.mozilla.org/docs/Web/HTML/Reference) -Attribut festgelegt ist und kein HTML-Tag ist, das über eine implizite WAI-ARIA-Rolle verfügt (z. b. **a**, **Button**, **IMG**, **Input**, **Select** usw.).
+Dieser Fehler gibt **an,** dass ein Element über einen Maus- oder Tastaturereignishandler **verfügt**( klicken Sie auf , **mousedown**, **mouseup** [](https://developer.mozilla.org/docs/Web/HTML/Reference) , **mousemove**, **mouseout**, **mouseover**, **keyup**, **keydown** oder **keypress**), aber nicht das Rollenattribut festgelegt ist und nicht eines der HTML-Tags ist, das über eine implizite ROLLE-ARIA-Rolle verfügt (z. B. eine **,** Schaltfläche, **img** **,** eingabe **,** select und so weiter).
 
-Das Festlegen des [**Role**](https://developer.mozilla.org/docs/Web/HTML/Reference) -Attributs für interaktive Elemente, die keine implizite Rolle haben (z. b. ein **div** -Tag), ist erforderlich, um die Verhaltensmuster des Elements für Sprachausgabe und andere Hilfstechnologien verfügbar zu machen.
+Das [](https://developer.mozilla.org/docs/Web/HTML/Reference) Festlegen des Rollenattributs für interaktive Elemente, die keine implizite Rolle haben (z. B. ein **div-Tag),** ist erforderlich, um die Verhaltensmuster des Elements für Sprachbildschirme und andere Hilfstechnologien verfügbar zu machen.
 
-Um diesen Fehler zu beheben, legen Sie das [**Role**](https://developer.mozilla.org/docs/Web/HTML/Reference) -Attribut auf eine gültige Rolle "WAI-ARIA" fest, die am besten zu den Verhaltensmustern und den erforderlichen Attributen dieses Elements passt. Wenn ein **div** -Tag z. b. als Schaltfläche fungiert, legen Sie das role-Attribut auf "Button" fest.
+Um diesen Fehler zu [](https://developer.mozilla.org/docs/Web/HTML/Reference) beheben, legen Sie das Rollenattribut auf eine gültige ROLLE VOM-ARIA-Element fest, die am besten zu den Verhaltensmustern und erforderlichen Attributen dieses Elements passt. Wenn ein **div-Tag beispielsweise** als Schaltfläche fungiert, legen Sie das Rollenattribut auf "button" fest.
 
 ## <a name="example"></a>Beispiel
 
@@ -43,9 +43,9 @@ Um diesen Fehler zu beheben, legen Sie das [**Role**](https://developer.mozilla.
 
 
 
- 
+ 
 
- 
+ 
 
 
 

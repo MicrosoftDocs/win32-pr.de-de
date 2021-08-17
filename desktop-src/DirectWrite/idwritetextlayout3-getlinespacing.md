@@ -1,11 +1,11 @@
 ---
-title: IDWriteTextLayout3 getlinespacingmethode
-description: Ruft Informationen zum Zeilenabstand ab.
+title: IDWriteTextLayout3 GetLineSpacing-Methode
+description: Ruft Zeilenabstandsinformationen ab.
 ms.assetid: 6b93a3ec-c8ea-2e64-45b5-51565d6de173
 keywords:
-- Getlinespacung-Methode direkt schreiben
-- Getlinespaceing-Methode Direct Write, IDWriteTextLayout3-Schnittstelle
-- IDWriteTextLayout3 Interface Direct Write, getlinespacingmethode
+- GetLineSpacing-Methode "Direct Write"
+- GetLineSpacing-Methode Direct Write , IDWriteTextLayout3-Schnittstelle
+- IDWriteTextLayout3-Schnittstelle Direct Write , GetLineSpacing-Methode
 topic_type:
 - apiref
 api_name:
@@ -16,16 +16,16 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 303030a5674f39c160804ae2dad5b91050d82f37
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 96444f0e50cbb79074c6fc6d8b041d91c0751616ec5afe7024704709a2240947
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "103956702"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119964010"
 ---
-# <a name="idwritetextlayout3getlinespacing-method"></a>IDWriteTextLayout3:: GetLineSpacing-Methode
+# <a name="idwritetextlayout3getlinespacing-method"></a>IDWriteTextLayout3::GetLineSpacing-Methode
 
-Ruft Informationen zum Zeilenabstand ab.
+Ruft Zeilenabstandsinformationen ab.
 
 ## <a name="syntax"></a>Syntax
 
@@ -42,16 +42,16 @@ HRESULT GetLineSpacing(
 
 <dl> <dt>
 
-*linespacingoptions* \[ vorgenommen\]
+*lineSpacingOptions* \[ out\]
 </dt> <dd>
 
-So verwalten Sie den Leerraum zwischen Zeilen
+Verwalten des Speicherplatzes zwischen Linien.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Wenn diese Methode erfolgreich ausgeführt wird, gibt Sie **S \_ OK** zurück. Andernfalls wird ein **HRESULT** -Fehlercode zurückgegeben.
+Wenn diese Methode erfolgreich ist, wird **S \_ OK** zurückgegeben. Andernfalls wird ein **HRESULT-Fehlercode** zurückgegeben.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -59,15 +59,15 @@ Wenn diese Methode erfolgreich ausgeführt wird, gibt Sie **S \_ OK** zurück. A
 
 | Anforderung | Wert |
 |-------------------------------------|-----------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | \[Nur Desktop-Apps Windows 8.1\]<br/>                                            |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2012 R2 \[ -Desktop-Apps\]<br/>                                 |
-| Unterstützte Mindestversion (Telefon)<br/>  | Windows Phone 8,1 \[ Windows Phone Silverlight 8,1 und Windows-Runtime apps\]<br/> |
-| Bibliothek<br/>                  | <dl> <dt>Dwrite. lib</dt> </dl>   |
+| Unterstützte Mindestversion (Client)<br/> | \[Windows 8.1 Nur Desktop-Apps\]<br/>                                            |
+| Unterstützte Mindestversion (Server)<br/> | Windows Server 2012 Nur \[ R2-Desktop-Apps\]<br/>                                 |
+| Unterstützte Mindestversion (Telefon)<br/>  | Windows Phone 8.1 \[ Windows Phone Silverlight 8.1- und Windows Runtime-Apps\]<br/> |
+| Bibliothek<br/>                  | <dl> <dt>Dwrite.lib</dt> </dl>   |
 | DLL<br/>                      | <dl> <dt>Dwrite.dll</dt> </dl>   |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 

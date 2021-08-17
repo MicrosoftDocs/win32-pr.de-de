@@ -3,29 +3,29 @@ title: Öffnen eines Geräts
 description: Öffnen eines Geräts
 ms.assetid: d4881d32-e8b7-45e6-b00b-b4cd69b738f1
 keywords:
-- MCI_OPEN-Befehl
+- MCI_OPEN Befehl
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: cd975b0dd5004fb4b1209003568b7fd5901cfc4e
-ms.sourcegitcommit: ebd3ce6908ff865f1ef66f2fc96769be0aad82e1
+ms.openlocfilehash: 34408cef4e85ed7200b91c610e60ca546ff488ce5ad45edee12159a664f319fc
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/19/2020
-ms.locfileid: "104038839"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117802317"
 ---
 # <a name="opening-a-device"></a>Öffnen eines Geräts
 
-Bevor Sie ein Gerät verwenden, müssen Sie es mit dem [**geöffneten**](open.md) Befehl ([**MCI \_ Open**](mci-open.md)) initialisieren. Mit diesem Befehl wird der Treiber in den Arbeitsspeicher geladen (sofern er nicht bereits geladen wurde), und der Geräte Bezeichner wird abgerufen, den Sie zum Identifizieren des Geräts in nachfolgenden MCI-Befehlen verwenden. Sie sollten den Rückgabewert der Funktion " [**mciSendString**](/previous-versions//dd757161(v=vs.85)) " oder " [**mciSendCommand**](/previous-versions//dd757160(v=vs.85)) " überprüfen, bevor Sie einen neuen Geräte Bezeichner verwenden, um sicherzustellen, dass der Bezeichner gültig ist. (Sie können auch einen Geräte Bezeichner mithilfe der Funktion " [**mcigetdebug Eid**](/previous-versions//dd757156(v=vs.85)) " abrufen.)
+Bevor Sie ein Gerät verwenden, müssen Sie es mit dem [**Befehl open**](open.md) ([**MCI \_ OPEN**](mci-open.md)) initialisieren. Dieser Befehl lädt den Treiber in den Arbeitsspeicher (sofern er noch nicht geladen ist) und ruft den Gerätebezeichner ab, den Sie zum Identifizieren des Geräts in nachfolgenden MCI-Befehlen verwenden. Überprüfen Sie den Rückgabewert der [**mciSendString-**](/previous-versions//dd757161(v=vs.85)) oder [**mciSendCommand-Funktion,**](/previous-versions//dd757160(v=vs.85)) bevor Sie einen neuen Gerätebezeichner verwenden, um sicherzustellen, dass der Bezeichner gültig ist. (Sie können einen Gerätebezeichner auch mithilfe der [**mciGetDeviceID-Funktion**](/previous-versions//dd757156(v=vs.85)) abrufen.)
 
-Wie bei allen MCI-befehlsnachrichten verfügt **MCI \_ Open** über eine zugeordnete Struktur. Diese Strukturen werden manchmal als *Parameter Blöcke* bezeichnet. Die Standardstruktur für **MCI \_ Open** ist [**MCI \_ Open- \_ Parser**](mci-open-parms.md). Bestimmte Geräte (z. b. *Wellenform* und *Overlay*) haben erweiterte Strukturen (z. b. [**MCI \_ Wave \_ Open \_**](mci-wave-open-parms.md) -Parameter und [**MCI- \_ Oly- \_ Open \_**](mci-ovly-open-parms.md)-Parameter), um zusätzliche optionale Parameter zu bieten. Wenn Sie diese zusätzlichen Parameter nicht benötigen, können Sie die MCI-Struktur mit **\_ offenen \_ para** Metern mit einem beliebigen MCI-Gerät verwenden.
+Wie alle MCI-Befehlsmeldungen verfügt **MCI \_ OPEN** über eine zugeordnete Struktur. Diese Strukturen werden manchmal als *Parameterblöcke* bezeichnet. Die Standardstruktur für **MCI \_ OPEN** ist [**MCI \_ OPEN \_ PARMS.**](mci-open-parms.md) Bestimmte Geräte (z. B. *Wellenform* und *Überlagerung)* verfügen über erweiterte Strukturen (z. B. [**MCI \_ WAVE OPEN \_ \_ PARMS**](mci-wave-open-parms.md) und [**MCI \_ OVLY \_ OPEN \_ PARMS),**](mci-ovly-open-parms.md)um zusätzliche optionale Parameter aufzunehmen. Sofern Sie diese zusätzlichen Parameter nicht verwenden müssen, können Sie die **MCI \_ OPEN \_ PARMS-Struktur** mit jedem MCI-Gerät verwenden.
 
-Die Anzahl der Geräte, die Sie öffnen können, ist nur durch die Menge des verfügbaren Arbeitsspeichers beschränkt.
+Die Anzahl der geöffneten Geräte ist nur durch die Menge des verfügbaren Arbeitsspeichers beschränkt.
 
 ## <a name="using-an-alias"></a>Verwenden eines Alias
 
-Wenn Sie ein Gerät öffnen, können Sie das Flag "Alias" verwenden, um einen Geräte Bezeichner für das Gerät anzugeben. Mit diesem Flag können Sie eine kurze Geräte-ID für Verbund Geräte mit langen Dateinamen zuweisen, und Sie können mehrere Instanzen derselben Datei oder eines Geräts öffnen.
+Wenn Sie ein Gerät öffnen, können Sie das Flag "alias" verwenden, um einen Gerätebezeichner für das Gerät anzugeben. Mit diesem Flag können Sie einen kurzen Gerätebezeichner für Verbundgeräte mit langen Dateinamen zuweisen und mehrere Instanzen derselben Datei oder desselben Geräts öffnen.
 
-Der folgende Befehl weist z. b. den Geräte Bezeichner "birdcall" dem langen Dateinamen "C: \\ nabunds \\ Sounds \\ mockmtng" zu. Wave
+Der folgende Befehl weist beispielsweise den Gerätebezeichner "birdcall" dem langen Dateinamen C zu: \\ NABIRDS \\ SOUNDS \\ MOCKMTNG. Wav:
 
 
 ```C++
@@ -36,11 +36,11 @@ mciSendString(
 
 
 
-In der befehlsnachrichten Schnittstelle geben Sie einen Alias an, indem Sie den **lpstraualias** -Member der [**geöffneten MCI-Struktur \_ Öffnen \_**](mci-open-parms.md) .
+In der Befehlsmeldungsschnittstelle geben Sie einen Alias an, indem Sie den **lpstrAlias-Member** der [**MCI \_ OPEN \_ PARMS-Struktur**](mci-open-parms.md) verwenden.
 
 ## <a name="specifying-a-device-type"></a>Angeben eines Gerätetyps
 
-Wenn Sie ein Gerät öffnen, können Sie das Flag "Type" verwenden, um auf einen Gerätetyp und nicht auf einen bestimmten Gerätetreiber zu verweisen. Im folgenden Beispiel wird die Waveform-Audiodatei C: \\ Windows- \\ Chimes geöffnet. WAV (mit dem Flag "Type", um den **waveaudiogerätetyp** anzugeben) und weist den Alias "Chimes" zu:
+Wenn Sie ein Gerät öffnen, können Sie das Flag "type" verwenden, um auf einen Gerätetyp und nicht auf einen bestimmten Gerätetreiber zu verweisen. Im folgenden Beispiel wird die Waveform-Audiodatei C: \\ WINDOWS \\ CHIMES geöffnet. WAV (mit dem Flag "type" zum Angeben des **Waveaudio-Gerätetyps)** und weist den Alias "Chimes" zu:
 
 
 ```C++
@@ -51,17 +51,17 @@ mciSendString(
 
 
 
-In der befehlsnachrichten Schnittstelle wird die Funktionalität des "Type"-Flags durch das **lpstraudevicetype** -Element der [**MCI \_ Open \_**](mci-open-parms.md) -Parameterstruktur bereitgestellt.
+In der Befehlsmeldungsschnittstelle wird die Funktionalität des Flags "type" vom **lpstrDeviceType-Member** der [**MCI \_ OPEN \_ PARMS-Struktur**](mci-open-parms.md) bereitgestellt.
 
-## <a name="simple-and-compound-devices"></a>Einfache und Verbund Geräte
+## <a name="simple-and-compound-devices"></a>Einfache und zusammengesetzte Geräte
 
-MCI klassifiziert Gerätetreiber als *Verbund* oder *einfach*. Treiber für Verbund Geräte erfordern den Namen einer Datendatei für die Wiedergabe. Treiber für einfache Geräte nicht.
+MCI klassifiziert Gerätetreiber als *zusammengesetzte* oder *einfache*. Treiber für Verbundgeräte erfordern den Namen einer Datendatei für die Wiedergabe. Treiber für einfache Geräte nicht.
 
-Einfache Geräte sind **CDAudio** -und **Videodisk** -Geräte. Es gibt zwei Möglichkeiten, um einfache Geräte zu öffnen:
+Zu den einfachen Geräten gehören **cdaudio-** und **videodisc-Geräte.** Es gibt zwei Möglichkeiten, einfache Geräte zu öffnen:
 
--   Geben Sie einen Zeiger auf eine NULL-terminierte Zeichenfolge an, die den Gerätenamen aus der Registrierung oder der SYSTEM.INI Datei enthält.
+-   Geben Sie einen Zeiger auf eine auf NULL endende Zeichenfolge an, die den Gerätenamen aus der Registrierung oder der SYSTEM.INI-Datei enthält.
 
-    Beispielsweise können Sie ein **Videodisk** -Gerät mit dem folgenden Befehl öffnen:
+    Beispielsweise können Sie ein **videodisc-Gerät** mit dem folgenden Befehl öffnen:
 
 
 ```C++
@@ -71,19 +71,19 @@ Einfache Geräte sind **CDAudio** -und **Videodisk** -Geräte. Es gibt zwei Mög
 
 
 
-In diesem Fall ist "Videodisk" der Gerätename aus der Registrierung oder der \[ MCI- \] Abschnitt der SYSTEM.INI.
+In diesem Fall ist "videodisc" der Gerätename aus der Registrierung oder der \[ mci-Abschnitt \] von SYSTEM.INI.
 
--   Geben Sie den tatsächlichen Namen des Gerätetreibers an. Wenn Sie ein Gerät mit dem Gerätetreiber-Dateinamen öffnen, wird die Anwendung jedoch gerätespezifisch, und die Ausführung der Anwendung kann verhindert werden, wenn sich die Systemkonfiguration ändert. Wenn Sie einen Dateinamen verwenden, müssen Sie nicht den kompletten Pfad oder die Dateinamenerweiterung angeben. MCI geht davon aus, dass sich Treiber in einem System Verzeichnis befinden und über verfügen. DRV-Dateinamenerweiterung.
+-   Geben Sie den tatsächlichen Namen des Gerätetreibers an. Das Öffnen eines Geräts mithilfe des Gerätetreiberdateinamens macht die Anwendung gerätespezifisch und kann verhindern, dass die Anwendung ausgeführt wird, wenn sich die Systemkonfiguration ändert. Wenn Sie einen Dateinamen verwenden, müssen Sie nicht den vollständigen Pfad oder die Dateinamenerweiterung angeben. MCI geht davon aus, dass treiber sich in einem Systemverzeichnis befinden und über die verfügen. DRV-Dateinamenerweiterung.
 
-Verbund Geräte umfassen **waveaudiogeräte** und **Sequencer** -Geräte. Die Daten für ein Verbund Gerät werden manchmal als *Geräte Element* bezeichnet. Dieses Dokument bezieht sich jedoch im Allgemeinen auf diese Daten als Datei, auch wenn die Daten in einigen Fällen nicht als Datei gespeichert werden.
+Verbundgeräte umfassen **Waveaudio-** und **Sequencergeräte.** Die Daten für ein verbundes Gerät werden manchmal als *Geräteelement* bezeichnet. Dieses Dokument bezieht sich jedoch im Allgemeinen auf diese Daten als Datei, obwohl die Daten in einigen Fällen möglicherweise nicht als Datei gespeichert werden.
 
-Es gibt drei Möglichkeiten, ein Verbund Gerät zu öffnen:
+Es gibt drei Möglichkeiten, ein Verbundgerät zu öffnen:
 
--   Geben Sie nur den Gerätenamen an. Auf diese Weise können Sie ein Verbund Gerät öffnen, ohne einen Dateinamen zuzuordnen. Bei den meisten Verbund Geräten werden nur die [**Funktionen**](capability.md) ([**MCI \_ getdevcaps**](mci-getdevcaps.md)) und [**Close**](close.md) ([**MCI \_ Close**](mci-close.md)) verarbeitet, wenn Sie auf diese Weise geöffnet werden.
--   Geben Sie nur den Dateinamen an. Der Gerätename wird aus den Zuordnungen in der Registrierung ermittelt.
+-   Geben Sie nur den Gerätenamen an. Auf diese Weise können Sie ein verbundes Gerät öffnen, ohne einen Dateinamen zuzuordnen. Die meisten zusammengesetzten Geräte verarbeiten nur die [**Befehle MCI**](capability.md) [**\_ GETDEVCAPS**](mci-getdevcaps.md)und [**Close**](close.md) [**(MCI \_ CLOSE),**](mci-close.md)wenn sie auf diese Weise geöffnet werden.
+-   Geben Sie nur den Dateinamen an. Der Gerätename wird anhand der Zuordnungen in der Registrierung bestimmt.
 -   Geben Sie den Dateinamen und den Gerätenamen an. MCI ignoriert die Einträge in der Registrierung und öffnet den angegebenen Gerätenamen.
 
-Wenn Sie einer Datendatei ein bestimmtes Gerät zuordnen möchten, können Sie den Dateinamen und den Gerätenamen angeben. Der folgende Befehl öffnet z. b. das **Waveaudiogerät** mit dem Dateinamen myvoice. SND
+Um eine Datendatei einem bestimmten Gerät zuzuordnen, können Sie den Dateinamen und den Gerätenamen angeben. Mit dem folgenden Befehl wird beispielsweise das **Waveaudio-Gerät** mit dem Dateinamen MYVOICE geöffnet. Snd:
 
 
 ```C++
@@ -93,17 +93,17 @@ mciSendString("open myvoice.snd type waveaudio", lpszReturnString,
 
 
 
-In der Befehls Zeichenfolgen-Schnittstelle können Sie auch die Geräte namens Spezifikation mit dem alternativen Ausrufezeichen Format abkürzen, wie mit dem [**Open**](open.md) -Befehl dokumentiert.
+In der Befehlszeichenfolgen-Schnittstelle können Sie die Gerätenamensspezifikation auch mithilfe des alternativen Ausrufezeichenformats abkürzen, wie mit dem [**open-Befehl**](open.md) dokumentiert.
 
 ## <a name="opening-a-device-using-the-filename-extension"></a>Öffnen eines Geräts mithilfe der Dateinamenerweiterung
 
-Wenn der Befehl [**Öffnen**](open.md) ([**MCI \_ geöffnet**](mci-open.md)) nur den Dateinamen angibt, verwendet MCI die Dateinamenerweiterung, um das entsprechende Gerät aus der Liste in der Registrierung oder im \[ Abschnitt MCI-Erweiterungen \] der SYSTEM.INI Datei auszuwählen. Die Einträge im \[ Abschnitt MCI- \] Erweiterungen verwenden die folgende Form:
+Wenn der Befehl [**open**](open.md) ([**MCI \_ OPEN**](mci-open.md)) nur den Dateinamen angibt, verwendet MCI die Dateinamenerweiterung, um das entsprechende Gerät aus der Liste in der Registrierung oder im \[ Abschnitt mci-Erweiterungen \] der SYSTEM.INI-Datei auszuwählen. Die Einträge im \[ Abschnitt mci-Erweiterungen \] verwenden das folgende Format:
 
-*Dateiname \_ Erweiterung*  =  *Geräte \_ Name*
+*Gerätename der \_ Dateinamenerweiterung*  =  *\_*
 
-MCI verwendet implizit den *Geräte \_ Namen* , wenn die Erweiterung gefunden wird und ein Gerätename nicht im Befehl " **Öffnen** " angegeben wurde.
+MCI verwendet implizit *den \_ Gerätenamen,* wenn die Erweiterung gefunden wird und wenn im **befehl open** kein Gerätename angegeben wurde.
 
-Das folgende Beispiel zeigt einen typischen \[ MCI-Erweiterungs \] Abschnitt:
+Das folgende Beispiel zeigt einen typischen \[ \] mci-Erweiterungsabschnitt:
 
 
 ```C++
@@ -115,7 +115,7 @@ rmi=sequencer
 
 
 
-Mithilfe dieser Definitionen öffnet MCI das **Waveaudiogerät** , wenn der folgende Befehl ausgegeben wird:
+Mithilfe dieser Definitionen öffnet MCI das **Waveaudio-Gerät,** wenn der folgende Befehl ausgegeben wird:
 
 
 ```C++
@@ -127,9 +127,9 @@ mciSendString("open train.wav", lpszReturnString,
 
 ## <a name="new-data-files"></a>Neue Datendateien
 
-Geben Sie einfach einen leeren Dateinamen an, um eine neue Datendatei zu erstellen. MCI speichert eine neue Datei erst, wenn Sie Sie mit dem Befehl [**Speichern**](save.md) ([**MCI- \_ Speicher**](mci-save.md)) speichern. Beim Erstellen einer neuen Datei müssen Sie einen Gerätealias mit dem [**geöffneten**](open.md) Befehl ([**MCI \_ Open**](mci-open.md)) einschließen.
+Um eine neue Datendatei zu erstellen, geben Sie einfach einen leeren Dateinamen an. MCI speichert eine neue Datei erst, wenn Sie sie mit dem Befehl [**save**](save.md) ([**MCI \_ SAVE**](mci-save.md)) speichern. Beim Erstellen einer neuen Datei müssen Sie einen Gerätealias mit dem [**befehl open**](open.md) ([**MCI \_ OPEN**](mci-open.md)) einschließen.
 
-Im folgenden Beispiel wird eine neue **waveaudiodatei** geöffnet, die Aufzeichnung gestartet und beendet und anschließend die Datei gespeichert und geschlossen:
+Im folgenden Beispiel wird eine neue **waveaudio-Datei** geöffnet, die Aufzeichnung gestartet und beendet, die Datei gespeichert und geschlossen:
 
 
 ```C++
@@ -147,18 +147,18 @@ mciSendString("close capture", lpszReturnString,
 
 
 
-## <a name="sharable-devices"></a>Sharable-Geräte
+## <a name="sharable-devices"></a>Sharable Devices
 
-Mit dem Flag "sharable" (MCI \_ Open \_ share able) des [**geöffneten**](open.md) Befehls ([**MCI \_ Open**](mci-open.md)) können mehrere Anwendungen gleichzeitig auf das gleiche Gerät (oder die gleiche Datei) und die Geräte Instanz zugreifen. Wenn Ihre Anwendung ein Gerät oder eine Datei als frei stellbar öffnet, können auch andere Anwendungen darauf zugreifen, indem Sie Sie als Sharable öffnen. Das freigegebene Gerät oder die freigegebene Datei gibt jeder Anwendung die Möglichkeit, die Parameter zu ändern, die den Betriebszustand steuern. Jedes Mal, wenn ein Gerät oder eine Datei als Sharable geöffnet wird, gibt MCI einen eindeutigen Geräte Bezeichner zurück, auch wenn die Bezeichner auf dieselbe Instanz verweisen.
+Mit dem Flag "sharable" (MCI \_ OPEN \_ SHAREABLE) des [**open**](open.md) -Befehls [**(MCI \_ OPEN**](mci-open.md)) können mehrere Anwendungen gleichzeitig auf dasselbe Gerät (oder die gleiche Datei) und die gleiche Geräteinstanz zugreifen. Wenn Ihre Anwendung ein Gerät oder eine Datei als trennbar öffnet, können andere Anwendungen auch darauf zugreifen, indem sie es als trennbar öffnen. Das freigegebene Gerät oder die datei gibt jeder Anwendung die Möglichkeit, die Parameter zu ändern, die ihren Betriebszustand bestimmen. Jedes Mal, wenn ein Gerät oder eine Datei als trennbar geöffnet wird, gibt MCI einen eindeutigen Gerätebezeichner zurück, obwohl die Bezeichner auf dieselbe Instanz verweisen.
 
-Wenn Ihre Anwendung ein Gerät oder eine Datei öffnet, ohne anzugeben, dass Sie freigegeben werden kann, kann keine andere Anwendung darauf zugreifen, bis Sie von der Anwendung geschlossen wird. Wenn ein Gerät nur eine geöffnete Instanz unterstützt, schlägt der Befehl " **Öffnen** " fehl, wenn Sie das freigegeben-Flag angeben.
+Wenn Ihre Anwendung ein Gerät oder eine Datei öffnet, ohne anzugeben, dass es trennbar ist, kann keine andere Anwendung darauf zugreifen, bis Ihre Anwendung es schließt. Wenn ein Gerät nur eine geöffnete Instanz unterstützt, schlägt der **Open-Befehl** fehl, wenn Sie das Trennzeichen angeben.
 
-Wenn Ihre Anwendung ein Gerät öffnet und angibt, dass Sie freigegeben werden kann, sollte Ihre Anwendung keine Annahmen über den Status dieses Geräts treffen. Die Anwendung muss möglicherweise Änderungen vornehmen, die von anderen Anwendungen, die auf das Gerät zugreifen, vorgenommen werden.
+Wenn Ihre Anwendung ein Gerät öffnet und angibt, dass es trennbar ist, sollte Ihre Anwendung keine Annahmen über den Zustand dieses Geräts treffen. Ihre Anwendung muss möglicherweise Änderungen kompensieren, die von anderen Anwendungen vorgenommen wurden, die auf das Gerät zugreifen.
 
-Die meisten Verbund Dateien können nicht freigegeben werden. Sie können jedoch mehrere Dateien öffnen oder eine einzelne Datei mehrmals öffnen. Wenn Sie eine einzelne Datei mehrmals öffnen, erstellt MCI jeweils eine unabhängige Instanz, wobei jede Instanz einen eindeutigen Betriebsstatus aufweist.
+Die meisten Verbunddateien sind nicht trennbar. Sie können jedoch mehrere Dateien öffnen, oder Sie können eine einzelne Datei mehrmals öffnen. Wenn Sie eine einzelne Datei mehrmals öffnen, erstellt MCI jeweils eine unabhängige Instanz, wobei jede Instanz einen eindeutigen Betriebsstatus aufweist.
 
-Wenn Sie mehrere Instanzen einer Datei öffnen, müssen Sie jedem eine eindeutige Gerätekennung zuweisen. Sie können einen Alias verwenden, wie im folgenden Abschnitt beschrieben, um für jede Datei einen eindeutigen Namen zuzuweisen.
+Wenn Sie mehrere Instanzen einer Datei öffnen, müssen Sie jedem einen eindeutigen Gerätebezeichner zuweisen. Sie können wie im folgenden Abschnitt beschrieben einen Alias verwenden, um jeder Datei einen eindeutigen Namen zuzuweisen.
 
- 
+ 
 
- 
+ 

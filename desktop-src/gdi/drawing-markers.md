@@ -1,21 +1,21 @@
 ---
-description: Sie können die Linienfunktionen zum Zeichnen von Markern verwenden.
+description: Sie können die Linienfunktionen verwenden, um Marker zu zeichnen.
 ms.assetid: 69114875-f3e0-45e9-8e87-1f4e9de08db1
-title: Zeichnungs Marker
+title: Zeichnen von Markern
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 497b725e3a266e296950394a9bb9b2b76a17cb25
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 9b5e05c651bf95aa48a8ef11fd0819523ee5da7652e27ecebaeff8ee9de4f1e0
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "103754432"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117887118"
 ---
-# <a name="drawing-markers"></a>Zeichnungs Marker
+# <a name="drawing-markers"></a>Zeichnen von Markern
 
-Sie können die Linienfunktionen zum Zeichnen von Markern verwenden. Ein Marker ist ein Symbol, das auf einen Punkt zentriert ist. Zeichen Anwendungen verwenden Marker, um Anfangspunkte, Endpunkte und Steuerungs Punkte festzulegen. Arbeitsblatt Anwendungen verwenden Marker, um relevante Punkte in einem Diagramm oder Diagramm zu bestimmen.
+Sie können die Linienfunktionen verwenden, um Marker zu zeichnen. Ein Marker ist ein Symbol, das über einem Punkt zentriert ist. Zeichenanwendungen verwenden Marker, um Ausgangspunkte, Endpunkte und Kontrollpunkte zu bestimmen. Tabellenkalkulationsanwendungen verwenden Marker, um Points of Interest in einem Diagramm oder Diagramm zu bestimmen.
 
-Im folgenden Codebeispiel erstellt die Anwendungs definierte markerfunktion einen Marker mithilfe der Funktionen " [**muveumex**](/windows/desktop/api/Wingdi/nf-wingdi-movetoex) " und " [**LineTo**](/windows/desktop/api/Wingdi/nf-wingdi-lineto) ". Diese Funktionen zeichnen zwei überlappende Zeilen mit einer Länge von 20 Pixeln, die auf die Cursor Koordinaten zentriert sind.
+Im folgenden Codebeispiel erstellt die anwendungsdefinierte Markerfunktion mithilfe der [**Funktionen MoveToEx**](/windows/desktop/api/Wingdi/nf-wingdi-movetoex) und [**LineTo einen Marker.**](/windows/desktop/api/Wingdi/nf-wingdi-lineto) Diese Funktionen zeichnen zwei sich überschneidende Linien mit einer Länge von 20 Pixeln, die über den Cursorkoordinaten zentriert sind.
 
 
 ```C++
@@ -35,7 +35,7 @@ void Marker(LONG x, LONG y, HWND hwnd)
 
 
 
-Das System speichert die Koordinaten des Cursors im *LPARAM* -Parameter der [**WM \_ lbuttondown**](../inputdev/wm-lbuttondown.md) -Meldung, wenn der Benutzer die linke Maustaste drückt. Der folgende Code veranschaulicht, wie eine Anwendung diese Koordinaten abruft, bestimmt, ob Sie in Ihrem Client Bereich liegen, und übergibt sie an die markerfunktion, um den Marker zu zeichnen.
+Das System speichert die Koordinaten des Cursors im *lParam-Parameter* der [**\_ WM-LBUTTONDOWN-Nachricht,**](../inputdev/wm-lbuttondown.md) wenn der Benutzer die linke Maustaste drückt. Der folgende Code veranschaulicht, wie eine Anwendung diese Koordinaten erhält, bestimmt, ob sie sich innerhalb ihres Clientbereichs liegen, und übergibt sie an die Markerfunktion, um den Marker zu zeichnen.
 
 
 ```C++

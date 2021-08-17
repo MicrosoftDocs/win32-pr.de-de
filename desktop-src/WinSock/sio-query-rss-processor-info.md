@@ -17,7 +17,7 @@ ms.locfileid: "117740382"
 ---
 # <a name="sio_query_rss_processor_info-control-code"></a>SIO_QUERY_RSS_PROCESSOR_INFO-Steuerelementcode
 
-## <a name="description"></a>BESCHREIBUNG
+## <a name="description"></a>Beschreibung
 
 Der Steuerungscode **SIO \_ QUERY RSS PROCESSOR \_ \_ \_ INFO** fragt die Zuordnung zwischen einem Socket und einem RSS-Prozessorkern und NUMA-Knoten ab.
 

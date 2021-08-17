@@ -1,6 +1,6 @@
 ---
 title: D3DX11CreateAsyncFileLoader-Funktion (D3DX11async.h)
-description: Hinweis Die Hilfsprogrammbibliothek D3DX (D3DX 9, D3DX 10 und D3DX 11) ist für Windows 8 veraltet und wird für Windows Store-Apps nicht unterstützt. Siehe Hinweise. Erstellen Sie ein asynchrones Dateilader.
+description: Hinweis Die Hilfsprogrammbibliothek D3DX (D3DX 9, D3DX 10 und D3DX 11) ist für Windows 8 veraltet und wird für Windows Store Apps nicht unterstützt. Siehe Hinweise. Erstellen Sie ein asynchrones Dateiladeprogramm.
 ms.assetid: ee24ac00-3636-4900-9b8a-27778c9a2152
 keywords:
 - D3DX11CreateAsyncFileLoader-Funktion Direct3D 11
@@ -25,11 +25,11 @@ ms.locfileid: "119124865"
 # <a name="d3dx11createasyncfileloader-function"></a>D3DX11CreateAsyncFileLoader-Funktion
 
 > [!Note]  
-> Die Hilfsprogrammbibliothek D3DX (D3DX 9, D3DX 10 und D3DX 11) ist für Windows 8 veraltet und wird für Windows Store-Apps nicht unterstützt. Siehe Hinweise.
+> Die Hilfsprogrammbibliothek D3DX (D3DX 9, D3DX 10 und D3DX 11) ist für Windows 8 veraltet und wird für Windows Store Apps nicht unterstützt. Siehe Hinweise.
 
  
 
-Erstellen Sie ein asynchrones Dateilader.
+Erstellen Sie ein asynchrones Dateiladeprogramm.
 
 ## <a name="syntax"></a>Syntax
 
@@ -52,7 +52,7 @@ HRESULT D3DX11CreateAsyncFileLoader(
 
 Typ: **[ **LPCTSTR**](/windows/desktop/WinProg/windows-data-types)**
 
-Der Name der zu ladenden Datei. Wenn die Compilereinstellungen Unicode erfordern, wird der Datentyp LPCTSTR in LPCWSTR auflösen. Andernfalls wird der Datentyp in LPCSTR auflösen.
+Der Name der zu ladenden Datei. Wenn die Compilereinstellungen Unicode erfordern, wird der Datentyp LPCTSTR in LPCWSTR aufgelöst. Andernfalls wird der Datentyp in LPCSTR aufgelöst.
 
 </dd> <dt>
 
@@ -61,7 +61,7 @@ Der Name der zu ladenden Datei. Wenn die Compilereinstellungen Unicode erfordern
 
 Typ: **[ **ID3DX11DataLoader**](id3dx11dataloader.md)\*\***
 
-Adresse eines Zeigers auf das asynchrone Datenlader (siehe [**ID3DX11DataLoader-Schnittstelle**](id3dx11dataloader.md)).
+Adresse eines Zeigers auf das asynchrone Datenladeprogramm (siehe [**ID3DX11DataLoader-Schnittstelle).**](id3dx11dataloader.md)
 
 </dd> </dl>
 
@@ -69,15 +69,15 @@ Adresse eines Zeigers auf das asynchrone Datenlader (siehe [**ID3DX11DataLoader-
 
 Typ: **[ **HRESULT**](https://msdn.microsoft.com/library/Bb401631(v=MSDN.10).aspx)**
 
-Der Rückgabewert ist einer der Werte, die unter [Direct3D 11-Rückgabecodes aufgeführt sind.](d3d11-graphics-reference-returnvalues.md)
+Der Rückgabewert ist einer der In [Direct3D 11-Rückgabecodes aufgeführten](d3d11-graphics-reference-returnvalues.md)Werte.
 
 ## <a name="remarks"></a>Hinweise
 
-Es gibt keine Implementierung des asynchronen Ladeers außerhalb von D3DX 10 und D3DX 11.
+Es gibt keine Implementierung des asynchronen Ladevorgangs außerhalb von D3DX 10 und D3DX 11.
 
-Für Windows Store-Apps enthalten die DirectX-Beispiele (z. B. das [Direct3D-Tutorialbeispiel)](https://github.com/microsoftarchive/msdn-code-gallery-microsoft/tree/master/Official%20Windows%20Platform%20Sample/Direct3D%20tutorial%20sample)das **BasicLoader-Modul,** das das asynchrone Windows Runtime-Programmiermodell ([**AsyncBase**](/previous-versions/visualstudio/visual-studio-2012/br244878(v=vs.110))) verwendet.
+Für Windows Store-Apps enthalten die DirectX-Beispiele (z. B. das [Direct3D-Tutorialbeispiel)](https://github.com/microsoftarchive/msdn-code-gallery-microsoft/tree/master/Official%20Windows%20Platform%20Sample/Direct3D%20tutorial%20sample)das **BasicLoader-Modul,** das das asynchrone Programmiermodell Windows Runtime ([**AsyncBase**](/previous-versions/visualstudio/visual-studio-2012/br244878(v=vs.110))) verwendet.
 
-Für Win32-Desktop-Apps können [](/previous-versions/visualstudio/visual-studio-2010/ee207192(v=vs.100)) Sie die Concurrency Runtime verwenden, um etwas zu implementieren, das dem asynchronen Windows Runtime-Modell ähnelt.
+Für Win32-Desktop-Apps können Sie die [Concurrency Runtime](/previous-versions/visualstudio/visual-studio-2010/ee207192(v=vs.100)) verwenden, um etwas ähnliches wie das asynchrone Programmiermodell Windows Runtime zu implementieren.
 
 ## <a name="requirements"></a>Anforderungen
 

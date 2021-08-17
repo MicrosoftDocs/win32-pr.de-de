@@ -17,9 +17,9 @@ ms.locfileid: "117740409"
 ---
 # <a name="sio_loopback_fast_path-control-code"></a>SIO_LOOPBACK_FAST_PATH-Steuerelementcode
 
-## <a name="description"></a>BESCHREIBUNG
+## <a name="description"></a>Beschreibung
 
-Der **SIO \_ LOOPBACK \_ FAST \_ PATH-Steuerungscode** konfiguriert einen TCP-Socket für geringere Latenz und schnellere Vorgänge auf der Loopbackschnittstelle.
+Der **SIO \_ LOOPBACK \_ FAST PATH-Steuerungscode \_** konfiguriert einen TCP-Socket für geringere Latenz und schnellere Vorgänge auf der Loopbackschnittstelle.
 
 **Wichtig**  **SIO \_ LOOPBACK \_ FAST \_ PATH** ist veraltet und wird nicht empfohlen, in Ihrem Code verwendet zu werden.
 
@@ -64,7 +64,7 @@ Ein Deskriptor, der einen Socket identifiziert.
 ### <a name="dwiocontrolcode"></a>dwIoControlCode
 
 Der Steuerelementcode für den Vorgang.
-Verwenden Sie **SIO \_ LOOPBACK \_ FAST \_ PATH** für diesen Vorgang.
+Verwenden Sie für diesen Vorgang **SIO \_ LOOPBACK \_ FAST \_ PATH.**
 
 ### <a name="lpvinbuffer"></a>lpvInBuffer
 
@@ -179,20 +179,20 @@ Wenn der Empfangspuffer voll ist, garantiert der TCP/IP-Stapel, dass die Gesende
 
 Tcp-Loopbackverbindungen mit schnellem Pfad bei Vorhandensein einer WFP-Rückruffunktion (Windows Filtering Platform) für Verbindungsdaten müssen den nicht optimierten langsamen Pfad für loopback verwenden.
 WFP-Filter verhindern daher die Verwendung dieses neuen schnellen Loopbackpfads.
-Wenn ein WFP-Filter aktiviert ist, wird das System den langsamen Pfad auch dann verwenden, wenn **die SIO \_ \_ LOOPBACK-FAST \_ PATH** IOCTL festgelegt wurde.
+Wenn ein WFP-Filter aktiviert ist, wird das System den langsamen Pfad auch dann verwenden, wenn **der SIO \_ LOOPBACK-FAST \_ \_ PATH** IOCTL festgelegt wurde.
 Dadurch wird sichergestellt, dass Anwendungen im Benutzermodus über die vollständige WFP-Sicherheitsfunktion verfügen.
 
 Standardmäßig ist **SIO \_ LOOPBACK \_ FAST \_ PATH** deaktiviert.
 
 Nur eine Teilmenge der TCP/IP-Socketoptionen wird unterstützt, wenn **SIO \_ LOOPBACK \_ FAST \_ PATH** IOCTL verwendet wird, um den schnellen Loopbackpfad für einen Socket zu aktivieren.
-Die Liste der unterstützten Optionen enthält Folgendes:
+Die Liste der unterstützten Optionen umfasst Folgendes:
 
 * **\_IP-Tl**
 * **IP \_ UNICAST \_ IF**
 * **IPV6 \_ \_ UNICAST-HOPS**
 * **IPV6 \_ UNICAST \_ IF**
 * **IPV6 \_ V6ONLY**
-* **DAHER \_ BEDINGTES \_ AKZEPTIEREN**
+* **BEDINGTES \_ \_ AKZEPTIEREN ALSO**
 * **SO \_ EXCLUSIVEADDRUSE**
 * **\_ \_ PORTSKALIERBARKEIT**
 * **SO \_ RCVBUF**

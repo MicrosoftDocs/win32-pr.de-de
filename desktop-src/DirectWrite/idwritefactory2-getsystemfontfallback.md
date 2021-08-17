@@ -1,10 +1,10 @@
 ---
 title: IDWriteFactory2 GetSystemFontFallback-Methode
-description: Erstellt ein Fallbackobjekt für Schriftarten aus der Fallbackliste der Systemschriftart.
+description: Erstellt ein Schriftartfallbackobjekt aus der Fallbackliste der Systemschriftart.
 ms.assetid: 7F2BDB39-2CB4-4DB7-BBBA-74B0C07E7420
 keywords:
-- GetSystemFontFallback-Methode – Direkter Schreibzugriff
-- GetSystemFontFallback-Methode Direct Write, IDWriteFactory2-Schnittstelle
+- GetSystemFontFallback-Methode Direct Write
+- GetSystemFontFallback-Methode Direct Write , IDWriteFactory2-Schnittstelle
 - IDWriteFactory2-Schnittstelle Direct Write , GetSystemFontFallback-Methode
 topic_type:
 - apiref
@@ -24,7 +24,7 @@ ms.locfileid: "119329445"
 ---
 # <a name="idwritefactory2getsystemfontfallback-method"></a>IDWriteFactory2::GetSystemFontFallback-Methode
 
-Erstellt ein Fallbackobjekt für Schriftarten aus der Fallbackliste der Systemschriftart.
+Erstellt ein Schriftartfallbackobjekt aus der Fallbackliste der Systemschriftart.
 
 ## <a name="syntax"></a>Syntax
 
@@ -54,7 +54,7 @@ Enthält eine Adresse eines Zeigers auf das neu erstellte Schriftartfallbackobje
 
 Typ: **HRESULT**
 
-Wenn diese Methode erfolgreich ist, wird **S \_ OK zurückgegeben.** Andernfalls wird ein **HRESULT-Fehlercode** zurückgegeben.
+Wenn diese Methode erfolgreich ist, wird **S \_ OK** zurückgegeben. Andernfalls wird ein **HRESULT-Fehlercode** zurückgegeben.
 
 ## <a name="see-also"></a>Weitere Informationen
 

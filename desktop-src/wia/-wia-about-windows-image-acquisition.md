@@ -1,5 +1,5 @@
 ---
-description: Die Windows WiA-Schnittstelle (Image Acquisition) ist sowohl eine API als auch eine Gerätetreiberschnittstelle (Device Driver Interface, DDI).
+description: Die Windows WIA-Schnittstelle (Image Acquisition) ist sowohl eine API als auch eine Gerätetreiberschnittstelle (Device Driver Interface, DDI).
 ms.assetid: 725543f8-6e33-4e22-904c-95cbec0388c8
 title: Informationen Windows Bilderfassung
 ms.topic: article
@@ -13,22 +13,22 @@ ms.locfileid: "119451300"
 ---
 # <a name="about-windows-image-acquisition"></a>Informationen Windows Bilderfassung
 
-Die Windows WiA-Schnittstelle (Image Acquisition) ist sowohl eine API als auch eine Gerätetreiberschnittstelle (Device Driver Interface, DDI). Die WIA-API ist so konzipiert, dass Anwendungen:
+Die Windows WIA-Schnittstelle (Image Acquisition) ist sowohl eine API als auch eine Gerätetreiberschnittstelle (Device Driver Interface, DDI). Die WIA-API ist so konzipiert, dass Anwendungen:
 
 -   Ausführung in einer robusten und stabilen Umgebung.
--   Minimieren sie Interoperabilitätsprobleme.
+-   Minimieren Sie Interoperabilitätsprobleme.
 -   Aufzählen der verfügbaren Geräte für die Bilderfassung
 -   Erstellen Sie verbindungen mit mehreren Geräten gleichzeitig.
 -   Abfragen von Eigenschaften von Geräten auf standardmäßige und erweiterbare Weise.
--   Erwerben von Gerätedaten mithilfe von Standard- und Hochleistungsübertragungsmechanismen.
+-   Erfassen sie Gerätedaten mithilfe von Standardübertragungsmechanismen und Hochleistungsübertragungsmechanismen.
 -   Verwalten von Bildeigenschaften bei Datenübertragungen.
--   Benachrichtigung über eine Vielzahl von Geräteereignissen.
+-   Sie werden über eine Vielzahl von Geräteereignissen benachrichtigt.
 
 Wiaddi ist so konzipiert, dass die Menge an Code minimiert wird, den ein Hardwareanbieter schreiben muss, während gleichzeitig die Flexibilität beim Erstellen einzelner Lösungen erhalten ist. Dies wird erreicht durch:
 
 -   Bereitstellen einer Standardgerätedienstbibliothek, die die meisten Treibervorgänge ausführt.
 -   Förderung von Branchenstandards für die Gerätekommunikation, sodass ein WIA-Treiber die meisten WIA-Geräte unterstützt. Beispiel: Picture Transfer Protocol (PTP).
--   Zulassen, dass der Gerätetreiber benutzerdefinierte Schnittstellen unterstützt, ohne dass die Standardgerätedienstbibliothek verwendet werden muss. Treiber müssen jedoch weiterhin die WIA-Standardschnittstellen implementieren.
+-   Ermöglicht dem Gerätetreiber die Unterstützung benutzerdefinierter Schnittstellen, ohne dass die Standardgerätedienstbibliothek verwendet werden muss. Treiber müssen jedoch weiterhin die WIA-Standardschnittstellen implementieren.
 
 Dieser Abschnitt bietet eine kurze Übersicht über die WIA-Schnittstelle in den folgenden Bereichen:
 
@@ -37,7 +37,7 @@ Dieser Abschnitt bietet eine kurze Übersicht über die WIA-Schnittstelle in den
 -   [TWAIN-Kompatibilität](-wia-twain-compatibility.md)
 -   [WIA-Geräte-Manager](-wia-wia-device-manager.md)
 -   [WIA Minidriver-Dienstbibliothek](-wia-wia-minidriver-service-library.md)
--   [WIA Minidriver](-wia-wia-minidriver.md)
+-   [WIA-Minitreiber](-wia-wia-minidriver.md)
 
  
 

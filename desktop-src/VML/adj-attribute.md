@@ -1,48 +1,48 @@
 ---
-title: ADJ-Attribut
-description: ADJ-Attribut
+title: Adj-Attribut
+description: Adj-Attribut
 ms.assetid: f0f31e6c-9dde-4082-88a2-da2d0012b9ae
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: ff83371cbca29ee687875343976b312466d6a78c
-ms.sourcegitcommit: 592c9bbd22ba69802dc353bcb5eb30699f9e9403
+ms.openlocfilehash: 85869500cc3e9f86e0f48e67f63cfd9e6ed2cff5580caa04994169a9e4b50df8
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "106339496"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119137143"
 ---
-# <a name="adj-attribute"></a>ADJ-Attribut
+# <a name="adj-attribute"></a>Adj-Attribut
 
-In diesem Thema wird VML beschrieben, eine Funktion, die ab Windows Internet Explorer 9 veraltet ist. Webseiten und Anwendungen, die auf VML basieren, sollten zu SVG oder anderen allgemein unterstützten Standards migriert werden.
+In diesem Thema wird VML beschrieben, ein Feature, das ab Version 9 Windows Internet Explorer ist. Webseiten und Anwendungen, die auf VML basieren, sollten zu SVG oder anderen weit verbreiteten Standards migriert werden.
 
 > [!Note]  
-> Ab Dezember 2011 wurde dieses Thema archiviert. Daher wird er nicht mehr aktiv verwaltet. Weitere Informationen finden Sie unter [archivierte Inhalte](/previous-versions/windows/internet-explorer/ie-developer/). Informationen, Empfehlungen und Anleitungen zur aktuellen Version von Windows Internet Explorer finden Sie im [Internet Explorer Developer Center](https://msdn.microsoft.com/ie/).
+> Seit Dezember 2011 wurde dieses Thema archiviert. Daher wird sie nicht mehr aktiv verwaltet. Weitere Informationen finden Sie unter [Archivierter Inhalt.](/previous-versions/windows/internet-explorer/ie-developer/) Informationen, Empfehlungen und Anleitungen zur aktuellen Version von Windows Internet Explorer finden Sie im [Internet Explorer Developer Center.](https://msdn.microsoft.com/ie/)
 
- 
+ 
 
-Gibt einen Anpassungswert an, der verwendet wird, um Werte für eine Formel zu definieren. Lese-/Schreibzugriff. **Zeichenfolge**.
+Gibt einen Anpassungswert an, mit dem Werte für eine Formel definiert werden. Lese-/Schreibzugriff. **Zeichenfolge.**
 
 **Gilt für**
 
-[Form](shape-element--vml.md)
+[Formen](shape-element--vml.md)
 
 **Tagsyntax**
 
-<v: *Element* adj = " *Expression* " >
+<v: *element* adj="-Ausdruck "> 
 
-**Skript Syntax**
+**Skriptsyntax**
 
-*Element* . adj = "*Ausdruck*"
+*element* .adj="*expression*"
 
-*Ausdruck* = *Element*. ADJ
+*expression* = *Element*.adj
 
 **Anmerkungen**
 
-**ADJ** dient zum Bereitstellen von anpassbaren Punkten für eine Formel. Bei Verwendung in Tags ist **ADJ** eine durch Trennzeichen getrennte Zeichenfolge mit bis zu acht Werten. Einige Werte werden möglicherweise ausgelassen. Beispielsweise ist "0, 1, 2,, 4, 5,, 7" eine gültige Zeichenfolge, aber das vierte und das siebte Element enthalten keine Werte (Elemente werden beginnend mit 0 gezählt).
+**Adj** wird verwendet, um anpassbare Punkte für eine Formel zur Verfügung zu stellen. Bei Verwendung in Tags ist **Adj** eine durch Trennzeichen getrennte Zeichenfolge mit bis zu 8 Werten. Einige Werte werden möglicherweise ausgelassen. Beispielsweise wäre "0,1,2,,4,5,,7" eine gültige Zeichenfolge, aber das vierte und das siebten Elemente hätten keine Werte (Elemente werden ab 0 gezählt).
 
-Bei der Skripterstellung verwendet **ADJ** den [ivganpassungen](msdn-online-vml-ivgadjustments-data-type.md) -Datentyp.
+Für die **Skripterstellung verwendet Adj** den [IVgAdjustments-Datentyp.](msdn-online-vml-ivgadjustments-data-type.md)
 
-*VML-Standard Attribut*
+*VML-Standardattribut*
 
 **Siehe auch**
 
@@ -50,7 +50,7 @@ Bei der Skripterstellung verwendet **ADJ** den [ivganpassungen](msdn-online-vml-
 
 **Beispiel**
 
-Ein einfaches Quadrat wird mit Anpassungen erstellt. Zuerst wird die **ADJ** -Zeichenfolge erstellt, um acht Anpassungs Werte zu definieren. Dann wird auf jeden Anpassungswert durch eine der acht Formeln verwiesen, wobei jeder Anpassungswert durch ein Nummern Zeichen () vorangestellt wird \# . Schließlich wird ein Pfad durch eine Zeichenfolge definiert, die auf die Formeln verweist, wobei jeder Formel das Zeichen "at" (@) vorangestellt ist.
+Ein einfaches Quadrat wird mit Anpassungen erstellt. Zuerst wird die **Adj-Zeichenfolge** erstellt, um acht Anpassungswerte zu definieren. Anschließend wird auf jeden Anpassungswert von einer der acht Formeln verwiesen, und jeder Anpassungswert wird durch ein Zahlenzeichen ( \# ) gekennzeichnet. Schließlich wird ein Pfad durch eine Zeichenfolge definiert, die auf die Formeln verweist, und jede Formel wird durch das Zeichen "at" (@) gekennzeichnet.
 
 
 ```HTML
@@ -75,8 +75,8 @@ Ein einfaches Quadrat wird mit Anpassungen erstellt. Zuerst wird die **ADJ** -Ze
 
 
 
-[ADJ-Attribut Beispiel](/previous-versions/bb229662(v=vs.85)) (erfordert Microsoft Internet Explorer 5 oder höher)
+[Adj-Attributbeispiel](/previous-versions/bb229662(v=vs.85)) (erfordert Microsoft Internet Explorer 5 oder höher.)
 
- 
+ 
 
- 
+ 

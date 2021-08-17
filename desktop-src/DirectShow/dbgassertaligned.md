@@ -1,7 +1,7 @@
 ---
-description: Testet, ob ein Zeiger an einer angegebenen Grenze ausgerichtet ist. Andernfalls ruft dieses Makro das ASSERT-Makro auf. Wird in Einzelhandels Builds ignoriert.
+description: Testet, ob ein Zeiger an einer angegebenen Grenze ausgerichtet ist. Falls nicht, ruft dieses Makro das ASSERT-Makro auf. Wird in Einzelhandelsbuilds ignoriert.
 ms.assetid: 4d9ec3a9-7107-45a3-a7aa-28d6e38fa92a
-title: Dbgassertaligned-Makro (wxdebug. h)
+title: DbgAssertAligned-Makro (Wxdebug.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,16 +13,16 @@ api_type:
 - HeaderDef
 api_location:
 - Wxdebug.h
-ms.openlocfilehash: 22b357f7f28e9df04ce36636e3972dbadc3036a6
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 36b835ccd7fd82e226eb76dfb45ca4cfcd034a713da0d3639e91fba8aa7e4fca
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106361485"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118953349"
 ---
-# <a name="dbgassertaligned-macro"></a>Dbgassertaligned-Makro
+# <a name="dbgassertaligned-macro"></a>DbgAssertAligned-Makro
 
-Testet, ob ein Zeiger an einer angegebenen Grenze ausgerichtet ist. Andernfalls ruft dieses Makro das [**Assert**](assert.md) -Makro auf. Wird in Einzelhandels Builds ignoriert.
+Testet, ob ein Zeiger an einer angegebenen Grenze ausgerichtet ist. Falls nicht, ruft dieses Makro das [**ASSERT-Makro**](assert.md) auf. Wird in Einzelhandelsbuilds ignoriert.
 
 ## <a name="syntax"></a>Syntax
 
@@ -40,14 +40,14 @@ void DbgAssertAligned(
 
 <dl> <dt>
 
-*ptr* 
+*Ptr* 
 </dt> <dd>
 
-Die Zeiger Variable.
+Zeigervariable.
 
 </dd> <dt>
 
-*Richt* 
+*Ausrichtung* 
 </dt> <dd>
 
 Erforderliche Ausrichtung.
@@ -64,15 +64,15 @@ Dieses Makro gibt keinen Wert zurück.
 
 | Anforderung | Wert |
 |-------------------|----------------------------------------------------------------------------------------------------------|
-| Header<br/> | <dl> <dt>Wxdebug. h (Include Streams. h)</dt> </dl> |
+| Header<br/> | <dl> <dt>Wxdebug.h (include Streams.h)</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[Assert-und breakpointmakros](assert-and-breakpoint-macros.md)
+[Assert- und Breakpoint-Makros](assert-and-breakpoint-macros.md)
 </dt> </dl>
 
  

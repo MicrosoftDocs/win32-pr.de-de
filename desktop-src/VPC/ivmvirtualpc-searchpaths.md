@@ -1,6 +1,6 @@
 ---
 title: IVMVirtualPC SearchPaths-Eigenschaft (VPCCOMInterfaces.h)
-description: Dateisystempfade, die zum Suchen von Dateien verwendet werden, die dem virtuellen Windows zugeordnet sind.
+description: Dateisystempfade, die verwendet werden, um Dateien zu suchen, die dem virtuellen Windows zugeordnet sind.
 ms.assetid: 2a2deee5-7e6b-4b90-8ce9-0b0dbeef0f30
 keywords:
 - SearchPaths-Eigenschaft Virtueller PC

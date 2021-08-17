@@ -1,23 +1,23 @@
 ---
-description: Der Installer legt die Windows Folder-Eigenschaft auf den vollständigen Pfad des Windows-Ordners fest.
+description: Das Installationsprogramm legt die WindowsFolder-Eigenschaft auf den vollständigen Pfad des Ordners Windows fest.
 ms.assetid: 196f7862-8dfc-4214-845f-7dc1f5c709f3
-title: Windowsfolder (Eigenschaft)
+title: WindowsFolder-Eigenschaft
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: ad1530c2dd82ae4d0477a8632aab82b22206a08a
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 5cbf8bb74099d227e28e23abed9081fd7dd26c845a43894bf4e1f9acbba681e5
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106370141"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119145213"
 ---
-# <a name="windowsfolder-property"></a>Windowsfolder (Eigenschaft)
+# <a name="windowsfolder-property"></a>WindowsFolder-Eigenschaft
 
-Der Installer legt die Windows **Folder** -Eigenschaft auf den vollständigen Pfad des Windows-Ordners fest.
+Das Installationsprogramm legt die **WindowsFolder-Eigenschaft** auf den vollständigen Pfad des Ordners Windows fest.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Dieser Ordner ist lokal, auch wenn er für freigegebene Fenster konfiguriert ist.
+Dieser Ordner ist lokal, auch wenn er für freigegebene Windows.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -25,7 +25,7 @@ Dieser Ordner ist lokal, auch wenn er für freigegebene Fenster konfiguriert ist
 
 | Anforderung | Wert |
 |--------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Version<br/> | Windows Installer 5,0 unter Windows Server 2012, Windows 8, Windows Server 2008 R2 oder Windows 7. Windows Installer 4,0 oder Windows Installer 4,5 unter Windows Server 2008 oder Windows Vista. Windows Installer unter Windows Server 2003 oder Windows XP finden Sie in den [Windows Installer Run-Time Anforderungen](windows-installer-portal.md) Informationen zu den minimalen Windows-Service Pack, die für eine Windows Installer Version erforderlich sind.<br/> |
+| Version<br/> | Windows Installer 5.0 auf Windows Server 2012, Windows 8, Windows Server 2008 R2 oder Windows 7. Windows Installer 4.0 oder Windows Installer 4.5 auf Windows Server 2008 oder Windows Vista. Windows Das Installationsprogramm auf Windows Server 2003 oder Windows XP finden Sie unter [Windows Installer Run-Time Requirements](windows-installer-portal.md) (Run-Time-Anforderungen für Windows Service Pack), das für eine Windows Installer-Version erforderlich ist.<br/> |
 
 
 

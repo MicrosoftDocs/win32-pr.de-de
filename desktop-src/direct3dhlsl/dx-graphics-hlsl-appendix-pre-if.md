@@ -1,9 +1,9 @@
 ---
-title: " if-, elif-, else-und endif-Direktiven"
+title: " if-, elif-, else- und endif-Direktiven"
 description: Präprozessordirektiven, die die Kompilierung von Teilen einer Quelldatei steuern.
 ms.assetid: f29e5a9b-cc0c-4fca-aac7-809a226eda58
 keywords:
-- if-, elif-, else-und endif-Direktive HLSL
+- if-, elif-, else- und endif-Direktiven HLSL
 topic_type:
 - apiref
 api_name:
@@ -13,23 +13,23 @@ api_type:
 ms.topic: reference
 ms.date: 05/31/2018
 api_location: ''
-ms.openlocfilehash: a32206232c726f19febf77c3f3270882894a6747
-ms.sourcegitcommit: 592c9bbd22ba69802dc353bcb5eb30699f9e9403
+ms.openlocfilehash: bb5f4716509905d4ce800abbe4cb11b85d116d7a5afd5a56301b1ecb5ce0724b
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "104101659"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117726450"
 ---
-# <a name="if-elif-else-and-endif-directives"></a>\#If \# -, elif \# -, else-und \# EndIf-Direktiven
+# <a name="if-elif-else-and-endif-directives"></a>\#if-, \# \# elif-, else- und \# endif-Direktiven
 
 Präprozessordirektiven, die die Kompilierung von Teilen einer Quelldatei steuern.
 
 
 
-| \#Wenn *ifcondition* ...         |
+| \#*, wenn ifCondition* ...         |
 |--------------------------------|
-| \[\#Elif *elif Condition* ...\] |
-| \[\#else...\]                 |
+| \[\#elif *elifCondition* ...\] |
+| \[\#oder...\]                 |
 | \#endif                        |
 
 
@@ -40,30 +40,30 @@ Präprozessordirektiven, die die Kompilierung von Teilen einer Quelldatei steuer
 
 
 
-| Element                                                                                                                                                                                                 | BESCHREIBUNG                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    |
+| Element                                                                                                                                                                                                 | Beschreibung                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    |
 |------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| <span id="ifCondition"></span><span id="ifcondition"></span><span id="IFCONDITION"></span>*ifcondition*<br/>                                                                                   | Die auszuwertende primäre Bedingung. Wenn dieser Parameter zu einem Wert ungleich 0 (null) ausgewertet wird, wird der gesamte Text zwischen dieser \# if-Direktive und der nächsten Instanz der \# elif-, \# else-oder \# endif-Direktive in der Übersetzungseinheit beibehalten. andernfalls wird der nachfolgende Quellcode nicht beibehalten. <br/> Mit der Bedingung kann der Präprozessoroperator definiert werden, um zu bestimmen, ob eine bestimmte präprozessorkonstante oder ein bestimmtes Makro definiert ist. Diese Verwendung entspricht der Verwendung der [ \# ifdef](dx-graphics-hlsl-appendix-pre-ifdef.md) -Direktive. <br/> Weitere Informationen zu den Werten des Parameters " *ifcondition* " finden Sie im Abschnitt "Hinweise". <br/>                                                                                        |
-| <span id="elifCondition__optional__________"></span><span id="elifcondition__optional__________"></span><span id="ELIFCONDITION__OPTIONAL__________"></span>*elif Condition* \[ optionale\] <br/> | Andere auszuwertende Bedingung. Wenn der *ifcondition* -Parameter und alle vorherigen \# elif-Direktiven NULL ergeben und dieser Parameter zu einem Wert ungleich 0 (null) ausgewertet wird, wird der gesamte Text zwischen dieser \# elif-Direktive und der nächsten Instanz der \# elif-, \# else-oder \# endif-Direktive in der Übersetzungseinheit beibehalten. andernfalls wird der nachfolgende Quellcode nicht beibehalten. <br/> Mit der Bedingung kann der Präprozessoroperator definiert werden, um zu bestimmen, ob eine bestimmte präprozessorkonstante oder ein bestimmtes Makro definiert ist. Diese Verwendung entspricht der Verwendung der [ \# ifdef](dx-graphics-hlsl-appendix-pre-ifdef.md) -Direktive. <br/> Im Abschnitt "Hinweise" finden Sie Einschränkungen für den Wert des *elilarcondition* -Parameters. <br/> |
+| <span id="ifCondition"></span><span id="ifcondition"></span><span id="IFCONDITION"></span>*ifCondition*<br/>                                                                                   | Die primäre auszuwertende Bedingung. Wenn dieser Parameter zu einem Wert ungleich 0 (null) ausgewertet wird, wird der gesamte Text zwischen dieser \# if-Direktive und der nächsten Instanz der \# elif-, \# else- oder \# endif-Direktive in der Übersetzungseinheit beibehalten. Andernfalls wird der nachfolgende Quellcode nicht beibehalten. <br/> Die Bedingung kann den definierten Präprozessoroperator verwenden, um zu bestimmen, ob eine bestimmte Präprozessorkonstante oder ein bestimmtes Makro definiert ist. Diese Verwendung entspricht der Verwendung der [ \# ifdef-Direktive.](dx-graphics-hlsl-appendix-pre-ifdef.md) <br/> Einschränkungen für den Wert des *ifCondition-Parameters* finden Sie im Abschnitt Hinweise. <br/>                                                                                        |
+| <span id="elifCondition__optional__________"></span><span id="elifcondition__optional__________"></span><span id="ELIFCONDITION__OPTIONAL__________"></span>*elifCondition* \[ Optional\] <br/> | Andere auszuwertende Bedingung. Wenn der *ifCondition-Parameter* und alle vorherigen \# elif-Direktiven zu 0 (null) ausgewertet werden und dieser Parameter einen Wert ungleich 0 ergibt, wird der gesamte Text zwischen dieser \# elif-Direktive und der nächsten Instanz der \# elif-, \# else- oder \# endif-Direktive in der Übersetzungseinheit beibehalten. Andernfalls wird der nachfolgende Quellcode nicht beibehalten. <br/> Die Bedingung kann den definierten Präprozessoroperator verwenden, um zu bestimmen, ob eine bestimmte Präprozessorkonstante oder ein bestimmtes Makro definiert ist. Diese Verwendung entspricht der Verwendung der [ \# ifdef-Direktive.](dx-graphics-hlsl-appendix-pre-ifdef.md) <br/> Einschränkungen für den Wert des *elifCondition-Parameters* finden Sie im Abschnitt Hinweise. <br/> |
 
 
 
  
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Jede \# if-Direktive in einer Quelldatei muss mit einer abschließenden \# endif-Direktive übereinstimmen. Eine beliebige Anzahl von \# elif-Direktiven kann zwischen der \# if-und der \# endif-Direktive auftreten, aber \# es ist höchstens eine Else-Direktive zulässig. Die \# else-Direktive muss, falls vorhanden, die letzte Direktive vor \# EndIf sein. Bedingte Kompilierungs Direktiven, die in include-Dateien enthalten sind, müssen die gleichen Bedingungen erfüllen.
+Jede \# if-Direktive in einer Quelldatei muss mit einer schließenden \# endif-Direktive abgegleichen werden. Eine beliebige Anzahl von \# Elifdirektiven kann zwischen der \# if- und \# endif-Direktive angezeigt werden, aber höchstens eine \# andere Direktive ist zulässig. Falls \# vorhanden, muss die else-Direktive die letzte Direktive vor \# endif sein. Anweisungen für die bedingte Kompilierung, die in Includedateien enthalten sind, müssen dieselben Bedingungen erfüllen.
 
-Die \# if-, \# elif \# -, else-und \# EndIf-Direktiven können in den Textteilen anderer \# if-Direktiven geschachtelt werden. Jede geschsted \# else-, \# elif-oder \# endif-Direktive gehört der nächstgelegenen vorangehenden \# if-Direktive an.
+Die \# \# if-, \# elif-, else- und \# endif-Direktiven können in den Textabschnitten anderer if-Direktiven geschachtelt \# werden. Jede geschachtelte \# \# else-, elif- oder \# endif-Direktive gehört zur nächstgelegenen vorangehenden \# if-Direktive.
 
-Wenn keine Bedingungen zu einem Wert ungleich 0 (null) ausgewertet werden, wählt der Präprozessor den TextBlock nach der \# else-Direktive aus. Wenn die \# else-Klausel ausgelassen wird und keine Bedingungen zu einem Wert ungleich 0 (null) ausgewertet werden, wird kein TextBlock ausgewählt.
+Wenn keine Bedingungen zu einem Wert ungleich 0 (null) ausgewertet werden, wählt der Präprozessor den Textblock nach der \# else-Anweisung aus. Wenn die \# else-Klausel ausgelassen wird und keine Bedingungen zu einem Wert ungleich 0 (null) ausgewertet werden, wird kein Textblock ausgewählt.
 
-Die Parameter " *ifcondition* " und " *elimode Condition* " erfüllen viele der folgenden Anforderungen:
+Die Parameter *ifCondition* und *elifCondition* erfüllen die folgenden Anforderungen:
 
--   Ausdrücke für die bedingte Kompilierung werden als [**signierte lange**](https://msdn.microsoft.com/library/cc953fe1(v=VS.71).aspx) Werte behandelt, und diese Ausdrücke werden mit denselben Regeln wie Ausdrücke in C++ ausgewertet.
+-   Ausdrücke für die bedingte Kompilierung werden als lange Werte mit [**Vorzeichen**](https://msdn.microsoft.com/library/cc953fe1(v=VS.71).aspx) behandelt, und diese Ausdrücke werden mit den gleichen Regeln wie Ausdrücke in C++ ausgewertet.
 -   Ausdrücke müssen einen ganzzahligen Typ aufweisen und können nur ganzzahlige Konstanten und Zeichenkonstanten und den defined -Operator umfassen.
--   Ausdrücke können nicht **sizeof** oder einen Typumwandlungs Operator verwenden.
+-   Ausdrücke können **sizeof** oder einen Typcastoperator nicht verwenden.
 -   Die Zielumgebung ist möglicherweise nicht in der Lage, alle Bereiche von ganzen Zahlen darzustellen.
--   Die Übersetzung stellt den Typ " [**int**](/windows/desktop/WinProg/windows-data-types) " mit dem Typ " **Long**" und " [**Ganzzahl ohne Vorzeichen int**](https://msdn.microsoft.com/library/cc953fe1(v=VS.71).aspx) " gleich " **Ganzzahl ohne Vorzeichen long**" dar.
+-   Die Übersetzung stellt den Typ [**int**](/windows/desktop/WinProg/windows-data-types) wie den Typ **long** und [**unsigned int**](https://msdn.microsoft.com/library/cc953fe1(v=VS.71).aspx) den gleichen typ wie **unsigned long** dar.
 -   Das Konvertierungsprogramm kann Zeichenkonstanten in einen Satz von Codewerten übersetzen, die sich vom Satz für die Zielumgebung unterscheiden. Um die Eigenschaften der Zielumgebung zu bestimmen, überprüfen Sie die Werte der Makros von LIMITS.H in einer für die Zielumgebung erstellten Anwendung.
 -   Der Ausdruck darf keine Umgebungsabfragen durchführen und muss von Implementierungsdetails auf dem Zielcomputer isoliert bleiben.
 
@@ -73,7 +73,7 @@ Dieser Abschnitt enthält Beispiele, die veranschaulichen, wie Präprozessordire
 
 ### <a name="use-of-the-defined-operator"></a>Verwendung des definierten Operators
 
-Das folgende Beispiel zeigt die Verwendung des definierten-Operators. Wenn das bezeichnerguthaben definiert ist, wird der-Befehl der **Credit** -Funktion kompiliert. Wenn der bezeichnerkennung definiert ist, wird der aufrufswert der **debitfunktion** kompiliert. Wenn kein Bezeichner definiert ist, wird der-Befehl der **Printerror** -Funktion kompiliert. Beachten Sie, dass "Guthaben" und "Guthaben" unterschiedliche Bezeichner in C und C++ sind, da sich ihre Fälle unterscheiden.
+Das folgende Beispiel zeigt die Verwendung des definierten Operators. Wenn der Bezeichner CREDIT definiert ist, wird der Aufruf der **Credit-Funktion** kompiliert. Wenn der Bezeichner DEBIT definiert ist, wird der Aufruf der **Debitfunktion** kompiliert. Wenn keiner der Bezeichner definiert ist, wird der Aufruf der **printerror-Funktion** kompiliert. Beachten Sie, dass "CREDIT" und "credit" unterschiedliche Bezeichner in C und C++ sind, da ihre Fälle unterschiedlich sind.
 
 
 ```
@@ -88,9 +88,9 @@ Das folgende Beispiel zeigt die Verwendung des definierten-Operators. Wenn das b
 
 
 
-### <a name="use-of-nested-if-directives"></a>Verwendung von nsted \# if-Direktiven
+### <a name="use-of-nested-if-directives"></a>Verwenden von geschachtelten \# if-Anweisungen
 
-Das folgende Beispiel zeigt, wie if-Direktiven geschachtelt \# werden. In diesem Beispiel wird davon ausgegangen, dass bereits eine symbolische Konstante mit dem Namen "DLEVEL" definiert wurde. Die \# elif-und \# else-Direktiven werden verwendet, um eine von vier Optionen basierend auf dem Wert von DLEVEL zu treffen. Der Konstante Stapel ist abhängig von der Definition von DLEVEL auf 0, 100 oder 200 festgelegt. Wenn DLEVEL größer als 5 ist, wird der Stapel nicht definiert.
+Das folgende Beispiel zeigt, wie if-Anweisungen geschachtelt \# werden. In diesem Beispiel wird davon ausgegangen, dass zuvor eine symbolische Konstante namens DLEVEL definiert wurde. Die \# Elif- und \# else-Direktiven werden verwendet, um basierend auf dem Wert von DLEVEL eine von vier Optionen zu treffen. Die Konstante STACK ist abhängig von der Definition von DLEVEL auf 0, 100 oder 200 festgelegt. Wenn DLEVEL größer als 5 ist, ist STACK nicht definiert.
 
 
 ```
@@ -122,9 +122,9 @@ Das folgende Beispiel zeigt, wie if-Direktiven geschachtelt \# werden. In diesem
 
 
 
-### <a name="use-for-including-header-files"></a>Verwenden zum Einschließen von Header Dateien
+### <a name="use-for-including-header-files"></a>Verwenden zum Einschließen von Headerdateien
 
-Eine übliche Verwendung für die bedingte Kompilierung besteht darin, mehrere Inklusionen derselben Headerdatei zu verhindern. In C++, in denen Klassen häufig in Header Dateien definiert werden, können Konstrukte für die bedingte Kompilierung verwendet werden, um mehrere Definitionen zu verhindern. Im folgenden Beispiel wird bestimmt, ob das symbolische Konstante Beispiel \_ H definiert ist. Wenn dies der Fall ist, wurde die Datei bereits eingeschlossen und muss nicht erneut verarbeitet werden. Wenn dies nicht der Wert ist, wird das Konstante Beispiel \_ H definiert, um das Beispiel anzuzeigen. H wurde bereits verarbeitet.
+Eine übliche Verwendung für die bedingte Kompilierung besteht darin, mehrere Inklusionen derselben Headerdatei zu verhindern. In C++, wo Klassen häufig in Headerdateien definiert werden, können Konstrukte für die bedingte Kompilierung verwendet werden, um mehrere Definitionen zu verhindern. Im folgenden Beispiel wird bestimmt, ob die symbolische Konstante EXAMPLE \_ H definiert ist. Wenn ja, wurde die Datei bereits eingeschlossen und muss nicht erneut verarbeitet werden. Andernfalls wird die Konstante EXAMPLE \_ H definiert, um dieses BEISPIEL anzugeben. H wurde bereits verarbeitet.
 
 
 ```

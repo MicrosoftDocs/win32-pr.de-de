@@ -1,7 +1,7 @@
 ---
-description: Legt Anmelde Informationen fest, die mit einem HTTP-Server verwendet werden sollen, egal ob es sich um einen Proxy Server oder einen ursprünglichen Server handelt.
+description: Legt Anmeldeinformationen fest, die mit einem HTTP-Server verwendet werden sollen, unabhängig davon, ob es sich um einen Proxyserver oder einen Ursprungsserver handelt.
 ms.assetid: d96c6e76-92b8-4ad7-8ca7-a9acbed523ff
-title: 'Iwinhttprequest:: Set-Anmelde Informationen-Methode'
+title: IWinHttpRequest::SetCredentials-Methode
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -14,16 +14,16 @@ api_type:
 - COM
 api_location:
 - Winhttp.dll
-ms.openlocfilehash: 46b0dfb321763a3b3bfe622e116f2e76c5e59423
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 9246352e78472461bfbfe37569d9bd631905fda03c87571ed7ed3dad04edb797
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106349916"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117744466"
 ---
-# <a name="iwinhttprequestsetcredentials-method"></a>Iwinhttprequest:: Set-Anmelde Informationen-Methode
+# <a name="iwinhttprequestsetcredentials-method"></a>IWinHttpRequest::SetCredentials-Methode
 
-Die  Methode setanmeldeinformationen legt die Anmelde Informationen für die Verwendung mit einem HTTP-Server fest, egal ob es sich um einen Proxy Server oder einen ursprünglichen Server handelt.
+Die **SetCredentials-Methode** legt Anmeldeinformationen fest, die mit einem HTTP-Server verwendet werden sollen, unabhängig davon, ob es sich um einen Proxyserver oder einen Ursprungsserver handelt.
 
 ## <a name="syntax"></a>Syntax
 
@@ -42,31 +42,31 @@ HRESULT SetCredentials(
 
 <dl> <dt>
 
-*Benutzername* \[ in\]
+*UserName* \[ In\]
 </dt> <dd>
 
 Gibt den Benutzernamen für die Authentifizierung an.
 
 </dd> <dt>
 
-*Kennwort* \[ in\]
+*Kennwort* \[ In\]
 </dt> <dd>
 
-Gibt das Kennwort für die Authentifizierung an. Dieser Parameter wird ignoriert, wenn *bstrUsername* **null** ist oder fehlt.
+Gibt das Kennwort für die Authentifizierung an. Dieser Parameter wird ignoriert, wenn *bstrUserName* **NULL ist** oder fehlt.
 
 </dd> <dt>
 
-*Flags* \[in\]
+*Flags* \[ In\]
 </dt> <dd>
 
-Gibt an, wann [**iwinhttprequest**](iwinhttprequest-interface.md) Anmelde Informationen verwendet. Kann einen der folgenden Werte aufweisen.
+Gibt an, wann [**IWinHttpRequest Anmeldeinformationen**](iwinhttprequest-interface.md) verwendet. Kann einer der folgenden Werte sein.
 
 
 
 | Wert                                                                                                               | Bedeutung                                        |
 |---------------------------------------------------------------------------------------------------------------------|------------------------------------------------|
-| <dl> <dt>HttpRequest \_ setanmelde Informationen \_ für \_ Server</dt> </dl> | Anmelde Informationen werden an einen Server übermittelt.<br/> |
-| <dl> <dt>HttpRequest \_ setanmelde Informationen \_ für \_ Proxy</dt> </dl>  | Anmelde Informationen werden an einen Proxy übermittelt.<br/>  |
+| <dl> <dt>HTTPREQUEST \_ SETCREDENTIALS \_ FÜR \_ SERVER</dt> </dl> | Anmeldeinformationen werden an einen Server übergeben.<br/> |
+| <dl> <dt>HTTPREQUEST \_ SETCREDENTIALS \_ FÜR \_ PROXY</dt> </dl>  | Anmeldeinformationen werden an einen Proxy übergeben.<br/>  |
 
 
 
@@ -76,22 +76,22 @@ Gibt an, wann [**iwinhttprequest**](iwinhttprequest-interface.md) Anmelde Inform
 
 ## <a name="return-value"></a>Rückgabewert
 
-Der Rückgabewert ist bei Erfolg **S \_ OK** oder andernfalls ein Fehlerwert.
+Der Rückgabewert ist **S \_ OK bei** Erfolg oder andernfalls ein Fehlerwert.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Diese Methode gibt einen Fehlerwert zurück, wenn ein [**offener**](iwinhttprequest-open.md) aufrufsvorgang nicht erfolgreich abgeschlossen wurde. Es wird davon ausgegangen, dass ein gewisses Maß an Interaktion mit einem Proxy Server oder Ursprungsserver auftreten muss, bevor Benutzer Anmelde Informationen für die Sitzung festlegen können. Außerdem können die Anmelde Informationen erst formatiert werden, wenn Benutzer wissen, welche Authentifizierungs Schemas unterstützt werden.
+Diese Methode gibt einen Fehlerwert zurück, wenn ein Aufruf von [**Open**](iwinhttprequest-open.md) nicht erfolgreich abgeschlossen wurde. Es wird davon ausgegangen, dass ein gewisses Maß an Interaktion mit einem Proxy- oder Ursprungsserver erfolgen muss, bevor Benutzer Anmeldeinformationen für die Sitzung festlegen können. Darüber hinaus können Benutzer die Anmeldeinformationen erst formatieren, wenn sie wissen, welche Authentifizierungsschemas unterstützt werden.
 
 > [!Note]  
-> Informationen zu Windows XP und Windows 2000 finden Sie im Abschnitt [Lauf Zeitanforderungen](winhttp-start-page.md) auf der WinHTTP-Start Seite.
+> Informationen Windows XP und Windows 2000 finden [](winhttp-start-page.md) Sie im Abschnitt Laufzeitanforderungen der WinHTTP-Startseite.
 
  
 
-Zum Authentifizieren des Servers und des Proxys muss die Anwendung **setanmelde** Informationen zweimal aufrufen. zuerst, wenn der *Flags* -Parameter auf **HttpRequest \_ setanmelde Informationen \_ für \_ Server** und Second festgelegt ist und der *Flags* -Parameter auf **HttpRequest \_ setanmelde Informationen \_ für \_ Proxy** festgelegt ist.
+Um sich sowohl beim Server als auch beim Proxy zu authentifizieren, muss die Anwendung **SetCredentials zweimal** aufrufen. zuerst mit dem *Flags-Parameter,* der auf **HTTPREQUEST \_ SETCREDENTIALS \_ FOR \_ SERVER** festgelegt ist, und dem zweiten Parameter, bei dem der *Flags-Parameter* auf **HTTPREQUEST \_ SETCREDENTIALS \_ FOR PROXY festgelegt \_ ist.**
 
 ## <a name="examples"></a>Beispiele
 
-Das folgende Beispiel zeigt, wie Sie eine HTTP-Verbindung öffnen, Anmelde Informationen für den Server festlegen, eine HTTP-Anforderung senden und den Antworttext lesen. Dieses Beispiel muss von einer Eingabeaufforderung aus ausgeführt werden.
+Das folgende Beispiel zeigt, wie Sie eine HTTP-Verbindung öffnen, Anmeldeinformationen für den Server festlegen, eine HTTP-Anforderung senden und den Antworttext lesen. Dieses Beispiel muss über eine Eingabeaufforderung ausgeführt werden.
 
 
 ```C++
@@ -191,7 +191,7 @@ int main()
 
 
 
-Im folgenden Beispielskript wird veranschaulicht, wie eine HTTP-Verbindung geöffnet, Anmelde Informationen für den Server festgelegt, Anmelde Informationen für einen Proxy festgelegt werden, wenn ein Proxy verwendet wird, eine HTTP-Anforderung gesendet und der Antworttext gelesen wird.
+Das folgende Skriptbeispiel zeigt, wie Sie eine HTTP-Verbindung öffnen, Anmeldeinformationen für den Server festlegen, Anmeldeinformationen für einen Proxy festlegen, sofern einer verwendet wird, eine HTTP-Anforderung senden und den Antworttext lesen.
 
 
 ```JScript
@@ -285,20 +285,20 @@ WScript.Echo(WinHttpReq.GetAllResponseHeaders());
 
 | Anforderung | Wert |
 |-------------------------------------|--------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Windows XP, Windows 2000 Professional mit SP3 \[ Desktop-Apps\]<br/>            |
-| Unterstützte Mindestversion (Server)<br/> | Windows Server 2003, Windows 2000-Server mit \[ nur SP3-Desktop-Apps\]<br/>         |
-| Verteilbare Komponente<br/>          | WinHTTP 5,0 und Internet Explorer 5,01 oder höher unter Windows XP und Windows 2000.<br/> |
-| IDL<br/>                      | <dl> <dt>HttpRequest. idl</dt> </dl> |
-| Bibliothek<br/>                  | <dl> <dt>WinHTTP. lib</dt> </dl>     |
+| Unterstützte Mindestversion (Client)<br/> | Windows XP, Windows 2000 Professional nur mit \[ SP3-Desktop-Apps\]<br/>            |
+| Unterstützte Mindestversion (Server)<br/> | Windows Server 2003, Windows 2000 Server nur mit \[ SP3-Desktop-Apps\]<br/>         |
+| Verteilbare Komponente<br/>          | WinHTTP 5.0 und Internet Explorer 5.01 oder höher unter Windows XP und Windows 2000.<br/> |
+| Idl<br/>                      | <dl> <dt>HttpRequest.idl</dt> </dl> |
+| Bibliothek<br/>                  | <dl> <dt>Winhttp.lib</dt> </dl>     |
 | DLL<br/>                      | <dl> <dt>Winhttp.dll</dt> </dl>     |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Iwinhttprequest**](iwinhttprequest-interface.md)
+[**IWinHttpRequest**](iwinhttprequest-interface.md)
 </dt> <dt>
 
 [**WinHttpRequest**](winhttprequest.md)

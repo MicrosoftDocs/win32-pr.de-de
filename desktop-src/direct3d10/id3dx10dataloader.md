@@ -37,7 +37,7 @@ Die **ID3DX10DataLoader-Schnittstelle** verfügt über diese Methoden.
 
 
 
-| Methode                                             | BESCHREIBUNG                                                                                                                                                                                                                        |
+| Methode                                             | Beschreibung                                                                                                                                                                                                                        |
 |:---------------------------------------------------|:-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | [**Dekomprimieren**](id3dx10dataloader-decompress.md) | Wird verwendet, um codierte Daten zu dekomprimiert. In der Regel wird dies verwendet, um Ressourcen aus Dateisystemen wie ZIP-Dateien zu laden. Beim Laden aus einer nicht komprimierten Ressource muss die Dekomprimierungsphase keine Arbeit leisten.<br/> |
 | [**Zerstören**](id3dx10dataloader-destroy.md)       | Wird von einer [**ID3DX10ThreadPump-Schnittstelle**](id3dx10threadpump.md) verwendet, um das Ladeprogramm nach Abschluss eines Arbeitselements zu zerstören.<br/>                                                                                                   |

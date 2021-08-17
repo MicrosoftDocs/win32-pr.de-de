@@ -1,7 +1,7 @@
 ---
-description: Beschreibt einen dreieckigen Patch für hohe Reihenfolge.
+description: Beschreibt einen dreieckigen, hochwertigen Patch.
 ms.assetid: 3f97120b-3b32-4f95-8614-7b263ff330db
-title: D3DTRIPATCH_INFO-Struktur (D3D9Types. h)
+title: D3DTRIPATCH_INFO -Struktur (D3D9Types.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,16 +13,16 @@ api_type:
 - HeaderDef
 api_location:
 - D3D9Types.h
-ms.openlocfilehash: b910d38025c44d6157a76aa3e3425ba46d628787
-ms.sourcegitcommit: 14010c34b35fa268046c7683f021f86de08ddd0a
+ms.openlocfilehash: c20a846d13cd45bb8a1629fca0e958d3042aacf148c24b0633dd19fb5462bd66
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "106355826"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119850114"
 ---
-# <a name="d3dtripatch_info-structure"></a>D3DTRIPATCH \_ Info-Struktur
+# <a name="d3dtripatch_info-structure"></a>D3DTRIPATCH \_ INFO-Struktur
 
-Beschreibt einen dreieckigen Patch für hohe Reihenfolge.
+Beschreibt einen dreieckigen, hochwertigen Patch.
 
 ## <a name="syntax"></a>Syntax
 
@@ -42,25 +42,25 @@ typedef struct D3DTRIPATCH_INFO {
 
 <dl> <dt>
 
-**Startvertexoffset**
+**StartVertexOffset**
 </dt> <dd>
 
-Typ: **[ **uint**](../winprog/windows-data-types.md)**
+Typ: **[ **UINT**](../winprog/windows-data-types.md)**
 
 </dd> <dd>
 
-Der Vertex-Offset wird als Anzahl von Vertices gestartet.
+Scheitelpunktoffset wird in Anzahl von Scheitelpunkte gestartet.
 
 </dd> <dt>
 
-**Numvertices**
+**NumVertices**
 </dt> <dd>
 
-Typ: **[ **uint**](../winprog/windows-data-types.md)**
+Typ: **[ **UINT**](../winprog/windows-data-types.md)**
 
 </dd> <dd>
 
-Anzahl der Scheitel Punkte.
+Anzahl der Scheitelzeichen.
 
 </dd> <dt>
 
@@ -71,7 +71,7 @@ Typ: **[ **D3DBASISTYPE**](./d3dbasistype.md)**
 
 </dd> <dd>
 
-Member des [**D3DBASISTYPE**](./d3dbasistype.md) -Enumerationstyps, der den Basistyp für den dreieckigen Patch für hohe Reihenfolge definiert. Der einzige gültige Wert für diesen Member ist D3DBASIS \_ Bezier.
+Member des [**enumerierten D3DBASISTYPE-Typs,**](./d3dbasistype.md) der den Basistyp für den dreieckigen, hohen Patch definiert. Der einzige gültige Wert für diesen Member ist D3DBASIS \_ BEZIER.
 
 </dd> <dt>
 
@@ -82,30 +82,30 @@ Typ: **[ **D3DDEGREETYPE**](./d3ddegreetype.md)**
 
 </dd> <dd>
 
-Member des [**D3DDEGREETYPE**](./d3ddegreetype.md) -Enumerationstyps, der den gradtyp für den dreieckigen Patch für hohe Reihenfolge definiert.
+Member des [**enumerierten D3DDEGREETYPE-Typs,**](./d3ddegreetype.md) der den Gradtyp für den triangularen Hochordnungspatch definiert.
 
 
 
-| Wert                | Anzahl von Vertices |
+| Wert                | Anzahl der Scheitelzeichen |
 |----------------------|--------------------|
-| D3DDEGREE \_ kubisch     | 10                 |
-| D3DDEGREE \_ linear    | 3                  |
-| D3DDEGREE \_ quadratisch | –                |
-| D3DDEGREE \_ Quintic   | 21                 |
+| D3DDEGREE \_ KUBISCH     | 10                 |
+| D3DDEGREE \_ LINEAR    | 3                  |
+| D3DDEGREE \_ QUADRATIC | Nicht zutreffend                |
+| D3DDEGREEIC \_   | 21                 |
 
 
 
  
 
-Nicht verfügbar-nicht verfügbar. Wird nicht unterstützt.
+Nicht verfügbar. Wird nicht unterstützt.
 
 </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Im folgenden Diagramm werden z. b. die Scheitelpunkt Reihenfolge und die Segment Nummern für einen kubischen Bézier-Dreiecks Patch identifiziert. Die Scheitelpunkt Reihenfolge bestimmt die Segment Nummern, die von [**drawdreipatch**](/windows/win32/api/d3d9helper/nf-d3d9helper-idirect3ddevice9-drawtripatch)verwendet werden. Der Offset ist die Anzahl der Bytes für den ersten Dreiecks patchscheitel Punkt im Scheitelpunkt Puffer.
+Im folgenden Diagramm werden beispielsweise die Scheitelpunkt-Reihenfolge und die Segmentnummern für einen kubischen Bézierdreieckpatch identifiziert. Die Scheitelpunkt-Reihenfolge bestimmt die Segmentnummern, die von [**DrawTriPatch verwendet werden.**](/windows/win32/api/d3d9helper/nf-d3d9helper-idirect3ddevice9-drawtripatch) Der Offset ist die Anzahl von Bytes zum ersten Dreieckspatch-Scheitelpunkt im Scheitelpunktpuffer.
 
-![Diagramm eines dreieckigen hochwertigen Patches mit neun Vertices](images/hop-tripatch-info.png)
+![Diagramm eines dreieckigen, hochwertigen Patches mit neun Scheitelungen](images/hop-tripatch-info.png)
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -113,18 +113,18 @@ Im folgenden Diagramm werden z. b. die Scheitelpunkt Reihenfolge und die Segment
 
 | Anforderung | Wert |
 |-------------------|----------------------------------------------------------------------------------------|
-| Header<br/> | <dl> <dt>D3D9Types. h</dt> </dl> |
+| Header<br/> | <dl> <dt>D3D9Types.h</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
 [Direct3D-Strukturen](dx9-graphics-reference-d3d-structures.md)
 </dt> <dt>
 
-[**Drawtrick Patch**](/windows/win32/api/d3d9helper/nf-d3d9helper-idirect3ddevice9-drawtripatch)
+[**DrawTriPatch**](/windows/win32/api/d3d9helper/nf-d3d9helper-idirect3ddevice9-drawtripatch)
 </dt> <dt>
 
 [**D3DXTessellateTriPatch**](d3dxtessellatetripatch.md)

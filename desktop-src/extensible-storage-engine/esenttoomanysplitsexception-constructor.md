@@ -1,6 +1,6 @@
 ---
-description: 'Weitere Informationen finden Sie unter: esentesomanysplitsexception-Konstruktor'
-title: Esentesomanysplitsexception-Konstruktor
+description: 'Weitere Informationen finden Sie unter: EsentTooManySplitsException-Konstruktor'
+title: EsentTooManySplitsException-Konstruktor
 TOCTitle: 'EsentTooManySplitsException constructor '
 ms:assetid: M:Microsoft.Isam.Esent.Interop.EsentTooManySplitsException.#ctor
 ms:mtpsurl: https://msdn.microsoft.com/library/microsoft.isam.esent.interop.esenttoomanysplitsexception.esenttoomanysplitsexception(v=EXCHG.10)
@@ -24,19 +24,19 @@ api_type:
 api_location:
 - Microsoft.Isam.Esent.Interop.dll
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: c2c548f23aaf37a79e32a655c0e0993ccddc3d04
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 49daaa63806c8004946e416308ef617da4429ef987f3aaba323864b5bd8ef4a0
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "104218386"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119112982"
 ---
-# <a name="esenttoomanysplitsexception-constructor"></a>Esentesomanysplitsexception-Konstruktor
+# <a name="esenttoomanysplitsexception-constructor"></a>EsentTooManySplitsException-Konstruktor
 
-Initialisiert eine neue Instanz der esentesomanysplitsexception-Klasse.
+Initialisiert eine neue Instanz der EsentTooManySplitsException-Klasse.
 
-**Namespace:**  [Microsoft. ISAM. ESENT. Interop](./microsoft.isam.esent.interop-namespace.md)  
-**Assembly:**  Microsoft. ISAM. ESENT. Interop (in Microsoft.Isam.Esent.Interop.dll)
+**Namespace:**  [Microsoft.Isam.Esent.Interop](./microsoft.isam.esent.interop-namespace.md)  
+**Assembly:**  Microsoft.Isam.Esent.Interop (in Microsoft.Isam.Esent.Interop.dll)
 
 ## <a name="syntax"></a>Syntax
 
@@ -52,12 +52,12 @@ Dim instance As New EsentTooManySplitsException()
 public EsentTooManySplitsException()
 ```
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
-#### <a name="reference"></a>Referenz
+#### <a name="reference"></a>Verweis
 
-[Esentesomanysplitsexception-Klasse](./esenttoomanysplitsexception-class.md)
+[EsentTooManySplitsException-Klasse](./esenttoomanysplitsexception-class.md)
 
-[Esentesomanysplitsexception-Elemente](./esenttoomanysplitsexception-members.md)
+[EsentTooManySplitsException-Member](./esenttoomanysplitsexception-members.md)
 
-[Microsoft. ISAM. ESENT. Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)
+[Microsoft.Isam.Esent.Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)

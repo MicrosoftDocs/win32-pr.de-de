@@ -1,60 +1,60 @@
 ---
-description: NLS umfasst eine Reihe von API-Funktionen, die Ihre Anwendungen verwenden können, um Gebiets Schema Daten zwischen Gebiets Schema Bezeichners und Gebiets Schema Namen zuzuordnen und neutrale Gebiets Schemas aufzulisten.
+description: NLS enthält eine Reihe von API-Funktionen, mit denen Ihre Anwendungen Gebietsschemadaten zwischen Gebietsschemabezeichnern und Gebietsschemanamen zuordnen und neutrale Gebietsschemas auflisten können.
 ms.assetid: 01bc261d-dfee-430e-86c9-cfafe82856c8
-title: Zuordnung von Gebiets Schema Daten
+title: Zuordnen von Gebietsschemadaten
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: ec2b4ec93efab1cc9023bedfa5479c3a1fc81987
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 1576844f13dda80a6b9d754fc807ef8a35514dcfedd88dc04cf233cfb2a1bfb5
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104214958"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119147192"
 ---
-# <a name="mapping-locale-data"></a>Zuordnung von Gebiets Schema Daten
+# <a name="mapping-locale-data"></a>Zuordnen von Gebietsschemadaten
 
-NLS umfasst eine Reihe von API-Funktionen, die Ihre Anwendungen verwenden können, um Gebiets Schema Daten zwischen Gebiets Schema Bezeichners und Gebiets Schema [Namen](locale-names.md) [zuzuordnen und neutrale](locale-identifiers.md) Gebiets Schemas aufzulisten. In diesem Thema wird die Verwendung dieser Funktionen unter Windows Vista und höher und unter Windows Vista-Betriebssystemen (manchmal auch als "downlevelsysteme" bezeichnet) erörtert.
+NLS enthält eine Reihe von API-Funktionen, mit denen Ihre Anwendungen Gebietsschemadaten zwischen [Gebietsschemabezeichnern](locale-identifiers.md) und [Gebietsschemanamen](locale-names.md)zuordnen und neutrale Gebietsschemas auflisten können. In diesem Thema wird die Verwendung dieser Funktionen auf Windows Vista und höher und auf Betriebssystemen vor Windows Vista (manchmal auch als "Downlevelsysteme" bezeichnet) erläutert.
 
-## <a name="map-locale-data-on-windows-vista-and-later"></a>Zuordnen von Gebiets Schema Daten unter Windows Vista und höher
+## <a name="map-locale-data-on-windows-vista-and-later"></a>Zuordnen von Gebietsschemadaten auf Windows Vista und höher
 
-NLS bietet verschiedene Funktionen für die Gebiets Schema Zuordnung, die von Anwendungen verwendet werden können, die Sie für die unter Windows Vista und höher entwickeln. Sie enthält auch Funktionen, die Ihre Anwendungen verwenden können, um neutrale Gebiets Schemas aufzuzählen.
+NLS bietet mehrere Gebietsschemazuordnungsfunktionen für die Verwendung durch Anwendungen, die Sie für die Ausführung auf Windows Vista und höher entwickeln. Sie enthält auch Funktionen, mit denen Ihre Anwendungen neutrale Gebietsschemas aufzählen können.
 
-**Verwenden der Standard Konvertierungs Funktionen für die Datenzuordnung**
+**Verwenden der Standardkonvertierungsfunktionen für die Datenzuordnung**
 
-Um zwischen einem Gebiets Schema Namen und einem Gebiets Schema Bezeichner zuzuordnen, kann die Anwendung die [**LocaleNameToLCID**](/windows/desktop/api/Winnls/nf-winnls-localenametolcid) -Funktion abrufen. Die Anwendung verwendet [**lcidtolocalename**](/windows/desktop/api/Winnls/nf-winnls-lcidtolocalename) , um eine Zuordnung zwischen einem Gebiets Schema Bezeichner und einem Gebiets Schema Namen zu verwenden.
+Um eine Zuordnung zwischen einem Gebietsschemanamen und einem Gebietsschemabezeichner zu erstellen, kann Ihre Anwendung die [**LocaleNameToLCID-Funktion**](/windows/desktop/api/Winnls/nf-winnls-localenametolcid) aufrufen. Die Anwendung verwendet [**LCIDToLocaleName,**](/windows/desktop/api/Winnls/nf-winnls-lcidtolocalename) um eine Zuordnung zwischen einem Gebietsschemabezeichner und einem Gebietsschemanamen zu erstellen.
 
-**Auflisten neutraler Gebiets Schemas**
+**Auflisten neutraler Gebietsschemas**
 
-Um neutrale Gebiets Schemata für Windows 7 und höher aufzulisten, kann die Anwendung [**enumsystemlocalesex**](/windows/desktop/api/Winnls/nf-winnls-enumsystemlocalesex) mit *dwFlags* aufrufen, die auf [**locale \_ neutraldata**](locale-neutraldata.md)festgelegt sind. Außerdem kann [**GetLocaleInfoEx**](/windows/desktop/api/Winnls/nf-winnls-getlocaleinfoex) verwendet werden, wobei *LCTYPE* auf [**locale \_ ineutral**](locale-ineutral.md)festgelegt ist.
+Um neutrale Gebietsschemas für Windows 7 und höher aufzuzählen, kann Ihre Anwendung [**EnumSystemLocalesEx**](/windows/desktop/api/Winnls/nf-winnls-enumsystemlocalesex) aufrufen, wobei *dwFlags* auf [**LOCALE \_ NEUTRALDATA**](locale-neutraldata.md)festgelegt ist. Es kann auch [**GetLocaleInfoEx**](/windows/desktop/api/Winnls/nf-winnls-getlocaleinfoex) verwenden, wobei *LCType* auf [**LOCALE \_ INEUTRAL**](locale-ineutral.md)festgelegt ist.
 
-## <a name="map-locale-data-on-pre-windows-vista-operating-systems"></a>Zuordnen von Gebiets Schema Daten auf Betriebssystemen vor Windows Vista
+## <a name="map-locale-data-on-pre-windows-vista-operating-systems"></a>Zuordnen von Gebietsschemadaten auf Betriebssystemen vor Windows Vista
 
-NLS enthält eine Direct Link Library (dll) zur Verwendung für Anwendungen, die Sie für die Betriebssysteme vor Windows Vista entwickeln. Die DLL unterstützt sowohl Konvertierungs-als auch Listen Funktionen für die Datenzuordnung.
+NLS enthält eine Direct Link Library (DLL), die für Anwendungen verwendet werden soll, die Sie für die Ausführung auf Betriebssystemen vor Windows Vista entwickeln. Die DLL unterstützt sowohl Konvertierungs- als auch Auflistungsfunktionen für die Datenzuordnung.
 
 > [!Note]  
-> Anwendungen, die nur unter Windows Vista und höher ausgeführt werden, sollten nicht die downlevelzuordnung oder die Auflistungs Funktionen verwenden.
+> Anwendungen, die nur auf Windows Vista und höher ausgeführt werden, sollten nicht die Downlevel-Zuordnungs- oder Auflistungsfunktionen verwenden.
 
  
 
-**Verwenden der Downlevel-Konvertierungs Funktionen für die Datenzuordnung**
+**Verwenden der Downlevelkonvertierungsfunktionen für die Datenzuordnung**
 
-Ihre Anwendung, die auf ein downlevelsystem ausgerichtet ist, kann die [**downlevellcidtolocalename**](downlevellcidtolocalename.md) -Funktion zum Konvertieren eines Gebiets Schema Bezeichners in einen Gebiets Schema Namen abrufen. Wenn ein Gebiets Schema Name in einen Gebiets Schema Bezeichner konvertiert werden muss, sollte er [**downlevellocalenametolcid**](downlevellocalenametolcid.md)nennen.
+Ihre Anwendung, die auf ein downlevel-System ausgerichtet ist, kann die [**DownlevelLCIDToLocaleName-Funktion**](downlevellcidtolocalename.md) aufrufen, um einen Gebietsschemabezeichner in einen Gebietsschemanamen zu konvertieren. Wenn ein Gebietsschemaname in einen Gebietsschemabezeichner konvertiert werden muss, sollte [**downlevelLocaleNameToLCID**](downlevellocalenametolcid.md)aufgerufen werden.
 
-**Verwenden der Funktionen für die downlevelauflistung zum Auflisten neutraler Gebiets Schemas**
+**Verwenden der Downlevel-Auflistungsfunktionen zum Auflisten neutraler Gebietsschemas**
 
-Die Anwendung sollte die [**downlevelgetparametrilocalelcid**](downlevelgetparentlocalelcid.md) aufrufen, um den Gebiets Schema Bezeichner des übergeordneten Elements für ein Gebiets Schema abzurufen. Wenn die Anwendung den Gebiets Schema Namen des übergeordneten Elements für das Gebiets Schema abrufen muss, sollte Sie [**downlevelgetparametrilocalename**](downlevelgetparentlocalename.md)aufrufen.
+Ihre Anwendung sollte die [**DownlevelGetParentLocaleLCID**](downlevelgetparentlocalelcid.md) aufrufen, um den Gebietsschemabezeichner des übergeordneten Elements für ein Gebietsschema abzurufen. Wenn die Anwendung den Gebietsschemanamen des übergeordneten Gebietsschemas abrufen muss, sollte sie [**DownlevelGetParentLocaleName**](downlevelgetparentlocalename.md)aufrufen.
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[Verwenden der Unterstützung für nationale Sprache](using-national-language-support.md)
+[Verwenden der Unterstützung für nationale Sprachen](using-national-language-support.md)
 </dt> <dt>
 
-[Gebiets Schema Bezeichner](locale-identifiers.md)
+[Gebietsschemabezeichner](locale-identifiers.md)
 </dt> <dt>
 
-[Gebiets Schema Namen](locale-names.md)
+[Gebietsschemanamen](locale-names.md)
 </dt> </dl>
 
  

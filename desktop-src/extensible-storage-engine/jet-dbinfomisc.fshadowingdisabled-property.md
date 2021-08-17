@@ -35,7 +35,7 @@ ms.locfileid: "119453980"
 ---
 # <a name="jet_dbinfomiscfshadowingdisabled-property"></a>JET_DBINFOMISC.fShadowingDisabled-Eigenschaft
 
-Ruft einen Wert ab, der angibt, ob der Katalogschatten aktiviert ist. Dieser Wert ist nur für die interne Verwendung.
+Ruft einen Wert ab, der angibt, ob das Katalogschatten aktiviert ist. Dieser Wert ist nur für die interne Verwendung vorgesehen.
 
 **Namespace:**  [Microsoft.Isam.Esent.Interop](./microsoft.isam.esent.interop-namespace.md)  
 **Assembly:**  Microsoft.Isam.Esent.Interop (in Microsoft.Isam.Esent.Interop.dll)
@@ -68,6 +68,6 @@ Typ: [System.Boolean](/dotnet/api/system.boolean)
 
 [JET_DBINFOMISC-Klasse](./jet-dbinfomisc-class.md)
 
-[JET_DBINFOMISC Member](./jet-dbinfomisc-members.md)
+[JET_DBINFOMISC-Member](./jet-dbinfomisc-members.md)
 
 [Microsoft.Isam.Esent.Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)

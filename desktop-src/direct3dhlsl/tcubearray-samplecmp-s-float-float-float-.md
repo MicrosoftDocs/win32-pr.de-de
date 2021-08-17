@@ -1,6 +1,6 @@
 ---
 title: SampleCmp::SampleCmp(S,float,float,float)-Funktion für TextureCubeArray
-description: Samples a texture, using a comparison value to reject samples, with an optional value to clamp sample level-of-detail (LOD) values to . | SampleCmp::SampleCmp(S,float,float,float)-Funktion für TextureCubeArray
+description: Stichproben einer Textur, wobei ein Vergleichswert verwendet wird, um Stichproben abzulehnen, mit einem optionalen Wert zum Klammern von LOD-Werten (Sample Level of Detail). | SampleCmp::SampleCmp(S,float,float,float)-Funktion für TextureCubeArray
 ms.assetid: A8824A82-A3FD-4FEE-BC10-56843997BBCE
 keywords:
 - SampleCmp-Funktion HLSL
@@ -22,7 +22,7 @@ ms.locfileid: "117723298"
 ---
 # <a name="samplecmpsamplecmpsfloatfloatfloat-function-for-texturecubearray"></a>SampleCmp::SampleCmp(S,float,float,float)-Funktion für TextureCubeArray
 
-Samples a texture, using a comparison value to reject samples, with an optional value to clamp sample level-of-detail (LOD) values to .
+Stichproben einer Textur, wobei ein Vergleichswert verwendet wird, um Stichproben abzulehnen, mit einem optionalen Wert zum Klammern von LOD-Werten (Sample Level of Detail).
 
 ## <a name="syntax"></a>Syntax
 
@@ -60,7 +60,7 @@ Texturkoordinaten Der Argumenttyp ist vom Texturobjekttyp abhängig.
 
 
 
-| Texture-Object Typ                    | Parametertyp |
+| Texture-Object-Typ                    | Parametertyp |
 |----------------------------------------|----------------|
 | Texture1D                              | float          |
 | Texture1DArray, Texture2D              | float2         |
@@ -87,7 +87,7 @@ Ein Gleitkommawert, der als Vergleichswert verwendet werden soll.
 
 Typ: **float**
 
-Ein optionaler Wert, an den LoD-Beispielwerte klammern werden. Wenn Sie z. B. 2,0f für den Klammerwert übergeben, stellen Sie sicher, dass keine einzelne Stichprobe auf eine Mip-Ebene unter 2,0f zuf zutritt.
+Ein optionaler Wert zum Klammern von LOD-Beispielwerten. Wenn Sie beispielsweise 2,0f für den Klammerwert übergeben, stellen Sie sicher, dass keine einzelne Stichprobe auf eine Mip-Ebene kleiner als 2,0f zugreift.
 
 </dd> </dl>
 
@@ -95,7 +95,7 @@ Ein optionaler Wert, an den LoD-Beispielwerte klammern werden. Wenn Sie z. B. 2,
 
 Typ: **[ **DXGI \_ FORMAT**](/windows/desktop/api/dxgiformat/ne-dxgiformat-dxgi_format)**
 
-Das Texturformat, bei dem es sich um einen der typierten Werte handelt, die in [**DXGI \_ FORMAT aufgeführt sind.**](/windows/desktop/api/dxgiformat/ne-dxgiformat-dxgi_format)
+Das Texturformat, bei dem es sich um einen der typisierten Werte handelt, die in [**DXGI \_ FORMAT**](/windows/desktop/api/dxgiformat/ne-dxgiformat-dxgi_format)aufgeführt sind.
 
 ## <a name="see-also"></a>Weitere Informationen
 

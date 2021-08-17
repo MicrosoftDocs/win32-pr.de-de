@@ -33,7 +33,7 @@ ms.locfileid: "119471430"
 ---
 # <a name="updatereleaseresource-method"></a>Update.ReleaseResource-Methode
 
-Wird aufgerufen, wenn die Transaktion verworfen wird, während sie aktiv ist. Dadurch sollte ein Rollback der Transaktion ausgeführt werden.
+Wird aufgerufen, wenn die Transaktion verworfen wird, während sie aktiv ist. Dadurch sollte ein Rollback für die Transaktion ausgeführt werden.
 
 **Namespace:**  [Microsoft.Isam.Esent.Interop](./microsoft.isam.esent.interop-namespace.md)  
 **Assembly:**  Microsoft.Isam.Esent.Interop (in Microsoft.Isam.Esent.Interop.dll)
@@ -58,6 +58,6 @@ protected override void ReleaseResource()
 
 [Update-Klasse](./update-class.md)
 
-[Aktualisieren von Membern](./update-members.md)
+[Aktualisieren von Mitgliedern](./update-members.md)
 
 [Microsoft.Isam.Esent.Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)

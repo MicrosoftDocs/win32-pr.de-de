@@ -1,29 +1,29 @@
 ---
-description: Die folgenden Konstanten werden von Kryptografiefunktionen verwendet und in Wincrypt. h definiert. Kryptografiekonstanten werden gemäß der Verwendung wie folgt kategorisiert.
+description: Die folgenden Konstanten werden von Kryptografiefunktionen verwendet und in Wincrypt.h definiert. Kryptografiekonst constants werden nach Verwendung wie folgt kategorisiert.
 ms.assetid: 938740cc-d1da-48b1-8cd6-46622f6fc93f
-title: Kryptografiekonstanten
+title: Kryptografiekonst constants (Kryptografiekonst constants)
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 6a7d3edba424aaa758c827ed3b8409ee9b29255e
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 92b4cfed68aad2da6f7768a09b863544fd66fb89415e7739eb6fcd6a1e1c66cb
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106345684"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117768352"
 ---
-# <a name="cryptography-constants"></a>Kryptografiekonstanten
+# <a name="cryptography-constants"></a>Kryptografiekonst constants (Kryptografiekonst constants)
 
-Die folgenden Konstanten werden von Kryptografiefunktionen verwendet und in Wincrypt. h definiert. Kryptografiekonstanten werden gemäß der Verwendung wie folgt kategorisiert.
+Die folgenden Konstanten werden von Kryptografiefunktionen verwendet und in Wincrypt.h definiert. Kryptografiekonst constants werden nach Verwendung wie folgt kategorisiert.
 
 
 
-| Konstante                                                                                                           | BESCHREIBUNG                                                                                                                                                                                                 |
+| Konstante                                                                                                           | Beschreibung                                                                                                                                                                                                 |
 |--------------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| [Konstanten für cryptencodeobject und cryptdecodeobject](constants-for-cryptencodeobject-and-cryptdecodeobject.md) | Vordefinierte Konstanten, die mit [*Abstract Syntax Notation One*](../secgloss/a-gly.md) (ASN. 1) verwendet werden, codieren und decodieren Vorgänge. |
-| [Konstanten für Netscape-Erweiterungen](constants-for-netscape-extensions.md)                                         | Für Netscape-Zertifikat Erweiterungen verwendete vordefinierte Konstanten. Dieser Abschnitt enthält ausführliche Informationen zur Verwendung dieser Erweiterungen mit ASN. 1-Codierungs-und-Decodierungs Vorgängen.                                      |
-| [Name des Kryptografieanbieters](cryptographic-provider-names.md)                                                   | Vordefinierte Zeichen folgen Konstanten für die Namen von gängigen [*Kryptografiedienstanbietern*](../secgloss/c-gly.md) (CSPs).   |
-| [**Maxuidlen**](maxuidlen.md)                                                                                     | Eine numerische Konstante, die die maximale Anzahl von Zeichen angibt, die von einigen Kryptografieanbietern von Microsoft beim Abrufen der Benutzer-ID verwendet werden.                                                  |
-| [**Zwischen Speicherungs Konstanten für private Schlüssel**](private-key-caching-constants.md)                                             | Konstanten, die Registrierungseinträge darstellen, die das Zwischenspeichern von [*privaten Schlüsseln*](../secgloss/p-gly.md) durch einen CSP steuern.                                                |
+| [Konstanten für CryptEncodeObject und CryptDecodeObject](constants-for-cryptencodeobject-and-cryptdecodeobject.md) | Vordefinierte Konstanten, die mit ASN.1-Codierungs- und Decodierungsvorgängen [*(Abstract Syntax Notation One)*](../secgloss/a-gly.md) verwendet werden. |
+| [Konstanten für Netscape-Erweiterungen](constants-for-netscape-extensions.md)                                         | Vordefinierte Konstanten, die für Netscape-Zertifikaterweiterungen verwendet werden. Dieser Abschnitt enthält Details zur Verwendung dieser Erweiterungen mit ASN.1-Codierungs- und Decodierungsvorgängen.                                      |
+| [Namen von Kryptografieanbietern](cryptographic-provider-names.md)                                                   | Vordefinierte Zeichenfolgenkonst constants für die Namen von allgemeinen [*Kryptografiedienstanbietern*](../secgloss/c-gly.md) (CSPs).   |
+| [**MAXUIDLEN**](maxuidlen.md)                                                                                     | Eine numerische Konstante, die die maximale Anzahl von Zeichen angibt, die einige kryptografische Microsoft-Anbieter beim Abrufen der Benutzer-ID verwenden.                                                  |
+| [**Zwischenspeicherungskonstten für private Schlüssel**](private-key-caching-constants.md)                                             | Konstanten, die Registrierungseinträge darstellen, die die [*Zwischenspeicherung privater*](../secgloss/p-gly.md) Schlüssel durch einen CSP steuern.                                                |
 | [Protokollflags](protocol-flags.md)                                                                               | Vordefinierte Konstanten für Kryptografieprotokolle.                                                                                                                                                            |
 
 

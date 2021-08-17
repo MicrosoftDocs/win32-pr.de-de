@@ -1,19 +1,19 @@
 ---
-description: Ereignis Objekte werden in Windows Sockets 2 als allgemeiner Synchronisierungs Mechanismus zwischen Winsock-Dienstanbietern und-Anwendungen eingeführt.
+description: Ereignisobjekte werden in Windows Sockets 2 als allgemeiner Synchronisierungsmechanismus zwischen Winsock-Dienstanbietern und -Anwendungen eingeführt.
 ms.assetid: 0ec8fe77-8465-4530-834c-c90ff8e4fe8c
-title: Ereignis Objekte in Windows Sockets 2 SPI
+title: Ereignisobjekte im Windows Sockets 2 SPI
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 13b89ec07790ecc3560e8b9d23e714c9c935d118
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: e3763a087a97f57d5626ebb80c30274c6b4c6d09078713dd123dbfd0ad50796f
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "103751465"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119132603"
 ---
-# <a name="event-objects-in-the-windows-sockets-2-spi"></a>Ereignis Objekte in Windows Sockets 2 SPI
+# <a name="event-objects-in-the-windows-sockets-2-spi"></a>Ereignisobjekte im Windows Sockets 2 SPI
 
-Ereignis Objekte werden in Windows Sockets 2 als allgemeiner Synchronisierungs Mechanismus zwischen Winsock-Dienstanbietern und-Anwendungen eingeführt. Sie werden für eine Reihe von Zwecken verwendet, einschließlich der Angabe des Abschlusses von überlappenden Vorgängen und des Auftretens von Netzwerk Ereignissen.
+Ereignisobjekte werden in Windows Sockets 2 als allgemeiner Synchronisierungsmechanismus zwischen Winsock-Dienstanbietern und -Anwendungen eingeführt. Sie werden für eine Reihe von Zwecken verwendet, z. B. zum Angeben des Abschlusses überlappender Vorgänge und des Auftretens eines oder mehrerer Netzwerkereignisse.
 
  
 

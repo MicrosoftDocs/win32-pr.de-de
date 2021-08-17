@@ -1,11 +1,11 @@
 ---
-title: Ivmvirtualmachine removeconfigurationvalue-Methode (vpccominterfaces. h)
+title: IVMVirtualMachine RemoveConfigurationValue-Methode (VPCCOMInterfaces.h)
 description: Entfernt den Wert der angegebenen Konfigurationseinstellung für diesen virtuellen Computer.
 ms.assetid: 2d75a667-9656-4d4c-bafe-f3f8be3763f5
 keywords:
-- Removeconfigurationvalue-Methode Virtual PC
-- Removeconfigurationvalue-Methode Virtual PC, ivmvirtualmachine-Schnittstelle
-- Ivmvirtualmachine Interface Virtual PC, removeconfigurationvalue-Methode
+- RemoveConfigurationValue-Methode Virtueller PC
+- RemoveConfigurationValue-Methode Virtual PC , IVMVirtualMachine-Schnittstelle
+- IVMVirtualMachine-Schnittstelle Virtueller PC , RemoveConfigurationValue-Methode
 topic_type:
 - apiref
 api_name:
@@ -16,16 +16,16 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 683cad2c7cce34822f6f5607ea2676902284baf0
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 130feab953b5116ae8d6194f23cefc88c6792cf584ec884edd359ce6fc44a906
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104477985"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117752289"
 ---
-# <a name="ivmvirtualmachineremoveconfigurationvalue-method"></a>Ivmvirtualmachine:: removeconfigurationvalue-Methode
+# <a name="ivmvirtualmachineremoveconfigurationvalue-method"></a>IVMVirtualMachine::RemoveConfigurationValue-Methode
 
-\[Windows Virtual PC ist nicht mehr für die Verwendung ab Windows 8 verfügbar. Verwenden Sie stattdessen den [Hyper-V-WMI-Anbieter (v2)](/windows/desktop/HyperV_v2/windows-virtualization-portal).\]
+\[Windows Der virtuelle PC ist ab Windows 8 nicht mehr für die Verwendung verfügbar. Verwenden Sie stattdessen den [Hyper-V-WMI-Anbieter (V2).](/windows/desktop/HyperV_v2/windows-virtualization-portal)\]
 
 Entfernt den Wert der angegebenen Konfigurationseinstellung für diesen virtuellen Computer.
 
@@ -44,10 +44,10 @@ HRESULT RemoveConfigurationValue(
 
 <dl> <dt>
 
-*ConfigurationKey* \[ in\]
+*configurationKey* \[ In\]
 </dt> <dd>
 
-Der Schlüssel, der zum Identifizieren des Konfigurations Werts verwendet wird, der in der \* VMC-Datei gespeichert ist.
+Der Schlüssel, der verwendet wird, um den Konfigurationswert zu identifizieren, der in der \* VMC-Datei gespeichert ist.
 
 </dd> </dl>
 
@@ -57,25 +57,25 @@ Diese Methode kann einen dieser Werte zurückgeben.
 
 
 
-| Rückgabecode/-wert                                                                                                                                                      | BESCHREIBUNG                                    |
+| Rückgabecode/-wert                                                                                                                                                      | Beschreibung                                    |
 |------------------------------------------------------------------------------------------------------------------------------------------------------------------------|------------------------------------------------|
 | <dl> <dt>**S \_ OK**</dt> <dt>0</dt> </dl>                            | Der Vorgang wurde durchgeführt.<br/>       |
-| <dl> <dt>**E \_ InvalidArg**</dt> <dt>0x80000003</dt> </dl>           | Der-Parameter ist **null** oder leer.<br/> |
-| <dl> <dt>**VM \_ E \_ VM \_ unbekannt**</dt> <dt>0xa0040207</dt> </dl>      | Die Konfiguration ist unbekannt.<br/>       |
-| <dl> <dt>**VM \_ E \_ Pref \_ nicht \_ gefunden**</dt> <dt>0xa0040300</dt> </dl> | Die Einstellung wurde nicht gefunden.<br/>       |
-| <dl> <dt>**DISP \_ E- \_ Ausnahme**</dt> <dt>0x80020009</dt> </dl>      | Ein unerwarteter Fehler ist aufgetreten.<br/>   |
+| <dl> <dt>**E \_ INVALIDARG-0x80000003**</dt> <dt></dt> </dl>           | Der Parameter ist **NULL** oder leer.<br/> |
+| <dl> <dt>**VM \_ E \_ VM \_ UNKNOWN**</dt> <dt>0xA0040207</dt> </dl>      | Die Konfiguration ist unbekannt.<br/>       |
+| <dl> <dt>**VM \_ \_E PREF \_ NOT \_ FOUND**</dt> <dt>0xA0040300</dt> </dl> | Die Einstellung wurde nicht gefunden.<br/>       |
+| <dl> <dt>**DISP \_ E \_ EXCEPTION**</dt> <dt>0x80020009</dt> </dl>      | Ein unerwarteter Fehler ist aufgetreten.<br/>   |
 
 
 
  
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Diese Methode bietet Zugriff auf niedriger Ebene auf einen beliebigen Konfigurations Wert. Sie kann verwendet werden, um Konfigurationswerte für Kunden definierte Schlüssel zu entfernen. Gehen Sie vorsichtig vor, wenn Sie mit dieser Methode Systemkonfigurationswerte entfernen, da einige Werte nicht geändert werden können, während die virtuelle Maschine ausgeführt wird.
+Diese Methode bietet Zugriff auf einen beliebigen Konfigurationswert auf niedriger Ebene. Sie kann verwendet werden, um Konfigurationswerte für kundendefinierte Schlüssel zu entfernen. Gehen Sie vorsichtig vor, wenn Sie diese Methode verwenden, um Systemkonfigurationswerte zu entfernen, da einige Werte nicht geändert werden können, während der virtuelle Computer ausgeführt wird.
 
-Konfigurationsschlüssel befinden sich in der VMC-Datei der virtuellen Maschine \* im XML-Format. Die Schlüssel werden auf hierarchische Weise gespeichert, ähnlich wie die Registrierungsschlüssel in Windows. Um einen bestimmten Unterschlüssel anzugeben, wird ein "Schlüssel Pfad" erstellt, der die verschiedenen Schlüssel in einem durch Trennzeichen getrennten Format angibt.
+Konfigurationsschlüssel befinden sich in der VMC-Datei des virtuellen Computers \* im XML-Format. Die Schlüssel werden auf hierarchische Weise gespeichert, ähnlich wie die Registrierungsschlüssel in Windows. Um einen bestimmten Unterschlüssel anzugeben, wird ein "Schlüsselpfad" erstellt, der die verschiedenen Schlüssel in einem durch Schrägstriche getrennten Format angibt.
 
-Um beispielsweise den Wert des Schlüssels "RAM size" zu entfernen, der \_ sich in der folgenden Schlüsselstruktur befindet:
+Um z. B. den Wert des \_ Schlüssels "RAM-Größe" in der folgenden Schlüsselstruktur zu entfernen:
 
 ``` syntax
 <hardware>
@@ -83,15 +83,15 @@ Um beispielsweise den Wert des Schlüssels "RAM size" zu entfernen, der \_ sich 
         <ram_size type="integer">128</ram_size>
 ```
 
-Die Pfad Zeichenfolge für *ConfigurationKey* wird wie folgt angegeben:
+Die *Pfadzeichenfolge configurationKey* wird wie folgt angegeben:
 
 ``` syntax
 "hardware/memory/ram_size"
 ```
 
-Wenn einer der Schlüssel in der gewünschten Struktur über einen "ID"-Attribut Wert verfügt, werden das Attribut und sein Wert in der *ConfigurationKey* -Pfad Zeichenfolge unmittelbar nach dem zugehörigen Konfigurationsschlüssel in folgendem Format in Klammern eingebettet: " \[ @id ="*ID- \_ Wert*" \] ".
+Wenn einer der Schlüssel in der gewünschten Struktur über einen "id"-Attributwert verfügt, werden das Attribut und sein Wert unmittelbar nach dem zugeordneten Konfigurationsschlüssel in die *configurationKey-Pfadzeichenfolge* eingebettet, wobei das folgende format in Klammern verwendet wird: " \[ @id =" id *\_ value*" \] ".
 
-Um z. b. den Wert des "absoluten" Schlüssels zu entfernen, der sich in der folgenden Schlüsselstruktur befindet:
+Um z. B. den Wert des "absoluten" Schlüssels in der folgenden Schlüsselstruktur zu entfernen:
 
 ``` syntax
 <hardware>
@@ -103,7 +103,7 @@ Um z. b. den Wert des "absoluten" Schlüssels zu entfernen, der sich in der folg
                         <absolute type="string">D</absolute>
 ```
 
-Die Pfad Zeichenfolge für *ConfigurationKey* wird wie folgt angegeben:
+Die *Pfadzeichenfolge configurationKey* wird wie folgt angegeben:
 
 ``` syntax
 "hardware/pci_bus/ide_adapter/ide_controller[@id=1]/location[@id=0]/pathname/absolute"
@@ -115,20 +115,20 @@ Die Pfad Zeichenfolge für *ConfigurationKey* wird wie folgt angegeben:
 
 | Anforderung | Wert |
 |-------------------------------------|-----------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows 7 \[ -Desktop-Apps\]<br/>                                                    |
+| Unterstützte Mindestversion (Client)<br/> | nur Windows 7 \[ Desktop-Apps\]<br/>                                                    |
 | Unterstützte Mindestversion (Server)<br/> | Nicht unterstützt<br/>                                                                     |
 | Ende des Supports (Client)<br/>    | Windows 7<br/>                                                                          |
-| Produkt<br/>                  | Windows Virtual PC<br/>                                                                 |
-| Header<br/>                   | <dl> <dt>Vpccominterfaces. h</dt> </dl> |
-| IID<br/>                      | IID \_ ivmvirtualmachine ist als f7092aa1-33ed-4f78-a59f-c00adfc2edd7 definiert.<br/>          |
+| Product (Produkt)<br/>                  | Windows Virtual PC<br/>                                                                 |
+| Header<br/>                   | <dl> <dt>VPCCOMInterfaces.h</dt> </dl> |
+| IID<br/>                      | IID \_ IVMVirtualMachine ist als f7092aa1-33ed-4f78-a59f-c00adfc2edd7 definiert.<br/>          |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Ivmvirtualmachine**](ivmvirtualmachine.md)
+[**IVMVirtualMachine**](ivmvirtualmachine.md)
 </dt> </dl>
 
  

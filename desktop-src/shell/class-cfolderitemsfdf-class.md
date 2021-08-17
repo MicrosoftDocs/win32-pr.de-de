@@ -25,15 +25,15 @@ ms.locfileid: "119444390"
 
 ## <a name="members"></a>Member
 
-Die **CFolderItemsFDF-Klasse** erbt von [**CFolderItems,**](class-cfolderitems-class.md) verfügt aber nicht über zusätzliche Member.
+Die **CFolderItemsFDF-Klasse** erbt von [**CFolderItems,**](class-cfolderitems-class.md) verfügt jedoch nicht über zusätzliche Member.
 
 ## <a name="remarks"></a>Hinweise
 
 FDF steht für *From Different Folders (Aus verschiedenen Ordnern).*
 
-Die [**CFolderItems-Klasse**](class-cfolderitems-class.md) listet Elemente aus mehreren Ordnern auf und verwendet die [**IInsertItem-Schnittstelle,**](/windows/desktop/api/Shobjidl/nn-shobjidl-iinsertitem) um die Elemente in die Auflistung einzufügen.
+Die [**CFolderItems-Klasse**](class-cfolderitems-class.md) aufzählt Elemente aus mehreren Ordnern und verwendet die [**IInsertItem-Schnittstelle,**](/windows/desktop/api/Shobjidl/nn-shobjidl-iinsertitem) um die Elemente in die Auflistung einfüge.
 
-## <a name="see-also"></a>Weitere Informationen:
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 

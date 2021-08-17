@@ -57,10 +57,10 @@ Die **SystemRestore-Klasse** verfügt über diese Methoden.
 
 
 
-| Methode                                                             | BESCHREIBUNG                                                 |
+| Methode                                                             | Beschreibung                                                 |
 |:-------------------------------------------------------------------|:------------------------------------------------------------|
 | [**CreateRestorePoint**](createrestorepoint-systemrestore.md)     | Erstellt einen Wiederherstellungspunkt.<br/>                         |
-| [**Disable**](disable-systemrestore.md)                           | Deaktiviert die Überwachung auf einem bestimmten Laufwerk.<br/>       |
+| [**Deaktivieren**](disable-systemrestore.md)                           | Deaktiviert die Überwachung auf einem bestimmten Laufwerk.<br/>       |
 | [**Aktivieren**](enable-systemrestore.md)                             | Ermöglicht die Überwachung auf einem bestimmten Laufwerk.<br/>        |
 | [**GetLastRestoreStatus**](getlastrestorestatus-systemrestore.md) | Ruft den Status der letzten Systemwiederherstellung ab.<br/> |
 | [**Restore**](restore-systemrestore.md)                           | Initiiert eine Systemwiederherstellung.<br/>                      |

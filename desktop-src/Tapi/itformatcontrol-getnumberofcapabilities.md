@@ -1,21 +1,21 @@
 ---
-description: Die getnumoffunktionalitäten-Methode ruft die Anzahl der Funktionen ab, die dem aktuellen Format zugeordnet sind.
+description: Die GetNumberOfCapabilities-Methode ruft die Anzahl der Funktionen ab, die dem aktuellen Format zugeordnet sind.
 ms.assetid: 26e51c0d-c1cb-410f-ab19-eb884afa8431
-title: 'Itformatcontrol:: getnumoffunktionalitäten-Methode (ipmsp. h)'
+title: ITFormatControl::GetNumberOfCapabilities-Methode (Ipmsp.h)
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: e29153f5ee9ce8c5e12b93a1d219905c40f80418
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 57bd79b61f8c41893ec8d99ffc9bfadcc3887631c885d5caa430a6fb723396a5
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106367661"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117945275"
 ---
-# <a name="itformatcontrolgetnumberofcapabilities-method"></a>Itformatcontrol:: getnumoffunktionalitäten-Methode
+# <a name="itformatcontrolgetnumberofcapabilities-method"></a>ITFormatControl::GetNumberOfCapabilities-Methode
 
-\[ Diese Methode ist nicht für die Verwendung in Windows Vista, Windows Server 2008 und nachfolgenden Versionen des Betriebssystems verfügbar. Die RTC-Client-API bietet eine ähnliche Funktionalität.\]
+\[Diese Methode ist nicht für die Verwendung in Windows Vista, Windows Server 2008 und nachfolgenden Versionen des Betriebssystems verfügbar. Die RTC-Client-API bietet ähnliche Funktionen.\]
 
-Die **getnumoffunktionalitäten** -Methode ruft die Anzahl der Funktionen ab, die dem aktuellen Format zugeordnet sind.
+Die **GetNumberOfCapabilities-Methode** ruft die Anzahl der Funktionen ab, die dem aktuellen Format zugeordnet sind.
 
 ## <a name="syntax"></a>Syntax
 
@@ -32,7 +32,7 @@ HRESULT GetNumberOfCapabilities(
 
 <dl> <dt>
 
-*pdwCount* \[ vorgenommen\]
+*pdwCount* \[ out\]
 </dt> <dd>
 
 Anzahl der Funktionen.
@@ -48,7 +48,7 @@ Diese Methode kann einen dieser Werte zurückgeben.
 | Rückgabecode                                                                                   | Beschreibung                                                     |
 |-----------------------------------------------------------------------------------------------|-----------------------------------------------------------------|
 | <dl> <dt>**S \_ OK**</dt> </dl>          | Methode war erfolgreich.<br/>                                    |
-| <dl> <dt>**E \_ outo-Memory**</dt> </dl> | Zum Ausführen des Vorgangs ist nicht genügend Arbeitsspeicher vorhanden.<br/> |
+| <dl> <dt>**E \_ OUTOFMEMORY**</dt> </dl> | Es ist nicht genügend Arbeitsspeicher vorhanden, um den Vorgang durchzuführen.<br/> |
 
 
 
@@ -60,18 +60,18 @@ Diese Methode kann einen dieser Werte zurückgeben.
 
 | Anforderung | Wert |
 |-------------------------|--------------------------------------------------------------------------------------|
-| TAPI-Version<br/> | Erfordert TAPI 3,1<br/>                                                         |
-| Header<br/>       | <dl> <dt>Ipmsp. h</dt> </dl>   |
-| Bibliothek<br/>      | <dl> <dt>UUID. lib</dt> </dl>  |
+| TAPI-Version<br/> | Erfordert TAPI 3.1<br/>                                                         |
+| Header<br/>       | <dl> <dt>Ipmsp.h</dt> </dl>   |
+| Bibliothek<br/>      | <dl> <dt>Uuid.lib</dt> </dl>  |
 | DLL<br/>          | <dl> <dt>Tapi3.dll</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Itformatcontrol**](itformatcontrol.md)
+[**ITFormatControl**](itformatcontrol.md)
 </dt> </dl>
 
  

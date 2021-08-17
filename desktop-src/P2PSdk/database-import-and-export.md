@@ -20,7 +20,7 @@ In der folgenden Liste sind wichtige Informationen zum Arbeiten mit Datenbanken 
 -   Sie können nur eine Datenbank importieren, die über denselben Graphen und dieselbe Peer-ID verfügt.
 -   Sie können die Import- und Exportfunktionen nicht aufrufen, wenn [**PeerGraphListen,**](/windows/desktop/api/P2P/nf-p2p-peergraphlisten) [**PeerGroupConnect**](/windows/desktop/api/P2P/nf-p2p-peergroupconnect)oder [**PeerGraphConnect**](/windows/desktop/api/P2P/nf-p2p-peergraphconnect) aufgerufen wurden.
 
-**Die Peer graphing-Infrastruktur** verwendet die folgenden Aufrufe zum Importieren und Exportieren einer Datensatzdatenbank:
+**Die Peer graphing-Infrastruktur** verwendet die folgenden Aufrufe, um eine Datensatzdatenbank zu importieren und zu exportieren:
 
 -   [**PeerGraphExportDatabase**](/windows/desktop/api/P2P/nf-p2p-peergraphexportdatabase)
 -   [**PeerGraphImportDatabase**](/windows/desktop/api/P2P/nf-p2p-peergraphimportdatabase)

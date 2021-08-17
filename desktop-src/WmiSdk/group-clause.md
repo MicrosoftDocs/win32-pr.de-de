@@ -1,22 +1,22 @@
 ---
-description: Die Group-Klausel bewirkt, dass WMI eine einzelne Benachrichtigung generiert, um eine Gruppe von Ereignissen darzustellen.
+description: Die GROUP-Klausel bewirkt, dass WMI eine einzelne Benachrichtigung generiert, die eine Gruppe von Ereignissen repräsentiert.
 ms.assetid: 811e72f8-2e50-4696-ad58-50bb5e211afb
 ms.tgt_platform: multiple
-title: Group-Klausel
+title: GROUP-Klausel
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 032a8e86c84c0b317b3739c0e203a249b432b0f0
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: b4f5f796c563376853896213c5418039ac0104d04437ec7c9e0b444db6692e60
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106359538"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118993180"
 ---
-# <a name="group-clause"></a>Group-Klausel
+# <a name="group-clause"></a>GROUP-Klausel
 
-Die Group-Klausel bewirkt, dass WMI eine einzelne Benachrichtigung generiert, um eine Gruppe von Ereignissen darzustellen. Die repräsentative Benachrichtigung ist eine Instanz der System Klasse [**\_ \_ aggregateevent**](--aggregateevent.md) . Die **\_ \_ aggregateevent** -System Klasse enthält zwei Eigenschaften: " **repräsentativ** " und " **numofevents**". Die **repräsentative** Eigenschaft ist ein eingebettetes Objekt, das eine der-Instanzen enthält, die während des in der [within-Klausel](within-clause.md)angegebenen Gruppierungs Intervalls empfangen werden. Wenn z. b. ein Aggregat Ereignis generiert wird, um über instanzänderungsereignisse zu benachrichtigen, enthält der **repräsentative** eine Instanz der [**\_ \_ instancemodificationevent**](--instancemodificationevent.md) -Klasse. Die Eigenschaft " **numofevents** " enthält die Anzahl der Ereignisse, die während des Gruppierungs Intervalls empfangen wurden. Das Gruppierungs Intervall gibt den Zeitraum an, nach dem ein erstes Ereignis empfangen wird, in dem WMI ähnliche Ereignisse erfassen sollte.
+Die GROUP-Klausel bewirkt, dass WMI eine einzelne Benachrichtigung generiert, die eine Gruppe von Ereignissen repräsentiert. Die repräsentative Benachrichtigung ist eine Instanz der [**\_ \_ AggregateEvent-Systemklasse.**](--aggregateevent.md) Die **\_ \_ AggregateEvent-Systemklasse** enthält zwei Eigenschaften: **Representative** und **NumberOfEvents**. Die **Representative-Eigenschaft** ist ein eingebettetes Objekt, das eine der -Instanzen enthält, die während des Gruppierungsintervalls empfangen wurden, das in der [WITHIN-Klausel angegeben ist.](within-clause.md) Wenn beispielsweise ein Aggregatereignis generiert wird, um über Instanzänderungsereignisse zu benachrichtigen, enthält **Representative** eine Instanz der [**\_ \_ InstanceModificationEvent-Klasse.**](--instancemodificationevent.md) Die **NumberOfEvents-Eigenschaft** enthält die Anzahl der Ereignisse, die während des Gruppierungsintervalls empfangen wurden. Das Gruppierungsintervall gibt den Zeitraum nach dem Empfang eines anfänglichen Ereignisses an, in dem WMI ähnliche Ereignisse sammeln soll.
 
-Die Group-Klausel muss eine within-Klausel enthalten, um das Gruppierungs Intervall anzugeben, und kann das-oder das-Schlüsselwort oder beides enthalten. Die Group-Klausel wird nach der WHERE-Klausel eingefügt, wie im folgenden dargestellt:
+Die GROUP-Klausel muss eine WITHIN-Klausel enthalten, um das Gruppierungsintervall anzugeben, und kann das BY- oder HAVING-Schlüsselwort oder beides enthalten. Die GROUP-Klausel wird nach der WHERE-Klausel platziert, wie im Folgenden gezeigt:
 
 ``` syntax
 SELECT * FROM EventClass [WHERE property = value] 
@@ -24,11 +24,11 @@ SELECT * FROM EventClass [WHERE property = value]
     [HAVING NumberOfEvents operator integer]
 ```
 
-Der *EventClass* -Wert ist die Ereignisklasse, deren Member das Ereignis ist, und *value* ist der Wert für die Eigenschaft, für die eine Benachrichtigung erforderlich ist. Das Intervall ist eine Ganzzahl ohne Vorzeichen, die das Gruppierungs Intervall nach dem Empfang des ersten Ereignisses darstellt. Die ganze Zahl ohne Vorzeichen ist eine Anzahl von Sekunden. Die Eigenschaften Liste ist eine durch Trennzeichen getrennte Liste von mindestens einer Eigenschaft, die in der Ereignisklasse enthalten ist. der *Operator* ist ein beliebiger relationaler Operator. und *Integer* ist eine Ganzzahl ohne Vorzeichen, die eine ganze Zahl 32 ohne Vorzeichen angibt und eine Anzahl von Ereignissen angibt.
+Der *EventClass-Wert* ist die Ereignisklasse, deren Member das Ereignis ist, und *value* ist der Wert für die Eigenschaft, für die eine Benachrichtigung erforderlich ist. Das Intervall ist eine ganze Zahl ohne Vorzeichen, die das Gruppierungsintervall nach dem Empfang des ersten Ereignisses darstellt. Die ganze Zahl ohne Vorzeichen ist eine Anzahl von Sekunden. Die Eigenschaftenliste ist eine durch Trennzeichen getrennte Liste von eigenschaften, die in der Ereignisklasse enthalten sind. *-Operator* ist ein beliebiger relationaler Operator. und *integer* ist eine 32-Bit-Ganzzahl ohne Vorzeichen, die eine Reihe von Ereignissen angibt.
 
-Wenn die Group-Klausel verwendet wird, sind die WHERE-, by-und have-Klauseln optional.
+Bei Verwendung der GROUP-Klausel sind die WHERE-, BY- und HAVING-Klauseln optional.
 
-Eine grundlegende Verwendung der Group-Klausel kann eine Gruppierung von Ereignissen innerhalb eines Zeitintervalls anfordern, das beginnt, wenn das erste Ereignis empfangen wird. Beispielsweise werden in der folgenden Abfrage alle e-Mail-Ereignisse, die innerhalb von fünf Minuten gesendet werden, gruppiert. Anstatt einen Benutzer jedes Mal, wenn eine neue e-Mail empfangen wird, zu Paging, kann der permanente Consumer diese Abfrage verwenden, um den Benutzer nur dann zu benachrichtigen, wenn innerhalb der letzten 5 Minuten eine neue e-Mail eingegangen ist.
+Eine grundlegende Verwendung der GROUP-Klausel kann eine Gruppierung von Ereignissen innerhalb eines Zeitintervalls anfordern, das beginnt, wenn das erste Ereignis empfangen wird. Beispielsweise werden mit der folgenden Abfrage alle E-Mail-Ereignisse, die innerhalb von 5 Minuten gesendet werden, gegruppen. Anstatt einen Benutzer jedes Mal zu pagingen, wenn eine neue E-Mail empfangen wird, kann der permanente Consumer diese Abfrage verwenden, um den Benutzer nur zu informieren, wenn innerhalb der letzten 5 Minuten neue E-Mails empfangen wurden.
 
 
 ```sql
@@ -37,7 +37,7 @@ SELECT * FROM EmailEvent GROUP WITHIN 300
 
 
 
-Wenn ausführlichere Informationen erforderlich sind, können Ereignisse nach einer oder mehreren Eigenschaften der Ereignisklasse gruppiert werden. Die folgende Abfrage fordert an, dass e-Mail-Ereignisse mit anderen Ereignissen kombiniert werden, die in der **Sender** -Eigenschaft denselben Wert aufweisen:
+Wenn ausführlichere Informationen erforderlich sind, können Ereignisse nach mindestens einer Eigenschaft der Ereignisklasse gruppiert werden. Die folgende Abfrage fordert an, dass E-Mail-Ereignisse mit anderen Ereignissen kombiniert werden, die denselben Wert in der **Sender-Eigenschaft** haben:
 
 
 ```sql
@@ -46,7 +46,7 @@ SELECT * FROM EmailEvent GROUP WITHIN 300 BY Sender
 
 
 
-Eine noch umfassendere Detailebene kann durch Hinzufügen einer WHERE-Klausel erreicht werden. Die folgende Abfrage benachrichtigt z. b. einen Benutzer über neue e-Mails von einem bestimmten Absender, der innerhalb der letzten 10 Minuten eingetroffen ist, zusammen mit anderen Ereignissen, die in der **Wichtigkeits** Eigenschaft denselben Wert aufweisen:
+Eine noch höhere Detailebene kann erreicht werden, indem eine WHERE-Klausel hinzugefügt wird. Die folgende Abfrage benachrichtigt z. B. einen Benutzer über neue E-Mails von einem bestimmten Absender, der innerhalb der letzten 10 Minuten eingetroffen ist, in Kombination mit anderen Ereignissen, die den gleichen Wert in der **Importance-Eigenschaft** haben:
 
 
 ```sql

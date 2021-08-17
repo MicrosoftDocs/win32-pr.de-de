@@ -27,7 +27,7 @@ Datenverarbeitungsobjekt, das von [**der ID3DX10ThreadPump-Schnittstelle**](id3d
 
 ## <a name="members"></a>Member
 
-Die **ID3DX10DataProcessor-Schnittstelle** erbt von der [**IUnknown-Schnittstelle.**](/windows/win32/api/unknwn/nn-unknwn-iunknown) **ID3DX10DataProcessor** verfügt auch über diese Typen von Membern:
+Die **ID3DX10DataProcessor-Schnittstelle** erbt von der [**IUnknown-Schnittstelle.**](/windows/win32/api/unknwn/nn-unknwn-iunknown) **ID3DX10DataProcessor** verfügt auch über diese Membertypen:
 
 -   [Methoden](#methods)
 
@@ -37,11 +37,11 @@ Die **ID3DX10DataProcessor-Schnittstelle** verfügt über diese Methoden.
 
 
 
-| Methode                                                                | BESCHREIBUNG                                                                                                                         |
+| Methode                                                                | Beschreibung                                                                                                                         |
 |:----------------------------------------------------------------------|:------------------------------------------------------------------------------------------------------------------------------------|
 | [**CreateDeviceObject**](id3dx10dataprocessor-createdeviceobject.md) | Erstellen Sie ein Geräteobjekt.<br/>                                                                                                  |
-| [**Zerstören**](id3dx10dataprocessor-destroy.md)                       | Wird von einer [**ID3DX10ThreadPump-Schnittstelle**](id3dx10threadpump.md) verwendet, um den Prozessor nach Abschluss eines Arbeitselements zu zerstören.<br/> |
-| [**Prozess**](id3dx10dataprocessor-process.md)                       | Verarbeiten einiger Daten.<br/>                                                                                                       |
+| [**Zerstören**](id3dx10dataprocessor-destroy.md)                       | Wird von einer [**ID3DX10ThreadPump-Schnittstelle**](id3dx10threadpump.md) verwendet, um den Prozessor zu zerstören, nachdem ein Arbeitselement abgeschlossen wurde.<br/> |
+| [**Prozess**](id3dx10dataprocessor-process.md)                       | Verarbeiten sie einige Daten.<br/>                                                                                                       |
 
 
 

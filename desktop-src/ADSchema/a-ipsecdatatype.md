@@ -57,10 +57,10 @@ Das **Attribut Ipsec-Data-Type** dient nur zur internen Verwendung.
 |------------------------|----------------------------------------------|
 | Link-ID                | \-                                           |
 | MAPI-Id                | \-                                           |
-| System-Only            | False                                        |
-| Ist einwertig       | True                                         |
-| Ist indiziert             | False                                        |
-| Im globalen Katalog      | False                                        |
+| System-Only            | Falsch                                        |
+| Ist einwertig       | Richtig                                         |
+| Ist indiziert             | Falsch                                        |
+| Im globalen Katalog      | Falsch                                        |
 | NT-Security-Descriptor | O:BAG:BAD:S:                                 |
 | Range-Lower            | \-                                           |
 | Range-Upper            | \-                                           |
@@ -78,10 +78,10 @@ Das **Attribut Ipsec-Data-Type** dient nur zur internen Verwendung.
 |------------------------|----------------------------------------------|
 | Link-ID                | \-                                           |
 | MAPI-Id                | \-                                           |
-| System-Only            | False                                        |
-| Ist einwertig       | True                                         |
-| Ist indiziert             | False                                        |
-| Im globalen Katalog      | False                                        |
+| System-Only            | Falsch                                        |
+| Ist einwertig       | Richtig                                         |
+| Ist indiziert             | Falsch                                        |
+| Im globalen Katalog      | Falsch                                        |
 | NT-Security-Descriptor | O:BAG:BAD:S:                                 |
 | Range-Lower            | \-                                           |
 | Range-Upper            | \-                                           |
@@ -99,10 +99,10 @@ Das **Attribut Ipsec-Data-Type** dient nur zur internen Verwendung.
 |------------------------|----------------------------------------------|
 | Link-ID                | \-                                           |
 | MAPI-Id                | \-                                           |
-| System-Only            | False                                        |
-| Ist einwertig       | True                                         |
-| Ist indiziert             | False                                        |
-| Im globalen Katalog      | False                                        |
+| System-Only            | Falsch                                        |
+| Ist einwertig       | Richtig                                         |
+| Ist indiziert             | Falsch                                        |
+| Im globalen Katalog      | Falsch                                        |
 | NT-Security-Descriptor | O:BAG:BAD:S:                                 |
 | Range-Lower            | \-                                           |
 | Range-Upper            | \-                                           |
@@ -120,16 +120,16 @@ Das **Attribut Ipsec-Data-Type** dient nur zur internen Verwendung.
 |------------------------|----------------------------------------------|
 | Link-ID                | \-                                           |
 | MAPI-Id                | \-                                           |
-| System-Only            | False                                        |
-| Is-Single-Valued       | True                                         |
-| Ist indiziert             | False                                        |
-| Im globalen Katalog      | False                                        |
+| System-Only            | Falsch                                        |
+| Ist einwertig       | Richtig                                         |
+| Ist indiziert             | Falsch                                        |
+| Im globalen Katalog      | Falsch                                        |
 | NT-Security-Descriptor | O:BAG:BAD:S:                                 |
 | Range-Lower            | \-                                           |
 | Range-Upper            | \-                                           |
 | Search-Flags           | 0x00000000                                   |
 | System-Flags           | 0x00000010                                   |
-| In verwendete Klassen        | [**Ipsec-Base**](c-ipsecbase.md)<br/> |
+| In verwendete Klassen        | [**Ipsec-Basis**](c-ipsecbase.md)<br/> |
 
 
 
@@ -141,16 +141,16 @@ Das **Attribut Ipsec-Data-Type** dient nur zur internen Verwendung.
 |------------------------|----------------------------------------------|
 | Link-ID                | \-                                           |
 | MAPI-Id                | \-                                           |
-| System-Only            | False                                        |
-| Is-Single-Valued       | True                                         |
-| Ist indiziert             | False                                        |
-| Im globalen Katalog      | False                                        |
+| System-Only            | Falsch                                        |
+| Ist einwertig       | Richtig                                         |
+| Ist indiziert             | Falsch                                        |
+| Im globalen Katalog      | Falsch                                        |
 | NT-Security-Descriptor | O:BAG:BAD:S:                                 |
 | Range-Lower            | \-                                           |
 | Range-Upper            | \-                                           |
 | Search-Flags           | 0x00000000                                   |
 | System-Flags           | 0x00000010                                   |
-| In verwendete Klassen        | [**Ipsec-Base**](c-ipsecbase.md)<br/> |
+| In verwendete Klassen        | [**Ipsec-Basis**](c-ipsecbase.md)<br/> |
 
 
 
@@ -162,16 +162,16 @@ Das **Attribut Ipsec-Data-Type** dient nur zur internen Verwendung.
 |------------------------|----------------------------------------------|
 | Link-ID                | \-                                           |
 | MAPI-Id                | \-                                           |
-| System-Only            | False                                        |
-| Is-Single-Valued       | True                                         |
-| Ist indiziert             | False                                        |
-| Im globalen Katalog      | False                                        |
+| System-Only            | Falsch                                        |
+| Ist einwertig       | Richtig                                         |
+| Ist indiziert             | Falsch                                        |
+| Im globalen Katalog      | Falsch                                        |
 | NT-Security-Descriptor | O:BAG:BAD:S:                                 |
 | Range-Lower            | \-                                           |
 | Range-Upper            | \-                                           |
 | Search-Flags           | 0x00000000                                   |
 | System-Flags           | 0x00000010                                   |
-| In verwendete Klassen        | [**Ipsec-Base**](c-ipsecbase.md)<br/> |
+| In verwendete Klassen        | [**Ipsec-Basis**](c-ipsecbase.md)<br/> |
 
 
 

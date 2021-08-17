@@ -14,12 +14,12 @@ api_type:
 api_location:
 - Ndisnpp.dll
 - Rmtnpp.dll
-ms.openlocfilehash: 10bf0886032c93288435ade05fec46077d53753c
-ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
+ms.openlocfilehash: 285d26e4eb141904e8a1951e6e42d0df0ef5d9738e5849057bbfe1e0a978e0b0
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2021
-ms.locfileid: "108113518"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119743000"
 ---
 # <a name="irtcstop-method"></a>IRTC::Stop-Methode
 
@@ -40,7 +40,7 @@ Diese Methode hat keine Parameter.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Wenn die Methode erfolgreich ist, ist der Rückgabewert NMERR \_ SUCCESS.
+Wenn die Methode erfolgreich ist, lautet der Rückgabewert NMERR \_ SUCCESS.
 
 Wenn die Methode nicht erfolgreich ist, ist der Rückgabewert einer der folgenden Fehlercodes:
 
@@ -48,23 +48,23 @@ Wenn die Methode nicht erfolgreich ist, ist der Rückgabewert einer der folgende
 
 | Rückgabecode                                                                                          | Beschreibung                                                                                                                   |
 |------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------|
-| <dl> <dt>**NMERR \_ NICHT \_ VERBUNDEN**</dt> </dl> | Das NPP ist nicht mit dem Netzwerk verbunden. Rufen [Sie IRTC::Connect auf,](irtc-connect.md) um das NPP mit dem Netzwerk zu verbinden.<br/> |
-| <dl> <dt>**NMERR \_ WIRD NICHT \_ ERFASST**</dt> </dl> | Der NPP erfasst keine Daten. Rufen Sie [IRTC::Start auf,](irtc-start.md) um die Erfassung zu starten.<br/>                            |
-| <dl> <dt>**NMERR \_ NOT \_ REALTIME**</dt> </dl>  | Das NPP ist mit dem Netzwerk verbunden, aber nicht mit der [IRTC::Connect-Methode.](irtc-connect.md)<br/>                     |
+| <dl> <dt>**NMERR \_ NICHT \_ VERBUNDEN**</dt> </dl> | Das NPP ist nicht mit dem Netzwerk verbunden. Rufen Sie [IRTC::Verbinden](irtc-connect.md) auf, um die NPP mit dem Netzwerk zu verbinden.<br/> |
+| <dl> <dt>**NMERR \_ NICHT \_ ERFASSEN**</dt> </dl> | Das NPP erfasst keine Daten. Rufen Sie [IRTC::Start](irtc-start.md) auf, um die Erfassung zu starten.<br/>                            |
+| <dl> <dt>**NMERR \_ NOT \_ REALTIME**</dt> </dl>  | Das NPP ist mit dem Netzwerk verbunden, jedoch nicht mit der [IRTC::Verbinden-Methode.](irtc-connect.md)<br/>                     |
 
 
 
  
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Wenn Sie die Erfassung nach dem Aufruf der **IRTC::Stop-Methode** neu starten, müssen Sie jedes Mal [IRTC::Configure](irtc-configure.md) aufrufen, wenn Sie [IRTC::Start](irtc-start.md) aufrufen, um die Erfassung neu zu starten.
+Wenn Sie die Erfassung nach dem Aufruf der **IRTC::Stop-Methode** neu starten, müssen Sie immer dann [IRTC::Configure](irtc-configure.md) aufrufen, wenn Sie [IRTC::Start](irtc-start.md) aufrufen, um die Erfassung neu zu starten.
 
 ## <a name="requirements"></a>Anforderungen
 
 
 
-| Anforderungen | Wert |
+| Anforderung | Wert |
 |-------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[nur Desktop-Apps\]<br/>                                                                                               |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                                                                                                     |
@@ -80,7 +80,7 @@ Wenn Sie die Erfassung nach dem Aufruf der **IRTC::Stop-Methode** neu starten, m
 [IRTC](irtc.md)
 </dt> <dt>
 
-[IRTC::Connect](irtc-connect.md)
+[IRTC::Verbinden](irtc-connect.md)
 </dt> <dt>
 
 [IRTC::Configure](irtc-configure.md)

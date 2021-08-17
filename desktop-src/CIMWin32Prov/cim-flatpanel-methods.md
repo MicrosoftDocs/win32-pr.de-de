@@ -1,23 +1,23 @@
 ---
-description: Die CIM- \_ Flatpanel-Klasse stellt die folgenden Methoden zur Verfügung.
+description: Die CIM \_ FlatPanel-Klasse macht die folgenden Methoden verfügbar.
 ms.assetid: 0D946E04-3C08-4C59-9445-F6F4DE549D25
 ms.tgt_platform: multiple
-title: CIM_FlatPanel Methoden
+title: CIM_FlatPanel-Methoden
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 6abf6cf461d7e9ccc33d3ecb99d9cfc73a2dab99
-ms.sourcegitcommit: c7add10d695482e1ceb72d62b8a4ebd84ea050f7
+ms.openlocfilehash: 13b1550803be08149beb1bc7314b48a6157cb5b403143672fb3d2b163bc66e49
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "103748472"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119923740"
 ---
-# <a name="cim_flatpanel-methods"></a>CIM- \_ Flatpanel-Methoden
+# <a name="cim_flatpanel-methods"></a>CIM \_ FlatPanel-Methoden
 
-Die [**CIM- \_ Flatpanel**](cim-flatpanel.md) -Klasse stellt die folgenden Methoden zur Verfügung.
+Die [**CIM \_ FlatPanel-Klasse**](cim-flatpanel.md) macht die folgenden Methoden verfügbar.
 
 > [!IMPORTANT]
-> Die Klassen der DMTF-CIM (Common Information Model) sind die übergeordneten Klassen, auf denen WMI-Klassen erstellt werden. WMI unterstützt zurzeit nur die [CIM 2. x-Versions Schemas](https://dmtf.org/standards/cim/schemas).
+> Die CIM-Klassen (Distributed Management Task Force) (DMTF (Distributed Management Task Force) (Common Information Model) sind die übergeordneten Klassen, auf denen WMI-Klassen erstellt werden. WMI unterstützt derzeit nur die [CIM 2.x-Versionsschemas.](https://dmtf.org/standards/cim/schemas)
 
  
 

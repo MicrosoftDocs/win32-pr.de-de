@@ -1,28 +1,28 @@
 ---
-description: In der folgenden Tabelle sind die Algorithmen aufgelistet, die vom Microsoft DSS-Kryptografieanbieter unterstützt werden.
+description: In der folgenden Tabelle sind die vom Microsoft DSS-Kryptografieanbieter unterstützten Algorithmen aufgeführt.
 ms.assetid: 2a7aecf8-e242-4087-83ee-aaa637a9ec71
-title: DSS-Anbieter Algorithmen
+title: DSS-Anbieteralgorithmen
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: fb0bd9346da7a9ab1490e2646d9d2559c07359b4
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 09a39b29ee38b929f9ee5495d04cf663a1458fee0921fe48b24569038a69f0ad
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106360528"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117767218"
 ---
-# <a name="dss-provider-algorithms"></a>DSS-Anbieter Algorithmen
+# <a name="dss-provider-algorithms"></a>DSS-Anbieteralgorithmen
 
-In der folgenden Tabelle sind die Algorithmen aufgelistet, die vom Microsoft DSS-Kryptografieanbieter unterstützt werden.
+In der folgenden Tabelle sind die vom Microsoft DSS-Kryptografieanbieter unterstützten Algorithmen aufgeführt.
 
 
 
-| Algorithmuskennung    | BESCHREIBUNG                                 | Kommentare                                                                                                        |
+| Algorithmus-ID    | BESCHREIBUNG                                 | Kommentare                                                                                                        |
 |-----------------|---------------------------------------------|-----------------------------------------------------------------------------------------------------------------|
-| Calg \_ MD5       | MD5-Hashalgorithmus                      | Wird nur für hashung bereitgestellt.                                                                                      |
-| calg \_ SHA       | SHA-Hashalgorithmus                      | Muss für DSS-Signaturen verwendet werden.                                                                                |
-| Calg \_ SHA1      | Identisch mit calg \_ SHA.                          | Kein Kommentar.                                                                                                     |
-| calg- \_ DSS- \_ Zeichen | DSS-Algorithmus für die öffentliche/private Schlüssel Signatur. | Schlüssellänge: kann festgelegt werden, 512 Bits auf 1.024 Bits in 64-Bit-Inkrementen. Standard Schlüssellänge: 1.024 Bits.<br/> |
+| CALG \_ MD5       | MD5-Hashalgorithmus                      | Wird nur für Hashing bereitgestellt.                                                                                      |
+| CALG \_ SHA       | SHA-Hashalgorithmus                      | Muss für DSS-Signaturen verwendet werden.                                                                                |
+| CALG \_ SHA1      | Identisch mit CALG \_ SHA.                          | Kein Kommentar.                                                                                                     |
+| \_CALG-DSS-ZEICHEN \_ | Signaturalgorithmus für öffentliche/private DSS-Schlüssel. | Schlüssellänge: Kann festgelegt werden, 512 Bits bis 1.024 Bits in 64-Bit-Schritten. Standardschlüssellänge: 1.024 Bits.<br/> |
 
 
 

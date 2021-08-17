@@ -1,66 +1,66 @@
 ---
-title: Ressourcen Dateiformate
-description: In diesem Abschnitt wird das Format der binären Ressourcen Datei beschrieben, die vom Ressourcen Compiler basierend auf dem Inhalt der Ressourcen Definitionsdatei erstellt wird.
+title: Ressourcendateiformate
+description: In diesem Abschnitt wird das Format der binären Ressourcendatei beschrieben, die der Ressourcencompiler basierend auf dem Inhalt der Ressourcendefinitionsdatei erstellt.
 ms.assetid: a0b17555-f50a-4d58-b2bc-760843dd67eb
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: b90c789cd1684c1f5ca31af0e2d60a31052ca03f
-ms.sourcegitcommit: ebd3ce6908ff865f1ef66f2fc96769be0aad82e1
+ms.openlocfilehash: 16bfc85190993992b7bf87001f3d807b777ed2fe27b4d66cba0b7f7c948d8cfb
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/19/2020
-ms.locfileid: "103858243"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117869791"
 ---
-# <a name="resource-file-formats"></a>Ressourcen Dateiformate
+# <a name="resource-file-formats"></a>Ressourcendateiformate
 
-In diesem Abschnitt wird das Format der binären Ressourcen Datei beschrieben, die vom Ressourcen Compiler basierend auf dem Inhalt der Ressourcen Definitionsdatei erstellt wird. Diese Datei weist in der Regel die Erweiterung ". res" auf. Der Linker formatiert die res-Datei in eine Ressourcen Objektdatei und verknüpft Sie dann mit der ausführbaren Datei einer Anwendung.
+In diesem Abschnitt wird das Format der binären Ressourcendatei beschrieben, die der Ressourcencompiler basierend auf dem Inhalt der Ressourcendefinitionsdatei erstellt. Diese Datei hat in der Regel die Erweiterung .res. Der Linker neu erstellt die RES-Datei in eine Ressourcenobjektdatei und verknüpft sie dann mit der ausführbaren Datei einer Anwendung.
 
-Eine binäre Ressourcen Datei besteht aus einer Reihe von verketteten Ressourcen Einträgen. Jeder Eintrag besteht aus einem Ressourcen Header und den Daten für diese Ressource. Ein Ressourcen Header ist in der Datei **DWORD**-ausgerichtet und besteht aus folgendem:
+Eine binäre Ressourcendatei besteht aus einer Reihe verketteter Ressourceneinträge. Jeder Eintrag besteht aus einem Ressourcenheader und den Daten für diese Ressource. Ein Ressourcenheader ist in der Datei **DWORD** ausgerichtet und besteht aus folgendem Code:
 
--   Ein **DWORD** , das die Größe des Ressourcen Headers enthält.
--   Ein **DWORD** , das die Größe der Ressourcen Daten enthält.
+-   Ein **DWORD,** das die Größe des Ressourcenheaders enthält
+-   Ein **DWORD,** das die Größe der Ressourcendaten enthält
 -   Der Ressourcentyp
--   Der Ressourcen Name
--   Zusätzliche Ressourcen Informationen
+-   Der Ressourcenname
+-   Zusätzliche Ressourceninformationen
 
-Die [**resourceheader**](resourceheader.md) -Struktur beschreibt das Format dieses Headers. Die Daten für die Ressource folgen dem Ressourcen Header und sind für jeden Ressourcentyp spezifisch. Einige Ressourcen verwenden auch eine Ressourcen spezifische Gruppen Header Struktur, um Informationen über eine Gruppe von Ressourcen bereitzustellen.
+Die [**RESOURCEHEADER-Struktur**](resourceheader.md) beschreibt das Format dieses Headers. Die Daten für die Ressource folgen dem Ressourcenheader und sind für jeden Ressourcentyp spezifisch. Einige Ressourcen verwenden auch eine ressourcenspezifische Gruppenheaderstruktur, um Informationen zu einer Gruppe von Ressourcen zur Verfügung zu stellen.
 
-## <a name="accelerator-table-resources"></a>Zugriffstasten Tabellen-Ressourcen
+## <a name="accelerator-table-resources"></a>Zugriffstastentabellenressourcen
 
-Eine Zugriffstasten Tabelle ist ein Ressourcen Eintrag in einer Ressourcen Datei. Er verfügt über keinen Gruppenkopf. Eine [**acceltableentry**](acceltableentry.md) -Struktur beschreibt jeden Eintrag in der Zugriffstasten Tabelle. Mehrere Zugriffstasten Tabellen sind zulässig.
+Eine Zugriffstastentabelle ist ein Ressourceneintrag in einer Ressourcendatei. Sie verfügt nicht über einen Gruppenheader. Eine [**ACCELTABLEENTRY-Struktur**](acceltableentry.md) beschreibt jeden Eintrag in der Zugriffstastentabelle. Mehrere Zugriffstastentabellen sind zulässig.
 
-## <a name="cursor-and-icon-resources"></a>Cursor-und Symbol Ressourcen
+## <a name="cursor-and-icon-resources"></a>Cursor- und Symbolressourcen
 
-Das System behandelt die einzelnen Symbole und Cursor als einzelne Datei. Diese werden jedoch in. res-Dateien und ausführbaren Dateien als Gruppe von Symbol Ressourcen oder einer Gruppe von Cursor Ressourcen gespeichert. Die Dateiformate von Symbol-und Cursor Ressourcen sind ähnlich. In der. res-Datei folgt eine Ressourcengruppen Kopfzeile allen einzelnen Symbol-oder Cursor Gruppen Komponenten.
+Das System behandelt jedes Symbol und jeden Cursor als einzelne Datei. Diese werden jedoch in RES-Dateien und ausführbaren Dateien als Gruppe von Symbolressourcen oder als Gruppe von Cursorressourcen gespeichert. Die Dateiformate von Symbol- und Cursorressourcen sind ähnlich. In der RES-Datei folgt ein Ressourcengruppenheader allen einzelnen Symbol- oder Cursorgruppenkomponenten.
 
-Das Format jeder Symbol Komponente ähnelt dem Format der ICO-Datei. Jedes Symbolbild wird in einer [**BitmapInfo**](/windows/win32/api/wingdi/ns-wingdi-bitmapinfo) -Struktur gefolgt von der Farbe geräteunabhängige Bitmap (DIB)-Bits der **Xor** -Maske des Symbols gespeichert. Die monochrome DIB-Bits des Symbols **und** der Maske folgen den farbdib-Bits.
+Das Format der einzelnen Symbolkomponenten ähnelt dem Format der ICO-Datei. Jedes Symbolbild wird in einer [**BITMAPINFO-Struktur**](/windows/win32/api/wingdi/ns-wingdi-bitmapinfo) gespeichert, gefolgt von den farblich geräteunabhängigen Bitmapbits (DIB) der **XOR-Maske** des Symbols. Die monofarbigen DIB-Bits der  AND-Maske des Symbols folgen den DIB-Farbbits.
 
-Das Format jeder Cursor Komponente ähnelt dem Format der CUR-Datei. Jedes Cursor Bild wird in einer [**BitmapInfo**](/windows/win32/api/wingdi/ns-wingdi-bitmapinfo) -Struktur gespeichert, gefolgt von den monochrome DIB-Bits der **Xor** -Maske des Cursors und dann von den monochrome DIB-Bits der Cursor- **und** -Maske. Beachten Sie, dass es einen Unterschied in den Bitmaps der beiden Ressourcen gibt: im Unterschied zu Symbolen haben Cursor-XOR-Masken keine farbdib-Bits. Obwohl die Bitmaps der Cursor Masken monochrome sind und keine DIB-Header oder Farbtabellen aufweisen, sind die Bits in Bezug auf Ausrichtung und Richtung immer noch im DIB-Format. Ein weiterer bedeutender Unterschied zwischen Cursorn und Symbolen besteht darin, dass Cursor über einen Hotspot verfügen und Symbole nicht.
+Das Format jeder Cursorkomponente ähnelt dem Format der CUR-Datei. Jedes Cursorbild wird in einer [**BITMAPINFO-Struktur**](/windows/win32/api/wingdi/ns-wingdi-bitmapinfo) gespeichert, gefolgt von den monofarbigen DIB-Bits der **XOR-Maske** des Cursors und dann von den monotonen DIB-Bits der **AND-Maske** des Cursors. Beachten Sie, dass es einen Unterschied in den Bitmaps der beiden Ressourcen gibt: Im Gegensatz zu Symbolen weisen Cursor-XOR-Masken keine Farb-DIB-Bits auf. Obwohl die Bitmaps der Cursormasken monofarbig sind und keine DIB-Header oder Farbtabellen haben, befinden sich die Bits in Bezug auf Ausrichtung und Richtung weiterhin im DIB-Format. Ein weiterer signifikanter Unterschied zwischen Cursorn und Symbolen ist, dass Cursor einen Hotspot haben und Symbole dies nicht tun.
 
-Die Gruppen Kopfzeile für die Symbol-und die Cursor-Ressource besteht aus einer [**nwheader**](newheader.md) -Struktur und einer oder mehreren [**resdir**](resdir.md) -Strukturen. Es gibt eine **resdir** -Struktur für jedes Symbol oder jeden Cursor. Die Gruppen Kopfzeile enthält die Informationen, die eine Anwendung benötigt, um das richtige Symbol oder den anzuzeigenden Cursor auszuwählen. Sowohl die Gruppen Kopfzeile als auch die Daten, die für jedes Symbol oder jeder Cursor in der Gruppe wiederholt werden, haben eine festgelegte Länge. Dadurch kann die Anwendung nach dem Zufallsprinzip auf die Informationen zugreifen.
+Der Gruppenheader für Symbol- und Cursorressourcen besteht aus einer [**NEWHEADER-Struktur**](newheader.md) sowie einer oder mehreren [**RESDIR-Strukturen.**](resdir.md) Es gibt eine **RESDIR-Struktur** für jedes Symbol oder jeden Cursor. Der Gruppenheader enthält die Informationen, die eine Anwendung benötigt, um das richtige Symbol oder den richtigen Cursor für die Anzeige auszuwählen. Sowohl der Gruppenkopf als auch die Daten, die für jedes Symbol oder jeden Cursor in der Gruppe wiederholt werden, haben eine feste Länge. Dadurch kann die Anwendung nach dem Zufallsprinzip auf die Informationen zugreifen.
 
-## <a name="dialog-box-resources"></a>Dialog Feld Ressourcen
+## <a name="dialog-box-resources"></a>Dialogfeldressourcen
 
-Ein Dialogfeld ist auch ein Ressourcen Eintrag in der Ressourcen Datei. Sie besteht aus einer [**DLGTEMPLATE**](/windows/desktop/api/winuser/ns-winuser-dlgtemplate) -Dialogfeld-Header Struktur und einer [**DLGITEMTEMPLATE**](/windows/desktop/api/winuser/ns-winuser-dlgitemtemplate) -Struktur für jedes Steuerelement im Dialogfeld. Die Strukturen [**dlgtemplateex**](/windows/desktop/dlgbox/dlgtemplateex) und [**dlgitemtemplateex**](/windows/desktop/dlgbox/dlgitemtemplateex) beschreiben das Format erweiterter Dialogfeld Ressourcen.
+Ein Dialogfeld ist auch ein Ressourceneintrag in der Ressourcendatei. Sie besteht aus einer [**DLGTEMPLATE-Dialogfeldheaderstruktur**](/windows/desktop/api/winuser/ns-winuser-dlgtemplate) sowie einer [**DLGITEMTEMPLATE-Struktur**](/windows/desktop/api/winuser/ns-winuser-dlgitemtemplate) für jedes Steuerelement im Dialogfeld. Die [**DLGTEMPLATEEX-**](/windows/desktop/dlgbox/dlgtemplateex) und [**DLGITEMTEMPLATEEX-Strukturen**](/windows/desktop/dlgbox/dlgitemtemplateex) beschreiben das Format erweiterter Dialogfeldressourcen.
 
 ## <a name="font-resources"></a>Schriftarten Ressourcen
 
-Schriftarten werden in der Ressourcen Datei als Gruppe von Ressourcen gespeichert. Einzelne Schriftarten bilden eine Schriftart Gruppe. Eine [Schriftart Anweisung](./font-statement.md) Ressourcen Definitions Anweisung in. In der RC-Datei wird jede Schriftart definiert. Jede einzelne Schriftart in der Ressource besteht aus dem gesamten Inhalt der zugehörigen. file-Datei. Eine [**fontgrouphdr**](fontgrouphdr.md) -Struktur folgt allen einzelnen Schriftart Komponenten in der RES-Datei.
+Schriftarten werden in der Ressourcendatei als Gruppe von Ressourcen gespeichert. Einzelne Schriftarten machen eine Schriftartgruppe aus. Eine FONT Statement-Ressourcendefinitions-Anweisung in der . [](./font-statement.md) Die RC-Datei definiert jede Schriftart. Jede einzelne Schriftart in der Ressource besteht aus dem vollständigen Inhalt der zugehörigen FNT-Datei. Eine [**FONTGROUPHDR-Struktur**](fontgrouphdr.md) folgt allen einzelnen Schriftartkomponenten in der RES-Datei.
 
-Den Ressourcen einer bestimmten Anwendung werden keine Schriftart Ressourcen hinzugefügt. Stattdessen werden Sie normalerweise ausführbaren Dateien hinzugefügt, die über die Erweiterung ". FON" verfügen. Diese Dateien sind in der Regel reine Ressourcen-DLLs anstelle von Anwendungen.
+Schriftartressourcen werden den Ressourcen einer bestimmten Anwendung nicht hinzugefügt. Stattdessen werden sie normalerweise ausführbaren Dateien mit der Erweiterung .fon hinzugefügt. Bei diesen Dateien handelt es sich in der Regel nicht um Anwendungen, sondern um ressourcenbasierte DLLs.
 
-## <a name="menu-resources"></a>Menü Ressourcen
+## <a name="menu-resources"></a>Menüressourcen
 
-Eine *Menü Ressource* besteht aus einer [**menuheader**](menuheader.md) -Struktur, gefolgt von einer oder mehreren [**normmenuitem**](normalmenuitem.md) -oder [**popupmenuitem**](popupmenuitem.md) -Strukturen, eine für jedes Menü Element in der Menüvorlage. Der [**menuex- \_ Vorlagen \_ Header**](menuex-template-header.md) und die [**menuex- \_ Vorlagen \_ Element**](menuex-template-item.md) Strukturen beschreiben das Format erweiterter Menü Ressourcen.
+Eine *Menüressource* besteht aus einer [**MENUHEADER-Struktur,**](menuheader.md) gefolgt von einer oder mehreren [**NORMALMENUITEM-**](normalmenuitem.md) oder [**POPUPMENUITEM-Strukturen,**](popupmenuitem.md) eine für jedes Menüelement in der Menüvorlage. Die [**MENUEX \_ TEMPLATE \_ HEADER-**](menuex-template-header.md) und [**MENUEX TEMPLATE \_ \_ ITEM-Strukturen**](menuex-template-item.md) beschreiben das Format erweiterter Menüressourcen.
 
-## <a name="message-table-resources"></a>Nachrichten Tabellen Ressourcen
+## <a name="message-table-resources"></a>Nachrichtentabellenressourcen
 
-Eine *Nachrichten Tabelle* ist eine Ressource, die formatierten Text enthält, der als Fehlermeldung oder in einem Meldungs Feld angezeigt werden soll. Die Hauptstruktur in einer Nachrichten Tabellen Ressource ist die [**\_ \_ Datenstruktur der Nachrichten Ressource**](/windows/desktop/api/Winnt/ns-winnt-message_resource_data) .
+Eine *Meldungstabelle* ist eine Ressource, die formatierten Text für die Anzeige als Fehlermeldung oder in einem Meldungsfeld enthält. Die Hauptstruktur in einer Nachrichtentabellenressource ist die [**MESSAGE \_ RESOURCE \_ DATA-Struktur.**](/windows/desktop/api/Winnt/ns-winnt-message_resource_data)
 
-## <a name="version-resources"></a>Versions Ressourcen
+## <a name="version-resources"></a>Versionsressourcen
 
-Die Hauptstruktur in einer Versions Ressource ist die [**vs \_ fixedfileingefo**](/windows/win32/api/verrsrc/ns-verrsrc-vs_fixedfileinfo) -Struktur. Zu den zusätzlichen Strukturen gehören die [**varfileinfo**](varfileinfo.md) -Struktur zum Speichern von sprach Informationsdaten und [**stringfileinfo**](stringfileinfo.md) für benutzerdefinierte Zeichen folgen Informationen. Alle Zeichen folgen in einer Versions Ressource sind im Unicode-Format. Jeder Informationsblock wird an einer **DWORD** -Grenze ausgerichtet.
+Die Hauptstruktur in einer Versionsressource ist die [**VS \_ FIXEDFILEINFO-Struktur.**](/windows/win32/api/verrsrc/ns-verrsrc-vs_fixedfileinfo) Weitere Strukturen sind die [**VarFileInfo-Struktur**](varfileinfo.md) zum Speichern von Sprachinformationsdaten und [**StringFileInfo**](stringfileinfo.md) für benutzerdefinierte Zeichenfolgeninformationen. Alle Zeichenfolgen in einer Versionsressource haben das Unicode-Format. Jeder Informationsblock wird an einer **DWORD-Grenze** ausgerichtet.
 
- 
+ 
 
- 
+ 

@@ -1,11 +1,11 @@
 ---
-title: Devicepair-Server Eigenschaft (asptlb. h)
-description: Ruft den Server für das aktive Basic-Geräte Paar ab.
+title: DevicePair-Servereigenschaft (Asptlb.h)
+description: Ruft den Server für das aktive Basisgerätepaar ab.
 ms.assetid: 25FD523F-36C7-4165-BBB2-6A3410D896EF
 keywords:
-- Server Eigenschaft Medien Streaming-API
-- Server Eigenschaft Medien Streaming-API, devicepair-Schnittstelle
-- Devicepair Interface Medien Streaming-API, Server Eigenschaft
+- Servereigenschaft Media Streaming-API
+- Servereigenschaft Media Streaming-API, DevicePair-Schnittstelle
+- DevicePair-Schnittstelle Medienstreaming-API, Servereigenschaft
 topic_type:
 - apiref
 api_name:
@@ -17,16 +17,16 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: eec2c28e8118f6cf11e89c7ab4a5ba04abd8b8f5
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 3d0939a27d96de8f2c8ff53ffd7b0bd766292b873450fb138d0877e916c691f3
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106371960"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119100724"
 ---
-# <a name="devicepairserver-property"></a>Devicepair:: Server-Eigenschaft
+# <a name="devicepairserver-property"></a>DevicePair::Server-Eigenschaft
 
-Ruft den Server für das aktive Basic-Geräte Paar ab.
+Ruft den Server für das aktive Basisgerätepaar ab.
 
 Diese Eigenschaft ist schreibgeschützt.
 
@@ -43,7 +43,7 @@ HRESULT get_Server(
 
 ## <a name="property-value"></a>Eigenschaftswert
 
-Empfängt ein [**activebasicdevice**](/previous-versions/windows/desktop/legacy/dn385755(v=vs.85)) -Objekt, das das Server Gerät darstellt.
+Empfängt ein [**ActiveBasicDevice-Objekt,**](/previous-versions/windows/desktop/legacy/dn385755(v=vs.85)) das das Servergerät darstellt.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -51,15 +51,15 @@ Empfängt ein [**activebasicdevice**](/previous-versions/windows/desktop/legacy/
 
 | Anforderung | Wert |
 |-------------------|-------------------------------------------------------------------------------------|
-| Header<br/> | <dl> <dt>Asptlb. h</dt> </dl> |
+| Header<br/> | <dl> <dt>Asptlb.h</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Devicepair**](/previous-versions/windows/desktop/legacy/dn385771(v=vs.85))
+[**DevicePair**](/previous-versions/windows/desktop/legacy/dn385771(v=vs.85))
 </dt> </dl>
 
  

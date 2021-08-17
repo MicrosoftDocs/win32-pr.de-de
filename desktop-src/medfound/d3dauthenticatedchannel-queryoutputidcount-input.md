@@ -76,7 +76,7 @@ Ein Handle für die kryptografische Sitzung.
 
 
 
-## <a name="see-also"></a>Weitere Informationen:
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 

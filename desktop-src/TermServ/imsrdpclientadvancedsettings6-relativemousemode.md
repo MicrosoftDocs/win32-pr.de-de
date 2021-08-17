@@ -1,16 +1,16 @@
 ---
-title: IMsRdpClientAdvancedSettings6 relativemousmode (Eigenschaft)
+title: IMsRdpClientAdvancedSettings6 RelativeMouseMode-Eigenschaft
 description: Gibt an, ob die Maus den relativen Modus verwenden soll.
 ms.assetid: 29ae9575-ce60-4999-9601-18413ae739e6
 ms.tgt_platform: multiple
 keywords:
-- Relativemousmode-Eigenschaft Remotedesktopdienste
-- Relativemousmode-Eigenschaft Remotedesktopdienste, IMsRdpClientAdvancedSettings6-Schnittstelle
-- IMsRdpClientAdvancedSettings6 Interface Remotedesktopdienste, relativemousmode (Eigenschaft)
-- Relativemousmode-Eigenschaft Remotedesktopdienste, IMsRdpClientAdvancedSettings7-Schnittstelle
-- IMsRdpClientAdvancedSettings7 Interface Remotedesktopdienste, relativemousmode (Eigenschaft)
-- Relativemousmode-Eigenschaft Remotedesktopdienste, IMsRdpClientAdvancedSettings8-Schnittstelle
-- IMsRdpClientAdvancedSettings8 Interface Remotedesktopdienste, relativemousmode (Eigenschaft)
+- RelativeMouseMode-Eigenschaft Remotedesktopdienste
+- RelativeMouseMode-Eigenschaft Remotedesktopdienste , IMsRdpClientAdvancedSettings6-Schnittstelle
+- IMsRdpClientAdvancedSettings6-Schnittstelle Remotedesktopdienste , RelativeMouseMode-Eigenschaft
+- RelativeMouseMode-Eigenschaft Remotedesktopdienste , IMsRdpClientAdvancedSettings7-Schnittstelle
+- IMsRdpClientAdvancedSettings7-Schnittstelle Remotedesktopdienste , RelativeMouseMode-Eigenschaft
+- RelativeMouseMode-Eigenschaft Remotedesktopdienste , IMsRdpClientAdvancedSettings8-Schnittstelle
+- IMsRdpClientAdvancedSettings8-Schnittstelle Remotedesktopdienste , RelativeMouseMode-Eigenschaft
 topic_type:
 - apiref
 api_name:
@@ -29,16 +29,16 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 31c575acefbfef54dc4c858f465f0cdde2ce8bc7
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 9cfe0551cf02f94f3494fde5ebf49ffb60c2bd4a966db1efb5f0dfeb3bd9e4bb
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "106346726"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119138813"
 ---
-# <a name="imsrdpclientadvancedsettings6relativemousemode-property"></a>IMsRdpClientAdvancedSettings6:: relativemousmode (Eigenschaft)
+# <a name="imsrdpclientadvancedsettings6relativemousemode-property"></a>IMsRdpClientAdvancedSettings6::RelativeMouseMode-Eigenschaft
 
-Gibt an, ob die Maus den relativen Modus verwenden soll. Enthält **Variant \_ true** , wenn sich der Mauszeiger im relativen Modus befindet, oder **Variant \_ false** , wenn sich der Mauszeiger im absoluten Modus befindet.
+Gibt an, ob die Maus den relativen Modus verwenden soll. Enthält **VARIANT \_ TRUE,** wenn sich die Maus im relativen Modus befindet, oder **VARIANT \_ FALSE,** wenn sich die Maus im absoluten Modus befindet.
 
 Dies ist eine Eigenschaft mit Lese- und Schreibzugriff.
 
@@ -59,11 +59,11 @@ HRESULT get_RelativeMouseMode(
 
 ## <a name="property-value"></a>Eigenschaftswert
 
-Enthält den neuen Eigenschafts Wert.
+Enthält den neuen Eigenschaftswert.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Der Mausmodus gibt an, wie das ActiveX-Steuerelement die Maus Koordinaten berechnet, die es an den Remotedesktop-Sitzungshost-Server (RD-Sitzungshost) sendet. Wenn sich der Mauszeiger im relativen Modus befindet, berechnet das ActiveX-Steuerelement Maus Koordinaten in Bezug auf die letzte Position der Maus. Wenn sich der Mauszeiger im absoluten Modus befindet, berechnet das ActiveX-Steuerelement die Maus Koordinaten relativ zum Desktop des RD-Sitzungshost Servers.
+Der Mausmodus gibt an, wie das ActiveX-Steuerelement die Mauskoordinaten berechnet, die es an den Remotedesktop-Sitzungshost -Server (RD-Sitzungshost) sendet. Wenn sich die Maus im relativen Modus befindet, berechnet das ActiveX-Steuerelement Mauskoordinaten relativ zur letzten Position der Maus. Wenn sich die Maus im absoluten Modus befindet, berechnet das ActiveX-Steuerelement Mauskoordinaten relativ zum Desktop des RD-Sitzungshost-Servers.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -79,7 +79,7 @@ Der Mausmodus gibt an, wie das ActiveX-Steuerelement die Maus Koordinaten berech
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 

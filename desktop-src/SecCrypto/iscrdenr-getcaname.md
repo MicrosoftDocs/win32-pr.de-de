@@ -1,7 +1,7 @@
 ---
-description: Ruft den Namen der angegebenen Zertifizierungsstelle (Certification Authority, ca) für eine angegebene Zertifikat Vorlage ab.
+description: Ruft den Namen der angegebenen Zertifizierungsstelle für eine bestimmte Zertifikatvorlage ab.
 ms.assetid: e921710a-7c74-4fda-91e1-fbad45889984
-title: 'Iscrdenr:: getcaname-Methode'
+title: ISCrdEnr::getCAName-Methode
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -14,16 +14,16 @@ api_type:
 - COM
 api_location:
 - Scrdenrl.dll
-ms.openlocfilehash: b62b0a7e871a29ff0a8edd28eb8cd5e18e97c1a8
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 6de5d1108ab09c9658af307d6a67c5a94a5dc35514720a221540de263f516c9a
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "104217997"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119960280"
 ---
-# <a name="iscrdenrgetcaname-method"></a>Iscrdenr:: getcaname-Methode
+# <a name="iscrdenrgetcaname-method"></a>ISCrdEnr::getCAName-Methode
 
-Die **getcaname** -Methode ruft den Namen der angegebenen Zertifizierungsstelle ( [*Certification Authority*](../secgloss/c-gly.md) , ca) für eine angegebene Zertifikat Vorlage ab.
+Die **getCAName-Methode** ruft den Namen der angegebenen Zertifizierungsstelle [*für*](../secgloss/c-gly.md) eine bestimmte Zertifikatvorlage ab.
 
 ## <a name="syntax"></a>Syntax
 
@@ -54,21 +54,21 @@ SCrdEnr.getCAName( _
 
 <dl> <dt>
 
-*dwFlags* \[ in\]
+*dwFlags* \[ In\]
 </dt> <dd>
 
-Ein-Wert, der bestimmt, ob der Name auf den ZS-Namen oder den Computernamen der Zertifizierungsstelle verweist. Wenn es sich bei diesem Wert um den Computer \_ \_ Namen der Zertifizierungsstelle \_ \_ (definiert als 0x01) handelt, verweist der Name auf den Computernamen der Zertifizierungsstelle; andernfalls bezieht sich der Name auf den Namen der Zertifizierungsstelle.
+Ein -Wert, der bestimmt, ob der Name auf den Namen der Zertifizierungsstelle oder den Computernamen der Zertifizierungsstelle verweist. Wenn dieser Wert SCARD ENROLL CA MACHINE NAME (definiert als 0x01) ist, bezieht sich der Name auf den Computernamen der Zertifizierungsstelle. Andernfalls bezieht sich der Name auf den Namen der \_ \_ \_ \_ Zertifizierungsstelle.
 
 </dd> <dt>
 
-*bstraucerttemplatename* \[ in\]
+*bstrCertTemplateName* \[ In\]
 </dt> <dd>
 
-Der Name der Zertifikat Vorlage.
+Der Name der Zertifikatvorlage.
 
 </dd> <dt>
 
-*pbstraucaname* \[ vorgenommen\]
+*pbstrCAName* \[ out\]
 </dt> <dd>
 
 Ein Zeiger auf eine Zeichenfolge, die den Namen der Zertifizierungsstelle zurückgibt.
@@ -79,17 +79,17 @@ Ein Zeiger auf eine Zeichenfolge, die den Namen der Zertifizierungsstelle zurüc
 
 ### <a name="c"></a>C++
 
-Wenn die Methode erfolgreich ausgeführt wird, gibt die Methode S \_ OK zurück.
+Wenn die Methode erfolgreich ist, gibt die Methode S \_ OK zurück.
 
-Wenn die Methode fehlschlägt, wird ein **HRESULT** -Wert zurückgegeben, der den Fehler angibt. Eine Liste der allgemeinen Fehlercodes finden Sie unter [Allgemeine HRESULT-Werte](common-hresult-values.md).
+Wenn bei der Methode ein Fehler auftritt, wird ein **HRESULT-Wert** zurückgegeben, der den Fehler angibt. Eine Liste der allgemeinen Fehlercodes finden Sie unter [Allgemeine HRESULT-Werte](common-hresult-values.md).
 
 ### <a name="vb"></a>VB
 
 Eine Zeichenfolge, die den Namen der Zertifizierungsstelle darstellt.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Der Standardname der Zertifizierungsstelle ist der Vorname in der Liste der verfügbaren Zertifizierungsstellen.
+Der Standardname der Zertifizierungsstelle ist der Vorname in der liste der verfügbaren Zertifizierungsstellen.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -98,26 +98,26 @@ Der Standardname der Zertifizierungsstelle ist der Vorname in der Liste der verf
 | Anforderung | Wert |
 |-------------------------------------|-----------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Nicht unterstützt<br/>                                                               |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/>                                    |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                                    |
 | DLL<br/>                      | <dl> <dt>Scrdenrl.dll</dt> </dl> |
-| IID<br/>                      | IID \_ iscrdenr ist definiert als 753988a1-1357-436d-9cf5-f089bdd67d64<br/>             |
+| IID<br/>                      | IID \_ ISCrdEnr ist als 753988a1-1357-436d-9cf5-f089bdd67d64 definiert.<br/>             |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Iscrdenr**](iscrdenr.md)
+[**ISCrdEnr**](iscrdenr.md)
 </dt> <dt>
 
-[**Iscrdenr:: enumcaname**](iscrdenr-enumcaname.md)
+[**ISCrdEnr::enumCAName**](iscrdenr-enumcaname.md)
 </dt> <dt>
 
-[**Iscrdenr:: getcacount**](iscrdenr-getcacount.md)
+[**ISCrdEnr::getCACount**](iscrdenr-getcacount.md)
 </dt> <dt>
 
-[**Iscrdenr:: setcaname**](iscrdenr-setcaname.md)
+[**ISCrdEnr::setCAName**](iscrdenr-setcaname.md)
 </dt> </dl>
 
  

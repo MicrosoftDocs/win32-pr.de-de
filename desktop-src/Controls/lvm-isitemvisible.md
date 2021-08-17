@@ -1,9 +1,9 @@
 ---
-title: LVM_ISITEMVISIBLE Meldung (kommstrg. h)
-description: Gibt an, ob ein Element im Listenansicht-Steuerelement sichtbar ist. Senden Sie diese Nachricht explizit oder mithilfe des ListView-Objekts \_ isitemvisible.
+title: LVM_ISITEMVISIBLE (Commctrl.h)
+description: Gibt an, ob ein Element im Listenansicht-Steuerelement sichtbar ist. Senden Sie diese Nachricht explizit oder mithilfe des ListView \_ IsItemVisible-Makros.
 ms.assetid: 355be527-e2b9-46be-96a0-951d72216d92
 keywords:
-- Windows-Steuerelemente für LVM_ISITEMVISIBLE Meldung
+- LVM_ISITEMVISIBLE meldungssteuerelemente Windows
 topic_type:
 - apiref
 api_name:
@@ -14,22 +14,22 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 2a95116d2d6da6e3554e63a8149c9b91d6c97f76
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 424d321b79b4a4f497942c36ca78c751cc5404cdfaf965b451eea94a8b3c8e1a
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "103859148"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118958179"
 ---
-# <a name="lvm_isitemvisible-message"></a>LVM- \_ isitemvisible-Meldung
+# <a name="lvm_isitemvisible-message"></a>LVM \_ ISITEMVISIBLE-Nachricht
 
-Gibt an, ob ein Element im Listenansicht-Steuerelement sichtbar ist. Senden Sie diese Nachricht explizit oder mithilfe des [**ListView-Objekts \_ isitemvisible**](/windows/desktop/api/Commctrl/nf-commctrl-listview_isitemvisible) .
+Gibt an, ob ein Element im Listenansicht-Steuerelement sichtbar ist. Senden Sie diese Nachricht explizit oder mithilfe des [**ListView \_ IsItemVisible-Makros.**](/windows/desktop/api/Commctrl/nf-commctrl-listview_isitemvisible)
 
 ## <a name="parameters"></a>Parameter
 
 <dl> <dt>
 
-*wParam* \[ in\]
+*wParam* \[ In\]
 </dt> <dd>
 
 Ein Index des Elements im Listenansicht-Steuerelement.
@@ -41,7 +41,7 @@ Ein Index des Elements im Listenansicht-Steuerelement.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt **true** zurück, wenn es sichtbar ist, andernfalls **false** .
+Gibt **TRUE zurück,** wenn sichtbar, andernfalls **FALSE.**
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -49,9 +49,9 @@ Gibt **true** zurück, wenn es sichtbar ist, andernfalls **false** .
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                        |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/>                                  |
-| Header<br/>                   | <dl> <dt>Kommstrg. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ Vista-Desktop-Apps\]<br/>                                        |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                                  |
+| Header<br/>                   | <dl> <dt>Commctrl.h</dt> </dl> |
 
 
 

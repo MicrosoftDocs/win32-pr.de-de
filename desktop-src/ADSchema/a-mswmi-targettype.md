@@ -4,8 +4,8 @@ description: WMI-Verweis auf eine Typdefinition für ein Richtlinienobjekt.
 ms.assetid: 0757d903-37f7-4830-9ba0-a971cf1bda04
 ms.tgt_platform: multiple
 keywords:
-- MS-WMI-TargetType-Attribut AD-Schema
-- MSWMI-TargetType-Attribut AD-Schema
+- AD-Schema des ms-WMI-TargetType-Attributs
+- AD-Schema des msWMI-TargetType-Attributs
 topic_type:
 - apiref
 api_name:
@@ -35,7 +35,7 @@ WMI-Verweis auf eine Typdefinition für ein Richtlinienobjekt.
 | Aktualisieren von Berechtigungen  | Gruppenrichtlinie Administrator                  |
 | Updatehäufigkeit  | \-                                          |
 | Attribute-Id      | 1.2.840.113556.1.4.1649                     |
-| System-ID-GUID    | ca2a281e-262b-4ff7-b419-bc123352a4e9        |
+| System-Id-Guid    | ca2a281e-262b-4ff7-b419-bc123352a4e9        |
 | Syntax            | [**String(Unicode)**](s-string-unicode.md) |
 
 
@@ -56,10 +56,10 @@ WMI-Verweis auf eine Typdefinition für ein Richtlinienobjekt.
 |------------------------|-------------------------------------------------------------------------------------------------------------------------------|
 | Link-ID                | \-                                                                                                                            |
 | MAPI-Id                | \-                                                                                                                            |
-| System-Only            | False                                                                                                                         |
-| Ist einwertig       | True                                                                                                                          |
-| Ist indiziert             | False                                                                                                                         |
-| Im globalen Katalog      | False                                                                                                                         |
+| System-Only            | Falsch                                                                                                                         |
+| Is-Single-Valued       | Richtig                                                                                                                          |
+| Ist indiziert             | Falsch                                                                                                                         |
+| Im globalen Katalog      | Falsch                                                                                                                         |
 | NT-Security-Descriptor | O:BAG:BAD:S:                                                                                                                  |
 | Range-Lower            | \-                                                                                                                            |
 | Range-Upper            | \-                                                                                                                            |
@@ -77,10 +77,10 @@ WMI-Verweis auf eine Typdefinition für ein Richtlinienobjekt.
 |------------------------|-------------------------------------------------------------------------------------------------------------------------------|
 | Link-ID                | \-                                                                                                                            |
 | MAPI-Id                | \-                                                                                                                            |
-| System-Only            | False                                                                                                                         |
-| Ist einwertig       | True                                                                                                                          |
-| Ist indiziert             | False                                                                                                                         |
-| Im globalen Katalog      | False                                                                                                                         |
+| System-Only            | Falsch                                                                                                                         |
+| Is-Single-Valued       | Richtig                                                                                                                          |
+| Ist indiziert             | Falsch                                                                                                                         |
+| Im globalen Katalog      | Falsch                                                                                                                         |
 | NT-Security-Descriptor | O:BAG:BAD:S:                                                                                                                  |
 | Range-Lower            | \-                                                                                                                            |
 | Range-Upper            | \-                                                                                                                            |
@@ -98,10 +98,10 @@ WMI-Verweis auf eine Typdefinition für ein Richtlinienobjekt.
 |------------------------|-------------------------------------------------------------------------------------------------------------------------------|
 | Link-ID                | \-                                                                                                                            |
 | MAPI-Id                | \-                                                                                                                            |
-| System-Only            | False                                                                                                                         |
-| Ist einwertig       | True                                                                                                                          |
-| Ist indiziert             | False                                                                                                                         |
-| Im globalen Katalog      | False                                                                                                                         |
+| System-Only            | Falsch                                                                                                                         |
+| Is-Single-Valued       | Richtig                                                                                                                          |
+| Ist indiziert             | Falsch                                                                                                                         |
+| Im globalen Katalog      | Falsch                                                                                                                         |
 | NT-Security-Descriptor | O:BAG:BAD:S:                                                                                                                  |
 | Range-Lower            | \-                                                                                                                            |
 | Range-Upper            | \-                                                                                                                            |
@@ -119,10 +119,10 @@ WMI-Verweis auf eine Typdefinition für ein Richtlinienobjekt.
 |------------------------|-------------------------------------------------------------------------------------------------------------------------------|
 | Link-ID                | \-                                                                                                                            |
 | MAPI-Id                | \-                                                                                                                            |
-| System-Only            | False                                                                                                                         |
-| Ist einwertig       | True                                                                                                                          |
-| Ist indiziert             | False                                                                                                                         |
-| Im globalen Katalog      | False                                                                                                                         |
+| System-Only            | Falsch                                                                                                                         |
+| Ist einwertig       | Richtig                                                                                                                          |
+| Ist indiziert             | Falsch                                                                                                                         |
+| Im globalen Katalog      | Falsch                                                                                                                         |
 | NT-Security-Descriptor | O:BAG:BAD:S:                                                                                                                  |
 | Range-Lower            | \-                                                                                                                            |
 | Range-Upper            | \-                                                                                                                            |
@@ -140,10 +140,10 @@ WMI-Verweis auf eine Typdefinition für ein Richtlinienobjekt.
 |------------------------|-------------------------------------------------------------------------------------------------------------------------------|
 | Link-ID                | \-                                                                                                                            |
 | MAPI-Id                | \-                                                                                                                            |
-| System-Only            | False                                                                                                                         |
-| Ist einwertig       | True                                                                                                                          |
-| Ist indiziert             | False                                                                                                                         |
-| Im globalen Katalog      | False                                                                                                                         |
+| System-Only            | Falsch                                                                                                                         |
+| Ist einwertig       | Richtig                                                                                                                          |
+| Ist indiziert             | Falsch                                                                                                                         |
+| Im globalen Katalog      | Falsch                                                                                                                         |
 | NT-Security-Descriptor | O:BAG:BAD:S:                                                                                                                  |
 | Range-Lower            | \-                                                                                                                            |
 | Range-Upper            | \-                                                                                                                            |

@@ -56,10 +56,10 @@ Die erforderliche RA-Anwendungsrichtlinien-OID in den Gegensignaturen der Zertif
 |------------------------|-------------------------------------------------------------------------|
 | Link-ID                | \-                                                                      |
 | MAPI-Id                | \-                                                                      |
-| System-Only            | False                                                                   |
-| Ist einwertig       | False                                                                   |
-| Ist indiziert             | False                                                                   |
-| Im globalen Katalog      | False                                                                   |
+| System-Only            | Falsch                                                                   |
+| Ist einwertig       | Falsch                                                                   |
+| Ist indiziert             | Falsch                                                                   |
+| Im globalen Katalog      | Falsch                                                                   |
 | NT-Security-Descriptor | O:BAG:BAD:S:                                                            |
 | Range-Lower            | \-                                                                      |
 | Range-Upper            | \-                                                                      |
@@ -77,10 +77,10 @@ Die erforderliche RA-Anwendungsrichtlinien-OID in den Gegensignaturen der Zertif
 |------------------------|-------------------------------------------------------------------------|
 | Link-ID                | \-                                                                      |
 | MAPI-Id                | \-                                                                      |
-| System-Only            | False                                                                   |
-| Ist einwertig       | False                                                                   |
-| Ist indiziert             | False                                                                   |
-| Im globalen Katalog      | False                                                                   |
+| System-Only            | Falsch                                                                   |
+| Ist einwertig       | Falsch                                                                   |
+| Ist indiziert             | Falsch                                                                   |
+| Im globalen Katalog      | Falsch                                                                   |
 | NT-Security-Descriptor | O:BAG:BAD:S:                                                            |
 | Range-Lower            | \-                                                                      |
 | Range-Upper            | \-                                                                      |
@@ -98,10 +98,10 @@ Die erforderliche RA-Anwendungsrichtlinien-OID in den Gegensignaturen der Zertif
 |------------------------|-------------------------------------------------------------------------|
 | Link-ID                | \-                                                                      |
 | MAPI-Id                | \-                                                                      |
-| System-Only            | False                                                                   |
-| Ist einwertig       | False                                                                   |
-| Ist indiziert             | False                                                                   |
-| Im globalen Katalog      | False                                                                   |
+| System-Only            | Falsch                                                                   |
+| Ist einwertig       | Falsch                                                                   |
+| Ist indiziert             | Falsch                                                                   |
+| Im globalen Katalog      | Falsch                                                                   |
 | NT-Security-Descriptor | O:BAG:BAD:S:                                                            |
 | Range-Lower            | \-                                                                      |
 | Range-Upper            | \-                                                                      |
@@ -119,10 +119,10 @@ Die erforderliche RA-Anwendungsrichtlinien-OID in den Gegensignaturen der Zertif
 |------------------------|-------------------------------------------------------------------------|
 | Link-ID                | \-                                                                      |
 | MAPI-Id                | \-                                                                      |
-| System-Only            | False                                                                   |
-| Is-Single-Valued       | False                                                                   |
-| Ist indiziert             | False                                                                   |
-| Im globalen Katalog      | False                                                                   |
+| System-Only            | Falsch                                                                   |
+| Ist einwertig       | Falsch                                                                   |
+| Ist indiziert             | Falsch                                                                   |
+| Im globalen Katalog      | Falsch                                                                   |
 | NT-Security-Descriptor | O:BAG:BAD:S:                                                            |
 | Range-Lower            | \-                                                                      |
 | Range-Upper            | \-                                                                      |
@@ -140,10 +140,10 @@ Die erforderliche RA-Anwendungsrichtlinien-OID in den Gegensignaturen der Zertif
 |------------------------|-------------------------------------------------------------------------|
 | Link-ID                | \-                                                                      |
 | MAPI-Id                | \-                                                                      |
-| System-Only            | False                                                                   |
-| Is-Single-Valued       | False                                                                   |
-| Ist indiziert             | False                                                                   |
-| Im globalen Katalog      | False                                                                   |
+| System-Only            | Falsch                                                                   |
+| Ist einwertig       | Falsch                                                                   |
+| Ist indiziert             | Falsch                                                                   |
+| Im globalen Katalog      | Falsch                                                                   |
 | NT-Security-Descriptor | O:BAG:BAD:S:                                                            |
 | Range-Lower            | \-                                                                      |
 | Range-Upper            | \-                                                                      |

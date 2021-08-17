@@ -4,7 +4,7 @@ description: Dieses Thema enthält Codebeispiele, in denen Mitglieder einer Grup
 ms.assetid: 0c066bf2-65ab-47fd-bf1e-0b3192d3b4c4
 ms.tgt_platform: multiple
 keywords:
-- Active Directory-Beispiele für Active Directory mit Mitgliedern einer Gruppe
+- Active Directory-Beispiele für Active Directory mit Anzeige von Mitgliedern einer Gruppe
 ms.topic: article
 ms.date: 05/31/2018
 ms.openlocfilehash: c0eb492b50a42cb400413d4cb1779c95e7da9d33fe828ee72be7d3b068f37f76
@@ -18,7 +18,7 @@ ms.locfileid: "118693959"
 
 Dieses Thema enthält Codebeispiele, in denen Mitglieder einer Gruppe angezeigt werden.
 
-Im folgenden C++-Codebeispiel werden die [**Klassen IADsGroup**](/windows/desktop/api/iads/nn-iads-iadsgroup) und [**IADsMembers**](/windows/desktop/api/iads/nn-iads-iadsmembers) verwendet, um die Member einer Gruppe anzuzeigen.
+Im folgenden C++-Codebeispiel werden die [**Klassen IADsGroup**](/windows/desktop/api/iads/nn-iads-iadsgroup) und [**IADsMembers**](/windows/desktop/api/iads/nn-iads-iadsmembers) verwendet, um die Mitglieder einer Gruppe anzuzeigen.
 
 
 ```C++
@@ -134,7 +134,7 @@ HRESULT PrintGroupObjectMembers(IADsGroup * pADsGroup)
 
 
 
-Im folgenden Visual Basic Codebeispiel wird die [**IADs-Klasse**](/windows/desktop/api/iads/nn-iads-iads) verwendet, um die Gruppenmember anzuzeigen.
+Im folgenden Visual Basic Codebeispiel wird die [**IADs-Klasse**](/windows/desktop/api/iads/nn-iads-iads) verwendet, um die Gruppenmitglieder anzuzeigen.
 
 
 ```VB

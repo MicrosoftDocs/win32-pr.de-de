@@ -121,7 +121,7 @@ Die Menge des in einem Drucker installierten Arbeitsspeichers.
 | Link-ID                | \-                                             |
 | MAPI-Id                | \-                                             |
 | System-Only            | Falsch                                          |
-| Is-Single-Valued       | Richtig                                           |
+| Ist einwertig       | Richtig                                           |
 | Ist indiziert             | Falsch                                          |
 | Im globalen Katalog      | Richtig                                           |
 | NT-Security-Descriptor | O:BAG:BAD:S:                                   |
@@ -142,7 +142,7 @@ Die Menge des in einem Drucker installierten Arbeitsspeichers.
 | Link-ID                | \-                                             |
 | MAPI-Id                | \-                                             |
 | System-Only            | Falsch                                          |
-| Is-Single-Valued       | Richtig                                           |
+| Ist einwertig       | Richtig                                           |
 | Ist indiziert             | Falsch                                          |
 | Im globalen Katalog      | Richtig                                           |
 | NT-Security-Descriptor | O:BAG:BAD:S:                                   |
@@ -163,7 +163,7 @@ Die Menge des in einem Drucker installierten Arbeitsspeichers.
 | Link-ID                | \-                                             |
 | MAPI-Id                | \-                                             |
 | System-Only            | Falsch                                          |
-| Is-Single-Valued       | Richtig                                           |
+| Ist einwertig       | Richtig                                           |
 | Ist indiziert             | Falsch                                          |
 | Im globalen Katalog      | Richtig                                           |
 | NT-Security-Descriptor | O:BAG:BAD:S:                                   |

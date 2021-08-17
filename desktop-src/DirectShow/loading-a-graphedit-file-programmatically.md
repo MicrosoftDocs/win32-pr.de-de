@@ -1,19 +1,19 @@
 ---
-description: Programm gesteuertes Laden einer GraphEdit-Datei
+description: Programmgesteuertes Laden einer GraphEdit-Datei
 ms.assetid: 0e1cff4e-43f8-4d0a-b7a7-b6d0278e9e4a
-title: Programm gesteuertes Laden einer GraphEdit-Datei
+title: Programmgesteuertes Laden einer GraphEdit-Datei
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: a9a4780ead7b65d883bdd48917c6372425612435
-ms.sourcegitcommit: a47bd86f517de76374e4fff33cfeb613eb259a7e
+ms.openlocfilehash: faf2bdff86a47e740e6cb177a70a7b1e12ffc7c865d8ad231f6ada9122f286d9
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/06/2021
-ms.locfileid: "104481747"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118153178"
 ---
-# <a name="loading-a-graphedit-file-programmatically"></a>Programm gesteuertes Laden einer GraphEdit-Datei
+# <a name="loading-a-graphedit-file-programmatically"></a>Programmgesteuertes Laden einer GraphEdit-Datei
 
-Eine Anwendung kann die **IPersistStream** -Schnittstelle verwenden, um eine GraphEdit-Datei (. GRF) zu laden. Verwenden Sie den folgenden Code:
+Eine Anwendung kann die **IPersistStream-Schnittstelle** verwenden, um eine GraphEdit-Datei (.grf) zu laden. Verwenden Sie den folgenden Code:
 
 
 ```C++
@@ -55,20 +55,20 @@ HRESULT LoadGraphFile(IGraphBuilder *pGraph, const WCHAR* wszName)
 
 
 > [!Note]  
-> Der Aufrufe von **IPersistStream:: Load** im vorherigen Codebeispiel kann einen DirectShow-Fehler oder einen Erfolgs Code zurückgeben. Eine Liste möglicher Rückgabewerte finden Sie unter [Fehler-und Erfolgs Codes](error-and-success-codes.md).
+> Der Aufruf von **IPersistStream::Load** im vorherigen Codebeispiel kann einen DirectShow-Fehler- oder Erfolgscode zurückgeben. Eine Liste der möglichen Rückgabewerte finden Sie unter [Fehler- und Erfolgscodes.](error-and-success-codes.md)
 
  
 
-GraphEdit-Dateien dienen nur zum Testen und Debuggen. Sie sind nicht für die Verwendung durch Endbenutzer Anwendungen vorgesehen.
+GraphEdit-Dateien sind nur zum Testen und Debuggen vorgesehen. Sie sind nicht für die Verwendung durch Endbenutzeranwendungen vorgesehen.
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[Simulieren der Diagramm Erstellung mit GraphEdit](simulating-graph-building-with-graphedit.md)
+[Simulieren Graph Erstellen mit GraphEdit](simulating-graph-building-with-graphedit.md)
 </dt> <dt>
 
-[**Stgisstoragefile**](/windows/win32/api/coml2api/nf-coml2api-stgisstoragefile)
+[**StgIsStorageFile**](/windows/win32/api/coml2api/nf-coml2api-stgisstoragefile)
 </dt> <dt>
 
 [**StgOpenStorage**](/windows/win32/api/coml2api/nf-coml2api-stgopenstorage)

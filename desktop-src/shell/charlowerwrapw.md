@@ -1,7 +1,7 @@
 ---
 description: Konvertiert eine Unicode-Zeichenfolge oder ein einzelnes Zeichen in Kleinbuchstaben.
 ms.assetid: 09b7cf8e-6aed-40f4-9dfa-29be3559ae89
-title: Charlowerwrapw-Funktion
+title: CharLowerWrapW-Funktion
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,21 +13,21 @@ api_type:
 - DllExport
 api_location:
 - Shlwapi.dll
-ms.openlocfilehash: 3911e0366d30f3eb9420391f9d06867ded73530e
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: c9a02e89713dd82de63817c00d5402fabe991fed565ebe33fa40286ad30058d4
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104525400"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119710750"
 ---
-# <a name="charlowerwrapw-function"></a>Charlowerwrapw-Funktion
+# <a name="charlowerwrapw-function"></a>CharLowerWrapW-Funktion
 
-\[**Charlowerwrapw** ist für die Verwendung in Windows XP verfügbar. Sie ist möglicherweise in nachfolgenden Versionen nicht verfügbar. Sie sollten " [**charlowerw**](/windows/win32/api/winuser/nf-winuser-charlowera) " an seiner Stelle verwenden.\]
+\[**CharLowerWrapW** ist für die Verwendung in Windows XP verfügbar. In nachfolgenden Versionen ist sie möglicherweise nicht verfügbar. Sie sollten [**CharLowerW**](/windows/win32/api/winuser/nf-winuser-charlowera) an seiner Stelle verwenden.\]
 
-Konvertiert eine Unicode-Zeichenfolge oder ein einzelnes Zeichen in Kleinbuchstaben. Wenn der Operand eine Zeichenfolge ist, konvertiert die-Funktion die Zeichen an Ort und Stelle.
+Konvertiert eine Unicode-Zeichenfolge oder ein einzelnes Zeichen in Kleinbuchstaben. Wenn der Operand eine Zeichenfolge ist, konvertiert die Funktion die Zeichen an Ort und Stelle.
 
 > [!Note]  
-> **Charlowerwrapw** ist ein Wrapper für die Funktion " **charlowerw** ". Weitere Hinweise zur Verwendung finden Sie auf der Seite [**charlower**](/windows/win32/api/winuser/nf-winuser-charlowera) .
+> **CharLowerWrapW** ist ein Wrapper für die **CharLowerW-Funktion.** Weitere Hinweise zur Verwendung finden Sie auf der Seite [**CharLower.**](/windows/win32/api/winuser/nf-winuser-charlowera)
 
  
 
@@ -46,12 +46,12 @@ LPWSTR CharLowerWrapW(
 
 <dl> <dt>
 
-*PCH* \[ in, out\]
+*pch* \[ in, out\]
 </dt> <dd>
 
 Typ: **LPWSTR**
 
-Ein Zeiger auf eine NULL-terminierte Unicode-Zeichenfolge oder ein einzelnes Zeichen. Wenn das höchst wertige Wort dieses Parameters NULL ist, muss das nieder wertige Wort nur ein einzelnes Zeichen enthalten, das konvertiert werden soll.
+Ein Zeiger auf eine mit NULL beendete Unicode-Zeichenfolge oder ein einzelnes Zeichen. Wenn das obere Wort dieses Parameters 0 (null) ist, darf das niedrigwertigen Wort nur ein einzelnes Zeichen enthalten, das konvertiert werden soll.
 
 </dd> </dl>
 
@@ -59,27 +59,27 @@ Ein Zeiger auf eine NULL-terminierte Unicode-Zeichenfolge oder ein einzelnes Zei
 
 Typ: **LPWSTR**
 
-Wenn *PCH* eine Zeichenfolge ist, gibt die Funktion einen Zeiger auf die konvertierte Zeichenfolge zurück. Da die Zeichenfolge direkt konvertiert wird, entspricht der Rückgabewert dem *PCH*.
+Wenn *pch* eine Zeichenfolge ist, gibt die Funktion einen Zeiger auf die konvertierte Zeichenfolge zurück. Da die Zeichenfolge an Ort und Stelle konvertiert wird, ist der Rückgabewert gleich *pch.*
 
-Wenn *PCH* ein einzelnes Zeichen ist, ist der Rückgabewert ein 32-Bit-Wert, dessen hohes Wort 0 (null) ist, und das nieder wertige Wort enthält das konvertierte Zeichen.
+Wenn *pch* ein einzelnes Zeichen ist, ist der Rückgabewert ein 32-Bit-Wert, dessen hochwertiges Wort 0 (null) ist und das konvertierte Zeichen enthält.
 
-Es gibt keinen Hinweis auf Erfolg oder Fehler. Der Fehler tritt selten auf. Es sind keine erweiterten Fehlerinformationen für diese Funktion vorhanden. " [**GetLastError**](/windows/win32/api/errhandlingapi/nf-errhandlingapi-getlasterror)" nicht aufrufen.
+Es gibt keinen Hinweis auf Erfolg oder Fehler. Fehler sind selten. Es gibt keine erweiterten Fehlerinformationen für diese Funktion. Rufen Sie [**getLastError nicht auf.**](/windows/win32/api/errhandlingapi/nf-errhandlingapi-getlasterror)
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die bevorzugte Methode ist die Verwendung von [**charlowerw**](/windows/win32/api/winuser/nf-winuser-charlowera) in Verbindung mit der Microsoft-Schicht für Unicode (MSLU).
+Die bevorzugte Methode ist die Verwendung [**von CharLowerW**](/windows/win32/api/winuser/nf-winuser-charlowera) in Verbindung mit microsoft Layer for Unicode (MSLU).
 
-**Charlowerwrapw** muss direkt aus Shlwapi.dll aufgerufen werden. dabei wird die Ordnungszahl 38 verwendet.
+**CharLowerWrapW** muss mithilfe der Ordnungszahl 38 direkt Shlwapi.dll aufgerufen werden.
 
-## <a name="requirements"></a>Requirements (Anforderungen)
+## <a name="requirements"></a>Anforderungen
 
 
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional, Windows XP \[ Desktop-Apps\]<br/>                                        |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/>                                                          |
-| DLL<br/>                      | <dl> <dt>Shlwapi.dll (Version 5,0 oder höher)</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional, nur Windows \[ XP-Desktop-Apps\]<br/>                                        |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                                                          |
+| DLL<br/>                      | <dl> <dt>Shlwapi.dll (Version 5.0 oder höher)</dt> </dl> |
 
 
 
@@ -87,7 +87,7 @@ Die bevorzugte Methode ist die Verwendung von [**charlowerw**](/windows/win32/ap
 
 <dl> <dt>
 
-[**Charlower**](/windows/win32/api/winuser/nf-winuser-charlowera)
+[**CharLower**](/windows/win32/api/winuser/nf-winuser-charlowera)
 </dt> </dl>
 
  

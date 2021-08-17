@@ -1,37 +1,37 @@
 ---
-title: Iagentcommandex
-description: Iagentcommandex
+title: IAgentCommandEx
+description: IAgentCommandEx
 ms.assetid: 7849ddbe-e81f-4088-ba66-67676279789b
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 58d54218d28372e9d22bebedbb0b07d8cbacfc03
-ms.sourcegitcommit: ebd3ce6908ff865f1ef66f2fc96769be0aad82e1
+ms.openlocfilehash: d24b088ecc38aebf51e34edefecdb9682c7217dbc3c7b4b5fc3c43c28371eec1
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/19/2020
-ms.locfileid: "104390222"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119105385"
 ---
-# <a name="iagentcommandex"></a>Iagentcommandex
+# <a name="iagentcommandex"></a>IAgentCommandEx
 
-\[Der Microsoft-Agent ist ab Windows 7 veraltet und in nachfolgenden Versionen von Windows möglicherweise nicht verfügbar.\]
+\[Microsoft Agent ist ab Version Windows 7 veraltet und in nachfolgenden Versionen von Windows.\]
 
-**Iagentcommandex** wird von der [**iagentcommand**](iagentcommand.md) -Schnittstelle abgeleitet. Sie enthält alle **iagentcommand** -Methoden und ermöglicht den Zugriff auf zusätzliche Funktionen.
+**IAgentCommandEx** wird von der [**IAgentCommand-Schnittstelle**](iagentcommand.md) abgeleitet. Sie enthält alle **IAgentCommand-Methoden** und bietet Zugriff auf zusätzliche Funktionen.
 
 **Methoden in Vtable-Reihenfolge**
 
 
 
-| Iagentcommandex-Methoden                                       | BESCHREIBUNG                                                                                  |
+| IAgentCommandEx-Methoden                                       | Beschreibung                                                                                  |
 |---------------------------------------------------------------|----------------------------------------------------------------------------------------------|
-| [**"Setup"**](iagentcommandex--sethelpcontextid.md) | Legt die kontextabhängige Hilfe Themen-ID für ein [**Befehls**](/windows/desktop/lwef/the-command-object) Objekt fest.    |
-| [**Gethelpcontextid**](iagentcommandex--gethelpcontextid.md) | Gibt die kontextbezogene Hilfe Themen-ID für ein [**Befehls**](/windows/desktop/lwef/the-command-object) Objekt zurück. |
-| [**Setvoicecaption**](iagentcommandex--setvoicecaption.md)   | Legt die sprach Beschriftung für ein [**Befehls**](/windows/desktop/lwef/the-command-object) Objekt fest.                      |
-| [**Getvoicecaption**](iagentcommandex--getvoicecaption.md)   | Gibt die sprach Beschriftung für ein [**Command**](/windows/desktop/lwef/the-command-object) -Objekt zurück.                   |
+| [**SetHelpContextID**](iagentcommandex--sethelpcontextid.md) | Legt die kontextsensitive Hilfethema-ID für ein [**Command-Objekt**](/windows/desktop/lwef/the-command-object) fest.    |
+| [**GetHelpContextID**](iagentcommandex--gethelpcontextid.md) | Gibt die kontextsensitive Hilfethema-ID für ein [**Command-Objekt**](/windows/desktop/lwef/the-command-object) zurück. |
+| [**SetVoiceCaption**](iagentcommandex--setvoicecaption.md)   | Legt die Sprachbeschriftung für ein [**Command-Objekt**](/windows/desktop/lwef/the-command-object) fest.                      |
+| [**GetVoiceCaption**](iagentcommandex--getvoicecaption.md)   | Gibt die Sprachbeschriftung für ein [**Command-Objekt**](/windows/desktop/lwef/the-command-object) zurück.                   |
 
 
 
- 
+ 
 
- 
+ 
 
- 
+ 

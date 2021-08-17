@@ -13,14 +13,14 @@ ms.locfileid: "117754736"
 ---
 # <a name="vml-diffusity-attribute"></a>VML-Diffusity-Attribut
 
-In diesem Thema wird VML beschrieben, ein Feature, das ab Version 9 Windows Internet Explorer ist. Webseiten und Anwendungen, die auf VML basieren, sollten zu SVG oder anderen weit verbreiteten Standards migriert werden.
+In diesem Thema wird VML beschrieben, ein Feature, das ab Windows Internet Explorer 9 als veraltet gilt. Webseiten und Anwendungen, die auf VML basieren, sollten zu SVG oder anderen allgemein unterstützten Standards migriert werden.
 
 > [!Note]  
-> Seit Dezember 2011 wurde dieses Thema archiviert. Daher wird sie nicht mehr aktiv verwaltet. Weitere Informationen finden Sie unter [Archivierter Inhalt.](/previous-versions/windows/internet-explorer/ie-developer/) Informationen, Empfehlungen und Anleitungen zur aktuellen Version von Windows Internet Explorer finden Sie im [Internet Explorer Developer Center.](https://msdn.microsoft.com/ie/)
+> Seit Dezember 2011 wurde dieses Thema archiviert. Daher wird sie nicht mehr aktiv verwaltet. Weitere Informationen finden Sie unter [Archivierter Inhalt.](/previous-versions/windows/internet-explorer/ie-developer/) Informationen, Empfehlungen und Anleitungen zur aktuellen Version von Windows Internet Explorer finden Sie unter [Internet Explorer Developer Center.](https://msdn.microsoft.com/ie/)
 
  
 
-Definiert die Menge des reflektierten Lichts aus einer polygonierten Form. Lese-/Schreibzugriff. **VgNumber**.
+Definiert die Menge des reflektierten Lichts aus einer belichteten Form. Lese-/Schreibzugriff. **VgNumber**.
 
 **Gilt für**
 
@@ -28,17 +28,17 @@ Definiert die Menge des reflektierten Lichts aus einer polygonierten Form. Lese-
 
 **Tagsyntax**
 
-<o: *element* diffusity="-Ausdruck "> 
+<o: *element* diffusity=" *ausdruck* ">
 
 **Skriptsyntax**
 
 *element* .diffusity="*expression*"
 
-*expression* = *Element*.diffusity
+*expression* = *.diffusity-Element*
 
 **Anmerkungen**
 
-Dieser Wert definiert das Verhältnis von Vorfalllicht zu diffusem reflektierten Licht. Normale Werte liegen zwischen 0 und 1. Der Standardwert ist 0.
+Dieser Wert definiert das Verhältnis von Incidentlicht zu diffusem reflektierten Licht. Normale Werte liegen zwischen 0 und 1. Der Standardwert ist 0.
 
 Wenn Werte größer als 1 angegeben werden, können ungewöhnliche Auswirkungen auftreten.
 

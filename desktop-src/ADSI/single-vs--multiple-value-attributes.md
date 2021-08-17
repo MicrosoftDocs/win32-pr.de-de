@@ -5,7 +5,7 @@ ms.assetid: ea06ca66-6407-448f-8238-c8de5353663b
 ms.tgt_platform: multiple
 keywords:
 - Adsi mit einzelnen und mehreren Wertattributen
-- Adsi-Attribute, Einzelne und mehrere Wertattribute
+- Adsi-Attribute, Attribute mit einem oder mehreren Werten
 ms.topic: article
 ms.date: 05/31/2018
 ms.openlocfilehash: 6dd9442a5365efbe343c2a9af74aa8576928e7a6a383cc131a3384152c2b1c0b
@@ -31,7 +31,7 @@ ADSI lädt normalerweise Schemadaten, wenn Ihr Verzeichnis wie Active Directory 
 Wenn Ihr Verzeichnis über kein Schema verfügt, geben Sie beim Zugriff auf ein Attribut den Datentyp an.
 
 > [!Note]  
-> Active Directory, Exchange, Windows NT 4.0 und Standortserver verfügen über ein Schema. Darüber hinaus verfügt Active Directory über ein erweiterbares Schema.
+> Active Directory, Exchange, Windows NT 4.0 und Standortserver verfügen alle über ein Schema. Darüber hinaus verfügt Active Directory über ein erweiterbares Schema.
 
  
 

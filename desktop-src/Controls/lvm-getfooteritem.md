@@ -1,9 +1,9 @@
 ---
-title: LVM_GETFOOTERITEM Meldung (kommstrg. h)
-description: Ruft Informationen zu einem footerelement in einem Listenansicht-Steuerelement ab. Senden Sie diese Nachricht explizit oder mithilfe des ListView \_ getfooteritem-Makros.
+title: LVM_GETFOOTERITEM Nachricht (Commctrl.h)
+description: Ruft Informationen zu einem Fußzeilenelement in einem Listenansichtssteuerelement ab. Senden Sie diese Nachricht explizit oder mithilfe des ListView \_ GetFooterItem-Makros.
 ms.assetid: 92f55719-c265-433f-84fc-a673680c7ad9
 keywords:
-- Windows-Steuerelemente für LVM_GETFOOTERITEM Meldung
+- LVM_GETFOOTERITEM Windows-Steuerelemente für Nachrichten
 topic_type:
 - apiref
 api_name:
@@ -14,38 +14,38 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 1e642c9d853ae11edcd9199e48de61592de4883c
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: c0b38bb8a91f93c456bd8096a3736eaec79e6c3472d0f18a133de482bb2c0328
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104040100"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119968280"
 ---
-# <a name="lvm_getfooteritem-message"></a>LVM- \_ getfooteritem-Nachricht
+# <a name="lvm_getfooteritem-message"></a>LVM \_ GETFOOTERITEM-Nachricht
 
-Ruft Informationen zu einem footerelement in einem Listenansicht-Steuerelement ab. Senden Sie diese Nachricht explizit oder mithilfe des [**ListView \_ getfooteritem**](/windows/desktop/api/Commctrl/nf-commctrl-listview_getfooteritem) -Makros.
+Ruft Informationen zu einem Fußzeilenelement in einem Listenansichtssteuerelement ab. Senden Sie diese Nachricht explizit oder mithilfe des [**ListView \_ GetFooterItem-Makros.**](/windows/desktop/api/Commctrl/nf-commctrl-listview_getfooteritem)
 
 ## <a name="parameters"></a>Parameter
 
 <dl> <dt>
 
-*wParam* \[ in\]
+*wParam* \[ In\]
 </dt> <dd>
 
 Der Index des Elements.
 
 </dd> <dt>
 
-*LPARAM* \[ in, out\]
+*lParam* \[ in, out\]
 </dt> <dd>
 
-Ein Zeiger auf eine " [**lvfooteritem**](/windows/win32/api/commctrl/ns-commctrl-lvfooteritem) "-Struktur, die einen Wert für den **Zustand** und/oder **pszText** -Member gemäß dem Wert des **Masken** Members empfängt. Der Aufrufprozess ist dafür verantwortlich, diese Struktur zuzuordnen und deren Member festzulegen, um dem Empfänger anzugeben, welche Informationen zurückgegeben werden sollen. Weitere Informationen finden Sie unter " **lvfooteritem**".
+Ein Zeiger auf eine [**LVFOOTERITEM-Struktur,**](/windows/win32/api/commctrl/ns-commctrl-lvfooteritem) um einen Wert für die **Zustands-** und/oder **pszText-Member** gemäß dem Wert des **Maskenmembers** zu erhalten. Der aufrufende Prozess ist dafür verantwortlich, diese Struktur zuzuordnen und deren Member so festzulegen, dass sie dem Empfänger angeben, welche Informationen zurückgegeben werden sollen. Weitere Informationen finden Sie unter **LVFOOTERITEM.**
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt **true** zurück, wenn erfolgreich, andernfalls **false** .
+Gibt **TRUE** zurück, wenn erfolgreich, **andernfalls FALSE.**
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -53,9 +53,9 @@ Gibt **true** zurück, wenn erfolgreich, andernfalls **false** .
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                        |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/>                                  |
-| Header<br/>                   | <dl> <dt>Kommstrg. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur Vista-Desktop-Apps\]<br/>                                        |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/>                                  |
+| Header<br/>                   | <dl> <dt>Commctrl.h</dt> </dl> |
 
 
 

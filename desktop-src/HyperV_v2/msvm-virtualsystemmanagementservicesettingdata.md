@@ -1,5 +1,5 @@
 ---
-description: Stellt die Einstellungen für den virtualisierungdienst dar, der auf einem einzelnen Host System vorhanden ist.
+description: Stellt die Einstellungen für den Virtualisierungsdienst dar, der auf einem einzelnen Hostsystem vorhanden ist.
 ms.assetid: E3265AFE-0117-4F59-9A6B-34CEA7A61EDD
 title: Msvm_VirtualSystemManagementServiceSettingData-Klasse
 ms.topic: reference
@@ -32,16 +32,16 @@ api_type:
 - DllExport
 api_location:
 - vmms.exe
-ms.openlocfilehash: 782f196fdbd3a09126a7b4d14be6789bb633f043
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 3ccb0a1a9bc4a10ec7f8a366f012446e0374dab299f8ee779f16cfeb38fb005b
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106346691"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119147973"
 ---
-# <a name="msvm_virtualsystemmanagementservicesettingdata-class"></a>MSVM \_ virtualsystemmanagementservicesettingdata-Klasse
+# <a name="msvm_virtualsystemmanagementservicesettingdata-class"></a>Msvm \_ VirtualSystemManagementServiceSettingData-Klasse
 
-Stellt die Einstellungen für den virtualisierungdienst dar, der auf einem einzelnen Host System vorhanden ist. Die Eigenschaften für diese Klasse können nicht direkt geändert werden. Der Client muss die [**modifyservicesettings**](modifyservicesettings-msvm-virtualsystemmanagementservice.md) -Methode der [**MSVM \_ virtualsystemmanagementservice**](msvm-virtualsystemmanagementservice.md) -Klasse abrufen, um diese Eigenschaften zu ändern.
+Stellt die Einstellungen für den Virtualisierungsdienst dar, der auf einem einzelnen Hostsystem vorhanden ist. Die Eigenschaften für diese Klasse können nicht direkt geändert werden. Der Client muss die [**ModifyServiceSettings-Methode**](modifyservicesettings-msvm-virtualsystemmanagementservice.md) der [**Msvm \_ VirtualSystemManagementService-Klasse**](msvm-virtualsystemmanagementservice.md) aufrufen, um eine dieser Eigenschaften zu ändern.
 
 Die folgende Syntax wird Managed Object Format (MOF)-Code vereinfacht und enthält alle geerbten Eigenschaften.
 
@@ -75,93 +75,93 @@ class Msvm_VirtualSystemManagementServiceSettingData : CIM_SettingData
 
 ## <a name="members"></a>Member
 
-Die **MSVM \_ virtualsystemmanagementservicesettingdata** -Klasse verfügt über diese Typen von Membern:
+Die **Msvm \_ VirtualSystemManagementServiceSettingData-Klasse** verfügt über die folgenden Membertypen:
 
 -   [Eigenschaften](#properties)
 
 ### <a name="properties"></a>Eigenschaften
 
-Die **MSVM \_ virtualsystemmanagementservicesettingdata** -Klasse verfügt über diese Eigenschaften.
+Die **Msvm \_ VirtualSystemManagementServiceSettingData-Klasse** verfügt über diese Eigenschaften.
 
 <dl> <dt>
 
-**Bioslockstring**
+**BiosLockString**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**maxlen**](/windows/desktop/WmiSdk/standard-qualifiers) (32)
+Qualifizierer: [**Maxlen**](/windows/desktop/WmiSdk/standard-qualifiers) (32)
 </dt> </dl>
 
-Wird von OEMs verwendet, um zuzulassen, dass BIOS-gesperrten Windows-Betriebssysteme auf dem virtuellen Computer ausgeführt werden. Diese Zeichenfolge muss genau 32 Zeichen lang sein.
+Wird von OEMs verwendet, um BIOS-gesperrten Windows betriebssystemen die Ausführung auf dem virtuellen Computer zu ermöglichen. Diese Zeichenfolge muss genau 32 Zeichen lang sein.
 
-Dabei handelt es sich um eine schreibgeschützte Eigenschaft, die jedoch mithilfe der [**modifyservicesettings**](modifyservicesettings-msvm-virtualsystemmanagementservice.md) -Methode der [**MSVM \_ virtualsystemmanagementservice**](msvm-virtualsystemmanagementservice.md) -Klasse geändert werden kann.
+Dies ist eine schreibgeschützte Eigenschaft, die jedoch mithilfe der [**ModifyServiceSettings-Methode**](modifyservicesettings-msvm-virtualsystemmanagementservice.md) der [**Msvm \_ VirtualSystemManagementService-Klasse geändert werden**](msvm-virtualsystemmanagementservice.md) kann.
 
 </dd> <dt>
 
 **Caption**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Eine kurze Beschreibung des-Objekts. Diese Eigenschaft wird von [**CIM \_ managedelta Element**](/previous-versions/windows/desktop/iscsitarg/cim-managedelement)geerbt und ist immer auf "Hyper-V Virtual System Management Service" festgelegt.
+Eine kurze Beschreibung des Objekts. Diese Eigenschaft wird von [**CIM \_ ManagedElement geerbt**](/previous-versions/windows/desktop/iscsitarg/cim-managedelement)und immer auf "Hyper-V Virtual System Management Service" festgelegt.
 
 </dd> <dt>
 
-**Currentwwnnaddress**
+**CurrentWWNNAddress**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Die wwnn-Adresse (World Wide Node Name) für dynamisch generierte World Wide Name-Adressen, die für synthetische Hostbus Adapter verwendet werden.
+Die WWNN-Adresse (World Wide Node Name) für dynamisch generierte Weltweitnamenadressen, die für synthetische Hostbusadapter verwendet werden.
 
-Dabei handelt es sich um eine schreibgeschützte Eigenschaft, die jedoch mithilfe der [**modifyservicesettings**](modifyservicesettings-msvm-virtualsystemmanagementservice.md) -Methode der [**MSVM \_ virtualsystemmanagementservice**](msvm-virtualsystemmanagementservice.md) -Klasse geändert werden kann.
+Dies ist eine schreibgeschützte Eigenschaft, die jedoch mithilfe der [**ModifyServiceSettings-Methode**](modifyservicesettings-msvm-virtualsystemmanagementservice.md) der [**Msvm \_ VirtualSystemManagementService-Klasse geändert werden**](msvm-virtualsystemmanagementservice.md) kann.
 
 </dd> <dt>
 
-**Defaultexternaldataroot**
+**DefaultExternalDataRoot**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**modelcorrespondence**](/windows/desktop/WmiSdk/standard-qualifiers) ("[**MSVM \_ virtualsystemsettingdata**](msvm-virtualsystemsettingdata.md)".**Configurationdataroot**")
+Qualifizierer: [**ModelCorrespondence**](/windows/desktop/WmiSdk/standard-qualifiers) ("[**Msvm \_ VirtualSystemSettingData**](msvm-virtualsystemsettingdata.md).**ConfigurationDataRoot**")
 </dt> </dl>
 
-Der standardmäßige externe Daten Stamm. Standardmäßig "*root* \\ Program Data \\ Microsoft \\ Windows \\ Virtualization".
+Der standardmäßige externe Datenstamm. Standardmäßig *"root* \\ ProgramData \\ Microsoft Windows \\ \\ Virtualization".
 
-Dabei handelt es sich um eine schreibgeschützte Eigenschaft, die jedoch mithilfe der [**modifyservicesettings**](modifyservicesettings-msvm-virtualsystemmanagementservice.md) -Methode der [**MSVM \_ virtualsystemmanagementservice**](msvm-virtualsystemmanagementservice.md) -Klasse geändert werden kann.
+Dies ist eine schreibgeschützte Eigenschaft, die jedoch mithilfe der [**ModifyServiceSettings-Methode**](modifyservicesettings-msvm-virtualsystemmanagementservice.md) der [**Msvm \_ VirtualSystemManagementService-Klasse geändert werden**](msvm-virtualsystemmanagementservice.md) kann.
 
 </dd> <dt>
 
-**Defaultvirtualharddiskcachingmode**
+**DefaultVirtualHardDiskCachingMode**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt16**
+Datentyp: **uint16**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Gibt an, ob die Zwischenspeicherung im Arbeitsspeicher für Datenträger standardmäßig verwendet werden soll. Dieser Wert kann auf Datenträger Basis im **CachingMode** -Feld der Klasse [**MSVM \_ storagezucationsettingdata**](msvm-storageallocationsettingdata.md) überschrieben werden.
+Gibt an, ob das Zwischenspeichern von Dateien im Arbeitsspeicher standardmäßig für Datenträger verwendet werden soll. Dieser Wert kann pro Datenträger im Feld **CachingMode** der [**Msvm \_ StorageAllocationSettingData-Klasse überschrieben**](msvm-storageallocationsettingdata.md) werden.
 
 > [!Note]  
-> In Windows 10 und Windows Server 2016 hinzugefügt.
+> Hinzugefügt in Windows 10 und Windows Server 2016.
 
  
 
@@ -176,104 +176,104 @@ Gibt an, ob die Zwischenspeicherung im Arbeitsspeicher für Datenträger standar
 
 <span id="No_Caching"></span><span id="no_caching"></span><span id="NO_CACHING"></span>
 
-**Kein Caching** (3)
+**Keine Zwischenspeicherung** (3)
 
 
 </dt> <dd></dd> <dt>
 
 <span id="Cache_Sharable_Parents"></span><span id="cache_sharable_parents"></span><span id="CACHE_SHARABLE_PARENTS"></span>
 
-Zwischen **Speichern** von freigegebenen übergeordneten Elementen (4)
+**Cache Sharable Parents** (4)
 
 
 </dt> <dd></dd> </dl>
 
 </dd> <dt>
 
-**Defaultvirtualharddiskpath**
+**DefaultVirtualHardDiskPath**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Der Standardpfad der virtuellen Festplatte. Standardmäßig ist "*root* \\ Users \\ Public \\ Documents \\ Virtual Hard Disks".
+Der Standardpfad der virtuellen Festplatte. Standardmäßig *"root* \\ Users Public Documents Virtual Hard \\ \\ \\ Disks".
 
-Dabei handelt es sich um eine schreibgeschützte Eigenschaft, die jedoch mithilfe der [**modifyservicesettings**](modifyservicesettings-msvm-virtualsystemmanagementservice.md) -Methode der [**MSVM \_ virtualsystemmanagementservice**](msvm-virtualsystemmanagementservice.md) -Klasse geändert werden kann.
+Dies ist eine schreibgeschützte Eigenschaft, die jedoch mithilfe der [**ModifyServiceSettings-Methode**](modifyservicesettings-msvm-virtualsystemmanagementservice.md) der [**Msvm \_ VirtualSystemManagementService-Klasse geändert werden**](msvm-virtualsystemmanagementservice.md) kann.
 
 </dd> <dt>
 
 **Beschreibung**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Eine Beschreibung des -Objekts. Diese Eigenschaft wird vom [**CIM- \_ managedelta**](/previous-versions/windows/desktop/iscsitarg/cim-managedelement)geerbt und ist immer auf "Einstellungen für den Verwaltungsdienst für virtuelle Systeme" festgelegt.
+Eine Beschreibung des -Objekts. Diese Eigenschaft wird von [**CIM \_ ManagedElement geerbt**](/previous-versions/windows/desktop/iscsitarg/cim-managedelement)und immer auf "Einstellungen für den Virtual System Management Service" festgelegt.
 
 </dd> <dt>
 
 **ElementName**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Ein Anzeige Name für das-Objekt. Diese Eigenschaft wird von [**CIM \_ managedelta Element**](/previous-versions/windows/desktop/iscsitarg/cim-managedelement)geerbt und ist immer auf "Hyper-V Virtual System Management Service" festgelegt. Durch Ändern dieser Eigenschaft wird die **ElementName** -Eigenschaft der zugeordneten [**CIM \_ LogicalDevice**](/windows/desktop/CIMWin32Prov/cim-logicaldevice) -Ableitung geändert.
+Ein Anzeigename für das Objekt. Diese Eigenschaft wird von [**CIM \_ ManagedElement geerbt**](/previous-versions/windows/desktop/iscsitarg/cim-managedelement)und immer auf "Hyper-V Virtual System Management Service" festgelegt. Durch Ändern dieser Eigenschaft wird die **ElementName-Eigenschaft** der zugeordneten [**CIM \_ LogicalDevice-Ableitung**](/windows/desktop/CIMWin32Prov/cim-logicaldevice) geändert.
 
 </dd> <dt>
 
-**Enhancedsessionmodeaktivierte**
+**EnhancedSessionModeEnabled**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **boolescher** Wert
+Datentyp: **boolescher Wert**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Gibt an, ob der erweiterte Sitzungs Modus auf dem Server zulässig ist. **True** gibt an, dass zulässig ist, andernfalls **false**.
+Gibt an, ob der erweiterte Sitzungsmodus auf dem Server zulässig ist. **True gibt** an, dass zulässig ist, andernfalls **False.**
 
-**Windows 8.1:** Dieser Wert wird bis Windows 8.1 und Windows Server 2012 R2 nicht unterstützt.
+**Windows 8.1:** Dieser Wert wird erst unterstützt, wenn Windows 8.1 und Windows Server 2012 R2.
 
 </dd> <dt>
 
-**Hbaluntimeout**
+**HbaLunTimeout**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt32**
+Datentyp: **uint32**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Gibt die Zeitspanne an, die das synthetische Fibre Channel virtuelle Gerät wartet, bis eine logische Gerätenummer (Logical Unit Number, LUN) angezeigt wird, bevor ein virtueller Computer gestartet wird.
+Gibt an, wie lange das synthetische Fibre Channel virtuelles Gerät wartet, bis eine logische Gerätenummer (LOGICAL Unit Number, LUN) angezeigt wird, bevor ein virtueller Computer gestartet wird.
 
-Dabei handelt es sich um eine schreibgeschützte Eigenschaft, die jedoch mithilfe der [**modifyservicesettings**](modifyservicesettings-msvm-virtualsystemmanagementservice.md) -Methode der [**MSVM \_ virtualsystemmanagementservice**](msvm-virtualsystemmanagementservice.md) -Klasse geändert werden kann.
+Dies ist eine schreibgeschützte Eigenschaft, die jedoch mithilfe der [**ModifyServiceSettings-Methode**](modifyservicesettings-msvm-virtualsystemmanagementservice.md) der [**Msvm \_ VirtualSystemManagementService-Klasse geändert werden**](msvm-virtualsystemmanagementservice.md) kann.
 
 </dd> <dt>
 
-**Hypervisorrootscheduleraktivierte**
+**HypervisorRootSchedulerEnabled**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **boolescher** Wert
+Datentyp: **boolescher Wert**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Gibt an, ob der Hypervisor-Stamm Planer aktiviert ist.
+Gibt an, ob der Hypervisor-Stammplaner aktiviert ist.
 
 > [!Note]  
-> Hinzugefügt in Windows 10, Version 1709.
+> Hinzugefügt in Windows 10 Version 1709.
 
  
 
@@ -282,7 +282,7 @@ Gibt an, ob der Hypervisor-Stamm Planer aktiviert ist.
 **InstanceID**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
@@ -291,135 +291,135 @@ Zugriffstyp: Schreibgeschützt
 Qualifizierer: **Schlüssel**
 </dt> </dl>
 
-Identifiziert eine Instanz dieser Klasse eindeutig. Diese Eigenschaft wird von [**CIM \_ SettingData**](/previous-versions//cc136911(v=vs.85))geerbt und ist immer auf "Microsoft:*Host*" festgelegt, wobei " *Host* " der NetBIOS-Name des hostingcomputersystems ist.
+Identifiziert eine Instanz dieser Klasse eindeutig. Diese Eigenschaft wird von [**CIM \_ SettingData geerbt**](/previous-versions//cc136911(v=vs.85))und immer auf "Microsoft:*host"* festgelegt, wobei *host* der NetBIOS-Name des Hostcomputersystems ist.
 
 </dd> <dt>
 
-**Maximummacaddress**
+**MaximumMacAddress**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Die maximale Mac-Adresse für dynamisch generierte Mac-Adressen.
+Die maximale MAC-Adresse für dynamisch generierte MAC-Adressen.
 
-Dabei handelt es sich um eine schreibgeschützte Eigenschaft, die jedoch mithilfe der [**modifyservicesettings**](modifyservicesettings-msvm-virtualsystemmanagementservice.md) -Methode der [**MSVM \_ virtualsystemmanagementservice**](msvm-virtualsystemmanagementservice.md) -Klasse geändert werden kann.
+Dies ist eine schreibgeschützte Eigenschaft, die jedoch mithilfe der [**ModifyServiceSettings-Methode**](modifyservicesettings-msvm-virtualsystemmanagementservice.md) der [**Msvm \_ VirtualSystemManagementService-Klasse geändert werden**](msvm-virtualsystemmanagementservice.md) kann.
 
 </dd> <dt>
 
-**Maximumwwpnaddress**
+**MaximumWWPNAddress**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Die maximale WWPN-Adresse (World Wide Port Name) für dynamisch generierte World Wide Name-Adressen, die für synthetische Hostbus Adapter verwendet werden.
+Die maximale WWPN-Adresse (World Wide Port Name) für dynamisch generierte Weltweitnamenadressen, die für synthetische Hostbusadapter verwendet werden.
 
-Dabei handelt es sich um eine schreibgeschützte Eigenschaft, die jedoch mithilfe der [**modifyservicesettings**](modifyservicesettings-msvm-virtualsystemmanagementservice.md) -Methode der [**MSVM \_ virtualsystemmanagementservice**](msvm-virtualsystemmanagementservice.md) -Klasse geändert werden kann.
+Dies ist eine schreibgeschützte Eigenschaft, die jedoch mithilfe der [**ModifyServiceSettings-Methode**](modifyservicesettings-msvm-virtualsystemmanagementservice.md) der [**Msvm \_ VirtualSystemManagementService-Klasse geändert werden**](msvm-virtualsystemmanagementservice.md) kann.
 
 </dd> <dt>
 
-**Minimummacaddress**
+**MinimumMacAddress**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Die minimale Mac-Adresse für dynamisch generierte Mac-Adressen.
+Die minimale MAC-Adresse für dynamisch generierte MAC-Adressen.
 
-Dabei handelt es sich um eine schreibgeschützte Eigenschaft, die jedoch mithilfe der [**modifyservicesettings**](modifyservicesettings-msvm-virtualsystemmanagementservice.md) -Methode der [**MSVM \_ virtualsystemmanagementservice**](msvm-virtualsystemmanagementservice.md) -Klasse geändert werden kann.
+Dies ist eine schreibgeschützte Eigenschaft, die jedoch mithilfe der [**ModifyServiceSettings-Methode**](modifyservicesettings-msvm-virtualsystemmanagementservice.md) der [**Msvm \_ VirtualSystemManagementService-Klasse geändert werden**](msvm-virtualsystemmanagementservice.md) kann.
 
 </dd> <dt>
 
-**Minimumwwpnaddress**
+**MinimumWWPNAddress**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Die minimale World Wide Port-namens Adresse für dynamisch generierte World Wide Name-Adressen, die für synthetische Hostbus Adapter verwendet werden.
+Die mindestadresse für den Namen des weltweiten Ports für dynamisch generierte Weltweitnamenadressen, die für synthetische Hostbusadapter verwendet werden.
 
-Dabei handelt es sich um eine schreibgeschützte Eigenschaft, die jedoch mithilfe der [**modifyservicesettings**](modifyservicesettings-msvm-virtualsystemmanagementservice.md) -Methode der [**MSVM \_ virtualsystemmanagementservice**](msvm-virtualsystemmanagementservice.md) -Klasse geändert werden kann.
+Dies ist eine schreibgeschützte Eigenschaft, die jedoch mithilfe der [**ModifyServiceSettings-Methode**](modifyservicesettings-msvm-virtualsystemmanagementservice.md) der [**Msvm \_ VirtualSystemManagementService-Klasse geändert werden**](msvm-virtualsystemmanagementservice.md) kann.
 
 </dd> <dt>
 
-**Numaspanningenabled**
+**NumaSpanningEnabled**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **boolescher** Wert
+Datentyp: **boolescher Wert**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Gibt an, ob beim Starten einer virtuellen Maschine oder beim Zuweisen von Arbeitsspeicher für eine virtuelle Maschine durch dynamischen Arbeitsspeicher von Knoten vom Typ "nicht einheitlicher Speicherzugriff" (NUMA) zugeordnet werden kann. Dies kann einer der folgenden Werte sein:
+Gibt an, ob Arbeitsspeicher von NUMA-Knoten (Remote Nonuniform Memory Access) beim Starten eines virtuellen Computers oder beim Zuweisen von Arbeitsspeicher zu einem virtuellen Computer durch dynamischen Arbeitsspeicher zugeordnet werden kann. Dies kann einer der folgenden Werte sein.
 
 
 
 | Wert                                                                                | Bedeutung                                                                                     |
 |--------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------|
-| <dl> <dt>**Fall**</dt> </dl>  | Der Arbeitsspeicher kann sowohl über lokale als auch Remote-NUMA-Knoten zugewiesen werden.<br/>                   |
-| <dl> <dt>**False**</dt> </dl> | Der Arbeitsspeicher kann nur über den NUMA-Knoten zugewiesen werden, der dem virtuellen Computer zugewiesen ist.<br/> |
+| <dl> <dt>**Richtig**</dt> </dl>  | Arbeitsspeicher kann sowohl von lokalen als auch von Remote-NUMA-Knoten zugeordnet werden.<br/>                   |
+| <dl> <dt>**Falsch**</dt> </dl> | Arbeitsspeicher kann nur über den NUMA-Knoten zugeordnet werden, der dem virtuellen Computer zugewiesen ist.<br/> |
 
 
 
  
 
-Dabei handelt es sich um eine schreibgeschützte Eigenschaft, die jedoch mithilfe der [**modifyservicesettings**](modifyservicesettings-msvm-virtualsystemmanagementservice.md) -Methode der [**MSVM \_ virtualsystemmanagementservice**](msvm-virtualsystemmanagementservice.md) -Klasse geändert werden kann.
+Dies ist eine schreibgeschützte Eigenschaft, die jedoch mithilfe der [**ModifyServiceSettings-Methode**](modifyservicesettings-msvm-virtualsystemmanagementservice.md) der [**Msvm \_ VirtualSystemManagementService-Klasse geändert werden**](msvm-virtualsystemmanagementservice.md) kann.
 
 </dd> <dt>
 
 **PrimaryOwnerContact**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**maxlen**](/windows/desktop/WmiSdk/standard-qualifiers) (256), [**mappingstrings**](/windows/desktop/WmiSdk/standard-qualifiers) ("MIF". Allgemeine Informationen zu DMTF \| \| 001,4 ")
+Qualifizierer: [**Maxlen**](/windows/desktop/WmiSdk/standard-qualifiers) (256), [**Mappingstrings**](/windows/desktop/WmiSdk/standard-qualifiers) ("MIF. DMTF \| General Information \| 001.4")
 </dt> </dl>
 
-Beschreibt, wie der primäre Systembesitzer erreicht werden kann (z. b. Telefonnummer oder e-Mail-Adresse). Standardmäßig leer. Dieser Name darf nicht länger als 256 Zeichen sein.
+Beschreibt, wie der primäre Systembesitzer erreicht werden kann (z. B. Telefonnummer oder E-Mail-Adresse). Standardmäßig leer. Dieser Name darf 256 Zeichen nicht überschreiten.
 
-Dabei handelt es sich um eine schreibgeschützte Eigenschaft, die jedoch mithilfe der [**modifyservicesettings**](modifyservicesettings-msvm-virtualsystemmanagementservice.md) -Methode der [**MSVM \_ virtualsystemmanagementservice**](msvm-virtualsystemmanagementservice.md) -Klasse geändert werden kann.
+Dies ist eine schreibgeschützte Eigenschaft, die jedoch mithilfe der [**ModifyServiceSettings-Methode**](modifyservicesettings-msvm-virtualsystemmanagementservice.md) der [**Msvm \_ VirtualSystemManagementService-Klasse geändert werden**](msvm-virtualsystemmanagementservice.md) kann.
 
 </dd> <dt>
 
-**Primaryownername**
+**PrimaryOwnerName**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**maxlen**](/windows/desktop/WmiSdk/standard-qualifiers) (64), [**mappingstrings**](/windows/desktop/WmiSdk/standard-qualifiers) ("MIF". Allgemeine Informationen zu DMTF \| \| 001,3 ")
+Qualifizierer: [**Maxlen**](/windows/desktop/WmiSdk/standard-qualifiers) (64), [**Mappingstrings**](/windows/desktop/WmiSdk/standard-qualifiers) ("MIF. DMTF \| General Information \| 001.3")
 </dt> </dl>
 
-Der Name des primären System Besitzers. Standardmäßig "Administratoren". Dieser Wert darf nicht länger als 64 Zeichen sein.
+Der Name des primären Systembesitzers. Standardmäßig "Administratoren". Dieser Wert darf 64 Zeichen nicht überschreiten.
 
-Dabei handelt es sich um eine schreibgeschützte Eigenschaft, die jedoch mithilfe der [**modifyservicesettings**](modifyservicesettings-msvm-virtualsystemmanagementservice.md) -Methode der [**MSVM \_ virtualsystemmanagementservice**](msvm-virtualsystemmanagementservice.md) -Klasse geändert werden kann.
+Dies ist eine schreibgeschützte Eigenschaft, die jedoch mithilfe der [**ModifyServiceSettings-Methode**](modifyservicesettings-msvm-virtualsystemmanagementservice.md) der [**Msvm \_ VirtualSystemManagementService-Klasse geändert werden**](msvm-virtualsystemmanagementservice.md) kann.
 
 </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Der Zugriff auf die **MSVM \_ virtualsystemmanagementservicesettingdata** -Klasse kann durch die UAC-Filterung eingeschränkt werden. Weitere Informationen finden Sie unter [Benutzerkontensteuerung und WMI](/windows/desktop/WmiSdk/user-account-control-and-wmi).
+Der Zugriff auf die **Msvm \_ VirtualSystemManagementServiceSettingData-Klasse** kann durch UAC-Filterung eingeschränkt werden. Weitere Informationen finden Sie unter [Benutzerkontensteuerung und WMI.](/windows/desktop/WmiSdk/user-account-control-and-wmi)
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -427,28 +427,28 @@ Der Zugriff auf die **MSVM \_ virtualsystemmanagementservicesettingdata** -Klass
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows 8 \[ -Desktop-Apps\]<br/>                                                              |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2012 \[ -Desktop-Apps\]<br/>                                                    |
-| Namespace<br/>                | \\Stammvirtualisierung \\ v2<br/>                                                                     |
-| MOF<br/>                      | <dl> <dt>Windowsvirtualization. v2. MOF</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | \[Windows 8 Nur Desktop-Apps\]<br/>                                                              |
+| Unterstützte Mindestversion (Server)<br/> | \[Windows Server 2012 Nur Desktop-Apps\]<br/>                                                    |
+| Namespace<br/>                | Root \\ Virtualization \\ V2<br/>                                                                     |
+| MOF<br/>                      | <dl> <dt>WindowsVirtualization.V2.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Vmms.exe</dt> </dl>                     |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**CIM- \_ SettingData**](cim-settingdata.md)
+[**CIM \_ SettingData**](cim-settingdata.md)
 </dt> <dt>
 
-[**Modifyservicesettings**](modifyservicesettings-msvm-virtualsystemmanagementservice.md)
+[**ModifyServiceSettings**](modifyservicesettings-msvm-virtualsystemmanagementservice.md)
 </dt> <dt>
 
-[**CIM- \_ SettingData**](/previous-versions//cc136911(v=vs.85))
+[**CIM \_ SettingData**](/previous-versions//cc136911(v=vs.85))
 </dt> <dt>
 
-[Verwaltungs Klassen für virtuelle Systeme](virtual-system-management-classes.md)
+[Verwaltungsklassen für virtuelle Systeme](virtual-system-management-classes.md)
 </dt> </dl>
 
  

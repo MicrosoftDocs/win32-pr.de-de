@@ -1,10 +1,10 @@
 ---
-description: Stellt Informationen zu einer Quell Code Datei dar.
+description: Stellt Informationen zu einer Quellcodedatei dar.
 MS-HAID: vspixengine.SourceFileInfo
 MSHAttr:
 - PreferredSiteName:MSDN
 - PreferredLib:/library/windows/desktop
-title: Sourcefileingefo-Struktur
+title: SourceFileInfo-Struktur
 ms.topic: reference
 ms.date: 05/31/2018
 ms.assetid: A5222610-36ED-4F3B-BD95-A4F8611CC557
@@ -17,16 +17,16 @@ api_location:
 topic_type:
 - APIRef
 - kbSyntax
-ms.openlocfilehash: 3e0528e61e830872a3e3b1c0555e541fc41d9d39
-ms.sourcegitcommit: a47bd86f517de76374e4fff33cfeb613eb259a7e
+ms.openlocfilehash: 9b6afd5f3b383aff5c6d5168b259b13fe4429ac40d5b19a21c8e2f6a207cecd2
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/06/2021
-ms.locfileid: "104481990"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119119234"
 ---
-# <a name="span-idvspixenginesourcefileinfospansourcefileinfo-structure"></a><span id="vspixengine.sourcefileinfo"></span>Sourcefileingefo-Struktur
+# <a name="span-idvspixenginesourcefileinfospansourcefileinfo-structure"></a><span id="vspixengine.sourcefileinfo"></span>SourceFileInfo-Struktur
 
-Stellt Informationen zu einer Quell Code Datei dar.
+Stellt Informationen zu einer Quellcodedatei dar.
 
 ## <a name="syntax"></a>Syntax
 
@@ -38,29 +38,29 @@ Stellt Informationen zu einer Quell Code Datei dar.
 ## <a name="members"></a>Member
 
 **fileName**  
-Eine com-Zeichenfolge, die den filePath der zugeordneten Quelldatei komprimiert.
+Eine COM-Zeichenfolge, die den Dateipfad der zugeordneten Quelldatei enthält.
 
-**checksumb-tecount**  
-Die Anzahl der Bytes in der Prüfsumme. Wenn checksumalgorithm gleich checksumalgorithm:: MD5 ist, lautet checksumb-Zähler 16. Wenn checksumalgorithm gleich checksumalgorithm:: SHA1 ist, lautet checksumb-Zähler 20.
+**checksumByteCount**  
+Die Anzahl der Bytes in der Prüfsumme. Wenn checkSumAlgorithm gleich CHECKSUMALGORITHM::md5 ist, ist checkSumByteCount 16. Wenn checkSumAlgorithm gleich CHECKSUMALGORITHM::sha1 ist, ist checkSumByteCount 20.
 
-**checksumalgorithm**  
-Gibt den Algorithmus an, der zum Generieren der Prüfsumme der Datei verwendet wird. Unterstützte Algorithmen sind MD5 und SHA1. Weitere Informationen finden Sie unter checksumalgorithm-Aufzählung.
+**checkSumAlgorithm**  
+Gibt den Algorithmus an, der zum Generieren der Prüfsumme der Datei verwendet wird. Unterstützte Algorithmen sind MD5 und SHA1. Weitere Informationen finden Sie in der CHECKSUMALGORITHM-Enumeration.
 
-**checksumfirstpart**  
+**checkSumFirstPart**  
 Der erste 8-Byte-Teil der Prüfsumme.
 
-**checksumsecondpart**  
+**checkSumSecondPart**  
 Der zweite 8-Byte-Teil der Prüfsumme.
 
-**checksumthirdpart**  
+**checkSumThirdPart**  
 Der dritte 8-Byte-Teil der Prüfsumme.
 
-**checksumfourthpart**  
+**checkSumFourthPart**  
 Der vierte 8-Byte-Teil der Prüfsumme.
 
 ## <a name="requirements"></a>Anforderungen
 
-<table><colgroup><col style="width: 50%" /><col style="width: 50%" /></colgroup><tbody><tr class="odd"><td><p>Header</p></td><td>Vspixengine. h</td></tr></tbody></table>
+<table><colgroup><col style="width: 50%" /><col style="width: 50%" /></colgroup><tbody><tr class="odd"><td><p>Header</p></td><td>Vspixengine.h</td></tr></tbody></table>
 
  
 

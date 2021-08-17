@@ -1,6 +1,6 @@
 ---
 title: IADsPath-Eigenschaftsmethoden (Iads.h)
-description: Die -Eigenschaftsmethode der IADsPath-Schnittstelle legt die in der folgenden Tabelle beschriebene Eigenschaft fest. Weitere Informationen finden Sie unter Schnittstelleneigenschaftsmethoden.
+description: Die -Eigenschaftsmethode der IADsPath-Schnittstelle legt die in der folgenden Tabelle beschriebene Eigenschaft fest. Weitere Informationen finden Sie unter Schnittstelleneigenschaftenmethoden.
 ms.assetid: 6fc7ce1a-575b-48c4-9f66-3ea22d60c96b
 ms.tgt_platform: multiple
 keywords:
@@ -139,7 +139,7 @@ HRESULT put_VolumeName(
 
 
 
-## <a name="see-also"></a>Weitere Informationen:
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 

@@ -29,7 +29,7 @@ ms.locfileid: "119977800"
 ---
 # <a name="apijetsetcolumn-method-jet_sesid-jet_tableid-jet_columnid-byte--int32-int32-setcolumngrbit-jet_setinfo"></a>Api.JetSetColumn-Methode (JET_SESID, JET_TABLEID, JET_COLUMNID, Byte, Int32, Int32, SetColumnGrbit, JET_SETINFO)
 
-Die JetSetColumn-Funktion ändert einen einzelnen Spaltenwert in einem geänderten Datensatz, um eingefügt oder den aktuellen Datensatz zu aktualisieren. Sie kann einen vorhandenen Wert überschreiben, einer Sequenz von Werten in einer mehrwertigen Spalte einen neuen Wert hinzufügen, einen Wert aus einer Sequenz von Werten in einer mehrwertigen Spalte entfernen oder einen long-Wert (eine Spalte vom Typ [LongText](./jet-coltyp-enumeration.md) oder [LongBinary)](./jet-coltyp-enumeration.md)ganz oder teilweise aktualisieren.
+Die JetSetColumn-Funktion ändert einen einzelnen Spaltenwert in einem geänderten Datensatz, um eingefügt oder den aktuellen Datensatz zu aktualisieren. Sie kann einen vorhandenen Wert überschreiben, einer Sequenz von Werten in einer mehrwertigen Spalte einen neuen Wert hinzufügen, einen Wert aus einer Sequenz von Werten in einer mehrwertigen Spalte entfernen oder einen ganz oder teilweise eines long-Werts aktualisieren (eine Spalte vom Typ [LongText](./jet-coltyp-enumeration.md) oder [LongBinary](./jet-coltyp-enumeration.md)).
 
 **Namespace:**  [Microsoft.Isam.Esent.Interop](./microsoft.isam.esent.interop-namespace.md)  
 **Assembly:**  Microsoft.Isam.Esent.Interop (in Microsoft.Isam.Esent.Interop.dll)
@@ -82,7 +82,7 @@ public static JET_wrn JetSetColumn(
   - sesid  
     Typ: [Microsoft.Isam.Esent.Interop.JET_SESID](./jet-sesid-structure.md)  
     
-    Die Sitzung, die das Update vor sich hat.
+    Die Sitzung, die das Update ausführt.
 
 <!-- end list -->
 
@@ -96,7 +96,7 @@ public static JET_wrn JetSetColumn(
   - columnid  
     Typ: [Microsoft.Isam.Esent.Interop.JET_COLUMNID](./jet-columnid-structure.md)  
     
-    Die columnid, die festgelegt werden soll.
+    Die festzulegende columnid.
 
 <!-- end list -->
 
@@ -110,14 +110,14 @@ public static JET_wrn JetSetColumn(
   - dataSize  
     Typ: [System.Int32](/dotnet/api/system.int32)  
     
-    Die Größe der daten, die festgelegt werden soll.
+    Die Größe der festzulegende Daten.
 
 <!-- end list -->
 
   - dataOffset  
     Typ: [System.Int32](/dotnet/api/system.int32)  
     
-    Der Offset im Datenpuffer, aus dem Daten festgelegt werden.
+    Der Offset im Datenpuffer, aus dem Daten festgelegt werden sollen.
 
 <!-- end list -->
 
@@ -131,16 +131,16 @@ public static JET_wrn JetSetColumn(
   - setinfo  
     Typ: [Microsoft.Isam.Esent.Interop.JET_SETINFO](./jet-setinfo-class.md)  
     
-    Wird verwendet, um itag oder long-value offset anzugeben.
+    Wird verwendet, um itag- oder long-value offset anzugeben.
 
 #### <a name="return-value"></a>Rückgabewert
 
 Typ: [Microsoft.Isam.Esent.Interop.JET_wrn](./jet-wrn-enumeration.md)  
-Ein Warnwert.  
+Ein Warnungswert.  
 
 ## <a name="remarks"></a>Hinweise
 
-Dies ist eine nur interne Version der API, die einen Datenpuffer und einen Offset in den Puffer übernimmt.
+Dies ist eine rein interne Version der API, die einen Datenpuffer und einen Offset in den Puffer einnimmt.
 
 ## <a name="see-also"></a>Weitere Informationen
 

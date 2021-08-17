@@ -39,7 +39,7 @@ Die **IMsRdpClient4-Schnittstelle** verfügt über diese Eigenschaften.
 
 
 
-| Eigenschaft                                                                | Zugriffstyp          | BESCHREIBUNG                                                                                             |
+| Eigenschaft                                                                | Zugriffstyp          | Beschreibung                                                                                             |
 |:------------------------------------------------------------------------|:---------------------|:--------------------------------------------------------------------------------------------------------|
 | [**AdvancedSettings5**](imsrdpclient4-advancedsettings5.md)<br/> | Schreibgeschützt<br/> | Ein [**IMsRdpClientAdvancedSettings4-Schnittstellenzeiger.**](imsrdpclientadvancedsettings4.md)<br/> |
 

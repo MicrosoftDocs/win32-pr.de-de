@@ -1,53 +1,53 @@
 ---
-description: Wenn Sie Ihre eigenen parallelen Assemblys erstellen, befolgen Sie die Richtlinien zum Erstellen paralleler Assemblys.
+description: Wenn Sie ihre eigenen nebeneinander angezeigten Assemblys erstellen, befolgen Sie die Richtlinien zum Erstellen von nebenseitigen Assemblys.
 ms.assetid: e5fc3bae-0646-4418-a8f7-369856f03cd5
-title: Erstellen von DLLs für parallele Assemblys
+title: Erstellen von DLLs für side-by-side-Assemblys
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: aa15f3876c60ce55be00d60d8f417eb0c2cbf6ec
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: fb83ba1d788d82e8d4fa7ab5f657170875b5deee6921aec3013406328dc2fcf8
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "104216547"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119142453"
 ---
-# <a name="authoring-dlls-for-side-by-side-assemblies"></a>Erstellen von DLLs für parallele Assemblys
+# <a name="authoring-dlls-for-side-by-side-assemblies"></a>Erstellen von DLLs für side-by-side-Assemblys
 
-Wenn Sie eigene parallele Assemblys erstellen, befolgen Sie die [Richtlinien zum Erstellen](guidelines-for-creating-side-by-side-assemblies.md) paralleler Assemblys und zum Erstellen beliebiger DLLs, die in der Assembly gemäß den folgenden Richtlinien verwendet werden:
+Wenn Sie ihre eigenen parallelen Assemblys erstellen, befolgen Sie die Richtlinien zum Erstellen paralleler [Assemblys,](guidelines-for-creating-side-by-side-assemblies.md) und erstellen Sie alle DLLs, die in der Assembly verwendet werden, gemäß den folgenden Richtlinien:
 
--   Ihre DLLs sollten so entworfen werden, dass mehrere Versionen gleichzeitig und im selben Prozess ausgeführt werden können, ohne dass sich diese gegenseitig beeinträchtigen. Viele Anwendungen hosten z. b. mehrere Plug-ins, die jeweils eine andere Version einer Komponente benötigen. Der Entwickler muss die parallele Assembly entwerfen und testen, um sicherzustellen, dass mehrere Versionen der Komponenten ordnungsgemäß funktionieren, wenn Sie gleichzeitig im selben Prozess ausgeführt werden.
+-   Ihre DLLs sollten so entworfen werden, dass mehrere Versionen gleichzeitig und im gleichen Prozess ausgeführt werden können, ohne sich gegenseitig zu beeinträchtigen. Viele Anwendungen hosten beispielsweise mehrere Plug-Ins, für die jeweils eine andere Version einer Komponente erforderlich ist. Der Entwickler der parallelen Assembly muss entwerfen und testen, um sicherzustellen, dass mehrere Versionen der Komponente ordnungsgemäß funktionieren, wenn sie gleichzeitig im selben Prozess ausgeführt werden.
 
--   Wenn Sie beabsichtigen, die Komponente als freigegebene Komponente auf Systemen vor Windows XP bereitzustellen, müssen Sie die Komponente auf diesen Systemen weiterhin als eine einzelne Instanz freigegebene Komponente installieren. In diesem Fall müssen Sie sicherstellen, dass die Komponente abwärts kompatibel ist.
+-   Wenn Sie ihre Komponente als freigegebene Komponente auf Systemen vor Windows XP bereitstellen möchten, müssen Sie die Komponente auf diesen Systemen weiterhin als freigegebene Einzelinstanzkomponente installieren. In diesem Fall müssen Sie sicherstellen, dass Ihre Komponente abwärtskompatibel ist.
 
--   Evaluieren Sie die Verwendung von-Objekten, wenn mehr als eine Version der Assembly auf dem System ausgeführt wird. Stellen Sie fest, ob für verschiedene Versionen der Assembly separate Datenstrukturen erforderlich sind, wie z. b. Speicher Abbild Dateien, Named Pipes, registrierte Windows-Meldungen und-Klassen, gemeinsam genutzter Speicher, Semaphore, Mutexe und Hardwaretreiber. Alle Datenstrukturen, die in Assemblyversionen verwendet werden, müssen abwärts kompatibel sein. Entscheiden Sie, welche Datenstrukturen in verschiedenen Versionen verwendet werden können und welche Datenstrukturen für eine Version privat sein müssen. Stellen Sie fest, ob freigegebene Datenstrukturen separate Synchronisierungs Objekte erfordern, z. b. Semaphore und Mutexe.
+-   Werten Sie die Verwendung von -Objekten aus, wenn mehr als eine Version der Assembly auf dem System ausgeführt wird. Bestimmen Sie, ob verschiedene Versionen der Assembly separate Datenstrukturen erfordern, z. B. speicherzuordnungsbasierte Dateien, Named Pipes, registrierte Windows Nachrichten und Klassen, freigegebener Arbeitsspeicher, Semaphore, Mutexe und Hardwaretreiber. Alle Datenstrukturen, die über Assemblyversionen hinweg verwendet werden, müssen abwärtskompatibel sein. Entscheiden Sie, welche Datenstrukturen versionsübergreifend verwendet werden können und welche Datenstrukturen für eine Version privat sein müssen. Bestimmen Sie, ob freigegebene Datenstrukturen separate Synchronisierungsobjekte wie Semaphore und Mutexe erfordern.
 
--   Einige Objekte, z. b. Fenster Klassen und Atome, werden für jeden Prozess eindeutig benannt. Objekte, wie z. b. Fenster Klassen, sollten für jede Assembly mit dem Manifest versioniert werden. Verwenden Sie für Objekte, wie z. b. Atome, versionsspezifische Bezeichner, es sei denn, Sie planen eine Versions übergreifende Freigabe. Wenn Sie versionsspezifische Bezeichner verwenden, verwenden Sie die vierteilige Versionsnummer.
+-   Einige Objekte, z. B. Fensterklassen und Atoms, werden für jeden Prozess eindeutig benannt. Objekte wie Fensterklassen sollten für jede Assembly mithilfe des Manifests versioniert werden. Verwenden Sie für Objekte wie Atoms versionsspezifische Bezeichner, es sei denn, Sie planen die Versionsfreigabe. Wenn Sie versionsspezifische Bezeichner verwenden, verwenden Sie die vierteilige Versionsnummer.
 
--   Fügen Sie keinen selbst Registrierungscode in eine DLL ein. Eine DLL in einer parallelen Assembly kann nicht selbst registriert werden.
+-   Fügen Sie keinen selbst registrierenden Code in eine DLL ein. Eine DLL in einer parallelen Assembly kann nicht selbst registriert werden.
 
--   Definieren Sie alle Versions spezifischen Namen in der DLL mit \# define-Anweisungen. Dadurch können alle Registrierungsschlüssel von einem Speicherort aus geändert werden. Wenn Sie eine neue Version der Assembly freigeben, müssen Sie diese define-Anweisung nur ändern \# . Beispiel:
+-   Definieren Sie alle versionsspezifischen Namen in Ihrer DLL mit \# define-Anweisungen. Dadurch können alle Registrierungsschlüssel von einem Speicherort geändert werden. Wenn Sie eine neue Version der Assembly freigeben, müssen Sie nur diese \# define-Anweisung ändern. Beispiel:
 
     `#define MyRegistryKey "MyAssembly1.0.0.0"`
 
--   Speichern Sie alle nicht persistenten Daten im temporären Verzeichnis.
+-   Store alle nicht beständigen Daten im Verzeichnis Temp.
 
--   Legen Sie keine Benutzerdaten an globalen Speicherorten ab. Halten Sie die Anwendungsdaten von den Benutzerdaten getrennt.
+-   Legen Sie Benutzerdaten nicht an globalen Standorten ab. Trennen Sie Anwendungsdaten von Benutzerdaten.
 
--   Weisen Sie alle freigegebenen Dateien einer Dateiversion zu, die vom Namen der Anwendung abhängt.
+-   Weisen Sie allen freigegebenen Dateien eine Dateiversion zu, die vom Namen der Anwendung abhängt.
 
--   Weisen Sie alle Nachrichten und Datenstrukturen zu, die für die Verarbeitung einer Version verwendet werden, um eine unbeabsichtigte prozessübergreifende Freigabe zu verhindern.
+-   Weisen Sie alle Nachrichten und Datenstrukturen, die prozessübergreifend verwendet werden, einer Version zu, um unbeabsichtigte prozessübergreifende Freigaben zu verhindern.
 
--   Die dll sollte nicht von der Freigabe über Versionen abhängen, die möglicherweise nicht vorhanden sind, wie z. b. freigegebene Speicher Abschnitte, die nicht für verschiedene Versionen der Assembly freigegeben sind.
+-   Ihre DLL sollte nicht von der Freigabe zwischen Versionen abhängen, die möglicherweise nicht vorhanden sind, z. B. Freigegebene Speicherabschnitte, die nicht für verschiedene Versionen der Assembly freigegeben sind.
 
--   Wenn Sie neue Funktionen hinzufügen, die nicht dem Binär Schnittstellen-Kompatibilitäts Vertrag der ursprünglichen dll folgen, müssen Sie eine neue CLSID, ProgID und einen Dateinamen zuweisen. In zukünftigen Versionen ihrer parallelen Assembly müssen diese CLSID, ProgID und der Dateiname verwendet werden. Dies verhindert einen Konflikt, wenn eine Version der dll, die nicht nebeneinander ist, über eine Seite-an-Seite-Version registriert wird.
+-   Wenn Sie neue Funktionen hinzufügen, die nicht dem Binärschnittstellen-Kompatibilitätsvertrag der ursprünglichen DLL entsprechen, müssen Sie eine neue CLSID, ProgId und einen Dateinamen zuweisen. Zukünftige Versionen Ihrer side-by-side-Assembly sind dann erforderlich, um diese CLSID, ProgId und den Dateinamen zu verwenden. Dadurch wird ein Konflikt verhindert, wenn eine version der DLL, die nicht nebeneinander ist, über eine nebenseitige Version registriert wird.
 
--   Wenn Sie dieselbe CLSID oder ProgID wieder verwenden, testen Sie, um sicherzustellen, dass die Assembly abwärts kompatibel ist.
+-   Wenn Sie dieselbe CLSID oder ProgId wiederverwenden, testen Sie, um sicherzustellen, dass die Assembly abwärtskompatibel ist.
 
--   Initialisieren Sie die Standardeinstellungen für die Assembly im Assemblycode, und legen Sie Sie fest. Speichern Sie die Standardeinstellungen nicht in der Registrierung.
+-   Initialisieren sie die Standardeinstellungen für die Assembly im Assemblycode, und legen Sie sie fest. Speichern Sie die Standardeinstellungen nicht in der Registrierung.
 
 -   Weisen Sie allen Datenstrukturen Versionen zu.
 
--   In Ihrer dll sollte der Status der parallelen Assembly gespeichert werden, wie unter [Authoring State Storage for Side-by-Side](authoring-state-storage-for-side-by-side-assemblies.md)Assemblys beschrieben.
+-   Die DLL sollte den Zustand der parallelen Assembly speichern, wie unter [Erstellungsstatus Storage für parallele Assemblys](authoring-state-storage-for-side-by-side-assemblies.md)beschrieben.
 
  
 

@@ -3,7 +3,7 @@ title: IMsRdpCameraRedirConfigCollection EncodeVideo-Eigenschaft
 description: Gibt an, ob der Videostream H.264-codiert ist.
 ms.tgt_platform: multiple
 keywords:
-- EncodeVideo-Eigenschaft Remotedesktopdienste
+- EncodeVideo-Remotedesktopdienste
 - EncodeVideo-Eigenschaft Remotedesktopdienste , IMsRdpCameraRedirConfigCollection-Schnittstelle
 - IMsRdpCameraRedirConfigCollection-Schnittstelle Remotedesktopdienste , EncodeVideo-Eigenschaft
 topic_type:
@@ -25,7 +25,7 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 08/11/2021
 ms.locfileid: "119475960"
 ---
-# <a name="imsrdpcameraredirconfigcollectionencodevideo-property"></a>IMsRdpCameraRedirConfigCollection::EncodeVideo-Eigenschaft
+# <a name="imsrdpcameraredirconfigcollectionencodevideo-property"></a>IMsRdpCameraRedirConfigCollection::EncodeVideo (Eigenschaft)
 
 Gibt an, ob der Videostream H.264-codiert ist.
 

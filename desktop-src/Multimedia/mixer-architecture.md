@@ -1,39 +1,39 @@
 ---
-title: Mixarchitektur
-description: Mixarchitektur
+title: Mixer Architektur
+description: Mixer Architektur
 ms.assetid: 11d650bf-c258-4818-88b7-9fdc71a8d859
 keywords:
-- Multimedia-Audiodatei, Mixer-Architektur
-- Audioarchitektur, Mixer-Architektur
-- Audiomixer, Architektur
-- Audiomixer, audiolinien
-- audiolinien
-- Audiomischungen, Steuerelemente
-- Multimedia-Audiosteuer Elemente
-- Audiodaten, Mixer-Steuerelemente
-- Mixer, audiolinien
+- Multimediaaudio, Mixerarchitektur
+- Audio, Mixerarchitektur
+- Audiomixer,Architektur
+- Audiomixer, Audiolinien
+- Audiozeilen
+- Audiomixer, Steuerelemente
+- Multimediaaudio, Mixersteuerelemente
+- Audio,Mixer-Steuerelemente
+- Mixer, Audiolinien
 - Mixer, Architektur
-- Mischungen, Steuerelemente
+- Mixer, Steuerelemente
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 447b0cdc44a33237aa7e0c726a5eb533b3bc7d0e
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: c3f435396dd2a8d5983f596628711dfd01afe7111e75af1dc2060f5c6c4ef0a8
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "104309932"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119065610"
 ---
-# <a name="mixer-architecture"></a>Mixarchitektur
+# <a name="mixer-architecture"></a>Mixer Architektur
 
-Das grundlegende Element der mixerarchitektur ist eine *Audiolinie*. Eine Audiolinie besteht aus einem oder mehreren Kanälen von Daten, die aus einer einzelnen Quelle oder einer System Ressource stammen. Beispielsweise verfügt eine Stereo audiozeile über zwei Datenkanäle, aber Sie wird als einzelne Audiolinie betrachtet, da Sie aus einer einzelnen Quelle stammt.
+Das grundlegende Element der Mixerarchitektur ist eine *Audiolinie.* Eine Audiozeile besteht aus einem oder mehreren Datenkanälen, die aus einer einzelnen Quelle oder einer Systemressource stammen. Beispielsweise verfügt eine Stereo-Audiolinie über zwei Datenkanäle, wird aber als einzelne Audiolinie betrachtet, da sie aus einer einzelnen Quelle stammt.
 
-Die mixerarchitektur bietet Routing Dienste zum Verwalten von audiolinien auf einem Computer. Sie können die Routing Dienste verwenden, wenn Sie über ausreichend Hardware Geräte und Software Treiber verfügen. Die Mixer-Architektur ermöglicht es, dass mehrere audioquellzeilen einer einzelnen zielaudiozeile zugeordnet werden.
+Die Mixerarchitektur bietet Routingdienste zum Verwalten von Audioleitungen auf einem Computer. Sie können die Routingdienste verwenden, wenn sie über geeignete Hardwaregeräte und Softwaretreiber verfügen. Die Mixerarchitektur ermöglicht die Zuordnung mehrerer Audioquellenlinien zu einer einzelnen Zielaudiolinie.
 
-Jeder Audiolinie können Mixer-Steuerelemente zugeordnet sein. Ein Mixer-Steuerelement kann je nach den Merkmalen der zugeordneten Audiolinie eine beliebige Anzahl von Funktionen (z. b. das Steuerelement Volume) ausführen.
+Jeder Audiozeile können Mixer-Steuerelemente zugeordnet sein. Ein Mixer-Steuerelement kann abhängig von den Merkmalen der zugeordneten Audiolinie eine beliebige Anzahl von Funktionen (z. B. Die Lautstärke des Steuerelements) ausführen.
 
- 
+ 
 
- 
+ 
 
 
 
