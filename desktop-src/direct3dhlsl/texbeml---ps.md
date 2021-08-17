@@ -1,6 +1,6 @@
 ---
-title: texbeml-PS
-description: Anwenden einer gefälschten Bump Environment-Map-Transformation mit Beleuchtungs Korrektur. Dies wird erreicht, indem die Textur Adressdaten des Ziel Registers mithilfe von Adress Erstellungs Daten (du, DV), einer 2D-Stoß Umgebungs Matrix und einer Leuchtkraft geändert werden.
+title: texbeml – ps
+description: Wenden Sie eine falsche Umgebungszuordnungstransformation mit Leuchtdichtekorrektur an. Dies wird erreicht, indem die Texturadressendaten des Zielregisters mithilfe von Adressperturndaten (du,dv), einer 2D-Bumpumgebungsmatrix und Leuchtdichte geändert werden.
 ms.assetid: 345a0b77-8d4e-4a0b-a31a-1153f8cb5961
 ms.topic: reference
 ms.date: 05/31/2018
@@ -9,54 +9,54 @@ topic_type:
 api_name: ''
 api_type: ''
 api_location: ''
-ms.openlocfilehash: d97877c67970f43a995fcfbe21d9aead2d792e09
-ms.sourcegitcommit: 592c9bbd22ba69802dc353bcb5eb30699f9e9403
+ms.openlocfilehash: c549e93829c3165d4921342d4e74a8dc15bc1518f7c88aa205f8afc889fae95e
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "103949066"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118788064"
 ---
-# <a name="texbeml---ps"></a>texbeml-PS
+# <a name="texbeml---ps"></a>texbeml – ps
 
-Anwenden einer gefälschten Bump Environment-Map-Transformation mit Beleuchtungs Korrektur. Dies wird erreicht, indem die Textur Adressdaten des Ziel Registers mithilfe von Adress Erstellungs Daten (du, DV), einer 2D-Stoß Umgebungs Matrix und einer Leuchtkraft geändert werden.
+Wenden Sie eine falsche Umgebungszuordnungstransformation mit Leuchtdichtekorrektur an. Dies wird erreicht, indem die Texturadressendaten des Zielregisters mithilfe von Adressperturndaten (du,dv), einer 2D-Bumpumgebungsmatrix und Leuchtdichte geändert werden.
 
 ## <a name="syntax"></a>Syntax
 
 
 
-| texbeml DST, src |
+| texbeml dst, src |
 |------------------|
 
 
 
- 
+ 
 
 where
 
--   DST ist das Ziel Register.
--   src ist ein Quell Register.
+-   dst ist das Zielregister.
+-   src ist ein Quellregister.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
 
 
-| Pixel-Shader-Versionen | 1\_1 | 1\_2 | 1 \_ 3 | 1\_4 | 2 \_ 0 | 2 \_ x | 2 \_ SW | 3 \_ 0 | 3 \_ SW |
+| Pixel-Shaderversionen | 1\_1 | 1\_2 | 1 \_ 3 | 1\_4 | 2 \_ 0 | 2 \_ x | 2 \_ sw | 3 \_ 0 | 3 \_ sw |
 |-----------------------|------|------|------|------|------|------|-------|------|-------|
 | texbeml               | x    | x    | x    |      |      |      |       |      |       |
 
 
 
- 
+ 
 
-Die roten und grünen Farbdaten im src-Register werden als Perturbation-Daten (du, DV) interpretiert. Die blauen Farbdaten im src-Register werden als Beleuchtungs Daten interpretiert.
+Die rot-grünen Farbdaten im src-Register werden als die Stördaten (du,dv) interpretiert. Die Blaufarbdaten im src-Register werden als Leuchtdichtedaten interpretiert.
 
-Diese Anweisung transformiert die roten und grünen Komponenten im Quell Register mithilfe der 2D-Bump-Umgebungs mappingmatrix. Das Ergebnis wird dem Texturkoordinaten Satz hinzugefügt, der der Ziel Registernummer entspricht. Eine Leuchtkraft Korrektur wird mithilfe des Leuchtkraft Werts und der Bias-Textur Stufen Werte angewendet. Das Ergebnis wird verwendet, um eine Stichprobe der aktuellen Textur Phase durchzuführen.
+Diese Anweisung transformiert die roten und grünen Komponenten im Quellregister mithilfe der 2D-Bump-Umgebungszuordnungsmatrix. Das Ergebnis wird dem Texturkoordinatensatz hinzugefügt, der der Zielregisternummer entspricht. Eine Leuchtdichtekorrektur wird mithilfe des Ludominanzwerts und der Werte der Biastexturphase angewendet. Das Ergebnis wird verwendet, um die aktuelle Texturphase zu beproben.
 
-Dies kann für eine Vielzahl von Techniken verwendet werden, die auf der Adress Erfassung basieren, wie z. b. eine gefälschte Umgebungs Zuordnung pro Pixel.
+Dies kann für eine Vielzahl von Techniken verwendet werden, die auf Einer bestimmten Adresse basieren, z. B. für eine falsche Umgebungszuordnung pro Pixel.
 
-Mit diesem Vorgang werden du und DV immer als signierte Mengen interpretiert. Für die Versionen 1 \_ 0 und 1 \_ 1 ist der Eingabe Modifizierer für die [Quell Registrierung mit signierter Skalierung](dx9-graphics-reference-asm-ps-registers-modifiers-signed-scale.md) ( \_ bx2) für das Eingabe Argument nicht zulässig.
+Dieser Vorgang interpretiert du und dv immer als signierte Mengen. Für die Versionen 1 0 und 1 1 ist der Eingabemodifizierer Source \_ \_ Register Signed [Scaling](dx9-graphics-reference-asm-ps-registers-modifiers-signed-scale.md) \_ (bx2) für das Eingabeargument nicht zulässig.
 
-Diese Anweisung erzeugt definierte Ergebnisse, wenn Eingabe Texturen gemischte Formatierungsdaten enthalten. Weitere Informationen zu Oberflächen Formaten finden Sie unter [D3DFORMAT](/windows/desktop/direct3d9/d3dformat).
+Diese Anweisung erzeugt definierte Ergebnisse, wenn Eingabetexturen Daten im gemischten Format enthalten. Weitere Informationen zu Oberflächenformaten finden Sie unter [D3DFORMAT](/windows/desktop/direct3d9/d3dformat).
 
 
 ```
@@ -70,7 +70,7 @@ texbeml t(m),  t(n)      where m > n
 
 
 
-In diesem Beispiel werden die in der-Anweisung durchgeführten Berechnungen veranschaulicht.
+Dieses Beispiel zeigt die Berechnungen, die innerhalb der -Anweisung durchgeführt werden.
 
 
 ```
@@ -81,27 +81,27 @@ In diesem Beispiel werden die in der-Anweisung durchgeführten Berechnungen vera
 
 
 
-u ' = TextureCoordinates (Stufe m)<sub>u</sub> +
+u' = TextureCoordinates(stage m)<sub>u</sub> +
 
-D3DTSS \_ BUMPENVMAT00 (Stufe m) \* t (n)<sub>R</sub> +
+D3DTSS \_ BUMPENVMAT00(Stage m) \* t(n)<sub>R</sub> +
 
-D3DTSS \_ BUMPENVMAT10 (Stufe m) \* t (n)<sub>G</sub>
+D3DTSS \_ BUMPENVMAT10(Stage m) \* t(n)<sub>G</sub>
 
-v ' = TextureCoordinates (Stufe m)<sub>v</sub> +
+v' = TextureCoordinates(stage m)<sub>v</sub> +
 
-D3DTSS \_ BUMPENVMAT01 (Stufe m) \* t (n)<sub>R</sub> +
+D3DTSS \_ BUMPENVMAT01(stage m) \* t(n)<sub>R</sub> +
 
-D3DTSS \_ BUMPENVMAT11 (Stufe m) \* t (n)<sub>G</sub>
+D3DTSS \_ BUMPENVMAT11(stage m) \* t(n)<sub>G</sub>
 
-t (m)<sub>RGBA</sub> = texturesample (Stufe m) mit (u ', v ') als Koordinaten
+t(m)<sub>RGBA</sub> = TextureSample(stage m) using (u',v') as coordinates
 
-t (m)<sub>RGBA</sub> = t (m)<sub>RGBA</sub>\*
+t(m)<sub>RGBA</sub> = t(m)<sub>RGBA</sub>\*
 
-\[(t (n)<sub>B</sub> \* D3DTSS \_ bumpenvlscale (Stufe m) +
+\[(t(n)<sub>B</sub> \* D3DTSS \_ BUMPENVLSCALE(Stage m)) +
 
-D3DTSS \_ bumpenvloffset (Stufe m)\]
+D3DTSS \_ BUMPENVLOFFSET(Stage m)\]
 
-Das Registrieren von Daten, die von einer [texbem](texbem---ps.md) -oder texbeml-Anweisung gelesen wurden, kann später nicht mehr gelesen werden, mit Ausnahme von anderen texbem oder texbeml.
+Registerdaten, die von einer [texbem-](texbem---ps.md) oder texbeml-Anweisung gelesen wurden, können nicht später gelesen werden, außer von einem anderen Texbem oder texbeml.
 
 
 ```
@@ -120,7 +120,7 @@ texbem or texbeml instruction cannot be read by other instructions
 
 ## <a name="examples"></a>Beispiele
 
-Hier ist ein Beispiel-Shader mit den identifizierten Textur Zuordnungen und den identifizierten Textur Stufen.
+Hier ist ein Beispiel-Shader mit den identifizierten Texturzuordnungen und den identifizierten Texturstufen.
 
 
 ```
@@ -134,19 +134,19 @@ mov r0, t1          ; Output result
 
 
 
-Für dieses Beispiel sind die folgenden Texturen in den folgenden Textur Phasen erforderlich.
+Für dieses Beispiel sind die folgenden Texturen in den folgenden Texturphasen erforderlich.
 
--   Phase 0 wird eine Bump Map mit (du-, DV-) perturingdaten zugewiesen.
--   Phase 1 wird eine Textur Zuordnung mit Farbdaten zugewiesen.
--   texbeml legt die Matrix Daten auf der Textur Stufe fest, für die ein Sampling durchgeführt wird. Dies unterscheidet sich von der Funktionalität der Fixed-Funktions Pipeline, bei der die Leistungsdaten und Matrizen dieselbe Textur Phase belegen.
+-   Phase 0 wird eine Bumpmap mit (du, dv)-Stördaten zugewiesen.
+-   Phase 1 wird eine Texturkarte mit Farbdaten zugewiesen.
+-   texbeml legt die Matrixdaten auf der Texturphase fest, für die stichprobenentnahmen werden. Dies ist anders als die Funktionalität der festen Funktionspipeline, bei der die Stördaten und die Matrizen dieselbe Texturphase belegen.
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[Pixelshaderanweisungen](dx9-graphics-reference-asm-ps-instructions.md)
+[Anweisungen für Pixel-Shader](dx9-graphics-reference-asm-ps-instructions.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 

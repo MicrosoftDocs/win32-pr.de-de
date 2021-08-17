@@ -1,6 +1,6 @@
 ---
-title: Day (daysofmonthtype)-Element
-description: Gibt den Tag des Monats an, in dem die Aufgabe ausgeführt wird.
+title: Day (daysOfMonthType) -Element
+description: Gibt einen Tag des Monats an, an dem der Task ausgeführt wird.
 ms.assetid: b213df09-9301-4a51-b000-edfdafbe861e
 keywords:
 - Day-Element Taskplaner
@@ -13,16 +13,16 @@ api_type:
 ms.topic: reference
 ms.date: 05/31/2018
 api_location: ''
-ms.openlocfilehash: 1e8e06169d2b758264f181263a5cb717977a1602
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 3c238ee5bd873c33f3acd2207ba9ad31869b151924dd20f082669b782d207c59
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104040336"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118857953"
 ---
-# <a name="day-daysofmonthtype-element"></a>Day (daysofmonthtype)-Element
+# <a name="day-daysofmonthtype-element"></a>Day (daysOfMonthType) -Element
 
-Gibt den Tag des Monats an, in dem die Aufgabe ausgeführt wird.
+Gibt einen Tag des Monats an, an dem der Task ausgeführt wird.
 
 ``` syntax
 <xs:element name="Day"
@@ -30,21 +30,21 @@ Gibt den Tag des Monats an, in dem die Aufgabe ausgeführt wird.
  />
 ```
 
-Das **Day** -Element wird durch den komplexen [**tagsofmonthtype**](taskschedulerschema-daysofmonthtype-complextype.md) -Typ definiert.
+Das **Day-Element** wird durch den komplexen [**DaysOfMonthType-Typ**](taskschedulerschema-daysofmonthtype-complextype.md) definiert.
 
 ## <a name="parent-element"></a>Übergeordnetes Element
 
 
 
-| Element                                                                            | Abgeleitet von                                                               | BESCHREIBUNG                                                            |
+| Element                                                                            | Abgeleitet von                                                               | Beschreibung                                                            |
 |------------------------------------------------------------------------------------|----------------------------------------------------------------------------|------------------------------------------------------------------------|
-| [**DaysOfMonth**](taskschedulerschema-daysofmonth-monthlyscheduletype-element.md) | [**daysofmonthtype**](taskschedulerschema-daysofmonthtype-complextype.md) | Gibt die Tage des Monats an, in denen der Task ausgeführt wird.<br/> |
+| [**DaysOfMonth**](taskschedulerschema-daysofmonth-monthlyscheduletype-element.md) | [**daysOfMonthType**](taskschedulerschema-daysofmonthtype-complextype.md) | Gibt die Tage des Monats an, an denen der Task ausgeführt wird.<br/> |
 
 
 
 ## <a name="examples"></a>Beispiele
 
-Im folgenden XML-Code wird der Tage Teil eines monatlichen Kalenders definiert, der die Aufgabe am 1. und 15. Tag des Monats ausführt.
+Der folgende XML-Code definiert den Tageteil eines monatlichen Kalenders, in dem die Aufgabe am 1. und 15. Tag des Monats ausgeführt wird.
 
 
 ```XML
@@ -62,16 +62,16 @@ Im folgenden XML-Code wird der Tage Teil eines monatlichen Kalenders definiert, 
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>       |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/> |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ Vista-Desktop-Apps\]<br/>       |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[Schema Elemente Taskplaner](task-scheduler-schema-elements.md)
+[Taskplaner Schemaelemente](task-scheduler-schema-elements.md)
 </dt> </dl>
 
  

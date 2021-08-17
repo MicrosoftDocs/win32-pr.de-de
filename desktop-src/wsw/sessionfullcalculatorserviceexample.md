@@ -1,29 +1,29 @@
 ---
-title: Sessionfullcalculatorserviceexample
-description: Eine Implementierung eines Sitzungs basierten Rechner Diensts, der den Dienst Host verwendet.
+title: SessionfullCalculatorServiceExample
+description: Eine Implementierung eines Sitzungsrechnerdiensts, der den Diensthost verwendet.
 ms.assetid: 7501025b-5692-4f89-ad74-c60694c29163
 keywords:
-- Sessionfullcalculatorserviceexample Native Webdienste
-- Wwsapi
+- SessionfullCalculatorServiceExample Native-Web-Services
+- WWSAPI
 - WWS
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 5a03c8c8daa8af0266b14e5d99eee003244123e0
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: c5e954b3e93cd2315a990935996429ffb2175534ca5ed3e709e6344ef4353e8c
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "104311441"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119026158"
 ---
-# <a name="sessionfullcalculatorserviceexample"></a>Sessionfullcalculatorserviceexample
+# <a name="sessionfullcalculatorserviceexample"></a>SessionfullCalculatorServiceExample
 
-Eine Implementierung eines Sitzungs basierten Rechner Diensts, der den Dienst Host verwendet.
+Eine Implementierung eines Sitzungsrechnerdiensts, der den Diensthost verwendet.
 
--   [Sessionfullcalculatorservice. cpp](#sessionfullcalculatorservicecpp)
--   [Sessionbasedcalculatorservice. WSDL](#sessionbasedcalculatorservicewsdl)
+-   [SessionfullCalculatorService.cpp](#sessionfullcalculatorservicecpp)
+-   [SessionBasedCalculatorService.wsdl](#sessionbasedcalculatorservicewsdl)
 -   [Makefile](#makefile)
 
-## <a name="sessionfullcalculatorservicecpp"></a>Sessionfullcalculatorservice. cpp
+## <a name="sessionfullcalculatorservicecpp"></a>SessionfullCalculatorService.cpp
 
 
 ```C++
@@ -415,7 +415,7 @@ Exit:
 
 
 
-## <a name="sessionbasedcalculatorservicewsdl"></a>Sessionbasedcalculatorservice. WSDL
+## <a name="sessionbasedcalculatorservicewsdl"></a>SessionBasedCalculatorService.wsdl
 
 ``` syntax
 <?xml version="1.0" encoding="UTF-8"?>
@@ -579,9 +579,9 @@ clean:
     $(CLEANUP)
 ```
 
- 
+ 
 
- 
+ 
 
 
 

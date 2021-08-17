@@ -1,41 +1,41 @@
 ---
 title: Features
-description: Features
+description: Funktionen
 ms.assetid: 19ecaa51-9c68-4d28-9f83-b31c692d22a7
 keywords:
-- Windows Media-Format-SDK, Features
-- Windows Media-Format-SDK, wichtige Features
+- Windows Medienformat-SDK, Features
+- Windows Medienformat-SDK, wichtige Features
 - Advanced Systems Format (ASF), Features
 - ASF (Advanced Systems Format), Features
 - Advanced Systems Format (ASF), wichtige Features
 - ASF (Advanced Systems Format), wichtige Features
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: aea60a6ab30e6f977e1c827718aac4b3bddec8b7
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: 7e394db59877612fb401552fc30a37c66f271e20e8c018c3525a0b617158abd9
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "103856152"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118704067"
 ---
 # <a name="features"></a>Features
 
-Das Windows Media-Format SDK bietet viele Optionen für den Umgang mit ASF-Dateien und anderen Dateien unter Verwendung des erweiterten Systems-Formats. Viele dieser Funktionen sind in einer der Hauptfunktionen des SDK nicht einfach zu klassifizieren. In diesem Abschnitt werden die Features des SDK für Windows Media-Format aus Programmier Sicht beschrieben. Jedes featurethema bietet einen Überblick über das Feature und bietet Links zu verwandten Themen in dieser Dokumentation.
+Das Windows Media Format SDK bietet viele Optionen für den Umgang mit ASF-Dateien und anderen Dateien unter Verwendung des Erweiterten Systemformats. Viele dieser Features lassen sich nicht einfach in einer der Hauptfunktionen des SDK klassifizieren. In diesem Abschnitt werden die Features des Windows Media Format SDK aus Programmiersicht beschrieben. Jedes Featurethema bietet eine Übersicht über das Feature und Links zu verwandten Themen in dieser Dokumentation.
 
 
 
 | `Section`                                                                      | BESCHREIBUNG                                                                                                                                                      |
 |------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| [Funktionen der ASF-Datei](asf-file-features.md)                                   | Beschreibt die Features, die im Advanced Systems-Format (ASF) enthalten sind. Diese Features werden in der Regel über das Profil implementiert, das zum Erstellen einer Datei verwendet wird. |
-| [Codec-Features](codec-features.md)                                         | Beschreibt die Features der Windows Media-Codecs, die direkt von den Objekten des Windows Media Format SDK unterstützt werden.                                    |
+| [ASF-Dateifeatures](asf-file-features.md)                                   | Beschreibt die Features, die dem Advanced Systems Format (ASF) inhärent sind. Diese Features werden in der Regel über das Profil implementiert, das zum Erstellen einer Datei verwendet wird. |
+| [Codecfunktionen](codec-features.md)                                         | Beschreibt die Features der Windows Mediencodecs, die direkt von den Objekten des Windows Media Format SDK unterstützt werden.                                    |
 | [Funktionen zum Schreiben von Dateien](file-writing-features.md)                           | Beschreibt die Funktionen, die das Schreiben von Dateien unterstützen.                                                                                                                |
-| [Funktionen zum Lesen von Dateien](file-reading-features.md)                           | Beschreibt die Funktionen, die das Lesen von Dateien unterstützen.                                                                                                                |
-| [Metadatenfeatures](metadata-features.md)                                   | Beschreibt die Funktionen, die Metadaten unterstützen, d. h. Informationen über die Datei und ihren Inhalt.                                                               |
-| [Features digitaler Rights Management](digital-rights-management-features.md) | Beschreibt die Digital Rights Management Funktionalität, die in das Windows Media-Format-SDK integriert ist.                                                      |
+| [Funktionen zum Lesen von Dateien](file-reading-features.md)                           | Beschreibt die Features, die das Lesen von Dateien unterstützen.                                                                                                                |
+| [Metadatenfeatures](metadata-features.md)                                   | Beschreibt die Features, die Metadaten unterstützen, d. h. Informationen über die Datei und ihren Inhalt.                                                               |
+| [Digital Rights Management Features](digital-rights-management-features.md) | Beschreibt die Funktionen für die Verwaltung digitaler Rechte, die in das Windows Media Format SDK integriert sind.                                                      |
 
 
 
- 
+ 
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
@@ -44,9 +44,9 @@ Das Windows Media-Format SDK bietet viele Optionen für den Umgang mit ASF-Datei
 [**Programmierhandbuch**](programming-guide.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

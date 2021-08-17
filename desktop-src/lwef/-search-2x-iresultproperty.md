@@ -3,7 +3,7 @@ title: IResultProperty-Schnittstelle (WdsSharedIDL.h)
 description: Macht Ergebniseigenschaften verfügbar.
 ms.assetid: 58d8c516-47c6-4cae-b46c-5127baf3054d
 keywords:
-- Legacy-Windows-Umgebungsfeatures der IResultProperty-Schnittstelle
+- IResultProperty-Schnittstelle – Legacy Windows Umgebungsfeatures
 - IResultProperty-Schnittstelle Legacy Windows Umgebungsfeatures , beschrieben
 topic_type:
 - apiref
@@ -59,11 +59,11 @@ Die **IResultProperty-Schnittstelle** verfügt über diese Eigenschaften.
 
 | Eigenschaft                                                                   | Zugriffstyp          | BESCHREIBUNG                                           |
 |:---------------------------------------------------------------------------|:---------------------|:------------------------------------------------------|
-| [**Datatype**](-search-2x-iresultproperty-datatype.md)<br/>         | Schreibgeschützt<br/> | Ein Properties-Datentyp. <br/>                   |
+| [**Datatype**](-search-2x-iresultproperty-datatype.md)<br/>         | Schreibgeschützt<br/> | Ein Eigenschaftendatentyp. <br/>                   |
 | [**DisplayName**](-search-2x-iresultproperty-displayname.md)<br/>   | Schreibgeschützt<br/> | Lokalisierter Anzeigename der Eigenschaft. <br/>   |
 | [**DisplayState**](-search-2x-iresultproperty-displaystate.md)<br/> | Schreibgeschützt<br/> | Sichtbarkeit der Eigenschaft. <br/>               |
-| [**Hinweis**](-search-2x-iresultproperty-hint.md)<br/>                 | Schreibgeschützt<br/> | Ein spezieller Wert, der zum Abrufen von Daten verwendet wird. <br/> |
-| [**IndexColumn**](-search-2x-iresultproperty-indexcolumn.md)<br/>   | Schreibgeschützt<br/> | Eigenschaftenspaltenname im Index. <br/>      |
+| [**Hinweis**](-search-2x-iresultproperty-hint.md)<br/>                 | Schreibgeschützt<br/> | Besonderer Wert, der zum Abrufen von Daten verwendet wird. <br/> |
+| [**IndexColumn**](-search-2x-iresultproperty-indexcolumn.md)<br/>   | Schreibgeschützt<br/> | Name der Eigenschaftenspalte im Index. <br/>      |
 | [**UID**](-search-2x-iresultproperty-uid.md)<br/>                   | Schreibgeschützt<br/> | Eindeutiger Bezeichner für die Eigenschaft. <br/>       |
 
 
@@ -81,7 +81,7 @@ Dies sind die Elemente, die Eigenschaften zurückgeben.
 | Anforderung | Wert |
 |-------------------------------------|-------------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows Nur XP mit \[ SP2-Desktop-Apps\]<br/>                                      |
-| Unterstützte Mindestversion (Server)<br/> | Windows Server 2003 nur mit \[ SP1-Desktop-Apps\]<br/>                             |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server 2003 mit \[ SP1-Desktop-Apps\]<br/>                             |
 | Verteilbare Komponente<br/>          | Windows Desktopsuche (WDS) 3.0<br/>                                               |
 | Header<br/>                   | <dl> <dt>WdsSharedIDL.h</dt> </dl> |
 

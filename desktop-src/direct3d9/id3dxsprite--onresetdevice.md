@@ -14,12 +14,12 @@ api_type:
 api_location:
 - d3dx9.lib
 - d3dx9.dll
-ms.openlocfilehash: cb58c682ab30f54461e6b3c1870f5db703a3876d
-ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
+ms.openlocfilehash: 16086aca86e0df8c2c75e6a055be9fa95f7cc97259f37401aa932af962409811
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2021
-ms.locfileid: "108117758"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118800578"
 ---
 # <a name="id3dxspriteonresetdevice-method"></a>ID3DXSprite::OnResetDevice-Methode
 
@@ -42,17 +42,17 @@ Diese Methode hat keine Parameter.
 
 Typ: **[ **HRESULT**](https://msdn.microsoft.com/library/Bb401631(v=MSDN.10).aspx)**
 
-Wenn die Methode erfolgreich ist, ist der Rückgabewert S \_ OK. Wenn bei der Methode ein Fehler auftritt, kann der Rückgabewert D3DERR \_ INVALIDCALL sein.
+Wenn die Methode erfolgreich ist, lautet der Rückgabewert S \_ OK. Wenn die Methode fehlschlägt, kann der Rückgabewert D3DERR \_ INVALIDCALL sein.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-**ID3DXSprite::OnResetDevice** sollte jedes Mal aufgerufen werden, wenn das Gerät zurückgesetzt wird (mithilfe von [**IDirect3DDevice9::Reset**](/windows/win32/api/d3d9helper/nf-d3d9helper-idirect3ddevice9-reset)), bevor andere Methoden aufgerufen werden. Dies ist ein guter Ort, um Videospeicherressourcen erneut zu erhalten und Zustandsblöcke zu erfassen.
+**ID3DXSprite::OnResetDevice** sollte jedes Mal aufgerufen werden, wenn das Gerät zurückgesetzt wird (mit [**IDirect3DDevice9::Reset),**](/windows/win32/api/d3d9helper/nf-d3d9helper-idirect3ddevice9-reset)bevor andere Methoden aufgerufen werden. Dies ist ein guter Ort zum erneuten Abrufen von Videospeicherressourcen und Erfassen von Zustandsblöcken.
 
 ## <a name="requirements"></a>Anforderungen
 
 
 
-| Anforderungen | Wert |
+| Anforderung | Wert |
 |--------------------|----------------------------------------------------------------------------------------|
 | Header<br/>  | <dl> <dt>D3dx9core.h</dt> </dl> |
 | Bibliothek<br/> | <dl> <dt>D3dx9.lib</dt> </dl>   |

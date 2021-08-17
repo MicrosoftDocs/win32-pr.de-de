@@ -1,17 +1,17 @@
 ---
 description: Die folgende Tabelle zeigt, welche Wörter reserviert sind und nicht verwendet werden dürfen.
 ms.assetid: 680211de-3f81-4ea7-b03e-741096b5dde0
-title: Reservierte Wörter, Header und Kommentare
+title: Reservierte Wörter, Kopfzeilen und Kommentare
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 8879d0dbb518f92f0d8a6c38793ab315ae48b73e
-ms.sourcegitcommit: b40a986d5ded926ae7617119cdd35d99b533bad9
+ms.openlocfilehash: f583084b3faa4777a5fe6031cc247fdb99c27cc1fb23c6a5676e60afe00aba20
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/24/2021
-ms.locfileid: "110343655"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119044279"
 ---
-# <a name="reserved-words-header-and-comments"></a>Reservierte Wörter, Header und Kommentare
+# <a name="reserved-words-header-and-comments"></a>Reservierte Wörter, Kopfzeilen und Kommentare
 
 Die folgende Tabelle zeigt, welche Wörter reserviert sind und nicht verwendet werden dürfen.
 
@@ -28,11 +28,11 @@ Die folgende Tabelle zeigt, welche Wörter reserviert sind und nicht verwendet w
 
  
 
-Der Header variabler Länge ist unerlangt und muss sich am Anfang des Datenstroms befindet. Der Header enthält die folgenden Daten.
+Der Header variabler Länge ist unerfüllt und muss sich am Anfang des Datenstroms befinden. Der Header enthält die folgenden Daten.
 
 
 
-| Typ           | Erforderlich | Größe (in Bytes) | Wert | BESCHREIBUNG                  |
+| type           | Erforderlich | Größe (in Bytes) | Wert | Beschreibung                  |
 |----------------|----------|-----------------|-------|------------------------------|
 | Magic Number   | x        | 4               | Xof   |                              |
 | Versionsnummer | x        | 2               | 03    | Hauptversion 3              |
@@ -41,7 +41,7 @@ Der Header variabler Länge ist unerlangt und muss sich am Anfang des Datenstrom
 |                |          |                 | bin   | Binärdatei                  |
 |                |          |                 | tzip  | Komprimierte MSZip-Textdatei   |
 |                |          |                 | bzip  | Komprimierte MSZip-Binärdatei |
-| Gleitkommagröße     | x        | 0064            |       | 64-Bit-Gleitkomma                |
+| Float-Größe     | x        | 0064            |       | 64-Bit-Gleitkomma                |
 |                | x        | "0032"          |       | 32-Bit-Gleitkomma                |
 
 

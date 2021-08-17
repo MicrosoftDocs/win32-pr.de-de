@@ -14,12 +14,12 @@ api_type:
 api_location:
 - d3dx9.lib
 - d3dx9.dll
-ms.openlocfilehash: 7fadad95e8e72691a0e030ed89eedc745de2be43
-ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
+ms.openlocfilehash: 6f51ed86569d29488f93a661999821c3f27bd5f17ed9ba2e552a2604f804c305
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2021
-ms.locfileid: "108093338"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118987220"
 ---
 # <a name="id3dxmatrixstacktranslate-method-d3dx9mathh"></a>ID3DXMATRIXStack::Translate-Methode (D3dx9math.h)
 
@@ -56,7 +56,7 @@ Der Übersetzungsfaktor in x-Richtung.
 
 Typ: **[ **FLOAT**](../winprog/windows-data-types.md)**
 
-Der Übersetzungsfaktor in der y-Richtung.
+Der Übersetzungsfaktor in y-Richtung.
 
 </dd> <dt>
 
@@ -65,7 +65,7 @@ Der Übersetzungsfaktor in der y-Richtung.
 
 Typ: **[ **FLOAT**](../winprog/windows-data-types.md)**
 
-Der Übersetzungsfaktor in der Z-Richtung.
+Der Übersetzungsfaktor in z-Richtung.
 
 </dd> </dl>
 
@@ -73,11 +73,11 @@ Der Übersetzungsfaktor in der Z-Richtung.
 
 Typ: **[ **HRESULT**](https://msdn.microsoft.com/library/Bb401631(v=MSDN.10).aspx)**
 
-Wenn die Methode erfolgreich ist, ist der Rückgabewert D3D \_ OK.
+Wenn die Methode erfolgreich ist, lautet der Rückgabewert D3D \_ OK.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Diese Methode multipliziert die aktuelle Matrix mit der berechneten Übersetzungsmatrix (die Transformation bezieht sich auf den aktuellen Ursprung der Welt).
+Mit dieser Methode wird die aktuelle Matrix mit der berechneten Übersetzungsmatrix rechts multipliziert (bei der Transformation geht es um den aktuellen Ursprung der Welt).
 
 
 ```
@@ -92,7 +92,7 @@ m_stack[m_currentPos] = m_stack[m_currentPos] * tmp;
 
 
 
-| Anforderungen | Wert |
+| Anforderung | Wert |
 |--------------------|----------------------------------------------------------------------------------------|
 | Header<br/>  | <dl> <dt>D3dx9math.h</dt> </dl> |
 | Bibliothek<br/> | <dl> <dt>D3dx9.lib</dt> </dl>   |

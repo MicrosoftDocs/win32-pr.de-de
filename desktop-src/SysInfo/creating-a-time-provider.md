@@ -1,39 +1,39 @@
 ---
-description: Ein Zeit Anbieter wird als dll implementiert. Jede DLL kann mehrere Zeit Anbieter unterstützen. Jeder Anbieter ist für seine eigene Konfiguration und Synchronisierung verantwortlich.
+description: Ein Zeitanbieter wird als DLL implementiert. Jede DLL kann mehrere Zeitanbieter unterstützen. Jeder Anbieter ist für seine eigene Konfiguration und Synchronisierung verantwortlich.
 ms.assetid: 04f523d7-7e99-4bf5-941f-ae67f4b9df0a
-title: Erstellen eines Zeit Anbieters
+title: Erstellen eines Zeitanbieters
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 93ac5a12e19651d88c3328ac72280c486a54c4d0
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: bf58766bf0ed7339bf8c9bfd7abc7434ddc43165b7cbdd77bcfd5420947e743d
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106354868"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118885763"
 ---
-# <a name="creating-a-time-provider"></a>Erstellen eines Zeit Anbieters
+# <a name="creating-a-time-provider"></a>Erstellen eines Zeitanbieters
 
-Ein Zeit Anbieter wird als dll implementiert. Jede DLL kann mehrere Zeit Anbieter unterstützen. Jeder Anbieter ist für seine eigene Konfiguration und Synchronisierung verantwortlich.
+Ein Zeitanbieter wird als DLL implementiert. Jede DLL kann mehrere Zeitanbieter unterstützen. Jeder Anbieter ist für seine eigene Konfiguration und Synchronisierung verantwortlich.
 
-Zeit Anbieter müssen die folgenden Rückruf Funktionen implementieren:
+Zeitanbieter müssen die folgenden Rückruffunktionen implementieren:
 
--   [**Timeprovclose**](/windows/desktop/api/Timeprov/nf-timeprov-timeprovclose)
--   [**Timeprovcommand**](/windows/desktop/api/Timeprov/nf-timeprov-timeprovcommand)
--   [**Timeprovopen**](/windows/desktop/api/Timeprov/nf-timeprov-timeprovopen)
+-   [**TimeProvClose**](/windows/desktop/api/Timeprov/nf-timeprov-timeprovclose)
+-   [**TimeProvCommand**](/windows/desktop/api/Timeprov/nf-timeprov-timeprovcommand)
+-   [**TimeProvOpen**](/windows/desktop/api/Timeprov/nf-timeprov-timeprovopen)
 
-Nachdem die Anbieter-DLL geladen wurde, ruft der Zeit Anbieter-Manager [**timeprovopen**](/windows/desktop/api/Timeprov/nf-timeprov-timeprovopen)auf und übergibt den Namen des Anbieters und Zeiger auf die folgenden Funktionen:
+Nachdem die Anbieter-DLL geladen wurde, ruft der Zeitanbieter-Manager [**TimeProvOpen**](/windows/desktop/api/Timeprov/nf-timeprov-timeprovopen)auf und überträgt den Namen des Anbieters und Zeiger auf die folgenden Funktionen:
 
--   [**Alertsamplesavailfunc**](/windows/desktop/api/Timeprov/nc-timeprov-alertsamplesavailfunc)
--   [**Gettimesysinfofunc**](/windows/desktop/api/Timeprov/nc-timeprov-gettimesysinfofunc)
--   [**Logtimeproveventfunc**](/windows/desktop/api/Timeprov/nc-timeprov-logtimeproveventfunc)
+-   [**AlertSamplesAvailFunc**](/windows/desktop/api/Timeprov/nc-timeprov-alertsamplesavailfunc)
+-   [**GetTimeSysInfoFunc**](/windows/desktop/api/Timeprov/nc-timeprov-gettimesysinfofunc)
+-   [**LogTimeProvEventFunc**](/windows/desktop/api/Timeprov/nc-timeprov-logtimeproveventfunc)
 
-Diese Funktionen sind für die Verwendung durch den Zeit Anbieter vorgesehen. Der Zeit Anbieter verwendet [**timeprovopen**](/windows/desktop/api/Timeprov/nf-timeprov-timeprovopen) , um ein Anbieter handle zurückzugeben, das der Zeit Anbieter-Manager beim Senden von Befehlen an den Zeit Anbieter verwendet. Der Handle-Wert wird durch den Zeit Anbieter definiert und wird hauptsächlich verwendet, um zwischen verschiedenen Anbietern zu unterscheiden, die in derselben dll implementiert werden. Der Zeit Anbieter kann mit [**logtimeproveventfunc**](/windows/desktop/api/Timeprov/nc-timeprov-logtimeproveventfunc)bedeutende Ereignisse protokollieren.
+Diese Funktionen sind für die Verwendung durch den Zeitanbieter. Der Zeitanbieter verwendet [**TimeProvOpen,**](/windows/desktop/api/Timeprov/nf-timeprov-timeprovopen) um ein Anbieterhand handle zurück zu geben, das der Zeitanbieter-Manager beim Senden von Befehlen an den Zeitanbieter verwendet. Der Handlewert wird vom Zeitanbieter definiert und hauptsächlich verwendet, um zwischen verschiedenen Anbietern zu unterscheiden, die in derselben DLL implementiert sind. Der Zeitanbieter kann wichtige Ereignisse mit [**LogTimeProvEventFunc protokollieren.**](/windows/desktop/api/Timeprov/nc-timeprov-logtimeproveventfunc)
 
-Der Zeit Anbieter-Manager verwendet [**timeprovcommand**](/windows/desktop/api/Timeprov/nf-timeprov-timeprovcommand) zum Senden von Befehlen an den Zeit Anbieter. Wenn der Zeit Anbieter den Zeit Anbieter-Manager benachrichtigen muss, dass Zeit Beispiele verfügbar sind, wird [**alertsamplesavailfunc**](/windows/desktop/api/Timeprov/nc-timeprov-alertsamplesavailfunc)aufgerufen. Der Zeit Anbieter-Manager ruft dann **timeprovcommand** mit dem TPC \_ getSamples-Befehl auf, um die Zeit Beispiele abzurufen. Es kann bis zu 16 Sekunden dauern, bis der Zeit Anbieter-Manager das Beispiel anfordert. Daher sollte die Anwendung nicht auf die Anforderung warten.
+Der Zeitanbieter-Manager verwendet [**TimeProvCommand,**](/windows/desktop/api/Timeprov/nf-timeprov-timeprovcommand) um Befehle an den Zeitanbieter zu senden. Wenn der Zeitanbieter den Zeitanbieter-Manager benachrichtigen muss, dass Zeitbeispiele verfügbar sind, ruft er [**AlertSamplesAvailFunc auf.**](/windows/desktop/api/Timeprov/nc-timeprov-alertsamplesavailfunc) Der Zeitanbieter-Manager ruft **dann TimeProvCommand** mit dem TPC \_ GetSamples-Befehl auf, um die Zeitbeispiele abzurufen. Es kann bis zu 16 Sekunden dauern, bis der Anbieter-Manager das Beispiel anfing. Daher sollte die Anwendung nicht auf die Anforderung warten.
 
-Um die Genauigkeit zu gewährleisten, sollte der Zeit Anbieter alle zeitbezogenen Informationen mithilfe von [**gettimesysinfofunc**](/windows/desktop/api/Timeprov/nc-timeprov-gettimesysinfofunc)abrufen.
+Um die Genauigkeit sicherzustellen, sollte der Zeitanbieter alle zeitbezogenen Informationen mit [**getTimeSysInfoFunc abrufen.**](/windows/desktop/api/Timeprov/nc-timeprov-gettimesysinfofunc)
 
-Wenn der Zeit Anbieter heruntergefahren werden soll, ruft der Zeit Anbieter-Manager [**timeprovclose**](/windows/desktop/api/Timeprov/nf-timeprov-timeprovclose)auf.
+Wenn der Zeitanbieter heruntergefahren werden soll, ruft der Zeitanbieter-Manager [**TimeProvClose auf.**](/windows/desktop/api/Timeprov/nf-timeprov-timeprovclose)
 
  
 

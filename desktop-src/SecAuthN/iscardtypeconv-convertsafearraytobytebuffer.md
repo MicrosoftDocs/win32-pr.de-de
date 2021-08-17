@@ -1,7 +1,7 @@
 ---
-description: Konvertiert ein als SAFEARRAY definiertes Bytearray in einen universellen Puffer von Bytes (IStream-Objekt).
+description: Konvertiert ein Bytearray, das als SAFEARRAY definiert ist, in einen universellen Bytepuffer (IStream-Objekt).
 ms.assetid: faa07bb5-cfdb-4181-b86a-f82a9c6b251a
-title: 'Iscardtypekonv:: convertafearraydebytebuffer-Methode (scarddat. h)'
+title: ISCardTypeConv::ConvertSafeArrayToByteBuffer-Methode (Ddat.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,20 +13,20 @@ api_type:
 - COM
 api_location:
 - Scardssp.dll
-ms.openlocfilehash: aa6503f474d96e3c25da3f2780ac43976b6507a4
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: dc7132cbc37a4716adb0dcb192571f9e83597b5aa8b58933962c9366a0c9de2c
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "103958875"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118922436"
 ---
-# <a name="iscardtypeconvconvertsafearraytobytebuffer-method"></a>Iscardtypekonv:: converzafearraydebytebuffer-Methode
+# <a name="iscardtypeconvconvertsafearraytobytebuffer-method"></a>ISCardTypeConv::ConvertSafeArrayToByteBuffer-Methode
 
-\[Die **convertafearraytobytebuffer** -Methode ist für die Verwendung in den Betriebssystemen verfügbar, die im Abschnitt "Anforderungen" angegeben sind. Es ist nicht für die Verwendung in Windows Server 2003 mit Service Pack 1 (SP1) und höher, Windows Vista, Windows Server 2008 und nachfolgenden Versionen des Betriebssystems verfügbar. Die [Smartcard-Module](/previous-versions/windows/desktop/secsmart/smart-card-modules) bieten eine ähnliche Funktionalität.\]
+\[Die **ConvertSafeArrayToByteBuffer-Methode** ist für die Verwendung in den Betriebssystemen verfügbar, die im Abschnitt Anforderungen angegeben sind. Es ist nicht für die Verwendung in Windows Server 2003 mit Service Pack 1 (SP1) und höher, Windows Vista, Windows Server 2008 und nachfolgenden Versionen des Betriebssystems verfügbar. Die [Smartcardmodule](/previous-versions/windows/desktop/secsmart/smart-card-modules) bieten ähnliche Funktionen.\]
 
-Die **convertsafearraydebytebuffer** -Methode konvertiert ein als SAFEARRAY definiertes Bytearray in einen universellen Puffer von Bytes (**IStream** -Objekt).
+Die **ConvertSafeArrayToByteBuffer-Methode** konvertiert ein Bytearray, das als SAFEARRAY definiert ist, in einen universellen Bytepuffer **(IStream-Objekt).**
 
-Der erstellte Byte Puffer ist ein Datenstrom, der über einem Speicherblock zugeordnet ist. Verwenden Sie die von der **IStream** -Schnittstelle bereitgestellten Methoden, um auf den Puffer zuzugreifen oder ihn zu verwalten. Ein eindeutiges Feature zu dieser Array Implementierung besteht darin, dass beim aufruft der **IStream:: Release** -Methode der zugrunde liegende Arbeitsspeicher für Sie freigegeben wird.
+Der erstellte Bytepuffer ist ein Stream, der einem Speicherblock zugeordnet ist. Verwenden Sie die von der **IStream-Schnittstelle** bereitgestellten Methoden, um auf den Puffer zuzugreifen oder diesen zu verwalten. Ein einzigartiges Feature dieser Arrayimplementierungen ist, dass beim Aufrufen der **IStream::Release-Methode** der zugrunde liegende Arbeitsspeicher für Sie freigegeben wird.
 
 ## <a name="syntax"></a>Syntax
 
@@ -44,40 +44,40 @@ HRESULT ConvertSafeArrayToByteBuffer(
 
 <dl> <dt>
 
-*pbyarray* \[ in\]
+*pbyArray* \[ In\]
 </dt> <dd>
 
-Zeiger auf das SafeArray, das konvertiert werden soll.
+Zeiger auf das SAFEARRAY, das konvertiert werden soll.
 
 </dd> <dt>
 
-*ppbybuff* \[ vorgenommen\]
+*ppbyBuff* \[ out\]
 </dt> <dd>
 
-Zeiger auf das **IStream** -Objekt, das zurückgegeben werden soll.
+Zeiger auf das **IStream-Objekt,** das zurückgegeben werden soll.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Die-Methode gibt einen der folgenden möglichen Werte zurück:
+Die -Methode gibt einen der folgenden möglichen Werte zurück:
 
 
 
 | Rückgabecode                                                                                   | Beschreibung                                                                                      |
 |-----------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------|
-| <dl> <dt>**S \_ OK**</dt> </dl>          | Der Arbeitsspeicher wurde erfolgreich zugewiesen.<br/>                                                        |
-| <dl> <dt>**E \_ invalidArg**</dt> </dl>  | Bei einem oder mehreren Parametern, die an die Funktion weitergegeben wurden, ist ein Fehler aufgetreten.<br/> |
-| <dl> <dt>**E- \_ Zeiger**</dt> </dl>     | Ein Parameter vom Zeigertyp war falsch.<br/>                                            |
-| <dl> <dt>**E \_ outo-Memory**</dt> </dl> | Nicht genügend freier Arbeitsspeicher, um die Anforderung zu erfüllen.<br/>                                            |
+| <dl> <dt>**S \_ OK**</dt> </dl>          | Arbeitsspeicher wurde erfolgreich zugeordnet.<br/>                                                        |
+| <dl> <dt>**E \_ INVALIDARG**</dt> </dl>  | Es liegt ein Problem mit einem oder mehreren parametern vor, die an die Funktion übergeben werden.<br/> |
+| <dl> <dt>**E \_ POINTER**</dt> </dl>     | Ein Parameter vom Zeigertyp war falsch.<br/>                                            |
+| <dl> <dt>**E \_ OUTOFMEMORY**</dt> </dl> | Nicht genügend freier Arbeitsspeicher zum Erfüllen der Anforderung.<br/>                                            |
 
 
 
  
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Der zugeordnete Arbeitsspeicher kann verschoben werden. Verwenden Sie die **IStream:: Release** -Methode, um den Arbeitsspeicher freizugeben.
+Der zugeordnete Arbeitsspeicher kann verschoben werden. Verwenden Sie die **IStream::Release-Methode,** um den Arbeitsspeicher freizugeben.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -85,22 +85,22 @@ Der zugeordnete Arbeitsspeicher kann verschoben werden. Verwenden Sie die **IStr
 
 | Anforderung | Wert |
 |-------------------------------------|-----------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows XP \[ -Desktop-Apps\]<br/>                                             |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/>                                    |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur XP-Desktop-Apps\]<br/>                                             |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                                    |
 | Ende des Supports (Client)<br/>    | Windows XP<br/>                                                                   |
-| Ende des Supports (Server)<br/>    | Windows Server 2003<br/>                                                          |
-| Header<br/>                   | <dl> <dt>"Scarddat. h"</dt> </dl>   |
-| Typbibliothek<br/>             | <dl> <dt>Scarddat. tlb</dt> </dl> |
+| Ende des Supports (Server)<br/>    | Windows Server 2003<br/>                                                          |
+| Header<br/>                   | <dl> <dt>Ddat.h</dt> </dl>   |
+| Typbibliothek<br/>             | <dl> <dt>Ddat.tlb</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Scardssp.dll</dt> </dl> |
-| IID<br/>                      | IID \_ iscardtypec ist als 53b6aa63-3F 56-11D0-916b-00aa00c18068 definiert.<br/>       |
+| IID<br/>                      | IID \_ ISCardTypeConv ist als 53B6AA63-3F56-11D0-916B-00AA00C18068 definiert.<br/>       |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Iscardtypeconfiguration**](iscardtypeconv.md)
+[**ISCardTypeConv**](iscardtypeconv.md)
 </dt> <dt>
 
 [Smartcard-Rückgabewerte](authentication-return-values.md)

@@ -1,7 +1,7 @@
 ---
-description: Die Methode "Methode" gibt an, ob im Fenster Paletten realisiert werden.
+description: Die SetRealize-Methode gibt an, ob das Fenster Paletten realisiert.
 ms.assetid: ab4a6069-c11f-4126-93bf-6de5277970a1
-title: Cbasewindow. ontrealize-Methode (winutil. h)
+title: CBaseWindow.SetRealize-Methode (Winutil.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,16 +16,16 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: 587e54cdbbbf57ddb4cf52e2d5dfb916acaee22d
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 825a020b73bc74b38a32daa6f6870b76a009f5b8090e253370c77dfce7d7dc31
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106361057"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118954565"
 ---
-# <a name="cbasewindowsetrealize-method"></a>Cbasewindow. abtrealize-Methode
+# <a name="cbasewindowsetrealize-method"></a>CBaseWindow.SetRealize-Methode
 
-Die- `SetRealize` Methode gibt an, ob im Fenster Paletten realisiert werden.
+Die `SetRealize` -Methode gibt an, ob das Fenster Paletten realisiert.
 
 ## <a name="syntax"></a>Syntax
 
@@ -42,10 +42,10 @@ void SetRealize(
 
 <dl> <dt>
 
-*zu brealisieren* 
+*bRealize* 
 </dt> <dd>
 
-Boolescher Wert, der angibt, ob Paletten erkannt werden sollen. **True** gibt an, dass die [**cbasewindow:: SetPalette**](cbasewindow-setpalette.md) -Methode Paletten erkennt.
+Boolescher Wert, der angibt, ob Paletten realisiert werden. True **gibt an,** dass die [**CBaseWindow::SetPalette-Methode**](cbasewindow-setpalette.md) Paletten realisiert.
 
 </dd> </dl>
 
@@ -53,9 +53,9 @@ Boolescher Wert, der angibt, ob Paletten erkannt werden sollen. **True** gibt an
 
 Diese Methode gibt keinen Wert zurück.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Standardmäßig erkennt die **SetPalette** -Methode die angegebene Palette. Diese Methode wird aufgerufen, um das Standardverhalten zu ändern, sodass die Paletten ausgewählt, aber nicht realisiert werden. Diese Methode legt die Element Variable [**cbasewindow:: m \_ bnorealize**](cbasewindow-m-bnorealize.md) fest.
+Standardmäßig erkennt die **SetPalette-Methode** die angegebene Palette. Rufen Sie diese Methode auf, um das Standardverhalten zu ändern, sodass Paletten ausgewählt, aber nicht realisiert werden. Diese Methode legt die [**CBaseWindow::m \_ bNoRealize-Membervariable**](cbasewindow-m-bnorealize.md) fest.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -63,16 +63,16 @@ Standardmäßig erkennt die **SetPalette** -Methode die angegebene Palette. Dies
 
 | Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Winutil. h (Include Streams. h)</dt> </dl>                                                                                   |
-| Bibliothek<br/> | <dl> " <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Winutil.h (include Streams.h)</dt> </dl>                                                                                   |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Einzelhandels-Builds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Cbasewindow-Klasse**](cbasewindow.md)
+[**CBaseWindow-Klasse**](cbasewindow.md)
 </dt> </dl>
 
  

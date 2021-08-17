@@ -1,5 +1,5 @@
 ---
-description: Stellt Einstellungsdaten für eine virtuelle Festplatte bereit.
+description: Stellt Einstellungsdaten für eine virtuelle Festplatte zur
 ms.assetid: 492a0b81-86b2-4d7d-a118-6ec14e3971ed
 title: Msvm_VirtualHardDiskSettingData-Klasse
 ms.topic: reference
@@ -31,16 +31,16 @@ api_type:
 - DllExport
 api_location:
 - vmms.exe
-ms.openlocfilehash: 6e13efbb068d15ca4051995e7d9f317eb2ccacab
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: b7f87ba072aaff03ab415ccabe803546a89192ecb1e28d85b628dd0655d47421
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104128409"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119068420"
 ---
-# <a name="msvm_virtualharddisksettingdata-class"></a>MSVM \_ virtualharddisksettingdata-Klasse
+# <a name="msvm_virtualharddisksettingdata-class"></a>Msvm \_ VirtualHardDiskSettingData-Klasse
 
-Stellt Einstellungsdaten für eine virtuelle Festplatte bereit.
+Stellt Einstellungsdaten für eine virtuelle Festplatte zur
 
 Die folgende Syntax wird Managed Object Format (MOF)-Code vereinfacht und enthält alle geerbten Eigenschaften.
 
@@ -73,20 +73,20 @@ class Msvm_VirtualHardDiskSettingData : CIM_SettingData
 
 ## <a name="members"></a>Member
 
-Die **MSVM \_ virtualharddisksettingdata** -Klasse verfügt über diese Typen von Membern:
+Die **Msvm \_ VirtualHardDiskSettingData-Klasse** verfügt über die folgenden Membertypen:
 
 -   [Eigenschaften](#properties)
 
 ### <a name="properties"></a>Eigenschaften
 
-Die **MSVM \_ virtualharddisksettingdata** -Klasse verfügt über diese Eigenschaften.
+Die **Msvm \_ VirtualHardDiskSettingData-Klasse** verfügt über diese Eigenschaften.
 
 <dl> <dt>
 
-**BlockSize**
+**Blöcke**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt32**
+Datentyp: **uint32**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
@@ -99,29 +99,29 @@ Die von der virtuellen Festplatte verwendete Blockgröße in Bytes.
 **Caption**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Eine kurze Beschreibung des-Objekts. Diese Eigenschaft wird vom [**CIM- \_ managedelta**](/previous-versions/windows/desktop/iscsitarg/cim-managedelement)geerbt und ist immer auf "Einstellungen für die Festplatte der virtuellen Festplatte" festgelegt.
+Eine kurze Beschreibung des Objekts. Diese Eigenschaft wird von [**CIM \_ ManagedElement geerbt**](/previous-versions/windows/desktop/iscsitarg/cim-managedelement)und immer auf "Virtual Hard Disk Setting Data" festgelegt.
 
 </dd> <dt>
 
-**Dataalignment**
+**DataAlignment**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt64**
+Datentyp: **uint64**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
 </dt> </dl>
 
-Gibt die gewünschte Ausrichtung (in Bytes) für die Daten Nutzlast des virtuellen Datenträgers an.
+Gibt die gewünschte Ausrichtung für die Datennutzlast des virtuellen Datenträgers in Bytes an.
 
 > [!Note]  
-> Hinzugefügt in Windows 10, Version 1709.
+> Hinzugefügt in Windows 10 Version 1709.
 
  
 
@@ -130,39 +130,39 @@ Gibt die gewünschte Ausrichtung (in Bytes) für die Daten Nutzlast des virtuell
 **Beschreibung**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Eine Beschreibung des -Objekts. Diese Eigenschaft wird vom [**CIM \_ managedelta-Element**](/previous-versions/windows/desktop/iscsitarg/cim-managedelement)geerbt und ist immer auf "Festlegen von Daten für eine virtuelle Festplatte" festgelegt.
+Eine Beschreibung des -Objekts. Diese Eigenschaft wird von [**CIM \_ ManagedElement geerbt**](/previous-versions/windows/desktop/iscsitarg/cim-managedelement)und immer auf "Setting Data for a Virtual Hard Disk" (Festlegen von Daten für eine virtuelle Festplatte) festgelegt.
 
 </dd> <dt>
 
 **ElementName**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Ein Anzeige Name für das-Objekt. Diese Eigenschaft wird von [**CIM \_ managedelta**](/previous-versions/windows/desktop/iscsitarg/cim-managedelement)geerbt.
+Ein Anzeigename für das Objekt. Diese Eigenschaft wird von [**CIM \_ ManagedElement geerbt.**](/previous-versions/windows/desktop/iscsitarg/cim-managedelement)
 
 </dd> <dt>
 
 **Format**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt16**
+Datentyp: **uint16**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
 </dt> </dl>
 
-Das Format für die virtuelle Festplatte. Dabei handelt es sich um einen der folgenden Werte.
+Das Format für die virtuelle Festplatte. Dies ist einer der folgenden Werte.
 
 <dt>
 
@@ -175,20 +175,20 @@ Das Format für die virtuelle Festplatte. Dabei handelt es sich um einen der fol
 
 <span id="VHDX"></span><span id="vhdx"></span>
 
-<span id="VHDX"></span><span id="vhdx"></span>**Vhdx** (3)
+<span id="VHDX"></span><span id="vhdx"></span>**VHDX** (3)
 
 
 </dt> <dd></dd> <dt>
 
 <span id="VHDSet"></span><span id="vhdset"></span><span id="VHDSET"></span>
 
-<span id="VHDSet"></span><span id="vhdset"></span><span id="VHDSET"></span>**Vhdset** (4)
+<span id="VHDSet"></span><span id="vhdset"></span><span id="VHDSET"></span>**VHDSet** (4)
 
 
 </dt> <dd>
 
 > [!Note]  
-> In Windows 10 und Windows Server 2016 hinzugefügt.
+> Hinzugefügt in Windows 10 und Windows Server 2016.
 
  
 
@@ -199,7 +199,7 @@ Das Format für die virtuelle Festplatte. Dabei handelt es sich um einen der fol
 **InstanceID**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
@@ -208,67 +208,67 @@ Zugriffstyp: Schreibgeschützt
 Qualifizierer: **Schlüssel**
 </dt> </dl>
 
-Identifiziert eine Instanz dieser Klasse eindeutig. Diese Eigenschaft wird von [**CIM \_ SettingData**](/previous-versions//cc136911(v=vs.85))geerbt.
+Identifiziert eine Instanz dieser Klasse eindeutig. Diese Eigenschaft wird von [**CIM \_ SettingData geerbt.**](/previous-versions//cc136911(v=vs.85))
 
 </dd> <dt>
 
-**Ispmemcompatible**
+**IsPmemCompatible**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **boolescher** Wert
+Datentyp: **boolescher Wert**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
 </dt> </dl>
 
-Gibt an, ob der virtuelle Datenträger als Sicherungs Speicher für ein dauerhaftes Speichergerät verwendet werden kann.
+Gibt an, ob der virtuelle Datenträger als Hintergrundspeicher für ein persistentes Speichergerät verwendet werden kann.
 
 > [!Note]  
-> Hinzugefügt in Windows 10, Version 1709.
+> Hinzugefügt in Windows 10 Version 1709.
 
  
 
 </dd> <dt>
 
-**Logicalsector size**
+**LogicalSectorSize**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt32**
+Datentyp: **uint32**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
 </dt> </dl>
 
-Die von der virtuellen Festplatte verwendete logische Sektorgröße in Bytes.
+Die logische Sektorgröße, die von der virtuellen Festplatte in Bytes verwendet wird.
 
 </dd> <dt>
 
 **MaxInternalSize**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt64**
+Datentyp: **uint64**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
 </dt> </dl>
 
-Die maximale Größe der virtuellen Festplatte, die vom virtuellen Computer angezeigt werden kann (in Bytes). Diese Größe wird auf das nächstgrößte Vielfache der Sektorgröße aufgerundet.
+Die maximale Größe der virtuellen Festplatte in Byte, die vom virtuellen Computer angezeigt werden kann. Diese Größe wird auf das nächstgrößerste Vielfache der Sektorgröße aufgerundet.
 
 </dd> <dt>
 
-**Parametifizierer**
+**ParentIdentifier**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Der GUID, der verwendet wird, um das übergeordnete Element der virtuellen Festplatte eindeutig zu identifizieren. Wenn die virtuelle Festplatte nicht über ein übergeordnetes Element verfügt, ist dieses Feld leer.
+Die GUID, mit der das übergeordnete Element der virtuellen Festplatte eindeutig identifiziert wird. Wenn die virtuelle Festplatte nicht über ein übergeordnetes Element verfügt, ist dieses Feld leer.
 
 > [!Note]  
-> In Windows 10 und Windows Server 2016 hinzugefügt.
+> Hinzugefügt in Windows 10 und Windows Server 2016.
 
  
 
@@ -277,7 +277,7 @@ Der GUID, der verwendet wird, um das übergeordnete Element der virtuellen Festp
 **ParentPath**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
@@ -287,10 +287,10 @@ Das übergeordnete Element der virtuellen Festplatte. Wenn die virtuelle Festpla
 
 </dd> <dt>
 
-**"Parametritimestamp"**
+**ParentTimestamp**
 </dt> <dd> <dl> <dt>
 
-**Datentyp: DateTime**
+Datentyp: **DATETIME**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
@@ -299,51 +299,51 @@ Zugriffstyp: Schreibgeschützt
 Der Zeitstempel des übergeordneten Elements der virtuellen Festplatte. Wenn die virtuelle Festplatte nicht über ein übergeordnetes Element verfügt, ist dieses Feld leer.
 
 > [!Note]  
-> In Windows 10 und Windows Server 2016 hinzugefügt.
+> Hinzugefügt in Windows 10 und Windows Server 2016.
 
  
 
 </dd> <dt>
 
-**Pfad**
+**Path**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
 </dt> </dl>
 
-Der voll qualifizierte Pfad der virtuellen Festplatte.
+Der vollqualifizierte Pfad der virtuellen Festplatte.
 
 </dd> <dt>
 
-**Physicalsector size**
+**PhysicalSectorSize**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt32**
+Datentyp: **uint32**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
 </dt> </dl>
 
-Die physische Sektorgröße, die von der virtuellen Festplatte verwendet wird (in Bytes).
+Die von der virtuellen Festplatte verwendete physische Sektorgröße in Bytes.
 
 </dd> <dt>
 
-**Pmemaddressabstractiontype**
+**PmemAddressAbstractionType**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt16**
+Datentyp: **uint16**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
 </dt> </dl>
 
-Die für diese virtuelle Festplatte zu verwendende persistente Speicher Adress Abstraktion-Methode.
+Die persistente Speicheradressenabstraktionsmethode, die mit diesem virtuellen Datenträger verwendet werden soll.
 
 > [!Note]  
-> Hinzugefügt in Windows 10, Version 1709.
+> Hinzugefügt in Windows 10 Version 1709.
 
  
 
@@ -372,22 +372,22 @@ Die für diese virtuelle Festplatte zu verwendende persistente Speicher Adress A
 
 </dd> <dt>
 
-**Type**
+**Typ**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt16**
+Datentyp: **uint16**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
 </dt> </dl>
 
-Der Typ der virtuellen Festplatte. Dabei handelt es sich um einen der folgenden Werte.
+Der Typ der virtuellen Festplatte. Dies ist einer der folgenden Werte.
 
 <dt>
 
 <span id="Fixed"></span><span id="fixed"></span><span id="FIXED"></span>
 
-**Korrigiert** (2)
+**Behoben** (2)
 
 
 </dt> <dd></dd> <dt>
@@ -401,7 +401,7 @@ Der Typ der virtuellen Festplatte. Dabei handelt es sich um einen der folgenden 
 
 <span id="Differencing"></span><span id="differencing"></span><span id="DIFFERENCING"></span>
 
-**Differenzierung** (4)
+**Differenzieren** (4)
 
 
 </dt> <dd></dd> </dl>
@@ -411,21 +411,21 @@ Der Typ der virtuellen Festplatte. Dabei handelt es sich um einen der folgenden 
 **VirtualDiskId**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
 </dt> </dl>
 
-Die GUID, die zur eindeutigen Identifizierung des virtuellen Datenträgers verwendet wird.
+Die GUID, die verwendet wird, um den virtuellen Datenträger eindeutig zu identifizieren.
 
-Wenn die [**MSVM-Methode " \_ imagemanagementservice. getvirtualharddisksettingdata**](getvirtualharddisksettingdata-msvm-imagemanagementservice.md) " eine Instanz von " **MSVM \_ virtualharddisksettingdata**" zurückgibt, kann der Client diese Eigenschaft verwenden, um die eindeutige Datenträger-ID der virtuellen Festplatte zu erhalten.
+Wenn die [**Msvm \_ ImageManagementService.GetVirtualHardDiskSettingData-Methode**](getvirtualharddisksettingdata-msvm-imagemanagementservice.md) eine Instanz von **Msvm \_ VirtualHardDiskSettingData** zurückgibt, kann der Client diese Eigenschaft verwenden, um die eindeutige Datenträger-ID der VHD abzurufen.
 
-Bei der Konflikterkennung kann ein Client den **virtualdiskid** -Wert auf eine neue GUID festlegen und diese **MSVM \_ virtualharddisksettingdata** -Instanz an die [**MSVM \_ imagemanagementservice. setvirtualharddisksettingdata**](setvirtualharddisksettingdata-msvm-imagemanagementservice.md) -Methode übergeben, um die Datenträger-ID der virtuellen Festplatte zu ändern. Wenn es sich bei der VHD nicht um eine vhdx-VHD handelt oder wenn die VHD angefügt ist, schlägt der Vorgang fehl. Der Vorgang schlägt auch fehl, wenn der bestandene Wert falsch formatiert ist, d. h. keine GUID ist oder alle 0s enthält. Der Vorgang wird im Hintergrund erfolgreich ausgeführt, wenn der bestandene Wert mit der aktuellen Datenträger-ID identisch ist.
+Bei der Konflikterkennung oder auf andere Weise kann ein Client den **VirtualDiskId-Wert** auf eine neue GUID festlegen und diese **Msvm \_ VirtualHardDiskSettingData-Instanz** an die [**Methode Msvm \_ ImageManagementService.SetVirtualHardDiskSettingData**](setvirtualharddisksettingdata-msvm-imagemanagementservice.md) übergeben, um die Datenträger-ID der VHD zu ändern. Wenn die VHD keine VHDX-VHD ist oder die VHD angefügt ist, schlägt der Vorgang fehl. Der Vorgang schlägt auch fehl, wenn der übergebene Wert falsch formatiert ist, d. h. keine GUID oder alle 0(e) hat. Der Vorgang wird automatisch erfolgreich ausgeführt, wenn der übergebene Wert mit der aktuellen Datenträger-ID identisch ist.
 
-Fehler, die von der Funktion " [**setvirtualdiskinformation**](/windows/win32/api/virtdisk/nf-virtdisk-setvirtualdiskinformation) " generiert werden, werden über diese Eigenschaft aufgehotet. Ein Client kann auch denselben Mechanismus verwenden, um den **virtualdiskid** -Wert bei der VHD-Erstellung über die [**MSVM \_ imagemanagementservice. kreatevirtualharddisk**](createvirtualharddisk-msvm-imagemanagementservice.md) -Methode im gleichen Namespace bereitzustellen. Dies kann zum Erstellen von VHD1-oder VHD2-VHDs verwendet werden.
+Fehler, die von der [**SetVirtualDiskInformation-Funktion**](/windows/win32/api/virtdisk/nf-virtdisk-setvirtualdiskinformation) generiert werden, werden über diese Eigenschaft ausgelöst. Ein Client kann auch den gleichen Mechanismus verwenden, um den **VirtualDiskId-Wert** bei der VHD-Erstellung über die [**Msvm \_ ImageManagementService.CreateVirtualHardDisk-Methode**](createvirtualharddisk-msvm-imagemanagementservice.md) im gleichen Namespace bereitzustellen. Dies kann zum Erstellen von VHD1- oder VHD2-VHDs verwendet werden.
 
-**Windows 8.1:** Dieser Wert wird bis Windows 8.1 und Windows Server 2012 R2 nicht unterstützt.
+**Windows 8.1:** Dieser Wert wird erst Windows 8.1 und Windows Server 2012 R2 unterstützt.
 
 </dd> </dl>
 
@@ -435,22 +435,22 @@ Fehler, die von der Funktion " [**setvirtualdiskinformation**](/windows/win32/ap
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows 8 \[ -Desktop-Apps\]<br/>                                                              |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2012 \[ -Desktop-Apps\]<br/>                                                    |
-| Namespace<br/>                | \\Stammvirtualisierung \\ v2<br/>                                                                     |
-| MOF<br/>                      | <dl> <dt>Windowsvirtualization. v2. MOF</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | \[Windows 8 Nur Desktop-Apps\]<br/>                                                              |
+| Unterstützte Mindestversion (Server)<br/> | \[Windows Server 2012 Nur Desktop-Apps\]<br/>                                                    |
+| Namespace<br/>                | Root \\ Virtualization \\ V2<br/>                                                                     |
+| MOF<br/>                      | <dl> <dt>WindowsVirtualization.V2.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Vmms.exe</dt> </dl>                     |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**CIM- \_ SettingData**](cim-settingdata.md)
+[**CIM \_ SettingData**](cim-settingdata.md)
 </dt> <dt>
 
-[**Getvirtualharddisksettingdata**](getvirtualharddisksettingdata-msvm-imagemanagementservice.md)
+[**GetVirtualHardDiskSettingData**](getvirtualharddisksettingdata-msvm-imagemanagementservice.md)
 </dt> </dl>
 
  

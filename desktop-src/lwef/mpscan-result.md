@@ -1,10 +1,10 @@
 ---
-title: MPSCAN_RESULT Struktur (mpclient. h)
+title: MPSCAN_RESULT-Struktur (MpClient.h)
 description: Die Ergebnisse einer Überprüfung.
 ms.assetid: 9031A371-092A-4175-BE1D-90442A5BED2D
 keywords:
-- MPSCAN_RESULT Struktur Funktionen der Legacy-Windows-Umgebung
-- PMPSCAN_RESULT Struktur Zeiger Legacy-Windows-Umgebungs Features
+- MPSCAN_RESULT struktur legacy Windows Environment Features (Legacy-Windows-Umgebungsfeatures)
+- PMPSCAN_RESULT Strukturzeiger Legacy Windows Umgebungsfeatures
 topic_type:
 - apiref
 api_name:
@@ -15,14 +15,14 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: e7be60df7993732bafcd7c44ac2fb581c111aed6
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: a41efd40529976d4b7fe639c4907729ed39ae261f5ac644faf1a36e1a213a97e
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104213746"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118747151"
 ---
-# <a name="mpscan_result-structure"></a>Mpscan- \_ Ergebnis Struktur
+# <a name="mpscan_result-structure"></a>MPSCAN \_ RESULT-Struktur
 
 Die Ergebnisse einer Überprüfung.
 
@@ -51,77 +51,77 @@ typedef struct tagMPSCAN_RESULT {
 **ScanType**
 </dt> <dd>
 
-Typ: **[ **mpscan- \_ Typ**](mpscan-type.md)**
+Typ: **[ **\_ MPSCAN-TYP**](mpscan-type.md)**
 
 </dd> <dd>
 
-Scantyp. Siehe [**mpscan- \_ Typ**](mpscan-type.md).
+Scantyp. Siehe [**\_ MPSCAN-TYP.**](mpscan-type.md)
 
 </dd> <dt>
 
 **Quelle**
 </dt> <dd>
 
-Typ: **[ **mpsource**](mpsource.md)**
+Typ: **[ **MPSOURCE**](mpsource.md)**
 
 </dd> <dd>
 
-Scan Quelle, z. b. Benutzer oder System initiiert. Siehe [**mpsource**](mpsource.md).
+Scanquelle, z. B. vom Benutzer oder vom System initiiert. Siehe [**MPSOURCE**](mpsource.md).
 
 </dd> <dt>
 
-**Scanguid**
+**ScanGuid**
 </dt> <dd>
 
 Typ: **GUID**
 
 </dd> <dd>
 
-Scan Bezeichner.
+Überprüfungsbezeichner.
 
 </dd> <dt>
 
 **StartTime**
 </dt> <dd>
 
-Typ: **ularge \_ Integer**
+Typ: **ULARGE \_ INTEGER**
 
 </dd> <dd>
 
-Startzeitpunkt der Überprüfung.
+Startzeit der Überprüfung.
 
 </dd> <dt>
 
 **EndTime**
 </dt> <dd>
 
-Typ: **ularge \_ Integer**
+Typ: **ULARGE \_ INTEGER**
 
 </dd> <dd>
 
-Endzeit des Scan Vorgangs.
+Endzeit der Überprüfung.
 
 </dd> <dt>
 
-**Bedrohlich stats**
+**ThreatStats**
 </dt> <dd>
 
-Typ: **[ **mpthreat- \_ Statistik**](mpthreat-stats.md)**
+Typ: **[ **MPTHREAT \_ STATS**](mpthreat-stats.md)**
 
 </dd> <dd>
 
-Bedrohungs bezogene Statistiken. Siehe [**mpthreat \_ Stats**](mpthreat-stats.md).
+Bedrohungsbezogene Statistiken. Siehe [**MPTHREAT \_ STATS**](mpthreat-stats.md).
 
 </dd> <dt>
 
-**Resourcestats**
+**ResourceStats**
 </dt> <dd>
 
-Typ: **[ **mpresource- \_ Statistik**](mpresource-stats.md)**
+Typ: **[ **MPRESOURCE \_ STATS**](mpresource-stats.md)**
 
 </dd> <dd>
 
-Ressourcenbezogene Statistiken. Siehe [**mpresource- \_ Statistik**](mpresource-stats.md).
+Ressourcenbezogene Statistiken. Weitere Informationen finden Sie [**unter MPRESOURCE-STATISTIKEN. \_**](mpresource-stats.md)
 
 </dd> <dt>
 
@@ -142,26 +142,26 @@ Version der Signatur, die für die Überprüfung verwendet wird.
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows 8 \[ -Desktop-Apps\]<br/>                                            |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2012 \[ -Desktop-Apps\]<br/>                                  |
-| Header<br/>                   | <dl> <dt>Mpclient. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | \[Windows 8 Nur Desktop-Apps\]<br/>                                            |
+| Unterstützte Mindestversion (Server)<br/> | \[Windows Server 2012 Nur Desktop-Apps\]<br/>                                  |
+| Header<br/>                   | <dl> <dt>MpClient.h</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**mpresource- \_ Statistik**](mpresource-stats.md)
+[**\_MPRESOURCE-STATISTIKEN**](mpresource-stats.md)
 </dt> <dt>
 
-[**mpscan- \_ Typ**](mpscan-type.md)
+[**\_MPSCAN-TYP**](mpscan-type.md)
 </dt> <dt>
 
-[**Mpsource**](mpsource.md)
+[**MPSOURCE**](mpsource.md)
 </dt> <dt>
 
-[**mpthreat- \_ Statistik**](mpthreat-stats.md)
+[**\_MPTHREAT-STATISTIKEN**](mpthreat-stats.md)
 </dt> </dl>
 
  

@@ -3,45 +3,45 @@ title: DRM-Import
 description: DRM-Import
 ms.assetid: 5e67a721-830b-4d99-9f90-4cb2d7c61104
 keywords:
-- Windows Media-Format-SDK, erweiterte DRM-Client-APIs
-- Windows Media-Format-SDK, erweiterte Client-APIs
-- Windows Media-Format-SDK, erweiterte APIs
-- SDK für Windows Media-Format, APIs
-- Windows Media-Format-SDK, Digital Rights Management (DRM)
-- Windows Media-Format-SDK, DRM-Import
-- SDK für Windows Media-Format, importieren
-- Windows Media-Format-SDK, Content Protection System (CPS)
-- Digital Rights Management (DRM), erweiterte Client-APIs
-- DRM (Digital Rights Management), erweiterte Client-APIs
-- Digital Rights Management (DRM), erweiterte APIs
-- DRM (Digital Rights Management), erweiterte APIs
+- Windows Medienformat-SDK, erweiterte DRM-Client-APIs
+- Windows Medienformat-SDK, erweiterte Client-APIs
+- Windows Medienformat-SDK, erweiterte APIs
+- Windows Medienformat-SDK, APIs
+- Windows Medienformat-SDK, Digital Rights Management (DRM)
+- Windows Medienformat-SDK, DRM-Import
+- Windows Medienformat-SDK,Importieren
+- Windows Media Format SDK, Content Protection System (CPS)
+- Digital Rights Management (DRM), Erweiterte Client-APIs
+- DRM (Digital Rights Management), Erweiterte Client-APIs
+- Digital Rights Management (DRM), Erweiterte APIs
+- DRM (Digital Rights Management), Erweiterte APIs
 - Digital Rights Management (DRM), APIs
 - DRM (Digital Rights Management), APIs
-- Digital Rights Management (DRM), importieren
-- DRM (Digital Rights Management), importieren
+- Digital Rights Management (DRM), Importieren
+- DRM (Verwaltung digitaler Rechte),Importieren
 - Digital Rights Management (DRM), Content Protection System (CPS)
 - DRM (Digital Rights Management), Content Protection System (CPS)
-- Erweiterte APIs für den DRM-Client, Import
-- Erweiterte Client-APIs, importieren
-- Erweiterte APIs für den DRM-Client, Content Protection System (CPS)
-- Erweiterte Client-APIs, Content Protection System (CPS)
+- Erweiterte APIs des DRM-Clients, Importieren
+- Erweiterte Client-APIs, Importieren
+- Erweiterte DRM-Client-APIs, Inhaltsschutzsystem (Content Protection System, CPS)
+- Erweiterte Client-APIs, Content Protection-System (CPS)
 - Content Protection System (CPS)
 - CPS (Content Protection System)
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 20fc20cfd682df975c10a8f39785c0e8d69610d0
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: 981e601c21dc3ee8f54e256c40453bf24580cf46c261d41ea5dd1d9afa1ffbbf
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "103711129"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119027898"
 ---
 # <a name="drm-import"></a>DRM-Import
 
-In den folgenden Abschnitten wird erläutert, wie Medieninhalte von einem Drittanbieter-CPS (Content Protection System) in Windows Media DRM konvertiert werden. Dieser Prozess wird als DRM-Import bezeichnet und besteht im Wesentlichen aus den folgenden Schritten:
+In den folgenden Abschnitten wird erläutert, wie Medieninhalte aus einem Inhaltsschutzsystem (Content Protection System, CPS) eines Drittanbieters in Windows Medien-DRM konvertiert werden. Dieser Prozess wird als DRM-Import bezeichnet und besteht im Wesentlichen aus den folgenden Schritten:
 
-1.  Die ASF-Datei wird erstellt.
-2.  Die Lizenz wird erstellt.
+1.  Erstellen der ASF-Datei.
+2.  Erstellen der Lizenz.
 3.  Optional können Sie die Lizenz löschen.
 
 Der DRM-Import wird in den folgenden Abschnitten erläutert.
@@ -50,16 +50,16 @@ Der DRM-Import wird in den folgenden Abschnitten erläutert.
 
 | `Section`                                                                              | BESCHREIBUNG                                                                          |
 |--------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------|
-| [Importieren von Lizenz-und Schlüssel Material](importing-license-and-key-material.md)         | Hier wird beschrieben, wie Lizenzen lokal ausgestellt und in Windows Media DRM importiert werden.      |
-| [Zertifikat Sperrung wird überprüft](checking-certificate-revocation.md)               | Hier wird beschrieben, wie Sie die Zertifikat Sperrung überprüfen.                                       |
-| [Aufbauen einer XMR-Lizenz](building-an-xmr-license.md)                               | Beschreibt, wie eine XMR-Lizenz erstellt und an das DRM-Subsystem übergeben wird.             |
-| [Erstellen und Initialisieren eines DRM-Writers](creating-and-initializing-a-drm-writer.md) | Beschreibt, wie ein ASF-Writer-Objekt für die Vorbereitung des DRM-Imports initialisiert wird.          |
-| [Verschlüsseln und Importieren von Medien Beispielen](encrypting-and-importing-media-samples.md) | Hier wird beschrieben, wie einzelne Medien Beispiele in Windows Media DRM verschlüsselt und importiert werden. |
-| [Löschen von Lizenzen](license-deletion.md)                                             | Hier wird beschrieben, wie lokal erstellte Lizenzen gelöscht werden.                                    |
+| [Importieren von Lizenz- und Schlüsselmaterial](importing-license-and-key-material.md)         | Beschreibt, wie Lizenzen lokal ausgestellt und in Windows Media DRM importiert werden.      |
+| [Überprüfen der Zertifikatsperrung](checking-certificate-revocation.md)               | Beschreibt, wie die Zertifikatsperrung überprüft wird.                                       |
+| [Erstellen einer XMR-Lizenz](building-an-xmr-license.md)                               | Beschreibt, wie eine XMR-Lizenz erstellt und an das DRM-Subsystem übergeben wird.             |
+| [Erstellen und Initialisieren eines DRM-Writers](creating-and-initializing-a-drm-writer.md) | Beschreibt, wie ein ASF Writer-Objekt initialisiert wird, um den DRM-Import vorzubereiten.          |
+| [Verschlüsseln und Importieren von Medienbeispielen](encrypting-and-importing-media-samples.md) | Beschreibt, wie einzelne Medienbeispiele verschlüsselt und in Windows Medien-DRM importiert werden. |
+| [Löschen von Lizenzen](license-deletion.md)                                             | Beschreibt, wie lokal erstellte Lizenzen gelöscht werden.                                    |
 
 
 
- 
+ 
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
@@ -68,9 +68,9 @@ Der DRM-Import wird in den folgenden Abschnitten erläutert.
 [**Programmierhandbuch**](drm-programming-guide.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

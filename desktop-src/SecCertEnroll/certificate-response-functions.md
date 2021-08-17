@@ -1,145 +1,145 @@
 ---
 description: Implementiert die IX509Enrollment-Schnittstelle.
 ms.assetid: bcf5c2f0-b99f-4de5-83f4-44f17dc31cd4
-title: Funktionen für Zertifikat Antworten
+title: Zertifikatantwortfunktionen
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 15eec71d0493fa4961988b86db0397d0fd516508
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 43f82922ce2b0cdfad370bbfbf4d1fd3a135c19d5ba613110364f7283ec12a06
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106347476"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118902400"
 ---
-# <a name="certificate-response-functions"></a>Funktionen für Zertifikat Antworten
+# <a name="certificate-response-functions"></a>Zertifikatantwortfunktionen
 
-CertEnroll.dll implementiert die [**IX509Enrollment**](/windows/desktop/api/CertEnroll/nn-certenroll-ix509enrollment) -Schnittstelle, um eine Client Zertifikat Anforderung zu senden und die Antwort von einer Zertifizierungsstelle ( [*Certification Authority*](/windows/desktop/SecGloss/c-gly) , ca) zu installieren.
+CertEnroll.dll implementiert die [**IX509Enrollment-Schnittstelle,**](/windows/desktop/api/CertEnroll/nn-certenroll-ix509enrollment) um eine Clientzertifikatanforderung zu übermitteln und die Antwort von einer [*Zertifizierungsstelle*](/windows/desktop/SecGloss/c-gly) zu installieren.
 
-Der Registrierungsvorgang kann die folgenden drei Szenarien erfüllen:
+Der Registrierungsprozess kann die folgenden drei Szenarien unterstützen:
 
 <dl> Out-of-Band-Registrierung
 
-1.  Ruft eine beliebige Initialisierungs Methode auf, die vom [**IX509Enrollment**](/windows/desktop/api/CertEnroll/nn-certenroll-ix509enrollment) -Objekt implementiert wird.
-2.  Rufen Sie die Methode " [**kreaterequest**](/windows/desktop/api/CertEnroll/nf-certenroll-ix509enrollment-createrequest) " auf, um die Anforderung abzurufen.
-3.  Senden Sie die Anforderung out-of-Band (manuell oder mithilfe eines anderen Prozesses).
-4.  Empfangen Sie die Antwort von einer Zertifizierungsstelle.
-5.  Nennen Sie die [**InstallResponse**](/windows/desktop/api/CertEnroll/nf-certenroll-ix509enrollment-installresponse) -Methode.
+1.  Rufen Sie eine beliebige Initialisierungsmethode auf, die vom [**IX509Enrollment-Objekt**](/windows/desktop/api/CertEnroll/nn-certenroll-ix509enrollment) implementiert wird.
+2.  Rufen Sie die [**CreateRequest-Methode**](/windows/desktop/api/CertEnroll/nf-certenroll-ix509enrollment-createrequest) auf, um die Anforderung abzurufen.
+3.  Übermitteln Sie die Anforderung out-of-band (manuell oder mithilfe eines anderen Prozesses).
+4.  Empfangen der Antwort von einer Zertifizierungsstelle.
+5.  Rufen Sie die [**InstallResponse-Methode auf.**](/windows/desktop/api/CertEnroll/nf-certenroll-ix509enrollment-installresponse)
 
   
 Automatische Registrierung
 
-1.  Ruft eine beliebige Initialisierungs Methode auf, die vom [**IX509Enrollment**](/windows/desktop/api/CertEnroll/nn-certenroll-ix509enrollment) -Objekt implementiert wird.
-2.  Ruft die [**ENROLL**](/windows/desktop/api/CertEnroll/nf-certenroll-ix509enrollment-enroll) -Methode auf.
+1.  Rufen Sie eine beliebige Initialisierungsmethode auf, die vom [**IX509Enrollment-Objekt**](/windows/desktop/api/CertEnroll/nn-certenroll-ix509enrollment) implementiert wird.
+2.  Rufen Sie die [**Enroll-Methode**](/windows/desktop/api/CertEnroll/nf-certenroll-ix509enrollment-enroll) auf.
 
   
 Verzögerte Registrierung
 
-1.  Ruft eine beliebige Initialisierungs Methode auf, die vom [**IX509Enrollment**](/windows/desktop/api/CertEnroll/nn-certenroll-ix509enrollment) -Objekt implementiert wird.
-2.  Rufen Sie die Methode " [**kreaterequest**](/windows/desktop/api/CertEnroll/nf-certenroll-ix509enrollment-createrequest) " auf, um die Anforderung abzurufen.
-3.  Speichern Sie die Anforderung, bis Sie bereit sind, Sie zu senden.
-4.  Wenn Sie zur Registrierung bereit sind, können Sie die [**Initialize**](/windows/desktop/api/CertEnroll/nf-certenroll-ix509enrollment-initialize) -Methode zum erneuten Initialisieren des anmeldungsobjekts aufzurufen.
-5.  Ruft die [**InstallResponse**](/windows/desktop/api/CertEnroll/nf-certenroll-ix509enrollment-installresponse) -Methode auf, wenn die Zertifizierungsstelle ein Zertifikat zurückgibt.
+1.  Rufen Sie eine beliebige Initialisierungsmethode auf, die vom [**IX509Enrollment-Objekt**](/windows/desktop/api/CertEnroll/nn-certenroll-ix509enrollment) implementiert wird.
+2.  Rufen Sie die [**CreateRequest-Methode**](/windows/desktop/api/CertEnroll/nf-certenroll-ix509enrollment-createrequest) auf, um die Anforderung abzurufen.
+3.  Store die Anforderung, bis Sie bereit sind, sie zu übermitteln.
+4.  Wenn Sie zur Registrierung bereit sind, rufen Sie die [**Initialize-Methode**](/windows/desktop/api/CertEnroll/nf-certenroll-ix509enrollment-initialize) auf, um das Registrierungsobjekt erneut zu initialisieren.
+5.  Rufen Sie die [**InstallResponse-Methode**](/windows/desktop/api/CertEnroll/nf-certenroll-ix509enrollment-installresponse) auf, wenn die Zertifizierungsstelle ein Zertifikat zurückgibt.
 
   
 </dl>
 
-Während des Registrierungsvorgangs können Sie die [**Status**](/windows/desktop/api/CertEnroll/nf-certenroll-ix509enrollment-get_status) -Eigenschaft für das [**IX509Enrollment**](/windows/desktop/api/CertEnroll/nn-certenroll-ix509enrollment) -Objekt aufrufen, um einen-Registrierungs Registrierungs [**Status**](/windows/desktop/api/CertEnroll/ne-certenroll-enrollmentenrollstatus) -Enumerationswert abzurufen, der angibt, ob die Registrierung erfolgreich war, aussteht, abgebrochen wurde, ein Fehler generiert wurde oder verweigert wurde.
+Während des Registrierungsprozesses können Sie die [**Status-Eigenschaft**](/windows/desktop/api/CertEnroll/nf-certenroll-ix509enrollment-get_status) für das [**IX509Enrollment-Objekt**](/windows/desktop/api/CertEnroll/nn-certenroll-ix509enrollment) aufrufen, um einen [**EnrollmentEnrollStatus-Enumerationswert**](/windows/desktop/api/CertEnroll/ne-certenroll-enrollmentenrollstatus) abzurufen, der angibt, ob die Registrierung erfolgreich war, aussteht, übersprungen wurde, einen Fehler generiert hat oder verweigert wurde.
 
-In den folgenden Abschnitten wird eine Funktion identifiziert, die von Xenroll.dll exportiert wird, um eine Zertifikat Antwort von einer Zertifizierungsstelle zu installieren. Außerdem wird in jedem Abschnitt erläutert, wie CertEnroll.dll verwendet wird, um die Funktion zu ersetzen, oder es wird angegeben, dass keine Zuordnung zwischen den beiden Bibliotheken besteht:
+Jeder der folgenden Abschnitte identifiziert eine Funktion, die von Xenroll.dll exportiert wird, um eine Zertifikatantwort von einer Zertifizierungsstelle zu installieren. In jedem Abschnitt wird auch erläutert, wie CertEnroll.dll verwendet wird, um die Funktion zu ersetzen, oder gibt an, dass keine Zuordnung zwischen den beiden Bibliotheken vorhanden ist:
 
 -   [acceptFilePKCS7WStr](#acceptfilepkcs7wstr)
--   [Accept-fileresponabwstr](#acceptfileresponsewstr)
+-   [acceptFileResponseWStr](#acceptfileresponsewstr)
 -   [acceptPKCS7Blob](#acceptpkcs7blob)
--   [akzeptresponseeblob](#acceptresponseblob)
--   [getcertcontextfromfileresponabwstr](#getcertcontextfromfileresponsewstr)
+-   [acceptResponseBlob](#acceptresponseblob)
+-   [getCertContextFromFileResponseWStr](#getcertcontextfromfileresponsewstr)
 -   [getCertContextFromPKCS7](#getcertcontextfrompkcs7)
--   [getcertcontextfromresponse-BLOB](#getcertcontextfromresponseblob)
+-   [getCertContextFromResponseBlob](#getcertcontextfromresponseblob)
 -   [InstallPKCS7Blob](#installpkcs7blobex)
 -   [InstallPKCS7BlobEx](#installpkcs7blobex)
--   [Spcdateinamewstr](#spcfilenamewstr)
--   ["Schreibcertto"](#writecerttocsp)
--   ["Schreibcerttouserds"](#writecerttouserds)
+-   [SPCFileNameWStr](#spcfilenamewstr)
+-   [WriteCertToCSP](#writecerttocsp)
+-   [WriteCertToUserDS](#writecerttouserds)
 -   [Zugehörige Themen](#related-topics)
 
 ## <a name="acceptfilepkcs7wstr"></a>acceptFilePKCS7WStr
 
-Die [**acceptFilePKCS7WStr**](/windows/desktop/api/xenroll/nf-xenroll-ienroll-acceptfilepkcs7wstr) -Funktion in Xenroll.dll installiert eine [*PKCS \# 7*](/windows/desktop/SecGloss/p-gly) -Antwort aus einer Datei.
+Die [**acceptFilePKCS7WStr-Funktion**](/windows/desktop/api/xenroll/nf-xenroll-ienroll-acceptfilepkcs7wstr) in Xenroll.dll installiert eine [*PKCS \# 7-Antwort*](/windows/desktop/SecGloss/p-gly) aus einer Datei.
 
-Die CertEnroll.dll Bibliothek implementiert nicht direkt Funktionen zum Installieren einer PKCS \# 7-Zertifikats Antwort aus einer Datei. Sie können jedoch eine benutzerdefinierte Funktion erstellen, um die Datei Daten in ein Bytearray zu lesen und [**InstallResponse**](/windows/desktop/api/CertEnroll/nf-certenroll-ix509enrollment-installresponse) zum Installieren der Antwort aufzurufen.
+Die CertEnroll.dll-Bibliothek implementiert die Funktionalität zum Installieren einer PKCS \# 7-Zertifikatantwort aus einer Datei nicht direkt. Sie können jedoch eine benutzerdefinierte Funktion erstellen, um die Dateidaten in ein Bytearray zu lesen und [**InstallResponse**](/windows/desktop/api/CertEnroll/nf-certenroll-ix509enrollment-installresponse) aufzurufen, um die Antwort zu installieren.
 
-Wenn Sie für den ersten Parameter von [**InstallResponse**](/windows/desktop/api/CertEnroll/nf-certenroll-ix509enrollment-installresponse)den Wert **allownooutstandingrequest** der [**installresponserestrictionflags**](/windows/desktop/api/CertEnroll/ne-certenroll-installresponserestrictionflags) -Enumeration angeben, ist ein dummyzertifikat nicht vorhanden. Dadurch können Sie ein Zertifikat installieren, ohne zuerst " [**ENROLL**](/windows/desktop/api/CertEnroll/nf-certenroll-ix509enrollment-enroll) " oder " [**CreateRequest**](/windows/desktop/api/CertEnroll/nf-certenroll-ix509enrollment-createrequest)" aufrufen zu müssen. Wenn Sie ein Zertifikat jedoch mithilfe eines Webskripts installieren, muss im Anforderungs Speicher ein dummyzertifikat vorhanden sein. Daher müssen Sie für den ersten Parameter " **allownone** " angeben.
+Wenn Sie den **AllowNoOutstandingRequest-Wert** der [**InstallResponseRestrictionFlags-Enumeration**](/windows/desktop/api/CertEnroll/ne-certenroll-installresponserestrictionflags) für den ersten Parameter von [**InstallResponse**](/windows/desktop/api/CertEnroll/nf-certenroll-ix509enrollment-installresponse)angeben, muss kein Dummyzertifikat vorhanden sein, sodass Sie ein Zertifikat installieren können, ohne zuerst [**Enroll**](/windows/desktop/api/CertEnroll/nf-certenroll-ix509enrollment-enroll) oder [**CreateRequest**](/windows/desktop/api/CertEnroll/nf-certenroll-ix509enrollment-createrequest)aufzurufen. Wenn Sie jedoch ein Zertifikat mithilfe eines Webskripts installieren, muss ein Dummyzertifikat im Anforderungsspeicher vorhanden sein. Daher müssen Sie **AllowNone** für den ersten Parameter angeben.
 
-## <a name="acceptfileresponsewstr"></a>Accept-fileresponabwstr
+## <a name="acceptfileresponsewstr"></a>acceptFileResponseWStr
 
-Mit der Funktion " [**Accept-fileresponabwstr**](/windows/desktop/api/xenroll/nf-xenroll-ienroll4-acceptfileresponsewstr) " in Xenroll.dll wird eine PKCS \# 7-oder CMC-Zertifikats Antwort aus einer Datei installiert.
+Die [**acceptFileResponseWStr-Funktion**](/windows/desktop/api/xenroll/nf-xenroll-ienroll4-acceptfileresponsewstr) in Xenroll.dll installiert eine PKCS \# 7- oder CMC-Zertifikatantwort aus einer Datei.
 
-Die CertEnroll.dll Bibliothek implementiert die Funktionalität nicht direkt, um eine Zertifikat Antwort aus einer Datei zu installieren. Sie können jedoch eine benutzerdefinierte Funktion erstellen, um die Datei Daten in ein Bytearray zu lesen und [**InstallResponse**](/windows/desktop/api/CertEnroll/nf-certenroll-ix509enrollment-installresponse) zum Installieren der PKCS 7-oder der CMC-Antwort aufzurufen \# .
+Die CertEnroll.dll Bibliothek implementiert die Funktionalität zum Installieren einer Zertifikatantwort aus einer Datei nicht direkt. Sie können jedoch eine benutzerdefinierte Funktion erstellen, um die Dateidaten in ein Bytearray zu lesen und [**InstallResponse**](/windows/desktop/api/CertEnroll/nf-certenroll-ix509enrollment-installresponse) aufzurufen, um die PKCS \# 7- oder CMC-Antwort zu installieren.
 
-Wenn Sie für den ersten Parameter von [**InstallResponse**](/windows/desktop/api/CertEnroll/nf-certenroll-ix509enrollment-installresponse)den Wert **allownooutstandingrequest** der [**installresponserestrictionflags**](/windows/desktop/api/CertEnroll/ne-certenroll-installresponserestrictionflags) -Enumeration angeben, ist ein dummyzertifikat nicht vorhanden. Dadurch können Sie ein Zertifikat installieren, ohne zuerst " [**ENROLL**](/windows/desktop/api/CertEnroll/nf-certenroll-ix509enrollment-enroll) " oder " [**CreateRequest**](/windows/desktop/api/CertEnroll/nf-certenroll-ix509enrollment-createrequest)" aufrufen zu müssen. Wenn Sie ein Zertifikat jedoch mithilfe eines Webskripts installieren, muss im Anforderungs Speicher ein dummyzertifikat vorhanden sein. Daher müssen Sie für den ersten Parameter " **allownone** " angeben.
+Wenn Sie den **AllowNoOutstandingRequest-Wert** der [**InstallResponseRestrictionFlags-Enumeration**](/windows/desktop/api/CertEnroll/ne-certenroll-installresponserestrictionflags) für den ersten Parameter von [**InstallResponse**](/windows/desktop/api/CertEnroll/nf-certenroll-ix509enrollment-installresponse)angeben, muss kein Dummyzertifikat vorhanden sein, sodass Sie ein Zertifikat installieren können, ohne zuerst [**Enroll**](/windows/desktop/api/CertEnroll/nf-certenroll-ix509enrollment-enroll) oder [**CreateRequest**](/windows/desktop/api/CertEnroll/nf-certenroll-ix509enrollment-createrequest)aufzurufen. Wenn Sie jedoch ein Zertifikat mithilfe eines Webskripts installieren, muss ein Dummyzertifikat im Anforderungsspeicher vorhanden sein. Daher müssen Sie **AllowNone** für den ersten Parameter angeben.
 
 ## <a name="acceptpkcs7blob"></a>acceptPKCS7Blob
 
-Die [**acceptPKCS7Blob**](/windows/desktop/api/xenroll/nf-xenroll-ienroll-acceptpkcs7blob) -Funktion in Xenroll.dll installiert eine PKCS 7-Antwort, die \# in einem Bytearray enthalten ist.
+Die [**acceptPKCS7Blob-Funktion**](/windows/desktop/api/xenroll/nf-xenroll-ienroll-acceptpkcs7blob) in Xenroll.dll installiert eine PKCS \# 7-Antwort, die in einem Bytearray enthalten ist.
 
-Sie können " [**InstallResponse**](/windows/desktop/api/CertEnroll/nf-certenroll-ix509enrollment-installresponse) " zum Installieren einer PKCS \# 7-Nachricht anrufen. Wenn Sie für den ersten Parameter von " [**InstallResponse**](/windows/desktop/api/CertEnroll/nf-certenroll-ix509enrollment-installresponse)" den Wert " **allownooutstandingrequest** " der [**installresponserestrictionflags**](/windows/desktop/api/CertEnroll/ne-certenroll-installresponserestrictionflags) -Enumeration angeben, ist ein dummyzertifikat nicht vorhanden. Dadurch können Sie die PKCS 7-Antwort installieren, \# ohne zuerst " [**ENROLL**](/windows/desktop/api/CertEnroll/nf-certenroll-ix509enrollment-enroll) " oder " [**CreateRequest**](/windows/desktop/api/CertEnroll/nf-certenroll-ix509enrollment-createrequest)" aufrufen zu müssen. Wenn Sie ein Zertifikat jedoch mithilfe eines Webskripts installieren, muss im Anforderungs Speicher ein dummyzertifikat vorhanden sein. Daher müssen Sie für den ersten Parameter " **allownone** " angeben.
+Sie können [**InstallResponse**](/windows/desktop/api/CertEnroll/nf-certenroll-ix509enrollment-installresponse) aufrufen, um eine PKCS \# 7-Nachricht zu installieren. Wenn Sie den **AllowNoOutstandingRequest-Wert** der [**InstallResponseRestrictionFlags-Enumeration**](/windows/desktop/api/CertEnroll/ne-certenroll-installresponserestrictionflags) für den ersten Parameter von [**InstallResponse**](/windows/desktop/api/CertEnroll/nf-certenroll-ix509enrollment-installresponse)angeben, muss kein Dummyzertifikat vorhanden sein, sodass Sie die PKCS 7-Antwort installieren können, \# ohne zuerst Enroll oder [**CreateRequest**](/windows/desktop/api/CertEnroll/nf-certenroll-ix509enrollment-createrequest) [**aufzurufen.**](/windows/desktop/api/CertEnroll/nf-certenroll-ix509enrollment-enroll) Wenn Sie jedoch ein Zertifikat mithilfe eines Webskripts installieren, muss ein Dummyzertifikat im Anforderungsspeicher vorhanden sein. Daher müssen Sie **AllowNone** für den ersten Parameter angeben.
 
-## <a name="acceptresponseblob"></a>akzeptresponseeblob
+## <a name="acceptresponseblob"></a>acceptResponseBlob
 
-Die Funktion " [**Accept trespontarblob**](/windows/desktop/api/xenroll/nf-xenroll-ienroll4-acceptresponseblob) " in Xenroll.dll installiert eine PKCS \# 7-oder CMC-Zertifikats Antwort, die in einem Bytearray enthalten ist.
+Die [**acceptResponseBlob-Funktion**](/windows/desktop/api/xenroll/nf-xenroll-ienroll4-acceptresponseblob) in Xenroll.dll installiert eine PKCS \# 7- oder CMC-Zertifikatantwort, die in einem Bytearray enthalten ist.
 
-Sie können " [**InstallResponse**](/windows/desktop/api/CertEnroll/nf-certenroll-ix509enrollment-installresponse) " anrufen, um eine PKCS 7-oder eine CMC-Antwort zu installieren \# . Wenn Sie für den ersten Parameter von [**InstallResponse**](/windows/desktop/api/CertEnroll/nf-certenroll-ix509enrollment-installresponse)den Wert **allownooutstandingrequest** der [**installresponserestrictionflags**](/windows/desktop/api/CertEnroll/ne-certenroll-installresponserestrictionflags) -Enumeration angeben, ist ein dummyzertifikat nicht vorhanden. Dadurch können Sie die Antwort installieren, ohne zuerst " [**ENROLL**](/windows/desktop/api/CertEnroll/nf-certenroll-ix509enrollment-enroll) " oder " [**CreateRequest**](/windows/desktop/api/CertEnroll/nf-certenroll-ix509enrollment-createrequest)" aufrufen zu müssen. Wenn Sie ein Zertifikat jedoch mithilfe eines Webskripts installieren, muss im Anforderungs Speicher ein dummyzertifikat vorhanden sein. Daher müssen Sie für den ersten Parameter " **allownone** " angeben.
+Sie können [**InstallResponse**](/windows/desktop/api/CertEnroll/nf-certenroll-ix509enrollment-installresponse) aufrufen, um eine PKCS \# 7- oder CMC-Antwort zu installieren. Wenn Sie den **AllowNoOutstandingRequest-Wert** der [**InstallResponseRestrictionFlags-Enumeration**](/windows/desktop/api/CertEnroll/ne-certenroll-installresponserestrictionflags) für den ersten Parameter von [**InstallResponse**](/windows/desktop/api/CertEnroll/nf-certenroll-ix509enrollment-installresponse)angeben, muss kein Dummyzertifikat vorhanden sein, sodass Sie die Antwort installieren können, ohne zuerst Enroll oder [**CreateRequest**](/windows/desktop/api/CertEnroll/nf-certenroll-ix509enrollment-createrequest) [**aufzurufen.**](/windows/desktop/api/CertEnroll/nf-certenroll-ix509enrollment-enroll) Wenn Sie jedoch ein Zertifikat mithilfe eines Webskripts installieren, muss ein Dummyzertifikat im Anforderungsspeicher vorhanden sein. Daher müssen Sie **AllowNone** für den ersten Parameter angeben.
 
-## <a name="getcertcontextfromfileresponsewstr"></a>getcertcontextfromfileresponabwstr
+## <a name="getcertcontextfromfileresponsewstr"></a>getCertContextFromFileResponseWStr
 
-Die [**getcertcontextfromfileresponcwstr**](/windows/desktop/api/xenroll/nf-xenroll-ienroll4-getcertcontextfromfileresponsewstr) -Funktion in Xenroll.dll ruft das Client Zertifikat aus einer Datei ab.
+Die [**getCertContextFromFileResponseWStr-Funktion**](/windows/desktop/api/xenroll/nf-xenroll-ienroll4-getcertcontextfromfileresponsewstr) in Xenroll.dll ruft das Clientzertifikat aus einer Datei ab.
 
-Die CertEnroll.dll Bibliothek implementiert die Funktionalität zum Abrufen eines Zertifikats aus einer in einer Datei gespeicherten Zertifizierungsstellen Antwort nicht direkt. Sie können jedoch eine benutzerdefinierte Funktion erstellen, um die Datei Daten in ein Bytearray zu lesen, und [**InstallResponse**](/windows/desktop/api/CertEnroll/nf-certenroll-ix509enrollment-installresponse) aufrufen, um die PKCS \# 7-oder die CMC-Antwort zu installieren, und die [**Zertifikat**](/windows/desktop/api/CertEnroll/nf-certenroll-ix509enrollment-get_certificate) Eigenschaft aufrufen, um das Zertifikat abzurufen.
+Die CertEnroll.dll Bibliothek implementiert nicht direkt Funktionen zum Abrufen eines Zertifikats aus einer in einer Datei gespeicherten Antwort der Zertifizierungsstelle. Sie können jedoch eine benutzerdefinierte Funktion erstellen, um die Dateidaten in ein Bytearray zu lesen und [**InstallResponse**](/windows/desktop/api/CertEnroll/nf-certenroll-ix509enrollment-installresponse) aufzurufen, um die PKCS \# 7- oder CMC-Antwort zu installieren, und die [**Certificate-Eigenschaft**](/windows/desktop/api/CertEnroll/nf-certenroll-ix509enrollment-get_certificate) aufrufen, um das Zertifikat abzurufen.
 
-Wenn Sie für den ersten Parameter von [**InstallResponse**](/windows/desktop/api/CertEnroll/nf-certenroll-ix509enrollment-installresponse)den Wert **allownooutstandingrequest** der [**installresponserestrictionflags**](/windows/desktop/api/CertEnroll/ne-certenroll-installresponserestrictionflags) -Enumeration angeben, ist ein dummyzertifikat nicht vorhanden. Dadurch können Sie ein Zertifikat installieren, ohne zuerst " [**ENROLL**](/windows/desktop/api/CertEnroll/nf-certenroll-ix509enrollment-enroll) " oder " [**CreateRequest**](/windows/desktop/api/CertEnroll/nf-certenroll-ix509enrollment-createrequest)" aufrufen zu müssen. Wenn Sie ein Zertifikat jedoch mithilfe eines Webskripts installieren, muss im Anforderungs Speicher ein dummyzertifikat vorhanden sein. Daher müssen Sie für den ersten Parameter " **allownone** " angeben.
+Wenn Sie den **AllowNoOutstandingRequest-Wert** der [**InstallResponseRestrictionFlags-Enumeration**](/windows/desktop/api/CertEnroll/ne-certenroll-installresponserestrictionflags) für den ersten Parameter von [**InstallResponse**](/windows/desktop/api/CertEnroll/nf-certenroll-ix509enrollment-installresponse)angeben, muss kein Dummyzertifikat vorhanden sein, sodass Sie ein Zertifikat installieren können, ohne zuerst [**Enroll**](/windows/desktop/api/CertEnroll/nf-certenroll-ix509enrollment-enroll) oder [**CreateRequest**](/windows/desktop/api/CertEnroll/nf-certenroll-ix509enrollment-createrequest)aufzurufen. Wenn Sie jedoch ein Zertifikat mithilfe eines Webskripts installieren, muss ein Dummyzertifikat im Anforderungsspeicher vorhanden sein. Daher müssen Sie **AllowNone** für den ersten Parameter angeben.
 
 ## <a name="getcertcontextfrompkcs7"></a>getCertContextFromPKCS7
 
-Die [**getCertContextFromPKCS7**](/windows/desktop/api/xenroll/nf-xenroll-ienroll-getcertcontextfrompkcs7) -Funktion in Xenroll.dll ruft das Client Zertifikat aus einer PKCS \# 7-Antwort ab.
+Die [**getCertContextFromPKCS7-Funktion**](/windows/desktop/api/xenroll/nf-xenroll-ienroll-getcertcontextfrompkcs7) in Xenroll.dll ruft das Clientzertifikat aus einer PKCS \# 7-Antwort ab.
 
-Sie können die [**Certificate**](/windows/desktop/api/CertEnroll/nf-certenroll-ix509enrollment-get_certificate) -Eigenschaft für das [**IX509Enrollment**](/windows/desktop/api/CertEnroll/nn-certenroll-ix509enrollment) -Objekt aufrufen, um ein Zertifikat abzurufen, nachdem Sie die Methode [**ENROLL**](/windows/desktop/api/CertEnroll/nf-certenroll-ix509enrollment-enroll) oder [**InstallResponse**](/windows/desktop/api/CertEnroll/nf-certenroll-ix509enrollment-installresponse) aufgerufen haben.
+Sie können die [**Certificate-Eigenschaft**](/windows/desktop/api/CertEnroll/nf-certenroll-ix509enrollment-get_certificate) für das [**IX509Enrollment-Objekt**](/windows/desktop/api/CertEnroll/nn-certenroll-ix509enrollment) aufrufen, um ein Zertifikat abzurufen, nachdem Sie die [**Enroll-**](/windows/desktop/api/CertEnroll/nf-certenroll-ix509enrollment-enroll) oder [**InstallResponse-Methode**](/windows/desktop/api/CertEnroll/nf-certenroll-ix509enrollment-installresponse) aufgerufen haben.
 
-## <a name="getcertcontextfromresponseblob"></a>getcertcontextfromresponse-BLOB
+## <a name="getcertcontextfromresponseblob"></a>getCertContextFromResponseBlob
 
-Die [**getcertcontextfromresponcblob**](/windows/desktop/api/xenroll/nf-xenroll-ienroll4-getcertcontextfromresponseblob) -Funktion in Xenroll.dll ruft ein Client Zertifikat von einer PKCS \# 7-oder CMC-Antwort ab.
+Die [**getCertContextFromResponseBlob-Funktion**](/windows/desktop/api/xenroll/nf-xenroll-ienroll4-getcertcontextfromresponseblob) in Xenroll.dll ruft ein Clientzertifikat aus einer PKCS \# 7- oder CMC-Antwort ab.
 
-Sie können die [**Certificate**](/windows/desktop/api/CertEnroll/nf-certenroll-ix509enrollment-get_certificate) -Eigenschaft für das [**IX509Enrollment**](/windows/desktop/api/CertEnroll/nn-certenroll-ix509enrollment) -Objekt aufrufen, um ein Zertifikat abzurufen, nachdem Sie die Methode [**ENROLL**](/windows/desktop/api/CertEnroll/nf-certenroll-ix509enrollment-enroll) oder [**InstallResponse**](/windows/desktop/api/CertEnroll/nf-certenroll-ix509enrollment-installresponse) aufgerufen haben.
+Sie können die [**Certificate-Eigenschaft**](/windows/desktop/api/CertEnroll/nf-certenroll-ix509enrollment-get_certificate) für das [**IX509Enrollment-Objekt**](/windows/desktop/api/CertEnroll/nn-certenroll-ix509enrollment) aufrufen, um ein Zertifikat abzurufen, nachdem Sie die [**Enroll-**](/windows/desktop/api/CertEnroll/nf-certenroll-ix509enrollment-enroll) oder [**InstallResponse-Methode**](/windows/desktop/api/CertEnroll/nf-certenroll-ix509enrollment-installresponse) aufgerufen haben.
 
 ## <a name="installpkcs7blob"></a>InstallPKCS7Blob
 
-Mit der [**InstallPKCS7Blob**](/windows/desktop/api/xenroll/nf-xenroll-ienroll2-installpkcs7blob) -Funktion in Xenroll.dll wird eine PKCS \# 7-Antwort installiert.
+Die [**InstallPKCS7Blob-Funktion**](/windows/desktop/api/xenroll/nf-xenroll-ienroll2-installpkcs7blob) in Xenroll.dll installiert eine PKCS \# 7-Antwort.
 
-Sie können " [**InstallResponse**](/windows/desktop/api/CertEnroll/nf-certenroll-ix509enrollment-installresponse) " anrufen, um eine PKCS 7-oder eine CMC-Antwort zu installieren \# . Wenn Sie für den ersten Parameter von [**InstallResponse**](/windows/desktop/api/CertEnroll/nf-certenroll-ix509enrollment-installresponse)den Wert **allownooutstandingrequest** der [**installresponserestrictionflags**](/windows/desktop/api/CertEnroll/ne-certenroll-installresponserestrictionflags) -Enumeration angeben, ist ein dummyzertifikat nicht vorhanden. Dadurch können Sie die Antwort installieren, ohne zuerst " [**ENROLL**](/windows/desktop/api/CertEnroll/nf-certenroll-ix509enrollment-enroll) " oder " [**CreateRequest**](/windows/desktop/api/CertEnroll/nf-certenroll-ix509enrollment-createrequest)" aufrufen zu müssen. Wenn Sie ein Zertifikat jedoch mithilfe eines Webskripts installieren, muss im Anforderungs Speicher ein dummyzertifikat vorhanden sein. Daher müssen Sie für den ersten Parameter " **allownone** " angeben.
+Sie können [**InstallResponse**](/windows/desktop/api/CertEnroll/nf-certenroll-ix509enrollment-installresponse) aufrufen, um eine PKCS \# 7- oder CMC-Antwort zu installieren. Wenn Sie den **AllowNoOutstandingRequest-Wert** der [**InstallResponseRestrictionFlags-Enumeration**](/windows/desktop/api/CertEnroll/ne-certenroll-installresponserestrictionflags) für den ersten Parameter von [**InstallResponse**](/windows/desktop/api/CertEnroll/nf-certenroll-ix509enrollment-installresponse)angeben, muss kein Dummyzertifikat vorhanden sein, sodass Sie die Antwort installieren können, ohne zuerst Enroll oder [**CreateRequest**](/windows/desktop/api/CertEnroll/nf-certenroll-ix509enrollment-createrequest) [**aufzurufen.**](/windows/desktop/api/CertEnroll/nf-certenroll-ix509enrollment-enroll) Wenn Sie jedoch ein Zertifikat mithilfe eines Webskripts installieren, muss ein Dummyzertifikat im Anforderungsspeicher vorhanden sein. Daher müssen Sie **AllowNone** für den ersten Parameter angeben.
 
 ## <a name="installpkcs7blobex"></a>InstallPKCS7BlobEx
 
-Mit der [**InstallPKCS7BlobEx**](/windows/desktop/api/xenroll/nf-xenroll-ienroll4-installpkcs7blobex) -Funktion in Xenroll.dll wird eine PKCS \# 7-Antwort installiert, und die Anzahl der installierten Zertifikate wird zurückgegeben.
+Die [**InstallPKCS7BlobEx-Funktion**](/windows/desktop/api/xenroll/nf-xenroll-ienroll4-installpkcs7blobex) in Xenroll.dll installiert eine PKCS \# 7-Antwort und gibt die Anzahl der installierten Zertifikate zurück.
 
-Sie können " [**InstallResponse**](/windows/desktop/api/CertEnroll/nf-certenroll-ix509enrollment-installresponse) " anrufen, um eine PKCS 7-oder eine CMC-Antwort zu installieren \# . Wenn Sie für den ersten Parameter von [**InstallResponse**](/windows/desktop/api/CertEnroll/nf-certenroll-ix509enrollment-installresponse)den Wert **allownooutstandingrequest** der [**installresponserestrictionflags**](/windows/desktop/api/CertEnroll/ne-certenroll-installresponserestrictionflags) -Enumeration angeben, ist ein dummyzertifikat nicht vorhanden. Dadurch können Sie die Antwort installieren, ohne zuerst " [**ENROLL**](/windows/desktop/api/CertEnroll/nf-certenroll-ix509enrollment-enroll) " oder " [**CreateRequest**](/windows/desktop/api/CertEnroll/nf-certenroll-ix509enrollment-createrequest)" aufrufen zu müssen. Wenn Sie ein Zertifikat jedoch mithilfe eines Webskripts installieren, muss im Anforderungs Speicher ein dummyzertifikat vorhanden sein. Daher müssen Sie für den ersten Parameter " **allownone** " angeben.
+Sie können [**InstallResponse**](/windows/desktop/api/CertEnroll/nf-certenroll-ix509enrollment-installresponse) aufrufen, um eine PKCS \# 7- oder CMC-Antwort zu installieren. Wenn Sie den **AllowNoOutstandingRequest-Wert** der [**InstallResponseRestrictionFlags-Enumeration**](/windows/desktop/api/CertEnroll/ne-certenroll-installresponserestrictionflags) für den ersten Parameter von [**InstallResponse**](/windows/desktop/api/CertEnroll/nf-certenroll-ix509enrollment-installresponse)angeben, muss kein Dummyzertifikat vorhanden sein, sodass Sie die Antwort installieren können, ohne zuerst Enroll oder [**CreateRequest**](/windows/desktop/api/CertEnroll/nf-certenroll-ix509enrollment-createrequest) [**aufzurufen.**](/windows/desktop/api/CertEnroll/nf-certenroll-ix509enrollment-enroll) Wenn Sie jedoch ein Zertifikat mithilfe eines Webskripts installieren, muss ein Dummyzertifikat im Anforderungsspeicher vorhanden sein. Daher müssen Sie **AllowNone** für den ersten Parameter angeben.
 
-## <a name="spcfilenamewstr"></a>Spcdateinamewstr
+## <a name="spcfilenamewstr"></a>SPCFileNameWStr
 
-Die [**spcfileamewstr**](/windows/desktop/api/xenroll/nf-xenroll-ienroll-get_spcfilenamewstr) -Funktion in Xenroll.dll gibt den Namen der Datei an, in der die Zertifikats Antwort gespeichert werden soll, oder ruft ihn ab. Die CertEnroll.dll Bibliothek implementiert keine Funktionen, mit denen Sie ein Zertifikat in eine bestimmte Datei kopieren können. Bei der Registrierung wird die Zertifikatskette automatisch in Dateien in den entsprechenden speichern installiert.
+Die [**SPCFileNameWStr-Funktion**](/windows/desktop/api/xenroll/nf-xenroll-ienroll-get_spcfilenamewstr) in Xenroll.dll gibt den Namen der Datei an, in der die Zertifikatantwort gespeichert werden soll, oder ruft diesen ab. Die bibliothek CertEnroll.dll implementiert keine Funktionen, mit denen Sie ein Zertifikat in eine bestimmte Datei kopieren können. Beim Registrierungsprozess wird die Zertifikatkette automatisch in Dateien in den entsprechenden Speichern installiert.
 
-## <a name="writecerttocsp"></a>"Schreibcertto"
+## <a name="writecerttocsp"></a>WriteCertToCSP
 
-Die Funktion " [**Write-certtocsp**](/windows/desktop/api/xenroll/nf-xenroll-ienroll-get_writecerttocsp) " in Xenroll.dll gibt einen booleschen Wert an oder ruft ihn ab, der angibt, ob ein Zertifikat in einen [*Kryptografiedienstanbieter (kryptografischen Service Provider*](/windows/desktop/SecGloss/c-gly) , CSP) geschrieben wird. Wenn diese Funktion aufgerufen wird, ist der Anbieter in der Regel eine [*Smartcard*](/windows/desktop/SecGloss/s-gly).
+Die [**WriteCertToCSP-Funktion**](/windows/desktop/api/xenroll/nf-xenroll-ienroll-get_writecerttocsp) in Xenroll.dll gibt einen booleschen Wert an oder ruft einen booleschen Wert ab, der angibt, ob ein Zertifikat in einen [*Kryptografiedienstanbieter (Cryptographic Service Provider,*](/windows/desktop/SecGloss/c-gly) CSP) geschrieben werden soll. Wenn diese Funktion aufgerufen wird, ist der Anbieter in der Regel eine [*Smartcard.*](/windows/desktop/SecGloss/s-gly)
 
-Wenn ein Client in CertEnroll.dll die [**Registrierungsmethode aufruft**](/windows/desktop/api/CertEnroll/nf-certenroll-ix509enrollment-enroll) , um eine Anforderung für ein Smartcardzertifikat zu senden, und ein Zertifikat ausgestellt wird, wird das Zertifikat bei der [**Anmeldung**](/windows/desktop/api/CertEnroll/nf-certenroll-ix509enrollment-enroll) automatisch auf der Smartcard installiert, vorausgesetzt, dass die Karte im Reader installiert ist. Die [**InstallResponse**](/windows/desktop/api/CertEnroll/nf-certenroll-ix509enrollment-installresponse) -Methode schreibt das Zertifikat auch automatisch auf die Smartcard.
+Wenn ein Client in CertEnroll.dll die [**Enroll-Methode**](/windows/desktop/api/CertEnroll/nf-certenroll-ix509enrollment-enroll) aufruft, um eine Anforderung für ein Smartcardzertifikat zu übermitteln, und ein Zertifikat ausgestellt wird, installiert [**Enroll**](/windows/desktop/api/CertEnroll/nf-certenroll-ix509enrollment-enroll) das Zertifikat automatisch auf der Smartcard, vorausgesetzt, die Karte wird im Reader installiert. Die [**InstallResponse-Methode**](/windows/desktop/api/CertEnroll/nf-certenroll-ix509enrollment-installresponse) schreibt das Zertifikat auch automatisch auf die Smartcard.
 
-## <a name="writecerttouserds"></a>"Schreibcerttouserds"
+## <a name="writecerttouserds"></a>WriteCertToUserDS
 
-Die Funktion " [**schreitecerttouserds**](/windows/desktop/api/xenroll/nf-xenroll-ienroll-get_writecerttouserds) " in Xenroll.dll gibt einen booleschen Wert an, der angibt, ob ein Zertifikat im Active Directory Speicher gespeichert werden soll, oder ruft ihn ab. Die CertEnroll.dll Bibliothek implementiert keine Funktionen, mit denen Sie einen Speicher angeben können, in den ein Zertifikat kopiert werden soll.
+Die [**WriteCertToUserDS-Funktion**](/windows/desktop/api/xenroll/nf-xenroll-ienroll-get_writecerttouserds) in Xenroll.dll gibt einen booleschen Wert an oder ruft einen booleschen Wert ab, der angibt, ob ein Zertifikat im Active Directory-Speicher gespeichert werden soll. Die CertEnroll.dll-Bibliothek implementiert keine Funktionen, mit denen Sie einen Speicher angeben können, in den ein Zertifikat kopiert werden soll.
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[Zuordnung von Xenroll.dll zu CertEnroll.dll](mapping-xenroll-dll-to-certenroll-dll.md)
+[Zuordnen Xenroll.dll zu CertEnroll.dll](mapping-xenroll-dll-to-certenroll-dll.md)
 </dt> <dt>
 
 [**IX509Enrollment**](/windows/desktop/api/CertEnroll/nn-certenroll-ix509enrollment)

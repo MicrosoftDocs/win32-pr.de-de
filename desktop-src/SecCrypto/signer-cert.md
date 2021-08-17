@@ -1,7 +1,7 @@
 ---
-description: Gibt ein Zertifikat an, das zum Signieren eines Dokuments verwendet wird. Das Zertifikat kann in einer SPC-Datei (Software Publisher Certificate) oder in einem Zertifikat Speicher gespeichert werden.
+description: Gibt ein Zertifikat an, das zum Signieren eines Dokuments verwendet wird. Das Zertifikat kann in einer SPC-Datei (Software Publisher Certificate) oder in einem Zertifikatspeicher gespeichert werden.
 ms.assetid: 9a99ce98-237d-4223-ab3d-0576041038e3
-title: SIGNER_CERT Struktur
+title: SIGNER_CERT-Struktur
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -12,19 +12,19 @@ api_name:
 api_type:
 - NA
 api_location: ''
-ms.openlocfilehash: a14f955749e98ca34cda0be2c57a3d5c546afc41
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: d31670575db045430e78b6c6b3182f4561b0d4784c1e1c0da95ff8629154d2c5
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "104217619"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118898873"
 ---
-# <a name="signer_cert-structure"></a>Signatur Geber- \_ Zertifikat Struktur
+# <a name="signer_cert-structure"></a>SIGNER \_ CERT-Struktur
 
-Die **Signatur Geber \_** -Zertifikat Struktur gibt ein [*Zertifikat*](../secgloss/c-gly.md) an, das zum Signieren eines Dokuments verwendet wird. Das Zertifikat kann in einer SPC-Datei ( [*Software Publisher Certificate*](../secgloss/s-gly.md) ) oder in einem [*Zertifikat Speicher*](../secgloss/c-gly.md)gespeichert werden.
+Die **SIGNER \_ CERT-Struktur** gibt ein Zertifikat an, [*das*](../secgloss/c-gly.md) zum Signieren eines Dokuments verwendet wird. Das Zertifikat kann in einer SPC-Datei [*(Software Publisher Certificate)*](../secgloss/s-gly.md) oder in einem [*Zertifikatspeicher*](../secgloss/c-gly.md)gespeichert werden.
 
 > [!Note]  
-> Diese Struktur ist nicht in einer Header Datei definiert. Um diese Struktur verwenden zu können, müssen Sie Sie selbst definieren, wie in diesem Thema gezeigt.
+> Diese Struktur ist in keiner Headerdatei definiert. Um diese Struktur zu verwenden, müssen Sie sie selbst definieren, wie in diesem Thema gezeigt.
 
  
 
@@ -50,25 +50,25 @@ typedef struct _SIGNER_CERT {
 
 <dl> <dt>
 
-**CBSIZE**
+**cbSize**
 </dt> <dd>
 
-Die Größe der-Struktur in Bytes.
+Die Größe der Struktur in Bytes.
 
 </dd> <dt>
 
-**dwcertchoice**
+**dwCertChoice**
 </dt> <dd>
 
-Gibt an, wie das Zertifikat gespeichert wird. Dieser Member kann einen oder mehrere der folgenden Werte aufweisen.
+Gibt an, wie das Zertifikat gespeichert wird. Bei diesem Member kann es sich um einen oder mehrere der folgenden Werte handelt.
 
 
 
 | Wert                                                                                                                                                                                                                                          | Bedeutung                                                                                                                                                                                                                                                                           |
 |------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| <span id="SIGNER_CERT_SPC_FILE"></span><span id="signer_cert_spc_file"></span><dl> <dt>**Signatur \_ Geber CERT \_ SPC- \_ Datei**</dt> <dt>1</dt> </dl>    | Das Zertifikat wird in einer SPC-Datei gespeichert. Der Member " **pwszspcfile** " enthält den Pfad und den Dateinamen der SPC-Datei.<br/>                                                                                                                                                  |
-| <span id="SIGNER_CERT_STORE"></span><span id="signer_cert_store"></span><dl> <dt>**Signatur \_ Geber Zertifikat \_ Speicher**</dt> <dt>2</dt> </dl>              | Das Zertifikat wird in einem Zertifikat Speicher gespeichert. Das **pcertstoreinfo** -Element enthält einen Zeiger auf eine Signatur Geber-Zertifikat [**\_ Speicher- \_ \_ Informations**](signer-cert-store-info.md) Struktur, die den Zertifikat Speicher angibt, in dem das Zertifikat gespeichert ist.<br/>                 |
-| <span id="SIGNER_CERT_SPC_CHAIN"></span><span id="signer_cert_spc_chain"></span><dl> <dt>**Signatur \_ Geber Zertifikat- \_ SPC- \_ Kette**</dt> <dt>3</dt> </dl> | Das Zertifikat wird in einer SPC-Datei gespeichert und mit einer Zertifikat Kette verknüpft. Das **pspcchaininfo** -Element enthält einen Zeiger auf eine Signatur Geber- [**\_ SPC- \_ Ketten \_ Info**](signer-spc-chain-info.md) -Struktur, die die Ketten Informationen für das Zertifikat enthält.<br/> |
+| <span id="SIGNER_CERT_SPC_FILE"></span><span id="signer_cert_spc_file"></span><dl> <dt>**SIGNER \_ \_ \_ ZERTIFIKATSPC-DATEI**</dt> <dt>1</dt> </dl>    | Das Zertifikat wird in einer SPC-Datei gespeichert. Der **pwszSpcFile-Member** enthält den Pfad und den Dateinamen der SPC-Datei.<br/>                                                                                                                                                  |
+| <span id="SIGNER_CERT_STORE"></span><span id="signer_cert_store"></span><dl> <dt>**SIGNER \_ CERT \_ STORE**</dt> <dt>2</dt> </dl>              | Das Zertifikat wird in einem Zertifikatspeicher gespeichert. Das **pCertStoreInfo-Element** enthält einen Zeiger auf eine [**SIGNER \_ CERT \_ STORE \_ INFO-Struktur,**](signer-cert-store-info.md) die den Zertifikatspeicher angibt, in dem das Zertifikat gespeichert wird.<br/>                 |
+| <span id="SIGNER_CERT_SPC_CHAIN"></span><span id="signer_cert_spc_chain"></span><dl> <dt>**SIGNER \_ CERT \_ SPC \_ CHAIN**</dt> <dt>3</dt> </dl> | Das Zertifikat wird in einer SPC-Datei gespeichert und einer Zertifikatkette zugeordnet. Der **pSpcChainInfo-Member** enthält einen Zeiger auf eine [**SIGNER \_ SPC \_ CHAIN \_ INFO-Struktur,**](signer-spc-chain-info.md) die die Ketteninformationen für das Zertifikat enthält.<br/> |
 
 
 
@@ -76,31 +76,31 @@ Gibt an, wie das Zertifikat gespeichert wird. Dieser Member kann einen oder mehr
 
 </dd> <dt>
 
-**pwszspcfile**
+**pwszSpcFile**
 </dt> <dd>
 
-Ein Zeiger auf eine NULL-terminierte Unicode-Zeichenfolge, die den Pfad und den Dateinamen der SPC-Datei enthält, in der das Zertifikat gespeichert ist. Dieser Member wird nur verwendet, wenn das **dwcertchoice** -Element eine Signatur Geber- **Zertifikat-SPC- \_ \_ \_ Datei** enthält.
+Ein Zeiger auf eine auf NULL endende Unicode-Zeichenfolge, die den Pfad und Dateinamen der SPC-Datei enthält, in der das Zertifikat gespeichert ist. Dieser Member wird nur verwendet, wenn der **dwCertChoice-Member** **SIGNER \_ CERT \_ SPC \_ FILE** enthält.
 
 </dd> <dt>
 
-**pcertstoreingefo**
+**pCertStoreInfo**
 </dt> <dd>
 
-Ein Zeiger auf eine Signatur Geber-Zertifikat [**\_ \_ Speicher \_ Info**](signer-cert-store-info.md) -Struktur, die den Zertifikat Speicher angibt, in dem das Zertifikat gespeichert ist. Dieser Member wird nur verwendet, wenn das **dwcertchoice** -Element den Signatur Geber- **\_ Zertifikat \_ Speicher** enthält.
+Ein Zeiger auf eine [**SIGNER \_ CERT \_ STORE \_ INFO-Struktur,**](signer-cert-store-info.md) die den Zertifikatspeicher angibt, in dem das Zertifikat gespeichert wird. Dieser Member wird nur verwendet, wenn der **dwCertChoice-Member** **SIGNER \_ CERT \_ STORE** enthält.
 
 </dd> <dt>
 
-**pspcchaininfo**
+**pSpcChainInfo**
 </dt> <dd>
 
-Ein Zeiger auf die Informationsstruktur der Signatur Geber- [**\_ SPC- \_ Kette \_**](signer-spc-chain-info.md) , die die Ketten Informationen für das Zertifikat enthält. Dieser Member wird nur verwendet, wenn der **dwcertchoice** -Member eine Signatur Geber- **Zertifikat-SPC- \_ \_ \_ Kette** enthält.
+Ein Zeiger auf eine [**SIGNER \_ SPC \_ CHAIN \_ INFO-Struktur,**](signer-spc-chain-info.md) die die Ketteninformationen für das Zertifikat enthält. Dieser Member wird nur verwendet, wenn der **dwCertChoice-Member** **SIGNER \_ CERT \_ SPC \_ CHAIN** enthält.
 
 </dd> <dt>
 
-**HWND**
+**Hwnd**
 </dt> <dd>
 
-Das Handle des Fensters, das als Besitzer beliebiger Dialogfelder verwendet werden soll, die angezeigt werden. Dieser Member wird derzeit nicht verwendet und wird ignoriert.
+Das Handle des Fensters, das als Besitzer aller angezeigten Dialogfelder verwendet werden soll. Dieser Member wird derzeit nicht verwendet und ignoriert.
 
 </dd> </dl>
 
@@ -110,19 +110,19 @@ Das Handle des Fensters, das als Besitzer beliebiger Dialogfelder verwendet werd
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows XP \[ -Desktop-Apps\]<br/>          |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/> |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur XP-Desktop-Apps\]<br/>          |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Signersign**](signersign.md)
+[**SignerSign**](signersign.md)
 </dt> <dt>
 
-[**Signersignetx**](signersignex.md)
+[**SignerSignEx**](signersignex.md)
 </dt> </dl>
 
  

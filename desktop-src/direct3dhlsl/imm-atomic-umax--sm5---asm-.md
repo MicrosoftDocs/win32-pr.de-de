@@ -1,23 +1,23 @@
 ---
-title: imm_atomic_umax (SM5-ASM)
-description: Sofortiger atomarer unsignierter Max-Wert im Speicher. Gibt den Wert im Arbeitsspeicher vor dem maximalen Vorgang zurück.
+title: imm_atomic_umax (sm5 – asm)
+description: Sofortige atomare maximale Größe ohne Vorzeichen im Arbeitsspeicher. Gibt den Wert im Arbeitsspeicher vor dem max-Vorgang zurück.
 ms.assetid: 6C9D2CA3-1502-41E1-8535-C94DF31201E1
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 072ef5a2a8e91a17501015bdc34738465880d91e
-ms.sourcegitcommit: fe03c5d92ca6a0d66a114b2303e99c0a19241ffb
+ms.openlocfilehash: 399142e182cbf33a8adea3ac8236fdc81e4f4b100e562e65bbb39057b6e6e192
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "104389580"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118986510"
 ---
-# <a name="imm_atomic_umax-sm5---asm"></a>imm \_ Atomic \_ Umax (SM5-ASM)
+# <a name="imm_atomic_umax-sm5---asm"></a>imm \_ atomic \_ umax (sm5 - asm)
 
-Sofortiger atomarer unsignierter Max-Wert im Speicher. Gibt den Wert im Arbeitsspeicher vor dem maximalen Vorgang zurück.
+Sofortige atomare maximale Größe ohne Vorzeichen im Arbeitsspeicher. Gibt den Wert im Arbeitsspeicher vor dem max-Vorgang zurück.
 
 
 
-| imm \_ Atomic \_ Umax dst0 \[ . Single \_ Component \_ mask \] , dST1, dstaddress \[ . Swizzle \] , src0 \[ . Select \_ Component\] |
+| imm \_ atomic \_ umax dst0 \[ .single component mask , \_ \_ \] dst1, dstAddress \[ .swizzle \] , src0 \[ .select \_ component\] |
 |--------------------------------------------------------------------------------------------------------------|
 
 
@@ -26,42 +26,42 @@ Sofortiger atomarer unsignierter Max-Wert im Speicher. Gibt den Wert im Arbeitss
 
 
 
-| Element                                                                                                           | BESCHREIBUNG                                                                                                                       |
+| Element                                                                                                           | Beschreibung                                                                                                                       |
 |----------------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------|
-| <span id="dst0"></span><span id="DST0"></span>*dst0*<br/>                                                | \[in \] enthält den Wert von *dST1* vor dieser Anweisung.<br/>                                                         |
-| <span id="dst1"></span><span id="DST1"></span>*dst1*<br/>                                                | \[in \] einer ungeordneten Zugriffs Ansicht (UAV) (u \# ). Im COMPUTE-Shader kann dies auch Thread Gruppe Shared Memory (g \# ) sein. <br/> |
-| <span id="dstAddress"></span><span id="dstaddress"></span><span id="DSTADDRESS"></span>*dstaddress*<br/> | \[in \] der Speicheradresse.<br/>                                                                                             |
-| <span id="src0"></span><span id="SRC0"></span>*src0*<br/>                                                | \[in \] dem Wert, der mit *dST1* bei *dstaddress* verglichen werden soll.<br/>                                                                 |
+| <span id="dst0"></span><span id="DST0"></span>*dst0*<br/>                                                | \[in \] Enthält den Wert aus *dst1* vor dieser Anweisung.<br/>                                                         |
+| <span id="dst1"></span><span id="DST1"></span>*dst1*<br/>                                                | \[in \] Einer ungeordneten Zugriffsansicht (UAV) (u \# ). Im Compute-Shader kann es sich auch um freigegebenen Threadgruppenspeicher \# (g) handelt. <br/> |
+| <span id="dstAddress"></span><span id="dstaddress"></span><span id="DSTADDRESS"></span>*dstAddress*<br/> | \[in \] Die Speicheradresse.<br/>                                                                                             |
+| <span id="src0"></span><span id="SRC0"></span>*src0*<br/>                                                | \[in \] Der Wert, der mit *dst1* bei *dstAddress* verglichen werden soll.<br/>                                                                 |
 
 
 
  
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Diese Anweisung führt eine einzelne Komponente mit einer Länge von 32 Bit ohne Vorzeichen des Operanden *src0* mit *dST1* bei 32 Bit pro Komponenten Adresse *dstaddress* aus.
+Diese Anweisung führt einen 32-Bit-Maximalwert ohne Vorzeichen einer einzelnen Komponente des Operanden *src0* mit *dst1* bei 32 Bit pro Komponentenadresse *dstAddress* aus.
 
-Wenn *dST1* eine u ist \# , wurde Sie möglicherweise als RAW, typisiert oder strukturiert deklariert. Wenn Sie eingegeben wird, muss Sie als uint/Sint mit dem gebundenen Ressourcen Format "R32 \_ uint/ \_ Sint" deklariert werden.
+Wenn *dst1* ein u \# ist, wurde er möglicherweise als roh, typisiert oder strukturiert deklariert. Wenn sie typisiert ist, muss sie als UINT/SINT deklariert werden, wobei das gebundene Ressourcenformat R32 \_ \_ UINT/SINT ist.
 
-Wenn *dST1* den Wert g \# hat, muss er als RAW oder strukturiert deklariert werden.
+Wenn *dst1* g \# ist, muss es als roh oder strukturiert deklariert werden.
 
-Der Wert im *dST1* -Arbeitsspeicher vor dem maximalen Wert wird an *dst0* zurückgegeben.
+Der Wert im *dst1-Arbeitsspeicher* vor max wird an *dst0* zurückgegeben.
 
-Die Anzahl der Komponenten, die von der Adresse entnommen werden, wird durch die Dimensionalität von *dST1* bestimmt.
+Die Anzahl der Von der Adresse entnommenen Komponenten wird durch die Dimensionalität von *dst1* bestimmt.
 
-Der gesamte Vorgang wird atomisch ausgeführt.
+Der gesamte Vorgang wird atomar ausgeführt.
 
-Wenn der Shader-Aufruf inaktiv ist, z. b. wenn das Pixel zuvor in seiner Ausführung verworfen wurde oder ein Pixel-/Beispielaufruf nur vorhanden ist, um als Hilfsobjekt/Stichprobe für Ableitungen zu dienen, ändert diese Anweisung den *dST1* -Arbeitsspeicher nicht, und der zurückgegebene Wert ist nicht definiert.
+Wenn der Shaderaufruf inaktiv ist, z. B. wenn das Pixel zuvor bei der Ausführung verworfen wurde, oder ein Pixel-/Beispielaufruf nur als Hilfselement für ein echtes Pixel/Sample für Ableitungen vorhanden ist, ändert diese Anweisung den *dst1-Speicher* überhaupt nicht, und der zurückgegebene Wert ist nicht definiert.
 
-Die Out-of-Bounds-Adressierung in u \# bewirkt, dass nichts in den Arbeitsspeicher geschrieben wird, außer wenn die u \# strukturiert ist und der Byte Offset in die Struktur (zweite Komponente der Adresse) den Zugriff außerhalb der Grenzen verursacht, dann wird der gesamte Inhalt der UAV nicht definiert.
+Die Adressierung außerhalb der Grenzen für u bewirkt, dass nichts in \# den Arbeitsspeicher geschrieben wird, außer wenn das u strukturiert ist und der \# Byteoffset in die Struktur (zweite Komponente der Adresse) den Zugriff außerhalb der Grenzen verursacht, dann wird der gesamte Inhalt des UAV nicht definiert.
 
-Die Adressierung für "u" \# oder "g" bewirkt, \# dass ein nicht definiertes Ergebnis an den Shader in *dst0* zurückgegeben wird.
+Die Adressierung außerhalb der Grenzen für u \# oder g \# bewirkt, dass ein nicht definiertes Ergebnis an den Shader in *dst0* zurückgegeben wird.
 
-Diese Anweisung gilt für die folgenden Shader-Phasen:
+Diese Anweisung gilt für die folgenden Shaderstufen:
 
 
 
-| Scheitelpunkt | Hülle | Domain | Geometrie | Pixel | Compute |
+| Scheitelpunkt | Rumpf | Domain | Geometrie | Pixel | Compute |
 |--------|------|--------|----------|-------|---------|
 |        |      |        |          | X     | X       |
 
@@ -69,11 +69,11 @@ Diese Anweisung gilt für die folgenden Shader-Phasen:
 
  
 
-Da UAVs in allen Shader-Phasen für Direct3D 11,1 verfügbar sind, gilt diese Anweisung für alle Shader-Phasen für die Direct3D 11,1-Laufzeit, die ab Windows 8 verfügbar ist.
+Da UAVs in allen Shaderstufen für Direct3D 11.1 verfügbar sind, gilt diese Anweisung für alle Shaderstufen für die Direct3D 11.1-Runtime, die ab Windows 8 verfügbar ist.
 
 
 
-| Scheitelpunkt | Hülle | Domain | Geometrie | Pixel | Compute |
+| Scheitelpunkt | Rumpf | Domain | Geometrie | Pixel | Compute |
 |--------|------|--------|----------|-------|---------|
 | X      | X    | X      | X        | X     | X       |
 
@@ -81,20 +81,20 @@ Da UAVs in allen Shader-Phasen für Direct3D 11,1 verfügbar sind, gilt diese An
 
  
 
-## <a name="minimum-shader-model"></a>Minimaler Shader-Modell
+## <a name="minimum-shader-model"></a>Shader-Mindestmodell
 
-Diese Anweisung wird in den folgenden shadermodellen unterstützt:
+Diese Anweisung wird in den folgenden Shadermodellen unterstützt:
 
 
 
 | Shadermodell                                              | Unterstützt |
 |-----------------------------------------------------------|-----------|
-| [Shader-Modell 5](d3d11-graphics-reference-sm5.md)        | ja       |
-| [Shadermodell 4,1](dx-graphics-hlsl-sm4.md)              | nein        |
-| [Shadermodell 4](dx-graphics-hlsl-sm4.md)                | nein        |
-| [Shader-Modell 3 (DirectX HLSL)](dx-graphics-hlsl-sm3.md) | nein        |
-| [Shader-Modell 2 (DirectX HLSL)](dx-graphics-hlsl-sm2.md) | nein        |
-| [Shader-Modell 1 (DirectX HLSL)](dx-graphics-hlsl-sm1.md) | nein        |
+| [Shadermodell 5](d3d11-graphics-reference-sm5.md)        | Ja       |
+| [Shadermodell 4.1](dx-graphics-hlsl-sm4.md)              | Nein        |
+| [Shadermodell 4](dx-graphics-hlsl-sm4.md)                | Nein        |
+| [Shadermodell 3 (DirectX HLSL)](dx-graphics-hlsl-sm3.md) | Nein        |
+| [Shadermodell 2 (DirectX HLSL)](dx-graphics-hlsl-sm2.md) | Nein        |
+| [Shadermodell 1 (DirectX HLSL)](dx-graphics-hlsl-sm1.md) | Nein        |
 
 
 
@@ -104,7 +104,7 @@ Diese Anweisung wird in den folgenden shadermodellen unterstützt:
 
 <dl> <dt>
 
-[Shader Model 5-Assembly (DirectX HLSL)](shader-model-5-assembly--directx-hlsl-.md)
+[Shadermodell 5-Assembly (DirectX HLSL)](shader-model-5-assembly--directx-hlsl-.md)
 </dt> </dl>
 
  

@@ -1,5 +1,5 @@
 ---
-description: 'D3DXVec3CatmullRom-Funktion (D3dx9math.h): Führt unter Verwendung der angegebenen 3D-Vektoren eine Catmull-Rom Interpolation durch.'
+description: 'D3DXVec3CatmullRom-Funktion (D3dx9math.h): Führt eine Catmull-Rom Interpolation unter Verwendung der angegebenen 3D-Vektoren aus.'
 ms.assetid: 779f067c-ac46-4fde-9e18-e31b1504b490
 title: D3DXVec3CatmullRom-Funktion (D3dx9math.h)
 ms.topic: reference
@@ -14,12 +14,12 @@ api_type:
 api_location:
 - d3dx9.lib
 - d3dx9.dll
-ms.openlocfilehash: bc2a72f6d638c7a4daa8db1849a790bdd76556b9
-ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
+ms.openlocfilehash: 215f5a73d18599484b80b9d29d7dffcbb8be20ef3743ddb6fc0cdf7f70e974b7
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2021
-ms.locfileid: "108115658"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119044612"
 ---
 # <a name="d3dxvec3catmullrom-function-d3dx9mathh"></a>D3DXVec3CatmullRom-Funktion (D3dx9math.h)
 
@@ -103,11 +103,11 @@ Gewichtungsfaktor. Siehe Hinweise.
 
 Typ: **[ **D3DXVECTOR3**](d3dxvector3.md)\***
 
-Zeiger auf eine [**D3DXVECTOR3-Struktur,**](d3dxvector3.md) die das Ergebnis der Catmull-Rom ist.
+Zeiger auf eine [**D3DXVECTOR3-Struktur,**](d3dxvector3.md) die das Ergebnis der Catmull-Rom Interpolation ist.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Suchen Sie bei vier Punkten (p1, p2, p3, p4) eine Funktion Q(s) so, dass:
+Bei vier Punkten (p1, p2, p3, p4) suchen Sie eine Funktion Q(s) so, dass:
 
 
 ```
@@ -119,7 +119,7 @@ Q(s) is parallel to the line joining p2 to p4 when s is 1.
 
 
 
-Die Catmull-Rom spline kann durch Festlegen von vom Hermite-Spline abgeleitet werden:
+Der Catmull-Rom Spline kann durch Festlegen von vom Hermite-Spline abgeleitet werden:
 
 
 ```
@@ -141,7 +141,7 @@ p3 ist der Inhalt von pV2.
 
 p4 ist der Inhalt von pV3.
 
-Verwenden der Splinegleichung "Hermite":
+Verwenden der Hermite-Splinegleichung:
 
 
 ```
@@ -150,7 +150,7 @@ Q(s) = (2s3 - 3s2 + 1)v1 + (-2s3 + 3s2)v2 + (s3 - 2s2 + s)t1 + (s3 - s2)t2
 
 
 
-und der Ersatz für v1, v2, t1, t2 ergibt:
+und ersetzen durch v1, v2, t1, t2 und ergeben:
 
 
 ```
@@ -159,7 +159,7 @@ Q(s) = (2s3 - 3s2 + 1)p2 + (-2s3 + 3s2)p3 + (s3 - 2s2 + s)(p3 - p1) / 2 + (s3 - 
 
 
 
-Dies kann neu angeordnet werden wie:
+Dies kann wie hier angezeigt neu angeordnet werden:
 
 
 ```
@@ -172,7 +172,7 @@ Q(s) = [(-s3 + 2s2 - s)p1 + (3s3 - 5s2 + 2)p2 + (-3s3 + 4s2 + s)p3 + (s3 - s2)p4
 
 
 
-| Anforderungen | Wert |
+| Anforderung | Wert |
 |--------------------|----------------------------------------------------------------------------------------|
 | Header<br/>  | <dl> <dt>D3dx9math.h</dt> </dl> |
 | Bibliothek<br/> | <dl> <dt>D3dx9.lib</dt> </dl>   |

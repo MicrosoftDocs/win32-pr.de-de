@@ -1,21 +1,21 @@
 ---
-description: Die Struktur der TAPI \_ - \_ \_ audiostreamkonfigurationscaps \_ ist in der TAPI-Struktur der Daten \_ Strom \_ Konfiguration enthalten \_ , wenn das capstype-Element auf den audiocap-Member der streamconfigcapstype-Union festgelegt ist.
+description: Die TAPI AUDIO STREAM CONFIG CAPS-Struktur ist in der TAPI STREAM CONFIG CAPS-Struktur enthalten, wenn das CapsType-Member auf das AudioCap-Member der \_ \_ \_ \_ \_ \_ \_ StreamConfigCapsType-Union festgelegt ist.
 ms.assetid: 61575839-4604-4c8b-ae4d-fe796c3c5314
-title: TAPI_AUDIO_STREAM_CONFIG_CAPS Struktur (ipmsp. h)
+title: TAPI_AUDIO_STREAM_CONFIG_CAPS -Struktur (Ipmsp.h)
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: daec587a8e760bedd3ab9c6b3469ef8f70b72383
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 51fc4777e6d174f7d4aaeac9bbd3f6d467123275b4030c9fa21363223584e8b9
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106354146"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118861219"
 ---
-# <a name="tapi_audio_stream_config_caps-structure"></a>Struktur der TAPI \_ - \_ Audiostream- \_ Konfigurations Ober \_ Grenzen
+# <a name="tapi_audio_stream_config_caps-structure"></a>TAPI \_ AUDIO \_ STREAM \_ CONFIG \_ CAPS structure
 
-\[ Diese Struktur ist nicht für die Verwendung in Windows Vista, Windows Server 2008 und nachfolgenden Versionen des Betriebssystems verfügbar. Die RTC-Client-API bietet eine ähnliche Funktionalität.\]
+\[Diese Struktur ist nicht für die Verwendung in Windows Vista, Windows Server 2008 und nachfolgenden Versionen des Betriebssystems verfügbar. Die RTC-Client-API bietet ähnliche Funktionen.\]
 
-Die Struktur der **TAPI \_ - \_ \_ audiostreamkonfigurationscaps \_** ist in der TAPI-Struktur der Daten [**\_ Strom \_ Konfiguration \_**](tapi-stream-config-caps.md) enthalten, wenn das **capstype** -Element auf den **audiocap** -Member der [**streamconfigcapstype**](streamconfigcapstype.md) -Union festgelegt ist.
+Die **TAPI \_ AUDIO STREAM \_ \_ CONFIG \_ CAPS-Struktur** ist in der [**TAPI STREAM \_ \_ CONFIG \_ CAPS-Struktur**](tapi-stream-config-caps.md) enthalten, wenn das **CapsType-Member** auf das **AudioCap-Member** der [**StreamConfigCapsType-Union**](streamconfigcapstype.md) festgelegt ist.
 
 ## <a name="syntax"></a>Syntax
 
@@ -33,91 +33,91 @@ Die Struktur der **TAPI \_ - \_ \_ audiostreamkonfigurationscaps \_** ist in der
 **Beschreibung**
 </dt> <dd>
 
-Eine benutzerfreundliche Beschreibung des audiostreamkonfigurationstyp für die Anzeige für Anwendungs Benutzer.
+Eine benutzerfreundliche Beschreibung des Audiostream-Konfigurationstyps für die Anzeige für Anwendungsbenutzer.
 
 </dd> <dt>
 
-**Minimumchannels**
+**MinimumChannels**
 </dt> <dd>
 
 Die Mindestanzahl von Kanälen, die dem Stream zugeordnet sind.
 
 </dd> <dt>
 
-**Maximumchannels**
+**MaximumChannels**
 </dt> <dd>
 
 Die maximale Anzahl von Kanälen, die dem Stream zugeordnet sind.
 
 </dd> <dt>
 
-**Channelsgranularität**
+**ChannelsGranularity**
 </dt> <dd>
 
 Die Granularität der Kanalanzahl.
 
 </dd> <dt>
 
-**Minimumbitspersample**
+**MinimumBitsPerSample**
 </dt> <dd>
 
-Die minimale Anzahl von Bits pro Stichprobe.
+Die Mindestanzahl von Bits pro Stichprobe.
 
 </dd> <dt>
 
-**Maximumbitspersample**
+**MaximumBitsPerSample**
 </dt> <dd>
 
 Die maximale Anzahl von Bits pro Stichprobe.
 
 </dd> <dt>
 
-**Bitspersamplegranularität**
+**BitsPerSampleGranularity**
 </dt> <dd>
 
-Die Granularität der Bits pro Stichproben Werten.
+Die Granularität der Bits pro Beispielwerten.
 
 </dd> <dt>
 
-**Minimumsamplefrequency**
+**MinimumSampleFrequency**
 </dt> <dd>
 
-Die minimale Stichproben Häufigkeit.
+Die minimale Samplinghäufigkeit.
 
 </dd> <dt>
 
-**Maximumsamplefrequency**
+**MaximumSampleFrequency**
 </dt> <dd>
 
-Die maximale Stichproben Häufigkeit.
+Die maximale Samplinghäufigkeit.
 
 </dd> <dt>
 
-**Samplefrequkocygranularität**
+**SampleFrequencyGranularity**
 </dt> <dd>
 
-Die Granularität der Werte für die Stichproben Häufigkeit.
+Die Granularität der Samplinghäufigkeitswerte.
 
 </dd> <dt>
 
-**Minimumavgbytespersec**
+**MinimumAvgBytesPerSec**
 </dt> <dd>
 
-Die minimalen durchschnittlichen Bytes pro Sekunde.
+Die durchschnittlichen Mindestbytes pro Sekunde.
 
 </dd> <dt>
 
-**Maximumavgbytespersec**
+**MaximumAvgBytesPerSec**
 </dt> <dd>
 
 Die maximale durchschnittliche Anzahl von Bytes pro Sekunde.
 
 </dd> <dt>
 
-**Avgbytespersecgranularität**
+**AvgBytesPerSecGranularity**
 </dt> <dd>
 
-Die Granularität der Bytes pro Sekunde-Werte.
+Die Granularität der Bytes pro Sekunde.
 
 </dd> </dl>
 
@@ -127,16 +127,16 @@ Die Granularität der Bytes pro Sekunde-Werte.
 
 | Anforderung | Wert |
 |-------------------------|------------------------------------------------------------------------------------|
-| TAPI-Version<br/> | Erfordert TAPI 3,1<br/>                                                       |
-| Header<br/>       | <dl> <dt>Ipmsp. h</dt> </dl> |
+| TAPI-Version<br/> | Erfordert TAPI 3.1<br/>                                                       |
+| Header<br/>       | <dl> <dt>Ipmsp.h</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**TAPI \_ - \_ streamkonfigurationscaps \_**](tapi-stream-config-caps.md)
+[**TAPI \_ STREAM \_ CONFIG \_ CAPS**](tapi-stream-config-caps.md)
 </dt> </dl>
 
  

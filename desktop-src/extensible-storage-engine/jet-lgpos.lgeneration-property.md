@@ -1,6 +1,6 @@
 ---
-description: 'Weitere Informationen finden Sie hier: JET_LGPOS. lGeneration-Eigenschaft'
-title: JET_LGPOS. lGeneration (Eigenschaft)
+description: 'Weitere Informationen finden Sie unter: JET_LGPOS.lGeneration-Eigenschaft'
+title: JET_LGPOS.lGeneration-Eigenschaft
 TOCTitle: 'lGeneration property '
 ms:assetid: P:Microsoft.Isam.Esent.Interop.JET_LGPOS.lGeneration
 ms:mtpsurl: https://msdn.microsoft.com/library/microsoft.isam.esent.interop.jet_lgpos.lgeneration(v=EXCHG.10)
@@ -26,19 +26,19 @@ api_type:
 api_location:
 - Microsoft.Isam.Esent.Interop.dll
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: c07c059a5c2b640964edf8c1410a739458345d9e
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 33d1399141aca8c68ea781c59569f44f60b1f0c94c7e168cd2d74f59ff1c951e
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "103867140"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118980017"
 ---
-# <a name="jet_lgposlgeneration-property"></a>JET_LGPOS. lGeneration (Eigenschaft)
+# <a name="jet_lgposlgeneration-property"></a>JET_LGPOS.lGeneration-Eigenschaft
 
-Ruft die Generierung dieser Protokoll Position ab oder legt Sie fest.
+Ruft die Generierung dieser Protokollposition ab oder legt diese fest.
 
-**Namespace:**  [Microsoft. ISAM. ESENT. Interop](./microsoft.isam.esent.interop-namespace.md)  
-**Assembly:**  Microsoft. ISAM. ESENT. Interop (in Microsoft.Isam.Esent.Interop.dll)
+**Namespace:**  [Microsoft.Isam.Esent.Interop](./microsoft.isam.esent.interop-namespace.md)  
+**Assembly:**  Microsoft.Isam.Esent.Interop (in Microsoft.Isam.Esent.Interop.dll)
 
 ## <a name="syntax"></a>Syntax
 
@@ -62,14 +62,14 @@ public int lGeneration { get; set; }
 
 #### <a name="property-value"></a>Eigenschaftswert
 
-Typ: [System. Int32](/dotnet/api/system.int32)  
+Typ: [System.Int32](/dotnet/api/system.int32)  
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
-#### <a name="reference"></a>Referenz
+#### <a name="reference"></a>Verweis
 
-[JET_LGPOS Struktur](./jet-lgpos-structure2.md)
+[JET_LGPOS-Struktur](./jet-lgpos-structure2.md)
 
-[Mitglieder JET_LGPOS](./jet-lgpos-members.md)
+[JET_LGPOS Member](./jet-lgpos-members.md)
 
-[Microsoft. ISAM. ESENT. Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)
+[Microsoft.Isam.Esent.Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)

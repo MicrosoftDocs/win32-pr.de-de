@@ -1,49 +1,49 @@
 ---
-title: Sicherheitsüberlegungen Text Services-Framework
-description: Sicherheitsüberlegungen Text Services-Framework
+title: Sicherheitsüberlegungen Textdienstframework
+description: Sicherheitsüberlegungen Textdienstframework
 ms.assetid: c1250ca0-3887-4519-888f-2ed436a39917
 keywords:
-- Text Dienst Framework (TSF), Sicherheit
-- TSF (Text Dienst Framework), Sicherheit
-- Text Dienste, Sicherheit
-- TSF-aktivierte Anwendungen, Sicherheit
+- Textdienstframework (TSF),Sicherheit
+- TSF (Textdienstframework),Sicherheit
+- Textdienste,Sicherheit
+- TSF-fähige Anwendungen, Sicherheit
 - Sicherheit für TSF
-- Text Dienst Framework (TSF), bewährte Methoden
-- TSF (Text Dienst Framework), bewährte Methoden
-- TSF-aktivierte Anwendungen, bewährte Methoden
-- Text Dienste, bewährte Methoden
-- bewährte Methoden für TSF
-- Text Services-Framework (TSF), Fehlerüberprüfung
-- TSF (Text Dienst Framework), Fehlerüberprüfung
-- TSF-aktivierte Anwendungen, Fehlerüberprüfung
-- Text Dienste, Fehlerüberprüfung
+- Textdienstframework (TSF), bewährte Methoden
+- TSF (Textdienstframework), bewährte Methoden
+- TSF-fähige Anwendungen, bewährte Methoden
+- Textdienste, bewährte Methoden
+- Bewährte Methoden für TSF
+- Textdienstframework (TSF), Fehlerüberprüfung
+- TSF (Textdienstframework),Fehlerüberprüfung
+- TSF-fähige Anwendungen, Fehlerüberprüfung
+- Textdienste, Fehlerüberprüfung
 - Fehlerüberprüfung
-- Text Dienst Framework (TSF), digitale Signaturen
-- TSF (Text Dienst Framework), digitale Signaturen
-- Text Dienste, digitale Signaturen
-- TSF-aktivierte Anwendungen, digitale Signaturen
+- Textdienstframework (TSF), digitale Signaturen
+- TSF (Textdienstframework),digitale Signaturen
+- Textdienste, digitale Signaturen
+- TSF-fähige Anwendungen, digitale Signaturen
 - Digitale Signaturen
-- Text Dienst Framework (TSF), LoadLibrary-Aufrufe
-- TSF (Text Services Framework), LoadLibrary-Aufrufe
-- Text Dienste, LoadLibrary-Aufrufe
-- TSF-aktivierte Anwendungen, LoadLibrary-Aufrufe
+- Textdienstframework (TSF),LoadLibrary-Aufrufe
+- TSF (Textdienstframework),LoadLibrary-Aufrufe
+- Textdienste, LoadLibrary-Aufrufe
+- TSF-fähige Anwendungen, LoadLibrary-Aufrufe
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 0d71966106cde0f59d39442f7e2bf9b2a216cd94
-ms.sourcegitcommit: 592c9bbd22ba69802dc353bcb5eb30699f9e9403
+ms.openlocfilehash: 432418fbcb6221082083d6595aa374939bc2f4d5cf5aad145cac87444e75bdc0
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "106342349"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118873575"
 ---
-# <a name="security-considerations-text-services-framework"></a>Sicherheitsüberlegungen: Text Services-Framework
+# <a name="security-considerations-text-services-framework"></a>Sicherheitsüberlegungen: Textdienstframework
 
 ## <a name="best-practices-for-developing-with-tsf"></a>Bewährte Methoden für die Entwicklung mit TSF
 
--   **Digitale Signaturen:** Text Dienstanbieter sollten digitale Signaturen mit Ihren binären ausführbaren Dateien bereitstellen. Ein registrierter Text Dienst hat Zugriff auf Systemthreads und kann Informationen verfügbar machen, auf die andernfalls nicht zugegriffen werden kann. Um einen stabilen und sicheren Betrieb sicherzustellen, muss der Benutzer die digitale Signatur eines Text Dienstanbieter überprüfen, bevor der Text Dienst geladen werden darf. Das richtige Verfahren zum Erstellen einer digitalen Signatur finden Sie unter [Einführung in die Code Signatur](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/ms537361(v=vs.85)) .
--   **Fehlerüberprüfung:** Jeder Methoden-oder Funktionsaufrufe sollte auf Erfolg geprüft werden. Im Fall eines Fehlers sollten die verbleibenden Methoden-oder Funktionsaufrufe übersprungen werden. Die meisten Codebeispiele in dieser Dokumentation enthalten nur eine begrenzte Fehlerüberprüfung oder gar keine Fehlerüberprüfung, um zu vermeiden, dass der zu Veranschaulichung Punkt verdeckt wird. Sie sollten keine Beispiele aus der Dokumentation direkt in den Produktionscode einfügen. Stattdessen sollten Sie die Beispiele verbessern, indem Sie eine eigene Fehlerüberprüfung hinzufügen.
+-   **Digitale Signaturen:** Textdienstanbieter sollten digitale Signaturen mit ihren binären ausführbaren Dateien bereitstellen. Ein registrierter Textdienst hat Zugriff auf Systemthreads und kann Informationen verfügbar machen, auf die andernfalls nicht zugegriffen werden kann. Um einen stabilen und sicheren Betrieb sicherzustellen, sollte der Benutzer die digitale Signatur eines Textdiensts überprüfen, bevor der Textdienst geladen werden kann. Informationen zum richtigen Verfahren zum Erstellen einer digitalen Signatur finden Sie unter Einführung in die [Codesignierung.](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/ms537361(v=vs.85))
+-   **Fehlerüberprüfung:** Jeder Methoden- oder Funktionsaufruf sollte auf Erfolg überprüft werden. Bei einem Fehler sollten die verbleibenden Methoden- oder Funktionsaufrufe übersprungen werden. Die meisten Codebeispiele in dieser Dokumentation haben eine eingeschränkte Fehlerüberprüfung oder gar keine, um zu vermeiden, dass der zu veranschaulichende Punkt verdeckt wird. Sie sollten Beispiele aus der Dokumentation nicht direkt in Produktionscode einfügen. Stattdessen sollten Sie die Beispiele verbessern, indem Sie Eine eigene Fehlerüberprüfung hinzufügen.
 
--   **LoadLibrary-Aufrufe:** Zum Abrufen eines Zeigers auf eine der [TSF-Funktionen](text-services-framework-functions.md)müssen Sie [LoadLibrary](/windows/desktop/api/libloaderapi/nf-libloaderapi-loadlibrarya) und [GetProcAddress](/windows/desktop/api/libloaderapi/nf-libloaderapi-getprocaddress)verwenden. Es ist jedoch wichtig, die Prozeduren zum Formatieren des dll-Pfadnamens zu befolgen, wie in der **LoadLibrary** -Dokumentation angegeben.
+-   **LoadLibrary-Aufrufe:** Um einen Zeiger auf eine der [TSF-Funktionen](text-services-framework-functions.md)abzurufen, müssen Sie [LoadLibrary](/windows/desktop/api/libloaderapi/nf-libloaderapi-loadlibrarya) und [GetProcAddress](/windows/desktop/api/libloaderapi/nf-libloaderapi-getprocaddress)verwenden. Es ist jedoch wichtig, die Verfahren zum Formatieren des DLL-Pfadnamens zu befolgen, wie in der **LoadLibrary-Dokumentation** angegeben.
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
@@ -64,6 +64,6 @@ ms.locfileid: "106342349"
 [GetProcAddress](/windows/desktop/api/libloaderapi/nf-libloaderapi-getprocaddress)
 </dt> </dl>
 
- 
+ 
 
- 
+ 

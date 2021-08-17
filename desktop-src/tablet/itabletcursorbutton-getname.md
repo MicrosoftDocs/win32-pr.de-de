@@ -1,7 +1,7 @@
 ---
-description: Ruft den Namen der Tablettstiftschaltfläche ab.
+description: Ruft den Namen der Stiftschaltfläche ab.
 ms.assetid: 26fad9bc-43c2-4b00-b76b-bf9f1242da77
-title: 'Itabletcurrsorbutton:: GetName-Methode'
+title: ITabletCursorButton::GetName-Methode
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -14,16 +14,16 @@ api_type:
 api_location:
 - wisptis.exe
 - wisptis.exe.dll
-ms.openlocfilehash: b21fd92823fb0f60c0936f662982d176a938b4dc
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 41155aa15a2efaeb789387ae3ea7c6863ab0010884ecacb2f7bd3a75453e57b1
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106347421"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118716820"
 ---
-# <a name="itabletcursorbuttongetname-method"></a>Itabletcurrsorbutton:: GetName-Methode
+# <a name="itabletcursorbuttongetname-method"></a>ITabletCursorButton::GetName-Methode
 
-Ruft den Namen der Tablettstiftschaltfläche ab.
+Ruft den Namen der Stiftschaltfläche ab.
 
 ## <a name="syntax"></a>Syntax
 
@@ -40,7 +40,7 @@ HRESULT GetName(
 
 <dl> <dt>
 
-*ppwszname* \[ vorgenommen\]
+*ppwszName* \[ out\]
 </dt> <dd>
 
 Der Name der Tablettstiftschaltfläche.
@@ -56,15 +56,15 @@ Diese Methode kann einen dieser Werte zurückgeben.
 | Rückgabecode                                                                            | Beschreibung                               |
 |----------------------------------------------------------------------------------------|-------------------------------------------|
 | <dl> <dt>**S \_ OK**</dt> </dl>   | Erfolg.<br/>                       |
-| <dl> <dt>**E \_ fehlschlagen**</dt> </dl> | Es ist ein unbekannter Fehler aufgetreten.<br/> |
+| <dl> <dt>**E \_ FAIL**</dt> </dl> | Es ist ein unbekannter Fehler aufgetreten.<br/> |
 
 
 
  
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Es ist Aufgabe des Aufrufers, den von dieser Methode zurückgegebenen Speicher mithilfe von " [**CoTaskMemFree**](/windows/desktop/api/combaseapi/nf-combaseapi-cotaskmemfree)" freizugeben.
+Der Aufrufer ist dafür verantwortlich, den von dieser Methode zurückgegebenen Arbeitsspeicher mithilfe von [**CoTaskMemFree**](/windows/desktop/api/combaseapi/nf-combaseapi-cotaskmemfree)freizugeben.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -72,17 +72,17 @@ Es ist Aufgabe des Aufrufers, den von dieser Methode zurückgegebenen Speicher m
 
 | Anforderung | Wert |
 |-------------------------------------|----------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows XP Tablet PC Edition \[ Desktop-Apps\]<br/>                          |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur Desktop-Apps der XP Tablet PC Edition \[\]<br/>                          |
 | Unterstützte Mindestversion (Server)<br/> | Nicht unterstützt<br/>                                                              |
 | Bibliothek<br/>                  | <dl> <dt>Wisptis.exe</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Itabletcursor Button-Schnittstelle**](itabletcursorbutton.md)
+[**ITabletCursorButton-Schnittstelle**](itabletcursorbutton.md)
 </dt> </dl>
 
  

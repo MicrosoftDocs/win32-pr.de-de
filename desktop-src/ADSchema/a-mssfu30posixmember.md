@@ -5,7 +5,7 @@ ms.assetid: 3e9f703d-6666-4fa5-8116-d77fee0dd98e
 ms.tgt_platform: multiple
 keywords:
 - MSSFU-30-Posix-Member-Attribut AD-Schema
-- AD-Schema des msSFU30PosixMember-Attributs
+- MSSFU30PosixMember-Attribut AD-Schema
 topic_type:
 - apiref
 api_name:

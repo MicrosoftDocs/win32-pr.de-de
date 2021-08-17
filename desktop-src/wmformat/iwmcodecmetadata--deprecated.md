@@ -21,7 +21,7 @@ ms.locfileid: "118701641"
 ---
 # <a name="iwmcodecmetadata"></a>IWMCodecMetaData
 
-Die aktuelle Dokumentation zu Windows Mediencodecs und Digitalsignalprozessoren finden Sie unter Windows Media Audio and Video Codec and DSP APIs (Medienaudio- und Videocodec und [DSP-APIs).](/previous-versions//dd464626(v=vs.85))
+Die aktuelle Dokumentation zu Windows Mediencodecs und digitalen Signalprozessoren finden Sie unter Windows Media Audio and Video Codec and DSP APIs (Medienaudio- und Videocodec und [DSP-APIs).](/previous-versions//dd464626(v=vs.85))
 
  
 

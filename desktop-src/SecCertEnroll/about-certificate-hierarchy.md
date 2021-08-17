@@ -1,29 +1,29 @@
 ---
-description: Wenn sich die Anzahl der ausgestellten Zertifikate in einer Public Key-Infrastruktur (PKI) erhöht, kann es für eine einzelne Zertifizierungsstelle (ca) schwierig werden, die ausgestellten Zertifikate effektiv nachzuverfolgen.
+description: Wenn die Anzahl ausgestellter Zertifikate in einer Public Key-Infrastruktur (PKI) zunimmt, kann es für eine einzelne Zertifizierungsstelle schwierig werden, die ausgestellten Zertifikate effektiv nachverfolgung zu können.
 ms.assetid: f1642c1c-d2cd-4fa4-8a26-cebf3d6dcf23
-title: Zertifikat Hierarchie
+title: Zertifikathierarchie
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: d05c4ed9a69ff96ec0904e658444d6a32b65ed82
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: abc3420e3f0f09f88b4b9e7157ec8abacc9516520de4472a48189520e3e0e567
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104566635"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118904975"
 ---
-# <a name="certificate-hierarchy"></a>Zertifikat Hierarchie
+# <a name="certificate-hierarchy"></a>Zertifikathierarchie
 
-Wenn sich die Anzahl der ausgestellten Zertifikate in einer Public Key-Infrastruktur (PKI) erhöht, kann es für eine einzelne Zertifizierungsstelle (ca) schwierig werden, die ausgestellten Zertifikate effektiv nachzuverfolgen. Eine Möglichkeit, dieses Problem zu beheben, besteht darin, eine Zertifikat Hierarchie zu erstellen, in der die Zertifizierungsstelle die Zertifizierungsstelle anweist, Zertifikate für untergeordnete Autoritäten auszustellen, die wiederum die Autorität an ihre untergeordneten Elemente delegieren können. Jede Zertifizierungsstelle delegiert die Zertifizierungsstelle, indem Sie ein Zertifizierungsstellen Zertifikat an einen untergeordneten- Die erste Zertifizierungsstelle in der Kette wird als Stamm bezeichnet, und es ist nicht erforderlich, dass eine Entität eine Vertrauensstellung mit einer Zertifizierungsstelle einrichtet, die sich in einer anderen [Zertifikat Kette](about-certificate-chain.md) befindet, in der sich die Entität befindet.
+Wenn die Anzahl ausgestellter Zertifikate in einer Public Key-Infrastruktur (PKI) zunimmt, kann es für eine einzelne Zertifizierungsstelle schwierig werden, die ausgestellten Zertifikate effektiv nachverfolgung zu können. Eine Möglichkeit, dies zu beheben, besteht in der Erstellung einer Zertifikathierarchie, in der die Zertifizierungsstelle die Autorität zum Ausstellen von Zertifikaten an untergeordnete Autoritäten delegiert, die wiederum die Autorität an ihre Untergeordneten delegieren können. Jede Zertifizierungsstelle delegiert die Autorität, indem sie ein Zertifizierungsstellenzertifikat an einen untergeordneten Mitarbeiter ausstellen. Die anfängliche Zertifizierungsstelle in der Kette wird als Stamm bezeichnet, und es ist nicht erforderlich, dass eine Entität eine Vertrauensstellung mit einer Zertifizierungsstelle aufbaut, die sich in einer anderen Zertifikatkette befindet als die, in der sich die Entität befindet. [](about-certificate-chain.md)
 
-Die folgende Abbildung zeigt eine Zertifikat Hierarchie, die aus einer Stamm Zertifizierungsstelle besteht, zwei Zertifizierungsstellen, die der Stamm Zertifizierungsstelle untergeordnet sind (eine für die Marketingabteilung und eine für die Fertigungsabteilung), und Zertifizierungsstellen, die diesen untergeordnet sind.
+Die folgende Abbildung zeigt eine Zertifikathierarchie aus einer Stammzertifizierungsstelle, zwei Zertifizierungsstellen, die dem Stamm untergeordnet sind (eine für die Marketingabteilung und eine für die Fertigungsabteilung) und Zertifizierungsstellen, die diesen untergeordnet sind.
 
-![Zertifikat Hierarchie Diagramm](images/certificate-hierarchy.png)
+![Diagramm der Zertifikathierarchie](images/certificate-hierarchy.png)
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[Trust-Modelle](about-trust-models.md)
+[Vertrauensmodelle](about-trust-models.md)
 </dt> </dl>
 
  

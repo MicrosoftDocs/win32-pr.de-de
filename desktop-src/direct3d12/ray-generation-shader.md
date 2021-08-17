@@ -1,5 +1,5 @@
 ---
-description: Ein Shader, der traceray aufruft, um Strahlen zu generieren.
+description: Ein Shader, der TraceRay aufruft, um Lichtstrahl zu generieren.
 ms.assetid: ''
 title: Ray Generation-Shader
 ms.localizationpriority: low
@@ -12,20 +12,20 @@ api_name:
 - RAY_FLAG
 api_type:
 - NA
-ms.openlocfilehash: 75d67293e489eee0f1d100002965c017de7c682c
-ms.sourcegitcommit: c7add10d695482e1ceb72d62b8a4ebd84ea050f7
+ms.openlocfilehash: fdc177040cac7324545172319c318d07cded6dba42cfeed4756a7afaa88439aa
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106342613"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119123712"
 ---
 # <a name="ray-generation-shader"></a>Ray Generation-Shader
 
-Ein Shader, der [**traceray**](traceray-function.md) aufruft, um Strahlen zu generieren. Die ursprüngliche benutzerdefinierte Ray-Nutzlast für jeden Strahl wird der **traceray** -Website für Anrufe bereitgestellt.  [**Callshader**](callshader-function.md) kann auch in Ray-Generierungs-Shadern verwendet werden, um [Aufruf Bare Shader](callable-shader.md)aufzurufen.
+Ein Shader, der [**TraceRay**](traceray-function.md) aufruft, um Lichtstrahl zu generieren. Die anfängliche benutzerdefinierte Raynutzlast für jeden Strahl wird der **TraceRay-Aufrufsite** bereitgestellt.  [**CallShader**](callshader-function.md) kann auch in Raygenerierungsshadern verwendet werden, um [aufrufbare Shader](callable-shader.md)aufzurufen.
 
-**Dispatchrays** Ruft ein Raster von Shader-Aufrufen der Ray-Generierung auf.  Jeder Aufruf (Thread) eines Ray-Generierungs-Shaders kennt seinen Speicherort im Gesamt Raster, kann beliebige Strahlen über [**traceray**](traceray-function.md)generieren und funktioniert unabhängig von anderen aufrufen. Es gibt keine definierte Reihenfolge der Ausführung von Threads in Bezug zueinander.
+**DispatchRays** ruft ein Raster von Raygenerierungs-Shaderaufrufen auf.  Jeder Aufruf (Thread) eines Raygenerierungs-Shaders kennt seine Position im Gesamtraster, kann beliebige Lichtstrahle über [**TraceRay**](traceray-function.md)generieren und arbeitet unabhängig von anderen Aufrufen. Es gibt keine definierte Ausführungsreihenfolge von Threads in Bezug aufeinander.
 
-## <a name="shader-type-attribute"></a>Shader Type-Attribut
+## <a name="shader-type-attribute"></a>Shadertypattribut
 
 
 ```

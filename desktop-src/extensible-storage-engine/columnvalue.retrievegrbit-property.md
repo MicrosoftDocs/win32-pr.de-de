@@ -1,6 +1,6 @@
 ---
-description: Weitere Informationen finden Sie in der ColumnValue. retrievegrbit-Eigenschaft.
-title: ColumnValue. retrievegrbit (Eigenschaft)
+description: 'Weitere Informationen zu: ColumnValue.RetrieveGrbit-Eigenschaft'
+title: ColumnValue.RetrieveGrbit-Eigenschaft
 TOCTitle: 'RetrieveGrbit property '
 ms:assetid: P:Microsoft.Isam.Esent.Interop.ColumnValue.RetrieveGrbit
 ms:mtpsurl: https://msdn.microsoft.com/library/microsoft.isam.esent.interop.columnvalue.retrievegrbit(v=EXCHG.10)
@@ -26,19 +26,19 @@ api_type:
 api_location:
 - Microsoft.Isam.Esent.Interop.dll
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: 880041a979aab7f6715dd0735caebe39a8eac3ab
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 4469e374caffce494f62b10c6a2a4032cb27b2413de37f707a5862f95e7360b0
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106356824"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118982620"
 ---
-# <a name="columnvalueretrievegrbit-property"></a>ColumnValue. retrievegrbit (Eigenschaft)
+# <a name="columnvalueretrievegrbit-property"></a>ColumnValue.RetrieveGrbit-Eigenschaft
 
-Ruft die Spalten Abruf Optionen ab oder legt Sie fest.
+Ruft Spaltenabrufoptionen ab oder legt diese fest.
 
-**Namespace:**  [Microsoft. ISAM. ESENT. Interop](./microsoft.isam.esent.interop-namespace.md)  
-**Assembly:**  Microsoft. ISAM. ESENT. Interop (in Microsoft.Isam.Esent.Interop.dll)
+**Namespace:**  [Microsoft.Isam.Esent.Interop](./microsoft.isam.esent.interop-namespace.md)  
+**Assembly:**  Microsoft.Isam.Esent.Interop (in Microsoft.Isam.Esent.Interop.dll)
 
 ## <a name="syntax"></a>Syntax
 
@@ -62,14 +62,14 @@ public RetrieveColumnGrbit RetrieveGrbit { get; set; }
 
 #### <a name="property-value"></a>Eigenschaftswert
 
-Typ: [Microsoft. ISAM. ESENT. Interop. retrievecolenngrbit](./retrievecolumngrbit-enumeration.md)  
+Typ: [Microsoft.Isam.Esent.Interop.RetrieveColumnGrbit](./retrievecolumngrbit-enumeration.md)  
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
-#### <a name="reference"></a>Referenz
+#### <a name="reference"></a>Verweis
 
 [ColumnValue-Klasse](./columnvalue-class.md)
 
-[ColumnValue-Member](./columnvalue-members.md)
+[ColumnValue-Elemente](./columnvalue-members.md)
 
-[Microsoft. ISAM. ESENT. Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)
+[Microsoft.Isam.Esent.Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)

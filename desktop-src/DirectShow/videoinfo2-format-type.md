@@ -4,33 +4,33 @@ ms.assetid: edd2013a-f0c5-4176-ba3a-a3af719ce31d
 title: VideoInfo2-Formattyp
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 74b0f435e0e2a1b5b1d948c42a881f19300a9c6f
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: a820ea6a53c457d2d000be8b4c0e8966213c1aeeb2b5f55a780c4801a4182907
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106349079"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119071924"
 ---
 # <a name="videoinfo2-format-type"></a>VideoInfo2-Formattyp
 
-Der bevorzugte Medientyp einer Vorschau-PIN kann ein Typ mit einem [**VIDEOINFOHEADER2**](/previous-versions/windows/desktop/api/dvdmedia/ns-dvdmedia-videoinfoheader2) -Format sein. Diese Format Struktur unterstützt besondere Features, wie z. b. Text-und Bildseiten Verhältnisse.
+Der bevorzugte Medientyp eines Vorschaupins kann ein Typ mit dem Format [**VIDEOINFOHEADER2**](/previous-versions/windows/desktop/api/dvdmedia/ns-dvdmedia-videoinfoheader2) sein. Diese Formatstruktur unterstützt spezielle Features, z. B. Seitenverhältnis zwischen Video und Bild.
 
-VMR-7 und VMR-9 unterstützen [**VIDEOINFOHEADER2**](/previous-versions/windows/desktop/api/dvdmedia/ns-dvdmedia-videoinfoheader2) direkt. Wenn Sie die VMR mit dem Decoder verbinden, wird das beste Format ausgehandelt. Der ältere Videorendererfilter unterstützt jedoch **VIDEOINFOHEADER2** nicht. Wenn Sie **VIDEOINFOHEADER2** -Format Typen mit dem Videorenderer-Filter verwenden möchten, müssen Sie den [Überlagerungs-Mischungs](overlay-mixer-filter.md) Filter in das Diagramm einfügen.
+SOWOHL VMR-7 als auch VMR-9 unterstützen [**VIDEOINFOHEADER2**](/previous-versions/windows/desktop/api/dvdmedia/ns-dvdmedia-videoinfoheader2) direkt. Wenn Sie die VMR mit dem Decoder verbinden, wird das beste Format ausgehandelt. Der ältere Videorendererfilter unterstützt **videoINFOHEADER2** jedoch nicht. Um **VIDEOINFOHEADER2-Formattypen** mit dem Videorendererfilter zu verwenden, müssen Sie das [Overlay Mixer](overlay-mixer-filter.md) Filter in das Diagramm einfügen.
 
-1.  Auflisten der bevorzugten Medientypen im Ausgabepin des Decoder-Filters unter Verwendung der [**IPin:: enummediatypes**](/windows/desktop/api/Strmif/nf-strmif-ipin-enummediatypes) -Methode.
-2.  Überprüfen Sie den ersten Medientyp in der enumerationssequenz.
-3.  Wenn der Formattyp **Format \_ VideoInfo2** ist, verbinden Sie die Ausgabe-PIN mit dem Überlagerungs-Mixer. Verbinden Sie dann den Overlay-Mixer mit dem Videorenderer. (Siehe [Video Port Pins](video-port-pins.md).)
+1.  Aufzählen der bevorzugten Medientypen auf dem Ausgabepin des Decoderfilters mithilfe der [**IPin::EnumMediaTypes-Methode.**](/windows/desktop/api/Strmif/nf-strmif-ipin-enummediatypes)
+2.  Überprüfen Sie den ersten Medientyp in der Enumerationssequenz.
+3.  Wenn der Formattyp **FORMAT \_ VideoInfo2** lautet, verbinden Sie den Ausgabepin mit dem Overlay-Mixer. Verbinden Sie dann die Overlay-Mixer mit dem Videorenderer. (Weitere Informationen finden Sie unter [Videoport-Pins.)](video-port-pins.md)
 
-Wenn Sie sich keine Gedanken über diese Features machen, müssen Sie den Overlay-Mixer nicht verwenden. Verbinden Sie den Decoder direkt mit dem Videorenderer, und stattdessen wird eine Verbindung mit einem [**videoinfoheader**](/previous-versions/windows/desktop/api/amvideo/ns-amvideo-videoinfoheader) -Format hergestellt.
+Wenn Sie diese Features nicht interessieren, müssen Sie die Overlay-Mixer nicht verwenden. Verbinden den Decoder direkt an den Videorenderer und stellt stattdessen eine Verbindung mit einem [**VIDEOINFOHEADER-Format**](/previous-versions/windows/desktop/api/amvideo/ns-amvideo-videoinfoheader) her.
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[Erweiterte Erfassungs Themen](advanced-capture-topics.md)
+[Themen zur erweiterten Erfassung](advanced-capture-topics.md)
 </dt> <dt>
 
-[Verwenden des Overlay-Mischers bei der Video Erfassung](using-the-overlay-mixer-in-video-capture.md)
+[Verwenden der Überlagerungs-Mixer in Video Capture](using-the-overlay-mixer-in-video-capture.md)
 </dt> </dl>
 
  

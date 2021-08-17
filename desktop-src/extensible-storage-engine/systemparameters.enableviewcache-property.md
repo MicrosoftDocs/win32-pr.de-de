@@ -1,6 +1,6 @@
 ---
-description: Weitere Informationen finden Sie in der System Parameters. enableviewcache-Eigenschaft.
-title: System Parameters. enableviewcache (Eigenschaft)
+description: 'Weitere Informationen zu: SystemParameters.EnableViewCache-Eigenschaft'
+title: SystemParameters.EnableViewCache-Eigenschaft
 TOCTitle: 'EnableViewCache property '
 ms:assetid: P:Microsoft.Isam.Esent.Interop.SystemParameters.EnableViewCache
 ms:mtpsurl: https://msdn.microsoft.com/library/microsoft.isam.esent.interop.systemparameters.enableviewcache(v=EXCHG.10)
@@ -26,19 +26,19 @@ api_type:
 api_location:
 - Microsoft.Isam.Esent.Interop.dll
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: 4b22808109b8fd69df18b9a6ae98de17a814b5ea
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 271039ad83ce67348cef93101e9f685589ecea51f6881a4d6f1109cc7098e985
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "104218720"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119107016"
 ---
-# <a name="systemparametersenableviewcache-property"></a>System Parameters. enableviewcache (Eigenschaft)
+# <a name="systemparametersenableviewcache-property"></a>SystemParameters.EnableViewCache-Eigenschaft
 
-Ruft einen Wert ab oder legt einen Wert fest, der angibt, ob die Datenbank-Engine für Datenbankdateien Datei-e/a für den Speicher
+Ruft einen Wert ab, der angibt, ob die Datenbank-Engine speicherzuordnungsdatei-E/A für Datenbankdateien verwenden soll, oder legt den Wert fest.
 
-**Namespace:**  [Microsoft. ISAM. ESENT. Interop](./microsoft.isam.esent.interop-namespace.md)  
-**Assembly:**  Microsoft. ISAM. ESENT. Interop (in Microsoft.Isam.Esent.Interop.dll)
+**Namespace:**  [Microsoft.Isam.Esent.Interop](./microsoft.isam.esent.interop-namespace.md)  
+**Assembly:**  Microsoft.Isam.Esent.Interop (in Microsoft.Isam.Esent.Interop.dll)
 
 ## <a name="syntax"></a>Syntax
 
@@ -61,14 +61,14 @@ public static bool EnableViewCache { get; set; }
 
 #### <a name="property-value"></a>Eigenschaftswert
 
-Typ: [System. Boolean](/dotnet/api/system.boolean)  
+Typ: [System.Boolean](/dotnet/api/system.boolean)  
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
-#### <a name="reference"></a>Referenz
+#### <a name="reference"></a>Verweis
 
 [SystemParameters-Klasse](./systemparameters-class.md)
 
 [SystemParameters-Member](./systemparameters-members.md)
 
-[Microsoft. ISAM. ESENT. Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)
+[Microsoft.Isam.Esent.Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)

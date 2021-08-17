@@ -1,19 +1,19 @@
 ---
-description: Gibt die Offsets zu den Nutz Last Grenzen in einem Frame für geschützte Beispiele an.
+description: Gibt die Offsets zu den Nutzlastgrenzen in einem Frame für geschützte Beispiele an.
 ms.assetid: 8aa25afd-efa8-4fe0-92d4-8432f9d633c9
-title: MFSampleExtension_PacketCrossOffsets-Attribut (wmcontainer. h)
+title: MFSampleExtension_PacketCrossOffsets -Attribut (Wmcontainer.h)
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: d416f41fef9caab3d73c2bdd015d345452ccbd69
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: b39abdcaf0dfb5888c1705a0a76a19c3a55be522b82405f5a77345efe0d8f13e
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106347861"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119102306"
 ---
-# <a name="mfsampleextension_packetcrossoffsets-attribute"></a>MF Sample Extension \_ packetcrossoffsets-Attribut
+# <a name="mfsampleextension_packetcrossoffsets-attribute"></a>MFSampleExtension \_ PacketCrossOffsets-Attribut
 
-Gibt die Offsets zu den Nutz Last Grenzen in einem Frame für geschützte Beispiele an.
+Gibt die Offsets zu den Nutzlastgrenzen in einem Frame für geschützte Beispiele an.
 
 ## <a name="data-type"></a>Datentyp
 
@@ -21,19 +21,19 @@ Bytearray
 
 ## <a name="getset"></a>Abrufen/Festlegen
 
-Zum Abrufen dieses Attributs müssen Sie [**imfattributes:: GetBlob**](/windows/desktop/api/mfobjects/nf-mfobjects-imfattributes-getblob)aufrufen.
+Um dieses Attribut zu erhalten, rufen [**Sie DEN ATTRIBUTEAttributes::GetBlob auf.**](/windows/desktop/api/mfobjects/nf-mfobjects-imfattributes-getblob)
 
-Um dieses Attribut festzulegen, müssen Sie [**imfattributes:: setBlob**](/windows/desktop/api/mfobjects/nf-mfobjects-imfattributes-setblob)aufrufen.
+Rufen Sie ZUM Festlegen dieses [**Attributs DIE ATTRIBUTEs::SetBlob auf.**](/windows/desktop/api/mfobjects/nf-mfobjects-imfattributes-setblob)
 
 ## <a name="applies-to"></a>Gilt für:
 
-[**IMF Sample**](/windows/desktop/api/mfobjects/nn-mfobjects-imfsample)
+[**DURCHSCHN.Sample**](/windows/desktop/api/mfobjects/nn-mfobjects-imfsample)
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Dieses Attribut gilt für Medien Beispiele, die von Windows Media Digital Rights Management (DRM) geschützt werden. Der Wert des-Attributs ist ein Array von **DWORD** s. Jeder Eintrag im Array ist der Offset einer Nutz Last Grenze relativ zum Anfang des Frames. Diese Werte können von einer Anwendung beim Entschlüsseln und erneuten Erstellen der Frames verwendet werden.
+Dieses Attribut gilt für Medienbeispiele, die durch Windows Media Digital Rights Management (DRM) geschützt werden. Der Wert des Attributs ist ein Array von **DWORD-s.** Jeder Eintrag im Array ist der Offset einer Nutzlastgrenze relativ zum Anfang des Frames. Eine Anwendung kann diese Werte beim Entschlüsseln und Rekonstruieren der Frames verwenden.
 
-Die GUID-Konstante für dieses Attribut wird aus "mfuuid. lib" exportiert.
+Die GUID-Konstante für dieses Attribut wird aus mfuuid.lib exportiert.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -41,26 +41,26 @@ Die GUID-Konstante für dieses Attribut wird aus "mfuuid. lib" exportiert.
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Windows Vista \[ -Desktop-Apps \| UWP-apps\]<br/>                                    |
-| Unterstützte Mindestversion (Server)<br/> | Windows Server 2008 \[ -Desktop-Apps \| UWP-apps\]<br/>                              |
-| Header<br/>                   | <dl> <dt>Wmcontainer. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Vista-Desktop-Apps \| UWP-Apps\]<br/>                                    |
+| Unterstützte Mindestversion (Server)<br/> | Windows UWP-Apps für Server \[ 2008-Desktop-Apps \|\]<br/>                              |
+| Header<br/>                   | <dl> <dt>Wmcontainer.h</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[Alphabetische Liste der Media Foundation Attribute](alphabetical-list-of-media-foundation-attributes.md)
+[Alphabetische Liste Media Foundation Attribute](alphabetical-list-of-media-foundation-attributes.md)
 </dt> <dt>
 
 [ASF-Splitter](asf-splitter.md)
 </dt> <dt>
 
-[Beispiel Attribute](sample-attributes.md)
+[Beispielattribute](sample-attributes.md)
 </dt> <dt>
 
-[Medien Beispiele](media-samples.md)
+[Medienbeispiele](media-samples.md)
 </dt> </dl>
 
  

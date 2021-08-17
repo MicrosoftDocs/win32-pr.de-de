@@ -1,5 +1,5 @@
 ---
-description: 'Weitere Informationen finden Sie hier: JET_TABLECREATE3 Struktur'
+description: 'Weitere Informationen zu: JET_TABLECREATE3-Struktur'
 title: JET_TABLECREATE3-Struktur
 TOCTitle: JET_TABLECREATE3 Structure
 ms:assetid: 61909569-e704-494b-a56d-b64d1a2ee157
@@ -17,21 +17,21 @@ api_type:
 - COM
 api_location: ''
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: 587649b592f2b0d213a481c3bfbecc723240e486
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 64f820b9e9a42099cdb99d8ab8f0756e8fdbb23256917821d05573afd9068017
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106353013"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118979240"
 ---
 # <a name="jet_tablecreate3-structure"></a>JET_TABLECREATE3-Struktur
 
 
 _**Gilt für:** Windows | Windows Server_
 
-Die **JET_TABLECREATE3** Struktur enthält die Informationen, die erforderlich sind, um eine Tabelle zu erstellen, die mit Spalten und Indizes in einer ESE-Datenbank (Extensible Storage Engine) gefüllt ist und die eine Rückruffunktion festlegt. Die **JET_TABLECREATE3** -Struktur wird von der [JetCreateTableColumnIndex3](./jetcreatetablecolumnindex3-function.md) -Funktion verwendet.
+Die **JET_TABLECREATE3-Struktur** enthält die Informationen, die zum Erstellen einer Tabelle erforderlich sind, die mit Spalten und Indizes in einer ESE-Datenbank (Extensible Storage Engine) aufgefüllt ist und eine Rückruffunktion bestimmt. Die **JET_TABLECREATE3-Struktur** wird von der [JetCreateTableColumnIndex3-Funktion](./jetcreatetablecolumnindex3-function.md) verwendet.
 
-Die **JET_TABLECREATE3** Struktur wurde mit dem Betriebssystem Windows 7 eingeführt.
+Die **JET_TABLECREATE3-Struktur** wurde im Betriebssystem Windows 7 eingeführt.
 
 ``` cpp
 typedef struct tagJET_TABLECREATE3 {
@@ -61,63 +61,63 @@ typedef struct tagJET_TABLECREATE3 {
 
 **cbStruct**
 
-Die Größe dieser-Struktur in Bytes (für zukünftige Erweiterungen). Er muss auf sizeof (JET_TABLECREATE3) in Bytes festgelegt werden.
+Die Größe dieser Struktur in Bytes (für zukünftige Erweiterungen). Sie muss auf sizeof( JET_TABLECREATE3 ) in Bytes festgelegt werden.
 
-**sztablename**
+**szTableName**
 
 Der Name der zu erstellenden Tabelle.
 
 Der Name muss die folgenden Bedingungen erfüllen:
 
-  - Er muss einen Wert aufweisen, der kleiner als JET_cbNameMost ist, ohne den abschließenden NULL-Wert.
+  - Er muss einen Wert aufweisen, der kleiner als JET_cbNameMost ist, ohne den abschließenden NULL-Wert zu enthalten.
 
-  - Sie muss aus folgenden Zeichen bestehen: 0 bis 9, A bis Z, A bis Z und alle anderen Interpunktions Punkte außer Ausrufezeichen ( \! ), Komma (,), öffnende eckige Klammer ( \[ ) und schließende Klammer (), d. h \] . ASCII-Zeichen 0x20, 0x22 bis 0x2D, 0x2F bis 0x5A, 0x5c und 0x5d bis 0x7F.
+  - Sie muss aus den folgenden Zeichen bestehen: 0 bis 9, A bis Z, a bis z und allen anderen Interpunktionszeichen mit Ausnahme von Ausrufezeichen ( \! ), Komma (,), öffnende eckige Klammer ( \[ ) und schließende Klammer ( ), d. h. \] ASCII-Zeichen 0x20, 0x22 durch 0x2d, 0x2f durch 0x5a, 0x5c und 0x5d durch 0x7f.
 
   - Er darf nicht mit einem Leerzeichen beginnen.
 
-  - Sie muss aus mindestens einem Zeichen bestehen, das kein Leerzeichen ist.
+  - Sie muss aus mindestens einem Zeichen ohne Leerzeichen bestehen.
 
-**sztemplatetablename**
+**szTemplateTableName**
 
-Der Name einer vorhandenen Tabelle, aus der die Basis-DDL (Data Definition Language) geerbt werden soll. Die Verwendung einer Vorlagen Tabelle ermöglicht die einfache Erstellung von vielen Tabellen mit identischen Spalten und Indizes.
+Der Name einer vorhandenen Tabelle, von der die Basisdatendefinitionssprache (DDL) geerbt werden soll. Die Verwendung einer Vorlagentabelle ermöglicht die einfache Erstellung vieler Tabellen mit identischen Spalten und Indizes.
 
-**ulpages**
+**ulPages**
 
-Die anfängliche Anzahl von Datenbankseiten, die für die Tabelle zuzuordnen sind. Wenn eine Zahl größer als 1 angegeben wird, kann die Fragmentierung reduziert werden, wenn viele Zeilen in diese Tabelle eingefügt werden.
+Die anfängliche Anzahl der Datenbankseiten, die für die Tabelle zugeordnet werden sollen. Wenn Sie eine Zahl angeben, die größer als 1 ist, kann die Fragmentierung reduziert werden, wenn viele Zeilen in diese Tabelle eingefügt werden.
 
-**uldensity**
+**ulDensity**
 
-Die Tabellen Dichte in Prozent. Die Zahl muss entweder 0 oder im Bereich von 20 bis 100 sein. Das übergeben von 0 bedeutet, dass der Standardwert verwendet werden soll. Der Standardwert ist 80.
+Die Tabellendichte in Prozent. Die Zahl muss entweder 0 oder im Bereich von 20 bis 100 liegen. Die Übergabe von 0 bedeutet, dass der Standardwert verwendet werden soll. Der Standardwert ist 80.
 
 **rgcolumncreate**
 
-Ein Array von [JET_COLUMNCREATE](./jet-columncreate-structure.md) Strukturen, die jeweils einer Spalte entsprechen, die in der neuen Tabelle erstellt werden soll.
+Ein Array von [JET_COLUMNCREATE](./jet-columncreate-structure.md) Strukturen, von denen jede einer Spalte entspricht, die in der neuen Tabelle erstellt werden soll.
 
 **cColumns**
 
-Die Anzahl der [JET_COLUMNCREATE](./jet-columncreate-structure.md) Elemente im *rgcolumncreate* -Parameter.
+Die Anzahl der [JET_COLUMNCREATE](./jet-columncreate-structure.md) Elemente im *rgcolumncreate-Parameter.*
 
 **rgindexcreate**
 
 Ein Array von [JET_INDEXCREATE2](./jet-indexcreate2-structure.md) Strukturen, von denen jede einem Index entspricht, der in der neuen Tabelle erstellt werden soll.
 
-**cindexes**
+**cIndexes**
 
-Die Anzahl der [JET_INDEXCREATE2](./jet-indexcreate2-structure.md) Elemente im *rgindexcreate* -Parameter.
+Die Anzahl der [JET_INDEXCREATE2](./jet-indexcreate2-structure.md) Elemente im *rgindexcreate-Parameter.*
 
-**szcallback**
+**szCallback**
 
-Die Funktion, die während bestimmter Ereignisse aufgerufen wird. **cbyp** bestimmt, wann die Rückruffunktion aufgerufen wird.
+Die Funktion, die während bestimmter Ereignisse aufgerufen wird. **cbtyp** bestimmt, wann die Rückruffunktion aufgerufen wird.
 
-Das Format von **szcallback** muss "Module \! Function" lauten, – z. b. "Alpha \! Beta" bezieht sich auf die Beta Funktion im Modul "Alpha".
+Das Format von **szCallback** muss \! "Modulfunktion" sein, z.B. bezieht sich "alpha \! beta" auf die Betafunktion im Modul mit dem Namen "alpha".
 
-Der Prototyp der Funktion muss mit der [JET_CALLBACK](./jet-callback-callback-function.md) Rückruffunktion identisch sein.
+Der Prototyp der Funktion muss mit der [JET_CALLBACK](./jet-callback-callback-function.md) Rückruffunktion übereinstimmen.
 
-**cbyp**
+**cbtyp**
 
-Beschreibt den Typ der durch **szcallback** bezeichneten Rückruffunktion. Weitere Informationen finden Sie unter [JET_CBTYP](./jet-cbtyp.md).
+Beschreibt den Typ der rückruffunktion, die von **szCallback** festgelegt wird. Weitere Informationen finden Sie unter [JET_CBTYP](./jet-cbtyp.md).
 
-Dieses Bitfeld besteht aus einem oder mehreren Bitwerten, die in der folgenden Tabelle aufgeführt sind.
+Dieses Bitfeld besteht aus mindestens einem der in der folgenden Tabelle aufgeführten Bitwerte.
 
 <table>
 <colgroup>
@@ -133,11 +133,11 @@ Dieses Bitfeld besteht aus einem oder mehreren Bitwerten, die in der folgenden T
 <tbody>
 <tr class="odd">
 <td><p>JET_cbtypFinalize</p></td>
-<td><p>Die Rückruffunktion wird aufgerufen, wenn eine Spalte, die abgeschlossen werden kann, auf NULL gesetzt ist.</p></td>
+<td><p>Die Rückruffunktion wird aufgerufen, wenn eine Spalte, die finalisiert werden kann, 0 (null) erreicht hat.</p></td>
 </tr>
 <tr class="even">
 <td><p>JET_cbtypBeforeInsert</p></td>
-<td><p>Die Rückruffunktion wird vor dem Einfügen von Datensätzen aufgerufen.</p></td>
+<td><p>Die Rückruffunktion wird vor dem Einfügen des Datensatzes aufgerufen.</p></td>
 </tr>
 <tr class="odd">
 <td><p>JET_cbtypAfterInsert</p></td>
@@ -177,7 +177,7 @@ Dieses Bitfeld besteht aus einem oder mehreren Bitwerten, die in der folgenden T
 
 **grbit**
 
-Eine Gruppe von Bits, die NULL oder mehr der in der folgenden Tabelle aufgeführten aufrufoptions Werte enthält.
+Eine Gruppe von Bits, die null oder mehr der in der folgenden Tabelle aufgeführten Aufrufoptionswerte enthält.
 
 <table>
 <colgroup>
@@ -193,11 +193,11 @@ Eine Gruppe von Bits, die NULL oder mehr der in der folgenden Tabelle aufgeführ
 <tbody>
 <tr class="odd">
 <td><p>JET_bitTableCreateFixedDDL</p></td>
-<td><p>Verhindert DDL-Vorgänge für die Tabelle (z. b. das Hinzufügen oder Entfernen von Spalten).</p></td>
+<td><p>Verhindert DDL-Vorgänge für die Tabelle (z. B. das Hinzufügen oder Entfernen von Spalten).</p></td>
 </tr>
 <tr class="even">
 <td><p>JET_bitTableCreateTemplateTable</p></td>
-<td><p>Bewirkt, dass die Tabelle eine Vorlagen Tabelle ist. In neuen Tabellen kann dann der Name dieser Tabelle als Vorlagen Tabelle angegeben werden. Das Festlegen JET_bitTableCreateTemplateTable impliziert JET_bitTableCreateFixedDDL.</p></td>
+<td><p>Bewirkt, dass die Tabelle eine Vorlagentabelle ist. Neue Tabellen können dann den Namen dieser Tabelle als Vorlagentabelle angeben. Das Festlegen JET_bitTableCreateTemplateTable impliziert JET_bitTableCreateFixedDDL.</p></td>
 </tr>
 <tr class="odd">
 <td><p>JET_bitTableCreateNoFixedVarColumnsInDerivedTables</p></td>
@@ -207,33 +207,33 @@ Eine Gruppe von Bits, die NULL oder mehr der in der folgenden Tabelle aufgeführ
 </table>
 
 
-**pssqspacehints**
+**pSeqSpacehints**
 
-Ein Zeiger auf eine [JET_SPACEHINTS](./jet-spacehints-structure.md) -Struktur für den sequenziellen Standard Index.
+Ein Zeiger auf eine [JET_SPACEHINTS-Struktur](./jet-spacehints-structure.md) für den sequenziellen Standardindex.
 
-**p* qspacehints** wurde in Windows 7 eingeführt.
+**pSeqSpacehints** wurde in Windows 7 eingeführt.
 
-**plvspacehints**
+**pLVSpacehints**
 
-Ein Zeiger auf eine [JET_SPACEHINTS](./jet-spacehints-structure.md) Struktur für eine getrennte Struktur mit langen Werten.
+Ein Zeiger auf eine [JET_SPACEHINTS](./jet-spacehints-structure.md) Struktur für eine Struktur mit getrennten langen Werten.
 
-**plvspacehints** wurde in Windows 7 eingeführt.
+**pLVSpacehints** wurde in Windows 7 eingeführt.
 
-**cbseparatelv**
+**cbSeparateLV**
 
-Die Größe, mit der ein System internes LV vom primären Datensatz getrennt wird. Eine beliebige lange Wert-c-Struktur für eine getrennte LV-Struktur. Weitere Informationen finden Sie unter ng-Value in [JET_SPACEHINTS](./jet-spacehints-structure.md). Lange Wert Spalten, die kleiner als dieser Wert sind, können getrennt werden, wenn der Datensatz zu groß wird.
+Die Größe, die ein systeminternes LV vom primären Datensatz trennen soll. Eine beliebige c-Struktur mit einem langen Wert für eine separate LV-Struktur. Weitere Informationen finden Sie unter ng-value in [JET_SPACEHINTS](./jet-spacehints-structure.md). Spalten mit langen Werten, die kleiner als dieser Wert sind, können getrennt werden, wenn der Datensatz zu groß wird.
 
-**cbseparatelv** wurde in Windows 7 eingeführt.
+**cbSeparateLV** wurde in Windows 7 eingeführt.
 
-**TableID**
+**tableid**
 
-Ein Ausgabefeld, das den [JET_TABLEID](./jet-tableid.md) der neuen Tabelle enthält, wenn der API-Befehl erfolgreich ausgeführt wird. Wenn der API-Befehl fehlschlägt, ist der Wert nicht definiert. Diese Tabelle wird exklusiv geöffnet.
+Ein Ausgabefeld, das die [JET_TABLEID](./jet-tableid.md) der neuen Tabelle enthält, wenn der API-Aufruf erfolgreich ist. Wenn der API-Aufruf fehlschlägt, ist der Wert nicht definiert. Diese Tabelle wird ausschließlich geöffnet.
 
-**erstellt**
+**cCreated**
 
-Ein Ausgabefeld, das die Anzahl der-Objekte enthält, die erstellt werden, wenn der API-Befehl erfolgreich ausgeführt wird. Wenn der API-Befehl fehlschlägt, ist der Wert nicht definiert.
+Ein Ausgabefeld, das die Anzahl der Objekte enthält, die erstellt werden, wenn der API-Aufruf erfolgreich ist. Wenn der API-Aufruf fehlschlägt, ist der Wert nicht definiert.
 
-Die Anzahl der Objekte, die erstellt werden, entspricht der Summe der Spalten, Tabellen und Indizes, die erfolgreich erstellt wurden.
+Die Anzahl der erstellten Objekte entspricht der Summe der Erfolgreich erstellten Spalten, Tabellen und Indizes.
 
 ### <a name="requirements"></a>Anforderungen
 
@@ -253,17 +253,17 @@ Die Anzahl der Objekte, die erstellt werden, entspricht der Summe der Spalten, T
 </tr>
 <tr class="odd">
 <td><p><strong>Header</strong></p></td>
-<td><p>In "ESENT. h" deklariert.</p></td>
+<td><p>Wird in Esent.h deklariert.</p></td>
 </tr>
 <tr class="even">
 <td><p><strong>Unicode</strong></p></td>
-<td><p>Wird als <strong>JET_TABLECREATE3_W</strong> (Unicode) und <strong>JET_TABLECREATE3_A</strong> (ANSI) implementiert.</p></td>
+<td><p>Wird als <strong>JET_TABLECREATE3_W</strong> (Unicode) und JET_TABLECREATE3_A (ANSI) implementiert. <strong></strong></p></td>
 </tr>
 </tbody>
 </table>
 
 
-### <a name="see-also"></a>Siehe auch
+### <a name="see-also"></a>Weitere Informationen
 
 [JET_CALLBACK](./jet-callback-callback-function.md)  
 [JET_CBTYP](./jet-cbtyp.md)  
@@ -272,7 +272,7 @@ Die Anzahl der Objekte, die erstellt werden, entspricht der Summe der Spalten, T
 [JET_GRBIT](./jet-grbit.md)  
 [JET_INDEXCREATE](./jet-indexcreate-structure.md)  
 [JET_TABLEID](./jet-tableid.md)  
-[Jetkreatetable](./jetcreatetable-function.md)  
-[Jetkreatetablecolumnindex](./jetcreatetablecolumnindex-function.md)  
+[JetCreateTable](./jetcreatetable-function.md)  
+[JetCreateTableColumnIndex](./jetcreatetablecolumnindex-function.md)  
 [JetCreateTableColumnIndex2](./jetcreatetablecolumnindex2-function.md)  
 [JetDefragment2](./jetdefragment2-function.md)

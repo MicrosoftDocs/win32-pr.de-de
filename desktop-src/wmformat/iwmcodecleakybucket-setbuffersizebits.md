@@ -1,9 +1,9 @@
 ---
 title: SetBufferSizeBits
-description: Die aktuelle Dokumentation zu Windows Mediencodecs und digitalen Signalprozessoren finden Sie unter Windows Media Audio and Video Codec and DSP APIs (Medienaudio- und Videocodec und DSP-APIs). | SetBufferSizeBits
+description: Die aktuelle Dokumentation zu Windows Mediencodecs und digitalen Signalprozessoren finden Sie unter Windows Medienaudio- und Videocodec und DSP-APIs. | SetBufferSizeBits
 ms.assetid: f5993947-c75a-4783-8ec9-6026f9f3e1a8
 keywords:
-- SetBufferSizeBits-Windows-Medienformat
+- SetBufferSizeBits windows Media Format
 topic_type:
 - apiref
 api_name:
@@ -21,7 +21,7 @@ ms.locfileid: "118701678"
 ---
 # <a name="setbuffersizebits"></a>SetBufferSizeBits
 
-Die aktuelle Dokumentation zu Windows Mediencodecs und digitalen Signalprozessoren finden Sie unter Windows Media Audio and Video Codec and DSP APIs (Medienaudio- und Videocodec und [DSP-APIs).](/previous-versions//dd464626(v=vs.85))
+Die aktuelle Dokumentation zu Windows Mediencodecs und digitalen Signalprozessoren finden Sie unter [Windows Medienaudio- und Videocodec und DSP-APIs.](/previous-versions//dd464626(v=vs.85))
 
  
 

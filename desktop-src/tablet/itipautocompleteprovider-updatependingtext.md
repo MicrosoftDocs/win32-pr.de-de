@@ -1,7 +1,7 @@
 ---
-description: Wird vom Auto Vervollständigen-Client verwendet, um die Anwendung über den Text zu benachrichtigen, den ein Benutzer in den Eingabebereich eingegeben hat.
+description: Wird vom Client für die automatische Vervollständigung verwendet, um die Anwendung über den Text zu informieren, den ein Benutzer in den Eingabebereich eingegeben hat.
 ms.assetid: 68413836-321a-4e75-8538-c5a8fc577c0f
-title: 'Itipaudecompleteprovider:: updatependingtext-Methode (tipaudecomplete. h)'
+title: ITipAutocompleteProvider::UpdatePendingText-Methode (TipAutoComplete.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,16 +13,16 @@ api_type:
 - COM
 api_location:
 - tiptsf.dll
-ms.openlocfilehash: 5c66e625639aa7088b1b3934a2f984d0f4097536
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 99fc67b5ba6495e2bdfb8a54de2412ca01cbdd37475d08d20d227b203f2da1bd
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "104050580"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118716430"
 ---
-# <a name="itipautocompleteproviderupdatependingtext-method"></a>Itipaudecompleteprovider:: updatependingtext-Methode
+# <a name="itipautocompleteproviderupdatependingtext-method"></a>ITipAutocompleteProvider::UpdatePendingText-Methode
 
-Wird vom Auto Vervollständigen-Client verwendet, um die Anwendung über den Text zu benachrichtigen, den ein Benutzer in den Eingabebereich eingegeben hat.
+Wird vom Client für die automatische Vervollständigung verwendet, um die Anwendung über den Text zu informieren, den ein Benutzer in den Eingabebereich eingegeben hat.
 
 ## <a name="syntax"></a>Syntax
 
@@ -39,10 +39,10 @@ HRESULT UpdatePendingText(
 
 <dl> <dt>
 
-*bstraupdingtext* \[ in\]
+*bstrPendingText* \[ In\]
 </dt> <dd>
 
-Quelltext, der zum Generieren der Auto Vervollständigen-Liste verwendet werden soll.
+Quelltext, der zum Generieren der Automatischen Vervollständigungsliste verwendet werden soll.
 
 </dd> </dl>
 
@@ -55,15 +55,15 @@ Diese Methode kann einen dieser Werte zurückgeben.
 | Rückgabecode                                                                            | Beschreibung                               |
 |----------------------------------------------------------------------------------------|-------------------------------------------|
 | <dl> <dt>**S \_ OK**</dt> </dl>   | Erfolg.<br/>                       |
-| <dl> <dt>**E \_ fehlschlagen**</dt> </dl> | Es ist ein unbekannter Fehler aufgetreten.<br/> |
+| <dl> <dt>**E \_ FAIL**</dt> </dl> | Es ist ein unbekannter Fehler aufgetreten.<br/> |
 
 
 
  
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Dieser Text enthält nicht den Text, der bereits in das fokussierte Feld eingefügt wurde. Der Anbieter für automatische Vervollständigung ist dafür verantwortlich, den aktuellen Feldtext und die Auswahl zum Generieren der Auto Vervollständigen-Liste zu berücksichtigen. Wenn *bstrautzdingtext* **null** ist, wird die Auto Vervollständigen-Liste mit dem aktuellen Text auf der linken Seite der Auswahl im Feld generiert.
+Dieser Text enthält nicht den Text, der bereits in das Fokussierte Feld eingefügt wurde. Der Anbieter für die automatische Vervollständigung ist dafür verantwortlich, den aktuellen Feldtext und die Auswahl zum Generieren der Automatischen Vervollständigungsliste zu berücksichtigen. Wenn *bstrPendingText* **NULL** ist, wird die Liste für die automatische Vervollständigung mit dem aktuellen Text links neben der Auswahl im Feld generiert.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -71,21 +71,21 @@ Dieser Text enthält nicht den Text, der bereits in das fokussierte Feld eingef�
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows XP Tablet PC Edition \[ Desktop-Apps\]<br/>                                                                   |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur Desktop-Apps der XP Tablet PC Edition \[\]<br/>                                                                   |
 | Unterstützte Mindestversion (Server)<br/> | Nicht unterstützt<br/>                                                                                                       |
-| Header<br/>                   | <dl> <dt>Tipautocomplete. h (erfordert auch "pinputpanel \_ i. c")</dt> </dl> |
+| Header<br/>                   | <dl> <dt>TipAutoComplete.h (erfordert auch Peninputpanel \_ i.c)</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Tiptsf.dll</dt> </dl>                                           |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Itipauescompleteprovider-Schnittstelle**](itipautocompleteprovider.md)
+[**ITipAutocompleteProvider-Schnittstelle**](itipautocompleteprovider.md)
 </dt> <dt>
 
-[Verweis auf Text Eingabe Panel](text-input-panel-reference.md)
+[Referenz zum Texteingabebereich](text-input-panel-reference.md)
 </dt> </dl>
 
  

@@ -1,27 +1,27 @@
 ---
-description: Sie können die Linien-und Kurven Funktionen zum Zeichnen eines Kreis Diagramms verwenden.
+description: Sie können die Linien- und Kurvenfunktionen verwenden, um ein Kreisdiagramm zu zeichnen.
 ms.assetid: 788d3bc2-1010-436c-a95f-6fe55daac88e
-title: Zeichnen eines Kreis Diagramms
+title: Zeichnen eines Kreisdiagramms
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 02d14928c3f90c3222c2a01d6a063d46f109ad7c
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
-ms.translationtype: HT
+ms.openlocfilehash: 0a9bfc5d60ca425deb7d099558366f627d1f94dfbf4889090b5d494f1a5770d6
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104130793"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119038078"
 ---
-# <a name="drawing-a-pie-chart"></a>Zeichnen eines Kreis Diagramms
+# <a name="drawing-a-pie-chart"></a>Zeichnen eines Kreisdiagramms
 
-Sie können die Linien-und Kurven Funktionen zum Zeichnen eines Kreis Diagramms verwenden. Die primäre Funktion zum Zeichnen von Kreis Diagrammen ist die [**anglearc**](/windows/desktop/api/Wingdi/nf-wingdi-anglearc) -Funktion, bei der Sie die Koordinaten der Mitte des Kreises, den Radius des Kreises, einen Start Winkel und einen Mittelpunktswinkel angeben müssen. Der folgende Screenshot zeigt ein Dialogfeld, mit dem der Benutzer diese Werte eingeben kann.
+Sie können die Linien- und Kurvenfunktionen verwenden, um ein Kreisdiagramm zu zeichnen. Die primäre Funktion, die zum Zeichnen von Kreisdiagrammen verwendet wird, ist die [**AngleArc-Funktion,**](/windows/desktop/api/Wingdi/nf-wingdi-anglearc) die erfordert, dass Sie die Koordinaten des Mittelpunkts des Kreiss, den Radius des Kreiss, einen Startwinkel und einen Sweepwinkel liefern. Der folgende Screenshot zeigt ein Dialogfeld, in dem der Benutzer diese Werte eingeben kann.
 
-![Screenshot mit einem Dialogfeld zum Eingeben von Werten für ein Kreis Diagramm](images/pie.png)
+![Screenshot, der ein Dialogfeld zum Eingeben von Werten für das Kreisdiagramm zeigt](images/pie.png)
 
-Mit den oben gezeigten Werten wird das folgende Kreis Diagramm erzeugt.
+Die oben gezeigten Werte erzeugen das folgende Kreisdiagramm.
 
-![Screenshot des resultierenden Kreis Diagramms](images/sampleapp.png)
+![Screenshot des resultierenden Kreisdiagramms](images/sampleapp.png)
 
-Die Dialogfeld Vorlage, die im Ressourcen Skript der Anwendung () gefunden wird. RC) gibt die Merkmale des vorangehenden Dialog Felds (die Höhe, die darin enthaltenen Steuerelemente und den Stil) wie folgt an.
+Die Dialogfeldvorlage im Ressourcenskript der Anwendung (. RC)-Datei gibt die Merkmale des vorherigen Dialogfelds (höhe, enthaltene Steuerelemente und Stil) wie folgt an.
 
 
 ```C++
@@ -48,13 +48,13 @@ END
 
 
 
-Die in der Quelldatei der Anwendung gefundene Dialogfeld Prozedur ruft Daten (zentrierte Koordinaten, Bogen RADIUS und Start-und Sweep-Winkel) ab, indem Sie die folgenden Schritte ausführen:
+Die In der Quelldatei der Anwendung gefundene Dialogfeldprozedur ruft Daten (Zentriertkoordinaten, Bogenradius und Start- und Sweepwinkel) mit den folgenden Schritten ab:
 
-1.  Die Anwendungs definierte clearbits-Funktion initialisiert das Array, das die Benutzereingaben an Null empfängt.
-2.  Die von der Anwendung definierte getstraulngth-Funktion Ruft die Länge der vom Benutzer eingegebenen Zeichenfolge ab.
-3.  Die von der Anwendung definierte "retrieveinput"-Funktion Ruft den vom Benutzer eingegebenen Wert ab.
+1.  Die anwendungsdefinierte ClearBits-Funktion initialisiert das Array, das die Benutzereingabe empfängt, auf 0 (null).
+2.  Die anwendungsdefinierte GetStrLngth-Funktion ruft die Länge der vom Benutzer eingegebenen Zeichenfolge ab.
+3.  Die anwendungsdefinierte RetrieveInput-Funktion ruft den vom Benutzer eingegebenen Wert ab.
 
-Der folgende Beispielcode zeigt die-Dialogfeld Prozedur.
+Der folgende Beispielcode zeigt die Prozedur des Dialogfelds.
 
 
 ```C++
@@ -180,7 +180,7 @@ DWORD RetrieveInput(LPTSTR cArray, int iLength)
 
 
 
-Um jeden Abschnitt des Kreis Diagramms zu zeichnen, übergeben Sie die vom Benutzer eingegebenen Werte an die [**anglearc**](/windows/desktop/api/Wingdi/nf-wingdi-anglearc) -Funktion. Um das Kreis Diagramm mit dem aktuellen Pinsel auszufüllen, Betten Sie den aufzurufenden **aufrufungsend** in eine Pfad Klammer ein. Das folgende Codebeispiel zeigt die definierte Pfad Klammer und den aufzurufenden aufzurufenden **.**
+Um jeden Abschnitt des Kreisdiagramms zu zeichnen, übergeben Sie die vom Benutzer eingegebenen Werte an die [**AngleArc-Funktion.**](/windows/desktop/api/Wingdi/nf-wingdi-anglearc) Um das Kreisdiagramm mit dem aktuellen Pinsel zu füllen, betten Sie den Aufruf von **AngleArc** in eine Pfadklammer ein. Das folgende Codebeispiel zeigt die definierte Pfadklammer und den Aufruf von **AngleArc.**
 
 
 ```C++

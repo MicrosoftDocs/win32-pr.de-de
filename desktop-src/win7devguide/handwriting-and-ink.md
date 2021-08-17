@@ -1,19 +1,19 @@
 ---
-title: Handschrift und Freihand
-description: Dank der zunehmenden Verbreitung von Tablet PCs auf dem Markt werden Tablet-Features zum Mainstream-Computing.
+title: Handschrift und Freihandschrift
+description: Mit der Verbreitung von Tablet-PCs auf dem Markt werden Tablet-Features Teil des Mainstream Computing.
 ms.assetid: 22caf8b3-d519-418f-b662-180d270b7cfb
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: c10bec217a9568419b3b150c932fc236c7d735bb
-ms.sourcegitcommit: 592c9bbd22ba69802dc353bcb5eb30699f9e9403
+ms.openlocfilehash: 4704300ed28d1ca10987ad0c22633ba65a3f529ec8ebeab63f7ea62137839d87
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "103729673"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118708939"
 ---
-# <a name="handwriting-and-ink"></a>Handschrift und Freihand
+# <a name="handwriting-and-ink"></a>Handschrift und Freihandschrift
 
-Dank der zunehmenden Verbreitung von *Tablet PCs* auf dem Markt werden *Tablet* -Features zum Mainstream-Computing. In Windows 7 sind Berührungs-und Schreibvorgänge eine erstklassige Benutzererfahrung. Windows 7 verbessert die Stift Darstellung, indem höhere Genauigkeit und Geschwindigkeit erzielt werden. Handschrift Eingaben werden verbessert, und es werden weitere Sprachen unterstützt. Der Texteingabe Panel bietet Vorhersage Text für eine höhere Geschwindigkeit bei Eingabe und Korrektur. Die Handschrift Genauigkeit wird durch Personalisierung in allen Sprachen, benutzerdefinierten Wörterbüchern und Durchbrüche in ostasiatischen Spracherkennungsfunktionen verbessert. Das verbesserte Interaktionsmodell bietet einen besseren Lesevorgang für die kleinen, hochauflösenden Bildschirme, die auf tragbaren Computern üblich sind. (Informationen hierzu finden Sie [unter Programmieren des Text Eingabe Panels](../tablet/programming-the-text-input-panel.md).)
+Mit der Verbreitung von *Tablet-PCs* auf dem Markt werden *Tablet-Features* Teil des Mainstream Computing. In Windows 7 sind Touch- und Schreibeingaben erstklassige Benutzeroberflächen. Windows 7 verbessert die Stifterfahrung durch höhere Genauigkeit und Geschwindigkeit. Handschrifteingaben wurden verbessert, und es werden weitere Sprachen unterstützt. Der Texteingabebereich bietet Vorhersagetext für eine schnellere Eingabe und Korrektur. Die Handschriftgenauigkeit wird durch Personalisierung in allen Sprachen, benutzerdefinierte Wörterbücher und Durchbrüche bei der ostasiatischen Spracherkennung verbessert. Das verbesserte Interaktionsmodell bietet eine bessere Leseerfahrung auf den kleinen Bildschirmen mit hoher Auflösung, die auf portablen Computern häufig verwendet werden. (Weitere Informationen finden Sie [unter Programmieren des Texteingabebereichs.)](../tablet/programming-the-text-input-panel.md)
 
 ![Tablet PC-Eingabebereich](images/windows7-4.jpg)
 
@@ -21,18 +21,18 @@ Der Texteingabebereich bietet eine einfache Textkorrektur.
 
 ## <a name="math-recognition"></a>Mathematische Erkennung
 
-Mit dem neuen Math Recognition-Feature können Benutzer mithilfe von Handschrift Mathematik in Anwendungen eingeben – die natürlichste und effizienteste Methode, mathematische Ausdrücke einzugeben. Die Funktionalität wird von zwei UI-Komponenten bereitgestellt. Der mathematische Eingabebereich ist ein eigenständiges Windows-Zubehör, das mit jeder Mathematik fähigen Anwendung funktioniert. Die mathematische Eingabesteuerung ist über die API in Anwendungen integriert.
+Das neue Feature "Mathematische Erkennung" ermöglicht Benutzern das Eingeben von Mathematik in Anwendungen mithilfe von Handschrift – der natürlichsten und effizientesten Methode zum Eingeben mathematischer Ausdrücke. Die Funktionalität wird von zwei Benutzeroberflächenkomponenten bereitgestellt. Mathematik-Eingabebereich ist ein eigenständiges Windows-Zubehör, das mit jeder mathematischen Anwendung funktioniert. Steuerung für mathematische Eingaben wird über die API in Anwendungen integriert.
 
-Zugrunde liegende Benutzeroberflächen Komponenten sind die mathematische Erkennung. Diese Engine erkennt einen handschriftlichen mathematischen Ausdruck und übersetzt das Ergebnis in das *MathML* -Format, um Anwendungen zu verwenden. Die Korrektur wurde verbessert, damit Benutzer Korrekturen schneller durchführen können. (Siehe [Programmieren des mathematischen Eingabe Steuer](../tablet/programming-the-math-input-control.md)Elements.)
+Zugrunde liegende Komponenten der Benutzeroberfläche sind die mathematische Erkennung. Diese Engine erkennt handschriftlichen mathematischen Ausdruck und übersetzt das Ergebnis in das *MathML-Format,* damit Anwendungen verwendet werden können. Die Korrektur wurde verbessert, damit Benutzer Korrekturen schneller vornehmen können. (Weitere Informationen finden Sie [unter Programmieren der Steuerung für mathematische Eingaben](../tablet/programming-the-math-input-control.md).)
 
-![mathematischer Eingabebereich](images/windows7-5.jpg)
+![Matheeingabebereich](images/windows7-5.jpg)
 
-Durch die mathematische Erkennung können Benutzer mithilfe von Handschrift Mathematik in Anwendungen eingeben.
+Mithilfe der mathematischen Erkennung können Benutzer mathematische Daten mithilfe von Handschrift in Anwendungen eingeben.
 
-## <a name="handwriting-with-personalized-custom-dictionary"></a>Handschrift mit personalisierter benutzerdefiniertem
+## <a name="handwriting-with-personalized-custom-dictionary"></a>Handschrift mit personalisiertem benutzerdefiniertem Wörterbuch
 
-Für viele Szenarien erfordert die gute Handschrift Genauigkeit ein Wörterbuch, das auf die verwendete Domäne zugeschnitten ist. Mit Windows 7 werden benutzerdefinierte Wörterbücher eingeführt, die eine bessere Handschrifterkennung für spezialisierte vokabare ermöglichen. Entwickler, die vertikale Anwendungen schreiben, z. b. ein ärztliches Notepad, können nun bestimmte Begriffe zu Ihrer Anwendung hinzufügen, wie z. b. die Namen von Medikamenten. (Weitere Informationen finden [Sie unter Developer-Erweiterungen für Windows-Touchscreen und Tablet PC](https://www.microsoft.com/whdc/device/input/Touch_tab_enhance.mspx).)
+Für viele Szenarien erfordert eine gute Handschriftgenauigkeit ein Wörterbuch, das auf den Jeweiligen Anwendungsbereich zugeschnitten ist. Windows 7 werden benutzerdefinierte Wörterbücher eingeführt, die eine bessere Handschrifterkennung für spezielle Vokabulare ermöglichen. Entwickler, die vertikale Anwendungen schreiben , z. B. einen medizinischen Notizblock, können ihrer Anwendung nun bestimmte Begriffe hinzufügen, z. B. Namen von Patienten. (Weitere Informationen finden Sie unter [Developer Enhancements to Windows Touch and Tablet PC](https://www.microsoft.com/whdc/device/input/Touch_tab_enhance.mspx).)
 
- 
+ 
 
- 
+ 

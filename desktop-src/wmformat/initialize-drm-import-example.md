@@ -1,40 +1,40 @@
 ---
-title: Initialisieren des DRM-Import Beispiels
-description: Initialisieren des DRM-Import Beispiels
+title: Beispiel zum Initialisieren des DRM-Imports
+description: Beispiel zum Initialisieren des DRM-Imports
 ms.assetid: 46a64305-9aac-47df-992d-6aea8ecb54bf
 keywords:
-- Windows Media-Format-SDK, DRM-Import
-- SDK für Windows Media-Format, importieren
-- Windows Media-Format-SDK, Beispielcode
-- Windows Media-Format-SDK, Codebeispiele
-- Digital Rights Management (DRM), importieren
-- DRM (Digital Rights Management), importieren
+- Windows Medienformat-SDK, DRM-Import
+- Windows Media Format SDK,import
+- Windows Medienformat-SDK, Beispielcode
+- Windows Medienformat-SDK, Codebeispiele
+- Digital Rights Management (DRM), Importieren
+- DRM (Digital Rights Management), Import
 - Digital Rights Management (DRM), Initialisieren des Imports
 - DRM (Digital Rights Management), Initialisieren des Imports
 - Digital Rights Management (DRM), Beispielcode
 - DRM (Digital Rights Management), Beispielcode
 - Digital Rights Management (DRM), Codebeispiele
 - DRM (Digital Rights Management), Codebeispiele
-- Erweiterte APIs für den DRM-Client, Initialisieren des Imports
+- ERWEITERTE APIs des DRM-Clients, Initialisieren des Imports
 - Erweiterte Client-APIs, Initialisieren des Imports
-- Erweiterte APIs für den DRM-Client, Import
-- Erweiterte Client-APIs, importieren
-- Erweiterte APIs für den DRM-Client, Beispielcode
+- ERWEITERTE APIs des DRM-Clients,Import
+- Erweiterte Client-APIs,Import
+- ERWEITERTE APIs für DEN DRM-Client, Beispielcode
 - Erweiterte Client-APIs, Beispielcode
-- Erweiterte APIs für den DRM-Client, Codebeispiele
+- ERWEITERTE APIs für DEN DRM-Client, Codebeispiele
 - Erweiterte Client-APIs, Codebeispiele
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 450eeaa128c17d0d64511dd028cda3ce1c4f28c3
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: e9e91d0aac6e9d54dac4cd52de7d84140a9e6af580084bd22ccc0af7283900d7
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "104207303"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118702121"
 ---
-# <a name="initialize-drm-import-example"></a>Initialisieren des DRM-Import Beispiels
+# <a name="initialize-drm-import-example"></a>Beispiel zum Initialisieren des DRM-Imports
 
-Im folgenden Codebeispiel wird veranschaulicht, wie ein DRM-Writer-Objekt für den DRM-Import initialisiert wird:
+Im folgenden Codebeispiel wird veranschaulicht, wie ein DRM Writer-Objekt für DRM Import initialisiert wird:
 
 
 ```C++
@@ -101,18 +101,18 @@ EXIT:
 
 <dl> <dt>
 
-[**Beispiel für das Erstellen eines Inhalts Schlüssels**](create-content-key-example.md)
+[**Beispiel zum Erstellen eines Inhaltsschlüssels**](create-content-key-example.md)
 </dt> <dt>
 
-[**Beispiel für das Erstellen eines Sitzungsschlüssels**](create-session-key-example.md)
+[**Beispiel zum Erstellen eines Sitzungsschlüssels**](create-session-key-example.md)
 </dt> <dt>
 
-[**DRM-Import Beispiele**](drm-import-examples.md)
+[**BEISPIELE FÜR DRM-Importe**](drm-import-examples.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

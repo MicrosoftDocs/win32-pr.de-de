@@ -1,5 +1,5 @@
 ---
-description: 'IShellDispatch4.ToggleDesktop-Methode: Zeigt den Desktop an oder blendet den Desktop aus.'
+description: 'IShellDispatch4.ToggleDesktop-Methode: Zeigt den Desktop an oder blendet diesen aus.'
 title: IShellDispatch4.ToggleDesktop-Methode (Shldisp.h)
 ms.topic: reference
 ms.date: 05/31/2018
@@ -57,7 +57,7 @@ Diese Methode gibt keinen Wert zurück.
 
 ## <a name="remarks"></a>Hinweise
 
-Diese Methode hat die gleiche Wirkung wie die **Schaltfläche Desktop** anzeigen auf der Taskleiste. Es blendet entweder alle geöffneten Fenster aus, um den Desktop einblenden, oder er blendet den Desktop aus, indem alle geöffneten Fenster angezeigt werden. Die **ToggleDesktop-Methode** zeigt keine Benutzeroberfläche an, sondern ruft nur die Umschaltaktion auf.
+Diese Methode hat die gleiche Auswirkung wie die Schaltfläche **Desktop anzeigen** auf der Taskleiste. Sie blendet entweder alle geöffneten Fenster aus, um den Desktop anzuzeigen, oder sie blendet den Desktop aus, indem alle geöffneten Fenster angezeigt werden. Die **ToggleDesktop-Methode** zeigt keine Benutzeroberfläche an, sie ruft lediglich die Umschaltaktion auf.
 
 ## <a name="examples"></a>Beispiele
 
@@ -117,7 +117,7 @@ End Sub
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ XP-Desktop-Apps\]<br/>                                                                   |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur XP-Desktop-Apps\]<br/>                                                                   |
 | Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                                                          |
 | Header<br/>                   | <dl> <dt>Shldisp.h</dt> </dl>                          |
 | Idl<br/>                      | <dl> <dt>Shldisp.idl</dt> </dl>                        |

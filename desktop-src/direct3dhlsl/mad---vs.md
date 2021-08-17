@@ -1,5 +1,5 @@
 ---
-title: Mad-vs
+title: mad – vs
 description: Multipliziert und fügt Quellen hinzu.
 ms.assetid: 059f0bf6-d143-4efc-b074-0ed026edb008
 ms.topic: reference
@@ -9,14 +9,14 @@ topic_type:
 api_name: ''
 api_type: ''
 api_location: ''
-ms.openlocfilehash: 01e96bb63395fe9e5dd27a17fbb5c0ddd9bf3c17
-ms.sourcegitcommit: fe03c5d92ca6a0d66a114b2303e99c0a19241ffb
+ms.openlocfilehash: a42a4f2d28ed8f0506909199b4c15c26ae3bc434ec250ddae9909ef53525583b
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "104313668"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118986400"
 ---
-# <a name="mad---vs"></a>Mad-vs
+# <a name="mad---vs"></a>mad – vs
 
 Multipliziert und fügt Quellen hinzu.
 
@@ -24,33 +24,33 @@ Multipliziert und fügt Quellen hinzu.
 
 
 
-| Mad DST, src0, Quelle1, Quelle2 |
+| mad dst, src0, src1, src2 |
 |---------------------------|
 
 
 
- 
+ 
 
 where
 
--   DST ist das Ziel Register.
--   src0 ist ein Quell Register.
--   Quelle1 ist ein Quell Register.
--   Quelle2 ist ein Quell Register.
+-   dst ist das Zielregister.
+-   src0 ist ein Quellregister.
+-   src1 ist ein Quellregister.
+-   src2 ist ein Quellregister.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
 
 
-| Vertex-Shader-Versionen | 1\_1 | 2 \_ 0 | 2 \_ x | 2 \_ SW | 3 \_ 0 | 3 \_ SW |
+| Vertex-Shaderversionen | 1\_1 | 2 \_ 0 | 2 \_ x | 2 \_ sw | 3 \_ 0 | 3 \_ sw |
 |------------------------|------|------|------|-------|------|-------|
-| geworden                    | x    | x    | x    | x     | x    | x     |
+| wütend                    | x    | x    | x    | x     | x    | x     |
 
 
 
- 
+ 
 
-Das folgende Code Fragment zeigt die ausgeführten Vorgänge.
+Das folgende Codefragment zeigt die ausgeführten Vorgänge.
 
 
 ```
@@ -66,12 +66,12 @@ dest.w = src0.w * src1.w + src2.w;
 
 <dl> <dt>
 
-[Vertex-shaderanweisungen](dx9-graphics-reference-asm-vs-instructions.md)
+[Vertex-Shader-Anweisungen](dx9-graphics-reference-asm-vs-instructions.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

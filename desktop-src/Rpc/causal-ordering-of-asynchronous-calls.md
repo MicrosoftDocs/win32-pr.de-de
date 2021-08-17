@@ -1,28 +1,28 @@
 ---
-title: Kausale Reihenfolge von asynchronen Aufrufen
-description: In einer asynchronen RPC-Anwendung ist es möglich, dass ein Client Thread einen zweiten asynchronen Aufruf für ein Bindungs handle ausführt, bevor ein früherer Aufruf für dieses Handle abgeschlossen wurde.
+title: Kausale Reihenfolge asynchroner Aufrufe
+description: In einer asynchronen RPC-Anwendung kann ein Clientthread einen zweiten asynchronen Aufruf für ein Bindungshandle vornehmen, bevor ein früherer Aufruf dieses Handles abgeschlossen wurde.
 ms.assetid: 69beb3a4-39ae-4e3f-bb7d-31519278334d
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 754ae4733e5a3936bdd28fef72b9560fb9c9dfcd
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: dbafc5f9166d28a80d514abd4ebea20ab01ea32f542561e2108feae4a5769458
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "104036883"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118932294"
 ---
-# <a name="causal-ordering-of-asynchronous-calls"></a>Kausale Reihenfolge von asynchronen Aufrufen
+# <a name="causal-ordering-of-asynchronous-calls"></a>Kausale Reihenfolge asynchroner Aufrufe
 
-In einer asynchronen RPC-Anwendung ist es möglich, dass ein Client Thread einen zweiten asynchronen Aufruf für ein Bindungs handle ausführt, bevor ein früherer Aufruf für dieses Handle abgeschlossen wurde. Diese Situation wird von der RPC-Lauf Zeit Bibliothek wie folgt behandelt:
+In einer asynchronen RPC-Anwendung kann ein Clientthread einen zweiten asynchronen Aufruf für ein Bindungshandle vornehmen, bevor ein früherer Aufruf dieses Handles abgeschlossen wurde. Die RPC-Laufzeitbibliothek behandelt diese Situation wie folgt:
 
--   Der asynchrone RPC-Mechanismus gewährleistet, dass asynchrone Aufrufe, die für denselben Bindungs Handle im gleichen Thread auf derselben Sicherheitsebene erfolgen, in der Reihenfolge verteilt werden, in der Sie vorgenommen wurden. Die tatsächliche Ausführung der Aufrufe kann nicht in der richtigen Reihenfolge erfolgen.
--   Wie bei synchronen Aufrufen werden asynchrone Remote Prozedur Aufrufe von unterschiedlichen Clientthreads gleichzeitig ausgeführt.
--   Wenn ein asynchroner Aufruf von einer Client Anwendung von einem oder mehreren synchronen Aufrufen gefolgt wird, kann der asynchrone Aufruf ausgeführt werden, während die synchronen Aufrufe ausgeführt werden. Unabhängig vom Status des asynchronen Aufrufs werden die synchronen Aufrufe in der Reihenfolge ausgeführt, in der Sie vom Server empfangen werden.
--   Wenn eine Client Anwendung eine nicht kausale Reihenfolge für ein bestimmtes Bindungs handle auswählt, wird die Serialisierung für dieses Handle deaktiviert. Anwendungen ermöglichen eine nicht kausale Reihenfolge durch Aufrufen von [**rpcbindingsetoption**](/windows/desktop/api/Rpcdce/nf-rpcdce-rpcbindingsetoption) , wobei der *Option* -Parameter auf RPC \_ C \_ opt \_ Binding \_ nicht kausal und der *OptionValue* -Parameter auf **true** festgelegt ist. Weitere Informationen finden Sie unter [Bindungs Options Konstanten](binding-option-constants.md).
+-   Der asynchrone RPC-Mechanismus garantiert, dass asynchrone Aufrufe, die für dasselbe Bindungshandle auf demselben Thread auf der gleichen Sicherheitsebene erfolgen, in der Reihenfolge gesendet werden, in der sie durchgeführt wurden. Die tatsächliche Ausführung der Aufrufe kann nicht in der reihenfolgengeordneten Reihenfolge erfolgen.
+-   Wie bei synchronen Aufrufen werden asynchrone Remoteprozeduraufrufe aus verschiedenen Clientthreads gleichzeitig ausgeführt.
+-   Wenn einem asynchronen Aufruf einer Clientanwendung ein oder mehrere synchrone Aufrufe folgen, kann der asynchrone Aufruf ausgeführt werden, während die synchronen Aufrufe ausgeführt werden. Unabhängig vom Status des asynchronen Aufrufs werden die synchronen Aufrufe in der Reihenfolge ausgeführt, in der sie vom Server empfangen werden.
+-   Wenn eine Clientanwendung die nichtausale Reihenfolge für ein bestimmtes Bindungshandle auswählt, wird die Serialisierung für dieses Handle deaktiviert. Anwendungen ermöglichen die nichtausale Sortierung, indem [**Sie RpcBindingSetOption**](/windows/desktop/api/Rpcdce/nf-rpcdce-rpcbindingsetoption) aufrufen, wobei der *Option-Parameter* auf RPC \_ C OPT BINDING \_ \_ \_ NONCAUSAL und der *OptionValue-Parameter* auf **TRUE** festgelegt ist. Weitere Informationen finden Sie unter [Bindungsoptionskonstanten.](binding-option-constants.md)
 
- 
+ 
 
- 
+ 
 
 
 

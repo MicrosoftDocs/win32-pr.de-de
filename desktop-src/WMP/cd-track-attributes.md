@@ -1,100 +1,100 @@
 ---
-title: CD-Track-Attribute
-description: CD-Track-Attribute
+title: CD Track Attributes
+description: CD Track Attributes
 ms.assetid: bc1ed934-87dd-4e19-8606-a8b18c44619f
 keywords:
-- Windows Media Player-, CD-Track-Attribute
-- Windows Media Player Mobile, CD-Track-Attribute
-- Windows Media Player-Objektmodell, CD-Track-Attribute
-- Objektmodell, CD-Track-Attribute
-- ActiveX-Steuerelement, CD-Track-Attribute
-- Windows Media Player ActiveX-Steuerelement, CD-Track-Attribute
-- Windows Media Player Mobile ActiveX-Steuerelement, CD-Track-Attribute
-- Referenz für Objektmodell, CD-Track-Attribute
-- Attribute, CD-Spuren
-- CD-Track-Attribute
+- Windows Media Player,CD-Trackattribute
+- Windows Media Player Mobile,CD-Trackattribute
+- Windows Media Player-Objektmodell, CD-Trackattribute
+- Objektmodell,CD-Trackattribute
+- ActiveX,CD-Trackattribute
+- Windows Media Player ActiveX,CD-Trackattribute
+- Windows Media Player Mobile ActiveX-Steuerelement, CD-Trackattribute
+- Referenz für Objektmodell,CD-Trackattribute
+- Attribute,CD-Spuren
+- CD-Trackattribute
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: d8f86f9b03f5c9f14e1cd386dc6e655e23a1b38d
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: 20015ae3651f86b408f978758110c187e45361d8a9d58965c3ed325586599031
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "104310775"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118119842"
 ---
-# <a name="cd-track-attributes"></a>CD-Track-Attribute
+# <a name="cd-track-attributes"></a>CD Track Attributes
 
-Die folgenden Attribute und Attribut Aliase sind für einen CD-Track verfügbar. Diese Attribute gelten für das Medienobjekt, das mithilfe von *Wiedergabeliste* abgerufen wurde. **Item**, wobei *Wiedergabeliste* ein **Wiedergabe** Listen Objekt darstellt, das mit *CDROM* abgerufen wurde. **Wiedergabeliste**.
+Die folgenden Attribute und Attributaliase sind für eine CD-Spur verfügbar. Diese Attribute gelten für das Medienobjekt, das mit playlist abgerufen *wurde.* **item**, wobei *Playlist ein* **Wiedergabelistenobjekt** darstellt, das mit *C wie abgerufen wurde.* **Wiedergabeliste**.
 
--   [Akteuralias](author-attribute.md)
--   [Albudalias](wm-albumtitle-attribute.md)
--   [Albumartist-Alias](wm-albumartist-attribute.md)
--   [Künstleralias](author-attribute.md)
+-   [Actoralias](author-attribute.md)
+-   [Albumalias](wm-albumtitle-attribute.md)
+-   [AlbumArtist-Alias](wm-albumartist-attribute.md)
+-   [Alias des Interpreten](author-attribute.md)
 -   [Author-Attribut](author-attribute.md)
--   [Buynow-Attribut](buynow-attribute.md)
--   [Caption-Alias](title-attribute.md)
--   [Cdtrackaktiviertes Attribut](cdtrackenabled-attribute.md)
--   [Composer-Alias](wm-composer-attribute.md)
--   [Copyright-Attribut](copyright-attribute.md)
--   [Genre-Alias](wm-genre-attribute.md)
+-   [BuyNow-Attribut](buynow-attribute.md)
+-   [Beschriftungsalias](title-attribute.md)
+-   [CDTrackEnabled-Attribut](cdtrackenabled-attribute.md)
+-   [Composer Alias](wm-composer-attribute.md)
+-   [Copyrightattribut](copyright-attribute.md)
+-   [Genrealias](wm-genre-attribute.md)
 -   [Bezeichnungsalias](wm-publisher-attribute.md)
--   [Liedalias](wm-lyrics-attribute.md)
+-   [Alias "Besen"](wm-lyrics-attribute.md)
 -   [MetadataSource-Alias](wm-provider-attribute.md)
 -   [ModifiedBy-Attribut](modifiedby-attribute.md)
--   [Moreingefo-Attribut](moreinfo-attribute.md)
--   [Alias Name](title-attribute.md)
--   [Originalindex-Alias](wm-tracknumber-attribute.md)
--   [Period-Alias](wm-period-attribute.md)
--   [Playlistindex-Attribut](playlistindex-attribute.md)
--   [Alias für Bewertung](wm-providerrating-attribute.md)
+-   [MoreInfo-Attribut](moreinfo-attribute.md)
+-   [Namensalias](title-attribute.md)
+-   [OriginalIndex-Alias](wm-tracknumber-attribute.md)
+-   [Periodenalias](wm-period-attribute.md)
+-   [PlaylistIndex-Attribut](playlistindex-attribute.md)
+-   [Bewertungsalias](wm-providerrating-attribute.md)
 -   [ReleaseDate-Attribut](releasedate-attribute.md)
--   [Releasedateday-Attribut](releasedateday-attribute.md)
--   [Releasedatemonth-Attribut](releasedatemonth-attribute.md)
--   [Releasedateyear-Attribut](releasedateyear-attribute.md)
--   [Releasedatasearmonth-Attribut](releasedateyearmonth-attribute.md)
--   [Releasedatasearmonthday-Attribut](releasedateyearmonthday-attribute.md)
--   [Releasedby-Alias](wm-publisher-attribute.md)
--   [Series-Alias](title-attribute.md)
+-   [ReleaseDateDay-Attribut](releasedateday-attribute.md)
+-   [ReleaseDateMonth-Attribut](releasedatemonth-attribute.md)
+-   [ReleaseDateYear-Attribut](releasedateyear-attribute.md)
+-   [ReleaseDateYearMonth-Attribut](releasedateyearmonth-attribute.md)
+-   [ReleaseDateYearMonthDay-Attribut](releasedateyearmonthday-attribute.md)
+-   [ReleasedBy-Alias](wm-publisher-attribute.md)
+-   [Reihenalias](title-attribute.md)
 -   [Studio-Alias](wm-publisher-attribute.md)
--   [Stilalias](wm-providerstyle-attribute.md)
+-   [Formatalias](wm-providerstyle-attribute.md)
 -   [Title-Attribut](title-attribute.md)
--   [Inhaltsverzeichnis](wm-mcdi-attribute.md)
--   [Totalduration-Attribut](totalduration-attribute.md)
+-   [TOC-Alias](wm-mcdi-attribute.md)
+-   [TotalDuration-Attribut](totalduration-attribute.md)
 -   [UniqueFileIdentifier-Alias](wm-uniquefileidentifier-attribute.md)
--   [WM/albumartist-Attribut](wm-albumartist-attribute.md)
--   [WM/Album Title-Attribut](wm-albumtitle-attribute.md)
+-   [WM/AlbumArtist-Attribut](wm-albumartist-attribute.md)
+-   [WM/AlbumTitle-Attribut](wm-albumtitle-attribute.md)
 -   [WM/Composer-Attribut](wm-composer-attribute.md)
 -   [WM/Genre-Attribut](wm-genre-attribute.md)
--   [WM/liedattribut](wm-lyrics-attribute.md)
+-   [WM-/Wm-Attribut](wm-lyrics-attribute.md)
 -   [WM/MCDI-Attribut](wm-mcdi-attribute.md)
--   [WM/period-Attribut](wm-period-attribute.md)
+-   [WM/Period-Attribut](wm-period-attribute.md)
 -   [WM/Provider-Attribut](wm-provider-attribute.md)
--   [WM/providerrating-Attribut](wm-providerrating-attribute.md)
--   [WM/providerstyle-Attribut](wm-providerstyle-attribute.md)
--   [WM/Verleger-Attribut](wm-publisher-attribute.md)
--   [WM/tracknumber-Attribut](wm-tracknumber-attribute.md)
+-   [WM/ProviderRating-Attribut](wm-providerrating-attribute.md)
+-   [WM/ProviderStyle-Attribut](wm-providerstyle-attribute.md)
+-   [WM/Publisher-Attribut](wm-publisher-attribute.md)
+-   [WM/TrackNumber-Attribut](wm-tracknumber-attribute.md)
 -   [WM/UniqueFileIdentifier-Attribut](wm-uniquefileidentifier-attribute.md)
--   [WM/wmcontentid-Attribut](wm-wmcontentid-attribute.md)
+-   [WM/WMContentID-Attribut](wm-wmcontentid-attribute.md)
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[**Attribut Verweis**](attribute-reference.md)
+[**Attributreferenz**](attribute-reference.md)
 </dt> <dt>
 
 [**CD-Wiedergabelisten**](cd-playlist-attributes.md)
 </dt> <dt>
 
-[**Cdrom. Wiedergabeliste**](cdrom-playlist.md)
+[**Cplay.playlist**](cdrom-playlist.md)
 </dt> <dt>
 
-[**Wiedergabeliste. Element**](playlist-item.md)
+[**Playlist.item**](playlist-item.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

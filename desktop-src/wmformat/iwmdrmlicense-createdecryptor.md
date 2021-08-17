@@ -1,11 +1,11 @@
 ---
-title: Iwmdrmlicense-Methode "deatedecryptor" (wmdrmsdk. h)
-description: Die Methode "kreatedecryptor" erstellt mithilfe der Einstellungen der aktuellen Lizenz ein Entschlüsselungs-Objekt.
+title: IWMDRMLicense CreateDecryptor-Methode (Wmdrmsdk.h)
+description: Die CreateDecryptor-Methode erstellt ein Entschlüsselungsobjekt mithilfe der Einstellungen der aktuellen Lizenz.
 ms.assetid: 69b7f96b-a0d6-455e-8ef9-0faf9690cef1
 keywords:
-- Methode "Windows Media" der Methode "kreatedecryptor"
-- Methode "deatedecryptor" Windows Media Format, iwmdrmlicense Interface
-- Iwmdrmlicense-Schnittstelle Windows Media-Format, Methode "kreatedecryptor"
+- CreateDecryptor-Methode windows Media Format
+- CreateDecryptor-Methode windows Media Format , IWMDRMLicense-Schnittstelle
+- IWMDRMLicense-Schnittstelle windows Media Format , CreateDecryptor-Methode
 topic_type:
 - apiref
 api_name:
@@ -16,16 +16,16 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: e987e7ffa3390462889b128f390934f05e64cdff
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 03ac7e6bb1e9d4f9e5e7c706c0a9e3518f62b1068ed743dc795554dd43ac61e4
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106353799"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119027708"
 ---
-# <a name="iwmdrmlicensecreatedecryptor-method"></a>Iwmdrmlicense:: kreatedecryptor-Methode
+# <a name="iwmdrmlicensecreatedecryptor-method"></a>IWMDRMLicense::CreateDecryptor-Methode
 
-Die Methode " **kreatedecryptor** " erstellt mithilfe der Einstellungen der aktuellen Lizenz ein Entschlüsselungs-Objekt.
+Die **CreateDecryptor-Methode** erstellt ein Entschlüsselungsobjekt mithilfe der Einstellungen der aktuellen Lizenz.
 
 ## <a name="syntax"></a>Syntax
 
@@ -42,22 +42,22 @@ HRESULT CreateDecryptor(
 
 <dl> <dt>
 
-*ppdecryptor* \[ vorgenommen\]
+*ppDecryptor* \[ out\]
 </dt> <dd>
 
-Empfängt einen Zeiger auf die [**iwmdrmentschlüsseln**](iwmdrmdecrypt.md) -Schnittstelle des neu erstellten Objekts.
+Empfängt einen Zeiger auf die [**IWMDRMDecrypt-Schnittstelle**](iwmdrmdecrypt.md) des neu erstellten Objekts.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Die-Methode gibt ein **HRESULT** zurück. Mögliches Werte (aber nicht die Einzigen) sind die in der folgenden Tabelle.
+Die Methode gibt ein **HRESULT** zurück. Mögliches Werte (aber nicht die Einzigen) sind die in der folgenden Tabelle.
 
 
 
 | Rückgabecode                                                                                                | Beschreibung                                              |
 |------------------------------------------------------------------------------------------------------------|----------------------------------------------------------|
-| <dl> <dt>**NS \_ E \_ DRM- \_ RIV \_ zu \_ klein**</dt> </dl> | Es wird eine aktualisierte Inhalts Sperr Liste benötigt.<br/> |
+| <dl> <dt>**NS \_ E \_ \_ DRM- WIES ZU \_ \_ KLEIN**</dt> </dl> | Eine aktualisierte Inhaltssperrliste ist erforderlich.<br/> |
 | <dl> <dt>**S \_ OK**</dt> </dl>                       | Die Methode wurde erfolgreich ausgeführt.<br/>                         |
 
 
@@ -74,18 +74,18 @@ Keine.
 
 | Anforderung | Wert |
 |-------------------|---------------------------------------------------------------------------------------|
-| Header<br/> | <dl> <dt>Wmdrmsdk. h</dt> </dl> |
+| Header<br/> | <dl> <dt>Wmdrmsdk.h</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
 [**CreateEncryptor**](iwmdrmlicense-createencryptor.md)
 </dt> <dt>
 
-[**Iwmdrmlicense-Schnittstelle**](iwmdrmlicense.md)
+[**IWMDRMLicense-Schnittstelle**](iwmdrmlicense.md)
 </dt> </dl>
 
  

@@ -1,9 +1,9 @@
 ---
-title: WINBIO_BDB_ANSI_381_HEADER Struktur (winbio \_ types. h)
-description: Gibt Informationen zu einer Reihe von Fingerabdruck-oder Palmen Beispielen an.
+title: WINBIO_BDB_ANSI_381_HEADER -Struktur (Winbio \_ types.h)
+description: Gibt Informationen zu einer Reihe von Fingerabdruck- oder Handflächenbeispielen an.
 ms.assetid: 8b0caa50-9bba-45c4-b4bf-514540894793
 keywords:
-- WINBIO_BDB_ANSI_381_HEADER Struktur Windows-Biometrieframework-API
+- WINBIO_BDB_ANSI_381_HEADER Struktur Windows Biometrieframework-API
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 9da04643bbdff273a2594394011ba46c16bfa29d
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 3bc9eee5d3ca99799c76b849e7b990eee2b94c61309c4d729f736ad33a00eecc
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "106345293"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118911278"
 ---
-# <a name="winbio_bdb_ansi_381_header-structure"></a>Winbio \_ BDB- \_ ANSI \_ 381- \_ Header Struktur
+# <a name="winbio_bdb_ansi_381_header-structure"></a>WINBIO \_ BDB \_ ANSI \_ 381 \_ HEADER-Struktur
 
-Die **Header Struktur von winbio \_ BDB \_ ANSI \_ 381 \_** gibt Informationen zu einer Reihe von Fingerabdruck-oder Palmen Beispielen an.
+Die **WINBIO \_ BDB \_ ANSI \_ 381 \_ HEADER-Struktur** gibt Informationen zu einer Reihe von Fingerabdruck- oder Handflächenbeispielen an.
 
 ## <a name="syntax"></a>Syntax
 
@@ -54,101 +54,101 @@ typedef struct _WINBIO_BDB_ANSI_381_HEADER {
 
 <dl> <dt>
 
-**RecordLength**
+**Recordlength**
 </dt> <dd>
 
-Die Größe dieser Struktur in Bytes zuzüglich der Größe aller [**winbio \_ BDB- \_ ANSI \_ 381- \_ Daten Satz**](winbio-bdb-ansi-381-record.md) Strukturen für den Fingerabdruck oder die von einem Endbenutzer erfassten Palmen Beispiele. Nur die unteren sechs Bytes sind gültig.
+Die Größe dieser Struktur in Bytes plus die Größe aller [**WINBIO \_ BDB \_ ANSI \_ 381 \_ RECORD-Strukturen**](winbio-bdb-ansi-381-record.md) für die Fingerabdruck- oder Handflächenbeispiele, die von einem Endbenutzer erfasst wurden. Nur die niedrigen sechs Bytes sind gültig.
 
 </dd> <dt>
 
-**Formatiertifier**
+**FormatIdentifier**
 </dt> <dd>
 
-Gibt das Format an. Derzeit muss dies 0x46495200 sein.
+Gibt das Format an. Derzeit muss dies 0x46495200.
 
 </dd> <dt>
 
 **VersionNumber**
 </dt> <dd>
 
-Gibt die Versionsnummer an. Derzeit muss dies 0x30313000 sein, das intern 0.1.0.0 entspricht.
+Gibt die Versionsnummer an. Derzeit muss dies 0x30313000, was intern 0.1.0.0 entspricht.
 
 </dd> <dt>
 
 **ProductId**
 </dt> <dd>
 
-Eine [**winbio- \_ registrierte \_ Format**](winbio-registered-format.md) Struktur, die das registrierte Datenformat als Besitzer-/typpaar enthält.
+Eine [**WINBIO \_ REGISTERED \_ FORMAT-Struktur,**](winbio-registered-format.md) die das registrierte Datenformat als Besitzer-Typ-Paar enthält.
 
 </dd> <dt>
 
-**Capturede viceid**
+**CaptureDeviceId**
 </dt> <dd>
 
 Enthält die Einheiten-ID des Geräts, das zum Erfassen des Beispiels verwendet wird.
 
 </dd> <dt>
 
-**Imageacquisitionlevel**
+**ImageAcquisitionLevel**
 </dt> <dd>
 
-Gibt die Auflösungsebene an, bei der das Beispiel aufgezeichnet wird.
+Gibt die Auflösungsebene an, auf der das Beispiel erfasst wird.
 
 </dd> <dt>
 
-**Horizontalscanresolution**
+**HorizontalScanResolution**
 </dt> <dd>
 
-Gibt die horizontale Auflösung der Überprüfung an.
+Gibt die horizontale Auflösung des Scans an.
 
 </dd> <dt>
 
-**Verticalscanresolution**
+**VerticalScanResolution**
 </dt> <dd>
 
-Gibt die vertikale Auflösung der Überprüfung an.
+Gibt die vertikale Auflösung des Scans an.
 
 </dd> <dt>
 
-**Horizontalimageresolution**
+**HorizontalImageResolution**
 </dt> <dd>
 
-Gibt die horizontale Auflösung des aufgezeichneten Finger Abbilds oder des Palm Bilds an.
+Gibt die horizontale Auflösung des erfassten Fingerabdrucks oder Handflächenbilds an.
 
 </dd> <dt>
 
-**Verticalimageresolution**
+**VerticalImageResolution**
 </dt> <dd>
 
-Gibt die vertikale Auflösung des aufgezeichneten Finger Abbilds oder des Palm Bilds an.
+Gibt die vertikale Auflösung des erfassten Fingerabdrucks oder Handflächenbilds an.
 
 </dd> <dt>
 
-**Element count**
+**ElementCount**
 </dt> <dd>
 
-Anzahl der Finger-oder Palmen Datensätze in dieser Struktur.
+Anzahl der Finger- oder Handflächendatensätze in dieser Struktur.
 
 </dd> <dt>
 
 **ScaleUnits**
 </dt> <dd>
 
-Enthält die Maßeinheit 1 für Zoll und 2 für Zentimeter.
+Enthält die Maßeinheit, 1 für Zoll und 2 für Zentimeter.
 
 </dd> <dt>
 
-**Pixeltiefe**
+**PixelDepth**
 </dt> <dd>
 
-Gibt die Anzahl der Bits in einem Pixel an. Der Wert kann zwischen 1 und 16 Bits pro Pixel liegen.
+Gibt die Anzahl der Bits in einem Pixel an. Dies kann 1 bis 16 Bits pro Pixel für Farbe sein.
 
 </dd> <dt>
 
-**Imagecompressionalg**
+**ImageCompressionAlg**
 </dt> <dd>
 
-Gibt den Algorithmus an, der zum Komprimieren des Fingers oder des Palmen Bilds verwendet wird.
+Gibt den Algorithmus an, der zum Komprimieren des Finger- oder Handflächenbilds verwendet wird.
 
 </dd> <dt>
 
@@ -161,17 +161,17 @@ Gibt den Algorithmus an, der zum Komprimieren des Fingers oder des Palmen Bilds 
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows 7 \[ -Desktop-Apps\]<br/>                                                                    |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 R2 \[ -Desktop-Apps\]<br/>                                                       |
-| Header<br/>                   | <dl> <dt>Winbio \_ types. h (Include winbio. h)</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows 7 \[ Desktop-Apps\]<br/>                                                                    |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server 2008 \[ R2-Desktop-Apps\]<br/>                                                       |
+| Header<br/>                   | <dl> <dt>Winbio \_ types.h (einschließlich Winbio.h)</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[Client Anwendungs Strukturen](client-application-structures.md)
+[Clientanwendungsstrukturen](client-application-structures.md)
 </dt> </dl>
 
  

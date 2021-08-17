@@ -3,9 +3,9 @@ title: IResultProperty GoBack-Methode
 description: Reserviert. | IResultProperty GoBack-Methode
 ms.assetid: e6f3106e-fe66-4341-ab0f-1683984f2cb3
 keywords:
-- GoBack-Methode – Legacy Windows Umgebungsfeatures
-- GoBack-Methode Legacy Windows Environment Features , IResultProperty-Schnittstelle
-- IResultProperty-Schnittstelle Legacy Windows Environment Features , GoBack-Methode
+- GoBack-Methode – Legacy-Windows-Umgebungsfeatures
+- GoBack-Methode Legacy Windows Umgebungsfeatures, IResultProperty-Schnittstelle
+- IResultProperty-Schnittstelle Legacy Windows Umgebungsfeatures, GoBack-Methode
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:

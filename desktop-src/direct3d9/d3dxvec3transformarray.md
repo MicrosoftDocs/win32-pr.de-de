@@ -1,5 +1,5 @@
 ---
-description: 'D3DXVec3TransformArray-Funktion (D3dx9math.h): Transformiert ein Array (x, y, z, 1) durch eine bestimmte Matrix.'
+description: 'D3DXVec3TransformArray-Funktion (D3dx9math.h): Transformiert ein Array (x, y, z, 1) durch eine angegebene Matrix.'
 ms.assetid: fd7ab674-5e42-4265-afad-ae5a00dabcdb
 title: D3DXVec3TransformArray-Funktion (D3dx9math.h)
 ms.topic: reference
@@ -14,16 +14,16 @@ api_type:
 api_location:
 - d3dx9.lib
 - d3dx9.dll
-ms.openlocfilehash: 440869f42769d5c20e26083acf3fad1203e20a22
-ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
+ms.openlocfilehash: 3cd17da7f3eb8e9c21ab2890ab112194c7f393b89c6761f2b14741e557318efe
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2021
-ms.locfileid: "108097768"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119122537"
 ---
 # <a name="d3dxvec3transformarray-function-d3dx9mathh"></a>D3DXVec3TransformArray-Funktion (D3dx9math.h)
 
-Transformiert ein Array (x, y, z, 1) durch eine bestimmte Matrix.
+Transformiert ein Array (x, y, z, 1) durch eine angegebene Matrix.
 
 ## <a name="syntax"></a>Syntax
 
@@ -59,7 +59,7 @@ Zeiger auf das [**D3DXVECTOR4-Array,**](d3dxvector4.md) das das Ergebnis des Vor
 
 Typ: **[ **UINT**](../winprog/windows-data-types.md)**
 
-Stride zwischen Vektoren im Ausgabedatenstrom.
+Schreitet zwischen Vektoren im Ausgabedatenstrom.
 
 </dd> <dt>
 
@@ -77,7 +77,7 @@ Zeiger auf das [**D3DXVECTOR3-Quellarray.**](d3dxvector3.md)
 
 Typ: **[ **UINT**](../winprog/windows-data-types.md)**
 
-Stride zwischen Vektoren im Eingabedatenstrom.
+Schreitet zwischen Vektoren im Eingabedatenstrom.
 
 </dd> <dt>
 
@@ -105,7 +105,7 @@ Typ: **[ **D3DXVECTOR4**](d3dxvector4.md)\***
 
 Zeiger auf ein transformiertes [**D3DXVECTOR4-Array.**](d3dxvector4.md)
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
 Diese Funktion transformiert das Array *pV* (x, y, z, 1) durch die Matrix *pM.*
 
@@ -115,7 +115,7 @@ Der Rückgabewert für diese Funktion ist der gleiche Wert, der im *pOut-Paramet
 
 
 
-| Anforderungen | Wert |
+| Anforderung | Wert |
 |--------------------|----------------------------------------------------------------------------------------|
 | Header<br/>  | <dl> <dt>D3dx9math.h</dt> </dl> |
 | Bibliothek<br/> | <dl> <dt>D3dx9.lib</dt> </dl>   |

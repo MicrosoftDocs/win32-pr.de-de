@@ -1,5 +1,5 @@
 ---
-description: Wenn true, ändern Sie die Metadaten dieser Datei nicht. Wird vom Benutzer festgelegt.
+description: Wenn true, ändern Sie die Metadaten dieser Datei nicht. Wird nach Benutzer festgelegt.
 ms.assetid: ee4ae7f9-0c4f-4127-9098-282641f9ab46
 title: System.Media.UserNoAutoInfo
 ms.topic: article
@@ -13,7 +13,7 @@ ms.locfileid: "118724840"
 ---
 # <a name="systemmediausernoautoinfo"></a>System.Media.UserNoAutoInfo
 
-Wenn true, ändern Sie die Metadaten dieser Datei nicht. Wird vom Benutzer festgelegt.
+Wenn true, ändern Sie die Metadaten dieser Datei nicht. Wird nach Benutzer festgelegt.
 
 ## <a name="windows-10-version-1703-windows-10-version-1607-windows-10-version-1511-windows-10-version-1507-windows-81-windows-8-windows-7-windows-vista"></a>Windows 10, Version 1703, Windows 10, Version 1607, Windows 10, Version 1511, Windows 10, Version 1507, Windows 8.1, Windows 8, Windows 7, Windows Vista
 

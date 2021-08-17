@@ -1,27 +1,27 @@
 ---
 title: Indirektes Zeichnen
-description: Indirektes Zeichnen ermöglicht es, einige Szenendurchlauf- und Cullingvorgänge von der CPU zur GPU zu verschieben, was die Leistung verbessern kann. Der Befehlspuffer kann von der CPU oder GPU generiert werden.
+description: Indirektes Zeichnen ermöglicht das Verschieben einiger Szenendurchlaufs und -cullings von der CPU auf die GPU, was die Leistung verbessern kann. Der Befehlspuffer kann von der CPU oder GPU generiert werden.
 ms.assetid: F8D6C88A-101E-4F66-999F-43206F6527B6
 ms.localizationpriority: high
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 6fa474a469d5789d4b31830400d981ea771db2e8
-ms.sourcegitcommit: b9a7a48e52219bf8d33e6b8171fc9f8b52151e92
+ms.openlocfilehash: c55070bead6f848777cb81dd7fb33878ddcf7954a7f8a4fbb55f4ab9c01d4cea
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/21/2021
-ms.locfileid: "112421878"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119123847"
 ---
 # <a name="indirect-drawing"></a>Indirektes Zeichnen
 
-Indirektes Zeichnen ermöglicht es, einige Szenendurchlauf- und Cullingvorgänge von der CPU zur GPU zu verschieben, was die Leistung verbessern kann. Der Befehlspuffer kann von der CPU oder GPU generiert werden.
+Indirektes Zeichnen ermöglicht das Verschieben einiger Szenendurchlaufs und -cullings von der CPU auf die GPU, was die Leistung verbessern kann. Der Befehlspuffer kann von der CPU oder GPU generiert werden.
 
 -   [Befehlssignaturen](#command-signatures)
 -   [Indirekte Argumentpufferstrukturen](#indirect-argument-buffer-structures)
 -   [Erstellung der Befehlssignatur](#command-signature-creation)
     -   [Keine Argumentänderungen](#no-argument-changes)
     -   [Stammkonstanten und Scheitelpunktpuffer](#root-constants-and-vertex-buffers)
--   [Verwandte Themen](#related-topics)
+-   [Zugehörige Themen](#related-topics)
 
 ## <a name="command-signatures"></a>Befehlssignaturen
 
@@ -153,9 +153,9 @@ Das Layout einer einzelnen Struktur innerhalb des indirekten Argumentpuffers sie
 |-------|-------------------------------------------|
 | 0:3   | Daten für den Stammparameterindex 2           |
 | 4:7   | Daten für den Stammparameterindex 6           |
-| 8:15  | Virtuelle Adresse von VB im Slot 3 (64-Bit)  |
-| 16:19 | VB-Größe                                   |
-| 20:23 | VB-Stride                                 |
+| 8:15  | Virtuelle Adresse der VB in Slot 3 (64-Bit)  |
+| 16:19 | VB Größe                                   |
+| 20:23 | VB stride                                 |
 | 24:27 | VertexCountPerInstance                    |
 | 28:31 | InstanceCount                             |
 | 32:35 | StartVertexLocation                       |
@@ -175,7 +175,7 @@ Das Layout einer einzelnen Struktur innerhalb des indirekten Argumentpuffers sie
 [Indirektes Zeichnen und GPU-Culling: exemplarische Vorgehensweise für Code](indirect-drawing-and-gpu-culling-.md)
 </dt> <dt>
 
-[Darstellung](rendering.md)
+[Rendering](rendering.md)
 </dt> </dl>
 
  

@@ -1,7 +1,7 @@
 ---
-description: Ruft einen Zeiger auf die GUID ab, mit der ein DirectX-Datei Objekt identifiziert wird. Veraltet.
+description: Ruft einen Zeiger auf die GUID ab, die ein DirectX-Dateiobjekt identifiziert. Veraltet.
 ms.assetid: 74c7a1d9-85e4-43eb-bcd8-1f3ddd713e9f
-title: 'Idirectxfileobject:: GetId-Methode (dxfile. h)'
+title: IDirectXFileObject::GetId-Methode (DXFile.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -14,16 +14,16 @@ api_type:
 api_location:
 - D3dxof.lib
 - D3dxof.dll
-ms.openlocfilehash: 336dbde487ecd1b3af7b32d3743f037c235952f8
-ms.sourcegitcommit: 14010c34b35fa268046c7683f021f86de08ddd0a
+ms.openlocfilehash: 5cb6788afe0b937822b8895790584f6928a7b5aecb564a31540337935763b2f7
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "106355177"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118800181"
 ---
-# <a name="idirectxfileobjectgetid-method"></a>Idirectxfileobject:: GetId-Methode
+# <a name="idirectxfileobjectgetid-method"></a>IDirectXFileObject::GetId-Methode
 
-Ruft einen Zeiger auf die GUID ab, mit der ein DirectX-Datei Objekt identifiziert wird. Veraltet.
+Ruft einen Zeiger auf die GUID ab, die ein DirectX-Dateiobjekt identifiziert. Veraltet.
 
 ## <a name="syntax"></a>Syntax
 
@@ -41,12 +41,12 @@ HRESULT GetId(
 
 <dl> <dt>
 
-*pguid* \[ Out, retval\]
+*pGuid* \[ out, retval\]
 </dt> <dd>
 
-Typ: **lpguid**
+Typ: **LPGUID**
 
-Zeiger auf eine GUID, um die Objekt-ID zu erhalten. Die-Funktion legt die GUID auf eine **null** -GUID fest, wenn das Objekt nicht über eine ID verfügt.
+Zeiger auf eine GUID, um die ID des Objekts zu empfangen. Die Funktion legt die GUID auf eine **NULL-GUID** fest, wenn das Objekt keine ID hat.
 
 </dd> </dl>
 
@@ -54,7 +54,7 @@ Zeiger auf eine GUID, um die Objekt-ID zu erhalten. Die-Funktion legt die GUID a
 
 Typ: **[ **HRESULT**](https://msdn.microsoft.com/library/Bb401631(v=MSDN.10).aspx)**
 
-Wenn die Methode erfolgreich ausgeführt wird, ist dxfile OK der Rückgabewert \_ . Wenn die Methode fehlschlägt, kann der Rückgabewert dxfileerr \_ badvalue lauten.
+Wenn die Methode erfolgreich ist, lautet der Rückgabewert DXFILE \_ OK. Wenn die Methode fehlschlägt, kann der Rückgabewert DXFILEERR \_ BADVALUE sein.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -62,16 +62,16 @@ Wenn die Methode erfolgreich ausgeführt wird, ist dxfile OK der Rückgabewert \
 
 | Anforderung | Wert |
 |--------------------|---------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Dxfile. h</dt> </dl>   |
-| Bibliothek<br/> | <dl> <dt>D3dxof. lib</dt> </dl> |
+| Header<br/>  | <dl> <dt>DXFile.h</dt> </dl>   |
+| Bibliothek<br/> | <dl> <dt>D3dxof.lib</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[Idirectxfileobject](idirectxfileobject.md)
+[IDirectXFileObject](idirectxfileobject.md)
 </dt> </dl>
 
  

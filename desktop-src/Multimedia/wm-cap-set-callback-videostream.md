@@ -1,9 +1,9 @@
 ---
-title: WM_CAP_SET_CALLBACK_VIDEOSTREAM Meldung (VFW. h)
-description: Die "WM \_ Cap \_ Set \_ Callback Videostream"- \_ Meldung legt eine Rückruffunktion in der Anwendung fest.
+title: WM_CAP_SET_CALLBACK_VIDEOSTREAM (Vfw.h)
+description: Die WM \_ CAP \_ SET \_ CALLBACK \_ VIDEOSTREAM-Nachricht legt eine Rückruffunktion in der Anwendung fest.
 ms.assetid: 590089b8-7a8d-476b-9b81-f96bf73b0369
 keywords:
-- WM_CAP_SET_CALLBACK_VIDEOSTREAM-Nachricht (Multimedia)
+- WM_CAP_SET_CALLBACK_VIDEOSTREAM von Windows Multimedia
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: cde1d2b44ba3786f2d17934e6e92e0894d8d3bba
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: f2cdb4d7d18997fe437609b43a266242f04bd0bc2bb25429191d944240706244
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104391544"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118940718"
 ---
-# <a name="wm_cap_set_callback_videostream-message"></a>WM- \_ Cap- \_ Rückruf- \_ \_ videostreamnachricht
+# <a name="wm_cap_set_callback_videostream-message"></a>WM \_ CAP \_ SET \_ CALLBACK \_ VIDEOSTREAM-Meldung
 
-Die " **WM \_ Cap \_ Set \_ Callback \_ Videostream** "-Meldung legt eine Rückruffunktion in der Anwendung fest. Avicap ruft dieses Verfahren während der streamingerfassung auf, wenn ein Video Puffer gefüllt wird. Sie können diese Nachricht explizit oder mithilfe des [**capsetcallbackonvideostream**](/windows/desktop/api/Vfw/nf-vfw-capsetcallbackonvideostream) -Makros senden.
+Die **WM CAP SET \_ \_ \_ CALLBACK \_ VIDEOSTREAM-Nachricht** legt eine Rückruffunktion in der Anwendung fest. AVICap ruft dieses Verfahren während der Streamingerfassung auf, wenn ein Videopuffer gefüllt wird. Sie können diese Nachricht explizit oder mithilfe des [**Makros capSetCallbackOnVideoStream**](/windows/desktop/api/Vfw/nf-vfw-capsetcallbackonvideostream) senden.
 
 
 ```C++
@@ -38,22 +38,22 @@ lParam = (LPARAM) (LPVOID) (fpProc);
 
 <dl> <dt>
 
-<span id="fpProc"></span><span id="fpproc"></span><span id="FPPROC"></span>*fpproc*
+<span id="fpProc"></span><span id="fpproc"></span><span id="FPPROC"></span>*fpProc*
 </dt> <dd>
 
-Ein Zeiger auf die videostreamrückruf-Funktion vom Typ [**capvideostreamcallback**](/windows/desktop/api/Vfw/nc-vfw-capvideocallback). Geben Sie **null** für diesen Parameter an, um eine zuvor installierte videostreamrückruf-Funktion zu deaktivieren.
+Zeiger auf die Videostream-Rückruffunktion vom Typ [**capVideoStreamCallback**](/windows/desktop/api/Vfw/nc-vfw-capvideocallback). Geben **Sie NULL** für diesen Parameter an, um eine zuvor installierte Videostream-Rückruffunktion zu deaktivieren.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt **true** zurück, wenn erfolgreich oder **false** , wenn eine streamingerfassung oder eine Single-Frame-Erfassungs Sitzung ausgeführt wird.
+Gibt **TRUE zurück,** wenn erfolgreich, **oder FALSE,** wenn streaming capture oder eine Singleframe-Erfassungssitzung in Bearbeitung ist.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Das Aufzeichnungs Fenster Ruft die Rückruffunktion auf, bevor der erfasste Frame auf den Datenträger geschrieben wird. Dies ermöglicht es Anwendungen, den Frame bei Bedarf zu ändern.
+Das Erfassungsfenster ruft die Rückruffunktion auf, bevor der erfasste Frame auf den Datenträger geschrieben wird. Dadurch können Anwendungen den Frame bei Wunsch ändern.
 
-Wenn eine videostreamrückruf-Funktion für die streamingerfassung verwendet wird, muss die Prozedur vor dem Start der Erfassungs Sitzung installiert werden, und Sie muss für die Dauer der Sitzung aktiviert bleiben. Sie kann nach Ende der streamingerfassung deaktiviert werden.
+Wenn eine Videostream-Rückruffunktion für streaming capture verwendet wird, muss die Prozedur vor dem Starten der Erfassungssitzung installiert werden und für die Dauer der Sitzung aktiviert bleiben. Sie kann nach dem Ende der Streamingerfassung deaktiviert werden.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -63,7 +63,7 @@ Wenn eine videostreamrückruf-Funktion für die streamingerfassung verwendet wir
 |-------------------------------------|----------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[nur Desktop-Apps\]<br/>                       |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                             |
-| Header<br/>                   | <dl> <dt>VFW. h</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Vfw.h</dt> </dl> |
 
 
 
@@ -71,10 +71,10 @@ Wenn eine videostreamrückruf-Funktion für die streamingerfassung verwendet wir
 
 <dl> <dt>
 
-[Video Erfassung](video-capture.md)
+[Videoaufnahme](video-capture.md)
 </dt> <dt>
 
-[Video Erfassungs Meldungen](video-capture-messages.md)
+[Videoaufnahmenachrichten](video-capture-messages.md)
 </dt> </dl>
 
  

@@ -1,5 +1,5 @@
 ---
-description: Die Belichtungszeit für das Foto in Sekunden, wie aus den ExIF-Informationen (Exchangeable Image File) gelesen.
+description: Die Belichtungszeit für das Foto in Sekunden, wie aus den EXIF-Informationen (Exchangeable Image File) gelesen.
 ms.assetid: 44f7e6d5-c4d9-4b41-b6c6-15145abb7983
 title: System.Photo.ExposureTime
 ms.topic: article
@@ -13,9 +13,9 @@ ms.locfileid: "118723865"
 ---
 # <a name="systemphotoexposuretime"></a>System.Photo.ExposureTime
 
-Die Belichtungszeit für das Foto in Sekunden, wie aus den ExIF-Informationen (Exchangeable Image File) gelesen. Diese Eigenschaft wird aus [System.Photo.ExposureTimeNumerator](./props-system-photo-exposuretimenumerator.md) und [System.Photo.ExposureTimeDenominator berechnet.](./props-system-photo-exposuretimedenominator.md)
+Die Belichtungszeit für das Foto in Sekunden, wie aus den EXIF-Informationen (Exchangeable Image File) gelesen. Diese Eigenschaft wird aus [System.Photo.ExposureTimeNumerator](./props-system-photo-exposuretimenumerator.md) und [System.Photo.ExposureTimeDenominator](./props-system-photo-exposuretimedenominator.md)berechnet.
 
-Im Folgenden finden Sie eine Liste der möglichen Werte aus der EXIF 2.2-Spezifikation.
+Es folgt eine Liste der möglichen Werte aus der EXIF 2.2-Spezifikation.
 
 -   30
 -   15

@@ -1,66 +1,66 @@
 ---
-description: Datenfluss im DVD-Navigator
+description: Daten Flow im DVD-Navigator
 ms.assetid: 14f9cfa3-5ef6-419c-9196-2e4060549c03
-title: Datenfluss im DVD-Navigator
+title: Daten Flow im DVD-Navigator
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 29a981d2d7b528163abb53478e9e8f2ab88d46c0
-ms.sourcegitcommit: a47bd86f517de76374e4fff33cfeb613eb259a7e
+ms.openlocfilehash: 56e649edfacf0a1fad56cfbe8e73a5e1e9aaf099b9c17463858bf776ab06605c
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/06/2021
-ms.locfileid: "103747425"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118953359"
 ---
-# <a name="data-flow-in-the-dvd-navigator"></a>Datenfluss im DVD-Navigator
+# <a name="data-flow-in-the-dvd-navigator"></a>Daten Flow im DVD-Navigator
 
-Der DVD-Navigator verfügt über Methoden zum Anhalten und Anhalten der Wiedergabe. Diese **Methoden sind** ähnlich –, aber nicht identisch – mit den Methoden zum **Anhalten und anhalten** in [**IMediaControl**](/windows/desktop/api/Control/nn-control-imediacontrol). Dies ist der Unterschied zwischen den folgenden:
+Der DVD-Navigator verfügt über Methoden zum Beenden und Anhalten der Wiedergabe. Diese Methoden ähneln – aber nicht identisch – den **Stop-** und **Pause-Methoden** in [**IMediaControl.**](/windows/desktop/api/Control/nn-control-imediacontrol) Dies ist der Unterschied zwischen ihnen:
 
--   Die **IDvdControl2** -Methoden ändern, was der DVD-Navigator aus dem Datenträger liest. Der Status des Diagramms wird nicht geändert.
--   Die **IMediaControl** -Methoden ändern den Status des Diagramms. Sie ändern nicht, was der DVD-Navigator aus dem Datenträger liest. (Es gibt eine wichtige Ausnahme, die im nächsten Abschnitt erläutert wird, die sich auf die Methode " **Ende** " bezieht.)
+-   Die **IDvdControl2-Methoden** ändern, was der DVD-Navigator vom Datenträger liest. Sie ändern den Zustand des Graphen nicht.
+-   Die **IMediaControl-Methoden** ändern den Zustand des Graphen. Sie ändern nicht, was der DVD-Navigator vom Datenträger liest. (Es gibt eine wichtige Ausnahme, die im nächsten Abschnitt im Zusammenhang mit der **Stop-Methode erläutert** wird.)
 
-Beispielsweise gibt [**IDvdControl2::P ause**](/windows/desktop/api/Strmif/nf-strmif-idvdcontrol2-pause) -Methode den Anhang J "Pause \_ on"-Befehl aus, hält aber nicht das Filter Diagramm an. Die [**IMediaControl::P ause**](/windows/desktop/api/Control/nf-control-imediacontrol-pause) -Methode hält dagegen das Diagramm an, gibt jedoch keinen DVD-Befehl aus.
+Beispielsweise gibt die [**IDvdControl2::P ause-Methode**](/windows/desktop/api/Strmif/nf-strmif-idvdcontrol2-pause) den Befehl "Pause On" in Anhang J aus, hält das Filterdiagramm \_ jedoch nicht an. Die [**IMediaControl::P ause-Methode**](/windows/desktop/api/Control/nf-control-imediacontrol-pause) hält dagegen das Diagramm an, gibt jedoch keinen DVD-Befehl aus.
 
-Verwenden Sie im Allgemeinen die Methoden **IMediaControl::P ause** und **Ende** anstelle der entsprechenden **IDvdControl2** -Methoden. Die **IMediaControl** -Methoden weisen sehr kleine Wartezeiten auf, während die **IDvdControl2** -Methoden bis zu zwei Sekunden Wartezeit haben können.
+Verwenden Sie im Allgemeinen die **Methoden IMediaControl::P ause** und **Stop** anstelle der entsprechenden **IDvdControl2-Methoden.** Die **IMediaControl-Methoden** haben sehr geringe Latenzen, während die **IDvdControl2-Methoden** bis zu zwei Sekunden Wartezeit haben können.
 
 Beenden der Wiedergabe
 
-Das Verhalten von [**IMediaControl:: Beendigung**](/windows/desktop/api/Control/nf-control-imediacontrol-stop) hängt von einem Flag ab, das Sie mit der [**IDvdControl2:: SetOption**](/windows/desktop/api/Strmif/nf-strmif-idvdcontrol2-setoption) -Methode festlegen können.
+Das Verhalten von [**IMediaControl::Stop hängt**](/windows/desktop/api/Control/nf-control-imediacontrol-stop) von einem Flag ab, das Sie mit der [**IDvdControl2::SetOption-Methode festlegen**](/windows/desktop/api/Strmif/nf-strmif-idvdcontrol2-setoption) können.
 
--   Wenn das DVD \_ -resetonstopp-Flag **false** ist, wird das Diagramm von **IMediaControl:: Stopp** beendet, aber die Domäne des DVD-Navigators wird nicht geändert. Wenn Sie erneut ausführen, wird die Wiedergabe von der aktuellen Position aus fortgesetzt.
--   Wenn die DVD- \_ reseetonstopps **true** ist, wird der DVD-Navigator von **IMediaControl:: Beendigung** zurückgesetzt. Wenn Sie [**IMediaControl:: Run erneut ausführen**](/windows/desktop/api/Control/nf-control-imediacontrol-run) , wird der DVD-Navigator von der ersten Wiedergabe Domäne abgespielt, als ob Sie die DVD zum ersten Mal eingefügt haben.
+-   Wenn das ResetOnStop-Flag der DVD \_ **FALSE** ist, beendet **IMediaControl::Stop** das Diagramm, ändert jedoch nicht die Domäne des DVD-Navigators. Wenn Sie run erneut aufrufen, wird die Wiedergabe von der aktuellen Position aus fortgesetzt.
+-   Wenn DVD \_ ResetOnStop **true ist,** bewirkt **IMediaControl::Stop,** dass der DVD-Navigator zurückgesetzt wird. Wenn Sie [**IMediaControl::Run**](/windows/desktop/api/Control/nf-control-imediacontrol-run) erneut aufrufen, wird der DVD-Navigator aus der Domäne "Erste Wiedergabe" wiedergerufen, als ob Sie die DVD zum ersten Mal einfügen würden.
 
-Das \_ Flag für die DVD resetonstoppist standardmäßig auf " **true** " gesetzt, um die Kompatibilität mit älteren Anwendungen zu Im Allgemeinen sollten Sie jedoch die Standardeinstellung überschreiben und das-Flag auf **false** festlegen. Der Grund dafür ist, dass bestimmte Ereignisse bewirken können, dass das Diagramm während der Wiedergabe angehalten wird. Wenn sich beispielsweise die Bildschirmauflösung ändert, wird das Filter Diagramm angehalten, der Videorenderer erneut verbunden und neu gestartet. Wenn \_ die DVD resetonstopps den Wert **true** hat, wird die Wiedergabe am Anfang der Festplatte neu gestartet. Das ist wahrscheinlich nicht das, was der Benutzer erwartet.
+Das Dvd \_ ResetOnStop-Flag ist **aus Kompatibilitäts-** und Kompatibilitätseinstellungen mit älteren Anwendungen standardmäßig TRUE. Im Allgemeinen sollten Sie jedoch den Standardwert überschreiben und das Flag auf **FALSE festlegen.** Der Grund dafür ist, dass bestimmte Ereignisse dazu führen können, dass das Diagramm während der Wiedergabe stoppt. Wenn sich beispielsweise die Auflösung der Anzeige ändert, wird das Filterdiagramm beendet, der Videorenderer erneut verbunden und neu gestartet. Wenn DVD \_ ResetOnStop **true ist,** wird die Wiedergabe vom Anfang des Datenträgers neu gestartet. Dies ist wahrscheinlich nicht das, was der Benutzer erwartet.
 
-Starten Sie daher am Anfang der Anwendung " **SetOption** ", wobei DVD \_ resetonstoppauf **false** festgelegt ist. Wenn Sie die Wiedergabe wieder aufnehmen möchten und Sie am gleichen Speicherort fortsetzen möchten, nennen Sie **IMediaControl:: stoppoder** **IMediaControl::P ause**. Wenn Sie die Wiedergabe und den Datenträger wiederherstellen möchten, geben Sie **SetOption** mit DVD \_ resetonstopps gleich **true** ein, und klicken Sie dann auf **IMediaControl:: Ende**, und wählen Sie schließlich **SetOption** erneut aus, und setzen \_ Sie DVD resetonstoppauf **false** zurück.
+Rufen Sie daher am Anfang ihrer Anwendung **SetOption** auf, und legen Sie DVD \_ ResetOnStop auf **FALSE fest.** Wenn Sie die Wiedergabe beenden und von demselben Speicherort fortsetzen möchten, rufen Sie **IMediaControl::Stop** oder **IMediaControl::P ause auf.** Wenn Sie die Wiedergabe beenden und den Datenträger zurücksetzen möchten, rufen Sie **SetOption** mit DVD ResetOnStop gleich TRUE auf. Rufen Sie \_ dann **IMediaControl::Stop** auf. Rufen Sie schließlich **setOption** erneut auf, und setzen Sie DVD  \_ ResetOnStop auf FALSE **zurück.**
 
 Anhalten der Wiedergabe
 
-Wenn Sie dem DVD-Navigator einen Befehl zur Verfügung stellen, während das Diagramm angehalten wird, wird der Befehl möglicherweise erst beendet, wenn das Diagramm erneut ausgeführt wird. In einigen Fällen kann dies zu einem Deadlock in der Anwendung führen. Es gibt zwei Regeln, die Sie befolgen sollten, um Deadlocks zu vermeiden:
+Wenn Sie dem DVD-Navigator einen Befehl geben, während das Diagramm angehalten ist, wird der Befehl möglicherweise erst abgeschlossen, wenn das Diagramm erneut ausgeführt wird. In einigen Situationen kann dies zu einem Deadlock in Ihrer Anwendung führen. Es gibt zwei Regeln, die Sie befolgen sollten, um Deadlocks zu vermeiden:
 
--   Geben Sie bei angehaltenen Ausführung nicht mehr als einen asynchronen DVD-Befehl aus.
--   Blockieren Sie den UI-Thread der Anwendung oder den Thread, der den Status des Diagramms ändert, nicht, wenn der Thread angehalten wurde.
+-   Geben Sie während der Pause nicht mehr als einen asynchronen DVD-Befehl aus.
+-   Blockieren Sie während der Pause nicht den Ui-Thread der Anwendung oder den Thread, der den Zustand des Graphen ändert.
 
-Die zweite Regel sollte genauer geprüft werden. Im folgenden finden Sie einige spezifische Szenarien, die möglicherweise einen Deadlock verursachen:
+Die zweite Regel ist eine ausführlichere Untersuchung. Im Folgenden finden Sie einige spezifische Szenarien, die zu einem Deadlock führen können:
 
--   **Szenario**: während der angehaltenen Anwendung gibt die Anwendung einen DVD-Befehl mit dem blockierflag aus. Dies kann zu einem Deadlock führen, wenn der Thread, der den DVD-Befehl ausgibt, derselbe Thread ist, der den Befehl "Run" ausgibt. Der DVD-Befehl blockiert, bis das Diagramm ausgeführt wird, aber das Diagramm kann erst ausgeführt werden, wenn der Befehl abgeschlossen ist.
+-   **Szenario:** Während der Unterbrechung gibt die Anwendung einen DVD-Befehl mit dem Blockierungsflag aus. Dies kann zu einem Deadlock führen, wenn der Thread, der den DVD-Befehl aus gibt, derselbe Thread ist, der den Ausführungsbefehl aus gibt. Der DVD-Befehl wird blockiert, bis das Diagramm ausgeführt wird, aber das Diagramm kann erst ausgeführt werden, wenn der Befehl abgeschlossen ist.
 
-    **Empfehlung**: Geben Sie den DVD-Befehl in einem separaten Arbeits Thread aus, oder verwenden Sie das blockierflag nicht.
+    **Empfehlung:** Geben Sie den DVD-Befehl in einem separaten Arbeitsthread aus, oder verwenden Sie nicht das Blockierungsflag.
 
--   **Szenario**: bei angehaltenen Anwendungen gibt die Anwendung einen DVD-Befehl aus und ruft dann [**idvdcmd:: waitforend**](/windows/desktop/api/Strmif/nf-strmif-idvdcmd-waitforend) für das Command-Objekt auf. Diese Situation entspricht dem vorherigen Beispiel. Wenn Sie **Wait** aus dem UI-Thread aufzurufen, kann der UI-Thread das Diagramm erst ausführen, wenn die **Wait** - **Methode die** Blockierung aufhebt, die Blockierung allerdings erst, wenn das Diagramm ausgeführt wird.
+-   **Szenario:** Während der Pause gibt die Anwendung einen DVD-Befehl aus und ruft [**dann IDvdCmd::WaitForEnd**](/windows/desktop/api/Strmif/nf-strmif-idvdcmd-waitforend) für das Befehlsobjekt auf. Diese Situation entspricht dem vorherigen Beispiel. Wenn Sie **Wait über** den UI-Thread aufrufen, kann der UI-Thread das Diagramm erst ausführen, wenn die Blockierung durch die **Wait-Methode** aufgehoben wird, aber die **Wait-Methode** entsperrt die Blockierung erst, wenn das Diagramm ausgeführt wird.
 
-    **Empfehlung**: **warten** Sie auf einen Arbeits Thread.
+    **Empfehlung:** Rufen Sie **Wait** für einen Arbeitsthread auf.
 
--   **Szenario**: während das Diagramm ausgeführt wird, gibt die Anwendung einen DVD-Befehl mit dem blockierflag aus und ruft dann die Pause von einem anderen Thread auf. Dies ist eine mögliche Racebedingung, da das Diagramm angehalten werden kann, bevor der Befehl ausgegeben wird. Wenn einer der beiden Threads der UI-Thread ist, können Sie einen Deadlock ähnlich den beiden vorherigen Beispielen auslösen. Dieses Beispiel veranschaulicht die Wichtigkeit beim Schreiben von Thread sicherem Code, wenn Ihre Anwendung mehrere Threads verwendet.
+-   **Szenario:** Während das Diagramm ausgeführt wird, gibt die Anwendung einen DVD-Befehl mit dem Blockierungsflag aus und ruft dann pause von einem anderen Thread aus auf. Dies ist eine mögliche Racebedingung, da das Diagramm möglicherweise angehalten wird, bevor der Befehl ausgegeben wird. Wenn einer der beiden Threads der UI-Thread ist, können Sie ähnlich wie in den beiden vorherigen Beispielen einen Deadlock verursachen. In diesem Beispiel wird veranschaulicht, wie wichtig das Schreiben von threadsicherem Code ist, wenn Ihre Anwendung mehrere Threads verwendet.
 
-    **Empfehlung**: Wenn Sie Arbeitsthreads verwenden, stellen Sie sicher, dass der Code Thread sicher ist.
+    **Empfehlung:** Wenn Sie Arbeitsthreads verwenden, stellen Sie sicher, dass Ihr Code threadsicher ist.
 
--   **Szenario**: bei angehaltenen Anwendung deaktiviert die Anwendung den Befehl "Run" von der Benutzeroberfläche und gibt dann einen asynchronen DVD-Befehl aus. Bei diesem Fall handelt es sich nicht unbedingt um einen Deadlock, da der Anwendungs Thread noch ausgeführt wird. Der Benutzer kann das Diagramm jedoch nicht ausführen, und der Befehl wird daher nie ausgeführt.
+-   **Szenario:** Während der Pause deaktiviert die Anwendung den Befehl run über die Benutzeroberfläche und gibt dann einen asynchronen DVD-Befehl aus. Dieser Fall ist kein Deadlock, da der Anwendungsthread noch ausgeführt wird. Allerdings wird der Benutzer jetzt daran gehindert, den Graphen auszuführen, und daher wird der Befehl nie abgeschlossen.
 
-    **Empfehlung**: Wenn Sie anhalten, lassen Sie den Befehl "Run" immer aktiviert.
+    **Empfehlung:** Lassen Sie beim Anhalten immer den Befehl run aktiviert.
 
-Suchen einer DVD zu einem bestimmten Zeitpunkt
+Suchen einer DVD zu einem angegebenen Zeitpunkt
 
-Um auf einer Festplatte genau zu einem bestimmten Zeitpunkt zu suchen, nennen Sie [**IMediaControl:: Run**](/windows/desktop/api/Control/nf-control-imediacontrol-run). Geben Sie dann [**IDvdControl2::P layattime**](/windows/desktop/api/Strmif/nf-strmif-idvdcontrol2-playattime)an, und geben Sie dabei die Zeit und das Festlegen von *dwFlags* auf das \_ Flush-cmd- \_ Flag an \_
+Rufen Sie [**IMediaControl::Run**](/windows/desktop/api/Control/nf-control-imediacontrol-run)auf, um genau zu einer bestimmten Zeit auf einem Datenträger zu suchen. Rufen Sie [**dann IDvdControl2::P layAtTime**](/windows/desktop/api/Strmif/nf-strmif-idvdcontrol2-playattime)auf, geben Sie die Uhrzeit an, und legen Sie *dwFlags* auf DVD \_ CMD FLAG Flush \_ \_ fest.
 
 ## <a name="related-topics"></a>Zugehörige Themen
 

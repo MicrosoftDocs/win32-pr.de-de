@@ -1,7 +1,7 @@
 ---
 description: Ruft die Länge des öffentlichen Schlüssels in Bits ab.
 ms.assetid: 02cb631a-5a5d-4d16-bdad-55263a0a53b3
-title: PublicKey. length (Eigenschaft)
+title: PublicKey.Length-Eigenschaft
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,18 +13,18 @@ api_type:
 - COM
 api_location:
 - Capicom.dll
-ms.openlocfilehash: 9429c2ab72845324ab024005cac2da2bfaf7eec1
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: ac374c8eac49391785fb6ad34f1bd1e941e86488ddd461c91581ac870e531839
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106362055"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118901452"
 ---
-# <a name="publickeylength-property"></a>PublicKey. length (Eigenschaft)
+# <a name="publickeylength-property"></a>PublicKey.Length-Eigenschaft
 
-\[Die **length** -Eigenschaft ist für die Verwendung in den Betriebssystemen verfügbar, die im Abschnitt "Anforderungen" angegeben sind. Verwenden Sie stattdessen die [**X509Certificate2. PublicKey-Eigenschaft**](/dotnet/api/system.security.cryptography.x509certificates.x509certificate2.publickey?view=netcore-3.1) im [**System. Security. Cryptography. X509Certificates**](/dotnet/api/system.security.cryptography.x509certificates.publickey.-ctor?view=netcore-3.1) -Namespace.\]
+\[Die **Length-Eigenschaft** ist für die Verwendung in den Betriebssystemen verfügbar, die im Abschnitt Anforderungen angegeben sind. Verwenden Sie stattdessen die [**X509Certificate2.PublicKey-Eigenschaft**](/dotnet/api/system.security.cryptography.x509certificates.x509certificate2.publickey?view=netcore-3.1) im [**System.Security.Cryptography.X509Certificates-Namespace.**](/dotnet/api/system.security.cryptography.x509certificates.publickey.-ctor?view=netcore-3.1)\]
 
-Die **length** -Eigenschaft ruft die Länge des öffentlichen Schlüssels in Bits ab.
+Die **Length-Eigenschaft** ruft die Länge des öffentlichen Schlüssels in Bits ab.
 
 ## <a name="syntax"></a>Syntax
 
@@ -45,16 +45,16 @@ Die Länge des öffentlichen Schlüssels in Bits.
 
 | Anforderung | Wert |
 |----------------------------|----------------------------------------------------------------------------------------|
-| Verteilbare Komponente<br/> | CAPICOM 2,0 oder höher unter Windows Server 2003 und Windows XP<br/>                  |
+| Verteilbare Komponente<br/> | CAPICOM 2.0 oder höher auf Windows Server 2003 und Windows XP<br/>                  |
 | DLL<br/>             | <dl> <dt>Capicom.dll</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**PublicKey**](publickey.md)
+[**Publickey**](publickey.md)
 </dt> </dl>
 
  

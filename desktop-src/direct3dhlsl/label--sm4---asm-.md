@@ -1,23 +1,23 @@
 ---
-title: Bezeichnung (SM4-ASM)
+title: label (sm4 - asm)
 description: Gibt den Anfang einer Unterroutine an.
 ms.assetid: B966AE64-47CA-4A13-A26F-184D9FD26C26
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: ff4c2d73db5d776c75b6d6339cecb7748a9868d2
-ms.sourcegitcommit: fe03c5d92ca6a0d66a114b2303e99c0a19241ffb
+ms.openlocfilehash: 1d9075aa14d72893d7c7862361b44ff636dd9bb6fda62563087ca2404bd1d70b
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "103719416"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118986460"
 ---
-# <a name="label-sm4---asm"></a>Bezeichnung (SM4-ASM)
+# <a name="label-sm4---asm"></a>label (sm4 - asm)
 
 Gibt den Anfang einer Unterroutine an.
 
 
 
-| Bezeichnung l\# |
+| Label l\# |
 |-----------|
 
 
@@ -26,21 +26,21 @@ Gibt den Anfang einer Unterroutine an.
 
 
 
-| Element                                                       | BESCHREIBUNG                         |
+| Element                                                       | Beschreibung                         |
 |------------------------------------------------------------|-------------------------------------|
-| <span id="l_"></span><span id="L_"></span>*int\#*<br/> | \[in \] der Nummer der Bezeichnung.<br/> |
+| <span id="l_"></span><span id="L_"></span>*L\#*<br/> | \[in \] Die Bezeichnungsnummer.<br/> |
 
 
 
  
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Eine **Bezeichnung** kann nur direkt nach einer [**ret**](ret--sm4---asm-.md) -Anweisung angezeigt werden, die in keiner der Fluss Steuerungs Anweisungen enthalten ist.
+Eine **Bezeichnung** kann nur direkt nach einer [**ret-Anweisung**](ret--sm4---asm-.md) angezeigt werden, die in keiner Flusssteuerungsanweisungen geschachtelt ist.
 
-Der Code vor der ersten **Bezeichnung** in einem Programm ist das Hauptprogramm. Alle Unterroutinen werden am Ende des Programms angezeigt, das durch Bezeichnungs Anweisungen **angegeben wird.**
+Der Code vor der ersten **Bezeichnung** in einem Programm ist das Hauptprogramm. Alle Unterroutinen werden am Ende des  Programms angezeigt, angegeben durch Bezeichnungsanweisungen.
 
-Das folgende Beispiel zeigt die Verwendung dieser Anweisung.
+Im folgenden Beispiel wird die Verwendung dieser Anweisung veranschaulicht.
 
 ``` syntax
  
@@ -57,7 +57,7 @@ Das folgende Beispiel zeigt die Verwendung dieser Anweisung.
                 ret
 ```
 
-Diese Anweisung gilt für die folgenden Shader-Phasen:
+Diese Anweisung gilt für die folgenden Shaderstufen:
 
 
 
@@ -69,20 +69,20 @@ Diese Anweisung gilt für die folgenden Shader-Phasen:
 
  
 
-## <a name="minimum-shader-model"></a>Minimaler Shader-Modell
+## <a name="minimum-shader-model"></a>Shader-Mindestmodell
 
-Diese Funktion wird in den folgenden shadermodellen unterstützt.
+Diese Funktion wird in den folgenden Shadermodellen unterstützt.
 
 
 
 | Shadermodell                                              | Unterstützt |
 |-----------------------------------------------------------|-----------|
-| [Shader-Modell 5](d3d11-graphics-reference-sm5.md)        | ja       |
-| [Shadermodell 4,1](dx-graphics-hlsl-sm4.md)              | ja       |
-| [Shadermodell 4](dx-graphics-hlsl-sm4.md)                | ja       |
-| [Shader-Modell 3 (DirectX HLSL)](dx-graphics-hlsl-sm3.md) | nein        |
-| [Shader-Modell 2 (DirectX HLSL)](dx-graphics-hlsl-sm2.md) | nein        |
-| [Shader-Modell 1 (DirectX HLSL)](dx-graphics-hlsl-sm1.md) | nein        |
+| [Shadermodell 5](d3d11-graphics-reference-sm5.md)        | Ja       |
+| [Shadermodell 4.1](dx-graphics-hlsl-sm4.md)              | Ja       |
+| [Shadermodell 4](dx-graphics-hlsl-sm4.md)                | Ja       |
+| [Shadermodell 3 (DirectX HLSL)](dx-graphics-hlsl-sm3.md) | Nein        |
+| [Shadermodell 2 (DirectX HLSL)](dx-graphics-hlsl-sm2.md) | Nein        |
+| [Shadermodell 1 (DirectX HLSL)](dx-graphics-hlsl-sm1.md) | Nein        |
 
 
 
@@ -92,7 +92,7 @@ Diese Funktion wird in den folgenden shadermodellen unterstützt.
 
 <dl> <dt>
 
-[Shader Model 4-Assembly (DirectX HLSL)](dx-graphics-hlsl-sm4-asm.md)
+[Shadermodell 4-Assembly (DirectX HLSL)](dx-graphics-hlsl-sm4-asm.md)
 </dt> </dl>
 
  

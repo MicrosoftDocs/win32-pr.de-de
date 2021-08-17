@@ -1,19 +1,19 @@
 ---
-description: Um zu ermitteln, ob Direct3D die vertextwiening unterstützt, überprüfen Sie das D3DVTXPCAPS \_ Tweening-Flag im VertexProcessingCaps-Member der D3DCAPS9-Struktur.
+description: Um zu ermitteln, ob Direct3D die Vertex-Tweening unterstützt, suchen Sie \_ im VertexProcessingCaps-Member der D3DCAPS9-Struktur nach dem D3DVTXPCAPS-TWEENING-Flag.
 ms.assetid: b60c7f96-3752-4703-9059-486d9906c508
 title: Verwenden von Vertex-Tweening (Direct3D 9)
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 12ca56cc521b5bff01a5d6af5c2d4ab6b02cd49e
-ms.sourcegitcommit: a47bd86f517de76374e4fff33cfeb613eb259a7e
+ms.openlocfilehash: 14c4d2da3f32698cc24e052a152b674ecb023f79e90541af23374c0903d54d55
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/06/2021
-ms.locfileid: "103860191"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118797088"
 ---
 # <a name="using-vertex-tweening-direct3d-9"></a>Verwenden von Vertex-Tweening (Direct3D 9)
 
-Um zu ermitteln, ob Direct3D die vertextwiening unterstützt, überprüfen Sie das D3DVTXPCAPS \_ Tweening-Flag im VertexProcessingCaps-Member der [**D3DCAPS9**](/windows/desktop/api/D3D9Caps/ns-d3d9caps-d3dcaps9) -Struktur. Im folgenden Codebeispiel wird die [**IDirect3DDevice9:: GetDeviceCaps**](/windows/win32/api/d3d9helper/nf-d3d9helper-idirect3ddevice9-getdevicecaps) -Methode verwendet, um zu bestimmen, ob das twiening unterstützt wird.
+Um zu ermitteln, ob Direct3D die Vertex-Tweening unterstützt, suchen Sie \_ im VertexProcessingCaps-Member der [**D3DCAPS9-Struktur nach dem D3DVTXPCAPS-TWEENING-Flag.**](/windows/desktop/api/D3D9Caps/ns-d3d9caps-d3dcaps9) Im folgenden Codebeispiel wird die [**IDirect3DDevice9::GetDeviceCaps-Methode**](/windows/win32/api/d3d9helper/nf-d3d9helper-idirect3ddevice9-getdevicecaps) verwendet, um zu bestimmen, ob Tweening unterstützt wird.
 
 
 ```
@@ -29,7 +29,7 @@ if( 0 != (d3dCaps.VertexProcessingCaps & D3DVTXPCAPS_TWEENING) )
 
 
 
-Um Vector Tweening verwenden zu können, müssen Sie zuerst einen benutzerdefinierten vertextyp einrichten, der eine zweite normale oder eine zweite Position verwendet. Das folgende Codebeispiel zeigt eine Beispiel Deklaration, die einen zweiten Punkt und eine zweite Position enthält.
+Um Vektor-Tweening zu verwenden, müssen Sie zunächst einen benutzerdefinierten Scheitelpunkttyp einrichten, der eine zweite normale oder eine zweite Position verwendet. Das folgende Codebeispiel zeigt eine Beispieldeklaration, die sowohl einen zweiten Punkt als auch eine zweite Position enthält.
 
 
 ```
@@ -46,7 +46,7 @@ struct TEX_VERTEX
 
 
 
-Der nächste Schritt besteht darin, die aktuelle Deklaration festzulegen. Das folgende Codebeispiel zeigt, wie Sie dies tun.
+Im nächsten Schritt wird die aktuelle Deklaration festgelegt. Das folgende Codebeispiel zeigt, wie dies funktioniert.
 
 
 ```
@@ -63,10 +63,10 @@ D3DVERTEXELEMENT9 decl[] =
 
 
 
-Weitere Informationen zum Erstellen eines benutzerdefinierten Scheitelpunkt Typs und eines Scheitelpunkt Puffers finden Sie unter [Erstellen eines Scheitelpunkt Puffers (Direct3D 9)](creating-a-vertex-buffer.md).
+Weitere Informationen zum Erstellen eines benutzerdefinierten Scheitelpunkttyps und eines Scheitelpunktpuffers finden Sie unter [Erstellen eines Scheitelpunktpuffers (Direct3D 9).](creating-a-vertex-buffer.md)
 
 > [!Note]  
-> Wenn die Vertex-Tweening aktiviert ist, muss in der aktuellen Deklaration eine zweite Position oder eine zweite normale Position vorhanden sein.
+> Wenn vertex tweening aktiviert ist, muss eine zweite Position oder eine zweite Normalität in der aktuellen Deklaration vorhanden sein.
 
  
 

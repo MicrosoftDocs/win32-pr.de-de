@@ -1,9 +1,9 @@
 ---
 title: D3DX_IsNan-Funktion
-description: Bestimmt, ob der Wert ein NaN (not a Number) ist.
+description: Bestimmt, ob der Wert ein NaN (Not a Number) ist.
 ms.assetid: 862d1d34-36ab-471e-b3ce-ce71896441e5
 keywords:
-- D3DX_IsNan-Funktion HLSL
+- D3DX_IsNan HlSL-Funktion
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 60aac82ebfb145bc11aac8d4ab509a4260767a74
-ms.sourcegitcommit: 14010c34b35fa268046c7683f021f86de08ddd0a
+ms.openlocfilehash: 6b8851fb216bf400971a281fb589b92205014e006651d4fc89592d98f5c93916
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "103961734"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118793749"
 ---
-# <a name="d3dx_isnan-function"></a>D3DX \_ isNaN-Funktion
+# <a name="d3dx_isnan-function"></a>\_D3DX-IsNan-Funktion
 
-Bestimmt, ob der Wert ein NaN (not a Number) ist.
+Bestimmt, ob der Wert ein NaN (Not a Number) ist.
 
 ## <a name="syntax"></a>Syntax
 
@@ -37,7 +37,7 @@ bool D3DX_IsNan(
 
 <dl> <dt>
 
-*\_Ramelow* 
+*\_V* 
 </dt> <dd>
 
 Der angegebene Wert.
@@ -46,15 +46,15 @@ Der angegebene Wert.
 
 ## <a name="return-value"></a>Rückgabewert
 
-true, wenn ein NaN; andernfalls false.
+TRUE, wenn ein NaN; andernfalls FALSE.
 
-## <a name="requirements"></a>Requirements (Anforderungen)
+## <a name="requirements"></a>Anforderungen
 
 
 
 | Anforderung | Wert |
 |-------------------|--------------------------------------------------------------------------------------------------------|
-| Header<br/> | <dl> <dt>D3DX \_ dxgiformatconvert. INL</dt> </dl> |
+| Header<br/> | <dl> <dt>D3DX \_ DXGIFormatConvert.inl</dt> </dl> |
 
 
 
@@ -65,7 +65,7 @@ true, wenn ein NaN; andernfalls false.
 [Funktionen](format-conversion-functions.md)
 </dt> <dt>
 
-[Entpacken und Verpacken des DXGI- \_ Formats für In-Place Bildbearbeitung](dx-graphics-hlsl-unpacking-packing-dxgi-format.md)
+[Entpacken und Packen von DXGI \_ FORMAT für In-Place Bildbearbeitung](dx-graphics-hlsl-unpacking-packing-dxgi-format.md)
 </dt> </dl>
 
  

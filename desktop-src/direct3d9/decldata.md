@@ -1,19 +1,19 @@
 ---
-description: Beschreibt eine Scheitelpunkt Deklaration.
+description: Beschreibt eine Scheitelpunktdeklaration.
 ms.assetid: 6a95bdf6-8767-4ad3-bcec-b32858d25571
-title: Decldata
+title: DeclData
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 89a26d667f853db3044db3155c55eb4a6d941c6e
-ms.sourcegitcommit: a47bd86f517de76374e4fff33cfeb613eb259a7e
+ms.openlocfilehash: 5686e3344e4642483490c9bd2892cbc92ade290567107b702cc9c56ff351c71a
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/06/2021
-ms.locfileid: "104481115"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118803235"
 ---
-# <a name="decldata"></a>Decldata
+# <a name="decldata"></a>DeclData
 
-Beschreibt eine Scheitelpunkt Deklaration.
+Beschreibt eine Scheitelpunktdeklaration.
 
 ``` syntax
 template DeclData
@@ -28,12 +28,12 @@ template DeclData
 
 Hierbei gilt:
 
--   nelements: Anzahl der Scheitelpunkt Deklarations Elemente.
--   Elemente \[ nelements \] -Array von Vertex-Deklarations Elementen.
--   ndwords: Anzahl der DWORDs.
--   Data \[ ndwords \] : Array von DWords, die die Daten in jedem Scheitelpunkt Element enthalten.
+-   nElements: Anzahl der Scheitelpunktdeklarationselemente.
+-   Elements \[ nElements \] : Array von Scheitelpunktdeklarationselementen.
+-   nDWords – Anzahl von DWORDS.
+-   data \[ nDWords: \] Array von DWORDS, die die Daten in jedem Scheitelpunktelement enthalten.
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 

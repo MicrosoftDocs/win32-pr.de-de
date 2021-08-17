@@ -1,49 +1,49 @@
 ---
-description: Die Kategorie biometrische Kategorie des Sensors \_ \_ enthält Sensoren, die Informationen zu Lebewesen bereitstellen.
+description: Die \_ Kategorie SENSOR CATEGORY \_ BIOMETRIC enthält Sensoren, die Informationen über Lebendwesen bereitstellen.
 ms.assetid: dfc7ad46-c13b-46d1-8854-0d93ecaac55a
-title: SENSOR_CATEGORY_BIOMETRIC (Sensors. h)
+title: SENSOR_CATEGORY_BIOMETRIC (Sensors.h)
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 71660c7bc94037c21502c91e017a8eba369766a0
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 1551a82e359d2277c8b46f227d7a72660b1419b3ba3ddfcf58bdd4ac1de5425b
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104128745"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118889576"
 ---
-# <a name="sensor_category_biometric"></a>Sensor \_ Kategorie \_ biometrische
+# <a name="sensor_category_biometric"></a>SENSORKATEGORIE \_ \_ BIOMETRIE
 
-Die Kategorie biometrische Kategorie des Sensors \_ \_ enthält Sensoren, die Informationen zu Lebewesen bereitstellen.
+Die \_ Kategorie SENSOR CATEGORY \_ BIOMETRIC enthält Sensoren, die Informationen über Lebendwesen bereitstellen.
 
-**Platt Form definierte Sensor Typen**
+**Plattformdefinierte Sensortypen**
 
-Diese Kategorie enthält die folgenden Platt Form definierten Sensortypen.
+Diese Kategorie umfasst die folgenden plattformdefinierte Sensortypen.
 
 
 
 | Sensortyp                                                                                                                                                                                                                                                                                           | BESCHREIBUNG                                     |
 |:------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|:------------------------------------------------|
-| <span id="SENSOR_TYPE_HUMAN_PRESENCE"></span><span id="sensor_type_human_presence"></span><dl> <dt>**Sensor \_ \_Typpräsenz \_ von Menschen**</dt> <dt>{C138C12B-AD52-451C-9375-87F518FF10C6}</dt> </dl>    | Sensoren, die die menschliche Präsenz erkennen.<br/>  |
-| <span id="SENSOR_TYPE_HUMAN_PROXIMITY"></span><span id="sensor_type_human_proximity"></span><dl> <dt>**Sensor \_ Type \_ Human \_ near**</dt> <dt>{5220dae9-3179-4430-9F 90-06266d2a34de}</dt> </dl> | Sensoren, mit denen die menschliche Nähe erkannt wird.<br/> |
-| <span id="SENSOR_TYPE_TOUCH"></span><span id="sensor_type_touch"></span><dl> <dt>**Sensor \_ Geben \_**</dt> Sie "berühren <dt>{17db3018-06c4-4b7599c27}</dt> " ein. </dl>                                | Touchscreen-Sensoren.<br/>                       |
+| <span id="SENSOR_TYPE_HUMAN_PRESENCE"></span><span id="sensor_type_human_presence"></span><dl> <dt>**SENSOR \_ TYPE \_ HUMAN \_ PRESENCE**</dt> <dt>{C138C12B-AD52-451C-9375-87F518FF10C6}</dt> </dl>    | Sensoren, die menschliche Präsenz erkennen.<br/>  |
+| <span id="SENSOR_TYPE_HUMAN_PROXIMITY"></span><span id="sensor_type_human_proximity"></span><dl> <dt>**SENSOR \_ TYPE \_ HUMAN \_ PROXIMITY**</dt> <dt>{5220DAE9-3179-4430-9F90-06266D2A34DE}</dt> </dl> | Sensoren, die menschliche Nähe erkennen.<br/> |
+| <span id="SENSOR_TYPE_TOUCH"></span><span id="sensor_type_touch"></span><dl> <dt>**SENSOR \_ TYPE \_ TOUCH**</dt> <dt>{17DB3018-06C4-4F7D-81AF-9274B7599C27}</dt> </dl>                                | Touchsensoren.<br/>                       |
 
 
 
-**Platt Form definierte Datenfelder**
+**Plattformdefinierte Datenfelder**
 
-Platt Form definierte Eigenschafts Schlüssel für diese Kategorie basieren auf der \_ \_ \_ biometrischen GUID des Sensor-Datentyps \_ :
+Plattformdefinierte Eigenschaftsschlüssel für diese Kategorie basieren auf DER \_ BIOMETRISCHEN BENUTZEROBERFLÄCHE DES \_ SENSORDATENTYPs: \_ \_
 
-{2299288a-6d9e-4b0b-b7ec-3528f 89e40af}
+{2299288A-6D9E-4B0B-B7EC-3528F89E40AF}
 
-Diese Kategorie enthält die folgenden Platt Form definierten Datenfelder.
+Diese Kategorie umfasst die folgenden plattformdefinierte Datenfelder.
 
 
 
-| Name und PID des Daten Felds                                                                                                                                                                                                                                                                                         | BESCHREIBUNG                                                                                               |
+| Datenfeldname und PID                                                                                                                                                                                                                                                                                         | BESCHREIBUNG                                                                                               |
 |:----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|:----------------------------------------------------------------------------------------------------------|
-| <span id="SENSOR_DATA_TYPE_HUMAN_PRESENCE"></span><span id="sensor_data_type_human_presence"></span><dl> <dt>**Sensor \_ \_ \_ \_ Anwesenheit des Datentyps**</dt> <dt>(PID = 2)</dt> </dl>                          | **VT \_ bool**<br/> **True** , wenn ein Benutzer den Computer verwendet.<br/>                           |
-| <span id="SENSOR_DATA_TYPE_HUMAN_PROXIMITY_METERS"></span><span id="sensor_data_type_human_proximity_meters"></span><dl> <dt>**Sensor \_ Datentyp: \_ \_ menschliche \_ near- \_ Zähler**</dt> <dt>(PID = 3)</dt> </dl> | **VT \_ R4**<br/> Abstand zwischen einem Menschen und dem Computer in Meter.<br/>                    |
-| <span id="SENSOR_DATA_TYPE_TOUCH_STATE"></span><span id="sensor_data_type_touch_state"></span><dl> <dt>**Sensor \_ Datentyp- \_ \_ Berührungs \_ Zustand**</dt> <dt>(PID = 4)</dt> </dl>                                   | **VT \_ bool**<br/> **True** , wenn der TouchSensor berührt wird. andernfalls **false**.<br/> |
+| <span id="SENSOR_DATA_TYPE_HUMAN_PRESENCE"></span><span id="sensor_data_type_human_presence"></span><dl> <dt>**SENSOR \_ \_DATENTYP \_ MENSCHLICHE \_ PRÄSENZ**</dt> <dt>(PID = 2)</dt> </dl>                          | **VT \_ BOOL**<br/> **TRUE,** wenn ein Mensch den Computer verwendet.<br/>                           |
+| <span id="SENSOR_DATA_TYPE_HUMAN_PROXIMITY_METERS"></span><span id="sensor_data_type_human_proximity_meters"></span><dl> <dt>**SENSOR \_ \_DATENTYP: \_ \_ NÄHERUNGSZÄHLER \_**</dt> FÜR MENSCHEN <dt>(PID = 3)</dt> </dl> | **VT \_ R4**<br/> Abstand zwischen einem Menschen und dem Computer in Metern.<br/>                    |
+| <span id="SENSOR_DATA_TYPE_TOUCH_STATE"></span><span id="sensor_data_type_touch_state"></span><dl> <dt>**SENSOR \_ TOUCHZUSTAND DES \_ \_ \_ DATENTYPS**</dt> <dt>(PID = 4)</dt> </dl>                                   | **VT \_ BOOL**<br/> **TRUE,** wenn der Touchsensor berührt wird; Andernfalls **FALSE**.<br/> |
 
 
 
@@ -53,9 +53,9 @@ Diese Kategorie enthält die folgenden Platt Form definierten Datenfelder.
 
 | Anforderung | Wert |
 |-------------------------------------|--------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows 7 \[ -Desktop-Apps\]<br/>                                           |
+| Unterstützte Mindestversion (Client)<br/> | nur Windows 7 \[ Desktop-Apps\]<br/>                                           |
 | Unterstützte Mindestversion (Server)<br/> | Nicht unterstützt<br/>                                                            |
-| Header<br/>                   | <dl> <dt>Sensoren. h</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Sensors.h</dt> </dl> |
 
 
 

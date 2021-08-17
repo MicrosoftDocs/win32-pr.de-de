@@ -1,9 +1,9 @@
 ---
 title: D3DX_B8G8R8X8_UNORM_SRGB_to_FLOAT3_inexact-Funktion
-description: Entpackt DXGI- \_ Format \_ B8G8R8X8 \_ unorm \_ sRGB-Shader-Daten in eine XMFLOAT3. | D3DX_B8G8R8X8_UNORM_SRGB_to_FLOAT3_inexact-Funktion
+description: Entpackt DXGI \_ FORMAT \_ B8G8R8X8 \_ UNORM \_ SRGB-Shaderdaten in ein XMFLOAT3. | D3DX_B8G8R8X8_UNORM_SRGB_to_FLOAT3_inexact-Funktion
 ms.assetid: caa64f89-7b9e-4bc0-82dc-31edfd31d495
 keywords:
-- D3DX_B8G8R8X8_UNORM_SRGB_to_FLOAT3_inexact-Funktion HLSL
+- D3DX_B8G8R8X8_UNORM_SRGB_to_FLOAT3_inexact HlSL-Funktion
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 2ef3f0b97ee3d5e21fef7b0227304fc5b187df2c
-ms.sourcegitcommit: 14010c34b35fa268046c7683f021f86de08ddd0a
+ms.openlocfilehash: f696381402d8ad42c92310029631e66b457e3b211d22d8f9de3dd98c1f1312ef
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "104982113"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118986870"
 ---
-# <a name="d3dx_b8g8r8x8_unorm_srgb_to_float3_inexact-function"></a>D3DX \_ B8G8R8X8 \_ unorm \_ sRGB \_ in \_ FLOAT3 \_ ungenau-Funktion
+# <a name="d3dx_b8g8r8x8_unorm_srgb_to_float3_inexact-function"></a>Ungenaue Funktion "D3DX \_ B8G8R8X8 \_ UNORM \_ SRGB \_ to \_ \_ FLOAT3"
 
-Entpackt DXGI- \_ Format \_ B8G8R8X8 \_ unorm \_ sRGB-Shader-Daten in eine XMFLOAT3.
+Entpackt DXGI \_ FORMAT \_ B8G8R8X8 \_ UNORM \_ SRGB-Shaderdaten in ein XMFLOAT3.
 
 ## <a name="syntax"></a>Syntax
 
@@ -37,28 +37,28 @@ XMFLOAT3 D3DX_B8G8R8X8_UNORM_SRGB_to_FLOAT3_inexact(
 
 <dl> <dt>
 
-*packedinput* 
+*packedInput* 
 </dt> <dd>
 
-Die gepackten Shader-Daten.
+Die gepackten Shaderdaten.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Die entpackten Shader-Daten.
+Die entpackten Shaderdaten.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Diese Funktion verwendet shaderanweisungen, die keine hohe genug Genauigkeit aufweisen, um die genaue Antwort zu erhalten. Die Alternative Funktion [**D3DX \_ B8G8R8X8 \_ unorm \_ sRGB \_ to \_ FLOAT3**](d3dx-b8g8r8x8-unorm-srgb-to-float3.md) verwendet eine im Shader gespeicherte Such Tabelle, um eine exakte sRGB-Konvertierung für die Gleit Komma Zahl zu verwenden.
+Diese Funktion verwendet Shaderanweisungen, die nicht über eine ausreichende Genauigkeit verfügen, um die genaue Antwort zu geben. Die alternative Funktion [**D3DX \_ B8G8R8X8 \_ UNORM \_ SRGB \_ in \_ FLOAT3**](d3dx-b8g8r8x8-unorm-srgb-to-float3.md) verwendet eine im Shader gespeicherte Nachschlagetabelle, um eine genaue Konvertierung von SRGB in Float zu ermöglichen.
 
-## <a name="requirements"></a>Requirements (Anforderungen)
+## <a name="requirements"></a>Anforderungen
 
 
 
 | Anforderung | Wert |
 |-------------------|--------------------------------------------------------------------------------------------------------|
-| Header<br/> | <dl> <dt>D3DX \_ dxgiformatconvert. INL</dt> </dl> |
+| Header<br/> | <dl> <dt>D3DX \_ DXGIFormatConvert.inl</dt> </dl> |
 
 
 
@@ -69,7 +69,7 @@ Diese Funktion verwendet shaderanweisungen, die keine hohe genug Genauigkeit auf
 [Funktionen](format-conversion-functions.md)
 </dt> <dt>
 
-[Entpacken und Verpacken des DXGI- \_ Formats für In-Place Bildbearbeitung](dx-graphics-hlsl-unpacking-packing-dxgi-format.md)
+[Entpacken und Packen von DXGI \_ FORMAT für In-Place Bildbearbeitung](dx-graphics-hlsl-unpacking-packing-dxgi-format.md)
 </dt> </dl>
 
  

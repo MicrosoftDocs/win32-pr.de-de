@@ -1,19 +1,19 @@
 ---
-description: Wenn ein Methoden Aufrufwert einen Fehler erzeugt, geben viele Funktionen einen Fehlercode zurück.
+description: Wenn ein Methodenaufruf einen Fehler erzeugt, geben viele Funktionen einen Fehlercode zurück.
 ms.assetid: 9d60277a-5ee8-471e-bfcd-d104064030a8
 title: Abrufen von Fehlermeldungen
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: cefeab75e4419bc1e36785236962069a6913e84d
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: d96ffb6627dac4f8612a80c68b1a227516ec645440c56dd7c58672cd8222c23a
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "103865012"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118900507"
 ---
 # <a name="retrieving-error-messages"></a>Abrufen von Fehlermeldungen
 
-Wenn ein Methoden Aufrufwert einen Fehler erzeugt, geben viele Funktionen einen Fehlercode zurück. Für die meisten Zertifikat Dienst Schnittstellen und API-Elemente, die einen Fehlercode zurückgeben, kann der Fehlermeldungs Text abgerufen werden, indem [**FormatMessage**](/windows/win32/api/winbase/nf-winbase-formatmessage) mit einem **null** -Modul Handle aufgerufen wird. Wenn **FormatMessage** nicht erfolgreich ist, führte der Fehlercode höchstwahrscheinlich aus einem Backup-API-Element oder einem Daten Bank bezogenen Fehler. Wenn Sie **FormatMessage** mit einem Modul handle aufrufen, das der Ntdsbmsg.dll Bibliothek entspricht, sollte der Fehlermeldungs Text abgerufen werden. Im folgenden Beispiel wird gezeigt, wie Fehlermeldungs Text in einer Zertifikat Dienst Anwendung abgerufen wird.
+Wenn ein Methodenaufruf einen Fehler erzeugt, geben viele Funktionen einen Fehlercode zurück. Für die meisten Certificate Services-Schnittstellen und API-Elemente, die einen Fehlercode zurückgeben, kann der Fehlermeldungstext durch Aufrufen von [**FormatMessage**](/windows/win32/api/winbase/nf-winbase-formatmessage) mit einem **NULL-Modulhandle** abgerufen werden. Wenn **FormatMessage** nicht erfolgreich ist, ist der Fehlercode höchstwahrscheinlich auf einen Api-Sicherungselement- oder datenbankbezogenen Fehler zurückzuführen. Der Aufruf von **FormatMessage** mit einem Modulhandle, das der Ntdsbmsg.dll Bibliothek entspricht, sollte den Fehlermeldungstext abrufen. Das folgende Beispiel zeigt, wie Der Text der Fehlermeldung in einer Zertifikatdienstanwendung abgerufen wird.
 
 
 ```C++

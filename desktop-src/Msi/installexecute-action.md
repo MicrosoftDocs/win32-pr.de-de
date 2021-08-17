@@ -1,31 +1,31 @@
 ---
-description: Mit der InstallExecute-Aktion wird ein Skript ausgeführt, das alle Vorgänge in der Aktions Sequenz seit dem Start der Installation oder der letzten InstallExecute-Aktion oder InstallExecuteAgain-Aktion enthält.
+description: Die InstallExecute-Aktion führt ein Skript aus, das alle Vorgänge in der Aktionssequenz seit dem Start der Installation oder der letzten InstallExecute-Aktion oder der InstallExecuteAndroin-Aktion enthält.
 ms.assetid: a124e9fb-f9fa-4ed3-8f32-4f1fab392530
 title: InstallExecute-Aktion
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 76417a4f188849f9a5af5a90b08e1f4bb5977afc
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 249a83f283b3abee97fbddf99d755b158678726fbb36c066791e3f87ae718f46
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104128380"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118946128"
 ---
 # <a name="installexecute-action"></a>InstallExecute-Aktion
 
-Mit der InstallExecute-Aktion wird ein Skript ausgeführt, das alle Vorgänge in der Aktions Sequenz seit dem Start der Installation oder der letzten InstallExecute-Aktion oder [InstallExecuteAgain](installexecuteagain-action.md)-Aktion enthält. Die InstallExecute-Aktion aktualisiert das System, ohne die Transaktion zu beenden.
+Die InstallExecute-Aktion führt ein Skript aus, das alle Vorgänge in der Aktionssequenz seit dem Start der Installation oder der letzten InstallExecute-Aktion oder [der InstallExecuteAndroin-Aktion](installexecuteagain-action.md)enthält. Die InstallExecute-Aktion aktualisiert das System, ohne die Transaktion zu beenden.
 
-## <a name="sequence-restrictions"></a>Sequenz Einschränkungen
+## <a name="sequence-restrictions"></a>Sequenzeinschränkungen
 
-Die InstallExecute-Aktion erfolgt zwischen der Aktion [InstallInitialize](installinitialize-action.md) und der [InstallFinalize](installfinalize-action.md)-Aktion.
+Die InstallExecute-Aktion wird zwischen der [InstallInitialize-Aktion](installinitialize-action.md) und der [InstallFinalize-Aktion ausgeführt.](installfinalize-action.md)
 
-## <a name="actiondata-messages"></a>Aktions Daten Meldungen
+## <a name="actiondata-messages"></a>ActionData-Nachrichten
 
-Es sind keine Aktions Daten Meldungen vorhanden.
+Es sind keine ActionData-Meldungen vorhanden.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die [InstallExecuteAgain-Aktion](installexecuteagain-action.md) bewirkt dasselbe wie die InstallExecute-Aktion. Da die Sequenz Tabellen nur über einen Primärschlüssel verfügen, kann die Aktionsspalte nicht in einer bestimmten Sequenz Tabelle wiederholt werden. Es gibt zwei Aktionen, die dasselbe tun, InstallExecute und InstallExecuteAgain, in Fällen, in denen die Funktionalität von InstallExecute zweimal in der [InstallExecuteSequence-Tabelle](installexecutesequence-table.md)benötigt wird. Weitere Informationen finden Sie unter [Verwenden einer Sequenz Tabelle](using-a-sequence-table.md).
+Die [InstallExecuteAndroin-Aktion](installexecuteagain-action.md) führt die gleiche Aktion wie die InstallExecute-Aktion aus. Da die Sequenztabellen nur über einen Primärschlüssel , die Action-Spalte, verfügen, kann dieselbe Aktion nicht in einer bestimmten Sequenztabelle wiederholt werden. Es gibt zwei Aktionen, die dasselbe tun: InstallExecute und InstallExecuteAndroin, wenn die Funktionalität von InstallExecute zweimal in der [Tabelle InstallExecuteSequence](installexecutesequence-table.md)benötigt wird. Weitere Informationen finden Sie unter [Verwenden einer Sequenztabelle.](using-a-sequence-table.md)
 
  
 

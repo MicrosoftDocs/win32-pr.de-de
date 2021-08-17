@@ -16,14 +16,14 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: 2f262c8538763dc4d0de3784bdf6523d905a2eac
-ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
+ms.openlocfilehash: 04789a47b403b287d4654a6717662b51982405efcbe38eef641b5f5c33fcc416
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2021
-ms.locfileid: "108096518"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118955419"
 ---
-# <a name="camschedulecamschedule-destructor"></a>CABSchedule.~CABSchedule-Destruktor
+# <a name="camschedulecamschedule-destructor"></a>CABSchedule.~CSVSchedule-Destruktor
 
 Destruktormethode.
 
@@ -40,7 +40,7 @@ Destruktormethode.
 
 
 
-| Anforderungen | Wert |
+| Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Header<br/>  | <dl> <dt>Dsschedule.h (include Streams.h)</dt> </dl>                                                                                |
 | Bibliothek<br/> | <dl> <dt>Strmbase.lib (Verkaufsbuilds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |

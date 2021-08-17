@@ -1,7 +1,7 @@
 ---
 description: Schreibt eine Zeichenfolge in die angegebene Datenbank.
 ms.assetid: 72c62d91-0c1c-4ff8-8829-1c3ec1fa8648
-title: Sdbschreitestringtag-Funktion
+title: SdbWriteStringTag-Funktion
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,14 +13,14 @@ api_type:
 - DllExport
 api_location:
 - Apphelp.dll
-ms.openlocfilehash: 4ac588d99408d0d7f13bc0fd13d8abe8a6580e69
-ms.sourcegitcommit: c7add10d695482e1ceb72d62b8a4ebd84ea050f7
+ms.openlocfilehash: 942d7995e002f7f211a84c333d44e26531e361beec0adfaaa75ad7dc433ea3b5
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "103860887"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119075964"
 ---
-# <a name="sdbwritestringtag-function"></a>Sdbschreitestringtag-Funktion
+# <a name="sdbwritestringtag-function"></a>SdbWriteStringTag-Funktion
 
 Schreibt eine Zeichenfolge in die angegebene Datenbank.
 
@@ -41,30 +41,30 @@ BOOL WINAPI SdbWriteStringTag(
 
 <dl> <dt>
 
-*PDB* \[ in\]
+*pdb* \[ In\]
 </dt> <dd>
 
-Ein Handle für die Shimdatenbank.
+Ein Handle für die Shim-Datenbank.
 
 </dd> <dt>
 
-*ttag* \[ in\]
+*tTag* \[ In\]
 </dt> <dd>
 
-Das-Tag für den Eintrag. Dieses Tag muss vom Typ " **\_ Tagtyp \_**" "".
+Das TAG für den Eintrag. Dieses TAG muss vom Typ **TAG \_ TYPE \_ STRINGREF sein.**
 
 </dd> <dt>
 
-*pwszdata* \[ in\]
+*pwszData* \[ In\]
 </dt> <dd>
 
-Die NULL-terminierte Zeichenfolge. Dieser Parameter darf nicht **null** sein.
+Die auf NULL beendete Zeichenfolge. Dieser Parameter darf nicht **NULL sein.**
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Bei einem Fehler gibt die Funktion **true** oder **false** zurück.
+Die Funktion gibt **TRUE bei** Erfolg oder **FALSE bei** Einem Fehler zurück.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -72,26 +72,26 @@ Bei einem Fehler gibt die Funktion **true** oder **false** zurück.
 
 | Anforderung | Wert |
 |-------------------------------------|----------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                         |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/>                                   |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ Vista-Desktop-Apps\]<br/>                                         |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/>                                   |
 | DLL<br/>                      | <dl> <dt>Apphelp.dll</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Sdbschreitebinarytag**](sdbwritebinarytag.md)
+[**SdbWriteBinaryTag**](sdbwritebinarytag.md)
 </dt> <dt>
 
-[**Sdbschreitedwordtag**](sdbwritedwordtag.md)
+[**SdbWriteDWORDTag**](sdbwritedwordtag.md)
 </dt> <dt>
 
-[**Sdbschreiteqwordtag**](sdbwriteqwordtag.md)
+[**SdbWriteQWORDTag**](sdbwriteqwordtag.md)
 </dt> <dt>
 
-[**Sdbschreitewordtag**](sdbwritewordtag.md)
+[**SdbWriteWORDTag**](sdbwritewordtag.md)
 </dt> </dl>
 
  

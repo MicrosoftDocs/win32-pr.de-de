@@ -4,8 +4,8 @@ description: Die primäre Mobiltelefonnummer.
 ms.assetid: c35fbaf1-e3f2-45df-98bd-e47ed79373ee
 ms.tgt_platform: multiple
 keywords:
-- Telefon-Mobile-Primary-Attribut AD-Schema
-- mobile attribute AD Schema
+- ad-Schema für Telefon-Mobile-Primary-Attribut
+- MOBILE-Attribut AD-Schema
 topic_type:
 - apiref
 api_name:
@@ -33,9 +33,9 @@ Die primäre Mobiltelefonnummer.
 | Ldap-Anzeigename | mobile                                                                           |
 | Size              | \-                                                                               |
 | Aktualisieren von Berechtigungen  | Domänenadministrator oder Kontobesitzer.                                           |
-| Updatehäufigkeit  | Wenn der Datensatz des Benutzers erstellt wird und wann immer sich die Telefonnummer ändern muss. |
+| Updatehäufigkeit  | Wenn der Datensatz des Benutzers erstellt wird und die Telefonnummer geändert werden muss. |
 | Attribute-Id      | 0.9.2342.19200300.100.1.41                                                       |
-| System-Id-Guid    | f0f8ffa3-1191-11d0-a060-00aa006c33ed                                             |
+| System-ID-GUID    | f0f8ffa3-1191-11d0-a060-00aa006c33ed                                             |
 | Syntax            | [**String(Unicode)**](s-string-unicode.md)                                      |
 
 
@@ -58,7 +58,7 @@ Die primäre Mobiltelefonnummer.
 | Link-ID                | \-                                                                 |
 | MAPI-Id                | 0x3A1C                                                             |
 | System-Only            | Falsch                                                              |
-| Is-Single-Valued       | Richtig                                                               |
+| Ist einwertig       | Richtig                                                               |
 | Ist indiziert             | Falsch                                                              |
 | Im globalen Katalog      | Falsch                                                              |
 | NT-Security-Descriptor | O:BAG:BAD:S:                                                       |
@@ -79,7 +79,7 @@ Die primäre Mobiltelefonnummer.
 | Link-ID                | \-                                                                                                                                                       |
 | MAPI-Id                | 0x3A1C                                                                                                                                                   |
 | System-Only            | Falsch                                                                                                                                                    |
-| Is-Single-Valued       | Richtig                                                                                                                                                     |
+| Ist einwertig       | Richtig                                                                                                                                                     |
 | Ist indiziert             | Falsch                                                                                                                                                    |
 | Im globalen Katalog      | Falsch                                                                                                                                                    |
 | NT-Security-Descriptor | O:BAG:BAD:S:                                                                                                                                             |
@@ -100,7 +100,7 @@ Die primäre Mobiltelefonnummer.
 | Link-ID                | \-                                                                                                                                                       |
 | MAPI-Id                | 0x3A1C                                                                                                                                                   |
 | System-Only            | Falsch                                                                                                                                                    |
-| Is-Single-Valued       | Richtig                                                                                                                                                     |
+| Ist einwertig       | Richtig                                                                                                                                                     |
 | Ist indiziert             | Falsch                                                                                                                                                    |
 | Im globalen Katalog      | Falsch                                                                                                                                                    |
 | NT-Security-Descriptor | O:BAG:BAD:S:                                                                                                                                             |
@@ -121,7 +121,7 @@ Die primäre Mobiltelefonnummer.
 | Link-ID                | \-                                                                                                                                                       |
 | MAPI-Id                | 0x3A1C                                                                                                                                                   |
 | System-Only            | Falsch                                                                                                                                                    |
-| Is-Single-Valued       | Richtig                                                                                                                                                     |
+| Ist einwertig       | Richtig                                                                                                                                                     |
 | Ist indiziert             | Falsch                                                                                                                                                    |
 | Im globalen Katalog      | Falsch                                                                                                                                                    |
 | NT-Security-Descriptor | O:BAG:BAD:S:                                                                                                                                             |
@@ -142,7 +142,7 @@ Die primäre Mobiltelefonnummer.
 | Link-ID                | \-                                                                                                                                                       |
 | MAPI-Id                | 0x3A1C                                                                                                                                                   |
 | System-Only            | Falsch                                                                                                                                                    |
-| Is-Single-Valued       | Richtig                                                                                                                                                     |
+| Ist einwertig       | Richtig                                                                                                                                                     |
 | Ist indiziert             | Falsch                                                                                                                                                    |
 | Im globalen Katalog      | Falsch                                                                                                                                                    |
 | NT-Security-Descriptor | O:BAG:BAD:S:                                                                                                                                             |
@@ -163,7 +163,7 @@ Die primäre Mobiltelefonnummer.
 | Link-ID                | \-                                                                                                                                                       |
 | MAPI-Id                | 0x3A1C                                                                                                                                                   |
 | System-Only            | Falsch                                                                                                                                                    |
-| Is-Single-Valued       | Richtig                                                                                                                                                     |
+| Ist einwertig       | Richtig                                                                                                                                                     |
 | Ist indiziert             | Falsch                                                                                                                                                    |
 | Im globalen Katalog      | Falsch                                                                                                                                                    |
 | NT-Security-Descriptor | O:BAG:BAD:S:                                                                                                                                             |

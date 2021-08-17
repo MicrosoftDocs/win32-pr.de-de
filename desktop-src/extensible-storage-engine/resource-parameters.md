@@ -1,5 +1,5 @@
 ---
-description: 'Weitere Informationen zu: Ressourcen Parametern'
+description: Weitere Informationen finden Sie unter Ressourcenparameter.
 title: Ressourcenparameter
 TOCTitle: Resource Parameters
 ms:assetid: 1f61845a-ffa5-4894-9fe0-a58737b3b54e
@@ -15,12 +15,12 @@ api_type:
 - COM
 api_location: ''
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: 953488a273092413df78d4fe396899d284c7a01c
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 87c8c93e70950aca360e4aa9bad62b8280611c6713156dec80e4d11414f346d0
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106362517"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118978600"
 ---
 # <a name="resource-parameters"></a>Ressourcenparameter
 
@@ -34,9 +34,9 @@ Dieses Thema enthält Parameter, die für Ressourcen verwendet werden.
 *JET_paramCachedClosedTables*  
 125  
 
-Dieser Parameter steuert die Anzahl der B +-strukturressourcen, die von der-Instanz zwischengespeichert wurden, nachdem die Tabellen, die Sie darstellen, von der Anwendung geschlossen wurden.
+Dieser Parameter steuert die Anzahl der B+-Strukturressourcen, die von der -Instanz zwischengespeichert werden, nachdem die tabellen, die sie darstellen, von der Anwendung geschlossen wurden.
 
-Große Werte für diesen Parameter bewirken, dass die Datenbank-Engine mehr Arbeitsspeicher verwendet, aber die Geschwindigkeit erhöht, mit der eine große Anzahl von Tabellen nach dem Zufallsprinzip von der Anwendung geöffnet werden kann. Dies ist nützlich für Anwendungen, die über ein Schema mit einer sehr großen Anzahl von Tabellen verfügen.
+Große Werte für diesen Parameter führen dazu, dass die Datenbank-Engine mehr Arbeitsspeicher verwendet, erhöht jedoch die Geschwindigkeit, mit der eine große Anzahl von Tabellen nach dem Zufallsprinzip von der Anwendung geöffnet werden kann. Dies ist nützlich für Anwendungen, die über ein Schema mit einer sehr großen Anzahl von Tabellen verfügen.
 
 <table>
 <colgroup>
@@ -61,19 +61,19 @@ Große Werte für diesen Parameter bewirken, dass die Datenbank-Engine mehr Arbe
 <td><p>Instanz</p></td>
 </tr>
 <tr class="odd">
-<td><p>Nach <a href="gg269354(v=exchg.10).md">jetkreateinstance</a>festlegen:</p></td>
+<td><p>Legen Sie nach <a href="gg269354(v=exchg.10).md">JetCreateInstance fest:</a></p></td>
 <td><p>Ja</p></td>
 </tr>
 <tr class="even">
-<td><p>Nach <a href="gg294068(v=exchg.10).md">jetinit</a>festlegen:</p></td>
+<td><p>Legen Sie nach <a href="gg294068(v=exchg.10).md">JetInit fest:</a></p></td>
 <td><p>Nein</p></td>
 </tr>
 <tr class="odd">
-<td><p>Hat Auswirkungen auf das physische Layout:</p></td>
+<td><p>Wirkt sich auf das physische Layout aus:</p></td>
 <td><p>Nein</p></td>
 </tr>
 <tr class="even">
-<td><p>Beeinträchtigt die Zuverlässigkeit:</p></td>
+<td><p>Wirkt sich auf die Zuverlässigkeit aus:</p></td>
 <td><p>Nein</p></td>
 </tr>
 <tr class="odd">
@@ -95,7 +95,7 @@ Große Werte für diesen Parameter bewirken, dass die Datenbank-Engine mehr Arbe
 *JET_paramDisablePerfmon*  
 107  
 
-Dieser Parameter kann verwendet werden, um zu verhindern, dass die Datenbank-Engine Daten über seine Leistung in Windows veröffentlicht. Dies kann erreicht werden, um die Dienst Thread Aktivität der Datenbank-Engine zu verringern.
+Dieser Parameter kann verwendet werden, um zu verhindern, dass die Datenbank-Engine Daten zur Leistung veröffentlicht, um Windows. Dies kann durchgeführt werden, um die Dienstthreadaktivität der Datenbank-Engine zu reduzieren.
 
 <table>
 <colgroup>
@@ -105,7 +105,7 @@ Dieser Parameter kann verwendet werden, um zu verhindern, dass die Datenbank-Eng
 <tbody>
 <tr class="odd">
 <td><p>Standardwert:</p></td>
-<td><p>False</p></td>
+<td><p>Falsch</p></td>
 </tr>
 <tr class="even">
 <td><p>Typ:</p></td>
@@ -120,19 +120,19 @@ Dieser Parameter kann verwendet werden, um zu verhindern, dass die Datenbank-Eng
 <td><p>Global</p></td>
 </tr>
 <tr class="odd">
-<td><p>Nach <a href="gg269354(v=exchg.10).md">jetkreateinstance</a>festlegen:</p></td>
+<td><p>Legen Sie nach <a href="gg269354(v=exchg.10).md">JetCreateInstance fest:</a></p></td>
 <td><p>Nein</p></td>
 </tr>
 <tr class="even">
-<td><p>Nach <a href="gg294068(v=exchg.10).md">jetinit</a>festlegen:</p></td>
+<td><p>Legen Sie nach <a href="gg294068(v=exchg.10).md">JetInit fest:</a></p></td>
 <td><p>Nein</p></td>
 </tr>
 <tr class="odd">
-<td><p>Hat Auswirkungen auf das physische Layout:</p></td>
+<td><p>Wirkt sich auf das physische Layout aus:</p></td>
 <td><p>Nein</p></td>
 </tr>
 <tr class="even">
-<td><p>Beeinträchtigt die Zuverlässigkeit:</p></td>
+<td><p>Wirkt sich auf die Zuverlässigkeit aus:</p></td>
 <td><p>Nein</p></td>
 </tr>
 <tr class="odd">
@@ -154,11 +154,11 @@ Dieser Parameter kann verwendet werden, um zu verhindern, dass die Datenbank-Eng
 *JET_paramGlobalMinVerPages*  
 81  
 
-Dieser Parameter ermöglicht es Anwendungen, die im Modus für mehrere Instanzen arbeiten, Arbeitsspeicher für Versions Seiten in einem globalen Pool vorab zuzuweisen, um das ältere Verhalten zu emulieren. Dies ist nützlich für den Fall, dass die Anwendung sicherstellen möchte, dass Transaktionen einer bestimmten Größe später auch dann erfolgreich ausgeführt werden können, wenn der Arbeitsspeicher knapp wird.
+Mit diesem Parameter können Anwendungen, die im Modus mit mehreren Instanzen arbeiten, Vorabspeicher für Versionsseiten in einem globalen Pool zuordnen, um das ältere Verhalten zu emulieren. Dies ist nützlich, wenn die Anwendung garantieren möchte, dass Transaktionen einer bestimmten Größe später auch dann erfolgreich sein können, wenn der Arbeitsspeicher knapp wird.
 
-**Windows 2000:**  Genügend Arbeitsspeicher für alle Versions Seiten ist immer zur [jetinit](./jetinit-function.md) -Zeit reserviert.
+**Windows 2000:**  Ausreichend Arbeitsspeicher zum Sichern aller Versionsseiten wird immer zur [JetInit-Zeit](./jetinit-function.md) reserviert.
 
-**Windows XP:**  Ab Windows XP ist dies im Einzel Instanzmodus immer noch true. Der Arbeitsspeicher der Versions Seite wird jedoch im Modus für mehrere Instanzen dynamisch zugewiesen.
+**Windows XP:**  Ab dem Windows XP gilt dies weiterhin im Einzelinstanzmodus. Im Modus mit mehreren Instanzen wird der Versionsseitenspeicher jedoch dynamisch zugeordnet.
 
 <table>
 <colgroup>
@@ -183,19 +183,19 @@ Dieser Parameter ermöglicht es Anwendungen, die im Modus für mehrere Instanzen
 <td><p>Global</p></td>
 </tr>
 <tr class="odd">
-<td><p>Nach <a href="gg269354(v=exchg.10).md">jetkreateinstance</a>festlegen:</p></td>
+<td><p>Legen Sie nach <a href="gg269354(v=exchg.10).md">JetCreateInstance fest:</a></p></td>
 <td><p>Nein</p></td>
 </tr>
 <tr class="even">
-<td><p>Nach <a href="gg294068(v=exchg.10).md">jetinit</a>festlegen:</p></td>
+<td><p>Legen Sie nach <a href="gg294068(v=exchg.10).md">JetInit fest:</a></p></td>
 <td><p>Nein</p></td>
 </tr>
 <tr class="odd">
-<td><p>Hat Auswirkungen auf das physische Layout:</p></td>
+<td><p>Wirkt sich auf das physische Layout aus:</p></td>
 <td><p>Nein</p></td>
 </tr>
 <tr class="even">
-<td><p>Beeinträchtigt die Zuverlässigkeit:</p></td>
+<td><p>Wirkt sich auf die Zuverlässigkeit aus:</p></td>
 <td><p>Ja</p></td>
 </tr>
 <tr class="odd">
@@ -208,7 +208,7 @@ Dieser Parameter ermöglicht es Anwendungen, die im Modus für mehrere Instanzen
 </tr>
 <tr class="odd">
 <td><p>Verfügbarkeit:</p></td>
-<td><p>Versionen von Windows XP und höher</p></td>
+<td><p>Windows XP und spätere Versionen</p></td>
 </tr>
 </tbody>
 </table>
@@ -217,9 +217,9 @@ Dieser Parameter ermöglicht es Anwendungen, die im Modus für mehrere Instanzen
 *JET_paramMaxCursors*  
 8  
 
-Dieser Parameter reserviert die angeforderte Anzahl von Cursor Ressourcen für die Verwendung durch eine-Instanz. Eine Cursor Ressource entspricht direkt einem [JET_TABLEID](./jet-tableid.md) -Datentyp. Diese Einstellung wirkt sich darauf aus, wie viele Cursor gleichzeitig verwendet werden können. Eine Cursor Ressource kann nicht von verschiedenen Sitzungen gemeinsam genutzt werden, daher muss dieser Parameter auf einen ausreichend großen Wert festgelegt werden, damit jede Sitzung beliebig viele Cursor verwenden kann.
+Dieser Parameter reserviert die angeforderte Anzahl von Cursorressourcen für die Verwendung durch eine -Instanz. Eine Cursorressource entspricht direkt einem [JET_TABLEID](./jet-tableid.md) Datentyp. Diese Einstellung wirkt sich darauf aus, wie viele Cursor gleichzeitig verwendet werden können. Eine Cursorressource kann nicht von verschiedenen Sitzungen gemeinsam genutzt werden, daher muss dieser Parameter auf einen ausreichend großen Wert festgelegt werden, damit jede Sitzung so viele Cursor verwenden kann, wie erforderlich sind.
 
-**Windows 2000, Windows XP und Windows Server 2003:**  Große Werte für diesen Parameter belegen Adressraum und können die Speicherauslastung erhöhen.
+**Windows 2000, Windows XP und Windows Server 2003:**  Große Werte für diesen Parameter verbrauchen Adressraum und können die Speicherauslastung erhöhen.
 
 <table>
 <colgroup>
@@ -244,19 +244,19 @@ Dieser Parameter reserviert die angeforderte Anzahl von Cursor Ressourcen für d
 <td><p>Instanz</p></td>
 </tr>
 <tr class="odd">
-<td><p>Nach <a href="gg269354(v=exchg.10).md">jetkreateinstance</a>festlegen:</p></td>
+<td><p>Legen Sie nach <a href="gg269354(v=exchg.10).md">JetCreateInstance fest:</a></p></td>
 <td><p>Ja</p></td>
 </tr>
 <tr class="even">
-<td><p>Nach <a href="gg294068(v=exchg.10).md">jetinit</a>festlegen:</p></td>
+<td><p>Legen Sie nach <a href="gg294068(v=exchg.10).md">JetInit fest:</a></p></td>
 <td><p>Nein</p></td>
 </tr>
 <tr class="odd">
-<td><p>Hat Auswirkungen auf das physische Layout:</p></td>
+<td><p>Wirkt sich auf das physische Layout aus:</p></td>
 <td><p>Nein</p></td>
 </tr>
 <tr class="even">
-<td><p>Beeinträchtigt die Zuverlässigkeit:</p></td>
+<td><p>Wirkt sich auf die Zuverlässigkeit aus:</p></td>
 <td><p>Nein</p></td>
 </tr>
 <tr class="odd">
@@ -303,19 +303,19 @@ Dieser Parameter steuert die maximale Anzahl von Instanzen, die in einem einzeln
 <td><p>Global</p></td>
 </tr>
 <tr class="odd">
-<td><p>Nach <a href="gg269354(v=exchg.10).md">jetkreateinstance</a>festlegen:</p></td>
+<td><p>Legen Sie nach <a href="gg269354(v=exchg.10).md">JetCreateInstance fest:</a></p></td>
 <td><p>Nein</p></td>
 </tr>
 <tr class="even">
-<td><p>Nach <a href="gg294068(v=exchg.10).md">jetinit</a>festlegen:</p></td>
+<td><p>Legen Sie nach <a href="gg294068(v=exchg.10).md">JetInit fest:</a></p></td>
 <td><p>Nein</p></td>
 </tr>
 <tr class="odd">
-<td><p>Hat Auswirkungen auf das physische Layout:</p></td>
+<td><p>Wirkt sich auf das physische Layout aus:</p></td>
 <td><p>Nein</p></td>
 </tr>
 <tr class="even">
-<td><p>Beeinträchtigt die Zuverlässigkeit:</p></td>
+<td><p>Wirkt sich auf die Zuverlässigkeit aus:</p></td>
 <td><p>Nein</p></td>
 </tr>
 <tr class="odd">
@@ -328,7 +328,7 @@ Dieser Parameter steuert die maximale Anzahl von Instanzen, die in einem einzeln
 </tr>
 <tr class="odd">
 <td><p>Verfügbarkeit:</p></td>
-<td><p>Versionen von Windows XP und höher</p></td>
+<td><p>Windows XP und spätere Versionen</p></td>
 </tr>
 </tbody>
 </table>
@@ -337,11 +337,11 @@ Dieser Parameter steuert die maximale Anzahl von Instanzen, die in einem einzeln
 *JET_paramMaxOpenTables*  
 6  
 
-Dieser Parameter reserviert die angeforderte Anzahl von B +-strukturressourcen für die Verwendung durch eine-Instanz. Diese Einstellung wirkt sich darauf aus, wie viele Tabellen gleichzeitig verwendet werden können. Dieser Parameter muss relativ zum physischen Schema der Datenbanken festgelegt werden, die von der Datenbank-Engine verwendet werden. Daher ist diese Einstellung nicht so einfach wie möglich.
+Dieser Parameter reserviert die angeforderte Anzahl von B+-Strukturressourcen für die Verwendung durch eine -Instanz. Diese Einstellung wirkt sich darauf aus, wie viele Tabellen gleichzeitig verwendet werden können. Dieser Parameter muss relativ zum physischen Schema der Datenbanken festgelegt werden, die von der Datenbank-Engine verwendet werden, sodass diese Einstellung nicht so einfach wie möglich ist.
 
-Im Allgemeinen benötigen Sie zwei Ressourcen und eine Ressource pro sekundärem Index pro Tabelle, die gleichzeitig von der Anwendung verwendet wird.
+Im Allgemeinen benötigen Sie zwei Ressourcen plus eine Ressource pro sekundärem Index pro Tabelle bei gleichzeitiger Verwendung durch die Anwendung.
 
-**Windows 2000, Windows XP und Windows Server 2003:**  Große Werte für diesen Parameter belegen Adressraum und können die Speicherauslastung erhöhen.
+**Windows 2000, Windows XP und Windows Server 2003:**  Große Werte für diesen Parameter verbrauchen Adressraum und können die Speicherauslastung erhöhen.
 
 <table>
 <colgroup>
@@ -366,19 +366,19 @@ Im Allgemeinen benötigen Sie zwei Ressourcen und eine Ressource pro sekundärem
 <td><p>Instanz</p></td>
 </tr>
 <tr class="odd">
-<td><p>Nach <a href="gg269354(v=exchg.10).md">jetkreateinstance</a>festlegen:</p></td>
+<td><p>Legen Sie nach <a href="gg269354(v=exchg.10).md">JetCreateInstance fest:</a></p></td>
 <td><p>Ja</p></td>
 </tr>
 <tr class="even">
-<td><p>Nach <a href="gg294068(v=exchg.10).md">jetinit</a>festlegen:</p></td>
+<td><p>Legen Sie nach <a href="gg294068(v=exchg.10).md">JetInit fest:</a></p></td>
 <td><p>Nein</p></td>
 </tr>
 <tr class="odd">
-<td><p>Hat Auswirkungen auf das physische Layout:</p></td>
+<td><p>Wirkt sich auf das physische Layout aus:</p></td>
 <td><p>Nein</p></td>
 </tr>
 <tr class="even">
-<td><p>Beeinträchtigt die Zuverlässigkeit:</p></td>
+<td><p>Wirkt sich auf die Zuverlässigkeit aus:</p></td>
 <td><p>Nein</p></td>
 </tr>
 <tr class="odd">
@@ -400,9 +400,9 @@ Im Allgemeinen benötigen Sie zwei Ressourcen und eine Ressource pro sekundärem
 *JET_paramMaxSessions*  
 5  
 
-Dieser Parameter reserviert die angeforderte Anzahl von Sitzungs Ressourcen für die Verwendung durch eine Instanz. Eine Sitzungs Ressource entspricht direkt einem [JET_SESID](./jet-sesid.md) -Datentyp. Diese Einstellung wirkt sich darauf aus, wie viele Sitzungen gleichzeitig verwendet werden können.
+Dieser Parameter reserviert die angeforderte Anzahl von Sitzungsressourcen für die Verwendung durch eine -Instanz. Eine Sitzungsressource [](./jet-sesid.md) entspricht direkt einem JET_SESID-Datentyp. Diese Einstellung wirkt sich darauf aus, wie viele Sitzungen gleichzeitig verwendet werden können.
 
-**Windows 2000, Windows XP und Windows Server 2003:**  Große Werte für diesen Parameter belegen Adressraum und können die Speicherauslastung erhöhen.
+**Windows 2000, Windows XP und Windows Server 2003:**  Große Werte für diesen Parameter verbrauchen Adressraum und können die Speicherauslastung erhöhen.
 
 <table>
 <colgroup>
@@ -427,19 +427,19 @@ Dieser Parameter reserviert die angeforderte Anzahl von Sitzungs Ressourcen für
 <td><p>Instanz</p></td>
 </tr>
 <tr class="odd">
-<td><p>Nach <a href="gg269354(v=exchg.10).md">jetkreateinstance</a>festlegen:</p></td>
+<td><p>Legen Sie nach <a href="gg269354(v=exchg.10).md">JetCreateInstance fest:</a></p></td>
 <td><p>Ja</p></td>
 </tr>
 <tr class="even">
-<td><p>Nach <a href="gg294068(v=exchg.10).md">jetinit</a>festlegen:</p></td>
+<td><p>Legen Sie nach <a href="gg294068(v=exchg.10).md">JetInit fest:</a></p></td>
 <td><p>Nein</p></td>
 </tr>
 <tr class="odd">
-<td><p>Hat Auswirkungen auf das physische Layout:</p></td>
+<td><p>Wirkt sich auf das physische Layout aus:</p></td>
 <td><p>Nein</p></td>
 </tr>
 <tr class="even">
-<td><p>Beeinträchtigt die Zuverlässigkeit:</p></td>
+<td><p>Wirkt sich auf die Zuverlässigkeit aus:</p></td>
 <td><p>Nein</p></td>
 </tr>
 <tr class="odd">
@@ -461,13 +461,13 @@ Dieser Parameter reserviert die angeforderte Anzahl von Sitzungs Ressourcen für
 *JET_paramMaxTemporaryTables*  
 10  
 
-Dieser Parameter reserviert die angeforderte Anzahl von temporären Tabellen Ressourcen für die Verwendung durch eine Instanz. Diese Einstellung wirkt sich darauf aus, wie viele temporäre Tabellen gleichzeitig verwendet werden können.
+Dieser Parameter reserviert die angeforderte Anzahl temporärer Tabellenressourcen für die Verwendung durch eine -Instanz. Diese Einstellung wirkt sich darauf aus, wie viele temporäre Tabellen gleichzeitig verwendet werden können.
 
-**Windows 2000, Windows XP und Windows Server 2003:**  Große Werte für diesen Parameter belegen Adressraum und können die Speicherauslastung erhöhen.
+**Windows 2000, Windows XP und Windows Server 2003:**  Große Werte für diesen Parameter verbrauchen Adressraum und können die Speicherauslastung erhöhen.
 
-**Windows XP und höher:**  Wenn dieser Systemparameter auf 0 (null) festgelegt ist, wird keine temporäre Datenbank erstellt, und jede Aktivität, die die temporäre Datenbank benötigt, schlägt fehl. Diese Einstellung kann hilfreich sein, um die e/a-Vorgänge zu vermeiden, die zum Erstellen der temporären Datenbank erforderlich sind, wenn bekannt ist, dass Sie nicht verwendet wird.
+**Windows XP und höher:**  Wenn dieser Systemparameter auf 0 (null) festgelegt ist, wird keine temporäre Datenbank erstellt, und alle Aktivitäten, die die verwendung der temporären Datenbank erfordern, schlagen fehl. Diese Einstellung kann nützlich sein, um die E/A zu vermeiden, die zum Erstellen der temporären Datenbank erforderlich ist, wenn bekannt ist, dass sie nicht verwendet wird.
 
-**Hinweis**  Die Verwendung einer temporären Tabelle erfordert auch eine Cursor Ressource.
+**Hinweis**  Die Verwendung einer temporären Tabelle erfordert auch eine Cursorressource.
 
 <table>
 <colgroup>
@@ -492,27 +492,27 @@ Dieser Parameter reserviert die angeforderte Anzahl von temporären Tabellen Res
 <td><p>Instanz</p></td>
 </tr>
 <tr class="odd">
-<td><p>Nach <a href="gg269354(v=exchg.10).md">jetkreateinstance</a>festlegen:</p></td>
+<td><p>Legen Sie nach <a href="gg269354(v=exchg.10).md">JetCreateInstance</a>fest:</p></td>
 <td><p>Ja</p></td>
 </tr>
 <tr class="even">
-<td><p>Nach <a href="gg294068(v=exchg.10).md">jetinit</a>festlegen:</p></td>
+<td><p>Legen Sie nach <a href="gg294068(v=exchg.10).md">JetInit fest:</a></p></td>
 <td><p>Nein</p></td>
 </tr>
 <tr class="odd">
-<td><p>Hat Auswirkungen auf das physische Layout:</p></td>
+<td><p>Wirkt sich auf das physische Layout aus:</p></td>
 <td><p>Ja</p></td>
 </tr>
 <tr class="even">
-<td><p>Beeinträchtigt die Zuverlässigkeit:</p></td>
+<td><p>Wirkt sich auf die Zuverlässigkeit aus:</p></td>
 <td><p>Nein</p></td>
 </tr>
 <tr class="odd">
-<td><p>Beeinträchtigt die Leistung:</p></td>
+<td><p>Wirkt sich auf die Leistung aus:</p></td>
 <td><p>Nein</p></td>
 </tr>
 <tr class="even">
-<td><p>Betrifft Ressourcen:</p></td>
+<td><p>Wirkt sich auf Ressourcen aus:</p></td>
 <td><p>Ja</p></td>
 </tr>
 <tr class="odd">
@@ -526,15 +526,15 @@ Dieser Parameter reserviert die angeforderte Anzahl von temporären Tabellen Res
 *JET_paramMaxVerPages*  
 9  
 
-Dieser Parameter reserviert die angeforderte Anzahl von Versionsspeicher Seiten für die Verwendung durch eine Instanz. Der Versionsspeicher enthält einen Live Datensatz aller verschiedenen Versionen der einzelnen Datensatz-oder Indexeinträge in der Datenbank, die von allen aktiven Transaktionen angezeigt werden können. Diese Versionen werden zur Unterstützung der Parallelitäts Steuerung mit mehreren Versionsverwaltung verwendet, die von der Datenbank-Engine verwendet wird, um Transaktionen mithilfe der Momentaufnahme Isolation zu unterstützen. Diese Einstellung wirkt sich darauf aus, wie viele Updates gleichzeitig im Arbeitsspeicher gespeichert werden können. Dies wirkt sich wiederum auf die maximale Anzahl von Updates aus, die eine einzelne Transaktion ausführen kann, die maximale Dauer, die eine Transaktion geöffnet werden kann, die maximale gleichzeitige Auslastung der Aktualisierung von Transaktionen im System oder eine Kombination daraus.
+Dieser Parameter reserviert die angeforderte Anzahl von Versionsspeicherseiten für die Verwendung durch eine -Instanz. Der Versionsspeicher enthält einen Livedatensatz aller verschiedenen Versionen jedes Datensatzes oder Indexeintrags in der Datenbank, der von allen aktiven Transaktionen angezeigt werden kann. Diese Versionen werden verwendet, um die parallele Steuerung mit mehreren Versionen zu unterstützen, die von der Datenbank-Engine verwendet wird, um Transaktionen mit Momentaufnahmeisolation zu unterstützen. Diese Einstellung wirkt sich darauf aus, wie viele Updates gleichzeitig im Arbeitsspeicher gespeichert werden können. Dies wirkt sich wiederum auf die maximale Anzahl von Updates aus, die eine einzelne Transaktion ausführen kann, die maximale Dauer, die eine Transaktion geöffnet bleiben kann, die maximale gleichzeitige Auslastung von Aktualisierungstransaktionen im System oder eine Kombination dieser Transaktionen.
 
-Jede Versionsspeicher Seite, die von diesem Parameter konfiguriert wurde, beträgt 16 KB auf 32-Bit-Computern und 32 KB auf 64-Bit-Computern.
+Jede version store-Seite, wie von diesem Parameter konfiguriert, hat eine Größe von 16 KB auf 32-Bit-Computern und 32 KB auf 64-Bit-Computern.
 
-**Windows Vista und höher:**  Die Seitengröße des Versionsspeicher kann über JET_paramVerPageSize gelesen und geändert werden.
+**Windows Vista und höher:**  Die Seitengröße des Versionsspeichers kann über JET_paramVerPageSize gelesen und geändert werden.
 
-**Windows 2000, Windows XP und Windows Server 2003:**  Große Werte für diesen Parameter belegen Adressraum und können die Speicherauslastung erhöhen.
+**Windows 2000, Windows XP und Windows Server 2003:**  Große Werte für diesen Parameter verbrauchen Adressraum und können die Speicherauslastung erhöhen.
 
-**Hinweis**  Dabei handelt es sich um die weit verbreiteten Ressourcen, die von der Datenbank-Engine aufgebraucht werden. Die Einstellung des System Parameters und die transaktionale Auslastung der Anwendung müssen sorgfältig beachtet werden, um zu vermeiden, dass diese Ressource im normalen Betrieb erschöpft ist. Wenn diese Ressource erschöpft ist, werden Updates der Datenbank mit Jet_errVersionStoreOutOfMemory zurückgewiesen. Um einige dieser Ressourcen freizugeben, muss die älteste ausstehende Transaktion abgebrochen werden.
+**Hinweis**  Dies ist die mit Abstand gängigste Ressource, die von der Datenbank-Engine erschöpft wird. Die Einstellung des Systemparameters und die Transaktionslast der Anwendung müssen sorgfältig beachtet werden, um zu vermeiden, dass diese Ressource im normalen Betrieb ausgelastete wird. Wenn diese Ressource erschöpft ist, werden Aktualisierungen der Datenbank mit JET_errVersionStoreOutOfMemory abgelehnt. Um einige dieser Ressourcen freizugeben, muss die älteste ausstehende Transaktion abgebrochen werden.
 
 <table>
 <colgroup>
@@ -559,27 +559,27 @@ Jede Versionsspeicher Seite, die von diesem Parameter konfiguriert wurde, beträ
 <td><p>Instanz</p></td>
 </tr>
 <tr class="odd">
-<td><p>Nach <a href="gg269354(v=exchg.10).md">jetkreateinstance</a>festlegen:</p></td>
+<td><p>Legen Sie nach <a href="gg269354(v=exchg.10).md">JetCreateInstance</a>fest:</p></td>
 <td><p>Ja</p></td>
 </tr>
 <tr class="even">
-<td><p>Nach <a href="gg294068(v=exchg.10).md">jetinit</a>festlegen:</p></td>
+<td><p>Legen Sie nach <a href="gg294068(v=exchg.10).md">JetInit fest:</a></p></td>
 <td><p>Nein</p></td>
 </tr>
 <tr class="odd">
-<td><p>Hat Auswirkungen auf das physische Layout:</p></td>
+<td><p>Wirkt sich auf das physische Layout aus:</p></td>
 <td><p>Nein</p></td>
 </tr>
 <tr class="even">
-<td><p>Beeinträchtigt die Zuverlässigkeit:</p></td>
+<td><p>Wirkt sich auf die Zuverlässigkeit aus:</p></td>
 <td><p>Ja</p></td>
 </tr>
 <tr class="odd">
-<td><p>Beeinträchtigt die Leistung:</p></td>
+<td><p>Wirkt sich auf die Leistung aus:</p></td>
 <td><p>Nein</p></td>
 </tr>
 <tr class="even">
-<td><p>Betrifft Ressourcen:</p></td>
+<td><p>Wirkt sich auf Ressourcen aus:</p></td>
 <td><p>Ja</p></td>
 </tr>
 <tr class="odd">
@@ -593,7 +593,7 @@ Jede Versionsspeicher Seite, die von diesem Parameter konfiguriert wurde, beträ
 *JET_paramPageHintCacheSize*  
 101  
 
-Dieser Parameter steuert die Größe eines speziellen Caches, der verwendet wird, um die Suche nach untergeordneten Seiten Zeigern der B +-Struktur im Datenbankseiten Cache zu beschleunigen. Die Größe des Caches beträgt bytes.
+Dieser Parameter steuert die Größe eines speziellen Caches, der verwendet wird, um die Suche nach untergeordneten Seitenzeigern der B+-Struktur im Datenbankseitencache zu beschleunigen. Die Größe des Caches ist in Bytes.
 
 <table>
 <colgroup>
@@ -618,32 +618,32 @@ Dieser Parameter steuert die Größe eines speziellen Caches, der verwendet wird
 <td><p>Global</p></td>
 </tr>
 <tr class="odd">
-<td><p>Nach <a href="gg269354(v=exchg.10).md">jetkreateinstance</a>festlegen:</p></td>
+<td><p>Legen Sie nach <a href="gg269354(v=exchg.10).md">JetCreateInstance</a>fest:</p></td>
 <td><p>Ja</p></td>
 </tr>
 <tr class="even">
-<td><p>Nach <a href="gg294068(v=exchg.10).md">jetinit</a>festlegen:</p></td>
+<td><p>Legen Sie nach <a href="gg294068(v=exchg.10).md">JetInit fest:</a></p></td>
 <td><p>Ja</p></td>
 </tr>
 <tr class="odd">
-<td><p>Hat Auswirkungen auf das physische Layout:</p></td>
+<td><p>Wirkt sich auf das physische Layout aus:</p></td>
 <td><p>Nein</p></td>
 </tr>
 <tr class="even">
-<td><p>Beeinträchtigt die Zuverlässigkeit:</p></td>
+<td><p>Wirkt sich auf die Zuverlässigkeit aus:</p></td>
 <td><p>Nein</p></td>
 </tr>
 <tr class="odd">
-<td><p>Beeinträchtigt die Leistung:</p></td>
+<td><p>Wirkt sich auf die Leistung aus:</p></td>
 <td><p>Ja</p></td>
 </tr>
 <tr class="even">
-<td><p>Betrifft Ressourcen:</p></td>
+<td><p>Wirkt sich auf Ressourcen aus:</p></td>
 <td><p>Ja</p></td>
 </tr>
 <tr class="odd">
 <td><p>Verfügbarkeit:</p></td>
-<td><p>Versionen von Windows XP und höher</p></td>
+<td><p>Windows XP und höhere Releases</p></td>
 </tr>
 </tbody>
 </table>
@@ -652,9 +652,9 @@ Dieser Parameter steuert die Größe eines speziellen Caches, der verwendet wird
 *JET_paramPreferredMaxOpenTables*  
 7  
 
-Dieser Parameter versucht, die Anzahl von B +-strukturressourcen unterhalb des angegebenen Schwellenwerts beizubehalten.
+Dieser Parameter versucht, die Anzahl der verwendeten B+-Strukturressourcen unter dem angegebenen Schwellenwert zu halten.
 
-Wenn dieser Parameter auf 0 (null) festgelegt ist, wird standardmäßig 100% der **JET_paramMaxOpenTables** verwendet.
+Wenn dieser Parameter auf 0 (null) festgelegt ist, wird standardmäßig 100 % der **JET_paramMaxOpenTables**.
 
 **Windows Vista und höher:**  Dieser Parameter ist veraltet und wirkt sich nicht auf den Betrieb der Datenbank-Engine aus. Anwendungen sollten stattdessen JET_paramMaxCachedClosedTables verwenden.
 
@@ -666,7 +666,7 @@ Wenn dieser Parameter auf 0 (null) festgelegt ist, wird standardmäßig 100% der
 <tbody>
 <tr class="odd">
 <td><p>Standardwert:</p></td>
-<td><p>0 (100% der <strong>JET_paramMaxOpenTables</strong>)</p></td>
+<td><p>0 (100 % der <strong>JET_paramMaxOpenTables</strong>)</p></td>
 </tr>
 <tr class="even">
 <td><p>Typ:</p></td>
@@ -681,19 +681,19 @@ Wenn dieser Parameter auf 0 (null) festgelegt ist, wird standardmäßig 100% der
 <td><p>Instanz</p></td>
 </tr>
 <tr class="odd">
-<td><p>Nach <a href="gg269354(v=exchg.10).md">jetkreateinstance</a>festlegen:</p></td>
+<td><p>Legen Sie nach <a href="gg269354(v=exchg.10).md">JetCreateInstance fest:</a></p></td>
 <td><p>Ja</p></td>
 </tr>
 <tr class="even">
-<td><p>Nach <a href="gg294068(v=exchg.10).md">jetinit</a>festlegen:</p></td>
+<td><p>Legen Sie nach <a href="gg294068(v=exchg.10).md">JetInit fest:</a></p></td>
 <td><p>Nein</p></td>
 </tr>
 <tr class="odd">
-<td><p>Hat Auswirkungen auf das physische Layout:</p></td>
+<td><p>Wirkt sich auf das physische Layout aus:</p></td>
 <td><p>Nein</p></td>
 </tr>
 <tr class="even">
-<td><p>Beeinträchtigt die Zuverlässigkeit:</p></td>
+<td><p>Wirkt sich auf die Zuverlässigkeit aus:</p></td>
 <td><p>Nein</p></td>
 </tr>
 <tr class="odd">
@@ -715,17 +715,17 @@ Wenn dieser Parameter auf 0 (null) festgelegt ist, wird standardmäßig 100% der
 *JET_paramPreferredVerPages*  
 63  
 
-Dieser Parameter stellt einen Schwellenwert relativ zu **JET_paramMaxVerPages** dar, der die freigegebene Verwendung von Versions Seiten durch die Datenbank-Engine steuert. Wenn die Größe des Versionsspeicher diesen Schwellenwert überschreitet, werden alle Informationen, die nur für optionale Hintergrundaufgaben verwendet werden, z. b. das Freigeben von gelöschtem Speicherplatz in der Datenbank, stattdessen geopfert, um Platz für Transaktionsinformationen zu erhalten.
+Dieser Parameter stellt einen Schwellenwert relativ **zu** einem JET_paramMaxVerPages, der die diskrete Verwendung von Versionsseiten durch die Datenbank-Engine steuert. Wenn die Größe des Versionsspeichers diesen Schwellenwert überschreitet, werden alle Informationen, die nur für optionale Hintergrundaufgaben verwendet werden, z. B. das Wiederverlangen von gelöschtem Speicherplatz in der Datenbank, stattdessen verfemt, um Platz für Transaktionsinformationen zu erhalten.
 
-**Windows 2000, Windows XP und Windows Server 2003:**  Wenn Sie diesen Parameter auf NULL festlegen, wird der Schwellenwert auf 90% der **JET_paramMaxVerPages** festgelegt.
+**Windows 2000, Windows XP und Windows Server 2003:**  Wenn Sie diesen Parameter auf 0 festlegen, wird der Schwellenwert auf 90 % **JET_paramMaxVerPages.**
 
 **Windows Vista und höher:**  Dies wird nicht mehr unterstützt, und der Standardwert dieses Parameters wurde geändert, um sein Verhalten zu verdeutlichen.
 
-Jede Versionsspeicher Seite, die von diesem Parameter konfiguriert wurde, beträgt 16 KB auf 32-Bit-Computern und 32 KB auf 64-Bit-Computern.
+Jede Mit diesem Parameter konfigurierte Versionsspeicherseite hat eine Größe von 16 KB auf 32-Bit-Computern und 32 KB auf 64-Bit-Computern.
 
-**Windows Vista und höher:**  Die Seitengröße des Versionsspeicher kann über JET_paramVerPageSize gelesen und geändert werden.
+**Windows Vista und höher:**  Die Seitengröße des Versionsspeichers kann über die JET_paramVerPageSize.
 
-**Hinweis**  Wenn die Datenbank-Engine zu häufig über diesem Schwellenwert arbeitet, kann die Leistung der Datenbank beeinträchtigt werden. Dies liegt daran, dass die Hintergrundprozesse, die die Datenbank bereinigen, ohne die optionalen Informationen, die in diesem Szenario verworfen werden, funktionieren können. Die Online-oder Offline Defragmentierung wirkt sich gegen diesen Effekt aus.
+**Hinweis:**  Wenn die Datenbank-Engine zu oft über diesem Schwellenwert arbeitet, kann die Leistung der Datenbank beeinträchtigt werden. Dies liegt daran, dass die Hintergrundprozesse, die die Datenbank bereinigten, nicht ohne die optionalen Informationen funktionieren, die in diesem Szenario verworfen werden. Die Online- oder Offlinedefragmentierung wirkt sich auf diesen Effekt aus.
 
 <table>
 <colgroup>
@@ -735,8 +735,8 @@ Jede Versionsspeicher Seite, die von diesem Parameter konfiguriert wurde, beträ
 <tbody>
 <tr class="odd">
 <td><p>Standardwert:</p></td>
-<td><p><strong>Windows 2000, Windows XP und Windows Server 2003:</strong>  0 (90% der JET_paramMaxVerPages)</p>
-<p><strong>Windows Vista:</strong>  58</p></td>
+<td><p><strong>Windows 2000, Windows XP und Windows Server 2003:</strong> 0 (90 % der JET_paramMaxVerPages)</p>
+<p><strong>Windows Vista:</strong> 58</p></td>
 </tr>
 <tr class="even">
 <td><p>Typ:</p></td>
@@ -751,19 +751,19 @@ Jede Versionsspeicher Seite, die von diesem Parameter konfiguriert wurde, beträ
 <td><p>Instanz</p></td>
 </tr>
 <tr class="odd">
-<td><p>Nach <a href="gg269354(v=exchg.10).md">jetkreateinstance</a>festlegen:</p></td>
+<td><p>Legen Sie nach <a href="gg269354(v=exchg.10).md">JetCreateInstance fest:</a></p></td>
 <td><p>Ja</p></td>
 </tr>
 <tr class="even">
-<td><p>Nach <a href="gg294068(v=exchg.10).md">jetinit</a>festlegen:</p></td>
+<td><p>Legen Sie nach <a href="gg294068(v=exchg.10).md">JetInit fest:</a></p></td>
 <td><p>Ja</p></td>
 </tr>
 <tr class="odd">
-<td><p>Hat Auswirkungen auf das physische Layout:</p></td>
+<td><p>Wirkt sich auf das physische Layout aus:</p></td>
 <td><p>Nein</p></td>
 </tr>
 <tr class="even">
-<td><p>Beeinträchtigt die Zuverlässigkeit:</p></td>
+<td><p>Wirkt sich auf die Zuverlässigkeit aus:</p></td>
 <td><p>Ja</p></td>
 </tr>
 <tr class="odd">
@@ -785,9 +785,9 @@ Jede Versionsspeicher Seite, die von diesem Parameter konfiguriert wurde, beträ
 *JET_paramVerPageSize*  
 128  
 
-Dieser Parameter steuert die Größe der Versionsspeicher Seiten, die von der Datenbank-Engine zum Speichern von Transaktionsinformationen verwendet werden. Der Wert dieses Parameters ist die Einheiten Größe für alle anderen Systemparameter, die auf Versions Seiten (z. b. JET_paramMaxVerPages) liegen.
+Dieser Parameter steuert die Größe der Versionsspeicherseiten, die von der Datenbank-Engine zum Speichern von Transaktionsinformationen verwendet werden. Der Wert dieses Parameters ist die Einheitengröße für alle anderen Systemparameter im Hinblick auf Versionsseiten (z. B. JET_paramMaxVerPages).
 
-Die Datenbank-Engine kann eine größere Seitengröße als die angeforderte Größe verwenden.
+Die Datenbank-Engine verwendet möglicherweise eine größere Seitengröße des Versionsspeichers als angefordert.
 
 <table>
 <colgroup>
@@ -812,19 +812,19 @@ Die Datenbank-Engine kann eine größere Seitengröße als die angeforderte Grö
 <td><p>Global</p></td>
 </tr>
 <tr class="odd">
-<td><p>Nach <a href="gg269354(v=exchg.10).md">jetkreateinstance</a>festlegen:</p></td>
+<td><p>Legen Sie nach <a href="gg269354(v=exchg.10).md">JetCreateInstance fest:</a></p></td>
 <td><p>Nein</p></td>
 </tr>
 <tr class="even">
-<td><p>Nach <a href="gg294068(v=exchg.10).md">jetinit</a>festlegen:</p></td>
+<td><p>Legen Sie nach <a href="gg294068(v=exchg.10).md">JetInit fest:</a></p></td>
 <td><p>Nein</p></td>
 </tr>
 <tr class="odd">
-<td><p>Hat Auswirkungen auf das physische Layout:</p></td>
+<td><p>Wirkt sich auf das physische Layout aus:</p></td>
 <td><p>Nein</p></td>
 </tr>
 <tr class="even">
-<td><p>Beeinträchtigt die Zuverlässigkeit:</p></td>
+<td><p>Wirkt sich auf die Zuverlässigkeit aus:</p></td>
 <td><p>Nein</p></td>
 </tr>
 <tr class="odd">
@@ -846,7 +846,7 @@ Die Datenbank-Engine kann eine größere Seitengröße als die angeforderte Grö
 *JET_paramVersionStoreTaskQueueMax*  
 105  
 
-Dieser Parameter steuert die Anzahl der Arbeitsaufgaben im Hintergrund Bereinigung, die zu einem beliebigen Zeitpunkt in die Warteschlange des Thread Pools der Datenbank-Engine eingereiht werden können.
+Dieser Parameter steuert die Anzahl der Arbeitselemente für die Hintergrundbereinigung, die jederzeit im Datenbank-Engine-Threadpool in die Warteschlange gestellt werden können.
 
 <table>
 <colgroup>
@@ -864,28 +864,28 @@ Dieser Parameter steuert die Anzahl der Arbeitsaufgaben im Hintergrund Bereinigu
 </tr>
 <tr class="odd">
 <td><p>Gültiger Bereich:</p></td>
-<td><p><strong>Windows XP und Windows Server 2003:  </strong>  1 – 63</p>
-<p><strong>Windows Vista:</strong>  1 – 127</p></td>
+<td><p><strong>Windows XP und Windows Server 2003:</strong> 1 – 63</p>
+<p><strong>Windows Vista:</strong> 1 – 127</p></td>
 </tr>
 <tr class="even">
 <td><p>Umfang:</p></td>
 <td><p>Instanz</p></td>
 </tr>
 <tr class="odd">
-<td><p>Nach <a href="gg269354(v=exchg.10).md">jetkreateinstance</a>festlegen:</p></td>
+<td><p>Legen Sie nach <a href="gg269354(v=exchg.10).md">JetCreateInstance fest:</a></p></td>
 <td><p>Ja</p></td>
 </tr>
 <tr class="even">
-<td><p>Nach <a href="gg294068(v=exchg.10).md">jetinit</a>festlegen:</p></td>
-<td><p><strong>Windows XP und Windows Server 2003:  </strong>  Nein</p>
-<p><strong>Windows Vista:</strong>  Zwar</p></td>
+<td><p>Legen Sie nach <a href="gg294068(v=exchg.10).md">JetInit fest:</a></p></td>
+<td><p><strong>Windows XP und Windows Server 2003:</strong>  Nein</p>
+<p><strong>Windows Vista:</strong>  Ja</p></td>
 </tr>
 <tr class="odd">
-<td><p>Hat Auswirkungen auf das physische Layout:</p></td>
+<td><p>Wirkt sich auf das physische Layout aus:</p></td>
 <td><p>Nein</p></td>
 </tr>
 <tr class="even">
-<td><p>Beeinträchtigt die Zuverlässigkeit:</p></td>
+<td><p>Wirkt sich auf die Zuverlässigkeit aus:</p></td>
 <td><p>Nein</p></td>
 </tr>
 <tr class="odd">
@@ -898,7 +898,7 @@ Dieser Parameter steuert die Anzahl der Arbeitsaufgaben im Hintergrund Bereinigu
 </tr>
 <tr class="odd">
 <td><p>Verfügbarkeit:</p></td>
-<td><p>Versionen von Windows XP und höher</p></td>
+<td><p>Windows XP und spätere Versionen</p></td>
 </tr>
 </tbody>
 </table>
@@ -922,7 +922,7 @@ Dieser Parameter steuert die Anzahl der Arbeitsaufgaben im Hintergrund Bereinigu
 </tr>
 <tr class="odd">
 <td><p><strong>Header</strong></p></td>
-<td><p>In "ESENT. h" deklariert.</p></td>
+<td><p>Wird in Esent.h deklariert.</p></td>
 </tr>
 </tbody>
 </table>
@@ -930,5 +930,5 @@ Dieser Parameter steuert die Anzahl der Arbeitsaufgaben im Hintergrund Bereinigu
 
 ### <a name="see-also"></a>Weitere Informationen
 
-[Jetkreateingestance](./jetcreateinstance-function.md)  
+[JetCreateInstance](./jetcreateinstance-function.md)  
 [JetInit](./jetinit-function.md)

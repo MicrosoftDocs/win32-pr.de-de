@@ -25,13 +25,13 @@ ms.locfileid: "118721090"
 Erweitert das [**IShellDispatch-Objekt**](ishelldispatch.md) um eine Vielzahl neuer Funktionen.
 
 > [!Note]  
-> **IShellDispatch2** wird implementiert und über das [**Shell-Objekt**](shell.md) aufgerufen.
+> **IShellDispatch2 wird** implementiert und über das [**Shell-Objekt aufgerufen.**](shell.md)
 
  
 
 ## <a name="members"></a>Member
 
-Das **IShellDispatch2-Objekt** verfügt über folgende Typen von Membern:
+Das **IShellDispatch2-Objekt** verfügt über die folgenden Membertypen:
 
 -   [Methoden](#methods)
 
@@ -44,7 +44,7 @@ Das **IShellDispatch2-Objekt** verfügt über diese Methoden.
 | Methode                                                               | Beschreibung                                                                        |
 |:---------------------------------------------------------------------|:-----------------------------------------------------------------------------------|
 | [**CanStartStopService**](ishelldispatch2-canstartstopservice.md)   | Bestimmt, ob der aktuelle Benutzer den benannten Dienst starten und beenden kann.<br/>    |
-| [**FindPrinter**](ishelldispatch2-findprinter.md)                   | Zeigt das Dialogfeld **Drucker suchen** an.<br/>                               |
+| [**FindPrinter**](ishelldispatch2-findprinter.md)                   | Zeigt das **Dialogfeld Drucker suchen** an.<br/>                               |
 | [**GetSystemInformation**](ishelldispatch2-getsysteminformation.md) | Ruft Systeminformationen ab.<br/>                                           |
 | [**Isrestricted**](ishelldispatch2-isrestricted.md)                 | Ruft die Einschränkungseinstellung einer Gruppe aus der Registrierung ab.<br/>              |
 | [**IsServiceRunning**](ishelldispatch2-isservicerunning.md)         | Gibt einen Wert zurück, der angibt, ob ein bestimmter Dienst ausgeführt wird.<br/> |
@@ -59,7 +59,7 @@ Das **IShellDispatch2-Objekt** verfügt über diese Methoden.
 
 ## <a name="remarks"></a>Hinweise
 
-Eine Erläuterung Windows Dienste finden Sie in der [Dokumentation zu Diensten.](../services/services.md)
+Eine Erörterung der Windows Dienste finden Sie in der [Dokumentation zu Diensten.](../services/services.md)
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -67,7 +67,7 @@ Eine Erläuterung Windows Dienste finden Sie in der [Dokumentation zu Diensten.]
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional, nur Windows \[ XP-Desktop-Apps\]<br/>                                        |
+| Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional nur Windows \[ XP-Desktop-Apps\]<br/>                                        |
 | Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                                                          |
 | Header<br/>                   | <dl> <dt>Shldisp.h</dt> </dl>                          |
 | Idl<br/>                      | <dl> <dt>Shldisp.idl</dt> </dl>                        |
