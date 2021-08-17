@@ -1,24 +1,24 @@
 ---
-description: Mit der deletebookmark-Methode wird das gespeicherte Lesezeichen gelöscht.
+description: Die DeleteBookmark-Methode löscht das gespeicherte Lesezeichen.
 ms.assetid: f408a65d-3b95-446b-9a48-a98dc920ea30
-title: Deletebookmark-Methode (Segment. h)
+title: DeleteBookmark-Methode (Segment.h)
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 43f3193708752716bffcc59bf7a637546db7176a
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 7aca0fdd0f212658d50678451dd4d57216a923d2ab43924f18fa9ed42288c648
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106358390"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118952979"
 ---
-# <a name="deletebookmark-method"></a>Deletebookmark-Methode
+# <a name="deletebookmark-method"></a>DeleteBookmark-Methode
 
 > [!Note]  
 > Diese Komponente ist für die Verwendung in den Betriebssystemen Microsoft Windows 2000, Windows XP und Windows Server 2003 verfügbar. Es kann in nachfolgenden Versionen geändert oder entfernt werden.
 
  
 
-Mit der **deletebookmark** -Methode wird das gespeicherte Lesezeichen gelöscht.
+Die **DeleteBookmark-Methode** löscht das gespeicherte Lesezeichen.
 
 ``` syntax
     MSWebDVD.DeleteBookmark()
@@ -28,9 +28,9 @@ Mit der **deletebookmark** -Methode wird das gespeicherte Lesezeichen gelöscht.
 
 Kein Rückgabewert.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Es darf jeweils nur ein Lesezeichen vorhanden sein.
+Es kann immer nur ein Lesezeichen gleichzeitig geben.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -38,7 +38,7 @@ Es darf jeweils nur ein Lesezeichen vorhanden sein.
 
 | Anforderung | Wert |
 |-------------------|--------------------------------------------------------------------------------------|
-| Header<br/> | <dl> <dt>Segment. h</dt> </dl> |
+| Header<br/> | <dl> <dt>Segment.h</dt> </dl> |
 
 
 

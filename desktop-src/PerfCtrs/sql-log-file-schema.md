@@ -1,26 +1,26 @@
 ---
-description: Anwendungen können PDH zum Extrahieren von Leistungsindikatoren aus SQL-Protokollen verwenden, oder Sie können formatierte oder unformatierte Leistungsindikatoren direkt aus der Datenbank mithilfe von SQL-Abfragen extrahieren.
+description: Anwendungen können PDH verwenden, um Leistungsindikatoren aus SQL Protokollen zu extrahieren, oder sie können formatierte oder unformatierte Leistungsindikatoren direkt aus der Datenbank über SQL Abfragen extrahieren.
 ms.assetid: 89515dd9-2d65-4b19-bb7a-ef9e7d146caa
-title: SQL-Protokolldatei Schema
+title: SQL Protokolldateischema
 ms.topic: article
 ms.date: 08/17/2020
-ms.openlocfilehash: 33b988194a8fda4a99f713e0026aeaddb65e9c26
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: a95026c478094d8e71a44c2c57e65c2fa7044b00e982ea43187244838beed2ab
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106357752"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119143813"
 ---
-# <a name="sql-log-file-schema"></a>SQL-Protokolldatei Schema
+# <a name="sql-log-file-schema"></a>SQL Protokolldateischema
 
 > [!IMPORTANT]
-> PDH-Unterstützung für ODBC-SQL-Datenbanken kann in Zukunft geändert oder nicht mehr verfügbar sein.
+> Die PDH-Unterstützung für ODBC SQL Datenbanken kann in Zukunft geändert oder nicht mehr verfügbar sein.
 
-Anwendungen können PDH-APIs für Lese-und Schreibvorgänge von Leistungsdaten in kompatiblen ODBC-SQL-Datenbanken verwenden und dann mithilfe von SQL-Abfragen weitere Verarbeitung ausführen. In diesem Abschnitt wird das SQL-Schema zum Speichern von Leistungsindikatoren beschrieben. Sie können diese Informationen zum Erstellen von benutzerdefinierten Ansichten und Berichten verwenden. Das Schema besteht aus den folgenden drei Tabellen:
+Anwendungen können PDH-APIs verwenden, um Leistungsindikatordaten in kompatiblen ODBC SQL-Datenbanken zu lesen und zu schreiben, und dann eine weitere Verarbeitung über SQL Abfragen durchführen. In diesem Abschnitt wird das SQL Schema beschrieben, das zum Speichern von Leistungsindikatoren verwendet wird. Sie können diese Informationen verwenden, um benutzerdefinierte Ansichten und Berichte zu erstellen. Das Schema besteht aus den folgenden drei Tabellen:
 
-- [**Gegen Daten**](counterdata.md)
-- [**Counter Details**](counterdetails.md)
-- [**Display toid**](displaytoid.md)
+- [**Counterdata**](counterdata.md)
+- [**CounterDetails**](counterdetails.md)
+- [**DisplayToID**](displaytoid.md)
 
 > [!NOTE]
-> PDH-Unterstützung für ODBC-SQL-Datenbanken funktioniert nur mit ODBC-SQL-Treibern, die [Massen Kopier Erweiterungen (BCP)](/sql/relational-databases/native-client-odbc-extensions-bulk-copy-functions/sql-server-driver-extensions-bulk-copy-functions)unterstützen.
+> Die PDH-Unterstützung für ODBC SQL-Datenbanken funktioniert nur mit ODBC SQL-Treibern, die [BCP-Erweiterungen (Bulk Copy)](/sql/relational-databases/native-client-odbc-extensions-bulk-copy-functions/sql-server-driver-extensions-bulk-copy-functions)unterstützen.

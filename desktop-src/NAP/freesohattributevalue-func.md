@@ -1,9 +1,9 @@
 ---
-title: Freesohattributevalue-Funktion (naputil. h)
-description: Gibt eine sohattributevalue-Datenstruktur frei.
+title: FreeSoHAttributeValue-Funktion (NapUtil.h)
+description: Gibt eine SoHAttributeValue-Datenstruktur frei.
 ms.assetid: 21647ee6-2ea2-45fd-b1f2-fb1836196f94
 keywords:
-- Freesohattributevalue-Funktion NAP
+- FreeSoHAttributeValue-Funktion NAP
 topic_type:
 - apiref
 api_name:
@@ -14,21 +14,21 @@ api_type:
 - DllExport
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 3bd56049eb727554227bd5eb509969f6795670a4
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 877a333c7eb43c3921c7727bcc15a958bdcd2565fabe4636a67868f3a27bf473
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104040936"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118940404"
 ---
-# <a name="freesohattributevalue-function"></a>Freesohattributevalue-Funktion
+# <a name="freesohattributevalue-function"></a>FreeSoHAttributeValue-Funktion
 
 > [!Note]  
-> Die Netzwerk Zugriffsschutz-Plattform ist ab Windows 10 nicht verfügbar.
+> Die Netzwerkzugriffsschutz-Plattform ist ab dem Windows 10
 
  
 
-Die **freesohattributevalue** -Funktion gibt eine [**sohattributevalue**](sohattributevalue-union.md) -Datenstruktur frei.
+Die **FreeSoHAttributeValue-Funktion** gibt eine [**SoHAttributeValue-Datenstruktur**](sohattributevalue-union.md) frei.
 
 ## <a name="syntax"></a>Syntax
 
@@ -46,29 +46,29 @@ NAPAPI VOID WINAPI FreeSoHAttributeValue(
 
 <dl> <dt>
 
-*Typ* \[ in\]
+*type* \[ In\]
 </dt> <dd>
 
-Ein [**sohattributetype**](sohattributetype-enum.md) -Wert, der den Typ des SoH-Attribut Werts angibt, der freigegeben werden soll.
+Ein [**SoHAttributeType-Wert,**](sohattributetype-enum.md) der den Typ des frei zu gebenden SoH-Attributwerts angibt.
 
 </dd> <dt>
 
-*Wert* \[ in\]
+*value* \[ In\]
 </dt> <dd>
 
-Ein Zeiger auf den freien [**sohattributevalue-Wert**](sohattributevalue-union.md) .
+Ein Zeiger auf den frei zu [**gebenden SoHAttributeValue.**](sohattributevalue-union.md)
 
 </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Alle vom NAP-System unterstützten com-Schnittstellen verwenden Standard-com-Speicher Verwaltungsregeln und die com-Speicher Belegungs Funktion (**cotaskmembelegc** und **CoTaskMemFree**):
+Alle vom NAP-System unterstützten COM-Schnittstellen verwenden standardmäßige COM-Speicherverwaltungsregeln und die COM-Speicherzuweisungen (**CoTaskMemAlloc** und **CoTaskMemFree**):
 
--   **In** -Parameter werden vom Aufrufer zugeordnet und freigegeben.
--   Out-Parameter werden vom **aufgerufenen** zugeordnet und vom Aufrufer mithilfe von **cotaskmem** freigegeben.
--   **In/out-** Parameter werden vom Aufrufer zugeordnet, vom aufgerufenen freigegeben und neu zugeordnet und schließlich mit **cotaskmem** vom Aufrufer freigegeben.
+-   **In** werden Parameter vom Aufrufer zugeordnet und frei.
+-   **Out-Parameter** werden vom Aufrufer zugeordnet und vom Aufrufer mithilfe von **CoTaskMem frei.**
+-   **Ein-/Aus-Parameter** werden vom Aufrufer zugeordnet, vom Aufrufer frei und neu zugeordnet und schließlich vom Aufrufer mithilfe von **CoTaskMem frei.**
 
-Alle NAP-Funktionen zum Freigeben von Speicher freigeben auch alle eingebetteten Zeiger.
+Alle NAP-Funktionen zum Freien von Arbeitsspeicher geben auch alle eingebetteten Zeiger frei.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -76,9 +76,9 @@ Alle NAP-Funktionen zum Freigeben von Speicher freigeben auch alle eingebetteten
 
 | Anforderung | Wert |
 |-------------------------------------|--------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                       |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/>                                 |
-| Header<br/>                   | <dl> <dt>Naputil. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ Vista-Desktop-Apps\]<br/>                                       |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/>                                 |
+| Header<br/>                   | <dl> <dt>NapUtil.h</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Qutil.dll</dt> </dl> |
 
 

@@ -1,7 +1,7 @@
 ---
-description: Durchsucht einen Shader nach einem bestimmten Kommentar. Der Kommentar wird durch einen vierstelligen Code (FourCC) im ersten DWORD-Wert des Kommentars identifiziert.
+description: Durchsucht einen Shader nach einem bestimmten Kommentar. Der Kommentar wird durch einen vierstelligen Code (FOURCC) im ersten DWORD des Kommentars identifiziert.
 ms.assetid: 86ab8330-fd48-4d14-835c-92399c6c8a38
-title: D3DXFindShaderComment-Funktion (D3DX9Shader. h)
+title: D3DXFindShaderComment-Funktion (D3DX9Shader.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -14,16 +14,16 @@ api_type:
 api_location:
 - d3dx9.lib
 - d3dx9.dll
-ms.openlocfilehash: 394c72bcf7076075318cd664cf56bbb464d7e3cf
-ms.sourcegitcommit: 14010c34b35fa268046c7683f021f86de08ddd0a
+ms.openlocfilehash: 07ff15b77866732f7a2dcab814e1ccf84d5344f640d83300af874e162485879b
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "106367367"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118096055"
 ---
 # <a name="d3dxfindshadercomment-function"></a>D3DXFindShaderComment-Funktion
 
-Durchsucht einen Shader nach einem bestimmten Kommentar. Der Kommentar wird durch einen vierstelligen Code (FourCC) im ersten DWORD-Wert des Kommentars identifiziert.
+Durchsucht einen Shader nach einem bestimmten Kommentar. Der Kommentar wird durch einen vierstelligen Code (FOURCC) im ersten DWORD des Kommentars identifiziert.
 
 ## <a name="syntax"></a>Syntax
 
@@ -43,39 +43,39 @@ HRESULT D3DXFindShaderComment(
 
 <dl> <dt>
 
-*pfunction* \[ in\]
+*pFunction* \[ In\]
 </dt> <dd>
 
-Typ: Konstante **[**DWORD**](../winprog/windows-data-types.md) \***
+Typ: **const [**DWORD**](../winprog/windows-data-types.md) \***
 
-Zeiger auf den DWORD-Datenstrom der Shader-Funktion.
+Zeiger auf den DWORD-Stream der Shaderfunktion.
 
 </dd> <dt>
 
-*FourCC* \[ in\]
+*FourCC* \[ In\]
 </dt> <dd>
 
 Typ: **[ **DWORD**](../winprog/windows-data-types.md)**
 
-FourCC-Code, der den Kommentar Block identifiziert. Siehe [FourCC-Formate](d3dformat.md).
+FOURCC-Code, der den Kommentarblock identifiziert. Weitere Informationen finden Sie unter [FourCC-Formate.](d3dformat.md)
 
 </dd> <dt>
 
-*ppData* \[ in\]
+*ppData* \[ In\]
 </dt> <dd>
 
-Geben Sie Folgendes ein: **[ **lpcvoid**](../winprog/windows-data-types.md)\***
+Typ: **[ **LPCVOID**](../winprog/windows-data-types.md)\***
 
-Gibt einen Zeiger auf die Kommentar Daten zurück (ohne das Kommentar Token und den FourCC-Code). Dieser Wert kann **null** sein.
+Gibt einen Zeiger auf die Kommentardaten zurück (ohne Kommentartoken und FOURCC-Code). Dieser Wert kann **NULL** sein.
 
 </dd> <dt>
 
-*psizin Bytes* \[ vorgenommen\]
+*pSizeInBytes* \[ out\]
 </dt> <dd>
 
-Typ: **[ **uint**](../winprog/windows-data-types.md)\***
+Typ: **[ **UINT**](../winprog/windows-data-types.md)\***
 
-Gibt die Größe der Kommentar Daten in Bytes zurück. Dieser Wert kann **null** sein.
+Gibt die Größe der Kommentardaten in Bytes zurück. Dieser Wert kann **NULL** sein.
 
 </dd> </dl>
 
@@ -83,7 +83,7 @@ Gibt die Größe der Kommentar Daten in Bytes zurück. Dieser Wert kann **null**
 
 Typ: **[ **HRESULT**](https://msdn.microsoft.com/library/Bb401631(v=MSDN.10).aspx)**
 
-Wenn die Funktion erfolgreich ausgeführt wird, ist der Rückgabewert D3D \_ OK. Wenn der Kommentar nicht gefunden wird und kein anderer Fehler aufgetreten ist, wird S \_ false zurückgegeben.
+Wenn die Funktion erfolgreich ausgeführt wird, lautet der Rückgabewert D3D \_ OK. Wenn der Kommentar nicht gefunden wird und kein anderer Fehler aufgetreten ist, wird S \_ FALSE zurückgegeben.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -91,12 +91,12 @@ Wenn die Funktion erfolgreich ausgeführt wird, ist der Rückgabewert D3D \_ OK.
 
 | Anforderung | Wert |
 |--------------------|------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>D3DX9Shader. h</dt> </dl> |
-| Bibliothek<br/> | <dl> <dt>D3dx9. lib</dt> </dl>     |
+| Header<br/>  | <dl> <dt>D3DX9Shader.h</dt> </dl> |
+| Bibliothek<br/> | <dl> <dt>D3dx9.lib</dt> </dl>     |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 

@@ -25,7 +25,7 @@ Die folgenden Informationstypen sind in Ipinfoid.h aufgeführt. Verwenden Sie di
 -   IP \_ IPINIP \_ CFG \_ INFO
 -   IP \_ MCAST \_ HEARBEAT \_ INFO
 -   \_ \_ IP-MCAST-BEGRENZUNGSINFORMATIONEN \_
--   \_ \_ IP-MCAST-LIMITINFORMATIONEN \_
+-   IP \_ MCAST \_ LIMIT \_ INFO
 -   IP \_ PROT \_ PRIORITY \_ INFO
 -   \_ \_ IP-ROUTENINFORMATIONEN
 -   INFORMATIONEN ZUM \_ IP-ROUTER-DATENTRÄGER \_ \_

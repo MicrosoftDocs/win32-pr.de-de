@@ -16,18 +16,18 @@ api_location: ''
 topic_type:
 - APIRef
 - kbSyntax
-ms.openlocfilehash: 1e7b4658e51f6f137795a935121dc90c047cf047
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 2d9208e3c0aad7ab05348056eaf70747aa23433e0ab5badec5da1f2baf063b1b
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104484835"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118066306"
 ---
 # <a name="span-idwwan_profile_v4element_providerspanprovider"></a><span id="WWAN_profile_v4.element_Provider"></span>Anbieter
 
 Gibt einen bevorzugten Netzwerkanbieter in einer Liste von Anbietern an, die beim Roaming verwendet werden sollen.
 
-Der Wert dieses Elements ist eine Instanz des komplexen Typs v1 [**ProviderType**](./schema-providertype-complextype.md) .
+Der Wert dieses Elements ist eine Instanz des komplexen Typs "v1 [**providerType".**](./schema-providertype-complextype.md)
 
 ## <a name="element-hierarchy"></a>Elementhierarchie
 
@@ -65,14 +65,14 @@ Keine.
 <thead>
 <tr class="header">
 <th>Übergeordnetes Element</th>
-<th>BESCHREIBUNG</th>
+<th>Beschreibung</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
 <td><a href="element-dataroamingpartners.md">DataRoamingPartners</a></td>
 <td><p>Gibt eine Liste der bevorzugten Netzwerkanbieter beim Roaming an.</p>
-<p>Weitere Informationen finden Sie in der Dokumentation für das v1 <a href="../mbn/schema-dataroamingpartners-mbnprofile-element.md"><strong>dataroamingpartners</strong></a> -Element.</p></td>
+<p>Weitere Informationen finden Sie in der Dokumentation zum <a href="../mbn/schema-dataroamingpartners-mbnprofile-element.md"><strong>DataRoamingPartners-Element</strong></a> v1.</p></td>
 </tr>
 </tbody>
 </table>

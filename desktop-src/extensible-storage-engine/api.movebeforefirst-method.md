@@ -1,6 +1,6 @@
 ---
-description: Weitere Informationen finden Sie in der API. muvebeforefirst-Methode.
-title: API. muvebeforefirst-Methode
+description: Weitere Informationen finden Sie unter Api.MoveBeforeFirst-Methode.
+title: Api.MoveBeforeFirst-Methode
 TOCTitle: 'MoveBeforeFirst method '
 ms:assetid: M:Microsoft.Isam.Esent.Interop.Api.MoveBeforeFirst(Microsoft.Isam.Esent.Interop.JET_SESID,Microsoft.Isam.Esent.Interop.JET_TABLEID)
 ms:mtpsurl: https://msdn.microsoft.com/library/microsoft.isam.esent.interop.api.movebeforefirst(v=EXCHG.10)
@@ -24,19 +24,19 @@ api_type:
 api_location:
 - Microsoft.Isam.Esent.Interop.dll
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: 1c3e49762c0d2be1f416181f5c07fb06b088d161
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 43e886e6296848b17aafa88e39797f9655acd374fca6953b9efdbfbc7e1428bd
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106342627"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117902376"
 ---
-# <a name="apimovebeforefirst-method"></a>API. muvebeforefirst-Methode
+# <a name="apimovebeforefirst-method"></a>Api.MoveBeforeFirst-Methode
 
-Positionieren Sie den Cursor vor dem ersten Datensatz in der Tabelle. Bei einem nachfolgenden Verschiebungs Vorgang wird der Cursor auf dem ersten Datensatz positioniert.
+Positionieren Sie den Cursor vor dem ersten Datensatz in der Tabelle. Bei einem nachfolgenden nächsten Schritt wird der Cursor auf dem ersten Datensatz positioniert.
 
-**Namespace:**  [Microsoft. ISAM. ESENT. Interop](./microsoft.isam.esent.interop-namespace.md)  
-**Assembly:**  Microsoft. ISAM. ESENT. Interop (in Microsoft.Isam.Esent.Interop.dll)
+**Namespace:**  [Microsoft.Isam.Esent.Interop](./microsoft.isam.esent.interop-namespace.md)  
+**Assembly:**  Microsoft.Isam.Esent.Interop (in Microsoft.Isam.Esent.Interop.dll)
 
 ## <a name="syntax"></a>Syntax
 
@@ -60,24 +60,24 @@ public static void MoveBeforeFirst(
 
 #### <a name="parameters"></a>Parameter
 
-  - -sid  
-    Typ: [Microsoft.ISAM.ESENT.Interop.JET_SESID](./jet-sesid-structure.md)  
+  - sesid  
+    Typ: [Microsoft.Isam.Esent.Interop.JET_SESID](./jet-sesid-structure.md)  
     
     Die zu verwendende Sitzung.
 
 <!-- end list -->
 
-  - TableID  
-    Typ: [Microsoft.ISAM.ESENT.Interop.JET_TABLEID](./jet-tableid-structure.md)  
+  - tableid  
+    Typ: [Microsoft.Isam.Esent.Interop.JET_TABLEID](./jet-tableid-structure.md)  
     
-    Die zu positiongende Tabelle.
+    Die zu positionierende Tabelle.
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
-#### <a name="reference"></a>Referenz
+#### <a name="reference"></a>Verweis
 
 [API-Klasse](./api-class.md)
 
-[API-Mitglieder](./api-members.md)
+[API-Member](./api-members.md)
 
-[Microsoft. ISAM. ESENT. Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)
+[Microsoft.Isam.Esent.Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)

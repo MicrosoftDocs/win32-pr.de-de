@@ -21,7 +21,7 @@ ms.locfileid: "118922659"
 ---
 # <a name="iscardmanagecreateinterface-method"></a>ISCardManage::CreateInterface-Methode
 
-\[Die **CreateInterface-Methode** ist für die Verwendung in den Betriebssystemen verfügbar, die im Abschnitt Anforderungen angegeben sind. Die [Smartcardmodule](/previous-versions/windows/desktop/secsmart/smart-card-modules) bieten ähnliche Funktionen.\]
+\[Die **CreateInterface-Methode** ist für die Verwendung in den im Abschnitt Anforderungen angegebenen Betriebssystemen verfügbar. Die [Smartcardmodule](/previous-versions/windows/desktop/secsmart/smart-card-modules) bieten ähnliche Funktionen.\]
 
 Die **CreateInterface-Methode** erstellt die angegebene Schnittstelle.
 
@@ -46,21 +46,21 @@ HRESULT CreateInterface(
 *pguidInterface* \[ In\]
 </dt> <dd>
 
-Der GUID-Wert der zu erstellende Schnittstelle.
+Der GUID-Wert der zu erstellenden Schnittstelle.
 
 </dd> <dt>
 
 *bstrName* \[ In\]
 </dt> <dd>
 
-Der Name der Schnittstelle, die erstellt werden soll, wenn die GUID nicht verfügbar ist. Standardwerte sind "CryptoProvider".
+Der Name der zu erstellenden Schnittstelle, wenn die GUID nicht verfügbar ist. Die Standardwerte sind "CryptoProvider".
 
 </dd> <dt>
 
 *pUserData* \[ In\]
 </dt> <dd>
 
-Zeiger auf benutzerspezifische Daten, die bei der Erstellung einer Schnittstelle verwendet werden sollen.
+Zeiger auf benutzerspezifische Daten, die bei der Erstellung einer Schnittstelle verwendet werden.
 
 </dd> <dt>
 
@@ -73,7 +73,7 @@ Zeiger auf die zurückgegebene Schnittstelle.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Folgende Rückgabewerte sind möglich:
+Die möglichen Rückgabewerte sind die folgenden:
 
 
 
@@ -81,7 +81,7 @@ Folgende Rückgabewerte sind möglich:
 |-----------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------|
 | <dl> <dt>**S \_ OK**</dt> </dl>          | Operation erfolgreich abgeschlossen.<br/>                                                     |
 | <dl> <dt>**E \_ INVALIDARG**</dt> </dl>  | Einer der angegebenen Parameter ist ungültig.<br/>                                         |
-| <dl> <dt>**E \_ POINTER**</dt> </dl>     | Ein ungültiger Zeiger wurde entweder im *pguidInterface-* oder im *pUserData-Parameter* übergeben.<br/> |
+| <dl> <dt>**\_E-ZEIGER**</dt> </dl>     | Ein fehlerhafter Zeiger wurde entweder im *pguidInterface-Parameter* oder im *pUserData-Parameter* übergeben.<br/> |
 | <dl> <dt>**E \_ OUTOFMEMORY**</dt> </dl> | Nicht genügend Arbeitsspeicher.<br/>                                                                        |
 
 
@@ -90,9 +90,9 @@ Folgende Rückgabewerte sind möglich:
 
 ## <a name="remarks"></a>Hinweise
 
-Eine Liste aller von der [**ISCardManage-Schnittstelle**](iscardmanage.md) definierten Methoden finden Sie unter **ISCardManage.**
+Eine Liste aller methoden, die von der [**ISCardManage-Schnittstelle**](iscardmanage.md) definiert werden, finden Sie unter **ISCardManage**.
 
-Zusätzlich zu den oben aufgeführten COM-Fehlercodes kann diese Schnittstelle einen [*Smartcardfehlercode*](../secgloss/s-gly.md) zurückgeben, wenn eine Smartcardfunktion aufgerufen wurde, um die Anforderung abzuschließen. Informationen zu Smartcard-Fehlercodes finden Sie unter [Smartcard-Rückgabewerte.](authentication-return-values.md)
+Zusätzlich zu den oben aufgeführten COM-Fehlercodes [](../secgloss/s-gly.md) gibt diese Schnittstelle möglicherweise einen Smartcard-Fehlercode zurück, wenn eine Smartcardfunktion aufgerufen wurde, um die Anforderung zu erfüllen. Informationen zu Smartcard-Fehlercodes finden Sie unter [Smartcard-Rückgabewerte.](authentication-return-values.md)
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -100,7 +100,7 @@ Zusätzlich zu den oben aufgeführten COM-Fehlercodes kann diese Schnittstelle e
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur XP-Desktop-Apps\]<br/>          |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ XP-Desktop-Apps\]<br/>          |
 | Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/> |
 | Ende des Supports (Client)<br/>    | Windows XP<br/>                                |
 | Ende des Supports (Server)<br/>    | Windows Server 2003<br/>                       |

@@ -1,21 +1,21 @@
 ---
-description: Das tuispidll- \_ Objekt wird unten definiert.
+description: Das OBJEKTENSPIDLL-OBJEKT \_ ist unten definiert.
 ms.assetid: bc0f876d-2443-4c3c-b723-3f82dc6bf849
-title: TUISPIDLL_OBJECT_ (TSPI. h)
+title: TUISPIDLL_OBJECT_ (Tspi.h)
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: e9a4711478b98f1ab4983fd8c83a59772e5b370e
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 0e31ba14d49be298bc2b8b0013382ef146fac90b82804eea1adbb54704858b9c
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106366772"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117944175"
 ---
-# <a name="tuispidll_object_"></a>tuispidll- \_ Objekt\_
+# <a name="tuispidll_object_"></a>\_OBJEKTENSPIDLL-OBJEKT\_
 
 <dl> <dt>
 
-<span id="TUISPIDLL_OBJECT_LINEID"></span><span id="tuispidll_object_lineid"></span>**tuispidll- \_ Objekt ( \_ LineID)**
+<span id="TUISPIDLL_OBJECT_LINEID"></span><span id="tuispidll_object_lineid"></span>**AIRLINESPIDLL \_ OBJECT \_ LINEID**
 </dt> <dd> <dl> <dt>
 
  0x00000001
@@ -23,12 +23,12 @@ ms.locfileid: "106366772"
 
 
 
-*dwobjectid* ist eine zeilige Geräte-ID (dwendviceid).
+*dwObjectID* ist ein Zeilengerätebezeichner (dwDeviceID).
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="TUISPIDLL_OBJECT_PHONEID"></span><span id="tuispidll_object_phoneid"></span>**tuispidll- \_ Objekt \_ phoneid**
+<span id="TUISPIDLL_OBJECT_PHONEID"></span><span id="tuispidll_object_phoneid"></span>**SIDESPIDLL \_ OBJECT \_ PHONEID**
 </dt> <dd> <dl> <dt>
 
  0x00000002
@@ -36,12 +36,12 @@ ms.locfileid: "106366772"
 
 
 
-*dwobjectid* ist eine Telefongeräte-ID (dwendviceid).
+*dwObjectID* ist eine Telefongeräte-ID (dwDeviceID).
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="TUISPIDLL_OBJECT_PROVIDERID"></span><span id="tuispidll_object_providerid"></span>**"tuispidll \_ Object \_ ProviderID"**
+<span id="TUISPIDLL_OBJECT_PROVIDERID"></span><span id="tuispidll_object_providerid"></span>**\_AIRLINESPIDLL-OBJEKTANBIETER-ID \_**
 </dt> <dd> <dl> <dt>
 
  0x00000003
@@ -49,12 +49,12 @@ ms.locfileid: "106366772"
 
 
 
-*dwobjectid* ist ein dauerhafter Anbieter Bezeichner.
+*dwObjectID* ist ein permanenter Anbieterbezeichner.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="TUISPIDLL_OBJECT_DIALOGINSTANCE"></span><span id="tuispidll_object_dialoginstance"></span>**tuispidll- \_ Objekt \_ dialoginstance**
+<span id="TUISPIDLL_OBJECT_DIALOGINSTANCE"></span><span id="tuispidll_object_dialoginstance"></span>**DIALOGSSPIDLL \_ OBJECT \_ DIALOGINSTANCE**
 </dt> <dd> <dl> <dt>
 
  0x00000004 
@@ -62,7 +62,7 @@ ms.locfileid: "106366772"
 
 
 
-*dwobjectid* ist ein Dialog Instanzhandle (entweder hdrvdialoginstance oder htapidialoginstance, abhängig vom Kontext).
+*dwObjectID* ist ein Dialoginstanzhandle (je nach Kontext entweder HDRVDIALOGINSTANCE oder HTAPIDIALOGINSTANCE).
 
 
 </dt> </dl> </dd> </dl>
@@ -73,8 +73,8 @@ ms.locfileid: "106366772"
 
 | Anforderung | Wert |
 |-------------------------|-----------------------------------------------------------------------------------|
-| TAPI-Version<br/> | Erfordert TAPI 2,0 oder höher<br/>                                             |
-| Header<br/>       | <dl> <dt>TSPI. h</dt> </dl> |
+| TAPI-Version<br/> | Erfordert TAPI 2.0 oder höher<br/>                                             |
+| Header<br/>       | <dl> <dt>Tspi.h</dt> </dl> |
 
 
 

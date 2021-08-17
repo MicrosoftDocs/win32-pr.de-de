@@ -1,7 +1,7 @@
 ---
-description: Gibt ein Ereignis Handle für das nächste Ereignis zurück, das geplant ist, nachdem ein bestimmtes Ereignis auf einem Animations Titel auftritt.
+description: Gibt ein Ereignishandle für das nächste Ereignis zurück, das nach einem angegebenen Ereignis auf einer Animationsspur auftreten soll.
 ms.assetid: 616b2de1-6107-4d18-ad2e-de2ef4560aee
-title: 'ID3DXAnimationController:: getupcomingtrackevent-Methode (D3dx9anim. h)'
+title: ID3DXAnimationController::GetUpcomingTrackEvent-Methode (D3dx9anim.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -14,16 +14,16 @@ api_type:
 api_location:
 - d3dx9.lib
 - d3dx9.dll
-ms.openlocfilehash: f863ce918f25c6b0975010f71a63f067c01f7345
-ms.sourcegitcommit: 14010c34b35fa268046c7683f021f86de08ddd0a
+ms.openlocfilehash: a6e2730a9649400af8cc0229cb69ab695044681fde43a29a1a784d212f8d2641
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "103961558"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119279030"
 ---
-# <a name="id3dxanimationcontrollergetupcomingtrackevent-method"></a>ID3DXAnimationController:: getupcomingtrackevent-Methode
+# <a name="id3dxanimationcontrollergetupcomingtrackevent-method"></a>ID3DXAnimationController::GetUpcomingTrackEvent-Methode
 
-Gibt ein Ereignis Handle für das nächste Ereignis zurück, das geplant ist, nachdem ein bestimmtes Ereignis auf einem Animations Titel auftritt.
+Gibt ein Ereignishandle für das nächste Ereignis zurück, das nach einem angegebenen Ereignis auf einer Animationsspur auftreten soll.
 
 ## <a name="syntax"></a>Syntax
 
@@ -41,21 +41,21 @@ D3DXEVENTHANDLE GetUpcomingTrackEvent(
 
 <dl> <dt>
 
-Nach *verfolgen* \[ in\]
+*Nachverfolgen* \[ In\]
 </dt> <dd>
 
-Typ: **[ **uint**](../winprog/windows-data-types.md)**
+Typ: **[ **UINT**](../winprog/windows-data-types.md)**
 
-Bezeichner nachverfolgen.
+Nachverfolgungsbezeichner.
 
 </dd> <dt>
 
-*hevent* \[ in\]
+*hEvent* \[ In\]
 </dt> <dd>
 
 Typ: **[ **D3DXEVENTHANDLE**](id3dxanimationcontroller.md)**
 
-Ereignis Handle für ein angegebenes Ereignis, nach dem nach einem folgenden Ereignis gesucht werden soll. Wenn der Wert auf **null** festgelegt wird, gibt die Methode das nächste geplante Ereignis zurück.
+Ereignishandle für ein angegebenes Ereignis, nach dem nach einem folgenden Ereignis gesucht werden soll. Wenn **null** festgelegt ist, gibt die Methode das nächste geplante Ereignis zurück.
 
 </dd> </dl>
 
@@ -63,14 +63,14 @@ Ereignis Handle für ein angegebenes Ereignis, nach dem nach einem folgenden Ere
 
 Typ: **[ **D3DXEVENTHANDLE**](id3dxanimationcontroller.md)**
 
-Ereignis Handle für das nächste Ereignis, das für die Ausführung auf dem angegebenen Track geplant ist. **Null** wird zurückgegeben, wenn kein neues Ereignis geplant ist.
+Ereignishandle für das nächste Ereignis, das für die Ausführung auf der angegebenen Spur geplant ist. **NULL** wird zurückgegeben, wenn kein neues Ereignis geplant ist.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Diese Methode kann iterativ verwendet werden, um ein gewünschtes Ereignis durch wiederholtes übergeben von **null** für hevent zu suchen.
+Diese Methode kann iterativ verwendet werden, um ein gewünschtes Ereignis zu finden, indem wiederholt **NULL** für hEvent übergeben wird.
 
 > [!Note]  
-> Iterieren Sie nicht weiter, nachdem die Methode **null** zurückgegeben hat.
+> Kehren Sie nicht weiter nach, nachdem die Methode **NULL** zurückgegeben hat.
 
  
 
@@ -80,12 +80,12 @@ Diese Methode kann iterativ verwendet werden, um ein gewünschtes Ereignis durch
 
 | Anforderung | Wert |
 |--------------------|----------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>D3dx9anim. h</dt> </dl> |
-| Bibliothek<br/> | <dl> <dt>D3dx9. lib</dt> </dl>   |
+| Header<br/>  | <dl> <dt>D3dx9anim.h</dt> </dl> |
+| Bibliothek<br/> | <dl> <dt>D3dx9.lib</dt> </dl>   |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 

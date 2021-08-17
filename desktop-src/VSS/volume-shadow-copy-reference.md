@@ -1,5 +1,5 @@
 ---
-description: Der Volumeschattenkopie-Dienst (VSS) ist ein Satz von COM- und C++-APIs, mit denen Volumesicherungen ausgeführt werden können, während Anwendungen auf dem System (als Writer bezeichnet) weiterhin auf die Volumes schreiben.
+description: Der Volumeschattenkopie-Dienst (VSS) ist ein Satz von COM- und C++-APIs, mit denen Volumesicherungen ausgeführt werden können, während Anwendungen im System (als Writer bezeichnet) weiterhin auf die Volumes schreiben.
 ms.assetid: 94d9504b-2838-4516-8031-daa7bd9d2fec
 title: Referenz zur Volumeschattenkopie-API
 ms.topic: article
@@ -13,25 +13,25 @@ ms.locfileid: "117751527"
 ---
 # <a name="volume-shadow-copy-api-reference"></a>Referenz zur Volumeschattenkopie-API
 
-Der Volumeschattenkopie-Dienst (VSS) ist ein Satz von COM- und C++-APIs, mit denen Volumesicherungen ausgeführt werden können, während Anwendungen auf dem System (als Writer bezeichnet) weiterhin auf die Volumes schreiben.
+Der Volumeschattenkopie-Dienst (VSS) ist ein Satz von COM- und C++-APIs, mit denen Volumesicherungen ausgeführt werden können, während Anwendungen im System (als Writer bezeichnet) weiterhin auf die Volumes schreiben.
 
 VSS unterstützt diese Sicherungen durch die Erstellung von Schattenkopien, einem Duplikat des ursprünglichen Volumes zu einem bestimmten Zeitpunkt.
 
-Drittanbieterentwickler können die VSS-API verwenden, um Anforderer (z. B. eine Sicherungsanwendung) zum Erstellen und Verwalten von Schattenkopien zu erstellen und zu verwalten.
+Drittanbieterentwickler können die VSS-API verwenden, um Anfordernde (z. B. eine Sicherungsanwendung) zum Erstellen und Verwalten von Schattenkopien zu erstellen und zu verwalten.
 
 Die eigentliche Arbeit zum Erstellen und Darstellen von Schattenkopien wird von Anwendungen auf Systemebene durchgeführt, die als Anbieter bezeichnet werden.
 
-Entwickler können die API auch verwenden, um Writer zu erstellen: VSS-fähige Anwendungen, die E/A-Vorgänge mit der Erstellung und Bearbeitung von Schattenkopien koordinieren können.
+Entwickler können die API auch verwenden, um Writer zu erstellen: VSS-orientierte Anwendungen, die E/A-Vorgänge mit der Erstellung und Bearbeitung von Schattenkopien koordinieren können.
 
 -   [Volumeschattenkopie-API-Klassen](volume-shadow-copy-api-classes.md)
 -   [Volumeschattenkopie-API-Datentypen](volume-shadow-copy-api-data-types.md)
--   [Volumeschattenkopie-API-Enumerationen](volume-shadow-copy-api-enumeration-types.md)
--   [Volumeschattenkopie-API-Funktionen](volume-shadow-copy-api-functions.md)
+-   [Enumerationen der Volumeschattenkopie-API](volume-shadow-copy-api-enumeration-types.md)
+-   [Funktionen der Volumeschattenkopie-API](volume-shadow-copy-api-functions.md)
 -   [Volumeschattenkopie-API-Schnittstellen](volume-shadow-copy-api-interfaces.md)
 -   [Volumeschattenkopie-API-Strukturen](volume-shadow-copy-api-structures.md)
--   [Volumeschattenkopie–Glossar](volume-shadow-copy-glossary.md)
+-   [Glossar für Volumeschattenkopien](volume-shadow-copy-glossary.md)
 
-Weitere Informationen zum Schreiben von Anforderern und Writern finden Sie unter [Verwenden der Volumeschattenkopie-Dienst](using-the-volume-shadow-copy-service.md).
+Weitere Informationen zum Schreiben von Anfordernden und Writern finden Sie unter [Verwenden der Volumeschattenkopie-Dienst](using-the-volume-shadow-copy-service.md).
 
  
 

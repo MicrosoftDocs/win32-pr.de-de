@@ -1,55 +1,55 @@
 ---
-title: Erstellen von MIDI-Dateien
-description: Erstellen von MIDI-Dateien
+title: Erstellen von DATEIEN
+description: Erstellen von DATEIEN
 ms.assetid: 2fca3b41-14f9-4eaf-9fdb-8f952c834302
 keywords:
-- Windows-Multimedia, Erstellen von MIDI-Dateien
-- Multimedia, Erstellen von MIDI-Dateien
-- Multimedia-Audiodatei, Erstellen von MIDI-Dateien
-- Audiodatei, Erstellen von MIDI-Dateien
-- Digital Instrumentation Digital Interface (MIDI), Erstellen von Dateien
-- MIDI (Digital Instrumentation Digital Interface), Erstellen von Dateien
-- Erstellen von MIDI-Dateien, Informationen zu
-- Zuordnung von MIDI-Herstellern (MMA)
-- MMA (Zuordnung von MIDI-Herstellern)
-- Ausführliche Beschreibung von MIDI
-- Standard-.
-- Allgemeine (GVO-) Spezifikation
-- GM-Spezifikation (General MIDI)
+- Windows Multimedia, Erstellen von DATEIEN
+- Multimedia, Erstellen von PROTOKOLLDATEIEN
+- Multimediaaudio, Erstellen vonCS-Dateien
+- Audio, Erstellen vonCS-Dateien
+- Music Instrument Digital Interface (DOSSIER), Erstellen von Dateien
+- INSTRUMENTS (Music Instrument Digital Interface),Erstellen von Dateien
+- Erstellen von TEXTDATEI-Dateien, Informationen
+- ASSOCIATION Manufacturers Association (MMA)
+- MMA (ASSOCIATION DER HERSTELLER)
+- AUSFÜHRLICHE SPEZIFIKATION FÜR DIE DETAILANGABE
+- STANDARDMÄßIGE SPEZIFIKATION FÜR DATEIEN
+- General GSM (GM)-Spezifikation
+- GM-Spezifikation (General GSM)
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: e36ccc25e73d6a28afc9001f2862870f1fa1a9ef
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: 07e2a229a8e9208645fa7ffae296c004b833156b240f063066be2a8732175054
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "104036682"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119144608"
 ---
-# <a name="creating-midi-files"></a>Erstellen von MIDI-Dateien
+# <a name="creating-midi-files"></a>Erstellen von DATEIEN
 
-Die Digital Instrumentation Digital Interface (MIDI)-Spezifikationen werden von veröffentlicht und sind urheberrechtlich geschütztes Material der Zuordnung von MIDI-Herstellern (MMA). In der folgenden Liste werden die Spezifikationen beschrieben, die das größte allgemeine Interesse haben:
+Die Spezifikationen für Die digitale Schnittstelle des Instrumentierens (COPYRIGHT) werden von veröffentlicht und sind urheberrechtlich geschütztes Material der COPYRIGHT Manufacturers Association (MMA). In der folgenden Liste werden die Spezifikationen beschrieben, die von größtem allgemeinen Interesse sind:
 
-## <a name="midi-detailed-specification"></a>Ausführliche Beschreibung von MIDI
+## <a name="midi-detailed-specification"></a>DETAILLIERTE SPEZIFIKATION FÜR DIE DETAILANGABE
 
-In der detaillierten Beschreibung des Protokolls werden die Protokolle "Hardware und Software" von MIDI erläutert. Dies ist nützlich für die Entwicklung von Multimedia-Anwendungen, die Unterstützung für die Unterstützung von MIDI mithilfe von MIDI-Funktionen zum Aufzeichnen, bearbeiten und/oder Wiedergeben von Daten von MIDI
+In der ausführlichen SPEZIFIKATION für DIE DETAILANGABE werden die HARDWARE- und Softwareprotokolle von CAB erläutert. Dies ist nützlich für dieJenigen, die Multimediaanwendungen entwickeln, die DIE SUPPORTS-Unterstützung implementieren, indem SIE DIE FUNKTIONEN VON ZUM AUFZEICHNEN, Bearbeiten und/oder Wiedergeben von CSV-Daten verwenden.
 
-## <a name="standard-midi-files-10"></a>Standard-MIDI-Dateien 1,0
+## <a name="standard-midi-files-10"></a>STANDARDMÄßIGE DATEIEN 1.0
 
-Mit der Standard-Datei für die-MIDI-Dateien wird eine Möglichkeit zum Austauschen von Daten mit Zeitstempel zwischen verschiedenen Anwendungen auf derselben oder unterschiedlichen Hardwareplattformen definiert. Dies ist nützlich für Entwickler, die Anwendungen schreiben, die Datenträger Dateien lesen und analysieren, die die Daten auf dem Datenträger schreiben und/oder auf dem Datenträger schreiben.
+Die SPEZIFIKATION STANDARD-DATEIDATEIEN definiert eine Möglichkeit zum Austausch von TIMESTAMP-Daten zwischen verschiedenen Anwendungen auf derselben oder verschiedenen Hardwareplattformen. Dies ist nützlich für Entwickler, die Anwendungen schreiben, die Datenträgerdateien lesen und analysieren, die CSV-Daten enthalten, und/oder WENN SIE DATEIEN auf den Datenträger schreiben.
 
-## <a name="general-midi-system---level-1"></a>Allgemeine System-und System Ebene 1
+## <a name="general-midi-system---level-1"></a>Allgemeines LEVELS-System – Ebene 1
 
-In der allgemeinen "MIDI (GM)"-Spezifikation wird eine minimale MIDI-Konfiguration eines "allgemeinen MIDI-Systems" definiert. Dieses System besteht aus einer bestimmten Klasse von MIDI-Wiedergabe Geräten und ist für multimediaderentwickler von Interesse, die als Autor von MIDI-Dateien arbeiten. Die meisten heute hergestellten PCs und MIDI-Synthesizer sind mit der GM-Spezifikation kompatibel. In der GM-Spezifikation erstellte MIDI-Dateien sollten in der Regel so klingen, als wären Sie für den Sound gedacht, unabhängig davon, auf welchem GM-kompatiblen Gerät Sie abgespielt werden.
+Die General GSM(GM)-Spezifikation definiert eine minimal erforderliche CONFIGURATION-Konfiguration eines "General GSM-Systems". Dieses System besteht aus einer bestimmten Klasse von PLAYBACK-Wiedergabegeräten und ist für Multimediaentwickler von Interesse, die CSV-Dateien erstellen. Die meisten heute hergestellten PC-Soundkarten und SYNTHESIZE-Synthesizer sind mit der GM-Spezifikation kompatibel. DIE DATEIEN, die in der GM-Spezifikation erstellt wurden, sollten in der Regel so klingen, wie sie für sound vorgesehen waren, unabhängig davon, auf welchem GM-kompatiblen Gerät sie wiedergegeben werden.
 
-Um es zu ermöglichen, dass für die Darstellung von Dateien in Multimedia Computing ein brauchbares Format für die Darstellung von Dateien in einem Format vorliegt, befolgt Windows die allgemeine System Ebene 1 Die folgenden Themen stellen zusätzliche Richtlinien für die Erstellung von Richtlinien zur
+Um ZU ermöglichen, dass DIE DATEIEN EIN geeignetes Format für die Darstellung von Musik im Multimediacomputing darstellen, Windows die allgemeine SPEZIFIKATION DES SYSTEMS Level 1 befolgt. Die folgenden Themen enthalten zusätzliche RICHTLINIEN für die ERSTELLUNG:
 
--   [Erstellungs Richtlinien für MIDI-Dateien](authoring-guidelines-for-midi-files.md)
--   [Standard mäßige MIDI-patchzuweisungen](standard-midi-patch-assignments.md)
--   [Standard-MIDI-schlüsselzuweisungen](standard-midi-key-assignments.md)
+-   [Richtlinien für die Erstellung von DATEIEN](authoring-guidelines-for-midi-files.md)
+-   [STANDARDMÄßIGE PATCH-Zuweisungen](standard-midi-patch-assignments.md)
+-   [STANDARDMÄßIGE SCHLÜSSELZUWEISUNGEN](standard-midi-key-assignments.md)
 
- 
+ 
 
- 
+ 
 
 
 

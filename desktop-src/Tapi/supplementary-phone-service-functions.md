@@ -1,99 +1,99 @@
 ---
-description: Die zusätzlichen Telefondienst Funktionen sind in den folgenden Themen nach Kategorie aufgelistet.
+description: Die Funktionen des ergänzenden Telefondiensts sind in den folgenden Themen nach Kategorie aufgeführt.
 ms.assetid: 0d1a81d2-aa9e-4a85-85d3-aa4eabb26eb5
-title: Zusätzliche Funktionen für den Telefondienst
+title: Ergänzende Telefon-Dienstfunktionen
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 527c39441a924a4f9787d22bf8db596882e7f257
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: d8ee0e32260ac3821fd06e7e8962ab2a6186fb42f1140eb6cd8f705709f2dfbd
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106367931"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118861418"
 ---
-# <a name="supplementary-phone-service-functions"></a>Zusätzliche Funktionen für den Telefondienst
+# <a name="supplementary-phone-service-functions"></a>Ergänzende Telefon-Dienstfunktionen
 
-Die zusätzlichen Telefondienst Funktionen sind in den folgenden Themen nach Kategorie aufgelistet. Eine Funktion wird als [*asynchron*](a-tapgloss.md) identifiziert, wenn Sie die Vervollständigung in einer Antwortmeldung an die Anwendung angibt. Wenn die Funktion das Ergebnis immer sofort an die Anwendung zurückgibt, gilt die Funktion als [*synchron*](s-tapgloss.md).
+Die Funktionen des ergänzenden Telefondiensts sind in den folgenden Themen nach Kategorie aufgeführt. Eine Funktion wird als asynchron [*identifiziert,*](a-tapgloss.md) wenn sie den Abschluss in einer REPLY-Nachricht an die Anwendung andeut. Wenn die Funktion ihr Ergebnis immer sofort an die Anwendung zurückgibt, wird die Funktion als synchron [*betrachtet.*](s-tapgloss.md)
 
-Im folgenden finden Sie eine funktionale Gruppierung der ergänzenden Phone Service-Funktionen:
+Im Folgenden finden Sie eine funktionale Gruppierung der Funktionen des ergänzenden Telefondiensts:
 
 -   [Schaltflächen](#buttons)
 -   [Datenbereiche](#data-areas)
 -   [Anzeige](#display)
--   [Gerätewechsel Geräte](#hookswitch-devices)
--   [Aufleuchten](#lamps)
+-   [Hookswitch-Geräte](#hookswitch-devices)
+-   [Lamps](#lamps)
 -   [Öffnen und Schließen von Telefongeräten](#opening-and-closing-phone-devices)
--   [Telefon Initialisierung und Herunterfahren](#phone-initialization-and-shutdown)
--   [Telefonstatus und-Funktionen](#phone-status-and-capabilities)
--   [Aushandlung der Telefon Version](#phone-version-negotiation)
--   [Mandel](#ring)
+-   [Telefon initialisieren und herunterfahren](#phone-initialization-and-shutdown)
+-   [Telefon und Funktionen](#phone-status-and-capabilities)
+-   [Telefon der Versionsaushandlung](#phone-version-negotiation)
+-   [Ring](#ring)
 -   [Status](#status)
 
 ## <a name="phone-initialization-and-shutdown"></a>Telefon Initialisierung und Herunterfahren
 
 
 
-| Funktion                                       | BESCHREIBUNG                                                                          |
+| Funktion                                       | Beschreibung                                                                          |
 |------------------------------------------------|--------------------------------------------------------------------------------------|
-| [**phoneinitializeex**](/windows/desktop/api/Tapi/nf-tapi-phoneinitializeexa) | Initialisiert die TAPI-telefonabstraktion zur Verwendung durch die Aufruf Anwendung. Synchronous. |
-| [**phoneshutdown**](/windows/desktop/api/Tapi/nf-tapi-phoneshutdown)         | Fährt die Verwendung der TAPI-Telefon Abstraktion für eine Anwendung herunter. Synchronous.            |
+| [**phoneInitializeEx**](/windows/desktop/api/Tapi/nf-tapi-phoneinitializeexa) | Initialisiert die TAPI-Telefonabstraktion zur Verwendung durch die aufrufende Anwendung. Synchronous. |
+| [**phoneShutdown**](/windows/desktop/api/Tapi/nf-tapi-phoneshutdown)         | Beendet die Verwendung der Phone-Abstraktion von TAPI durch eine Anwendung. Synchronous.            |
 
 
 
  
 
-## <a name="phone-version-negotiation"></a>Aushandlung der Telefon Version
+## <a name="phone-version-negotiation"></a>Telefon Versionsaushandlung
 
 
 
-| Funktion                                                     | BESCHREIBUNG                                                            |
+| Funktion                                                     | Beschreibung                                                            |
 |--------------------------------------------------------------|------------------------------------------------------------------------|
-| [**phonenegotiateapiversion**](/windows/desktop/api/Tapi/nf-tapi-phonenegotiateapiversion) | Ermöglicht es einer Anwendung, eine TAPI-Version für die Verwendung von auszuhandeln. Synchronous. |
+| [**phoneNegotiateAPIVersion**](/windows/desktop/api/Tapi/nf-tapi-phonenegotiateapiversion) | Ermöglicht einer Anwendung, eine zu verwendende TAPI-Version auszuhandeln. Synchronous. |
 
 
 
  
 
-## <a name="opening-and-closing-phone-devices"></a>Öffnen und Schließen von Telefongeräten
+## <a name="opening-and-closing-phone-devices"></a>Öffnen und Schließen Telefon Geräten
 
 
 
-| Funktion                         | BESCHREIBUNG                                                                                               |
+| Funktion                         | Beschreibung                                                                                               |
 |----------------------------------|-----------------------------------------------------------------------------------------------------------|
-| [**phoneopen**](/windows/desktop/api/Tapi/nf-tapi-phoneopen)   | Öffnet das angegebene Telefongerät und erteilt der Anwendung entweder Besitzer-oder Monitor Berechtigungen. Synchronous. |
-| [**phoneclose**](/windows/desktop/api/Tapi/nf-tapi-phoneclose) | Schließt ein angegebenes geöffnetes Telefongerät. Synchronous.                                                        |
+| [**phoneOpen**](/windows/desktop/api/Tapi/nf-tapi-phoneopen)   | Öffnet das angegebene Telefongerät und gibt der Anwendung entweder Besitzer- oder Monitorberechtigungen. Synchronous. |
+| [**phoneClose**](/windows/desktop/api/Tapi/nf-tapi-phoneclose) | Schließt ein angegebenes geöffnetes Telefongerät. Synchronous.                                                        |
 
 
 
  
 
-## <a name="phone-status-and-capabilities"></a>Telefon Status und-Funktionen
+## <a name="phone-status-and-capabilities"></a>Telefon Status und Funktionen
 
 
 
-| Funktion                                       | BESCHREIBUNG                                                                                                                                                      |
+| Funktion                                       | Beschreibung                                                                                                                                                      |
 |------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| [**phonegetdevcaps**](/windows/desktop/api/Tapi/nf-tapi-phonegetdevcaps)     | Gibt die Funktionen eines angegebenen Telefon Geräts zurück. Synchronous.                                                                                                   |
-| [**phonegetid**](/windows/desktop/api/Tapi/nf-tapi-phonegetid)               | Gibt eine Geräte-ID für die angegebene Geräteklasse zurück, die dem angegebenen Telefongerät zugeordnet ist. Synchronous.                                                          |
-| [**phonegeticon**](/windows/desktop/api/Tapi/nf-tapi-phonegeticon)           | Ermöglicht es einer Anwendung, ein Symbol für die Anzeige für den Benutzer abzurufen. Synchronous.                                                                                  |
-| [**phoneconfigdialog**](/windows/desktop/api/Tapi/nf-tapi-phoneconfigdialog) | Bewirkt, dass der Anbieter des angegebenen Telefon Geräts ein Dialogfeld anzeigt, das es dem Benutzer ermöglicht, Parameter im Zusammenhang mit dem Telefongerät zu konfigurieren. Synchronous. |
+| [**phoneGetDevCaps**](/windows/desktop/api/Tapi/nf-tapi-phonegetdevcaps)     | Gibt die Funktionen eines bestimmten Telefongeräts zurück. Synchronous.                                                                                                   |
+| [**phoneGetID**](/windows/desktop/api/Tapi/nf-tapi-phonegetid)               | Gibt eine Geräte-ID für die angegebene Geräteklasse zurück, die dem angegebenen Telefongerät zugeordnet ist. Synchronous.                                                          |
+| [**phoneGetIcon**](/windows/desktop/api/Tapi/nf-tapi-phonegeticon)           | Ermöglicht einer Anwendung, ein Symbol für die Anzeige für den Benutzer abzurufen. Synchronous.                                                                                  |
+| [**phoneConfigDialog**](/windows/desktop/api/Tapi/nf-tapi-phoneconfigdialog) | Veranlasst den Anbieter des angegebenen Telefongeräts, ein Dialogfeld anzuzeigen, in dem der Benutzer Parameter konfigurieren kann, die sich auf das Telefongerät bezieht. Synchronous. |
 
 
 
  
 
-## <a name="hookswitch-devices"></a>Gerätewechsel Geräte
+## <a name="hookswitch-devices"></a>Hookswitch-Geräte
 
 
 
-| Funktion                                         | BESCHREIBUNG                                                                                       |
+| Funktion                                         | Beschreibung                                                                                       |
 |--------------------------------------------------|---------------------------------------------------------------------------------------------------|
-| [**phonesethookswitch**](/windows/desktop/api/Tapi/nf-tapi-phonesethookswitch) | Legt den Hook-Zustand der geöffnenden Geräte eines geöffneten Telefons auf einen angegebenen Modus fest. Asynchron.      |
-| [**phonegethookswitch**](/windows/desktop/api/Tapi/nf-tapi-phonegethookswitch) | Fragt den Modus "geokswitch" eines geöffnenden Telefon Geräts ab. Synchronous.          |
-| [**phonesetvolume**](/windows/desktop/api/Tapi/nf-tapi-phonesetvolume)         | Legt das Volume eines geöffnenden Telefon Geräts für einen Hostgerät fest. Asynchron.           |
-| [**phonegetvolume**](/windows/desktop/api/Tapi/nf-tapi-phonegetvolume)         | Gibt die volumeeinstellung eines Sprechers eines geöffnenden Telefons für ein geöffnetes Telefongerät zurück. Synchronous. |
-| [**phonesetgewinn**](/windows/desktop/api/Tapi/nf-tapi-phonesetgain)             | Legt den Gewinn der MIC eines geöffnenden Telefon Geräts für ein geöffnetes Gerät fest. Asynchron.                 |
-| [**phonegetgewinn**](/windows/desktop/api/Tapi/nf-tapi-phonegetgain)             | Gibt die ergriffseinstellung eines geöffnenden Telefons eines geöffnenden Telefons für ein geöffnetes Gerät zurück. Synchronous.              |
+| [**phoneSetHookSwitch**](/windows/desktop/api/Tapi/nf-tapi-phonesethookswitch) | Legt den Hookzustand der Hookswitchgeräte eines geöffneten Telefons auf einen angegebenen Modus fest. Asynchron.      |
+| [**phoneGetHookSwitch**](/windows/desktop/api/Tapi/nf-tapi-phonegethookswitch) | Fragt den Hookswitchmodus eines Hookswitch-Geräts eines geöffneten Telefongeräts ab. Synchronous.          |
+| [**phoneSetVolume**](/windows/desktop/api/Tapi/nf-tapi-phonesetvolume)         | Legt das Volumen des Lautsprechers eines Geräts mit offenem Telefon fest. Asynchron.           |
+| [**phoneGetVolume**](/windows/desktop/api/Tapi/nf-tapi-phonegetvolume)         | Gibt die Volumeeinstellung des Lautsprechers eines Geräts mit offenem Telefon zurück. Synchronous. |
+| [**phoneSetGain**](/windows/desktop/api/Tapi/nf-tapi-phonesetgain)             | Legt den Gewinn des Mikrofons eines Geräts mit hookswitch eines geöffneten Telefongeräts fest. Asynchron.                 |
+| [**phoneGetGain**](/windows/desktop/api/Tapi/nf-tapi-phonegetgain)             | Gibt die Verstärkungseinstellung des Mikrofons eines geöffneten Telefons eines Hookswitchgeräts zurück. Synchronous.              |
 
 
 
@@ -103,10 +103,10 @@ Im folgenden finden Sie eine funktionale Gruppierung der ergänzenden Phone Serv
 
 
 
-| Funktion                                   | BESCHREIBUNG                                                              |
+| Funktion                                   | Beschreibung                                                              |
 |--------------------------------------------|--------------------------------------------------------------------------|
-| [**phonesetdisplay**](/windows/desktop/api/Tapi/nf-tapi-phonesetdisplay) | Schreibt Informationen in die Anzeige eines geöffneten Telefon Geräts. Asynchron. |
-| [**phonegetdisplay**](/windows/desktop/api/Tapi/nf-tapi-phonegetdisplay) | Gibt den aktuellen Inhalt der Anzeige eines Telefons zurück. Synchronous.          |
+| [**phoneSetDisplay**](/windows/desktop/api/Tapi/nf-tapi-phonesetdisplay) | Schreibt Informationen in die Anzeige eines geöffneten Telefongeräts. Asynchron. |
+| [**phoneGetDisplay**](/windows/desktop/api/Tapi/nf-tapi-phonegetdisplay) | Gibt den aktuellen Inhalt der Anzeige eines Telefons zurück. Synchronous.          |
 
 
 
@@ -116,10 +116,10 @@ Im folgenden finden Sie eine funktionale Gruppierung der ergänzenden Phone Serv
 
 
 
-| Funktion                             | BESCHREIBUNG                                                              |
+| Funktion                             | Beschreibung                                                              |
 |--------------------------------------|--------------------------------------------------------------------------|
-| [**phonesetring**](/windows/desktop/api/Tapi/nf-tapi-phonesetring) | Beendet ein geöffnetes Telefongerät entsprechend einem bestimmten Ring Modus. Asynchron. |
-| [**phonegetralling**](/windows/desktop/api/Tapi/nf-tapi-phonegetring) | Gibt den aktuellen Ring Modus eines geöffneten Telefon Geräts zurück. Synchronous.    |
+| [**phoneSetRing**](/windows/desktop/api/Tapi/nf-tapi-phonesetring) | Ringt ein offenes Telefongerät gemäß einem bestimmten Ringmodus. Asynchron. |
+| [**phoneGetRing**](/windows/desktop/api/Tapi/nf-tapi-phonegetring) | Gibt den aktuellen Ringmodus eines geöffneten Telefongeräts zurück. Synchronous.    |
 
 
 
@@ -129,23 +129,23 @@ Im folgenden finden Sie eine funktionale Gruppierung der ergänzenden Phone Serv
 
 
 
-| Funktion                                         | BESCHREIBUNG                                                                    |
+| Funktion                                         | Beschreibung                                                                    |
 |--------------------------------------------------|--------------------------------------------------------------------------------|
-| [**phonesetbuttoninfo**](/windows/desktop/api/Tapi/nf-tapi-phonesetbuttoninfo) | Legt die mit einer Schaltfläche auf einem Telefongerät verknüpften Informationen fest. Asynchron. |
-| [**phonegetbuttoninfo**](/windows/desktop/api/Tapi/nf-tapi-phonegetbuttoninfo) | Gibt Informationen zurück, die mit einer Schaltfläche auf einem Telefongerät verknüpft sind. Synchronous.   |
+| [**phoneSetButtonInfo**](/windows/desktop/api/Tapi/nf-tapi-phonesetbuttoninfo) | Legt die einer Schaltfläche auf einem Telefongerät zugeordneten Informationen fest. Asynchron. |
+| [**phoneGetButtonInfo**](/windows/desktop/api/Tapi/nf-tapi-phonegetbuttoninfo) | Gibt Informationen zurück, die einer Schaltfläche auf einem Telefongerät zugeordnet sind. Synchronous.   |
 
 
 
  
 
-## <a name="lamps"></a>Aufleuchten
+## <a name="lamps"></a>Lamps
 
 
 
-| Funktion                             | BESCHREIBUNG                                                                                 |
+| Funktion                             | Beschreibung                                                                                 |
 |--------------------------------------|---------------------------------------------------------------------------------------------|
-| [**phonesetlamp**](/windows/desktop/api/Tapi/nf-tapi-phonesetlamp) | Leuchtet eine LAMP auf einem angegebenen geöffneten Telefongerät in einem bestimmten Lamp-Beleuchtungs Modus. Asynchron. |
-| [**phonegetlamp**](/windows/desktop/api/Tapi/nf-tapi-phonegetlamp) | Gibt den aktuellen Lamp-Modus der angegebenen Lamp zurück. Synchronous.                           |
+| [**phoneSetLamp**](/windows/desktop/api/Tapi/nf-tapi-phonesetlamp) | Leuchtet eine Lampe auf einem angegebenen geöffneten Telefongerät in einem bestimmten Lampe-Beleuchtungsmodus. Asynchron. |
+| [**phoneGetLamp**](/windows/desktop/api/Tapi/nf-tapi-phonegetlamp) | Gibt den aktuellen Lampemodus der angegebenen Lampe zurück. Synchronous.                           |
 
 
 
@@ -155,10 +155,10 @@ Im folgenden finden Sie eine funktionale Gruppierung der ergänzenden Phone Serv
 
 
 
-| Funktion                             | BESCHREIBUNG                                                                             |
+| Funktion                             | Beschreibung                                                                             |
 |--------------------------------------|-----------------------------------------------------------------------------------------|
-| [**phonesetdata**](/windows/desktop/api/Tapi/nf-tapi-phonesetdata) | Lädt einen Datenpuffer in einen bestimmten Datenbereich auf dem Telefongerät herunter. Asynchron.      |
-| [**phonegetdata**](/windows/desktop/api/Tapi/nf-tapi-phonegetdata) | Lädt den Inhalt eines bestimmten Datenbereichs auf dem Telefongerät in einen Puffer hoch. Synchronous. |
+| [**phoneSetData**](/windows/desktop/api/Tapi/nf-tapi-phonesetdata) | Lädt einen Datenpuffer in einen bestimmten Datenbereich auf dem Telefongerät herunter. Asynchron.      |
+| [**phoneGetData**](/windows/desktop/api/Tapi/nf-tapi-phonegetdata) | Lädt den Inhalt eines bestimmten Datenbereichs auf dem Telefongerät in einen Puffer hoch. Synchronous. |
 
 
 
@@ -168,11 +168,11 @@ Im folgenden finden Sie eine funktionale Gruppierung der ergänzenden Phone Serv
 
 
 
-| Funktion                                                 | BESCHREIBUNG                                                                               |
+| Funktion                                                 | Beschreibung                                                                               |
 |----------------------------------------------------------|-------------------------------------------------------------------------------------------|
-| [**phonesetstatus-Meldungen**](/windows/desktop/api/Tapi/nf-tapi-phonesetstatusmessages) | Gibt die Statusänderungen an, für die die Anwendung benachrichtigt werden soll. Synchronous. |
-| [**phonegetstatus Messages**](/windows/desktop/api/Tapi/nf-tapi-phonegetstatusmessages) | Gibt die Statusänderungen zurück, für die die Anwendung benachrichtigt werden soll. Synchronous.   |
-| [**phonegetstatus**](/windows/desktop/api/Tapi/nf-tapi-phonegetstatus)                 | Gibt den gesamten Status eines geöffneten Telefon Geräts zurück. Synchronous.                         |
+| [**phoneSetStatusMessages**](/windows/desktop/api/Tapi/nf-tapi-phonesetstatusmessages) | Gibt die Statusänderungen an, für die die Anwendung benachrichtigt werden soll. Synchronous. |
+| [**phoneGetStatusMessages**](/windows/desktop/api/Tapi/nf-tapi-phonegetstatusmessages) | Gibt die Statusänderungen zurück, für die die Anwendung benachrichtigt werden soll. Synchronous.   |
+| [**phoneGetStatus**](/windows/desktop/api/Tapi/nf-tapi-phonegetstatus)                 | Gibt den vollständigen Status eines geöffneten Telefongeräts zurück. Synchronous.                         |
 
 
 

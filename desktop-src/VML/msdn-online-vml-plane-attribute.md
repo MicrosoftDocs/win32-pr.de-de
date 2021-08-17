@@ -1,40 +1,40 @@
 ---
-title: VML-Ebene-Attribut
-description: VML-Ebene-Attribut
+title: VML-Ebenenattribut
+description: VML-Ebenenattribut
 ms.assetid: e1de630b-8e25-4052-b316-251046f73e98
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 04f279f008adf8f12f78d6edd790cc533678adc9
-ms.sourcegitcommit: 592c9bbd22ba69802dc353bcb5eb30699f9e9403
+ms.openlocfilehash: c85312c8c2987105859b9f773fa102723c64c30c688dedd34fb9578bd370452e
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "103948841"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119334210"
 ---
-# <a name="vml-plane-attribute"></a>VML-Ebene-Attribut
+# <a name="vml-plane-attribute"></a>VML-Ebenenattribut
 
-In diesem Thema wird VML beschrieben, eine Funktion, die ab Windows Internet Explorer 9 veraltet ist. Webseiten und Anwendungen, die auf VML basieren, sollten zu SVG oder anderen allgemein unterstützten Standards migriert werden.
+In diesem Thema wird VML beschrieben, ein Feature, das ab Version 9 Windows Internet Explorer ist. Webseiten und Anwendungen, die auf VML basieren, sollten zu SVG oder anderen weit verbreiteten Standards migriert werden.
 
 > [!Note]  
-> Ab Dezember 2011 wurde dieses Thema archiviert. Daher wird er nicht mehr aktiv verwaltet. Weitere Informationen finden Sie unter [archivierte Inhalte](/previous-versions/windows/internet-explorer/ie-developer/). Informationen, Empfehlungen und Anleitungen zur aktuellen Version von Windows Internet Explorer finden Sie im [Internet Explorer Developer Center](https://msdn.microsoft.com/ie/).
+> Seit Dezember 2011 wurde dieses Thema archiviert. Daher wird sie nicht mehr aktiv verwaltet. Weitere Informationen finden Sie unter [Archivierter Inhalt.](/previous-versions/windows/internet-explorer/ie-developer/) Informationen, Empfehlungen und Anleitungen zur aktuellen Version von Windows Internet Explorer finden Sie im [Internet Explorer Developer Center.](https://msdn.microsoft.com/ie/)
 
- 
+ 
 
-Gibt die Ebene an, die sich im rechten Winkel der-Extrusion befindet. Lese-/Schreibzugriff. **Zeichenfolge**.
+Gibt die Ebene an, die sich in rechten Winkeln zurExtrusion befindet. Lese-/Schreibzugriff. **Zeichenfolge.**
 
 **Gilt für**
 
-[Schläuche](msdn-online-vml-extrusion-element.md)
+[Extrusion](msdn-online-vml-extrusion-element.md)
 
 **Tagsyntax**
 
-<o: *Element* Plane = " *Ausdruck* " >
+<o: *element* plane="-Ausdruck "> 
 
-**Skript Syntax**
+**Skriptsyntax**
 
-*Element* . Plane = "*Ausdruck*"
+*element* .plane="*expression*"
 
-*Ausdruck* = *Element*. Plane
+*expression* = *Element*.plane
 
 **Anmerkungen**
 
@@ -42,18 +42,18 @@ Mögliche Werte:
 
 
 
-| Wert | BESCHREIBUNG                                            |
+| Wert | Beschreibung                                            |
 |-------|--------------------------------------------------------|
-| xy    | Die-Extrusion erfolgt im rechten Winkel der XY-Ebene. Standard |
-| ZX    | Die-Extrusion erfolgt in der rechten Ecke der ZX-Ebene.         |
-| YZ    | Die-Extrusion ist im rechten Winkel zur YZ-Ebene.         |
+| xy    | DieExtrusion befindet sich in rechten Winkeln zur xy-Ebene. Standard |
+| Zx    | DieExtrusion befindet sich in rechten Winkeln zur zx-Ebene.         |
+| Yz    | DieExtrusion befindet sich in rechten Winkeln zur yz-Ebene.         |
 
 
 
- 
+ 
 
 *Microsoft Office Extensions-Attribut*
 
- 
+ 
 
- 
+ 

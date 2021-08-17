@@ -19,9 +19,9 @@ Dieser Abschnitt enthält ein Thema, das das Erstellen eines statischen Steuerel
 
 
 
-| Thema                                                                  | BESCHREIBUNG                                                                                    |
+| Thema                                                                  | Beschreibung                                                                                    |
 |------------------------------------------------------------------------|------------------------------------------------------------------------------------------------|
-| [Erstellen statischer Steuerelemente](create-static-controls.md)<br/> | Das Beispiel in diesem Abschnitt veranschaulicht, wie ein animiertes statisches Steuerelement erstellt wird. <br/> |
+| [Erstellen von statischen Steuerelementen](create-static-controls.md)<br/> | Im Beispiel in diesem Abschnitt wird veranschaulicht, wie ein animiertes statisches Steuerelement erstellt wird. <br/> |
 
 
 

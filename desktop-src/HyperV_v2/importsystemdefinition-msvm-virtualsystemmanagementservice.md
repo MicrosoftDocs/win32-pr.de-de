@@ -1,7 +1,7 @@
 ---
-description: Erstellt ein neues geplantes Computersystem basierend auf der angegebenen Definition der virtuellen Maschine.
+description: Erstellt ein neues geplantes Computersystem basierend auf der angegebenen Definition des virtuellen Computers.
 ms.assetid: 885d399f-5bcf-4f34-b2f1-582cbfcd7c10
-title: Importsystemdefinition-Methode der Msvm_VirtualSystemManagementService-Klasse
+title: ImportSystemDefinition-Methode der Msvm_VirtualSystemManagementService Klasse
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,16 +13,16 @@ api_type:
 - COM
 api_location:
 - vmms.exe
-ms.openlocfilehash: bb38ab343a3d92fabd1dc44ed100d2d2f7f7bf01
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: ee8dd5bb7d17684216b747717c0adf32011dafa543f05c91a0c1264da89caf2a
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106354596"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118149736"
 ---
-# <a name="importsystemdefinition-method-of-the-msvm_virtualsystemmanagementservice-class"></a>Importsystemdefinition-Methode der MSVM \_ virtualsystemmanagementservice-Klasse
+# <a name="importsystemdefinition-method-of-the-msvm_virtualsystemmanagementservice-class"></a>ImportSystemDefinition-Methode der Msvm \_ VirtualSystemManagementService-Klasse
 
-Erstellt ein neues geplantes Computersystem basierend auf der angegebenen Definition der virtuellen Maschine.
+Erstellt ein neues geplantes Computersystem basierend auf der angegebenen Definition des virtuellen Computers.
 
 ## <a name="syntax"></a>Syntax
 
@@ -43,38 +43,38 @@ uint32 ImportSystemDefinition(
 
 <dl> <dt>
 
-*SystemDefinitionFile* \[ in\]
+*SystemDefinitionFile* \[ In\]
 </dt> <dd>
 
-Der voll qualifizierte Pfad zur System Definitionsdatei (. XML oder. exp), die den zu importierenden virtuellen Computer darstellt. Die Definitionsdatei darf nicht bereits vom Host System oder der Virtualisierungsplattform verwendet werden.
+Der vollqualifizierte Pfad zur Systemdefinitionsdatei (.xml oder EXP), die den zu importierenden virtuellen Computer darstellt. Die Definitionsdatei darf nicht bereits vom Hostsystem oder der Virtualisierungsplattform verwendet werden.
 
 </dd> <dt>
 
-*Snapshotfolder* \[ in\]
+*SnapshotFolder* \[ In\]
 </dt> <dd>
 
-Der voll qualifizierte Pfad zum Ordner, in dem die Momentaufnahme Konfigurationen für diesen virtuellen Computer gefunden werden können. Dieser Ordner wird durchsucht, um Momentaufnahmen zu finden, auf die in der Definition der virtuellen Maschine verwiesen wird. Alle referenzierten Momentaufnahmen, die an diesem Speicherort nicht gefunden werden, müssen mithilfe der [**destroysnapshot**](destroysnapshot-msvm-virtualsystemsnapshotservice.md) -Methode gelöscht oder mithilfe der [**importsnapshotdefinitions**](importsnapshotdefinitions-msvm-virtualsystemmanagementservice.md) -Methode importiert werden, bevor das geplante Computersystem erkannt wird.
+Der vollqualifizierte Pfad zu dem Ordner, in dem sich die Momentaufnahmekonfigurationen für diesen virtuellen Computer befinden. Dieser Ordner wird durchsucht, um alle Momentaufnahmen zu finden, auf die in der Definition des virtuellen Computers verwiesen wird. Alle Momentaufnahmen, auf die an diesem Speicherort nicht verwiesen wird, müssen mit der [**DestroySnapshot-Methode**](destroysnapshot-msvm-virtualsystemsnapshotservice.md) gelöscht oder mit der [**ImportSnapshotDefinitions-Methode**](importsnapshotdefinitions-msvm-virtualsystemmanagementservice.md) importiert werden, bevor das geplante Computersystem realisiert wird.
 
 </dd> <dt>
 
-*Generatenewsystematidentifier* \[ in\]
+*GenerateNewSystemIdentifier* \[ In\]
 </dt> <dd>
 
-Gibt an, ob der eindeutige Bezeichner für den virtuellen Computer wieder verwendet werden soll. Wenn dieser Parameter **true** ist, wird ein neuer System Bezeichner generiert. Wenn dieser Parameter **false** ist, wird der vorhandene System Bezeichner verwendet.
+Gibt an, ob der eindeutige Bezeichner für den virtuellen Computer wiederverwendet werden soll. Wenn dieser Parameter **true ist,** wird ein neuer Systembezeichner generiert. Wenn dieser Parameter False **ist,** wird der vorhandene Systembezeichner verwendet.
 
 </dd> <dt>
 
-*Importedsystem* \[ vorgenommen\]
+*ImportedSystem* \[ out\]
 </dt> <dd>
 
-Wenn der Vorgang synchron abgeschlossen wird, ein Verweis auf ein [**MSVM \_ plannedcomputersystem**](msvm-plannedcomputersystem.md) -Objekt, das den importierten virtuellen Computer darstellt.
+Wenn der Vorgang synchron abgeschlossen wird, ein Verweis auf ein [**Msvm \_ PlannedComputerSystem-Objekt,**](msvm-plannedcomputersystem.md) das den importierten virtuellen Computer darstellt.
 
 </dd> <dt>
 
-*Auftrag* \[ vorgenommen\]
+*Auftrag* \[ out\]
 </dt> <dd>
 
-Wenn der Vorgang asynchron ausgeführt wird, gibt diese Methode 4096 zurück, und dieser Parameter enthält einen Verweis auf ein Objekt, das von [**CIM \_ concretejob**](/previous-versions//cc136808(v=vs.85))abgeleitet wird.
+Wenn der Vorgang asynchron ausgeführt wird, gibt diese Methode 4096 zurück, und dieser Parameter enthält einen Verweis auf ein Objekt, das von [**CIM \_ ConcreteJob abgeleitet wurde.**](/previous-versions//cc136808(v=vs.85))
 
 </dd> </dl>
 
@@ -87,10 +87,10 @@ Diese Methode gibt einen der folgenden Werte zurück.
 **Abgeschlossen ohne Fehler** (0)
 </dt> <dt>
 
-Über **prüfte Methoden Parameter-Auftrag gestartet** (4096)
+**Überprüfte Methodenparameter – Auftrag gestartet** (4096)
 </dt> <dt>
 
-Fehler **(32768** )
+**Fehler** (32768)
 </dt> <dt>
 
 **Zugriff verweigert** (32769)
@@ -99,31 +99,31 @@ Fehler **(32768** )
 **Nicht unterstützt** (32770)
 </dt> <dt>
 
-Der **Status ist "Unknown** " (32771).
+**Status ist unbekannt** (32771)
 </dt> <dt>
 
 **Timeout** (32772)
 </dt> <dt>
 
-**Ungültiger Parameter** (32773)
+**Ungültiger** Parameter (32773)
 </dt> <dt>
 
 **System wird verwendet** (32774)
 </dt> <dt>
 
-**Ungültiger Status für diesen Vorgang** (32775).
+**Ungültiger Zustand für diesen Vorgang** (32775)
 </dt> <dt>
 
-**Falscher Datentyp** (32776).
+**Falscher Datentyp** (32776)
 </dt> <dt>
 
-Das **System ist nicht verfügbar** (32777).
+**System ist nicht verfügbar** (32777)
 </dt> <dt>
 
-**Nicht** genügend Arbeitsspeicher (32778)
+**Nicht genügend Arbeitsspeicher** (32778)
 </dt> <dt>
 
-**Verwendete Datei** (32779)
+**Datei in Verwendung** (32779)
 </dt> </dl>
 
 ## <a name="requirements"></a>Anforderungen
@@ -132,19 +132,19 @@ Das **System ist nicht verfügbar** (32777).
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows 8 \[ -Desktop-Apps\]<br/>                                                              |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2012 \[ -Desktop-Apps\]<br/>                                                    |
-| Namespace<br/>                | \\Stammvirtualisierung \\ v2<br/>                                                                     |
-| MOF<br/>                      | <dl> <dt>Windowsvirtualization. v2. MOF</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | \[Windows 8 Nur Desktop-Apps\]<br/>                                                              |
+| Unterstützte Mindestversion (Server)<br/> | \[Windows Server 2012 Nur Desktop-Apps\]<br/>                                                    |
+| Namespace<br/>                | Root \\ Virtualization \\ V2<br/>                                                                     |
+| MOF<br/>                      | <dl> <dt>WindowsVirtualization.V2.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Vmms.exe</dt> </dl>                     |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**MSVM \_ virtualsystemmanagementservice**](msvm-virtualsystemmanagementservice.md)
+[**Msvm \_ VirtualSystemManagementService**](msvm-virtualsystemmanagementservice.md)
 </dt> </dl>
 
  

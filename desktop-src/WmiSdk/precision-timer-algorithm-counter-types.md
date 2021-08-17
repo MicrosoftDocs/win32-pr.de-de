@@ -1,27 +1,27 @@
 ---
-description: Die Zähler Typen der Genauigkeits Geber Algorithmen erhalten genauere Messwerte als systemtimer.
+description: Die Genauigkeits-Timer-Algorithmus-Indikatortypen erhalten genauere Messwerte als Systemzeitindikatoren.
 ms.assetid: f7159645-6287-47a3-895e-20dae6e0892a
 ms.tgt_platform: multiple
-title: Zähler Typen für Genauigkeits Geber Algorithmen
+title: Genauigkeits-Timeralgorithmus-Indikatortypen
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: f3a8864587fedc915678dfa4a9e578ca051e1262
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 137d136db0b4dd579dfec4673b09ce216bef4042d9356b3938b79e7817e3d83a
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "103759769"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119131032"
 ---
-# <a name="precision-timer-algorithm-counter-types"></a>Zähler Typen für Genauigkeits Geber Algorithmen
+# <a name="precision-timer-algorithm-counter-types"></a>Genauigkeits-Timeralgorithmus-Indikatortypen
 
-Die Zähler Typen der Genauigkeits Geber Algorithmen erhalten genauere Messwerte als systemtimer. Der Dienst, der die Daten bereitstellt, stellt auch einen Zeitstempel bereit. Dadurch werden die Fehler vermieden, die aufgrund der kurzen und Variablen Zeit zwischen der Erfassung des Systemzeit Stempels und der Auflistung der Daten aus der Leistungs-dll auftreten können. Dieser Basis Zeitstempel für Genauigkeits Timer ist eine perf \_ Precision- \_ Zeitstempel Eigenschaft, die unmittelbar auf die perf Precision-Zeit Geber Eigenschaft folgen muss \_ \_ .
+Die Genauigkeits-Timer-Algorithmus-Indikatortypen erhalten genauere Messwerte als Systemzeitindikatoren. Der Dienst, der die Daten zur Verfügung stellt, stellt auch einen Zeitstempel zur Verfügung, der die Fehler beseitigt, die aufgrund der kleinen und variablen Zeit auftreten können, die zwischen der Erfassung des Systemzeitstempels und der Erfassung der Daten aus der Leistungs-DLL verstreicht. Dieser Basiszeitstempel für Genauigkeits-Timer ist eine PERF PRECISION TIMESTAMP-Eigenschaft, die unmittelbar auf die \_ \_ PERF \_ PRECISION \_ TIMER-Eigenschaft folgen muss.
 
 
 
-| CounterType-Konstante                                                                                         | BESCHREIBUNG                                                                                                                  |
+| CounterType-Konstante                                                                                         | Beschreibung                                                                                                                  |
 |--------------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------|
-| Leistung [ \_ Genauigkeits \_ System- \_ Timer](/previous-versions/windows/it-pro/windows-server-2003/cc785636(v=ws.10))Decimal 541525248<br/> | Ähnelt \_ dem Leistungs Zähler- \_ Timer, mit dem Unterschied, dass er anstelle des Systemzeit Stempels eine Zähler definierte Zeitbasis verwendet.             |
-| Leistung [ \_ Genauigkeit \_ 100 NS \_ Timer](/previous-versions/windows/it-pro/windows-server-2003/cc785636(v=ws.10))Decimal 542573824<br/>  | Ähnelt dem perf-Wert von \_ 100 nsec \_ , außer dass er eine 100-ns-Zähler definierte Zeitbasis anstelle des System-100-ns-Zeitstempels verwendet. |
+| [PERF \_ PRECISION \_ SYSTEM \_ TIMER](/previous-versions/windows/it-pro/windows-server-2003/cc785636(v=ws.10))Decimal 541525248<br/> | Ähnlich wie PERF COUNTER TIMER, mit der Ausnahme, dass anstelle des Systemzeitstempels eine indikatordefinierte \_ \_ Zeitbasis verwendet wird.             |
+| [PERF \_ GENAUIGKEIT: \_ 100NS \_ TIMER](/previous-versions/windows/it-pro/windows-server-2003/cc785636(v=ws.10))Decimal 542573824<br/>  | Ähnlich wie PERF 100NSEC TIMER, mit der Ausnahme, dass anstelle des Systemzeitstempels \_ \_ 100ns eine 100ns-Indikator-definierte Zeitbasis verwendet wird. |
 
 
 
@@ -31,7 +31,7 @@ Die Zähler Typen der Genauigkeits Geber Algorithmen erhalten genauere Messwerte
 
 <dl> <dt>
 
-[WMI-Leistungsdaten Typen](wmi-performance-counter-types.md)
+[WMI-Leistungsindikatortypen](wmi-performance-counter-types.md)
 </dt> </dl>
 
  

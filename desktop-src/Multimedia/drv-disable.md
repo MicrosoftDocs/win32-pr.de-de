@@ -1,9 +1,9 @@
 ---
-title: DRV_DISABLE Meldung (MMSYSTEM. h)
-description: Deaktiviert den Treiber. Der Treiber sollte das entsprechende Gerät (sofern vorhanden) in einen inaktiven Zustand versetzen und alle Rückruf Funktionen oder Threads beenden.
+title: DRV_DISABLE (Mmsystem.h)
+description: Deaktiviert den Treiber. Der Treiber sollte das entsprechende Gerät in einem inaktiven Zustand platzieren und alle Rückruffunktionen oder Threads beenden.
 ms.assetid: 83e99397-6f0e-4174-9f96-e10c1f17ef0b
 keywords:
-- DRV_DISABLE-Nachricht (Multimedia)
+- DRV_DISABLE von Windows Multimedia
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: b512e90612a02681008474c7f1323f17304422d2
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 75d9c5a99414f0b755efbae005365d89665a2b2bc5a4673436101066ec740564
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "103957168"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119144413"
 ---
-# <a name="drv_disable-message"></a>DRV-Deaktivierungs \_ Meldung
+# <a name="drv_disable-message"></a>DRV \_ DISABLE-Meldung
 
-Deaktiviert den Treiber. Der Treiber sollte das entsprechende Gerät (sofern vorhanden) in einen inaktiven Zustand versetzen und alle Rückruf Funktionen oder Threads beenden.
+Deaktiviert den Treiber. Der Treiber sollte das entsprechende Gerät in einem inaktiven Zustand platzieren und alle Rückruffunktionen oder Threads beenden.
 
 ## <a name="parameters"></a>Parameter
 
@@ -32,7 +32,7 @@ Deaktiviert den Treiber. Der Treiber sollte das entsprechende Gerät (sofern vor
 <span id="hdrvr"></span><span id="HDRVR"></span>*hdrvr*
 </dt> <dd>
 
-Handle der installierbaren Treiber Instanz.
+Handle der installierbaren Treiberinstanz.
 
 </dd> </dl>
 
@@ -40,11 +40,11 @@ Handle der installierbaren Treiber Instanz.
 
 Kein Rückgabewert.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die Parameter " *dwdriverid*", " *lParam1*" und " *lParam2* " werden nicht verwendet.
+Die *Parameter dwDriverId,* *lParam1* und *lParam2* werden nicht verwendet.
 
-Nach der Deaktivierung des Treibers sendet das System in der Regel eine [**drv- \_ freie drv**](drv-free.md) -Nachricht, bevor der Treiber aus dem Arbeitsspeicher entfernt wird.
+Nach dem Deaktivieren des Treibers sendet das System dem Treiber in der Regel eine [**DRV \_ FREE-Nachricht,**](drv-free.md) bevor der Treiber aus dem Arbeitsspeicher entfernt wird.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -54,18 +54,18 @@ Nach der Deaktivierung des Treibers sendet das System in der Regel eine [**drv- 
 |-------------------------------------|-----------------------------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[nur Desktop-Apps\]<br/>                                                |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                                                      |
-| Header<br/>                   | <dl> <dt>MMSYSTEM. h (Include Windows. h)</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Mmsystem.h (include Windows.h)</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
 [Installierbare Treiber](installable-drivers.md)
 </dt> <dt>
 
-[Installierbare Treiber Meldungen](installable-driver-messages.md)
+[Installierbare Treibermeldungen](installable-driver-messages.md)
 </dt> </dl>
 
  

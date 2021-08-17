@@ -14,12 +14,12 @@ api_type:
 api_location:
 - D3DX10.lib
 - D3DX10.dll
-ms.openlocfilehash: 73cd5d9b809a0eb442db57e91c3788d2548a8c33
-ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
+ms.openlocfilehash: b8b1b64818f4c0903897dc5b1de83b1aaa963461e909edbbfc9ba8dc4a1f10f8
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2021
-ms.locfileid: "108113098"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119282960"
 ---
 # <a name="d3dxmatrixortholh-function-d3dx10mathh"></a>D3DXMatrixOrthoLH-Funktion (D3DX10Math.h)
 
@@ -80,7 +80,7 @@ Der minimale Z-Wert des Ansichtsvolumes, der als z-near bezeichnet wird.
 
 </dd> <dt>
 
-*NSD* \[ In\]
+*NSDR* \[ In\]
 </dt> <dd>
 
 Typ: **[ **FLOAT**](../winprog/windows-data-types.md)**
@@ -95,9 +95,9 @@ Typ: **[ **D3DXMATRIX**](../direct3d9/d3dxmatrix.md)\***
 
 Zeiger auf die resultierende [**D3DXMATRIX.**](d3d10-d3dxmatrix.md)
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Alle Parameter der D3DXMatrixOrthoLH-Funktion sind Abstände im Kameraraum. Die Parameter beschreiben die Dimensionen des Ansichtsvolumens.
+Alle Parameter der D3DXMatrixOrthoLH-Funktion sind Entfernungen im Kameraraum. Die Parameter beschreiben die Dimensionen des Ansichtsvolumes.
 
 Der Rückgabewert für diese Funktion ist der gleiche Wert, der im pOut-Parameter zurückgegeben wird. Auf diese Weise kann die D3DXMatrixOrthoLH-Funktion als Parameter für eine andere Funktion verwendet werden.
 
@@ -117,7 +117,7 @@ Diese Funktion verwendet die folgende Formel, um die zurückgegebene Matrix zu b
 
 
 
-| Anforderungen | Wert |
+| Anforderung | Wert |
 |--------------------|-----------------------------------------------------------------------------------------|
 | Header<br/>  | <dl> <dt>D3DX10Math.h</dt> </dl> |
 | Bibliothek<br/> | <dl> <dt>D3DX10.lib</dt> </dl>   |

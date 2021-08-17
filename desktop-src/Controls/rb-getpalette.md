@@ -1,9 +1,9 @@
 ---
-title: RB_GETPALETTE Meldung (kommstrg. h)
-description: Ruft die aktuelle Palette des Grund leisten-Steuer Elements ab.
+title: RB_GETPALETTE (Commctrl.h)
+description: Ruft die aktuelle Palette des Rebar-Steuerelements ab.
 ms.assetid: f9eeefb3-8308-45bf-89e4-4f282ee6d935
 keywords:
-- Windows-Steuerelemente für RB_GETPALETTE Meldung
+- RB_GETPALETTE von Windows-Steuerelementen
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 36dd2764b6a8951a337c990dcbcfb8e5aff9c56b
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 1e2a4be005392e01bceedd2582c61edfa60b808ef98414237109ec276dc016f8
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104104445"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119078704"
 ---
-# <a name="rb_getpalette-message"></a>RB \_ getpalette-Nachricht
+# <a name="rb_getpalette-message"></a>RB \_ GETPALETTE-Nachricht
 
-Ruft die aktuelle Palette des Grund leisten-Steuer Elements ab.
+Ruft die aktuelle Palette des Rebar-Steuerelements ab.
 
 ## <a name="parameters"></a>Parameter
 
@@ -37,7 +37,7 @@ Ruft die aktuelle Palette des Grund leisten-Steuer Elements ab.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt eine **hpalette** zurück, die die aktuelle Palette des Grund leisten-Steuer Elements angibt.
+Gibt eine **HPALETTE zurück,** die die aktuelle Palette des Steuerelements für die Leiste angibt.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -45,17 +45,17 @@ Gibt eine **hpalette** zurück, die die aktuelle Palette des Grund leisten-Steue
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                        |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/>                                  |
-| Header<br/>                   | <dl> <dt>Kommstrg. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ Vista-Desktop-Apps\]<br/>                                        |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                                  |
+| Header<br/>                   | <dl> <dt>Commctrl.h</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**RB- \_ SetPalette**](rb-setpalette.md)
+[**RB \_ SETPALETTE**](rb-setpalette.md)
 </dt> </dl>
 
  

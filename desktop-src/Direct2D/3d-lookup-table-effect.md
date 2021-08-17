@@ -1,6 +1,6 @@
 ---
 title: 3D-Lookuptabelleneffekt
-description: Eine 3D-Nachschlagen-Tabelle ist ein allgemeiner Effekt, der zum Kapseln von 1 1 Imageeffekten verwendet wird, indem vorab berechnet wird, wie der Effekt Eingaben Ausgaben für eine Teilmenge aller Eingabewerte zuteilt.
+description: Eine 3D-Nachschautabelle ist ein allgemeiner Effekt, der verwendet wird, um jeden 1.1-Bildverarbeitungseffekt zu kapseln, indem vorgefertigt wird, wie der Effekt Eingaben Ausgaben für eine Teilmenge aller Eingabewerte zuteilt.
 ms.assetid: 2f0b4b6d-f371-101c-918a-bf564778e593
 ms.topic: article
 ms.date: 05/31/2018
@@ -13,27 +13,27 @@ ms.locfileid: "118161025"
 ---
 # <a name="3d-lookup-table-effect"></a>3D-Lookuptabelleneffekt
 
-Eine 3D-Nachschlagen-Tabelle ist ein allgemeiner Effekt, der verwendet wird, um alle 1:1-Bildbearbeitungseffekte zu kapseln, indem vorab berechnet wird, wie der Effekt Eingaben Ausgaben für eine Teilmenge aller Eingabewerte zuteilt.
+Eine 3D-Nachschautabelle ist ein allgemeiner Effekt, der verwendet wird, um jeden 1:1-Bildverarbeitungseffekt zu kapseln, indem vorgefertigt wird, wie der Effekt Eingaben Ausgaben für eine Teilmenge aller Eingabewerte zuteilt.
 
-Der Effekt 3D-Lookuptabelle (3D Lookup Table) ändert ein Eingabebild, indem der RGB-Farbwert des Bilds verwendet wird, um eine 3D-Textur zu indizieren, bei der die Textur einen vorausberechnen Ausgabewert einer Pipeline mit beliebigen Effekten enthält.
+Der Effekt "3D Lookup Table" (TASTE) ändert ein Eingabebild mithilfe des RGB-Farbwerts des Bilds, um eine 3D-Textur zu indizieren, wobei die Textur einen vorausbewerteten Ausgabewert einer beliebigen Effektpipeline enthält.
 
-Die 3D-TEXTUR muss in eine GPU-Texturressource geladen werden, damit sie gerendert werden kann. Dies kann je nach Größe der Textur und den Gerätefunktionen teuer sein. Anwendungsentwickler können mithilfe der Ressource [**ID2D1LookupTable3D D2D**](/windows/win32/api/d2d1_3/nn-d2d1_3-id2d1lookuptable3d) angeben, wann diese Kosten zu bezahlen sind. **ID2D1LookupTable3D** weist die folgenden Attribute auf:
+Die 3D-GRAFIK muss in eine GPU-Texturressource geladen werden, um gerendert zu werden. Dies kann je nach Texturgröße und Gerätefunktionen teuer sein. Anwendungsentwickler können mithilfe der Ressource [**ID2D1LookupTable3D**](/windows/win32/api/d2d1_3/nn-d2d1_3-id2d1lookuptable3d) D2D angeben, wann diese Kosten zu zahlen sind. **ID2D1LookupTable3D** verfügt über die folgenden Attribute:
 
--   Stellt eine abstrahierte Darstellung der GPU-Ressource von 3D GPU bereit.
--   Abhängig von den Gerätefunktionen wird entweder eine 2D- oder eine 3D-Textur erstellt und mit den bereitgestellten MSI-Daten gefüllt.
--   Kann zum Rendern an die -Eigenschaft des 3D-AUSWIRKUNG-Effekts übergeben werden.
+-   Stellt eine abstrahierte Darstellung der GPU-Ressource von 3D GPU zur
+-   Abhängig von den Gerätefunktionen wird entweder eine 2D- oder 3D-Textur erstellt und mit den bereitgestellten DANN-Daten gefüllt.
+-   Kann zum Rendern an die -Eigenschaft des 3D-EFFECT-Effekts übergeben werden.
 
 Die CLSID für diesen Effekt ist CLSID \_ D2D1LookupTable3D.
 
 -   [Beispielbild](#example-image)
 -   [Beispielcode](#sample-code)
--   [Effekteigenschaften](#effect-properties)
+-   [Effect-Eigenschaften](#effect-properties)
 -   [Requirements](#requirements)
 -   [Zugehörige Themen](#related-topics)
 
 ## <a name="example-image"></a>Beispielbild
 
-![Beispiel für die Effektausgabe](images/3dlookuptable-effect.png)
+![Beispiel für die Auswirkungsausgabe](images/3dlookuptable-effect.png)
 
 ## <a name="sample-code"></a>Beispielcode
 

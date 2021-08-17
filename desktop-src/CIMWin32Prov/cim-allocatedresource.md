@@ -1,5 +1,5 @@
 ---
-description: Die CIM \_ -Klasse "Zuweisungs Klasse" stellt eine Zuordnung zwischen logischen Geräten und Systemressourcen dar und zeigt an, dass die Ressource dem Gerät zugewiesen ist.
+description: Die CIM AllocatedResource-Klasse stellt eine Zuordnung zwischen logischen Geräten und Systemressourcen dar und gibt an, dass die Ressource \_ dem Gerät zugewiesen ist.
 ms.assetid: e1702635-32f5-4280-8c02-3940fd858106
 ms.tgt_platform: multiple
 title: CIM_AllocatedResource-Klasse
@@ -16,19 +16,19 @@ api_type:
 - DllExport
 api_location:
 - CIMWin32.dll
-ms.openlocfilehash: e4191315b76553a8c23b94c04d9649cceb131855
-ms.sourcegitcommit: c7add10d695482e1ceb72d62b8a4ebd84ea050f7
+ms.openlocfilehash: 2caf51e4b6a76693a64253e1046ea74c6ec19b8f5895618419aa693a10260f56
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104127217"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119322700"
 ---
-# <a name="cim_allocatedresource-class"></a>CIM-Klasse "- \_ Zuweisung"
+# <a name="cim_allocatedresource-class"></a>CIM \_ AllocatedResource-Klasse
 
-Die CIM-Klasse " **\_ Zuweisungs** Klasse" stellt eine Zuordnung zwischen logischen Geräten und Systemressourcen dar und zeigt an, dass die Ressource dem Gerät zugewiesen ist.
+Die **CIM \_ AllocatedResource-Klasse** stellt eine Zuordnung zwischen logischen Geräten und Systemressourcen dar und gibt an, dass die Ressource dem Gerät zugewiesen ist.
 
 > [!IMPORTANT]
-> Die Klassen der DMTF-CIM (Common Information Model) sind die übergeordneten Klassen, auf denen WMI-Klassen erstellt werden. WMI unterstützt zurzeit nur die [CIM 2. x-Versions Schemas](https://dmtf.org/standards/cim/schemas).
+> Die CIM-Klassen (Distributed Management Task Force) (DMTF) (Common Information Model) sind die übergeordneten Klassen, auf denen WMI-Klassen erstellt werden. WMI unterstützt derzeit nur die [CIM 2.x-Versionsschemas.](https://dmtf.org/standards/cim/schemas)
 
  
 
@@ -47,33 +47,33 @@ class CIM_AllocatedResource : CIM_Dependency
 
 ## <a name="members"></a>Member
 
-Die **CIM \_** -Klasse "-Zuweisung" weist die folgenden Typen von Membern auf:
+Die **CIM \_ AllocatedResource-Klasse** verfügt über die folgenden Membertypen:
 
 -   [Eigenschaften](#properties)
 
 ### <a name="properties"></a>Eigenschaften
 
-Die **CIM \_** -Klasse "-Zuweisung" weist die folgenden Eigenschaften auf.
+Die **CIM \_ AllocatedResource-Klasse** verfügt über diese Eigenschaften.
 
 <dl> <dt>
 
-**Vorgänger**
+**Vorläufer**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **CIM \_ Systemresource**
+Datentyp: **CIM \_ SystemResource**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**außer Kraft**](/windows/desktop/WmiSdk/standard-qualifiers) Setzung ("Vorgänger")
+Qualifizierer: [**Außerkraftsetzung**](/windows/desktop/WmiSdk/standard-qualifiers) ("Vorerst")
 </dt> </dl>
 
-Eine [**CIM- \_ System Ressource**](cim-systemresource.md) , die die Ressource beschreibt.
+Ein [**\_ CIM-SystemResource,**](cim-systemresource.md) das die Ressource beschreibt.
 
 </dd> <dt>
 
-**Dependent**
+**Abhängigen**
 </dt> <dd> <dl> <dt>
 
 Datentyp: **CIM \_ LogicalDevice**
@@ -82,20 +82,20 @@ Datentyp: **CIM \_ LogicalDevice**
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**außer Kraft**](/windows/desktop/WmiSdk/standard-qualifiers) Setzung ("abhängig")
+Qualifizierer: [**Außerkraftsetzung**](/windows/desktop/WmiSdk/standard-qualifiers) ("Abhängig")
 </dt> </dl>
 
-Ein [**CIM \_ LogicalDevice**](cim-logicaldevice.md) , das das logische Gerät enthält, dem die Ressource zugewiesen ist.
+Ein [**CIM \_ LogicalDevice,das**](cim-logicaldevice.md) das logische Gerät enthält, dem die Ressource zugewiesen ist.
 
 </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die **CIM \_** -Klasse "-Zuweisung" ist von der [**CIM- \_ Abhängigkeit**](cim-dependency.md)abgeleitet.
+Die **CIM \_ AllocatedResource-Klasse** wird von der [**\_ CIM-Abhängigkeit abgeleitet.**](cim-dependency.md)
 
-Diese Klasse wird von WMI nicht implementiert. Weitere Informationen zu Klassen, die von **CIM- \_ Zuweisung** abgeleitet sind, finden Sie unter [Win32-Klassen](win32-provider.md).
+WMI implementiert diese Klasse nicht. Weitere Informationen zu Klassen, die von **CIM \_ AllocatedResource abgeleitet werden,** finden Sie unter [Win32-Klassen.](win32-provider.md)
 
-Diese Dokumentation wird von den von der DMTF veröffentlichten CIM-Klassen Beschreibungen abgeleitet. Microsoft hat möglicherweise Änderungen an den korrekten geringfügigen Fehlern vorgenommen, den Microsoft SDK-Dokumentations Standards entsprechen oder weitere Informationen bereitstellen.
+Diese Dokumentation wird von den CIM-Klassenbeschreibungen abgeleitet, die von DMTF veröffentlicht wurden. Microsoft hat möglicherweise Änderungen vorgenommen, um kleinere Fehler zu beheben, die Dokumentationsstandards des Microsoft SDK zu erfüllen oder weitere Informationen zur Verfügung zu stellen.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -105,17 +105,17 @@ Diese Dokumentation wird von den von der DMTF veröffentlichten CIM-Klassen Besc
 |-------------------------------------|-----------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows Vista<br/>                                                                |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2008<br/>                                                          |
-| Namespace<br/>                | Root \\ CIMV2<br/>                                                                  |
-| MOF<br/>                      | <dl> <dt>Cimwin32. MOF</dt> </dl> |
+| Namespace<br/>                | \\Stamm-CIMV2<br/>                                                                  |
+| MOF<br/>                      | <dl> <dt>CIMWin32.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>CIMWin32.dll</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**CIM- \_ Abhängigkeit**](cim-dependency.md)
+[**\_CIM-Abhängigkeit**](cim-dependency.md)
 </dt> </dl>
 
  

@@ -4,49 +4,49 @@ description: VML-Attribut "MiterLimit"
 ms.assetid: 74744b8a-df73-4a2e-8df7-07fd0e423a47
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 0f1b2d5b0a186ca416bb6af25df38c4f29964efe
-ms.sourcegitcommit: 592c9bbd22ba69802dc353bcb5eb30699f9e9403
+ms.openlocfilehash: fef82ce7e8e0d3bf99fc532a9e746a94006a6bb9deba282ce8edd6ab91d41902
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "104473429"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119308370"
 ---
 # <a name="vml-miterlimit-attribute"></a>VML-Attribut "MiterLimit"
 
-In diesem Thema wird VML beschrieben, eine Funktion, die ab Windows Internet Explorer 9 veraltet ist. Webseiten und Anwendungen, die auf VML basieren, sollten zu SVG oder anderen allgemein unterstützten Standards migriert werden.
+In diesem Thema wird VML beschrieben, ein Feature, das ab Version 9 Windows Internet Explorer ist. Webseiten und Anwendungen, die auf VML basieren, sollten zu SVG oder anderen weit verbreiteten Standards migriert werden.
 
 > [!Note]  
-> Ab Dezember 2011 wurde dieses Thema archiviert. Daher wird er nicht mehr aktiv verwaltet. Weitere Informationen finden Sie unter [archivierte Inhalte](/previous-versions/windows/internet-explorer/ie-developer/). Informationen, Empfehlungen und Anleitungen zur aktuellen Version von Windows Internet Explorer finden Sie im [Internet Explorer Developer Center](https://msdn.microsoft.com/ie/).
+> Seit Dezember 2011 wurde dieses Thema archiviert. Daher wird sie nicht mehr aktiv verwaltet. Weitere Informationen finden Sie unter [Archivierter Inhalt.](/previous-versions/windows/internet-explorer/ie-developer/) Informationen, Empfehlungen und Anleitungen zur aktuellen Version von Windows Internet Explorer finden Sie im [Internet Explorer Developer Center.](https://msdn.microsoft.com/ie/)
 
- 
+ 
 
-Definiert die Glätte des Haupt Trennzeichens. Lese-/Schreibzugriff. **Vgnumber**.
+Definiert die Glättung des Miter-Fugens. Lese-/Schreibzugriff. **VgNumber**.
 
 **Gilt für**
 
-[Stellung](msdn-online-vml-stroke-element.md)
+[Takt](msdn-online-vml-stroke-element.md)
 
 **Tagsyntax**
 
-<v: *Element* MiterLimit = " *Ausdruck* " >
+<v: *element* miterlimit=" *expression* ">
 
-**Skript Syntax**
+**Skriptsyntax**
 
-*Element* . MiterLimit = "*Ausdruck*"
+*element* .miterlimit="*expression*"
 
-*Ausdruck* = *Element*. miterLimit
+*expression* = *Element*.miterlimit
 
 **Anmerkungen**
 
-Der maximale Abstand zwischen dem inneren und dem äußeren Punkt eines gemeinsamen Punkts. Diese Zahl ist ein Vielfaches der Linienstärke.
+Der maximale Abstand zwischen dem inneren und äußeren Punkt eines Fugens. Diese Zahl ist ein Vielfaches der Linienstärke.
 
 Der Standardwert ist 8.
 
-*VML-Standard Attribut*
+*VML-Standardattribut*
 
 **Beispiel**
 
-Die Gelenke auf der Polylinie werden mit einem Grenzwert von 10 gemessen, d. h. 5 mal 2 Punkten.
+Die Fugen auf der Polylinie werden mit einem Grenzwert von 10,5-mal zwei Punkten geerbt.
 
 
 ```HTML
@@ -59,6 +59,6 @@ Die Gelenke auf der Polylinie werden mit einem Grenzwert von 10 gemessen, d. h. 
 
 
 
- 
+ 
 
- 
+ 

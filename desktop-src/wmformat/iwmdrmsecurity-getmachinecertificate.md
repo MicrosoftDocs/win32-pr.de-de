@@ -1,11 +1,11 @@
 ---
-title: Iwmdrmsecurity getmachinecertificate-Methode (wmdrmsdk. h)
-description: Die getmachinecertificate-Methode ruft das Computer Zertifikat des DRM-Subsystems auf dem Client Computer ab.
+title: IWMDRMSecurity GetMachineCertificate-Methode (Wmdrmsdk.h)
+description: Die GetMachineCertificate-Methode ruft das Computerzertifikat des DRM-Subsystems auf dem Clientcomputer ab.
 ms.assetid: 38b8e812-e997-4a63-b906-ebd26a5556be
 keywords:
-- Getmachinecertificate-Methode Windows Media-Format
-- Getmachinecertificate-Methode, Windows Media-Format, iwmdrmsecurity-Schnittstelle
-- Iwmdrmsecurity-Schnittstelle Windows Media-Format, getmachinecertificate-Methode
+- GetMachineCertificate-Methode windows Media Format
+- GetMachineCertificate-Methode windows Media Format , IWMDRMSecurity-Schnittstelle
+- IWMDRMSecurity-Schnittstelle windows Media Format , GetMachineCertificate-Methode
 topic_type:
 - apiref
 api_name:
@@ -17,16 +17,16 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 8d6c66c54ab9528a458910def5978ec83b191654
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 4fd85a3b74ee28e5faa8df5fc264d50366803f4073ec97a36920577d417e4f97
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106371088"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119084697"
 ---
-# <a name="iwmdrmsecuritygetmachinecertificate-method"></a>Iwmdrmsecurity:: getmachinecertificate-Methode
+# <a name="iwmdrmsecuritygetmachinecertificate-method"></a>IWMDRMSecurity::GetMachineCertificate-Methode
 
-Die **getmachinecertificate** -Methode ruft das Computer Zertifikat des DRM-Subsystems auf dem Client Computer ab.
+Die **GetMachineCertificate-Methode** ruft das Computerzertifikat des DRM-Subsystems auf dem Clientcomputer ab.
 
 ## <a name="syntax"></a>Syntax
 
@@ -46,17 +46,17 @@ HRESULT GetMachineCertificate(
 
 <dl> <dt>
 
-*dwcertifialisietype* \[ in\]
+*dwCertificateType* \[ In\]
 </dt> <dd>
 
-Der Typ des abzurufenden Zertifikats. Legen Sie auf einen der Werte in der folgenden Tabelle fest.
+Typ des abzurufende Zertifikats. Legen Sie auf einen der Werte in der folgenden Tabelle fest.
 
 
 
-| Wert                        | BESCHREIBUNG                                                                           |
+| Wert                        | Beschreibung                                                                           |
 |------------------------------|---------------------------------------------------------------------------------------|
-| WMDRM \_ - \_ Zertifikattyp \_ v1 | Das Zertifikat wird im von Legacy Komponenten verwendeten Format abgerufen.            |
-| WMDRM \_ - \_ Zertifikattyp \_ v2 | Das Zertifikat wird in dem Format abgerufen, das von den Windows Vista-Komponenten verwendet wird. |
+| \_WMDRM-ZERTIFIKATTYP \_ \_ V1 | Das Zertifikat wird in dem von Legacykomponenten verwendeten Format abgerufen.            |
+| \_WMDRM-ZERTIFIKATTYP \_ \_ V2 | Das Zertifikat wird in dem Format abgerufen, das von den Windows Vista-Komponenten verwendet wird. |
 
 
 
@@ -64,30 +64,30 @@ Der Typ des abzurufenden Zertifikats. Legen Sie auf einen der Werte in der folge
 
 </dd> <dt>
 
-*rgbversion \[ 4 \]* ausgehend \[\]
+*rgbVersion \[ 4 \]* \[ out\]
 </dt> <dd>
 
-Array von vier Bytes, die die Version des DRM-Subsystems auf dem Client Computer angeben.
+Array mit vier Bytes, das die Version des DRM-Subsystems auf dem Clientcomputer angibt.
 
 </dd> <dt>
 
-*ppbcertificate* \[ vorgenommen\]
+*ppbCertificate* \[ out\]
 </dt> <dd>
 
-Adresse einer Variablen, die einen Zeiger auf die Zertifikat Daten empfängt. Legen Sie diese Einstellung auf **null** fest, damit die Methode die Puffergröße bereitstellt, die zum Speichern des Zertifikats in *pcbcertificate* erforderlich ist.
+Adresse einer Variablen, die einen Zeiger auf die Zertifikatdaten empfängt. Legen Sie diese Einstellung auf **NULL** fest, damit die -Methode die Puffergröße bereitstellt, die zum Speichern des Zertifikats in *"zertifikateCertificate"* erforderlich ist.
 
 </dd> <dt>
 
-*pcbcertificate* \[ in, out\]
+*pwCertificate* \[ in, out\]
 </dt> <dd>
 
-Größe des Zertifikats in Bytes. Wenn *ppbcertificate* den Wert **null** hat, wird dieser Wert auf die Größe des Zertifikats festgelegt. Wenn *ppbcertificate* nicht **null** ist, muss dieser Wert auf die Größe des Puffers festgelegt werden.
+Größe des Zertifikats in Bytes. Wenn *ppbCertificate* **NULL** ist, wird dieser Wert auf die Größe des Zertifikats festgelegt. Wenn *ppbCertificate* nicht **NULL** ist, muss dieser Wert auf die Größe des Puffers festgelegt werden.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Die-Methode gibt ein **HRESULT** zurück. Mögliches Werte (aber nicht die Einzigen) sind die in der folgenden Tabelle.
+Die Methode gibt ein **HRESULT** zurück. Mögliches Werte (aber nicht die Einzigen) sind die in der folgenden Tabelle.
 
 
 
@@ -105,16 +105,16 @@ Die-Methode gibt ein **HRESULT** zurück. Mögliches Werte (aber nicht die Einzi
 
 | Anforderung | Wert |
 |--------------------|-----------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Wmdrmsdk. h</dt> </dl>   |
-| Bibliothek<br/> | <dl> <dt>Wmdrmsdk. lib</dt> </dl> |
+| Header<br/>  | <dl> <dt>Wmdrmsdk.h</dt> </dl>   |
+| Bibliothek<br/> | <dl> <dt>Wmdrmsdk.lib</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Iwmdrmsecurity-Schnittstelle**](iwmdrmsecurity.md)
+[**IWMDRMSecurity-Schnittstelle**](iwmdrmsecurity.md)
 </dt> </dl>
 
  

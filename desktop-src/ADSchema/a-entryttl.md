@@ -1,11 +1,11 @@
 ---
 title: Entry-TTL-Attribut
-description: Dieses Betriebs Attribut wird vom Server verwaltet und ist anscheinend in jedem dynamischen Eintrag vorhanden.
+description: Dieses Betriebsattribut wird vom Server verwaltet und scheint in jedem dynamischen Eintrag vorhanden zu sein.
 ms.assetid: cac0e52e-243d-4822-9419-2af8b9352cee
 ms.tgt_platform: multiple
 keywords:
-- AD-Schema für Entry-TTL-Attribut
-- entryttl-Attribut AD-Schema
+- AD-Schema des Entry-TTL-Attributs
+- AD-Schema des entryTTL-Attributs
 topic_type:
 - apiref
 api_name:
@@ -14,42 +14,42 @@ api_type:
 - Schema
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: ab2dd5e38b22731fee7f957ee8f817537e32c645
-ms.sourcegitcommit: b77ace27b0432e7cd3863191b11926be032fbe2f
+ms.openlocfilehash: fbcd3e06304824ba51431b00b6a5b90d24d7719194dd84974470a101d5f6a1c4
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "104479711"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118961559"
 ---
 # <a name="entry-ttl-attribute"></a>Entry-TTL-Attribut
 
-Dieses Betriebs Attribut wird vom Server verwaltet und ist anscheinend in jedem dynamischen Eintrag vorhanden. Das-Attribut ist nicht vorhanden, wenn der Eintrag nicht die DynamicObject-Objektklasse enthält. Der Wert dieses Attributs ist die Zeit (in Sekunden), in der der Eintrag weiterhin vorhanden ist, bevor er aus dem Verzeichnis verschwindet. Wenn keine dazwischenliegenden "Refresh"-Vorgänge vorhanden sind, werden die Werte, die durch das Lesen des Attributs in zwei aufeinander folgenden suchen zurückgegeben werden, garantiert nicht zunehmen. Der kleinste zulässige Wert ist 0 (null) und gibt an, dass der Eintrag ohne Warnung verschwinden kann. Das Attribut ist als "keine Benutzer Änderung" gekennzeichnet, da es nur mit dem Aktualisierungs Vorgang geändert werden kann.
+Dieses Betriebsattribut wird vom Server verwaltet und scheint in jedem dynamischen Eintrag vorhanden zu sein. Das -Attribut ist nicht vorhanden, wenn der Eintrag die dynamicObject-Objektklasse nicht enthält. Der Wert dieses Attributs ist die Zeit (in Sekunden), zu der der Eintrag weiterhin vorhanden ist, bevor er aus dem Verzeichnis entfernt wird. Wenn keine "Aktualisierungsvorgänge" durchgeführt werden, werden die Werte, die beim Lesen des Attributs in zwei aufeinander folgenden Suchvorgängen zurückgegeben werden, garantiert nicht inkrementiert. Der kleinste zulässige Wert ist 0 und gibt an, dass der Eintrag ohne Warnung möglicherweise nicht mehr angezeigt wird. Das Attribut ist als NO-USER-MODIFICATION gekennzeichnet, da es nur mithilfe des Aktualisierungsvorgang geändert werden kann.
 
 
 
 | Eingabe | Wert |
 |-------------------|---------------------------------------------|
 | CN                | Entry-TTL                                   |
-| LDAP-Display-Name | entryttl                                    |
+| Ldap-Anzeigename | entryTTL                                    |
 | Size              | 4 Bytes. Maximum = 1 Jahr, Standardwert = 1 Tag. |
-| Berechtigung aktualisieren  | \-                                          |
-| Aktualisierungshäufigkeit  | \-                                          |
+| Aktualisieren von Berechtigungen  | \-                                          |
+| Updatehäufigkeit  | \-                                          |
 | Attribute-Id      | 1.3.6.1.4.1.1466.101.119.3                  |
-| System-ID-GUID    | d213decc-d81a-4384-aac2-dcfcfd631cf8        |
+| System-Id-Guid    | d213decc-d81a-4384-aac2-dcfcfd631cf8        |
 | Syntax            | [**Enumeration**](s-enumeration.md)        |
 
 
 
 ## <a name="implementations"></a>Implementierungen
 
--   [**Windows Server 2003**](#windows-server-2003)
+-   [**Windows Server 2003**](#windows-server-2003)
 -   [**Adam**](#adam)
 -   [**Windows Server 2003 R2**](#windows-server-2003-r2)
 -   [**Windows Server 2008**](#windows-server-2008)
 -   [**Windows Server 2008 R2**](#windows-server-2008-r2)
 -   [**Windows Server 2012**](#windows-server-2012)
 
-## <a name="windows-server-2003"></a>Windows Server 2003
+## <a name="windows-server-2003"></a>Windows Server 2003
 
 
 
@@ -57,11 +57,11 @@ Dieses Betriebs Attribut wird vom Server verwaltet und ist anscheinend in jedem 
 |------------------------|------------------------------------------------------|
 | Link-ID                | \-                                                   |
 | MAPI-Id                | \-                                                   |
-| System-Only            | False                                                |
-| Ist-einwertig       | Richtig                                                 |
-| Ist indiziert             | False                                                |
-| Im globalen Katalog      | False                                                |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                         |
+| System-Only            | Falsch                                                |
+| Is-Single-Valued       | Richtig                                                 |
+| Ist indiziert             | Falsch                                                |
+| Im globalen Katalog      | Falsch                                                |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                         |
 | Range-Lower            | 0                                                    |
 | Range-Upper            | 31557600                                             |
 | Search-Flags           | 0x00000000                                           |
@@ -78,11 +78,11 @@ Dieses Betriebs Attribut wird vom Server verwaltet und ist anscheinend in jedem 
 |------------------------|------------------------------------------------------|
 | Link-ID                | \-                                                   |
 | MAPI-Id                | \-                                                   |
-| System-Only            | False                                                |
-| Ist-einwertig       | Richtig                                                 |
-| Ist indiziert             | False                                                |
-| Im globalen Katalog      | False                                                |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                         |
+| System-Only            | Falsch                                                |
+| Is-Single-Valued       | Richtig                                                 |
+| Ist indiziert             | Falsch                                                |
+| Im globalen Katalog      | Falsch                                                |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                         |
 | Range-Lower            | 0                                                    |
 | Range-Upper            | 31557600                                             |
 | Search-Flags           | 0x00000000                                           |
@@ -99,11 +99,11 @@ Dieses Betriebs Attribut wird vom Server verwaltet und ist anscheinend in jedem 
 |------------------------|------------------------------------------------------|
 | Link-ID                | \-                                                   |
 | MAPI-Id                | \-                                                   |
-| System-Only            | False                                                |
-| Ist-einwertig       | Richtig                                                 |
-| Ist indiziert             | False                                                |
-| Im globalen Katalog      | False                                                |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                         |
+| System-Only            | Falsch                                                |
+| Is-Single-Valued       | Richtig                                                 |
+| Ist indiziert             | Falsch                                                |
+| Im globalen Katalog      | Falsch                                                |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                         |
 | Range-Lower            | 0                                                    |
 | Range-Upper            | 31557600                                             |
 | Search-Flags           | 0x00000000                                           |
@@ -120,11 +120,11 @@ Dieses Betriebs Attribut wird vom Server verwaltet und ist anscheinend in jedem 
 |------------------------|------------------------------------------------------|
 | Link-ID                | \-                                                   |
 | MAPI-Id                | \-                                                   |
-| System-Only            | False                                                |
-| Ist-einwertig       | Richtig                                                 |
-| Ist indiziert             | False                                                |
-| Im globalen Katalog      | False                                                |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                         |
+| System-Only            | Falsch                                                |
+| Is-Single-Valued       | Richtig                                                 |
+| Ist indiziert             | Falsch                                                |
+| Im globalen Katalog      | Falsch                                                |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                         |
 | Range-Lower            | 0                                                    |
 | Range-Upper            | 31557600                                             |
 | Search-Flags           | 0x00000000                                           |
@@ -141,11 +141,11 @@ Dieses Betriebs Attribut wird vom Server verwaltet und ist anscheinend in jedem 
 |------------------------|------------------------------------------------------|
 | Link-ID                | \-                                                   |
 | MAPI-Id                | \-                                                   |
-| System-Only            | False                                                |
-| Ist-einwertig       | Richtig                                                 |
-| Ist indiziert             | False                                                |
-| Im globalen Katalog      | False                                                |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                         |
+| System-Only            | Falsch                                                |
+| Is-Single-Valued       | Richtig                                                 |
+| Ist indiziert             | Falsch                                                |
+| Im globalen Katalog      | Falsch                                                |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                         |
 | Range-Lower            | 0                                                    |
 | Range-Upper            | 31557600                                             |
 | Search-Flags           | 0x00000000                                           |
@@ -162,11 +162,11 @@ Dieses Betriebs Attribut wird vom Server verwaltet und ist anscheinend in jedem 
 |------------------------|------------------------------------------------------|
 | Link-ID                | \-                                                   |
 | MAPI-Id                | \-                                                   |
-| System-Only            | False                                                |
-| Ist-einwertig       | Richtig                                                 |
-| Ist indiziert             | False                                                |
-| Im globalen Katalog      | False                                                |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                         |
+| System-Only            | Falsch                                                |
+| Is-Single-Valued       | Richtig                                                 |
+| Ist indiziert             | Falsch                                                |
+| Im globalen Katalog      | Falsch                                                |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                         |
 | Range-Lower            | 0                                                    |
 | Range-Upper            | 31557600                                             |
 | Search-Flags           | 0x00000000                                           |

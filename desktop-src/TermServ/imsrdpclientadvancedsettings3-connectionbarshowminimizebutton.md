@@ -1,22 +1,22 @@
 ---
-title: IMsRdpClientAdvancedSettings3 connectionbarshowminimizebutton (Eigenschaft)
-description: Gibt an, ob die Schaltfläche Minimieren auf der Verbindungs Leiste angezeigt werden soll.
+title: IMsRdpClientAdvancedSettings3 ConnectionBarShowMinimizeButton (Eigenschaft)
+description: Gibt an, ob die Schaltfläche Minimieren auf der Verbindungsleiste angezeigt werden soll.
 ms.assetid: 3ad89f25-f1ff-4bfc-ae86-09603058c9b5
 ms.tgt_platform: multiple
 keywords:
-- Connectionbarshowminimizebutton-Eigenschaft Remotedesktopdienste
-- Connectionbarshowminimizebutton-Eigenschaft Remotedesktopdienste, IMsRdpClientAdvancedSettings3-Schnittstelle
-- IMsRdpClientAdvancedSettings3 Interface Remotedesktopdienste, connectionbarshowminimizebutton-Eigenschaft
-- Connectionbarshowminimizebutton-Eigenschaft Remotedesktopdienste, IMsRdpClientAdvancedSettings4-Schnittstelle
-- IMsRdpClientAdvancedSettings4 Interface Remotedesktopdienste, connectionbarshowminimizebutton-Eigenschaft
-- Connectionbarshowminimizebutton-Eigenschaft Remotedesktopdienste, IMsRdpClientAdvancedSettings5-Schnittstelle
-- IMsRdpClientAdvancedSettings5 Interface Remotedesktopdienste, connectionbarshowminimizebutton-Eigenschaft
-- Connectionbarshowminimizebutton-Eigenschaft Remotedesktopdienste, IMsRdpClientAdvancedSettings6-Schnittstelle
-- IMsRdpClientAdvancedSettings6 Interface Remotedesktopdienste, connectionbarshowminimizebutton-Eigenschaft
-- Connectionbarshowminimizebutton-Eigenschaft Remotedesktopdienste, IMsRdpClientAdvancedSettings7-Schnittstelle
-- IMsRdpClientAdvancedSettings7 Interface Remotedesktopdienste, connectionbarshowminimizebutton-Eigenschaft
-- Connectionbarshowminimizebutton-Eigenschaft Remotedesktopdienste, IMsRdpClientAdvancedSettings8-Schnittstelle
-- IMsRdpClientAdvancedSettings8 Interface Remotedesktopdienste, connectionbarshowminimizebutton-Eigenschaft
+- ConnectionBarShowMinimizeButton-Remotedesktopdienste
+- ConnectionBarShowMinimizeButton-Eigenschaft Remotedesktopdienste , IMsRdpClientAdvancedSettings3-Schnittstelle
+- IMsRdpClientAdvancedSettings3-Schnittstelle Remotedesktopdienste , ConnectionBarShowMinimizeButton(Eigenschaft)
+- ConnectionBarShowMinimizeButton-Eigenschaft Remotedesktopdienste , IMsRdpClientAdvancedSettings4-Schnittstelle
+- IMsRdpClientAdvancedSettings4-Schnittstelle Remotedesktopdienste , ConnectionBarShowMinimizeButton(Eigenschaft)
+- ConnectionBarShowMinimizeButton-Eigenschaft Remotedesktopdienste , IMsRdpClientAdvancedSettings5-Schnittstelle
+- IMsRdpClientAdvancedSettings5-Schnittstelle Remotedesktopdienste , ConnectionBarShowMinimizeButton(Eigenschaft)
+- ConnectionBarShowMinimizeButton-Eigenschaft Remotedesktopdienste , IMsRdpClientAdvancedSettings6-Schnittstelle
+- IMsRdpClientAdvancedSettings6-Schnittstelle Remotedesktopdienste , ConnectionBarShowMinimizeButton(Eigenschaft)
+- ConnectionBarShowMinimizeButton-Eigenschaft Remotedesktopdienste , IMsRdpClientAdvancedSettings7-Schnittstelle
+- IMsRdpClientAdvancedSettings7-Schnittstelle Remotedesktopdienste , ConnectionBarShowMinimizeButton(Eigenschaft)
+- ConnectionBarShowMinimizeButton-Remotedesktopdienste , IMsRdpClientAdvancedSettings8-Schnittstelle
+- IMsRdpClientAdvancedSettings8-Schnittstelle Remotedesktopdienste , ConnectionBarShowMinimizeButton-Eigenschaft
 topic_type:
 - apiref
 api_name:
@@ -44,16 +44,16 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: bc3cb600a853e4bc2dea7c693e676f992db85f48
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 02f1ef263868d29685242962e4538bd84635138fb0f205194d8c27c5b6932aeb
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "103740009"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119058958"
 ---
-# <a name="imsrdpclientadvancedsettings3connectionbarshowminimizebutton-property"></a>IMsRdpClientAdvancedSettings3:: connectionbarshowminimizebutton-Eigenschaft
+# <a name="imsrdpclientadvancedsettings3connectionbarshowminimizebutton-property"></a>IMsRdpClientAdvancedSettings3::ConnectionBarShowMinimizeButton (Eigenschaft)
 
-Gibt an, ob die Schaltfläche **minimieren** auf der Verbindungs Leiste angezeigt werden soll.
+Gibt an, ob die Schaltfläche **Minimieren auf** der Verbindungsleiste angezeigt werden soll.
 
 Dies ist eine Eigenschaft mit Lese- und Schreibzugriff.
 
@@ -74,15 +74,15 @@ HRESULT get_ConnectionBarShowMinimizeButton(
 
 ## <a name="property-value"></a>Eigenschaftswert
 
-Legen Sie diesen Parameter **auf Variant \_ true** fest, um die Schaltfläche **minimieren** anzuzeigen, und auf **Variant \_ false** , um die Anzeige der Schaltfläche **minimieren** zu deaktivieren.
+Legen Sie diesen Parameter auf  **VARIANT \_ TRUE fest,** um die Schaltfläche Minimieren anzuzeigen, und auf **VARIANT \_ FALSE,** um die Anzeige der Schaltfläche **Minimieren zu** deaktivieren.
 
 ## <a name="error-codes"></a>Fehlercodes
 
-Gibt bei Erfolg **S \_ OK** zurück.
+Gibt **S \_ OK zurück,** wenn erfolgreich.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Diese Eigenschaft kann nicht festgelegt werden, wenn das Steuerelement verbunden ist.
+Diese Eigenschaft kann nicht festgelegt werden, während das Steuerelement verbunden ist.
 
 Weitere Informationen zu Remotedesktop-Webverbindung finden Sie unter [Anforderungen für Remotedesktop-Webverbindung](requirements-for-remote-desktop-web-connection.md).
 
@@ -96,11 +96,11 @@ Weitere Informationen zu Remotedesktop-Webverbindung finden Sie unter [Anforderu
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2008<br/>                                                                   |
 | Typbibliothek<br/>             | <dl> <dt>MsTscAx.dll</dt> </dl>           |
 | DLL<br/>                      | <dl> <dt>MsTscAx.dll</dt> </dl>           |
-| IID<br/>                      | IID \_ IMsRdpClientAdvancedSettings3 ist als 19cd856b-c542-4c53-ACee-B127 e3be1a59 definiert.<br/> |
+| IID<br/>                      | IID \_ IMsRdpClientAdvancedSettings3 ist als 19cd856b-c542-4c53-acee-f127e3be1a59 definiert.<br/> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 

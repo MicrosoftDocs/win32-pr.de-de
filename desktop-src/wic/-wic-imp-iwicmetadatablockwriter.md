@@ -4,24 +4,24 @@ ms.assetid: 31824f21-04b1-45ca-adfa-15fd348e14a1
 title: Implementieren von IWICMetadataBlockWriter
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 62044ce9695a45a8fe052d67479158aa9e4baf6d
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 43d49912ece0cc1e3c2299ace0a15f112ef7ab65ac03863b855b8a9ee64e62e1
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "104530269"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118964969"
 ---
 # <a name="implementing-iwicmetadatablockwriter"></a>Implementieren von IWICMetadataBlockWriter
 
 ## <a name="iwicmetadatablockwriter"></a>IWICMetadataBlockWriter
 
 -   [InitializeFromBlockReader](#initializefromblockreader)
--   ["Getschreiterbyindex"](#getwriterbyindex)
+-   [GetWriterByIndex](#getwriterbyindex)
 -   [AddWriter](#addwriter)
--   [Setschreiterbyindex](#setwriterbyindex)
--   [Removeschreiterbyindex](#removewriterbyindex)
+-   [SetWriterByIndex](#setwriterbyindex)
+-   [RemoveWriterByIndex](#removewriterbyindex)
 
-Die Codierungs Klasse auf Frame-Ebene implementiert diese Schnittstelle, um alle Metadatenblöcke verfügbar zu machen und den entsprechenden metadatenwriter für jeden Block anzufordern. Wenn Ihr Bildformat globale Metadaten außerhalb eines einzelnen Frames unterstützt, sollten Sie diese Schnittstelle auch in der Encoder-Klasse auf Container-Ebene implementieren. Eine ausführlichere Erläuterung von metadatenhandlern finden Sie im Abschnitt [**IWICMetadataBlockReader**](/windows/desktop/api/Wincodecsdk/nn-wincodecsdk-iwicmetadatablockreader) im Abschnitt über die Implementierung eines WIC-Enabled Decoders.
+Die Codierungsklasse auf Frameebene implementiert diese Schnittstelle, um alle Metadatenblöcke verfügbar zu machen und den entsprechenden Metadatenwriter für jeden Block an fordern. Wenn Ihr Bildformat globale Metadaten außerhalb eines einzelnen Frames unterstützt, sollten Sie diese Schnittstelle auch für die Encoderklasse auf Containerebene implementieren. Eine ausführlichere Erläuterung von Metadatenhandlern finden Sie im Abschnitt [**zum IWICMetadataBlockReader**](/windows/desktop/api/Wincodecsdk/nn-wincodecsdk-iwicmetadatablockreader) im Abschnitt Implementieren eines WIC-Enabled Decoders.
 
 ``` syntax
 interface IWICMetadataBlockWriter : IWICMetadataBlockReader
@@ -37,7 +37,7 @@ interface IWICMetadataBlockWriter : IWICMetadataBlockReader
 
 ### <a name="initializefromblockreader"></a>InitializeFromBlockReader
 
-[**InitializeFromBlockReader**](/windows/desktop/api/Wincodecsdk/nf-wincodecsdk-iwicmetadatablockwriter-initializefromblockreader) verwendet ein [**IWICMetadataBlockReader**](/windows/desktop/api/Wincodecsdk/nn-wincodecsdk-iwicmetadatablockreader) , um den blockwriter zu initialisieren. Sie können den **IWICMetadataBlockReader** aus dem Decoder, der das Bild decodiert hat, erhalten.
+[**InitializeFromBlockReader verwendet**](/windows/desktop/api/Wincodecsdk/nf-wincodecsdk-iwicmetadatablockwriter-initializefromblockreader) [**einen IWICMetadataBlockReader,**](/windows/desktop/api/Wincodecsdk/nn-wincodecsdk-iwicmetadatablockreader) um den Blockwriter zu initialisieren. Sie können den **IWICMetadataBlockReader** aus dem Decoder erhalten, der das Bild decodiert hat.
 
 
 ```C++
@@ -59,41 +59,41 @@ for (UINT x=0; x < blockCount; x++)
 
 
 
-Da die Initialisierung des [**IWICMetadataBlockWriter**](/windows/desktop/api/Wincodecsdk/nn-wincodecsdk-iwicmetadatablockwriter) mit einem [**IWICMetadataBlockReader**](/windows/desktop/api/Wincodecsdk/nn-wincodecsdk-iwicmetadatablockreader) einen metadatenwriter für jeden metadatenreader instanziiert, der vom **IWICMetadataBlockReader** -Objekt verfügbar gemacht wird, muss die Anwendung einen Writer nicht explizit für jeden Metadatenblock anfordern.
+Da die Initialisierung von [**IWICMetadataBlockWriter**](/windows/desktop/api/Wincodecsdk/nn-wincodecsdk-iwicmetadatablockwriter) mit [**einem IWICMetadataBlockReader**](/windows/desktop/api/Wincodecsdk/nn-wincodecsdk-iwicmetadatablockreader) einen Metadatenwriter für jeden Metadatenleser instanziiert, der vom **IWICMetadataBlockReader-Objekt** verfügbar gemacht wird, muss die Anwendung nicht explizit einen Writer für jeden Metadatenblock anfordern.
 
-### <a name="getwriterbyindex"></a>"Getschreiterbyindex"
+### <a name="getwriterbyindex"></a>GetWriterByIndex
 
-[**Getschreiterbyindex**](/windows/desktop/api/Wincodecsdk/nf-wincodecsdk-iwicmetadatablockwriter-getwriterbyindex) gibt das [**IWICMetadataWriter**](/windows/desktop/api/Wincodecsdk/nn-wincodecsdk-iwicmetadatawriter) -Objekt für den ten-Metadatenblock zurück, wobei n der Wert ist, der im *nIndex* -Parameter übergeben wird. Wenn kein metadatenwriter registriert ist, der den Typ der Metadaten im ten-Block verarbeiten kann, gibt die komponentenfactory den unbekannten Metadatenhandler zurück, der den Metadatenblock als Binary Large Object (BLOB) behandelt. Sie wird als Bitstream serialisiert, ohne zu versuchen, Sie zu analysieren.
+[**GetWriterByIndex gibt**](/windows/desktop/api/Wincodecsdk/nf-wincodecsdk-iwicmetadatablockwriter-getwriterbyindex) das [**IWICMetadataWriter-Objekt**](/windows/desktop/api/Wincodecsdk/nn-wincodecsdk-iwicmetadatawriter) für den n-th-Metadatenblock zurück, wobei n der wert ist, der im *nIndex-Parameter übergeben* wird. Wenn kein Metadatenwriter registriert ist, der den Typ der Metadaten im n-th-Block verarbeiten kann, gibt die Komponenten factory den Unknown Metadata Handler zurück, der den Metadatenblock als Blob (Binary Large Object) behandelt. Sie wird als Bitstream serialisiert, ohne zu versuchen, sie zu analysieren.
 
 ### <a name="addwriter"></a>AddWriter
 
-[**AddWriter**](/windows/desktop/api/Wincodecsdk/nf-wincodecsdk-iwicmetadatablockwriter-addwriter) ermöglicht einem Aufrufer, einen neuen metadatenwriter hinzuzufügen. Dies ist erforderlich, wenn eine Anwendung Metadaten eines anderen Formats als einen der vorhandenen Metadatenblöcke hinzufügen möchte. Beispielsweise kann eine Anwendung einige XMP-Metadaten hinzufügen. Wenn kein vorhandener XMP-Metadatenblock vorhanden ist, muss die Anwendung einen XMP-metadatenwriter instanziieren und die **AddWriter** -Methode verwenden, um Sie in die Auflistung von metadatenwritern einzubeziehen.
+[**AddWriter**](/windows/desktop/api/Wincodecsdk/nf-wincodecsdk-iwicmetadatablockwriter-addwriter) ermöglicht einem Aufrufer das Hinzufügen eines neuen Metadatenwriters. Dies ist erforderlich, wenn eine Anwendung Metadaten eines anderen Formats als die vorhandenen Metadatenblöcke hinzufügen möchte. Beispielsweise kann eine Anwendung XMP-Metadaten hinzufügen. Wenn kein XMP-Metadatenblock vorhanden ist, muss die Anwendung einen XMP-Metadatenwriter instanziieren und die **AddWriter-Methode** verwenden, um ihn in die Auflistung der Metadatenschreiber einaufnahme.
 
-### <a name="setwriterbyindex"></a>Setschreiterbyindex
+### <a name="setwriterbyindex"></a>SetWriterByIndex
 
-[**Setschreiterbyindex**](/windows/desktop/api/Wincodecsdk/nf-wincodecsdk-iwicmetadatablockwriter-setwriterbyindex) wird verwendet, um einen metadatenwriter an einem bestimmten Index in der Auflistung hinzuzufügen. Wenn ein metadatenwriter derzeit an diesem Index vorhanden ist, sollte der neue einen metadatenwriter ersetzen.
+[**SetWriterByIndex**](/windows/desktop/api/Wincodecsdk/nf-wincodecsdk-iwicmetadatablockwriter-setwriterbyindex) wird verwendet, um einen Metadatenwriter an einem bestimmten Index in der Auflistung hinzuzufügen. Wenn an diesem Index derzeit ein Metadatenwriter vorhanden ist, sollte er durch den neuen ersetzt werden.
 
-### <a name="removewriterbyindex"></a>Removeschreiterbyindex
+### <a name="removewriterbyindex"></a>RemoveWriterByIndex
 
-[**Removeschreiterbyindex**](/windows/desktop/api/Wincodecsdk/nf-wincodecsdk-iwicmetadatablockwriter-removewriterbyindex) wird verwendet, um einen metadatenwriter aus der Auflistung zu entfernen.
+[**RemoveWriterByIndex**](/windows/desktop/api/Wincodecsdk/nf-wincodecsdk-iwicmetadatablockwriter-removewriterbyindex) wird verwendet, um einen Metadatenwriter aus der Auflistung zu entfernen.
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-**Licher**
+**Konzeptionellen**
 </dt> <dt>
 
-[Implementieren von iwicbitmapframecocode](-wic-imp-iwicbitmapframeencode.md)
+[Implementieren von IWICBitmapFrameEncode](-wic-imp-iwicbitmapframeencode.md)
 </dt> <dt>
 
-[Codec-Installation und-Registrierung](-wic-codecinstallandreg.md)
+[CODEC-Installation und -Registrierung](-wic-codecinstallandreg.md)
 </dt> <dt>
 
-[Schreiben eines WIC-Enabled Codecs](-wic-howtowriteacodec.md)
+[Schreiben eines WIC-Enabled CODEC](-wic-howtowriteacodec.md)
 </dt> <dt>
 
-[Übersicht über die Windows Imaging-Komponente](-wic-about-windows-imaging-codec.md)
+[Windows Übersicht über Bildverarbeitungskomponenten](-wic-about-windows-imaging-codec.md)
 </dt> </dl>
 
  

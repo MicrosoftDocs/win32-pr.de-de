@@ -21,7 +21,7 @@ Da Energieverwaltungstechnologien auf heutigen Computern immer häufiger eingese
 
 ## <a name="background"></a>Hintergrund
 
-Seit der Einführung des x86 P5-Anweisungssatzes haben viele Spieleentwickler den Lesezeitstempelzähler, die RDTSC-Anweisung, verwendet, um zeitauflösende Zeitsteuerungen mit hoher Auflösung durchzuführen. Die Windows Multimediatimer sind für die Verarbeitung von Sound und Video präzise genug, aber mit Framezeiten von mindestens einem Dutzend Millisekunden verfügen sie nicht über genügend Auflösung, um Deltazeitinformationen bereitzustellen. Bei vielen Spielen wird beim Start immer noch ein Multimediatimer verwendet, um die CPU-Frequenz festzulegen, und sie verwenden diesen Frequency-Wert, um Ergebnisse von RDTSC zu skalieren, um eine genaue Zeit zu erhalten. Aufgrund der Einschränkungen von RDTSC bietet die Windows-API die korrekte möglichkeit, über die Routinen von [**QueryPerformanceCounter**](/windows/win32/api/profileapi/nf-profileapi-queryperformancecounter) und [**QueryPerformanceFrequency**](/windows/win32/api/profileapi/nf-profileapi-queryperformancefrequency)auf diese Funktionalität zuzugreifen.
+Seit der Einführung des x86 P5-Anweisungssatzes haben viele Spieleentwickler den Lesezeitstempelzähler, die RDTSC-Anweisung, verwendet, um zeitauflösende Zeitsteuerungen mit hoher Auflösung durchzuführen. Die Windows Multimediatimer sind für die Audio- und Videoverarbeitung präzise genug, aber mit Framezeiten von mindestens einem Dutzend Millisekunden verfügen sie nicht über genügend Auflösung, um Deltazeitinformationen bereitzustellen. Bei vielen Spielen wird beim Start immer noch ein Multimediatimer verwendet, um die CPU-Frequenz festzulegen, und sie verwenden diesen Frequency-Wert, um Ergebnisse von RDTSC zu skalieren, um eine genaue Zeit zu erhalten. Aufgrund der Einschränkungen von RDTSC bietet die Windows-API die korrekte möglichkeit, über die Routinen von [**QueryPerformanceCounter**](/windows/win32/api/profileapi/nf-profileapi-queryperformancecounter) und [**QueryPerformanceFrequency**](/windows/win32/api/profileapi/nf-profileapi-queryperformancefrequency)auf diese Funktionalität zuzugreifen.
 
 Diese Verwendung von RDTSC für die zeitliche Steuerung hat folgende grundlegende Probleme:
 
@@ -54,8 +54,8 @@ Anweisungen zur Verwendung des Kompatibilitätsadministrators finden Sie in der 
 
 Kundenorientierte Informationen finden Sie in den folgenden Knowledge Base-Artikeln von Microsoft Help and Support:
 
--   [Programme, die die QueryPerformanceCounter-Funktion verwenden, können in Windows Server 2003 und in Windows XP schlecht funktionieren](https://support.microsoft.com/kb/895980) (Artikel 895980)
--   Die Leistung des [Spiels kann auf einem Windows XP-basierten Computer schlecht sein, der einen Dual-Core-Prozessor verwendet](https://support.microsoft.com/kb/909944) (Artikel 909944)
+-   [Programme, die die QueryPerformanceCounter-Funktion verwenden, können in Windows Server 2003 und in Windows XP eine schlechte Leistung erzielen](https://support.microsoft.com/kb/895980) (Artikel 895980)
+-   [Die Spielleistung auf einem Windows XP-basierten Computer, der einen Dual-Core-Prozessor verwendet, ist möglicherweise schlecht](https://support.microsoft.com/kb/909944) (Artikel 909944)
 
  
 

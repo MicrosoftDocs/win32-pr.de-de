@@ -1,6 +1,6 @@
 ---
-title: dcl_temps (SM4-ASM)
-description: DCL \_ -Temps (SM4-ASM)
+title: dcl_temps (sm4 - asm)
+description: dcl \_ temps (sm4 - asm)
 ms.assetid: ecfbdd1e-0f2d-4371-91cc-ebc3e5ee8ee7
 ms.topic: reference
 ms.date: 05/31/2018
@@ -9,20 +9,20 @@ topic_type:
 api_name: ''
 api_type: ''
 api_location: ''
-ms.openlocfilehash: 5fc3a468575b30836d4574edb13c4fc77a3505fc
-ms.sourcegitcommit: fe03c5d92ca6a0d66a114b2303e99c0a19241ffb
+ms.openlocfilehash: 6426caff8ecd347ce8233f15df6b914a53c647ae79fb50a530b531e9207bf1c5
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "104993199"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117726808"
 ---
-# <a name="dcl_temps-sm4---asm"></a>DCL \_ -Temps (SM4-ASM)
+# <a name="dcl_temps-sm4---asm"></a>dcl \_ temps (sm4 - asm)
 
 Deklariert temporäre Register.
 
 
 
-| DCL- \_ Temps N |
+| dcl \_ temps N |
 |--------------|
 
 
@@ -31,17 +31,17 @@ Deklariert temporäre Register.
 
 
 
-| Element                                                   | BESCHREIBUNG                                          |
+| Element                                                   | Beschreibung                                          |
 |--------------------------------------------------------|------------------------------------------------------|
-| <span id="N"></span><span id="n"></span>*Nr*<br/> | \[in \] der Anzahl der temporären Register.<br/> |
+| <span id="N"></span><span id="n"></span>*N*<br/> | \[in \] Die Anzahl temporärer Register.<br/> |
 
 
 
  
 
-Jedes Register verfügt über Platz für einen Wert von 32-Bit-vier Komponenten. Die Gesamtanzahl der temporären und [indizierbaren temporären](dcl-indexabletemp.md) Register muss kleiner oder gleich 4096 sein.
+Jedes Register verfügt über Platz für einen 32-Bit-Wert mit vier Komponenten. Die Gesamtzahl temporärer und [indizierbarer temporärer](dcl-indexabletemp.md) Register muss kleiner oder gleich 4096 sein.
 
-Diese Anweisung gilt für die folgenden Shader-Phasen:
+Diese Anweisung gilt für die folgenden Shaderstufen:
 
 
 
@@ -53,7 +53,7 @@ Diese Anweisung gilt für die folgenden Shader-Phasen:
 
  
 
-Diese Anweisung ist enthalten, um das Debuggen eines Shaders in der Assembly zu unterstützen. Es ist nicht möglich, einen Shader mit Shadermodell 4 in der Assemblysprache zu erstellen.
+Diese Anweisung ist enthalten, um das Debuggen eines Shaders in der Assembly zu erleichtern. Sie können mit shader Model 4 keinen Shader in der Assemblysprache erstellen.
 
 ## <a name="example"></a>Beispiel
 
@@ -66,20 +66,20 @@ dcl_temps 10; // Declare r0-r9
 
 
 
-## <a name="minimum-shader-model"></a>Minimaler Shader-Modell
+## <a name="minimum-shader-model"></a>Minimales Shadermodell
 
-Diese Funktion wird in den folgenden shadermodellen unterstützt.
+Diese Funktion wird in den folgenden Shadermodellen unterstützt.
 
 
 
 | Shadermodell                                              | Unterstützt |
 |-----------------------------------------------------------|-----------|
-| [Shader-Modell 5](d3d11-graphics-reference-sm5.md)        | ja       |
-| [Shadermodell 4,1](dx-graphics-hlsl-sm4.md)              | ja       |
-| [Shadermodell 4](dx-graphics-hlsl-sm4.md)                | ja       |
-| [Shader-Modell 3 (DirectX HLSL)](dx-graphics-hlsl-sm3.md) | nein        |
-| [Shader-Modell 2 (DirectX HLSL)](dx-graphics-hlsl-sm2.md) | nein        |
-| [Shader-Modell 1 (DirectX HLSL)](dx-graphics-hlsl-sm1.md) | nein        |
+| [Shadermodell 5](d3d11-graphics-reference-sm5.md)        | Ja       |
+| [Shadermodell 4.1](dx-graphics-hlsl-sm4.md)              | Ja       |
+| [Shadermodell 4](dx-graphics-hlsl-sm4.md)                | Ja       |
+| [Shadermodell 3 (DirectX HLSL)](dx-graphics-hlsl-sm3.md) | Nein        |
+| [Shadermodell 2 (DirectX HLSL)](dx-graphics-hlsl-sm2.md) | Nein        |
+| [Shadermodell 1 (DirectX HLSL)](dx-graphics-hlsl-sm1.md) | Nein        |
 
 
 

@@ -4,12 +4,12 @@ ms.assetid: aa59f322-09b1-4b0a-be6f-d865c20f76e5
 title: MSTape-Treiber
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 951084f8827f925bba43028c0792736883d5ff0f
-ms.sourcegitcommit: 63753fcfb0afbbe5ec283fb8316e62c2dc950f66
+ms.openlocfilehash: 23eaf6dd7f0d6713b0db5ba5ed21ba4f7640c1373f23cb0066b0b31f366809cc
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/22/2021
-ms.locfileid: "107909398"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118952209"
 ---
 # <a name="mstape-driver"></a>MSTape-Treiber
 
@@ -45,9 +45,9 @@ Der Ausgabepin unterstützt zwei Medientypen.
 | Bezeichnung | Wert |
 |--------------|----------------------------------------|
 | Haupttyp   | \_MEDIATYPE-Stream                      |
-| Subtype      | MEDIASUBTYPE \_ \_ MPEG2-TRANSPORT-STRIDE \_ |
+| Subtype      | MEDIASUBTYPE \_ MPEG2 \_ TRANSPORT \_ STRIDE |
 | Stichprobengröße  | 192 x 256                              |
-| Formatblock | \_ \_ MPEG2-TRANSPORT-STRIDE               |
+| Block formatieren | MPEG2 \_ TRANSPORT \_ STRIDE               |
 
 
 
@@ -58,9 +58,9 @@ Der Ausgabepin unterstützt zwei Medientypen.
 | Bezeichnung | Wert |
 |--------------|----------------------------------------|
 | Haupttyp   | \_MEDIATYPE-Stream                      |
-| Subtype      | MEDIASUBTYPE \_ \_ MPEG2-TRANSPORT-STRIDE \_ |
+| Subtype      | MEDIASUBTYPE \_ MPEG2 \_ TRANSPORT \_ STRIDE |
 | Stichprobengröße  | 188 x 256                              |
-| Formatblock | **NULL**                               |
+| Block formatieren | **NULL**                               |
 
 
 
@@ -68,14 +68,14 @@ Der Ausgabepin unterstützt zwei Medientypen.
 
 **Geräteinformationen**
 
-Der Treiber liest Informationen dynamisch aus der Gerätekonfigurations-ROM. Die Anwendung kann diese Informationen abrufen, indem sie den Gerätemoniker an eine Eigenschaftentüte binden und die **IPropertyBag::Read-Methode** aufruft.
+Der Treiber liest dynamisch Informationen aus dem Gerätekonfigurations-ROM. Die Anwendung kann diese Informationen abrufen, indem sie den Gerätemoniker an einen Eigenschaftenbehälter bindet und die **IPropertyBag::Read-Methode** aufruft.
 
 
 
-| Eigenschaft            | BESCHREIBUNG                                                                                                                                                                         | Datentyp           |
+| Eigenschaft            | Beschreibung                                                                                                                                                                         | Datentyp           |
 |---------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------------|
-| UniqueID \_ Low       | Eindeutige ID des Geräts **(niedriges DWORD).**                                                                                                                                            | **long** (VT \_ I4)   |
-| UniqueID \_ High      | Eindeutige ID des Geräts (hoher **DWORD-Wert)**                                                                                                                                            | **long**            |
+| UniqueID \_ Low       | Eindeutige ID des Geräts (niedriger **DWORD-Wert).**                                                                                                                                            | **long** (VT \_ I4)   |
+| UniqueID \_ High      | Eindeutige ID des Geräts (hohes **DWORD)**                                                                                                                                            | **long**            |
 | VendorID            | Anbieter-ID.                                                                                                                                                                          | **long**            |
 | ModelID             | Modell-ID                                                                                                                                                                           | **long**            |
 | VendorText          | Name des Anbieters.                                                                                                                                                                        | **BSTR** (VT \_ BSTR) |
@@ -84,15 +84,15 @@ Der Treiber liest Informationen dynamisch aus der Gerätekonfigurations-ROM. Die
 | DeviceOPcr0Payload  | oPCR(Output Plug Control)-Nutzlast. Beispiel: 146 Quadlets.                                                                                                                          | **long**            |
 | DeviceOPcr0DataRate | oPCR-Datenrate. Beispiele: 0 (S100), 1 (S200) oder 2 (S400).                                                                                                                          | **long**            |
 | DeviceClassGUID     | GUID, die den Gerätetreiber identifiziert. Für MSTape ist dieser Wert `{8C0F6AF2-0EDB-44C1-8AEB-59040BD830ED}` . Diese GUID ist in der Headerdatei Xprtdefs.h als MSTapeDeviceGUID definiert. | **Bstr**            |
-| BESCHREIBUNG         | Eine Beschreibung des Geräts aus der INF-Datei. Diese Zeichenfolge enthält in der Regel den Markennamen des Geräts.                                                                    | **Bstr**            |
+| Beschreibung         | Eine Beschreibung des Geräts aus der INF-Datei. Diese Zeichenfolge enthält in der Regel den Markennamen des Geräts.                                                                    | **Bstr**            |
 
 
 
  
 
-Die Geräte-ID ist eine 64-Bit-Ganzzahl. Das niedrige **DWORD** wird in der UniqueID Low-Eigenschaft gespeichert, und das \_ hohe **DWORD** wird in der UniqueID \_ High-Eigenschaft gespeichert.
+Die Geräte-ID ist eine 64-Bit-Ganzzahl. Das niedrige **DWORD** wird in der UniqueID \_ Low-Eigenschaft und das hohe **DWORD** in der UniqueID \_ High-Eigenschaft gespeichert.
 
-Weitere Informationen zu Gerätemonikern finden Sie unter [Verwenden des Systemgeräte-Enumerators](using-the-system-device-enumerator.md).
+Weitere Informationen zu Gerätemonikern finden Sie unter [Verwenden des Systemgeräte-Enumerators.](using-the-system-device-enumerator.md)
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
@@ -101,7 +101,7 @@ Weitere Informationen zu Gerätemonikern finden Sie unter [Verwenden des Systemg
 [DirectShow-Filter](directshow-filters.md)
 </dt> <dt>
 
-[Steuern eines DV-Dvd](controlling-a-dv-camcorder.md)
+[Steuern eines DV-Dvds](controlling-a-dv-camcorder.md)
 </dt> </dl>
 
  

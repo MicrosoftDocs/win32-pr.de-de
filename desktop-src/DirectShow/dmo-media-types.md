@@ -1,53 +1,53 @@
 ---
-description: DMO-Medientypen
+description: DMO Medientypen
 ms.assetid: 40958e12-09c7-4ce5-aa4d-5ed8b1f40aa3
-title: DMO-Medientypen
+title: DMO Medientypen
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 1997abb1cc3c8eb10301778982ef7a46690855ed
-ms.sourcegitcommit: c16214e53680dc71d1c07111b51f72b82a4512d8
+ms.openlocfilehash: d0d67be6775163695189c2dc2c2742f65bcd0181032d9935b2a2a3ce2df2e900
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/03/2021
-ms.locfileid: "104530551"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119016128"
 ---
-# <a name="dmo-media-types"></a>DMO-Medientypen
+# <a name="dmo-media-types"></a>DMO Medientypen
 
-Ein Medientyp beschreibt das Format, das einem Stream von Mediendaten zugeordnet ist. In diesem Artikel wird beschrieben, wie DMOS Medientypen verarbeitet. Es richtet sich hauptsächlich an Entwickler, die eigene benutzerdefinierte DMOS schreiben.
+Ein Medientyp beschreibt das Format, das einem Datenstrom von Mediendaten zugeordnet ist. In diesem Artikel wird beschrieben, wie DMOs Medientypen behandeln. Es ist in erster Linie für Entwickler gedacht, die ihre eigenen benutzerdefinierten DMOs schreiben.
 
-Medientypen werden mithilfe der [**DMO- \_ \_ Medientyp**](/previous-versions/windows/desktop/api/mediaobj/ns-mediaobj-dmo_media_type) Struktur definiert. Diese Struktur enthält die folgenden Informationen:
+Medientypen werden mithilfe der [**media DMO \_ \_ TYPE-Struktur**](/previous-versions/windows/desktop/api/mediaobj/ns-mediaobj-dmo_media_type) definiert. Diese Struktur enthält die folgenden Informationen:
 
--   Der *Haupttyp* ist eine Globally Unique Identifier (GUID), die eine breite Kategorie definiert, wie z. b. Audiodaten oder Videos.
--   Der *Untertyp* ist eine GUID, die spezifischere Aspekte des Typs definiert. Beispielsweise enthalten die Untertypen innerhalb von Video 16-Bit-RGB-, 24-Bit-RGB-, UYVY-und DV-codierte Videos usw.
--   Der *Format Block* ist eine sekundäre Struktur, die das Format vollständig angibt. Das Layout des Format Blocks hängt von der Art der Daten ab. Beispielsweise verwendet PCM-Audiodaten die **WaveFormatEx** -Struktur. Video verwendet verschiedene andere Strukturen, einschließlich **videoinfoheader** und **VIDEOINFOHEADER2**. Das Layout des Format Blocks wird durch einen Formattyp-GUID identifiziert. Das Format \_ WaveFormatEx gibt z. b. eine **WaveFormatEx** -Struktur an.
+-   Der *Haupttyp ist* ein global eindeutiger Bezeichner (Globally Unique Identifier, GUID), der eine breite Kategorie definiert, z. B. Audio oder Video.
+-   Der *Untertyp* ist eine GUID, die spezifischere Aspekte des Typs definiert. Die Untertypen im Video umfassen beispielsweise 16-Bit RGB, 24-Bit RGB, UY ASCII, DV-codiertes Video usw.
+-   Der *Formatblock ist* eine sekundäre Struktur, die das Format vollständig angibt. Das Layout des Formatblocks hängt vom Datentyp ab. PCM-Audio verwendet beispielsweise die **WAVEFORMATEX-Struktur.** Video verwendet verschiedene andere Strukturen, einschließlich **VIDEOINFOHEADER** und **VIDEOINFOHEADER2**. Das Layout des Formatblocks wird durch eine Formattyp-GUID identifiziert. Format \_ WaveFormatEx gibt beispielsweise eine **WAVEFORMATEX-Struktur** an.
 
-Wenn ein DMO erstmalig erstellt wird, weisen die Streams keinen Medientyp auf. Bevor der DMO Daten verarbeiten kann, muss der Client für jeden Stream einen Medientyp festlegen. Dieser Prozess wird aus der Sicht des Clients beim [Festlegen von Medientypen in einem DMO](setting-media-types-on-a-dmo.md)beschrieben.
+Wenn ein DMO erstellt wird, haben die Streams keinen Medientyp. Bevor die DMO Daten verarbeiten kann, muss der Client einen Medientyp für jeden Stream festlegen. Dieser Prozess wird aus Clientsicht unter [Setting Media Types on a DMO](setting-media-types-on-a-dmo.md).
 
 **Medientypen in der Registrierung**
 
-Ein DMO kann durch Aufrufen der [**dmoregisterfunktion**](/previous-versions/windows/desktop/api/Dmoreg/nf-dmoreg-dmoregister) eine Liste der von ihm unterstützten Medientypen zur Registrierung hinzufügen. Eine Anwendung kann diese Informationen verwenden, um nach DMOS zu suchen, die einem bestimmten Format entsprechen. Die Informationen in der Registrierung sind nicht als vollständig zu verstehen. Normalerweise würden Sie nur die Haupttypen einschließen, die der DMO unterstützt. Der Registrierungs Eintrag weist separate Schlüssel für Eingabe-und Ausgabetypen auf, unterscheidet jedoch nicht zwischen einzelnen Datenströmen.
+Ein DMO kann der Registrierung eine Liste von Medientypen hinzufügen, die er unterstützt, indem die [**DMORegister-Funktion aufruft.**](/previous-versions/windows/desktop/api/Dmoreg/nf-dmoreg-dmoregister) Eine Anwendung kann diese Informationen verwenden, um nach DMOs zu suchen, die mit einem bestimmten Format übereinstimmen. Die Informationen in der Registrierung sollen nicht umfassend sein. In der Regel würden Sie nur die Haupttypen enthalten, die DMO unterstützt. Der Registrierungseintrag verfügt über separate Schlüssel für Eingabe- und Ausgabetypen, unterscheidet jedoch nicht zwischen einzelnen Streams.
 
-Die **dmoregiester** -Funktion verwendet die [**partielle DMO- \_ \_ mediaType**](/previous-versions/windows/desktop/api/Dmoreg/ns-dmoreg-dmo_partial_mediatype) -Struktur, um Medientypen zu beschreiben. Diese Struktur enthält eine Teilmenge der Informationen, die in der **DMO \_ - \_ Medientyp** Struktur gefunden werden – nämlich den Haupttyp und den Untertyp. Sie enthält keinen Format Block, da der Format Block in der Regel Informationen enthält, die in der Registrierung zu granulär sind, z. b. Höhe und Breite eines Video Bilds.
+Die **DMORegister-Funktion** verwendet die DMO [**PARTIAL \_ \_ MEDIATYPE-Struktur,**](/previous-versions/windows/desktop/api/Dmoreg/ns-dmoreg-dmo_partial_mediatype) um Medientypen zu beschreiben. Diese Struktur enthält eine Teilmenge der Informationen, die in der MEDIA **\_ \_ TYPE DMO struktur** gefunden werden, nämlich den Haupttyp und den Untertyp. Es enthält keinen Formatblock, da der Formatblock in der Regel Informationen enthält, die zu präzise sind, um sie in die Registrierung einfingen zu können, z. B. die Höhe und Breite eines Videobilds.
 
 **Bevorzugte Medientypen**
 
-Nachdem die Anwendung ein DMO erstellt hat, kann Sie den DMO nach den unterstützten Medientypen Abfragen. Der DMO erstellt für jeden Datenstrom eine Liste von Medientypen (möglicherweise leer), sortiert nach bevorzugten Reihenfolge. Die Methoden [**imediaobject:: getinputtype**](/previous-versions/windows/desktop/api/Mediaobj/nf-mediaobj-imediaobject-getinputtype) und [**imediaobject:: getoutputtype**](/previous-versions/windows/desktop/api/Mediaobj/nf-mediaobj-imediaobject-getoutputtype) zählen die bevorzugten Typen auf. Die bevorzugten Typen eines Streams können sich dynamisch ändern, wenn die Anwendung Medientypen für andere Streams festlegt. Beispielsweise kann sich die Liste der bevorzugten Ausgabetypen ändern, nachdem der Eingabetyp festgelegt wurde, oder umgekehrt. Es ist jedoch nicht erforderlich, dass der DMO seine bevorzugten Typen dynamisch aktualisiert. Die Anwendung kann nicht davon ausgehen, dass jeder empfangene Typ gültig ist. Aus diesem Grund unterstützen die [**imediaobject:: setinputtype**](/previous-versions/windows/desktop/api/Mediaobj/nf-mediaobj-imediaobject-setinputtype) -und die [**imediaobject:: setoutputtype**](/previous-versions/windows/desktop/api/Mediaobj/nf-mediaobj-imediaobject-setoutputtype) -Methode ein Flag zum Testen eines bestimmten Typs.
+Nachdem die Anwendung eine DMO erstellt hat, kann sie die DMO medientypen abfragen, die sie unterstützt. Für jeden Stream erstellt der DMO eine Liste von Medientypen (möglicherweise leer), die in der Reihenfolge ihrer Präferenz geordnet sind. Die [**Methoden IMediaObject::GetInputType**](/previous-versions/windows/desktop/api/Mediaobj/nf-mediaobj-imediaobject-getinputtype) und [**IMediaObject::GetOutputType**](/previous-versions/windows/desktop/api/Mediaobj/nf-mediaobj-imediaobject-getoutputtype) aufzählen die bevorzugten Typen. Die bevorzugten Typen eines Streams können sich dynamisch ändern, wenn die Anwendung Medientypen für andere Streams fest legt. Beispielsweise kann sich die Liste der bevorzugten Ausgabetypen ändern, nachdem der Eingabetyp festgelegt wurde oder umgekehrt. Die -DMO ist jedoch nicht erforderlich, um ihre bevorzugten Typen dynamisch zu aktualisieren. Die Anwendung kann nicht davon ausgehen, dass jeder empfangene Typ gültig ist. Aus diesem Grund unterstützen die [**Methoden IMediaObject::SetInputType**](/previous-versions/windows/desktop/api/Mediaobj/nf-mediaobj-imediaobject-setinputtype) und [**IMediaObject::SetOutputType**](/previous-versions/windows/desktop/api/Mediaobj/nf-mediaobj-imediaobject-setoutputtype) ein Flag zum Testen eines bestimmten Typs.
 
-Die Methoden " **getinputtype** " und " **getoutputtype** " geben eine **DMO- \_ \_ Medientyp** Struktur zurück. Der DMO kann einige der Informationen in dieser Struktur leer lassen, um einen Bereich von Typen anzugeben. Der Haupttyp oder Untertyp kann GUID \_ NULL sein, und der Format Block kann leer sein (0 Bytes). Wenn der Format Block leer ist, muss der Formattyp "GUID \_ null" lauten.
+Die **Methoden GetInputType** **und GetOutputType** geben beide eine DMO **MEDIA \_ \_ TYPE-Struktur** zurück. Der DMO kann einige der Informationen in dieser Struktur leer lassen, um einen Bereich von Typen anzugeben. Der Haupttyp oder Untertyp kann GUID \_ NULL sein, und der Formatblock kann leer sein (null Bytes). Wenn der Formatblock leer ist, muss der Formattyp GUID \_ NULL sein.
 
-Nachdem die Anwendung alle Eingabetypen eines DMO festgelegt hat, sollte der DMO in der Regel mindestens einen vollständigen Typ für jeden Ausgabestream zurückgeben. Ein kompletter Ausgabetyp ermöglicht das Testen, und Anwendungen können ihn als angemessenen Standardwert verwenden. Die DMO-Testanwendung basiert auf diesem Verhalten. (Weitere Informationen finden [Sie unter Verwenden der dmutest-Anwendung](using-the-dmotest-application.md).)
+Nachdem die Anwendung alle Eingabetypen eines DMO legt, sollte die DMO in der Regel mindestens einen vollständigen Typ für jeden Ausgabestream zurückgeben. Ein vollständiger Ausgabetyp erleichtert das Testen, und Anwendungen können ihn als angemessene Standardeinstellung verwenden. Die DMO Testanwendung basiert auf diesem Verhalten. (Siehe [Verwenden der DMOTest-Anwendung](using-the-dmotest-application.md).)
 
 **Festlegen der Medientypen**
 
-Anwendungen verwenden die **setinputtype** -Methode und die **setoutputtype** -Methode, um Typen für einen angegebenen Stream zu testen, festzulegen oder zu löschen. Die Anwendung muss den Typ vollständig angeben. Der DMO überprüft, ob der vorgeschlagene Typ akzeptiert werden kann. Die Antwort hängt möglicherweise davon ab, welche Typen für andere Streams festgelegt wurden. Das Flag zum \_ Löschen der typef-Funktion von DMO \_ Löscht den \_ Typ eines Streams, sodass die Anwendung "zurück" ist und eine weitere Kombination ausprobieren kann.
+Anwendungen verwenden die **Methoden SetInputType** und **SetOutputType,** um Typen in einem angegebenen Stream zu testen, festzulegen oder zu löschen. Die Anwendung muss den Typ vollständig angeben. Der DMO überprüft, ob er den vorgeschlagenen Typ akzeptieren kann. Die Antwort hängt möglicherweise davon ab, welche Typen für andere Streams festgelegt wurden. Das DMO SET TYPEF CLEAR-Flag löschen den Typ eines Streams, sodass die Anwendung "back out" (Zurücksuchen) und eine \_ \_ andere Kombination ausprobieren \_ kann.
 
 **Beispielszenarien**
 
-In den folgenden Beispielen werden einige typische Szenarien beschrieben, um die in den vorherigen Abschnitten beschriebenen Punkte zu veranschaulichen.
+In den folgenden Beispielen werden einige typische Szenarien beschrieben, um die Punkte in den vorherigen Abschnitten zu veranschaulichen.
 
--   **Video-Decoders.** In einem typischen Video Decoder bestimmt der Eingabetyp teilweise den Ausgabetyp. In der Regel müssen beide Datenströme z. b. die gleichen Frameraten-und Bild Dimensionen aufweisen. Eine Möglichkeit besteht darin, keine bevorzugten Ausgabetypen zu definieren, bis der Eingabetyp festgelegt ist. Eine andere Möglichkeit besteht darin, einen Satz unvollständiger Typen aufzulisten, wobei der Format Block weggelassen wird. Verwenden Sie den Untertyp, um die unterstützten nicht komprimierten Typen anzugeben, z. b. 16-Bit-RGB, 24-Bit-RGB usw. Außerdem unterstützen Video Decoder in der Regel nicht das Festlegen des Ausgabe Typs vor dem Eingabetyp. Das übliche Szenario besteht darin, ein bekanntes Eingabeformat zu decodieren, sodass diese Einschränkung angemessen ist.
--   **Audiodecoder.** Ein Audiodecoder unterstützt möglicherweise einen begrenzten Satz von Ausgabeformaten. In diesem Fall kann es möglicherweise in der Lage sein, eine Liste der bevorzugten Ausgabeformate zu erstellen, bevor das Eingabeformat bekannt ist.
--   **Chtern.** In den meisten Fällen kann ein Video-Kompressor seine bevorzugten Ausgabeformate nicht vollständig angeben, bis die Anwendung das Eingabeformat festlegt (und umgekehrt). Stattdessen sollte der DMO einen unvollständigen Typ ohne Format Block zurückgeben. Bei der Audio-und Video Komprimierung muss die Anwendung normalerweise verschiedene Ausgabeparameter festlegen, z. b. die Bitrate. Nachdem der Eingabetyp jedoch festgelegt wurde, sollte der-Kompressor aus den zuvor erwähnten Gründen mindestens einen kompletten Ausgabetyp zurückgeben.
+-   **Videodecoder.** In einem typischen Videodecoder bestimmt der Eingabetyp teilweise den Ausgabetyp. Beispielsweise müssen in der Regel beide Streams die gleiche Bildfrequenz und die gleiche Bildabmessungen haben. Eine Möglichkeit besteht in der Definition bevorzugter Ausgabetypen, bis der Eingabetyp festgelegt ist. Eine weitere Möglichkeit besteht im Aufzählen eines Sets unvollständiger Typen, ohne den Formatblock zu verwenden. Verwenden Sie den Untertyp , um die unterstützten nicht komprimierten Typen anzugeben, z. B. 16-Bit RGB, 24-Bit RGB usw. Darüber hinaus unterstützen Videodecoder in der Regel nicht das Festlegen des Ausgabetyps vor dem Eingabetyp. Das übliche Szenario ist die Decodierung aus einem bekannten Eingabeformat, daher ist diese Einschränkung sinnvoll.
+-   **Audiodecoder.** Ein Audiodecoder unterstützt möglicherweise einen begrenzten, festen Satz von Ausgabeformaten. In diesem Fall kann er möglicherweise eine Liste der bevorzugten Ausgabeformate erstellen, bevor das Eingabeformat bekannt ist.
+-   **Kompressoren.** In den meisten Fällen kann ein Videoreproduktionsvideo seine bevorzugten Ausgabeformate erst vollständig angeben, wenn die Anwendung das Eingabeformat festgelegt hat und umgekehrt. Stattdessen sollte die DMO einen unvollständigen Typ ohne Formatblock zurückgeben. Für die Audio- und Videokomprimierung muss die Anwendung in der Regel verschiedene Ausgabeparameter festlegen, z. B. die Bitrate. Nachdem jedoch der Eingabetyp festgelegt wurde, sollte die Ehrung aus den oben genannten Gründen mindestens einen vollständigen Ausgabetyp zurückgeben.
 
 ## <a name="related-topics"></a>Zugehörige Themen
 

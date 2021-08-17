@@ -16,12 +16,12 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: 903522b63754ff7972e4cdcf5221946442497896
-ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
+ms.openlocfilehash: 51584bc38c49345f6bb1d940aed24a052e9a4f9cd05fc2dc84246a6ba1168fd0
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2021
-ms.locfileid: "108095098"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118953499"
 ---
 # <a name="ctransformfilterpause-method"></a>CTransformFilter.Pause-Methode
 
@@ -44,7 +44,7 @@ Diese Methode hat keine Parameter.
 
 Gibt S \_ OK oder einen anderen **HRESULT-Wert** zurück.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
 Diese Methode ruft die [**StartStreaming-Methode**](ctransformfilter-startstreaming.md) auf. Die **StartStreaming-Methode** führt in der Basisklasse nichts aus, aber die abgeleitete Klasse kann sie überschreiben.
 
@@ -52,10 +52,10 @@ Diese Methode ruft die [**StartStreaming-Methode**](ctransformfilter-startstream
 
 
 
-| Anforderungen | Wert |
+| Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Header<br/>  | <dl> <dt>Transfrm.h (include Streams.h)</dt> </dl>                                                                                  |
-| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Verkaufsbuilds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Einzelhandels-Builds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 

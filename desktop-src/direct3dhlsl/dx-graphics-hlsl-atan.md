@@ -37,7 +37,7 @@ Gibt den Arangens des angegebenen Werts zurück.
 
 
 
-| Element                                                   | BESCHREIBUNG                            |
+| Element                                                   | Beschreibung                            |
 |--------------------------------------------------------|----------------------------------------|
 | <span id="x"></span><span id="X"></span>*X*<br/> | \[in \] Der angegebene Wert.<br/> |
 
@@ -70,7 +70,7 @@ Diese Funktion wird in den folgenden Shadermodellen unterstützt.
 
 | Shadermodell                                                                       | Unterstützt |
 |------------------------------------------------------------------------------------|-----------|
-| [Shadermodell 2 (DirectX HLSL)](dx-graphics-hlsl-sm2.md) und höhere Shadermodelle | ja       |
+| [Shadermodell 2 (DirectX HLSL)](dx-graphics-hlsl-sm2.md) und höhere Shadermodelle | Ja       |
 | [Shadermodell 1 (DirectX HLSL)](dx-graphics-hlsl-sm1.md)                          | Vs \_ 1 \_ 1  |
 
 

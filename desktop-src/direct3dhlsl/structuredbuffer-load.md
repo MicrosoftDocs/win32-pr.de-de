@@ -3,7 +3,7 @@ title: StructuredBuffer::StructuredBuffer Load-Methoden
 description: Liest Pufferdaten aus einem StructuredBuffer.
 ms.assetid: 4c797f36-d8e6-46ed-8ff0-248c28f82998
 keywords:
-- HlSL-Lademethoden
+- Lademethoden HLSL
 topic_type:
 - apiref
 api_type:
@@ -21,13 +21,13 @@ ms.locfileid: "117724439"
 ---
 # <a name="structuredbufferload-methods"></a>StructuredBuffer::Load-Methoden
 
-Liest Pufferdaten aus einem [**StructuredBuffer-**](sm5-object-structuredbuffer.md).
+Liest Pufferdaten aus einer [**StructuredBuffer-.**](sm5-object-structuredbuffer.md)
 
 ### <a name="overload-list"></a>Überladeliste
 
 
 
-| Methode                                                      | BESCHREIBUNG                                                          |
+| Methode                                                      | Beschreibung                                                          |
 |:------------------------------------------------------------|:---------------------------------------------------------------------|
 | [**Load(int,uint)**](structuredbuffer-load-float-uint-.md) | Liest Pufferdaten und gibt den Status des Vorgangs zurück.<br/> |
 | [**Load(int)**](structuredbuffer-load-float-.md)           | Liest Pufferdaten.<br/>                                        |

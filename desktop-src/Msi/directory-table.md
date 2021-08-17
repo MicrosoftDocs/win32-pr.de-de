@@ -1,28 +1,28 @@
 ---
-description: Die Verzeichnis Tabelle gibt das Verzeichnis Layout für das Produkt an. Jede Zeile der Tabelle gibt ein Verzeichnis an, das sowohl an der Quelle als auch am Ziel liegt.
+description: Die Tabelle Directory gibt das Verzeichnislayout für das Produkt an. Jede Zeile der Tabelle gibt ein Verzeichnis sowohl an der Quelle als auch am Ziel an.
 ms.assetid: eaca30cb-fec1-49ca-8b23-5e54c583e3e2
-title: Verzeichnis Tabelle
+title: Verzeichnistabelle
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 273445aef67e3f166255321d0ac0ccf1aee37515
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: f19e9b5994062ac55564799854fc36016fc6ddb9887bc36aa9a94652ef31aeb1
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "103960058"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118947344"
 ---
-# <a name="directory-table"></a>Verzeichnis Tabelle
+# <a name="directory-table"></a>Verzeichnistabelle
 
-Die Verzeichnis Tabelle gibt das Verzeichnis Layout für das Produkt an. Jede Zeile der Tabelle gibt ein Verzeichnis an, das sowohl an der Quelle als auch am Ziel liegt.
+Die Tabelle Directory gibt das Verzeichnislayout für das Produkt an. Jede Zeile der Tabelle gibt ein Verzeichnis sowohl an der Quelle als auch am Ziel an.
 
-Die Verzeichnis Tabelle enthält die folgenden Spalten.
+Die Tabelle Directory enthält die folgenden Spalten.
 
 
 
-| Spalte            | Typ                         | Schlüssel | Nullwerte zulässig |
+| Spalte            | Typ                         | Key | Nullwerte zulässig |
 |-------------------|------------------------------|-----|----------|
-| Verzeichnis         | [Bezeichner](identifier.md) | J   | N        |
-| Über \_ geordnetes Verzeichnis | [Bezeichner](identifier.md) | N   | J        |
+| Verzeichnis         | [Identifier](identifier.md) | J   | N        |
+| Übergeordnetes Verzeichnis \_ | [Identifier](identifier.md) | N   | J        |
 | DefaultDir        | [DefaultDir](defaultdir.md) | N   | N        |
 
 
@@ -33,78 +33,78 @@ Die Verzeichnis Tabelle enthält die folgenden Spalten.
 
 <dl> <dt>
 
-<span id="Directory"></span><span id="directory"></span><span id="DIRECTORY"></span>Befinden
+<span id="Directory"></span><span id="directory"></span><span id="DIRECTORY"></span>Verzeichnis
 </dt> <dd>
 
-Die Verzeichnis Spalte enthält einen eindeutigen Bezeichner für ein Verzeichnis oder einen Verzeichnispfad. Diese Spalte kann den Namen einer Eigenschaft enthalten, die auf den vollständigen Pfad eines Zielverzeichnisses festgelegt ist. Wenn diese Spalte eine Eigenschaft enthält, übernimmt das Zielverzeichnis den in der Spalte DefaultDir angegebenen Namen und übernimmt das übergeordnete Verzeichnis, das in der übergeordneten Spalte des Verzeichnisses angegeben ist \_ .
+Die Spalte Verzeichnis enthält einen eindeutigen Bezeichner für ein Verzeichnis oder einen Verzeichnispfad. Diese Spalte kann den Namen einer Eigenschaft enthalten, die auf den vollständigen Pfad eines Zielverzeichnisses festgelegt ist. Wenn diese Spalte eine Eigenschaft enthält, verwendet das Zielverzeichnis den in der DefaultDir -Spalte angegebenen Namen und das übergeordnete Verzeichnis, das in der Spalte Directory \_ Parent angegeben ist.
 
-Das Quellverzeichnis nimmt immer den in der Spalte DefaultDir angegebenen Namen an und übernimmt das übergeordnete Verzeichnis, das in der übergeordneten Spalte des Verzeichnisses angegeben ist \_ .
+Das Quellverzeichnis verwendet immer den in der Spalte DefaultDir angegebenen Namen und das übergeordnete Verzeichnis, das in der Spalte Directory \_ Parent angegeben ist.
 
-Wenn die \_ übergeordnete Spalte des Verzeichnisses entweder NULL oder gleich dem Wert der Verzeichnis Spalte ist, stellt die Verzeichnis Spalte ein Stammverzeichnis dar. In der Verzeichnis Tabelle kann nur ein Stammverzeichnis angegeben werden.
+Wenn die Spalte Directory Parent entweder NULL oder gleich dem Wert der Directory -Spalte ist, stellt die Directory -Spalte \_ ein Stammzielverzeichnis dar. In der Directory-Tabelle kann nur ein Stammverzeichnis angegeben werden.
 
 </dd> <dt>
 
-<span id="Directory_Parent"></span><span id="directory_parent"></span><span id="DIRECTORY_PARENT"></span>Über \_ geordnetes Verzeichnis
+<span id="Directory_Parent"></span><span id="directory_parent"></span><span id="DIRECTORY_PARENT"></span>Übergeordnetes \_ Verzeichnis
 </dt> <dd>
 
-Diese Spalte ist ein Verweis auf das übergeordnete Verzeichnis des Verzeichnisses. Ein Datensatz mit einer über \_ geordneten Verzeichnis Spalte, die gleich NULL oder gleich der Verzeichnis Spalte ist, stellt ein Stammverzeichnis dar. Der vollständige Pfad des übergeordneten Verzeichnisses wird in der übergeordneten Spalte des Verzeichnisses als Verweis aufgelöst \_ . ist ein externer Schlüssel in der Verzeichnis Spalte. Wenn ein Ordner z. b. über ein übergeordnetes Verzeichnis namens pdir verfügt, wird das übergeordnete Verzeichnis von pdir in der über \_ geordneten Spalte des Verzeichnisses der Zeile mit pdir in der Spalte Verzeichnis angegeben.
+Diese Spalte ist ein Verweis auf das übergeordnete Verzeichnis des Verzeichnisses. Ein Datensatz mit einer übergeordneten Verzeichnisspalte gleich NULL oder gleich der Directory -Spalte \_ stellt ein Stammverzeichnis dar. Der vollständige Pfad des übergeordneten Verzeichnisses wird als Verweis in der Spalte Directory Parent (Übergeordnetes Verzeichnis) aufgelöst und ist ein externer Schlüssel \_ in der Spalte Directory. Wenn ein Ordner beispielsweise über ein übergeordnetes Verzeichnis namens PDIR verfügt, wird das übergeordnete Verzeichnis von PDIR in der Directory Parent -Spalte der Zeile mit PDIR in der \_ Directory -Spalte angegeben.
 
 </dd> <dt>
 
 <span id="DefaultDir"></span><span id="defaultdir"></span><span id="DEFAULTDIR"></span>DefaultDir
 </dt> <dd>
 
-Die DefaultDir-Spalte enthält den Namen des Verzeichnisses (lokalisierbar) unter dem übergeordneten Verzeichnis. Standardmäßig ist dies der Name des Zielverzeichnisses und des Quell Verzeichnisses. Um verschiedene Quell-und Zielverzeichnis Namen anzugeben, trennen Sie die Ziel-und Quellnamen durch einen Doppelpunkt wie folgt: \[ TargetName \] : \[ SourceName \] .
+Die Spalte DefaultDir enthält den Namen des Verzeichnisses (lokalisierbar) unter dem übergeordneten Verzeichnis. Standardmäßig ist dies der Name des Ziel- und des Quellverzeichnisses. Um unterschiedliche Quell- und Zielverzeichnisnamen anzugeben, trennen Sie die Ziel- und Quellnamen wie folgt durch einen \[ Doppelpunkt: Zielname \] : \[ Quellname \] .
 
-Wenn der Wert der über \_ geordneten Verzeichnis Spalte NULL oder gleich der Verzeichnis Spalte ist, gibt die DefaultDir-Spalte den Namen eines Stamm Quell Verzeichnisses an.
+Wenn der Wert der Übergeordneten Verzeichnisspalte NULL oder gleich der Spalte Directory ist, gibt die Spalte DefaultDir den Namen eines \_ Stammquellenverzeichnisses an.
 
-Bei einem nicht stammenden Quellverzeichnis gibt ein Punkt (.), der in der DefaultDir-Spalte für den Quellverzeichnis Namen oder den Zielverzeichnis Namen eingegeben wird, an, dass sich das Verzeichnis in seinem übergeordneten Verzeichnis ohne Unterverzeichnis befinden soll.
+Bei einem Quellverzeichnis, das kein Stammverzeichnis ist, gibt ein in der Spalte DefaultDir eingegebener Zeitraum (.) für den Quellverzeichnisnamen oder den Zielverzeichnisnamen an, dass sich das Verzeichnis im übergeordneten Verzeichnis ohne Unterverzeichnis befinden soll.
 
-Die Verzeichnisnamen in dieser Spalte können als kurze \| Dateiname-Paare mit langer Dateiname formatiert werden.
+Die Verzeichnisnamen in dieser Spalte können als kurze Dateinamenpaare \| mit langen Dateinamen formatiert werden.
 
 </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Jeder Datensatz in der Tabelle stellt ein Verzeichnis sowohl im Quell-als auch im Ziel Abbild dar. Die Verzeichnis Tabelle muss ein einzelnes Stammverzeichnis mit einem Verzeichnis Spaltenwert angeben, der der [**TARGETDIR**](targetdir.md) -Eigenschaft entspricht.
+Jeder Datensatz in der Tabelle stellt ein Verzeichnis sowohl im Quell- als auch im Zielbild dar. Die Directory-Tabelle muss ein einzelnes Stammverzeichnis mit einem Directory-Spaltenwert angeben, der der [**TARGETDIR-Eigenschaft**](targetdir.md) entspricht.
 
-Installieren Sie für eine [Administrative Installation](administrative-installation.md)das administrative image im Stammverzeichnis TARGETDIR, und verwenden Sie die Quellverzeichnis Namen, um die Zielverzeichnisse aufzulösen.
+Installieren Sie [bei einer Administratorinstallation](administrative-installation.md)das Administrative Image im Stammverzeichnis TARGETDIR, und verwenden Sie die Namen des Quellverzeichnisses, um die Zielverzeichnisse aufzulösen.
 
-Beachten Sie, dass das Installationsprogramm eine Reihe von Standard [Eigenschaften](properties.md) für Systemordner Pfade festlegt. Eine Liste der Eigenschaften, die auf Systemordner festgelegt sind, finden Sie in der [Eigenschafts Referenz](property-reference.md) .
+Beachten Sie, dass das Installationsprogramm eine Reihe von [Standardeigenschaften auf](properties.md) Systemordnerpfade fest legt. Eine Liste [der Eigenschaften, die](property-reference.md) auf Systemordner festgelegt sind, finden Sie in der Eigenschaftenreferenz.
 
-Die Verzeichnis Auflösung erfolgt während der [Aktion "costfinalize](costfinalize-action.md) " und wird wie folgt ausgeführt:
+Die Verzeichnisauflösung wird während der [Aktion CostFinalize](costfinalize-action.md) durchgeführt und erfolgt wie folgt:
 
-### <a name="root-destination-directory"></a>Stammverzeichnis
+### <a name="root-destination-directory"></a>Stammzielverzeichnis
 
-Es darf nur ein einzelnes Stammverzeichnis vorhanden sein. Zum Angeben des Stammverzeichnis Verzeichnisses legen Sie die Spalte Verzeichnis auf die Eigenschaft [**TARGETDIR**](targetdir.md) und die Spalte DefaultDir auf die Eigenschaft [**SourceDir**](sourcedir.md) fest. Wenn die Eigenschaft **TARGETDIR** definiert ist, wird das Zielverzeichnis in den Wert der Eigenschaft aufgelöst. Wenn die **TARGETDIR** -Eigenschaft nicht definiert ist, wird der Pfad mithilfe der [**ROOTDRIVE**](rootdrive.md) -Eigenschaft aufgelöst.
+Möglicherweise ist nur ein einzelnes Stammzielverzeichnis vorhanden. Um das Stammzielverzeichnis anzugeben, legen Sie die Directory-Spalte auf die [**TARGETDIR-Eigenschaft**](targetdir.md) und die DefaultDir -Spalte auf die [**SourceDir-Eigenschaft**](sourcedir.md) fest. Wenn die **TARGETDIR-Eigenschaft** definiert ist, wird das Zielverzeichnis in den Wert der Eigenschaft aufgelöst. Wenn die **TARGETDIR-Eigenschaft** nicht definiert ist, wird die [**ROOTDRIVE-Eigenschaft**](rootdrive.md) verwendet, um den Pfad aufzulösen.
 
-### <a name="root-source-directory"></a>Stamm Quellverzeichnis
+### <a name="root-source-directory"></a>Stamm-Quellverzeichnis
 
-Der Wert der DefaultDir-Spalte für den Stammverzeichnis Eintrag muss auf die [**SourceDir**](sourcedir.md) -Eigenschaft festgelegt werden.
+Der Wert der DefaultDir-Spalte für den Stammverzeichniseintrag muss auf die [**SourceDir-Eigenschaft festgelegt**](sourcedir.md) werden.
 
-### <a name="non-root-destination-directories"></a>Nicht Stamm Verzeichnisse (Ziel)
+### <a name="non-root-destination-directories"></a>Zielverzeichnisse ohne Stamm
 
-Der Verzeichnis Wert für ein nicht-Stammverzeichnis wird auch als Name einer Eigenschaft interpretiert, die den Speicherort des Ziels definiert. Wenn die Eigenschaft definiert ist, wird das Zielverzeichnis in den Wert der Eigenschaft aufgelöst. Wenn die Eigenschaft nicht definiert ist, wird das Zielverzeichnis in ein Unterverzeichnis unter dem aufgelösten Zielverzeichnis für den über \_ geordneten Verzeichniseintrag aufgelöst. Der DefaultDir-Wert definiert den Namen des Unterverzeichnisses.
+Der Verzeichniswert für ein Nicht-Stammverzeichnis wird auch als Name einer Eigenschaft interpretiert, die den Speicherort des Ziels definiert. Wenn die Eigenschaft definiert ist, wird das Zielverzeichnis in den Wert der Eigenschaft aufgelöst. Wenn die Eigenschaft nicht definiert ist, wird das Zielverzeichnis in ein Unterverzeichnis unterhalb des aufgelösten Zielverzeichnisses für den Eintrag Übergeordnetes Verzeichnis \_ aufgelöst. Der DefaultDir-Wert definiert den Namen des Unterverzeichnisses.
 
-### <a name="non-root-source-directories"></a>Nicht Stamm Quellverzeichnisse
+### <a name="non-root-source-directories"></a>Quellverzeichnisse ohne Stamm
 
-Das Quellverzeichnis für ein nicht-Stammverzeichnis wird in ein Unterverzeichnis des aufgelösten Quell Verzeichnisses für den über \_ geordneten Verzeichniseintrag aufgelöst. Der DefaultDir-Wert definiert den Namen des Unterverzeichnisses.
+Das Quellverzeichnis für ein Nicht-Stammverzeichnis wird in ein Unterverzeichnis des aufgelösten Quellverzeichnisses für den Eintrag Übergeordnetes Verzeichnis \_ aufgelöst. Auch hier definiert der DefaultDir-Wert den Namen des Unterverzeichnisses.
 
 ### <a name="short-or-long-file-names"></a>Kurze oder lange Dateinamen
 
-Beim Auflösen von Zielverzeichnissen werden die in der DefaultDir-Spalte angegebenen kurzen Dateinamen verwendet, wenn entweder die [**shortfileames**](shortfilenames.md) -Eigenschaft festgelegt ist oder das Volume, auf dem sich das Verzeichnis befindet, keine langen Dateinamen unterstützt. Andernfalls wird der lange Dateiname verwendet.
+Beim Auflösen von Zielverzeichnissen werden die in der Spalte DefaultDir angegebenen kurzen Dateinamen verwendet, wenn entweder die [**SHORTFILENAMES-Eigenschaft**](shortfilenames.md) festgelegt ist oder das Volume, auf dem sich das Verzeichnis befindet, keine langen Dateinamen unterstützt. Andernfalls wird der lange Dateiname verwendet.
 
-Beachten Sie Folgendes: Wenn die Verzeichnisse während der costfinalize-Aktion aufgelöst werden, werden die Schlüssel in der Verzeichnis Tabelle zu [Eigenschaften](properties.md) , die auf Verzeichnispfade festgelegt sind.
+Beachten Sie Folgendes: Wenn die Verzeichnisse während der Aktion CostFinalize aufgelöst werden, werden die Schlüssel in der Directory-Tabelle zu Eigenschaften, die [auf](properties.md) Verzeichnispfade festgelegt sind.
 
-[Tabelle "Buildordner"](createfolder-table.md)
+[CreateFolder-Tabelle](createfolder-table.md)
 
-Informationen zum Erstellen von leeren Ordnern während einer Installation finden Sie in der [Tabelle "Tabelle](createfolder-table.md)".
+Informationen zum Erstellen leerer Ordner während einer Installation finden Sie unter [CreateFolder Table](createfolder-table.md).
 
-[Verwenden der Verzeichnis Tabelle](using-the-directory-table.md)
+[Verwenden der Verzeichnistabelle](using-the-directory-table.md)
 
-Weitere Informationen zur Verzeichnis Tabelle, einschließlich Beispielen, finden Sie unter [Verwenden der Verzeichnis Tabelle](using-the-directory-table.md).
+Weitere Informationen zur Verzeichnistabelle, einschließlich Beispielen, finden Sie unter [Verwenden der Verzeichnistabelle](using-the-directory-table.md).
 
-## <a name="validation"></a>Überprüfen
+## <a name="validation"></a>Überprüfung
 
 <dl>
 

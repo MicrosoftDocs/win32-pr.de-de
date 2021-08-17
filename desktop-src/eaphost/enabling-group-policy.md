@@ -1,6 +1,6 @@
 ---
 title: Aktivieren Gruppenrichtlinie
-description: Erfahren Sie, wie Sie das Bittsteller konfigurieren, indem Sie die Gruppenrichtlinie aktivieren. Weitere verfügbare Ressourcen finden Sie unter Überlegungen zu Unterstützungen und Anzeigen zusätzlicher verfügbarer Ressourcen.
+description: Erfahren Sie, wie Sie die Unterstützung konfigurieren, indem Sie die Gruppenrichtlinie aktivieren. Weitere verfügbare Ressourcen finden Sie unter Überlegungen zu Unterstützungen und Anzeigen zusätzlicher verfügbarer Ressourcen.
 ms.assetid: ac04b83b-1322-41d4-85e0-93687f10a7f6
 ms.topic: article
 ms.date: 05/31/2018
@@ -21,7 +21,7 @@ Die genaue Methode und der Mechanismus, mit denen sich der Bittsteller für die 
 
 Dies sind die Überlegungen zu Denk- und Annahmen in Bezug auf Gruppenrichtlinien und EAP.
 
-1.  Die EAP-Konfiguration sollte nach Möglichkeit immer als XML und nicht im Binärformat gespeichert werden. Gruppenrichtlinien können auf jeden Computer in der Domäne angewendet werden, und die Konfiguration der EAP-Methode und die Benutzerdaten sind nicht garantiert portierbar zwischen 32-Bit- und 64-Bit-Prozessorarchitekturen. XML löst die Probleme mit der Prozessorarchitekturgrenze, da die bittliche -Struktur die prozessorarchitekturunabhängige XML-Datei zur Authentifizierungszeit lokal in die binäre Darstellung der Konfiguration konvertiert.
+1.  Die EAP-Konfiguration sollte nach Möglichkeit immer als XML und nicht im Binärformat gespeichert werden. Gruppenrichtlinien können auf jeden Computer in der Domäne angewendet werden, und die Konfiguration der EAP-Methode und die Benutzerdaten sind nicht garantiert portierbar zwischen 32-Bit- und 64-Bit-Prozessorarchitekturen. XML löst die Probleme mit der Prozessorarchitekturgrenze, da der Bittsteller die prozessorarchitekturunabhängige XML-Datei zur Authentifizierungszeit lokal in die binäre Darstellung der Konfiguration konvertiert.
 
     Weitere Informationen finden Sie in den folgenden Themen.
 
@@ -42,7 +42,7 @@ Dies sind die Überlegungen zu Denk- und Annahmen in Bezug auf Gruppenrichtlinie
 [Implementieren In-Band NAP-Unterstützung für EAP-Methoden](enabling-in-band-nap-support.md)
 </dt> <dt>
 
-[Implementieren von NAP-Unterstützung für EAP-Methoden](implementing-nap-for-eap-methods.md)
+[Implementieren der NAP-Unterstützung für EAP-Methoden](implementing-nap-for-eap-methods.md)
 </dt> <dt>
 
 [Übertragen von Daten zwischen den Supplicant- und EAP-Methoden](transferring-data-between-the-supplicant-and-eap-methods.md)

@@ -1,7 +1,7 @@
 ---
-description: Bestimmt, ob der Treiber einen Befehl auf Treiber Ebene oder einen Vertex-Puffer der angegebenen Beschreibung erstellen kann.
+description: Bestimmt, ob der Treiber einen Befehl auf Treiberebene oder einen Scheitelpunktpuffer der angegebenen Beschreibung erstellen kann.
 ms.assetid: c67492d9-c4ba-4206-8beb-3d67235192f9
-title: NtGdiDdCanCreateD3DBuffer-Funktion (ntgdi. h)
+title: NtGdiDdCanCreateD3DBuffer-Funktion (Ntgdi.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,18 +16,18 @@ api_location:
 - Ext-MS-Win-GDI-Internal-Desktop-L1-1-0.dll
 - GDI32.dll
 - GDI32Full.dll
-ms.openlocfilehash: 849eb2ba9c1349c54c20703217989b0b92ee78e9
-ms.sourcegitcommit: c7add10d695482e1ceb72d62b8a4ebd84ea050f7
+ms.openlocfilehash: 777d22347c6a922407ef423a076ab3c1f876854b6c3aaf6aee7394aa3480f3b3
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106346427"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118956729"
 ---
 # <a name="ntgdiddcancreated3dbuffer-function"></a>NtGdiDdCanCreateD3DBuffer-Funktion
 
-\[Diese Funktion kann bei jeder Betriebssystem Revision geändert werden. Verwenden Sie stattdessen Microsoft DirectDraw und Microsoft Direct3DAPIs; Diese APIs isolieren Anwendungen vor solchen Betriebssystem Änderungen und verbergen viele andere Schwierigkeiten bei der direkten Interaktion mit Anzeige Treibern.\]
+\[Diese Funktion kann bei jeder Betriebssystemrevision geändert werden. Verwenden Sie stattdessen Microsoft DirectDraw und Microsoft Direct3DAPIs. Diese APIs isolieren Anwendungen vor solchen Betriebssystemänderungen und verbergen viele andere Schwierigkeiten bei der direkten Interaktion mit Anzeigetreibern.\]
 
-Bestimmt, ob der Treiber einen Befehl auf Treiber Ebene oder einen Vertex-Puffer der angegebenen Beschreibung erstellen kann.
+Bestimmt, ob der Treiber einen Befehl auf Treiberebene oder einen Scheitelpunktpuffer der angegebenen Beschreibung erstellen kann.
 
 ## <a name="syntax"></a>Syntax
 
@@ -45,30 +45,30 @@ DWORD APIENTRY NtGdiDdCanCreateD3DBuffer(
 
 <dl> <dt>
 
-*hdirectdraw* \[ in\]
+*hDirectDraw* \[ In\]
 </dt> <dd>
 
-Handle zur [**globalen DD \_ DirectDraw \_**](/windows/win32/api/ddrawint/ns-ddrawint-dd_directdraw_global) -Struktur, die das DirectDraw-Objekt darstellt.
+Handle für die [**DD \_ DIRECTDRAW \_ GLOBAL-Struktur,**](/windows/win32/api/ddrawint/ns-ddrawint-dd_directdraw_global) die das DirectDraw-Objekt darstellt.
 
 </dd> <dt>
 
-*pucankreatesurfacedata* \[ in, out\]
+*puCanCreateSurfaceData* \[ in, out\]
 </dt> <dd>
 
-Zeiger auf eine [**DD \_ cankreatesurfacedata**](/windows/win32/api/ddrawint/ns-ddrawint-dd_cancreatesurfacedata) -Struktur. Diese Struktur enthält die Informationen, die für den Treiber erforderlich sind, um zu bestimmen, ob ein Befehl oder ein Vertex-Puffer erstellt werden kann.
+Zeiger auf eine [**DD \_ CANCREATESURFACEDATA-Struktur.**](/windows/win32/api/ddrawint/ns-ddrawint-dd_cancreatesurfacedata) Diese Struktur enthält die Informationen, die der Treiber benötigt, um zu bestimmen, ob ein Befehls- oder Scheitelpunktpuffer erstellt werden kann.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-**NtGdiDdCanCreateD3DBuffer** gibt einen der folgenden Rückruf Codes zurück.
+**NtGdiDdCanCreateD3DBuffer gibt** einen der folgenden Rückrufcodes zurück.
 
 
 
 | Rückgabecode                                                                                              | Beschreibung                                                                                                                                                                                                                                                                                                                                                                |
 |----------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| <dl> <dt>**ddhal- \_ Treiber \_ behandelt**</dt> </dl>    | Der Treiber hat den Vorgang durchgeführt und einen gültigen Rückgabecode für diesen Vorgang zurückgegeben. Wenn dieser Code DD \_ OK ist, fährt DirectDraw oder Direct3D mit der-Funktion fort. Andernfalls gibt DirectDraw oder Direct3D den vom Treiber bereitgestellten Fehlercode zurück und bricht die Funktion ab.<br/>                                                                                 |
-| <dl> <dt>**ddhal- \_ Treiber \_ nothandled**</dt> </dl> | Der Treiber hat keinen Kommentar zum angeforderten Vorgang. Wenn der Treiber einen bestimmten Rückruf implementieren muss, meldet DirectDraw oder Direct3D eine Fehlerbedingung. Andernfalls behandelt DirectDraw oder Direct3D den Vorgang so, als ob der Treiber Rückruf nicht durch Ausführen der geräteunabhängigen DirectDraw-oder Direct3D-Implementierung definiert wurde.<br/> |
+| <dl> <dt>**\_DDHAL-TREIBER \_ BEHANDELT**</dt> </dl>    | Der Treiber hat den Vorgang ausgeführt und einen gültigen Rückgabecode für diesen Vorgang zurückgegeben. Wenn dieser Code DD \_ OK ist, wird DirectDraw oder Direct3D mit der Funktion fortgesetzt. Andernfalls gibt DirectDraw oder Direct3D den vom Treiber bereitgestellten Fehlercode zurück und bricht die Funktion ab.<br/>                                                                                 |
+| <dl> <dt>**\_DDHAL-TREIBER \_ NICHT BEHANDELT**</dt> </dl> | Der Treiber hat keinen Kommentar zum angeforderten Vorgang. Wenn der Treiber einen bestimmten Rückruf implementiert haben muss, meldet DirectDraw oder Direct3D eine Fehlerbedingung. Andernfalls verarbeitet DirectDraw oder Direct3D den Vorgang so, als ob der Treiberrückruf nicht durch Ausführen der geräteunabhängigen DirectDraw- oder Direct3D-Implementierung definiert worden wäre.<br/> |
 
 
 
@@ -82,15 +82,15 @@ Zeiger auf eine [**DD \_ cankreatesurfacedata**](/windows/win32/api/ddrawint/ns-
 |-------------------------------------|------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[nur Desktop-Apps\]<br/>                         |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                               |
-| Header<br/>                   | <dl> <dt>Ntgdi. h</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Ntgdi.h</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[Unterstützung der untergeordneten Grafik Ebene](-dxgkernel-low-level-client-support.md)
+[Clientunterstützung auf niedriger Grafikebene](-dxgkernel-low-level-client-support.md)
 </dt> </dl>
 
  

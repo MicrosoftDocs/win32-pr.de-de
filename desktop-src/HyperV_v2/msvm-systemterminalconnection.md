@@ -1,5 +1,5 @@
 ---
-description: Ordnet eine virtuelle Maschine einer Terminal Verbindung zu.
+description: Ordnet einen virtuellen Computer einer Terminalverbindung zu.
 ms.assetid: 31979FB8-3870-44D9-9720-AD99237C5268
 title: Msvm_SystemTerminalConnection-Klasse
 ms.topic: reference
@@ -15,16 +15,16 @@ api_type:
 - DllExport
 api_location:
 - vmms.exe
-ms.openlocfilehash: 368c25b8505ec7ddd29da3b95d95fc842602119e
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 280c8c6489e831bf9342e8e19699fb56fcdc6b15d1088a53796af28e45651d8d
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106350389"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117810593"
 ---
-# <a name="msvm_systemterminalconnection-class"></a>MSVM \_ systemterminalconnection-Klasse
+# <a name="msvm_systemterminalconnection-class"></a>Msvm \_ SystemTerminalConnection-Klasse
 
-Ordnet eine virtuelle Maschine einer Terminal Verbindung zu.
+Ordnet einen virtuellen Computer einer Terminalverbindung zu.
 
 Die folgende Syntax wird Managed Object Format (MOF)-Code vereinfacht und enthält alle geerbten Eigenschaften.
 
@@ -41,51 +41,51 @@ class Msvm_SystemTerminalConnection : CIM_HostedDependency
 
 ## <a name="members"></a>Member
 
-Die **MSVM \_ systemterminalconnection** -Klasse verfügt über diese Typen von Membern:
+Die **Msvm \_ SystemTerminalConnection-Klasse** verfügt über die folgenden Membertypen:
 
 -   [Eigenschaften](#properties)
 
 ### <a name="properties"></a>Eigenschaften
 
-Die **MSVM \_ systemterminalconnection** -Klasse verfügt über diese Eigenschaften.
+Die **Msvm \_ SystemTerminalConnection-Klasse** verfügt über diese Eigenschaften.
 
 <dl> <dt>
 
-**Vorgänger**
+**Vorläufer**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **[ **MSVM \_ Computersystem**](msvm-computersystem.md)**
+Datentyp: **[ **Msvm \_ ComputerSystem**](msvm-computersystem.md)**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**außer Kraft**](/windows/desktop/WmiSdk/standard-qualifiers) Setzung ("Vorgänger"), [**Max**](/windows/desktop/WmiSdk/standard-qualifiers) (1)
+Qualifizierer: [**Override**](/windows/desktop/WmiSdk/standard-qualifiers) ("Antecedent"), [**Max**](/windows/desktop/WmiSdk/standard-qualifiers) (1)
 </dt> </dl>
 
-Der virtuelle Computer, an den die Verbindung angefügt wird.
+Der virtuelle Computer, an den die Verbindung angefügt ist.
 
 </dd> <dt>
 
-**Dependent**
+**Abhängigen**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **[ **MSVM \_ terminalconnection**](msvm-terminalconnection.md)**
+Datentyp: **[ **Msvm \_ TerminalConnection**](msvm-terminalconnection.md)**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**außer Kraft**](/windows/desktop/WmiSdk/standard-qualifiers) Setzung ("abhängig")
+Qualifizierer: [**Überschreiben**](/windows/desktop/WmiSdk/standard-qualifiers) ("Abhängig")
 </dt> </dl>
 
 Die Verbindung mit dem virtuellen Computer.
 
 </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Der Zugriff auf die **MSVM \_ systemterminalconnection** -Klasse kann durch die UAC-Filterung eingeschränkt werden. Weitere Informationen finden Sie unter [Benutzerkontensteuerung und WMI](/windows/desktop/WmiSdk/user-account-control-and-wmi).
+Der Zugriff auf die **Msvm \_ SystemTerminalConnection-Klasse** kann durch UAC-Filterung eingeschränkt werden. Weitere Informationen finden Sie unter [Benutzerkontensteuerung und WMI.](/windows/desktop/WmiSdk/user-account-control-and-wmi)
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -93,25 +93,25 @@ Der Zugriff auf die **MSVM \_ systemterminalconnection** -Klasse kann durch die 
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows 8 \[ -Desktop-Apps\]<br/>                                                              |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2012 \[ -Desktop-Apps\]<br/>                                                    |
-| Namespace<br/>                | \\Stammvirtualisierung \\ v2<br/>                                                                     |
-| MOF<br/>                      | <dl> <dt>Windowsvirtualization. v2. MOF</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | \[Windows 8 Nur Desktop-Apps\]<br/>                                                              |
+| Unterstützte Mindestversion (Server)<br/> | \[Windows Server 2012 Nur Desktop-Apps\]<br/>                                                    |
+| Namespace<br/>                | Root \\ Virtualization \\ V2<br/>                                                                     |
+| MOF<br/>                      | <dl> <dt>WindowsVirtualization.V2.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Vmms.exe</dt> </dl>                     |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**CIM- \_ hubabhängigkeit**](cim-hosteddependency.md)
+[**CIM \_ HostedDependency**](cim-hosteddependency.md)
 </dt> <dt>
 
-[**CIM- \_ hubabhängigkeit**](/previous-versions//cc136861(v=vs.85))
+[**CIM \_ HostedDependency**](/previous-versions//cc136861(v=vs.85))
 </dt> <dt>
 
-[Video Klassen](video-classes.md)
+[Videoklassen](video-classes.md)
 </dt> </dl>
 
  

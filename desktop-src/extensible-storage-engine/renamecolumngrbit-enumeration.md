@@ -1,6 +1,6 @@
 ---
-description: 'Weitere Informationen finden Sie hier: renamecolumngrbit-Enumeration'
-title: Renamecolumngrbit-Enumeration
+description: Weitere Informationen finden Sie unter RenameColumnGrbit-Enumeration.
+title: RenameColumnGrbit-Enumeration
 TOCTitle: RenameColumnGrbit enumeration
 ms:assetid: T:Microsoft.Isam.Esent.Interop.RenameColumnGrbit
 ms:mtpsurl: https://msdn.microsoft.com/library/microsoft.isam.esent.interop.renamecolumngrbit(v=EXCHG.10)
@@ -26,21 +26,21 @@ api_type:
 api_location:
 - Microsoft.Isam.Esent.Interop.dll
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: 446b24bf584034d300c5b631ce450ead31f68741
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 904ce2d926814dc97d65ede9d5b622cfe94b9cbce6d97a01e5366d7f65b31e9f
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "104529291"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118071800"
 ---
-# <a name="renamecolumngrbit-enumeration"></a>Renamecolumngrbit-Enumeration
+# <a name="renamecolumngrbit-enumeration"></a>RenameColumnGrbit-Enumeration
 
-Optionen für [jetrenamecolumn (JET_SESID, JET_TABLEID, String, String, renamecolumngrbit)](./api.jetrenamecolumn-method.md).
+Optionen für [JetRenameColumn(JET_SESID, JET_TABLEID, String, String, RenameColumnGrbit)](./api.jetrenamecolumn-method.md).
 
 Diese Enumeration enthält ein [FlagsAttribute](/dotnet/api/system.flagsattribute)-Attribut, das eine bitweise Kombination der Memberwerte zulässt.
 
-**Namespace:**  [Microsoft. ISAM. ESENT. Interop](./microsoft.isam.esent.interop-namespace.md)  
-**Assembly:**  Microsoft. ISAM. ESENT. Interop (in Microsoft.Isam.Esent.Interop.dll)
+**Namespace:**  [Microsoft.Isam.Esent.Interop](./microsoft.isam.esent.interop-namespace.md)  
+**Assembly:**  Microsoft.Isam.Esent.Interop (in Microsoft.Isam.Esent.Interop.dll)
 
 ## <a name="syntax"></a>Syntax
 
@@ -77,8 +77,8 @@ public enum RenameColumnGrbit
 </table>
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
-#### <a name="reference"></a>Referenz
+#### <a name="reference"></a>Verweis
 
-[Microsoft. ISAM. ESENT. Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)
+[Microsoft.Isam.Esent.Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)

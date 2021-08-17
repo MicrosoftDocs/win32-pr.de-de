@@ -1,7 +1,7 @@
 ---
 description: Legt die Auflistung von Zertifikaten fest, die zum Erstellen der Zertifikatkette verwendet werden können, oder ruft sie ab.
 ms.assetid: cdf378f9-0d71-4dd9-93cc-85f09a51c5fc
-title: CertificateStatus.Certificates-Eigenschaft
+title: CertificateStatus.Certificates (Eigenschaft)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -20,11 +20,11 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 08/11/2021
 ms.locfileid: "117770387"
 ---
-# <a name="certificatestatuscertificates-property"></a>CertificateStatus.Certificates-Eigenschaft
+# <a name="certificatestatuscertificates-property"></a>CertificateStatus.Certificates (Eigenschaft)
 
-\[CAPICOM ist eine nur 32-Bit-Komponente, die für die Verwendung in den folgenden Betriebssystemen verfügbar ist: Windows Server 2008, Windows Vista und Windows XP. Verwenden Sie stattdessen die [**X509ChainStatus-Struktur**](/dotnet/api/system.security.cryptography.x509certificates.x509chainstatus?view=netcore-3.1) im [**Namespace System.Security.Cryptography.X509Certificates.**](/dotnet/api/system.security.cryptography.x509certificates.publickey.-ctor?view=netcore-3.1)\]
+\[CAPICOM ist eine 32-Bit-Komponente, die für die Verwendung in den folgenden Betriebssystemen verfügbar ist: Windows Server 2008, Windows Vista und Windows XP. Verwenden Sie stattdessen die [**X509ChainStatus-Struktur**](/dotnet/api/system.security.cryptography.x509certificates.x509chainstatus?view=netcore-3.1) im [**Namespace System.Security.Cryptography.X509Certificates.**](/dotnet/api/system.security.cryptography.x509certificates.publickey.-ctor?view=netcore-3.1)\]
 
-Die **Certificates-Eigenschaft** legt die Auflistung von Zertifikaten fest oder ruft sie ab, die zum Erstellen der Zertifikatkette verwendet werden können.
+Die **Certificates-Eigenschaft** legt die Sammlung von Zertifikaten fest, die zum Erstellen der Zertifikatkette verwendet werden können, oder ruft sie ab.
 
 ## <a name="syntax"></a>Syntax
 

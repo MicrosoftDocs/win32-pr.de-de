@@ -1,9 +1,9 @@
 ---
-title: EditBox. getlinefromchar
-description: Die getlinefromchar-Methode ruft den Zeilen Index für den angegebenen Zeichen Index ab.
+title: EDITBOX.getLineFromChar
+description: Die getLineFromChar-Methode ruft den Zeilenindex für den angegebenen Zeichenindex ab.
 ms.assetid: c3a29bdf-ff63-4b6d-90e8-d414dde87f85
 keywords:
-- EditBox. getlinefromchar Windows Media Player
+- EDITBOX.getLineFromChar Windows Media Player
 topic_type:
 - apiref
 api_name:
@@ -13,16 +13,16 @@ api_type:
 ms.topic: reference
 ms.date: 05/31/2018
 api_location: ''
-ms.openlocfilehash: 3462ce628da72ca1e55df79e408fc79e0ec8b63a
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 110030c3c756a91c993857cef125c51669f71eb9a358eb7261205fde0b0ad4a9
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106365852"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117749306"
 ---
-# <a name="editboxgetlinefromchar"></a>EditBox. getlinefromchar
+# <a name="editboxgetlinefromchar"></a>EDITBOX.getLineFromChar
 
-Die **getlinefromchar** -Methode ruft den Zeilen Index für den angegebenen Zeichen Index ab.
+Die **getLineFromChar-Methode** ruft den Zeilenindex für den angegebenen Zeichenindex ab.
 
 ``` syntax
         elementID.getLineFromChar(index)
@@ -32,20 +32,20 @@ Die **getlinefromchar** -Methode ruft den Zeilen Index für den angegebenen Zeic
 
 <dl> <dt>
 
-<span id="index"></span><span id="INDEX"></span>*Sin*
+<span id="index"></span><span id="INDEX"></span>*Index*
 </dt> <dd>
 
-**Zahl** (**Long**), die den Index des Zeichens enthält, dessen Zeilen Index abgerufen werden soll.
+**Number** (**long**), die den Index des Zeichens enthält, dessen Zeilenindex abgerufen werden soll.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Diese Methode gibt eine **Zahl** (**Long**) zurück.
+Diese Methode gibt eine **Zahl** (**long**) zurück.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Wenn die angegebene Zeichenposition 1 ist, ruft diese Methode den Zeilen Index der aktuellen Zeile ab.
+Wenn die angegebene Zeichenposition 1 ist, ruft diese Methode den Zeilenindex der aktuellen Zeile ab.
 
 Diese Methode kann nur aufgerufen werden, nachdem das Steuerelement sichtbar wird.
 
@@ -59,17 +59,17 @@ Diese Methode kann nur aufgerufen werden, nachdem das Steuerelement sichtbar wir
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**EditBox-Element**](editbox-element.md)
+[**EDITBOX-Element**](editbox-element.md)
 </dt> <dt>
 
-[**EditBox. getline**](editbox-getline.md)
+[**EDITBOX.getLine**](editbox-getline.md)
 </dt> <dt>
 
-[**EditBox. getlineingedex**](editbox-getlineindex.md)
+[**EDITBOX.getLineIndex**](editbox-getlineindex.md)
 </dt> </dl>
 
  

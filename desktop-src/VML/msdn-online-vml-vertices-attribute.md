@@ -4,23 +4,23 @@ description: VML-Vertices-Attribut
 ms.assetid: 3b887ecb-19e8-4ebf-9db6-bf3ed4f7d589
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: a236be4b1496ceb938cc827692610a987cc2e9b1
-ms.sourcegitcommit: 592c9bbd22ba69802dc353bcb5eb30699f9e9403
+ms.openlocfilehash: d9bb8d2229eb8c6cab9cb8171fdf42cb61511ccc3b093e1b3b331e7f9cf19303
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "104390919"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119057618"
 ---
 # <a name="vml-vertices-attribute"></a>VML-Vertices-Attribut
 
-In diesem Thema wird VML beschrieben, eine Funktion, die ab Windows Internet Explorer 9 veraltet ist. Webseiten und Anwendungen, die auf VML basieren, sollten zu SVG oder anderen allgemein unterstützten Standards migriert werden.
+In diesem Thema wird VML beschrieben, ein Feature, das ab Windows Internet Explorer 9 als veraltet gilt. Webseiten und Anwendungen, die auf VML basieren, sollten zu SVG oder anderen allgemein unterstützten Standards migriert werden.
 
 > [!Note]  
-> Ab Dezember 2011 wurde dieses Thema archiviert. Daher wird er nicht mehr aktiv verwaltet. Weitere Informationen finden Sie unter [archivierte Inhalte](/previous-versions/windows/internet-explorer/ie-developer/). Informationen, Empfehlungen und Anleitungen zur aktuellen Version von Windows Internet Explorer finden Sie im [Internet Explorer Developer Center](https://msdn.microsoft.com/ie/).
+> Seit Dezember 2011 wurde dieses Thema archiviert. Daher wird sie nicht mehr aktiv verwaltet. Weitere Informationen finden Sie unter [Archivierter Inhalt.](/previous-versions/windows/internet-explorer/ie-developer/) Informationen, Empfehlungen und Anleitungen zur aktuellen Version von Windows Internet Explorer finden Sie unter [Internet Explorer Developer Center.](https://msdn.microsoft.com/ie/)
 
- 
+ 
 
-Bestimmt, ob die Scheitel Punkte eines Pfades von einem Editor geändert werden können. Lese-/Schreibzugriff. **Vgder State**.
+Bestimmt, ob die Scheitelpunkte eines Pfads von einem Editor geändert werden können. Lese-/Schreibzugriff. **VgTriState**.
 
 **Gilt für**
 
@@ -28,14 +28,14 @@ Bestimmt, ob die Scheitel Punkte eines Pfades von einem Editor geändert werden 
 
 **Tagsyntax**
 
-<o: *Element* Vertices = " *Ausdruck* " >
+<o: *element* vertices=" *ausdruck* ">
 
 **Anmerkungen**
 
-**True** gibt an, dass die Bearbeitungspunkte der Scheitel Punkte eines Pfads gesperrt sind. Der Standardwert für Microsoft Office Auto Shapes ist **true** , aber andernfalls **false**.
+**True** gibt an, dass die Bearbeitungspunkte der Scheitelpunkte eines Pfads gesperrt sind. Der Standardwert ist **True** für Microsoft Office AutoShapes, andernfalls **false.**
 
 *Microsoft Office Extensions-Attribut*
 
- 
+ 
 
- 
+ 

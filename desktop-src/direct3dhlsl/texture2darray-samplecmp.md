@@ -27,7 +27,7 @@ Probieren Sie ein [**Texture2DArray**](sm5-object-texture2darray.md)mithilfe ein
 
 
 
-| Methode                                                                                              | Beschreibung                                                                                                                                                                           |
+| Methode                                                                                              | BESCHREIBUNG                                                                                                                                                                           |
 |:----------------------------------------------------------------------------------------------------|:--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | [**SampleCmp(S,float,float,int)**](dx-graphics-hlsl-to-samplecmp.md)                               | Stichproben einer Textur mithilfe eines Vergleichswerts zum Ablehnen von Stichproben.<br/>                                                                                                             |
 | [**SampleCmp(S,float,float,int,float)**](t2darray-samplecmp-s-float-float-int-float-.md)           | Stichproben einer Textur, wobei ein Vergleichswert verwendet wird, um Stichproben abzulehnen, mit einem optionalen Wert zum Klammern von LOD-Werten (Sample Level of Detail).<br/>                                     |

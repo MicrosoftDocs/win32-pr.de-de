@@ -13,12 +13,12 @@ api_type:
 - HeaderDef
 api_location:
 - D3D9Types.h
-ms.openlocfilehash: 0778e879a6147c185964808ee4b4c302bd211ef3
-ms.sourcegitcommit: bfab92e16614d4fa54b044917358261232bda81a
+ms.openlocfilehash: b60f6a52f782efee8647828509e04b99a2ffd94489b9db215158090497947229
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/08/2021
-ms.locfileid: "113489694"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117732321"
 ---
 # <a name="d3dquerytype-enumeration"></a>D3DQUERYTYPE-Enumeration
 
@@ -119,7 +119,7 @@ Prozent der Zeit für die Verarbeitung von Pipelinedaten.
 <span id="D3DQUERYTYPE_INTERFACETIMINGS"></span><span id="d3dquerytype_interfacetimings"></span>**\_D3DQUERYTYPE-SCHNITTSTELLETIMINGS**
 </dt> <dd>
 
-Prozent der Zeit für die Verarbeitung von Daten im Treiber.
+Prozent der Zeit, die Daten im Treiber verarbeitet.
 
 </dd> <dt>
 
@@ -166,7 +166,7 @@ Unterschiede zwischen Direct3D 9 und Direct3D 9Ex:
 
 </dd> </dl>
 
-## <a name="requirements"></a>Requirements (Anforderungen)
+## <a name="requirements"></a>Anforderungen
 
 
 
@@ -176,7 +176,7 @@ Unterschiede zwischen Direct3D 9 und Direct3D 9Ex:
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 

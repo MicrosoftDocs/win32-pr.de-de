@@ -1,26 +1,26 @@
 ---
-description: Die iwbemqualifierset-Schnittstelle stellt die folgenden Methoden zur Verfügung.
+description: Die IWbemQualifierSet-Schnittstelle macht die folgenden Methoden verfügbar.
 ms.assetid: D4D9C330-BEBE-4856-BEBB-64255FFC3FF0
 ms.tgt_platform: multiple
-title: Iwbemqualifierset-Methoden
+title: IWbemQualifierSet-Methoden
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: b3c9f2ec7dd81ada339aa5eef06b15d7b3c10f6b
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 14eeb9cb2a93e1280696b860d21843dfee99541f9a7cb8d86d791eabea2c3e14
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "103864015"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118992950"
 ---
-# <a name="iwbemqualifierset-methods"></a>Iwbemqualifierset-Methoden
+# <a name="iwbemqualifierset-methods"></a>IWbemQualifierSet-Methoden
 
-Die [**iwbemqualifierset**](/windows/desktop/api/Wbemcli/nn-wbemcli-iwbemqualifierset) -Schnittstelle stellt die folgenden Methoden zur Verfügung.
+Die [**IWbemQualifierSet-Schnittstelle**](/windows/desktop/api/Wbemcli/nn-wbemcli-iwbemqualifierset) macht die folgenden Methoden verfügbar.
 
 ## <a name="in-this-section"></a>In diesem Abschnitt
 
--   [**Beginenumeration-Methode**](/windows/desktop/api/Wbemcli/nf-wbemcli-iwbemqualifierset-beginenumeration)
+-   [**BeginEnumeration-Methode**](/windows/desktop/api/Wbemcli/nf-wbemcli-iwbemqualifierset-beginenumeration)
 -   [**Delete-Methode**](/windows/desktop/api/Wbemcli/nf-wbemcli-iwbemqualifierset-delete)
--   [**Umeration-Methode**](/windows/desktop/api/Wbemcli/nf-wbemcli-iwbemqualifierset-endenumeration)
+-   [**EndEnumeration-Methode**](/windows/desktop/api/Wbemcli/nf-wbemcli-iwbemqualifierset-endenumeration)
 -   [**Get-Methode**](/windows/desktop/api/Wbemcli/nf-wbemcli-iwbemqualifierset-get)
 -   [**GetNames-Methode**](/windows/desktop/api/Wbemcli/nf-wbemcli-iwbemqualifierset-getnames)
 -   [**Nächste Methode**](/windows/desktop/api/Wbemcli/nf-wbemcli-iwbemqualifierset-next)

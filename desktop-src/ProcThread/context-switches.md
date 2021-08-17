@@ -1,40 +1,40 @@
 ---
-description: Der Scheduler verwaltet eine Warteschlange mit ausführbaren Threads für jede Prioritätsstufe.
+description: Der Scheduler verwaltet eine Warteschlange ausführbarer Threads für jede Prioritätsebene.
 ms.assetid: 82463d71-9cef-4608-b997-25dc9c1e1c0a
 title: Kontextwechsel
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 7628ee9e659cdbc2369b5f69d25847e8864dbd62
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: c15f5d762525fd4a80030ea10e128e2c30a1ab914e9f17d0f954d80ecfd2e204
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104216019"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119143133"
 ---
 # <a name="context-switches"></a>Kontextwechsel
 
-Der Scheduler verwaltet eine Warteschlange mit ausführbaren Threads für jede Prioritätsstufe. Diese werden als *bereite Threads* bezeichnet. Wenn ein Prozessor verfügbar wird, führt das System einen *Kontextwechsel* aus. Die Schritte in einem Kontextwechsel lauten wie folgt:
+Der Scheduler verwaltet eine Warteschlange ausführbarer Threads für jede Prioritätsebene. Diese werden als *bereite Threads* bezeichnet. Wenn ein Prozessor verfügbar wird, führt das System einen *Kontextwechsel aus.* Die Schritte in einem Kontextwechsel sind:
 
-1.  Speichern Sie den Kontext des Threads, der gerade ausgeführt wird.
-2.  Platzieren Sie den soeben ausgeführten Thread am Ende der Warteschlange für seine Priorität.
+1.  Speichern Sie den Kontext des Threads, der die Ausführung gerade abgeschlossen hat.
+2.  Platzieren Sie den Gerade ausgeführten Thread für seine Priorität am Ende der Warteschlange.
 3.  Suchen Sie die Warteschlange mit der höchsten Priorität, die bereite Threads enthält.
 4.  Entfernen Sie den Thread am Anfang der Warteschlange, laden Sie seinen Kontext, und führen Sie ihn aus.
 
-Bei den folgenden Thread Klassen handelt es sich nicht um bereite Threads.
+Die folgenden Threadklassen sind keine bereiten Threads.
 
--   Mit dem Flag zum Erstellen von angehaltenen Threads erstellte Threads \_
--   Threads, die während der Ausführung mit der [**SuspendThread**](/windows/win32/api/processthreadsapi/nf-processthreadsapi-suspendthread) -oder [**SwitchTo Thread**](/windows/win32/api/processthreadsapi/nf-processthreadsapi-switchtothread) -Funktion angehalten wurden
--   Threads, die auf ein Synchronisierungs Objekt oder eine Eingabe warten.
+-   Threads, die mit dem \_ CREATE SUSPENDED-Flag erstellt wurden
+-   Threads wurden während der Ausführung mit der [**SuspendThread-**](/windows/win32/api/processthreadsapi/nf-processthreadsapi-suspendthread) oder [**SwitchToThread-Funktion**](/windows/win32/api/processthreadsapi/nf-processthreadsapi-switchtothread) angehalten.
+-   Threads, die auf ein Synchronisierungsobjekt oder eine Eingabe warten.
 
-Bis die Threads, die angehalten oder blockiert werden, ausgeführt werden können, weist der Planer unabhängig von ihrer Priorität keine Prozessorzeit zu.
+Bis angehaltene oder blockierte Threads zur Ausführung bereit sind, ordnet der Scheduler ihnen unabhängig von ihrer Priorität keine Prozessorzeit zu.
 
 Die häufigsten Gründe für einen Kontextwechsel sind:
 
--   Der Zeit Slice ist abgelaufen.
--   Ein Thread mit einer höheren Priorität ist für die Durchführung bereit.
--   Ein laufender Thread muss warten.
+-   Der Zeitslice ist verstrichen.
+-   Ein Thread mit einer höheren Priorität ist nun für die Ausführung bereit.
+-   Ein ausgeführter Thread muss warten.
 
-Wenn ein laufender Thread warten muss, wird der restliche Zeit Slice aufgegeben.
+Wenn ein ausgeführter Thread warten muss, gibt er den Rest seines Zeitslices ab.
 
  
 

@@ -1,7 +1,7 @@
 ---
-description: Verwendet effiziente Ray-Tracing in PRT-Simulationen (preberechneten Radiance Transfer), um zu bestimmen, ob ein Strahl ein Mesh schneidet.
+description: Verwendet effiziente Ray-Tracing in PRT-Simulationen (Precomputed Radiance Transfer), um zu bestimmen, ob ein Strahl ein Gittermodell überschneidet.
 ms.assetid: e506aed3-bf14-4f29-845b-2091f5b00950
-title: 'ID3DXPRTEngine:: closestrayintersekten-Methode (D3DX9Mesh. h)'
+title: ID3DXPRTEngine::ClosestRayIntersects-Methode (D3DX9Mesh.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -14,16 +14,16 @@ api_type:
 api_location:
 - d3dx9.lib
 - d3dx9.dll
-ms.openlocfilehash: 4fd802f636077c9ec2a9f0f1060ffd43493aabf1
-ms.sourcegitcommit: 14010c34b35fa268046c7683f021f86de08ddd0a
+ms.openlocfilehash: a2620140337807891efa739da4540e3895394f63bcc494396c13e7c15d0c1b29
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "104219673"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117729786"
 ---
-# <a name="id3dxprtengineclosestrayintersects-method"></a>ID3DXPRTEngine:: closestrayintersekten-Methode
+# <a name="id3dxprtengineclosestrayintersects-method"></a>ID3DXPRTEngine::ClosestRayIntersects-Methode
 
-Verwendet effiziente Ray-Tracing in PRT-Simulationen (preberechneten Radiance Transfer), um zu bestimmen, ob ein Strahl ein Mesh schneidet. Wenn eine Schnittmenge gefunden wird, gibt die Methode den Index der nächstgelegenen Mesh-Oberfläche zurück, die vom Strahl und den baryzentrischen Koordinaten des Schnittstellen Punkts getroffen wird.
+Verwendet effiziente Ray-Tracing in PRT-Simulationen (Precomputed Radiance Transfer), um zu bestimmen, ob ein Strahl ein Gittermodell überschneidet. Wenn eine Schnittmenge gefunden wird, gibt die -Methode den Index des nächstgelegenen Gittergesichts zurück, das vom Strahl und den baryzentrischen Koordinaten des Schnittpunkts erreicht wird.
 
 ## <a name="syntax"></a>Syntax
 
@@ -45,75 +45,75 @@ BOOL ClosestRayIntersects(
 
 <dl> <dt>
 
-" *praypos* \[ " in\]
+*pRayPos* \[ In\]
 </dt> <dd>
 
-Typ: **Konstanten [**D3DXVECTOR3**](d3dxvector3.md) \***
+Typ: **const [**D3DXVECTOR3**](d3dxvector3.md) \***
 
-Zeiger auf eine [**D3DXVECTOR3**](d3dxvector3.md) -Struktur, die den Punkt angibt, an dem das Ray beginnt.
+Zeiger auf eine [**D3DXVECTOR3-Struktur,**](d3dxvector3.md) der den Punkt angibt, an dem der Strahl beginnt.
 
 </dd> <dt>
 
-" *praydir* \[ " in\]
+*pRayDir* \[ In\]
 </dt> <dd>
 
-Typ: **Konstanten [**D3DXVECTOR3**](d3dxvector3.md) \***
+Typ: **const [**D3DXVECTOR3**](d3dxvector3.md) \***
 
-Zeiger auf eine [**D3DXVECTOR3**](d3dxvector3.md) -Struktur, die die normalisierte Richtung des Strahls angibt.
+Zeiger auf eine [**D3DXVECTOR3-Struktur,**](d3dxvector3.md) die die normalisierte Richtung des Strahls angibt.
 
 </dd> <dt>
 
-*pfakeingedex* \[ in\]
+*pFaceIndex* \[ In\]
 </dt> <dd>
 
 Typ: **[ **DWORD**](../winprog/windows-data-types.md)\***
 
-Ein Zeiger auf den Index der aktuellen Gitterfläche, die zuerst vom angegebenen Strahl getroffen wird, basierend auf dem Stapeln aller blocknetz Flächen vor dem aktuellen Mesh.
+Zeiger auf den Index des aktuellen Netzgesichts, das zuerst vom angegebenen Strahl getroffen wird, basierend auf dem Stapeln aller Blocknetzflächen vor dem aktuellen Gitter.
 
 </dd> <dt>
 
-*pU* \[ vorgenommen\]
+*pU* \[ out\]
 </dt> <dd>
 
-Typ: **[ **float**](../winprog/windows-data-types.md)\***
+Typ: **[ **FLOAT**](../winprog/windows-data-types.md)\***
 
-Zeiger auf eine baryzentrierte Treffer Koordinate, U, für Vertex 0 des Dreiecks.
+Zeiger auf eine baryzentrische Trefferkoordinate, U, für den Scheitelpunkt 0 des Dreiecks.
 
 </dd> <dt>
 
-*PV* \[ vorgenommen\]
+*pV* \[ out\]
 </dt> <dd>
 
-Typ: **[ **float**](../winprog/windows-data-types.md)\***
+Typ: **[ **FLOAT**](../winprog/windows-data-types.md)\***
 
-Zeiger auf eine baryzentrierte Treffer Koordinate, V, für Scheitelpunkt 1 des Dreiecks.
+Zeiger auf eine barycentric-Trefferkoordinate V für Scheitelpunkt 1 des Dreiecks.
 
 </dd> <dt>
 
-*pdist* \[ vorgenommen\]
+*pDist* \[ out\]
 </dt> <dd>
 
-Typ: **[ **float**](../winprog/windows-data-types.md)\***
+Typ: **[ **FLOAT**](../winprog/windows-data-types.md)\***
 
-Zeiger auf den Abstand des Schnittpunkt entlang des Strahls.
+Zeiger auf den Abstand des Schnittpunkts entlang des Strahls.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Typ: **[ **bool**](../winprog/windows-data-types.md)**
+Typ: **[ **BOOL**](../winprog/windows-data-types.md)**
 
-Gibt " **true** " zurück, wenn der Strahl das aktuelle Mesh überschneidet. Andernfalls wird **false** zurückgegeben.
+Gibt **TRUE** zurück, wenn der Strahl das aktuelle Gitternetz überschneidet. andernfalls gibt **FALSE** zurück.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Verwenden Sie [**ID3DXPRTEngine:: setminmaxschnittstrente**](id3dxprtengine--setminmaxintersection.md) , um den minimalen und maximalen Abstand der Schnittmenge mit dem Ray festzulegen.
+Verwenden Sie [**ID3DXPRTEngine::SetMinMaxIntersection,**](id3dxprtengine--setminmaxintersection.md) um minimale und maximale Entfernungen der Schnittmenge mit dem Strahl festzulegen.
 
-Die barzentrische Koordinate des dritten Vertex (Vertex 2) des Dreiecks ist 1-(U + V).
+Die balyzentrische Koordinate des dritten Scheitelpunkts (Scheitelpunkt 2) des Dreiecks ist 1 – ( U + V ).
 
-Diese Methode wird langsamer ausgeführt als [**ID3DXPRTEngine:: shadowrayintersekten**](id3dxprtengine--shadowrayintersects.md). Verwenden Sie **ID3DXPRTEngine:: shadowrayintersekten** , wenn die Position des Schnitt Punkts nicht benötigt wird.
+Diese Methode wird langsamer als [**ID3DXPRTEngine::ShadowRayIntersects**](id3dxprtengine--shadowrayintersects.md)ausgeführt. Verwenden Sie **ID3DXPRTEngine::ShadowRayIntersects,** wenn die Position des Schnittpunkts nicht benötigt wird.
 
-In den Scheitel Punkten des Dreiecks wird ein Punkt innerhalb eines Dreiecks definiert. Eine ausführlichere Beschreibung von baryzentrischen Koordinaten finden Sie in [der Beschreibung von mathworld in der Beschreibung der baryzentrierten Koordinaten](https://mathworld.wolfram.com/BarycentricCoordinates.html).
+Barycentric-Koordinaten definieren einen Punkt innerhalb eines Dreiecks in Bezug auf die Scheitelpunkte des Dreiecks. Eine ausführlichere Beschreibung der baryzentrischen Koordinaten finden Sie unter [Mathworld es Barycentric Coordinates Description](https://mathworld.wolfram.com/BarycentricCoordinates.html).
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -121,22 +121,22 @@ In den Scheitel Punkten des Dreiecks wird ein Punkt innerhalb eines Dreiecks def
 
 | Anforderung | Wert |
 |--------------------|----------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>D3DX9Mesh. h</dt> </dl> |
-| Bibliothek<br/> | <dl> <dt>D3dx9. lib</dt> </dl>   |
+| Header<br/>  | <dl> <dt>D3DX9Mesh.h</dt> </dl> |
+| Bibliothek<br/> | <dl> <dt>D3dx9.lib</dt> </dl>   |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
 [ID3DXPRTEngine](id3dxprtengine.md)
 </dt> <dt>
 
-[**ID3DXPRTEngine:: shadowrayintersekten**](id3dxprtengine--shadowrayintersects.md)
+[**ID3DXPRTEngine::ShadowRayIntersects**](id3dxprtengine--shadowrayintersects.md)
 </dt> <dt>
 
-[**ID3DXPRTEngine:: setminmaxschnitt Menge**](id3dxprtengine--setminmaxintersection.md)
+[**ID3DXPRTEngine::SetMinMaxIntersection**](id3dxprtengine--setminmaxintersection.md)
 </dt> </dl>
 
  

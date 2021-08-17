@@ -1,9 +1,9 @@
 ---
-title: Vmdvddriveevent-Enumeration (vpccominterfaces. h)
-description: Gibt die DVD-Laufwerks Ereignisse an.
+title: VMDVDDriveEvent-Enumeration (VPCCOMInterfaces.h)
+description: Gibt die DVD-Laufwerkereignisse an.
 ms.assetid: 17126138-614f-42d9-937e-1aca9393557c
 keywords:
-- Virtueller PC der vmdvddriveevent-Enumeration
+- VMDVDDriveEvent-Enumeration Virtueller PC
 topic_type:
 - apiref
 api_name:
@@ -14,18 +14,18 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 967fcd545c0ddd24d01c5dc779929ef4639c6736
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 125e2f8f9d126e582d47376f5c23b56051d3f75d9af6493a1f273cc5be93195c
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "103741393"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117751982"
 ---
-# <a name="vmdvddriveevent-enumeration"></a>Vmdvddriveevent-Enumeration
+# <a name="vmdvddriveevent-enumeration"></a>VMDVDDriveEvent-Enumeration
 
-\[Windows Virtual PC ist nicht mehr für die Verwendung ab Windows 8 verfügbar. Verwenden Sie stattdessen den [Hyper-V-WMI-Anbieter (v2)](/windows/desktop/HyperV_v2/windows-virtualization-portal).\]
+\[Windows Der virtuelle PC ist ab Windows 8 nicht mehr für die Verwendung verfügbar. Verwenden Sie stattdessen den [Hyper-V-WMI-Anbieter (V2).](/windows/desktop/HyperV_v2/windows-virtualization-portal)\]
 
-Gibt die DVD-Laufwerks Ereignisse an.
+Gibt die DVD-Laufwerkereignisse an.
 
 ## <a name="syntax"></a>Syntax
 
@@ -43,17 +43,17 @@ typedef enum  {
 
 <dl> <dt>
 
-<span id="vmDVDDriveEvent_OnInsert"></span><span id="vmdvddriveevent_oninsert"></span><span id="VMDVDDRIVEEVENT_ONINSERT"></span>**vmdvddriveevent \_ OnInsert**
+<span id="vmDVDDriveEvent_OnInsert"></span><span id="vmdvddriveevent_oninsert"></span><span id="VMDVDDRIVEEVENT_ONINSERT"></span>**vmDVDDriveEvent \_ OnInsert**
 </dt> <dd>
 
-Ein ISO-Abbild ist angefügt oder echte Medien werden in ein Host Laufwerk eingefügt.
+Ein ISO-Image wird angefügt, oder echte Medien werden in ein Hostlaufwerk eingefügt.
 
 </dd> <dt>
 
-<span id="vmDVDDriveEvent_OnEject"></span><span id="vmdvddriveevent_oneject"></span><span id="VMDVDDRIVEEVENT_ONEJECT"></span>**vmdvddriveevent \_ oneject**
+<span id="vmDVDDriveEvent_OnEject"></span><span id="vmdvddriveevent_oneject"></span><span id="VMDVDDRIVEEVENT_ONEJECT"></span>**vmDVDDriveEvent \_ OnEject**
 </dt> <dd>
 
-Das Medium wurde ausgestoßen.
+Das Medium wurde eingefügt.
 
 </dd> </dl>
 
@@ -63,19 +63,19 @@ Das Medium wurde ausgestoßen.
 
 | Anforderung | Wert |
 |-------------------------------------|-----------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows 7 \[ -Desktop-Apps\]<br/>                                                    |
+| Unterstützte Mindestversion (Client)<br/> | nur Windows 7 \[ Desktop-Apps\]<br/>                                                    |
 | Unterstützte Mindestversion (Server)<br/> | Nicht unterstützt<br/>                                                                     |
 | Ende des Supports (Client)<br/>    | Windows 7<br/>                                                                          |
-| Produkt<br/>                  | Windows Virtual PC<br/>                                                                 |
-| Header<br/>                   | <dl> <dt>Vpccominterfaces. h</dt> </dl> |
+| Product (Produkt)<br/>                  | Windows Virtual PC<br/>                                                                 |
+| Header<br/>                   | <dl> <dt>VPCCOMInterfaces.h</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Ivmdvddriveevents**](ivmdvddriveevents.md)
+[**IVMDVDDriveEvents**](ivmdvddriveevents.md)
 </dt> </dl>
 
  

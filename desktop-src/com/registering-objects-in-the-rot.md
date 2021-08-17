@@ -1,41 +1,41 @@
 ---
-title: Registrieren von Objekten in der rot
-description: Registrieren von Objekten in der rot
+title: Registrieren von Objekten in rot
+description: Registrieren von Objekten in rot
 ms.assetid: f479c2d1-0c55-4281-8f15-2f957fa03b70
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: b452ead94a717791910ecceaa5082535bc1b233c
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: d77e7bc6fe8b0a4d5896bf33575df2f57fb0e583f78acd02653f6ccb014f34ff
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "104388358"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118104812"
 ---
-# <a name="registering-objects-in-the-rot"></a>Registrieren von Objekten in der rot
+# <a name="registering-objects-in-the-rot"></a>Registrieren von Objekten in rot
 
-Wenn ein Client einen Server anfordert, eine Objektinstanz zu erstellen, erstellt der Server in der Regel einen Moniker für das Objekt und registriert ihn in der laufenden Objekttabelle (rot) durch einen Aufruf von " [**iriunningobjec\:: Register**](/windows/desktop/api/ObjIdl/nf-objidl-irunningobjecttable-register)".
+Wenn ein Client einen Server auffordert, eine Objektinstanz zu erstellen, erstellt der Server in der Regel einen Moniker für das Objekt und registriert es in der laufenden Objekttabelle (ROT) durch einen Aufruf von [**IRunningObjectTable::Register.**](/windows/desktop/api/ObjIdl/nf-objidl-irunningobjecttable-register)
 
-Wenn der Server " [**kreatefilemoniker**](/windows/desktop/api/Objbase/nf-objbase-createfilemoniker) " aufruft, um einen dateimoniker zu erstellen, der in der rot registriert werden soll, sollten Server lokale Dateinamen übergeben, die Laufwerk basiert und nicht im UNC-Format sind. Dadurch wird sichergestellt, dass die vom rot-Registrierungs Aufruf generierten Moniker-Vergleichsdaten mit den beim Durchsuchen einer rot-Suche im Teil eines Remote Clients verwendeten Daten verglichen werden. Dies liegt daran, dass der verteilte com-Dienst, wenn er von einem Remote Client eine Aktivierungs Anforderung für eine lokale Datei an den Server empfängt, in einen auf lokalen Laufwerken basierenden Pfad konvertiert wird.
+Wenn der Server [**CreateFileMoniker aufruft,**](/windows/desktop/api/Objbase/nf-objbase-createfilemoniker) um einen Dateimoniker zu erstellen, der in ROT registriert werden soll, sollten Server lokale Dateinamen übergeben, die laufwerksbasiert sind, nicht im UNC-Format. Dadurch wird sichergestellt, dass die vom ROT-Registeraufruf generierten Monikervergleichsdaten mit dem übereinstimmen, was beim Durchführen einer ROT-Suche auf einem Remoteclient verwendet wird. Dies liegt daran, dass die Datei in einen pfadbasierten lokalen Pfad konvertiert wird, wenn der verteilte COM-Dienst eine Aktivierungsanforderung für eine lokale Datei auf dem Server von einem Remoteclient empfängt.
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[Installieren von als Dienst Anwendung](installing-as-a-service-application.md)
+[Installieren als Dienstanwendung](installing-as-a-service-application.md)
 </dt> <dt>
 
 [Registrieren einer Klasse bei der Installation](registering-a-class-at-installation.md)
 </dt> <dt>
 
-[Registrieren eines ausführenden exe-Servers](registering-a-running-exe-server.md)
+[Registrieren eines ausgeführten EXE-Servers](registering-a-running-exe-server.md)
 </dt> <dt>
 
 [Selbstregistrierung](self-registration.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

@@ -14,12 +14,12 @@ api_type:
 api_location:
 - d3dx9.lib
 - d3dx9.dll
-ms.openlocfilehash: 9b9b0f5ae0e3fda05cd8bdd92ee73b826f81b970
-ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
+ms.openlocfilehash: 2115b804dfda537508247785d897757a3f25263e8ee528fdacfb1a91b0515045
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2021
-ms.locfileid: "108097948"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117730799"
 ---
 # <a name="d3dxvec2transform-function-d3dx9mathh"></a>D3DXVec2Transform-Funktion (D3dx9math.h)
 
@@ -75,7 +75,7 @@ Typ: **[ **D3DXVECTOR4**](d3dxvector4.md)\***
 
 Zeiger auf eine [**D3DXVECTOR4-Struktur,**](d3dxvector4.md) die der transformierte Vektor ist.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
 Diese Funktion transformiert den *Vektor pV* (x, y, 0, 1) durch die *Matrix pM.*
 
@@ -85,7 +85,7 @@ Der Rückgabewert für diese Funktion ist der gleiche Wert, der im *pOut-Paramet
 
 
 
-| Anforderungen | Wert |
+| Anforderung | Wert |
 |--------------------|----------------------------------------------------------------------------------------|
 | Header<br/>  | <dl> <dt>D3dx9math.h</dt> </dl> |
 | Bibliothek<br/> | <dl> <dt>D3dx9.lib</dt> </dl>   |
