@@ -1,47 +1,47 @@
 ---
-description: Netzwerkmonitor verwendet die Exportfunktion DllMain, um das vorhanden sein des Parsers zu identifizieren, und gibt Ressourcen frei, die von Netzwerkmonitor zum Speichern von Informationen über den Parser verwendet werden.
+description: Netzwerkmonitor verwendet die DllMain-Exportfunktion, um das Vorhandensein des Parsers zu identifizieren, und gibt Ressourcen frei, die Netzwerkmonitor zum Speichern von Informationen über den Parser verwenden.
 ms.assetid: 1741a12c-3645-4e83-b97f-37e67218c5eb
-title: Implementieren von DllMain-Parser
+title: Implementieren des DllMain-Parsers
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 55dd1ab7432920ac7496643c7c6f9aa0692daf56
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: bb79ab862c64d8d99359965fec6c0d1ca8bf3cf9e35fdf58f1cbc063d5c3e6c1
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "103750049"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118132939"
 ---
-# <a name="implementing-dllmain-parser"></a>Implementieren von DllMain-Parser
+# <a name="implementing-dllmain-parser"></a>Implementieren des DllMain-Parsers
 
-Netzwerkmonitor verwendet die Exportfunktion **DllMain** , um das vorhanden sein des Parsers zu identifizieren, und gibt Ressourcen frei, die von Netzwerkmonitor zum Speichern von Informationen über den Parser verwendet werden.
+Netzwerkmonitor verwendet die **DllMain-Exportfunktion,** um das Vorhandensein des Parsers zu identifizieren, und gibt Ressourcen frei, die Netzwerkmonitor zum Speichern von Informationen über den Parser verwenden.
 
-Wenn Netzwerkmonitor zum ersten Mal **DllMain** aufruft, ruft die Parser-DLL [**für Folgendes Folgendes auf:**](createprotocol.md)
+Wenn Netzwerkmonitor **dllMain zum** ersten Mal aufruft, ruft die Parser-DLL [**CreateProtocol**](createprotocol.md) auf, um Folgendes zu tun:
 
 -   Geben Sie das Protokoll an, das der Parser erkennt.
--   Geben Sie Einstiegspunkte für die verbleibenden Parser-Exportfunktionen an, die Netzwerkmonitor aufrufen.
+-   Stellen Sie Einstiegspunkte für die verbleibenden Parserexportfunktionen zur Verfügung, die Netzwerkmonitor werden.
 
-Wenn Netzwerkmonitor **DllMain** zum letzten Mal aufruft, ruft **DllMain** " [**destroyprotocol**](destroyprotocol.md) " auf, um alle Ressourcen freizugeben, die Netzwerkmonitor zum Speichern von Informationen über den Parser verwendet.
+Wenn Netzwerkmonitor **dllMain** zum letzten Mal aufruft, ruft **DllMain** [**DestroyProtocol**](destroyprotocol.md) auf, um alle Ressourcen frei zu geben, die Netzwerkmonitor zum Speichern von Informationen über den Parser verwendet.
 
-Im folgenden Verfahren werden die Schritte beschrieben, die für die Implementierung von **DllMain** erforderlich sind.
+Im folgenden Verfahren werden die schritte beschrieben, die zum Implementieren von **DllMain erforderlich sind.**
 
 **So implementieren Sie DllMain**
 
-1.  Geben Sie die [**entryPoints**](entrypoints.md) -Struktur für [**die Funktion "**](createprotocol.md) Funktion" und die Variable "Global Attach" an. Die Attach-Variable wird verwendet, um die Anzahl der Protokoll Instanzen zu verfolgen, die ausgeführt werden.
-2.  Sehen Sie sich den Wert des *Befehls* Parameters an, der vom Betriebssystem festgelegt wird.
+1.  Geben Sie [**die ENTRYPOINTS-Struktur**](entrypoints.md) für die [**CreateProtocol-Funktion**](createprotocol.md) und die globale Attach-Variable an. Die Variable Attach wird verwendet, um die Anzahl der ausgeführten Protokollinstanzen nachzuverfolgungen.
+2.  Sehen Sie sich den Wert des *Command-Parameters* an, den das Betriebssystem legt.
 
-    Wenn der *Befehls* Parameter auf DLL \_ \_ -Prozess anfügen und anfügen den Wert 0 festgelegt ist, müssen Sie zum Bereitstellen des Protokoll namens und der Einstiegspunkte für die folgenden Exportfunktionen das- [**Protokoll**](createprotocol.md) aufrufen.
+    Wenn der *Command-Parameter* auf DLL PROCESS ATTACH und Attach auf 0 festgelegt ist, rufen Sie \_ \_ [**CreateProtocol**](createprotocol.md) auf, um den Protokollnamen und die Einstiegspunkte für die folgenden Exportfunktionen zur Verfügung zu stellen.
 
     -   **Registrieren**
     -   **Registrierung aufheben**
-    -   **Erkenzeframe**
-    -   **Attachproperties**
-    -   **Formatproperties** (nur erforderlich, wenn Netzwerkmonitor die Protokoll Eigenschaften anzeigt).
+    -   **RecognizeFrame**
+    -   **AttachProperties**
+    -   **FormatProperties** (nur erforderlich, wenn Netzwerkmonitor die Protokolleigenschaften anzeigen).
 
-    Wenn der *Befehls* Parameter auf DLL \_ -Prozess Trennung \_ und anfügen den Wert 0 festgelegt ist, wird [**destroyprotocol**](destroyprotocol.md) mithilfe des Instanzhandles aufgerufen, das von " [**kreateprotocol**](createprotocol.md) " zurückgegeben wird.
+    Wenn der *Command-Parameter* auf DLL PROCESS DETACH und Attach auf 0 festgelegt ist, rufen Sie DestroyProtocol mit dem Instanzhandle auf, das \_ \_ [**CreateProtocol zurückgibt.**](createprotocol.md) [](destroyprotocol.md)
 
-3.  Gibt **true** zurück, da die **DllMain** -parserfunktion immer **true** zurückgeben muss.
+3.  Gibt **TRUE zurück,** da **die DllMain-Parserfunktion** immer TRUE **zurückgeben muss.**
 
-Im folgenden finden Sie eine grundlegende Implementierung von **DllMain**. Im Codebeispiel wird eine Case-Anweisung verwendet, um Werte des *Command* -Parameters abzufangen [**, um zu**](createprotocol.md) bestimmen, ob "-" oder " [**destroyprotocol**](destroyprotocol.md) " aufgerufen werden soll.
+Im Folgenden finden Sie eine grundlegende Implementierung von **DllMain**. Im Codebeispiel wird eine case-Anweisung verwendet, um Werte des *Command-Parameters* zu ermitteln, um zu bestimmen, ob [**CreateProtocol**](createprotocol.md) oder [**DestroyProtocol**](destroyprotocol.md) aufgerufen werden soll.
 
 ``` syntax
 #include <windows.h>

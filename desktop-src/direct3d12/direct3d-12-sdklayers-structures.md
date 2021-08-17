@@ -1,6 +1,6 @@
 ---
 title: Strukturen der Debugschicht
-description: Die folgenden Strukturen werden in d3d12sdungyers.h deklariert.
+description: Die folgenden Strukturen werden in d3d12sdklayers.h deklariert.
 ms.assetid: FE8796A7-98D1-4333-8755-2A47567560B3
 ms.localizationpriority: low
 ms.topic: article
@@ -14,19 +14,19 @@ ms.locfileid: "118529750"
 ---
 # <a name="debug-layer-structures"></a>Strukturen der Debugschicht
 
-Die folgenden Strukturen werden in d3d12sdungyers.h deklariert.
+Die folgenden Strukturen werden in d3d12sdklayers.h deklariert.
 
 ## <a name="in-this-section"></a>In diesem Abschnitt
 
 
 
-| Thema                                                                                                                                      | Beschreibung                                                                                                                          |
+| Thema                                                                                                                                      | BESCHREIBUNG                                                                                                                          |
 |--------------------------------------------------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------|
-| [**D3D12 \_ \_ DEBUGBEFEHLSLISTE \_ \_ \_ GPU-BASIERTE \_ \_ VALIDIERUNGSEINSTELLUNGEN**](/windows/desktop/api/d3d12sdklayers/ns-d3d12sdklayers-d3d12_debug_command_list_gpu_based_validation_settings)<br/> | Beschreibt die Einstellungen pro Befehlsliste, die von der GPU-Based werden. <br/>                                                        |
-| [**D3D12 \_ DEBUG \_ DEVICE \_ GPU \_ BASED \_ VALIDATION \_ SETTINGS**](/windows/desktop/api/d3d12sdklayers/ns-d3d12sdklayers-d3d12_debug_device_gpu_based_validation_settings)<br/>              | Beschreibt die einstellungen, die von der GPU-Based werden. <br/>                                                                         |
-| [**D3D12 \_ DEBUG DEVICE \_ \_ \_ GPU-VERLANGSAMUNGSLEISTUNGSFAKTOR \_ \_**](/windows/desktop/api/d3d12sdklayers/ns-d3d12sdklayers-d3d12_debug_device_gpu_slowdown_performance_factor)<br/>          | Beschreibt die Menge der künstlichen Verlangsamung, die vom Debuggerät eingefügt wird, um Grafikkarten mit geringerer Leistung zu simulieren.<br/> |
-| [**D3D12 \_ \_ INFO-WARTESCHLANGENFILTER \_**](/windows/desktop/api/d3d12sdklayers/ns-d3d12sdklayers-d3d12_info_queue_filter)<br/>                                                                   | Debugnachrichtenfilter; enthält eine Liste von Nachrichtentypen, die zulässig oder verweigert werden.<br/>                                                 |
-| [**D3D12 \_ INFO \_ QUEUE \_ FILTER \_ DESC**](/windows/desktop/api/d3d12sdklayers/ns-d3d12sdklayers-d3d12_info_queue_filter_desc)<br/>                                                        | Zulassen oder Verweigern bestimmter Nachrichtentypen, die einen Filter passieren.<br/>                                                         |
+| [**D3D12 \_ \_ \_ DEBUGBEFEHLSLISTE \_ \_ GPU-BASIERTE \_ \_ VALIDIERUNGSEINSTELLUNGEN**](/windows/desktop/api/d3d12sdklayers/ns-d3d12sdklayers-d3d12_debug_command_list_gpu_based_validation_settings)<br/> | Beschreibt einstellungen pro Befehlsliste, die von GPU-Based Validation verwendet werden. <br/>                                                        |
+| [**D3D12– \_ \_ DEBUGGEN VON \_ \_ GPU-BASIERTEN \_ \_ ÜBERPRÜFUNGSEINSTELLUNGEN FÜR GERÄTE**](/windows/desktop/api/d3d12sdklayers/ns-d3d12sdklayers-d3d12_debug_device_gpu_based_validation_settings)<br/>              | Beschreibt einstellungen, die von GPU-Based Validation verwendet werden. <br/>                                                                         |
+| [**D3D12– LEISTUNGSFAKTOR FÜR \_ \_ GPU-VERLANGSAMUNG DES D3D12-DEBUGGERÄTS \_ \_ \_ \_**](/windows/desktop/api/d3d12sdklayers/ns-d3d12sdklayers-d3d12_debug_device_gpu_slowdown_performance_factor)<br/>          | Beschreibt die Menge der künstlichen Verlangsamung, die vom Debuggerät eingefügt wird, um Grafikadapter mit geringerer Leistung zu simulieren.<br/> |
+| [**D3D12 \_ INFO \_ QUEUE \_ FILTER**](/windows/desktop/api/d3d12sdklayers/ns-d3d12sdklayers-d3d12_info_queue_filter)<br/>                                                                   | Debugmeldungsfilter; enthält eine Liste von Nachrichtentypen, die zugelassen oder verweigert werden sollen.<br/>                                                 |
+| [**D3D12 \_ INFO \_ QUEUE \_ FILTER \_ DESC**](/windows/desktop/api/d3d12sdklayers/ns-d3d12sdklayers-d3d12_info_queue_filter_desc)<br/>                                                        | Zulassen oder Verweigern der Übergabe bestimmter Nachrichtentypen durch einen Filter.<br/>                                                         |
 | [**D3D12 \_ MESSAGE**](/windows/desktop/api/d3d12sdklayers/ns-d3d12sdklayers-d3d12_message)<br/>                                                                                         | Eine Debugmeldung in der Informationswarteschlange.<br/>                                                                                 |
 
 

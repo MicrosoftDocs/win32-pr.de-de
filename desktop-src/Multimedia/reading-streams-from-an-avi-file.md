@@ -1,21 +1,21 @@
 ---
-title: Lesen von Streams aus einer AVI-Datei
-description: Lesen von Streams aus einer AVI-Datei
+title: Lesen Streams aus einer AVI-Datei
+description: Lesen Streams aus einer AVI-Datei
 ms.assetid: fa17cac4-bc6f-48ef-8960-286386b43c82
 keywords:
-- AVISTREAMINFO-Funktion
+- AVIStreamInfo-Funktion
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: edbea431a5a5f08602b026e26fd15dfe684c555d
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: 84d42c4682c1875fffbea079ab9ef55d954f15d3e9d49c2da1309504da68aa92
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "106340610"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118371515"
 ---
-# <a name="reading-streams-from-an-avi-file"></a>Lesen von Streams aus einer AVI-Datei
+# <a name="reading-streams-from-an-avi-file"></a>Lesen Streams aus einer AVI-Datei
 
-Die folgende Unterroutine ruft streaminformationen aus einer AVI-Datei ab und bestimmt den Streamtyp aus der [**AVISTREAMINFO**](/windows/desktop/api/Vfw/ns-vfw-avistreaminfoa) -Struktur, die von der [**AVISTREAMINFO**](/windows/desktop/api/Vfw/nf-vfw-avistreaminfoa) -Funktion zurückgegeben wird.
+Die folgende Unterroutine ruft Streaminformationen aus einer AVI-Datei ab und bestimmt den Streamtyp aus der [**AVISTREAMINFO-Struktur,**](/windows/desktop/api/Vfw/ns-vfw-avistreaminfoa) die von der [**AVIStreamInfo-Funktion**](/windows/desktop/api/Vfw/nf-vfw-avistreaminfoa) zurückgegeben wird.
 
 
 ```C++
@@ -60,9 +60,9 @@ void StreamTypes(HWND hwnd)
 
 
 
- 
+ 
 
- 
+ 
 
 
 

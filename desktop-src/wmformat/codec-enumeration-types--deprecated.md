@@ -1,9 +1,9 @@
 ---
 title: Codec-Enumerationstypen
-description: Die aktuelle Dokumentation zu Windows Mediencodecs und digitalen Signalprozessoren finden Sie unter Windows Media Audio and Video Codec and DSP APIs (Medienaudio- und Videocodec und DSP-APIs). | Codec-Enumerationstypen
+description: Die aktuelle Dokumentation zu Windows Mediencodecs und digitalen Signalprozessoren finden Sie unter Windows Medienaudio- und Videocodec und DSP-APIs. | Codec-Enumerationstypen
 ms.assetid: 7a6a0a56-7927-431f-a33c-626075b16de6
 keywords:
-- Codec-Enumerationstypen – Windows-Medienformat
+- Codec-Enumerationstypen windows Media Format
 topic_type:
 - apiref
 api_name:
@@ -21,7 +21,7 @@ ms.locfileid: "117849181"
 ---
 # <a name="codec-enumeration-types"></a>Codec-Enumerationstypen
 
-Die aktuelle Dokumentation zu Windows Mediencodecs und Digitalsignalprozessoren finden Sie unter Windows Media Audio and Video Codec and DSP APIs (Medienaudio- und Videocodec und [DSP-APIs).](/previous-versions//dd464626(v=vs.85))
+Die aktuelle Dokumentation zu Windows Mediencodecs und digitalen Signalprozessoren finden Sie unter [Windows Medienaudio- und Videocodec und DSP-APIs.](/previous-versions//dd464626(v=vs.85))
 
  
 

@@ -1,11 +1,11 @@
 ---
-title: Ienumprogressitems RemoteNext-Methode
-description: Unterstützt einen Remote Client, der eine angegebene Anzahl von Elementen in der enumerationssequenz abrufen möchte. | Ienumprogressitems RemoteNext-Methode
+title: IEnumProgressItems RemoteNext-Methode
+description: Unterstützt einen Remoteclient, der eine angegebene Anzahl von Elementen in der Enumerationssequenz abrufen möchte. | IEnumProgressItems RemoteNext-Methode
 ms.assetid: c5f85ca3-1bad-49fd-9e67-d41135cd837d
 keywords:
-- RemoteNext-Methode IMAPI
-- RemoteNext-Methode IMAPI, ienumprogressitems-Schnittstelle
-- Ienumprogressitems Interface IMAPI, RemoteNext-Methode
+- 'RemoteNext-Methode : IMAPI'
+- RemoteNext-Methode IMAPI, IEnumProgressItems-Schnittstelle
+- IEnumProgressItems-Schnittstelle IMAPI , RemoteNext-Methode
 topic_type:
 - apiref
 api_name:
@@ -16,16 +16,16 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: a088a1be640c6653a8a8ccd8b00cf21bd027ecd7
-ms.sourcegitcommit: 92e74c99f8f4d097676959d0c317f533c2400a80
+ms.openlocfilehash: 5daa2b33fdc356782837aadfe37186bc4cc2b493208fdc78ba645ada9e746582
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/09/2021
-ms.locfileid: "106354321"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117884850"
 ---
-# <a name="ienumprogressitemsremotenext-method"></a>Ienumprogressitems:: RemoteNext-Methode
+# <a name="ienumprogressitemsremotenext-method"></a>IEnumProgressItems::RemoteNext-Methode
 
-Unterstützt einen Remote Client, der eine angegebene Anzahl von Elementen in der enumerationssequenz abrufen möchte
+Unterstützt einen Remoteclient, der eine angegebene Anzahl von Elementen in der Enumerationssequenz abrufen möchte.
 
 ## <a name="syntax"></a>Syntax
 
@@ -44,49 +44,49 @@ HRESULT RemoteNext(
 
 <dl> <dt>
 
-*celt* \[ in\]
+*Celt* \[ In\]
 </dt> <dd>
 
-Anzahl der abzurufenden Elemente.
+Anzahl der abzurufende Elemente.
 
 </dd> <dt>
 
-*rgelt* \[ vorgenommen\]
+*rgelt* \[ out\]
 </dt> <dd>
 
-Array von [**iprogressitem**](/windows/desktop/api/imapi2fs/nn-imapi2fs-iprogressitem) -Schnittstellen. Wenn Sie den Vorgang abgeschlossen haben, müssen Sie jede Schnittstelle in rgelt freigeben
+Array von [**IProgressItem-Schnittstellen.**](/windows/desktop/api/imapi2fs/nn-imapi2fs-iprogressitem) Wenn Sie fertig sind, müssen Sie jede Schnittstelle in rgelt freigeben.
 
 </dd> <dt>
 
-*pceltfetch* \[ vorgenommen\]
+*pceltFetched* \[ out\]
 </dt> <dd>
 
-Anzahl der Elemente, die in rgelt zurückgegeben werden. Sie können *pceltfetch* auf **null** festlegen, wenn es sich um ein *celt* handelt. Initialisieren Sie andernfalls den Wert von *pceltfetch* auf 0, bevor Sie diese Methode aufrufen.
+Anzahl der in rgelt zurückgegebenen Elemente. Sie können *pceltFetched* auf **NULL** festlegen, wenn *celt* eins ist. Andernfalls initialisieren Sie den Wert von *pceltFetched* auf 0, bevor Sie diese Methode aufrufen.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-S \_ OK wird zurückgegeben, wenn die Anzahl der angeforderten Elemente (*celt*) erfolgreich zurückgegeben wurde oder wenn die Anzahl der zurückgegebenen Elemente (*pceltfetch*) kleiner als die Anzahl der angeforderten Elemente ist.
+S \_ OK wird zurückgegeben, wenn die Anzahl der angeforderten Elemente (*celt*) erfolgreich zurückgegeben wird oder die Anzahl der zurückgegebenen Elemente (*pceltFetched*) kleiner als die Anzahl der angeforderten Elemente ist.
 
-Andere Erfolgs Codes können als Ergebnis der-Implementierung zurückgegeben werden. Die folgenden Fehlercodes werden häufig bei einem Vorgangs Fehler zurückgegeben. Sie stellen jedoch nicht die einzigen möglichen Fehler Werte dar:
+Andere Erfolgscodes können als Ergebnis der Implementierung zurückgegeben werden. Die folgenden Fehlercodes werden häufig bei einem Vorgangsfehler zurückgegeben, stellen jedoch nicht die einzigen möglichen Fehlerwerte dar:
 
 
 
 | Rückgabecode                                                                                   | Beschreibung                                                                     |
 |-----------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------|
-| <dl> <dt>**E- \_ Zeiger**</dt> </dl>     | Der Zeiger ist ungültig.<br/> Wert: 0x80004003<br/>                   |
-| <dl> <dt>**E \_ outo-Memory**</dt> </dl> | Der erforderliche Arbeitsspeicher konnte nicht belegt werden.<br/> Wert: 0x8007000E<br/> |
-| <dl> <dt>**E \_ invalidArg**</dt> </dl>  | Mindestens ein Argument ist ungültig.<br/> Wert: 0x80070057<br/>    |
-| <dl> <dt>**E \_ Unerwartete**</dt> </dl> | Unerwarteter Fehler.<br/> Wert: 0x8000ffff<br/>         |
+| <dl> <dt>**E \_ POINTER**</dt> </dl>     | Zeiger ist ungültig.<br/> Wert: 0x80004003<br/>                   |
+| <dl> <dt>**E \_ OUTOFMEMORY**</dt> </dl> | Fehler beim Zuordnen des erforderlichen Arbeitsspeichers.<br/> Wert: 0x8007000E<br/> |
+| <dl> <dt>**E \_ INVALIDARG**</dt> </dl>  | Mindestens ein Argument ist ungültig.<br/> Wert: 0x80070057<br/>    |
+| <dl> <dt>**E \_ UNEXPECTED**</dt> </dl> | Unerwarteter Fehler.<br/> Wert: 0x8000FFFF<br/>         |
 
 
 
  
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Wenn weniger als die angeforderte Anzahl von Elementen in der Sequenz vorhanden sind, werden die restlichen Elemente abgerufen.
+Wenn weniger Elemente als die angeforderte Anzahl von Elementen in der Sequenz vorhanden sind, werden die verbleibenden Elemente abgerufen.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -94,20 +94,20 @@ Wenn weniger als die angeforderte Anzahl von Elementen in der Sequenz vorhanden 
 
 | Anforderung | Wert |
 |-------------------------------------|-----------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Windows Vista, Windows XP mit SP2 \[ Desktop-Apps\]<br/>                     |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/>                                    |
-| IDL<br/>                      | <dl> <dt>Imapi2fs. idl</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows Vista, Windows XP nur mit \[ SP2-Desktop-Apps\]<br/>                     |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                                    |
+| Idl<br/>                      | <dl> <dt>Imapi2fs.idl</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Ienumprogressitems**](/windows/desktop/api/imapi2fs/nn-imapi2fs-ienumprogressitems)
+[**IEnumProgressItems**](/windows/desktop/api/imapi2fs/nn-imapi2fs-ienumprogressitems)
 </dt> <dt>
 
-[Ienumprogressitems:: Next](/windows/desktop/api/imapi2fs/nf-imapi2fs-ienumprogressitems-next)
+[IEnumProgressItems::Next](/windows/desktop/api/imapi2fs/nf-imapi2fs-ienumprogressitems-next)
 </dt> </dl>
 
  

@@ -1,12 +1,12 @@
 ---
-title: WSMAN. getErrorMessage-Methode (WSManDisp. h)
+title: WSMan.GetErrorMessage-Methode (WSManDisp.h)
 description: Gibt eine formatierte Zeichenfolge zurück, die den Text einer Fehlernummer enthält.
 ms.assetid: 5f0a5259-8356-4406-8612-34f4921184f0
 ms.tgt_platform: multiple
 keywords:
-- GetErrorMessage-Methode Windows-Remoteverwaltung
-- GetErrorMessage-Methode Windows-Remoteverwaltung, WSMAN-Objekt
-- WSMAN-Objekt Windows-Remoteverwaltung, getErrorMessage-Methode
+- GetErrorMessage-Methode Windows Remoteverwaltung
+- GetErrorMessage-Methode Windows Remoteverwaltung, WSMan-Objekt
+- WSMan-Objekt Windows Remoteverwaltung , GetErrorMessage-Methode
 topic_type:
 - apiref
 api_name:
@@ -17,16 +17,16 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 3d085e6f19c64f609fe1389a2822df1594ee69bc
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 94e7f23a5d2678d3df024c78397aaeb6a388d8b75368f329867f6457b9ad4d84
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104340697"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117742090"
 ---
-# <a name="wsmangeterrormessage-method"></a>WSMAN. getErrorMessage-Methode
+# <a name="wsmangeterrormessage-method"></a>WSMan.GetErrorMessage-Methode
 
-Gibt eine formatierte Zeichenfolge zurück, die den Text einer Fehlernummer enthält. Diese Methode führt denselben Vorgang aus wie die **WinRM** -Befehlszeile **WinRM helpmsg** *Decimal oder hexadezimale Fehlernummer*.
+Gibt eine formatierte Zeichenfolge zurück, die den Text einer Fehlernummer enthält. Diese Methode führt denselben  Vorgang wie die Winrm-Befehlszeilen-Winrm-Hilfemsg  *decimal oder hexadezimale Fehlernummer aus.*
 
 ## <a name="syntax"></a>Syntax
 
@@ -44,23 +44,23 @@ WSMan.GetErrorMessage( _
 
 <dl> <dt>
 
-*errornumber* \[ in\]
+*errorNumber* \[ In\]
 </dt> <dd>
 
-Eine Fehlermeldungs Nummer in Dezimal-oder hexadezimal aus WinRM-, WinHTTP-oder anderen Betriebssystemkomponenten.
+Eine Fehlermeldungsnummer in dezimaler oder hexadezimaler Form von WinRM, WinHTTP oder anderen Betriebssystemkomponenten.
 
 </dd> <dt>
 
-*ErrorMessage* \[ vorgenommen\]
+*errorMessage* \[ out\]
 </dt> <dd>
 
-Eine Fehlermeldungs Zeichenfolge, die wie vom **WinRM** -Befehl zurückgegebene Meldungen formatiert
+Eine Fehlermeldungszeichenfolge, die wie meldungen formatiert ist, die vom **Winrm-Befehl zurückgegeben** werden.
 
 </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die entsprechende C++-Methode ist " [**iwsmanex:: getErrorMessage**](/windows/desktop/api/WSManDisp/nf-wsmandisp-iwsmanex-geterrormessage)".
+Die entsprechende C++-Methode ist [**IWSManEx::GetErrorMessage.**](/windows/desktop/api/WSManDisp/nf-wsmandisp-iwsmanex-geterrormessage)
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -70,18 +70,18 @@ Die entsprechende C++-Methode ist " [**iwsmanex:: getErrorMessage**](/windows/de
 |-------------------------------------|------------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows Vista<br/>                                                                 |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2008<br/>                                                           |
-| Header<br/>                   | <dl> <dt>WSManDisp. h</dt> </dl>   |
-| IDL<br/>                      | <dl> <dt>WSManDisp. idl</dt> </dl> |
-| Bibliothek<br/>                  | <dl> <dt>WSManDisp. tlb</dt> </dl> |
+| Header<br/>                   | <dl> <dt>WSManDisp.h</dt> </dl>   |
+| Idl<br/>                      | <dl> <dt>WSManDisp.idl</dt> </dl> |
+| Bibliothek<br/>                  | <dl> <dt>WSManDisp.tlb</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>WSMAuto.dll</dt> </dl>   |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**WSMAN**](wsman.md)
+[**Wsman**](wsman.md)
 </dt> </dl>
 
  

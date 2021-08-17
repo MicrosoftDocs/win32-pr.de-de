@@ -9,12 +9,12 @@ topic_type:
 api_name: ''
 api_type: ''
 api_location: ''
-ms.openlocfilehash: 847194c08b865542cff1deb20c8518a7e4b62ab9
-ms.sourcegitcommit: b32433cc0394159c7263809ae67615ab5792d40d
+ms.openlocfilehash: ce8c6ec83963dac74dce32d248b23548c767192a604ddb8afbe35cf932dedee9
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/30/2021
-ms.locfileid: "113119045"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118514605"
 ---
 # <a name="function-declaration-syntax"></a>Syntax der Funktionsdeklaration
 
@@ -76,9 +76,9 @@ Optionale [Anweisungen,](dx-graphics-hlsl-statement-blocks.md) die den Textkörp
 
 Der Rückgabetyp kann einer dieser [HLSL-Typen](dx-graphics-hlsl-data-types.md)sein.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die Syntax auf dieser Seite beschreibt fast jeden Typ von HLSL-Funktion. Dazu gehören Vertex-Shader, Pixel-Shader und Hilfsfunktionen. Während ein geometriebasierter Shader auch mit einer Funktion implementiert wird, ist seine Syntax etwas komplizierter, sodass es eine separate Seite gibt, die eine Deklaration einer [Geometry-Shader-Funktion definiert (siehe Geometry-Shader-Objekt (DirectX HLSL)](dx-graphics-hlsl-geometry-shader.md)).
+Die Syntax auf dieser Seite beschreibt fast jeden Typ von HLSL-Funktion. Dazu gehören Vertex-Shader, Pixel-Shader und Hilfsfunktionen. Während ein Geometry-Shader auch mit einer Funktion implementiert wird, ist seine Syntax etwas komplizierter, sodass es eine separate Seite gibt, die eine Deklaration einer [Geometry-Shader-Funktion definiert (siehe Geometry-Shader Object (DirectX HLSL)](dx-graphics-hlsl-geometry-shader.md)).
 
 Eine Funktion kann überladen werden, solange sie eine eindeutige Kombination aus Parametertypen und/oder Parameterreihenfolge erhält. HLSL implementiert auch eine Reihe von integrierten oder [**intrinsischen Funktionen.**](dx-graphics-hlsl-intrinsic-functions.md)
 

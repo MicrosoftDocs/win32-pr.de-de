@@ -17,7 +17,7 @@ Die [Verknüpfungstabelle](shortcut-table.md) und die zugehörigen Tabellen der 
 
 In diesem Abschnitt fügen Sie Informationen hinzu, die angekündigte und nicht angekündigte Verknüpfungen für das Editor Beispiel angeben.
 
-Öffnen Sie in Ihrem Datenbank-Editor MNP2000.msi, und geben Sie die folgenden Daten in die Tabelle Verknüpfung ein.
+Verwenden Sie den Datenbank-Editor, um MNP2000.msi zu öffnen und die folgenden Daten in die Tabelle Verknüpfung einzugeben.
 
 [Verknüpfungstabelle](shortcut-table.md)
 
@@ -39,7 +39,7 @@ In diesem Abschnitt fügen Sie Informationen hinzu, die angekündigte und nicht 
 
  
 
-Die Beispielinstallation muss die Installation einer angekündigten Verknüpfung für das Baseball-Feature aktivieren. Dies erfordert die Angabe eines Schlüssels für die Symboltabelle in der \_ Symbolspalte der Verknüpfungstabelle. Für dieses Beispiel können Sie das Symbol für den Orca-Datenbank-Editor kopieren, der mit dem Windows Installer SDK bereitgestellt wird. Exportieren Sie die [Tabelle Symbol](icon-table.md) aus Orca.msi, und führen Sie diese Tabelle dann mit orca oder einem anderen Mergetool in die MNP2000.msi-Datenbank zusammen. Orca erstellt außerdem ein Verzeichnis mit dem Namen Icon in dem Verzeichnis, das MNP2000.msi enthält, und fügt die Binärdatendatei orca \_icon.exe.ibd hinzu. Weitere Informationen finden Sie in der Spalte Daten in der Tabelle Symbol. Die fertige Symboltabelle sollte bei der Anzeige in Orca wie folgt aussehen.
+Die Beispielinstallation muss die Installation einer angekündigten Verknüpfung für das Baseball-Feature aktivieren. Dies erfordert die Angabe eines Schlüssels für die Symboltabelle in der \_ Symbolspalte der Verknüpfungstabelle. Für dieses Beispiel können Sie das Symbol für den Orca-Datenbank-Editor kopieren, der mit dem Windows Installer SDK bereitgestellt wird. Exportieren Sie die [Tabelle Symbol](icon-table.md) aus Orca.msi, und führen Sie diese Tabelle dann mit orca oder einem anderen Mergetool in die MNP2000.msi-Datenbank zusammen. Orca erstellt auch ein Verzeichnis mit dem Namen Icon in dem Verzeichnis, das MNP2000.msi enthält, und fügt die Binärdatendatei orca \_icon.exe.ibd hinzu. Weitere Informationen finden Sie in der Spalte Daten in der Tabelle Symbol. Die fertige Symboltabelle sollte bei der Anzeige in Orca wie folgt aussehen.
 
 [Symboltabelle](icon-table.md)
 

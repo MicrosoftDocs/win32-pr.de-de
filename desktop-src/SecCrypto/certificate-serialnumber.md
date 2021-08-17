@@ -1,7 +1,7 @@
 ---
 description: Ruft eine Zeichenfolge ab, die die Seriennummer des Zertifikats enthält.
 ms.assetid: d08be744-4ae8-49f9-8b00-48e76c296f2b
-title: Certificate.SerialNumber(Eigenschaft)
+title: Certificate.SerialNumber-Eigenschaft
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -20,9 +20,9 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 08/11/2021
 ms.locfileid: "117771271"
 ---
-# <a name="certificateserialnumber-property"></a>Certificate.SerialNumber(Eigenschaft)
+# <a name="certificateserialnumber-property"></a>Certificate.SerialNumber-Eigenschaft
 
-\[CAPICOM ist eine 32-Bit-Komponente, die für die Verwendung in den folgenden Betriebssystemen verfügbar ist: Windows Server 2008, Windows Vista und Windows XP. Verwenden Sie stattdessen die [**X509Certificate2-Klasse**](/previous-versions/windows/embedded/hh424017(v=msdn.10)) im [**Namespace System.Security.Cryptography.X509Certificates.**](/dotnet/api/system.security.cryptography.x509certificates.publickey.-ctor?view=netcore-3.1)\]
+\[CAPICOM ist eine nur 32-Bit-Komponente, die für die Verwendung in den folgenden Betriebssystemen verfügbar ist: Windows Server 2008, Windows Vista und Windows XP. Verwenden Sie stattdessen die [**X509Certificate2-Klasse**](/previous-versions/windows/embedded/hh424017(v=msdn.10)) im [**Namespace System.Security.Cryptography.X509Certificates.**](/dotnet/api/system.security.cryptography.x509certificates.publickey.-ctor?view=netcore-3.1)\]
 
 Die **SerialNumber-Eigenschaft** ruft eine Zeichenfolge ab, die die Seriennummer des Zertifikats enthält.
 

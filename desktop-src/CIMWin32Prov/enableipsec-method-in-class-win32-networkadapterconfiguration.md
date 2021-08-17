@@ -1,5 +1,5 @@
 ---
-description: Die EnableIPSec-&\# 8194; Die WMI-Klassenmethode aktiviert die Internet Protokoll Sicherheit (Internet Protocol Security, IPSec) auf einem TCP/IP-fähigen Netzwerkadapter.
+description: EnableIPSec&\# 8194; Die WMI-Klassenmethode aktiviert internetprotokollsicherheit (IPsec) auf einem TCP/IP-fähigen Netzwerkadapter.
 ms.assetid: 0a45d864-606d-4adb-9b51-62d46a0d68b1
 ms.tgt_platform: multiple
 title: EnableIPSec-Methode der Win32_NetworkAdapterConfiguration-Klasse
@@ -14,18 +14,18 @@ api_type:
 - COM
 api_location:
 - CIMWin32.dll
-ms.openlocfilehash: 6988d68f9939752e3c8c2c9ace063b895a2d3720
-ms.sourcegitcommit: c7add10d695482e1ceb72d62b8a4ebd84ea050f7
+ms.openlocfilehash: 3a4b13d7cdd083fd5b343741823c8a7136ce1603941ba525978ecec4f73e4b1c
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "103860956"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118419488"
 ---
-# <a name="enableipsec-method-of-the-win32_networkadapterconfiguration-class"></a>EnableIPSec-Methode der Win32 \_ networkadapterconfiguration-Klasse
+# <a name="enableipsec-method-of-the-win32_networkadapterconfiguration-class"></a>EnableIPSec-Methode der Win32 \_ NetworkAdapterConfiguration-Klasse
 
-Die Methode " **EnableIPSec** [WMI-Klasse](/windows/desktop/WmiSdk/retrieving-a-class) " ermöglicht die Internet Protokoll Sicherheit (Internet Protocol Security, IPSec) auf einem TCP/IP-fähigen Netzwerkadapter.
+Die [WMI-Klassenmethode](/windows/desktop/WmiSdk/retrieving-a-class) **EnableIPSec** aktiviert IPsec (Internet Protocol Security) auf einem TCP/IP-fähigen Netzwerkadapter.
 
-In diesem Thema wird die MOF-Syntax (Managed Object Format) verwendet. Weitere Informationen zum Verwenden dieser Methode finden Sie unter [Aufrufen einer Methode](/windows/desktop/WmiSdk/calling-a-method).
+In diesem Thema wird die MOF-Syntax (Managed Object Format) verwendet. Weitere Informationen zur Verwendung dieser Methode finden Sie unter [Aufrufen einer Methode.](/windows/desktop/WmiSdk/calling-a-method)
 
 ## <a name="syntax"></a>Syntax
 
@@ -44,30 +44,30 @@ uint32 EnableIPSec(
 
 <dl> <dt>
 
-*IPSecPermitTCPPorts* \[ in\]
+*IPSecPermitTCPPorts* \[ In\]
 </dt> <dd>
 
-Liste der Ports, denen die Zugriffsberechtigung für TCP erteilt werden soll. Ein numerischer Wert von 0 (null) gibt an, dass für alle Ports die Zugriffsberechtigung gewährt wird. Ein leeres Array gibt an, dass keinen Ports die Zugriffsberechtigung erteilt werden soll.
+Liste der Ports, für die die Zugriffsberechtigung für TCP erteilt werden soll. Der numerische Wert 0 (null) gibt an, dass die Zugriffsberechtigung für alle Ports erteilt wird. Ein leeres Array gibt an, dass keine Zugriffsrechte für Ports erteilt werden sollen.
 
 </dd> <dt>
 
-*IPSecPermitUDPPorts* \[ in\]
+*IPSecPermitUDPPorts* \[ In\]
 </dt> <dd>
 
-Liste der Ports, denen die Zugriffsberechtigung für UDP erteilt werden soll. Ein numerischer Wert von 0 (null) gibt an, dass für alle Ports die Zugriffsberechtigung gewährt wird. Ein leeres Array gibt an, dass keinen Ports die Zugriffsberechtigung erteilt werden soll.
+Liste der Ports, deren Zugriffsberechtigung für UDP erteilt werden soll. Der numerische Wert 0 (null) gibt an, dass die Zugriffsberechtigung für alle Ports erteilt wird. Ein leeres Array gibt an, dass keine Zugriffsrechte für Ports erteilt werden sollen.
 
 </dd> <dt>
 
-*Ipsecperentschärpprotokolle* \[ in\]
+*IPSecPermitIPProtocols* \[ In\]
 </dt> <dd>
 
-Liste der Protokolle, die über die IP-Adresse ausgeführt werden dürfen. Ein numerischer Wert von 0 (null) gibt an, dass für alle Protokolle die Zugriffsberechtigung gewährt wird. Ein leeres Array gibt an, dass keinen Protokollen Zugriffsberechtigungen erteilt werden.
+Liste der Protokolle, die über die IP-Adresse ausgeführt werden dürfen. Der numerische Wert 0 (null) gibt an, dass die Zugriffsberechtigung für alle Protokolle erteilt wurde. Ein leeres Array gibt an, dass keine Protokolle zugriffsberechtigungen erteilt werden.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt einen Wert von 0 (null) für einen erfolgreichen Abschluss zurück, wenn kein Neustart erforderlich ist, 1 (eins) für einen erfolgreichen Abschluss, wenn ein Neustart erforderlich ist, und jede andere Zahl, wenn ein Fehler vorliegt. Weitere Informationen zu Fehlercodes finden Sie unter [**WMI-Fehler Konstanten**](/windows/desktop/WmiSdk/wmi-error-constants) oder [**WbemErrorEnum**](/windows/desktop/api/wbemdisp/ne-wbemdisp-wbemerrorenum). Allgemeine **HRESULT** -Werte finden Sie unter [System Fehler Codes](/windows/desktop/Debug/system-error-codes).
+Gibt den Wert 0 (null) für einen erfolgreichen Abschluss zurück, wenn kein Neustart erforderlich ist, 1 (eins) für einen erfolgreichen Abschluss, wenn ein Neustart erforderlich ist, und eine beliebige andere Zahl, wenn ein Fehler auftritt. Weitere Informationen zu Fehlercodes finden Sie unter [**WMI-Fehlerkonstanten**](/windows/desktop/WmiSdk/wmi-error-constants) oder [**WbemErrorEnum.**](/windows/desktop/api/wbemdisp/ne-wbemdisp-wbemerrorenum) Allgemeine **HRESULT-Werte** finden Sie unter [Systemfehlercodes.](/windows/desktop/Debug/system-error-codes)
 
 <dl> <dt>
 
@@ -89,7 +89,7 @@ Erfolgreicher Abschluss, Neustart erforderlich.
 
 </dd> <dt>
 
-**Methode wird auf dieser Plattform nicht unterstützt.**
+**Die Methode wird auf dieser Plattform nicht unterstützt.**
 </dt> <dd>
 
 64
@@ -98,7 +98,7 @@ Die Methode wird auf dieser Plattform nicht unterstützt.
 
 </dd> <dt>
 
-**Unbekannter Fehler.**
+**Unbekannter Fehler**
 </dt> <dd>
 
 65
@@ -107,7 +107,7 @@ Unbekannter Fehler.
 
 </dd> <dt>
 
-**Ungültige Subnetzmaske.**
+**Ungültige Subnetzmaske**
 </dt> <dd>
 
 66
@@ -116,12 +116,12 @@ Ungültige Subnetzmaske.
 
 </dd> <dt>
 
-**Fehler beim Verarbeiten einer Instanz, die zurückgegeben wurde.**
+**Fehler beim Verarbeiten einer zurückgegebenen Instanz**
 </dt> <dd>
 
 67
 
-Fehler beim Verarbeiten einer Instanz, die zurückgegeben wurde.
+Fehler beim Verarbeiten einer zurückgegebenen Instanz.
 
 </dd> <dt>
 
@@ -134,12 +134,12 @@ Ungültiger Eingabeparameter.
 
 </dd> <dt>
 
-**Es wurden mehr als 5 Gateways angegeben.**
+**Mehr als 5 Gateways angegeben**
 </dt> <dd>
 
 69
 
-Es wurden mehr als fünf Gateways angegeben.
+Mehr als fünf Gateways angegeben.
 
 </dd> <dt>
 
@@ -161,7 +161,7 @@ Ungültige Gateway-IP-Adresse.
 
 </dd> <dt>
 
-**Fehler beim Zugriff auf die Registrierung für die angeforderten Informationen.**
+**Fehler beim Zugriff auf die Registrierung für die angeforderten Informationen**
 </dt> <dd>
 
 72
@@ -170,12 +170,12 @@ Fehler beim Zugriff auf die Registrierung für die angeforderten Informationen.
 
 </dd> <dt>
 
-**Ungültiger Domänen Name**
+**Ungültiger Domänenname**
 </dt> <dd>
 
 73
 
-Ungültiger Domänen Name.
+Ungültiger Domänenname.
 
 </dd> <dt>
 
@@ -188,12 +188,12 @@ Ungültiger Hostname.
 
 </dd> <dt>
 
-**Kein primärer/sekundärer WINS-Server definiert.**
+**Kein primärer/sekundärer WINS-Server definiert**
 </dt> <dd>
 
 75
 
-Es wurde kein primärer oder sekundärer WINS-Server
+Es wurde kein primärer oder sekundärer WINS-Server definiert.
 
 </dd> <dt>
 
@@ -206,7 +206,7 @@ Ungültige Datei.
 
 </dd> <dt>
 
-**Ungültiger Systempfad.**
+**Ungültiger Systempfad**
 </dt> <dd>
 
 77
@@ -233,102 +233,102 @@ Ungültiger Sicherheitsparameter.
 
 </dd> <dt>
 
-**Der TCP/IP-Dienst kann nicht konfiguriert werden.**
+**TCP/IP-Dienst kann nicht konfiguriert werden**
 </dt> <dd>
 
 80
 
-Der TCP/IP-Dienst kann nicht konfiguriert werden.
+Tcp/IP-Dienst kann nicht konfiguriert werden.
 
 </dd> <dt>
 
-**DHCP-Dienst kann nicht konfiguriert werden.**
+**DHCP-Dienst kann nicht konfiguriert werden**
 </dt> <dd>
 
 81
 
-Der DHCP-Dienst kann nicht konfiguriert werden.
+Dhcp-Dienst kann nicht konfiguriert werden.
 
 </dd> <dt>
 
-**DHCP-Lease kann nicht erneuert werden.**
+**DHCP-Lease kann nicht erneuert werden**
 </dt> <dd>
 
 82
 
-Die DHCP-Lease kann nicht erneuert werden.
+DHCP-Lease kann nicht erneuert werden.
 
 </dd> <dt>
 
-**DHCP-Lease kann nicht freigegeben werden**
+**DHCP-Lease kann nicht veröffentlicht werden**
 </dt> <dd>
 
 83
 
-DHCP-Lease kann nicht freigegeben werden.
+DHCP-Lease kann nicht veröffentlicht werden.
 
 </dd> <dt>
 
-**IP ist auf dem Adapter nicht aktiviert.**
+**IP auf Adapter nicht aktiviert**
 </dt> <dd>
 
 84
 
-Die IP ist auf dem Adapter nicht aktiviert.
+DIE IP-Adresse ist auf dem Adapter nicht aktiviert.
 
 </dd> <dt>
 
-**IPX ist auf dem Adapter nicht aktiviert.**
+**IPX auf Adapter nicht aktiviert**
 </dt> <dd>
 
 85
 
-IPX ist auf dem Adapter nicht aktiviert.
+IPX für Adapter nicht aktiviert.
 
 </dd> <dt>
 
-**Fehler bei Frame/Netzwerk Nummer.**
+**Frame-/Netzwerknummern-Begrenzungsfehler**
 </dt> <dd>
 
 86
 
-Fehler bei Frame-oder Netzwerk Nummern Begrenzungen.
+Frame- oder Netzwerknummern-Begrenzungsfehler.
 
 </dd> <dt>
 
-**Ungültiger Frame-Typ**
+**Ungültiger Frametyp**
 </dt> <dd>
 
 87
 
-Ungültiger Rahmentyp.
+Ungültiger Frametyp.
 
 </dd> <dt>
 
-**Ungültige Netzwerk Nummer**
+**Ungültige Netzwerknummer**
 </dt> <dd>
 
 88
 
-Ungültige Netzwerk Nummer.
+Ungültige Netzwerknummer.
 
 </dd> <dt>
 
-**Doppelte Netzwerk Nummer**
+**Doppelte Netzwerknummer**
 </dt> <dd>
 
 89
 
-Doppelte Netzwerk Nummer.
+Doppelte Netzwerknummer.
 
 </dd> <dt>
 
-**Parameter außerhalb des gültigen Bereichs**
+**Parameter außerhalb der Grenzen**
 </dt> <dd>
 
 90
 
-Der Parameter liegt außerhalb des gültigen Bereichs.
+Parameter außerhalb der Grenzen.
 
 </dd> <dt>
 
@@ -337,11 +337,11 @@ Der Parameter liegt außerhalb des gültigen Bereichs.
 
 91
 
-Zugriff verweigert.
+Zugriff verweigert:
 
 </dd> <dt>
 
-**Nicht genügend Arbeitsspeicher**
+**Nicht genügend Arbeitsspeicher.**
 </dt> <dd>
 
 92
@@ -350,7 +350,7 @@ Nicht genügend Arbeitsspeicher.
 
 </dd> <dt>
 
-**Ist bereits vorhanden.**
+**Bereits vorhanden**
 </dt> <dd>
 
 93
@@ -359,16 +359,16 @@ Ist bereits vorhanden.
 
 </dd> <dt>
 
-**Der Pfad, die Datei oder das Objekt wurde nicht gefunden.**
+**Pfad, Datei oder Objekt nicht gefunden**
 </dt> <dd>
 
 94
 
-Der Pfad, die Datei oder das Objekt wurde nicht gefunden.
+Pfad, Datei oder Objekt nicht gefunden.
 
 </dd> <dt>
 
-**Der Dienst kann nicht benachrichtigt werden.**
+**Dienst kann nicht benachrichtigt werden**
 </dt> <dd>
 
 95
@@ -377,7 +377,7 @@ Der Dienst kann nicht benachrichtigt werden.
 
 </dd> <dt>
 
-**DNS-Dienst kann nicht benachrichtigt werden.**
+**DNS-Dienst kann nicht benachrichtigt werden**
 </dt> <dd>
 
 96
@@ -391,7 +391,7 @@ Der DNS-Dienst kann nicht benachrichtigt werden.
 
 97
 
-Schnittstelle nicht konfigurierbar.
+Die Schnittstelle kann nicht konfiguriert werden.
 
 </dd> <dt>
 
@@ -404,7 +404,7 @@ Nicht alle DHCP-Leases konnten freigegeben oder erneuert werden.
 
 </dd> <dt>
 
-**DHCP ist auf dem Adapter nicht aktiviert.**
+**DHCP für Adapter nicht aktiviert**
 </dt> <dd>
 
 100
@@ -420,13 +420,13 @@ DHCP ist auf dem Adapter nicht aktiviert.
 
 </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Ports werden nur gesichert, wenn die **ipfiltersecurityaktivierte** Eigenschaft in [**Win32 \_ networkadapterconfiguration**](win32-networkadapterconfiguration.md) den Wert " **true**" hat.
+Ports werden nur geschützt, wenn die **IPFilterSecurityEnabled-Eigenschaft** in [**Win32 \_ NetworkAdapterConfiguration**](win32-networkadapterconfiguration.md) **true** ist.
 
 ## <a name="examples"></a>Beispiele
 
-Das Beispiel " [Enable IPSec on a Network Adapter](https://Gallery.TechNet.Microsoft.Com/ff821218-c392-42fb-a77c-c3eab899587c) VBScript" in der TechNet Gallery verwendet **EnableIPSec** , um die IP-Sicherheit für einen Netzwerkadapter zu aktivieren.
+Im [VBScript-Beispiel IpSec für einen Netzwerkadapter aktivieren](https://Gallery.TechNet.Microsoft.Com/ff821218-c392-42fb-a77c-c3eab899587c) im TechNet-Katalog wird **EnableIPSec** verwendet, um die IP-Sicherheit für einen Netzwerkadapter zu aktivieren.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -436,29 +436,29 @@ Das Beispiel " [Enable IPSec on a Network Adapter](https://Gallery.TechNet.Micro
 |-------------------------------------|-----------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows Vista<br/>                                                                |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2008<br/>                                                          |
-| Namespace<br/>                | Root \\ CIMV2<br/>                                                                  |
-| MOF<br/>                      | <dl> <dt>Cimwin32. MOF</dt> </dl> |
+| Namespace<br/>                | \\Stamm-CIMV2<br/>                                                                  |
+| MOF<br/>                      | <dl> <dt>CIMWin32.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>CIMWin32.dll</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[Computer System-Hardware Klassen](computer-system-hardware-classes.md)
+[Computersystemhardwareklassen](computer-system-hardware-classes.md)
 </dt> <dt>
 
-[**Win32 \_ networkadapterconfiguration**](win32-networkadapterconfiguration.md)
+[**Win32 \_ NetworkAdapterConfiguration**](win32-networkadapterconfiguration.md)
 </dt> <dt>
 
-[WMI-Tasks: Netzwerk](/windows/desktop/WmiSdk/wmi-tasks--networking)
+[WMI-Aufgaben: Netzwerk](/windows/desktop/WmiSdk/wmi-tasks--networking)
 </dt> <dt>
 
-[WMI-Tasks: Konten und Domänen](/windows/desktop/WmiSdk/wmi-tasks--accounts-and-domains)
+[WMI-Aufgaben: Konten und Domänen](/windows/desktop/WmiSdk/wmi-tasks--accounts-and-domains)
 </dt> <dt>
 
-[IPv6-und IPv4-Unterstützung in WMI](/windows/desktop/WmiSdk/ipv6-and-ipv4-support-in-wmi)
+[IPv6- und IPv4-Unterstützung in WMI](/windows/desktop/WmiSdk/ipv6-and-ipv4-support-in-wmi)
 </dt> </dl>
 
  

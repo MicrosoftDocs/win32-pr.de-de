@@ -1,6 +1,6 @@
 ---
-title: Shadermodelle im Vergleich zu Shaderprofilen
-description: Shadermodelle im Vergleich zu Shaderprofilen
+title: Vergleich von Shadermodellen und Shaderprofilen
+description: Vergleich von Shadermodellen und Shaderprofilen
 ms.assetid: 6224f05e-20b1-42ea-96fb-63dd0edb720e
 ms.topic: article
 ms.date: 05/31/2018
@@ -9,20 +9,20 @@ topic_type:
 api_name: ''
 api_type: ''
 api_location: ''
-ms.openlocfilehash: 963e68d5875c3ee512e7e0d6ee7c243db72f4400
-ms.sourcegitcommit: b32433cc0394159c7263809ae67615ab5792d40d
+ms.openlocfilehash: d7f6a37b1d37225425a60cc42887d5e587d9522929bc78a28dbb5bf5854493f1
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/30/2021
-ms.locfileid: "113119615"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117726150"
 ---
-# <a name="shader-models-vs-shader-profiles"></a>Shadermodelle im Vergleich zu Shaderprofilen
+# <a name="shader-models-vs-shader-profiles"></a>Vergleich von Shadermodellen und Shaderprofilen
 
 Die Schattierungssprache auf hoher Ebene für DirectX implementiert eine Reihe von Shadermodellen. Mit HLSL können Sie C-ähnliche programmierbare Shader für die Direct3D-Pipeline erstellen. Jedes Shadermodell baut auf den Funktionen des Modells auf, bevor es verfügbar ist, und implementiert mehr Funktionalität mit weniger Einschränkungen.
 
-Shadermodell 1 wurde mit DirectX 8 gestartet und enthielt Assemblyebene und C-ähnliche Anweisungen. Dieses Modell weist viele Einschränkungen auf, die durch frühe programmierbare Shaderhardware verursacht werden. Shadermodell 2 und 3 wurden aufgrund der Anzahl von Anweisungen stark erweitert, und Konstanten-Shader könnten verwenden. Sie sind viel leistungsstärker als Shadermodell 1, haben aber trotzdem einige der bestehenden Einschränkungen des ersten Shadermodells.
+Shadermodell 1 wurde mit DirectX 8 gestartet und enthielt Assemblyebene und C-ähnliche Anweisungen. Dieses Modell weist viele Einschränkungen auf, die durch frühe programmierbare Shaderhardware verursacht werden. Shadermodell 2 und 3 wurden aufgrund der Anzahl von Anweisungen erheblich erweitert, und Konstanten-Shader könnten verwenden. Sie sind viel leistungsstärker als Shadermodell 1, haben aber dennoch einige der bestehenden Einschränkungen des ersten Shadermodells.
 
-Ab Windows Vista ist Shadermodell 4 ein vollständiges Design. Sie ermöglicht unbegrenzte Anweisungen und Konstanten (innerhalb der Hardwareeinschränkungen Ihres Computers), verfügt über Vorlagenobjekte, um die Textursampling übersichtlicher und effizienter zu gestalten, und weist die geringsten Einschränkungen für jedes Shadermodell auf. Es ist jedoch die Windows-Treibermodell erforderlich, die nur unter dem Betriebssystem Windows Vista (oder höher) verfügbar ist.
+Ab Windows Vista ist das Shadermodell 4 ein vollständiges Design. Sie ermöglicht unbegrenzte Anweisungen und Konstanten (innerhalb der Hardwareeinschränkungen Ihres Computers), verfügt über Vorlagenobjekte, um die Textursampling übersichtlicher und effizienter zu gestalten, und weist die geringsten Einschränkungen jedes Shadermodells auf. Es ist jedoch das Windows Driver Model erforderlich, das nur unter dem Betriebssystem Windows Vista (oder höher) verfügbar ist.
 
 ## <a name="shader-profiles"></a>Shaderprofile
 

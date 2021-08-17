@@ -1,28 +1,28 @@
 ---
-description: 'Weitere Informationen: Verwenden von Hooks'
+description: 'Weitere Informationen zu: Verwenden von Hooks'
 ms.assetid: f0ca9e41-a9f7-435f-a601-f0959adcb514
 title: Verwenden von Hooks
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 9d65d457b4549601aa89c3dae5b6e05c1fe0afed
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 34539855a30a67964acfe671c29de3cacdf23314cbb51bb80027d4b388e47b5f
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "103867995"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117849630"
 ---
 # <a name="using-hooks"></a>Verwenden von Hooks
 
-Die folgenden Codebeispiele veranschaulichen, wie die folgenden mit Hooks verknüpften Aufgaben ausgeführt werden:
+Die folgenden Codebeispiele veranschaulichen, wie die folgenden Aufgaben ausgeführt werden, die Hooks zugeordnet sind:
 
--   [Installieren und Freigeben von Hook-Verfahren](#installing-and-releasing-hook-procedures)
--   [Überwachen von System Ereignissen](#monitoring-system-events)
+-   [Installieren und Freigeben von Hookprozessen](#installing-and-releasing-hook-procedures)
+-   [Überwachen von Systemereignissen](#monitoring-system-events)
 
-## <a name="installing-and-releasing-hook-procedures"></a>Installieren und Freigeben von Hook-Verfahren
+## <a name="installing-and-releasing-hook-procedures"></a>Installieren und Freigeben von Hookprozessen
 
-Sie können eine Hook-Prozedur installieren, indem Sie die Funktion [**SetWindowsHookEx**](/windows/win32/api/winuser/nf-winuser-setwindowshookexa) aufrufen und den Typ des Hooks angeben, der die Prozedur aufruft, ob die Prozedur allen Threads im gleichen Desktop wie der aufrufende Thread oder einem bestimmten Thread zugeordnet werden soll, und ein Zeiger auf den Einstiegspunkt der Prozedur.
+Sie können eine Hookprozedur installieren, indem Sie die [**SetWindowsHookEx-Funktion**](/windows/win32/api/winuser/nf-winuser-setwindowshookexa) aufrufen und den Typ des Hooks angeben, der die Prozedur aufruft, ob die Prozedur allen Threads auf demselben Desktop wie der aufrufende Thread oder einem bestimmten Thread zugeordnet werden soll, und einen Zeiger auf den Prozedureinstiegspunkt.
 
-Sie müssen eine globale Hook-Prozedur in einer DLL getrennt von der Anwendung platzieren, die die Hook-Prozedur installiert. Die Installationsanwendung muss über das Handle für das dll-Modul verfügen, bevor die Hook-Prozedur installiert werden kann. Rufen Sie die [**LoadLibrary**](/windows/win32/api/libloaderapi/nf-libloaderapi-loadlibrarya) -Funktion mit dem Namen der dll auf, um ein Handle für das dll-Modul abzurufen. Nachdem Sie das Handle abgerufen haben, können Sie die [**GetProcAddress**](/windows/win32/api/libloaderapi/nf-libloaderapi-getprocaddress) -Funktion aufrufen, um einen Zeiger auf die Hook-Prozedur abzurufen. Verwenden Sie abschließend [**SetWindowsHookEx**](/windows/win32/api/winuser/nf-winuser-setwindowshookexa) , um die Hook-Prozedur Adresse in der entsprechenden Hook-Kette zu installieren. **SetWindowsHookEx** übergibt das Modul handle, einen Zeiger auf den Einstiegspunkt für die Hook-Prozedur und 0 für den Thread Bezeichner, um anzugeben, dass die Hook-Prozedur allen Threads im gleichen Desktop wie der aufrufende Thread zugeordnet werden soll. Diese Sequenz wird im folgenden Beispiel gezeigt.
+Sie müssen eine globale Hookprozedur getrennt von der Anwendung, die die Hookprozedur installiert, in einer DLL platzieren. Die installierende Anwendung muss über das Handle für das DLL-Modul verfügen, bevor sie die Hookprozedur installieren kann. Um ein Handle für das DLL-Modul abzurufen, rufen Sie die [**LoadLibrary-Funktion**](/windows/win32/api/libloaderapi/nf-libloaderapi-loadlibrarya) mit dem Namen der DLL auf. Nachdem Sie das Handle abgerufen haben, können Sie die [**GetProcAddress-Funktion**](/windows/win32/api/libloaderapi/nf-libloaderapi-getprocaddress) aufrufen, um einen Zeiger auf die Hookprozedur abzurufen. Verwenden Sie abschließend [**SetWindowsHookEx,**](/windows/win32/api/winuser/nf-winuser-setwindowshookexa) um die Hookprozeduradresse in der entsprechenden Hookkette zu installieren. **SetWindowsHookEx** übergibt das Modulhandle, einen Zeiger auf den Einstiegspunkt der Hookprozedur und 0 für den Threadbezeichner, der angibt, dass die Hookprozedur allen Threads auf demselben Desktop wie der aufrufende Thread zugeordnet werden soll. Diese Sequenz wird im folgenden Beispiel gezeigt.
 
 ``` syntax
 HOOKPROC hkprcSysMsg;
@@ -39,25 +39,25 @@ hhookSysMsg = SetWindowsHookEx(
                     0); 
 ```
 
-Sie können eine Thread spezifische Hook-Prozedur freigeben (entfernen Sie die Adresse aus der Hookkette), indem Sie die [**unhookwindowshookex**](/windows/win32/api/winuser/nf-winuser-unhookwindowshookex) -Funktion aufrufen und das Handle für die frei zugebende Hook-Prozedur angeben. Geben Sie eine Hook-Prozedur frei, sobald Sie von Ihrer Anwendung nicht mehr benötigt wird.
+Sie können eine threadspezifische Hookprozedur freigeben (ihre Adresse aus der Hookkette entfernen), indem Sie die [**UnhookWindowsHookEx-Funktion**](/windows/win32/api/winuser/nf-winuser-unhookwindowshookex) aufrufen und das Handle für die freizugebende Hookprozedur angeben. Geben Sie eine Hookprozedur frei, sobald Ihre Anwendung sie nicht mehr benötigt.
 
-Sie können eine globale Hook-Prozedur mithilfe von [**unhookwindowshookex**](/windows/win32/api/winuser/nf-winuser-unhookwindowshookex)freigeben, aber diese Funktion gibt die dll, die die Hook-Prozedur enthält, nicht frei. Dies liegt daran, dass globale Hook-Prozeduren im Prozess Kontext jeder Anwendung auf dem Desktop aufgerufen werden. Dies führt zu einem impliziten Aufruf der [**LoadLibrary**](/windows/win32/api/libloaderapi/nf-libloaderapi-loadlibrarya) -Funktion für alle diese Prozesse. Da für einen anderen Prozess kein Aufrufe der [**FreeLibrary**](/windows/win32/api/libloaderapi/nf-libloaderapi-freelibrary) -Funktion durchgeführt werden kann, gibt es keine Möglichkeit, die dll freizugeben. Das System gibt die dll schließlich frei, nachdem alle Prozesse, die explizit mit der DLL verknüpft sind, entweder beendet oder als **FreeLibrary** bezeichnet wurden und alle Prozesse, die die Hook-Prozedur aufgerufen haben, die Verarbeitung außerhalb der dll fortsetzen.
+Sie können eine globale Hookprozedur mit [**UnhookWindowsHookEx**](/windows/win32/api/winuser/nf-winuser-unhookwindowshookex)freigeben, aber diese Funktion gibt die DLL, die die Hookprozedur enthält, nicht frei. Dies liegt daran, dass globale Hookprozenden im Prozesskontext jeder Anwendung auf dem Desktop aufgerufen werden, was einen impliziten Aufruf der [**LoadLibrary-Funktion**](/windows/win32/api/libloaderapi/nf-libloaderapi-loadlibrarya) für alle diese Prozesse verursacht. Da ein Aufruf der [**FreeLibrary-Funktion**](/windows/win32/api/libloaderapi/nf-libloaderapi-freelibrary) nicht für einen anderen Prozess erfolgen kann, gibt es dann keine Möglichkeit, die DLL frei zu geben. Das System gibt die DLL schließlich frei, nachdem alle Prozesse, die explizit mit der DLL verknüpft sind, entweder beendet oder **Als FreeLibrary** bezeichnet wurden und alle Prozesse, die die Hookprozedur aufgerufen haben, die Verarbeitung außerhalb der DLL fortgesetzt haben.
 
-Eine alternative Methode zum Installieren einer globalen Hook-Prozedur ist das Bereitstellen einer Installationsfunktion in der dll zusammen mit der Hook-Prozedur. Bei dieser Methode benötigt die installierte Anwendung das Handle für das dll-Modul nicht. Durch die Verknüpfung mit der DLL erhält die Anwendung Zugriff auf die-Installationsfunktion. Die Installationsfunktion kann das dll-Modul Handle und andere Details im Aufrufen von [**SetWindowsHookEx**](/windows/win32/api/winuser/nf-winuser-setwindowshookexa)bereitstellen. Die dll kann auch eine Funktion enthalten, die die globale Hook-Prozedur freigibt. die Anwendung kann diese Funktion zur Hook-Freigabe beim Beenden von aufgerufen werden.
+Eine alternative Methode zum Installieren einer globalen Hookprozedur ist das Bereitstellen einer Installationsfunktion in der DLL zusammen mit der Hookprozedur. Bei dieser Methode benötigt die installierende Anwendung das Handle für das DLL-Modul nicht. Durch die Verknüpfung mit der DLL erhält die Anwendung Zugriff auf die Installationsfunktion. Die Installationsfunktion kann das DLL-Modulhandle und andere Details im Aufruf von [**SetWindowsHookEx**](/windows/win32/api/winuser/nf-winuser-setwindowshookexa)bereitstellen. Die DLL kann auch eine Funktion enthalten, die die globale Hookprozedur freigibt. Die Anwendung kann diese Hookfreigabefunktion beim Beenden aufrufen.
 
-## <a name="monitoring-system-events"></a>Überwachen von System Ereignissen
+## <a name="monitoring-system-events"></a>Überwachen von Systemereignissen
 
-Im folgenden Beispiel werden verschiedene Thread spezifische Hook-Prozeduren verwendet, um das System auf Ereignisse zu überwachen, die sich auf einen Thread auswirken. Es wird veranschaulicht, wie Ereignisse für die folgenden Arten von Hook-Prozeduren verarbeitet werden:
+Im folgenden Beispiel wird eine Vielzahl von threadspezifischen Hookprozesuren verwendet, um das System auf Ereignisse zu überwachen, die sich auf einen Thread auswirken. Es wird veranschaulicht, wie Ereignisse für die folgenden Arten von Hookprozesuren verarbeitet werden:
 
--   **WH \_ callwndproc**
+-   **WH \_ CALLWNDPROC**
 -   **WH \_ CBT**
--   **WH- \_ Debug**
--   **WH \_ GetMessage**
--   **WH- \_ Tastatur**
--   **WH- \_ Maus**
--   **WH \_ msgfilter**
+-   **WH \_ DEBUG**
+-   **WH \_ GETMESSAGE**
+-   **\_WH-TASTATUR**
+-   **WH \_ MOUSE**
+-   **WH \_ MSGFILTER**
 
-Der Benutzer kann eine Hook-Prozedur mithilfe des Menüs installieren und entfernen. Wenn eine Hook-Prozedur installiert wird und ein Ereignis auftritt, das von der Prozedur überwacht wird, schreibt die Prozedur Informationen über das Ereignis in den Client Bereich des Hauptfensters der Anwendung.
+Der Benutzer kann eine Hookprozedur über das Menü installieren und entfernen. Wenn eine Hookprozedur installiert wird und ein Ereignis auftritt, das von der Prozedur überwacht wird, schreibt die Prozedur Informationen über das Ereignis in den Clientbereich des Hauptfensters der Anwendung.
 
 
 ```

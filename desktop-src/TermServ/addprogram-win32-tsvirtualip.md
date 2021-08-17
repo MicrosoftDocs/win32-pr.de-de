@@ -1,12 +1,12 @@
 ---
-title: Addprogram-Methode der Win32_TSVirtualIP-Klasse (bmolface. h)
-description: Fügt der Liste der Programme, die die IP-Virtualisierung verwenden, ein Programm hinzu.
+title: AddProgram-Methode der Win32_TSVirtualIP -Klasse (Bdaiface.h)
+description: Fügt der Liste der Programme, die IP-Virtualisierung verwenden, ein Programm hinzu.
 ms.assetid: 4d142774-fa7a-4cfb-9305-5a61b0ef5438
 ms.tgt_platform: multiple
 keywords:
-- Addprogram-Methode Remotedesktopdienste
-- Addprogram-Methode Remotedesktopdienste, Win32_TSVirtualIP-Klasse
-- Win32_TSVirtualIP-Klasse Remotedesktopdienste, addprogram-Methode
+- AddProgram-Remotedesktopdienste
+- AddProgram-Methode Remotedesktopdienste , Win32_TSVirtualIP-Klasse
+- Win32_TSVirtualIP klasse Remotedesktopdienste , AddProgram-Methode
 topic_type:
 - apiref
 api_name:
@@ -17,16 +17,16 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 4de573e8d04500917ed44d5a0453005b3aa691bf
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 8d2f78cb461a61467867a544e954a71c23d59432e29450a7b0f35184f0edec57
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "103740768"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117757858"
 ---
-# <a name="addprogram-method-of-the-win32_tsvirtualip-class"></a>Addprogram-Methode der Win32- \_ Klasse "tvirtualip"
+# <a name="addprogram-method-of-the-win32_tsvirtualip-class"></a>AddProgram-Methode der Win32 \_ TSVirtualIP-Klasse
 
-Fügt der Liste der Programme, die die IP-Virtualisierung verwenden, ein Programm hinzu.
+Fügt der Liste der Programme, die IP-Virtualisierung verwenden, ein Programm hinzu.
 
 ## <a name="syntax"></a>Syntax
 
@@ -43,20 +43,20 @@ uint32 AddProgram(
 
 <dl> <dt>
 
-*Programpath* \[ in\]
+*ProgramPath* \[ In\]
 </dt> <dd>
 
 Typ: **Zeichenfolge**
 
-Der Pfad und der Dateiname des Programms, das der Liste hinzugefügt werden soll.
+Der Pfad und Dateiname des Programms, das der Liste hinzugefügt werden soll.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Typ: **UInt32**
+Typ: **uint32**
 
-Gibt bei Erfolg 0 zurück, andernfalls wird ein WMI-Fehlercode zurückgegeben. Eine Liste dieser Werte finden Sie unter [Remotedesktopdienste Fehler Codes des WMI-Anbieters](terminal-services-wmi-provider-error-codes.md) . Die-Methode gibt einen Fehler zurück, wenn die Einstellung Untergruppen Richtlinien Steuerung liegt.
+Gibt bei Erfolg 0 zurück, andernfalls wird ein WMI-Fehlercode zurückgegeben. Eine Liste dieser Remotedesktopdienste finden Sie unter [Fehlercodes](terminal-services-wmi-provider-error-codes.md) für WMI-Anbieter. Die -Methode gibt einen Fehler zurück, wenn sich die Einstellung unter der Gruppenrichtliniensteuerung befindet.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -66,18 +66,18 @@ Gibt bei Erfolg 0 zurück, andernfalls wird ein WMI-Fehlercode zurückgegeben. E
 |-------------------------------------|-----------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Nicht unterstützt<br/>                                                               |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2008 R2<br/>                                                       |
-| Namespace<br/>                | Root \\ CIMv2 \\ TerminalServices<br/>                                                |
-| Header<br/>                   | <dl> <dt>Bmolface. h</dt> </dl>   |
-| MOF<br/>                      | <dl> <dt>Tscsgwmi. MOF</dt> </dl> |
+| Namespace<br/>                | \\ \\ CiMv2-Stammterminaldienste<br/>                                                |
+| Header<br/>                   | <dl> <dt>Bdaiface.h</dt> </dl>   |
+| MOF<br/>                      | <dl> <dt>TSCfgWmi.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>TSCfgWmi.dll</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Win32- \_ virtualialip**](win32-tsvirtualip.md)
+[**Win32 \_ TSVirtualIP**](win32-tsvirtualip.md)
 </dt> </dl>
 
  

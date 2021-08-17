@@ -1,6 +1,6 @@
 ---
 title: DefaultAction-Eigenschaft
-description: Die DefaultAction-Eigenschaft eines Objekts beschreibt die primäre Manipulationsmethode des Objekts aus sicht des Benutzers. Die DefaultAction-Eigenschaft eines Objekts sollte ein Verb oder ein kurzer Verbbegriff sein.
+description: Die DefaultAction-Eigenschaft eines Objekts beschreibt die primäre Manipulationsmethode des Objekts aus Sicht des Benutzers. Die DefaultAction-Eigenschaft eines Objekts sollte ein Verb oder ein kurzer Verbphrase sein.
 ms.assetid: 8242c0af-b42e-44a4-8807-d6740fa1a24a
 ms.topic: article
 ms.date: 05/31/2018
@@ -13,18 +13,18 @@ ms.locfileid: "118325754"
 ---
 # <a name="defaultaction-property"></a>DefaultAction-Eigenschaft
 
-Die **DefaultAction-Eigenschaft eines** Objekts beschreibt die primäre Manipulationsmethode des Objekts aus sicht des Benutzers. Die **DefaultAction-Eigenschaft eines** Objekts sollte ein Verb oder ein kurzer Verbbegriff sein.
+Die **DefaultAction-Eigenschaft** eines Objekts beschreibt die primäre Manipulationsmethode des Objekts aus Sicht des Benutzers. Die **DefaultAction-Eigenschaft** eines Objekts sollte ein Verb oder ein kurzer Verbphrase sein.
 
-Die **DefaultAction-Eigenschaft** wird durch Aufrufen von [**IAccessible::get \_ accDefaultAction abgerufen.**](/windows/desktop/api/Oleacc/nf-oleacc-iaccessible-get_accdefaultaction)
+Die **DefaultAction-Eigenschaft** wird durch Aufrufen von [**IAccessible::get \_ accDefaultAction**](/windows/desktop/api/Oleacc/nf-oleacc-iaccessible-get_accdefaultaction)abgerufen.
 
-Um die Standardaktion eines Objekts durchzuführen, rufen Clients [**IAccessible::accDoDefaultAction auf.**](/windows/desktop/api/Oleacc/nf-oleacc-iaccessible-accdodefaultaction)
+Clients rufen [**IAccessible::accDoDefaultAction**](/windows/desktop/api/Oleacc/nf-oleacc-iaccessible-accdodefaultaction)auf, um die Standardaktion eines Objekts auszuführen.
 
-Nicht alle Objekte verfügen über Standardaktionen, und einige Objekte verfügen über eine Standardaktion, die mit ihrer [**Value-Eigenschaft**](value-property.md) verknüpft ist, wie in den folgenden Beispielen gezeigt:
+Nicht alle Objekte verfügen über Standardaktionen, und einige Objekte verfügen über eine Standardaktion, die sich auf die [**Value-Eigenschaft**](value-property.md) bezieht, z. B. in den folgenden Beispielen:
 
--   Ein ausgewähltes Kontrollkästchen verfügt über die Standardaktion "Deaktivieren" und den Wert "Aktiviert".
--   Ein deaktiviertes Kontrollkästchen verfügt über die Standardaktion "Check" und den Wert "Unchecked".
--   Eine Schaltfläche mit der Bezeichnung "Drucken" hat die Standardaktion "Drücken" ohne Wert.
--   Ein statisches Textsteuerfeld oder ein Bearbeitungssteuerfeld, das "Printer" (Drucker) zeigt, hat keine Standardaktion, aber den Wert "Printer".
+-   Ein ausgewähltes Kontrollkästchen verfügt über die Standardaktion "Deaktivieren" und den Wert "Checked".
+-   Ein deaktiviertes Kontrollkästchen weist die Standardaktion "Check" und den Wert "Unchecked" auf.
+-   Eine Schaltfläche mit der Bezeichnung "Drucken" hat die Standardaktion "Press" (Drücken) ohne Wert.
+-   Ein statisches Textsteuerelement oder ein Bearbeitungssteuerelement, das "Printer" anzeigt, hat keine Standardaktion, aber den Wert "Printer".
 
  
 

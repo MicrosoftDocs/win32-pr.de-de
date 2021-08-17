@@ -1,41 +1,41 @@
 ---
-description: Gibt an, ob ein Decoder vor anderen Formaten IYUV/I420-Ausgabetypen (für die Transcodierung geeignet) verfügbar macht.
+description: Gibt an, ob ein Decoder IYUV/I420-Ausgabetypen (für die Transcodierung geeignet) vor anderen Formaten verfügbar macht.
 ms.assetid: 8505CFA1-210A-4DA8-B92A-FCE62F0310E5
-title: MFT_DECODER_EXPOSE_OUTPUT_TYPES_IN_NATIVE_ORDER-Attribut (MF Transform. h)
+title: MFT_DECODER_EXPOSE_OUTPUT_TYPES_IN_NATIVE_ORDER-Attribut (Mftransform.h)
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 01ecf074fa0767552a48e3238374dbd02f077404
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 46b91492054215aee5a63dbcf0adf300d74933a0859a2d71256e7e4352deba9e
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "103755280"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117872339"
 ---
-# <a name="mft_decoder_expose_output_types_in_native_order-attribute"></a>MFT- \_ Decoder macht \_ \_ Ausgabe \_ Typen im systemeigenen \_ \_ \_ Order-Attribut verfügbar.
+# <a name="mft_decoder_expose_output_types_in_native_order-attribute"></a>\_MFT-DECODER \_ MACHT \_ \_ AUSGABETYPEN \_ IM \_ \_ NATIVEN ORDER-Attribut VERFÜGBAR
 
-Gibt an, ob ein Decoder vor anderen Formaten IYUV/I420-Ausgabetypen (für die Transcodierung geeignet) verfügbar macht.
+Gibt an, ob ein Decoder IYUV/I420-Ausgabetypen (für die Transcodierung geeignet) vor anderen Formaten verfügbar macht.
 
 ## <a name="data-type"></a>Datentyp
 
 **UINT32**
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Dieses Attribut ist ein Hinweis für den Decoder, seine Liste der Ausgabetypen in einer bestimmten Reihenfolge anzuordnen, abhängig von der vorgesehenen Verwendung, entweder Wiedergabe oder transcode.
+Dieses Attribut ist ein Hinweis für den Decoder, seine Liste der Ausgabetypen in einer bestimmten Reihenfolge anzuordnen, je nach beabsichtigter Verwendung, entweder Wiedergabe oder Transcodierung.
 
-Bei den meisten Codierungs Formaten (H. 264, MPEG-2, WMV) unterstützen die Video-Decoder in Microsoft Media Foundation mehrere allgemeine YUV-Ausgaben, einschließlich NV12, YV12, im YUY2, IYUV und I420. Der Decoder bietet mithilfe der [**imftransform:: getoutputavailabletype**](/windows/desktop/api/mftransform/nf-mftransform-imftransform-getoutputavailabletype) -Methode eine geordnete Liste von Ausgabetypen.
+Für die meisten Codierungsformate (H.264, MPEG-2, WMV) unterstützen die Videodecoder in Microsoft Media Foundation mehrere gängige YUV-Ausgaben, einschließlich NV12, YV12, YUY2, IYUV und I420. Der Decoder bietet eine geordnete Liste von Ausgabetypen über die [**ZUGEHÖRIGETRANSFORM::GetOutputAvailableType-Methode.**](/windows/desktop/api/mftransform/nf-mftransform-imftransform-getoutputavailabletype)
 
-Für die Wiedergabe ist NV12 das effizienteste und unterschiedlichste Format. Daher bieten Decoder standardmäßig NV12 als ersten Ausgabetyp in der Liste an. Dadurch wird die zum Auflösen des Medientyps erforderliche Zeit minimiert, wenn eine Wiedergabe Topologie aufgebaut wird. Bei der Transcodierung sind IYUV oder I420 jedoch für die CPU effizienter und werden in der Regel von Encodern bevorzugt.
+Für die Wiedergabe ist NV12 das effizienteste und am häufigsten unterstützte Format. Daher bieten Decoder in der Regel NV12 als ersten Ausgabetyp in der Liste an. Dadurch wird die Zeit minimiert, die zum Auflösen des Medientyps beim Erstellen einer Wiedergabetopologie benötigt wird. Für die Transcodierung sind IYUV oder I420 jedoch effizienter für die CPU und werden in der Regel von Encodern bevorzugt.
 
-Wenn ein Decoder dieses Attribut unterstützt, weist das Attribut folgendes Verhalten auf:
+Wenn ein Decoder dieses Attribut unterstützt, weist das Attribut das folgende Verhalten auf:
 
--   Wenn das Attribut einen Wert ungleich 0 (null) aufweist, werden IYUV und I420 zuerst in der Liste der Ausgabemedien Typen angezeigt. Diese Einstellung ist für die Transcodierung am effizientesten.
--   Wenn das-Attribut 0 (null) ist, wird NV12 zuerst in der Liste der Ausgabemedien Typen angezeigt. Diese Einstellung ist für die Wiedergabe am effizientesten und ist die Standardeinstellung.
+-   Wenn das Attribut über einen Wert ungleich 0 (null) verfügt, werden IYUV und I420 zuerst in der Liste der Ausgabemedientypen angezeigt. Diese Einstellung ist für die Transcodierung am effizientesten.
+-   Wenn das Attribut 0 (null) ist, wird NV12 zuerst in der Liste der Ausgabemedientypen angezeigt. Diese Einstellung ist für die Wiedergabe am effizientesten und die Standardeinstellung.
 
 So legen Sie dieses Attribut fest:
 
-1.  Aufrufen von [**imftransform:: GetAttributes**](/windows/desktop/api/mftransform/nf-mftransform-imftransform-getattributes) für den Decoder zum Abrufen eines [**imfattributes**](/windows/desktop/api/mfobjects/nn-mfobjects-imfattributes) -Zeigers.
-2.  Zum Hinzufügen des Attributs wird [**imfattributes:: SetUINT32**](/windows/desktop/api/mfobjects/nf-mfobjects-imfattributes-setuint32) aufgerufen.
+1.  Rufen Sie [**ÜBERTRANSFORM::GetAttributes**](/windows/desktop/api/mftransform/nf-mftransform-imftransform-getattributes) für den Decoder auf, um einen [**POINTERAttributes-Zeiger**](/windows/desktop/api/mfobjects/nn-mfobjects-imfattributes) abzurufen.
+2.  Rufen Sie [**DIE ATTRIBUTEAttributes::SetUINT32**](/windows/desktop/api/mfobjects/nf-mfobjects-imfattributes-setuint32) auf, um das Attribut hinzuzufügen.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -43,13 +43,13 @@ So legen Sie dieses Attribut fest:
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Windows 8 \[ -Desktop-Apps \| UWP-apps\]<br/>                                        |
+| Unterstützte Mindestversion (Client)<br/> | \[Windows 8 \|Desktop-Apps UWP-Apps\]<br/>                                        |
 | Unterstützte Mindestversion (Server)<br/> | Nicht unterstützt<br/>                                                                |
-| Header<br/>                   | <dl> <dt>"MF Transform. h"</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Mftransform.h</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 

@@ -1,48 +1,48 @@
 ---
-title: WDS-Transport Verwaltungs Schnittstellen
+title: WDS Transport Management Schnittstellen
 ms.assetid: b86df804-f8d3-4267-9ee9-0a539068cfb2
-description: 'Weitere Informationen finden Sie hier: WDS-Transport Verwaltungs Schnittstellen'
+description: Weitere Informationen zu WDS Transport Management Interfaces
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 6f1cb6148994962b451b443ba6a7b80430f93ef7
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 9b8874d762691cc83d4bac445e75e5fd477ad330e46fddf97533ea4c13f51cb4
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "103865980"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117745496"
 ---
-# <a name="wds-transport-management-interfaces"></a>WDS-Transport Verwaltungs Schnittstellen
+# <a name="wds-transport-management-interfaces"></a>WDS Transport Management Schnittstellen
 
-Die Windows-Bereitstellungs Dienste (WDS)-Transport Verwaltung verwendet die folgenden Schnittstellen:
+Windows Bereitstellungsdienste (WDS) Transport Management verwendet die folgenden Schnittstellen:
 
--   [**Iwdstransportcachable**](/windows/desktop/api/Wdstptmgmt/nn-wdstptmgmt-iwdstransportcacheable)
--   [**Iwdstransportclient**](/windows/desktop/api/Wdstptmgmt/nn-wdstptmgmt-iwdstransportclient)
--   [**Iwdstransportcollection**](/windows/desktop/api/Wdstptmgmt/nn-wdstptmgmt-iwdstransportcollection)
--   [**Iwdstransportconfigurationmanager**](/windows/desktop/api/Wdstptmgmt/nn-wdstptmgmt-iwdstransportconfigurationmanager)
+-   [**IWdsTransportCacheable**](/windows/desktop/api/Wdstptmgmt/nn-wdstptmgmt-iwdstransportcacheable)
+-   [**IWdsTransportClient**](/windows/desktop/api/Wdstptmgmt/nn-wdstptmgmt-iwdstransportclient)
+-   [**IWdsTransportCollection**](/windows/desktop/api/Wdstptmgmt/nn-wdstptmgmt-iwdstransportcollection)
+-   [**IWdsTransportConfigurationManager**](/windows/desktop/api/Wdstptmgmt/nn-wdstptmgmt-iwdstransportconfigurationmanager)
 -   [**IWdsTransportConfigurationManager2**](/windows/desktop/api/Wdstptmgmt/nn-wdstptmgmt-iwdstransportconfigurationmanager2)
--   [**Iwdstransportcontent**](/windows/desktop/api/Wdstptmgmt/nn-wdstptmgmt-iwdstransportcontent)
--   [**Iwdstransportdiagnosticspolicy**](/windows/desktop/api/Wdstptmgmt/nn-wdstptmgmt-iwdstransportdiagnosticspolicy)
--   [**Iwdstransport Manager**](/windows/desktop/api/Wdstptmgmt/nn-wdstptmgmt-iwdstransportmanager)
--   [**Iwdstransportmulticastsessionpolicy**](/windows/desktop/api/Wdstptmgmt/nn-wdstptmgmt-iwdstransportmulticastsessionpolicy)
--   [**Iwdstransportnamespace**](/windows/desktop/api/Wdstptmgmt/nn-wdstptmgmt-iwdstransportnamespace)
--   [**Iwdstransportnamespaceautocast**](/windows/win32/api/wdstptmgmt/nn-wdstptmgmt-iwdstransportnamespaceautocast)
--   [**Iwdstransportnamespacemanager**](/windows/desktop/api/Wdstptmgmt/nn-wdstptmgmt-iwdstransportnamespacemanager)
--   [**Iwdstransportnamespacescheduledcast**](/windows/desktop/api/Wdstptmgmt/nn-wdstptmgmt-iwdstransportnamespacescheduledcast)
--   [**Iwdstransportnamespacescheduledcastautostart**](/windows/desktop/api/Wdstptmgmt/nn-wdstptmgmt-iwdstransportnamespacescheduledcastautostart)
--   [**Iwdstransportnamespacescheduledcastmanualstart**](/windows/win32/api/wdstptmgmt/nn-wdstptmgmt-iwdstransportnamespacescheduledcastmanualstart)
--   [**Iwdstransportserver**](/windows/desktop/api/Wdstptmgmt/nn-wdstptmgmt-iwdstransportserver)
--   [**Iwdstransportservicepolicy**](/windows/desktop/api/Wdstptmgmt/nn-wdstptmgmt-iwdstransportservicepolicy)
--   [**Iwdstransportsession**](/windows/desktop/api/Wdstptmgmt/nn-wdstptmgmt-iwdstransportsession)
--   [**Iwdstransportsetupmanager**](/windows/desktop/api/Wdstptmgmt/nn-wdstptmgmt-iwdstransportsetupmanager)
+-   [**IWdsTransportContent**](/windows/desktop/api/Wdstptmgmt/nn-wdstptmgmt-iwdstransportcontent)
+-   [**IWdsTransportDiagnosticsPolicy**](/windows/desktop/api/Wdstptmgmt/nn-wdstptmgmt-iwdstransportdiagnosticspolicy)
+-   [**IWdsTransportManager**](/windows/desktop/api/Wdstptmgmt/nn-wdstptmgmt-iwdstransportmanager)
+-   [**IWdsTransportMulticastSessionPolicy**](/windows/desktop/api/Wdstptmgmt/nn-wdstptmgmt-iwdstransportmulticastsessionpolicy)
+-   [**IWdsTransportNamespace**](/windows/desktop/api/Wdstptmgmt/nn-wdstptmgmt-iwdstransportnamespace)
+-   [**IWdsTransportNamespaceAutoCast**](/windows/win32/api/wdstptmgmt/nn-wdstptmgmt-iwdstransportnamespaceautocast)
+-   [**IWdsTransportNamespaceManager**](/windows/desktop/api/Wdstptmgmt/nn-wdstptmgmt-iwdstransportnamespacemanager)
+-   [**IWdsTransportNamespaceScheduledCast**](/windows/desktop/api/Wdstptmgmt/nn-wdstptmgmt-iwdstransportnamespacescheduledcast)
+-   [**IWdsTransportNamespaceScheduledCastAutoStart**](/windows/desktop/api/Wdstptmgmt/nn-wdstptmgmt-iwdstransportnamespacescheduledcastautostart)
+-   [**IWdsTransportNamespaceScheduledCastManualStart**](/windows/win32/api/wdstptmgmt/nn-wdstptmgmt-iwdstransportnamespacescheduledcastmanualstart)
+-   [**IWdsTransportServer**](/windows/desktop/api/Wdstptmgmt/nn-wdstptmgmt-iwdstransportserver)
+-   [**IWdsTransportServicePolicy**](/windows/desktop/api/Wdstptmgmt/nn-wdstptmgmt-iwdstransportservicepolicy)
+-   [**IWdsTransportSession**](/windows/desktop/api/Wdstptmgmt/nn-wdstptmgmt-iwdstransportsession)
+-   [**IWdsTransportSetupManager**](/windows/desktop/api/Wdstptmgmt/nn-wdstptmgmt-iwdstransportsetupmanager)
 
-Die folgenden Versionen sind ab Windows 8 und Windows Server 2012 verfügbar.
+Die folgenden Schritte sind ab Windows 8 und Windows Server 2012.
 
--   [**Iwdstransportcontentprovider**](/windows/desktop/api/Wdstptmgmt/nn-wdstptmgmt-iwdstransportcontentprovider)
+-   [**IWdsTransportContentProvider**](/windows/desktop/api/Wdstptmgmt/nn-wdstptmgmt-iwdstransportcontentprovider)
 -   [**IWdsTransportServer2**](/windows/desktop/api/Wdstptmgmt/nn-wdstptmgmt-iwdstransportserver2)
 -   [**IWdsTransportServicePolicy2**](/windows/desktop/api/Wdstptmgmt/nn-wdstptmgmt-iwdstransportservicepolicy2)
 -   [**IWdsTransportSetupManager2**](/windows/desktop/api/Wdstptmgmt/nn-wdstptmgmt-iwdstransportsetupmanager2)
--   [**Iwdstransporttftpclient**](/windows/desktop/api/Wdstptmgmt/nn-wdstptmgmt-iwdstransporttftpclient)
--   [**Iwdstransporttftpmanager**](/windows/desktop/api/Wdstptmgmt/nn-wdstptmgmt-iwdstransporttftpmanager)
+-   [**IWdsTransportTftpClient**](/windows/desktop/api/Wdstptmgmt/nn-wdstptmgmt-iwdstransporttftpclient)
+-   [**IWdsTransportTftpManager**](/windows/desktop/api/Wdstptmgmt/nn-wdstptmgmt-iwdstransporttftpmanager)
 
  
 

@@ -1,6 +1,6 @@
 ---
 title: Von synchronen Suchvorgängen zurückgegebene Gerätesammlungen
-description: Gerätesammlungen sind Objekte, die ein oder mehrere Geräteobjekte enthalten. Eine Gerätesammlung macht die IUPnPDevices-Schnittstelle verfügbar, die Methoden und Eigenschaften zum Durchlaufen der Sammlung und zum Extrahieren einzelner Geräteobjekte bereitstellt.
+description: Gerätesammlungen sind Objekte, die mindestens ein Geräteobjekt enthalten. Eine Gerätesammlung macht die IUPnPDevices-Schnittstelle verfügbar, die Methoden und Eigenschaften zum Durchlaufen der Sammlung und Extrahieren einzelner Geräteobjekte enthält.
 ms.assetid: 45455c3f-7281-4f96-a609-2efd2cf36aa2
 ms.topic: article
 ms.date: 05/31/2018
@@ -13,11 +13,11 @@ ms.locfileid: "117755526"
 ---
 # <a name="device-collections-returned-by-synchronous-searches"></a>Von synchronen Suchvorgängen zurückgegebene Gerätesammlungen
 
-Gerätesammlungen sind Objekte, die ein oder mehrere Geräteobjekte enthalten. Eine Gerätesammlung macht die [**IUPnPDevices-Schnittstelle**](/windows/desktop/api/Upnp/nn-upnp-iupnpdevices) verfügbar, die Methoden und Eigenschaften zum Durchlaufen der Sammlung und zum Extrahieren einzelner Geräteobjekte bereitstellt.
+Gerätesammlungen sind Objekte, die mindestens ein Geräteobjekt enthalten. Eine Gerätesammlung macht die [**IUPnPDevices-Schnittstelle**](/windows/desktop/api/Upnp/nn-upnp-iupnpdevices) verfügbar, die Methoden und Eigenschaften zum Durchlaufen der Sammlung und Extrahieren einzelner Geräteobjekte enthält.
 
 ## <a name="vbscript-example"></a>VBScript-Beispiel
 
-VBScript-Anwendungen können auf zwei Arten auf die Objekte in der Auflistung zugreifen. Zuerst können sie die Elemente sequenziell durchlaufen, indem sie ein für ... Jeder... Next-Schleife, wie im folgenden Beispiel gezeigt:
+VBScript-Anwendungen können auf zwei Arten auf die Objekte in der Auflistung zugreifen. Zunächst können sie die Elemente sequenziell durchlaufen, indem sie ein für ... Jeder... Next-Schleife, wie im folgenden Beispiel gezeigt:
 
 
 ```VB
@@ -28,11 +28,11 @@ next
 
 
 
-In diesem Beispiel wird davon ausgegangen, dass die Variable devices mit dem Ergebnis einer vorherigen Suche initialisiert wurde. Die Schleife durchläuft die Geräteobjekte in der Sammlung und weist der Variablen deviceObj wiederum den Wert jedes Geräteobjekts zu. Der Text der Schleife kann Code enthalten, der das Device-Objekt verarbeitet.
+In diesem Beispiel wird davon ausgegangen, dass die Gerätevariable mit dem Ergebnis einer vorherigen Suche initialisiert wurde. Die Schleife durchfing die Geräteobjekte in der Sammlung und weist der Variablen deviceObj wiederum den Wert jedes Geräteobjekts zu. Der Text der Schleife kann Code enthalten, der das Device-Objekt verarbeitet.
 
 ## <a name="c-example"></a>C++-Beispiel
 
-Das folgende Beispiel zeigt den C++-Code, der für den Zugriff auf die Objekte in einer Auflistung von Geräteobjekten erforderlich ist. Die angezeigte Funktion **TraverseCollection** empfängt einen Zeiger auf die [**IUPnPDevices-Schnittstelle**](/windows/desktop/api/Upnp/nn-upnp-iupnpdevices) als Eingabeparameter. Dieser Schnittstellenzeiger kann von der [**FindByType-Methode**](/windows/desktop/api/Upnp/nf-upnp-iupnpdevicefinder-findbytype) oder anderen **Find-Methoden** des Device Finder-Objekts zurückgegeben werden.
+Das folgende Beispiel zeigt den C++-Code, der für den Zugriff auf die Objekte in einer Auflistung von Geräteobjekten erforderlich ist. Die gezeigte **Funktion TraverseCollection** empfängt einen Zeiger auf die [**IUPnPDevices-Schnittstelle**](/windows/desktop/api/Upnp/nn-upnp-iupnpdevices) als Eingabeparameter. Dieser Schnittstellenzeiger kann von der [**FindByType-Methode**](/windows/desktop/api/Upnp/nf-upnp-iupnpdevicefinder-findbytype) oder anderen **Find-Methoden** des Device Finder-Objekts zurückgegeben werden.
 
 
 ```C++
@@ -82,7 +82,7 @@ HRESULT TraverseCollection(IUPnPDevices * pDevices)
 
 
 
-Der erste Schritt besteht darin, mithilfe der [**\_ NewEnum-Eigenschaft**](/windows/win32/api/upnp/nf-upnp-iupnpdevices-get__newenum) einen neuen Enumerator für die Auflistung anzufordern. Dadurch wird ein Enumerator als [**IUnknown-Schnittstelle**](/windows/win32/api/unknwn/nn-unknwn-iunknown) zurückgegeben. Der Beispielcode ruft [**IUnknown::QueryInterface**](/windows/win32/api/unknwn/nf-unknwn-iunknown-queryinterface(q)) auf, um die [**IEnumVARIANT-Schnittstelle**](/windows/win32/api/oaidl/nn-oaidl-ienumvariant) abzurufen. Der Beispielcode legt dann den Enumerator durch Aufrufen der [**IEnumVARIANT::Reset-Methode**](/windows/win32/api/oaidl/nf-oaidl-ienumvariant-reset) auf den Anfang der Auflistung fest. Schließlich ruft der Beispielcode die [**IEnumVARIANT::Next-Methode**](/windows/win32/api/oaidl/nf-oaidl-ienumvariant-next) auf, um die Auflistung zu durchlaufen. Die Geräteobjekte in der Auflistung sind in **VARIANT-Strukturen** enthalten. Diese Strukturen enthalten Zeiger auf [**IDispatch-Schnittstellen**](/windows/win32/api/oaidl/nn-oaidl-idispatch) auf den Geräteobjekten. Um die [**IUPnPDevice-Schnittstelle**](/windows/desktop/api/Upnp/nn-upnp-iupnpdevice) abzurufen, ruft der Beispielcode **QueryInterface** für die **IDispatch-Schnittstelle** auf.
+Der erste Schritt besteht im Anfordern eines neuen Enumerators für die Auflistung mithilfe der [**\_ NewEnum-Eigenschaft.**](/windows/win32/api/upnp/nf-upnp-iupnpdevices-get__newenum) Dadurch wird ein Enumerator als [**IUnknown-Schnittstelle**](/windows/win32/api/unknwn/nn-unknwn-iunknown) zurückgegeben. Der Beispielcode ruft [**IUnknown::QueryInterface**](/windows/win32/api/unknwn/nf-unknwn-iunknown-queryinterface(q)) auf, um die [**IEnumVARIANT-Schnittstelle**](/windows/win32/api/oaidl/nn-oaidl-ienumvariant) zu erhalten. Der Beispielcode legt dann den Enumerator auf den Anfang der Auflistung fest, indem die [**IEnumVARIANT::Reset-Methode aufruft.**](/windows/win32/api/oaidl/nf-oaidl-ienumvariant-reset) Schließlich ruft der Beispielcode die [**IEnumVARIANT::Next-Methode**](/windows/win32/api/oaidl/nf-oaidl-ienumvariant-next) auf, um die Auflistung zu durchlaufen. Die Geräteobjekte in der Sammlung sind in **VARIANT-Strukturen** enthalten. Diese Strukturen enthalten Zeiger auf [**IDispatch-Schnittstellen**](/windows/win32/api/oaidl/nn-oaidl-idispatch) auf den Geräteobjekten. Um die [**IUPnPDevice-Schnittstelle**](/windows/desktop/api/Upnp/nn-upnp-iupnpdevice) zu erhalten, ruft der Beispielcode **QueryInterface** auf der **IDispatch-Schnittstelle** auf.
 
  
 

@@ -1,7 +1,7 @@
 ---
-description: Die getzählto ftype-Methode ruft die Anzahl der Objekte des angegebenen Typs ab, die in einer angegebenen Gruppe und allen untergeordneten Elementen enthalten sind.
+description: Die GetCountOfType-Methode ruft die Anzahl der Objekte des angegebenen Typs ab, die in einer angegebenen Gruppe und allen untergeordneten Objekten enthalten sind.
 ms.assetid: f3571fa5-8020-4079-ab7e-ba9ff280c0c5
-title: 'Iamtimeline:: getzählto ftype-Methode (qedit. h)'
+title: IAMTimeline::GetCountOfType-Methode (Qedit.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -14,21 +14,21 @@ api_type:
 api_location:
 - strmiids.lib
 - strmiids.dll
-ms.openlocfilehash: f0636eac7c651ed003c618e258f7dbf2bdd60996
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 8e9eb896f00752c5d9369cf494e7b1426347f82a7ebe2aac74f7822a936c2ffb
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106370638"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118401061"
 ---
-# <a name="iamtimelinegetcountoftype-method"></a>Iamtimeline:: getzählto ftype-Methode
+# <a name="iamtimelinegetcountoftype-method"></a>IAMTimeline::GetCountOfType-Methode
 
 > [!Note]  
-> \[Veraltet. Diese API kann aus zukünftigen Versionen von Windows entfernt werden.\]
+> \[Veraltet. Diese API kann aus zukünftigen Releases von Windows entfernt werden.\]
 
  
 
-Die `GetCountOfType` -Methode ruft die Anzahl der Objekte des angegebenen Typs ab, die in einer angegebenen Gruppe und allen untergeordneten Elementen enthalten sind.
+Die `GetCountOfType` -Methode ruft die Anzahl der Objekte des angegebenen Typs ab, die in einer angegebenen Gruppe und allen untergeordneten Objekten enthalten sind.
 
 ## <a name="syntax"></a>Syntax
 
@@ -48,63 +48,63 @@ HRESULT GetCountOfType(
 
 <dl> <dt>
 
-*Gruppieren* 
+*Gruppe* 
 </dt> <dd>
 
-Index Nummer der Gruppe, für die die Anzahl abgerufen werden soll.
+Indexnummer der Gruppe, für die die Anzahl abgerufen werden soll.
 
 </dd> <dt>
 
 *pVal* 
 </dt> <dd>
 
-Empfängt rekursiv die Anzahl von Objekten des angegebenen Typs, die in der Gruppe enthalten sind, und alle zugehörigen virtuellen Spuren.
+Empfängt rekursiv die Anzahl der Objekte des angegebenen Typs, die in der Gruppe enthalten sind, und alle zugehörigen virtuellen Spuren.
 
 </dd> <dt>
 
-*pvalwithcomps* 
+*pValWithComps* 
 </dt> <dd>
 
-Empfängt die Anzahl, die in *PVal* zurückgegeben wurde, sowie die Anzahl der durchsuchten Kompositionen, einschließlich dieses.
+Empfängt die in *pVal* zurückgegebene Anzahl sowie die Anzahl der gesuchten Kompositionen, einschließlich dieser.
 
 </dd> <dt>
 
-*Majortype* 
+*MajorType* 
 </dt> <dd>
 
-Member des enumerierten Typs der [**Zeitachse \_ \_**](timeline-major-type.md) , der den Typ des zu zählenden Objekts angibt.
+Member des enumerierten [**TIMELINE \_ MAJOR \_ TYPE-Typs,**](timeline-major-type.md) der den Typ des zu zählenden Objekts angibt.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt einen der folgenden **HRESULT** -Werte zurück.
+Gibt einen der folgenden **HRESULT-Werte** zurück.
 
 
 
 | Rückgabecode                                                                                  | Beschreibung                           |
 |----------------------------------------------------------------------------------------------|---------------------------------------|
 | <dl> <dt>**S \_ OK**</dt> </dl>         | Erfolg.<br/>                   |
-| <dl> <dt>**E \_ invalidArg**</dt> </dl> | Ungültige Gruppennummer.<br/>      |
-| <dl> <dt>**E- \_ Zeiger**</dt> </dl>    | **Null** -Zeigerargument.<br/> |
+| <dl> <dt>**E \_ INVALIDARG**</dt> </dl> | Ungültige Gruppennummer.<br/>      |
+| <dl> <dt>**E \_ POINTER**</dt> </dl>    | **NULL-Zeigerargument.**<br/> |
 
 
 
  
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Das Aufrufen dieser Methode entspricht dem Aufrufen von [**iamtimelinecomp:: getzählype**](iamtimelinecomp-getcountoftype.md) für die angegebene Gruppe. Weitere Informationen finden Sie im Abschnitt "Hinweise" dieser Methode.
+Das Aufrufen dieser Methode entspricht dem Aufrufen von [**IAMTimelineComp::GetCountOfType**](iamtimelinecomp-getcountoftype.md) für die angegebene Gruppe. Weitere Informationen finden Sie im Abschnitt "Hinweise" dieser Methode.
 
-In der Regel Ruft eine Anwendung diese Methode nicht auf. Sie wird intern von der Rendering-Engine aufgerufen.
+In der Regel ruft eine Anwendung diese Methode nicht auf. Sie wird intern von der Render-Engine aufgerufen.
 
 > [!Note]  
-> Die Header Datei "qedit. h" ist nicht mit Direct3D-Headern nach Version 7 kompatibel.
+> Die Headerdatei Qedit.h ist nicht mit Direct3D-Headern kompatibel, die höher als Version 7 sind.
 
  
 
 > [!Note]  
-> Zum Abrufen von "qedit. h" Laden Sie das [Microsoft Windows SDK Update für Windows Vista und .NET Framework 3,0](https://msdn.microsoft.com/windowsvista/bb980924.aspx)herunter. "Qedit. h" ist im Microsoft Windows SDK für Windows 7 und .NET Framework 3,5 Service Pack 1 nicht verfügbar.
+> Laden Sie zum Abrufen von Qedit.h das [Microsoft Windows SDK-Update für Windows Vista und .NET Framework 3.0](https://msdn.microsoft.com/windowsvista/bb980924.aspx)herunter. Qedit.h ist im Microsoft Windows SDK für Windows 7 und .NET Framework 3.5 Service Pack 1 nicht verfügbar.
 
  
 
@@ -114,19 +114,19 @@ In der Regel Ruft eine Anwendung diese Methode nicht auf. Sie wird intern von de
 
 | Anforderung | Wert |
 |--------------------|-----------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>"Qedit. h"</dt> </dl>      |
-| Bibliothek<br/> | <dl> <dt>"" "" ". Lib"</dt> </dl> |
+| Header<br/>  | <dl> <dt>Qedit.h</dt> </dl>      |
+| Bibliothek<br/> | <dl> <dt>Strmiids.lib</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Iamtimeline-Schnittstelle**](iamtimeline.md)
+[**IAMTimeline-Schnittstelle**](iamtimeline.md)
 </dt> <dt>
 
-[Fehler-und Erfolgs Codes](error-and-success-codes.md)
+[Fehler- und Erfolgscodes](error-and-success-codes.md)
 </dt> </dl>
 
  

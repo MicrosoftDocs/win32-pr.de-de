@@ -1,32 +1,32 @@
 ---
-title: Audioprobennahme
-description: Audioprobennahme
+title: Audio-Resampling
+description: Audio-Resampling
 ms.assetid: ec6ad6b2-1d35-4ac4-9a1e-3fc9c053000c
 keywords:
-- Windows Media-Format-SDK, audioresampling
-- Windows Media-Format-SDK, neusampling von Audiodaten
-- Advanced Systems Format (ASF), audioresampling
-- ASF (Advanced Systems Format), audioresampling
-- Advanced Systems Format (ASF), Resampling von Audiodaten
-- ASF (Advanced Systems Format), Resampling von Audiodaten
-- audioprobennahme
-- Neuberechnung von Audioinformationen, Informationen
+- Windows Medienformat-SDK, Audio-Resampling
+- Windows Medienformat-SDK, Resampling von Audio
+- Advanced Systems Format (ASF), Audioresampling
+- ASF (Advanced Systems Format), Audio resampling
+- Advanced Systems Format (ASF), Resampling von Audio
+- ASF (Advanced Systems Format), Resampling von Audio
+- Audio-Resampling
+- Resampling von Audiodaten, Informationen
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 608272a7e531d7380991a705d391e6226a6758d1
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: 7a5d95ed50117ac9d0fe7d71a2148314e1b9faf3ba8a26b99bb69083029b991c
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "104309987"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118434474"
 ---
-# <a name="audio-resampling"></a>Audioprobennahme
+# <a name="audio-resampling"></a>Audio-Resampling
 
-Jedes komprimierte Format eines Audiocodecs hat eine bestimmte Samplingrate und eine bestimmte Stichprobengröße. Diese müssen nicht den Einstellungen des Eingabe Formats oder des Ausgabeformats entsprechen. Wenn ein Eingabeformat andere Einstellungen als das im Profil beschriebene komprimierte Format aufweist, wird das audioverfahren während des Codierungs Vorgangs vom Writer neu erstellt, um das komprimierte Format abzugleichen. Nur bestimmte Formate werden vom Writer als Eingabe akzeptiert. Wenn Sie die Eingabeformate für einen komprimierten Audiostream auflisten, können alle abgerufenen Formate neu erstellt werden, sodass Sie dem Format im Profil entsprechen.
+Jedes komprimierte Format eines Audiocodecs hat eine bestimmte Abtastrate und Stichprobengröße. Diese müssen nicht mit den Einstellungen des Eingabe- oder Ausgabeformats übereinstimmen. Wenn ein Eingabeformat über andere Einstellungen als das im Profil beschriebene komprimierte Format verfügt, wird der Writer die Audiodaten während des Codierungsprozesses erneutsammpeln, um dem komprimierten Format zu passen. Nur bestimmte Formate werden vom Writer als Eingabe akzeptiert. Wenn Sie die Eingabeformate für einen komprimierten Audiostream aufzählen, können alle abgerufenen Formate neu erstellt werden, um dem Format im Profil zu passen.
 
-Wenn Sie komprimierte Audiodaten lesen, wird der Inhalt vom Reader entsprechend dem Ausgabeformat neu erstellt. Sie müssen eines der Ausgabeformate verwenden, die vom Reader aufgelistet werden, damit Sie sicherstellen können, dass die Audiodaten in den Ausgabe Formateinstellungen erneut erstellt werden können.
+Beim Lesen komprimierter Audiodaten wird der Inhalt vom Reader neu sampelt, um dem Ausgabeformat zu passen. Sie müssen eines der Ausgabeformate verwenden, die vom Reader aufzählt werden, damit Sie garantiert können, dass die Audiodaten für die Ausgabeformateinstellungen neu erstellt werden können.
 
-Jede erneute Stichprobe wirkt sich potenziell auf die Audioqualität aus. Wenn möglich, sollten Sie Eingabe-und Ausgabeformate mit Einstellungen verwenden, die dem komprimierten Format entsprechen.
+Jedes Resampling wirkt sich potenziell auf die Qualität des Audios aus. Wenn möglich, sollten Sie Eingabe- und Ausgabeformate mit Einstellungen verwenden, die mit dem komprimierten Format übereinstimmen.
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
@@ -41,9 +41,9 @@ Jede erneute Stichprobe wirkt sich potenziell auf die Audioqualität aus. Wenn m
 [**Arbeiten mit Ausgaben**](working-with-outputs.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

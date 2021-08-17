@@ -31,7 +31,7 @@ Die Windows Management Instrumentation Query Language (WQL) unterstützt eine Re
 
  
 
-Es gibt einige zusätzliche WQL-spezifische Operatoren: IS, IS NOT, ISA und LIKE. Die IS- und IS NOT-Operatoren sind in der WHERE-Klausel nur gültig, wenn die Konstante **NULL ist.** Beispielsweise sind die folgenden Abfragen gültig:
+Es gibt einige zusätzliche WQL-spezifische Operatoren: IS, IS NOT, ISA und LIKE. Die Operatoren IS und IS NOT sind in der WHERE-Klausel nur gültig, wenn die Konstante **NULL ist.** Beispielsweise sind die folgenden Abfragen gültig:
 
 
 ```sql
@@ -51,7 +51,7 @@ SELECT * FROM Win32_LogicalDisk WHERE FileSystem IS NOT "NTFS"
 
 
 
-Der ISA-Operator wird in der WHERE-Klausel von Daten- und Ereignisabfragen verwendet, um eingebettete Objekte für eine Klassenhierarchie zu testen. Der ISA-Operator macht es nicht mehr notwendig, neu abgeleitete Klassen nachverfolgung zu behalten, wenn eine Hierarchie von Klassen anfällt. Wenn Sie ISA verwenden, werden neu erstellte und vorhandene Unterklassen der angeforderten Klasse automatisch in das Ergebnisset aufgenommen.
+Der ISA-Operator wird in der WHERE-Klausel von Daten- und Ereignisabfragen verwendet, um eingebettete Objekte für eine Klassenhierarchie zu testen. Der ISA-Operator macht es nicht mehr notwendig, neu abgeleitete Klassen beim Anfordern einer Klassenhierarchie nachverfolgung zu lassen. Wenn Sie ISA verwenden, werden neu erstellte und vorhandene Unterklassen der angeforderten Klasse automatisch in das Ergebnisset aufgenommen.
 
 Weitere Informationen zur Syntax und Verwendung dieses Operators finden Sie in den folgenden Themen:
 

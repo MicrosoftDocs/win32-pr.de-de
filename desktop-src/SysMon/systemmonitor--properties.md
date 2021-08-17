@@ -1,6 +1,6 @@
 ---
-title: Systemmonitor-Eigenschaften
-description: 'Die Systemmonitor-Klasse verfügt über die folgenden Eigenschaften:'
+title: SystemMonitor-Eigenschaften
+description: Die SystemMonitor-Klasse verfügt über die folgenden Eigenschaften.
 ms.assetid: 37f8179a-50f8-481c-ae5e-d4081387eea0
 ms.topic: article
 ms.date: 05/31/2018
@@ -9,61 +9,61 @@ topic_type:
 api_name: ''
 api_type: ''
 api_location: ''
-ms.openlocfilehash: 16cee42f76a1fc448698ce7245e688279d8624a5
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: 17c4a26028219ebf4c1e3a8024493432c30e4c550c5d5e087ddf21a864d5ad27
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "104388782"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118882983"
 ---
-# <a name="systemmonitor-properties"></a>Systemmonitor-Eigenschaften
+# <a name="systemmonitor-properties"></a>SystemMonitor-Eigenschaften
 
-Die [**Systemmonitor**](systemmonitor.md) -Klasse verfügt über die folgenden Eigenschaften:
+Die [**SystemMonitor-Klasse**](systemmonitor.md) verfügt über die folgenden Eigenschaften:
 
 -   [**Darstellung**](systemmonitor-appearance.md)
--   [**BackColor**](systemmonitor-backcolor.md)
--   [**Backcolorctl**](systemmonitor-backcolorctl.md)
+-   [**Backcolor**](systemmonitor-backcolor.md)
+-   [**BackColorCtl**](systemmonitor-backcolorctl.md)
 -   [**Rahmenart**](systemmonitor-borderstyle.md)
--   [**Chartscroll**](systemmonitor-chartscroll.md)
+-   [**ChartScroll**](systemmonitor-chartscroll.md)
 -   [**Counters**](systemmonitor-counters.md)
--   [**Datapointcount**](systemmonitor-datapointcount.md)
+-   [**DataPointCount**](systemmonitor-datapointcount.md)
 -   [**DataSourceType**](systemmonitor-datasourcetype.md)
--   [**Display Type**](systemmonitor-displaytype.md)
--   [**Enabledigit-Gruppierung**](systemmonitor-enabledigitgrouping.md)
+-   [**DisplayType**](systemmonitor-displaytype.md)
+-   [**EnableDigitGrouping**](systemmonitor-enabledigitgrouping.md)
 -   [**EnableToolTips**](systemmonitor-enabletooltips.md)
--   [**Raster**](systemmonitor-font.md)
+-   [**Schriftart**](systemmonitor-font.md)
 -   [**ForeColor**](systemmonitor-forecolor.md)
--   [**Graphtitle**](systemmonitor-graphtitle.md)
+-   [**GraphTitle**](systemmonitor-graphtitle.md)
 -   [**GridColor**](systemmonitor-gridcolor.md)
 -   [**Markierung**](systemmonitor-highlight.md)
--   [**Protokoll Dateiname**](systemmonitor-logfilename.md)
+-   [**LogFileName**](systemmonitor-logfilename.md)
 -   [**LogFiles**](systemmonitor-logfiles.md)
--   [**Logsourcestarttime**](systemmonitor-logsourcestarttime.md)
--   [**Logsourcestoptime**](systemmonitor-logsourcestoptime.md)
--   [**Logviewstart**](systemmonitor-logviewstart.md)
--   [**Logviewstoppt**](systemmonitor-logviewstop.md)
+-   [**LogSourceStartTime**](systemmonitor-logsourcestarttime.md)
+-   [**LogSourceStopTime**](systemmonitor-logsourcestoptime.md)
+-   [**LogViewStart**](systemmonitor-logviewstart.md)
+-   [**LogViewStop**](systemmonitor-logviewstop.md)
 -   [**ManualUpdate**](systemmonitor-manualupdate.md)
 -   [**MaximumScale**](systemmonitor-maximumscale.md)
 -   [**MinimumScale**](systemmonitor-minimumscale.md)
--   [**Monitordupli-Einhaltungen**](systemmonitor-monitorduplicateinstances.md)
--   [**ReadOnly**](systemmonitor-readonly.md)
--   [**Report ValueType**](systemmonitor-reportvaluetype.md)
--   [**Showhorizontalgrid**](systemmonitor-showhorizontalgrid.md)
+-   [**MonitorDuplicateInstances**](systemmonitor-monitorduplicateinstances.md)
+-   [**Readonly**](systemmonitor-readonly.md)
+-   [**ReportValueType**](systemmonitor-reportvaluetype.md)
+-   [**ShowHorizontalGrid**](systemmonitor-showhorizontalgrid.md)
 -   [**ShowLegend**](systemmonitor-showlegend.md)
--   [**Showscalelabels**](systemmonitor-showscalelabels.md)
--   [**Showtimeaxislabels**](systemmonitor-showtimeaxislabels.md)
+-   [**ShowScaleLabels**](systemmonitor-showscalelabels.md)
+-   [**ShowTimeAxisLabels**](systemmonitor-showtimeaxislabels.md)
 -   [**ShowToolbar**](systemmonitor-showtoolbar.md)
--   [**Showvaluebar**](systemmonitor-showvaluebar.md)
--   [**Showverticalgrid**](systemmonitor-showverticalgrid.md)
--   [**Sqldsnname**](systemmonitor-sqldsnname.md)
--   [**Sqllogsetname**](systemmonitor-sqllogsetname.md)
--   [**Timebarcolor**](systemmonitor-timebarcolor.md)
+-   [**ShowValueBar**](systemmonitor-showvaluebar.md)
+-   [**ShowVerticalGrid**](systemmonitor-showverticalgrid.md)
+-   [**SqlDsnName**](systemmonitor-sqldsnname.md)
+-   [**SqlLogSetName**](systemmonitor-sqllogsetname.md)
+-   [**TimeBarColor**](systemmonitor-timebarcolor.md)
 -   [**UpdateInterval**](systemmonitor-updateinterval.md)
--   [**Yaxislabel**](systemmonitor-yaxislabel.md)
+-   [**YAxisLabel**](systemmonitor-yaxislabel.md)
 
- 
+ 
 
- 
+ 
 
 
 

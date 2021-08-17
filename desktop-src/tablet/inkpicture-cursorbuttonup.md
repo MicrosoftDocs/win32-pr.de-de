@@ -1,5 +1,5 @@
 ---
-description: 'InkPicture.CursorButtonUp-Ereignis: Tritt auf, wenn der InkCollector eine geöffnete Cursorschaltfläche erkennt.'
+description: 'InkPicture.CursorButtonUp-Ereignis: Tritt auf, wenn der InkCollector eine Cursorschaltfläche erkennt, die aktiv ist.'
 ms.assetid: bb10b032-a88d-4b52-9062-c0b63dfe98e9
 title: InkPicture.CursorButtonUp-Ereignis (Msinkaut.h)
 ms.topic: reference
@@ -13,7 +13,7 @@ ms.locfileid: "118451079"
 ---
 # <a name="inkpicturecursorbuttonup-event"></a>InkPicture.CursorButtonUp-Ereignis
 
-Tritt ein, wenn [**der InkCollector**](inkcollector-class.md) eine Cursorschaltfläche erkennt, die geöffnet ist.
+Tritt ein, wenn [**der InkCollector**](inkcollector-class.md) eine Cursorschaltfläche erkennt, die aktiv ist.
 
 ## <a name="syntax"></a>Syntax
 
@@ -34,7 +34,7 @@ void CursorButtonUp(
 *Cursor* \[ In\]
 </dt> <dd>
 
-Das [**IInkCursor Interface-Objekt,**](/windows/desktop/api/msinkaut/nn-msinkaut-iinkcursor) das das **CursorButtonUp-Ereignis generiert** hat.
+Das [**IInkCursor-Schnittstellenobjekt,**](/windows/desktop/api/msinkaut/nn-msinkaut-iinkcursor) das das **CursorButtonUp-Ereignis** generiert hat.
 
 </dd> <dt>
 
@@ -51,11 +51,11 @@ Dieses Ereignis gibt keinen Wert zurück.
 
 ## <a name="remarks"></a>Hinweise
 
-Eine Schaltfläche an einer Stiftspitze ist nach oben, wenn der Benutzer einen Strich schließt und den Stift aus dem Digitizer hebt. Wenn die Schaltfläche nicht gedrückt wird, ist eine Schaltfläche auf einem Knopf oben.
+Eine Schaltfläche auf einer Stiftspitze wird angezeigt, wenn der Benutzer einen Strich abschließt und den Stift aus dem Digitizer hebt. Eine Schaltfläche an einem Fass ist hoch, wenn die Schaltfläche nicht gedrückt wird.
 
-Wenn Sie die rechte Maustaste loslegen, erhalten Sie tatsächlich zwei **CursorButtonUp-Ereignisse** : eines für die rechte Schaltfläche nach oben und eines für die linke Schaltfläche nach oben.
+Wenn Sie die rechte Maustaste loslassen, erhalten Sie tatsächlich zwei **CursorButtonUp-Ereignisse:** eines für die rechte Schaltfläche nach oben und eines für die linke Schaltfläche nach oben.
 
-Diese Ereignismethode wird in den **\_ IInkCollectorEvents-,** **\_ IInkOverlayEvents-** und **\_ IInkPictureEvents-Disp-Interfaces** mit der ID DISPID \_ ICECursorButtonUp definiert.
+Diese Ereignismethode wird in den **\_ Dispinterfaces IInkCollectorEvents**, **\_ IInkOverlayEvents** und **\_ IInkPictureEvents** mit der ID DISPID \_ ICECursorButtonUp definiert.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -70,7 +70,7 @@ Diese Ereignismethode wird in den **\_ IInkCollectorEvents-,** **\_ IInkOverlayE
 
 
 
-## <a name="see-also"></a>Weitere Informationen:
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 

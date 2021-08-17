@@ -1,26 +1,26 @@
 ---
-title: Button-Steuerelement Verweis
-description: Button-Steuerelement Verweis
+title: Referenz zum Schaltflächensteuerelement
+description: Referenz zum Schaltflächensteuerelement
 ms.assetid: fab77471-ca1b-480a-b956-a872bf8b129a
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: bfd01c290cfa2b052c52af7a025150488ee4bf5f
-ms.sourcegitcommit: 92e74c99f8f4d097676959d0c317f533c2400a80
+ms.openlocfilehash: accef496a0cccd28cb5ff2dd7d02921bc1a32e355d5a1e3550dc4fe58eab3d76
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/09/2021
-ms.locfileid: "104352608"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117833570"
 ---
-# <a name="button-control-reference"></a>Button-Steuerelement Verweis
+# <a name="button-control-reference"></a>Referenz zum Schaltflächensteuerelement
 
 ## <a name="in-this-section"></a>In diesem Abschnitt
 
--   [Schaltflächen-Steuerungsfunktionen](bumper-button-control-reference-functions.md)
--   [Button-Steuerelement Makros](bumper-button-control-reference-macros.md)
--   [Button-Steuerelement Meldungen](bumper-button-control-reference-messages.md)
--   [Button-Steuerelement Benachrichtigungen](bumper-button-control-reference-notifications.md)
--   [Schaltflächen-Steuerungsstrukturen](bumper-button-control-reference-structures.md)
--   [Button-Steuerelement Konstanten](bumper-button-control-reference-constants.md)
+-   [Schaltflächen-Steuerelementfunktionen](bumper-button-control-reference-functions.md)
+-   [Schaltflächen-Steuerelementmakros](bumper-button-control-reference-macros.md)
+-   [Schaltflächensteuerelementmeldungen](bumper-button-control-reference-messages.md)
+-   [Benachrichtigungen zum Schaltflächensteuerelement](bumper-button-control-reference-notifications.md)
+-   [Schaltflächen-Steuerelementstrukturen](bumper-button-control-reference-structures.md)
+-   [Schaltflächensteuerelementkonstanten](bumper-button-control-reference-constants.md)
 
  
 

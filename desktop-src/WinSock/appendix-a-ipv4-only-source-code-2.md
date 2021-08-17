@@ -13,19 +13,19 @@ ms.locfileid: "118560636"
 ---
 # <a name="appendix-a-ipv4-only-source-code"></a>Anhang A: Nur IPv4-Quellcode
 
-Dieser Anhang enthält den Quellcode für die Beispiele simplec.c und Simples.c des Platform Software Development Kit (SDK), die in diesem IPv6-Leitfaden als Beispiele verwendet werden:
+Dieser Anhang enthält den Quellcode für die SDK-Beispiele (Platform Software Development Kit) Simplec.c und Simples.c, die in diesem IPv6-Leitfaden als Beispiele verwendet werden:
 
--   [Nur-IPv4-Clientcode](ipv4-only-client-code-2.md)
+-   [Nur IPv4-Clientcode](ipv4-only-client-code-2.md)
 -   [Nur IPv4-Servercode](ipv4-only-server-code-2.md)
 
 > [!WARNING]
 >
-> Dieser Code ist in dieser Anleitung enthalten, um den in Anhang B bereitgestellten unabhängigen IP-Versionscode zu vergleichen. Dieser Beispielcode wird zu Vergleichszwecken bereitgestellt und bietet beim Lesen dieses IPv6-Leitfadens eine klare und leicht verfügbare Referenz. Eine agnostische IP-Version dieses Quellcodes finden Sie in [Anhang B: Agnostic Source Code der IP-Version.](appendix-b-ip-version-agnostic-source-code-2.md)
+> Dieser Code ist in diesem Leitfaden enthalten, um den in Anhang B bereitgestellten unabhängigen IP-Versionscode gegenüber zu vergleichen. Dieser Beispielcode wird zu Vergleichszwecken bereitgestellt und bietet eine klare und leicht verfügbare Referenz beim Lesen dieses IPv6-Leitfadens. Eine agnostische VERSION dieser IP-Version dieses Quellcodes finden Sie in Anhang [B: IP-Version Agnostic Source Code](appendix-b-ip-version-agnostic-source-code-2.md).
 
  
 
 > [!Note]  
-> Durch den Vergleich des Quellcodes in Anhang A (nur IPv4) und Anhang B (IP-Version agnostisch) erhalten Sie ein Gefühl für die Änderungen, die erforderlich sind, um Ihre Windows Sockets-Anwendung zu ändern, um Unterstützung für IPv6 hinzuzufügen.
+> Wenn Sie den Quellcode in Anhang A (nur IPv4) und Anhang B (IP-Version agnostisch) vergleichen, erhalten Sie einen Sinn für die Änderungen, die erforderlich sind, um Ihre Windows Sockets-Anwendung so zu ändern, dass Unterstützung für IPv6 hinzugefügt wird.
 
  
 

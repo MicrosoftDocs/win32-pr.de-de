@@ -17,7 +17,7 @@ Windows Der Update-Agent (WUA) verwendet die strukturen, die in der folgenden Ta
 
 
 
-| Struktur                                                          | BESCHREIBUNG                                                        |
+| Struktur                                                          | Beschreibung                                                        |
 |--------------------------------------------------------------------|--------------------------------------------------------------------|
 | [**UpdateEndpointProxySettings**](updateendpointproxysettings.md) | Definiert die Proxyeinstellungen, die beim Anfordern eines Endpunkttokens verwendet werden. |
 

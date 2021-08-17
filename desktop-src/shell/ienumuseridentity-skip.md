@@ -1,7 +1,7 @@
 ---
-description: 'Iendumuseridentity:: Skip wird nicht unterstützt und kann in Zukunft geändert oder nicht verfügbar sein. Verwenden Sie stattdessen Benutzerkonten mit schneller Benutzerumschaltung und Remotedesktop.'
+description: IEnumUserIdentity::Skip wird nicht unterstützt und kann in Zukunft geändert oder nicht mehr verfügbar sein. Verwenden Sie stattdessen Benutzerkonten mit schnellem Benutzerwechsel und Remotedesktop.
 ms.assetid: bb19ae50-b384-48fb-9272-15e3e3eaa9d0
-title: 'Ienumumuseridentity:: Skip-Methode (Msident. h)'
+title: IEnumUserIdentity::Skip-Methode (Msident.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,18 +13,18 @@ api_type:
 - COM
 api_location:
 - Msident.dll
-ms.openlocfilehash: cedd4f3c6e9736e26cbf8d58f27f805f0f5d33a9
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
-ms.translationtype: HT
+ms.openlocfilehash: ced6a1a9ce463f82b6b33275339216edabc02737928e985a294154e579523575
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104994599"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117678927"
 ---
-# <a name="ienumuseridentityskip-method"></a>Ienumumuseridentity:: Skip-Methode
+# <a name="ienumuseridentityskip-method"></a>IEnumUserIdentity::Skip-Methode
 
-\[**Iendumuseridentity:: Skip** wird nicht unterstützt und kann in Zukunft geändert oder nicht verfügbar sein. Verwenden Sie stattdessen [Benutzerkonten mit schneller Benutzerumschaltung und Remotedesktop](fastuserswitching.md).\]
+\[**IEnumUserIdentity::Skip** wird nicht unterstützt und kann in Zukunft geändert oder nicht mehr verfügbar sein. Verwenden Sie stattdessen [Benutzerkonten mit schnellem Benutzerwechsel und Remotedesktop](fastuserswitching.md).\]
 
-Überspringt eine angegebene Anzahl von Benutzer Identitäts Schnittstellen in der-Enumeration. Wird beim Abrufen von Schnittstellen verwendet.
+Überspringt eine bestimmte Anzahl von Benutzeridentitätsschnittstellen in der -Enumeration. Wird beim Abrufen von Schnittstellen verwendet.
 
 ## <a name="syntax"></a>Syntax
 
@@ -41,10 +41,10 @@ HRESULT Skip(
 
 <dl> <dt>
 
-*celt* \[ in\]
+*Celt* \[ In\]
 </dt> <dd>
 
-Typ: **ulong**
+Typ: **ULONG**
 
 Die Anzahl der zu überspringenden Schnittstellen.
 
@@ -54,24 +54,24 @@ Die Anzahl der zu überspringenden Schnittstellen.
 
 Typ: **HRESULT**
 
-Wenn diese Methode erfolgreich ausgeführt wird, gibt Sie **S \_ OK** zurück. Andernfalls wird ein **HRESULT** -Fehlercode zurückgegeben.
+Wenn diese Methode erfolgreich ist, wird **S \_ OK** zurückgegeben. Andernfalls wird ein **HRESULT-Fehlercode** zurückgegeben.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-[**Ienumumuseridentity**](ienumuseridentity.md) behält eine interne Anzahl bei, die angibt, welche Schnittstelle als nächstes abgerufen wird. Um diese Anzahl zu erhöhen, ohne Schnittstellen abzurufen, rufen Sie diese Methode auf. Um die Anzahl zurückzusetzen, nennen Sie [**ienumumuseridentity:: Reset**](ienumuseridentity-reset.md).
+[**IEnumUserIdentity**](ienumuseridentity.md) behält eine interne Anzahl bei, die angibt, welche Schnittstelle als Nächstes abgerufen werden soll. Um diese Anzahl zu erhöhen, ohne Schnittstellen abzurufen, rufen Sie diese Methode auf. Um die Anzahl zurückzusetzen, rufen [**Sie IEnumUserIdentity::Reset auf.**](ienumuseridentity-reset.md)
 
-## <a name="requirements"></a>Requirements (Anforderungen)
+## <a name="requirements"></a>Anforderungen
 
 
 
 | Anforderung | Wert |
 |-------------------------------------|----------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows XP \[ -Desktop-Apps\]<br/>                                            |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/>                                   |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur XP-Desktop-Apps\]<br/>                                            |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                                   |
 | Ende des Supports (Client)<br/>    | Windows XP<br/>                                                                  |
-| Ende des Supports (Server)<br/>    | Windows Server 2003<br/>                                                         |
-| Header<br/>                   | <dl> <dt>Msident. h</dt> </dl>   |
-| IDL<br/>                      | <dl> <dt>Msident. idl</dt> </dl> |
+| Ende des Supports (Server)<br/>    | Windows Server 2003<br/>                                                         |
+| Header<br/>                   | <dl> <dt>Msident.h</dt> </dl>   |
+| Idl<br/>                      | <dl> <dt>Msident.idl</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Msident.dll</dt> </dl> |
 
 
@@ -80,16 +80,16 @@ Wenn diese Methode erfolgreich ausgeführt wird, gibt Sie **S \_ OK** zurück. A
 
 <dl> <dt>
 
-[**Iumumuseridentity**](ienumuseridentity.md)
+[**IEnumUserIdentity**](ienumuseridentity.md)
 </dt> <dt>
 
-[**Ienumumuseridentity:: Reset**](ienumuseridentity-reset.md)
+[**IEnumUserIdentity::Reset**](ienumuseridentity-reset.md)
 </dt> <dt>
 
-[**Ienumumuseridentity:: Next**](ienumuseridentity-next.md)
+[**IEnumUserIdentity::Next**](ienumuseridentity-next.md)
 </dt> <dt>
 
-[**Iendumuseridentity:: GetCount**](ienumuseridentity-getcount.md)
+[**IEnumUserIdentity::GetCount**](ienumuseridentity-getcount.md)
 </dt> </dl>
 
  

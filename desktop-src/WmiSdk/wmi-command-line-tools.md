@@ -1,5 +1,5 @@
 ---
-description: WMI verfügt über mehrere Befehlszeilentools, die von Administratoren und WMI-Anbieterwritern verwendet werden.
+description: WMI verfügt über mehrere Befehlszeilentools, die von Administratoren und WMI-Anbieterautoren verwendet werden.
 ms.assetid: 4766ca5b-81da-4167-b4f1-a215178a828a
 ms.tgt_platform: multiple
 title: WMI-Befehlszeilentools
@@ -19,13 +19,13 @@ ms.locfileid: "118553144"
 ---
 # <a name="wmi-command-line-tools"></a>WMI-Befehlszeilentools
 
-WMI verfügt über mehrere Befehlszeilentools, die von Administratoren und WMI-Anbieterwritern verwendet werden.
+WMI verfügt über mehrere Befehlszeilentools, die von Administratoren und WMI-Anbieterautoren verwendet werden.
 
 
 
 | `Section`                      | BESCHREIBUNG                                                                                                                                                         |
 |------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| [**mofcomp**](mofcomp.md)   | Kompiliert mof-Code (Managed Object Format) in binäre Form, die im WMI-Repository gespeichert ist. Verwenden Sie , wenn Sie die MOF-Datei für einen WMI-Anbieter erstellen oder ändern.<br/> |
+| [**mofcomp**](mofcomp.md)   | Kompiliert Managed Object Format (MOF)-Code in binäre Form, die im WMI-Repository gespeichert ist. Verwenden Sie beim Erstellen oder Ändern der MOF-Datei für einen WMI-Anbieter.<br/> |
 | [**smi2smir**](smi2smir.md) | Akzeptiert ein SNMP-Informationsmodul als Eingabe und akzeptiert alle zusätzlichen Module, die zum Auflösen externer Verweise erforderlich sind.<br/>                               |
 | [**winmgmt**](winmgmt.md)   | Führt den WMI-Dienst aus. Ab Windows Vista wurden mehrere neue Switches hinzugefügt.<br/>                                                                |
 | [**wmiadap**](wmiadap.md)   | Führt das ADAP-Befehlszeilentool aus, um Leistungsbibliotheken zu analysieren und an das WMI-Repository zu übertragen.<br/>                                                       |

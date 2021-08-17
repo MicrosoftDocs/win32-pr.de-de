@@ -1,9 +1,9 @@
 ---
-title: Effects. EffectType
-description: Die EffectType-Methode ruft den Registrierungs Namen der Visualisierung mit dem angegebenen Registrierungs Index ab. Dieser Name ist eine eindeutige ID, die vom Visualisierungs Autor definiert wurde.
+title: EFFECTS.effectType
+description: Die effectType-Methode ruft den Registrierungsnamen der Visualisierung mit dem angegebenen Registrierungsindex ab. Dieser Name ist eine eindeutige ID, die vom Autor der Visualisierung definiert wird.
 ms.assetid: 47da4f3f-8552-4404-ad46-5dc6afca849a
 keywords:
-- Effekte. EffectType-Fenster Media Player
+- EFFECTS.effectType-Windows Media Player
 topic_type:
 - apiref
 api_name:
@@ -13,16 +13,16 @@ api_type:
 ms.topic: reference
 ms.date: 05/31/2018
 api_location: ''
-ms.openlocfilehash: 3eda9cbd1a4634062683536f1f132393a2874691
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: a452f9218c7004d1078ae6b9e878421a7cad301f3ee913ef6296aaa1c681b736
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106366700"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117749232"
 ---
-# <a name="effectseffecttype"></a>Effects. EffectType
+# <a name="effectseffecttype"></a>EFFECTS.effectType
 
-Die **EffectType** -Methode ruft den Registrierungs Namen der Visualisierung mit dem angegebenen Registrierungs Index ab. Dieser Name ist eine eindeutige ID, die vom Visualisierungs Autor definiert wurde.
+Die **effectType-Methode** ruft den Registrierungsnamen der Visualisierung mit dem angegebenen Registrierungsindex ab. Dieser Name ist eine eindeutige ID, die vom Autor der Visualisierung definiert wird.
 
 ``` syntax
         elementID.effectType(index)
@@ -32,20 +32,20 @@ Die **EffectType** -Methode ruft den Registrierungs Namen der Visualisierung mit
 
 <dl> <dt>
 
-<span id="index"></span><span id="INDEX"></span>*Sin*
+<span id="index"></span><span id="INDEX"></span>*Index*
 </dt> <dd>
 
-**Zahl** (**Long**), die den Registrierungs Index einer Visualisierung enthält.
+**Number** (**long**), die den Registrierungsindex einer Visualisierung enthält.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Diese Methode gibt eine **Zeichenfolge** zurück.
+Diese Methode gibt eine **Zeichenfolge zurück.**
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Diese Methode ist hilfreich für den Wechsel zwischen Visualisierungen im Skript. Eine Benutzeroberfläche könnte den Satz von Titeln anzeigen. wenn der Benutzer jedoch eine solche Tabelle auswählt, muss das Skript für die Visualisierung von Visualisierungen die Verwendung von " **einstellerffecttype** " verwenden.
+Diese Methode ist nützlich, um zwischen Visualisierungen im Skript zu wechseln. Eine Benutzeroberfläche kann den Satz von Titeln anzeigen, aber wenn der Benutzer einen Titel auswählt, muss das Skript **currentEffectType** verwenden, um visualisierungen zu wechseln.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -57,14 +57,14 @@ Diese Methode ist hilfreich für den Wechsel zwischen Visualisierungen im Skript
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Effects-Element**](effects-element.md)
+[**EFFECTS-Element**](effects-element.md)
 </dt> <dt>
 
-[**Effekte. Currency-ffecttype**](effects-currenteffecttype.md)
+[**EFFECTS.currentEffectType**](effects-currenteffecttype.md)
 </dt> </dl>
 
  

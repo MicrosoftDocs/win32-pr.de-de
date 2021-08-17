@@ -1,11 +1,11 @@
 ---
-title: Iwmpnetwork DownloadProgress (Eigenschaft)
-description: Die DownloadProgress-Eigenschaft ruft den Prozentsatz des abgeschlossenen Downloads ab.
+title: IWMPNetwork downloadProgress(Eigenschaft)
+description: Die downloadProgress-Eigenschaft ruft den Prozentsatz des abgeschlossenen Downloads ab.
 ms.assetid: 40568c81-5bb5-45d9-b654-31072608663d
 keywords:
-- Download Progress-Eigenschaften Fenster Media Player
-- Download Progress-Eigenschaft, Windows Media Player, iwmpnetwork-Schnittstelle
-- Iwmpnetwork Interface, Windows Media Player, Download Progress (Eigenschaft)
+- downloadProgress-Windows Media Player
+- downloadProgress-Eigenschaft Windows Media Player , IWMPNetwork-Schnittstelle
+- IWMPNetwork interface Windows Media Player , downloadProgress-Eigenschaft
 topic_type:
 - apiref
 api_name:
@@ -16,16 +16,16 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 4b10b767845ac951e1364e15c7f6f1d729882e0d
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 96c2b47895d595a570191d9aa66b90b1cdc53392f8f111d64307074e5689f2ca
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106358222"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118331979"
 ---
-# <a name="iwmpnetworkdownloadprogress-property"></a>Iwmpnetwork::d ownloadprogress-Eigenschaft
+# <a name="iwmpnetworkdownloadprogress-property"></a>IWMPNetwork::d ownloadProgress-Eigenschaft
 
-Die **DownloadProgress** -Eigenschaft ruft den Prozentsatz des abgeschlossenen Downloads ab.
+Die **downloadProgress-Eigenschaft** ruft den Prozentsatz des abgeschlossenen Downloads ab.
 
 ## <a name="syntax"></a>Syntax
 
@@ -46,26 +46,26 @@ Public ReadOnly Property downloadProgress As System.Int32
 
 ## <a name="property-value"></a>Eigenschaftswert
 
-Ein **System. Int32** -Wert, der den Download Fortschritt als Prozentsatz ausgedrückt.
+Ein **System.Int32,** bei dem es sich um den Downloadfortschritt in Prozent handelt.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Wenn das Windows Media Player-Steuerelement mit einer digitalen Mediendatei verbunden ist, die gleichzeitig abgespielt und heruntergeladen werden kann, ruft die **DownloadProgress** -Eigenschaft den Prozentsatz der gesamten heruntergeladenen Datei ab. Diese Funktion wird zurzeit nur für digitale Mediendateien unterstützt, die von Webservern heruntergeladen werden. Eine Datei mit einem der folgenden Formate kann heruntergeladen und gleichzeitig abgespielt werden:
+Wenn das Windows Media Player-Steuerelement mit einer digitalen Mediendatei verbunden ist, die gleichzeitig abgespielt und heruntergeladen werden kann, ruft die **downloadProgress-Eigenschaft** den Prozentsatz der gesamten heruntergeladenen Datei ab. Dieses Feature wird derzeit nur für digitale Mediendateien unterstützt, die von Webservern heruntergeladen wurden. Eine Datei mit einem der folgenden Formate kann heruntergeladen und gleichzeitig abgespielt werden:
 
 -   Advanced Systems Format (ASF)
 -   Windows Media Audio (WMA)
 -   Windows Media Video (WMV)
 -   MP3
--   MPEG
+-   Mpeg
 -   WAV
 
-Darüber hinaus können einige AVI-Dateien gleichzeitig heruntergeladen und abgespielt werden.
+Darüber hinaus können einige AVI-Dateien heruntergeladen und gleichzeitig abgespielt werden.
 
-Verwenden Sie den **AxWindowsMediaPlayer. \_ Wmpocxevents \_ bufferingevent** , um zu bestimmen, wann die Pufferung gestartet oder angehalten wird.
+Verwenden Sie **axWindowsMediaPlayer. \_ WMPOCXEvents \_ BufferingEvent,** um zu bestimmen, wann die Pufferung beginnt oder beendet wird.
 
 ## <a name="examples"></a>Beispiele
 
-Im folgenden Codebeispiel wird **Download Progress** verwendet, um den Prozentsatz des abgeschlossenen Downloads anzuzeigen. Die Informationen werden in einer Bezeichnung als Reaktion auf das **Puffer** Ereignis angezeigt. Im Beispiel wird ein Timer mit einem Intervall von 1 Sekunde verwendet, um die Anzeige zu aktualisieren. Das **AxWMPLib. AxWindowsMediaPlayer** -Objekt wird durch die Variable mit dem Namen "Player" dargestellt.
+Im folgenden Codebeispiel wird **downloadProgress** verwendet, um den Prozentsatz des abgeschlossenen Downloads anzuzeigen. Die Informationen werden als Reaktion auf das Pufferungsereignis in einer **Bezeichnung** angezeigt. Im Beispiel wird ein Timer mit einem Intervall von 1 Sekunde verwendet, um die Anzeige zu aktualisieren. Das **AxWMPLib.AxWindowsMediaPlayer-Objekt** wird durch die Variable player dargestellt.
 
 
 ```CSharp
@@ -151,14 +151,14 @@ End Sub
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**AxWindowsMediaPlayer. buffereing-Ereignis (VB und c#)**](axwmplib-axwindowsmediaplayer-buffering.md)
+[**AxWindowsMediaPlayer.Buffering-Ereignis (VB und C#)**](axwmplib-axwindowsmediaplayer-buffering.md)
 </dt> <dt>
 
-[**Iwmpnetwork-Schnittstelle (VB und c#)**](iwmpnetwork--vb-and-c.md)
+[**IWMPNetwork-Schnittstelle (VB und C#)**](iwmpnetwork--vb-and-c.md)
 </dt> </dl>
 
  

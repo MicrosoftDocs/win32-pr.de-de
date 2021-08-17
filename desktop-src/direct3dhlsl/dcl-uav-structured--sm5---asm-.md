@@ -26,7 +26,7 @@ Deklarieren Sie eine ungeordnete Zugriffsansicht (UAV) für die Verwendung durch
 
 
 
-| Element                                                                                                                                   | BESCHREIBUNG                                           |
+| Element                                                                                                                                   | Beschreibung                                           |
 |----------------------------------------------------------------------------------------------------------------------------------------|-------------------------------------------------------|
 | <span id="dstUAV"></span><span id="dstuav"></span><span id="DSTUAV"></span>*dstUAV*<br/>                                         | \[im \] UAV.<br/>                            |
 | <span id="structByteStride"></span><span id="structbytestride"></span><span id="STRUCTBYTESTRIDE"></span>*structByteStride*<br/> | \[in \] Die Größe der Struktur in Bytes.<br/> |
@@ -47,11 +47,11 @@ Anweisungen, die auf ein strukturiertes u verweisen, nehmen eine 2D-Adresse an, 
 
 Das \_ glc-Flag bedeutet für "global zusammenhängende". Das Fehlen von glc bedeutet, dass die UAV im Compute-Shader nur als "gruppenreigent" oder bei einem Aufruf eines Einzelnen Pixel-Shaders \_ als "lokal zusammenhängend" deklariert wird.
 
-Das \_ opc-Flag ist der Zähler für die Beibehaltung der Reihenfolge. Sie gibt an, dass ein UAV mit dem COUNTER-Flag erstellt worden sein muss, wenn er an den Slot \# (u) \# gebunden ist. Dies bedeutet, dass [imm \_ atomic \_ alloc-](imm-atomic-alloc--sm5---asm-.md) oder [imm \_ \_ atomic-Vorgänge](imm-atomic-consume--sm5---asm-.md) im Shader einen Zähler bearbeiten, dessen Werte im Shader als permanenter Verweis auf eine Position im UAV verwendet werden können. Daten können nicht neu angeordnet werden, nachdem der Shader beendet wurde.
+Das \_ opc-Flag ist der Zähler für die Beibehaltung der Reihenfolge. Gibt an, dass ein UAV mit dem COUNTER-Flag erstellt worden sein muss, wenn er an den Slot \# (u) \# gebunden ist. Dies bedeutet, dass [imm \_ atomic \_ alloc-](imm-atomic-alloc--sm5---asm-.md) oder [imm \_ \_ atomic-Vorgänge](imm-atomic-consume--sm5---asm-.md) im Shader einen Zähler bearbeiten, dessen Werte im Shader als permanenter Verweis auf eine Position im UAV verwendet werden können. Daten können nicht neu angeordnet werden, nachdem der Shader beendet wurde.
 
 Das Fehlen des opc-Flags bedeutet, dass, wenn der \_ Shader imm atomic[ \_ \_ alloc-](imm-atomic-alloc--sm5---asm-.md) oder [imm \_ atomic \_ consume-Anweisungen](imm-atomic-consume--sm5---asm-.md) verwendet und ein UAV an den Slot (u) gebunden ist, mit dem APPEND-Flag erstellt worden sein muss, das einen Zähler bietet, der nicht garantiert, dass die Reihenfolge nach dem \# Shaderaufruf beibehalten wird.
 
-Wenn das opc-Flag nicht vorhanden ist und der Shader keine Anweisungen für \_ [imm \_ atomic \_ alloc](imm-atomic-alloc--sm5---asm-.md) oder [imm \_ atomic \_ consume](imm-atomic-consume--sm5---asm-.md) enthält, darf ein UAV, das an Slot (u) gebunden ist, mit dem COUNTER-Flag erstellt worden sein (der Indikator wird von diesem Shader nicht verwendet), kein Flag (kein Indikator), aber nicht mit dem \# APPEND-Flag.
+Wenn das opc-Flag nicht vorhanden ist und der Shader keine Anweisungen für \_ [imm \_ atomic \_ alloc](imm-atomic-alloc--sm5---asm-.md) oder [imm \_ atomic \_ consume](imm-atomic-consume--sm5---asm-.md) enthält, darf ein UAV, das an slot (u) gebunden ist, mit dem COUNTER-Flag erstellt worden sein (der Indikator wird von diesem Shader nicht verwendet), kein Flag (kein Indikator), aber nicht mit dem \# APPEND-Flag.
 
 > [!Note]  
 > cs \_ 4 \_ 0 und cs \_ 4 \_ 1 unterstützt **dcl \_ tgsm \_ structured**, aber [nicht dcl \_ tgsm \_ raw](dcl-tgsm-raw--sm5---asm-.md).
@@ -90,12 +90,12 @@ Diese Anweisung wird in den folgenden Shadermodellen unterstützt:
 
 | Shadermodell                                              | Unterstützt |
 |-----------------------------------------------------------|-----------|
-| [Shadermodell 5](d3d11-graphics-reference-sm5.md)        | ja       |
-| [Shadermodell 4.1](dx-graphics-hlsl-sm4.md)              | nein        |
-| [Shadermodell 4](dx-graphics-hlsl-sm4.md)                | nein        |
-| [Shadermodell 3 (DirectX HLSL)](dx-graphics-hlsl-sm3.md) | nein        |
-| [Shadermodell 2 (DirectX HLSL)](dx-graphics-hlsl-sm2.md) | nein        |
-| [Shadermodell 1 (DirectX HLSL)](dx-graphics-hlsl-sm1.md) | nein        |
+| [Shadermodell 5](d3d11-graphics-reference-sm5.md)        | Ja       |
+| [Shadermodell 4.1](dx-graphics-hlsl-sm4.md)              | Nein        |
+| [Shadermodell 4](dx-graphics-hlsl-sm4.md)                | Nein        |
+| [Shadermodell 3 (DirectX HLSL)](dx-graphics-hlsl-sm3.md) | Nein        |
+| [Shadermodell 2 (DirectX HLSL)](dx-graphics-hlsl-sm2.md) | Nein        |
+| [Shadermodell 1 (DirectX HLSL)](dx-graphics-hlsl-sm1.md) | Nein        |
 
 
 

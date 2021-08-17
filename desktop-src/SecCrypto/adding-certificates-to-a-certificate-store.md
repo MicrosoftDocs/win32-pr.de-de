@@ -1,31 +1,31 @@
 ---
-description: Zertifikate können dem Zertifikat Speicher hinzugefügt oder daraus entfernt werden, wenn der Speicher mit Lese-/Schreibberechtigungen geöffnet ist.
+description: Zertifikate können Zertifikatspeichern hinzugefügt oder daraus entfernt werden, wenn der Speicher mit Lese-/Schreibberechtigung geöffnet wird.
 ms.assetid: a1cb6e1e-0702-4f73-827e-3f9e9237b4b6
-title: Hinzufügen von Zertifikaten zu einem Zertifikat Speicher
+title: Hinzufügen von Zertifikaten zu einem Store
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: c6f4c018be697f48e40d52480f49694762fb956f
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 4e3c4b2fafbcd11bf2d984dfd5b5a575f67dc4f6d3c70337de399ca6076029ff
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "104529234"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117774035"
 ---
-# <a name="adding-certificates-to-a-certificate-store"></a>Hinzufügen von Zertifikaten zu einem Zertifikat Speicher
+# <a name="adding-certificates-to-a-certificate-store"></a>Hinzufügen von Zertifikaten zu einem Store
 
-\[CAPICOM ist eine nur-32-Bit-Komponente, die für die Verwendung in den folgenden Betriebssystemen verfügbar ist: Windows Server 2008, Windows Vista, Windows XP. Verwenden Sie stattdessen die .NET Framework, um Sicherheitsfunktionen zu implementieren. Weitere Informationen finden Sie unter [Alternativen zur Verwendung von CAPICOM](alternatives-to-using-capicom.md).\]
+\[CAPICOM ist eine nur 32-Bit-Komponente, die für die Verwendung in den folgenden Betriebssystemen verfügbar ist: Windows Server 2008, Windows Vista, Windows XP. Verwenden Sie stattdessen die .NET Framework, um Sicherheitsfeatures zu implementieren. Weitere Informationen finden Sie unter [Alternativen zur Verwendung von CAPICOM.](alternatives-to-using-capicom.md)\]
 
-[*Zertifikate*](../secgloss/c-gly.md) können dem [*Zertifikat Speicher*](../secgloss/c-gly.md) hinzugefügt oder daraus entfernt werden, wenn der Speicher mit Lese-/Schreibberechtigungen geöffnet ist. Die Lese-/Schreibberechtigung wird Active Directory speichern nicht erteilt. Während Zertifikate hinzugefügt oder aus dem Speicher Speicher entfernt werden können, werden Änderungen in Speicher speichern zwischen den Sitzungen nicht beibehalten.
+[*Zertifikate*](../secgloss/c-gly.md) können [*Zertifikatspeichern*](../secgloss/c-gly.md) hinzugefügt oder daraus entfernt werden, wenn der Speicher mit Lese-/Schreibberechtigung geöffnet wird. Active Directory-Speichern wird keine Lese-/Schreibberechtigung erteilt. Obwohl Zertifikate zu Speicherspeichern hinzugefügt oder daraus entfernt werden können, werden Änderungen in Speicherspeichern nicht zwischen Sitzungen beibehalten.
 
-Zertifikate können einem Zertifikat Speicher hinzugefügt werden, der mit der Lese-/Schreibberechtigung mithilfe der **Add** -Methode geöffnet wird. Ein Zertifikat kann mithilfe der **Remove** -Methode aus einem Zertifikat Speicher entfernt werden, der mit der Lese-/Schreibberechtigung geöffnet wurde. Neue Filialen können erstellt und im aktuellen CAPICOM \_ \_ \_ -Benutzerspeicher und CAPICOM- \_ \_ Speicherorten für lokale Computer \_ gespeichert werden. Neu erstellte Filialen an einem dieser Speicherorte können mit Lese-/Schreibberechtigung geöffnet werden.
+Zertifikate können einem Zertifikatspeicher hinzugefügt werden, der mit Lese-/Schreibberechtigung mithilfe der **Add-Methode** geöffnet wird. Ein Zertifikat kann mithilfe der **Remove-Methode** aus einem Zertifikatspeicher entfernt werden, der mit Lese-/Schreibberechtigung geöffnet wird. Neue Speicher können im CAPICOM \_ CURRENT \_ USER STORE und \_ CAPICOM LOCAL MACHINE STORE erstellt und gespeichert \_ \_ \_ werden. Neu erstellte Speicher an einem dieser Speicherorte können mit Lese-/Schreibberechtigung geöffnet werden.
 
-Im folgenden Beispiel werden zwei Zertifikat Speicher geöffnet. Zertifikate von Subjekten mit Nachnamen, die mit F beginnen, werden aus dem Active Directory Speicher abgerufen. Der aktuelle CAPICOM- \_ \_ Benutzer \_ Speicher, CAPICOM \_ ca \_ Store Store, wird dann als Lese-/Schreibspeicher geöffnet, und das erste Zertifikat aus der Sammlung der Zertifikate im Active Directory Store wird den Zertifikaten im CAPICOM-ca-Speicher hinzugefügt \_ \_ .
+Im folgenden Beispiel werden zwei Zertifikatspeicher geöffnet. Zertifikate von Antragstellern mit Nachnamen, die mit F beginnen, werden aus dem Active Directory-Speicher abgerufen. Der CAPICOM \_ CURRENT USER STORE und der \_ \_ CAPICOM \_ CA \_ STORE-Speicher werden dann als Lese-/Schreibspeicher geöffnet, und das erste Zertifikat aus der Sammlung von Zertifikaten im Active Directory-Speicher wird den Zertifikaten im CAPICOM CA \_ STORE \_ hinzugefügt.
 
-Zu Demonstrationszwecken zeigt das Beispiel das Öffnen von Stores im CAPICOM \_ -Speicher Speicher \_ , CAPICOM \_ Current \_ User \_ Store und CAPICOM-Speicher \_ Orte für lokale \_ Computer \_ . Das Beispiel zeigt, wie Sie alle Zertifikate aus einem geöffneten Speicher exportieren, die exportierten Zertifikate in eine Datei schreiben, Sie wieder einlesen und in einen anderen Speicher importieren. Die neu importierten Zertifikate werden aufgelistet und angezeigt.
+Zu Demonstrationszwecken zeigt das Beispiel das Öffnen von Filialen im CAPICOM \_ MEMORY \_ STORE, CAPICOM \_ CURRENT USER STORE und \_ \_ CAPICOM \_ LOCAL MACHINE \_ \_ STORE. Das Beispiel zeigt, wie alle Zertifikate aus einem geöffneten Speicher exportiert, die exportierten Zertifikate in eine Datei geschrieben, wieder eingelesen und in einen anderen Speicher importiert werden. Die neu importierten Zertifikate werden aufzählt und angezeigt.
 
-Bei einem beliebigen CAPICOM-Fehler wird der negative Dezimalwert **Err. Number** zurückgegeben. Weitere Informationen finden Sie unter [**CAPICOM- \_ Fehler \_ Code**](capicom-error-code.md). Informationen zu positiven Dezimalwerten von **Err. Number** finden Sie unter Winerror. h.
+Bei einem CAPICOM-Fehler wird ein negativer Dezimalwert von **Err.Number** zurückgegeben. Weitere Informationen finden Sie unter [**CAPICOM \_ ERROR \_ CODE**](capicom-error-code.md). Informationen zu positiven Dezimalwerten von **Err.Number** finden Sie unter Winerror.h.
 
-Das folgende Beispiel zeigt das Öffnen von Zertifikat speichern mithilfe der frühen Bindung in der Deklaration der **Speicher** Objekte und das Erstellen einer Instanz dieser Objekte.
+Das folgende Beispiel zeigt das Öffnen von Zertifikatspeichern mithilfe einer frühen Bindung in der **Deklaration** der Store-Objekten und beim Erstellen einer Instanz dieser Objekte.
 
 
 ```VB

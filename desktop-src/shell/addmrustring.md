@@ -14,16 +14,16 @@ api_type:
 api_location:
 - Comctl32.dll
 ms.assetid: ad94a442-8492-412c-a4f2-ac6e7c5327d7
-ms.openlocfilehash: b62e23cd0604273559e36e561970dd62f117c11d
-ms.sourcegitcommit: 3caaa3c92dcb1ef12f84464d14ce6262e65e988e
+ms.openlocfilehash: 4ac72c44b670466f10cd708b81b1a84f93a349afcb0d81473ed5e6578c20617a
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/12/2021
-ms.locfileid: "109841191"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117861592"
 ---
 # <a name="addmrustringw-function"></a>AddMRUStringW-Funktion
 
-\[Diese Funktion ist über Windows XP mit Service Pack 2 (SP2) und Windows Server 2003 verfügbar. Sie kann in nachfolgenden Versionen von Windows geändert oder nicht verfügbar sein. \]
+\[Diese Funktion ist über Windows XP mit Service Pack 2 (SP2) und Windows Server 2003 verfügbar. Sie kann in nachfolgenden Versionen von geändert oder nicht verfügbar Windows. \]
 
 Fügt am Anfang der Liste der zuletzt verwendeten (MRU) eine Zeichenfolge hinzu.
 
@@ -57,7 +57,7 @@ Das Handle der MRU-Liste.
 
 Typ: **LPCTSTR**
 
-Ein Zeiger auf die Daten. Dies kann entweder eine Zeichenfolge oder binäre Daten sein, wenn die MRU-Liste mit dem **MRU \_ BINARY-Flag** erstellt wurde. Bei binären Daten gibt das erste **DWORD** seine Größe an.
+Ein Zeiger auf die Daten. Dies kann entweder eine Zeichenfolge oder, wenn die MRU-Liste mit dem **MRU \_ BINARY-Flag** erstellt wurde, binäre Daten sein. Im Fall von Binärdaten gibt das erste **DWORD** seine Größe an.
 
 </dd> </dl>
 
@@ -69,7 +69,7 @@ Gibt bei Erfolg einen nicht negativen Wert zurück, andernfalls -1.
 
 ## <a name="remarks"></a>Hinweise
 
-Diese Funktion ist nicht in einem öffentlichen Header oder einer öffentlichen Bibliothek enthalten. Der Zugriff kann über [**GetProcAddress**](/windows/desktop/api/libloaderapi/nf-libloaderapi-getprocaddress) erfolgen oder aus comctl32.dll durch die Ordnungszahl 401 für **AddMRUStringW** extrahiert werden.
+Diese Funktion ist nicht in einem öffentlichen Header oder einer öffentlichen Bibliothek enthalten. Auf sie kann über [**GetProcAddress**](/windows/desktop/api/libloaderapi/nf-libloaderapi-getprocaddress) zugegriffen oder aus comctl32.dll durch ihre Ordnungszahl extrahiert werden, die 401 für **AddMRUStringW ist.**
 
 ## <a name="requirements"></a>Anforderungen
 

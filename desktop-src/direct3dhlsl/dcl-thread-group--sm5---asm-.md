@@ -1,23 +1,23 @@
 ---
-title: dcl_thread_group (SM5-ASM)
-description: Thread Gruppengröße deklarieren.
+title: dcl_thread_group (sm5 – asm)
+description: Deklarieren Sie die Threadgruppengröße.
 ms.assetid: CB8192C4-100D-49B6-94E7-6CD3AEC28149
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: b8141c80e82f1dfd1ae5a4d360d04fac32ba5221
-ms.sourcegitcommit: fe03c5d92ca6a0d66a114b2303e99c0a19241ffb
+ms.openlocfilehash: 5402e53e2252d8019ba553c6a8ff449200625b1469ee923f3c26234f1faa292e
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "104038360"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118515478"
 ---
-# <a name="dcl_thread_group-sm5---asm"></a>DCL \_ \_ -Thread Gruppe (SM5-ASM)
+# <a name="dcl_thread_group-sm5---asm"></a>dcl \_ thread \_ group (sm5 – asm)
 
-Thread Gruppengröße deklarieren.
+Deklarieren Sie die Threadgruppengröße.
 
 
 
-| DCL- \_ Thread \_ Gruppe x, y, z |
+| dcl \_ thread \_ group x, y, z |
 |----------------------------|
 
 
@@ -28,25 +28,25 @@ Thread Gruppengröße deklarieren.
 
 | Element                                                   | BESCHREIBUNG                                                        |
 |--------------------------------------------------------|--------------------------------------------------------------------|
-| <span id="x"></span><span id="X"></span>*Stuben*<br/> | \[in \] einer 32-Bit-Ganzzahl mit Vorzeichen. 1 <= x <= 1024 <br/> |
-| <span id="y"></span><span id="Y"></span>*Teenie*<br/> | \[in \] einer 32-Bit-Ganzzahl mit Vorzeichen. 1 <= y <= 1024<br/>  |
-| <span id="z"></span><span id="Z"></span>*z*<br/> | \[in \] einer 32-Bit-Ganzzahl mit Vorzeichen. 1 <= z <= 64<br/>    |
+| <span id="x"></span><span id="X"></span>*X*<br/> | \[in \] Eine angepasste 32-Bit-Ganzzahl. 1 <= x <= 1024 <br/> |
+| <span id="y"></span><span id="Y"></span>*Y*<br/> | \[in \] Eine angepasste 32-Bit-Ganzzahl. 1 <= y <= 1024<br/>  |
+| <span id="z"></span><span id="Z"></span>*Z*<br/> | \[in \] Eine angepasste 32-Bit-Ganzzahl. 1 <= z <= 64<br/>    |
 
 
 
  
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
 x \* y \* z <= 1024
 
-Diese Thread Gruppen Deklaration muss einmal in einem Compute-Shader vorkommen.
+Diese Threadgruppendeklaration muss einmal in einem Compute-Shader angezeigt werden.
 
-Diese Anweisung gilt für die folgenden Shader-Phasen:
+Diese Anweisung gilt für die folgenden Shaderstufen:
 
 
 
-| Scheitelpunkt | Hülle | Domain | Geometrie | Pixel | Compute |
+| Scheitelpunkt | Rumpf | Domain | Geometrie | Pixel | Compute |
 |--------|------|--------|----------|-------|---------|
 |        |      |        |          |       | X       |
 
@@ -54,20 +54,20 @@ Diese Anweisung gilt für die folgenden Shader-Phasen:
 
  
 
-## <a name="minimum-shader-model"></a>Minimaler Shader-Modell
+## <a name="minimum-shader-model"></a>Shader-Mindestmodell
 
-Diese Anweisung wird in den folgenden shadermodellen unterstützt:
+Diese Anweisung wird in den folgenden Shadermodellen unterstützt:
 
 
 
 | Shadermodell                                              | Unterstützt |
 |-----------------------------------------------------------|-----------|
-| [Shader-Modell 5](d3d11-graphics-reference-sm5.md)        | ja       |
-| [Shadermodell 4,1](dx-graphics-hlsl-sm4.md)              | nein        |
+| [Shadermodell 5](d3d11-graphics-reference-sm5.md)        | ja       |
+| [Shadermodell 4.1](dx-graphics-hlsl-sm4.md)              | nein        |
 | [Shadermodell 4](dx-graphics-hlsl-sm4.md)                | nein        |
-| [Shader-Modell 3 (DirectX HLSL)](dx-graphics-hlsl-sm3.md) | nein        |
-| [Shader-Modell 2 (DirectX HLSL)](dx-graphics-hlsl-sm2.md) | nein        |
-| [Shader-Modell 1 (DirectX HLSL)](dx-graphics-hlsl-sm1.md) | nein        |
+| [Shadermodell 3 (DirectX HLSL)](dx-graphics-hlsl-sm3.md) | nein        |
+| [Shadermodell 2 (DirectX HLSL)](dx-graphics-hlsl-sm2.md) | nein        |
+| [Shadermodell 1 (DirectX HLSL)](dx-graphics-hlsl-sm1.md) | nein        |
 
 
 
@@ -77,7 +77,7 @@ Diese Anweisung wird in den folgenden shadermodellen unterstützt:
 
 <dl> <dt>
 
-[Shader Model 5-Assembly (DirectX HLSL)](shader-model-5-assembly--directx-hlsl-.md)
+[Shadermodell 5-Assembly (DirectX HLSL)](shader-model-5-assembly--directx-hlsl-.md)
 </dt> </dl>
 
  

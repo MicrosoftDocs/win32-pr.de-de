@@ -1,11 +1,11 @@
 ---
-title: Systemmonitor. showverticalgrid-Eigenschaft
-description: Ruft einen Wert ab, der bestimmt, ob vertikale Rasterlinien im Diagramm angezeigt werden, oder legt ihn fest.
+title: SystemMonitor.ShowVerticalGrid-Eigenschaft
+description: Ruft einen Wert ab, der bestimmt, ob vertikale Rasterlinien im Diagramm angezeigt werden, oder legt diesen fest.
 ms.assetid: caade83d-0ea8-4da7-9328-127841bd48d9
 keywords:
-- Showverticalgrid-Eigenschaft (Sysmon)
-- Showverticalgrid-Eigenschaft (Sysmon), Systemmonitor-Klasse
-- Systemmonitor-Klasse sysmon, showverticalgrid (Eigenschaft)
+- ShowVerticalGrid-Eigenschaft SysMon
+- ShowVerticalGrid-Eigenschaft SysMon , SystemMonitor-Klasse
+- SystemMonitor-Klasse SysMon , ShowVerticalGrid-Eigenschaft
 topic_type:
 - apiref
 api_name:
@@ -16,16 +16,16 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: bc31f5867f6410fd82f182468d0ee5847179b3e0
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 30ac1d6ae0d48628c80c61a3042bb2dd823ab506013d1a491a7e5dfa689b3617
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104475816"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118881353"
 ---
-# <a name="systemmonitorshowverticalgrid-property"></a>Systemmonitor. showverticalgrid-Eigenschaft
+# <a name="systemmonitorshowverticalgrid-property"></a>SystemMonitor.ShowVerticalGrid-Eigenschaft
 
-Ruft einen Wert ab, der bestimmt, ob vertikale Rasterlinien im Diagramm angezeigt werden, oder legt ihn fest.
+Ruft einen Wert ab, der bestimmt, ob vertikale Rasterlinien im Diagramm angezeigt werden, oder legt diesen fest.
 
 Diese Eigenschaft ist schreibgeschützt.
 
@@ -40,7 +40,7 @@ Property ShowVerticalGrid As Boolean
 
 ## <a name="property-value"></a>Eigenschaftswert
 
-True gibt an, dass vertikale Rasterlinien im Diagramm angezeigt werden. andernfalls false. Der Standardwert für diese Eigenschaft ist False.
+True gibt an, dass vertikale Rasterlinien im Diagramm angezeigt werden. andernfalls FALSE. Der Standardwert für diese Eigenschaft ist False.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -50,15 +50,15 @@ True gibt an, dass vertikale Rasterlinien im Diagramm angezeigt werden. andernfa
 |-------------------------------------|---------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[nur Desktop-Apps\]<br/>                            |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                                  |
-| DLL<br/>                      | <dl> <dt>Sysmon. ocx</dt> </dl> |
+| DLL<br/>                      | <dl> <dt>Sysmon.ocx</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**System Monitor**](systemmonitor.md)
+[**SystemMonitor**](systemmonitor.md)
 </dt> </dl>
 
  

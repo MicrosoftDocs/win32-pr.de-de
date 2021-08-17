@@ -1,5 +1,5 @@
 ---
-title: Name (networkSettingsType)-Element
+title: Name-Element (networkSettingsType)
 description: Enthält den Namen eines Netzwerkprofils. Der Name wird zu Anzeigezwecken verwendet.
 ms.assetid: 86e4e68d-3c36-41eb-8563-d7d5125a5957
 keywords:
@@ -20,7 +20,7 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 08/11/2021
 ms.locfileid: "117758500"
 ---
-# <a name="name-networksettingstype-element"></a>Name (networkSettingsType)-Element
+# <a name="name-networksettingstype-element"></a>Name-Element (networkSettingsType)
 
 Enthält den Namen eines Netzwerkprofils. Der Name wird zu Anzeigezwecken verwendet.
 
@@ -31,23 +31,23 @@ Enthält den Namen eines Netzwerkprofils. Der Name wird zu Anzeigezwecken verwen
  />
 ```
 
-Das **Name-Element** wird durch den komplexen [**networkSettingsType-Typ**](taskschedulerschema-networksettingstype-complextype.md) definiert.
+Das **Name-Element** wird durch den komplexen [**NetworkSettingsType-Typ**](taskschedulerschema-networksettingstype-complextype.md) definiert.
 
 ## <a name="parent-element"></a>Übergeordnetes Element
 
 
 
-| Element                                                                                            | Abgeleitet von                                                                       | BESCHREIBUNG                                                                                                                                                                                                                                                                                                        |
+| Element                                                                                            | Abgeleitet von                                                                       | Beschreibung                                                                                                                                                                                                                                                                                                        |
 |----------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| [**NetworkSettings (settingsType)**](taskschedulerschema-networksettings-settingstype-element.md) | [**networkSettingsType**](taskschedulerschema-networksettingstype-complextype.md) | Enthält die Einstellungen, die der Taskplaner Dienst zum Abrufen eines Netzwerkprofils verwendet. Der Taskplaner-Dienst überprüft die Verfügbarkeit dieses Netzwerks, wenn das [**RunOnlyIfNetworkAvailable-Element**](taskschedulerschema-runonlyifnetworkavailable-settingstype-element.md) auf **True** festgelegt ist.<br/> |
+| [**NetworkSettings (settingsType)**](taskschedulerschema-networksettings-settingstype-element.md) | [**networkSettingsType**](taskschedulerschema-networksettingstype-complextype.md) | Enthält die Einstellungen, die der Taskplaner verwendet, um ein Netzwerkprofil zu erhalten. Der Taskplaner überprüft die Verfügbarkeit dieses Netzwerks, wenn das [**RunOnlyIfNetworkAvailable-Element**](taskschedulerschema-runonlyifnetworkavailable-settingstype-element.md) auf **True festgelegt ist.**<br/> |
 
 
 
 ## <a name="remarks"></a>Hinweise
 
-Informationen zur C++-Entwicklung finden Sie unter [**Name-Eigenschaft von INetworkSettings.**](/windows/desktop/api/taskschd/nf-taskschd-inetworksettings-get_name)
+Informationen zur C++-Entwicklung finden Sie [**unter Name-Eigenschaft von INetworkSettings**](/windows/desktop/api/taskschd/nf-taskschd-inetworksettings-get_name).
 
-Informationen zur Skriptentwicklung finden Sie unter [**NetworkSettings.Name**](networksettings-name.md).
+Informationen zur Skriptentwicklung finden Sie [**unter NetworkSettings.Name**](networksettings-name.md).
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -55,7 +55,7 @@ Informationen zur Skriptentwicklung finden Sie unter [**NetworkSettings.Name**](
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur Vista-Desktop-Apps\]<br/>       |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ Vista-Desktop-Apps\]<br/>       |
 | Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/> |
 
 

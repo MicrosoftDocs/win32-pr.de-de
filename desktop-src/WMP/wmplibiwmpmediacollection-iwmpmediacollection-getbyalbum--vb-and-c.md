@@ -1,11 +1,11 @@
 ---
-title: Iwmpmediacollection getbyalbum-Methode
-description: Die getbyalbum-Methode gibt eine iwmpwiedergabe-Schnittstelle zurück, die den Zugriff auf Medienelemente aus dem angegebenen Album ermöglicht.
+title: IWMPMediaCollection getByMedia-Methode
+description: Die getByGibt-Methode gibt eine IWMPPlaylist-Schnittstelle zurück, die zugriff auf Medienelemente aus dem angegebenen Album ermöglicht.
 ms.assetid: 26f004c0-de46-4792-8212-9d4ac749bb21
 keywords:
-- getbyalbum-Methode, Windows-Media Player
-- getbyalbum-Methode, Windows Media Player, iwmpmediacollection-Schnittstelle
-- Iwmpmediacollection Interface, Windows Media Player, getbyalbum-Methode
+- getBy-Methode Windows Media Player
+- getBy-Methode Windows Media Player , IWMPMediaCollection-Schnittstelle
+- IWMPMediaCollection-Schnittstelle Windows Media Player , getByMedia-Methode
 topic_type:
 - apiref
 api_name:
@@ -16,16 +16,16 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: c455e9bd61038a4d72bb6537d7c62b30a5d0b733
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 07137068961447b9f311dbdb765d34fbf2689ca80fd2035e8a60ebe27e4037bf
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106365837"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117929763"
 ---
-# <a name="iwmpmediacollectiongetbyalbum-method"></a>Iwmpmediacollection:: getbyalbum-Methode
+# <a name="iwmpmediacollectiongetbyalbum-method"></a>IWMPMediaCollection::getByMedia-Methode
 
-Die **getbyalbum** -Methode gibt eine **iwmpwiedergabe** -Schnittstelle zurück, die den Zugriff auf Medienelemente aus dem angegebenen Album ermöglicht.
+Die **getByGibt-Methode** gibt eine **IWMPPlaylist-Schnittstelle** zurück, die zugriff auf Medienelemente aus dem angegebenen Album ermöglicht.
 
 ## <a name="syntax"></a>Syntax
 
@@ -53,26 +53,26 @@ Implements IWMPMediaCollection.getByAlbum
 
 <dl> <dt>
 
-*bstrinalbum* \[ in\]
+*bstrZeichenfolge* \[ In\]
 </dt> <dd>
 
-Die **System. String** , die den Titel des Albums ist.
+Die **System.String,** die der Titel des Albums ist.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Eine **WMPLib. iwmpwiedergabe** -Schnittstelle für die abgerufenen Medienelemente.
+Eine **WMPLib.IWMPPlaylist-Schnittstelle** für die abgerufenen Medienelemente.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Vor dem Aufrufen dieser Methode müssen Sie über Lesezugriff auf die Bibliothek verfügen. Weitere Informationen finden Sie unter [Bibliotheks Zugriff](library-access.md).
+Bevor Sie diese Methode aufrufen, müssen Sie über Lesezugriff auf die Bibliothek verfügen. Weitere Informationen finden Sie unter [Bibliothekszugriff.](library-access.md)
 
-Es gibt zwei Möglichkeiten, wie Sie eine **iwmpmediacollection** -Schnittstelle abrufen können, und das Verhalten der **getbyalbum** -Methode hängt davon ab, welche dieser beiden Methoden Sie verwenden. Wenn Sie die Schnittstelle abrufen, indem Sie [AxWindowsMediaPlayer. mediacollection](axwmplib-axwindowsmediaplayer-mediacollection--vb-and-c.md)aufrufen, gibt die **getbyalbum** -Methode alle Medienelemente in der Bibliothek zurück. Wenn Sie jedoch die Schnittstelle abrufen, indem Sie [iwmplibrary. mediacollection](wmplibiwmplibrary-iwmplibrary-mediacollection--vb-and-c.md)aufrufen, gibt die **getbyalbum** -Methode nur die Audioelemente in der Bibliothek zurück, die zum angegebenen Album gehören.
+Es gibt zwei Möglichkeiten, wie Sie eine **IWMPMediaCollection-Schnittstelle** abrufen können, und das Verhalten der **getByMedia-Methode** hängt davon ab, welche dieser beiden Methoden Sie verwenden. Wenn Sie die Schnittstelle abrufen, indem Sie [AxWindowsMediaPlayer.mediaCollection](axwmplib-axwindowsmediaplayer-mediacollection--vb-and-c.md)aufrufen, gibt die **getBy Auflistungsmethode** alle Medienelemente in der Bibliothek zurück. Wenn Sie die Schnittstelle jedoch durch Aufrufen von [IWMPLibrary.mediaCollection](wmplibiwmplibrary-iwmplibrary-mediacollection--vb-and-c.md)abrufen, gibt die **getBy Audio-Methode** nur die Audioelemente in der Bibliothek zurück, die zum angegebenen Album gehören.
 
 ## <a name="examples"></a>Beispiele
 
-Im folgenden Beispiel wird **getbyalbum** verwendet, um eine Wiedergabeliste von Medien Elementen zu erstellen, wenn der Benutzer auf eine Schaltfläche klickt. Die Wiedergabeliste enthält Elemente mit dem vom Benutzer angegebenen Album in einem Textfeld. Das **AxWMPLib. AxWindowsMediaPlayer** -Objekt wird durch die Variable mit dem Namen "Player" dargestellt.
+Im folgenden Beispiel wird **getByProfil verwendet,** um eine Wiedergabeliste von Medienelementen zu erstellen, wenn der Benutzer auf eine Schaltfläche klickt. Die Wiedergabeliste enthält Elemente mit dem vom Benutzer angegebenen Album in einem Textfeld. Das **AxWMPLib.AxWindowsMediaPlayer-Objekt** wird durch die Variable player dargestellt.
 
 
 ```CSharp
@@ -132,14 +132,14 @@ End Sub
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Iwmpmediacollection-Schnittstelle (VB und c#)**](iwmpmediacollection--vb-and-c.md)
+[**IWMPMediaCollection-Schnittstelle (VB und C#)**](iwmpmediacollection--vb-and-c.md)
 </dt> <dt>
 
-[**Iwmpwiedergabe-Schnittstelle (VB und c#)**](iwmpplaylist--vb-and-c.md)
+[**IWMPPlaylist-Schnittstelle (VB und C#)**](iwmpplaylist--vb-and-c.md)
 </dt> </dl>
 
  

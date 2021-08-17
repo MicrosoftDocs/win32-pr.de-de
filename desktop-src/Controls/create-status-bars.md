@@ -1,43 +1,43 @@
 ---
-title: Erstellen von Status leisten
-description: Sie können eine Statusleiste erstellen, indem Sie die Funktion "kreatestatuswindow" verwenden oder die Funktion "die Funktion" "," die "statusclassname"-Klasse angeben.
+title: Erstellen von Statusleisten
+description: Sie können eine Statusleiste erstellen, indem Sie die CreateStatusWindow-Funktion oder die CreateWindowEx-Funktion verwenden und die STATUSCLASSNAME-Fensterklasse angeben.
 ms.assetid: 4ED4BFD3-904D-4198-8152-5DD13CA7C189
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: c133d7c7e15e5f43d198f21cadff54bcb4be14c2
-ms.sourcegitcommit: 5f33645661bf8c825a7a2e73950b1f4ea0f1cd82
+ms.openlocfilehash: e7075c8d8896d59a5711d5ee80be4af90948ee4ee99a441fbbf1140cd7452c4a
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/21/2020
-ms.locfileid: "104039657"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118413188"
 ---
-# <a name="how-to-create-status-bars"></a>Erstellen von Status leisten
+# <a name="how-to-create-status-bars"></a>Erstellen von Statusleisten
 
-Sie können eine Statusleiste erstellen, indem Sie die Funktion " [**kreatestatuswindow**](/windows/desktop/api/Commctrl/nf-commctrl-createstatuswindowa) " verwenden oder die Funktion " [**die Funktion"**](/windows/desktop/api/winuser/nf-winuser-createwindowexa) "," die " [**statusclassname**](common-control-window-classes.md) "-Klasse angeben.
+Sie können eine Statusleiste erstellen, indem Sie die [**CreateStatusWindow-Funktion**](/windows/desktop/api/Commctrl/nf-commctrl-createstatuswindowa) oder die [**CreateWindowEx-Funktion**](/windows/desktop/api/winuser/nf-winuser-createwindowexa) verwenden und die [**STATUSCLASSNAME-Fensterklasse**](common-control-window-classes.md) angeben.
 
-Nachdem Sie die Statusleiste erstellt haben, können Sie Sie in Teile aufteilen, den Text für jeden Teil festlegen und die Darstellung des Fensters mithilfe von Status leisten Meldungen steuern.
+Nachdem Sie die Statusleiste erstellt haben, können Sie sie in Teile unterteilen, den Text für die einzelnen Teile festlegen und die Darstellung des Fensters mithilfe von Statusleistenmeldungen steuern.
 
 > [!Note]  
-> Um sicherzustellen, dass die DLL des allgemeinen Steuer Elements geladen ist, verwenden Sie zuerst die [**InitCommonControls**](/windows/desktop/api/Commctrl/nf-commctrl-initcommoncontrols) -Funktion.
+> Um sicherzustellen, dass die allgemeine Steuerelement-DLL geladen wird, verwenden Sie zuerst die [**InitCommonControls-Funktion.**](/windows/desktop/api/Commctrl/nf-commctrl-initcommoncontrols)
 
- 
+ 
 
-## <a name="what-you-need-to-know"></a>Was Sie wissen müssen
+## <a name="what-you-need-to-know"></a>Wichtige Informationen
 
 ### <a name="technologies"></a>Technologien
 
--   [Windows-Steuerelemente](window-controls.md)
+-   [Windows Steuerelemente](window-controls.md)
 
 ### <a name="prerequisites"></a>Voraussetzungen
 
 -   C/C++
--   Programmieren der Windows-Benutzeroberfläche
+-   Windows Benutzeroberfläche-Programmierung
 
 ## <a name="instructions"></a>Anweisungen
 
-### <a name="create-a-status-bar"></a>Erstellen einer Status Leiste
+### <a name="create-a-status-bar"></a>Erstellen einer Statusleiste
 
-Im folgenden Beispiel wird veranschaulicht, wie Sie eine Statusleiste mit einem Größen Zieh Punkt erstellen und das Fenster basierend auf der Breite des Client Bereichs des übergeordneten Fensters in vier gleiche Teile aufteilen.
+Im folgenden Beispiel wird veranschaulicht, wie Sie eine Statusleiste erstellen, die über einen Größenziehstrich verfügt, und das Fenster basierend auf der Breite des Clientbereichs des übergeordneten Fensters in vier gleiche Teile unterteilen.
 
 
 ```C++
@@ -109,12 +109,12 @@ HWND DoCreateStatusBar(HWND hwndParent, int idStatus, HINSTANCE
 
 <dl> <dt>
 
-[Verwenden von Status leisten](using-status-bars.md)
+[Verwenden von Statusleisten](using-status-bars.md)
 </dt> <dt>
 
-[Demo zu allgemeinen Windows-Steuerelementen (cppwindowscommoncontrols)](https://github.com/microsoftarchive/msdn-code-gallery-microsoft/tree/master/OneCodeTeam/Windows%20common%20controls%20demo%20(CppWindowsCommonControls)/%5BC++%5D-Windows%20common%20controls%20demo%20(CppWindowsCommonControls)/C++/CppWindowsCommonControls)
+[Demo zu Windows allgemeinen Steuerelementen (CppWindowsCommonControls)](https://github.com/microsoftarchive/msdn-code-gallery-microsoft/tree/master/OneCodeTeam/Windows%20common%20controls%20demo%20(CppWindowsCommonControls)/%5BC++%5D-Windows%20common%20controls%20demo%20(CppWindowsCommonControls)/C++/CppWindowsCommonControls)
 </dt> </dl>
 
- 
+ 
 
- 
+ 

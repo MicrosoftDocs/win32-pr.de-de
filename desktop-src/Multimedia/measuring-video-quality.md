@@ -1,30 +1,30 @@
 ---
-title: Messen der Video Qualität
-description: Messen der Video Qualität
+title: Messen der Videoqualität
+description: Messen der Videoqualität
 ms.assetid: e1e76bed-a632-45e8-a8b3-13dd6969e85a
 keywords:
 - WM_CAP_GET_SEQUENCE_SETUP Meldung
-- capcapturegetsetup-Makro
+- capCaptureGetSetup-Makro
 - WM_CAP_SET_SEQUENCE_SETUP Meldung
-- capcapturesetsetup-Makro
+- capCaptureSetSetup-Makro
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: b0ad32bd3983301687b0eb0bb01f0fd932a43944
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: 95d3a4d28c12905722447189eabc494b220d737fc0c87f7a9ebc12948390920d
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "104036888"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118373524"
 ---
-# <a name="measuring-video-quality"></a>Messen der Video Qualität
+# <a name="measuring-video-quality"></a>Messen der Videoqualität
 
-Eine Möglichkeit zum Messen der Videoqualität besteht darin, die Anzahl der aufgezeichneten Frames einzuschränken, die während des Aufzeichnungs Vorgangs verworfen wurden. Wenn die streamingerfassung abgeschlossen ist, wird der Qualitäts Wert mit dem Verhältnis der verworfenen Frames zu den Gesamtrahmen verglichen. Wenn der Prozentsatz der gelöschten Frames größer ist als der Wert des **wprozdropforerror** -Members der [**captuprojektstruktur**](/windows/win32/api/vfw/ns-vfw-captureparms) , sendet avicap bei der Installation eine Fehlermeldung an die Fehler Rückruffunktion.
+Eine Möglichkeit zum Messen der Videoqualität besteht darin, die Anzahl der erfassten Frames zu begrenzen, die während des Aufzeichnungsvorgangs gelöscht werden. Wenn die Streamingerfassung abgeschlossen ist, wird der Qualitätswert mit dem Verhältnis von gelöschten Frames zu Gesamtframes verglichen. Wenn der Prozentsatz der gelöschten Frames größer als der Wert des **wPercentDropForError-Members** der [**CAPTUREPARMS-Struktur**](/windows/win32/api/vfw/ns-vfw-captureparms) ist, sendet AVICap bei der Installation eine Fehlermeldung an die Fehlerrückruffunktion.
 
-Sie können das aktuelle Limit von gelöschten Frames (ausgedrückt als Prozentsatz) mithilfe der [**\_ \_ get \_ Sequence- \_ Setup**](wm-cap-get-sequence-setup.md) Nachricht der WM-Abdeckung abrufen (oder das-Makro [**capcapturegetsetup**](/windows/desktop/api/Vfw/nf-vfw-capcapturegetsetup) ). Sie können eine neue Grenze festlegen, indem Sie einen Prozentwert als Wert des **wprozentudropforerror** -Members der **captuprojektstruktur** angeben und dann die aktualisierte Struktur mithilfe der [**\_ \_ \_ \_ Setup**](wm-cap-set-sequence-setup.md) -Nachricht für die WM-Abdeckung (oder das [**capcapturesetsetup**](/windows/desktop/api/Vfw/nf-vfw-capcapturesetsetup) -Makro) an das Aufzeichnungs Fenster senden. Der Standardwert von **wprozdropforerror** ist 10 Prozent.
+Sie können den aktuellen Grenzwert für gelöschte Frames (ausgedrückt als Prozentsatz) mithilfe der [**WM CAP GET SEQUENCE \_ \_ \_ \_ SETUP-Meldung**](wm-cap-get-sequence-setup.md) (oder des [**CapCaptureGetSetup-Makros)**](/windows/desktop/api/Vfw/nf-vfw-capcapturegetsetup) abrufen. Sie können einen neuen Grenzwert festlegen, indem Sie einen Prozentsatz als Wert des **wPercentDropForError-Members** der **CAPTUREPARMS-Struktur** angeben und dann die aktualisierte Struktur mithilfe der [**WM CAP SET SEQUENCE \_ \_ \_ \_ SETUP-Meldung**](wm-cap-set-sequence-setup.md) (oder des [**CapCaptureSetSetup-Makros)**](/windows/desktop/api/Vfw/nf-vfw-capcapturesetsetup) an das Erfassungsfenster senden. Der Standardwert von **wPercentDropForError** ist 10 Prozent.
 
- 
+ 
 
- 
+ 
 
 
 

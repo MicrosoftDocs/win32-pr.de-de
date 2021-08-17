@@ -1,17 +1,17 @@
 ---
-title: Der virtuelle Datenträger Dienst wechselt zur Windows-Speicherverwaltungs-API.
-description: Der virtuelle Datenträger Dienst wechselt zur Windows-Speicherverwaltungs-API.
+title: Virtual Disk Service geht auf Windows Storage Verwaltungs-API
+description: Virtual Disk Service geht auf Windows Storage Verwaltungs-API
 ms.assetid: AB2A7D08-03B2-4595-A8EC-805D111A0E89
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: ceea3ffe82358737ca8f39e9ef6db0bdb1f116ef
-ms.sourcegitcommit: ea4baf9953a78d2d6bd530b680601e39f3884541
+ms.openlocfilehash: a45e25452ae0b6bb20e0ca04130b7fa2fd64f2a191d504380f973f663b7931ce
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/01/2020
-ms.locfileid: "104391103"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117852037"
 ---
-# <a name="virtual-disk-service-is-transitioning-to-windows-storage-management-api"></a>Der virtuelle Datenträger Dienst wechselt zur Windows-Speicherverwaltungs-API.
+# <a name="virtual-disk-service-is-transitioning-to-windows-storage-management-api"></a>Virtual Disk Service geht auf Windows Storage Verwaltungs-API
 
 ## <a name="platforms"></a>Plattformen
 
@@ -21,33 +21,33 @@ ms.locfileid: "104391103"
 
 ## <a name="description"></a>BESCHREIBUNG
 
-Ab Windows 8 und Windows Server 2012 wird die COM-Schnittstelle des virtuellen Datenträger Dienstanbieter durch die Speicherverwaltungs-API ersetzt, eine WMI-basierte Programmierschnittstelle. Zum Verwalten von Speicher Subsystemen, (Windows)-Datenträgern, Partitionen und Volumes wird dringend empfohlen, die-Speicherverwaltungs-API zu verwenden. Weitere Informationen finden Sie unter [Windows-Speicherverwaltungs-API](/previous-versions/windows/desktop/stormgmt/windows-storage-management-api-portal).
+Ab Windows 8 und Windows Server 2012 wird die COM-Schnittstelle des Virtual Disk Service durch die Storage Verwaltungs-API ersetzt, eine WMI-basierte Programmierschnittstelle. Für die Verwaltung von Speichersubsystemen, (Windows) Datenträgern, Partitionen und Volumes wird dringend empfohlen, die Storage Verwaltungs-API zu verwenden. Weitere Informationen finden Sie unter [Windows Storage Verwaltungs-API](/previous-versions/windows/desktop/stormgmt/windows-storage-management-api-portal).
 
-Für alle Verwendungen mit Ausnahme von Spiegelungs Start Volumes (mit einem Spiegelungs Volume zum Hosten des Betriebssystems) sind dynamische Datenträger veraltet. Verwenden Sie für Daten, die Resilienz vor Laufwerks Fehlern erfordern, Speicherplätze, eine robuste Lösung für die Speichervirtualisierung. Weitere Informationen finden Sie unter [Speicherplätze Technical Preview](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/hh831739(v=ws.11)).
+Für alle Verwendungen mit Ausnahme von Spiegelstartvolumes (mit einem Spiegelvolume zum Hosten des Betriebssystems) sind dynamische Datenträger veraltet. Verwenden Sie für Daten, die Resilienz bei Laufwerkausfällen erfordern, Speicherplätze, eine robuste Speichervirtualisierungslösung. Weitere Informationen finden Sie unter [Speicherplätze Technical Preview.](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/hh831739(v=ws.11))
 
-Sie können Diskpart, Diskraid und die Datenträgerverwaltung während des veralteten Zeitraums weiterhin verwenden. diese Tools funktionieren jedoch nicht mit Speicherplätzen oder mit anderen neuen Windows-Verwaltungsinstrumentation (WMI)-basierten Windows-Speicherverwaltungs-APIs oder in-Box-Speicher Verwaltungs Dienstprogrammen oder-Clients.
+Sie können DiskPart, DiskRAID und Die Datenträgerverwaltung während des Veralteten Zeitraums weiterhin verwenden, aber diese Tools funktionieren nicht mit Speicherplätze oder anderen neuen WMI-basierten (Windows Management Instrumentation)-basierten Windows Storage Management-APIs oder in-box-Speicherverwaltungshilfsprogrammen oder -clients.
 
 
-| APIs | Speicher-Subsysteme | Grundlegende Datenträger | Dynamische Datenträger | Speicherplätze |
+| APIs | Speicher-Subsysteme | Basisdatenträger | Dynamische Datenträger | Speicherplätze |
 | --- | --- | --- | --- | --- |
-| VDS | Ja | Ja | Ja | Nein |
+| Vds | Ja | Ja | Ja | Nein |
 | WMI | Ja | Ja | Nein | Ja |
 | DiskPart | – | Ja | Ja | Nein |
 | DiskRAID |  Ja | – | – | – |
-| Datenträger-Mgmt-GUI | – | Ja | Ja | Nein |
+| Gui des Datenträgers mgmt | – | Ja | Ja | Nein |
 | PowerShell | Ja | Ja | Nein | Ja |
-| Speicherplätze-Systemsteuerung | – | Nein | Nein | Ja |
+| Speicherplätze Systemsteuerung | – | Nein | Nein | Ja |
 
 
-Das Ergebnis dieses Übergangs ist eine höhere speicherresilienz, Verfügbarkeit und Skalierbarkeit. eine einheitliche Skript-und Programmiersprache, geringere Speicher Verwaltungskosten und eine einfachere Remote Speicherverwaltung.
+Das Ergebnis dieses Übergangs ist eine höhere Speicherresilienz, Verfügbarkeit und Skalierbarkeit. eine einheitliche Skript- und Programmiersprache, reduzierte Speicherverwaltungskosten und eine einfachere Remotespeicherverwaltung.
 
-## <a name="manifestation"></a>Ausstrahlung
+## <a name="manifestation"></a>Manifestation
 
-Die in der VDS-Umgebung verwendeten Diskpart-und Diskraid-Hilfsprogramme unterstützen nicht die neuen Speicherplätze. Ebenso unterstützt das neue Storage PowerShell-Hilfsprogramm die veralteten dynamischen Datenträger nicht.
+Die in der VDS-Umgebung verwendeten Hilfsprogramme DiskPart und DiskRAID unterstützen die neuen Speicherplätze nicht. Ebenso unterstützt das neue Storage PowerShell-Hilfsprogramm die veralteten dynamischen Datenträger nicht.
 
 ## <a name="mitigation"></a>Minderung
 
-Microsoft empfiehlt dringend, dass Sie neue Speicher Verwaltungs-apps auf der Windows-Speicherverwaltungs-API als Grundlage für vorhandene apps, die auf der VDS-Infrastruktur basieren, auf die Windows-Speicherverwaltungs-API auf der Windows-Speicherverwaltungs-API in den standardmäßigen Aktualisierungszyklen umstellen.
+Microsoft empfiehlt dringend, dass Sie alle neuen Speicherverwaltungs-Apps auf dem Windows Storage Verwaltungs-API basieren und planen, vorhandene Apps, die auf der VDS-Infrastruktur basieren, während Ihrer Standardaktualisierungszyklen auf die Windows Storage Verwaltungs-API umgestellt zu werden.
 
 ## <a name="resources"></a>Ressourcen
 
@@ -56,6 +56,6 @@ Microsoft empfiehlt dringend, dass Sie neue Speicher Verwaltungs-apps auf der Wi
 -   [Windows-Verwaltungsinstrumentation](../wmisdk/wmi-start-page.md)
 -   [Windows PowerShell](https://msdn.microsoft.com/library/dd835506(v=VS.85).aspx)
 
- 
+ 
 
- 
+ 

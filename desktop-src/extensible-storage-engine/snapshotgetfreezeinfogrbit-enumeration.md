@@ -1,6 +1,6 @@
 ---
-description: 'Weitere Informationen finden Sie hier: snapshotgetfrezeinfogrbit-Enumeration'
-title: Snapshotgetfrezeinfogrbit-Enumeration (Microsoft. ISAM. ESENT. Interop. Vista)
+description: Weitere Informationen finden Sie unter SnapshotGetFreezeInfoGrbit-Enumeration.
+title: SnapshotGetFreezeInfoGrbit-Enumeration (Microsoft.Isam.Esent.Interop.Vista)
 TOCTitle: SnapshotGetFreezeInfoGrbit enumeration
 ms:assetid: T:Microsoft.Isam.Esent.Interop.Vista.SnapshotGetFreezeInfoGrbit
 ms:mtpsurl: https://msdn.microsoft.com/library/microsoft.isam.esent.interop.vista.snapshotgetfreezeinfogrbit(v=EXCHG.10)
@@ -26,21 +26,21 @@ api_type:
 api_location:
 - Microsoft.Isam.Esent.Interop.dll
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: 65cd54a1dd66f498e1d25fd5bb36f97b96a40a34
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: a986e56666fba1c97cb530fcd8ccf095b3ff87e6af42197159cd3f154bd503d7
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "103862963"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118485437"
 ---
-# <a name="snapshotgetfreezeinfogrbit-enumeration"></a>Snapshotgetfrezeinfogrbit-Enumeration
+# <a name="snapshotgetfreezeinfogrbit-enumeration"></a>SnapshotGetFreezeInfoGrbit-Enumeration
 
-Optionen für [jedessnapshotgetfrezeinfo (JET_OSSNAPID, Int32, \[ \] , snapshotgetfreizeinfogrbit)](./vistaapi.jetossnapshotgetfreezeinfo-method.md).
+Optionen für [JetOSSnapshotGetFreezeInfo(JET_OSSNAPID, Int32, \[ \] , SnapshotGetFreezeInfoGrbit)](./vistaapi.jetossnapshotgetfreezeinfo-method.md).
 
 Diese Enumeration enthält ein [FlagsAttribute](/dotnet/api/system.flagsattribute)-Attribut, das eine bitweise Kombination der Memberwerte zulässt.
 
-**Namespace:**  [Microsoft. ISAM. ESENT. Interop. Vista](./microsoft.isam.esent.interop.vista-namespace.md)  
-**Assembly:**  Microsoft. ISAM. ESENT. Interop (in Microsoft.Isam.Esent.Interop.dll)
+**Namespace:**  [Microsoft.Isam.Esent.Interop.Vista](./microsoft.isam.esent.interop.vista-namespace.md)  
+**Assembly:**  Microsoft.Isam.Esent.Interop (in Microsoft.Isam.Esent.Interop.dll)
 
 ## <a name="syntax"></a>Syntax
 
@@ -77,8 +77,8 @@ public enum SnapshotGetFreezeInfoGrbit
 </table>
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
-#### <a name="reference"></a>Referenz
+#### <a name="reference"></a>Verweis
 
-[Microsoft. ISAM. ESENT. Interop. Vista-Namespace](./microsoft.isam.esent.interop.vista-namespace.md)
+[Microsoft.Isam.Esent.Interop.Vista-Namespace](./microsoft.isam.esent.interop.vista-namespace.md)

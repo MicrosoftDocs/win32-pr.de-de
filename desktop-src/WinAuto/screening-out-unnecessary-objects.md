@@ -1,40 +1,40 @@
 ---
-title: Auschecken unnötiger Objekte
-description: Wenn Sie überprüfen verwenden, um ein einfaches Steuerelement zu untersuchen, z. b. eine Schaltfläche "OK" im Microsoft WordPad-Zubehör, sehen Sie, dass diese übergeordneten Fenster Objekte auch mehrere unsichtbare untergeordnete Objekte enthalten.
+title: Aufsparen unnötiger Objekte
+description: Wenn Sie überprüfen verwenden, um ein einfaches Steuerelement zu untersuchen, z. B. eine SCHALTFLÄCHE OK im Microsoft WordPad-Accessory, können Sie sehen, dass diese übergeordneten Fensterobjekte auch mehrere unsichtbare untergeordnete Objekte enthalten.
 ms.assetid: 30884e11-cc73-4bb8-9d9e-b9f1b53c4193
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: bb341881ee2ea503b1f74643723a1f90c8e5d1d5
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: 2c52dc54f2c32be3aff3e535427668943cf1ee21423636e3be8c018f6e3257b2
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "106340414"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117745283"
 ---
-# <a name="screening-out-unnecessary-objects"></a>Auschecken unnötiger Objekte
+# <a name="screening-out-unnecessary-objects"></a>Aufsparen unnötiger Objekte
 
-Wenn Sie über [prüfen](inspect-objects.md) verwenden, um ein einfaches Steuerelement zu untersuchen, z. b. eine Schaltfläche "OK" im Microsoft WordPad-Zubehör, sehen Sie, dass diese übergeordneten Fenster Objekte auch mehrere unsichtbare untergeordnete Objekte enthalten. Diese nicht sichtbaren Objekte haben denselben Fenster Klassennamen wie das Steuerelement, und die [State-Eigenschaft](state-property.md) des [**Zustands Systems ist \_ \_ unsichtbar**](object-state-constants.md). In der folgenden Tabelle sind die unsichtbaren untergeordneten Objekte aufgelistet, die von Active Accessibility Microsoft für das-Steuerelement erstellt werden.
+Wenn Sie [](inspect-objects.md) überprüfen verwenden, um ein einfaches Steuerelement zu untersuchen, z. B. eine SCHALTFLÄCHE OK im Microsoft WordPad-Accessory, können Sie sehen, dass diese übergeordneten Fensterobjekte auch mehrere unsichtbare untergeordnete Objekte enthalten. Diese unsichtbaren Objekte haben den gleichen Fensterklassennamen wie das -Steuerelement und die [State-Eigenschaft](state-property.md) [**von STATE SYSTEM \_ \_ INVISIBLE**](object-state-constants.md). In der folgenden Tabelle sind die unsichtbaren untergeordneten Objekte aufgeführt, Microsoft Active Accessibility für das -Steuerelement erstellt werden.
 
 
 
 | Name          | Role                                                                  | ChildCount |
 |---------------|-----------------------------------------------------------------------|------------|
-| Anlage      | [**Rollen \_ System- \_ Menüleiste**](object-roles.md)     | 0          |
-| Keine          | [**Rollen \_ System- \_ TitleBar**](object-roles.md)   | 5          |
-| Asyl | [**Rollen \_ System- \_ Menüleiste**](object-roles.md)     | 0          |
-| Rechtes    | [**Rollen \_ System- \_ Scrollleiste**](object-roles.md) | 5          |
-| Ales  | [**Rollen \_ System- \_ Scrollleiste**](object-roles.md) | 5          |
-| "Size Box"    | [**Rollen System-Zieh Punkt \_ \_**](object-roles.md)           | 0          |
+| "System"      | [**MENÜLEISTE \_ \_ "ROLLENSYSTEM"**](object-roles.md)     | 0          |
+| Keine          | [**ROLE \_ SYSTEM \_ TITLEBAR**](object-roles.md)   | 5          |
+| "Anwendung" | [**MENÜLEISTE \_ \_ "ROLLENSYSTEM"**](object-roles.md)     | 0          |
+| "Vertikal"    | [**\_ \_ ROLLENSYSTEM-BILDLAUFLEISTE**](object-roles.md) | 5          |
+| "Horizontal"  | [**\_ \_ ROLLENSYSTEM-BILDLAUFLEISTE**](object-roles.md) | 5          |
+| "Size Box"    | [**ROLE \_ \_ SYSTEM-GREIFER**](object-roles.md)           | 0          |
 
 
 
- 
+ 
 
-Client Entwickler müssen diese Objekte des übergeordneten Fensters und die untergeordneten Objekte identifizieren und herausfiltern, da Sie keinen sinnvollen Informationen für Endbenutzer bereitstellen.
+Cliententwickler müssen diese übergeordneten Fensterobjekte und unsichtbaren untergeordneten Objekte identifizieren und herausfiltern, da sie endbenutzern keine aussagekräftigen Informationen bereitstellen.
 
- 
+ 
 
- 
+ 
 
 
 

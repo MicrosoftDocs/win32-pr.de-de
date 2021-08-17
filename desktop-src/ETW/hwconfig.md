@@ -1,7 +1,7 @@
 ---
-description: Die hwconfig-Klasse ist die übergeordnete Klasse für Hardware Konfigurations Ereignisse unter Windows XP. Die folgende Syntax wird durch den MOF-Code vereinfacht.
+description: Die HWConfig-Klasse ist die übergeordnete Klasse für Hardwarekonfigurationsereignisse auf Windows XP. Die folgende Syntax wird durch einen MOF-Code vereinfacht.
 ms.assetid: 47f062c0-fdf0-4beb-906d-257571324de9
-title: Hwconfig-Klasse
+title: HWConfig-Klasse
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -12,18 +12,18 @@ api_name:
 api_type:
 - NA
 api_location: ''
-ms.openlocfilehash: cfb194e09701dbc52b00279b624877f09ffac24b
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: e1d4b8f69784729ffe5d51f3068b03fc0b4154182b2d05f2896e4556a05f7eba
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "103868919"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118394680"
 ---
-# <a name="hwconfig-class"></a>Hwconfig-Klasse
+# <a name="hwconfig-class"></a>HWConfig-Klasse
 
-Die **hwconfig** -Klasse ist die übergeordnete Klasse für Hardware Konfigurations Ereignisse unter Windows XP.
+Die **HWConfig-Klasse** ist die übergeordnete Klasse für Hardwarekonfigurationsereignisse auf Windows XP.
 
-Die folgende Syntax wird durch den MOF-Code vereinfacht.
+Die folgende Syntax wird durch einen MOF-Code vereinfacht.
 
 ## <a name="syntax"></a>Syntax
 
@@ -36,38 +36,38 @@ class HWConfig : MSNT_SystemTrace
 
 ## <a name="members"></a>Member
 
-Die **hwconfig** -Klasse definiert keine Member.
+Die **HWConfig-Klasse** definiert keine Member.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Diese Ereignisse stellen die Hardwarekonfiguration des Computers bereit. Im Gegensatz zu anderen NT-Kernel Protokollierungs Ereignissen werden von der Kernel Sitzung automatisch Hardware Konfigurations Ereignisse generiert. Sie aktivieren diese Ereignisse nicht, wenn Sie die NT Kernel Logger-Sitzung starten.
+Diese Ereignisse stellen die Hardwarekonfiguration des Computers zur Verfügung. Im Gegensatz zu anderen NT-Kernelprotokollierungsereignissen generiert die Kernelsitzung automatisch Hardwarekonfigurationsereignisse. Sie aktivieren diese Ereignisse nicht, wenn Sie die NT-Kernelprotokollierungssitzung starten.
 
 **Windows 2000:** Nicht unterstützt.
 
-Informationen zu Hardware Konfigurations Ereignissen unter Windows Vista und Windows Server 2003 finden Sie in der [SystemConfig](systemconfig.md) -Klasse.
+Hardwarekonfigurationsereignisse auf Windows Vista und Windows Server 2003 finden Sie in der [SystemConfig-Klasse.](systemconfig.md)
 
-Ereignisablaufverfolgungs-Consumer können eine spezielle Verarbeitung für Hardware Konfigurations Ereignisse implementieren, indem Sie die [**settracecallback**](/windows/win32/api/evntrace/nf-evntrace-settracecallback) -Funktion aufrufen und [**eventtraceconfigguid**](nt-kernel-logger-constants.md) als *pguid* -Parameter angeben. Verwenden Sie die folgenden Ereignis Typen, um das tatsächliche Hardware Konfigurations Ereignis beim Verarbeiten von Ereignissen zu identifizieren.
+Ereignisverfolgungsverbraucher können eine spezielle Verarbeitung für Hardwarekonfigurationsereignisse implementieren, indem sie die [**SetTraceCallback-Funktion**](/windows/win32/api/evntrace/nf-evntrace-settracecallback) aufrufen und [**EventTraceConfigGuid**](nt-kernel-logger-constants.md) als *pGuid-Parameter* angeben. Verwenden Sie die folgenden Ereignistypen, um das tatsächliche Hardwarekonfigurationsereignis bei der Nutzung von Ereignissen zu identifizieren.
 
 
 
 | Ereignistyp                                                                      | BESCHREIBUNG                                                                                                                                      |
 |---------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------|
-| **Ereignis \_ Configuration \_ \_ \_ CPU**-Ablaufverfolgungstyp (Ereignistyp Wert ist 10)<br/>          | CPU-Konfigurations Ereignis. Die [**hwconfig \_ CPU**](hwconfig-cpu.md) MOF-Klassen definieren die Ereignisdaten für dieses Ereignis.                            |
-| **Ereignis \_ Ablaufverfolgungstyp \_ \_ config \_ LogicalDisk**(Ereignistyp Wert ist 12)<br/>  | Konfigurations Ereignis des logischen Datenträgers. Die MOF-Klasse " [**hwconfig \_ logdisk**](hwconfig-logdisk.md) MOF Classes" definiert die Ereignisdaten für dieses Ereignis. |
-| **Ereignis \_ \_Konfigurations- \_ \_ NIC des Ablauf Verfolgungs Typs**(Ereignistyp Wert ist 13)<br/>          | Nic-Konfigurations Ereignis. Die MOF-Klassen der [**hwconfig- \_ NIC**](hwconfig-nic.md) definieren die Ereignisdaten für dieses Ereignis.                            |
-| **Ereignis \_ Typ der Ablaufverfolgungstyp \_ \_ config \_ PhysicalDisk**(Ereignistyp Wert ist 11)<br/> | Ereignis für die Konfiguration des physischen Datenträgers Die [**hwconfig \_ phydisk**](hwconfig-phydisk.md) -MOF-Klassen definieren die Ereignisdaten für dieses Ereignis.          |
+| **EVENT \_ TRACE \_ TYPE \_ CONFIG \_ CPU**(Ereignistypwert ist 10)<br/>          | CPU-Konfigurationsereignis. Die [**HWConfig-CPU-MOF-Klassen \_**](hwconfig-cpu.md) definieren die Ereignisdaten für dieses Ereignis.                            |
+| **EVENT \_ TRACE \_ TYPE \_ CONFIG \_ LOGICALDISK**(Ereignistypwert ist 12)<br/>  | Logisches Datenträgerkonfigurationsereignis. Die [**MOF-Klasse HWConfig \_ LogDisk**](hwconfig-logdisk.md) MOF definiert die Ereignisdaten für dieses Ereignis. |
+| **EVENT \_ TRACE \_ TYPE \_ CONFIG \_ NIC**(Ereignistypwert ist 13)<br/>          | NIC-Konfigurationsereignis. Die [**MOF-Klassen \_ der HWConfig-NIC**](hwconfig-nic.md) definieren die Ereignisdaten für dieses Ereignis.                            |
+| **EVENT \_ TRACE \_ TYPE \_ CONFIG \_ PHYSICALDISK**(Ereignistypwert ist 11)<br/> | Physisches Datenträgerkonfigurationsereignis. Die [**HWConfig \_ PhyDisk**](hwconfig-phydisk.md) MOF-Klassen definieren die Ereignisdaten für dieses Ereignis.          |
 
 
 
  
 
-## <a name="requirements"></a>Requirements (Anforderungen)
+## <a name="requirements"></a>Anforderungen
 
 
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows XP \[ -Desktop-Apps\]<br/> |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ XP-Desktop-Apps\]<br/> |
 | Unterstützte Mindestversion (Server)<br/> | Nicht unterstützt<br/>                   |
 
 
@@ -76,19 +76,19 @@ Ereignisablaufverfolgungs-Consumer können eine spezielle Verarbeitung für Hard
 
 <dl> <dt>
 
-[**MSNT \_ systemtrace**](msnt-systemtrace.md)
+[**MSNT \_ SystemTrace**](msnt-systemtrace.md)
 </dt> <dt>
 
-[**Hwconfig- \_ CPU**](hwconfig-cpu.md)
+[**\_HWConfig-CPU**](hwconfig-cpu.md)
 </dt> <dt>
 
-[**Hwconfig- \_ logdisk**](hwconfig-logdisk.md)
+[**HWConfig \_ LogDisk**](hwconfig-logdisk.md)
 </dt> <dt>
 
-[**Hwconfig- \_ NIC**](hwconfig-nic.md)
+[**\_HWConfig-NIC**](hwconfig-nic.md)
 </dt> <dt>
 
-[**Hwconfig- \_ phydisk**](hwconfig-phydisk.md)
+[**HWConfig \_ PhyDisk**](hwconfig-phydisk.md)
 </dt> </dl>
 
  

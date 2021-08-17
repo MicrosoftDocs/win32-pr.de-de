@@ -113,11 +113,11 @@ Die Microsoft High Level Shader Language (HLSL) erkennt die Wörter in diesem Ab
 - [line, lineadj,](dx-graphics-hlsl-geometry-shader.md) [linear,](dx-graphics-hlsl-struct.md) [LineStream](dx-graphics-hlsl-so-type.md)
 - [matrix](dx-graphics-hlsl-matrix.md), [min16float](dx-graphics-hlsl-scalar.md), [min10float](dx-graphics-hlsl-scalar.md), [min16int](dx-graphics-hlsl-scalar.md), [min12int](dx-graphics-hlsl-scalar.md), [min16uint](dx-graphics-hlsl-scalar.md)
 - namespace, [nointerpolation](dx-graphics-hlsl-struct.md), [noperspective](dx-graphics-hlsl-struct.md), NULL
-- [out](dx-graphics-hlsl-function-parameters.md), [ **OutputPatch**](sm5-object-outputpatch.md)
+- [out,](dx-graphics-hlsl-function-parameters.md) [ **OutputPatch**](sm5-object-outputpatch.md)
 - [**packoffset**](dx-graphics-hlsl-variable-packoffset.md), pass, [pixelfragment](fragment-declaration-syntax.md), [PixelShader](dx-graphics-hlsl-shader.md), [point](dx-graphics-hlsl-geometry-shader.md), [PointStream](dx-graphics-hlsl-so-type.md), [precise](dx-graphics-hlsl-variable-syntax.md)
 - RasterizerState, RenderTargetView, [return](dx-graphics-hlsl-return.md), [register](dx-graphics-hlsl-variable-register.md), [row \_ major](dx-graphics-hlsl-variable-syntax.md), [**RWBuffer**](sm5-object-rwbuffer.md), [**RWByteAddressBuffer**](sm5-object-rwbyteaddressbuffer.md), [**RWStructuredBuffer**](sm5-object-rwstructuredbuffer.md), [**RWTexture1D**](sm5-object-rwtexture1d.md), [**RWTexture1DArray**](sm5-object-rwtexture1darray.md), [**RWTexture2D**](sm5-object-rwtexture2d.md), [**RWTexture2DArray**](sm5-object-rwtexture2darray.md), [**RWTexture3D**](sm5-object-rwtexture3d.md)
-- [sample](dx-graphics-hlsl-struct.md), [sampler, SamplerState, SamplerComparisonState](dx-graphics-hlsl-sampler.md), [shared](dx-graphics-hlsl-variable-syntax.md), [snorm](dx-graphics-hlsl-scalar.md), stateblock, stateblock \_ state, static, [string](dx-graphics-hlsl-scalar.md), [struct](dx-graphics-hlsl-struct.md), [switch](dx-graphics-hlsl-switch.md), [**StructuredBuffer**](sm5-object-structuredbuffer.md)
-- [tbuffer](dx-graphics-hlsl-constants.md), technique, [technique10](/windows/desktop/direct3d10/d3d10-effect-technique-syntax), [technique11](/windows/desktop/direct3d10/d3d10-effect-technique-syntax), [texture](dx-graphics-hlsl-texture.md), [Texture1D](sm5-object-texture1d.md), [Texture1DArray](sm5-object-texture1darray.md), [Texture2D](sm5-object-texture2d.md), [Texture2DArray](sm5-object-texture2darray.md), [Texture2DMS](sm5-object-texture2dms.md), [Texture2DMSArray](sm5-object-texture2dmsarray.md), [Texture3D](sm5-object-texture3d.md), [TextureCube](dx-graphics-hlsl-to-type.md), [TextureCubeArray](dx-graphics-hlsl-to-type.md), true, [typedef](dx-graphics-hlsl-user-defined.md), [triangle, triangleadj](dx-graphics-hlsl-geometry-shader.md), [TriangleStream](dx-graphics-hlsl-so-type.md)
+- [Sample](dx-graphics-hlsl-struct.md), [sampler, SamplerState, SamplerComparisonState](dx-graphics-hlsl-sampler.md), [shared](dx-graphics-hlsl-variable-syntax.md), [snorm](dx-graphics-hlsl-scalar.md), stateblock, stateblock \_ state, static, [string](dx-graphics-hlsl-scalar.md), [struct](dx-graphics-hlsl-struct.md), [switch](dx-graphics-hlsl-switch.md), [**StructuredBuffer**](sm5-object-structuredbuffer.md)
+- [tbuffer](dx-graphics-hlsl-constants.md), [technique10](/windows/desktop/direct3d10/d3d10-effect-technique-syntax), [technique11](/windows/desktop/direct3d10/d3d10-effect-technique-syntax), [texture](dx-graphics-hlsl-texture.md), [Texture1D](sm5-object-texture1d.md), [Texture1DArray](sm5-object-texture1darray.md), [Texture2D](sm5-object-texture2d.md), [Texture2DArray](sm5-object-texture2darray.md), [Texture2DMS](sm5-object-texture2dms.md), [Texture2DMSArray](sm5-object-texture2dmsarray.md), [Texture3D](sm5-object-texture3d.md), [TextureCube](dx-graphics-hlsl-to-type.md), [TextureCubeArray](dx-graphics-hlsl-to-type.md), true, [typedef](dx-graphics-hlsl-user-defined.md), [triangle, triangleadj](dx-graphics-hlsl-geometry-shader.md), [TriangleStream](dx-graphics-hlsl-so-type.md)
 - [uint](dx-graphics-hlsl-scalar.md), [uniform](dx-graphics-hlsl-function-parameters.md), [unorm](dx-graphics-hlsl-scalar.md), unsigned
 - [vector](dx-graphics-hlsl-vector.md), [vertexfragment](fragment-declaration-syntax.md), [VertexShader](dx-graphics-hlsl-shader.md), void, [volatile](dx-graphics-hlsl-variable-syntax.md)
 - [while](dx-graphics-hlsl-while.md)
@@ -151,11 +151,11 @@ Die Erweiterungen dieser numerischen Typen folgen diesem Muster, das float als B
     float4x1, float4x2, float4x3, float4x4  
     </dl>
 
-HLSL unterstützt aus Legacygründen eine [Kleinbuchstabentextur](dx-graphics-hlsl-texture.md) und [einen Sampler.](dx-graphics-hlsl-sampler.md) Stattdessen wird für Ihre neuen Apps empfohlen, die neuen Texturobjekte[(Texture2D,](sm5-object-texture2d.md) [Texture3D](sm5-object-texture3d.md)usw.) und sampler-Objekte[(SamplerState und SamplerComparisonState)](dx-graphics-hlsl-sampler.md)von HLSL zu verwenden.
+HLSL unterstützt aus Legacygründen Die [Textur](dx-graphics-hlsl-texture.md) und [den Sampler](dx-graphics-hlsl-sampler.md) in Klein klein. Stattdessen wird empfohlen, für Ihre neuen Apps die neuen Texturobjekte von HLSL ([Texture2D,](sm5-object-texture2d.md) [Texture3D](sm5-object-texture3d.md)und so weiter) und Samplerobjekte ([SamplerState und SamplerComparisonState](dx-graphics-hlsl-sampler.md)) zu verwenden.
 
 ### <a name="export"></a>Export
 
-Verwenden Sie **export,** um Funktionen zu markieren, die Sie in eine Bibliothek packen.
+Verwenden **Sie export,** um Funktionen zu markieren, die Sie in eine Bibliothek packen.
 
 Beispiel:
 
@@ -166,12 +166,12 @@ export float identity(float x)
 }
 ```
 
-Indem Sie die **Identitätsfunktion** mit dem **Schlüsselwort export** markieren, stellen Sie die **Identitätsfunktion** in einer Bibliothek für die spätere Verknüpfung zur Verfügung. Ohne **die Exportmarkierung** ist die **Identitätsfunktion** für spätere Verknüpfungen nicht verfügbar.
+Indem Sie die **Identitätsfunktion** mit dem **Exportschlüsselwort** markieren, stellen Sie die **Identitätsfunktion** über eine Bibliothek zur späteren Verknüpfung zur Verfügung. Ohne die **Exportmarkierung** ist **die Identitätsfunktion** nicht für spätere Verknüpfungen verfügbar.
 
-Der Compiler ignoriert das **Exportschlüsselwort** für die Nichtbibliothekskompilierung.
+Der Compiler ignoriert das **Exportschlüsselwort** für die Kompilierung ohne Bibliothek.
 
 > [!Note]  
-> Das **Exportschlüsselwort** erfordert die D3dcompiler-47.dll \_ oder eine höhere Version der DLL.
+> Das **Exportschlüsselwort** erfordert die D3dcompiler-47.dll \_ oder eine neuere Version der DLL.
 
  
 

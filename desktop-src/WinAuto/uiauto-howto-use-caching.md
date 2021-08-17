@@ -1,27 +1,27 @@
 ---
 title: Verwenden der Zwischenspeicherung
-description: Dieses Thema enthält Beispielcode, in dem gezeigt wird, wie die Funktionen zum Zwischenspeichern (oder Massen Abruf) der Microsoft UI Automation Tree verwendet werden.
+description: Dieses Thema enthält Beispielcode, der zeigt, wie die Zwischenspeicherungsfunktionen (oder das Massenabrufen) von Microsoft Benutzeroberflächenautomatisierung werden.
 ms.assetid: d72fa637-35ca-4c28-922d-263f469cb1c8
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 8758621a8499202b820a6ffc3459fade57c2a485
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: a020f200384f88e1e4f06f9418676e8fc567851424ed03b1c36e2e6299f98e45
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "106338383"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119133253"
 ---
 # <a name="how-to-use-caching"></a>Verwenden der Zwischenspeicherung
 
-Dieses Thema enthält Beispielcode, in dem gezeigt wird, wie die Funktionen zum Zwischenspeichern (oder Massen Abruf) der Microsoft UI Automation Tree verwendet werden. In diesem Thema werden die folgenden Themen behandelt:
+Dieses Thema enthält Beispielcode, der zeigt, wie die Zwischenspeicherungsfunktionen (oder das Massenabrufen) von Microsoft Benutzeroberflächenautomatisierung werden. Es werden die folgenden Themen erläutert:
 
--   [Abrufen von Eigenschaften und Steuerelement Mustern im Cache](#fetching-properties-and-control-patterns-into-the-cache)
--   [Abrufen von Eigenschaften und Steuerelement Mustern aus dem Cache](#retrieving-properties-and-control-patterns-from-the-cache)
+-   [Abrufen von Eigenschaften und Steuerelementmustern in den Cache](#fetching-properties-and-control-patterns-into-the-cache)
+-   [Abrufen von Eigenschaften und Steuerelementmustern aus dem Cache](#retrieving-properties-and-control-patterns-from-the-cache)
 -   [Zugehörige Themen](#related-topics)
 
-## <a name="fetching-properties-and-control-patterns-into-the-cache"></a>Abrufen von Eigenschaften und Steuerelement Mustern im Cache
+## <a name="fetching-properties-and-control-patterns-into-the-cache"></a>Abrufen von Eigenschaften und Steuerelementmustern in den Cache
 
-Das folgende Codebeispiel zeigt eine Funktion, die Elemente aus einem Listen Steuerelement abruft und das SelectionItem-Steuerelement Muster und die Name-Eigenschaft für jedes Element zwischenspeichert. Standardmäßig werden die Listenelemente mit einer vollständigen Referenz zurückgegeben, sodass alle aktuellen Eigenschaften weiterhin verfügbar sind.
+Das folgende Codebeispiel zeigt eine Funktion, die Elemente aus einem Listensteuerelement abruft und das SelectionItem-Steuerelementmuster und die Name-Eigenschaft für jedes Element zwischenspeichert. Standardmäßig werden die Listenelemente mit einem vollständigen Verweis zurückgegeben, sodass alle aktuellen Eigenschaften weiterhin verfügbar sind.
 
 
 ```C++
@@ -67,9 +67,9 @@ cleanup:
 
 
 
-## <a name="retrieving-properties-and-control-patterns-from-the-cache"></a>Abrufen von Eigenschaften und Steuerelement Mustern aus dem Cache
+## <a name="retrieving-properties-and-control-patterns-from-the-cache"></a>Abrufen von Eigenschaften und Steuerelementmustern aus dem Cache
 
-Der folgende Code veranschaulicht, wie Eigenschaften und Steuerelement Muster aus dem Cache abgerufen werden. Das SelectionItem-Steuerelement Muster und die Name-Eigenschaft für ein Listenelement werden abgerufen.
+Der folgende Code veranschaulicht, wie Eigenschaften und Steuerelementmuster aus dem Cache abgerufen werden. Sie ruft das SelectionItem-Steuerelementmuster und die Name-Eigenschaft für ein Listenelement ab.
 
 
 ```C++
@@ -124,18 +124,18 @@ HRESULT GetCachedListItem(IUIAutomationElement* pItem)
 
 <dl> <dt>
 
-**Licher**
+**Konzeptionellen**
 </dt> <dt>
 
-[Zwischenspeichern von Eigenschaften der Benutzeroberflächen Automatisierung und Steuerelement Mustern](uiauto-cachingforclients.md)
+[Zwischenspeichern Benutzeroberflächenautomatisierung Eigenschaften und Steuerelementmustern](uiauto-cachingforclients.md)
 </dt> <dt>
 
-[Themen zur Vorgehensweise für Benutzeroberflächenautomatisierungs-Clients](uiauto-howto-topics-for-uiautomation-clients.md)
+[How-To Topics for Benutzeroberflächenautomatisierung Clients (Themen zur Benutzeroberflächenautomatisierung Clients)](uiauto-howto-topics-for-uiautomation-clients.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

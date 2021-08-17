@@ -1,41 +1,41 @@
 ---
-description: Die Aktion registerproduct registriert die Produktinformationen mit dem Installationsprogramm und mit der Option "Software". Außerdem wird mit dieser Aktion das Windows Installer-Daten Bank Paket auf dem lokalen Computer gespeichert.
+description: Die Aktion RegisterProduct registriert die Produktinformationen beim Installationsprogramm und bei "Programme hinzufügen/entfernen". Darüber hinaus speichert diese Aktion das Windows Installer-Datenbankpaket auf dem lokalen Computer.
 ms.assetid: 689b09c7-9c17-42f5-ba31-cf9c6252e453
-title: Registerproduct-Aktion
+title: RegisterProduct-Aktion
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 5afa2d3e9f00f736b8c4c7864d8ec4baa3aa8ad9
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 185b670b7a24c31e6dc5adb402cd6c557e2eba9eac3db5138744cd1e827113ad
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106373026"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118375961"
 ---
-# <a name="registerproduct-action"></a>Registerproduct-Aktion
+# <a name="registerproduct-action"></a>RegisterProduct-Aktion
 
-Die Aktion registerproduct registriert die Produktinformationen mit dem Installationsprogramm und mit der Option "Software". Außerdem wird mit dieser Aktion das Windows Installer-Daten Bank Paket auf dem lokalen Computer gespeichert.
+Die Aktion RegisterProduct registriert die Produktinformationen beim Installationsprogramm und bei "Programme hinzufügen/entfernen". Darüber hinaus speichert diese Aktion das Windows Installer-Datenbankpaket auf dem lokalen Computer.
 
-Mit der registerproduct-Aktion werden die Steuerelemente konfiguriert, die in der Systemsteuerung über die Option "Software" angezeigt werden. Weitere Informationen finden Sie unter [Konfigurieren von "Programme hinzufügen/entfernen" mit Windows Installer](configuring-add-remove-programs-with-windows-installer.md).
+Die RegisterProduct-Aktion konfiguriert die Steuerelemente, die von der Software in Systemsteuerung angezeigt werden. Weitere Informationen finden Sie unter [Konfigurieren von Programmen mit Windows Installer.](configuring-add-remove-programs-with-windows-installer.md)
 
-## <a name="sequence-restrictions"></a>Sequenz Einschränkungen
+## <a name="sequence-restrictions"></a>Sequenzeinschränkungen
 
-Es gibt keine Sequenz Einschränkungen.
+Es gibt keine Sequenzeinschränkungen.
 
-## <a name="actiondata-messages"></a>Aktions Daten Meldungen
+## <a name="actiondata-messages"></a>ActionData-Nachrichten
 
 
 
-| Feld | Beschreibung der Aktions Daten            |
+| Feld | Beschreibung der Aktionsdaten            |
 |-------|---------------------------------------|
-| \[1\] | Informationen zu registriertes Produkt. |
+| \[1\] | Informationen zum registrierten Produkt. |
 
 
 
  
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die Aktion "registerproduct" wird während der Installation nicht an einem administrativen Installations Punkt ausgeführt.
+Die RegisterProduct-Aktion wird während der Installation auf einem Administratorinstallationspunkt nicht ausgeführt.
 
  
 

@@ -1,7 +1,7 @@
 ---
-description: Hier wird beschrieben, wie das Betriebssystem auf einem Gerät auf dem neuesten Stand ist.
+description: Beschreibt, wie aktuell das Betriebssystem auf einem Gerät ist.
 ms.assetid: 157E241E-E8D8-41F8-9565-5C9298DCD1BE
-title: Updateassessment mentstatus-Enumeration
+title: UpdateAssessmentStatus-Enumeration
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,16 +13,16 @@ api_type:
 - HeaderDef
 api_location:
 - waasapitypes.h
-ms.openlocfilehash: 790077118db7704bdd04801758f44cbb50cc54b4
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: f4ece78c9593ab674a4198829c4e75612a9c4b337e17b3d2b6c5ed2fc19f42c1
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106347224"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118884306"
 ---
-# <a name="updateassessmentstatus-enumeration"></a>Updateassessment mentstatus-Enumeration
+# <a name="updateassessmentstatus-enumeration"></a>UpdateAssessmentStatus-Enumeration
 
-Hier wird beschrieben, wie das Betriebssystem auf einem Gerät auf dem neuesten Stand ist. **Updategutamentstatus** wird von den-Strukturen " [**updateassessment**](/windows/win32/api/waasapitypes/ns-waasapitypes-updateassessment) " und " [**osupdateassessment**](/windows/win32/api/waasapitypes/ns-waasapitypes-osupdateassessment) " in den Elementen " **Assessment mentforcurrent**", " **bewermentforuptodate**" und " **SecurityStatus** " verwendet. Es wird genau eine Konstante zurückgegeben.
+Beschreibt, wie aktuell das Betriebssystem auf einem Gerät ist. **UpdateAssessmentStatus** wird von [**den Strukturen UpdateAssessment**](/windows/win32/api/waasapitypes/ns-waasapitypes-updateassessment) und [**OSUpdateAssessment**](/windows/win32/api/waasapitypes/ns-waasapitypes-osupdateassessment) in den **Membern assessmentForCurrent,** **assessmentForUpToDate** und **securityStatus** verwendet. Es wird genau eine Konstante zurückgegeben.
 
 ## <a name="syntax"></a>Syntax
 
@@ -50,98 +50,98 @@ typedef enum TagUpdateAssessmentStatus {
 
 <dl> <dt>
 
-<span id="____UpdateAssessmentStatus_Latest"></span><span id="____updateassessmentstatus_latest"></span><span id="____UPDATEASSESSMENTSTATUS_LATEST"></span>**Updategutamentstatus \_ Neueste** Version
+<span id="____UpdateAssessmentStatus_Latest"></span><span id="____updateassessmentstatus_latest"></span><span id="____UPDATEASSESSMENTSTATUS_LATEST"></span>**UpdateAssessmentStatus \_ Neueste Version**
 </dt> <dd>
 
-Dieses Ergebnis in " **bewermentforcurrent** " impliziert, dass sich das Gerät auf dem neuesten Feature Update und Qualitäts Update befindet, das für dieses Gerät verfügbar ist. In " **bewermentforuptodate**" bedeutet das, dass das Gerät das aktuellste Qualitäts Update für die Windows-Version ist, die es ausgeführt wird.
+Dieses Ergebnis in **assessmentForCurrent impliziert,** dass sich das Gerät auf dem neuesten Featureupdate und Qualitätsupdate befindet, das für dieses Gerät verfügbar ist. In **assessmentForUpToDate** impliziert dieses Ergebnis, dass das Gerät das neueste Qualitätsupdate für die Veröffentlichung Windows ausgeführt wird.
 
 </dd> <dt>
 
-<span id="____UpdateAssessmentStatus_NotLatestSoftRestriction"></span><span id="____updateassessmentstatus_notlatestsoftrestriction"></span><span id="____UPDATEASSESSMENTSTATUS_NOTLATESTSOFTRESTRICTION"></span>**Updategutamentstatus \_ Notlatestsoftrestriction**
+<span id="____UpdateAssessmentStatus_NotLatestSoftRestriction"></span><span id="____updateassessmentstatus_notlatestsoftrestriction"></span><span id="____UPDATEASSESSMENTSTATUS_NOTLATESTSOFTRESTRICTION"></span>**UpdateAssessmentStatus \_ NotLatestSoftRestriction**
 </dt> <dd>
 
-Das aktuellste Funktions Update wurde aufgrund einer Soft-Einschränkung nicht installiert. Wenn eine weiche Einschränkung für ein Update festgelegt wurde, wird das Update nicht automatisch installiert. ein Benutzer muss den Download innerhalb der Update-UX selbst initiieren. Dieser Status gilt nur für " **bewermentforcurrent**".
+Das neueste Featureupdate wurde aufgrund einer soft-Einschränkung nicht installiert. Wenn für ein Update eine weiche Einschränkung vorgenommen wurde, wird das Update nicht automatisch installiert. Ein Benutzer muss den Download auf der Update-Benutzeroberfläche selbst initiieren. Dieser Status gilt nur für **assessmentForCurrent.**
 
 </dd> <dt>
 
-<span id="____UpdateAssessmentStatus_NotLatestHardRestriction"></span><span id="____updateassessmentstatus_notlatesthardrestriction"></span><span id="____UPDATEASSESSMENTSTATUS_NOTLATESTHARDRESTRICTION"></span>**Updategutamentstatus \_ Notlatesthardrestriction**
+<span id="____UpdateAssessmentStatus_NotLatestHardRestriction"></span><span id="____updateassessmentstatus_notlatesthardrestriction"></span><span id="____UPDATEASSESSMENTSTATUS_NOTLATESTHARDRESTRICTION"></span>**UpdateAssessmentStatus \_ NotLatestHardRestriction**
 </dt> <dd>
 
-Das aktuellste Funktions Update wurde aufgrund einer festen Einschränkung nicht installiert. Wenn eine feste Einschränkung für ein Update festgelegt wurde, kann das Update nicht auf das Gerät angewendet werden. Dieser Status gilt nur für " **bewermentforcurrent**".
+Das neueste Featureupdate wurde aufgrund einer harte Einschränkung nicht installiert. Wenn für ein Update eine harte Einschränkung gilt, gilt das Update nicht für das Gerät. Dieser Status gilt nur für **assessmentForCurrent.**
 
 </dd> <dt>
 
-<span id="____UpdateAssessmentStatus_NotLatestEndOfSupport"></span><span id="____updateassessmentstatus_notlatestendofsupport"></span><span id="____UPDATEASSESSMENTSTATUS_NOTLATESTENDOFSUPPORT"></span>**Updategutamentstatus \_ Notlatestendof Support**
+<span id="____UpdateAssessmentStatus_NotLatestEndOfSupport"></span><span id="____updateassessmentstatus_notlatestendofsupport"></span><span id="____UPDATEASSESSMENTSTATUS_NOTLATESTENDOFSUPPORT"></span>**UpdateAssessmentStatus \_ NotLatestEndOfSupport**
 </dt> <dd>
 
-Das Gerät befindet sich nicht auf dem neuesten Update, da das Feature-Update des Geräts von Microsoft nicht mehr unterstützt wird. Wenn Microsoft eine Featureversion nicht mehr unterstützt, wird dieser Status sowohl für " **bewermentforcurrent** " als auch für " **bewermentforuptodate**" zurückgegeben.
+Das Gerät befindet sich nicht im neuesten Update, da das Featureupdate des Geräts nicht mehr von Microsoft unterstützt wird. Wenn Microsoft keine Featureversion mehr unterstützt, wird dieser Status sowohl für **assessmentForCurrent** als auch **für assessmentForUpToDate zurückgegeben.**
 
 > [!Note]  
-> Wenn **updategutamentstatus \_ notlatestendofsupport** zurückgegeben wird, ist **updateimpactlevel** der Bewertung immer **updateimpactlevel \_ hoch**.
+> Wenn **UpdateAssessmentStatus \_ NotLatestEndOfSupport** zurückgegeben wird, ist **UpdateImpactLevel** der Bewertung immer **UpdateImpactLevel \_ High.**
 
  
 
 </dd> <dt>
 
-<span id="____UpdateAssessmentStatus_NotLatestServicingTrain"></span><span id="____updateassessmentstatus_notlatestservicingtrain"></span><span id="____UPDATEASSESSMENTSTATUS_NOTLATESTSERVICINGTRAIN"></span>**Updategutamentstatus \_ Notlatestservicingtrain**
+<span id="____UpdateAssessmentStatus_NotLatestServicingTrain"></span><span id="____updateassessmentstatus_notlatestservicingtrain"></span><span id="____UPDATEASSESSMENTSTATUS_NOTLATESTSERVICINGTRAIN"></span>**UpdateAssessmentStatus \_ NotLatestServicingTrain**
 </dt> <dd>
 
-Das Gerät befindet sich nicht im aktuellen Featureupdate, da der Wartungsplan des Geräts die Aktualisierung auf das neueste Featureupdate einschränkt. Beispiel: Wenn ein Gerät on Current Branch for Business (CBB) ist und ein neues Funktions Update für Current Branch (CB) veröffentlicht wurde, wird dieses zurückgegeben. Dieser Status gilt nur für " **bewermentforcurrent**".
+Das Gerät befindet sich nicht im neuesten Featureupdate, da der Wartungs trainieren des Geräts das Update des Geräts auf das neueste Featureupdate beschränkt. Beispiel: Wenn sich ein Gerät auf Current Branch for Business (CBB) befindet und ein neues Featureupdate für Current Branch (CB) veröffentlicht wurde, wird dies zurückgegeben. Dieser Status gilt nur für **assessmentForCurrent.**
 
 </dd> <dt>
 
-<span id="____UpdateAssessmentStatus_NotLatestDeferredFeature"></span><span id="____updateassessmentstatus_notlatestdeferredfeature"></span><span id="____UPDATEASSESSMENTSTATUS_NOTLATESTDEFERREDFEATURE"></span>**Updategutamentstatus \_ Notlatestdeferredfeature**
+<span id="____UpdateAssessmentStatus_NotLatestDeferredFeature"></span><span id="____updateassessmentstatus_notlatestdeferredfeature"></span><span id="____UPDATEASSESSMENTSTATUS_NOTLATESTDEFERREDFEATURE"></span>**UpdateAssessmentStatus \_ NotLatestDeferredFeature**
 </dt> <dd>
 
-Das aktuellste Featureupdate wurde nicht installiert, da es die zurückstellungs Richtlinie für das Windows Update for Business Feature Update des Geräts ist. Beim Bestimmen von **daysoutof** werden zurückstellungs Richtlinien berücksichtigt. **daysoudef** beginnt nicht mit dem Inkrementieren, bis der zurückstellungs Zeitraum abgelaufen ist. Dieser Status gilt nur für " **bewermentforcurrent**".
+Das neueste Featureupdate wurde aufgrund der Richtlinie "Update for Business Windows update update deferral des Geräts nicht installiert. Bei der **Bestimmung von daysOutOfDate** werden Zurückbegrenzungsrichtlinien berücksichtigt. **daysOutOfDate wird** erst erhöht, wenn der Verzögerungszeitraum abgelaufen ist. Dieser Status gilt nur für **assessmentForCurrent.**
 
 </dd> <dt>
 
-<span id="____UpdateAssessmentStatus_NotLatestDeferredQuality"></span><span id="____updateassessmentstatus_notlatestdeferredquality"></span><span id="____UPDATEASSESSMENTSTATUS_NOTLATESTDEFERREDQUALITY"></span>**Updategutamentstatus \_ Notlatestdeferredquality**
+<span id="____UpdateAssessmentStatus_NotLatestDeferredQuality"></span><span id="____updateassessmentstatus_notlatestdeferredquality"></span><span id="____UPDATEASSESSMENTSTATUS_NOTLATESTDEFERREDQUALITY"></span>**UpdateAssessmentStatus \_ NotLatestDeferredQuality**
 </dt> <dd>
 
-Das Gerät befindet sich nicht auf dem neuesten Qualitäts Update aufgrund der Windows Update des Geräts für die zurückstellungs Richtlinie für Geschäfts Qualitäts Updates. Beim Bestimmen von **daysoutof** werden zurückstellungs Richtlinien berücksichtigt. **daysoudef** beginnt nicht mit dem Inkrementieren, bis der zurückstellungs Zeitraum abgelaufen ist.
+Das Gerät befindet sich Windows aufgrund der Richtlinie "Update for Business Quality Update Deferral" des Geräts nicht auf dem neuesten Qualitätsupdate. Bei der **Bestimmung von daysOutOfDate** werden Zurückbegrenzungsrichtlinien berücksichtigt. **daysOutOfDate wird** erst erhöht, wenn der Verzögerungszeitraum abgelaufen ist.
 
 </dd> <dt>
 
-<span id="____UpdateAssessmentStatus_NotLatestPausedFeature"></span><span id="____updateassessmentstatus_notlatestpausedfeature"></span><span id="____UPDATEASSESSMENTSTATUS_NOTLATESTPAUSEDFEATURE"></span>**Updategutamentstatus \_ Notlatestpausedfeature**
+<span id="____UpdateAssessmentStatus_NotLatestPausedFeature"></span><span id="____updateassessmentstatus_notlatestpausedfeature"></span><span id="____UPDATEASSESSMENTSTATUS_NOTLATESTPAUSEDFEATURE"></span>**UpdateAssessmentStatus \_ NotLatestPausedFeature**
 </dt> <dd>
 
-Das Gerät befindet sich nicht auf dem neuesten Feature-Update, weil das Gerät über angehaltene Featureupdates verfügt. Ob ein Gerät angehalten wurde, wird nicht in die Berechnung von **daysouumf Date** einbezogen. Dieser Status gilt nur für " **bewermentforcurrent**".
+Das Gerät befindet sich nicht im neuesten Featureupdate, da das Gerät Funktionsupdates angehalten hat. Ob ein Gerät angehalten wird, wird nicht in die Berechnung von **daysOutOfDate einbezogen.** Dieser Status gilt nur für **assessmentForCurrent.**
 
 </dd> <dt>
 
-<span id="____UpdateAssessmentStatus_NotLatestPausedQuality"></span><span id="____updateassessmentstatus_notlatestpausedquality"></span><span id="____UPDATEASSESSMENTSTATUS_NOTLATESTPAUSEDQUALITY"></span>**Updategutamentstatus \_ Notlatestpausedquality**
+<span id="____UpdateAssessmentStatus_NotLatestPausedQuality"></span><span id="____updateassessmentstatus_notlatestpausedquality"></span><span id="____UPDATEASSESSMENTSTATUS_NOTLATESTPAUSEDQUALITY"></span>**UpdateAssessmentStatus \_ NotLatestPausedQuality**
 </dt> <dd>
 
-Das Gerät befindet sich nicht auf dem neuesten Qualitäts Update, weil das Gerät über angehaltene Qualitäts Updates verfügt. Ob ein Gerät angehalten wurde, wird nicht in die Berechnung von **daysouumf Date** einbezogen. **daysoudef** ist nicht maßgeblich, ob ein Gerät in seiner Berechnung angehalten wird.
+Das Gerät befindet sich nicht im neuesten Qualitätsupdate, da das Gerät Qualitätsupdates angehalten hat. Ob ein Gerät angehalten wird, wird nicht in die Berechnung von **daysOutOfDate einbezogen.** **daysOutOfDate** berücksichtigt nicht, ob ein Gerät bei der Berechnung angehalten wird.
 
 </dd> <dt>
 
-<span id="____UpdateAssessmentStatus_NotLatestManaged"></span><span id="____updateassessmentstatus_notlatestmanaged"></span><span id="____UPDATEASSESSMENTSTATUS_NOTLATESTMANAGED"></span>**Updategutamentstatus \_ Notlatestmanaged**
+<span id="____UpdateAssessmentStatus_NotLatestManaged"></span><span id="____updateassessmentstatus_notlatestmanaged"></span><span id="____UPDATEASSESSMENTSTATUS_NOTLATESTMANAGED"></span>**UpdateAssessmentStatus \_ NotLatestManaged**
 </dt> <dd>
 
-Das Gerät befindet sich nicht auf dem neuesten Update, da die Genehmigung von Updates nicht über Windows Update erfolgt.
+Das Gerät befindet sich nicht auf dem neuesten Update, da die Genehmigung von Updates nicht über das Windows erfolgt.
 
 </dd> <dt>
 
-<span id="____UpdateAssessmentStatus_NotLatestUnknown"></span><span id="____updateassessmentstatus_notlatestunknown"></span><span id="____UPDATEASSESSMENTSTATUS_NOTLATESTUNKNOWN"></span>**Updategutamentstatus \_ Notlatestunknown**
+<span id="____UpdateAssessmentStatus_NotLatestUnknown"></span><span id="____updateassessmentstatus_notlatestunknown"></span><span id="____UPDATEASSESSMENTSTATUS_NOTLATESTUNKNOWN"></span>**UpdateAssessmentStatus \_ NotLatestUnknown**
 </dt> <dd>
 
-Das Gerät befindet sich nicht auf dem neuesten Update, weil der Grund dafür nicht durch die Bewertung bestimmt werden kann.
+Das Gerät befindet sich aufgrund eines Grunds, der von der Bewertung nicht bestimmt werden kann, nicht auf dem neuesten Update.
 
 </dd> <dt>
 
-<span id="____UpdateAssessmentStatus_NotLatestTargetedVersion"></span><span id="____updateassessmentstatus_notlatesttargetedversion"></span><span id="____UPDATEASSESSMENTSTATUS_NOTLATESTTARGETEDVERSION"></span>**Updategutamentstatus \_ Notlatesttargetedversion**
+<span id="____UpdateAssessmentStatus_NotLatestTargetedVersion"></span><span id="____updateassessmentstatus_notlatesttargetedversion"></span><span id="____UPDATEASSESSMENTSTATUS_NOTLATESTTARGETEDVERSION"></span>**UpdateAssessmentStatus \_ NotLatestTargetedVersion**
 </dt> <dd>
 
-Das Gerät befindet sich nicht im aktuellen Featureupdate aufgrund der Richtlinie für das Windows Update für die Geschäftsziel Version des Geräts. Bei dieser Richtlinie wird das Gerät auf der Zielversion der Funktions Version belassen.
+Das Gerät befindet sich aufgrund der Richtlinie "Update for Business-Zielversion" Windows gerät nicht auf dem neuesten Featureupdate. Diese Richtlinie hält das Gerät auf der Releaseversion des Zielfeatures.
 
 </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Diese Enumeration wird am häufigsten mit den Strukturen [**updateassessment**](/windows/win32/api/waasapitypes/ns-waasapitypes-updateassessment) und [**osupdateassessment**](/windows/win32/api/waasapitypes/ns-waasapitypes-osupdateassessment) verwendet, die wiederum mit der [**gedesupdateassessment**](/windows/desktop/api/waasapi/nf-waasapi-iwaasassessor-getosupdateassessment) -Methode für [**iwaasassessor**](/windows/desktop/api/waasapi/nn-waasapi-iwaasassessor)verwendet werden.
+Diese Enumeration wird am häufigsten mit den [**Strukturen UpdateAssessment**](/windows/win32/api/waasapitypes/ns-waasapitypes-updateassessment) und [**OSUpdateAssessment**](/windows/win32/api/waasapitypes/ns-waasapitypes-osupdateassessment) verwendet, die wiederum mit der [**GetOSUpdateAssessment-Methode**](/windows/desktop/api/waasapi/nf-waasapi-iwaasassessor-getosupdateassessment) für [**IWaaSAssessor verwendet werden.**](/windows/desktop/api/waasapi/nn-waasapi-iwaasassessor)
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -149,9 +149,9 @@ Diese Enumeration wird am häufigsten mit den Strukturen [**updateassessment**](
 
 | Anforderung | Wert |
 |-------------------------------------|----------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Windows 10, Version 1703, \[ nur Desktop-Apps\]<br/>                              |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2016 \[ -Desktop-Apps\]<br/>                                   |
-| IDL<br/>                      | <dl> <dt>Waasapi. idl</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows 10 Desktop-Apps, Version 1703 \[\]<br/>                              |
+| Unterstützte Mindestversion (Server)<br/> | \[Windows Server 2016 Nur Desktop-Apps\]<br/>                                   |
+| Idl<br/>                      | <dl> <dt>WaaSAPI.idl</dt> </dl> |
 
 
 

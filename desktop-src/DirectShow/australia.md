@@ -4,20 +4,20 @@ ms.assetid: f7d5aa66-3b8e-496a-a7fd-209f7334a868
 title: Australien
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 3d00d98e13e2e0b8ea326a0e1e831b02553f8917
-ms.sourcegitcommit: a47bd86f517de76374e4fff33cfeb613eb259a7e
+ms.openlocfilehash: f25b95b9ac5e6936fd38cf910f87357834f73dd72bc582c5e3dbdf7c8282f1e5
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/06/2021
-ms.locfileid: "104041189"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117824240"
 ---
 # <a name="australia"></a>Australien
 
-Eine Erläuterung der folgenden Tabellen finden Sie unter [Tabellen und Zuweisungen](tables-and-assignments.md).
+Eine Erläuterung der folgenden Tabellen finden Sie unter [Tabellen und Zuweisungen.](tables-and-assignments.md)
 
-Die Häufigkeits Indizes in der Tabelle "Australien" sind nicht für die Verwendung als Kanalnummern geeignet. Beachten Sie auch, dass die Kanäle 3, 4, 5 und 5A für andere Zwecke nicht mehr verwendet werden.
+Die Häufigkeitsindizes in der Tabelle "Australien" eignen sich nicht für die Verwendung als Kanalnummern. Beachten Sie auch, dass die Kanäle 3, 4, 5 und 5A für andere Zwecke eingestellt werden.
 
-### <a name="australia-broadcast-assignments"></a>Australien-Broadcast Zuweisungen
+### <a name="australia-broadcast-assignments"></a>Broadcastzuweisungen in Australien
 
 
 ```C++
@@ -82,7 +82,7 @@ Die Häufigkeits Indizes in der Tabelle "Australien" sind nicht für die Verwend
 
 
 
-### <a name="australia-cable-assignments"></a>Australien-Kabel Zuweisungen
+### <a name="australia-cable-assignments"></a>Kabelzuweisungen in Australien
 
 
 ```C++
@@ -151,7 +151,7 @@ Die Häufigkeits Indizes in der Tabelle "Australien" sind nicht für die Verwend
 
 <dl> <dt>
 
-[Internationale Analog-TV-Optimierung](international-analog-tv-tuning.md)
+[Internationale Analog TV-Optimierung](international-analog-tv-tuning.md)
 </dt> </dl>
 
  

@@ -43,32 +43,32 @@ HRESULT SetClientCertificate(
 *ClientCertificate* \[ In\]
 </dt> <dd>
 
-Gibt den Speicherort, [*den Zertifikatspeicher*](glossary.md)und den Antragsteller eines Clientzertifikats an.
+Gibt den Speicherort, den [*Zertifikatspeicher und*](glossary.md)den Betreff eines Clientzertifikats an.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Der Rückgabewert ist bei Erfolg **S \_ OK,** andernfalls ein Fehlerwert.
+Der Rückgabewert ist **S \_ OK bei** Erfolg oder andernfalls ein Fehlerwert.
 
 ## <a name="remarks"></a>Hinweise
 
-Die im *ClientCertificate-Parameter* angegebene Zeichenfolge besteht aus dem Zertifikatspeicherort, dem Zertifikatspeicher und dem Antragstellernamen, die durch umgekehrte Schrägstriche getrennt sind. Weitere Informationen zu den Komponenten der Zertifikatzeichenfolge finden Sie unter [Clientzertifikate.](ssl-in-winhttp.md)
+Die im *ClientCertificate-Parameter* angegebene Zeichenfolge besteht aus dem Speicherort des Zertifikats, dem Zertifikatspeicher und dem Namen des Subjekts, getrennt durch schräge Schrägstriche. Weitere Informationen zu den Komponenten der Zertifikatzeichenfolge finden Sie unter [Clientzertifikate](ssl-in-winhttp.md).
 
-Name und Speicherort des Zertifikatspeichers sind optional. Wenn Sie jedoch einen Zertifikatspeicher angeben, müssen Sie auch den Speicherort dieses Zertifikatspeichers angeben. Der Standardspeicherort ist CURRENT \_ USER, und der Standardzertifikatspeicher ist "MY". Ein leerer Antragsteller gibt an, dass das erste Zertifikat im Zertifikatspeicher verwendet werden soll.
+Der Name und Speicherort des Zertifikatspeichers sind optional. Wenn Sie jedoch einen Zertifikatspeicher angeben, müssen Sie auch den Speicherort dieses Zertifikatspeichers angeben. Der Standardspeicherort ist CURRENT \_ USER, und der Standardzertifikatspeicher ist "MY". Ein leerer Betreff gibt an, dass das erste Zertifikat im Zertifikatspeicher verwendet werden soll.
 
-Rufen **Sie SetClientCertificate** auf, um ein Zertifikat auszuwählen, bevor [**Sie Senden**](iwinhttprequest-send.md) aufrufen, um die Anforderung zu senden.
+Rufen **Sie SetClientCertificate auf,** um ein Zertifikat auszuwählen, bevor [**Sie Send aufrufen,**](iwinhttprequest-send.md) um die Anforderung zu senden.
 
-Microsoft Windows HTTP Services (WinHTTP) stellt keine Clientzertifikate für Proxyserver bereit, die Zertifikate für die Authentifizierung anfordern.
+Microsoft Windows HTTP Services (WinHTTP) stellt keine Clientzertifikate für Proxyserver zur Verfügung, die Zertifikate für die Authentifizierung anfordern.
 
 > [!Note]  
-> Informationen zu Windows XP und Windows 2000 finden Sie im Abschnitt [Laufzeitanforderungen](winhttp-start-page.md) der WinHTTP-Startseite.
+> Informationen Windows XP und Windows 2000 finden [](winhttp-start-page.md) Sie im Abschnitt Laufzeitanforderungen der WinHTTP-Startseite.
 
  
 
 ## <a name="examples"></a>Beispiele
 
-Das folgende Skriptbeispiel zeigt, wie Sie ein Clientzertifikat auswählen, das mit einer Anforderung gesendet werden soll. Ein Zertifikat mit dem Betreff "Mein Middle-Tier Zertifikat" wird aus dem "persönlichen" Zertifikatspeicher in der Registrierung unter **HKEY \_ LOCAL \_ MACHINE** ausgewählt. Da dieses Codebeispiel spezifisch für Microsoft JScript ist, das den umgekehrten Schrägstrich als Escapezeichen verwendet, sind zwei angrenzende umgekehrte Schrägstriche erforderlich, um Komponenten der Zertifikatzeichenfolge zu begrenzen.
+Das folgende Skriptbeispiel zeigt, wie Sie ein Clientzertifikat auswählen, das mit einer Anforderung gesendet werden soll. Ein Zertifikat mit dem Betreff "Mein Middle-Tier Zertifikat" wird aus dem "persönlichen" Zertifikatspeicher in der Registrierung unter **HKEY \_ LOCAL MACHINE \_ ausgewählt.** Da dieses Codebeispiel spezifisch für Microsoft JScript ist, bei dem der schräge Schrägstrich als Escapezeichen verwendet wird, sind zwei angrenzende schräge Schrägstriche erforderlich, um Komponenten der Zertifikatzeichenfolge zu begrenzen.
 
 
 ```JScript
@@ -96,14 +96,14 @@ HttpReq.Send();
 |-------------------------------------|--------------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows XP, Windows 2000 Professional nur mit \[ SP3-Desktop-Apps\]<br/>            |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2003, Windows 2000 Server nur mit \[ SP3-Desktop-Apps\]<br/>         |
-| Verteilbare Komponente<br/>          | WinHTTP 5.0 und Internet Explorer 5.01 oder höher auf Windows XP und Windows 2000.<br/> |
+| Verteilbare Komponente<br/>          | WinHTTP 5.0 und Internet Explorer 5.01 oder höher unter Windows XP und Windows 2000.<br/> |
 | Idl<br/>                      | <dl> <dt>HttpRequest.idl</dt> </dl> |
 | Bibliothek<br/>                  | <dl> <dt>Winhttp.lib</dt> </dl>     |
 | DLL<br/>                      | <dl> <dt>Winhttp.dll</dt> </dl>     |
 
 
 
-## <a name="see-also"></a>Weitere Informationen:
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 

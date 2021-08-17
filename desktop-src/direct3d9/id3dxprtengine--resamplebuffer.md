@@ -1,5 +1,5 @@
 ---
-description: Resamples an input ID3DXPRTBuffer buffer and saves it to an output buffer. Diese Methode kann verwendet werden, um einen Scheitelpunktpuffer in einen Texturpuffer zu konvertieren und umgekehrt. Sie kann auch verwendet werden, um Einzelkanalpuffer in 3-Kanal-Puffer und umgekehrt zu konvertieren.
+description: Verwendet einen ID3DXPRTBuffer-Eingabepuffer neu und speichert ihn in einem Ausgabepuffer. Diese Methode kann verwendet werden, um einen Scheitelpunktpuffer in einen Texturpuffer zu konvertieren und umgekehrt. Sie kann auch verwendet werden, um Einkanalpuffer in 3-Kanal-Puffer und umgekehrt zu konvertieren.
 ms.assetid: 78015044-38a9-4c08-a690-28f6427dae8c
 title: ID3DXPRTEngine::ResampleBuffer-Methode (D3DX9Mesh.h)
 ms.topic: reference
@@ -23,7 +23,7 @@ ms.locfileid: "117729614"
 ---
 # <a name="id3dxprtengineresamplebuffer-method"></a>ID3DXPRTEngine::ResampleBuffer-Methode
 
-Resamples an input [**ID3DXPRTBuffer**](id3dxprtbuffer.md) buffer and saves it to an output buffer. Diese Methode kann verwendet werden, um einen Scheitelpunktpuffer in einen Texturpuffer zu konvertieren und umgekehrt. Sie kann auch verwendet werden, um Einzelkanalpuffer in 3-Kanal-Puffer und umgekehrt zu konvertieren.
+Verwendet einen [**ID3DXPRTBuffer-Eingabepuffer neu**](id3dxprtbuffer.md) und speichert ihn in einem Ausgabepuffer. Diese Methode kann verwendet werden, um einen Scheitelpunktpuffer in einen Texturpuffer zu konvertieren und umgekehrt. Sie kann auch verwendet werden, um Einkanalpuffer in 3-Kanal-Puffer und umgekehrt zu konvertieren.
 
 ## <a name="syntax"></a>Syntax
 
@@ -46,7 +46,7 @@ HRESULT ResampleBuffer(
 
 Typ: **[ **LPD3DXPRTBUFFER**](id3dxprtbuffer.md)**
 
-Zeiger auf den [**Eingabepuffer ID3DXPRTBuffer.**](id3dxprtbuffer.md)
+Zeiger auf den Eingabepuffer [**ID3DXPRTBuffer.**](id3dxprtbuffer.md)
 
 </dd> <dt>
 
@@ -55,7 +55,7 @@ Zeiger auf den [**Eingabepuffer ID3DXPRTBuffer.**](id3dxprtbuffer.md)
 
 Typ: **[ **LPD3DXPRTBUFFER**](id3dxprtbuffer.md)**
 
-Zeiger auf den [**Id3DXPRTBuffer-Puffer**](id3dxprtbuffer.md) der Ausgabe.
+Zeiger auf den Ausgabepuffer [**ID3DXPRTBuffer.**](id3dxprtbuffer.md)
 
 </dd> </dl>
 
@@ -63,7 +63,7 @@ Zeiger auf den [**Id3DXPRTBuffer-Puffer**](id3dxprtbuffer.md) der Ausgabe.
 
 Typ: **[ **HRESULT**](https://msdn.microsoft.com/library/Bb401631(v=MSDN.10).aspx)**
 
-Wenn die Methode erfolgreich ist, lautet der Rückgabewert S \_ OK. Wenn die Methode fehlschlägt, kann der Rückgabewert einer der folgenden Werte sein: D3DERR \_ INVALIDCALL, E \_ OUTOFMEMORY.
+Wenn die Methode erfolgreich ist, ist der Rückgabewert S \_ OK. Wenn die Methode fehlschlägt, kann der Rückgabewert einer der folgenden sein: D3DERR \_ INVALIDCALL, E \_ OUTOFMEMORY.
 
 ## <a name="requirements"></a>Anforderungen
 

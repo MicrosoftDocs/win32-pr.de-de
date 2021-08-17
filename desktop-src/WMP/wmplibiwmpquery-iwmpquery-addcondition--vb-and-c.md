@@ -1,11 +1,11 @@
 ---
-title: Iwmpquery-addcondition-Methode
-description: Die addcondition-Methode fügt der Verbund Abfrage mithilfe der-und der-Logik eine Bedingung hinzu.
+title: IWMPQuery addCondition-Methode
+description: Die addCondition-Methode fügt der Verbundabfrage mithilfe der AND-Logik eine Bedingung hinzu.
 ms.assetid: 4594ee6f-b153-4d53-b3ee-cd1718a4d5dc
 keywords:
-- addcondition-Methode (Windows Media Player)
-- addcondition-Methode, Windows Media Player, iwmpquery-Schnittstelle
-- Iwmpquery Interface, Windows Media Player, addcondition-Methode
+- addCondition-Windows Media Player
+- addCondition-Methode Windows Media Player , IWMPQuery-Schnittstelle
+- IWMPQuery-Schnittstelle Windows Media Player , addCondition-Methode
 topic_type:
 - apiref
 api_name:
@@ -16,16 +16,16 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 9de3015ef0389fef82934cbd8e9326b6f9ec2307
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: fe85999c60364827d483f81d14ff88602c9b2831c16e7cff8a3e17076b77671d
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106352030"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117745705"
 ---
-# <a name="iwmpqueryaddcondition-method"></a>Iwmpquery:: addcondition-Methode
+# <a name="iwmpqueryaddcondition-method"></a>IWMPQuery::addCondition-Methode
 
-Die **addcondition** -Methode fügt der Verbund Abfrage mithilfe der **-und der-** Logik eine Bedingung hinzu.
+Die **addCondition-Methode** fügt der Verbundabfrage mithilfe der **AND-Logik eine Bedingung** hinzu.
 
 ## <a name="syntax"></a>Syntax
 
@@ -57,24 +57,24 @@ Implements IWMPQuery.addCondition
 
 <dl> <dt>
 
-*bstrattribute* \[ in\]
+*bstrAttribute* \[ In\]
 </dt> <dd>
 
-Ein **System. String** -Wert, der der Name des Attributs ist, das der Abfrage hinzugefügt werden soll.
+Eine **System.String,die** den Namen des Attributs angibt, das der Abfrage hinzugefügt werden soll.
 
 </dd> <dt>
 
-*bstroperator* \[ in\]
+*bstrOperator* \[ In\]
 </dt> <dd>
 
-Ein **System. String** -Operator, der der-Operator ist. Siehe Hinweise zu unterstützten Werten.
+Eine **System.String,** die der Operator ist. Unterstützte Werte finden Sie unter Hinweise.
 
 </dd> <dt>
 
-*bstrauvalue* \[ in\]
+*bstrValue* \[ In\]
 </dt> <dd>
 
-Ein **System. String** -Wert, der der Attribut Wert ist.
+Eine **System.String,** die der Attributwert ist.
 
 </dd> </dl>
 
@@ -82,15 +82,15 @@ Ein **System. String** -Wert, der der Attribut Wert ist.
 
 Diese Methode gibt keinen Wert zurück.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-In einer Verbund Abfrage enthaltene Bedingungen werden in Bedingungs Gruppen organisiert. Mehrere Bedingungen innerhalb einer Bedingungs Gruppe werden immer mithilfe der **-und der-** Logik verkettet. Bedingungs Gruppen werden stets mithilfe der- **oder** -Logik miteinander verkettet. Um eine neue Bedingungs Gruppe zu starten, nennen Sie [iwmpquery. beginnextgroup](wmplibiwmpquery-iwmpquery-beginnextgroup--vb-and-c.md).
+Bedingungen, die in einer zusammengesetzten Abfrage enthalten sind, werden in Bedingungsgruppen organisiert. Mehrere Bedingungen innerhalb einer Bedingungsgruppe werden immer mithilfe der **AND-Logik verkettet.** Bedingungsgruppen werden immer mithilfe der **OR-Logik miteinander verkettet.** Um eine neue Bedingungsgruppe zu starten, rufen [Sie IWMPQuery.beginNextGroup auf.](wmplibiwmpquery-iwmpquery-beginnextgroup--vb-and-c.md)
 
-Bei Verbund Abfragen mit **iwmpquery** wird die Groß-/Kleinschreibung nicht beachtet
+Bei zusammengesetzten Abfragen, **die IWMPQuery verwenden,** wird die Kleinschreibung nicht beachtet.
 
-Eine Liste der Werte für den *bstrattribute* -Parameter finden Sie in der [alphabetischen Attribut Referenz](alphabetical-attribute-reference.md).
+Eine Liste der Werte für den *bstrAttribute-Parameter* finden Sie unter [Alphabetische Attributreferenz.](alphabetical-attribute-reference.md)
 
-In der folgenden Tabelle sind die unterstützten Werte für *bstroperator* aufgeführt.
+In der folgenden Tabelle sind die unterstützten Werte für *bstrOperator aufgeführt.*
 
 
 
@@ -98,12 +98,12 @@ In der folgenden Tabelle sind die unterstützten Werte für *bstroperator* aufge
 |---------------------|----------------|
 | BeginsWith          | Zeichenfolgen        |
 | Enthält            | Zeichenfolgen        |
-| Equals              | Alle Typen      |
+| Ist gleich              | Alle Typen      |
 | GreaterThan         | Zahlen, Datumsangaben |
 | Größer als oder gleich | Zahlen, Datumsangaben |
 | LessThan            | Zahlen, Datumsangaben |
 | Kleiner als oder gleich    | Zahlen, Datumsangaben |
-| Notbeginswith       | Zeichenfolgen        |
+| NotBeginsWith       | Zeichenfolgen        |
 | NotContains         | Zeichenfolgen        |
 | NotEquals           | Alle Typen      |
 
@@ -113,7 +113,7 @@ In der folgenden Tabelle sind die unterstützten Werte für *bstroperator* aufge
 
 ## <a name="examples"></a>Beispiele
 
-Im folgenden Beispiel wird eine Abfrage erstellt, zwei Bedingungen hinzugefügt und diese Abfrage verwendet, um die Ergebnisse der Abfrage als Zeichen folgen Auflistung zu extrahieren. Die Ergebnisse werden dann in einem Listenfeld angezeigt. Das **AxWMPLib. AxWindowsMediaPlayer** -Objekt wird durch die Variable mit dem Namen "Player" dargestellt.
+Das folgende Beispiel erstellt eine Abfrage, fügt ihr zwei Bedingungen hinzu und verwendet diese Abfrage, um die Ergebnisse der Abfrage als Zeichenfolgensammlung zu extrahieren. Die Ergebnisse werden dann in einem Listenfeld angezeigt. Das **AxWMPLib.AxWindowsMediaPlayer-Objekt** wird durch die Variable player dargestellt.
 
 
 ```CSharp
@@ -177,23 +177,23 @@ Next i
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Alphabetische Attribut Referenz**](alphabetical-attribute-reference.md)
+[**Alphabetische Attributreferenz**](alphabetical-attribute-reference.md)
 </dt> <dt>
 
-[**IWMPMediaCollection2. kreatequery (VB und c#)**](wmplibiwmpmediacollection2-iwmpmediacollection2-createquery--vb-and-c.md)
+[**IWMPMediaCollection2.createQuery (VB und C#)**](wmplibiwmpmediacollection2-iwmpmediacollection2-createquery--vb-and-c.md)
 </dt> <dt>
 
-[**IWMPMediaCollection2. getplaylistbyquery (VB und c#)**](wmplibiwmpmediacollection2-iwmpmediacollection2-getplaylistbyquery--vb-and-c.md)
+[**IWMPMediaCollection2.getPlaylistByQuery (VB und C#)**](wmplibiwmpmediacollection2-iwmpmediacollection2-getplaylistbyquery--vb-and-c.md)
 </dt> <dt>
 
-[**IWMPMediaCollection2. getstringcollectionbyquery (VB und c#)**](wmplibiwmpmediacollection2-iwmpmediacollection2-getstringcollectionbyquery--vb-and-c.md)
+[**IWMPMediaCollection2.getStringCollectionByQuery (VB und C#)**](wmplibiwmpmediacollection2-iwmpmediacollection2-getstringcollectionbyquery--vb-and-c.md)
 </dt> <dt>
 
-[**Iwmpquery-Schnittstelle**](iwmpquery--vb-and-c.md)
+[**IWMPQuery-Schnittstelle**](iwmpquery--vb-and-c.md)
 </dt> </dl>
 
  

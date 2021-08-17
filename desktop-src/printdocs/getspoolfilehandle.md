@@ -1,7 +1,7 @@
 ---
-description: Die getspoolfilehandle-Funktion Ruft ein Handle für die Spooldatei ab, die dem derzeit von der Anwendung übermittelten Auftrag zugeordnet ist.
+description: Die GetSpoolFileHandle-Funktion ruft ein Handle für die Spooldatei ab, die dem aktuell von der Anwendung übermittelten Auftrag zugeordnet ist.
 ms.assetid: df6f28b3-66a6-4fb7-bdde-40cd7d934c5f
-title: Getspoolfilehandle-Funktion (winspool. h)
+title: GetSpoolFileHandle-Funktion (Winspool.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -15,16 +15,16 @@ api_type:
 - DllExport
 api_location:
 - WinSpool.drv
-ms.openlocfilehash: 9ac4dd4b0db9a59cc0140872ff04f89adaf8b6c5
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 10b0b36333e51dfb5c831f6c74e00c6930ccbb9d1ce31646fed0d689abc7f639
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "104050492"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117686693"
 ---
-# <a name="getspoolfilehandle-function"></a>Getspoolfilehandle-Funktion
+# <a name="getspoolfilehandle-function"></a>GetSpoolFileHandle-Funktion
 
-Die **getspoolfilehandle** -Funktion Ruft ein Handle für die Spooldatei ab, die dem derzeit von der Anwendung übermittelten Auftrag zugeordnet ist.
+Die **GetSpoolFileHandle-Funktion** ruft ein Handle für die Spooldatei ab, die dem aktuell von der Anwendung übermittelten Auftrag zugeordnet ist.
 
 ## <a name="syntax"></a>Syntax
 
@@ -41,26 +41,26 @@ HANDLE GetSpoolFileHandle(
 
 <dl> <dt>
 
-*hprinter* \[ in\]
+*hPrinter* \[ In\]
 </dt> <dd>
 
-Ein Handle für den Drucker, an den der Auftrag übermittelt wurde. Dies sollte das gleiche Handle sein, das verwendet wurde, um den Auftrag zu übermitteln. (Verwenden Sie die Funktion [**OpenPrinter**](openprinter.md) oder [**addprinter**](addprinter.md) zum Abrufen eines Drucker Handles.)
+Ein Handle für den Drucker, an den der Auftrag übermittelt wurde. Dies sollte dasselbe Handle sein, das zum Übermitteln des Auftrags verwendet wurde. (Verwenden Sie die [**OpenPrinter-**](openprinter.md) oder [**AddPrinter-Funktion,**](addprinter.md) um ein Druckerhand handle abzurufen.)
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Wenn die Funktion erfolgreich ausgeführt wird, wird ein Handle für die Spooldatei zurückgegeben.
+Wenn die Funktion erfolgreich ist, wird ein Handle an die Spooldatei zurückgegeben.
 
-Wenn die Funktion fehlschlägt, wird ein **ungültiger \_ handle- \_ Wert** zurückgegeben.
+Wenn die Funktion fehlschlägt, gibt sie **INVALID \_ HANDLE VALUE \_ zurück.**
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Mit dem Handle für die Spooldatei kann die Anwendung mit Aufrufen von "Write [**File**](/windows/desktop/api/fileapi/nf-fileapi-writefile) " in die Spooldatei schreiben, gefolgt von " [**commitspooldata**](commitspooldata.md)".
+Mit dem Handle für die Spooldatei kann Ihre Anwendung mit Aufrufen von [**WriteFile**](/windows/desktop/api/fileapi/nf-fileapi-writefile) gefolgt von CommitSpoolData in die [**Spooldatei schreiben.**](commitspooldata.md)
 
-Die Anwendung darf " [**closeprinter**](closeprinter.md) " nicht auf dem *hprinter* aufrufen, bis Sie zum letzten Mal auf die Spooldatei zugegriffen hat. Dann sollte es [**closespoolfilehandle**](closespoolfilehandle.md) gefolgt von **closeprinter** aufgerufen werden. Wenn Sie versuchen, auf das spooldateihandle zuzugreifen, nachdem der ursprüngliche *hprinter* geschlossen wurde, tritt ein Fehler auf, auch wenn das Datei Handle selbst nicht geschlossen wurde. **Closespoolfilehandle** schlägt selbst fehl, wenn **closeprinter** zuerst aufgerufen wird.
+Ihre Anwendung darf [**ClosePrinter in**](closeprinter.md) *hPrinter* erst aufrufen, nachdem sie zum letzten Mal auf die Spooldatei zugegriffen hat. Anschließend sollte [**CloseSpoolFileHandle**](closespoolfilehandle.md) gefolgt von **ClosePrinter genannt werden.** Versuche, auf das Spooldateihand handle zu zugreifen, nachdem der ursprüngliche *hPrinter* geschlossen wurde, führen auch dann zu einem Fehler, wenn das Dateihand handle selbst nicht geschlossen wurde. **CloseSpoolFileHandle selbst kann** nicht verwendet werden, **wenn ClosePrinter** zuerst aufgerufen wird.
 
-Diese Funktion schlägt fehl, wenn Sie aufgerufen wird, bevor der Druckauftrag das Spoolvorgang abgeschlossen hat.
+Diese Funktion kann nicht verwendet werden, wenn sie aufgerufen wird, bevor das Spoolen des Druckauftrags abgeschlossen ist.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -68,16 +68,16 @@ Diese Funktion schlägt fehl, wenn Sie aufgerufen wird, bevor der Druckauftrag d
 
 | Anforderung | Wert |
 |-------------------------------------|-----------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                                            |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/>                                                      |
-| Header<br/>                   | <dl> <dt>Winspool. h (Include Windows. h)</dt> </dl> |
-| Bibliothek<br/>                  | <dl> <dt>Winspool. lib</dt> </dl>                   |
-| DLL<br/>                      | <dl> <dt>Winspool. drv</dt> </dl>                   |
-| Unicode- und ANSI-Name<br/>   | **Getspoolfilelenker** (Unicode) und **getspoolfilehandlea** (ANSI)<br/>                           |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ Vista-Desktop-Apps\]<br/>                                                            |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/>                                                      |
+| Header<br/>                   | <dl> <dt>Winspool.h (include Windows.h)</dt> </dl> |
+| Bibliothek<br/>                  | <dl> <dt>Winspool.lib</dt> </dl>                   |
+| DLL<br/>                      | <dl> <dt>WinSpool.drv</dt> </dl>                   |
+| Unicode- und ANSI-Name<br/>   | **GetSpoolFileHandleW** (Unicode) und **GetSpoolFileHandleA** (ANSI)<br/>                           |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
@@ -93,13 +93,13 @@ Diese Funktion schlägt fehl, wenn Sie aufgerufen wird, bevor der Druckauftrag d
 [**AddPrinter**](addprinter.md)
 </dt> <dt>
 
-[**Closeprinter**](closeprinter.md)
+[**ClosePrinter**](closeprinter.md)
 </dt> <dt>
 
-[**Closespoolfilehandle**](closespoolfilehandle.md)
+[**CloseSpoolFileHandle**](closespoolfilehandle.md)
 </dt> <dt>
 
-[**Commitspooldata**](commitspooldata.md)
+[**CommitSpoolData**](commitspooldata.md)
 </dt> </dl>
 
  

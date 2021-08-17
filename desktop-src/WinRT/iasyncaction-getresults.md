@@ -41,11 +41,11 @@ Diese Methode hat keine Parameter.
 
 Typ: **HRESULT**
 
-Diese Methode gibt immer **S \_ OK** zurück.
+Diese Methode gibt immer **S \_ OK zurück.**
 
 ## <a name="remarks"></a>Hinweise
 
-Das Aufrufen der **GetResults-Methode** hat keine Auswirkungen, wenn die aktuelle Implementierung den dynamischen Typ [**IAsyncAction aufweist.**](/windows/win32/api/windows.foundation/nn-windows-foundation-iasyncaction)
+Das Aufrufen **der GetResults-Methode** hat keine Auswirkungen, wenn die aktuelle Implementierung über den dynamischen [**Typ IAsyncAction verfügt.**](/windows/win32/api/windows.foundation/nn-windows-foundation-iasyncaction)
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -59,7 +59,7 @@ Das Aufrufen der **GetResults-Methode** hat keine Auswirkungen, wenn die aktuell
 
 
 
-## <a name="see-also"></a>Weitere Informationen:
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 

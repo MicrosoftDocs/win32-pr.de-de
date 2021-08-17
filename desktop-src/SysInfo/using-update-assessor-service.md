@@ -1,21 +1,21 @@
 ---
-description: Um die WAAS Assessment Platform-API zu verwenden, erstellen Sie eine Instanz der iwaasassessor-Schnittstelle, und rufen Sie dann die gedesupdateassessment-Methode auf.
+description: Um die WaaS Assessment Platform-API zu verwenden, erstellen Sie eine Instanz der IWaaSAssessor-Schnittstelle, und rufen Sie dann die GetOSUpdateAssessment-Methode auf.
 ms.assetid: 810D4057-8319-4B9B-9098-CD7987CB292C
-title: Verwenden der WAAS-Bewertungsplattform
+title: Verwenden der WaaS-Bewertungsplattform
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: ed3a7d70e3dab0c75aea266f2a1874931e5e5d4e
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 08401222b11036047a6c03e98cccaa9dc65e6f6a7cf39470480479c217549d57
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106347930"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118884229"
 ---
-# <a name="using-the-waas-assessment-platform"></a>Verwenden der WAAS-Bewertungsplattform
+# <a name="using-the-waas-assessment-platform"></a>Verwenden der WaaS-Bewertungsplattform
 
-Um die WAAS Assessment Platform-API zu verwenden, erstellen Sie eine Instanz der [**iwaasassessor**](/windows/desktop/api/waasapi/nn-waasapi-iwaasassessor) -Schnittstelle, und rufen Sie dann die [**gedesupdateassessment**](/windows/desktop/api/waasapi/nf-waasapi-iwaasassessor-getosupdateassessment) -Methode auf. Bei erfolgreicher Ausführung gibt der *Ergebnis* Parameter ein [**osupdateassessment**](/windows/win32/api/waasapitypes/ns-waasapitypes-osupdateassessment) -Objekt aus, das die relevanten Informationen enthält.
+Um die WaaS Assessment Platform-API zu verwenden, erstellen Sie eine Instanz der [**IWaaSAssessor-Schnittstelle,**](/windows/desktop/api/waasapi/nn-waasapi-iwaasassessor) und rufen Sie dann die [**GetOSUpdateAssessment-Methode**](/windows/desktop/api/waasapi/nf-waasapi-iwaasassessor-getosupdateassessment) auf. Bei einem Erfolg gibt der *Result-Parameter* ein [**OSUpdateAssessment-Objekt**](/windows/win32/api/waasapitypes/ns-waasapitypes-osupdateassessment) aus, das die relevanten Informationen enthält.
 
-Das folgende Codebeispiel zeigt, wie Sie mithilfe der iwaasassessor. gedesupdateassessment-Methode eine Betriebssystem Bewertung von Ihrem lokalen System abrufen.
+Das folgende Codebeispiel zeigt, wie Sie mithilfe der IWaaSAssessor.GetOSUpdateAssessment-Methode eine Betriebssystembewertung von Ihrem lokalen System abrufen.
 
 
 ```C++

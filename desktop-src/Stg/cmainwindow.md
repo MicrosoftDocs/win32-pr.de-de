@@ -1,29 +1,29 @@
 ---
 title: CMainWindow
-description: Der folgende Beispielcode veranschaulicht dieses Verfahren.
+description: Dieser Vorgang wird im folgenden Beispielcode veranschaulicht.
 ms.assetid: a2998232-db71-48ce-b14b-5e17de147172
 keywords:
 - CMainWindow
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: bc3e9cb538246dfa6931a2f036ba75cab5e962a7
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: 45f67fd2a00bb6f3ab082499e5ca2a4a991a9fb33159a4f43c05923ae393efcf
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "106341825"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117962467"
 ---
 # <a name="cmainwindow"></a>CMainWindow
 
-Das Microsoft Windows-Betriebssystem übersetzt die folgenden Benutzeraktionen in Standardfenster Meldungen und sendet Sie an die Haupt Prozedur in der **stoclien** -Anwendung:
+Das Microsoft Windows-Betriebssystem übersetzt die folgenden Benutzeraktionen in Standardfenstermeldungen und sendet sie an die Hauptprozedur in der **StoClien-Anwendung:**
 
--   Der Benutzer klickt auf die linke Maustaste oder auf Tablet-Geräte, um eine Zeilen Zeichnungs Sequenz zu initiieren.
--   Der Benutzer klickt auf die Schaltfläche und bewegt die Schaltfläche und bewegt die Maus, um eine Linie zu zeichnen.
+-   Der Benutzer klickt auf die linke Maustaste oder den Stiftspitzenschalter auf Tabletgeräten, um eine Strichzeichnungssequenz zu initiieren.
+-   Der Benutzer klickt auf die Schaltfläche und hält sie gedrückt und bewegt die Maus, um eine Linie zu zeichnen.
 -   Die Sequenz wird beendet, wenn die linke Maustaste losgelassen wird.
 
-Der folgende Beispielcode veranschaulicht dieses Verfahren.
+Dieser Vorgang wird im folgenden Beispielcode veranschaulicht.
 
-## <a name="cmainwindowwindowproc-stocliencpp"></a>CMainWindow:: WindowProc (stoclien). CPP
+## <a name="cmainwindowwindowproc-stocliencpp"></a>CMainWindow::WindowProc (STOCLIEN. CPP)
 
 
 ```C++
@@ -122,17 +122,17 @@ LRESULT CMainWindow::WindowProc(
 
 
 
-Eine Zeilen Zeichnungs Sequenz beginnt, wenn die WM- \_ lbuttondown-Nachricht Maus Positionsdaten übermittelt.
+Eine Strichzeichnungssequenz wird gestartet, wenn die \_ WM-LBUTTONDOWN-Nachricht Mauspositionsdaten liefert.
 
-CMainWindow weist einen Zeiger auf das cguipaper-Objekt auf und ruft die [**cguipaper:: inkstart**](cguipaper-methods.md) -Methode auf, um die Zeilen Zeichnungs Sequenz zu starten.
+CMainWindow verfügt über einen Zeiger auf das CGuiPaper-Objekt und ruft die [**CGuiPaper::InkStart-Methode**](cguipaper-methods.md) auf, um die Strichzeichnungssequenz zu starten.
 
-Wenn die Maus zu zeichnen bewegt wird, wird eine Sequenz von separaten **WM- \_ MouseMove** -Nachrichten, die Maus Positionsdaten enthalten, für die [cguipaper:: inkdraw](cguipaper-methods.md) -Methode bereitgestellt.
+Wenn die Maus zum Zeichnen bewegt wird, wird der [CGuiPaper::InkDraw-Methode](cguipaper-methods.md) eine Sequenz von separaten **WM \_ MOUSEMOVE-Meldungen** bereitgestellt, die Mauspositionsdaten enthalten.
 
-Wenn die linke Maustaste losgelassen wird, wird die **WM \_ lbuttonup** -Meldung empfangen. Die [cguipaper:: inkstopp](cguipaper-methods.md) -Methode beendet die Zeilen Zeichnungs Sequenz.
+Wenn die linke Maustaste losgelassen wird, wird die **\_ WM-LBUTTONUP-Nachricht** empfangen. Die [CGuiPaper::InkStop-Methode beendet](cguipaper-methods.md) die Strichzeichnungssequenz.
 
- 
+ 
 
- 
+ 
 
 
 

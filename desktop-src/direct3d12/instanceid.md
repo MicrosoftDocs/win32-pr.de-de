@@ -1,5 +1,5 @@
 ---
-description: Der vom Benutzer bereitgestellte Bezeichner für die -Instanz in der Instanz der Beschleunigungsstruktur der unteren Ebene innerhalb der Struktur der obersten Ebene.
+description: Der vom Benutzer bereitgestellte Bezeichner für die Instanz in der Beschleunigungsstrukturinstanz der unteren Ebene innerhalb der Struktur der obersten Ebene.
 ms.assetid: ''
 title: InstanceId
 ms.localizationpriority: low
@@ -21,7 +21,7 @@ ms.locfileid: "118528312"
 ---
 # <a name="instanceid"></a>InstanceId
 
-Der vom Benutzer bereitgestellte Bezeichner für die -Instanz in der Instanz der Beschleunigungsstruktur der unteren Ebene innerhalb der Struktur der obersten Ebene.
+Der vom Benutzer bereitgestellte Bezeichner für die Instanz in der Beschleunigungsstrukturinstanz der unteren Ebene innerhalb der Struktur der obersten Ebene.
 
 ## <a name="syntax"></a>Syntax
 
@@ -46,7 +46,7 @@ Diese Funktion kann von den folgenden Raytracing-Shadertypen aufgerufen werden:
 
 
 
-## <a name="see-also"></a>Weitere Informationen:
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 

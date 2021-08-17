@@ -1,7 +1,7 @@
 ---
-description: Konvertiert die lokale Zeit des Computers in eine koordinierte Weltzeit (Greenwich Mean Time).
+description: Konvertiert die Ortszeit des Computers in koordinierte Weltzeit (Greenwich Mean Time).
 ms.assetid: ff5d40ba-7d94-4f11-9c18-e41752d1d7b9
-title: Utilities. localtimetoutctime-Methode
+title: Utilities.LocalTimeToUTCTime-Methode
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,18 +13,18 @@ api_type:
 - COM
 api_location:
 - Capicom.dll
-ms.openlocfilehash: 2691e3306a84ce4eff3d73df4b070ba4b65671f9
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 03efb6cdfbea712f2fbca194073b89bcee66975481c1a7c0fdc2d7bd385eb652
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106355857"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117971021"
 ---
-# <a name="utilitieslocaltimetoutctime-method"></a>Utilities. localtimetoutctime-Methode
+# <a name="utilitieslocaltimetoutctime-method"></a>Utilities.LocalTimeToUTCTime-Methode
 
-\[Die **localtimetoutctime** -Methode ist für die Verwendung in den Betriebssystemen verfügbar, die im Abschnitt "Anforderungen" angegeben sind.\]
+\[Die **LocalTimeToUTCTime-Methode** ist für die Verwendung in den Betriebssystemen verfügbar, die im Abschnitt Anforderungen angegeben sind.\]
 
-Die **localtimetoutctime** -Methode konvertiert die lokale Zeit des Computers in eine koordinierte Weltzeit (Greenwich Mean Time).
+Die **LocalTimeToUTCTime-Methode** konvertiert die lokale Zeit des Computers in koordinierte Weltzeit (Greenwich Mean Time).
 
 ## <a name="syntax"></a>Syntax
 
@@ -41,10 +41,10 @@ Utilities.LocalTimeToUTCTime( _
 
 <dl> <dt>
 
-*Localtime* \[ in\]
+*LocalTime* \[ In\]
 </dt> <dd>
 
-Die Ortszeit, die in die koordinierte Weltzeit konvertiert werden soll.
+Die ortslokale Zeit, die in koordinierte Weltzeit konvertiert werden soll.
 
 </dd> </dl>
 
@@ -52,9 +52,9 @@ Die Ortszeit, die in die koordinierte Weltzeit konvertiert werden soll.
 
 Die koordinierte Weltzeit, die der angegebenen Ortszeit entspricht.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Während das System eine koordinierte Weltzeit intern verwendet, zeigen Anwendungen in der Regel die Ortszeit an, die das Datum und die Uhrzeit für die lokale Zeitzone des Computers ist.
+Während das System intern koordinierte Weltzeit verwendet, zeigen Anwendungen in der Regel die Ortszeit an, d. h. datums- und tageszeit für die lokale Zeitzone des Computers.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -62,16 +62,16 @@ Während das System eine koordinierte Weltzeit intern verwendet, zeigen Anwendun
 
 | Anforderung | Wert |
 |----------------------------|----------------------------------------------------------------------------------------|
-| Verteilbare Komponente<br/> | CAPICOM 2,0 oder höher unter Windows Server 2003 und Windows XP<br/>                  |
+| Verteilbare Komponente<br/> | CAPICOM 2.0 oder höher auf Windows Server 2003 und Windows XP<br/>                  |
 | DLL<br/>             | <dl> <dt>Capicom.dll</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Versorgungsunternehmen**](utilities.md)
+[**Hilfsprogramme**](utilities.md)
 </dt> </dl>
 
  

@@ -23,7 +23,7 @@ ms.locfileid: "118543899"
 ---
 # <a name="idodownloadsetproperty-method"></a>IDODownload::SetProperty-Methode
 
-Legt eine Downloadeigenschaft fest. Die -Methode akzeptiert  einen Zeiger auf eine VARIANT-Eigenschaft, die eine bestimmte Eigenschaft enthält, die auf den Download angewendet werden soll.
+Legt eine Downloadeigenschaft fest. Die -Methode akzeptiert einen  Zeiger auf eine VARIANT-Datei, die eine bestimmte Eigenschaft enthält, die auf den Download angewendet werden soll.
 
 ## <a name="syntax"></a>Syntax
 
@@ -38,17 +38,17 @@ HRESULT SetProperty(
 
 `propId`
 
-Die erforderliche Festzulegende Eigenschaften-ID (vom Typ **DODownloadProperty**).
+Die erforderliche Eigenschafts-ID, die festgelegt werden soll (vom **Typ DODownloadProperty**).
 
 `propVal`
 
-Der festzulegende Eigenschaftswert, der in einer **VARIANT** gespeichert wird.
+Der eigenschaftswert, der festgelegt werden soll und in einem **VARIANT-Objekt gespeichert ist.**
 
 ## <a name="return-value"></a>Rückgabewert
 
-Wenn die Funktion erfolgreich ausgeführt wird, wird **S_OK** zurückgegeben. Andernfalls wird ein [**HRESULT-Fehlercode**](/windows/desktop/com/structure-of-com-error-codes) [](/windows/desktop/com/com-error-codes-10)zurückgegeben.
+Wenn die Funktion erfolgreich ist, gibt **sie** S_OK. Andernfalls wird ein [**HRESULT-Fehlercode**](/windows/desktop/com/structure-of-com-error-codes) [zurückgegeben.](/windows/desktop/com/com-error-codes-10)
 
-|Rückgabewert|Beschreibung|
+|Rückgabewert|BESCHREIBUNG|
 |-|-|
 |DO_E_UNKNOWN_PROPERTY_ID|*propId* ist unbekannt.|
 |DO_E_INVALID_STATE|Der Download befindet sich derzeit nicht in einem Zustand, der das Festlegen von Eigenschaften zulässt.|
@@ -58,5 +58,5 @@ Wenn die Funktion erfolgreich ausgeführt wird, wird **S_OK** zurückgegeben. An
 | &nbsp; | &nbsp; |
 | ---- |:---- |
 | **Unterstützte Mindestversion (Client)** | \[Windows 10, Version 1809 Nur Win32-Anwendungen\] |
-| **Unterstützte Mindestversion (Server)** | Windows Server, nur Win32-Anwendungen der Version 1809 \[\] |
+| **Unterstützte Mindestversion (Server)** | Windows Server, version 1809 Win32 applications only (Nur \[ Win32-Anwendungen der Version 1809)\] |
 | **Header** | Do.h |

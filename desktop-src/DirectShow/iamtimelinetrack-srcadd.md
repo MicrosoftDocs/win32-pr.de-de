@@ -1,7 +1,7 @@
 ---
-description: Die srcadd-Methode fügt der Spur eine Quelle hinzu.
+description: Die SrcAdd-Methode fügt der Spur eine Quelle hinzu.
 ms.assetid: 71c62e92-02d6-4c6f-8121-2052d6cc832c
-title: 'Iamtimelinetrack:: srcadd-Methode (qedit. h)'
+title: IAMTimelineTrack::SrcAdd-Methode (Qedit.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -14,21 +14,21 @@ api_type:
 api_location:
 - strmiids.lib
 - strmiids.dll
-ms.openlocfilehash: e3d1d727fb6a99e3dea9ec2659838df1bfcd392b
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: e705f840a073ee6796776f6f68c7b57df0bd972facf8f7a586792519735bfb3e
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106357565"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117998750"
 ---
-# <a name="iamtimelinetracksrcadd-method"></a>Iamtimelinetrack:: srcadd-Methode
+# <a name="iamtimelinetracksrcadd-method"></a>IAMTimelineTrack::SrcAdd-Methode
 
 > [!Note]  
-> \[Veraltet. Diese API kann aus zukünftigen Versionen von Windows entfernt werden.\]
+> \[Veraltet. Diese API wird möglicherweise aus zukünftigen Releases von Windows.\]
 
  
 
-Die- `SrcAdd` Methode fügt der Spur eine Quelle hinzu.
+Die `SrcAdd` -Methode fügt der Spur eine Quelle hinzu.
 
 ## <a name="syntax"></a>Syntax
 
@@ -48,27 +48,27 @@ HRESULT SrcAdd(
 *pSrc* 
 </dt> <dd>
 
-Zeiger auf die [**iamtimelineobj**](iamtimelineobj.md) -Schnittstelle des Quell Objekts.
+Zeiger auf die [**IAMTimelineObj-Schnittstelle**](iamtimelineobj.md) des Quellobjekts.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt \_ bei Erfolg S OK zurück. Gibt "E nointerface" zurück, \_ Wenn das Objekt kein Quell Objekt ist. Andernfalls wird ein **HRESULT** -Wert zurückgegeben, der die Ursache des Fehlers angibt.
+Gibt S \_ OK zurück, wenn erfolgreich. Gibt E \_ NOINTERFACE zurück, wenn das -Objekt kein Quellobjekt ist. Andernfalls gibt einen **HRESULT-Wert** zurück, der die Ursache des Fehlers angibt.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Legen Sie die Start-und Endzeiten der Quelle vor dem Aufrufen dieser Methode fest. (Aufrufen von [**iamtimelineobj:: setstartstation**](iamtimelineobj-setstartstop.md).)
+Legen Sie die Start- und Stoppzeiten der Quelle fest, bevor Sie diese Methode aufrufen. (Rufen Sie [**IAMTimelineObj::SetStartStop**](iamtimelineobj-setstartstop.md)auf.)
 
-Derzeit kann des nicht gleichzeitig mehr als 75 Quellen gleichzeitig erzeugen, die mit Video Compression Manager-Codecs (VCM) komprimiert wurden. Wenn das Projekt als Ganzes mehr als 75 derartige Quellen enthält, müssen Sie auch die dynamische Neuverbindung verwenden, oder des kann das Projekt nicht in der Vorschau anzeigen. Weitere Informationen finden Sie unter " [**unenderengine:: setdynamikreconnectlevel**](irenderengine-setdynamicreconnectlevel.md)".
+Derzeit kann DES nicht mehr als 75 Quellen gleichzeitig rendern, die mit VCM-Codecs (Video Compression Manager) komprimiert wurden. Wenn das Projekt als Ganzes mehr als 75 solcher Quellen enthält, müssen Sie die dynamische Wiederherstellungsverbindung verwenden, oder DES kann keine Vorschau des Projekts anzeigen. Weitere Informationen finden Sie unter [**IRenderEngine::SetDynamicReconnectLevel**](irenderengine-setdynamicreconnectlevel.md).
 
 > [!Note]  
-> Die Header Datei "qedit. h" ist nicht mit Direct3D-Headern nach Version 7 kompatibel.
+> Die Headerdatei Qedit.h ist nicht mit Direct3D-Headern nach Version 7 kompatibel.
 
  
 
 > [!Note]  
-> Zum Abrufen von "qedit. h" Laden Sie das [Microsoft Windows SDK Update für Windows Vista und .NET Framework 3,0](https://msdn.microsoft.com/windowsvista/bb980924.aspx)herunter. "Qedit. h" ist im Microsoft Windows SDK für Windows 7 und .NET Framework 3,5 Service Pack 1 nicht verfügbar.
+> Um Qedit.h zu erhalten, laden Sie das Microsoft Windows SDK-Update für Windows Vista und [.NET Framework 3.0 herunter.](https://msdn.microsoft.com/windowsvista/bb980924.aspx) Qedit.h ist im Microsoft Windows SDK für Windows 7 und .NET Framework 3.5 Service Pack 1 nicht verfügbar.
 
  
 
@@ -78,19 +78,19 @@ Derzeit kann des nicht gleichzeitig mehr als 75 Quellen gleichzeitig erzeugen, d
 
 | Anforderung | Wert |
 |--------------------|-----------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>"Qedit. h"</dt> </dl>      |
-| Bibliothek<br/> | <dl> <dt>"" "" ". Lib"</dt> </dl> |
+| Header<br/>  | <dl> <dt>Qedit.h</dt> </dl>      |
+| Bibliothek<br/> | <dl> <dt>Strmiids.lib</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Iamtimelinetrack-Schnittstelle**](iamtimelinetrack.md)
+[**IAMTimelineTrack-Schnittstelle**](iamtimelinetrack.md)
 </dt> <dt>
 
-[Fehler-und Erfolgs Codes](error-and-success-codes.md)
+[Fehler- und Erfolgscodes](error-and-success-codes.md)
 </dt> </dl>
 
  

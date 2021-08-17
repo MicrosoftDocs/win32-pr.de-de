@@ -1,6 +1,6 @@
 ---
 title: IBackgroundCopyJob SetNotifyFlags-Methode (Deliveryoptimization.h)
-description: Gibt den Typ der Ereignisbenachrichtigung an, die Sie empfangen möchten, z. B. ereignisse, die vom Auftrag übertragen wurden.
+description: Gibt den Typ der Ereignisbenachrichtigung an, die Sie empfangen möchten, z. B. ereignisse, die vom Auftrag übertragen werden sollen.
 ms.assetid: 19E626A5-6B6E-44E0-BD6F-43F132F32890
 keywords:
 - SetNotifyFlags-Methode
@@ -26,7 +26,7 @@ ms.locfileid: "118542917"
 ---
 # <a name="ibackgroundcopyjobsetnotifyflags-method"></a>IBackgroundCopyJob::SetNotifyFlags-Methode
 
-Gibt den Typ der Ereignisbenachrichtigung an, die Sie empfangen möchten, z. B. ereignisse, die vom Auftrag übertragen wurden.
+Gibt den Typ der Ereignisbenachrichtigung an, die Sie empfangen möchten, z. B. ereignisse, die vom Auftrag übertragen werden sollen.
 
 ## <a name="syntax"></a>Syntax
 
@@ -55,7 +55,7 @@ Legen Sie mindestens eines der folgenden Flags fest, um die Ereignisse zu identi
 | <span id="BG_NOTIFY_JOB_TRANSFERRED"></span><span id="bg_notify_job_transferred"></span><dl> <dt>**BG_NOTIFY_JOB_TRANSFERRED**</dt> <dt>0x0001</dt> </dl>                          | Alle Dateien im Auftrag wurden übertragen.<br/>                                                                                                                                                          |
 | <span id="BG_NOTIFY_JOB_ERROR"></span><span id="bg_notify_job_error"></span><dl> <dt>**BG_NOTIFY_JOB_ERROR**</dt> <dt>0x0002</dt> </dl>                                            | Es ist ein Fehler aufgetreten.<br/>                                                                                                                                                                                      |
 | <span id="BG_NOTIFY_DISABLE"></span><span id="bg_notify_disable"></span><dl> <dt>**BG_NOTIFY_DISABLE**</dt> <dt>0x0004</dt> </dl>                                                   | Wird nicht unterstützt.<br/>                                                                                                                                                                                              |
-| <span id="BG_NOTIFY_JOB_MODIFICATION"></span><span id="bg_notify_job_modification"></span><dl> <dt>**BG_NOTIFY_JOB_MODIFICATION**</dt> <dt>0x0008</dt> </dl>                       | Der Auftrag wurde geändert. Beispielsweise wurde ein Eigenschaftswert geändert, der Status des Auftrags wurde geändert, oder es wird ein Fortschritt beim Übertragen der Dateien erzielt. Dieses Flag wird ignoriert, wenn eine Befehlszeilenbenachrichtigung angegeben wird.<br/> |
+| <span id="BG_NOTIFY_JOB_MODIFICATION"></span><span id="bg_notify_job_modification"></span><dl> <dt>**BG_NOTIFY_JOB_MODIFICATION**</dt> <dt>0x0008</dt> </dl>                       | Der Auftrag wurde geändert. Beispielsweise wurde ein Eigenschaftswert geändert, der Status des Auftrags geändert, oder der Fortschritt wird beim Übertragen der Dateien ausgeführt. Dieses Flag wird ignoriert, wenn eine Befehlszeilenbenachrichtigung angegeben wird.<br/> |
 | <span id="BG_NOTIFY_FILE_TRANSFERRED"></span><span id="bg_notify_file_transferred"></span><dl> <dt>**BG_NOTIFY_FILE_TRANSFERRED**</dt> <dt>0x0010</dt> </dl>                       | Eine Datei im Auftrag wurde übertragen. Dieses Flag wird ignoriert, wenn eine Befehlszeilenbenachrichtigung angegeben wird.<br/>                                                                                                     |
 | <span id="BG_NOTIFY_FILE_RANGES_TRANSFERRED"></span><span id="bg_notify_file_ranges_transferred"></span><dl> <dt>**BG_NOTIFY_FILE_RANGES_TRANSFERRED**</dt> <dt>0x0020</dt> </dl> | Wird nicht unterstützt.<br/>                                                                                                                                                                                              |
 
@@ -73,8 +73,8 @@ Diese Methode gibt die folgenden **HRESULT-Werte** sowie andere zurück.
 
 | Rückgabecode                                                                                          | Beschreibung                                                                                          |
 |------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------|
-| <dl> <dt>S_OK S_OK</dt> </dl>             | Der Typ der Ereignisbenachrichtigung wurde erfolgreich festgelegt.<br/>                                          |
-| <dl> <dt>**DO_E_INVALID_STATE**</dt> </dl> | Der Status des Auftrags kann nicht BG_JOB_STATE_CANCELLED oder BG_JOB_STATE_ACKNOWLEDGED.<br/> |
+| <dl> <dt>S_OK</dt> </dl>             | Der Typ der Ereignisbenachrichtigung wurde erfolgreich festgelegt.<br/>                                          |
+| <dl> <dt>**DO_E_INVALID_STATE**</dt> </dl> | Der Status des Auftrags kann nicht BG_JOB_STATE_CANCELLED oder BG_JOB_STATE_ACKNOWLEDGED werden.<br/> |
 
 
 
@@ -82,7 +82,7 @@ Diese Methode gibt die folgenden **HRESULT-Werte** sowie andere zurück.
 
 ## <a name="remarks"></a>Hinweise
 
-Verwenden Sie **die SetNotifyFlags-Methode** in Verbindung mit [**IBackgroundCopyJob::SetNotifyInterface**](ibackgroundcopyjob-setnotifyinterface.md).
+Verwenden Sie die **SetNotifyFlags-Methode** in Verbindung mit [**IBackgroundCopyJob::SetNotifyInterface.**](ibackgroundcopyjob-setnotifyinterface.md)
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -90,8 +90,8 @@ Verwenden Sie **die SetNotifyFlags-Methode** in Verbindung mit [**IBackgroundCop
 
 | Anforderung | Wert |
 |-------------------------------------|-----------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Windows 10 Desktop-Apps, Version 1709 \[\]<br/>                                           |
-| Unterstützte Mindestversion (Server)<br/> | Windows Server, version 1709 desktop apps only (Nur \[ Desktop-Apps der Version 1709)\]<br/>                                       |
+| Unterstützte Mindestversion (Client)<br/> | Windows 10, nur Desktop-Apps der Version 1709 \[\]<br/>                                           |
+| Unterstützte Mindestversion (Server)<br/> | Windows Server, nur Desktop-Apps der Version 1709 \[\]<br/>                                       |
 | Header<br/>                   | <dl> <dt>Deliveryoptimization.h</dt> </dl>   |
 | Idl<br/>                      | <dl> <dt>DeliveryOptimization.idl</dt> </dl> |
 | Bibliothek<br/>                  | <dl> <dt>Dosvc.lib</dt> </dl>                |
@@ -100,7 +100,7 @@ Verwenden Sie **die SetNotifyFlags-Methode** in Verbindung mit [**IBackgroundCop
 
 
 
-## <a name="see-also"></a>Weitere Informationen:
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 

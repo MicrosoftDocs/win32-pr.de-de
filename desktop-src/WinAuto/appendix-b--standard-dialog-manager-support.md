@@ -1,6 +1,6 @@
 ---
 title: Anhang B– Unterstützung für Standarddialog-Manager
-description: Microsoft Active Accessibility bietet vollständige Unterstützung für DIALOGFELD-Steuerelemente im Standarddialog-Manager (Standard Dialog Manager, SDM).
+description: Microsoft Active Accessibility bietet vollständige Unterstützung für Dialogfeld-Steuerelemente des Standarddialog-Managers (STANDARD Dialog Manager, SDM).
 ms.assetid: cdec2dbd-943b-4160-ae22-c16198cc192a
 ms.topic: article
 ms.date: 05/31/2018
@@ -13,11 +13,11 @@ ms.locfileid: "118326821"
 ---
 # <a name="appendix-b-standard-dialog-manager-support"></a>Anhang B: Unterstützung des Standarddialog-Managers
 
-Microsoft Active Accessibility bietet vollständige Unterstützung für DIALOGFELD-Steuerelemente im Standarddialog-Manager (Standard Dialog Manager, SDM). SDM ist eine interne Microsoft-Codebibliothek, die Microsoft-Anwendungen ein gewisses Maß an Abhängigkeit von den Unterschieden zwischen macintosh- und microsoft Windows bietet. SDM wird hauptsächlich für Dialogfelder in Microsoft Excel und Microsoft Word.
+Microsoft Active Accessibility bietet vollständige Unterstützung für Dialogfeld-Steuerelemente des Standarddialog-Managers (STANDARD Dialog Manager, SDM). SDM ist eine interne Microsoft-Codebibliothek, die Microsoft-Anwendungen ein gewisses Maß an Unabhängigkeit von den Unterschieden zwischen Macintosh- und Microsoft Windows bietet. SDM wird hauptsächlich für Dialogfelder in Microsoft Excel und Microsoft Word.
 
 SDM stellt Probleme bei Barrierefreiheitshilfen vor, da nicht standardmäßige Implementierungen von Dialogfeldern verwendet werden. Beispielsweise verwenden SDM-Dialogfeldschaltflächen fensterhandles nicht auf die gleiche Weise wie die Standardelemente der Benutzeroberfläche. Sie können keine Nachrichten an Schaltflächen senden, und Schaltflächen sind nicht in der Fensterliste enthalten. Eine Anwendung, die SDM verwendet, kommuniziert über eine private Schnittstelle mit dem Steuerelement.
 
-Die folgende Abbildung zeigt ein Beispieldialogfeld aus Word. Obwohl es wie ein reguläres Windows, das das Registerkarten-Steuerelement verwendet, ist es tatsächlich ein SDM-Dialogfeld.
+Die folgende Abbildung zeigt ein Beispieldialogfeld aus Word. Obwohl es wie ein reguläres Dialogfeld Windows, das das Registerkarten-Steuerelement verwendet, handelt es sich tatsächlich um ein SDM-Dialogfeld.
 
 ![Screenshot des Dialogfelds "Optionen" mit ausgewählter Registerkarte "Ansicht"](images/dialog.gif)
 

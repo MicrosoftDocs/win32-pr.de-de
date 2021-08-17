@@ -1,7 +1,7 @@
 ---
-description: Die enumprinterkey-Funktion Listet die Unterschlüssel eines angegebenen Schlüssels für einen angegebenen Drucker auf.
+description: Die EnumPrinterKey-Funktion aufzählt die Unterschlüssel eines angegebenen Schlüssels für einen angegebenen Drucker.
 ms.assetid: 721b1d23-a594-4439-b8f9-9b11be5fe874
-title: Enumprinterkey-Funktion (winspool. h)
+title: EnumPrinterKey-Funktion (Winspool.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -15,18 +15,18 @@ api_type:
 - DllExport
 api_location:
 - Winspool.drv
-ms.openlocfilehash: d9af6a9ef26612385cee68eba9733c148cd36b17
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: c3666cce36884a331085d074df44e05b5bcfd0422433ce24bdbf3dbc385d7f7e
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "104347498"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118471784"
 ---
-# <a name="enumprinterkey-function"></a>Enumprinterkey-Funktion
+# <a name="enumprinterkey-function"></a>EnumPrinterKey-Funktion
 
-Die **enumprinterkey** -Funktion Listet die Unterschlüssel eines angegebenen Schlüssels für einen angegebenen Drucker auf.
+Die **EnumPrinterKey-Funktion** aufzählt die Unterschlüssel eines angegebenen Schlüssels für einen angegebenen Drucker.
 
-Druckerdaten werden in der Registrierung gespeichert. Wenn Sie Druckerdaten auflisten, dürfen Sie keine Registrierungsfunktionen aufzurufen, die die Daten möglicherweise ändern.
+Druckerdaten werden in der Registrierung gespeichert. Rufen Sie beim Aufzählen von Druckerdaten keine Registrierungsfunktionen auf, die die Daten ändern könnten.
 
 ## <a name="syntax"></a>Syntax
 
@@ -47,53 +47,53 @@ DWORD EnumPrinterKey(
 
 <dl> <dt>
 
-*hprinter* \[ in\]
+*hPrinter* \[ In\]
 </dt> <dd>
 
-Ein Handle für den Drucker, für den die-Funktion Unterschlüssel auflistet. Verwenden Sie die Funktion [**OpenPrinter**](openprinter.md) oder [**addprinter**](addprinter.md) zum Abrufen eines Drucker Handles.
+Ein Handle für den Drucker, für den die Funktion Unterschlüssel aufzählt. Verwenden Sie [**die OpenPrinter-**](openprinter.md) [**oder AddPrinter-Funktion,**](addprinter.md) um einen Druckerhandpunkt abzurufen.
 
 </dd> <dt>
 
-*pkeyname* \[ in\]
+*pKeyName* \[ In\]
 </dt> <dd>
 
-Ein Zeiger auf eine NULL-terminierte Zeichenfolge, die den Schlüssel mit den unter Schlüsseln angibt, die aufgelistet werden sollen. Verwenden Sie den umgekehrten Schrägstrich ' \\ ' als Trennzeichen, um einen Pfad mit einem oder mehreren unter Schlüsseln anzugeben. **Enumprinterkey** listet alle Unterschlüssel des Schlüssels auf, listet aber nicht die untergeordneten Schlüssel dieser Unterschlüssel auf.
+Ein Zeiger auf eine auf NULL beendete Zeichenfolge, die den Schlüssel angibt, der die aufzählenden Unterschlüssel enthält. Verwenden Sie den schrägen Schrägstrich '' als Trennzeichen, um einen Pfad \\ mit mindestens einem Unterschlüssel anzugeben. **EnumPrinterKey** aufzählt alle Unterschlüssel des Schlüssels, aber nicht die Unterschlüssel dieser Unterschlüssel.
 
-Wenn " *pkeyname* " eine leere Zeichenfolge ("") ist, listet " **enumprinterkey** " den Schlüssel der obersten Ebene für den Drucker auf. Wenn *pkeyname* **null** ist, gibt **enumprinterkey** einen \_ ungültigen \_ Parameter zurück.
+Wenn *pKeyName eine* leere Zeichenfolge ("") ist, **enumPrinterKey** den Schlüssel der obersten Ebene für den Drucker aufzählt. Wenn *pKeyName* NULL **ist,** gibt **EnumPrinterKey** ERROR \_ INVALID PARAMETER \_ zurück.
 
 </dd> <dt>
 
-*psubkey* \[ vorgenommen\]
+*pSubkey* \[ out\]
 </dt> <dd>
 
-Ein Zeiger auf einen Puffer, der ein Array von auf NULL endenden Unterschlüssel Namen empfängt. Das Array wird mit zwei NULL-Zeichen beendet.
+Ein Zeiger auf einen Puffer, der ein Array von Null-Terminierungsunterschlüsselnamen empfängt. Das Array wird mit zwei NULL-Zeichen beendet.
 
 </dd> <dt>
 
-*cbsubkey* \[ in\]
+*cbSubkey* \[ In\]
 </dt> <dd>
 
-Die Größe (in Bytes) des Puffers, auf den *psubkey* zeigt. Wenn Sie *cbsubkey* auf NULL festlegen, gibt der *pcbsubkey* -Parameter die erforderliche Puffergröße zurück.
+Die Größe des Puffers in Bytes, auf den *pSubkey zeigt.* Wenn Sie *cbSubkey auf* 0 (null) festlegen, gibt der *parameter "ierungSubkey"* die erforderliche Puffergröße zurück.
 
 </dd> <dt>
 
-*pcbsubkey* \[ vorgenommen\]
+*dateiSubkey* \[ out\]
 </dt> <dd>
 
-Ein Zeiger auf eine Variable, die die Anzahl von Bytes empfängt, die im *psubkey* -Puffer abgerufen wurden. Wenn die von *cbsubkey* angegebene Puffergröße zu klein ist, gibt die Funktion Fehler \_ Weitere \_ Daten zurück, und *pcbsubkey* gibt die erforderliche Puffergröße an.
+Ein Zeiger auf eine Variable, die die Anzahl der im *pSubkey-Puffer abgerufenen Bytes* empfängt. Wenn die von *cbSubkey* angegebene Puffergröße zu klein ist, gibt die Funktion ERROR MORE DATA zurück, und \_ \_ *"malwareSubkey"* gibt die erforderliche Puffergröße an.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Wenn die Funktion erfolgreich ausgeführt wird, ist der Rückgabewert Fehler \_ erfolgreich.
+Wenn die Funktion erfolgreich ist, ist der Rückgabewert ERROR \_ SUCCESS.
 
-Wenn die Funktion fehlschlägt, ist der Rückgabewert ein Systemfehler Code. Wenn " *pkeyname* " nicht vorhanden ist, lautet der Rückgabewert "Fehler \_ Datei \_ nicht \_ gefunden".
+Wenn die Funktion fehlschlägt, ist der Rückgabewert ein Systemfehlercode. Wenn *pKeyName nicht* vorhanden ist, ist der Rückgabewert ERROR \_ FILE NOT \_ \_ FOUND.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
 > [!Note]  
-> Dies ist eine blockierende oder synchrone Funktion, die möglicherweise nicht sofort zurückgegeben wird. Wie schnell diese Funktion zurückgibt, hängt von Lauf Zeitfaktoren ab, wie z. b. Netzwerkstatus, Druckserver Konfiguration und Implementierungs Faktoren für Druckertreiber, die beim Schreiben einer Anwendung schwierig vorhergesagt werden können. Wenn diese Funktion von einem Thread aufgerufen wird, der die Interaktion mit der Benutzeroberfläche verwaltet, könnte die Anwendung scheinbar nicht mehr reagiert.
+> Dies ist eine blockierende oder synchrone Funktion, die möglicherweise nicht sofort zurückkehrt. Wie schnell diese Funktion zurückgegeben wird, hängt von Laufzeitfaktoren wie Netzwerkstatus, Druckerserverkonfiguration und Implementierungsfaktoren des Druckertreibers ab, die beim Schreiben einer Anwendung schwer vorherzusagen sind. Das Aufrufen dieser Funktion aus einem Thread, der die Interaktion mit der Benutzeroberfläche verwaltet, könnte dazu kommen, dass die Anwendung nicht reagiert.
 
  
 
@@ -105,14 +105,14 @@ Wenn die Funktion fehlschlägt, ist der Rückgabewert ein Systemfehler Code. Wen
 |-------------------------------------|-----------------------------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[nur Desktop-Apps\]<br/>                                                |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                                                      |
-| Header<br/>                   | <dl> <dt>Winspool. h (Include Windows. h)</dt> </dl> |
-| Bibliothek<br/>                  | <dl> <dt>Winspool. lib</dt> </dl>                   |
-| DLL<br/>                      | <dl> <dt>Winspool. drv</dt> </dl>                   |
-| Unicode- und ANSI-Name<br/>   | **Enumprinterkeyw** (Unicode) und **enumprinterkeya** (ANSI)<br/>                                   |
+| Header<br/>                   | <dl> <dt>Winspool.h (include Windows.h)</dt> </dl> |
+| Bibliothek<br/>                  | <dl> <dt>Winspool.lib</dt> </dl>                   |
+| DLL<br/>                      | <dl> <dt>Winspool.drv</dt> </dl>                   |
+| Unicode- und ANSI-Name<br/>   | **EnumPrinterKeyW** (Unicode) und **EnumPrinterKeyA** (ANSI)<br/>                                   |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
@@ -122,16 +122,16 @@ Wenn die Funktion fehlschlägt, ist der Rückgabewert ein Systemfehler Code. Wen
 [Druckspooler-API-Funktionen](printing-and-print-spooler-functions.md)
 </dt> <dt>
 
-[**Deleteprinterdataex**](deleteprinterdataex.md)
+[**DeletePrinterDataEx**](deleteprinterdataex.md)
 </dt> <dt>
 
-[**Getprinterdataex**](getprinterdataex.md)
+[**GetPrinterDataEx**](getprinterdataex.md)
 </dt> <dt>
 
 [**OpenPrinter**](openprinter.md)
 </dt> <dt>
 
-[**Setprinterdataex**](setprinterdataex.md)
+[**SetPrinterDataEx**](setprinterdataex.md)
 </dt> </dl>
 
  

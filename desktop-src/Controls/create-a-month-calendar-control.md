@@ -1,37 +1,37 @@
 ---
-title: Erstellen eines Monatskalender-Steuer Elements
-description: In diesem Thema wird veranschaulicht, wie ein Monatskalender-Steuerelement mithilfe der Funktion "die Funktion" "" "erstellt wird.
+title: Erstellen eines Monatskalender-Steuerelements
+description: In diesem Thema wird veranschaulicht, wie ein Monatskalender-Steuerelement mithilfe der CreateWindowEx-Funktion dynamisch erstellt wird.
 ms.assetid: 35ADDA85-5D7D-46F4-A637-99FEE4592B3B
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 82f3824618e9801b68eb67b13c64c638a5057481
-ms.sourcegitcommit: a716ca2a6a22a400f02c6b31699cf4da83ee3619
+ms.openlocfilehash: 22f0fbc819a79b05842db75c1871e8150b311444e6055d076a9831b0bc42486b
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/04/2020
-ms.locfileid: "103734913"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117831816"
 ---
-# <a name="how-to-create-a-month-calendar-control"></a>Erstellen eines Monatskalender-Steuer Elements
+# <a name="how-to-create-a-month-calendar-control"></a>Erstellen eines Monatskalender-Steuerelements
 
-In diesem Thema wird veranschaulicht, wie ein Monatskalender-Steuerelement mithilfe [**der Funktion**](/windows/desktop/api/winuser/nf-winuser-createwindowexa) "die Funktion" "" "erstellt wird.
+In diesem Thema wird veranschaulicht, wie ein Monatskalender-Steuerelement mithilfe der [**CreateWindowEx-Funktion**](/windows/desktop/api/winuser/nf-winuser-createwindowexa) dynamisch erstellt wird.
 
-## <a name="what-you-need-to-know"></a>Was Sie wissen müssen
+## <a name="what-you-need-to-know"></a>Wichtige Informationen
 
 ### <a name="technologies"></a>Technologien
 
--   [Windows-Steuerelemente](window-controls.md)
+-   [Windows Steuerelemente](window-controls.md)
 
 ### <a name="prerequisites"></a>Voraussetzungen
 
 -   C/C++
--   Programmieren der Windows-Benutzeroberfläche
+-   Windows Benutzeroberfläche-Programmierung
 
 ## <a name="instructions"></a>Anweisungen
 
 
-Um ein Monatskalender-Steuerelement zu erstellen, verwenden Sie die Funktion " [**kreatewindowex**](/windows/desktop/api/winuser/nf-winuser-createwindowexa) ", wobei die [**monthcal- \_ Klasse**](common-control-window-classes.md) als Fenster Klasse angegeben wird. Sie müssen zuerst die Fenster Klasse registrieren, indem Sie die [**InitCommonControlsEx**](/windows/desktop/api/Commctrl/nf-commctrl-initcommoncontrolsex) -Funktion aufrufen und dabei das Bit der **ICC- \_ Datums \_ Klassen** in der zugehörigen [**InitCommonControlsEx**](/windows/win32/api/commctrl/ns-commctrl-initcommoncontrolsex) -Struktur angeben.
+Verwenden Sie zum Erstellen eines Monatskalender-Steuerelements die [**CreateWindowEx-Funktion,**](/windows/desktop/api/winuser/nf-winuser-createwindowexa) und geben Sie [**MONTHCAL \_ CLASS**](common-control-window-classes.md) als Fensterklasse an. Sie müssen zuerst die Fensterklasse registrieren, indem Sie die [**InitCommonControlsEx-Funktion**](/windows/desktop/api/Commctrl/nf-commctrl-initcommoncontrolsex) aufrufen und dabei das **BIT "DATE \_ \_ CLASSES"** in der zugehörigen [**INITCOMMONCONTROLSEX-Struktur**](/windows/win32/api/commctrl/ns-commctrl-initcommoncontrolsex) angeben.
 
-Im folgenden Beispiel wird veranschaulicht, wie ein Monatskalender-Steuerelement in einem vorhandenen nicht modalem Dialogfeld erstellt wird. Beachten Sie, dass die an " [**kreatewindowex**](/windows/desktop/api/winuser/nf-winuser-createwindowexa) " über gebenden Größen Werte alle Nullen sind. Da die erforderliche Mindestgröße von der Schriftart abhängig ist, die das Steuerelement verwendet, verwendet das Beispiel das [**monthcal \_ getminreqrect**](/windows/desktop/api/Commctrl/nf-commctrl-monthcal_getminreqrect) -Makro, um Größen Informationen anzufordern, und ändert anschließend die Größe des Steuer Elements, indem [**SetWindowPos**](/windows/desktop/api/winuser/nf-winuser-setwindowpos)aufgerufen werden. Wenn Sie anschließend die Schriftart mit [**WM \_ setFont**](/windows/desktop/winmsg/wm-setfont)ändern, werden die Abmessungen des Steuer Elements nicht geändert. Sie müssen **monthcal \_ getminreqrect** erneut aufrufen und die Größe des Steuer Elements an die neue Schriftart anpassen.
+Im folgenden Beispiel wird veranschaulicht, wie sie ein Monatskalender-Steuerelement in einem vorhandenen moduslosen Dialogfeld erstellen. Beachten Sie, dass die an [**CreateWindowEx**](/windows/desktop/api/winuser/nf-winuser-createwindowexa) übergebenen Größenwerte alle Nullen sind. Da die erforderliche Mindestgröße von der Schriftart abhängt, die das Steuerelement verwendet, wird im Beispiel das [**MonthCal \_ GetMinReqRect-Makro**](/windows/desktop/api/Commctrl/nf-commctrl-monthcal_getminreqrect) verwendet, um Größeninformationen anzufordern, und anschließend wird die Größe des Steuerelements durch Aufrufen von [**SetWindowPos**](/windows/desktop/api/winuser/nf-winuser-setwindowpos)geändert. Wenn Sie anschließend die Schriftart mit [**WM \_ SETFONT**](/windows/desktop/winmsg/wm-setfont)ändern, ändern sich die Abmessungen des Steuerelements nicht. Sie müssen **MonthCal \_ GetMinReqRect** erneut aufrufen und die Größe des Steuerelements an die neue Schriftart anpassen.
 
 
 
@@ -116,7 +116,7 @@ HRESULT CreateMonthCalDialog(HWND hwndOwner)
 
 <dl> <dt>
 
-[Verweis für Monatskalender-Steuerelement](bumper-month-calendar-month-calendar-control-reference.md)
+[Monatskalender-Steuerelementreferenz](bumper-month-calendar-month-calendar-control-reference.md)
 </dt> <dt>
 
 [Informationen zu Monatskalender-Steuerelementen](month-calendar-controls.md)

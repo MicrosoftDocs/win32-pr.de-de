@@ -1,9 +1,9 @@
 ---
-title: Videoformat-Attribut
-description: Das Videoformat-Attribut ist ein FourCC-Code, der das Videoformat des Elements identifiziert.
+title: VideoFormat-Attribut
+description: Das VideoFormat-Attribut ist ein FourCC-Code, der das Videoformat des Elements identifiziert.
 ms.assetid: 1f92f40e-a604-49d9-a7a4-3f50afe2f0f7
 keywords:
-- Videoformat-Attribut Fenster Media Player
+- VideoFormat-Attribut Windows Media Player
 topic_type:
 - apiref
 api_name:
@@ -12,24 +12,24 @@ api_type:
 - NA
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: c68e1e763a3b6d04dbcd8c8afec8d29ccc136954
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: a4a74e811a3edab92a2c7a17f14f1fbd65ea8abe46176cd121e6f182621db035
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106353788"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118333036"
 ---
-# <a name="videoformat-attribute"></a>Videoformat-Attribut
+# <a name="videoformat-attribute"></a>VideoFormat-Attribut
 
-Das Video **Format** -Attribut ist ein FourCC-Code, der das Videoformat des Elements identifiziert.
+Das **VideoFormat-Attribut** ist ein FourCC-Code, der das Videoformat des Elements identifiziert.
 
 ## <a name="applies-to"></a>Gilt für
 
--   [Video Elemente](video-item-attributes.md)
+-   [Videoelemente](video-item-attributes.md)
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Um zu ermitteln, ob Sie den Wert dieses Attributs ändern können, verwenden Sie die [Media. isread onlyitem](media-isreadonlyitem.md) -Methode.
+Verwenden Sie die [Media.isReadOnlyItem-Methode,](media-isreadonlyitem.md) um zu bestimmen, ob Sie den Wert dieses Attributs ändern können.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -41,11 +41,11 @@ Um zu ermitteln, ob Sie den Wert dieses Attributs ändern können, verwenden Sie
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Attribut Verweis**](attribute-reference.md)
+[**Attributverweis**](attribute-reference.md)
 </dt> </dl>
 
  

@@ -1,9 +1,9 @@
 ---
-title: ICM_DRAW_CHANGEPALETTE Meldung (VFW. h)
-description: Die ICM \_ Draw \_ changepalette-Meldung benachrichtigt einen renderingtreiber, dass sich die Film Palette ändert. Sie können diese Nachricht explizit oder mithilfe des icdrawchangepalette-Makros senden.
+title: ICM_DRAW_CHANGEPALETTE Nachricht (Vfw.h)
+description: Die ICM \_ DRAW \_ CHANGEPALETTE-Nachricht benachrichtigt einen Renderingtreiber, dass sich die Filmpalette ändert. Sie können diese Nachricht explizit oder mithilfe des ICDrawChangePalette-Makros senden.
 ms.assetid: 974fc0d8-d0c7-4a82-af84-68b53f753259
 keywords:
-- ICM_DRAW_CHANGEPALETTE-Nachricht (Multimedia)
+- ICM_DRAW_CHANGEPALETTE nachricht Windows Multimedia
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 6364abb2c535158b2e64ff311041b00490c5958c
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: e936c7dce397910ef70a80e2efa7f3e031ab8a61b8f59fece158d5c28e9e1270
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "103858986"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117987596"
 ---
-# <a name="icm_draw_changepalette-message"></a>ICM- \_ Meldung zum Zeichnen der \_ changepalette
+# <a name="icm_draw_changepalette-message"></a>\_ICM DRAW \_ CHANGEPALETTE-Meldung
 
-Die **ICM \_ Draw \_ changepalette** -Meldung benachrichtigt einen renderingtreiber, dass sich die Film Palette ändert. Sie können diese Nachricht explizit oder mithilfe des [**icdrawchangepalette**](/windows/desktop/api/Vfw/nf-vfw-icdrawchangepalette) -Makros senden.
+Die **ICM \_ DRAW \_ CHANGEPALETTE-Nachricht** benachrichtigt einen Renderingtreiber, dass sich die Filmpalette ändert. Sie können diese Nachricht explizit oder mithilfe des [**ICDrawChangePalette-Makros**](/windows/desktop/api/Vfw/nf-vfw-icdrawchangepalette) senden.
 
 
 ```C++
@@ -38,20 +38,20 @@ lParam = 0;
 
 <dl> <dt>
 
-<span id="lpbiInput"></span><span id="lpbiinput"></span><span id="LPBIINPUT"></span>*lpbiinput*
+<span id="lpbiInput"></span><span id="lpbiinput"></span><span id="LPBIINPUT"></span>*lpbiInput*
 </dt> <dd>
 
-Zeiger auf eine [**BitmapInfo**](/windows/win32/api/wingdi/ns-wingdi-bitmapinfo) -Struktur, die das neue Format und die optionale Farbtabelle enthält.
+Zeiger auf eine [**BITMAPINFO-Struktur,**](/windows/win32/api/wingdi/ns-wingdi-bitmapinfo) die das neue Format und die optionale Farbtabelle enthält.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt bei erfolgreicher Ausführung von ICERR \_ OK oder andernfalls **false** zurück.
+Gibt ICERR \_ OK zurück, wenn erfolgreich, **andernfalls FALSE.**
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Diese Meldung sollte von installierbaren renderhandlern unterstützt werden, die Disb mit einer internen Struktur zeichnen, die eine Palette enthält.
+Diese Meldung sollte von installierbaren Renderinghandlern unterstützt werden, die DIBs mit einer internen Struktur zeichnen, die eine Palette enthält.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -61,18 +61,18 @@ Diese Meldung sollte von installierbaren renderhandlern unterstützt werden, die
 |-------------------------------------|----------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[nur Desktop-Apps\]<br/>                       |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                             |
-| Header<br/>                   | <dl> <dt>VFW. h</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Vfw.h</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
 [Videokomprimierungs-Manager](video-compression-manager.md)
 </dt> <dt>
 
-[Video Komprimierungs Meldungen](video-compression-messages.md)
+[Videokomprimierungsmeldungen](video-compression-messages.md)
 </dt> </dl>
 
  

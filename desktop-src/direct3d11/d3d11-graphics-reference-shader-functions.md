@@ -22,9 +22,9 @@ Dieser Abschnitt enthält Informationen zu den Shaderfunktionen.
 
 
 
-| Thema                                                             | Beschreibung                                                                                                                             |
+| Thema                                                             | BESCHREIBUNG                                                                                                                             |
 |-------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------|
-| [**D3DDisassemble11Trace**](/windows/desktop/api/D3D11ShaderTracing/nf-d3d11shadertracing-d3ddisassemble11trace)<br/> | Disassembliert einen Abschnitt des kompilierten HLSL-Codes (Microsoft High Level Shader Language), der von Shader-Ablaufverfolgungsschritten angegeben wird.<br/> |
+| [**D3DDisassemble11Trace**](/windows/desktop/api/D3D11ShaderTracing/nf-d3d11shadertracing-d3ddisassemble11trace)<br/> | Disassembliert einen Abschnitt des kompilierten HLSL-Codes (High Level Shader Language) von Microsoft, der durch Shader-Ablaufverfolgungsschritte angegeben wird.<br/> |
 
 
 

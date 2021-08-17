@@ -1,10 +1,10 @@
 ---
-title: IPX_SPECIFIC_DATA Struktur (RTM. h)
-description: Die IPX \_ \_ -spezifische Datenstruktur enthält IPX-spezifische Daten.
+title: IPX_SPECIFIC_DATA-Struktur (Rtm.h)
+description: Die \_ IPX-SPEZIFISCHE \_ DATENstruktur enthält IPX-spezifische Daten.
 ms.assetid: 4d97092d-692c-4dc7-af7f-260dc76c6c08
 keywords:
-- IPX_SPECIFIC_DATA Struktur-RAS
-- PIPX_SPECIFIC_DATA-Struktur Zeiger RAS
+- IPX_SPECIFIC_DATA Struktur von RAS
+- PIPX_SPECIFIC_DATA Strukturzeiger RAS
 topic_type:
 - apiref
 api_name:
@@ -15,18 +15,18 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 56badfb6149e416c71b447aca93564b5eb5aba7a
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 0367e02dd8b0a46304538a2e5830e101eb9573e6548383fbae617a856df83621
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "103949387"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117790748"
 ---
-# <a name="ipx_specific_data-structure"></a>IPX- \_ spezifische \_ Datenstruktur
+# <a name="ipx_specific_data-structure"></a>\_IPX-SPEZIFISCHE \_ DATENstruktur
 
-\[Diese API wurde durch die API für [Routing Table Manager, Version 2](about-routing-table-manager-version-2.md) , ersetzt und ist nicht über Windows Server 2003 verfügbar. Anwendungen sollten die API für Routing Table Manager Version 2 verwenden.\]
+\[Diese API wurde durch die Routing Table Manager Version [2-API](about-routing-table-manager-version-2.md) ersetzt und ist nach Windows Server 2003 nicht mehr verfügbar. Anwendungen sollten die Routing Table Manager Version 2-API verwenden.\]
 
-Die **IPX- \_ spezifische \_ Daten** Struktur enthält IPX-spezifische Daten.
+Die **\_ IPX-SPEZIFISCHE \_ DATENstruktur** enthält IPX-spezifische Daten.
 
 ## <a name="syntax"></a>Syntax
 
@@ -45,16 +45,16 @@ typedef struct _IPX_SPECIFIC_DATA {
 
 <dl> <dt>
 
-**F- \_ Flags**
+**\_FSD-Flags**
 </dt> <dd>
 
-Gibt Flags an, die die Route beschreiben. Derzeit ist dieser Member entweder NULL oder der folgende Flagwert.
+Gibt Flags an, die die Route beschreiben. Derzeit ist dieser Member entweder 0 (null) oder der folgende Flagwert.
 
 
 
 | Wert                                                                                                                                                                                                      | Bedeutung                                                                                       |
 |------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------|
-| <span id="IPX_GLOBAL_CLIENT_WAN_ROUTE"></span><span id="ipx_global_client_wan_route"></span><dl> <dt>**globale IPX- \_ \_ Client-WAN- \_ \_ Route**</dt> </dl> | Gibt an, dass diese Route für das globale Netzwerk bestimmt ist, das allen WAN-Clients zugeordnet ist.<br/> |
+| <span id="IPX_GLOBAL_CLIENT_WAN_ROUTE"></span><span id="ipx_global_client_wan_route"></span><dl> <dt>**IPX \_ GLOBAL \_ CLIENT \_ WAN \_ ROUTE**</dt> </dl> | Gibt an, dass diese Route für das globale Netzwerk gilt, das allen WAN-Clients zugeordnet ist.<br/> |
 
 
 
@@ -62,14 +62,14 @@ Gibt Flags an, die die Route beschreiben. Derzeit ist dieser Member entweder NUL
 
 </dd> <dt>
 
-**Anzahl der Aktivier- \_ Tickanzahl**
+**FSD \_ TickCount**
 </dt> <dd>
 
-Gibt die Anzahl der Ticks an, die zum Erreichen des Ziel Netzwerks benötigt werden. Bei anderen Routing Protokollen als RIP sollten ihre Metriken in Ticks konvertiert werden.
+Gibt die Anzahl der Ticks an, die zum Erreichen des Zielnetzwerks benötigt werden. Andere Routingprotokolle als RIP sollten ihre Metriken in Ticks konvertieren.
 
 </dd> <dt>
 
-**Anzahl von "f SD" \_**
+**FSD \_ HopCount**
 </dt> <dd>
 
 Gibt die Hopanzahl an, die der Route zugeordnet ist.
@@ -84,22 +84,22 @@ Gibt die Hopanzahl an, die der Route zugeordnet ist.
 |-------------------------------------|----------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Nicht unterstützt<br/>                                                        |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                             |
-| Ende des Supports (Server)<br/>    | Windows Server 2003<br/>                                                   |
-| Header<br/>                   | <dl> <dt>RTM. h</dt> </dl> |
+| Ende des Supports (Server)<br/>    | Windows Server 2003<br/>                                                   |
+| Header<br/>                   | <dl> <dt>Rtm.h</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[Referenz für Routing Tabellen-Manager Version 1](routing-table-manager-version-1-reference.md)
+[Referenz zu Routingtabellen-Manager, Version 1](routing-table-manager-version-1-reference.md)
 </dt> <dt>
 
-[Routing Tabellen-Manager, Version 1, Strukturen](routing-table-manager-version-1-structures.md)
+[Routingtabellen-Manager- Version 1-Strukturen](routing-table-manager-version-1-structures.md)
 </dt> <dt>
 
-[**RTM- \_ IPX- \_ Route**](rtm-ipx-route.md)
+[**\_RTM-IPX-ROUTE \_**](rtm-ipx-route.md)
 </dt> </dl>
 
  

@@ -2,7 +2,7 @@
 description: Deaktiviert dieses Plug & Play Gerät.
 ms.assetid: 88d60218-7282-4d0e-9a2c-0ad1a8c96650
 ms.tgt_platform: multiple
-title: Deaktivieren der Methode der Win32_PnPEntity-Klasse
+title: Disable-Methode der Win32_PnPEntity-Klasse
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -14,14 +14,14 @@ api_type:
 - COM
 api_location:
 - CIMWin32.dll
-ms.openlocfilehash: 59d08d14f8dbf32941554dcecc372d73c60bef60
-ms.sourcegitcommit: c7add10d695482e1ceb72d62b8a4ebd84ea050f7
+ms.openlocfilehash: 499e189d7262454e61df9c93a583bc2ed2b62da6bc8a9fa9f12a018c25813de8
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104523395"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118419430"
 ---
-# <a name="disable-method-of-the-win32_pnpentity-class"></a>Deaktivieren der Methode der Win32- \_ pnptity-Klasse
+# <a name="disable-method-of-the-win32_pnpentity-class"></a>Disable-Methode der \_ Win32-PnPEntity-Klasse
 
 Deaktiviert dieses Plug & Play Gerät.
 
@@ -40,7 +40,7 @@ Uint32 Disable(
 
 <dl> <dt>
 
-*neubootbedarf* \[ vorgenommen\]
+*rebootNeeded* \[ out\]
 </dt> <dd>
 
 Gibt an, ob ein Neustart erforderlich ist.
@@ -53,19 +53,19 @@ Gibt an, ob ein Neustart erforderlich ist.
 
 | Anforderung | Wert |
 |-------------------------------------|-----------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows 10 \[ -Desktop-Apps\]<br/>                                             |
+| Unterstützte Mindestversion (Client)<br/> | \[Windows 10 Nur Desktop-Apps\]<br/>                                             |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2016<br/>                                                          |
-| Namespace<br/>                | Root \\ CIMV2<br/>                                                                  |
-| MOF<br/>                      | <dl> <dt>Cimwin32. MOF</dt> </dl> |
+| Namespace<br/>                | \\Stamm-CIMV2<br/>                                                                  |
+| MOF<br/>                      | <dl> <dt>Cimwin32.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>CIMWin32.dll</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Win32- \_ pnptity**](win32-pnpentity.md)
+[**Win32 \_ PnPEntity**](win32-pnpentity.md)
 </dt> </dl>
 
  

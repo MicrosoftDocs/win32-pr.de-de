@@ -1,7 +1,7 @@
 ---
-description: Mit der GetState-Methode wird der Zustand des Filters abgerufen (wird ausgeführt, beendet oder angehalten).
+description: Die GetState-Methode ruft den Zustand der Filter ab (wird ausgeführt, angehalten oder angehalten).
 ms.assetid: 5d35824c-2509-499a-bbb1-1fb916b51808
-title: Cbaserderderer. GetState-Methode (renbase. h)
+title: CBaseRenderer.GetState-Methode (Renbase.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,16 +16,16 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: 451078a6167ff7ca89ad4153c416826af8ac6d05
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 532a41bb9e39f844b3a485fc236ae8d03450d45cdcb45d92c8cfa94d9af4a4bc
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106371013"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118403409"
 ---
-# <a name="cbaserenderergetstate-method"></a>Cbaserderderer. GetState-Methode
+# <a name="cbaserenderergetstate-method"></a>CBaseRenderer.GetState-Methode
 
-Mit der `GetState` -Methode wird der Zustand des Filters abgerufen (wird ausgeführt, beendet oder angehalten).
+Die `GetState` -Methode ruft den Zustand der Filter ab (wird ausgeführt, angehalten oder angehalten).
 
 ## <a name="syntax"></a>Syntax
 
@@ -43,39 +43,39 @@ HRESULT GetState(
 
 <dl> <dt>
 
-*dwmillisecstimeout* 
+*dwMsecsTimeout* 
 </dt> <dd>
 
-Timeout Intervall in Millisekunden.
+Time out-Intervall in Millisekunden.
 
 </dd> <dt>
 
 *State* 
 </dt> <dd>
 
-Ein Zeiger auf eine Variable, die einen Member des Enumerationstyps des [**Filter \_ Zustands**](/windows/win32/api/strmif/ne-strmif-filter_state) empfängt, der den Zustand des Filters angibt.
+Zeiger auf eine Variable, die einen Member des Enumerationstyps [**FILTER \_ STATE**](/windows/win32/api/strmif/ne-strmif-filter_state) empfängt, der den Zustand des Filters angibt.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt einen der **HRESULT** -Werte zurück, die in der folgenden Tabelle aufgeführt sind.
+Gibt einen der in der folgenden Tabelle gezeigten **HRESULT-Werte** zurück.
 
 
 
 | Rückgabecode                                                                                                | Beschreibung                                                    |
 |------------------------------------------------------------------------------------------------------------|----------------------------------------------------------------|
 | <dl> <dt>**S \_ OK**</dt> </dl>                       | Erfolg.<br/>                                            |
-| <dl> <dt>**VFW \_ S \_ State \_ Intermediate**</dt> </dl> | Der Filter wechselt in den Status "angegeben".<br/> |
-| <dl> <dt>**E- \_ Zeiger**</dt> </dl>                  | **Null** -Zeigerargument.<br/>                          |
+| <dl> <dt>**VFW \_ S \_ STATE \_ INTERMEDIATE**</dt> </dl> | Der Filter wechselt in den angegebenen Zustand.<br/> |
+| <dl> <dt>**E \_ POINTER**</dt> </dl>                  | **NULL-Zeigerargument.**<br/>                          |
 
 
 
  
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Diese Methode überschreibt die [**cbasefilter:: GetState**](cbasefilter-getstate.md) -Methode. Wenn der Renderer angehalten wird, schließt er den Zustandsübergang erst ab, wenn er ein zum renderingmuster empfängt. Wenn das Timeout abläuft, bevor der Zustandsübergang beendet ist, gibt die Methode VFW \_ S \_ State Intermediate zurück \_ .
+Diese Methode überschreibt die [**CBaseFilter::GetState-Methode.**](cbasefilter-getstate.md) Wenn der Renderer angehalten wird, wird der Zustandsübergang erst abgeschlossen, wenn er ein Beispiel zum Rendern empfängt. Wenn das Time out abläuft, bevor der Zustandsübergang abgeschlossen ist, gibt die Methode VFW \_ S \_ STATE INTERMEDIATE \_ zurück.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -83,16 +83,16 @@ Diese Methode überschreibt die [**cbasefilter:: GetState**](cbasefilter-getstat
 
 | Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Renbase. h (Include Streams. h)</dt> </dl>                                                                                   |
-| Bibliothek<br/> | <dl> " <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Renbase.h (include Streams.h)</dt> </dl>                                                                                   |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Verkaufsbuilds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Cbaserderderer-Klasse**](cbaserenderer.md)
+[**CBaseRenderer-Klasse**](cbaserenderer.md)
 </dt> </dl>
 
  

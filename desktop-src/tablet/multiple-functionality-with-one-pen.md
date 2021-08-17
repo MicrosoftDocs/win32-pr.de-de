@@ -1,5 +1,5 @@
 ---
-description: Ein Tablet PC-Stift kann über mehrere Enden verfügen, die mit dem Digitizer interagieren können.
+description: Ein Tablet PC-Stift kann mehrere Enden haben, die mit dem Digitizer interagieren können.
 ms.assetid: c1aa0d65-cfea-4720-ad09-7add724e03c7
 title: Mehrere Funktionen mit einem Stift
 ms.topic: article
@@ -13,11 +13,11 @@ ms.locfileid: "118449671"
 ---
 # <a name="multiple-functionality-with-one-pen"></a>Mehrere Funktionen mit einem Stift
 
-Ein Tablet PC-Stift kann über mehrere Enden verfügen, die mit dem Digitizer interagieren können. Wenn beide Enden des Stifts Ereignisse generieren können, kann ein Ende zum Festlegen von Ink, Select und Point verwendet werden, und das andere Ende kann für andere Funktionen wie das Löschen verwendet werden.
+Ein Tablet PC-Stift kann mehrere Enden haben, die mit dem Digitizer interagieren können. Wenn beide Enden des Stifts Ereignisse generieren können, kann ein Ende verwendet werden, um die Ink-, Select- und Point-Funktion zu erstellen, und das andere Ende kann für andere Funktionen wie das Löschen verwendet werden.
 
-Um diese Funktionalität zu implementieren, muss Ihre Anwendung bestimmen können, welches Ende des Stifts verwendet wird und wann die Darstellung des Cursors geändert werden soll. Dies kann erreicht werden, indem nach dem Status der [**Inverted-Eigenschaft**](/windows/desktop/api/msinkaut/nf-msinkaut-iinkcursor-get_inverted) für das [**Cursor-Objekt**](/windows/desktop/api/msinkaut/nn-msinkaut-iinkcursor) gesucht wird.
+Um diese Funktionalität zu implementieren, muss Ihre Anwendung bestimmen können, welches Ende des Stifts verwendet wird und wann die Darstellung des Cursors geändert werden soll. Dies kann durch Suchen nach dem Zustand der [**Inverted-Eigenschaft**](/windows/desktop/api/msinkaut/nf-msinkaut-iinkcursor-get_inverted) für das [**Cursor-Objekt der Fall**](/windows/desktop/api/msinkaut/nn-msinkaut-iinkcursor) sein.
 
-Spezifische Informationen zur Verwendung der Rückseite des Stifts zum Löschen finden Sie unter Löschen von [Ink mit dem Stift](erasing-ink-with-the-pen.md). Darüber hinaus veranschaulicht das [Ink Erasing Sample,](ink-erasing-sample.md) wie Sie die Rückseite des Stifts zum Löschen von Ink verwenden.
+Spezifische Informationen zur Verwendung der Rückseite des Stifts zum Löschen finden Sie unter Löschen von [Ink mit dem Stift](erasing-ink-with-the-pen.md). Darüber hinaus wird im Beispiel zum Löschen von [Ink Erasing](ink-erasing-sample.md) veranschaulicht, wie die Rückseite des Stifts zum Löschen von Ink verwendet wird.
 
  
 

@@ -1,7 +1,7 @@
 ---
-description: Das Abhängigkeits Objekt gibt ein Modul zurück, von dem das aktuelle Modul abhängig ist und das noch nicht mit der aktuellen Installations Datenbank zusammengeführt wurde.
+description: Das Dependency-Objekt gibt ein Modul zurück, von dem das aktuelle Modul abhängig ist und das noch nicht mit der aktuellen Installationsdatenbank zusammengeführt wurde.
 ms.assetid: 3157f07d-99de-4628-9b03-eb86eb4896a4
-title: Abhängigkeits Objekt (Mergemod. h)
+title: Abhängigkeitsobjekt (Mergemod.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -14,26 +14,26 @@ api_type:
 - COM
 api_location:
 - Mergemod.dll
-ms.openlocfilehash: 24b215b67d22d27639f3e002590e7d08dd54b0c6
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: ac5786dcf3d4818fdfb3f0458cbfa85c923e5200ae69b5cb93d38330c322abf6
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106359399"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118378889"
 ---
 # <a name="dependency-object"></a>Abhängigkeitsobjekt
 
-Das **Abhängigkeits** Objekt gibt ein Modul zurück, von dem das aktuelle Modul abhängig ist und das noch nicht mit der aktuellen Installations Datenbank zusammengeführt wurde.
+Das **Dependency-Objekt** gibt ein Modul zurück, von dem das aktuelle Modul abhängig ist und das noch nicht mit der aktuellen Installationsdatenbank zusammengeführt wurde.
 
 ## <a name="members"></a>Member
 
-Das **Abhängigkeits** Objekt verfügt über diese Typen von Membern:
+Das **Dependency-Objekt** verfügt über diese Typen von Membern:
 
 -   [Eigenschaften](#properties)
 
 ### <a name="properties"></a>Eigenschaften
 
-Das **Abhängigkeits** Objekt verfügt über diese Eigenschaften.
+Das **Abhängigkeitsobjekt** verfügt über diese Eigenschaften.
 
 
 
@@ -49,7 +49,7 @@ Das **Abhängigkeits** Objekt verfügt über diese Eigenschaften.
 
 ## <a name="c"></a>C++
 
-Schnittstelle **imsmdependenz: IDispatch**
+**schnittstelle IMsmDependency : IDispatch**
 
 ## <a name="interface-id"></a>Schnittstellen-ID
 
@@ -57,7 +57,7 @@ Schnittstelle **imsmdependenz: IDispatch**
 
 | Konstante                | Wert                                  |
 |-------------------------|----------------------------------------|
-| **IID \_ imsmabhängigkeit** | {0adda82d-2c26-11d2-Ad65-00a0c9af11a6} |
+| **\_IID-IMsmDependency** | {0ADDA82D-2C26-11D2-AD65-00A0C9AF11A6} |
 
 
 
@@ -69,8 +69,8 @@ Schnittstelle **imsmdependenz: IDispatch**
 
 | Anforderung | Wert |
 |--------------------|-----------------------------------------------------------------------------------------|
-| Version<br/> | Mergemod.dll 1,0 oder höher<br/>                                                    |
-| Header<br/>  | <dl> <dt>Mergemod. h</dt> </dl>   |
+| Version<br/> | Mergemod.dll 1.0 oder höher<br/>                                                    |
+| Header<br/>  | <dl> <dt>Mergemod.h</dt> </dl>   |
 | DLL<br/>     | <dl> <dt>Mergemod.dll</dt> </dl> |
 
 

@@ -28,7 +28,7 @@ Dies ist ein **REG \_ DWORD-Wert.**
 
 
 
-| Wert | BESCHREIBUNG                                                                               |
+| Wert | Beschreibung                                                                               |
 |-------|-------------------------------------------------------------------------------------------|
 | 0     | Deaktiviert Windows Store Apps bei der Migration von Windows 7 zu Windows 8.                   |
 | 1     | Fügt com-Einschränkungen nicht die SID ALL \_ APPLICATION \_ PACKAGES hinzu. Dies ist die Standardoption. |

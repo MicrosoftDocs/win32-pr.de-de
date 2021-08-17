@@ -13,12 +13,12 @@ api_type:
 - COM
 api_location:
 - vmms.exe
-ms.openlocfilehash: 3124d1a878d04e9ea79d3f5b900ac111d3e2c0b2
-ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
+ms.openlocfilehash: bc9999bba539a8cc6bd1f205cd93abe615a0939772ca95c77ca325440d13d893
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2021
-ms.locfileid: "108109539"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118391887"
 ---
 # <a name="reset-method-of-the-msvm_syntheticmouse-class"></a>Reset-Methode der Msvm \_ SyntheticMouse-Klasse
 
@@ -53,7 +53,7 @@ Diese Methode gibt einen der folgenden Werte zurück:
 
 
 
-| Anforderungen | Wert |
+| Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 8.1<br/>                                                                                  |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2012 R2<br/>                                                                       |

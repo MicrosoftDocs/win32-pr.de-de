@@ -22,7 +22,7 @@ Enumerationen werden verwendet, um Informationen zu Shadern anzugeben.
 
 
 
-| Thema                                                                                          | Beschreibung                                                        |
+| Thema                                                                                          | BESCHREIBUNG                                                        |
 |------------------------------------------------------------------------------------------------|--------------------------------------------------------------------|
 | [**D3D11 \_ \_ CBUFFER-TYP**](/previous-versions/windows/desktop/legacy/ff476097(v=vs.85))<br/>                                  | Gibt den Typ eines konstanten Puffers an.<br/>                     |
 | [**\_D3D-PARAMETERFLAGS \_**](/windows/desktop/api/d3dcommon/ne-d3dcommon-d3d_parameter_flags)<br/>                                | Gibt semantische Flags für Funktionsparameter an.<br/>       |

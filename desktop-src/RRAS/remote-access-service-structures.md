@@ -1,100 +1,100 @@
 ---
-title: RAS-Dienst Strukturen
-description: Verwenden Sie die folgenden Strukturen, um RAS-Funktionen zu implementieren.
+title: Remotezugriffsdienststrukturen
+description: Verwenden Sie die folgenden Strukturen, um die RAS-Funktionalität zu implementieren.
 ms.assetid: c20e8892-7c5e-48cc-939a-9b747fefe09d
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: fc836f8759f522f0fede724db3738e7906448e00
-ms.sourcegitcommit: 592c9bbd22ba69802dc353bcb5eb30699f9e9403
+ms.openlocfilehash: 006e887126ae68c36aa902674f7b8a4f7a101e0e71630323251afbb78c5b90c9
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "103729649"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117788349"
 ---
-# <a name="remote-access-service-structures"></a>RAS-Dienst Strukturen
+# <a name="remote-access-service-structures"></a>Remotezugriffsdienststrukturen
 
-Verwenden Sie die folgenden Strukturen, um RAS-Funktionen zu implementieren.
+Verwenden Sie die folgenden Strukturen, um die RAS-Funktionalität zu implementieren.
 
-[**RAS- \_ Projektions \_ Informationen**](/windows/desktop/api/Ras/ns-ras-ras_projection_info)
+[**\_RAS-PROJEKTIONSINFORMATIONEN \_**](/windows/desktop/api/Ras/ns-ras-ras_projection_info)
 
-[**RAS- \_ Statistik**](/windows/desktop/api/Ras/ns-ras-ras_stats)
+[**\_RAS-STATISTIKEN**](/windows/desktop/api/Ras/ns-ras-ras_stats)
 
-[**Rasadparameams**](/previous-versions/windows/desktop/legacy/aa376719(v=vs.85))
+[**RASADPARAMS**](/previous-versions/windows/desktop/legacy/aa376719(v=vs.85))
 
-[**Rasamb**](/previous-versions/windows/desktop/legacy/aa376720(v=vs.85))
+[**RASAMB**](/previous-versions/windows/desktop/legacy/aa376720(v=vs.85))
 
-[**Rasapiversion**](/previous-versions/windows/desktop/legacy/dd408102(v=vs.85))
+[**RASAPIVERSION**](/previous-versions/windows/desktop/legacy/dd408102(v=vs.85))
 
-[**Rasauydialentry**](/previous-versions/windows/desktop/legacy/aa376721(v=vs.85))
+[**RASAUTODIALENTRY**](/previous-versions/windows/desktop/legacy/aa376721(v=vs.85))
 
-[**Rascommsettings**](/previous-versions/windows/desktop/legacy/aa376724(v=vs.85))
+[**RASCOMMSETTINGS**](/previous-versions/windows/desktop/legacy/aa376724(v=vs.85))
 
-[**Rasconn**](/previous-versions/windows/desktop/legacy/aa376725(v=vs.85))
+[**RASCONN**](/previous-versions/windows/desktop/legacy/aa376725(v=vs.85))
 
-[**Rasrestatus**](/previous-versions/windows/desktop/legacy/aa376728(v=vs.85))
+[**RASCONNSTATUS**](/previous-versions/windows/desktop/legacy/aa376728(v=vs.85))
 
-[**Rascredenseins**](/previous-versions/windows/desktop/legacy/aa376730(v=vs.85))
+[**RASCREDENTIALS**](/previous-versions/windows/desktop/legacy/aa376730(v=vs.85))
 
-[**Rasctryinfo**](/previous-versions/windows/desktop/legacy/aa376731(v=vs.85))
+[**RASCTRYINFO**](/previous-versions/windows/desktop/legacy/aa376731(v=vs.85))
 
-[**Rascustomscriptextensions**](/previous-versions/windows/desktop/legacy/aa376738(v=vs.85))
+[**RASCUSTOMSCRIPTEXTENSIONS**](/previous-versions/windows/desktop/legacy/aa376738(v=vs.85))
 
-[**Rasdevinfo**](/previous-versions/windows/desktop/legacy/aa377001(v=vs.85))
+[**RASDEVINFO**](/previous-versions/windows/desktop/legacy/aa377001(v=vs.85))
 
-[**Rasdevspecificinfo**](/windows/win32/api/ras/ns-ras-rasdevspecificinfo)
+[**RASDEVSPECIFICINFO**](/windows/win32/api/ras/ns-ras-rasdevspecificinfo)
 
-[**RasDialDlg**](/previous-versions/windows/desktop/legacy/aa377023(v=vs.85))
+[**RASDIALDLG**](/previous-versions/windows/desktop/legacy/aa377023(v=vs.85))
 
-[**Rasdialextensions**](/previous-versions/windows/desktop/legacy/aa377029(v=vs.85))
+[**RASDIALEXTENSIONS**](/previous-versions/windows/desktop/legacy/aa377029(v=vs.85))
 
-[**Rasdialparametriams**](/previous-versions/windows/desktop/legacy/aa377238(v=vs.85))
+[**RASDIALPARAMS**](/previous-versions/windows/desktop/legacy/aa377238(v=vs.85))
 
-[**Raseapinfo**](/previous-versions/windows/desktop/legacy/aa377242(v=vs.85))
+[**RASEAPINFO**](/previous-versions/windows/desktop/legacy/aa377242(v=vs.85))
 
-[**Raseemapuseridentity**](/previous-versions/windows/desktop/legacy/aa377247(v=vs.85))
+[**RASEAPUSERIDENTITY**](/previous-versions/windows/desktop/legacy/aa377247(v=vs.85))
 
 [**RASENTRY**](/previous-versions/windows/desktop/legacy/aa377274(v=vs.85))
 
-[**RasEntryDlg**](/previous-versions/windows/desktop/legacy/aa377260(v=vs.85))
+[**RASENTRYDLG**](/previous-versions/windows/desktop/legacy/aa377260(v=vs.85))
 
-[**Rasentryname**](/previous-versions/windows/desktop/legacy/aa377267(v=vs.85))
+[**RASENTRYNAME**](/previous-versions/windows/desktop/legacy/aa377267(v=vs.85))
 
-[**RASIKEV2- \_ Projektions \_ Informationen**](/windows/desktop/api/ras/ns-ras-rasikev2_projection_info)
+[**\_RASIKEV2-PROJEKTIONSINFORMATIONEN \_**](/windows/desktop/api/ras/ns-ras-rasikev2_projection_info)
 
-[**Rasipaddr**](/previous-versions/windows/desktop/legacy/aa377578(v=vs.85))
+[**RASIPADDR**](/previous-versions/windows/desktop/legacy/aa377578(v=vs.85))
 
-[**Rasmonitordlg**](/previous-versions/windows/desktop/legacy/aa377591(v=vs.85))
+[**RASMONITORDLG**](/previous-versions/windows/desktop/legacy/aa377591(v=vs.85))
 
-[**Rasnapstate**](/windows/desktop/api/Ras/ns-ras-rasnapstate)
+[**RASNAPSTATE**](/windows/desktop/api/Ras/ns-ras-rasnapstate)
 
-[**Rasnouser**](/previous-versions/windows/desktop/legacy/aa377598(v=vs.85))
+[**RASNOUSER**](/previous-versions/windows/desktop/legacy/aa377598(v=vs.85))
 
-[**Raspbdlg**](/previous-versions/windows/desktop/legacy/aa377607(v=vs.85))
+[**RASPBDLG**](/previous-versions/windows/desktop/legacy/aa377607(v=vs.85))
 
-[**rasppp- \_ Projektions \_ Informationen**](/windows/desktop/api/Ras/ns-ras-rasppp_projection_info)
+[**\_RASPPP-PROJEKTIONSINFORMATIONEN \_**](/windows/desktop/api/Ras/ns-ras-rasppp_projection_info)
 
-[**Raspppccp**](/previous-versions/windows/desktop/legacy/aa377620(v=vs.85))
+[**RASPPPCCP**](/previous-versions/windows/desktop/legacy/aa377620(v=vs.85))
 
-[**Raspppip**](/previous-versions/windows/desktop/legacy/aa377634(v=vs.85))
+[**RASPPPIP**](/previous-versions/windows/desktop/legacy/aa377634(v=vs.85))
 
 [**RASPPPIPV6**](/previous-versions/windows/desktop/legacy/aa816540(v=vs.85))
 
-[**Raspppipx**](/previous-versions/windows/desktop/legacy/aa377623(v=vs.85))
+[**RASPPPIPX**](/previous-versions/windows/desktop/legacy/aa377623(v=vs.85))
 
-[**Rasppplcp**](/previous-versions/windows/desktop/legacy/aa377638(v=vs.85))
+[**RASPPPLCP**](/previous-versions/windows/desktop/legacy/aa377638(v=vs.85))
 
-[**Raspppnbf**](/previous-versions/windows/desktop/legacy/aa377642(v=vs.85))
+[**RASPPPNBF**](/previous-versions/windows/desktop/legacy/aa377642(v=vs.85))
 
-[**rasprojection \_ - \_ Infotyp**](/windows/desktop/api/ras/ne-ras-rasprojection_info_type)
+[**\_RASPROJECTION-INFOTYP \_**](/windows/desktop/api/ras/ne-ras-rasprojection_info_type)
 
-[**Rasslip**](/previous-versions/windows/desktop/legacy/aa377836(v=vs.85))
+[**RASSLIP**](/previous-versions/windows/desktop/legacy/aa377836(v=vs.85))
 
-[**Rassubentry**](/previous-versions/windows/desktop/legacy/aa377839(v=vs.85))
+[**RASSUBENTRY**](/previous-versions/windows/desktop/legacy/aa377839(v=vs.85))
 
-[**Rastunnelendpoint**](/previous-versions/windows/desktop/legacy/dd430579(v=vs.85))
+[**RASTUNNELENDPOINT**](/previous-versions/windows/desktop/legacy/dd430579(v=vs.85))
 
-[**Rasupdateconn**](/previous-versions/windows/desktop/legacy/dd408110(v=vs.85))
+[**RASUPDATECONN**](/previous-versions/windows/desktop/legacy/dd408110(v=vs.85))
 
- 
+ 
 
- 
+ 

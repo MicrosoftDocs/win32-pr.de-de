@@ -1,5 +1,5 @@
 ---
-description: Die RemoveIniValues-Aktion entfernt .ini Dateiinformationen, die zum Entfernen in der RemoveIniFile-Tabelle angegeben sind, wenn die Komponente so festgelegt ist, dass sie lokal installiert oder aus der Quelle ausgeführt wird.
+description: Die RemoveIniValues-Aktion entfernt .ini dateiinformationen, die zum Entfernen in der RemoveIniFile-Tabelle angegeben sind, wenn die Komponente so festgelegt ist, dass sie lokal installiert oder aus der Quelle ausgeführt wird.
 ms.assetid: a30793c8-4154-4990-a42a-d022e69f960a
 title: RemoveIniValues-Aktion
 ms.topic: article
