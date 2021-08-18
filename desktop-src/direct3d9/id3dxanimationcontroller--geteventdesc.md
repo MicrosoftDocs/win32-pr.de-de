@@ -76,7 +76,7 @@ Wenn die Methode erfolgreich ist, lautet der Rückgabewert S \_ OK. Wenn die Met
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 

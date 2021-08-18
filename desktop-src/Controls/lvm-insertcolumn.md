@@ -1,9 +1,9 @@
 ---
-title: LVM_INSERTCOLUMN Meldung (kommstrg. h)
-description: Fügt eine neue Spalte in ein Listenansicht-Steuerelement ein. Sie können diese Nachricht explizit oder mithilfe des ListView \_ InsertColumn-Makros senden.
+title: LVM_INSERTCOLUMN (Commctrl.h)
+description: Fügt eine neue Spalte in ein Listenansicht-Steuerelement ein. Sie können diese Nachricht explizit oder mithilfe des \_ InsertColumn-Makros ListView senden.
 ms.assetid: 1326e38e-bb45-4d0d-b5bc-ec684b3b92ef
 keywords:
-- Windows-Steuerelemente für LVM_INSERTCOLUMN Meldung
+- LVM_INSERTCOLUMN meldungssteuerelemente Windows
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 8be89ff0b4ef417a715085582544112cb90cb6b1
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: c5c2316ed2a74c82cd4530eff2d71d4771f4042b903c7ee17fc62886009ed5b7
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104518647"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119019238"
 ---
-# <a name="lvm_insertcolumn-message"></a>LVM- \_ InsertColumn-Meldung
+# <a name="lvm_insertcolumn-message"></a>LVM \_ INSERTCOLUMN-Meldung
 
-Fügt eine neue Spalte in ein Listenansicht-Steuerelement ein. Sie können diese Nachricht explizit oder mithilfe des [**ListView \_ InsertColumn**](/windows/desktop/api/Commctrl/nf-commctrl-listview_insertcolumn) -Makros senden.
+Fügt eine neue Spalte in ein Listenansicht-Steuerelement ein. Sie können diese Nachricht explizit oder mithilfe des [**\_ InsertColumn-Makros ListView**](/windows/desktop/api/Commctrl/nf-commctrl-listview_insertcolumn) senden.
 
 ## <a name="parameters"></a>Parameter
 
@@ -39,15 +39,15 @@ Index der neuen Spalte.
 *lParam* 
 </dt> <dd>
 
-Zeiger auf eine [**LVCOLUMN**](/windows/win32/api/commctrl/ns-commctrl-lvcolumna) -Struktur, die die Attribute der neuen Spalte enthält.
+Zeiger auf eine [**LVCOLUMN-Struktur,**](/windows/win32/api/commctrl/ns-commctrl-lvcolumna) die die Attribute der neuen Spalte enthält.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt den Index der neuen Spalte zurück, wenn erfolgreich, andernfalls-1.
+Gibt bei Erfolg den Index der neuen Spalte zurück, andernfalls -1.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
 Spalten sind nur in der Berichtsansicht (Details) sichtbar.
 
@@ -57,9 +57,9 @@ Spalten sind nur in der Berichtsansicht (Details) sichtbar.
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                        |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/>                                  |
-| Header<br/>                   | <dl> <dt>Kommstrg. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ Vista-Desktop-Apps\]<br/>                                        |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                                  |
+| Header<br/>                   | <dl> <dt>Commctrl.h</dt> </dl> |
 
 
 

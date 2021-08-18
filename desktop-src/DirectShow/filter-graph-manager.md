@@ -1,69 +1,69 @@
 ---
-description: Diagramm-Manager Filtern
+description: Filtern Graph-Managers
 ms.assetid: b1a53193-27c6-4e86-a5b9-f3c1e4401690
-title: Diagramm-Manager Filtern
+title: Filtern Graph-Managers
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 7161f15ea04e1404425d4671ca7991420e0aa993
-ms.sourcegitcommit: a47bd86f517de76374e4fff33cfeb613eb259a7e
+ms.openlocfilehash: 793a261f0d7bd12058aa0dc22a448f567fea6847dca6062494f0943eee03a9b3
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/06/2021
-ms.locfileid: "103860003"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119756720"
 ---
-# <a name="filter-graph-manager"></a>Diagramm-Manager Filtern
+# <a name="filter-graph-manager"></a>Filtern Graph-Managers
 
-Der Filter Graph-Manager erstellt und steuert Filter Diagramme. Dieses Objekt ist die zentrale Komponente in DirectShow. Anwendungen verwenden Sie, um Filter Diagramme zu erstellen und zu steuern. Der Filter Graph-Manager behandelt auch die Synchronisierung, Ereignis Benachrichtigung und andere Aspekte der Steuerung des Filter Diagramms. Erstellen Sie dieses Objekt durch Aufrufen von **CoCreateInstance**.
+Filter Graph Manager erstellt und steuert Filterdiagramme. Dieses Objekt ist die zentrale Komponente in DirectShow. Anwendungen verwenden es zum Erstellen und Steuern von Filterdiagrammen. Der Filter Graph Manager verarbeitet auch die Synchronisierung, Ereignisbenachrichtigungen und andere Aspekte der Steuerung des Filterdiagramms. Erstellen Sie dieses Objekt, indem **Sie CoCreateInstance** aufrufen.
 
 ### <a name="clsid"></a>CLSID
 
-Es gibt zwei CLSIDs zum Erstellen des Filter Graph-Managers:
+Es gibt zwei CLSIDs zum Erstellen des Filter-Graph-Managers:
 
 
 
-| CLSID                      | BESCHREIBUNG                                                 |
+| CLSID                      | Beschreibung                                                 |
 |----------------------------|-------------------------------------------------------------|
-| CLSID- \_ Filtergraph         | Erstellt den Filter Graph-Manager in einem freigegebenen Arbeits Thread. |
-| CLSID- \_ filtergraphnothread | Erstellt den Filter Graph-Manager im Anwendungs Thread. |
+| CLSID \_ FilterGraph         | Erstellt den Filter Graph Manager für einen freigegebenen Arbeitsthread. |
+| \_CLSID-FilterGraphNoThread | Erstellt den Filter Graph Manager im Anwendungsthread. |
 
 
 
  
 
-Im Allgemeinen sollten Anwendungen CLSID \_ Filtergraph verwenden. Beide CLSIDs erstellen dasselbe Objekt, verwenden jedoch verschiedene Threading Modelle:
+Im Allgemeinen sollten Anwendungen CLSID \_ FilterGraph verwenden. Beide CLSIDs erstellen das gleiche Objekt, verwenden aber unterschiedliche Threadingmodelle:
 
--   CLSID \_ Filtergraph erstellt den Filter Graph-Manager in einem Arbeits Thread, der von allen CLSID- \_ Filtergraph-Instanzen innerhalb desselben Prozesses gemeinsam genutzt wird. Der Thread sendet Nachrichten, die von Filtern gesendet werden, und steuert die Lebensdauer von Fenstern, die durch Filter erstellt wurden.
--   CLSID \_ filtergraphnothread erstellt den Filter Graph-Manager im Anwendungs Thread. Wenn Sie diese CLSID verwenden, muss der Thread, der **cokreateinstance** aufruft, eine Nachrichten Schleife aufweisen, die Nachrichten sendet. Andernfalls können Deadlocks auftreten. Bevor der Anwendungs Thread beendet wird, muss er außerdem den Filter Graph-Manager und alle Graph-Objekte (z. b. Filter, Pins, Referenzuhren usw.) freigeben.
+-   CLSID \_ FilterGraph erstellt den Filter Graph Manager in einem Arbeitsthread, der von allen CLSID \_ FilterGraph-Instanzen innerhalb desselben Prozesses gemeinsam genutzt wird. Der Thread sendet Nachrichten, die von Filtern gesendet werden, und steuert die Lebensdauer von Fenstern, die von Filtern erstellt werden.
+-   CLSID \_ FilterGraphNoThread erstellt den Filter Graph Manager im Thread der Anwendung. Wenn Sie diese CLSID verwenden, muss der Thread, der **CoCreateInstance aufruft,** über eine Nachrichtenschleife verfügen, die Nachrichten verteilt. Andernfalls können Deadlocks auftreten. Außerdem muss vor dem Beenden des Anwendungsthreads der Filter Graph Manager und alle Graphobjekte (z. B. Filter, Stecknadeln, Referenzuhren usw.) veröffentlicht werden.
 
 ### <a name="interfaces"></a>Schnittstellen
 
-Der Filter Graph-Manager macht die folgenden Schnittstellen verfügbar:
+Der Filter Graph Manager macht die folgenden Schnittstellen verfügbar:
 
--   [**Iamgraphstreams**](/windows/desktop/api/Strmif/nn-strmif-iamgraphstreams)
--   [**Iamstats**](/windows/desktop/api/Control/nn-control-iamstats)
--   [**Ibasicaudiodatei**](/windows/desktop/api/Control/nn-control-ibasicaudio)
--   [**Ibasicvideo**](/windows/desktop/api/Control/nn-control-ibasicvideo)
+-   [**IAMGraphStreams**](/windows/desktop/api/Strmif/nn-strmif-iamgraphstreams)
+-   [**IAMStats**](/windows/desktop/api/Control/nn-control-iamstats)
+-   [**IBasicAudio**](/windows/desktop/api/Control/nn-control-ibasicaudio)
+-   [**IBasicVideo**](/windows/desktop/api/Control/nn-control-ibasicvideo)
 -   [**IBasicVideo2**](/windows/desktop/api/Control/nn-control-ibasicvideo2)
--   [**Ifilterchain**](/windows/desktop/api/Strmif/nn-strmif-ifilterchain)
--   [**Ifiltergraph**](/windows/desktop/api/Strmif/nn-strmif-ifiltergraph)
+-   [**IFilterChain**](/windows/desktop/api/Strmif/nn-strmif-ifilterchain)
+-   [**IFilterGraph**](/windows/desktop/api/Strmif/nn-strmif-ifiltergraph)
 -   [**IFilterGraph2**](/windows/desktop/api/Strmif/nn-strmif-ifiltergraph2)
 -   [**IFilterGraph3**](/windows/desktop/api/Strmif/nn-strmif-ifiltergraph3)
 -   [**IFilterMapper2**](/windows/desktop/api/Strmif/nn-strmif-ifiltermapper2)
--   [**Igraphbuilder**](/windows/desktop/api/Strmif/nn-strmif-igraphbuilder)
--   [**Igraphconfig**](/windows/desktop/api/Strmif/nn-strmif-igraphconfig)
--   [**Igraphversion**](/windows/desktop/api/Strmif/nn-strmif-igraphversion)
+-   [**IGraphBuilder**](/windows/desktop/api/Strmif/nn-strmif-igraphbuilder)
+-   [**IGraphConfig**](/windows/desktop/api/Strmif/nn-strmif-igraphconfig)
+-   [**IGraphVersion**](/windows/desktop/api/Strmif/nn-strmif-igraphversion)
 -   [**IMediaControl**](/windows/desktop/api/Control/nn-control-imediacontrol)
--   [**Imediaevent**](/windows/desktop/api/Control/nn-control-imediaevent)
--   [**Imediaeventex**](/windows/desktop/api/Control/nn-control-imediaeventex)
--   [**Imediaeventsink**](/windows/desktop/api/Strmif/nn-strmif-imediaeventsink)
--   [**Imediafilter**](/windows/desktop/api/Strmif/nn-strmif-imediafilter)
--   [**Imediaposition**](/windows/desktop/api/Control/nn-control-imediaposition)
--   [**Imediaseeking**](/windows/desktop/api/Strmif/nn-strmif-imediaseeking)
--   [**Iqueuecommand**](/windows/desktop/api/Control/nn-control-iqueuecommand)
--   [**Iregisterserviceprovider**](/windows/desktop/api/Strmif/nn-strmif-iregisterserviceprovider)
+-   [**IMediaEvent**](/windows/desktop/api/Control/nn-control-imediaevent)
+-   [**IMediaEventEx**](/windows/desktop/api/Control/nn-control-imediaeventex)
+-   [**IMediaEventSink**](/windows/desktop/api/Strmif/nn-strmif-imediaeventsink)
+-   [**IMediaFilter**](/windows/desktop/api/Strmif/nn-strmif-imediafilter)
+-   [**IMediaPosition**](/windows/desktop/api/Control/nn-control-imediaposition)
+-   [**IMediaSeeking**](/windows/desktop/api/Strmif/nn-strmif-imediaseeking)
+-   [**IQueueCommand**](/windows/desktop/api/Control/nn-control-iqueuecommand)
+-   [**IRegisterServiceProvider**](/windows/desktop/api/Strmif/nn-strmif-iregisterserviceprovider)
 -   [**IResourceManager**](/windows/desktop/api/Strmif/nn-strmif-iresourcemanager)
 -   **IServiceProvider**
--   [**Ivideoframestep**](/windows/desktop/api/Strmif/nn-strmif-ivideoframestep)
+-   [**IVideoFrameStep**](/windows/desktop/api/Strmif/nn-strmif-ivideoframestep)
 -   [**IVideoWindow**](/windows/desktop/api/Control/nn-control-ivideowindow)
 
 ## <a name="related-topics"></a>Zugehörige Themen

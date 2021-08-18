@@ -1,19 +1,19 @@
 ---
-description: Ein undurchsichtiger, portabler Typ, der die Verwendung der C/C++-initialisierersyntax zum Laden von Gleit Komma Werten in eine Instanz des xmvector-Typs unterstützt.
+description: Ein nicht transparenter, portabler Typ zur Unterstützung der Verwendung der C/C++-Initialisierersyntax zum Laden von Gleitkommawerten in eine Instanz des XMVECTOR-Typs.
 ms.assetid: bafaa59f-fd1b-e252-cbbd-903df796fde0
-title: XMVECTORF32-Datentyp (directxmath. h)
+title: XMVECTORF32-Datentyp (DirectXMath.h)
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 8e56e79ea678ede0afcac3523c09da725ede00d1
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: c1a39de246e3e0e4ab9a96197dbe4a286cb6ecabe327d60e5c506795af79dd11
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106365484"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119739780"
 ---
 # <a name="xmvectorf32-data-type"></a>XMVECTORF32-Datentyp
 
-Ein undurchsichtiger, portabler Typ, der die Verwendung der C/C++-initialisierersyntax zum Laden von Gleit Komma Werten in eine Instanz des [**xmvector**](xmvector-data-type.md) -Typs unterstützt.
+Ein nicht transparenter, portabler Typ zur Unterstützung der Verwendung der C/C++-Initialisierersyntax zum Laden von Gleitkommawerten in eine Instanz des [**XMVECTOR-Typs.**](xmvector-data-type.md)
 
 
 ```C++
@@ -22,13 +22,13 @@ typedef XMVECTORF32 vectorf32;
 
 
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Eine Liste der zusätzlichen Funktionen, wie z. b. Konstruktoren und Operatoren, die `XMVECTORF32` beim Programmieren in C++ verfügbar sind, finden Sie unter [XMVECTORF32 Extensions](ovw-xmvectorf32-extensions.md).
+Eine Liste zusätzlicher Funktionen wie Konstruktoren und Operatoren, die bei der Programmierung in C++ verfügbar `XMVECTORF32` sind, finden Sie unter [XMVECTORF32-Erweiterungen.](ovw-xmvectorf32-extensions.md)
 
-Die **XMVECTORF32**-, [**XMVECTORU32**](xmvectoru32-data-type.md)-, [**XMVECTORI32**](xmvectori32-data-type.md)-und [**XMVECTORU8**](xmvectoru8-data-type.md) -Strukturen werden als Mechanismus zur Erstellung von [**xmvector**](xmvector-data-type.md) aus unterschiedlichen Konstanten Datentypen (Gleit Komma Zahl, Ganzzahl ohne Vorzeichen, Ganzzahl und Byte) mithilfe von Initialisierern bereitgestellt.
+Die **XMVECTORF32-,** [**XMVECTORU32-,**](xmvectoru32-data-type.md) [**XMVECTORI32-**](xmvectori32-data-type.md)und [**XMVECTORU8-Strukturen**](xmvectoru8-data-type.md) werden als Mechanismus zum Erstellen von [**XMVECTOR**](xmvector-data-type.md) aus verschiedenen konstanten Datentypen (Gleitkomma, ganze Zahl ohne Vorzeichen, Integer und Byte) mit initialisierern bereitgestellt.
 
-Dies ist für die Unterstützung von [**xmvector**](xmvector-data-type.md)erforderlich, da Initialisierer aus Gründen der Portabilität und Optimierung nicht selbst unterstützt werden.
+Dies ist aus Gründen der Portabilität und Optimierung erforderlich, um [**XMVECTOR**](xmvector-data-type.md)zu unterstützen, da es selbst keine Initialisierer unterstützt.
 
 Beispiel:
 
@@ -41,7 +41,7 @@ data = floatingVector;
 
 
 
-**Namespace**: Verwenden von DirectX
+**Namespace:** Verwenden von DirectX
 
 ### <a name="platform-requirements"></a>Plattformanforderungen
 
@@ -53,21 +53,21 @@ Microsoft Visual Studio 2010 oder Microsoft Visual Studio 2012 mit dem Windows S
 
 | Anforderung | Wert |
 |-------------------|------------------------------------------------------------------------------------------|
-| Header<br/> | <dl> <dt>Directxmath. h</dt> </dl> |
+| Header<br/> | <dl> <dt>DirectXMath.h</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[Directxmath-Bibliothekstypen](ovw-xnamath-reference-types.md)
+[DirectXMath-Bibliothekstypen](ovw-xnamath-reference-types.md)
 </dt> <dt>
 
 [**XMVECTORI32-Datentyp**](xmvectori32-data-type.md)
 </dt> <dt>
 
-[**Xmvector-Datentyp**](xmvector-data-type.md)
+[**XMVECTOR-Datentyp**](xmvector-data-type.md)
 </dt> <dt>
 
 [**XMVECTORU32-Datentyp**](xmvectoru32-data-type.md)

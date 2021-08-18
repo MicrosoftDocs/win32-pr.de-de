@@ -3,7 +3,7 @@ title: IDCompositionRectangleClip SetLeft-Methoden (Dcomp.h)
 description: Animiert oder ändert den Wert der Left-Eigenschaft eines Cliprechtecks.
 ms.assetid: A8E2C2A3-6146-486F-8FF4-05097BFE9222
 keywords:
-- SetLeft-Methoden DirectComposition
+- SetLeft-Methoden – DirectComposition
 topic_type:
 - apiref
 api_location:
@@ -27,7 +27,7 @@ Animiert oder ändert den Wert der Left-Eigenschaft eines Cliprechtecks. Die Lef
 
 
 
-| Methode                                                                                                 | BESCHREIBUNG                                         |
+| Methode                                                                                                 | Beschreibung                                         |
 |:-------------------------------------------------------------------------------------------------------|:----------------------------------------------------|
 | [**SetLeft(float)**](/windows/win32/api/dcomp/nf-dcomp-idcompositionrectangleclip-setleft(float))                                     | Ändert den Wert der Left-Eigenschaft.<br/>  |
 | [**SetLeft(IDCompositionAnimation \* )**](/windows/win32/api/dcomp/nf-dcomp-idcompositionrectangleclip-setleft(idcompositionanimation)) | Animiert den Wert der Left-Eigenschaft.<br/> |
@@ -40,7 +40,7 @@ Animiert oder ändert den Wert der Left-Eigenschaft eines Cliprechtecks. Die Lef
 
 | Anforderung | Wert |
 |-------------------------------------|--------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | nur Windows 8 \[ Desktop-Apps\]<br/>                                           |
+| Unterstützte Mindestversion (Client)<br/> | Windows 8 \[ Desktop-Apps\]<br/>                                           |
 | Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2012-Desktop-Apps\]<br/>                                 |
 | Header<br/>                   | <dl> <dt>Dcomp.h</dt> </dl>   |
 | Bibliothek<br/>                  | <dl> <dt>Dcomp.lib</dt> </dl> |

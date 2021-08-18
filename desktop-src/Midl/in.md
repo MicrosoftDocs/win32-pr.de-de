@@ -1,9 +1,9 @@
 ---
 title: in-Attribut
-description: Das Attribut \ in \ gibt an, dass ein Parameter von der aufrufenden Prozedur an die aufgerufene Prozedur übergeben werden soll.
+description: Das \in\-Attribut gibt an, dass ein Parameter von der aufrufenden Prozedur an die aufgerufene Prozedur übergeben werden soll.
 ms.assetid: 85d5617e-8b73-449a-9627-2c8d5ab2b629
 keywords:
-- in attributmittell
+- im MIDL-Attribut
 topic_type:
 - apiref
 api_name:
@@ -12,16 +12,16 @@ api_type:
 - NA
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: b606a834b394197960777fa485d112a94212ec45
-ms.sourcegitcommit: ebd3ce6908ff865f1ef66f2fc96769be0aad82e1
+ms.openlocfilehash: fb78ad08dd5ba5494181d3fb2adecb7a8441e4716c42ba6cd4f1c119b3ccb046
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/19/2020
-ms.locfileid: "103726968"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119067230"
 ---
 # <a name="in-attribute"></a>in-Attribut
 
-Das **\[ in \]** -Attribut gibt an, dass ein Parameter von der aufrufenden Prozedur an die aufgerufene Prozedur übergeben werden soll.
+Das **\[ \] in-Attribut** gibt an, dass ein Parameter von der aufrufenden Prozedur an die aufgerufene Prozedur übergeben werden soll.
 
 ``` syntax
 [ [function-attribute-list] ] type-specifier [pointer-declarator] function-name(
@@ -33,55 +33,55 @@ Das **\[ in \]** -Attribut gibt an, dass ein Parameter von der aufrufenden Proze
 
 <dl> <dt>
 
-*Function-Attribute-List* 
+*function-attribute-list* 
 </dt> <dd>
 
-Gibt 0 (null) oder mehr Attribute an, die für die Funktion gelten. Gültige Funktions Attribute sind **\[ Callback \]**, **\[ local \]**, das Zeiger Attribut **\[ ref \]**, **\[ Unique \]** oder **\[ ptr \]** und die Verwendungs Attribute **\[ Zeichenfolge \]**, **\[ Ignore \]** und **\[ Kontext \_ handle \]**.
+Gibt null oder mehr Attribute an, die für die Funktion gelten. Gültige Funktionsattribute sind **\[ \] rückruf,** **\[ \] local,** das Zeigerattribut **\[ ref, \]** **\[ eindeutig \]** oder **\[ ptr \]** und die Verwendungsattribute **\[ Zeichenfolge \]**, **\[ ignorieren \]** und **\[ \_ Kontexthandle \]**.
 
 </dd> <dt>
 
 *Typspezifizierer* 
 </dt> <dd>
 
-Gibt einen **\_ Basistyp**, eine [**Struktur**](struct.md), eine [**Union**](union.md)oder einen Aufzählungstyp [**oder einen**](enum.md) Typbezeichner an. Eine optionale Speicher Spezifikation kann dem *Typspezifizierer* vorangestellt werden.
+Gibt einen **\_ Basistyp,** [**eine Struktur,**](struct.md) [**einen Union-**](union.md)oder [**Enumerationstyp**](enum.md) oder einen Typbezeichner an. Eine optionale Speicherspezifikation kann dem *Typspezifizierer* vorangestellt werden.
 
 </dd> <dt>
 
-*Zeiger-Deklarator* 
+*Zeigerdeklarator* 
 </dt> <dd>
 
-Gibt 0 (null) oder mehr Zeiger Deklaratoren an. Ein zeigerdeklarator ist derselbe wie der in C verwendete zeigerdeklarator. Sie wird aus dem Kenn \* Zeichner, den Modifizierern, z. b. **weit**, und dem Qualifizierer " [**Konstanten**](const.md)" erstellt.
+Gibt null oder mehr Zeigerdeklaratoren an. Ein Zeigerdeklarator entspricht dem in C verwendeten Zeigerdeklarator. sie wird aus dem \* Bezeichner, Modifizierern wie **far** und dem Qualifizierer [**const**](const.md)erstellt.
 
 </dd> <dt>
 
-*function-name* 
+*Funktionsname* 
 </dt> <dd>
 
-Gibt den Namen der Remote Prozedur an.
+Gibt den Namen der Remoteprozedur an.
 
 </dd> <dt>
 
-*Parameter-Attribute-List* 
+*parameter-attribute-list* 
 </dt> <dd>
 
-Gibt NULL oder mehr Attribute an, die für den angegebenen Parametertyp geeignet sind. Parameter Attribute mit dem **\[ in \]** -Attribut können auch **\[ \]** das **\[ \]** **\[ \]** direktionale Attribut übernehmen. die **\[ \]** **\[ \_ \]** Feld Attribute **\[ \_ sind \] zuerst** **\[ \_ \]** **\[ \_ \]** **\[ \_ \]** **\[ \]**, "Last", "length", "Max is", "size" und "Switch Type", das Zeiger Attribut "ref", "Unique" oder "PTR" und das **\[ Kontext \_ handle \]** für Verwendungs Attribute **\[ \_ \]** Das Usage-Attribut " **\[ Ignore \]** " kann nicht als Parameter Attribut verwendet werden. Trennen Sie mehrere Attribute durch Kommas.
+Gibt null oder mehr Attribute an, die für den angegebenen Parametertyp geeignet sind. Parameterattribute mit dem **\[ in-Attribut \]** können auch das direktionale Attribut **\[ \] herausnehmen.** Die Feldattribute **\[ sind zuerst \_ \]**, die letzte **\[ \_ ist \]**, die Länge ist , max **\[ \_ \]** **\[ \_ ist \]**, die Größe **\[ \_ ist \]** und der **\[ \_ Switchtyp, \]** das Zeigerattribut **\[ ref \]**, **\[ eindeutig \]** oder **\[ ptr; \]** und das **\[ \_ Kontexthandle \]** der Verwendungsattribute und die **\[ Zeichenfolge \]**. Das Verwendungsattribut **\[ ignore \]** kann nicht als Parameterattribut verwendet werden. Trennen Sie mehrere Attribute durch Kommas.
 
 </dd> <dt>
 
 *Deklarator* 
 </dt> <dd>
 
-Gibt Standard-C-Deklaratoren an, z. b. Bezeichner, Zeiger Deklaratoren und Array Deklaratoren. Weitere Informationen finden Sie unter [Array-und Sized-Pointer Attribute](array-and-sized-pointer-attributes.md), [**Arrays**](arrays-1.md)und [Arrays und Zeiger](/windows/desktop/Rpc/arrays-and-pointers). Der parameterdeklarator im funktionsdedeclarator (z. b. der Parameter Name) ist optional.
+Gibt C-Standarddeklaratoren an, z. B. Bezeichner, Zeigerdeklaratoren und Arraydeklaratoren. Weitere Informationen finden Sie unter [Array- und Sized-Pointer Attribute,](array-and-sized-pointer-attributes.md) [**Arrays**](arrays-1.md)und [Arrays und Zeiger.](/windows/desktop/Rpc/arrays-and-pointers) Der Parameterdeklarator im Funktionsdeklarator, z. B. der Parametername, ist optional.
 
 </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Das **\[ in \]** -Attribut verfügt über ein umgekehrter Attribut, **\[** [](out-idl.md) **\]** das angibt, dass ein Parameter von der aufgerufenen Prozedur an die aufrufende Prozedur zurückgegeben werden soll. Die Attribute " **\[ in \]** " und " **\[ out \]** " werden als direktionale Parameter Attribute bezeichnet, da Sie die Richtung angeben, in der Parameter übergeben werden. Ein Parameter kann als " **\[ in \]**", " **\[ out \]**" oder " **\[ in**" oder " **out \]**" definiert werden.
+Das **\[ \] in-Attribut** verfügt über das umgekehrte Attribut **\[** [**out,**](out-idl.md) **\]** das angibt, dass ein Parameter von der aufgerufenen Prozedur an die aufrufende Prozedur zurückgegeben werden soll. Die **\[ In- \]** und **\[ Out-Attribute \]** werden als Richtungsparameterattribute bezeichnet, da sie die Richtung angeben, in der Parameter übergeben werden. Ein Parameter kann als **\[ in \]**, **\[ out \]** oder **\[ in**, **out \]** definiert werden.
 
-Das **\[ in \]** -Attribut identifiziert Parameter, die vom Clientstub für die Übertragung an den Server gemarshallt werden.
+Das **\[ attribut in \]** identifiziert Parameter, die vom Clientstub für die Übertragung an den Server gemarshallt werden.
 
-Das **\[ in \]** -Attribut wird standardmäßig auf einen Parameter angewendet, wenn kein direktionales Parameter Attribut angegeben wird.
+Das **\[ \] in-Attribut** wird standardmäßig auf einen Parameter angewendet, wenn kein direktionales Parameterattribut angegeben wird.
 
 ## <a name="examples"></a>Beispiele
 
@@ -93,15 +93,15 @@ HRESULT MyFunction([in] short count);
 
 <dl> <dt>
 
-[Schnittstellen Definitionsdatei (IDL)](interface-definition-idl-file.md)
+[IDL-Datei (Interface Definition)](interface-definition-idl-file.md)
 </dt> <dt>
 
-[**mittlere Benutzer Zuordnungen \_ \_**](/windows/desktop/Rpc/the-midl-user-allocate-function)
+[**midl \_ user \_ allocate**](/windows/desktop/Rpc/the-midl-user-allocate-function)
 </dt> <dt>
 
-[**vorgenommen**](out-idl.md)
+[**out**](out-idl.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 

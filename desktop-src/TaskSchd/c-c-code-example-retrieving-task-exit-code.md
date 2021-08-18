@@ -1,22 +1,22 @@
 ---
-title: C/C++-Codebeispiel Abrufen von taskexitcode
-description: Dieses Beispiel ruft den letzten Exitcode ab, der von einer bekannten Aufgabe zurückgegeben wurde. (Ein zurückgegebener Wert von \ 0034; 0 \ 0034; gibt an, dass die Aufgabe nie ausgeführt wurde.) In diesem Beispiel wird davon ausgegangen, dass der Task und die Testaufgabe bereits auf dem lokalen Computer vorhanden sind.
+title: C/C++-Codebeispiel zum Abrufen von Task-Exitcode
+description: In diesem Beispiel wird der letzte Exitcode abgerufen, der von einer bekannten Aufgabe zurückgegeben wurde. (Der zurückgegebene Wert \0034;0 \ 0034; gibt an, dass der Task nie ausgeführt wurde.) In diesem Beispiel wird davon ausgegangen, dass die Aufgabe und die Testaufgabe bereits auf dem lokalen Computer vorhanden sind.
 ms.assetid: e7bfe645-7f4c-4700-9adf-c581e6895aec
 keywords:
-- Abrufen von Aufgaben Kommentaren Taskplaner
-- Abrufen von Arbeits Element Eigenschaften Taskplaner, Aufgaben Kommentar
+- Abrufen von Aufgabenkommentaren Taskplaner
+- Abrufen von Arbeitselementeigenschaften Taskplaner , Aufgabenkommentar
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 5911cad3831dc8da04e44f161a644bda9742bd33
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: e0908ae8fc15e3ae34c06f02267e9bad396956181fa058c0bf757b8f8486783d
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "104515734"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119738850"
 ---
-# <a name="cc-code-example-retrieving-task-exit-code"></a>C/C++-Codebeispiel: Abrufen von taskexitcode
+# <a name="cc-code-example-retrieving-task-exit-code"></a>C/C++-Codebeispiel: Abrufen von Task-Exitcode
 
-Dieses Beispiel ruft den letzten Exitcode ab, der von einer bekannten Aufgabe zurückgegeben wurde. (Der Rückgabewert "0" gibt an, dass die Aufgabe nie ausgeführt wurde.) In diesem Beispiel wird davon ausgegangen, dass der Task und die Testaufgabe bereits auf dem lokalen Computer vorhanden sind.
+In diesem Beispiel wird der letzte Exitcode abgerufen, der von einer bekannten Aufgabe zurückgegeben wurde. (Der zurückgegebene Wert "0" gibt an, dass die Aufgabe nie ausgeführt wurde.) In diesem Beispiel wird davon ausgegangen, dass die Aufgabe und die Testaufgabe bereits auf dem lokalen Computer vorhanden sind.
 
 
 ```C++
@@ -113,12 +113,12 @@ int main(int argc, char **argv)
 
 <dl> <dt>
 
-[Taskplaner 1,0-Beispiele](task-scheduler-1-0-examples.md)
+[Taskplaner 1.0-Beispiele](task-scheduler-1-0-examples.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

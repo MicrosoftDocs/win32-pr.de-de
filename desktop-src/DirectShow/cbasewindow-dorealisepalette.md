@@ -1,7 +1,7 @@
 ---
-description: Die Methode "dorealilpalette" erkennt die aktuelle Palette des Fensters.
+description: Die DoRealisePalette-Methode erkennt die aktuelle Palette des Fensters.
 ms.assetid: dd023c81-0cd0-48c6-bc63-5891f2a4acf7
-title: Cbasewindow. dorealilpalette-Methode (winutil. h)
+title: CBaseWindow.DoRealisePalette-Methode (Winutil.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,14 +16,14 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: be1e02d355ab5991c9d0e95dbff30d4c8e0162ea
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: ce593939ec9f8aa3f2675c95e7a70363465aabb6f501fde79de839c533a1d249
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106368309"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119757480"
 ---
-# <a name="cbasewindowdorealisepalette-method"></a>Cbasewindow. dorealilpalette-Methode
+# <a name="cbasewindowdorealisepalette-method"></a>CBaseWindow.DoRealisePalette-Methode
 
 Die `DoRealisePalette` -Methode erkennt die aktuelle Palette des Fensters.
 
@@ -45,28 +45,28 @@ virtual HRESULT DoRealisePalette(
 *bForceBackground* 
 </dt> <dd>
 
-Boolescher Wert, der angibt, ob die Palette als Hintergrund Palette erzwungen werden soll. Weitere Informationen finden Sie unter **SelectPalette** im Platform SDK.
+Boolescher Wert, der angibt, ob die Palette als Hintergrundpalette erzwungen wird. Weitere Informationen finden Sie unter **SelectPalette** im Platform SDK.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt einen der **HRESULT** -Werte zurück, die in der folgenden Tabelle aufgeführt sind.
+Gibt einen der in der folgenden Tabelle gezeigten **HRESULT-Werte** zurück.
 
 
 
 | Rückgabecode                                                                             | Beschreibung                                                    |
 |-----------------------------------------------------------------------------------------|----------------------------------------------------------------|
-| <dl> <dt>**S \_ false**</dt> </dl> | Ein interner-Befehl von " **gdiflush** " hat einen Fehler zurückgegeben.<br/> |
+| <dl> <dt>**S \_ FALSE**</dt> </dl> | Ein interner Aufruf von **GdiFlush** hat einen Fehler zurückgegeben.<br/> |
 | <dl> <dt>**S \_ OK**</dt> </dl>    | Erfolg.<br/>                                            |
 
 
 
  
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die [**cbasewindow:: onpalettechange**](cbasewindow-onpalettechange.md) -Methode ruft diese Methode auf. Um eine neue Palette festzulegen, müssen Sie die [**cbasewindow:: SetPalette**](cbasewindow-setpalette.md) -Methode aufrufen.
+Die [**CBaseWindow::OnPaletteChange-Methode**](cbasewindow-onpalettechange.md) ruft diese Methode auf. Um eine neue Palette festzulegen, rufen Sie die [**CBaseWindow::SetPalette-Methode**](cbasewindow-setpalette.md) auf.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -74,16 +74,16 @@ Die [**cbasewindow:: onpalettechange**](cbasewindow-onpalettechange.md) -Methode
 
 | Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Winutil. h (Include Streams. h)</dt> </dl>                                                                                   |
-| Bibliothek<br/> | <dl> " <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Winutil.h (include Streams.h)</dt> </dl>                                                                                   |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Verkaufsbuilds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Cbasewindow-Klasse**](cbasewindow.md)
+[**CBaseWindow-Klasse**](cbasewindow.md)
 </dt> </dl>
 
  

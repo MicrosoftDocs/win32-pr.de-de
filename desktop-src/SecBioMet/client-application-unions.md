@@ -1,19 +1,19 @@
 ---
-title: Client Anwendungs Unions
-description: Unions, die von der Windows-Biometrieframework-API unterst체tzt werden.
+title: Clientanwendungs-Unions
+description: Unions, die von der Windows Biometric Framework-API unterst체tzt werden.
 ms.assetid: 41B7ABBB-41AC-48AB-B714-8F49EFAEC0E3
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 1fe1bf112eceb7ffd7cc3ac7f9ac25fd8ac52c4f
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: 219a61f8ec63cc2209fd456fc2f81431695f92d5c655067fbb1c0ec95297471f
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "104037394"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119993880"
 ---
-# <a name="client-application-unions"></a>Client Anwendungs Unions
+# <a name="client-application-unions"></a>Clientanwendungs-Unions
 
-Die folgenden Union-Typen werden von der Windows-Biometrieframework-API unterst체tzt.
+Die folgenden Union-Typen werden von der Windows Biometric Framework-API unterst체tzt.
 
 ## <a name="in-this-section"></a>In diesem Abschnitt
 
@@ -21,7 +21,7 @@ Die folgenden Union-Typen werden von der Windows-Biometrieframework-API unterst�
 
 | Thema                                                                         | BESCHREIBUNG                                                                                                                 |
 |-------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------|
-| [**winbio- \_ Anwesenheits \_ Eigenschaften**](winbio-presence-properties.md)<br/> | Enth채lt biometrische Werte, die der Windows-Biometrieframework, um zu bestimmen, ob eine Person vorhanden war.<br/> |
+| [**\_WINBIO-ANWESENHEITSEIGENSCHAFTEN \_**](winbio-presence-properties.md)<br/> | Enth채lt biometrische Werte, die vom Windows Biometric Framework verwendet wurden, um zu bestimmen, ob eine Person vorhanden war.<br/> |
 
 
 

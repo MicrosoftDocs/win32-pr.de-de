@@ -1,11 +1,11 @@
 ---
-title: Ivmhostinfo-MMX-Eigenschaft (vpccominterfaces. h)
-description: Bestimmt, ob der Prozessor den MMX-Anweisungs Satz unterstützt. | Ivmhostinfo-MMX-Eigenschaft (vpccominterfaces. h)
+title: IVMHostInfo-MMX-Eigenschaft (VPCCOMInterfaces.h)
+description: Bestimmt, ob der Prozessor den MMX-Anweisungssatz unterstützt. | IVMHostInfo-MMX-Eigenschaft (VPCCOMInterfaces.h)
 ms.assetid: 2f556289-c752-4af2-a6d0-abb6e717e609
 keywords:
-- Virtueller PC der MMX-Eigenschaft
-- MMX-Eigenschaft Virtual PC, ivmhostinfo-Schnittstelle
-- Ivmhostinfo Interface Virtual PC, MMX-Eigenschaft
+- MMX-Eigenschaft Virtueller PC
+- MMX-Eigenschaft Virtueller PC, IVMHostInfo-Schnittstelle
+- IVMHostInfo-Schnittstelle Virtueller PC, MMX-Eigenschaft
 topic_type:
 - apiref
 api_name:
@@ -17,18 +17,18 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: e224ed6a0f15da9143a884dd1c1dfacc1634fce7
-ms.sourcegitcommit: 92e74c99f8f4d097676959d0c317f533c2400a80
+ms.openlocfilehash: 4498289130a59e7c651b9dfffe9d4d228f9d9187e9d958ce1d203291654d7c53
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/09/2021
-ms.locfileid: "106363085"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118998900"
 ---
-# <a name="ivmhostinfommx-property"></a>Ivmhostinfo:: MMX-Eigenschaft
+# <a name="ivmhostinfommx-property"></a>IVMHostInfo::MMX-Eigenschaft
 
-\[Windows Virtual PC ist nicht mehr für die Verwendung ab Windows 8 verfügbar. Verwenden Sie stattdessen den [Hyper-V-WMI-Anbieter (v2)](/windows/desktop/HyperV_v2/windows-virtualization-portal).\]
+\[Windows Der virtuelle PC ist ab Windows 8 nicht mehr für die Verwendung verfügbar. Verwenden Sie stattdessen den [Hyper-V-WMI-Anbieter (V2).](/windows/desktop/HyperV_v2/windows-virtualization-portal)\]
 
-Bestimmt, ob der Prozessor den MMX-Anweisungs Satz unterstützt.
+Bestimmt, ob der Prozessor den MMX-Anweisungssatz unterstützt.
 
 Diese Eigenschaft ist schreibgeschützt.
 
@@ -45,7 +45,7 @@ HRESULT get_MMX(
 
 ## <a name="property-value"></a>Eigenschaftswert
 
-**True** , wenn MMX-Anweisungen unterstützt werden, andernfalls **false** .
+**TRUE,** wenn MMX-Anweisungen unterstützt werden, andernfalls **FALSE.**
 
 ## <a name="error-codes"></a>Fehlercodes
 
@@ -54,8 +54,8 @@ HRESULT get_MMX(
 | Name/Wert                                                                                                                                                    | Bedeutung                                      |
 |---------------------------------------------------------------------------------------------------------------------------------------------------------------|----------------------------------------------|
 | <dl> <dt>S \_ OK</dt> <dt>0</dt> </dl>                       | Der Vorgang wurde durchgeführt.<br/>     |
-| <dl> <dt>E \_ Zeiger</dt> <dt>0x80004003</dt> </dl>         | Der-Parameter ist **null**.<br/>        |
-| <dl> <dt>DISP \_ E- \_ Ausnahme</dt> <dt>0x80020009</dt> </dl> | Ein unerwarteter Fehler ist aufgetreten.<br/> |
+| <dl> <dt>E \_ POINTER</dt> <dt>0x80004003</dt> </dl>         | Der Parameter ist **NULL.**<br/>        |
+| <dl> <dt>DISP \_ E \_ EXCEPTION</dt> <dt>0x80020009</dt> </dl> | Ein unerwarteter Fehler ist aufgetreten.<br/> |
 
 
 
@@ -65,12 +65,12 @@ HRESULT get_MMX(
 
 | Anforderung | Wert |
 |-------------------------------------|-----------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows 7 \[ -Desktop-Apps\]<br/>                                                    |
+| Unterstützte Mindestversion (Client)<br/> | nur Windows 7 \[ Desktop-Apps\]<br/>                                                    |
 | Unterstützte Mindestversion (Server)<br/> | Nicht unterstützt<br/>                                                                     |
 | Ende des Supports (Client)<br/>    | Windows 7<br/>                                                                          |
-| Produkt<br/>                  | Windows Virtual PC<br/>                                                                 |
-| Header<br/>                   | <dl> <dt>Vpccominterfaces. h</dt> </dl> |
-| IID<br/>                      | IID \_ ivmhostinfo ist als 5b5cf343-05ad-453b-be99-adf4e27b2ebc definiert.<br/>                |
+| Product (Produkt)<br/>                  | Windows Virtual PC<br/>                                                                 |
+| Header<br/>                   | <dl> <dt>VPCCOMInterfaces.h</dt> </dl> |
+| IID<br/>                      | IID \_ IVMHostInfo ist als 5b5cf343-05ad-453b-be99-adf4e27b2ebc definiert.<br/>                |
 
 
 
@@ -78,7 +78,7 @@ HRESULT get_MMX(
 
 <dl> <dt>
 
-[**Ivmhostinfo**](ivmhostinfo.md)
+[**IVMHostInfo**](ivmhostinfo.md)
 </dt> </dl>
 
  

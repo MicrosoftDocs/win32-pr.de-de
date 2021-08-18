@@ -1,7 +1,7 @@
 ---
-description: Die isendorsementkeypaunpresent-Methode der Win32- \_ TPM-Klasse gibt an, ob das Endorsement Key-paar auf dem Gerät vorhanden ist.
+description: Die IsEndorsementKeyPairPresent-Methode der Win32 \_ Tpm-Klasse gibt an, ob das Endorsement Key-Paar auf dem Gerät vorhanden ist.
 ms.assetid: c36cd0b5-1ac2-4fcf-b140-c5ecb0b3b211
-title: Isendorsementkeypaarpresent-Methode der Win32_Tpm-Klasse
+title: IsEndorsementKeyPairPresent-Methode der Win32_Tpm-Klasse
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,18 +13,18 @@ api_type:
 - COM
 api_location:
 - Win32_tpm.dll
-ms.openlocfilehash: 63561a4971523fd1554e1d973861c3f0737df2ca
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: bcbc0c4877aae2db0e94d42838100720ee0ae0dcbdcc33f52cf70d2e23327e9d
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "104131988"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119004468"
 ---
-# <a name="isendorsementkeypairpresent-method-of-the-win32_tpm-class"></a>Isendorsementkeypaarpresent-Methode der Win32- \_ TPM-Klasse
+# <a name="isendorsementkeypairpresent-method-of-the-win32_tpm-class"></a>IsEndorsementKeyPairPresent-Methode der Win32 \_ Tpm-Klasse
 
-Die **isendorsementkeypaunpresent** -Methode der [**Win32- \_ TPM**](win32-tpm.md) -Klasse gibt an, ob das Endorsement Key-paar auf dem Gerät vorhanden ist. Das Endorsement Key-Paar ist erforderlich, bevor das Gerät im Besitz des Geräts sein kann. Dieses Schlüsselpaar kann mit der Methode " [**kreateendorsegmentkeypair**](createendorsementkeypair-win32-tpm.md) " erstellt werden.
+Die **IsEndorsementKeyPairPresent-Methode** der [**Win32 \_ Tpm-Klasse**](win32-tpm.md) gibt an, ob das Endorsement Key-Paar auf dem Gerät vorhanden ist. Das Endorsement Key-Paar ist erforderlich, bevor sich das Gerät im Besitz des Geräts befinden kann. Dieses Schlüsselpaar kann mit der [**CreateEndorsementKeyPair-Methode**](createendorsementkeypair-win32-tpm.md) erstellt werden.
 
-Das Gerät muss aktiviert und aktiviert sein, damit diese Methode erfolgreich ausgeführt werden konnte. Informationen zum Aktivieren und Aktivieren eines nicht eigenen Geräts finden Sie unter der [**setphysicalpresencerequest**](setphysicalpresencerequest-win32-tpm.md) -Methode.
+Das Gerät muss aktiviert und aktiviert sein, damit diese Methode erfolgreich ausgeführt werden kann. Informationen zum Aktivieren und Aktivieren eines nicht verwendeten Geräts finden Sie in der [**SetPhysicalPresenceRequest-Methode.**](setphysicalpresencerequest-win32-tpm.md)
 
 ## <a name="syntax"></a>Syntax
 
@@ -41,20 +41,20 @@ uint32 IsEndorsementKeyPairPresent(
 
 <dl> <dt>
 
-*Isendorsementkeypaarpresent* \[ vorgenommen\]
+*IsEndorsementKeyPairPresent* \[ out\]
 </dt> <dd>
 
-Typ: **booleschen**
+Typ: **boolescher Wert**
 
-**True** gibt an, dass das Endorsement Key-paar auf dem Gerät vorhanden ist.
+True gibt an, dass das Endorsement Key-Paar auf dem Gerät vorhanden ist.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Typ: **UInt32**
+Typ: **uint32**
 
-Alle TPM-Fehler sowie Fehler, die für die TPM-Basisdienste spezifisch sind, können zurückgegeben werden.
+Alle TPM-Fehler sowie Fehler, die spezifisch für TPM-Basisdienste sind, können zurückgegeben werden.
 
 Allgemeine Rückgabecodes sind unten aufgeführt.
 
@@ -68,9 +68,9 @@ Allgemeine Rückgabecodes sind unten aufgeführt.
 
  
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Managed Object Format-Dateien (MOF) enthalten die Definitionen für Windows-Verwaltungsinstrumentation (WMI)-Klassen. MOF-Dateien werden nicht als Teil des Windows SDK installiert. Sie werden auf dem Server installiert, wenn Sie die zugehörige Rolle mithilfe der Server-Manager hinzufügen. Weitere Informationen zu MOF-Dateien finden Sie unter [Managed Object Format (MOF)](../wmisdk/managed-object-format--mof-.md).
+Managed Object Format -Dateien (MOF) enthalten die Definitionen für Windows Management Instrumentation (WMI)-Klassen. MOF-Dateien werden nicht als Teil des Windows SDK installiert. Sie werden auf dem Server installiert, wenn Sie die zugeordnete Rolle mithilfe der Server-Manager hinzufügen. Weitere Informationen zu MOF-Dateien finden Sie unter [Managed Object Format (MOF).](../wmisdk/managed-object-format--mof-.md)
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -78,11 +78,11 @@ Managed Object Format-Dateien (MOF) enthalten die Definitionen für Windows-Verw
 
 | Anforderung | Wert |
 |-------------------------------------|-------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                            |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/>                                      |
-| Namespace<br/>                | Root \\ CIMV2 \\ Security- \\ mikrosofttpm<br/>                                            |
-| MOF<br/>                      | <dl> <dt>Win32- \_ TPM. MOF</dt> </dl> |
-| DLL<br/>                      | <dl> <dt>Win32- \_tpm.dll</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur Vista-Desktop-Apps\]<br/>                                            |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/>                                      |
+| Namespace<br/>                | Root \\ CIMV2 \\ Security \\ MicrosoftTpm<br/>                                            |
+| MOF<br/>                      | <dl> <dt>Win32 \_ tpm.mof</dt> </dl> |
+| DLL<br/>                      | <dl> <dt>Win32 \_tpm.dll</dt> </dl> |
 
 
 
@@ -90,13 +90,13 @@ Managed Object Format-Dateien (MOF) enthalten die Definitionen für Windows-Verw
 
 <dl> <dt>
 
-[**Win32- \_ TPM**](win32-tpm.md)
+[**Win32 \_ Tpm**](win32-tpm.md)
 </dt> <dt>
 
-[**"Kreateendorsegmentkeypair"**](createendorsementkeypair-win32-tpm.md)
+[**CreateEndorsementKeyPair**](createendorsementkeypair-win32-tpm.md)
 </dt> <dt>
 
-[**Setphysicalpresencerequest**](setphysicalpresencerequest-win32-tpm.md)
+[**SetPhysicalPresenceRequest**](setphysicalpresencerequest-win32-tpm.md)
 </dt> </dl>
 
  

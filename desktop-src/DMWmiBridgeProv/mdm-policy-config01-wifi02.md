@@ -1,6 +1,6 @@
 ---
 title: MDM_Policy_Config01_WiFi02-Klasse
-description: Die MDM- \_ Richtlinie \_ Config01 \_ WiFi02-Klasse stellt die verfügbaren Wi-Fi Richtlinien dar.
+description: Die MDM \_ Policy \_ Config01 \_ WiFi02-Klasse stellt die verfügbaren Wi-Fi Richtlinien dar.
 ms.assetid: 68CFBB5E-F365-4D1A-8EF1-CC070E9A7982
 keywords:
 - MDM_Policy_Config01_WiFi02-Klasse
@@ -17,18 +17,18 @@ api_type:
 - DllExport
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 00848613f1f0e9fd4ab6db9dc4afdabe54ce538c
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 8aed66a95bfd1f20086747811d6622ea19a819930094b8da99ce0876146df0f8
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "103858930"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119588030"
 ---
-# <a name="mdm_policy_config01_wifi02-class"></a>MDM- \_ Richtlinie \_ Config01 \_ WiFi02-Klasse
+# <a name="mdm_policy_config01_wifi02-class"></a>MDM \_ Policy \_ Config01 \_ WiFi02-Klasse
 
 \[Einige Informationen beziehen sich auf Vorabversionen, die vor der kommerziellen Freigabe grundlegend geändert werden können. Microsoft übernimmt keine Garantie, weder ausdrücklich noch stillschweigend, für die hier bereitgestellten Informationen.\]
 
-Die **MDM- \_ Richtlinie \_ Config01 \_ WiFi02** -Klasse stellt die verfügbaren Wi-Fi Richtlinien dar. Diese Richtlinien bestimmen Wi-Fi zulässigen Konfigurationen.
+Die **MDM \_ Policy \_ Config01 \_ WiFi02-Klasse** stellt die Wi-Fi verfügbaren Richtlinien dar. Diese Richtlinien bestimmen Wi-Fi zulässigen Konfigurationen.
 
 Die folgende Syntax enthält vereinfachten MOF-Code und schließt alle geerbten Eigenschaften ein.
 
@@ -51,17 +51,17 @@ class MDM_Policy_Config01_WiFi02
 
 ## <a name="members"></a>Member
 
-Die **MDM- \_ Richtlinie \_ Config01 \_ WiFi02** -Klasse verfügt über diese Typen von Membern:
+Die **MDM \_ Policy \_ Config01 \_ WiFi02-Klasse** verfügt über diese Typen von Membern:
 
 -   [Eigenschaften](#properties)
 
 ### <a name="properties"></a>Eigenschaften
 
-Die **MDM- \_ Richtlinie \_ Config01 \_ WiFi02** -Klasse verfügt über diese Eigenschaften.
+Die **MDM \_ Policy \_ Config01 \_ WiFi02-Klasse** verfügt über diese Eigenschaften.
 
 <dl> <dt>
 
-[Allowautoconnecttowi-Sender-Hotspots](/windows/client-management/mdm/policy-csp-wifi#wifi-allowautoconnecttowifisensehotspots)
+[AllowAutoConnectToWiFiSenseHotspots](/windows/client-management/mdm/policy-csp-wifi#wifi-allowautoconnecttowifisensehotspots)
 </dt> <dd> <dl> <dt>
 
 Datentyp: **sint32**
@@ -72,7 +72,7 @@ Zugriffstyp: Lesen/Schreiben
 
 </dd> <dt>
 
-[Zuteilungs Netzwerkfreigabe](/windows/client-management/mdm/policy-csp-wifi#wifi-allowinternetsharing)
+[AllowInternetSharing](/windows/client-management/mdm/policy-csp-wifi#wifi-allowinternetsharing)
 </dt> <dd> <dl> <dt>
 
 Datentyp: **sint32**
@@ -83,7 +83,7 @@ Zugriffstyp: Lesen/Schreiben
 
 </dd> <dt>
 
-[Allowmanualwifconfiguration](/windows/client-management/mdm/policy-csp-wifi#wifi-allowmanualwificonfiguration)
+[AllowManualWiFiConfiguration](/windows/client-management/mdm/policy-csp-wifi#wifi-allowmanualwificonfiguration)
 </dt> <dd> <dl> <dt>
 
 Datentyp: **sint32**
@@ -105,7 +105,7 @@ Zugriffstyp: Lesen/Schreiben
 
 </dd> <dt>
 
-[Allowwifdirect](/windows/client-management/mdm/policy-csp-wifi#wifi-allowwifidirect)
+[AllowWiFiDirect](/windows/client-management/mdm/policy-csp-wifi#wifi-allowwifidirect)
 </dt> <dd> <dl> <dt>
 
 Datentyp: **sint32**
@@ -119,36 +119,36 @@ Zugriffstyp: Lesen/Schreiben
 **InstanceID**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [ **Schlüssel**](/windows/desktop/WmiSdk/key-qualifier)
+Qualifizierer: [ **key**](/windows/desktop/WmiSdk/key-qualifier)
 </dt> </dl>
 
-Gibt den Namen des übergeordneten Knotens an. Für diese Klasse ist die Zeichenfolge "WiFi".
+Identifiziert den Namen des übergeordneten Knotens. Für diese Klasse lautet die Zeichenfolge "WiFi".
 
 </dd> <dt>
 
-**ParentID**
+**Parentid**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [ **Schlüssel**](/windows/desktop/WmiSdk/key-qualifier)
+Qualifizierer: [ **key**](/windows/desktop/WmiSdk/key-qualifier)
 </dt> </dl>
 
-Beschreibt den vollständigen Pfad zum übergeordneten Knoten. Für diese Klasse ist die Zeichenfolge "./Vendor/MSFT/Policy/config".
+Beschreibt den vollständigen Pfad zum übergeordneten Knoten. Für diese Klasse lautet die Zeichenfolge "./Vendor/MSFT/Policy/Config".
 
 </dd> <dt>
 
-[Wlanscanmode](/windows/client-management/mdm/policy-csp-wifi#wifi-wlanscanmode)
+[WLANScanMode](/windows/client-management/mdm/policy-csp-wifi#wifi-wlanscanmode)
 </dt> <dd> <dl> <dt>
 
 Datentyp: **sint32**
@@ -165,19 +165,19 @@ Zugriffstyp: Lesen/Schreiben
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows 10 \[ -Desktop-Apps\]<br/>                                                    |
+| Unterstützte Mindestversion (Client)<br/> | \[Windows 10 Nur Desktop-Apps\]<br/>                                                    |
 | Unterstützte Mindestversion (Server)<br/> | Nicht unterstützt<br/>                                                                      |
-| Namespace<br/>                | Root \\ CIMv2 \\ MDM- \\ dmmap<br/>                                                             |
-| MOF<br/>                      | <dl> <dt>Dmwmibridgeprov. MOF</dt> </dl> |
+| Namespace<br/>                | Root \\ CIMv2 \\ MDM \\ DMMap<br/>                                                             |
+| MOF<br/>                      | <dl> <dt>DMWmiBridgeProv.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>DMWmiBridgeProv.dll</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[Verwenden von PowerShell-Skripts mit dem WMI-Bridge Anbieter](/windows/client-management/mdm/using-powershell-scripting-with-the-wmi-bridge-provider)
+[Verwenden von PowerShell-Skripts mit dem WMI-Bridge-Anbieter](/windows/client-management/mdm/using-powershell-scripting-with-the-wmi-bridge-provider)
 </dt> </dl>
 
  

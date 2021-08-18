@@ -1,6 +1,6 @@
 ---
-description: 'Weitere Informationen finden Sie unter: esentdeletebackupfilefailexception-Konstruktor'
-title: Esentdeletebackupfilefailexception-Konstruktor
+description: 'Weitere Informationen finden Sie unter: EsentDeleteBackupFileFailException-Konstruktor'
+title: EsentDeleteBackupFileFailException-Konstruktor
 TOCTitle: 'EsentDeleteBackupFileFailException constructor '
 ms:assetid: M:Microsoft.Isam.Esent.Interop.EsentDeleteBackupFileFailException.#ctor
 ms:mtpsurl: https://msdn.microsoft.com/library/microsoft.isam.esent.interop.esentdeletebackupfilefailexception.esentdeletebackupfilefailexception(v=EXCHG.10)
@@ -24,19 +24,19 @@ api_type:
 api_location:
 - Microsoft.Isam.Esent.Interop.dll
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: ace5e669ea243198e8234e85e9820ca65f1ba6e8
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: f012c5b702d2c2809e51287d7dd7c9dfc4255aaa11d0dfc4ba18609ab3522d8b
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106363408"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119974210"
 ---
-# <a name="esentdeletebackupfilefailexception-constructor"></a>Esentdeletebackupfilefailexception-Konstruktor
+# <a name="esentdeletebackupfilefailexception-constructor"></a>EsentDeleteBackupFileFailException-Konstruktor
 
-Initialisiert eine neue Instanz der esentdeletebackupfilefailexception-Klasse.
+Initialisiert eine neue Instanz der EsentDeleteBackupFileFailException-Klasse.
 
-**Namespace:**  [Microsoft. ISAM. ESENT. Interop](./microsoft.isam.esent.interop-namespace.md)  
-**Assembly:**  Microsoft. ISAM. ESENT. Interop (in Microsoft.Isam.Esent.Interop.dll)
+**Namespace:**  [Microsoft.Isam.Esent.Interop](./microsoft.isam.esent.interop-namespace.md)  
+**Assembly:**  Microsoft.Isam.Esent.Interop (in Microsoft.Isam.Esent.Interop.dll)
 
 ## <a name="syntax"></a>Syntax
 
@@ -52,12 +52,12 @@ Dim instance As New EsentDeleteBackupFileFailException()
 public EsentDeleteBackupFileFailException()
 ```
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
-#### <a name="reference"></a>Referenz
+#### <a name="reference"></a>Verweis
 
-[Esentdeletebackupfilefailexception-Klasse](./esentdeletebackupfilefailexception-class.md)
+[EsentDeleteBackupFileFailException-Klasse](./esentdeletebackupfilefailexception-class.md)
 
-[Esentdeletebackupfilefailexception-Elemente](./esentdeletebackupfilefailexception-members.md)
+[EsentDeleteBackupFileFailException-Member](./esentdeletebackupfilefailexception-members.md)
 
-[Microsoft. ISAM. ESENT. Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)
+[Microsoft.Isam.Esent.Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)

@@ -1,5 +1,5 @@
 ---
-description: Die Win32- \_ NetworkAdapter-Klasse ist veraltet. Verwenden Sie stattdessen die MSFT \_ netadapter-Klasse. Die Win32 \_ networkadapterwmi-Klasse stellt einen Netzwerkadapter eines Computers dar, auf dem ein Windows-Betriebssystem ausgeführt wird.
+description: Die Win32 \_ NetworkAdapter-Klasse ist veraltet. Verwenden Sie stattdessen die MSFT \_ NetAdapter-Klasse. Die Win32 NetworkAdapterWMI-Klasse stellt einen Netzwerkadapter eines Computers dar, auf dem ein Windows \_ ausgeführt wird.
 ms.assetid: f79cb2a1-a249-479d-a495-37a44fdea995
 ms.tgt_platform: multiple
 title: Win32_NetworkAdapter-Klasse
@@ -56,20 +56,20 @@ api_type:
 - DllExport
 api_location:
 - CIMWin32.dll
-ms.openlocfilehash: 22718802370995cc0515e3f63e731cc86d37eb0f
-ms.sourcegitcommit: c7add10d695482e1ceb72d62b8a4ebd84ea050f7
+ms.openlocfilehash: 55ee65b151778dbfbb4bb8e09fabfb3ae59392966344b951586cd9e08dd1f984
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104483798"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119973038"
 ---
-# <a name="win32_networkadapter-class"></a>Win32- \_ NetworkAdapter-Klasse
+# <a name="win32_networkadapter-class"></a>Win32 \_ NetworkAdapter-Klasse
 
-Die **Win32- \_ NetworkAdapter** -Klasse ist veraltet. Verwenden Sie stattdessen die [**MSFT \_ netadapter**](/previous-versions/windows/desktop/legacy/hh968170(v=vs.85)) -Klasse. Die **Win32 \_ Network Adapter**-[WMI-Klasse](../wmisdk/retrieving-a-class.md) stellt einen Netzwerkadapter eines Computers dar, auf dem ein Windows-Betriebssystem ausgeführt wird.
+Die **Win32 \_ NetworkAdapter-Klasse** ist veraltet. Verwenden Sie stattdessen [**die MSFT \_ NetAdapter-Klasse.**](/previous-versions/windows/desktop/legacy/hh968170(v=vs.85)) Die **WMI-Klasse \_ Win32 NetworkAdapter** stellt einen Netzwerkadapter eines Computers dar, auf dem ein Windows ausgeführt wird.[](../wmisdk/retrieving-a-class.md)
 
-**Win32 \_ Network Adapter** stellt nur IPv4-Daten bereit. Weitere Informationen finden Sie [unter IPv6-und IPv4-Unterstützung in WMI](../wmisdk/ipv6-and-ipv4-support-in-wmi.md).
+**Win32 \_ NetworkAdapter liefert** nur IPv4-Daten. Weitere Informationen finden Sie unter [IPv6- und IPv4-Unterstützung in WMI.](../wmisdk/ipv6-and-ipv4-support-in-wmi.md)
 
-Die folgende Syntax wurde aus MOF-Code (Managed Object Format, verwaltetes Objektformat) vereinfacht und enthält alle geerbten Eigenschaften. Eigenschaften werden in alphabetischer Reihenfolge und nicht in der MOF-Reihenfolge aufgelistet.
+Die folgende Syntax wurde aus MOF-Code (Managed Object Format, verwaltetes Objektformat) vereinfacht und enthält alle geerbten Eigenschaften. Eigenschaften werden in alphabetischer Reihenfolge und nicht in MOF-Reihenfolge aufgeführt.
 
 ## <a name="syntax"></a>Syntax
 
@@ -122,23 +122,23 @@ class Win32_NetworkAdapter : CIM_NetworkAdapter
 
 ## <a name="members"></a>Member
 
-Die **Win32- \_ netzwerkadapterklasse** verfügt über diese Typen von Membern:
+Die **Win32 \_ NetworkAdapter-Klasse** verfügt über die folgenden Membertypen:
 
 -   [Methoden](#methods)
 -   [Eigenschaften](#properties)
 
 ### <a name="methods"></a>Methoden
 
-Die **Win32- \_ netzwerkadapterklasse** verfügt über diese Methoden.
+Die **Win32 \_ NetworkAdapter-Klasse** verfügt über diese Methoden.
 
 
 
-| Methode                                                          | BESCHREIBUNG                                                                                                                                                                                                                     |
+| Methode                                                          | Beschreibung                                                                                                                                                                                                                     |
 |:----------------------------------------------------------------|:--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| [**Ier**](disable-method-in-class-win32-networkadapter.md) | Deaktiviert den Netzwerkadapter.<br/>                                                                                                                                                                                        |
+| [**Deaktivieren**](disable-method-in-class-win32-networkadapter.md) | Deaktiviert den Netzwerkadapter.<br/>                                                                                                                                                                                        |
 | [**Aktivieren**](enable-method-in-class-win32-networkadapter.md)   | Aktiviert den Netzwerkadapter.<br/>                                                                                                                                                                                         |
-| **Zurücksetzen**                                                       | Nicht implementiert. Weitere Informationen zur Implementierung dieser Methode finden Sie unter der [**Reset**](reset-method-in-class-cim-controller.md) -Methode in [**CIM \_ Network Adapter**](cim-networkadapter.md).<br/>                 |
-| **SetPowerState**                                               | Nicht implementiert. Weitere Informationen zur Implementierung dieser Methode finden Sie unter der [**SetPowerState**](setpowerstate-method-in-class-cim-controller.md) -Methode in [**CIM \_ Network Adapter**](cim-networkadapter.md).<br/> |
+| **Zurücksetzen**                                                       | Nicht implementiert. Weitere Informationen zum Implementieren dieser Methode finden Sie unter [**Reset-Methode**](reset-method-in-class-cim-controller.md) in [**CIM \_ NetworkAdapter**](cim-networkadapter.md).<br/>                 |
+| **SetPowerState**                                               | Nicht implementiert. Weitere Informationen zum Implementieren dieser Methode finden Sie unter der [**SetPowerState-Methode**](setpowerstate-method-in-class-cim-controller.md) in [**CIM \_ NetworkAdapter.**](cim-networkadapter.md)<br/> |
 
 
 
@@ -146,7 +146,7 @@ Die **Win32- \_ netzwerkadapterklasse** verfügt über diese Methoden.
 
 ### <a name="properties"></a>Eigenschaften
 
-Die **Win32- \_ netzwerkadapterklasse** verfügt über diese Eigenschaften.
+Die **Win32 \_ NetworkAdapter-Klasse** verfügt über diese Eigenschaften.
 
 <dl> <dt>
 
@@ -159,37 +159,37 @@ Datentyp: **Zeichenfolge**
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**mappingstrings**](../wmisdk/standard-qualifiers.md) ("[**Geräte abviceiocontrol**](/windows/win32/api/ioapiset/nf-ioapiset-deviceiocontrol)::[OID \_ gen-Medien werden \_ \_ \_ verwendet](/windows-hardware/drivers/network/oid-gen-media-in-use)")
+Qualifizierer: [**MappingStrings**](../wmisdk/standard-qualifiers.md) ("[**DeviceIoControl**](/windows/win32/api/ioapiset/nf-ioapiset-deviceiocontrol)::[OID \_ GEN MEDIA IN \_ \_ \_ USE](/windows-hardware/drivers/network/oid-gen-media-in-use)")
 </dt> </dl>
 
-Netzwerk Medium verwendet. Die Netzwerkadapter lauten wie folgt:
+Verwendetes Netzwerkmedium. Die Netzwerkadapter lauten wie folgt:
 
 <dt>
 
 <span id="Ethernet_802.3"></span><span id="ethernet_802.3"></span><span id="ETHERNET_802.3"></span>
 
-**Ethernet 802,3** ("Ethernet 802,3")
+**Ethernet 802.3** ("Ethernet 802.3")
 
 
 </dt> <dd></dd> <dt>
 
 <span id="Token_Ring_802.5"></span><span id="token_ring_802.5"></span><span id="TOKEN_RING_802.5"></span>
 
-**TokenRing 802,5** ("TokenRing 802,5")
+**Token Ring 802.5** ("Token Ring 802.5")
 
 
 </dt> <dd></dd> <dt>
 
 <span id="Fiber_Distributed_Data_Interface__FDDI_"></span><span id="fiber_distributed_data_interface__fddi_"></span><span id="FIBER_DISTRIBUTED_DATA_INTERFACE__FDDI_"></span>
 
-**Fiber verteilter Datenschnittstelle ((** "Fiber verteilter Data Interface, f)")
+**Fiber Distributed Data Interface (FDDI)** ("Fiber Distributed Data Interface (FDDI)")
 
 
 </dt> <dd></dd> <dt>
 
 <span id="Wide_Area_Network__WAN_"></span><span id="wide_area_network__wan_"></span><span id="WIDE_AREA_NETWORK__WAN_"></span>
 
-**WAN (Wide** Area Network) ("Wide Area Network (WAN)")
+**Wide Area Network (WAN)** ("Wide Area Network (WAN)")
 
 
 </dt> <dd></dd> <dt>
@@ -203,7 +203,7 @@ Netzwerk Medium verwendet. Die Netzwerkadapter lauten wie folgt:
 
 <span id="Ethernet_using_DIX_header_format"></span><span id="ethernet_using_dix_header_format"></span><span id="ETHERNET_USING_DIX_HEADER_FORMAT"></span>
 
-**Ethernet mit Dix-Header Format** ("Ethernet mit Dix-Header Format")
+**Ethernet mit DIX-Headerformat** ("Ethernet mit DIX-Headerformat")
 
 
 </dt> <dd></dd> <dt>
@@ -217,42 +217,42 @@ Netzwerk Medium verwendet. Die Netzwerkadapter lauten wie folgt:
 
 <span id="ARCNET__878.2_"></span><span id="arcnet__878.2_"></span>
 
-**ARCNET (878,2)** ("ARCNET (878,2)")
+**ARCNET (878.2)** ("ARCNET (878.2)")
 
 
 </dt> <dd></dd> <dt>
 
 <span id="ATM"></span><span id="atm"></span>
 
-**ATM** ("ATM")
+**GELDAUTOMATEN** ("ATM")
 
 
 </dt> <dd></dd> <dt>
 
 <span id="Wireless"></span><span id="wireless"></span><span id="WIRELESS"></span>
 
-**Drahtlos** ("drahtlos")
+**Drahtlos** ("Drahtlos")
 
 
 </dt> <dd></dd> <dt>
 
 <span id="Infrared_Wireless"></span><span id="infrared_wireless"></span><span id="INFRARED_WIRELESS"></span>
 
-**Infrarot drahtlos** ("Infrarot drahtlos")
+**Wireless Wireless** (funkenloses Funken)
 
 
 </dt> <dd></dd> <dt>
 
 <span id="Bpc"></span><span id="bpc"></span><span id="BPC"></span>
 
-**Bpc** ("bpc")
+**Bpc** ("Bpc")
 
 
 </dt> <dd></dd> <dt>
 
 <span id="CoWan"></span><span id="cowan"></span><span id="COWAN"></span>
 
-**Cowan** ("Cowan")
+**CoWan** ("CoWan")
 
 
 </dt> <dd></dd> <dt>
@@ -266,46 +266,46 @@ Netzwerk Medium verwendet. Die Netzwerkadapter lauten wie folgt:
 
 </dd> <dt>
 
-**AdapterTypeId**
+**AdapterTypeID**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt16**
+Datentyp: **uint16**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**mappingstrings**](../wmisdk/standard-qualifiers.md) ("[**Geräte abviceiocontrol**](/windows/win32/api/ioapiset/nf-ioapiset-deviceiocontrol)::[OID \_ gen-Medien werden \_ \_ \_ verwendet](/windows-hardware/drivers/network/oid-gen-media-in-use)")
+Qualifizierer: [**MappingStrings**](../wmisdk/standard-qualifiers.md) ("[**DeviceIoControl**](/windows/win32/api/ioapiset/nf-ioapiset-deviceiocontrol)::[OID \_ GEN MEDIA IN \_ \_ \_ USE](/windows-hardware/drivers/network/oid-gen-media-in-use)")
 </dt> </dl>
 
-Netzwerk Medium verwendet. Gibt dieselben Informationen wie die **AdapterType** -Eigenschaft zurück, mit dem Unterschied, dass die Informationen in Form einer ganzen Zahl sind.
+Verwendetes Netzwerkmedium. Gibt die gleichen Informationen wie die **AdapterType-Eigenschaft** zurück, mit der Ausnahme, dass die Informationen in Form einer ganzen Zahl sind.
 
 <dt>
 
 <span id="Ethernet_802.3"></span><span id="ethernet_802.3"></span><span id="ETHERNET_802.3"></span>
 
-**Ethernet 802,3** (0)
+**Ethernet 802.3** (0)
 
 
 </dt> <dd></dd> <dt>
 
 <span id="Token_Ring_802.5"></span><span id="token_ring_802.5"></span><span id="TOKEN_RING_802.5"></span>
 
-**TokenRing 802,5** (1)
+**Token Ring 802.5** (1)
 
 
 </dt> <dd></dd> <dt>
 
 <span id="Fiber_Distributed_Data_Interface__FDDI_"></span><span id="fiber_distributed_data_interface__fddi_"></span><span id="FIBER_DISTRIBUTED_DATA_INTERFACE__FDDI_"></span>
 
-**Fiber verteilte Datenschnittstelle (DDI)** (2)
+**Fiber Distributed Data Interface (FDDI)** (2)
 
 
 </dt> <dd></dd> <dt>
 
 <span id="Wide_Area_Network__WAN_"></span><span id="wide_area_network__wan_"></span><span id="WIDE_AREA_NETWORK__WAN_"></span>
 
-**WAN (Wide Area Network)** (3)
+**Wide Area Network (WAN)** (3)
 
 
 </dt> <dd></dd> <dt>
@@ -319,7 +319,7 @@ Netzwerk Medium verwendet. Gibt dieselben Informationen wie die **AdapterType** 
 
 <span id="Ethernet_using_DIX_header_format"></span><span id="ethernet_using_dix_header_format"></span><span id="ETHERNET_USING_DIX_HEADER_FORMAT"></span>
 
-**Ethernet mit Dix-Header Format** (5)
+**Ethernet mit DIX-Headerformat** (5)
 
 
 </dt> <dd></dd> <dt>
@@ -333,14 +333,14 @@ Netzwerk Medium verwendet. Gibt dieselben Informationen wie die **AdapterType** 
 
 <span id="ARCNET__878.2_"></span><span id="arcnet__878.2_"></span>
 
-**ARCNET (878,2)** (7)
+**ARCNET (878.2)** (7)
 
 
 </dt> <dd></dd> <dt>
 
 <span id="ATM"></span><span id="atm"></span>
 
-**ATM** (8)
+**GELDAUTOMATEN** (8)
 
 
 </dt> <dd></dd> <dt>
@@ -354,7 +354,7 @@ Netzwerk Medium verwendet. Gibt dieselben Informationen wie die **AdapterType** 
 
 <span id="Infrared_Wireless"></span><span id="infrared_wireless"></span><span id="INFRARED_WIRELESS"></span>
 
-**Infrarot drahtlos** (10)
+**Wireless Wireless** (10)
 
 
 </dt> <dd></dd> <dt>
@@ -368,7 +368,7 @@ Netzwerk Medium verwendet. Gibt dieselben Informationen wie die **AdapterType** 
 
 <span id="CoWan"></span><span id="cowan"></span><span id="COWAN"></span>
 
-**Cowan** (12)
+**CoWan** (12)
 
 
 </dt> <dd></dd> <dt>
@@ -382,38 +382,38 @@ Netzwerk Medium verwendet. Gibt dieselben Informationen wie die **AdapterType** 
 
 </dd> <dt>
 
-**AutoSense**
+**Autosense**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **boolescher** Wert
+Datentyp: **boolescher Wert**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Wenn der Wert **true** ist, kann der Netzwerkadapter die Geschwindigkeit der angefügten oder Netzwerk Medien automatisch bestimmen.
+True **gibt an,** dass der Netzwerkadapter automatisch die Geschwindigkeit des angeschlossenen Mediums oder des Netzwerkmediums bestimmen kann.
 
-Diese Eigenschaft wird vom [**CIM- \_ NetworkAdapter**](cim-networkadapter.md)geerbt.
+Diese Eigenschaft wird von [**CIM \_ NetworkAdapter geerbt.**](cim-networkadapter.md)
 
-Diese Eigenschaft wurde noch nicht implementiert. Standardmäßig wird ein **null** -Wert zurückgegeben.
+Diese Eigenschaft wurde noch nicht implementiert. Standardmäßig wird ein **NULL-Wert** zurückgegeben.
 
 </dd> <dt>
 
 **Verfügbarkeit**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt16**
+Datentyp: **uint16**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**mappingstrings**](../wmisdk/standard-qualifiers.md) ("MIF". DMTF \| Betriebsstatus \| 003,5 "," MIB. IETF \| Host-Resources-MIB. hrdevicestatus ")
+Qualifizierer: [**MappingStrings**](../wmisdk/standard-qualifiers.md) ("MIF. DMTF \| Operational State \| 003.5", "MIB. IETF \| HOST-RESOURCES-MIB.hrDeviceStatus")
 </dt> </dl>
 
 Verfügbarkeit und Status des Geräts.
 
-Diese Eigenschaft wird von [**CIM \_ LogicalDevice**](cim-logicaldevice.md)geerbt.
+Diese Eigenschaft wird von [**CIM \_ LogicalDevice geerbt.**](cim-logicaldevice.md)
 
 <dt>
 
@@ -433,12 +433,12 @@ Diese Eigenschaft wird von [**CIM \_ LogicalDevice**](cim-logicaldevice.md)geerb
 
 <span id="Running_Full_Power"></span><span id="running_full_power"></span><span id="RUNNING_FULL_POWER"></span>
 
-<span id="Running_Full_Power"></span><span id="running_full_power"></span><span id="RUNNING_FULL_POWER"></span>**Running/Full Power** (3)
+<span id="Running_Full_Power"></span><span id="running_full_power"></span><span id="RUNNING_FULL_POWER"></span>**Wird ausgeführt/Vollstrom** (3)
 
 
 </dt> <dd>
 
-Ausführung oder vollständiger Stromversorgung
+Running or Full Power
 
 </dd> <dt>
 
@@ -451,7 +451,7 @@ Ausführung oder vollständiger Stromversorgung
 
 <span id="In_Test"></span><span id="in_test"></span><span id="IN_TEST"></span>
 
-<span id="In_Test"></span><span id="in_test"></span><span id="IN_TEST"></span>**In Test** (5)
+<span id="In_Test"></span><span id="in_test"></span><span id="IN_TEST"></span>**Im Test** (5)
 
 
 </dt> <dd></dd> <dt>
@@ -472,21 +472,21 @@ Ausführung oder vollständiger Stromversorgung
 
 <span id="Off_Line"></span><span id="off_line"></span><span id="OFF_LINE"></span>
 
-<span id="Off_Line"></span><span id="off_line"></span><span id="OFF_LINE"></span>**Offline** (8)
+<span id="Off_Line"></span><span id="off_line"></span><span id="OFF_LINE"></span>**Off Line** (8)
 
 
 </dt> <dd></dd> <dt>
 
 <span id="Off_Duty"></span><span id="off_duty"></span><span id="OFF_DUTY"></span>
 
-<span id="Off_Duty"></span><span id="off_duty"></span><span id="OFF_DUTY"></span>**Off-Duty** (9)
+<span id="Off_Duty"></span><span id="off_duty"></span><span id="OFF_DUTY"></span>**Off-Off-Dienst** (9)
 
 
 </dt> <dd></dd> <dt>
 
 <span id="Degraded"></span><span id="degraded"></span><span id="DEGRADED"></span>
 
-<span id="Degraded"></span><span id="degraded"></span><span id="DEGRADED"></span>Herunter **gestuft (10** )
+<span id="Degraded"></span><span id="degraded"></span><span id="DEGRADED"></span>**Heruntergestuft** (10)
 
 
 </dt> <dd></dd> <dt>
@@ -507,63 +507,63 @@ Ausführung oder vollständiger Stromversorgung
 
 <span id="Power_Save_-_Unknown"></span><span id="power_save_-_unknown"></span><span id="POWER_SAVE_-_UNKNOWN"></span>
 
-<span id="Power_Save_-_Unknown"></span><span id="power_save_-_unknown"></span><span id="POWER_SAVE_-_UNKNOWN"></span>**Energiespeicher-unbekannt** (13)
+<span id="Power_Save_-_Unknown"></span><span id="power_save_-_unknown"></span><span id="POWER_SAVE_-_UNKNOWN"></span>**Energiesparen – Unbekannt** (13)
 
 
 </dt> <dd>
 
-Es ist bekannt, dass sich das Gerät in einem Energiespar Zustand befindet, aber der genaue Status ist unbekannt.
+Das Gerät befindet sich bekanntermaßen im Energiesparzustand, aber sein genauer Status ist unbekannt.
 
 </dd> <dt>
 
 <span id="Power_Save_-_Low_Power_Mode"></span><span id="power_save_-_low_power_mode"></span><span id="POWER_SAVE_-_LOW_POWER_MODE"></span>
 
-<span id="Power_Save_-_Low_Power_Mode"></span><span id="power_save_-_low_power_mode"></span><span id="POWER_SAVE_-_LOW_POWER_MODE"></span>**Energiesparmodus-niedriger Energie Modus** (14)
+<span id="Power_Save_-_Low_Power_Mode"></span><span id="power_save_-_low_power_mode"></span><span id="POWER_SAVE_-_LOW_POWER_MODE"></span>**Energiesparmodus – Energiesparmodus** (14)
 
 
 </dt> <dd>
 
-Das Gerät befindet sich in einem Energiespar Zustand, funktioniert jedoch weiterhin und kann eine Beeinträchtigung der Leistung aufweisen.
+Das Gerät befindet sich im Energiesparzustand, funktioniert aber weiterhin und kann eine beeinträchtigte Leistung aufweisen.
 
 </dd> <dt>
 
 <span id="Power_Save_-_Standby"></span><span id="power_save_-_standby"></span><span id="POWER_SAVE_-_STANDBY"></span>
 
-<span id="Power_Save_-_Standby"></span><span id="power_save_-_standby"></span><span id="POWER_SAVE_-_STANDBY"></span>**Energiesparmodus-Standby** (15)
+<span id="Power_Save_-_Standby"></span><span id="power_save_-_standby"></span><span id="POWER_SAVE_-_STANDBY"></span>**Energiesparmodus – Standby** (15)
 
 
 </dt> <dd>
 
-Das Gerät funktioniert nicht, kann jedoch schnell in den vollständigen Energiespar Betrieb gebracht werden.
+Das Gerät funktioniert nicht, kann aber schnell voll ausgepowert werden.
 
 </dd> <dt>
 
 <span id="Power_Cycle"></span><span id="power_cycle"></span><span id="POWER_CYCLE"></span>
 
-<span id="Power_Cycle"></span><span id="power_cycle"></span><span id="POWER_CYCLE"></span>**Energie Zyklen** (16)
+<span id="Power_Cycle"></span><span id="power_cycle"></span><span id="POWER_CYCLE"></span>**Stromzyklus** (16)
 
 
 </dt> <dd></dd> <dt>
 
 <span id="Power_Save_-_Warning"></span><span id="power_save_-_warning"></span><span id="POWER_SAVE_-_WARNING"></span>
 
-<span id="Power_Save_-_Warning"></span><span id="power_save_-_warning"></span><span id="POWER_SAVE_-_WARNING"></span>**Energiespar Speicher-Warnung** (17)
+<span id="Power_Save_-_Warning"></span><span id="power_save_-_warning"></span><span id="POWER_SAVE_-_WARNING"></span>**Energiesparen – Warnung** (17)
 
 
 </dt> <dd>
 
-Das Gerät befindet sich in einem Warn Status, aber auch in einem Energiespar Zustand.
+Das Gerät befindet sich in einem Warnungszustand, aber auch im Energiesparzustand.
 
 </dd> <dt>
 
 <span id="Paused"></span><span id="paused"></span><span id="PAUSED"></span>
 
-<span id="Paused"></span><span id="paused"></span><span id="PAUSED"></span>**Angeh** alten (18)
+<span id="Paused"></span><span id="paused"></span><span id="PAUSED"></span>**Angehalten** (18)
 
 
 </dt> <dd>
 
-Das Gerät wurde angehalten.
+Das Gerät wird angehalten.
 
 </dd> <dt>
 
@@ -591,12 +591,12 @@ Das Gerät ist nicht konfiguriert.
 
 <span id="Quiesced"></span><span id="quiesced"></span><span id="QUIESCED"></span>
 
-<span id="Quiesced"></span><span id="quiesced"></span><span id="QUIESCED"></span>Inaktiven **Status (21** )
+<span id="Quiesced"></span><span id="quiesced"></span><span id="QUIESCED"></span>**Still** (21)
 
 
 </dt> <dd>
 
-Das Gerät ist in Ruhe.
+Das Gerät ist still.
 
 </dd> </dl>
 
@@ -605,25 +605,25 @@ Das Gerät ist in Ruhe.
 **Caption**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**maxlen**](../wmisdk/standard-qualifiers.md) (64), [**Display Name**](../wmisdk/standard-qualifiers.md) ("Caption")
+Qualifizierer: [**MaxLen**](../wmisdk/standard-qualifiers.md) (64), [**DisplayName**](../wmisdk/standard-qualifiers.md) ("Caption")
 </dt> </dl>
 
-Kurze Beschreibung des Objekts – eine einzeilige Zeichenfolge.
+Kurze Beschreibung des Objekts– eine einzeilige Zeichenfolge.
 
 Diese Eigenschaft wird von [**CIM \_ ManagedSystemElement**](cim-managedsystemelement.md)geerbt.
 
 </dd> <dt>
 
-**Configmanagererrorcode**
+**ConfigManagerErrorCode**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt32**
+Datentyp: **uint32**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
@@ -632,7 +632,7 @@ Zugriffstyp: Schreibgeschützt
 Qualifizierer: [**Schema**](../wmisdk/standard-qualifiers.md) ("Win32")
 </dt> </dl>
 
-Windows Configuration Manager-Fehlercode.
+Windows Konfigurations-Manager Fehlercode.
 
 Diese Eigenschaft wird von [**CIM \_ LogicalDevice**](cim-logicaldevice.md)geerbt.
 
@@ -662,25 +662,25 @@ Das Gerät ist nicht ordnungsgemäß konfiguriert.
 
 <span id="Windows_cannot_load_the_driver_for_this_device."></span><span id="windows_cannot_load_the_driver_for_this_device."></span><span id="WINDOWS_CANNOT_LOAD_THE_DRIVER_FOR_THIS_DEVICE."></span>
 
-<span id="windows_cannot_load_the_driver_for_this_device."></span><span id="WINDOWS_CANNOT_LOAD_THE_DRIVER_FOR_THIS_DEVICE."></span>**Der Treiber für dieses Gerät kann nicht geladen werden.** (2)
+<span id="windows_cannot_load_the_driver_for_this_device."></span><span id="WINDOWS_CANNOT_LOAD_THE_DRIVER_FOR_THIS_DEVICE."></span>**Windows kann den Treiber für dieses Gerät nicht laden.** (2)
 
 
 </dt> <dd></dd> <dt>
 
 <span id="The_driver_for_this_device_might_be_corrupted__or_your_system_may_be_running_low_on_memory_or_other_resources."></span><span id="the_driver_for_this_device_might_be_corrupted__or_your_system_may_be_running_low_on_memory_or_other_resources."></span><span id="THE_DRIVER_FOR_THIS_DEVICE_MIGHT_BE_CORRUPTED__OR_YOUR_SYSTEM_MAY_BE_RUNNING_LOW_ON_MEMORY_OR_OTHER_RESOURCES."></span>
 
-<span id="the_driver_for_this_device_might_be_corrupted__or_your_system_may_be_running_low_on_memory_or_other_resources."></span><span id="THE_DRIVER_FOR_THIS_DEVICE_MIGHT_BE_CORRUPTED__OR_YOUR_SYSTEM_MAY_BE_RUNNING_LOW_ON_MEMORY_OR_OTHER_RESOURCES."></span>**Der Treiber für dieses Gerät ist möglicherweise beschädigt, oder das System verfügt über wenig Arbeitsspeicher oder andere Ressourcen.** (3)
+<span id="the_driver_for_this_device_might_be_corrupted__or_your_system_may_be_running_low_on_memory_or_other_resources."></span><span id="THE_DRIVER_FOR_THIS_DEVICE_MIGHT_BE_CORRUPTED__OR_YOUR_SYSTEM_MAY_BE_RUNNING_LOW_ON_MEMORY_OR_OTHER_RESOURCES."></span>**Der Treiber für dieses Gerät ist möglicherweise beschädigt, oder ihr System verfügt über wenig Arbeitsspeicher oder andere Ressourcen.** (3)
 
 
 </dt> <dd>
 
-Der Treiber für dieses Gerät ist möglicherweise beschädigt, oder das System verfügt möglicherweise nicht über genügend Arbeitsspeicher oder andere Ressourcen.
+Der Treiber für dieses Gerät ist möglicherweise beschädigt, oder das System verfügt über wenig Arbeitsspeicher oder andere Ressourcen.
 
 </dd> <dt>
 
 <span id="This_device_is_not_working_properly._One_of_its_drivers_or_your_registry_might_be_corrupted."></span><span id="this_device_is_not_working_properly._one_of_its_drivers_or_your_registry_might_be_corrupted."></span><span id="THIS_DEVICE_IS_NOT_WORKING_PROPERLY._ONE_OF_ITS_DRIVERS_OR_YOUR_REGISTRY_MIGHT_BE_CORRUPTED."></span>
 
-<span id="This_device_is_not_working_properly._One_of_its_drivers_or_your_registry_might_be_corrupted."></span><span id="this_device_is_not_working_properly._one_of_its_drivers_or_your_registry_might_be_corrupted."></span><span id="THIS_DEVICE_IS_NOT_WORKING_PROPERLY._ONE_OF_ITS_DRIVERS_OR_YOUR_REGISTRY_MIGHT_BE_CORRUPTED."></span>**Dieses Gerät funktioniert nicht ordnungsgemäß. Einer der Treiber oder die Registrierung ist möglicherweise beschädigt.** (4)
+<span id="This_device_is_not_working_properly._One_of_its_drivers_or_your_registry_might_be_corrupted."></span><span id="this_device_is_not_working_properly._one_of_its_drivers_or_your_registry_might_be_corrupted."></span><span id="THIS_DEVICE_IS_NOT_WORKING_PROPERLY._ONE_OF_ITS_DRIVERS_OR_YOUR_REGISTRY_MIGHT_BE_CORRUPTED."></span>**Dieses Gerät funktioniert nicht ordnungsgemäß. Einer der Treiber oder Ihre Registrierung ist möglicherweise beschädigt.** (4)
 
 
 </dt> <dd>
@@ -691,23 +691,23 @@ Das Gerät funktioniert nicht ordnungsgemäß. Einer der Treiber oder die Regist
 
 <span id="The_driver_for_this_device_needs_a_resource_that_Windows_cannot_manage."></span><span id="the_driver_for_this_device_needs_a_resource_that_windows_cannot_manage."></span><span id="THE_DRIVER_FOR_THIS_DEVICE_NEEDS_A_RESOURCE_THAT_WINDOWS_CANNOT_MANAGE."></span>
 
-<span id="the_driver_for_this_device_needs_a_resource_that_windows_cannot_manage."></span><span id="THE_DRIVER_FOR_THIS_DEVICE_NEEDS_A_RESOURCE_THAT_WINDOWS_CANNOT_MANAGE."></span>**Der Treiber für dieses Gerät benötigt eine Ressource, die von Windows nicht verwaltet werden kann.** (5)
+<span id="the_driver_for_this_device_needs_a_resource_that_windows_cannot_manage."></span><span id="THE_DRIVER_FOR_THIS_DEVICE_NEEDS_A_RESOURCE_THAT_WINDOWS_CANNOT_MANAGE."></span>**Der Treiber für dieses Gerät benötigt eine Ressource, die Windows nicht verwalten können.** (5)
 
 
 </dt> <dd>
 
-Der Treiber für das Gerät erfordert eine Ressource, die von Windows nicht verwaltet werden kann.
+Der Treiber für das Gerät erfordert eine Ressource, die Windows nicht verwalten können.
 
 </dd> <dt>
 
 <span id="The_boot_configuration_for_this_device_conflicts_with_other_devices."></span><span id="the_boot_configuration_for_this_device_conflicts_with_other_devices."></span><span id="THE_BOOT_CONFIGURATION_FOR_THIS_DEVICE_CONFLICTS_WITH_OTHER_DEVICES."></span>
 
-<span id="the_boot_configuration_for_this_device_conflicts_with_other_devices."></span><span id="THE_BOOT_CONFIGURATION_FOR_THIS_DEVICE_CONFLICTS_WITH_OTHER_DEVICES."></span>**Die Startkonfiguration für dieses Gerät steht in Konflikt mit anderen Geräten.**  (6)
+<span id="the_boot_configuration_for_this_device_conflicts_with_other_devices."></span><span id="THE_BOOT_CONFIGURATION_FOR_THIS_DEVICE_CONFLICTS_WITH_OTHER_DEVICES."></span>**Die Startkonfiguration für dieses Gerät ist mit anderen Geräten in Konflikt.**  (6)
 
 
 </dt> <dd>
 
-Die Startkonfiguration für das Gerät steht in Konflikt mit anderen Geräten.
+Bei der Startkonfiguration für das Gerät tritt ein Konflikt mit anderen Geräten auf.
 
 </dd> <dt>
 
@@ -720,23 +720,23 @@ Die Startkonfiguration für das Gerät steht in Konflikt mit anderen Geräten.
 
 <span id="The_driver_loader_for_the_device_is_missing."></span><span id="the_driver_loader_for_the_device_is_missing."></span><span id="THE_DRIVER_LOADER_FOR_THE_DEVICE_IS_MISSING."></span>
 
-<span id="the_driver_loader_for_the_device_is_missing."></span><span id="THE_DRIVER_LOADER_FOR_THE_DEVICE_IS_MISSING."></span>**Das Treiber Lade Modul für das Gerät fehlt.** (8)
+<span id="the_driver_loader_for_the_device_is_missing."></span><span id="THE_DRIVER_LOADER_FOR_THE_DEVICE_IS_MISSING."></span>**Das Treiberladeprogramm für das Gerät fehlt.** (8)
 
 
 </dt> <dd>
 
-Das Treiber Lade Modul für das Gerät fehlt.
+Das Treiberladeprogramm für das Gerät fehlt.
 
 </dd> <dt>
 
 <span id="This_device_is_not_working_properly_because_the_controlling_firmware_is_reporting_the_resources_for_the_device_incorrectly."></span><span id="this_device_is_not_working_properly_because_the_controlling_firmware_is_reporting_the_resources_for_the_device_incorrectly."></span><span id="THIS_DEVICE_IS_NOT_WORKING_PROPERLY_BECAUSE_THE_CONTROLLING_FIRMWARE_IS_REPORTING_THE_RESOURCES_FOR_THE_DEVICE_INCORRECTLY."></span>
 
-<span id="this_device_is_not_working_properly_because_the_controlling_firmware_is_reporting_the_resources_for_the_device_incorrectly."></span><span id="THIS_DEVICE_IS_NOT_WORKING_PROPERLY_BECAUSE_THE_CONTROLLING_FIRMWARE_IS_REPORTING_THE_RESOURCES_FOR_THE_DEVICE_INCORRECTLY."></span>**Dieses Gerät funktioniert nicht ordnungsgemäß, da die Steuerungs Firmware die Ressourcen für das Gerät falsch meldet.** (9)
+<span id="this_device_is_not_working_properly_because_the_controlling_firmware_is_reporting_the_resources_for_the_device_incorrectly."></span><span id="THIS_DEVICE_IS_NOT_WORKING_PROPERLY_BECAUSE_THE_CONTROLLING_FIRMWARE_IS_REPORTING_THE_RESOURCES_FOR_THE_DEVICE_INCORRECTLY."></span>**Dieses Gerät funktioniert nicht ordnungsgemäß, da die steuernde Firmware die Ressourcen für das Gerät falsch meldet.** (9)
 
 
 </dt> <dd>
 
-Das Gerät funktioniert nicht ordnungsgemäß. Die Steuerungs Firmware meldet nicht korrekt die Ressourcen für das Gerät.
+Das Gerät funktioniert nicht ordnungsgemäß. Die steuernde Firmware meldet fälschlicherweise die Ressourcen für das Gerät.
 
 </dd> <dt>
 
@@ -753,7 +753,7 @@ Das Gerät kann nicht gestartet werden.
 
 <span id="This_device_failed."></span><span id="this_device_failed."></span><span id="THIS_DEVICE_FAILED."></span>
 
-<span id="this_device_failed."></span><span id="THIS_DEVICE_FAILED."></span>**Dieses Gerät ist fehlgeschlagen.** (11)
+<span id="this_device_failed."></span><span id="THIS_DEVICE_FAILED."></span>**Auf diesem Gerät ist ein Fehler aufgetreten.** (11)
 
 
 </dt> <dd>
@@ -764,62 +764,62 @@ Fehler beim Gerät.
 
 <span id="This_device_cannot_find_enough_free_resources_that_it_can_use."></span><span id="this_device_cannot_find_enough_free_resources_that_it_can_use."></span><span id="THIS_DEVICE_CANNOT_FIND_ENOUGH_FREE_RESOURCES_THAT_IT_CAN_USE."></span>
 
-<span id="this_device_cannot_find_enough_free_resources_that_it_can_use."></span><span id="THIS_DEVICE_CANNOT_FIND_ENOUGH_FREE_RESOURCES_THAT_IT_CAN_USE."></span>**Auf diesem Gerät können nicht genügend kostenfreie Ressourcen gefunden werden.** (12)
+<span id="this_device_cannot_find_enough_free_resources_that_it_can_use."></span><span id="THIS_DEVICE_CANNOT_FIND_ENOUGH_FREE_RESOURCES_THAT_IT_CAN_USE."></span>**Dieses Gerät kann nicht genügend freie Ressourcen finden, die es verwenden kann.** (12)
 
 
 </dt> <dd>
 
-Das Gerät kann nicht genug freie Ressourcen für die Verwendung finden.
+Das Gerät kann nicht genügend freie Ressourcen für die Verwendung finden.
 
 </dd> <dt>
 
 <span id="Windows_cannot_verify_this_device_s_resources."></span><span id="windows_cannot_verify_this_device_s_resources."></span><span id="WINDOWS_CANNOT_VERIFY_THIS_DEVICE_S_RESOURCES."></span>
 
-<span id="windows_cannot_verify_this_device_s_resources."></span><span id="WINDOWS_CANNOT_VERIFY_THIS_DEVICE_S_RESOURCES."></span>**Die Ressourcen dieses Geräts können von Windows nicht überprüft werden.** (13)
+<span id="windows_cannot_verify_this_device_s_resources."></span><span id="WINDOWS_CANNOT_VERIFY_THIS_DEVICE_S_RESOURCES."></span>**Windows können die Ressourcen dieses Geräts nicht überprüfen.** (13)
 
 
 </dt> <dd>
 
-Die Geräte Ressourcen können nicht überprüft werden.
+Windows können die Ressourcen des Geräts nicht überprüfen.
 
 </dd> <dt>
 
 <span id="This_device_cannot_work_properly_until_you_restart_your_computer."></span><span id="this_device_cannot_work_properly_until_you_restart_your_computer."></span><span id="THIS_DEVICE_CANNOT_WORK_PROPERLY_UNTIL_YOU_RESTART_YOUR_COMPUTER."></span>
 
-<span id="this_device_cannot_work_properly_until_you_restart_your_computer."></span><span id="THIS_DEVICE_CANNOT_WORK_PROPERLY_UNTIL_YOU_RESTART_YOUR_COMPUTER."></span>**Dieses Gerät funktioniert erst ordnungsgemäß, wenn Sie den Computer neu starten.** (14)
+<span id="this_device_cannot_work_properly_until_you_restart_your_computer."></span><span id="THIS_DEVICE_CANNOT_WORK_PROPERLY_UNTIL_YOU_RESTART_YOUR_COMPUTER."></span>**Dieses Gerät kann erst ordnungsgemäß funktionieren, wenn Sie den Computer neu starten.** (14)
 
 
 </dt> <dd>
 
-Das Gerät kann erst ordnungsgemäß funktionieren, wenn der Computer neu gestartet wird.
+Das Gerät kann erst ordnungsgemäß funktionieren, wenn der Computer neu gestartet wurde.
 
 </dd> <dt>
 
 <span id="This_device_is_not_working_properly_because_there_is_probably_a_re-enumeration_problem."></span><span id="this_device_is_not_working_properly_because_there_is_probably_a_re-enumeration_problem."></span><span id="THIS_DEVICE_IS_NOT_WORKING_PROPERLY_BECAUSE_THERE_IS_PROBABLY_A_RE-ENUMERATION_PROBLEM."></span>
 
-<span id="This_device_is_not_working_properly_because_there_is_probably_a_re-enumeration_problem."></span><span id="this_device_is_not_working_properly_because_there_is_probably_a_re-enumeration_problem."></span><span id="THIS_DEVICE_IS_NOT_WORKING_PROPERLY_BECAUSE_THERE_IS_PROBABLY_A_RE-ENUMERATION_PROBLEM."></span>**Dieses Gerät funktioniert nicht ordnungsgemäß, da wahrscheinlich ein Problem mit der erneuten Aufzählung vorliegt.** (15)
+<span id="This_device_is_not_working_properly_because_there_is_probably_a_re-enumeration_problem."></span><span id="this_device_is_not_working_properly_because_there_is_probably_a_re-enumeration_problem."></span><span id="THIS_DEVICE_IS_NOT_WORKING_PROPERLY_BECAUSE_THERE_IS_PROBABLY_A_RE-ENUMERATION_PROBLEM."></span>**Dieses Gerät funktioniert nicht ordnungsgemäß, da es wahrscheinlich ein Problem mit der erneuten Enumeration gibt.** (15)
 
 
 </dt> <dd>
 
-Das Gerät funktioniert aufgrund eines möglichen erneuten Aufzählungs Problems nicht ordnungsgemäß.
+Das Gerät funktioniert aufgrund eines möglichen Problems mit der erneuten Enumeration nicht ordnungsgemäß.
 
 </dd> <dt>
 
 <span id="Windows_cannot_identify_all_the_resources_this_device_uses."></span><span id="windows_cannot_identify_all_the_resources_this_device_uses."></span><span id="WINDOWS_CANNOT_IDENTIFY_ALL_THE_RESOURCES_THIS_DEVICE_USES."></span>
 
-<span id="windows_cannot_identify_all_the_resources_this_device_uses."></span><span id="WINDOWS_CANNOT_IDENTIFY_ALL_THE_RESOURCES_THIS_DEVICE_USES."></span>**Es können nicht alle von diesem Gerät verwendeten Ressourcen identifiziert werden.** (16)
+<span id="windows_cannot_identify_all_the_resources_this_device_uses."></span><span id="WINDOWS_CANNOT_IDENTIFY_ALL_THE_RESOURCES_THIS_DEVICE_USES."></span>**Windows können nicht alle Ressourcen identifizieren, die dieses Gerät verwendet.** (16)
 
 
 </dt> <dd>
 
-In Windows können nicht alle Ressourcen identifiziert werden, die vom Gerät verwendet werden.
+Windows können nicht alle Ressourcen identifizieren, die das Gerät verwendet.
 
 </dd> <dt>
 
 <span id="This_device_is_asking_for_an_unknown_resource_type."></span><span id="this_device_is_asking_for_an_unknown_resource_type."></span><span id="THIS_DEVICE_IS_ASKING_FOR_AN_UNKNOWN_RESOURCE_TYPE."></span>
 
-<span id="this_device_is_asking_for_an_unknown_resource_type."></span><span id="THIS_DEVICE_IS_ASKING_FOR_AN_UNKNOWN_RESOURCE_TYPE."></span>**Dieses Gerät fragt nach einem unbekannten Ressourcentyp.** (17)
+<span id="this_device_is_asking_for_an_unknown_resource_type."></span><span id="THIS_DEVICE_IS_ASKING_FOR_AN_UNKNOWN_RESOURCE_TYPE."></span>**Dieses Gerät fordert einen unbekannten Ressourcentyp an.** (17)
 
 
 </dt> <dd>
@@ -841,14 +841,14 @@ Gerätetreiber müssen neu installiert werden.
 
 <span id="Failure_using_the_VxD_loader."></span><span id="failure_using_the_vxd_loader."></span><span id="FAILURE_USING_THE_VXD_LOADER."></span>
 
-<span id="failure_using_the_vxd_loader."></span><span id="FAILURE_USING_THE_VXD_LOADER."></span>**Fehler bei Verwendung des VXD-Lade Moduls.** (19)
+<span id="failure_using_the_vxd_loader."></span><span id="FAILURE_USING_THE_VXD_LOADER."></span>**Fehler beim Verwenden des VxD-Ladeprogramm.** (19)
 
 
 </dt> <dd></dd> <dt>
 
 <span id="Your_registry_might_be_corrupted."></span><span id="your_registry_might_be_corrupted."></span><span id="YOUR_REGISTRY_MIGHT_BE_CORRUPTED."></span>
 
-<span id="your_registry_might_be_corrupted."></span><span id="YOUR_REGISTRY_MIGHT_BE_CORRUPTED."></span>**Möglicherweise ist die Registrierung beschädigt.** (20)
+<span id="your_registry_might_be_corrupted."></span><span id="YOUR_REGISTRY_MIGHT_BE_CORRUPTED."></span>**Ihre Registrierung ist möglicherweise beschädigt.** (20)
 
 
 </dt> <dd>
@@ -859,12 +859,12 @@ Die Registrierung ist möglicherweise beschädigt.
 
 <span id="System_failure__Try_changing_the_driver_for_this_device._If_that_does_not_work__see_your_hardware_documentation._Windows_is_removing_this_device."></span><span id="system_failure__try_changing_the_driver_for_this_device._if_that_does_not_work__see_your_hardware_documentation._windows_is_removing_this_device."></span><span id="SYSTEM_FAILURE__TRY_CHANGING_THE_DRIVER_FOR_THIS_DEVICE._IF_THAT_DOES_NOT_WORK__SEE_YOUR_HARDWARE_DOCUMENTATION._WINDOWS_IS_REMOVING_THIS_DEVICE."></span>
 
-<span id="System_failure__Try_changing_the_driver_for_this_device._If_that_does_not_work__see_your_hardware_documentation._Windows_is_removing_this_device."></span><span id="system_failure__try_changing_the_driver_for_this_device._if_that_does_not_work__see_your_hardware_documentation._windows_is_removing_this_device."></span><span id="SYSTEM_FAILURE__TRY_CHANGING_THE_DRIVER_FOR_THIS_DEVICE._IF_THAT_DOES_NOT_WORK__SEE_YOUR_HARDWARE_DOCUMENTATION._WINDOWS_IS_REMOVING_THIS_DEVICE."></span>**System Fehler: versuchen Sie, den Treiber für dieses Gerät zu ändern. Wenn dies nicht funktioniert, finden Sie weitere Informationen in der Hardware Dokumentation. Dieses Gerät wird von Windows entfernt.** (21)
+<span id="System_failure__Try_changing_the_driver_for_this_device._If_that_does_not_work__see_your_hardware_documentation._Windows_is_removing_this_device."></span><span id="system_failure__try_changing_the_driver_for_this_device._if_that_does_not_work__see_your_hardware_documentation._windows_is_removing_this_device."></span><span id="SYSTEM_FAILURE__TRY_CHANGING_THE_DRIVER_FOR_THIS_DEVICE._IF_THAT_DOES_NOT_WORK__SEE_YOUR_HARDWARE_DOCUMENTATION._WINDOWS_IS_REMOVING_THIS_DEVICE."></span>**Systemfehler: Versuchen Sie, den Treiber für dieses Gerät zu ändern. Wenn dies nicht funktioniert, finden Sie weitere Informationen in der Hardwaredokumentation. Windows entfernt dieses Gerät.** (21)
 
 
 </dt> <dd>
 
-System Fehler. Wenn das Ändern des Gerätetreibers nicht wirksam ist, lesen Sie die Hardware Dokumentation. Das Gerät wird von Windows entfernt.
+Systemfehler. Wenn das Ändern des Gerätetreibers ineffektiv ist, lesen Sie die Hardwaredokumentation. Windows entfernt das Gerät.
 
 </dd> <dt>
 
@@ -881,56 +881,56 @@ Das Gerät ist deaktiviert.
 
 <span id="System_failure__Try_changing_the_driver_for_this_device._If_that_doesn_t_work__see_your_hardware_documentation."></span><span id="system_failure__try_changing_the_driver_for_this_device._if_that_doesn_t_work__see_your_hardware_documentation."></span><span id="SYSTEM_FAILURE__TRY_CHANGING_THE_DRIVER_FOR_THIS_DEVICE._IF_THAT_DOESN_T_WORK__SEE_YOUR_HARDWARE_DOCUMENTATION."></span>
 
-<span id="System_failure__Try_changing_the_driver_for_this_device._If_that_doesn_t_work__see_your_hardware_documentation."></span><span id="system_failure__try_changing_the_driver_for_this_device._if_that_doesn_t_work__see_your_hardware_documentation."></span><span id="SYSTEM_FAILURE__TRY_CHANGING_THE_DRIVER_FOR_THIS_DEVICE._IF_THAT_DOESN_T_WORK__SEE_YOUR_HARDWARE_DOCUMENTATION."></span>**System Fehler: versuchen Sie, den Treiber für dieses Gerät zu ändern. Wenn dies nicht funktioniert, finden Sie weitere Informationen in der Hardware Dokumentation.** (23)
+<span id="System_failure__Try_changing_the_driver_for_this_device._If_that_doesn_t_work__see_your_hardware_documentation."></span><span id="system_failure__try_changing_the_driver_for_this_device._if_that_doesn_t_work__see_your_hardware_documentation."></span><span id="SYSTEM_FAILURE__TRY_CHANGING_THE_DRIVER_FOR_THIS_DEVICE._IF_THAT_DOESN_T_WORK__SEE_YOUR_HARDWARE_DOCUMENTATION."></span>**Systemfehler: Versuchen Sie, den Treiber für dieses Gerät zu ändern. Wenn dies nicht funktioniert, finden Sie weitere Informationen in der Hardwaredokumentation.** (23)
 
 
 </dt> <dd>
 
-System Fehler. Wenn das Ändern des Gerätetreibers nicht wirksam ist, lesen Sie die Hardware Dokumentation.
+Systemfehler. Wenn das Ändern des Gerätetreibers ineffektiv ist, lesen Sie die Hardwaredokumentation.
 
 </dd> <dt>
 
 <span id="This_device_is_not_present__is_not_working_properly__or_does_not_have_all_its_drivers_installed."></span><span id="this_device_is_not_present__is_not_working_properly__or_does_not_have_all_its_drivers_installed."></span><span id="THIS_DEVICE_IS_NOT_PRESENT__IS_NOT_WORKING_PROPERLY__OR_DOES_NOT_HAVE_ALL_ITS_DRIVERS_INSTALLED."></span>
 
-<span id="this_device_is_not_present__is_not_working_properly__or_does_not_have_all_its_drivers_installed."></span><span id="THIS_DEVICE_IS_NOT_PRESENT__IS_NOT_WORKING_PROPERLY__OR_DOES_NOT_HAVE_ALL_ITS_DRIVERS_INSTALLED."></span>**Dieses Gerät ist nicht vorhanden, funktioniert nicht ordnungsgemäß, oder es sind nicht alle Treiber installiert.** (24)
+<span id="this_device_is_not_present__is_not_working_properly__or_does_not_have_all_its_drivers_installed."></span><span id="THIS_DEVICE_IS_NOT_PRESENT__IS_NOT_WORKING_PROPERLY__OR_DOES_NOT_HAVE_ALL_ITS_DRIVERS_INSTALLED."></span>**Dieses Gerät ist nicht vorhanden, funktioniert nicht ordnungsgemäß oder verfügt nicht über alle installierten Treiber.** (24)
 
 
 </dt> <dd>
 
-Das Gerät ist nicht vorhanden, funktioniert nicht ordnungsgemäß, oder es sind nicht alle Treiber installiert.
+Das Gerät ist nicht vorhanden, funktioniert nicht ordnungsgemäß oder verfügt nicht über alle installierten Treiber.
 
 </dd> <dt>
 
 <span id="Windows_is_still_setting_up_this_device."></span><span id="windows_is_still_setting_up_this_device."></span><span id="WINDOWS_IS_STILL_SETTING_UP_THIS_DEVICE."></span>
 
-<span id="windows_is_still_setting_up_this_device."></span><span id="WINDOWS_IS_STILL_SETTING_UP_THIS_DEVICE."></span>**Das Gerät wird weiterhin von Windows eingerichtet.** (25)
+<span id="windows_is_still_setting_up_this_device."></span><span id="WINDOWS_IS_STILL_SETTING_UP_THIS_DEVICE."></span>**Windows richtet dieses Gerät noch ein.** (25)
 
 
 </dt> <dd>
 
-Das Gerät wird weiterhin von Windows eingerichtet.
+Windows richtet das Gerät noch ein.
 
 </dd> <dt>
 
 <span id="Windows_is_still_setting_up_this_device."></span><span id="windows_is_still_setting_up_this_device."></span><span id="WINDOWS_IS_STILL_SETTING_UP_THIS_DEVICE."></span>
 
-<span id="windows_is_still_setting_up_this_device."></span><span id="WINDOWS_IS_STILL_SETTING_UP_THIS_DEVICE."></span>**Das Gerät wird weiterhin von Windows eingerichtet.** (26)
+<span id="windows_is_still_setting_up_this_device."></span><span id="WINDOWS_IS_STILL_SETTING_UP_THIS_DEVICE."></span>**Windows richtet dieses Gerät noch ein.** (26)
 
 
 </dt> <dd>
 
-Das Gerät wird weiterhin von Windows eingerichtet.
+Windows richtet das Gerät noch ein.
 
 </dd> <dt>
 
 <span id="This_device_does_not_have_valid_log_configuration."></span><span id="this_device_does_not_have_valid_log_configuration."></span><span id="THIS_DEVICE_DOES_NOT_HAVE_VALID_LOG_CONFIGURATION."></span>
 
-<span id="this_device_does_not_have_valid_log_configuration."></span><span id="THIS_DEVICE_DOES_NOT_HAVE_VALID_LOG_CONFIGURATION."></span>**Dieses Gerät verfügt nicht über eine gültige Protokoll Konfiguration.** (27)
+<span id="this_device_does_not_have_valid_log_configuration."></span><span id="THIS_DEVICE_DOES_NOT_HAVE_VALID_LOG_CONFIGURATION."></span>**Dieses Gerät verfügt nicht über eine gültige Protokollkonfiguration.** (27)
 
 
 </dt> <dd>
 
-Das Gerät verfügt nicht über eine gültige Protokoll Konfiguration.
+Das Gerät verfügt nicht über eine gültige Protokollkonfiguration.
 
 </dd> <dt>
 
@@ -947,7 +947,7 @@ Gerätetreiber sind nicht installiert.
 
 <span id="This_device_is_disabled_because_the_firmware_of_the_device_did_not_give_it_the_required_resources."></span><span id="this_device_is_disabled_because_the_firmware_of_the_device_did_not_give_it_the_required_resources."></span><span id="THIS_DEVICE_IS_DISABLED_BECAUSE_THE_FIRMWARE_OF_THE_DEVICE_DID_NOT_GIVE_IT_THE_REQUIRED_RESOURCES."></span>
 
-<span id="this_device_is_disabled_because_the_firmware_of_the_device_did_not_give_it_the_required_resources."></span><span id="THIS_DEVICE_IS_DISABLED_BECAUSE_THE_FIRMWARE_OF_THE_DEVICE_DID_NOT_GIVE_IT_THE_REQUIRED_RESOURCES."></span>**Dieses Gerät ist deaktiviert, da die Firmware des Geräts ihm nicht die erforderlichen Ressourcen erteilt hat.** (29)
+<span id="this_device_is_disabled_because_the_firmware_of_the_device_did_not_give_it_the_required_resources."></span><span id="THIS_DEVICE_IS_DISABLED_BECAUSE_THE_FIRMWARE_OF_THE_DEVICE_DID_NOT_GIVE_IT_THE_REQUIRED_RESOURCES."></span>**Dieses Gerät ist deaktiviert, da die Firmware des Geräts ihm nicht die erforderlichen Ressourcen bereitgestellt hat.** (29)
 
 
 </dt> <dd>
@@ -958,32 +958,32 @@ Das Gerät ist deaktiviert. Die Gerätefirmware hat nicht die erforderlichen Res
 
 <span id="This_device_is_using_an_Interrupt_Request__IRQ__resource_that_another_device_is_using."></span><span id="this_device_is_using_an_interrupt_request__irq__resource_that_another_device_is_using."></span><span id="THIS_DEVICE_IS_USING_AN_INTERRUPT_REQUEST__IRQ__RESOURCE_THAT_ANOTHER_DEVICE_IS_USING."></span>
 
-<span id="this_device_is_using_an_interrupt_request__irq__resource_that_another_device_is_using."></span><span id="THIS_DEVICE_IS_USING_AN_INTERRUPT_REQUEST__IRQ__RESOURCE_THAT_ANOTHER_DEVICE_IS_USING."></span>**Dieses Gerät verwendet eine interruptanforderungs-Ressource (UNQ), die von einem anderen Gerät verwendet wird.** (30)
+<span id="this_device_is_using_an_interrupt_request__irq__resource_that_another_device_is_using."></span><span id="THIS_DEVICE_IS_USING_AN_INTERRUPT_REQUEST__IRQ__RESOURCE_THAT_ANOTHER_DEVICE_IS_USING."></span>**Dieses Gerät verwendet eine IRQ-Ressource (Interrupt Request), die von einem anderen Gerät verwendet wird.** (30)
 
 
 </dt> <dd>
 
-Das Gerät verwendet eine UNQ-Ressource, die von einem anderen Gerät verwendet wird.
+Das Gerät verwendet eine IRQ-Ressource, die von einem anderen Gerät verwendet wird.
 
 </dd> <dt>
 
 <span id="This_device_is_not_working_properly_because_Windows_cannot_load_the_drivers_required_for_this_device."></span><span id="this_device_is_not_working_properly_because_windows_cannot_load_the_drivers_required_for_this_device."></span><span id="THIS_DEVICE_IS_NOT_WORKING_PROPERLY_BECAUSE_WINDOWS_CANNOT_LOAD_THE_DRIVERS_REQUIRED_FOR_THIS_DEVICE."></span>
 
-<span id="this_device_is_not_working_properly_because_windows_cannot_load_the_drivers_required_for_this_device."></span><span id="THIS_DEVICE_IS_NOT_WORKING_PROPERLY_BECAUSE_WINDOWS_CANNOT_LOAD_THE_DRIVERS_REQUIRED_FOR_THIS_DEVICE."></span>**Dieses Gerät funktioniert nicht ordnungsgemäß, da Windows die für dieses Gerät erforderlichen Treiber nicht laden kann.** 31,5
+<span id="this_device_is_not_working_properly_because_windows_cannot_load_the_drivers_required_for_this_device."></span><span id="THIS_DEVICE_IS_NOT_WORKING_PROPERLY_BECAUSE_WINDOWS_CANNOT_LOAD_THE_DRIVERS_REQUIRED_FOR_THIS_DEVICE."></span>**Dieses Gerät funktioniert nicht ordnungsgemäß, da Windows die für dieses Gerät erforderlichen Treiber nicht laden können.** (31)
 
 
 </dt> <dd>
 
-Das Gerät funktioniert nicht ordnungsgemäß. Die erforderlichen Gerätetreiber können nicht geladen werden.
+Das Gerät funktioniert nicht ordnungsgemäß. Windows können die erforderlichen Gerätetreiber nicht laden.
 
 </dd> </dl>
 
 </dd> <dt>
 
-**Configmanageruserconfig**
+**ConfigManagerUserConfig**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **boolescher** Wert
+Datentyp: **boolescher Wert**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
@@ -998,19 +998,19 @@ Diese Eigenschaft wird von [**CIM \_ LogicalDevice**](cim-logicaldevice.md)geerb
 
 </dd> <dt>
 
-**"Name der Klassenname"**
+**CreationClassName**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [ **CIM- \_ Taste**](../wmisdk/standard-wmi-qualifiers.md)
+Qualifizierer: [ **\_ CIM-Schlüssel**](../wmisdk/standard-wmi-qualifiers.md)
 </dt> </dl>
 
-Der Name der ersten konkreten Klasse, die in der Vererbungs Kette angezeigt werden soll, die bei der Erstellung einer Instanz verwendet wird. Bei Verwendung mit den anderen Schlüsseleigenschaften der-Klasse ermöglicht die-Eigenschaft, dass alle Instanzen dieser Klasse und deren Unterklassen eindeutig identifiziert werden.
+Name der ersten konkreten Klasse, die in der Vererbungskette angezeigt wird, die bei der Erstellung einer Instanz verwendet wird. Bei Verwendung mit den anderen Schlüsseleigenschaften der -Klasse ermöglicht die -Eigenschaft, dass alle Instanzen dieser Klasse und deren Unterklassen eindeutig identifiziert werden.
 
 Diese Eigenschaft wird von [**CIM \_ LogicalDevice**](cim-logicaldevice.md)geerbt.
 
@@ -1019,13 +1019,13 @@ Diese Eigenschaft wird von [**CIM \_ LogicalDevice**](cim-logicaldevice.md)geerb
 **Beschreibung**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**Display Name**](../wmisdk/standard-qualifiers.md) ("Description")
+Qualifizierer: [**DisplayName**](../wmisdk/standard-qualifiers.md) ("Beschreibung")
 </dt> </dl>
 
 Eine Beschreibung des Objekts.
@@ -1034,16 +1034,16 @@ Diese Eigenschaft wird von [**CIM \_ ManagedSystemElement**](cim-managedsystemel
 
 </dd> <dt>
 
-**DeviceID**
+**Deviceid**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**Key**](../wmisdk/key-qualifier.md), [**override**](../wmisdk/standard-qualifiers.md) ("DeviceID"), [**mappingstrings**](../wmisdk/standard-qualifiers.md) ("Win32Registry \| System \\ \\ CurrentControlSet \\ \\ Control \\ \\ Class \\ \\ {4D36E972-E325-11CE-BFC1-08002BE10318}")
+Qualifizierer: [**Key**](../wmisdk/key-qualifier.md), [**Override**](../wmisdk/standard-qualifiers.md) ("DeviceId"), [**MappingStrings**](../wmisdk/standard-qualifiers.md) ("Win32Registry \| System \\ \\ CurrentControlSet \\ \\ Control Class \\ \\ \\ \\ {4D36E972-E325-11CE-BFC1-08002BE10318}")
 </dt> </dl>
 
 Eindeutiger Bezeichner des Netzwerkadapters von anderen Geräten im System.
@@ -1052,10 +1052,10 @@ Diese Eigenschaft wird von [**CIM \_ LogicalDevice**](cim-logicaldevice.md)geerb
 
 </dd> <dt>
 
-**Errorgelöscht**
+**ErrorCleared**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **boolescher** Wert
+Datentyp: **boolescher Wert**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
@@ -1070,13 +1070,13 @@ Diese Eigenschaft wird von [**CIM \_ LogicalDevice**](cim-logicaldevice.md)geerb
 **ErrorDescription**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Weitere Informationen zu dem Fehler, der in " **LastErrorCode**" aufgezeichnet wurde, sowie Informationen zu ggf. durchzuführenden Korrekturmaßnahmen.
+Weitere Informationen zu dem in **LastErrorCode** aufgezeichneten Fehler und Informationen zu ggf. ergriffenen Korrekturmaßnahmen.
 
 Diese Eigenschaft wird von [**CIM \_ LogicalDevice**](cim-logicaldevice.md)geerbt.
 
@@ -1085,7 +1085,7 @@ Diese Eigenschaft wird von [**CIM \_ LogicalDevice**](cim-logicaldevice.md)geerb
 **GUID**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
@@ -1098,16 +1098,16 @@ Global eindeutiger Bezeichner für die Verbindung.
 **Index**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt32**
+Datentyp: **uint32**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**mappingstrings**](../wmisdk/standard-qualifiers.md) ("Win32Registry \| System \\ \\ CurrentControlSet \\ \\ Control \\ \\ Class \\ \\ {4D36E972-E325-11CE-BFC1-08002BE10318}")
+Qualifizierer: [**MappingStrings**](../wmisdk/standard-qualifiers.md) ("Win32Registry \| System \\ \\ CurrentControlSet \\ \\ Control Class \\ \\ \\ \\ {4D36E972-E325-11CE-BFC1-08002BE10318}")
 </dt> </dl>
 
-Index Nummer des in der Systemregistrierung gespeicherten Netzwerkadapters.
+Indexnummer des Netzwerkadapters, der in der Systemregistrierung gespeichert ist.
 
 Beispiel: 0
 
@@ -1116,33 +1116,33 @@ Beispiel: 0
 **InstallDate**
 </dt> <dd> <dl> <dt>
 
-**Datentyp: DateTime**
+Datentyp: **datetime**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**mappingstrings**](../wmisdk/standard-qualifiers.md) ("MIF". DMTF \| ComponentID \| 001,5 "), [**Display Name**](../wmisdk/standard-qualifiers.md) (" Install Date ")
+Qualifizierer: [**MappingStrings**](../wmisdk/standard-qualifiers.md) ("MIF. DMTF \| ComponentID \| 001.5"), [**DisplayName**](../wmisdk/standard-qualifiers.md) ("Installationsdatum")
 </dt> </dl>
 
-Datum und Uhrzeit der Installation des-Objekts. Für diese Eigenschaft ist kein Wert erforderlich, um anzugeben, dass das Objekt installiert ist.
+Datum und Uhrzeit der Installation des Objekts. Diese Eigenschaft benötigt keinen Wert, um anzugeben, dass das Objekt installiert ist.
 
 Diese Eigenschaft wird von [**CIM \_ ManagedSystemElement**](cim-managedsystemelement.md)geerbt.
 
-Diese Eigenschaft wurde noch nicht implementiert. Standardmäßig wird ein **null** -Wert zurückgegeben.
+Diese Eigenschaft wurde noch nicht implementiert. Standardmäßig wird ein **NULL-Wert** zurückgegeben.
 
 </dd> <dt>
 
 **Installiert**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **boolescher** Wert
+Datentyp: **boolescher Wert**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**veraltet**](../wmisdk/standard-wmi-qualifiers.md), [**mappingstrings**](../wmisdk/standard-qualifiers.md) ("Win32Registry \| Software \\ \\ Microsoft \\ \\ Windows NT \\ \\ CurrentVersion \\ \\ networkcards \| driverdate")
+Qualifizierer: [**VERALTET,**](../wmisdk/standard-wmi-qualifiers.md) [**MappingStrings**](../wmisdk/standard-qualifiers.md) ("Win32Registry \| Software Microsoft Windows NT \\ \\ \\ \\ \\ \\ CurrentVersion \\ \\ NetworkCards \| DriverDate")
 </dt> </dl>
 
 **True** gibt an, dass der Netzwerkadapter im System installiert ist.
@@ -1152,20 +1152,20 @@ Qualifizierer: [**veraltet**](../wmisdk/standard-wmi-qualifiers.md), [**mappings
 **InterfaceIndex**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt32**
+Datentyp: **uint32**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Indexwert, der die lokale Netzwerkschnittstelle eindeutig identifiziert. Der Wert in dieser Eigenschaft ist identisch mit dem Wert in der **interfakeindex** -Eigenschaft in der Instanz von [**Win32 \_ IP4RouteTable**](/previous-versions/windows/desktop/wmiiprouteprov/win32-ip4routetable) , die die Netzwerkschnittstelle in der Routing Tabelle darstellt.
+Indexwert, der die lokale Netzwerkschnittstelle eindeutig identifiziert. Der Wert in dieser Eigenschaft entspricht dem Wert in der **InterfaceIndex-Eigenschaft** in der [**Win32-IP4RouteTable-Instanz, \_**](/previous-versions/windows/desktop/wmiiprouteprov/win32-ip4routetable) die die Netzwerkschnittstelle in der Routingtabelle darstellt.
 
 </dd> <dt>
 
 **LastErrorCode**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt32**
+Datentyp: **uint32**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
@@ -1180,57 +1180,57 @@ Diese Eigenschaft wird von [**CIM \_ LogicalDevice**](cim-logicaldevice.md)geerb
 **MACAddress**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**mappingstrings**](../wmisdk/standard-qualifiers.md) ("Win32API \| Device Input and Output Functions \| [**DeviceIoControl**](/windows/win32/api/ioapiset/nf-ioapiset-deviceiocontrol)")
+Qualifizierer: [**MappingStrings**](../wmisdk/standard-qualifiers.md) ("Win32API-Geräteeingabe- \| und -ausgabefunktionen \| [**DeviceIoControl")**](/windows/win32/api/ioapiset/nf-ioapiset-deviceiocontrol)
 </dt> </dl>
 
-Media Access Control-Adresse für diesen Netzwerkadapter. Eine Mac-Adresse ist eine eindeutige 48-Bit-Nummer, die dem Netzwerkadapter vom Hersteller zugewiesen wird. Dieser Netzwerkadapter wird eindeutig identifiziert und zum Mapping der TCP/IP-Netzwerkkommunikation verwendet.
+Medienzugriffssteuerungsadresse für diesen Netzwerkadapter. Eine MAC-Adresse ist eine eindeutige 48-Bit-Nummer, die dem Netzwerkadapter vom Hersteller zugewiesen wird. Dieser Netzwerkadapter wird eindeutig identifiziert und für die Zuordnung der TCP/IP-Netzwerkkommunikation verwendet.
 
 </dd> <dt>
 
 **Manufacturer**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**mappingstrings**](../wmisdk/standard-qualifiers.md) ("Win32Registry \| Software \\ \\ Microsoft \\ \\ Windows NT \\ \\ CurrentVersion \\ \\ Network Cards \| Manufacturer")
+Qualifizierer: [**MappingStrings**](../wmisdk/standard-qualifiers.md) ("Win32Registry \| Software Microsoft Windows NT \\ \\ \\ \\ \\ \\ CurrentVersion \\ \\ NetworkCards \| Manufacturer")
 </dt> </dl>
 
-Der Name des Herstellers des Netzwerkadapters.
+Name des Herstellers des Netzwerkadapters.
 
-Beispiel: "3Com"
+Beispiel: "3COM"
 
 </dd> <dt>
 
-**Maxnuma**
+**MaxNumberControlled**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt32**
+Datentyp: **uint32**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**mappingstrings**](../wmisdk/standard-qualifiers.md) ("MIF". DMTF \| Bus Port \| 001,9 \| Maximale Anzahl von Anlagen ")
+Qualifizierer: [**MappingStrings**](../wmisdk/standard-qualifiers.md) ("MIF. \|DMTF-Busport \| 001.9 \| Maximale Anzahl von Anlagen")
 </dt> </dl>
 
-Maximale Anzahl von direkt adressierbaren Ports, die von diesem Netzwerkadapter unterstützt werden. Wenn die Zahl unbekannt ist, sollte ein Wert von 0 (null) verwendet werden.
+Maximale Anzahl direkt adressierbarer Ports, die von diesem Netzwerkadapter unterstützt werden. Wenn die Zahl unbekannt ist, sollte der Wert 0 (null) verwendet werden.
 
 </dd> <dt>
 
-**MAXSPEED**
+**MaxSpeed**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt64**
+Datentyp: **uint64**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
@@ -1239,29 +1239,29 @@ Zugriffstyp: Schreibgeschützt
 Qualifizierer: [**Einheiten**](../wmisdk/standard-qualifiers.md) ("Bits pro Sekunde")
 </dt> </dl>
 
-Maximale Geschwindigkeit in Bits pro Sekunde für den Netzwerkadapter.
+Maximale Geschwindigkeit (in Bits pro Sekunde) für den Netzwerkadapter.
 
-Diese Eigenschaft wird vom [**CIM- \_ NetworkAdapter**](cim-networkadapter.md)geerbt.
+Diese Eigenschaft wird von [**CIM \_ NetworkAdapter**](cim-networkadapter.md)geerbt.
 
-Diese Eigenschaft wurde noch nicht implementiert. Standardmäßig wird ein **null** -Wert zurückgegeben.
+Diese Eigenschaft wurde noch nicht implementiert. Standardmäßig wird ein **NULL-Wert** zurückgegeben.
 
-Weitere Informationen zur Verwendung von **UInt64** -Werten in Skripts finden Sie unter [Scripting in WMI](/previous-versions//aa393262(v=vs.85)).
+Weitere Informationen zur Verwendung von **uint64-Werten** in Skripts finden Sie unter [Skripterstellung in WMI.](/previous-versions//aa393262(v=vs.85))
 
 </dd> <dt>
 
 **Name**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**Display Name**](../wmisdk/standard-qualifiers.md) ("Name")
+Qualifizierer: [**DisplayName**](../wmisdk/standard-qualifiers.md) ("Name")
 </dt> </dl>
 
-Die Bezeichnung, nach der das-Objekt bekannt ist. Bei einer Unterklasse kann die Eigenschaft als Schlüsseleigenschaft überschrieben werden.
+Bezeichnung, mit der das Objekt bekannt ist. Bei einer Unterklasse kann die Eigenschaft als Schlüsseleigenschaft überschrieben werden.
 
 Diese Eigenschaft wird von [**CIM \_ ManagedSystemElement**](cim-managedsystemelement.md)geerbt.
 
@@ -1270,26 +1270,26 @@ Diese Eigenschaft wird von [**CIM \_ ManagedSystemElement**](cim-managedsystemel
 **NetConnectionID**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
 </dt> </dl>
 
-Der Name der Netzwerkverbindung, der in der Systemsteuerung unter " **Netzwerkverbindungen** " angezeigt wird.
+Name der Netzwerkverbindung, wie er im Programm **Netzwerkverbindungen** Systemsteuerung angezeigt wird.
 
 </dd> <dt>
 
 **NetConnectionStatus**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt16**
+Datentyp: **uint16**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Status der Netzwerkadapter Verbindung mit dem Netzwerk.
+Status der Netzwerkadapterverbindung mit dem Netzwerk.
 
 <dt>
 
@@ -1302,7 +1302,7 @@ Status der Netzwerkadapter Verbindung mit dem Netzwerk.
 
 <span id="Connecting"></span><span id="connecting"></span><span id="CONNECTING"></span>
 
-**Verbindung** wird hergestellt (1)
+**Herstellen einer Verbindung** (1)
 
 
 </dt> <dd></dd> <dt>
@@ -1316,7 +1316,7 @@ Status der Netzwerkadapter Verbindung mit dem Netzwerk.
 
 <span id="Disconnecting"></span><span id="disconnecting"></span><span id="DISCONNECTING"></span>
 
-**Trennen der Verbindung** (3)
+**Trennen** (3)
 
 
 </dt> <dd></dd> <dt>
@@ -1337,7 +1337,7 @@ Status der Netzwerkadapter Verbindung mit dem Netzwerk.
 
 <span id="Hardware_Malfunction"></span><span id="hardware_malfunction"></span><span id="HARDWARE_MALFUNCTION"></span>
 
-**Hardware** Fehler (6)
+**Hardwarefehler** (6)
 
 
 </dt> <dd></dd> <dt>
@@ -1351,7 +1351,7 @@ Status der Netzwerkadapter Verbindung mit dem Netzwerk.
 
 <span id="Authenticating"></span><span id="authenticating"></span><span id="AUTHENTICATING"></span>
 
-**Authentifizieren** (8)
+**Authentifizierung** (8)
 
 
 </dt> <dd></dd> <dt>
@@ -1365,7 +1365,7 @@ Status der Netzwerkadapter Verbindung mit dem Netzwerk.
 
 <span id="Authentication_Failed"></span><span id="authentication_failed"></span><span id="AUTHENTICATION_FAILED"></span>
 
-Fehler bei der **Authentifizierung** (10).
+**Authentifizierungsfehler** (10)
 
 
 </dt> <dd></dd> <dt>
@@ -1379,7 +1379,7 @@ Fehler bei der **Authentifizierung** (10).
 
 <span id="Credentials_Required"></span><span id="credentials_required"></span><span id="CREDENTIALS_REQUIRED"></span>
 
-**Erforderliche Anmelde** Informationen (12)
+**Erforderliche Anmeldeinformationen** (12)
 
 
 </dt> <dd></dd> <dt>
@@ -1389,80 +1389,80 @@ Fehler bei der **Authentifizierung** (10).
 **Andere**
 
 
-</dt> <dd>13 – 65535</dd> </dl>
+</dt> <dd>13–65535</dd> </dl>
 
 </dd> <dt>
 
 **NetEnabled**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **boolescher** Wert
+Datentyp: **boolescher Wert**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Gibt an, ob der Adapter aktiviert ist. **True** gibt an, dass der Adapter aktiviert ist. Sie können die NIC mithilfe der Methoden [**enable**](enable-method-in-class-win32-networkadapter.md) und [**Deaktivieren**](disable-method-in-class-win32-networkadapter.md) aktivieren oder deaktivieren.
+Gibt an, ob der Adapter aktiviert ist oder nicht. **True** gibt an, dass der Adapter aktiviert ist. Sie können die NIC mithilfe der Methoden [**Aktivieren**](enable-method-in-class-win32-networkadapter.md) und [**Deaktivieren**](disable-method-in-class-win32-networkadapter.md) aktivieren oder deaktivieren.
 
 </dd> <dt>
 
-**"Networkaddresses"**
+**NetworkAddresses**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichen** folgen Array
+Datentyp: **Zeichenfolgenarray**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**maxlen**](../wmisdk/standard-qualifiers.md) (64), [**mappingstrings**](../wmisdk/standard-qualifiers.md) ("MIF". DMTF- \| Netzwerk Adapter 802-Port \| 001,3 ")
+Qualifizierer: [**MaxLen**](../wmisdk/standard-qualifiers.md) (64), [**MappingStrings**](../wmisdk/standard-qualifiers.md) ("MIF. \|DMTF-Netzwerkadapter 802 Port \| 001.3")
 </dt> </dl>
 
 Array von Netzwerkadressen für einen Adapter.
 
-Diese Eigenschaft wird vom [**CIM- \_ NetworkAdapter**](cim-networkadapter.md)geerbt.
+Diese Eigenschaft wird von [**CIM \_ NetworkAdapter**](cim-networkadapter.md)geerbt.
 
-Diese Eigenschaft wurde noch nicht implementiert. Standardmäßig wird ein **null** -Wert zurückgegeben.
+Diese Eigenschaft wurde noch nicht implementiert. Standardmäßig wird ein **NULL-Wert** zurückgegeben.
 
 </dd> <dt>
 
-**Permanent Address**
+**PermanentAddress**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**maxlen**](../wmisdk/standard-qualifiers.md) (64), [**mappingstrings**](../wmisdk/standard-qualifiers.md) ("MIF". DMTF- \| Netzwerk Adapter 802-Port \| 001,2 ")
+Qualifizierer: [**MaxLen**](../wmisdk/standard-qualifiers.md) (64), [**MappingStrings**](../wmisdk/standard-qualifiers.md) ("MIF. \|DMTF-Netzwerkadapter 802 Port \| 001.2")
 </dt> </dl>
 
-Die Netzwerkadresse ist in einem Adapter hart codiert. Diese hart codierte Adresse kann durch ein Firmwareupdate oder eine Softwarekonfiguration geändert werden. Wenn dies der Fall ist, sollte dieses Feld aktualisiert werden, wenn die Änderung vorgenommen wird. Die-Eigenschaft sollte leer gelassen werden, wenn für den Netzwerkadapter keine hart codierte Adresse vorhanden ist.
+Netzwerkadresse, die in einen Adapter hart codiert ist. Diese hart codierte Adresse kann durch Firmwareupgrade oder Softwarekonfiguration geändert werden. Wenn ja, sollte dieses Feld aktualisiert werden, wenn die Änderung vorgenommen wird. Die Eigenschaft sollte leer gelassen werden, wenn keine hart codierte Adresse für den Netzwerkadapter vorhanden ist.
 
-Diese Eigenschaft wird vom [**CIM- \_ NetworkAdapter**](cim-networkadapter.md)geerbt.
+Diese Eigenschaft wird von [**CIM \_ NetworkAdapter**](cim-networkadapter.md)geerbt.
 
-Diese Eigenschaft wurde noch nicht implementiert. Standardmäßig wird ein **null** -Wert zurückgegeben.
+Diese Eigenschaft wurde noch nicht implementiert. Standardmäßig wird ein **NULL-Wert** zurückgegeben.
 
 </dd> <dt>
 
 **PhysicalAdapter**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **boolescher** Wert
+Datentyp: **boolescher Wert**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Gibt an, ob es sich bei dem Adapter um einen physischen oder logischen Adapter handelt. **True** gibt an, dass der Adapter physisch ist.
+Gibt an, ob der Adapter ein physischer oder logischer Adapter ist. **True** gibt an, dass der Adapter physisch ist.
 
 </dd> <dt>
 
 **PNPDeviceID**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
@@ -1471,18 +1471,18 @@ Zugriffstyp: Schreibgeschützt
 Qualifizierer: [**Schema**](../wmisdk/standard-qualifiers.md) ("Win32")
 </dt> </dl>
 
-Windows Plug & Play Geräte Bezeichner des logischen Geräts.
+Windows Plug & Play Gerätebezeichner des logischen Geräts.
 
 Diese Eigenschaft wird von [**CIM \_ LogicalDevice**](cim-logicaldevice.md)geerbt.
 
-Beispiel: " \* PNP030b"
+Beispiel: \* "PNP030b"
 
 </dd> <dt>
 
-**Powermanagementfunktionen**
+**PowerManagementCapabilities**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt16** Array
+Datentyp: **uint16-Array**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
@@ -1522,70 +1522,70 @@ Diese Eigenschaft wird von [**CIM \_ LogicalDevice**](cim-logicaldevice.md)geerb
 
 </dt> <dd>
 
-Die Energie Verwaltungsfunktionen sind zurzeit aktiviert, aber der genaue Featuresatz ist unbekannt, oder die Informationen sind nicht verfügbar.
+Die Energieverwaltungsfeatures sind derzeit aktiviert, aber der genaue Funktionssatz ist unbekannt, oder die Informationen sind nicht verfügbar.
 
 </dd> <dt>
 
 <span id="Power_Saving_Modes_Entered_Automatically"></span><span id="power_saving_modes_entered_automatically"></span><span id="POWER_SAVING_MODES_ENTERED_AUTOMATICALLY"></span>
 
-<span id="Power_Saving_Modes_Entered_Automatically"></span><span id="power_saving_modes_entered_automatically"></span><span id="POWER_SAVING_MODES_ENTERED_AUTOMATICALLY"></span>**Automatisch eingegebene Energiespar Modi** (4)
+<span id="Power_Saving_Modes_Entered_Automatically"></span><span id="power_saving_modes_entered_automatically"></span><span id="POWER_SAVING_MODES_ENTERED_AUTOMATICALLY"></span>**Automatisch eingegebene Energiesparmodi** (4)
 
 
 </dt> <dd>
 
-Das Gerät kann seinen Energiezustand basierend auf der Verwendung oder anderen Kriterien ändern.
+Das Gerät kann seinen Energiezustand basierend auf der Nutzung oder anderen Kriterien ändern.
 
 </dd> <dt>
 
 <span id="Power_State_Settable"></span><span id="power_state_settable"></span><span id="POWER_STATE_SETTABLE"></span>
 
-<span id="Power_State_Settable"></span><span id="power_state_settable"></span><span id="POWER_STATE_SETTABLE"></span>**Einsetzbaren Energiezustand** (5)
+<span id="Power_State_Settable"></span><span id="power_state_settable"></span><span id="POWER_STATE_SETTABLE"></span>**Power State Settable** (5)
 
 
 </dt> <dd>
 
-Die [**SetPowerState**](setpowerstate-method-in-class-cim-controller.md) -Methode wird unterstützt. Diese Methode wird in der übergeordneten [**CIM \_ LogicalDevice**](cim-logicaldevice.md) -Klasse gefunden und kann implementiert werden. Weitere Informationen finden Sie unter [Entwerfen von Managed Object Format-Klassen (MOF)](../wmisdk/designing-managed-object-format--mof--classes.md).
+Die [**SetPowerState-Methode**](setpowerstate-method-in-class-cim-controller.md) wird unterstützt. Diese Methode befindet sich in der übergeordneten [**CIM \_ LogicalDevice-Klasse**](cim-logicaldevice.md) und kann implementiert werden. Weitere Informationen finden Sie unter [Entwerfen Managed Object Format -Klassen (MOF).](../wmisdk/designing-managed-object-format--mof--classes.md)
 
 </dd> <dt>
 
 <span id="Power_Cycling_Supported"></span><span id="power_cycling_supported"></span><span id="POWER_CYCLING_SUPPORTED"></span>
 
-<span id="Power_Cycling_Supported"></span><span id="power_cycling_supported"></span><span id="POWER_CYCLING_SUPPORTED"></span>**Unterstützung für Power Cycling** (6)
+<span id="Power_Cycling_Supported"></span><span id="power_cycling_supported"></span><span id="POWER_CYCLING_SUPPORTED"></span>**Power-Bike unterstützt** (6)
 
 
 </dt> <dd>
 
-Die [**SetPowerState**](setpowerstate-method-in-class-cim-controller.md) -Methode kann aufgerufen werden, wenn der *PowerState* -Parameter auf 5 (Power Cycle) festgelegt ist.
+Die [**SetPowerState-Methode**](setpowerstate-method-in-class-cim-controller.md) kann mit dem *PowerState-Parameter* aufgerufen werden, der auf 5 (Power Cycle) festgelegt ist.
 
 </dd> <dt>
 
 <span id="Timed_Power_On_Supported"></span><span id="timed_power_on_supported"></span><span id="TIMED_POWER_ON_SUPPORTED"></span>
 
-<span id="Timed_Power_On_Supported"></span><span id="timed_power_on_supported"></span><span id="TIMED_POWER_ON_SUPPORTED"></span>**Unterstützte Unterstützung** (7)
+<span id="Timed_Power_On_Supported"></span><span id="timed_power_on_supported"></span><span id="TIMED_POWER_ON_SUPPORTED"></span>**Timed Power On Supported** (7)
 
 
 </dt> <dd>
 
-Zeitgesteuerte Power-On unterstützt
+Timed Power-On Supported
 
-Die [**SetPowerState**](setpowerstate-method-in-class-cim-controller.md) -Methode kann aufgerufen werden, wenn der *PowerState* -Parameter auf 5 (Power Cycle) und die *Uhrzeit* auf ein bestimmtes Datum und eine bestimmte Uhrzeit bzw. ein bestimmtes Intervall festgelegt ist.
+Die [**SetPowerState-Methode**](setpowerstate-method-in-class-cim-controller.md) kann aufgerufen werden, wenn der *PowerState-Parameter* auf 5 (Power Cycle) und *Time* auf ein bestimmtes Datum und eine bestimmte Uhrzeit oder ein bestimmtes Intervall für das Ein-/Aus-Setzen festgelegt ist.
 
 </dd> </dl>
 
 </dd> <dt>
 
-**Powermanagementsupported**
+**PowerManagementSupported**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **boolescher** Wert
+Datentyp: **boolescher Wert**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Wenn der Wert **true** ist, kann das Gerät Energie gesteuert werden (kann in den Unterbrechungs Modus versetzt werden usw.). Die-Eigenschaft gibt nicht an, dass die Energie Verwaltungsfunktionen zurzeit aktiviert sind, sondern nur, dass das logische Gerät für die Energie Verwaltung geeignet ist.
+True **gibt an,** dass das Gerät mit Strom verwaltet werden kann (kann in den Modus "Aussetzen" und so weiter) übertragen werden. Die -Eigenschaft gibt nicht an, dass energieverwaltungsfeatures derzeit aktiviert sind, sondern nur, dass das logische Gerät energieverwaltungsfähig ist.
 
-Diese Eigenschaft wird von [**CIM \_ LogicalDevice**](cim-logicaldevice.md)geerbt.
+Diese Eigenschaft wird von [**CIM \_ LogicalDevice geerbt.**](cim-logicaldevice.md)
 
 </dd> <dt>
 
@@ -1598,16 +1598,16 @@ Datentyp: **Zeichenfolge**
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**mappingstrings**](../wmisdk/standard-qualifiers.md) ("Win32Registry \| Software \\ \\ Microsoft \\ \\ Windows NT \\ \\ CurrentVersion \\ \\ Network Cards \| ServiceName")
+Qualifizierer: [**MappingStrings**](../wmisdk/standard-qualifiers.md) ("Win32Registry \| Software Microsoft Windows NT \\ \\ \\ \\ \\ \\ CurrentVersion \\ \\ NetworkCards \| ServiceName")
 </dt> </dl>
 
-Der Produktname des Netzwerkadapters.
+Produktname des Netzwerkadapters.
 
 Beispiel: "Fast EtherLink XL"
 
 </dd> <dt>
 
-**Service Name**
+**Servicename**
 </dt> <dd> <dl> <dt>
 
 Datentyp: **Zeichenfolge**
@@ -1616,10 +1616,10 @@ Datentyp: **Zeichenfolge**
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**mappingstrings**](../wmisdk/standard-qualifiers.md) ("Win32Registry \| Software \\ \\ Microsoft \\ \\ Windows NT \\ \\ CurrentVersion \\ \\ Network Cards \| ProductName")
+Qualifizierer: [**MappingStrings**](../wmisdk/standard-qualifiers.md) ("Win32Registry \| Software Microsoft Windows NT \\ \\ \\ \\ \\ \\ CurrentVersion \\ \\ NetworkCards \| ProductName")
 </dt> </dl>
 
-Der Dienst Name des Netzwerkadapters. Dieser Name ist in der Regel kürzer als der vollständige Produktname.
+Dienstname des Netzwerkadapters. Dieser Name ist in der Regel kürzer als der vollständige Produktname.
 
 Beispiel: "Elnkii"
 
@@ -1628,20 +1628,20 @@ Beispiel: "Elnkii"
 **Geschwindigkeit**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt64**
+Datentyp: **uint64**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**mappingstrings**](../wmisdk/standard-qualifiers.md) ("MIB. IETF \| RFC1213-MIB. IfSpeed "," MIF. DMTF- \| Netzwerk Adapter 802-Port \| 001,5 "), [**Einheiten**](../wmisdk/standard-qualifiers.md) (Bits pro Sekunde)
+Qualifizierer: [**MappingStrings**](../wmisdk/standard-qualifiers.md) ("MIB. IETF \| RFC1213-MIB.ifSpeed", "MIF. \|DMTF-Netzwerkadapter 802 Port \| 001.5"), [**Einheiten**](../wmisdk/standard-qualifiers.md) ("Bits pro Sekunde")
 </dt> </dl>
 
-Schätzung der aktuellen Bandbreite in Bits pro Sekunde. Für Endpunkte, die die Bandbreite variieren, oder für diejenigen, bei denen keine genaue Schätzung vorgenommen werden kann, sollte diese Eigenschaft die nominale Bandbreite enthalten.
+Schätzung der aktuellen Bandbreite in Bits pro Sekunde. Für Endpunkte, die in der Bandbreite variieren, oder für Endpunkte, bei denen keine genaue Schätzung vorgenommen werden kann, sollte diese Eigenschaft die nominale Bandbreite enthalten.
 
-Diese Eigenschaft wird vom [**CIM- \_ NetworkAdapter**](cim-networkadapter.md)geerbt.
+Diese Eigenschaft wird von [**CIM \_ NetworkAdapter geerbt.**](cim-networkadapter.md)
 
-Weitere Informationen zur Verwendung von **UInt64** -Werten in Skripts finden Sie unter [Scripting in WMI](/previous-versions//aa393262(v=vs.85)).
+Weitere Informationen zur Verwendung von **uint64-Werten** in Skripts finden Sie unter [Skripterstellung in WMI.](/previous-versions//aa393262(v=vs.85))
 
 </dd> <dt>
 
@@ -1654,10 +1654,10 @@ Datentyp: **Zeichenfolge**
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**maxlen**](../wmisdk/standard-qualifiers.md) (10), [**Display Name**](../wmisdk/standard-qualifiers.md) ("Status")
+Qualifizierer: [**MaxLen**](../wmisdk/standard-qualifiers.md) (10), [**DisplayName**](../wmisdk/standard-qualifiers.md) ("Status")
 </dt> </dl>
 
-Aktueller Status des Objekts. Diese Eigenschaft wird von [**CIM \_ ManagedSystemElement**](cim-managedsystemelement.md)geerbt.
+Aktueller Status des Objekts. Diese Eigenschaft wird von [**CIM \_ ManagedSystemElement geerbt.**](cim-managedsystemelement.md)
 
 Folgende Werte sind gültig:
 
@@ -1679,35 +1679,35 @@ Folgende Werte sind gültig:
 
 <span id="Degraded"></span><span id="degraded"></span><span id="DEGRADED"></span>
 
-Herunter **gestuft ("** heruntergestuft")
+**Heruntergestuft** ("Heruntergestuft")
 
 
 </dt> <dd></dd> <dt>
 
 <span id="Unknown"></span><span id="unknown"></span><span id="UNKNOWN"></span>
 
-**Unbekannt** ("unbekannt")
+**Unbekannt** ("Unbekannt")
 
 
 </dt> <dd></dd> <dt>
 
 <span id="Pred_Fail"></span><span id="pred_fail"></span><span id="PRED_FAIL"></span>
 
-**Pred-** Fehler ("pred Fail")
+**Pred Fail** ("Pred Fail")
 
 
 </dt> <dd></dd> <dt>
 
 <span id="Starting"></span><span id="starting"></span><span id="STARTING"></span>
 
-Wird **gestartet** ("wird gestartet")
+**Wird** gestartet ("Wird gestartet")
 
 
 </dt> <dd></dd> <dt>
 
 <span id="Stopping"></span><span id="stopping"></span><span id="STOPPING"></span>
 
-Wird **beendet ("wird angehalten** ")
+**Wird beendet** ("Wird beendet")
 
 
 </dt> <dd></dd> <dt>
@@ -1721,28 +1721,28 @@ Wird **beendet ("wird angehalten** ")
 
 <span id="Stressed"></span><span id="stressed"></span><span id="STRESSED"></span>
 
-**Betont** ("gestresst")
+**Striche** ("Strich")
 
 
 </dt> <dd></dd> <dt>
 
 <span id="NonRecover"></span><span id="nonrecover"></span><span id="NONRECOVER"></span>
 
-**Nicht wiederherstellen** ("nicht wiederherstellen")
+**NonRecover** ("NonRecover")
 
 
 </dt> <dd></dd> <dt>
 
 <span id="No_Contact"></span><span id="no_contact"></span><span id="NO_CONTACT"></span>
 
-**Kein Kontakt** ("kein Kontakt")
+**Kein Kontakt** ("Kein Kontakt")
 
 
 </dt> <dd></dd> <dt>
 
 <span id="Lost_Comm"></span><span id="lost_comm"></span><span id="LOST_COMM"></span>
 
-**Verlorene** Kommunikations ("verlorene Kommunikations-")
+**Lost Comm** ("Lost Comm")
 
 
 </dt> <dd></dd> </dl>
@@ -1752,18 +1752,18 @@ Wird **beendet ("wird angehalten** ")
 **StatusInfo**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt16**
+Datentyp: **uint16**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**mappingstrings**](../wmisdk/standard-qualifiers.md) ("MIF". \|Betriebsstatus DMTF \| 003,3 ")
+Qualifizierer: [**MappingStrings**](../wmisdk/standard-qualifiers.md) ("MIF. DMTF \| Operational State \| 003.3")
 </dt> </dl>
 
-Der Status des logischen Geräts. Wenn diese Eigenschaft nicht für das logische Gerät gilt, sollte der Wert 5 (nicht zutreffend) verwendet werden.
+Status des logischen Geräts. Wenn diese Eigenschaft nicht für das logische Gerät gilt, sollte der Wert 5 (Nicht zutreffend) verwendet werden.
 
-Diese Eigenschaft wird von [**CIM \_ LogicalDevice**](cim-logicaldevice.md)geerbt.
+Diese Eigenschaft wird von [**CIM \_ LogicalDevice geerbt.**](cim-logicaldevice.md)
 
 <dt>
 
@@ -1804,7 +1804,7 @@ Diese Eigenschaft wird von [**CIM \_ LogicalDevice**](cim-logicaldevice.md)geerb
 
 </dd> <dt>
 
-**Systemkreationclassname**
+**SystemCreationClassName**
 </dt> <dd> <dl> <dt>
 
 Datentyp: **Zeichenfolge**
@@ -1813,12 +1813,12 @@ Datentyp: **Zeichenfolge**
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer [**: weiter**](../wmisdk/standard-qualifiers.md) gegeben ("[**CIM- \_ System**](cim-system.md).**"Kreationclassname**"), [**CIM- \_ Taste**](../wmisdk/standard-wmi-qualifiers.md)
+Qualifizierer: [**Propagated**](../wmisdk/standard-qualifiers.md) ("[**\_ CIM-System**](cim-system.md).**CreationClassName**"), [**\_ CIM-Schlüssel**](../wmisdk/standard-wmi-qualifiers.md)
 </dt> </dl>
 
-Der Wert der Eigenschaft " **kreationclassname** " des Bereichs Computers.
+Der Wert der **CreationClassName-Eigenschaft** des Bereichscomputers.
 
-Diese Eigenschaft wird von [**CIM \_ LogicalDevice**](cim-logicaldevice.md)geerbt.
+Diese Eigenschaft wird von [**CIM \_ LogicalDevice geerbt.**](cim-logicaldevice.md)
 
 </dd> <dt>
 
@@ -1831,47 +1831,47 @@ Datentyp: **Zeichenfolge**
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer [**: weiter**](../wmisdk/standard-qualifiers.md) gegeben ("[**CIM- \_ System**](cim-system.md).**Name**"), [**CIM- \_ Taste**](../wmisdk/standard-wmi-qualifiers.md)
+Qualifizierer: [**Propagated**](../wmisdk/standard-qualifiers.md) ("[**\_ CIM-System**](cim-system.md).**Name**"), [**\_ CIM-Schlüssel**](../wmisdk/standard-wmi-qualifiers.md)
 </dt> </dl>
 
-Der Name des Bereichs Systems.
+Name des Bereichssystems.
 
-Diese Eigenschaft wird von [**CIM \_ LogicalDevice**](cim-logicaldevice.md)geerbt.
+Diese Eigenschaft wird von [**CIM \_ LogicalDevice geerbt.**](cim-logicaldevice.md)
 
 </dd> <dt>
 
 **TimeOfLastReset**
 </dt> <dd> <dl> <dt>
 
-**Datentyp: DateTime**
+Datentyp: **datetime**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**mappingstrings**](../wmisdk/standard-qualifiers.md) ("Software \\ \\ Microsoft \\ \\ Windows NT \\ \\ CurrentVersion \\ \\ \\ \\ 009 \| System Up Time")
+Qualifizierer: [**MappingStrings**](../wmisdk/standard-qualifiers.md) ("SOFTWARE \\ \\ Microsoft Windows NT \\ \\ \\ \\ CurrentVersion \\ \\ Perflib \\ \\ 009 \| System Up Time")
 </dt> </dl>
 
-Datum und Uhrzeit der letzten zurück setzung des Netzwerkadapters.
+Datum und Uhrzeit der letzten Zurücksetzung des Netzwerkadapters.
 
 </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die **Win32- \_ netzwerkadapterklasse** wird von [**CIM \_ Network Adapter**](cim-networkadapter.md)abgeleitet.
+Die **Win32 \_ NetworkAdapter-Klasse** wird von [**CIM \_ NetworkAdapter abgeleitet.**](cim-networkadapter.md)
 
-In der folgenden Liste werden die assoziatorklassen für den **Win32- \_ Netzwerkadapter** beschrieben:
+In der folgenden Liste werden die Assoziatorklassen für **Win32 \_ NetworkAdapter beschrieben:**
 
--   [**Win32- \_ pnptity**](win32-pnpentity.md)
--   [**Win32- \_ Computersystem**](win32-computersystem.md)
--   [**Win32 \_ networkadapterconfiguration**](win32-networkadapterconfiguration.md)
--   [**Win32-Webressource \_**](win32-irqresource.md)
--   [**Win32 \_ devicememoryaddress**](win32-devicememoryaddress.md)
--   [**Win32- \_ portresource**](win32-portresource.md)
--   [**Win32- \_ networkprotocol**](win32-networkprotocol.md)
--   [**Win32- \_ System Treiber**](win32-systemdriver.md)
+-   [**Win32 \_ PnPEntity**](win32-pnpentity.md)
+-   [**Win32 \_ ComputerSystem**](win32-computersystem.md)
+-   [**Win32 \_ NetworkAdapterConfiguration**](win32-networkadapterconfiguration.md)
+-   [**Win32 \_ IRQResource**](win32-irqresource.md)
+-   [**Win32 \_ DeviceMemoryAddress**](win32-devicememoryaddress.md)
+-   [**Win32 \_ PortResource**](win32-portresource.md)
+-   [**Win32 \_ NetworkProtocol**](win32-networkprotocol.md)
+-   [**Win32 \_ SystemDriver**](win32-systemdriver.md)
 
-Viele Systeme verfügen über eine Reihe von Netzwerkadaptern. Verwenden Sie Folgendes als Referenz, um die aktuellen Adapter zu finden:
+Viele Systeme verfügen über eine Reihe von Netzwerkadaptern. Verwenden Sie Folgendes als Referenz, um die aktuellen Adapter zu suchen:
 
 ``` syntax
 AdapterType: "Ethernet 802.3"
@@ -1883,7 +1883,7 @@ ConfigManagerErrorCode: 0
 : <keep this as an index to Win32_NetworkAdapterConfiguration>
 ```
 
-Selbst bei Verwendung der obigen Qualifizierer werden Sie wahrscheinlich mehr als einen gültigen Netzwerkadapter abrufen. Wenn dies der Fall ist, können Sie die folgenden Informationen verwenden, um die Suche nach Win32 \_ networkadapterconfiguration weiter zu qualifizieren:
+Selbst wenn Sie die oben genannten Qualifizierer verwenden, rufen Sie wahrscheinlich mehr als einen gültigen Netzwerkadapter ab. Wenn dies der Fall ist, können Sie die folgenden Informationen verwenden, um Ihre Suche nach "Win32 \_ NetworkAdapterConfiguration" weiter zu qualifizieren:
 
 ``` syntax
 Index: <match to DeviceID above>
@@ -1894,27 +1894,27 @@ IPEnabled: vbTrue
 IPAddress: Array of strings with length > 6
 ```
 
-Nachdem Sie dies abgeschlossen haben, haben Sie die Liste wahrscheinlich auf einen oder zwei konfigurierte Adapter reduziert.
+Sobald Sie dies getan haben, haben Sie ihre Liste wahrscheinlich auf einen oder zwei konfigurierte Adapter reduziert.
 
-Sie können auch das folgende Verfahren verwenden, um den Standard Adapter zu finden:
+Sie können auch das folgende Verfahren verwenden, um den Standardadapter zu suchen:
 
 1.  Führen Sie die folgende Abfrage aus:
 
     `"SELECT InterfaceIndex, Destination FROM Win32_IP4RouteTable WHERE Destination='0.0.0.0'"`
 
-    Sie sollten nur über ein Standard Netzwerk Ziel 0.0.0.0 verfügen.
+    Sie sollten nur über ein Standardnetzwerkziel 0.0.0.0 verfügen.
 
-2.  Verwenden Sie den **interfaceingedex** , um den gewünschten Netzwerk Adapter abzurufen.
+2.  Verwenden Sie **InterfaceIndex,** um den gewünschten Netzwerkadapter abzurufen.
 
     `"SELECT * FROM Win32_NetworkAdapter WHERE InterfaceIndex=" + insertVariableHere`
 
 ## <a name="examples"></a>Beispiele
 
-Das PowerShell-Codebeispiel für [WMI-Funktionen](https://Gallery.TechNet.Microsoft.Com/Two-WMI-Functions-94c31b5f) in der TechNet Gallery verwendet **Win32 \_ Network Adapter** , um das Windows [Get-netadapter](/powershell/module/netadapter/get-netadapter?view=win10-ps) -Cmdlet neu zu erstellen.
+Das PowerShell-Codebeispiel [für zwei WMI-Funktionen](https://Gallery.TechNet.Microsoft.Com/Two-WMI-Functions-94c31b5f) im TechNet-Katalog verwendet **Win32 \_ NetworkAdapter,** um das cmdlet [get-NetAdapter](/powershell/module/netadapter/get-netadapter?view=win10-ps) Windows neu zu erstellen.
 
-Das PowerShell [-Beispiel Get-ComputerInfo-Query Computer Info from Local/Remote Computers-(WMI)](https://Gallery.TechNet.Microsoft.Com/Get-ComputerInfo-Query-23dd6042) in der TechNet Gallery verwendet eine Reihe von Aufrufen von Hardware und Software, einschließlich **Win32 \_ Network Adapter**, um Informationen über ein lokales oder Remote System anzuzeigen.
+Das [PowerShell-Beispiel Get-ComputerInfo – Query Computer Info From Local/Remote Computers - (WMI)](https://Gallery.TechNet.Microsoft.Com/Get-ComputerInfo-Query-23dd6042) im TechNet Gallery verwendet eine Reihe von Aufrufen von Hardware und Software, einschließlich **Win32 \_ NetworkAdapter,** um Informationen zu einem lokalen oder Remotesystem anzuzeigen.
 
-Im folgenden C- \# Codebeispiel wird der [Microsoft. Management. Infrastructure](/previous-versions/windows/desktop/wmi_v2/mi-managed-api/hh832958(v=vs.85)) -Namespace verwendet, um die aktuellen Netzwerkadapter auf dem lokalen Computer abzurufen.
+Im folgenden \# C-Codebeispiel wird der [Microsoft.Management.Infrastructure-Namespace](/previous-versions/windows/desktop/wmi_v2/mi-managed-api/hh832958(v=vs.85)) verwendet, um die aktuellen Netzwerkadapter auf dem lokalen Computer abzurufen.
 
 
 ```CSharp
@@ -1939,10 +1939,10 @@ static void QueryInstanceFunc()
 
 
 
-Im folgenden C- \# Codebeispiel wird https://msdn.microsoft.com/library/system.management.aspx der Namespace verwendet, um die aktuellen Netzwerkadapter auf dem lokalen Computer abzurufen.
+Im folgenden \# C-Codebeispiel wird https://msdn.microsoft.com/library/system.management.aspx namespace verwendet, um die aktuellen Netzwerkadapter auf dem lokalen Computer abzurufen.
 
 > [!Note]  
-> https://msdn.microsoft.com/library/system.management.aspx enthält die ursprünglichen Klassen, die für den Zugriff auf WMI verwendet werden. Allerdings gelten Sie als langsamer und werden im Allgemeinen nicht ebenso skaliert wie Ihre [Microsoft. Management. Infrastructure](/previous-versions/windows/desktop/wmi_v2/mi-managed-api/hh832958(v=vs.85)) -Entsprechungen.
+> https://msdn.microsoft.com/library/system.management.aspxenthält die ursprünglichen Klassen, die für den Zugriff auf WMI verwendet werden. Sie gelten jedoch als langsamer und skalieren im Allgemeinen nicht so gut wie ihre [Microsoft.Management.Infrastructure-Entsprechungen.](/previous-versions/windows/desktop/wmi_v2/mi-managed-api/hh832958(v=vs.85))
 
  
 
@@ -1996,26 +1996,26 @@ Next
 |-------------------------------------|-----------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows Vista<br/>                                                                |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2008<br/>                                                          |
-| Namespace<br/>                | Root \\ CIMV2<br/>                                                                  |
-| MOF<br/>                      | <dl> <dt>Cimwin32. MOF</dt> </dl> |
+| Namespace<br/>                | \\Stamm-CIMV2<br/>                                                                  |
+| MOF<br/>                      | <dl> <dt>CIMWin32.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>CIMWin32.dll</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**CIM- \_ Netzwerkadapter**](cim-networkadapter.md)
+[**CIM \_ NetworkAdapter**](cim-networkadapter.md)
 </dt> <dt>
 
-[Computer System-Hardware Klassen](computer-system-hardware-classes.md)
+[Computersystemhardwareklassen](computer-system-hardware-classes.md)
 </dt> <dt>
 
-[WMI-Tasks: Netzwerk](../wmisdk/wmi-tasks--networking.md)
+[WMI-Aufgaben: Netzwerk](../wmisdk/wmi-tasks--networking.md)
 </dt> <dt>
 
-[IPv6-und IPv4-Unterstützung in WMI](../wmisdk/ipv6-and-ipv4-support-in-wmi.md)
+[IPv6- und IPv4-Unterstützung in WMI](../wmisdk/ipv6-and-ipv4-support-in-wmi.md)
 </dt> </dl>
 
  

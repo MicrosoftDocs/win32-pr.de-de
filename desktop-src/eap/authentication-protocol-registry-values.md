@@ -1,6 +1,6 @@
 ---
-title: Registrierungs Werte für das Authentifizierungsprotokoll
-description: Die Setup Software für die EAP-dll erstellt möglicherweise die folgenden Registrierungs Werte unter eaptypeid.
+title: Registrierungswerte des Authentifizierungsprotokolls
+description: Die Setupsoftware für die EAP-DLL erstellt möglicherweise die folgenden Registrierungswerte unter eaptypeid.
 ms.assetid: a5f6674d-77c8-4b88-af0e-bb62f84d8a2b
 keywords:
 - RAS_EAP_VALUENAME_PATH
@@ -21,16 +21,16 @@ keywords:
 - RAS_EAP_VALUENAME_FILTER_INNERMETHODS
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 8091197c7b0d5c5a208bf3658bbc15284a29ac9e
-ms.sourcegitcommit: c20a43b333f03175ac23823c55f3204bfe8cd243
+ms.openlocfilehash: a0822e7abb62aad136a3abbe36ee92f5b6f1ec9fbeabd6426c039f05c1f752d4
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/26/2019
-ms.locfileid: "104038402"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119739560"
 ---
-# <a name="authentication-protocol-registry-values"></a>Registrierungs Werte für das Authentifizierungsprotokoll
+# <a name="authentication-protocol-registry-values"></a>Registrierungswerte des Authentifizierungsprotokolls
 
-Die Setup Software für die EAP-dll erstellt möglicherweise die folgenden Registrierungs Werte unter **&lt; eaptypeid &gt;**. Diese Registrierungs Werte werden in der Header Datei "raseapif. h" definiert. Die **RAS_EAP_VALUENAME_PATH** -und **RAS_EAP_VALUENAME_FRIENDLY_NAME** Werte sind erforderlich. Die Setup Software erstellt möglicherweise auch andere Schlüssel und Werte. Diese können vom Authentifizierungsprotokoll selbst verwendet werden. Weitere Informationen und ein Beispiel für die Registrierungs Konfiguration finden Sie unter [Beispiel für Registrierungs Werte](registry-values-example.md).
+Die Setupsoftware für die EAP-DLL kann die folgenden Registrierungswerte unter **&lt; eaptypeid &gt;** erstellen. Diese Registrierungswerte werden in der Headerdatei Raseapif.h definiert. Die **werte RAS_EAP_VALUENAME_PATH** und **RAS_EAP_VALUENAME_FRIENDLY_NAME** sind erforderlich. Die Setupsoftware kann auch andere Schlüssel und Werte erstellen. Diese können vom Authentifizierungsprotokoll selbst verwendet werden. Weitere Informationen und ein Beispiel für die Registrierungskonfiguration finden Sie unter Beispiel für [Registrierungswerte.](registry-values-example.md)
 
 [RAS_EAP_VALUENAME_PATH](#ras_eap_valuename_path)
 
@@ -68,106 +68,106 @@ Die Setup Software für die EAP-dll erstellt möglicherweise die folgenden Regis
 
 | Konstanter Wert | `Path`                               |
 |----------------|------------------------------------|
-| type           | REG_EXPAND_SZ                    |
-| BESCHREIBUNG    | Gibt den Pfad zur EAP-dll an. |
+| type           | Reg_expand_sz                    |
+| Beschreibung    | Gibt den Pfad zur EAP-DLL an. |
 
 ## <a name="ras_eap_valuename_friendly_name"></a>RAS_EAP_VALUENAME_FRIENDLY_NAME
 
 | Konstanter Wert | FriendlyName                                                                                                                                                      |
 |----------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | type           | REG_SZ                                                                                                                                                           |
-| BESCHREIBUNG    | Gibt einen anzeigen Amen für das Authentifizierungsprotokoll an. Dieser Name wird in der Benutzeroberfläche der EAP-Anwendung sowohl für Einwähl-als auch für drahtlose Implementierungen angezeigt. |
+| Beschreibung    | Gibt einen Anzeigenamen für das Authentifizierungsprotokoll an. Dieser Name wird auf der Benutzeroberfläche der EAP-Anwendung für DFÜ- und Drahtlosimplementierungen angezeigt. |
 
 ## <a name="ras_eap_valuename_configui"></a>RAS_EAP_VALUENAME_CONFIGUI
 
-| Konstanter Wert | Configuipath                                                                                                                      |
+| Konstanter Wert | ConfigUIPath                                                                                                                      |
 |----------------|-----------------------------------------------------------------------------------------------------------------------------------|
-| type           | REG_EXPAND_SZ                                                                                                                   |
-| BESCHREIBUNG    | Gibt den Pfad zu der dll an, die die Benutzeroberfläche für die Konfiguration auf dem Client implementiert, da diese Benutzeroberfläche ausschließlich für Client vorgesehen ist. |
+| type           | Reg_expand_sz                                                                                                                   |
+| Beschreibung    | Gibt den Pfad zur DLL an, die die Benutzeroberfläche für die Konfiguration auf dem Client implementiert, da diese Benutzeroberfläche nur für den Client bestimmt ist. |
 
 ## <a name="ras_eap_valuename_default_data"></a>RAS_EAP_VALUENAME_DEFAULT_DATA
 
 | Konstanter Wert | ConfigData                                                            |
 |----------------|-----------------------------------------------------------------------|
 | type           | REG_BINARY                                                           |
-| BESCHREIBUNG    | Gibt Standard Konfigurationsdaten für das Authentifizierungsprotokoll an. |
+| Beschreibung    | Gibt Standardkonfigurationsdaten für das Authentifizierungsprotokoll an. |
 
 ## <a name="ras_eap_valuename_require_configui"></a>RAS_EAP_VALUENAME_REQUIRE_CONFIGUI
 
-| Konstanter Wert | Requirements configui                                                                                                                                                                                                                                          |
+| Konstanter Wert | RequireConfigUI                                                                                                                                                                                                                                          |
 |----------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | type           | REG_DWORD                                                                                                                                                                                                                                               |
-| BESCHREIBUNG    | Gibt an, ob der Benutzer Konfigurationsdaten in der Benutzeroberfläche der EAP-Client Anwendung bereitstellen muss. Wenn dieser Wert 1 ist, kann der Benutzer die Benutzeroberfläche der EAP-Client Anwendung nicht beenden, ohne Konfigurationsdaten bereitzustellen. Der Standardwert ist 0. |
+| Beschreibung    | Gibt an, ob der Benutzer Konfigurationsdaten auf der Benutzeroberfläche der EAP-Clientanwendung bereitstellen muss. Wenn dieser Wert 1 ist, darf der Benutzer die Benutzeroberfläche der EAP-Clientanwendung nicht beenden, ohne Konfigurationsdaten bereitzustellen. Der Standardwert ist 0. |
 
 ## <a name="ras_eap_valuename_config_clsid"></a>RAS_EAP_VALUENAME_CONFIG_CLSID
 
-| Konstanter Wert | Configclsid                                                   |
+| Konstanter Wert | ConfigCLSID                                                   |
 |----------------|---------------------------------------------------------------|
 | type           | REG_SZ                                                       |
-| BESCHREIBUNG    | Gibt die Klassen-ID der Konfigurations Benutzeroberfläche auf dem Server an. |
+| Beschreibung    | Gibt die Klassen-ID der Konfigurationsbenutzeroberfläche auf dem Server an. |
 
 ## <a name="ras_eap_valuename_identity"></a>RAS_EAP_VALUENAME_IDENTITY
 
-| Konstanter Wert | Identitypath                                                                                                                           |
+| Konstanter Wert | IdentityPath                                                                                                                           |
 |----------------|----------------------------------------------------------------------------------------------------------------------------------------|
-| type           | REG_EXPAND_SZ                                                                                                                        |
-| BESCHREIBUNG    | Gibt den Pfad zu der dll an, die Funktionen implementiert, um die Benutzeridentität auf dem Client abzurufen, da diese Benutzeroberfläche nur für den Client bestimmt ist. |
+| type           | Reg_expand_sz                                                                                                                        |
+| Beschreibung    | Gibt den Pfad zur DLL an, die Funktionen implementiert, um die Benutzeridentität auf dem Client abzurufen, da diese Benutzeroberfläche nur für den Client bestimmt ist. |
 
 ## <a name="ras_eap_valuename_interactiveui"></a>RAS_EAP_VALUENAME_INTERACTIVEUI
 
-| Konstanter Wert | Interactiveuipath                                                                                                               |
+| Konstanter Wert | InteractiveUIPath                                                                                                               |
 |----------------|---------------------------------------------------------------------------------------------------------------------------------|
-| type           | REG_EXPAND_SZ                                                                                                                 |
-| BESCHREIBUNG    | Gibt den Pfad zu der dll an, die die interaktive Benutzeroberfläche auf dem Client implementiert, da diese Benutzeroberfläche nur für den Client bestimmt ist. |
+| type           | Reg_expand_sz                                                                                                                 |
+| Beschreibung    | Gibt den Pfad zur DLL an, die die interaktive Benutzeroberfläche auf dem Client implementiert, da diese Benutzeroberfläche nur für Clients bestimmt ist. |
 
 ## <a name="ras_eap_valuename_invoke_namedlg"></a>RAS_EAP_VALUENAME_INVOKE_NAMEDLG
 
-| Konstanter Wert | Invokeusernamedialog                                                                                                                                                                                   |
+| Konstanter Wert | InvokeUsernameDialog                                                                                                                                                                                   |
 |----------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | type           | REG_DWORD                                                                                                                                                                                             |
-| BESCHREIBUNG    | Gibt an, ob RAS das Standard Dialogfeld für Windows NT/Windows 2000-Benutzername (Wert 1) oder [**raseapgetidentity**](/previous-versions/windows/desktop/api/Raseapif/nf-raseapif-raseapgetidentity) (Wert 0) anzeigen soll. Der Standardwert ist 1. |
+| Beschreibung    | Gibt an, ob RAS das Standarddialogfeld Windows NT/Windows 2000-Benutzername (Wert 1) anzeigen oder [**RasEapGetIdentity**](/previous-versions/windows/desktop/api/Raseapif/nf-raseapif-raseapgetidentity) aufrufen soll (Wert 0). Der Standardwert ist 1. |
 
 ## <a name="ras_eap_valuename_invoke_pwddlg"></a>RAS_EAP_VALUENAME_INVOKE_PWDDLG
 
-| Konstanter Wert | Invokepassworddialog                                                                                                                                                                        |
+| Konstanter Wert | InvokePasswordDialog                                                                                                                                                                        |
 |----------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | type           | REG_DWORD                                                                                                                                                                                  |
-| BESCHREIBUNG    | Gibt an, ob RAS das Standard Dialogfeld Windows NT/Windows 2000-Kennwort anzeigen soll. Wenn dieser Wert vorhanden ist und 0 ist, zeigt RAS das Kenn Wort Dialogfeld nicht an. Der Standardwert ist 1. |
+| Beschreibung    | Gibt an, ob RAS das Standarddialogfeld Windows NT/Windows 2000-Kennworts anzeigen soll. Wenn dieser Wert vorhanden ist und 0 ist, zeigt RAS das Kennwortdialogfeld nicht an. Der Standardwert ist 1. |
 
 
 ## <a name="ras_eap_valuename_encryption"></a>RAS_EAP_VALUENAME_ENCRYPTION
 
-| Konstanter Wert | Mppeer-Unterstützung                                                                                                                                                                       |
+| Konstanter Wert | MPPEEncryptionSupported                                                                                                                                                                       |
 |----------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | type           | REG_DWORD                                                                                                                                                                                    |
-| BESCHREIBUNG    | Wenn dieser Wert 1 ist, kann das Authentifizierungsprotokoll Schlüssel für den Microsoft-MPPE-Verschlüsselungs Stil (Point-to-Point Encryption, MPPE) generieren. Mögliche Werte sind 0 oder 1. Der Standardwert ist 0. |
+| Beschreibung    | Wenn dieser Wert 1 ist, kann das Authentifizierungsprotokoll Schlüssel für den MPPE-Verschlüsselungsstil (Microsoft Point-to-Point Encryption) generieren. Mögliche Werte sind 0 oder 1. Der Standardwert ist 0. |
 
 ## <a name="ras_eap_valuename_standalone_supported"></a>RAS_EAP_VALUENAME_STANDALONE_SUPPORTED
 
-| Konstanter Wert | Standalonesupportiert                                                                                                                                                            |
+| Konstanter Wert | StandaloneSupported                                                                                                                                                            |
 |----------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | type           | REG_DWORD                                                                                                                                                                     |
-| BESCHREIBUNG    | Gibt an, ob dieses Authentifizierungsprotokoll auf einem eigenständigen Windows 2000-Server unterstützt wird. Der Wert 0 gibt an, dass EAP nicht unterstützt wird. Der Standardwert ist 1. |
+| Beschreibung    | Gibt an, ob dieses Authentifizierungsprotokoll auf einem eigenständigen Windows 2000-Server unterstützt wird. Der Wert 0 gibt an, dass der EAP nicht unterstützt wird. Der Standardwert ist 1. |
 
 ## <a name="ras_eap_valuename_roles_supported"></a>RAS_EAP_VALUENAME_ROLES_SUPPORTED
 
-| Konstanter Wert | Rolessupported                                                                                                                                                                                                                             |
+| Konstanter Wert | RolesSupported                                                                                                                                                                                                                             |
 |----------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | type           | REG_DWORD                                                                                                                                                                                                                                 |
-| BESCHREIBUNG    | Gibt die verschiedenen Rollen an, die das EAP unterstützt. Dies gibt an, ob es auf einem Server oder Client verwendet werden kann, ob es für RAS-Verbindungen (VPN) oder PEAP unterstützt wird. Das Standardverhalten besteht darin, die EAP-Methode in PEAP und in EAP anzuzeigen. |
+| Beschreibung    | Gibt die verschiedenen Rollen an, die von EAP unterstützt werden. Dies gibt an, ob es auf einem Server oder client verwendet werden kann, ob es für RAS-Verbindungen (VPN) oder PEAP unterstützt wird. Standardmäßig wird die EAP-Methode in PEAP und EAP angezeigt. |
 
 ## <a name="ras_eap_valuename_per_policy_config"></a>RAS_EAP_VALUENAME_PER_POLICY_CONFIG
 
-| Konstanter Wert | Perpolicyconfig |
+| Konstanter Wert | PerPolicyConfig |
 |----------------|-----------------|
 | type           | REG_DWORD      |
-| BESCHREIBUNG    |                 |
+| Beschreibung    |                 |
 
 ## <a name="ras_eap_valuename_istunnel_method"></a>RAS_EAP_VALUENAME_ISTUNNEL_METHOD
 
-Dieser Registrierungs Wert wird nicht verwendet.
+Dieser Registrierungswert wird nicht verwendet.
 
 ## <a name="ras_eap_valuename_filter_innermethods"></a>RAS_EAP_VALUENAME_FILTER_INNERMETHODS
 
-Dieser Registrierungs Wert wird nicht verwendet.
+Dieser Registrierungswert wird nicht verwendet.
 

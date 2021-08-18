@@ -1,21 +1,21 @@
 ---
-description: Wird an ein Fenster gesendet, dessen Größe, Position oder Position in der Z-Reihenfolge im Ergebnis eines Aufrufes der Funktion SetWindowPos oder einer anderen Fenster Verwaltungsfunktion geändert wird.
+description: Wird an ein Fenster gesendet, dessen Größe, Position oder Position in der Z-Reihenfolge sich als Ergebnis eines Aufrufs der SetWindowPos-Funktion oder einer anderen Fensterverwaltungsfunktion ändern wird.
 ms.assetid: 45ecd966-5222-4738-9e99-8a6edbdd435a
-title: WM_WINDOWPOSCHANGING Meldung (Winuser. h)
+title: WM_WINDOWPOSCHANGING (Winuser.h)
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 015a31aac31d38506d1798f83c8dd7f9aa646f85
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 68f10abcb0692374209c2070a465df7c4a5f18672eebf376378d6fb16cbca537
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "103758461"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119771940"
 ---
-# <a name="wm_windowposchanging-message"></a>WM- \_ windowposchanging-Meldung
+# <a name="wm_windowposchanging-message"></a>WM \_ WINDOWPOSCHANGING-Meldung
 
-Wird an ein Fenster gesendet, dessen Größe, Position oder Position in der Z-Reihenfolge im Ergebnis eines Aufrufes der Funktion [**SetWindowPos**](/windows/win32/api/winuser/nf-winuser-setwindowpos) oder einer anderen Fenster Verwaltungsfunktion geändert wird.
+Wird an ein Fenster gesendet, dessen Größe, Position oder Position in der Z-Reihenfolge sich als Ergebnis eines Aufrufs der [**SetWindowPos-Funktion**](/windows/win32/api/winuser/nf-winuser-setwindowpos) oder einer anderen Fensterverwaltungsfunktion ändern wird.
 
-Ein Fenster empfängt diese Meldung über seine [**WindowProc**](/previous-versions/windows/desktop/legacy/ms633573(v=vs.85)) -Funktion.
+Ein Fenster empfängt diese Nachricht über seine [**WindowProc-Funktion.**](/previous-versions/windows/desktop/legacy/ms633573(v=vs.85))
 
 
 ```C++
@@ -38,7 +38,7 @@ Dieser Parameter wird nicht verwendet.
 *lParam* 
 </dt> <dd>
 
-Ein Zeiger auf eine [**WINDOWPOS**](/windows/win32/api/winuser/ns-winuser-windowpos) -Struktur, die Informationen über die neue Größe und Position des Fensters enthält.
+Ein Zeiger auf eine [**WINDOWPOS-Struktur,**](/windows/win32/api/winuser/ns-winuser-windowpos) die Informationen über die neue Größe und Position des Fensters enthält.
 
 </dd> </dl>
 
@@ -46,13 +46,13 @@ Ein Zeiger auf eine [**WINDOWPOS**](/windows/win32/api/winuser/ns-winuser-window
 
 Typ: **LRESULT**
 
-Wenn eine Anwendung diese Nachricht verarbeitet, sollte Sie 0 (null) zurückgeben.
+Wenn eine Anwendung diese Nachricht verarbeitet, sollte sie 0 (null) zurückgeben.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Bei einem Fenster mit dem [**\_ über**](window-styles.md) Lapp enden oder dem **WS- \_ dicken Frame** -Stil sendet die [**defwindowproc**](/windows/desktop/api/winuser/nf-winuser-defwindowproca) -Funktion die [**WM \_ getminmaxinfo**](wm-getminmaxinfo.md) -Meldung an das Fenster. Dies geschieht, um die neue Größe und Position des Fensters zu überprüfen und die Client Stile [CS \_ bytealignclient](about-window-classes.md) und CS \_ bytealignwindow zu erzwingen. Wenn die WM- **\_ windowposchanging** -Nachricht nicht an die **defwindowproc** -Funktion übergeben wird, kann eine Anwendung diese Standardeinstellungen überschreiben.
+Für ein Fenster mit [**dem Format WS \_ OVERLAPPED**](window-styles.md) oder **WS \_ THICKFRAME** sendet die [**DefWindowProc-Funktion**](/windows/desktop/api/winuser/nf-winuser-defwindowproca) die [**WM \_ GETMINMAXINFO-Nachricht**](wm-getminmaxinfo.md) an das Fenster. Dies erfolgt, um die neue Größe und Position des Fensters zu überprüfen und die [Clientstile CS \_ BYTEALIGNCLIENT](about-window-classes.md) und CS \_ BYTEALIGNWINDOW zu erzwingen. Wenn die **WM \_ WINDOWPOSCHANGING-Nachricht** nicht an die **DefWindowProc-Funktion** übergeben wird, kann eine Anwendung diese Standardwerte überschreiben.
 
-Während diese Nachricht verarbeitet wird, wirkt sich das Ändern aller Werte in [**WINDOWPOS**](/windows/win32/api/winuser/ns-winuser-windowpos) auf die neue Größe, Position oder Position des Fensters in der Z-Reihenfolge aus. Eine Anwendung kann Änderungen am Fenster verhindern, indem die entsprechenden Bits im **Flags** -Member von **Windows POS** festgelegt oder gelöscht werden.
+Während diese Nachricht verarbeitet wird, wirkt sich das Ändern eines der Werte in [**WINDOWPOS**](/windows/win32/api/winuser/ns-winuser-windowpos) auf die neue Größe, Position oder Position des Fensters in der Z-Reihenfolge aus. Eine Anwendung kann Änderungen am Fenster verhindern, indem sie die entsprechenden Bits im **Flags-Member** von **WINDOWPOS festlegen oder löschen.**
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -62,21 +62,21 @@ Während diese Nachricht verarbeitet wird, wirkt sich das Ändern aller Werte in
 |-------------------------------------|----------------------------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[nur Desktop-Apps\]<br/>                                               |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                                                     |
-| Header<br/>                   | <dl> <dt>Winuser. h (Windows. h einschließen)</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Winuser.h (include Windows.h)</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-**Verweis**
+**Referenz**
 </dt> <dt>
 
 [**DefWindowProc**](/windows/desktop/api/winuser/nf-winuser-defwindowproca)
 </dt> <dt>
 
-[**Enddeferwindowpos**](/windows/win32/api/winuser/nf-winuser-enddeferwindowpos)
+[**EndDeferWindowPos**](/windows/win32/api/winuser/nf-winuser-enddeferwindowpos)
 </dt> <dt>
 
 [**SetWindowPos**](/windows/win32/api/winuser/nf-winuser-setwindowpos)
@@ -85,19 +85,19 @@ Während diese Nachricht verarbeitet wird, wirkt sich das Ändern aller Werte in
 [**WINDOWPOS**](/windows/win32/api/winuser/ns-winuser-windowpos)
 </dt> <dt>
 
-[**WM \_ getminmaxinfo**](wm-getminmaxinfo.md)
+[**WM \_ GETMINMAXINFO**](wm-getminmaxinfo.md)
 </dt> <dt>
 
-[**WM \_ verschieben**](wm-move.md)
+[**WM \_ MOVE**](wm-move.md)
 </dt> <dt>
 
-[**WM- \_ Größe**](wm-size.md)
+[**WM \_ SIZE**](wm-size.md)
 </dt> <dt>
 
-[**WM-Windows-Server \_**](wm-windowposchanged.md)
+[**\_WM-FENSTERPOSCHANGED**](wm-windowposchanged.md)
 </dt> <dt>
 
-**Licher**
+**Konzeptionellen**
 </dt> <dt>
 
 [Windows](windows.md)

@@ -1,12 +1,12 @@
 ---
-title: Remotecontrol-Methode der Win32_TSRemoteControlSetting-Klasse
-description: Die Methode "levelofcontrol" wird von der remotecontrol-Methode festgelegt.
+title: RemoteControl-Methode der Win32_TSRemoteControlSetting Klasse
+description: Die RemoteControl-Methode legt die LevelOfControl-Eigenschaft fest.
 ms.assetid: 341f4f8d-17be-4482-834a-b771e041cfec
 ms.tgt_platform: multiple
 keywords:
-- Remotecontrol-Methode Remotedesktopdienste
-- Remotecontrol-Methode Remotedesktopdienste, Win32_TSRemoteControlSetting-Klasse
-- Win32_TSRemoteControlSetting-Klasse Remotedesktopdienste, remotecontrol-Methode
+- RemoteControl-Remotedesktopdienste
+- RemoteControl-Remotedesktopdienste , Win32_TSRemoteControlSetting-Klasse
+- Win32_TSRemoteControlSetting klasse Remotedesktopdienste , RemoteControl-Methode
 topic_type:
 - apiref
 api_name:
@@ -17,16 +17,16 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 9476269c2f619b7ea46bc6546f106d7ccd2a486e
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 73de3f92171f688a9c0dc611552a061a3f2de7bf573fa41dab8606395eafe228
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104340628"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119769420"
 ---
-# <a name="remotecontrol-method-of-the-win32_tsremotecontrolsetting-class"></a>Remotecontrol-Methode der Win32- \_ Klasse "zremotecontrolsetting"
+# <a name="remotecontrol-method-of-the-win32_tsremotecontrolsetting-class"></a>RemoteControl-Methode der Win32 \_ TSRemoteControlSetting-Klasse
 
-Die Methode " **levelofcontrol** " wird von der **remotecontrol** -Methode festgelegt.
+Die **RemoteControl-Methode** legt die **LevelOfControl-Eigenschaft** fest.
 
 ## <a name="syntax"></a>Syntax
 
@@ -43,10 +43,10 @@ uint32 RemoteControl(
 
 <dl> <dt>
 
-*Levelofcontrol* \[ in\]
+*LevelOfControl* \[ In\]
 </dt> <dd>
 
-Neuer Wert für die **levelofcontrol** -Eigenschaft, die angibt, ob die Sitzung nur vom Remote Benutzer angezeigt wird oder über Tastatur und Maus angezeigt und gesteuert wird. Weitere Informationen finden Sie im Abschnitt "Hinweise". Die folgenden Werte werden unterstützt.
+Neuer Wert für die **LevelOfControl-Eigenschaft,** der angibt, ob die Sitzung nur vom Remotebenutzer angezeigt oder per Tastatur und Maus angezeigt und gesteuert wird. Weitere Informationen finden Sie im Abschnitt "Hinweise". Die folgenden Werte werden unterstützt.
 
 <dt>
 
@@ -57,7 +57,7 @@ Neuer Wert für die **levelofcontrol** -Eigenschaft, die angibt, ob die Sitzung 
 
 </dt> <dd>
 
-Die Remote Steuerung ist deaktiviert.
+Die Remotesteuerung ist deaktiviert.
 
 </dd> <dt>
 
@@ -68,7 +68,7 @@ Die Remote Steuerung ist deaktiviert.
 
 </dt> <dd>
 
-Der Benutzer der Remote Steuerung hat die vollständige Kontrolle über die Sitzung des Benutzers mit der Berechtigung des Benutzers.
+Der Benutzer der Remotesteuerung hat mit der Berechtigung des Benutzers die vollständige Kontrolle über die Sitzung des Benutzers.
 
 </dd> <dt>
 
@@ -79,7 +79,7 @@ Der Benutzer der Remote Steuerung hat die vollständige Kontrolle über die Sitz
 
 </dt> <dd>
 
-Der Benutzer der Remote Steuerung hat die vollständige Kontrolle über die Sitzung des Benutzers. die Berechtigung des Benutzers ist nicht erforderlich.
+Der Benutzer der Remotesteuerung hat die vollständige Kontrolle über die Sitzung des Benutzers. Die Berechtigung des Benutzers ist nicht erforderlich.
 
 </dd> <dt>
 
@@ -90,7 +90,7 @@ Der Benutzer der Remote Steuerung hat die vollständige Kontrolle über die Sitz
 
 </dt> <dd>
 
-Der Benutzer der Remote Steuerung kann die Sitzung Remote mit der Berechtigung des Benutzers anzeigen. der Remote Benutzer kann die Sitzung nicht aktiv steuern.
+Der Benutzer der Remotesteuerung kann die Sitzung mit der Berechtigung des Benutzers remote anzeigen. der Remotebenutzer kann die Sitzung nicht aktiv steuern.
 
 </dd> <dt>
 
@@ -101,21 +101,21 @@ Der Benutzer der Remote Steuerung kann die Sitzung Remote mit der Berechtigung d
 
 </dt> <dd>
 
-Der Benutzer der Remote Steuerung kann die Sitzung Remote anzeigen, aber die Sitzung nicht aktiv steuern. die Berechtigung des Benutzers ist nicht erforderlich.
+Der Benutzer der Remotesteuerung kann die Sitzung remote anzeigen, aber nicht aktiv steuern. Die Berechtigung des Benutzers ist nicht erforderlich.
 
 </dd> </dl> </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt bei Erfolg 0 zurück, andernfalls wird ein WMI-Fehlercode zurückgegeben. Eine Liste dieser Werte finden Sie unter [Remotedesktopdienste Fehler Codes des WMI-Anbieters](terminal-services-wmi-provider-error-codes.md) . Die-Methode gibt einen Fehler zurück, wenn die Einstellung Untergruppen Richtlinien Steuerung liegt.
+Gibt bei Erfolg 0 zurück, andernfalls wird ein WMI-Fehlercode zurückgegeben. Eine Liste dieser Remotedesktopdienste finden Sie unter [Fehlercodes](terminal-services-wmi-provider-error-codes.md) für WMI-Anbieter. Die -Methode gibt einen Fehler zurück, wenn sich die Einstellung unter der Gruppenrichtliniensteuerung befindet.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Vollständige Kontrolle über eine Sitzung bedeutet, dass der Remote Benutzer die Sitzung des Benutzers mit Tastatur und Maus aktiv steuern kann.
+Die vollständige Kontrolle über eine Sitzung bedeutet, dass der Remotebenutzer die Sitzung des Benutzers aktiv mit einer Tastatur und Maus steuern kann.
 
-Wenn ein Benutzer versucht, eine Remote Steuerungs Verbindung herzustellen, zeigt das System eine Meldung an den Remote Client an und fordert die Berechtigung an, die Remote Sitzung entweder in der Remote Sitzung anzuzeigen oder aktiv zu nehmen.
+Wenn ein Benutzer versucht, eine Remotesteuerungsverbindung herzustellen, zeigt das System eine Nachricht an den Remoteclient an und fordert die Berechtigung an, die Remotesitzung entweder anzeigen oder aktiv daran teilnehmen zu können.
 
-Managed Object Format-Dateien (MOF) enthalten die Definitionen für Windows-Verwaltungsinstrumentation (WMI)-Klassen. MOF-Dateien werden nicht als Teil des Microsoft Windows Software Development Kit (SDK) installiert. Sie werden auf dem Server installiert, wenn Sie die zugehörige Rolle mithilfe der Server-Manager hinzufügen. Weitere Informationen zu MOF-Dateien finden Sie unter [Managed Object Format (MOF)](/windows/desktop/WmiSdk/managed-object-format--mof-).
+Managed Object Format (MOF) enthalten die Definitionen für WMI-Klassen (Windows Management Instrumentation). MOF-Dateien werden nicht als Teil des Microsoft Windows Software Development Kit (SDK) installiert. Sie werden auf dem Server installiert, wenn Sie die zugeordnete Rolle mithilfe der Server-Manager. Weitere Informationen zu MOF-Dateien finden Sie unter [Managed Object Format (MOF).](/windows/desktop/WmiSdk/managed-object-format--mof-)
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -125,17 +125,17 @@ Managed Object Format-Dateien (MOF) enthalten die Definitionen für Windows-Verw
 |-------------------------------------|-----------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows Vista<br/>                                                                |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2008<br/>                                                          |
-| Namespace<br/>                | Root \\ CIMv2 \\ TerminalServices<br/>                                                |
-| MOF<br/>                      | <dl> <dt>Tscsgwmi. MOF</dt> </dl> |
+| Namespace<br/>                | \\ \\ CiMv2-Stammterminaldienste<br/>                                                |
+| MOF<br/>                      | <dl> <dt>TSCfgWmi.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>TSCfgWmi.dll</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Win32-"t- \_ remotecontrolsetting"**](win32-tsremotecontrolsetting.md)
+[**Win32 \_ TSRemoteControlSetting**](win32-tsremotecontrolsetting.md)
 </dt> </dl>
 
  

@@ -1,5 +1,5 @@
 ---
-description: 'D3DXQuaternionSlerp-Funktion (D3DX10Math.h): Interpoliert zwischen zwei Quaternionen mithilfe von sph채rischer linearer Interpolation.'
+description: 'D3DXQuaternionSlerp-Funktion (D3DX10Math.h): Interpoliert mithilfe der pherischen linearen Interpolation zwischen zwei Quaternionen.'
 ms.assetid: 487e1df1-bf20-49cb-ad14-61fcf1300904
 title: D3DXQuaternionSlerp-Funktion (D3DX10Math.h)
 ms.topic: reference
@@ -48,7 +48,7 @@ D3DXQUATERNION* D3DXQuaternionSlerp(
 
 Typ: **[ **D3DXQUATERNION**](../direct3d9/d3dxquaternion.md)\***
 
-Zeiger auf [**D3DXQUATERNION,**](d3d10-d3dxquaternion.md) das das Ergebnis des Vorgangs ist.
+Zeiger auf das [**D3DXQUATERNION-Steuerelement,**](d3d10-d3dxquaternion.md) das das Ergebnis des Vorgangs ist.
 
 </dd> <dt>
 
@@ -89,7 +89,7 @@ Zeiger auf eine D3DXQUATERNION-Struktur, die das Ergebnis der Interpolation ist.
 
 Der R체ckgabewert f체r diese Funktion ist der gleiche Wert, der im pOut-Parameter zur체ckgegeben wird. Auf diese Weise kann die D3DXQuaternionSlerp-Funktion als Parameter f체r eine andere Funktion verwendet werden.
 
-Verwenden Sie [**D3DXQuaternionNormalize**](d3d10-d3dxquaternionnormalize.md) f체r alle Quaternioneingaben, die noch nicht normalisiert sind.
+Verwenden [**Sie D3DXQuaternionNormalize**](d3d10-d3dxquaternionnormalize.md) f체r alle Quaternioneingaben, die noch nicht normalisiert sind.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -102,7 +102,7 @@ Verwenden Sie [**D3DXQuaternionNormalize**](d3d10-d3dxquaternionnormalize.md) f�
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 

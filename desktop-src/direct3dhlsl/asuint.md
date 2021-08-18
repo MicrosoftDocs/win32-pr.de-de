@@ -1,6 +1,6 @@
 ---
 title: asuint-Funktion
-description: Interpretiert das Bitmuster eines 64-Bit-Werts als zwei Ganzzahlen 32 ohne Vorzeichen zurück.
+description: Interpretiert das Bitmuster eines 64-Bit-Werts als zwei 32-Bit-Ganzzahlen ohne Vorzeichen neu.
 ms.assetid: 29671661-4fec-46e5-9b6f-56fba8e1d756
 keywords:
 - asuint-Funktion HLSL
@@ -13,24 +13,24 @@ api_type:
 ms.topic: reference
 ms.date: 05/31/2018
 api_location: ''
-ms.openlocfilehash: c54ed89e112482df4a54f35e24a04694e88fa490
-ms.sourcegitcommit: 57758ecb246c84d65e6e0e4bd5570d9176fa39cd
+ms.openlocfilehash: 02f0df4d31ca978b8b58b50cd0c91710056aa9ac0f3cac1ae370a4edba6a9edf
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "104038140"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119626590"
 ---
 # <a name="asuint-function"></a>asuint-Funktion
 
-Interpretiert das Bitmuster eines 64-Bit-Werts als zwei Ganzzahlen 32 ohne Vorzeichen zurück.
+Interpretiert das Bitmuster eines 64-Bit-Werts als zwei 32-Bit-Ganzzahlen ohne Vorzeichen neu.
 
 ## <a name="syntax"></a>Syntax
 
 ``` syntax
 void asuint(
-  in  double value,
-  out uint lowbits,
-  out uint highbits
+  in  double value,
+  out uint lowbits,
+  out uint highbits
 );
 ```
 
@@ -38,16 +38,16 @@ void asuint(
 
 <dl> <dt>
 
-*Wert* \[ in\]
+*value* \[ In\]
 </dt> <dd>
 
-Typ: **Double**
+Typ: **double**
 
 Der Eingabewert.
 
 </dd> <dt>
 
-*lowbits* \[ vorgenommen\]
+*lowbits* \[ out\]
 </dt> <dd>
 
 Typ: **uint**
@@ -56,7 +56,7 @@ Das niedrige 32-Bit-Muster des *Werts*.
 
 </dd> <dt>
 
-*highbits* \[ vorgenommen\]
+*Highbits* \[ out\]
 </dt> <dd>
 
 Typ: **uint**
@@ -69,52 +69,52 @@ Das hohe 32-Bit-Muster des *Werts*.
 
 Diese Funktion gibt keinen Wert zurück.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Diese Funktion ist eine Alternative Version von " [**asuint**](dx-graphics-hlsl-asuint.md) ", die in früheren shadermodellen verfügbar war und für Shader Model 5 eingeführt wurde. Die ursprüngliche Funktion (im HLSL-Compiler mit der unterschiedlichen Signatur erkannt) bleibt für Shader Model 5 verfügbar.
+Diese Funktion ist eine alternative Version der [**systeminternen Asuint-Funktion,**](dx-graphics-hlsl-asuint.md) die in früheren Shadermodellen verfügbar war und für ShaderModell 5 eingeführt wurde. Die ursprüngliche Funktion (im HLSL-Compiler durch ihre unterschiedliche Signatur erkannt) bleibt für Shader Model 5 verfügbar.
 
-### <a name="minimum-shader-model"></a>Minimaler Shader-Modell
+### <a name="minimum-shader-model"></a>Minimales Shadermodell
 
-Diese Funktion wird in den folgenden shadermodellen unterstützt.
+Diese Funktion wird in den folgenden Shadermodellen unterstützt.
 
 
 
 | Shadermodell                                                                | Unterstützt |
 |-----------------------------------------------------------------------------|-----------|
-| [Shader Model 5](d3d11-graphics-reference-sm5.md) und höhere shadermodelle | ja       |
+| [Shadermodell 5](d3d11-graphics-reference-sm5.md) und höher– Shadermodelle | Ja       |
 
 
 
- 
+ 
 
-Diese Funktion wird in den folgenden Typen von Shadern unterstützt:
+Diese Funktion wird in den folgenden Shadertypen unterstützt:
 
 
 
-| Scheitelpunkt | Hülle | Domain | Geometrie | Pixel | Compute |
+| Scheitelpunkt | Rumpf | Domain | Geometrie | Pixel | Compute |
 |--------|------|--------|----------|-------|---------|
 | x      | x    | x      | x        | x     | x       |
 
 
 
- 
+ 
 
 ## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[Intrinsische Funktionen](dx-graphics-hlsl-intrinsic-functions.md)
+[Systeminterne Funktionen](dx-graphics-hlsl-intrinsic-functions.md)
 </dt> <dt>
 
 [**asuint (DirectX HLSL)**](dx-graphics-hlsl-asuint.md)
 </dt> <dt>
 
-[Shader-Modell 5](d3d11-graphics-reference-sm5.md)
+[Shadermodell 5](d3d11-graphics-reference-sm5.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

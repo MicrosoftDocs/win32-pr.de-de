@@ -1,12 +1,12 @@
 - name: Netzwerkverwaltung
   href: network-management.md
   items:
-    - name: Neuerungen bei der Netzwerkverwaltung
+    - name: Neues bei der Netzwerkverwaltung
       href: what-s-new-in-network-management.md
     - name: Informationen zur Netzwerkverwaltung
       href: about-network-management.md
       items:
-        - name: Netzwerkverwaltungsfunktionengruppen
+        - name: Netzwerkverwaltungsfunktionsgruppen
           href: network-management-function-groups.md
           items:
             - name: Warnungsfunktionen
@@ -25,9 +25,9 @@
               href: message-functions.md
             - name: NetFile-Funktionen
               href: netfile-functions.md
-            - name: Remotehilfsprogrammfunktionen
+            - name: Remote-Hilfsprogrammfunktionen
               href: remote-utility-functions.md
-            - name: Schedule Functions
+            - name: Zeitplanfunktionen
               href: schedule-functions.md
             - name: Serverfunktionen
               href: server-functions.md
@@ -35,7 +35,7 @@
               href: server-and-workstation-transport-functions.md
             - name: Sitzungsfunktionen
               href: session-functions.md
-            - name: Freigeben von Funktionen
+            - name: Freigabefunktionen
               href: share-functions.md
             - name: Verwenden von Funktionen
               href: use-functions.md
@@ -43,7 +43,7 @@
               href: user-functions.md
             - name: Modale Benutzerfunktionen
               href: user-modal-functions.md
-            - name: Benutzerfunktionen für Arbeitsstationen und Arbeitsstationen
+            - name: Arbeitsstations- und Arbeitsstationsbenutzerfunktionen
               href: workstation-and-workstation-user-functions.md
         - name: Sicherheitsanforderungen für Netzwerkverwaltungsfunktionen
           href: security-requirements-for-the-network-management-functions.md
@@ -57,7 +57,7 @@
         - name: Netzwerkverwaltungsdaten
           href: network-management-data.md
           items:
-            - name: Netzwerkverwaltungsfunktionspuffer
+            - name: Puffer für Netzwerkverwaltungsfunktionen
               href: network-management-function-buffers.md
             - name: Pufferlängen der Netzwerkverwaltungsfunktion
               href: network-management-function-buffer-lengths.md
@@ -71,7 +71,7 @@
               href: function-status.md
             - name: NLS-Unterstützung
               href: nls-support.md
-            - name: Parameterfehlerberichterstattung
+            - name: Berichterstellung für Parameterfehler
               href: parameter-error-reporting.md
             - name: RPC-Pufferzuordnungsfehler
               href: rpc-buffer-allocation-errors.md
@@ -80,9 +80,9 @@
     - name: Verwenden der Netzwerkverwaltung
       href: using-network-management.md
       items:
-        - name: Suchen nach dem vollständigen Namen eines Benutzers
+        - name: Suchen des vollständigen Namens eines Benutzers
           href: looking-up-a-users-full-name.md
-        - name: Erzwingen eines Benutzers zum Ändern des Anmeldekennworts
+        - name: Erzwingen der Änderung des Anmeldekennworts durch einen Benutzer
           href: forcing-a-user-to-change-the-logon-password.md
         - name: Ändern von Elementen von Benutzerinformationen
           href: changing-elements-of-user-information.md
@@ -95,7 +95,7 @@
     - name: Referenz zur Netzwerkverwaltung
       href: network-management-reference.md
       items:
-        - name: Netzwerkverwaltungsenumerationen
+        - name: Netzwerkverwaltungsenumeration
           href: network-management-enumerations.md
           items:
             - name: DSREG_JOIN_TYPE
@@ -121,9 +121,9 @@
               href: /windows/desktop/api/lmaccess/nf-lmaccess-netaccesssetinfo
             - name: NetAddAlternateComputerName
               href: /windows/desktop/api/Lmjoin/nf-lmjoin-netaddalternatecomputername
-            - name: NetAlertRais
+            - name: NetAlertR period
               href: /windows/desktop/api/Lmalert/nf-lmalert-netalertraise
-            - name: NetAlertR generationsex
+            - name: NetAlertRerklärenEx
               href: /windows/desktop/api/Lmalert/nf-lmalert-netalertraiseex
             - name: NetApiBufferAllocate
               href: /windows/desktop/api/Lmapibuf/nf-lmapibuf-netapibufferallocate

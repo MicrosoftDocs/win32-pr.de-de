@@ -1,7 +1,7 @@
 ---
-description: Die idxtcompositor-Schnittstelle legt Eigenschaften für den compositorübergang fest. Diese Schnittstelle wird vom DirectShow-Bearbeitungs Dienst (des) intern verwendet, wenn der compositorübergang gerendert wird.
+description: Die IDxtCompositor-Schnittstelle legt Eigenschaften für den Compositor-Übergang fest. Diese Schnittstelle wird intern von DirectShow Editing Services (DES) verwendet, wenn der Compositor-Übergang gerendert wird.
 ms.assetid: 519f1e00-4b67-4014-906b-043f2478baa7
-title: Idxtcompositor-Schnittstelle (qedit. h)
+title: IDxtCompositor-Schnittstelle (Qedit.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -14,72 +14,72 @@ api_type:
 api_location:
 - strmiids.lib
 - strmiids.dll
-ms.openlocfilehash: c2e19f555fe01cbec3763bc1dc76d11aeb5f5ecb
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: dd59f62a4382ae6023a18792ce3547f67b49c9e8ae49e9de7c9c8409bccd788d
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106356032"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119997694"
 ---
-# <a name="idxtcompositor-interface"></a>Idxtcompositor-Schnittstelle
+# <a name="idxtcompositor-interface"></a>IDxtCompositor-Schnittstelle
 
 > [!Note]  
-> \[Veraltet. Diese API kann aus zukünftigen Versionen von Windows entfernt werden.\]
+> \[Veraltet. Diese API wird möglicherweise aus zukünftigen Releases von Windows.\]
 
  
 
-Die- `IDxtCompositor` Schnittstelle legt Eigenschaften für den [compositorübergang](compositor-transition.md) fest.
+Die `IDxtCompositor` -Schnittstelle legt Eigenschaften für den [Compositor-Übergang](compositor-transition.md) fest.
 
-Diese Schnittstelle wird vom DirectShow-Bearbeitungs Dienst (des) intern verwendet, wenn der compositorübergang gerendert wird. Die-Anwendungen müssen diese Schnittstelle nicht verwenden. Um die Eigenschaften für einen Übergang in des festzulegen, verwenden Sie die [**ipropertysetter**](ipropertysetter.md) -Schnittstelle.
+Diese Schnittstelle wird intern von DirectShow Editing Services (DES) verwendet, wenn der Compositor-Übergang gerendert wird. DES-Anwendungen müssen diese Schnittstelle nicht verwenden. Verwenden Sie zum Festlegen der Eigenschaften für einen Übergang in DES die [**IPropertySetter-Schnittstelle.**](ipropertysetter.md)
 
-Der Compositor-Übergang setzt ein Vordergrundbild auf ein Hintergrundbild zusammen. Das *Quell Rechteck* definiert den Abschnitt des Vordergrund Bilds, das zusammengesetzt ist. Das *Ziel Rechteck* definiert den Abschnitt des Hintergrund Bilds, das das Vordergrundbild empfängt. Das folgende Diagramm veranschaulicht diese Rechtecke.
+Der Compositorübergang zusammengesetzt ein Vordergrundbild zu einem Hintergrundbild. Das *Quellrechteck* definiert den Abschnitt des Vordergrundbilds, das zusammengesetzt ist. Das *Zielrechteck* definiert den Abschnitt des Hintergrundbilds, das das Vordergrundbild empfängt. Das folgende Diagramm veranschaulicht diese Rechtecke.
 
-![Eigenschaften des compositorübergangs](images/compmeasure.png)
+![Eigenschaften des Compositorübergangs](images/compmeasure.png)
 
 ## <a name="members"></a>Member
 
-Die **idxtcompositor** -Schnittstelle erbt von **idxeffect**. **Idxtcompositor** verfügt auch über diese Typen von Membern:
+Die **IDxtCompositor-Schnittstelle** erbt von **IDXEffect.** **IDxtCompositor** verfügt auch über diese Membertypen:
 
 -   [Methoden](#methods)
 
 ### <a name="methods"></a>Methoden
 
-Die **idxtcompositor** -Schnittstelle verfügt über diese Methoden.
+Die **IDxtCompositor-Schnittstelle** verfügt über diese Methoden.
 
 
 
-| Methode                                                   | BESCHREIBUNG                                                         |
+| Methode                                                   | Beschreibung                                                         |
 |:---------------------------------------------------------|:--------------------------------------------------------------------|
-| [**\_Höhe erhalten**](idxtcompositor-get-height.md)         | Ruft die Höhe des Ziel Rechtecks ab.<br/>            |
-| [**\_OffsetX erhalten**](idxtcompositor-get-offsetx.md)       | Ruft den horizontalen Offset des Ziel Rechtecks ab.<br/> |
-| [**\_offität abrufen**](idxtcompositor-get-offsety.md)       | Ruft den vertikalen Offset des Ziel Rechtecks ab.<br/>   |
-| [**\_srcHeight erhalten**](idxtcompositor-get-srcheight.md)   | Ruft die Höhe des Quell Rechtecks ab.<br/>            |
-| [**\_srcoffsetx erhalten**](idxtcompositor-get-srcoffsetx.md) | Ruft den horizontalen Offset des Quell Rechtecks ab.<br/> |
-| [**\_srcoff-Ty abrufen**](idxtcompositor-get-srcoffsety.md) | Ruft den vertikalen Offset des Quell Rechtecks ab.<br/>   |
-| [**\_srcWidth erhalten**](idxtcompositor-get-srcwidth.md)     | Ruft die Breite des Quell Rechtecks ab.<br/>             |
-| [**\_Breite erhalten**](idxtcompositor-get-width.md)           | Ruft die Breite des Ziel Rechtecks ab.<br/>             |
-| [**\_Höhe ablegen**](idxtcompositor-put-height.md)         | Gibt die Höhe des Ziel Rechtecks an.<br/>            |
-| [**\_OffsetX ablegen**](idxtcompositor-put-offsetx.md)       | Gibt den horizontalen Offset des Ziel Rechtecks an.<br/> |
-| [**Put \_ offty**](idxtcompositor-put-offsety.md)       | Gibt den vertikalen Offset des Ziel Rechtecks an.<br/>   |
-| [**\_srcHeight platzieren**](idxtcompositor-put-srcheight.md)   | Gibt die Höhe des Quell Rechtecks an.<br/>            |
-| [**\_srcoffsetx platzieren**](idxtcompositor-put-srcoffsetx.md) | Gibt den horizontalen Offset des Quell Rechtecks an.<br/> |
-| [**\_srcoff-Ty platzieren**](idxtcompositor-put-srcoffsety.md) | Gibt den vertikalen Offset des Quell Rechtecks an.<br/>   |
-| [**\_srcWidth platzieren**](idxtcompositor-put-srcwidth.md)     | Gibt die Breite des Quell Rechtecks an.<br/>             |
-| [**\_Breite platzieren**](idxtcompositor-put-width.md)           | Gibt die Breite des Ziel Rechtecks an.<br/>             |
+| [**Get \_ Height**](idxtcompositor-get-height.md)         | Ruft die Höhe des Zielrechtecks ab.<br/>            |
+| [**get \_ OffsetX**](idxtcompositor-get-offsetx.md)       | Ruft den horizontalen Offset des Zielrechtecks ab.<br/> |
+| [**get \_ OffsetY**](idxtcompositor-get-offsety.md)       | Ruft den vertikalen Offset des Zielrechtecks ab.<br/>   |
+| [**get \_ SrcHeight**](idxtcompositor-get-srcheight.md)   | Ruft die Höhe des Quellrechtecks ab.<br/>            |
+| [**Get \_ SrcOffsetX**](idxtcompositor-get-srcoffsetx.md) | Ruft den horizontalen Offset des Quellrechtecks ab.<br/> |
+| [**get \_ SrcOffsetY**](idxtcompositor-get-srcoffsety.md) | Ruft den vertikalen Offset des Quellrechtecks ab.<br/>   |
+| [**get \_ SrcWidth**](idxtcompositor-get-srcwidth.md)     | Ruft die Breite des Quellrechtecks ab.<br/>             |
+| [**get \_ Width**](idxtcompositor-get-width.md)           | Ruft die Breite des Zielrechtecks ab.<br/>             |
+| [**Put \_ Height**](idxtcompositor-put-height.md)         | Gibt die Höhe des Zielrechtecks an.<br/>            |
+| [**put \_ OffsetX**](idxtcompositor-put-offsetx.md)       | Gibt den horizontalen Offset des Zielrechtecks an.<br/> |
+| [**put \_ OffsetY**](idxtcompositor-put-offsety.md)       | Gibt den vertikalen Offset des Zielrechtecks an.<br/>   |
+| [**put \_ SrcHeight**](idxtcompositor-put-srcheight.md)   | Gibt die Höhe des Quellrechtecks an.<br/>            |
+| [**put \_ SrcOffsetX**](idxtcompositor-put-srcoffsetx.md) | Gibt den horizontalen Offset des Quellrechtecks an.<br/> |
+| [**put \_ SrcOffsetY**](idxtcompositor-put-srcoffsety.md) | Gibt den vertikalen Offset des Quellrechtecks an.<br/>   |
+| [**put \_ SrcWidth**](idxtcompositor-put-srcwidth.md)     | Gibt die Breite des Quellrechtecks an.<br/>             |
+| [**Put \_ Width**](idxtcompositor-put-width.md)           | Gibt die Breite des Zielrechtecks an.<br/>             |
 
 
 
  
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
 > [!Note]  
-> Die Header Datei "qedit. h" ist nicht mit Direct3D-Headern nach Version 7 kompatibel.
+> Die Headerdatei Qedit.h ist nicht mit Direct3D-Headern nach Version 7 kompatibel.
 
  
 
 > [!Note]  
-> Zum Abrufen von "qedit. h" Laden Sie das [Microsoft Windows SDK Update für Windows Vista und .NET Framework 3,0](https://msdn.microsoft.com/windowsvista/bb980924.aspx)herunter. "Qedit. h" ist im Microsoft Windows SDK für Windows 7 und .NET Framework 3,5 Service Pack 1 nicht verfügbar.
+> Um Qedit.h zu erhalten, laden Sie das [Microsoft Windows SDK-Update für Windows Vista und .NET Framework 3.0 herunter.](https://msdn.microsoft.com/windowsvista/bb980924.aspx) Qedit.h ist im Microsoft Windows SDK für Windows 7 und .NET Framework 3.5 Service Pack 1 nicht verfügbar.
 
  
 
@@ -89,8 +89,8 @@ Die **idxtcompositor** -Schnittstelle verfügt über diese Methoden.
 
 | Anforderung | Wert |
 |--------------------|-----------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>"Qedit. h"</dt> </dl>      |
-| Bibliothek<br/> | <dl> <dt>"" "" ". Lib"</dt> </dl> |
+| Header<br/>  | <dl> <dt>Qedit.h</dt> </dl>      |
+| Bibliothek<br/> | <dl> <dt>Strmiids.lib</dt> </dl> |
 
 
 

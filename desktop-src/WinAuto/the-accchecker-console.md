@@ -17,14 +17,14 @@ ms.locfileid: "118994034"
 ---
 # <a name="the-accchecker-console"></a>Die AccChecker-Konsole
 
-AccChecker Console (AccCheckConsole.exe) ist ein Befehlszeilentool zum Überprüfen der Implementierung der Barrierefreiheit der Benutzeroberfläche Ihrer Anwendung. Die Befehlszeile akzeptiert eine Vielzahl von Eingaben (z. B. HWND, Fenstertitel und Überprüfungsroutine) und gibt einen Exitcode an, der der Fehlerprotokollanzahl entspricht.
+AccChecker Console (AccCheckConsole.exe) ist ein Befehlszeilentool zum Überprüfen der Implementierung der Barrierefreiheit der Benutzeroberfläche Ihrer Anwendung. Die Befehlszeile akzeptiert eine Vielzahl von Eingaben (z. B. HWND, Fenstertitel und Überprüfungsroutine) und stellt einen Exitcode bereit, der der Fehlerprotokollanzahl entspricht.
 
 -   [Befehlszeilensyntax](#command-line-syntax)
 -   [Befehlszeilenfehlercodes](#command-line-error-codes)
 -   [Befehlszeilenbeispiele](#command-line-examples)
 -   [Zugehörige Themen](#related-topics)
 
-![Accchecker-Konsolen-Befehlszeilentool](images/accchecker-console.png)
+![Befehlszeilentool der Accchecker-Konsole](images/accchecker-console.png)
 
 ## <a name="command-line-syntax"></a>Befehlszeilensyntax
 
@@ -32,22 +32,22 @@ Die AccChecker-Konsole verfügt über die folgende Befehlszeilensyntax.
 
 **AccCheckConsole-Optionen \[ \] (-hwnd <hwnd> \| -process <name> ) \[<dlls>\]**
 
-Die Befehlszeilenoptionen lauten wie folgt.
+Die Befehlszeilenoptionen sind wie folgt.
 
 
 
 | Optionen                                                                                                                                                         | BESCHREIBUNG                                                                                                                  |
 |-----------------------------------------------------------------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------|
-| <span id="-hwnd__hwnd_"></span><span id="-HWND__HWND_"></span>-hwnd <hwnd><br/>                                                                     | Überprüft das Fenster mit dem angegebenen Handle (HWND). Das Handle kann in hexadezimal oder dezimal angegeben werden.<br/> |
+| <span id="-hwnd__hwnd_"></span><span id="-HWND__HWND_"></span>-hwnd <hwnd><br/>                                                                     | Überprüft das Fenster mit dem angegebenen Handle (HWND). Das Handle kann in hexidecimal oder decimal angegeben werden.<br/> |
 | <span id="-window__title_"></span><span id="-WINDOW__TITLE_"></span>-window <title><br/>                                                            | Überprüft das Fenster mit dem angegebenen Titel.<br/>                                                                |
 | <span id="__________________-process__name_"></span><span id="__________________-PROCESS__NAME_"></span> -process <name><br/>                       | Überprüft das Hauptfenster des Prozesses mit dem angegebenen Namen.<br/>                                             |
 | <span id="____________________________-list"></span><span id="____________________________-LIST"></span> -list<br/>                                       | Listet alle verfügbaren Überprüfungsroutinen auf.<br/>                                                                 |
 | <span id="__________________-enable__name_"></span><span id="__________________-ENABLE__NAME_"></span> -enable <name><br/>                          | Führt die angegebene Überprüfungsroutine aus. Diese Option kann mehr als einmal angegeben werden.<br/>                             |
 | <span id="_____________________________-disable__name_"></span><span id="_____________________________-DISABLE__NAME_"></span> -disable <name><br/> | Führt alle bis auf die angegebene Überprüfungsroutine aus. Diese Option kann mehr als einmal angegeben werden.<br/>                     |
 | <span id="___________-log__info_warn_err_"></span><span id="___________-LOG__INFO_WARN_ERR_"></span> -log (info \| warn \| err)<br/>                          | Die niedrigste Ereignisbewertung, die protokolliert wird.<br/>                                                                      |
-| <span id="__________________-logfile__file_"></span><span id="__________________-LOGFILE__FILE_"></span> -logfile <file><br/>                       | Schreiben Sie die Ausgabe in die angegebene Protokolldatei. Diese Option kann mehr als einmal angegeben werden.<br/>                          |
+| <span id="__________________-logfile__file_"></span><span id="__________________-LOGFILE__FILE_"></span> -protokolldatei <file><br/>                       | Schreiben Sie die Ausgabe in die angegebene Protokolldatei. Diese Option kann mehr als einmal angegeben werden.<br/>                          |
 | <span id="-suppress__file_"></span><span id="-SUPPRESS__FILE_"></span>-suppress <file><br/>                                                         | Verwenden Sie die angegebene XML-Datei, um Fehler zu unterdrücken. <br/>                                                                   |
-| <span id="-quiet"></span><span id="-QUIET"></span>-quiet<br/>                                                                                             | Schreiben Sie keine Protokollierungsausgabe in stdout.<br/>                                                                            |
+| <span id="-quiet"></span><span id="-QUIET"></span>-quiet<br/>                                                                                             | Schreiben Sie die Protokollierungsausgabe nicht in stdout.<br/>                                                                            |
 | <span id="-help__________________________________"></span><span id="-HELP__________________________________"></span>-help <br/>                           | Zeigt schnelle Hilfe an. <br/>                                                                                             |
 
 
@@ -75,7 +75,7 @@ Im Folgenden finden Sie Fehlercodes, die von AccCheckConsole zurückgegeben werd
 
 ## <a name="command-line-examples"></a>Befehlszeilenbeispiele
 
-Im Folgenden finden Sie einige Beispiele für die AccChecker-Konsolenbefehlszeile.
+Im Folgenden sind einige Beispiele für die AccChecker-Konsolenbefehlszeile aufgeführt.
 
 -   Führen Sie alle Überprüfungen in einem Fenster mit einem angegebenen Namen aus.
 

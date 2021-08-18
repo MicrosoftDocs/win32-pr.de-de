@@ -1,11 +1,11 @@
 ---
-title: Ivmhostinfo SSE-Eigenschaft (vpccominterfaces. h)
-description: Bestimmt, ob der Prozessor den SSE-Anweisungs Satz unterstützt. | Ivmhostinfo SSE-Eigenschaft (vpccominterfaces. h)
+title: IVMHostInfo SSE-Eigenschaft (VPCCOMInterfaces.h)
+description: Bestimmt, ob der Prozessor den SSE-Anweisungssatz unterstützt. | IVMHostInfo SSE-Eigenschaft (VPCCOMInterfaces.h)
 ms.assetid: 135704db-757a-45b1-884a-5e26ef7d65c7
 keywords:
-- SSE-Eigenschaft virtueller PC
-- SSE-Eigenschaft Virtual PC, ivmhostinfo-Schnittstelle
-- Ivmhostinfo Interface Virtual PC, SSE-Eigenschaft
+- SSE-Eigenschaft Virtueller PC
+- SSE-Eigenschaft Virtueller PC, IVMHostInfo-Schnittstelle
+- IVMHostInfo-Schnittstelle Virtueller PC, SSE-Eigenschaft
 topic_type:
 - apiref
 api_name:
@@ -17,18 +17,18 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 02bef292e7dbcae48b9e2a6a94e7f879212a0dfc
-ms.sourcegitcommit: 92e74c99f8f4d097676959d0c317f533c2400a80
+ms.openlocfilehash: 355764a018714ef4ce63a817272797aa59dbca59dc060ab18df5f4e9f85baffb
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/09/2021
-ms.locfileid: "104353479"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119974270"
 ---
-# <a name="ivmhostinfosse-property"></a>Ivmhostinfo:: SSE (Eigenschaft)
+# <a name="ivmhostinfosse-property"></a>IVMHostInfo::SSE-Eigenschaft
 
-\[Windows Virtual PC ist nicht mehr für die Verwendung ab Windows 8 verfügbar. Verwenden Sie stattdessen den [Hyper-V-WMI-Anbieter (v2)](/windows/desktop/HyperV_v2/windows-virtualization-portal).\]
+\[Windows Der virtuelle PC ist ab diesem Zeitraum nicht mehr Windows 8. Verwenden Sie stattdessen den [Hyper-V-WMI-Anbieter (V2).](/windows/desktop/HyperV_v2/windows-virtualization-portal)\]
 
-Bestimmt, ob der Prozessor den SSE-Anweisungs Satz unterstützt.
+Bestimmt, ob der Prozessor den SSE-Anweisungssatz unterstützt.
 
 Diese Eigenschaft ist schreibgeschützt.
 
@@ -45,7 +45,7 @@ HRESULT get_SSE(
 
 ## <a name="property-value"></a>Eigenschaftswert
 
-**True** , wenn SSE-Anweisungen vom Host Prozessor unterstützt werden, andernfalls **false** .
+**TRUE,** wenn SSE-Anweisungen vom Hostprozessor unterstützt werden, **andernfalls FALSE.**
 
 ## <a name="error-codes"></a>Fehlercodes
 
@@ -54,8 +54,8 @@ HRESULT get_SSE(
 | Name/Wert                                                                                                                                                    | Bedeutung                                      |
 |---------------------------------------------------------------------------------------------------------------------------------------------------------------|----------------------------------------------|
 | <dl> <dt>S \_ OK</dt> <dt>0</dt> </dl>                       | Der Vorgang wurde durchgeführt.<br/>     |
-| <dl> <dt>E \_ Zeiger</dt> <dt>0x80004003</dt> </dl>         | Der-Parameter ist **null**.<br/>        |
-| <dl> <dt>DISP \_ E- \_ Ausnahme</dt> <dt>0x80020009</dt> </dl> | Ein unerwarteter Fehler ist aufgetreten.<br/> |
+| <dl> <dt>E \_ ZEIGER 0X80004003</dt> <dt></dt> </dl>         | Der Parameter ist **NULL.**<br/>        |
+| <dl> <dt>DISP \_ E \_ EXCEPTION</dt> <dt>0x80020009</dt> </dl> | Ein unerwarteter Fehler ist aufgetreten.<br/> |
 
 
 
@@ -65,20 +65,20 @@ HRESULT get_SSE(
 
 | Anforderung | Wert |
 |-------------------------------------|-----------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows 7 \[ -Desktop-Apps\]<br/>                                                    |
+| Unterstützte Mindestversion (Client)<br/> | Windows 7 \[ Desktop-Apps\]<br/>                                                    |
 | Unterstützte Mindestversion (Server)<br/> | Nicht unterstützt<br/>                                                                     |
 | Ende des Supports (Client)<br/>    | Windows 7<br/>                                                                          |
-| Produkt<br/>                  | Windows Virtual PC<br/>                                                                 |
-| Header<br/>                   | <dl> <dt>Vpccominterfaces. h</dt> </dl> |
-| IID<br/>                      | IID \_ ivmhostinfo ist als 5b5cf343-05ad-453b-be99-adf4e27b2ebc definiert.<br/>                |
+| Product (Produkt)<br/>                  | Windows Virtual PC<br/>                                                                 |
+| Header<br/>                   | <dl> <dt>VPCCOMInterfaces.h</dt> </dl> |
+| IID<br/>                      | IID \_ IVMHostInfo ist als 5b5cf343-05ad-453b-be99-adf4e27b2ebc definiert.<br/>                |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Ivmhostinfo**](ivmhostinfo.md)
+[**IVMHostInfo**](ivmhostinfo.md)
 </dt> </dl>
 
  

@@ -1,9 +1,9 @@
 ---
-title: Idlesettings (settingstype)-Element
-description: Gibt an, wie die Taskplaner Aufgaben ausführt, wenn sich der Computer im Leerlauf befindet.
+title: IdleSettings(settingsType)-Element
+description: Gibt an, wie der Taskplaner Aufgaben ausführt, wenn sich der Computer im Leerlauf befindet.
 ms.assetid: 23d57417-95a9-42e3-904c-7f0859fcda7c
 keywords:
-- Idlesettings-Element Taskplaner
+- IdleSettings-Element Taskplaner
 topic_type:
 - apiref
 api_name:
@@ -13,16 +13,16 @@ api_type:
 ms.topic: reference
 ms.date: 05/31/2018
 api_location: ''
-ms.openlocfilehash: 5ae8b7953f31d7e9c6f01387d3136f01d8ab697a
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: fc0a4c3fc978c93d13be8faa62012d3928d47da5b5a214ce50f5506992f1fc8d
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104105219"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119991219"
 ---
-# <a name="idlesettings-settingstype-element"></a>Idlesettings (settingstype)-Element
+# <a name="idlesettings-settingstype-element"></a>IdleSettings(settingsType)-Element
 
-Gibt an, wie die Taskplaner Aufgaben ausführt, wenn sich der Computer im Leerlauf befindet. Informationen zu Bedingungen im Leerlauf finden Sie unter [Aufgaben im Leerlauf](task-idle-conditions.md).
+Gibt an, wie der Taskplaner Aufgaben ausführt, wenn sich der Computer im Leerlauf befindet. Informationen zu Leerlaufbedingungen finden Sie unter [Leerlaufbedingungen für Aufgaben.](task-idle-conditions.md)
 
 ``` syntax
 <xs:element name="IdleSettings"
@@ -31,35 +31,35 @@ Gibt an, wie die Taskplaner Aufgaben ausführt, wenn sich der Computer im Leerla
  />
 ```
 
-Das **idlesettings** -Element wird durch den komplexen [**settingstype**](taskschedulerschema-settingstype-complextype.md) -Typ definiert.
+Das **IdleSettings-Element** wird durch den komplexen [**SettingsType-Typ**](taskschedulerschema-settingstype-complextype.md) definiert.
 
 ## <a name="parent-element"></a>Übergeordnetes Element
 
 | Element                                                           | Abgeleitet von                                                         | BESCHREIBUNG                                                                        |
 |-------------------------------------------------------------------|----------------------------------------------------------------------|------------------------------------------------------------------------------------|
-| [**Einstellungen**](taskschedulerschema-settings-tasktype-element.md) | [**settingstype**](taskschedulerschema-settingstype-complextype.md) | Enthält die Einstellungen, die der Taskplaner verwendet, um die Aufgabe auszuführen.<br/> |
+| [**Einstellungen**](taskschedulerschema-settings-tasktype-element.md) | [**settingsType**](taskschedulerschema-settingstype-complextype.md) | Enthält die Einstellungen, die der Taskplaner zum Ausführen der Aufgabe verwendet.<br/> |
 
 ## <a name="child-elements"></a>Untergeordnete Elemente
 
 > [!NOTE]
-> Die Einstellungen für *Dauer* und *WaitTimeout* sind veraltet. Sie sind weiterhin in der Taskplaner-Benutzeroberfläche vorhanden, und ihre Schnittstellen Methoden geben möglicherweise weiterhin gültige Werte zurück, aber Sie werden nicht mehr verwendet.
+> Die Einstellungen *Dauer* und *WaitTimeout* sind veraltet. Sie sind weiterhin in der Taskplaner Benutzeroberfläche vorhanden, und ihre Schnittstellenmethoden geben möglicherweise weiterhin gültige Werte zurück, werden jedoch nicht mehr verwendet.
 
 | Element                                                                                  | type     | BESCHREIBUNG                                                                                                              |
 |------------------------------------------------------------------------------------------|----------|--------------------------------------------------------------------------------------------------------------------------|
-| [**Neustartondle**](taskschedulerschema-restartonidle-idlesettingstype-element.md)      | boolean  | Gibt an, ob der Task neu gestartet wird, wenn der Computer mehrmals in eine Leerlauf Bedingung wechselt.<br/>       |
-| [**Stoponidleend**](taskschedulerschema-terminateonidleend-idlesettingstype-element.md) | boolean  | Gibt an, dass der Taskplaner den Task beendet, wenn die Leerlauf Bedingung vor dem Abschluss der Aufgabe endet.<br/> |
-| **Veraltet**: [ **Dauer**](taskschedulerschema-duration-idlesettingstype-element.md)                | duration | Gibt an, wie lange sich der Computer im Leerlauf befinden muss, bevor der Task ausgeführt wird.<br/>                              |
-| **Veraltet**: [ **WaitTimeout**](taskschedulerschema-waittimeout-idlesettingstype-element.md)          | duration | Gibt die Zeitspanne an, die der Taskplaner auf das Eintreten einer Leerlauf Bedingung wartet.<br/>                |
+| [**RestartOnIdle**](taskschedulerschema-restartonidle-idlesettingstype-element.md)      | boolean  | Gibt an, ob der Task neu gestartet wird, wenn der Computer mehr als einmal in eine Leerlaufbedingung eintritt.<br/>       |
+| [**StopOnIdleEnd**](taskschedulerschema-terminateonidleend-idlesettingstype-element.md) | boolean  | Gibt an, dass die Taskplaner die Aufgabe beendet, wenn die Leerlaufbedingung beendet wird, bevor der Task abgeschlossen wird.<br/> |
+| **Veraltet:** [ **Dauer**](taskschedulerschema-duration-idlesettingstype-element.md)                | duration | Gibt an, wie lange sich der Computer im Leerlauf befinden muss, bevor der Task ausgeführt wird.<br/>                              |
+| **Veraltet:** [ **WaitTimeout**](taskschedulerschema-waittimeout-idlesettingstype-element.md)          | duration | Gibt die Zeitspanne an, die der Taskplaner auf das Auftreten einer Leerlaufbedingung wartet.<br/>                |
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Bei der Skript Entwicklung werden im Leerlauf Einstellungen mithilfe der [**tasksettings. idlesettings**](tasksettings-idlesettings.md) -Eigenschaft angegeben.
+Für die Skriptentwicklung werden Leerlaufeinstellungen mithilfe der [**TaskSettings.IdleSettings-Eigenschaft**](tasksettings-idlesettings.md) angegeben.
 
-Bei der C++-Entwicklung werden Leerlauf Einstellungen mithilfe der [**itasksettings:: idlesettings**](/windows/desktop/api/taskschd/nf-taskschd-itasksettings-get_idlesettings) -Eigenschaft angegeben.
+Für die C++-Entwicklung werden Leerlaufeinstellungen mithilfe der [**ITaskSettings::IdleSettings-Eigenschaft**](/windows/desktop/api/taskschd/nf-taskschd-itasksettings-get_idlesettings) angegeben.
 
 ## <a name="examples"></a>Beispiele
 
-Der folgende XML-Code definiert ein settings-Element, das es Taskplaner ermöglicht, 24 Stunden auf eine Leerlauf Bedingung zu warten, und dann nur 10 Minuten {idleduration) zum Initiieren der Aufgabe zulässt.
+Der folgende XML-Code definiert ein Einstellungselement, das es Taskplaner ermöglicht, 24 Stunden auf eine Leerlaufbedingung zu warten und dann nur 10 Minuten {IdleDuration) zu erlauben, um den Task zu initiieren.
 
 ```XML
 <Settings>
@@ -77,11 +77,11 @@ Der folgende XML-Code definiert ein settings-Element, das es Taskplaner ermögli
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>       |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/> |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur Vista-Desktop-Apps\]<br/>       |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/> |
 
 ## <a name="see-also"></a>Siehe auch
 
-[Schema Elemente Taskplaner](task-scheduler-schema-elements.md)
+[Taskplaner Schemaelemente](task-scheduler-schema-elements.md)
 
 [Aufgabenplanung](task-scheduler-start-page.md)

@@ -1,55 +1,55 @@
 ---
-title: Typdefinitionen, Konstruktordeklarationen und Importe
-description: Typdefinitionen, Konstruktordeklarationen und Importe können außerhalb des Schnittstellen Texts auftreten.
+title: Typdefinitionen, Konstruktdeklarationen und Importe
+description: Typdefinitionen, Konstruktdeklarationen und Importe können außerhalb des Schnittstellentexts erfolgen.
 ms.assetid: 5d9011ab-bfc4-41f6-bd69-953660191652
 keywords:
-- Schnittstellen-Mittell, Typdefinitionen
-- Schnittstellen-Mittell, Konstruieren von Deklarationen
-- Schnittstellen-Mittel l, Importe
-- Typdefinitionen (Mittell)
-- Konstruieren von Deklarationen in der Mitte
-- importiert Mittel l
+- Schnittstellen MIDL , Typdefinitionen
+- Schnittstellen MIDL , Konstruktdeklarationen
+- Schnittstellen MIDL , Importe
+- Typdefinitionen MIDL
+- MIDL-Konstruktdeklarationen
+- importiert MIDL
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 645781f033566ba43dc6e355935ed112d0e8f5f6
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: aca1f80bca0a5d03ea0e935b05f973a6370c4180c9ce5c0fe7dea5d8f5c9c7de
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "106342247"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119829220"
 ---
-# <a name="type-definitions-construct-declarations-and-imports"></a>Typdefinitionen, Konstruktordeklarationen und Importe
+# <a name="type-definitions-construct-declarations-and-imports"></a>Typdefinitionen, Konstruktdeklarationen und Importe
 
-Typdefinitionen, Konstruktordeklarationen und Importe können außerhalb des Schnittstellen Texts auftreten. Alle Definitionen aus der Haupt-IDL-Datei werden in der generierten Header Datei angezeigt, und alle Prozeduren aus allen Schnittstellen in der Haupt-IDL-Datei generieren stubroutinen. Dies ermöglicht es Anwendungen, die mehrere Schnittstellen unterstützen, IDL-Dateien in einer einzelnen, kombinierten IDL-Datei zusammenzuführen.
+Typdefinitionen, Konstruktdeklarationen und Importe können außerhalb des Schnittstellentexts erfolgen. Alle Definitionen aus der IDL-Hauptdatei werden in der generierten Headerdatei angezeigt, und alle Prozeduren von allen Schnittstellen in der IDL-Hauptdatei generieren Stubroutinen. Dadurch können Anwendungen, die mehrere Schnittstellen unterstützen, IDL-Dateien in einer einzelnen, kombinierten IDL-Datei zusammenführen.
 
-Daher ist es weniger Zeit, die Dateien zu kompilieren, und kann die Redundanz in den generierten Stubdaten auch durch die mittlere Größe verringern. Dadurch können [**Objekt**](object.md) Schnittstellen erheblich verbessert werden, indem allgemeiner Code für Basis Schnittstellen und abgeleitete Schnittstellen gemeinsam genutzt wird. Bei nicht- **Objekt** Schnittstellen müssen die Namen der Prozedur über alle Schnittstellen hinweg eindeutig sein. Bei **Objekt** Schnittstellen müssen die Namen der Prozedur nur innerhalb einer Schnittstelle eindeutig sein. Beachten Sie, dass mehrere Schnittstellen nicht zulässig sind, wenn Sie den Schalter [**/OSF**](-osf.md) verwenden.
+Daher ist weniger Zeit zum Kompilieren der Dateien erforderlich, und MIDL kann redundanzen in den generierten Stubs reduzieren. Dies kann [**Objektschnittstellen**](object.md) erheblich verbessern, indem sie gemeinsamen Code für Basisschnittstellen und abgeleitete Schnittstellen freigeben können. Bei **Nicht-Objektschnittstellen** müssen die Prozedurnamen für alle Schnittstellen eindeutig sein. Bei **Objektschnittstellen** müssen die Prozedurnamen nur innerhalb einer Schnittstelle eindeutig sein. Beachten Sie, dass mehrere Schnittstellen nicht zulässig sind, wenn Sie den Schalter [**/osf**](-osf.md) verwenden.
 
 ## <a name="declarative-constructs"></a>Deklarative Konstrukte
 
-Die Syntax für deklarative Konstrukte in der IDL-Datei ähnelt der Syntax für c. in der Mitte werden alle deklarativen Microsoft C/C++-Konstrukte unterstützt, mit Ausnahme der folgenden:
+Die Syntax für deklarative Konstrukte in der IDL-Datei ähnelt der syntax für C. MIDL unterstützt alle deklarativen Microsoft C/C++-Konstrukte mit Ausnahme der folgenden:
 
--   Ältere typdeklaratoren, die es ermöglichen, dass ein Deklarator ohne Typspezifizierer angegeben wird, z. b.:
+-   Ältere Deklaratoren im Stil, mit denen ein Deklarator ohne Typspezifizierer angegeben werden kann, z. B.:
 
     ``` syntax
     x (y) 
     short x (y)
     ```
 
--   Deklarationen mit Initialisierern (in der Mitte dürfen nur Deklarationen akzeptiert werden, die der Syntax der [**Konstanten Konstanten**](const.md) entsprechen).
+-   Deklarationen mit Initialisierern (MIDL akzeptiert nur Deklarationen, die der MIDL [**const-Syntax**](const.md) entsprechen).
 
-Das [**Import**](import.md) -Schlüsselwort gibt die Namen von mindestens einer IDL-Datei an, die importiert werden soll. Die Import-Direktive ähnelt der C [**include**](include.md) -Direktive, mit dem Unterschied, dass nur Datentypen in die importierte IDL-Datei aufgenommen werden.
+Das [**Importschlüsselwort**](import.md) gibt die Namen einer oder mehrerer zu importierenden IDL-Dateien an. Die Importdirektive ähnelt [](include.md) der C include-Direktive, mit der Ausnahme, dass nur Datentypen in die importierende IDL-Datei aufgenommen werden.
 
-## <a name="constant-declaration"></a>Konstante Deklaration
+## <a name="constant-declaration"></a>Konstantendeklaration
 
-Die Konstante Deklaration gibt [**boolesche**](boolean.md), ganzzahlige, Zeichen-, breit Zeichen-, Zeichen folgen-und **\* void** -Konstanten an. Weitere Informationen finden Sie unter [**konstant**](const.md).
+Die Konstantendeklaration gibt [**boolesche**](boolean.md), integer-, character-, wide-character-, string- und **\* void* _-Konstanten an. Weitere Informationen finden Sie unter [_ *const* *](const.md).
 
 ## <a name="general-declaration"></a>Allgemeine Deklaration
 
-Eine allgemeine Deklaration ähnelt der C- [**typedef**](typedef.md) -Anweisung mit dem Hinzufügen von IDL-Typattributen. Mit Ausnahme des [**/OSF**](-osf.md) -Modus ermöglicht der-Mittell-Compiler auch eine implizite Deklaration in Form einer Variablen Definition.
+Eine allgemeine Deklaration ähnelt der [**C-Typedef-Anweisung**](typedef.md) mit dem Hinzufügen von IDL-Typattributen. Mit Ausnahme des [**Modus /osf**](-osf.md) lässt der MIDL-Compiler auch eine implizite Deklaration in Form einer Variablendefinition zu.
 
 ## <a name="function-declaration"></a>Funktionsdeklaration
 
-Der funktionsdeklarator ist ein Sonderfall der allgemeinen Deklaration. Sie können IDL-Attribute verwenden, um das Verhalten des Funktions Rückgabe Typs und jedes Parameters anzugeben.
+Der Funktionsdeklarator ist ein Sonderfall der allgemeinen Deklaration. Sie können IDL-Attribute verwenden, um das Verhalten des Funktionsrückgabetyps und der einzelnen Parameter anzugeben.
 
 ## <a name="examples"></a>Beispiele
 
@@ -72,9 +72,9 @@ interface IdlGrammarExample
 }
 ```
 
- 
+ 
 
- 
+ 
 
 
 

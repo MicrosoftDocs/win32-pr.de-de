@@ -1,6 +1,6 @@
 ---
 title: MDM_Policy_Config01_CredentialsUI02-Klasse
-description: Die MDM- \_ Richtlinie \_ Config01 \_ CredentialsUI02-Klasse konfiguriert die verfügbaren Richtlinien für Anmelde Informationsanbieter.
+description: Die MDM \_ Policy \_ Config01 \_ CredentialsUI02-Klasse konfiguriert die verfügbaren Richtlinien für Anmeldeinformationsanbieter.
 ms.assetid: 508b8dc8-cc89-4260-9346-30deeac606fd
 keywords:
 - MDM_Policy_Config01_CredentialsUI02-Klasse
@@ -17,18 +17,18 @@ api_type:
 - DllExport
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: d5e0fcb9b736adfabbf2b3de12d576ef76652e17
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: a1568a253321da863020eb77f19dc3d43d87a2e256d4ef844fccf13d5b3853f5
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104040413"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119017988"
 ---
-# <a name="mdm_policy_config01_credentialsui02-class"></a>MDM- \_ Richtlinie \_ Config01 \_ CredentialsUI02-Klasse
+# <a name="mdm_policy_config01_credentialsui02-class"></a>MDM \_ Policy \_ Config01 \_ CredentialsUI02-Klasse
 
 \[Einige Informationen beziehen sich auf Vorabversionen, die vor der kommerziellen Freigabe grundlegend geändert werden können. Microsoft übernimmt keine Garantie, weder ausdrücklich noch stillschweigend, für die hier bereitgestellten Informationen.\]
 
-Die MDM- \_ Richtlinie \_ Config01 \_ CredentialsUI02-Klasse konfiguriert die verfügbaren Richtlinien für Anmelde Informationsanbieter.
+Die MDM \_ Policy \_ Config01 \_ CredentialsUI02-Klasse konfiguriert die verfügbaren Richtlinien für Anmeldeinformationsanbieter.
 
 Die folgende Syntax enthält vereinfachten MOF-Code und schließt alle geerbten Eigenschaften ein.
 
@@ -47,20 +47,20 @@ class MDM_Policy_Config01_CredentialsUI02
 
 ## <a name="members"></a>Member
 
-Die **MDM- \_ Richtlinie \_ Config01 \_ CredentialsUI02** -Klasse verfügt über diese Typen von Membern:
+Die **MDM \_ Policy \_ Config01 \_ CredentialsUI02-Klasse** verfügt über die folgenden Membertypen:
 
 -   [Eigenschaften](#properties)
 
 ### <a name="properties"></a>Eigenschaften
 
-Die **MDM- \_ Richtlinie \_ Config01 \_ CredentialsUI02** -Klasse verfügt über diese Eigenschaften.
+Die **MDM \_ Policy \_ Config01 \_ CredentialsUI02-Klasse** verfügt über diese Eigenschaften.
 
 <dl> <dt>
 
-[Disablepasswordreveal](/windows/client-management/mdm/policy-csp-credentialsui#credentialsui-disablepasswordreveal)
+[DisablePasswordReveal](/windows/client-management/mdm/policy-csp-credentialsui#credentialsui-disablepasswordreveal)
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
@@ -68,10 +68,10 @@ Zugriffstyp: Lesen/Schreiben
 
 </dd> <dt>
 
-[Enumerateadministrators](/windows/client-management/mdm/policy-csp-credentialsui#credentialsui-enumerateadministrators)
+[EnumerateAdministrators](/windows/client-management/mdm/policy-csp-credentialsui#credentialsui-enumerateadministrators)
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
@@ -82,7 +82,7 @@ Zugriffstyp: Lesen/Schreiben
 **InstanceID**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
@@ -93,10 +93,10 @@ Qualifizierer: [ **Schlüssel**](/windows/desktop/WmiSdk/key-qualifier)
 
 </dd> <dt>
 
-**ParentID**
+**Parentid**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
@@ -113,10 +113,10 @@ Qualifizierer: [ **Schlüssel**](/windows/desktop/WmiSdk/key-qualifier)
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows 10 \[ -Desktop-Apps\]<br/>                                                    |
+| Unterstützte Mindestversion (Client)<br/> | \[Windows 10 Nur Desktop-Apps\]<br/>                                                    |
 | Unterstützte Mindestversion (Server)<br/> | Nicht unterstützt<br/>                                                                      |
-| Namespace<br/>                | Root \\ CIMV2 \\ MDM- \\ dmmap<br/>                                                             |
-| MOF<br/>                      | <dl> <dt>Dmwmibridgeprov. MOF</dt> </dl> |
+| Namespace<br/>                | Root \\ cimv2 \\ mdm \\ dmmap<br/>                                                             |
+| MOF<br/>                      | <dl> <dt>DMWmiBridgeProv.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>DMWmiBridgeProv.dll</dt> </dl> |
 
 

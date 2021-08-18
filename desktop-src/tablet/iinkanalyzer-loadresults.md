@@ -1,7 +1,7 @@
 ---
-description: Lädt gespeicherte Analyseergebnisse in iinkanalyzer.
+description: Lädt gespeicherte Analyseergebnisse in IInkAnalyzer.
 ms.assetid: 7634dbe2-1857-497c-81b5-76b92fed862d
-title: 'Iinkanalyzer:: loadresults-Methode (iacom. h)'
+title: IInkAnalyzer::LoadResults-Methode (IACom.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,16 +13,16 @@ api_type:
 - COM
 api_location:
 - IACom.dll
-ms.openlocfilehash: 76c7fed63b38f1b4fc058fbe7676a727c2d47f19
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 47f385334f1b16f3d7de46b8cfc53ee6b94f485c9768f973b745af335cd5c12f
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104485075"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119713380"
 ---
-# <a name="iinkanalyzerloadresults-method"></a>Iinkanalyzer:: loadresults-Methode
+# <a name="iinkanalyzerloadresults-method"></a>IInkAnalyzer::LoadResults-Methode
 
-Lädt gespeicherte Analyseergebnisse in [**iinkanalyzer**](iinkanalyzer.md).
+Lädt gespeicherte Analyseergebnisse in [**IInkAnalyzer.**](iinkanalyzer.md)
 
 ## <a name="syntax"></a>Syntax
 
@@ -44,65 +44,65 @@ HRESULT LoadResults(
 
 <dl> <dt>
 
-*uldatasize* \[ in\]
+*ulDataSize* \[ In\]
 </dt> <dd>
 
-Die Anzahl von Bytes in *pbserializedresults*.
+Die Anzahl der Bytes in *pbSerializedResults.*
 
 </dd> <dt>
 
-*pbserializedresults* \[ in\]
+*pbSerializedResults* \[ In\]
 </dt> <dd>
 
 Die serialisierten Analyseergebnisse.
 
 </dd> <dt>
 
-*ulstrokeidscount* \[ in\]
+*ulStrokeIdsCount* \[ In\]
 </dt> <dd>
 
-Die Anzahl der Strich Bezeichner.
+Die Anzahl der Strichbezeichner.
 
 </dd> <dt>
 
-*ploriginalstrokeids* \[ in\]
+*plOriginalStrokeIds* \[ In\]
 </dt> <dd>
 
-Das Array der ursprünglichen Strich Bezeichner.
+Das Array ursprünglicher Strichbezeichner.
 
 </dd> <dt>
 
-*plnewstrokeids* \[ in\]
+*plNewStrokeIds* \[ In\]
 </dt> <dd>
 
-Das Array neuer Strich Bezeichner.
+Das Array neuer Strichbezeichner.
 
 </dd> <dt>
 
-*pferfolgreich* \[ Out, retval\]
+*pfSuccessful* \[ out, retval\]
 </dt> <dd>
 
-**Variant \_ TRUE** , wenn das Laden erfolgreich war. Andernfalls ist der Wert **\_ false**.
+**VARIANT \_ TRUE,** wenn das Laden erfolgreich war; Andernfalls **VARIANT \_ FALSE**.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Eine Beschreibung der Rückgabewerte finden Sie unter [Klassen und Schnittstellen-Ink-Analyse](classes-and-interfaces---ink-analysis.md).
+Eine Beschreibung der Rückgabewerte finden Sie unter Klassen und Schnittstellen – [Ink-Analyse.](classes-and-interfaces---ink-analysis.md)
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Wenn [**iinkanalyzer**](iinkanalyzer.md) aus den gespeicherten Ergebnissen einen [**icontextnode**](icontextnode.md) hinzufügt, wird dem **icontextnode** eine neue Globally Unique Identifier (GUID) zugewiesen (siehe [**icontextnode:: GetPropertyData**](icontextnode-getpropertydata.md) und [Kontext Knoten Eigenschaften](context-node-properties.md)).
+Wenn [**IInkAnalyzer**](iinkanalyzer.md) einen [**IContextNode**](icontextnode.md) aus den gespeicherten Ergebnissen hinzufügt, weist er dem **IContextNode** einen neuen guid (Globally Unique Identifier) zu (siehe [**IContextNode::GetPropertyData**](icontextnode-getpropertydata.md) und [Kontextknoteneigenschaften](context-node-properties.md)).
 
-Mit dieser Methode werden die gespeicherten Analyseergebnisse der vorhandenen [**icontextnode**](icontextnode.md) -Struktur hinzugefügt. Um sicherzustellen, dass die kombinierten Ergebnisse ordnungsgemäß geordnet sind, fügen Sie den Bereich mit den geladenen Kontext Knoten dem geänderten Bereich des [**iinkanalyzer**](iinkanalyzer.md) -Objekts hinzu (siehe [**iinkanalyzer:: getdirtyregion-Methode**](iinkanalyzer-getdirtyregion.md)), und analysieren Sie die frei Hand Eingaben erneut.
+Diese Methode fügt die gespeicherten Analyseergebnisse der vorhandenen [**IContextNode-Struktur**](icontextnode.md) hinzu. Um sicherzustellen, dass die kombinierten Ergebnisse ordnungsgemäß sortiert sind, fügen Sie den Bereich mit den geladenen Kontextknoten dem geänderten Bereich des [**IInkAnalyzer-Objekts**](iinkanalyzer.md) hinzu (siehe [**IInkAnalyzer::GetDirtyRegion-Methode),**](iinkanalyzer-getdirtyregion.md)undanalysieren Sie die Freihand erneut.
 
-Die Methoden Methoden [**iinkanalyzer:: SaveResults**](iinkanalyzer-saveresults.md), [**iinkanalyzer:: saveresultsfornodes**](iinkanalyzer-saveresultsfornodes.md)und [**iinkanalyzer:: saveresultsforstriche**](iinkanalyzer-saveresultsforstrokes.md) speichern die Paketdaten nicht zusammen mit den Analyseergebnissen.
+Die [**IInkAnalyzer::SaveResults-Methode,**](iinkanalyzer-saveresults.md) [**die IInkAnalyzer::SaveResultsForNodes-Methode**](iinkanalyzer-saveresultsfornodes.md)und die [**IInkAnalyzer::SaveResultsForStrokes-Methode**](iinkanalyzer-saveresultsforstrokes.md) speichern die Paketdaten nicht zusammen mit den Analyseergebnissen.
 
-Jeder Bezeichner in *ploriginalstrokeids* ist der Strich Bezeichner für den Strich in den gespeicherten Analyseergebnissen. Jeder Bezeichner in *plnewstrokeids* ist der neue Bezeichner, mit dem der ursprüngliche Bezeichner in den geladenen Analyseergebnissen ersetzt werden soll.
+Jeder Bezeichner in *plOriginalStrokeIds* ist der Strichbezeichner für den Strich in den gespeicherten Analyseergebnissen. Jeder Bezeichner in *plNewStrokeIds* ist der neue Bezeichner, durch den der ursprüngliche Bezeichner in den geladenen Analyseergebnissen ersetzt werden soll.
 
-Wenn ein gespeicherter Analyse Hinweis einen Konflikt mit einem vorhandenen Analyse Hinweis verursacht, lädt der [**iinkanalyzer**](iinkanalyzer.md) den gespeicherten Hinweis nicht, lädt jedoch die restlichen gespeicherten Ergebnisse. Wenn jedoch **iinkanalyzer** Ergebnisse für einen Strich lädt, der sich innerhalb des Bereichs eines gespeicherten Analyse Hinweises befindet, dass der **iinkanalyzer** nicht geladen wird, fügt **iinkanalyzer** das umgebende Feld des Strichs dem geänderten Bereich des **iinkanalyzer** -Objekts hinzu. Wenn **iinkanalyzer** Ergebnisse für einen Strich lädt, der sich innerhalb eines vorhandenen Analyse Hinweises befindet, fügt der **iinkanalyzer** auch das umgebende Feld des Strichs dem geänderten Bereich des **iinkanalyzer** -Objekts hinzu. Weitere Informationen zu Analyse hinweisen finden Sie unter [Eigenschaften des Analysis-Hinweises](analysis-hint-properties.md).
+Wenn ein gespeicherter Analysehinweis mit einem vorhandenen Analysehinweis in Konflikt steht, lädt [**IInkAnalyzer**](iinkanalyzer.md) den gespeicherten Hinweis nicht, sondern die restlichen gespeicherten Ergebnisse. Wenn der **IInkAnalyzer** jedoch Ergebnisse für einen Strich lädt, der sich im Bereich eines gespeicherten Analysehinweises befindet, dass der **IInkAnalyzer** nicht geladen wird, fügt **IInkAnalyzer** den Begrenzungsbereich des Strichs dem geänderten Bereich des **IInkAnalyzer-Objekts** hinzu. Wenn der **IInkAnalyzer** Ergebnisse für einen Strich lädt, der sich im Bereich eines vorhandenen Analysehinweises befindet, fügt **der IInkAnalyzer** auch den Begrenzungsbereich des Strichs dem geänderten Bereich des **IInkAnalyzer-Objekts** hinzu. Weitere Informationen zu Analysehinweisen finden Sie unter [Analysis Hint Properties](analysis-hint-properties.md).
 
-Diese Methode kann die Ereignisse [**\_ ianalysisproxyevents:: ContextNodeCreated**](-ianalysisproxyevents-contextnodecreated.md), [**\_ ianalysisproxyevents:: contextnodelta inkadditions**](-ianalysisproxyevents-contextnodelinkadding.md)und [**\_ ianalysisproxyevents:: contextnodepropertiesaktualisierten**](-ianalysisproxyevents-contextnodepropertiesupdated.md) beim Laden der gespeicherten Ergebnisse hervorrufen.
+Diese Methode kann die Ereignisse [**\_ IAnalysisProxyEvents::ContextNodeCreated,**](-ianalysisproxyevents-contextnodecreated.md) [**\_ IAnalysisProxyEvents::ContextNodeLinkAdding**](-ianalysisproxyevents-contextnodelinkadding.md)und [**\_ IAnalysisProxyEvents::ContextNodePropertiesUpdated**](-ianalysisproxyevents-contextnodepropertiesupdated.md) auslösen, während die gespeicherten Ergebnisse geladen werden.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -110,39 +110,39 @@ Diese Methode kann die Ereignisse [**\_ ianalysisproxyevents:: ContextNodeCreate
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows XP Tablet PC Edition \[ Desktop-Apps\]<br/>                                                 |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur Desktop-Apps der XP Tablet PC Edition \[\]<br/>                                                 |
 | Unterstützte Mindestversion (Server)<br/> | Nicht unterstützt<br/>                                                                                     |
-| Header<br/>                   | <dl> <dt>Iacom. h (erfordert auch iacom \_ i. c)</dt> </dl> |
+| Header<br/>                   | <dl> <dt>IACom.h (erfordert auch IACom \_ i.c)</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>IACom.dll</dt> </dl>                          |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Iinkanalyzer**](iinkanalyzer.md)
+[**IInkAnalyzer**](iinkanalyzer.md)
 </dt> <dt>
 
-[**Icontextnode**](icontextnode.md)
+[**IContextNode**](icontextnode.md)
 </dt> <dt>
 
-[**Iinkanalyzer:: getdirtyregion-Methode**](iinkanalyzer-getdirtyregion.md)
+[**IInkAnalyzer::GetDirtyRegion-Methode**](iinkanalyzer-getdirtyregion.md)
 </dt> <dt>
 
-[**Iinkanalyzer:: setdirtyregion-Methode**](iinkanalyzer-setdirtyregion.md)
+[**IInkAnalyzer::SetDirtyRegion-Methode**](iinkanalyzer-setdirtyregion.md)
 </dt> <dt>
 
-[**Iinkanalyzer:: SaveResults-Methode**](iinkanalyzer-saveresults.md)
+[**IInkAnalyzer::SaveResults-Methode**](iinkanalyzer-saveresults.md)
 </dt> <dt>
 
-[**Iinkanalyzer:: saveresultsfornodes-Methode**](iinkanalyzer-saveresultsfornodes.md)
+[**IInkAnalyzer::SaveResultsForNodes-Methode**](iinkanalyzer-saveresultsfornodes.md)
 </dt> <dt>
 
-[**Iinkanalyzer:: saveresultsforstrokes-Methode**](iinkanalyzer-saveresultsforstrokes.md)
+[**IInkAnalyzer::SaveResultsForStrokes-Methode**](iinkanalyzer-saveresultsforstrokes.md)
 </dt> <dt>
 
-[Ink-Analyse Referenz](ink-analysis-reference.md)
+[Referenz zur Ink-Analyse](ink-analysis-reference.md)
 </dt> </dl>
 
  

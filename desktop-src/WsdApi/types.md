@@ -1,5 +1,5 @@
 ---
-description: Eine Liste von qualifizierten XSD-Namen.
+description: Eine Liste von XSD-qualifizierten Namen.
 title: Types-Element
 ms.topic: article
 ms.date: 05/31/2018
@@ -12,7 +12,7 @@ ms.locfileid: "118991540"
 ---
 # <a name="types-element"></a>Types-Element
 
-Eine Liste von qualifizierten XSD-Namen.
+Eine Liste von XSD-qualifizierten Namen.
 
 ## <a name="usage"></a>Verbrauch
 

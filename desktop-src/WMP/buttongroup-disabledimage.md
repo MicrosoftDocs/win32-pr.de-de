@@ -1,9 +1,9 @@
 ---
-title: ButtonGroup. disabledImage
-description: Das disabledImage-Attribut gibt den Namen des Bilds an, das den deaktivierten Zustand der Schaltflächen in der ButtonGroup darstellt, oder ruft ihn ab.
+title: BUTTONGROUP.disabledImage
+description: Das disabledImage-Attribut gibt den Namen des Bilds an, das den deaktivierten Zustand der Schaltflächen in BUTTONGROUP darstellt, oder ruft den Namen des Bilds ab.
 ms.assetid: 34d4e6a9-de73-4dfa-9c23-4f17b55298f6
 keywords:
-- ButtonGroup. disabledImage Windows Media Player
+- BUTTONGROUP.disabledImage Windows Media Player
 topic_type:
 - apiref
 api_name:
@@ -12,16 +12,16 @@ api_type:
 - NA
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 9659c4d726313c0fb202a840e12891f00ad3fcf0
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 7eeef37bbc25185a64e767f00f9ce17934e8b445327606b552ad69d282e42e4b
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106352854"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119764350"
 ---
-# <a name="buttongroupdisabledimage"></a>ButtonGroup. disabledImage
+# <a name="buttongroupdisabledimage"></a>BUTTONGROUP.disabledImage
 
-Das **disabledImage** -Attribut gibt den Namen des Bilds an, das den deaktivierten Zustand der Schaltflächen in der **ButtonGroup** darstellt, oder ruft ihn ab.
+Das **disabledImage-Attribut** gibt den Namen des Bilds an, das den deaktivierten Zustand der Schaltflächen in **buttongroup darstellt,** oder ruft den Namen des Bilds ab.
 
 ``` syntax
         elementID.disabledImage
@@ -29,15 +29,15 @@ Das **disabledImage** -Attribut gibt den Namen des Bilds an, das den deaktiviert
 
 ## <a name="possible-values"></a>Mögliche Werte
 
-Dieses Attribut ist eine Lese- **/schreibzeichenfolge**.
+Dieses Attribut ist eine **Zeichenfolge** mit Lese-/Schreibzugriff.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die unterstützten Bildformate sind BMP, JPG, PNG und GIF. Wenn es sich bei dem Bild um eine 8-Bit-BMP-Datei handelt, können seine Farbton-und Sättigungswerte mithilfe der Attribute **hueshift** und **Sättigung** dynamisch geändert werden.
+Die unterstützten Bildformate sind BMP, JPG, PNG und GIF. Wenn es sich bei dem Bild um eine 8-Bit-BMP-Datei handelt, können die Farbton- und Sättigungswerte mithilfe der Attribute **hueShift** und **saturation** dynamisch geändert werden.
 
-Wenn das **Deaktivierte** Attribut eines **ButtonElement** -Elements auf true festgelegt ist, wird der zugehörige Bereich von **disabledImage** für die **ButtonGroup** angezeigt. Wenn das deaktivierte Bild größer als der definierte Bereich ist, wird das deaktivierte Bild beschnitten.
+Wenn das **disabled-Attribut** eines **BUTTONELEMENT-Elements** auf TRUE festgelegt ist, wird der entsprechende Bereich von **disabledImage** für **BUTTONGROUP** angezeigt. Wenn das deaktivierte Bild größer als der definierte Bereich ist, wird das deaktivierte Bild zugeschnitten.
 
-Wenn das Bild nicht abgerufen werden kann, wird ein Standardbild (das rot-x-Bild) angezeigt.
+Wenn das Bild nicht abgerufen werden kann, wird ein Standardbild (das bild red-x) angezeigt.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -45,7 +45,7 @@ Wenn das Bild nicht abgerufen werden kann, wird ein Standardbild (das rot-x-Bild
 
 | Anforderung | Wert |
 |--------------------|------------------------------------------------------|
-| Version<br/> | Windows Media Player, Version 7,0 oder höher<br/> |
+| Version<br/> | Windows Media Player Version 7.0 oder höher<br/> |
 
 
 
@@ -53,13 +53,13 @@ Wenn das Bild nicht abgerufen werden kann, wird ein Standardbild (das rot-x-Bild
 
 <dl> <dt>
 
-[**ButtonGroup-Element**](buttongroup-element.md)
+[**BUTTONGROUP-Element**](buttongroup-element.md)
 </dt> <dt>
 
-[**ButtonGroup. hueshift**](buttongroup-hueshift.md)
+[**BUTTONGROUP.hueShift**](buttongroup-hueshift.md)
 </dt> <dt>
 
-[**ButtonGroup. Sättigung**](buttongroup-saturation.md)
+[**BUTTONGROUP.saturation**](buttongroup-saturation.md)
 </dt> </dl>
 
  

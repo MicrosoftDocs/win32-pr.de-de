@@ -1,19 +1,19 @@
 ---
-description: Wird gesendet, wenn ein Benutzer einen Stift Flick ausführt. Ein Fenster empfängt diese Meldung über seine WindowProc-Funktion.
+description: Wird gesendet, wenn ein Benutzer einen Stiftflick ausführt. Ein Fenster empfängt diese Nachricht über seine WindowProc-Funktion.
 ms.assetid: 9433aadf-3440-4249-8f2c-3e22ebc949fb
-title: WM_TABLET_FLICK Meldung (tpcshrd. h)
+title: WM_TABLET_FLICK (Tpcshrd.h)
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 98c95598ac23f37918c67eec70c2ed205f8a4fe3
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 5bb01fce646d2e7c6cb4e1b25c2f49f0c4dde5258ba2167e117a23eff22a5d1c
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104214552"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119842775"
 ---
-# <a name="wm_tablet_flick-message"></a>WM- \_ Tablet \_ Flick-Nachricht
+# <a name="wm_tablet_flick-message"></a>WM \_ TABLET \_ FLICK-Nachricht
 
-Wird gesendet, wenn ein Benutzer einen Stift Flick ausführt. Ein Fenster empfängt diese Meldung über seine [*WindowProc*](/previous-versions/windows/desktop/legacy/ms633573(v=vs.85)) -Funktion.
+Wird gesendet, wenn ein Benutzer einen Stiftflick ausführt. Ein Fenster empfängt diese Nachricht über seine [*WindowProc-Funktion.*](/previous-versions/windows/desktop/legacy/ms633573(v=vs.85))
 
 
 ```C++
@@ -30,24 +30,24 @@ Wird gesendet, wenn ein Benutzer einen Stift Flick ausführt. Ein Fenster empfä
 *wParam* 
 </dt> <dd>
 
-Eine [**Flick \_ Datenstruktur**](/windows/desktop/api/tabflicks/ns-tabflicks-flick_data) , die Informationen über den aufgetretenen Stift Flick enthält.
+Eine [**\_ FLICK-DATENstruktur,**](/windows/desktop/api/tabflicks/ns-tabflicks-flick_data) die Informationen über den aufgetretenen Stiftflick enthält.
 
 </dd> <dt>
 
 *lParam* 
 </dt> <dd>
 
-Die [**flimapointstruktur \_**](/windows/desktop/api/tabflicks/ns-tabflicks-flick_point) , die angibt, wo der Stift flicke aufgetreten ist.
+Die [**FLICK \_ POINT-Struktur,**](/windows/desktop/api/tabflicks/ns-tabflicks-flick_point) die angibt, wo der Stiftflick aufgetreten ist.
 
 </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Bei einem Stift-Flick handelt es sich um eine unidirektionale Stift Bewegung, bei der der Benutzer sich bei einer schnellen, geraden Bewegung an den Digitalisierer wenden muss. Ein Flick ist durch hohe Geschwindigkeit und einen hohen Grad an Genauigkeit gekennzeichnet. Ein Flick wird durch seine Richtung identifiziert. Flicks können in acht Richtungen erstellt werden, die den Haupt-und sekundären Kompass Richtungen entsprechen.
+Ein Stiftflick ist eine unidirektionale Stiftbewegung, bei der der Benutzer den Digitizer in einer schnellen, geraden Bewegung kontaktieren muss. Ein Flick ist durch hohe Geschwindigkeit und einen hohen Grad an Geraden gekennzeichnet. Ein Flick wird anhand seiner Richtung identifiziert. Flicks können in acht Richtungen vorgenommen werden, die den Kardinal- und sekundären Kompassrichtungen entspricht.
 
-Wenn ein Stift-Flick auftritt, benachrichtigt Windows zunächst eine Anwendung, indem er eine **WM- \_ Tablet- \_** Pass-Nachricht sendet, die ein Fenster über seine [*WindowProc*](/previous-versions/windows/desktop/legacy/ms633573(v=vs.85)) -Funktion empfängt. Gibt die in [Flicks-Konstanten](flicks-constants.md)beschriebene **Maske-Maske- \_ \_ \_ Maske** zurück, die angibt, dass die Anwendung auf die **WM- \_ Tablet \_** -Nachricht geantwortet hat. Wenn die Anwendung keine " **Flick- \_ WM \_ behandelte \_ Maske**" zurückgibt, führt Windows die in der schnelle Stift Bewegungen-Systemsteuerung angegebene Standardaktion aus, indem eine nach Verfolgungs Benachrichtigung gesendet wird, wie z. b. [**WM \_ appcommand**](../inputdev/wm-appcommand.md), [**WM \_ VScroll**](../controls/wm-vscroll.md)oder [**WM \_ KeyDown**](../inputdev/wm-keydown.md), je nachdem, welche Aktion dem Stift Flick zugeordnet ist.
+Wenn ein Stiftflick auftritt, benachrichtigt Windows zunächst eine Anwendung durch Senden einer **WM \_ TABLET \_ FLICK-Nachricht,** die ein Fenster über seine [*WindowProc-Funktion*](/previous-versions/windows/desktop/legacy/ms633573(v=vs.85)) empfängt. Gibt die **FLICK \_ WM \_ HANDLED \_ MASK-Konstante** zurück, die unter [Flicks-Konstanten](flicks-constants.md)beschrieben ist, um anzugeben, dass die Anwendung auf die **WM TABLET \_ \_ FLICK-Nachricht geantwortet** hat. Wenn die Anwendung **FLICK \_ WM \_ HANDLED \_ MASK** nicht zurücksendet, führt Windows die in der Flicks-Systemsteuerung angegebene Standardaktion aus, indem eine Folgebenachrichtigung wie [**WM \_ APPCOMMAND,**](../inputdev/wm-appcommand.md) [**WM \_ VSCROLL**](../controls/wm-vscroll.md)oder [**WM \_ KEYDOWN**](../inputdev/wm-keydown.md)sendet, je nachdem, welche Aktion dem Stiftflick zugeordnet ist.
 
-Gehen Sie bei der Behandlung der **WM- \_ Tablet \_ Flick** -Nachricht vorsichtig vor. **WM \_ Tablet \_ Flick** wird über die [**SendMessageTimeout**](/windows/win32/api/winuser/nf-winuser-sendmessagetimeouta) -Funktion übergeben. Wenn Sie Methoden für eine COM-Schnittstelle aufzurufen, muss sich dieses Objekt innerhalb desselben Prozesses befinden. Andernfalls löst com eine Ausnahme aus.
+Seien Sie vorsichtig, wenn Sie die **WM \_ TABLET \_ FLICK-Nachricht** behandeln. **WM \_ TABLET \_ FLICK** wird über die [**SendMessageTimeout-Funktion**](/windows/win32/api/winuser/nf-winuser-sendmessagetimeouta) übergeben. Wenn Sie Methoden für eine COM-Schnittstelle aufrufen, muss sich dieses Objekt innerhalb desselben Prozesses finden. Wenn dies nicht der Dert ist, löst COM eine Ausnahme aus.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -55,26 +55,26 @@ Gehen Sie bei der Behandlung der **WM- \_ Tablet \_ Flick** -Nachricht vorsichti
 
 | Anforderung | Wert |
 |-------------------------------------|--------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                       |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/>                                 |
-| Header<br/>                   | <dl> <dt>Tpcshrd. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ Vista-Desktop-Apps\]<br/>                                       |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/>                                 |
+| Header<br/>                   | <dl> <dt>Tpcshrd.h</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Flick \_ Datenstruktur**](/windows/desktop/api/tabflicks/ns-tabflicks-flick_data)
+[**Datenstruktur mit \_ "Flick"**](/windows/desktop/api/tabflicks/ns-tabflicks-flick_data)
 </dt> <dt>
 
-[**WM- \_ Tablet \_ Flick-Nachricht**](wm-tablet-flick-message.md)
+[**wm \_ tablet \_ flick message**](wm-tablet-flick-message.md)
 </dt> <dt>
 
-[Gesten schnelle Stift Bewegungen](flicks-gestures.md)
+[Gesten für Blättern](flicks-gestures.md)
 </dt> <dt>
 
-[reagieren auf Pen-schnelle Stift Bewegungen](/previous-versions/windows/desktop/ms703447(v=vs.85))
+[Reagieren auf Stiftflicks](/previous-versions/windows/desktop/ms703447(v=vs.85))
 </dt> </dl>
 
  

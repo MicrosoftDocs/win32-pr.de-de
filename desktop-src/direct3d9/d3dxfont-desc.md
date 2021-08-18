@@ -1,7 +1,7 @@
 ---
 description: Definiert die Attribute einer Schriftart.
 ms.assetid: 6f456f26-3410-4205-a013-e3c12bf0feb1
-title: D3DXFONT_DESC-Struktur (D3dx9core. h)
+title: D3DXFONT_DESC-Struktur (D3dx9core.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,14 +13,14 @@ api_type:
 - HeaderDef
 api_location:
 - d3dx9core.h
-ms.openlocfilehash: d7c142787e4e4fac5be53763a3c19fd86a27efd9
-ms.sourcegitcommit: 14010c34b35fa268046c7683f021f86de08ddd0a
+ms.openlocfilehash: b458d9c3575993dd3d478f886d0b71b3cd5c1af0a53330b0813deafa188ac4c9
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "106351949"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119728540"
 ---
-# <a name="d3dxfont_desc-structure"></a>D3DXFONT- \_ Struktur
+# <a name="d3dxfont_desc-structure"></a>D3DXFONT \_ DESC-Struktur
 
 Definiert die Attribute einer Schriftart.
 
@@ -51,29 +51,29 @@ typedef struct D3DXFONT_DESC {
 **Height**
 </dt> <dd>
 
-Typ: **[ **int**](../winprog/windows-data-types.md)**
+Typ: **[ **INT**](../winprog/windows-data-types.md)**
 
 </dd> <dd>
 
-Höhe (in logischen Einheiten) der Zeichen Zelle oder des Zeichens der Schriftart.
+Höhe der Zeichenzelle oder des Zeichens der Schriftart in logischen Einheiten.
 
 </dd> <dt>
 
 **Width**
 </dt> <dd>
 
-Typ: **[ **uint**](../winprog/windows-data-types.md)**
+Typ: **[ **UINT**](../winprog/windows-data-types.md)**
 
 </dd> <dd>
 
-Breite (in logischen Einheiten) der Zeichen in der Schriftart.
+Breite von Zeichen in der Schriftart in logischen Einheiten.
 
 </dd> <dt>
 
 **Weight**
 </dt> <dd>
 
-Typ: **[ **uint**](../winprog/windows-data-types.md)**
+Typ: **[ **UINT**](../winprog/windows-data-types.md)**
 
 </dd> <dd>
 
@@ -84,29 +84,29 @@ Gewichtung der Schriftart im Bereich von 0 bis 1000.
 **MipLevels**
 </dt> <dd>
 
-Typ: **[ **uint**](../winprog/windows-data-types.md)**
+Typ: **[ **UINT**](../winprog/windows-data-types.md)**
 
 </dd> <dd>
 
-Anzahl der angeforderten Mip-Ebenen. Wenn dieser Wert 0 (null) oder D3DX \_ Default ist, wird eine komplette MipMap-Kette erstellt. Wenn der Wert 1 ist, wird der Textur Bereich identisch mit dem Bildschirmbereich zugeordnet.
+Anzahl der angeforderten MIP-Ebenen. Wenn dieser Wert 0 (null) oder D3DX \_ DEFAULT ist, wird eine vollständige Mipmapkette erstellt. Wenn der Wert 1 ist, wird der Texturraum dem Bildschirmbereich identisch zugeordnet.
 
 </dd> <dt>
 
 **Kursiv**
 </dt> <dd>
 
-Typ: **[ **bool**](../winprog/windows-data-types.md)**
+Typ: **[ **BOOL**](../winprog/windows-data-types.md)**
 
 </dd> <dd>
 
-Legen Sie für eine kursiv Schrift auf **true** fest.
+Legen Sie für eine italische Schriftart **true** fest.
 
 </dd> <dt>
 
-**CharSet**
+**Charset**
 </dt> <dd>
 
-Type: **[ **Byte**](../winprog/windows-data-types.md)**
+Typ: **[ **BYTE**](../winprog/windows-data-types.md)**
 
 </dd> <dd>
 
@@ -114,21 +114,21 @@ Zeichensatz.
 
 </dd> <dt>
 
-**Outputprecision**
+**OutputPrecision**
 </dt> <dd>
 
-Type: **[ **Byte**](../winprog/windows-data-types.md)**
+Typ: **[ **BYTE**](../winprog/windows-data-types.md)**
 
 </dd> <dd>
 
-Ausgabe Genauigkeit. Die Ausgabe Genauigkeit definiert, wie genau die Ausgabe der angeforderten Schrift Höhe, der Breite, der Zeichen Ausrichtung, dem Escapezeichen, der Tonhöhe und dem Schrifttyp entsprechen muss.
+Ausgabegenauigkeit. Die Ausgabegenauigkeit definiert, wie genau die Ausgabe mit der angeforderten Schrifthöhe, Breite, Zeichenausrichtung, Escapezeichen, Tonhöhe und Schrifttyp übereinstimmen muss.
 
 </dd> <dt>
 
 **Qualität**
 </dt> <dd>
 
-Type: **[ **Byte**](../winprog/windows-data-types.md)**
+Typ: **[ **BYTE**](../winprog/windows-data-types.md)**
 
 </dd> <dd>
 
@@ -139,30 +139,30 @@ Ausgabequalität.
 **PitchAndFamily**
 </dt> <dd>
 
-Type: **[ **Byte**](../winprog/windows-data-types.md)**
+Typ: **[ **BYTE**](../winprog/windows-data-types.md)**
 
 </dd> <dd>
 
-Tonhöhe und Familie der Schriftart.
+Tonhöhe und Schriftfamilie.
 
 </dd> <dt>
 
-**Fakename**
+**GesichtsName**
 </dt> <dd>
 
 Typ: **TCHAR**
 
 </dd> <dd>
 
-Eine mit NULL endenden Zeichenfolge oder Zeichen, die den Schriftart Namen der Schriftart angibt. Die Länge der Zeichenfolge darf 32 Zeichen nicht überschreiten, einschließlich des abschließenden NULL-Zeichens. Wenn "fakename" eine leere Zeichenfolge ist, wird die erste Schriftart verwendet, die mit den anderen angegebenen Attributen übereinstimmt. Wenn die Compilereinstellungen Unicode erfordern, wird der Datentyp "TCHAR" in "WCHAR;" aufgelöst. Andernfalls wird der-Datentyp in char aufgelöst. Siehe Hinweise.
+Eine auf NULL endende Zeichenfolge oder Zeichen, die den Schriftartnamen der Schriftart angibt. Die Länge der Zeichenfolge darf 32 Zeichen nicht überschreiten, einschließlich des abschließenden NULL-Zeichens. Wenn FaceName eine leere Zeichenfolge ist, wird die erste Schriftart verwendet, die mit den anderen angegebenen Attributen übereinstimmt. Wenn die Compilereinstellungen Unicode erfordern, wird der Datentyp TCHAR in WCHAR aufgelöst. Andernfalls wird der Datentyp in CHAR aufgelöst. Siehe Hinweise.
 
 </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die Compilereinstellung bestimmt auch den Strukturtyp. Wenn Unicode definiert ist, wird der D3DXFONT \_ DESC-Strukturtyp zu einem D3DXFONT- \_ descw aufgelöst; andernfalls wird der Strukturtyp in einen D3DXFONT \_ DeScA aufgelöst.
+Die Compilereinstellung bestimmt auch den Strukturtyp. Wenn Unicode definiert ist, wird der D3DXFONT \_ DESC-Strukturtyp in einen D3DXFONT \_ DESCW aufgelöst. Andernfalls wird der Strukturtyp in einen D3DXFONT-DESCA \_ aufgelöst.
 
-Mögliche Werte der obigen Member werden in der GDI- [**LOGFONT**](/windows/win32/api/wingdi/ns-wingdi-logfonta) -Struktur angegeben.
+Mögliche Werte der oben genannten Member werden in der GDI [**LOGFONT-Struktur**](/windows/win32/api/wingdi/ns-wingdi-logfonta) angegeben.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -170,11 +170,11 @@ Mögliche Werte der obigen Member werden in der GDI- [**LOGFONT**](/windows/win3
 
 | Anforderung | Wert |
 |-------------------|----------------------------------------------------------------------------------------|
-| Header<br/> | <dl> <dt>D3dx9core. h</dt> </dl> |
+| Header<br/> | <dl> <dt>D3dx9core.h</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 

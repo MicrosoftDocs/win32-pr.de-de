@@ -1,5 +1,5 @@
 ---
-description: 'CBasePin.CBasePin-Konstruktor : Konstruktormethode.'
+description: 'CBasePin.CBasePin-Konstruktor: Konstruktormethode.'
 ms.assetid: e8cb5f1d-171f-4bf8-8ab6-6e547c4678d2
 title: CBasePin.CBasePin-Konstruktor (Amfilter.h)
 ms.topic: reference
@@ -16,12 +16,12 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: f11dea6bd5bc3f766e5f93a04022dab5ba6e51a5
-ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
+ms.openlocfilehash: cbeead09843aa8bf66471caeaabbdb42ee8d97d01cdaa9a54809f35c437b52d7
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2021
-ms.locfileid: "108099428"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119916900"
 ---
 # <a name="cbasepincbasepin-constructor"></a>CBasePin.CBasePin-Konstruktor
 
@@ -50,28 +50,28 @@ CBasePin(
 *pObjectName* 
 </dt> <dd>
 
-Zeichenfolge, die den Debugnamen für das Objekt enthält. Weitere Informationen finden Sie unter [**CBaseObject.**](cbaseobject.md)
+Eine Zeichenfolge, die den Debugnamen für das Objekt enthält. Weitere Informationen finden Sie unter [**CBaseObject**](cbaseobject.md).
 
 </dd> <dt>
 
 *pFilter* 
 </dt> <dd>
 
-Zeiger auf den Filter, der diese Stecknadel erstellt hat.
+Zeiger auf den Filter, der diesen Pin erstellt hat.
 
 </dd> <dt>
 
 *Plock* 
 </dt> <dd>
 
-Zeiger auf eine [**CCritSec-Sperre,**](ccritsec.md) die zum Serialisieren von Zustandsänderungen verwendet wird. Kann derselbe kritische Abschnitt wie die Filtersperre sein, [**CBaseFilter::m \_ pLock**](cbasefilter-m-plock.md).
+Zeiger auf eine [**CCritSec-Sperre,**](ccritsec.md) die zum Serialisieren von Zustandsänderungen verwendet wird. Kann derselbe kritische Abschnitt wie die Filtersperre [**sein: CBaseFilter::m \_ pLock**](cbasefilter-m-plock.md).
 
 </dd> <dt>
 
 *Phr* 
 </dt> <dd>
 
-Zeiger auf eine Variable, die einen **HRESULT-Wert** empfängt, der den Erfolg oder Fehler der Methode angibt. Initialisieren Sie den Wert vor dem Erstellen des -Objekts mit S \_ OK. Der Wert wird nur geändert, wenn ein Fehler auftritt.
+Zeiger auf eine Variable, die einen **HRESULT-Wert** empfängt, der den Erfolg oder Fehler der Methode angibt. Initialisieren Sie den Wert auf S \_ OK, bevor Sie das -Objekt erstellen. Der Wert wird nur geändert, wenn ein Fehler auftritt.
 
 </dd> <dt>
 
@@ -85,23 +85,23 @@ Breitzeichenzeichenfolge, die den Namen der Stecknadel enthält. Weitere Informa
 *dir* 
 </dt> <dd>
 
-Member der [**PIN \_ DIRECTION-Enumeration,**](/windows/win32/api/strmif/ne-strmif-pin_direction) der die Richtung des Pins angibt.
+Member der [**PIN \_ DIRECTION-Enumeration,**](/windows/win32/api/strmif/ne-strmif-pin_direction) der die Richtung des Pins an gibt.
 
 </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Der von *pLock* angegebene kritische Abschnitt serialisiert den Zustand des Pins, einschließlich des Verbindungsstatus, der Auswahl der Zuweisung, des Medientyps und des Status von Leerungsvorgängen. Verwenden Sie diesen kritischen Abschnitt nicht zum Serialisieren von Streamingvorgängen. Weitere Informationen finden Sie unter [Datenfluss im Filterdiagramm](data-flow-in-the-filter-graph.md).
+Der von *pLock* angegebene kritische Abschnitt serialisiert den Zustand des Pins, einschließlich des Verbindungsstatus, der Auswahl der Zuweisung, des Medientyps und des Status von Leerungsvorgängen. Verwenden Sie diesen kritischen Abschnitt nicht zum Serialisieren von Streamingvorgängen. Weitere Informationen finden Sie unter [Data Flow in the Filter Graph](data-flow-in-the-filter-graph.md).
 
-Ein Filter erstellt möglicherweise Pins in seiner Konstruktormethode, sodass der *pFilter-Zeiger* an diesem Punkt möglicherweise nicht auf ein gültiges Objekt verweisen kann. Speichern Sie den Zeiger, dereferenzieren Sie ihn jedoch nicht im Konstruktor des Pins.
+Ein Filter erstellt möglicherweise Pins in seiner Konstruktormethode, sodass der *pFilter-Zeiger* an diesem Punkt möglicherweise nicht auf ein gültiges Objekt verweisen kann. Store den Zeiger, dereferenzieren Sie ihn jedoch nicht, während sie sich im Konstruktor des Pins befindet.
 
 ## <a name="requirements"></a>Anforderungen
 
 
 
-| Anforderungen | Wert |
+| Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Amfilter.h (streams.h enthalten)</dt> </dl>                                                                                  |
+| Header<br/>  | <dl> <dt>Amfilter.h (include Streams.h)</dt> </dl>                                                                                  |
 | Bibliothek<br/> | <dl> <dt>Strmbase.lib (Einzelhandels-Builds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 

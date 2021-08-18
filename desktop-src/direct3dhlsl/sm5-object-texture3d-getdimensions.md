@@ -45,7 +45,7 @@ void GetDimensions(
 
 Typ: **[ **UINT**](/windows/desktop/WinProg/windows-data-types)**
 
-Optional. Mipmapebene (muss angegeben werden, wenn *NumberOfLevels* verwendet wird).
+Optional. Mipmap-Ebene (muss angegeben werden, wenn *NumberOfLevels* verwendet wird).
 
 </dd> <dt>
 
@@ -54,7 +54,7 @@ Optional. Mipmapebene (muss angegeben werden, wenn *NumberOfLevels* verwendet wi
 
 Typ: **[ **UINT**](/windows/desktop/WinProg/windows-data-types)**
 
-Die Ressourcenbreite in Texel.
+Die Ressourcenbreite in Texeln.
 
 </dd> <dt>
 
@@ -63,7 +63,7 @@ Die Ressourcenbreite in Texel.
 
 Typ: **[ **UINT**](/windows/desktop/WinProg/windows-data-types)**
 
-Die Ressourcenhöhe in Texel.
+Die Ressourcenhöhe in Texeln.
 
 </dd> <dt>
 
@@ -72,7 +72,7 @@ Die Ressourcenhöhe in Texel.
 
 Typ: **[ **UINT**](/windows/desktop/WinProg/windows-data-types)**
 
-Die Ressourcentiefe in Texel.
+Die Ressourcentiefe in Texeln.
 
 </dd> <dt>
 
@@ -81,7 +81,7 @@ Die Ressourcentiefe in Texel.
 
 Typ: **[ **UINT**](/windows/desktop/WinProg/windows-data-types)**
 
-Die Anzahl der Mipmap-Ebenen (erfordert auch *MipLevel).*
+Die Anzahl der Mipmap-Ebenen (erfordert *auch MipLevel).*
 
 </dd> </dl>
 
@@ -130,7 +130,7 @@ Diese Funktion wird für die folgenden Shadertypen unterstützt:
 
  
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 

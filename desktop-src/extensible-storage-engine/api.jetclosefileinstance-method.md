@@ -73,7 +73,7 @@ public static void JetCloseFileInstance(
     
     Das zu schließende Handle.
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 #### <a name="reference"></a>Verweis
 

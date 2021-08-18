@@ -54,11 +54,11 @@ Ein Zeiger auf einen **DWORD-Wert,** der die Ordnungszahl für diese Identität 
 
 Typ: **HRESULT**
 
-Wenn diese Methode erfolgreich ist, wird **S \_ OK zurückgegeben.** Andernfalls wird ein **HRESULT-Fehlercode** zurückgegeben.
+Wenn diese Methode erfolgreich ist, wird **S \_ OK** zurückgegeben. Andernfalls wird ein **HRESULT-Fehlercode** zurückgegeben.
 
 ## <a name="remarks"></a>Hinweise
 
-Die Ordnungszahl bestimmt die Reihenfolge der Identitäten in der Identitätsliste, bleibt jedoch möglicherweise nicht während der gesamten Vorgänge für die Identitäten erhalten. Rufen Sie [**GetCookie**](iuseridentity-getcookie.md)auf, um einen eindeutigen Wert für eine Identität zu erhalten.
+Die Ordnungszahl bestimmt die Reihenfolge der Identitäten in der Identitätsliste, bleibt jedoch möglicherweise nicht während der vorgänge für die Identitäten erhalten. Rufen [**Sie GetCookie**](iuseridentity-getcookie.md)auf, um einen eindeutigen Wert für eine Identität abzurufen.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -76,7 +76,7 @@ Die Ordnungszahl bestimmt die Reihenfolge der Identitäten in der Identitätslis
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 

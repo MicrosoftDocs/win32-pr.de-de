@@ -1,11 +1,11 @@
 ---
-title: Player. mediacollectionattributestringadded-Ereignis
-description: Das mediacollectionattributestringadded-Ereignis tritt auf, wenn der Bibliothek ein Attribut Wert hinzugefügt wird. | Player. mediacollectionattributestringadded-Ereignis
+title: Player.MediaCollectionAttributeStringAdded-Ereignis
+description: Das MediaCollectionAttributeStringAdded-Ereignis tritt auf, wenn der Bibliothek ein Attributwert hinzugefügt wird. | Player.MediaCollectionAttributeStringAdded-Ereignis
 ms.assetid: 0a7fd61f-0429-4c1c-8790-d2f0e7f41d44
 keywords:
-- Media Player für mediacollectionattributestringadded-Ereignisfenster
-- Mediacollectionattributestringadded-Ereignis, Windows Media Player, Player-Klasse
-- Windows Media Player Player-Klasse, mediacollectionattributestringadded-Ereignis
+- MediaCollectionAttributeStringAdded-Ereignis Windows Media Player
+- MediaCollectionAttributeStringAdded-Ereignis Windows Media Player , Player-Klasse
+- Player-Klasse Windows Media Player , MediaCollectionAttributeStringAdded-Ereignis
 topic_type:
 - apiref
 api_name:
@@ -16,16 +16,16 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 61ec30cf22b36fe97902d6eb6d6949daeb751f8e
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: d01bd86cb3004cb3f481222f392ba47bd1c47373f55c37ee8f0e7ded57a3d268
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106371285"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118995870"
 ---
-# <a name="playermediacollectionattributestringadded-event"></a>Player. mediacollectionattributestringadded-Ereignis
+# <a name="playermediacollectionattributestringadded-event"></a>Player.MediaCollectionAttributeStringAdded-Ereignis
 
-Das **mediacollectionattributestringadded** -Ereignis tritt auf, wenn der Bibliothek ein Attribut Wert hinzugefügt wird.
+Das **MediaCollectionAttributeStringAdded-Ereignis** tritt auf, wenn der Bibliothek ein Attributwert hinzugefügt wird.
 
 ## <a name="syntax"></a>Syntax
 
@@ -43,17 +43,17 @@ Player.MediaCollectionAttributeStringAdded(
 
 <dl> <dt>
 
-*bstrattribname* 
+*bstrAttribName* 
 </dt> <dd>
 
-**Zeichenfolge** , die den Namen des Attributs angibt. Informationen zu den Attributen, die von Windows Media Player unterstützt werden, finden Sie in der [Referenz](attribute-reference.md)zu Windows Media Player-Attributen.
+**Zeichenfolge,** die den Namen des Attributs angibt. Informationen zu den attributen, die von Windows Media Player unterstützt werden, finden Sie in der Windows Media Player [Attributreferenz.](attribute-reference.md)
 
 </dd> <dt>
 
-*bstrattribval* 
+*bstrAttribVal* 
 </dt> <dd>
 
-Eine **Zeichenfolge** , die den Wert des Attributs angibt.
+**Zeichenfolge,** die den Wert des Attributs angibt.
 
 </dd> </dl>
 
@@ -61,11 +61,11 @@ Eine **Zeichenfolge** , die den Wert des Attributs angibt.
 
 Dieses Ereignis gibt keinen Wert zurück.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Wenn der Bibliothek ein Medien Element hinzugefügt wird, werden die zugehörigen Metadaten dem **mediacollection** -Objekt hinzugefügt, und dieses Ereignis wird für jedes hinzugefügte Attribut ausgelöst.
+Wenn der Bibliothek ein Medienelement hinzugefügt wird, werden dessen Metadaten dem **MediaCollection-Objekt** hinzugefügt, und dieses Ereignis wird für jedes hinzugefügte Attribut ausgelöst.
 
-Der Wert von Ereignis Parametern wird von Windows Media Player festgelegt, und der Zugriff auf und die Übergabe an eine Methode in einer importierten JScript-Datei mithilfe des angegebenen Parameter namens ist möglich. Dieser Parameter Name muss genau wie gezeigt eingegeben werden, einschließlich der Groß-/Kleinschreibung.
+Der Wert von Ereignisparametern wird von Windows Media Player angegeben und kann mithilfe des angegebenen Parameternamens in einer importierten JScript-Datei auf eine Methode zugegriffen oder an diese übergeben werden. Dieser Parametername muss genau wie gezeigt eingegeben werden, einschließlich Der Groß-/Großschreibung.
 
 **Windows Media Player 10 Mobile:** Dieses Ereignis wird nicht unterstützt.
 
@@ -75,7 +75,7 @@ Der Wert von Ereignis Parametern wird von Windows Media Player festgelegt, und d
 
 | Anforderung | Wert |
 |--------------------|------------------------------------------------------------------------------------|
-| Version<br/> | Windows Media Player Version 7,0 oder höher.<br/>                              |
+| Version<br/> | Windows Media Player Version 7.0 oder höher.<br/>                              |
 | DLL<br/>     | <dl> <dt>Wmp.dll</dt> </dl> |
 
 
@@ -84,13 +84,13 @@ Der Wert von Ereignis Parametern wird von Windows Media Player festgelegt, und d
 
 <dl> <dt>
 
-[**Mediacollection-Objekt**](mediacollection-object.md)
+[**MediaCollection-Objekt**](mediacollection-object.md)
 </dt> <dt>
 
 [**Player-Objekt**](player-object.md)
 </dt> <dt>
 
-[**Player. mediacollection**](player-mediacollection.md)
+[**Player.mediaCollection**](player-mediacollection.md)
 </dt> </dl>
 
  

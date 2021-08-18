@@ -1,5 +1,5 @@
 ---
-description: '<span id="vspixengine.istatuscallback"></span>IStatusCallback-Schnittstelle: Nicht verwendet.'
+description: '<span id="vspixengine.istatuscallback"></span>IStatusCallback-Schnittstelle: Wird nicht verwendet.'
 MS-HAID: vspixengine.IStatusCallback
 MSHAttr:
 - PreferredSiteName:MSDN
@@ -30,7 +30,7 @@ Wird nicht verwendet.
 
 ## <a name="members"></a>Member
 
-Die **IStatusCallback-Schnittstelle** erbt von der [**IUnknown-Schnittstelle.**](/windows/desktop/api/unknwn/nn-unknwn-iunknown) **IStatusCallback** verfügt auch über die folgenden Typen von Membern:
+Die **IStatusCallback-Schnittstelle** erbt von der [**IUnknown-Schnittstelle.**](/windows/desktop/api/unknwn/nn-unknwn-iunknown) **IStatusCallback** verfügt auch über diese Typen von Membern:
 
 -   [Methoden](#methods)
 
@@ -38,7 +38,7 @@ Die **IStatusCallback-Schnittstelle** erbt von der [**IUnknown-Schnittstelle.**]
 
 Die **IStatusCallback-Schnittstelle** verfügt über diese Methoden.
 
-<table><colgroup><col style="width: 50%" /><col style="width: 50%" /></colgroup><thead><tr class="header"><th style="text-align: left;">Methode</th><th style="text-align: left;">BESCHREIBUNG</th></tr></thead><tbody><tr class="odd"><td style="text-align: left;"><a href="/windows/desktop/direct3dtools/istatuscallback-status-dword-dword-dword"><strong>Status</strong></a></td><td style="text-align: left;"><p>Eine Rückruffunktion, die verwendet wird, um den Host über den Fortschritt der Engine zu benachrichtigen. Dies dient auch als Möglichkeit für den Host, zu ermitteln, ob die Engine noch ausgeführt wird.</p></td></tr></tbody></table>
+<table><colgroup><col style="width: 50%" /><col style="width: 50%" /></colgroup><thead><tr class="header"><th style="text-align: left;">Methode</th><th style="text-align: left;">BESCHREIBUNG</th></tr></thead><tbody><tr class="odd"><td style="text-align: left;"><a href="/windows/desktop/direct3dtools/istatuscallback-status-dword-dword-dword"><strong>Status</strong></a></td><td style="text-align: left;"><p>Eine Rückruffunktion, die verwendet wird, um den Host über den Fortschritt der Engine zu benachrichtigen. Dies dient auch als Möglichkeit für den Host, zu bestimmen, ob die Engine noch ausgeführt wird.</p></td></tr></tbody></table>
 
  
 

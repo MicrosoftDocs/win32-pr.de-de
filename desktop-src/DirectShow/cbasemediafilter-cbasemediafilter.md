@@ -16,12 +16,12 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: f123c7af29c6420de6004132180eba8dbf33fa72
-ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
+ms.openlocfilehash: 264363ebb7194504dd16a94c0835bab0a4fe0163edd31329b77853510c9523db
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2021
-ms.locfileid: "108096318"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119917010"
 ---
 # <a name="cbasemediafiltercbasemediafilter-constructor"></a>CBaseMediaFilter.CBaseMediaFilter-Konstruktor
 
@@ -69,27 +69,27 @@ Zeiger auf eine [**CCritSec-Sperre,**](ccritsec.md) die zum Serialisieren von Zu
 *Clsid* 
 </dt> <dd>
 
-Klassenbezeichner des Objekts.
+Klassenbezeichner des -Objekts.
 
 </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
 Wenn ein anderes Objekt das Objekt enthält oder aggregiert, kann `CBaseMediaFilter` die **CCritSec-Sperre** für das Objekt extern `CBaseMediaFilter` sein. Übergeben Sie in diesem Fall einen Zeiger auf die Sperre in *pLock*.
 
 Andernfalls können Sie:
 
 -   Leiten Sie eine Klasse ab, die sowohl als auch `CBaseMediaFilter` **CCritSec erbt.** Übergeben *Sie für pLock* den this-Zeiger.
--   Leiten Sie eine Klasse ab, die eine `CBaseMediaFilter` **CCritSec-Membervariable erbt und** enthält. Übergeben Sie für *pLock* die Adresse dieser Variablen.
+-   Leiten Sie eine Klasse ab, die eine `CBaseMediaFilter` **CCritSec-Membervariable erbt und** enthält. Übergeben *Sie für pLock* die Adresse dieser Variablen.
 
 ## <a name="requirements"></a>Anforderungen
 
 
 
-| Anforderungen | Wert |
+| Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Amfilter.h (streams.h einschließen)</dt> </dl>                                                                                  |
-| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Verkaufsbuilds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Amfilter.h (include Streams.h)</dt> </dl>                                                                                  |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Einzelhandels-Builds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 

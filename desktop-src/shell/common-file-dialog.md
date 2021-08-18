@@ -1,6 +1,6 @@
 ---
-description: Ab Windows Vista ersetzt das allgemeine Element Dialogfeld das ältere allgemeine Datei Dialogfeld, wenn es verwendet wird, um eine Datei zu öffnen oder zu speichern.
-title: Dialog Feld für allgemeine Elemente
+description: Ab Windows Vista ersetzt das Dialogfeld "Allgemeines Element" das ältere Dialogfeld "Allgemeine Datei", wenn es zum Öffnen oder Speichern einer Datei verwendet wird.
+title: Dialogfeld "Allgemeines Element"
 ms.topic: article
 ms.date: 05/31/2018
 ms.assetid: f8846148-89a5-4b9b-ad68-56137a5c2f65
@@ -9,83 +9,83 @@ api_type: ''
 api_location: ''
 topic_type:
 - kbArticle
-ms.openlocfilehash: 896514779b2ba3d11d3db0551f82e21f1d4120b8
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
-ms.translationtype: HT
+ms.openlocfilehash: 2956bf7329ff9c92b777199d040d1275aa827cfa9ea9c8bfbec175d234b204f3
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104342848"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119943520"
 ---
-# <a name="common-item-dialog"></a>Dialog Feld für allgemeine Elemente
+# <a name="common-item-dialog"></a>Dialogfeld "Allgemeines Element"
 
-Ab Windows Vista ersetzt das allgemeine Element Dialogfeld das ältere allgemeine Datei Dialogfeld, wenn es verwendet wird, um eine Datei zu öffnen oder zu speichern. Das Dialogfeld für allgemeine Elemente wird in zwei Variationen verwendet: dem Dialogfeld **Öffnen** und dem Dialogfeld **Speichern** . In diesen beiden Dialogfeldern wird der größte Teil ihrer Funktionalität genutzt, aber jede verfügt über eigene eindeutige Methoden.
+Ab Windows Vista ersetzt das Dialogfeld "Allgemeines Element" das ältere Dialogfeld "Allgemeine Datei", wenn es zum Öffnen oder Speichern einer Datei verwendet wird. Das Dialogfeld "Allgemeines Element" wird in zwei Varianten verwendet: im **Dialogfeld** Öffnen und **im Dialogfeld Speichern.** Diese beiden Dialoge teilen sich den Größten ihrer Funktionalität, aber jedes dialogfeld verfügt über eigene eindeutige Methoden.
 
-Diese neuere Version heißt das allgemeine Element Dialogfeld, wird jedoch in der meisten Dokumentation weiterhin als gemeinsames Datei Dialogfeld bezeichnet. Wenn Sie nicht speziell mit einer älteren Version von Windows arbeiten, sollten Sie davon ausgehen, dass sich jede beliebige Angabe des allgemeinen Datei Dialogfelds auf dieses allgemeine Element Dialogfeld bezieht.
+Diese neuere Version heißt zwar "Dialogfeld für allgemeine Elemente", wird aber in den meisten Dokumentationen weiterhin als Dialogfeld "Gemeinsame Datei" bezeichnet. Sofern Sie nicht speziell mit einer älteren Version von Windows arbeiten, sollten Sie davon ausgehen, dass jede Erwähnung des Dialogfelds "Gemeinsame Datei" auf dieses Dialogfeld für allgemeine Elemente verweist.
 
-Die folgenden Themen werden hier behandelt:
+Die folgenden Themen werden hier erläutert:
 
--   [Ifiledialog, IFileOpenDialog und IFileSaveDialog](#ifiledialog-ifileopendialog-and-ifilesavedialog)
-    -   [Beispiel Verwendung](#sample-usage)
--   [Lauschen auf Ereignisse aus dem Dialog Feld](#listening-to-events-from-the-dialog)
-    -   [OnFileOk](#onfileok)
-    -   [Onshareverletzungs und onüberschreibung](#onshareviolation-and-onoverwrite)
--   [Anpassen des Dialog Felds](#customizing-the-dialog)
+-   [IFileDialog, IFileOpenDialog und IFileSaveDialog](#ifiledialog-ifileopendialog-and-ifilesavedialog)
+    -   [Beispielverwendung](#sample-usage)
+-   [Lauschen auf Ereignisse über den Dialog](#listening-to-events-from-the-dialog)
+    -   [Onfileok](#onfileok)
+    -   [OnShareViolation und OnOverwrite](#onshareviolation-and-onoverwrite)
+-   [Anpassen des Dialogs](#customizing-the-dialog)
     -   [Hinzufügen von Optionen zur Schaltfläche "OK"](#adding-options-to-the-ok-button)
     -   [Reagieren auf Ereignisse in hinzugefügten Steuerelementen](#responding-to-events-in-added-controls)
 -   [Vollständige Beispiele](#full-samples)
 -   [Zugehörige Themen](#related-topics)
 
-## <a name="ifiledialog-ifileopendialog-and-ifilesavedialog"></a>Ifiledialog, IFileOpenDialog und IFileSaveDialog
+## <a name="ifiledialog-ifileopendialog-and-ifilesavedialog"></a>IFileDialog, IFileOpenDialog und IFileSaveDialog
 
-Windows Vista stellt Implementierungen der Dialogfelder zum **Öffnen** und **Speichern** bereit: CLSID \_ fileopendialog und CLSID \_ filesavedialog. Diese Dialogfelder werden hier angezeigt.
+Windows Vista stellt Implementierungen der Dialogfelder **Öffnen** und **Speichern** bereit: CLSID \_ FileOpenDialog und CLSID \_ FileSaveDialog. Diese Dialogfelder werden hier angezeigt.
 
-![Screenshot des Dialog Felds "Öffnen"](images/cid/openfiledialog.png)
+![Screenshot des geöffneten Dialogfelds](images/cid/openfiledialog.png)
 
-![Screenshot des Dialog Felds "Speichern unter"](images/cid/savefiledialog.png)
+![Screenshot des Dialogfelds "Speichern unter"](images/cid/savefiledialog.png)
 
-[**IFileOpenDialog**](/windows/win32/api/shobjidl_core/nn-shobjidl_core-ifileopendialog) und [**IFileSaveDialog**](/windows/desktop/api/Shobjidl_core/nn-shobjidl_core-ifilesavedialog) erben von [**ifiledialog**](/windows/win32/api/shobjidl_core/nn-shobjidl_core-ifiledialog) und teilen viele ihrer Funktionen. Außerdem unterstützt das  Dialogfeld Öffnen **IFileOpenDialog**, und das Dialogfeld **Speichern** unterstützt **IFileSaveDialog**.
+[**IFileOpenDialog**](/windows/win32/api/shobjidl_core/nn-shobjidl_core-ifileopendialog) und [**IFileSaveDialog**](/windows/desktop/api/Shobjidl_core/nn-shobjidl_core-ifilesavedialog) erben von [**IFileDialog**](/windows/win32/api/shobjidl_core/nn-shobjidl_core-ifiledialog) und teilen einen großen Teil ihrer Funktionalität. Darüber hinaus unterstützt das **Dialogfeld Öffnen** **IFileOpenDialog** und das **Dialogfeld** Speichern **IFileSaveDialog**.
 
-Die Implementierung der allgemeinen Element Dialogfelder in Windows Vista bietet gegenüber der in früheren Versionen bereitgestellten Implementierung verschiedene Vorteile:
+Die Common Item Dialog-Implementierung in Windows Vista bietet mehrere Vorteile gegenüber der Implementierung, die in früheren Versionen bereitgestellt wurde:
 
--   Unterstützt die direkte Verwendung des Shell-Namespace über [**IShellItem**](/windows/desktop/api/shobjidl_core/nn-shobjidl_core-ishellitem) anstelle der Verwendung von Dateisystem Pfaden.
--   Ermöglicht die einfache Anpassung des Dialog Felds, z. b. das Festlegen der Bezeichnung auf der Schaltfläche **OK** , ohne dass eine Hook-Prozedur erforderlich ist.
--   Unterstützt eine umfangreichere Anpassung des Dialog Felds durch das Hinzufügen eines Satzes von datengesteuerten Steuerelementen, die ohne eine Win32-Dialogfeld Vorlage ausgeführt werden. Dieses Anpassungs Schema gibt den aufrufenden Prozess aus dem Benutzeroberflächen Layout frei. Da Änderungen am Dialogfeld Entwurf weiterhin dieses Datenmodell verwenden, ist die Dialog-Implementierung nicht an die jeweilige aktuelle Version des Dialog Felds gebunden.
--   Unterstützt die aufruferbenachrichtigung über Ereignisse im Dialogfeld, z. b. Auswahl Änderungen oder Dateityp Änderungen. Ermöglicht es dem aufrufenden Prozess außerdem, bestimmte Ereignisse im Dialogfeld zu verbinden, z. b. die-Verarbeitung.
--   Führt neue Dialogfeld Funktionen ein, z. b. das Hinzufügen von vom Aufrufer **angegebenen Stellen zur** Leiste
--   Im Dialogfeld **Speichern** können Entwickler die neuen Metadatenfeatures der Windows Vista-Shell nutzen.
+-   Unterstützt die direkte Verwendung des Shell-Namespace über [**IShellItem anstelle**](/windows/desktop/api/shobjidl_core/nn-shobjidl_core-ishellitem) von Dateisystempfaden.
+-   Ermöglicht eine einfache Anpassung des Dialogfelds, z. B. das Festlegen der Bezeichnung auf die **Schaltfläche OK,** ohne dass eine Hookprozedur erforderlich ist.
+-   Unterstützt eine umfangreichere Anpassung des Dialogs durch hinzufügen einer Reihe von datengesteuerten Steuerelementen, die ohne Win32-Dialogvorlage funktionieren. Dieses Anpassungsschema gibt den aufrufenden Prozess aus dem Benutzeroberflächenlayout frei. Da alle Änderungen am Dialogentwurf dieses Datenmodell weiterhin verwenden, ist die Dialogimplementierung nicht an die spezifische aktuelle Version des Dialogs gebunden.
+-   Unterstützt aufruferbenachrichtigungen über Ereignisse im Dialogfeld, z. B. Auswahländerung oder Dateitypänderung. Ermöglicht es dem aufrufenden Prozess auch, bestimmte Ereignisse im Dialog zu hooken, z. B. die Analyse.
+-   Führt neue Dialogfeatures ein, z. B. das Hinzufügen von vom Aufrufer angegebenen Stellen zur **Ortsleiste.**
+-   Im Dialogfeld **Speichern** können Entwickler neue Metadatenfeatures der Vista-Shell Windows nutzen.
 
-Außerdem können Entwickler die folgenden Schnittstellen implementieren:
+Darüber hinaus können Entwickler die folgenden Schnittstellen implementieren:
 
--   [**IFileDialogEvents**](/windows/desktop/api/shobjidl_core/nn-shobjidl_core-ifiledialogevents) zum Empfangen von Benachrichtigungen über Ereignisse innerhalb des Dialog Felds.
--   [**IFileDialogCustomize**](/windows/desktop/api/shobjidl_core/nn-shobjidl_core-ifiledialogcustomize) zum Hinzufügen von Steuerelementen zum Dialogfeld.
--   [**Ifiledialogcontrolevents**](/windows/desktop/api/Shobjidl/nn-shobjidl-ifiledialogcontrolevents) , um über Ereignisse in diesen hinzugefügten Steuerelementen benachrichtigt zu werden.
+-   [**IFileDialogEvents zum**](/windows/desktop/api/shobjidl_core/nn-shobjidl_core-ifiledialogevents) Empfangen von Benachrichtigungen über Ereignisse im Dialogfeld.
+-   [**IFileDialogCustomize,**](/windows/desktop/api/shobjidl_core/nn-shobjidl_core-ifiledialogcustomize) um dem Dialogfeld Steuerelemente hinzuzufügen.
+-   [**IFileDialogControlEvents,**](/windows/desktop/api/Shobjidl/nn-shobjidl-ifiledialogcontrolevents) um über Ereignisse in diesen hinzugefügten Steuerelementen benachrichtigt zu werden.
 
-Im Dialogfeld zum **Öffnen** oder **Speichern** wird ein [**IShellItem**](/windows/desktop/api/shobjidl_core/nn-shobjidl_core-ishellitem) -oder [**ishellitemarray**](/windows/desktop/api/shobjidl_core/nn-shobjidl_core-ishellitemarray) -Objekt an den aufrufenden Prozess zurückgegeben. Der Aufrufer kann dann ein einzelnes **IShellItem** -Objekt verwenden, um einen Dateisystempfad abzurufen oder einen Stream für das Element zu öffnen, um Informationen zu lesen oder zu schreiben.
+Das **Dialogfeld Öffnen** oder **Speichern** gibt ein [**IShellItem-**](/windows/desktop/api/shobjidl_core/nn-shobjidl_core-ishellitem) oder [**IShellItemArray-Objekt**](/windows/desktop/api/shobjidl_core/nn-shobjidl_core-ishellitemarray) an den aufrufenden Prozess zurück. Der Aufrufer kann dann ein einzelnes **IShellItem-Objekt** verwenden, um einen Dateisystempfad zu erhalten oder einen Stream für das Element zu öffnen, um Informationen zu lesen oder zu schreiben.
 
-Flags und Optionen, die für die neuen Dialogmethoden verfügbar sind, ähneln den älteren **ofn** -Flags, die in der [**OpenFileName**](/windows/win32/api/commdlg/ns-commdlg-openfilenamea) -Struktur gefunden werden und in [**GetOpenFileName**](/windows/win32/api/commdlg/nf-commdlg-getopenfilenamea) und [**GetSaveFileName**](/windows/win32/api/commdlg/nf-commdlg-getsavefilenamea)verwendet werden. Viele von Ihnen sind identisch, mit der Ausnahme, dass Sie mit einem Fos-Präfix beginnen. Die komplette Liste finden Sie in den Themen [**ifiledialog:: GetOptions**](/windows/win32/api/shobjidl_core/nf-shobjidl_core-ifiledialog-getoptions) und [**ifiledialog:: slitoptions**](/windows/win32/api/shobjidl_core/nf-shobjidl_core-ifiledialog-setoptions) . Dialogfelder zum **Öffnen** und **Speichern** werden standardmäßig mit den gängigsten Flags erstellt. Für das Dialogfeld " **Öffnen** " ist dies (z. b. "Fos \_ pathmustexist; \| \_ filemustexist \| Fos \_ nochangedir"), und für das Dialogfeld " **Speichern** " ist dies ("Fos \_ overwrite-prompt \| Fos \_ noreadonlyreturn \| Fos \_ pathmustexist Fos \| \_ nochangedir)"
+Flags und Optionen, die für die neuen Dialogmethoden verfügbar sind, ähneln den älteren **OFN-Flags** in der [**OPENFILENAME-Struktur,**](/windows/win32/api/commdlg/ns-commdlg-openfilenamea) die in [**GetOpenFileName**](/windows/win32/api/commdlg/nf-commdlg-getopenfilenamea) und [**GetSaveFileName verwendet werden.**](/windows/win32/api/commdlg/nf-commdlg-getsavefilenamea) Viele davon sind identisch, mit der Ausnahme, dass sie mit einem FOS-Präfix beginnen. Die vollständige Liste finden Sie in den Themen [**IFileDialog::GetOptions**](/windows/win32/api/shobjidl_core/nf-shobjidl_core-ifiledialog-getoptions) und [**IFileDialog::SetOptions.**](/windows/win32/api/shobjidl_core/nf-shobjidl_core-ifiledialog-setoptions) **Dialogfelder** **zum Öffnen** und Speichern werden standardmäßig mit den gängigsten Flags erstellt. Für  das Dialogfeld Öffnen ist dies (FOS PATHMUSTEXIST FOS FILEMUSTEXIST FOS NOCHANGEDIR), und für das Dialogfeld Speichern ist dies \_ \| \_ \| \_ (FOS  \_ OVERWRITEPROMPT \| FOS \_ NOREADONLYRETURN \| FOS \_ PATHMUSTEXIST \| FOS \_ NOCHANGEDIR).
 
-[**Ifiledialog**](/windows/win32/api/shobjidl_core/nn-shobjidl_core-ifiledialog) und die untergeordneten Schnittstellen erben von und erweitern [**imodalwindow**](/windows/desktop/api/shobjidl_core/nn-shobjidl_core-imodalwindow). [**Show**](/windows/desktop/api/shobjidl_core/nf-shobjidl_core-imodalwindow-show) nimmt als einzigen Parameter das Handle des übergeordneten Fensters an. Wenn **anzeigen** erfolgreich zurückgegeben wurde, ist ein gültiges Ergebnis vorhanden. Wenn Sie zurückgibt `HRESULT_FROM_WIN32(ERROR_CANCELLED)` , bedeutet dies, dass der Benutzer das Dialogfeld abgebrochen hat. Möglicherweise wird auch ein anderer Fehlercode wie z. b. " **E \_ outo-Memory**" zurückgegeben.
+[**IFileDialog und**](/windows/win32/api/shobjidl_core/nn-shobjidl_core-ifiledialog) seine Nachfolgerschnittstellen erben von und erweitern [**IModalWindow**](/windows/desktop/api/shobjidl_core/nn-shobjidl_core-imodalwindow). [**Show**](/windows/desktop/api/shobjidl_core/nf-shobjidl_core-imodalwindow-show) verwendet als einzigen Parameter das Handle des übergeordneten Fensters. Wenn **Show** erfolgreich zurückgegeben wird, gibt es ein gültiges Ergebnis. Wenn zurückgegeben `HRESULT_FROM_WIN32(ERROR_CANCELLED)` wird, bedeutet dies, dass der Benutzer den Dialog abgebrochen hat. Möglicherweise wird auch ein anderer Fehlercode wie **E \_ OUTOFMEMORY zurückgegeben.**
 
 ### <a name="sample-usage"></a>Beispielverwendung
 
-In den folgenden Abschnitten wird Beispielcode für eine Vielzahl von Dialog Aufgaben veranschaulicht.
+Die folgenden Abschnitte zeigen Beispielcode für eine Vielzahl von Dialogaufgaben.
 
 -   [Grundlegende Verwendung](#basic-usage)
--   [Einschränken der Ergebnisse auf Datei System Elemente](#limiting-results-to-file-system-items)
--   [Angeben von Dateitypen für ein Dialog Feld](#specifying-file-types-for-a-dialog)
--   [Steuern des Standard Ordners](#controlling-the-default-folder)
--   [Hinzufügen von Elementen zur Leiste "Plätze"](#adding-items-to-the-places-bar)
--   [Zustands Persistenz](#state-persistence)
--   [MultiSelect-Funktionen](#multiselect-capabilities)
+-   [Beschränken von Ergebnissen auf Dateisystemelemente](#limiting-results-to-file-system-items)
+-   [Angeben von Dateitypen für ein Dialogfeld](#specifying-file-types-for-a-dialog)
+-   [Steuern des Standardordners](#controlling-the-default-folder)
+-   [Hinzufügen von Elementen zur Leiste "Orte"](#adding-items-to-the-places-bar)
+-   [Zustandspersistenz](#state-persistence)
+-   [Multiselect-Funktionen](#multiselect-capabilities)
 
-Den größten Teil des Beispielcodes finden Sie im Beispiel zum Windows SDK [allgemeinen Datei Dialogfeld](samples-commonfiledialog.md).
+Den größten Teil des Beispielcodes finden Sie im Windows SDK [Common File Dialog Sample](samples-commonfiledialog.md).
 
 ### <a name="basic-usage"></a>Grundlegende Verwendung
 
-Im folgenden Beispiel wird veranschaulicht, wie ein Dialogfeld **Öffnen** gestartet wird. In diesem Beispiel ist es auf Microsoft Word-Dokumente beschränkt.
+Im folgenden Beispiel wird das Starten eines Dialogfelds **Öffnen** veranschaulicht. In diesem Beispiel ist sie auf Microsoft Word beschränkt.
 
 > [!Note]  
-> In mehreren Beispielen in diesem Thema wird die- `CDialogEventHandler_CreateInstance` Hilfsfunktion zum Erstellen einer Instanz der [**IFileDialogEvents**](/windows/desktop/api/shobjidl_core/nn-shobjidl_core-ifiledialogevents) -Implementierung verwendet. Wenn Sie diese Funktion in Ihrem eigenen Code verwenden möchten, kopieren Sie den Quellcode für die `CDialogEventHandler_CreateInstance` Funktion aus dem [Beispiel "Common File Dialog](samples-commonfiledialog.md)", aus dem alle Beispiele in diesem Thema entnommen werden.
+> In mehreren Beispielen in diesem Thema wird die `CDialogEventHandler_CreateInstance` Hilfsfunktion verwendet, um eine Instanz der [**IFileDialogEvents-Implementierung zu**](/windows/desktop/api/shobjidl_core/nn-shobjidl_core-ifiledialogevents) erstellen. Um diese Funktion in Ihrem eigenen Code zu verwenden, kopieren Sie den Quellcode für die Funktion aus dem Beispiel des Dialogfelds "Allgemeine Datei", aus dem alle Beispiele `CDialogEventHandler_CreateInstance` in diesem Thema stammen. [](samples-commonfiledialog.md)
 
  
 
@@ -185,9 +185,9 @@ HRESULT BasicFileOpen()
 
 
 
-### <a name="limiting-results-to-file-system-items"></a>Einschränken der Ergebnisse auf Datei System Elemente
+### <a name="limiting-results-to-file-system-items"></a>Beschränken von Ergebnissen auf Dateisystemelemente
 
-Im folgenden Beispiel wird veranschaulicht, wie die Ergebnisse auf Dateisystem Elemente beschränkt werden. Beachten Sie, dass [**ifiledialog:: SetOptions**](/windows/win32/api/shobjidl_core/nf-shobjidl_core-ifiledialog-setoptions) das neue Flag einem Wert hinzufügt, der über [**ifiledialog:: GetOptions**](/windows/win32/api/shobjidl_core/nf-shobjidl_core-ifiledialog-getoptions)abgerufen wurde. Dies ist die empfohlene Methode.
+Das folgende Beispiel aus dem obigen Beispiel veranschaulicht, wie Ergebnisse auf Dateisystemelemente beschränkt werden. Beachten [**Sie, dass IFileDialog::SetOptions**](/windows/win32/api/shobjidl_core/nf-shobjidl_core-ifiledialog-setoptions) das neue Flag zu einem Wert hinzufügt, der über [**IFileDialog::GetOptions ermittelt wurde.**](/windows/win32/api/shobjidl_core/nf-shobjidl_core-ifiledialog-getoptions) Dies ist die empfohlene Methode.
 
 
 ```C++
@@ -205,13 +205,13 @@ Im folgenden Beispiel wird veranschaulicht, wie die Ergebnisse auf Dateisystem E
 
 
 
-### <a name="specifying-file-types-for-a-dialog"></a>Angeben von Dateitypen für ein Dialog Feld
+### <a name="specifying-file-types-for-a-dialog"></a>Angeben von Dateitypen für ein Dialogfeld
 
-Um bestimmte Dateitypen festzulegen, die vom Dialog behandelt werden können, verwenden Sie die [**ifiledialog:: SetFileTypes**](/windows/win32/api/shobjidl_core/nf-shobjidl_core-ifiledialog-setfiletypes) -Methode. Diese Methode akzeptiert ein Array von [**comdlg \_ FILTERSPEC**](/windows/desktop/api/Shtypes/ns-shtypes-comdlg_filterspec) -Strukturen, von denen jedes einen Dateityp darstellt.
+Verwenden Sie die [**IFileDialog::SetFileTypes-Methode,**](/windows/win32/api/shobjidl_core/nf-shobjidl_core-ifiledialog-setfiletypes) um bestimmte Dateitypen zu festlegen, die vom Dialogfeld verarbeitet werden können. Diese Methode akzeptiert ein Array von [**COMDLG \_ FILTERSPEC-Strukturen,**](/windows/desktop/api/Shtypes/ns-shtypes-comdlg_filterspec) von denen jede einen Dateityp darstellt.
 
-Der Standard Erweiterungsmechanismus in einem Dialogfeld ändert sich nicht von [**GetOpenFileName**](/windows/win32/api/commdlg/nf-commdlg-getopenfilenamea) und [**GetSaveFileName**](/windows/win32/api/commdlg/nf-commdlg-getsavefilenamea). Die Dateinamenerweiterung, die an den Text angehängt wird, den der Benutzer in das Bearbeitungsfeld Dateiname eingibt, wird beim Öffnen des Dialog Felds initialisiert. Er sollte dem Standard Dateityp entsprechen (der beim Öffnen des Dialog Felds ausgewählt wird). Wenn der Standard Dateityp " \* . \* " lautet. (alle Dateien), kann die Datei eine Erweiterung Ihrer Wahl sein. Wenn der Benutzer einen anderen Dateityp auswählt, wird die Erweiterung automatisch auf die erste Dateinamenerweiterung aktualisiert, die diesem Dateityp zugeordnet ist. Wenn der Benutzer "." auswählt \* . \* (alle Dateien), dann wird die Erweiterung auf den ursprünglichen Wert zurückgesetzt.
+Der Standarderweiterungsmechanismus in einem Dialogfeld wird nicht von [**GetOpenFileName**](/windows/win32/api/commdlg/nf-commdlg-getopenfilenamea) und [**GetSaveFileName geändert.**](/windows/win32/api/commdlg/nf-commdlg-getsavefilenamea) Die Dateierweiterung, die an den Text angefügt wird, den der Benutzer im Bearbeitungsfeld für Dateinamen ein gibt, wird initialisiert, wenn das Dialogfeld geöffnet wird. Er sollte mit dem Standarddateityp übereinstimmen (der ausgewählt wird, wenn das Dialogfeld geöffnet wird). Wenn der Standarddateityp "" \* \* ist. (alle Dateien), kann die Datei eine Erweiterung Ihrer Wahl sein. Wenn der Benutzer einen anderen Dateityp auswählt, wird die Erweiterung automatisch auf die erste Dateierweiterung aktualisiert, die diesem Dateityp zugeordnet ist. Wenn der Benutzer "" \* \* auswählt. (alle Dateien), dann wird die Erweiterung auf ihren ursprünglichen Wert zurückverwendet.
 
-Im folgenden Beispiel wird veranschaulicht, wie dies oben geschehen ist.
+Im folgenden Beispiel wird veranschaulicht, wie dies oben erfolgt ist.
 
 
 ```C++
@@ -230,19 +230,19 @@ Im folgenden Beispiel wird veranschaulicht, wie dies oben geschehen ist.
 
 
 
-### <a name="controlling-the-default-folder"></a>Steuern des Standard Ordners
+### <a name="controlling-the-default-folder"></a>Steuern des Standardordners
 
-Fast jeder Ordner im Shell-Namespace kann als Standardordner für den Dialog verwendet werden (der Ordner, der angezeigt wird, wenn der Benutzer eine Datei öffnen oder speichern möchte). Rufen Sie [**ifiledialog:: SetDefaultFolder**](/windows/win32/api/shobjidl_core/nf-shobjidl_core-ifiledialog-setdefaultfolder) auf, bevor Sie " [**Show**](/windows/desktop/api/shobjidl_core/nf-shobjidl_core-imodalwindow-show) " aufrufen, um dies zu tun.
+Fast jeder Ordner im Shellnamespace kann als Standardordner für das Dialogfeld verwendet werden (der Ordner, der angezeigt wird, wenn der Benutzer eine Datei öffnet oder speichern soll). Rufen [**Sie IFileDialog::SetDefaultFolder**](/windows/win32/api/shobjidl_core/nf-shobjidl_core-ifiledialog-setdefaultfolder) auf, bevor [**Sie Show aufrufen.**](/windows/desktop/api/shobjidl_core/nf-shobjidl_core-imodalwindow-show)
 
-Der Standardordner ist der Ordner, in dem das Dialogfeld gestartet wird, wenn ein Benutzer es zum ersten Mal in der Anwendung öffnet. Anschließend wird das Dialogfeld im letzten Ordner geöffnet, den ein Benutzer geöffnet hat, oder in dem letzten Ordner, der zum Speichern eines Elements verwendet wurde. Weitere Informationen finden Sie unter [Zustands Persistenz](#state-persistence) .
+Der Standardordner ist der Ordner, in dem das Dialogfeld gestartet wird, wenn ein Benutzer ihn zum ersten Mal in Ihrer Anwendung öffnet. Danach wird das Dialogfeld im letzten Ordner geöffnet, den ein Benutzer geöffnet hat, oder im letzten Ordner, den er zum Speichern eines Elements verwendet hat. Weitere [Informationen finden Sie unter Zustandspersistenz.](#state-persistence)
 
-Durch Aufrufen von [**ifiledialog:: SetFolder**](/windows/win32/api/shobjidl_core/nf-shobjidl_core-ifiledialog-setfolder)können Sie erzwingen, dass das Dialogfeld immer den gleichen Ordner anzeigt, wenn es geöffnet wird, unabhängig von der vorherigen Benutzeraktion. Dies wird jedoch nicht empfohlen. Wenn Sie **SetFolder** aufrufen, bevor Sie das Dialogfeld anzeigen, wird der letzte Speicherort, in dem der Benutzer gespeichert oder geöffnet hat, nicht angezeigt. Wenn es keinen besonderen Grund für dieses Verhalten gibt, ist es keine gute oder erwartete Benutzer Darstellung und sollte vermieden werden. In fast allen Instanzen ist [**ifiledialog:: SetDefaultFolder**](/windows/win32/api/shobjidl_core/nf-shobjidl_core-ifiledialog-setdefaultfolder) die bessere Methode.
+Sie können erzwingen, dass das Dialogfeld beim Öffnen immer denselben Ordner zeigt, unabhängig von der vorherigen Benutzeraktion, indem Sie [**IFileDialog::SetFolder aufrufen.**](/windows/win32/api/shobjidl_core/nf-shobjidl_core-ifiledialog-setfolder) Es wird jedoch davon abraten, dies zu tun. Wenn Sie **SetFolder aufrufen,** bevor Sie das Dialogfeld anzeigen, wird der letzte Speicherort, an dem der Benutzer gespeichert oder geöffnet hat, nicht angezeigt. Sofern es keinen sehr spezifischen Grund für dieses Verhalten gibt, ist es keine gute oder erwartete Benutzererfahrung und sollte vermieden werden. In fast allen Instanzen ist [**IFileDialog::SetDefaultFolder**](/windows/win32/api/shobjidl_core/nf-shobjidl_core-ifiledialog-setdefaultfolder) die bessere Methode.
 
-Wenn Sie ein Dokument zum ersten Mal im Dialogfeld **Speichern** speichern, sollten Sie dieselben Richtlinien befolgen, um den ursprünglichen Ordner zu bestimmen, wie im Dialogfeld **Öffnen** . Wenn der Benutzer ein bereits vorhandenes Dokument bearbeitet, öffnen Sie das Dialogfeld in dem Ordner, in dem das Dokument gespeichert ist, und füllen Sie das Bearbeitungsfeld mit dem Namen des Dokuments auf. Rufen Sie [**IFileSaveDialog:: setsaveasitem**](/windows/desktop/api/Shobjidl_core/nf-shobjidl_core-ifilesavedialog-setsaveasitem) mit dem aktuellen Element vor dem Aufrufen von [**Show**](/windows/desktop/api/shobjidl_core/nf-shobjidl_core-imodalwindow-show)auf.
+Wenn Sie ein Dokument zum  ersten Mal im Dialogfeld Speichern speichern, sollten Sie die gleichen Richtlinien befolgen, um den anfänglichen Ordner wie im **Dialogfeld Öffnen zu** bestimmen. Wenn der Benutzer ein zuvor vorhandenes Dokument bearbeitet, öffnen Sie das Dialogfeld in dem Ordner, in dem das Dokument gespeichert ist, und füllen Sie das Bearbeitungsfeld mit dem Namen dieses Dokuments auf. Rufen [**Sie IFileSaveDialog::SetSaveAsItem**](/windows/desktop/api/Shobjidl_core/nf-shobjidl_core-ifilesavedialog-setsaveasitem) mit dem aktuellen Element auf, bevor Sie [**Show aufrufen.**](/windows/desktop/api/shobjidl_core/nf-shobjidl_core-imodalwindow-show)
 
-### <a name="adding-items-to-the-places-bar"></a>Hinzufügen von Elementen zur Leiste "Plätze"
+### <a name="adding-items-to-the-places-bar"></a>Hinzufügen von Elementen zur Leiste "Orte"
 
-Das folgende Beispiel veranschaulicht das Hinzufügen von Elementen zur Leiste " **Plätze** ":
+Im folgenden Beispiel wird das Addition von Elementen zur Leiste **Orte** veranschaulicht:
 
 
 ```C++
@@ -302,13 +302,13 @@ HRESULT AddItemsToCommonPlaces()
 
 
 
-### <a name="state-persistence"></a>Zustands Persistenz
+### <a name="state-persistence"></a>Zustandspersistenz
 
-Vor Windows Vista wurde ein Zustand, wie z. b. der zuletzt besuchte Ordner, pro Prozess gespeichert. Diese Informationen wurden jedoch unabhängig von der jeweiligen Aktion verwendet. Beispielsweise würde eine Anwendung zur Videobearbeitung denselben Ordner im Dialogfeld " **Rendering als** " enthalten, wie dies im Dialogfeld " **Medien importieren** " der Fall wäre. In Windows Vista können Sie durch die Verwendung von GUIDs spezifischer werden. Um dem Dialogfeld eine **GUID** zuzuweisen, nennen Sie [**ifiledialog:: setclientguid**](/windows/win32/api/shobjidl_core/nf-shobjidl_core-ifiledialog-setclientguid).
+Vor Windows Vista wurde ein Zustand, z. B. der zuletzt besuchten Ordner, pro Prozess gespeichert. Diese Informationen wurden jedoch unabhängig von der jeweiligen Aktion verwendet. Beispielsweise würde eine Videobearbeitungsanwendung im Dialogfeld **Rendern unter** den gleichen Ordner wie im Dialogfeld **Medien importieren** anzeigen. In Windows Vista können Sie durch die Verwendung von GUIDs spezifischer sein. Um dem Dialogfeld eine **GUID** zuzuweisen, rufen [**Sie iFileDialog::SetClientGuid auf.**](/windows/win32/api/shobjidl_core/nf-shobjidl_core-ifiledialog-setclientguid)
 
-### <a name="multiselect-capabilities"></a>MultiSelect-Funktionen
+### <a name="multiselect-capabilities"></a>Multiselect-Funktionen
 
-Die MultiSelect-Funktionalität ist im Dialogfeld **Öffnen** mit der [**GetResults**](/windows/win32/api/shobjidl_core/nf-shobjidl_core-ifileopendialog-getresults) -Methode verfügbar, wie hier gezeigt.
+Die Multiselect-Funktionalität ist im Dialogfeld **Öffnen** mithilfe der [**GetResults-Methode**](/windows/win32/api/shobjidl_core/nf-shobjidl_core-ifileopendialog-getresults) verfügbar, wie hier gezeigt.
 
 
 ```C++
@@ -361,11 +361,11 @@ HRESULT MultiselectInvoke()
 
 
 
-## <a name="listening-to-events-from-the-dialog"></a>Lauschen auf Ereignisse aus dem Dialog Feld
+## <a name="listening-to-events-from-the-dialog"></a>Lauschen auf Ereignisse über das Dialogfeld
 
-Ein Aufruf ender Prozess kann eine [**IFileDialogEvents**](/windows/desktop/api/shobjidl_core/nn-shobjidl_core-ifiledialogevents) -Schnittstelle mit dem Dialogfeld mithilfe der Methoden [**ifiledialog:: Rat**](/windows/win32/api/shobjidl_core/nf-shobjidl_core-ifiledialog-advise) und [**ifiledialog:: unempfehlung**](/windows/win32/api/shobjidl_core/nf-shobjidl_core-ifiledialog-unadvise) registrieren, wie hier gezeigt.
+Ein aufrufende Prozess kann eine [**IFileDialogEvents-Schnittstelle**](/windows/desktop/api/shobjidl_core/nn-shobjidl_core-ifiledialogevents) mithilfe der Methoden [**IFileDialog::Advise**](/windows/win32/api/shobjidl_core/nf-shobjidl_core-ifiledialog-advise) und [**IFileDialog::Unadvise**](/windows/win32/api/shobjidl_core/nf-shobjidl_core-ifiledialog-unadvise) wie hier gezeigt beim Dialog registrieren.
 
-Dies wird aus dem Beispiel " [grundlegende Verwendung](#basic-usage) " entnommen.
+Dies stammt aus dem Beispiel ["Grundlegende Verwendung".](#basic-usage)
 
 
 ```C++
@@ -381,7 +381,7 @@ Dies wird aus dem Beispiel " [grundlegende Verwendung](#basic-usage) " entnommen
 
 
 
-Der Großteil der Dialogfeld Verarbeitung würde hier eingefügt werden.
+Der Großteil der Dialogverarbeitung würde hier platziert werden.
 
 
 ```C++
@@ -398,13 +398,13 @@ Der Großteil der Dialogfeld Verarbeitung würde hier eingefügt werden.
 
 
 
-Der Aufrufprozess kann Ereignisse für Benachrichtigungen verwenden, wenn der Benutzer den Ordner, den Dateityp oder die Auswahl ändert. Diese Ereignisse sind besonders nützlich, wenn der aufrufende Prozess dem Dialog Steuerelemente hinzugefügt hat (siehe [Anpassen des Dialog](#customizing-the-dialog)Felds) und den Zustand dieser Steuerelemente als Reaktion auf diese Ereignisse ändern müssen. In allen Fällen ist die Fähigkeit des aufrufenden Prozesses, benutzerdefinierten Code bereitzustellen, wie z. b. das Freigeben von Verstößen, das Überschreiben von Dateien oder das ermitteln, ob eine Datei gültig ist, bevor das Dialogfeld geschlossen wird. Einige dieser Fälle werden in diesem Abschnitt beschrieben.
+Der aufrufende Prozess kann Ereignisse für Benachrichtigungen verwenden, wenn der Benutzer den Ordner, den Dateityp oder die Auswahl ändert. Diese Ereignisse sind besonders nützlich, wenn der aufrufende Prozess dem Dialog Steuerelemente hinzugefügt hat (siehe [Anpassen des Dialogs)](#customizing-the-dialog)und den Zustand dieser Steuerelemente als Reaktion auf diese Ereignisse ändern muss. In allen Fällen ist die Fähigkeit des aufrufenden Prozesses nützlich, benutzerdefinierten Code bereitzustellen, um mit Situationen wie der Freigabe von Verstößen, dem Überschreiben von Dateien oder dem Bestimmen der Gültigkeit einer Datei vor dem Schließen des Dialogs umzugehen. Einige dieser Fälle werden in diesem Abschnitt beschrieben.
 
-### <a name="onfileok"></a>OnFileOk
+### <a name="onfileok"></a>Onfileok
 
-Diese Methode wird aufgerufen, nachdem der Benutzer ein Element auswählt hat, kurz bevor das Dialogfeld geschlossen wird. Die Anwendung kann dann [**ifiledialog:: GetResult**](/windows/win32/api/shobjidl_core/nf-shobjidl_core-ifiledialog-getresult) oder [**IFileOpenDialog:: GetResults**](/windows/win32/api/shobjidl_core/nf-shobjidl_core-ifileopendialog-getresults) wie folgt aufgerufen werden, nachdem das Dialogfeld geschlossen wurde. Wenn das ausgewählte Element akzeptabel ist, können Sie S OK zurückgeben \_ . Andernfalls geben Sie "false" zurück \_ und zeigen die Benutzeroberfläche an, die dem Benutzer mitteilt, warum das ausgewählte Element ungültig ist. Wenn S \_ false zurückgegeben wird, wird das Dialogfeld nicht geschlossen.
+Diese Methode wird aufgerufen, nachdem der Benutzer ein Element ausgewählt hat, kurz bevor das Dialogfeld geschlossen wird. Die Anwendung kann dann [**IFileDialog::GetResult**](/windows/win32/api/shobjidl_core/nf-shobjidl_core-ifiledialog-getresult) oder [**IFileOpenDialog::GetResults**](/windows/win32/api/shobjidl_core/nf-shobjidl_core-ifileopendialog-getresults) aufrufen, wie dies nach dem Schließen des Dialogs der Fall wäre. Wenn das ausgewählte Element akzeptabel ist, kann es S \_ OK zurückgeben. Andernfalls geben sie S \_ FALSE zurück und zeigen eine Benutzeroberfläche an, die dem Benutzer mitgibt, warum das ausgewählte Element ungültig ist. Wenn S \_ FALSE zurückgegeben wird, wird das Dialogfeld nicht geschlossen.
 
-Der aufrufende Prozess kann das Fenster Handle des Dialog Felds selbst als übergeordnetes Element der Benutzeroberfläche verwenden. Dieses Handle kann abgerufen werden, indem Sie zuerst [**IOleWindow:: QueryInterface**](/windows/win32/api/oleidl/nn-oleidl-iolewindow) aufrufen und dann [**IOleWindow:: GetWindow**](/windows/win32/api/oleidl/nf-oleidl-iolewindow-getwindow) mit dem Handle aufrufen, wie im folgenden Beispiel gezeigt.
+Der aufrufende Prozess kann das Fensterhandle des Dialogs selbst als übergeordnetes Element der Benutzeroberfläche verwenden. Dieses Handle kann abgerufen werden, indem zuerst [**IOleWindow::QueryInterface**](/windows/win32/api/oleidl/nn-oleidl-iolewindow) und dann [**IOleWindow::GetWindow**](/windows/win32/api/oleidl/nf-oleidl-iolewindow-getwindow) mit dem Handle aufgerufen wird, wie in diesem Beispiel gezeigt.
 
 
 ```C++
@@ -460,17 +460,17 @@ HRESULT CDialogEventHandler::_DisplayMessage(IFileDialog *pfd, PCWSTR pszMessage
 
 
 
-### <a name="onshareviolation-and-onoverwrite"></a>Onshareverletzungs und onüberschreibung
+### <a name="onshareviolation-and-onoverwrite"></a>OnShareViolation und OnOverwrite
 
-Wenn sich der Benutzer für das Überschreiben einer Datei im Dialogfeld " **Speichern** " entscheidet, oder wenn eine Datei verwendet wird, die gespeichert oder ersetzt wird und nicht geschrieben werden kann (eine Freigabe Verletzung), kann die Anwendung benutzerdefinierte Funktionen bereitstellen, um das Standardverhalten des Dialog Felds zu überschreiben. Wenn eine Datei überschrieben wird, wird im Dialogfeld standardmäßig eine Eingabeaufforderung angezeigt, die dem Benutzer ermöglicht, diese Aktion zu überprüfen. Bei Freigabe Verstößen wird im Dialogfeld standardmäßig eine Fehlermeldung angezeigt, es wird nicht geschlossen, und der Benutzer muss eine andere Auswahl treffen. Der aufrufenden Prozess kann diese Standardwerte überschreiben und die eigene Benutzeroberfläche anzeigen, wenn gewünscht. Das Dialogfeld kann angewiesen werden, die Datei abzulehnen und offen zu bleiben oder die Datei zu akzeptieren und erfolgreich zu schließen.
+Wenn der Benutzer sich entscheidet, eine Datei im Dialogfeld **Speichern** zu überschreiben, oder wenn eine gespeicherte oder ersetzte Datei verwendet wird und nicht in geschrieben werden kann (eine Freigabeverletzung), kann die Anwendung benutzerdefinierte Funktionen bereitstellen, um das Standardverhalten des Dialogs zu überschreiben. Standardmäßig zeigt das Dialogfeld beim Überschreiben einer Datei eine Eingabeaufforderung an, mit der der Benutzer diese Aktion überprüfen kann. Bei Freigabeverletzungen zeigt das Dialogfeld standardmäßig eine Fehlermeldung an, die nicht geschlossen wird, und der Benutzer muss eine andere Auswahl treffen. Der aufrufende Prozess kann diese Standardwerte überschreiben und bei Bedarf eine eigene Benutzeroberfläche anzeigen. Das Dialogfeld kann angewiesen werden, die Datei abzulehnen und geöffnet zu bleiben oder die Datei zu akzeptieren und erfolgreich zu schließen.
 
-## <a name="customizing-the-dialog"></a>Anpassen des Dialog Felds
+## <a name="customizing-the-dialog"></a>Anpassen des Dialogfelds
 
-Eine Vielzahl von Steuerelementen können dem Dialogfeld hinzugefügt werden, ohne eine Win32-Dialogfeld Vorlage bereitzustellen. Diese Steuerelemente umfassen PUSHBUTTON, ComboBox, EditBox, checkbutton, RadioButton-Listen, Gruppen, Trennzeichen und statische Text Steuerelemente. Rufen Sie **QueryInterface** im Dialog Objekt ([**ifiledialog**](/windows/win32/api/shobjidl_core/nn-shobjidl_core-ifiledialog), [**IFileOpenDialog**](/windows/win32/api/shobjidl_core/nn-shobjidl_core-ifileopendialog)oder [**IFileSaveDialog**](/windows/desktop/api/Shobjidl_core/nn-shobjidl_core-ifilesavedialog)) auf, um einen [**IFileDialogCustomize**](/windows/desktop/api/shobjidl_core/nn-shobjidl_core-ifiledialogcustomize) -Zeiger zu erhalten. Verwenden Sie diese Schnittstelle, um Steuerelemente hinzuzufügen. Jedes Steuerelement verfügt über eine zugeordnete, vom Aufrufer bereitgestellte ID sowie einen *sichtbaren* und *aktivierten* Zustand, der vom aufrufenden Prozess festgelegt werden kann. Einigen Steuerelementen, z. b. PUSHBUTTON, sind auch Text zugeordnet.
+Dem Dialogfeld kann eine Vielzahl von Steuerelementen hinzugefügt werden, ohne eine Win32-Dialogfeldvorlage bereitstellen zu müssen. Zu diesen Steuerelementen gehören PushButton-, ComboBox-, EditBox-, CheckButton-, RadioButton-Listen, Gruppen, Trennzeichen und statische Textsteuerelemente. Rufen Sie **QueryInterface** für das Dialogobjekt ([**IFileDialog**](/windows/win32/api/shobjidl_core/nn-shobjidl_core-ifiledialog), [**IFileOpenDialog**](/windows/win32/api/shobjidl_core/nn-shobjidl_core-ifileopendialog)oder [**IFileSaveDialog**](/windows/desktop/api/Shobjidl_core/nn-shobjidl_core-ifilesavedialog)) auf, um einen [**IFileDialogCustomize-Zeiger**](/windows/desktop/api/shobjidl_core/nn-shobjidl_core-ifiledialogcustomize) abzurufen. Verwenden Sie diese Schnittstelle, um Steuerelemente hinzuzufügen. Jedes Steuerelement verfügt über eine vom Aufrufer bereitgestellte ID sowie einen *sichtbaren* und *aktivierten* Zustand, der vom aufrufenden Prozess festgelegt werden kann. Einigen Steuerelementen, z. B. PushButton, ist auch Text zugeordnet.
 
-Einer "visuellen Gruppe" können mehrere Steuerelemente hinzugefügt werden, die als eine Einheit im Layout des Dialog Felds verschoben werden. Gruppen kann eine Bezeichnung zugeordnet sein.
+Mehrere Steuerelemente können einer "visuellen Gruppe" hinzugefügt werden, die als einzelne Einheit im Layout des Dialogfelds verschoben wird. Gruppen kann eine Bezeichnung zugeordnet sein.
 
-Steuerelemente können nur hinzugefügt werden, bevor das Dialogfeld angezeigt wird. Wenn das Dialogfeld angezeigt wird, können Steuerelemente jedoch wie gewünscht ausgeblendet oder angezeigt werden, möglicherweise als Reaktion auf eine Benutzeraktion. In den folgenden Beispielen wird gezeigt, wie eine Optionsfeld Liste zum Dialogfeld hinzugefügt wird.
+Steuerelemente können nur hinzugefügt werden, bevor das Dialogfeld angezeigt wird. Sobald das Dialogfeld angezeigt wird, können Steuerelemente jedoch ausgeblendet oder wie gewünscht angezeigt werden, möglicherweise als Reaktion auf eine Benutzeraktion. In den folgenden Beispielen wird veranschaulicht, wie dem Dialogfeld eine Optionsfeldliste hinzugefügt wird.
 
 
 ```C++
@@ -581,7 +581,7 @@ HRESULT AddCustomControls()
 
 ### <a name="adding-options-to-the-ok-button"></a>Hinzufügen von Optionen zur Schaltfläche "OK"
 
-Entsprechend können Sie die Schaltflächen " **Öffnen** " oder " **Speichern** " auswählen, bei denen es sich um die Schaltfläche " **OK** " für die entsprechenden Dialog Typen handelt. Die Optionen sind über ein Dropdown-Listenfeld zugänglich, das an die Schaltfläche angefügt ist. Das erste Element in der Liste wird der Text für die Schaltfläche. Das folgende Beispiel zeigt, wie Sie eine Schaltfläche **Öffnen** mit zwei Möglichkeiten bereitstellen: "Öffnen" und "als schreibgeschützt öffnen".
+Auf ähnliche Weise können optionen zu den Schaltflächen **Öffnen** oder **Speichern** hinzugefügt werden. Dies ist die Schaltfläche **OK** für die jeweiligen Dialogtypen. Auf die Optionen kann über ein Dropdownlistenfeld zugegriffen werden, das an die Schaltfläche angefügt ist. Das erste Element in der Liste wird zum Text für die Schaltfläche. Das folgende Beispiel zeigt, wie Sie eine Schaltfläche **Öffnen** mit zwei Möglichkeiten bereitstellen: "Öffnen" und "Als schreibgeschützt öffnen".
 
 
 ```C++
@@ -647,20 +647,20 @@ HRESULT AddOpenChoices()
 
 
 
-Die Auswahl des Benutzers kann überprüft werden, nachdem der Dialog von der [**Show**](/windows/desktop/api/shobjidl_core/nf-shobjidl_core-imodalwindow-show) -Methode wie bei einem Kombinations Feld zurückgegeben wurde, oder er kann im Rahmen der Verarbeitung durch [**IFileDialogEvents:: OnFileOk**](/windows/desktop/api/shobjidl_core/nf-shobjidl_core-ifiledialogevents-onfileok)überprüft werden.
+Die Auswahl des Benutzers kann überprüft werden, nachdem der Dialog von der [**Show-Methode**](/windows/desktop/api/shobjidl_core/nf-shobjidl_core-imodalwindow-show) wie bei einem ComboBox-Objekt zurückgegeben wurde, oder sie kann im Rahmen der Verarbeitung durch [**IFileDialogEvents::OnFileOk**](/windows/desktop/api/shobjidl_core/nf-shobjidl_core-ifiledialogevents-onfileok)überprüft werden.
 
 ### <a name="responding-to-events-in-added-controls"></a>Reagieren auf Ereignisse in hinzugefügten Steuerelementen
 
-Der Ereignishandler, der vom aufrufenden Prozess bereitgestellt wird, kann [**ifiledialogcontrolevents**](/windows/desktop/api/Shobjidl/nn-shobjidl-ifiledialogcontrolevents) zusätzlich zu [**IFileDialogEvents**](/windows/desktop/api/shobjidl_core/nn-shobjidl_core-ifiledialogevents)implementieren. **Ifiledialogcontrolevents** ermöglicht dem aufrufenden Prozess, auf diese Ereignisse zu reagieren:
+Der vom aufrufenden Prozess bereitgestellte Ereignishandler kann zusätzlich zu [**IFileDialogEvents IFileDialogControlEvents**](/windows/desktop/api/Shobjidl/nn-shobjidl-ifiledialogcontrolevents) implementieren. [](/windows/desktop/api/shobjidl_core/nn-shobjidl_core-ifiledialogevents) **IFileDialogControlEvents** ermöglicht dem aufrufenden Prozess, auf diese Ereignisse zu reagieren:
 
--   PUSHBUTTON geklickt
--   Kontrollkästchen Zustand geändert
--   Ausgewähltes Element in einem Menü, ComboBox oder RadioButton-Liste
--   Aktivieren des Steuer Elements. Dies wird gesendet, wenn ein Menü im Begriff ist, eine Dropdown Liste anzuzeigen, falls der aufrufenden Prozess die Elemente in der Liste ändern möchte.
+-   Klick auf PushButton
+-   CheckButton-Status geändert
+-   Ausgewähltes Element in einer Menü-, ComboBox- oder RadioButton-Liste
+-   Steuerungsaktivierung. Dies wird gesendet, wenn in einem Menü eine Dropdownliste angezeigt wird, falls der aufrufende Prozess die Elemente in der Liste ändern möchte.
 
 ## <a name="full-samples"></a>Vollständige Beispiele
 
-Im folgenden finden Sie umfassende, herunterladbare C++-Beispiele aus dem Windows Software Development Kit (SDK), die die Verwendung von und die Interaktion mit dem Dialog Feld "allgemeine Elemente" veranschaulichen.
+Im Folgenden finden Sie vollständige, herunterladbare C++-Beispiele aus dem Windows Software Development Kit (SDK), die die Verwendung von und die Interaktion mit dem Dialogfeld "Allgemeine Elemente" veranschaulichen.
 
 -   [Dialogfeld „Gemeinsame Dateien“ (Beispiel)](samples-commonfiledialog.md)
 -   [Modi des Dialogfelds „Gemeinsame Dateien“ (Beispiel)](samples-commonfiledialogmodes.md)
@@ -669,7 +669,7 @@ Im folgenden finden Sie umfassende, herunterladbare C++-Beispiele aus dem Window
 
 <dl> <dt>
 
-[**IID \_ PPV-Argumente \_**](/windows/win32/api/combaseapi/nf-combaseapi-iid_ppv_args)
+[**IID \_ PPV \_ ARGS**](/windows/win32/api/combaseapi/nf-combaseapi-iid_ppv_args)
 </dt> </dl>
 
  

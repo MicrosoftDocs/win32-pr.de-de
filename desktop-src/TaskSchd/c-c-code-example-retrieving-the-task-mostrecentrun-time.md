@@ -1,22 +1,22 @@
 ---
-title: C/C++-Code Beispiel zum Abrufen der Aufgabe "comstrecentrun"
-description: Dieses Beispiel ruft den Zeitpunkt ab, zu dem die Aufgabe zuletzt ausgeführt wurde, und zeigt Sie auf dem Bildschirm an. In diesem Beispiel wird davon ausgegangen, dass der Task und die Testaufgabe bereits auf dem lokalen Computer vorhanden sind.
+title: 'C/C++-Codebeispiel: Abrufen der MostRecentRun Time-Aufgabe'
+description: In diesem Beispiel wird der Zeitpunkt der letzten Ausführung des Tasks abgerufen und auf dem Bildschirm angezeigt. In diesem Beispiel wird davon ausgegangen, dass die Aufgabe und die Testaufgabe bereits auf dem lokalen Computer vorhanden sind.
 ms.assetid: 683ff1e1-1cb0-4ef7-bca2-9c3a2b4d1bd0
 keywords:
-- Abrufen der letzten Aufgabe Taskplaner
-- Abrufen von Arbeits Element Eigenschaften Taskplaner, Aufgabe der letzten Ausführung
+- Abrufen der letzten Taskplaner
+- Abrufen von Arbeitselementeigenschaften Taskplaner , letzte Tasklaufzeit
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: c8cae40de306d79628fa10230091c571e776c5e4
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: 70e8a49372a082567f5f454cfd01a84239ff622f7ab6121fa07a1f557976c4de
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "106340433"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119738570"
 ---
-# <a name="cc-code-example-retrieving-the-task-mostrecentrun-time"></a>C/C++-Code Beispiel: Abrufen der Aufgabe "mustrecentrun"
+# <a name="cc-code-example-retrieving-the-task-mostrecentrun-time"></a>C/C++-Codebeispiel: Abrufen des Tasks MostRecentRun Time
 
-Dieses Beispiel ruft den Zeitpunkt ab, zu dem die Aufgabe zuletzt ausgeführt wurde, und zeigt Sie auf dem Bildschirm an. In diesem Beispiel wird davon ausgegangen, dass der Task und die Testaufgabe bereits auf dem lokalen Computer vorhanden sind.
+In diesem Beispiel wird der Zeitpunkt der letzten Ausführung des Tasks abgerufen und auf dem Bildschirm angezeigt. In diesem Beispiel wird davon ausgegangen, dass die Aufgabe und die Testaufgabe bereits auf dem lokalen Computer vorhanden sind.
 
 
 ```C++
@@ -120,12 +120,12 @@ int main(int argc, char **argv)
 
 <dl> <dt>
 
-[Taskplaner 1,0-Beispiele](task-scheduler-1-0-examples.md)
+[beispiele für Taskplaner 1.0](task-scheduler-1-0-examples.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

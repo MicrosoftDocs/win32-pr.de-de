@@ -1,36 +1,36 @@
 ---
 title: Erstellen einer QuickInfo für ein Steuerelement
-description: Die folgende Beispiel Funktion erstellt eine QuickInfo und verknüpft Sie mit dem-Steuerelement, dessen Ressourcen-ID an Sie übermittelt wird.
+description: Die folgende Beispielfunktion erstellt eine QuickInfo und ordnet sie dem Steuerelement zu, dessen Ressourcen-ID übergeben wird.
 ms.assetid: FDA3B2A0-1256-4DAC-86CF-8F123894E760
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: f341c1be1e749c4e0d6f18caf97a3f897cf429e7
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: 9883dc90e8a150c7cc863b59e8388df676ed0f1663aaea7b356cb45292a6c8c0
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "104036539"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119826570"
 ---
 # <a name="how-to-create-a-tooltip-for-a-control"></a>Erstellen einer QuickInfo für ein Steuerelement
 
-Die folgende Beispiel Funktion erstellt eine QuickInfo und verknüpft Sie mit dem-Steuerelement, dessen Ressourcen-ID an Sie übermittelt wird.
+Die folgende Beispielfunktion erstellt eine QuickInfo und ordnet sie dem Steuerelement zu, dessen Ressourcen-ID übergeben wird.
 
-## <a name="what-you-need-to-know"></a>Was Sie wissen müssen
+## <a name="what-you-need-to-know"></a>Wichtige Informationen
 
 ### <a name="technologies"></a>Technologien
 
--   [Windows-Steuerelemente](window-controls.md)
+-   [Windows Steuerelemente](window-controls.md)
 
 ### <a name="prerequisites"></a>Voraussetzungen
 
 -   C/C++
--   Programmieren der Windows-Benutzeroberfläche
+-   Windows Benutzeroberfläche-Programmierung
 
 ## <a name="instructions"></a>Anweisungen
 
 ### <a name="create-a-tooltip-for-a-control"></a>Erstellen einer QuickInfo für ein Steuerelement
 
-Die folgende Beispiel Funktion erstellt eine QuickInfo und verknüpft Sie mit dem-Steuerelement, dessen Ressourcen-ID an Sie übermittelt wird.
+Die folgende Beispielfunktion erstellt eine QuickInfo und ordnet sie dem Steuerelement zu, dessen Ressourcen-ID übergeben wird.
 
 
 ```C++
@@ -84,12 +84,12 @@ HWND CreateToolTip(int toolID, HWND hDlg, PTSTR pszText)
 
 <dl> <dt>
 
-[Verwenden von Quick Infos](using-tooltip-contro.md)
+[Verwenden von QuickInfo-Steuerelementen](using-tooltip-contro.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

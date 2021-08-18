@@ -1,28 +1,28 @@
 ---
-description: Listet die Zertifikate in einem Zertifikat Speicher auf, zeigt den Betreff und den Benutzer der einzelnen Zertifikate an und konvertiert den Antragsteller Namen von jedem Zertifikat in seine abstrakte Syntax Notation One (ASN. 1)-codiertes Formular und dann wieder in seine decodierte Form.
+description: Listet die Zertifikate in einem Zertifikatspeicher auf, zeigt den Antragsteller und den Benutzer jedes Zertifikats an, konvertiert den Antragstellernamen aus jedem Zertifikat in sein ASN.1-codiertes Format (Abstract Syntax Notation One) und dann wieder in das decodierte Formular.
 ms.assetid: 8b4771da-0996-40fb-98ce-73efe8e3534f
-title: 'Beispiel C-Programm: Umrechnen von Namen aus Zertifikaten in ASN. 1 und Back'
+title: 'C-Beispielprogramm: Konvertieren von Namen von Zertifikaten in ASN.1 und Zurück'
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: a14114d4ba956acabf26ff28368403c699497b45
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 1e1093f47500592c32142f4680c046b60facc690f7c794c7b850b18e810242e6
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "103866980"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119993060"
 ---
-# <a name="example-c-program-converting-names-from-certificates-to-asn1-and-back"></a>Beispiel C-Programm: Umrechnen von Namen aus Zertifikaten in ASN. 1 und Back
+# <a name="example-c-program-converting-names-from-certificates-to-asn1-and-back"></a>C-Beispielprogramm: Konvertieren von Namen von Zertifikaten in ASN.1 und Zurück
 
-Im folgenden Beispiel werden die Zertifikate in einem [*Zertifikat Speicher*](../secgloss/c-gly.md)aufgelistet, der Betreff und der Benutzer jedes Zertifikats angezeigt, und der Antragsteller Name wird von jedem Zertifikat in seine [*abstrakte Syntax Notation One*](../secgloss/a-gly.md) (ASN. 1) codierte Form und anschließend zurück in seine decodierte Form konvertiert.
+Im folgenden Beispiel werden die Zertifikate in einem [*Zertifikatspeicher*](../secgloss/c-gly.md)aufzählt, der Antragsteller und der Benutzer jedes Zertifikats angezeigt und der Antragstellername aus jedem Zertifikat in die ASN.1-codierte Form [*(Abstract Syntax Notation One)*](../secgloss/a-gly.md) konvertiert und dann wieder in das decodierte Formular eingefügt.
 
-In diesem Beispiel werden die folgenden Aufgaben und [*kryptoapi*](../secgloss/c-gly.md) -Funktionen veranschaulicht:
+Dieses Beispiel zeigt die folgenden Aufgaben und [*CryptoAPI-Funktionen:*](../secgloss/c-gly.md)
 
--   Öffnen eines System Stores mithilfe von " [**certopdsystemstore**](/windows/desktop/api/Wincrypt/nf-wincrypt-certopensystemstorea)".
--   Verwenden von [**certenrecertifikatesinstore**](/windows/desktop/api/Wincrypt/nf-wincrypt-certenumcertificatesinstore) , um das erste Zertifikat aus dem geöffneten Speicher zu erhalten.
--   Verwenden von [**certgetnamestring**](/windows/desktop/api/Wincrypt/nf-wincrypt-certgetnamestringa) , um den Antragsteller Namen und den Benutzernamen aus dem Zertifikat zu erhalten.
--   Verwenden Sie [**certnametostr**](/windows/desktop/api/Wincrypt/nf-wincrypt-certnametostra) , um den Antragsteller Namen aus dem Zertifikat in das ASN. 1-codierte Formular zu konvertieren.
--   Verwenden von [**certstrintoname**](/windows/desktop/api/Wincrypt/nf-wincrypt-certstrtonamea) , um eine ASN. 1-codierte Zeichenfolge in die decodierte Form zu konvertieren.
--   Schließen eines Zertifikat Speicher mithilfe von " [**certclosestore**](/windows/desktop/api/Wincrypt/nf-wincrypt-certclosestore) " mit dem Kontroll Kennzeichen-Flag " **CERT \_ Close \_ Store \_ \_** ".
+-   Öffnen eines Systemspeichers mit [**CertOpenSystemStore**](/windows/desktop/api/Wincrypt/nf-wincrypt-certopensystemstorea).
+-   Verwenden von [**CertEnumCertificatesInStore,**](/windows/desktop/api/Wincrypt/nf-wincrypt-certenumcertificatesinstore) um das erste Zertifikat aus dem geöffneten Speicher abzurufen.
+-   Verwenden sie [**CertGetNameString,**](/windows/desktop/api/Wincrypt/nf-wincrypt-certgetnamestringa) um den Antragstellernamen und den Benutzernamen aus dem Zertifikat abzurufen.
+-   Verwenden von [**CertNameToStr**](/windows/desktop/api/Wincrypt/nf-wincrypt-certnametostra) zum Konvertieren des Antragstellernamens aus dem Zertifikat in seine ASN.1-codierte Form.
+-   Verwenden von [**CertStrToName**](/windows/desktop/api/Wincrypt/nf-wincrypt-certstrtonamea) zum Konvertieren einer ASN.1-codierten Zeichenfolge in die decodierte Form.
+-   Schließen eines Zertifikatspeichers mithilfe von [**CertCloseStore**](/windows/desktop/api/Wincrypt/nf-wincrypt-certclosestore) mit dem **Flag CERT \_ CLOSE STORE \_ CHECK \_ \_ FLAG.**
 
 
 ```C++

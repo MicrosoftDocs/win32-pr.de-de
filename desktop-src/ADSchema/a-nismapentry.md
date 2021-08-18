@@ -1,10 +1,10 @@
 ---
-title: nismapentry-Attribut
-description: Enthält einen Zuordnungs Eintrag für eine nicht dem Standard entsprechende Zuordnung.
+title: nisMapEntry-Attribut
+description: Enthält einen Karteneintrag für eine Nichtstandardzuordnung.
 ms.assetid: 00975302-3eba-4512-b836-01b38cad4dd5
 ms.tgt_platform: multiple
 keywords:
-- Schema für das Schema mapentry-Attribut
+- nisMapEntry-Attribut AD-Schema
 topic_type:
 - apiref
 api_name:
@@ -13,28 +13,28 @@ api_type:
 - Schema
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: f749bcd41d299e422399043b43c6ca2d8163dbee
-ms.sourcegitcommit: b77ace27b0432e7cd3863191b11926be032fbe2f
+ms.openlocfilehash: 0cff534019d370f5a090854b5cc02ef0b7d29eb6927c410c5c9220cb113bdf4f
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "103957459"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119704710"
 ---
-# <a name="nismapentry-attribute"></a>nismapentry-Attribut
+# <a name="nismapentry-attribute"></a>nisMapEntry-Attribut
 
-Enthält einen Zuordnungs Eintrag für eine nicht dem Standard entsprechende Zuordnung.
+Enthält einen Karteneintrag für eine Nichtstandardzuordnung.
 
 
 
 | Eingabe | Wert |
 |-------------------|--------------------------------------|
-| CN                | nismapentry                          |
-| LDAP-Display-Name | nismapentry                          |
+| CN                | nisMapEntry                          |
+| Ldap-Anzeigename | nisMapEntry                          |
 | Size              | \-                                   |
-| Berechtigung aktualisieren  | \-                                   |
-| Aktualisierungshäufigkeit  | \-                                   |
+| Aktualisieren von Berechtigungen  | \-                                   |
+| Updatehäufigkeit  | \-                                   |
 | Attribute-Id      | 1.3.6.1.1.1.1.27                     |
-| System-ID-GUID    | 4a95216e-lcc0-402e-b57f -5971626148a9 |
+| System-Id-Guid    | 4a95216e-fcc0-402e-b57f-5971626148a9 |
 | Syntax            | [**String(IA5)**](s-string-ia5.md)  |
 
 
@@ -54,16 +54,16 @@ Enthält einen Zuordnungs Eintrag für eine nicht dem Standard entsprechende Zuo
 |------------------------|---------------------------------------------|
 | Link-ID                | \-                                          |
 | MAPI-Id                | \-                                          |
-| System-Only            | False                                       |
-| Ist-einwertig       | Richtig                                        |
-| Ist indiziert             | False                                       |
-| Im globalen Katalog      | False                                       |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                |
+| System-Only            | Falsch                                       |
+| Is-Single-Valued       | Richtig                                        |
+| Ist indiziert             | Falsch                                       |
+| Im globalen Katalog      | Falsch                                       |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                |
 | Range-Lower            | \-                                          |
 | Range-Upper            | \-                                          |
 | Search-Flags           | 0x00000000                                  |
 | System-Flags           | 0x00000000                                  |
-| In verwendete Klassen        | [**nisobject**](c-nisobject.md)<br/> |
+| In verwendete Klassen        | [**nisObject**](c-nisobject.md)<br/> |
 
 
 
@@ -75,16 +75,16 @@ Enthält einen Zuordnungs Eintrag für eine nicht dem Standard entsprechende Zuo
 |------------------------|---------------------------------------------|
 | Link-ID                | \-                                          |
 | MAPI-Id                | \-                                          |
-| System-Only            | False                                       |
-| Ist-einwertig       | Richtig                                        |
-| Ist indiziert             | False                                       |
-| Im globalen Katalog      | False                                       |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                |
+| System-Only            | Falsch                                       |
+| Is-Single-Valued       | Richtig                                        |
+| Ist indiziert             | Falsch                                       |
+| Im globalen Katalog      | Falsch                                       |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                |
 | Range-Lower            | \-                                          |
 | Range-Upper            | \-                                          |
 | Search-Flags           | 0x00000000                                  |
 | System-Flags           | 0x00000000                                  |
-| In verwendete Klassen        | [**nisobject**](c-nisobject.md)<br/> |
+| In verwendete Klassen        | [**nisObject**](c-nisobject.md)<br/> |
 
 
 
@@ -96,16 +96,16 @@ Enthält einen Zuordnungs Eintrag für eine nicht dem Standard entsprechende Zuo
 |------------------------|---------------------------------------------|
 | Link-ID                | \-                                          |
 | MAPI-Id                | \-                                          |
-| System-Only            | False                                       |
-| Ist-einwertig       | Richtig                                        |
-| Ist indiziert             | False                                       |
-| Im globalen Katalog      | False                                       |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                |
+| System-Only            | Falsch                                       |
+| Is-Single-Valued       | Richtig                                        |
+| Ist indiziert             | Falsch                                       |
+| Im globalen Katalog      | Falsch                                       |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                |
 | Range-Lower            | \-                                          |
 | Range-Upper            | \-                                          |
 | Search-Flags           | 0x00000000                                  |
 | System-Flags           | 0x00000000                                  |
-| In verwendete Klassen        | [**nisobject**](c-nisobject.md)<br/> |
+| In verwendete Klassen        | [**nisObject**](c-nisobject.md)<br/> |
 
 
 
@@ -117,20 +117,20 @@ Enthält einen Zuordnungs Eintrag für eine nicht dem Standard entsprechende Zuo
 |------------------------|---------------------------------------------|
 | Link-ID                | \-                                          |
 | MAPI-Id                | \-                                          |
-| System-Only            | False                                       |
-| Ist-einwertig       | Richtig                                        |
-| Ist indiziert             | False                                       |
-| Im globalen Katalog      | False                                       |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                |
+| System-Only            | Falsch                                       |
+| Ist einwertig       | Richtig                                        |
+| Ist indiziert             | Falsch                                       |
+| Im globalen Katalog      | Falsch                                       |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                |
 | Range-Lower            | \-                                          |
 | Range-Upper            | \-                                          |
 | Search-Flags           | 0x00000000                                  |
 | System-Flags           | 0x00000000                                  |
-| In verwendete Klassen        | [**nisobject**](c-nisobject.md)<br/> |
+| In verwendete Klassen        | [**nisObject**](c-nisobject.md)<br/> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 

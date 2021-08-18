@@ -81,7 +81,7 @@ Ermöglicht Updates von Klassen auch dann, wenn untergeordnete Klassen vorhanden
 
 </dt> <dd>
 
-Dieses Flag erzwingt Aktualisierungen von Klassen, wenn in Konflikt stehende untergeordnete Klassen vorhanden sind. Dieses Flag zwingt z. B. ein Update, wenn ein Klassenqualifizierer in einer untergeordneten Klasse definiert wurde und die Basisklasse versucht, den gleichen Qualifizierer hinzuzufügen und in Konflikt mit dem vorhandenen zu stehen. Im Force-Modus würde dieser Konflikt gelöst werden, indem der in Konflikt stehende Qualifizierer in der untergeordneten Klasse gelöscht wird. Wenn die Klasse über Instanzen verfügt, schlägt das Update fehl.
+Dieses Flag erzwingt Aktualisierungen von Klassen, wenn in Konflikt stehende untergeordnete Klassen vorhanden sind. Mit diesem Flag wird z. B. ein Update erzwingen, wenn ein Klassenqualifizierer in einer untergeordneten Klasse definiert wurde und die Basisklasse versucht, den gleichen Qualifizierer hinzuzufügen, der mit dem vorhandenen in Konflikt steht. Im Force-Modus würde dieser Konflikt gelöst werden, indem der in Konflikt stehende Qualifizierer in der untergeordneten Klasse gelöscht wird. Wenn die Klasse über Instanzen verfügt, schlägt das Update fehl.
 
 Die Verwendung des Force-Modus zum Aktualisieren einer statischen Klasse führt zum Löschen aller Instanzen dieser Klasse. Bei einem erzwungenen Update für eine Anbieterklasse werden keine Instanzen der -Klasse gelöscht.
 
@@ -100,7 +100,7 @@ Bewirkt, dass die Klasse oder Instanz erstellt wird, wenn sie nicht vorhanden is
 
 <span id="wbemChangeFlagCreateOnly"></span><span id="wbemchangeflagcreateonly"></span><span id="WBEMCHANGEFLAGCREATEONLY"></span>
 
-<span id="wbemChangeFlagCreateOnly"></span><span id="wbemchangeflagcreateonly"></span><span id="WBEMCHANGEFLAGCREATEONLY"></span>wbemChangeFlagCreateOnly( 2 (0x2))
+<span id="wbemChangeFlagCreateOnly"></span><span id="wbemchangeflagcreateonly"></span><span id="WBEMCHANGEFLAGCREATEONLY"></span>wbemChangeFlagCreateOnly** (2 (0x2))
 
 
 </dt> <dd>
@@ -249,7 +249,7 @@ Nicht genügend Arbeitsspeicher, um den Vorgang abzuschließen.
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 

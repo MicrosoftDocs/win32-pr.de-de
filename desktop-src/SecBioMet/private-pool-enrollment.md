@@ -1,27 +1,27 @@
 ---
-title: Private Pool Registrierung
-description: Enthält das Registrierungs Konsolen Projekt.
+title: Registrierung eines privaten Pools
+description: Enthält das Anmeldungskonsolenprojekt.
 ms.assetid: 666CD6FF-A6A2-4992-81EB-F520C8FE5D95
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 418b601653b16aba60efdd747f7e5f26150e9d56
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: 9a3c4ae86ac04190f1bf8e6fde8bf57b4fc0d0208ad4a03bafaf0de2a8f4502a
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "104310872"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119977060"
 ---
-# <a name="private-pool-enrollment"></a>Private Pool Registrierung
+# <a name="private-pool-enrollment"></a>Registrierung eines privaten Pools
 
-Die folgenden Abschnitte enthalten den Code, der für die Anmeldung des privaten Sensor Pools erforderlich ist.
+Die folgenden Abschnitte enthalten den Code, der für die Registrierung eines privaten Sensorpools erforderlich ist.
 
--   [Targetver. h](#targetverh)
+-   [Targetver.h](#targetverh)
 -   [stdafx.h](#stdafxh)
--   [Privatepoolenroll. cpp](#privatepoolenrollcpp)
+-   [PrivatePoolEnroll.cpp](#privatepoolenrollcpp)
 
-## <a name="targetverh"></a>Targetver. h
+## <a name="targetverh"></a>Targetver.h
 
-Dieses Beispiel wurde für Windows 7 und spätere Betriebssysteme erstellt.
+Dieses Beispiel wurde für Windows 7 und höhere Betriebssysteme erstellt.
 
 
 ```C++
@@ -65,7 +65,7 @@ Dieses Beispiel wurde für Windows 7 und spätere Betriebssysteme erstellt.
 
 
 
-## <a name="privatepoolenrollcpp"></a>Privatepoolenroll. cpp
+## <a name="privatepoolenrollcpp"></a>PrivatePoolEnroll.cpp
 
 
 ```C++
@@ -472,9 +472,9 @@ static void displayIdentity(
 
 
 
- 
+ 
 
- 
+ 
 
 
 

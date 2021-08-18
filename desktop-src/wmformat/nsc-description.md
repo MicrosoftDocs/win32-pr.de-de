@@ -1,9 +1,9 @@
 ---
 title: NSC_Description
-description: Das NSC- \_ Beschreibungs Attribut enthält eine Beschreibung der Multicast Station.
+description: Das Attribut NSC \_ Description enthält eine Beschreibung der Multicaststation.
 ms.assetid: 6a3dc2ed-722b-427a-99e1-7b311e7e8408
 keywords:
-- NSC_Description Windows Media-Format
+- NSC_Description Windows-Medienformat
 topic_type:
 - apiref
 api_name:
@@ -12,38 +12,38 @@ api_type:
 - NA
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 56296f9000677704d247605ebae93d27732249bc
-ms.sourcegitcommit: 57758ecb246c84d65e6e0e4bd5570d9176fa39cd
+ms.openlocfilehash: 14268e5a6e529fce61a28fa305ddb794ea13e10bc37d162124ad74a8f7e3a5f7
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "104038036"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119839450"
 ---
-# <a name="nsc_description"></a>NSC- \_ Beschreibung
+# <a name="nsc_description"></a>\_NSC-Beschreibung
 
-Das **NSC- \_ Beschreibungs** Attribut enthält eine Beschreibung der Multicast Station.
+Das **Attribut NSC \_ Description** enthält eine Beschreibung der Multicaststation.
 
 ## <a name="global-constant"></a>Globale Konstante
 
-g \_ wszwmnscdescription
+g \_ wszWMNSCDescription
 
 ## <a name="data-type"></a>Datentyp
 
-**WMT \_ - \_ Typzeichenfolge**
+**\_ \_ WMT-TYPZEICHENFOLGE**
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
 [**Attributliste**](attribute-list.md)
 </dt> <dt>
 
-[**Attribute für Multicast Station**](multicast-station-attributes.md)
+[**Multicaststationsattribute**](multicast-station-attributes.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

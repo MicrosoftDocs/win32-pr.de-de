@@ -1,9 +1,9 @@
 ---
-title: Effekte. Currency-ffect
-description: Das Attribut "attributeffect" gibt die aktuelle Visualisierung an oder ruft Sie ab.
+title: EFFECTS.currentEffect
+description: Das attribut currentEffect gibt die aktuelle Visualisierung an oder ruft sie ab.
 ms.assetid: d6b0e77d-2872-420a-b5f5-36fd23243648
 keywords:
-- Effekte. Currency-ffect-Fenster Media Player
+- EFFECTS.currentEffect Windows Media Player
 topic_type:
 - apiref
 api_name:
@@ -12,16 +12,16 @@ api_type:
 - NA
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: b19398946906fb6c6ea43234c110383b27b16ede
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 2d9ac47ef88d1a0bce4982f71ce2e20e33f48933c9916bbb1e62085b5a1e5178
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106372279"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118996870"
 ---
-# <a name="effectscurrenteffect"></a>Effekte. Currency-ffect
+# <a name="effectscurrenteffect"></a>EFFECTS.currentEffect
 
-Das Attribut " **attributeffect** " gibt die aktuelle Visualisierung an oder ruft Sie ab.
+Das **attribut currentEffect** gibt die aktuelle Visualisierung an oder ruft sie ab.
 
 ``` syntax
         elementID.currentEffect
@@ -29,11 +29,11 @@ Das Attribut " **attributeffect** " gibt die aktuelle Visualisierung an oder ruf
 
 ## <a name="possible-values"></a>Mögliche Werte
 
-Dieses Attribut ist ein Lese- **/schreibjekt**. Der Standardwert ist die erste Visualisierung in der Erstellungs Reihenfolge. Wenn keine Visualisierungen in der Skin erstellt wurden, ist der Standardwert die erste Visualisierung in der Registrierung.
+Dieses Attribut ist ein Lese-/Schreibobjekt. Der Standardwert ist die erste Visualisierung in der Erstellungsreihenfolge. Wenn in der Skin keine Visualisierungen erstellt wurden, ist die Standardeinstellung die erste Visualisierung in der Registrierung.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Mit diesem Objekt können Sie auf benutzerdefinierte Visualisierungen zugreifen, die Sie erstellt haben. Beispielsweise können Sie eine Eigenschaft über die **IDispatch** -Schnittstelle in der Visualisierung verfügbar machen. Anschließend können Sie den Eigenschafts Wert aus der Skin ändern, indem Sie die Visualisierung auf den aktuellen Effekt festlegen, und dann das Objekt " **setobffect** " verwenden, um einen neuen Wert für die Eigenschaft festzulegen. Wenn Ihre Visualisierung z. b. eine Eigenschaft mit dem Namen BackgroundColor verfügbar macht, gibt der folgende JScript-Code einen neuen Wert an:
+Sie können dieses Objekt verwenden, um auf benutzerdefinierte Visualisierungen zuzugreifen, die Sie erstellt haben. Beispielsweise können Sie eine Eigenschaft über die **IDispatch-Schnittstelle** in Ihrer Visualisierung verfügbar machen. Sie können dann den Eigenschaftswert von Ihrer Skin ändern, indem Sie die Visualisierung zum aktuellen Effekt machen und dann das **currentEffect-Objekt** verwenden, um einen neuen Wert für die Eigenschaft festzulegen. Wenn Ihre Visualisierung beispielsweise eine Eigenschaft mit dem Namen backgroundColor verfügbar macht, gibt der folgende JScript Code einen neuen Wert an:
 
 
 ```JScript
@@ -49,7 +49,7 @@ MyEffects.currentEffect.backgroundColor = "blue";
 
 | Anforderung | Wert |
 |--------------------|------------------------------------------------------|
-| Version<br/> | Windows Media Player, Version 7,0 oder höher<br/> |
+| Version<br/> | Windows Media Player Version 7.0 oder höher<br/> |
 
 
 
@@ -57,13 +57,13 @@ MyEffects.currentEffect.backgroundColor = "blue";
 
 <dl> <dt>
 
-[**Effects-Element**](effects-element.md)
+[**EFFECTS-Element**](effects-element.md)
 </dt> <dt>
 
-[**Effekte. Currency-ffecttitle**](effects-currenteffecttitle.md)
+[**EFFECTS.currentEffectTitle**](effects-currenteffecttitle.md)
 </dt> <dt>
 
-[**Effekte. Currency-ffecttype**](effects-currenteffecttype.md)
+[**EFFECTS.currentEffectType**](effects-currenteffecttype.md)
 </dt> </dl>
 
  

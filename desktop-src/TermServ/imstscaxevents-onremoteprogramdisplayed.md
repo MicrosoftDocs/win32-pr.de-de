@@ -1,12 +1,12 @@
 ---
-title: Imstscaxevents onremoteprogramview-Methode
+title: IMsTscAxEvents OnRemoteProgramDisplayed-Methode
 description: Wird aufgerufen, wenn ein RemoteApp-Programm angezeigt wird.
 ms.assetid: 24f5ea52-0c13-4024-9448-5c2c1896ca8b
 ms.tgt_platform: multiple
 keywords:
-- Onremoteprogramview-Methode Remotedesktopdienste
-- Onremoteprogramview-Methode Remotedesktopdienste, imstscaxevents-Schnittstelle
-- Imstscaxevents-Schnittstelle Remotedesktopdienste, onremoteprogramview-Methode
+- OnRemoteProgramDisplayed-Remotedesktopdienste
+- OnRemoteProgramDisplayed-Methode Remotedesktopdienste , IMsTscAxEvents-Schnittstelle
+- IMsTscAxEvents-Schnittstelle Remotedesktopdienste , OnRemoteProgramDisplayed-Methode
 topic_type:
 - apiref
 api_name:
@@ -17,14 +17,14 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 584e54c487ec24a3c165fdd5eb8e22f243e07f23
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: df50f9a536b367b203f395d9c856562b8967d8a5830704a2e9bbb4c69152f202
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "103742112"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119058818"
 ---
-# <a name="imstscaxeventsonremoteprogramdisplayed-method"></a>Imstscaxevents:: onremoteprogramview-Methode
+# <a name="imstscaxeventsonremoteprogramdisplayed-method"></a>IMsTscAxEvents::OnRemoteProgramDisplayed-Methode
 
 Wird aufgerufen, wenn ein RemoteApp-Programm angezeigt wird.
 
@@ -44,14 +44,14 @@ VOID OnRemoteProgramDisplayed(
 
 <dl> <dt>
 
-*vbangezeigte* \[ in\]
+*vbDisplayed* \[ In\]
 </dt> <dd>
 
 Gibt an, ob das RemoteApp-Programm angezeigt oder ausgeblendet wird.
 
 </dd> <dt>
 
-*udisplayinformation* \[ in\]
+*uDisplayInformation* \[ In\]
 </dt> <dd>
 
 Die Anzeigeinformationen.
@@ -60,23 +60,23 @@ Die Anzeigeinformationen.
 
 <span id="RAIL_APPDISPLAY_AUTORECONNECT"></span><span id="rail_appdisplay_autoreconnect"></span>
 
-<span id="RAIL_APPDISPLAY_AUTORECONNECT"></span><span id="rail_appdisplay_autoreconnect"></span>**Schiene \_ appdisplay \_ autoreconnct**
+<span id="RAIL_APPDISPLAY_AUTORECONNECT"></span><span id="rail_appdisplay_autoreconnect"></span>**RAIL \_ APPDISPLAY \_ AUTORECONNECT**
 
 
 </dt> <dd>
 
-Die automatische Wiederherstellung der Verbindung wird gerade ausgeführt.
+Die automatische Wiederherstellung der Verbindung wird in Bearbeitung.
 
 </dd> <dt>
 
 <span id="RAIL_APPDISPLAY_DESKTOPHOOKED"></span><span id="rail_appdisplay_desktophooked"></span>
 
-<span id="RAIL_APPDISPLAY_DESKTOPHOOKED"></span><span id="rail_appdisplay_desktophooked"></span>**Schiene \_ appdisplay \_ desktophooked**
+<span id="RAIL_APPDISPLAY_DESKTOPHOOKED"></span><span id="rail_appdisplay_desktophooked"></span>**RAIL \_ APPDISPLAY \_ DESKTOPHOOKED**
 
 
 </dt> <dd>
 
-Der RemoteApp-Zähler wurde einfach auf NULL gesetzt.
+Die RemoteApp-Anzahl wurde gerade auf 0 (null) gesetzt.
 
 </dd> </dl> </dd> </dl>
 
@@ -84,9 +84,9 @@ Der RemoteApp-Zähler wurde einfach auf NULL gesetzt.
 
 Diese Methode gibt keinen Wert zurück.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Implementieren Sie diese Methode in der Ereignis Senke, um die Benachrichtigung zu erhalten, dass eine RemoteApp angezeigt wird.
+Implementieren Sie diese Methode in Ihrer Ereignissenke, um eine Benachrichtigung zu erhalten, dass eine RemoteApp angezeigt wurde.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -98,7 +98,7 @@ Implementieren Sie diese Methode in der Ereignis Senke, um die Benachrichtigung 
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2008<br/>                                                         |
 | Typbibliothek<br/>             | <dl> <dt>MsTscAx.dll</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>MsTscAx.dll</dt> </dl> |
-| IID<br/>                      | Imstscaxevents ist als 336d5562-efa8-482e-8cb3-c5c0fc7a7db6 definiert.<br/>           |
+| IID<br/>                      | IMsTscAxEvents ist als 336d5562-efa8-482e-8cb3-c5c0fc7a7db6 definiert.<br/>           |
 
 
 

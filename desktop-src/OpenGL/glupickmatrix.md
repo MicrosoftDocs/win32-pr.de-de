@@ -1,9 +1,9 @@
 ---
 title: gluPickMatrix-Funktion (Glu.h)
-description: Die gluPickMatrix-Funktion definiert einen Auswahlbereich.
+description: Die funktion gluPickMatrix definiert einen Auswahlbereich.
 ms.assetid: 2f57345c-17a0-4716-8ab8-170aaed2b4f9
 keywords:
-- OpenGL-Funktion "gluPickMatrix"
+- gluPickMatrix-Funktion OpenGL
 topic_type:
 - apiref
 api_name:
@@ -23,7 +23,7 @@ ms.locfileid: "119061578"
 ---
 # <a name="glupickmatrix-function"></a>gluPickMatrix-Funktion
 
-Die **gluPickMatrix-Funktion** definiert einen Auswahlbereich.
+Die **funktion gluPickMatrix** definiert einen Auswahlbereich.
 
 ## <a name="syntax"></a>Syntax
 
@@ -87,18 +87,18 @@ Diese Funktion gibt keinen Wert zurück.
 
 Die **gluPickMatrix-Funktion** erstellt eine Projektionsmatrix, mit der Sie das Zeichnen auf einen kleinen Bereich des Viewports beschränken können.
 
-1.  Verwenden **Sie gluPickMatrix,** um das Zeichnen auf einen kleinen Bereich um den Cursor zu beschränken.
-2.  Wechseln Sie in den Auswahlmodus [**(mit glRenderMode),**](glrendermode.md)und rerendern Sie die Szene erneut.
+1.  Verwenden Sie **gluPickMatrix,** um das Zeichnen auf einen kleinen Bereich um den Cursor zu beschränken.
+2.  Wechseln Sie in den Auswahlmodus (mit [**glRenderMode),**](glrendermode.md)und geben Sie dann die Szene erneut aus.
 
     Alle Primitive, die in der Nähe des Cursors gezeichnet worden wären, werden identifiziert und im Auswahlpuffer gespeichert.
 
 Die von **gluPickMatrix** erstellte Matrix wird mit der aktuellen Matrix multipliziert, als ob [**glMultMatrix**](glmultmatrix.md) mit der generierten Matrix aufgerufen würde.
 
-1.  Rufen [**Sie glLoadIdentity auf,**](glloadidentity.md) um eine Identitätsmatrix in den Perspektivenmatrixstapel zu laden.
-2.  Rufen Sie **gluPickMatrix auf.**
-3.  Rufen Sie eine Funktion (z. B. [**gluPerspective**](gluperspective.md)) auf, um die Perspektivmatrix mit der Auswahlmatrix zu multiplizieren.
+1.  Rufen Sie [**glLoadIdentity**](glloadidentity.md) auf, um eine Identitätsmatrix in den Perspektivmatrixstapel zu laden.
+2.  Rufen Sie **gluPickMatrix** auf.
+3.  Rufen Sie eine Funktion (z. [**B. gluPerspective)**](gluperspective.md)auf, um die Perspektivenmatrix mit der Auswahlmatrix zu multiplizieren.
 
-Wenn Sie **gluPickMatrix** zum Auswählen einer nicht einheitlichen rationalen B-Spline [(NURBS)](using-nurbs-curves-and-surfaces.md)verwenden, deaktivieren Sie die NURBS-Eigenschaft GLU \_ AUTO LOAD \_ \_ MATRIX. Wenn GLU AUTO LOAD MATRIX nicht deaktiviert ist, wird jede \_ \_ gerenderte NURBS-Oberfläche anders mit der Auswahlmatrix von der Unterteilung ohne die Auswahlmatrix \_ unterteilt.
+Wenn Sie **gluPickMatrix** zum Auswählen von Non-Uniform Rational B-Spline [(NURBS)](using-nurbs-curves-and-surfaces.md)verwenden, achten Sie darauf, die NURBS-Eigenschaft GLU AUTO LOAD MATRIX zu \_ \_ \_ deaktivieren. Wenn GLU \_ AUTO LOAD MATRIX nicht deaktiviert \_ \_ ist, werden alle gerenderten NURBS-Oberflächen unterschiedlich mit der Auswahlmatrix von der Unterteilung ohne die Auswahlmatrix unterteilt.
 
 ## <a name="examples"></a>Beispiele
 

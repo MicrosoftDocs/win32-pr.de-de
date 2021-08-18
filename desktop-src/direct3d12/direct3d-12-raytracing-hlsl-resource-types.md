@@ -1,28 +1,28 @@
 ---
-title: Raytracing HLSL-Ressourcentypen (Direct3D 12)
-description: Die folgenden HLSL-Ressourcentypen unterstützen die Direct3D 12-Raytracing-Pipeline.
+title: Raytracing von HLSL-Ressourcentypen (Direct3D 12)
+description: Die folgenden HLSL-Ressourcentypen unterstützen die Direct3D 12-Raytracingpipeline.
 ms.assetid: ''
 ms.localizationpriority: low
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 3d9688d257aefe912545fb7e7263859e9b1f8f51
-ms.sourcegitcommit: cba7f424a292fd7f3a8518947b9466439b455419
+ms.openlocfilehash: 61c661762045a9c9eab98392fde10c220a2b411f38be2cc7d36be8415f37cb74
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "106338432"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119045608"
 ---
-# <a name="raytracing-hlsl-resource-types-direct3d-12"></a>Raytracing HLSL-Ressourcentypen (Direct3D 12)
+# <a name="raytracing-hlsl-resource-types-direct3d-12"></a>Raytracing von HLSL-Ressourcentypen (Direct3D 12)
 
-Die folgenden HLSL-Ressourcentypen unterstützen die Direct3D 12-Raytracing-Pipeline.
+Die folgenden HLSL-Ressourcentypen unterstützen die Direct3D 12-Raytracingpipeline.
 
 ## <a name="in-this-section"></a>In diesem Abschnitt
 
 
 
-| Thema                                                                                                       | BESCHREIBUNG                                                                                                                                                                                                                                                                                             |
+| Thema                                                                                                       | Beschreibung                                                                                                                                                                                                                                                                                             |
 |-------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| [**RaytracingAccelerationStructure**](raytracingaccelerationstructure.md)<br/>                              | Ein Ressourcentyp, der in HLSL deklariert und in [**traceray**](traceray-function.md) übergeben werden kann, um die Beschleunigungs Ressource der obersten Ebene anzugeben, die mithilfe von **buildraytracingaccelerationstructure** erstellt wurde.<br/>                                                                                                                                                                                                                                              |
+| [**RaytracingAccelerationStructure**](raytracingaccelerationstructure.md)<br/>                              | Ein Ressourcentyp, der in HLSL deklariert und an [**TraceRay**](traceray-function.md) übergeben werden kann, um die Beschleunigungsressource der obersten Ebene anzugeben, die mit **BuildRaytracingAccelerationStructure erstellt wurde.**<br/>                                                                                                                                                                                                                                              |
 
 
 
@@ -33,7 +33,7 @@ Die folgenden HLSL-Ressourcentypen unterstützen die Direct3D 12-Raytracing-Pipe
 
 <dl> <dt>
 
-[Kern Referenz](direct3d-12-core-reference.md)
+[Kernreferenz](direct3d-12-core-reference.md)
 </dt> <dt>
 
 [Referenz für Direct3D 12](direct3d-12-reference.md)

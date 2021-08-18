@@ -1,19 +1,19 @@
 ---
-description: Generiert eine C-Konstantendefinition für die im hostMetadata-Element angegebenen Hostingmetadaten.
+description: Generiert eine C-Konstantendefinition für die Hostingmetadaten, die im hostMetadata-Element angegeben sind.
 ms.assetid: c15f77a2-060b-4bc3-8759-d921ea57e5b5
 title: relationshipMetadataDefinition-Element
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 3549be26d0443b7aeba776346b7cddb2d6bdeed3
-ms.sourcegitcommit: b6fe9acffad983c14864b8fe0296f6025cb1f961
+ms.openlocfilehash: 4918694d70a053ece04d544d7d885899f4e6de916ea2f16a61f364a7a6db771e
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2021
-ms.locfileid: "107993657"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119897220"
 ---
 # <a name="relationshipmetadatadefinition-element"></a>relationshipMetadataDefinition-Element
 
-Generiert eine C-Konstantendefinition für die im [**hostMetadata-Element**](hostmetadata.md) angegebenen Hostingmetadaten. Diese Definition wird in einer Quelldatei verwendet.
+Generiert eine C-Konstantendefinition für die Hostingmetadaten, die im [**hostMetadata-Element angegeben**](hostmetadata.md) sind. Diese Definition wird in einer Quelldatei verwendet.
 
 ## <a name="usage"></a>Verbrauch
 
@@ -33,7 +33,7 @@ Es gibt keine untergeordneten Elemente.
 
 
 
-| Element                         | BESCHREIBUNG                                                    |
+| Element                         | Beschreibung                                                    |
 |---------------------------------|----------------------------------------------------------------|
 | [**Datei**](file.md)<br/> | Gibt eine Datei aus dem Codegenerator aus.<br/> <br/> |
 
@@ -41,7 +41,7 @@ Es gibt keine untergeordneten Elemente.
 
 ## <a name="remarks"></a>Hinweise
 
-Dieses Element wird im Allgemeinen in C-Quelldateien verwendet, um die von **relationshipMetadataDeclaration** deklarierten Diensthostmetadaten bereitzustellen.
+Dieses Element wird im Allgemeinen in C-Quelldateien verwendet, um die von **relationshipMetadataDeclaration** deklarierten Diensthostmetadaten zur Verfügung zu stellen.
 
 ## <a name="element-information"></a>Elementinformationen
 

@@ -17,11 +17,11 @@ In diesem Thema werden das EAPHost-Schema und das Legacyschema zum Erstellen von
 
 ## <a name="about-eaphost-and-legacy-schema"></a>Informationen zu EAPHost und Legacyschema
 
-Das Erstellen von Konfigurations-XML beginnt mit dem [eaphostconfig-Schema.](eaphostconfigschema-schema.md) Das Erstellen von XML-Anmeldeinformationen beginnt mit dem [eaphostusercredentials-Schema.](eaphostusercredentialsschema-schema.md)
+Das Erstellen von XML-Konfigurationsdateien beginnt mit dem [Schema eaphostconfig.](eaphostconfigschema-schema.md) Das Erstellen von XML-Anmeldeinformationen beginnt mit dem [Schema eaphostusercredentials.](eaphostusercredentialsschema-schema.md)
 
-Einige der systemeigenen und älteren Schemas enthalten allgemeine Schemaelemente. Allgemeine Elemente, die in methodenkonfigurations- und methodenanmeldeinformationen verwendet werden, werden in einer einzelnen Schemadatei abstrahiert, die als "allgemeines Schema" bezeichnet wird.
+Einige der nativen und älteren Schemas enthalten allgemeine Schemaelemente. Allgemeine Elemente, die in der Methodenkonfiguration und methodenanmeldeinformationen verwendet werden, werden in eine einzelne Schemadatei abstrahiert, die als "allgemeines Schema" bezeichnet wird.
 
-Die Begriffe "Methodenkonfiguration" und "Verbindungseigenschaften" werden synonym verwendet. Ebenso werden die Begriffe "Methodenanmeldeinformationen" und "Benutzereigenschaften" synonym verwendet.
+Die Begriffe "Methodenkonfiguration" und "Verbindungseigenschaften" werden austauschbar verwendet. Ebenso werden die Begriffe "Methodenanmeldeinformationen" und "Benutzereigenschaften" synonym verwendet.
 
 ## <a name="eaphost-schema"></a>EAPHost-Schema
 
@@ -56,7 +56,7 @@ Die Begriffe "Methodenkonfiguration" und "Verbindungseigenschaften" werden synon
 | [mschapv2userpropertiesv1](mschapv2userpropertiesv1schema-schema.md)             | Wird mit MS-CHAPv2 verwendet, um Anmeldeinformationen und Anmeldeinformationsoptionen für die Authentifizierung zu beschreiben.        |
 | [mspeapconnectionpropertiesv1](mspeapconnectionpropertiesv1schema-schema.md)     | Wird mit PEAPv0 verwendet, um Authentifizierungskonfigurationsdaten zu beschreiben.                           |
 | [mspeapconnectionpropertiesv2](mspeapconnectionpropertiesv2schema-schema.md)     | Wird mit PEAPv0 verwendet, um Authentifizierungskonfigurationsdaten zu beschreiben, die mit Windows 7 beginnen.  |
-| [mspeapuserpropertiesv1](mspeapuserpropertiesv1schema-schema.md)                 | Wird mit PEAPv0 verwendet, um Authentifizierungsanmeldeinformationen und Anmeldeinformationsoptionen zu beschreiben.           |
+| [mspeapuserpropertiesv1](mspeapuserpropertiesv1schema-schema.md)                 | Wird mit PEAPv0 verwendet, um Anmeldeinformationen und Anmeldeinformationsoptionen für die Authentifizierung zu beschreiben.           |
 
 
 

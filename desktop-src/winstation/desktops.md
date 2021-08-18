@@ -1,44 +1,44 @@
 ---
 title: Desktops
-description: Ein Desktop verfügt über eine logische Anzeige Oberfläche und enthält Benutzeroberflächen Objekte wie Fenster, Menüs und Hooks. Sie kann verwendet werden, um Windows zu erstellen und zu verwalten.
+description: Ein Desktop verfügt über eine logische Anzeigeoberfläche und enthält Benutzeroberflächenobjekte wie Fenster, Menüs und Hooks. sie kann zum Erstellen und Verwalten von Fenstern verwendet werden.
 ms.assetid: c56cd63b-c260-40d0-9a62-1dee1eb18679
 keywords:
-- Desktop Objekte
+- Desktopobjekte
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 44ca0b390ec4d34cc943c9d18d958cdea6466634
-ms.sourcegitcommit: 592c9bbd22ba69802dc353bcb5eb30699f9e9403
+ms.openlocfilehash: 5b763c05c3d45c701da0bdd606fa906dec3f8af07ce72d256b402e7df5d9319b
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "106338074"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119587350"
 ---
 # <a name="desktops"></a>Desktops
 
-Ein *Desktop* verfügt über eine logische Anzeige Oberfläche und enthält Benutzeroberflächen Objekte wie Fenster, Menüs und Hooks. Sie kann verwendet werden, um Windows zu erstellen und zu verwalten. Jedes Desktop Objekt ist ein Sicherungs fähiges Objekt. Wenn ein Desktop erstellt wird, wird er der aktuellen [Fenster Station](window-stations.md) des aufrufenden Prozesses zugeordnet und dem aufrufenden Thread zugewiesen.
+Ein *Desktop* verfügt über eine logische Anzeigeoberfläche und enthält Benutzeroberflächenobjekte wie Fenster, Menüs und Hooks. sie kann zum Erstellen und Verwalten von Fenstern verwendet werden. Jedes Desktopobjekt ist ein sicherungsfähiges Objekt. Wenn ein Desktop erstellt wird, wird [](window-stations.md) er der aktuellen Fensterstation des aufrufenden Prozesses zugeordnet und dem aufrufenden Thread zugewiesen.
 
-Fenster Meldungen können nur zwischen Prozessen gesendet werden, die sich auf demselben Desktop befinden. Außerdem kann die Hook-Prozedur eines Prozesses, der auf einem bestimmten Desktop ausgeführt wird, nur Nachrichten empfangen, die für Windows erstellt wurden, die auf demselben Desktop erstellt wurden.
+Fenstermeldungen können nur zwischen Prozessen gesendet werden, die sich auf demselben Desktop befinden. Darüber hinaus kann die Hookprozedur eines Prozesses, der auf einem bestimmten Desktop ausgeführt wird, nur Nachrichten empfangen, die für Fenster vorgesehen sind, die auf demselben Desktop erstellt wurden.
 
-Die Desktops, die der interaktiven Fenster Station (Winsta0) zugeordnet sind, können so erstellt werden, dass eine Benutzeroberfläche angezeigt und Benutzereingaben empfangen werden. es ist jedoch jeweils nur einer der Desktops aktiv. Dieser aktive Desktop, auch als *Eingabe Desktop* bezeichnet, ist der derzeit für den Benutzer sichtbare Benutzer, der Benutzereingaben empfängt. Anwendungen können die [**openinputdesktop-**](/windows/win32/api/winuser/nf-winuser-openinputdesktop) Funktion verwenden, um ein Handle für den Eingabe Desktop zu erhalten. Anwendungen, die über den erforderlichen Zugriff verfügen, können die [**switchdesktop-**](/windows/win32/api/winuser/nf-winuser-switchdesktop) Funktion verwenden, um einen anderen Eingabe Desktop anzugeben.
+Die Desktops, die der interaktiven Fensterstation Winsta0 zugeordnet sind, können so erstellt werden, dass sie eine Benutzeroberfläche anzeigen und Benutzereingaben empfangen, aber nur einer dieser Desktops gleichzeitig aktiv ist. Dieser aktive Desktop, auch als Eingabedesktop *bezeichnet,* ist der Desktop, der derzeit für den Benutzer sichtbar ist und Benutzereingaben empfängt. Anwendungen können die [**OpenInputDesktop-Funktion**](/windows/win32/api/winuser/nf-winuser-openinputdesktop) verwenden, um ein Handle für den Eingabedesktop zu erhalten. Anwendungen mit dem erforderlichen Zugriff können die [**SwitchDesktop-Funktion**](/windows/win32/api/winuser/nf-winuser-switchdesktop) verwenden, um einen anderen Eingabedesktop anzugeben.
 
-Standardmäßig befinden sich drei Desktops auf der interaktiven Fenster Station: Standard, Bildschirmschoner und Winlogon.
+Standardmäßig gibt es drei Desktops in der interaktiven Fensterstation: Default, ScreenSaver und Winlogon.
 
-Der Standard Desktop wird erstellt, wenn der anfängliche Prozess von Winlogon als angemeldeter Benutzer gestartet wird. An diesem Punkt wird der Standard Desktop aktiviert und für die Interaktion mit dem Benutzer verwendet.
+Der Standarddesktop wird erstellt, wenn Winlogon den ersten Prozess als angemeldeter Benutzer startet. An diesem Punkt wird der Standarddesktop aktiv und für die Interaktion mit dem Benutzer verwendet.
 
-Wenn ein sicherer Bildschirmschoner aktiviert wird, wechselt das System automatisch zum Bildschirmschoner-Desktop, der die Prozesse auf dem Standard Desktop vor nicht autorisierten Benutzern schützt. Unsichere Bildschirmschoner werden unter Winsta0 \\ Standard ausgeführt.
+Wenn ein sicherer Bildschirmschoner aktiviert wird, wechselt das System automatisch zum ScreenSaver-Desktop, der die Prozesse auf dem Standarddesktop vor nicht autorisierten Benutzern schützt. Ungesicherte Bildschirmschoner werden unter Winsta0 \\ Default ausgeführt.
 
-Der Winlogon-Desktop ist aktiv, während sich ein Benutzer anmeldet. Das System wechselt zum Standard Desktop, wenn die Shell anzeigt, dass es bereit ist, etwas anzuzeigen, oder nach dreißig Sekunden, je nachdem, was zuerst eintritt. Während der Benutzersitzung wechselt das System zum Winlogon-Desktop, wenn der Benutzer die Tastenkombination STRG + ALT + ENTF drückt oder wenn das Dialogfeld Benutzerkontensteuerung (User Account Control, UAC) geöffnet ist.
+Der Winlogon-Desktop ist aktiv, während sich ein Benutzer anmeldet. Das System wechselt zum Standarddesktop, wenn die Shell angibt, dass sie bereit ist, etwas anzuzeigen, oder nach 30 Sekunden, was zuerst ankommt. Während der Sitzung des Benutzers wechselt das System zum Winlogon-Desktop, wenn der Benutzer strg+ALT+ENTF drückt oder wenn das Dialogfeld Benutzerkontensteuerung (UAC) geöffnet ist.
 
-**Windows Server 2003 und Windows XP/2000:** Das UAC-Dialogfeld wird nicht unterstützt.
+**Windows Server 2003 und Windows XP/2000:** Das Dialogfeld "UAC" wird nicht unterstützt.
 
-Die Sicherheits Beschreibung des Windows-Logon-Desktops ermöglicht den Zugriff auf einen sehr eingeschränkten Satz von Konten, einschließlich des [LocalSystem-Kontos](/windows/desktop/Services/localsystem-account). Anwendungen enthalten im Allgemeinen keine der SIDs dieser Konten in ihren Token und können daher nicht auf den Winlogon-Desktop zugreifen oder zu einem anderen Desktop wechseln, während der Winlogon-Desktop aktiv ist.
+Die Sicherheitsbeschreibung des Winlogon-Desktops ermöglicht den Zugriff auf einen sehr eingeschränkten Satz von Konten, einschließlich [des LocalSystem-Kontos.](/windows/desktop/Services/localsystem-account) Anwendungen enthalten im Allgemeinen keine siDs dieser Konten in ihren Token und können daher nicht auf den Winlogon-Desktop zugreifen oder zu einem anderen Desktop wechseln, während der Winlogon-Desktop aktiv ist.
 
-Weitere Informationen finden Sie unter den folgenden Themen:
+Weitere Informationen finden Sie in den folgenden Themen:
 
--   [Fenster Station und Desktop Erstellung](window-station-and-desktop-creation.md)
--   [Thread Verbindung mit einem Desktop](thread-connection-to-a-desktop.md)
--   [Desktop Sicherheit und Zugriffsrechte](desktop-security-and-access-rights.md)
+-   [Fensterstation und Desktoperstellung](window-station-and-desktop-creation.md)
+-   [Threadverbindung mit einem Desktop](thread-connection-to-a-desktop.md)
+-   [Desktopsicherheit und Zugriffsrechte](desktop-security-and-access-rights.md)
 
- 
+ 
 
- 
+ 

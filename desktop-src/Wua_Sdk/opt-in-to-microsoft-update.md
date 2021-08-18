@@ -1,30 +1,30 @@
 ---
-description: Sie können einen Computer in für den Microsoft Update-Dienst und dann diesen Dienst bei automatische Updates registrieren.
+description: Sie können einen Computer für den Microsoft Update-Dienst anmelden und diesen Dienst dann bei Automatische Updates.
 ms.assetid: d6f3d8ca-3b7e-409c-87b6-db247b7b68e4
-title: Opt-In Microsoft Update
+title: Opt-In sie Microsoft Update
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 6b149eb28024d77f66a08371827187adf05d4b78
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 82d034f0b224d8170a52ce359589693c601cb9598d716e9663493e8ac99edf2d
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104128272"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119994278"
 ---
-# <a name="opt-in-to-microsoft-update"></a>Opt-In Microsoft Update
+# <a name="opt-in-to-microsoft-update"></a>Opt-In sie Microsoft Update
 
-Sie können einen Computer in für den Microsoft Update-Dienst und dann diesen Dienst bei automatische Updates registrieren.
+Sie können einen Computer für den Microsoft Update-Dienst anmelden und diesen Dienst dann bei Automatische Updates.
 
-Das Skript Beispiel in diesem Thema zeigt Ihnen, wie Sie Windows Update-Agent (WUA) verwenden, um den Microsoft Update-Dienst bei automatische Updates zu registrieren. Alternativ kann der Benutzer Microsoft Update besuchen, um den Dienst zu registrieren.
+Das Skriptbeispiel in diesem Thema zeigt, wie Sie den Windows Update-Agent (WUA) verwenden, um den Microsoft Update-Dienst bei Automatische Updates. Alternativ kann der Benutzer zum Registrieren des Diensts Microsoft Update.
 
-Vergewissern Sie sich vor dem Ausführen dieses Beispiels, dass die auf dem Computer installierte Version von WUA Version 7.0.6000 oder eine höhere Version ist. Weitere Informationen zum Ermitteln der installierten Version von WUA finden Sie unter [bestimmen der aktuellen WUA](determining-the-current-version-of-wua.md)-Version.
+Vergewissern Sie sich vor dem Ausführen dieses Beispiels, dass die auf dem Computer installierte WUA-Version Version 7.0.6000 oder höher ist. Weitere Informationen zum Bestimmen der installierten WUA-Version finden Sie unter [Determining the Current Version of WUA](determining-the-current-version-of-wua.md)( Bestimmen der aktuellen Version von WUA ).
 
 ## <a name="example"></a>Beispiel
 
-Im folgenden Skript Beispiel wird gezeigt, wie Sie den Windows Update-Agent (WUA) verwenden, um den Microsoft Update-Dienst bei automatische Updates zu registrieren. Das Beispiel ermöglicht die verzögerte oder Offline Verarbeitung bei Bedarf.
+Das folgende Skriptbeispiel zeigt, wie Sie den Windows Update-Agent (WUA) verwenden, um den Microsoft Update-Dienst bei Automatische Updates. Das Beispiel ermöglicht bei Bedarf eine verzögerte oder Offlineverarbeitung.
 
 > [!IMPORTANT]
-> Dieses Skript soll die Verwendung der Windows Update-Agent-APIs veranschaulichen und bietet ein Beispiel dafür, wie Entwickler diese APIs zum Lösen von Problemen verwenden können. Dieses Skript ist nicht als Produktionscode gedacht, und das Skript selbst wird nicht von Microsoft unterstützt (obwohl die zugrunde liegenden Windows Update-Agent-APIs unterstützt werden).
+> Dieses Skript soll die Verwendung der Windows Update-Agent-APIs veranschaulichen und ein Beispiel dafür bereitstellen, wie Entwickler diese APIs verwenden können, um Probleme zu lösen. Dieses Skript ist nicht als Produktionscode gedacht, und das Skript selbst wird von Microsoft nicht unterstützt (obwohl die zugrunde liegenden Windows-Agent-APIs unterstützt werden).
 
  
 
@@ -40,21 +40,21 @@ Set NewUpdateService = ServiceManager.AddService2("7971f918-a847-4430-9279-4a52d
 
 
 
-In früheren Versionen von WUA (mindestens eine WUA-Version von 7.0.6000) können Sie den Opt-in-Prozess vereinfachen, indem Sie eine Registrierungs Einstellung verwenden. Nachdem der Registrierungsschlüssel und die Werte konfiguriert wurden, wird der Microsoft Update Opt-in-Vorgang durchgeführt, wenn WUA das nächste Mal eine Suche durchführt. Der Opt-in-Prozess kann durch automatische Updates oder durch einen API-Aufrufer ausgelöst werden.
+In früheren Versionen von WUA (wua-Mindestversion 7.0.6000) können Sie den Opt-In-Prozess vereinfachen, indem Sie eine Registrierungseinstellung verwenden. Nachdem der Registrierungsschlüssel und die Werte konfiguriert wurden, Microsoft Update der Registrierungsprozess bei der nächsten WuA-Suche. Der Opt-In-Prozess kann durch einen Automatische Updates oder durch einen API-Aufrufer ausgelöst werden.
 
-Der vollständige Pfad des Registrierungsschlüssels und der Werte, die für den Opt-in-Prozess festgelegt werden sollen, lauten z. b. wie folgt:
+Der vollständige Pfad des Registrierungsschlüssels und der Werte, die für den Opt-In-Prozess festgelegt werden sollen, lautet beispielsweise wie folgt:
 
-**HKLM** \\ **Software** \\ **Microsoft** \\ **Windows** \\ **CurrentVersion** \\ **Windowsupdate** \\ **Pdingserviceregistration** \\ **7971l918-a847-4430-9279-4a52d1efe18d**
+**HKLM** \\ **Software** \\ **Microsoft** \\ **Windows** \\ **CurrentVersion** \\ **WindowsUpdate** \\ **PendingServiceRegistration** \\ **7971f918-a847-4430-9279-4a52d1efe18d**
 
-**Clientapplicationid** = meine APP
+**ClientApplicationID** = Meine App
 
-**Registerwithau** = 1
+**RegisterWithAU** = 1
 
 > [!Note]
 >
-> Der Registrierungsschlüssel wird nur einmal beachtet, wenn WUA von einer Version, die älter ist als Version 7.0.6000, auf Version 7.0.6000 oder eine höhere Version aktualisiert wird. Beim Überschreiben vorhandener Registrierungs Werte wird ein Ermessen empfohlen, da durch das Überschreiben der Werte das Ergebnis einer früheren Dienst Registrierungs Anforderung geändert werden kann.
+> Der Registrierungsschlüssel wird nur einmal beachtet, wenn WUA von einer früheren Version als Version 7.0.6000 auf Version 7.0.6000 oder auf eine neuere Version aktualisiert wird. Es wird empfohlen, beim Überschreiben vorhandener Registrierungswerte einen ermessenswerten Wert zu haben, da das Überschreiben der Werte das Ergebnis einer früheren Dienstregistrierungsanforderung ändern kann.
 >
-> Zum Erstellen dieses Registrierungsschlüssels sind administrative Anmelde Informationen erforderlich. Für Windows Vista muss der Aufrufer den Registrierungsschlüssel in einem erweiterten Prozess erstellen.
+> Zum Erstellen dieses Registrierungsschlüssels sind Administratoranmeldeinformationen erforderlich. Für Windows Vista muss der Aufrufer den Registrierungsschlüssel in einem Prozess mit erhöhten Rechten erstellen.
 
  
 

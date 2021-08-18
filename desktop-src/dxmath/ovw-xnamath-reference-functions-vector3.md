@@ -19,11 +19,11 @@ Listet die von DirectXMath bereitgestellten 3D-Vektorfunktionen auf.
 
 
 
-| Thema                                                                                                                           | BESCHREIBUNG                                              |
+| Thema                                                                                                                           | Beschreibung                                              |
 |---------------------------------------------------------------------------------------------------------------------------------|----------------------------------------------------------|
-| [3D-Vektorvergleichsfunktionen der DirectXMath-Bibliothek](ovw-xnamath-reference-functions-vector3-comparison.md)<br/>         | Listet die 3D-Vektorvergleichsfunktionen auf.<br/>     |
+| [DirectXMath Library 3D Vector Comparison Functions](ovw-xnamath-reference-functions-vector3-comparison.md)<br/>         | Listet die 3D-Vektorvergleichsfunktionen auf.<br/>     |
 | [Geometrische 3D-Vektorfunktionen der DirectXMath-Bibliothek](ovw-xnamath-reference-functions-vector3-geometric.md)<br/>           | Listet die geometrischen 3D-Vektorfunktionen auf.<br/>      |
-| [Transformationsfunktionen für 3D-Vektoren der DirectXMath-Bibliothek](ovw-xnamath-reference-functions-vector3-transformation.md)<br/> | Listet die 3D-Vektortransformationsfunktionen auf.<br/> |
+| [3D-Vektortransformationsfunktionen der DirectXMath-Bibliothek](ovw-xnamath-reference-functions-vector3-transformation.md)<br/> | Listet die 3D-Vektortransformationsfunktionen auf.<br/> |
 
 
 

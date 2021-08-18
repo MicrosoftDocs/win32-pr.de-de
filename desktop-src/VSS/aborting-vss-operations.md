@@ -1,53 +1,53 @@
 ---
-description: 'Abbruch Ereignisse können während eines Sicherungs Vorgangs in einem der folgenden Fälle generiert werden:'
+description: 'Abbruchereignisse können während eines Sicherungsvorgangs in einem der folgenden Fälle generiert werden:'
 ms.assetid: c2e39cdd-0ff8-4030-9bec-9e003b4d9520
 title: Abbrechen von VSS-Vorgängen
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 35e4b82ba4227dfeb02e3da91c9bc1e77f10f492
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 120ef8fb16c23d77a24526aad0fd62e56c1888a76dc2de884140094c6591cd78
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106360590"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118998270"
 ---
 # <a name="aborting-vss-operations"></a>Abbrechen von VSS-Vorgängen
 
-[*Abbruch*](vssgloss-a.md) Ereignisse können während eines Sicherungs Vorgangs in einem der folgenden Fälle generiert werden:
+[*Abbruchereignisse*](vssgloss-a.md) können während eines Sicherungsvorgangs in einem der folgenden Fälle generiert werden:
 
--   Ein Anforderer generiert explizit ein [*Abbruch Ereignis*](vssgloss-a.md) , indem [**IVssBackupComponents:: abortbackup**](/windows/desktop/api/VsBackup/nf-vsbackup-ivssbackupcomponents-abortbackup)aufgerufen wird.
--   Die [*Freeze*](vssgloss-f.md) [*-und Ereignis*](vssgloss-t.md) Handler eines Writers ([**CVssWriter:: OnFreeze**](/windows/desktop/api/VsWriter/nf-vswriter-cvsswriter-onfreeze) und [**CVssWriter:: OnThaw**](/windows/desktop/api/VsWriter/nf-vswriter-cvsswriter-onthaw)) geben **false** zurück oder können nicht im Zeitfenster, das in [**CVssWriter:: Initialize**](/windows/desktop/api/VsWriter/nf-vswriter-cvsswriter-initialize)angegeben ist, abschließen.
--   Bei der Erstellung einer Schatten Kopie nach dem [*prepareforsnapshot*](vssgloss-p.md) -Ereignis ist ein Fehler des Anbieters oder VSS aufgetreten.
+-   Ein Anfordernder generiert explizit ein [*Abort-Ereignis,*](vssgloss-a.md) indem [**er IVssBackupComponents::AbortBackup**](/windows/desktop/api/VsBackup/nf-vsbackup-ivssbackupcomponents-abortbackup)aufruft.
+-   Die [*Freeze-*](vssgloss-f.md) und [*Thaw-Ereignishandler*](vssgloss-t.md) eines Writers ([**CVssWriter::OnFreeze**](/windows/desktop/api/VsWriter/nf-vswriter-cvsswriter-onfreeze) und [**CVssWriter::OnThaw**](/windows/desktop/api/VsWriter/nf-vswriter-cvsswriter-onthaw)) geben **false** zurück oder können in dem in [**CVssWriter::Initialize**](/windows/desktop/api/VsWriter/nf-vswriter-cvsswriter-initialize)angegebenen Zeitfenster nicht abgeschlossen werden.
+-   Bei der Erstellung einer Schattenkopie nach dem [*PrepareForSnapshot-Ereignis*](vssgloss-p.md) tritt ein Fehler des Anbieters oder von VSS auf.
 
-Abbrüche werden für Wiederherstellungs Vorgänge nicht unterstützt.
+Abbrüche werden für Wiederherstellungsvorgänge nicht unterstützt.
 
-## <a name="requester-handling-and-creation-of-abort-events"></a>Behandlung und Erstellung von Abbruch Ereignissen durch Anforderer
+## <a name="requester-handling-and-creation-of-abort-events"></a>Verarbeitung und Erstellung von Abbruchereignissen durch den Anforderer
 
-Eine Instanz der [**IVssBackupComponents**](/windows/desktop/api/VsBackup/nl-vsbackup-ivssbackupcomponents) -Schnittstelle kann nur für eine Sicherung verwendet werden. Wenn bei der Verarbeitung einer Sicherung ein Fehler auftritt, ist es in der Regel am besten, die aktuelle Instanz freizugeben und zu beginnen.
+Eine Instanz der [**IVSSBackupComponents-Schnittstelle**](/windows/desktop/api/VsBackup/nl-vsbackup-ivssbackupcomponents) kann nur für eine Sicherung verwendet werden. Wenn also bei der Verarbeitung einer Sicherung ein Fehler auftritt, empfiehlt es sich im Allgemeinen, die aktuelle Instanz freizugeben und neu zu starten.
 
-Ein Anforderer sollte explizit signalisieren, dass ein Sicherungs Vorgang abgebrochen wird (mithilfe von [**IVssBackupComponents:: abortbackup**](/windows/desktop/api/VsBackup/nf-vsbackup-ivssbackupcomponents-abortbackup)), nachdem die tatsächliche Vorbereitung für eine Sicherung, das Einbeziehen von Writern oder das Erstellen einer Schatten Kopie statt genommen hat.
+Ein Anforderer sollte explizit signalisieren, dass er einen Sicherungsvorgang (mit [**IVssBackupComponents::AbortBackup)**](/windows/desktop/api/VsBackup/nf-vsbackup-ivssbackupcomponents-abortbackup)erst abbricht, nachdem die eigentliche Vorbereitung für eine Sicherung mit Writern oder die Erstellung einer Schattenkopie erfolgt ist.
 
-Dies bedeutet, dass jedes Mal, wenn ein Anforderer einen Sicherungs Vorgang nach dem Erstellen eines [*PrepareForBackup*](vssgloss-p.md) -Ereignisses durch Aufrufen von [**IVssBackupComponents::P Analyse forbackup**](/windows/desktop/api/VsBackup/nf-vsbackup-ivssbackupcomponents-prepareforbackup)abbrechen muss, [**IVssBackupComponents:: abortbackup**](/windows/desktop/api/VsBackup/nf-vsbackup-ivssbackupcomponents-abortbackup) aufrufen und seine Rückgabe abwarten muss, bevor die aktuelle [**IVssBackupComponents**](/windows/desktop/api/VsBackup/nl-vsbackup-ivssbackupcomponents) -Instanz freigegeben wird.
+Dies bedeutet, dass jedes Mal, wenn ein Anforderer einen Sicherungsvorgang beenden muss, nachdem er ein [*PrepareForBackup-Ereignis*](vssgloss-p.md) generiert hat, indem er [**IVssBackupComponents::P repareForBackup**](/windows/desktop/api/VsBackup/nf-vsbackup-ivssbackupcomponents-prepareforbackup)aufruft, [**IVssBackupComponents::AbortBackup**](/windows/desktop/api/VsBackup/nf-vsbackup-ivssbackupcomponents-abortbackup) aufruft und auf seine Rückgabe wartet, bevor die aktuelle [**IVSSBackupComponents-Instanz**](/windows/desktop/api/VsBackup/nl-vsbackup-ivssbackupcomponents) freigegeben wird.
 
-Wenn ein Writer z. b. einen Sicherungs Vorgang überprüft hat, sollte ein Anforderer [**IVssBackupComponents:: abortbackup**](/windows/desktop/api/VsBackup/nf-vsbackup-ivssbackupcomponents-abortbackup) verwenden, um alle anderen Writer zu benachrichtigen, dass der Sicherungs Vorgang nicht abgeschlossen wird.
+Wenn beispielsweise ein Writer einen Sicherungsvorgang verhindert hat, sollte ein Anforderer [**IVssBackupComponents::AbortBackup**](/windows/desktop/api/VsBackup/nf-vsbackup-ivssbackupcomponents-abortbackup) verwenden, um alle anderen Writer zu benachrichtigen, dass der Sicherungsvorgang nicht abgeschlossen wird.
 
-Vor dem Aufruf von [**PrepareForBackup**](/windows/desktop/api/VsBackup/nf-vsbackup-ivssbackupcomponents-prepareforbackup), oder wenn der Aufruf von **PrepareForBackup** fehlschlägt, kann ein Anforderer die aktuelle Instanz der [**IVssBackupComponents**](/windows/desktop/api/VsBackup/nl-vsbackup-ivssbackupcomponents) -Schnittstelle freigeben, ohne dass ein Abbruch Ereignis generiert werden muss.
+Vor dem Aufrufen von [**PrepareForBackup**](/windows/desktop/api/VsBackup/nf-vsbackup-ivssbackupcomponents-prepareforbackup)oder wenn der Aufruf von **PrepareForBackup** fehlschlägt, kann ein Anforderer die aktuelle Instanz der [**IVSSBackupComponents-Schnittstelle**](/windows/desktop/api/VsBackup/nl-vsbackup-ivssbackupcomponents) freigeben, ohne ein Abort-Ereignis generieren zu müssen.
 
-Wenn z. b. die aktuelle Instanz von [**IVssBackupComponents**](/windows/desktop/api/VsBackup/nl-vsbackup-ivssbackupcomponents) lediglich zum Abrufen von Informationen verwendet wird, indem [**IVssBackupComponents:: gatherwrite Metadata**](/windows/desktop/api/VsBackup/nf-vsbackup-ivssbackupcomponents-gatherwritermetadata) aufgerufen und ein [*identifizereignis*](vssgloss-i.md) erzeugt wird, kann die Instanz von **IVssBackupComponents** einfach freigegeben werden, sobald Informationen zurückgegeben wurden.
+Wenn beispielsweise die aktuelle Instanz von [**IVSSBackupComponents**](/windows/desktop/api/VsBackup/nl-vsbackup-ivssbackupcomponents) nur zum Abrufen von Informationen verwendet wird, indem [**IVssBackupComponents::GatherWriterMetadata**](/windows/desktop/api/VsBackup/nf-vsbackup-ivssbackupcomponents-gatherwritermetadata) aufgerufen und ein [*Identify-Ereignis*](vssgloss-i.md) generiert wird, kann die Instanz von **IVSSBackupComponents** einfach freigegeben werden, sobald Informationen zurückgegeben wurden.
 
-Ein Anforderer generiert eine Reihe von Ereignissen ([*prepareforsnapshot*](vssgloss-p.md), [*Freeze*](vssgloss-f.md), [*Thaw*](vssgloss-t.md)und [*PostSnapshot*](vssgloss-p.md)), wenn er [**IVssBackupComponents::D osnapshotset**](/windows/desktop/api/VsBackup/nf-vsbackup-ivssbackupcomponents-dosnapshotset)aufruft. Während der Behandlung von Freeze-und Thaw-Ereignissen schlägt ein Writer möglicherweise fehl und kann selbst ein Abbruch Ereignis generieren. Bei einem Fehler bei der Behandlung von prepareforsnapshot-und PostSnapshot-Ereignissen wird kein Abbruch Ereignis generiert.
+Ein Anforderer generiert eine Reihe von Ereignissen ([*PrepareForSnapshot*](vssgloss-p.md), [*Freeze*](vssgloss-f.md), [*Thaw*](vssgloss-t.md)und [*PostSnapshot*](vssgloss-p.md)), wenn er [**IVssBackupComponents::D oSnapshotSet aufruft.**](/windows/desktop/api/VsBackup/nf-vsbackup-ivssbackupcomponents-dosnapshotset) Bei der Behandlung der Freeze- und Thaw-Ereignisse schlägt ein Writer möglicherweise fehl und kann selbst ein Abbruchereignis generieren. Wenn die Ereignisse PrepareForSnapshot und PostSnapshot nicht behandelt werden, wird kein Abbruchereignis generiert.
 
-Es ist nicht immer möglich, dass ein Anforderer weiß, ob ein Abbruch Ereignis generiert wurde, wenn [**IVssBackupComponents::D osnapshotset**](/windows/desktop/api/VsBackup/nf-vsbackup-ivssbackupcomponents-dosnapshotset) einen Fehler anzeigt. Daher sollte ein Anforderer, der einen Sicherungs Vorgang beenden muss, da der Status von **IVssBackupComponents::D osnapshotset** auf ein Problem hinweist, trotzdem [**IVssBackupComponents:: abortbackup**](/windows/desktop/api/VsBackup/nf-vsbackup-ivssbackupcomponents-abortbackup)aufruft.
+Es ist nicht immer möglich, dass ein Anforderer weiß, ob ein Abbruchereignis generiert wurde, wenn [**IVssBackupComponents::D oSnapshotSet**](/windows/desktop/api/VsBackup/nf-vsbackup-ivssbackupcomponents-dosnapshotset) einen Fehler angibt. Daher sollte ein Anforderer, der einen Sicherungsvorgang beenden muss, weil der Status von **IVssBackupComponents::D oSnapshotSet** darauf hinweist, dass ein Problem weiterhin [**IVssBackupComponents::AbortBackup**](/windows/desktop/api/VsBackup/nf-vsbackup-ivssbackupcomponents-abortbackup)aufrufen sollte.
 
-Wenn ein Anforderer [**IVssBackupComponents:: abortbackup**](/windows/desktop/api/VsBackup/nf-vsbackup-ivssbackupcomponents-abortbackup)aufgerufen hat, ist es nicht erforderlich, [**IVssBackupComponents:: BackupComplete**](/windows/desktop/api/VsBackup/nf-vsbackup-ivssbackupcomponents-backupcomplete) vor dem Freigeben einer Instanz von [**IVssBackupComponents**](/windows/desktop/api/VsBackup/nl-vsbackup-ivssbackupcomponents)aufzurufen.
+Wenn ein Anforderer [**IVssBackupComponents::AbortBackup**](/windows/desktop/api/VsBackup/nf-vsbackup-ivssbackupcomponents-abortbackup)aufgerufen hat, ist es nicht erforderlich, [**IVssBackupComponents::BackupComplete**](/windows/desktop/api/VsBackup/nf-vsbackup-ivssbackupcomponents-backupcomplete) aufzurufen, bevor eine Instanz von [**IVSSBackupComponents**](/windows/desktop/api/VsBackup/nl-vsbackup-ivssbackupcomponents)freigegeben wird.
 
-## <a name="writer-handling-and-creation-of-abort-events"></a>Behandlung und Erstellung von Abbruch Ereignissen durch Writer
+## <a name="writer-handling-and-creation-of-abort-events"></a>Writer-Behandlung und -Erstellung von Abbruchereignissen
 
-Wie bereits erwähnt, kann ein Writer ein Abbruch Ereignis von einem Anforderer empfangen, oder der Anbieter kann einen selbst initiieren. Außerdem kann ein Writer unter bestimmten Umständen mehrere Abbruch Ereignisse empfangen. Writer-Entwickler sollten eine beliebige Implementierung von [**CVssWriter:: OnAbort**](/windows/desktop/api/VsWriter/nf-vswriter-cvsswriter-onabort) mit diesem Hintergrund codieren.
+Wie bereits erwähnt, kann ein Writer ein Abbruchereignis von einem Anforderer empfangen, oder der Anbieter kann ein Ereignis selbst auslösen. Außerdem ist es möglich, dass ein Writer unter bestimmten Umständen mehrere Abbruchereignisse empfängt. Writer-Entwickler sollten jede Implementierung von [**CVssWriter::OnAbort**](/windows/desktop/api/VsWriter/nf-vswriter-cvsswriter-onabort) unter Berücksichtigung dieses Themas programmieren.
 
-Bei der Behandlung eines Abbruch Ereignisses sollte ein Writer versuchen, den von ihm verwalteten Prozess in seinem normalen Betriebsstatus wiederherzustellen sowie Fehlerbehandlung und Protokollierung auszuführen.
+Bei der Behandlung eines Abbruchereignisses sollte ein Writer versuchen, den von ihm verwalteten Prozess in den normalen Ausführungszustand wiederherzustellen und fehlerbehandlung und Protokollierung durchzuführen.
 
-Dies kann bedeuten, dass die Implementierung von [**CVssWriter: OnAbort**](/windows/desktop/api/VsWriter/nf-vswriter-cvsswriter-onabort) muss möglicherweise viele, wenn nicht alle, der gleichen Aufgaben wie der Ereignishandler für Ereignishandler ([**CVssWriter:: OnThaw**](/windows/desktop/api/VsWriter/nf-vswriter-cvsswriter-onthaw)) und den PostSnapshot-Ereignishandler ([**CVssWriter:: OnPostSnapshot**](/windows/desktop/api/VsWriter/nf-vswriter-cvsswriter-onpostsnapshot)) ausführen, und diese Handler können von **CVssWriter:: OnAbort** aufgerufen werden.
+Dies kann bedeuten, dass eine Implementierung von [**CVssWriter::OnAbort**](/windows/desktop/api/VsWriter/nf-vswriter-cvsswriter-onabort) möglicherweise viele, wenn nicht alle Aufgaben derselben Aufgaben ausführen muss wie der Thaw-Ereignishandler ([**CVssWriter::OnThaw**](/windows/desktop/api/VsWriter/nf-vswriter-cvsswriter-onthaw)) und der PostSnapshot-Ereignishandler ([**CVssWriter::OnPostSnapshot**](/windows/desktop/api/VsWriter/nf-vswriter-cvsswriter-onpostsnapshot)), und diese Handler können innerhalb von **CVssWriter::OnAbort** aufgerufen werden.
 
  
 

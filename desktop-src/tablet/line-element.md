@@ -13,16 +13,16 @@ api_type:
 - HeaderDef
 api_location:
 - windows.ui.xaml.shapes.h
-ms.openlocfilehash: 91663ba7462db6b8d3ec5a4ed1c91bfe2b66e5a2
-ms.sourcegitcommit: c3f669dc1d52278432bf75ad9fddba3257d26aa2
+ms.openlocfilehash: 05fa12161199a83b831ac7058d7b1541914dc4e89ac1cafbc13180349884fe13
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/04/2021
-ms.locfileid: "111432402"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119708363"
 ---
 # <a name="line-element"></a>Line-Element
 
-Enthält eine Zeile innerhalb eines [**Absatzes.**](paragraph-element.md)
+Enthält eine Zeile innerhalb eines [**Absatzes**](paragraph-element.md).
 
 ## <a name="definition"></a>Definition
 
@@ -56,7 +56,7 @@ Keine
 
  
 
-## <a name="requirements"></a>Requirements (Anforderungen)
+## <a name="requirements"></a>Anforderungen
 
 
 

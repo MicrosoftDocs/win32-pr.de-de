@@ -1,9 +1,9 @@
 ---
-title: Verwenden von zwei Codierungs Durchläufen
-description: Aktuelle Dokumentation zu Windows Media Codecs und digitalen Signalprozessoren finden Sie unter Windows Media Audio-und Videocodec-und DSP-APIs. | Verwenden von zwei Codierungs Durchläufen
+title: Verwenden von zwei Codierungsdurchläufen
+description: Die aktuelle Dokumentation zu Windows Mediencodecs und digitalen Signalprozessoren finden Sie unter Windows Medienaudio- und Videocodec und DSP-APIs. | Verwenden von zwei Codierungsdurchläufen
 ms.assetid: 953313d4-4a37-4064-b4c3-b7479c87207b
 keywords:
-- Verwenden von zwei Codierungen übergibt das Windows Media-Format
+- Verwenden von zwei Codierungsdurchläufen im Windows-Medienformat
 topic_type:
 - apiref
 api_name:
@@ -12,16 +12,16 @@ api_type:
 - NA
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 3d09d5617e2aa9e4c455f214dc38e3ecf729e3f6
-ms.sourcegitcommit: 92e74c99f8f4d097676959d0c317f533c2400a80
+ms.openlocfilehash: cdaed5adc5c584bd16289f67ecbf55821994dc0e3c2c0af9224ca2b5c1d6a301
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/09/2021
-ms.locfileid: "104352408"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119707380"
 ---
-# <a name="using-two-encoding-passes"></a>Verwenden von zwei Codierungs Durchläufen
+# <a name="using-two-encoding-passes"></a>Verwenden von zwei Codierungsdurchläufen
 
-Aktuelle Dokumentation zu Windows Media Codecs und digitalen Signalprozessoren finden Sie unter [Windows Media Audio-und Videocodec-und DSP-APIs.](/previous-versions//dd464626(v=vs.85))
+Die aktuelle Dokumentation zu Windows Mediencodecs und digitalen Signalprozessoren finden Sie unter [Windows Medienaudio- und Videocodec und DSP-APIs.](/previous-versions//dd464626(v=vs.85))
 
  
 

@@ -23,37 +23,37 @@ ADSI enthält die in der folgenden Tabelle aufgeführten Dienstanbieter.
 
 | Dienstanbieter | BESCHREIBUNG                                                                                | Weitere Informationen finden Sie unter                                      |
 |------------------|--------------------------------------------------------------------------------------------|-----------------------------------------------------------|
-| LDAP<br/>  | Namespaceimplementierungen, die mit dem Lightweight Directory Access Protocol kompatibel sind.<br/> | [ADSI LDAP-Anbieter](adsi-ldap-provider.md)<br/>   |
-| Winnt<br/> | Namespaceimplementierungen, die mit Windows kompatibel sind.<br/>                               | [ADSI WinNT-Anbieter](adsi-winnt-provider.md)<br/> |
+| LDAP<br/>  | Namespaceimplementierung, die mit dem Lightweight Directory Access Protocol kompatibel ist.<br/> | [ADSI-LDAP-Anbieter](adsi-ldap-provider.md)<br/>   |
+| Winnt<br/> | Namespaceimplementierung, die mit Windows.<br/>                               | [ADSI WinNT-Anbieter](adsi-winnt-provider.md)<br/> |
 
 
 
  
 
-Andere Dienstanbieter sind als Teil anderer Produkte als ADSI enthalten. Im Folgenden werden die ADSI-Dienstanbieter von Microsoft implementiert.
+Andere Dienstanbieter sind als Produkte enthalten, die nicht ADSI sind. Im Folgenden finden Sie die ADSI-Dienstanbieter, die von Microsoft implementiert werden.
 
 
 
 | Dienstanbieter | Weitere Informationen finden Sie unter                                                                        |
 |------------------|---------------------------------------------------------------------------------------------|
-| IIS<br/>   | [IIS ADSI-Anbieterarchitektur](/previous-versions/iis/6.0-sdk/ms525929(v=vs.90))<br/> |
+| IIS<br/>   | [ARCHITEKTUR DES IIS ADSI-Anbieters](/previous-versions/iis/6.0-sdk/ms525929(v=vs.90))<br/> |
 
 
 
  
 
-Die von ADSI-Schnittstellen verfügbar gemachten Methoden und Eigenschaftenmethoden werden nicht von jedem Dienstanbieter unterstützt. Da verschiedene Verzeichnisdienste in den Typen der gespeicherten Objekte und Eigenschaften variieren, unterschiedliche Protokolle und Authentifizierung verwenden, ist ADSI für die nahtlose Zusammenarbeit mit unterstützten Dienstanbietern konzipiert. Daher gibt es Schnittstellen, Methoden und Eigenschaftenmethoden, die mit einem Dienstanbieter wie LDAP funktionieren, die möglicherweise nicht für einen anderen Dienstanbieter wie WinNT funktionieren.
+Die Methoden und Eigenschaftenmethoden, die von ADSI-Schnittstellen verfügbar gemacht werden, werden nicht von jedem Dienstanbieter unterstützt. Da verschiedene Verzeichnisdienste in den Typen der gespeicherten Objekte und Eigenschaften variieren, unterschiedliche Protokolle und Authentifizierung verwenden, ist ADSI für die nahtlose Zusammenarbeit mit unterstützten Dienstanbietern konzipiert. Daher gibt es Schnittstellen, Methoden und Eigenschaftenmethoden, die mit einem Dienstanbieter wie LDAP zusammenarbeiten, die möglicherweise nicht auf einem anderen Wie z. B. WinNT funktionieren.
 
-Dieser Abschnitt enthält anbieterspezifische Informationen, z. B. das ADsPath-Format, eine Liste der ADSI-Objekte, die für diesen Dienstanbieter verwendet werden, sowie Datentyp- und Syntaxinformationen für die in ADSI enthaltenen Dienstanbieter. Es gibt auch eine zusammenfassende Beschreibung der ADSI-Schnittstellen, die von den einzelnen in ADSI enthaltenen Anbietern unterstützt werden.
+Dieser Abschnitt enthält anbieterspezifische Informationen, z. B. das ADsPath-Format, eine Auflistung der ADSI-Objekte, die für diesen Dienstanbieter verwendet werden, sowie Datentyp- und Syntaxinformationen für die in ADSI enthaltenen Dienstanbieter. Es gibt auch eine zusammenfassende Beschreibung der ADSI-Schnittstellen, die von jedem Anbieter unterstützt werden, der in ADSI enthalten ist.
 
-In ADSI werden verschiedene Anbieter verschiedenen DLLs zugeordnet. Der LDAP-Anbieter ist Adsldp.dll, Adsldpc.dll und Adsmsext.dll zugeordnet. Der WinNT-Anbieter ist Adsnt.dll zugeordnet. Der ROUTER-Anbieter ist Activeds.dll zugeordnet.
+In ADSI sind verschiedene Anbieter verschiedenen DLLs zugeordnet. Der LDAP-Anbieter ist Adsldp.dll, Adsldpc.dll und Adsmsext.dll. Der WinNT-Anbieter ist dem Adsnt.dll. Der ROUTER-Anbieter ist dem Activeds.dll.
 
 > [!Note]  
-> Gehen Sie nicht davon aus, dass ADSI-Standardanbieter threadsicher sind. Multithreadanwendungsentwickler sollten den Zugriff zwischen Threads durch die ordnungsgemäße Verwendung von Synchronisierungsobjekten wie Semaphoren, Mutexen, kritischen Abschnitten usw. koordinieren.
+> Gehen Sie nicht davon aus, dass ADSI-Standardanbieter threadsicher sind. Multithreadanwendungsentwickler sollten den Zugriff zwischen Threads über die ordnungsgemäße Verwendung von Synchronisierungsobjekten wie Semaphoren, Mutexen, kritischen Abschnitten und so weiter koordinieren.
 
  
 
-Weitere Informationen zu ADSI-Dienstanbietern finden Sie unter [ADSI-Router-](adsi-router.md) und [Anbieterunterstützung von ADSI-Schnittstellen.](provider-support-of-adsi-interfaces.md)
+Weitere Informationen zu ADSI-Dienstanbietern finden Sie unter ADSI Router and Provider Support of ADSI interfaces [(ADSI-Router](adsi-router.md) und [Anbieterunterstützung von ADSI-Schnittstellen).](provider-support-of-adsi-interfaces.md)
 
  
 

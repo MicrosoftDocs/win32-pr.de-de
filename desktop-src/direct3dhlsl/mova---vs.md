@@ -1,5 +1,5 @@
 ---
-title: mova im Vergleich zu
+title: mova – im Vergleich zu
 description: Verschieben Sie Daten aus einem Gleitkommaregister in das Adressregister, a0.
 ms.assetid: 929a0670-f337-4d6d-a7e7-d285e7dc8ae1
 ms.topic: reference
@@ -16,7 +16,7 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 08/11/2021
 ms.locfileid: "118986330"
 ---
-# <a name="mova---vs"></a>mova im Vergleich zu
+# <a name="mova---vs"></a>mova – im Vergleich zu
 
 Verschieben Sie Daten aus einem Gleitkommaregister in [das Adressregister](dx9-graphics-reference-asm-vs-registers-address.md), a0.
 

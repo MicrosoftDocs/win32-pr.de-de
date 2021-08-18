@@ -1,9 +1,9 @@
 ---
-title: Komplexer eapmethodtype-Typ
-description: Definiert die Elemente, die einen einzelnen EAP-Methodentyp, VendorID, vendortype und AutorID eindeutig identifizieren.
+title: Komplexer EapMethodType-Typ
+description: Definiert die Elemente, die einen einzelnen EAP-Methodentyp, VendorId, VendorType und AuthorId eindeutig identifizieren.
 ms.assetid: 3ef96187-7376-438d-9d47-a87d5a6c9b8b
 keywords:
-- Komplexer EAP-Typ eapmethodtype EAPHost
+- 'EapMethodType: komplexer EAPHost-Typ'
 topic_type:
 - apiref
 api_name:
@@ -14,18 +14,18 @@ ms.topic: reference
 ms.date: 05/31/2018
 api_location: ''
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: cea2448111266696398d1581aaecdbec2fb5859e
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 059ea8162241c61d88fc93f565fa0aa4ba8aee223212e6fab254ed9d5dec4eea
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "103741841"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119739170"
 ---
-# <a name="eapmethodtype-complex-type"></a>Komplexer eapmethodtype-Typ
+# <a name="eapmethodtype-complex-type"></a>Komplexer EapMethodType-Typ
 
-Der komplexe Typ **eapmethodtype** definiert die Elemente, die eine einzelne EAP-Methode eindeutig identifizieren: [**Type**](eapcommonschema-type-eapmethodtype-element.md), [**VendorID**](eapcommonschema-vendorid-eapmethodtype-element.md), [**vendortype**](eapcommonschema-vendortype-eapmethodtype-element.md)und [**AutorID**](eapcommonschema-authorid-eapmethodtype-element.md).
+Der komplexe **EapMethodType-Typ** definiert die Elemente, die eine einzelne EAP-Methode eindeutig identifizieren: [**Type**](eapcommonschema-type-eapmethodtype-element.md), [**VendorId**](eapcommonschema-vendorid-eapmethodtype-element.md), [**VendorType**](eapcommonschema-vendortype-eapmethodtype-element.md)und [**AuthorId**](eapcommonschema-authorid-eapmethodtype-element.md).
 
-[**Typ**](eapcommonschema-type-eapmethodtype-element.md) und [**Autorität**](eapcommonschema-authorid-eapmethodtype-element.md) sind obligatorische Elemente, während [**vendortype**](eapcommonschema-vendortype-eapmethodtype-element.md) und [**VendorID**](eapcommonschema-vendorid-eapmethodtype-element.md) nur erforderlich sind, wenn das **Type** -Element 254 (eine erweiterte EAP-Methode) ist.
+[**Type**](eapcommonschema-type-eapmethodtype-element.md) und [**AuthorId**](eapcommonschema-authorid-eapmethodtype-element.md) sind obligatorische Elemente, wohingegen [**VendorType**](eapcommonschema-vendortype-eapmethodtype-element.md) und [**VendorId**](eapcommonschema-vendorid-eapmethodtype-element.md) nur erforderlich sind, wenn das **Type-Element** 254 ist (eine erweiterte EAP-Methode).
 
 ``` syntax
 <xs:complexType name="EapMethodType">
@@ -54,20 +54,20 @@ Der komplexe Typ **eapmethodtype** definiert die Elemente, die eine einzelne EAP
 
 
 
-| Element                                                                | type         | BESCHREIBUNG                                                                                                                                                                                                                                              |
+| Element                                                                | type         | Beschreibung                                                                                                                                                                                                                                              |
 |------------------------------------------------------------------------|--------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| [**AutorID**](eapcommonschema-authorid-eapmethodtype-element.md)     | unsignedInt  | Verweist auf den Autor der Methode. <br/>                                                                                                                                                                                                                 |
-| [**type**](eapcommonschema-type-eapmethodtype-element.md)             | unsignedByte | Bezieht sich auf den Typ der EAP-Methode. <br/>                                                                                                                                                                                                               |
-| [**VendorID**](eapcommonschema-vendorid-eapmethodtype-element.md)     | unsignedInt  | Verweist auf den Hersteller, der die-Methode definiert hat,, wenn das [**Type**](eapcommonschema-type-eapmethodtype-element.md) -Element 254 (eine erweiterte EAP-Methode) ist. [**VendorID**](eapcommonschema-vendorid-eapmethodtype-element.md) ist optional. <br/> |
-| [**Vendortype**](eapcommonschema-vendortype-eapmethodtype-element.md) | unsignedInt  | Ist der Hersteller definierte Typ für die Methode. Der [**vendortype**](eapcommonschema-vendortype-eapmethodtype-element.md) ist optional. <br/>                                                                                                           |
+| [**AuthorId**](eapcommonschema-authorid-eapmethodtype-element.md)     | unsignedInt  | Verweist auf den Methodenautor. <br/>                                                                                                                                                                                                                 |
+| [**type**](eapcommonschema-type-eapmethodtype-element.md)             | unsignedByte | Bezieht sich auf den EAP-Methodentyp. <br/>                                                                                                                                                                                                               |
+| [**Vendorid**](eapcommonschema-vendorid-eapmethodtype-element.md)     | unsignedInt  | Bezieht sich auf den Anbieter, der die Methode definiert hat, wenn das [**Type-Element**](eapcommonschema-type-eapmethodtype-element.md) 254 ist (eine erweiterte EAP-Methode). Die [**VendorId**](eapcommonschema-vendorid-eapmethodtype-element.md) ist optional. <br/> |
+| [**VendorType**](eapcommonschema-vendortype-eapmethodtype-element.md) | unsignedInt  | Der vom Anbieter definierte Typ für die Methode. [**VendorType**](eapcommonschema-vendortype-eapmethodtype-element.md) ist optional. <br/>                                                                                                           |
 
 
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die Elemente " [**AutorID**](eapcommonschema-authorid-eapmethodtype-element.md) " und " [**VendorID**](eapcommonschema-vendorid-eapmethodtype-element.md) " müssen für eine bestimmte Methode nicht identisch sein.
+Die [**Elemente AuthorId**](eapcommonschema-authorid-eapmethodtype-element.md) und [**VendorId**](eapcommonschema-vendorid-eapmethodtype-element.md) müssen für eine bestimmte Methode nicht identisch sein.
 
-Die Elemente " [**AutorID**](eapcommonschema-authorid-eapmethodtype-element.md)", " [**Type**](eapcommonschema-type-eapmethodtype-element.md)", " [**VendorID**](eapcommonschema-vendorid-eapmethodtype-element.md) " und " [**vendortype**](eapcommonschema-vendortype-eapmethodtype-element.md) " sind jeweils eine eindeutige Zahl, die von der Internet Assigned Numbers Authority (IANA) ausgegeben wird.
+Die Elemente [**AuthorId,**](eapcommonschema-authorid-eapmethodtype-element.md) [**Type,**](eapcommonschema-type-eapmethodtype-element.md) [**VendorId**](eapcommonschema-vendorid-eapmethodtype-element.md) und [**VendorType**](eapcommonschema-vendortype-eapmethodtype-element.md) sind jeweils eine eindeutige Zahl, die von der Internet Assigned Numbers Authority (IANA) ausgegeben wird.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -75,8 +75,8 @@ Die Elemente " [**AutorID**](eapcommonschema-authorid-eapmethodtype-element.md)"
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>       |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/> |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur Vista-Desktop-Apps\]<br/>       |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/> |
 
 
 
@@ -84,7 +84,7 @@ Die Elemente " [**AutorID**](eapcommonschema-authorid-eapmethodtype-element.md)"
 
 <dl> <dt>
 
-[EAPHost und Legacy Schema](eaphost-schemas.md)
+[EAPHost und Legacyschema](eaphost-schemas.md)
 </dt> <dt>
 
 [eapcommon-Schema](eapcommonschema-schema.md)

@@ -1,19 +1,19 @@
 ---
-description: Verhindert das Verhalten von Rand Gesten, wenn ein Anwendungsfenster aktiv ist und sich im Vollbildmodus befindet (oder wenn ein eigenes Fenster aktiv ist).
+description: Verhindert Kantengestenverhalten, wenn ein Anwendungsfenster aktiv ist und sich im Vollbildmodus befindet (oder ein eigenes Fenster aktiv ist).
 ms.assetid: F4242C05-181B-44FC-BE6C-8ABB76079981
-title: System. edgegesture. disabletouchvon Fullscreen
+title: System.EdgeGesture.DisableTouchWhenFullscreen
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 208962f11b96420a8e0ef771ada846a3f802e815
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 13132ba30fd3f1e594ec54966dfe2268ce66d570b66ca6d34b1c63b03bfc0c75
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106352540"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119845120"
 ---
-# <a name="systemedgegesturedisabletouchwhenfullscreen"></a>System. edgegesture. disabletouchvon Fullscreen
+# <a name="systemedgegesturedisabletouchwhenfullscreen"></a>System.EdgeGesture.DisableTouchWhenFullscreen
 
-Verhindert das Verhalten von Rand Gesten, wenn ein Anwendungsfenster aktiv ist und sich im Vollbildmodus befindet (oder wenn ein eigenes Fenster aktiv ist).
+Verhindert Kantengestenverhalten, wenn ein Anwendungsfenster aktiv ist und sich im Vollbildmodus befindet (oder ein eigenes Fenster aktiv ist).
 
 > [!Note]  
 > Im Vollbildmodus entspricht die Größe des Anwendungsfensters der Bildschirmauflösung.
@@ -35,17 +35,17 @@ propertyDescription
       type = Boolean
 ```
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-In Windows 8 zeigen Benutzerinteraktionen mit den Rändern des Bildschirms die Systembenutzer Oberfläche an, z. b. app-leisten, Charms und ausgestellte apps.
+In Windows 8 Benutzerinteraktionen mit den Rändern der Systembenutzeroberfläche der Bildschirmanzeige, z. B. App-Balken, Charms und ausgeführte Apps.
 
-Für voll Bild-Remote Anwendungen kann dieses Verhalten der Benutzeroberfläche auf dem lokalen Computer die Benutzeroberfläche der Remote Sitzung überschreiben und stören. Diese Eigenschaft ermöglicht es einer Anwendung, die Edge-Benutzeroberfläche auf dem lokalen Computer zu deaktivieren.
+Bei Remoteanwendungen im Vollbildmodus kann dieses Benutzeroberflächenverhalten auf dem lokalen Computer die Benutzeroberfläche der Remotesitzung überschreiben und beeinträchtigen. Mit dieser Eigenschaft kann eine Anwendung die Edgebenutzeroberfläche auf dem lokalen Computer deaktivieren.
 
-Zum Deaktivieren der Edge-Benutzeroberfläche legen Sie diese Eigenschaft auf Variant \_ true fest. Der Standardwert ist Variant \_ false.
+Um die Edgebenutzeroberfläche zu deaktivieren, legen Sie diese Eigenschaft auf VARIANT \_ TRUE fest. Der Standardwert ist VARIANT \_ FALSE.
 
-Diese Eigenschaft hat keine Auswirkung auf Windows Store-Apps.
+Diese Eigenschaft hat keine Auswirkungen auf Windows Store Apps.
 
-Im folgenden Beispiel wird gezeigt, wie Sie das Verhalten der Benutzeroberfläche von Edge festlegen
+Das folgende Beispiel zeigt, wie Sie Verhalten der Edgebenutzeroberfläche festlegen.
 
 
 ```
@@ -71,13 +71,13 @@ HRESULT SetTouchDisableProperty(HWND hwnd, BOOL fDisableTouch)
 
 <dl> <dt>
 
-[propertydescription](./propdesc-schema-propertydescription.md)
+[propertyDescription](./propdesc-schema-propertydescription.md)
 </dt> <dt>
 
-[SearchInfo](./propdesc-schema-searchinfo.md)
+[searchInfo](./propdesc-schema-searchinfo.md)
 </dt> <dt>
 
-[TypeInfo](./propdesc-schema-typeinfo.md)
+[Typeinfo](./propdesc-schema-typeinfo.md)
 </dt> </dl>
 
  

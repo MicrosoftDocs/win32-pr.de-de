@@ -23,9 +23,9 @@ Gibt an, ob ein Flash für den erfassten Frame ausgelöst wurde.
 
 | Wert                                                                               | Bedeutung                                                                                                                                               |
 |-------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------|
-| <dl> <dt>0</dt> </dl>        | Für diesen Frame wurde kein Flash ausgelöst.<br/>                                                                                                   |
+| <dl> <dt>0</dt> </dl>        | In diesem Frame wurde kein Flash ausgelöst.<br/>                                                                                                   |
 | <dl> <dt>ungleich null</dt> </dl> | Für diesen Frame wurde ein Flash ausgelöst.<br/>                                                                                                       |
-| <dl> <dt>1</dt> </dl>        | Reserviert<br/> Überprüfen Sie nicht explizit auf den Wert 1. Anwendungen sollten nur auf !=0 prüfen, um anzugeben, ob ein Flash ausgelöst wurde.<br/> |
+| <dl> <dt>1</dt> </dl>        | Reserviert<br/> Überprüfen Sie nicht explizit auf den Wert 1. Anwendungen sollten nur auf !=0 überprüfen, um anzugeben, ob ein Flash ausgelöst wurde.<br/> |
 
 
 
@@ -43,11 +43,11 @@ Gibt an, ob ein Flash für den erfassten Frame ausgelöst wurde.
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 
-[Alphabetische Liste der Media Foundation Attribute](alphabetical-list-of-media-foundation-attributes.md)
+[Alphabetische Liste Media Foundation Attribute](alphabetical-list-of-media-foundation-attributes.md)
 </dt> </dl>
 
  

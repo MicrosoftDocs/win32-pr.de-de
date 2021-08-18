@@ -58,13 +58,13 @@ Deaktivieren Sie den Debugmonitor.
 <span id="D3DDMT_FORCE_DWORD"></span><span id="d3ddmt_force_dword"></span>**D3DDMT \_ FORCE \_ DWORD**
 </dt> <dd>
 
-Erzwingt, dass diese Enumeration in eine Größe von 32 Bits kompiliert wird. Ohne diesen Wert würden einige Compiler zulassen, dass diese Enumeration in eine andere Größe als 32 Bits kompiliert wird. Dieser Wert wird nicht verwendet.
+Erzwingt, dass diese Enumeration auf eine Größe von 32 Bits kompiliert wird. Ohne diesen Wert würden einige Compiler zulassen, dass diese Enumeration in eine andere Größe als 32 Bits kompiliert wird. Dieser Wert wird nicht verwendet.
 
 </dd> </dl>
 
 ## <a name="remarks"></a>Hinweise
 
-Die Werte in diesem Enumerationstyp werden vom D3DRS \_ DEBUGMONITORTOKEN-Renderzustand verwendet und sind nur für Debugbuilds relevant.
+Die Werte in diesem aufzählten Typ werden vom D3DRS DEBUGMONITORTOKEN-Renderzustand verwendet und sind nur \_ für Debugbuilds relevant.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -76,7 +76,7 @@ Die Werte in diesem Enumerationstyp werden vom D3DRS \_ DEBUGMONITORTOKEN-Render
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 

@@ -1,9 +1,9 @@
 ---
-title: TB_ISBUTTONENABLED Meldung (kommstrg. h)
+title: TB_ISBUTTONENABLED (Commctrl.h)
 description: Bestimmt, ob die angegebene Schaltfläche in einer Symbolleiste aktiviert ist.
 ms.assetid: 055ed89a-2f3a-4174-b249-c6e68afbad31
 keywords:
-- Windows-Steuerelemente für TB_ISBUTTONENABLED Meldung
+- TB_ISBUTTONENABLED von Windows Steuerelementen
 topic_type:
 - apiref
 api_name:
@@ -14,14 +14,14 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 1647d158f0e19ce9dc110a475990cfcc9deff770
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 07ceb230edb693e065a7ef0455c1374b410a2dcd86995dc1a0ec8c2b354ae028
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "103858782"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119918460"
 ---
-# <a name="tb_isbuttonenabled-message"></a>TB \_ isbuttonaktivierte Meldung
+# <a name="tb_isbuttonenabled-message"></a>TB \_ ISBUTTONENABLED-Nachricht
 
 Bestimmt, ob die angegebene Schaltfläche in einer Symbolleiste aktiviert ist.
 
@@ -32,7 +32,7 @@ Bestimmt, ob die angegebene Schaltfläche in einer Symbolleiste aktiviert ist.
 *wParam* 
 </dt> <dd>
 
-Der Befehls Bezeichner der Schaltfläche.
+Befehlsbezeichner der Schaltfläche.
 
 </dd> <dt>
 
@@ -41,7 +41,7 @@ Der Befehls Bezeichner der Schaltfläche.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt einen Wert ungleich 0 (null) zurück, wenn die Schaltfläche aktiviert ist, andernfalls.
+Gibt einen Wert ungleich 0 (null) zurück, wenn die Schaltfläche aktiviert ist, andernfalls 0 (null).
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -49,9 +49,9 @@ Gibt einen Wert ungleich 0 (null) zurück, wenn die Schaltfläche aktiviert ist,
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                        |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/>                                  |
-| Header<br/>                   | <dl> <dt>Kommstrg. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ Vista-Desktop-Apps\]<br/>                                        |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                                  |
+| Header<br/>                   | <dl> <dt>Commctrl.h</dt> </dl> |
 
 
 

@@ -1,9 +1,9 @@
 ---
-title: Helpmsgstring-Nachricht (kommdlg. h)
-description: Ein häufig verwendeter Dialogfeld sendet die registrierte helpmsgstring-Meldung an die Fenster Prozedur des Besitzer Fensters, wenn der Benutzer auf die Schaltfläche Hilfe klickt.
+title: HELPMSGSTRING-Nachricht (Commdlg.h)
+description: Ein allgemeines Dialogfeld sendet die registrierte HELPMSGSTRING-Meldung an die Fensterprozedur des Besitzerfensters, wenn der Benutzer auf die Schaltfläche Hilfe klickt.
 ms.assetid: 21c0fcf5-785b-4005-8133-e48347f991a8
 keywords:
-- Helpmsgstring-Meldungs Dialogfelder
+- HELPMSGSTRING-Meldungsdialogfelder
 topic_type:
 - apiref
 api_name:
@@ -16,16 +16,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: ac3f7a883f50b06c8d142cb83bedf0bfa2920191
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: ec8a446164bb7ae51d36d1a89219f6c3b84eff74b9af3a40c2121b3bd205a581
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104106011"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119741740"
 ---
-# <a name="helpmsgstring-message"></a>Helpmsgstring-Meldung
+# <a name="helpmsgstring-message"></a>HELPMSGSTRING-Meldung
 
-Ein häufig verwendeter Dialogfeld sendet die registrierte **helpmsgstring** -Meldung an die Fenster Prozedur des Besitzer Fensters, wenn der Benutzer auf die Schaltfläche **Hilfe** klickt.
+Ein allgemeines Dialogfeld sendet die registrierte **HELPMSGSTRING-Meldung** an die Fensterprozedur des Besitzerfensters, wenn der Benutzer auf die Schaltfläche **Hilfe** klickt.
 
 
 ```C++
@@ -48,19 +48,19 @@ Ein Handle für das allgemeine Dialogfeld.
 *lParam* 
 </dt> <dd>
 
-Ein Zeiger auf die Initialisierungs Struktur für das allgemeine Dialogfeld. Bei [**dieser Struktur kann**](/windows/win32/api/commdlg/ns-commdlg-pagesetupdlga) es sich um eine " [**CHOOSECOLOR**](/windows/win32/api/commdlg/ns-commdlg-choosecolora-r1)"-, " [**choosefont**](/windows/win32/api/commdlg/ns-commdlg-choosefonta)"-, " [**FindReplace**](/windows/win32/api/commdlg/ns-commdlg-findreplacea)"-, " [**OpenFileName**](/windows/win32/api/commdlg/ns-commdlg-openfilenamea)"-, " [**PRINTDLG**](/windows/win32/api/commdlg/ns-commdlg-printdlga) "-
+Ein Zeiger auf die Initialisierungsstruktur für das allgemeine Dialogfeld. Diese Struktur kann eine [**CHOOSECOLOR-,**](/windows/win32/api/commdlg/ns-commdlg-choosecolora-r1) [**CHOOSEFONT-,**](/windows/win32/api/commdlg/ns-commdlg-choosefonta) [**FINDREPLACE-,**](/windows/win32/api/commdlg/ns-commdlg-findreplacea) [**OPENFILENAME-,**](/windows/win32/api/commdlg/ns-commdlg-openfilenamea) [**PRINTDLG-**](/windows/win32/api/commdlg/ns-commdlg-printdlga) oder [**PAGESETUPDLG-Struktur**](/windows/win32/api/commdlg/ns-commdlg-pagesetupdlga) sein.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Diese Nachricht weist keinen Rückgabewert auf.
+Diese Meldung hat keinen Rückgabewert.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Sie müssen die **helpmsgstring** -Konstante in einem Aufrufen der [**RegisterWindowMessage**](/windows/desktop/api/winuser/nf-winuser-registerwindowmessagea) -Funktion angeben, um den Bezeichner für die vom Dialogfeld gesendete Nachricht abzurufen.
+Sie müssen die **HELPMSGSTRING-Konstante** in einem Aufruf der [**RegisterWindowMessage-Funktion**](/windows/desktop/api/winuser/nf-winuser-registerwindowmessagea) angeben, um den Bezeichner für die vom Dialogfeld gesendete Nachricht zu erhalten.
 
-Wenn Sie das Dialogfeld erstellen, verwenden Sie den **hwndOwner** -Member der Initialisierungs Struktur, um das Fenster für den Empfang von **helpmsgstring** -Nachrichten zu identifizieren.
+Verwenden Sie beim Erstellen des Dialogfelds das **hwndOwner-Member** der Initialisierungsstruktur, um das Fenster zum Empfangen von **HELPMSGSTRING-Nachrichten zu** identifizieren.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -70,46 +70,46 @@ Wenn Sie das Dialogfeld erstellen, verwenden Sie den **hwndOwner** -Member der I
 |-------------------------------------|----------------------------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[nur Desktop-Apps\]<br/>                                               |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                                                     |
-| Header<br/>                   | <dl> <dt>Kommdlg. h (Include Windows. h)</dt> </dl> |
-| Unicode- und ANSI-Name<br/>   | **Helpmsgstringw** (Unicode) und **helpmsgstrauinga** (ANSI)<br/>                                    |
+| Header<br/>                   | <dl> <dt>Commdlg.h (include Windows.h)</dt> </dl> |
+| Unicode- und ANSI-Name<br/>   | **HELPMSGSTRINGW** (Unicode) und **HELPMSGSTRINGA** (ANSI)<br/>                                    |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-**Verweis**
+**Referenz**
 </dt> <dt>
 
-[**CDN- \_ Hilfe**](cdn-help.md)
+[**\_CDN Hilfe**](cdn-help.md)
 </dt> <dt>
 
 [**CHOOSECOLOR**](/windows/win32/api/commdlg/ns-commdlg-choosecolora-r1)
 </dt> <dt>
 
-[**Auswahl Schriftart**](/windows/win32/api/commdlg/ns-commdlg-choosefonta)
+[**CHOOSEFONT**](/windows/win32/api/commdlg/ns-commdlg-choosefonta)
 </dt> <dt>
 
-[**FindReplace**](/windows/win32/api/commdlg/ns-commdlg-findreplacea)
+[**FINDREPLACE**](/windows/win32/api/commdlg/ns-commdlg-findreplacea)
 </dt> <dt>
 
-[**OpenFileName**](/windows/win32/api/commdlg/ns-commdlg-openfilenamea)
+[**OPENFILENAME**](/windows/win32/api/commdlg/ns-commdlg-openfilenamea)
 </dt> <dt>
 
 [**PRINTDLG**](/windows/win32/api/commdlg/ns-commdlg-printdlga)
 </dt> <dt>
 
-[**Pagesetupdlg**](/windows/win32/api/commdlg/ns-commdlg-pagesetupdlga)
+[**PAGESETUPDLG**](/windows/win32/api/commdlg/ns-commdlg-pagesetupdlga)
 </dt> <dt>
 
 [**RegisterWindowMessage**](/windows/desktop/api/winuser/nf-winuser-registerwindowmessagea)
 </dt> <dt>
 
-**Licher**
+**Konzeptionellen**
 </dt> <dt>
 
-[Allgemeine Dialog Feld Bibliothek](common-dialog-box-library.md)
+[Allgemeine Dialogfeldbibliothek](common-dialog-box-library.md)
 </dt> </dl>
 
  

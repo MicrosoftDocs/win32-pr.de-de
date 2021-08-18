@@ -1,9 +1,9 @@
 ---
 title: pointer_default-Attribut
-description: Das Attribut \pointer \_ default\ gibt das Standardzeigerattribut für alle Zeiger mit Ausnahme von Zeigern der obersten Ebene an, die in Parameterlisten angezeigt werden.
+description: Das Attribut \pointer default\ gibt das Standardzeigerattribut für alle Zeiger außer Zeigern der obersten Ebene an, die \_ in Parameterlisten angezeigt werden.
 ms.assetid: a6e83034-8adb-483d-8d1e-432a1aed22c6
 keywords:
-- pointer_default-Attribut MIDL
+- pointer_default MIDL-Attribut
 topic_type:
 - apiref
 api_name:
@@ -19,9 +19,9 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 08/11/2021
 ms.locfileid: "119013768"
 ---
-# <a name="pointer_default-attribute"></a>\_Zeigerstandardattribut
+# <a name="pointer_default-attribute"></a>\_Zeiger-Standardattribut
 
-Das **\[ \_ \] Zeigerstandardattribut** gibt das Standardzeigerattribut für alle Zeiger mit Ausnahme von Zeigern der obersten Ebene an, die in Parameterlisten angezeigt werden.
+Das **\[ \_ Standardattribut \]** des Zeigers gibt das Standardzeigerattribut für alle Zeiger außer Zeigern der obersten Ebene an, die in Parameterlisten angezeigt werden.
 
 ``` syntax
 pointer_default ( ptr | ref | unique )
@@ -52,7 +52,7 @@ interface dictionary
 [**Schnittstelle**](interface.md)
 </dt> <dt>
 
-[Array- und Sized-Pointer attribute](array-and-sized-pointer-attributes.md)
+[Array- Sized-Pointer Attribute](array-and-sized-pointer-attributes.md)
 </dt> <dt>
 
 [**Arrays**](arrays-1.md)

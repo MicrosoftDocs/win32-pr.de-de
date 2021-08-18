@@ -1,5 +1,5 @@
 ---
-description: Gibt den Typ des Deallocators an, der von einer Stubfunktion verwendet werden soll.
+description: Gibt den Typ des Zuordnungsauslösers an, der von einer Stubfunktion verwendet werden soll.
 ms.assetid: 58228dfd-1d4b-41e5-b423-a54525021c22
 title: deallocator-Element
 ms.topic: reference
@@ -13,7 +13,7 @@ ms.locfileid: "118991750"
 ---
 # <a name="deallocator-element"></a>deallocator-Element
 
-Gibt den Typ des Deallocators an, der von einer Stubfunktion verwendet werden soll.
+Gibt den Typ des Zuordnungsauslösers an, der von einer Stubfunktion verwendet werden soll.
 
 ## <a name="usage"></a>Verbrauch
 
@@ -41,7 +41,7 @@ Es gibt keine untergeordneten Elemente.
 
 ## <a name="remarks"></a>Hinweise
 
-Der Deallocatortyp sollte in ein Tagpaar eingeschlossen <deallocator></deallocator> werden. Die folgenden Zeichenfolgen sind gültige Deallocator-Werte:
+Der Zuordnungstyp sollte in ein Tagpaar eingeschlossen <deallocator></deallocator> werden. Die folgenden Zeichenfolgen sind gültige Zuordnungswerte:
 
 -   Keine
 -   WSDFreeLinkedMemory

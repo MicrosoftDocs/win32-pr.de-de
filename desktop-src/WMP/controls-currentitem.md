@@ -1,9 +1,9 @@
 ---
-title: Controls. happtitem
-description: Die Eigenschaft "ustitem" gibt das aktuelle Medien Element an oder ruft es ab.
+title: Controls.currentItem
+description: Die currentItem-Eigenschaft gibt das aktuelle Medienelement an oder ruft es ab.
 ms.assetid: 77e21585-3cc8-41f5-97b5-da6eb992c7bc
 keywords:
-- Steuerelemente. Fenster Media Player
+- Controls.currentItem Windows Media Player
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - DllExport
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 81658665cb6f31acd327f5050a733a2fc3c70371
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 66dc0ad047213e0fbba7dbdd7336e67b8d015e39aba510ac37bd3701462413ec
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106361349"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118997550"
 ---
-# <a name="controlscurrentitem"></a>Controls. happtitem
+# <a name="controlscurrentitem"></a>Controls.currentItem
 
-Die Eigenschaft " **ustitem** " gibt das aktuelle Medien Element an oder ruft es ab.
+Die **currentItem-Eigenschaft** gibt das aktuelle Medienelement an oder ruft es ab.
 
 ``` syntax
 player.controls.currentItem
@@ -32,15 +32,15 @@ player.controls.currentItem
 
 ## <a name="possible-values"></a>Mögliche Werte
 
-Diese Eigenschaft ist ein **Medien** Objekt mit Lese-/Schreibzugriff.
+Diese Eigenschaft ist ein  Medienobjekt mit Lese-/Schreibzugriff.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Diese Methode funktioniert nur mit Elementen in *Player*. **currentwiedergabe**. Das Aufrufen von " **happtitem** " mit einem Verweis auf ein gespeichertes Medien Element wird nicht unterstützt.
+Diese Methode funktioniert nur mit Elementen in *Player*. **currentPlaylist**. Das **Aufrufen von currentItem** mit einem Verweis auf ein gespeichertes Medienelement wird nicht unterstützt.
 
 ## <a name="examples"></a>Beispiele
 
-Im folgenden JScript-Beispiel wird das Steuer **Element für das** Player-Steuerelement in einem HTML-SELECT-Element auf den ausgewählten Wert festgelegt. Die aktuelle Wiedergabeliste wurde zuerst mithilfe von *playlistcollection* angegeben. **getByName**. Das **Player** -Objekt wurde mit ID = "Player" erstellt.
+Im folgenden JScript wird **currentItem** verwendet, um das aktuelle Medienelement des Player-Steuerelements auf den ausgewählten Wert in einem HTML SELECT-Element zu setzen. Die aktuelle Wiedergabeliste wurde zuerst mithilfe von *PlaylistCollection angegeben.* **getByName**. Das **Player-Objekt** wurde mit der ID = "Player" erstellt.
 
 
 ```JScript
@@ -66,7 +66,7 @@ Im folgenden JScript-Beispiel wird das Steuer **Element für das** Player-Steuer
 
 | Anforderung | Wert |
 |--------------------|------------------------------------------------------------------------------------|
-| Version<br/> | Windows Media Player Version 7,0 oder höher.<br/>                              |
+| Version<br/> | Windows Media Player Version 7.0 oder höher.<br/>                              |
 | DLL<br/>     | <dl> <dt>Wmp.dll</dt> </dl> |
 
 
@@ -81,7 +81,7 @@ Im folgenden JScript-Beispiel wird das Steuer **Element für das** Player-Steuer
 [**Medienobjekt**](media-object.md)
 </dt> <dt>
 
-[**Playlistcollection. getByName**](playlistcollection-getbyname.md)
+[**PlaylistCollection.getByName**](playlistcollection-getbyname.md)
 </dt> </dl>
 
  

@@ -1,11 +1,11 @@
 ---
-title: Imsrdpclientshell-Schnittstelle
-description: Remotedesktopverbindung (RDC)-Client Einstellungen, die verwendet werden, um den Client über Remotedesktop Webzugriff (RD Webzugriff) oder andere Webportale zu starten.
+title: IMsRdpClientShell-Schnittstelle
+description: Remotedesktopverbindung Clienteinstellungen (RDC), die zum Starten des Clients über Remotedesktop Webzugriff (RD Webzugriff) oder über andere Webportale verwendet werden.
 ms.assetid: 05ca2e90-656a-40a3-a438-29d7985e9feb
 ms.tgt_platform: multiple
 keywords:
-- Imsrdpclientshell-Schnittstelle Remotedesktopdienste
-- Imsrdpclientshell-Schnittstelle Remotedesktopdienste, beschrieben
+- IMsRdpClientShell-Remotedesktopdienste
+- IMsRdpClientShell-Schnittstelle Remotedesktopdienste , beschrieben
 topic_type:
 - apiref
 api_name:
@@ -16,35 +16,35 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: b529ed1819864e5fc6106472b33ddd00312560c1
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 5f8593a890097bbfaf6d9c9876bb56d92794ce204f38f349c72beb73b8d28403
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104477757"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119621030"
 ---
-# <a name="imsrdpclientshell-interface"></a>Imsrdpclientshell-Schnittstelle
+# <a name="imsrdpclientshell-interface"></a>IMsRdpClientShell-Schnittstelle
 
-Remotedesktopverbindung (RDC)-Client Einstellungen, die verwendet werden, um den Client über Remotedesktop Webzugriff (RD Webzugriff) oder andere Webportale zu starten.
+Remotedesktopverbindung Clienteinstellungen (RDC), die zum Starten des Clients über Remotedesktop Webzugriff (RD Webzugriff) oder über andere Webportale verwendet werden.
 
 ## <a name="members"></a>Member
 
-Die **imsrdpclientshell** -Schnittstelle erbt von der [**IDispatch**](/windows/win32/api/oaidl/nn-oaidl-idispatch) -Schnittstelle. **Imsrdpclientshell** verfügt auch über die folgenden Typen von Membern:
+Die **IMsRdpClientShell-Schnittstelle** erbt von der [**IDispatch-Schnittstelle.**](/windows/win32/api/oaidl/nn-oaidl-idispatch) **IMsRdpClientShell** verfügt auch über diese Membertypen:
 
 -   [Methoden](#methods)
 -   [Eigenschaften](#properties)
 
 ### <a name="methods"></a>Methoden
 
-Die **imsrdpclientshell** -Schnittstelle verfügt über diese Methoden.
+Die **IMsRdpClientShell-Schnittstelle** verfügt über diese Methoden.
 
 
 
-| Methode                                                     | BESCHREIBUNG                                                  |
+| Methode                                                     | Beschreibung                                                  |
 |:-----------------------------------------------------------|:-------------------------------------------------------------|
-| [**Getrdpproperty**](/previous-versions/windows/desktop/legacy/aa381303(v=vs.85)) | Ruft eine einzelne RDP-Eigenschaft ab.<br/>                  |
-| [**Starten**](imsrdpclientshell-launch.md)                 | Starten von Remote Dateiinhalt über das Webportal.<br/> |
-| [**""-Eigenschaft ""**](/previous-versions/windows/desktop/legacy/aa381312(v=vs.85)) | Legt eine einzelne RDP-Eigenschaft fest.<br/>                       |
+| [**GetRdpProperty**](/previous-versions/windows/desktop/legacy/aa381303(v=vs.85)) | Ruft eine einzelne RDP-Eigenschaft ab.<br/>                  |
+| [**Starten**](imsrdpclientshell-launch.md)                 | Startet remoten Dateiinhalt über das Webportal.<br/> |
+| [**SetRdpProperty**](/previous-versions/windows/desktop/legacy/aa381312(v=vs.85)) | Legt eine einzelne RDP-Eigenschaft fest.<br/>                       |
 
 
 
@@ -52,15 +52,15 @@ Die **imsrdpclientshell** -Schnittstelle verfügt über diese Methoden.
 
 ### <a name="properties"></a>Eigenschaften
 
-Die **imsrdpclientshell** -Schnittstelle verfügt über diese Eigenschaften.
+Die **IMsRdpClientShell-Schnittstelle** verfügt über diese Eigenschaften.
 
 
 
-| Eigenschaft                                                                                              | Zugriffstyp           | BESCHREIBUNG                                                                                               |
+| Eigenschaft                                                                                              | Zugriffstyp           | Beschreibung                                                                                               |
 |:------------------------------------------------------------------------------------------------------|:----------------------|:----------------------------------------------------------------------------------------------------------|
-| [**Isremoteprogramclientinstalliert**](imsrdpclientshell-isremoteprogramclientinstalled.md)<br/> | Schreibgeschützt<br/>  | Ruft ab, ob der Remotedesktopverbindung-Client (RDC) die RemoteApp-Funktionalität unterstützt.<br/> |
-| [**Publicmode**](imsrdpclientshell-publicmode.md)<br/>                                         | Lesen/Schreiben<br/> | Ruft ab, ob der öffentliche Modus aktiviert ist.<br/>                                                      |
-| [**Rdpfilecontents**](imsrdpclientshell-rdpfilecontents.md)<br/>                               | Lesen/Schreiben<br/> | Streamversion der RDP-Konfigurationsdatei.<br/>                                                  |
+| [**IsRemoteProgramClientInstalled**](imsrdpclientshell-isremoteprogramclientinstalled.md)<br/> | Schreibgeschützt<br/>  | Ruft ab, ob der Remotedesktopverbindung -Client (RDC) remoteApp-Funktionen unterstützt.<br/> |
+| [**PublicMode**](imsrdpclientshell-publicmode.md)<br/>                                         | Lesen/Schreiben<br/> | Ruft ab, ob der öffentliche Modus aktiviert ist.<br/>                                                      |
+| [**RdpFileContents**](imsrdpclientshell-rdpfilecontents.md)<br/>                               | Lesen/Schreiben<br/> | Streamversion der RDP-Konfigurationsdatei.<br/>                                                  |
 
 
 
@@ -76,11 +76,11 @@ Die **imsrdpclientshell** -Schnittstelle verfügt über diese Eigenschaften.
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2008<br/>                                                         |
 | Typbibliothek<br/>             | <dl> <dt>MsTscAx.dll</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>MsTscAx.dll</dt> </dl> |
-| IID<br/>                      | IID \_ imsrdpclientshell ist als d012ae6d-C19A-4bfe-b367-201f8911f134 definiert.<br/>   |
+| IID<br/>                      | IID \_ IMsRdpClientShell ist als d012ae6d-c19a-4bfe-b367-201f8911f134 definiert.<br/>   |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 

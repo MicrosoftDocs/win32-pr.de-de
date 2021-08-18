@@ -1,11 +1,11 @@
 ---
-title: Downloadcollection. RemoveItem-Methode
-description: In diesem Abschnitt werden die Funktionen beschrieben, die für die Verwendung durch Online Stores entwickelt wurden. Die Verwendung dieser Funktion außerhalb des Kontexts eines Online Stores wird nicht unterstützt. Mit der RemoveItem-Methode wird ein Download Element aus einer Download Sammlung entfernt.
+title: DownloadCollection.removeItem-Methode
+description: Hinweis In diesem Abschnitt werden Funktionen beschrieben, die für die Verwendung durch Onlineshops entwickelt wurden. Die Verwendung dieser Funktionalität außerhalb des Kontexts eines Onlineshops wird nicht unterstützt. Die removeItem-Methode entfernt ein Downloadelement aus einer Downloadsammlung.
 ms.assetid: 0008752e-c81a-4f91-a582-9d6b46569479
 keywords:
-- RemoveItem-Methode, Windows-Media Player
-- RemoveItem-Methode, Windows Media Player, downloadcollection-Klasse
-- Download Collection-Klasse, Windows Media Player, RemoveItem-Methode
+- removeItem-Windows Media Player
+- removeItem-Methode Windows Media Player , DownloadCollection-Klasse
+- DownloadCollection-Klasse Windows Media Player , removeItem-Methode
 topic_type:
 - apiref
 api_name:
@@ -16,21 +16,21 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: a1798665b79327b7956c1b78509b55cc6e6dd70c
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: d1d7eaa7b26a4d64070cae426d1bbc23418593fa8ec5472e870ed7529ce8a122
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106370843"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118997070"
 ---
-# <a name="downloadcollectionremoveitem-method"></a>Downloadcollection. RemoveItem-Methode
+# <a name="downloadcollectionremoveitem-method"></a>DownloadCollection.removeItem-Methode
 
 > [!Note]  
-> In diesem Abschnitt werden die-Funktionen beschrieben, die für die Verwendung durch Online Stores Die Verwendung dieser Funktion außerhalb des Kontexts eines Online Stores wird nicht unterstützt.
+> In diesem Abschnitt werden Funktionen beschrieben, die für die Verwendung durch Onlineshops entwickelt wurden. Die Verwendung dieser Funktionalität außerhalb des Kontexts eines Onlineshops wird nicht unterstützt.
 
  
 
-Mit der **RemoveItem** -Methode wird ein Download Element aus einer Download Sammlung entfernt.
+Die **removeItem-Methode** entfernt ein Downloadelement aus einer Downloadsammlung.
 
 ## <a name="syntax"></a>Syntax
 
@@ -47,10 +47,10 @@ DownloadCollection.removeItem(
 
 <dl> <dt>
 
-*ItemID* \[ in\]
+*itemID* \[ In\]
 </dt> <dd>
 
-**Number** (**Long**), der den Index des zu entfernenden **Download** Elements angibt.
+**Number** (**long**) gibt den Index des **zu entfernenden DownloadItem** an.
 
 </dd> </dl>
 
@@ -58,9 +58,9 @@ DownloadCollection.removeItem(
 
 Diese Methode gibt keinen Wert zurück.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Wenn der von der *ItemID* dargestellte Download ausgeführt wird, wird der Download durch diese Methode abgebrochen.
+Wenn der durch *itemID dargestellte* Download in Bearbeitung ist, bricht diese Methode den Download ab.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -77,10 +77,10 @@ Wenn der von der *ItemID* dargestellte Download ausgeführt wird, wird der Downl
 
 <dl> <dt>
 
-[**Download Collection. Item**](downloadcollection-item.md)
+[**DownloadCollection.item**](downloadcollection-item.md)
 </dt> <dt>
 
-[**Download Collection-Objekt**](downloadcollection-object.md)
+[**DownloadCollection-Objekt**](downloadcollection-object.md)
 </dt> </dl>
 
  

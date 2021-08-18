@@ -46,14 +46,14 @@ typedef enum D3DDEGREETYPE {
 <span id="D3DDEGREE_LINEAR"></span><span id="d3ddegree_linear"></span>**D3DDEGREE \_ LINEAR**
 </dt> <dd>
 
-Die Kurve wird durch Variablen der ersten Reihenfolge beschrieben.
+Die Kurve wird durch Variablen der ersten Ordnung beschrieben.
 
 </dd> <dt>
 
 <span id="D3DDEGREE_QUADRATIC"></span><span id="d3ddegree_quadratic"></span>**D3DDEGREE \_ QUADRATIC**
 </dt> <dd>
 
-Die Kurve wird durch Variablen der zweiten Reihenfolge beschrieben.
+Die Kurve wird durch Variablen der zweiten Ordnung beschrieben.
 
 </dd> <dt>
 
@@ -64,7 +64,7 @@ Die Kurve wird durch Variablen der dritten Reihenfolge beschrieben.
 
 </dd> <dt>
 
-<span id="D3DDEGREE_QUINTIC"></span><span id="d3ddegree_quintic"></span>**D3DDEGREE– \_ MICIC**
+<span id="D3DDEGREE_QUINTIC"></span><span id="d3ddegree_quintic"></span>**D3DDEGREEIC \_**
 </dt> <dd>
 
 Die Kurve wird durch Variablen der vierten Reihenfolge beschrieben.
@@ -74,7 +74,7 @@ Die Kurve wird durch Variablen der vierten Reihenfolge beschrieben.
 <span id="D3DCULL_FORCE_DWORD"></span><span id="d3dcull_force_dword"></span>**D3DCULL \_ FORCE \_ DWORD**
 </dt> <dd>
 
-Erzwingt, dass diese Enumeration in eine Größe von 32 Bits kompiliert wird. Ohne diesen Wert würden einige Compiler zulassen, dass diese Enumeration in eine andere Größe als 32 Bits kompiliert wird. Dieser Wert wird nicht verwendet.
+Erzwingt, dass diese Enumeration auf eine Größe von 32 Bits kompiliert wird. Ohne diesen Wert würden einige Compiler zulassen, dass diese Enumeration in eine andere Größe als 32 Bits kompiliert wird. Dieser Wert wird nicht verwendet.
 
 </dd> </dl>
 
@@ -92,7 +92,7 @@ Die Werte in dieser Enumeration werden verwendet, um die Kurven zu beschreiben, 
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 

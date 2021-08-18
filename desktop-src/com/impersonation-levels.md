@@ -1,71 +1,71 @@
 ---
-title: Identitätswechsel Ebenen (com)
-description: Wenn der Identitätswechsel erfolgreich ist, bedeutet dies, dass der Client zugestimmt hat, den Server zu einem gewissen Grad zu machen.
+title: Identitätswechselebenen (COM)
+description: Wenn der Identitätswechsel erfolgreich ist, bedeutet dies, dass der Client zugestimmt hat, den Server zu einem gewissen Grad als Client zuzulassen.
 ms.assetid: 7539bbee-063f-4788-aece-7b70684826c8
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 85286e5fa880ea7620d6f6ccb6107bf139ec2005
-ms.sourcegitcommit: 5f33645661bf8c825a7a2e73950b1f4ea0f1cd82
+ms.openlocfilehash: fca691c89e7ff4a12e279ae0ecd0fd04cb31a951c8ac3f2671201fe99dd5900a
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/21/2020
-ms.locfileid: "103858483"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119756390"
 ---
-# <a name="impersonation-levels"></a>Identitätswechsel Ebenen
+# <a name="impersonation-levels"></a>Identitätswechselebenen
 
-Wenn der Identitätswechsel erfolgreich ist, bedeutet dies, dass der Client zugestimmt hat, den Server zu einem gewissen Grad zu machen. Die unterschiedlichen Stufen des Identitäts Wechsels werden als Identitätswechsel *Ebenen* bezeichnet und geben an, wie viel Autorität dem Server zugewiesen wird, wenn die Identität des Clients angenommen wird.
+Wenn der Identitätswechsel erfolgreich ist, bedeutet dies, dass der Client zugestimmt hat, den Server zu einem gewissen Grad als Client zuzulassen. Die unterschiedlichen Identitätswechselgrade werden als *Identitätswechselebenen* bezeichnet und geben an, wie viel Autorität dem Server erteilt wird, wenn er die Identität des Clients angibt.
 
-Derzeit gibt es vier Identitätswechsel Ebenen: *Anonym*, *identifiziert* *, annehmen* und *delegieren*. In der folgenden Liste werden die einzelnen Identitätswechsel Ebenen kurz beschrieben:
+Derzeit gibt es vier Identitätswechselebenen: *anonym,* *identifizieren,* *identitätieren* und *delegieren.* In der folgenden Liste werden die einzelnen Identitätswechselebenen kurz beschrieben:
 
 <dl> <dt>
 
-<span id="anonymous__RPC_C_IMP_LEVEL_ANONYMOUS_"></span><span id="anonymous__rpc_c_imp_level_anonymous_"></span><span id="ANONYMOUS__RPC_C_IMP_LEVEL_ANONYMOUS_"></span>Anonym (RPC- \_ C- \_ IMP- \_ Ebene \_ Anonym)
+<span id="anonymous__RPC_C_IMP_LEVEL_ANONYMOUS_"></span><span id="anonymous__rpc_c_imp_level_anonymous_"></span><span id="ANONYMOUS__RPC_C_IMP_LEVEL_ANONYMOUS_"></span>anonymous (RPC \_ C \_ IMP \_ LEVEL \_ ANONYMOUS)
 </dt> <dd>
 
-Der Client ist gegenüber dem Server anonym. Der Serverprozess kann den Client imitieren, das Identitätswechseltoken enthält jedoch keine Informationen über den Client. Diese Ebene wird nur über den lokalen Kommunikationsprozess für die prozessübergreifende Kommunikation unterstützt. Alle anderen Transporte Stufen diese Ebene im Hintergrund herauf, um Sie zu identifizieren.
+Der Client ist gegenüber dem Server anonym. Der Serverprozess kann den Client imitieren, das Identitätswechseltoken enthält jedoch keine Informationen über den Client. Diese Ebene wird nur über den lokalen prozessübergreifenden Kommunikationstransport unterstützt. Alle anderen Transporte stufen diese Ebene automatisch zur Identifizierung herauf.
 
 </dd> <dt>
 
-<span id="identify__RPC_C_IMP_LEVEL_IDENTIFY_"></span><span id="identify__rpc_c_imp_level_identify_"></span><span id="IDENTIFY__RPC_C_IMP_LEVEL_IDENTIFY_"></span>identifizieren (RPC \_ C \_ IMP- \_ Ebene \_ identifizieren)
+<span id="identify__RPC_C_IMP_LEVEL_IDENTIFY_"></span><span id="identify__rpc_c_imp_level_identify_"></span><span id="IDENTIFY__RPC_C_IMP_LEVEL_IDENTIFY_"></span>identify (RPC \_ C \_ IMP \_ LEVEL \_ IDENTIFY)
 </dt> <dd>
 
 Die Standardebene des Systems. Der Server kann die Identität des Clients abrufen und den Client imitieren, um ACL-Überprüfungen auszuführen.
 
 </dd> <dt>
 
-<span id="impersonate__RPC_C_IMP_LEVEL_IMPERSONATE_"></span><span id="impersonate__rpc_c_imp_level_impersonate_"></span><span id="IMPERSONATE__RPC_C_IMP_LEVEL_IMPERSONATE_"></span>Identität annehmen (RPC- \_ C- \_ IMP-Ebene Identität annehmen \_ \_ )
+<span id="impersonate__RPC_C_IMP_LEVEL_IMPERSONATE_"></span><span id="impersonate__rpc_c_imp_level_impersonate_"></span><span id="IMPERSONATE__RPC_C_IMP_LEVEL_IMPERSONATE_"></span>impersonate (RPC \_ C \_ IMP \_ LEVEL \_ IMPERSONATE)
 </dt> <dd>
 
-Der Server kann als der Client auftreten und dabei dessen Sicherheitskontext imitieren. Der Server kann als Client auf lokale Ressourcen zugreifen. Wenn der Server lokal ist, kann er auf Netzwerkressourcen als Client zugreifen. Wenn der Server Remote ist, kann er nur auf Ressourcen zugreifen, die sich auf demselben Computer wie der Server befinden.
+Der Server kann als der Client auftreten und dabei dessen Sicherheitskontext imitieren. Der Server kann als Client auf lokale Ressourcen zugreifen. Wenn der Server lokal ist, kann er als Client auf Netzwerkressourcen zugreifen. Wenn der Server remote ist, kann er nur auf Ressourcen zugreifen, die sich auf demselben Computer wie der Server befinden.
 
 </dd> <dt>
 
-<span id="delegate__RPC_C_IMP_LEVEL_DELEGATE_"></span><span id="delegate__rpc_c_imp_level_delegate_"></span><span id="DELEGATE__RPC_C_IMP_LEVEL_DELEGATE_"></span>Delegat (RPC \_ C \_ IMP-Ebene-Delegat \_ \_ )
+<span id="delegate__RPC_C_IMP_LEVEL_DELEGATE_"></span><span id="delegate__rpc_c_imp_level_delegate_"></span><span id="DELEGATE__RPC_C_IMP_LEVEL_DELEGATE_"></span>delegat (RPC \_ C \_ IMP \_ LEVEL \_ DELEGATE)
 </dt> <dd>
 
-Die umfassendste Ebene des Identitätswechsels. Wenn diese Ebene ausgewählt wird, kann der Server (sowohl lokal als auch remote) als Client auftreten und dabei dessen Sicherheitskontext imitieren. Während des Identitäts Wechsels können die Anmelde Informationen des Clients (sowohl lokal als auch Netzwerk) an eine beliebige Anzahl von Computern übermittelt werden.
+Die umfassendste Ebene des Identitätswechsels. Wenn diese Ebene ausgewählt wird, kann der Server (sowohl lokal als auch remote) als Client auftreten und dabei dessen Sicherheitskontext imitieren. Während des Identitätswechsels können die Anmeldeinformationen des Clients (sowohl lokal als auch netzwerkseitig) an eine beliebige Anzahl von Computern übergeben werden.
 
-Damit der Identitätswechsel auf der delegatebene funktioniert, müssen die folgenden Anforderungen erfüllt sein:
+Damit der Identitätswechsel auf Delegatebene funktioniert, müssen die folgenden Anforderungen erfüllt sein:
 
--   Der Client muss die Identitätswechsel Ebene auf den RPC- \_ C- \_ IMP-Ebenen-Delegaten festlegen \_ \_ .
--   Das Client Konto darf nicht als "Konto ist vertraulich und kann nicht delegiert werden" im Active Directory-Dienst gekennzeichnet sein.
--   Das Server Konto muss mit dem Attribut "Trusted for Delegation" im Active Directory-Dienst gekennzeichnet werden.
--   Die Computer, auf denen der-Client, der-Server und alle Downstream-Server gehostet werden, müssen in einer Domäne ausgeführt werden.
+-   Der Client muss die Identitätswechselebene auf RPC \_ C \_ IMP \_ LEVEL DELEGATE \_ festlegen.
+-   Das Clientkonto darf im Active Directory-Dienst nicht als "Konto ist vertraulich und kann nicht delegiert werden" gekennzeichnet werden.
+-   Das Serverkonto muss im Active Directory-Dienst mit dem Attribut "Vertrauenswürdig für delegierung" gekennzeichnet werden.
+-   Die Computer, auf denen der Client, der Server und alle "Downstreamserver" gehostet werden, müssen alle in einer Domäne ausgeführt werden.
 
 </dd> </dl>
 
-Durch Auswählen der Identitätswechsel Ebene teilt der Client dem Server mit, wie weit die Identität des Clients angenommen werden kann. Der Client legt die Identitätswechsel Ebene auf dem Proxy fest, der für die Kommunikation mit dem Server verwendet wird.
+Durch Auswählen der Identitätswechselebene teilt der Client dem Server mit, wie weit er beim Identitätswechsel des Clients gehen kann. Der Client legt die Identitätswechselebene auf dem Proxy fest, den er für die Kommunikation mit dem Server verwendet.
 
-## <a name="setting-the-impersonation-level"></a>Festlegen der Identitätswechsel Ebene
+## <a name="setting-the-impersonation-level"></a>Festlegen der Identitätswechselebene
 
-Es gibt zwei Möglichkeiten, die Identitätswechsel Ebene festzulegen:
+Es gibt zwei Möglichkeiten, die Identitätswechselebene festzulegen:
 
--   Der Client kann ihn Processwide durch einen [**CoInitializeSecurity**](/windows/desktop/api/combaseapi/nf-combaseapi-coinitializesecurity)-Rückruf festlegen.
--   Ein Client kann die Sicherheit auf Proxy Ebene für eine Schnittstelle eines Remote Objekts über einen [**IClientSecurity:: setblanket**](/windows/win32/api/objidl/nf-objidl-iclientsecurity-setblanket) -Befehl (oder die Hilfsfunktion [**CoSetProxyBlanket**](/windows/desktop/api/combaseapi/nf-combaseapi-cosetproxyblanket)) festlegen.
+-   Der Client kann ihn über einen Aufruf von [**CoInitializeSecurity**](/windows/desktop/api/combaseapi/nf-combaseapi-coinitializesecurity)prozessweit festlegen.
+-   Ein Client kann die Sicherheit auf Proxyebene für eine Schnittstelle eines Remoteobjekts über einen Aufruf von [**IClientSecurity::SetBlanket**](/windows/win32/api/objidl/nf-objidl-iclientsecurity-setblanket) (oder der Hilfsfunktion [**CoSetProxyBlanket)**](/windows/desktop/api/combaseapi/nf-combaseapi-cosetproxyblanket)festlegen.
 
-Sie legen die Identitätswechsel Ebene fest, indem Sie einen geeigneten RPC- \_ C- \_ IMP- \_ Level \_ xxx-Wert an [**CoInitializeSecurity**](/windows/desktop/api/combaseapi/nf-combaseapi-coinitializesecurity) oder [**CoSetProxyBlanket**](/windows/desktop/api/combaseapi/nf-combaseapi-cosetproxyblanket) über den *dwimplevel* -Parameter übergeben.
+Sie legen die Identitätswechselebene fest, indem Sie einen entsprechenden RPC \_ C \_ IMP \_ LEVEL \_ xxx-Wert über den *dwImpLevel-Parameter* an [**CoInitializeSecurity**](/windows/desktop/api/combaseapi/nf-combaseapi-coinitializesecurity) oder [**CoSetProxyBlanket**](/windows/desktop/api/combaseapi/nf-combaseapi-cosetproxyblanket) übergeben.
 
-Verschiedene Authentifizierungsdienste unterstützen Identitätswechsel auf delegatebene an verschiedene Blöcke. Beispielsweise unterstützt NTLMSSP Thread übergreifende und prozessübergreifende delegatebenenidentitäts-Identitätswechsel, aber nicht Computer übergreifend. Auf der anderen Seite unterstützt das Kerberos-Protokoll Identitätswechsel auf delegatebene über Computer Grenzen hinweg, während SChannel keinen Identitätswechsel auf der delegatebene unterstützt. Wenn Sie über einen Proxy mit Identitätswechsel verfügen und die Identitätswechsel Ebene auf Delegieren festlegen möchten, sollten Sie [**setblanket**](/windows/win32/api/objidl/nf-objidl-iclientsecurity-setblanket) mithilfe der Standard Konstanten für jeden Parameter Außer der Identitätswechsel Ebene aufrufen. COM wählt NTLM lokal und das Kerberos-Protokoll Remote aus (wenn das Kerberos-Protokoll funktioniert).
+Verschiedene Authentifizierungsdienste unterstützen den Identitätswechsel auf Delegatebene in unterschiedlichen Ausmaßen. NTLMSSP unterstützt beispielsweise thread- und prozessübergreifenden Identitätswechsel auf Delegatebene, jedoch nicht computerübergreifend. Andererseits unterstützt das Kerberos-Protokoll Identitätswechsel auf Delegatebene über Computergrenzen hinweg, während Schannel keinen Identitätswechsel auf Delegatebene unterstützt. Wenn Sie über einen Proxy auf Identitätswechselebene verfügen und die Identitätswechselebene auf Delegate festlegen möchten, sollten Sie [**SetBlanket**](/windows/win32/api/objidl/nf-objidl-iclientsecurity-setblanket) mithilfe der Standardkonstanten für jeden Parameter außer der Identitätswechselebene aufrufen. COM wählt NTLM lokal und das Kerberos-Protokoll remote aus (wenn das Kerberos-Protokoll funktioniert).
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
@@ -74,6 +74,6 @@ Verschiedene Authentifizierungsdienste unterstützen Identitätswechsel auf dele
 [Delegierung und Identitätswechsel](delegation-and-impersonation.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 

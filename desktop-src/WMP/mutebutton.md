@@ -1,9 +1,9 @@
 ---
-title: MuteButton
-description: Dies ist eine vordefinierte Schaltfläche mit den folgenden Standardwerten. | MuteButton
+title: MUTEBUTTON
+description: Dies ist eine vordefinierte SCHALTFLÄCHE mit den folgenden Standardwerten. | MUTEBUTTON
 ms.assetid: eee00161-c0c4-4e26-a7d2-6357034fcdfd
 keywords:
-- MuteButton-Fenster Media Player
+- MUTEBUTTON-Windows Media Player
 topic_type:
 - apiref
 api_name:
@@ -13,16 +13,16 @@ api_type:
 ms.topic: reference
 ms.date: 05/31/2018
 api_location: ''
-ms.openlocfilehash: faa89e7a4497500076bea8a31d7b803dff9a379e
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 4f23cea94bfbc6e57807df26512423b530c826411aadd2cd8466b54230d9c23b
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106364427"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118996130"
 ---
-# <a name="mutebutton"></a>MuteButton
+# <a name="mutebutton"></a>MUTEBUTTON
 
-Dies ist eine vordefinierte Schaltfläche mit den folgenden Standardwerten.
+Dies ist eine vordefinierte SCHALTFLÄCHE mit den folgenden Standardwerten.
 
 ``` syntax
 onclick="jscript:player.settings.mute=down;"
@@ -32,9 +32,9 @@ down="wmpprop:player.settings.mute"
 sticky="true"
 ```
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Dadurch wird ein **Schalt** Flächen-Steuerelement erstellt, mit dem die Audiodatei stumm geschaltet wird. Die Quick Infos sind lokalisiert. Alle Eigenschaften dieser **Schaltfläche** können überschrieben werden, indem Sie explizit angegeben werden.
+Dadurch wird ein **BUTTON-Steuerelement** erstellt, das die Audiodaten stummschalten und stummschalten wird. Die QuickInfos sind lokalisiert. Alle Eigenschaften dieser **SCHALTFLÄCHE können** überschrieben werden, indem sie explizit angegeben werden.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -42,7 +42,7 @@ Dadurch wird ein **Schalt** Flächen-Steuerelement erstellt, mit dem die Audioda
 
 | Anforderung | Wert |
 |--------------------|----------------------------------------------|
-| Version<br/> | Windows Media Player 7,0 oder höher<br/> |
+| Version<br/> | Windows Media Player 7.0 oder höher<br/> |
 
 
 
@@ -50,7 +50,7 @@ Dadurch wird ein **Schalt** Flächen-Steuerelement erstellt, mit dem die Audioda
 
 <dl> <dt>
 
-[**Button-Element**](button-element.md)
+[**BUTTON-Element**](button-element.md)
 </dt> </dl>
 
  
