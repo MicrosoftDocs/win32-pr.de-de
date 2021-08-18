@@ -1,11 +1,11 @@
 ---
 title: IVMVirtualPC MaximumNumberOfIDEBuses-Eigenschaft (VPCCOMInterfaces.h)
-description: Ruft die maximale Anzahl von Busen ab, die für die IDE zulässig sind.
+description: Ruft die maximale Anzahl von Buss ab, die für die IDE zulässig sind.
 ms.assetid: 7b88eda4-0f66-4e26-96cb-1e9ebef9d0b8
 keywords:
 - MaximumNumberOfIDEBuses-Eigenschaft Virtueller PC
-- MaximumNumberOfIDEBuses-Eigenschaft Virtual PC, IVMVirtualPC-Schnittstelle
-- IVMVirtualPC-Schnittstelle Virtueller PC, MaximumNumberOfIDEBuses-Eigenschaft
+- MaximumNumberOfIDEBuses-Eigenschaft Virtueller PC, IVMVirtualPC-Schnittstelle
+- IVMVirtualPC-Schnittstelle Virtueller PC , MaximumNumberOfIDEBuses-Eigenschaft
 topic_type:
 - apiref
 api_name:
@@ -24,11 +24,11 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 08/11/2021
 ms.locfileid: "118998470"
 ---
-# <a name="ivmvirtualpcmaximumnumberofidebuses-property"></a>IVMVirtualPC::MaximumNumberOfIDEBuses (Eigenschaft)
+# <a name="ivmvirtualpcmaximumnumberofidebuses-property"></a>IVMVirtualPC::MaximumNumberOfIDEBuses-Eigenschaft
 
-\[Windows Der virtuelle PC ist ab diesem Zeitraum nicht mehr Windows 8. Verwenden Sie stattdessen den [Hyper-V-WMI-Anbieter (V2).](/windows/desktop/HyperV_v2/windows-virtualization-portal)\]
+\[Windows Der virtuelle PC ist ab Windows 8 nicht mehr für die Verwendung verfügbar. Verwenden Sie stattdessen den [Hyper-V-WMI-Anbieter (V2).](/windows/desktop/HyperV_v2/windows-virtualization-portal)\]
 
-Ruft die maximale Anzahl von Busen ab, die für die IDE zulässig sind.
+Ruft die maximale Anzahl von Buss ab, die für die IDE zulässig sind.
 
 Diese Eigenschaft ist schreibgeschützt.
 
@@ -45,7 +45,7 @@ HRESULT get_MaximumNumberOfIDEBuses(
 
 ## <a name="property-value"></a>Eigenschaftswert
 
-Die maximale Anzahl zulässiger Buslinien für die IDE.
+Die maximale Anzahl von Buss, die für die IDE zulässig sind.
 
 ## <a name="error-codes"></a>Fehlercodes
 
@@ -54,9 +54,9 @@ Die maximale Anzahl zulässiger Buslinien für die IDE.
 | Name/Wert                                                                                                                                                                           | Bedeutung                                                                                         |
 |--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------|
 | <dl> <dt>S \_ OK</dt> <dt>0</dt> </dl>                                              | Der Vorgang wurde durchgeführt.<br/>                                                        |
-| <dl> <dt>E \_ ZEIGER 0X80004003</dt> <dt></dt> </dl>                                | Der Parameter ist **NULL.**<br/>                                                           |
+| <dl> <dt>E \_ POINTER</dt> <dt>0x80004003</dt> </dl>                                | Der Parameter ist **NULL.**<br/>                                                           |
 | <dl> <dt>DISP \_ E \_ EXCEPTION</dt> <dt>0x80020009</dt> </dl>                        | Ein unerwarteter Fehler ist aufgetreten.<br/>                                                    |
-| <dl> <dt>VM \_ E \_ \_ HARDWAREVIRTUALISIERUNG \_ DEAKTIVIERT</dt> <dt>0XA0040951</dt> </dl> | Der Prozessor unterstützt keine HAV-Erweiterungen (Hardware Accelerated Virtualization).<br/> |
+| <dl> <dt>VM \_ E \_ HARDWARE \_ VIRTUALIZATION \_ DISABLED</dt> <dt>0xA0040951</dt> </dl> | Der Prozessor unterstützt keine HAV-Erweiterungen (Hardware Accelerated Virtualization).<br/> |
 
 
 
@@ -66,7 +66,7 @@ Die maximale Anzahl zulässiger Buslinien für die IDE.
 
 | Anforderung | Wert |
 |-------------------------------------|-----------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Windows 7 \[ Desktop-Apps\]<br/>                                                    |
+| Unterstützte Mindestversion (Client)<br/> | nur Windows 7 \[ Desktop-Apps\]<br/>                                                    |
 | Unterstützte Mindestversion (Server)<br/> | Nicht unterstützt<br/>                                                                     |
 | Ende des Supports (Client)<br/>    | Windows 7<br/>                                                                          |
 | Product (Produkt)<br/>                  | Windows Virtual PC<br/>                                                                 |
@@ -75,7 +75,7 @@ Die maximale Anzahl zulässiger Buslinien für die IDE.
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 

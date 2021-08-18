@@ -1,21 +1,21 @@
 ---
 title: Variierende Arrays
-description: In der mittleren l sind unterschiedliche Arrays in der Größe fester Größe. Sie ermöglichen es Clients, verschiedene Teile von Arrays von Clients an Server zu übergeben. Die Größe des Array Teils kann vom Aufruf zum Aufruf abweichen. Allerdings ist die Größe des gesamten Arrays korrigiert.
+description: In MIDL sind unterschiedliche Arrays in der Größe festgelegt. Sie ermöglichen Clients, verschiedene Teile von Arrays von Clients an Server zu übergeben. Die Größe des Arrayteils kann von Aufruf zu Aufruf variieren. Die Größe des gesamten Arrays ist jedoch festgelegt.
 ms.assetid: 31c4bc63-de55-4937-832e-8dde9bcc47b9
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: a4b2d79ee37f3e366bbf232b362306f78ca6ada4
-ms.sourcegitcommit: 592c9bbd22ba69802dc353bcb5eb30699f9e9403
+ms.openlocfilehash: 3919eed28ef7a9c888d7c23e4ebe12a1db39c97b18fa325c6daf8a4cd62d6554
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "104473877"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119010548"
 ---
 # <a name="varying-arrays"></a>Variierende Arrays
 
-In der mittleren l sind unterschiedliche Arrays in der Größe fester Größe. Sie ermöglichen es Clients, verschiedene Teile von Arrays von Clients an Server zu übergeben. Die Größe des Array Teils kann vom Aufruf zum Aufruf abweichen. Allerdings ist die Größe des gesamten Arrays korrigiert.
+In MIDL sind unterschiedliche Arrays in der Größe festgelegt. Sie ermöglichen Clients, verschiedene Teile von Arrays von Clients an Server zu übergeben. Die Größe des Arrayteils kann von Aufruf zu Aufruf variieren. Die Größe des gesamten Arrays ist jedoch festgelegt.
 
-Das folgende Beispiel zeigt beispielsweise die Definition einer Remote Prozedur in einer Schnittstelle in einer Mittel l-Datei. Die Größe des Arrays, das der Client an den Server übergibt, wird durch die Konstante Array \_ Größe festgesetzt. Die-Schnittstelle gibt den Teil des Arrays an, den der Client in den Parametern firstelement und ChunkSize an den Server übergibt.
+Das folgende Beispiel zeigt beispielsweise die Definition einer Remoteprozedur in einer Schnittstelle in einer MIDL-Datei. Die Größe des Arrays, das der Client an den Server übergibt, wird durch die Konstante ARRAY \_ SIZE festgelegt. Die -Schnittstelle gibt den Teil des Arrays an, den der Client in den Parametern firstElement und chunkSize an den Server übergibt.
 
 ``` syntax
 [
@@ -36,9 +36,9 @@ interface MyInterface
 }
 ```
 
-Die Schnittstellen Definition verwendet zuerst das Attribut "Mittel" \[ [**\_**](/windows/desktop/Midl/first-is) \] , um die Indexnummer des ersten Elements in dem Array anzugeben, das der Client an den Server übergibt. Das \[ [**length \_ is**](/windows/desktop/Midl/length-is) - \] Attribut gibt die Gesamtanzahl der Array Elemente an, die der Client übergibt. Weitere Informationen zu diesen Mittelwert Attributen finden Sie unter [Array Attribute](array-attributes.md).
+Die Schnittstellendefinition verwendet zuerst das MIDL-Attribut, \[ [**\_**](/windows/desktop/Midl/first-is) um \] die Indexnummer des ersten Elements im Teil des Arrays anzugeben, das der Client an den Server übergibt. Das \[ [**length \_ is-Attribut**](/windows/desktop/Midl/length-is) \] gibt die Gesamtzahl der Arrayelemente an, die der Client übergibt. Weitere Informationen zu diesen MIDL-Attributen finden Sie unter [Arrayattribute.](array-attributes.md)
 
-Das folgende Code Fragment veranschaulicht, wie ein Client möglicherweise die in der vorhergehenden-Datei definierte Remote Prozedur aufruft.
+Das folgende Codefragment veranschaulicht, wie ein Client die in der vorherigen MIDL-Datei definierte Remoteprozedur aufrufen kann.
 
 
 ```C++
@@ -64,8 +64,8 @@ MyRemoteProc(
 
 
 
-Dieses Fragment Ruft die Remote Prozedur myremoteproc zweimal auf. Beim ersten Aufruf übergibt Sie die Array Elemente mit der Nummerierung 20 bis 119, wie durch die Werte in den Variablen firstarrayelementnumber und totalelementsp; angegeben. Beim zweiten-Befehl übergibt der Client die Array Elemente mit der Nummerierung 120 bis 319.
+Dieses Fragment ruft die Remoteprozedur MyRemoteProc zweimal auf. Beim ersten Aufruf werden die Arrayelemente mit der Nummer 20 bis 119 übergeben, wie durch die Werte in den Variablen firstArrayElementNumber und totalElementsPassed angegeben. Beim zweiten Aufruf übergibt der Client die Arrayelemente mit der Nummer 120 bis 319.
 
- 
+ 
 
- 
+ 

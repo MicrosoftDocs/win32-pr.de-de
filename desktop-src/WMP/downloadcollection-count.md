@@ -49,12 +49,12 @@ Diese Eigenschaft ist eine schreibgeschützte **Zahl** (**long**).
 
 | Anforderung | Wert |
 |--------------------|------------------------------------------------------------------------------------|
-| Version<br/> | Windows Media Player 9er Serie oder höher<br/>                                  |
+| Version<br/> | Windows Media Player 9-Serie oder höher<br/>                                  |
 | DLL<br/>     | <dl> <dt>Wmp.dll</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 

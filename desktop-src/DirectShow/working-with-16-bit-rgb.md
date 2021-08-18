@@ -4,23 +4,23 @@ ms.assetid: 0a245187-4120-4003-9a8f-6b1e8fa40d38
 title: Arbeiten mit 16-Bit-RGB
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 3f6bf4b3217af4d0261d4ab26ca011881762a2a7
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 660d5b0223bab6c19a89e4316f7dffce56ec0545f83c72f7316b9278dfa3e4c5
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106347418"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119071794"
 ---
 # <a name="working-with-16-bit-rgb"></a>Arbeiten mit 16-Bit-RGB
 
-Zwei Formate sind für 16-Bit-unkomprimierte RGB definiert:
+Für unkomprimiertes RGB mit 16 Bit sind zwei Formate definiert:
 
--   Mediasubtype \_ 555 verwendet jeweils fünf Bits für die roten, grünen und blauen Komponenten in einem Pixel. Das signifikanteste Bit im **Wort** wird ignoriert.
--   Mediasubtype \_ 565 verwendet fünf Bits für die roten und blauen Komponenten und sechs Bits für die grüne Komponente. Dieses Format spiegelt die Tatsache wider, dass die menschliche Vision für die grünen Teile des sichtbaren Spektrums am empfindlichsten ist.
+-   MEDIASUBTYPE 555 verwendet jeweils fünf Bits für die roten, grünen und blauen \_ Komponenten in einem Pixel. Das wichtigste Bit in **WORD** wird ignoriert.
+-   MEDIASUBTYPE 565 verwendet fünf Bits für die roten und blauen Komponenten und sechs Bits \_ für die grüne Komponente. Dieses Format spiegelt die Tatsache wider, dass das menschliche Sehen am empfindlichsten auf die grünen Teile des sichtbaren Spektrums reagieren kann.
 
 **RGB 565**
 
-Wenn Sie die Farbkomponenten aus einem RGB-565-Image extrahieren möchten, behandeln Sie jedes Pixel als **Worttyp** , und verwenden Sie die folgenden Bitmasken:
+Um die Farbkomponenten aus einem RGB 565-Bild  zu extrahieren, behandeln Sie jedes Pixel als WORD-Typ, und verwenden Sie die folgenden Bitmasken:
 
 
 ```C++
@@ -31,7 +31,7 @@ WORD blue_mask = 0x1F;
 
 
 
-Nehmen Sie die Farbkomponenten aus einem Pixel wie folgt:
+Erhalten Sie die Farbkomponenten wie folgt aus einem Pixel:
 
 
 ```C++
@@ -42,7 +42,7 @@ BYTE blue_value = (pixel & blue_mask);
 
 
 
-Beachten Sie, dass die roten und blauen Kanäle 5 Bits und der grüne Kanal 6 Bits sind. Um diese Werte in 8-Bit-Komponenten (24-Bit-oder 32-Bit-RGB) zu konvertieren, müssen Sie die entsprechende Anzahl von Bits nach links verschieben:
+Beachten Sie, dass der rote und der blaue Kanal 5 Bits und der grüne Kanal 6 Bits beträgt. Um diese Werte in 8-Bit-Komponenten (für 24-Bit- oder 32-Bit-RGB) zu konvertieren, müssen Sie die entsprechende Anzahl von Bits nach links verschieben:
 
 
 ```C++
@@ -54,7 +54,7 @@ BYTE blue  = blue_value << 3;
 
 
 
-Umkehren Sie diesen Prozess, um ein RGB-565-Pixel zu erstellen. Angenommen, die Farbwerte wurden auf die richtige Anzahl von Bits gekürzt:
+Kehren Sie diesen Vorgang um, um ein RGB-Pixel von 565 Pixeln zu erstellen. Angenommen, die Farbwerte wurden auf die richtige Anzahl von Bits abgeschnitten:
 
 
 ```C++
@@ -65,7 +65,7 @@ WORD pixel565 = (red_value << 11) | (green_value << 5) | blue_value;
 
 **RGB 555**
 
-Das Arbeiten mit RGB 555 ist im Wesentlichen mit RGB 565 identisch, mit der Ausnahme, dass Bitmasken und Bitverschiebungs Vorgänge unterschiedlich sind. Gehen Sie folgendermaßen vor, um die Farbkomponenten aus einem RGB-555-Pixel zu erhalten:
+Die Arbeit mit RGB 555 ist im Wesentlichen identisch mit RGB 565, außer dass sich die Bitmasken und Bitverschiebungsvorgänge unterscheiden. Gehen Sie wie folgt vor, um die Farbkomponenten aus einem RGB-Pixel von 555 Pixeln zu erhalten:
 
 
 ```C++
@@ -85,7 +85,7 @@ BYTE blue  = blue_value << 3;
 
 
 
-Gehen Sie folgendermaßen vor, um die roten, grünen und blauen Farbwerte in ein RGB-555-Pixel zu packen:
+Gehen Sie wie folgt vor, um die Farbwerte für Rot, Grün und Blau in ein RGB-Pixel von 555 Pixeln zu packen:
 
 
 ```C++
@@ -98,7 +98,7 @@ WORD pixel565 = (red << 10) | (green << 5) | blue;
 
 <dl> <dt>
 
-[Unkomprimierte RGB-Video Untertypen](uncompressed-rgb-video-subtypes.md)
+[Nicht komprimierte RGB-Videountertypen](uncompressed-rgb-video-subtypes.md)
 </dt> </dl>
 
  

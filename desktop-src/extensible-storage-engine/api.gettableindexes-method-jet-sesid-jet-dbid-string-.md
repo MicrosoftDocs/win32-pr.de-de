@@ -1,5 +1,5 @@
 ---
-description: Weitere Informationen finden Sie unter Api.GetTableIndexes-Methode (JET_SESID, JET_DBID, String).
+description: 'Weitere Informationen finden Sie unter: Api.GetTableIndexes-Methode (JET_SESID, JET_DBID, String)'
 title: Api.GetTableIndexes-Methode (JET_SESID, JET_DBID, String)
 TOCTitle: GetTableIndexes method (JET_SESID, JET_DBID, String)
 ms:assetid: M:Microsoft.Isam.Esent.Interop.Api.GetTableIndexes(Microsoft.Isam.Esent.Interop.JET_SESID,Microsoft.Isam.Esent.Interop.JET_DBID,System.String)
@@ -29,7 +29,7 @@ ms.locfileid: "118983830"
 ---
 # <a name="apigettableindexes-method-jet_sesid-jet_dbid-string"></a>Api.GetTableIndexes-Methode (JET_SESID, JET_DBID, String)
 
-Durchläuft alle Indizes in der Tabelle und gibt Informationen zu jedem Index zurück.
+Durch iteriert alle Indizes in der Tabelle und gibt Informationen zu jedem Index zurück.
 
 **Namespace:**  [Microsoft.Isam.Esent.Interop](./microsoft.isam.esent.interop-namespace.md)  
 **Assembly:**  Microsoft.Isam.Esent.Interop (in Microsoft.Isam.Esent.Interop.dll)
@@ -85,9 +85,9 @@ public static IEnumerable<IndexInfo> GetTableIndexes(
 #### <a name="return-value"></a>Rückgabewert
 
 Typ: [System.Collections.Generic.IEnumerable](/dotnet/api/system.collections.generic.ienumerable-1)\<[IndexInfo](./indexinfo-class.md)\>  
-Ein Iterator über einer IndexInfo für jeden Index in der Tabelle.  
+Ein Iterator für eine IndexInfo für jeden Index in der Tabelle.  
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 #### <a name="reference"></a>Verweis
 

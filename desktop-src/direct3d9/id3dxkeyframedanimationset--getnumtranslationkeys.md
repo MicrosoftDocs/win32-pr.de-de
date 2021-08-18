@@ -1,7 +1,7 @@
 ---
 description: Ruft die Anzahl der Übersetzungsschlüssel in der angegebenen Keyframe-Animation ab.
 ms.assetid: cdab759f-d383-40b2-84dc-8b968e6fdce0
-title: 'ID3DXKeyframedAnimationSet:: getnumsetzationkeys-Methode (D3dx9anim. h)'
+title: ID3DXKeyframedAnimationSet::GetNumTranslationKeys-Methode (D3dx9anim.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -14,14 +14,14 @@ api_type:
 api_location:
 - d3dx9.lib
 - d3dx9.dll
-ms.openlocfilehash: 1f81b80f3722367d7bc696d1546ca2027b38c3c6
-ms.sourcegitcommit: 14010c34b35fa268046c7683f021f86de08ddd0a
+ms.openlocfilehash: 01cdf16732f5bc784a580fd84b3a65935e389b6acd56a940e33c3463538e097a
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "106355836"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119748190"
 ---
-# <a name="id3dxkeyframedanimationsetgetnumtranslationkeys-method"></a>ID3DXKeyframedAnimationSet:: getnumtranslationkeys-Methode
+# <a name="id3dxkeyframedanimationsetgetnumtranslationkeys-method"></a>ID3DXKeyframedAnimationSet::GetNumTranslationKeys-Methode
 
 Ruft die Anzahl der Übersetzungsschlüssel in der angegebenen Keyframe-Animation ab.
 
@@ -40,20 +40,20 @@ UINT GetNumTranslationKeys(
 
 <dl> <dt>
 
-*Animation* \[ in\]
+*Animation* \[ In\]
 </dt> <dd>
 
-Typ: **[ **uint**](../winprog/windows-data-types.md)**
+Typ: **[ **UINT**](../winprog/windows-data-types.md)**
 
-Animations Index.
+Animationsindex.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Typ: **[ **uint**](../winprog/windows-data-types.md)**
+Typ: **[ **UINT**](../winprog/windows-data-types.md)**
 
-Anzahl der Übersetzungsschlüssel in der angegebenen Keyframe-Animation.
+Anzahl der Übersetzungsschlüssel in der angegebenen Keyframeanimation.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -61,12 +61,12 @@ Anzahl der Übersetzungsschlüssel in der angegebenen Keyframe-Animation.
 
 | Anforderung | Wert |
 |--------------------|----------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>D3dx9anim. h</dt> </dl> |
-| Bibliothek<br/> | <dl> <dt>D3dx9. lib</dt> </dl>   |
+| Header<br/>  | <dl> <dt>D3dx9anim.h</dt> </dl> |
+| Bibliothek<br/> | <dl> <dt>D3dx9.lib</dt> </dl>   |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 

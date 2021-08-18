@@ -1,5 +1,5 @@
 ---
-description: Nicht verwendet. Früher ein Rückruf, um auf &\# 0034;Erfassungsrahmen&\# 0034;-Ereignis zu reagieren.
+description: Nicht verwendet. Früher ein Rückruf zum Reagieren auf &\# 0034;Capture frame&\# 0034;-Ereignis.
 MS-HAID: vspixengine.IRunActionCallback
 MSHAttr:
 - PreferredSiteName:MSDN
@@ -26,7 +26,7 @@ ms.locfileid: "118985750"
 ---
 # <a name="span-idvspixengineirunactioncallbackspanirunactioncallback-interface"></a><span id="vspixengine.irunactioncallback"></span>IRunActionCallback-Schnittstelle
 
-Wird nicht verwendet. Früher ein Rückruf, um auf das Erfassungsframeereignis zu reagieren.
+Wird nicht verwendet. Früher ein Rückruf, der auf das Ereignis "Frame erfassen" reagiert.
 
 ## <a name="members"></a>Member
 
@@ -38,7 +38,7 @@ Die **IRunActionCallback-Schnittstelle** erbt von der [**IUnknown-Schnittstelle.
 
 Die **IRunActionCallback-Schnittstelle** verfügt über diese Methoden.
 
-<table><colgroup><col style="width: 50%" /><col style="width: 50%" /></colgroup><thead><tr class="header"><th style="text-align: left;">Methode</th><th style="text-align: left;">BESCHREIBUNG</th></tr></thead><tbody><tr class="odd"><td style="text-align: left;"><a href="/windows/desktop/direct3dtools/irunactioncallback-requestresult-iunknown-ptr"><strong>RequestResult</strong></a></td><td style="text-align: left;"><p>Eine Rückruffunktion, die verwendet wird, um den Host über Die Ergebnisse einer Aktion (z. B. einen Frame) zu benachrichtigen, die angefordert wurde.</p></td></tr></tbody></table>
+<table><colgroup><col style="width: 50%" /><col style="width: 50%" /></colgroup><thead><tr class="header"><th style="text-align: left;">Methode</th><th style="text-align: left;">BESCHREIBUNG</th></tr></thead><tbody><tr class="odd"><td style="text-align: left;"><a href="/windows/desktop/direct3dtools/irunactioncallback-requestresult-iunknown-ptr"><strong>RequestResult</strong></a></td><td style="text-align: left;"><p>Eine Rückruffunktion, die verwendet wird, um den Host über Ergebnisse einer angeforderten Aktion zu benachrichtigen (z. B. einen Frame zu erfassen).</p></td></tr></tbody></table>
 
  
 

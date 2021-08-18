@@ -1,7 +1,7 @@
 ---
-description: Die getframecapturehandle-Funktion gibt ein Handle für die Erfassung basierend auf einem angegebenen Frame zurück.
+description: Die GetFrameCaptureHandle-Funktion gibt basierend auf einem bestimmten Frame ein Handle an die Erfassung zurück.
 ms.assetid: 71b32799-194c-40f8-8438-36aebaba31c7
-title: Getframecapturehandle-Funktion (Netmon. h)
+title: GetFrameCaptureHandle-Funktion (Netmon.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,16 +13,16 @@ api_type:
 - DllExport
 api_location:
 - Nmapi.dll
-ms.openlocfilehash: 3770ad0fd3db7d1c076b5d1f286c1fdbdc2707a5
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 9e7bf14cd7eae73ac1e5c8e21f8036574628932032a1545f8ac1c653dbbf8adb
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "103862011"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119910750"
 ---
-# <a name="getframecapturehandle-function"></a>Getframecapturehandle-Funktion
+# <a name="getframecapturehandle-function"></a>GetFrameCaptureHandle-Funktion
 
-Die **getframecapturehandle** -Funktion gibt ein Handle für die Erfassung basierend auf einem angegebenen Frame zurück.
+Die **GetFrameCaptureHandle-Funktion** gibt basierend auf einem bestimmten Frame ein Handle an die Erfassung zurück.
 
 ## <a name="syntax"></a>Syntax
 
@@ -39,7 +39,7 @@ HCAPTURE WINAPI GetFrameCaptureHandle(
 
 <dl> <dt>
 
-*hframe* \[ in\]
+*hFrame* \[ In\]
 </dt> <dd>
 
 Handle für einen Frame.
@@ -52,9 +52,9 @@ Wenn die Funktion erfolgreich ist, ist der Rückgabewert ein Handle für die Erf
 
 Wenn die Funktion nicht erfolgreich ist, ist der Rückgabewert 0.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-[*Experten*](e.md) und [*Parser*](p.md) können die **getframecapturehandle** -Funktion aufrufen.
+[*Experten*](e.md) und [*Parser*](p.md) können die **GetFrameCaptureHandle-Funktion** aufrufen.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -64,8 +64,8 @@ Wenn die Funktion nicht erfolgreich ist, ist der Rückgabewert 0.
 |-------------------------------------|--------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[nur Desktop-Apps\]<br/>                           |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                                 |
-| Header<br/>                   | <dl> <dt>Netmon. h</dt> </dl>  |
-| Bibliothek<br/>                  | <dl> <dt>Nmapi. lib</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Netmon.h</dt> </dl>  |
+| Bibliothek<br/>                  | <dl> <dt>Nmapi.lib</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Nmapi.dll</dt> </dl> |
 
 

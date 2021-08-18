@@ -1,11 +1,11 @@
 ---
 title: ms-DS-Source-Object-DN-Attribut
-description: Enthält die Zeichen folgen Darstellung des Distinguished Name des-Objekts in einer anderen Gesamtstruktur, die diesem-Objekt entspricht.
+description: Enthält die Zeichenfolgendarstellung des Distinguished Name des Objekts in einer anderen Gesamtstruktur, die diesem -Objekt entspricht.
 ms.assetid: 2955c6ed-068a-47bb-aabc-e335f5ad7709
 ms.tgt_platform: multiple
 keywords:
 - AD-Schema des ms-DS-Source-Object-DN-Attributs
-- AD-Schema des msDS-sourceobjectdn-Attributs
+- AD-Schema des msDS-SourceObjectDN-Attributs
 topic_type:
 - apiref
 api_name:
@@ -14,28 +14,28 @@ api_type:
 - Schema
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: a9853dd37ead84e638f9ccb5e928b6d86bc9f5ab
-ms.sourcegitcommit: b77ace27b0432e7cd3863191b11926be032fbe2f
+ms.openlocfilehash: d47c347edf85cf5d5db330ed14a97bad7464571e74469d3c06608d20e544397a
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "103859833"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119544430"
 ---
 # <a name="ms-ds-source-object-dn-attribute"></a>ms-DS-Source-Object-DN-Attribut
 
-Enthält die Zeichen folgen Darstellung des Distinguished Name des-Objekts in einer anderen Gesamtstruktur, die diesem-Objekt entspricht.
+Enthält die Zeichenfolgendarstellung des Distinguished Name des Objekts in einer anderen Gesamtstruktur, die diesem -Objekt entspricht.
 
 
 
 | Eingabe | Wert |
 |-------------------|---------------------------------------------|
 | CN                | ms-DS-Source-Object-DN                      |
-| LDAP-Display-Name | MSDS-sourceobjectdn                         |
+| Ldap-Anzeigename | msDS-SourceObjectDN                         |
 | Size              | \-                                          |
-| Berechtigung aktualisieren  | \-                                          |
-| Aktualisierungshäufigkeit  | \-                                          |
+| Aktualisieren von Berechtigungen  | \-                                          |
+| Updatehäufigkeit  | \-                                          |
 | Attribute-Id      | 1.2.840.113556.1.4.1879                     |
-| System-ID-GUID    | 773e93af-d3b4-48d4-B3F 9-06457602d3d0        |
+| System-Id-Guid    | 773e93af-d3b4-48d4-b3f9-06457602d3d0        |
 | Syntax            | [**String(Unicode)**](s-string-unicode.md) |
 
 
@@ -55,11 +55,11 @@ Enthält die Zeichen folgen Darstellung des Distinguished Name des-Objekts in ei
 |------------------------|--------------|
 | Link-ID                | \-           |
 | MAPI-Id                | \-           |
-| System-Only            | False        |
-| Ist-einwertig       | Richtig         |
-| Ist indiziert             | False        |
-| Im globalen Katalog      | False        |
-| NT-Security-Descriptor | o:Bag: schlecht: S: |
+| System-Only            | Falsch        |
+| Is-Single-Valued       | Richtig         |
+| Ist indiziert             | Falsch        |
+| Im globalen Katalog      | Falsch        |
+| NT-Security-Descriptor | O:BAG:BAD:S: |
 | Range-Lower            | 0            |
 | Range-Upper            | 10.240        |
 | Search-Flags           | 0x00000000   |
@@ -76,11 +76,11 @@ Enthält die Zeichen folgen Darstellung des Distinguished Name des-Objekts in ei
 |------------------------|--------------|
 | Link-ID                | \-           |
 | MAPI-Id                | \-           |
-| System-Only            | False        |
-| Ist-einwertig       | Richtig         |
-| Ist indiziert             | False        |
-| Im globalen Katalog      | False        |
-| NT-Security-Descriptor | o:Bag: schlecht: S: |
+| System-Only            | Falsch        |
+| Is-Single-Valued       | Richtig         |
+| Ist indiziert             | Falsch        |
+| Im globalen Katalog      | Falsch        |
+| NT-Security-Descriptor | O:BAG:BAD:S: |
 | Range-Lower            | 0            |
 | Range-Upper            | 10.240        |
 | Search-Flags           | 0x00000000   |
@@ -97,11 +97,11 @@ Enthält die Zeichen folgen Darstellung des Distinguished Name des-Objekts in ei
 |------------------------|--------------|
 | Link-ID                | \-           |
 | MAPI-Id                | \-           |
-| System-Only            | False        |
-| Ist-einwertig       | Richtig         |
-| Ist indiziert             | False        |
-| Im globalen Katalog      | False        |
-| NT-Security-Descriptor | o:Bag: schlecht: S: |
+| System-Only            | Falsch        |
+| Is-Single-Valued       | Richtig         |
+| Ist indiziert             | Falsch        |
+| Im globalen Katalog      | Falsch        |
+| NT-Security-Descriptor | O:BAG:BAD:S: |
 | Range-Lower            | 0            |
 | Range-Upper            | 10.240        |
 | Search-Flags           | 0x00000000   |
@@ -118,11 +118,11 @@ Enthält die Zeichen folgen Darstellung des Distinguished Name des-Objekts in ei
 |------------------------|--------------|
 | Link-ID                | \-           |
 | MAPI-Id                | \-           |
-| System-Only            | False        |
-| Ist-einwertig       | Richtig         |
-| Ist indiziert             | False        |
-| Im globalen Katalog      | False        |
-| NT-Security-Descriptor | o:Bag: schlecht: S: |
+| System-Only            | Falsch        |
+| Ist einwertig       | Richtig         |
+| Ist indiziert             | Falsch        |
+| Im globalen Katalog      | Falsch        |
+| NT-Security-Descriptor | O:BAG:BAD:S: |
 | Range-Lower            | 0            |
 | Range-Upper            | 10.240        |
 | Search-Flags           | 0x00000000   |

@@ -6,8 +6,8 @@ keywords:
 - Windows Media Player Mobile Skins, Text
 - Skins, Text
 - Referenz für Skins, Text
-- Text in Skins,Abschnitt "Text"
-- Skindefinitionsdateien,Textabschnitt
+- Text in Skins, Abschnitt "Text"
+- Skindefinitionsdateien,Abschnitt "Text"
 ms.topic: article
 ms.date: 05/31/2018
 ms.openlocfilehash: 182fa28f774f023ccccd7234fd4e8d4eb6a6c4cf22841efbd800ae313a15b50d

@@ -1,35 +1,35 @@
 ---
-description: Vermittler kommunizieren mit Client Anwendungen, um Ihnen das Übermitteln von Zertifikat Anforderungen zu ermöglichen, und (vorausgesetzt, dass die Anforderung ein ausgestelltes Zertifikat ergibt), um das ausgegebene Zertifikat auf den Client herunterzuladen.
+description: Vermittler kommunizieren mit Clientanwendungen, damit sie Zertifikatanforderungen übermitteln können, und (vorausgesetzt, die Anforderung führt zu einem ausgestellten Zertifikat), um das ausgestellte Zertifikat auf den Client herunterzuladen.
 ms.assetid: c696f09e-98d3-4cea-8ea1-cd8f40b74f12
 title: Zwischenstufen
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 040e79abb03bd0363d37fdad79f7311412b0ffe2
-ms.sourcegitcommit: c16214e53680dc71d1c07111b51f72b82a4512d8
+ms.openlocfilehash: bc9f9dbd48d5af575658c04760740ad0b1f64f373d76bb20ba80253b874c67de
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/03/2021
-ms.locfileid: "106364281"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119005288"
 ---
 # <a name="intermediaries"></a>Zwischenstufen
 
-Vermittler kommunizieren mit Client Anwendungen, um Ihnen das Übermitteln von [*Zertifikat Anforderungen*](../secgloss/c-gly.md)zu ermöglichen, und (vorausgesetzt, dass die Anforderung ein ausgestelltes Zertifikat ergibt), um das ausgegebene Zertifikat auf den Client herunterzuladen. Jedes Transportschicht Protokoll erfordert einen eigenen Vermittler.
+Vermittler kommunizieren mit Clientanwendungen, damit sie [*Zertifikatanforderungen*](../secgloss/c-gly.md)übermitteln und (vorausgesetzt, die Anforderung führt zu einem ausgestellten Zertifikat), um das ausgestellte Zertifikat auf den Client herunterzuladen. Jedes Transportschichtprotokoll erfordert einen eigenen Vermittler.
 
-Die Microsoft-Zertifikat Dienste werden mit einem Vermittler (den Webregistrierungs Seiten) für http ausgeliefert. Ein weiteres Beispiel für einen Vermittler ist das Microsoft Windows-Zertifikate-MMC-Snap-in (das den Aufruf des Zertifikatanforderungs-Assistenten ermöglicht). Wenn andere Transportschicht Protokolle mit Zertifikat Diensten verwendet werden sollen, kann ein Entwickler einen Vermittler für jedes gewünschte Transportschicht Protokoll erstellen.
+Microsoft-Zertifikatdienste werden mit einem Vermittler (den Webregistrierungsseiten) für HTTP versendet. Ein weiteres Beispiel für einen Vermittler ist das MICROSOFT Windows Certificates MMC-Snap-In (das das Aufrufen des Zertifikatanforderungs-Assistenten ermöglicht). Wenn andere Transportschichtprotokolle mit Zertifikatdiensten verwendet werden sollen, kann ein Entwickler einen Vermittler für jedes gewünschte Transportschichtprotokoll erstellen.
 
-Vermittler kommunizieren mithilfe der [**ICertRequest**](/windows/desktop/api/Certcli/nn-certcli-icertrequest) -und [**ICertConfig**](/windows/desktop/api/Certcli/nn-certcli-icertconfig) -Schnittstellen, die von der Server-Engine bereitgestellt werden, mit Zertifikat Diensten. Die [**ICertRequest:: Submit**](/windows/desktop/api/Certcli/nf-certcli-icertrequest-submit) -Methode wird verwendet, um eine [*Zertifikat Anforderung*](../secgloss/c-gly.md)zu senden, und [**ICertRequest:: GetCertificate**](/windows/desktop/api/Certcli/nf-certcli-icertrequest-getcertificate) wird verwendet, um das resultierende ausgegebene Zertifikat zu erhalten. Entsprechend wird [**ICertConfig:: GetConfig**](/windows/desktop/api/Certcli/nf-certcli-icertconfig-getconfig) verwendet, um zu bestimmen, welche Zertifizierungsstelle zum Ausstellen des Zertifikats verwendet werden kann.
+Vermittler kommunizieren mit Zertifikatdiensten über die [**schnittstellen ICertRequest**](/windows/desktop/api/Certcli/nn-certcli-icertrequest) und [**ICertConfig,**](/windows/desktop/api/Certcli/nn-certcli-icertconfig) die von der Server-Engine bereitgestellt werden. Die [**ICertRequest::Submit-Methode**](/windows/desktop/api/Certcli/nf-certcli-icertrequest-submit) wird [](../secgloss/c-gly.md)verwendet, um eine Zertifikatanforderung zu übermitteln, und [**ICertRequest::GetCertificate**](/windows/desktop/api/Certcli/nf-certcli-icertrequest-getcertificate) wird verwendet, um das resultierende ausgestellte Zertifikat zu erhalten. Auf ähnliche Weise [**wird ICertConfig::GetConfig**](/windows/desktop/api/Certcli/nf-certcli-icertconfig-getconfig) verwendet, um zu bestimmen, welche Zertifizierungsstelle für die Ausstellung des Zertifikats verwendet werden kann.
 
-Ein Vermittler ist nicht sprachabhängig. Dabei kann es sich um ein Programm handeln, das in C++, Visual Basic, Java, Script oder einer anderen Sprache geschrieben ist.
+Ein Vermittler ist nicht sprachabhängig. Es kann sich um ein programm in C++, Visual Basic, Java, Skript oder eine andere Sprache schreiben.
 
-Zusätzlich zum Sammeln von Daten vom Client zum Erstellen einer Zertifikat Anforderung kann ein Vermittler Anforderungs Attribute angeben. Anforderungen an eine [*Zertifizierungs*](../secgloss/c-gly.md) Stelle, die das Enterprise-Richtlinien Modul ausführen, müssen den Typ des angeforderten Zertifikats angeben, indem Sie in der Anforderung entweder ein "certificatetemplate"-Attribut oder eine Zertifikat Vorlagen Erweiterung angeben.
+Zusätzlich zum Sammeln von Daten vom Client zum Erstellen einer Zertifikatanforderung kann ein Vermittler Anforderungsattribute angeben. Anforderungen, die [](../secgloss/c-gly.md) an eine Zertifizierungsstelle gesendet werden, die das Unternehmensrichtlinienmodul ausgeführt, müssen den Typ des angeforderten Zertifikats angeben, indem sie entweder ein CertificateTemplate-Attribut oder eine Zertifikatvorlagenerweiterung in der Anforderung selbst angeben.
 
-Beachten Sie, dass Entwickler (und Vermittler) während der Erstellung einer Zertifikat Anforderung dafür verantwortlich sind, das Geheimnis des privaten Schlüssels aufrechtzuerhalten. Wenn ein privater Schlüssel kompromittiert wurde (seine Geheimhaltung verliert), ist er nutzlos.
+Beachten Sie, dass Entwickler (und Vermittler) während der Erstellung einer Zertifikatanforderung für die Beibehaltung der Geheimnisse des privaten Schlüssels verantwortlich sind. Nachdem ein privater Schlüssel kompromittiert wurde (seine Geheimnisse verloren), ist er nicht mehr von Nutzen.
 
-Die Webregistrierungs-Seiten der Zertifikat Dienste verwenden die [Zertifikat Registrierungs Schnittstellen](cryptography-interfaces.md), die private Schlüssel schützen, indem Sie auf der Arbeitsstation erstellt werden. Zusätzlich zur Aufrechterhaltung des Geheimnisses des privaten Schlüssels ermöglicht die Zertifikat Registrierungs Steuerung einem Vermittler, den Kryptografiedienstanbieter, die Schlüssel Spezifikation, die Schlüssel Stärke und den Hash Algorithmus anzugeben.
+Die Zertifikatdienste-Webregistrierungsseiten verwenden die Zertifikatregistrierungsschnittstellen, die private Schlüssel schützt, indem sie auf der Arbeitsstation generiert werden. [](cryptography-interfaces.md) Zusätzlich zur Beibehaltung der Geheimnisse des privaten Schlüssels ermöglicht das Zertifikatregistrierungssteuersystem einem Vermittler die Angabe des Kryptografiedienstanbieters, der Schlüsselspezifikation, der Schlüsselstärke und des Hashalgorithmus.
 
-Das MMC-Snap-in "Zertifikate" verwendet auch das Zertifikat Registrierungs Steuerelement (Xenroll.dll). Wenn die Webregistrierungs Seiten der Zertifikat Dienste jedoch bewirken, dass die Zertifikatregistrierungs-Steuerungs Ressource (Xenroll.dll) bei Bedarf auf den Client heruntergeladen wird, wird das MMC-Snap-in "Zertifikate" in einer Umgebung ausgeführt, in der Xenroll.dll bereits eine verfügbare Ressource ist.
+Das MMC-Snap-In Zertifikate verwendet auch die Zertifikatregistrierungssteuerung (Certificate Enrollment Control, Xenroll.dll). Wenn die Zertifikatdienste-Webregistrierungsseiten jedoch bewirken, dass die Ressource für die Zertifikatregistrierungssteuerung (Xenroll.dll) bei Bedarf auf den Client heruntergeladen wird, wird das MMC-Snap-In Zertifikate in einer Umgebung ausgeführt, in der Xenroll.dll bereits eine verfügbare Ressource ist.
 
-Zusätzlich zu [**ICertRequest**](/windows/desktop/api/Certcli/nn-certcli-icertrequest) und [**ICertConfig**](/windows/desktop/api/Certcli/nn-certcli-icertconfig)finden Entwickler von Vermittler möglicherweise die [Zertifikat Registrierungs Schnittstellen](cryptography-interfaces.md) und die [Smartcard](certificate-enrollment-control.md) -Registrierungs Steuerung als nützlich.
+Zusätzlich zu [**ICertRequest**](/windows/desktop/api/Certcli/nn-certcli-icertrequest) und [**ICertConfig**](/windows/desktop/api/Certcli/nn-certcli-icertconfig)finden Entwickler [](cryptography-interfaces.md) von Vermittlern möglicherweise die Schnittstellen für die Zertifikatregistrierung und das [Smartcard-Registrierungssteuersystem](certificate-enrollment-control.md) als nützlich.
 
  
 

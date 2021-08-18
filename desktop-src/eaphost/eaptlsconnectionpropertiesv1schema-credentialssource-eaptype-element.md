@@ -1,6 +1,6 @@
 ---
-title: CredentialsSource (EapType)-Element
-description: Erfahren Sie mehr über das CredentialsSource-Element (EapType). Dieses Element enthält Informationen zum Speicherort des EAP-TLS-Zertifikats.
+title: CredentialsSource-Element (EapType)
+description: Erfahren Sie mehr über das CredentialsSource -Element (EapType). Dieses Element enthält Informationen zum Speicherort des EAP-TLS-Zertifikats.
 ms.assetid: 6ef48e5e-7c71-472f-ab01-0a43a97ecd96
 keywords:
 - CredentialsSource-Element EAPHost
@@ -21,9 +21,9 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 08/11/2021
 ms.locfileid: "118984109"
 ---
-# <a name="credentialssource-eaptype-element"></a>CredentialsSource (EapType)-Element
+# <a name="credentialssource-eaptype-element"></a>CredentialsSource-Element (EapType)
 
-Das **CredentialsSource-Element (EapType)** enthält Informationen zum Speicherort des EAP-TLS-Zertifikats.
+Das **CredentialsSource -Element (EapType)** enthält Informationen zum Speicherort des EAP-TLS-Zertifikats.
 
 ``` syntax
 <xs:element name="CredentialsSource"
@@ -43,12 +43,12 @@ Das **CredentialSource-Element** ist optional.
 
 | Role | Unterstützte Mindestversion des Betriebssystems |
 |------|------------------------------|
-| Client<br/> | Windows Nur \[ Vista-Desktop-Apps\]<br/>       |
+| Client<br/> | Windows \[Nur Vista-Desktop-Apps\]<br/>       |
 | Server<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/> |
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 

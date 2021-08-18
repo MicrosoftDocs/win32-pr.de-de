@@ -1,5 +1,5 @@
 ---
-description: Animiert das Gitternetz und verläuft um einen angegebenen Wert für die globale Animationszeit.
+description: Animiert das Gitternetz und erweitert die globale Animationszeit um einen angegebenen Betrag.
 ms.assetid: a822d92a-c301-4289-b67b-1df99808c79d
 title: ID3DXAnimationController::AdvanceTime-Methode (D3dx9anim.h)
 ms.topic: reference
@@ -23,7 +23,7 @@ ms.locfileid: "118987960"
 ---
 # <a name="id3dxanimationcontrolleradvancetime-method"></a>ID3DXAnimationController::AdvanceTime-Methode
 
-Animiert das Gitternetz und verläuft um einen angegebenen Wert für die globale Animationszeit.
+Animiert das Gitternetz und erweitert die globale Animationszeit um einen angegebenen Betrag.
 
 ## <a name="syntax"></a>Syntax
 
@@ -46,7 +46,7 @@ HRESULT AdvanceTime(
 
 Typ: **[ **DOUBLE**](../winprog/windows-data-types.md)**
 
-Der Betrag in Sekunden, um den die globale Animationszeit nach vorn geht. Der TimeDelta-Wert muss nicht negativ oder 0 (null) sein.
+Betrag in Sekunden, um den die globale Animationszeit nach vorn bewegt werden soll. Der TimeDelta-Wert muss nicht negativ oder 0 (null) sein.
 
 </dd> <dt>
 
@@ -55,7 +55,7 @@ Der Betrag in Sekunden, um den die globale Animationszeit nach vorn geht. Der Ti
 
 Typ: **[ **LPD3DXANIMATIONCALLBACKHANDLER**](id3dxanimationcallbackhandler.md)**
 
-Zeiger auf eine benutzerdefinierte Benutzeroberfläche des Animationsrückrufhandlers [**ID3DXAnimationCallbackHandler.**](id3dxanimationcallbackhandler.md)
+Zeiger auf eine benutzerdefinierte Schnittstelle für Animationsrückrufhandler, [**ID3DXAnimationCallbackHandler.**](id3dxanimationcallbackhandler.md)
 
 </dd> </dl>
 
@@ -63,7 +63,7 @@ Zeiger auf eine benutzerdefinierte Benutzeroberfläche des Animationsrückrufhan
 
 Typ: **[ **HRESULT**](https://msdn.microsoft.com/library/Bb401631(v=MSDN.10).aspx)**
 
-Wenn die Methode erfolgreich ist, ist der Rückgabewert S \_ OK. Wenn bei der Methode ein Fehler auftritt, kann der Rückgabewert einer der folgenden Werte sein: D3DERR \_ INVALIDCALL, E \_ OUTOFMEMORY.
+Wenn die Methode erfolgreich ist, lautet der Rückgabewert S \_ OK. Wenn die Methode fehlschlägt, kann der Rückgabewert einer der folgenden Werte sein: D3DERR \_ INVALIDCALL, E \_ OUTOFMEMORY.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -76,7 +76,7 @@ Wenn die Methode erfolgreich ist, ist der Rückgabewert S \_ OK. Wenn bei der Me
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 

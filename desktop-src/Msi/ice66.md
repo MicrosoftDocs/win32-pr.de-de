@@ -1,25 +1,25 @@
 ---
-description: ICE66 verwendet die Tabellen in der-Datenbank, um zu bestimmen, welches Schema von der Datenbank verwendet werden soll.
+description: ICE66 verwendet die Tabellen in der Datenbank, um zu bestimmen, welches Schema Ihre Datenbank verwenden soll.
 ms.assetid: 7cf929a0-2c4c-40ca-a902-dfd9dcd203b8
 title: ICE66
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: ea1436ad791941c96c0484a02f40a60fc9939e73
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 023450a451a412c47c21904ab96a13e4513c71f8327966dffa5b657b1b65bb65
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "103753016"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119787400"
 ---
 # <a name="ice66"></a>ICE66
 
-ICE66 verwendet die Tabellen in der-Datenbank, um zu bestimmen, welches Schema von der Datenbank verwendet werden soll.
+ICE66 verwendet die Tabellen in der Datenbank, um zu bestimmen, welches Schema Ihre Datenbank verwenden soll.
 
-Einige Funktionen sind möglicherweise nur verfügbar, wenn das Paket auf einem System mit einer aktuellen Windows Installer Version installiert ist.
+Einige Funktionen sind möglicherweise nur verfügbar, wenn das Paket auf einem System mit einer aktuellen Version Windows Installer installiert ist.
 
 ## <a name="result"></a>Ergebnis
 
-ICE66 gibt eine Warnung aus, wenn die Datenbank das falsche Schema verwendet.
+ICE66 gibt eine Warnung aus, wenn Ihre Datenbank das falsche Schema verwendet.
 
 ## <a name="example"></a>Beispiel
 
@@ -29,27 +29,27 @@ ICE66 meldet die folgende Warnung für das gezeigte Beispiel.
 WARNING: Complete functionality of the IsolatedComponents table is only available with Windows Installer versions 1.1 or greater. Your schema is 100.
 ```
 
-Diese Warnung kann ignoriert werden, wenn das Paket mit einer aktuellen Windows Installer Version installiert werden soll. Wenn Sie z. b. möchten, dass das Paket nur in Version 2,0 oder höher installiert werden kann, ändern Sie das Paket Schema (PID \_ Page count) in 200.
+Diese Warnung kann ignoriert werden, wenn Sie möchten, dass Ihr Paket mithilfe einer aktuellen Version Windows Installer installiert wird. Wenn Ihr Paket beispielsweise nur ab Version 2.0 installiert werden kann, ändern Sie das Paketschema (PID \_ PAGECOUNT) in 200.
 
-[Isolatedcomponent-Tabelle](isolatedcomponent-table.md)
+[IsolatedComponent-Tabelle](isolatedcomponent-table.md)
 
 
 
-| Frei \_ gegebene Komponente | Komponenten \_ Anwendung |
+| Freigegebene \_ Komponente | \_Komponentenanwendung |
 |-------------------|------------------------|
-| Component1        | Component2             |
+| Komponente1        | Component2             |
 
 
 
  
 
-[Zusammenfassungs Informationsdaten Strom](summary-information-stream.md)
+[Zusammenfassungsinformationsstream](summary-information-stream.md)
 
 
 
-| Pidt           | Wert |
+| PIDt           | Wert |
 |----------------|-------|
-| PID- \_ PageCount | 100   |
+| PID \_ PAGECOUNT | 100   |
 
 
 
@@ -57,13 +57,13 @@ Diese Warnung kann ignoriert werden, wenn das Paket mit einer aktuellen Windows 
 
 ## <a name="table-used-during-execution"></a>Während der Ausführung verwendete Tabelle:
 
-[\_Columns-Tabelle](-columns-table.md)
+[\_Spaltentabelle](-columns-table.md)
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[Ice-Referenz](ice-reference.md)
+[ICE-Referenz](ice-reference.md)
 </dt> </dl>
 
  

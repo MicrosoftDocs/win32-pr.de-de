@@ -4,7 +4,7 @@ description: Führt die virtuellen Rückgängig-Datenträger zusammen.
 ms.assetid: 6445b097-220e-48c4-9a7b-1139ca7b3338
 keywords:
 - MergeUndoDisks-Methode – Virtueller PC
-- MergeUndoDisks-Methode Virtual PC, IVMVirtualMachine-Schnittstelle
+- MergeUndoDisks-Methode Virtueller PC, IVMVirtualMachine-Schnittstelle
 - IVMVirtualMachine-Schnittstelle Virtueller PC, MergeUndoDisks-Methode
 topic_type:
 - apiref
@@ -93,7 +93,7 @@ Diese Methode kann einen dieser Werte zurückgeben.
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 

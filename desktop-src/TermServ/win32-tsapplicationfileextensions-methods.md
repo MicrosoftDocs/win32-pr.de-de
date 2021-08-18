@@ -1,29 +1,29 @@
 ---
-title: Win32_TSApplicationFileExtensions Methoden
-description: Die Win32- \_ Klasse "tyapplicationfileextensions" stellt die folgenden Methoden zur Verfügung.
+title: Win32_TSApplicationFileExtensions-Methoden
+description: Die Win32 \_ TSApplicationFileExtensions-Klasse macht die folgenden Methoden verfügbar.
 ms.assetid: F7F5E4F8-DB09-4845-BFEA-9B85BC37E4EE
 ms.tgt_platform: multiple
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: c88f826db17a5e7187938c69732773b4d6439bec
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: 36f00198cdeac27bb850195d9fb0510908e30a6ff52d730a344d956f9f111954
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "103707926"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118999849"
 ---
-# <a name="win32_tsapplicationfileextensions-methods"></a>Win32-Methoden für " \_ tyapplicationfileextensions"
+# <a name="win32_tsapplicationfileextensions-methods"></a>Win32 \_ TSApplicationFileExtensions-Methoden
 
-Die Win32-Klasse " [**\_ tyapplicationfileextensions**](win32-tsapplicationfileextensions.md) " stellt die folgenden Methoden zur Verfügung.
+Die [**Win32 \_ TSApplicationFileExtensions-Klasse**](win32-tsapplicationfileextensions.md) macht die folgenden Methoden verfügbar.
 
 ## <a name="in-this-section"></a>In diesem Abschnitt
 
--   [**Fileassociations-Methode**](fileassociations-win32-tsapplicationfileextensions.md)
--   [**File Extensions-Methode**](fileextensions-win32-tsapplicationfileextensions.md)
+-   [**FileAssociations-Methode**](fileassociations-win32-tsapplicationfileextensions.md)
+-   [**FileExtensions-Methode**](fileextensions-win32-tsapplicationfileextensions.md)
 
- 
+ 
 
- 
+ 
 
 
 

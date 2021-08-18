@@ -58,7 +58,7 @@ Dieser Operator ist nur unter C++ verfügbar.
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 

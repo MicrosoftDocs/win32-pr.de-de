@@ -1,19 +1,19 @@
 ---
-description: Gibt die Mikrofon Array Geometrie für den sprach Erfassungs-DSP an.
+description: Gibt die Geometrie des Mikrofonarrays für den Spracherfassungs-DSP an.
 ms.assetid: 1d91bdc8-5a09-487d-b45e-80d57a44cd0e
-title: MFPKEY_WMAAECMA_MICARRAY_DESCPTR-Eigenschaft (wmcodecdsp. h)
+title: MFPKEY_WMAAECMA_MICARRAY_DESCPTR-Eigenschaft (Wmcodecdsp.h)
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: e433f50d9d7640575f1314c5acc13d7751fde0cd
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 7b2bf0b495e7b57ba60cf5cc993b85a143836c8666e06d6b849ece3693b2a334
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106355571"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119722944"
 ---
-# <a name="mfpkey_wmaaecma_micarray_descptr-property"></a>Mfpkey \_ wmaaecma \_ micarray \_ descptr (Eigenschaft)
+# <a name="mfpkey_wmaaecma_micarray_descptr-property"></a>MFPKEY \_ WMAAECMA \_ MICARRAY \_ DESCPTR-Eigenschaft
 
-Gibt die Mikrofon Array Geometrie für den sprach Erfassungs-DSP an.
+Gibt die Geometrie des Mikrofonarrays für den Spracherfassungs-DSP an.
 
 ## <a name="constant-for-ipropertybag"></a>Konstante für IPropertyBag
 
@@ -21,17 +21,17 @@ Nur mit [**IPropertyStore**](/windows/win32/api/propsys/nn-propsys-ipropertystor
 
 ## <a name="data-type"></a>Datentyp
 
-VT- \_ BLOB
+\_VT-BLOB
 
 ## <a name="applies-to"></a>Gilt für
 
--   [Sprach Erfassungs-DSP](voicecapturedmo.md)
+-   [Spracherfassungs-DSP](voicecapturedmo.md)
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Der Wert dieser Eigenschaft ist eine [**kston- \_ MIC- \_ array \_ Geometrie**](/windows-hardware/drivers/ddi/ksmedia/ns-ksmedia-ksaudio_mic_array_geometry) Struktur. Diese Struktur wird in der Header Datei "ksmedia. h" definiert. Um die Geometrie des mikrofonarrays abzurufen, Fragen Sie das Audiogerät nach der Geometry-Eigenschaft des ksproperty \_ - \_ audiomic-Arrays ab, \_ indem Sie \_ die Methode " **ikscontrol:: ksproperty** " auf dem Gerät aufrufen. Weitere Informationen zu mikrofonarrays finden Sie im Whitepaper [Erstellen und Verwenden von mikrofonarrays für Windows Vista](/windows-hardware/drivers/audio/microphone-array-geometry-descriptor-format).
+Der Wert dieser Eigenschaft ist eine [**KSAUDIO \_ MIC \_ ARRAY \_ GEOMETRY-Struktur.**](/windows-hardware/drivers/ddi/ksmedia/ns-ksmedia-ksaudio_mic_array_geometry) Diese Struktur wird in der Headerdatei KsMedia.h definiert. Um die Geometrie des Mikrofonarrays abzurufen, fragen Sie das Audiogerät nach der KSPROPERTY \_ AUDIO \_ MIC ARRAY \_ \_ GEOMETRY-Eigenschaft ab, indem Sie die **IKsControl::KSProperty-Methode** auf dem Gerät aufrufen. Weitere Informationen zu Mikrofonarrays können Sie im Whitepaper [How to Build and Use Microphone Arrays for Windows Vista (Erstellen und Verwenden von Mikrofonarrays für Windows Vista)](/windows-hardware/drivers/audio/microphone-array-geometry-descriptor-format)herunterladen.
 
-Legen Sie diese Eigenschaft fest, wenn Sie den DSP im Filter Modus verwenden und die Verarbeitung von mikrofonarrays aktiviert ist. Wenn Sie den DSP im Quell Modus verwenden, fragt der DSP das Gerät automatisch nach den Geometry-Informationen ab.
+Legen Sie diese Eigenschaft fest, wenn Sie den DSP im Filtermodus verwenden und die Verarbeitung des Mikrofonarrays aktiviert ist. Wenn Sie den DSP im Quellmodus verwenden, fragt der DSP automatisch die Geometrieinformationen für das Gerät ab.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -39,20 +39,20 @@ Legen Sie diese Eigenschaft fest, wenn Sie den DSP im Filter Modus verwenden und
 
 | Anforderung | Wert |
 |-------------------------------------|-----------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                          |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/>                                    |
-| Header<br/>                   | <dl> <dt>Wmcodecdsp. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur Vista-Desktop-Apps\]<br/>                                          |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/>                                    |
+| Header<br/>                   | <dl> <dt>Wmcodecdsp.h</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[Eigenschaften von Media Foundation](media-foundation-properties.md)
+[Media Foundation-Eigenschaften](media-foundation-properties.md)
 </dt> <dt>
 
-[Sprach Erfassungs-DSP](voicecapturedmo.md)
+[Spracherfassungs-DSP](voicecapturedmo.md)
 </dt> </dl>
 
  

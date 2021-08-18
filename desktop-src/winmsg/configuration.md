@@ -1,23 +1,23 @@
 ---
-description: In diesem Referenzabschnitt wird die Konfiguration für Windows und Meldungen beschrieben. Erfahren Sie mehr über Anzeigeelemente und Systemmetriken.
+description: In diesem Referenzabschnitt wird die Konfiguration für Windows und Nachrichten beschrieben. Erfahren Sie mehr über Anzeigeelemente und Systemmetriken.
 ms.assetid: aba21473-07cc-4de9-a310-ad9b43c133eb
-title: Konfiguration (Windows und Meldungen)
+title: Konfiguration (Windows und Nachrichten)
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: ffa516e87aa7d338d4e2fd46a160fcbd6dadb305
-ms.sourcegitcommit: 5d4e99f4c8f42f5f543e52cb9beb9fb13ec56c5f
+ms.openlocfilehash: 72a5c910fd9614d4d0e8fe9f6ba38d9dd59a0fd5649e836c3629427cde5d8617
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2021
-ms.locfileid: "112406343"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119028468"
 ---
-# <a name="configuration-windows-and-messages"></a>Konfiguration (Windows und Meldungen)
+# <a name="configuration-windows-and-messages"></a>Konfiguration (Windows und Nachrichten)
 
-*Anzeigeelemente* sind die Teile eines Fensters und die Anzeige, die auf dem Systemanzeigebildschirm angezeigt werden. *Systemmetriken* sind die Dimensionen verschiedener Anzeigeelemente. Typische Systemmetriken sind die Fensterrahmenbreite, die Symbolhöhe usw. Systemmetriken beschreiben auch andere Aspekte des Systems, z. B. ob eine Maus installiert ist, Doppel-Byte-Zeichen unterstützt werden oder eine Debugversion des Betriebssystems installiert ist. Die [**GetSystemMetrics-Funktion**](/windows/win32/api/winuser/nf-winuser-getsystemmetrics) ruft die angegebene Systemmetrik ab.
+*Anzeigeelemente* sind die Teile eines Fensters und die Anzeige, die auf dem Systemanzeigebildschirm angezeigt werden. *Systemmetriken* sind die Dimensionen verschiedener Anzeigeelemente. Typische Systemmetriken sind die Fensterrahmenbreite, symbolhöhe und so weiter. Systemmetriken beschreiben auch andere Aspekte des Systems, z. B. ob eine Maus installiert, Doppel bytezeichen unterstützt oder eine Debugversion des Betriebssystems installiert ist. Die [**GetSystemMetrics-Funktion**](/windows/win32/api/winuser/nf-winuser-getsystemmetrics) ruft die angegebene Systemmetrik ab.
 
-Anwendungen können auch die Farbe von Fensterelementen wie Menüs, Scrollleisten und Schaltflächen abrufen und festlegen, indem sie die Funktionen [**GetSysColor**](/windows/desktop/api/winuser/nf-winuser-getsyscolor) bzw. [**SetSysColors**](/windows/desktop/api/winuser/nf-winuser-setsyscolors) verwenden.
+Anwendungen können die Farbe von Fensterelementen wie Menüs, Scrollleisten und Schaltflächen auch mithilfe der [**Funktionen GetSysColor**](/windows/desktop/api/winuser/nf-winuser-getsyscolor) bzw. [**SetSysColors**](/windows/desktop/api/winuser/nf-winuser-setsyscolors) abrufen und festlegen.
 
-Die [**SystemParametersInfo-Funktion**](/windows/win32/api/winuser/nf-winuser-systemparametersinfoa) ruft verschiedene Systemattribute ab oder legt diese fest, z. B. Doppelklickzeit, Time-Out für Bildschirmschoner, Fensterrahmenbreite und Desktopmuster. Wenn eine Anwendung **SystemParametersInfo** verwendet, um einen Parameter festzulegen, erfolgt die Änderung sofort. Mit dieser Funktion können Anwendungen auch das Benutzerprofil aktualisieren, sodass Änderungen am System beibehalten werden, wenn das System neu gestartet wird.
+Die [**SystemParametersInfo-Funktion**](/windows/win32/api/winuser/nf-winuser-systemparametersinfoa) ruft verschiedene Systemattribute ab oder legt sie fest, z. B. Doppelklickzeit, Time out des Bildschirmschoners, Breite des Fensterrahmens und Desktopmuster. Wenn eine Anwendung **SystemParametersInfo zum** Festlegen eines Parameters verwendet, erfolgt die Änderung sofort. Mit dieser Funktion können Anwendungen auch das Benutzerprofil aktualisieren, sodass Änderungen am System beim Neustart des Systems beibehalten werden.
 
  
 

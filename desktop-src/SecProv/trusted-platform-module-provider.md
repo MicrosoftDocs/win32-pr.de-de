@@ -1,19 +1,19 @@
 ---
-description: Der Trusted Platform Module-Anbieter wird verwendet, um eine Trusted Platform Module (TPM) zu verwalten.
+description: Der Trusted Platform Module-Anbieter wird verwendet, um ein Trusted Platform Module (TPM) zu verwalten.
 ms.assetid: ed230fee-03d4-4430-bba8-454d5da050dd
-title: Trusted Platform Module Anbieter
+title: Trusted Platform Module Provider
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: c09afe272a1017d04e2bd868323b6773ec1b9fe5
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: b32d847d4144d22fb50ad5674110a33f4cc9f68e18d102ce9e820fa032b907ac
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106350401"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119004238"
 ---
-# <a name="trusted-platform-module-provider"></a>Trusted Platform Module Anbieter
+# <a name="trusted-platform-module-provider"></a>Trusted Platform Module Provider
 
-Der Trusted Platform Module-Anbieter wird verwendet, um eine Trusted Platform Module (TPM) zu verwalten.
+Der Trusted Platform Module-Anbieter wird verwendet, um ein Trusted Platform Module (TPM) zu verwalten.
 
 ## <a name="in-this-section"></a>In diesem Abschnitt
 
@@ -21,7 +21,7 @@ Der Trusted Platform Module-Anbieter wird verwendet, um eine Trusted Platform Mo
 
 | Thema                                      | BESCHREIBUNG                                                                                                                            |
 |--------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------|
-| [**Win32- \_ TPM**](win32-tpm.md)<br/> | stellt den Trusted Platform Module (TPM) dar, einen Hardware Sicherheits Chip, der eine Vertrauensstellung für ein Computersystem bereitstellt.<br/> |
+| [**Win32 \_ Tpm**](win32-tpm.md)<br/> | stellt das Trusted Platform Module (TPM) dar, einen Hardwaresicherheitschip, der einen Vertrauensstamm für ein Computersystem bietet.<br/> |
 
 
 

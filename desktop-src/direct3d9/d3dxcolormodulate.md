@@ -99,7 +99,7 @@ pOut->r = pC1->r * pC2->r;
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 

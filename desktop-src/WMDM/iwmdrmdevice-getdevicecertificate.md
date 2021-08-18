@@ -1,11 +1,11 @@
 ---
-title: Iwmdrmdevice getdevicecertificate-Methode
-description: Die getdevicecertificate-Methode ruft das Gerätezertifikat ab.
+title: IWMDRMDevice GetDeviceCertificate-Methode
+description: Die GetDeviceCertificate-Methode ruft das Gerätezertifikat ab.
 ms.assetid: 9e345bf9-a158-4c0e-a9f1-e4ce3ec16b58
 keywords:
-- Getdevicecertificate-Methode, Windows Media Device Manager
-- Getdevicecertificate-Methode Windows Media Device Manager, iwmdrmdevice-Schnittstelle
-- Iwmdrmdevice-Schnittstelle Windows Media Device Manager, getdevicecertificate-Methode
+- GetDeviceCertificate-Methode windows Media Geräte-Manager
+- GetDeviceCertificate-Methode windows Media Geräte-Manager , IWMDRMDevice-Schnittstelle
+- IWMDRMDevice-Schnittstelle windows Media Geräte-Manager , GetDeviceCertificate-Methode
 topic_type:
 - apiref
 api_name:
@@ -17,16 +17,16 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: f9ceecca32f2455d73ca1dce76a4f8a17613a1ee
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 299233ff4344f44535933221141534ab2b0173ba54e47c9cc340020a2f462eb3
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106357311"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119619820"
 ---
-# <a name="iwmdrmdevicegetdevicecertificate-method"></a>Iwmdrmdevice:: getdevicecertificate-Methode
+# <a name="iwmdrmdevicegetdevicecertificate-method"></a>IWMDRMDevice::GetDeviceCertificate-Methode
 
-Die **getdevicecertificate** -Methode ruft das Gerätezertifikat ab.
+Die **GetDeviceCertificate-Methode** ruft das Gerätezertifikat ab.
 
 ## <a name="syntax"></a>Syntax
 
@@ -43,16 +43,16 @@ HRESULT GetDeviceCertificate(
 
 <dl> <dt>
 
-*pbstraudevcert* \[ vorgenommen\]
+*pbstrDevCert* \[ out\]
 </dt> <dd>
 
-Zeiger auf einen **BSTR** -Wert, der das abgerufene Gerätezertifikat enthält.
+Zeiger auf einen **BSTR,** der das abgerufene Gerätezertifikat enthält.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Die-Methode gibt ein **HRESULT** zurück. Mögliches Werte (aber nicht die Einzigen) sind die in der folgenden Tabelle.
+Die Methode gibt ein **HRESULT** zurück. Mögliches Werte (aber nicht die Einzigen) sind die in der folgenden Tabelle.
 
 
 
@@ -70,16 +70,16 @@ Die-Methode gibt ein **HRESULT** zurück. Mögliches Werte (aber nicht die Einzi
 
 | Anforderung | Wert |
 |--------------------|-----------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Wmddrmsp. idl</dt> </dl> |
-| Bibliothek<br/> | <dl> <dt>Mssachlp. lib</dt> </dl> |
+| Header<br/>  | <dl> <dt>WMDDRMSP.idl</dt> </dl> |
+| Bibliothek<br/> | <dl> <dt>Mssachlp.lib</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Iwmdrmdevice-Schnittstelle**](iwmdrmdevice.md)
+[**IWMDRMDevice-Schnittstelle**](iwmdrmdevice.md)
 </dt> </dl>
 
  

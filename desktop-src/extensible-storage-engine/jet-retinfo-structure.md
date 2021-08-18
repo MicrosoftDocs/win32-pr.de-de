@@ -1,6 +1,6 @@
 ---
-description: 'Weitere Informationen finden Sie hier: JET_RETINFO Struktur'
-title: JET_RETINFO Struktur
+description: 'Weitere Informationen zu: JET_RETINFO-Struktur'
+title: JET_RETINFO-Struktur
 TOCTitle: JET_RETINFO Structure
 ms:assetid: a47a7902-3ecd-4d42-941f-89d25d78eb4c
 ms:mtpsurl: https://msdn.microsoft.com/library/Gg294049(v=EXCHG.10)
@@ -15,21 +15,21 @@ api_type:
 - COM
 api_location: ''
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: 3452c4fab7155ea33b556ac7aa2c777b11a3f954
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: a04ee087f036bf0d6a9e0bb4c9c558dbfe3ae5a8fc8e875973ef2930e7ba911a
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "103862967"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119038728"
 ---
-# <a name="jet_retinfo-structure"></a>JET_RETINFO Struktur
+# <a name="jet_retinfo-structure"></a>JET_RETINFO-Struktur
 
 
 _**Gilt für:** Windows | Windows Server_
 
-## <a name="jet_retinfo-structure"></a>JET_RETINFO Struktur
+## <a name="jet_retinfo-structure"></a>JET_RETINFO-Struktur
 
-Die **JET_RETINFO** Struktur enthält optionale Eingabe-und Ausgabeparameter für [jetretrievecolumschlag](./jetretrievecolumn-function.md). Ein NULL-Zeiger kann an die Stelle geleitet werden, an der ein Zeiger auf diese-Struktur andernfalls passieren würde. Das Übergeben eines NULL-Zeigers ist identisch mit dem übergeben von **JET_RETINFO** , wobei **cbStruct** auf sizeof (JET_RETINFO) festgelegt ist, **iblongvalue** auf 0 (null) und **itagsequence** auf 1 festgelegt ist.
+Die **JET_RETINFO-Struktur** enthält optionale Eingabe- und Ausgabeparameter für [JetRetrieveColumn.](./jetretrievecolumn-function.md) Ein NULL-Zeiger kann übergeben werden, wenn andernfalls ein Zeiger auf diese Struktur übergeben würde. Das Übergeben eines NULL-Zeigers entspricht der Übergabe **von JET_RETINFO,** wobei **cbStruct** auf sizeof(JET_RETINFO), **ibLongValue** auf 0 (null) und **itagSequence** auf 1 festgelegt ist.
 
 ```cpp
     typedef struct {
@@ -44,21 +44,21 @@ Die **JET_RETINFO** Struktur enthält optionale Eingabe-und Ausgabeparameter fü
 
 **cbStruct**
 
-Muss auf die Größe der **JET_RETINFO** Struktur in Bytes festgelegt werden und stellt sicher, dass die folgenden Felder vorhanden sind.
+Muss auf die Größe der **JET_RETINFO-Struktur** in Bytes festgelegt werden und dient zur Bestätigung des Vorhandenseins der folgenden Felder.
 
-**iblongvalue**
+**ibLongValue**
 
-Der Offset zum ersten Byte, der aus einer Spalte vom Typ [JET_coltypLongBinary](./jet-coltyp.md)abgerufen werden soll, oder [JET_coltypLongText](./jet-coltyp.md). Beachten Sie, dass die Menge der Daten, die von diesem Offset abgerufen werden, die geringere Größe des Ausgabepuffers und die Größe der Daten im tatsächlichen Wert nach diesem Offset ist.
+Der Offset zum ersten Byte, das aus einer Spalte vom Typ [JET_coltypLongBinary](./jet-coltyp.md)oder [JET_coltypLongText](./jet-coltyp.md)abgerufen werden soll. Beachten Sie, dass die Menge der aus diesem Offset abgerufenen Daten die niedrigere Größe des Ausgabepuffers und die Größe der Daten im tatsächlichen Wert nach diesem Offset ist.
 
-**itagsequence**
+**itagSequence**
 
-Beschreibt die Sequenznummer des Werts in einer mehrwertigen Spalte. Beachten Sie, dass das Array von Werten einbasiert ist. Der erste Wert ist Sequenz 1, nicht 0. Wenn die Daten Satz Spalte nur über einen Wert verfügt, sollte 1 als **itagsequence** übergeben werden.
+Beschreibt die Sequenznummer des Werts in einer mehrwertigen Spalte. Beachten Sie, dass das Array von Werten einsbasiert ist. Der erste Wert ist Sequenz 1, nicht 0. Wenn die Datensatzspalte nur über einen Wert verfügt, sollte 1 als **itagSequence** übergeben werden.
 
-Bei einer Spalte, die mehrere Werte enthalten kann, ist es nur möglich, eine Sequenznummer größer als 1 in [jetsetcolumn](./jetsetcolumn-function.md) und [jetretrievecolumschlag](./jetretrievecolumn-function.md) oder 0 in [jetsetcolumn](./jetsetcolumn-function.md)zu verwenden. In der aktuellen Implementierung der Engine kann jede Spalte, die mit JET_bitColumnTagged erstellt wurde, mehrere Werte enthalten. Spalten, die mit JET_bitColumnMultiValued erstellt werden, unterscheiden sich nur in der Art und Weise, in der Sie indiziert werden Weitere Informationen finden Sie unter [JET_INDEXCREATE](./jet-indexcreate-structure.md) .
+Bei einer Spalte, die mehrere Werte enthalten kann, ist es nur möglich, eine Sequenznummer größer als 1 in [JetSetColumn](./jetsetcolumn-function.md) und [JetRetrieveColumn](./jetretrievecolumn-function.md) oder 0 in [JetSetColumn](./jetsetcolumn-function.md)zu verwenden. In der aktuellen Implementierung der Engine kann jede Spalte, die mit JET_bitColumnTagged erstellt wurde, mehrere Werte enthalten. Spalten, die mit JET_bitColumnMultiValued erstellt wurden, unterscheiden sich von mehrwertigen markierten Spalten nur in der Weise, wie sie indiziert werden. Weitere Informationen finden Sie [unter JET_INDEXCREATE.](./jet-indexcreate-structure.md)
 
-**columnidnexttaging**
+**columnidNextTagged**
 
-Gibt das ColumnID der abgerufenen Spalte mit mehreren Werten oder geringer Dichte zurück, wenn alle markierten Spalten abgerufen werden, indem 0 als ColumnID an [jetretrievecolbin](./jetretrievecolumn-function.md)übergeben wird.
+Gibt die columnid der abgerufenen markierten, mehrwertigen oder sparsebasierten Spalte zurück, wenn alle markierten Spalten abgerufen werden, indem 0 als columnid an [JetRetrieveColumn](./jetretrievecolumn-function.md)übergeben wird.
 
 ### <a name="requirements"></a>Anforderungen
 
@@ -78,7 +78,7 @@ Gibt das ColumnID der abgerufenen Spalte mit mehreren Werten oder geringer Dicht
 </tr>
 <tr class="odd">
 <td><p><strong>Header</strong></p></td>
-<td><p>In "ESENT. h" deklariert.</p></td>
+<td><p>Deklariert in Esent.h.</p></td>
 </tr>
 </tbody>
 </table>
@@ -89,4 +89,4 @@ Gibt das ColumnID der abgerufenen Spalte mit mehreren Werten oder geringer Dicht
 [JET_COLTYP](./jet-coltyp.md)  
 [JET_COLUMNID](./jet-columnid.md)  
 [JET_RETINFO]()  
-[Jetretrievecolumschlag](./jetretrievecolumn-function.md)
+[JetRetrieveColumn](./jetretrievecolumn-function.md)

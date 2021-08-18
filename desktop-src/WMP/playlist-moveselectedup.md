@@ -1,9 +1,9 @@
 ---
-title: Wiedergabeliste.
-description: Die Methode "muveselectedup" verschiebt das ausgewählte Element in der Liste um eine Position nach oben.
+title: PLAYLIST.moveSelectedUp
+description: Die moveSelectedUp-Methode verschiebt das ausgewählte Element um eine Position in der Liste nach oben.
 ms.assetid: 2d942cb8-b09d-486a-80a5-fac9f172cef3
 keywords:
-- Wiedergabeliste für Windows-Media Player
+- PLAYLIST.moveSelectedUp Windows Media Player
 topic_type:
 - apiref
 api_name:
@@ -13,16 +13,16 @@ api_type:
 ms.topic: reference
 ms.date: 05/31/2018
 api_location: ''
-ms.openlocfilehash: 680889442035886ed1110426f45d7031ce0a4c09
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 568629cf08405e92738ad06cb84bda06f0b5f37d10c6d20c1fbc43aa67cfa105
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106373973"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119735900"
 ---
-# <a name="playlistmoveselectedup"></a>Wiedergabeliste.
+# <a name="playlistmoveselectedup"></a>PLAYLIST.moveSelectedUp
 
-Die Methode " **muveselectedup** " verschiebt das ausgewählte Element in der Liste um eine Position nach oben.
+Die **moveSelectedUp-Methode** verschiebt das ausgewählte Element um eine Position in der Liste nach oben.
 
 ``` syntax
         elementID.moveSelectedUp()
@@ -42,18 +42,18 @@ Diese Methode gibt keinen Wert zurück.
 
 | Anforderung | Wert |
 |--------------------|------------------------------------------------------|
-| Version<br/> | Windows Media Player, Version 7,0 oder höher<br/> |
+| Version<br/> | Windows Media Player Version 7.0 oder höher<br/> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Wiedergabelisten Element**](playlist-element.md)
+[**PLAYLIST-Element**](playlist-element.md)
 </dt> <dt>
 
-[**Wiedergabeliste.**](playlist-moveselecteddown.md)
+[**PLAYLIST.moveSelectedDown**](playlist-moveselecteddown.md)
 </dt> </dl>
 
  

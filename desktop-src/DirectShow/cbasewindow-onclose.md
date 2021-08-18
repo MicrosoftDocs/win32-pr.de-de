@@ -1,7 +1,7 @@
 ---
-description: Die OnClose-Methode behandelt WM- \_ Schließen-Nachrichten.
+description: Die OnClose-Methode verarbeitet WM \_ CLOSE-Nachrichten.
 ms.assetid: e562add4-752e-4665-a75e-a5526fb7f045
-title: Cbasewindow. OnClose-Methode (winutil. h)
+title: CBaseWindow.OnClose-Methode (Winutil.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,16 +16,16 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: 189b08c116f66ff864ffe308befb990973c6ce43
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 880e82ca527972b5074ac290fda34ad1c7868a33cbbe1cad12885b56720cef99
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106369991"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119635140"
 ---
-# <a name="cbasewindowonclose-method"></a>Cbasewindow. OnClose-Methode
+# <a name="cbasewindowonclose-method"></a>CBaseWindow.OnClose-Methode
 
-Die- `OnClose` Methode behandelt WM- \_ Schließen-Nachrichten.
+Die `OnClose` -Methode verarbeitet WM \_ CLOSE-Nachrichten.
 
 ## <a name="syntax"></a>Syntax
 
@@ -42,11 +42,11 @@ Diese Methode hat keine Parameter.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt **true** zurück.
+Gibt **TRUE** zurück.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-In der Basisklasse blendet diese Methode einfach das Fenster aus. In der Regel wird diese Methode von einer abgeleiteten Klasse überschrieben, sodass auch ein [**EC \_ userabort**](ec-userabort.md) -Ereignis gesendet wird. Überschreiben Sie die-Methode nicht, um das Fenster zu zerstören. Stattdessen wird die Methode [**cbasewindow::D onewithwindow**](cbasewindow-donewithwindow.md) aufgerufen, wenn der besitzende Filter zerstört wird.
+In der Basisklasse blendet diese Methode einfach das Fenster aus. In der Regel überschreibt eine abgeleitete Klasse diese Methode, sodass sie auch ein [**EC \_ USERABORT-Ereignis**](ec-userabort.md) sendet. Überschreiben Sie nicht die -Methode, um das Fenster zu zerstören. Rufen Sie stattdessen die [**CBaseWindow::D oneWithWindow-Methode**](cbasewindow-donewithwindow.md) auf, wenn der besitzende Filter zerstört wird.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -54,16 +54,16 @@ In der Basisklasse blendet diese Methode einfach das Fenster aus. In der Regel w
 
 | Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Winutil. h (Include Streams. h)</dt> </dl>                                                                                   |
-| Bibliothek<br/> | <dl> " <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Winutil.h (include Streams.h)</dt> </dl>                                                                                   |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Verkaufsbuilds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Cbasewindow-Klasse**](cbasewindow.md)
+[**CBaseWindow-Klasse**](cbasewindow.md)
 </dt> </dl>
 
  

@@ -1,9 +1,9 @@
 ---
-title: EM_GETCARETINDEX Meldung (kommstrg. h)
-description: Ruft den NULL basierten Index der Position der Einfügemarke in einem Bearbeitungs Steuerelement ab.
+title: EM_GETCARETINDEX (CommCtrl.h)
+description: Ruft den nullbasierten Index der Position des Caret-Caret-Steuerelements in einem Bearbeitungssteuerpunkt ab.
 ms.assetid: cf12aaea-cfa7-4804-ae34-fd0992332288
 keywords:
-- Windows-Steuerelemente für EM_GETCARETINDEX Meldung
+- EM_GETCARETINDEX meldungssteuerelemente Windows
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 6653e2ae0e2126941e3d8977a593300b86051800
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 4080acdc7ee338b76f80b97c81a952188fc74774254476771f9ff47e87f3fdff
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "103956582"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119019838"
 ---
-# <a name="em_getcaretindex-message"></a>EM \_ getcaretindex-Meldung
+# <a name="em_getcaretindex-message"></a>EM \_ GETCARETINDEX-Nachricht
 
-Ruft den NULL basierten Index der Position der Einfügemarke in einem Bearbeitungs Steuerelement ab.
+Ruft den nullbasierten Index der Position des Caret-Caret-Steuerelements in einem Bearbeitungssteuerpunkt ab.
 
 ## <a name="parameters"></a>Parameter
 
@@ -37,7 +37,7 @@ Ruft den NULL basierten Index der Position der Einfügemarke in einem Bearbeitun
 
 ## <a name="return-value"></a>Rückgabewert
 
-Der Rückgabewert ist ein NULL basierter Indexwert der Position der Einfügemarke.
+Der Rückgabewert ist ein nullbasierter Indexwert der Position des Caretpunkts.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -45,20 +45,20 @@ Der Rückgabewert ist ein NULL basierter Indexwert der Position der Einfügemark
 
 | Anforderung | Wert |
 |-------------------------------------|----------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows 10, 1809 \[ Desktop-Apps\]<br/>                                                           |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2019 \[ -Desktop-Apps\]<br/>                                                     |
-| Header<br/>                   | <dl> <dt>Kommstrg. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows 10, nur 1809 \[ Desktop-Apps\]<br/>                                                           |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2019-Desktop-Apps\]<br/>                                                     |
+| Header<br/>                   | <dl> <dt>CommCtrl.h</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-**Verweis**
+**Referenz**
 </dt> <dt>
 
-[**EM \_ setcaretindex**](em-setcaretindex.md)
+[**EM \_ SETCARETINDEX**](em-setcaretindex.md)
 </dt> </dl>
 
  

@@ -1,9 +1,9 @@
 ---
-title: LVN_LINKCLICK Benachrichtigungs Code (kommctrl. h)
-description: Benachrichtigt das übergeordnete Fenster eines Listenansicht-Steuer Elements, dass auf einen Link geklickt wurde. Dieser Benachrichtigungs Code wird in Form einer WM-Benachrichtigungs \_ Meldung gesendet.
+title: LVN_LINKCLICK Benachrichtigungscode (Commctrl.h)
+description: Benachrichtigt das übergeordnete Fenster eines Listenansichtssteuerelements, dass auf einen Link geklickt wurde. Dieser Benachrichtigungscode wird in Form einer WM \_ NOTIFY-Nachricht gesendet.
 ms.assetid: de8f40d6-b79e-4324-af67-9a3c0915609d
 keywords:
-- Windows-Steuerelemente für LVN_LINKCLICK Benachrichtigungs
+- LVN_LINKCLICK Benachrichtigungscode Windows Controls
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: bd69fb463e71523fcbd4eeb65a6a718d27847c09
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 6e89db641bc17e8c3d9d548bdf502e077c88dfc6c7452f8059b085c3432d23bd
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104479431"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119019068"
 ---
-# <a name="lvn_linkclick-notification-code"></a>LVN \_ linkclick-Benachrichtigungs Code
+# <a name="lvn_linkclick-notification-code"></a>LVN \_ LINKCLICK-Benachrichtigungscode
 
-Benachrichtigt das übergeordnete Fenster eines Listenansicht-Steuer Elements, dass auf einen Link geklickt wurde. Dieser Benachrichtigungs Code wird in Form einer WM- [**\_ Benachrichtigungs**](wm-notify.md) Meldung gesendet.
+Benachrichtigt das übergeordnete Fenster eines Listenansichtssteuerelements, dass auf einen Link geklickt wurde. Dieser Benachrichtigungscode wird in Form einer [**WM \_ NOTIFY-Nachricht**](wm-notify.md) gesendet.
 
 
 ```C++
@@ -41,7 +41,7 @@ LVN_LINKCLICK
 *lParam* 
 </dt> <dd>
 
-Zeiger auf eine [**NMLVLINK**](/windows/win32/api/commctrl/ns-commctrl-nmlvlink) -Struktur. Der Bezeichner der Gruppe, die den Link enthält, befindet sich im **iSubItem** -Member.
+Zeiger auf eine [**NMLVLINK-Struktur.**](/windows/win32/api/commctrl/ns-commctrl-nmlvlink) Der Bezeichner der Gruppe, die den Link enthält, befindet sich im **iSubItem-Element.**
 
 </dd> </dl>
 
@@ -49,9 +49,9 @@ Zeiger auf eine [**NMLVLINK**](/windows/win32/api/commctrl/ns-commctrl-nmlvlink)
 
 Kein Rückgabewert.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Das folgende Beispiel zeigt, wie eine Anwendung in Ihrem [**WM \_**](wm-notify.md) -Benachrichtigungs Meldungs Handler auf diesen Benachrichtigungs Code reagieren könnte. Im Beispiel wird der reduzierte Status der Gruppe gewechselt und der entsprechende Linktext festgelegt.
+Das folgende Beispiel zeigt, wie eine Anwendung auf diesen Benachrichtigungscode in ihrem [**WM NOTIFY-Meldungshandler \_**](wm-notify.md) reagieren kann. Im Beispiel wird der reduzierte Status der Gruppe umgeschaltet und der entsprechende Linktext festgelegt.
 
 ``` syntax
 case LVN_LINKCLICK:
@@ -83,9 +83,9 @@ case LVN_LINKCLICK:
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                        |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/>                                  |
-| Header<br/>                   | <dl> <dt>Kommstrg. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur Vista-Desktop-Apps\]<br/>                                        |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/>                                  |
+| Header<br/>                   | <dl> <dt>Commctrl.h</dt> </dl> |
 
 
 

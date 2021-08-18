@@ -1,9 +1,9 @@
 ---
-title: WM_DELETEITEM Meldung (Winuser. h)
-description: Wird an den Besitzer eines Listen Felds oder Kombinations Felds gesendet, wenn das Listenfeld oder Kombinations Feld zerstört wird oder wenn Elemente von der LB- \_ deletestring-, lb \_ resetcontent-, CB \_ deletestring-oder CB \_ resetcontent-Nachricht entfernt werden.
+title: WM_DELETEITEM (Winuser.h)
+description: Wird an den Besitzer eines Listen- oder Kombinationsfelds gesendet, wenn das Listenfeld oder Kombinationsfeld zerstört wird oder wenn Elemente von der LB \_ DELETESTRING-, LB \_ RESETCONTENT-, CB \_ DELETESTRING- oder CB RESETCONTENT-Meldung entfernt \_ werden.
 ms.assetid: c3adf8fb-45f2-44f1-8821-6ffa7d76dc78
 keywords:
-- Windows-Steuerelemente für WM_DELETEITEM Meldung
+- WM_DELETEITEM meldungssteuerelemente Windows
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: dbf37f8a367d23353903bd3cda85b573f6884ff2
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 1f461b63d751822d9a4c602993314bf0677cff754881269ab44458ab17f3a439
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104476473"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119018538"
 ---
-# <a name="wm_deleteitem-message"></a>WM \_ DeleteItem-Meldung
+# <a name="wm_deleteitem-message"></a>WM \_ DELETEITEM-Nachricht
 
-Wird an den Besitzer eines Listen Felds oder Kombinations Felds gesendet, wenn das Listenfeld oder Kombinations Feld zerstört wird oder wenn Elemente von der [**lb- \_ deletestring**](lb-deletestring.md)- [**, lb \_ resetcontent**](lb-resetcontent.md)-, [**CB \_ deletestring**](cb-deletestring.md)-oder [**CB \_ resetcontent**](cb-resetcontent.md) -Nachricht entfernt werden. Das System sendet eine " **WM \_ DeleteItem** "-Meldung für jedes gelöschte Element. Das System sendet die " **WM \_ DeleteItem** "-Meldung für ein beliebiges gelöschtes Listenfeld oder Kombinations Feld Element mit Elementdaten, die nicht NULL sind.
+Wird an den Besitzer eines Listen- oder Kombinationsfelds gesendet, wenn das Listenfeld oder Kombinationsfeld zerstört wird oder wenn Elemente von der [**LB \_ DELETESTRING-,**](lb-deletestring.md) [**LB \_ RESETCONTENT-,**](lb-resetcontent.md) [**CB \_ DELETESTRING-**](cb-deletestring.md)oder [**CB \_ RESETCONTENT-Meldung**](cb-resetcontent.md) entfernt werden. Das System sendet für jedes gelöschte Element eine **WM \_ DELETEITEM-Nachricht.** Das System sendet die **WM \_ DELETEITEM-Nachricht** für jedes gelöschte Listenfeld oder Kombinationsfeldelement mit Elementdaten ungleich 0 (null).
 
 
 ```C++
@@ -42,26 +42,26 @@ WM_DELETEITEM
 *wParam* 
 </dt> <dd>
 
-Gibt den Bezeichner des Steuer Elements an, das die **WM- \_ DeleteItem** -Nachricht gesendet hat.
+Gibt den Bezeichner des Steuerelements an, das die **WM \_ DELETEITEM-Nachricht gesendet** hat.
 
 </dd> <dt>
 
 *lParam* 
 </dt> <dd>
 
-Ein Zeiger auf eine [**deleteitemstruct**](/windows/win32/api/winuser/ns-winuser-deleteitemstruct) -Struktur, die Informationen über das Element enthält, das aus einem Listenfeld gelöscht wurde.
+Zeiger auf eine [**DELETEITEMSTRUCT-Struktur,**](/windows/win32/api/winuser/ns-winuser-deleteitemstruct) die Informationen über das aus einem Listenfeld gelöschte Element enthält.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Eine Anwendung sollte **true** zurückgeben, wenn Sie diese Nachricht verarbeitet.
+Eine Anwendung sollte **TRUE zurückgeben,** wenn sie diese Nachricht verarbeitet.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Microsoft Windows NT und höher: Windows sendet eine **WM \_ DeleteItem** -Nachricht nur für Elemente, die aus einem von einem Besitzer gezeichneten Listenfeld (mit dem "lbs-Besitzer" oder "lbs-Besitzer"-Stil) oder dem vom Besitzer gezeichneten Kombinations Feld (mit dem [**CBS \_**](combo-box-styles.md) -Besitzer-oder [**CBS \_**](combo-box-styles.md) -Besitzer-Stil) gelöscht wurden. [**\_**](list-box-styles.md) [**\_**](list-box-styles.md)
+Microsoft Windows NT und höher: Windows sendet eine **WM \_ DELETEITEM-Nachricht** nur für Elemente, die aus einem vom Besitzer gezeichneten Listenfeld (mit dem [**LBS \_ OWNERDRAWFIXED-**](list-box-styles.md) oder [**LBS \_ OWNERDRAWVARIABLE-Stil)**](list-box-styles.md) oder einem vom Besitzer gezeichneten Kombinationsfeld (mit dem [**CBS \_ OWNERDRAWFIXED-**](combo-box-styles.md) oder [**CBS \_ OWNERDRAWVARIABLE-Stil)**](combo-box-styles.md) gelöscht wurden.
 
-Windows 95: Windows sendet die " **WM \_ DeleteItem** "-Meldung für ein beliebiges gelöschtes Listenfeld oder Kombinations Feld Element mit Elementdaten, die nicht NULL sind.
+Windows 95: Windows sendet die **WM \_ DELETEITEM-Nachricht** für jedes gelöschte Listenfeld oder Kombinationsfeldelement mit Elementdaten ungleich null.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -69,9 +69,9 @@ Windows 95: Windows sendet die " **WM \_ DeleteItem** "-Meldung für ein beliebi
 
 | Anforderung | Wert |
 |-------------------------------------|----------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                                           |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/>                                                     |
-| Header<br/>                   | <dl> <dt>Winuser. h (Windows. h einschließen)</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ Vista-Desktop-Apps\]<br/>                                                           |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                                                     |
+| Header<br/>                   | <dl> <dt>Winuser.h (include Windows.h)</dt> </dl> |
 
 
 
@@ -79,22 +79,22 @@ Windows 95: Windows sendet die " **WM \_ DeleteItem** "-Meldung für ein beliebi
 
 <dl> <dt>
 
-**Verweis**
+**Referenz**
 </dt> <dt>
 
-[**CB \_ deletestring**](cb-deletestring.md)
+[**CB \_ DELETESTRING**](cb-deletestring.md)
 </dt> <dt>
 
-[**CB \_ resetcontent**](cb-resetcontent.md)
+[**CB \_ RESETCONTENT**](cb-resetcontent.md)
 </dt> <dt>
 
 [**DELETEITEMSTRUCT**](/windows/win32/api/winuser/ns-winuser-deleteitemstruct)
 </dt> <dt>
 
-[**LB- \_ deletestring**](lb-deletestring.md)
+[**LB \_ DELETESTRING**](lb-deletestring.md)
 </dt> <dt>
 
-[**LB- \_ resetcontent**](lb-resetcontent.md)
+[**LB \_ RESETCONTENT**](lb-resetcontent.md)
 </dt> </dl>
 
  

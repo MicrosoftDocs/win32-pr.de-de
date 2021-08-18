@@ -26,7 +26,7 @@ Die [**XMSHORTN4-Struktur**](/windows/desktop/api/DirectXPackedVector/ns-directx
 
 | Methoden                                                | BESCHREIBUNG                                                                                                            |
 |--------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------|
-| [**operator =**](/windows/win32/api/directxpackedvector/nf-directxpackedvector-xmshortn4-operator-assign)<br/> | Weist die Vektorkomponentendaten aus einer Instanz von `XMSHORTN4` der aktuellen Instanz von `XMSHORTN4` zu. <br/> |
+| [**operator =**](/windows/win32/api/directxpackedvector/nf-directxpackedvector-xmshortn4-operator-assign)<br/> | Weist der aktuellen Instanz von die Vektorkomponentendaten von `XMSHORTN4` einer Instanz von `XMSHORTN4` zu. <br/> |
 
 
 

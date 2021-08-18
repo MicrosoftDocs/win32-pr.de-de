@@ -1,27 +1,27 @@
 ---
-title: Vom Shader angegebener Schablonenverweiswert (Direct3D 11-Grafiken)
-description: Erfahren Sie mehr über den Schablonenverweiswert in Direct3D 11-Grafiken. Das Aktivieren von Pixel-Shadern für die Verwendung des Schablonenverweiswerts ermöglicht eine fein kontrollierte Steuerung von Schablonenvorgängen.
+title: Shader– Angegebener Schablonenverweiswert (Direct3D 11-Grafiken)
+description: Erfahren Sie mehr über den Schablonenverweiswert in Direct3D 11-Grafiken. Wenn Pixel-Shader den Schablonenverweiswert verwenden können, können Schablonenvorgänge mit feiner Kontrolle kontrolliert werden.
 ms.assetid: 6E336623-9746-4872-ADC1-C5489F53D7AE
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: c0e8a34d53bc7f30dc2a91fafabb561dff7a1e96
-ms.sourcegitcommit: 5d4e99f4c8f42f5f543e52cb9beb9fb13ec56c5f
+ms.openlocfilehash: 2d68d780c7a800f4291b3cce01c6f974cdeedaa8f590fc76fdf8afa8b3fb3c5b
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2021
-ms.locfileid: "112408103"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119632310"
 ---
-# <a name="shader-specified-stencil-reference-value-direct3d-11-graphics"></a>Vom Shader angegebener Schablonenverweiswert (Direct3D 11-Grafiken)
+# <a name="shader-specified-stencil-reference-value-direct3d-11-graphics"></a>Shader– Angegebener Schablonenverweiswert (Direct3D 11-Grafiken)
 
-Die Aktivierung von Pixel-Shadern zum Ausgeben des Schablonenverweiswerts anstelle des von der API angegebenen Werts ermöglicht eine sehr präzise Steuerung von Schablonenvorgängen.
+Wenn Pixel-Shader den Schablonenverweiswert anstelle des von der API angegebenen Werts aus geben, wird eine sehr präzise Steuerung von Schablonenvorgängen ermöglicht.
 
-Der angegebene Shaderwert ersetzt den von der API angegebenen *Schablonenverweiswert* für diesen Aufruf. Dies bedeutet, dass sich die Änderung sowohl auf den Schablonentest auswirkt als auch wenn stencil op D3D11 \_ STENCIL \_ OP REPLACE \_ (ein Member von [**D3D11 \_ STENCIL \_ OP**](/windows/desktop/api/D3D11/ne-d3d11-d3d11_stencil_op)) verwendet wird, um den Verweiswert in den Schablonenpuffer zu schreiben.
+Der angegebene Shaderwert ersetzt den  API-angegebenen Schablonenverweiswert für diesen Aufruf. Dies bedeutet, dass die Änderung sowohl den Schablonentest beeinflusst als auch wenn die Schablonen op D3D11 STENCIL OP REPLACE (ein Member von \_ \_ \_ [**D3D11 \_ STENCIL \_ OP**](/windows/desktop/api/D3D11/ne-d3d11-d3d11_stencil_op)) verwendet wird, um den Verweiswert in den Schablonenpuffer zu schreiben.
 
-In früheren Versionen von D3D11 kann der Schablonenverweiswert nur von der [**ID3D11DeviceContext::OMSetDepthStencilState-Methode**](/windows/desktop/api/D3D11/nf-d3d11-id3d11devicecontext-omsetdepthstencilstate) angegeben werden. Dies bedeutet, dass dieser Wert nur mit einer Granularität pro Zeichnen definiert werden kann. Dieses D3D11.3-Feature ermöglicht Entwicklern das Lesen und Verwenden des Schablonenverweiswerts (), der `SV_StencilRef` von einem Pixel-Shader ausgegeben wird. Dies bedeutet, dass er für eine Pixel- oder Stichprobengranularität angegeben werden kann.
+In früheren Versionen von D3D11 kann der Schablonenverweiswert nur von der [**ID3D11DeviceContext::OMSetDepthStencilState-Methode**](/windows/desktop/api/D3D11/nf-d3d11-id3d11devicecontext-omsetdepthstencilstate) angegeben werden. Dies bedeutet, dass dieser Wert nur für eine Granularität pro Zeichnen definiert werden kann. Mit diesem D3D11.3-Feature können Entwickler den Schablonenverweiswert ( ) lesen und verwenden, der von einem Pixel-Shader ausgegeben wird. Dies bedeutet, dass er für eine Granularität pro Pixel oder pro Beispiel angegeben werden `SV_StencilRef` kann.
 
-Dieses Feature ist in D3D11.3 optional. Überprüfen Sie zum Testen der Unterstützung das `PSSpecifiedStencilRefSupported` boolesche Feld [**D3D11 \_ FEATURE DATA \_ \_ D3D11 \_ OPTIONS2**](/windows/desktop/api/D3D11/ns-d3d11-d3d11_feature_data_d3d11_options2) mit [**ID3D11Device::CheckFeatureSupport.**](/windows/desktop/api/D3D11/nf-d3d11-id3d11device-checkfeaturesupport)
+Dieses Feature ist in D3D11.3 optional. Überprüfen Sie zum Testen der Unterstützung das boolesche Feld von `PSSpecifiedStencilRefSupported` [**D3D11 \_ FEATURE \_ DATA \_ D3D11 \_ OPTIONS2**](/windows/desktop/api/D3D11/ns-d3d11-d3d11_feature_data_d3d11_options2) mit [**ID3D11Device::CheckFeatureSupport.**](/windows/desktop/api/D3D11/nf-d3d11-id3d11device-checkfeaturesupport)
 
-Hier sehen Sie ein Beispiel für die Verwendung von `SV_StencilRef` in einem Pixel-Shader:
+Hier ist ein Beispiel für die Verwendung von `SV_StencilRef` in einem Pixel-Shader:
 
 ``` syntax
 uint main2(float4 c : COORD) : SV_StencilRef

@@ -23,11 +23,11 @@ ms.locfileid: "118987980"
 ---
 # <a name="id3dxanimationcallbackhandler-interface"></a>ID3DXAnimationCallbackHandler-Schnittstelle
 
-Eine Anwendung implementiert diese Schnittstelle, um Rückrufe in Animationssätzen zu verarbeiten, die durch Aufrufe von [**ID3DXAnimationController::AdvanceTime generiert werden.**](id3dxanimationcontroller--advancetime.md)
+Eine Anwendung implementiert diese Schnittstelle, um Rückrufe in Animationssätzen zu verarbeiten, die durch Aufrufe von [**ID3DXAnimationController::AdvanceTime**](id3dxanimationcontroller--advancetime.md)generiert werden.
 
 ## <a name="members"></a>Member
 
-Die **ID3DXAnimationCallbackHandler-Schnittstelle** erbt von der [**IUnknown-Schnittstelle.**](/windows/win32/api/unknwn/nn-unknwn-iunknown) **ID3DXAnimationCallbackHandler** verfügt auch über diese Membertypen:
+Die **ID3DXAnimationCallbackHandler-Schnittstelle** erbt von der [**IUnknown-Schnittstelle.**](/windows/win32/api/unknwn/nn-unknwn-iunknown) **ID3DXAnimationCallbackHandler** verfügt auch über diese Typen von Membern:
 
 -   [Methoden](#methods)
 
@@ -39,7 +39,7 @@ Die **ID3DXAnimationCallbackHandler-Schnittstelle** verfügt über diese Methode
 
 | Methode                                                                  | BESCHREIBUNG                                                                                                                                                                                                                                        |
 |:------------------------------------------------------------------------|:---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| [**HandleCallback**](id3dxanimationcallbackhandler--handlecallback.md) | Die Anwendung implementiert diese Methode. Diese Methode wird aufgerufen, wenn während eines Aufrufs von [**ID3DXAnimationController::AdvanceTime**](id3dxanimationcontroller--advancetime.md)ein Rückruf für eine Animation auftritt, die in einer der Spuren festgelegt wurde.<br/> |
+| [**HandleCallback**](id3dxanimationcallbackhandler--handlecallback.md) | Die Anwendung implementiert diese Methode. Diese Methode wird aufgerufen, wenn während eines Aufrufs von [**ID3DXAnimationController::AdvanceTime**](id3dxanimationcontroller--advancetime.md)ein Rückruf für eine Animation auftritt, die in einer der Spuren festgelegt ist.<br/> |
 
 
 
@@ -47,7 +47,7 @@ Die **ID3DXAnimationCallbackHandler-Schnittstelle** verfügt über diese Methode
 
 ## <a name="remarks"></a>Hinweise
 
-Der LPD3DXANIMATIONCALLBACKHANDLER-Typ ist als Zeiger auf diese Schnittstelle definiert.
+Der LPD3DXANIMATIONCALLBACKHANDLER-Typ wird als Zeiger auf diese Schnittstelle definiert.
 
 
 ```
@@ -68,7 +68,7 @@ typedef interface ID3DXAnimationCallbackHandler *LPD3DXANIMATIONCALLBACKHANDLER;
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 

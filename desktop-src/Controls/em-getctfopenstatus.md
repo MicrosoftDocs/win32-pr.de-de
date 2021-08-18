@@ -1,9 +1,9 @@
 ---
-title: EM_GETCTFOPENSTATUS Meldung (RichEdit. h)
-description: Bestimmt, ob die TSF-Tastatur (Text Services Framework) geöffnet oder geschlossen ist.
+title: EM_GETCTFOPENSTATUS (Richedit.h)
+description: Bestimmt, ob die Textdienstframework (TSF) geöffnet oder geschlossen ist.
 ms.assetid: a50fedf4-b4e5-4b99-be46-1bbbf08e85a8
 keywords:
-- Windows-Steuerelemente für EM_GETCTFOPENSTATUS Meldung
+- EM_GETCTFOPENSTATUS meldungssteuerelemente Windows
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 3ce1bbf09af6c61a33c33c4172ff699fa5bd26f4
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: ef55fe0944ad3632f8bfec11894c5613efde02dc1ec16f8c0d31105f6b19ea8e
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "103956581"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119019738"
 ---
-# <a name="em_getctfopenstatus-message"></a>EM \_ getctfopenstatus-Meldung
+# <a name="em_getctfopenstatus-message"></a>EM \_ GETCTFOPENSTATUS-Nachricht
 
-Bestimmt, ob die TSF-Tastatur (Text Services Framework) geöffnet oder geschlossen ist.
+Bestimmt, ob die Textdienstframework (TSF) geöffnet oder geschlossen ist.
 
 ## <a name="parameters"></a>Parameter
 
@@ -45,7 +45,7 @@ Nicht verwendet; muss 0 (null) sein.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Wenn die TSF-Tastatur geöffnet ist, ist der Rückgabewert " **true**". Andernfalls ist Sie **false**.
+Wenn die TSF-Tastatur geöffnet ist, ist der Rückgabewert **TRUE.** Andernfalls ist dies **FALSE.**
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -53,9 +53,9 @@ Wenn die TSF-Tastatur geöffnet ist, ist der Rückgabewert " **true**". Andernfa
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows XP mit SP1 \[ Desktop-Apps\]<br/>                                  |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/>                                  |
-| Header<br/>                   | <dl> <dt>RichEdit. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur XP mit \[ SP1-Desktop-Apps\]<br/>                                  |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                                  |
+| Header<br/>                   | <dl> <dt>Richedit.h</dt> </dl> |
 
 
 
@@ -63,7 +63,7 @@ Wenn die TSF-Tastatur geöffnet ist, ist der Rückgabewert " **true**". Andernfa
 
 <dl> <dt>
 
-[**EM \_ setctfopenstatus**](em-setctfopenstatus.md)
+[**EM \_ SETCTFOPENSTATUS**](em-setctfopenstatus.md)
 </dt> </dl>
 
  

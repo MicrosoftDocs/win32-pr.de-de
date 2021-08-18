@@ -1,21 +1,21 @@
 ---
-description: Zum Abrufen einer Liste von Anbietern, die ihr Manifest oder MOF-Klassen auf dem Computer installiert haben, rufen Sie die Funktion tdhenenerateproviders auf.
+description: Um eine Liste der Anbieter abzurufen, die ihre Manifest- oder MOF-Klassen auf dem Computer installiert haben, rufen Sie die TdhEnumerateProviders-Funktion auf.
 ms.assetid: 79a29a55-e211-4921-ac78-a21ef8ef238f
 title: Auflisten von Anbietern
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 63f12ba5ad17816ada25bcaffd169e89acca8868
-ms.sourcegitcommit: 3d9dce1bd6c84e2b51759e940aa95aa9b459cd20
+ms.openlocfilehash: a1b93bcecbd1713a2945ea97703a77ab33629987f989505dea9498d03b7cb17c
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/04/2021
-ms.locfileid: "104219034"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119755070"
 ---
 # <a name="enumerating-providers"></a>Auflisten von Anbietern
 
-Zum Abrufen einer Liste von Anbietern, die ihr Manifest oder MOF-Klassen auf dem Computer installiert haben, rufen Sie die Funktion [**tdhenenerateproviders**](/windows/desktop/api/Tdh/nf-tdh-tdhenumerateproviders) auf.
+Um eine Liste der Anbieter abzurufen, die ihre Manifest- oder MOF-Klassen auf dem Computer installiert haben, rufen Sie die [**TdhEnumerateProviders-Funktion**](/windows/desktop/api/Tdh/nf-tdh-tdhenumerateproviders) auf.
 
-Im folgenden Beispiel wird gezeigt, wie Anbieter aufgelistet werden.
+Im folgenden Beispiel wird gezeigt, wie Anbieter aufzählt werden.
 
 
 ```C++

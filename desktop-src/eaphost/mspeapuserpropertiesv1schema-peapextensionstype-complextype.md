@@ -1,9 +1,9 @@
 ---
-title: Komplexer Dateityp "Peer apextensionstype" (Verbindungs Eigenschaften)
-description: Erfahren Sie mehr über den komplexen Typ "apapextensionstype". Dieser Typ ermöglicht zukünftige Erweiterungen des Schemas.
+title: Komplexer PeapExtensionsType-Typ (Verbindungseigenschaften)
+description: Erfahren Sie mehr über den komplexen PeapExtensionsType-Typ. Dieser Typ ermöglicht zukünftige Verbesserungen am Schema.
 ms.assetid: d4f7784d-d426-4da6-bf81-40716f185416
 keywords:
-- Komplexer Typ von "etapextensionstype" EAPHost
+- Komplexer PeapExtensionsType-Typ EAPHost
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ ms.topic: reference
 ms.date: 05/31/2018
 api_location: ''
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: 4bf7e22a013bbd7a931b61b55ae0013bb42f4e41
-ms.sourcegitcommit: b0ebdefc3dcd5c04bede94091833aa1015a2f95c
+ms.openlocfilehash: 9a72fa87b3f1cf5ba4a65c179895c22e5a208616ed8c9b2ffb9f046e5de9b92e
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/21/2020
-ms.locfileid: "104316485"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118983920"
 ---
-# <a name="peapextensionstype-complex-type-connection-properties"></a>Komplexer Dateityp "Peer apextensionstype" (Verbindungs Eigenschaften)
+# <a name="peapextensionstype-complex-type-connection-properties"></a>Komplexer PeapExtensionsType-Typ (Verbindungseigenschaften)
 
-Der komplexe Typ " **Peer apextensionstype** " ermöglicht zukünftige Erweiterungen des Schemas.
+Der komplexe **PeapExtensionsType-Typ** ermöglicht zukünftige Verbesserungen am Schema.
 
 ``` syntax
 <xs:complexType name="PeapExtensionsType">
@@ -38,26 +38,26 @@ Der komplexe Typ " **Peer apextensionstype** " ermöglicht zukünftige Erweiteru
 </xs:complexType>
 ```
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Der komplexe Typ " **Peer apextensionstype** " ist optional.
+Der komplexe **PeapExtensionsType-Typ** ist optional.
 
 ## <a name="requirements"></a>Anforderungen
 
 
 
-| Role | Mindestens unterstützte Betriebssystemversion |
+| Role | Unterstützte Mindestversion des Betriebssystems |
 |------|------------------------------|
-| Client<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>       |
-| Server<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/> |
+| Client<br/> | Windows \[Nur Vista-Desktop-Apps\]<br/>       |
+| Server<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[EAPHost und Legacy Schema](eaphost-schemas.md)
+[EAPHost und Legacyschema](eaphost-schemas.md)
 </dt> <dt>
 
 [mspeapuserpropertiesv1-Schema](mspeapuserpropertiesv1schema-schema.md)

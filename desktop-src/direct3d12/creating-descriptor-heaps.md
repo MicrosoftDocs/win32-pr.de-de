@@ -1,31 +1,31 @@
 ---
-title: Erstellen von deskriptorheaps
-description: Zum Erstellen und Konfigurieren eines deskriptorheaps müssen Sie einen deskriptorheap auswählen, die Anzahl der enthaltenen Deskriptoren bestimmen und Flags festlegen, die angeben, ob CPU-sichtbar und/oder Shader sichtbar sind.
+title: Erstellen von Deskriptorheaps
+description: Zum Erstellen und Konfigurieren eines Deskriptor-Heaps müssen Sie einen Deskriptor-Heaptyp auswählen, bestimmen, wie viele Deskriptoren er enthält, und Flags festlegen, die angeben, ob er cpu- und/oder shader sichtbar ist.
 ms.assetid: 58677023-692C-4BA4-90B7-D568F3DD3F73
 ms.localizationpriority: high
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 1e472a0749634d5cbaa9cbf1cde5e11202d4c4f9
-ms.sourcegitcommit: 592c9bbd22ba69802dc353bcb5eb30699f9e9403
+ms.openlocfilehash: 218d21d462dd393360e9ebfcb07ab5b35524b9d8d8c01c8ab1ef28ef90166eb2
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "104548657"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119857990"
 ---
-# <a name="creating-descriptor-heaps"></a>Erstellen von deskriptorheaps
+# <a name="creating-descriptor-heaps"></a>Erstellen von Deskriptorheaps
 
-Zum Erstellen und Konfigurieren eines deskriptorheaps müssen Sie einen deskriptorheap auswählen, die Anzahl der enthaltenen Deskriptoren bestimmen und Flags festlegen, die angeben, ob CPU-sichtbar und/oder Shader sichtbar sind.
+Zum Erstellen und Konfigurieren eines Deskriptor-Heaps müssen Sie einen Deskriptor-Heaptyp auswählen, bestimmen, wie viele Deskriptoren er enthält, und Flags festlegen, die angeben, ob er cpu- und/oder shader sichtbar ist.
 
--   [Deskriptorheap-Typen](#descriptor-heap-types)
--   [Deskriptorheap-Eigenschaften](#descriptor-heap-properties)
+-   [Deskriptor-Heaptypen](#descriptor-heap-types)
+-   [Deskriptor-Heapeigenschaften](#descriptor-heap-properties)
 -   [Deskriptorhandles](#descriptor-handles)
--   [Deskriptorheap-Methoden](#descriptor-heap-methods)
--   [Wrapper für minimalen deskriptorheap](#minimal-descriptor-heap-wrapper)
--   [Verwandte Themen](#related-topics)
+-   [Deskriptor-Heapmethoden](#descriptor-heap-methods)
+-   [Minimaler Deskriptor-Heap-Wrapper](#minimal-descriptor-heap-wrapper)
+-   [Zugehörige Themen](#related-topics)
 
-## <a name="descriptor-heap-types"></a>Deskriptorheap-Typen
+## <a name="descriptor-heap-types"></a>Deskriptor-Heaptypen
 
-Der Typ des Heaps wird von einem Member der [**D3D12 \_ Descriptor \_ Heap \_ Type**](/windows/desktop/api/d3d12/ne-d3d12-d3d12_descriptor_heap_type) -Enumeration bestimmt:
+Der Heaptyp wird von einem Member der [**D3D12 \_ DESCRIPTOR \_ HEAP TYPE-Enumerator \_**](/windows/desktop/api/d3d12/ne-d3d12-d3d12_descriptor_heap_type) bestimmt:
 
 ``` syntax
 typedef enum D3D12_DESCRIPTOR_HEAP_TYPE
@@ -38,15 +38,15 @@ typedef enum D3D12_DESCRIPTOR_HEAP_TYPE
 } D3D12_DESCRIPTOR_HEAP_TYPE;
 ```
 
-## <a name="descriptor-heap-properties"></a>Deskriptorheap-Eigenschaften
+## <a name="descriptor-heap-properties"></a>Deskriptor-Heapeigenschaften
 
-Heap Eigenschaften werden für die [**D3D12 \_ Descriptor \_ Heap \_**](/windows/desktop/api/d3d12/ns-d3d12-d3d12_descriptor_heap_desc) -Struktur festgelegt, die sowohl auf den [**D3D12 \_ Deskriptor- \_ heaptyp \_**](/windows/desktop/api/d3d12/ne-d3d12-d3d12_descriptor_heap_type) als auch auf [**D3D12 \_ Descriptor \_ Heap \_ Flags**](/windows/desktop/api/d3d12/ne-d3d12-d3d12_descriptor_heap_flags) -enumerationsenumerationsvorgänge verweist.
+Heapeigenschaften werden für die [**D3D12 \_ DESCRIPTOR \_ HEAP \_ DESC-Struktur**](/windows/desktop/api/d3d12/ns-d3d12-d3d12_descriptor_heap_desc) festgelegt, die sowohl auf die [**D3D12 \_ DESCRIPTOR \_ HEAP \_ TYPE-**](/windows/desktop/api/d3d12/ne-d3d12-d3d12_descriptor_heap_type) als auch [**auf die D3D12 \_ DESCRIPTOR \_ HEAP FLAGS-Enumeren \_**](/windows/desktop/api/d3d12/ne-d3d12-d3d12_descriptor_heap_flags) verweist.
 
-Das Flag "Flag D3D12 \_ Deskriptor \_ Heap \_ Flag", das \_ \_ sichtbar ist, kann optional für einen deskriptorheap festgelegt werden, um anzugeben, dass es an eine Befehlsliste für den Verweis durch Shader gebunden ist. Deskriptorheaps, die *ohne* dieses Flag erstellt werden, ermöglichen es Anwendungen, Deskriptoren im CPU-Arbeitsspeicher bereitzustellen, bevor Sie Sie als praktische Kopie in den sichtbaren Shader-deskriptorheap kopieren. Es ist jedoch auch für Anwendungen in Ordnung, Deskriptoren direkt in Shader sichtbare deskriptorheaps zu erstellen, ohne dass eine Bereitstellung auf der CPU erforderlich ist.
+Das Flag D3D12 DESCRIPTOR HEAP FLAG SHADER VISIBLE kann optional für einen \_ \_ \_ \_ Deskriptorhap festgelegt werden, um anzugeben, dass es an eine Befehlsliste gebunden ist, um von \_ Shadern referenziert zu werden. Deskriptorheaps,  die ohne dieses Flag erstellt wurden, ermöglichen Es Anwendungen, Deskriptoren im CPU-Arbeitsspeicher vor dem Kopieren in einen shader sichtbaren Deskriptorheap aus Gründen der Einfachheit zu stagen. Es ist aber auch für Anwendungen in Ordnung, Deskriptoren direkt in Shader-sichtbaren Deskriptorhaps zu erstellen, ohne dass eine Stufe auf der CPU erforderlich ist.
 
-Dieses Flag gilt nur für CBV, SRV, UAV und Samplers. Sie gilt nicht für andere deskriptorheap-Typen, da Shader nicht direkt auf die anderen Typen verweisen.
+Dieses Flag gilt nur für CBV, SRV, UAV und Sampler. Sie gilt nicht für andere Deskriptor-Heaptypen, da Shader nicht direkt auf die anderen Typen verweisen.
 
-Beschreiben Sie z. b. einen sampldeskriptorheap, und erstellen Sie ihn.
+Beschreiben und erstellen Sie beispielsweise einen Samplerdeskriptor-Heap.
 
 
 ```C++
@@ -60,7 +60,7 @@ ThrowIfFailed(m_device->CreateDescriptorHeap(&samplerHeapDesc, IID_PPV_ARGS(&m_s
 
 
 
-Beschreiben und erstellen Sie eine Konstante Puffer Ansicht (CBV), Shader-Ressourcen Ansicht (SRV) und den deskriptorheap für die ungeordnete Zugriffs Ansicht (UAV).
+Beschreiben und erstellen Sie einen CBV-Deskriptordeskriptor-Heap (Constant Buffer View), eine Shader-Ressourcenansicht (SRV) und eine ungeordnete Zugriffsansicht (Unordered Access View, UAV).
 
 
 ```C++
@@ -80,17 +80,17 @@ m_srvUavDescriptorSize = m_device->GetDescriptorHandleIncrementSize(D3D12_DESCRI
 
 ## <a name="descriptor-handles"></a>Deskriptorhandles
 
-Die [**D3D12 \_ GPU- \_ \_ Deskriptorhandle**](/windows/desktop/api/d3d12/ns-d3d12-d3d12_gpu_descriptor_handle) -und [**D3D12-CPU- \_ \_ \_ Deskriptorhandle**](/windows/desktop/api/d3d12/ns-d3d12-d3d12_cpu_descriptor_handle) -Strukturen identifizieren bestimmte Deskriptoren in einem deskriptorheap. Ein Handle ist etwas wie ein Zeiger, aber die Anwendung darf es nicht manuell dereferenzieren. Andernfalls ist das Verhalten nicht definiert. Die Verwendung der Handles muss die API überlaufen. Ein Handle selbst kann frei kopiert oder an APIs weitergegeben werden, die mit Deskriptoren arbeiten bzw. verwenden. Es gibt keine Verweis Zählung, deshalb muss die Anwendung sicherstellen, dass Sie kein Handle verwendet, nachdem der zugrunde liegende deskriptorheap gelöscht wurde.
+Die [**STRUKTUREN D3D12 \_ GPU \_ DESCRIPTOR \_ HANDLE**](/windows/desktop/api/d3d12/ns-d3d12-d3d12_gpu_descriptor_handle) und [**D3D12 \_ CPU \_ DESCRIPTOR \_ HANDLE**](/windows/desktop/api/d3d12/ns-d3d12-d3d12_cpu_descriptor_handle) identifizieren bestimmte Deskriptoren in einem Deskriptorhap. Ein Handle ist ein wenig wie ein Zeiger, aber die Anwendung darf es nicht manuell dereferenzieren. Andernfalls ist das Verhalten nicht definiert. Die Verwendung der Handles muss über die API gehen. Ein Handle selbst kann frei kopiert oder an APIs übergeben werden, die Deskriptoren verwenden bzw. verwenden. Es gibt keine Ref-Zählung, daher muss die Anwendung sicherstellen, dass sie kein Handle verwendet, nachdem der zugrunde liegende Deskriptorhap gelöscht wurde.
 
-Anwendungen können die Inkrement-Größe der Deskriptoren für einen bestimmten deskriptorheap-Typ ermitteln, sodass Sie Handles für jede Position in einem deskriptorheap manuell beginnend mit dem Handle bis zur Basis generieren können. Anwendungen müssen die Inkrement-Größen für Deskriptorhandles niemals hart codieren und sollten Sie immer für eine bestimmte Geräte Instanz Abfragen. Andernfalls ist das Verhalten nicht definiert. Anwendungen müssen die Inkrement-Größen und-Handles nicht verwenden, um eine eigene Prüfung oder Bearbeitung von deskriptorheap-Daten durchzuführen, da die Ergebnisse nicht definiert sind. Die Handles werden möglicherweise nicht als Zeiger verwendet, sondern eher als Proxys für Zeiger, um eine versehentliche Dereferenzierung zu vermeiden.
+Anwendungen können die Inkrementgröße der Deskriptoren für einen bestimmten Deskriptor-Heaptyp herausfinden, sodass sie Handles an jedem Speicherort in einem Deskriptorhap manuell generieren können, beginnend vom Handle bis zur Basis. Anwendungen dürfen inkrementierte Größen niemals hartcodieren und sollten sie immer für eine bestimmte Geräteinstanz abfragen. Andernfalls ist das Verhalten nicht definiert. Anwendungen dürfen auch nicht die inkrementierten Größen und Handles verwenden, um ihre eigene Untersuchung oder Bearbeitung von Deskriptor-Heapdaten zu tun, da die Ergebnisse daraus nicht definiert sind. Die Handles werden möglicherweise nicht als Zeiger, sondern als Proxys für Zeiger verwendet, um eine versehentliche Deleitung zu vermeiden.
 
 > [!Note]
 >
-> Es gibt eine hilfsstruktur, ein CD3DX12 \_ GPU- \_ \_ Deskriptorhandle, das in der Kopfzeile d3dx12. h definiert ist, die die [**D3D12 \_ GPU- \_ \_ Deskriptorhandle**](/windows/desktop/api/d3d12/ns-d3d12-d3d12_gpu_descriptor_handle) -Struktur erbt und Initialisierungs-und andere nützliche Vorgänge bereitstellt. Auf ähnliche Weise \_ wird die hilfsstruktur des CD3DX12-CPU- \_ \_ Deskriptorhandles für die [**D3D12-CPU- \_ \_ \_ Deskriptorhandle**](/windows/desktop/api/d3d12/ns-d3d12-d3d12_cpu_descriptor_handle) -Struktur definiert.
+> Es gibt eine Hilfsstruktur, CD3DX12 GPU DESCRIPTOR HANDLE, definiert im Header \_ \_ \_ d3dx12.h, die die [**D3D12 \_ GPU \_ DESCRIPTOR \_ HANDLE-Struktur**](/windows/desktop/api/d3d12/ns-d3d12-d3d12_gpu_descriptor_handle) erbt und Initialisierung und andere nützliche Vorgänge bietet. Ebenso wird die HILFSstruktur CD3DX12 CPU DESCRIPTOR HANDLE für die \_ \_ \_ [**D3D12 \_ CPU \_ DESCRIPTOR \_ HANDLE-Struktur**](/windows/desktop/api/d3d12/ns-d3d12-d3d12_cpu_descriptor_handle) definiert.
 
- 
+ 
 
-Beide Hilfsstrukturen werden beim Auffüllen von Befehlslisten verwendet.
+Beide Hilfsstrukturen werden beim Auflisten von Befehlslisten verwendet.
 
 
 ```C++
@@ -163,17 +163,17 @@ void D3D12nBodyGravity::PopulateCommandList()
 
 
 
-## <a name="descriptor-heap-methods"></a>Deskriptorheap-Methoden
+## <a name="descriptor-heap-methods"></a>Deskriptor-Heapmethoden
 
-Deskriptorheaps ([**ID3D12DescriptorHeap**](/windows/desktop/api/d3d12/nn-d3d12-id3d12descriptorheap)) erben von [**ID3D12Pageable**](/windows/win32/api/d3d12/nn-d3d12-id3d12pageable). Dies erzwingt die Residenz Verwaltung von deskriptorheaps für Anwendungen, ebenso wie Ressourcen Heaps. Die terminologieverwaltungmethoden gelten nur für für Shader sichtbare Heaps, da die nicht-Shader-sichtbaren Heaps nicht direkt für die GPU sichtbar sind.
+Deskriptorheaps ([**ID3D12DescriptorHeap**](/windows/desktop/api/d3d12/nn-d3d12-id3d12descriptorheap)) erben von [**ID3D12Pageable**](/windows/win32/api/d3d12/nn-d3d12-id3d12pageable). Dies erzwingt die Verantwortung für die Verwaltung derResidenz von Deskriptorhaps für Anwendungen, genau wie Ressourcenhaps. Die Verwaltungsmethoden für die Residency gelten nur für shader-sichtbare Heaps, da die nicht shader sichtbaren Heaps nicht direkt für die GPU sichtbar sind.
 
-Die [**ID3D12Device:: getdescriptorhandleinkrementsize**](/windows/desktop/api/d3d12/nf-d3d12-id3d12device-getdescriptorhandleincrementsize) -Methode ermöglicht es Anwendungen, Handles manuell in einen Heap zu versetzen (wodurch Handles an beliebiger Stelle in einem deskriptorheap erzeugt werden). Das Handle des Heap Start Speicher Orts stammt aus [**ID3D12DescriptorHeap:: getcpudescriptorlenker forheapstart**](/windows/desktop/api/d3d12/nf-d3d12-id3d12descriptorheap-getcpudescriptorhandleforheapstart) / [**ID3D12DescriptorHeap:: getgpudescriptorlenker forheapstart**](/windows/desktop/api/d3d12/nf-d3d12-id3d12descriptorheap-getgpudescriptorhandleforheapstart). Das Offsetting erfolgt durch Hinzufügen der Inkrement-Größe \* die Anzahl der Deskriptoren, die auf den deskriptorheap-Start versetzt werden. Beachten Sie, dass die Inkrement-Größe nicht als Bytegröße betrachtet werden kann, da Anwendungen die Handles nicht dereferenzieren dürfen, als wären Sie Arbeitsspeicher – der Speicher, auf den verwiesen wird, verfügt über ein nicht standardisiertes Layout und kann sogar für ein bestimmtes Gerät variieren.
+Mit der [**ID3D12Device::GetDescriptorHandleIncrementSize-Methode**](/windows/desktop/api/d3d12/nf-d3d12-id3d12device-getdescriptorhandleincrementsize) können Anwendungen Handles manuell in einem Heap veroffen (handles werden an einer beliebigen Stelle in einem Deskriptor-Heap erzeugt). Das Handle des Heapstartspeicherorts stammt von [**ID3D12DescriptorHeap::GetCPUDescriptorHandleForHeapStart**](/windows/desktop/api/d3d12/nf-d3d12-id3d12descriptorheap-getcpudescriptorhandleforheapstart) / [**ID3D12DescriptorHeap::GetGPUDescriptorHandleForHeapStart**](/windows/desktop/api/d3d12/nf-d3d12-id3d12descriptorheap-getgpudescriptorhandleforheapstart). Das Deaktivieren erfolgt durch Hinzufügen der Inkrementgröße der Anzahl von Deskriptoren, die dem \* Deskriptor heap start versetzt werden soll. Beachten Sie, dass die Inkrementgröße nicht als Bytegröße gedacht werden kann, da Anwendungen Handles nicht dereferenzieren dürfen, als ob es sich um Arbeitsspeicher handelt. Der Arbeitsspeicher, auf den verwiesen wird, weist ein nicht standardisiertes Layout auf und kann auch für ein bestimmtes Gerät variieren.
 
-[**Getcpudescriptorlenker forheapstart**](/windows/desktop/api/d3d12/nf-d3d12-id3d12descriptorheap-getcpudescriptorhandleforheapstart) gibt ein CPU-Handle für die CPU-sichtbaren deskriptorheaps zurück. Es wird ein NULL-Handle zurückgegeben (und die debugschicht meldet einen Fehler), wenn der deskriptorheap nicht CPU-sichtbar ist.
+[**GetCPUDescriptorHandleForHeapStart**](/windows/desktop/api/d3d12/nf-d3d12-id3d12descriptorheap-getcpudescriptorhandleforheapstart) gibt ein CPU-Handle für CPU-sichtbare Deskriptorheaps zurück. Sie gibt ein NULL-Handle zurück (und die Debugebene gibt einen Fehler aus), wenn der Deskriptorhap nicht CPU-sichtbar ist.
 
-[**Getgpudescriptorlenker forheapstart**](/windows/desktop/api/d3d12/nf-d3d12-id3d12descriptorheap-getgpudescriptorhandleforheapstart) gibt ein GPU-Handle für die für Shader sichtbaren deskriptorheaps zurück. Es wird ein NULL-Handle zurückgegeben (und die debugschicht meldet einen Fehler), wenn der deskriptorheap nicht als Shader sichtbar ist.
+[**GetGPUDescriptorHandleForHeapStart**](/windows/desktop/api/d3d12/nf-d3d12-id3d12descriptorheap-getgpudescriptorhandleforheapstart) gibt ein GPU-Handle für shader-sichtbare Deskriptorheaps zurück. Sie gibt ein NULL-Handle zurück (und die Debugebene gibt einen Fehler aus), wenn der Deskriptorhap nicht sichtbar ist.
 
-Beispielsweise erstellen Sie renderzielsichten, um D2D Text mit einem 11on12-Gerät anzuzeigen.
+Beispiel: Erstellen von Renderzielansichten zum Anzeigen von D2D-Text mithilfe eines 11on12-Geräts.
 
 
 ```C++
@@ -233,9 +233,9 @@ Beispielsweise erstellen Sie renderzielsichten, um D2D Text mit einem 11on12-Ger
 
 
 
-## <a name="minimal-descriptor-heap-wrapper"></a>Wrapper für minimalen deskriptorheap
+## <a name="minimal-descriptor-heap-wrapper"></a>Minimaler Deskriptor-Heap-Wrapper
 
-Anwendungsentwickler möchten wahrscheinlich ihren eigenen Hilfscode zum Verwalten von Deskriptorhandles und Heaps erstellen. Unten ist ein einfaches Beispiel dargestellt. Komplexere Wrapper können z. b. nachverfolgen, welche Arten von Deskriptoren sich in einem Heap befinden und die deskriptorerstellungs-Argumente speichern.
+Anwendungsentwickler möchten wahrscheinlich ihren eigenen Hilfscode für die Verwaltung von Deskriptorhandles und Heaps erstellen. Im Folgenden finden Sie ein einfaches Beispiel. Komplexere Wrapper könnten beispielsweise nachverfolgen, welche Arten von Deskriptoren sich in einem Heap befinden, und die Argumente für die Deskriptorerstellung speichern.
 
 ``` syntax
 class CDescriptorHeapWrapper
@@ -284,13 +284,13 @@ public:
 };
 ```
 
-## <a name="related-topics"></a>Verwandte Themen
+## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
 [Deskriptorheaps](descriptor-heaps.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 

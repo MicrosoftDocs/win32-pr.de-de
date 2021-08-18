@@ -20,7 +20,7 @@ ms.locfileid: "118995272"
 
 Dieser Leitfaden ist eine Reihe ausführlicher Erläuterungen zum Erstellen verschiedener Arten von Skins. Weitere allgemeine Informationen zu Skins finden Sie unter Informationen zu [Skins.](about-skins.md) Spezifische Details zu jedem Attribut, jeder Methode und jedem Ereignis, das in Skins verwendet wird, finden Sie in der Referenz zur [Skinprogrammierung.](skin-programming-reference.md) Wenn Sie mehr an der Programmierung Ihrer Skin beteiligt sind, können Sie den Teil dieses SDK lesen, der die [Windows Media Player Object Model](windows-media-player-object-model.md)abdeckt.
 
-In diesem Leitfaden erhalten Sie Anweisungen zum Erstellen der Grafik für Adobe Acrobat 5.5, ein beliebtes Programm zur Bearbeitung von Bildern. Die spezifischen Anweisungen können sich unterscheiden, wenn Sie über ein ähnliches Grafikprogramm wie Jasc Paint Shop Pro oder Sonic Foundry Decryptioy verfügen, die Konzepte jedoch identisch sind. Es gibt zwei Gründe für die Auswahl von Albums: Es handelt sich um ein beliebtes Grafikprogramm für kommerzielle Interpreten, das mit Schichten arbeitet. Wie Sie in den Tutorials sehen werden, sind Ebenen sehr nützlich für die Skinerstellung.
+In diesem Leitfaden erhalten Sie Anweisungen zum Erstellen der Grafik für Adobe Acrobat 5.5, ein beliebtes Programm zur Bearbeitung von Bildern. Die spezifischen Anweisungen können sich unterscheiden, wenn Sie über ein ähnliches Grafikprogramm wie Jasc Paint Shop Pro oder Sonic Foundry Decryptioy verfügen, aber die Konzepte sind identisch. Es gibt zwei Gründe für die Auswahl von Albums: Es handelt sich um ein beliebtes Grafikprogramm für kommerzielle Interpreten, das mit Schichten arbeitet. Wie Sie in den Tutorials sehen werden, sind Ebenen sehr nützlich für die Skinerstellung.
 
 In diesem Leitfaden werden die folgenden Aufgaben behandelt.
 
@@ -28,7 +28,7 @@ In diesem Leitfaden werden die folgenden Aufgaben behandelt.
 
 | Aufgabe                                                     | BESCHREIBUNG                                                                                     |
 |----------------------------------------------------------|-------------------------------------------------------------------------------------------------|
-| [Erstellen Ihrer ersten Skin](building-your-first-skin.md) | Eine exemplarische Durchdingung einer einfachen Skin, die Windows Media Player beginnt und beendet.                     |
+| [Erstellen Ihrer ersten Skin](building-your-first-skin.md) | Eine exemplarische Durchlauf- einer einfachen Skin, die Windows Media Player beginnt und beendet.                     |
 | [Hinzufügen einer Wiedergabeliste](adding-a-playlist.md)               | Verwenden einer einfachen Wiedergabeliste                                                                   |
 | [Auswählen von Dateien](choosing-files.md)                     | Auswählen von Dateien mit einem dialogfeld "Datei öffnen".                                                 |
 | [Hinzufügen von Videos](adding-video.md)                         | Hier erfahren Sie, wie Sie ein Videofenster in Ihre Skin integrieren.                                                       |

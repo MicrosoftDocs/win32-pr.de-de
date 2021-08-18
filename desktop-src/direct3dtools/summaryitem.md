@@ -41,13 +41,13 @@ Stellt zusammenfassende Informationen zu einem Ereignis dar.
 Eine COM-Zeichenfolge, die den Namen des zusammengefassten Ereignisses enthält.
 
 **Wert**  
-Eine COM-Zeichenfolge, die einen Wert enthält, der mit dem Ereignis verknüpft ist.
+Eine COM-Zeichenfolge, die einen wert enthält, der mit dem Ereignis verknüpft ist.
 
 **ID**  
 Die ID des Ereignisses.
 
 **Parentid**  
-Die ID des Übergeordneten Ereignisses, falls eine davon ist.
+Die ID des übergeordneten Ereignisses, falls vorhanden.
 
 ## <a name="requirements"></a>Anforderungen
 

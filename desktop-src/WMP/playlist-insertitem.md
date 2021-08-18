@@ -78,7 +78,7 @@ Um diese Methode verwenden zu können, ist Vollzugriff auf die Bibliothek erford
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 

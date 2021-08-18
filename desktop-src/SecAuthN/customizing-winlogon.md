@@ -1,69 +1,69 @@
 ---
-description: Anpassen des Winlogon-Verhaltens durch Implementieren eines Anmelde Informationsanbieters.
+description: Passen Sie das Winlogon-Verhalten an, indem Sie eine Anmeldeinformationsanbieter.
 ms.assetid: 70b47e29-c755-4c59-a493-d7fcbbc94b83
-title: Anpassen von Winlogon
+title: Anpassen der Winlogon
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: b64da4baae9b52dd53e288c631f35d33ea5a3085
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: a10b2ae1e029bb741a2402a25d8e51f331fdd1cac1e9918dfef3b35b36c8e6d4
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106357393"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119008658"
 ---
-# <a name="customizing-winlogon"></a>Anpassen von Winlogon
+# <a name="customizing-winlogon"></a>Anpassen der Winlogon
 
-Anpassen des [*Winlogon*](/windows/desktop/SecGloss/w-gly) -Verhaltens durch Implementieren eines Anmelde Informationsanbieters. Weitere Informationen zu Anmelde Informationsanbietern finden Sie unter [**ikredentialprovider-Schnittstelle**](/windows/win32/api/credentialprovider/nn-credentialprovider-icredentialprovider).
+Anpassen [*des Winlogon-Verhaltens*](/windows/desktop/SecGloss/w-gly) durch Implementieren eines Anmeldeinformationsanbieter. Informationen zu Anmeldeinformationsanbietern finden Sie unter [**ICredentialProvider-Schnittstelle**](/windows/win32/api/credentialprovider/nn-credentialprovider-icredentialprovider).
 
-**Windows Server 2003 und Windows XP:** Anmelde Informationsanbieter werden nicht unterstützt.
+**Windows Server 2003 und Windows XP:** Anmeldeinformationsanbieter werden nicht unterstützt.
 
-In den folgenden Abschnitten werden Möglichkeiten zum Anpassen von Winlogon in Windows-Versionen vor Windows Vista beschrieben.
+In den folgenden Abschnitten werden Möglichkeiten zum Anpassen der Winlogon in Windows Versionen vor Windows Vista beschrieben.
 
 > [!Note]  
-> Gina-DLLs und Winlogon-Benachrichtigungs Pakete werden in Windows Vista ignoriert.
+> GINA-DLLs und Winlogon-Benachrichtigungspakete werden in Windows Vista ignoriert.
 
  
 
--   [Winlogon-Benachrichtigungs Pakete](#winlogon-notification-packages)
--   [Gina-Stub](#gina-stubs)
--   [Gina-Hooks](#gina-hooks)
+-   [Winlogon-Benachrichtigungspakete](#winlogon-notification-packages)
+-   [GINA-Stubs](#gina-stubs)
+-   [GINA-Hooks](#gina-hooks)
 
-## <a name="winlogon-notification-packages"></a>Winlogon-Benachrichtigungs Pakete
+## <a name="winlogon-notification-packages"></a>Winlogon-Benachrichtigungspakete
 
-Ein Winlogon-Benachrichtigungs Paket ist eine DLL, die Funktionen exportiert, die Winlogon-Ereignisse verarbeiten. Wenn sich ein Benutzer beispielsweise beim System anmeldet, ruft Winlogon jedes Benachrichtigungs Paket auf, um Informationen zum Ereignis bereitzustellen. Weitere Informationen finden Sie unter [Winlogon-Benachrichtigungs Pakete](winlogon-notification-packages.md).
+Ein Winlogon-Benachrichtigungspaket ist eine DLL, die Funktionen exportiert, die Winlogon-Ereignisse behandeln. Wenn sich beispielsweise ein Benutzer beim System anmeldet, ruft Winlogon jedes Benachrichtigungspaket auf, um Informationen zum Ereignis zu liefern. Weitere Informationen finden Sie unter [Winlogon Notification Packages](winlogon-notification-packages.md).
 
-## <a name="gina-stubs"></a>Gina-Stub
+## <a name="gina-stubs"></a>GINA-Stubs
 
-Ein [*Gina*](/windows/desktop/SecGloss/g-gly) Stub ist eine benutzerdefinierte GINA-DLL, die die Export Funktions Implementierungen einer zuvor installierten Gina-DLL verwendet (in der Regel MsGina.dll). Ein Gina-Stub ruft Zeiger auf jede Funktion ab, die von der zuvor installierten Gina-DLL exportiert wurde. Jede Gina Stub-Funktion verwendet dann den passenden Funktionszeiger, um die entsprechende Funktion in der zuvor installierten Gina-DLL aufzurufen.
+Ein [*GINA-Stub*](/windows/desktop/SecGloss/g-gly) ist eine benutzerdefinierte GINA-DLL, die die Implementierungen der Exportfunktion einer zuvor installierten GINA-DLL verwendet (in der Regel MsGina.dll). Ein GINA-Stub ruft Zeiger auf jede Funktion ab, die von der zuvor installierten GINA-DLL exportiert wird. Jede GINA-Stubfunktion verwendet dann den entsprechenden Funktionszeiger zum Aufrufen der entsprechenden Funktion in der zuvor installierten GINA-DLL.
 
 > [!IMPORTANT]
-> Jede Gina Stub-Funktion muss die entsprechende Funktion in der zuvor installierten Gina aufruft.
+> Jede GINA-Stubfunktion muss die entsprechende Funktion in der zuvor installierten GINA aufrufen.
 
  
 
-Eine Gina Stub-Funktion kann zusätzliche Funktionen in einer oder mehreren ihrer Exportfunktionen implementieren. Beispielsweise kann die [**wlxloggedoutsas**](/windows/desktop/api/Winwlx/nf-winwlx-wlxloggedoutsas) -Funktion eines Gina Stub die aktuelle Zeit überprüfen, bevor die **wlxloggedoutsas** -Funktion des MsGina.dll aufgerufen wird. Wenn sich die aktuelle Zeit in einem bestimmten Bereich befunden hat, könnte die stubfunktion eine Meldung anzeigen, die angibt, dass die Anmeldung während dieses Zeitraums nicht zulässig ist, und die **wlx- \_ SAS- \_ Aktion " \_ None** " an "Winlogon" zurückgeben Die **wlxloggedoutsas** -Funktion des MsGina.dll würde dann nur während des zulässigen Zeitraums aufgerufen werden.
+Eine GINA-Stubfunktion kann zusätzliche Funktionen in eine oder mehrere ihrer Exportfunktionen implementieren. Beispielsweise kann die [**WlxLoggedOutSAS-Funktion**](/windows/desktop/api/Winwlx/nf-winwlx-wlxloggedoutsas) eines GINA-Stubs die aktuelle Zeit überprüfen, bevor die **WlxLoggedOutSAS-Funktion** des -MsGina.dll. Wenn die aktuelle Zeit innerhalb eines bestimmten Bereichs liegt, könnte die Stubfunktion eine Meldung anzeigen, die angibt, dass die Anmeldung während dieses Zeitraums nicht mehr unterstützt wird, und **WLX \_ SAS \_ ACTION \_ NONE** an Winlogon zurückgeben. Die **WlxLoggedOutSAS-Funktion** des MsGina.dll dann nur während des zulässigen Zeitraums aufgerufen.
 
-Die Gina Stub-Anwendung ruft über den *pwinlogonfunctions* -Parameter der [**wlxinitialize**](/windows/desktop/api/Winwlx/nf-winwlx-wlxinitialize) -Funktion eine dispatchtabelle an die Winlogon-Unterstützungsfunktionen ab. Die Gina Stub-Anwendung kann diese Dispatch-Tabelle verwenden, um Winlogon-Unterstützungsfunktionen aufzurufen. Eine Gina Stub-Anwendung kann z. b. die [**wlxsasnotify**](/windows/win32/api/winwlx/nc-winwlx-pwlx_sas_notify) -Funktion aufgerufen werden, um ein Sicherheits Ereignis ( [*Secure Attention Sequence*](/windows/desktop/SecGloss/s-gly) , SAS) auszulösen, wenn eine [*Smartcard*](/windows/desktop/SecGloss/s-gly) in einen [*Reader*](/windows/desktop/SecGloss/r-gly)eingefügt wird.
+Die GINA-Stubanwendung ruft über den *pWinlogonFunctions-Parameter* der [**WlxInitialize-Funktion**](/windows/desktop/api/Winwlx/nf-winwlx-wlxinitialize) eine Dispatchtabelle für Winlogon-Unterstützungsfunktionen ab. Die GINA-Stubanwendung kann diese Dispatchtabelle zum Aufrufen von Winlogon-Unterstützungsfunktionen verwenden. Beispielsweise kann eine GINA-Stubanwendung die [**WlxSasNotify-Funktion**](/windows/win32/api/winwlx/nc-winwlx-pwlx_sas_notify) aufrufen, um ein [](/windows/desktop/SecGloss/s-gly) SAS-Ereignis [*(Secure Attention Sequence)*](/windows/desktop/SecGloss/s-gly) zu verursachen, wenn eine Smartcard in einen Reader [*eingefügt wird.*](/windows/desktop/SecGloss/r-gly)
 
-Weitere Informationen zum Erstellen eines Gina Stub finden Sie im Beispiel "Gina Stubs" im \\ Verzeichnis "Beispiele \\ Security \\ Gina \\ Ginastub" einer Platform Software Development Kit (SDK)-Installation.
+Weitere Informationen zum Erstellen eines GINA-Stubs finden Sie im Gina Stubs-Beispiel im Verzeichnis \\ Samples \\ Security \\ \\ GinaStub einer Platform Software Development Kit -Installation (SDK).
 
 > [!Note]  
-> Alle Aufrufe zwischen einer Gina und Winlogon müssen sich innerhalb eines einzelnen Threads befinden.
+> Alle Aufrufe zwischen GINA und Winlogon müssen innerhalb eines einzelnen Threads liegen.
 
  
 
-## <a name="gina-hooks"></a>Gina-Hooks
+## <a name="gina-hooks"></a>GINA-Hooks
 
-Ein Gina-Hook ist ein Gina-Stub, der in der Implementierung der [**wlxinitialize**](/windows/desktop/api/Winwlx/nf-winwlx-wlxinitialize) -Funktion den Zeiger auf die [**wlxdialogboxparam**](/windows/win32/api/winwlx/nc-winwlx-pwlx_dialog_box_param) -Unterstützungsfunktion in der dispatchtabelle durch einen Zeiger auf seine eigene Implementierung der **wlxdialogboxparam** -Funktion ersetzt. Daher wird jedes Mal, wenn die zuvor installierte Gina (in der Regel MsGina.dll) die **wlxdialogboxparam** -Funktion aufruft, die durch den Gina-Hook implementierte Funktion aufgerufen.
+Ein GINA-Hook ist ein GINA-Stub, der in seiner Implementierung der [**WlxInitialize-Funktion**](/windows/desktop/api/Winwlx/nf-winwlx-wlxinitialize) den Zeiger auf die [**WlxDialogBoxParam-Unterstützungsfunktion**](/windows/win32/api/winwlx/nc-winwlx-pwlx_dialog_box_param) in der Dispatchtabelle durch einen Zeiger auf seine eigene Implementierung der **WlxDialogBoxParam-Funktion** ersetzt. Daher wird jedes Mal, wenn die zuvor installierte GINA (in der Regel MsGina.dll) die **WlxDialogBoxParam-Funktion** aufruft, die durch den GINA-Hook implementierte Funktion aufgerufen.
 
-Die vom Gina-Hook implementierte [**wlxdialogboxparam**](/windows/win32/api/winwlx/nc-winwlx-pwlx_dialog_box_param) -Funktion kann die [**DialogProc**](/windows/win32/api/winuser/nc-winuser-dlgproc) -Rückruf Prozedur ersetzen, die auf ein bestimmtes Dialogfeld Ereignis antwortet.
+Die vom GINA-Hook implementierte [**WlxDialogBoxParam-Funktion**](/windows/win32/api/winwlx/nc-winwlx-pwlx_dialog_box_param) kann die [**DialogProc-Rückrufprozedur**](/windows/win32/api/winuser/nc-winuser-dlgproc) ersetzen, die auf ein bestimmtes Dialogfeldereignis reagiert.
 
-Dadurch erhält der Gina-Hook vollständige Kontrolle über die Darstellung und das Verhalten aller Dialogfelder, die von MsGina.dll erstellt werden.
+Dadurch erhält der GINA-Hook die vollständige Kontrolle über die Darstellung und das Verhalten aller Dialogfelder, die MsGina.dll werden.
 
-Weitere Informationen zum Erstellen eines Gina-Hooks finden Sie im Beispiel "Gina Hooks" \\ im \\ Verzeichnis "Beispiele Security \\ Gina \\ ginahook" einer Platform SDK-Installation.
+Weitere Informationen zum Erstellen eines GINA-Hooks finden Sie im Gina Hooks-Beispiel im \\ \\ Beispielsicherheitsverzeichnis \\ von Gina \\ GinaHook einer Plattform-SDK-Installation.
 
 > [!Note]  
-> Alle Aufrufe zwischen einer Gina und Winlogon müssen sich innerhalb eines einzelnen Threads befinden.
+> Alle Aufrufe zwischen GINA und Winlogon müssen innerhalb eines einzelnen Threads liegen.
 
  
 

@@ -1,27 +1,27 @@
 ---
-description: Beispiele für Light-Aware Benutzeroberflächen
+description: Beispiele für Light-Aware-Benutzeroberflächen
 ms.assetid: 13bcc087-bbe7-4352-b242-5a849cfe423d
-title: Beispiele für Light-Aware Benutzeroberflächen
+title: Beispiele für Light-Aware-Benutzeroberflächen
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: faac7a83abd5f505cecf44fee17e34bf360a7b62
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 68f6b5865c79681eea63e78f9ce690ac90678e78a0dfdeac82b55b5193da9bd2
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "103866943"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119003816"
 ---
-# <a name="examples-of-light-aware-user-interfaces"></a>Beispiele für Light-Aware Benutzeroberflächen
+# <a name="examples-of-light-aware-user-interfaces"></a>Beispiele für Light-Aware-Benutzeroberflächen
 
-Nachdem Sie nun einige grundlegende Grundsätze zur Optimierung der Benutzeroberfläche für verschiedene Beleuchtungsbedingungen verstanden haben, können Sie einige Beispiele dafür betrachten, wie diese Optimierung einen Unterschied beim Anzeigen von Inhalten im Außenbereich macht. Die folgenden Bilder sind parallele Vergleiche von Laptops in direktem Sonnenlicht.
+Nachdem Sie sich nun mit einigen grundlegenden Prinzipien für die Optimierung Ihrer Benutzeroberfläche für verschiedene Beleuchtungsbedingungen ausgiert haben, können Sie sich einige Beispiele ansehen, wie sich diese Optimierung bei der Anzeige von Inhalten im Freien unterscheidet. Die folgenden Bilder sind vergleichsbasierte Vergleiche von Laptops in direkten Bildern.
 
-In den folgenden Abbildungen wird die helle Benutzeroberfläche mit der normalen Benutzeroberfläche auf einem Laptop im direkten Sonnenlicht verglichen. Das erste Foto zeigt, welche Inhalte in der Regel im Außenbereich aussehen, wenn ein Laptop seine Anzeigeeinstellungen für die Akku Auslastung verwendet. Das zweite Foto zeigt die Kombination aus adaptiver Helligkeit und heller Benutzeroberfläche und erläutert, wie diese Features zusammenarbeiten können, um die Lesbarkeit des Bildschirms zu erhöhen.
+In den folgenden Abbildungen wird die lichtorientierte Benutzeroberfläche mit der normalen Benutzeroberfläche auf einem Laptop in direkter Folge verglichen. Das erste Foto zeigt, welcher Inhalt normalerweise im Freien aussieht, wenn ein Laptop die Anzeigeeinstellungen für den Akkuverbrauch verwendet. Das zweite Foto zeigt die Kombination aus adaptiver Helligkeit und lichtfähiger Benutzeroberfläche und wie diese Features zusammenarbeiten können, um die Lesbarkeit des Bildschirms zu verbessern.
 
-![normale Benutzeroberfläche mit einer Helligkeit von 40%](images/ui-unaware.png)![helle Benutzeroberfläche mit einer Helligkeit von 100%](images/ui-lightaware.png)
+![Normale Benutzeroberfläche bei 40 % Helligkeit](images/ui-unaware.png)![Lichtstärke benutzeroberfläche bei 100 % Helligkeit](images/ui-lightaware.png)
 
-Die folgenden Abbildungen zeigen ein Navigationsprogramm, das in der Außenwelt angezeigt wird, wobei Light-Awareness ausgeschaltet und aktiviert ist. Der Inhalt kann nicht im Innenbereich verwendet werden, wohingegen die Inhalte im Außenbereich leicht lesbar sind. Beachten Sie auch, wie die Reflektionen minimiert werden, wenn ein schwarzes weiß-Farbschema verwendet wird, wie im zweiten Bild dargestellt.
+Die folgenden Fotos zeigen ein Navigationsprogramm, das im Freien mit eingeschalteten und eingeschalteten Lichtlichtern zu sehen ist. Der Inhalt im Innenbereich kann nicht im Freien verwendet werden, während der Inhalt im Freien leicht lesbar ist. Beachten Sie auch, wie die Reflektionen minimiert werden, wenn ein Schwarz-auf-Weiß-Farbschema verwendet wird, wie im zweiten Foto gezeigt.
 
-![normale Navigations Benutzeroberfläche](images/nav-photo-normal.png)![hell bewusste Navigations Benutzeroberfläche](images/nav-photo-contrast.png)
+![Normale Navigations-Benutzeroberfläche](images/nav-photo-normal.png)![Benutzeroberfläche für die lichtbewusste Navigation](images/nav-photo-contrast.png)
 
  
 

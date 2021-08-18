@@ -32,7 +32,7 @@ Weitere Informationen finden Sie in der Struktur [**D3D12 \_ STREAM \_ OUTPUT \_
 
 Die Debugebene überprüft Folgendes in [**ID3D12GraphicsCommandList::SOSetTargets:**](/windows/desktop/api/d3d12/nf-d3d12-id3d12graphicscommandlist-sosettargets)
 
--   *BufferFilledSize* liegt im Bereich von {*OffsetInBytes*, *SizeInBytes*}, wenn eine Ressource ungleich NULL angegeben wird.
+-   *BufferFilledSize* liegt in dem Bereich, der von {*OffsetInBytes*, *SizeInBytes*} impliziert wird, wenn eine Nicht-NULL-Ressource angegeben wird.
 -   *BufferFilledSizeOffsetInBytes* ist ein Vielfaches von 4.
 -   *BufferFilledSizeOffsetInBytes* liegt innerhalb des Bereichs der enthaltenden Ressource.
 -   Die angegebene Ressource ist ein Puffer.
@@ -41,7 +41,7 @@ Die Runtime überprüft nicht den Heaptyp, der dem Streamausgabepuffer zugeordne
 
 Stammsignaturen müssen mithilfe der [**Flags D3D12 \_ ROOT SIGNATURE \_ \_ FLAGS**](/windows/desktop/api/d3d12/ne-d3d12-d3d12_root_signature_flags) angeben, ob die Streamausgabe verwendet wird.
 
-D3D12 \_ ROOT SIGNATURE FLAG ALLOW STREAM OUTPUT kann für in \_ \_ \_ \_ \_ HLSL erstellte Stammsignaturen auf ähnliche Weise wie die anderen Flags angegeben werden.
+D3D12 \_ ROOT SIGNATURE FLAG ALLOW STREAM OUTPUT kann für In \_ \_ \_ \_ \_ HLSL erstellte Stammsignaturen auf ähnliche Weise wie die anderen Flags angegeben werden.
 
 [**CreateGraphicsPipelineState**](/windows/desktop/api/d3d12/nf-d3d12-id3d12device-creategraphicspipelinestate) schlägt fehl, wenn der geometry-Shader stream-output enthält, aber für die Stammsignatur das Flag D3D12 \_ ROOT SIGNATURE FLAG ALLOW STREAM OUTPUT nicht festgelegt \_ \_ \_ \_ \_ ist.
 

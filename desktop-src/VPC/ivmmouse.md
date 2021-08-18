@@ -24,9 +24,9 @@ ms.locfileid: "118998850"
 ---
 # <a name="ivmmouse-interface"></a>IVMMouse-Schnittstelle
 
-\[Windows Der virtuelle PC ist ab diesem Zeitraum nicht mehr Windows 8. Verwenden Sie stattdessen den [Hyper-V-WMI-Anbieter (V2).](/windows/desktop/HyperV_v2/windows-virtualization-portal)\]
+\[Windows Der virtuelle PC ist ab Windows 8 nicht mehr für die Verwendung verfügbar. Verwenden Sie stattdessen den [Hyper-V-WMI-Anbieter (V2).](/windows/desktop/HyperV_v2/windows-virtualization-portal)\]
 
-Steuert das Mausgerät innerhalb eines virtuellen Computers (VM). Die **IVMMouse** für einen virtuellen Computer kann mithilfe der [**IVMVirtualMachine::Mouse-Eigenschaft abgerufen**](ivmvirtualmachine-mouse.md) werden. Koordinaten für das Mausgerät können entweder in absoluten Koordinaten oder in Deltakoordinaten dargestellt werden. Verwenden Sie [**die UsingAbsoluteCoordinates-Eigenschaft,**](ivmmouse-usingabsolutecoordinates.md) um zwischen den beiden Methoden der Koordinatendarstellung zu unterscheiden. Beachten Sie, dass das Abrufen der aktuellen Cursorposition und die Verwendung absoluter Koordinaten nur unterstützt werden, wenn auf dem Gastbetriebssystem die Integrationskomponenten installiert sind.
+Steuert das Mausgerät innerhalb eines virtuellen Computers (VM). Die **IVMMouse** für einen virtuellen Computer kann mithilfe der [**IVMVirtualMachine::Mouse-Eigenschaft**](ivmvirtualmachine-mouse.md) abgerufen werden. Koordinaten für das Mausgerät können entweder in absoluten Koordinaten oder in Deltakoordinaten dargestellt werden. Verwenden Sie die [**UsingAbsoluteCoordinates-Eigenschaft,**](ivmmouse-usingabsolutecoordinates.md) um zwischen den beiden Methoden der Koordinatendarstellung zu unterscheiden. Beachten Sie, dass das Abrufen der aktuellen Cursorposition und die Verwendung absoluter Koordinaten nur unterstützt werden, wenn auf dem Gastbetriebssystem die Integrationskomponenten installiert sind.
 
 ## <a name="members"></a>Member
 
@@ -74,7 +74,7 @@ Die **IVMMouse-Schnittstelle** verfügt über diese Eigenschaften.
 
 | Anforderung | Wert |
 |-------------------------------------|-----------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Windows 7 \[ Desktop-Apps\]<br/>                                                    |
+| Unterstützte Mindestversion (Client)<br/> | nur Windows 7 \[ Desktop-Apps\]<br/>                                                    |
 | Unterstützte Mindestversion (Server)<br/> | Nicht unterstützt<br/>                                                                     |
 | Ende des Supports (Client)<br/>    | Windows 7<br/>                                                                          |
 | Product (Produkt)<br/>                  | Windows Virtual PC<br/>                                                                 |

@@ -1,29 +1,29 @@
 ---
-title: Die Header Dateien
-description: Die Schnittstellen Header Datei (Name. h) enthält Typdefinitionen und Funktions Deklarationen auf der Grundlage der Schnittstellen Definition in der aktuellen IDL-Datei sowie alle Datentypen und Vorgänge, die in den in der \ include-Direktive enthaltenen Dateien deklariert werden.
+title: Headerdateien
+description: Die Schnittstellenheaderdatei (Name.h) enthält Typdefinitionen und Funktionsdeklarationen basierend auf der Schnittstellendefinition in der aktuellen IDL-Datei sowie alle Datentypen und Vorgänge, die in den dateien deklariert sind, die in der \include-Direktive enthalten sind.
 ms.assetid: 81fac1fa-6bd7-4a3e-8aa6-5104d4b25b55
 keywords:
-- Header Dateien (Mitte)
+- Headerdateien MIDL
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 214ae80877b88d8061769b0d6bd56c13469427fc
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: ac9bc5e8b5edd091450af670fd51d251326029f13e1f88a6d5a9116faa5b4447
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "106341257"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119013518"
 ---
-# <a name="the-header-files"></a>Die Header Dateien
+# <a name="the-header-files"></a>Headerdateien
 
-Die Schnittstellen Header Datei (Name. h) enthält Typdefinitionen und Funktions Deklarationen, die auf der Schnittstellen Definition in der aktuellen IDL-Datei basieren, sowie alle Datentypen und Vorgänge, die in den in der include-Direktive enthaltenen Dateien deklariert werden \# . Datentypen aus den Dateien, die mit der Import-Anweisung importiert werden, werden nicht in die Header Datei repliziert. Stattdessen enthält die generierte Header Datei eine include-Zeile zu der aus der importierten Datei generierten H-Datei.
+Die Schnittstellenheaderdatei (Name.h) enthält Typdefinitionen und Funktionsdeklarationen basierend auf der Schnittstellendefinition in der aktuellen IDL-Datei sowie alle Datentypen und Vorgänge, die in den in der include-Direktive enthaltenen Dateien deklariert \# sind. Datentypen aus den Dateien, die mit der import-Direktive importiert wurden, werden nicht in die Headerdatei repliziert. Stattdessen enthält die generierte Headerdatei eine Includezeile zur H-Datei, die aus der importierten Datei generiert wurde.
 
-Fügen Sie diese Datei in die Quelldateien für die Proxy-dll und für Client Anwendungen ein, die die-Schnittstelle verwenden.
+Schließen Sie diese Datei in die Quelldateien für die Proxy-DLL und für Clientanwendungen ein, die die -Schnittstelle verwenden.
 
-Der Standardname für eine Header Datei, die aus einer Datei erstellt wird. idl ist File. h. Der [**/Header**](-header.md) -Compilerschalter überschreibt den Standardnamen der Schnittstellen Header Datei.
+Der Standardname für eine Headerdatei, die aus file.idl generiert wird, ist File.h. Der [**MIDL-Compilerschalter /header**](-header.md) überschreibt den Standardnamen der Schnittstellenheaderdatei.
 
- 
+ 
 
- 
+ 
 
 
 

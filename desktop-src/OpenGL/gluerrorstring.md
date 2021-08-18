@@ -1,9 +1,9 @@
 ---
-title: gluerrorstring-Funktion (glu. h)
-description: Die Funktion "gluerrorstring" erzeugt eine Fehler Zeichenfolge aus einem OpenGL-oder glu-Fehlercode. Die Fehler Zeichenfolge ist nur ANSI.
+title: gluErrorString-Funktion (Glu.h)
+description: Die funktion gluErrorString erzeugt eine Fehlerzeichenfolge aus einem OpenGL- oder GLU-Fehlercode. Die Fehlerzeichenfolge ist nur ANSI.
 ms.assetid: 6d71a6d5-ac00-49f9-a56c-cfeeb88963eb
 keywords:
-- gluerrorstring-Funktion OpenGL
+- gluErrorString-Funktion OpenGL
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - DllExport
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 0cdcfad0e2a943bf3a475317f32d37921878a8f8
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: beef90cfced2b33b612e15c1ef6918de81997520483acfb141f3a307ad64096d
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "103741120"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119777650"
 ---
-# <a name="gluerrorstring-function"></a>gluerrorstring-Funktion
+# <a name="gluerrorstring-function"></a>gluErrorString-Funktion
 
-Die Funktion " **gluerrorstring** " erzeugt eine Fehler Zeichenfolge aus einem OpenGL-oder glu-Fehlercode. Die Fehler Zeichenfolge ist nur ANSI.
+Die **funktion gluErrorString** erzeugt eine Fehlerzeichenfolge aus einem OpenGL- oder GLU-Fehlercode. Die Fehlerzeichenfolge ist nur ANSI.
 
 ## <a name="syntax"></a>Syntax
 
@@ -40,20 +40,20 @@ const GLubyte* WINAPI gluErrorString(
 
 <dl> <dt>
 
-*Errcode* 
+*errCode* 
 </dt> <dd>
 
-Ein OpenGL-oder glu-Fehlercode.
+Ein OpenGL- oder GLU-Fehlercode.
 
 </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die Funktion " **gluerrorstring** " erzeugt eine Fehler Zeichenfolge aus einem OpenGL-oder glu-Fehlercode. Die Zeichenfolge weist ein ISO Latin 1-Format auf. Beispielsweise gibt " **gluerrorstring**(GL \_ out \_ of \_ Memory)" die Zeichenfolge "nicht genügend Arbeitsspeicher" zurück.
+Die **funktion gluErrorString** erzeugt eine Fehlerzeichenfolge aus einem OpenGL- oder GLU-Fehlercode. Die Zeichenfolge hat ein ISO Latin 1-Format. Beispielsweise gibt **gluErrorString**(GL \_ OUT OF \_ \_ MEMORY) die Zeichenfolge "nicht genügend Arbeitsspeicher" zurück.
 
-Die standardmäßigen glu-Fehlercodes lauten "glu \_ invalid \_ enum", "glu \_ invalid value" und "glu" aus dem Arbeits \_ \_ \_ \_ Speicher. Bestimmte andere glu-Funktionen können spezielle Fehlercodes durch Rückrufe zurückgeben. Eine Liste der OpenGL-Fehlercodes finden Sie unter [**glgeterror**](glgeterror.md).
+Die Standardmäßigen GLU-Fehlercodes sind GLU \_ INVALID \_ ENUM, GLU \_ INVALID VALUE und GLU OUT OF \_ \_ \_ \_ MEMORY. Bestimmte andere GLU-Funktionen können spezielle Fehlercodes über Rückrufe zurückgeben. Die Liste der OpenGL-Fehlercodes finden Sie unter [**glGetError**](glgeterror.md).
 
-Die Funktion " **gluerrorstring** " erzeugt Fehler Zeichenfolgen nur in ANSI. Verwenden Sie nach Möglichkeit " **gluerrorstringwin**", das ANSI-oder Unicode-Fehler Zeichenfolgen zulässt. Dadurch ist es einfacher, Ihr Programm für die Verwendung mit einer anderen Sprache zu lokalisieren.
+Die **funktion gluErrorString** erzeugt nur Fehlerzeichenfolgen in ANSI. Verwenden Sie nach Möglichkeit **gluErrorStringWIN,** wodurch ANSI- oder Unicode-Fehlerzeichenfolgen zulässig sind. Dadurch ist es einfacher, Ihr Programm für die Verwendung mit einer anderen Sprache zu lokalisieren.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -63,26 +63,26 @@ Die Funktion " **gluerrorstring** " erzeugt Fehler Zeichenfolgen nur in ANSI. Ve
 |-------------------------------------|--------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[nur Desktop-Apps\]<br/>                           |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                                 |
-| Header<br/>                   | <dl> <dt>Glu. h</dt> </dl>     |
-| Bibliothek<br/>                  | <dl> <dt>Glu32. lib</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Glu.h</dt> </dl>     |
+| Bibliothek<br/>                  | <dl> <dt>Glu32.lib</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Glu32.dll</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**glgeterror**](glgeterror.md)
+[**glGetError**](glgeterror.md)
 </dt> <dt>
 
-[*glunurbscallback*](glunurbs.md)
+[*gluNurbsCallback*](glunurbs.md)
 </dt> <dt>
 
-[*gluvierccallback*](gluquadric.md)
+[*gluQuadricCallback*](gluquadric.md)
 </dt> <dt>
 
-[*glutesscallback*](glutess.md)
+[*gluTessCallback*](glutess.md)
 </dt> </dl>
 
  

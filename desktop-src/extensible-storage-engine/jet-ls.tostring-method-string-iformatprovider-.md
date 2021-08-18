@@ -1,5 +1,5 @@
 ---
-description: 'Erfahren Sie mehr über: JET_LS. ToString-Methode (String, IFormatProvider)'
+description: 'Weitere Informationen finden Sie unter: JET_LS. ToString-Methode (String, IFormatProvider)'
 title: JET_LS. ToString-Methode (String, IFormatProvider)
 TOCTitle: ToString method (String, IFormatProvider)
 ms:assetid: M:Microsoft.Isam.Esent.Interop.JET_LS.ToString(System.String,System.IFormatProvider)
@@ -64,14 +64,14 @@ public string ToString(
   - format  
     Typ: [System.String](/dotnet/api/system.string)  
     
-    Die [Zeichenfolge,](/dotnet/api/system.string) die das zu verwendende Format angibt. Oder: NULL, um das Standardformat zu verwenden, das für den Typ der [IFormattable-Implementierung](/dotnet/api/system.iformattable) definiert ist.
+    Die [Zeichenfolge,](/dotnet/api/system.string) die das zu verwendende Format angibt. Oder: NULL, um das für den Typ der [IFormattable-Implementierung](/dotnet/api/system.iformattable) definierte Standardformat zu verwenden.
 
 <!-- end list -->
 
   - Formatprovider  
     Typ: [System.IFormatProvider](/dotnet/api/system.iformatprovider)  
     
-    Der [IFormatProvider,](/dotnet/api/system.iformatprovider) der zum Formatieren des Werts verwendet werden soll. Oder: NULL, um die numerischen Formatinformationen aus der aktuellen Gebietsschemaeinstellung des Betriebssystems abzurufen.
+    Der [IFormatProvider, der](/dotnet/api/system.iformatprovider) zum Formatieren des Werts verwendet werden soll. Oder: NULL, um die numerischen Formatinformationen aus der aktuellen Locale-Einstellung des Betriebssystems zu erhalten.
 
 #### <a name="return-value"></a>Rückgabewert
 
@@ -86,9 +86,9 @@ Eine [Zeichenfolge,](/dotnet/api/system.string) die den Wert der aktuellen Insta
 
 #### <a name="reference"></a>Verweis
 
-[JET_LS Struktur](./jet-ls-structure.md)
+[JET_LS-Struktur](./jet-ls-structure.md)
 
-[JET_LS-Member](./jet-ls-members.md)
+[JET_LS Member](./jet-ls-members.md)
 
 [ToString-Überladung](./jet-ls.tostring-method2.md)
 

@@ -13,12 +13,12 @@ api_type:
 - DllExport
 api_location:
 - Exstrace.dll
-ms.openlocfilehash: 5a9dc0eee2f4ea3f65fa45914c3340a99ac2d45b
-ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
+ms.openlocfilehash: 6c41369e8a0d73a56dc5d9d831d0028e87a7ecec300f2e43a625f17bd25bede1
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2021
-ms.locfileid: "108085768"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119538865"
 ---
 # <a name="setasynctraceparamsex-function"></a>SetAsyncTraceParamsEx-Funktion
 
@@ -96,14 +96,14 @@ Eine Ablaufverfolgungsflag-Konstante, die einen der verfügbaren Ablaufverfolgun
 <span id="MESSAGE_TRACE_MASK"></span><span id="message_trace_mask"></span>**MESSAGE \_ TRACE \_ MASK** (0x00000020)
 </dt> <dt>
 
-<span id="ALL_TRACE_MASK"></span><span id="all_trace_mask"></span>**ALLE \_ TRACE \_ MASK** (0xFFFFFFFF)
+<span id="ALL_TRACE_MASK"></span><span id="all_trace_mask"></span>**ALL \_ TRACE \_ MASK** (0xFFFFFFFF)
 </dt> </dl> </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
 Diese Funktion gibt 1 zurück, wenn die Funktion erfolgreich ist. Andernfalls wird 0 zurückgegeben.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
 Exstrace.dll ist eine optionale Komponente, die mit dem Simple Mail Transfer Protocol (SMTP) und dem Network News Transfer Protocol (NNTP) installiert wird.
 
@@ -113,7 +113,7 @@ Dieser Funktion ist keine Importbibliothek oder Headerdatei zugeordnet. Sie müs
 
 
 
-| Anforderungen | Wert |
+| Anforderung | Wert |
 |----------------|-----------------------------------------------------------------------------------------|
 | DLL<br/> | <dl> <dt>Exstrace.dll</dt> </dl> |
 

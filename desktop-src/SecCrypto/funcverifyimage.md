@@ -1,7 +1,7 @@
 ---
-description: Wird von einem Kryptografiedienstanbieter (CSP) zum Überprüfen der Signatur einer DLL verwendet.
+description: Wird von einem Kryptografiedienstanbieter (Cryptographic Service Provider, CSP) verwendet, um die Signatur einer DLL zu überprüfen.
 ms.assetid: 477a6c9f-05ac-485a-8b27-5605fc11c1d6
-title: CRYPT_VERIFY_IMAGE Funktionszeiger (cspdk. h)
+title: CRYPT_VERIFY_IMAGE Funktionszeiger (Cspdk.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -15,18 +15,18 @@ api_type:
 - UserDefined
 api_location:
 - Cspdk.h
-ms.openlocfilehash: e95414d09a7869aa4a2ef512fcff2765ba4491bb
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: b33e6e627c87840e4adb7615f7e3ca5932a7402a3b3ae7110be51c0847a5f67f
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106359076"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119006678"
 ---
-# <a name="crypt_verify_image-function-pointer"></a>Crypt \_ - \_ Bild Funktionszeiger überprüfen
+# <a name="crypt_verify_image-function-pointer"></a>CRYPT \_ VERIFY \_ IMAGE-Funktionszeiger
 
-Die **funkverifyimage** -Rückruffunktion wird von einem [*Kryptografiedienstanbieter (kryptografischen Service Provider*](../secgloss/c-gly.md) , CSP) zum Überprüfen der Signatur einer DLL verwendet.
+Die **FuncVerifyImage-Rückruffunktion** wird von einem Kryptografiedienstanbieter (Cryptographic [*Service Provider,*](../secgloss/c-gly.md) CSP) verwendet, um die Signatur einer DLL zu überprüfen.
 
-Alle Erweiterungs-DLLs, in die ein CSP Funktionsaufrufe durchführt, müssen auf die gleiche Weise (und mit demselben Schlüssel) wie die primäre CSP-DLL signiert werden. Um diese Signatur sicherzustellen, müssen die zusätzlichen DLLs dynamisch mithilfe der [**LoadLibrary**](/windows/win32/api/libloaderapi/nf-libloaderapi-loadlibrarya) -Funktion geladen werden. Aber bevor die dll geladen wird, muss die Signatur der dll überprüft werden. Der CSP führt diese Überprüfung durch Aufrufen der Funktion **funcverifyimage** aus, wie im folgenden Beispiel gezeigt.
+Alle zusätzlichen DLLs, in denen ein CSP Funktionsaufrufe vorsingt, müssen auf die gleiche Weise (und mit demselben Schlüssel) wie die primäre CSP-DLL signiert werden. Um diese Signatur sicherzustellen, müssen die Hilfs-DLLs dynamisch mithilfe der [**LoadLibrary-Funktion geladen**](/windows/win32/api/libloaderapi/nf-libloaderapi-loadlibrarya) werden. Bevor die DLL geladen wird, muss jedoch die Signatur der DLL überprüft werden. Der CSP führt diese Überprüfung durch, indem er die **Funktion FuncVerifyImage** aufruft, wie im folgenden Beispiel gezeigt.
 
 ## <a name="syntax"></a>Syntax
 
@@ -44,14 +44,14 @@ typedef BOOL ( WINAPI *CRYPT_VERIFY_IMAGE)(
 
 <dl> <dt>
 
-*lpszimage* \[ in\]
+*lpszImage* \[ In\]
 </dt> <dd>
 
-Die Adresse einer auf NULL endenden Zeichenfolge, die den Pfad und den Dateinamen der dll enthält, für die die Signatur überprüft werden soll.
+Die Adresse einer auf NULL beendeten Zeichenfolge, die den Pfad und Dateinamen der DLL enthält, für die die Signatur überprüft werden soll.
 
 </dd> <dt>
 
-*pbsigdata* \[ in\]
+*pbSigData* \[ In\]
 </dt> <dd>
 
 Die Adresse eines Puffers, der die Signatur enthält.
@@ -60,11 +60,11 @@ Die Adresse eines Puffers, der die Signatur enthält.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt **true** zurück, wenn die Funktion erfolgreich ist, und **false** , wenn Sie fehlschlägt.
+Gibt **TRUE zurück,** wenn die Funktion erfolgreich ist, **FALSE,** wenn sie fehlschlägt.
 
 ## <a name="examples"></a>Beispiele
 
-Im folgenden Beispiel wird gezeigt, wie Sie die Funktion " **funcverifyimage** " verwenden, um die Signatur einer DLL zu überprüfen, bevor Sie von einem CSP geladen wird.
+Das folgende Beispiel zeigt, wie Sie die **FuncVerifyImage-Rückruffunktion** verwenden, um die Signatur einer DLL zu überprüfen, bevor sie von einem CSP geladen wird.
 
 
 ```C++
@@ -103,9 +103,9 @@ if(RCRYPT_FAILED(ProvVerifyImage
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows XP \[ -Desktop-Apps\]<br/>                                        |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/>                               |
-| Header<br/>                   | <dl> <dt>Cspdk. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ XP-Desktop-Apps\]<br/>                                        |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                               |
+| Header<br/>                   | <dl> <dt>Cspdk.h</dt> </dl> |
 
 
 
@@ -113,10 +113,10 @@ if(RCRYPT_FAILED(ProvVerifyImage
 
 <dl> <dt>
 
-[**Cpacquirecontext**](https://www.bing.com/search?q=**CPAcquireContext**)
+[**CPAcquireContext**](https://www.bing.com/search?q=**CPAcquireContext**)
 </dt> <dt>
 
-[**Vtableprovstruc**](vtableprovstruc.md)
+[**VTableProvStruc**](vtableprovstruc.md)
 </dt> </dl>
 
  

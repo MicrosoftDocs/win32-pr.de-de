@@ -1,20 +1,20 @@
 ---
-description: Das Objekt "taubemqualifierset" macht die folgenden Eigenschaften verfügbar.
+description: Das SWbemQualifierSet-Objekt macht die folgenden Eigenschaften verfügbar.
 ms.assetid: E97C815F-C984-477F-9FE0-71C2A3E6CC67
 ms.tgt_platform: multiple
-title: Eigenschaften von "taubemqualifierset"
+title: SWbemQualifierSet-Eigenschaften
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: cd3c95779da7c1864b6cd7b285370548849d4244
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 737cbfd89be775d3b04d4d602733da31b7e80683852e10cceb4c332156b95011
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106352564"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119897760"
 ---
-# <a name="swbemqualifierset-properties"></a>Eigenschaften von "taubemqualifierset"
+# <a name="swbemqualifierset-properties"></a>SWbemQualifierSet-Eigenschaften
 
-Das Objekt " [**taubemqualifierset**](swbemqualifierset.md) " macht die folgenden Eigenschaften verfügbar.
+Das [**SWbemQualifierSet-Objekt**](swbemqualifierset.md) macht die folgenden Eigenschaften verfügbar.
 
 ## <a name="in-this-section"></a>In diesem Abschnitt
 

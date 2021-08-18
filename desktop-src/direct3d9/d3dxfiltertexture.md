@@ -1,7 +1,7 @@
 ---
-description: Filtert MipMap-Ebenen einer Textur.
+description: Filtert Mipmapebenen einer Textur.
 ms.assetid: bfeae9b0-9480-4a26-a225-4a34780546ce
-title: D3DXFilterTexture-Funktion (D3dx9tex. h)
+title: D3DXFilterTexture-Funktion (D3dx9tex.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -14,16 +14,16 @@ api_type:
 api_location:
 - d3dx9.lib
 - d3dx9.dll
-ms.openlocfilehash: e8a0d1c211b50379451c8b04830e9c97fe988137
-ms.sourcegitcommit: 14010c34b35fa268046c7683f021f86de08ddd0a
+ms.openlocfilehash: dc07336edb5f7bb8672fbbec415b0a3b312335a3a3a4b0de32aec4fdde558363
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "106355012"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118988500"
 ---
 # <a name="d3dxfiltertexture-function"></a>D3DXFilterTexture-Funktion
 
-Filtert MipMap-Ebenen einer Textur.
+Filtert Mipmapebenen einer Textur.
 
 ## <a name="syntax"></a>Syntax
 
@@ -43,39 +43,39 @@ HRESULT D3DXFilterTexture(
 
 <dl> <dt>
 
-*pbasetexture* \[ in\]
+*pBaseTexture* \[ In\]
 </dt> <dd>
 
 Typ: **[ **LPDIRECT3DBASETEXTURE9**](/windows/win32/api/d3d9helper/nn-d3d9helper-idirect3dbasetexture9)**
 
-Zeiger auf eine [**IDirect3DBaseTexture9**](/windows/win32/api/d3d9helper/nn-d3d9helper-idirect3dbasetexture9) -Schnittstelle, die das zu filternde Textur Objekt darstellt.
+Zeiger auf eine [**IDirect3DBaseTexture9-Schnittstelle,**](/windows/win32/api/d3d9helper/nn-d3d9helper-idirect3dbasetexture9) die das zu filternde Texturobjekt darstellt.
 
 </dd> <dt>
 
-*pPalette* \[ vorgenommen\]
+*pPalette* \[ out\]
 </dt> <dd>
 
-Typ: **Konstanten [**PaletteEntry**](/windows/win32/api/wingdi/ns-wingdi-paletteentry) \***
+Typ: **const [**PALETTEENTRY**](/windows/win32/api/wingdi/ns-wingdi-paletteentry) \***
 
-Ein Zeiger auf eine [**PaletteEntry**](/windows/win32/api/wingdi/ns-wingdi-paletteentry) -Struktur, die eine zu füllende 256-Farbpalette darstellt, oder **null** für nicht paletformatierte Formate. Wenn keine Palette angegeben ist, wird die standardmäßige Direct3D-Palette (eine alle nicht transparenten weißen Palette) bereitgestellt. Siehe Hinweise.
+Zeiger auf eine [**PALETTEENTRY-Struktur,**](/windows/win32/api/wingdi/ns-wingdi-paletteentry) die eine zu füllende 256-Farbpalette darstellt, oder **NULL** für nichtpalettierte Formate. Wenn keine Palette angegeben wird, wird die Direct3D-Standardpalette (eine nicht transparente weiße Palette) bereitgestellt. Siehe Hinweise.
 
 </dd> <dt>
 
-*Srclevel* \[ in\]
+*SrcLevel* \[ In\]
 </dt> <dd>
 
-Typ: **[ **uint**](../winprog/windows-data-types.md)**
+Typ: **[ **UINT**](../winprog/windows-data-types.md)**
 
-Ebene, mit deren Bild die nachfolgenden Ebenen generiert werden. Die Angabe \_ von D3DX default für diesen Parameter entspricht der Angabe von 0.
+Ebene, deren Bild zum Generieren der nachfolgenden Ebenen verwendet wird. Die Angabe von D3DX DEFAULT für diesen Parameter entspricht der Angabe \_ von 0.
 
 </dd> <dt>
 
-*MipFilter* \[ in\]
+*MipFilter* \[ In\]
 </dt> <dd>
 
 Typ: **[ **DWORD**](../winprog/windows-data-types.md)**
 
-Kombination aus einem oder mehreren [D3DX- \_ Filtern](d3dx-filter.md) , die Steuern, wie die MipMap gefiltert wird. Das angeben \_ von D3DX default für diesen Parameter entspricht dem Angeben des \_ D3DX \_ -Filter Felds, wenn die Textur Größe eine Potenz von zwei ist, und D3DX \_ Filter \_ Box \| D3DX \_ filtert \_ andernfalls.
+Kombination aus mindestens einem [D3DX-FILTER, \_ ](d3dx-filter.md) der steuert, wie die Mipmap gefiltert wird. Die Angabe von D3DX DEFAULT für diesen Parameter entspricht der Angabe von D3DX FILTER BOX, wenn die Texturgröße eine Zweierleistung hat, andernfalls \_ \_ \_ D3DX \_ FILTER \_ BOX \| D3DX \_ FILTER \_ DITHER.
 
 </dd> </dl>
 
@@ -83,19 +83,19 @@ Kombination aus einem oder mehreren [D3DX- \_ Filtern](d3dx-filter.md) , die Ste
 
 Typ: **[ **HRESULT**](https://msdn.microsoft.com/library/Bb401631(v=MSDN.10).aspx)**
 
-Wenn die Funktion erfolgreich ausgeführt wird, ist der Rückgabewert D3D \_ OK. Wenn die Funktion fehlschlägt, kann der Rückgabewert einer der folgenden sein: D3DERR \_ invalidcall, D3DXERR \_ InvalidData.
+Wenn die Funktion erfolgreich ist, ist der Rückgabewert D3D \_ OK. Wenn die Funktion fehlschlägt, kann der Rückgabewert einer der folgenden sein: D3DERR \_ INVALIDCALL, D3DXERR \_ INVALIDDATA.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Ein Filter wird rekursiv auf jede Textur Ebene angewendet, um die nächste Textur Ebene zu generieren.
+Ein Filter wird rekursiv auf jede Texturebene angewendet, um die nächste Texturebene zu generieren.
 
-Das Schreiben in eine Oberfläche ohne Ebene der Textur bewirkt nicht, dass das geänderte Rechteck aktualisiert wird. Wenn **D3DXFilterTexture** aufgerufen wird und die Oberfläche nicht bereits geändert wurde (Dies ist unwahrscheinlich in normalen Verwendungs Szenarien), muss die Anwendung [**AddDirtyRect**](/windows/win32/api/d3d9helper/nf-d3d9helper-idirect3dtexture9-adddirtyrect) explizit für die Textur aufrufen.
+Das Schreiben auf eine Texturoberfläche, die keine Ebene 0 (null) aufgibt, verursacht keine Aktualisierung des geänderten Rechtecks. Wenn **D3DXFilterTexture** aufgerufen wird und die Oberfläche noch nicht angepasst wurde (dies ist in normalen Verwendungsszenarien unwahrscheinlich), muss die Anwendung [**AddDirtyRect**](/windows/win32/api/d3d9helper/nf-d3d9helper-idirect3dtexture9-adddirtyrect) explizit für die Textur aufrufen.
 
-Texturen, die im Standard Pool (D3DPOOL \_ Default) erstellt werden, können nicht mit **D3DXFilterTexture** verwendet werden (es sei denn, Sie werden mit D3DUSAGE \_ Dynamic erstellt), da ein Sperr Vorgang für das Objekt erforderlich ist. Beachten Sie, dass Sperren für Texturen im Standard Pool nicht zulässig sind (es sei denn, Sie sind dynamisch).
+Im Standardpool erstellte Texturen (D3DPOOL DEFAULT) können nicht mit \_ **D3DXFilterTexture** verwendet werden (es sei denn, sie werden mit D3DUSAGE DYNAMIC erstellt), da ein Sperrvorgang für das Objekt erforderlich \_ ist. Beachten Sie, dass Sperren für Texturen im Standardpool nicht zulässig sind (es sei denn, sie sind dynamisch).
 
-Ausführliche Informationen zu [**PaletteEntry**](/windows/win32/api/wingdi/ns-wingdi-paletteentry)finden Sie unter Platform SDK. Beachten Sie, dass der Member "Peer Flags" der **PaletteEntry** -Struktur ab DirectX 8,0 nicht wie im Platform SDK dokumentiert funktioniert. Der peflags-Member ist nun der Alphakanal für 8-Bit-Paletten-Formate.
+Weitere Informationen zu [**PALETTEENTRY finden**](/windows/win32/api/wingdi/ns-wingdi-paletteentry)Sie im Plattform-SDK. Beachten Sie, dass das peFlags-Member der **PALETTEENTRY-Struktur** ab DirectX 8.0 nicht wie im Platform SDK dokumentiert funktioniert. Das peFlags-Member ist jetzt der Alphakanal für palettierte 8-Bit-Formate.
 
-Es gibt nur eine Textur Filterungs Funktion, aber zwei Makros, die diese Methode aufruft.
+Es gibt nur eine Texturfilterfunktion, aber zwei Makros, die diese Methode aufrufen.
 
 
 ```
@@ -111,16 +111,16 @@ Es gibt nur eine Textur Filterungs Funktion, aber zwei Makros, die diese Methode
 
 | Anforderung | Wert |
 |--------------------|---------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>D3dx9tex. h</dt> </dl> |
-| Bibliothek<br/> | <dl> <dt>D3dx9. lib</dt> </dl>  |
+| Header<br/>  | <dl> <dt>D3dx9tex.h</dt> </dl> |
+| Bibliothek<br/> | <dl> <dt>D3dx9.lib</dt> </dl>  |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[Textur Funktionen in D3DX 9](dx9-graphics-reference-d3dx-functions-texture.md)
+[Texturfunktionen in D3DX 9](dx9-graphics-reference-d3dx-functions-texture.md)
 </dt> </dl>
 
  

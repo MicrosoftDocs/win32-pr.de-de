@@ -1,11 +1,11 @@
 ---
-title: AxWindowsMediaPlayer. ctlcontrols-Eigenschaft
-description: Die ctlcontrols-Eigenschaft ruft eine iwmpcontrols-Schnittstelle ab, die eine Möglichkeit zum Bearbeiten der Wiedergabe eines Medien Elements bereitstellt.
+title: AxWindowsMediaPlayer.Ctlcontrols (Eigenschaft)
+description: Die Ctlcontrols-Eigenschaft ruft eine IWMPControls-Schnittstelle ab, die eine Möglichkeit bietet, die Wiedergabe eines Medienelements zu bearbeiten.
 ms.assetid: 0f0067e5-91bb-4179-a054-51f709b90c01
 keywords:
-- Ctlcontrols-Eigenschaften Fenster Media Player
-- Ctlcontrols-Eigenschaft, Windows Media Player, AxWindowsMediaPlayer-Klasse
-- AxWindowsMediaPlayer-Klasse, Windows Media Player, ctlcontrols-Eigenschaft
+- Ctlcontrols-Windows Media Player
+- Ctlcontrols-Eigenschaft Windows Media Player , AxWindowsMediaPlayer-Klasse
+- AxWindowsMediaPlayer-Klasse Windows Media Player , Ctlcontrols-Eigenschaft
 topic_type:
 - apiref
 api_name:
@@ -16,16 +16,16 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 85a1929542a168a873e50baf9994375d09311cfe
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 3b2a3ece2da72c5fe35a2710d83c0d9abd3376c6c4f1715d129bb63bd8a42e72
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106358045"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119619050"
 ---
-# <a name="axwindowsmediaplayerctlcontrols-property"></a>AxWindowsMediaPlayer. ctlcontrols-Eigenschaft
+# <a name="axwindowsmediaplayerctlcontrols-property"></a>AxWindowsMediaPlayer.Ctlcontrols (Eigenschaft)
 
-Die ctlcontrols-Eigenschaft ruft eine iwmpcontrols-Schnittstelle ab, die eine Möglichkeit zum Bearbeiten der Wiedergabe eines Medien Elements bereitstellt.
+Die Ctlcontrols-Eigenschaft ruft eine IWMPControls-Schnittstelle ab, die eine Möglichkeit bietet, die Wiedergabe eines Medienelements zu bearbeiten.
 
 Diese Eigenschaft ist schreibgeschützt.
 
@@ -48,7 +48,7 @@ Public ReadOnly Property Ctlcontrols As IWMPControls
 
 ## <a name="property-value"></a>Eigenschaftswert
 
-WMPLib. Iwmpcontrols-Schnittstelle.
+Die WMPLIB. IWMPControls-Schnittstelle.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -62,14 +62,14 @@ WMPLib. Iwmpcontrols-Schnittstelle.
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**AxWindowsMediaPlayer-Objekt (VB und c#)**](axwindowsmediaplayer-object--vb-and-c.md)
+[**AxWindowsMediaPlayer-Objekt (VB und C#)**](axwindowsmediaplayer-object--vb-and-c.md)
 </dt> <dt>
 
-[**Iwmpcontrols-Schnittstelle (VB und c#)**](iwmpcontrols--vb-and-c.md)
+[**IWMPControls-Schnittstelle (VB und C#)**](iwmpcontrols--vb-and-c.md)
 </dt> </dl>
 
  

@@ -1,261 +1,261 @@
 ---
-description: Version 2 des Hyper-V-WMI-Anbieters ist für Windows 8 und Windows Server 2012 neu.
+description: Version 2 des Hyper-V-WMI-Anbieters ist neu für Windows 8 Windows Server 2012.
 ms.assetid: A91ACF7A-AFE6-45B6-960C-C4AAA0083735
-title: Neuerungen beim Hyper-V-WMI-Anbieter
+title: Neues beim Hyper-V-WMI-Anbieter
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: ce222fd18955e88b9e33e1b706cf81ef5a806917
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: bbaab65c08031c291eb11e8f865b77e256e5600deba060e0f8176ec8d13c3714
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "103866380"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119754930"
 ---
-# <a name="whats-new-in-hyper-v-wmi-provider"></a>Neues in Hyper-V-WMI-Anbieter
+# <a name="whats-new-in-hyper-v-wmi-provider"></a>Neues beim Hyper-V-WMI-Anbieter
 
-Version 2 des Hyper-V-WMI-Anbieters ist für Windows 8 und Windows Server 2012 neu.
+Version 2 des Hyper-V-WMI-Anbieters ist neu für Windows 8 Windows Server 2012.
 
 ## <a name="windows-10-version-1709"></a>Windows 10, Version 1709
 
 Neue Klassen:
 
--   [**MSVM- \_ Akku**](msvm-battery.md)
--   [**MSVM- \_ batterysettingdata**](msvm-batterysettingdata.md)
--   [**MSVM \_ persistentmemorycontroller**](msvm-persistentmemorycontroller.md)
+-   [**Msvm \_ Battery**](msvm-battery.md)
+-   [**Msvm \_ BatterySettingData**](msvm-batterysettingdata.md)
+-   [**Msvm \_ PersistentMemoryController**](msvm-persistentmemorycontroller.md)
 
 Neue Eigenschaften:
 
--   [**MSVM \_ Collectionreferencepointexportjob**](msvm-collectionreferencepointexportjob.md): **exportedgueststatefilepath**
--   [**MSVM \_ Ethernetwitchhardwareoffloaddata**](msvm-ethernetswitchhardwareoffloaddata.md): **defaultqueuevrssindependenthostdisposition**, **defaultqueuevrssexclugelimaryprocessor**, **defaultqueuevrssqueueschedulingmode** und **defaultqueuevrssminqueuepairs**
--   [**MSVM \_ Ethernetwitchhardwareoffloadsettingdata**](msvm-ethernetswitchhardwareoffloadsettingdata.md): **defaultqueuevrssindependenthostdisposition**, **defaultqueuevrssexclugelimaryprocessor**, **defaultqueuevrssqueueschedulingmode**, **defaultqueuevrssminqueuepairs**,
--   [**MSVM \_ Ethernezwitchportoffloaddata**](msvm-ethernetswitchportoffloaddata.md): **vrssvmbuschannelaffinitypolicy**, **vrssindependenthostdisposition**, **vrssexclugelimaryprocessor**, **vrssqueueschedulingmodes** und **vrssminqueuepairs**
--   [**MSVM \_ Virtualharddisksettingdata**](msvm-virtualharddisksettingdata.md): **dataalignment**, **pmemaddressabstractiontype** und **ispmemcompatible**
--   [**MSVM \_ Virtualsystemexportsettingdata**](msvm-virtualsystemexportsettingdata.md): **disabledifferenalofignoredstorage** und **excludedvirtualharddisks**
--   [**MSVM \_ Virtualsystemmanagementservicesettingdata**](msvm-virtualsystemmanagementservicesettingdata.md): **hypervisorrootscheduleraktivierte**
--   [**MSVM \_ Virtualsystemmigrationsettingdata**](msvm-virtualsystemmigrationsettingdata.md): **cpucappingmagnitude** und **cancelifblackoutcedoldexceging**
--   [**MSVM \_ Virtualsystemreferencepointexportjob**](msvm-virtualsystemreferencepointexportjob.md): **exportedgueststatefilepath**
--   [**MSVM \_ Virtualsystemsettingdata**](msvm-virtualsystemsettingdata.md): **Architecture**, **automaticsnapshotsenabled**, **isautomaticsnapshot**, **gueststatefile** und **gueststatedataroot**
+-   [**Msvm \_ CollectionReferencePointExportJob:**](msvm-collectionreferencepointexportjob.md) **ExportedGuestStateFilePaths**
+-   [**Msvm \_ EthernetSwitchHardwareOffloadData:**](msvm-ethernetswitchhardwareoffloaddata.md) **DefaultQueueVrssIndependentHostSpreading,** **DefaultQueueVrssExcludePrimaryProcessor,** **DefaultQueueVrssQueueSchedulingMode** und **DefaultQueueVrssMinQueuePairs**
+-   [**Msvm \_ EthernetSwitchHardwareOffloadSettingData:**](msvm-ethernetswitchhardwareoffloadsettingdata.md) **DefaultQueueVrssIndependentHostSpreading**, **DefaultQueueVrssExcludePrimaryProcessor**, **DefaultQueueVrssQueueSchedulingMode**, **DefaultQueueVrssMinQueuePairs**,
+-   [**Msvm \_ EthernetSwitchPortOffloadData:**](msvm-ethernetswitchportoffloaddata.md) **VrssVmbusChannelAffinityPolicy,** **VrssIndependentHostSpreading,** **VrssExcludePrimaryProcessor,** **VrssQueueSchedulingModes** und **VrssMinQueuePairs**
+-   [**Msvm \_ VirtualHardDiskSettingData:**](msvm-virtualharddisksettingdata.md) **DataAlignment,** **PmemAddressAbstractionType** und **IsPmemCompatible**
+-   [**Msvm \_ VirtualSystemExportSettingData:**](msvm-virtualsystemexportsettingdata.md) **DisableDifferentialOfIgnoredStorage** und **ExcludedVirtualHardDisks**
+-   [**Msvm \_ VirtualSystemManagementServiceSettingData:**](msvm-virtualsystemmanagementservicesettingdata.md) **HypervisorRootSchedulerEnabled**
+-   [**Msvm \_ VirtualSystemMigrationSettingData**](msvm-virtualsystemmigrationsettingdata.md): **CPUCappingMagnitude** und **CancelIfBlackoutThresholdExceeded**
+-   [**Msvm \_ VirtualSystemReferencePointExportJob:**](msvm-virtualsystemreferencepointexportjob.md) **ExportedGuestStateFilePath**
+-   [**Msvm \_ VirtualSystemSettingData:**](msvm-virtualsystemsettingdata.md) **Architektur,** **AutomaticSnapshotsEnabled,** **IsAutomaticSnapshot,** **GuestStateFile** und **GuestStateDataRoot**
 
 ## <a name="windows-10-version-1703"></a>Windows 10, Version 1703
 
 Neue Klassen:
 
--   [**MSVM zugewiesen \_ abledevicedismountsettingdata**](msvm-assignabledevicedismountsettingdata.md)
--   [**MSVM zugewiesen \_ abledebug Service**](msvm-assignabledeviceservice.md)
--   [**MSVM \_ collectionreferencepointexportjob**](msvm-collectionreferencepointexportjob.md)
--   [**MSVM \_ ethernezwitchhardwareoffloadsettingdata**](msvm-ethernetswitchhardwareoffloadsettingdata.md)
--   [**MSVM \_ ethernetzwitchportmigrationqossettingdata**](msvm-ethernetswitchportmigrationqossettingdata.md)
--   [**MSVM \_ ethernetzwitchportrdmasettingdata**](msvm-ethernetswitchportrdmasettingdata.md)
--   [**MSVM \_ ethernetzwitchportteammappingsettingdata**](msvm-ethernetswitchportteammappingsettingdata.md)
--   [**MSVM- \_ gpupartition**](msvm-gpupartition.md)
--   [**MSVM \_ gpupartitionsettingdata**](msvm-gpupartitionsettingdata.md)
--   [**MSVM \_ networkconnectiondiagnosticinformation**](msvm-networkconnectiondiagnosticinformation.md)
--   [**MSVM \_ networkconnectiondiagnosticsettingdata**](msvm-networkconnectiondiagnosticsettingdata.md)
--   [**MSVM \_ partitionablegpu**](msvm-partitionablegpu.md)
--   [**MSVM \_ PCIExpress**](msvm-pciexpress.md)
--   [**MSVM \_ PCIExpress SettingData**](msvm-pciexpresssettingdata.md)
--   [**MSVM \_ SecurityElement**](msvm-securityelement.md)
--   [**MSVM- \_ SecurityService**](msvm-securityservice.md)
--   [**MSVM \_ securitysettingdata**](msvm-securitysettingdata.md)
--   [**MSVM \_ storagesettingdata**](msvm-storagesettingdata.md)
--   [**MSVM \_ summaryinformationbase**](msvm-summaryinformationbase.md)
--   [**MSVM \_ systemcomponentsettingdata**](msvm-systemcomponentsettingdata.md)
--   [**MSVM \_ virtualsystemreferencepointexportjob**](msvm-virtualsystemreferencepointexportjob.md)
--   [**MSVM \_ virtualsystemreferencepointsettingdata**](msvm-virtualsystemreferencepointsettingdata.md)
+-   [**Msvm \_ AssignableDeviceDismountSettingData**](msvm-assignabledevicedismountsettingdata.md)
+-   [**Msvm \_ AssignableDeviceService**](msvm-assignabledeviceservice.md)
+-   [**Msvm \_ CollectionReferencePointExportJob**](msvm-collectionreferencepointexportjob.md)
+-   [**Msvm \_ EthernetSwitchHardwareOffloadSettingData**](msvm-ethernetswitchhardwareoffloadsettingdata.md)
+-   [**Msvm \_ EthernetSwitchPortMigrationQosSettingData**](msvm-ethernetswitchportmigrationqossettingdata.md)
+-   [**Msvm \_ EthernetSwitchPortRdmaSettingData**](msvm-ethernetswitchportrdmasettingdata.md)
+-   [**Msvm \_ EthernetSwitchPortTeamMappingSettingData**](msvm-ethernetswitchportteammappingsettingdata.md)
+-   [**Msvm \_ GpuPartition**](msvm-gpupartition.md)
+-   [**Msvm \_ GpuPartitionSettingData**](msvm-gpupartitionsettingdata.md)
+-   [**Msvm \_ NetworkConnectionDiagnosticInformation**](msvm-networkconnectiondiagnosticinformation.md)
+-   [**Msvm \_ NetworkConnectionDiagnosticSettingData**](msvm-networkconnectiondiagnosticsettingdata.md)
+-   [**Msvm \_ PartitionableGpu**](msvm-partitionablegpu.md)
+-   [**Msvm \_ PciExpress**](msvm-pciexpress.md)
+-   [**Msvm \_ PciExpressSettingData**](msvm-pciexpresssettingdata.md)
+-   [**Msvm \_ SecurityElement**](msvm-securityelement.md)
+-   [**Msvm \_ SecurityService**](msvm-securityservice.md)
+-   [**Msvm \_ SecuritySettingData**](msvm-securitysettingdata.md)
+-   [**Msvm \_ StorageSettingData**](msvm-storagesettingdata.md)
+-   [**Msvm \_ SummaryInformationBase**](msvm-summaryinformationbase.md)
+-   [**Msvm \_ SystemComponentSettingData**](msvm-systemcomponentsettingdata.md)
+-   [**Msvm \_ VirtualSystemReferencePointExportJob**](msvm-virtualsystemreferencepointexportjob.md)
+-   [**Msvm \_ VirtualSystemReferencePointSettingData**](msvm-virtualsystemreferencepointsettingdata.md)
 
 Entfernte Klassen:
 
--   [**MSVM \_ tpmsettingdata**](msvm-tpmsettingdata.md)
+-   [**Msvm \_ TPMSettingData**](msvm-tpmsettingdata.md)
 
 Neue Methoden:
 
--   [**MSVM \_ Collectionsnapshotservice**](msvm-collectionsnapshotservice.md) -Klasse: [ **applysnapshot**](msvm-collectionsnapshotservice-applysnapshot.md)
--   [**MSVM \_ Virtualsystemmanagementservice**](msvm-virtualsystemmanagementservice.md) -Klasse: [**addsystemcomponentsetting**](msvm-virtualsystemmanagementservice-addsystemcomponentsettings.md), [**diagnosenetworkconnection**](msvm-virtualsystemmanagementservice-diagnosenetworkconnection.md), [**modifysystemcomponentsettings**](msvm-virtualsystemmanagementservice-modifysystemcomponentsettings.md)und [**removesystemcomponentsettings**](msvm-virtualsystemmanagementservice-removesystemcomponentsettings.md)
--   [**MSVM \_ Virtualsystemreferencepointservice**](msvm-virtualsystemreferencepointservice.md) -Klasse: [ **importreferencepointmetadata**](msvm-virtualsystemreferencepointservice-importreferencepointmetadata.md)
+-   [**Msvm \_ CollectionSnapshotService-Klasse:**](msvm-collectionsnapshotservice.md) [ **ApplySnapshot**](msvm-collectionsnapshotservice-applysnapshot.md)
+-   [**Msvm \_ VirtualSystemManagementService-Klasse:**](msvm-virtualsystemmanagementservice.md) [**AddSystemComponentSetting**](msvm-virtualsystemmanagementservice-addsystemcomponentsettings.md), [**DiagnoseNetworkConnection**](msvm-virtualsystemmanagementservice-diagnosenetworkconnection.md), [**ModifySystemComponentSettings**](msvm-virtualsystemmanagementservice-modifysystemcomponentsettings.md)und [**RemoveSystemComponentSettings**](msvm-virtualsystemmanagementservice-removesystemcomponentsettings.md)
+-   [**Msvm \_ VirtualSystemReferencePointService-Klasse:**](msvm-virtualsystemreferencepointservice.md) [ **ImportReferencePointMetadata**](msvm-virtualsystemreferencepointservice-importreferencepointmetadata.md)
 
 Neue Eigenschaften:
 
--   [**MSVM \_ Ethernezwitchhardwareoffloaddata**](msvm-ethernetswitchhardwareoffloaddata.md): **defaultqueuevmmqqueuepairs**, **defaultqueuevmmqaktivierte** und **defaultqueuevrssssaktivierte**
--   [**MSVM \_ Ethernezwitchportoffloaddata**](msvm-ethernetswitchportoffloaddata.md): **vmmqqueuepairs**, **vmmqaktivierte** und **vrssaktivierte**
--   [**MSVM \_ Ethernezwitchportoffloadsettingdata**](msvm-ethernetswitchportoffloadsettingdata.md): **vmmqqueuepairs**, **vmmqaktivierte** und **vrssaktivierte**
--   [**MSVM \_ Guestclusterinformation**](msvm-guestclusterinformation.md): **lastresourcemuvetime**
--   [**MSVM \_ Kvpexchangecomponentsettingdata**](msvm-kvpexchangecomponentsettingdata.md): **disablehostkvpitems**
--   [**MSVM \_ Memorysettingdata**](msvm-memorysettingdata.md): **sgxsize** und **sgxaktivierte**
--   [**MSVM \_ Physical3dGraphicsProcessor**](msvm-physical3dgraphicsprocessor.md): **compatibleforvirtualization** und **drivermodelversion**
--   [**MSVM \_ Processorsettingdata**](msvm-processorsettingdata.md): **hwthreadspercorecpugroupid**, **hidehypervisorpresent** und **exposevirtualizationextensions**
--   [**MSVM \_ Settingsdefinecapabili:**](msvm-settingsdefinecapabilities.md) **supportstatement**
--   [**MSVM \_ Storagezugecationsettingdata**](msvm-storageallocationsettingdata.md): **Beschreib tehardeningmethod**
--   [**MSVM \_ SummaryInformation**](msvm-summaryinformation.md): **abgeschirmt**
--   [**MSVM \_ Syntheticethernetportsettingdata**](msvm-syntheticethernetportsettingdata.md): **allowpacketdirect**
--   [**MSVM \_ Virtualsystemcollection**](msvm-virtualsystemcollection.md): **LastApplyConsistencyLevel**, **lastapplyvirtualmachineids**, **lastapplytime**, **failedoverreplicationtype**, **replicationmode** und **replicationstate**
--   [**MSVM \_ Virtualsystemexportsettingdata**](msvm-virtualsystemexportsettingdata.md): **exportforlivemigration**
--   [**MSVM \_ Virtualsystemmigrationsettingdata**](msvm-virtualsystemmigrationsettingdata.md): " **vermeidremuvingvhds**" und " **Zuweisung** von" "" ".
--   [**MSVM \_ Virtualsystemsettingdata**](msvm-virtualsystemsettingdata.md): **highmmiogapsize**
--   [**MSVM \_ Virtualsystemsnapshotsettingdata**](msvm-virtualsystemsnapshotsettingdata.md): **guestbackuptype**
+-   [**Msvm \_ EthernetSwitchHardwareOffloadData:**](msvm-ethernetswitchhardwareoffloaddata.md) **DefaultQueueVmmqQueuePairs,** **DefaultQueueVmmqEnabled** und **DefaultQueueVrssEnabled**
+-   [**Msvm \_ EthernetSwitchPortOffloadData:**](msvm-ethernetswitchportoffloaddata.md) **VmmqQueuePairs,** **VmmqEnabled** und **VrssEnabled**
+-   [**Msvm \_ EthernetSwitchPortOffloadSettingData:**](msvm-ethernetswitchportoffloadsettingdata.md) **VmmqQueuePairs,** **VmmqEnabled** und **VrssEnabled**
+-   [**Msvm \_ GuestClusterInformation:**](msvm-guestclusterinformation.md) **LastResourceMoveTime**
+-   [**Msvm \_ KvpExchangeComponentSettingData:**](msvm-kvpexchangecomponentsettingdata.md) **DisableHostKVPItems**
+-   [**Msvm \_ MemorySettingData:**](msvm-memorysettingdata.md) **SgxSize** und **SgxEnabled**
+-   [**Msvm \_ Physical3dGraphicsProcessor:**](msvm-physical3dgraphicsprocessor.md) **CompatibleForVirtualization** und **DriverModelVersion**
+-   [**Msvm \_ ProcessorSettingData:**](msvm-processorsettingdata.md) **HwThreadsPerCoreCpuGroupId,** **HideHypervisorPresent** und **ExposeVirtualizationExtensions**
+-   [**Msvm \_ SettingsDefineCapabilities**](msvm-settingsdefinecapabilities.md): **SupportStatement**
+-   [**Msvm \_ StorageAllocationSettingData:**](msvm-storageallocationsettingdata.md) **WriteHardeningMethod**
+-   [**Msvm \_ SummaryInformation:**](msvm-summaryinformation.md) **Abgeschirmt**
+-   [**Msvm \_ SyntheticEthernetPortSettingData:**](msvm-syntheticethernetportsettingdata.md) **AllowPacketDirect**
+-   [**Msvm \_ VirtualSystemCollection:**](msvm-virtualsystemcollection.md) **LastApplyConsistencyLevel,** **LastApplyVirtualMachineIds,** **LastApplyTime,** **FailedOverReplicationType,** **ReplicationMode** und **ReplicationState**
+-   [**Msvm \_ VirtualSystemExportSettingData:**](msvm-virtualsystemexportsettingdata.md) **ExportForLiveMigration**
+-   [**Msvm \_ VirtualSystemMigrationSettingData:**](msvm-virtualsystemmigrationsettingdata.md) **AvoidRemovingVHDs** und **AllowOverwriteExistingFile**
+-   [**Msvm \_ VirtualSystemSettingData:**](msvm-virtualsystemsettingdata.md) **HighMmioGapSize**
+-   [**Msvm \_ VirtualSystemSnapshotSettingData:**](msvm-virtualsystemsnapshotsettingdata.md) **GuestBackupType**
 
 Entfernte Eigenschaften:
 
--   [**MSVM \_ Virtualsystemsettingdata**](msvm-virtualsystemsettingdata.md): Parameter **Package**
+-   [**Msvm \_ VirtualSystemSettingData:**](msvm-virtualsystemsettingdata.md) **ParentPackage**
 
-## <a name="windows-10"></a>Windows 10
+## <a name="windows-10"></a>Windows 10
 
 Neue Klassen:
 
--   [**CIM \_ collectedmses**](cim-collectedmses.md)
--   [**CIM \_ -Auflistung**](cim-collection.md)
+-   [**CIM \_ CollectedMSEs**](cim-collectedmses.md)
+-   [**\_CIM-Sammlung**](cim-collection.md)
 -   [**CIM \_ CollectionOfMSEs**](cim-collectionofmses.md)
--   [**CIM- \_ Element Ansicht**](cim-elementview.md)
--   [**CIM- \_ mitgliedfassungs Sammlung**](cim-memberofcollection.md)
--   [**CIM- \_ TPM**](cim-tpm.md)
--   [**CIM- \_ Ansicht**](cim-view.md)
--   [**MSVM \_ collectedcollections**](msvm-collectedcollections.md)
--   [**MSVM \_ collectedreferencepoints**](msvm-collectedreferencepoints.md)
--   [**MSVM \_ collectedmoment Aufnahmen**](msvm-collectedsnapshots.md)
--   [**MSVM \_ collectedvirtualsystems**](msvm-collectedvirtualsystems.md)
--   [**MSVM \_ collectionmanagementservice**](msvm-collectionmanagementservice.md)
--   [**MSVM \_ collectionreferencepointexportsettingdata**](msvm-collectionreferencepointexportsettingdata.md)
--   [**MSVM \_ collectionreferencepointservice**](msvm-collectionreferencepointservice.md)
--   [**MSVM \_ collectionreferencepointsettingdata**](msvm-collectionreferencepointsettingdata.md)
--   [**MSVM \_ collectionsettingdata**](msvm-collectionsettingdata.md)
--   [**MSVM \_ collectionsnapshotexportsettingdata**](msvm-collectionsnapshotexportsettingdata.md)
--   [**MSVM \_ collectionsnapshotservice**](msvm-collectionsnapshotservice.md)
--   [**MSVM \_ computersystemsummaryinformation**](msvm-computersystemsummaryinformation.md)
--   [**MSVM \_ ethernetzwitchportvfpsettingdata**](msvm-ethernetswitchportvfpsettingdata.md)
--   [**MSVM \_ guestclusterinformation**](msvm-guestclusterinformation.md)
--   [**MSVM \_ guestcommunicationservice**](msvm-guestcommunicationservice.md)
--   [**MSVM \_ guestcommunicationservicesettingdata**](msvm-guestcommunicationservicesettingdata.md)
--   [**MSVM \_ guestserviceinterfaktenettingdatacomponent**](msvm-guestserviceinterfacesettingdatacomponent.md)
--   [**MSVM \_ managementcollection**](msvm-managementcollection.md)
--   [**MSVM " \_ muveunmanagedvhd"**](msvm-moveunmanagedvhd.md)
--   [**MSVM \_ referencepointcollection**](msvm-referencepointcollection.md)
--   [**MSVM \_ referencepoinpofvirtualsystem**](msvm-referencepointofvirtualsystem.md)
--   [**MSVM \_ referencepoinpofvirtualsystemcollection**](msvm-referencepointofvirtualsystemcollection.md)
--   [**MSVM \_ resourcedependentonresource**](msvm-resourcedependentonresource.md)
--   [**MSVM \_ serialportsettingdata**](msvm-serialportsettingdata.md)
--   [**MSVM \_ serviceofvsscomponent**](msvm-serviceofvsscomponent.md)
--   [**MSVM \_ snapshotcollection**](msvm-snapshotcollection.md)
--   [**MSVM \_ snapshostart System Collection**](msvm-snapshotofvirtualsystemcollection.md)
--   [**MSVM \_ StandaloneV2ElementConformsToProfile**](msvm-standalonev2elementconformstoprofile.md)
--   [**MSVM \_ syntheticdisplaycontrollersettingdata**](msvm-syntheticdisplaycontrollersettingdata.md)
--   [**MSVM \_ synthetickeyboard**](msvm-synthetickeyboard.md)
--   [**MSVM \_ TPM**](msvm-tpm.md)
--   [**MSVM \_ tpmsettingdata**](msvm-tpmsettingdata.md)
--   [**MSVM \_ vhdsetinformation**](msvm-vhdsetinformation.md)
--   [**MSVM \_ vhdsnapshotinformation**](msvm-vhdsnapshotinformation.md)
--   [**MSVM \_ virtualethernetzwitchnicteamingmember**](msvm-virtualethernetswitchnicteamingmember.md)
--   [**MSVM \_ virtualethernetzwitchnicteamingsettingdata**](msvm-virtualethernetswitchnicteamingsettingdata.md)
--   [**MSVM \_ virtualmachinetodisks**](msvm-virtualmachinetodisks.md)
--   [**MSVM \_ virtualsystemcollection**](msvm-virtualsystemcollection.md)
--   [**MSVM \_ virtualsystemreferencepoint**](msvm-virtualsystemreferencepoint.md)
--   [**MSVM \_ virtualsystemreferencepointexportsettingdata**](msvm-virtualsystemreferencepointexportsettingdata.md)
--   [**MSVM \_ virtualsystemreferencepointservice**](msvm-virtualsystemreferencepointservice.md)
--   [**MSVM \_ virtualsystemreferencepointsettingdata**](msvm-virtualsystemreferencepointsettingdata.md)
--   [**MSVM \_ virtualsystemsnapshotsettingdata**](msvm-virtualsystemsnapshotsettingdata.md)
--   [**MSVM- \_ VssService**](msvm-vssservice.md)
+-   [**CIM \_ ElementView**](cim-elementview.md)
+-   [**CIM \_ MemberOfCollection**](cim-memberofcollection.md)
+-   [**CIM \_ TPM**](cim-tpm.md)
+-   [**\_CIM-Ansicht**](cim-view.md)
+-   [**Msvm \_ CollectedCollections**](msvm-collectedcollections.md)
+-   [**Msvm \_ CollectedReferencePoints**](msvm-collectedreferencepoints.md)
+-   [**Msvm \_ CollectedSnapshots**](msvm-collectedsnapshots.md)
+-   [**Msvm \_ CollectedVirtualSystems**](msvm-collectedvirtualsystems.md)
+-   [**Msvm \_ CollectionManagementService**](msvm-collectionmanagementservice.md)
+-   [**Msvm \_ CollectionReferencePointExportSettingData**](msvm-collectionreferencepointexportsettingdata.md)
+-   [**Msvm \_ CollectionReferencePointService**](msvm-collectionreferencepointservice.md)
+-   [**Msvm \_ CollectionReferencePointSettingData**](msvm-collectionreferencepointsettingdata.md)
+-   [**Msvm \_ CollectionSettingData**](msvm-collectionsettingdata.md)
+-   [**Msvm \_ CollectionSnapshotExportSettingData**](msvm-collectionsnapshotexportsettingdata.md)
+-   [**Msvm \_ CollectionSnapshotService**](msvm-collectionsnapshotservice.md)
+-   [**Msvm \_ ComputerSystemSummaryInformation**](msvm-computersystemsummaryinformation.md)
+-   [**Msvm \_ EthernetSwitchPortVfpSettingData**](msvm-ethernetswitchportvfpsettingdata.md)
+-   [**Msvm \_ GuestClusterInformation**](msvm-guestclusterinformation.md)
+-   [**Msvm \_ GuestCommunicationService**](msvm-guestcommunicationservice.md)
+-   [**Msvm \_ GuestCommunicationServiceSettingData**](msvm-guestcommunicationservicesettingdata.md)
+-   [**Msvm \_ GuestServiceInterfaceSettingDataComponent**](msvm-guestserviceinterfacesettingdatacomponent.md)
+-   [**Msvm \_ ManagementCollection**](msvm-managementcollection.md)
+-   [**Msvm \_ MoveUnmanagedVhd**](msvm-moveunmanagedvhd.md)
+-   [**Msvm \_ ReferencePointCollection**](msvm-referencepointcollection.md)
+-   [**Msvm \_ ReferencePointOfVirtualSystem**](msvm-referencepointofvirtualsystem.md)
+-   [**Msvm \_ ReferencePointOfVirtualSystemCollection**](msvm-referencepointofvirtualsystemcollection.md)
+-   [**Msvm \_ ResourceDependentOnResource**](msvm-resourcedependentonresource.md)
+-   [**Msvm \_ SerialPortSettingData**](msvm-serialportsettingdata.md)
+-   [**Msvm \_ ServiceOfVssComponent**](msvm-serviceofvsscomponent.md)
+-   [**Msvm \_ SnapshotCollection**](msvm-snapshotcollection.md)
+-   [**Msvm \_ SnapshotOfVirtualSystemCollection**](msvm-snapshotofvirtualsystemcollection.md)
+-   [**Msvm \_ StandaloneV2ElementConformsToProfile**](msvm-standalonev2elementconformstoprofile.md)
+-   [**Msvm \_ SyntheticDisplayControllerSettingData**](msvm-syntheticdisplaycontrollersettingdata.md)
+-   [**Msvm \_ SyntheticKeyboard**](msvm-synthetickeyboard.md)
+-   [**Msvm \_ TPM**](msvm-tpm.md)
+-   [**Msvm \_ TPMSettingData**](msvm-tpmsettingdata.md)
+-   [**Msvm \_ VHDSetInformation**](msvm-vhdsetinformation.md)
+-   [**Msvm \_ VHDSnapshotInformation**](msvm-vhdsnapshotinformation.md)
+-   [**Msvm \_ VirtualEthernetSwitchNicTeamingMember**](msvm-virtualethernetswitchnicteamingmember.md)
+-   [**Msvm \_ VirtualEthernetSwitchNicTeamingSettingData**](msvm-virtualethernetswitchnicteamingsettingdata.md)
+-   [**Msvm \_ VirtualMachineToDisks**](msvm-virtualmachinetodisks.md)
+-   [**Msvm \_ VirtualSystemCollection**](msvm-virtualsystemcollection.md)
+-   [**Msvm \_ VirtualSystemReferencePoint**](msvm-virtualsystemreferencepoint.md)
+-   [**Msvm \_ VirtualSystemReferencePointExportSettingData**](msvm-virtualsystemreferencepointexportsettingdata.md)
+-   [**Msvm \_ VirtualSystemReferencePointService**](msvm-virtualsystemreferencepointservice.md)
+-   [**Msvm \_ VirtualSystemReferencePointSettingData**](msvm-virtualsystemreferencepointsettingdata.md)
+-   [**Msvm \_ VirtualSystemSnapshotSettingData**](msvm-virtualsystemsnapshotsettingdata.md)
+-   [**Msvm \_ VssService**](msvm-vssservice.md)
 
-Entfernte Klasse:
+Klasse entfernt:
 
--   [**MSVM \_ resourcepoolcomponent**](msvm-resourcepoolcomponent.md)
--   [**MSVM \_ resourcepoolregistration**](msvm-resourcepoolregistration.md)
--   [**MSVM \_ resourcepoolsettingdata**](msvm-resourcepoolsettingdata.md)
--   [**MSVM \_ virtualizationcomponent**](msvm-virtualizationcomponent.md)
--   [**MSVM \_ virtualizationcomponentregistration**](msvm-virtualizationcomponentregistration.md)
+-   [**Msvm \_ ResourcePoolComponent**](msvm-resourcepoolcomponent.md)
+-   [**Msvm \_ ResourcePoolRegistration**](msvm-resourcepoolregistration.md)
+-   [**Msvm \_ ResourcePoolSettingData**](msvm-resourcepoolsettingdata.md)
+-   [**Msvm \_ VirtualizationComponent**](msvm-virtualizationcomponent.md)
+-   [**Msvm \_ VirtualizationComponentRegistration**](msvm-virtualizationcomponentregistration.md)
 
 Neue Eigenschaften:
 
--   [**MSVM \_ Bootsourcesettingdata**](msvm-bootsourcesettingdata.md): **OptionalData**
--   [**MSVM \_ Ethernetportumcationsettingdata**](msvm-ethernetportallocationsettingdata.md): **lastknownswitchname** und **Abteilungs-GUID**
--   [**MSVM \_ Ethernezwitchhardwareoffloaddata**](msvm-ethernetswitchhardwareoffloaddata.md): **packetdirectinuse**
--   [**MSVM \_ Ethernezwitchportoffloadsettingdata**](msvm-ethernetswitchportoffloadsettingdata.md): **packetdirectmoderationinterval**, **packetdirectmoderationcount**, **packetdirectnumprocs**,
--   [**MSVM \_ Ethernetzwitchportsecuritysettingdata**](msvm-ethernetswitchportsecuritysettingdata.md): **EnableFixSpeed10G** und **reserved**
--   [**MSVM \_ Guestserviceinterfacecomponentsettingdata**](msvm-guestserviceinterfacecomponentsettingdata.md): **defaultenabledstatepolicy**
--   [**MSVM \_ Processorsettingdata**](msvm-processorsettingdata.md): **enablehustresourceprotection**
--   [**MSVM \_ Storagezugecationsettingdata**](msvm-storageallocationsettingdata.md): **storageqospolicyid**, **CachingMode** und **snapshotid**
--   [**MSVM \_ SummaryInformation**](msvm-summaryinformation.md): **InstanceId**, **Version**, **thumbnailimageheight**, **ThumbnailImageWidth** und **hostcomputersystemname**
--   [**MSVM \_ Synthetic3DDisplayControllerSettingData**](msvm-synthetic3ddisplaycontrollersettingdata.md): **vramsizebytes**
--   [**MSVM \_ Virtualethernetzwitchsettingdata**](msvm-virtualethernetswitchsettingdata.md): **teamingenabled** und **packetdirectenabled**
--   [**MSVM \_ Virtualharddisksettingdata**](msvm-virtualharddisksettingdata.md): "Parameter **timestamp**" und "Parameter **Name** "
--   [**MSVM \_ Virtualharddiskstate**](msvm-virtualharddiskstate.md): **Zeitstempel**
--   [**MSVM \_ Virtualsystemexportsettingdata**](msvm-virtualsystemexportsettingdata.md): **backupintent** und **differentialbackupbase**
--   [**MSVM \_ Virtualsystemmanagementservicesettingdata**](msvm-virtualsystemmanagementservicesettingdata.md): **defaultvirtualharddiskcachingmode**
--   [**MSVM \_ Virtualsystemmigrationsettingdata**](msvm-virtualsystemmigrationsettingdata.md): **removesourceunmanagedvhds** und **unmanagedvhds**
--   [**MSVM \_ Virtualsystemsettingdata**](msvm-virtualsystemsettingdata.md): **usersnapshottype**, **guestcontrolledcachetypes**, **lockondisconnect, Parameter** **Package**, **automaticcriticalerroraction Timeout**, **automaticcriticalerroraction**, **consolemode** und **secureboottemplateid**
+-   [**Msvm \_ BootSourceSettingData:**](msvm-bootsourcesettingdata.md) **OptionalData**
+-   [**Msvm \_ EthernetPortAllocationSettingData:**](msvm-ethernetportallocationsettingdata.md) **LastKnownSwitchName** und **CompartmentGuid**
+-   [**Msvm \_ EthernetSwitchHardwareOffloadData:**](msvm-ethernetswitchhardwareoffloaddata.md) **PacketDirectInUse**
+-   [**Msvm \_ EthernetSwitchPortOffloadSettingData:**](msvm-ethernetswitchportoffloadsettingdata.md) **PacketDirectModerationInterval**, **PacketDirectModerationCount**, **PacketDirectNumProcs**,
+-   [**Msvm \_ EthernetSwitchPortSecuritySettingData:**](msvm-ethernetswitchportsecuritysettingdata.md) **EnableFixSpeed10G** und **Reserved**
+-   [**Msvm \_ GuestServiceInterfaceComponentSettingData:**](msvm-guestserviceinterfacecomponentsettingdata.md) **DefaultEnabledStatePolicy**
+-   [**Msvm \_ ProcessorSettingData:**](msvm-processorsettingdata.md) **EnableHostResourceProtection**
+-   [**Msvm \_ StorageAllocationSettingData:**](msvm-storageallocationsettingdata.md) **StorageQoSPolicyID,** **CachingMode** und **SnapshotId**
+-   [**Msvm \_ SummaryInformation:**](msvm-summaryinformation.md) **InstanceID**, **Version**, **ThumbnailImageHeight**, **ThumbnailImageWidth** und **HostComputerSystemName**
+-   [**Msvm \_ Synthetic3DDisplayControllerSettingData:**](msvm-synthetic3ddisplaycontrollersettingdata.md) **VRAMSizeBytes**
+-   [**Msvm \_ VirtualEthernetSwitchSettingData:**](msvm-virtualethernetswitchsettingdata.md) **TeamingEnabled** und **PacketDirectEnabled**
+-   [**Msvm \_ VirtualHardDiskSettingData:**](msvm-virtualharddisksettingdata.md) **ParentTimestamp** und **ParentIdentifier**
+-   [**Msvm \_ VirtualHardDiskState:**](msvm-virtualharddiskstate.md) **Zeitstempel**
+-   [**Msvm \_ VirtualSystemExportSettingData:**](msvm-virtualsystemexportsettingdata.md) **BackupIntent** und **DifferentialBackupBase**
+-   [**Msvm \_ VirtualSystemManagementServiceSettingData:**](msvm-virtualsystemmanagementservicesettingdata.md) **DefaultVirtualHardDiskCachingMode**
+-   [**Msvm \_ VirtualSystemMigrationSettingData**](msvm-virtualsystemmigrationsettingdata.md): **RemoveSourceUnmanagedVhds** und **UnmanagedVhds**
+-   [**Msvm \_ VirtualSystemSettingData:**](msvm-virtualsystemsettingdata.md) **UserSnapshotType,** **GuestControlledCacheTypes,** **LockOnDisconnect,** **ParentPackage,** **AutomaticCriticalErrorActionTimeout,** **AutomaticCriticalErrorAction,** **ConsoleMode** und **SecureBootTemplateId**
 
 Neue Methoden:
 
--   [**MSVM \_ Imagemanagementservice**](msvm-imagemanagementservice.md) -Klasse: [**convertvirtualharddisktovhdset**](msvm-imagemanagementservice-convertvirtualharddisktovhdset.md), [**deletevhdsnapshot**](msvm-imagemanagementservice-deletevhdsnapshot.md), [**findmountedstorageimageinstance**](msvm-imagemanagementservice-findmountedstorageimageinstance.md), [**getvhdsetinformation**](msvm-imagemanagementservice-getvhdsetinformation.md), [**getvhdsnapshotinformation**](msvm-imagemanagementservice-getvhdsnapshotinformation.md), [**getvirtualdiskchanges**](msvm-imagemanagementservice-getvirtualdiskchanges.md), [**optimizevhdset**](msvm-imagemanagementservice-optimizevhdset.md)und [**setvhdsnapshotinformation**](msvm-imagemanagementservice-setvhdsnapshotinformation.md)
--   [**MSVM \_ Shutdowncomponent**](msvm-shutdowncomponent.md) -Klasse: [ **initiatereboot**](msvm-shutdowncomponent-initiatereboot.md)
--   [**MSVM \_ Virtualsystemmanagementservice**](msvm-virtualsystemmanagementservice.md): [**addbootsourcesettings**](msvm-virtualsystemmanagementservice-addbootsourcesettings.md), [**addguestservicesettings**](msvm-virtualsystemmanagementservice-addguestservicesettings.md), [**defineplannedsystem**](msvm-virtualsystemmanagementservice-defineplannedsystem.md), [**modifyguestservicesettings**](msvm-virtualsystemmanagementservice-modifyguestservicesettings.md), [**removebootsourcesettings**](msvm-virtualsystemmanagementservice-removebootsourcesettings.md), [**removeguesservicesettings**](msvm-virtualsystemmanagementservice-removeguestservicesettings.md), [**setinitialmachineconfigurationdata**](msvm-virtualsystemmanagementservice-setinitialmachineconfigurationdata.md)und [**upgradesystemversion**](msvm-virtualsystemmanagementservice-upgradesystemversion.md)
--   [**MSVM \_ Virtualsystemsnapshotservice**](msvm-virtualsystemsnapshotservice.md) -Klasse: [ **converttoreferencepoint**](msvm-virtualsystemsnapshotservice-converttoreferencepoint.md)
+-   [**Msvm \_ ImageManagementService-Klasse:**](msvm-imagemanagementservice.md) [**ConvertVirtualHardDiskToVHDSet**](msvm-imagemanagementservice-convertvirtualharddisktovhdset.md), [**DeleteVHDSnapshot**](msvm-imagemanagementservice-deletevhdsnapshot.md), [**FindMountedStorageImageInstance**](msvm-imagemanagementservice-findmountedstorageimageinstance.md), [**GetVHDSetInformation**](msvm-imagemanagementservice-getvhdsetinformation.md), [**GetVHDSnapshotInformation**](msvm-imagemanagementservice-getvhdsnapshotinformation.md), [**GetVirtualDiskChanges**](msvm-imagemanagementservice-getvirtualdiskchanges.md), [**OptimizeVHDSet**](msvm-imagemanagementservice-optimizevhdset.md)und [**SetVHDSnapshotInformation**](msvm-imagemanagementservice-setvhdsnapshotinformation.md)
+-   [**Msvm \_ ShutdownComponent-Klasse:**](msvm-shutdowncomponent.md) [ **InitiateReboot**](msvm-shutdowncomponent-initiatereboot.md)
+-   [**Msvm \_ VirtualSystemManagementService**](msvm-virtualsystemmanagementservice.md): [**AddBootSourceSettings**](msvm-virtualsystemmanagementservice-addbootsourcesettings.md), [**AddGuestServiceSettings**](msvm-virtualsystemmanagementservice-addguestservicesettings.md), [**DefinePlannedSystem**](msvm-virtualsystemmanagementservice-defineplannedsystem.md), [**ModifyGuestServiceSettings**](msvm-virtualsystemmanagementservice-modifyguestservicesettings.md), [**RemoveBootSourceSettings**](msvm-virtualsystemmanagementservice-removebootsourcesettings.md), [**RemoveGuesServiceSettings**](msvm-virtualsystemmanagementservice-removeguestservicesettings.md), [**SetInitialMachineConfigurationData**](msvm-virtualsystemmanagementservice-setinitialmachineconfigurationdata.md)und [**UpgradeSystemVersion**](msvm-virtualsystemmanagementservice-upgradesystemversion.md)
+-   [**Msvm \_ VirtualSystemSnapshotService-Klasse:**](msvm-virtualsystemsnapshotservice.md) [ **ConvertToReferencePoint**](msvm-virtualsystemsnapshotservice-converttoreferencepoint.md)
 
 ## <a name="windows-81-and-windows-server-2012-r2"></a>Windows 8.1 und Windows Server 2012 R2
 
 Windows 8.1 und Windows Server 2012 R2 enthalten neue Funktionen für Version 2 des Hyper-V-WMI-Anbieters.
 
--   Die Eigenschaften " **iopsallocationunits**", " **iopslimit**", " **iopsreservierung**" und " **persistentreservationssupported** " wurden der [**MSVM-Klasse " \_ storagezucationsettingdata**](msvm-storageallocationsettingdata.md) " hinzugefügt.
--   Die **virtualdiskid** -Eigenschaft wurde der [**MSVM-Klasse " \_ virtualharddisksettingdata**](msvm-virtualharddisksettingdata.md) " hinzugefügt.
--   Informationen zu Speicher-QoS wurden der Eigenschaft **OperationalStatus** der [**MSVM \_ LogicalDisk**](msvm-logicaldisk.md) -und [**MSVM \_ resourcepool**](msvm-resourcepool.md) -Klassen hinzugefügt.
--   [**MSVM \_ Storagealert**](msvm-storagealert.md) -Klasse
--   Die **clusterüberwachter** -Eigenschaft wurde den Klassen [**MSVM \_ emuatedethernetportsettingdata**](msvm-emulatedethernetportsettingdata.md) und [**MSVM \_ syntheticethernetportsettingdata**](msvm-syntheticethernetportsettingdata.md) hinzugefügt.
--   Die Eigenschaften **EnableCompression** und **enablesmbtransport** wurden der [**MSVM \_ virtualsystemmigrationservicesettingdata**](msvm-virtualsystemmigrationservicesettingdata.md) -Klasse hinzugefügt.
--   Die **EnableCompression** -Eigenschaft wurde der [**MSVM-Klasse " \_ virtualsystemmigrationsettingdata**](msvm-virtualsystemmigrationsettingdata.md) " hinzugefügt. Die **TransportType** -Eigenschaft enthält Informationen zur Live Migration.
--   [**MSVM \_ Copyfiledeguestjob**](msvm-copyfiletoguestjob.md) -Klasse
--   [**MSVM \_ Copyfilestarguestsettingdata**](msvm-copyfiletoguestsettingdata.md) -Klasse
--   [**MSVM \_ Guestfileservice**](msvm-guestfileservice.md) -Klasse
--   [**MSVM \_ Guestservice**](msvm-guestservice.md) -Klasse
--   [**MSVM \_ Guestserviceingeterfacecomponent**](msvm-guestserviceinterfacecomponent.md) -Klasse
--   [**MSVM \_ Guestserviceinterfacecomponentsettingdata**](msvm-guestserviceinterfacecomponentsettingdata.md) -Klasse
--   [**MSVM \_ Registeredguestservice**](msvm-registeredguestservice.md) -Klasse
--   Die **enhancedsessionmodeaktivierte** Eigenschaft wurde der [**MSVM \_ virtualsystemmanagementservicesettingdata**](msvm-virtualsystemmanagementservicesettingdata.md) -Klasse hinzugefügt.
--   Die **enhancedmodestate** -Eigenschaft und die [**injetnonmaskableinterrupt**](injectnonmaskableinterrupt-msvm-computersystem.md) -Methode wurden der [**MSVM \_ Computersystem**](msvm-computersystem.md) -Klasse hinzugefügt.
--   Die Eigenschaften " **bootsourceorder**", " **lowmmiogapsize**", " **networkbootpreferredprotocol**", " **pauseafterbootfailure** ", " **securebootenabled**" und " **virtualsystemsubtype** " wurden der [**MSVM-Klasse " \_ virtualsystemsettingdata**](msvm-virtualsystemsettingdata.md) " hinzugefügt.
--   [**MSVM \_ Bootsourcesettingdata**](msvm-bootsourcesettingdata.md) -Klasse
--   [**MSVM \_ Bootsourcecomponent**](msvm-bootsourcecomponent.md) -Klasse
--   [**MSVM \_ Logicalidentity**](msvm-logicalidentity.md) -Klasse
--   [**MSVM \_ Compatibilityvector**](msvm-compatibilityvector.md) -Klasse
--   Die [**getsystemcompatibilityvectors**](getsystemcompatibilityvectors-msvm-virtualsystemmigrationservice.md) -Methode wurde der [**MSVM \_ virtualsystemmigrationservice**](msvm-virtualsystemmigrationservice.md) -Klasse hinzugefügt.
--   Die Eigenschaften " **replicationstateex**", " **replicationhealthex**", " **enhancedsessionmodestate**", " **virtualswitchnames** " und " **virtualsystemsubtype** " wurden der [**MSVM-Klasse " \_ SummaryInformation**](msvm-summaryinformation.md) " hinzugefügt. Die Eigenschaften " **replicationstate** " und " **ReplicationHealth** " sind veraltet und werden durch die Eigenschaften " **replicationstateex** " und " **replicationhealthex** " ersetzt.
--   Die **pnpdevicepath** -Eigenschaft wurde der [**MSVM \_ mountedstorageimage**](msvm-mountedstorageimage.md) -Klasse hinzugefügt.
--   Die Eigenschaften " **zugswedhashalgorithms** " und " **Treuhänder Name** " wurden der Klasse " [**MSVM \_ terminalservicesettingdata**](msvm-terminalservicesettingdata.md) " hinzugefügt.
+-   Die **Eigenschaften IOPSAllocationUnits,** **IOPSLimit,** **IOPSReservation** und **PersistentReservationsSupported** wurden der [**Msvm \_ StorageAllocationSettingData-Klasse**](msvm-storageallocationsettingdata.md) hinzugefügt.
+-   Die **VirtualDiskId-Eigenschaft** wurde der [**Msvm \_ VirtualHardDiskSettingData-Klasse**](msvm-virtualharddisksettingdata.md) hinzugefügt.
+-   Informationen zur Speicher-QoS wurden der **OperationalStatus-Eigenschaft** der [**Klassen Msvm \_ LogicalDisk**](msvm-logicaldisk.md) und [**Msvm \_ ResourcePool**](msvm-resourcepool.md) hinzugefügt.
+-   [**Msvm \_ StorageAlert-Klasse**](msvm-storagealert.md)
+-   Die **ClusterMonitored-Eigenschaft** wurde den [**Klassen Msvm \_ EmulatedEthernetPortSettingData**](msvm-emulatedethernetportsettingdata.md) und [**Msvm \_ SyntheticEthernetPortSettingData**](msvm-syntheticethernetportsettingdata.md) hinzugefügt.
+-   Die **Eigenschaften EnableCompression** und **EnableSmbTransport** wurden der [**Msvm \_ VirtualSystemMigrationServiceSettingData-Klasse**](msvm-virtualsystemmigrationservicesettingdata.md) hinzugefügt.
+-   Die **EnableCompression-Eigenschaft** wurde der [**Msvm \_ VirtualSystemMigrationSettingData-Klasse**](msvm-virtualsystemmigrationsettingdata.md) hinzugefügt. Die **TransportType-Eigenschaft** enthält Informationen zur Livemigration.
+-   [**Msvm \_ CopyFileToGuestJob-Klasse**](msvm-copyfiletoguestjob.md)
+-   [**Msvm \_ CopyFileToGuestSettingData-Klasse**](msvm-copyfiletoguestsettingdata.md)
+-   [**Msvm \_ GuestFileService-Klasse**](msvm-guestfileservice.md)
+-   [**Msvm \_ GuestService-Klasse**](msvm-guestservice.md)
+-   [**Msvm \_ GuestServiceInterfaceComponent-Klasse**](msvm-guestserviceinterfacecomponent.md)
+-   [**Msvm \_ GuestServiceInterfaceComponentSettingData-Klasse**](msvm-guestserviceinterfacecomponentsettingdata.md)
+-   [**Msvm \_ RegisteredGuestService-Klasse**](msvm-registeredguestservice.md)
+-   Die **EnhancedSessionModeEnabled-Eigenschaft** wurde der [**Msvm \_ VirtualSystemManagementServiceSettingData-Klasse**](msvm-virtualsystemmanagementservicesettingdata.md) hinzugefügt.
+-   Die **EnhancedModeState-Eigenschaft** und die [**InjectNonMaskableInterrupt-Methode**](injectnonmaskableinterrupt-msvm-computersystem.md) wurden der [**Msvm \_ ComputerSystem-Klasse**](msvm-computersystem.md) hinzugefügt.
+-   Die **Eigenschaften BootSourceOrder,** **LowMmioGapSize,** **NetworkBootPreferredProtocol,** **PauseAfterBootFailure,** **SecureBootEnabled** und **VirtualSystemSubType** wurden der [**Msvm \_ VirtualSystemSettingData-Klasse**](msvm-virtualsystemsettingdata.md) hinzugefügt.
+-   [**Msvm \_ BootSourceSettingData-Klasse**](msvm-bootsourcesettingdata.md)
+-   [**Msvm \_ BootSourceComponent-Klasse**](msvm-bootsourcecomponent.md)
+-   [**Msvm \_ LogicalIdentity-Klasse**](msvm-logicalidentity.md)
+-   [**Msvm \_ CompatibilityVector-Klasse**](msvm-compatibilityvector.md)
+-   Die [**GetSystemCompatibilityVectors-Methode**](getsystemcompatibilityvectors-msvm-virtualsystemmigrationservice.md) wurde der [**Msvm \_ VirtualSystemMigrationService-Klasse**](msvm-virtualsystemmigrationservice.md) hinzugefügt.
+-   Die **Eigenschaften ReplicationStateEx,** **ReplicationHealthEx,** **EnhancedSessionModeState,** **VirtualSwitchNames** und **VirtualSystemSubType** wurden der [**Msvm \_ SummaryInformation-Klasse**](msvm-summaryinformation.md) hinzugefügt. Die **Eigenschaften ReplicationState** und **ReplicationHealth** sind veraltet und werden durch die **Eigenschaften ReplicationStateEx** und **ReplicationHealthEx** ersetzt.
+-   Die **PnpDevicePath-Eigenschaft** wurde der [**Msvm \_ MountedStorageImage-Klasse**](msvm-mountedstorageimage.md) hinzugefügt.
+-   Die **Eigenschaften AllowedHashAlgorithms** und **TrustedIssuerCertificateHashes** wurden der [**Msvm \_ TerminalServiceSettingData-Klasse**](msvm-terminalservicesettingdata.md) hinzugefügt.
 
-Windows 8.1 und Windows Server 2012 R2 enthalten neue Funktionen für die Replikation virtueller Computer und die failoverwiederherstellung.
+Windows 8.1 und Windows Server 2012 R2 enthalten neue Funktionen für die Replikation virtueller Computer und die Failoverwiederherstellung.
 
--   [**MSVM \_ Replicationprovider**](msvm-replicationprovider.md) -Klasse
--   [**MSVM \_ Replicationrelationship**](msvm-replicationrelationship.md) -Klasse
--   Die Methoden [**changereplicationmodetoprimary**](changereplicationmodetoprimary-msvm-replicationservice.md), [**getreplicationstatisticsex**](getreplicationstatisticsex-msvm-replicationservice.md), [**initiatefailback**](initiatefailback-msvm-replicationservice.md), [**removereplicationrelationshipex**](removereplicationrelationshipex-msvm-replicationservice.md)und [**remintreplicationstatisticsex**](resetreplicationstatisticsex-msvm-replicationservice.md) wurden der Klasse [**MSVM \_ replicationservice**](msvm-replicationservice.md) hinzugefügt. Die Methoden **getreplicationstatisticsex**, **removereplicationrelationshipex** und **rec treplicationstatisticsex** ersetzen die Methoden [**getreplicationstatistics**](getreplicationstatistics-msvm-replicationservice.md), [**removereplicationrelationship**](removereplicationrelationship-msvm-replicationservice.md)und [**recationstatistics**](resetreplicationstatistics-msvm-replicationservice.md) .
--   Die [**MSVM \_ systemreplicationrelationship**](msvm-systemreplicationrelationship.md) -Klasse zeigt eine Zuordnung zwischen einem virtuellen Computer und einer vielen Replikations Beziehung.
--   Die Eigenschaften **additionalsettings** und **replicationprovider** wurden der [**MSVM \_ replicationsettingdata**](msvm-replicationsettingdata.md) -Klasse hinzugefügt.
--   Die Informationen zum Host-zu-Host-Anbieter wurden den Methoden "up [**" und "**](createreplicationrelationship-msvm-replicationservice.md) [**modifyreplicationsettings**](modifyreplicationsettings-msvm-replicationservice.md) " der [**MSVM- \_ replicationservice**](msvm-replicationservice.md) -Klasse hinzugefügt.
--   Die [**requestreplicationstatechangeex**](msvm-requestreplicationstatechangeex-computersystem.md) -Methode wurde der [**MSVM \_ Computersystem**](msvm-computersystem.md) -Klasse hinzugefügt und ersetzt die [**requestreplicationstatechange**](msvm-computersystem-requestreplicationstatechange.md) -Methode. Die **InstanceId-** Eigenschaft kann jetzt die erweiterte Replikation angeben. Weitere Informationen zur erweiterten Replikation finden Sie unter [**MSVM \_ replicationrelationship**](msvm-replicationrelationship.md).
--   [**MSVM \_ Replicationsettingdata**](msvm-replicationsettingdata.md) -und [**MSVM \_ replicationrelationship**](msvm-replicationrelationship.md) -Instanzen verfügen über eine 1:1-Beziehung, die Sie mit einer [**MSVM \_ settingsdefinestate**](msvm-settingsdefinestate.md) -Zuordnung darstellen können.
+-   [**Msvm \_ ReplicationProvider-Klasse**](msvm-replicationprovider.md)
+-   [**Msvm \_ ReplicationRelationship-Klasse**](msvm-replicationrelationship.md)
+-   Die [**Methoden ChangeReplicationModeToPrimary,**](changereplicationmodetoprimary-msvm-replicationservice.md) [**GetReplicationStatisticsEx,**](getreplicationstatisticsex-msvm-replicationservice.md) [**InitiateFailback,**](initiatefailback-msvm-replicationservice.md) [**RemoveReplicationRelationshipEx**](removereplicationrelationshipex-msvm-replicationservice.md)und [**ResetReplicationStatisticsEx**](resetreplicationstatisticsex-msvm-replicationservice.md) wurden der [**Msvm \_ ReplicationService-Klasse**](msvm-replicationservice.md) hinzugefügt. Die **Methoden GetReplicationStatisticsEx,** **RemoveReplicationRelationshipEx** und **ResetReplicationStatisticsEx** ersetzen die [**Methoden GetReplicationStatistics,**](getreplicationstatistics-msvm-replicationservice.md) [**RemoveReplicationRelationship**](removereplicationrelationship-msvm-replicationservice.md)und [**ResetReplicationStatistics.**](resetreplicationstatistics-msvm-replicationservice.md)
+-   Die [**\_ Msvm-Klasse SystemReplicationRelationship zeigt**](msvm-systemreplicationrelationship.md) eine Zuordnung zwischen einem virtuellen Computer und vielen Replikationsbeziehungen.
+-   Die **Eigenschaften AdditionalSettings** **und ReplicationProvider** wurden der [**Msvm \_ ReplicationSettingData-Klasse**](msvm-replicationsettingdata.md) hinzugefügt.
+-   Informationen zum Host-zu-Host-Anbieter wurden den [**Methoden CreateReplicationRelationship**](createreplicationrelationship-msvm-replicationservice.md) und [**ModifyReplicationSettings**](modifyreplicationsettings-msvm-replicationservice.md) der [**Msvm \_ ReplicationService-Klasse**](msvm-replicationservice.md) hinzugefügt.
+-   Die [**RequestReplicationStateChangeEx-Methode**](msvm-requestreplicationstatechangeex-computersystem.md) wurde der [**Msvm \_ ComputerSystem-Klasse**](msvm-computersystem.md) hinzugefügt und ersetzt die [**RequestReplicationStateChange-Methode.**](msvm-computersystem-requestreplicationstatechange.md) Die **InstanceID-Eigenschaft** kann jetzt die erweiterte Replikation angeben. Weitere Informationen zur erweiterten Replikation finden Sie unter [**Msvm \_ ReplicationRelationship**](msvm-replicationrelationship.md).
+-   [**Msvm \_ ReplicationSettingData-**](msvm-replicationsettingdata.md) und [**Msvm \_ ReplicationRelationship-Instanzen**](msvm-replicationrelationship.md) verfügen über eine 1:1-Beziehung, die Sie mit einer [**Msvm \_ SettingsDefineState-Zuordnung darstellen**](msvm-settingsdefinestate.md) können.
 
-    | [**MSVM \_ Name der settingsdefinestate**](msvm-settingsdefinestate.md) -Eigenschaft | Wert                                                                                                |
+    | [**Msvm \_ SettingsDefineState-Eigenschaftenname**](msvm-settingsdefinestate.md) | Wert                                                                                                |
     |-----------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------|
-    | **"Managedelement"**                                                          | Stellt das [**MSVM- \_ replicationrelationship**](msvm-replicationrelationship.md) -Objekt dar.          |
-    | **SettingData**                                                             | Stellt das zugeordnete [**MSVM \_ replicationsettingdata**](msvm-replicationsettingdata.md) -Objekt dar. |
+    | **ManagedElement**                                                          | Stellt das [**Msvm \_ ReplicationRelationship-Objekt**](msvm-replicationrelationship.md) dar.          |
+    | **Settingdata**                                                             | Stellt das zugeordnete [**Msvm \_ ReplicationSettingData-Objekt**](msvm-replicationsettingdata.md) dar. |
 
     
 
      
 
--   [**MSVM \_ Replicationsettingdata**](msvm-replicationsettingdata.md) kann zwischen dem Festlegen von Instanzen für die Replikations Beziehung basierend auf der **InstanceId** oder der **replicationrelationship** -Eigenschaft unterscheiden. Daher haben diese Methoden, die sich mit einer einzelnen Beziehung beschäftigen, Ihre Signatur nicht geändert:
+-   [**Msvm \_ ReplicationSettingData kann**](msvm-replicationsettingdata.md) zwischen dem Festlegen von Instanzen für die Replikationsbeziehung basierend auf der **InstanceId-** oder **ReplicationRelationship-Eigenschaft** unterscheiden. Daher haben diese Methoden, die eine einzelne Beziehung behandeln, ihre Signatur nicht geändert:
 
-    -   [**MSVM \_ replicationservice:: kreatereplicationrelationship**](createreplicationrelationship-msvm-replicationservice.md)
-    -   [**MSVM \_ replicationservice:: modifyreplicationsettings**](modifyreplicationsettings-msvm-replicationservice.md)
-    -   [**MSVM \_ replicationservice:: Resync**](resynchronize-msvm-replicationservice.md)
-    -   [**MSVM \_ replicationservice:: startreplizierung**](startreplication-msvm-replicationservice.md)
+    -   [**Msvm \_ ReplicationService::CreateReplicationRelationship**](createreplicationrelationship-msvm-replicationservice.md)
+    -   [**Msvm \_ ReplicationService::ModifyReplicationSettings**](modifyreplicationsettings-msvm-replicationservice.md)
+    -   [**Msvm \_ ReplicationService::Resync**](resynchronize-msvm-replicationservice.md)
+    -   [**Msvm \_ ReplicationService::StartReplication**](startreplication-msvm-replicationservice.md)
 
--   Obwohl Sie [**getreplicationstatistics**](getreplicationstatistics-msvm-replicationservice.md), [**removereplicationrelationship**](removereplicationrelationship-msvm-replicationservice.md)und [**requestreplicationstatechange**](msvm-computersystem-requestreplicationstatechange.md) immer für die primäre Beziehung verwenden können, empfiehlt es sich, stattdessen [**getreplicationstatisticsex**](getreplicationstatisticsex-msvm-replicationservice.md), [**removereplicationrelationshipex**](removereplicationrelationshipex-msvm-replicationservice.md)und [**requestreplicationstatechangeex**](msvm-requestreplicationstatechangeex-computersystem.md) zu verwenden, da Sie die primäre und erweiterte Replikations Beziehung verarbeiten können. Weitere Informationen zur erweiterten Replikation finden Sie unter [**MSVM \_ replicationrelationship**](msvm-replicationrelationship.md).
--   Obwohl diese Eigenschaften der [**MSVM \_ Computersystem**](msvm-computersystem.md) -Klasse weiterhin den Status der primären Replikations Beziehung anzeigen, verwenden Sie stattdessen die Eigenschaften eines [**MSVM- \_ replicationrelationship**](msvm-replicationrelationship.md) -Objekts, um den aktuellen Status für die primäre und erweiterte Replikations Beziehung zu ermitteln.
+-   Obwohl Sie [**GetReplicationStatistics,**](getreplicationstatistics-msvm-replicationservice.md) [**RemoveReplicationRelationship**](removereplicationrelationship-msvm-replicationservice.md)und [**RequestReplicationStateChange**](msvm-computersystem-requestreplicationstatechange.md) immer für die primäre Beziehung verwenden können, wird empfohlen, stattdessen [**GetReplicationStatisticsEx,**](getreplicationstatisticsex-msvm-replicationservice.md) [**RemoveReplicationRelationshipEx**](removereplicationrelationshipex-msvm-replicationservice.md)und [**RequestReplicationStateChangeEx**](msvm-requestreplicationstatechangeex-computersystem.md) zu verwenden, da sie primäre und erweiterte Replikationsbeziehungen verarbeiten können. Weitere Informationen zur erweiterten Replikation finden Sie unter [**Msvm \_ ReplicationRelationship**](msvm-replicationrelationship.md).
+-   Obwohl diese Eigenschaften der [**Msvm \_ ComputerSystem-Klasse**](msvm-computersystem.md) weiterhin den Status für die primäre Replikationsbeziehung angeben, verwenden Sie stattdessen diese Eigenschaften eines [**Msvm \_ ReplicationRelationship-Objekts,**](msvm-replicationrelationship.md) um den aktuellen Status für die primäre und erweiterte Replikationsbeziehung zu bestimmen.
 
     | Eigenschaftenname                                | type        |
     |----------------------------------------------|-------------|
-    | **ReplicationState**                         | UInt16 (RO) |
-    | **ReplicationHealth**                        | UInt16 (RO) |
-    | **Lastreplicationtime**                      | Datetime    |
-    | **Failedoverreplicationtype**                | UInt16      |
-    | **Lastapplicationkonsistentreplicationtime** | Datetime    |
-    | **Lastreplicationtype**                      | UInt16      |
+    | **ReplicationState**                         | Uint16 (RO) |
+    | **Replicationhealth**                        | Uint16 (RO) |
+    | **LastReplicationTime**                      | Datetime    |
+    | **FailedOverReplicationType**                | Uint16      |
+    | **LastApplicationConsistentReplicationTime** | Datetime    |
+    | **LastReplicationType**                      | Uint16      |
 
     
 

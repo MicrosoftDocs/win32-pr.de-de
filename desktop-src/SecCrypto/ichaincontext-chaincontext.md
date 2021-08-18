@@ -1,7 +1,7 @@
 ---
-description: Legt den pccert- \_ Ketten Kontext eines Zertifikats fest oder ruft ihn ab \_ .
+description: Legt den PCCERT CHAIN CONTEXT eines Zertifikats fest oder ruft sie \_ \_ ab.
 ms.assetid: 1b33ecd5-88c9-4654-9d2d-95a0be4283c6
-title: 'Ichaincontext:: ChainContext-Eigenschaft'
+title: IChainContext::ChainContext-Eigenschaft
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,18 +16,18 @@ api_type:
 - COM
 api_location:
 - Capicom.dll
-ms.openlocfilehash: 36b2f6f5811c844e4e43544f5b56b8de66cb3bf7
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: d5e7bc92aa798766538af19cae440542705a859040aed7fc8d9510e3724051f6
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106355281"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119005498"
 ---
-# <a name="ichaincontextchaincontext-property"></a>Ichaincontext:: ChainContext-Eigenschaft
+# <a name="ichaincontextchaincontext-property"></a>IChainContext::ChainContext-Eigenschaft
 
-\[CAPICOM ist eine nur-32-Bit-Komponente, die für die Verwendung in den folgenden Betriebssystemen verfügbar ist: Windows Server 2008, Windows Vista und Windows XP.\]
+\[CAPICOM ist eine nur 32-Bit-Komponente, die für die Verwendung in den folgenden Betriebssystemen verfügbar ist: Windows Server 2008, Windows Vista und Windows XP.\]
 
-Die **chainContext** -Eigenschaft legt den pccert- \_ Ketten \_ Kontext eines Zertifikats fest oder ruft ihn ab.
+Die **ChainContext-Eigenschaft** legt den PCCERT CHAIN CONTEXT eines Zertifikats fest oder ruft sie \_ \_ ab.
 
 Dies ist eine Eigenschaft mit Lese- und Schreibzugriff.
 
@@ -44,19 +44,19 @@ ChainContext.ChainContext As Long
 
 ## <a name="property-value"></a>Eigenschaftswert
 
-Der pccert- \_ Ketten \_ Kontext des Zertifikats.
+Der PCCERT \_ CHAIN \_ CONTEXT des Zertifikats.
 
 ## <a name="error-codes"></a>Fehlercodes
 
-Wenn die Eigenschaften Zugriffsmethoden **\_ chainContext platzieren** und **\_ chainContext** erfolgreich abrufen, geben Sie S \_ OK zurück.
+Wenn die Eigenschaftenzugriffsmethoden **\_ ChainContext setzen** und **\_ ChainContext** erfolgreich abrufen, geben sie S \_ OK zurück.
 
-Jeder andere **HRESULT** -Wert gibt an, dass der-Fehler aufgetreten ist.
+Jeder andere **HRESULT-Wert** gibt an, dass der Aufruf fehlgeschlagen ist.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Zum Freigeben des Kontexts muss entweder die [**freecontext**](ichaincontext-freecontext.md) -Methode oder die [**certfreecertificatechain**](/windows/desktop/api/Wincrypt/nf-wincrypt-certfreecertificatechain) -Funktion aufgerufen werden.
+Sie müssen entweder die [**FreeContext-Methode**](ichaincontext-freecontext.md) oder die [**CertFreeCertificateChain-Funktion**](/windows/desktop/api/Wincrypt/nf-wincrypt-certfreecertificatechain) aufrufen, um den Kontext freizugeben.
 
-Wenn Sie die **chainContext** -Eigenschaft festlegen, wird der Status des gesamten [**Kette**](chain.md) -Objekts zurückgesetzt.
+Wenn Sie die **ChainContext-Eigenschaft** festlegen, wird der Zustand des gesamten [**Chain-Objekts**](chain.md) zurückgesetzt.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -64,16 +64,16 @@ Wenn Sie die **chainContext** -Eigenschaft festlegen, wird der Status des gesamt
 
 | Anforderung | Wert |
 |----------------------------|----------------------------------------------------------------------------------------|
-| Verteilbare Komponente<br/> | CAPICOM 2,0 oder höher unter Windows Server 2003 und Windows XP<br/>                  |
+| Verteilbare Komponente<br/> | CAPICOM 2.0 oder höher auf Windows Server 2003 und Windows XP<br/>                  |
 | DLL<br/>             | <dl> <dt>Capicom.dll</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Ichaincontext**](ichaincontext.md)
+[**IChainContext**](ichaincontext.md)
 </dt> </dl>
 
  

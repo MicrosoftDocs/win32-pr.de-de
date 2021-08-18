@@ -62,7 +62,7 @@ Das **Medienelement** gibt eines der Medienelemente in einer Wiedergabeliste an.
 
 ## <a name="remarks"></a>Bemerkungen
 
-Das **cid-Attribut** (die Inhalts-ID) wird vom Windows Media Player aufgefüllt, um einen Medieninhalt eindeutig zu identifizieren, auch wenn seine Metadatenattribute geändert wurden. Dies ermöglicht die computerübergreifende Freigabe von Wiedergabelisten, da der Inhalt auf einem anderen Computer identifiziert werden kann und der Pfad zu dieser Wiedergabeliste von der Windows Medienwiedergabeliste automatisch repariert werden kann. Das **tid-Attribut** (die Nachverfolgungs-ID) verwendet das Windows Dateisystem, um den Pfad zu den Medien automatisch zu reparieren, wenn der Name oder Speicherort der Datei geändert wird.
+Das **cid-Attribut** (die Inhalts-ID) wird vom Windows Media Player aufgefüllt, um einen Medieninhalt eindeutig zu identifizieren, auch wenn seine Metadatenattribute geändert wurden. Dies ermöglicht die computerübergreifende Freigabe von Wiedergabelisten, da der Inhalt auf einem anderen Computer identifiziert werden kann und der Pfad zu dieser Wiedergabeliste von der Windows Medienwiedergabeliste automatisch repariert werden kann. Das **attribut tid** (die Nachverfolgungs-ID) verwendet das Windows Dateisystem, um den Pfad zu den Medien automatisch zu reparieren, wenn der Name oder Speicherort der Datei geändert wird.
 
 ## <a name="examples"></a>Beispiele
 
@@ -88,7 +88,7 @@ Das **cid-Attribut** (die Inhalts-ID) wird vom Windows Media Player aufgefüllt,
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 

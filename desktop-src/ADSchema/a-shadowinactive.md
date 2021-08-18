@@ -1,10 +1,10 @@
 ---
-title: shadowinactive-Attribut
+title: shadowInactive-Attribut
 description: Enthält die Anzahl der Tage der Inaktivität, die für den Benutzer zulässig ist.
 ms.assetid: 0e6b023f-9806-4c7e-82e4-505807647733
 ms.tgt_platform: multiple
 keywords:
-- AD-Schema des shadowinactive-Attributs
+- shadowInactive-Attribut AD-Schema
 topic_type:
 - apiref
 api_name:
@@ -13,14 +13,14 @@ api_type:
 - Schema
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: c05a63ba03cc45e1c5c1914bda98d9c09b8a2f3f
-ms.sourcegitcommit: b77ace27b0432e7cd3863191b11926be032fbe2f
+ms.openlocfilehash: df5f399e400d0ddb0bbddab9deadfe89908c4d53144e1c2cad4ae603bbc3e6fd
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "103859567"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119836570"
 ---
-# <a name="shadowinactive-attribute"></a>shadowinactive-Attribut
+# <a name="shadowinactive-attribute"></a>shadowInactive-Attribut
 
 Enthält die Anzahl der Tage der Inaktivität, die für den Benutzer zulässig ist.
 
@@ -28,11 +28,11 @@ Enthält die Anzahl der Tage der Inaktivität, die für den Benutzer zulässig i
 
 | Eingabe | Wert |
 |-------------------|--------------------------------------|
-| CN                | shadowinactive                       |
-| LDAP-Display-Name | shadowinactive                       |
+| CN                | shadowInactive                       |
+| Ldap-Anzeigename | shadowInactive                       |
 | Size              | \-                                   |
-| Berechtigung aktualisieren  | \-                                   |
-| Aktualisierungshäufigkeit  | \-                                   |
+| Aktualisieren von Berechtigungen  | \-                                   |
+| Updatehäufigkeit  | \-                                   |
 | Attribute-Id      | 1.3.6.1.1.1.1.9                      |
 | System-ID-GUID    | 86871d1f-3310-4312-8efd-af49dcfb2671 |
 | Syntax            | [**Enumeration**](s-enumeration.md) |
@@ -54,11 +54,11 @@ Enthält die Anzahl der Tage der Inaktivität, die für den Benutzer zulässig i
 |------------------------|-----------------------------------------------------|
 | Link-ID                | \-                                                  |
 | MAPI-Id                | \-                                                  |
-| System-Only            | False                                               |
-| Ist-einwertig       | Richtig                                                |
-| Ist indiziert             | False                                               |
-| Im globalen Katalog      | False                                               |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                        |
+| System-Only            | Falsch                                               |
+| Ist einwertig       | Richtig                                                |
+| Ist indiziert             | Falsch                                               |
+| Im globalen Katalog      | Falsch                                               |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                        |
 | Range-Lower            | \-                                                  |
 | Range-Upper            | \-                                                  |
 | Search-Flags           | 0x00000000                                          |
@@ -75,11 +75,11 @@ Enthält die Anzahl der Tage der Inaktivität, die für den Benutzer zulässig i
 |------------------------|-----------------------------------------------------|
 | Link-ID                | \-                                                  |
 | MAPI-Id                | \-                                                  |
-| System-Only            | False                                               |
-| Ist-einwertig       | Richtig                                                |
-| Ist indiziert             | False                                               |
-| Im globalen Katalog      | False                                               |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                        |
+| System-Only            | Falsch                                               |
+| Ist einwertig       | Richtig                                                |
+| Ist indiziert             | Falsch                                               |
+| Im globalen Katalog      | Falsch                                               |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                        |
 | Range-Lower            | \-                                                  |
 | Range-Upper            | \-                                                  |
 | Search-Flags           | 0x00000000                                          |
@@ -96,11 +96,11 @@ Enthält die Anzahl der Tage der Inaktivität, die für den Benutzer zulässig i
 |------------------------|-----------------------------------------------------|
 | Link-ID                | \-                                                  |
 | MAPI-Id                | \-                                                  |
-| System-Only            | False                                               |
-| Ist-einwertig       | Richtig                                                |
-| Ist indiziert             | False                                               |
-| Im globalen Katalog      | False                                               |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                        |
+| System-Only            | Falsch                                               |
+| Ist einwertig       | Richtig                                                |
+| Ist indiziert             | Falsch                                               |
+| Im globalen Katalog      | Falsch                                               |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                        |
 | Range-Lower            | \-                                                  |
 | Range-Upper            | \-                                                  |
 | Search-Flags           | 0x00000000                                          |
@@ -117,11 +117,11 @@ Enthält die Anzahl der Tage der Inaktivität, die für den Benutzer zulässig i
 |------------------------|-----------------------------------------------------|
 | Link-ID                | \-                                                  |
 | MAPI-Id                | \-                                                  |
-| System-Only            | False                                               |
-| Ist-einwertig       | Richtig                                                |
-| Ist indiziert             | False                                               |
-| Im globalen Katalog      | False                                               |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                        |
+| System-Only            | Falsch                                               |
+| Is-Single-Valued       | Richtig                                                |
+| Ist indiziert             | Falsch                                               |
+| Im globalen Katalog      | Falsch                                               |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                        |
 | Range-Lower            | \-                                                  |
 | Range-Upper            | \-                                                  |
 | Search-Flags           | 0x00000000                                          |
@@ -130,7 +130,7 @@ Enthält die Anzahl der Tage der Inaktivität, die für den Benutzer zulässig i
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 

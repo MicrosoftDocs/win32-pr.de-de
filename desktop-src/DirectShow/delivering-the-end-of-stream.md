@@ -1,19 +1,19 @@
 ---
-description: Über das Ende des Streams
+description: Bereitstellen des Endes von Stream
 ms.assetid: 23afdb2e-93b0-4a74-94bd-e38eb82a5995
-title: Über das Ende des Streams
+title: Bereitstellen des Endes von Stream
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: e2bd80d186bd62e6360fa1600f4ba970281315aa
-ms.sourcegitcommit: a47bd86f517de76374e4fff33cfeb613eb259a7e
+ms.openlocfilehash: 3eebae0fe3238f32f630c0a2ecd0787f6bd9b75a9aed6342e202f187d3fe8dac
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/06/2021
-ms.locfileid: "103860037"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119831350"
 ---
-# <a name="delivering-the-end-of-stream"></a>Über das Ende des Streams
+# <a name="delivering-the-end-of-stream"></a>Bereitstellen des Endes von Stream
 
-Wenn die Eingabe-PIN eine Benachrichtigung über das Ende des Datenstroms empfängt, wird der-Rückruf weitergegeben. Alle Downstream-Filter, die Daten von dieser Eingabe-PIN empfangen, sollten auch die Datenstrom-Benachrichtigung erhalten. Nehmen Sie erneut die streamingsperre und nicht die Filter Sperre vor. Wenn der Filter ausstehende Daten aufweist, die noch nicht übermittelt wurden, sollte der Filter ihn jetzt übermitteln, bevor er die Benachrichtigung über das Ende des Datenstroms sendet. Nach dem Ende des Streams sollten keine Daten gesendet werden.
+Wenn der Eingabepin eine End-of-Stream-Benachrichtigung empfängt, wird der Aufruf downstream weitergegeben. Alle Downstreamfilter, die Daten von diesem Eingabepin empfangen, sollten ebenfalls die End-of-Stream-Benachrichtigung erhalten. Nehmen Sie erneut die Streamingsperre und nicht die Filtersperre. Wenn der Filter ausstehende Daten enthält, die noch nicht übermittelt wurden, sollte der Filter ihn jetzt übermitteln, bevor er die Benachrichtigung zum Ende des Streams sendet. Nach dem Ende des Streams sollten keine Daten gesendet werden.
 
 
 ```C++
@@ -35,7 +35,7 @@ HRESULT CMyInputPin::EndOfStream()
 
 
 
-Die [**cbaseoutputpin::D eliverendof Stream**](cbaseoutputpin-deliverendofstream.md) -Methode ruft [**IPin:: EndOf Stream**](/windows/desktop/api/Strmif/nf-strmif-ipin-endofstream) für die downstreameingabepin auf.
+Die [**CBaseOutputPin::D eliverEndOfStream-Methode**](cbaseoutputpin-deliverendofstream.md) ruft [**IPin::EndOfStream**](/windows/desktop/api/Strmif/nf-strmif-ipin-endofstream) auf dem Downstreameingabepin auf.
 
 ## <a name="related-topics"></a>Zugehörige Themen
 

@@ -1,5 +1,5 @@
 ---
-description: Fungiert als übergeordnete Klasse für Klassen, die die Generierung von Ereignissen steuern, z. b. Timer-Ereignisse.
+description: Dient als übergeordnete Klasse für Klassen, die die Generierung von Ereignissen steuern, z. B. Timerereignisse.
 ms.assetid: 381b06e7-2857-4932-9f52-f1d62efa8b79
 ms.tgt_platform: multiple
 title: __EventGenerator-Klasse
@@ -14,18 +14,18 @@ api_type:
 - Schema
 api_location:
 - All
-ms.openlocfilehash: b40524405c3b284e7ec61414e36448cb37afeab8
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 0033bef55915865ba1945c9f17705ed40cd0d3db4cd572efd13cdadf99d4bbab
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "104218657"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119732902"
 ---
-# <a name="__eventgenerator-class"></a>\_\_Eventgenerator-Klasse
+# <a name="__eventgenerator-class"></a>\_\_EventGenerator-Klasse
 
-Die **\_ \_ eventgenerator** -System Klasse ist eine abstrakte Basisklasse, die als übergeordnete Klasse für Klassen fungiert, die die Generierung von Ereignissen steuern, z. b. [Timer-Ereignisse](receiving-a-timed-or-repeating-event.md).
+Die **\_ \_ EventGenerator-Systemklasse** ist eine abstrakte Basisklasse, die als übergeordnete Klasse für Klassen dient, die die Generierung von Ereignissen steuern, z. B. [Timerereignisse.](receiving-a-timed-or-repeating-event.md)
 
-Die folgende Syntax wird durch MOF-Code (Managed Object Format) vereinfacht und schließt alle geerbten Eigenschaften ein. Eigenschaften werden in alphabetischer Reihenfolge und nicht in der MOF-Reihenfolge aufgelistet.
+Die folgende Syntax wird durch MOF-Code (Managed Object Format) vereinfacht und schließt alle geerbten Eigenschaften ein. Eigenschaften werden in alphabetischer Reihenfolge und nicht in MOF-Reihenfolge aufgeführt.
 
 ## <a name="syntax"></a>Syntax
 
@@ -38,11 +38,11 @@ class __EventGenerator : __IndicationRelated
 
 ## <a name="members"></a>Member
 
-Die **\_ \_ eventgenerator** -Klasse definiert keine Member.
+Die **\_ \_ EventGenerator-Klasse** definiert keine Member.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die **\_ \_ eventgenerator** -Klasse wird von " [**\_ \_ indicationrelated**](--indicationrelated.md)" abgeleitet, die keine Eigenschaften hat.
+Die **\_ \_ EventGenerator-Klasse** wird von [**\_ \_ IndicationRelated**](--indicationrelated.md)abgeleitet, das über keine Eigenschaften verfügt.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -56,14 +56,14 @@ Die **\_ \_ eventgenerator** -Klasse wird von " [**\_ \_ indicationrelated**](--
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**\_\_Indicationrelated**](/windows/desktop/WmiSdk/--indicationrelated)
+[**\_\_IndicationRelated**](/windows/desktop/WmiSdk/--indicationrelated)
 </dt> <dt>
 
-[WMI-System Klassen](wmi-system-classes.md)
+[WMI-Systemklassen](wmi-system-classes.md)
 </dt> </dl>
 
  

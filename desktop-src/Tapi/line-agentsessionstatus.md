@@ -1,19 +1,19 @@
 ---
-description: Die \_ Meldung "agentsessionstatus" wird gesendet, wenn sich der Status einer ACD-Agent-Sitzung auf einem Agent-Handler ändert, für den die Anwendung zurzeit eine offene Zeile aufweist. Diese Meldung wird mithilfe der lineproxymess-Funktion generiert.
+description: Die MELDUNG LINE \_ AGENTSESSIONSTATUS wird gesendet, wenn sich der Status einer ACD-Agentsitzung in einem Agenthandler ändert, für den die Anwendung derzeit über eine offene Zeile verfügt. Diese Nachricht wird mithilfe der funktion lineProxyMessage generiert.
 ms.assetid: bb9d2292-8c41-4557-989e-6c5eb785313f
-title: LINE_AGENTSESSIONSTATUS Meldung (TAPI. h)
+title: LINE_AGENTSESSIONSTATUS Meldung (Tapi.h)
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 5d53c14290dfb6bda3889e7d2b87d8d3ca5e651c
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 25209abda7cfec3864c45bfd58a35a9fad21a1aa5e5645669a7fdad6ec907d5b
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106368674"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119003218"
 ---
-# <a name="line_agentsessionstatus-message"></a>Zeile \_ agentsessionstatus-Meldung
+# <a name="line_agentsessionstatus-message"></a>LINE \_ AGENTSESSIONSTATUS-Meldung
 
-Die Meldung " **\_ agentsessionstatus** " wird gesendet, wenn sich der Status einer ACD-Agent-Sitzung auf einem Agent-Handler ändert, für den die Anwendung zurzeit eine offene Zeile aufweist. Diese Meldung wird mithilfe der [**lineproxymess**](/windows/desktop/api/Tapi/nf-tapi-lineproxymessage) -Funktion generiert.
+Die **MELDUNG LINE \_ AGENTSESSIONSTATUS** wird gesendet, wenn sich der Status einer ACD-Agentsitzung in einem Agenthandler ändert, für den die Anwendung derzeit über eine offene Zeile verfügt. Diese Nachricht wird mithilfe der [**funktion lineProxyMessage**](/windows/desktop/api/Tapi/nf-tapi-lineproxymessage) generiert.
 
 
 ```C++
@@ -26,40 +26,40 @@ Die Meldung " **\_ agentsessionstatus** " wird gesendet, wenn sich der Status ei
 
 <dl> <dt>
 
-*dwdevice* 
+*dwDevice* 
 </dt> <dd>
 
-Das Handle der Anwendung für das liniengerät, für das sich der agentsitzungsstatus geändert hat.
+Das Handle der Anwendung für das Zeilengerät, auf dem sich der Status der Agentsitzung geändert hat.
 
 </dd> <dt>
 
-*dwcallbackinstance* 
+*dwCallbackInstance* 
 </dt> <dd>
 
-Die beim Öffnen der Zeile angegebene Rückruf Instanz.
+Die Rückrufinstanz, die beim Öffnen der Zeile angegeben wird.
 
 </dd> <dt>
 
 *dwParam1* 
 </dt> <dd>
 
-Ein Handle der Agentsitzung, deren Status sich geändert hat.
+Ein Handle der Agentsitzung, deren Status geändert wurde.
 
 </dd> <dt>
 
 *dwParam2* 
 </dt> <dd>
 
-Gibt den Agent-Sitzungs Status an, der geändert wurde. Kann eine oder mehrere der **Zeilen \_ agentsessionstatus** sein.
+Gibt den Status der Agentsitzung an, der geändert wurde. Kann mindestens ein **\_ LINE-AGENTSESSIONSTATUS** sein.
 
 </dd> <dt>
 
 *dwParam3* 
 </dt> <dd>
 
-Wenn *dwParam2* das Status Bit lineagentstatusex enthält \_ , gibt *dwParam3* den neuen Wert des Agentstatus an, der eine der [**lineagentstateex- \_ Konstanten**](lineagentstateex--constants.md)ist.
+Wenn *dwParam2* das LINEAGENTSTATUSEX \_ STATE-Bit enthält, gibt *dwParam3* den neuen Wert des Agentzustands an, bei dem es sich um eine der [**LINEAGENTSTATEEX-Konstanten \_**](lineagentstateex--constants.md)handelt.
 
-Andernfalls ist *dwParam3* auf 0 (null) festgelegt.
+Andernfalls wird *dwParam3* auf 0 (null) festgelegt.
 
 </dd> </dl>
 
@@ -69,8 +69,8 @@ Andernfalls ist *dwParam3* auf 0 (null) festgelegt.
 
 | Anforderung | Wert |
 |-------------------------|-----------------------------------------------------------------------------------|
-| TAPI-Version<br/> | Erfordert TAPI 2,2<br/>                                                      |
-| Header<br/>       | <dl> <dt>TAPI. h</dt> </dl> |
+| TAPI-Version<br/> | Erfordert TAPI 2.2<br/>                                                      |
+| Header<br/>       | <dl> <dt>Tapi.h</dt> </dl> |
 
 
 
@@ -78,10 +78,10 @@ Andernfalls ist *dwParam3* auf 0 (null) festgelegt.
 
 <dl> <dt>
 
-[**linegetagentsessioninfo**](/windows/desktop/api/Tapi/nf-tapi-linegetagentsessioninfo)
+[**lineGetAgentSessionInfo**](/windows/desktop/api/Tapi/nf-tapi-linegetagentsessioninfo)
 </dt> <dt>
 
-[**lineproxymess**](/windows/desktop/api/Tapi/nf-tapi-lineproxymessage)
+[**lineProxyMessage**](/windows/desktop/api/Tapi/nf-tapi-lineproxymessage)
 </dt> </dl>
 
  

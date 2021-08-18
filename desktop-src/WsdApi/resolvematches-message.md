@@ -1,30 +1,30 @@
 ---
-description: Eine WS-Discovery Nachricht, die als Reaktion auf einen Client gesendet wird, der die Nachricht durch einen übereinstimmenden Dienst auflöst
+description: Eine WS-Discovery Nachricht, die als Antwort an eine Clients gesendet wird. Lösen Sie die Nachricht durch einen übereinstimmenden Dienst auf.
 ms.assetid: 0eaa4348-968e-4b45-9509-8b15476edaa1
-title: Resolvematches-Nachricht
+title: ResolveMatches-Nachricht
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 40ab5c0d66541b93eeee13966d686c94eef9364d
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 1daffe985f3956e57ad69fd7c4fc4d199f0b24bd5fdab5677b7ef83765e5fcdd
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106351554"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119756800"
 ---
-# <a name="resolvematches-message"></a>Resolvematches-Nachricht
+# <a name="resolvematches-message"></a>ResolveMatches-Nachricht
 
-Eine resolvematches-Nachricht ist eine WS-Discovery Nachricht, die als Antwort auf die [Auflösungs](resolve-message.md) Nachricht eines Clients durch einen übereinstimmenden Dienst gesendet wird. Weitere Informationen zu resolvematches-Nachrichten finden Sie im Abschnitt 6,2 der [WS-Discovery-Spezifikation](https://specs.xmlsoap.org/ws/2005/04/discovery/ws-discovery.pdf).
+Eine ResolveMatches-Nachricht ist eine WS-Discovery Nachricht, die als Antwort auf die [Resolve-Nachricht](resolve-message.md) eines Clients durch einen übereinstimmenden Dienst gesendet wird. Weitere Informationen zu ResolveMatches-Meldungen finden Sie in Abschnitt 6.2 der [WS-Discovery-Spezifikation.](https://specs.xmlsoap.org/ws/2005/04/discovery/ws-discovery.pdf)
 
-Eine resolvematches-Nachricht wird von UDP Unicast an Port 3702 gesendet (der Port, von dem aus die [Auflösungs](resolve-message.md) Nachricht des Clients gesendet wurde). Resolvematches müssen innerhalb von 4 Sekunden der Auflösungs Nachricht gesendet werden. Andernfalls kann das Paket von der Windows-Firewall gelöscht werden.
+Eine ResolveMatches-Nachricht wird von UDP unicast an Port 3702 gesendet (der Port, von dem die [Resolve-Nachricht](resolve-message.md) des Clients gesendet wurde). ResolveMatches muss innerhalb von 4 Sekunden nach der Auflösungsmeldung gesendet werden. Andernfalls kann Windows Firewall das Paket löschen.
 
-Alle DPWS-Anwendungen, die [Auflösungs](resolve-message.md) Meldungen senden, empfangen resolvematches-Nachrichten.
+Jede DPWS-Anwendung, die [Resolve-Nachrichten](resolve-message.md) sendet, empfängt ResolveMatches-Nachrichten.
 
 > [!Note]  
-> Dieses Thema zeigt eine DPWS-Beispiel Nachricht, die von WSDAPI-Clients und-Hosts generiert wurde. WSDAPI analysiert und akzeptiert andere DPWS-kompatible Nachrichten, die nicht diesem Beispiel entsprechen. Verwenden Sie dieses Beispiel nicht zum Überprüfen der DPWS-Interoperabilität. Verwenden Sie stattdessen das [WSDAPI-grundlegende Interoperabilitäts Tool (wsdbit)](https://msdn.microsoft.com/library/cc264250.aspx) .
+> In diesem Thema wird eine DPWS-Beispielnachricht gezeigt, die von WSDAPI-Clients und -Hosts generiert wird. WSDAPI analysiert und akzeptiert andere DPWS-kompatible Nachrichten, die diesem Beispiel nicht entsprechen. Verwenden Sie dieses Beispiel nicht, um die DPWS-Interoperabilität zu überprüfen. Verwenden Sie stattdessen das [WSDAPI Basic Interoperability Tool (WSDBIT).](https://msdn.microsoft.com/library/cc264250.aspx)
 
  
 
-Die folgende SOAP-Nachricht zeigt eine Beispiel-resolvematches-Nachricht.
+Die folgende SOAP-Nachricht zeigt eine ResolveMatches-Beispielnachricht.
 
 ``` syntax
 <?xml version="1.0" encoding="utf-8" ?>
@@ -70,7 +70,7 @@ Die folgende SOAP-Nachricht zeigt eine Beispiel-resolvematches-Nachricht.
 </soap:Envelope>
 ```
 
-Eine resolvematches-Nachricht weist die folgenden Schwerpunkt Punkte auf.
+Eine ResolveMatches-Nachricht weist die folgenden Fokuspunkte auf.
 
 
 
@@ -84,23 +84,23 @@ Eine resolvematches-Nachricht weist die folgenden Schwerpunkt Punkte auf.
 <tr class="header">
 <th>Fokuspunkt</th>
 <th>XML</th>
-<th>BESCHREIBUNG</th>
+<th>Beschreibung</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td>Resolvematches</td>
+<td>ResolveMatches</td>
 <td><pre class="syntax" data-space="preserve"><code><wsa:Action>
     https://schemas.xmlsoap.org/ws/2005/04/discovery/ResolveMatches
 </wsa:Action></code></pre></td>
-<td>Die resolvematches-SOAP-Aktion identifiziert die Nachricht als resolvematches-Nachricht.</td>
+<td>Die SOAP-Aktion ResolveMatches identifiziert die Nachricht als ResolveMatches-Nachricht.</td>
 </tr>
 <tr class="even">
 <td>RelatesTo</td>
 <td><pre class="syntax" data-space="preserve"><code><wsa:RelatesTo>
     urn:uuid:38d1c3d9-8d73-4424-8861-6b7ee2af24d3
 </wsa:RelatesTo></code></pre></td>
-<td>Der Bezeichner der Nachricht, auf die der Dienst antwortet. Dieser Header entspricht der MessageId in der <a href="resolve-message.md">Auflösungs</a> Nachricht.</td>
+<td>Der Bezeichner der Nachricht, auf die der Dienst antwortet. Dieser Header entspricht der MessageId in der <a href="resolve-message.md">Resolve-Nachricht.</a></td>
 </tr>
 <tr class="odd">
 <td>AppSequence</td>
@@ -108,21 +108,21 @@ Eine resolvematches-Nachricht weist die folgenden Schwerpunkt Punkte auf.
     SequenceId=&quot;urn:uuid:369a7d7b-5f87-48a4-aa9a-189edf2a8772&quot;
     MessageNumber=&quot;6&quot;>
 </wsd:AppSequence></code></pre></td>
-<td>Enthält Informationen zur Anwendungs Sequenzierung, die die Reihenfolge der Nachrichten auch dann beibehalten, wenn Sie nicht in der richtigen Reihenfolge empfangen werden. Die appsequence wird wie in <a href="appsequence-validation-rules.md">appsequence-Validierungsregeln</a>beschrieben überprüft.</td>
+<td>Enthält Informationen zur Anwendungssequenzierung, mit denen die Sequenz von Nachrichten auch dann beibehalten werden kann, wenn sie nicht in der angegebenen Reihenfolge empfangen werden. Die AppSequence wird wie unter <a href="appsequence-validation-rules.md">AppSequence Validation Rules (AppSequence-Validierungsregeln)</a>beschrieben überprüft.</td>
 </tr>
 <tr class="even">
 <td>Adresse</td>
 <td><pre class="syntax" data-space="preserve"><code><wsa:Address>
     urn:uuid:37f86d35-e6ac-4241-964f-1d9ae46fb366
 </wsa:Address></code></pre></td>
-<td>Enthält die Adresse des zu lösenden Endpunkts.</td>
+<td>Enthält die Adresse des Endpunkts, der aufgelöst wird.</td>
 </tr>
 <tr class="odd">
-<td>Xaddrs</td>
+<td>XAddrs</td>
 <td><pre class="syntax" data-space="preserve"><code><wsd:XAddrs>
     https://192.168.0.2:5357/37f86d35-e6ac-4241-964f-1d9ae46fb366
 </wsd:XAddrs></code></pre></td>
-<td>Xaddrs sind Transport Adressen, die für die Kommunikation zwischen Client und Dienst verwendet werden können. Addrs werden wie in <a href="xaddr-validation-rules.md">xaddr-Validierungsregeln</a>beschrieben überprüft.</td>
+<td>XAddrs sind Transportadressen, die für die Kommunikation zwischen Client und Dienst verwendet werden können. Addr werden wie unter <a href="xaddr-validation-rules.md">XAddr-Validierungsregeln</a>beschrieben überprüft.</td>
 </tr>
 </tbody>
 </table>
@@ -135,10 +135,10 @@ Eine resolvematches-Nachricht weist die folgenden Schwerpunkt Punkte auf.
 
 <dl> <dt>
 
-[Ermittlungs-und metadatenaustauschnachrichten](discovery-and-metadata-exchange-message-patterns.md)
+[Ermittlungs- und Metadaten-Exchange-Meldungen](discovery-and-metadata-exchange-message-patterns.md)
 </dt> <dt>
 
-[Meldung auflösen](resolve-message.md)
+[Auflösen von Nachrichten](resolve-message.md)
 </dt> </dl>
 
  

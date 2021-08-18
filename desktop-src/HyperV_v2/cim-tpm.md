@@ -1,5 +1,5 @@
 ---
-description: Beschreibt ein Trusted Platform Module (TPM)-Gerät.
+description: Beschreibt ein Trusted Platform Module -Gerät (TPM).
 ms.assetid: c923106f-126e-4e7e-822a-2fb715bbbc26
 title: CIM_TPM-Klasse
 ms.topic: reference
@@ -22,16 +22,16 @@ api_type:
 - DllExport
 api_location:
 - vmms.exe
-ms.openlocfilehash: 0f2d35d42e864a247ca042ec81813ff7d1ac5c35
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 21df36da4a84e0b85d23f24bcc839b87afa64472381aed6dbda0706374493a57
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104042074"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119148413"
 ---
-# <a name="cim_tpm-class"></a>CIM- \_ TPM-Klasse
+# <a name="cim_tpm-class"></a>CIM \_ TPM-Klasse
 
-Beschreibt ein Trusted Platform Module (TPM)-Gerät.
+Beschreibt ein Trusted Platform Module -Gerät (TPM).
 
 ## <a name="syntax"></a>Syntax
 
@@ -53,21 +53,21 @@ class CIM_TPM : CIM_LogicalDevice
 
 ## <a name="members"></a>Member
 
-Die **CIM- \_ TPM** -Klasse verfügt über diese Typen von Membern:
+Die **CIM \_ TPM-Klasse** verfügt über die folgenden Membertypen:
 
 -   [Methoden](#methods)
 -   [Eigenschaften](#properties)
 
 ### <a name="methods"></a>Methoden
 
-Die **CIM- \_ TPM** -Klasse verfügt über diese Methoden.
+Die **CIM \_ TPM-Klasse** verfügt über diese Methoden.
 
 
 
-| Methode                                                         | BESCHREIBUNG                                                                                                             |
+| Methode                                                         | Beschreibung                                                                                                             |
 |:---------------------------------------------------------------|:------------------------------------------------------------------------------------------------------------------------|
-| [**Changebesitzauth**](cim-tpm-changeownerauth.md)             | Ändert die Besitzer Autorisierungs Anmelde Informationen eines TPM-Geräts.<br/>                                                  |
-| [**Requesttpmstatechange**](cim-tpm-requesttpmstatechange.md) | Fordert an, dass der Status des TPM in den im **requestedtpmstate** -Parameter angegebenen Wert geändert wird.<br/> |
+| [**ChangeOwnerAuth**](cim-tpm-changeownerauth.md)             | Ändert die Anmeldeinformationen für die Besitzerautorisierung eines TPM-Geräts.<br/>                                                  |
+| [**RequestTPMStateChange**](cim-tpm-requesttpmstatechange.md) | Fordert an, dass der Status des TPM in den im **RequestedTPMState-Parameter angegebenen Wert geändert** wird.<br/> |
 
 
 
@@ -75,23 +75,23 @@ Die **CIM- \_ TPM** -Klasse verfügt über diese Methoden.
 
 ### <a name="properties"></a>Eigenschaften
 
-Die **CIM- \_ TPM** -Klasse verfügt über diese Eigenschaften.
+Die **CIM \_ TPM-Klasse** verfügt über diese Eigenschaften.
 
 <dl> <dt>
 
-**Availablerequestedtpmstates**
+**AvailableRequestedTPMStates**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt16** Array
+Datentyp: **uint16 array**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**modelkorrespondenz**](/windows/desktop/WmiSdk/standard-qualifiers) ("**CIM \_ TPM**".**Requesttpmstatechange**, CIM \_ tpmfunktionen. requestedtpmstatesupported ")
+Qualifizierer: [**ModelCorrespondence**](/windows/desktop/WmiSdk/standard-qualifiers) ("**CIM \_ TPM**.**RequestTPMStateChange**, CIM \_ TPMCapabilities.RequestedTPMStatesSupported")
 </dt> </dl>
 
-Die möglichen Werte für den *requestedtpmstate* -Parameter der [**requesttpmstatechange**](cim-tpm-requesttpmstatechange.md) -Methode.
+Die möglichen Werte für den *RequestedTPMState-Parameter* der [**RequestTPMStateChange-Methode.**](cim-tpm-requesttpmstatechange.md)
 
 <dt>
 
@@ -104,109 +104,109 @@ Die möglichen Werte für den *requestedtpmstate* -Parameter der [**requesttpmst
 
 <span id="S1_Enabled-Active-Owned"></span><span id="s1_enabled-active-owned"></span><span id="S1_ENABLED-ACTIVE-OWNED"></span>
 
-**S1 aktiviert-aktiv** (2)
+**S1 Enabled-Active-Owned** (2)
 
 
 </dt> <dd></dd> <dt>
 
 <span id="S2_Disabled-Active-Owned"></span><span id="s2_disabled-active-owned"></span><span id="S2_DISABLED-ACTIVE-OWNED"></span>
 
-**S2 deaktiviert-aktiv** (3)
+**S2 Disabled-Active-Owned** (3)
 
 
 </dt> <dd></dd> <dt>
 
 <span id="S3_Enabled-Inactive-Owned"></span><span id="s3_enabled-inactive-owned"></span><span id="S3_ENABLED-INACTIVE-OWNED"></span>
 
-**S3 aktiviert-inaktiv** (4)
+**S3 Enabled-Inactive-Owned** (4)
 
 
 </dt> <dd></dd> <dt>
 
 <span id="S4_Disabled-Inactive-Owned"></span><span id="s4_disabled-inactive-owned"></span><span id="S4_DISABLED-INACTIVE-OWNED"></span>
 
-**S4 deaktiviert-inaktiv** (5)
+**S4 Disabled-Inactive-Owned** (5)
 
 
 </dt> <dd></dd> <dt>
 
 <span id="S5_Enabled-Active-Unowned"></span><span id="s5_enabled-active-unowned"></span><span id="S5_ENABLED-ACTIVE-UNOWNED"></span>
 
-**S5 aktiviert, aktiv/nicht im Besitz** (6)
+**S5 Enabled-Active-Unowned** (6)
 
 
 </dt> <dd></dd> <dt>
 
 <span id="S6_Disabled-Active-Unowned"></span><span id="s6_disabled-active-unowned"></span><span id="S6_DISABLED-ACTIVE-UNOWNED"></span>
 
-**S6 deaktiviert, aktiv/nicht im Besitz** (7)
+**S6 Disabled-Active-Unowned** (7)
 
 
 </dt> <dd></dd> <dt>
 
 <span id="S7_Enabled-Inactive-Unowned"></span><span id="s7_enabled-inactive-unowned"></span><span id="S7_ENABLED-INACTIVE-UNOWNED"></span>
 
-**S7 aktiviert, inaktiv** (8)
+**S7 Enabled-Inactive-Unowned** (8)
 
 
 </dt> <dd></dd> <dt>
 
 <span id="S8_Disabled-Inactive-Unowned"></span><span id="s8_disabled-inactive-unowned"></span><span id="S8_DISABLED-INACTIVE-UNOWNED"></span>
 
-**S8 deaktiviert, inaktiv-nicht im Besitz** (9)
+**S8 Disabled-Inactive-Unowned** (9)
 
 
 </dt> <dd></dd> <dt>
 
 <span id="DMTF_Reserved"></span><span id="dmtf_reserved"></span><span id="DMTF_RESERVED"></span>
 
-**DMTF reserviert** (..)
+**DMTF Reserved** (..)
 
 
 </dt> <dd></dd> <dt>
 
 <span id="Vendor_Reserved"></span><span id="vendor_reserved"></span><span id="VENDOR_RESERVED"></span>
 
-**Anbieter reserviert** (32768.65535)
+**Reservierter Anbieter** (32768..65535)
 
 
 </dt> <dd></dd> </dl>
 
 </dd> <dt>
 
-**Tpmmanafucturermajorrevision**
+**TPMManafucturerMajorRevision**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt32**
+Datentyp: **uint32**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**mappingstrings**](/windows/desktop/WmiSdk/standard-qualifiers) ("TPM". TCG \| Part 2 v1dot2 \| section 5,3 \| Version \| revmajor ")
+Qualifizierer: [**MappingStrings**](/windows/desktop/WmiSdk/standard-qualifiers) ("TPM. TCG \| Part 2 v1dot2 \| Section 5.3 \| version \| revMajor")
 </dt> </dl>
 
-Die Haupt Revision des TPM des Herstellers.
+Die hauptrevision des TPM durch den Hersteller.
 
 </dd> <dt>
 
-**Tpmmanufacturerid**
+**TPMManufacturerId**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt32**
+Datentyp: **uint32**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**mappingstrings**](/windows/desktop/WmiSdk/standard-qualifiers) ("TPM". TCG \| Part 2 v1dot2 \| section 21,6 \| TPM \_ Cap \_ Version \_ Info \| tpmvendorid ")
+Qualifizierer: [**MappingStrings**](/windows/desktop/WmiSdk/standard-qualifiers) ("TPM. TCG \| Part 2 v1dot2 \| Section 21.6 TPM CAP VERSION INFO \| \_ \_ \_ \| tpmVendorID")
 </dt> </dl>
 
 Die TPM-Hersteller-ID.
 
 </dd> <dt>
 
-**Tpmmanufacturerinfo**
+**TPMManufacturerInfo**
 </dt> <dd> <dl> <dt>
 
 Datentyp: **Zeichenfolge**
@@ -215,74 +215,74 @@ Datentyp: **Zeichenfolge**
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**mappingstrings**](/windows/desktop/WmiSdk/standard-qualifiers) ("TPM". TCG \| Part 2 v 1.2. TCG \| section 21,6 \| TPM \_ Cap \_ Version \_ Info \| vendorspecific ")
+Qualifizierer: [**MappingStrings**](/windows/desktop/WmiSdk/standard-qualifiers) ("TPM. TCG \| Part 2 v1.2.TCG \| Section 21.6 \| TPM CAP VERSION INFO \_ \_ \_ \| vendorSpecific")
 </dt> </dl>
 
-Die zusätzlichen Informationen, die vom TPM-Hersteller definiert werden.
+Die vom TPM-Hersteller definierten zusätzlichen Informationen.
 
 </dd> <dt>
 
-**Tpmmanufacturerminorrevision**
+**TPMManufacturerMinorRevision**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt32**
+Datentyp: **uint32**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**mappingstrings**](/windows/desktop/WmiSdk/standard-qualifiers) ("TPM". TCG \| Part 2 v1dot2 \| Abschnitt 5,3 \| Version \| revminor ")
+Qualifizierer: [**MappingStrings**](/windows/desktop/WmiSdk/standard-qualifiers) ("TPM. TCG \| Part 2 v1dot2 \| Section 5.3 \| version \| revMinor")
 </dt> </dl>
 
-Die neben Version des TPM des Herstellers.
+Die kleinere Überarbeitung des TPM durch den Hersteller.
 
 </dd> <dt>
 
-**Tpmspecmajorversion**
+**TPMSpecMajorVersion**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt32**
+Datentyp: **uint32**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**mappingstrings**](/windows/desktop/WmiSdk/standard-qualifiers) ("TPM". TCG \| Part 2 v1dot2 \| Abschnitt 5,3 \| Version \| Major "," TSS. TCG \| Level 1 v 1.2, \| Abschnitt 2.3.2.18 ")
+Qualifizierer: [**MappingStrings**](/windows/desktop/WmiSdk/standard-qualifiers) ("TPM. TCG \| Part 2 v1dot2 \| Section 5.3 \| version \| major", "TSS. TCG \| Level 1 v1.2 \| Section 2.3.2.18")
 </dt> </dl>
 
 Die Hauptversion des TPM.
 
 </dd> <dt>
 
-**Tpmspecminorversion**
+**TPMSpecMinorVersion**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt32**
+Datentyp: **uint32**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**mappingstrings**](/windows/desktop/WmiSdk/standard-qualifiers) ("TPM". TCG \| Part 2 v1dot2 \| Abschnitt 5,3 \| Version \| Minor "," TSS. TCG \| Level 1 v 1.2, \| Abschnitt 2.3.2.18 ")
+Qualifizierer: [**MappingStrings**](/windows/desktop/WmiSdk/standard-qualifiers) ("TPM. TCG \| Part 2 v1dot2 \| Section 5.3 version \| \| minor", "TSS. TCG \| Level 1 v1.2 \| Section 2.3.2.18")
 </dt> </dl>
 
-Die neben Version des TPM.
+Die Nebenversion des TPM.
 
 </dd> <dt>
 
-**Tpmstate**
+**TPMState**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt16**
+Datentyp: **uint16**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**mappingstrings**](/windows/desktop/WmiSdk/standard-qualifiers) ("TPM". TCG \| Part 1 v1dot2 \| Abschnitt 9,4 "," TPM. TCG \| Part 2 v1dot2 \| section 7,1 \| TPM \_ permanente \_ Flags "), [**modelkorrespondenz**](/windows/desktop/WmiSdk/standard-qualifiers) ("**CIM \_ TPM**".**Requesttpmstatechange**","**CIM \_ TPM**.**Transitioningtotpmstate**")
+Qualifizierer: [**MappingStrings**](/windows/desktop/WmiSdk/standard-qualifiers) ("TPM. TCG \| Part 1 v1dot2 \| Section 9.4", "TPM. TCG \| Part 2 v1dot2 \| Section 7.1 \| TPM PERMANENT \_ \_ FLAGS"), [**ModelCorrespondence**](/windows/desktop/WmiSdk/standard-qualifiers) ("**CIM \_ TPM**.**RequestTPMStateChange**", "**CIM \_ TPM**.**TransitioningToTPMState**")
 </dt> </dl>
 
-Der Betriebsstatus des TPM.
+Der Betriebszustand des TPM.
 
 <dt>
 
@@ -295,56 +295,56 @@ Der Betriebsstatus des TPM.
 
 <span id="S1_Enabled-Active-Owned"></span><span id="s1_enabled-active-owned"></span><span id="S1_ENABLED-ACTIVE-OWNED"></span>
 
-**S1 aktiviert-aktiv** (2)
+**S1 Enabled-Active-Owned** (2)
 
 
 </dt> <dd></dd> <dt>
 
 <span id="S2_Disabled-Active-Owned"></span><span id="s2_disabled-active-owned"></span><span id="S2_DISABLED-ACTIVE-OWNED"></span>
 
-**S2 deaktiviert-aktiv** (3)
+**S2 Disabled-Active-Owned** (3)
 
 
 </dt> <dd></dd> <dt>
 
 <span id="S3_Enabled-Inactive-Owned"></span><span id="s3_enabled-inactive-owned"></span><span id="S3_ENABLED-INACTIVE-OWNED"></span>
 
-**S3 aktiviert-inaktiv** (4)
+**S3 Enabled-Inactive-Owned** (4)
 
 
 </dt> <dd></dd> <dt>
 
 <span id="S4_Disabled-Inactive-Owned"></span><span id="s4_disabled-inactive-owned"></span><span id="S4_DISABLED-INACTIVE-OWNED"></span>
 
-**S4 deaktiviert-inaktiv** (5)
+**S4 Disabled-Inactive-Owned** (5)
 
 
 </dt> <dd></dd> <dt>
 
 <span id="S5_Enabled-Active-Unowned"></span><span id="s5_enabled-active-unowned"></span><span id="S5_ENABLED-ACTIVE-UNOWNED"></span>
 
-**S5 aktiviert, aktiv/nicht im Besitz** (6)
+**S5 Enabled-Active-Unowned** (6)
 
 
 </dt> <dd></dd> <dt>
 
 <span id="S6_Disabled-Active-Unowned"></span><span id="s6_disabled-active-unowned"></span><span id="S6_DISABLED-ACTIVE-UNOWNED"></span>
 
-**S6 deaktiviert, aktiv/nicht im Besitz** (7)
+**S6 Disabled-Active-Unowned** (7)
 
 
 </dt> <dd></dd> <dt>
 
 <span id="S7_Enabled-Inactive-Unowned"></span><span id="s7_enabled-inactive-unowned"></span><span id="S7_ENABLED-INACTIVE-UNOWNED"></span>
 
-**S7 aktiviert, inaktiv** (8)
+**S7 Enabled-Inactive-Unowned** (8)
 
 
 </dt> <dd></dd> <dt>
 
 <span id="S8_Disabled-Inactive-Unowned"></span><span id="s8_disabled-inactive-unowned"></span><span id="S8_DISABLED-INACTIVE-UNOWNED"></span>
 
-**S8 deaktiviert, inaktiv-nicht im Besitz** (9)
+**S8 Disabled-Inactive-Unowned** (9)
 
 
 </dt> <dd></dd> <dt>
@@ -358,33 +358,33 @@ Der Betriebsstatus des TPM.
 
 <span id="DMTF_Reserved"></span><span id="dmtf_reserved"></span><span id="DMTF_RESERVED"></span>
 
-**DMTF reserviert** (..)
+**DMTF Reserved** (..)
 
 
 </dt> <dd></dd> <dt>
 
 <span id="Vendor_Reserved"></span><span id="vendor_reserved"></span><span id="VENDOR_RESERVED"></span>
 
-**Anbieter reserviert** (32768.65535)
+**Reservierter Anbieter** (32768..65535)
 
 
 </dt> <dd></dd> </dl>
 
 </dd> <dt>
 
-**Transitioningtotpmstate**
+**TransitioningToTPMState**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt16**
+Datentyp: **uint16**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**modelkorrespondenz**](/windows/desktop/WmiSdk/standard-qualifiers) ("**CIM \_ TPM**".**Requesttpmstatechange**","**CIM \_ TPM**.**Tpmstate**")
+Qualifizierer: [**ModelCorrespondence**](/windows/desktop/WmiSdk/standard-qualifiers) ("**CIM \_ TPM**.**RequestTPMStateChange**", "**CIM \_ TPM**.**TPMState**")
 </dt> </dl>
 
-Der Zielzustand, in den das TPM übergeht.
+Der Zielzustand, in den das TPM über geht.
 
 <dt>
 
@@ -397,56 +397,56 @@ Der Zielzustand, in den das TPM übergeht.
 
 <span id="S1_Enabled-Active-Owned"></span><span id="s1_enabled-active-owned"></span><span id="S1_ENABLED-ACTIVE-OWNED"></span>
 
-<span id="S1_Enabled-Active-Owned"></span><span id="s1_enabled-active-owned"></span><span id="S1_ENABLED-ACTIVE-OWNED"></span>**S1 aktiviert-aktiv** (2)
+<span id="S1_Enabled-Active-Owned"></span><span id="s1_enabled-active-owned"></span><span id="S1_ENABLED-ACTIVE-OWNED"></span>**S1 Enabled-Active-Owned** (2)
 
 
 </dt> <dd></dd> <dt>
 
 <span id="S2_Disabled-Active-Owned"></span><span id="s2_disabled-active-owned"></span><span id="S2_DISABLED-ACTIVE-OWNED"></span>
 
-<span id="S2_Disabled-Active-Owned"></span><span id="s2_disabled-active-owned"></span><span id="S2_DISABLED-ACTIVE-OWNED"></span>**S2 deaktiviert-aktiv** (3)
+<span id="S2_Disabled-Active-Owned"></span><span id="s2_disabled-active-owned"></span><span id="S2_DISABLED-ACTIVE-OWNED"></span>**S2 Disabled-Active-Owned** (3)
 
 
 </dt> <dd></dd> <dt>
 
 <span id="S3_Enabled-Inactive-Owned"></span><span id="s3_enabled-inactive-owned"></span><span id="S3_ENABLED-INACTIVE-OWNED"></span>
 
-<span id="S3_Enabled-Inactive-Owned"></span><span id="s3_enabled-inactive-owned"></span><span id="S3_ENABLED-INACTIVE-OWNED"></span>**S3 aktiviert-inaktiv** (4)
+<span id="S3_Enabled-Inactive-Owned"></span><span id="s3_enabled-inactive-owned"></span><span id="S3_ENABLED-INACTIVE-OWNED"></span>**S3 Enabled-Inactive-Owned** (4)
 
 
 </dt> <dd></dd> <dt>
 
 <span id="S4_Disabled-Inactive-Owned"></span><span id="s4_disabled-inactive-owned"></span><span id="S4_DISABLED-INACTIVE-OWNED"></span>
 
-<span id="S4_Disabled-Inactive-Owned"></span><span id="s4_disabled-inactive-owned"></span><span id="S4_DISABLED-INACTIVE-OWNED"></span>**S4 deaktiviert-inaktiv** (5)
+<span id="S4_Disabled-Inactive-Owned"></span><span id="s4_disabled-inactive-owned"></span><span id="S4_DISABLED-INACTIVE-OWNED"></span>**S4 Disabled-Inactive-Owned** (5)
 
 
 </dt> <dd></dd> <dt>
 
 <span id="S5_Enabled-Active-Unowned"></span><span id="s5_enabled-active-unowned"></span><span id="S5_ENABLED-ACTIVE-UNOWNED"></span>
 
-<span id="S5_Enabled-Active-Unowned"></span><span id="s5_enabled-active-unowned"></span><span id="S5_ENABLED-ACTIVE-UNOWNED"></span>**S5 aktiviert, aktiv/nicht im Besitz** (6)
+<span id="S5_Enabled-Active-Unowned"></span><span id="s5_enabled-active-unowned"></span><span id="S5_ENABLED-ACTIVE-UNOWNED"></span>**S5 Enabled-Active-Unowned** (6)
 
 
 </dt> <dd></dd> <dt>
 
 <span id="S6_Disabled-Active-Unowned"></span><span id="s6_disabled-active-unowned"></span><span id="S6_DISABLED-ACTIVE-UNOWNED"></span>
 
-<span id="S6_Disabled-Active-Unowned"></span><span id="s6_disabled-active-unowned"></span><span id="S6_DISABLED-ACTIVE-UNOWNED"></span>**S6 deaktiviert, aktiv/nicht im Besitz** (7)
+<span id="S6_Disabled-Active-Unowned"></span><span id="s6_disabled-active-unowned"></span><span id="S6_DISABLED-ACTIVE-UNOWNED"></span>**S6 Disabled-Active-Unowned** (7)
 
 
 </dt> <dd></dd> <dt>
 
 <span id="S7_Enabled-Inactive-Unowned"></span><span id="s7_enabled-inactive-unowned"></span><span id="S7_ENABLED-INACTIVE-UNOWNED"></span>
 
-<span id="S7_Enabled-Inactive-Unowned"></span><span id="s7_enabled-inactive-unowned"></span><span id="S7_ENABLED-INACTIVE-UNOWNED"></span>**S7 aktiviert, inaktiv** (8)
+<span id="S7_Enabled-Inactive-Unowned"></span><span id="s7_enabled-inactive-unowned"></span><span id="S7_ENABLED-INACTIVE-UNOWNED"></span>**S7 Enabled-Inactive-Unowned** (8)
 
 
 </dt> <dd></dd> <dt>
 
 <span id="S8_Disabled-Inactive-Unowned"></span><span id="s8_disabled-inactive-unowned"></span><span id="S8_DISABLED-INACTIVE-UNOWNED"></span>
 
-<span id="S8_Disabled-Inactive-Unowned"></span><span id="s8_disabled-inactive-unowned"></span><span id="S8_DISABLED-INACTIVE-UNOWNED"></span>**S8 deaktiviert, inaktiv-nicht im Besitz** (9)
+<span id="S8_Disabled-Inactive-Unowned"></span><span id="s8_disabled-inactive-unowned"></span><span id="S8_DISABLED-INACTIVE-UNOWNED"></span>**S8 Disabled-Inactive-Unowned** (9)
 
 
 </dt> <dd></dd> <dt>
@@ -474,14 +474,14 @@ Der Zielzustand, in den das TPM übergeht.
 
 <span id="DMTF_Reserved"></span><span id="dmtf_reserved"></span><span id="DMTF_RESERVED"></span>
 
-<span id="DMTF_Reserved"></span><span id="dmtf_reserved"></span><span id="DMTF_RESERVED"></span>**DMTF reserviert** (..)
+<span id="DMTF_Reserved"></span><span id="dmtf_reserved"></span><span id="DMTF_RESERVED"></span>**DMTF Reserved** (..)
 
 
 </dt> <dd></dd> <dt>
 
 <span id="Vendor_Reserved"></span><span id="vendor_reserved"></span><span id="VENDOR_RESERVED"></span>
 
-<span id="Vendor_Reserved"></span><span id="vendor_reserved"></span><span id="VENDOR_RESERVED"></span>**Anbieter reserviert** (32768.65535)
+<span id="Vendor_Reserved"></span><span id="vendor_reserved"></span><span id="VENDOR_RESERVED"></span>**Reservierter Anbieter** (32768..65535)
 
 
 </dt> <dd></dd> </dl>
@@ -494,15 +494,15 @@ Der Zielzustand, in den das TPM übergeht.
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows 10 \[ -Desktop-Apps\]<br/>                                                             |
+| Unterstützte Mindestversion (Client)<br/> | \[Windows 10 Nur Desktop-Apps\]<br/>                                                             |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2016<br/>                                                                          |
-| Namespace<br/>                | \\Stammvirtualisierung \\ v2<br/>                                                                     |
-| MOF<br/>                      | <dl> <dt>Windowsvirtualization. v2. MOF</dt> </dl> |
+| Namespace<br/>                | \\Root-Virtualisierung \\ v2<br/>                                                                     |
+| MOF<br/>                      | <dl> <dt>WindowsVirtualization.V2.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Vmms.exe</dt> </dl>                     |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 

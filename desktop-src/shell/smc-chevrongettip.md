@@ -1,7 +1,7 @@
 ---
-description: Fordert den Titel und text für eine Chevron-Infotip für das Element an, das von der zugehörigen SMDATA-Struktur angegeben wird.
+description: Fordert den Titel und Text für eine Chevron-Infotip für das Element an, das von der zugehörigen SMDATA-Struktur angegeben wird.
 ms.assetid: 7bce4079-994c-4eb0-ab86-9044701d85a1
-title: SMC_CHEVRONGETTIP (Shobjidl.h)
+title: SMC_CHEVRONGETTIP Nachricht (Shobjidl.h)
 ms.topic: reference
 ms.date: 05/31/2018
 ms.openlocfilehash: 9e64636994743d4b13a96fe75947fb515c4dbd3edcc94e6dee0fa85efb8bc9d1
@@ -13,7 +13,7 @@ ms.locfileid: "118968239"
 ---
 # <a name="smc_chevrongettip-message"></a>\_SMC-CHEVRONGETTIP-Nachricht
 
-Fordert den Titel und text für eine Chevron-Infotip für das Element an, das von der zugehörigen [**SMDATA-Struktur angegeben**](/windows/win32/api/shobjidl_core/ns-shobjidl_core-smdata) wird.
+Fordert den Titel und Text für eine Chevron-Infotip für das Element an, das von der zugehörigen [**SMDATA-Struktur**](/windows/win32/api/shobjidl_core/ns-shobjidl_core-smdata) angegeben wird.
 
 
 ```C++
@@ -32,14 +32,14 @@ SMC_CHEVRONGETTIP
 *pwszTipTitle* 
 </dt> <dd>
 
-Ein Zeiger auf einen Puffer, der eine **mit NULL** beendete Unicode-Zeichenfolge empfängt, die den Titel des Infotips enthält. Diese Zeichenfolge darf nicht länger als MAX \_ PATH-Zeichen lang sein, einschließlich des beendenden **NULL-Zeichens.**
+Ein Zeiger auf einen Puffer, der eine **Mit NULL** endende Unicode-Zeichenfolge empfängt, die den Titel der Infotip enthält. Diese Zeichenfolge darf nicht länger als MAX \_ PATH-Zeichen sein, einschließlich des abschließenden **NULL-Zeichens.**
 
 </dd> <dt>
 
 *pwszTipText* 
 </dt> <dd>
 
-Ein Zeiger auf einen Puffer, der eine mit **NULL** beendete Unicode-Zeichenfolge empfängt, die den Text der Infotip enthält. Diese Zeichenfolge darf nicht länger als MAX \_ PATH-Zeichen lang sein, einschließlich des beendenden **NULL-Zeichens.**
+Ein Zeiger auf einen Puffer, der eine **mit NULL** beendete Unicode-Zeichenfolge empfängt, die den Text der Infotip enthält. Diese Zeichenfolge darf nicht länger als MAX \_ PATH-Zeichen sein, einschließlich des abschließenden **NULL-Zeichens.**
 
 </dd> </dl>
 

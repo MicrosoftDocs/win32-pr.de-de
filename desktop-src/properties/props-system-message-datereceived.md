@@ -1,5 +1,5 @@
 ---
-description: Das Datum und die Uhrzeit, zu der eine Kommunikation empfangen wurde.
+description: Datum und Uhrzeit des Empfangs einer Kommunikation.
 ms.assetid: de222d2f-1825-45a5-b899-45b4c2ab6f2c
 title: System.Message.DateReceived
 ms.topic: article
@@ -13,7 +13,7 @@ ms.locfileid: "118970299"
 ---
 # <a name="systemmessagedatereceived"></a>System.Message.DateReceived
 
-Das Datum und die Uhrzeit, zu der eine Kommunikation empfangen wurde.
+Datum und Uhrzeit des Empfangs einer Kommunikation.
 
 ## <a name="windows-10-version-1703-windows-10-version-1607-windows-10-version-1511-windows-10-version-1507-windows-81-windows-8-windows-7"></a>Windows 10, Version 1703, Windows 10, Version 1607, Windows 10, Version 1511, Windows 10, Version 1507, Windows 8.1, Windows 8, Windows 7
 

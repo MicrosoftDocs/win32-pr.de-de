@@ -1,35 +1,35 @@
 ---
-description: Gibt an, ob der Bildstream in einer Video Erfassungs Quelle unabhängig vom Videostream ist.
+description: Gibt an, ob der Bilddatenstrom in einer Videoaufnahmequelle unabhängig vom Videostream ist.
 ms.assetid: DC4ED612-593B-40BF-BB42-946149042D1F
-title: MF_DEVICESTREAM_INDEPENDENT_IMAGE_STREAM-Attribut (mspdl. h)
+title: MF_DEVICESTREAM_INDEPENDENT_IMAGE_STREAM-Attribut (Mfidl.h)
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 174e62a1bdd178ad2d8dce7fab5bf9ce3104d834
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: f52392839c5f196159692bc9c4624cbda67b869471d6737c4cff60c847f890e3
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106353196"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119956680"
 ---
-# <a name="mf_devicestream_independent_image_stream-attribute"></a>Das MF- \_ Attribut "devicestream \_ Independent \_ Image \_ Stream"
+# <a name="mf_devicestream_independent_image_stream-attribute"></a>MF \_ DEVICESTREAM \_ INDEPENDENT IMAGE \_ \_ STREAM-Attribut
 
-Gibt an, ob der Bildstream in einer Video Erfassungs Quelle unabhängig vom Videostream ist.
+Gibt an, ob der Bilddatenstrom in einer Videoaufnahmequelle unabhängig vom Videostream ist.
 
 ## <a name="data-type"></a>Datentyp
 
-**Bool** gespeichert als **UInt32**
+**BOOL** als **UINT32** gespeichert
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Einige USB-Videokameras machen einen Stream verfügbar, der weiterhin Bilder erzeugt. In einigen Kameras gibt der Bildstream einfach den nächsten Frame aus dem Videostream zurück. In anderen Kameras funktioniert der Bildstream unabhängig vom Videostream. Wenn die Kamera über einen unabhängigen Bildstream verfügt, legt die Medienquelle für das Erfassungsgerät dieses Attribut für den Bildstream auf **true** fest.
+Einige USB-Videokameras machen einen Stream verfügbar, der Standbilder erzeugt. Bei einigen Kameras gibt der Bildstream einfach den nächsten Frame aus dem Videostream zurück. In anderen Kameras funktioniert der Bildstream unabhängig vom Videostream. Wenn die Kamera über einen unabhängigen Bilddatenstrom verfügt, legt die Medienquelle für das Erfassungsgerät dieses Attribut im Bilddatenstrom auf **TRUE** fest.
 
-Gehen Sie folgendermaßen vor, um dieses Attribut zu erhalten:
+Gehen Sie wie folgt vor, um dieses Attribut abzurufen:
 
-1.  Fragen Sie die Medienquelle für die [**imfmediasourceex**](/windows/desktop/api/mfidl/nn-mfidl-imfmediasourceex) -Schnittstelle ab.
-2.  Aufrufen von [**imfmediasourceex:: getstreamattributs**](/windows/desktop/api/mfidl/nf-mfidl-imfmediasourceex-getstreamattributes) , um einen [**imfattributes**](/windows/desktop/api/mfobjects/nn-mfobjects-imfattributes) -Zeiger für den Stream zu erhalten.
-3.  Zum Abrufen des Attributs muss [**imfattributes:: GetUINT32**](/windows/desktop/api/mfobjects/nf-mfobjects-imfattributes-getuint32) aufgerufen werden.
+1.  Fragen Sie die Medienquelle nach der [**SCHNITTSTELLE "CSVMediaSourceEx"**](/windows/desktop/api/mfidl/nn-mfidl-imfmediasourceex) ab.
+2.  Rufen Sie [**DEN CURSORMediaSourceEx::GetStreamAttributes**](/windows/desktop/api/mfidl/nf-mfidl-imfmediasourceex-getstreamattributes) auf, um einen [**POINTERAttributes-Zeiger**](/windows/desktop/api/mfobjects/nn-mfobjects-imfattributes) für den Stream abzurufen.
+3.  Rufen Sie [**DIE ATTRIBUTEAttributes::GetUINT32**](/windows/desktop/api/mfobjects/nf-mfobjects-imfattributes-getuint32) auf, um das Attribut abzurufen.
 
-Dieses Attribut gilt nur, wenn das MF-Attribut " [ \_ devicestream \_ Image \_ Stream](mf-devicestream-image-stream.md) " den Wert **true** hat.
+Dieses Attribut gilt nur, wenn das [MF \_ DEVICESTREAM \_ IMAGE \_ STREAM-Attribut](mf-devicestream-image-stream.md) **TRUE** ist.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -37,9 +37,9 @@ Dieses Attribut gilt nur, wenn das MF-Attribut " [ \_ devicestream \_ Image \_ S
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows 8 \[ -Desktop-Apps\]<br/>                                         |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2012 \[ -Desktop-Apps\]<br/>                               |
-| Header<br/>                   | <dl> <dt>Mspdl. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | \[Windows 8 Nur Desktop-Apps\]<br/>                                         |
+| Unterstützte Mindestversion (Server)<br/> | \[Windows Server 2012 Nur Desktop-Apps\]<br/>                               |
+| Header<br/>                   | <dl> <dt>Mfidl.h</dt> </dl> |
 
 
 

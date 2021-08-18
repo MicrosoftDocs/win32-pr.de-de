@@ -1,9 +1,9 @@
 ---
-title: /mktyplib203-Schalter
-description: Der/mktyplib203-Schalter zwingt den Mittel l-Compiler, die Eingabedatei zu analysieren.
+title: /mktyplib203 switch
+description: Der Schalter /mktyplib203 zwingt den MIDL-Compiler, die Eingabedatei zu analysieren.
 ms.assetid: e1eddf03-db42-426e-bdf1-b7122b862756
 keywords:
-- /mktyplib203-Schalter-Mittel l
+- /mktyplib203 switch MIDL
 topic_type:
 - apiref
 api_name:
@@ -12,16 +12,16 @@ api_type:
 - NA
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 84e8fd972355c2f6d37300c60f4bf74e76bf4396
-ms.sourcegitcommit: 57758ecb246c84d65e6e0e4bd5570d9176fa39cd
+ms.openlocfilehash: dc887560401986b9a7d5e0f0aa7c8b36d61874bf245a88ade7a149cd084f1ee3
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "103857551"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119014148"
 ---
-# <a name="mktyplib203-switch"></a>/mktyplib203-Schalter
+# <a name="mktyplib203-switch"></a>/mktyplib203 switch
 
-Der **/mktyplib203** -Schalter zwingt den Mittel l-Compiler, die Eingabedatei zu analysieren.
+Der Schalter **/mktyplib203** zwingt den MIDL-Compiler, die Eingabedatei zu analysieren.
 
 ``` syntax
 midl /mktyplib203
@@ -29,29 +29,29 @@ midl /mktyplib203
 
 ## <a name="switch-options"></a>Optionen wechseln
 
-Dieser Switch hat keine Parameter.
+Dieser Schalter verfügt über keine Parameter.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Um den **/mktyplib203** -Schalter verwenden zu können, muss die Eingabedatei genau der ODL-Syntax folgen. Dies bedeutet, dass Sie keine Anweisungen außerhalb des Bibliotheks Blocks platzieren können. Beispiele
+Um den Schalter **/mktyplib203** zu verwenden, muss die Eingabedatei genau der ODL-Syntax folgen. Das bedeutet, dass Sie keine Anweisungen außerhalb des Bibliotheksblocks platzieren können. Beispiele
 
-**Mittel l/mktyplib203 myoldodl. ODL**
+**midl /mktyplib203 myoldodl.odl**
 
-**Mittel l/mktyplib203 oldhabit. idl**
+**midl /mktyplib203 oldhabit.idl**
 
 ## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 
-[Allgemeine Syntax der Mittell-Befehlszeile](general-midl-command-line-syntax.md)
+[Allgemeine MIDL-Befehlszeilensyntax](general-midl-command-line-syntax.md)
 </dt> <dt>
 
-[Erstellen einer Typbibliothek mit "Mittel l"](generating-a-type-library-with-midl-2.md)
+[Generieren einer Typbibliothek mit MIDL](generating-a-type-library-with-midl-2.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

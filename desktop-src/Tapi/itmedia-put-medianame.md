@@ -1,21 +1,21 @@
 ---
-description: Mit der Put \_ MEDIANAME-Methode wird der Medien Name festgelegt. Definierte Medien sind Audiodaten, Videos, Whiteboards, Text und Daten.
+description: Die put \_ MediaName-Methode legt den Mediennamen fest. Definierte Medien sind Audio, Video, Whiteboard, Text und Daten.
 ms.assetid: 0dd18add-6c7e-40a8-8b39-10c65bdfb2e0
-title: ITmedia::p ut_MediaName-Methode (sdpblb. h)
+title: ITMedia::p ut_MediaName-Methode (Sdpblb.h)
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 66dcbd4e29f59694d610fb4e6af9fd49aa53323d
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: d77ffde28406b7fb527ed8679d1f65d6aba537e611b69d1ad31e8679f59fd0e9
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106373702"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119003338"
 ---
-# <a name="itmediaput_medianame-method"></a>ITmedia::p UT \_ MEDIANAME-Methode
+# <a name="itmediaput_medianame-method"></a>ITMedia::p ut \_ MediaName-Methode
 
-\[ Rendezvous-Steuerelemente und Schnittstellen für die IP-telefoniekonferenz sind nicht für die Verwendung in Windows Vista, Windows Server 2008 und nachfolgenden Versionen des Betriebssystems verfügbar. Die RTC-Client-API bietet eine ähnliche Funktionalität.\]
+\[Rendezvous IP-Telefoniekonferenz-Steuerelemente und -Schnittstellen sind nicht für die Verwendung in Windows Vista, Windows Server 2008 und nachfolgenden Versionen des Betriebssystems verfügbar. Die RTC-Client-API bietet ähnliche Funktionen.\]
 
-Mit der **Put \_ MEDIANAME** -Methode wird der Medien Name festgelegt. Definierte Medien sind Audiodaten, Videos, Whiteboards, Text und Daten.
+Die **put \_ MediaName-Methode** legt den Mediennamen fest. Definierte Medien sind Audio, Video, Whiteboard, Text und Daten.
 
 ## <a name="syntax"></a>Syntax
 
@@ -32,10 +32,10 @@ HRESULT put_MediaName(
 
 <dl> <dt>
 
-*pmedianame* \[ in\]
+*pMediaName* \[ In\]
 </dt> <dd>
 
-Zeiger auf einen **BSTR** -Wert, der den festzulegenden Mediennamen enthält.
+Zeiger auf einen **BSTR,** der den festgelegten Mediennamen enthält.
 
 </dd> </dl>
 
@@ -48,20 +48,20 @@ Diese Methode kann einen dieser Werte zurückgeben.
 | Rückgabecode                                                                                   | Beschreibung                                                     |
 |-----------------------------------------------------------------------------------------------|-----------------------------------------------------------------|
 | <dl> <dt>**S \_ OK**</dt> </dl>          | Methode war erfolgreich.<br/>                                    |
-| <dl> <dt>**E- \_ Zeiger**</dt> </dl>     | Der *pmedianame* -Parameter ist kein gültiger Zeiger.<br/>   |
-| <dl> <dt>**E \_ outo-Memory**</dt> </dl> | Zum Ausführen des Vorgangs ist nicht genügend Arbeitsspeicher vorhanden.<br/> |
-| <dl> <dt>**E \_ fehlschlagen**</dt> </dl>        | Unbekannter Fehler.<br/>                                   |
-| <dl> <dt>**E \_ notimpl**</dt> </dl>     | Diese Methode ist noch nicht implementiert.<br/>                  |
+| <dl> <dt>**\_E-ZEIGER**</dt> </dl>     | Der *pMediaName-Parameter* ist kein gültiger Zeiger.<br/>   |
+| <dl> <dt>**E \_ OUTOFMEMORY**</dt> </dl> | Es ist nicht genügend Arbeitsspeicher vorhanden, um den Vorgang durchzuführen.<br/> |
+| <dl> <dt>**E \_ FAIL**</dt> </dl>        | Unbekannter Fehler.<br/>                                   |
+| <dl> <dt>**E \_ NOTIMPL**</dt> </dl>     | Diese Methode ist noch nicht implementiert.<br/>                  |
 
 
 
  
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die Anwendung muss " [**SysAllocString**](/windows/win32/api/oleauto/nf-oleauto-sysallocstring) " verwenden, um Speicher für den *pmedianame* -Parameter zuzuweisen, und " [**SysFreeString**](/windows/win32/api/oleauto/nf-oleauto-sysfreestring) " verwenden, um den Arbeitsspeicher freizugeben, wenn die Variable nicht mehr benötigt wird.
+Die Anwendung muss [**SysAllocString**](/windows/win32/api/oleauto/nf-oleauto-sysallocstring) verwenden, um Arbeitsspeicher für den *pMediaName-Parameter* zu reservieren, und [**SysFreeString**](/windows/win32/api/oleauto/nf-oleauto-sysfreestring) verwenden, um den Arbeitsspeicher frei zu geben, wenn die Variable nicht mehr benötigt wird.
 
-Diese Funktion kann Daten in unverschlüsselter Form über das Netzwerk senden. aus diesem Grund kann ein Benutzer, der sich im Netzwerk befindet, möglicherweise die Daten lesen. Das Sicherheitsrisiko, dass Daten im Klartext gesendet werden, sollte vor der Verwendung dieser Methode berücksichtigt werden.
+Diese Funktion kann Daten unverschlüsselt über das Netzwerk senden. Aus diesem Grund kann eine Person, die im Netzwerk abhört, die Daten lesen. Das Sicherheitsrisiko des Sendens der Daten in Klartext sollte vor der Verwendung dieser Methode berücksichtigt werden.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -69,9 +69,9 @@ Diese Funktion kann Daten in unverschlüsselter Form über das Netzwerk senden. 
 
 | Anforderung | Wert |
 |-------------------------|---------------------------------------------------------------------------------------|
-| TAPI-Version<br/> | Erfordert TAPI 3,0 oder höher<br/>                                                 |
-| Header<br/>       | <dl> <dt>Sdpblb. h</dt> </dl>   |
-| Bibliothek<br/>      | <dl> <dt>UUID. lib</dt> </dl>   |
+| TAPI-Version<br/> | Erfordert TAPI 3.0 oder höher<br/>                                                 |
+| Header<br/>       | <dl> <dt>Sdpblb.h</dt> </dl>   |
+| Bibliothek<br/>      | <dl> <dt>Uuid.lib</dt> </dl>   |
 | DLL<br/>          | <dl> <dt>Sdpblb.dll</dt> </dl> |
 
 
@@ -80,10 +80,10 @@ Diese Funktion kann Daten in unverschlüsselter Form über das Netzwerk senden. 
 
 <dl> <dt>
 
-[**ITmedia**](itmedia.md)
+[**ITMedia**](itmedia.md)
 </dt> <dt>
 
-[**ITmedia:: get \_ MEDIANAME**](itmedia-get-medianame.md)
+[**ITMedia::get \_ MediaName**](itmedia-get-medianame.md)
 </dt> </dl>
 
  

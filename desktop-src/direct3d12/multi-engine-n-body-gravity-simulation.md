@@ -1,31 +1,31 @@
 ---
-title: N-Text-Schwerkraft Simulation mit mehreren Modulen
-description: Das D3D12nBodyGravity-Beispiel veranschaulicht, wie Compute-Arbeit asynchron ausgeführt wird.
+title: N-Körper-Schwerkraftsimulation mit mehreren Modulen
+description: Das Beispiel D3D12nBody Ctity veranschaulicht, wie Computearbeit asynchron ausgeführt wird.
 ms.assetid: B20C5575-0616-43F7-9AC9-5F802E5597B5
 ms.localizationpriority: high
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: e60782519de6f655882717c4ea657668129a6ce3
-ms.sourcegitcommit: 592c9bbd22ba69802dc353bcb5eb30699f9e9403
+ms.openlocfilehash: da14e34bfc881e000eb4f4557a0dddef3cee3d0ab55343a9e5597a483af39adc
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "104548661"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119632044"
 ---
-# <a name="multi-engine-n-body-gravity-simulation"></a>N-Text-Schwerkraft Simulation mit mehreren Modulen
+# <a name="multi-engine-n-body-gravity-simulation"></a>N-Körper-Schwerkraftsimulation mit mehreren Modulen
 
-Das **D3D12nBodyGravity** -Beispiel veranschaulicht, wie Compute-Arbeit asynchron ausgeführt wird. Das Beispiel startet eine Reihe von Threads, die jeweils über eine COMPUTE-Befehls Warteschlange verfügen, und plant Compute-Arbeit auf der GPU, die eine n-Text-Schwerkraft Simulation ausführt. Jeder Thread arbeitet mit zwei Puffer, die sich aus der Position und den Geschwindigkeitsdaten zusammen befinden. Bei jeder Iterationen liest der COMPUTE-Shader die aktuellen Positions-und Geschwindigkeitsdaten aus einem Puffer und schreibt die nächste Iterationen in den anderen Puffer. Wenn die Iterationen abgeschlossen sind, tauscht der COMPUTE-Shader aus, welcher Puffer der SRV zum Lesen von Positions-/Velocity-Daten ist. dabei handelt es sich um die UAV zum Schreiben von Positions-/Velocity-Updates durch Ändern des Ressourcen Zustands für jeden Puffer.
+Das **Beispiel D3D12nBody Ctity** veranschaulicht, wie Computearbeit asynchron ausgeführt wird. Im Beispiel werden eine Reihe von Threads mit jeweils einer Computebefehlswarteschlange eingerichtet und Computearbeit auf der GPU geplant, die eine n-body-Schwerkraftsimulation ausführt. Jeder Thread arbeitet mit zwei Puffern mit Positions- und Geschwindigkeitsdaten. Bei jeder Iteration liest der Compute-Shader die aktuellen Positions- und Geschwindigkeitsdaten aus einem Puffer und schreibt die nächste Iteration in den anderen Puffer. Nach Abschluss der Iteration tauscht der Compute-Shader aus, welcher Puffer der SRV zum Lesen von Positions-/Geschwindigkeitsdaten ist und welcher UAV zum Schreiben von Positions-/Geschwindigkeitsaktualisierungen durch Ändern des Ressourcenzustands für jeden Puffer ist.
 
--   [Erstellen der Stamm Signaturen](#create-the-root-signatures)
--   [Erstellen der SRV-und UAV-Puffer](#create-the-srv-and-uav-buffers)
--   [Erstellen der CBV-und Vertex-Puffer](#create-the-cbv-and-vertex-buffers)
--   [Synchronisieren der Rendering-und Compute-Threads](#synchronize-the-rendering-and-compute-threads)
+-   [Erstellen der Stammsignaturen](#create-the-root-signatures)
+-   [Erstellen der SRV- und UAV-Puffer](#create-the-srv-and-uav-buffers)
+-   [Erstellen der CBV- und Scheitelpunktpuffer](#create-the-cbv-and-vertex-buffers)
+-   [Synchronisieren der Rendering- und Computethreads](#synchronize-the-rendering-and-compute-threads)
 -   [Ausführen des Beispiels](#run-the-sample)
--   [Verwandte Themen](#related-topics)
+-   [Zugehörige Themen](#related-topics)
 
-## <a name="create-the-root-signatures"></a>Erstellen der Stamm Signaturen
+## <a name="create-the-root-signatures"></a>Erstellen der Stammsignaturen
 
-Wir beginnen damit, in der **loadassets** -Methode sowohl eine Grafik als auch eine COMPUTE-Stamm Signatur zu erstellen. Beide Stamm Signaturen haben eine CBV (root Constant Buffer View) und eine Tabelle der Tabelle "Shader Resource View" (SRV). Die COMPUTE-Stamm Signatur verfügt auch über eine benutzerdefinierte UAV-Deskriptortabelle (ungeordnete Zugriffs Ansicht).
+Zunächst erstellen wir sowohl eine Grafik als auch eine Computestammsignatur in der **LoadAssets-Methode.** Beide Stammsignaturen verfügen über eine Stammkonst constant buffer view (CBV) und eine Shader resource view (SRV)-Deskriptortabelle. Die Computestammsignatur verfügt auch über eine Unordered Access View (UAV)-Deskriptortabelle.
 
 ``` syntax
  // Create the root signatures.
@@ -60,25 +60,25 @@ Wir beginnen damit, in der **loadassets** -Methode sowohl eine Grafik als auch e
 
 
 
-| Aufruffluss                                                             | Parameter                                                            |
+| Anruffluss                                                             | Parameter                                                            |
 |-----------------------------------------------------------------------|-----------------------------------------------------------------------|
-| [**CD3DX12- \_ \_ Deskriptorbereich**](cd3dx12-descriptor-range.md)        | [**D3D12- \_ \_ deskriptorbereichstyp \_**](/windows/win32/api/d3d12/ne-d3d12-d3d12_descriptor_range_type) |
-| [**CD3DX12 \_ root- \_ Parameter**](cd3dx12-root-parameter.md)            | [**D3D12- \_ Shader- \_ Sichtbarkeit**](/windows/win32/api/d3d12/ne-d3d12-d3d12_shader_visibility)          |
-| [**CD3DX12 \_ Stamm \_ Signatur \_ DESC**](cd3dx12-root-signature-desc.md) | [**D3D12 \_ root \_ Signature- \_ Flags**](/windows/win32/api/d3d12/ne-d3d12-d3d12_root_signature_flags)   |
+| [**\_CD3DX12-DESKRIPTORBEREICH \_**](cd3dx12-descriptor-range.md)        | [**\_D3D12-DESKRIPTORBEREICHSTYP \_ \_**](/windows/win32/api/d3d12/ne-d3d12-d3d12_descriptor_range_type) |
+| [**CD3DX12 \_ ROOT \_ PARAMETER**](cd3dx12-root-parameter.md)            | [**SICHTBARKEIT DES \_ D3D12-SHADERS \_**](/windows/win32/api/d3d12/ne-d3d12-d3d12_shader_visibility)          |
+| [**CD3DX12 \_ ROOT \_ SIGNATURE \_ DESC**](cd3dx12-root-signature-desc.md) | [**D3D12 \_ ROOT \_ SIGNATURE \_ FLAGS**](/windows/win32/api/d3d12/ne-d3d12-d3d12_root_signature_flags)   |
 | [**ID3DBlob**](/previous-versions/windows/desktop/legacy/ff728743(v=vs.85))                                   |                                                                       |
-| [**D3D12SerializeRootSignature**](/windows/win32/api/d3d12/nf-d3d12-d3d12serializerootsignature)    | [**D3D \_ Stamm \_ Signatur \_ Version**](/windows/win32/api/d3d12/ne-d3d12-d3d_root_signature_version)   |
-| [**"Kreaterootsignature"**](/windows/win32/api/d3d12/nf-d3d12-id3d12device-createrootsignature)       |                                                                       |
-| [**CD3DX12 \_ Stamm \_ Signatur \_ DESC**](cd3dx12-root-signature-desc.md) |                                                                       |
-| [**D3D12SerializeRootSignature**](/windows/win32/api/d3d12/nf-d3d12-d3d12serializerootsignature)    | [**D3D \_ Stamm \_ Signatur \_ Version**](/windows/win32/api/d3d12/ne-d3d12-d3d_root_signature_version)   |
-| [**"Kreaterootsignature"**](/windows/win32/api/d3d12/nf-d3d12-id3d12device-createrootsignature)       |                                                                       |
+| [**D3D12SerializeRootSignature**](/windows/win32/api/d3d12/nf-d3d12-d3d12serializerootsignature)    | [**\_ \_ D3D-STAMMSIGNATURVERSION \_**](/windows/win32/api/d3d12/ne-d3d12-d3d_root_signature_version)   |
+| [**CreateRootSignature**](/windows/win32/api/d3d12/nf-d3d12-id3d12device-createrootsignature)       |                                                                       |
+| [**CD3DX12 \_ ROOT \_ SIGNATURE \_ DESC**](cd3dx12-root-signature-desc.md) |                                                                       |
+| [**D3D12SerializeRootSignature**](/windows/win32/api/d3d12/nf-d3d12-d3d12serializerootsignature)    | [**\_ \_ D3D-STAMMSIGNATURVERSION \_**](/windows/win32/api/d3d12/ne-d3d12-d3d_root_signature_version)   |
+| [**CreateRootSignature**](/windows/win32/api/d3d12/nf-d3d12-id3d12device-createrootsignature)       |                                                                       |
 
 
 
- 
+ 
 
-## <a name="create-the-srv-and-uav-buffers"></a>Erstellen der SRV-und UAV-Puffer
+## <a name="create-the-srv-and-uav-buffers"></a>Erstellen der SRV- und UAV-Puffer
 
-Die SRV-und UAV-Puffer bestehen aus einem Array von Positions-und Geschwindigkeitsdaten.
+Die SRV- und UAV-Puffer bestehen aus einem Array von Positions- und Geschwindigkeitsdaten.
 
 ``` syntax
  // Position and velocity data for the particles in the system.
@@ -95,17 +95,17 @@ Die SRV-und UAV-Puffer bestehen aus einem Array von Positions-und Geschwindigkei
 
 
 
-| Aufruffluss                       | Parameter |
+| Anruffluss                       | Parameter |
 |---------------------------------|------------|
 | [**XMFLOAT4**](/windows/win32/api/directxmath/ns-directxmath-xmfloat4) |            |
 
 
 
- 
+ 
 
-## <a name="create-the-cbv-and-vertex-buffers"></a>Erstellen der CBV-und Vertex-Puffer
+## <a name="create-the-cbv-and-vertex-buffers"></a>Erstellen der CBV- und Scheitelpunktpuffer
 
-Bei der Grafik Pipeline ist die CBV eine **Struktur** , die zwei Matrizen enthält, die vom Geometry-Shader verwendet werden. Der Geometry-Shader nimmt die Position jedes Partikels im System an und generiert ein Vierfach, um es mithilfe dieser Matrizen darzustellen.
+Für die Grafikpipeline ist die CBV **eine** Struktur, die zwei Matrizen enthält, die vom Geometrie-Shader verwendet werden. Der Geometrie-Shader nimmt die Position jedes Partikels im System an und generiert ein Quader, um es mithilfe dieser Matrizen darstellen zu können.
 
 ``` syntax
  struct ConstantBufferGS
@@ -121,15 +121,15 @@ Bei der Grafik Pipeline ist die CBV eine **Struktur** , die zwei Matrizen enthä
 
 
 
-| Aufruffluss                       | Parameter |
+| Anruffluss                       | Parameter |
 |---------------------------------|------------|
-| [**Xmmatrix**](/windows/win32/api/directxmath/ns-directxmath-xmmatrix) |            |
+| [**XMMATRIX**](/windows/win32/api/directxmath/ns-directxmath-xmmatrix) |            |
 
 
 
- 
+ 
 
-Folglich enthält der Vertex-Puffer, der vom Vertex-Shader verwendet wird, keine Positionsdaten.
+Daher enthält der vom Vertex-Shader verwendete Scheitelpunktpuffer keine Positionsdaten.
 
 ``` syntax
  // "Vertex" definition for particles. Triangle vertices are generated 
@@ -143,15 +143,15 @@ Folglich enthält der Vertex-Puffer, der vom Vertex-Shader verwendet wird, keine
 
 
 
-| Aufruffluss                       | Parameter |
+| Anruffluss                       | Parameter |
 |---------------------------------|------------|
 | [**XMFLOAT4**](/windows/win32/api/directxmath/ns-directxmath-xmfloat4) |            |
 
 
 
- 
+ 
 
-Bei der COMPUTE-Pipeline ist die CBV eine **Struktur** , die einige Konstanten enthält, die von der n-Text-Gravitations Simulation im COMPUTE-Shader verwendet werden.
+Für die Computepipeline ist  die CBV eine Struktur, die einige Konstanten enthält, die von der n-body-Schwerkraftsimulation im Compute-Shader verwendet werden.
 
 ``` syntax
  struct ConstantBufferCS
@@ -161,9 +161,9 @@ Bei der COMPUTE-Pipeline ist die CBV eine **Struktur** , die einige Konstanten e
        };
 ```
 
-## <a name="synchronize-the-rendering-and-compute-threads"></a>Synchronisieren der Rendering-und Compute-Threads
+## <a name="synchronize-the-rendering-and-compute-threads"></a>Synchronisieren der Rendering- und Computethreads
 
-Nachdem alle Puffer initialisiert wurden, werden das Rendering und die Compute-Arbeit gestartet. Der computethread ändert den Status der beiden Positions-/Velocity-Puffer zwischen SRV und UAV, während er die Simulation durchläuft, und der Renderingthread muss sicherstellen, dass er die Arbeit an der Grafik Pipeline plant, die auf dem SRV ausgeführt wird. Mithilfe von Zäunen wird der Zugriff auf die beiden Puffer synchronisiert.
+Nachdem alle Puffer initialisiert wurden, beginnen die Rendering- und Computearbeit. Der Computethread ändert den Zustand der beiden Positions-/Geschwindigkeitspuffer zwischen SRV und UAV, während er die Simulation durch iteriert, und der Renderingthread muss sicherstellen, dass er die Arbeit an der Grafikpipeline geplant, die auf dem SRV ausgeführt wird. Fences werden verwendet, um den Zugriff auf die beiden Puffer zu synchronisieren.
 
 Im Renderthread:
 
@@ -206,23 +206,23 @@ void D3D12nBodyGravity::OnRender()
 
 
 
-| Aufruffluss                                                              | Parameter |
+| Anruffluss                                                              | Parameter |
 |------------------------------------------------------------------------|------------|
 | [**InterlockedExchange**](/windows-hardware/drivers/ddi/content/wdm/nf-wdm-interlockedexchange)                  |            |
-| [**Interlockedgetvalue**](/windows-hardware/drivers/ddi/content/wdm/nf-wdm-interlockedcompareexchange)           |            |
-| [**Getcompletedvalue**](/windows/win32/api/d3d12/nf-d3d12-id3d12fence-getcompletedvalue)             |            |
+| [**InterlockedGetValue**](/windows-hardware/drivers/ddi/content/wdm/nf-wdm-interlockedcompareexchange)           |            |
+| [**GetCompletedValue**](/windows/win32/api/d3d12/nf-d3d12-id3d12fence-getcompletedvalue)             |            |
 | [**Wait**](/windows/win32/api/d3d12/nf-d3d12-id3d12commandqueue-wait)                                |            |
 | [**ID3D12CommandList**](/windows/win32/api/d3d12/nn-d3d12-id3d12commandlist)                         |            |
-| [**Executecommandlists**](/windows/win32/api/d3d12/nf-d3d12-id3d12commandqueue-executecommandlists)  |            |
+| [**ExecuteCommandLists**](/windows/win32/api/d3d12/nf-d3d12-id3d12commandqueue-executecommandlists)  |            |
 | [**IDXGISwapChain1::Present1**](/windows/win32/api/dxgi1_2/nf-dxgi1_2-idxgiswapchain1-present1) |            |
 
 
 
- 
+ 
 
-Um das Beispiel etwas zu vereinfachen, wartet der computethread, bis die GPU jede Iterationen abschließt, bevor eine weitere computearbeit geplant wird. In der Praxis möchten Anwendungen wahrscheinlich die computewarteschlange vollständig aufbewahren, um eine maximale Leistung von der GPU zu erzielen.
+Um die Stichprobe etwas zu vereinfachen, wartet der Computethread, bis die GPU jede Iteration abgeschlossen hat, bevor weitere Computearbeit geplant wird. In der Praxis möchten Anwendungen die Computewarteschlange wahrscheinlich voll halten, um die maximale Leistung der GPU zu erzielen.
 
-Im COMPUTE-Thread:
+Im Computethread:
 
 ``` syntax
 DWORD D3D12nBodyGravity::AsyncComputeThreadProc(int threadIndex)
@@ -272,37 +272,37 @@ DWORD D3D12nBodyGravity::AsyncComputeThreadProc(int threadIndex)
 
 
 
-| Aufruffluss                                                                   | Parameter |
+| Anruffluss                                                                   | Parameter |
 |-----------------------------------------------------------------------------|------------|
 | [**ID3D12CommandQueue**](/windows/win32/api/d3d12/nn-d3d12-id3d12commandqueue)                            |            |
 | [**ID3D12CommandAllocator**](/windows/win32/api/d3d12/nn-d3d12-id3d12commandallocator)                    |            |
 | [**ID3D12GraphicsCommandList**](/windows/win32/api/d3d12/nn-d3d12-id3d12graphicscommandlist)              |            |
 | [**ID3D12Fence**](/windows/win32/api/d3d12/nn-d3d12-id3d12fence)                                          |            |
-| [**Interlockedgetvalue**](/windows-hardware/drivers/ddi/content/wdm/nf-wdm-interlockedcompareexchange)                |            |
+| [**InterlockedGetValue**](/windows-hardware/drivers/ddi/content/wdm/nf-wdm-interlockedcompareexchange)                |            |
 | [**Schließen**](/windows/win32/api/d3d12/nf-d3d12-id3d12graphicscommandlist-close)                            |            |
 | [**ID3D12CommandList**](/windows/win32/api/d3d12/nn-d3d12-id3d12commandlist)                              |            |
-| [**Executecommandlists**](/windows/win32/api/d3d12/nf-d3d12-id3d12commandqueue-executecommandlists)       |            |
+| [**ExecuteCommandLists**](/windows/win32/api/d3d12/nf-d3d12-id3d12commandqueue-executecommandlists)       |            |
 | [**InterlockedIncrement**](/windows-hardware/drivers/ddi/content/wdm/nf-wdm-interlockedincrement)                     |            |
-| [**Aussendet**](/windows/win32/api/d3d12/nf-d3d12-id3d12commandqueue-signal)                                 |            |
-| [**"Abschlusventoncompletion"**](/windows/win32/api/d3d12/nf-d3d12-id3d12fence-seteventoncompletion)            |            |
-| [**WaitForSingleObject**](/windows/win32/api/synchapi/nf-synchapi-waitforsingleobject)                         |            |
-| [**Interlockedgetvalue**](/windows-hardware/drivers/ddi/content/wdm/nf-wdm-interlockedcompareexchange)                |            |
-| [**Getcompletedvalue**](/windows/win32/api/d3d12/nf-d3d12-id3d12fence-getcompletedvalue)                  |            |
+| [**Signal**](/windows/win32/api/d3d12/nf-d3d12-id3d12commandqueue-signal)                                 |            |
+| [**SetEventOnCompletion**](/windows/win32/api/d3d12/nf-d3d12-id3d12fence-seteventoncompletion)            |            |
+| [**Waitforsingleobject**](/windows/win32/api/synchapi/nf-synchapi-waitforsingleobject)                         |            |
+| [**InterlockedGetValue**](/windows-hardware/drivers/ddi/content/wdm/nf-wdm-interlockedcompareexchange)                |            |
+| [**GetCompletedValue**](/windows/win32/api/d3d12/nf-d3d12-id3d12fence-getcompletedvalue)                  |            |
 | [**Wait**](/windows/win32/api/d3d12/nf-d3d12-id3d12commandqueue-wait)                                     |            |
 | [**InterlockedExchange**](/windows-hardware/drivers/ddi/content/wdm/nf-wdm-interlockedexchange)                       |            |
-| [**ID3D12CommandAllocator:: Reset**](/windows/win32/api/d3d12/nf-d3d12-id3d12commandallocator-reset)       |            |
-| [**ID3D12GraphicsCommandList:: Reset**](/windows/win32/api/d3d12/nf-d3d12-id3d12graphicscommandlist-reset) |            |
+| [**ID3D12CommandAllocator::Reset**](/windows/win32/api/d3d12/nf-d3d12-id3d12commandallocator-reset)       |            |
+| [**ID3D12GraphicsCommandList::Reset**](/windows/win32/api/d3d12/nf-d3d12-id3d12graphicscommandlist-reset) |            |
 
 
 
- 
+ 
 
 ## <a name="run-the-sample"></a>Ausführen des Beispiels
 
-![Screenshot der abschließenden n-Text Schwerpunkt Simulation](images/nbodygravity.png)
+![Screenshot der endgültigen Simulation der Schwerkraft des n-Körpers](images/nbodygravity.png)
 
-## <a name="related-topics"></a>Verwandte Themen
+## <a name="related-topics"></a>Zugehörige Themen
 
-[D3D12-Code Exemplarische Vorgehensweisen](d3d12-code-walk-throughs.md)
+[Exemplarische Vorgehensweisen zu D3D12-Code](d3d12-code-walk-throughs.md)
 
-[Multi-Engine-Synchronisierung](./user-mode-heap-synchronization.md)
+[Synchronisierung mit mehreren Modulen](./user-mode-heap-synchronization.md)

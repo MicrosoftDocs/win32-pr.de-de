@@ -1,5 +1,5 @@
 ---
-description: Fordert an, dass der Zustand der virtuellen Maschine auf den angegebenen Wert geändert wird.
+description: Fordert an, dass der Status des virtuellen Computers in den angegebenen Wert geändert wird.
 ms.assetid: 87BE4C7D-604B-4F8D-B4DC-89BD563E3999
 title: RequestStateChange-Methode der Msvm_ComputerSystem-Klasse
 ms.topic: reference
@@ -13,18 +13,18 @@ api_type:
 - COM
 api_location:
 - vmms.exe
-ms.openlocfilehash: 291d72797b1ee765507a3d23921cd518cf605354
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: f3851d32b43bc7ebd170a1179ecda1e25f86e43ddaf819453a4af6998e2f7efc
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "104218855"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119014348"
 ---
-# <a name="requeststatechange-method-of-the-msvm_computersystem-class"></a>RequestStateChange-Methode der MSVM \_ Computersystem-Klasse
+# <a name="requeststatechange-method-of-the-msvm_computersystem-class"></a>RequestStateChange-Methode der Msvm \_ ComputerSystem-Klasse
 
-Fordert an, dass der Zustand der virtuellen Maschine auf den angegebenen Wert geändert wird. Wenn Sie die **requestStateChange** -Methode mehrmals aufrufen, kann dies dazu führen, dass frühere Anforderungen überschrieben oder verloren gehen. Diese Methode wird nur für Instanzen der [**MSVM \_ Computersystem**](msvm-computersystem.md) -Klasse unterstützt, die eine virtuelle Maschine darstellen.
+Fordert an, dass der Status des virtuellen Computers in den angegebenen Wert geändert wird. Das mehrfache Aufrufen **der RequestStateChange-Methode** kann dazu führen, dass frühere Anforderungen überschrieben oder verloren gehen. Diese Methode wird nur für Instanzen der [**Msvm \_ ComputerSystem-Klasse**](msvm-computersystem.md) unterstützt, die einen virtuellen Computer darstellen.
 
-Während die Statusänderung ausgeführt wird, wird die **requestedstate** -Eigenschaft in den Wert des *requestedstate* -Parameters geändert.
+Während der Zustandsänderung wird die **RequestedState-Eigenschaft** in den Wert des *RequestedState-Parameters* geändert.
 
 ## <a name="syntax"></a>Syntax
 
@@ -43,14 +43,14 @@ uint32 RequestStateChange(
 
 <dl> <dt>
 
-*Requestedstate* \[ in\]
+*RequestedState* \[ In\]
 </dt> <dd>
 
-Typ: **UInt16**
+Typ: **uint16**
 
-Der neue Zustand. Werte, die größer als 32767 sind, sind Werte, die von **DMTF** vorgeschlagen und geändert werden können.
+Der neue Zustand. Werte, die größer als 32767 sind, sind **von DMTF** vorgeschlagene Werte und können sich ändern.
 
-Folgende Werte sind möglich:
+Dies sind mögliche Werte:
 
 <dt>
 
@@ -61,7 +61,7 @@ Folgende Werte sind möglich:
 
 </dt> <dd>
 
-Entspricht [**CIM \_ enabledlogicalelement. enabledstate**](/previous-versions//cc136818(v=vs.85)) = other.
+Entspricht [**CIM \_ EnabledLogicalElement.EnabledState**](/previous-versions//cc136818(v=vs.85)) = Other.
 
 </dd> <dt>
 
@@ -72,7 +72,7 @@ Entspricht [**CIM \_ enabledlogicalelement. enabledstate**](/previous-versions//
 
 </dt> <dd>
 
-Entspricht [**CIM \_ enabledlogicalelement. enabledstate**](/previous-versions//cc136818(v=vs.85)) = aktiviert.
+Entspricht [**CIM \_ EnabledLogicalElement.EnabledState**](/previous-versions//cc136818(v=vs.85)) = Enabled.
 
 </dd> <dt>
 
@@ -83,18 +83,18 @@ Entspricht [**CIM \_ enabledlogicalelement. enabledstate**](/previous-versions//
 
 </dt> <dd>
 
-Entspricht [**CIM \_ enabledlogicalelement. enabledstate**](/previous-versions//cc136818(v=vs.85)) = deaktiviert.
+Entspricht [**CIM \_ EnabledLogicalElement.EnabledState**](/previous-versions//cc136818(v=vs.85)) = Disabled.
 
 </dd> <dt>
 
 <span id="Shut_Down"></span><span id="shut_down"></span><span id="SHUT_DOWN"></span>
 
-<span id="Shut_Down"></span><span id="shut_down"></span><span id="SHUT_DOWN"></span>**Herunter** fahren (4)
+<span id="Shut_Down"></span><span id="shut_down"></span><span id="SHUT_DOWN"></span>**Herunterfahren** (4)
 
 
 </dt> <dd>
 
-Gültig in Version 1 (v1) von Hyper-V. Die virtuelle Maschine wird über den Dienst zum Herunterfahren heruntergefahren. Entspricht [**CIM \_ enabledlogicalelement. enabledstate**](/previous-versions//cc136818(v=vs.85)) = heruntergefahren.
+Nur in Version 1 (V1) von Hyper-V gültig. Der virtuelle Computer wird über den Dienst zum Herunterfahren heruntergefahren. Entspricht [**CIM \_ EnabledLogicalElement.EnabledState**](/previous-versions//cc136818(v=vs.85)) = ShuttingDown.
 
 </dd> <dt>
 
@@ -105,7 +105,7 @@ Gültig in Version 1 (v1) von Hyper-V. Die virtuelle Maschine wird über den Die
 
 </dt> <dd>
 
-Entspricht [**CIM \_ enabledlogicalelement. enabledstate**](/previous-versions//cc136818(v=vs.85)) = aktiviert, aber offline.
+Entspricht [**CIM \_ EnabledLogicalElement.EnabledState**](/previous-versions//cc136818(v=vs.85)) = Aktiviert, aber offline.
 
 </dd> <dt>
 
@@ -118,19 +118,19 @@ Entspricht [**CIM \_ enabledlogicalelement. enabledstate**](/previous-versions//
 
 <span id="Defer"></span><span id="defer"></span><span id="DEFER"></span>
 
-<span id="Defer"></span><span id="defer"></span><span id="DEFER"></span>Zurück **stellen (8** )
+<span id="Defer"></span><span id="defer"></span><span id="DEFER"></span>**Zurückern** (8)
 
 
 </dt> <dd></dd> <dt>
 
 <span id="Quiesce"></span><span id="quiesce"></span><span id="QUIESCE"></span>
 
-<span id="Quiesce"></span><span id="quiesce"></span><span id="QUIESCE"></span>Still **legung (9** )
+<span id="Quiesce"></span><span id="quiesce"></span><span id="QUIESCE"></span>**Ruhe** (9)
 
 
 </dt> <dd>
 
-Entspricht [**CIM \_ enabledlogicalelement. enabledstate**](/previous-versions//cc136818(v=vs.85)) = Quiesce, aktiviert, aber angehalten.
+Entspricht [**CIM \_ EnabledLogicalElement.EnabledState**](/previous-versions//cc136818(v=vs.85)) = Quiesce, Enabled, but paused.
 
 </dd> <dt>
 
@@ -141,7 +141,7 @@ Entspricht [**CIM \_ enabledlogicalelement. enabledstate**](/previous-versions//
 
 </dt> <dd>
 
-Zustandsübergang von **aus oder in**  wird **ausgeführt**.
+Statusübergang von **Aus oder** **Gespeichert in** **Wird ausgeführt.**
 
 </dd> <dt>
 
@@ -152,62 +152,62 @@ Zustandsübergang von **aus oder in**  wird **ausgeführt**.
 
 </dt> <dd>
 
-Setzen Sie den virtuellen Computer zurück. Entspricht [**CIM \_ enabledlogicalelement. enabledstate**](/previous-versions//cc136818(v=vs.85)) = Reset.
+Setzen Sie den virtuellen Computer zurück. Entspricht [**CIM \_ EnabledLogicalElement.EnabledState**](/previous-versions//cc136818(v=vs.85)) = Reset.
 
 </dd> <dt>
 
 <span id="Saving"></span><span id="saving"></span><span id="SAVING"></span>
 
-<span id="Saving"></span><span id="saving"></span><span id="SAVING"></span>Wird **gespeichert** (32773)
+<span id="Saving"></span><span id="saving"></span><span id="SAVING"></span>**Speichern** (32773)
 
 
 </dt> <dd>
 
-In Version 1 (v1) von Hyper-V entspricht **enabledstaataving**.
+In Version 1 (V1) von Hyper-V entspricht **EnabledStateSaving**.
 
 </dd> <dt>
 
 <span id="Pausing"></span><span id="pausing"></span><span id="PAUSING"></span>
 
-<span id="Pausing"></span><span id="pausing"></span><span id="PAUSING"></span>Wird **angeh** alten (32776)
+<span id="Pausing"></span><span id="pausing"></span><span id="PAUSING"></span>**Anhalten** (32776)
 
 
 </dt> <dd>
 
-In Version 1 (v1) von Hyper-V entspricht **enabledstatepausung**.
+In Version 1 (V1) von Hyper-V entspricht **EnabledStatePausing**.
 
 </dd> <dt>
 
 <span id="Resuming"></span><span id="resuming"></span><span id="RESUMING"></span>
 
-<span id="Resuming"></span><span id="resuming"></span><span id="RESUMING"></span>Wird fort **gesetzt (32777** )
+<span id="Resuming"></span><span id="resuming"></span><span id="RESUMING"></span>**Fortsetzen** (32777)
 
 
 </dt> <dd>
 
-In Version 1 (v1) von Hyper-V entspricht **enabledstatus eresumschlag**. Zustandsübergang von " **angeh** alten" zu "wird **ausgeführt**"
+In Version 1 (V1) von Hyper-V entspricht **EnabledStateResuming**. Statusübergang von **Angehalten zu** **Wird ausgeführt.**
 
 </dd> <dt>
 
 <span id="FastSaved"></span><span id="fastsaved"></span><span id="FASTSAVED"></span>
 
-<span id="FastSaved"></span><span id="fastsaved"></span><span id="FASTSAVED"></span>**Fastgespeicherter** (32779)
+<span id="FastSaved"></span><span id="fastsaved"></span><span id="FASTSAVED"></span>**FastSaved** (32779)
 
 
 </dt> <dd>
 
-Entspricht **enabledstatefastsuspend**.
+Entspricht **EnabledStateFastSuspend**.
 
 </dd> <dt>
 
 <span id="FastSaving"></span><span id="fastsaving"></span><span id="FASTSAVING"></span>
 
-<span id="FastSaving"></span><span id="fastsaving"></span><span id="FASTSAVING"></span>**Fastsave** (32780)
+<span id="FastSaving"></span><span id="fastsaving"></span><span id="FASTSAVING"></span>**FastSaving** (32780)
 
 
 </dt> <dd>
 
-Entspricht **enabledstatefastsuspen.** Status Übergang von " **Running** " zu " **fastgespeich"**.
+Entspricht **EnabledStateFastSuspending.** Statusübergang von **Wird ausgeführt** zu **FastSaved.**
 
 </dd> </dl>
 
@@ -217,101 +217,101 @@ Diese Werte stellen kritische Zustände dar:
 
 <span id="RunningCritical"></span><span id="runningcritical"></span><span id="RUNNINGCRITICAL"></span>
 
-**Runningcritical** (32781)
+**RunningCritical** (32781)
 
 
 </dt> <dd></dd> <dt>
 
 <span id="OffCritical"></span><span id="offcritical"></span><span id="OFFCRITICAL"></span>
 
-**Offcritical** (32782)
+**OffCritical** (32782)
 
 
 </dt> <dd></dd> <dt>
 
 <span id="StoppingCritical"></span><span id="stoppingcritical"></span><span id="STOPPINGCRITICAL"></span>
 
-**Stoppingcritical** (32783)
+**StoppingCritical** (32783)
 
 
 </dt> <dd></dd> <dt>
 
 <span id="SavedCritical"></span><span id="savedcritical"></span><span id="SAVEDCRITICAL"></span>
 
-**Savedcritical** (32784)
+**SavedCritical** (32784)
 
 
 </dt> <dd></dd> <dt>
 
 <span id="PausedCritical"></span><span id="pausedcritical"></span><span id="PAUSEDCRITICAL"></span>
 
-" **Pausedcritical** " (32785)
+**PausedCritical** (32785)
 
 
 </dt> <dd></dd> <dt>
 
 <span id="StartingCritical"></span><span id="startingcritical"></span><span id="STARTINGCRITICAL"></span>
 
-**Startingcritical** (32786)
+**StartingCritical** (32786)
 
 
 </dt> <dd></dd> <dt>
 
 <span id="ResetCritical"></span><span id="resetcritical"></span><span id="RESETCRITICAL"></span>
 
-**Resetcritical** (32787)
+**ResetCritical** (32787)
 
 
 </dt> <dd></dd> <dt>
 
 <span id="SavingCritical"></span><span id="savingcritical"></span><span id="SAVINGCRITICAL"></span>
 
-**Savingcritical** (32788)
+**SavingCritical** (32788)
 
 
 </dt> <dd></dd> <dt>
 
 <span id="PausingCritical"></span><span id="pausingcritical"></span><span id="PAUSINGCRITICAL"></span>
 
-**Pausingcritical** (32789)
+**PausingCritical** (32789)
 
 
 </dt> <dd></dd> <dt>
 
 <span id="ResumingCritical"></span><span id="resumingcritical"></span><span id="RESUMINGCRITICAL"></span>
 
-**Resumingcritical** (32790)
+**ResumingCritical** (32790)
 
 
 </dt> <dd></dd> <dt>
 
 <span id="FastSavedCritical"></span><span id="fastsavedcritical"></span><span id="FASTSAVEDCRITICAL"></span>
 
-**Fastsavedcritical** (32791)
+**FastSavedCritical** (32791)
 
 
 </dt> <dd></dd> <dt>
 
 <span id="FastSavingCritical"></span><span id="fastsavingcritical"></span><span id="FASTSAVINGCRITICAL"></span>
 
-**Fastsavingcritical** (32792)
+**FastSavingCritical** (32792)
 
 
 </dt> <dd></dd> </dl> </dd> <dt>
 
-*Auftrag* \[ vorgenommen\]
+*Auftrag* \[ out\]
 </dt> <dd>
 
-Typ: **[ **CIM \_ bettejob**](/previous-versions//cc136808(v=vs.85))**
+Typ: **[ **CIM \_ ConcreteJob**](/previous-versions//cc136808(v=vs.85))**
 
-Ein optionaler Verweis auf ein [**MSVM-" \_ concretejob**](msvm-concretejob.md) "-Objekt, das zurückgegeben wird, wenn der Vorgang asynchron ausgeführt wird. Falls vorhanden, kann der zurückgegebene Verweis zum Überwachen des Fortschritts und zum Abrufen des Ergebnisses der Methode verwendet werden.
+Ein optionaler Verweis auf ein [**Msvm \_ ConcreteJob-Objekt,**](msvm-concretejob.md) das zurückgegeben wird, wenn der Vorgang asynchron ausgeführt wird. Falls vorhanden, kann der zurückgegebene Verweis verwendet werden, um den Fortschritt zu überwachen und das Ergebnis der -Methode zu erhalten.
 
 </dd> <dt>
 
-*Timeoutperiod* \[ in\]
+*TimeoutPeriod* \[ In\]
 </dt> <dd>
 
-Type: **DateTime**
+Typ: **datetime**
 
 Dieser Parameter wird nicht verwendet.
 
@@ -319,24 +319,24 @@ Dieser Parameter wird nicht verwendet.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Typ: **UInt32**
+Typ: **uint32**
 
 Diese Methode gibt einen der folgenden Werte zurück.
 
 
 
-| Rückgabecode/-wert                                                                                                                                                                       | BESCHREIBUNG                                                                        |
+| Rückgabecode/-wert                                                                                                                                                                       | Beschreibung                                                                        |
 |-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------|
 | <dl> <dt>**Abgeschlossen ohne Fehler**</dt> <dt>0</dt> </dl>                           | Erfolg.<br/>                                                                |
-| <dl> Über <dt>**prüfte Methoden Parameter-der Übergang**</dt> wurde <dt>4096</dt> gestartet. </dl> | Der Übergang erfolgt asynchron.<br/>                                         |
-| <dl> <dt>**Zugriff verweigert**</dt> <dt>32769</dt> </dl>                                 | Zugriff verweigert.<br/>                                                          |
+| <dl> <dt>**Überprüfte Methodenparameter – Übergang gestartet**</dt> <dt>4096</dt> </dl> | Der Übergang ist asynchron.<br/>                                         |
+| <dl> <dt>**Zugriff verweigert**</dt> <dt>32769</dt> </dl>                                 | Zugriff verweigert:<br/>                                                          |
 | <dl> <dt></dt><dt>32768</dt> </dl>                                                  |                                                                                    |
 | <dl> <dt></dt><dt>32770</dt> </dl>                                                  |                                                                                    |
 | <dl> <dt></dt><dt>32771</dt> </dl>                                                  |                                                                                    |
 | <dl> <dt></dt><dt>32772</dt> </dl>                                                  |                                                                                    |
 | <dl> <dt></dt><dt>32773</dt> </dl>                                                  |                                                                                    |
 | <dl> <dt></dt><dt>32774</dt> </dl>                                                  |                                                                                    |
-| <dl> <dt>**Ungültiger Status für diesen Vorgang**</dt> <dt>32775</dt> </dl>              | Der im *requestedstate* -Parameter angegebene Wert wird nicht unterstützt.<br/> |
+| <dl> <dt>**Ungültiger Zustand für diesen Vorgang**</dt> <dt>32775</dt> </dl>              | Der im *RequestedState-Parameter angegebene* Wert wird nicht unterstützt.<br/> |
 | <dl> <dt></dt><dt>32776</dt> </dl>                                                  |                                                                                    |
 | <dl> <dt></dt><dt>32777</dt> </dl>                                                  |                                                                                    |
 | <dl> <dt></dt><dt>32778</dt> </dl>                                                  |                                                                                    |
@@ -345,16 +345,16 @@ Diese Methode gibt einen der folgenden Werte zurück.
 
  
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Der Zugriff auf die [**MSVM \_ Computersystem**](msvm-computersystem.md) -Klasse kann durch die UAC-Filterung eingeschränkt werden. Weitere Informationen finden Sie unter [Benutzerkontensteuerung und WMI](/windows/desktop/WmiSdk/user-account-control-and-wmi).
+Der Zugriff auf die [**Msvm \_ ComputerSystem-Klasse**](msvm-computersystem.md) kann durch UAC-Filterung eingeschränkt werden. Weitere Informationen finden Sie unter [Benutzerkontensteuerung und WMI.](/windows/desktop/WmiSdk/user-account-control-and-wmi)
 
 ## <a name="examples"></a>Beispiele
 
-Im folgenden c#-Beispiel wird ein virtueller Computer gestartet oder deaktiviert. Die Dienstprogramme, auf die verwiesen wird, finden Sie unter [Allgemeine Hilfsprogramme für die Virtualisierungsbeispiele (v2)](common-utilities-for-the-virtualization-samples-v2.md).
+Im folgenden C#-Beispiel wird ein virtueller Computer gestartet oder deaktiviert. Die referenzierten Hilfsprogramme finden Sie unter [Allgemeine Hilfsprogramme für die Virtualisierungsbeispiele (V2).](common-utilities-for-the-virtualization-samples-v2.md)
 
 > [!IMPORTANT]
-> Der folgende Code muss auf dem Host Server des virtuellen Computers ausgeführt werden, und er muss mit Administratorrechten ausgeführt werden, um ordnungsgemäß zu funktionieren.
+> Damit der folgende Code ordnungsgemäß funktioniert, muss er auf dem Hostserver des virtuellen Computers und mit Administratorrechten ausgeführt werden.
 
  
 
@@ -449,10 +449,10 @@ namespace HyperVSamples
 
 
 
-Im folgenden Visual Basic Scripting Edition (VBScript)-Beispiel wird ein virtueller Computer gestartet oder deaktiviert.
+Im folgenden beispiel Visual Basic Scripting Edition (VBScript) wird ein virtueller Computer gestartet oder deaktiviert.
 
 > [!IMPORTANT]
-> Der folgende Code muss auf dem Host Server des virtuellen Computers ausgeführt werden, und er muss mit Administratorrechten ausgeführt werden, um ordnungsgemäß zu funktionieren.
+> Damit der folgende Code ordnungsgemäß funktioniert, muss er auf dem Hostserver des virtuellen Computers und mit Administratorrechten ausgeführt werden.
 
  
 
@@ -630,19 +630,19 @@ End Function
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows 8 \[ -Desktop-Apps\]<br/>                                                              |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2012 \[ -Desktop-Apps\]<br/>                                                    |
-| Namespace<br/>                | \\Stammvirtualisierung \\ v2<br/>                                                                     |
-| MOF<br/>                      | <dl> <dt>Windowsvirtualization. v2. MOF</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | \[Windows 8 Nur Desktop-Apps\]<br/>                                                              |
+| Unterstützte Mindestversion (Server)<br/> | \[Windows Server 2012 Nur Desktop-Apps\]<br/>                                                    |
+| Namespace<br/>                | Root \\ Virtualization \\ V2<br/>                                                                     |
+| MOF<br/>                      | <dl> <dt>WindowsVirtualization.V2.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Vmms.exe</dt> </dl>                     |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**MSVM \_ Computersystem**](msvm-computersystem.md)
+[**Msvm \_ ComputerSystem**](msvm-computersystem.md)
 </dt> </dl>
 
  

@@ -1,9 +1,9 @@
 ---
-title: glindexpointer-Funktion (GL. h)
-description: Die Funktion "glindexpointer" definiert ein Array von Farbindizes.
+title: glIndexPointer-Funktion (Gl.h)
+description: Die glIndexPointer-Funktion definiert ein Array von Farbindizes.
 ms.assetid: b435d950-1f87-4041-93e4-f1f8786cabdb
 keywords:
-- glindexpointer-Funktion OpenGL
+- glIndexPointer-Funktion OpenGL
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - DllExport
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: cca6858d7d1e3f13e4155bd40307a53b22e80a56
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: e27502420121f7373af5425e8aadffe3641ddec539a4521fe6c6bf55e6d807d9
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104475261"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119012148"
 ---
-# <a name="glindexpointer-function"></a>glindexpointer-Funktion
+# <a name="glindexpointer-function"></a>glIndexPointer-Funktion
 
-Die Funktion " **glindexpointer** " definiert ein Array von Farbindizes.
+Die **glIndexPointer-Funktion** definiert ein Array von Farbindizes.
 
 ## <a name="syntax"></a>Syntax
 
@@ -45,21 +45,21 @@ void WINAPI glIndexPointer(
 *type* 
 </dt> <dd>
 
-Der Datentyp der einzelnen Farbindizes im Array mit den folgenden symbolischen Konstanten: GL \_ Short, GL \_ int, GL \_ float, GL \_ Double.
+Der Datentyp jedes Farbindexes im Array mit den folgenden symbolischen Konstanten: GL \_ SHORT, GL \_ INT, GL \_ FLOAT, GL \_ DOUBLE.
 
 </dd> <dt>
 
 *Schritt* 
 </dt> <dd>
 
-Der Byte Offset zwischen aufeinander folgenden Farbindizes. Wenn *Stride* gleich NULL ist, werden die Farbindizes im Array eng verpackt.
+Der Byteoffset zwischen aufeinander folgenden Farbindizes. Wenn *stride* 0 (null) ist, werden die Farbindizes eng in das Array gepackt.
 
 </dd> <dt>
 
 *Zeiger* 
 </dt> <dd>
 
-Ein Zeiger auf den ersten Farb Index im Array.
+Ein Zeiger auf den ersten Farbindex im Array.
 
 </dd> </dl>
 
@@ -69,42 +69,42 @@ Diese Funktion gibt keinen Wert zurück.
 
 ## <a name="error-codes"></a>Fehlercodes
 
-Die folgenden Fehlercodes können von der Funktion " [**glgeterror**](glgeterror.md) " abgerufen werden.
+Die folgenden Fehlercodes können von der [**glGetError-Funktion abgerufen**](glgeterror.md) werden.
 
 
 
 | Name                                                                                              | Bedeutung                                      |
 |---------------------------------------------------------------------------------------------------|----------------------------------------------|
-| <dl> <dt>**GL \_ ungültige Aufzählung. \_**</dt> </dl>  | der *Typ* war kein akzeptierter Wert.<br/> |
-| <dl> <dt>**\_Ungültiger GL- \_ Wert**</dt> </dl> | " *Stride* " oder " *count* " war negativ.<br/> |
+| <dl> <dt>**GL \_ INVALID \_ ENUM**</dt> </dl>  | *type* war kein akzeptierter Wert.<br/> |
+| <dl> <dt>**GL \_ UNGÜLTIGER \_ WERT**</dt> </dl> | *stride* oder *count* war negativ.<br/> |
 
 
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die Funktion " **glindexpointer** " gibt den Speicherort und die Daten eines Arrays von Farbindizes an, die beim Rendern verwendet werden sollen. Der *Typparameter* gibt den Datentyp jedes Farbindexes an, und *Stride* bestimmt den Byte Offset von einem Farb Index zum nächsten und ermöglicht das Packen von Vertices und Attributen in einem einzelnen Array oder Speicher in separaten Arrays. In einigen Implementierungen können das Speichern der Scheitel Punkte und Attribute in einem einzelnen Array effizienter als die Verwendung von separaten Arrays sein. Weitere Informationen finden Sie unter [**glinterleavedarrays**](glinterleavedarrays.md).
+Die **glIndexPointer-Funktion** gibt den Speicherort und die Daten eines Arrays von Farbindizes an, die beim Rendering verwendet werden. Der *Typparameter* gibt den Datentyp jedes Farbindexes an, und *stride* bestimmt den Byteoffset von einem Farbindex zum nächsten, wodurch das Packen von Scheiteltices und Attributen in einem einzelnen Array oder Speicher in separaten Arrays ermöglicht wird. In einigen Implementierungen kann das Speichern der Scheitelungen und Attribute in einem einzelnen Array effizienter sein als die Verwendung separater Arrays. Weitere Informationen finden Sie unter [**glInterleavedArrays**](glinterleavedarrays.md).
 
-Ein Farb Index Array wird aktiviert, wenn Sie die GL- \_ Index \_ Array Konstante mit [**glenableclientstate**](glenableclientstate.md)angeben. Wenn diese Option aktiviert ist, verwenden " [**gldrawarrays**](gldrawarrays.md) " und " [**glarrayelement**](glarrayelement.md) " das Farb Index Array. Standardmäßig ist das Farb Index Array deaktiviert.
+Ein Farbindexarray wird aktiviert, wenn Sie die GL \_ INDEX \_ ARRAY-Konstante mit [**glEnableClientState angeben.**](glenableclientstate.md) Wenn diese Option aktiviert ist, verwenden [**glDrawArrays**](gldrawarrays.md) und [**glArrayElement**](glarrayelement.md) das Array color-index. Standardmäßig ist das Farbindexarray deaktiviert.
 
-Sie können " **glindexpointer** " nicht in Anzeigelisten einschließen.
+**GlIndexPointer kann nicht** in Anzeigelisten enthalten sein.
 
-Wenn Sie ein Farb Index Array mithilfe von **glindexpointer** angeben, werden die Werte aller Farb Index Array-Parameter der Funktion in einem Client seitigen Zustand gespeichert, und statische Array Elemente können zwischengespeichert werden. Da es sich bei den Farb Index Array-Parametern um einen Client seitigen Zustand handelt, werden ihre Werte von [**glpushatpub**](glpushattrib.md) und **glpopatpub** nicht gespeichert oder wieder hergestellt.
+Wenn Sie ein Farbindexarray mit **glIndexPointer** angeben, werden die Werte aller Parameter des Farbindexarrays der Funktion in einem clientseitigen Zustand gespeichert, und statische Arrayelemente können zwischengespeichert werden. Da die Arrayparameter für den Farbindex clientseitig sind, werden ihre Werte nicht durch [**glPushAttrib**](glpushattrib.md) und **glPopAttrib gespeichert oder wiederhergestellt.**
 
-Obwohl kein Fehler generiert wird, wenn Sie **glindexpointer** innerhalb von [**glBegin**](glbegin.md) -und **glEnd** -Paaren aufzurufen, sind die Ergebnisse nicht definiert.
+Obwohl beim Aufrufen von **glIndexPointer** in [**glBegin-**](glbegin.md) und **glEnd-Paaren** kein Fehler generiert wird, sind die Ergebnisse nicht definiert.
 
-Mit den folgenden Funktionen werden Informationen im Zusammenhang mit **glindexpointer** abgerufen:
+Die folgenden Funktionen rufen Informationen im Zusammenhang mit **glIndexPointer ab:**
 
-[**glisenabled**](glisenabled.md) mit Argument-GL- \_ Index \_ Array
+[**glIsEnabled mit**](glisenabled.md) Argument GL \_ INDEX \_ ARRAY
 
-[**glget**](glgetbooleanv--glgetdoublev--glgetfloatv--glgetintegerv.md) mit Argument GL \_ Index \_ array \_ Stride
+[**glGet**](glgetbooleanv--glgetdoublev--glgetfloatv--glgetintegerv.md) mit argument GL \_ INDEX \_ ARRAY \_ STRIDE
 
-**glget** mit Argument GL \_ Index \_ array \_ count
+**glGet** mit Argument GL \_ INDEX \_ ARRAY \_ COUNT
 
-**glget** mit Argument-Typ für GL- \_ Index \_ array \_
+**glGet** mit Argument GL \_ INDEX \_ ARRAY \_ TYPE
 
-**glget** mit Argument-GL- \_ Index \_ array \_ Größe
+**glGet** mit Argument GL \_ INDEX \_ ARRAY \_ SIZE
 
-[**glgetpointerv**](glgetpointerv.md) mit Argument GL \_ Index \_ array- \_ Zeiger
+[**glGetPointerv mit**](glgetpointerv.md) Argument GL \_ INDEX ARRAY \_ \_ POINTER
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -114,44 +114,44 @@ Mit den folgenden Funktionen werden Informationen im Zusammenhang mit **glindexp
 |-------------------------------------|-----------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[nur Desktop-Apps\]<br/>                              |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                                    |
-| Header<br/>                   | <dl> <dt>GL. h</dt> </dl>         |
-| Bibliothek<br/>                  | <dl> <dt>Opengl32. lib</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Gl.h</dt> </dl>         |
+| Bibliothek<br/>                  | <dl> <dt>Opengl32.lib</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Opengl32.dll</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**glarrayelement**](glarrayelement.md)
+[**glArrayElement**](glarrayelement.md)
 </dt> <dt>
 
-[**glcolorpointer**](glcolorpointer.md)
+[**glColorPointer**](glcolorpointer.md)
 </dt> <dt>
 
-[**gldrawarrays**](gldrawarrays.md)
+[**glDrawArrays**](gldrawarrays.md)
 </dt> <dt>
 
-[**gledgeflagpointer**](gledgeflagpointer.md)
+[**glEdgeFlagPointer**](gledgeflagpointer.md)
 </dt> <dt>
 
-[**glgetpointerv**](glgetpointerv.md)
+[**glGetPointerv**](glgetpointerv.md)
 </dt> <dt>
 
-[**glgetstring**](glgetstring.md)
+[**glGetString**](glgetstring.md)
 </dt> <dt>
 
-[**glnormalpointer**](glnormalpointer.md)
+[**glNormalPointer**](glnormalpointer.md)
 </dt> <dt>
 
-[**glpushatpub**](glpushattrib.md)
+[**glPushAttrib**](glpushattrib.md)
 </dt> <dt>
 
-[**gltexcoordpointer**](gltexcoordpointer.md)
+[**glTexCoordPointer**](gltexcoordpointer.md)
 </dt> <dt>
 
-[**glvertexpointer**](glvertexpointer.md)
+[**glVertexPointer**](glvertexpointer.md)
 </dt> </dl>
 
  

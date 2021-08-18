@@ -1,6 +1,6 @@
 ---
-description: 'Weitere Informationen finden Sie unter: esentcallbackfailedexception-Konstruktor'
-title: Esentcallbackfailedexception-Konstruktor
+description: 'Weitere Informationen finden Sie unter: EsentCallbackFailedException-Konstruktor'
+title: EsentCallbackFailedException-Konstruktor
 TOCTitle: 'EsentCallbackFailedException constructor '
 ms:assetid: M:Microsoft.Isam.Esent.Interop.EsentCallbackFailedException.#ctor
 ms:mtpsurl: https://msdn.microsoft.com/library/microsoft.isam.esent.interop.esentcallbackfailedexception.esentcallbackfailedexception(v=EXCHG.10)
@@ -24,19 +24,19 @@ api_type:
 api_location:
 - Microsoft.Isam.Esent.Interop.dll
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: 71f11c0170af94e76208031490a78d43627d13de
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 229393b1230761b8340de3dbf8331f49b8f5abe2833b666eeaaeda5ca68fad29
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "104350069"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119737220"
 ---
-# <a name="esentcallbackfailedexception-constructor"></a>Esentcallbackfailedexception-Konstruktor
+# <a name="esentcallbackfailedexception-constructor"></a>EsentCallbackFailedException-Konstruktor
 
-Initialisiert eine neue Instanz der esentcallbackfailedexception-Klasse.
+Initialisiert eine neue Instanz der EsentCallbackFailedException-Klasse.
 
-**Namespace:**  [Microsoft. ISAM. ESENT. Interop](./microsoft.isam.esent.interop-namespace.md)  
-**Assembly:**  Microsoft. ISAM. ESENT. Interop (in Microsoft.Isam.Esent.Interop.dll)
+**Namespace:**  [Microsoft.Isam.Esent.Interop](./microsoft.isam.esent.interop-namespace.md)  
+**Assembly:**  Microsoft.Isam.Esent.Interop (in Microsoft.Isam.Esent.Interop.dll)
 
 ## <a name="syntax"></a>Syntax
 
@@ -52,12 +52,12 @@ Dim instance As New EsentCallbackFailedException()
 public EsentCallbackFailedException()
 ```
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
-#### <a name="reference"></a>Referenz
+#### <a name="reference"></a>Verweis
 
-[Esentcallbackfailedexception-Klasse](./esentcallbackfailedexception-class.md)
+[EsentCallbackFailedException-Klasse](./esentcallbackfailedexception-class.md)
 
-[Esentcallbackfailedexception-Member](./esentcallbackfailedexception-members.md)
+[EsentCallbackFailedException-Member](./esentcallbackfailedexception-members.md)
 
-[Microsoft. ISAM. ESENT. Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)
+[Microsoft.Isam.Esent.Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)

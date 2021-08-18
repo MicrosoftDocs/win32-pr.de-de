@@ -1,5 +1,5 @@
 ---
-title: WM_DWMSENDICONICLIVEPREVIEWBITMAP Meldung (Dwmapi.h)
+title: WM_DWMSENDICONICLIVEPREVIEWBITMAP Nachricht (Dwmapi.h)
 description: Weist ein Fenster an, eine statische Bitmap bereitzustellen, die als Livevorschau (auch als Vorschauversion bezeichnet) dieses Fensters verwendet werden kann.
 ms.assetid: 24bf3b42-a850-4aa5-966a-29baab6b4d21
 keywords:
@@ -102,7 +102,7 @@ Den vollständigen Code finden Sie im [Beispiel Customize an Thumbnail Thumbnail
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 

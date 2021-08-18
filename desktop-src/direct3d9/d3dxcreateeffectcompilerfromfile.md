@@ -14,12 +14,12 @@ api_type:
 api_location:
 - D3dx9.lib
 - D3dx9.dll
-ms.openlocfilehash: 0c054b31b1ab70d1378c794be13058204b994ee2
-ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
+ms.openlocfilehash: f955c62bed0e449ddc2f9c9b1e4d7fe1c57df388f7ae99647a6b6cbce9d4fa48
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2021
-ms.locfileid: "108087978"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119857260"
 ---
 # <a name="d3dxcreateeffectcompilerfromfile-function"></a>D3DXCreateEffectCompilerFromFile-Funktion
 
@@ -54,12 +54,12 @@ Zeiger auf den Dateinamen. Dieser Parameter unterstützt sowohl Unicode- als auc
 
 </dd> <dt>
 
-*pDefdefine* \[ In\]
+*pDefine* \[ In\]
 </dt> <dd>
 
 Typ: **const [**D3DXMACRO**](d3dxmacro.md) \***
 
-Ein optionales **auf NULL** beendetes Array [**von D3DXMACRO-Strukturen,**](d3dxmacro.md) die Präprozessordefinitionen beschreiben. Dieser Wert kann NULL **sein.**
+Ein optionales Mit **NULL** endendes Array von [**D3DXMACRO-Strukturen,**](d3dxmacro.md) die Präprozessordefinitionen beschreiben. Dieser Wert kann **NULL** sein.
 
 </dd> <dt>
 
@@ -68,16 +68,16 @@ Ein optionales **auf NULL** beendetes Array [**von D3DXMACRO-Strukturen,**](d3dx
 
 Typ: **[ **LPD3DXINCLUDE**](id3dxinclude.md)**
 
-Optionaler Schnittstellenzeiger [**ID3DXInclude**](id3dxinclude.md), der für die Behandlung von Include-Direktiven \# verwendet werden soll. Wenn dieser Wert **NULL ist,** wird includes entweder beim Kompilieren aus einer Datei oder beim Kompilieren aus einer Ressource oder einem Arbeitsspeicher \# zu einem Fehler führen.
+Optionaler Schnittstellenzeiger [**ID3DXInclude**](id3dxinclude.md), der für die Behandlung von \# Includedirektiven verwendet werden soll. Wenn dieser Wert **NULL** ist, \# wird includes entweder beim Kompilieren aus einer Datei berücksichtigt oder verursacht bei der Kompilierung aus einer Ressource oder aus dem Arbeitsspeicher einen Fehler.
 
 </dd> <dt>
 
-*Flags* \[in\]
+*Flags* \[ In\]
 </dt> <dd>
 
 Typ: **[ **DWORD**](../winprog/windows-data-types.md)**
 
-Kompilierungsoptionen, die durch verschiedene Flags identifiziert werden (siehe [D3DXSHADER-Flags](d3dxshader-flags.md)). Der Direct3D 10 HLSL-Compiler ist jetzt die Standardeinstellung. Weitere [Informationen finden Sie unter Effect-Compiler Tool](../direct3dtools/fxc.md) .
+Durch verschiedene Flags identifizierte Kompilierungsoptionen (siehe [D3DXSHADER-Flags).](d3dxshader-flags.md) Der Direct3D 10 HLSL-Compiler ist jetzt die Standardeinstellung. Weitere Informationen finden Sie [unter Effektcompilertool.](../direct3dtools/fxc.md)
 
 </dd> <dt>
 
@@ -105,7 +105,7 @@ Typ: **[ **HRESULT**](https://msdn.microsoft.com/library/Bb401631(v=MSDN.10).asp
 
 Wenn die Funktion erfolgreich ausgeführt wird, lautet der Rückgabewert D3D \_ OK. Wenn die Funktion fehlschlägt, kann der Rückgabewert einer der folgenden Werte sein: D3DERR \_ INVALIDCALL, E \_ OUTOFMEMORY.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
 Wenn die Compilereinstellungen Unicode erfordern, wird der Datentyp LPCTSTR in LPCWSTR aufgelöst. Andernfalls wird der LPCTSTR-Datentyp in LPCSTR aufgelöst.
 
@@ -115,7 +115,7 @@ Die Compilereinstellung bestimmt auch die Funktionsversion. Wenn Unicode definie
 
 
 
-| Anforderungen | Wert |
+| Anforderung | Wert |
 |--------------------|------------------------------------------------------------------------------------------|
 | Header<br/>  | <dl> <dt>D3DX9Effect.h</dt> </dl> |
 | Bibliothek<br/> | <dl> <dt>D3dx9.lib</dt> </dl>     |

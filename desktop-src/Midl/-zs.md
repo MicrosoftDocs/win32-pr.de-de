@@ -1,9 +1,9 @@
 ---
-title: /ZS-Schalter
-description: Der Schalter/ZS gibt an, dass der Compiler nur die Syntax überprüft und keine Ausgabedateien generiert.
+title: /Zs-Schalter
+description: Der Schalter /Zs gibt an, dass der Compiler nur die Syntax überprüft und keine Ausgabedateien generiert.
 ms.assetid: 5ff44607-12c3-4a2d-8a7f-2056504990e2
 keywords:
-- /ZS-Schalter-Mittel l
+- /Zs switch MIDL
 topic_type:
 - apiref
 api_name:
@@ -12,51 +12,51 @@ api_type:
 - NA
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 469802434d54319aa55c1e409ccb8d64e942836f
-ms.sourcegitcommit: 57758ecb246c84d65e6e0e4bd5570d9176fa39cd
+ms.openlocfilehash: f92bd2321567bbc565d3198fe5ebf5c98a3d8df440ea967409830c8e73488609
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "103718162"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119014018"
 ---
-# <a name="zs-switch"></a>/ZS-Schalter
+# <a name="zs-switch"></a>/Zs-Schalter
 
-Der Schalter **/ZS** gibt an, dass der Compiler nur die Syntax überprüft und keine Ausgabedateien generiert.
+Der **Schalter /Zs** gibt an, dass der Compiler nur die Syntax überprüft und keine Ausgabedateien generiert.
 
 ``` syntax
 midl /Zs
 midl /syntax_check
 ```
 
-## <a name="switch-options"></a>Optionen wechseln
+## <a name="switch-options"></a>Switch-Optionen
 
-Dieser Switch hat keine Parameter.
+Dieser Schalter verfügt über keine Parameter.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Dieser Schalter überschreibt alle anderen Switches, die Informationen zu Ausgabedateien angeben.
+Dieser Schalter überschreibt alle anderen Schalter, die Informationen zu Ausgabedateien angeben.
 
-Sie können auch den Syntax Überprüfungs Modus mit dem Mittell-Compilerschalter [**/Syntax \_ Check**](-syntax-check.md)angeben.
+Sie können den Syntaxüberprüfungsmodus auch mit dem MIDL-Compilerschalter [**/syntax \_ check angeben.**](-syntax-check.md)
 
 ## <a name="examples"></a>Beispiele
 
-**Mittel l/ZS Dateiname. idl**
+**midl /Zs filename.idl**
 
-**Mittel l/Syntax \_ Überprüfen von Dateiname. idl**
+**midl /syntax \_ check filename.idl**
 
 ## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 
-[Allgemeine Syntax der Mittell-Befehlszeile](general-midl-command-line-syntax.md)
+[Allgemeine MIDL-Befehlszeilensyntax](general-midl-command-line-syntax.md)
 </dt> <dt>
 
-[**/Syntax \_ überprüfen**](-syntax-check.md)
+[**/syntax \_ check**](-syntax-check.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

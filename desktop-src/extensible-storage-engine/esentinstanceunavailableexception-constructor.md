@@ -1,6 +1,6 @@
 ---
-description: 'Erfahren Sie mehr über: esentinstanceunavailableexception-Konstruktor'
-title: Esentinstanceunavailableexception-Konstruktor
+description: 'Weitere Informationen finden Sie unter: EsentInstanceUnavailableException-Konstruktor'
+title: EsentInstanceUnavailableException-Konstruktor
 TOCTitle: 'EsentInstanceUnavailableException constructor '
 ms:assetid: M:Microsoft.Isam.Esent.Interop.EsentInstanceUnavailableException.#ctor
 ms:mtpsurl: https://msdn.microsoft.com/library/microsoft.isam.esent.interop.esentinstanceunavailableexception.esentinstanceunavailableexception(v=EXCHG.10)
@@ -24,19 +24,19 @@ api_type:
 api_location:
 - Microsoft.Isam.Esent.Interop.dll
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: d0f9c1a3a15c2e59df5b2393c613b73ca2a173fe
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 528a280df8c76d19b21352f820e638450430b60f268526976aa96f0194f2061a
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106353219"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119621110"
 ---
-# <a name="esentinstanceunavailableexception-constructor"></a>Esentinstanceunavailableexception-Konstruktor
+# <a name="esentinstanceunavailableexception-constructor"></a>EsentInstanceUnavailableException-Konstruktor
 
-Initialisiert eine neue Instanz der esentinstanceunavailableexception-Klasse.
+Initialisiert eine neue Instanz der EsentInstanceUnavailableException-Klasse.
 
-**Namespace:**  [Microsoft. ISAM. ESENT. Interop](./microsoft.isam.esent.interop-namespace.md)  
-**Assembly:**  Microsoft. ISAM. ESENT. Interop (in Microsoft.Isam.Esent.Interop.dll)
+**Namespace:**  [Microsoft.Isam.Esent.Interop](./microsoft.isam.esent.interop-namespace.md)  
+**Assembly:**  Microsoft.Isam.Esent.Interop (in Microsoft.Isam.Esent.Interop.dll)
 
 ## <a name="syntax"></a>Syntax
 
@@ -52,12 +52,12 @@ Dim instance As New EsentInstanceUnavailableException()
 public EsentInstanceUnavailableException()
 ```
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
-#### <a name="reference"></a>Referenz
+#### <a name="reference"></a>Verweis
 
-[Esentinstanceunavailableexception-Klasse](./esentinstanceunavailableexception-class.md)
+[EsentInstanceUnavailableException-Klasse](./esentinstanceunavailableexception-class.md)
 
-[Esentinstanceunavailableexception-Member](./esentinstanceunavailableexception-members.md)
+[EsentInstanceUnavailableException-Member](./esentinstanceunavailableexception-members.md)
 
-[Microsoft. ISAM. ESENT. Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)
+[Microsoft.Isam.Esent.Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)

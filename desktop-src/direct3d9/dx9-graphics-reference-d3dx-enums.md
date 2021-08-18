@@ -15,7 +15,7 @@ ms.locfileid: "118988180"
 
 Dieser Abschnitt enthält Informationen zu den folgenden aufzählten Typen und Flags, die mit D3DX verwendet werden.
 
--   [**D3DXCALLBACK-SUCHFLAGS \_ \_**](./d3dxcallback-search-flags.md)
+-   [**\_D3DXCALLBACK-SUCHFLAGS \_**](./d3dxcallback-search-flags.md)
 -   [**D3DXCLEANTYPE**](./d3dxcleantype.md)
 -   [**D3DXCOMPRESSION-FLAGS \_**](./d3dxcompression-flags.md)
 -   [**D3DXEFFECTDEFAULTTYPE**](./d3dxeffectdefaulttype.md)
@@ -36,12 +36,12 @@ Dieser Abschnitt enthält Informationen zu den folgenden aufzählten Typen und F
 -   [**D3DXPRIORITY-TYP \_**](./d3dxpriority-type.md)
 -   [**D3DXREGISTER \_ SET**](./d3dxregister-set.md)
 -   [**D3DXSHCOMPRESSQUALITYTYPE**](./d3dxshcompressqualitytype.md)
--   [**D3DXSLKPUSLIPPT**](./d3dxshgpusimopt.md)
+-   [**D3DXSHGPUSIMOPT**](./d3dxshgpusimopt.md)
 -   [**D3DXTANGENT**](./d3dxtangent.md)
 -   [**D3DXTRANSITION-TYP \_**](./d3dxtransition-type.md)
 -   [**D3DXUVATLAS**](./d3dxuvatlas.md)
 -   [**D3DXWELDEPSILONSFLAGS**](./d3dxweldepsilonsflags.md)
--   [**MAXIMALE \_ \_ FVF-DECL-GRÖßE \_**](./max-fvf-decl-size.md)
+-   [**MAX \_ FVF \_ DECL \_ SIZE**](./max-fvf-decl-size.md)
 
 ## <a name="related-topics"></a>Zugehörige Themen
 

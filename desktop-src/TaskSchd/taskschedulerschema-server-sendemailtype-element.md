@@ -1,9 +1,9 @@
 ---
-title: Server (sendemailtype)-Element
-description: Enthält den e-Mail-Server zum Senden der e-Mail-Nachricht.
+title: Server (sendEmailType)-Element
+description: Enthält den E-Mail-Server, der zum Senden der E-Mail-Nachricht verwendet wird.
 ms.assetid: 4c6084d1-70c5-4d8b-8fcb-ab4cd8aab441
 keywords:
-- Server-Element Taskplaner
+- Serverelement Taskplaner
 topic_type:
 - apiref
 api_name:
@@ -13,16 +13,16 @@ api_type:
 ms.topic: reference
 ms.date: 05/31/2018
 api_location: ''
-ms.openlocfilehash: 5fc57ddf5deee52ff9b118a8267eec4069108030
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: d6052ebb5e648c040c321a311a6ba18313244ab20340d5a7f6c4185e3d35f5df
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104391631"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119002248"
 ---
-# <a name="server-sendemailtype-element"></a>Server (sendemailtype)-Element
+# <a name="server-sendemailtype-element"></a>Server (sendEmailType)-Element
 
-Enthält den e-Mail-Server zum Senden der e-Mail-Nachricht.
+Enthält den E-Mail-Server, der zum Senden der E-Mail-Nachricht verwendet wird.
 
 ``` syntax
 <xs:element name="Server"
@@ -30,7 +30,7 @@ Enthält den e-Mail-Server zum Senden der e-Mail-Nachricht.
  />
 ```
 
-Das **Server** -Element wird durch den komplexen [**sendemailtype**](taskschedulerschema-sendemailtype-complextype.md) -Typ definiert.
+Das **Server-Element** wird durch den komplexen [**SendEmailType-Typ**](taskschedulerschema-sendemailtype-complextype.md) definiert.
 
 ## <a name="parent-element"></a>Übergeordnetes Element
 
@@ -38,15 +38,15 @@ Das **Server** -Element wird durch den komplexen [**sendemailtype**](taskschedul
 
 | Element                                                                              | Abgeleitet von                                                           | BESCHREIBUNG                                                  |
 |--------------------------------------------------------------------------------------|------------------------------------------------------------------------|--------------------------------------------------------------|
-| [**SendEmail (Aktionsgruppe)**](taskschedulerschema-sendemail-actiongroup-element.md) | [**sendemailtype**](taskschedulerschema-sendemailtype-complextype.md) | Stellt eine Aktion dar, die eine e-Mail-Nachricht sendet.<br/> |
+| [**SendEmail (actionGroup)**](taskschedulerschema-sendemail-actiongroup-element.md) | [**sendEMailType**](taskschedulerschema-sendemailtype-complextype.md) | Stellt eine Aktion dar, die eine E-Mail sendet.<br/> |
 
 
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Informationen zur C++-Entwicklung finden Sie unter [**Server-Eigenschaft von iemailaction**](/windows/desktop/api/taskschd/nf-taskschd-iemailaction-get_server).
+Informationen zur C++-Entwicklung finden Sie unter [**Servereigenschaft von IEmailAction**](/windows/desktop/api/taskschd/nf-taskschd-iemailaction-get_server).
 
-Informationen zur Skript Entwicklung finden Sie unter [**emailaction. Server**](emailaction-server.md).
+Informationen zur Skriptentwicklung finden Sie unter [**EmailAction.Server.**](emailaction-server.md)
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -54,8 +54,8 @@ Informationen zur Skript Entwicklung finden Sie unter [**emailaction. Server**](
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>       |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/> |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur Vista-Desktop-Apps\]<br/>       |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/> |
 
 
 

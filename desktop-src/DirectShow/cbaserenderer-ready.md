@@ -1,7 +1,7 @@
 ---
 description: Die Ready-Methode signalisiert, dass ein Zustandsübergang abgeschlossen ist.
 ms.assetid: 01328281-cf25-43fd-9f9c-e55fccbac217
-title: Cbaserderderer. Ready-Methode (renbase. h)
+title: CBaseRenderer.Ready-Methode (Renbase.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,16 +16,16 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: 3a7f70ec258fde7f6208d44c35ca2c284f99e0a0
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 31a1870af825f2a33236d0fd86d0f730e0013df59297fec5cdaa2baf46a2b773
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106369280"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119757520"
 ---
-# <a name="cbaserendererready-method"></a>Cbaserderderer. Ready-Methode
+# <a name="cbaserendererready-method"></a>CBaseRenderer.Ready-Methode
 
-Die- `Ready` Methode signalisiert, dass ein Zustandsübergang beendet ist.
+Die `Ready` -Methode signalisiert, dass ein Zustandsübergang abgeschlossen ist.
 
 ## <a name="syntax"></a>Syntax
 
@@ -44,9 +44,9 @@ Diese Methode hat keine Parameter.
 
 Diese Methode gibt keinen Wert zurück.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Diese Methode bewirkt, dass die [**cbasergetderer:: GetState**](cbaserenderer-getstate.md) -Methode "S OK" zurückgibt \_ , was bedeutet, dass der Filter den Übergang in seinen aktuellen Zustand abgeschlossen hat. Der Filter ruft diese Methode immer dann auf, wenn Sie einen Zustandsübergang abschließt.
+Diese Methode bewirkt, dass die [**CBaseRenderer::GetState-Methode**](cbaserenderer-getstate.md) S OK zurückgibt, was angibt, dass der Filter den Übergang in seinen \_ aktuellen Zustand abgeschlossen hat. Der Filter ruft diese Methode immer dann auf, wenn ein Zustandsübergang abgeschlossen wird.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -54,22 +54,22 @@ Diese Methode bewirkt, dass die [**cbasergetderer:: GetState**](cbaserenderer-ge
 
 | Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Renbase. h (Include Streams. h)</dt> </dl>                                                                                   |
-| Bibliothek<br/> | <dl> " <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Renbase.h (include Streams.h)</dt> </dl>                                                                                   |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Einzelhandels-Builds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Cbaserderderer-Klasse**](cbaserenderer.md)
+[**CBaseRenderer-Klasse**](cbaserenderer.md)
 </dt> <dt>
 
-[**Cbaserererderer:: checkready**](cbaserenderer-checkready.md)
+[**CBaseRenderer::CheckReady**](cbaserenderer-checkready.md)
 </dt> <dt>
 
-[**Cbaserderderer:: notready**](cbaserenderer-notready.md)
+[**CBaseRenderer::NotReady**](cbaserenderer-notready.md)
 </dt> </dl>
 
  
