@@ -1,23 +1,23 @@
 ---
-description: Gibt die gewünschte Qualitätsstufe für die Qualitäts basierte (1-Pass-) VBR-Codierung (VBR) von Audiostreams an.
+description: Gibt den gewünschten Qualitätsgrad für die qualitätsbasierte (1-Durch-) VBR-Codierung (Variable Bit Rate) von Audiostreams an.
 ms.assetid: 0bbb4f51-78c3-4455-bd96-9a6d80110220
-title: MFPKEY_DESIRED_VBRQUALITY-Eigenschaft (wmcodecdsp. h)
+title: MFPKEY_DESIRED_VBRQUALITY-Eigenschaft (Wmcodecdsp.h)
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 8aa0f2cf86db076fa211f9c850db15de730a3a14
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 4f52ab8cc791a5309b5df6537d133bce68e49d66a15ab79c12beeb7411cece8e
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106349152"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119939943"
 ---
-# <a name="mfpkey_desired_vbrquality-property"></a>Mfpkey \_ gewünschte \_ vbrquality-Eigenschaft
+# <a name="mfpkey_desired_vbrquality-property"></a>GEWÜNSCHTE \_ \_ VBRQUALITY-Eigenschaft für MFPKEY
 
-Gibt die gewünschte Qualitätsstufe für die Qualitäts basierte (1-Pass-) VBR-Codierung (VBR) von Audiostreams an.
+Gibt den gewünschten Qualitätsgrad für die qualitätsbasierte (1-Durch-) VBR-Codierung (Variable Bit Rate) von Audiostreams an.
 
 ## <a name="constant-for-ipropertybag"></a>Konstante für IPropertyBag
 
-Nur mit [**IPropertyStore**](/windows/win32/api/propsys/nn-propsys-ipropertystore)verfügbar.
+Nur mit [**IPropertyStore verfügbar.**](/windows/win32/api/propsys/nn-propsys-ipropertystore)
 
 ## <a name="data-type"></a>Datentyp
 
@@ -27,15 +27,15 @@ Nur mit [**IPropertyStore**](/windows/win32/api/propsys/nn-propsys-ipropertystor
 
 0
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Dieser Wert kann zwischen 0 und 100 liegen, wobei 100 eine maximale Qualität ist. Der Wert 0 gibt an, dass die Qualitäts basierte VBR-Codierungsmethode nicht verwendet werden soll.
+Dieser Wert kann zwischen 0 und 100 sein, wobei 100 die maximale Qualität ist. Der Wert 0 gibt an, dass die qualitätsbasierte VBR-Codierungsmethode nicht verwendet werden soll.
 
-Legen Sie die folgenden Codierungs Eigenschaften fest, um VBR-Modi aufzulisten, die eine bestimmte Qualitätsanforderung erfüllen.
+Legen Sie die folgenden Encodereigenschaften fest, um VBR-Modi aufzählen zu können, die eine bestimmte Qualitätsanforderung erfüllen.
 
--   Legen Sie [**mfpkey \_ vbrenabled**](mfpkey-vbrenabledproperty.md) auf **Variant \_ true** fest.
--   Legen Sie [**mfpkey- \_ \_ Enumeration \_ vbrquality**](mfpkey-constrain-enumerated-vbrqualityproperty.md) auf **Variant \_ true** fest.
--   Legen Sie für **mfpkey die \_ gewünschte \_ vbrquality** auf die gewünschte Qualität fest. Legen Sie für den Modus ohne Verlust die gewünschte Qualität auf 100 fest.
+-   Legen [**Sie MFPKEY \_ VBRENABLED auf**](mfpkey-vbrenabledproperty.md) VARIANT TRUE **\_ fest.**
+-   Legen [**Sie MFPKEY \_ CONSTRAIN \_ ENUMERATED \_ VBRQUALITY**](mfpkey-constrain-enumerated-vbrqualityproperty.md) auf **VARIANT TRUE \_ fest.**
+-   Legen **Sie MFPKEY \_ DESIRED \_ VBRQUALITY auf** die gewünschte Qualität fest. Legen Sie für verlustfreie Modi die gewünschte Qualität auf 100 fest.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -43,9 +43,9 @@ Legen Sie die folgenden Codierungs Eigenschaften fest, um VBR-Modi aufzulisten, 
 
 | Anforderung | Wert |
 |-------------------------------------|-----------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                          |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/>                                    |
-| Header<br/>                   | <dl> <dt>Wmcodecdsp. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ Vista-Desktop-Apps\]<br/>                                          |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/>                                    |
+| Header<br/>                   | <dl> <dt>Wmcodecdsp.h</dt> </dl> |
 
 
 
@@ -53,7 +53,7 @@ Legen Sie die folgenden Codierungs Eigenschaften fest, um VBR-Modi aufzulisten, 
 
 <dl> <dt>
 
-[Eigenschaften von Media Foundation](media-foundation-properties.md)
+[Media Foundation Eigenschaften](media-foundation-properties.md)
 </dt> </dl>
 
  

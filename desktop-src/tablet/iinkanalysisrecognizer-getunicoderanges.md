@@ -1,7 +1,7 @@
 ---
-description: Ruft ein Array von Zeichen Bereichen ab, die die unterstützten Unicode-Zeichen Bereiche darstellen.
+description: Ruft ein Array von Zeichenbereichen ab, die die unterstützten Unicode-Zeichenbereiche darstellen.
 ms.assetid: 334cf545-832a-4e8a-8fe6-76a173676be7
-title: 'Iinkanalysiserkenzer:: GetUnicodeRanges-Methode (iacom. h)'
+title: IInkAnalysisRecognizer::GetUnicodeRanges-Methode (IACom.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,16 +13,16 @@ api_type:
 - COM
 api_location:
 - IACom.dll
-ms.openlocfilehash: 939c2d5bf45c5dfbf0f1866cb6d0c7a58c38320f
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: cf8c0fe75d2eff0cdd8f2f9d3eb5366f6bab4dd4588c854455804ce4196971bc
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "103862707"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120008400"
 ---
-# <a name="iinkanalysisrecognizergetunicoderanges-method"></a>Iinkanalysiserkenzer:: GetUnicodeRanges-Methode
+# <a name="iinkanalysisrecognizergetunicoderanges-method"></a>IInkAnalysisRecognizer::GetUnicodeRanges-Methode
 
-Ruft ein Array von Zeichen Bereichen ab, die die unterstützten Unicode-Zeichen Bereiche darstellen.
+Ruft ein Array von Zeichenbereichen ab, die die unterstützten Unicode-Zeichenbereiche darstellen.
 
 ## <a name="syntax"></a>Syntax
 
@@ -41,30 +41,30 @@ HRESULT GetUnicodeRanges(
 
 <dl> <dt>
 
-*pulnummeriofranges* \[ in, out\]
+*pulNumberOfRanges* \[ in, out\]
 </dt> <dd>
 
-Die Anzahl der Zeichen Bereiche, auf die von *ppullowunicode* verwiesen wird.
+Die Anzahl der Zeichenbereiche, auf die *ppulLowUnicode* zeigt.
 
 </dd> <dt>
 
-*ppullowunicode* \[ vorgenommen\]
+*ppulLowUnicode* \[ out\]
 </dt> <dd>
 
-Ein Zeiger auf ein Array von Zeichen Bereichen, die die unterstützten Unicode-Zeichen Bereiche darstellen.
+Zeiger auf ein Array von Zeichenbereichen, das die unterstützten Unicode-Zeichenbereiche darstellt.
 
 </dd> <dt>
 
-*ppusunicoderangelength* \[ vorgenommen\]
+*ppusUnicodeRangeLength* \[ out\]
 </dt> <dd>
 
-Ein Zeiger auf ein Array von-Werten, das die Länge der einzelnen Array Punkte von *ppullowunicode* angibt.
+Zeiger auf ein Array von -Werten, das die Länge jedes Arrays angibt, auf das *ppulLowUnicode* zeigt.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Eine Beschreibung der Rückgabewerte finden Sie unter [Klassen und Schnittstellen-Ink-Analyse](classes-and-interfaces---ink-analysis.md).
+Eine Beschreibung der Rückgabewerte finden Sie unter Klassen und Schnittstellen – [Ink-Analyse.](classes-and-interfaces---ink-analysis.md)
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -72,9 +72,9 @@ Eine Beschreibung der Rückgabewerte finden Sie unter [Klassen und Schnittstelle
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows XP Tablet PC Edition \[ Desktop-Apps\]<br/>                                                 |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur Desktop-Apps der XP Tablet PC Edition \[\]<br/>                                                 |
 | Unterstützte Mindestversion (Server)<br/> | Nicht unterstützt<br/>                                                                                     |
-| Header<br/>                   | <dl> <dt>Iacom. h (erfordert auch iacom \_ i. c)</dt> </dl> |
+| Header<br/>                   | <dl> <dt>IACom.h (erfordert auch IACom \_ i.c)</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>IACom.dll</dt> </dl>                          |
 
 
@@ -83,7 +83,7 @@ Eine Beschreibung der Rückgabewerte finden Sie unter [Klassen und Schnittstelle
 
 <dl> <dt>
 
-[**Iinkanalysiserkenzer**](iinkanalysisrecognizer.md)
+[**IInkAnalysisRecognizer**](iinkanalysisrecognizer.md)
 </dt> </dl>
 
  

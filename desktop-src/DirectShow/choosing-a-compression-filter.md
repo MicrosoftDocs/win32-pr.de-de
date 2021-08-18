@@ -1,41 +1,41 @@
 ---
-description: Auswählen eines Komprimierungs Filters
+description: Auswählen eines Komprimierungsfilters
 ms.assetid: 9a2c3c48-771e-44db-a042-3db0fd9a6c76
-title: Auswählen eines Komprimierungs Filters
+title: Auswählen eines Komprimierungsfilters
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 6a64ebebf41c35ed6aed9ab47d853c03ba720a31
-ms.sourcegitcommit: a47bd86f517de76374e4fff33cfeb613eb259a7e
+ms.openlocfilehash: cf964aa3647086efe569263e5fb36b4e0db60ebfad73c9d2fe9dcb14f3bcf125
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/06/2021
-ms.locfileid: "104125510"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119999220"
 ---
-# <a name="choosing-a-compression-filter"></a>Auswählen eines Komprimierungs Filters
+# <a name="choosing-a-compression-filter"></a>Auswählen eines Komprimierungsfilters
 
-Verschiedene Arten von Softwarekomponenten können Video-oder Audiokomprimierung durchführen, z. b.:
+Verschiedene Arten von Softwarekomponenten können eine Video- oder Audiokomprimierung durchführen, z. B.:
 
 -   Native DirectShow-Filter
--   Codecs für Video Komprimierungs-Manager (VCM)
--   Codecs für den Audiokomprimierungs-Manager (ACM)
--   DirectX Media Objects (DMOs)
+-   VideoKomprimierungs-Manager-Codecs (VCM)
+-   ACM-Codecs (Audio Compression Manager)
+-   DirectX-Medienobjekte (DMOs)
 
-In DirectShow werden VCM-Codecs durch den [AVI-Kompressor-Filter](avi-compressor-filter.md)umschlossen, und ACM-Codecs werden durch den [ACM-Wrapper Filter](acm-wrapper-filter.md)umschlossen. DMOS werden durch den [DMO-Wrapper Filter](dmo-wrapper-filter.md)umschlossen. Der Enumerator für Systemgeräte bietet eine konsistente Möglichkeit zum Auflisten und Erstellen eines dieser kompressortypen, ohne sich Gedanken über das zugrunde liegende Modell machen zu müssen.
+In DirectShow werden VCM-Codecs vom [AVI-Filter](avi-compressor-filter.md)umschlossen, und ACM-Codecs werden vom [ACM-Wrapperfilter umschlossen.](acm-wrapper-filter.md) DMOs werden vom DMO [Wrapperfilter umschlossen.](dmo-wrapper-filter.md) Der Systemgeräte-Enumerator bietet eine konsistente Möglichkeit zum Aufzählen und Erstellen eines dieser Typen von Typen, ohne sich Gedanken über das zugrunde liegende Modell machen zu müssen.
 
-Ausführliche Informationen zum Enumerator für Systemgeräte finden [Sie unter Verwenden des Systemgeräte Enumerators](using-the-system-device-enumerator.md). Kurz gesagt, alle DirectShow-Filter werden nach Kategorie klassifiziert, und jede Kategorie wird durch eine GUID identifiziert. Bei Video-Kompressoren lautet die Kategorie GUID CLSID \_ videocompressorcategory. Für audiokompressoren ist es CLSID \_ audiocompressorcategory. Zum Auflisten einer bestimmten Kategorie erstellt der Systemgeräte Enumerator ein *Enumeratorobjekt* , das die [**IEnumMoniker**](/windows/desktop/api/objidl/nn-objidl-ienummoniker) -Schnittstelle unterstützt. Diese Schnittstelle wird von der Anwendung zum Abrufen von gerätermonikern verwendet, wobei jeder gerätermoniker eine Instanz eines DirectShow-Filters darstellt. Sie können den Moniker verwenden, um den Filter zu erstellen, oder um den anzeigen amen des Geräts zu erhalten, ohne den Filter zu erstellen.
+Weitere Informationen zum Systemgeräte-Enumerator finden Sie unter [Verwenden des Systemgeräte-Enumerators.](using-the-system-device-enumerator.md) Kurz gesagt werden alle DirectShow-Filter nach Kategorie klassifiziert, und jede Kategorie wird durch eine GUID identifiziert. Für Videovideovideos ist die Kategorie-GUID CLSID \_ VideoCompressorCategory. Für Audiowiedergaben ist dies CLSID \_ AudioCompressorCategory. Zum Aufzählen einer bestimmten Kategorie erstellt der Systemgeräte-Enumerator ein *Enumeratorobjekt,* das die [**IEnumMoniker-Schnittstelle**](/windows/desktop/api/objidl/nn-objidl-ienummoniker) unterstützt. Die Anwendung verwendet diese Schnittstelle, um Gerätemoniker abzurufen, wobei jeder Gerätemoniker eine Instanz eines DirectShow-Filters darstellt. Sie können den Moniker verwenden, um den Filter zu erstellen oder den Angezeigten Namen des Geräts zu erhalten, ohne den Filter zu erstellen.
 
-Gehen Sie folgendermaßen vor, um die auf dem System des Benutzers verfügbaren Video-oder audiokompressoren aufzulisten:
+Gehen Sie wie folgt vor, um die video- oder audio-Audiowiedergaben aufzählen zu können, die auf dem System des Benutzers verfügbar sind:
 
-1.  Rufen Sie [**cokreateinstance**](/windows/desktop/api/combaseapi/nf-combaseapi-cocreateinstance) auf, um den Enumerator für Systemgeräte zu erstellen, der über die Klassen-ID CLSID \_ systemdeviceenumeration verfügt.
-2.  Aufrufen von [**ikreatedevenum:: kreateclassenumerator**](/windows/desktop/api/Strmif/nf-strmif-icreatedevenum-createclassenumerator) mit der Filterkategorie GUID. Die-Methode gibt einen **IEnumMoniker** -Schnittstellen Zeiger zurück.
-3.  Verwenden Sie die IEnumMoniker:: Next-Methode, um die gerätermoniker aufzuzählen. Diese Methode gibt eine [**IMoniker**](/windows/desktop/api/objidl/nn-objidl-imoniker) -Schnittstelle zurück, die den Moniker darstellt.
+1.  Rufen [**Sie CoCreateInstance auf,**](/windows/desktop/api/combaseapi/nf-combaseapi-cocreateinstance) um den Systemgeräte-Enumerator zu erstellen, der über die Klassen-ID CLSID \_ SystemDeviceEnum verfügt.
+2.  Rufen [**Sie ICreateDevEnum::CreateClassEnumerator**](/windows/desktop/api/Strmif/nf-strmif-icreatedevenum-createclassenumerator) mit der Filterkategorie-GUID auf. Die -Methode gibt einen **IEnumMoniker-Schnittstellenzeiger** zurück.
+3.  Verwenden Sie die IEnumMoniker::Next-Methode, um die Gerätemoniker zu aufzählen. Diese Methode gibt eine [**IMoniker-Schnittstelle**](/windows/desktop/api/objidl/nn-objidl-imoniker) zurück, die den Moniker darstellt.
 
-Gehen Sie folgendermaßen vor, um den anzeigen Amen von einem Moniker zu erhalten:
+Gehen Sie wie folgt vor, um den Benutzernamen aus einem Moniker zu erhalten:
 
-1.  Aufrufen der **IMoniker:: bindesstorage** -Methode. Diese Methode gibt einen **IPropertyBag** -Schnittstellen Zeiger zurück.
-2.  Verwenden Sie die **IPropertyBag:: Read** -Methode, um die **FriendlyName** -Eigenschaft zu lesen.
+1.  Rufen Sie **die IMoniker::BindToStorage-Methode** auf. Diese Methode gibt einen **IPropertyBag-Schnittstellenzeiger** zurück.
+2.  Verwenden Sie **die IPropertyBag::Read-Methode,** um die **FriendlyName-Eigenschaft zu** lesen.
 
-In der Regel würde eine Anwendung eine Liste von Kompressoren anzeigen, sodass der Benutzer eine Liste auswählen kann. Der folgende Code füllt z. b. ein Listenfeld mit den Namen der verfügbaren Video-Kompressoren auf.
+In der Regel würde eine Anwendung eine Liste von Darstellungen anzeigen, sodass der Benutzer eine auswählen kann. Der folgende Code füllt z. B. ein Listenfeld mit den Namen der verfügbaren Videobeobarungen auf.
 
 
 ```C++
@@ -86,7 +86,7 @@ void OnInitDialog(HWND hDlg)
 
 
 
-Um eine Filter Instanz aus dem Moniker zu erstellen, rufen Sie die **IMoniker:: BindTo Object** -Methode auf. Die-Methode gibt einen [**ibasefilter**](/windows/desktop/api/Strmif/nn-strmif-ibasefilter) -Zeiger zurück.
+Um eine Filterinstanz aus dem Moniker zu erstellen, rufen Sie die **IMoniker::BindToObject-Methode** auf. Die -Methode gibt einen [**IBaseFilter-Zeiger**](/windows/desktop/api/Strmif/nn-strmif-ibasefilter) zurück.
 
 
 ```C++
@@ -102,13 +102,13 @@ if (SUCCEEDED(hr))
 
 
 
-Bei VCM-Codecs stellt jeder Moniker einen bestimmten Codec dar, auch wenn alle Codecs durch denselben AVI-Komprimierungs Filter umschließt werden. Der Aufruf von " **BindToObject** " erstellt eine Instanz dieses Filters, die für diesen Codec initialisiert wird. Aus diesem Grund können Sie **cokreateinstance** nicht direkt für den AVI-Komprimierungs Filter aufrufen. Sie müssen den Enumerator "Systemgeräte" durchlaufen.
+Bei VCM-Codecs stellt jeder Moniker einen bestimmten Codec dar, obwohl alle Codecs vom gleichen AVI-Komprimierungsfilter umschlossen sind. Durch **Aufrufen von BindToObject** wird eine Instanz dieses Filters erstellt, die für diesen Codec initialisiert wird. Aus diesem Grund können Sie **CoCreateInstance** nicht direkt im FILTER DER AVI-Komprimierung aufrufen. Sie müssen den Systemgeräte-Enumerator durchgehen.
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[Neukomprimieren einer AVI-Datei](recompressing-an-avi-file.md)
+[Erneutes Dekomprimieren einer AVI-Datei](recompressing-an-avi-file.md)
 </dt> </dl>
 
  

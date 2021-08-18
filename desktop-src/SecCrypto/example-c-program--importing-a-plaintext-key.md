@@ -1,28 +1,28 @@
 ---
-description: Identifizieren Sie einen Schlüssel mithilfe eines hcryptkey-Handles.
+description: Identifizieren Sie einen Schlüssel mithilfe eines HCRYPTKEY-Handles.
 ms.assetid: 23569104-a302-40de-a31a-a4ee22d5f7f2
-title: 'Beispiel für ein C-Programm: Importieren eines Klartext-Schlüssels'
+title: 'C-Beispielprogramm: Importieren eines Klartextschlüssels'
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 92341f4118770b963a9ea3dd47a153da0fe406b8
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 58632d7dd3f7411788e26538906c41d1b33ce30888696516e29642f8dbaf00c4
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "104350129"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119874020"
 ---
-# <a name="example-c-program-importing-a-plaintext-key"></a>Beispiel für ein C-Programm: Importieren eines Klartext-Schlüssels
+# <a name="example-c-program-importing-a-plaintext-key"></a>C-Beispielprogramm: Importieren eines Klartextschlüssels
 
-Viele der Funktionen in diesem SDK erfordern, dass Sie einen Schlüssel mithilfe eines **hcryptkey** -Handles identifizieren. Wenn Ihr Schlüssel in einem Bytearray enthalten ist, können Sie mithilfe der [**cryptimportkey**](/windows/desktop/api/Wincrypt/nf-wincrypt-cryptimportkey) -Funktion ein Handle erstellen, wie im folgenden Beispiel gezeigt.
+Viele der Funktionen in diesem SDK erfordern, dass Sie einen Schlüssel mithilfe eines **HCRYPTKEY-Handles** identifizieren. Wenn Ihr Schlüssel in einem Bytearray enthalten ist, können Sie ein Handle mithilfe der [**CryptImportKey-Funktion**](/windows/desktop/api/Wincrypt/nf-wincrypt-cryptimportkey) erstellen, wie im folgenden Beispiel gezeigt.
 
-In diesem Beispiel werden die folgenden Aufgaben und kryptoapi-Funktionen veranschaulicht:
+In diesem Beispiel werden die folgenden Aufgaben und CryptoAPI-Funktionen veranschaulicht:
 
 -   Abrufen eines Handles für einen [*Kryptografiedienstanbieter*](../secgloss/c-gly.md) durch Aufrufen von [**CryptAcquireContext**](/windows/desktop/api/Wincrypt/nf-wincrypt-cryptacquirecontexta).
--   Importieren eines Klartext-Schlüssels in den CSP-Schlüssel Container durch Aufrufen von [**cryptimportkey**](/windows/desktop/api/Wincrypt/nf-wincrypt-cryptimportkey).
--   Exportieren eines Schlüssels aus dem Schlüssel Container durch Aufrufen von "\ [**texportkey**](/windows/desktop/api/Wincrypt/nf-wincrypt-cryptexportkey)".
--   Drucken des exportierten Schlüssels auf der Konsole, um zu überprüfen, ob der nur-Text-Schlüssel tatsächlich in den Container importiert wurde.
--   Freigeben des für den nur-Text-Schlüssel reservierten Speichers.
--   Freigeben des CSP durch Aufrufen von [**cryptreleasecontext**](/windows/desktop/api/Wincrypt/nf-wincrypt-cryptreleasecontext).
+-   Importieren eines Klartextschlüssels in den CSP-Schlüsselcontainer durch Aufrufen von [**CryptImportKey**](/windows/desktop/api/Wincrypt/nf-wincrypt-cryptimportkey).
+-   Exportieren eines Schlüssels aus dem Schlüsselcontainer durch Aufrufen von [**CiptExportKey**](/windows/desktop/api/Wincrypt/nf-wincrypt-cryptexportkey).
+-   Drucken des exportierten Schlüssels in die Konsole, um zu überprüfen, ob der Klartextschlüssel tatsächlich in den Container importiert wurde.
+-   Freigeben des für den Klartextschlüssel reservierten Arbeitsspeichers.
+-   Freigeben des CSP durch Aufrufen von [**CryptReleaseContext.**](/windows/desktop/api/Wincrypt/nf-wincrypt-cryptreleasecontext)
 
 
 ```C++

@@ -1,10 +1,10 @@
 ---
-title: "' Zubei '-Element (settingstype)-Element"
-description: Gibt an, dass die Aufgabe mithilfe von TerminateProcess beendet werden kann.
+title: AllowHardTerminate (settingsType)-Element
+description: Gibt an, dass der Task mit TerminateProcess beendet werden kann.
 ms.assetid: 093a3cc6-d3e1-48e3-bc9e-0b15df2a54de
 keywords:
-- "' Zuder '-Element (settingstype)-Element Taskplaner"
-- "\"Zuweisung\"-Element Taskplaner"
+- AllowHardTerminate (settingsType)-Element Taskplaner
+- AllowHardTerminate-Element Taskplaner
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 ms.topic: reference
 ms.date: 05/31/2018
 api_location: ''
-ms.openlocfilehash: eba987b42206121b91b3c096f298eac32cf52b38
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: d7a143dfb0024cced8a67595e17b12fba9d037b335b425272e1ad2a7999e0b11
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "106339132"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120010920"
 ---
-# <a name="allowhardterminate-settingstype-element"></a>' Zubei '-Element (settingstype)-Element
+# <a name="allowhardterminate-settingstype-element"></a>AllowHardTerminate (settingsType)-Element
 
-Gibt an, dass die Aufgabe mithilfe von TerminateProcess beendet werden kann.
+Gibt an, dass der Task mit TerminateProcess beendet werden kann.
 
 ``` syntax
 <xs:element name="AllowHardTerminate"
@@ -33,7 +33,7 @@ Gibt an, dass die Aufgabe mithilfe von TerminateProcess beendet werden kann.
  />
 ```
 
-Das Element "- **Zuweisung** " wird durch den komplexen [**settingstype**](taskschedulerschema-settingstype-complextype.md) -Typ definiert.
+Das **AllowHardTerminate-Element** wird durch den komplexen [**SettingsType-Typ**](taskschedulerschema-settingstype-complextype.md) definiert.
 
 ## <a name="parent-element"></a>Übergeordnetes Element
 
@@ -41,19 +41,19 @@ Das Element "- **Zuweisung** " wird durch den komplexen [**settingstype**](tasks
 
 | Element                                                           | Abgeleitet von                                                 | BESCHREIBUNG                                                                        |
 |-------------------------------------------------------------------|--------------------------------------------------------------|------------------------------------------------------------------------------------|
-| [**Einstellungen**](taskschedulerschema-settings-tasktype-element.md) | [**taskType**](taskschedulerschema-tasktype-complextype.md) | Enthält die Einstellungen, die der Taskplaner verwendet, um die Aufgabe auszuführen.<br/> |
+| [**Einstellungen**](taskschedulerschema-settings-tasktype-element.md) | [**taskType**](taskschedulerschema-tasktype-complextype.md) | Enthält die Einstellungen, die der Taskplaner zum Ausführen der Aufgabe verwendet.<br/> |
 
 
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Informationen zur C++-Entwicklung finden Sie unter der [**Eigenschaft "Zuweisung von Eigenschaften" von itasksettings**](/windows/desktop/api/taskschd/nf-taskschd-itasksettings-get_allowhardterminate).
+Informationen zur C++-Entwicklung finden Sie in der [**AllowHardTerminate-Eigenschaft von ITaskSettings.**](/windows/desktop/api/taskschd/nf-taskschd-itasksettings-get_allowhardterminate)
 
-Informationen zur Skript Entwicklung finden Sie unter [**tasksettings. Zuweisung**](tasksettings-allowhardterminate.md).
+Informationen zur Skriptentwicklung finden Sie unter [**TaskSettings.AllowHardTerminate**](tasksettings-allowhardterminate.md).
 
 ## <a name="examples"></a>Beispiele
 
-Ein umfassendes Beispiel für den XML-Code für eine Aufgabe, die das harte Beenden zulässt, finden Sie unter [time-auslöserbeispiel (XML)](time-trigger-example--xml-.md).
+Ein vollständiges Beispiel für den XML-Code für eine Aufgabe, die eine harte Beendigung zulässt, finden Sie unter [Time Trigger Example (XML) (Zeittriggerbeispiel (XML)).](time-trigger-example--xml-.md)
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -61,8 +61,8 @@ Ein umfassendes Beispiel für den XML-Code für eine Aufgabe, die das harte Been
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>       |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/> |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur Vista-Desktop-Apps\]<br/>       |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/> |
 
 
 
@@ -70,7 +70,7 @@ Ein umfassendes Beispiel für den XML-Code für eine Aufgabe, die das harte Been
 
 <dl> <dt>
 
-[Schema Elemente Taskplaner](task-scheduler-schema-elements.md)
+[Taskplaner Schemaelemente](task-scheduler-schema-elements.md)
 </dt> </dl>
 
  

@@ -1,11 +1,11 @@
 ---
-title: Emailaction. Body (Eigenschaft)
-description: Ruft bei der Skripterstellung den Text der e-Mail ab, die die e-Mail-Nachricht enthält, oder legt diesen fest
+title: EmailAction.Body (Eigenschaft)
+description: Für die Skripterstellung ruft den Text der E-Mail ab, die die E-Mail enthält, oder legt diesen fest.
 ms.assetid: 0015c2b9-9278-407b-b3cf-492f2d95bcb6
 keywords:
-- Body-Eigenschafts Taskplaner
-- Body-Eigenschaften Taskplaner, emailaction-Objekt
-- Emailaction-Objekt Taskplaner, Text-Eigenschaft
+- Texteigenschafts-Taskplaner
+- Body-Eigenschaft Taskplaner , EmailAction-Objekt
+- EmailAction-Taskplaner , Body-Eigenschaft
 topic_type:
 - apiref
 api_name:
@@ -16,18 +16,18 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 84be176fcf63c7a5191588dc0a68ccaf06c69f94
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 57daf8d16da9f77a88d91a23cfaea88d1c3e27adb09a0d502b447b5987fce2ac
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "106337936"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120100380"
 ---
-# <a name="emailactionbody-property"></a>Emailaction. Body (Eigenschaft)
+# <a name="emailactionbody-property"></a>EmailAction.Body (Eigenschaft)
 
-\[Dieses Objekt wird nicht mehr unterstützt. Verwenden Sie "IExecAction" mit dem PowerShell-Cmdlet " [**Send-Mail Message**](/powershell/module/microsoft.powershell.utility/send-mailmessage) " als Problem Umgehung.\]
+\[Dieses Objekt wird nicht mehr unterstützt. Verwenden Sie IExecAction mit dem [**PowerShell-Cmdlet Send-MailMessage**](/powershell/module/microsoft.powershell.utility/send-mailmessage) als Problemumgehung.\]
 
-Ruft bei der Skripterstellung den Text der e-Mail ab, die die e-Mail-Nachricht enthält, oder legt diesen fest
+Für die Skripterstellung ruft den Text der E-Mail ab, die die E-Mail enthält, oder legt diesen fest.
 
 Dies ist eine Eigenschaft mit Lese- und Schreibzugriff.
 
@@ -42,11 +42,11 @@ EmailAction.Body As String
 
 ## <a name="property-value"></a>Eigenschaftswert
 
-Der Text der e-Mail, in der die e-Mail-Nachricht enthalten ist.
+Der Text der E-Mail, die die E-Mail enthält.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Beim Festlegen dieses Eigenschafts Werts kann der Wert aus Text bestehen, der aus einer DLL-Datei der Ressource abgerufen wird. Eine spezialisierte Zeichenfolge wird verwendet, um auf den Text aus der Ressourcen Datei zu verweisen. Das Format der Zeichenfolge ist $ (@ \[ dll \] , \[ ResourceId \] ), wobei \[ dll \] der Pfad zur DLL-Datei, die die Ressource enthält, und \[ ResourceId der \] Bezeichner für den Ressourcen Text ist. Wenn z. b. der Wert dieser Eigenschaft auf $ (@% systemroot% \\ system32 \\ResourceName.dll,-101) festgelegt wird, wird die-Eigenschaft auf den Wert des Ressourcen Texts mit einem Bezeichner gleich-101 in der Datei% SystemRoot% \\ system32ResourceName.dll festgelegt \\ .
+Beim Festlegen dieses Eigenschaftswerts kann der Wert Text sein, der aus einer Ressourcendatei .dll wird. Eine spezialisierte Zeichenfolge wird verwendet, um auf den Text aus der Ressourcendatei zu verweisen. Das Format der Zeichenfolge ist $(@ Dll , ResourceID ), wobei DLL der Pfad zur .dll-Datei ist, die die Ressource enthält, und ResourceID der Bezeichner für den \[ \] \[ \] \[ \] \[ \] Ressourcentext ist. Wenn Sie diesen Eigenschaftswert beispielsweise auf $(@ %SystemRoot% System32ResourceName.dll, -101) festlegen, wird die -Eigenschaft auf den Wert des Ressourcentexts mit einem Bezeichner gleich \\ \\ -101 in der Datei %SystemRoot% \\ System32 \\ResourceName.dll festgelegt.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -54,11 +54,11 @@ Beim Festlegen dieses Eigenschafts Werts kann der Wert aus Text bestehen, der au
 
 | Anforderung | Wert |
 |-------------------------------------|-----------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                          |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/>                                    |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ Vista-Desktop-Apps\]<br/>                                          |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/>                                    |
 | Ende des Supports (Client)<br/>    | Windows 7<br/>                                                                    |
 | Ende des Supports (Server)<br/>    | Windows Server 2008 R2<br/>                                                       |
-| Typbibliothek<br/>             | <dl> <dt>Taskschd. tlb</dt> </dl> |
+| Typbibliothek<br/>             | <dl> <dt>Taskschd.tlb</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Taskschd.dll</dt> </dl> |
 
 
@@ -67,7 +67,7 @@ Beim Festlegen dieses Eigenschafts Werts kann der Wert aus Text bestehen, der au
 
 <dl> <dt>
 
-[**Emailaction**](emailaction.md)
+[**EmailAction**](emailaction.md)
 </dt> <dt>
 
 [Aufgabenplanung](task-scheduler-start-page.md)

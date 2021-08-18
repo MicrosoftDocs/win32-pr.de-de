@@ -1,6 +1,6 @@
 ---
-description: Weitere Informationen finden Sie in der columnstream. CanWrite-Eigenschaft.
-title: Columnstream. CanWrite (Eigenschaft)
+description: 'Weitere Informationen zu: ColumnStream.CanWrite-Eigenschaft'
+title: ColumnStream.CanWrite-Eigenschaft
 TOCTitle: 'CanWrite property '
 ms:assetid: P:Microsoft.Isam.Esent.Interop.ColumnStream.CanWrite
 ms:mtpsurl: https://msdn.microsoft.com/library/microsoft.isam.esent.interop.columnstream.canwrite(v=EXCHG.10)
@@ -25,19 +25,19 @@ api_type:
 api_location:
 - Microsoft.Isam.Esent.Interop.dll
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: b9dd50d38aa320f433dbb9972cb8bf6e615a2125
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 3e9ee84732aeaed5d8854008fc8dff7edf703a48d7427f289e5aeb4f525126be
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104214926"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119976670"
 ---
-# <a name="columnstreamcanwrite-property"></a>Columnstream. CanWrite (Eigenschaft)
+# <a name="columnstreamcanwrite-property"></a>ColumnStream.CanWrite-Eigenschaft
 
 Ruft einen Wert, der angibt, ob der Stream Schreibvorgänge unterstützt.
 
-**Namespace:**  [Microsoft. ISAM. ESENT. Interop](./microsoft.isam.esent.interop-namespace.md)  
-**Assembly:**  Microsoft. ISAM. ESENT. Interop (in Microsoft.Isam.Esent.Interop.dll)
+**Namespace:**  [Microsoft.Isam.Esent.Interop](./microsoft.isam.esent.interop-namespace.md)  
+**Assembly:**  Microsoft.Isam.Esent.Interop (in Microsoft.Isam.Esent.Interop.dll)
 
 ## <a name="syntax"></a>Syntax
 
@@ -58,14 +58,14 @@ public override bool CanWrite { get; }
 
 #### <a name="property-value"></a>Eigenschaftswert
 
-Typ: [System. Boolean](/dotnet/api/system.boolean)  
+Typ: [System.Boolean](/dotnet/api/system.boolean)  
 
 ## <a name="see-also"></a>Siehe auch
 
-#### <a name="reference"></a>Referenz
+#### <a name="reference"></a>Verweis
 
-[Columnstream-Klasse](./columnstream-class.md)
+[ColumnStream-Klasse](./columnstream-class.md)
 
-[Columnstream-Member](./columnstream-members.md)
+[ColumnStream-Elemente](./columnstream-members.md)
 
-[Microsoft. ISAM. ESENT. Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)
+[Microsoft.Isam.Esent.Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)

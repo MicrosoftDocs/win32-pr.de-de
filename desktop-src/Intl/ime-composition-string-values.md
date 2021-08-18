@@ -1,36 +1,36 @@
 ---
-description: Diese Werte werden mit "immgetcompositionstring" und "WM \_ IME Composition" verwendet \_ .
+description: Diese Werte werden mit ImmGetCompositionString und WM \_ IME \_ COMPOSITION verwendet.
 ms.assetid: 14087598-8041-4e02-a168-f5538a437be0
-title: IME-Kompositions Zeichen folgen Werte
+title: IME Composition String Values
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 8c5b3935329e56f015cdb08a764e1660142a067a
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 52b7caa775edd6bcc41300258d8d6181077a40c743f873014e28dcf2da517ec5
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "103862919"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120107240"
 ---
-# <a name="ime-composition-string-values"></a>IME-Kompositions Zeichen folgen Werte
+# <a name="ime-composition-string-values"></a>IME Composition String Values
 
-Diese Werte werden mit " [**immgetcompositionstring**](/windows/desktop/api/Imm/nf-imm-immgetcompositionstringa) " und " [**WM \_ IME \_ Composition**](wm-ime-composition.md)" verwendet.
+Diese Werte werden mit [**ImmGetCompositionString und**](/windows/desktop/api/Imm/nf-imm-immgetcompositionstringa) [**WM \_ IME COMPOSITION \_ verwendet.**](wm-ime-composition.md)
 
 
 
-| Wert                 | BESCHREIBUNG                                                                                |
+| Wert                 | Beschreibung                                                                                |
 |-----------------------|--------------------------------------------------------------------------------------------|
-| GCS- \_ compattr         | Ruft das-Attribut der Kompositions Zeichenfolge ab oder aktualisiert es.                                |
-| GCS- \_ compclause       | Abrufen oder Aktualisieren von klauselinformationen der Kompositions Zeichenfolge.                           |
-| GCS- \_ compreadattr     | Ruft die Attribute der Lese Zeichenfolge der aktuellen Komposition ab oder aktualisiert sie.        |
-| GCS- \_ compreadclause   | Ruft die klauselinformationen der Lese Zeichenfolge der Kompositions Zeichenfolge ab oder aktualisiert sie. |
-| GCS- \_ compreadstr      | Ruft die Lese Zeichenfolge der aktuellen Komposition ab oder aktualisiert sie.                          |
-| GCS \_ compstr          | Ruft die aktuelle Kompositions Zeichenfolge ab oder aktualisiert sie.                                         |
-| GCS- \_ Cursor        | Ruft die Cursorposition in der Kompositions Zeichenfolge ab oder aktualisiert sie.                              |
-| GCS \_ Delta Start       | Ruft die Anfangsposition von Änderungen in der Kompositions Zeichenfolge ab oder aktualisiert sie.             |
-| GCS- \_ resultclause     | Abrufen oder Aktualisieren von klauselinformationen der Ergebnis Zeichenfolge.                                |
-| GCS- \_ resultreadclause | Abrufen oder Aktualisieren von klauselinformationen der Lese Zeichenfolge.                               |
-| GCS- \_ resultreadstr    | Ruft die Lese Zeichenfolge ab oder aktualisiert sie.                                                     |
-| GCS- \_ ResultStr        | Ruft die Zeichenfolge des Kompositions Ergebnisses ab oder aktualisiert sie.                                   |
+| \_GCS-KOMPATIBILITÄTS-TR         | Ruft das Attribut der Kompositionszeichenfolge ab oder aktualisiert es.                                |
+| GCS \_ COMPCLAUSE       | Ruft Klauselinformationen der Kompositionszeichenfolge ab oder aktualisiert sie.                           |
+| GCS \_ COMPREADATTR     | Ruft die Attribute der Lesezeichenfolge der aktuellen Komposition ab oder aktualisiert sie.        |
+| GCS \_ COMPREADCLAUSE   | Ruft die Klauselinformationen der Lesezeichenfolge der Kompositionszeichenfolge ab oder aktualisiert sie. |
+| GCS \_ COMPREADSTR      | Ruft die Lesezeichenfolge der aktuellen Komposition ab oder aktualisiert sie.                          |
+| GCS \_ COMPSTR          | Ruft die aktuelle Kompositionszeichenfolge ab oder aktualisiert sie.                                         |
+| GCS \_ CURSORPOS        | Ruft die Cursorposition in der Kompositionszeichenfolge ab oder aktualisiert sie.                              |
+| GCS \_ DELTASTART       | Ruft die Anfangsposition aller Änderungen an der Kompositionszeichenfolge ab oder aktualisiert sie.             |
+| GCS \_ RESULTCLAUSE     | Ruft Klauselinformationen der Ergebniszeichenfolge ab oder aktualisiert sie.                                |
+| GCS \_ RESULTREADCLAUSE | Ruft Die Klauselinformationen der Lesezeichenfolge ab oder aktualisiert sie.                               |
+| GCS \_ RESULTREADSTR    | Ruft die Lesezeichenfolge ab oder aktualisiert sie.                                                     |
+| GCS \_ RESULTSTR        | Ruft die Zeichenfolge des Kompositionsergebnis ab oder aktualisiert sie.                                   |
 
 
 

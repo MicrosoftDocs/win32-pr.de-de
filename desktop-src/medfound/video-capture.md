@@ -1,26 +1,26 @@
 ---
-description: In diesem Abschnitt wird beschrieben, wie Sie Microsoft Media Foundation zum Durchführen der Video Erfassung verwenden.
+description: In diesem Abschnitt wird beschrieben, wie sie Microsoft Media Foundation verwenden, um Videoaufnahmen durchzuführen.
 ms.assetid: ae9cdebe-0591-4bdb-9637-7a4dee002be2
-title: Video Erfassung (Microsoft Media Foundation)
+title: Videoaufnahme (Microsoft Media Foundation)
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: c53d40a2a4078f84e09b11c83da9f3f493cea9e6
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 992d615283907a2356f3d5c14dd1d042c28b7ca5bf20704d5320cb031eb5004e
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106357427"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120012100"
 ---
-# <a name="video-capture-microsoft-media-foundation"></a>Video Erfassung (Microsoft Media Foundation)
+# <a name="video-capture-microsoft-media-foundation"></a>Videoaufnahme (Microsoft Media Foundation)
 
-In diesem Abschnitt wird beschrieben, wie Sie Microsoft Media Foundation zum Durchführen der Video Erfassung verwenden.
+In diesem Abschnitt wird beschrieben, wie sie Microsoft Media Foundation verwenden, um Videoaufnahmen durchzuführen.
 
 Dieser Abschnitt enthält die folgenden Themen:
 
--   [Auflisten von Video Erfassungs Geräten](enumerating-video-capture-devices.md)
--   [Verarbeiten von Video Geräte Verlusten](handling-video-device-loss.md)
--   [Festlegen des Video Erfassungs Formats](how-to-set-the-video-capture-format.md)
--   [Festlegen der Frame Rate für die Video Erfassung](how-to-set-the-video-capture-frame-rate.md)
+-   [Aufzählen von Videoaufnahmegeräten](enumerating-video-capture-devices.md)
+-   [Behandeln von Videogeräteverlusten](handling-video-device-loss.md)
+-   [Festlegen des Videoaufnahmeformats](how-to-set-the-video-capture-format.md)
+-   [Festlegen der Videoaufnahme-Bildfrequenz](how-to-set-the-video-capture-frame-rate.md)
 
 ## <a name="related-topics"></a>Zugehörige Themen
 

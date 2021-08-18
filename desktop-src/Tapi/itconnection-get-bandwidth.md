@@ -1,21 +1,21 @@
 ---
-description: Die get \_ Bandwidth-Methode ruft den Bandbreitenwert ab.
+description: Die \_ Methode "Bandbreite abrufen" ruft den Bandbreitenwert ab.
 ms.assetid: d9020443-d061-4a60-9d54-191144def110
-title: 'Itconnection:: get_Bandwidth-Methode (sdpblb. h)'
+title: ITConnection::get_Bandwidth-Methode (Sdpblb.h)
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 563ff4d5902a3434839167ffd28fad2b7552e5c2
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: d5ec8d46b4b57fb4bc3249acd486225e6de2ef108aa82ba3661c2c4ad5840c1f
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106364548"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119975790"
 ---
-# <a name="itconnectionget_bandwidth-method"></a>Itconnection:: get- \_ Bandbreiten Methode
+# <a name="itconnectionget_bandwidth-method"></a>ITConnection::get \_ Bandwidth-Methode
 
-\[ Rendezvous-Steuerelemente und Schnittstellen für die IP-telefoniekonferenz sind nicht für die Verwendung in Windows Vista, Windows Server 2008 und nachfolgenden Versionen des Betriebssystems verfügbar. Die RTC-Client-API bietet eine ähnliche Funktionalität.\]
+\[Rendezvous-IP-Telefoniekonferenz-Steuerelemente und -Schnittstellen sind nicht für die Verwendung in Windows Vista, Windows Server 2008 und nachfolgenden Versionen des Betriebssystems verfügbar. Die RTC-Client-API bietet ähnliche Funktionen.\]
 
-Die **get \_ Bandwidth** -Methode ruft den Bandbreitenwert ab.
+Die Methode **\_ "Bandbreite abrufen"** ruft den Bandbreitenwert ab.
 
 ## <a name="syntax"></a>Syntax
 
@@ -32,7 +32,7 @@ HRESULT get_Bandwidth(
 
 <dl> <dt>
 
-*pbandwidth* \[ vorgenommen\]
+*pBandwidth* \[ out\]
 </dt> <dd>
 
 Bandbreitenwert.
@@ -48,10 +48,10 @@ Diese Methode kann einen dieser Werte zurückgeben.
 | Rückgabecode                                                                                   | Beschreibung                                                     |
 |-----------------------------------------------------------------------------------------------|-----------------------------------------------------------------|
 | <dl> <dt>**S \_ OK**</dt> </dl>          | Methode war erfolgreich.<br/>                                    |
-| <dl> <dt>**E- \_ Zeiger**</dt> </dl>     | Der *pbandwidth* -Parameter ist kein gültiger Zeiger.<br/>   |
-| <dl> <dt>**E \_ outo-Memory**</dt> </dl> | Zum Ausführen des Vorgangs ist nicht genügend Arbeitsspeicher vorhanden.<br/> |
-| <dl> <dt>**E \_ fehlschlagen**</dt> </dl>        | Unbekannter Fehler.<br/>                                   |
-| <dl> <dt>**E \_ notimpl**</dt> </dl>     | Diese Methode ist noch nicht implementiert.<br/>                  |
+| <dl> <dt>**E \_ POINTER**</dt> </dl>     | Der *pBandwidth-Parameter* ist kein gültiger Zeiger.<br/>   |
+| <dl> <dt>**E \_ OUTOFMEMORY**</dt> </dl> | Es ist nicht genügend Arbeitsspeicher zum Ausführen des Vorgangs vorhanden.<br/> |
+| <dl> <dt>**E \_ FAIL**</dt> </dl>        | Unbekannter Fehler.<br/>                                   |
+| <dl> <dt>**E \_ NOTIMPL**</dt> </dl>     | Diese Methode ist noch nicht implementiert.<br/>                  |
 
 
 
@@ -63,9 +63,9 @@ Diese Methode kann einen dieser Werte zurückgeben.
 
 | Anforderung | Wert |
 |-------------------------|---------------------------------------------------------------------------------------|
-| TAPI-Version<br/> | Erfordert TAPI 3,0 oder höher<br/>                                                 |
-| Header<br/>       | <dl> <dt>Sdpblb. h</dt> </dl>   |
-| Bibliothek<br/>      | <dl> <dt>UUID. lib</dt> </dl>   |
+| TAPI-Version<br/> | Erfordert TAPI 3.0 oder höher<br/>                                                 |
+| Header<br/>       | <dl> <dt>Sdpblb.h</dt> </dl>   |
+| Bibliothek<br/>      | <dl> <dt>Uuid.lib</dt> </dl>   |
 | DLL<br/>          | <dl> <dt>Sdpblb.dll</dt> </dl> |
 
 
@@ -74,7 +74,7 @@ Diese Methode kann einen dieser Werte zurückgeben.
 
 <dl> <dt>
 
-[**Itconnection**](itconnection.md)
+[**ITConnection**](itconnection.md)
 </dt> </dl>
 
  

@@ -1,7 +1,7 @@
 ---
-description: Die fastrauender-Methode zeichnet das Video Bild mithilfe der Funktionen BitBLT oder StretchBlt.
+description: Die FastRender-Methode zeichnet das Videobild mithilfe der Funktionen BitBlt oder StretchBlt.
 ms.assetid: 8bbc96ce-393f-46fb-bf90-61d3ce0ef0d6
-title: Cdrawimage. fastrauender-Methode (winutil. h)
+title: CDrawImage.FastRender-Methode (Winutil.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,16 +16,16 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: 823583beed6696d40803ccc098410dac053b8948
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 146c3736f7aaa89fc9a724d9dd7e4bfb58160e21e2de57f40a8e855c8a3c1446
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106373730"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120043604"
 ---
-# <a name="cdrawimagefastrender-method"></a>Cdrawimage. fastrauender-Methode
+# <a name="cdrawimagefastrender-method"></a>CDrawImage.FastRender-Methode
 
-Die- `FastRender` Methode zeichnet das Video Bild mithilfe der Funktionen **BitBLT** oder **StretchBlt** .
+Die `FastRender` -Methode zeichnet das Videobild mithilfe der **Funktionen BitBlt** oder **StretchBlt.**
 
 ## <a name="syntax"></a>Syntax
 
@@ -42,10 +42,10 @@ void FastRender(
 
 <dl> <dt>
 
-*pmediasample* 
+*pMediaSample* 
 </dt> <dd>
 
-Ein Zeiger auf die [**imediasample**](/windows/desktop/api/Strmif/nn-strmif-imediasample) -Schnittstelle des Beispiels, das das Bild enthält.
+Zeiger auf die [**IMediaSample-Schnittstelle**](/windows/desktop/api/Strmif/nn-strmif-imediasample) des Beispiels, das das Bild enthält.
 
 </dd> </dl>
 
@@ -53,13 +53,13 @@ Ein Zeiger auf die [**imediasample**](/windows/desktop/api/Strmif/nn-strmif-imed
 
 Diese Methode gibt keinen Wert zurück.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die [**cdrawimage::D rawImage**](cdrawimage-drawimage.md) -Methode ruft diese Methode auf, aber nur, wenn die Zuweisung für die Verbindung ein [**cimagezuordcator**](cimageallocator.md) -Objekt ist. In diesem Fall ist das Medien Beispiel garantiert ein [**cimagesample**](cimagesample.md) -Objekt. Das **cimagesample** -Objekt verwendet die Funktion " **kreatedibsection** ", um den gemeinsamen Speicher für die Bitmap zuzuordnen, sodass das Bild entweder mithilfe von **BitBLT** oder **StretchBlt** gezeichnet werden kann.
+Die [**CDrawImage::D rawImage-Methode**](cdrawimage-drawimage.md) ruft diese Methode auf, jedoch nur, wenn die Zuweisung für die Verbindung ein [**CImageAllocator-Objekt**](cimageallocator.md) ist. In diesem Fall ist das Medienbeispiel garantiert ein [**CImageSample-Objekt.**](cimagesample.md) Das **CImageSample-Objekt** verwendet die **CreateDIBSection-Funktion,** um freigegebenen Arbeitsspeicher für die Bitmap zu reservieren. Dadurch kann das Bild mit **BitBlt** oder **StretchBlt ge zeichnen.**
 
-Diese Methode ruft **BitBLT** auf, wenn die Quell-und ungültige Ziel-Rechtecke genau übereinstimmen oder andernfalls **StretchBlt** .
+Diese Methode ruft **BitBlt auf,** wenn die Quell- und Targerrechtecke genau übereinstimmen, **andernfalls StretchBlt.**
 
-Wenn der Filter nicht Besitzer der Zuweisung ist, verwendet die **DrawImage** -Methode [**cdrawimage:: slowrendering**](cdrawimage-slowrender.md) zum Zeichnen des Bilds.
+Wenn der Filter die Zuweisung nicht besitzt, verwendet die **DrawImage-Methode** [**CDrawImage::SlowRender,**](cdrawimage-slowrender.md) um das Bild zu zeichnen.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -67,8 +67,8 @@ Wenn der Filter nicht Besitzer der Zuweisung ist, verwendet die **DrawImage** -M
 
 | Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Winutil. h (Include Streams. h)</dt> </dl>                                                                                   |
-| Bibliothek<br/> | <dl> " <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Winutil.h (include Streams.h)</dt> </dl>                                                                                   |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Einzelhandels-Builds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
@@ -76,7 +76,7 @@ Wenn der Filter nicht Besitzer der Zuweisung ist, verwendet die **DrawImage** -M
 
 <dl> <dt>
 
-[**Cdrawimage-Klasse**](cdrawimage.md)
+[**CDrawImage-Klasse**](cdrawimage.md)
 </dt> </dl>
 
  

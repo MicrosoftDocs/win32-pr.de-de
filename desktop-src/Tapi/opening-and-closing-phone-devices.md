@@ -1,21 +1,21 @@
 ---
-description: Nachdem Sie die Funktionen eines Telefon Geräts ermittelt haben, muss eine Anwendung das Gerät öffnen, bevor es auf die Funktionen auf diesem Telefon zugreifen kann.
+description: Nachdem die Funktionen eines Telefongeräts bestimmt wurden, muss eine Anwendung das Gerät öffnen, bevor sie auf Funktionen auf diesem Telefon zugreifen kann.
 ms.assetid: 0215db43-b4d7-4a1e-8d4f-d17013c14e61
-title: Öffnen und Schließen von Telefongeräten
+title: Öffnen und Schließen Telefon Geräten
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 4692901d09c680276bda1a5dba77bc57ce599e77
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: e6dacda3e98e96ed4a11334443a7b99b949e6d1b3823e42e1790c5a346b52dac
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106345779"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120012520"
 ---
-# <a name="opening-and-closing-phone-devices"></a>Öffnen und Schließen von Telefongeräten
+# <a name="opening-and-closing-phone-devices"></a>Öffnen und Schließen Telefon Geräten
 
-Nachdem Sie die Funktionen eines Telefon Geräts ermittelt haben, muss eine Anwendung das Gerät öffnen, bevor es auf die Funktionen auf diesem Telefon zugreifen kann. Nachdem ein Telefongerät erfolgreich geöffnet wurde, wird der Anwendung ein Handle zurückgegeben, das das geöffnete Telefon darstellt. Ein Telefongerät kann in verschiedenen Modi geöffnet werden, sodass eine strukturierte Methode zur Freigabe eines Telefon Geräts bereitgestellt wird.
+Nachdem die Funktionen eines Telefongeräts bestimmt wurden, muss eine Anwendung das Gerät öffnen, bevor sie auf Funktionen auf diesem Telefon zugreifen kann. Nachdem ein Telefongerät erfolgreich geöffnet wurde, wird der Anwendung ein Handle zurückgegeben, das das geöffnete Telefon darstellt. Ein Telefongerät kann in verschiedenen Modi geöffnet werden, wodurch eine strukturierte Möglichkeit zum Freigeben eines Telefongeräts zur Verfügung stehen kann.
 
-Die [**phoneopen**](/windows/desktop/api/Tapi/nf-tapi-phoneopen) -Funktion öffnet das angegebene Telefongerät, damit die Anwendung Zugriff auf Funktionen auf dem Telefon erhält. Ein Telefongerät wird mit dem zugehörigen Geräte Bezeichner als **phoneopen** identifiziert, das als *dwtoviceid* -Parameter übergeben wird.
+Die [**phoneOpen-Funktion**](/windows/desktop/api/Tapi/nf-tapi-phoneopen) öffnet das angegebene Telefongerät, um der Anwendung Zugriff auf Funktionen auf dem Smartphone zu geben. Ein Telefongerät wird als **phoneOpen identifiziert,** indem seine Geräte-ID verwendet wird, die als *dwDeviceID-Parameter übergeben* wird.
 
  
 

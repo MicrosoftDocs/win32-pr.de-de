@@ -16,12 +16,12 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: 3bd7735726d7e7d21bc16e8a811947b954ffaac4
-ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
+ms.openlocfilehash: be20231cf62148e3487aef405735f764bf5c02b7cbaadba3c140728b66bd5391
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2021
-ms.locfileid: "108085158"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120053860"
 ---
 # <a name="ctransformfilterbeginflush-method"></a>CTransformFilter.BeginFlush-Methode
 
@@ -44,24 +44,24 @@ Diese Methode hat keine Parameter.
 
 Gibt S \_ OK oder einen anderen **HRESULT-Wert** zurück.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Zu Beginn eines Leerungsvorgang ruft die [**CTransformInputPin::BeginFlush-Methode**](ctransforminputpin-beginflush.md) des Eingabepins diese Methode auf. Diese Methode übergibt den `BeginFlush` Aufruf downstream.
+Zu Beginn eines Leerungsvorgangs ruft die [**CTransformInputPin::BeginFlush-Methode**](ctransforminputpin-beginflush.md) des Eingabepins diese Methode auf. Diese Methode übergibt den `BeginFlush` Aufruf downstream.
 
-Wenn die abgeleitete Klasse einen Arbeitsthread verwendet, um Stichproben zu liefern, sollte sie alle Daten in der Warteschlange während eines Leerungsvorgang verwerfen. Dies kann entweder in der -Methode `BeginFlush` oder in der [**EndFlush-Methode**](ctransformfilter-endflush.md) erfolgen. Beachten Sie jedoch, dass Aufrufe `BeginFlush` von nicht mit dem Streamingthread synchronisiert werden. Wenn die -Methode die in der Warteschlange gespeicherten Daten verwirft, muss der Filter darauf achten, dass keine daten zwischen den Aufrufen und `BeginFlush` `BeginFlush` **EndFlush mehr verarbeiten.** Weitere Informationen finden Sie unter [Datenfluss für Filterentwickler.](data-flow-for-filter-developers.md)
+Wenn die abgeleitete Klasse einen Arbeitsthread zum Übermitteln von Beispielen verwendet, sollte sie während eines Leerungsvorgangs alle daten in der Warteschlange verwerfen. Dies kann entweder in der `BeginFlush` -Methode oder in der [**EndFlush-Methode**](ctransformfilter-endflush.md) erfolgen. Beachten Sie jedoch, dass Aufrufe von `BeginFlush` nicht mit dem Streamingthread synchronisiert werden. Wenn die `BeginFlush` -Methode die in der Warteschlange enthaltenen Daten verwirft, muss der Filter darauf achten, keine weiteren Daten zwischen dem - und dem `BeginFlush` **EndFlush-Aufruf** zu verarbeiten. Weitere Informationen finden Sie unter [Data Flow for Filter Developers](data-flow-for-filter-developers.md).
 
 ## <a name="requirements"></a>Anforderungen
 
 
 
-| Anforderungen | Wert |
+| Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Transfrm.h (streams.h enthalten)</dt> </dl>                                                                                  |
-| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Einzelhandels-Builds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Transfrm.h (include Streams.h)</dt> </dl>                                                                                  |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Verkaufsbuilds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 

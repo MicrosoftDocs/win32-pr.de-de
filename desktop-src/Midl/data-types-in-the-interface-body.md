@@ -1,27 +1,27 @@
 ---
-title: Datentypen im Schnittstellen Text
-description: Der Schnittstellen Text, der in geschweiften Klammern () eingeschlossen ist, enthält die Datentypen, die in Remote Prozedur aufrufen und Prototypen für die Funktionen verwendet werden, die Remote ausgeführt werden.
+title: Datentypen im Schnittstellentext
+description: Der Schnittstellentext, der in geschweifte Klammern () eingeschlossen ist, enthält die Datentypen, die in Remoteprozeduraufrufen und Prototypen für die Funktionen verwendet werden, die remote ausgeführt werden.
 ms.assetid: a5130744-6b14-48a4-b439-16f0ecaf08c2
 keywords:
-- Schnittstellen-Mittell, Datentypen
+- Schnittstellen MIDL , Datentypen
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: c5bdbbb90c4cbecd4a6a4e3cc74ba9775772dd0a
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: 6691ccf89e1bff3b0e980678a30c6f706b724e4f30192d7960183c00cc00c237
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "106339196"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119979709"
 ---
-# <a name="data-types-in-the-interface-body"></a>Datentypen im Schnittstellen Text
+# <a name="data-types-in-the-interface-body"></a>Datentypen im Schnittstellentext
 
-Der Schnittstellen Text, der in geschweiften Klammern ({}) eingeschlossen ist, enthält die Datentypen, die in Remote Prozedur aufrufen und Prototypen für die Funktionen verwendet werden, die Remote ausgeführt werden. Ein Schnittstellen Text kann Importe, Pragmas, Konstante Deklarationen, Typdeklarationen und Funktions Deklarationen enthalten. Mit Ausnahme des OSF-Kompatibilitätsmodus lässt der Mittelwert Compiler auch implizite Deklarationen in Form von Variablen Definitionen zu.
+Der Schnittstellentext, der in geschweifte Klammern ({ }) eingeschlossen ist, enthält die Datentypen, die in Remoteprozeduraufrufen und Prototypen für die Funktionen verwendet werden, die remote ausgeführt werden. Ein Schnittstellentext kann Importe, Pragmas, konstanten Deklarationen, Typdeklarationen und Funktionsdeklarationen enthalten. Mit Ausnahme des OSF-Kompatibilitätsmodus lässt der MIDL-Compiler auch implizite Deklarationen in Form von Variablendefinitionen zu.
 
-Beachten Sie, dass die OSF-DCE-Spezifikation für RPC-Schnittstellen nicht mehrere Schnittstellen in einer einzelnen IDL-Datei zulässt. Wenn Sie also im OSF-Kompatibilitätsmodus ( [**/OSF**](-osf.md)) von mittlerer l kompilieren, kann die IDL-Datei nur eine Schnittstelle enthalten.
+Beachten Sie, dass die OSF-DCE-Spezifikation für RPC-Schnittstellen nicht mehrere Schnittstellen in einer einzelnen IDL-Datei zulässt. Wenn Sie also im OSF-Kompatibilitätsmodus [**(/osf)**](-osf.md)von MIDL kompilieren, kann Ihre IDL-Datei nur eine Schnittstelle enthalten.
 
-Ausführliche Informationen zur Verwendung des-Mittell-Compilers zum Erstellen von Typbibliotheken finden Sie unter Erstellen [einer Typbibliothek mit mittlerer l](generating-a-type-library-with-midl-2.md).
+Ausführliche Informationen zur Verwendung des MIDL-Compilers zum Erstellen von Typbibliotheken finden Sie unter [Generieren einer Typbibliothek mit MIDL.](generating-a-type-library-with-midl-2.md)
 
-In Microsoft RPC kann eine IDL-Datei mehrere Schnittstellen enthalten, und diese Schnittstellen können vorwärts (innerhalb der IDL-Datei, die Sie definiert) als deklariert werden. Beispiel:
+In Microsoft RPC kann eine IDL-Datei mehrere Schnittstellen enthalten, und diese Schnittstellen können vorwärts deklariert werden (innerhalb der IDL-Datei, die sie definiert). Beispiel:
 
 ``` syntax
 interface ITwo; //forward declaration
@@ -35,9 +35,9 @@ interface ITwo
 }
 ```
 
- 
+ 
 
- 
+ 
 
 
 

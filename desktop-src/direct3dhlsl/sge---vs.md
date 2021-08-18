@@ -1,5 +1,5 @@
 ---
-title: SGE-vs
+title: sge – im Vergleich zu
 description: Berechnet das Vorzeichen, wenn die erste Quelle größer oder gleich der zweiten Quelle ist.
 ms.assetid: 88e8eb68-8189-40c3-b20e-f395576f5f6a
 ms.topic: reference
@@ -9,14 +9,14 @@ topic_type:
 api_name: ''
 api_type: ''
 api_location: ''
-ms.openlocfilehash: 7bad8816b87a32c5f10c73df27beb3cc2aef7716
-ms.sourcegitcommit: fe03c5d92ca6a0d66a114b2303e99c0a19241ffb
+ms.openlocfilehash: 1478a6e53889ed9b1aed725653f18791af7e6eda1fd4c888f87e0e938d850cff
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "104389544"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119671760"
 ---
-# <a name="sge---vs"></a>SGE-vs
+# <a name="sge---vs"></a>sge – im Vergleich zu
 
 Berechnet das Vorzeichen, wenn die erste Quelle größer oder gleich der zweiten Quelle ist.
 
@@ -24,32 +24,32 @@ Berechnet das Vorzeichen, wenn die erste Quelle größer oder gleich der zweiten
 
 
 
-| SGE DST, src0, Quelle1 |
+| sge dst, src0, src1 |
 |---------------------|
 
 
 
- 
+ 
 
 where
 
--   DST ist das Ziel Register.
--   src0 ist ein Quell Register.
--   Quelle1 ist ein Quell Register.
+-   dst ist das Zielregister.
+-   src0 ist ein Quellregister.
+-   src1 ist ein Quellregister.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
 
 
-| Vertex-Shader-Versionen | 1\_1 | 2 \_ 0 | 2 \_ x | 2 \_ SW | 3 \_ 0 | 3 \_ SW |
+| Vertex-Shaderversionen | 1\_1 | 2 \_ 0 | 2 \_ x | 2 \_ sw | 3 \_ 0 | 3 \_ sw |
 |------------------------|------|------|------|-------|------|-------|
-| SGE                    | x    | x    | x    | x     | x    | x     |
+| Sge                    | x    | x    | x    | x     | x    | x     |
 
 
 
- 
+ 
 
-Das folgende Code Fragment zeigt die ausgeführten Vorgänge.
+Das folgende Codefragment zeigt die ausgeführten Vorgänge.
 
 
 ```
@@ -66,12 +66,12 @@ dest.w = (src0.w >= src1.w) ? 1.0f : 0.0f;
 
 <dl> <dt>
 
-[Vertex-shaderanweisungen](dx9-graphics-reference-asm-vs-instructions.md)
+[Vertex-Shaderanweisungen](dx9-graphics-reference-asm-vs-instructions.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

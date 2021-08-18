@@ -1,6 +1,6 @@
 ---
-title: glVertex2iv-Funktion (GL. h)
-description: Gibt einen Scheitelpunkt an. | glVertex2iv-Funktion (GL. h)
+title: glVertex2iv-Funktion (Gl.h)
+description: Gibt einen Scheitelpunkt an. | glVertex2iv-Funktion (Gl.h)
 ms.assetid: 3b88bf7d-5743-4ac0-a79f-5f450b488bd2
 keywords:
 - glVertex2iv-Funktion OpenGL
@@ -14,12 +14,12 @@ api_type:
 - DllExport
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 594c50ff1e30184d5a7292c5b639f16a48f0820b
-ms.sourcegitcommit: 92e74c99f8f4d097676959d0c317f533c2400a80
+ms.openlocfilehash: e39e173be4fb602dec1987996d50bce2703c8948f1ae0297cc31d9330b7b606a
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/09/2021
-ms.locfileid: "104050810"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120036210"
 ---
 # <a name="glvertex2iv-function"></a>glVertex2iv-Funktion
 
@@ -40,10 +40,10 @@ void WINAPI glVertex2iv(
 
 <dl> <dt>
 
-*Ramelow* 
+*V* 
 </dt> <dd>
 
-Ein Zeiger auf ein Array mit zwei-Elementen. Die Elemente sind die x-und y-Koordinaten eines Scheitel Punkts.
+Ein Zeiger auf ein Array von zwei Elementen. Die Elemente sind die x- und y-Koordinaten eines Scheitelpunkts.
 
 </dd> </dl>
 
@@ -59,13 +59,13 @@ Diese Funktion gibt keinen Wert zurück.
 |-------------------------------------|-----------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[nur Desktop-Apps\]<br/>                              |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                                    |
-| Header<br/>                   | <dl> <dt>GL. h</dt> </dl>         |
-| Bibliothek<br/>                  | <dl> <dt>Opengl32. lib</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Gl.h</dt> </dl>         |
+| Bibliothek<br/>                  | <dl> <dt>Opengl32.lib</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Opengl32.dll</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
@@ -75,31 +75,31 @@ Diese Funktion gibt keinen Wert zurück.
 [**glCallList**](glcalllist.md)
 </dt> <dt>
 
-[**glcolor**](glcolor-functions.md)
+[**glColor**](glcolor-functions.md)
 </dt> <dt>
 
-[**gledgeflag**](gledgeflag-functions.md)
+[**glEdgeFlag**](gledgeflag-functions.md)
 </dt> <dt>
 
 [**glEnd**](glend.md)
 </dt> <dt>
 
-[**glevalcoord**](glevalcoord-functions.md)
+[**glEvalCoord**](glevalcoord-functions.md)
 </dt> <dt>
 
-[**glindex**](glindex-functions.md)
+[**glIndex**](glindex-functions.md)
 </dt> <dt>
 
-[**glmaterial**](glmaterial-functions.md)
+[**glMaterial**](glmaterial-functions.md)
 </dt> <dt>
 
-[**glnormal**](glnormal-functions.md)
+[**glNormal**](glnormal-functions.md)
 </dt> <dt>
 
-[**glrect**](glrect-functions.md)
+[**glRect**](glrect-functions.md)
 </dt> <dt>
 
-[**gltexcoord**](gltexcoord-functions.md)
+[**glTexCoord**](gltexcoord-functions.md)
 </dt> </dl>
 
  

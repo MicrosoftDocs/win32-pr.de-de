@@ -1,7 +1,7 @@
 ---
-description: Ruft Analyse Alternativen für die Knoten in einer angegebenen icontextnodes-Sammlung ab.
+description: Ruft Analysewechsel für die Knoten in einer angegebenen IContextNodes-Auflistung ab.
 ms.assetid: 7d047808-4360-442d-8fd9-4ee4aeeed2c9
-title: 'Iinkanalyzer:: getalternatesforcontextnodes-Methode (iacom. h)'
+title: IInkAnalyzer::GetAlternatesForContextNodes-Methode (IACom.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,16 +13,16 @@ api_type:
 - COM
 api_location:
 - IACom.dll
-ms.openlocfilehash: 71c53e4a8e0989d836d63db5c5cae8c89d56fcf8
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: bc282906bae70a28f612a8c1fd0a5a67ea1343c73f5ededf0d6c85a8bfd60aa0
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104129460"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119939859"
 ---
-# <a name="iinkanalyzergetalternatesforcontextnodes-method"></a>Iinkanalyzer:: getalternatesforcontextnodes-Methode
+# <a name="iinkanalyzergetalternatesforcontextnodes-method"></a>IInkAnalyzer::GetAlternatesForContextNodes-Methode
 
-Ruft Analyse Alternativen für die Knoten in einer angegebenen [**icontextnodes**](icontextnodes.md) -Sammlung ab.
+Ruft Analysewechsel für die Knoten in einer angegebenen [**IContextNodes-Auflistung**](icontextnodes.md) ab.
 
 ## <a name="syntax"></a>Syntax
 
@@ -41,43 +41,43 @@ HRESULT GetAlternatesForContextNodes(
 
 <dl> <dt>
 
-*pcontextnodes* \[ in\]
+*pContextNodes* \[ In\]
 </dt> <dd>
 
-Die [**icontextnodes**](icontextnodes.md) -Auflistung, für die die Analyse Alternativen zurückgegeben werden.
+Die [**IContextNodes-Auflistung,**](icontextnodes.md) für die die Analysealternativen zurückgegeben werden.
 
 </dd> <dt>
 
-*ulmaximumalteraten* \[ in\]
+*ulMaximumAlternates* \[ In\]
 </dt> <dd>
 
 Die maximale Anzahl von Alternativen, die zurückgegeben werden sollen.
 
 </dd> <dt>
 
-*ppalternativen* \[ vorgenommen\]
+*ppAlternates* \[ out\]
 </dt> <dd>
 
-Das [**ianalysisalterniert**](ianalysisalternates.md) -Objekt, das die Analyse Alternativen enthält.
+Das [**IAnalysisAlternates-Objekt,**](ianalysisalternates.md) das die Analysealternativen enthält.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Eine Beschreibung der Rückgabewerte finden Sie unter [Klassen und Schnittstellen-Ink-Analyse](classes-and-interfaces---ink-analysis.md).
+Eine Beschreibung der Rückgabewerte finden Sie unter Klassen und Schnittstellen – [Ink-Analyse.](classes-and-interfaces---ink-analysis.md)
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
 > [!Caution]  
-> Um einen Speicherplatz zu vermeiden, nennen Sie [**IUnknown:: Release**](/windows/desktop/api/unknwn/nf-unknwn-iunknown-release) auf *ppalternativen* , wenn Sie das-Objekt nicht mehr verwenden müssen.
+> Um einen Speicherverlust zu vermeiden, rufen Sie [**IUnknown::Release**](/windows/desktop/api/unknwn/nf-unknwn-iunknown-release) auf *ppAlternates* auf, wenn Sie das Objekt nicht mehr verwenden müssen.
 
  
 
-Der oberste [**ianalysisalternate**](ianalysisalternate.md) wird als erste Alternative der Auflistung zurückgegeben.
+Das oberste [**IAnalysisAlternate**](ianalysisalternate.md) wird als erste Alternative der Auflistung zurückgegeben.
 
-Die [**icontextnode**](icontextnode.md) -Objekte in *pcontextnodes* müssen keine angrenzenden Bereiche des Dokuments darstellen.
+Die [**IContextNode-Objekte**](icontextnode.md) in *pContextNodes* müssen keine angrenzenden Bereiche des Dokuments darstellen.
 
-Für jeden Analyse Hinweis in Knoten gibt [**iinkanalyzer**](iinkanalyzer.md) nur die ersten alternativen zurück.
+Für jeden Analysehinweis in Knoten gibt [**IInkAnalyzer**](iinkanalyzer.md) nur die obere Alternative zurück.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -85,9 +85,9 @@ Für jeden Analyse Hinweis in Knoten gibt [**iinkanalyzer**](iinkanalyzer.md) nu
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows XP Tablet PC Edition \[ Desktop-Apps\]<br/>                                                 |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur Desktop-Apps der XP Tablet PC Edition \[\]<br/>                                                 |
 | Unterstützte Mindestversion (Server)<br/> | Nicht unterstützt<br/>                                                                                     |
-| Header<br/>                   | <dl> <dt>Iacom. h (erfordert auch iacom \_ i. c)</dt> </dl> |
+| Header<br/>                   | <dl> <dt>IACom.h (erfordert auch IACom \_ i.c)</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>IACom.dll</dt> </dl>                          |
 
 
@@ -96,28 +96,28 @@ Für jeden Analyse Hinweis in Knoten gibt [**iinkanalyzer**](iinkanalyzer.md) nu
 
 <dl> <dt>
 
-[**Iinkanalyzer**](iinkanalyzer.md)
+[**IInkAnalyzer**](iinkanalyzer.md)
 </dt> <dt>
 
-[**Ianalysisalternate**](ianalysisalternate.md)
+[**IAnalysisAlternate**](ianalysisalternate.md)
 </dt> <dt>
 
-[**Ianalysisalteraten**](ianalysisalternates.md)
+[**IAnalysisAlternates**](ianalysisalternates.md)
 </dt> <dt>
 
-[**Iinkanalyzer:: getalteraten-Methode**](iinkanalyzer-getalternates.md)
+[**IInkAnalyzer::GetAlternates-Methode**](iinkanalyzer-getalternates.md)
 </dt> <dt>
 
-[**Iinkanalyzer:: getalternatesforstrokes-Methode**](iinkanalyzer-getalternatesforstrokes.md)
+[**IInkAnalyzer::GetAlternatesForStrokes-Methode**](iinkanalyzer-getalternatesforstrokes.md)
 </dt> <dt>
 
-[**Iinkanalyzer:: ModifyTopAlternate-Methode**](iinkanalyzer-modifytopalternate.md)
+[**IInkAnalyzer::ModifyTopAlternate-Methode**](iinkanalyzer-modifytopalternate.md)
 </dt> <dt>
 
-[**Iinkanalyzer:: modifytopmodifiewithconfirmation-Methode**](iinkanalyzer-modifytopalternatewithconfirmation.md)
+[**IInkAnalyzer::ModifyTopAlternateWithConfirmation-Methode**](iinkanalyzer-modifytopalternatewithconfirmation.md)
 </dt> <dt>
 
-[Ink-Analyse Referenz](ink-analysis-reference.md)
+[Referenz zur Ink-Analyse](ink-analysis-reference.md)
 </dt> </dl>
 
  

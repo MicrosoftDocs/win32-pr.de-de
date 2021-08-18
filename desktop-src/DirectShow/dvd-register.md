@@ -1,19 +1,19 @@
 ---
-description: Der Datentyp "DVD- \_ Register" enthält einen Wert für eine DVD (General Parameter Register, GPRM) oder ein Systemparameter Register (SPRM).
+description: Der DVD \_ REGISTER-Datentyp enthält einen Wert für ein ALLGEMEINES DVD-Parameterregister (GPRM) oder ein Systemparameterregister (SPRM).
 ms.assetid: cd1aaeff-241c-4e54-9d05-da5cf61b58df
-title: DVD_REGISTER ("strinmif. h")
+title: DVD_REGISTER (Strmif.h)
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: fa7aba97cc0a1ddf9bf69a22e5d1adf3bf020997
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 2e849156b0e23cefa858b361e5ed10a1aecfbcd7f26a86c5194a5166b5213169
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106373814"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120043520"
 ---
-# <a name="dvd_register"></a>DVD- \_ Register
+# <a name="dvd_register"></a>\_DVD-REGISTER
 
-Der Datentyp " **DVD- \_ Register** " enthält einen Wert für eine DVD (General Parameter Register, GPRM) oder ein Systemparameter Register (SPRM).
+Der **DVD \_ REGISTER-Datentyp** enthält einen Wert für ein ALLGEMEINES DVD-Parameterregister (GPRM) oder ein Systemparameterregister (SPRM).
 
 
 ```C++
@@ -28,7 +28,7 @@ typedef WORD DVD_REGISTER;
 
 | Anforderung | Wert |
 |-------------------|-------------------------------------------------------------------------------------------------------|
-| Header<br/> | <dl> <dt>"Strinmif. h" (Include DShow. h)</dt> </dl> |
+| Header<br/> | <dl> <dt>Strmif.h (include Dshow.h)</dt> </dl> |
 
 
 
@@ -39,10 +39,10 @@ typedef WORD DVD_REGISTER;
 [DirectShow-Datentypen](directshow-data-types.md)
 </dt> <dt>
 
-[**Gprmarray**](gprmarray.md)
+[**GPRMARRAY**](gprmarray.md)
 </dt> <dt>
 
-[**Sprmarray**](sprmarray.md)
+[**SPRMARRAY**](sprmarray.md)
 </dt> </dl>
 
  

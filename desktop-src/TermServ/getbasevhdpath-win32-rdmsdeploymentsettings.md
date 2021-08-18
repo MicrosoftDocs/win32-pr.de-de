@@ -1,12 +1,12 @@
 ---
-title: Getbasevhdpath-Methode der Win32_RDMSDeploymentSettings-Klasse
-description: Ruft den Basispfad zu dem Verzeichnis ab, in dem die VHDs der virtuellen Desktop Sammlung bereitgestellt werden. | Getbasevhdpath-Methode der Win32_RDMSDeploymentSettings-Klasse
+title: GetBaseVHDPath-Methode der Win32_RDMSDeploymentSettings Klasse
+description: Ruft den Basispfad zu dem Verzeichnis ab, in dem VHDs der Sammlung virtueller Desktops bereitgestellt werden. | GetBaseVHDPath-Methode der Win32_RDMSDeploymentSettings Klasse
 ms.assetid: d3629a08-ef16-4aab-b74b-f837a8ba00d0
 ms.tgt_platform: multiple
 keywords:
-- Getbasevhdpath-Methode Remotedesktopdienste
-- Getbasevhdpath-Methode Remotedesktopdienste, Win32_RDMSDeploymentSettings-Klasse
-- Win32_RDMSDeploymentSettings-Klasse Remotedesktopdienste, getbasevhdpath-Methode
+- GetBaseVHDPath-Methode Remotedesktopdienste
+- GetBaseVHDPath-Methode Remotedesktopdienste , Win32_RDMSDeploymentSettings-Klasse
+- Win32_RDMSDeploymentSettings klasse Remotedesktopdienste , GetBaseVHDPath-Methode
 topic_type:
 - apiref
 api_name:
@@ -17,16 +17,16 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 595c6459148a0270bed2328c70e15ef74a69acf3
-ms.sourcegitcommit: 92e74c99f8f4d097676959d0c317f533c2400a80
+ms.openlocfilehash: f44d2379d498f5e191296a132c30b5fde925c9c323d4f42f1a316ed6cb0a4c46
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/09/2021
-ms.locfileid: "103961401"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120010189"
 ---
-# <a name="getbasevhdpath-method-of-the-win32_rdmsdeploymentsettings-class"></a>Getbasevhdpath-Methode der Win32 \_ rdmsdeploymentsettings-Klasse
+# <a name="getbasevhdpath-method-of-the-win32_rdmsdeploymentsettings-class"></a>GetBaseVHDPath-Methode der Win32 \_ RDMSDeploymentSettings-Klasse
 
-Ruft den Basispfad zu dem Verzeichnis ab, in dem die VHDs der virtuellen Desktop Sammlung bereitgestellt werden.
+Ruft den Basispfad zu dem Verzeichnis ab, in dem VHDs der Sammlung virtueller Desktops bereitgestellt werden.
 
 ## <a name="syntax"></a>Syntax
 
@@ -43,10 +43,10 @@ uint32 GetBaseVHDPath(
 
 <dl> <dt>
 
-*Directoriypath* \[ vorgenommen\]
+*DirectoryPath* \[ out\]
 </dt> <dd>
 
-Empfängt den VHD-Bereitstellungs Pfad.
+Empfängt den VHD-Bereitstellungspfad.
 
 </dd> </dl>
 
@@ -62,8 +62,8 @@ Gibt bei Erfolg 0 zurück, andernfalls wird ein WMI-Fehlercode zurückgegeben.
 |-------------------------------------|---------------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Nicht unterstützt<br/>                                                                   |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2012<br/>                                                              |
-| Namespace<br/>                | Root \\ CIMv2 \\ RDMs<br/>                                                                |
-| MOF<br/>                      | <dl> <dt>Rdmanagement. MOF</dt> </dl> |
+| Namespace<br/>                | \\Stamm-CIMv2-Rdms \\<br/>                                                                |
+| MOF<br/>                      | <dl> <dt>RDManagement.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>RDMS.dll</dt> </dl>         |
 
 
@@ -72,7 +72,7 @@ Gibt bei Erfolg 0 zurück, andernfalls wird ein WMI-Fehlercode zurückgegeben.
 
 <dl> <dt>
 
-[**Win32 \_ rdmsdeploymentsettings**](win32-rdmsdeploymentsettings.md)
+[**Win32 \_ RDMSDeploymentSettings**](win32-rdmsdeploymentsettings.md)
 </dt> </dl>
 
  

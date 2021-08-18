@@ -1,19 +1,19 @@
 ---
-description: Eine IME-fähige Anwendung, die die WM \_ IME- \_ Kompositions Nachricht verarbeitet, testet die Bits im lParam-Parameter und ruft die immgetcompositionstring-Funktion auf, um die festgestellte Zeichenfolge oder die Daten abzurufen.
+description: Eine IME-fähige Anwendung, die die WM \_ IME COMPOSITION-Nachricht verarbeitet, \_ testet die Bits im lParam-Parameter und ruft die ImmGetCompositionString-Funktion auf, um die angegebene Zeichenfolge oder die daten abzurufen.
 ms.assetid: 6d9cb9e2-f30e-4299-9af5-a705cd40b185
-title: Verarbeiten der WM_IME_COMPOSITION Nachricht
+title: Verarbeiten der WM_IME_COMPOSITION-Nachricht
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 059ff6f38531cfdea781d5633226d32d054f13b2
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 5cb7237c986270f2684552fb19b1ad31a1dd369a723b0c8ef47189de95021022
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104214534"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120040660"
 ---
-# <a name="processing-the-wm_ime_composition-message"></a>Verarbeiten der WM- \_ IME- \_ Kompositions Nachricht
+# <a name="processing-the-wm_ime_composition-message"></a>Verarbeiten der WM \_ IME \_ COMPOSITION-Nachricht
 
-Eine IME-fähige Anwendung, die die [**WM \_ IME- \_ Kompositions**](wm-ime-composition.md) Nachricht verarbeitet, testet die Bits im *LPARAM* -Parameter und ruft die [**immgetcompositionstring**](/windows/desktop/api/Imm/nf-imm-immgetcompositionstringa) -Funktion auf, um die festgestellte Zeichenfolge oder die Daten abzurufen. Im folgenden Beispiel wird die Ergebnis Zeichenfolge überprüft, ausreichend Arbeitsspeicher für die Zeichenfolge zugewiesen und die Ergebnis Zeichenfolge aus dem IME abgerufen.
+Eine IME-fähige Anwendung, die die [**WM \_ IME \_ COMPOSITION-Nachricht**](wm-ime-composition.md) verarbeitet, testet die Bits im *lParam-Parameter* und ruft die [**ImmGetCompositionString-Funktion**](/windows/desktop/api/Imm/nf-imm-immgetcompositionstringa) auf, um die angegebene Zeichenfolge oder die daten abzurufen. Im folgenden Beispiel wird nach der Ergebniszeichenfolge gesucht, genügend Arbeitsspeicher für die Zeichenfolge belegt und die Ergebniszeichenfolge aus der IME abgerufen.
 
 
 ```C++

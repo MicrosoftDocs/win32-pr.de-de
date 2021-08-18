@@ -1,6 +1,6 @@
 ---
-description: Weitere Informationen finden Sie in der API. jetgettruneureloginfoinstance-Methode.
-title: API. jetgettruneureloginfoinstance-Methode
+description: 'Weitere Informationen finden Sie unter: Api.JetGetTruncateLogInfoInstance-Methode'
+title: Api.JetGetTruncateLogInfoInstance-Methode
 TOCTitle: 'JetGetTruncateLogInfoInstance method '
 ms:assetid: M:Microsoft.Isam.Esent.Interop.Api.JetGetTruncateLogInfoInstance(Microsoft.Isam.Esent.Interop.JET_INSTANCE,System.String@,System.Int32,System.Int32@)
 ms:mtpsurl: https://msdn.microsoft.com/library/microsoft.isam.esent.interop.api.jetgettruncateloginfoinstance(v=EXCHG.10)
@@ -24,19 +24,19 @@ api_type:
 api_location:
 - Microsoft.Isam.Esent.Interop.dll
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: fc54d12796a724b382343c4a3514f03102df305f
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 1a0e96bd52b7a6ac196289d554c7376790ceb544823235caf5fd99e4fd5da5e5
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "104218471"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119978230"
 ---
-# <a name="apijetgettruncateloginfoinstance-method"></a>API. jetgettruneureloginfoinstance-Methode
+# <a name="apijetgettruncateloginfoinstance-method"></a>Api.JetGetTruncateLogInfoInstance-Methode
 
-Wird bei einer von [jetbeginexternalbackupinstance initiierten Sicherung (JET_INSTANCE beginexternalbackupgrbit)](./api.jetbeginexternalbackupinstance-method.md) verwendet, um eine Instanz nach den Namen der Transaktionsprotokoll Dateien abzufragen, die nach erfolgreichem Abschluss der Sicherung sicher gelöscht werden können.
+Wird während einer Sicherung verwendet, die von [JetBeginExternalBackupInstance(JET_INSTANCE, BeginExternalBackupGrbit)](./api.jetbeginexternalbackupinstance-method.md) initiiert wurde, um eine Instanz nach den Namen der Transaktionsprotokolldateien abfragt, die nach erfolgreichem Abschluss der Sicherung sicher gelöscht werden können.
 
-**Namespace:**  [Microsoft. ISAM. ESENT. Interop](./microsoft.isam.esent.interop-namespace.md)  
-**Assembly:**  Microsoft. ISAM. ESENT. Interop (in Microsoft.Isam.Esent.Interop.dll)
+**Namespace:**  [Microsoft.Isam.Esent.Interop](./microsoft.isam.esent.interop-namespace.md)  
+**Assembly:**  Microsoft.Isam.Esent.Interop (in Microsoft.Isam.Esent.Interop.dll)
 
 ## <a name="syntax"></a>Syntax
 
@@ -68,41 +68,41 @@ public static void JetGetTruncateLogInfoInstance(
 #### <a name="parameters"></a>Parameter
 
   - instance  
-    Typ: [Microsoft.ISAM.ESENT.Interop.JET_INSTANCE](./jet-instance-structure.md)  
+    Typ: [Microsoft.Isam.Esent.Interop.JET_INSTANCE](./jet-instance-structure.md)  
     
-    Die-Instanz, für die die Informationen zu erhalten sind.
+    Die -Instanz, für die die Informationen erhalten werden.
 
 <!-- end list -->
 
   - files  
-    Typ: [System. String](/dotnet/api/system.string)  
+    Typ: [System.String](/dotnet/api/system.string)  
     
-    Gibt eine Liste von null-terminierten Zeichen folgen zurück, die den Satz von Daten Bank Protokolldateien beschreiben, die nach Abschluss der Sicherung sicher gelöscht werden können. Die Liste der in diesem Puffer zurückgegebenen Zeichen folgen weist das gleiche Format auf wie eine von der Registrierung verwendete Multizeichenfolge. Jede NULL terminierte Zeichenfolge wird nacheinander zurückgegeben, gefolgt von einem abschließenden NULL-Terminator.
+    Gibt eine Liste der auf NULL beendeten Zeichenfolgen zurück, die den Satz von Datenbankprotokolldateien beschreiben, die nach Abschluss der Sicherung sicher gelöscht werden können. Die Liste der in diesem Puffer zurückgegebenen Zeichenfolgen hat das gleiche Format wie eine mehrzeichenfolge, die von der Registrierung verwendet wird. Jede auf NULL endende Zeichenfolge wird nacheinander zurückgegeben, gefolgt von einem abschließenden NULL-Abschlusszeichen.
 
 <!-- end list -->
 
   - maxChars  
-    Typ: [System. Int32](/dotnet/api/system.int32)  
+    Typ: [System.Int32](/dotnet/api/system.int32)  
     
     Maximale Anzahl der abzurufenden Zeichen.
 
 <!-- end list -->
 
-  - actualchars  
-    Typ: [System. Int32](/dotnet/api/system.int32)  
+  - actualChars  
+    Typ: [System.Int32](/dotnet/api/system.int32)  
     
-    Die tatsächliche Größe der Datei Liste. Wenn dieser Wert größer als maxChars ist, wurde die Liste abgeschnitten.
+    Tatsächliche Größe der Dateiliste. Wenn dies größer als maxChars ist, wurde die Liste abgeschnitten.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Beachten Sie, dass diese API keinen Fehler oder keine Warnung zurückgibt, wenn der Ausgabepuffer zu klein ist, um die vollständige Liste der Dateien zu akzeptieren, die Bestandteil des Sicherungsdatei Satzes sein sollten.
+Beachten Sie, dass diese API keinen Fehler oder eine Warnung zurück gibt, wenn der Ausgabepuffer zu klein ist, um die vollständige Liste der Dateien zu akzeptieren, die Teil des Sicherungsdateisets sein sollten.
 
 ## <a name="see-also"></a>Siehe auch
 
-#### <a name="reference"></a>Referenz
+#### <a name="reference"></a>Verweis
 
 [API-Klasse](./api-class.md)
 
-[API-Mitglieder](./api-members.md)
+[API-Member](./api-members.md)
 
-[Microsoft. ISAM. ESENT. Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)
+[Microsoft.Isam.Esent.Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)

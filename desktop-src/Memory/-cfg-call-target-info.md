@@ -1,7 +1,7 @@
 ---
-description: Stellt Informationen über callziele für den Ablauf Steuerungs Schutz (Control Flow Guard, cfg) dar.
+description: Stellt Informationen zu Aufrufzielen für Control Flow Guard (CFG) dar.
 ms.assetid: 8DEF907F-3F23-4122-95CE-F413FC7FD96B
-title: CFG_CALL_TARGET_INFO Struktur (ntmmapi. h)
+title: CFG_CALL_TARGET_INFO-Struktur (Ntmmapi.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,16 +13,16 @@ api_type:
 - HeaderDef
 api_location:
 - ntmmapi.h
-ms.openlocfilehash: 66177f6b478264a10c1ce0e50297d943a16407c4
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: e3bd7d351e890a968f2fa01ddffa6c8e3be16164d78393894055f55660c516bd
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106359025"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120040280"
 ---
-# <a name="cfg_call_target_info-structure"></a>CFG \_ - \_ Aufrufziel- \_ Informationsstruktur
+# <a name="cfg_call_target_info-structure"></a>CFG \_ CALL \_ TARGET \_ INFO-Struktur
 
-Stellt Informationen über callziele für den Ablauf Steuerungs Schutz (Control Flow Guard, cfg) dar.
+Stellt Informationen zu Aufrufzielen für Control Flow Guard (CFG) dar.
 
 ## <a name="syntax"></a>Syntax
 
@@ -43,14 +43,14 @@ typedef struct _CFG_CALL_TARGET_INFO {
 **Offset**
 </dt> <dd>
 
-Offset relativ zu einer angegebenen (Start-) virtuellen Adresse. Dieser Offset sollte 16 Byte ausgerichtet sein.
+Offset relativ zu einer angegebenen (Start-)virtuellen Adresse. Dieser Offset sollte 16 Byte ausgerichtet sein.
 
 </dd> <dt>
 
 **Flags**
 </dt> <dd>
 
-Flags, die den Vorgang beschreiben, der für die Adresse ausgeführt werden soll. Wenn das **cfg- \_ \_ Aufrufziel \_ gültig** ist, wird die Adresse für cfg als gültig gekennzeichnet. Andernfalls wird er als ungültiges aufrufsziel gekennzeichnet.
+Flags, die den Vorgang beschreiben, der für die Adresse ausgeführt werden soll. Wenn **CFG \_ CALL TARGET \_ \_ VALID** festgelegt ist, wird die Adresse als gültig für CFG gekennzeichnet. Andernfalls wird es als ungültiges Aufrufziel gekennzeichnet.
 
 </dd> </dl>
 
@@ -60,9 +60,9 @@ Flags, die den Vorgang beschreiben, der für die Adresse ausgeführt werden soll
 
 | Anforderung | Wert |
 |-------------------------------------|--------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows 10 \[ -Desktop-Apps\]<br/>                                          |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2016 \[ -Desktop-Apps\]<br/>                                 |
-| Header<br/>                   | <dl> <dt>Ntmmapi. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | \[Windows 10 Nur Desktop-Apps\]<br/>                                          |
+| Unterstützte Mindestversion (Server)<br/> | \[Windows Server 2016 Nur Desktop-Apps\]<br/>                                 |
+| Header<br/>                   | <dl> <dt>Ntmmapi.h</dt> </dl> |
 
 
 

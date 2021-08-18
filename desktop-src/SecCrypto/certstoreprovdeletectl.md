@@ -1,7 +1,7 @@
 ---
-description: Wird von certdeletectlfromstore aufgerufen, bevor eine CTL aus dem Speicher gelöscht wird.
+description: Wird von CertDeleteCTLFromStore aufgerufen, bevor eine CTL aus dem Speicher gelöscht wird.
 ms.assetid: 6cda772f-7e94-414d-99fc-a90451ac0ccf
-title: Certstoreprovdeletectl-Rückruffunktion
+title: CertStoreProvDeleteCTL-Rückruffunktion
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -12,16 +12,16 @@ api_name:
 api_type:
 - UserDefined
 api_location: ''
-ms.openlocfilehash: abeea0fdc3b6d77974b2c057d0e2ea98fe11e63a
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: befc031c1be441ad23c7a50563030775b625b81b66a9e1f92df4fb7c641fe73c
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "103864352"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119993090"
 ---
-# <a name="certstoreprovdeletectl-callback-function"></a>Certstoreprovdeletectl-Rückruffunktion
+# <a name="certstoreprovdeletectl-callback-function"></a>CertStoreProvDeleteCTL-Rückruffunktion
 
-Die **certstoreprovdeletectl** -Rückruffunktion wird von [**certdeletectlfromstore**](/windows/desktop/api/Wincrypt/nf-wincrypt-certdeletectlfromstore) aufgerufen, bevor eine CTL aus dem Speicher gelöscht wird. Diese Funktion bestimmt, ob eine CTL gelöscht werden kann.
+Die **Rückruffunktion CertStoreProvDeleteCTL** wird von [**CertDeleteCTLFromStore**](/windows/desktop/api/Wincrypt/nf-wincrypt-certdeletectlfromstore) aufgerufen, bevor eine CTL aus dem Speicher gelöscht wird. Diese Funktion bestimmt, ob eine CTL gelöscht werden kann.
 
 ## <a name="syntax"></a>Syntax
 
@@ -40,30 +40,30 @@ BOOL WINAPI CertStoreProvDeleteCTL(
 
 <dl> <dt>
 
-*hstoreprov* \[ in\]
+*hStoreProv* \[ In\]
 </dt> <dd>
 
-**Hcertstoreprov** -Handle für einen [*Zertifikat Speicher*](../secgloss/c-gly.md).
+**HCERTSTOREPROV-Handle** für einen [*Zertifikatspeicher.*](../secgloss/c-gly.md)
 
 </dd> <dt>
 
-*pctlcontext* \[ in\]
+*pCtlContext* \[ In\]
 </dt> <dd>
 
-Ein Zeiger auf eine [**CTL- \_ Kontext**](/windows/desktop/api/Wincrypt/ns-wincrypt-ctl_context) Struktur.
+Ein Zeiger auf eine [**CTL \_ CONTEXT-Struktur.**](/windows/desktop/api/Wincrypt/ns-wincrypt-ctl_context)
 
 </dd> <dt>
 
-*dwFlags* \[ in\]
+*dwFlags* \[ In\]
 </dt> <dd>
 
-Alle benötigten Flagwerte.
+Alle erforderlichen Flagwerte.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt " **true** " zurück, wenn eine CTL aus dem Speicher gelöscht werden kann.
+Gibt **TRUE** zurück, wenn eine CTL aus dem Speicher gelöscht werden kann.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -71,8 +71,8 @@ Gibt " **true** " zurück, wenn eine CTL aus dem Speicher gelöscht werden kann.
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows XP \[ -Desktop-Apps\]<br/>          |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/> |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur XP-Desktop-Apps\]<br/>          |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/> |
 
 
 

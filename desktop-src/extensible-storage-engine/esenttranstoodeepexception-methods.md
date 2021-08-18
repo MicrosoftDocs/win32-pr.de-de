@@ -1,5 +1,5 @@
 ---
-description: 'Erfahren Sie mehr über: esenttranstoodeepexception-Methoden'
+description: 'Weitere Informationen zu: EsentTransTooDeepException-Methoden'
 title: 'EsentTransTooDeepException-Methoden '
 TOCTitle: EsentTransTooDeepException methods
 ms:assetid: Methods.T:Microsoft.Isam.Esent.Interop.EsentTransTooDeepException
@@ -7,19 +7,19 @@ ms:mtpsurl: https://msdn.microsoft.com/library/microsoft.isam.esent.interop.esen
 ms:contentKeyID: 55103136
 ms.date: 07/30/2014
 ms.topic: article
-ms.openlocfilehash: 2e3ba521358f67ddb7b4b3c3787c66dfc5899f14
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 8a1f9c8da834b10924b7b77f2f70c7c4a0d9e4643d88630dc0be7ad6a290ee8f
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "104042293"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119969490"
 ---
 # <a name="esenttranstoodeepexception-methods"></a>EsentTransTooDeepException-Methoden 
 
-Geschützte Member einschließen  
-Geerbte Member einschließen  
+Einschließen geschützter Member  
+Einschließen geerbter Member  
 
-Der [esenttranstoodeepexception](./esenttranstoodeepexception-class.md) -Typ macht die folgenden Member verfügbar.
+Der [EsentTransTooDeepException-Typ](./esenttranstoodeepexception-class.md) macht die folgenden Member verfügbar.
 
 ## <a name="methods"></a>Methoden
 
@@ -35,42 +35,42 @@ Der [esenttranstoodeepexception](./esenttranstoodeepexception-class.md) -Typ mac
 <tr class="odd">
 <td><img src="../images/dn292146.pubmethod(exchg.10).gif" title="Öffentliche Methode" alt="Public method" /></td>
 <td><a href="/dotnet/api/system.object.equals#System_Object_Equals_System_Object_">Ist gleich</a></td>
-<td>(Von <a href="/dotnet/api/system.object">Objekt</a>geerbt.)</td>
+<td>(Geerbt vom <a href="/dotnet/api/system.object">Objekt</a>.)</td>
 </tr>
 <tr class="even">
 <td><img src="../images/dn292116.protmethod(exchg.10).gif" title="Geschützte Methode" alt="Protected method" /></td>
 <td><a href="/dotnet/api/system.object.finalize#System_Object_Finalize">Finalize</a></td>
-<td>(Von <a href="/dotnet/api/system.object">Objekt</a>geerbt.)</td>
+<td>(Geerbt vom <a href="/dotnet/api/system.object">Objekt</a>.)</td>
 </tr>
 <tr class="odd">
 <td><img src="../images/dn292146.pubmethod(exchg.10).gif" title="Öffentliche Methode" alt="Public method" /></td>
-<td><a href="/dotnet/api/system.exception.getbaseexception#System_Exception_GetBaseException">GetBaseException</a></td>
-<td>(Geerbt von der <a href="/dotnet/api/system.exception">Ausnahme</a>.)</td>
+<td><a href="/dotnet/api/system.exception.getbaseexception#System_Exception_GetBaseException">Getbaseexception</a></td>
+<td>(Geerbt von <a href="/dotnet/api/system.exception">der Ausnahme</a>.)</td>
 </tr>
 <tr class="even">
 <td><img src="../images/dn292146.pubmethod(exchg.10).gif" title="Öffentliche Methode" alt="Public method" /></td>
 <td><a href="/dotnet/api/system.object.gethashcode#System_Object_GetHashCode">GetHashCode</a></td>
-<td>(Von <a href="/dotnet/api/system.object">Objekt</a>geerbt.)</td>
+<td>(Geerbt vom <a href="/dotnet/api/system.object">Objekt</a>.)</td>
 </tr>
 <tr class="odd">
 <td><img src="../images/dn292146.pubmethod(exchg.10).gif" title="Öffentliche Methode" alt="Public method" /></td>
 <td><a href="dn334369(v=exchg.10).md">GetObjectData</a></td>
-<td>Legt beim Überschreiben in einer abgeleiteten Klasse die <a href="/dotnet/api/system.runtime.serialization.serializationinfo">SerializationInfo</a> mit Informationen zur Ausnahme fest. (Geerbt von " <a href="dn274314(v=exchg.10).md">esenterrorexception</a>".)</td>
+<td>Legt beim Überschreiben in einer abgeleiteten Klasse <a href="/dotnet/api/system.runtime.serialization.serializationinfo">serializationInfo</a> mit Informationen zur Ausnahme fest. (Geerbt von <a href="dn274314(v=exchg.10).md">EsentErrorException</a>.)</td>
 </tr>
 <tr class="even">
 <td><img src="../images/dn292146.pubmethod(exchg.10).gif" title="Öffentliche Methode" alt="Public method" /></td>
-<td><a href="/dotnet/api/system.exception.gettype#System_Exception_GetType">GetType</a></td>
-<td>(Geerbt von der <a href="/dotnet/api/system.exception">Ausnahme</a>.)</td>
+<td><a href="/dotnet/api/system.exception.gettype#System_Exception_GetType">Gettype</a></td>
+<td>(Geerbt von <a href="/dotnet/api/system.exception">der Ausnahme</a>.)</td>
 </tr>
 <tr class="odd">
 <td><img src="../images/dn292116.protmethod(exchg.10).gif" title="Geschützte Methode" alt="Protected method" /></td>
-<td><a href="/dotnet/api/system.object.memberwiseclone#System_Object_MemberwiseClone">Mitgliedglieder Klon</a></td>
-<td>(Von <a href="/dotnet/api/system.object">Objekt</a>geerbt.)</td>
+<td><a href="/dotnet/api/system.object.memberwiseclone#System_Object_MemberwiseClone">MemberwiseClone</a></td>
+<td>(Geerbt vom <a href="/dotnet/api/system.object">Objekt</a>.)</td>
 </tr>
 <tr class="even">
 <td><img src="../images/dn292146.pubmethod(exchg.10).gif" title="Öffentliche Methode" alt="Public method" /></td>
 <td><a href="/dotnet/api/system.exception.tostring#System_Exception_ToString">ToString</a></td>
-<td>(Geerbt von der <a href="/dotnet/api/system.exception">Ausnahme</a>.)</td>
+<td>(Geerbt von <a href="/dotnet/api/system.exception">der Ausnahme</a>.)</td>
 </tr>
 </tbody>
 </table>
@@ -80,8 +80,8 @@ Oben
 
 ## <a name="see-also"></a>Siehe auch
 
-#### <a name="reference"></a>Referenz
+#### <a name="reference"></a>Verweis
 
-[Esenttranstoodeepexception-Klasse](./esenttranstoodeepexception-class.md)
+[EsentTransTooDeepException-Klasse](./esenttranstoodeepexception-class.md)
 
-[Microsoft. ISAM. ESENT. Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)
+[Microsoft.Isam.Esent.Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)

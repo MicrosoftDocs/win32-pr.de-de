@@ -1,7 +1,7 @@
 ---
-description: 'Ienumumuseridentity:: Next wird nicht unterstützt und kann in Zukunft geändert oder nicht verfügbar sein. Verwenden Sie stattdessen Benutzerkonten mit schneller Benutzerumschaltung und Remotedesktop.'
+description: IEnumUserIdentity::Next wird nicht unterstützt und kann in Zukunft geändert oder nicht mehr verfügbar sein. Verwenden Sie stattdessen Benutzerkonten mit schnellem Benutzerwechsel und Remotedesktop.
 ms.assetid: 2c8dfe36-c1bb-49f8-8847-f355cfab2984
-title: 'Ienumumuseridentity:: Next-Methode (Msident. h)'
+title: IEnumUserIdentity::Next-Methode (Msident.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,18 +13,18 @@ api_type:
 - COM
 api_location:
 - Msident.dll
-ms.openlocfilehash: 763b2b4a612596c5f02a9826ad2e9c09ab8e4b0e
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: eb3074a7b55ce03e7372491fce11160f1df1bc5fc8a4e45ad0f12d4538d4b2f6
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104994607"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120009400"
 ---
-# <a name="ienumuseridentitynext-method"></a>Ienumumuseridentity:: Next-Methode
+# <a name="ienumuseridentitynext-method"></a>IEnumUserIdentity::Next-Methode
 
-\[**Ienumumuseridentity:: Next** wird nicht unterstützt und kann in Zukunft geändert oder nicht verfügbar sein. Verwenden Sie stattdessen [Benutzerkonten mit schneller Benutzerumschaltung und Remotedesktop](fastuserswitching.md).\]
+\[**IEnumUserIdentity::Next** wird nicht unterstützt und kann in Zukunft geändert oder nicht mehr verfügbar sein. Verwenden Sie stattdessen [Benutzerkonten mit schnellem Benutzerwechsel und Remotedesktop](fastuserswitching.md).\]
 
-Veraltet. Ruft ein Array von Benutzer Identitäts Schnittstellen aus der-Enumeration ab.
+Veraltet. Ruft ein Array von Benutzeridentitätsschnittstellen aus der -Enumeration ab.
 
 ## <a name="syntax"></a>Syntax
 
@@ -43,16 +43,16 @@ HRESULT Next(
 
 <dl> <dt>
 
-*celt* \[ in\]
+*Celt* \[ In\]
 </dt> <dd>
 
-Typ: **ulong**
+Typ: **ULONG**
 
-Ein **ulong** -Wert, der die Anzahl der abzurufenden Schnittstellen darstellt.
+Ein **ULONG-Wert,** der die Anzahl der abzurufende Schnittstellen darstellt.
 
 </dd> <dt>
 
-*rgelt* \[ vorgenommen\]
+*rgelt* \[ out\]
 </dt> <dd>
 
 Typ: **[ **IUnknown**](/windows/win32/api/unknwn/nn-unknwn-iunknown)\*\***
@@ -61,10 +61,10 @@ Die Adresse eines Zeigers, der die Schnittstellen empfängt.
 
 </dd> <dt>
 
-*pceltfetch* \[ vorgenommen\]
+*pceltFetched* \[ out\]
 </dt> <dd>
 
-Typ: **ulong \** _
+Typ: **ULONG \***
 
 Die Adresse eines Zeigers, der die Anzahl der erfolgreich abgerufenen Schnittstellen empfängt.
 
@@ -72,46 +72,46 @@ Die Adresse eines Zeigers, der die Anzahl der erfolgreich abgerufenen Schnittste
 
 ## <a name="return-value"></a>Rückgabewert
 
-Type: _ *HRESULT**
+Typ: **HRESULT**
 
-Wenn diese Methode erfolgreich ausgeführt wird, gibt Sie **S \_ OK** zurück. Andernfalls wird ein **HRESULT** -Fehlercode zurückgegeben.
+Wenn diese Methode erfolgreich ist, wird **S \_ OK** zurückgegeben. Andernfalls wird ein **HRESULT-Fehlercode** zurückgegeben.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-[**Ienumumuseridentity**](ienumuseridentity.md) behält eine interne Anzahl bei, die angibt, welche Schnittstelle als nächstes abgerufen wird. Bei mehreren Aufrufen dieser Methode wird diese Anzahl nicht zurückgesetzt. Um die Anzahl zurückzusetzen, nennen Sie [**ienumumuseridentity:: Reset**](ienumuseridentity-reset.md). Um die Anzahl zu erhöhen, ohne Schnittstellen abzurufen, rufen Sie [**ienumumuseridentity:: Skip**](ienumuseridentity-skip.md)auf.
+[**IEnumUserIdentity**](ienumuseridentity.md) behält eine interne Anzahl bei, die angibt, welche Schnittstelle als Nächstes abgerufen werden soll. Durch mehrere Aufrufe dieser Methode wird diese Anzahl nicht zurückgesetzt. Um die Anzahl zurückzusetzen, rufen [**Sie IEnumUserIdentity::Reset auf.**](ienumuseridentity-reset.md) Um die Anzahl zu erhöhen, ohne Schnittstellen abzurufen, rufen [**Sie IEnumUserIdentity::Skip**](ienumuseridentity-skip.md)auf.
 
-Der Wert von " *celt* " sollte nicht den Wert überschreiten, der von " [**ienumumuseridentity:: GetCount**](ienumuseridentity-getcount.md)" zurückgegeben wird.
+Der Wert von *celt* darf den von [**IEnumUserIdentity::GetCount zurückgegebenen**](ienumuseridentity-getcount.md)Wert nicht überschreiten.
 
-## <a name="requirements"></a>Requirements (Anforderungen)
+## <a name="requirements"></a>Anforderungen
 
 
 
 | Anforderung | Wert |
 |-------------------------------------|----------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows XP \[ -Desktop-Apps\]<br/>                                            |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/>                                   |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur XP-Desktop-Apps\]<br/>                                            |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                                   |
 | Ende des Supports (Client)<br/>    | Windows XP<br/>                                                                  |
-| Ende des Supports (Server)<br/>    | Windows Server 2003<br/>                                                         |
-| Header<br/>                   | <dl> <dt>Msident. h</dt> </dl>   |
-| IDL<br/>                      | <dl> <dt>Msident. idl</dt> </dl> |
+| Ende des Supports (Server)<br/>    | Windows Server 2003<br/>                                                         |
+| Header<br/>                   | <dl> <dt>Msident.h</dt> </dl>   |
+| Idl<br/>                      | <dl> <dt>Msident.idl</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Msident.dll</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 
-[**Iumumuseridentity**](ienumuseridentity.md)
+[**IEnumUserIdentity**](ienumuseridentity.md)
 </dt> <dt>
 
-[**Iendumuseridentity:: Skip**](ienumuseridentity-skip.md)
+[**IEnumUserIdentity::Skip**](ienumuseridentity-skip.md)
 </dt> <dt>
 
-[**Ienumumuseridentity:: Reset**](ienumuseridentity-reset.md)
+[**IEnumUserIdentity::Reset**](ienumuseridentity-reset.md)
 </dt> <dt>
 
-[**Iendumuseridentity:: GetCount**](ienumuseridentity-getcount.md)
+[**IEnumUserIdentity::GetCount**](ienumuseridentity-getcount.md)
 </dt> </dl>
 
  

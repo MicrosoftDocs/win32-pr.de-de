@@ -1,19 +1,19 @@
 ---
-description: Definiert ein 4-Byte-Array, das 4 8-Bit-ASCII-Werte für Leerzeichen, a-z oder a-z enthält, um die Funktions Tags von OpenType-Skripts, Sprachen und Schriftart zu identifizieren.
+description: Definiert ein 4-Byte-Array, das vier 8-Bit-ASCII-Werte für Leerzeichen, A-Z oder a-z enthält, um OpenType-Skript-, Sprach- und Schriftartfeaturetags zu identifizieren.
 ms.assetid: 188ad9a1-e0eb-411f-b6df-8c394d122d6f
-title: OPENTYPE_TAG (Usp10. h)
+title: OPENTYPE_TAG (Usp10.h)
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: bf973c03f26bdb8f8b3799e1780fed5075d315cb
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: d7c784fa7f6243e7e5444dcbc64c690ce7184d6ace469759c19be9de87854732
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106368198"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120040780"
 ---
-# <a name="opentype_tag"></a>OpenType- \_ Tag
+# <a name="opentype_tag"></a>\_OPENTYPE-TAG
 
-Definiert ein 4-Byte-Array, das 4 8-Bit-ASCII-Werte für Leerzeichen, a-z oder a-z enthält, um die Funktions Tags von OpenType-Skripts, Sprachen und Schriftart zu identifizieren.
+Definiert ein 4-Byte-Array, das vier 8-Bit-ASCII-Werte für Leerzeichen, A-Z oder a-z enthält, um OpenType-Skript-, Sprach- und Schriftartfeaturetags zu identifizieren.
 
 
 ```C++
@@ -22,15 +22,15 @@ typedef ULONG OPENTYPE_TAG;
 
 
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-In den folgenden Beispielen werden Darstellungen von OpenType-Merkmals Tags definiert.
+In den folgenden Beispielen werden Darstellungen von OpenType-Featuretags definiert.
 
--   Das featuretag für die Ligaturen-Funktion ist "Liga".
--   Die Sprachen Tags für Rumänisch, Urdu und Persian sind "Rom", "URD" bzw. "All". Beachten Sie, dass jedes dieser Tags mit einem Leerzeichen endet.
--   Die Skript Tags für lateinische und arabische Skripts sind "Latn" bzw. "Arabisch".
+-   Das Featuretag für das Feature "ligature" ist "liga".
+-   Die Sprachtags für "Deutsch", "Urdu" und "Deutsch" sind "ROM", "URD" bzw. "FAR". Beachten Sie, dass jedes dieser Tags mit einem Leerzeichen endet.
+-   Die Skripttags für lateinische und arabische Skripts sind "latn" bzw. "arabisch".
 
-Weitere Informationen zu OpenType-featuretags und der OpenType-Spezifikation finden Sie unter <https://www.microsoft.com/typography/otspec/featuretags.htm> .
+Weitere Informationen zu OpenType-Featuretags und zur OpenType-Spezifikation finden Sie unter <https://www.microsoft.com/typography/otspec/featuretags.htm> .
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -40,8 +40,8 @@ Weitere Informationen zu OpenType-featuretags und der OpenType-Spezifikation fin
 |-------------------------------------|------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[nur Desktop-Apps\]<br/>                         |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                               |
-| Verteilbare Komponente<br/>          | Usp10.dll, Version 1,600 oder höher, onwindows Xpund höher<br/>                |
-| Header<br/>                   | <dl> <dt>Usp10. h</dt> </dl> |
+| Verteilbare Komponente<br/>          | Usp10.dll Version 1.600 oder höher unterWindows XPand höher<br/>                |
+| Header<br/>                   | <dl> <dt>Usp10.h</dt> </dl> |
 
 
 
@@ -49,37 +49,37 @@ Weitere Informationen zu OpenType-featuretags und der OpenType-Spezifikation fin
 
 <dl> <dt>
 
-[Unischreiber](uniscribe.md)
+[Uniscribe](uniscribe.md)
 </dt> <dt>
 
-[Uniscristrukturen](uniscribe-structures.md)
+[Uniscribe-Strukturen](uniscribe-structures.md)
 </dt> <dt>
 
-[**Scriptgetfontalternateglyphs**](/windows/desktop/api/Usp10/nf-usp10-scriptgetfontalternateglyphs)
+[**ScriptGetFontAlternateGlyphs**](/windows/desktop/api/Usp10/nf-usp10-scriptgetfontalternateglyphs)
 </dt> <dt>
 
-[**Scriptgetfontfeaturetags**](/windows/desktop/api/Usp10/nf-usp10-scriptgetfontfeaturetags)
+[**ScriptGetFontFeatureTags**](/windows/desktop/api/Usp10/nf-usp10-scriptgetfontfeaturetags)
 </dt> <dt>
 
-[**Scriptgetfontlanguagetags**](/windows/desktop/api/Usp10/nf-usp10-scriptgetfontlanguagetags)
+[**ScriptGetFontLanguageTags**](/windows/desktop/api/Usp10/nf-usp10-scriptgetfontlanguagetags)
 </dt> <dt>
 
-[**Scriptgetfontscripttags**](/windows/desktop/api/Usp10/nf-usp10-scriptgetfontscripttags)
+[**ScriptGetFontScriptTags**](/windows/desktop/api/Usp10/nf-usp10-scriptgetfontscripttags)
 </dt> <dt>
 
-[**Scriptitemizeopentype**](/windows/desktop/api/usp10/nf-usp10-scriptitemizeopentype)
+[**ScriptItemizeOpenType**](/windows/desktop/api/usp10/nf-usp10-scriptitemizeopentype)
 </dt> <dt>
 
-[**Scriptplaceopentype**](/windows/desktop/api/Usp10/nf-usp10-scriptplaceopentype)
+[**ScriptPlaceOpenType**](/windows/desktop/api/Usp10/nf-usp10-scriptplaceopentype)
 </dt> <dt>
 
-[**Scriptpositionsingleglyph**](/windows/desktop/api/Usp10/nf-usp10-scriptpositionsingleglyph)
+[**ScriptPositionSingleGlyph**](/windows/desktop/api/Usp10/nf-usp10-scriptpositionsingleglyph)
 </dt> <dt>
 
-[**Scriptshapeopentype**](/windows/desktop/api/Usp10/nf-usp10-scriptshapeopentype)
+[**ScriptShapeOpenType**](/windows/desktop/api/Usp10/nf-usp10-scriptshapeopentype)
 </dt> <dt>
 
-[**Scriptsubstitutesingleglyph**](/windows/desktop/api/Usp10/nf-usp10-scriptsubstitutesingleglyph)
+[**ScriptSubstituteSingleGlyph**](/windows/desktop/api/Usp10/nf-usp10-scriptsubstitutesingleglyph)
 </dt> </dl>
 
  

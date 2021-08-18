@@ -1,7 +1,7 @@
 ---
-description: 'Die Reset-Methode setzt die Enumerationsfolge auf den Anfang zurück. Diese Methode implementiert die iumumpins:: Reset-Methode.'
+description: Die Reset-Methode setzt die Enumerationssequenz auf den Anfang zurück. Diese Methode implementiert die IEnumPins::Reset-Methode.
 ms.assetid: b2e86304-bb14-495b-a922-8868b3898d85
-title: Cenumpins. Reset-Methode (amfilter. h)
+title: CEnumPins.Reset-Methode (Amfilter.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,16 +16,16 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: 154899176d342b4630f8c93ab4b4cb86a54e13ea
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 0bbef967736261ca6e177bd0cb31e399f7d68bad1ab1a8ef9601e717213c82be
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106368618"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119999490"
 ---
-# <a name="cenumpinsreset-method"></a>Cenumpins. Reset-Methode
+# <a name="cenumpinsreset-method"></a>CEnumPins.Reset-Methode
 
-Die- `Reset` Methode setzt die Enumerationsfolge auf den Anfang zurück. Diese Methode implementiert die [**iumumpins:: Reset**](/windows/desktop/api/Strmif/nf-strmif-ienumpins-reset) -Methode.
+Die `Reset` -Methode setzt die Enumerationssequenz auf den Anfang zurück. Diese Methode implementiert die [**IEnumPins::Reset-Methode.**](/windows/desktop/api/Strmif/nf-strmif-ienumpins-reset)
 
 ## <a name="syntax"></a>Syntax
 
@@ -50,16 +50,16 @@ Gibt S \_ OK zurück.
 
 | Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Amfilter. h (Include Streams. h)</dt> </dl>                                                                                  |
-| Bibliothek<br/> | <dl> " <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Amfilter.h (include Streams.h)</dt> </dl>                                                                                  |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Verkaufsbuilds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Cenumpins-Klasse**](cenumpins.md)
+[**CEnumPins-Klasse**](cenumpins.md)
 </dt> </dl>
 
  

@@ -1,32 +1,32 @@
 ---
-description: Registriert einen Computer in einer Zertifikat Hierarchie mithilfe einer Vorlage, eines Zertifikat anzeigen Amens und der Zertifikat Beschreibung.
+description: Registriert einen Computer in einer Zertifikathierarchie mithilfe einer Vorlage, eines Zertifikatanzeigenamens und der Zertifikatbeschreibung.
 ms.assetid: d9e01767-f6e8-4fd6-a848-8d5acf57407e
-title: Registrierungs simplemachinecert
+title: enrollSimpleMachineCert
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 8582bc73fdee7e8be6b2cff8d0aec81b84487307
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: eb533dc2c0d262a64f8fd1d2245c310880586c04900ef028e7c2609f1a6b4577
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106357840"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119976900"
 ---
-# <a name="enrollsimplemachinecert"></a>Registrierungs simplemachinecert
+# <a name="enrollsimplemachinecert"></a>enrollSimpleMachineCert
 
-Das Beispiel "registrisimplemachinecert" registriert einen Computer in einer Zertifikat Hierarchie, indem eine Vorlage, ein Zertifikat Anzeige Name und die Zertifikat Beschreibung verwendet werden.
+Im Beispiel enrollSimpleMachineCert wird ein Computer in einer Zertifikathierarchie mithilfe einer Vorlage, eines Zertifikatanzeigenamens und der Zertifikatbeschreibung registriert.
 
 ## <a name="location"></a>Standort
 
-Wenn Sie das Microsoft Windows Software Development Kit (SDK) installieren, wird eine C++-Version des Beispiels standardmäßig im Ordner *% Program Files%* \\ Microsoft SDKs \\ Windows \\ v 7.0 \\ Samples \\ Security \\ X509 Certificate Registrierung \\ VC \\ registrisimplemachinecert installiert. Eine VBScript-Version ist im Ordner " *% Program Files%* \\ Microsoft sdert \\ Windows \\ v 7.0 \\ Samples \\ Security \\ X509 Certificate Registrierung \\ VB Registrierungs \\ simplemachinecert" installiert.
+Wenn Sie das Microsoft Windows Software Development Kit (SDK) installieren, wird standardmäßig eine C++-Version des Beispiels im Ordner *%ProgramFiles%* \\ Microsoft SDKs Windows \\ \\ v7.0 \\ Samples Security \\ \\ X509 Certificate Enrollment \\ VC \\ EnrollSimpleMachineCert installiert. Eine VBScript-Version wird im Ordner *%ProgramFiles%* \\ Microsoft SDKs Windows \\ \\ v7.0 \\ Samples Security \\ \\ X509 Certificate Enrollment \\ VBS \\ EnrollSimpleMachineCert installiert.
 
-## <a name="discussion"></a>Diskussion
+## <a name="discussion"></a>Diskussion (Discussion)
 
-Das Beispiel "registrisimplemachinecert":
+Das Beispiel enrollSimpleMachineCert:
 
-1.  Verarbeitet die Befehlszeilenargumente. Die Befehlszeile muss den Namen der Vorlage, einen Zertifikat anzeigen Amen und eine Zertifikat Beschreibung enthalten.
-2.  Erstellt ein [**IX509Enrollment**](/windows/desktop/api/CertEnroll/nn-certenroll-ix509enrollment) -Objekt und initialisiert es mithilfe der in der Befehlszeile angegebenen Vorlage. Der ContextAdministratorForceMachine-Wert für den ersten Parameter gibt an, dass das Zertifikat von einem Administrator angefordert wird, der im Auftrag eines Computers agiert.
-3.  Fügt dem Registrierungs Objekt den anzeigen Amen und die Beschreibung hinzu.
-4.  Versucht, die Zertifikat Anforderung zu registrieren und den Status des Prozesses zu überprüfen. Die Funktion "checkenrollstatus" wird in der Datei "registricommon. cpp" definiert.
+1.  Verarbeitet die Befehlszeilenargumente. Die Befehlszeile sollte den Namen der Vorlage, einen Zertifikatanzeigenamen und eine Zertifikatbeschreibung enthalten.
+2.  Erstellt ein [**IX509Enrollment-Objekt**](/windows/desktop/api/CertEnroll/nn-certenroll-ix509enrollment) und initialisiert es mithilfe der in der Befehlszeile angegebenen Vorlage. Der ContextAdministratorForceMachine-Wert für den ersten Parameter gibt an, dass das Zertifikat von einem Administrator angefordert wird, der im Auftrag eines Computers handelt.
+3.  Fügt dem Registrierungsobjekt den Anzeigenamen und die Beschreibung hinzu.
+4.  Versucht, die Zertifikatanforderung zu registrieren, und überprüft den Status des Prozesses. Die checkEnrollStatus-Funktion ist in enrollCommon.cpp definiert.
 
 ## <a name="related-topics"></a>Zugehörige Themen
 

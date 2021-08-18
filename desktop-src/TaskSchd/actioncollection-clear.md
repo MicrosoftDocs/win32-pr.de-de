@@ -1,11 +1,11 @@
 ---
-title: Aktions Collection. Clear-Methode
-description: Bei der Skripterstellung werden alle Aktionen aus der Auflistung gelöscht.
+title: ActionCollection.Clear-Methode
+description: Löscht für die Skripterstellung alle Aktionen aus der Auflistung.
 ms.assetid: e2cdf2eb-72ca-42cf-bfbe-2234153ba3b4
 keywords:
-- Methoden Taskplaner löschen
-- Clear-Methode Taskplaner, Aktions Sammlungsobjekt
-- Aktions Sammlungsobjekt Taskplaner, Clear-Methode
+- Clear-Methode Taskplaner
+- Clear-Methode Taskplaner , ActionCollection-Objekt
+- ActionCollection-Objekt Taskplaner , Clear-Methode
 topic_type:
 - apiref
 api_name:
@@ -16,16 +16,16 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: bd44fac1e86188de6d1c549dc517630cf1094fe4
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 1d9a0f951fd1dbbcba934553d6aea4d87a687b36a1f91dceab10d9a00c7973a6
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "106342637"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120011780"
 ---
-# <a name="actioncollectionclear-method"></a>Aktions Collection. Clear-Methode
+# <a name="actioncollectionclear-method"></a>ActionCollection.Clear-Methode
 
-Bei der Skripterstellung werden alle Aktionen aus der Auflistung gelöscht.
+Löscht für die Skripterstellung alle Aktionen aus der Auflistung.
 
 ## <a name="syntax"></a>Syntax
 
@@ -50,9 +50,9 @@ Diese Methode gibt keinen Wert zurück.
 
 | Anforderung | Wert |
 |-------------------------------------|-----------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                          |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/>                                    |
-| Typbibliothek<br/>             | <dl> <dt>Taskschd. tlb</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur Vista-Desktop-Apps\]<br/>                                          |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/>                                    |
+| Typbibliothek<br/>             | <dl> <dt>Taskschd.tlb</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Taskschd.dll</dt> </dl> |
 
 

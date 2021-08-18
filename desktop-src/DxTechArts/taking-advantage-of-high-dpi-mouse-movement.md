@@ -1,35 +1,35 @@
 ---
 title: Nutzen der High-Definition Mausbewegung
-description: Dieser Artikel konzentriert sich auf die beste Methode zur Optimierung der Leistung von High-Definition-Maus Eingaben in einem Spiel, wie z. b. einem ersten Mitarbeiter.
+description: In diesem Artikel geht es um die beste Möglichkeit, die Leistung von High-Definition-Mauseingaben in einem Spiel wie einem Erstperson-Spieler zu optimieren.
 ms.assetid: 0138a248-e8e0-a392-564e-7a9229b94b56
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 7ebe2abd9487d95b8fe12aa3c6938e21d72d8e2f
-ms.sourcegitcommit: 592c9bbd22ba69802dc353bcb5eb30699f9e9403
+ms.openlocfilehash: 7d7a6efe6916ad8605e3cdc056ffd716ac5113b66c022b0a95fd8a78b1a62e30
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "104390699"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120042390"
 ---
 # <a name="taking-advantage-of-high-definition-mouse-movement"></a>Nutzen der High-Definition Mausbewegung
 
-Eine Standard Computermaus gibt Daten mit 400 Punkten pro Zoll (dpi) zurück, während eine High-Definition-Maus Daten mit 800 dpi oder höher generiert. Dadurch wird die Eingabe von einer High-Definition-Maus wesentlich präziser als die von der Standard Maus. Hoch Definitionsdaten können jedoch nicht über die standardmäßigen WM- \_ mouset-Nachrichten abgerufen werden. Im Allgemeinen profitieren Spiele von High-Definition-Maus Geräten, aber Spiele, die mithilfe von WM MouseMove Maus Daten abrufen, \_ können nicht auf die vollständige, ungefilterte Auflösung der Maus zugreifen.
+Eine Standard-Computermaus gibt Daten bei 400 DPI (Dots per Inch) zurück, während eine HdM-Maus Daten mit mindestens 800 DPI generiert. Dadurch wird die Eingabe von einer hdind-Maus viel präziser als die Eingabe mit einer Standardmaus. Allerdings können high-definition-Daten nicht über die standardmäßigen WM \_ MOUSEMOVE-Meldungen erhalten werden. Im Allgemeinen profitieren Spiele von leistungsstarken Mausgeräten, aber Spiele, die Mausdaten nur mitHILFE von WM MOUSEMOVE abrufen, können nicht auf die vollständige, ungefilterte Auflösung der Maus \_ zugreifen.
 
-Eine Reihe von Unternehmen ist die Herstellung von High-Definition-Maus Geräten, z. b. Microsoft und Logitech. Dank der zunehmenden Beliebtheit von Maus Geräten mit hoher Auflösung ist es wichtig, dass Entwickler wissen, wie die von diesen Geräten generierten Informationen optimal verwendet werden. Dieser Artikel konzentriert sich auf die beste Methode zur Optimierung der Leistung von High-Definition-Maus Eingaben in einem Spiel, wie z. b. einem ersten Mitarbeiter.
+Eine Reihe von Unternehmen stellt High-Definition-Mausgeräte her, z. B. Microsoft und Logitech. Mit der zunehmenden Beliebtheit von hochauflösenden Mausgeräten ist es wichtig, dass Entwickler verstehen, wie die von diesen Geräten generierten Informationen optimal verwendet werden. In diesem Artikel geht es um die beste Möglichkeit, die Leistung von High-Definition-Mauseingaben in einem Spiel wie einem Erstperson-Spieler zu optimieren.
 
-## <a name="retrieving-mouse-movement-data"></a>Abrufen von Maus Verschiebungs Daten
+## <a name="retrieving-mouse-movement-data"></a>Abrufen von Mausbewegungsdaten
 
-Im folgenden sind die drei primären Methoden zum Abrufen von Mausdaten aufgeführt:
+Hier sind die drei primären Methoden zum Abrufen von Mausdaten:
 
--   [WM- \_ mouseelmove](/windows)
--   [WM- \_ Eingabe](/windows)
+-   [WM \_ MOUSEMOVE](/windows)
+-   [\_WM-EINGABE](/windows)
 -   [DirectInput](#directinput)
 
-Jede Methode hat vor-und Nachteile, abhängig davon, wie die Daten verwendet werden.
+Je nachdem, wie die Daten verwendet werden, gibt es Vor- und Nachteile für jede Methode.
 
-### <a name="wm_mousemove"></a>WM- \_ mouseelmove
+### <a name="wm_mousemove"></a>WM \_ MOUSEMOVE
 
-Die einfachste Methode zum Lesen von Maus Verschiebungs Daten ist die Verwendung von WM- \_ MouseMove-Nachrichten. Im folgenden finden Sie ein Beispiel für das Lesen von Maus Verschiebungs Daten aus der WM- \_ MouseMove-Nachricht:
+Die einfachste Methode zum Lesen von Mausbewegungsdaten ist das Lesen von WM \_ MOUSEMOVE-Nachrichten. Im Folgenden finden Sie ein Beispiel für das Lesen von Mausbewegungsdaten aus der WM \_ MOUSEMOVE-Meldung:
 
 ```cpp
 case WM_MOUSEMOVE:
@@ -41,17 +41,17 @@ case WM_MOUSEMOVE:
 }
 ```
 
-Der primäre Nachteil von Daten aus WM- \_ mousmove ist, dass Sie auf die Bildschirmauflösung beschränkt ist. Dies bedeutet Folgendes: Wenn Sie die Maus leicht verschieben – aber nicht genug, um den Zeiger auf das nächste Pixel zu bewegen – wird keine WM- \_ MouseMove-Nachricht generiert. Die Verwendung dieser Methode zum Lesen der Mausbewegung negiert die Vorteile der Eingabe von hoch Definitionen.
+Der Hauptnachteil von Daten von WM \_ MOUSEMOVE ist, dass sie auf die Bildschirmauflösung beschränkt sind. Dies bedeutet, dass keine WM MOUSEMOVE-Meldung generiert wird, wenn Sie die Maus leicht bewegen – aber nicht genug, um den Zeiger zum nächsten Pixel zu \_ bewegen. Daher negiert die Verwendung dieser Methode zum Lesen von Mausbewegungen die Vorteile von High-Definition-Eingaben.
 
-Der Vorteil von WM \_ MouseMove besteht jedoch darin, dass Windows Zeiger Beschleunigung (auch als "Ballistik" bezeichnet) auf die rohdatenmausdaten anwendet, wodurch sich der Mauszeiger wie erwartet verhält. Dies bewirkt, dass WM \_ MouseMove die bevorzugte Option für das Zeiger Steuerelement (über WM- \_ Eingabe oder DirectInput) ist, da es für Benutzer zu einem natürlicheren Verhalten führt. Während WM \_ MouseMove für das Bewegen von Maus Zeigern ideal ist, ist es nicht so gut, eine erste Person Kamera zu verschieben, da die Genauigkeit der hoch Definition verloren geht.
+Der Vorteil von WM MOUSEMOVE ist jedoch, dass Windows die Zeigerbeschleunigung (auch als "Ballistik" bezeichnet) auf die rohen Mausdaten angewendet, wodurch sich der Mauszeiger wie erwartet \_ verhält. Dies macht WM MOUSEMOVE zur bevorzugten Option für die Zeigersteuerung (über WM INPUT oder \_ DirectInput), da dies zu einem natürlicheren Verhalten \_ für Benutzer führt. WM MOUSEMOVE eignet sich zwar ideal zum Bewegen von Mauszeigern, eignet sich jedoch nicht so gut zum Bewegen einer Erstpersonkamera, da die hohe Genauigkeit \_ verloren geht.
 
-Weitere Informationen zu WM \_ mousee Move finden Sie unter [**WM \_ mousee Move**](/windows/desktop/inputdev/wm-mousemove).
+Weitere Informationen zu WM \_ MOUSEMOVE finden Sie unter [**WM \_ MOUSEMOVE**](/windows/desktop/inputdev/wm-mousemove).
 
-### <a name="wm_input"></a>WM- \_ Eingabe
+### <a name="wm_input"></a>\_WM-EINGABE
 
-Die zweite Methode zum Abrufen von Maus Daten ist das Lesen von WM- \_ Eingabe Nachrichten. Die Verarbeitung von WM \_ -Eingabe Nachrichten ist komplizierter als \_ die Verarbeitung von WM-mouset-Nachrichten, aber WM \_ -Eingabe Nachrichten werden direkt aus dem Eingabegeräte (HID)-Stapel gelesen und spiegeln Ergebnisse der hoch Definition wider.
+Die zweite Methode zum Abrufen von Mausdaten ist das Lesen von WM \_ INPUT-Nachrichten. Die Verarbeitung von WM INPUT-Nachrichten ist komplizierter als die Verarbeitung von WM MOUSEMOVE-Nachrichten, aber WM INPUT-Nachrichten werden direkt aus dem \_ \_ Eingabegeräte-Stapel (HID) gelesen und spiegeln ergebnisse mit hoher Definition \_ wider.
 
-Zum Lesen von Maus Verschiebungs Daten aus der WM- \_ Eingabe Nachricht muss das Gerät zuerst registriert werden. der folgende Code stellt ein Beispiel dafür dar:
+Um Mausbewegungsdaten aus der WM INPUT-Nachricht zu lesen, muss das Gerät zuerst registriert werden. Der folgende Code \_ enthält ein Beispiel dafür:
 
 ```cpp
 // you can #include <hidusage.h> for these defines
@@ -70,7 +70,7 @@ Rid[0].hwndTarget = hWnd;
 RegisterRawInputDevices(Rid, 1, sizeof(Rid[0]));
 ```
 
-Der folgende Code behandelt WM \_ -Eingabe Meldungen im WinProc-Handler der Anwendung:
+Der folgende Code verarbeitet WM \_ INPUT-Meldungen im WinProc-Handler der Anwendung:
 
 ```cpp
 case WM_INPUT: 
@@ -91,17 +91,17 @@ case WM_INPUT:
 }
 ```
 
-Der Vorteil der Verwendung von WM- \_ Eingaben besteht darin, dass Ihr Spiel Rohdaten von der Maus auf der niedrigsten möglichen Ebene empfängt.
+Der Vorteil der Verwendung von WM INPUT ist, dass Ihr Spiel rohe Daten von der Maus auf \_ der niedrigsten möglichen Ebene empfängt.
 
-Der Nachteil ist, dass \_ für die WM-Eingabe keine Ballistik auf die Daten angewendet wird. Wenn Sie also einen Cursor mit diesen Daten steuern möchten, ist zusätzlicher Aufwand erforderlich, um den Cursor wie in Windows aussehen zu lassen. Weitere Informationen zum Anwenden von zeigereignis finden Sie unter [Zeiger-Ballistik für Windows XP](https://www.microsoft.com/whdc/archive/pointer-bal.mspx).
+Der Nachteil ist, dass WM INPUT keine Ballistik auf seine Daten angewendet hat. Wenn Sie also einen Cursor mit diesen Daten bewegen möchten, ist zusätzlicher Aufwand erforderlich, damit sich der Cursor wie in der \_ Windows. Weitere Informationen zum Anwenden von Zeigerballistik finden Sie unter [Zeigerballistik für](https://www.microsoft.com/whdc/archive/pointer-bal.mspx)Windows XP .
 
-Weitere Informationen zu WM- \_ Eingaben finden Sie unter Informationen [zu](/windows/desktop/inputdev/about-raw-input)unformatierten Eingaben.
+Weitere Informationen zu WM \_ INPUT finden Sie unter About Raw [Input](/windows/desktop/inputdev/about-raw-input).
 
 ### <a name="directinput"></a>DirectInput
 
-[DirectInput](/windows-hardware/drivers/hid/directinput) ist ein Satz von API-aufrufen, mit denen Eingabegeräte auf dem System abstrahiert werden. Intern erstellt DirectInput einen zweiten Thread zum Lesen von WM \_ -Eingabedaten, und die Verwendung der DirectInput-APIs führt zu mehr Aufwand als das einfache Lesen von WM- \_ Eingaben. DirectInput ist nur für das Lesen von Daten aus DirectInput-Joysticks nützlich. Wenn Sie jedoch nur den Xbox 360-Controller für Windows unterstützen müssen, verwenden Sie stattdessen [xinput](/windows/desktop/xinput/xinput-game-controller-apis-portal) . Insgesamt bietet die Verwendung von DirectInput keine Vorteile beim Lesen von Daten von Maus-oder Tastatur Geräten, und die Verwendung von DirectInput in diesen Szenarien wird davon abgeraten.
+[DirectInput ist](/windows-hardware/drivers/hid/directinput) eine Gruppe von API-Aufrufen, die Eingabegeräte im System abstrahiert. Intern erstellt DirectInput einen zweiten Thread zum Lesen von WM INPUT-Daten, und die Verwendung der DirectInput-APIs führt zu mehr Aufwand als das direkte Lesen \_ von WM \_ INPUT. DirectInput ist nur nützlich zum Lesen von Daten aus DirectInput-Beschriftungen. Wenn Sie jedoch nur den Xbox 360-Controller für Windows müssen, verwenden Sie [stattdessen XInput.](/windows/desktop/xinput/xinput-game-controller-apis-portal) Insgesamt bietet die Verwendung von DirectInput keine Vorteile beim Lesen von Daten von Maus- oder Tastaturgeräten, und die Verwendung von DirectInput in diesen Szenarien wird davon abgeraten.
 
-Vergleichen Sie die Komplexität der Verwendung von [DirectInput](/windows-hardware/drivers/hid/directinput), wie im folgenden Code gezeigt, mit den Methoden, die zuvor beschrieben wurden. Die folgenden Aufrufe sind erforderlich, um eine DirectInput-Maus zu erstellen:
+Vergleichen Sie die Komplexität der Verwendung [von DirectInput](/windows-hardware/drivers/hid/directinput), wie im folgenden Code gezeigt, mit den zuvor beschriebenen Methoden. Die folgenden Aufrufe sind erforderlich, um eine DirectInput-Maus zu erstellen:
 
 ```cpp
 LPDIRECTINPUT8 pDI;
@@ -139,7 +139,7 @@ if(!bImmediate)
 pMouse->Acquire();
 ```
 
-Und dann kann das DirectInput-Mausgerät jeden Frame lesen:
+Anschließend kann das DirectInput-Mausgerät für jeden Frame gelesen werden:
 
 ```cpp
 DIMOUSESTATE2 dims2; 
@@ -161,4 +161,4 @@ int yPosRelative = dims2.lY;
 
 ## <a name="summary"></a>Zusammenfassung
 
-Insgesamt ist die beste Methode zum Empfangen von Daten mit hoher Definitions Datenbewegung "WM \_ Input". Wenn die Benutzer nur einen Mauszeiger bewegen, erwägen Sie die Verwendung von "WM \_ MouseMove", um zu vermeiden, dass Zeiger-ballistiken durchgeführt werden. Beide Fenster Meldungen funktionieren auch dann gut, wenn die Maus keine High-Definition-Maus ist. Durch die Unterstützung hoher Definitionen können Windows-Spiele Benutzern eine präzisere Kontrolle bieten.
+Insgesamt ist WM INPUT die beste Methode zum Empfangen von Daten zur Mausbewegung mit hoher \_ Definition. Wenn Ihre Benutzer nur einen Mauszeiger bewegen, sollten Sie WM MOUSEMOVE verwenden, um zu vermeiden, dass \_ Zeigerballistiken verwendet werden müssen. Beide Fenstermeldungen funktionieren auch dann gut, wenn es sich bei der Maus nicht um eine hdind-Maus handelt. Durch die Unterstützung von High Definition Windows Können Spiele benutzern eine präzisere Kontrolle bieten.

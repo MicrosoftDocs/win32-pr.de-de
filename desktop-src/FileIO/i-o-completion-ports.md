@@ -1,79 +1,79 @@
 ---
-description: E/a-Abschlussports stellen ein effizientes Threading Modell für die Verarbeitung mehrerer asynchroner e/a-Anforderungen auf einem Multiprozessorsystem dar.
+description: E/A-Abschlussports bieten ein effizientes Threadingmodell für die Verarbeitung mehrerer asynchroner E/A-Anforderungen auf einem Multiprozessorsystem.
 ms.assetid: 213c48e8-bb21-43ed-9c00-2a5cf8ac25f0
-title: E/a-Abschlussports
+title: E/A-Abschlussports
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 882363ef99821a0b0b40810f45d609c5b5f7760c
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 2133bb14c661580eaf8004bd92c6f947b3b8777a4b1a5f6b330fe631b2be6c81
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106352306"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120050830"
 ---
-# <a name="io-completion-ports"></a>E/a-Abschlussports
+# <a name="io-completion-ports"></a>E/A-Abschlussports
 
-E/a-Abschlussports stellen ein effizientes Threading Modell für die Verarbeitung mehrerer asynchroner e/a-Anforderungen auf einem Multiprozessorsystem dar. Wenn ein Prozess einen e/a-Abschlussport erstellt, erstellt das System ein zugeordnetes Warteschlangen Objekt für Anforderungen, deren einziger Zweck darin besteht, diese Anforderungen zu verarbeiten. Prozesse, die viele gleichzeitige asynchrone e/a-Anforderungen verarbeiten, können dies schneller und effizienter tun, indem Sie e/a-Abschlussports in Verbindung mit einem vorab zugeordneten Thread Pool verwenden, als indem Sie Threads zu dem Zeitpunkt erstellen, an dem Sie eine e/a-Anforderung erhalten.
+E/A-Abschlussports bieten ein effizientes Threadingmodell für die Verarbeitung mehrerer asynchroner E/A-Anforderungen auf einem Multiprozessorsystem. Wenn ein Prozess einen E/A-Abschlussport erstellt, erstellt das System ein zugeordnetes Warteschlangenobjekt für Anforderungen, deren einziger Zweck die Verarbeitung dieser Anforderungen ist. Prozesse, die viele gleichzeitige asynchrone E/A-Anforderungen verarbeiten, können dies schneller und effizienter durchführen, indem E/A-Vervollständigungsports in Verbindung mit einem vorab zugeordneten Threadpool verwendet werden, anstatt Threads zum Zeitpunkt des Empfangs einer E/A-Anforderung zu erstellen.
 
-## <a name="how-io-completion-ports-work"></a>Funktionsweise von e/a-Abschlussports
+## <a name="how-io-completion-ports-work"></a>Funktionsweise von E/A-Vervollständigungsports
 
-Die Funktion " [**deeieiocompletionport**](createiocompletionport.md) " erstellt einen e/a-Abschlussport und ordnet ein oder mehrere Datei Handles diesem Port zu. Wenn ein asynchroner e/a-Vorgang für einen dieser Datei Handles abgeschlossen ist, wird ein e/a-abschlusspaket in der FIFO-Reihenfolge (First-in-First-Out) an den zugeordneten e/a-Abschlussport in die Warteschlange eingereiht. Eine leistungsstarke Verwendung für diesen Mechanismus besteht darin, den Synchronisierungs Punkt für mehrere Datei Handles in einem einzelnen Objekt zu kombinieren, obwohl auch andere nützliche Anwendungen vorhanden sind. Beachten Sie, dass die Pakete zwar in der FIFO-Reihenfolge in die Warteschlange eingereiht werden, Sie werden jedoch möglicherweise in einer anderen Reihenfolge entfernt
+Die [**CreateIoCompletionPort-Funktion**](createiocompletionport.md) erstellt einen E/A-Vervollständigungsport und ordnet diesem Port einen oder mehrere Dateihandles zu. Wenn ein asynchroner E/A-Vorgang für einen dieser Dateihandles abgeschlossen wird, wird ein E/A-Vervollständigungspaket in fiFO-Reihenfolge (First-in-First-Out) an den zugeordneten E/A-Abschlussport in die Warteschlange gestellt. Eine leistungsstarke Verwendung dieses Mechanismus besteht in der Kombination des Synchronisierungspunkts für mehrere Dateihandles in einem einzigen Objekt, obwohl es auch andere nützliche Anwendungen gibt. Beachten Sie, dass die Pakete in der FIFO-Reihenfolge in der Warteschlange stehen und in einer anderen Reihenfolge aus der Warteschlange entfernt werden können.
 
 > [!Note]
 >
-> Der hier verwendete Begriff " *Datei Handle* " bezieht sich auf eine System Abstraktion, die einen überlappenden e/a-Endpunkt darstellt, nicht nur eine Datei auf dem Datenträger. Beispielsweise kann es sich um einen Netzwerk Endpunkt, einen TCP-Socket, Named Pipe oder einen e-Mail-Slot handeln. Jedes Systemobjekt, das überlappende e/a unterstützt, kann verwendet werden. Eine Liste der zugehörigen e/a-Funktionen finden Sie am Ende dieses Themas.
+> Der hier *verwendete Begriff Dateihandl* bezieht sich auf eine Systemabstraktion, die einen überlappenden E/A-Endpunkt darstellt, nicht nur eine Datei auf dem Datenträger. Dies kann z. B. ein Netzwerkendpunkt, ein TCP-Socket, eine Named Pipe oder ein E-Mail-Slot sein. Jedes Systemobjekt, das überlappende E/A unterstützt, kann verwendet werden. Eine Liste verwandter E/A-Funktionen finden Sie am Ende dieses Themas.
 
  
 
-Wenn ein Datei Handle einem Abschlussport zugeordnet ist, wird der Status Block nicht aktualisiert, bis das Paket aus dem Abschlussport entfernt wurde. Die einzige Ausnahme ist, wenn der ursprüngliche Vorgang synchron mit einem Fehler zurückgegeben wird. Ein Thread (entweder vom Haupt Thread oder dem Haupt Thread selbst erstellt) verwendet die [**GetQueuedCompletionStatus**](/windows/win32/api/ioapiset/nf-ioapiset-getqueuedcompletionstatus) -Funktion, um zu warten, bis ein abschlusspaket in die Warteschlange für den e/a-Abschlussport eingereiht wird, anstatt direkt auf den Abschluss der asynchronen e/a-Vorgänge zu warten. Threads, die ihre Ausführung an einem e/a-Abschlussport blockieren, werden in LIFO-Reihenfolge (Last-in-First-Out) freigegeben, und das nächste Vervollständigungs Paket wird aus der FIFO-Warteschlange des e/a-Abschluss Ports für diesen Thread abgerufen. Dies bedeutet, dass beim Freigeben eines Vervollständigungs Pakets in einem Thread das System den letzten (neuesten) Thread freigibt, der diesem Port zugeordnet ist, und ihm die Abschluss Informationen für den ältesten e/a-Abschluss übergibt.
+Wenn ein Dateihand handle einem Vervollständigungsport zugeordnet ist, wird der übergebene Statusblock erst aktualisiert, wenn das Paket aus dem Vervollständigungsport entfernt wird. Die einzige Ausnahme ist, wenn der ursprüngliche Vorgang synchron mit einem Fehler zurückgegeben wird. Ein Thread (entweder vom Hauptthread oder vom Hauptthread selbst erstellt) verwendet die [**GetQueuedCompletionStatus-Funktion,**](/windows/win32/api/ioapiset/nf-ioapiset-getqueuedcompletionstatus) um auf die Warteschlange eines Abschlusspakets am E/A-Abschlussport zu warten, anstatt direkt auf den Abschluss der asynchronen E/A zu warten. Threads, die ihre Ausführung an einem E/A-Abschlussport blockieren, werden in LIFO-Reihenfolge (Last-in-First-Out) freigegeben, und das nächste Vervollständigungspaket wird aus der FIFO-Warteschlange des E/A-Abschlussports für diesen Thread gezogen. Wenn ein Vervollständigungspaket an einen Thread freigegeben wird, gibt das System den letzten (letzten) Thread frei, der diesem Port zugeordnet ist, und überlässt ihm die Abschlussinformationen für die älteste E/A-Vervollständigung.
 
-Obwohl eine beliebige Anzahl von Threads [**GetQueuedCompletionStatus**](/windows/win32/api/ioapiset/nf-ioapiset-getqueuedcompletionstatus) für einen angegebenen e/a-Abschlussport aufrufen kann, wenn ein angegebener Thread beim ersten Mal **GetQueuedCompletionStatus** aufruft, wird er dem angegebenen e/a-Abschlussport zugeordnet, bis eines von drei Dingen Eintritt Anders ausgedrückt: ein einzelner Thread kann höchstens einem e/a-Abschlussport zugeordnet werden.
+Obwohl eine beliebige Anzahl von Threads [**GetQueuedCompletionStatus**](/windows/win32/api/ioapiset/nf-ioapiset-getqueuedcompletionstatus) für einen angegebenen E/A-Abschlussport aufrufen kann, wird er dem angegebenen E/A-Abschlussport zugeordnet, wenn ein angegebener Thread **GetQueuedCompletionStatus** zum ersten Mal aufruft, bis einer der drei Folgenden eintritt: Der Thread wird beendet, gibt einen anderen E/A-Abschlussport an oder schließt den E/A-Abschlussport. Anders ausgedrückt: Ein einzelner Thread kann mindestens einem E/A-Abschlussport zugeordnet werden.
 
-Wenn ein Vervollständigungs Paket an einen e/a-Abschlussport eingereiht wird, prüft das System zunächst, wie viele Threads ausgeführt werden, die diesem Port zugeordnet sind. Wenn die Anzahl der ausgeführten Threads kleiner ist als der Parallelitäts Wert (im nächsten Abschnitt erläutert), ist einer der wartenden Threads (der aktuellste) für die Verarbeitung des Vervollständigungs Pakets zulässig. Wenn ein laufender Thread seine Verarbeitung abschließt, ruft er normalerweise erneut [**GetQueuedCompletionStatus**](/windows/win32/api/ioapiset/nf-ioapiset-getqueuedcompletionstatus) auf. an diesem Punkt gibt er entweder mit dem nächsten Vervollständigungs Paket zurück oder wartet, wenn die Warteschlange leer ist.
+Wenn ein Vervollständigungspaket an einem E/A-Abschlussport in die Warteschlange gestellt wird, überprüft das System zunächst, wie viele Threads ausgeführt werden, die diesem Port zugeordnet sind. Wenn die Anzahl der ausgeführten Threads kleiner ist als der Parallelitätswert (im nächsten Abschnitt erläutert), darf einer der wartenden Threads (der letzte) das Abschlusspaket verarbeiten. Wenn die Verarbeitung eines ausgeführten Threads abgeschlossen ist, ruft er in der Regel [**GetQueuedCompletionStatus**](/windows/win32/api/ioapiset/nf-ioapiset-getqueuedcompletionstatus) erneut auf. An diesem Punkt wird entweder mit dem nächsten Vervollständigungspaket zurückgegeben, oder es wird gewartet, wenn die Warteschlange leer ist.
 
-Threads können die [**PostQueuedCompletionStatus**](postqueuedcompletionstatus.md) -Funktion verwenden, um Vervollständigungs Pakete in der Warteschlange eines e/a-Abschlussports zu platzieren. Dadurch kann der Abschlussport zusätzlich zum Empfang von e/a-Abschluss Paketen vom e/a-System verwendet werden, um die Kommunikation von anderen Threads des Prozesses zu empfangen. Die Funktion " **PostQueuedCompletionStatus** " ermöglicht einer Anwendung, ihre eigenen speziellen Abschluss Pakete in die Warteschlange für den e/a-Abschlussport zu stellen, ohne einen asynchronen e/a-Vorgang zu starten. Dies ist beispielsweise hilfreich, um Arbeitsthreads externer Ereignisse zu benachrichtigen.
+Threads können die [**PostQueuedCompletionStatus-Funktion**](postqueuedcompletionstatus.md) verwenden, um Vervollständigungspakete in der Warteschlange eines E/A-Abschlussports zu platzieren. Dadurch kann der Abschlussport verwendet werden, um zusätzlich zum Empfangen von E/A-Vervollständigungspaketen vom E/A-System Kommunikation von anderen Threads des Prozesses zu empfangen. Mit **der PostQueuedCompletionStatus-Funktion** kann eine Anwendung ihre eigenen speziellen Vervollständigungspakete an den E/A-Abschlussport in die Warteschlange stellen, ohne einen asynchronen E/A-Vorgang zu starten. Dies ist beispielsweise nützlich, um Arbeitsthreads über externe Ereignisse zu benachrichtigen.
 
-Der e/a-Abschluss Port Handle und jedes Datei Handle, das diesem bestimmten e/a-Abschlussport zugeordnet ist, werden als *Verweise auf den e/* a-Abschlussport bezeichnet. Der e/a-Abschlussport wird freigegeben, wenn keine Verweise mehr vorhanden sind. Daher müssen alle diese Handles ordnungsgemäß geschlossen werden, um den e/a-Abschlussport und seine zugeordneten Systemressourcen freizugeben. Nachdem diese Bedingungen erfüllt sind, sollte eine Anwendung den e/a-Abschluss Port handle schließen, indem Sie die [**CloseHandle**](/windows/desktop/api/handleapi/nf-handleapi-closehandle) -Funktion aufrufen.
+Das Handle für den E/A-Abschlussport und jedes Dateihand handle, das diesem bestimmten E/A-Vervollständigungsport zugeordnet ist, werden als Verweise auf den *E/A-Abschlussport bezeichnet.* Der E/A-Vervollständigungsport wird freigegeben, wenn keine Verweise mehr darauf stehen. Daher müssen alle diese Handles ordnungsgemäß geschlossen werden, um den E/A-Abschlussport und die zugehörigen Systemressourcen frei zu geben. Nachdem diese Bedingungen erfüllt sind, sollte eine Anwendung das Porthandle für die E/A-Vervollständigung schließen, indem sie die [**CloseHandle-Funktion**](/windows/desktop/api/handleapi/nf-handleapi-closehandle) aufruft.
 
 > [!Note]
 >
-> Es ist ein e/a-Abschlussport mit dem Prozess verknüpft, der ihn erstellt hat und der nicht zwischen Prozessen freigegeben werden kann. Ein einzelnes Handle kann jedoch zwischen Threads im gleichen Prozess freigegeben werden.
+> Ein E/A-Vervollständigungsport ist dem Prozess zugeordnet, von dem er erstellt wurde, und kann zwischen Prozessen nicht sharable werden. Ein einzelnes Handle kann jedoch zwischen Threads im gleichen Prozess zwischen zwei Threads verwendet werden.
 
  
 
 ## <a name="threads-and-concurrency"></a>Threads und Parallelität
 
-Die wichtigste Eigenschaft eines e/a-Abschlussports, der berücksichtigt werden muss, ist der Parallelitäts Wert. Der Parallelitäts Wert eines Abschlussports wird angegeben, wenn er mit " [**forateiocompletionport**](createiocompletionport.md) " über den Parameter " *numofconcurrentthreads* " erstellt wird. Dieser Wert schränkt die Anzahl der ausführbaren Threads ein, die dem Abschlussport zugeordnet sind. Wenn die Gesamtzahl der ausführbaren Threads, die dem Abschlussport zugeordnet sind, den Parallelitäts Wert erreicht, blockiert das System die Ausführung aller nachfolgenden Threads, die diesem Abschlussport zugeordnet sind, bis die Anzahl der ausführbaren Threads unter den Parallelitäts Wert fällt.
+Die wichtigste Eigenschaft eines E/A-Abschlussports, der sorgfältig zu berücksichtigen ist, ist der Parallelitätswert. Der Parallelitätswert eines Vervollständigungsport wird angegeben, wenn er mit [**CreateIoCompletionPort über**](createiocompletionport.md) den *NumberOfConcurrentThreads-Parameter erstellt* wird. Dieser Wert schränkt die Anzahl der ausführungsfähige Threads ein, die dem Abschlussport zugeordnet sind. Wenn die Gesamtzahl der dem Abschlussport zugeordneten ausführungsfähige Threads den Parallelitätswert erreicht, blockiert das System die Ausführung aller nachfolgenden Threads, die diesem Vervollständigungsport zugeordnet sind, bis die Anzahl der ausführungsfähige Threads unter den Parallelitätswert fällt.
 
-Das effizienteste Szenario tritt auf, wenn Abschluss Pakete in der Warteschlange warten, aber keine warte Vorgänge möglich sind, da der Port das Parallelitäts Limit erreicht hat. Beachten Sie, was mit einem Parallelitäts Wert von einem und mehreren Threads passiert, die auf den [**GetQueuedCompletionStatus**](/windows/win32/api/ioapiset/nf-ioapiset-getqueuedcompletionstatus) -Funktions aufzurufen warten. Wenn in diesem Fall für die Warteschlange immer Abschluss Pakete gewartet werden, wenn der laufende Thread **GetQueuedCompletionStatus** aufruft, wird die Ausführung nicht blockiert, weil die Thread Warteschlange wie bereits erwähnt LIFO ist. Stattdessen übernimmt dieser Thread sofort das nächste ablaufschlangen-abschlusspaket. Es treten keine Thread Kontextwechsel auf, da der laufende Thread ständig Abschluss Pakete aufnimmt und die anderen Threads nicht ausgeführt werden können.
+Das effizienteste Szenario tritt auf, wenn Vervollständigungspakete in der Warteschlange warten, aber keine Warteschleifen erfüllt werden können, da der Port das Parallelitätslimit erreicht hat. Überlegen Sie, was mit einem Parallelitätswert von einem und mehreren Threads geschieht, die auf den [**GetQueuedCompletionStatus-Funktionsaufruf**](/windows/win32/api/ioapiset/nf-ioapiset-getqueuedcompletionstatus) warten. In diesem Fall wird die Ausführung nicht blockiert, wenn in der Warteschlange immer Abschlusspakete warten, wenn der ausgeführte Thread **GetQueuedCompletionStatus** aufruft, da die Threadwarteschlange, wie bereits erwähnt, LIFO ist. Stattdessen nimmt dieser Thread sofort das nächste Vervollständigungspaket in der Warteschlange auf. Es treten keine Threadkontextwechsel auf, da der ausgeführte Thread fortlaufend Vervollständigungspakete aufsammelt und die anderen Threads nicht ausgeführt werden können.
 
 > [!Note]
 >
-> Im vorherigen Beispiel scheinen die zusätzlichen Threads nutzlos und nie ausgeführt zu werden. dabei wird jedoch davon ausgegangen, dass der laufende Thread nie von einem anderen Mechanismus in einen Wartezustand versetzt wird, beendet oder anderweitig den zugeordneten e/a-Abschlussport schließt. Beachten Sie beim Entwerfen der Anwendung alle Auswirkungen der Thread Ausführung.
+> Im vorherigen Beispiel scheinen die zusätzlichen Threads unbnädig zu sein und nie ausgeführt zu werden. Dabei wird jedoch davon ausgegangen, dass der ausgeführte Thread nie durch einen anderen Mechanismus in einen Wartezustand gerät, den zugehörigen E/A-Abschlussport beendet oder anderweitig schließt. Berücksichtigen Sie beim Entwerfen der Anwendung alle Auswirkungen auf die Threadausführung.
 
  
 
-Der beste maximale Gesamtwert für den Parallelitäts Wert ist die Anzahl der CPUs auf dem Computer. Wenn für die Transaktion eine lange Berechnung erforderlich ist, können durch einen größeren Parallelitäts Wert mehr Threads ausgeführt werden. Es dauert möglicherweise länger, bis das abschlusspaket abgeschlossen ist, aber es werden gleichzeitig weitere Abschluss Pakete verarbeitet. Sie können mit dem Parallelitäts Wert zusammen mit den Profil Erstellungs Tools experimentieren, um die bestmögliche Auswirkung für Ihre Anwendung zu erzielen.
+Der beste maximal zulässige Wert für den Parallelitätswert ist die Anzahl der CPUs auf dem Computer. Wenn ihre Transaktion eine langwierige Berechnung erfordert, ermöglicht ein größerer Parallelitätswert die Ausführung von mehr Threads. Die Beendigung jedes Vervollständigungspakets kann länger dauern, aber es werden mehr Vervollständigungspakete gleichzeitig verarbeitet. Sie können mit dem Parallelitätswert in Verbindung mit Profilerstellungstools experimentieren, um die beste Wirkung für Ihre Anwendung zu erzielen.
 
-Das System ermöglicht außerdem einem Thread, der auf [**GetQueuedCompletionStatus**](/windows/win32/api/ioapiset/nf-ioapiset-getqueuedcompletionstatus) wartet, ein abschlusspaket zu verarbeiten, wenn ein anderer laufender Thread, der demselben e/a-Abschlussport zugeordnet ist, aus anderen Gründen in den Wartezustand wechselt, z. b. die [**SuspendThread**](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-suspendthread) -Funktion Wenn der Thread im Wartezustand erneut ausgeführt wird, kann es zu einem kurzen Zeitpunkt kommen, wenn die Anzahl aktiver Threads den Parallelitäts Wert überschreitet. Das System reduziert diese Anzahl jedoch schnell, indem es keine neuen aktiven Threads zulässt, bis die Anzahl aktiver Threads unter den Parallelitäts Wert fällt. Dies ist ein Grund dafür, dass Ihre Anwendung mehr Threads im Thread Pool als der Parallelitäts Wert erstellt. Die Thread Pool Verwaltung geht über den Rahmen dieses Themas hinaus, aber eine gute Faustregel besteht darin, dass Sie mindestens doppelt so viele Threads im Thread Pool haben, wie Prozessoren auf dem System vorhanden sind. Weitere Informationen zum Thread Pooling finden Sie unter [Thread Pools](/windows/desktop/ProcThread/thread-pools).
+Das System ermöglicht auch, dass ein Thread, der in [**GetQueuedCompletionStatus**](/windows/win32/api/ioapiset/nf-ioapiset-getqueuedcompletionstatus) wartet, ein Vervollständigungspaket verarbeiten kann, wenn ein anderer ausgeführter Thread, der dem gleichen E/A-Abschlussport zugeordnet ist, aus anderen Gründen in den Wartezustand eintritt, z. B. die [**SuspendThread-Funktion.**](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-suspendthread) Wenn der Thread im Wartezustand erneut ausgeführt wird, kann es einen kurzen Zeitraum geben, in dem die Anzahl der aktiven Threads den Parallelitätswert überschreitet. Das System verringert diese Anzahl jedoch schnell, indem es keine neuen aktiven Threads zu lässt, bis die Anzahl der aktiven Threads unter den Parallelitätswert fällt. Dies ist ein Grund dafür, dass Ihre Anwendung mehr Threads im Threadpool erstellt als der Parallelitätswert. Die Threadpoolverwaltung geht über den Rahmen dieses Themas hinaus, aber eine gute Faustregel ist, mindestens doppelt so viele Threads im Threadpool zu haben wie Prozessoren im System. Weitere Informationen zum Threadpooling finden Sie unter [Threadpools](/windows/desktop/ProcThread/thread-pools).
 
-## <a name="supported-io-functions"></a>Unterstützte e/a-Funktionen
+## <a name="supported-io-functions"></a>Unterstützte E/A-Funktionen
 
-Die folgenden Funktionen können verwendet werden, um e/a-Vorgänge zu starten, die mithilfe von e/a-Abschlussports abgeschlossen werden. Zum Aktivieren des e/a-Abschlussport-Mechanismus müssen Sie der Funktion eine Instanz der [**über**](/windows/desktop/api/minwinbase/ns-minwinbase-overlapped) Lapp enden Struktur und ein Datei Handle übergeben, das zuvor mit einem e/a-Abschlussport (durch Aufrufen von " [**anateiocompletionport**](createiocompletionport.md)") verknüpft ist:
+Die folgenden Funktionen können verwendet werden, um E/A-Vorgänge zu starten, die mithilfe von E/A-Vervollständigungsports abgeschlossen werden. Sie müssen der Funktion eine Instanz der [**OVERLAPPED-Struktur**](/windows/desktop/api/minwinbase/ns-minwinbase-overlapped) und ein Dateihandle übergeben, die zuvor einem E/A-Vervollständigungsport zugeordnet waren (durch einen Aufruf von [**CreateIoCompletionPort),**](createiocompletionport.md)um den E/A-Vervollständigungsportmechanismus zu aktivieren:
 
--   [**Connectnamedpipe**](/windows/desktop/api/namedpipeapi/nf-namedpipeapi-connectnamedpipe)
--   [**DeviceIoControl**](/windows/desktop/api/ioapiset/nf-ioapiset-deviceiocontrol)
--   [**Lockfileex**](/windows/desktop/api/FileAPI/nf-fileapi-lockfileex)
--   [**"Read directoriychangesw"**](/windows/desktop/api/WinBase/nf-winbase-readdirectorychangesw)
+-   [**ConnectNamedPipe**](/windows/desktop/api/namedpipeapi/nf-namedpipeapi-connectnamedpipe)
+-   [**Deviceiocontrol**](/windows/desktop/api/ioapiset/nf-ioapiset-deviceiocontrol)
+-   [**LockFileEx**](/windows/desktop/api/FileAPI/nf-fileapi-lockfileex)
+-   [**ReadDirectoryChangesW**](/windows/desktop/api/WinBase/nf-winbase-readdirectorychangesw)
 -   [**ReadFile**](/windows/desktop/api/FileAPI/nf-fileapi-readfile)
--   [**Transactnamedpipe**](/windows/desktop/api/namedpipeapi/nf-namedpipeapi-transactnamedpipe)
+-   [**TransactNamedPipe**](/windows/desktop/api/namedpipeapi/nf-namedpipeapi-transactnamedpipe)
 -   [**WaitCommEvent**](/windows/desktop/api/winbase/nf-winbase-waitcommevent)
 -   [**WriteFile**](/windows/desktop/api/FileAPI/nf-fileapi-writefile)
--   [**Wsasendmsg**](/windows/desktop/api/winsock2/nf-winsock2-wsasendmsg)
+-   [**WSASendMsg**](/windows/desktop/api/winsock2/nf-winsock2-wsasendmsg)
 -   [**WSASendTo**](/windows/desktop/api/winsock2/nf-winsock2-wsasendto)
--   [**Wsasend**](/windows/desktop/api/winsock2/nf-winsock2-wsasend)
+-   [**WSASend**](/windows/desktop/api/winsock2/nf-winsock2-wsasend)
 -   [**WSARecvFrom**](/windows/desktop/api/winsock2/nf-winsock2-wsarecvfrom)
--   [**LPFN_WSARECVMSG (wsarecvmsg)**](/windows/win32/api/mswsock/nc-mswsock-lpfn_wsarecvmsg)
+-   [**LPFN_WSARECVMSG (WSARecvMsg)**](/windows/win32/api/mswsock/nc-mswsock-lpfn_wsarecvmsg)
 -   [**WSARecv**](/windows/desktop/api/winsock2/nf-winsock2-wsarecv)
 
 ## <a name="related-topics"></a>Zugehörige Themen
@@ -86,7 +86,7 @@ Die folgenden Funktionen können verwendet werden, um e/a-Vorgänge zu starten, 
 [About Processes and Threads (Informationen zu Prozessen und Threads)](/windows/desktop/ProcThread/about-processes-and-threads)
 </dt> <dt>
 
-[**' Bindiocompletioncallback '**](/windows/desktop/api/winbase/nf-winbase-bindiocompletioncallback)
+[**BindIoCompletionCallback**](/windows/desktop/api/winbase/nf-winbase-bindiocompletioncallback)
 </dt> <dt>
 
 [**CreateIoCompletionPort**](createiocompletionport.md)
@@ -95,10 +95,10 @@ Die folgenden Funktionen können verwendet werden, um e/a-Vorgänge zu starten, 
 [**GetQueuedCompletionStatus**](/windows/win32/api/ioapiset/nf-ioapiset-getqueuedcompletionstatus)
 </dt> <dt>
 
-[**GetQueuedCompletionStatus usex**](getqueuedcompletionstatusex-func.md)
+[**GetQueuedCompletionStatusEx**](getqueuedcompletionstatusex-func.md)
 </dt> <dt>
 
-[**' PostQueuedCompletionStatus '**](postqueuedcompletionstatus.md)
+[**PostQueuedCompletionStatus**](postqueuedcompletionstatus.md)
 </dt> </dl>
 
  

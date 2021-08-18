@@ -1,28 +1,28 @@
 ---
-description: Der Startbefehl für die Stream-Steuerung wurde wirksam.
+description: Ein Startbefehl für das Streamsteuersteuersystem ist wirksam.
 ms.assetid: e2f8d9a2-c96c-457c-8a88-7c86d4405928
-title: EC_STREAM_CONTROL_STARTED (DShow. h)
+title: EC_STREAM_CONTROL_STARTED (Dshow.h)
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 984562fde9001de14067e5865d5583636b264852
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 73af8d39c3dae0447600a23dcb00483f4e0da6b81bc7ba6ab4a7e8b5f7afa42d
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106365982"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119997890"
 ---
-# <a name="ec_stream_control_started"></a>EC- \_ Stream- \_ Steuerelement \_
+# <a name="ec_stream_control_started"></a>EC \_ STREAM CONTROL STARTED \_ (EC STREAM-STEUERELEMENT \_ GESTARTET)
 
-Der Startbefehl für die Stream-Steuerung wurde wirksam.
+Ein Startbefehl für das Streamsteuersteuersystem ist wirksam.
 
 ## <a name="parameters"></a>Parameter
 
 <dl> <dt>
 
-<span id="pSender"></span><span id="psender"></span><span id="PSENDER"></span>*psender*
+<span id="pSender"></span><span id="psender"></span><span id="PSENDER"></span>*pSender*
 </dt> <dd>
 
-(**IUnknown** \* ) Ein Zeiger auf die [**IPin**](/windows/desktop/api/Strmif/nn-strmif-ipin) -Schnittstelle der PIN, die den Stream gestartet hat.
+(**IUnknown** \* ) Zeiger auf die [**IPin-Schnittstelle**](/windows/desktop/api/Strmif/nn-strmif-ipin) des Pins, der den Stream gestartet hat.
 
 </dd> <dt>
 
@@ -37,13 +37,13 @@ Der Startbefehl für die Stream-Steuerung wurde wirksam.
 
 Keine.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Filter Senden dieses Ereignis als Antwort auf die [**iamstreamcontrol:: startat**](/windows/desktop/api/Strmif/nf-strmif-iamstreamcontrol-startat) -Methode. Diese Methode gibt eine Bezugszeit für eine PIN an, um mit dem Streaming zu beginnen. Wenn das Streaming beginnt, sendet der Filter dieses Ereignis.
+Filter senden dieses Ereignis als Antwort auf die [**IAMStreamControl::StartAt-Methode.**](/windows/desktop/api/Strmif/nf-strmif-iamstreamcontrol-startat) Diese Methode gibt eine Bezugszeit an, zu der ein Pin mit dem Streaming beginnt. Wenn das Streaming beginnt, sendet der Filter dieses Ereignis.
 
-Der *psender* -Parameter gibt die PIN an, die den Startbefehl ausführt. Abhängig von der Implementierung ist es möglicherweise nicht die PIN, die den [**startat**](/windows/desktop/api/Strmif/nf-strmif-iamstreamcontrol-startat) -Befehl empfangen hat.
+Der *pSender-Parameter* gibt den Pin an, der den Startbefehl ausgibt. Je nach Implementierung ist es möglicherweise nicht der Pin, der den [**StartAt-Aufruf empfangen**](/windows/desktop/api/Strmif/nf-strmif-iamstreamcontrol-startat) hat.
 
-Der *dwCookie* -Parameter wird von der Anwendung in der [**startat**](/windows/desktop/api/Strmif/nf-strmif-iamstreamcontrol-startat) -Methode angegeben. Dieser Parameter ermöglicht der Anwendung die Nachverfolgung mehrerer Aufrufe der-Methode.
+Der *dwCookie-Parameter* wird von der Anwendung in der [**StartAt-Methode**](/windows/desktop/api/Strmif/nf-strmif-iamstreamcontrol-startat) angegeben. Mit diesem Parameter kann die Anwendung mehrere Aufrufe der -Methode nachverfolgen.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -51,18 +51,18 @@ Der *dwCookie* -Parameter wird von der Anwendung in der [**startat**](/windows/d
 
 | Anforderung | Wert |
 |-------------------|------------------------------------------------------------------------------------|
-| Header<br/> | <dl> <dt>DShow. h</dt> </dl> |
+| Header<br/> | <dl> <dt>Dshow.h</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[Ereignis Benachrichtigungs Codes](event-notification-codes.md)
+[Ereignisbenachrichtigungscodes](event-notification-codes.md)
 </dt> <dt>
 
-[Ereignis Benachrichtigung in DirectShow](event-notification-in-directshow.md)
+[Ereignisbenachrichtigung in DirectShow](event-notification-in-directshow.md)
 </dt> </dl>
 
  

@@ -1,5 +1,5 @@
 ---
-title: D3DX11_EFFECT_TYPE_DESC-Struktur (D3dx11effect.h)
+title: D3DX11_EFFECT_TYPE_DESC -Struktur (D3dx11effect.h)
 description: Beschreibt einen Effektvariablentyp.
 ms.assetid: bf2aa5b7-c68c-42bb-ae70-2fe16f8669a4
 keywords:
@@ -63,7 +63,7 @@ Name des Typs, z. B. "float4" oder "MyStruct".
 **Klasse**
 </dt> <dd>
 
-Typ: **[ **D3D10 \_ SHADER \_ VARIABLE \_ CLASS**](/windows/desktop/api/d3dcommon/ne-d3dcommon-d3d_shader_variable_class)**
+Typ: **[ **D3D10 \_ SHADER \_ \_ VARIABLE-KLASSE**](/windows/desktop/api/d3dcommon/ne-d3dcommon-d3d_shader_variable_class)**
 
 </dd> <dd>
 
@@ -74,7 +74,7 @@ Die Variablenklasse (siehe [**D3D10 \_ SHADER \_ VARIABLE \_ CLASS**](/windows/d
 **Typ**
 </dt> <dd>
 
-Typ: **[ **D3D10 \_ SHADER \_ VARIABLE \_ TYPE**](/windows/desktop/api/d3dcommon/ne-d3dcommon-d3d_shader_variable_type)**
+Typ: **[ **D3D10 \_ SHADER VARIABLE \_ \_ TYPE**](/windows/desktop/api/d3dcommon/ne-d3dcommon-d3d_shader_variable_type)**
 
 </dd> <dd>
 
@@ -111,7 +111,7 @@ Typ: **[ **UINT**](/windows/desktop/WinProg/windows-data-types)**
 
 </dd> <dd>
 
-Anzahl der Zeilen in diesem Typ (0, wenn kein numerischer Primitiver).
+Anzahl der Zeilen in diesem Typ (0, wenn kein numerischer Primitiver ist).
 
 </dd> <dt>
 
@@ -122,7 +122,7 @@ Typ: **[ **UINT**](/windows/desktop/WinProg/windows-data-types)**
 
 </dd> <dd>
 
-Anzahl der Spalten in diesem Typ (0, wenn es sich nicht um einen numerischen Primitiven handelt).
+Anzahl der Spalten in diesem Typ (0, wenn kein numerischer Primitiver ist).
 
 </dd> <dt>
 
@@ -144,7 +144,7 @@ Typ: **[ **UINT**](/windows/desktop/WinProg/windows-data-types)**
 
 </dd> <dd>
 
-Anzahl der Bytes, die von diesem Datentyp belegt werden, wenn sie in einem konstanten Puffer angeordnet sind.
+Anzahl von Bytes, die von diesem Datentyp belegt werden, wenn sie in einem konstanten Puffer angegeben sind.
 
 </dd> <dt>
 
@@ -155,13 +155,13 @@ Typ: **[ **UINT**](/windows/desktop/WinProg/windows-data-types)**
 
 </dd> <dd>
 
-Anzahl der Bytes, die zwischen Elementen gesucht werden sollen, wenn sie in einem konstanten Puffer angeordnet sind.
+Die Anzahl der Bytes, die zwischen Elementen durchdringt werden sollen, wenn sie in einem konstanten Puffer angegeben werden.
 
 </dd> </dl>
 
 ## <a name="remarks"></a>Hinweise
 
-D3DX11 \_ EFFECT \_ TYPE \_ DESC wird mit [ **ID3DX11EffectType::GetDesc** verwendet.](id3dx11effecttype-getdesc.md)
+D3DX11 \_ EFFECT \_ TYPE \_ DESC wird mit [ **ID3DX11EffectType::GetDesc verwendet.**](id3dx11effecttype-getdesc.md)
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -173,11 +173,11 @@ D3DX11 \_ EFFECT \_ TYPE \_ DESC wird mit [ **ID3DX11EffectType::GetDesc** verwe
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 
-[Effekte 11 Strukturen](d3d11-graphics-reference-effects11-structures.md)
+[Effects 11 Structures](d3d11-graphics-reference-effects11-structures.md)
 </dt> </dl>
 
  

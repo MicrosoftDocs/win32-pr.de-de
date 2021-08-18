@@ -1,12 +1,12 @@
 ---
-title: IMsRdpClientTransportSettings2 gatewaykredsharing (Eigenschaft)
-description: Gibt die Einstellung an, ob das Feature für die Freigabe von Anmelde Informationen für das Remotedesktop Gateway (RD-Gateway) aktiviert ist, oder ruft Sie ab.
+title: IMsRdpClientTransportSettings2-GatewayCredSharing-Eigenschaft
+description: Gibt die Einstellung an, mit der festgelegt wird, ob das Feature zum Freigeben von Anmeldeinformationen für Remotedesktop Gateway (RD-Gateway) aktiviert ist, oder ruft sie ab.
 ms.assetid: 296dc578-376d-41f6-988a-286fe744959f
 ms.tgt_platform: multiple
 keywords:
-- Gatewaykredsharing-Eigenschaft Remotedesktopdienste
-- Gatewaykredsharing-Eigenschaft Remotedesktopdienste, IMsRdpClientTransportSettings2-Schnittstelle
-- IMsRdpClientTransportSettings2 Interface Remotedesktopdienste, gatewaykredsharing (Eigenschaft)
+- GatewayCredSharing-Eigenschaft Remotedesktopdienste
+- GatewayCredSharing-Eigenschaft Remotedesktopdienste , IMsRdpClientTransportSettings2-Schnittstelle
+- IMsRdpClientTransportSettings2-Schnittstelle Remotedesktopdienste , GatewayCredSharing-Eigenschaft
 topic_type:
 - apiref
 api_name:
@@ -19,16 +19,16 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 329e425631b674e050f246c4105115bd4326be3d
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: d6d489678006e842a6da82f5d2f9489f84a9a20fd70bfe8f18018aaa6d412c5c
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104475627"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119974650"
 ---
-# <a name="imsrdpclienttransportsettings2gatewaycredsharing-property"></a>IMsRdpClientTransportSettings2:: gatewaykredsharing (Eigenschaft)
+# <a name="imsrdpclienttransportsettings2gatewaycredsharing-property"></a>IMsRdpClientTransportSettings2::GatewayCredSharing-Eigenschaft
 
-Gibt die Einstellung an, ob das Feature für die Freigabe von Anmelde Informationen für das Remotedesktop Gateway (RD-Gateway) aktiviert ist, oder ruft Sie ab. Wenn das Feature aktiviert ist, versucht das Remotedesktop ActiveX-Steuerelement, die gleichen Anmelde Informationen für die Authentifizierung beim Remotedesktop-Sitzungshost (RD-Sitzungshost)-Server und beim RD-Gateway Server zu verwenden.
+Gibt die Einstellung an, mit der festgelegt wird, ob das Feature zum Freigeben von Anmeldeinformationen für Remotedesktop Gateway (RD-Gateway) aktiviert ist, oder ruft sie ab. Wenn das Feature aktiviert ist, versucht das Remotedesktop ActiveX-Steuerelement, die gleichen Anmeldeinformationen für die Authentifizierung beim Remotedesktop-Sitzungshost -Server (RD-Sitzungshost) und beim RD-Gatewayserver zu verwenden.
 
 Dies ist eine Eigenschaft mit Lese- und Schreibzugriff.
 
@@ -49,15 +49,15 @@ HRESULT get_GatewayCredSharing(
 
 ## <a name="property-value"></a>Eigenschaftswert
 
-Wenn Sie auf 1 festgelegt ist, ist die Freigabe von Anmelde Informationen aktiviert. Wenn der Wert auf NULL festgelegt ist, ist die Freigabe von Anmelde Informationen deaktiviert
+Wenn diese Einstellung auf 1 festgelegt ist, ist die Freigabe von Anmeldeinformationen aktiviert. Wenn null festgelegt ist, ist die Freigabe von Anmeldeinformationen deaktiviert.
 
 ## <a name="error-codes"></a>Fehlercodes
 
 Gibt bei Erfolg **S \_ OK** zurück.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Diese Eigenschaft wird vom ActiveX-Steuerelement verwendet, um eine einzelne Eingabeaufforderung für die Freigabe von Anmelde Informationen zwischen dem RD-Sitzungshost Server und dem RD-Gateway Server zu implementieren. Die Freigabe von Anmelde Informationen unterstützt keine webbasierte Kenn Wort Freigabe mit [**gatewaypassword**](imsrdpclienttransportsettings2-gatewaypassword.md) oder [**cleartextpassword**](imstscnonscriptable-cleartextpassword.md).
+Diese Eigenschaft wird vom ActiveX-Steuerelement verwendet, um eine einzelne Eingabeaufforderung für die Freigabe von Anmeldeinformationen zwischen dem RD-Sitzungshost-Server und dem RD-Gatewayserver zu implementieren. Die Freigabe von Anmeldeinformationen unterstützt keine webbasierte Kennwortfreigabe mit [**GatewayPassword**](imsrdpclienttransportsettings2-gatewaypassword.md) oder [**ClearTextPassword.**](imstscnonscriptable-cleartextpassword.md)
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -69,7 +69,7 @@ Diese Eigenschaft wird vom ActiveX-Steuerelement verwendet, um eine einzelne Ein
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2008<br/>                                                                    |
 | Typbibliothek<br/>             | <dl> <dt>MsTscAx.dll</dt> </dl>            |
 | DLL<br/>                      | <dl> <dt>MsTscAx.dll</dt> </dl>            |
-| IID<br/>                      | IID \_ IMsRdpClientTransportSettings2 ist als 67341688-D606-4c73-A5D2-2e0489009319 definiert.<br/> |
+| IID<br/>                      | IID \_ IMsRdpClientTransportSettings2 ist als 67341688-D606-4c73-A5D2-2E0489009319 definiert.<br/> |
 
 
 
@@ -77,7 +77,7 @@ Diese Eigenschaft wird vom ActiveX-Steuerelement verwendet, um eine einzelne Ein
 
 <dl> <dt>
 
-[**Imsrdpclienttransportsettings**](imsrdpclienttransportsettings.md)
+[**IMsRdpClientTransportSettings**](imsrdpclienttransportsettings.md)
 </dt> <dt>
 
 [**IMsRdpClientTransportSettings2**](imsrdpclienttransportsettings2.md)

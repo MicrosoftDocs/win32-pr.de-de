@@ -1,8 +1,8 @@
 ---
-description: Gibt die Sicherheits Beschreibung zurück, die den Zugriff auf den Drucker steuert.
+description: Gibt den Sicherheitsdeskriptor zurück, der den Zugriff auf den Drucker steuert.
 ms.assetid: c12ca35c-07b3-41ad-98c4-48ee584059d1
 ms.tgt_platform: multiple
-title: Getsecuritydescriptor-Methode der Win32_Printer-Klasse
+title: GetSecurityDescriptor-Methode der Win32_Printer Klasse
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -14,18 +14,18 @@ api_type:
 - COM
 api_location:
 - CIMWin32.dll
-ms.openlocfilehash: c74d79430d15fa136c6edeb2a6e77e79e76b02ca
-ms.sourcegitcommit: c7add10d695482e1ceb72d62b8a4ebd84ea050f7
+ms.openlocfilehash: 4ea96e021972855b75d04c3c9e5a9294d241f524bb27f31e0b42093815a5bf2c
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106344951"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119918350"
 ---
-# <a name="getsecuritydescriptor-method-of-the-win32_printer-class"></a>Getsecuritydescriptor-Methode der Win32- \_ Drucker Klasse
+# <a name="getsecuritydescriptor-method-of-the-win32_printer-class"></a>GetSecurityDescriptor-Methode der Win32 \_ Printer-Klasse
 
-Die **getsecuritydescriptor** -Methode gibt die Sicherheits Beschreibung zurück, die den Zugriff auf den Drucker steuert. Der Deskriptor wird als eine Instanz von [**Win32 \_ securityDescriptor**](/previous-versions/windows/desktop/secrcw32prov/win32-securitydescriptor)zurückgegeben. Weitere Informationen finden Sie unter [Ändern der Zugriffssicherheit für Sicherungs fähige Objekte](/windows/desktop/WmiSdk/changing-access-security-on-securable-objects).
+Die **GetSecurityDescriptor-Methode** gibt den Sicherheitsdeskriptor zurück, der den Zugriff auf den Drucker steuert. Der Deskriptor wird als Instanz von [**Win32 \_ SecurityDescriptor zurückgegeben.**](/previous-versions/windows/desktop/secrcw32prov/win32-securitydescriptor) Weitere Informationen finden Sie unter Changing Access Security on Securable Objects (Ändern [der Zugriffssicherheit für sicherungsfähige Objekte).](/windows/desktop/WmiSdk/changing-access-security-on-securable-objects)
 
-In diesem Thema wird die MOF-Syntax (Managed Object Format) verwendet. Weitere Informationen zum Verwenden dieser Methode finden Sie unter [Aufrufen einer Methode](/windows/desktop/WmiSdk/calling-a-method).
+In diesem Thema wird Managed Object Format (MOF)-Syntax verwendet. Weitere Informationen zur Verwendung dieser Methode finden Sie unter [Aufrufen einer Methode.](/windows/desktop/WmiSdk/calling-a-method)
 
 ## <a name="syntax"></a>Syntax
 
@@ -42,16 +42,16 @@ uint32 GetSecurityDescriptor(
 
 <dl> <dt>
 
-*Deskriptor* \[ vorgenommen\]
+*Deskriptor* \[ out\]
 </dt> <dd>
 
-Die dem Drucker zugeordnete Sicherheits Beschreibung.
+Der dem Drucker zugeordnete Sicherheitsdeskriptor.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt einen der Werte zurück, der in der folgenden Liste aufgeführt ist, oder einen anderen Wert, um einen Fehler anzugeben. Weitere Fehlercodes finden Sie unter [**WMI-Fehler Konstanten**](/windows/desktop/WmiSdk/wmi-error-constants) oder [**WbemErrorEnum**](/windows/desktop/api/wbemdisp/ne-wbemdisp-wbemerrorenum). Allgemeine **HRESULT** -Werte finden Sie unter [System Fehler Codes](/windows/desktop/Debug/system-error-codes).
+Gibt einen der in der folgenden Liste aufgeführten Werte oder einen anderen Wert zurück, um einen Fehler anzugeben. Weitere Fehlercodes finden Sie unter [**WMI-Fehlerkonstistenzen**](/windows/desktop/WmiSdk/wmi-error-constants) oder [**WbemErrorEnum**](/windows/desktop/api/wbemdisp/ne-wbemdisp-wbemerrorenum). Allgemeine **HRESULT-Werte** finden Sie unter [Systemfehlercodes](/windows/desktop/Debug/system-error-codes).
 
 <dl> <dt>
 
@@ -79,26 +79,26 @@ Unbekannter Fehler.
 **9**
 </dt> <dd>
 
-Der Benutzer verfügt nicht über die erforderlichen Berechtigungen, um die Methode auszuführen.
+Der Benutzer verfügt nicht über die erforderlichen Berechtigungen zum Ausführen der -Methode.
 
 </dd> <dt>
 
 **21**
 </dt> <dd>
 
-Ein im Methoden Aufrufwert angegebener Parameter ist ungültig.
+Ein im Methodenaufruf angegebener Parameter ist ungültig.
 
 </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die [**Win32- \_ securityDescriptor**](/previous-versions/windows/desktop/secrcw32prov/win32-securitydescriptor) -Instanz stellt einen Datentyp für die [**Sicherheits \_ \_ deskriptorsteuerung**](/windows/desktop/SecAuthZ/security-descriptor-control) dar und enthält eine freigegebene [*Zugriffs Steuerungs Liste*](/windows/desktop/SecGloss/d-gly) (DACL) und eine [*System Zugriffs Steuerungs Liste*](/windows/desktop/SecGloss/s-gly) (SACL). Weitere Informationen finden Sie unter [Access Control Listen](/windows/desktop/SecAuthZ/access-control-lists).
+Die [**Win32 \_ SecurityDescriptor-Instanz**](/previous-versions/windows/desktop/secrcw32prov/win32-securitydescriptor) stellt einen [**SECURITY \_ DESCRIPTOR \_ CONTROL-Datentyp**](/windows/desktop/SecAuthZ/security-descriptor-control) dar und enthält eine DACL (Discretionary [*Access Control List)*](/windows/desktop/SecGloss/d-gly) und eine Systemzugriffssteuerungsliste (SACL). [](/windows/desktop/SecGloss/s-gly) Weitere Informationen finden Sie unter [Access Control Listen.](/windows/desktop/SecAuthZ/access-control-lists)
 
-Wenn **SeSecurityPrivilege** beim erhalten einer Sicherheits Beschreibung nicht gewährt oder aktiviert ist, wird nur die DACL in der zurückgegebenen Sicherheits Beschreibung zurückgegeben. Weitere Informationen finden Sie unter [**Berechtigungs Konstanten**](/windows/desktop/WmiSdk/privilege-constants) und [Ausführen privilegierter Vorgänge](/windows/desktop/WmiSdk/executing-privileged-operations).
+Wenn **seSecurityPrivilege** beim Abrufen eines Sicherheitsdeskriptors nicht gewährt oder aktiviert wird, wird nur die DACL in der zurückgegebenen Sicherheitsbeschreibung zurückgegeben. Weitere Informationen finden Sie unter [**Privilege Constants**](/windows/desktop/WmiSdk/privilege-constants) und [Executing Privileged Operations](/windows/desktop/WmiSdk/executing-privileged-operations).
 
 ## <a name="examples"></a>Beispiele
 
-Im folgenden VBScript-Codebeispiel werden die Drucker aufgelistet, die mit dem lokalen Computer verbunden sind, und die Sicherheits Beschreibung für jeden Drucker abgerufen. Anschließend werden die [*Zugriffs Steuerungs Einträge (Access Control Entries*](/windows/desktop/SecGloss/a-gly) , ACE) in der freigegebenen [*Zugriffs Steuerungs Liste*](/windows/desktop/SecGloss/d-gly) (DACL) extrahiert, um zu bestimmen, welche Benutzer auf den Drucker zugreifen können.
+Im folgenden VBScript-Codebeispiel werden die an den lokalen Computer angefügten Drucker aufgeführt und die Sicherheitsbeschreibung für jeden Drucker erhalten. Anschließend werden die [*Zugriffssteuerungseinträge*](/windows/desktop/SecGloss/a-gly) (ACE) in der DACL [*(Discretionary Access Control List)*](/windows/desktop/SecGloss/d-gly) extrahiert, um zu bestimmen, welche Benutzer Zugriff auf den Drucker haben.
 
 
 ```VB
@@ -152,26 +152,26 @@ Next
 |-------------------------------------|-----------------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows Vista<br/>                                                                      |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2008<br/>                                                                |
-| Namespace<br/>                | Root \\ CIMV2<br/>                                                                        |
-| MOF<br/>                      | <dl> <dt>Win32 \_ Printer. MOF</dt> </dl> |
+| Namespace<br/>                | \\Stamm-CIMV2<br/>                                                                        |
+| MOF<br/>                      | <dl> <dt>Win32 \_ Printer.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>CIMWin32.dll</dt> </dl>       |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Win32- \_ Drucker**](win32-printer.md)
+[**Win32-Drucker \_**](win32-printer.md)
 </dt> <dt>
 
-[**Berechtigungs Konstanten**](/windows/desktop/WmiSdk/privilege-constants)
+[**Berechtigungskonst constants**](/windows/desktop/WmiSdk/privilege-constants)
 </dt> <dt>
 
-[WMI-sicherheitsdeskriptorobjekte](/windows/desktop/WmiSdk/wmi-security-descriptor-objects)
+[WMI-Sicherheitsdeskriptorobjekte](/windows/desktop/WmiSdk/wmi-security-descriptor-objects)
 </dt> <dt>
 
-[Ändern der Zugriffssicherheit für Sicherungs fähige Objekte](/windows/desktop/WmiSdk/changing-access-security-on-securable-objects)
+[Ändern der Zugriffssicherheit für sicherungsfähige Objekte](/windows/desktop/WmiSdk/changing-access-security-on-securable-objects)
 </dt> </dl>
 
  

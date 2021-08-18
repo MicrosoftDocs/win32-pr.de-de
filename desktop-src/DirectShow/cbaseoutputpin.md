@@ -1,7 +1,7 @@
 ---
-description: Die cbaseoutputpin-Klasse ist eine abstrakte Basisklasse, die eine Ausgabe-PIN implementiert.
+description: Die CBaseOutputPin-Klasse ist eine abstrakte Basisklasse, die einen Ausgabepin implementiert.
 ms.assetid: 5279c8aa-6ec0-4a89-a1b3-6904d7b69a93
-title: Cbaseoutputpin-Klasse (amfilter. h)
+title: CBaseOutputPin-Klasse (Amfilter.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,59 +16,59 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: 21949d772c44f02e364013dd98c905b8f59ccdc2
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 67a4051f904b27b75273d553e1d0604b068b3910fbfb322b5a2df716c996a1ba
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106365543"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119872585"
 ---
-# <a name="cbaseoutputpin-class"></a>Cbaseoutputpin-Klasse
+# <a name="cbaseoutputpin-class"></a>CBaseOutputPin-Klasse
 
 ![cbaseoutputpin-Klassenhierarchie](images/filter06.png)
 
-Die- `CBaseOutputPin` Klasse ist eine abstrakte Basisklasse, die eine Ausgabe-PIN implementiert.
+Die `CBaseOutputPin` -Klasse ist eine abstrakte Basisklasse, die einen Ausgabepin implementiert.
 
-Diese Klasse wird von [**cbasepin**](cbasepin.md)abgeleitet. Dies unterscheidet sich von **cbasepin** in den folgenden Punkten:
+Diese Klasse wird von [**CBasePin ableiten.**](cbasepin.md) Sie unterscheidet **sich von CBasePin** in folgenden Hinsicht:
 
--   Es stellt nur eine Verbindung mit Eingabe Pins her, die die [**IMemInputPin**](/windows/desktop/api/Strmif/nn-strmif-imeminputpin) -Schnittstelle unterstützen.
--   Es unterstützt den lokalen Speicher Transport über die [**imembelegcator**](/windows/desktop/api/Strmif/nn-strmif-imemallocator) -Schnittstelle.
--   Er lehnt Streamende-, Lösch-und neue Segment Benachrichtigungen ab. (Diese sollten nicht an eine Ausgabepin gesendet werden.)
--   Es stellt Methoden zum Bereitstellen von Abtastungen bereit.
+-   Es wird nur eine Verbindung mit Eingabepins herstellt, die die [**IMemInputPin-Schnittstelle**](/windows/desktop/api/Strmif/nn-strmif-imeminputpin) unterstützen.
+-   Er unterstützt den lokalen Speichertransport über die [**IMemAllocator-Schnittstelle.**](/windows/desktop/api/Strmif/nn-strmif-imemallocator)
+-   Sie lehnt Benachrichtigungen zum Ende des Streams, zum Leeren und zu neuen Segmenten ab. (Diese sollten nicht an einen Ausgabepin gesendet werden.)
+-   Es stellt Methoden für die Nachverarbeitung von Beispielen zur Verfügung.
 
-Wenn die PIN eine Verbindung herstellt, wird von der eingabepin eine Speicherzuweisung angefordert. Wenn ein Fehler auftritt, wird ein neues zuordnerobjekt erstellt. Die Ausgabepin ist für das Festlegen der zuweicatoreigenschaften verantwortlich. Dies erfolgt über die reine virtuelle Methode [**cbaseoutputpin::D ecidebuffersize**](cbaseoutputpin-decidebuffersize.md). Überschreiben Sie diese Methode in der abgeleiteten Klasse. Wenn die Eingabe-PIN beliebige Puffer Anforderungen hat, werden Sie an die **decidebuffersize** -Methode übergeben.
+Wenn der Pin eine Verbindung herstellt, fordert er eine Speicherzuweisung vom Eingabepin an. Wenn dies nicht der Fehler ist, wird ein neues Zuweisungsobjekt erstellt. Der Ausgabepin ist für das Festlegen der Zuweisungseigenschaften verantwortlich. Dies wird mit der reinen virtuellen [**Methode CBaseOutputPin::D ecideBufferSize ausgeführt.**](cbaseoutputpin-decidebuffersize.md) Überschreiben Sie diese Methode in der abgeleiteten Klasse. Wenn der Eingabepin Pufferanforderungen hat, werden sie an die **DecideBufferSize-Methode** übergeben.
 
-Rufen Sie die [**cbaseoutputpin:: getdeliverybuffer**](cbaseoutputpin-getdeliverybuffer.md) -Methode auf, um ein leeres Medien Beispiel zu erhalten. Rufen Sie die [**cbaseoutputpin::D eliver**](cbaseoutputpin-deliver.md) -Methode auf, um Abtastungen übermitteln.
+Rufen Sie [**die CBaseOutputPin::GetDeliveryBuffer-Methode**](cbaseoutputpin-getdeliverybuffer.md) auf, um ein leeres Medienbeispiel zu erhalten. Rufen Sie [**die CBaseOutputPin::D eliver-Methode**](cbaseoutputpin-deliver.md) auf, um Nachgelagerte Beispiele zu liefern.
 
-Ihre abgeleitete Klasse muss die rein virtuelle [**cbasepin:: checkmediatype**](cbasepin-checkmediatype.md) -Methode überschreiben, um den Medientyp während der PIN-Verbindungen zu überprüfen.
+Die abgeleitete Klasse muss die rein virtuelle [**CBasePin::CheckMediaType-Methode**](cbasepin-checkmediatype.md) überschreiben, um den Medientyp während pin-Verbindungen zu überprüfen.
 
 
 
-| Geschützte Member-Variablen                                      | BESCHREIBUNG                                                                |
+| Geschützte Membervariablen                                      | Beschreibung                                                                |
 |-----------------------------------------------------------------|----------------------------------------------------------------------------|
-| [**m- \_ pallocator**](cbaseoutputpin-m-pallocator.md)            | Zeiger auf die Speicherzuweisung.                                           |
-| [**m \_ pinputpin**](cbaseoutputpin-m-pinputpin.md)              | Zeiger auf die Eingabe-PIN, die mit dieser Pin verbunden ist.                            |
-| Öffentliche Methoden                                                  | BESCHREIBUNG                                                                |
-| [**Cbaseoutputpin**](cbaseoutputpin-cbaseoutputpin.md)         | Konstruktormethode.                                                        |
-| [**Completeconnect**](cbaseoutputpin-completeconnect.md)       | Schließt eine Verbindung mit einer Eingabe-PIN ab. Virtu.                           |
-| [**Decidezuordcator**](cbaseoutputpin-decideallocator.md)       | Wählt eine Speicherzuweisung aus. Virtu.                                       |
-| [**Getdeliverybuffer**](cbaseoutputpin-getdeliverybuffer.md)   | Ruft ein Medien Beispiel ab, das einen leeren Puffer enthält. Virtu.           |
-| [**Bereitstellen**](cbaseoutputpin-deliver.md)                       | Übermittelt ein Medien Beispiel an die verbundene Eingabe-PIN. Virtu.               |
-| [**Initzuweisung**](cbaseoutputpin-initallocator.md)           | Erstellt eine Speicherzuweisung. Virtu.                                       |
-| [**Check Connect**](cbaseoutputpin-checkconnect.md)             | Bestimmt, ob eine PIN-Verbindung geeignet ist.                           |
-| [**Breakconnect**](cbaseoutputpin-breakconnect.md)             | Gibt die PIN von einer Verbindung frei.                                        |
-| [**Aktiv**](cbaseoutputpin-active.md)                         | Benachrichtigt die PIN, dass der Filter jetzt aktiv ist.                            |
-| [**Inaktiv**](cbaseoutputpin-inactive.md)                     | Benachrichtigt die PIN, dass der Filter nicht mehr aktiv ist.                      |
-| [**Deliverendof**](cbaseoutputpin-deliverendofstream.md) | Übermittelt eine Benachrichtigung über das Ende des Streams an die verbundene Eingabe-PIN. Virtu. |
-| [**Deliverbeginflush**](cbaseoutputpin-deliverbeginflush.md)   | Fordert an, dass die verbundene Eingabe-PIN einen Leerungs Vorgang startet. Virtu.      |
-| [**Deliverendflush**](cbaseoutputpin-deliverendflush.md)       | Fordert die verbundene Eingabe-PIN an, einen Leerungs Vorgang zu beenden. Virtu.        |
-| [**Delivernewsegment**](cbaseoutputpin-delivernewsegment.md)   | Übermittelt eine Benachrichtigung über ein neues Segment an die verbundene Eingabe-PIN. Virtu.   |
-| Reine virtuelle Methoden                                            | BESCHREIBUNG                                                                |
-| [**Decidebuffersize**](cbaseoutputpin-decidebuffersize.md)     | Legt die Puffer Anforderungen fest.                                              |
-| IPin-Methoden                                                    | BESCHREIBUNG                                                                |
-| [**Beginflush**](cbaseoutputpin-beginflush.md)                 | Startet einen Löschvorgang.                                                  |
-| [**Endflush**](cbaseoutputpin-endflush.md)                     | Beendet einen Löschvorgang.                                                    |
-| [**EndOfStream**](cbaseoutputpin-endofstream.md)               | Benachrichtigt die PIN, dass keine weiteren Daten erwartet werden.                      |
+| [**m \_ pAllocator**](cbaseoutputpin-m-pallocator.md)            | Zeiger auf die Speicherzuweisung.                                           |
+| [**m \_ pInputPin**](cbaseoutputpin-m-pinputpin.md)              | Zeiger auf den Eingabepin, der mit diesem Pin verbunden ist.                            |
+| Öffentliche Methoden                                                  | Beschreibung                                                                |
+| [**CBaseOutputPin**](cbaseoutputpin-cbaseoutputpin.md)         | Konstruktormethode.                                                        |
+| [**CompleteConnect**](cbaseoutputpin-completeconnect.md)       | Schließt eine Verbindung mit einem Eingabepin ab. Virtuellen.                           |
+| [**DecideAllocator**](cbaseoutputpin-decideallocator.md)       | Wählt eine Speicherzuweisung aus. Virtuellen.                                       |
+| [**GetDeliveryBuffer**](cbaseoutputpin-getdeliverybuffer.md)   | Ruft ein Medienbeispiel ab, das einen leeren Puffer enthält. Virtuellen.           |
+| [**Bereitstellen**](cbaseoutputpin-deliver.md)                       | Übergibt ein Medienbeispiel an den verbundenen Eingabepin. Virtuellen.               |
+| [**InitAllocator**](cbaseoutputpin-initallocator.md)           | Erstellt eine Speicherzuweisung. Virtuellen.                                       |
+| [**CheckConnect**](cbaseoutputpin-checkconnect.md)             | Bestimmt, ob eine Stecknadelverbindung geeignet ist.                           |
+| [**BreakConnect**](cbaseoutputpin-breakconnect.md)             | Gibt den Pin von einer Verbindung frei.                                        |
+| [**Aktiv**](cbaseoutputpin-active.md)                         | Benachrichtigt den Pin, dass der Filter jetzt aktiv ist.                            |
+| [**Inaktiv**](cbaseoutputpin-inactive.md)                     | Benachrichtigt den Pin, dass der Filter nicht mehr aktiv ist.                      |
+| [**DeliverEndOfStream**](cbaseoutputpin-deliverendofstream.md) | Übergibt eine Benachrichtigung am Ende des Streams an den verbundenen Eingabepin. Virtuellen. |
+| [**DeliverBeginFlush**](cbaseoutputpin-deliverbeginflush.md)   | Fordert den verbundenen Eingabepin an, um einen Leerungsvorgang zu starten. Virtuellen.      |
+| [**DeliverEndFlush**](cbaseoutputpin-deliverendflush.md)       | Fordert den verbundenen Eingabepin an, um einen Leerungsvorgang zu beenden. Virtuellen.        |
+| [**DeliverNewSegment**](cbaseoutputpin-delivernewsegment.md)   | Übergibt eine Benachrichtigung für ein neues Segment an den verbundenen Eingabepin. Virtuellen.   |
+| Rein virtuelle Methoden                                            | Beschreibung                                                                |
+| [**DecideBufferSize**](cbaseoutputpin-decidebuffersize.md)     | Legt die Pufferanforderungen fest.                                              |
+| IPin-Methoden                                                    | Beschreibung                                                                |
+| [**BeginFlush**](cbaseoutputpin-beginflush.md)                 | Startet einen Leerungsvorgang.                                                  |
+| [**EndFlush**](cbaseoutputpin-endflush.md)                     | Beendet einen Leerungsvorgang.                                                    |
+| [**EndOfStream**](cbaseoutputpin-endofstream.md)               | Benachrichtigt den Pin, dass keine zusätzlichen Daten erwartet werden.                      |
 
 
 
@@ -80,8 +80,8 @@ Ihre abgeleitete Klasse muss die rein virtuelle [**cbasepin:: checkmediatype**](
 
 | Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Amfilter. h (Include Streams. h)</dt> </dl>                                                                                  |
-| Bibliothek<br/> | <dl> " <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Amfilter.h (include Streams.h)</dt> </dl>                                                                                  |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Einzelhandels-Builds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 

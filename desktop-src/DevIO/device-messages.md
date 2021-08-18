@@ -1,23 +1,23 @@
 ---
-description: Geräte Nachrichten sind Systemmeldungen, die Anwendungen und andere Features von Geräte Änderungs Ereignissen benachrichtigen.
+description: Gerätemeldungen sind Systemmeldungen, die Anwendungen und andere Features von Geräteänderungsereignissen benachrichtigen.
 ms.assetid: 4d1ace87-2d02-4ba4-9bcc-da86cf3481db
 title: Gerätemeldungen
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: e22fe5b9f8b3f9fcc2a075767aa684bd92962f32
-ms.sourcegitcommit: c7add10d695482e1ceb72d62b8a4ebd84ea050f7
+ms.openlocfilehash: 3a26666ab0f7675da02e70d53ffd8aec5040a0482a0a2cdc71279fcaeca8ca92
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106343000"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120053509"
 ---
 # <a name="device-messages"></a>Gerätemeldungen
 
-Geräte Nachrichten sind Systemmeldungen, die Anwendungen und andere Features von Geräte Änderungs Ereignissen benachrichtigen. Diese Ereignisse treten immer dann auf, wenn das System eine Änderung an der System Hardware erkennt, z. b. wenn der Benutzer einen Laptop andockt und ihn abdockt oder ein Gerät wie eine PCMCIA-Karte einfügt oder entfernt. Geräte Ereignisse können auftreten, während das System ausgeführt wird, oder wenn der Vorgang fortgesetzt wird, nachdem das System vorübergehend angehalten wurde.
+Gerätemeldungen sind Systemmeldungen, die Anwendungen und andere Features von Geräteänderungsereignissen benachrichtigen. Diese Ereignisse treten immer dann auf, wenn das System eine Änderung der Systemhardware erkennt, z. B. wenn der Benutzer einen Laptop andockt und abdockt oder ein Gerät wie eine PCMCIA-Karte ein- oder entfernt. Geräteereignisse können auftreten, während das System ausgeführt wird oder wenn das System den Betrieb nach dem vorübergehenden Aussetzen wieder aufgenommen hat.
 
-Um sicherzustellen, dass Anwendungen keine Daten verlieren, wenn Geräte nicht mehr verfügbar sind, überwacht das System die Hardwarekonfiguration und sendet Geräte Nachrichten an die Anwendungen, um Sie über die Änderungen zu informieren und Ihnen die Möglichkeit zu geben, die Änderungen vorzubereiten, bevor Sie auftreten.
+Um sicherzustellen, dass Anwendungen keine Daten verlieren, wenn Geräte nicht mehr verfügbar sind, überwacht das System die Hardwarekonfiguration und sendet Gerätenachrichten an die Anwendungen, um sie über die Änderungen zu benachrichtigen und ihnen die Möglichkeit zu geben, sich auf die Änderungen vorzubereiten, bevor sie auftreten.
 
-Das System überträgt für jedes Geräte Ereignis eine [**WM- \_ devicechange**](wm-devicechange.md) -Nachricht an alle Anwendungen. In dieser Meldung identifiziert der *wParam* -Parameter den [Geräte Ereignistyp](device-event-types.md) , und der *LPARAM* -Parameter ist ein Zeiger auf ereignisspezifische Daten.
+Für jedes Geräteereignis sendet das System eine [**WM \_ DEVICECHANGE-Nachricht**](wm-devicechange.md) an alle Anwendungen. In dieser Meldung identifiziert der *wParam-Parameter* den Geräteereignistyp, und der [](device-event-types.md) *lParam-Parameter* ist ein Zeiger auf ereignisspezifische Daten.
 
  
 

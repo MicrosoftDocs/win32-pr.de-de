@@ -1,7 +1,7 @@
 ---
-description: Implementiert die ianalysisregion-Schnittstelle.
+description: Implementiert die IAnalysisRegion-Schnittstelle.
 ms.assetid: b881c15d-be2b-4b6a-a50e-bdd42a7cd9bb
-title: AnalysisRegion-Klasse (iacom. h)
+title: AnalysisRegion-Klasse (IACom.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,20 +13,20 @@ api_type:
 - COM
 api_location:
 - IACom.dll
-ms.openlocfilehash: 6e517f509a18efe9c6d413eb1a7fe7dab47b8820
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 2e8ce5a4da0bbf4c6698e15c6a830982c41822c000789ba9ffe97f2a2df2069f
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "103958637"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120009230"
 ---
 # <a name="analysisregion-class"></a>AnalysisRegion-Klasse
 
-Implementiert die [**ianalysisregion**](ianalysisregion.md) -Schnittstelle.
+Implementiert die [**IAnalysisRegion-Schnittstelle.**](ianalysisregion.md)
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Diese Klasse implementiert die [**ianalysisregion**](ianalysisregion.md) -com-Schnittstelle und entspricht System. Windows. Ink. AnalysisCore. AnalysisRegionBase im .NET Framework.
+Diese Klasse implementiert die [**IAnalysisRegion-COM-Schnittstelle**](ianalysisregion.md) und entspricht System. Windows. Ink.AnalysisCore.AnalysisRegionBase im .NET Framework.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -34,9 +34,9 @@ Diese Klasse implementiert die [**ianalysisregion**](ianalysisregion.md) -com-Sc
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows XP Tablet PC Edition \[ Desktop-Apps\]<br/>                                                 |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur Desktop-Apps der XP Tablet PC Edition \[\]<br/>                                                 |
 | Unterstützte Mindestversion (Server)<br/> | Nicht unterstützt<br/>                                                                                     |
-| Header<br/>                   | <dl> <dt>Iacom. h (erfordert auch iacom \_ i. c)</dt> </dl> |
+| Header<br/>                   | <dl> <dt>IACom.h (erfordert auch IACom \_ i.c)</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>IACom.dll</dt> </dl>                          |
 
 
@@ -45,10 +45,10 @@ Diese Klasse implementiert die [**ianalysisregion**](ianalysisregion.md) -com-Sc
 
 <dl> <dt>
 
-[**Iinkanalyzer**](iinkanalyzer.md)
+[**IInkAnalyzer**](iinkanalyzer.md)
 </dt> <dt>
 
-[Ink-Analyse Referenz](ink-analysis-reference.md)
+[Referenz zur Ink-Analyse](ink-analysis-reference.md)
 </dt> </dl>
 
  

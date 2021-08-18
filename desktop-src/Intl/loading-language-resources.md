@@ -4,16 +4,16 @@ ms.assetid: 2655b2a3-2926-43f6-aef4-8b756c02a162
 title: Laden von Sprachressourcen
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: af6917f03e773a470288fb4c9577812e0b38868b
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 2eebf027476658872fe392fe60699da1a586f9297f39a191898b1e132439962c
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "104350308"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120106930"
 ---
 # <a name="loading-language-resources"></a>Laden von Sprachressourcen
 
-Die Anwendung lädt alle Sprachressourcen für die Benutzeroberfläche, außer bestimmte umgeleitete Registrierungs Zeichenfolgen, mit Aufrufen von Funktionen zum Laden von Standard Ressourcen, z. b. [**FormatMessage**](/windows/win32/api/winbase/nf-winbase-formatmessage), [**LoadString**](/windows/win32/api/winuser/nf-winuser-loadstringa)und [**LoadImage**](/windows/win32/api/winuser/nf-winuser-loadimagea). Viele Funktionen zum Laden von Ressourcen wurden so geändert, dass Ressourcen aus sprachspezifischen Ressourcen Dateien automatisch geladen werden, wobei Ressourcen so behandelt werden, als wären Sie in der LN-Datei enthalten. Das folgende Beispiel veranschaulicht die Verwendung von **LoadString** zum Laden von sprach Zeichenfolgen für eine Anwendung, die den System Spracheinstellungen folgt.
+Ihre Anwendung lädt alle Benutzeroberflächensprachressourcen außer bestimmten umgeleiteten Registrierungszeichenfolgen mithilfe von Aufrufen von Standardfunktionen zum Laden von Ressourcen, z. B. [**FormatMessage,**](/windows/win32/api/winbase/nf-winbase-formatmessage) [**LoadString**](/windows/win32/api/winuser/nf-winuser-loadstringa)und [**LoadImage.**](/windows/win32/api/winuser/nf-winuser-loadimagea) Viele Funktionen zum Laden von Ressourcen wurden so geändert, dass Ressourcen automatisch aus sprachspezifischen Ressourcendateien geladen werden. Dabei werden Ressourcen so behandelt, als wären sie in der LN-Datei enthalten. Das folgende Beispiel veranschaulicht die Verwendung von **LoadString** zum Laden von Sprachzeichenfolgen für eine Anwendung, die den Systemspracheinstellungen folgt.
 
 
 ```C++

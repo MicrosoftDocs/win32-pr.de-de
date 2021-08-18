@@ -1,19 +1,19 @@
 ---
-description: Dieser Beispielcode basiert auf einer benutzerdefinierten Ice-Aktion (ICE08). Das Eis überprüft, ob jede Komponente in der Komponenten Tabelle über eine eindeutige GUID verfügt. Wenn die Komponenten Tabelle nicht vorhanden ist, wird keine Validierung durchgeführt.
+description: Dieser Beispielcode stammt aus einer benutzerdefinierten ICE-Aktion (ICE08). Der ICE überprüft, ob jede Komponente in der Tabelle Komponente über eine eindeutige GUID verfügt. Wenn die Tabelle Komponente nicht vorhanden ist, wird keine Überprüfung durchgeführt.
 ms.assetid: 785c3fd6-7120-4532-b055-b73a9a44f75d
-title: Sample Ice in VBScript
+title: ICE-Beispiel in VBScript
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: cf49c37eb5aa8d8e4b4e7b617802c49389e77ed7
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 28a21ce87547923cca67b115f1f5c9ea93c4cfac6676924e9ad88e7f1d2b332d
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106350235"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119996310"
 ---
-# <a name="sample-ice-in-vbscript"></a>Sample Ice in VBScript
+# <a name="sample-ice-in-vbscript"></a>ICE-Beispiel in VBScript
 
-Dieser Beispielcode basiert auf einer benutzerdefinierten Ice-Aktion ( [ICE08](ice08.md)). Das Eis überprüft, ob jede Komponente in der [Komponenten Tabelle](component-table.md) über eine eindeutige [GUID](guid.md)verfügt. Wenn die Komponenten Tabelle nicht vorhanden ist, wird keine Validierung durchgeführt.
+Dieser Beispielcode stammt aus einer benutzerdefinierten ICE-Aktion ( [ICE08](ice08.md)). Der ICE überprüft, ob jede Komponente in der [Tabelle Komponente](component-table.md) über eine eindeutige [GUID verfügt.](guid.md) Wenn die Tabelle Komponente nicht vorhanden ist, wird keine Überprüfung durchgeführt.
 
 
 ```VB

@@ -1,9 +1,9 @@
 ---
-title: Friday (daysOfWeekType)-Element
+title: Friday -Element (daysOfWeekType)
 description: Gibt an, dass die Aufgabe am Freitag ausgeführt wird.
 ms.assetid: bff85911-d354-4954-8c69-7b6f2ca312d3
 keywords:
-- Friday-Element Taskplaner
+- Friday-Taskplaner
 topic_type:
 - apiref
 api_name:
@@ -20,7 +20,7 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 08/11/2021
 ms.locfileid: "119991240"
 ---
-# <a name="friday-daysofweektype-element"></a>Friday (daysOfWeekType)-Element
+# <a name="friday-daysofweektype-element"></a>Friday -Element (daysOfWeekType)
 
 Gibt an, dass die Aufgabe am Freitag ausgeführt wird.
 
@@ -30,16 +30,16 @@ Gibt an, dass die Aufgabe am Freitag ausgeführt wird.
 </xs:element>
 ```
 
-Das **Friday-Element** wird durch den komplexen [**DaysOfWeekType-Typ**](taskschedulerschema-daysofweektype-complextype.md) definiert.
+Das **Friday-Element** wird durch den [**komplexen DaysOfWeekType-Typ**](taskschedulerschema-daysofweektype-complextype.md) definiert.
 
 ## <a name="parent-element"></a>Übergeordnetes Element
 
 
 
-| Element                                                                                                                  | Abgeleitet von                                                             | BESCHREIBUNG                                                                                          |
+| Element                                                                                                                  | Abgeleitet von                                                             | Beschreibung                                                                                          |
 |--------------------------------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------|
 | [**DaysOfWeek (monthlyDayOfWeekScheduleType)**](taskschedulerschema-daysofweek-monthlydayofweekscheduletype-element.md) | [**daysOfWeekType**](taskschedulerschema-daysofweektype-complextype.md) | Gibt die Wochentage an, an denen der Task für einen monatlichen Wochentag ausgeführt wird.<br/> |
-| [**DaysOfWeek (weeklyScheduleType)**](taskschedulerschema-daysofweek-weeklyscheduletype-element.md)                     | [**daysOfWeekType**](taskschedulerschema-daysofweektype-complextype.md) | Gibt die Wochentage an, an denen der Task nach einem wöchentlichen Zeitplan ausgeführt wird.<br/>              |
+| [**DaysOfWeek (weeklyScheduleType)**](taskschedulerschema-daysofweek-weeklyscheduletype-element.md)                     | [**daysOfWeekType**](taskschedulerschema-daysofweektype-complextype.md) | Gibt die Wochentage an, an denen die Aufgabe für einen wöchentlichen Zeitplan ausgeführt wird.<br/>              |
 
 
 
@@ -62,7 +62,7 @@ Der folgende XML-Code definiert einen Wochentagskalender, der eine Aufgabe am Fr
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur Vista-Desktop-Apps\]<br/>       |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ Vista-Desktop-Apps\]<br/>       |
 | Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/> |
 
 

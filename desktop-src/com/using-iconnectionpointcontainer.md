@@ -4,35 +4,35 @@ description: Verwenden von IConnectionPointContainer
 ms.assetid: a87afb25-4d45-4ce2-9b27-840da5107bce
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: d4d0b7c691e1ba6a8445af56978b43a2ccbf33e7
-ms.sourcegitcommit: 85688bbfbe5b121bc05ddf112d54c23a469dfbc0
+ms.openlocfilehash: 9a8d53e9051796cafa4a8c7825d810b18784d58a4dd5d531eb38872b87cb32c4
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "106341701"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119992030"
 ---
 # <a name="using-iconnectionpointcontainer"></a>Verwenden von IConnectionPointContainer
 
-Ein Verbindungs fähigen-Objekt implementiert [**IConnectionPointContainer**](/windows/desktop/api/OCIdl/nn-ocidl-iconnectionpointcontainer) (und macht es über [**QueryInterface**](/windows/desktop/api/Unknwn/nf-unknwn-iunknown-queryinterface(q))verfügbar), um anzugeben, dass ausgehende Schnittstellen vorhanden sind. Für jede ausgehende Schnittstelle verwaltet das Verbindungs fähigen-Objekt ein Verbindungspunkt-unter Objekt, das [**IConnectionPoint**](/windows/desktop/api/OCIdl/nn-ocidl-iconnectionpoint)implementiert. Das Verbindungs fähigen-Objekt enthält daher die Verbindungspunkte, daher die Benennung von **IConnectionPointContainer** und **IConnectionPoint**.
+Ein verbindungsfähiges Objekt implementiert [**IConnectionPointContainer**](/windows/desktop/api/OCIdl/nn-ocidl-iconnectionpointcontainer) (und macht es über [**QueryInterface**](/windows/desktop/api/Unknwn/nf-unknwn-iunknown-queryinterface(q))verfügbar), um das Vorhandensein ausgehender Schnittstellen anzugeben. Für jede ausgehende Schnittstelle verwaltet das verbindungsfähige Objekt ein Unterobjekt des Verbindungspunkts, das [**selbst IConnectionPoint implementiert.**](/windows/desktop/api/OCIdl/nn-ocidl-iconnectionpoint) Das verbindungsfähige Objekt enthält daher die Verbindungspunkte, daher die Benennung von **IConnectionPointContainer** und **IConnectionPoint**.
 
-Über [**IConnectionPointContainer**](/windows/desktop/api/OCIdl/nn-ocidl-iconnectionpointcontainer)kann ein Client zwei Vorgänge ausführen. Wenn der Client bereits über die IID für eine ausgehende Schnittstelle verfügt, die er unterstützt, kann er zunächst den entsprechenden Verbindungspunkt für die IID mithilfe von [**IConnectionPointContainer:: FindConnectionPoint**](/windows/desktop/api/OCIdl/nf-ocidl-iconnectionpointcontainer-findconnectionpoint)finden. Der Client kann den Verbindungspunkt nicht direkt Abfragen, weil die Container/enthaltene Beziehung zwischen dem Verbindungs fähigen-Objekt und den darin enthaltenen Verbindungs Punkten besteht. Im Grunde ist **FindConnectionPoint** die [**QueryInterface**](/windows/desktop/api/Unknwn/nf-unknwn-iunknown-queryinterface(q)) für ausgehende Schnittstellen, wenn die IID dem Client bekannt ist.
+Über [**IConnectionPointContainer**](/windows/desktop/api/OCIdl/nn-ocidl-iconnectionpointcontainer)kann ein Client zwei Vorgänge ausführen. Erstens: Wenn der Client bereits über die IID für eine ausgehende Schnittstelle verfügt, die er unterstützt, kann er den entsprechenden Verbindungspunkt für die IID mithilfe von [**IConnectionPointContainer::FindConnectionPoint suchen.**](/windows/desktop/api/OCIdl/nf-ocidl-iconnectionpointcontainer-findconnectionpoint) Der Client kann den Verbindungspunkt aufgrund der Container-/Contained-Beziehung zwischen dem verbindungsierbaren Objekt und seinen enthaltenen Verbindungspunkten nicht direkt abfragen. Im Grunde **ist FindConnectionPoint** das [**QueryInterface**](/windows/desktop/api/Unknwn/nf-unknwn-iunknown-queryinterface(q)) für ausgehende Schnittstellen, wenn die IID dem Client bekannt ist.
 
-Zweitens kann der Client alle Verbindungspunkte innerhalb des Verbindungs fähigen Objekts über [**IConnectionPointContainer:: EnumConnectionPoints**](/windows/desktop/api/OCIdl/nf-ocidl-iconnectionpointcontainer-enumconnectionpoints)auflisten. Diese Methode gibt einen [**IEnumConnectionPoints**](/windows/desktop/api/ocidl/nn-ocidl-ienumconnectionpoints) -Schnittstellen Zeiger für ein separates Enumeratorobjekt zurück. Über [**IEnumConnectionPoints:: Next**](/windows/desktop/api/ocidl/nf-ocidl-ienumconnectionpoints-next)kann der Client [**IConnectionPoint**](/windows/desktop/api/OCIdl/nn-ocidl-iconnectionpoint) -Schnittstellen Zeiger auf jeden Verbindungspunkt abrufen.
+Zweitens kann der Client alle Verbindungspunkte innerhalb des verbindungsbaren Objekts über [**IConnectionPointContainer::EnumConnectionPoints aufzählen.**](/windows/desktop/api/OCIdl/nf-ocidl-iconnectionpointcontainer-enumconnectionpoints) Diese Methode gibt einen [**IEnumConnectionPoints-Schnittstellenzeiger**](/windows/desktop/api/ocidl/nn-ocidl-ienumconnectionpoints) für ein separates Enumeratorobjekt zurück. Über [**IEnumConnectionPoints::Next**](/windows/desktop/api/ocidl/nf-ocidl-ienumconnectionpoints-next)kann der Client [**IConnectionPoint-Schnittstellenzederherstellungen**](/windows/desktop/api/OCIdl/nn-ocidl-iconnectionpoint) auf jeden Verbindungspunkt abrufen.
 
-Nachdem der Client die [**IConnectionPoint**](/windows/desktop/api/OCIdl/nn-ocidl-iconnectionpoint) -Schnittstelle abgerufen hat, muss er [**IConnectionPoint:: GetConnectionInterface**](/windows/desktop/api/OCIdl/nf-ocidl-iconnectionpoint-getconnectioninterface) aufrufen, um die IID der ausgehenden Schnittstelle zu ermitteln, die von den einzelnen Verbindungs Punkten unterstützt wird. Wenn der Client diese ausgehende Schnittstelle bereits unterstützt, kann er eine Verbindung herstellen. Andernfalls kann die ausgehende Schnittstelle weiterhin unterstützt werden, indem Informationen aus der Typbibliothek des Verbindungs fähigen-Objekts verwendet werden, um zur Laufzeit Unterstützung bereitzustellen. Diese Technik erfordert, dass das Verbindungs fähigen-Objekt die [**IProvideClassInfo**](/windows/desktop/api/OCIdl/nn-ocidl-iprovideclassinfo) -Schnittstelle unterstützt. (Weitere Informationen finden [Sie unter Verwenden von IProvideClassInfo](using-iprovideclassinfo.md).)
+Nachdem der Client die [**IConnectionPoint-Schnittstelle**](/windows/desktop/api/OCIdl/nn-ocidl-iconnectionpoint) erhalten hat, muss er [**IConnectionPoint::GetConnectionInterface**](/windows/desktop/api/OCIdl/nf-ocidl-iconnectionpoint-getconnectioninterface) aufrufen, um die IID der ausgehenden Schnittstelle zu bestimmen, die von jedem Verbindungspunkt unterstützt wird. Wenn der Client diese ausgehende Schnittstelle bereits unterstützt, kann er eine Verbindung herstellen. Andernfalls kann die ausgehende Schnittstelle möglicherweise weiterhin unterstützt werden, indem Informationen aus der Typbibliothek des verbindungsierbaren Objekts verwendet werden, um zur Laufzeit Unterstützung zu bieten. Diese Technik erfordert, dass das verbindungsfähige Objekt die [**IProvideClassInfo-Schnittstelle**](/windows/desktop/api/OCIdl/nn-ocidl-iprovideclassinfo) unterstützt. (Siehe [Verwenden von IProvideClassInfo](using-iprovideclassinfo.md).)
 
-Da der Enumerator ein separates Objekt ist, muss der Client **IEnumConnectionPoints:: Release** abrufen, wenn der Enumerator nicht mehr benötigt wird. Außerdem ist jeder Verbindungspunkt ein Objekt mit einem separaten Verweis Zähler aus dem enthaltenden Verbindungs fähigen-Objekt. Daher muss der Client auch IConnectionPoint:: Release für jeden Verbindungspunkt aufrufen, auf den über den Enumerator oder durch [**FindConnectionPoint**](/windows/desktop/api/OCIdl/nf-ocidl-iconnectionpointcontainer-findconnectionpoint)zugegriffen wird.
+Da der Enumerator ein separates Objekt ist, muss der Client **IEnumConnectionPoints::Release** aufrufen, wenn der Enumerator nicht mehr benötigt wird. Darüber hinaus ist jeder Verbindungspunkt ein Objekt mit einem separaten Verweiszähler vom enthaltenden verbindungsierbaren Objekt. Daher muss der Client auch IConnectionPoint::Release für jeden Verbindungspunkt aufrufen, auf den entweder über den Enumerator oder über [**FindConnectionPoint zugegriffen wird.**](/windows/desktop/api/OCIdl/nf-ocidl-iconnectionpointcontainer-findconnectionpoint)
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[Verbindungs fähige Objekt Schnittstellen](connectable-object-interfaces.md)
+[Schnittstellen für verbindende Objekte](connectable-object-interfaces.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

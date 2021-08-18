@@ -1,6 +1,6 @@
 ---
-description: 'Erfahren Sie mehr über: esentindexinuseexception-Konstruktor'
-title: Esentindexinuseexception-Konstruktor
+description: 'Weitere Informationen zu: EsentIndexInUseException-Konstruktor'
+title: EsentIndexInUseException-Konstruktor
 TOCTitle: 'EsentIndexInUseException constructor '
 ms:assetid: M:Microsoft.Isam.Esent.Interop.EsentIndexInUseException.#ctor
 ms:mtpsurl: https://msdn.microsoft.com/library/microsoft.isam.esent.interop.esentindexinuseexception.esentindexinuseexception(v=EXCHG.10)
@@ -24,19 +24,19 @@ api_type:
 api_location:
 - Microsoft.Isam.Esent.Interop.dll
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: 00d3ff500618570a104a2f881b5bf05eaaeb0f37
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 601df3b37253a3b00e96b142ab0dac0114814279f48ed65259023202a4237986
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "103866220"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119973090"
 ---
-# <a name="esentindexinuseexception-constructor"></a>Esentindexinuseexception-Konstruktor
+# <a name="esentindexinuseexception-constructor"></a>EsentIndexInUseException-Konstruktor
 
-Initialisiert eine neue Instanz der esentindexinuseexception-Klasse.
+Initialisiert eine neue Instanz der EsentIndexInUseException-Klasse.
 
-**Namespace:**  [Microsoft. ISAM. ESENT. Interop](./microsoft.isam.esent.interop-namespace.md)  
-**Assembly:**  Microsoft. ISAM. ESENT. Interop (in Microsoft.Isam.Esent.Interop.dll)
+**Namespace:**  [Microsoft.Isam.Esent.Interop](./microsoft.isam.esent.interop-namespace.md)  
+**Assembly:**  Microsoft.Isam.Esent.Interop (in Microsoft.Isam.Esent.Interop.dll)
 
 ## <a name="syntax"></a>Syntax
 
@@ -54,10 +54,10 @@ public EsentIndexInUseException()
 
 ## <a name="see-also"></a>Siehe auch
 
-#### <a name="reference"></a>Referenz
+#### <a name="reference"></a>Verweis
 
-[Esentindexinuseexception-Klasse](./esentindexinuseexception-class.md)
+[EsentIndexInUseException-Klasse](./esentindexinuseexception-class.md)
 
-[Esentindexinuseexception-Member](./esentindexinuseexception-members.md)
+[EsentIndexInUseException-Member](./esentindexinuseexception-members.md)
 
-[Microsoft. ISAM. ESENT. Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)
+[Microsoft.Isam.Esent.Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)

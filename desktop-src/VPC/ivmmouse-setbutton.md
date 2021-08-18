@@ -1,11 +1,11 @@
 ---
-title: Ivmmouse setbutton-Methode (vpccominterfaces. h)
+title: IVMMouse SetButton-Methode (VPCCOMInterfaces.h)
 description: Legt den aktuellen Zustand (nach oben oder unten) der angegebenen Maustaste fest.
 ms.assetid: 52b24472-68d6-4a42-8ae5-b1434a6d67f3
 keywords:
-- Setbutton-Methode virtueller PC
-- Setbutton-Methode Virtual PC, ivmmouse-Schnittstelle
-- Ivmmouse Interface Virtual PC, setbutton-Methode
+- SetButton-Methode Virtueller PC
+- SetButton-Methode Virtual PC, IVMMouse-Schnittstelle
+- IVMMouse-Schnittstelle Virtueller PC, SetButton-Methode
 topic_type:
 - apiref
 api_name:
@@ -16,16 +16,16 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: c2d30ae131ac33eeff339b98511fd2da60a1e606
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 04bdd3d7e0075b050c5184beee0a5da21f184040a03731317f2d61e09c07fd9c
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104105675"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119974110"
 ---
-# <a name="ivmmousesetbutton-method"></a>Ivmmouse:: setbutton-Methode
+# <a name="ivmmousesetbutton-method"></a>IVMMouse::SetButton-Methode
 
-\[Windows Virtual PC ist nicht mehr für die Verwendung ab Windows 8 verfügbar. Verwenden Sie stattdessen den [Hyper-V-WMI-Anbieter (v2)](/windows/desktop/HyperV_v2/windows-virtualization-portal).\]
+\[Windows Der virtuelle PC ist ab diesem Zeitraum nicht mehr Windows 8. Verwenden Sie stattdessen den [Hyper-V-WMI-Anbieter (V2).](/windows/desktop/HyperV_v2/windows-virtualization-portal)\]
 
 Legt den aktuellen Zustand (nach oben oder unten) der angegebenen Maustaste fest.
 
@@ -45,17 +45,17 @@ HRESULT SetButton(
 
 <dl> <dt>
 
-*ButtonIndex* \[ in\]
+*buttonIndex* \[ In\]
 </dt> <dd>
 
-Der Schaltflächen Index. Eine Liste der Werte finden Sie unter [**vmmousetbutton**](vmmousebutton.md).
+Der Schaltflächenindex. Eine Liste der Werte finden Sie unter [**VMMouseButton**](vmmousebutton.md).
 
 </dd> <dt>
 
-*nach unten* \[ in\]
+*down* \[ In\]
 </dt> <dd>
 
-Der neue Schaltflächen Zustand. Verwenden Sie **true** , wenn der Zustand der Schaltfläche auf Down festgelegt werden soll, und **false** , wenn es auf up festgelegt werden soll.
+Der neue Schaltflächenzustand. Verwenden **Sie TRUE,** wenn der Schaltflächenzustand auf "down" festgelegt werden soll, und **FALSE,** wenn er eingerichtet werden soll.
 
 </dd> </dl>
 
@@ -68,10 +68,10 @@ Diese Methode kann einen dieser Werte zurückgeben.
 | Rückgabecode/-wert                                                                                                                                                        | BESCHREIBUNG                                                                                                                                       |
 |--------------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------|
 | <dl> <dt>**S \_ OK**</dt> <dt>0</dt> </dl>                              | Der Vorgang wurde durchgeführt.<br/>                                                                                                          |
-| <dl> <dt>**E \_ InvalidArg**</dt> <dt>0x80000003</dt> </dl>             | Der *Button Index* -Parameter ist ungültig.<br/>                                                                                              |
-| <dl> <dt>**VM \_ E \_ - \_ VM \_ führt**</dt> <dt>0xa0040206</dt> nicht aus </dl>   | Der virtuelle Computer, an den dieses Mausgerät angefügt ist, wird zurzeit nicht ausgeführt.<br/>                                                   |
-| <dl> <dt>**VM \_ E \_ Maus \_ nicht \_ aktiv**</dt> <dt>0xa0040800</dt> </dl> | Der Vorgang konnte nicht abgeschlossen werden, da das Mausgerät nicht eingeschaltet ist oder derzeit nicht auf dem virtuellen Computer aktiv ist.<br/> |
-| <dl> <dt>**DISP \_ E- \_ Ausnahme**</dt> <dt>0x80020009</dt> </dl>        | Ein unerwarteter Fehler ist aufgetreten.<br/>                                                                                                      |
+| <dl> <dt>**E \_ INVALIDARG-0x80000003**</dt> <dt></dt> </dl>             | Der *buttonIndex-Parameter* ist ungültig.<br/>                                                                                              |
+| <dl> <dt>**VM \_ E \_ VM \_ NOT \_ RUNNING**</dt> <dt>0xA0040206</dt> </dl>   | Der virtuelle Computer, an den dieses Mausgerät angefügt ist, wird derzeit nicht ausgeführt.<br/>                                                   |
+| <dl> <dt>**VM \_ E \_ MOUSE NOT ACTIVE \_ \_ 0xA0040800**</dt> <dt></dt> </dl> | Der Vorgang konnte nicht abgeschlossen werden, weil das Mausgerät nicht hochgefahren wird oder derzeit auf dem virtuellen Computer nicht aktiv ist.<br/> |
+| <dl> <dt>**DISP \_ E \_ EXCEPTION**</dt> <dt>0x80020009</dt> </dl>        | Ein unerwarteter Fehler ist aufgetreten.<br/>                                                                                                      |
 
 
 
@@ -83,12 +83,12 @@ Diese Methode kann einen dieser Werte zurückgeben.
 
 | Anforderung | Wert |
 |-------------------------------------|-----------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows 7 \[ -Desktop-Apps\]<br/>                                                    |
+| Unterstützte Mindestversion (Client)<br/> | Windows 7 \[ Desktop-Apps\]<br/>                                                    |
 | Unterstützte Mindestversion (Server)<br/> | Nicht unterstützt<br/>                                                                     |
 | Ende des Supports (Client)<br/>    | Windows 7<br/>                                                                          |
-| Produkt<br/>                  | Windows Virtual PC<br/>                                                                 |
-| Header<br/>                   | <dl> <dt>Vpccominterfaces. h</dt> </dl> |
-| IID<br/>                      | IID \_ ivmmouse ist als ac903f6d-6346-4f29-8875-5d511a13895e definiert.<br/>                   |
+| Product (Produkt)<br/>                  | Windows Virtual PC<br/>                                                                 |
+| Header<br/>                   | <dl> <dt>VPCCOMInterfaces.h</dt> </dl> |
+| IID<br/>                      | IID \_ IVMmouse ist als ac903f6d-6346-4f29-8875-5d511a13895e definiert.<br/>                   |
 
 
 
@@ -96,7 +96,7 @@ Diese Methode kann einen dieser Werte zurückgeben.
 
 <dl> <dt>
 
-[**Ivmmouse**](ivmmouse.md)
+[**IVMMouse**](ivmmouse.md)
 </dt> </dl>
 
  

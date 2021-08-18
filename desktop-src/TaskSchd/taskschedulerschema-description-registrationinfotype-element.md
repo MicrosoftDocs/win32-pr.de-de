@@ -31,7 +31,7 @@ Gibt die Beschreibung des Tasks an.
  />
 ```
 
-Das **Description-Element** wird durch den komplexen [**registrationInfoType-Typ**](taskschedulerschema-registrationinfotype-complextype.md) definiert.
+Das **Description-Element** wird durch den komplexen [**RegistrationInfoType-Typ**](taskschedulerschema-registrationinfotype-complextype.md) definiert.
 
 ## <a name="parent-element"></a>Übergeordnetes Element
 
@@ -39,13 +39,13 @@ Das **Description-Element** wird durch den komplexen [**registrationInfoType-Typ
 
 | Element                                                                           | Abgeleitet von                                                                         | BESCHREIBUNG                                                                                                                         |
 |-----------------------------------------------------------------------------------|--------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------|
-| [**RegistrationInfo**](taskschedulerschema-registrationinfo-tasktype-element.md) | [**registrationInfoType**](taskschedulerschema-registrationinfotype-complextype.md) | Gibt administrative Informationen über den Task an, z. B. den Ersteller der Aufgabe und das Datum, an dem der Task registriert ist.<br/> |
+| [**RegistrationInfo**](taskschedulerschema-registrationinfo-tasktype-element.md) | [**registrationInfoType**](taskschedulerschema-registrationinfotype-complextype.md) | Gibt Administratorinformationen zum Task an, z. B. den Autor der Aufgabe und das Datum, an dem die Aufgabe registriert wird.<br/> |
 
 
 
 ## <a name="remarks"></a>Hinweise
 
-Für die Skriptentwicklung wird die Beschreibung einer Aufgabe mithilfe der [**RegistrationInfo.Description-Eigenschaft**](registrationinfo-description.md) angegeben.
+Für die Skriptentwicklung wird die Beschreibung eines Task mithilfe der [**RegistrationInfo.Description-Eigenschaft**](registrationinfo-description.md) angegeben.
 
 Für die C++-Entwicklung wird die Beschreibung einer Aufgabe mithilfe der [**IRegistrationInfo::D escription-Eigenschaft**](/windows/desktop/api/taskschd/nf-taskschd-iregistrationinfo-get_description) angegeben.
 
@@ -55,12 +55,12 @@ Für die C++-Entwicklung wird die Beschreibung einer Aufgabe mithilfe der [**IRe
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur Vista-Desktop-Apps\]<br/>       |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ Vista-Desktop-Apps\]<br/>       |
 | Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/> |
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 

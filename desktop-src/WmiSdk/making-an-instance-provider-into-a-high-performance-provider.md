@@ -1,30 +1,30 @@
 ---
-description: Das Schreiben eines hochleistungsfähigen WMI-Anbieters zum Erstellen von Leistungsindikatoren ist nicht empfehlenswert.
+description: Das Schreiben eines WMI-Hochleistungsanbieters zum Erstellen von Leistungsindikatoren wird nicht empfohlen.
 ms.assetid: 6a22d6f7-d9e2-45fa-876d-921a4bc4f574
 ms.tgt_platform: multiple
-title: Erstellen eines Instanzanbieters in einen High-Performance-Anbieter
+title: Erstellen eines Instanzanbieters zu einem High-Performance Anbieter
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 10744b110463a3207f76bb55d48a8045ec22783d
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: e2b6326c0af270088c37bb2a1798951ba0a9de7afe65ec593f5f7ab6768b83b1
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106363496"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119996490"
 ---
-# <a name="making-an-instance-provider-into-a-high-performance-provider"></a>Erstellen eines Instanzanbieters in einen High-Performance-Anbieter
+# <a name="making-an-instance-provider-into-a-high-performance-provider"></a>Erstellen eines Instanzanbieters zu einem High-Performance Anbieter
 
-Das Schreiben eines hochleistungsfähigen WMI-Anbieters zum Erstellen von Leistungsindikatoren ist nicht empfehlenswert. Ab Windows Vista werden die WMI- [Leistungs Leistungs](/windows/desktop/CIMWin32Prov/performance-counter-classes) Daten-Klassen nicht mehr vom reverseadapter AutoDiscovery/AUTOPURGE (ADAP) in die Windows-Leistungs Bibliotheken migriert. Verwenden Sie zum Erstellen eines Leistungsindikator Anbieters die [Leistungsindikatoren Version 2,0](/windows/desktop/PerfCtrs/performance-counters-portal). Nachdem Leistungs Bibliotheksobjekte erstellt wurden, analysiert der [wmiperfclass-Anbieter](wmiperfclass-provider.md) die Objekte und erstellt oder aktualisiert eine von [**Win32 \_ perf**](/windows/desktop/CIMWin32Prov/win32-perf) abgeleitete WMI-Klasse für jedes Leistungs Objekt. Der [WMIPerfInst-Anbieter](wmiperfinst-provider.md) stellt dann dynamisch Rohdaten und formatierte Leistungsdaten für die WMI-Leistungsklassen bereit.
+Das Schreiben eines WMI-Hochleistungsanbieters zum Erstellen von Leistungsindikatoren wird nicht empfohlen. Ab Windows Vista werden die [](/windows/desktop/CIMWin32Prov/performance-counter-classes) WMI-Leistungsindikatorklassen nicht mehr vom Reverseadapter AutoDiscovery/AutoPurge (ADAP) in die Windows-Leistungsbibliotheken migriert. Verwenden Sie zum Erstellen eines Leistungsindikatoranbieters [Die Leistungsindikatoren Version 2.0.](/windows/desktop/PerfCtrs/performance-counters-portal) Nachdem Leistungsbibliotheksobjekte erstellt wurden, analysiert [der WMIPerfClass-Anbieter](wmiperfclass-provider.md) die Objekte und erstellt oder aktualisiert eine von [**Win32 \_ Perf**](/windows/desktop/CIMWin32Prov/win32-perf) abgeleitete WMI-Klasse für jedes Leistungsobjekt. Der [WMIPerfInst-Anbieter](wmiperfinst-provider.md) stellt dann dynamisch unformatierte und formatierte Leistungsindikatordaten für die WMI-Leistungsklassen zur Verfügung.
 
-Die folgende allgemeine Vorgehensweise enthält die zum Erstellen eines Hochleistungs Anbieters erforderlichen Schritte.
+Das folgende verfahren auf hoher Ebene enthält die erforderlichen Schritte zum Erstellen eines Hochleistungsanbieters.
 
-**So erstellen Sie einen Hochleistungs Anbieter**
+**So erstellen Sie einen Hochleistungsanbieter**
 
-1.  Registrieren Sie Ihren Anbieter bei WMI. Weitere Informationen finden Sie unter [Registrieren eines High-Performance Anbieters](registering-a-high-performance-provider.md).
-2.  Implementieren Sie Ihren Anbieter. Weitere Informationen finden Sie unter [Schreiben eines Instanzanbieters](writing-an-instance-provider.md).
-3.  Implementieren Sie die Hochleistungs Schnittstelle. Weitere Informationen finden Sie unter [Implementieren der High-Performance-Schnittstelle](implementing-the-high-performance-interface.md).
-4.  Leiten Sie das MOF-Schema (Managed Object Format) ab, und schreiben Sie es, um rohleistungs Daten abzurufen. Weitere Informationen finden Sie [unter unterstützen der Win32 \_ perfrawdata-Klasse](supporting-the-win32-perfrawdata-class.md).
-5.  Ableiten und schreiben Sie das MOF-Schema, um vorab berechnete Daten zu erhalten. Wenn diese Klasse unterstützt wird, ist es nicht erforderlich, dass der Anbieter die Berechnungen ausführt. Dabei handelt es sich um die gleichen Daten, die im System Monitor in Perfmon angezeigt werden. Weitere Informationen finden Sie [unter unterstützen der Win32 \_ perfformatteddata-Klasse](supporting-the-win32-perfformatteddata-class.md).
+1.  Registrieren Sie Ihren Anbieter bei WMI. Weitere Informationen finden Sie unter [Registrieren eines High-Performance Anbieters.](registering-a-high-performance-provider.md)
+2.  Implementieren Sie Ihren Anbieter. Weitere Informationen finden Sie unter [Schreiben eines Instanzanbieters.](writing-an-instance-provider.md)
+3.  Implementieren Sie die Hochleistungsschnittstelle. Weitere Informationen finden Sie unter [Implementieren der High-Performance-Schnittstelle.](implementing-the-high-performance-interface.md)
+4.  Leiten Sie Ihr MOF-Schema (Managed Object Format) ab, und schreiben Sie es, um rohe Leistungsdaten zu erhalten. Weitere Informationen finden Sie unter [Supporting the Win32 \_ PerfRawData Class](supporting-the-win32-perfrawdata-class.md).
+5.  Leiten Sie Ihr MOF-Schema ab, und schreiben Sie es, um vorab berechnete Daten zu erhalten. Durch die Unterstützung dieser Klasse ist der Anbieter nicht erforderlich, um die Berechnungen durchzuführen. Diese Daten sind dieselben, die im Systemmonitor in Perfmon angezeigt werden. Weitere Informationen finden Sie unter [Supporting the Win32 \_ PerfFormattedData Class](supporting-the-win32-perfformatteddata-class.md).
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
@@ -33,7 +33,7 @@ Die folgende allgemeine Vorgehensweise enthält die zum Erstellen eines Hochleis
 [Entwickeln eines WMI-Anbieters](developing-a-wmi-provider.md)
 </dt> <dt>
 
-[Leistungs Bibliotheken und WMI](performance-libraries-and-wmi.md)
+[Leistungsbibliotheken und WMI](performance-libraries-and-wmi.md)
 </dt> </dl>
 
  

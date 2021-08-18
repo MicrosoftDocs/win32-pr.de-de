@@ -1,7 +1,7 @@
 ---
-description: Die deleteform-Funktion entfernt einen Formular Namen aus der Liste der unterstützten Formulare.
+description: Die DeleteForm-Funktion entfernt einen Formularnamen aus der Liste der unterstützten Formulare.
 ms.assetid: a2d0345f-2469-46ab-935f-777f2b33b621
-title: Deleteform-Funktion (winspool. h)
+title: DeleteForm-Funktion (Winspool.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -15,16 +15,16 @@ api_type:
 - DllExport
 api_location:
 - Winspool.drv
-ms.openlocfilehash: 70ead5026c3b5cf21b28d230f79819bf71eeaf10
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: efd200a06ddea9cd5ec11396741e7ea66fb2d803a273a6d56c9d15c295263247
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104042248"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120112660"
 ---
-# <a name="deleteform-function"></a>Deleteform-Funktion
+# <a name="deleteform-function"></a>DeleteForm-Funktion
 
-Die **deleteform** -Funktion entfernt einen Formular Namen aus der Liste der unterstützten Formulare.
+Die **DeleteForm-Funktion** entfernt einen Formularnamen aus der Liste der unterstützten Formulare.
 
 ## <a name="syntax"></a>Syntax
 
@@ -42,17 +42,17 @@ BOOL DeleteForm(
 
 <dl> <dt>
 
-*hprinter* \[ in\]
+*hPrinter* \[ In\]
 </dt> <dd>
 
-Gibt das öffnende Drucker Handle an, auf dem diese Funktion ausgeführt werden soll. Verwenden Sie die Funktion [**OpenPrinter**](openprinter.md) oder [**addprinter**](addprinter.md) zum Abrufen eines Drucker Handles.
+Gibt das geöffnete Druckerhandle an, für das diese Funktion ausgeführt werden soll. Verwenden Sie die [**OpenPrinter-**](openprinter.md) oder [**AddPrinter-Funktion,**](addprinter.md) um ein Druckerhandle abzurufen.
 
 </dd> <dt>
 
-*pformname* \[ in\]
+*pFormName* \[ In\]
 </dt> <dd>
 
-Ein Zeiger auf den zu entfernenden Formular Namen.
+Zeiger auf den zu entfernenden Formularnamen.
 
 </dd> </dl>
 
@@ -62,14 +62,14 @@ Wenn die Funktion erfolgreich ausgeführt wird, ist der Rückgabewert ein Wert u
 
 Wenn die Funktion fehlerhaft ist, ist der Rückgabewert null.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
 > [!Note]  
-> Dies ist eine blockierende oder synchrone Funktion, die möglicherweise nicht sofort zurückgegeben wird. Wie schnell diese Funktion zurückgibt, hängt von Lauf Zeitfaktoren ab, wie z. b. Netzwerkstatus, Druckserver Konfiguration und Implementierungs Faktoren für Druckertreiber, die beim Schreiben einer Anwendung schwierig vorhergesagt werden können. Wenn diese Funktion von einem Thread aufgerufen wird, der die Interaktion mit der Benutzeroberfläche verwaltet, könnte die Anwendung scheinbar nicht mehr reagiert.
+> Dies ist eine blockierende oder synchrone Funktion und wird möglicherweise nicht sofort zurückgegeben. Wie schnell diese Funktion zurückgegeben wird, hängt von Laufzeitfaktoren wie Netzwerkstatus, Druckerserverkonfiguration und Implementierungsfaktoren für Druckertreiber ab, die beim Schreiben einer Anwendung schwer vorherzusagen sind. Das Aufrufen dieser Funktion über einen Thread, der die Interaktion mit der Benutzeroberfläche verwaltet, kann dazu bringen, dass die Anwendung scheinbar nicht reagiert.
 
  
 
-**Deleteform** kann nur Formular Namen löschen, die mithilfe der [**AddForm**](addform.md) -Funktion hinzugefügt wurden.
+**DeleteForm** kann nur Formularnamen löschen, die mithilfe der [**AddForm-Funktion**](addform.md) hinzugefügt wurden.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -79,14 +79,14 @@ Wenn die Funktion fehlerhaft ist, ist der Rückgabewert null.
 |-------------------------------------|-----------------------------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[nur Desktop-Apps\]<br/>                                                |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                                                      |
-| Header<br/>                   | <dl> <dt>Winspool. h (Include Windows. h)</dt> </dl> |
-| Bibliothek<br/>                  | <dl> <dt>Winspool. lib</dt> </dl>                   |
-| DLL<br/>                      | <dl> <dt>Winspool. drv</dt> </dl>                   |
-| Unicode- und ANSI-Name<br/>   | **Deleteformw** (Unicode) und **deleteforma** (ANSI)<br/>                                           |
+| Header<br/>                   | <dl> <dt>Winspool.h (include Windows.h)</dt> </dl> |
+| Bibliothek<br/>                  | <dl> <dt>Winspool.lib</dt> </dl>                   |
+| DLL<br/>                      | <dl> <dt>Winspool.drv</dt> </dl>                   |
+| Unicode- und ANSI-Name<br/>   | **DeleteFormW** (Unicode) und **DeleteFormA** (ANSI)<br/>                                           |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 

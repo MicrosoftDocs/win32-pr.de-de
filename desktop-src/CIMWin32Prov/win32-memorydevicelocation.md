@@ -1,5 +1,5 @@
 ---
-description: Die \_ WMI-Klasse "Win32 memorydevicelocation Association" verknüpft ein Speichergerät und den physischen Speicher, in dem es vorhanden ist.
+description: Die WMI-Zuordnungsklasse Win32 MemoryDeviceLocation bezieht sich auf ein Speichergerät und den physischen Speicher, \_ auf dem es vorhanden ist.
 ms.assetid: 6fef916e-44e2-4b9f-94b7-c7204259004a
 ms.tgt_platform: multiple
 title: Win32_MemoryDeviceLocation-Klasse
@@ -16,18 +16,18 @@ api_type:
 - DllExport
 api_location:
 - CIMWin32.dll
-ms.openlocfilehash: 5cf1ba93a2574810892443aefa43e1c7c501636c
-ms.sourcegitcommit: c7add10d695482e1ceb72d62b8a4ebd84ea050f7
+ms.openlocfilehash: ba19807d888c27246a17d8af73cfd81bfd8ba52136e466ab78433316ea533339
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "103958230"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119973010"
 ---
-# <a name="win32_memorydevicelocation-class"></a>Win32 \_ memorydeviceloationklasse
+# <a name="win32_memorydevicelocation-class"></a>Win32 \_ MemoryDeviceLocation-Klasse
 
-Die [WMI-Klasse](/windows/desktop/WmiSdk/retrieving-a-class) " **Win32 \_ memorydevicelocation** Association" verknüpft ein Speichergerät und den physischen Speicher, in dem es vorhanden ist.
+Die **WMI-Zuordnungsklasse Win32 \_ MemoryDeviceLocation** bezieht sich auf ein Speichergerät und den physischen Speicher, auf dem es vorhanden ist. [](/windows/desktop/WmiSdk/retrieving-a-class)
 
-Die folgende Syntax wurde aus MOF-Code (Managed Object Format, verwaltetes Objektformat) vereinfacht und enthält alle geerbten Eigenschaften. Eigenschaften werden in alphabetischer Reihenfolge und nicht in der MOF-Reihenfolge aufgelistet.
+Die folgende Syntax wurde aus MOF-Code (Managed Object Format, verwaltetes Objektformat) vereinfacht und enthält alle geerbten Eigenschaften. Eigenschaften werden in alphabetischer Reihenfolge und nicht in MOF-Reihenfolge aufgeführt.
 
 ## <a name="syntax"></a>Syntax
 
@@ -42,17 +42,17 @@ class Win32_MemoryDeviceLocation : CIM_Realizes
 
 ## <a name="members"></a>Member
 
-Die **Win32-Klasse \_ memorydevicelokation** verfügt über diese Typen von Membern:
+Die **Win32 \_ MemoryDeviceLocation-Klasse** verfügt über die folgenden Membertypen:
 
 -   [Eigenschaften](#properties)
 
 ### <a name="properties"></a>Eigenschaften
 
-Die **Win32-Klasse \_ memorydevicelokation** verfügt über diese Eigenschaften.
+Die **Win32 \_ MemoryDeviceLocation-Klasse** verfügt über diese Eigenschaften.
 
 <dl> <dt>
 
-**Vorgänger**
+**Vorläufer**
 </dt> <dd> <dl> <dt>
 
 Datentyp: **Win32 \_ PhysicalMemory**
@@ -61,32 +61,32 @@ Datentyp: **Win32 \_ PhysicalMemory**
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**Key**](/windows/desktop/WmiSdk/key-qualifier), [**override**](/windows/desktop/WmiSdk/standard-qualifiers) ("Vorgänger"), [**Max**](/windows/desktop/WmiSdk/standard-qualifiers) (1), [**mappingstrings**](/windows/desktop/WmiSdk/standard-qualifiers) ("WMI \| Win32 \_ PhysicalMemory")
+Qualifizierer: [**Key**](/windows/desktop/WmiSdk/key-qualifier), [**Override**](/windows/desktop/WmiSdk/standard-qualifiers) ("Antecedent"), [**Max**](/windows/desktop/WmiSdk/standard-qualifiers) (1), [**MappingStrings**](/windows/desktop/WmiSdk/standard-qualifiers) ("WMI \| Win32 \_ PhysicalMemory")
 </dt> </dl>
 
-Ein [**Win32- \_ PhysicalMemory**](win32-physicalmemory.md) , der den physischen Speicher darstellt, der das Speichergerät enthält.
+Ein [**Win32 \_ PhysicalMemory,**](win32-physicalmemory.md) das den physischen Speicher darstellt, der das Speichergerät enthält.
 
 </dd> <dt>
 
-**Dependent**
+**Abhängigen**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Win32 \_ memorydevice**
+Datentyp: **Win32 \_ MemoryDevice**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**Key**](/windows/desktop/WmiSdk/key-qualifier), [**override**](/windows/desktop/WmiSdk/standard-qualifiers) ("Dependent"), [**mappingstrings**](/windows/desktop/WmiSdk/standard-qualifiers) ("WMI \| Win32 \_ memorydevice")
+Qualifizierer: [**Key**](/windows/desktop/WmiSdk/key-qualifier), [**Override**](/windows/desktop/WmiSdk/standard-qualifiers) ("Dependent"), [**MappingStrings**](/windows/desktop/WmiSdk/standard-qualifiers) ("WMI \| Win32 \_ MemoryDevice")
 </dt> </dl>
 
-Ein **Win32 \_ memorydevicelokation** , das das im physischen Speicher vorhandene Speichergerät darstellt.
+Ein **Win32 \_ MemoryDeviceLocation,** der das Speichergerät darstellt, das im physischen Speicher vorhanden ist.
 
 </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die **Win32-Klasse \_ memorydeviceloationist** von [**CIM \_**](cim-realizes.md)-erkennen abgeleitet.
+Die **Win32 \_ MemoryDeviceLocation-Klasse** wird von [**CIM \_ Realizes abgeleitet.**](cim-realizes.md)
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -96,8 +96,8 @@ Die **Win32-Klasse \_ memorydeviceloationist** von [**CIM \_**](cim-realizes.md)
 |-------------------------------------|-----------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows Vista<br/>                                                                |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2008<br/>                                                          |
-| Namespace<br/>                | Root \\ CIMV2<br/>                                                                  |
-| MOF<br/>                      | <dl> <dt>Cimwin32. MOF</dt> </dl> |
+| Namespace<br/>                | \\Stamm-CIMV2<br/>                                                                  |
+| MOF<br/>                      | <dl> <dt>CIMWin32.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>CIMWin32.dll</dt> </dl> |
 
 
@@ -106,10 +106,10 @@ Die **Win32-Klasse \_ memorydeviceloationist** von [**CIM \_**](cim-realizes.md)
 
 <dl> <dt>
 
-[**CIM \_ erkennt**](cim-realizes.md)
+[**CIM \_ Realisiert**](cim-realizes.md)
 </dt> <dt>
 
-[Computer System-Hardware Klassen](computer-system-hardware-classes.md)
+[Hardwareklassen des Computersystems](computer-system-hardware-classes.md)
 </dt> </dl>
 
  

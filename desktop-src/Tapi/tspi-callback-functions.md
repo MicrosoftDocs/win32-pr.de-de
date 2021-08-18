@@ -1,5 +1,5 @@
 ---
-description: Dieser Abschnitt enthält Beschreibungen der Rückruffunktionen für Telefonie-SPI.
+description: Dieser Abschnitt enthält Beschreibungen der Telefonie-SPI-Rückruffunktionen.
 ms.assetid: 0694e703-b99c-41f3-8c65-9407add27077
 title: TSPI-Rückruffunktionen
 ms.topic: article
@@ -13,10 +13,10 @@ ms.locfileid: "119991620"
 ---
 # <a name="tspi-callback-functions"></a>TSPI-Rückruffunktionen
 
-Dieser Abschnitt enthält Beschreibungen der Rückruffunktionen für Telefonie-SPI. Die TSPI-Rückruffunktionen umfassen Folgendes:
+Dieser Abschnitt enthält Beschreibungen der Telefonie-SPI-Rückruffunktionen. Die TSPI-Rückruffunktionen umfassen Folgendes:
 
--   [**\_Vervollständigungsproz d**](/windows/win32/api/tspi/nc-tspi-async_completion)
--   [**\_Line-Ereignis**](/windows/win32/api/tspi/nc-tspi-lineevent)
+-   [**\_Vervollständigungsproc**](/windows/win32/api/tspi/nc-tspi-async_completion)
+-   [**\_Zeilenereignis**](/windows/win32/api/tspi/nc-tspi-lineevent)
 -   [**\_Telefon Ereignis**](/windows/desktop/api/tspi/nc-tspi-phoneevent)
 
  

@@ -1,35 +1,35 @@
 ---
-description: Eine WS-Discovery Nachricht, die von einem Client verwendet wird, um nach dem Namen nach Diensten im Netzwerk zu suchen.
+description: Eine WS-Discovery Meldung, die von einem Client verwendet wird, um anhand des Namens nach Diensten im Netzwerk zu suchen.
 ms.assetid: b963bd2a-47cb-4f8d-8272-a586e6d6a047
-title: Meldung auflösen
+title: Auflösen von Nachrichten
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: c3390d97aad972f001b98587c6b5e7cd7ac708b2
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 54887db566ee428e6bfe9ec2de9016a637884b092611a85e607c55aaa4176abc
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106355632"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118991610"
 ---
-# <a name="resolve-message"></a>Meldung auflösen
+# <a name="resolve-message"></a>Auflösen von Nachrichten
 
-Eine Auflösungs Meldung ist eine WS-Discovery Nachricht, die von einem Client verwendet wird, um nach dem Namen nach Diensten im Netzwerk zu suchen. Ein Client sendet nur dann eine Auflösungs Nachricht, wenn eine HTTP-Nachricht (z. b. eine [Get](get--metadata-exchange--http-request-and-message.md) Metadata Exchange-Anforderung oder eine Dienst Nachricht) gesendet wird. Weitere Informationen zum Auflösen von Nachrichten finden Sie im Abschnitt 6,1 der [WS-Discovery-Spezifikation](https://specs.xmlsoap.org/ws/2005/04/discovery/ws-discovery.pdf).
+Eine Resolve-Nachricht ist eine WS-Discovery Nachricht, die von einem Client verwendet wird, um anhand des Namens nach Diensten im Netzwerk zu suchen. Ein Client sendet nur dann eine Resolve-Nachricht, wenn eine HTTP-Nachricht (z. B. eine [Get](get--metadata-exchange--http-request-and-message.md) Metadata Exchange-Anforderung oder eine Dienstnachricht) gesendet wird. Weitere Informationen zum Auflösen von Nachrichten finden Sie in Abschnitt 6.1 der [WS-Ermittlungsspezifikation.](https://specs.xmlsoap.org/ws/2005/04/discovery/ws-discovery.pdf)
 
-Eine Auflösungs Meldung wird von UDP-Multicast an Port 3702 gesendet. Unicast-Auflösungs Nachrichten werden nicht unterstützt.
+Eine Resolve-Nachricht wird von UDP Multicast an Port 3702 gesendet. Unicast-Auflösungsmeldungen werden nicht unterstützt.
 
-DPWS-Clients senden Auflösungs Nachrichten. In der folgenden Liste sind Szenarien aufgeführt, in denen WSDAPI eine Resolve-Nachricht sendet.
+DPWS-Clients senden Resolve-Nachrichten. Die folgende Liste zeigt Szenarien, in denen WSDAPI eine Resolve-Nachricht sendet.
 
--   Ein Funktions Ermittlungs Client sendet eine Resolve-Nachricht, wenn keine xaddrs in eine [Probe Matches](probematches-message.md) -Nachricht eingeschlossen werden.
--   Ein Client, der die [**iwsdiscoveryprovider:: searchbyid**](/windows/desktop/api/WsdDisco/nf-wsddisco-iwsdiscoveryprovider-searchbyid) -Methode aufrufen, sendet eine Resolve-Nachricht.
--   Ein Client, der [**wsdcreatedeviceproxy**](/windows/desktop/api/WsdClient/nf-wsdclient-wsdcreatedeviceproxy) anruft, kann eine Auflösungs Nachricht senden, wenn eine logische Geräteadresse an *pszdeviceid* übergeben wird.
--   Ein Client, der [**wsdcreatedeviceproxyadvanced**](/windows/desktop/api/WsdClient/nf-wsdclient-wsdcreatedeviceproxyadvanced) aufruft, sendet eine Resolve-Nachricht, wenn die Funktion mit dem pdeviceaddress-Parameter auf **null** festgelegt wird.
+-   Ein Funktionsermittlungsclient sendet eine Resolve-Nachricht, wenn keine XAddrs in einer [ProbeMatches-Nachricht](probematches-message.md) enthalten sind.
+-   Ein Client, der die [**IWSDiscoveryProvider::SearchById-Methoden**](/windows/desktop/api/WsdDisco/nf-wsddisco-iwsdiscoveryprovider-searchbyid) aufruft, sendet eine Resolve-Nachricht.
+-   Ein Client, der [**WSDCreateDeviceProxy**](/windows/desktop/api/WsdClient/nf-wsdclient-wsdcreatedeviceproxy) aufruft, sendet möglicherweise eine Resolve-Nachricht, wenn eine logische Geräteadresse an *pszDeviceId* übergeben wird.
+-   Ein Client, der [**WSDCreateDeviceProxyAdvanced aufruft,**](/windows/desktop/api/WsdClient/nf-wsdclient-wsdcreatedeviceproxyadvanced) sendet eine Resolve-Nachricht, wenn die Funktion mit dem pDeviceAddress-Parameter aufgerufen wird, der auf **NULL** festgelegt ist.
 
 > [!Note]  
-> Dieses Thema zeigt eine DPWS-Beispiel Nachricht, die von WSDAPI-Clients und-Hosts generiert wurde. WSDAPI analysiert und akzeptiert andere DPWS-kompatible Nachrichten, die nicht diesem Beispiel entsprechen. Verwenden Sie dieses Beispiel nicht zum Überprüfen der DPWS-Interoperabilität. Verwenden Sie stattdessen das [WSDAPI-grundlegende Interoperabilitäts Tool (wsdbit)](https://msdn.microsoft.com/library/cc264250.aspx) .
+> In diesem Thema wird eine DPWS-Beispielnachricht gezeigt, die von WSDAPI-Clients und -Hosts generiert wird. WSDAPI analysiert und akzeptiert andere DPWS-kompatible Nachrichten, die diesem Beispiel nicht entsprechen. Verwenden Sie dieses Beispiel nicht, um die DPWS-Interoperabilität zu überprüfen. Verwenden Sie stattdessen das [WSDAPI Basic Interoperability Tool (WSDBIT).](https://msdn.microsoft.com/library/cc264250.aspx)
 
  
 
-Die folgende SOAP-Nachricht zeigt eine Beispiel Auflösungs Meldung an.
+Die folgende SOAP-Nachricht zeigt eine Beispielmeldung zum Auflösen.
 
 ``` syntax
 <?xml version="1.0" encoding="utf-8" ?>
@@ -60,7 +60,7 @@ urn:schemas-xmlsoap-org:ws:2005:04:discovery
 </soap:Envelope>
 ```
 
-Eine Resolve-Nachricht weist die folgenden Schwerpunkt Punkte auf.
+Eine Resolve-Nachricht weist die folgenden Fokuspunkte auf.
 
 
 
@@ -83,21 +83,21 @@ Eine Resolve-Nachricht weist die folgenden Schwerpunkt Punkte auf.
 <td><pre class="syntax" data-space="preserve"><code><wsa:Action>
     https://schemas.xmlsoap.org/ws/2005/04/discovery/Resolve
 </wsa:Action></code></pre></td>
-<td>Die Aktion SOAP auflösen identifiziert die Nachricht als Auflösungs Nachricht.</td>
+<td>Die Aktion SOAP auflösen identifiziert die Nachricht als Resolve-Nachricht.</td>
 </tr>
 <tr class="even">
 <td>Meldungs-ID</td>
 <td><pre class="syntax" data-space="preserve"><code><wsa:MessageID>
     urn:uuid:38d1c3d9-8d73-4424-8861-6b7ee2af24d3
 </wsa:MessageID></code></pre></td>
-<td>Enthält die Nachrichten-ID, auf die in einer <a href="resolvematches-message.md">resolvematches</a> -Meldung verwiesen wird.</td>
+<td>Enthält den Nachrichtenbezeichner, auf den in einer <a href="resolvematches-message.md">ResolveMatches-Nachricht</a> verwiesen wird.</td>
 </tr>
 <tr class="odd">
 <td>Adresse</td>
 <td><pre class="syntax" data-space="preserve"><code><wsa:Address>
     urn:uuid:37f86d35-e6ac-4241-964f-1d9ae46fb366
 </wsa:Address></code></pre></td>
-<td>Enthält die Adresse des zu lösenden Endpunkts.</td>
+<td>Enthält die Adresse des Endpunkts, der aufgelöst wird.</td>
 </tr>
 </tbody>
 </table>
@@ -110,10 +110,10 @@ Eine Resolve-Nachricht weist die folgenden Schwerpunkt Punkte auf.
 
 <dl> <dt>
 
-[Ermittlungs-und metadatenaustauschnachrichten](discovery-and-metadata-exchange-message-patterns.md)
+[Ermittlungs- und Metadaten-Exchange-Meldungen](discovery-and-metadata-exchange-message-patterns.md)
 </dt> <dt>
 
-[Resolvematches-Nachricht](resolvematches-message.md)
+[ResolveMatches-Nachricht](resolvematches-message.md)
 </dt> </dl>
 
  

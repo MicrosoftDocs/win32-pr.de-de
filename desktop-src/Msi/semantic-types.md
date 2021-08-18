@@ -1,79 +1,79 @@
 ---
-description: Die folgenden Einträge in den Spalten "Format", "Type" und "ContextData" der Tabelle "ModuleConfiguration" geben den semantischen Typ der Informationen an, die in das konfigurierbare Element ersetzt werden, das in der Name-Spalte der Tabelle angegeben ist
+description: Die folgenden Einträge in den Spalten Format, Type und ContextData der Tabelle ModuleConfiguration geben den semantischen Informationstyp an, der durch das konfigurierbare Element ersetzt wird, das in der Spalte Name dieser Tabelle angegeben ist.
 ms.assetid: f44e234e-b45a-40be-993d-956b8966c321
-title: Semantik Typen
+title: Semantische Typen
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 69c2a0798a9ae7be3c2c0b56483707e3a09f67d5
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 01845bd7790f618794816182bb4b11fc0d13baf9216d17bbd15c63a390a52a90
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106351124"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120040300"
 ---
-# <a name="semantic-types"></a>Semantik Typen
+# <a name="semantic-types"></a>Semantische Typen
 
-Die folgenden Einträge in den Spalten "Format", "Type" und "ContextData" der [Tabelle "ModuleConfiguration](moduleconfiguration-table.md) " geben den semantischen Typ der Informationen an, die in das konfigurierbare Element ersetzt werden, das in der Name-Spalte der Tabelle angegeben ist
+Die folgenden Einträge in den Spalten Format, Type und ContextData der [Tabelle ModuleConfiguration](moduleconfiguration-table.md) geben den semantischen Informationstyp an, der durch das konfigurierbare Element ersetzt wird, das in der Spalte Name dieser Tabelle angegeben ist.
 
-[Text Format Typen](text-format-types.md)
+[Textformattypen](text-format-types.md)
 
 
 
 | Format | type       | ContextData                                                 | BESCHREIBUNG                                                                                                |
 |--------|------------|-------------------------------------------------------------|------------------------------------------------------------------------------------------------------------|
-| Text   |            |                                                             | Beliebiger Text. Siehe [beliebigen Texttyp](arbitrary-text-type.md).                                        |
-| Text   | Enumeration       | <A>=<a>;<B>=<b>;<C>=<c> | Der aus einer Menge ausgewählte Wert. Siehe [Aufzählungstyp](enum-type.md).                                                 |
-| Text   | Formatiert  |                                                             | Wert, der die Definition des formatierten Texts im Installer erfüllt. Siehe [formatierten Typ](formatted-type.md). |
-| Text   | RTF        |                                                             | Eine RTF-Text Zeichenfolge. Siehe [RTF-Typ](rtf-type.md).                                                          |
-| Text   | Bezeichner |                                                             | Eine Text Zeichenfolge, die einem Windows Installer [Bezeichner](identifier.md)entspricht.                              |
+| Text   |            |                                                             | Beliebiger Text. Weitere Informationen finden Sie unter [Beliebiger Texttyp.](arbitrary-text-type.md)                                        |
+| Text   | Enumeration       | <A>=<a>;<B>=<b>;<C>=<c> | Aus einem Satz ausgewählter Wert. Weitere Informationen finden Sie unter [Enumerationstyp.](enum-type.md)                                                 |
+| Text   | Formatiert  |                                                             | Wert, der der Definition von Formatierter Text im Installationsprogramm gerecht wird. Weitere Informationen finden Sie unter [Formatierter Typ.](formatted-type.md) |
+| Text   | RTF        |                                                             | Eine RTF-Textzeichenfolge. Weitere Informationen finden Sie unter [RTF-Typ.](rtf-type.md)                                                          |
+| Text   | Bezeichner |                                                             | Eine Textzeichenfolge, die einem Windows [Installer-Bezeichner](identifier.md)entspricht.                              |
 
 
 
  
 
-[Ganzzahlige Format Typen](integer-format-types.md)
+[Ganzzahlformattypen](integer-format-types.md)
 
 
 
 | Format  | type | ContextData | BESCHREIBUNG                                                                  |
 |---------|------|-------------|------------------------------------------------------------------------------|
-| Integer |      |             | Ein ganzzahliger Wert. Siehe [beliebigen ganzzahligen Typ](arbitrary-integer-type.md). |
+| Integer |      |             | Ein ganzzahliger Wert. Weitere Informationen finden Sie unter [Beliebiger ganzzahliger Typ.](arbitrary-integer-type.md) |
 
 
 
  
 
-[Schlüssel Format Typen](key-format-types.md)
+[Schlüsselformattypen](key-format-types.md)
 
 
 
 | Format | type      | ContextData      | BESCHREIBUNG                                                                                                            |
 |--------|-----------|------------------|------------------------------------------------------------------------------------------------------------------------|
-| Schlüssel    | File      | Assemblycontext  | Ermöglicht es Benutzern, Fremdschlüssel für Win32-oder Common Language Runtime-Assemblys zu konfigurieren. Siehe [Dateityp](file-type.md). |
-| Schlüssel    | Binary    | Bitmap           | Fremdschlüssel für eine binäre Tabellenzeile, die eine Bitmap für die Verwendung in der Benutzeroberfläche enthält. Siehe [Binary Type](binary-type.md).                  |
-| Schlüssel    | Binary    | Symbol             | Fremdschlüssel für eine binäre Tabellenzeile, die ein Symbol für die Verwendung in der Benutzeroberfläche enthält. Siehe [Binary Type](binary-type.md).                   |
-| Schlüssel    | Binary    | EXE              | Fremdschlüssel für eine binäre Tabellenzeile, die eine 32-Bit-exe-Datei enthält. Siehe [Binary Type](binary-type.md).                             |
-| Schlüssel    | Binary    | EXE64            | Fremdschlüssel für eine binäre Tabellenzeile, die eine 32-oder 64-Bit-exe-Datei enthält. Siehe [Binary Type](binary-type.md).                       |
-| Schlüssel    | Symbol      | Shortcuticon     | Fremdschlüssel für eine Symboltabellen Zeile, die ein Symbol für die Verwendung durch eine Verknüpfung enthält. Siehe [Icon Type](icon-type.md).                |
-| Schlüssel    | Dialog    | Dialognext       | Fremdschlüssel für eine Dialog Feld Tabellenzeile. Siehe den [Dialog Typ](dialog-type.md).                                                 |
-| Schlüssel    | Dialog    | Dialogprev       | Fremdschlüssel für eine Dialog Feld Tabellenzeile. Siehe den [Dialog Typ](dialog-type.md).                                                 |
-| Schlüssel    | Verzeichnis | Isolationdir     | Fremdschlüssel für eine Verzeichnis Tabellenzeile, zu der isolierte Dateien gehören. Siehe [Verzeichnistyp](directory-type.md).            |
-| Schlüssel    | Verzeichnis | ShortcutLocation | Fremdschlüssel für eine Verzeichnis Tabellenzeile, in der eine Verknüpfung installiert werden soll. Siehe [Verzeichnistyp](directory-type.md).   |
-| Key    | Eigenschaft  |                  | Fremdschlüssel für eine Eigenschaften Zeile. Siehe [Eigenschaftentyp](property-type.md).                                                 |
-| Key    | Eigenschaft  | Öffentlich           | Fremdschlüssel für eine Eigenschaften Zeile. Siehe [Eigenschaftentyp](property-type.md).                                                 |
-| Key    | Eigenschaft  | Private          | Fremdschlüssel für eine Eigenschaften Zeile. Siehe [Eigenschaftentyp](property-type.md).                                                 |
+| Schlüssel    | Datei      | AssemblyContext  | Ermöglichen Sie Es Benutzern, Fremdschlüssel für Win32- oder Common Language Runtime-Assemblys zu konfigurieren. Weitere Informationen finden Sie unter [Dateityp.](file-type.md) |
+| Key    | Binary    | Bitmap           | Fremdschlüssel zu einer Binärtabellenzeile, die eine Bitmap für die Verwendung auf der Benutzeroberfläche enthält. Weitere Informationen finden Sie unter [Binärtyp](binary-type.md).                  |
+| Key    | Binary    | Symbol             | Fremdschlüssel zu einer Binärtabellenzeile, die ein Symbol für die Verwendung in der Benutzeroberfläche enthält. Weitere Informationen finden Sie unter [Binärtyp](binary-type.md).                   |
+| Key    | Binary    | EXE              | Fremdschlüssel zu einer Binärtabellenzeile, die eine 32-Bit-EXE-Datei enthält. Weitere Informationen finden Sie unter [Binärtyp](binary-type.md).                             |
+| Key    | Binary    | EXE64            | Fremdschlüssel für eine Binärtabellenzeile, die eine 32- oder 64-Bit-EXE enthält. Weitere Informationen finden Sie unter [Binärtyp](binary-type.md).                       |
+| Key    | Symbol      | ShortcutIcon     | Fremdschlüssel für eine Symboltabellenzeile, die ein Symbol für die Verwendung durch eine Verknüpfung enthält. Weitere Informationen finden Sie unter [Symboltyp.](icon-type.md)                |
+| Key    | Dialog    | DialogWeiter       | Fremdschlüssel für eine Dialogtabellenzeile. Weitere Informationen finden Sie [unter Dialogtyp.](dialog-type.md)                                                 |
+| Key    | Dialog    | DialogPrev       | Fremdschlüssel für eine Dialogtabellenzeile. Weitere Informationen finden Sie [unter Dialogtyp.](dialog-type.md)                                                 |
+| Key    | Verzeichnis | IsolationDir     | Fremdschlüssel zu einer Verzeichnistabellenzeile, zu der isolierte Dateien gehören. Weitere Informationen finden Sie unter [Verzeichnistyp](directory-type.md).            |
+| Key    | Verzeichnis | ShortcutLocation | Fremdschlüssel zu einer Verzeichnistabellenzeile, in der eine Verknüpfung installiert werden soll. Weitere Informationen finden Sie unter [Verzeichnistyp](directory-type.md).   |
+| Key    | Eigenschaft  |                  | Fremdschlüssel für eine Eigenschaftenzeile. Weitere Informationen finden Sie unter [Eigenschaftentyp.](property-type.md)                                                 |
+| Key    | Eigenschaft  | Öffentlich           | Fremdschlüssel für eine Eigenschaftenzeile. Weitere Informationen finden Sie unter [Eigenschaftentyp.](property-type.md)                                                 |
+| Key    | Eigenschaft  | Privat          | Fremdschlüssel zu einer Eigenschaftenzeile. Weitere Informationen [finden Sie unter Eigenschaftentyp](property-type.md).                                                 |
 
 
 
  
 
-[Bitfield-Format Typen](bitfield-format-types.md)
+[Bitfield-Formattypen](bitfield-format-types.md)
 
 
 
 | Format   | type | ContextData                                  | BESCHREIBUNG                                                                                       |
 |----------|------|----------------------------------------------|---------------------------------------------------------------------------------------------------|
-| Bitfeld |      | <mask>;<A>=<a>;<B> = b | Ändert eine Teilmenge von Bits in einer Spalte. Siehe [beliebigen Bitfeldtyp](arbitrary-bitfield-type.md). |
+| Bitfield |      | <mask>;<A>=<a>;<B> =b | Ändert eine Teilmenge von Bits in einer Spalte. Weitere Informationen [finden Sie unter Beliebiger Bitfeldtyp.](arbitrary-bitfield-type.md) |
 
 
 
