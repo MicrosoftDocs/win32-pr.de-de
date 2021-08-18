@@ -1,6 +1,6 @@
 ---
-description: 'Weitere Informationen finden Sie unter: esentesomanyioexception-Klasse'
-title: Esentesomanyioexception-Klasse
+description: 'Weitere Informationen zu: EsentTooManyIOException-Klasse'
+title: EsentTooManyIOException-Klasse
 TOCTitle: EsentTooManyIOException class
 ms:assetid: T:Microsoft.Isam.Esent.Interop.EsentTooManyIOException
 ms:mtpsurl: https://msdn.microsoft.com/library/microsoft.isam.esent.interop.esenttoomanyioexception(v=EXCHG.10)
@@ -24,29 +24,29 @@ api_type:
 api_location:
 - Microsoft.Isam.Esent.Interop.dll
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: 47a098691d8d471b0bb553a1893513f737bf51fb
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: cf5ae411c13f6b7ed68ee869ef0ec5cca3631b56594727ac45064aaab2a0eaed
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106352640"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119850470"
 ---
-# <a name="esenttoomanyioexception-class"></a>Esentesomanyioexception-Klasse
+# <a name="esenttoomanyioexception-class"></a>EsentTooManyIOException-Klasse
 
-Basisklasse für JET_err. "|"-Ausnahmen.
+Basisklasse für JET_err. TooManyIO-Ausnahmen.
 
 ## <a name="inheritance-hierarchy"></a>Vererbungshierarchie
 
 [System.Object](/dotnet/api/system.object)  
   [System.Exception](/dotnet/api/system.exception)  
-    [Microsoft. ISAM. ESENT. esentexception](./esentexception-class.md)  
-      [Microsoft. ISAM. ESENT. Interop. esenterrorexception](./esenterrorexception-class.md)  
-        [Microsoft. ISAM. ESENT. Interop. esentoperationexception](./esentoperationexception-class.md)  
-          [Microsoft. ISAM. ESENT. Interop. esentresourceexception](./esentresourceexception-class.md)  
-            Microsoft. ISAM. ESENT. Interop. esentesomanyioexception  
+    [Microsoft.Isam.Esent.EsentException](./esentexception-class.md)  
+      [Microsoft.Isam.Esent.Interop.EsentErrorException](./esenterrorexception-class.md)  
+        [Microsoft.Isam.Esent.Interop.EsentOperationException](./esentoperationexception-class.md)  
+          [Microsoft.Isam.Esent.Interop.EsentResourceException](./esentresourceexception-class.md)  
+            Microsoft.Isam.Esent.Interop.EsentTooManyIOException  
 
-**Namespace:**  [Microsoft. ISAM. ESENT. Interop](./microsoft.isam.esent.interop-namespace.md)  
-**Assembly:**  Microsoft. ISAM. ESENT. Interop (in Microsoft.Isam.Esent.Interop.dll)
+**Namespace:**  [Microsoft.Isam.Esent.Interop](./microsoft.isam.esent.interop-namespace.md)  
+**Assembly:**  Microsoft.Isam.Esent.Interop (in Microsoft.Isam.Esent.Interop.dll)
 
 ## <a name="syntax"></a>Syntax
 
@@ -68,10 +68,10 @@ public sealed class EsentTooManyIOException : EsentResourceException
 
 Alle öffentlichen statischen Elemente dieses Typs (Shared in Microsoft Visual Basic) sind threadsicher. Bei Instanzmembern ist die Threadsicherheit nicht gewährleistet.
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
-#### <a name="reference"></a>Referenz
+#### <a name="reference"></a>Verweis
 
-[Esentesomanyioexception-Member](./esenttoomanyioexception-members.md)
+[EsentTooManyIOException-Member](./esenttoomanyioexception-members.md)
 
-[Microsoft. ISAM. ESENT. Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)
+[Microsoft.Isam.Esent.Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)

@@ -1,19 +1,19 @@
 ---
-title: UI_ANIMATION_SECONDS (uianimation. h)
+title: UI_ANIMATION_SECONDS (UIAnimation.h)
 description: Die Zeiteinheit, die für alle Animationen verwendet wird.
 ms.assetid: 0745b227-61c4-462e-8529-9402c9eaa70a
 keywords:
 - UI_ANIMATION_SECONDS
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: ea7cdf5b487138f68dac90f1d4f4bd9afcd1e73b
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: c21b6fbdb053fa46423bf1e29b92d59b9cf6d4007bc46fa739614b21c12d09ad
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "103741761"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118999660"
 ---
-# <a name="ui_animation_seconds"></a>UI- \_ Animation in \_ Sekunden
+# <a name="ui_animation_seconds"></a>\_BENUTZEROBERFLÄCHENANIMATION \_ – SEKUNDEN
 
 Die Zeiteinheit, die für alle Animationen verwendet wird.
 
@@ -30,33 +30,33 @@ typedef DOUBLE UI_ANIMATION_SECONDS;
 
 | Anforderung | Wert |
 |-------------------------------------|--------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Windows 7, Windows Vista und Platt Form Update für Windows Vista \[ -Desktop-Apps \| UWP-apps\]<br/> |
+| Unterstützte Mindestversion (Client)<br/> | Windows 7, Windows Vista und Plattformupdate für UWP-Apps für Windows \[ \| Vista-Desktop-Apps\]<br/> |
 | Unterstützte Mindestversion (Server)<br/> | Nicht unterstützt<br/>                                                                              |
-| Header<br/>                   | <dl> <dt>Uianimation. h</dt> </dl>               |
-| IDL<br/>                      | <dl> <dt>Uianimation. idl</dt> </dl>             |
+| Header<br/>                   | <dl> <dt>UIAnimation.h</dt> </dl>               |
+| Idl<br/>                      | <dl> <dt>UIAnimation.idl</dt> </dl>             |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Iuianimationinterpolator**](/windows/desktop/api/UIAnimation/nn-uianimation-iuianimationinterpolator)
+[**IUIAnimationInterpolator**](/windows/desktop/api/UIAnimation/nn-uianimation-iuianimationinterpolator)
 </dt> <dt>
 
-[**Iuianimationmanager**](/windows/desktop/api/UIAnimation/nn-uianimation-iuianimationmanager)
+[**IUIAnimationManager**](/windows/desktop/api/UIAnimation/nn-uianimation-iuianimationmanager)
 </dt> <dt>
 
-[**Iuianimationstoryboard**](/windows/desktop/api/UIAnimation/nn-uianimation-iuianimationstoryboard)
+[**IUIAnimationStoryboard**](/windows/desktop/api/UIAnimation/nn-uianimation-iuianimationstoryboard)
 </dt> <dt>
 
-[**Iuianimationtimer**](/windows/desktop/api/UIAnimation/nn-uianimation-iuianimationtimer)
+[**IUIAnimationTimer**](/windows/desktop/api/UIAnimation/nn-uianimation-iuianimationtimer)
 </dt> <dt>
 
-[**Iuianimationtransition**](/windows/desktop/api/UIAnimation/nn-uianimation-iuianimationtransition)
+[**IUIAnimationTransition**](/windows/desktop/api/UIAnimation/nn-uianimation-iuianimationtransition)
 </dt> <dt>
 
-[**Iuianimationtransitionlibrary**](/windows/desktop/api/UIAnimation/nn-uianimation-iuianimationtransitionlibrary)
+[**IUIAnimationTransitionLibrary**](/windows/desktop/api/UIAnimation/nn-uianimation-iuianimationtransitionlibrary)
 </dt> </dl>
 
  

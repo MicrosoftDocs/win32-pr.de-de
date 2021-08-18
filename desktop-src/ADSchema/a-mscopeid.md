@@ -1,11 +1,11 @@
 ---
 title: Mscope-Id-Attribut
-description: Gibt an, dass auf dem angegebenen DHCP-Server ein Multicast Bereich vorhanden ist.
+description: Gibt an, dass auf dem angegebenen DHCP-Server ein Multicastbereich verfügbar ist.
 ms.assetid: 376e3699-d261-4278-a073-0cf2e5b8193b
 ms.tgt_platform: multiple
 keywords:
-- AD-Schema für Mscope-Id-Attribut
-- AD-Schema des mscopeid-Attributs
+- Mscope-Id AD-Schema
+- mscopeId-Attribut AD-Schema
 topic_type:
 - apiref
 api_name:
@@ -14,28 +14,28 @@ api_type:
 - Schema
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 6437e273fdc93137c7fe99047524e6b2475265d7
-ms.sourcegitcommit: b77ace27b0432e7cd3863191b11926be032fbe2f
+ms.openlocfilehash: 0042646ea27cb69f935f4ad8b867aa3930060550c0ecd30b71aafaad8624e2af
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "104519495"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119705180"
 ---
 # <a name="mscope-id-attribute"></a>Mscope-Id-Attribut
 
-Gibt an, dass auf dem angegebenen DHCP-Server ein Multicast Bereich vorhanden ist.
+Gibt an, dass auf dem angegebenen DHCP-Server ein Multicastbereich verfügbar ist.
 
 
 
 | Eingabe | Wert |
 |-------------------|--------------------------------------|
 | CN                | Mscope-Id                            |
-| LDAP-Display-Name | mscopeid                             |
+| Ldap-Anzeigename | mscopeId                             |
 | Size              | \-                                   |
-| Berechtigung aktualisieren  | \-                                   |
-| Aktualisierungshäufigkeit  | \-                                   |
+| Aktualisieren von Berechtigungen  | \-                                   |
+| Updatehäufigkeit  | \-                                   |
 | Attribute-Id      | 1.2.840.113556.1.4.716               |
-| System-ID-GUID    | 963d2751-48be-11d1-a9c3-0000 C1 |
+| System-Id-Guid    | 963d2751-48be-11d1-a9c3-0000f80367c1 |
 | Syntax            | [**String(IA5)**](s-string-ia5.md)  |
 
 
@@ -43,7 +43,7 @@ Gibt an, dass auf dem angegebenen DHCP-Server ein Multicast Bereich vorhanden is
 ## <a name="implementations"></a>Implementierungen
 
 -   [**Windows 2000 Server**](#windows-2000-server)
--   [**Windows Server 2003**](#windows-server-2003)
+-   [**Windows Server 2003**](#windows-server-2003)
 -   [**Windows Server 2003 R2**](#windows-server-2003-r2)
 -   [**Windows Server 2008**](#windows-server-2008)
 -   [**Windows Server 2008 R2**](#windows-server-2008-r2)
@@ -57,11 +57,11 @@ Gibt an, dass auf dem angegebenen DHCP-Server ein Multicast Bereich vorhanden is
 |------------------------|----------------------------------------------|
 | Link-ID                | \-                                           |
 | MAPI-Id                | \-                                           |
-| System-Only            | False                                        |
-| Ist-einwertig       | Richtig                                         |
-| Ist indiziert             | False                                        |
-| Im globalen Katalog      | False                                        |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                 |
+| System-Only            | Falsch                                        |
+| Is-Single-Valued       | Richtig                                         |
+| Ist indiziert             | Falsch                                        |
+| Im globalen Katalog      | Falsch                                        |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                 |
 | Range-Lower            | \-                                           |
 | Range-Upper            | \-                                           |
 | Search-Flags           | 0x00000000                                   |
@@ -70,7 +70,7 @@ Gibt an, dass auf dem angegebenen DHCP-Server ein Multicast Bereich vorhanden is
 
 
 
-## <a name="windows-server-2003"></a>Windows Server 2003
+## <a name="windows-server-2003"></a>Windows Server 2003
 
 
 
@@ -78,11 +78,11 @@ Gibt an, dass auf dem angegebenen DHCP-Server ein Multicast Bereich vorhanden is
 |------------------------|----------------------------------------------|
 | Link-ID                | \-                                           |
 | MAPI-Id                | \-                                           |
-| System-Only            | False                                        |
-| Ist-einwertig       | Richtig                                         |
-| Ist indiziert             | False                                        |
-| Im globalen Katalog      | False                                        |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                 |
+| System-Only            | Falsch                                        |
+| Is-Single-Valued       | Richtig                                         |
+| Ist indiziert             | Falsch                                        |
+| Im globalen Katalog      | Falsch                                        |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                 |
 | Range-Lower            | \-                                           |
 | Range-Upper            | \-                                           |
 | Search-Flags           | 0x00000000                                   |
@@ -99,11 +99,11 @@ Gibt an, dass auf dem angegebenen DHCP-Server ein Multicast Bereich vorhanden is
 |------------------------|----------------------------------------------|
 | Link-ID                | \-                                           |
 | MAPI-Id                | \-                                           |
-| System-Only            | False                                        |
-| Ist-einwertig       | Richtig                                         |
-| Ist indiziert             | False                                        |
-| Im globalen Katalog      | False                                        |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                 |
+| System-Only            | Falsch                                        |
+| Is-Single-Valued       | Richtig                                         |
+| Ist indiziert             | Falsch                                        |
+| Im globalen Katalog      | Falsch                                        |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                 |
 | Range-Lower            | \-                                           |
 | Range-Upper            | \-                                           |
 | Search-Flags           | 0x00000000                                   |
@@ -120,11 +120,11 @@ Gibt an, dass auf dem angegebenen DHCP-Server ein Multicast Bereich vorhanden is
 |------------------------|----------------------------------------------|
 | Link-ID                | \-                                           |
 | MAPI-Id                | \-                                           |
-| System-Only            | False                                        |
-| Ist-einwertig       | Richtig                                         |
-| Ist indiziert             | False                                        |
-| Im globalen Katalog      | False                                        |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                 |
+| System-Only            | Falsch                                        |
+| Is-Single-Valued       | Richtig                                         |
+| Ist indiziert             | Falsch                                        |
+| Im globalen Katalog      | Falsch                                        |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                 |
 | Range-Lower            | \-                                           |
 | Range-Upper            | \-                                           |
 | Search-Flags           | 0x00000000                                   |
@@ -141,11 +141,11 @@ Gibt an, dass auf dem angegebenen DHCP-Server ein Multicast Bereich vorhanden is
 |------------------------|----------------------------------------------|
 | Link-ID                | \-                                           |
 | MAPI-Id                | \-                                           |
-| System-Only            | False                                        |
-| Ist-einwertig       | Richtig                                         |
-| Ist indiziert             | False                                        |
-| Im globalen Katalog      | False                                        |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                 |
+| System-Only            | Falsch                                        |
+| Is-Single-Valued       | Richtig                                         |
+| Ist indiziert             | Falsch                                        |
+| Im globalen Katalog      | Falsch                                        |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                 |
 | Range-Lower            | \-                                           |
 | Range-Upper            | \-                                           |
 | Search-Flags           | 0x00000000                                   |
@@ -162,11 +162,11 @@ Gibt an, dass auf dem angegebenen DHCP-Server ein Multicast Bereich vorhanden is
 |------------------------|----------------------------------------------|
 | Link-ID                | \-                                           |
 | MAPI-Id                | \-                                           |
-| System-Only            | False                                        |
-| Ist-einwertig       | Richtig                                         |
-| Ist indiziert             | False                                        |
-| Im globalen Katalog      | False                                        |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                 |
+| System-Only            | Falsch                                        |
+| Is-Single-Valued       | Richtig                                         |
+| Ist indiziert             | Falsch                                        |
+| Im globalen Katalog      | Falsch                                        |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                 |
 | Range-Lower            | \-                                           |
 | Range-Upper            | \-                                           |
 | Search-Flags           | 0x00000000                                   |

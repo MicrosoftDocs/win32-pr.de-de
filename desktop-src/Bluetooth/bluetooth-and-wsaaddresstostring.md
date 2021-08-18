@@ -1,40 +1,40 @@
 ---
-title: Bluetooth und wsaadresssstostring
-description: Die Windows Sockets-Funktion von wsaadresssstostring wird verwendet, um eine Bluetooth-Geräteadresse in eine Zeichenfolge zu konvertieren, die wiederum über die wsaqueryset-Struktur beim Abrufen von Geräte Dienst Informationen für die wsalookupservicebegin-Funktion bereitgestellt wird.
+title: Bluetooth und WSAAddressToString
+description: Die WSAAddressToString Windows Sockets-Funktion wird verwendet, um eine Bluetooth-Geräteadresse in eine Zeichenfolge zu konvertieren, die wiederum für die WSALookupServiceBegin-Funktion über die WSAQUERYSET-Struktur beim Abrufen von Gerätedienstinformationen bereitgestellt wird.
 ms.assetid: 3489d29a-2b64-4051-b579-57878efc0c73
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: a78e8a9ae3ea6a0f853619a3f3610a64204ad3c3
-ms.sourcegitcommit: 592c9bbd22ba69802dc353bcb5eb30699f9e9403
+ms.openlocfilehash: 65bb49563355b3a85ff64d7168f77e8526ca1679cffaa565e7b9cd7070cf87f9
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "104039070"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120004280"
 ---
-# <a name="bluetooth-and-wsaaddresstostring"></a>Bluetooth und wsaadresssstostring
+# <a name="bluetooth-and-wsaaddresstostring"></a>Bluetooth und WSAAddressToString
 
-Die Windows Sockets-Funktion von [**wsaadresssstostring**](/windows/desktop/api/winsock2/nf-winsock2-wsaaddresstostringa) wird verwendet, um eine Bluetooth-Geräteadresse in eine Zeichenfolge zu konvertieren, die wiederum über die [**wsaqueryset**](/windows/desktop/api/winsock2/ns-winsock2-wsaquerysetw) -Struktur beim Abrufen von Geräte Dienst Informationen für die [**wsalookupservicebegin**](/windows/desktop/api/winsock2/nf-winsock2-wsalookupservicebegina) -Funktion bereitgestellt wird.
+Die [**WSAAddressToString**](/windows/desktop/api/winsock2/nf-winsock2-wsaaddresstostringa) Windows Sockets-Funktion wird verwendet, um eine Bluetooth-Geräteadresse in eine Zeichenfolge zu konvertieren, die wiederum für die [**WSALookupServiceBegin-Funktion**](/windows/desktop/api/winsock2/nf-winsock2-wsalookupservicebegina) über die [**WSAQUERYSET-Struktur**](/windows/desktop/api/winsock2/ns-winsock2-wsaquerysetw) beim Abrufen von Gerätedienstinformationen bereitgestellt wird.
 
-Obwohl eine Bluetooth-Geräteadresse in einen 20-Zeichen-Puffer passt, gibt die [**wsaaddresssstostring**](/windows/desktop/api/winsock2/nf-winsock2-wsaaddresstostringa) -Funktion derzeit **wsaefault** für Bluetooth-Geräte Adressen zurück, es sei denn, der Puffer und der angegebene *lpdwaddressstringlength* -Wert sind auf eine Zeichen Länge von 40 festgelegt.
+Während eine Bluetooth-Geräteadresse in einen Puffer mit 20 Zeichen passt, gibt die [**WSAAddressToString-Funktion**](/windows/desktop/api/winsock2/nf-winsock2-wsaaddresstostringa) derzeit **WSAEFAULT** für Bluetooth-Geräteadressen zurück, es sei denn, der Puffer und der angegebene *lpdwAddressStringLength-Wert* sind auf eine Zeichenlänge von 40 festgelegt.
 
 > [!Note]  
-> Wenn **wsaefault** von [**wsaadresssstostring**](/windows/desktop/api/winsock2/nf-winsock2-wsaaddresstostringa) als Ergebnis eines nicht ausreichenden Puffers zurückgegeben wird, wird der *lpdwaddressstringlength* -Parameter nicht mit der für den Vorgang erforderlichen Puffergröße aktualisiert.
+> Wenn **WSAEFAULT** von [**WSAAddressToString**](/windows/desktop/api/winsock2/nf-winsock2-wsaaddresstostringa) als Ergebnis eines unzureichenden Puffers zurückgegeben wird, wird der *lpdwAddressStringLength-Parameter* nicht mit der für den Vorgang erforderlichen Puffergröße aktualisiert.
 
- 
+ 
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[**Wsaadresssstostring**](/windows/desktop/api/winsock2/nf-winsock2-wsaaddresstostringa)
+[**WSAAddressToString**](/windows/desktop/api/winsock2/nf-winsock2-wsaaddresstostringa)
 </dt> <dt>
 
-[Bluetooth und wsalookupservicebegin](bluetooth-and-wsalookupservicebegin.md)
+[Bluetooth und WSALookupServiceBegin](bluetooth-and-wsalookupservicebegin.md)
 </dt> <dt>
 
-[Bluetooth und wsaqueryset](bluetooth-and-wsaqueryset.md)
+[Bluetooth und WSAQUERYSET](bluetooth-and-wsaqueryset.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 

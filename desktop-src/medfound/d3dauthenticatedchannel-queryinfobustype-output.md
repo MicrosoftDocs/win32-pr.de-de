@@ -1,7 +1,7 @@
 ---
-description: Enthält die Antwort auf eine D3DAUTHENTICATEDQUERY \_ accessibilityattributabfrage.
+description: Enthält die Antwort auf eine D3DAUTHENTICATEDQUERY \_ ACCESSIBILITYATTRIBUTES-Abfrage.
 ms.assetid: 9f66a467-ba05-413b-b001-ea4c5ca4a37d
-title: D3DAUTHENTICATEDCHANNEL_QUERYINFOBUSTYPE_OUTPUT-Struktur (D3d9types. h)
+title: D3DAUTHENTICATEDCHANNEL_QUERYINFOBUSTYPE_OUTPUT-Struktur (D3d9types.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,18 +13,18 @@ api_type:
 - HeaderDef
 api_location:
 - d3d9types.h
-ms.openlocfilehash: 853488c98687825ab55d642b2e01e569f0d435c6
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 1f4d7a0f8ceadc4e40ceaf327b7dc45fd10bd3427620971b16c5a02659c0a067
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106341161"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119828710"
 ---
-# <a name="d3dauthenticatedchannel_queryinfobustype_output-structure"></a>D3DAUTHENTICATEDCHANNEL \_ queryinfobustype- \_ Ausgabestruktur
+# <a name="d3dauthenticatedchannel_queryinfobustype_output-structure"></a>D3DAUTHENTICATEDCHANNEL \_ \_ QUERYINFOBUSTYPE-AUSGABEstruktur
 
-Enthält die Antwort auf eine [**D3DAUTHENTICATEDQUERY \_ accessibilityattributabfrage**](d3dauthenticatedquery-accessibilityattributes.md) .
+Enthält die Antwort auf eine [**D3DAUTHENTICATEDQUERY \_ ACCESSIBILITYATTRIBUTES-Abfrage.**](d3dauthenticatedquery-accessibilityattributes.md)
 
-Um diese Abfrage zu senden, nennen Sie [**IDirect3DAuthenticatedChannel9:: Query**](/windows/desktop/api/d3d9/nf-d3d9-idirect3dauthenticatedchannel9-query).
+Rufen Sie [**IDirect3DAuthenticatedChannel9::Query**](/windows/desktop/api/d3d9/nf-d3d9-idirect3dauthenticatedchannel9-query)auf, um diese Abfrage zu senden.
 
 ## <a name="syntax"></a>Syntax
 
@@ -47,28 +47,28 @@ typedef struct _D3DAUTHENTICATEDCHANNEL_QUERYINFOBUSTYPE_OUTPUT {
 **Ausgabe**
 </dt> <dd>
 
-Eine [**D3DAUTHENTICATEDCHANNEL \_ Query- \_ Ausgabe**](d3dauthenticatedchannel-query-output.md) Struktur, die eine Nachrichtenauthentifizierungscode (Mac) und andere Daten enthält.
+Eine [**D3DAUTHENTICATEDCHANNEL \_ QUERY \_ OUTPUT-Struktur,**](d3dauthenticatedchannel-query-output.md) die eine Nachrichtenauthentifizierungscode (MAC) und andere Daten enthält.
 
 </dd> <dt>
 
 **BusType**
 </dt> <dd>
 
-Ein bitweises **or** von-Flags aus der [**D3DBUSTYPE**](d3dbustype.md) -Enumeration.
+Ein bitweises **OR** von Flags aus der [**D3DBUSTYPE-Enumeration.**](d3dbustype.md)
 
 </dd> <dt>
 
-**baccessiblancontiguousblocks**
+**bAccessibleInContiguousBlocks**
 </dt> <dd>
 
-**True** gibt an, dass die CPU oder der Bus auf zusammenhängende Blöcke des Video Speichers zugreifen können.
+**True** gibt an, dass die CPU oder der Bus möglicherweise auf zusammenhängende Videospeicherblöcke zugreifen können.
 
 </dd> <dt>
 
-**baccessiblannoncontiguousblocks**
+**bAccessibleInNonContiguousBlocks**
 </dt> <dd>
 
-**True** gibt an, dass die CPU oder der Bus auf nicht zusammenhängende Blöcke des Video Speichers zugreifen können.
+True gibt an, dass die CPU oder der Bus möglicherweise auf nicht zusammenhängende Videospeicherblöcke zugreifen kann.
 
 </dd> </dl>
 
@@ -78,20 +78,20 @@ Ein bitweises **or** von-Flags aus der [**D3DBUSTYPE**](d3dbustype.md) -Enumerat
 
 | Anforderung | Wert |
 |-------------------------------------|----------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows 7 \[ -Desktop-Apps\]<br/>                                             |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 R2 \[ -Desktop-Apps\]<br/>                                |
-| Header<br/>                   | <dl> <dt>D3d9types. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | nur Windows 7 \[ Desktop-Apps\]<br/>                                             |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server 2008 \[ R2-Desktop-Apps\]<br/>                                |
+| Header<br/>                   | <dl> <dt>D3d9types.h</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[Direct3D-Video Strukturen](direct3d-video-structures.md)
+[Direct3D-Videostrukturen](direct3d-video-structures.md)
 </dt> <dt>
 
-[**IDirect3DAuthenticatedChannel9:: Query**](/windows/desktop/api/d3d9/nf-d3d9-idirect3dauthenticatedchannel9-query)
+[**IDirect3DAuthenticatedChannel9::Query**](/windows/desktop/api/d3d9/nf-d3d9-idirect3dauthenticatedchannel9-query)
 </dt> </dl>
 
  

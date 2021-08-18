@@ -1,12 +1,12 @@
 ---
-title: Setnetworkadapterlanaid-Methode der Win32_TSNetworkAdapterSetting-Klasse
-description: Gibt die Nummer des lokalen Netzwerkadapters (Lana) des festzulegenden Netzwerkadapters an.
+title: SetNetworkAdapterLanaID-Methode der Win32_TSNetworkAdapterSetting-Klasse
+description: Gibt die LANA-Nummer (Local Area Network Adapter) des festzulegenden Netzwerkadapters an.
 ms.assetid: a12c7f06-4ecf-40bd-98c5-a2583dd1754a
 ms.tgt_platform: multiple
 keywords:
-- Setnetworkadapterlanaid-Methode Remotedesktopdienste
-- Setnetworkadapterlanaid-Methode Remotedesktopdienste, Win32_TSNetworkAdapterSetting-Klasse
-- Win32_TSNetworkAdapterSetting-Klasse Remotedesktopdienste, setnetworkadapterlanaid-Methode
+- SetNetworkAdapterLanaID-Methode Remotedesktopdienste
+- SetNetworkAdapterLanaID-Methode Remotedesktopdienste , Win32_TSNetworkAdapterSetting-Klasse
+- Win32_TSNetworkAdapterSetting-Klasse Remotedesktopdienste , SetNetworkAdapterLanaID-Methode
 topic_type:
 - apiref
 api_name:
@@ -17,16 +17,16 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 00675ae6378041e6c06b82a7de3c1ccf27620f4d
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 3b5ffe976da794714f01e711913c01216d6b9bfad30c8c337da1fbd4c796e5f6
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "103743496"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120008960"
 ---
-# <a name="setnetworkadapterlanaid-method-of-the-win32_tsnetworkadaptersetting-class"></a>Setnetworkadapterlanaid-Methode der Win32- \_ Klasse "znetworkadaptersetting"
+# <a name="setnetworkadapterlanaid-method-of-the-win32_tsnetworkadaptersetting-class"></a>SetNetworkAdapterLanaID-Methode der Win32 \_ TSNetworkAdapterSetting-Klasse
 
-Die **setnetworkadapterlanaid** -Methode gibt die Nummer des lokalen Netzwerkadapters (Lana) des festzulegenden Netzwerkadapters an. Wenn die angegebene Lana-ID ungültig ist oder nicht vorhanden ist, wird ein Fehler zurückgegeben. Die Liste der verfügbaren Lana-IDs wird durch Aufzählen der **deviceidlist** -Eigenschaft in der Win32-Klasse " [**\_ tnetworkadaptersetting**](win32-tsnetworkadaptersetting.md) " abgerufen.
+Die **SetNetworkAdapterLanaID-Methode** gibt die LANA-Nummer (Local Area Network Adapter) des festzulegenden Netzwerkadapters an. Wenn die angegebene LANA-ID ungültig ist oder nicht vorhanden ist, wird ein Fehler zurückgegeben. Die verfügbare Liste der LANA-IDs wird durch Auflisten der Eigenschaft **DeviceIDList** in der [**Win32 \_ TSNetworkAdapterSetting-Klasse**](win32-tsnetworkadaptersetting.md) abgerufen.
 
 ## <a name="syntax"></a>Syntax
 
@@ -43,20 +43,20 @@ uint32 SetNetworkAdapterLanaID(
 
 <dl> <dt>
 
-*Networkadapterlanaid* \[ in\]
+*NetworkAdapterLanaID* \[ In\]
 </dt> <dd>
 
-Lana-Nummer des festzulegenden Netzwerkadapters.
+LANA-Nummer des festzulegende Netzwerkadapters.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt bei Erfolg 0 zurück, andernfalls wird ein WMI-Fehlercode zurückgegeben. Eine Liste dieser Werte finden Sie unter [Remotedesktopdienste Fehler Codes des WMI-Anbieters](terminal-services-wmi-provider-error-codes.md) .
+Gibt bei Erfolg 0 zurück, andernfalls einen WMI-Fehlercode. Eine Liste dieser Werte finden Sie unter [Remotedesktopdienste WMI-Anbieterfehlercodes.](terminal-services-wmi-provider-error-codes.md)
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Managed Object Format-Dateien (MOF) enthalten die Definitionen für Windows-Verwaltungsinstrumentation (WMI)-Klassen. MOF-Dateien werden nicht als Teil des Microsoft Windows Software Development Kit (SDK) installiert. Sie werden auf dem Server installiert, wenn Sie die zugehörige Rolle mithilfe der Server-Manager hinzufügen. Weitere Informationen zu MOF-Dateien finden Sie unter [Managed Object Format (MOF)](/windows/desktop/WmiSdk/managed-object-format--mof-).
+Managed Object Format -Dateien (MOF) enthalten die Definitionen für WMI-Klassen (Windows Management Instrumentation). MOF-Dateien werden nicht als Teil des Microsoft Windows Software Development Kit (SDK) installiert. Sie werden auf dem Server installiert, wenn Sie die zugeordnete Rolle mithilfe der Server-Manager hinzufügen. Weitere Informationen zu MOF-Dateien finden Sie unter [Managed Object Format (MOF).](/windows/desktop/WmiSdk/managed-object-format--mof-)
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -67,16 +67,16 @@ Managed Object Format-Dateien (MOF) enthalten die Definitionen für Windows-Verw
 | Unterstützte Mindestversion (Client)<br/> | Windows Vista<br/>                                                                |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2008<br/>                                                          |
 | Namespace<br/>                | Root \\ CIMv2 \\ TerminalServices<br/>                                                |
-| MOF<br/>                      | <dl> <dt>Tscsgwmi. MOF</dt> </dl> |
+| MOF<br/>                      | <dl> <dt>TSCfgWmi.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>TSCfgWmi.dll</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Win32-Datei "t-Network \_ adaptersetting"**](win32-tsnetworkadaptersetting.md)
+[**Win32 \_ TSNetworkAdapterSetting**](win32-tsnetworkadaptersetting.md)
 </dt> </dl>
 
  

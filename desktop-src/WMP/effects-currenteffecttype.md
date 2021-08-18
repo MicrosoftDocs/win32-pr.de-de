@@ -1,9 +1,9 @@
 ---
-title: Effekte. Currency-ffecttype
-description: Das Attribut "attributeffecttype" gibt den Registrierungs Namen der aktuellen Visualisierung an oder ruft ihn ab. Dieser Name ist eine eindeutige ID, die vom Visualisierungs Autor definiert wurde.
+title: EFFECTS.currentEffectType
+description: Das attribut currentEffectType gibt den Registrierungsnamen der aktuellen Visualisierung an oder ruft den Namen ab. Dieser Name ist eine eindeutige ID, die vom Autor der Visualisierung definiert wird.
 ms.assetid: 29469272-468d-49b4-a934-e7dc00583efa
 keywords:
-- Effekte. Currency-ffecttype Windows-Media Player
+- EFFECTS.currentEffectType Windows Media Player
 topic_type:
 - apiref
 api_name:
@@ -12,16 +12,16 @@ api_type:
 - NA
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: be7c7671c4a5dce9df81cf8f9d770d71eba3325e
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 8df55ae806781fa0924349cfe472f355cdabd2be6723148fc6100dc39efd9062
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106351228"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118996750"
 ---
-# <a name="effectscurrenteffecttype"></a>Effekte. Currency-ffecttype
+# <a name="effectscurrenteffecttype"></a>EFFECTS.currentEffectType
 
-Das Attribut " **attributeffecttype** " gibt den Registrierungs Namen der aktuellen Visualisierung an oder ruft ihn ab. Dieser Name ist eine eindeutige ID, die vom Visualisierungs Autor definiert wurde.
+Das **attribut currentEffectType** gibt den Registrierungsnamen der aktuellen Visualisierung an oder ruft den Namen ab. Dieser Name ist eine eindeutige ID, die vom Autor der Visualisierung definiert wird.
 
 ``` syntax
         elementID.currentEffectType
@@ -29,15 +29,15 @@ Das Attribut " **attributeffecttype** " gibt den Registrierungs Namen der aktuel
 
 ## <a name="possible-values"></a>Mögliche Werte
 
-Dieses Attribut ist eine Lese- **/schreibzeichenfolge**.
+Dieses Attribut ist eine Zeichenfolge mit **Lese-/Schreibzugriff.**
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Sie können dieses Attribut zur Laufzeit verwenden, um den aktuell angezeigten Effekt zu ändern. Gehen Sie hierzu folgendermaßen vor:
+Sie können dieses Attribut zur Laufzeit verwenden, um den derzeit angezeigten Effekt zu ändern. Gehen Sie hierzu folgendermaßen vor:
 
-1.  Verwenden Sie **effectcount** , um die Anzahl der registrierten Effekte abzurufen.
-2.  Rufen Sie in einer-Schleife den Namen jedes registrierten Effekts mithilfe von **EffectType** ab.
-3.  Geben Sie einen der Namen **an, den** Sie für "" "" "" "" "" "" "" "" ""
+1.  Verwenden **Sie effectCount,** um die Anzahl registrierter Effekte abzurufen.
+2.  Rufen Sie in einer Schleife den Namen jedes registrierten Effekts mit **effectType ab.**
+3.  Geben Sie einen der Namen an, die Sie für **currentEffectType abgerufen haben,** um den aktuellen Effekt festzulegen.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -45,24 +45,24 @@ Sie können dieses Attribut zur Laufzeit verwenden, um den aktuell angezeigten E
 
 | Anforderung | Wert |
 |--------------------|------------------------------------------------------|
-| Version<br/> | Windows Media Player, Version 7,0 oder höher<br/> |
+| Version<br/> | Windows Media Player Version 7.0 oder höher<br/> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Effects-Element**](effects-element.md)
+[**EFFECTS-Element**](effects-element.md)
 </dt> <dt>
 
-[**Effekte. Currency-ffect**](effects-currenteffect.md)
+[**EFFECTS.currentEffect**](effects-currenteffect.md)
 </dt> <dt>
 
-[**Effects. effectcount**](effects-effectcount.md)
+[**EFFECTS.effectCount**](effects-effectcount.md)
 </dt> <dt>
 
-[**Effects. EffectType**](effects-effecttype.md)
+[**EFFECTS.effectType**](effects-effecttype.md)
 </dt> </dl>
 
  

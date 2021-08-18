@@ -1,9 +1,9 @@
 ---
-title: Devicememorybarrierwithgroupsync-Funktion
-description: Blockiert die Ausführung aller Threads in einer Gruppe, bis alle Gerätespeicher Zugriffe abgeschlossen sind und alle Threads in der Gruppe diesen Befehl erreicht haben.
+title: DeviceMemoryBarrierWithGroupSync-Funktion
+description: Blockiert die Ausführung aller Threads in einer Gruppe, bis alle Gerätespeicherzugriffe abgeschlossen sind und alle Threads in der Gruppe diesen Aufruf erreicht haben.
 ms.assetid: 77c54064-a996-4c51-84b5-7da60e884c4f
 keywords:
-- Devicememorybarrierwithgroupsync-Funktion HLSL
+- DeviceMemoryBarrierWithGroupSync-Funktion HLSL
 topic_type:
 - apiref
 api_name:
@@ -13,16 +13,16 @@ api_type:
 ms.topic: reference
 ms.date: 05/31/2018
 api_location: ''
-ms.openlocfilehash: 6a7a4a27b3256fb78c7b60b960fc5383cfd5b5d4
-ms.sourcegitcommit: 57758ecb246c84d65e6e0e4bd5570d9176fa39cd
+ms.openlocfilehash: 2567a209b86481cd0f25922e8e3b1cf947196a2c799344089591cf70fa3624fd
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "104312833"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119625820"
 ---
-# <a name="devicememorybarrierwithgroupsync-function"></a>Devicememorybarrierwithgroupsync-Funktion
+# <a name="devicememorybarrierwithgroupsync-function"></a>DeviceMemoryBarrierWithGroupSync-Funktion
 
-Blockiert die Ausführung aller Threads in einer Gruppe, bis alle Gerätespeicher Zugriffe abgeschlossen sind und alle Threads in der Gruppe diesen Befehl erreicht haben.
+Blockiert die Ausführung aller Threads in einer Gruppe, bis alle Gerätespeicherzugriffe abgeschlossen sind und alle Threads in der Gruppe diesen Aufruf erreicht haben.
 
 ## <a name="syntax"></a>Syntax
 
@@ -38,47 +38,47 @@ Diese Funktion besitzt keine Parameter.
 
 Diese Funktion gibt keinen Wert zurück.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-### <a name="minimum-shader-model"></a>Minimaler Shader-Modell
+### <a name="minimum-shader-model"></a>Minimales Shadermodell
 
-Diese Funktion wird in den folgenden shadermodellen unterstützt.
+Diese Funktion wird in den folgenden Shadermodellen unterstützt.
 
 
 
 | Shadermodell                                                                | Unterstützt |
 |-----------------------------------------------------------------------------|-----------|
-| [Shader Model 5](d3d11-graphics-reference-sm5.md) und höhere shadermodelle | ja       |
+| [Shadermodell 5](d3d11-graphics-reference-sm5.md) und höher– Shadermodelle | Ja       |
 
 
 
- 
+ 
 
-Diese Funktion wird in den folgenden Typen von Shadern unterstützt:
+Diese Funktion wird in den folgenden Shadertypen unterstützt:
 
 
 
-| Scheitelpunkt | Hülle | Domain | Geometrie | Pixel | Compute |
+| Scheitelpunkt | Rumpf | Domain | Geometrie | Pixel | Compute |
 |--------|------|--------|----------|-------|---------|
 |        |      |        |          |       | x       |
 
 
 
- 
+ 
 
 ## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[Intrinsische Funktionen](dx-graphics-hlsl-intrinsic-functions.md)
+[Systeminterne Funktionen](dx-graphics-hlsl-intrinsic-functions.md)
 </dt> <dt>
 
-[Shader-Modell 5](d3d11-graphics-reference-sm5.md)
+[Shadermodell 5](d3d11-graphics-reference-sm5.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

@@ -1,5 +1,5 @@
 ---
-description: Win32 \_ PageFileUsage&\# 8194; WMI-Klasse stellt die Datei dar, die zum Verarbeiten des Austauschs von virtuellen Speicherdateien in einem Win32-System verwendet wird. Informationen, die in Objekten enthalten sind, die von dieser Klasse instanziiert werden, geben den Lauf Zeit Zustand der Auslagerungs Datei an.
+description: Win32 \_ PageFileUsage&\# 8194; Die WMI-Klasse stellt die Datei dar, die zum Behandeln des Austauschs virtueller Speicherdateien auf einem Win32-System verwendet wird. Informationen, die in Objekten enthalten sind, die von dieser Klasse instanziiert werden, geben den Laufzeitzustand der Seitendatei an.
 ms.assetid: 635d7bd0-3738-4092-8b76-5e9583e079a9
 ms.tgt_platform: multiple
 title: Win32_PageFileUsage-Klasse
@@ -23,18 +23,18 @@ api_type:
 - DllExport
 api_location:
 - CIMWin32.dll
-ms.openlocfilehash: 9885bea242a9f2b781ccb0dcac479248a9ccc538
-ms.sourcegitcommit: c7add10d695482e1ceb72d62b8a4ebd84ea050f7
+ms.openlocfilehash: d5d901c771fb71dbda141f6166348d1601317eae7bcda3ea5a059f5836975014
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104524096"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119972270"
 ---
 # <a name="win32_pagefileusage-class"></a>Win32 \_ PageFileUsage-Klasse
 
-Die  [WMI-Klasse](../wmisdk/retrieving-a-class.md) " **Win32 \_ PageFileUsage**" stellt die Datei dar, die zum Verarbeiten des Austauschs von virtuellen Speicherdateien in einem Win32-System verwendet wird. Informationen, die in Objekten enthalten sind, die von dieser Klasse instanziiert werden, geben den Lauf Zeit Zustand der Auslagerungs Datei an.
+Die  [WMI-Klasse](../wmisdk/retrieving-a-class.md) **Win32 \_ PageFileUsage** stellt die Datei dar, die für den Austausch virtueller Speicherdateien auf einem Win32-System verwendet wird. Informationen, die in Objekten enthalten sind, die von dieser Klasse instanziiert werden, geben den Laufzeitzustand der Seitendatei an.
 
-Die folgende Syntax wurde aus MOF-Code (Managed Object Format, verwaltetes Objektformat) vereinfacht und enthält alle geerbten Eigenschaften. Eigenschaften und Methoden sind in alphabetischer Reihenfolge, nicht in der MOF-Reihenfolge.
+Die folgende Syntax wurde aus MOF-Code (Managed Object Format, verwaltetes Objektformat) vereinfacht und enthält alle geerbten Eigenschaften. Eigenschaften und Methoden werden in alphabetischer Reihenfolge und nicht in MOF-Reihenfolge sortiert.
 
 ## <a name="syntax"></a>Syntax
 
@@ -56,29 +56,29 @@ class Win32_PageFileUsage : CIM_LogicalElement
 
 ## <a name="members"></a>Member
 
-Die **Win32-Klasse \_ PageFileUsage** verfügt über diese Typen von Membern:
+Die **Win32 \_ PageFileUsage-Klasse** verfügt über folgende Typen von Membern:
 
 -   [Eigenschaften](#properties)
 
 ### <a name="properties"></a>Eigenschaften
 
-Die **Win32-Klasse \_ PageFileUsage** verfügt über diese Eigenschaften.
+Die **Win32 \_ PageFileUsage-Klasse** verfügt über diese Eigenschaften.
 
 <dl> <dt>
 
-**"Zubei Zuweisung"**
+**AllocatedBaseSize**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt32**
+Datentyp: **uint32**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**mappingstrings**](../wmisdk/standard-qualifiers.md) ("Win32API \| [**MEMORYSTATUS**](/windows/win32/api/winbase/ns-winbase-memorystatus) \| dwTotalPageFile"), [**Einheiten**](../wmisdk/standard-qualifiers.md) ("Megabyte")
+Qualifizierer: [**MappingStrings**](../wmisdk/standard-qualifiers.md) ("Win32API \| [**MEMORYSTATUS**](/windows/win32/api/winbase/ns-winbase-memorystatus) \| dwTotalPageFile"), [**Einheiten**](../wmisdk/standard-qualifiers.md) ("Megabytes")
 </dt> </dl>
 
-Tatsächlicher Speicherplatz, der für die Verwendung mit dieser Auslagerungs Datei reserviert ist. Dieser Wert entspricht dem Bereich, der in [**Win32 \_ pagefilesetting**](win32-pagefilesetting.md) unter den Eigenschaften **InitialSize** und **MaximumSize** festgelegt wird, die beim Systemstart festgelegt werden.
+Tatsächlicher Speicherplatz, der für die Verwendung mit dieser Seitendatei zugeordnet ist. Dieser Wert entspricht dem Bereich, der in [**Win32 \_ PageFileSetting**](win32-pagefilesetting.md) unter den Eigenschaften **InitialSize** und **MaximumSize** festgelegt ist, die beim Systemstart festgelegt wurden.
 
 Beispiel: 178
 
@@ -87,16 +87,16 @@ Beispiel: 178
 **Caption**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**maxlen**](../wmisdk/standard-qualifiers.md) (64), [**Display Name**](../wmisdk/standard-qualifiers.md) ("Caption")
+Qualifizierer: [**MaxLen**](../wmisdk/standard-qualifiers.md) (64), [**DisplayName**](../wmisdk/standard-qualifiers.md) ("Caption")
 </dt> </dl>
 
-Eine kurze Textbeschreibung des-Objekts.
+Eine kurze Textbeschreibung des Objekts.
 
 Diese Eigenschaft wird von [**CIM \_ ManagedSystemElement**](cim-managedsystemelement.md)geerbt.
 
@@ -105,32 +105,32 @@ Diese Eigenschaft wird von [**CIM \_ ManagedSystemElement**](cim-managedsystemel
 **CurrentUsage**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt32**
+Datentyp: **uint32**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**mappingstrings**](../wmisdk/standard-qualifiers.md) ("Win32API \| [**MEMORYSTATUS**](/windows/win32/api/winbase/ns-winbase-memorystatus)"), [**Einheiten**](../wmisdk/standard-qualifiers.md) ("Megabyte")
+Qualifizierer: [**MappingStrings**](../wmisdk/standard-qualifiers.md) ("Win32API \| [**MEMORYSTATUS"),**](/windows/win32/api/winbase/ns-winbase-memorystatus) [**Einheiten**](../wmisdk/standard-qualifiers.md) ("Megabytes")
 </dt> </dl>
 
-Menge an Speicherplatz, der derzeit von der Auslagerungs Datei verwendet wird.
+Speicherplatz, der derzeit von der Seitendatei verwendet wird.
 
 </dd> <dt>
 
 **Beschreibung**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**Display Name**](../wmisdk/standard-qualifiers.md) ("Description")
+Qualifizierer: [**DisplayName**](../wmisdk/standard-qualifiers.md) ("Beschreibung")
 </dt> </dl>
 
-Eine Textbeschreibung des-Objekts.
+Eine Textbeschreibung des Objekts.
 
 Diese Eigenschaft wird von [**CIM \_ ManagedSystemElement**](cim-managedsystemelement.md)geerbt.
 
@@ -139,16 +139,16 @@ Diese Eigenschaft wird von [**CIM \_ ManagedSystemElement**](cim-managedsystemel
 **InstallDate**
 </dt> <dd> <dl> <dt>
 
-**Datentyp: DateTime**
+Datentyp: **datetime**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**mappingstrings**](../wmisdk/standard-qualifiers.md) ("MIF". DMTF \| ComponentID \| 001,5 "), [**Display Name**](../wmisdk/standard-qualifiers.md) (" Install Date ")
+Qualifizierer: [**MappingStrings**](../wmisdk/standard-qualifiers.md) ("MIF. DMTF \| ComponentID \| 001.5"), [**DisplayName**](../wmisdk/standard-qualifiers.md) ("Installationsdatum")
 </dt> </dl>
 
-Gibt an, wann das Objekt installiert wurde. Ein fehlender Wert weist nicht darauf hin, dass das Objekt nicht installiert ist.
+Gibt an, wann das Objekt installiert wurde. Das Fehlen eines Werts gibt nicht an, dass das Objekt nicht installiert ist.
 
 Diese Eigenschaft wird von [**CIM \_ ManagedSystemElement**](cim-managedsystemelement.md)geerbt.
 
@@ -157,52 +157,52 @@ Diese Eigenschaft wird von [**CIM \_ ManagedSystemElement**](cim-managedsystemel
 **Name**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**Key**](../wmisdk/key-qualifier.md), [**override**](../wmisdk/standard-qualifiers.md) ("Name"), [**mappingstrings**](../wmisdk/standard-qualifiers.md) ("WMI")
+Qualifizierer: [**Key**](../wmisdk/key-qualifier.md), [**Override**](../wmisdk/standard-qualifiers.md) ("Name"), [**MappingStrings**](../wmisdk/standard-qualifiers.md) ("WMI")
 </dt> </dl>
 
-Der Name der Auslagerungs Datei.
+Name der Seitendatei.
 
 Beispiel: "C: \\PAGEFILE.SYS"
 
 </dd> <dt>
 
-**Peer Usage**
+**PeakUsage**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt32**
+Datentyp: **uint32**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**mappingstrings**](../wmisdk/standard-qualifiers.md) ("WMI"), [**Einheiten**](../wmisdk/standard-qualifiers.md) ("Megabyte")
+Qualifizierer: [**MappingStrings**](../wmisdk/standard-qualifiers.md) ("WMI"), [**Einheiten**](../wmisdk/standard-qualifiers.md) ("Megabyte")
 </dt> </dl>
 
-Die Datei mit der höchsten Verwendungs Seite.
+Die höchste Verwendungsseitendatei.
 
 </dd> <dt>
 
 **Status**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**maxlen**](../wmisdk/standard-qualifiers.md) (10), [**Display Name**](../wmisdk/standard-qualifiers.md) ("Status")
+Qualifizierer: [**MaxLen**](../wmisdk/standard-qualifiers.md) (10), [**DisplayName**](../wmisdk/standard-qualifiers.md) ("Status")
 </dt> </dl>
 
-Eine Zeichenfolge, die den aktuellen Status des Objekts angibt. Der Betriebsstatus und der nicht betriebliche Status können definiert werden. Der Betriebsstatus kann "OK", "heruntergestuft" und "pred Fail" enthalten. "Pred Fail" gibt an, dass ein Element ordnungsgemäß funktioniert, aber einen Fehler vorhersagt (z. b. ein intelligent-fähiges Festplattenlaufwerk).
+Zeichenfolge, die den aktuellen Status des Objekts angibt. Der Betriebsstatus und der nicht betriebsbereite Status können definiert werden. Der Betriebsstatus kann "OK", "Heruntergestuft" und "Fehler vor dem Fehler" enthalten. "Pred Fail" gibt an, dass ein Element ordnungsgemäß funktioniert, aber einen Fehler vorhersagt (z. B. ein SMART-fähiges Festplattenlaufwerk).
 
-Der nicht betriebliche Status kann "Error", "Starting", "Stop" und "Service" enthalten. "Service" kann während der Datenträger Spiegelung angewendet werden, indem eine Benutzer Berechtigungs Liste oder eine andere administrative Arbeit neu geladen wird. Nicht alle diese Arbeiten sind online, aber das verwaltete Element ist weder "OK" noch in einem der anderen Zustände.
+Nicht betriebsbereite Status können "Error", "Starting", "Stopping" und "Service" sein. "Dienst" kann während der Datenträgerspiegelung, beim erneuten Laden einer Benutzerberechtigungsliste oder bei anderen Administrativen Arbeiten angewendet werden. Nicht alle dieser Arbeiten sind online, aber das verwaltete Element ist weder "OK" noch in einem der anderen Zustände.
 
 Diese Eigenschaft wird von [**CIM \_ ManagedSystemElement**](cim-managedsystemelement.md)geerbt.
 
@@ -226,35 +226,35 @@ Folgende Werte sind gültig:
 
 <span id="Degraded"></span><span id="degraded"></span><span id="DEGRADED"></span>
 
-Herunter **gestuft ("** heruntergestuft")
+**Heruntergestuft** ("Heruntergestuft")
 
 
 </dt> <dd></dd> <dt>
 
 <span id="Unknown"></span><span id="unknown"></span><span id="UNKNOWN"></span>
 
-**Unbekannt** ("unbekannt")
+**Unbekannt** ("Unbekannt")
 
 
 </dt> <dd></dd> <dt>
 
 <span id="Pred_Fail"></span><span id="pred_fail"></span><span id="PRED_FAIL"></span>
 
-**Pred-** Fehler ("pred Fail")
+**Pred Fail** ("Pred Fail")
 
 
 </dt> <dd></dd> <dt>
 
 <span id="Starting"></span><span id="starting"></span><span id="STARTING"></span>
 
-Wird **gestartet** ("wird gestartet")
+**Wird gestartet** ("Wird gestartet")
 
 
 </dt> <dd></dd> <dt>
 
 <span id="Stopping"></span><span id="stopping"></span><span id="STOPPING"></span>
 
-Wird **beendet ("wird angehalten** ")
+**Beenden** ("Wird beendet")
 
 
 </dt> <dd></dd> <dt>
@@ -268,53 +268,53 @@ Wird **beendet ("wird angehalten** ")
 
 <span id="Stressed"></span><span id="stressed"></span><span id="STRESSED"></span>
 
-**Betont** ("gestresst")
+**Mannslast** ("1000")
 
 
 </dt> <dd></dd> <dt>
 
 <span id="NonRecover"></span><span id="nonrecover"></span><span id="NONRECOVER"></span>
 
-**Nicht wiederherstellen** ("nicht wiederherstellen")
+**NonRecover** ("NonRecover")
 
 
 </dt> <dd></dd> <dt>
 
 <span id="No_Contact"></span><span id="no_contact"></span><span id="NO_CONTACT"></span>
 
-**Kein Kontakt** ("kein Kontakt")
+**Kein Kontakt** ("Kein Kontakt")
 
 
 </dt> <dd></dd> <dt>
 
 <span id="Lost_Comm"></span><span id="lost_comm"></span><span id="LOST_COMM"></span>
 
-**Verlorene** Kommunikations ("verlorene Kommunikations-")
+**Verlorenes Komma** ("Verlorenes Komma")
 
 
 </dt> <dd></dd> </dl>
 
 </dd> <dt>
 
-**Temppagefile**
+**TempPageFile**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **boolescher** Wert
+Datentyp: **boolescher Wert**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**mappingstrings**](../wmisdk/standard-qualifiers.md) ("Win32Registry \| System \\ \\ CurrentControlSet \\ \\ Control \\ \\ Session Manager \\ \\ Memory Management \| temppagefile")
+Qualifizierer: [**MappingStrings**](../wmisdk/standard-qualifiers.md) ("Win32Registry \| System \\ \\ CurrentControlSet \\ \\ Control Session Manager Memory \\ \\ Management \\ \\ \| TempPageFile")
 </dt> </dl>
 
-**True** gibt an, dass eine temporäre Auslagerungs Datei erstellt wurde, in der Regel, weil keine permanente Auslagerungs Datei auf dem aktuellen Computersystem vorhanden ist.
+True gibt an, dass eine temporäre Seitendatei erstellt wurde. Dies liegt normalerweise daran, dass auf dem aktuellen Computersystem keine permanente Seitendatei vorhanden ist.
 
 </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die **Win32-Klasse \_ PageFileUsage** ist von [**CIM \_ LogicalElement**](cim-logicalelement.md)abgeleitet.
+Die **Win32 \_ PageFileUsage-Klasse** wird von [**CIM \_ LogicalElement**](cim-logicalelement.md)abgeleitet.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -324,13 +324,13 @@ Die **Win32-Klasse \_ PageFileUsage** ist von [**CIM \_ LogicalElement**](cim-lo
 |-------------------------------------|-----------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows Vista<br/>                                                                |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2008<br/>                                                          |
-| Namespace<br/>                | Root \\ CIMV2<br/>                                                                  |
-| MOF<br/>                      | <dl> <dt>Cimwin32. MOF</dt> </dl> |
+| Namespace<br/>                | \\Stamm-CIMV2<br/>                                                                  |
+| MOF<br/>                      | <dl> <dt>CIMWin32.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>CIMWin32.dll</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 

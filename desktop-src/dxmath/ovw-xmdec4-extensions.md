@@ -1,19 +1,19 @@
 ---
-description: XMDEC4describes ein 4D-Vektor mit x-, y-und z-Komponenten, die als 10-Bit-Ganzzahl mit Vorzeichen dargestellt werden, und die w-Komponente als 2-Bit-Ganzzahl mit Vorzeichen.
+description: XMDEC4 schreibt einen 4D-Vektor mit x-, y- und z-Komponenten, die als 10-Bit-Ganzzahlwerte mit Vorzeichen dargestellt werden, und die w-Komponente als 2-Bit-Ganzzahlwert mit Vorzeichen.
 ms.assetid: 7b4a8d01-af7a-4dad-98c2-f81d8a16fb42
 title: XMDEC4-Erweiterungen
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: e9ff1fccaaf1a14a507e18a38f09146c42df8847
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 9b33bef0ff4c2bf44b9d022085468ab032cdbe53d9c3eea48635cfe0ce1f71ee
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106348271"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119740670"
 ---
 # <a name="xmdec4-extensions"></a>XMDEC4-Erweiterungen
 
-[**XMDEC4**](/windows/win32/api/directxpackedvector/ns-directxpackedvector-xmdec4)beschreibt einen 4D-Vektor mit x-, y-und z-Komponenten, die als 10-Bit-ganz Zahl Werte mit Vorzeichen dargestellt werden, und die w-Komponente als 2-Bit-Ganzzahl mit Vorzeichen.
+[**XMDEC4**](/windows/win32/api/directxpackedvector/ns-directxpackedvector-xmdec4)beschreibt einen 4D-Vektor mit x-, y- und z-Komponenten, die als 10-Bit-Ganzzahlwerte mit Vorzeichen dargestellt werden, und die w-Komponente als 2-Bit-Ganzzahlwert mit Vorzeichen.
 
 > [!Note]  
 > Die hier aufgeführten Features sind nur bei der Entwicklung mit C++ verfügbar.
@@ -24,10 +24,10 @@ ms.locfileid: "106348271"
 
 
 
-| Thema                                                   | BESCHREIBUNG                                  |
+| Thema                                                   | Beschreibung                                  |
 |---------------------------------------------------------|----------------------------------------------|
-| [**XMDEC4-Konstruktoren**](xmdec4-ctor.md)<br/>   | Von verfügbar gemachte Konstruktoren `XMDEC4` .<br/> |
-| [XMDEC4-Operatoren](ovw-xmdec4-operators.md)<br/> | Von verfügbar gemachte Operatoren `XMDEC4` .<br/>    |
+| [**XMDEC4-Konstruktoren**](xmdec4-ctor.md)<br/>   | Konstruktoren, die von verfügbar gemacht `XMDEC4` werden.<br/> |
+| [XMDEC4-Operatoren](ovw-xmdec4-operators.md)<br/> | Operatoren, die von verfügbar gemacht `XMDEC4` werden.<br/>    |
 
 
 

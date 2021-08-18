@@ -14,12 +14,12 @@ api_type:
 api_location:
 - d3dx9.lib
 - d3dx9.dll
-ms.openlocfilehash: 5d976c29d370887362e46899c7fb2a654d6e2cc7
-ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
+ms.openlocfilehash: 37e09bab2473ace06b9e0fa803db523453ccff4796693d9faa1d410f5a6630f1
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2021
-ms.locfileid: "108093738"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119748200"
 ---
 # <a name="id3dxfontonresetdevice-method"></a>ID3DXFont::OnResetDevice-Methode
 
@@ -44,7 +44,7 @@ Typ: **[ **HRESULT**](https://msdn.microsoft.com/library/Bb401631(v=MSDN.10).asp
 
 Wenn die Methode erfolgreich ist, lautet der Rückgabewert S \_ OK. Wenn die Methode fehlschlägt, kann der Rückgabewert D3DERR \_ INVALIDCALL sein.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
 **OnResetDevice** sollte jedes Mal aufgerufen werden, wenn das Gerät zurückgesetzt wird [**(mithilfe**](/windows/win32/api/d3d9helper/nf-d3d9helper-idirect3ddevice9-reset)von Reset ), bevor andere Methoden aufgerufen werden. Dies ist ein guter Ort zum erneuten Abrufen von Videospeicherressourcen und Erfassen von Zustandsblöcken.
 
@@ -52,7 +52,7 @@ Wenn die Methode erfolgreich ist, lautet der Rückgabewert S \_ OK. Wenn die Met
 
 
 
-| Anforderungen | Wert |
+| Anforderung | Wert |
 |--------------------|----------------------------------------------------------------------------------------|
 | Header<br/>  | <dl> <dt>D3dx9core.h</dt> </dl> |
 | Bibliothek<br/> | <dl> <dt>D3dx9.lib</dt> </dl>   |

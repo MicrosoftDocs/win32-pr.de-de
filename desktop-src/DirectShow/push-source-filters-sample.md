@@ -1,40 +1,40 @@
 ---
-description: Beispiel für Push-Quell Filter
+description: Beispiel für Pushquellenfilter
 ms.assetid: fc52f7bc-e9c7-4cd4-91e8-5c8f3450ca95
-title: Beispiel für Push-Quell Filter
+title: Beispiel für Pushquellenfilter
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 2ce22c7c6d73f54152ce469b4b3bb40c20db6c29
-ms.sourcegitcommit: a47bd86f517de76374e4fff33cfeb613eb259a7e
+ms.openlocfilehash: c0e72a9be7e5fa81d4fe2dc006c6d12e42f4f94d91561823b7f26a8400bbddda
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/06/2021
-ms.locfileid: "104521331"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119747790"
 ---
-# <a name="push-source-filters-sample"></a>Beispiel für Push-Quell Filter
+# <a name="push-source-filters-sample"></a>Beispiel für Pushquellenfilter
 
-## <a name="description"></a>BESCHREIBUNG
+## <a name="description"></a>Beschreibung
 
-Dieses Beispiel besteht aus einem Satz von drei Quell filtern, die die folgenden Quelldaten als Videostream bereitstellen:
+Dieses Beispiel besteht aus drei Quellfiltern, die die folgenden Quelldaten als Videostream bereitstellen:
 
--   Cpushsourcebitmap: Single Bitmap (aus aktuellem Verzeichnis geladen)
--   Cpushsourcebitmapset: Satz von Bitmaps (aus aktuellem Verzeichnis geladen)
--   Cpushsourcedesktop: Kopie des aktuellen Desktop Abbilds (nur GDI)
+-   CPushSourceBitmap: Einzelne Bitmap (aus aktuellem Verzeichnis geladen)
+-   CPushSourceBitmapSet: Satz von Bitmaps (aus dem aktuellen Verzeichnis geladen)
+-   CPushSourceDesktop: Kopie des aktuellen Desktopimages (nur GDI)
 
 ## <a name="usage"></a>Verbrauch
 
-Wenn Sie einen Filter verwenden möchten, laden Sie ihn in GraphEdit, und rendieren Sie seine Ausgabe-PIN. Dadurch wird eine Verbindung mit einem Videorenderer (und möglicherweise mit einem Farb Raum Konverter-Filter) hergestellt, und Sie können die Ausgabe anzeigen. Wenn Sie die Ausgabe in eine AVI-Datei renderten möchten, laden Sie die Datei "AVI MUX", laden Sie einen Datei Schreiber Filter, geben Sie einen Ausgabe Namen an den dateiwriter an, und renderten Sie die Ausgabe-PIN des pushsource Sie können auch Video Kompressoren, Video Effekte usw. Laden und verbinden.
+Um einen Filter zu verwenden, laden Sie ihn in GraphEdit, und rendern Sie dessen Ausgabepin. Dadurch wird ein Videorenderer (und möglicherweise ein Farbraumkonverterfilter) verbunden, und Sie können die Ausgabe anzeigen. Wenn Sie die Ausgabe in einer AVI-Datei rendern möchten, laden Sie den AVI Mux, laden Sie einen Dateiwriterfilter, geben Sie dem Dateiwriter einen Ausgabenamen an, und rendern Sie den Ausgabepin des PushSource-Filters. Sie können auch Videointeressierer, Videoeffekte usw. laden und verbinden.
 
 > [!Note]  
-> Der Desktop Erfassungs Filter bietet keine Unterstützung für Hardware Überlagerungen, sodass das Video, das auf einer über Lagerungs Oberfläche gerendert wird, oder Cursor, die über die Hardware über Er verwendet GDI zum Konvertieren des aktuellen Desktop Bilds in eine Bitmap, die als Beispiel für ein Medium an die Ausgabe-PIN übergeben wird.
+> Der Desktoperfassungsfilter unterstützt keine Hardwareüberlagerungen und erfasst daher keine Videos, die auf einer Überlagerungsoberfläche gerendert werden, oder Cursor, die über Hardwareüberlagerungen angezeigt werden. GDI wird verwendet, um das aktuelle Desktopbild in eine Bitmap zu konvertieren, die als Medienbeispiel an den Ausgabepin übergeben wird.
 
  
 
 ## <a name="downloading-the-sample"></a>Herunterladen des Beispiels
 
-Zum Herunterladen der DirectShow SDK-Beispiele installieren Sie die neueste Version der [Windows SDK](https://msdn.microsoft.com/windowsvista/bb980924.aspx).
+Um die DirectShow SDK-Beispiele herunterzuladen, installieren Sie die neueste Version des [Windows SDK](https://msdn.microsoft.com/windowsvista/bb980924.aspx).
 
-Dieses Beispiel wird unter folgendem Pfad installiert: *\[ SDK Root \]* \\ Samples \\ Multimedia \\ DirectShow \\ Filters \\ pushsource.
+Dieses Beispiel wird unter folgendem Pfad installiert: *\[ \] SDK-Stammbeispiele* \\ Multimedia \\ \\ DirectShow Filters \\ \\ PushSource.
 
 ## <a name="related-topics"></a>Zugehörige Themen
 

@@ -1,7 +1,7 @@
 ---
-description: Überprüft, ob der aufrufenden Prozess Lesezugriff auf eine breit Zeichen-Zeichenfolge hat. Andernfalls ruft das Makro das dbgbreak-Makro auf.
+description: Überprüft, ob der aufrufende Prozess Lesezugriff auf eine Breitzeichenzeichenfolge hat. Falls nicht, ruft das Makro das DbgBreak-Makro auf.
 ms.assetid: 526e8027-31e5-428d-856d-9fc6698693c3
-title: Validatestringptrw-Makro (wxdebug. h)
+title: ValidateStringPtrW-Makro (Wxdebug.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,19 +13,19 @@ api_type:
 - HeaderDef
 api_location:
 - Wxdebug.h
-ms.openlocfilehash: 1ece2caa0f2263c038121cd1ffd031cbe42d336a
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 71567070618796ad564b7f7fb5e8d854f580d482e91d9f4fd7381a582e32495c
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106371348"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119755670"
 ---
-# <a name="validatestringptrw-macro"></a>Validatestringptrw-Makro
+# <a name="validatestringptrw-macro"></a>ValidateStringPtrW-Makro
 
-Überprüft, ob der aufrufenden Prozess Lesezugriff auf eine breit Zeichen-Zeichenfolge hat. Andernfalls ruft das Makro das [**dbgbreak**](dbgbreak.md) -Makro auf.
+Überprüft, ob der aufrufende Prozess Lesezugriff auf eine Breitzeichenzeichenfolge hat. Falls nicht, ruft das Makro das [**DbgBreak-Makro**](dbgbreak.md) auf.
 
 > [!Note]  
-> Dieses Makro ist veraltet. Im Windows SDK für Windows Vista (und höher) führt dieses Makro nichts aus.
+> Dieses Makro ist veraltet. Im Windows SDK für Windows Vista (und höher) führt dieses Makro keine Aktion aus.
 
  
 
@@ -44,10 +44,10 @@ void ValidateStringPtrW(
 
 <dl> <dt>
 
-*cker* 
+*P* 
 </dt> <dd>
 
-Zeiger auf eine NULL-terminierte breit Zeichen-Zeichenfolge.
+Zeiger auf eine NULL-endende Breitzeichenzeichenfolge.
 
 </dd> </dl>
 
@@ -55,9 +55,9 @@ Zeiger auf eine NULL-terminierte breit Zeichen-Zeichenfolge.
 
 Dieses Makro gibt keinen Wert zurück.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Dieses Makro wird ignoriert, es sei denn, Debug, \_ Debug oder vfwrobust wird definiert, wenn die DirectShow-Basisklassen-Header Datei eingeschlossen wird. Dieses Makro kann einen erheblichen Leistungs Aufwand verursachen.
+Dieses Makro wird ignoriert, es sei denn, \_ DEBUG, DEBUG oder VFWROBUST wird definiert, wenn die DirectShow-Basisklassenheaderdatei enthalten ist. Dieses Makro kann erhebliche Leistungskosten haben.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -65,7 +65,7 @@ Dieses Makro wird ignoriert, es sei denn, Debug, \_ Debug oder vfwrobust wird de
 
 | Anforderung | Wert |
 |-------------------|----------------------------------------------------------------------------------------------------------|
-| Header<br/> | <dl> <dt>Wxdebug. h (Include Streams. h)</dt> </dl> |
+| Header<br/> | <dl> <dt>Wxdebug.h (include Streams.h)</dt> </dl> |
 
 
 
@@ -73,7 +73,7 @@ Dieses Makro wird ignoriert, es sei denn, Debug, \_ Debug oder vfwrobust wird de
 
 <dl> <dt>
 
-[Zeiger Validierungs Makros](pointer-validation-macros.md)
+[Zeigervalidierungsmakros](pointer-validation-macros.md)
 </dt> </dl>
 
  

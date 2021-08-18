@@ -4,12 +4,12 @@ description: 'Mauseingabefunktionen '
 ms.assetid: a666b25b-a75c-4500-8077-fabe07589a1d
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: a952a9ce90284f284b176c608228c0b852f5f4c8
-ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
+ms.openlocfilehash: 8c9b6abb4283ce4101b2e22c36653500db8109a0b8efbc01f9f3affe20c367a7
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2021
-ms.locfileid: "108112878"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119717380"
 ---
 # <a name="mouse-input-functions"></a>Mauseingabefunktionen 
 
@@ -26,13 +26,13 @@ ms.locfileid: "108112878"
 <thead>
 <tr class="header">
 <th>Thema</th>
-<th>BESCHREIBUNG</th>
+<th>Beschreibung</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
 <td><a href="/windows/win32/api/commctrl/nf-commctrl-_trackmouseevent"><strong>_TrackMouseEvent</strong></a><br/></td>
-<td>Sendet Meldungen, wenn der Mauszeiger ein Fenster verlässt oder für einen bestimmten Zeitraum auf ein Fenster zeigt. Diese Funktion ruft <a href="/windows/desktop/api/winuser/nf-winuser-trackmouseevent"><strong>TrackMouseEvent</strong></a> auf, sofern vorhanden, andernfalls emuliert sie es.<br/></td>
+<td>Sendet Nachrichten, wenn der Mauszeiger ein Fenster verlässt oder für einen bestimmten Zeitraum auf ein Fenster zeigt. Diese Funktion ruft <a href="/windows/desktop/api/winuser/nf-winuser-trackmouseevent"><strong>TrackMouseEvent</strong></a> auf, sofern vorhanden, andernfalls emuliert sie es.<br/></td>
 </tr>
 <tr class="even">
 <td><a href="/windows/desktop/api/winuser/nf-winuser-dragdetect"><strong>DragDetect</strong></a><br/></td>
@@ -40,11 +40,11 @@ ms.locfileid: "108112878"
 </tr>
 <tr class="odd">
 <td><a href="/windows/desktop/api/winuser/nf-winuser-getcapture"><strong>GetCapture</strong></a><br/></td>
-<td>Ruft ein Handle für das Fenster ab (sofern vorhanden), das die Maus erfasst hat. Nur jeweils ein Fenster kann die Maus erfassen. Dieses Fenster empfängt Mauseingaben, unabhängig davon, ob sich der Cursor innerhalb seiner Rahmen befindet. <br/></td>
+<td>Ruft ein Handle für das Fenster ab (sofern vorhanden), das die Maus erfasst hat. Nur jeweils ein Fenster kann die Maus erfassen. Dieses Fenster empfängt Mauseingaben, unabhängig davon, ob sich der Cursor innerhalb seiner Rahmen befindet oder nicht. <br/></td>
 </tr>
 <tr class="even">
 <td><a href="/windows/desktop/api/winuser/nf-winuser-getdoubleclicktime"><strong>GetDoubleClickTime</strong></a><br/></td>
-<td>Ruft die aktuelle Doppelklickzeit für die Maus ab. Bei einem Doppelklick handelt es sich um eine Reihe von zwei Mausklicks, der zweite klickt innerhalb eines angegebenen Zeitraums nach dem ersten Klick. Die Doppelklickzeit ist die maximale Anzahl von Millisekunden, die zwischen dem ersten und zweiten Klick eines Doppelklicks auftreten können. Die maximale Doppelklickzeit beträgt 5.000 Millisekunden.<br/></td>
+<td>Ruft die aktuelle Doppelklickzeit für die Maus ab. Ein Doppelklick ist eine Reihe von zwei Mausklicks, der zweite, der innerhalb eines angegebenen Zeitraums nach dem ersten auftritt. Die Doppelklickzeit ist die maximale Anzahl von Millisekunden, die zwischen dem ersten und zweiten Klick eines Doppelklicks auftreten können. Die maximale Doppelklickzeit beträgt 5.000 Millisekunden.<br/></td>
 </tr>
 <tr class="odd">
 <td><a href="/windows/desktop/api/winuser/nf-winuser-getmousemovepointsex"><strong>GetMouseMovePointsEx</strong></a><br/></td>
@@ -52,7 +52,7 @@ ms.locfileid: "108112878"
 </tr>
 <tr class="even">
 <td><a href="/windows/desktop/api/winuser/nf-winuser-mouse_event"><strong>mouse_event</strong></a><br/></td>
-<td>Die <a href="/windows/desktop/api/winuser/nf-winuser-mouse_event"><strong>mouse_event</strong></a> Funktion synthetisiert Mausbewegungen und Schaltflächenklicks.<br/>
+<td>Die <a href="/windows/desktop/api/winuser/nf-winuser-mouse_event"><strong>mouse_event-Funktion</strong></a> synthetisiert Mausbewegungen und Schaltflächenklicks.<br/>
 <blockquote>
 [!Note]<br />
 Diese Funktion wurde abgelöst. Verwenden Sie stattdessen <a href="/windows/desktop/api/winuser/nf-winuser-sendinput"><strong>SendInput.</strong></a>
@@ -61,7 +61,7 @@ Diese Funktion wurde abgelöst. Verwenden Sie stattdessen <a href="/windows/desk
 </tr>
 <tr class="odd">
 <td><a href="/windows/desktop/api/winuser/nf-winuser-releasecapture"><strong>ReleaseCapture</strong></a><br/></td>
-<td>Gibt die Mauserfassung aus einem Fenster im aktuellen Thread frei und stellt die normale Verarbeitung der Mauseingabe wieder auf. Ein Fenster, das die Maus erfasst hat, empfängt unabhängig von der Position des Cursors alle Mauseingaben, es sei denn, es wird auf eine Maustaste geklickt, während sich der Cursor im Fenster eines anderen Threads befindet. <br/></td>
+<td>Gibt die Mauserfassung aus einem Fenster im aktuellen Thread frei und stellt die normale Verarbeitung der Mauseingabe wieder her. Ein Fenster, das die Maus erfasst hat, empfängt alle Mauseingaben, unabhängig von der Position des Cursors, außer wenn auf eine Maustaste geklickt wird, während sich der Cursor-Hot Spot im Fenster eines anderen Threads befindet. <br/></td>
 </tr>
 <tr class="even">
 <td><a href="/windows/desktop/api/winuser/nf-winuser-setcapture"><strong>SetCapture</strong></a><br/></td>
@@ -69,18 +69,18 @@ Diese Funktion wurde abgelöst. Verwenden Sie stattdessen <a href="/windows/desk
 </tr>
 <tr class="odd">
 <td><a href="/windows/desktop/api/winuser/nf-winuser-setdoubleclicktime"><strong>SetDoubleClickTime</strong></a><br/></td>
-<td>Legt die Doppelklickzeit für die Maus fest. Bei einem Doppelklick handelt es sich um eine Reihe von zwei Mausklicks, bei der der zweite innerhalb eines angegebenen Zeitpunkts nach dem ersten klickt. Die Doppelklickzeit ist die maximale Anzahl von Millisekunden, die zwischen dem ersten und zweiten Klick eines Doppelklicks auftreten können. <br/></td>
+<td>Legt die Doppelklickzeit für die Maus fest. Bei einem Doppelklick handelt es sich um eine Reihe von zwei Mausklicks, der zweite klickt innerhalb eines angegebenen Zeitraums nach dem ersten Klick. Die Doppelklickzeit ist die maximale Anzahl von Millisekunden, die zwischen dem ersten und zweiten Klick eines Doppelklicks auftreten können. <br/></td>
 </tr>
 <tr class="even">
 <td><a href="/windows/desktop/api/winuser/nf-winuser-swapmousebutton"><strong>SwapMouseButton</strong></a><br/></td>
-<td>Kehrt die Bedeutung der linken und rechten Maustaste um oder stellt sie wieder wieder auf. <br/></td>
+<td>Kehrt die Bedeutung der linken und rechten Maustaste um oder stellt sie wieder her. <br/></td>
 </tr>
 <tr class="odd">
 <td><a href="/windows/desktop/api/winuser/nf-winuser-trackmouseevent"><strong>TrackMouseEvent</strong></a><br/></td>
-<td>Gibt Meldungen aus, wenn der Mauszeiger ein Fenster verlässt oder für einen angegebenen Zeitraum mit dem Mauszeiger auf ein Fenster zeigt.<br/>
+<td>Sendet Nachrichten, wenn der Mauszeiger ein Fenster verlässt oder für einen bestimmten Zeitraum auf ein Fenster zeigt.<br/>
 <blockquote>
 [!Note]<br />
-Die <a href="/windows/win32/api/commctrl/nf-commctrl-_trackmouseevent"><strong>_TrackMouseEvent-Funktion</strong></a> ruft <a href="/windows/desktop/api/winuser/nf-winuser-trackmouseevent"><strong>TrackMouseEvent</strong></a> auf, sofern vorhanden, andernfalls _TrackMouseEvent <strong>TrackMouseEvent emuliert.</strong> <strong></strong>
+Die <a href="/windows/win32/api/commctrl/nf-commctrl-_trackmouseevent"><strong>_TrackMouseEvent-Funktion</strong></a> ruft <a href="/windows/desktop/api/winuser/nf-winuser-trackmouseevent"><strong>TrackMouseEvent</strong></a> auf, sofern vorhanden, andernfalls <strong>emuliert _TrackMouseEvent</strong> <strong>TrackMouseEvent.</strong>
 </blockquote>
 <br/></td>
 </tr>

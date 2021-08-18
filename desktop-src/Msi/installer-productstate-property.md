@@ -1,7 +1,7 @@
 ---
-description: Die productstate-Eigenschaft ist eine schreibgeschützte Eigenschaft, die die Installations Zustandsinformationen für ein Produkt zurückgibt.
+description: Die ProductState-Eigenschaft ist eine schreibgeschützte Eigenschaft, die die Installationsstatusinformationen für ein Produkt zurückgibt.
 ms.assetid: 9ae3bc86-aa13-41b3-b058-4037607f7dd5
-title: Installer. productstate-Eigenschaften Methode
+title: Installer.ProductState-Eigenschaftsmethode
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,16 +13,16 @@ api_type:
 - COM
 api_location:
 - Msi.dll
-ms.openlocfilehash: cdd1397def1cd25405d0a80a6d5cfde2ee6ef77e
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: c19a712c4838905296026a2a0bea4c9e1abc1c49465a854692dd603734e0bd89
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106368576"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119763620"
 ---
-# <a name="installerproductstate-property-method"></a>Installer. productstate-Eigenschaften Methode
+# <a name="installerproductstate-property-method"></a>Installer.ProductState-Eigenschaftsmethode
 
-Die **productstate-Eigenschaft** ist eine schreibgeschützte Eigenschaft, die die Installations Zustandsinformationen für ein Produkt zurückgibt.
+Die **ProductState-Eigenschaft** ist eine schreibgeschützte Eigenschaft, die die Installationsstatusinformationen für ein Produkt zurückgibt.
 
 ## <a name="syntax"></a>Syntax
 
@@ -50,20 +50,20 @@ Gibt den Produktcode des Produkts an.
 
 Diese Methode gibt keinen Wert zurück.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Gibt einen der in der folgenden Tabelle aufgeführten Werte zurück.
+Gibt einen der in der folgenden Tabelle gezeigten Werte zurück.
 
 
 
-| Installationsstatus        | BESCHREIBUNG                                      |
+| Installationsstatus        | Beschreibung                                      |
 |---------------------------|--------------------------------------------------|
-| msiinstallstatemissing     | Das Produkt wird für einen anderen Benutzer installiert.   |
-| msiinstallstatedefault    | Das Produkt ist für den aktuellen Benutzer installiert.   |
-| msiinstallstateangekündigten | Das Produkt wird angekündigt, aber nicht installiert.     |
-| msiinstallstatueingevalidarg | An die Funktion wurde ein ungültiger Parameter übergeben. |
-| msiinstallstateunknown    | Das Produkt ist weder angekündigt noch installiert. |
-| msiinstallstatebadconfig  | Die Konfigurationsdaten sind beschädigt.               |
+| msiInstallStateAbsent     | Das Produkt wird für einen anderen Benutzer installiert.   |
+| msiInstallStateDefault    | Das Produkt wird für den aktuellen Benutzer installiert.   |
+| msiInstallStateAdvertised | Das Produkt wird angekündigt, aber nicht installiert.     |
+| msiInstallStateInvalidArg | An die Funktion wurde ein ungültiger Parameter übergeben. |
+| msiInstallStateUnknown    | Das Produkt wird weder angekündigt noch installiert. |
+| msiInstallStateBadConfig  | Die Konfigurationsdaten sind beschädigt.               |
 
 
 
@@ -75,17 +75,17 @@ Gibt einen der in der folgenden Tabelle aufgeführten Werte zurück.
 
 | Anforderung | Wert |
 |--------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Version<br/> | Windows Installer 5,0 unter Windows Server 2012, Windows 8, Windows Server 2008 R2 oder Windows 7. Windows Installer 4,0 oder Windows Installer 4,5 unter Windows Server 2008 oder Windows Vista. Windows Installer unter Windows Server 2003 oder Windows XP<br/> |
+| Version<br/> | Windows Installer 5.0 auf Windows Server 2012, Windows 8, Windows Server 2008 R2 oder Windows 7. Windows Installer 4.0 oder Windows Installer 4.5 auf Windows Server 2008 oder Windows Vista. Windows Installationsprogramm auf Windows Server 2003 oder Windows XP<br/> |
 | DLL<br/>     | <dl> <dt>Msi.dll</dt> </dl>                                                                                                                                                                      |
-| IID<br/>     | IID \_ iinstaller ist definiert als 000c1090-0000-0000-C000-000000000046<br/>                                                                                                                                                                           |
+| IID<br/>     | IID \_ IInstaller ist als 000C1090-0000-0000-C000-00000000046 definiert.<br/>                                                                                                                                                                           |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Msiqueryproductstate**](/windows/desktop/api/Msi/nf-msi-msiqueryproductstatea)
+[**MsiQueryProductState**](/windows/desktop/api/Msi/nf-msi-msiqueryproductstatea)
 </dt> </dl>
 
  

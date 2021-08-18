@@ -1,6 +1,6 @@
 ---
-title: Beispiel für Registrierungs Beispiel (Skripterstellung)
-description: In diesem Skript Beispiel wird gezeigt, wie eine Aufgabe erstellt wird, die für die Ausführung von Notepad geplant ist, wenn ein Task registriert wird.
+title: Beispiel für Registrierungstrigger (Skripterstellung)
+description: In diesem Skriptbeispiel wird gezeigt, wie Sie eine Aufgabe erstellen, die Editor ausgeführt werden soll, wenn ein Task registriert wird.
 ms.assetid: 956b3a21-7d36-4d06-be84-690884ba653a
 ms.topic: article
 ms.date: 05/31/2018
@@ -9,34 +9,34 @@ topic_type:
 api_name: ''
 api_type: ''
 api_location: ''
-ms.openlocfilehash: bce6271927e74e31f25b3ac86783b35899bbd862
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: f036d4772c98392881f254e07e192c970a2cb407727294c7f196c9c15cb9e11f
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "104311418"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120011320"
 ---
-# <a name="registration-trigger-example-scripting"></a>Beispiel für Registrierungs Beispiel (Skripterstellung)
+# <a name="registration-trigger-example-scripting"></a>Beispiel für Registrierungstrigger (Skripterstellung)
 
-In diesem Skript Beispiel wird gezeigt, wie eine Aufgabe erstellt wird, die für die Ausführung von Notepad geplant ist, wenn ein Task registriert wird. Der Task enthält einen Registrierungs--Auslösung, der eine Start Grenze und eine Endgrenze für den Task angibt. Die Start Grenze gibt an, wann der-Auslösers aktiviert wird. Der Task enthält auch eine Aktion, die den Task zum Ausführen von Notepad angibt.
+In diesem Skriptbeispiel wird gezeigt, wie Sie eine Aufgabe erstellen, die Editor ausgeführt werden soll, wenn ein Task registriert wird. Die Aufgabe enthält einen Registrierungstrigger, der eine Startgrenze und eine Endgrenze für den Task angibt. Die Startgrenze gibt an, wann der Trigger aktiviert wird. Der Task enthält auch eine Aktion, die den Task angibt, der Editor ausgeführt werden soll.
 
 > [!Note]  
-> Wenn eine Aufgabe mit einem Registrierungs-ausgelöst wird, wird die Aufgabe ausgeführt, nachdem das Update ausgeführt wurde.
+> Wenn eine Aufgabe mit einem Registrierungstrigger aktualisiert wird, wird der Task nach dem Update ausgeführt.
 
- 
+ 
 
-Im folgenden Verfahren wird beschrieben, wie eine ausführbare Datei (z. b. Notepad) gestartet wird, wenn ein Task registriert wird.
+Im folgenden Verfahren wird beschrieben, wie Sie eine ausführbare Datei wie Editor planen, die gestartet wird, wenn eine Aufgabe registriert wird.
 
-**So planen Sie den Start von Notepad, wenn ein Task registriert wird**
+**So planen Sie Editor, wenn eine Aufgabe registriert wird**
 
-1.  Erstellen Sie ein [**TaskService**](taskservice.md) -Objekt. Mit diesem Objekt können Sie die Aufgabe in einem angegebenen Ordner erstellen.
-2.  Rufen Sie einen Aufgaben Ordner ab, und erstellen Sie eine Aufgabe. Verwenden Sie die [**TaskService. GetFolder**](taskservice-getfolder.md) -Methode, um den Ordner zu erhalten, in dem die Aufgabe gespeichert ist, und die [**TaskService. newtask**](taskservice-newtask.md) -Methode zum Erstellen des [**Task Definition**](taskdefinition.md) -Objekts, das die Aufgabe darstellt.
-3.  Definieren von Informationen über den Task mithilfe des [**Taskdefinition**](taskdefinition.md) -Objekts. Verwenden Sie die [**Task Definition. Settings**](taskdefinition-settings.md) -Eigenschaft, um die Einstellungen zu definieren, die bestimmen, wie der Taskplaner Dienst den Task ausführt, und die [**Taskdefinition. RegistrationInfo**](taskdefinition-registrationinfo.md) -Eigenschaft, um die Informationen zu definieren, die die Aufgabe beschreiben.
-4.  Erstellen Sie einen Registrierungs Trigger mithilfe der [**Taskdefinition.**](taskdefinition-triggers.md) Triggers-Eigenschaft. Diese Eigenschaft ermöglicht den Zugriff auf das [**TriggerCollection**](triggercollection.md) -Objekt. Verwenden Sie die [**TriggerCollection. Create**](triggercollection-create.md) -Methode (die den Typ des zu erstellenden Auslösers angibt), um einen Registrierungs Trigger zu erstellen.
-5.  Erstellen Sie eine Aktion für die Ausführung der Aufgabe, indem Sie die [**Task Definition. Actions**](taskdefinition-actions.md) -Eigenschaft verwenden. Diese Eigenschaft ermöglicht den Zugriff auf das Objekt " [**Aktions Sammlung**](actioncollection.md) ". Verwenden Sie die [**Action Collection. Create**](actioncollection-create.md) -Methode, um den Typ der Aktion anzugeben, die Sie erstellen möchten. In diesem Beispiel wird ein [**execaction**](execaction.md) -Objekt verwendet, das eine Aktion darstellt, die eine ausführbare Datei startet.
-6.  Registrieren Sie die Aufgabe mit der [**Task Folder. RegisterTaskDefinition**](taskfolder-registertaskdefinition.md) -Methode.
+1.  Erstellen Sie ein [**TaskService-Objekt.**](taskservice.md) Mit diesem Objekt können Sie die Aufgabe in einem angegebenen Ordner erstellen.
+2.  Abrufen eines Aufgabenordners und Erstellen einer Aufgabe Verwenden Sie die [**TaskService.GetFolder-Methode,**](taskservice-getfolder.md) um den Ordner abzurufen, in dem der Task gespeichert ist, und die [**TaskService.NewTask-Methode,**](taskservice-newtask.md) um das [**TaskDefinition-Objekt**](taskdefinition.md) zu erstellen, das den Task darstellt.
+3.  Definieren Sie Informationen zur Aufgabe mithilfe des [**TaskDefinition-Objekts.**](taskdefinition.md) Verwenden Sie die [**TaskDefinition.Einstellungen**](taskdefinition-settings.md) -Eigenschaft, um die Einstellungen zu definieren, die bestimmen, wie der Taskplaner-Dienst die Aufgabe ausführt, und die [**TaskDefinition.RegistrationInfo-Eigenschaft,**](taskdefinition-registrationinfo.md) um die Informationen zu definieren, die die Aufgabe beschreiben.
+4.  Erstellen Sie einen Registrierungstrigger mithilfe der [**TaskDefinition.Triggers-Eigenschaft.**](taskdefinition-triggers.md) Diese Eigenschaft bietet Zugriff auf das [**TriggerCollection-Objekt.**](triggercollection.md) Verwenden Sie die [**TriggerCollection.Create-Methode**](triggercollection-create.md) (die den Typ des Triggers angibt, den Sie erstellen möchten), um einen Registrierungstrigger zu erstellen.
+5.  Erstellen Sie mithilfe der [**TaskDefinition.Actions-Eigenschaft**](taskdefinition-actions.md) eine Aktion für die auszuführende Aufgabe. Diese Eigenschaft bietet Zugriff auf das [**ActionCollection-Objekt.**](actioncollection.md) Verwenden Sie die [**ActionCollection.Create-Methode,**](actioncollection-create.md) um den Typ der Aktion anzugeben, die Sie erstellen möchten. In diesem Beispiel wird ein [**ExecAction-Objekt**](execaction.md) verwendet, das eine Aktion darstellt, die eine ausführbare Datei startet.
+6.  Registrieren Sie die Aufgabe mithilfe der [**TaskFolder.RegisterTaskDefinition-Methode.**](taskfolder-registertaskdefinition.md)
 
-Im folgenden VBScript-Beispiel wird gezeigt, wie eine Aufgabe erstellt wird, die die Ausführung von Notepad plant, wenn der Task registriert wird.
+Das folgende VBScript-Beispiel zeigt, wie Sie eine Aufgabe erstellen, die Editor für die Ausführung plant, wenn der Task registriert wird.
 
 
 ```VB
@@ -119,12 +119,12 @@ WScript.Echo "Task submitted."
 
 <dl> <dt>
 
-[Verwenden des Taskplaner](using-the-task-scheduler.md)
+[Verwenden der Taskplaner](using-the-task-scheduler.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

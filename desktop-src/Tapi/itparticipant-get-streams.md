@@ -1,21 +1,21 @@
 ---
 description: Die get \_ Streams-Methode erstellt eine Auflistung von Streams, die dem aktuellen Teilnehmer zugeordnet sind.
 ms.assetid: 9ab05b14-8ef8-4e7f-b598-05795011e35d
-title: 'Itteilnehmer:: get_Streams-Methode (ipmsp. h)'
+title: ITParticipant::get_Streams-Methode (Ipmsp.h)
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 0a920929c71e01632edcd8c4c78029b479d8b250
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 1b66447cd320110db45e1624d677c9b76e518f926da341805bd7de992d0e0eec
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106368527"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119003288"
 ---
-# <a name="itparticipantget_streams-method"></a>Itteilnehmer:: get \_ Streams-Methode
+# <a name="itparticipantget_streams-method"></a>ITParticipant::get \_ Streams-Methode
 
-\[**get \_ Streams** sind nicht für die Verwendung in Windows Vista, Windows Server 2008 und nachfolgenden Versionen des Betriebssystems verfügbar. Die RTC-Client-API bietet eine ähnliche Funktionalität.\]
+\[**get \_ Streams** ist nicht für die Verwendung in Windows Vista, Windows Server 2008 und nachfolgenden Versionen des Betriebssystems verfügbar. Die RTC-Client-API bietet ähnliche Funktionen.\]
 
-Die **get \_ Streams** -Methode erstellt eine Auflistung von Streams, die dem aktuellen Teilnehmer zugeordnet sind. Diese Methode wird für Automatisierungs Client Anwendungen bereitgestellt, wie z. b. in Visual Basic. C-und C++-Anwendungen müssen die [**enumeratestreams**](itparticipant-enumeratestreams.md) -Methode verwenden.
+Die **get \_ Streams-Methode** erstellt eine Auflistung von Streams, die dem aktuellen Teilnehmer zugeordnet sind. Diese Methode wird für Automation-Clientanwendungen bereitgestellt, z. B. in Visual Basic geschriebene Anwendungen. C- und C++-Anwendungen müssen die [**EnumerateStreams-Methode**](itparticipant-enumeratestreams.md) verwenden.
 
 ## <a name="syntax"></a>Syntax
 
@@ -32,10 +32,10 @@ HRESULT get_Streams(
 
 <dl> <dt>
 
-*pvariant* \[ vorgenommen\]
+*pVariant* \[ out\]
 </dt> <dd>
 
-Ein Zeiger auf eine **Variante** , die eine [**itcollection**](/windows/desktop/api/tapi3if/nn-tapi3if-itcollection) von [**itstream**](/windows/win32/api/tapi3if/nn-tapi3if-itstream) -Schnittstellen Zeigern enthält.
+Zeiger auf **VARIANT,** der eine [**ITCollection**](/windows/desktop/api/tapi3if/nn-tapi3if-itcollection) von [**ITStream-Schnittstellenzeigern**](/windows/win32/api/tapi3if/nn-tapi3if-itstream) enthält.
 
 </dd> </dl>
 
@@ -48,16 +48,16 @@ Diese Methode kann einen dieser Werte zurückgeben.
 | Wert                                                                                         | Bedeutung                                                         |
 |-----------------------------------------------------------------------------------------------|-----------------------------------------------------------------|
 | <dl> <dt>**S \_ OK**</dt> </dl>          | Methode war erfolgreich.<br/>                                    |
-| <dl> <dt>**E \_ outo-Memory**</dt> </dl> | Zum Ausführen des Vorgangs ist nicht genügend Arbeitsspeicher vorhanden.<br/> |
-| <dl> <dt>**E- \_ Zeiger**</dt> </dl>     | Der *pvariant* -Parameter ist kein gültiger Zeiger.<br/>     |
+| <dl> <dt>**E \_ OUTOFMEMORY**</dt> </dl> | Es ist nicht genügend Arbeitsspeicher zum Ausführen des Vorgangs vorhanden.<br/> |
+| <dl> <dt>**E \_ POINTER**</dt> </dl>     | Der *pVariant-Parameter* ist kein gültiger Zeiger.<br/>     |
 
 
 
  
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-TAPI Ruft die **adressf** -Methode für die [**itstream**](/windows/win32/api/tapi3if/nn-tapi3if-itstream) -Schnittstelle auf, die von **itparticipants:: get \_ Streams** zurückgegeben wurde. Die Anwendung muss Release auf der **itstream** -Schnittstelle aufzurufen, um Ressourcen frei **zugeben** , die ihr zugeordnet sind.
+TAPI ruft die **AddRef-Methode** auf der [**ITStream-Schnittstelle**](/windows/win32/api/tapi3if/nn-tapi3if-itstream) auf, die von **ITParticipant::get \_ Streams** zurückgegeben wird. Die Anwendung muss **Release** auf der **ITStream-Schnittstelle** aufrufen, um zugeordnete Ressourcen freizugeben.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -65,30 +65,30 @@ TAPI Ruft die **adressf** -Methode für die [**itstream**](/windows/win32/api/ta
 
 | Anforderung | Wert |
 |-------------------------|--------------------------------------------------------------------------------------|
-| TAPI-Version<br/> | Erfordert TAPI 3,0 oder höher<br/>                                                |
-| Header<br/>       | <dl> <dt>Ipmsp. h</dt> </dl>   |
-| Bibliothek<br/>      | <dl> <dt>UUID. lib</dt> </dl>  |
+| TAPI-Version<br/> | Erfordert TAPI 3.0 oder höher<br/>                                                |
+| Header<br/>       | <dl> <dt>Ipmsp.h</dt> </dl>   |
+| Bibliothek<br/>      | <dl> <dt>Uuid.lib</dt> </dl>  |
 | DLL<br/>          | <dl> <dt>Tapi3.dll</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Itteilnehmer**](itparticipant.md)
+[**ITParticipant**](itparticipant.md)
 </dt> <dt>
 
-[**Enumeratestreams**](itparticipant-enumeratestreams.md)
+[**EnumerateStreams**](itparticipant-enumeratestreams.md)
 </dt> <dt>
 
-[**Ienumstream**](/windows/desktop/api/tapi3if/nn-tapi3if-ienumstream)
+[**IEnumStream**](/windows/desktop/api/tapi3if/nn-tapi3if-ienumstream)
 </dt> <dt>
 
-[**Itcollection**](/windows/desktop/api/tapi3if/nn-tapi3if-itcollection)
+[**ITCollection**](/windows/desktop/api/tapi3if/nn-tapi3if-itcollection)
 </dt> <dt>
 
-[**Itstream**](/windows/win32/api/tapi3if/nn-tapi3if-itstream)
+[**ITStream**](/windows/win32/api/tapi3if/nn-tapi3if-itstream)
 </dt> </dl>
 
  

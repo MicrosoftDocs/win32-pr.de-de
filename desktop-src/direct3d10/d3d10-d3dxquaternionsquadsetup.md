@@ -14,12 +14,12 @@ api_type:
 api_location:
 - D3DX10.lib
 - D3DX10.dll
-ms.openlocfilehash: 8d8a778473c0b07ef984facce9c42f947755a74a
-ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
+ms.openlocfilehash: 94f6c3fbfa72a46132efe0b9a8057983728d161cc06ba0364019f9d39b4635fc
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2021
-ms.locfileid: "108108718"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118990980"
 ---
 # <a name="d3dxquaternionsquadsetup-function-d3dx10mathh"></a>D3DXQuaternionSquadSetup-Funktion (D3DX10Math.h)
 
@@ -113,7 +113,7 @@ Zeiger auf den Eingabesteuerpunkt Q3.
 
 Keine.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
 Diese Funktion verwendet vier Steuerungspunkte, die für die Eingaben pQ0, pQ1, pQ2 und pQ3 bereitgestellt werden. Die Funktion ändert dann diese Werte, um eine Kurve zu finden, die entlang des kürzesten Pfads verläuft. Die Werte von q0, q2 und q3 werden wie unten dargestellt berechnet.
 
@@ -139,7 +139,7 @@ COut = q2
 
  
 
-Verwenden Sie [**D3DXQuaternionNormalize**](d3d10-d3dxquaternionnormalize.md) für alle Quaternioneingaben, die nicht bereits normalisiert sind.
+Verwenden Sie [**D3DXQuaternionNormalize**](d3d10-d3dxquaternionnormalize.md) für alle Quaternioneingaben, die noch nicht normalisiert sind.
 
 ### <a name="examples"></a>Beispiele
 
@@ -184,7 +184,7 @@ D3DXQuaternionSquad(&Qt, &Q1, &A, &B, &C, time);
 
 
 
-| Anforderungen | Wert |
+| Anforderung | Wert |
 |--------------------|-----------------------------------------------------------------------------------------|
 | Header<br/>  | <dl> <dt>D3DX10Math.h</dt> </dl> |
 | Bibliothek<br/> | <dl> <dt>D3DX10.lib</dt> </dl>   |

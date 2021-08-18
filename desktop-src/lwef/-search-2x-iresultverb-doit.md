@@ -1,11 +1,11 @@
 ---
-title: Iresultverb doit-Eigenschaft (wdssharedidl. h)
+title: IResultVerb-DoIt-Eigenschaft (WdsSharedIDL.h)
 description: Führt das Verb aus.
 ms.assetid: cfe57396-e1c2-457a-8950-d2f6a79aa44b
 keywords:
-- Funktionen der Legacy-Windows-Umgebung der doit-Eigenschaft
-- Doit-Eigenschaft Legacy-Windows-Umgebungs Features, iresultverb-Schnittstelle
-- Iresultverb Interface Legacy Windows-Umgebungs Features, doit-Eigenschaft
+- DoIt-Eigenschaft Legacy-Windows-Umgebungsfeatures
+- DoIt-Eigenschaft Legacy Windows Umgebungsfeatures, IResultVerb-Schnittstelle
+- IResultVerb-Schnittstelle Legacy Windows Umgebungsfeatures, DoIt-Eigenschaft
 topic_type:
 - apiref
 api_name:
@@ -16,17 +16,17 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: f8b5aca6ca700f199e17cdc60ba4ca96d84a42b4
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 6d6521c31a309099af9dcc24cdb022624c56268d9670e66fb7e8eadbf6406f4c
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "103742313"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120014370"
 ---
-# <a name="iresultverbdoit-property"></a>Iresultverb::D OIT-Eigenschaft
+# <a name="iresultverbdoit-property"></a>IResultVerb::D oIt-Eigenschaft
 
 > [!NOTE]
-> Windows-Desktop Suche 2. x ist eine veraltete Technologie, die ursprünglich als Add-in für Windows XP und Windows Server 2003 verfügbar war. Verwenden Sie in späteren Versionen stattdessen die [Windows Search-API](../search/-search-reference-entry-page.md) . 
+> Windows DesktopSuche 2.x ist eine veraltete Technologie, die ursprünglich als Add-In für Windows XP und Windows Server 2003 verfügbar war. Verwenden Sie in späteren Versionen stattdessen die [Windows-Suche-API.](../search/-search-reference-entry-page.md) 
 
 Führt das Verb aus.
 
@@ -40,10 +40,10 @@ Führt das Verb aus.
 
 | Anforderung | Wert |
 |-------------------------------------|-------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows XP mit SP2 \[ Desktop-Apps\]<br/>                                      |
-| Unterstützte Mindestversion (Server)<br/> | Windows Server 2003 mit SP1 \[ Desktop-Apps\]<br/>                             |
-| Verteilbare Komponente<br/>          | Windows-Desktop Suche (WDS) 2.6.5<br/>                                             |
-| Header<br/>                   | <dl> <dt>Wdssharedidl. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur XP mit \[ SP2-Desktop-Apps\]<br/>                                      |
+| Unterstützte Mindestversion (Server)<br/> | Windows Server 2003 nur mit \[ SP1-Desktop-Apps\]<br/>                             |
+| Verteilbare Komponente<br/>          | Windows Desktopsuche (WDS) 2.6.5<br/>                                             |
+| Header<br/>                   | <dl> <dt>WdsSharedIDL.h</dt> </dl> |
 
 
 

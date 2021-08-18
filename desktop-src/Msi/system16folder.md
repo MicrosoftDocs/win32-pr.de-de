@@ -1,19 +1,19 @@
 ---
-description: Windows Installer legt die System16Folder-Eigenschaft für 16-Bit-System-DLLs auf den vollständigen Pfad zum Ordner fest. Beachten Sie, dass die System16Folder-Eigenschaft nicht für 64-Bit-Windows definiert ist, da dieses System keine 16-Bit-Anwendungen oder-Komponenten unterstützt.
+description: Windows Das Installationsprogramm legt die System16Folder-Eigenschaft auf den vollständigen Pfad zum Ordner für 16-Bit-System-DLLs fest. Beachten Sie, dass die System16Folder-Eigenschaft nicht für 64-Bit-Windows definiert ist, da dieses System keine 16-Bit-Anwendungen oder -Komponenten unterstützt.
 ms.assetid: c4aa3c6e-0168-4103-921b-7ae2ecb7e455
 title: System16Folder-Eigenschaft
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: f686f6ed525455ef0878a6b74c945b93eb2b9bd8
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 342458fe9ab774b928b0a6803cf4a0e076835366c024f0f733b7efea30c2e423
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106354802"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119626820"
 ---
 # <a name="system16folder-property"></a>System16Folder-Eigenschaft
 
-Windows Installer legt die **System16Folder** -Eigenschaft für 16-Bit-System-DLLs auf den vollständigen Pfad zum Ordner fest. Beachten Sie, dass die **System16Folder** -Eigenschaft nicht für 64-Bit-Windows definiert ist, da dieses System keine 16-Bit-Anwendungen oder-Komponenten unterstützt.
+Windows Das Installationsprogramm legt **die System16Folder-Eigenschaft** auf den vollständigen Pfad zum Ordner für 16-Bit-System-DLLs fest. Beachten Sie, dass die **System16Folder-Eigenschaft** nicht für 64-Bit-Windows definiert ist, da dieses System keine 16-Bit-Anwendungen oder -Komponenten unterstützt.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -21,7 +21,7 @@ Windows Installer legt die **System16Folder** -Eigenschaft für 16-Bit-System-DL
 
 | Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Version<br/> | Windows Installer 5,0 unter Windows Server 2012, Windows 8, Windows Server 2008 R2 oder Windows 7. Windows Installer 4,0 oder Windows Installer 4,5 unter Windows Server 2008 oder Windows Vista. Windows Installer unter Windows Server 2003 oder Windows XP. Informationen zu den minimalen Windows-Service Pack, die für eine Windows Installer Version erforderlich sind, finden Sie in den [Windows Installer Run-Time Anforderungen](windows-installer-portal.md) .<br/> |
+| Version<br/> | Windows Installer 5.0 auf Windows Server 2012, Windows 8, Windows Server 2008 R2 oder Windows 7. Windows Installer 4.0 oder Windows Installer 4.5 auf Windows Server 2008 oder Windows Vista. Windows Installationsprogramm auf Windows Server 2003 oder Windows XP. Informationen zum [Windows Service](windows-installer-portal.md) Pack, das für eine Windows Installer-Version erforderlich ist, finden Sie unter Windows Installer Run-Time Anforderungen.<br/> |
 
 
 

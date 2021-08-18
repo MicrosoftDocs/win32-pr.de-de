@@ -1,9 +1,9 @@
 ---
 title: Bereichsattribut
-description: Mit dem Attribut \ Range \ können Sie einen Bereich zulässiger Werte für Argumente oder Felder angeben, deren Werte zur Laufzeit festgelegt werden. Bei Verwendung mit einem Pipetyp gibt das-Attribut den zulässigen Bereich für die Anzahl von Elementen in den pipesegmenten an.
+description: Mit dem Attribut \range\ können Sie einen Bereich von zulässigen Werten für Argumente oder Felder angeben, deren Werte zur Laufzeit festgelegt werden. Bei Verwendung mit einem Pipetyp gibt das -Attribut den zulässigen Bereich für die Anzahl der Elemente in den Pipesegmenten an.
 ms.assetid: 1609fea5-e82c-4389-b4f4-2cd8d0622cde
 keywords:
-- Bereichs Attribut-Mittel l
+- Range-Attribut MIDL
 topic_type:
 - apiref
 api_name:
@@ -12,16 +12,16 @@ api_type:
 - NA
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: e095d420afc433c1f01a63dff51868e57efc50f4
-ms.sourcegitcommit: ebd3ce6908ff865f1ef66f2fc96769be0aad82e1
+ms.openlocfilehash: e8be59ef1b212d0f6953063ce7ac3239d8940a5ea54a623990fc3d7af9f36ad3
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/19/2020
-ms.locfileid: "106339475"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119764310"
 ---
 # <a name="range-attribute"></a>Bereichsattribut
 
-Mit dem **\[ Range \]** -Attribut können Sie einen Bereich zulässiger Werte für Argumente oder Felder angeben, deren Werte zur Laufzeit festgelegt werden. Bei Verwendung mit einem Pipetyp gibt das-Attribut den zulässigen Bereich für die Anzahl von Elementen in den pipesegmenten an.
+Mit **\[ dem \] Bereichsattribut** können Sie einen Bereich von zulässigen Werten für Argumente oder Felder angeben, deren Werte zur Laufzeit festgelegt werden. Bei Verwendung mit einem Pipetyp gibt das -Attribut den zulässigen Bereich für die Anzahl der Elemente in den Pipesegmenten an.
 
 ``` syntax
 [range(low-val,high-val)] type-specifier declarator
@@ -31,43 +31,43 @@ Mit dem **\[ Range \]** -Attribut können Sie einen Bereich zulässiger Werte f�
 
 <dl> <dt>
 
-*niedrig-Val* 
+*low-val* 
 </dt> <dd>
 
-Der niedrigste zulässige Wert, den der-Parameter oder das-Feld enthalten kann.
+Der niedrigste zulässige Wert, den der Parameter oder das Feld halten kann.
 
 </dd> <dt>
 
-*High-Val* 
+*high-val* 
 </dt> <dd>
 
-Der höchste zulässige Wert, den der-Parameter oder das-Feld enthalten kann.
+Der höchste zulässige Wert, den der Parameter oder das Feld halten kann.
 
 </dd> <dt>
 
 *Typspezifizierer* 
 </dt> <dd>
 
-Ein ganzzahliger Typ, der nicht [**Hyper**](hyper.md) oder [**\_ \_ Int64**](--int64.md), ein Typbezeichner für einen ganzzahligen Typ, ein [**Enumeration**](enum.md) -Typ oder ein pipetypname ist.
+Ein integraler Typ, der nicht [**hyper**](hyper.md) oder [**\_ \_ int64**](--int64.md)ist, ein Typbezeichner für einen integralen Typ, einen [**enum-Typ**](enum.md) oder einen Pipetypnamen.
 
 </dd> <dt>
 
 *Deklarator* 
 </dt> <dd>
 
-Ein standardmäßiger C-Deklarator, z. b. ein Bezeichner.
+Ein C-Standarddeklarator, z. B. ein Bezeichner.
 
 </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Verwenden Sie das **\[ Range \]** -Attribut, um die Bedeutung von sensiblen Parametern oder Feldern zu ändern, z. b. für die Größe oder Länge, mit konformen oder variierenden Arrays, oder wenn Sie einen Parameter-oder Feldwert auf einen Bereich gültiger Werte überprüfen möchten. Das-Attribut gilt sowohl für Parameter der obersten Ebene als auch für Parameter und Felder auf niedrigerer Ebene. Durch das Hinzufügen des **\[ Range \]** -Attributs zu einem Typ wird das Wire-Format nicht geändert, und die Abwärtskompatibilität wird daher nicht beeinträchtigt.
+Verwenden Sie das **\[ \]** Bereichsattribut, um die Bedeutung vertraulicher Parameter oder Felder zu ändern, z. B. diejenigen, die für Größe oder Länge verwendet werden, mit konformen oder variierenden Arrays oder immer dann, wenn Sie einen Parameter- oder Feldwert mit einem Bereich gültiger Werte überprüfen möchten. Das -Attribut gilt für Parameter der obersten Ebene sowie für Parameter und Felder auf niedrigerer Ebene. Das Hinzufügen **\[ des \] Bereichsattributs** zu einem Typ ändert das Wire-Format nicht und wirkt sich daher nicht auf die Abwärtskompatibilität aus.
 
-Das **\[ Range \]** -Attribut kann auch für konforme Daten wie z. b. Puffer oder Arrays mit einem Konformitäts Attribut verwendet werden. Der Effekt besteht darin, alle Konformitäts Größen für die konformen Daten auf den angegebenen Bereich zu beschränken. Wenn es sich bei den überein kompatiblen Daten um ein mehrdimensionales Array handelt, ist jede Array Dimension auf den angegebenen Bereich beschränkt.
+Das **\[ \] Bereichsattribut** kann auch für konforme Daten wie Puffer oder Arrays mit einem Konformitätsattribut verwendet werden. Die Auswirkung besteht in der Beschränkung aller Übereinstimmungsgrößen für die konformen Daten auf den angegebenen Bereich. Wenn die konformen Daten ein mehrdimensionales Array sind, ist jede Arraydimension auf den angegebenen Bereich beschränkt.
 
-Die Verwendung des **\[ Bereichs \]** für konforme Daten erfordert, dass das Kompilierungs Ziel den Wert "nt60" oder höher hat.
+Die Verwendung **\[ des Bereichs \]** für konforme Daten erfordert, dass das Kompilierungsziel "ZIEL NT60" oder höher ist.
 
-Beachten Sie, dass Sie die [**/robust**](-robust.md) -Compileroption verwenden müssen, wenn Sie Ihre IDL-Datei kompilieren, um den Stub-Code zu generieren, der diese Überprüfungen durchführt. Ohne den Schalter **/robust** ignoriert der Mittell-Compiler dieses Attribut.
+Beachten Sie, dass Sie die Compileroption [**/robust**](-robust.md) verwenden müssen, wenn Sie Ihre IDL-Datei kompilieren, um den Stubcode zu generieren, der diese Überprüfungen ausführen soll. Ohne den **Schalter /robust** ignoriert der MIDL-Compiler dieses Attribut.
 
 ## <a name="examples"></a>Beispiele
 
@@ -85,33 +85,33 @@ void InPipe(
 
 <dl> <dt>
 
-[Schnittstellen Definitionsdatei (IDL)](interface-definition-idl-file.md)
+[IDL-Datei (Interface Definition)](interface-definition-idl-file.md)
 </dt> <dt>
 
 [Arrays](/windows/desktop/Rpc/arrays)
 </dt> <dt>
 
-[**der erste \_ ist**](first-is.md)
+[**first \_ is**](first-is.md)
 </dt> <dt>
 
-[**Letzter \_ ist**](last-is.md)
+[**last \_ is**](last-is.md)
 </dt> <dt>
 
-[**Länge \_ ist**](length-is.md)
+[**length \_ ist**](length-is.md)
 </dt> <dt>
 
-[**Max \_ ist**](max-is.md)
+[**max \_ is**](max-is.md)
 </dt> <dt>
 
 [**/robust**](-robust.md)
 </dt> <dt>
 
-[**Größe \_ :**](size-is.md)
+[**size \_ ist**](size-is.md)
 </dt> <dt>
 
-[**Switch \_ ist**](switch-is.md)
+[**switch \_ ist**](switch-is.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 

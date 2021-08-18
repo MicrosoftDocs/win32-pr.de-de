@@ -1,11 +1,11 @@
 ---
-title: Ivmusbdevice manufacturerstring-Eigenschaft (vpccominterfaces. h)
+title: IVMUSBDevice ManufacturerString-Eigenschaft (VPCCOMInterfaces.h)
 description: Ruft den Namen des USB-Geräteherstellers ab.
 ms.assetid: 0d815887-96bf-4795-a4eb-32fb2f35c57e
 keywords:
-- Manufacturerstring-Eigenschaft virtueller PC
-- Manufacturerstring-Eigenschaft Virtual PC, ivmusbdevice-Schnittstelle
-- Ivmusbdevice Interface Virtual PC, manufacturerstring (Eigenschaft)
+- ManufacturerString-Eigenschaft Virtueller PC
+- ManufacturerString-Eigenschaft Virtueller PC, IVMUSBDevice-Schnittstelle
+- IVMUSBDevice-Schnittstelle Virtueller PC, ManufacturerString -Eigenschaft
 topic_type:
 - apiref
 api_name:
@@ -17,16 +17,16 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: dc8d74cbe737c59e10daf2cf3ee93e4b1f14983f
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 7bb0ec725779e4ffd18d46752f4083ad53c5b77c8392b45dc414d927b1038988
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104104912"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119973710"
 ---
-# <a name="ivmusbdevicemanufacturerstring-property"></a>Ivmusbdevice:: manufacturerstring (Eigenschaft)
+# <a name="ivmusbdevicemanufacturerstring-property"></a>IVMUSBDevice::ManufacturerString (Eigenschaft)
 
-\[Windows Virtual PC ist nicht mehr für die Verwendung ab Windows 8 verfügbar. Verwenden Sie stattdessen den [Hyper-V-WMI-Anbieter (v2)](/windows/desktop/HyperV_v2/windows-virtualization-portal).\]
+\[Windows Der virtuelle PC ist ab diesem Zeitraum nicht mehr Windows 8. Verwenden Sie stattdessen den [Hyper-V-WMI-Anbieter (V2).](/windows/desktop/HyperV_v2/windows-virtualization-portal)\]
 
 Ruft den Namen des USB-Geräteherstellers ab.
 
@@ -45,7 +45,7 @@ HRESULT get_ManufacturerString(
 
 ## <a name="property-value"></a>Eigenschaftswert
 
-Der Name des Herstellers des USB-Geräts.
+Der Name des USB-Geräteherstellers.
 
 ## <a name="error-codes"></a>Fehlercodes
 
@@ -54,7 +54,7 @@ Der Name des Herstellers des USB-Geräts.
 | Name/Wert                                                                                                                                            | Bedeutung                                       |
 |-------------------------------------------------------------------------------------------------------------------------------------------------------|-----------------------------------------------|
 | <dl> <dt>S \_ OK</dt> <dt>0</dt> </dl>               | Die Methode wurde erfolgreich abgeschlossen.<br/> |
-| <dl> <dt>E \_ Zeiger</dt> <dt>0x80004003</dt> </dl> | Der-Parameter ist **null**.<br/>         |
+| <dl> <dt>E \_ ZEIGER 0X80004003</dt> <dt></dt> </dl> | Der Parameter ist **NULL.**<br/>         |
 
 
 
@@ -64,20 +64,20 @@ Der Name des Herstellers des USB-Geräts.
 
 | Anforderung | Wert |
 |-------------------------------------|-----------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows 7 \[ -Desktop-Apps\]<br/>                                                    |
+| Unterstützte Mindestversion (Client)<br/> | Windows 7 \[ Desktop-Apps\]<br/>                                                    |
 | Unterstützte Mindestversion (Server)<br/> | Nicht unterstützt<br/>                                                                     |
 | Ende des Supports (Client)<br/>    | Windows 7<br/>                                                                          |
-| Produkt<br/>                  | Windows Virtual PC<br/>                                                                 |
-| Header<br/>                   | <dl> <dt>Vpccominterfaces. h</dt> </dl> |
-| IID<br/>                      | IID \_ ivmusbdevice ist als 63c1258c-5721-4070-B86B-A6CE2AFEC0B3 definiert.<br/>               |
+| Product (Produkt)<br/>                  | Windows Virtual PC<br/>                                                                 |
+| Header<br/>                   | <dl> <dt>VPCCOMInterfaces.h</dt> </dl> |
+| IID<br/>                      | IID \_ IVMUSBDevice ist als 63C1258C-5721-4070-B86B-A6CE2AFEC0B3 definiert.<br/>               |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Ivmusbdevice**](ivmusbdevice.md)
+[**IVMUSBDevice**](ivmusbdevice.md)
 </dt> </dl>
 
  

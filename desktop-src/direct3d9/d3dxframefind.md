@@ -1,7 +1,7 @@
 ---
-description: Sucht den untergeordneten Rahmen eines Stamm Frames.
+description: Sucht den untergeordneten Frame eines Stammrahmens.
 ms.assetid: 211e117a-9707-459a-a6a1-b3e78bdad6e2
-title: D3DXFrameFind-Funktion (D3dx9anim. h)
+title: D3DXFrameFind-Funktion (D3dx9anim.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -14,16 +14,16 @@ api_type:
 api_location:
 - d3dx9.lib
 - d3dx9.dll
-ms.openlocfilehash: 82b8c56c93f19c99441b93707fac2a0c150e0c38
-ms.sourcegitcommit: 14010c34b35fa268046c7683f021f86de08ddd0a
+ms.openlocfilehash: 4f62cacabbf020d1fe9ff9e83c47acc6c58e52c4ab6be031586bda365745f595
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "106361206"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120027660"
 ---
 # <a name="d3dxframefind-function"></a>D3DXFrameFind-Funktion
 
-Sucht den untergeordneten Rahmen eines Stamm Frames.
+Sucht den untergeordneten Frame eines Stammrahmens.
 
 ## <a name="syntax"></a>Syntax
 
@@ -41,21 +41,21 @@ LPD3DXFRAME D3DXFrameFind(
 
 <dl> <dt>
 
-*pframeroot* \[ in\]
+*pFrameRoot* \[ In\]
 </dt> <dd>
 
-Typ: **Konstanten [**D3DXFRAME**](d3dxframe.md) \***
+Typ: **const [**D3DXFRAME**](d3dxframe.md) \***
 
-Zeiger auf den stammframe. Siehe [**D3DXFRAME**](d3dxframe.md).
+Zeiger auf den Stammrahmen. Siehe [**D3DXFRAME**](d3dxframe.md).
 
 </dd> <dt>
 
-*Name* \[ in\]
+*Name* \[ In\]
 </dt> <dd>
 
 Typ: **[ **LPCSTR**](../winprog/windows-data-types.md)**
 
-Der Name des zu suchenden untergeordneten Frames.
+Name des zu suchenden untergeordneten Frames.
 
 </dd> </dl>
 
@@ -63,7 +63,7 @@ Der Name des zu suchenden untergeordneten Frames.
 
 Typ: **[ **LPD3DXFRAME**](d3dxframe.md)**
 
-Gibt den untergeordneten Frame zurück, wenn er gefunden wird, andernfalls **null** . Siehe [**D3DXFRAME**](d3dxframe.md).
+Gibt den untergeordneten Frame zurück, wenn er gefunden wird, **andernfalls NULL.** Siehe [**D3DXFRAME**](d3dxframe.md).
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -71,16 +71,16 @@ Gibt den untergeordneten Frame zurück, wenn er gefunden wird, andernfalls **nul
 
 | Anforderung | Wert |
 |--------------------|----------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>D3dx9anim. h</dt> </dl> |
-| Bibliothek<br/> | <dl> <dt>D3dx9. lib</dt> </dl>   |
+| Header<br/>  | <dl> <dt>D3dx9anim.h</dt> </dl> |
+| Bibliothek<br/> | <dl> <dt>D3dx9.lib</dt> </dl>   |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[Animations Funktionen](dx9-graphics-reference-d3dx-functions-animation.md)
+[Animationsfunktionen](dx9-graphics-reference-d3dx-functions-animation.md)
 </dt> </dl>
 
  

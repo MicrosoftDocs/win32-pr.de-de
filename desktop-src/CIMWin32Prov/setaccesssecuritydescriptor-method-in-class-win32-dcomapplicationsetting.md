@@ -1,8 +1,8 @@
 ---
-description: Aktualisiert den Zugriffs Sicherheits Deskriptor der DCOM-Anwendung mit einer neuen Sicherheits Beschreibung, die durch eine Instanz einer Win32 \_ securityDescriptor-Klasse definiert wird.
+description: Aktualisiert die Zugriffssicherheitsbeschreibung der DCOM-Anwendung mit einem neuen Sicherheitsdeskriptor, der von einer Instanz einer Win32 \_ SecurityDescriptor-Klasse definiert wird.
 ms.assetid: 71b708ba-5eb7-400e-bee2-37ca93966c3f
 ms.tgt_platform: multiple
-title: Setaccesssecuritydescriptor-Methode der Win32_DCOMApplicationSetting-Klasse
+title: SetAccessSecurityDescriptor-Methode der Win32_DCOMApplicationSetting-Klasse
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -14,16 +14,16 @@ api_type:
 - COM
 api_location:
 - CIMWin32.dll
-ms.openlocfilehash: 53c0975475c5f20682ee77125b66ed703fbb4b9f
-ms.sourcegitcommit: c7add10d695482e1ceb72d62b8a4ebd84ea050f7
+ms.openlocfilehash: ab668b12d6f08e205c770f4c717eda6f996971897fedb48e70702fc2d80a3c5c
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "103861667"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119752690"
 ---
-# <a name="setaccesssecuritydescriptor-method-of-the-win32_dcomapplicationsetting-class"></a>Setaccesssecuritydescriptor-Methode der Win32 \_ dcomapplicationsetting-Klasse
+# <a name="setaccesssecuritydescriptor-method-of-the-win32_dcomapplicationsetting-class"></a>SetAccessSecurityDescriptor-Methode der Win32 \_ DCOMApplicationSetting-Klasse
 
-Die **setaccesssecuritydescriptor** -Methode aktualisiert die Zugriffs Sicherheits Beschreibung der DCOM-Anwendung mit einer neuen Sicherheits Beschreibung, die durch eine Instanz einer [**Win32 \_ securityDescriptor**](/previous-versions/windows/desktop/secrcw32prov/win32-securitydescriptor) -Klasse definiert wird. Diese Sicherheits Beschreibung steuert, wer auf die Anwendung zugreifen darf. Das Konto, auf dem das Skript oder die Anwendung ausgeführt wird, das diese Methode aufruft, muss über die Berechtigungen **SeSecurityPrivilege** und **SeRestorePrivilege** verfügen. Weitere Informationen finden Sie unter [Ändern der Zugriffssicherheit für Sicherungs fähige Objekte](/windows/desktop/WmiSdk/changing-access-security-on-securable-objects).
+Die **SetAccessSecurityDescriptor-Methode** aktualisiert den Zugriffssicherheitsdeskriptor der DCOM-Anwendung mit einem neuen Sicherheitsdeskriptor, der von einer Instanz einer [**Win32 \_ SecurityDescriptor-Klasse**](/previous-versions/windows/desktop/secrcw32prov/win32-securitydescriptor) definiert wird. Dieser Sicherheitsdeskriptor steuert, wer auf die Anwendung zugreifen darf. Das Konto, das das Skript oder die Anwendung ausführt, das diese Methode aufruft, muss über die Berechtigungen **SeSecurityPrivilege** und **SeRestorePrivilege** verfügen. Weitere Informationen finden Sie unter [Ändern der Zugriffssicherheit für sicherungsfähige Objekte.](/windows/desktop/WmiSdk/changing-access-security-on-securable-objects)
 
 ## <a name="syntax"></a>Syntax
 
@@ -40,16 +40,16 @@ uint32 SetAccessSecurityDescriptor(
 
 <dl> <dt>
 
-*Deskriptor* \[ in\]
+*Deskriptor* \[ In\]
 </dt> <dd>
 
-Die Sicherheits Beschreibung, die für die DCOM-Anwendung festgelegt werden soll.
+Der Sicherheitsdeskriptor, der für die DCOM-Anwendung festgelegt werden soll.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt einen der Werte zurück, der in der folgenden Liste aufgeführt ist, oder einen anderen Wert, um einen Fehler anzugeben. Weitere Informationen finden Sie unter [WMI-Rückgabe Codes](/windows/desktop/WmiSdk/wmi-return-codes) oder [**WbemErrorEnum**](/windows/desktop/api/wbemdisp/ne-wbemdisp-wbemerrorenum).
+Gibt einen der in der folgenden Liste aufgeführten Werte oder einen anderen Wert zurück, um einen Fehler anzugeben. Weitere Informationen finden Sie unter [WMI-Rückgabecodes](/windows/desktop/WmiSdk/wmi-return-codes) oder [**WbemErrorEnum.**](/windows/desktop/api/wbemdisp/ne-wbemdisp-wbemerrorenum)
 
 <dl> <dt>
 
@@ -72,7 +72,7 @@ Der Benutzer hat keinen Zugriff auf die angeforderten Informationen.
 **8**
 </dt> <dd>
 
-Unbekannter Fehler.
+Unbekannter Fehler
 
 </dd> <dt>
 
@@ -86,7 +86,7 @@ Der Benutzer verfügt nicht über die erforderlichen Berechtigungen zum Ausführ
 **21**
 </dt> <dd>
 
-Ein im Methoden Aufrufwert angegebener Parameter ist ungültig.
+Ein im Methodenaufruf angegebener Parameter ist ungültig.
 
 </dd> <dt>
 
@@ -97,27 +97,27 @@ Ein im Methoden Aufrufwert angegebener Parameter ist ungültig.
 
 </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die [**Win32- \_ securityDescriptor**](/previous-versions/windows/desktop/secrcw32prov/win32-securitydescriptor) -Instanz stellt einen Datentyp für die [**Sicherheits \_ \_ deskriptorsteuerung**](/windows/desktop/SecAuthZ/security-descriptor-control) dar und enthält eine freigegebene [*Zugriffs Steuerungs Liste*](/windows/desktop/SecGloss/d-gly) (DACL) und eine [*System Zugriffs Steuerungs Liste*](/windows/desktop/SecGloss/s-gly) (SACL). Weitere Informationen finden Sie unter [Access Control Listen](/windows/desktop/SecAuthZ/access-control-lists).
+Die [**Win32 \_ SecurityDescriptor-Instanz**](/previous-versions/windows/desktop/secrcw32prov/win32-securitydescriptor) stellt einen [**SECURITY \_ DESCRIPTOR \_ CONTROL-Datentyp**](/windows/desktop/SecAuthZ/security-descriptor-control) dar und enthält eine [*DACL (Discretionary Access Control List)*](/windows/desktop/SecGloss/d-gly) und eine SACL [*(System Access Control List).*](/windows/desktop/SecGloss/s-gly) Weitere Informationen finden Sie unter [Access Control Lists](/windows/desktop/SecAuthZ/access-control-lists).
 
-Wenn **SeSecurityPrivilege** beim erhalten einer Sicherheits Beschreibung nicht gewährt oder aktiviert ist, wird nur die DACL in der zurückgegebenen Sicherheits Beschreibung zurückgegeben. Weitere Informationen finden Sie unter [**Berechtigungs Konstanten**](/windows/desktop/WmiSdk/privilege-constants) und [Ausführen privilegierter Vorgänge](/windows/desktop/WmiSdk/executing-privileged-operations).
+Wenn **seSecurityPrivilege** beim Abrufen eines Sicherheitsdeskriptors nicht gewährt oder aktiviert wird, wird nur die DACL in der zurückgegebenen Sicherheitsbeschreibung zurückgegeben. Weitere Informationen finden Sie unter [**Berechtigungskonstanten**](/windows/desktop/WmiSdk/privilege-constants) und [Ausführen privilegierter Vorgänge.](/windows/desktop/WmiSdk/executing-privileged-operations)
 
-Wenn Sie diese Methode aufrufen, können Sie sowohl die DACL als auch die SACL in der [**Win32- \_ securityDescriptor**](/previous-versions/windows/desktop/secrcw32prov/win32-securitydescriptor) -Instanz aktualisieren, aber Sie können auch nur die DACL oder nur die SACL aktualisieren.
+Sie können sowohl die DACL als auch die SACL in der [**Win32 \_ SecurityDescriptor-Instanz**](/previous-versions/windows/desktop/secrcw32prov/win32-securitydescriptor) aktualisieren, wenn Sie diese Methode aufrufen. Sie können jedoch auch nur die DACL oder nur die SACL aktualisieren.
 
-Die folgenden Werte im [**Sicherheits \_ Deskriptor- \_ Steuer**](/windows/desktop/SecAuthZ/security-descriptor-control) Element bestimmen, ob die DACL, die SACL oder beides aktualisiert wird.
+Die folgenden Werte in [**SECURITY \_ DESCRIPTOR \_ CONTROL**](/windows/desktop/SecAuthZ/security-descriptor-control) bestimmen, ob die DACL, die SACL oder beide aktualisiert werden.
 
--   **SE \_ DACL \_ vorhanden**
+-   **\_SE DACL \_ PRESENT**
 
     Gibt an, dass die DACL aktualisiert werden soll. Wenn dies nicht festgelegt ist, behält WMI den ursprünglichen Wert der DACL bei.
 
--   **SE \_ SACL \_ vorhanden**
+-   **\_SE SACL \_ PRESENT**
 
-    Gibt an, dass die SACL aktualisiert werden soll. Wenn dies nicht festgelegt ist, behält WMI den ursprünglichen Wert der SACL bei. Zum Aktualisieren der SACL muss für das Konto die Berechtigung " **SeSecurityPrivilege** " aktiviert sein. Bei der Skripterstellung lautet der Berechtigungs Name " **SeSecurityPrivilege**". Weitere Informationen finden Sie unter [**Berechtigungs Konstanten**](/windows/desktop/WmiSdk/privilege-constants).
+    Gibt an, dass die SACL aktualisiert werden soll. Wenn dies nicht festgelegt ist, behält WMI den ursprünglichen Wert der SACL bei. Zum Aktualisieren der SACL muss für das Konto die **SeSecurityPrivilege-Berechtigung** aktiviert sein. Für die Skripterstellung lautet der Berechtigungsname **SeSecurityPrivilege.** Weitere Informationen finden Sie unter [**Berechtigungskonstanten.**](/windows/desktop/WmiSdk/privilege-constants)
 
-Wenn die Eigenschaften des Gruppen Vertrauens nehmers und des Besitzer Treuhänders nicht **null** sind, werden Sie aktualisiert. Andernfalls behält WMI die ursprünglichen Werte bei. Weitere Informationen finden Sie unter [WMI Security Descriptor Objects](/windows/desktop/WmiSdk/wmi-security-descriptor-objects).
+Wenn die Eigenschaften des Gruppentreuhänders und des Besitzertreuhänders nicht **NULL** sind, werden sie aktualisiert. Andernfalls behält WMI die ursprünglichen Werte bei. Weitere Informationen finden Sie unter [WMI-Sicherheitsdeskriptorobjekte.](/windows/desktop/WmiSdk/wmi-security-descriptor-objects)
 
-Wenn eine neue SACL bei einem Aufruf dieser Methode **null** ist, bleibt die SACL der Sicherheits Beschreibung für das Sicherungs fähige Zielobjekt unverändert.
+Wenn eine neue SACL in einem Aufruf dieser Methode **NULL** ist, bleibt die Sicherheitsbeschreibungs-SACL für das sicherungsfähige Zielobjekt unverändert.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -127,26 +127,26 @@ Wenn eine neue SACL bei einem Aufruf dieser Methode **null** ist, bleibt die SAC
 |-------------------------------------|-----------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows Vista<br/>                                                                |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2008<br/>                                                          |
-| Namespace<br/>                | Root \\ CIMV2<br/>                                                                  |
-| MOF<br/>                      | <dl> <dt>Cimwin32. MOF</dt> </dl> |
+| Namespace<br/>                | \\Stamm-CIMV2<br/>                                                                  |
+| MOF<br/>                      | <dl> <dt>CIMWin32.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>CIMWin32.dll</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Win32- \_ dcomapplicationsetting**](win32-dcomapplicationsetting.md)
+[**Win32 \_ DCOMApplicationSetting**](win32-dcomapplicationsetting.md)
 </dt> <dt>
 
-[**Berechtigungs Konstanten**](/windows/desktop/WmiSdk/privilege-constants)
+[**Berechtigungskonstanten**](/windows/desktop/WmiSdk/privilege-constants)
 </dt> <dt>
 
-[WMI-sicherheitsdeskriptorobjekte](/windows/desktop/WmiSdk/wmi-security-descriptor-objects)
+[WMI-Sicherheitsbeschreibungsobjekte](/windows/desktop/WmiSdk/wmi-security-descriptor-objects)
 </dt> <dt>
 
-[Ändern der Zugriffssicherheit für Sicherungs fähige Objekte](/windows/desktop/WmiSdk/changing-access-security-on-securable-objects)
+[Ändern der Zugriffssicherheit für sicherungsfähige Objekte](/windows/desktop/WmiSdk/changing-access-security-on-securable-objects)
 </dt> </dl>
 
  

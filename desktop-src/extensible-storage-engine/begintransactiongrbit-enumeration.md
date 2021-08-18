@@ -1,6 +1,6 @@
 ---
-description: 'Weitere Informationen finden Sie hier: begintransaktiongrbit-Enumeration'
-title: Begintransaktiongrbit-Enumeration
+description: Weitere Informationen finden Sie unter BeginTransactionGrbit-Enumeration.
+title: BeginTransactionGrbit-Enumeration
 TOCTitle: BeginTransactionGrbit enumeration
 ms:assetid: T:Microsoft.Isam.Esent.Interop.BeginTransactionGrbit
 ms:mtpsurl: https://msdn.microsoft.com/library/microsoft.isam.esent.interop.begintransactiongrbit(v=EXCHG.10)
@@ -28,21 +28,21 @@ api_type:
 api_location:
 - Microsoft.Isam.Esent.Interop.dll
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: 5f407c54b7b6e76ab63dcfb97d1307458ba15277
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: b8bbbba69a6768f37e816030f63aa00e5ed05f2133b62f1047b0c7cbe58d55ee
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "103758970"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118982840"
 ---
-# <a name="begintransactiongrbit-enumeration"></a>Begintransaktiongrbit-Enumeration
+# <a name="begintransactiongrbit-enumeration"></a>BeginTransactionGrbit-Enumeration
 
-Optionen für [JetBeginTransaction2 (JET_SESID, begintransaktiongrbit)](./api.jetbegintransaction2-method.md).
+Optionen für [JetBeginTransaction2(JET_SESID, BeginTransactionGrbit)](./api.jetbegintransaction2-method.md).
 
 Diese Enumeration enthält ein [FlagsAttribute](/dotnet/api/system.flagsattribute)-Attribut, das eine bitweise Kombination der Memberwerte zulässt.
 
-**Namespace:**  [Microsoft. ISAM. ESENT. Interop](./microsoft.isam.esent.interop-namespace.md)  
-**Assembly:**  Microsoft. ISAM. ESENT. Interop (in Microsoft.Isam.Esent.Interop.dll)
+**Namespace:**  [Microsoft.Isam.Esent.Interop](./microsoft.isam.esent.interop-namespace.md)  
+**Assembly:**  Microsoft.Isam.Esent.Interop (in Microsoft.Isam.Esent.Interop.dll)
 
 ## <a name="syntax"></a>Syntax
 
@@ -78,14 +78,14 @@ public enum BeginTransactionGrbit
 <tr class="even">
 <td></td>
 <td>ReadOnly</td>
-<td>Die Datenbank wird von der Transaktion nicht geändert. Wenn versucht wird, ein Update auszuführen, schlägt dieser Vorgang mit <a href="hh564840(v=exchg.10).md">transread only</a>fehl. Diese Option wird ignoriert, es sei denn, Sie wird angefordert, wenn die angegebene Sitzung nicht bereits in einer Transaktion vorhanden ist.</td>
+<td>Die Datenbank wird von der Transaktion nicht geändert. Wenn ein Update versucht wird, tritt bei diesem Vorgang mit <a href="hh564840(v=exchg.10).md">TransReadOnly ein Fehler auf.</a> Diese Option wird ignoriert, es sei denn, sie wird angefordert, wenn sich die gegebene Sitzung nicht bereits in einer Transaktion befindet.</td>
 </tr>
 </tbody>
 </table>
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
-#### <a name="reference"></a>Referenz
+#### <a name="reference"></a>Verweis
 
-[Microsoft. ISAM. ESENT. Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)
+[Microsoft.Isam.Esent.Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)

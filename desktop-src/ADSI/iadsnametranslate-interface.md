@@ -1,26 +1,26 @@
 ---
-title: Iadsnametranslation-Schnittstelle
-description: Die iadsnametranslation-Schnittstelle wird verwendet, um Distinguished Names zwischen verschiedenen Formaten zu übersetzen. Namens Übersetzungen werden auf dem Verzeichnisserver ausgeführt, und diese Schnittstelle ist derzeit nur für Objekte in Active Directory verfügbar.
+title: IADsNameTranslate-Schnittstelle
+description: Die IADsNameTranslate-Schnittstelle wird verwendet, um Distinguished Names zwischen verschiedenen Formaten zu übersetzen. Namensübersetzungen werden auf dem Verzeichnisserver ausgeführt, und diese Schnittstelle ist derzeit nur für Objekte in Active Directory verfügbar.
 ms.assetid: c5c6e821-f19b-4269-81de-34c79dd2731f
 ms.tgt_platform: multiple
 keywords:
-- Iadsnametranslation-Schnittstelle ADSI
-- Iadstranslate ADSI, using
-- ADSI ADSI, Beispielcode C/C++, using iadstranslate
+- IADsNameTranslate-Schnittstelle ADSI
+- IADsTranslate ADSI mit
+- ADSI ADSI , Beispielcode C/C++ , mit IADsTranslate
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: e7ff5b44288289f118c41463a22e619aa815ecb2
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: 60e167363e3c35337e74851dc43126593772aac56236f27e10a98a81b533159e
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "103855296"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119023448"
 ---
-# <a name="iadsnametranslate-interface"></a>Iadsnametranslation-Schnittstelle
+# <a name="iadsnametranslate-interface"></a>IADsNameTranslate-Schnittstelle
 
-Die [**iadsnametranslation**](/windows/desktop/api/Iads/nn-iads-iadsnametranslate) -Schnittstelle wird verwendet, um Distinguished Names zwischen verschiedenen Formaten zu übersetzen. Namens Übersetzungen werden auf dem Verzeichnisserver ausgeführt, und diese Schnittstelle ist derzeit nur für Objekte in Active Directory verfügbar.
+Die [**IADsNameTranslate-Schnittstelle**](/windows/desktop/api/Iads/nn-iads-iadsnametranslate) wird verwendet, um Distinguished Names zwischen verschiedenen Formaten zu übersetzen. Namensübersetzungen werden auf dem Verzeichnisserver ausgeführt, und diese Schnittstelle ist derzeit nur für Objekte in Active Directory verfügbar.
 
-Im folgenden Codebeispiel wird ein Konto Name aus dem Windows-Format in das LDAP-Format konvertiert.
+Im folgenden Codebeispiel wird ein Kontoname aus dem Windows in das LDAP-Format konvertiert.
 
 
 ```C++
@@ -51,9 +51,9 @@ HRESULT TranslateNTNameToLDAPName( BSTR * pNTName, BSTR * pLDAPName )
 
 
 
- 
+ 
 
- 
+ 
 
 
 

@@ -1,6 +1,6 @@
 ---
-description: 'Weitere Informationen finden Sie unter: JET_THREADSTATS. cpageread-Eigenschaft'
-title: JET_THREADSTATS. cpageread-Eigenschaft (Microsoft. ISAM. ESENT. Interop. Vista)
+description: 'Weitere Informationen zu: JET_THREADSTATS.cPageRead-Eigenschaft'
+title: JET_THREADSTATS.cPageRead-Eigenschaft (Microsoft.Isam.Esent.Interop.Vista)
 TOCTitle: 'cPageRead property '
 ms:assetid: P:Microsoft.Isam.Esent.Interop.Vista.JET_THREADSTATS.cPageRead
 ms:mtpsurl: https://msdn.microsoft.com/library/microsoft.isam.esent.interop.vista.jet_threadstats.cpageread(v=EXCHG.10)
@@ -26,19 +26,19 @@ api_type:
 api_location:
 - Microsoft.Isam.Esent.Interop.dll
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: 4c5a8ed28a4f45abe57ca71eff89ab2ce374bf0d
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: fc2dbc98adb0299cc5d409e4bbb278a9a82ac51d2f19121d8f6d46b0371e6927
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106362903"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119832630"
 ---
-# <a name="jet_threadstatscpageread-property"></a>JET_THREADSTATS. cpageread (Eigenschaft)
+# <a name="jet_threadstatscpageread-property"></a>JET_THREADSTATS.cPageRead-Eigenschaft
 
-Ruft die Gesamtanzahl der Datenbankseiten ab, die von der Datenbank-Engine auf dem aktuellen Thread von der Festplatte abgerufen wurden.
+Ruft die Gesamtzahl der Datenbankseiten ab, die von der Datenbank-Engine im aktuellen Thread vom Datenträger abgerufen wurden.
 
-**Namespace:**  [Microsoft. ISAM. ESENT. Interop. Vista](./microsoft.isam.esent.interop.vista-namespace.md)  
-**Assembly:**  Microsoft. ISAM. ESENT. Interop (in Microsoft.Isam.Esent.Interop.dll)
+**Namespace:**  [Microsoft.Isam.Esent.Interop.Vista](./microsoft.isam.esent.interop.vista-namespace.md)  
+**Assembly:**  Microsoft.Isam.Esent.Interop (in Microsoft.Isam.Esent.Interop.dll)
 
 ## <a name="syntax"></a>Syntax
 
@@ -60,14 +60,14 @@ public int cPageRead { get; internal set; }
 
 #### <a name="property-value"></a>Eigenschaftswert
 
-Typ: [System. Int32](/dotnet/api/system.int32)  
+Typ: [System.Int32](/dotnet/api/system.int32)  
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
-#### <a name="reference"></a>Referenz
+#### <a name="reference"></a>Verweis
 
 [JET_THREADSTATS Struktur](./jet-threadstats-structure2.md)
 
-[Mitglieder JET_THREADSTATS](./jet-threadstats-members.md)
+[JET_THREADSTATS-Member](./jet-threadstats-members.md)
 
-[Microsoft. ISAM. ESENT. Interop. Vista-Namespace](./microsoft.isam.esent.interop.vista-namespace.md)
+[Microsoft.Isam.Esent.Interop.Vista-Namespace](./microsoft.isam.esent.interop.vista-namespace.md)

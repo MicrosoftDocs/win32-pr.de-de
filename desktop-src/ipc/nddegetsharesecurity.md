@@ -1,7 +1,7 @@
 ---
-description: Ruft die Sicherheits Beschreibung ab, die der DDE-Freigabe zugeordnet ist. Dies erfolgt in der Regel zur Bearbeitung.
+description: Ruft den Sicherheitsdeskriptor ab, der der DDE-Freigabe zugeordnet ist. Dies erfolgt in der Regel für die Bearbeitung.
 ms.assetid: 7d3cc965-45ee-40ce-a462-568200592345
-title: Nddebug-sharesecurity-Funktion (nddecoapi. h)
+title: NDdeGetShareSecurity-Funktion (Nddeapi.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -15,18 +15,18 @@ api_type:
 - DllExport
 api_location:
 - Nddeapi.dll
-ms.openlocfilehash: dae1352d9e7c45f9ce301dd30d4e7f73d508498c
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 101767516e8bd726ebf1a64ad83cfd924b3696a56d810895b4d9a9ed9a1e0ef8
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "103868352"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119829340"
 ---
-# <a name="nddegetsharesecurity-function"></a>Ndde GetShareSecurity-Funktion
+# <a name="nddegetsharesecurity-function"></a>NDdeGetShareSecurity-Funktion
 
-\[Network DDE wird nicht mehr unterstützt. Nddeapi.dll ist unter Windows Vista vorhanden, aber alle Funktionsaufrufe geben "ndde" \_ nicht \_ implementiert zurück.\]
+\[Netzwerk-DDE wird nicht mehr unterstützt. Nddeapi.dll ist auf Windows Vista vorhanden, aber alle Funktionsaufrufe geben NDDE \_ NICHT \_ IMPLEMENTIERT zurück.\]
 
-Ruft die Sicherheits Beschreibung ab, die der DDE-Freigabe zugeordnet ist. Dies erfolgt in der Regel zur Bearbeitung.
+Ruft den Sicherheitsdeskriptor ab, der der DDE-Freigabe zugeordnet ist. Dies erfolgt in der Regel für die Bearbeitung.
 
 ## <a name="syntax"></a>Syntax
 
@@ -48,53 +48,53 @@ UINT NDdeGetShareSecurity(
 
 <dl> <dt>
 
-*lpszserver* \[ in\]
+*lpszServer* \[ In\]
 </dt> <dd>
 
-Der Name des Servers, auf dem sich die DSDM befindet.
+Der Name des Servers, auf dem sich das DSDM befindet.
 
 </dd> <dt>
 
-*lpszsharename* \[ in\]
+*lpszShareName* \[ In\]
 </dt> <dd>
 
-Der Name der Freigabe, deren Sicherheits Beschreibung von der DSDM abgerufen werden soll. Dieser Parameter darf nicht **null** sein.
+Der Name der Freigabe, deren Sicherheitsbeschreibung aus dem DSDM abgerufen werden soll. Dieser Parameter darf nicht **NULL sein.**
 
 </dd> <dt>
 
-*Si* \[ in\]
+*si* \[ In\]
 </dt> <dd>
 
-Ein [**Sicherheits \_ Informations**](/windows/desktop/SecAuthZ/security-information) Wert, der die Sicherheitsinformationen angibt, die aus der Sicherheits Beschreibung abgerufen werden sollen, die der Freigabe zugeordnet ist.
+Ein [**SECURITY \_ INFORMATION-Wert,**](/windows/desktop/SecAuthZ/security-information) der die Sicherheitsinformationen angibt, die aus dem der Freigabe zugeordneten Sicherheitsdeskriptor abgerufen werden sollen.
 
 </dd> <dt>
 
-*pSD* \[ vorgenommen\]
+*pSD* \[ out\]
 </dt> <dd>
 
-Ein Zeiger auf eine [**Sicherheits \_ deskriptorstruktur**](/windows/desktop/api/winnt/ns-winnt-security_descriptor) , die die selbst relative Sicherheits Beschreibung empfängt. Dieser Parameter kann **NULL** sein. Wenn dieser Parameter **null** ist, bestimmt die DSDM die Größe der angeforderten Sicherheitsinformationen und gibt die Anzahl der Bytes zurück, die im *lpcbsdrequired* -Parameter benötigt werden, sowie den \_ zu kleinen ndde buf- \_ \_ Fehlercode.
+Ein Zeiger auf eine [**SECURITY \_ DESCRIPTOR-Struktur,**](/windows/desktop/api/winnt/ns-winnt-security_descriptor) die den selbst relativen Sicherheitsdeskriptor empfängt. Dieser Parameter kann **NULL** sein. Wenn dieser Parameter **NULL** ist, bestimmt das DSDM die Größe der angeforderten Sicherheitsinformationen und gibt die Anzahl der Bytes zurück, die im *lpcbsdRequired-Parameter* zusammen mit dem NDDE BUF TOO SMALL-Fehlercode benötigt \_ \_ \_ werden.
 
 </dd> <dt>
 
-*cbsd* \[ in\]
+*cbSD* \[ In\]
 </dt> <dd>
 
-Die Größe des *pSD* -Puffers. Dieser Parameter muss NULL sein, wenn das *pSD* **null** ist.
+Die Größe des *pSD-Puffers.* Dieser Parameter muss 0 (null) sein, *wenn pSD* **NULL ist.**
 
 </dd> <dt>
 
-*lpcbsdrequired* \[ vorgenommen\]
+*lpcbsdRequired* \[ out\]
 </dt> <dd>
 
-Ein Zeiger auf die Variable, die die tatsächliche Größe der abgerufenen Sicherheits Beschreibung empfängt. Dieser Parameter darf nicht **null** sein.
+Ein Zeiger auf die Variable, die die tatsächliche Größe des abgerufenen Sicherheitsdeskriptors empfängt. Dieser Parameter darf nicht **NULL sein.**
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Wenn die Funktion erfolgreich ausgeführt wird, lautet der Rückgabewert "ndde \_ No \_ Error".
+Wenn die Funktion erfolgreich ist, ist der Rückgabewert NDDE \_ NO \_ ERROR.
 
-Wenn die Funktion fehlschlägt, ist der Rückgabewert ein Fehlercode, der durch den Aufruf von [**nddegeterrorstring**](nddegeterrorstring.md)in eine Text Fehlermeldung übersetzt werden kann. Wenn der *pSD* -Parameter **null** war, wird ndde \_ buf \_ zu \_ klein zurückgegeben.
+Wenn die Funktion fehlschlägt, ist der Rückgabewert ein Fehlercode, der durch Aufrufen von [**NDdeGetErrorString**](nddegeterrorstring.md)in eine Textfehlermeldung übersetzt werden kann. Wenn der *pSD-Parameter* **NULL war,** wird NDDE \_ BUF \_ TOO SMALL \_ zurückgegeben.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -104,27 +104,27 @@ Wenn die Funktion fehlschlägt, ist der Rückgabewert ein Fehlercode, der durch 
 |-------------------------------------|----------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[nur Desktop-Apps\]<br/>                             |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                                   |
-| Header<br/>                   | <dl> <dt>Ndde API. h</dt> </dl>   |
-| Bibliothek<br/>                  | <dl> <dt>Ndde API. lib</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Nddeapi.h</dt> </dl>   |
+| Bibliothek<br/>                  | <dl> <dt>Nddeapi.lib</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Nddeapi.dll</dt> </dl> |
-| Unicode- und ANSI-Name<br/>   | **Nddebug-sharesecurityw** (Unicode) und **nddebug** -Freigabe (ANSI)<br/>    |
+| Unicode- und ANSI-Name<br/>   | **NDdeGetShareSecurityW** (Unicode) und **NDdeGetShareSecurityA** (ANSI)<br/>    |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[Übersicht über das Netzwerk dynamischer Datenaustausch](network-dynamic-data-exchange.md)
+[Übersicht dynamische Daten Exchange Netzwerksicherheit](network-dynamic-data-exchange.md)
 </dt> <dt>
 
-[Network DDE-Funktionen](network-dde-functions.md)
+[DDE-Netzwerkfunktionen](network-dde-functions.md)
 </dt> <dt>
 
-[**Sicherheits \_ Informationen**](/windows/desktop/SecAuthZ/security-information)
+[**\_SICHERHEITSINFORMATIONEN**](/windows/desktop/SecAuthZ/security-information)
 </dt> <dt>
 
-[**Ndde setsharesecurity**](nddesetsharesecurity.md)
+[**NDdeSetShareSecurity**](nddesetsharesecurity.md)
 </dt> </dl>
 
  

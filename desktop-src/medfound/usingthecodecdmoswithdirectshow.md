@@ -1,56 +1,56 @@
 ---
-description: Verwenden der Fenster Medien Codecs in DirectShow
+description: Verwenden der Fenstermediencodecs in DirectShow
 ms.assetid: 5b930447-6bf2-4bb3-8dfb-05f4c1e7cd64
-title: Verwenden der Fenster Medien Codecs in DirectShow
+title: Verwenden der Fenstermediencodecs in DirectShow
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: cb521c0e3897dc2415fbd613f97b755a146657d3
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 495a2675335474351da80b9845fba67f9e967d637d7c9d9c749ffc2f12ce3ea4
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106343380"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120012180"
 ---
-# <a name="using-the-window-media-codecs-in-directshow"></a>Verwenden der Fenster Medien Codecs in DirectShow
+# <a name="using-the-window-media-codecs-in-directshow"></a>Verwenden der Fenstermediencodecs in DirectShow
 
-Die Windows Media Audio-und Video Encoder-und Decoder-Objekte wurden ursprünglich entworfen und optimiert, um mit dem Datei Containerformat ASF und dem SDK für den Windows Media-Format arbeiten zu können. Die Codec-Objekte funktionieren in DirectShow für bestimmte Szenarien gut, d.... Dies gilt für CBR und eine qualitativ hochwertige VBR-Codierung von Videodaten strömen. Wenn Sie jedoch erwägen, die Codec-Objekte direkt in DirectShow mithilfe von Datei Containern als ASF zu verwenden, gibt es bestimmte Verhalten und Probleme, die Sie im Voraus beachten sollten.
+Die Windows Medienaudio- und Videoencoderobjekte wurden ursprünglich für die Arbeit mit dem ASF-Dateicontainerformat und dem Windows Media Format SDK entworfen und optimiert. Die Codecobjekte funktionieren in DirectShow für bestimmte Szenarien gut, nämlich für 1-Pass-CBR und qualitätsbasierte VBR-Codierung von Videostreams. Wenn Sie jedoch erwägen, die Codecobjekte direkt in DirectShow mit anderen Dateicontainern als ASF zu verwenden, gibt es bestimmte Verhaltensweisen und Probleme, die Sie im Voraus kennen sollten.
 
 > [!Note]  
-> Wenn Sie eigenständige Codecs mit DirectShow verwenden möchten, sollten Sie Sie wahrscheinlich nur als DMOS verwenden. Anders ausgedrückt: Sie verwenden die [**imediaobject**](/previous-versions/windows/desktop/api/mediaobj/nn-mediaobj-imediaobject) -Schnittstelle anstelle von [**IMF Transform**](/windows/desktop/api/mftransform/nn-mftransform-imftransform).
+> Wenn Sie eigenständige Codecs mit DirectShow verwenden möchten, sollten Sie sie wahrscheinlich nur als DMOs verwenden. Anders ausgedrückt: Sie verwenden die [**IMediaObject-Schnittstelle**](/previous-versions/windows/desktop/api/mediaobj/nn-mediaobj-imediaobject) anstelle von [**DURCHSICHTTransform.**](/windows/desktop/api/mftransform/nn-mftransform-imftransform)
 
  
 
-## <a name="wm-audio-in-avi-files"></a>WM-Audiodatei in AVI-Dateien
+## <a name="wm-audio-in-avi-files"></a>WM-Audio in AVI-Dateien
 
-Mithilfe von DirectShow können Sie WMA-Streams in ein beliebiges Datei Containerformat codieren, für das Sie einen Multiplexer-Filter verwenden. Die Windows Media Audio-und Video-Codec-Schnittstellen unterstützen WMA in AVI-Dateien jedoch nicht, da es nicht möglich ist, die standardmäßigen DirectShow-AVI-Wiedergabe Filter zu verwenden, um die audiovideosynchronisierung in einer AVI-Datei mit einem WMA-Stream aufrechtzuerhalten. Weitere Informationen finden Sie unter [Speichern von komprimierten Medien in AVI-Dateien](storingcompressedmediainavifiles.md).
+Sie können DirectShow verwenden, um WMA-Streams in ein beliebiges Dateicontainerformat zu codieren, für das Sie über einen Multiplexerfilter verfügen. Die Codecschnittstellen Windows Media Audio und Video unterstützen WMA in AVI-Dateien jedoch nicht, da es mithilfe der standardmäßigen DirectShow AVI-Wiedergabefilter nicht möglich ist, die Audiovideosynchronisierung in einer AVI-Datei mit einem WMA-Stream zu verwalten. Weitere Informationen finden Sie unter [Speichern komprimierter Medien in AVI-Dateien.](storingcompressedmediainavifiles.md)
 
-Der Audioencoder-DMO gibt Stichproben unterschiedlicher Dauer aus, auch wenn der Modus "Konstante Bitrate" angezeigt wird. Dies funktioniert daher am besten mit Datei Containerformaten, die Zeitstempel verwenden. AVI-Dateien stellen keinen Zeitstempel für jedes Audiobeispiel oder jede Gruppe von Beispielen bereit. In DirectShow stellt der avi-Splitter Filter Zeitstempel für jede Gruppe von Stichproben (jeden audioframe) basierend auf dem **navgbytespersec** -Wert in der [**WaveFormatEx**](/previous-versions/dd757713(v=vs.85)) -Struktur im AVI-Streamheader her.
+Der Audioencoder DMO Stichproben mit unterschiedlicher Dauer aus, selbst wenn er sich im Modus "Konstante Bitrate" befindet. Es funktioniert daher am besten mit Dateicontainerformaten, die Zeitstempel verwenden. AVI-Dateien stellen keinen Zeitstempel für jedes Audiobeispiel oder jede Gruppe von Beispielen zur Verfügung. In DirectShow stellt der AVI-Splitterfilter Zeitstempel für jede Gruppe von Stichproben (jeden Audioframe) basierend auf dem **nAvgBytesPerSec-Wert** in der [**WAVEFORMATEX-Struktur**](/previous-versions/dd757713(v=vs.85)) im AVI-Streamheader zusammen.
 
-Die Annahme, dass diese Berechnung zugrunde liegt, besteht darin, dass alle Audiobeispiele im Stream die gleiche Dauer haben. die vom DMO ausgegebenen Beispiele sind jedoch nicht identisch, sodass die vom avi-Splitter angewendeten Zeitstempel nicht exakt sind. Aus diesem Grund ist es nicht möglich, den avi-Splitter oder den Audiodecoder-DMO zu ändern, um die Verwendung einer beliebigen DirectShow-basierten Anwendung für die Wiedergabe von AVI-Dateien mit Audiodaten und Videostreams synchron zu verwenden. In einigen Fällen funktioniert der Voice-Codec von Windows Media Audio 9, aber auch dies verliert nach jedem Suchvorgang die Synchronisierung, sodass er nicht als geeignete Lösung angesehen werden kann.
+Die Annahme, die dieser Berechnung zugrunde liegt, ist, dass alle Audiobeispiele im Stream eine gleiche Dauer haben. Die Stichproben, die vom DMO ausgegeben werden, sind jedoch nicht gleich lange, sodass die vom AVI-Splitter angewendeten Zeitstempel nicht genau sind. Daher ist es nicht möglich, ohne den AVI-Splitter oder den Audiodecoder DMO zu ändern, eine directShow-basierte Anwendung zu verwenden, um AVI-Dateien mit synchronen Audio- und Videostreams wieder zu wieder geben. Der Windows Media Audio 9 Voice-Codec funktioniert in einigen Fällen, aber auch dieser Vorgang verliert nach jedem Suchvorgang die Synchronisierung, sodass er nicht wirklich als praktikable Lösung angesehen werden kann.
 
-Wenn Sie über einen MP3-Encoder verfügen, können Sie AVI-Dateien mit WMV und MP3 für den Audiostream erstellen. Diese Dateien werden in Windows Media Player und anderen DirectShow-basierten Anwendungen ordnungsgemäß wiedergegeben, da der avi-Splitter einen speziellen Behandlungs Code für MP3-Streams enthält. Eine andere Möglichkeit ist die Verwendung von unkomprimierter PCM-Audiodaten, obwohl die resultierende Dateigröße deutlich größer als bei einem komprimierten Audiodatenstrom ist. Da die DirectShow-Beispielanwendung AVI-Dateien erstellt, wird die Verwendung des Audioencoders DMO nicht veranschaulicht.
+Wenn Sie über einen MP3-Encoder verfügen, können Sie AVI-Dateien mit WMV und MP3 für den Audiostream erstellen. Solche Dateien werden in Windows Media Player und anderen DirectShow-basierten Anwendungen ordnungsgemäß abspielt und suchen, da der AVI-Splitter speziellen Behandlungscode für MP3-Streams enthält. Eine weitere Möglichkeit ist die Verwendung von unkomprimiertem PCM-Audio, obwohl die resultierende Dateigröße deutlich größer ist als bei einem komprimierten Audiostream. Da die DirectShow-Beispielanwendung AVI-Dateien erstellt, wird die Verwendung des Audioencoder-DMO.
 
 ## <a name="one-pass-encoding"></a>One-Pass-Codierung
 
-Der Video Encoder DMO funktioniert problemlos in DirectShow für zwei Codierungs Modi: CBR und Qualitäts basiertes VBR. Solange Sie bei der Erstellung des Filter Diagramms auf die richtige Reihenfolge der Vorgänge folgen, wie in der Beispielanwendung veranschaulicht, ist es relativ einfach, WMV-Inhalte mithilfe von AVI Multiplexer und dem dateiwriter in eine AVI-Datei zu platzieren.
+Der Videoencoder DMO funktioniert problemlos in DirectShow für zwei Codierungsmodi: CBR und qualitätsbasierte VBR. Solange Sie beim Erstellen des Filterdiagramms die richtige Reihenfolge der Vorgänge befolgen, wie in der Beispielanwendung gezeigt, ist es relativ einfach, WMV-Inhalte mithilfe des AVI-Multiplexers und des File Writer in eine AVI-Datei zu platzieren.
 
-## <a name="two-pass-encoding"></a>Zwei-Pass-Codierung
+## <a name="two-pass-encoding"></a>Codierung mit zwei Durchgangen
 
-Die zwei-Pass-Codierungs Modi erfordern einen komplexeren Ansatz zum entwickeln und Streamen von Diagrammen, um zu verhindern, dass der DMO seinen Inhalt vor dem zweiten Durchlauf aus dem ersten Durchlauf legt. Bei der Codierung mit zwei Durchgängen ist es erforderlich, das Diagramm einmal auszuführen, damit DMO seine Vorverarbeitungs Analyse der Datei Daten durchführen kann. Anschließend wird das Diagramm zurück gezeichnet und erneut ausgeführt, damit das DMO die tatsächliche Codierung durchführen kann.
+Die Codierungsmodi mit zwei Durchgang erfordern einen komplexeren Ansatz zum Erstellen und Streamen von Diagrammen, um zu verhindern, dass DMO den Inhalt des ersten Durchgangs leert, bevor der zweite Durchgang beginnt. Bei der Codierung mit zwei Durchlaufs ist es erforderlich, den Graphen einmal ausführen, damit die DMO ihre Vorverarbeitungsanalyse der Dateidaten ausführen kann. Anschließend wird das Diagramm zurückgelädt und erneut ausgeführt, damit die DMO die eigentliche Codierung durchführen kann.
 
-Wenn das Diagramm für den zweiten Durchlauf in den Lauf Zustand wechselt, legt der DMO-Wrapper das discontinuity-Flag für das erste Beispiel fest, da der Zeitstempel nicht mit dem letzten Zeitstempel im ersten Durchlauf sequenziell ist. Wenn der DMO, der nicht für die Ausführung in DirectShow entworfen wurde, das discontinuity-Flag empfängt, führt er eine Leerung aus und verliert die vom ersten Durchlauf gespeicherten Daten. Um dieses Problem zu umgehen, besteht die beste Lösung wahrscheinlich darin, einen benutzerdefinierten DMO-Wrapper Filter zu schreiben, der das discontinuity-Flag nicht festgelegt, wenn das Diagramm nach dem ersten Durchlauf als Seeding festgelegt wird. Das Beispiel Video für Windows (Vfw) in diesem SDK veranschaulicht, wie die zwei-Pass-Codierung ausgeführt wird.
+Wenn das Diagramm für den zweiten Durchlauf in einen Ausführungszustand übergeht, legt der DMO-Wrapper das DISCONTINUITY-Flag für das erste Beispiel fest, da der Zeitstempel nicht sequenziell mit dem letzten Zeitstempel des ersten Durchlaufs ist. Wenn der DMO, der auf diese Weise nicht in DirectShow funktioniert, das FLAG DISCONTINUITY empfängt, führt er eine Leerung durch und verliert die vom ersten Durchlauf gespeicherten Daten. Um dieses Problem zu beheben, besteht die beste Lösung wahrscheinlich im Schreiben eines benutzerdefinierten DMO-Wrapperfilters, der das DISCONTINUITY-Flag nicht festgelegt, wenn das Diagramm nach dem ersten Durchlauf durchgesuchet wird. Das Video for Windows (VfW)-Beispiel in diesem SDK veranschaulicht, wie die Codierung mit zwei Durchgangen funktioniert.
 
-## <a name="interlaced-content"></a>Zeilen Sprung Inhalt
+## <a name="interlaced-content"></a>Interlaced Content
 
-Der WMV Encoder DMO ist in der Lage, Zeilen Sprung Inhalte zu codieren, während die Überlappung beibehalten wird. Dies ist nützlich für Inhalte, die von einem Fernsehgerät aufgezeichnet werden und möglicherweise auch auf einem Fernsehgerät wiedergegeben werden. Es ist jedoch nicht möglich, die Überlappung mit dem standardmäßigen DMO-Wrapper beizubehalten, da dieser Filter [**inssbuffer**](/previous-versions/windows/desktop/api/wmsbuffer/nn-wmsbuffer-inssbuffer) in den Eingabe Beispielen nicht unterstützt.
+Der WMV-Encoder DMO in der Lage, interlaced-Inhalte zu codieren, während das Interlacing beibehalten wird. Dies ist nützlich für Inhalte, die von einem TV erfasst werden und möglicherweise auch auf einem TV-Gerät wiedergeknendet werden. Es ist jedoch nicht möglich, interlacing mithilfe des standardmäßigen DMO Wrappers zu erhalten, da dieser Filter [**INSSBuffer**](/previous-versions/windows/desktop/api/wmsbuffer/nn-wmsbuffer-inssbuffer) für seine Eingabebeispiele nicht unterstützt.
 
-Der DMO verwendet diese Schnittstelle zum Abrufen der Zeilen Sprung Einstellungen für jedes empfangene Beispiel. Wenn die Schnittstelle nicht gefunden wird, wie es bei dem DMO-Wrapper der Fall ist, behandelt die DMO einfach die Eingabe Beispiele als nicht-Zeilen Sprung. Zum Ausführen von Zeilen Sprung Codierung in DirectShow gibt es mehrere Alternativen. Am einfachsten ist es, das Windows Media Format 9-Serien-SDK entweder direkt oder mithilfe des "WM ASF Writer DirectShow Filter" zu verwenden, um eine Zeilen Sprung-ASF-Datei zu erstellen. Anschließend können Sie diese Datei in ein anderes Format umwandeln. Wenn Sie in AVI umwandeln, verfügen Sie über eine Zeilen Sprung Datei, aber die standardmäßigen DirectShow AVI-Wiedergabe Filter erkennen Sie nicht als solche, da Sie [**VIDEOINFOHEADER2**](/previous-versions/windows/desktop/api/dvdmedia/ns-dvdmedia-videoinfoheader2)nicht unterstützen. Ein anderer Ansatz besteht darin, einen eigenen DMO-Wrapper Filter zu schreiben, der die [**inssbuffer**](/previous-versions/windows/desktop/api/wmsbuffer/nn-wmsbuffer-inssbuffer) -Schnittstelle unterstützt.
+Die DMO verwendet diese Schnittstelle, um die Interlaced-Einstellungen für jedes empfangene Beispiel zu erhalten. Wenn die Schnittstelle nicht gefunden wird, wie dies beim DMO Wrapper der Fall ist, behandelt der DMO die Eingabebeispiele einfach als nicht geschachtelt. Für die Interlacingcodierung in DirectShow gibt es mehrere Alternativen. Der einfachste Ansatz ist wahrscheinlich die Verwendung des Windows Media Format 9 Series SDK entweder direkt oder mithilfe des WM ASF Writer DirectShow-Filters, um eine ASF-Datei mit Interlacing zu erstellen. Sie können diese Datei dann in ein anderes Format transcodieren. Wenn Sie in AVI transcodieren, verfügen Sie über eine Interlaced-Datei, aber die standardmäßigen DirectShow AVI-Wiedergabefilter erkennen sie nicht als solche, da sie [**VIDEOINFOHEADER2 nicht unterstützen.**](/previous-versions/windows/desktop/api/dvdmedia/ns-dvdmedia-videoinfoheader2) Ein anderer Ansatz ist das Schreiben eines eigenen DMO Wrapperfilters, der die [**INSSBuffer-Schnittstelle**](/previous-versions/windows/desktop/api/wmsbuffer/nn-wmsbuffer-inssbuffer) unterstützt.
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[Arbeiten mit Codec-DMOS](workingwithcodecdmos.md)
+[Arbeiten mit Codec-DMOs](workingwithcodecdmos.md)
 </dt> </dl>
 
  

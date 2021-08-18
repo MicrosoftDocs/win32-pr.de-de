@@ -1,6 +1,6 @@
 ---
-description: 'Weitere Informationen finden Sie hier: JET_DBID. Methode "destring"'
-title: JET_DBID. Methode "destring"
+description: 'Weitere Informationen finden Sie unter: JET_DBID. ToString-Methode'
+title: JET_DBID. ToString-Methode
 TOCTitle: 'ToString method '
 ms:assetid: M:Microsoft.Isam.Esent.Interop.JET_DBID.ToString
 ms:mtpsurl: https://msdn.microsoft.com/library/microsoft.isam.esent.interop.jet_dbid.tostring(v=EXCHG.10)
@@ -20,19 +20,19 @@ api_type:
 api_location:
 - Microsoft.Isam.Esent.Interop.dll
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: d705e9899526d6196ba1b4e8b84bc23b933315ff
-ms.sourcegitcommit: 4d4a6e9ad5de37e467cd3164276771b71e1f113f
+ms.openlocfilehash: aca24af6600fdbe482d93bea57ceaa738acea478932b412506d7b94faf86c372
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/05/2021
-ms.locfileid: "106389134"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120017240"
 ---
-# <a name="jet_dbidtostring-method"></a>JET_DBID. Methode "destring"
+# <a name="jet_dbidtostring-method"></a>JET_DBID. ToString-Methode
 
-Generiert eine Zeichen folgen Darstellung der-Struktur.
+Generiert eine Zeichenfolgendarstellung der -Struktur.
 
-**Namespace:**  [Microsoft. ISAM. ESENT. Interop](./microsoft.isam.esent.interop-namespace.md)  
-**Assembly:**  Microsoft. ISAM. ESENT. Interop (in Microsoft.Isam.Esent.Interop.dll)
+**Namespace:**  [Microsoft.Isam.Esent.Interop](./microsoft.isam.esent.interop-namespace.md)  
+**Assembly:**  Microsoft.Isam.Esent.Interop (in Microsoft.Isam.Esent.Interop.dll)
 
 ## <a name="syntax"></a>Syntax
 
@@ -52,17 +52,17 @@ public override string ToString()
 
 #### <a name="return-value"></a>Rückgabewert
 
-Typ: [System. String](/dotnet/api/system.string)  
-Die-Struktur als Zeichenfolge.  
+Typ: [System.String](/dotnet/api/system.string)  
+Die -Struktur als Zeichenfolge.  
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
-#### <a name="reference"></a>Referenz
+#### <a name="reference"></a>Verweis
 
-[JET_DBID Struktur](./jet-dbid-structure.md)
+[JET_DBID-Struktur](./jet-dbid-structure.md)
 
-[Mitglieder JET_DBID](./jet-dbid-members.md)
+[JET_DBID Member](./jet-dbid-members.md)
 
-[Überladung von ""](./jet-dbid.tostring-method.md)
+[ToString-Überladung](./jet-dbid.tostring-method.md)
 
-[Microsoft. ISAM. ESENT. Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)
+[Microsoft.Isam.Esent.Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)

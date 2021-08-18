@@ -1,9 +1,9 @@
 ---
-title: Text. FontStyle
-description: Das FontStyle-Attribut gibt den Schrift Schnitt für das Text Steuerelement an oder ruft ihn ab.
+title: TEXT.fontStyle
+description: Das fontStyle-Attribut gibt den Schriftschnitt für das Text-Steuerelement an oder ruft es ab.
 ms.assetid: 1bb99305-dccc-489d-9a02-7cb306f0d47d
 keywords:
-- Text. FontStyle-Fenster Media Player
+- TEXT.fontStyle-Windows Media Player
 topic_type:
 - apiref
 api_name:
@@ -12,16 +12,16 @@ api_type:
 - NA
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 0ab6ddfb3ff31cba50027c010ed10c2129d45134
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 4fbdbe021890b3a76fbae3838cbebe958956af82ff468f990fe6fd9e91345a48
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106369959"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119762900"
 ---
-# <a name="textfontstyle"></a>Text. FontStyle
+# <a name="textfontstyle"></a>TEXT.fontStyle
 
-Das **FontStyle** -Attribut gibt den Schrift Schnitt für das Text Steuerelement an oder ruft ihn ab.
+Das **fontStyle-Attribut** gibt den Schriftschnitt für das Text-Steuerelement an oder ruft es ab.
 
 ``` syntax
         elementID.fontStyle
@@ -29,27 +29,27 @@ Das **FontStyle** -Attribut gibt den Schrift Schnitt für das Text Steuerelement
 
 ## <a name="possible-values"></a>Mögliche Werte
 
-Dieses Attribut ist eine Lese- **/schreibzeichenfolge** , die einen oder mehrere der folgenden Werte enthält.
+Dieses Attribut ist eine **Zeichenfolge** mit Lese-/Schreibzugriff, die mindestens einen der folgenden Werte enthält.
 
 
 
-| Wert     | BESCHREIBUNG                 |
+| Wert     | Beschreibung                 |
 |-----------|-----------------------------|
-| Fett      | Fett Schriftstil.            |
-| Kursiv    | Kursiv Schriftstil.          |
-| Underline | Unterstreichung der Schriftart.       |
-| Durchgestrichen | Stil der Strikeout-Schriftart.       |
-| Normal    | Standard. Normaler Schriftart Stil. |
+| Fett      | Fetter Schriftschnitt.            |
+| Kursiv    | Italischer Schriftschnitt.          |
+| Underline | Unterstrichen Sie den Schriftschnitt.       |
+| Durchgestrichen | Schriftschnitt mit durchsaarten Zeichen.       |
+| Normal    | Standard. Normaler Schriftschnitt. |
 
 
 
  
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Eine beliebige Kombination der Werte kann mit Leerzeichen getrennt verwendet werden. Der normale Stil hat Vorrang vor allen anderen Werten, und alle anderen Werte, die zusammen mit normal angegeben werden, werden ignoriert.
+Jede Kombination der Werte kann verwendet werden, getrennt durch Leerzeichen. Der Normal-Stil hat Vorrang vor allen anderen Werten, und alle anderen werte, die zusammen mit Normal angegeben werden, werden ignoriert.
 
-Im [value](text-value.md) -Attribut finden Sie ein Beispiel, das veranschaulicht, wie die Attribute des **Text** -Elements verwendet werden.
+Ein Beispiel, das veranschaulicht, wie die Attribute des **TEXT-Elements** verwendet werden, finden Sie im [Value-Attribut.](text-value.md)
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -57,15 +57,15 @@ Im [value](text-value.md) -Attribut finden Sie ein Beispiel, das veranschaulicht
 
 | Anforderung | Wert |
 |--------------------|------------------------------------------------------|
-| Version<br/> | Windows Media Player, Version 7,0 oder höher<br/> |
+| Version<br/> | Windows Media Player Version 7.0 oder höher<br/> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Text-Element**](text-element.md)
+[**TEXT-Element**](text-element.md)
 </dt> </dl>
 
  

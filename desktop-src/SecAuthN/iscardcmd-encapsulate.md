@@ -1,7 +1,7 @@
 ---
-description: Die Kapselungsmethode kapselt die angegebene Application Protocol Data Unit (APDU) für die Übertragung an eine Smartcard in ein anderes Befehls-APDU.
+description: Die Encapsulate-Methode kapselt den angegebenen Befehl Application Protocol Data Unit (APDU) in eine andere Befehls-APDU für die Übertragung an eine Smartcard.
 ms.assetid: dfffad09-046b-46cb-b6fd-286a4bbf1066
-title: 'Iscardcmd:: Kapseln-Methode (scarddat. h)'
+title: ISCardCmd::Encapsulate-Methode (Scarddat.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,18 +13,18 @@ api_type:
 - COM
 api_location:
 - Scardssp.dll
-ms.openlocfilehash: cd671a11edd9977695eeaf858e38f962b3dd0962
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: f531d0d5f55bea1fe63875a9feb508eb8b4c0e830705bfad2603cc52664c6f44
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106350011"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120015120"
 ---
-# <a name="iscardcmdencapsulate-method"></a>Iscardcmd:: Kapseln-Methode
+# <a name="iscardcmdencapsulate-method"></a>ISCardCmd::Encapsulate-Methode
 
-\[Die **Kapseln** -Methode ist für die Verwendung in den Betriebssystemen verfügbar, die im Abschnitt "Anforderungen" angegeben sind. Es ist nicht für die Verwendung in Windows Server 2003 mit Service Pack 1 (SP1) und höher, Windows Vista, Windows Server 2008 und nachfolgenden Versionen des Betriebssystems verfügbar. Die [Smartcard-Module](/previous-versions/windows/desktop/secsmart/smart-card-modules) bieten eine ähnliche Funktionalität.\]
+\[Die **Encapsulate-Methode** ist für die Verwendung in den im Abschnitt Anforderungen angegebenen Betriebssystemen verfügbar. Es ist nicht für die Verwendung in Windows Server 2003 mit Service Pack 1 (SP1) und höher, Windows Vista, Windows Server 2008 und nachfolgenden Versionen des Betriebssystems verfügbar. Die [Smartcardmodule](/previous-versions/windows/desktop/secsmart/smart-card-modules) bieten ähnliche Funktionen.\]
 
-Die **Kapselungsmethode** kapselt die angegebene [*Application Protocol Data Unit*](../secgloss/a-gly.md) (APDU) für die Übertragung an eine [*Smartcard*](../secgloss/s-gly.md)in ein anderes Befehls-APDU.
+Die **Encapsulate-Methode** kapselt den angegebenen Befehl [*Application Protocol Data Unit*](../secgloss/a-gly.md) (APDU) in einen anderen Befehls-APDU für die Übertragung an eine [*Smartcard.*](../secgloss/s-gly.md)
 
 ## <a name="syntax"></a>Syntax
 
@@ -42,60 +42,60 @@ HRESULT Encapsulate(
 
 <dl> <dt>
 
-*papdu* \[ in\]
+*pApdu* \[ In\]
 </dt> <dd>
 
-Zeiger auf das zu gekapselte APDU.
+Zeiger auf das APDU, das gekapselt werden soll.
 
 </dd> <dt>
 
-*Apdutype* \[ in\]
+*ApduType* \[ In\]
 </dt> <dd>
 
-ISO 7816-4-Fall für [*T = 0*](../secgloss/t-gly.md) -Übertragungen.
+ISO 7816-4-Case für [*T=0-Übertragungen.*](../secgloss/t-gly.md)
 
 <dl><span id="ISO_CASE_1"></span><span id="iso_case_1"></span><dt>
 
-**ISO- \_ Fall \_ 1**
+**ISO \_ CASE \_ 1**
 </dt><span id="ISO_CASE_2"></span><span id="iso_case_2"></span><dt>
 
-**ISO- \_ Fall \_ 2**
+**ISO \_ CASE \_ 2**
 </dt><span id="ISO_CASE_3"></span><span id="iso_case_3"></span><dt>
 
-**ISO- \_ Fall \_ 3**
+**ISO \_ CASE \_ 3**
 </dt><span id="ISO_CASE_4"></span><span id="iso_case_4"></span><dt>
 
-**ISO- \_ Fall \_ 4**
+**ISO \_ CASE \_ 4**
 </dt> </dl> </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Die-Methode gibt einen der folgenden möglichen Werte zurück.
+Die -Methode gibt einen der folgenden möglichen Werte zurück.
 
 
 
 | Rückgabecode                                                                                   | Beschreibung                                     |
 |-----------------------------------------------------------------------------------------------|-------------------------------------------------|
 | <dl> <dt>**S \_ OK**</dt> </dl>          | Operation erfolgreich abgeschlossen.<br/>    |
-| <dl> <dt>**E \_ invalidArg**</dt> </dl>  | Ungültiger Parameter.<br/>                   |
-| <dl> <dt>**E- \_ Zeiger**</dt> </dl>     | Ein fehlerhafter Zeiger wurde in *papdu* übermittelt.<br/> |
-| <dl> <dt>**E \_ outo-Memory**</dt> </dl> | Nicht genügend Arbeitsspeicher.<br/>                       |
+| <dl> <dt>**E \_ INVALIDARG**</dt> </dl>  | Ungültiger Parameter.<br/>                   |
+| <dl> <dt>**\_E-ZEIGER**</dt> </dl>     | Ein fehlerhafter Zeiger wurde in *pApdu übergeben.*<br/> |
+| <dl> <dt>**E \_ OUTOFMEMORY**</dt> </dl> | Nicht genügend Arbeitsspeicher.<br/>                       |
 
 
 
  
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Zum Erstellen eines Befehls-APDU rufe Sie [**buildcmd**](iscardcmd-buildcmd.md)auf.
+Rufen Sie [**BuildCmd**](iscardcmd-buildcmd.md)auf, um eine Befehls-APDU zu erstellen.
 
-Eine Liste aller Methoden, die von dieser Schnittstelle bereitgestellt werden, finden Sie unter [**iscardcmd**](iscardcmd.md).
+Eine Liste aller von dieser Schnittstelle bereitgestellten Methoden finden Sie unter [**ISCardCmd**](iscardcmd.md).
 
-Zusätzlich zu den oben aufgeführten com-Fehlercodes gibt diese Schnittstelle möglicherweise einen Fehlercode für die Smartcard zurück, wenn eine smartcardfunktion aufgerufen wurde, um die Anforderung abzuschließen. Weitere Informationen finden Sie unter [Smartcard-Rückgabewerte](authentication-return-values.md).
+Zusätzlich zu den oben aufgeführten COM-Fehlercodes gibt diese Schnittstelle möglicherweise einen Smartcard-Fehlercode zurück, wenn eine Smartcardfunktion aufgerufen wurde, um die Anforderung zu erfüllen. Weitere Informationen finden Sie unter [Smartcard-Rückgabewerte.](authentication-return-values.md)
 
 ## <a name="examples"></a>Beispiele
 
-Im folgenden Beispiel wird gezeigt, wie Sie einen Befehls-APDU Kapseln. Im Beispiel wird davon ausgegangen, dass pibyteapdu ein gültiger Zeiger auf eine Instanz der [**ibytebuffer**](ibytebuffer.md) -Schnittstelle ist.
+Das folgende Beispiel zeigt, wie eine Befehls-APDU gekapselt wird. Im Beispiel wird davon ausgegangen, dass pIByteApdu ein gültiger Zeiger auf eine Instanz der [**IByteBuffer-Schnittstelle**](ibytebuffer.md) ist.
 
 
 ```C++
@@ -119,25 +119,25 @@ if (FAILED(hr))
 
 | Anforderung | Wert |
 |-------------------------------------|-----------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows XP \[ -Desktop-Apps\]<br/>                                             |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/>                                    |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ XP-Desktop-Apps\]<br/>                                             |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                                    |
 | Ende des Supports (Client)<br/>    | Windows XP<br/>                                                                   |
-| Ende des Supports (Server)<br/>    | Windows Server 2003<br/>                                                          |
-| Header<br/>                   | <dl> <dt>"Scarddat. h"</dt> </dl>   |
-| Typbibliothek<br/>             | <dl> <dt>Scarddat. tlb</dt> </dl> |
+| Ende des Supports (Server)<br/>    | Windows Server 2003<br/>                                                          |
+| Header<br/>                   | <dl> <dt>Scarddat.h</dt> </dl>   |
+| Typbibliothek<br/>             | <dl> <dt>Scarddat.tlb</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Scardssp.dll</dt> </dl> |
-| IID<br/>                      | IID \_ iscardcmd ist als D5778AE3-43DE-11D0-9171-00AA00C18068 definiert.<br/>            |
+| IID<br/>                      | IID \_ ISCardCmd ist als D5778AE3-43DE-11D0-9171-00AA00C18068 definiert.<br/>            |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Buildcmd**](iscardcmd-buildcmd.md)
+[**BuildCmd**](iscardcmd-buildcmd.md)
 </dt> <dt>
 
-[**Iscardcmd**](iscardcmd.md)
+[**ISCardCmd**](iscardcmd.md)
 </dt> </dl>
 
  

@@ -1,11 +1,11 @@
 ---
-title: TaskService. Connected (Eigenschaft)
-description: Ruft bei der Skripterstellung einen booleschen Wert ab, der angibt, ob eine Verbindung mit dem Taskplaner-Dienst besteht.
+title: TaskService.Connected (Eigenschaft)
+description: Für die Skripterstellung ruft einen booleschen Wert ab, der angibt, ob Sie mit dem Taskplaner sind.
 ms.assetid: 2b04def0-c4eb-4c81-8aa0-6a5b47944243
 keywords:
 - Verbundene Eigenschaften Taskplaner
-- Verbundene Eigenschaften Taskplaner, Task Service-Objekt
-- Task Service-Objekt Taskplaner, verbundene Eigenschaft
+- Verbundene Eigenschaft Taskplaner , TaskService-Objekt
+- TaskService-Objekt Taskplaner , Connected-Eigenschaft
 topic_type:
 - apiref
 api_name:
@@ -16,16 +16,16 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 07e39d75f72139cfa141e969acadfc0a7ea2c019
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 60e66e22092d31a29cb15ca9c85b0bdea20f765e4244f39b8507c525e27383b7
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104519103"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119772010"
 ---
-# <a name="taskserviceconnected-property"></a>TaskService. Connected (Eigenschaft)
+# <a name="taskserviceconnected-property"></a>TaskService.Connected (Eigenschaft)
 
-Ruft bei der Skripterstellung einen booleschen Wert ab, der angibt, ob eine Verbindung mit dem Taskplaner-Dienst besteht.
+Für die Skripterstellung ruft einen booleschen Wert ab, der angibt, ob Sie mit dem Taskplaner sind.
 
 Diese Eigenschaft ist schreibgeschützt.
 
@@ -40,7 +40,7 @@ TaskService.Connected
 
 ## <a name="property-value"></a>Eigenschaftswert
 
-Ein boolescher Wert, der angibt, ob eine Verbindung mit dem Taskplaner-Dienst besteht.
+Ein boolescher Wert, der angibt, ob Sie mit dem Taskplaner sind.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -48,9 +48,9 @@ Ein boolescher Wert, der angibt, ob eine Verbindung mit dem Taskplaner-Dienst be
 
 | Anforderung | Wert |
 |-------------------------------------|-----------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                          |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/>                                    |
-| Typbibliothek<br/>             | <dl> <dt>Taskschd. tlb</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ Vista-Desktop-Apps\]<br/>                                          |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/>                                    |
+| Typbibliothek<br/>             | <dl> <dt>Taskschd.tlb</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Taskschd.dll</dt> </dl> |
 
 

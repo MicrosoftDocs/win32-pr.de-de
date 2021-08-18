@@ -1,39 +1,39 @@
 ---
-description: Enthält Konfigurations Eigenschaften für einen Encoder.
+description: Enthält Konfigurationseigenschaften für einen Encoder.
 ms.assetid: f9bd8a50-e43e-4668-86a0-c9d5f517f4cf
-title: MFT_PREFERRED_ENCODER_PROFILE-Attribut (MF Transform. h)
+title: MFT_PREFERRED_ENCODER_PROFILE -Attribut (Mftransform.h)
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: dfdc85ead0fe813215b3edaea14833400df5445d
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 85acf742e518d91c6512b2b887cca910c3b19d21180500bd1180e6972255e54f
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "103959238"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119722505"
 ---
-# <a name="mft_preferred_encoder_profile-attribute"></a>"MFT \_ Preferred \_ Encoder profile"- \_ Attribut
+# <a name="mft_preferred_encoder_profile-attribute"></a>MFT \_ PREFERRED \_ ENCODER \_ PROFILE-Attribut
 
-Enthält Konfigurations Eigenschaften für einen Encoder.
+Enthält Konfigurationseigenschaften für einen Encoder.
 
 ## <a name="data-type"></a>Datentyp
 
-**[**Imfattributes**](/windows/desktop/api/mfobjects/nn-mfobjects-imfattributes) \** _ als " _*IUnknown \** " gespeichert_
+**[**DURCHATTRIBUTEAttributes**](/windows/desktop/api/mfobjects/nn-mfobjects-imfattributes) \* *_ gespeichert als _* Iunknown\***
 
 ## <a name="getset"></a>Abrufen/Festlegen
 
-Um dieses Attribut abzurufen, nennen Sie [_ *imfattributes:: getunknown* *](/windows/desktop/api/mfobjects/nf-mfobjects-imfattributes-getunknown).
+Um dieses Attribut zu erhalten, rufen [**Sie DANNATTRIBUTEs::GetUnknown auf.**](/windows/desktop/api/mfobjects/nf-mfobjects-imfattributes-getunknown)
 
-Um dieses Attribut festzulegen, nennen Sie [**imfattributes:: setunknown**](/windows/desktop/api/mfobjects/nf-mfobjects-imfattributes-setunknown).
+Rufen Sie ZUM Festlegen dieses [**Attributs DIE ATTRIBUTEs::SetUnknown auf.**](/windows/desktop/api/mfobjects/nf-mfobjects-imfattributes-setunknown)
 
 ## <a name="applies-to"></a>Gilt für:
 
-[**Imfaktivate**](/windows/desktop/api/mfobjects/nn-mfobjects-imfactivate)
+[**ACTIVate**](/windows/desktop/api/mfobjects/nn-mfobjects-imfactivate)
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Dieses Attribut kann für das Aktivierungs Objekt festgelegt werden, das von der [**msmekreatetransformaktivierungs**](/windows/desktop/api/mftransform/nf-mftransform-mfcreatetransformactivate) -Funktion zurückgegeben wird. Das-Attribut wird nur angewendet, wenn das Aktivierungs Objekt zum Erstellen eines Encoders konfiguriert ist. Der Wert des-Attributs ist ein Zeiger auf einen Attribut Speicher, der wiederum Eigenschaften enthält, die für den Encoder festgelegt werden sollen.
+Dieses Attribut kann für das Aktivierungsobjekt festgelegt werden, das von der [**MFCreateTransformActivate-Funktion zurückgegeben**](/windows/desktop/api/mftransform/nf-mftransform-mfcreatetransformactivate) wird. Das -Attribut gilt nur, wenn das Aktivierungsobjekt zum Erstellen eines Encoders konfiguriert ist. Der Wert des Attributs ist ein Zeiger auf einen Attributspeicher, der selbst Eigenschaften enthält, die für den Encoder festgelegt werden.
 
-Die GUID-Konstante für dieses Attribut wird aus "mfuuid. lib" exportiert.
+Die GUID-Konstante für dieses Attribut wird aus mfuuid.lib exportiert.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -41,23 +41,23 @@ Die GUID-Konstante für dieses Attribut wird aus "mfuuid. lib" exportiert.
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Windows 7 \[ -Desktop-Apps \| UWP-apps\]<br/>                                        |
-| Unterstützte Mindestversion (Server)<br/> | Windows Server 2008 R2 \[ -Desktop-Apps \| UWP-apps\]<br/>                           |
-| Header<br/>                   | <dl> <dt>"MF Transform. h"</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows 7 \[ Desktop-Apps \| UWP-Apps\]<br/>                                        |
+| Unterstützte Mindestversion (Server)<br/> | Windows UWP-Apps für Server 2008 \[ \| R2-Desktop-Apps\]<br/>                           |
+| Header<br/>                   | <dl> <dt>Mftransform.h</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[Alphabetische Liste der Media Foundation Attribute](alphabetical-list-of-media-foundation-attributes.md)
+[Alphabetische Liste Media Foundation Attribute](alphabetical-list-of-media-foundation-attributes.md)
 </dt> <dt>
 
-[**MF | atetransformaktivierungs**](/windows/desktop/api/mftransform/nf-mftransform-mfcreatetransformactivate)
+[**MFCreateTransformActivate**](/windows/desktop/api/mftransform/nf-mftransform-mfcreatetransformactivate)
 </dt> <dt>
 
-[Transformations Attribute](transform-attributes.md)
+[Transformieren von Attributen](transform-attributes.md)
 </dt> </dl>
 
  

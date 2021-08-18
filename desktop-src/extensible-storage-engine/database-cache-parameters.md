@@ -1,6 +1,6 @@
 ---
-description: Weitere Informationen finden Sie in den Daten Bank Cache Parametern.
-title: Daten Bank Cache Parameter
+description: Weitere Informationen finden Sie unter Datenbankcacheparameter.
+title: Datenbankcacheparameter
 TOCTitle: Database Cache Parameters
 ms:assetid: 715e5495-0cd8-430f-bf21-509cf03bfbfd
 ms:mtpsurl: https://msdn.microsoft.com/library/Gg269293(v=EXCHG.10)
@@ -15,26 +15,26 @@ api_type:
 - COM
 api_location: ''
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: 77d83ea8998da7c00fd294f81b94099d23d524e6
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: ac7e8859eabfa35d37464340958b52e85315a9237655107d6736af3555915757
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106360101"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119786348"
 ---
-# <a name="database-cache-parameters"></a>Daten Bank Cache Parameter
+# <a name="database-cache-parameters"></a>Datenbankcacheparameter
 
 
 _**Gilt für:** Windows | Windows Server_
 
-## <a name="database-cache-parameters"></a>Daten Bank Cache Parameter
+## <a name="database-cache-parameters"></a>Datenbankcacheparameter
 
-Dieses Thema enthält Parameter, die für den Daten Bank Cache verwendet werden.
+Dieses Thema enthält Parameter, die für den Datenbankcache verwendet werden.
 
 *JET_paramBatchIOBufferMax*  
 22  
 
-Dieser Parameter steuert die Größe eines zusätzlichen Teils des Datenbankseiten Caches, der zum Simulieren von e/a-Punkt erfassten e/a-Vorgängen verwendet wird, wenn diese andernfalls nicht verfügbar sind. Die Größe befindet sich auf Datenbankseiten.
+Dieser Parameter steuert die Größe eines zusätzlichen Teils des Datenbankseitencaches, der zum Simulieren von Scatter Gather-E/A verwendet wird, wenn er andernfalls nicht verfügbar ist. Die Größe befindet sich auf Datenbankseiten.
 
 **Windows XP und höher:**  Dieser Parameter ist veraltet und wirkt sich nicht auf den Betrieb der Datenbank-Engine aus.
 
@@ -61,19 +61,19 @@ Dieser Parameter steuert die Größe eines zusätzlichen Teils des Datenbankseit
 <td><p>Global</p></td>
 </tr>
 <tr class="odd">
-<td><p>Nach <a href="gg269354(v=exchg.10).md">jetkreateinstance</a>festlegen:</p></td>
+<td><p>Legen Sie nach <a href="gg269354(v=exchg.10).md">JetCreateInstance fest:</a></p></td>
 <td><p>Nein</p></td>
 </tr>
 <tr class="even">
-<td><p>Nach <a href="gg294068(v=exchg.10).md">jetinit</a>festlegen:</p></td>
+<td><p>Legen Sie nach <a href="gg294068(v=exchg.10).md">JetInit fest:</a></p></td>
 <td><p>Nein</p></td>
 </tr>
 <tr class="odd">
-<td><p>Hat Auswirkungen auf das physische Layout:</p></td>
+<td><p>Wirkt sich auf das physische Layout aus:</p></td>
 <td><p>Nein</p></td>
 </tr>
 <tr class="even">
-<td><p>Beeinträchtigt die Zuverlässigkeit:</p></td>
+<td><p>Wirkt sich auf die Zuverlässigkeit aus:</p></td>
 <td><p>Nein</p></td>
 </tr>
 <tr class="odd">
@@ -95,11 +95,11 @@ Dieser Parameter steuert die Größe eines zusätzlichen Teils des Datenbankseit
 *JET_paramCacheSize*  
 41  
 
-Dieser Parameter kann verwendet werden, um die Größe des Datenbankseiten Caches zur Laufzeit zu steuern. Normalerweise wird die Größe des Caches automatisch als Funktion der Datenbank-und Computer Aktivitäts Ebenen optimiert. Wenn die Anwendung diesen Parameter auf 0 (null) festlegt, wird auf diese Weise der Cache seine eigene Größe optimieren. Wenn die Anwendung diesen Parameter jedoch auf einen Wert ungleich 0 (null) festlegt, wird der Cache an die Zielgröße (in Datenbankseiten) angepasst. Der Cache speichert dann seine Größe an diesem Schwellenwert, bis eine neue Größe angegeben wird, oder bis er freigegeben wird, um seine eigene Größe auszuwählen.
+Dieser Parameter kann verwendet werden, um die Größe des Datenbankseitencaches zur Laufzeit zu steuern. Normalerweise wird die Größe des Caches automatisch als Funktion der Datenbank- und Computeraktivitätsebenen optimieren. Wenn die Anwendung diesen Parameter auf 0 (null) setzt, wird der Cache seine eigene Größe auf diese Weise optimieren. Wenn die Anwendung diesen Parameter jedoch auf einen Wert von nicht 0 (null) legt, passt sich der Cache an diese Zielgröße (auf Datenbankseiten) an. Der Cache hält dann seine Größe bei diesem Schwellenwert, bis er eine neue Größe erhält, oder bis er freigegeben wird, um seine eigene Größe zu wählen.
 
-**Hinweis**  Die Cache Größe unterliegt weiterhin den von **JET_paramCacheSizeMin** und **JET_paramCacheSizeMax** vorgegebenen Grenzwerten.
+**Hinweis:**  Die Cachegröße unterliegt weiterhin den Grenzwerten, die von **JET_paramCacheSizeMin** und **JET_paramCacheSizeMax.**
 
-Wenn dieser Parameter gelesen wird, wird die tatsächliche Größe des Caches in Datenbankseiten zurückgegeben. Diese Größe kann von der Anwendung als Eingabe verwendet werden, um die manuelle Anpassung der Cache Größe zu steuern.
+Wenn dieser Parameter gelesen wird, wird die tatsächliche Größe des Caches auf Datenbankseiten zurückgegeben. Diese Größe kann von der Anwendung als Eingabe verwendet werden, um die manuelle Anpassung der Cachegröße zu erstell.
 
 <table>
 <colgroup>
@@ -117,27 +117,27 @@ Wenn dieser Parameter gelesen wird, wird die tatsächliche Größe des Caches in
 </tr>
 <tr class="odd">
 <td><p>Gültiger Bereich:</p></td>
-<td><p><strong>Windows 2000:</strong>  1 – 1048575</p>
-<p><strong>Windows XP:</strong>  1 – 4294967295</p></td>
+<td><p><strong>Windows 2000:</strong> 1 – 1048575</p>
+<p><strong>Windows XP:</strong> 1 – 4294967295</p></td>
 </tr>
 <tr class="even">
 <td><p>Umfang:</p></td>
 <td><p>Global</p></td>
 </tr>
 <tr class="odd">
-<td><p>Nach <a href="gg269354(v=exchg.10).md">jetkreateinstance</a>festlegen:</p></td>
+<td><p>Legen Sie nach <a href="gg269354(v=exchg.10).md">JetCreateInstance fest:</a></p></td>
 <td><p>Ja</p></td>
 </tr>
 <tr class="even">
-<td><p>Nach <a href="gg294068(v=exchg.10).md">jetinit</a>festlegen:</p></td>
+<td><p>Legen Sie nach <a href="gg294068(v=exchg.10).md">JetInit fest:</a></p></td>
 <td><p>Ja</p></td>
 </tr>
 <tr class="odd">
-<td><p>Hat Auswirkungen auf das physische Layout:</p></td>
+<td><p>Wirkt sich auf das physische Layout aus:</p></td>
 <td><p>Nein</p></td>
 </tr>
 <tr class="even">
-<td><p>Beeinträchtigt die Zuverlässigkeit:</p></td>
+<td><p>Wirkt sich auf die Zuverlässigkeit aus:</p></td>
 <td><p>Nein</p></td>
 </tr>
 <tr class="odd">
@@ -159,13 +159,13 @@ Wenn dieser Parameter gelesen wird, wird die tatsächliche Größe des Caches in
 *JET_paramCacheSizeMin*  
 60  
 
-Dieser Parameter konfiguriert die Mindestgröße des Datenbankseiten Caches. Die Größe befindet sich auf Datenbankseiten.
+Dieser Parameter konfiguriert die Mindestgröße des Datenbankseitencaches. Die Größe befindet sich auf Datenbankseiten.
 
-Standardmäßig wird die Größe des Daten Bank Caches automatisch zwischen den von **JET_paramCacheSizeMin** und **JET_paramCacheSizeMax** festgelegten Grenzwerten angepasst.
+Standardmäßig passt der Datenbankcache seine Größe automatisch zwischen den von JET_paramCacheSizeMin und **festgelegten** **JET_paramCacheSizeMax.**
 
-**Windows 2000:**  Unter Windows 2000 sollte dieser Parameter auf einen Wert festgelegt werden, der ungefähr so groß wie die Anzahl der Threads ist, die gleichzeitig in der ESE-API vorkommen werden. Dies ist erforderlich, um Deadlocks zu vermeiden, die durch eine unzureichende Anzahl von Datenbankseiten Cache Puffern verursacht werden, um komplexe Vorgänge wie B +-Struktur Teilungen auszuführen.
+**Windows 2000:**  Ab Windows 2000 sollte dieser Parameter auf einen Wert festgelegt werden, der ungefähr der vierfachen Anzahl von Threads entspricht, die sich gleichzeitig innerhalb der ESE-API befindet. Dies ist erforderlich, um Deadlocks zu vermeiden, die durch eine unzureichende Anzahl von Cachepuffern für Datenbankseiten verursacht werden, um komplexe Vorgänge wie B+-Strukturteilungen durchzuführen.
 
-**Windows XP und höher:**  Der Cache-Manager legt automatisch seine eigene minimale Cache Größe fest, um Deadlocks zu vermeiden.
+**Windows XP und höher:**  Der Cache-Manager wird automatisch seine eigene minimale Cachegröße festlegen, um Deadlocks zu vermeiden.
 
 <table>
 <colgroup>
@@ -175,8 +175,8 @@ Standardmäßig wird die Größe des Daten Bank Caches automatisch zwischen den 
 <tbody>
 <tr class="odd">
 <td><p>Standardwert:</p></td>
-<td><p><strong>Windows 2000:</strong>  64</p>
-<p><strong>Windows XP:</strong>  1</p></td>
+<td><p><strong>Windows 2000:</strong> 64</p>
+<p><strong>Windows XP:</strong> 1</p></td>
 </tr>
 <tr class="even">
 <td><p>Typ:</p></td>
@@ -184,29 +184,29 @@ Standardmäßig wird die Größe des Daten Bank Caches automatisch zwischen den 
 </tr>
 <tr class="odd">
 <td><p>Gültiger Bereich:</p></td>
-<td><p><strong>Windows 2000:</strong>  1 – 1048575</p>
-<p><strong>Windows XP:</strong>  1 – 4294967295</p></td>
+<td><p><strong>Windows 2000:</strong> 1 – 1048575</p>
+<p><strong>Windows XP:</strong> 1 – 4294967295</p></td>
 </tr>
 <tr class="even">
 <td><p>Umfang:</p></td>
 <td><p>Global</p></td>
 </tr>
 <tr class="odd">
-<td><p>Nach <a href="gg269354(v=exchg.10).md">jetkreateinstance</a>festlegen:</p></td>
+<td><p>Legen Sie nach <a href="gg269354(v=exchg.10).md">JetCreateInstance fest:</a></p></td>
 <td><p><strong>Windows 2000:</strong>  Nein</p>
-<p><strong>Windows XP:</strong>  Zwar</p></td>
+<p><strong>Windows XP:</strong>  Ja</p></td>
 </tr>
 <tr class="even">
-<td><p>Nach <a href="gg294068(v=exchg.10).md">jetinit</a>festlegen:</p></td>
+<td><p>Legen Sie nach <a href="gg294068(v=exchg.10).md">JetInit fest:</a></p></td>
 <td><p><strong>Windows 2000:</strong>  Nein</p>
-<p><strong>Windows XP:</strong>  Zwar</p></td>
+<p><strong>Windows XP:</strong>  Ja</p></td>
 </tr>
 <tr class="odd">
-<td><p>Hat Auswirkungen auf das physische Layout:</p></td>
+<td><p>Wirkt sich auf das physische Layout aus:</p></td>
 <td><p>Nein</p></td>
 </tr>
 <tr class="even">
-<td><p>Beeinträchtigt die Zuverlässigkeit:</p></td>
+<td><p>Wirkt sich auf die Zuverlässigkeit aus:</p></td>
 <td><p>Nein</p></td>
 </tr>
 <tr class="odd">
@@ -228,11 +228,11 @@ Standardmäßig wird die Größe des Daten Bank Caches automatisch zwischen den 
 *JET_paramCacheSizeMax*  
 23  
 
-Dieser Parameter konfiguriert die maximale Größe des Datenbankseiten Caches. Die Größe befindet sich auf Datenbankseiten.
+Dieser Parameter konfiguriert die maximale Größe des Datenbankseitencaches. Die Größe befindet sich auf Datenbankseiten.
 
-Standardmäßig wird die Größe des Daten Bank Caches automatisch zwischen den von **JET_paramCacheSizeMin** und **JET_paramCacheSizeMax** festgelegten Grenzwerten angepasst.
+Standardmäßig passt der Datenbankcache seine Größe automatisch zwischen den von JET_paramCacheSizeMin und **festgelegten** **JET_paramCacheSizeMax.**
 
-**Hinweis**   Wenn dieser Parameter auf seinen Standardwert zurückgesetzt wird, wird die maximale Cache Größe auf die Größe des physischen Arbeitsspeichers festgelegt, wenn [jetinit](./jetinit-function.md) aufgerufen wird.
+**Hinweis:**   Wenn dieser Parameter auf seinen Standardwert festgelegt wird, wird die maximale Größe des Caches auf die Größe des physischen Speichers festgelegt, wenn [JetInit](./jetinit-function.md) aufgerufen wird.
 
 **Windows Vista:**  Ab Windows Vista wurde der Standardwert dieses Parameters geändert, um dieses Verhalten zu verdeutlichen.
 
@@ -244,8 +244,8 @@ Standardmäßig wird die Größe des Daten Bank Caches automatisch zwischen den 
 <tbody>
 <tr class="odd">
 <td><p>Standardwert:</p></td>
-<td><p><strong>Windows 2000, Windows XP und Windows Server 2003:</strong>  512</p>
-<p><strong>Windows Vista:</strong>  2 Milliarden</p></td>
+<td><p><strong>Windows 2000, Windows XP und Windows Server 2003:</strong> 512</p>
+<p><strong>Windows Vista:</strong> 200000000</p></td>
 </tr>
 <tr class="even">
 <td><p>Typ:</p></td>
@@ -253,29 +253,29 @@ Standardmäßig wird die Größe des Daten Bank Caches automatisch zwischen den 
 </tr>
 <tr class="odd">
 <td><p>Gültiger Bereich:</p></td>
-<td><p><strong>Windows 2000:</strong>  1 – 1048575</p>
-<p><strong>Windows XP:</strong>  1 – 4294967295</p></td>
+<td><p><strong>Windows 2000:</strong> 1 – 1048575</p>
+<p><strong>Windows XP:</strong> 1 – 4294967295</p></td>
 </tr>
 <tr class="even">
 <td><p>Umfang:</p></td>
 <td><p>Global</p></td>
 </tr>
 <tr class="odd">
-<td><p>Nach <a href="gg269354(v=exchg.10).md">jetkreateinstance</a>festlegen:</p></td>
+<td><p>Legen Sie nach <a href="gg269354(v=exchg.10).md">JetCreateInstance fest:</a></p></td>
 <td><p><strong>Windows 2000:</strong>  Nein</p>
-<p><strong>Windows XP:</strong>  Zwar</p></td>
+<p><strong>Windows XP:</strong>  Ja</p></td>
 </tr>
 <tr class="even">
-<td><p>Nach <a href="gg294068(v=exchg.10).md">jetinit</a>festlegen:</p></td>
+<td><p>Legen Sie nach <a href="gg294068(v=exchg.10).md">JetInit fest:</a></p></td>
 <td><p><strong>Windows XP und Windows 2000:</strong>  Nein</p>
-<p><strong>Windows Vista und Windows Server 2003:</strong>  Zwar</p></td>
+<p><strong>Windows Vista und Windows Server 2003:</strong>  Ja</p></td>
 </tr>
 <tr class="odd">
-<td><p>Hat Auswirkungen auf das physische Layout:</p></td>
+<td><p>Wirkt sich auf das physische Layout aus:</p></td>
 <td><p>Nein</p></td>
 </tr>
 <tr class="even">
-<td><p>Beeinträchtigt die Zuverlässigkeit:</p></td>
+<td><p>Wirkt sich auf die Zuverlässigkeit aus:</p></td>
 <td><p>Nein</p></td>
 </tr>
 <tr class="odd">
@@ -297,11 +297,11 @@ Standardmäßig wird die Größe des Daten Bank Caches automatisch zwischen den 
 *JET_paramCheckpointDepthMax*  
 24 
 
-Mit diesem Parameter wird gesteuert, wie aggressiv Datenbankseiten aus dem Datenbankseiten Cache geleert werden, um die Zeitspanne zu minimieren, die für die Wiederherstellung nach einem Absturz benötigt wird. Der-Parameter ist ein Schwellenwert in Bytes, der angibt, wie viele Transaktionsprotokoll Dateien nach einem Absturz wiedergegeben werden müssen.
+Dieser Parameter steuert, wie aggressiv Datenbankseiten aus dem Datenbankseitencache geleert werden, um die Zeit für die Wiederherstellung nach einem Absturz zu minimieren. Der -Parameter ist ein Schwellenwert in Bytes für die Anzahl der Transaktionsprotokolldateien, die nach einem Absturz wiedergegeben werden müssen.
 
-Wenn die zirkuläre Protokollierung mithilfe [JET_paramCircularLog](./transaction-log-parameters.md) aktiviert wird, steuert dieser Parameter auch die ungefähre Menge an Transaktionsprotokoll Dateien, die auf dem Datenträger beibehalten werden.
+Wenn die zirkuläre Protokollierung mit JET_paramCircularLog aktiviert [wird,](./transaction-log-parameters.md) wird mit diesem Parameter auch die ungefähre Menge an Transaktionsprotokolldateien kontrolliert, die auf dem Datenträger beibehalten werden.
 
-Es ist wichtig, dass dieser Parameter nicht zu niedrig festgelegt wird. Da der Wert dieses Parameters NULL ist, wird der Cache beim Leeren von Datenbankseiten auf den Datenträger immer komplexer. Dies führt nicht nur zu einer größeren Anzahl von Schreibvorgängen für die Datenbankdateien, sondern auch indirekt zu einer größeren Anzahl von Lesevorgängen für diese Dateien. Dies kann in einigen Fällen sehr erhebliche Leistungsprobleme verursachen. Leider kann das Festlegen des kleinsten optimalen Werts für diesen Parameter nur mithilfe von Experimenten mit der Zielanwendung erfolgen.
+Es ist wichtig, dass dieser Parameter nicht zu niedrig festgelegt wird. Wenn sich der Wert dieses Parameters null nähert, wird der Cache immer aggressiver, wenn Datenbankseiten auf den Datenträger geleert werden. Dies führt nicht nur zu einer erhöhten Anzahl von Schreibvorgängen in die Datenbankdateien, sondern auch indirekt zu einer erhöhten Anzahl von Lesevorgängen in diesen Dateien. Dies kann in einigen Fällen zu erheblichen Leistungsproblemen führen. Leider kann das Festlegen des kleinsten optimalen Werts für diesen Parameter nur mithilfe von Experimenten mit der Zielanwendung erfolgen.
 
 <table>
 <colgroup>
@@ -319,28 +319,28 @@ Es ist wichtig, dass dieser Parameter nicht zu niedrig festgelegt wird. Da der W
 </tr>
 <tr class="odd">
 <td><p>Gültiger Bereich:</p></td>
-<td><p><strong>Windows 2000, Windows XP und Windows Server 2003:</strong>  0 – 2147483647</p>
+<td><p><strong>Windows 2000, Windows XP und Windows Server 2003:</strong> 0 – 2147483647</p>
 <p><strong>Windows Vista:</strong>  Alle Werte</p></td>
 </tr>
 <tr class="even">
 <td><p>Umfang:</p></td>
-<td><p><strong>Windows 2000, Windows XP und Windows Server 2003:</strong> Dieser Parameter ist Global.</p>
-<p><strong>Windows Vista:</strong>  Dieser Parameter ist pro Instanz.</p></td>
+<td><p><strong>Windows 2000, Windows XP und Windows Server 2003:</strong> Dieser Parameter ist global.</p>
+<p><strong>Windows Vista:</strong>  Dieser Parameter gilt pro Instanz.</p></td>
 </tr>
 <tr class="odd">
-<td><p>Nach <a href="gg269354(v=exchg.10).md">jetkreateinstance</a>festlegen:</p></td>
+<td><p>Legen Sie nach <a href="gg269354(v=exchg.10).md">JetCreateInstance fest:</a></p></td>
 <td><p>Ja</p></td>
 </tr>
 <tr class="even">
-<td><p>Nach <a href="gg294068(v=exchg.10).md">jetinit</a>festlegen:</p></td>
+<td><p>Legen Sie nach <a href="gg294068(v=exchg.10).md">JetInit fest:</a></p></td>
 <td><p>Ja</p></td>
 </tr>
 <tr class="odd">
-<td><p>Hat Auswirkungen auf das physische Layout:</p></td>
+<td><p>Wirkt sich auf das physische Layout aus:</p></td>
 <td><p>Nein</p></td>
 </tr>
 <tr class="even">
-<td><p>Beeinträchtigt die Zuverlässigkeit:</p></td>
+<td><p>Wirkt sich auf die Zuverlässigkeit aus:</p></td>
 <td><p>Ja</p></td>
 </tr>
 <tr class="odd">
@@ -362,7 +362,7 @@ Es ist wichtig, dass dieser Parameter nicht zu niedrig festgelegt wird. Da der W
 *JET_paramCheckpointIOMax*  
 135  
 
-Dieser Parameter steuert die maximale Anzahl von gleichzeitigen Schreibvorgängen, die von der Datenbank-Engine verwendet werden, um geänderte Datenbankseiten zum Zweck der Weiterentwicklung des Prüf Punkts zu leeren. Der Wert dieses Parameters kann verwendet werden, um die Geschwindigkeit auszugleichen, mit der der Prüfpunkt erweitert werden kann, im Vergleich zu den negativen Auswirkungen, die dieser Prozess für die Antwortzeit für andere e/a-Vorgänge auf die Datenträger mit der Datenbank hat.
+Dieser Parameter steuert die maximale Anzahl gleichzeitiger Schreibvorgänge, die die Datenbank-Engine zum Leeren geänderter Datenbankseiten zum Fortschreiten des Prüfpunkts verwendet. Der Wert dieses Parameters kann verwendet werden, um die Geschwindigkeit, mit der der Prüfpunkt erweitert werden kann, im Vergleich zu den negativen Auswirkungen, die dieser Prozess auf die Antwortzeit für andere E/A-Vorgänge auf die Datenträger mit der Datenbank hat, zu ausgleichen.
 
 <table>
 <colgroup>
@@ -387,19 +387,19 @@ Dieser Parameter steuert die maximale Anzahl von gleichzeitigen Schreibvorgänge
 <td><p>Global</p></td>
 </tr>
 <tr class="odd">
-<td><p>Nach <a href="gg269354(v=exchg.10).md">jetkreateinstance</a>festlegen:</p></td>
+<td><p>Legen Sie nach <a href="gg269354(v=exchg.10).md">JetCreateInstance fest:</a></p></td>
 <td><p>Ja</p></td>
 </tr>
 <tr class="even">
-<td><p>Nach <a href="gg294068(v=exchg.10).md">jetinit</a>festlegen:</p></td>
+<td><p>Legen Sie nach <a href="gg294068(v=exchg.10).md">JetInit fest:</a></p></td>
 <td><p>Ja</p></td>
 </tr>
 <tr class="odd">
-<td><p>Hat Auswirkungen auf das physische Layout:</p></td>
+<td><p>Wirkt sich auf das physische Layout aus:</p></td>
 <td><p>Nein</p></td>
 </tr>
 <tr class="even">
-<td><p>Beeinträchtigt die Zuverlässigkeit:</p></td>
+<td><p>Wirkt sich auf die Zuverlässigkeit aus:</p></td>
 <td><p>Nein</p></td>
 </tr>
 <tr class="odd">
@@ -421,11 +421,11 @@ Dieser Parameter steuert die maximale Anzahl von gleichzeitigen Schreibvorgänge
 *JET_paramEnableViewCache*  
 127  
 
-Wenn dieser Parameter **true** ist, verwendet die Datenbank-Engine Datenbankdaten direkt aus dem Windows-Dateicache, anstatt die zwischengespeicherten Daten in ihren eigenen privaten Speicher zu kopieren. Alle geänderten Datenbankdaten werden weiterhin im privaten Speicher zwischengespeichert.
+Wenn dieser Parameter **true ist,** verwendet die Datenbank-Engine Datenbankdaten direkt aus dem Windows-Dateicache, anstatt die zwischengespeicherten Daten in ihren eigenen privaten Speicher zu kopieren. Alle geänderten Datenbankdaten werden weiterhin im privaten Arbeitsspeicher zwischengespeichert.
 
-Der Zweck dieses Modus besteht darin, den Umfang des privaten Speichers, der von der Datenbank-Engine zum Zwischenspeichern von Datenbankdaten verwendet wird, weiter zu reduzieren.
+Dieser Modus soll die Menge des privaten Arbeitsspeichers, der von der Datenbank-Engine zum Zwischenspeichern von Datenbankdaten verwendet wird, weiter reduzieren.
 
-Der Ansichts Cache kann nur verwendet werden, wenn die Verwendung des Windows-Datei Caches aktiviert ist, indem JET_paramEnableFileCache auf **true** festgelegt wird.
+Der Ansichtscache kann nur verwendet werden, wenn die Verwendung des Windows-Dateicaches aktiviert ist, indem sie JET_paramEnableFileCache **true festlegen.**
 
 <table>
 <colgroup>
@@ -435,7 +435,7 @@ Der Ansichts Cache kann nur verwendet werden, wenn die Verwendung des Windows-Da
 <tbody>
 <tr class="odd">
 <td><p>Standardwert:</p></td>
-<td><p>False</p></td>
+<td><p>Falsch</p></td>
 </tr>
 <tr class="even">
 <td><p>Typ:</p></td>
@@ -450,27 +450,27 @@ Der Ansichts Cache kann nur verwendet werden, wenn die Verwendung des Windows-Da
 <td><p>Global</p></td>
 </tr>
 <tr class="odd">
-<td><p>Nach <a href="gg269354(v=exchg.10).md">jetkreateinstance</a>festlegen:</p></td>
+<td><p>Legen Sie nach <a href="gg269354(v=exchg.10).md">JetCreateInstance</a>fest:</p></td>
 <td><p>Nein</p></td>
 </tr>
 <tr class="even">
-<td><p>Nach <a href="gg294068(v=exchg.10).md">jetinit</a>festlegen:</p></td>
+<td><p>Legen Sie nach <a href="gg294068(v=exchg.10).md">JetInit fest:</a></p></td>
 <td><p>Nein</p></td>
 </tr>
 <tr class="odd">
-<td><p>Hat Auswirkungen auf das physische Layout:</p></td>
+<td><p>Wirkt sich auf das physische Layout aus:</p></td>
 <td><p>Nein</p></td>
 </tr>
 <tr class="even">
-<td><p>Beeinträchtigt die Zuverlässigkeit:</p></td>
+<td><p>Wirkt sich auf die Zuverlässigkeit aus:</p></td>
 <td><p>Nein</p></td>
 </tr>
 <tr class="odd">
-<td><p>Beeinträchtigt die Leistung:</p></td>
+<td><p>Wirkt sich auf die Leistung aus:</p></td>
 <td><p>Ja</p></td>
 </tr>
 <tr class="even">
-<td><p>Betrifft Ressourcen:</p></td>
+<td><p>Wirkt sich auf Ressourcen aus:</p></td>
 <td><p>Ja</p></td>
 </tr>
 <tr class="odd">
@@ -484,7 +484,7 @@ Der Ansichts Cache kann nur verwendet werden, wenn die Verwendung des Windows-Da
 *JET_paramLRUKCorrInterval*  
 25  
 
-Mit diesem Parameter wird das Zeitintervall in Mikrosekunden festgelegt, in dem zwei Datenbankseiten Zugriffe als korreliert angesehen werden. Mit diesem Korrelations Intervall wird die Vertraulichkeit des Seiten Ersetzungs Algorithmus (LRU-K) zwischen Cache und aufeinander folgenden Seiten Zugriffen gesteuert. Dies wirkt sich wiederum auf die Seiten aus, die für die Zwischenspeicherung ausgewählt werden.
+Dieser Parameter legt das Zeitintervall in Mikrosekunden fest, über das zwei Datenbankseitenzugriffe als korreliert betrachtet werden. Dieses Korrelationsintervall steuert die Empfindlichkeit des Seitenersetzungsalgorithmus des Caches (LRU-K) gegenüber aufeinander folgenden Seitenzugriffen. Dies wirkt sich wiederum darauf aus, welche Seiten zwischengespeichert werden sollen.
 
 <table>
 <colgroup>
@@ -502,7 +502,7 @@ Mit diesem Parameter wird das Zeitintervall in Mikrosekunden festgelegt, in dem 
 </tr>
 <tr class="odd">
 <td><p>Gültiger Bereich:</p></td>
-<td><p><strong>Windows 2000, Windows XP und Windows Server 2003: </strong>    0 – 2147483647</p>
+<td><p><strong>Windows 2000, Windows XP und Windows Server 2003:</strong> 0 – 2147483647</p>
 <p><strong>Windows Vista:</strong>  Alle Werte</p></td>
 </tr>
 <tr class="even">
@@ -510,27 +510,27 @@ Mit diesem Parameter wird das Zeitintervall in Mikrosekunden festgelegt, in dem 
 <td><p>Global</p></td>
 </tr>
 <tr class="odd">
-<td><p>Nach <a href="gg269354(v=exchg.10).md">jetkreateinstance</a>festlegen:</p></td>
+<td><p>Legen Sie nach <a href="gg269354(v=exchg.10).md">JetCreateInstance</a>fest:</p></td>
 <td><p>Nein</p></td>
 </tr>
 <tr class="even">
-<td><p>Nach <a href="gg294068(v=exchg.10).md">jetinit</a>festlegen:</p></td>
+<td><p>Legen Sie nach <a href="gg294068(v=exchg.10).md">JetInit fest:</a></p></td>
 <td><p>Nein</p></td>
 </tr>
 <tr class="odd">
-<td><p>Hat Auswirkungen auf das physische Layout:</p></td>
+<td><p>Wirkt sich auf das physische Layout aus:</p></td>
 <td><p>Nein</p></td>
 </tr>
 <tr class="even">
-<td><p>Beeinträchtigt die Zuverlässigkeit:</p></td>
+<td><p>Wirkt sich auf die Zuverlässigkeit aus:</p></td>
 <td><p>Nein</p></td>
 </tr>
 <tr class="odd">
-<td><p>Beeinträchtigt die Leistung:</p></td>
+<td><p>Wirkt sich auf die Leistung aus:</p></td>
 <td><p>Ja</p></td>
 </tr>
 <tr class="even">
-<td><p>Betrifft Ressourcen:</p></td>
+<td><p>Wirkt sich auf Ressourcen aus:</p></td>
 <td><p>Nein</p></td>
 </tr>
 <tr class="odd">
@@ -544,9 +544,9 @@ Mit diesem Parameter wird das Zeitintervall in Mikrosekunden festgelegt, in dem 
 *JET_paramLRUKHistoryMax*  
 26  
 
-Mit diesem Parameter wird die maximale Anzahl nicht zwischen gespeicherter Datenbankseiten festgelegt, für die Datenbankseiten Zugriffszeiten beibehalten werden. Diese Verlaufs Datensätze ermöglichen es dem Cache mit dem Seiten Ersetzungs Algorithmus (LRU-K), beliebte Seiten, die fälschlicherweise aus dem Datenbankseiten Cache entfernt wurden, genauer zu erkennen.
+Dieser Parameter legt die maximale Anzahl von nicht zwischengespeicherten Datenbankseiten fest, für die die Zugriffszeiten der Datenbankseite beibehalten werden. Diese Verlaufsdatensätze ermöglichen es dem Seitenersetzungsalgorithmus des Caches (LRU-K), beliebte Seiten genauer zu erkennen, die fälschlicherweise aus dem Datenbankseitencache entfernt wurden.
 
-**Windows XP und Windows Server 2003:**  Dieser Parameter wird unter Windows XP und Windows Server 2003 ignoriert und wirkt sich nicht auf den Betrieb der Datenbank-Engine aus.
+**Windows XP und Windows Server 2003:**  Dieser Parameter wird auf Windows XP und Windows Server 2003 ignoriert und wirkt sich nicht auf den Betrieb der Datenbank-Engine aus.
 
 <table>
 <colgroup>
@@ -556,8 +556,8 @@ Mit diesem Parameter wird die maximale Anzahl nicht zwischen gespeicherter Daten
 <tbody>
 <tr class="odd">
 <td><p>Standardwert:</p></td>
-<td><p><strong>Windows 2000:</strong>  1024</p>
-<p><strong>Windows Vista:</strong>  100000</p></td>
+<td><p><strong>Windows 2000:</strong> 1024</p>
+<p><strong>Windows Vista:</strong> 100000</p></td>
 </tr>
 <tr class="even">
 <td><p>Typ:</p></td>
@@ -565,7 +565,7 @@ Mit diesem Parameter wird die maximale Anzahl nicht zwischen gespeicherter Daten
 </tr>
 <tr class="odd">
 <td><p>Gültiger Bereich:</p></td>
-<td><p><strong>Windows 2000:</strong>  0 – 4194303</p>
+<td><p><strong>Windows 2000:</strong> 0 – 4194303</p>
 <p><strong>Windows Vista:</strong>  Alle Werte</p></td>
 </tr>
 <tr class="even">
@@ -573,27 +573,27 @@ Mit diesem Parameter wird die maximale Anzahl nicht zwischen gespeicherter Daten
 <td><p>Global</p></td>
 </tr>
 <tr class="odd">
-<td><p>Nach <a href="gg269354(v=exchg.10).md">jetkreateinstance</a>festlegen:</p></td>
+<td><p>Legen Sie nach <a href="gg269354(v=exchg.10).md">JetCreateInstance</a>fest:</p></td>
 <td><p>Nein</p></td>
 </tr>
 <tr class="even">
-<td><p>Nach <a href="gg294068(v=exchg.10).md">jetinit</a>festlegen:</p></td>
+<td><p>Legen Sie nach <a href="gg294068(v=exchg.10).md">JetInit fest:</a></p></td>
 <td><p>Nein</p></td>
 </tr>
 <tr class="odd">
-<td><p>Hat Auswirkungen auf das physische Layout:</p></td>
+<td><p>Wirkt sich auf das physische Layout aus:</p></td>
 <td><p>Nein</p></td>
 </tr>
 <tr class="even">
-<td><p>Beeinträchtigt die Zuverlässigkeit:</p></td>
+<td><p>Wirkt sich auf die Zuverlässigkeit aus:</p></td>
 <td><p>Nein</p></td>
 </tr>
 <tr class="odd">
-<td><p>Beeinträchtigt die Leistung:</p></td>
+<td><p>Wirkt sich auf die Leistung aus:</p></td>
 <td><p>Ja</p></td>
 </tr>
 <tr class="even">
-<td><p>Betrifft Ressourcen:</p></td>
+<td><p>Wirkt sich auf Ressourcen aus:</p></td>
 <td><p>Ja</p></td>
 </tr>
 <tr class="odd">
@@ -607,7 +607,7 @@ Mit diesem Parameter wird die maximale Anzahl nicht zwischen gespeicherter Daten
 *JET_paramLRUKPolicy*  
 27  
 
-Mit diesem Parameter wird die Anzahl der Datenbankseiten Zugriffe konfiguriert, die zum Ermitteln der Nützlichkeit der Seite berücksichtigt werden. Bei diesem Parameter handelt es sich im Wesentlichen um das k in LRU-K, den Seiten Ersetzungs Algorithmus des Datenbankseiten Caches.
+Dieser Parameter konfiguriert die Anzahl der Datenbankseitenzugriffe, die für die Bestimmung der Nützlichkeit der Seite berücksichtigt werden. Dieser Parameter ist im Wesentlichen K in LRU-K, dem Seitenersetzungsalgorithmus des Datenbankseitencaches.
 
 <table>
 <colgroup>
@@ -632,27 +632,27 @@ Mit diesem Parameter wird die Anzahl der Datenbankseiten Zugriffe konfiguriert, 
 <td><p>Global</p></td>
 </tr>
 <tr class="odd">
-<td><p>Nach <a href="gg269354(v=exchg.10).md">jetkreateinstance</a>festlegen:</p></td>
+<td><p>Legen Sie nach <a href="gg269354(v=exchg.10).md">JetCreateInstance</a>fest:</p></td>
 <td><p>Nein</p></td>
 </tr>
 <tr class="even">
-<td><p>Nach <a href="gg294068(v=exchg.10).md">jetinit</a>festlegen:</p></td>
+<td><p>Legen Sie nach <a href="gg294068(v=exchg.10).md">JetInit fest:</a></p></td>
 <td><p>Nein</p></td>
 </tr>
 <tr class="odd">
-<td><p>Hat Auswirkungen auf das physische Layout:</p></td>
+<td><p>Wirkt sich auf das physische Layout aus:</p></td>
 <td><p>Nein</p></td>
 </tr>
 <tr class="even">
-<td><p>Beeinträchtigt die Zuverlässigkeit:</p></td>
+<td><p>Wirkt sich auf die Zuverlässigkeit aus:</p></td>
 <td><p>Nein</p></td>
 </tr>
 <tr class="odd">
-<td><p>Beeinträchtigt die Leistung:</p></td>
+<td><p>Wirkt sich auf die Leistung aus:</p></td>
 <td><p>Ja</p></td>
 </tr>
 <tr class="even">
-<td><p>Betrifft Ressourcen:</p></td>
+<td><p>Wirkt sich auf Ressourcen aus:</p></td>
 <td><p>Nein</p></td>
 </tr>
 <tr class="odd">
@@ -666,7 +666,7 @@ Mit diesem Parameter wird die Anzahl der Datenbankseiten Zugriffe konfiguriert, 
 *JET_paramLRUKTimeout*  
 28
 
-Dieser Parameter gibt den Zeitraum in Sekunden an, nach dem eine Seite im Datenbankseiten Cache einen Seiten Zugriff verloren hat, um die Nützlichkeit der Seite zu berücksichtigen.
+Dieser Parameter gibt den Zeitraum in Sekunden an, nach dem eine Seite im Datenbankseitencache einen Seitenzugriff verloren hat, um die Nützlichkeit der Seite zu berücksichtigen.
 
 <table>
 <colgroup>
@@ -684,35 +684,35 @@ Dieser Parameter gibt den Zeitraum in Sekunden an, nach dem eine Seite im Datenb
 </tr>
 <tr class="odd">
 <td><p>Gültiger Bereich:</p></td>
-<td><p><strong>Windows 2000, Windows XP und Windows Server 2003:</strong>  1 – 2147483647</p>
-<p><strong>Windows Vista:</strong>   1 – 4294967295</p></td>
+<td><p><strong>Windows 2000, Windows XP und Windows Server 2003:</strong> 1 – 2147483647</p>
+<p><strong>Windows Vista:</strong> 1 – 4294967295</p></td>
 </tr>
 <tr class="even">
 <td><p>Umfang:</p></td>
 <td><p>Global</p></td>
 </tr>
 <tr class="odd">
-<td><p>Nach <a href="gg269354(v=exchg.10).md">jetkreateinstance</a>festlegen:</p></td>
+<td><p>Legen Sie nach <a href="gg269354(v=exchg.10).md">JetCreateInstance</a>fest:</p></td>
 <td><p>Nein</p></td>
 </tr>
 <tr class="even">
-<td><p>Nach <a href="gg294068(v=exchg.10).md">jetinit</a>festlegen:</p></td>
+<td><p>Legen Sie nach <a href="gg294068(v=exchg.10).md">JetInit fest:</a></p></td>
 <td><p>Nein</p></td>
 </tr>
 <tr class="odd">
-<td><p>Hat Auswirkungen auf das physische Layout:</p></td>
+<td><p>Wirkt sich auf das physische Layout aus:</p></td>
 <td><p>Nein</p></td>
 </tr>
 <tr class="even">
-<td><p>Beeinträchtigt die Zuverlässigkeit:</p></td>
+<td><p>Wirkt sich auf die Zuverlässigkeit aus:</p></td>
 <td><p>Nein</p></td>
 </tr>
 <tr class="odd">
-<td><p>Beeinträchtigt die Leistung:</p></td>
+<td><p>Wirkt sich auf die Leistung aus:</p></td>
 <td><p>Ja</p></td>
 </tr>
 <tr class="even">
-<td><p>Betrifft Ressourcen:</p></td>
+<td><p>Wirkt sich auf Ressourcen aus:</p></td>
 <td><p>Nein</p></td>
 </tr>
 <tr class="odd">
@@ -731,9 +731,9 @@ Dieser Parameter ist veraltet und wirkt sich nicht auf den Betrieb der Datenbank
 *JET_paramStartFlushThreshold*  
 31  
 
-Mit diesem Parameter wird gesteuert, wann der Datenbankseiten Cache mit der Erstellung von Seiten aus dem Cache beginnt, um Platz für Seiten zu schaffen, die nicht zwischengespeichert werden. Wenn die Anzahl der Seiten Puffer im Cache unter diesen Schwellenwert fällt, wird ein Hintergrundprozess gestartet, um den Pool der verfügbaren Puffer aufzufüllen. Dieser Schwellenwert ist immer relativ zur maximalen Cache Größe, die von **JET_paramCacheSizeMax** festgelegt wird. Dieser Schwellenwert muss auch immer niedriger als der von **JET_paramStopFlushThreshold** festgelegte Schwellenwert sein.
+Dieser Parameter steuert, wann der Datenbankseitencache beginnt, Seiten aus dem Cache zu entfernen, um Platz für Seiten zu schaffen, die nicht zwischengespeichert werden. Wenn die Anzahl der Seitenpuffer im Cache unter diesen Schwellenwert fällt, wird ein Hintergrundprozess gestartet, um diesen Pool verfügbarer Puffer aufzufüllen. Dieser Schwellenwert ist immer relativ zur maximalen Cachegröße, die von **JET_paramCacheSizeMax** festgelegt wird. Dieser Schwellenwert muss auch immer kleiner als der durch **JET_paramStopFlushThreshold** festgelegte Stoppschwellenwert sein.
 
-Die Entfernungs Höhe des Start Schwellenwerts bestimmt die Antwortzeit, die der Datenbankseiten Cache aufweisen muss, damit verfügbare Puffer erstellt werden, bevor die Anwendung Sie benötigt. Ein Schwellenwert für hohe Starts gibt dem Hintergrundprozess mehr Zeit für die Reaktion. Ein Schwellenwert für hohe Starts impliziert jedoch einen höheren Schwellenwert für die Beendigung, wodurch die effektive Größe des Datenbankseiten Caches für geänderte Seiten (Windows 2000) oder für alle Seiten (Windows XP und höher) reduziert wird.
+Die Entfernungshöhe des Startschwellenwerts bestimmt die Antwortzeit, die der Datenbankseitencache benötigt, um verfügbare Puffer zu erzeugen, bevor die Anwendung sie benötigt. Ein hoher Startschwellenwert gibt dem Hintergrundprozess mehr Zeit zum Reagieren. Ein hoher Startschwellenwert impliziert jedoch einen höheren Stoppschwellenwert, der die effektive Größe des Datenbankseitencaches für geänderte Seiten (Windows 2000) oder für alle Seiten (Windows XP und höher) reduziert.
 
 <table>
 <colgroup>
@@ -743,8 +743,8 @@ Die Entfernungs Höhe des Start Schwellenwerts bestimmt die Antwortzeit, die der
 <tbody>
 <tr class="odd">
 <td><p>Standardwert:</p></td>
-<td><p><strong>Windows 2000, Windows XP und Windows Server 2003:</strong>  5 (1%)</p>
-<p><strong>Windows Vista:</strong>  20 Millionen (1%)</p></td>
+<td><p><strong>Windows 2000, Windows XP und Windows Server 2003:</strong> 5 (1 %)</p>
+<p><strong>Windows Vista:</strong> 20000000 (1 %)</p></td>
 </tr>
 <tr class="even">
 <td><p>Typ:</p></td>
@@ -752,8 +752,8 @@ Die Entfernungs Höhe des Start Schwellenwerts bestimmt die Antwortzeit, die der
 </tr>
 <tr class="odd">
 <td><p>Gültiger Bereich:</p></td>
-<td><p><strong>Windows 2000:</strong>  1 – 1048575</p>
-<p><strong>Windows XP:</strong>  1 – 4294967295</p>
+<td><p><strong>Windows 2000:</strong> 1 – 1048575</p>
+<p><strong>Windows XP:</strong> 1 – 4294967295</p>
 <p><strong>Windows Vista:</strong>  Alle Werte</p></td>
 </tr>
 <tr class="even">
@@ -761,27 +761,27 @@ Die Entfernungs Höhe des Start Schwellenwerts bestimmt die Antwortzeit, die der
 <td><p>Global</p></td>
 </tr>
 <tr class="odd">
-<td><p>Nach <a href="gg269354(v=exchg.10).md">jetkreateinstance</a>festlegen:</p></td>
+<td><p>Legen Sie nach <a href="gg269354(v=exchg.10).md">JetCreateInstance</a>fest:</p></td>
 <td><p>Ja</p></td>
 </tr>
 <tr class="even">
-<td><p>Nach <a href="gg294068(v=exchg.10).md">jetinit</a>festlegen:</p></td>
+<td><p>Legen Sie nach <a href="gg294068(v=exchg.10).md">JetInit fest:</a></p></td>
 <td><p>Ja</p></td>
 </tr>
 <tr class="odd">
-<td><p>Hat Auswirkungen auf das physische Layout:</p></td>
+<td><p>Wirkt sich auf das physische Layout aus:</p></td>
 <td><p>Nein</p></td>
 </tr>
 <tr class="even">
-<td><p>Beeinträchtigt die Zuverlässigkeit:</p></td>
+<td><p>Wirkt sich auf die Zuverlässigkeit aus:</p></td>
 <td><p>Nein</p></td>
 </tr>
 <tr class="odd">
-<td><p>Beeinträchtigt die Leistung:</p></td>
+<td><p>Wirkt sich auf die Leistung aus:</p></td>
 <td><p>Ja</p></td>
 </tr>
 <tr class="even">
-<td><p>Betrifft Ressourcen:</p></td>
+<td><p>Wirkt sich auf Ressourcen aus:</p></td>
 <td><p>Ja</p></td>
 </tr>
 <tr class="odd">
@@ -795,9 +795,9 @@ Die Entfernungs Höhe des Start Schwellenwerts bestimmt die Antwortzeit, die der
 *JET_paramStopFlushThreshold*  
 32  
 
-Mit diesem Parameter wird gesteuert, wann der Datenbankseiten Cache das Entfernen von Seiten aus dem Cache beendet, um Platz für nicht zwischengespeicherte Seiten zu schaffen. Wenn die Anzahl der Seiten Puffer im Cache über diesem Schwellenwert liegt, wird der Hintergrundprozess beendet, der zum Auffüllen dieses Pools verfügbarer Puffer gestartet wurde. Dieser Schwellenwert ist immer relativ zur maximalen Cache Größe, die von **JET_paramCacheSizeMax** festgelegt wird. Dieser Schwellenwert muss auch immer größer sein als der Start Schwellenwert, der durch **JET_paramStartFlushThreshold** festgelegt wird.
+Dieser Parameter steuert, wann der Datenbankseitencache das Entfernen von Seiten aus dem Cache beendet, um Platz für Seiten zu schaffen, die nicht zwischengespeichert werden. Wenn die Anzahl der Seitenpuffer im Cache diesen Schwellenwert überschreitet, wird der Hintergrundprozess beendet, der gestartet wurde, um diesen Pool verfügbarer Puffer aufzufüllen. Dieser Schwellenwert ist immer relativ zur maximalen Cachegröße, die von **JET_paramCacheSizeMax** festgelegt wird. Dieser Schwellenwert muss auch immer größer als der Startschwellenwert sein, der durch **JET_paramStartFlushThreshold** festgelegt wird.
 
-Der Abstand zwischen dem Start Schwellenwert und dem Schwellenwert für das Abbrechen wirkt sich auf die Effizienz aus, mit der Datenbankseiten durch den Hintergrundprozess geleert werden. Eine größere Lücke macht es wahrscheinlicher, dass Schreibvorgänge auf benachbarte Seiten möglicherweise kombiniert werden. Durch einen Schwellenwert für hohe Beendigung wird jedoch die effektive Größe des Datenbankseiten Caches für geänderte Seiten (Windows 2000) oder für alle Seiten (Windows XP und höher) verringert.
+Der Abstand zwischen dem Startschwellenwert und dem Beendigungsschwellenwert wirkt sich auf die Effizienz aus, mit der Datenbankseiten vom Hintergrundprozess geleert werden. Eine größere Lücke macht es wahrscheinlicher, dass Schreibvorgänge auf benachbarte Seiten kombiniert werden können. Ein hoher Schwellenwert für die Beendigung reduziert jedoch die effektive Größe des Datenbankseitencaches für geänderte Seiten (Windows 2000) oder für alle Seiten (Windows XP und höher).
 
 <table>
 <colgroup>
@@ -807,8 +807,8 @@ Der Abstand zwischen dem Start Schwellenwert und dem Schwellenwert für das Abbr
 <tbody>
 <tr class="odd">
 <td><p>Standardwert:</p></td>
-<td><p><strong>Windows 2000, Windows XP und Windows Server 2003:</strong>  10 (2%)</p>
-<p><strong>Windows Vista:</strong>  40 Millionen (2%)</p></td>
+<td><p><strong>Windows 2000, Windows XP und Windows Server 2003:</strong> 10 (2 %)</p>
+<p><strong>Windows Vista:</strong> 400000000 (2 %)</p></td>
 </tr>
 <tr class="even">
 <td><p>Typ:</p></td>
@@ -816,8 +816,8 @@ Der Abstand zwischen dem Start Schwellenwert und dem Schwellenwert für das Abbr
 </tr>
 <tr class="odd">
 <td><p>Gültiger Bereich:</p></td>
-<td><p><strong>Windows 2000:</strong>  1 – 1048575</p>
-<p><strong>Windows XP:</strong>  1 – 4294967295</p>
+<td><p><strong>Windows 2000:</strong> 1 – 1048575</p>
+<p><strong>Windows XP:</strong> 1 – 4294967295</p>
 <p><strong>Windows Vista:</strong>  Alle Werte</p></td>
 </tr>
 <tr class="even">
@@ -825,27 +825,27 @@ Der Abstand zwischen dem Start Schwellenwert und dem Schwellenwert für das Abbr
 <td><p>Global</p></td>
 </tr>
 <tr class="odd">
-<td><p>Nach <a href="gg269354(v=exchg.10).md">jetkreateinstance</a>festlegen:</p></td>
+<td><p>Legen Sie nach <a href="gg269354(v=exchg.10).md">JetCreateInstance</a>fest:</p></td>
 <td><p>Ja</p></td>
 </tr>
 <tr class="even">
-<td><p>Nach <a href="gg294068(v=exchg.10).md">jetinit</a>festlegen:</p></td>
+<td><p>Legen Sie nach <a href="gg294068(v=exchg.10).md">JetInit fest:</a></p></td>
 <td><p>Ja</p></td>
 </tr>
 <tr class="odd">
-<td><p>Hat Auswirkungen auf das physische Layout:</p></td>
+<td><p>Wirkt sich auf das physische Layout aus:</p></td>
 <td><p>Nein</p></td>
 </tr>
 <tr class="even">
-<td><p>Beeinträchtigt die Zuverlässigkeit:</p></td>
+<td><p>Wirkt sich auf die Zuverlässigkeit aus:</p></td>
 <td><p>Nein</p></td>
 </tr>
 <tr class="odd">
-<td><p>Beeinträchtigt die Leistung:</p></td>
+<td><p>Wirkt sich auf die Leistung aus:</p></td>
 <td><p>Ja</p></td>
 </tr>
 <tr class="even">
-<td><p>Betrifft Ressourcen:</p></td>
+<td><p>Wirkt sich auf Ressourcen aus:</p></td>
 <td><p>Ja</p></td>
 </tr>
 <tr class="odd">
@@ -874,7 +874,7 @@ Der Abstand zwischen dem Start Schwellenwert und dem Schwellenwert für das Abbr
 </tr>
 <tr class="odd">
 <td><p><strong>Header</strong></p></td>
-<td><p>In "ESENT. h" deklariert.</p></td>
+<td><p>Wird in Esent.h deklariert.</p></td>
 </tr>
 </tbody>
 </table>
@@ -882,5 +882,5 @@ Der Abstand zwischen dem Start Schwellenwert und dem Schwellenwert für das Abbr
 
 ### <a name="see-also"></a>Weitere Informationen
 
-[Jetkreateingestance](./jetcreateinstance-function.md)  
+[JetCreateInstance](./jetcreateinstance-function.md)  
 [JetInit](./jetinit-function.md)

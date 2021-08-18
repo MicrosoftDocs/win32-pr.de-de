@@ -1,5 +1,5 @@
 ---
-description: Ein Shader, der aufgerufen wird, wenn keine Ray-Schnittmengen gefunden oder akzeptiert werden.
+description: Ein Shader, der aufgerufen wird, wenn keine Strahlkreuzungen gefunden oder akzeptiert werden.
 ms.assetid: ''
 title: Miss-Shader
 ms.localizationpriority: low
@@ -12,21 +12,21 @@ api_name:
 - RAY_FLAG
 api_type:
 - NA
-ms.openlocfilehash: fe8e2ec9cdbb8ef7567b9327ae5af1128597a601
-ms.sourcegitcommit: c7add10d695482e1ceb72d62b8a4ebd84ea050f7
+ms.openlocfilehash: 30f7ce32e66a19984ce43737d9fc9cae83652c851174d7db350ca34628a33033
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106343017"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119850823"
 ---
 # <a name="miss-shader"></a>Miss-Shader
 
-Ein Shader, der aufgerufen wird, wenn keine Ray-Schnittmengen gefunden oder akzeptiert werden. Dies ist nützlich für die Hintergrund-oder Himmel Schattierung.  Der übersehen-Shader kann [**callshader**](callshader-function.md) und **traceray** verwenden, um mehr Arbeit zu planen.
+Ein Shader, der aufgerufen wird, wenn keine Strahlkreuzungen gefunden oder akzeptiert werden. Dies ist für hintergrund- oder sky-Schattierungen nützlich.  Der Fehlshader kann [**CallShader**](callshader-function.md) und **TraceRay** verwenden, um weitere Arbeit zu planen.
 
-Der Miss-Shader muss einen mit einer benutzerdefinierten Struktur typisierten Nutz Last Parameter einschließen, der mit dem für [**traceray**](traceray-function.md)angegebenen Parameter übereinstimmt.
+Der Miss-Shader muss einen benutzerdefinierten nutzlasttypisierten Strukturparameter enthalten, der mit dem für [**TraceRay**](traceray-function.md)bereitgestellten übereinstimmt.
 
 
-## <a name="shader-type-attribute"></a>Shader Type-Attribut
+## <a name="shader-type-attribute"></a>Shadertypattribut
 
 
 ```

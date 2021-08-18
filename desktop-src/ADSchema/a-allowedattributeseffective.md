@@ -1,11 +1,11 @@
 ---
-title: Zulässige Attribute-effektives Attribut
-description: Eine Liste der Attribute, die für das-Objekt geändert werden können.
+title: Allowed-Attributes-Effective-Attribut
+description: Eine Liste von Attributen, die für das -Objekt geändert werden können.
 ms.assetid: bf2db8d5-bbef-4063-be94-f657f3b2768b
 ms.tgt_platform: multiple
 keywords:
-- Zulässige Attribute-effektives Attribut AD-Schema
-- AD-Schema für das Attribut "attribuwedattributeseffective"
+- AD-Schema für zulässige Attribute und effektive Attribute
+- allowedAttributesEffective-Attribut-AD-Schema
 topic_type:
 - apiref
 api_name:
@@ -14,26 +14,26 @@ api_type:
 - Schema
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 425383e97d924526d926cd8dd08d35e352ac2531
-ms.sourcegitcommit: b77ace27b0432e7cd3863191b11926be032fbe2f
+ms.openlocfilehash: 654f42a71621118c326480c977e19b04c5658bff87ce4d3c810872af0dff485f
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "106338845"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119022828"
 ---
-# <a name="allowed-attributes-effective-attribute"></a>Zulässige Attribute-effektives Attribut
+# <a name="allowed-attributes-effective-attribute"></a>Allowed-Attributes-Effective-Attribut
 
-Eine Liste der Attribute, die für das-Objekt geändert werden können.
+Eine Liste von Attributen, die für das -Objekt geändert werden können.
 
 
 
 | Eingabe | Wert |
 |-------------------|-----------------------------------------------------------------|
-| CN                | Zulässige Attribute-gültig                                    |
-| LDAP-Display-Name | Zuordnung von "zurechendattributeseffective"                                      |
+| CN                | Allowed-Attributes-Effective                                    |
+| Ldap-Anzeigename | allowedAttributesEffective                                      |
 | Size              | \-                                                              |
-| Berechtigung aktualisieren  | \-                                                              |
-| Aktualisierungshäufigkeit  | \-                                                              |
+| Aktualisieren von Berechtigungen  | \-                                                              |
+| Updatehäufigkeit  | \-                                                              |
 | Attribute-Id      | 1.2.840.113556.1.4.914                                          |
 | System-ID-GUID    | 9a7ad941-ca53-11d1-bbd0-0080c76670c0                            |
 | Syntax            | [**String(Object-Identifier)**](s-string-object-identifier.md) |
@@ -43,7 +43,7 @@ Eine Liste der Attribute, die für das-Objekt geändert werden können.
 ## <a name="implementations"></a>Implementierungen
 
 -   [**Windows 2000 Server**](#windows-2000-server)
--   [**Windows Server 2003**](#windows-server-2003)
+-   [**Windows Server 2003**](#windows-server-2003)
 -   [**Adam**](#adam)
 -   [**Windows Server 2003 R2**](#windows-server-2003-r2)
 -   [**Windows Server 2008**](#windows-server-2008)
@@ -59,10 +59,10 @@ Eine Liste der Attribute, die für das-Objekt geändert werden können.
 | Link-ID                | \-                              |
 | MAPI-Id                | \-                              |
 | System-Only            | Richtig                            |
-| Ist-einwertig       | False                           |
-| Ist indiziert             | False                           |
-| Im globalen Katalog      | False                           |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                    |
+| Ist einwertig       | Falsch                           |
+| Ist indiziert             | Falsch                           |
+| Im globalen Katalog      | Falsch                           |
+| NT-Security-Descriptor | O:BAG:BAD:S:                    |
 | Range-Lower            | \-                              |
 | Range-Upper            | \-                              |
 | Search-Flags           | 0x00000000                      |
@@ -71,7 +71,7 @@ Eine Liste der Attribute, die für das-Objekt geändert werden können.
 
 
 
-## <a name="windows-server-2003"></a>Windows Server 2003
+## <a name="windows-server-2003"></a>Windows Server 2003
 
 
 
@@ -80,10 +80,10 @@ Eine Liste der Attribute, die für das-Objekt geändert werden können.
 | Link-ID                | \-                              |
 | MAPI-Id                | \-                              |
 | System-Only            | Richtig                            |
-| Ist-einwertig       | False                           |
-| Ist indiziert             | False                           |
-| Im globalen Katalog      | False                           |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                    |
+| Ist einwertig       | Falsch                           |
+| Ist indiziert             | Falsch                           |
+| Im globalen Katalog      | Falsch                           |
+| NT-Security-Descriptor | O:BAG:BAD:S:                    |
 | Range-Lower            | \-                              |
 | Range-Upper            | \-                              |
 | Search-Flags           | 0x00000000                      |
@@ -101,10 +101,10 @@ Eine Liste der Attribute, die für das-Objekt geändert werden können.
 | Link-ID                | \-                              |
 | MAPI-Id                | \-                              |
 | System-Only            | Richtig                            |
-| Ist-einwertig       | False                           |
-| Ist indiziert             | False                           |
-| Im globalen Katalog      | False                           |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                    |
+| Ist einwertig       | Falsch                           |
+| Ist indiziert             | Falsch                           |
+| Im globalen Katalog      | Falsch                           |
+| NT-Security-Descriptor | O:BAG:BAD:S:                    |
 | Range-Lower            | \-                              |
 | Range-Upper            | \-                              |
 | Search-Flags           | 0x00000000                      |
@@ -122,10 +122,10 @@ Eine Liste der Attribute, die für das-Objekt geändert werden können.
 | Link-ID                | \-                              |
 | MAPI-Id                | \-                              |
 | System-Only            | Richtig                            |
-| Ist-einwertig       | False                           |
-| Ist indiziert             | False                           |
-| Im globalen Katalog      | False                           |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                    |
+| Is-Single-Valued       | Falsch                           |
+| Ist indiziert             | Falsch                           |
+| Im globalen Katalog      | Falsch                           |
+| NT-Security-Descriptor | O:BAG:BAD:S:                    |
 | Range-Lower            | \-                              |
 | Range-Upper            | \-                              |
 | Search-Flags           | 0x00000000                      |
@@ -143,10 +143,10 @@ Eine Liste der Attribute, die für das-Objekt geändert werden können.
 | Link-ID                | \-                              |
 | MAPI-Id                | \-                              |
 | System-Only            | Richtig                            |
-| Ist-einwertig       | False                           |
-| Ist indiziert             | False                           |
-| Im globalen Katalog      | False                           |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                    |
+| Is-Single-Valued       | Falsch                           |
+| Ist indiziert             | Falsch                           |
+| Im globalen Katalog      | Falsch                           |
+| NT-Security-Descriptor | O:BAG:BAD:S:                    |
 | Range-Lower            | \-                              |
 | Range-Upper            | \-                              |
 | Search-Flags           | 0x00000000                      |
@@ -164,10 +164,10 @@ Eine Liste der Attribute, die für das-Objekt geändert werden können.
 | Link-ID                | \-                              |
 | MAPI-Id                | \-                              |
 | System-Only            | Richtig                            |
-| Ist-einwertig       | False                           |
-| Ist indiziert             | False                           |
-| Im globalen Katalog      | False                           |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                    |
+| Is-Single-Valued       | Falsch                           |
+| Ist indiziert             | Falsch                           |
+| Im globalen Katalog      | Falsch                           |
+| NT-Security-Descriptor | O:BAG:BAD:S:                    |
 | Range-Lower            | \-                              |
 | Range-Upper            | \-                              |
 | Search-Flags           | 0x00000000                      |
@@ -185,10 +185,10 @@ Eine Liste der Attribute, die für das-Objekt geändert werden können.
 | Link-ID                | \-                              |
 | MAPI-Id                | \-                              |
 | System-Only            | Richtig                            |
-| Ist-einwertig       | False                           |
-| Ist indiziert             | False                           |
-| Im globalen Katalog      | False                           |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                    |
+| Is-Single-Valued       | Falsch                           |
+| Ist indiziert             | Falsch                           |
+| Im globalen Katalog      | Falsch                           |
+| NT-Security-Descriptor | O:BAG:BAD:S:                    |
 | Range-Lower            | \-                              |
 | Range-Upper            | \-                              |
 | Search-Flags           | 0x00000000                      |

@@ -1,10 +1,10 @@
 ---
-title: Iwmpsettings (VB und C)-Schnittstelle (WMP. h)
-description: Stellt Eigenschaften und Methoden bereit, mit denen die Werte von Windows Media Player-Einstellungen angezeigt oder festgelegt werden. Die iwmpsettings-Schnittstelle macht die folgenden Eigenschaften verfügbar.
+title: IWMPSettings-Schnittstelle (VB und C) (Wmp.h)
+description: Stellt Eigenschaften und Methoden bereit, die die Werte Windows Media Player Einstellungen abrufen oder festlegen. Die IWMPSettings-Schnittstelle macht die folgenden Eigenschaften verfügbar.
 ms.assetid: fb37b455-221e-4cee-a219-cacf2938a92a
 keywords:
-- Windows Media Player der iwmpsettings-Schnittstelle (VB und C)
-- Iwmpsettings (VB und C) Interface Windows Media Player, beschrieben
+- IWMPSettings-Schnittstelle (VB und C) Windows Media Player
+- IWMPSettings-Schnittstelle (VB und C) Windows Media Player beschrieben
 topic_type:
 - apiref
 api_name:
@@ -15,36 +15,36 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: db911cc6d18ba40777e77a803480c7fcab4ff8ad
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 6a537efcd9b39f993705244020e579b9d667164180fd5cd70ab05fc692bed8fa
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106358040"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118996470"
 ---
-# <a name="iwmpsettings-vb-and-c-interface"></a>Iwmpsettings-Schnittstelle (VB und c#)
+# <a name="iwmpsettings-vb-and-c-interface"></a>IWMPSettings-Schnittstelle (VB und C#)
 
-Stellt Eigenschaften und Methoden bereit, mit denen die Werte von Windows Media Player-Einstellungen angezeigt oder festgelegt werden.
+Stellt Eigenschaften und Methoden bereit, die die Werte Windows Media Player Einstellungen abrufen oder festlegen.
 
-Die **iwmpsettings** -Schnittstelle macht die folgenden Eigenschaften verfügbar.
+Die **IWMPSettings-Schnittstelle** macht die folgenden Eigenschaften verfügbar.
 
 ## <a name="members"></a>Member
 
-Die **iwmpsettings (VB und c#)** -Schnittstelle verfügt über diese Typen von Membern:
+Die **IWMPSettings-Schnittstelle (VB und C#)** verfügt über diese Typen von Membern:
 
 -   [Methoden](#methods)
 -   [Eigenschaften](#properties)
 
 ### <a name="methods"></a>Methoden
 
-Die **iwmpsettings (VB und c#)** -Schnittstelle verfügt über diese Methoden.
+Die **IWMPSettings-Schnittstelle (VB und C#)** verfügt über diese Methoden.
 
 
 
-| Methode                                                               | BESCHREIBUNG                                                                        |
+| Methode                                                               | Beschreibung                                                                        |
 |:---------------------------------------------------------------------|:-----------------------------------------------------------------------------------|
-| [**getMode**](wmplibiwmpsettings-iwmpsettings-getmode--vb-and-c.md) | Gibt einen Wert zurück, der angibt, ob der Schleifen Modus oder der Shuffle-Modus aktiv ist<br/> |
-| [**setMode**](wmplibiwmpsettings-iwmpsettings-setmode--vb-and-c.md) | Legt den Schleifen Modus oder den Shuffle-Modus auf aktiv oder inaktiv fest.<br/>               |
+| [**getMode**](wmplibiwmpsettings-iwmpsettings-getmode--vb-and-c.md) | Gibt einen Wert zurück, der angibt, ob der Schleifenmodus oder der Shufflemodus aktiv ist.<br/> |
+| [**setMode**](wmplibiwmpsettings-iwmpsettings-setmode--vb-and-c.md) | Legt den Schleifenmodus oder Shufflemodus auf aktiv oder inaktiv fest.<br/>               |
 
 
 
@@ -52,29 +52,29 @@ Die **iwmpsettings (VB und c#)** -Schnittstelle verfügt über diese Methoden.
 
 ### <a name="properties"></a>Eigenschaften
 
-Die **iwmpsettings (VB und c#)** -Schnittstelle verfügt über diese Eigenschaften.
+Die **IWMPSettings-Schnittstelle (VB und C#)** verfügt über diese Eigenschaften.
 
 
 
-| Eigenschaft                                                                                              | Zugriffstyp           | BESCHREIBUNG                                                                                                                                  |
+| Eigenschaft                                                                                              | Zugriffstyp           | Beschreibung                                                                                                                                  |
 |:------------------------------------------------------------------------------------------------------|:----------------------|:---------------------------------------------------------------------------------------------------------------------------------------------|
-| [**Autostart**](wmplibiwmpsettings-iwmpsettings-autostart--vb-and-c.md)<br/>                   | Lesen/Schreiben<br/> | Dient zum Abrufen oder Festlegen eines Werts, der angibt, ob das aktuelle Medien Element automatisch wiedergegeben wird. <br/>                                     |
-| [**Schwebe**](wmplibiwmpsettings-iwmpsettings-balance--vb-and-c.md)<br/>                       | Lesen/Schreiben<br/> | Ruft den aktuellen Stereo Saldo ab oder legt ihn fest.<br/>                                                                                          |
-| [**Basis**](wmplibiwmpsettings-iwmpsettings-baseurl--vb-and-c.md)<br/>                       | Lesen/Schreiben<br/> | Ruft die Basis-URL ab, die für die relative Pfad Auflösung mit URL-Skript Befehlen verwendet wird, die in Inhalte digitaler Medien eingebettet sind, oder legt diese <br/> |
-| [**defaultframe**](wmplibiwmpsettings-iwmpsettings-defaultframe--vb-and-c.md)<br/>             | Lesen/Schreiben<br/> | Ruft den Namen des Frames ab, der zum Anzeigen einer URL verwendet wird, die in einem **ScriptCommand** -Ereignis empfangen wird, oder legt diesen fest. <br/>                          |
-| [**enableerrordialogfelder**](wmplibiwmpsettings-iwmpsettings-enableerrordialogs--vb-and-c.md)<br/> | Lesen/Schreiben<br/> | Ruft einen Wert ab, der angibt, ob automatisch Fehler Dialogfelder angezeigt werden<br/>                                           |
-| [**invokeurls**](wmplibiwmpsettings-iwmpsettings-invokeurls--vb-and-c.md)<br/>                 | Lesen/Schreiben<br/> | Ruft einen Wert ab, der angibt, ob URL-Ereignisse einen Webbrowser starten sollen, oder legt diesen fest. <br/>                                                  |
-| [**isAvailable**](iwmpsettings-isavailable--vb-and-c.md)<br/>                                  | Schreibgeschützt<br/>  | Ruft einen Wert ab, der angibt, ob eine angegebene Aktion ausgeführt werden kann. In c# ist dies die **get \_ IsAvailable** -Methode.<br/>             |
-| [**verstum**](wmplibiwmpsettings-iwmpsettings-mute--vb-and-c.md)<br/>                             | Lesen/Schreiben<br/> | Ruft einen Wert ab, der angibt, ob Audiodaten stumm geschaltet werden. <br/>                                                                          |
-| [**playcount**](wmplibiwmpsettings-iwmpsettings-playcount--vb-and-c.md)<br/>                   | Lesen/Schreiben<br/> | Ruft ab oder legt fest, wie oft ein Medien Element wiedergegeben wird. <br/>                                                                         |
-| [**zinss**](wmplibiwmpsettings-iwmpsettings-rate--vb-and-c.md)<br/>                             | Lesen/Schreiben<br/> | Ruft die aktuelle Wiedergabe Rate für Video ab oder legt Sie fest. <br/>                                                                                |
-| [**Handels**](wmplibiwmpsettings-iwmpsettings-volume--vb-and-c.md)<br/>                         | Lesen/Schreiben<br/> | Ruft das aktuelle Wiedergabe Volume ab oder legt es fest. <br/>                                                                                        |
+| [**autoStart**](wmplibiwmpsettings-iwmpsettings-autostart--vb-and-c.md)<br/>                   | Lesen/Schreiben<br/> | Ruft einen Wert ab, der angibt, ob das aktuelle Medienelement automatisch wiedergegeben wird, oder legt diesen fest. <br/>                                     |
+| [**Gleichgewicht**](wmplibiwmpsettings-iwmpsettings-balance--vb-and-c.md)<br/>                       | Lesen/Schreiben<br/> | Ruft die aktuelle Stereo-Ausgewogenheit ab oder legt sie fest.<br/>                                                                                          |
+| [**baseURL**](wmplibiwmpsettings-iwmpsettings-baseurl--vb-and-c.md)<br/>                       | Lesen/Schreiben<br/> | Ruft die Basis-URL ab, die für die relative Pfadauflösung mit URL-Skriptbefehlen verwendet wird, die in digitale Medieninhalte eingebettet sind, oder legt diese fest. <br/> |
+| [**defaultFrame**](wmplibiwmpsettings-iwmpsettings-defaultframe--vb-and-c.md)<br/>             | Lesen/Schreiben<br/> | Ruft den Namen des Frames ab, der zum Anzeigen einer URL verwendet wird, die in einem **scriptCommand-Ereignis** empfangen wird, oder legt diesen fest. <br/>                          |
+| [**enableErrorDialogs**](wmplibiwmpsettings-iwmpsettings-enableerrordialogs--vb-and-c.md)<br/> | Lesen/Schreiben<br/> | Ruft einen Wert ab, der angibt, ob Fehlerdialogfelder automatisch angezeigt werden, oder legt einen Wert fest.<br/>                                           |
+| [**invokeURLs**](wmplibiwmpsettings-iwmpsettings-invokeurls--vb-and-c.md)<br/>                 | Lesen/Schreiben<br/> | Ruft einen Wert ab, der angibt, ob URL-Ereignisse einen Webbrowser starten sollen, oder legt den Wert fest. <br/>                                                  |
+| [**Isavailable**](iwmpsettings-isavailable--vb-and-c.md)<br/>                                  | Schreibgeschützt<br/>  | Ruft einen Wert ab, der angibt, ob eine angegebene Aktion ausgeführt werden kann. In C# ist dies die **get \_ isAvailable-Methode.**<br/>             |
+| [**Stumm**](wmplibiwmpsettings-iwmpsettings-mute--vb-and-c.md)<br/>                             | Lesen/Schreiben<br/> | Ruft einen Wert ab, der angibt, ob audio stummgeschaltet ist, oder legt einen Wert fest. <br/>                                                                          |
+| [**playCount**](wmplibiwmpsettings-iwmpsettings-playcount--vb-and-c.md)<br/>                   | Lesen/Schreiben<br/> | Ruft ab oder legt fest, wie oft ein Medienelement wiedergegeben wird. <br/>                                                                         |
+| [**Rate**](wmplibiwmpsettings-iwmpsettings-rate--vb-and-c.md)<br/>                             | Lesen/Schreiben<br/> | Ruft die aktuelle Wiedergaberate für Video ab oder legt sie fest. <br/>                                                                                |
+| [**Volumen**](wmplibiwmpsettings-iwmpsettings-volume--vb-and-c.md)<br/>                         | Lesen/Schreiben<br/> | Ruft das aktuelle Wiedergabevolume ab oder legt dieses fest. <br/>                                                                                        |
 
 
 
  
 
-Verwenden Sie die folgende Eigenschaft, um eine **iwmpsettings** -Schnittstelle zu erhalten.
+Abrufen einer **IWMPSettings-Schnittstelle** mithilfe der folgenden Eigenschaft.
 
 
 
@@ -92,18 +92,18 @@ Verwenden Sie die folgende Eigenschaft, um eine **iwmpsettings** -Schnittstelle 
 
 | Anforderung | Wert |
 |-------------------|----------------------------------------------------------------------------------|
-| Header<br/> | <dl> <dt>WMP. h</dt> </dl> |
+| Header<br/> | <dl> <dt>Wmp.h</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Schnittstellen für Visual Basic .net und C #**](interfaces-for-visual-basic--net-and-c.md)
+[**Schnittstellen für Visual Basic .NET und C #**](interfaces-for-visual-basic--net-and-c.md)
 </dt> <dt>
 
-[**IWMPSettings2-Schnittstelle (VB und c#)**](iwmpsettings2--vb-and-c.md)
+[**IWMPSettings2-Schnittstelle (VB und C#)**](iwmpsettings2--vb-and-c.md)
 </dt> </dl>
 
  

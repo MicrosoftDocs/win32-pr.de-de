@@ -1,32 +1,32 @@
 ---
-title: Ändern der Synchronisierungs Priorität
-description: Ändern der Synchronisierungs Priorität
+title: Ändern der Synchronisierungspriorität
+description: Ändern der Synchronisierungspriorität
 ms.assetid: 992781cb-5018-4b88-aa93-2f8a86468a42
 keywords:
-- Windows Media Player, Synchronisierungs Wiedergabelisten
-- Windows Media Player-Objektmodell, Synchronisierungs Wiedergabelisten
-- Objektmodell, Synchronisierungs Wiedergabelisten
-- Windows Media Player Mobile, Synchronisierungs Wiedergabelisten
-- Windows Media Player ActiveX-Steuerelement, Synchronisierungs Wiedergabelisten
-- Windows Media Player Mobile ActiveX-Steuerelement, Synchronisierungs Wiedergabelisten
-- ActiveX-Steuerung, Synchronisierungs Wiedergabelisten
+- Windows Media Player, Synchronisierungswiedergabelisten
+- Windows Media Player Objektmodell, Synchronisierungswiedergabelisten
+- Objektmodell, Synchronisierungswiedergabelisten
+- Windows Media Player Mobile Wiedergabelisten, Synchronisierungswiedergabelisten
+- Windows Media Player ActiveX-Steuerelement, Synchronisierungswiedergabelisten
+- Windows Media Player Mobile ActiveX- und Synchronisierungswiedergabelisten
+- ActiveX-Steuerelement, Synchronisierungswiedergabelisten
 - Wiedergabelisten, Synchronisierung
-- Metadatei-Wiedergabelisten, Synchronisierung
-- Windows Media Metadatei-Wiedergabelisten, Synchronisierung
-- Portable Geräte, Ändern der Prioritäten der Synchronisierungs Wiedergabeliste
-- Synchronisierungs Wiedergabelisten, Prioritäten
+- Metafile-Wiedergabelisten, Synchronisierung
+- Windows Medienmetadatei-Wiedergabelisten, Synchronisierung
+- Portable Geräte, Ändern der Prioritäten der Synchronisierungswiedergabeliste
+- Synchronisierungswiedergabelisten, Prioritäten
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 327f211282e2e3b35c21dce721a17f99dcb6583d
-ms.sourcegitcommit: 48d1c892045445bcbd0f22bafa2fd3861ffaa6e7
+ms.openlocfilehash: 1513679bcde31893cd7c4f456bc0e99404bb5dc66de37976f2053ae1559a4cdf
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/19/2020
-ms.locfileid: "103723608"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118997660"
 ---
-# <a name="changing-synchronization-priority"></a>Ändern der Synchronisierungs Priorität
+# <a name="changing-synchronization-priority"></a>Ändern der Synchronisierungspriorität
 
-Der folgende Beispielcode gibt einen Prioritätswert für jedes Element im ListView-Steuerelement an, das von IDC \_ plview identifiziert wird. Elemente, die mit einem Häkchen gekennzeichnet sind, wird basierend auf ihrer Reihenfolge in der Liste ein Prioritätswert zugewiesen. Elementen, die nicht aktiviert sind, wird ein Prioritätswert von 0 (null) zugewiesen.
+Der folgende Beispielcode gibt einen Prioritätswert für jedes Element im ListView-Steuerelement an, das durch IDC PLVIEW identifiziert \_ wird. Elementen, die mit einem Häkchen markiert sind, wird basierend auf ihrer Reihenfolge in der Liste ein Prioritätswert zugewiesen. Elementen, die nicht überprüft werden, wird der Prioritätswert 0 (null) zugewiesen.
 
 
 ```C++
@@ -85,18 +85,18 @@ void CSyncSettings::SetPriorities()
 
 <dl> <dt>
 
-[**Iwmpmedia-Schnittstelle**](/previous-versions/windows/desktop/api/wmp/nn-wmp-iwmpmedia)
+[**IWMPMedia-Schnittstelle**](/previous-versions/windows/desktop/api/wmp/nn-wmp-iwmpmedia)
 </dt> <dt>
 
-[**Iwmpwiedergabe-Schnittstelle**](/previous-versions/windows/desktop/api/wmp/nn-wmp-iwmpplaylist)
+[**IWMPPlaylist-Schnittstelle**](/previous-versions/windows/desktop/api/wmp/nn-wmp-iwmpplaylist)
 </dt> <dt>
 
-[**Synchronisierungs Wiedergabelisten**](managing-synchronization-playlists.md)
+[**Verwalten von Synchronisierungswiedergabelisten**](managing-synchronization-playlists.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

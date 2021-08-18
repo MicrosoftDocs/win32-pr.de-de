@@ -1,7 +1,7 @@
 ---
-description: Die PrintProcessor \_ Info \_ 1-Struktur gibt den Namen eines installierten Druck Prozessors an.
+description: Die \_ PRINTPROCESSOR INFO \_ 1-Struktur gibt den Namen eines installierten Druckprozessors an.
 ms.assetid: 49b272c8-156b-4996-b3fd-92cde831f4ae
-title: PRINTPROCESSOR_INFO_1 Struktur (winspool. h)
+title: PRINTPROCESSOR_INFO_1-Struktur (Winspool.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -15,16 +15,16 @@ api_type:
 - HeaderDef
 api_location:
 - Winspool.h
-ms.openlocfilehash: 5ac35f85e904e9a80d9f244a1421b54fd0994a43
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 0aa94a2df1c44b53ec9fb8211f7eaed8c955f9f2c1cd824cd4634c754f8c337e
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106350802"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119824739"
 ---
-# <a name="printprocessor_info_1-structure"></a>PrintProcessor \_ Info \_ 1-Struktur
+# <a name="printprocessor_info_1-structure"></a>PRINTPROCESSOR \_ INFO \_ 1-Struktur
 
-Die **PrintProcessor \_ Info \_ 1** -Struktur gibt den Namen eines installierten Druck Prozessors an.
+Die **PRINTPROCESSOR \_ INFO \_ 1-Struktur** gibt den Namen eines installierten Druckprozessors an.
 
 ## <a name="syntax"></a>Syntax
 
@@ -44,7 +44,7 @@ typedef struct _PRINTPROCESSOR_INFO_1 {
 **pName**
 </dt> <dd>
 
-Ein Zeiger auf eine mit NULL endenden Zeichenfolge, die den Namen eines installierten Druck Prozessors angibt.
+Zeiger auf eine auf NULL endende Zeichenfolge, die den Namen eines installierten Druckprozessors angibt.
 
 </dd> </dl>
 
@@ -56,22 +56,22 @@ Ein Zeiger auf eine mit NULL endenden Zeichenfolge, die den Namen eines installi
 |-------------------------------------|-----------------------------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[nur Desktop-Apps\]<br/>                                                |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                                                      |
-| Header<br/>                   | <dl> <dt>Winspool. h (Include Windows. h)</dt> </dl> |
-| Unicode- und ANSI-Name<br/>   | **\_ PrintProcessor \_ Info \_ 1W** (Unicode) und **\_ PrintProcessor \_ Info \_ 1a** (ANSI)<br/>             |
+| Header<br/>                   | <dl> <dt>Winspool.h (include Windows.h)</dt> </dl> |
+| Unicode- und ANSI-Name<br/>   | **\_ PRINTPROCESSOR \_ INFO \_ 1W** (Unicode) und **\_ PRINTPROCESSOR \_ INFO \_ 1A** (ANSI)<br/>             |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
 [Drucken](printdocs-printing.md)
 </dt> <dt>
 
-[Druck Spooler-API-Strukturen](printing-and-print-spooler-structures.md)
+[Drucken von Spooler-API-Strukturen](printing-and-print-spooler-structures.md)
 </dt> <dt>
 
-[**Enumprintprozessoren**](enumprintprocessors.md)
+[**EnumPrintProcessors**](enumprintprocessors.md)
 </dt> </dl>
 
  

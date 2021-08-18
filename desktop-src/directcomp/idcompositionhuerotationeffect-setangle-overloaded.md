@@ -1,9 +1,9 @@
 ---
-title: idcompositionhuerotationeffect-Methode (Dcomp. h)
+title: idcompositionhuerotationeffect SetAngle-Methoden (Dcomp.h)
 description: Legt den Winkel fest, um den Farbton zu drehen.
 ms.assetid: e4069c7a-c8a1-dadb-a1fc-1d0c4c58834f
 keywords:
-- Dritangle-Methoden directcomposition
+- SetAngle-Methoden DirectComposition
 topic_type:
 - apiref
 api_location:
@@ -12,14 +12,14 @@ api_type:
 - HeaderDef
 ms.date: 07/02/2019
 ms.topic: reference
-ms.openlocfilehash: 1b0e78443ca0cd2e60cf851f74e9125d920bf9ed
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: dafec7ae3e325965df113e4aa5f901107ffb16d230baf23ada5fa939b94261cc
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106366740"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119787850"
 ---
-# <a name="idcompositionhuerotationeffectsetangle-methods"></a>idcompositionhuerotationeffect::-Methode
+# <a name="idcompositionhuerotationeffectsetangle-methods"></a>idcompositionhuerotationeffect::SetAngle-Methoden
 
 Legt den Winkel fest, um den Farbton zu drehen.
 
@@ -27,10 +27,10 @@ Legt den Winkel fest, um den Farbton zu drehen.
 
 
 
-| Methode                                                                                    | BESCHREIBUNG                                  |
+| Methode                                                                                    | Beschreibung                                  |
 |:------------------------------------------------------------------------------------------|:---------------------------------------------|
-| [**"Eintangle" (idcompositionanimation \* )**](/windows/win32/api/dcomp/nf-dcomp-idcompositionhuerotationeffect-setangle(idcompositionanimation)) | Legt den Winkel fest, um den Farbton zu drehen.<br/> |
-| [**Ziel**](/windows/win32/api/dcomp/nf-dcomp-idcompositionhuerotationeffect-setangle(float))                               | Legt den Winkel fest, um den Farbton zu drehen.<br/> |
+| [**SetAngle (IDCompositionAnimation \* )**](/windows/win32/api/dcomp/nf-dcomp-idcompositionhuerotationeffect-setangle(idcompositionanimation)) | Legt den Winkel fest, um den Farbton zu drehen.<br/> |
+| [**SetAngle**](/windows/win32/api/dcomp/nf-dcomp-idcompositionhuerotationeffect-setangle(float))                               | Legt den Winkel fest, um den Farbton zu drehen.<br/> |
 
 
 
@@ -40,15 +40,15 @@ Legt den Winkel fest, um den Farbton zu drehen.
 
 | Anforderung | Wert |
 |-------------------|------------------------------------------------------------------------------------|
-| Header<br/> | <dl> <dt>Dcomp. h</dt> </dl> |
+| Header<br/> | <dl> <dt>Dcomp.h</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Idcompositionhuerotationeffect**](/windows/win32/api/dcomp/nn-dcomp-idcompositionhuerotationeffect)
+[**IDCompositionHueRotationEffect**](/windows/win32/api/dcomp/nn-dcomp-idcompositionhuerotationeffect)
 </dt> </dl>
 
 �

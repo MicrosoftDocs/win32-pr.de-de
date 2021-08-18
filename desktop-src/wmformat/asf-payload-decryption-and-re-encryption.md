@@ -1,64 +1,64 @@
 ---
-title: Entschlüsselung und erneute Verschlüsselung von ASF-Nutzlast
-description: Entschlüsselung und erneute Verschlüsselung von ASF-Nutzlast
+title: ASF-Nutzlastentschlüsselung und erneute Verschlüsselung
+description: ASF-Nutzlastentschlüsselung und erneute Verschlüsselung
 ms.assetid: 0a8c996d-2167-483a-93af-6fe22f0efaf1
 keywords:
-- SDK für Windows Media-Format, ASF-Nutz Last Entschlüsselung und erneute Verschlüsselung
-- Windows Media-Format-SDK, Nutzlast entschlüsseln und erneute Verschlüsselung
-- SDK für Windows Media-Format, Entschlüsselung
-- SDK für Windows Media-Format, erneute Verschlüsselung
-- Digital Rights Management (DRM), ASF-Nutz Last Entschlüsselung und erneute Verschlüsselung
-- DRM (Digital Rights Management), ASF-Nutz Last Entschlüsselung und erneute Verschlüsselung
-- Digital Rights Management (DRM), Nutzlast entschlüsseln und erneute Verschlüsselung
-- DRM (Digital Rights Management), Nutzlast entschlüsseln und erneute Verschlüsselung
+- Windows Medienformat-SDK, ASF-Nutzlastentschlüsselung und erneute Verschlüsselung
+- Windows Medienformat-SDK, Nutzlastentschlüsselung und erneute Verschlüsselung
+- Windows Medienformat-SDK,Entschlüsselung
+- Windows Medienformat-SDK, erneute Verschlüsselung
+- Digital Rights Management (DRM), ASF-Nutzlastentschlüsselung und erneute Verschlüsselung
+- DRM (Digital Rights Management), ASF-Nutzlastentschlüsselung und erneute Verschlüsselung
+- Digital Rights Management (DRM), Nutzlastentschlüsselung und erneute Verschlüsselung
+- DRM (Digital Rights Management), Nutzlastentschlüsselung und erneute Verschlüsselung
 - Digital Rights Management (DRM), Entschlüsselung
-- DRM (Digital Rights Management), Entschlüsselung
+- DRM (Verwaltung digitaler Rechte),Entschlüsselung
 - Digital Rights Management (DRM), erneute Verschlüsselung
 - DRM (Digital Rights Management), erneute Verschlüsselung
-- Erweiterte APIs für den DRM-Client, die Entschlüsselung der ASF-Nutzlast und die erneute Verschlüsselung
-- Erweiterte Client-APIs, ASF-Nutz Last Entschlüsselung und erneute Verschlüsselung
-- Erweiterte APIs für den DRM-Client, Nutzlast entschlüsseln und erneute Verschlüsselung
-- Erweiterte Client-APIs, Nutzlast entschlüsseln und erneute Verschlüsselung
-- Erweiterte APIs für den DRM-Client, Entschlüsselung
-- Erweiterte Client-APIs, Entschlüsselung
-- Erweiterte APIs für den DRM-Client, erneute Verschlüsselung
+- Erweiterte DRM-Client-APIs, ASF-Nutzlastentschlüsselung und erneute Verschlüsselung
+- Erweiterte Client-APIs, ASF-Nutzlastentschlüsselung und erneute Verschlüsselung
+- Erweiterte APIs des DRM-Clients, Nutzlastentschlüsselung und erneute Verschlüsselung
+- Erweiterte Client-APIs, Nutzlastentschlüsselung und erneute Verschlüsselung
+- Erweiterte APIs des DRM-Clients, Entschlüsselung
+- Erweiterte Client-APIs,Entschlüsselung
+- Erweiterte DRM-Client-APIs, erneute Verschlüsselung
 - Erweiterte Client-APIs, erneute Verschlüsselung
 - Advanced Systems Format (ASF), erneute Verschlüsselung
 - ASF (Advanced Systems Format), erneute Verschlüsselung
 - Advanced Systems Format (ASF), Entschlüsselung
 - ASF (Advanced Systems Format), Entschlüsselung
-- Advanced Systems Format (ASF), Nutzlast entschlüsseln und erneute Verschlüsselung
-- ASF (Advanced Systems Format), Nutzlast entschlüsseln und erneute Verschlüsselung
+- Advanced Systems Format (ASF), Nutzlastentschlüsselung und erneute Verschlüsselung
+- ASF (Advanced Systems Format), Nutzlastentschlüsselung und erneute Verschlüsselung
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 313c6dcab1d483b737b6b05636b51b8af0502350
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: 1c60469ff0b1408fcf51cb3dde899559980790a09c01b6619b3ff2ba797554a8
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "103707866"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120007110"
 ---
-# <a name="asf-payload-decryption-and-re-encryption"></a>Entschlüsselung und erneute Verschlüsselung von ASF-Nutzlast
+# <a name="asf-payload-decryption-and-re-encryption"></a>ASF-Nutzlastentschlüsselung und erneute Verschlüsselung
 
-In den folgenden Schritten werden die Aktionen beschrieben, die eine Anwendung zum Entschlüsseln und erneuten Verschlüsseln der einzelnen Nutzlasten ausführen muss:
+In den folgenden Schritten werden die Aktionen beschrieben, die eine Anwendung ausführen muss, um jede Nutzlast zu entschlüsseln und erneut zu verschlüsseln:
 
 1.  Erhöhen Sie den Salt-Wert.
-2.  Übergeben Sie die mit Windows Media DRM verschlüsselte Nutzlast (mit Windows Media DRM) und den Salt-Wert an die Entschlüsselungs Funktion [**iwmdrmentschlüsseln::D ecrypt**](iwmdrmdecrypt-decrypt.md), die die Nutzlast zurückgibt, die mithilfe des öffentlichen RC4-Schlüssels verschlüsselt wird.
-3.  Leiten Sie einen vorübergehendes RC4-Schlüssel ab, indem Sie einen SHA-1-Hash des Initialisierungs Vektors anwenden, der mit dem Salt-Wert verkettet ist.
-4.  Verwenden Sie Ihren vorübergehendes-Schlüssel, um die Nutzlast zu entschlüsseln.
-5.  Erneutes Verschlüsseln der Nutzlast mit dem autorisierten Inhalts Schutzschema gemäß den Windows Media DRM-Regeln zum Exportieren von Konformität und Stabilität.
+2.  Übergeben Sie die Nutzlast (verschlüsselt mit Windows Media DRM) und den Salt-Wert an die Entschlüsselungsfunktion [**IWMDRMDecrypt::D ecrypt,**](iwmdrmdecrypt-decrypt.md)die die Nutzlast zurückgibt, die mit dem öffentlichen RC4-Schlüssel verschlüsselt wurde.
+3.  Leiten Sie einen vorübergehenden RC4-Schlüssel ab, indem Sie einen SHA-1-Hash des Initialisierungsvektors anwenden, der mit dem Salt-Wert verkettet ist.
+4.  Verwenden Sie Ihren vorübergehenden Schlüssel, um die Nutzlast zu entschlüsseln.
+5.  Verschlüsseln Sie die Nutzlast sofort mit dem autorisierten Inhaltsschutzschema gemäß den Regeln für die Konformität und Stabilität des drm-Exports für Windows Medien-DRM.
 6.  Suchen Sie die nächste Nutzlast.
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[**Exportieren von komprimiertem Inhalt**](exporting-compressed-content.md)
+[**Exportieren von komprimierten Inhalten**](exporting-compressed-content.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

@@ -1,9 +1,9 @@
 ---
-title: gldeaktiviert-Funktion (GL. h)
-description: Die Funktionen "glEnable" und "gldeaktivieren" aktivieren oder deaktivieren OpenGL-Funktionen. | gldeaktiviert-Funktion (GL. h)
+title: glDisable-Funktion (Gl.h)
+description: Die Funktionen glEnable und glDisable aktivieren oder deaktivieren OpenGL-Funktionen. | glDisable-Funktion (Gl.h)
 ms.assetid: 094f730e-5e2b-485e-8d9d-fee2902d3d5f
 keywords:
-- gldeaktivieren-Funktion OpenGL
+- GlDisable-Funktion OpenGL
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - DllExport
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: eff5c12e53eb060777f75ad537bed265401a7a26
-ms.sourcegitcommit: 92e74c99f8f4d097676959d0c317f533c2400a80
+ms.openlocfilehash: a124421684fc2e1b5826e149b90f9d249a6236c792f3830fa2a10e29793d0935
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/09/2021
-ms.locfileid: "106365057"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119625730"
 ---
-# <a name="gldisable-function"></a>gldeaktiviert-Funktion
+# <a name="gldisable-function"></a>glDisable-Funktion
 
-Die Funktionen " [**glEnable**](glenable.md) " und " **gldeaktivieren** " aktivieren oder deaktivieren OpenGL-Funktionen.
+Die [**Funktionen glEnable**](glenable.md) und **glDisable** aktivieren oder deaktivieren OpenGL-Funktionen.
 
 ## <a name="syntax"></a>Syntax
 
@@ -40,12 +40,12 @@ void WINAPI glDisable(
 
 <dl> <dt>
 
-*Decke* 
+*Cap* 
 </dt> <dd>
 
 Eine symbolische Konstante, die eine OpenGL-Funktion angibt.
 
-Eine Erläuterung der Werte, die die *Obergrenze* annehmen kann, finden Sie im Abschnitt "Hinweise".
+Eine Erläuterung der *Werteobergrenze* finden Sie im abschnitt "Hinweise".
 
 </dd> </dl>
 
@@ -55,76 +55,76 @@ Diese Funktion gibt keinen Wert zurück.
 
 ## <a name="error-codes"></a>Fehlercodes
 
-Die folgenden Fehlercodes können von der Funktion " [**glgeterror**](glgeterror.md) " abgerufen werden.
+Die folgenden Fehlercodes können von der [**glGetError-Funktion**](glgeterror.md) abgerufen werden.
 
 
 
 | Name                                                                                                  | Bedeutung                                                                                                                               |
 |-------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------|
-| <dl> <dt>**GL \_ ungültige Aufzählung. \_**</dt> </dl>      | Das *Cap* war keiner der Werte, die im vorherigen Abschnitt "Hinweise" aufgeführt sind.<br/>                                                   |
-| <dl> <dt>**\_ungültiger \_ Vorgang**</dt> </dl> | Die Funktion wurde zwischen einem Aufruf von [**glBegin**](glbegin.md) und dem entsprechenden Aufruf von [**glEnd**](glend.md)aufgerufen.<br/> |
+| <dl> <dt>**GL \_ INVALID \_ ENUM**</dt> </dl>      | *cap* war keiner der im vorherigen Abschnitt "Hinweise" aufgeführten Werte.<br/>                                                   |
+| <dl> <dt>**GL \_ INVALID \_ OPERATION**</dt> </dl> | Die Funktion wurde zwischen einem Aufruf von [**glBegin**](glbegin.md) und dem entsprechenden Aufruf von [**glEnd**](glend.md)aufgerufen.<br/> |
 
 
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die Funktionen " [**glEnable**](glenable.md) " und " **gldeaktivieren** " aktivieren und deaktivieren verschiedene OpenGL-Grafikfunktionen. Verwenden Sie " [**glisenabled**](glisenabled.md) " oder " [**glget**](glgetbooleanv--glgetdoublev--glgetfloatv--glgetintegerv.md) ", um die aktuelle Einstellung einer beliebigen Funktion zu bestimmen.
+Die [**Funktionen glEnable**](glenable.md) und **glDisable** aktivieren und deaktivieren verschiedene OpenGL-Grafikfunktionen. Verwenden Sie [**glIsEnabled**](glisenabled.md) oder [**glGet,**](glgetbooleanv--glgetdoublev--glgetfloatv--glgetintegerv.md) um die aktuelle Einstellung jeder Funktion zu bestimmen.
 
-Sowohl [**glEnable**](glenable.md) als auch **glEnable** verwenden ein einzelnes Argument ( *Cap*), das einen der folgenden Werte annehmen kann:
+Sowohl [**glEnable**](glenable.md) als **auch glDisable** übernehmen ein einzelnes Argument, *cap*, das einen der folgenden Werte annehmen kann:
 
 
 
 | Wert                       | Bedeutung                                                                                                                                                                                                                                                     |
 |-----------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| GL- \_ alpha \_ Test             | Wenn diese Option aktiviert ist, führen Sie Alpha Tests durch. Siehe [**glalphafunc**](glalphafunc.md).                                                                                                                                                                                       |
-| GL \_ Auto \_ Normal            | Wenn diese Option aktiviert ist, werden normale Vektoren bei der Generierung von GL \_ map2 \_ Vertex \_ 3 oder GL \_ map2 Scheitel Punkten durch \_ Scheitel \_ Punkte analytisch berechnet. Siehe [**glMap2**](glmap2.md).                                                                                        |
-| GL \_ Blend                   | Wenn diese Option aktiviert ist, werden die eingehenden RGBA-Farbwerte mit den Werten in den Farb Puffern in Blend Siehe [**glblendfunc**](glblendfunc.md).                                                                                                                              |
-| GL \_ - \_ clippinbene *i*          | Wenn diese Option aktiviert ist, schneiden Sie Geometry für die benutzerdefinierte Clippingebene *i* ab. Siehe [**glclipplane**](glclipplane.md).                                                                                                                                                  |
-| GL- \_ Farb \_ Logik- \_ op        | Wenn diese Option aktiviert ist, wird der aktuelle logische Vorgang auf die eingehenden RGBA-Farb-und Farb Puffer Werte angewendet. Siehe [**gllogicop**](gllogicop.md).                                                                                                                     |
-| GL- \_ Farb \_ Material         | Wenn diese Option aktiviert ist, muss mindestens ein Materialparameter die aktuelle Farbe verfolgen. Siehe [**glcolormaterial**](glcolormaterial.md).                                                                                                                                   |
-| GL. Ober \_ \_ Fläche              | Wenn diese Option aktiviert ist, werden Polygone auf Grundlage ihres aufwicklungs Fensters in Fenster Koordinaten angezeigt. Siehe [**glcullface**](glcullface.md).                                                                                                                                               |
-| GL- \_ tiefen \_ Test             | Wenn diese Option aktiviert ist, werden tiefen Vergleiche durchführen und der tiefen Puffer aktualisiert. Weitere Informationen finden Sie unter [**gldepthfunc**](gldepthfunc.md) und [**gldepthrange**](gldepthrange.md).                                                                                                              |
-| GL \_ .                  | Wenn diese Option aktiviert ist, werden Komponenten oder Indizes vor dem Schreiben in den Farb Puffer unterschieden.                                                                                                                                                                 |
-| GL- \_ Nebel                     | Wenn diese Option aktiviert ist, wird eine Nebelfarbe in die Post-texturierungsfarbe umgewandelt. Siehe [**glnebel**](glfog.md).                                                                                                                                                                    |
-| GL- \_ Index \_ Logik- \_ op        | Wenn diese Option aktiviert ist, wird die aktuelle logische Operation auf die eingehenden Index-und Farb Puffer Indizes angewendet. Siehe [**gllogicop**](gllogicop.md).                                                                                                                         |
-| GL \_ Light *i*                | Wenn diese Option aktiviert ist, sollten Sie Light *i* in die Auswertung der Beleuchtungs Gleichung einschließen. Siehe [**gllightmodel**](gllightmodel-functions.md) und [**gllight**](gllight-functions.md).                                                                                      |
-| GL- \_ Beleuchtung                | Wenn diese Option aktiviert ist, verwenden Sie die aktuellen Beleuchtungs Parameter, um die Vertexfarbe oder den Index zu berechnen. Wenn diese Option deaktiviert ist, ordnen Sie die aktuelle Farbe oder den aktuellen Index jedem Scheitelpunkt zu Siehe [**glmaterial**](glmaterial-functions.md), **gllightmodel** und **gllight**.                |
-| GL- \_ Linie \_ glatt            | Wenn diese Option aktiviert ist, zeichnen Sie Linien mit korrekter Filterung. Wenn diese Option deaktiviert ist, zeichnen Sie Zeilen mit Zeilen. Siehe [**glLineWidth**](gllinewidth.md).                                                                                                                                     |
-| GL- \_ Zeilen \_ Stippel           | Wenn diese Option aktiviert ist, verwenden Sie das aktuelle Zeilen stippingmuster beim Zeichnen von Linien. Siehe [**glLineStipple**](gllinestipple.md).                                                                                                                                            |
-| GL- \_ Logik- \_ op               | Wenn diese Option aktiviert ist, wird der aktuell ausgewählte logische Vorgang auf die eingehenden und Farb Puffer Indizes angewendet. Siehe [**gllogicop**](gllogicop.md).                                                                                                                    |
-| GL \_ zuordnung1 \_ Farbe \_ 4          | Wenn diese Option aktiviert ist, generieren Aufrufe von [**glEvalCoord1**](glevalcoord-functions.md), [**glEvalMesh1**](glevalmesh-functions.md)und [**glEvalPoint1**](glevalpoint.md) RGBA-Werte. Siehe auch [**glMap1**](glmap1.md).                                           |
-| GL \_ zuordnung1 \_ Index             | Wenn diese Option aktiviert ist, werden bei Aufrufen von **glEvalCoord1**, **glEvalMesh1** und **glEvalPoint1** Farbindizes generiert. Siehe auch **glMap1**.                                                                                                                                   |
-| GL \_ zuordnung1 \_ Normal            | Wenn diese Option aktiviert ist, werden bei Aufrufen von [**glEvalCoord1**](glevalcoord-functions.md), [**glEvalMesh1**](glevalmesh-functions.md)und [**glEvalPoint1**](glevalpoint.md) normale generiert. Siehe auch [**glMap1**](glmap1.md).                                               |
-| GL \_ zuordnung1 \_ Textur \_ Koord \_ 1 | Wenn diese Option aktiviert ist, generieren Aufrufe von **glEvalCoord1**, **glEvalMesh1** und **glEvalPoint1** *s* -Texturkoordinaten. Siehe auch **glMap1**.                                                                                                                         |
-| GL \_ zuordnung1 \_ Textur- \_ Koord \_ 2 | Wenn diese Option aktiviert ist, generieren Aufrufe von [**glEvalCoord1**](glevalcoord-functions.md), [**glEvalMesh1**](glevalmesh-functions.md)und [**glEvalPoint1**](glevalpoint.md) *s* -und *t* -Texturkoordinaten. Siehe auch [**glMap1**](glmap1.md).                       |
-| GL \_ zuordnung1 \_ Textur \_ Koord \_ 3 | Wenn diese Option aktiviert ist, generieren Aufrufe von **glEvalCoord1**, **glEvalMesh1** und **glEvalPoint1** die Texturkoordinaten *s*, *t* und *r* . Siehe auch **glMap1**.                                                                                                           |
-| GL \_ zuordnung1 \_ Textur- \_ Koord \_ 4 | Wenn diese Option aktiviert ist, generieren Aufrufe von [glEvalCoord1](glevalcoord-functions.md), [glEvalMesh1](glevalmesh-functions.md)und [**glEvalPoint1**](glevalpoint.md) *s*-, *t*-, *r*-und *q* -Texturkoordinaten. Siehe auch [**glMap1**](glmap1.md).                    |
-| GL \_ zuordnung1 \_ Scheitelpunkt \_ 3         | Wenn diese Option aktiviert ist, werden von Aufrufen von **glEvalCoord1**, **glEvalMesh1** und **glEvalPoint1** *x*-, *y*-und *z* -Scheitelpunkt Koordinaten generiert. Siehe auch **glMap1**.                                                                                                            |
-| GL \_ zuordnung1 \_ Scheitelpunkt \_ 4         | Wenn diese Option aktiviert ist, generieren Aufrufe von [**glEvalCoord1**](glevalcoord-functions.md), [**glEvalMesh1**](glevalmesh-functions.md)und [**glEvalPoint1**](glevalpoint.md) homogene *x*-, *y*-, *z*-und *w* -Scheitelpunkt Koordinaten. Siehe auch [**glMap1**](glmap1.md). |
-| GL \_ map2 \_ Farbe \_ 4          | Wenn diese Option aktiviert ist, generieren Aufrufe von [**glEvalCoord2**](glevalcoord-functions.md), [**glEvalMesh2**](glevalmesh-functions.md)und [**glEvalPoint2**](glevalpoint.md) RGBA-Werte. Siehe auch [**glMap2**](glmap2.md).                                           |
-| GL \_ map2 \_ Index             | Wenn diese Option aktiviert ist, werden bei Aufrufen von **glEvalCoord2**, **glEvalMesh2** und **glEvalPoint2** Farbindizes generiert. Siehe auch **glMap2**.                                                                                                                                   |
-| GL \_ map2 \_ Normal            | Wenn diese Option aktiviert ist, werden bei Aufrufen von [**glEvalCoord2**](glevalcoord-functions.md), [**glEvalMesh2**](glevalmesh-functions.md)und [**glEvalPoint2**](glevalpoint.md) normale generiert. Siehe auch [**glMap2**](glmap2.md).                                               |
-| GL \_ map2 \_ Textur \_ Koord \_ 1 | Wenn diese Option aktiviert ist, generieren Aufrufe von **glEvalCoord2**, **glEvalMesh2** und **glEvalPoint2** *s* -Texturkoordinaten. Siehe auch **glMap2**.                                                                                                                         |
-| GL \_ map2 \_ Textur- \_ Koord \_ 2 | Wenn diese Option aktiviert ist, generieren Aufrufe von [**glEvalCoord2**](glevalcoord-functions.md), [**glEvalMesh2**](glevalmesh-functions.md)und [**glEvalPoint2**](glevalpoint.md) *s* -und *t* -Texturkoordinaten. Siehe auch [**glMap2**](glmap2.md).                       |
-| GL \_ map2 \_ Textur \_ Koord \_ 3 | Wenn diese Option aktiviert ist, generieren Aufrufe von **glEvalCoord2**, **glEvalMesh2** und **glEvalPoint2** die Texturkoordinaten *s*, *t* und *r* . Siehe auch **glMap2**.                                                                                                           |
-| GL \_ map2 \_ Textur- \_ Koord \_ 4 | Wenn diese Option aktiviert ist, generieren Aufrufe von [**glEvalCoord2**](glevalcoord-functions.md), [**glEvalMesh2**](glevalmesh-functions.md)und [**glEvalPoint2**](glevalpoint.md) *s*-, *t*-, *r*-und *q* -Texturkoordinaten. Siehe auch [**glMap2**](glmap2.md).            |
-| GL \_ map2 \_ Scheitelpunkt \_ 3         | Wenn diese Option aktiviert ist, werden von Aufrufen von **glEvalCoord2**, **glEvalMesh2** und **glEvalPoint2** *x*-, *y*-und *z* -Scheitelpunkt Koordinaten generiert. Siehe auch **glMap2**.                                                                                                            |
-| GL \_ map2 \_ Scheitelpunkt \_ 4         | Wenn diese Option aktiviert ist, generieren Aufrufe von [**glEvalCoord2**](glevalcoord-functions.md), [**glEvalMesh2**](glevalmesh-functions.md)und [**glEvalPoint2**](glevalpoint.md) homogene *x*-, *y*-, *z*-und *w* -Scheitelpunkt Koordinaten. Siehe auch [**glMap2**](glmap2.md). |
-| GL \_ normalize               | Wenn diese Option aktiviert ist, werden die mit **glnormal** angegebenen normalen Vektoren nach der Transformation auf die Einheiten Länge skaliert. Siehe [**glnormal**](glnormal-functions.md).                                                                                                          |
-| GL- \_ Punkt \_ glatt           | Wenn diese Option aktiviert ist, zeichnen Sie Punkte mit ordnungsgemäßer Filterung. Wenn diese Option deaktiviert ist, zeichnen Sie Aliasing Punkte. Siehe [**glPointSize**](glpointsize.md).                                                                                                                                    |
-| GL- \_ Polygon- \_ Offset \_ Füllung   | Wenn diese Option aktiviert ist und das Polygon im GL \_ -Füllmodus gerendert wird, wird den tiefen Werten der Fragmente eines Polygons ein Offset hinzugefügt, bevor der tiefen Vergleich durchgeführt wird. Siehe [**glpolygonoffset**](glpolygonoffset.md)**.**                                      |
-| GL- \_ Polygon- \_ Offset \_ Linie   | Wenn diese Option aktiviert ist und das Polygon im GL \_ -Zeilen Modus gerendert wird, wird den tiefen Werten der Fragmente eines Polygons ein Offset hinzugefügt, bevor der tiefen Vergleich durchgeführt wird. Siehe **glpolygonoffset**.                                                                 |
-| GL- \_ Polygon- \_ Offset \_ Punkt  | Wenn diese Option aktiviert ist, wird den tiefen Werten der Fragmente eines Polygons ein Offset hinzugefügt, bevor der tiefen Vergleich durchgeführt wird, wenn das Polygon im GL-Punkt Modus gerendert wird \_ . Siehe [**glpolygonoffset**](glpolygonoffset.md).                                             |
-| GL- \_ Polygon \_ glatt         | Wenn diese Option aktiviert ist, zeichnen Sie Polygone mit dem richtigen Filter. Wenn diese Option deaktiviert ist, zeichnen Sie Polygone mit Alias. Siehe [**glpolygonmode**](glpolygonmode.md).                                                                                                                            |
-| GL- \_ Polygon- \_ Stippel        | Wenn diese Option aktiviert ist, verwenden Sie das aktuelle Polygon Stippel Muster beim Rendern von Polygonen. Siehe [**glpolygonstippel**](glpolygonstipple.md).                                                                                                                              |
-| GL- \_ Scissor- \_ Test           | Wenn diese Option aktiviert ist, verwerfen Sie Fragmente außerhalb des Scheren Rechtecks. Siehe [**glscissor**](glscissor.md).                                                                                                                                                   |
-| GL- \_ Schablonen \_ Test           | Wenn diese Option aktiviert ist, führen Sie Schablonen Tests aus, und aktualisieren Sie den Schablonen Puffer. Weitere Informationen finden Sie unter [**glstencilfunc**](glstencilfunc.md) und [**glstencilop**](glstencilop.md).                                                                                                            |
-| GL \_ \_ -Textur 1D             | Wenn diese Option aktiviert ist, wird eine eindimensionale Texturierung ausgeführt (es sei denn, die zweidimensionale Texturierung ist ebenfalls aktiviert). Siehe [**glTexImage1D**](glteximage1d.md).                                                                                                            |
-| GL \_ Textur \_ 2D             | Wenn diese Option aktiviert ist, wird eine zweidimensionale Texturierung ausgeführt. Siehe [**glTexImage2D**](glteximage2d.md).                                                                                                                                                               |
-| GL \_ Textur \_ gen, \_ Q         | Wenn diese Option aktiviert ist, wird die *q* -Textur Koordinate mithilfe der Textur Generierungs Funktion berechnet, die mit [**gltexgen**](gltexgen-functions.md)definiert wurde. Andernfalls wird die aktuelle *q* -Textur Koordinate verwendet.                                                        |
-| GL \_ Textur \_ gen \_ R         | Wenn diese Option aktiviert ist, wird die *r* -Textur Koordinate mithilfe der in [**gltexgen**](gltexgen-functions.md)definierten Textur Generierungs Funktion berechnet. Wenn diese Option deaktiviert ist, wird die aktuelle *r* -Textur Koordinate verwendet.                                                      |
-| GL- \_ Textur \_ gen \_ S         | Wenn diese Option aktiviert ist, wird die *s* -Textur Koordinate mithilfe der in **gltexgen** definierten Textur Generierungs Funktion berechnet. Wenn diese Option deaktiviert ist, wird die aktuelle *s* -Textur Koordinate verwendet.                                                                                |
-| GL \_ Textur \_ gen \_ T         | Wenn diese Option aktiviert ist, wird die *t* -Textur Koordinate mithilfe der in [**gltexgen**](gltexgen-functions.md)definierten Textur Generierungs Funktion berechnet. Wenn diese Option deaktiviert ist, wird die aktuelle *t* -Textur Koordinate verwendet.                                                      |
+| GL \_ ALPHA \_ TEST             | Wenn diese Option aktiviert ist, sollten Sie Alphatests durchführen. Siehe [**glAlphaFunc**](glalphafunc.md).                                                                                                                                                                                       |
+| GL \_ AUTO \_ NORMAL            | Wenn diese Option aktiviert ist, berechnen Sie Normalvektoren der Oberfläche analytisch, wenn entweder GL \_ MAP2 \_ VERTEX \_ 3 oder GL \_ MAP2 \_ VERTEX \_ 4 Scheitelpunkte generiert hat. Siehe [**glMap2**](glmap2.md).                                                                                        |
+| GL \_ BLEND                   | Wenn diese Option aktiviert ist, mischen Sie die eingehenden RGBA-Farbwerte mit den Werten in den Farbpuffern. Siehe [**glBlendFunc**](glblendfunc.md).                                                                                                                              |
+| GL \_ CLIP \_ PLANE *i*          | Wenn diese Option aktiviert ist, wird die Geometrie anhand der benutzerdefinierten Clippingebene *i* abgeschnitten. Weitere Informationen finden Sie [**unter glClipPlane**](glclipplane.md).                                                                                                                                                  |
+| GL \_ COLOR \_ LOGIC \_ OP        | Wenn diese Option aktiviert ist, wenden Sie den aktuellen logischen Vorgang auf die eingehenden RGBA-Farb- und Farbpufferwerte an. Siehe [**glLogicOp**](gllogicop.md).                                                                                                                     |
+| GL \_ COLOR \_ MATERIAL         | Wenn diese Option aktiviert ist, können Sie die aktuelle Farbe mit einem oder mehreren Materialparametern nachverfolgen. Siehe [**glColorMaterial**](glcolormaterial.md).                                                                                                                                   |
+| GL \_ CULL \_ FACE              | Wenn diese Option aktiviert ist, können Polygone basierend auf deren Windung in Fensterkoordinaten mit Cull-Ziehzeichen geschaltet werden. Siehe [**glCullFace**](glcullface.md).                                                                                                                                               |
+| \_ \_ GL-TIEFENTEST             | Wenn diese Option aktiviert ist, können Sie Tiefenvergleiche durchführen und den Tiefenpuffer aktualisieren. Siehe [**glDepthFunc**](gldepthfunc.md) und [**glDepthRange**](gldepthrange.md).                                                                                                              |
+| GL \_ DITHER                  | Wenn diese Option aktiviert ist, können Sie Farbkomponenten oder Indizes ditherieren, bevor sie in den Farbpuffer geschrieben werden.                                                                                                                                                                 |
+| GL \_ VERSCHENKTE                     | Wenn diese Option aktiviert ist, mischen Sie eine Farbfarbe in die Farbe nach der Texturierung. Weitere Informationen finden Sie [**unter glFog**](glfog.md).                                                                                                                                                                    |
+| GL \_ INDEX \_ LOGIC \_ OP        | Wenn diese Option aktiviert ist, wenden Sie den aktuellen logischen Vorgang auf den eingehenden Index und die Farbpufferindizes an. Siehe [**glLogicOp**](gllogicop.md).                                                                                                                         |
+| GL \_ LIGHT *i*                | Wenn diese Option aktiviert ist, schließen Sie light *i* in die Auswertung der Beleuchtungsgleichung ein. Siehe [**glLightModel**](gllightmodel-functions.md) und [**glLight**](gllight-functions.md).                                                                                      |
+| GL \_ LIGHTING                | Wenn diese Option aktiviert ist, verwenden Sie die aktuellen Beleuchtungsparameter, um die Scheitelpunktfarbe oder den Index zu berechnen. Wenn diese Option deaktiviert ist, ordnen Sie jedem Scheitelpunkt die aktuelle Farbe oder den aktuellen Index zu. Weitere Informationen finden Sie unter [**glMaterial,**](glmaterial-functions.md) **glLightModel** und **glLight**.                |
+| GL \_ LINE \_ SMOOTH            | Wenn diese Option aktiviert ist, zeichnen Sie Linien mit korrekter Filterung. Wenn diese Option deaktiviert ist, zeichnen Sie Linien mit Alias. Siehe [**glLineWidth**](gllinewidth.md).                                                                                                                                     |
+| GL \_ LINE \_ STIPPLE           | Wenn diese Option aktiviert ist, verwenden Sie beim Zeichnen von Linien das aktuelle Linienstipplemuster. Siehe [**glLineStipple**](gllinestipple.md).                                                                                                                                            |
+| GL \_ LOGIC \_ OP               | Wenn diese Option aktiviert ist, wenden Sie den aktuell ausgewählten logischen Vorgang auf die eingehenden Indizes und Farbpufferindizes an. Siehe [**glLogicOp**](gllogicop.md).                                                                                                                    |
+| GL \_ MAP1 \_ COLOR \_ 4          | Wenn diese Option aktiviert ist, generieren Aufrufe von [**glEvalCoord1,**](glevalcoord-functions.md) [**glEvalMesh1**](glevalmesh-functions.md)und [**glEvalPoint1**](glevalpoint.md) RGBA-Werte. Siehe auch [**glMap1.**](glmap1.md)                                           |
+| GL \_ MAP1 \_ INDEX             | Wenn diese Option aktiviert ist, generieren Aufrufe von **glEvalCoord1,** **glEvalMesh1** und **glEvalPoint1** Farbindizes. Siehe auch **glMap1.**                                                                                                                                   |
+| GL \_ MAP1 \_ NORMAL            | Wenn diese Option aktiviert ist, generieren Aufrufe von [**glEvalCoord1,**](glevalcoord-functions.md) [**glEvalMesh1**](glevalmesh-functions.md)und [**glEvalPoint1**](glevalpoint.md) Normaldaten. Siehe auch [**glMap1.**](glmap1.md)                                               |
+| GL \_ MAP1 \_ TEXTURE \_ COORD \_ 1 | Wenn diese Option aktiviert ist, generieren Aufrufe von **glEvalCoord1,** **glEvalMesh1** und **glEvalPoint1** Texturkoordinaten.  Siehe auch **glMap1.**                                                                                                                         |
+| GL \_ MAP1 \_ TEXTURE \_ COORD \_ 2 | Wenn diese Option aktiviert ist, generieren Aufrufe von [**glEvalCoord1,**](glevalcoord-functions.md) [**glEvalMesh1**](glevalmesh-functions.md)und [**glEvalPoint1**](glevalpoint.md) *die* Texturkoordinaten s und *t.* Siehe auch [**glMap1.**](glmap1.md)                       |
+| GL \_ MAP1 \_ TEXTURE \_ COORD \_ 3 | Wenn diese Option aktiviert ist, generieren Aufrufe von **glEvalCoord1,** **glEvalMesh1** und **glEvalPoint1** *die* Texturkoordinaten s , *t* und *r.* Siehe auch **glMap1.**                                                                                                           |
+| GL \_ MAP1 \_ TEXTURE \_ COORD \_ 4 | Wenn diese Option aktiviert ist, generieren Aufrufe von [glEvalCoord1,](glevalcoord-functions.md) [glEvalMesh1](glevalmesh-functions.md)und [**glEvalPoint1**](glevalpoint.md) die Texturkoordinaten *s*, *t*, *r* und *q.* Siehe auch [**glMap1.**](glmap1.md)                    |
+| GL \_ MAP1 \_ VERTEX \_ 3         | Wenn diese Option aktiviert ist, generieren Aufrufe von **glEvalCoord1,** **glEvalMesh1** und **glEvalPoint1** *x-,* *y-* und z-Scheitelpunktkoordinaten.  Siehe auch **glMap1.**                                                                                                            |
+| GL \_ MAP1 \_ VERTEX \_ 4         | Wenn diese Option aktiviert ist, generieren Aufrufe von [**glEvalCoord1,**](glevalcoord-functions.md) [**glEvalMesh1**](glevalmesh-functions.md)und [**glEvalPoint1**](glevalpoint.md) homogene *x-,* *y-,* *z-* und w-Scheitelpunktkoordinaten.  Siehe auch [**glMap1.**](glmap1.md) |
+| GL \_ MAP2 \_ COLOR \_ 4          | Wenn diese Option aktiviert ist, generieren Aufrufe von [**glEvalCoord2,**](glevalcoord-functions.md) [**glEvalMesh2**](glevalmesh-functions.md)und [**glEvalPoint2**](glevalpoint.md) RGBA-Werte. Siehe auch [**glMap2.**](glmap2.md)                                           |
+| GL \_ MAP2 \_ INDEX             | Wenn diese Option aktiviert ist, generieren Aufrufe von **glEvalCoord2,** **glEvalMesh2** und **glEvalPoint2** Farbindizes. Siehe auch **glMap2.**                                                                                                                                   |
+| GL \_ MAP2 \_ NORMAL            | Wenn diese Option aktiviert ist, generieren Aufrufe von [**glEvalCoord2,**](glevalcoord-functions.md) [**glEvalMesh2**](glevalmesh-functions.md)und [**glEvalPoint2**](glevalpoint.md) Normaldaten. Siehe auch [**glMap2.**](glmap2.md)                                               |
+| GL \_ MAP2 \_ TEXTURE \_ COORD \_ 1 | Wenn diese Option aktiviert ist, generieren Aufrufe von **glEvalCoord2,** **glEvalMesh2** und **glEvalPoint2** Texturkoordinaten.  Siehe auch **glMap2.**                                                                                                                         |
+| GL \_ MAP2 \_ TEXTURE \_ COORD \_ 2 | Wenn diese Option aktiviert ist, generieren Aufrufe von [**glEvalCoord2,**](glevalcoord-functions.md) [**glEvalMesh2**](glevalmesh-functions.md)und [**glEvalPoint2**](glevalpoint.md) *die* Texturkoordinaten s und *t.* Siehe auch [**glMap2.**](glmap2.md)                       |
+| GL \_ MAP2 \_ TEXTURE \_ COORD \_ 3 | Wenn diese Option aktiviert ist, generieren Aufrufe von **glEvalCoord2,** **glEvalMesh2** und **glEvalPoint2** *die* Texturkoordinaten s , *t* und *r.* Siehe auch **glMap2.**                                                                                                           |
+| GL \_ MAP2 \_ TEXTURE \_ COORD \_ 4 | Wenn diese Option aktiviert ist, generieren Aufrufe von [**glEvalCoord2,**](glevalcoord-functions.md) [**glEvalMesh2**](glevalmesh-functions.md)und [**glEvalPoint2**](glevalpoint.md) die Texturkoordinaten *s*, *t*, *r* und *q.* Siehe auch [**glMap2.**](glmap2.md)            |
+| GL \_ MAP2 \_ VERTEX \_ 3         | Wenn diese Option aktiviert ist, generieren Aufrufe von **glEvalCoord2,** **glEvalMesh2** und **glEvalPoint2** *x-,* *y-* und z-Scheitelpunktkoordinaten.  Siehe auch **glMap2.**                                                                                                            |
+| GL \_ MAP2 \_ VERTEX \_ 4         | Wenn diese Option aktiviert ist, generieren Aufrufe von [**glEvalCoord2,**](glevalcoord-functions.md) [**glEvalMesh2**](glevalmesh-functions.md)und [**glEvalPoint2**](glevalpoint.md) *homogene* x-, *y-,* *z-* und w-Scheitelpunktkoordinaten.  Siehe auch [**glMap2.**](glmap2.md) |
+| GL \_ NORMALIZE               | Wenn diese Option aktiviert ist, werden normal mit **glNormal** angegebene Vektoren nach der Transformation auf die Einheitslänge skaliert. Siehe [**glNormal**](glnormal-functions.md).                                                                                                          |
+| GL \_ POINT \_ SMOOTH           | Wenn diese Option aktiviert ist, zeichnen Sie Punkte mit ordnungsgemäßer Filterung. Wenn diese Option deaktiviert ist, zeichnen Sie Punkte mit Alias. Siehe [**glPointSize**](glpointsize.md).                                                                                                                                    |
+| GL \_ POLYGON \_ OFFSET \_ FILL   | Wenn diese Option aktiviert ist und das Polygon im GL FILL-Modus gerendert \_ wird, wird den Tiefenwerten der Fragmente eines Polygons ein Offset hinzugefügt, bevor der Tiefenvergleich durchgeführt wird. Siehe [**glPolygonOffset.**](glpolygonoffset.md)                                      |
+| GL \_ POLYGON \_ OFFSET \_ LINE   | Wenn diese Option aktiviert ist und das Polygon im GL LINE-Modus gerendert \_ wird, wird den Tiefenwerten der Fragmente eines Polygons ein Offset hinzugefügt, bevor der Tiefenvergleich durchgeführt wird. Siehe **glPolygonOffset.**                                                                 |
+| GL \_ POLYGON \_ OFFSET \_ POINT  | Wenn diese Option aktiviert ist, wird den Tiefenwerten der Fragmente eines Polygons vor dem Tiefenvergleich ein Offset hinzugefügt, wenn das Polygon im GL POINT-Modus gerendert \_ wird. Siehe [**glPolygonOffset.**](glpolygonoffset.md)                                             |
+| GL \_ POLYGON \_ SMOOTH         | Wenn diese Option aktiviert ist, zeichnen Sie Polygone mit ordnungsgemäßer Filterung. Wenn diese Option deaktiviert ist, zeichnen Sie Polygone mit Alias. Siehe [**glPolygonMode.**](glpolygonmode.md)                                                                                                                            |
+| GL \_ POLYGON \_ STIPPLE        | Wenn diese Option aktiviert ist, verwenden Sie beim Rendern von Polygonen das aktuelle Polygonstipplemuster. Siehe [**glPolygonStipple**](glpolygonstipple.md).                                                                                                                              |
+| GL \_ \_ SCISSOR-TEST           | Wenn diese Option aktiviert ist, verwerfen Sie Fragmente, die sich außerhalb des Scissor-Rechtecks befinden. Siehe [**glScissor**](glscissor.md).                                                                                                                                                   |
+| GL \_ \_ STENCIL-TEST           | Wenn diese Option aktiviert ist, können Sie Schablonentests durchführen und den Schablonenpuffer aktualisieren. Siehe [**glStencilFunc**](glstencilfunc.md) und [**glStencilOp**](glstencilop.md).                                                                                                            |
+| GL \_ TEXTURE \_ 1D             | Wenn diese Option aktiviert ist, wird die eindimensionale Texturierung ausgeführt (es sei denn, die zweidimensionale Texturierung ist ebenfalls aktiviert). Siehe [**glTexImage1D**](glteximage1d.md).                                                                                                            |
+| GL \_ TEXTURE \_ 2D             | Wenn diese Option aktiviert ist, wird die zweidimensionale Texturierung ausgeführt. Siehe [**glTexImage2D.**](glteximage2d.md)                                                                                                                                                               |
+| GL \_ TEXTURE \_ GEN \_ Q         | Wenn diese Option aktiviert ist, wird die Texturkoordinate *q* mithilfe der Texturgenerierungsfunktion berechnet, die mit [**glTexGen**](gltexgen-functions.md)definiert ist. Andernfalls  wird die aktuelle q-Texturkoordinate verwendet.                                                        |
+| GL \_ TEXTURE \_ GEN \_ R         | Wenn diese  Option aktiviert ist, wird die r-Texturkoordinate mithilfe der Texturgenerierungsfunktion berechnet, die mit [**glTexGen**](gltexgen-functions.md)definiert ist. Wenn diese Option  deaktiviert ist, wird die aktuelle r-Texturkoordinate verwendet.                                                      |
+| GL \_ TEXTURE \_ GEN \_ S         | Wenn diese Option aktiviert ist, wird die Texturkoordinate mithilfe der *Texturgenerierungsfunktion* berechnet, die mit **glTexGen** definiert ist. Wenn diese Option deaktiviert ist, wird die *Texturkoordinate* der aktuellen verwendet.                                                                                |
+| GL \_ TEXTURE \_ GEN \_ T         | Wenn diese Option aktiviert ist, wird die Texturkoordinate *t* mithilfe der texturgenerierungsfunktion berechnet, die mit [**glTexGen**](gltexgen-functions.md)definiert ist. Wenn diese Option deaktiviert ist, wird die aktuelle *t* Texturkoordinate verwendet.                                                      |
 
 
 
@@ -138,50 +138,50 @@ Sowohl [**glEnable**](glenable.md) als auch **glEnable** verwenden ein einzelnes
 |-------------------------------------|-----------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[nur Desktop-Apps\]<br/>                              |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                                    |
-| Header<br/>                   | <dl> <dt>GL. h</dt> </dl>         |
-| Bibliothek<br/>                  | <dl> <dt>Opengl32. lib</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Gl.h</dt> </dl>         |
+| Bibliothek<br/>                  | <dl> <dt>Opengl32.lib</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Opengl32.dll</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**glalphafunc**](glalphafunc.md)
+[**glAlphaFunc**](glalphafunc.md)
 </dt> <dt>
 
-[**glarrayelement**](glarrayelement.md)
+[**glArrayElement**](glarrayelement.md)
 </dt> <dt>
 
 [**glBegin**](glbegin.md)
 </dt> <dt>
 
-[**glblendfunc**](glblendfunc.md)
+[**glBlendFunc**](glblendfunc.md)
 </dt> <dt>
 
-[**glclipplane**](glclipplane.md)
+[**glClipPlane**](glclipplane.md)
 </dt> <dt>
 
-[**glcolormaterial**](glcolormaterial.md)
+[**glColorMaterial**](glcolormaterial.md)
 </dt> <dt>
 
-[**glcolorpointer**](glcolorpointer.md)
+[**glColorPointer**](glcolorpointer.md)
 </dt> <dt>
 
-[**glcullface**](glcullface.md)
+[**glCullFace**](glcullface.md)
 </dt> <dt>
 
-[**gldepthfunc**](gldepthfunc.md)
+[**glDepthFunc**](gldepthfunc.md)
 </dt> <dt>
 
-[**gldepthrange**](gldepthrange.md)
+[**glDepthRange**](gldepthrange.md)
 </dt> <dt>
 
-[**gldrawarrays**](gldrawarrays.md)
+[**glDrawArrays**](gldrawarrays.md)
 </dt> <dt>
 
-[**gledgeflagpointer**](gledgeflagpointer.md)
+[**glEdgeFlagPointer**](gledgeflagpointer.md)
 </dt> <dt>
 
 [**glEnable**](glenable.md)
@@ -199,31 +199,31 @@ Sowohl [**glEnable**](glenable.md) als auch **glEnable** verwenden ein einzelnes
 [**glEvalPoint1**](glevalpoint.md)
 </dt> <dt>
 
-[**glnebel**](glfog.md)
+[**glFog**](glfog.md)
 </dt> <dt>
 
-[**glget**](glgetbooleanv--glgetdoublev--glgetfloatv--glgetintegerv.md)
+[**glGet**](glgetbooleanv--glgetdoublev--glgetfloatv--glgetintegerv.md)
 </dt> <dt>
 
-[**glindexpointer**](glindexpointer.md)
+[**glIndexPointer**](glindexpointer.md)
 </dt> <dt>
 
-[**glisenabled**](glisenabled.md)
+[**glIsEnabled**](glisenabled.md)
 </dt> <dt>
 
-[**gllight**](gllight-functions.md)
+[**glLight**](gllight-functions.md)
 </dt> <dt>
 
-[**gllightmodel**](gllightmodel-functions.md)
+[**glLightModel**](gllightmodel-functions.md)
 </dt> <dt>
 
 [**glLineWidth**](gllinewidth.md)
 </dt> <dt>
 
-[**gllinestippel**](gllinestipple.md)
+[**glLineStipple**](gllinestipple.md)
 </dt> <dt>
 
-[**gllogicop**](gllogicop.md)
+[**glLogicOp**](gllogicop.md)
 </dt> <dt>
 
 [**glMap1**](glmap1.md)
@@ -232,37 +232,37 @@ Sowohl [**glEnable**](glenable.md) als auch **glEnable** verwenden ein einzelnes
 [**glMap2**](glmap2.md)
 </dt> <dt>
 
-[**glmaterial**](glmaterial-functions.md)
+[**glMaterial**](glmaterial-functions.md)
 </dt> <dt>
 
-[**glnormal**](glnormal-functions.md)
+[**glNormal**](glnormal-functions.md)
 </dt> <dt>
 
-[**glnormalpointer**](glnormalpointer.md)
+[**glNormalPointer**](glnormalpointer.md)
 </dt> <dt>
 
 [**glPointSize**](glpointsize.md)
 </dt> <dt>
 
-[**glpolygonmode**](glpolygonmode.md)
+[**glPolygonMode**](glpolygonmode.md)
 </dt> <dt>
 
-[**glpolygonstippel**](glpolygonstipple.md)
+[**glPolygonStipple**](glpolygonstipple.md)
 </dt> <dt>
 
-[**glscissor**](glscissor.md)
+[**glScissor**](glscissor.md)
 </dt> <dt>
 
-[**glstencilfunc**](glstencilfunc.md)
+[**glStencilFunc**](glstencilfunc.md)
 </dt> <dt>
 
-[**glstencilop**](glstencilop.md)
+[**glStencilOp**](glstencilop.md)
 </dt> <dt>
 
-[**gltexcoordpointer**](gltexcoordpointer.md)
+[**glTexCoordPointer**](gltexcoordpointer.md)
 </dt> <dt>
 
-[**gltexgen**](gltexgen-functions.md)
+[**glTexGen**](gltexgen-functions.md)
 </dt> <dt>
 
 [**glTexImage1D**](glteximage1d.md)

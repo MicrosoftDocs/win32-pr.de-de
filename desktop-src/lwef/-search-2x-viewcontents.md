@@ -1,9 +1,9 @@
 ---
-title: Viewcontents-Enumeration
-description: Wird von iresultsviewer-Inhalten verwendet, um anzugeben, wie der aktuelle Abfrage Rückgabe Satz angezeigt wird, oder legt ihn fest.
+title: ViewContents-Enumeration
+description: Wird von IResultsViewer Contents verwendet, um anzugeben oder festzulegen, wie der aktuelle Abfragerückgabesatz angezeigt wird.
 ms.assetid: aebcbcac-4c45-4097-91a1-5e00611c152c
 keywords:
-- Viewcontents-Enumeration Legacy-Windows-Umgebungs Features
+- ViewContents-Enumeration– Legacy-Windows-Umgebungsfeatures
 topic_type:
 - apiref
 api_name:
@@ -14,19 +14,19 @@ api_type:
 - IDLDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 9f465b16ef81dd71695f8de0b04b6d7567480f4c
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 2070b68ec62a8dd6ca86758b98a6399ee41180eaad24613d17d0825a927b1871
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106364552"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119829110"
 ---
-# <a name="viewcontents-enumeration"></a>Viewcontents-Enumeration
+# <a name="viewcontents-enumeration"></a>ViewContents-Enumeration
 
 > [!NOTE]
-> Windows-Desktop Suche 2. x ist eine veraltete Technologie, die ursprünglich als Add-in für Windows XP und Windows Server 2003 verfügbar war. Verwenden Sie in späteren Versionen stattdessen die [Windows Search-API](../search/-search-reference-entry-page.md) . 
+> Windows Desktop Search 2.x ist eine veraltete Technologie, die ursprünglich als Add-In für Windows XP und Windows Server 2003 verfügbar war. Verwenden Sie in späteren Versionen stattdessen die [Windows-Suche-API.](../search/-search-reference-entry-page.md) 
 
-Wird von [**iresultsviewer:: Contents**](-search-2x-iresultsviewer-contents.md) verwendet, um anzugeben, wie die aktuelle Abfrage Rückgabe Menge angezeigt wird, oder legt diese fest.
+Wird von [**IResultsViewer::Contents**](-search-2x-iresultsviewer-contents.md) verwendet, um anzugeben oder festzulegen, wie der aktuelle Abfragerückgabesatz angezeigt wird.
 
 ## <a name="syntax"></a>Syntax
 
@@ -45,24 +45,24 @@ typedef enum ViewContentsEnum {
 
 <dl> <dt>
 
-<span id="ResultsDisplayed"></span><span id="resultsdisplayed"></span><span id="RESULTSDISPLAYED"></span>**Ergebnis angezeigt**
+<span id="ResultsDisplayed"></span><span id="resultsdisplayed"></span><span id="RESULTSDISPLAYED"></span>**ResultsDisplayed**
 </dt> <dd>
 
-Gibt den Typ des Inhalts an, der in der Ergebnis Ansicht angezeigt wird.
+Gibt den Inhaltstyp an, der in der Ergebnisansicht angezeigt wird.
 
 </dd> <dt>
 
-<span id="ShellViewDisplayed"></span><span id="shellviewdisplayed"></span><span id="SHELLVIEWDISPLAYED"></span>**Shellviewanzeige**
+<span id="ShellViewDisplayed"></span><span id="shellviewdisplayed"></span><span id="SHELLVIEWDISPLAYED"></span>**ShellViewDisplayed**
 </dt> <dd>
 
-Gibt an, welcher Typ von Inhalt, der in der Ergebnis Ansicht angezeigt wird, derzeit auf die shellansicht festgelegt ist.
+Gibt an, dass der Inhaltstyp, der in der Ergebnisansicht angezeigt wird, derzeit auf die Shellansicht festgelegt ist.
 
 </dd> <dt>
 
-<span id="WebBrowserDisplayed"></span><span id="webbrowserdisplayed"></span><span id="WEBBROWSERDISPLAYED"></span>**Webbrowseranzeige**
+<span id="WebBrowserDisplayed"></span><span id="webbrowserdisplayed"></span><span id="WEBBROWSERDISPLAYED"></span>**WebBrowserDisplayed**
 </dt> <dd>
 
-Gibt an, welcher Typ von Inhalt, der in der Ergebnis Ansicht angezeigt wird, derzeit auf die Browseransicht festgelegt ist.
+Gibt an, dass der Inhaltstyp, der in der Ergebnisansicht angezeigt wird, derzeit auf die Browseransicht festgelegt ist.
 
 </dd> </dl>
 
@@ -72,7 +72,7 @@ Gibt an, welcher Typ von Inhalt, der in der Ergebnis Ansicht angezeigt wird, der
 
 | Anforderung | Wert |
 |----------------|----------------------------------------------------------------------------------------|
-| IDL<br/> | <dl> <dt>Wdsview. idl</dt> </dl> |
+| Idl<br/> | <dl> <dt>WdsView.idl</dt> </dl> |
 
 
 

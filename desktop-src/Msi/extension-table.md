@@ -1,31 +1,31 @@
 ---
-description: Die Erweiterungs Tabelle enthält Informationen zu Dateinamen Erweiterungs Servern, die als Teil der Produktankündigung generiert werden müssen. Jede Zeile generiert einen Satz von Registrierungs Schlüsseln und-Werten.
+description: Die Tabelle Erweiterung enthält Informationen zu Dateinamenerweiterungsservern, die als Teil der Produktanzeige generiert werden müssen. Jede Zeile generiert einen Satz von Registrierungsschlüsseln und -werten.
 ms.assetid: 924858b7-8956-4636-b7c7-c902aa822ee1
-title: Erweiterungs Tabelle
+title: Erweiterungstabelle
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 6ef52f7248f44dcb63255244bbd8abd4ac8181d8
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 8d664df812b723d7ab6c9b966b09fac8c57a35b655e123f720fdb87bdf431146
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106350545"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119821740"
 ---
-# <a name="extension-table"></a>Erweiterungs Tabelle
+# <a name="extension-table"></a>Erweiterungstabelle
 
-Die Erweiterungs Tabelle enthält Informationen zu Dateinamen Erweiterungs Servern, die als Teil der Produktankündigung generiert werden müssen. Jede Zeile generiert einen Satz von Registrierungs Schlüsseln und-Werten.
+Die Tabelle Erweiterung enthält Informationen zu Dateinamenerweiterungsservern, die als Teil der Produktanzeige generiert werden müssen. Jede Zeile generiert einen Satz von Registrierungsschlüsseln und -werten.
 
-Die Erweiterungs Tabelle enthält die Spalten, die in der folgenden Tabelle aufgeführt sind.
+Die Tabelle Erweiterung enthält die in der folgenden Tabelle gezeigten Spalten.
 
 
 
-| Spalte      | Typ                         | Schlüssel | Nullwerte zulässig |
+| Spalte      | Typ                         | Key | Nullwerte zulässig |
 |-------------|------------------------------|-----|----------|
 | Durchwahl   | [Text](text.md)             | J   | N        |
-| Komponente\_ | [Bezeichner](identifier.md) | J   | N        |
-| ProgID\_    | [Text](text.md)             | N   | J        |
-| Medi\_      | [Text](text.md)             | N   | J        |
-| Funktion\_   | [Bezeichner](identifier.md) | N   | N        |
+| Komponente\_ | [Identifier](identifier.md) | J   | N        |
+| Progid\_    | [Text](text.md)             | N   | J        |
+| Mime\_      | [Text](text.md)             | N   | J        |
+| Komponente\_   | [Identifier](identifier.md) | N   | N        |
 
 
 
@@ -35,48 +35,48 @@ Die Erweiterungs Tabelle enthält die Spalten, die in der folgenden Tabelle aufg
 
 <dl> <dt>
 
-<span id="Extension"></span><span id="extension"></span><span id="EXTENSION"></span>Weiterung
+<span id="Extension"></span><span id="extension"></span><span id="EXTENSION"></span>Erweiterung
 </dt> <dd>
 
-Die der Tabellenzeile zugeordnete Erweiterung. Die Erweiterung kann bis zu 255 Zeichen lang sein. Geben Sie die Erweiterung in diesem Feld ohne den vorangehenden Zeitraum ein.
+Die erweiterung, die der Tabellenzeile zugeordnet ist. Die Erweiterung kann bis zu 255 Zeichen lang sein. Geben Sie die Erweiterung in dieses Feld ohne vorherigen Zeitraum ein.
 
 </dd> <dt>
 
-<span id="Component_"></span><span id="component_"></span><span id="COMPONENT_"></span>Zulieferern\_
+<span id="Component_"></span><span id="component_"></span><span id="COMPONENT_"></span>Komponente\_
 </dt> <dd>
 
-Ein externer Schlüssel für die erste Spalte der [Komponenten](component-table.md) Tabelle. Diese Spalte verweist auf die Komponente, mit der die Installation der Erweiterung gesteuert wird.
+Ein externer Schlüssel für die erste Spalte der [Component-Tabelle.](component-table.md) Diese Spalte verweist auf die Komponente, die die Installation der Erweiterung steuert.
 
 </dd> <dt>
 
-<span id="ProgId_"></span><span id="progid_"></span><span id="PROGID_"></span>ProgID\_
+<span id="ProgId_"></span><span id="progid_"></span><span id="PROGID_"></span>Progid\_
 </dt> <dd>
 
-Die Programm-ID, die dieser Erweiterung zugeordnet ist. Dabei handelt es sich um einen Fremdschlüssel in der [ProgID](progid-table.md) -Tabelle.
+Die dieser Erweiterung zugeordnete Programm-ID. Dies ist ein Fremdschlüssel in der [Tabelle ProgId.](progid-table.md)
 
 </dd> <dt>
 
-<span id="MIME_"></span><span id="mime_"></span>Medi\_
+<span id="MIME_"></span><span id="mime_"></span>Mime\_
 </dt> <dd>
 
-Der Inhaltstyp, der für die Erweiterungs Spalte geschrieben werden soll.
+Der Inhaltstyp, der für die Spalte Erweiterung geschrieben werden soll.
 
-Ein externer Schlüssel für die erste Spalte der [MIME](mime-table.md) -Tabelle.
+Ein externer Schlüssel für die erste Spalte der [MIME-Tabelle.](mime-table.md)
 
 </dd> <dt>
 
-<span id="Feature_"></span><span id="feature_"></span><span id="FEATURE_"></span>Befinden\_
+<span id="Feature_"></span><span id="feature_"></span><span id="FEATURE_"></span>Feature\_
 </dt> <dd>
 
-Ein externer Schlüssel in der ersten [Spalte der Featuretabelle,](feature-table.md) der das Feature angibt, das den Erweiterungs Server bereitstellt.
+Ein externer Schlüssel in der ersten Spalte der [Featuretabelle,](feature-table.md) der das Feature an gibt, das den Erweiterungsserver bietet.
 
 </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Auf die Erweiterungs Tabelle wird verwiesen, wenn die [RegisterExtensionInfo](registerextensioninfo-action.md) -Aktion oder die [unregisterextensioninfo](unregisterextensioninfo-action.md) -Aktion ausgeführt wird.
+Auf die Extension-Tabelle wird verwiesen, wenn die [RegisterExtensionInfo-Aktion](registerextensioninfo-action.md) oder die [UnRegisterExtensionInfo-Aktion](unregisterextensioninfo-action.md) ausgeführt wird.
 
-## <a name="validation"></a>Überprüfen
+## <a name="validation"></a>Überprüfung
 
 <dl>
 

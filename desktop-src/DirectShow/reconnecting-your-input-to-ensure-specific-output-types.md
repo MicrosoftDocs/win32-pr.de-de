@@ -1,28 +1,28 @@
 ---
-description: Erneutes Verbinden Ihrer Eingabe, um bestimmte Ausgabetypen sicherzustellen
+description: Erneutes Verbinden ihrer Eingabe, um bestimmte Ausgabetypen sicherzustellen
 ms.assetid: c83d002e-59bf-4d03-9917-e39ceab9a4ce
-title: Erneutes Verbinden Ihrer Eingabe, um bestimmte Ausgabetypen sicherzustellen
+title: Erneutes Verbinden ihrer Eingabe, um bestimmte Ausgabetypen sicherzustellen
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: d74d6914989231542ddfea9f97e93ce860d34eb4
-ms.sourcegitcommit: a47bd86f517de76374e4fff33cfeb613eb259a7e
+ms.openlocfilehash: 299d8aa400619043cc0d79242e35065ac4fc8490aad4972a33be6aea8fc4e7b7
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/06/2021
-ms.locfileid: "104392517"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119747310"
 ---
-# <a name="reconnecting-your-input-to-ensure-specific-output-types"></a>Erneutes Verbinden Ihrer Eingabe, um bestimmte Ausgabetypen sicherzustellen
+# <a name="reconnecting-your-input-to-ensure-specific-output-types"></a>Erneutes Verbinden ihrer Eingabe, um bestimmte Ausgabetypen sicherzustellen
 
-Filter implementieren die [**iamstreamconfig:: SetFormat**](/windows/desktop/api/Strmif/nf-strmif-iamstreamconfig-setformat) -Methode, um das Audioformat oder Videoformat vor dem Verbinden der Pins des Filters festzulegen. Wenn die Ausgabepin bereits verbunden ist und Sie einen neuen Typ bereitstellen können, verbinden Sie Ihre PIN erneut, jedoch nur, wenn der andere Filter den neuen Typ annehmen kann. Wenn der andere Filter den Medientyp nicht akzeptieren kann, führen Sie einen Fehler beim Aufrufen von **SetFormat** aus, und lassen Sie die Verbindung unverändert.
+Filter implementieren die [**IAMStreamConfig::SetFormat-Methode,**](/windows/desktop/api/Strmif/nf-strmif-iamstreamconfig-setformat) um das Audio- oder Videoformat festzulegen, bevor die Pins des Filters verbunden werden. Wenn der Ausgabepin bereits verbunden ist und Sie einen neuen Typ angeben können, stellen Sie die Verbindung mit dem Pin wieder her. Dies gilt jedoch nur, wenn der andere Filter den neuen Typ akzeptieren kann. Wenn der andere Filter den Medientyp nicht akzeptieren kann, schlägt der Aufruf von **SetFormat** fehl, und lassen Sie die Verbindung in Ruhe.
 
-Ein Transformations Filter hat möglicherweise keine bevorzugten Ausgabetypen, es sei denn, die Eingabe-PIN ist verbunden. In diesem Fall sollten die Methoden **SetFormat** und [**iamstreamconfig:: getstreamcaps**](/windows/desktop/api/Strmif/nf-strmif-iamstreamconfig-getstreamcaps) den VFW \_ E ohne Verbindung zurückgeben, \_ \_ bis die Eingabe-PIN verbunden ist. Andernfalls können diese Methoden wie üblich funktionieren.
+Ein Transformationsfilter hat möglicherweise keine bevorzugten Ausgabetypen, es sei denn, der Eingabepin ist verbunden. In diesem Fall sollten die **Methoden SetFormat** und [**IAMStreamConfig::GetStreamCaps**](/windows/desktop/api/Strmif/nf-strmif-iamstreamconfig-getstreamcaps) VFW E NOT CONNECTED zurückgeben, \_ bis der \_ \_ Eingabepin verbunden ist. Andernfalls können diese Methoden wie gewohnt funktionieren.
 
-In bestimmten Fällen ist es sinnvoll, Pins erneut zu verbinden, wenn Sie ein Format für eine etablierte Verbindung anbieten. Nehmen wir beispielsweise an, dass ein Filter 24-Bit-RGB-Video in Format X komprimieren und ein 8-Bit-RGB-Video in das Format Y komprimieren kann. Die Ausgabe-PIN kann eine der folgenden Aktionen ausführen:
+In bestimmten Fällen ist es hilfreich, pins erneut zu verbinden, wenn Sie ein Format für eine hergestellte Verbindung anbieten. Angenommen, ein Filter kann 24-Bit-RGB-Videos im Format X komprimieren und 8-Bit-RGB-Videos im Format Y komprimieren. Der Ausgabepin kann eine der folgenden Schritte ausführen:
 
--   Bieten Sie immer sowohl x als auch y in **getstreamcaps** an, und akzeptieren Sie immer sowohl x als auch y in **SetFormat**.
--   Angebot und Akzeptanz nur Format X, wenn der Eingabetyp 24-Bit-RGB ist. Angebot und Annahme: Formatieren Sie Y, wenn der Eingabetyp 8-Bit RGB ist. Beide Methoden können nicht ausgeführt werden, wenn die Eingabe-PIN nicht verbunden ist.
+-   Bieten Sie in **GetStreamCaps** immer sowohl X als auch Y an, und akzeptieren Sie in **SetFormat** immer sowohl X als auch Y.
+-   Angebots- und Annahmeformat X, wenn der Eingabetyp 24-Bit RGB ist. Sie können nur das Format Y anbieten und akzeptieren, wenn der Eingabetyp 8-Bit RGB ist. Fehler bei beiden Methoden, wenn der Eingabepin nicht verbunden ist.
 
-In beiden Fällen benötigen Sie einen Code für die erneute Verbindung, der wie folgt aussieht:
+In beiden Fällen benötigen Sie code, der wie folgt aussieht, um die Verbindung wiederherzustellen:
 
 
 ```C++

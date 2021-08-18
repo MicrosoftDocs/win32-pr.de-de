@@ -1,6 +1,6 @@
 ---
-title: EAP-bezogene Fehler-und Informations Konstanten (EAPHost RoR. h)
-description: Einzelne Gruppen von EAP-bezogenen Fehlern und Informations Konstanten, die allen EAPHost-API-Technologien gemeinsam sind.
+title: EAP-bezogene Fehler- und Informationskonstanten (Eaphosterror.h)
+description: Einzelne Gruppen von EAP-bezogenen Fehler- und Informationskonstanten, die allen EAPHost-API-Technologien gemeinsam sind.
 ms.assetid: 081b7a72-abe3-4cbb-9b6c-07bb6717fbfe
 topic_type:
 - apiref
@@ -58,72 +58,72 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 8bd7b829cd4c5ba550fd88242ffb8c34572648d9
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: bc4140444d1b5c3ae99c90c2447e165a4143b042dcc7567104e4b5f0063b645b
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104040698"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118984240"
 ---
-# <a name="eap-related-error-and-information-constants"></a>EAP-bezogene Fehler-und Informations Konstanten
+# <a name="eap-related-error-and-information-constants"></a>EAP-bezogene Fehler- und Informationskonstanten
 
-Einzelne Gruppen von EAP-bezogenen Fehlern und Informations Konstanten, die allen EAPHost-API-Technologien gemeinsam sind.
+Einzelne Gruppen von EAP-bezogenen Fehler- und Informationskonstanten, die allen EAPHost-API-Technologien gemeinsam sind.
 
 <dl> <dt>
 
-<span id="EAP_E_EAPHOST_FIRST"></span><span id="eap_e_eaphost_first"></span>**EAP \_ E \_ EAPHost \_ zuerst**
+<span id="EAP_E_EAPHOST_FIRST"></span><span id="eap_e_eaphost_first"></span>**EAP \_ E \_ EAPHOST \_ FIRST**
 </dt> <dd> <dl> <dt>
 
-0x80420000l
+0x80420000L
 </dt> <dt>
 
 
 
-Definiert die Grenze von Fehlerberichten. Alle EAPHost-bezogenen Fehler treten zwischen **EAP \_ e \_ EAPHost \_ First** und **EAP \_ e \_ EAPHost \_ Last** auf.
+Definiert die Grenze von Fehlerberichten. Jeder EAPHost-bezogene Fehler tritt zwischen **EAP \_ E \_ EAPHOST \_ FIRST** und **EAP \_ E \_ EAPHOST \_ LAST** auf.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="EAP_E_EAPHOST_LAST___"></span><span id="eap_e_eaphost_last___"></span>**EAP \_ E \_ EAPHost \_ zuletzt** 
+<span id="EAP_E_EAPHOST_LAST___"></span><span id="eap_e_eaphost_last___"></span>**EAP \_ E \_ EAPHOST \_ LAST** 
 </dt> <dd> <dl> <dt>
 
-0x804200ffl
+0x804200FFL
 </dt> <dt>
 
 
 
-Definiert die Grenze von Fehlerberichten. Alle EAPHost-bezogenen Fehler treten zwischen **EAP \_ e \_ EAPHost \_ First** und **EAP \_ e \_ EAPHost \_ Last** auf.
+Definiert die Grenze von Fehlerberichten. Jeder EAPHost-bezogene Fehler tritt zwischen **EAP \_ E \_ EAPHOST \_ FIRST** und **EAP \_ E \_ EAPHOST \_ LAST** auf.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="EAP_I_EAPHOST_FIRST_"></span><span id="eap_i_eaphost_first_"></span>**EAP \_ I \_ EAPHost \_ zuerst** 
+<span id="EAP_I_EAPHOST_FIRST_"></span><span id="eap_i_eaphost_first_"></span>**EAP \_ I \_ EAPHOST \_ FIRST** 
 </dt> <dd> <dl> <dt>
 
-0x80420000l
+0x80420000L
 </dt> <dt>
 
 
 
-Definiert die Grenze von Informationsberichten. alle mit EAPHost verknüpften Informations Ereignisprotokollierung treten zwischen **EAP \_ i \_ EAPHost \_ First** und **EAP \_ i \_ EAPHost \_ Last** auf.
+Definiert die Grenze von Informationsberichten. jede EAPHost-bezogene Informationsereignisprotokollierung erfolgt zwischen **EAP \_ I \_ EAPHOST \_ FIRST** und **EAP \_ I \_ EAPHOST \_ LAST**.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="EAP_I_EAPHOST_LAST"></span><span id="eap_i_eaphost_last"></span>**EAP \_ I \_ EAPHost \_ Last**
+<span id="EAP_I_EAPHOST_LAST"></span><span id="eap_i_eaphost_last"></span>**EAP \_ I \_ EAPHOST \_ LAST**
 </dt> <dd> <dl> <dt>
 
-0x804200ffl
+0x804200FFL
 </dt> <dt>
 
 
 
-Definiert die Grenze von Informationsberichten. alle mit EAPHost verknüpften Informations Ereignisprotokollierung treten zwischen **EAP \_ i \_ EAPHost \_ First** und **EAP \_ i \_ EAPHost \_ Last** auf.
+Definiert die Grenze von Informationsberichten. jede EAPHost-bezogene Informationsereignisprotokollierung erfolgt zwischen **EAP \_ I \_ EAPHOST \_ FIRST** und **EAP \_ I \_ EAPHOST \_ LAST**.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="EAP_E_CERT_STORE_INACCESSIBLE"></span><span id="eap_e_cert_store_inaccessible"></span>**EAP \_ E- \_ Zertifikat \_ Speicher nicht \_ zugänglich**
+<span id="EAP_E_CERT_STORE_INACCESSIBLE"></span><span id="eap_e_cert_store_inaccessible"></span>**\_ \_ \_ EAP-E-ZERTIFIKATSPEICHER \_ NICHT ZUGÄNGLICH**
 </dt> <dd> <dl> <dt>
 
 0x80420011
@@ -131,12 +131,12 @@ Definiert die Grenze von Informationsberichten. alle mit EAPHost verknüpften In
 
 
 
-Weder der Authentifikator noch der Peer können auf den Zertifikat Speicher zugreifen.
+Weder der Authentifikator noch der Peer kann auf den Zertifikatspeicher zugreifen.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="EAP_E_EAPHOST_METHOD_NOT_INSTALLED"></span><span id="eap_e_eaphost_method_not_installed"></span>**EAP \_ E \_ EAPHost- \_ Methode \_ nicht \_ installiert**
+<span id="EAP_E_EAPHOST_METHOD_NOT_INSTALLED"></span><span id="eap_e_eaphost_method_not_installed"></span>**EAP \_ E \_ EAPHOST-METHODE \_ NICHT \_ \_ INSTALLIERT**
 </dt> <dd> <dl> <dt>
 
 0x80420011
@@ -149,7 +149,7 @@ Die angeforderte EAP-Methode ist nicht installiert.
 
 </dt> </dl> </dd> <dt>
 
-<span id="EAP_E_EAPHOST_THIRDPARTY_METHOD_HOST_RESET"></span><span id="eap_e_eaphost_thirdparty_method_host_reset"></span>**EAP \_ E \_ EAPHost \_ thirdparty- \_ Methoden \_ Host \_ Reset**
+<span id="EAP_E_EAPHOST_THIRDPARTY_METHOD_HOST_RESET"></span><span id="eap_e_eaphost_thirdparty_method_host_reset"></span>**EAP \_ E \_ EAPHOST \_ THIRDPARTY \_ METHOD \_ HOST \_ RESET**
 </dt> <dd> <dl> <dt>
 
 0x80420012
@@ -157,12 +157,12 @@ Die angeforderte EAP-Methode ist nicht installiert.
 
 
 
-Der Host der Drittanbieter Methode antwortet nicht und wurde automatisch neu gestartet.
+Der Host der Drittanbietermethode reagiert nicht und wurde automatisch neu gestartet.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="EAP_E_EAPHOST_EAPQEC_INACCESSIBLE"></span><span id="eap_e_eaphost_eapqec_inaccessible"></span>**EAP \_ E \_ EAPHost \_ eapqec nicht \_ zugänglich**
+<span id="EAP_E_EAPHOST_EAPQEC_INACCESSIBLE"></span><span id="eap_e_eaphost_eapqec_inaccessible"></span>**EAP \_ E \_ EAPHOST \_ EAPQEC \_ NICHT ZUGÄNGLICH**
 </dt> <dd> <dl> <dt>
 
 0x80420013
@@ -170,12 +170,12 @@ Der Host der Drittanbieter Methode antwortet nicht und wurde automatisch neu ges
 
 
 
-EAPHost kann nicht mit dem EAP- [Quarantäne](/windows/desktop/NAP/nap-client-architecture) Erzwingungs Client (QEC) auf einem NAP-fähigen Client ( [Network Access Protection, Netzwerk Zugriffsschutz](/windows/desktop/NAP/network-access-protection-start-page) ) kommunizieren.
+EAPHost kann nicht mit dem [EAP-Quarantäneerzwingungsclient](/windows/desktop/NAP/nap-client-architecture) (QEC) auf einem NAP-fähigen Client [(Network Access Protection)](/windows/desktop/NAP/network-access-protection-start-page) kommunizieren.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="EAP_E_EAPHOST_IDENTITY_UNKNOWN"></span><span id="eap_e_eaphost_identity_unknown"></span>**EAP \_ E \_ EAPHost- \_ Identität \_ unbekannt**
+<span id="EAP_E_EAPHOST_IDENTITY_UNKNOWN"></span><span id="eap_e_eaphost_identity_unknown"></span>**EAP \_ E \_ EAPHOST \_ IDENTITY \_ UNKNOWN**
 </dt> <dd> <dl> <dt>
 
 0x80420014
@@ -183,12 +183,12 @@ EAPHost kann nicht mit dem EAP- [Quarantäne](/windows/desktop/NAP/nap-client-ar
 
 
 
-EAPHost gibt diesen Fehler zurück, wenn der Authentifikator die Authentifizierung fehlschlägt, nachdem die Peer Identität übermittelt wurde.
+EAPHost gibt diesen Fehler zurück, wenn der Authentifikator die Authentifizierung nach übermittlung der Peeridentität fehlschlägt.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="EAP_E_AUTHENTICATION_FAILED"></span><span id="eap_e_authentication_failed"></span>**EAP \_ E- \_ Authentifizierung \_ fehlgeschlagen**
+<span id="EAP_E_AUTHENTICATION_FAILED"></span><span id="eap_e_authentication_failed"></span>**\_ \_ EAP-E-AUTHENTIFIZIERUNG \_ FEHLGESCHLAGEN**
 </dt> <dd> <dl> <dt>
 
 0x80420015 
@@ -196,12 +196,12 @@ EAPHost gibt diesen Fehler zurück, wenn der Authentifikator die Authentifizieru
 
 
 
-EAPHost gibt diesen Fehler bei Authentifizierungs Fehlern zurück.
+EAPHost gibt diesen Fehler bei einem Authentifizierungsfehler zurück.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="EAP_I_EAPHOST_EAP_NEGOTIATION_FAILED"></span><span id="eap_i_eaphost_eap_negotiation_failed"></span>**EAP \_ I \_ EAPHost- \_ EAP- \_ Aushandlung \_ fehlgeschlagen**
+<span id="EAP_I_EAPHOST_EAP_NEGOTIATION_FAILED"></span><span id="eap_i_eaphost_eap_negotiation_failed"></span>**\_EAP I \_ EAPHOST \_ EAP NEGOTIATION FAILED (EAP I EAPHOST-EAP-AUSHANDLUNG \_ \_ FEHLGESCHLAGEN)**
 </dt> <dd> <dl> <dt>
 
 0x40420016
@@ -209,12 +209,12 @@ EAPHost gibt diesen Fehler bei Authentifizierungs Fehlern zurück.
 
 
 
-EAPHost protokolliert dieses Informations Ereignis, wenn der Client und der Server nicht mit kompatiblen EAP-Typen konfiguriert sind.
+EAPHost protokolliert dieses Informationsereignis, wenn Client und Server nicht mit kompatiblen EAP-Typen konfiguriert sind.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="EAP_E_EAPHOST_METHOD_INVALID_PACKET"></span><span id="eap_e_eaphost_method_invalid_packet"></span>**EAP \_ E \_ EAPHost- \_ Methode \_ ungültiges \_ Paket**
+<span id="EAP_E_EAPHOST_METHOD_INVALID_PACKET"></span><span id="eap_e_eaphost_method_invalid_packet"></span>**EAP \_ E \_ EAPHOST-METHODE \_ \_ \_ UNGÜLTIGES PAKET**
 </dt> <dd> <dl> <dt>
 
 0x80420017
@@ -222,12 +222,12 @@ EAPHost protokolliert dieses Informations Ereignis, wenn der Client und der Serv
 
 
 
-Eine EAP-Methode hat ein EAP-Paket empfangen, das nicht verarbeitet werden kann. Ein anderer Name für die **EAP \_ E \_ EAPHost- \_ Methode " \_ ungültiges \_ Paket** " ist das **EAP- \_ \_ ungültige \_ Paket**.
+Eine EAP-Methode hat ein EAP-Paket empfangen, das nicht verarbeitet werden kann. Ein anderer Name für **EAP \_ E \_ EAPHOST \_ METHOD INVALID \_ \_ PACKET** ist **EAP METHOD INVALID \_ \_ \_ PACKET**.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="EAP_E_EAPHOST_REMOTE_INVALID_PACKET"></span><span id="eap_e_eaphost_remote_invalid_packet"></span>**EAP \_ E \_ EAPHost- \_ Remote \_ ungültiges \_ Paket**
+<span id="EAP_E_EAPHOST_REMOTE_INVALID_PACKET"></span><span id="eap_e_eaphost_remote_invalid_packet"></span>**EAP \_ E \_ EAPHOST \_ REMOTE \_ INVALID \_ PACKET**
 </dt> <dd> <dl> <dt>
 
 0x80420018
@@ -235,12 +235,12 @@ Eine EAP-Methode hat ein EAP-Paket empfangen, das nicht verarbeitet werden kann.
 
 
 
-EAPHost hat ein Paket empfangen, das nicht verarbeitet werden kann. Ein anderer Name für das **\_ \_ \_ Remote ungültige EAP \_ E \_ EAPHost-Paket** ist ein **Ungültiges EAP- \_ \_ Paket**.
+EAPHost hat ein Paket empfangen, das nicht verarbeitet werden kann. Ein anderer Name für **EAP \_ E \_ EAPHOST \_ REMOTE INVALID \_ \_ PACKET** ist **EAP INVALID \_ \_ PACKET**.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="EAP_E_EAPHOST_XML_MALFORMED_"></span><span id="eap_e_eaphost_xml_malformed_"></span>**EAP \_ E \_ EAPHost- \_ XML \_ falsch formatiert** 
+<span id="EAP_E_EAPHOST_XML_MALFORMED_"></span><span id="eap_e_eaphost_xml_malformed_"></span>**EAP \_ E \_ EAPHOST \_ XML \_ MALFORMED** 
 </dt> <dd> <dl> <dt>
 
 0x80420019
@@ -248,25 +248,25 @@ EAPHost hat ein Paket empfangen, das nicht verarbeitet werden kann. Ein anderer 
 
 
 
-Fehler bei der Überprüfung des EAPHost-Konfigurations Schemas.
+Fehler bei der Validierung des EAPHost-Konfigurationsschemas.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="EAP_E_METHOD_CONFIG_DOES_NOT_SUPPORT_SSO"></span><span id="eap_e_method_config_does_not_support_sso"></span>**die EAP \_ E- \_ Methoden \_ Konfiguration \_ \_ \_ unterstützt \_ SSO nicht.**
+<span id="EAP_E_METHOD_CONFIG_DOES_NOT_SUPPORT_SSO"></span><span id="eap_e_method_config_does_not_support_sso"></span>**EAP \_ \_ E-METHODENKONFIGURATION \_ \_ UNTERSTÜTZT KEIN \_ \_ \_ EINMALIGES ANMELDEN.**
 </dt> <dd> <dl> <dt>
 
-0x8042001a
+0x8042001A
 </dt> <dt>
 
 
 
-Windows 7 oder höher: die EAP-Methode bietet keine Unterstützung für einmaliges Anmelden (Single Sign on, SSO) für die angegebene Konfiguration.
+Windows 7 oder höher: Die EAP-Methode unterstützt das einmalige Anmelden (Single Sign On, SSO) für die bereitgestellte Konfiguration nicht.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="EAP_E_EAPHOST_METHOD_OPERATION_NOT_SUPPORTED"></span><span id="eap_e_eaphost_method_operation_not_supported"></span>**der EAP \_ E \_ EAPHost- \_ Methoden \_ Vorgang \_ \_ wird nicht unterstützt.**
+<span id="EAP_E_EAPHOST_METHOD_OPERATION_NOT_SUPPORTED"></span><span id="eap_e_eaphost_method_operation_not_supported"></span>**\_EAP E \_ EAPHOST-METHODENVORGANG \_ WIRD NICHT \_ \_ \_ UNTERSTÜTZT**
 </dt> <dd> <dl> <dt>
 
 0x80420020
@@ -274,64 +274,64 @@ Windows 7 oder höher: die EAP-Methode bietet keine Unterstützung für einmalig
 
 
 
-EAPHost gibt diesen Fehler zurück, wenn eine konfigurierte EAP-Methode einen angeforderten Vorgang nicht unterstützt (Prozedur aufzurufen).
+EAPHost gibt diesen Fehler zurück, wenn eine konfigurierte EAP-Methode einen angeforderten Vorgang nicht unterstützt (Prozeduraufruf).
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="EAP_E_USER_FIRST"></span><span id="eap_e_user_first"></span>**EAP \_ E- \_ Benutzer \_ zuerst**
+<span id="EAP_E_USER_FIRST"></span><span id="eap_e_user_first"></span>**EAP \_ E \_ USER \_ FIRST**
 </dt> <dd> <dl> <dt>
 
-0x80420100l
+0x80420100L
 </dt> <dt>
 
 
 
-Definiert die Grenze von Fehlerberichten. alle Benutzer bezogenen Fehler treten zwischen **EAP \_ e \_ User \_ First** und **EAP \_ e \_ User \_ Last** auf.
+Definiert die Grenze von Fehlerberichten. Alle benutzerbezogenen Fehler treten zwischen **EAP \_ E USER \_ \_ FIRST** und **EAP E USER \_ \_ \_ LAST** auf.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="EAP_E_USER_LAST_"></span><span id="eap_e_user_last_"></span>**EAP \_ E- \_ Benutzer \_ Letzte** 
+<span id="EAP_E_USER_LAST_"></span><span id="eap_e_user_last_"></span>**EAP \_ E \_ USER \_ LAST** 
 </dt> <dd> <dl> <dt>
 
-0x804201ffl
+0x804201FFL
 </dt> <dt>
 
 
 
-Definiert die Grenze von Fehlerberichten. alle Benutzer bezogenen Fehler treten zwischen **EAP \_ e \_ User \_ First** und **EAP \_ e \_ User \_ Last** auf.
+Definiert die Grenze von Fehlerberichten. Alle benutzerbezogenen Fehler treten zwischen **EAP \_ E USER \_ \_ FIRST** und **EAP E USER \_ \_ \_ LAST** auf.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="EAP_I_USER_FIRST"></span><span id="eap_i_user_first"></span>**EAP \_ I- \_ Benutzer \_ zuerst**
+<span id="EAP_I_USER_FIRST"></span><span id="eap_i_user_first"></span>**EAP \_ I \_ USER \_ FIRST**
 </dt> <dd> <dl> <dt>
 
-0x40420100l
+0x40420100L
 </dt> <dt>
 
 
 
-Definiert die Grenze von Informationsberichten. alle EAP-bezogenen Protokolle für Informations Ereignisse werden zwischen **EAP \_ i \_ User \_ First** und **EAP \_ i \_ User \_ Last** ausgeführt.
+Definiert die Grenze von Informationsberichten. Alle EAP-bezogenen Informationsereignisprotokollierung erfolgt zwischen **EAP \_ I USER \_ \_ FIRST** und **EAP I USER \_ \_ \_ LAST**.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="EAP_I_USER_LAST"></span><span id="eap_i_user_last"></span>**EAP \_ I- \_ Benutzer \_ Letzte**
+<span id="EAP_I_USER_LAST"></span><span id="eap_i_user_last"></span>**EAP \_ I \_ USER \_ LAST**
 </dt> <dd> <dl> <dt>
 
-0x404201ffl
+0x404201FFL
 </dt> <dt>
 
 
 
-Definiert die Grenze von Informationsberichten. alle EAP-bezogenen Protokolle für Informations Ereignisse werden zwischen **EAP \_ i \_ User \_ First** und **EAP \_ i \_ User \_ Last** ausgeführt.
+Definiert die Grenze von Informationsberichten. Alle EAP-bezogenen Informationsereignisprotokollierung erfolgt zwischen **EAP \_ I USER \_ \_ FIRST** und **EAP I USER \_ \_ \_ LAST**.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="EAP_E_USER_CERT_NOT_FOUND"></span><span id="eap_e_user_cert_not_found"></span>**EAP \_ E- \_ Benutzer \_ Zertifikat \_ nicht \_ gefunden**
+<span id="EAP_E_USER_CERT_NOT_FOUND"></span><span id="eap_e_user_cert_not_found"></span>**EAP \_ E \_ USER \_ CERT \_ NOT \_ FOUND**
 </dt> <dd> <dl> <dt>
 
 0x80420100
@@ -344,7 +344,7 @@ EAPHost konnte kein Benutzerzertifikat für die Authentifizierung finden.
 
 </dt> </dl> </dd> <dt>
 
-<span id="EAP_E_USER_CERT_INVALID"></span><span id="eap_e_user_cert_invalid"></span>**EAP \_ E- \_ Benutzer \_ Zertifikat \_ ungültig**
+<span id="EAP_E_USER_CERT_INVALID"></span><span id="eap_e_user_cert_invalid"></span>**EAP \_ E \_ USER \_ CERT \_ INVALID**
 </dt> <dd> <dl> <dt>
 
 0x80420101
@@ -352,12 +352,12 @@ EAPHost konnte kein Benutzerzertifikat für die Authentifizierung finden.
 
 
 
-Das Benutzerzertifikat, das für die Authentifizierung verwendet wird, verfügt nicht über die richtige erweiterte Schlüssel Verwendung (EKU).
+Für das Benutzerzertifikat, das für die Authentifizierung verwendet wird, ist keine ordnungsgemäße erweiterte Schlüsselverwendung (Extended Key Usage, EKU) festgelegt.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="EAP_E_USER_CERT_EXPIRED"></span><span id="eap_e_user_cert_expired"></span>**EAP \_ E- \_ Benutzer \_ Zertifikat \_ abgelaufen**
+<span id="EAP_E_USER_CERT_EXPIRED"></span><span id="eap_e_user_cert_expired"></span>**EAP \_ E \_ USER \_ CERT \_ EXPIRED**
 </dt> <dd> <dl> <dt>
 
 0x80420102
@@ -365,12 +365,12 @@ Das Benutzerzertifikat, das für die Authentifizierung verwendet wird, verfügt 
 
 
 
-EAPHost hat ein abgelaufenes Benutzerzertifikat gefunden.
+EAPhost hat ein abgelaufenes Benutzerzertifikat gefunden.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="EAP_E_USER_CERT_REVOKED"></span><span id="eap_e_user_cert_revoked"></span>**EAP \_ E- \_ Benutzer \_ Zertifikat \_ gesperrt**
+<span id="EAP_E_USER_CERT_REVOKED"></span><span id="eap_e_user_cert_revoked"></span>**EAP \_ E \_ USER \_ CERT \_ REVOKED**
 </dt> <dd> <dl> <dt>
 
 0x80420103
@@ -378,12 +378,12 @@ EAPHost hat ein abgelaufenes Benutzerzertifikat gefunden.
 
 
 
-Das Benutzerzertifikat, das für die Authentifizierung verwendet wird, wurde gesperrt.
+Das für die Authentifizierung verwendete Benutzerzertifikat wurde widerrufen.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="EAP_E_USER_CERT_OTHER_ERROR"></span><span id="eap_e_user_cert_other_error"></span>**Fehler beim EAP \_ E- \_ Benutzer \_ Zertifikat \_ \_ .**
+<span id="EAP_E_USER_CERT_OTHER_ERROR"></span><span id="eap_e_user_cert_other_error"></span>**\_EAP E \_ USER \_ CERT \_ – ANDERER \_ FEHLER**
 </dt> <dd> <dl> <dt>
 
 0x80420104
@@ -391,12 +391,12 @@ Das Benutzerzertifikat, das für die Authentifizierung verwendet wird, wurde ges
 
 
 
-Ein unbekannter Fehler ist aufgetreten, wenn die Benutzer Zertifizierung für die Authentifizierung verwendet wird.
+Unbekannter Fehler bei der Benutzerzertifizierung, die für die Authentifizierung verwendet wird.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="EAP_E_USER_CERT_REJECTED_"></span><span id="eap_e_user_cert_rejected_"></span>**EAP \_ E- \_ Benutzer \_ Zertifikat \_ abgelehnt** 
+<span id="EAP_E_USER_CERT_REJECTED_"></span><span id="eap_e_user_cert_rejected_"></span>**EAP \_ E \_ USER \_ CERT \_ ABGELEHNT** 
 </dt> <dd> <dl> <dt>
 
 0x80420105
@@ -404,12 +404,12 @@ Ein unbekannter Fehler ist aufgetreten, wenn die Benutzer Zertifizierung für di
 
 
 
-Der Authentifikator hat die Benutzer Zertifizierung abgelehnt.
+Der Authentifikator hat die Benutzerzertifizierung abgelehnt.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="EAP_I_USER_ACCOUNT_OTHER_ERROR"></span><span id="eap_i_user_account_other_error"></span>**anderer EAP- \_ \_ Benutzer \_ Konto \_ \_ Fehler**
+<span id="EAP_I_USER_ACCOUNT_OTHER_ERROR"></span><span id="eap_i_user_account_other_error"></span>**EAP \_ I \_ USER \_ ACCOUNT \_ OTHER \_ ERROR**
 </dt> <dd> <dl> <dt>
 
 0x40420110
@@ -417,12 +417,12 @@ Der Authentifikator hat die Benutzer Zertifizierung abgelehnt.
 
 
 
-Nach einem Identitäts Austausch wurde ein EAP-Fehler empfangen, der die Wahrscheinlichkeit eines Problems mit dem Konto des authentifizier enden Benutzers angibt.
+Nach einem Identitätsaustausch wurde ein EAP-Fehler empfangen, der die Wahrscheinlichkeit eines Problems mit dem Authentifizieren des Benutzerkontos angibt.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="EAP_E_USER_CREDENTIALS_REJECTED"></span><span id="eap_e_user_credentials_rejected"></span>**EAP \_ E- \_ Benutzer \_ Anmelde Informationen \_ abgelehnt**
+<span id="EAP_E_USER_CREDENTIALS_REJECTED"></span><span id="eap_e_user_credentials_rejected"></span>**EAP \_ E USER CREDENTIALS REJECTED (EAP-E-BENUTZERANMELDEINFORMATIONEN \_ \_ \_ ABGELEHNT)**
 </dt> <dd> <dl> <dt>
 
 0x80420111
@@ -430,12 +430,12 @@ Nach einem Identitäts Austausch wurde ein EAP-Fehler empfangen, der die Wahrsch
 
 
 
-Der Authentifikator hat die Benutzer Anmelde Informationen für die Authentifizierung abgelehnt.
+Der Authentifikator hat Benutzeranmeldeinformationen für die Authentifizierung abgelehnt.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="EAP_E_USER_NAME_PASSWORD_REJECTED"></span><span id="eap_e_user_name_password_rejected"></span>**Kennwort für EAP \_ E- \_ Benutzer \_ Name \_ \_ abgelehnt**
+<span id="EAP_E_USER_NAME_PASSWORD_REJECTED"></span><span id="eap_e_user_name_password_rejected"></span>**EAP \_ E \_ USER \_ NAME \_ PASSWORD \_ REJECTED**
 </dt> <dd> <dl> <dt>
 
 0x80420112
@@ -443,12 +443,12 @@ Der Authentifikator hat die Benutzer Anmelde Informationen für die Authentifizi
 
 
 
-Windows 7 oder höher: Fehler bei der Authentifizierung. Der Authentifikator hat die Anmelde Informationen des Benutzers abgelehnt.
+Windows 7 oder höher: Fehler bei der Authentifizierung. Der Authentifikator hat die Benutzeranmeldeinformationen abgelehnt.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="EAP_E_NO_SMART_CARD_READER"></span><span id="eap_e_no_smart_card_reader"></span>**EAP \_ E \_ kein \_ \_ \_ Smartcardleser**
+<span id="EAP_E_NO_SMART_CARD_READER"></span><span id="eap_e_no_smart_card_reader"></span>**EAP \_ E \_ NO \_ SMART \_ CARD \_ READER**
 </dt> <dd> <dl> <dt>
 
 0x80420113
@@ -456,38 +456,38 @@ Windows 7 oder höher: Fehler bei der Authentifizierung. Der Authentifikator hat
 
 
 
-Windows 7 oder höher: Es wurde kein Smartcardleser gefunden.
+Windows 7 oder höher: Kein Smartcardleser gefunden.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="EAP_E_SERVER_FIRST"></span><span id="eap_e_server_first"></span>**EAP \_ E \_ Server \_ First**
+<span id="EAP_E_SERVER_FIRST"></span><span id="eap_e_server_first"></span>**EAP \_ E \_ SERVER \_ FIRST**
 </dt> <dd> <dl> <dt>
 
-0x80420200l
+0x80420200L
 </dt> <dt>
 
 
 
-Definiert die Grenze von Fehlerberichten. alle Server bezogenen Fehler werden zwischen **EAP \_ e \_ Server \_ First** und **EAP \_ e \_ Server \_ Last** auftreten.
+Definiert die Grenze von Fehlerberichten. Alle serverbezogenen Fehler treten zwischen **EAP \_ E SERVER \_ \_ FIRST** und **EAP E SERVER \_ \_ \_ LAST** auf.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="EAP_E_SERVER_LAST"></span><span id="eap_e_server_last"></span>**EAP \_ E- \_ Server \_ zuletzt**
+<span id="EAP_E_SERVER_LAST"></span><span id="eap_e_server_last"></span>**EAP \_ E \_ SERVER \_ LAST**
 </dt> <dd> <dl> <dt>
 
-0x804202ffl
+0x804202FFL
 </dt> <dt>
 
 
 
-Definiert die Grenze von Fehlerberichten. alle Server bezogenen Fehler werden zwischen **EAP \_ e \_ Server \_ First** und **EAP \_ e \_ Server \_ Last** auftreten.
+Definiert die Grenze von Fehlerberichten. Serverbezogene Fehler treten zwischen **EAP \_ E SERVER \_ \_ FIRST** und **EAP E SERVER LAST \_ \_ \_ auf.**
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="EAP_E_SERVER_CERT_NOT_FOUND"></span><span id="eap_e_server_cert_not_found"></span>**EAP \_ E- \_ Server- \_ CERT \_ nicht \_ gefunden**
+<span id="EAP_E_SERVER_CERT_NOT_FOUND"></span><span id="eap_e_server_cert_not_found"></span>**EAP \_ E \_ SERVER \_ CERT \_ NOT \_ FOUND**
 </dt> <dd> <dl> <dt>
 
 0x80420200
@@ -500,7 +500,7 @@ EAPHost konnte das Serverzertifikat für die Authentifizierung nicht finden.
 
 </dt> </dl> </dd> <dt>
 
-<span id="EAP_E_SERVER_CERT_INVALID"></span><span id="eap_e_server_cert_invalid"></span>**EAP \_ E- \_ Server \_ Zertifikat \_ ungültig**
+<span id="EAP_E_SERVER_CERT_INVALID"></span><span id="eap_e_server_cert_invalid"></span>**EAP \_ E \_ SERVER \_ CERT \_ INVALID**
 </dt> <dd> <dl> <dt>
 
 0x80420201
@@ -508,12 +508,12 @@ EAPHost konnte das Serverzertifikat für die Authentifizierung nicht finden.
 
 
 
-Das Serverzertifikat, das als Benutzer für die Authentifizierung dient, verfügt über keinen geeigneten EKU-Satz (Extended Key Usage).
+Für das Serverzertifikat, das benutzer für die Authentifizierung ist, ist keine ordnungsgemäße erweiterte Schlüsselverwendung (Extended Key Usage, EKU) festgelegt.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="EAP_E_SERVER_CERT_EXPIRED"></span><span id="eap_e_server_cert_expired"></span>**EAP \_ E \_ Server- \_ Zertifikat \_ abgelaufen**
+<span id="EAP_E_SERVER_CERT_EXPIRED"></span><span id="eap_e_server_cert_expired"></span>**EAP \_ E \_ SERVER \_ CERT \_ EXPIRED**
 </dt> <dd> <dl> <dt>
 
 0x80420202
@@ -521,12 +521,12 @@ Das Serverzertifikat, das als Benutzer für die Authentifizierung dient, verfüg
 
 
 
-EAPHost hat ein abgelaufenes Serverzertifikat gefunden.
+EAPhost hat ein abgelaufenes Serverzertifikat gefunden.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="EAP_E_SERVER_CERT_REVOKED"></span><span id="eap_e_server_cert_revoked"></span>**EAP \_ E- \_ Server \_ Zertifikat \_ gesperrt**
+<span id="EAP_E_SERVER_CERT_REVOKED"></span><span id="eap_e_server_cert_revoked"></span>**EAP \_ E \_ SERVER \_ CERT \_ WIDERRUFEN**
 </dt> <dd> <dl> <dt>
 
 0x80420203
@@ -534,12 +534,12 @@ EAPHost hat ein abgelaufenes Serverzertifikat gefunden.
 
 
 
-Das Serverzertifikat, das für die Authentifizierung verwendet wird, wurde gesperrt.
+Das für die Authentifizierung verwendete Serverzertifikat wurde widerrufen.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="EAP_E_SERVER_CERT_OTHER_ERROR"></span><span id="eap_e_server_cert_other_error"></span>**anderer EAP \_ E-Server- \_ CERT- \_ \_ \_ Fehler**
+<span id="EAP_E_SERVER_CERT_OTHER_ERROR"></span><span id="eap_e_server_cert_other_error"></span>**EAP \_ E \_ SERVER \_ CERT \_ OTHER \_ ERROR**
 </dt> <dd> <dl> <dt>
 
 0x80420204
@@ -547,38 +547,38 @@ Das Serverzertifikat, das für die Authentifizierung verwendet wird, wurde gespe
 
 
 
-Unbekannter Fehler beim Serverzertifikat.
+Beim Serverzertifikat ist ein unbekannter Fehler aufgetreten.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="EAP_E_USER_ROOT_CERT_FIRST"></span><span id="eap_e_user_root_cert_first"></span>**EAP \_ E- \_ Benutzer Stamm \_ \_ Zertifikat \_ zuerst**
+<span id="EAP_E_USER_ROOT_CERT_FIRST"></span><span id="eap_e_user_root_cert_first"></span>**EAP \_ E \_ USER \_ ROOT \_ CERT \_ FIRST**
 </dt> <dd> <dl> <dt>
 
-0x80420300l
+0x80420300L
 </dt> <dt>
 
 
 
-Definiert die Grenze von Fehlerberichten. alle Fehler im Zusammenhang mit dem Benutzer Stamm Zertifikat treten zuerst zwischen dem **EAP e-Benutzer Stamm Zertifikat \_ \_ \_ \_ \_ First** und dem **EAP \_ e- \_ Benutzer \_ \_ \_** Stamm Zertifikat auf.
+Definiert die Grenze von Fehlerberichten. Ein Fehler im Zusammenhang mit dem Benutzerstammzertifikat tritt zwischen **EAP \_ E USER \_ ROOT \_ \_ CERT \_ FIRST** und **EAP E USER ROOT \_ \_ \_ \_ CERT FIRST \_ auf.**
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="EAP_E_USER_ROOT_CERT_LAST"></span><span id="eap_e_user_root_cert_last"></span>**EAP \_ E- \_ Benutzer Stamm \_ \_ Zertifikat \_ zuletzt**
+<span id="EAP_E_USER_ROOT_CERT_LAST"></span><span id="eap_e_user_root_cert_last"></span>**EAP \_ E \_ USER \_ ROOT \_ CERT \_ LAST**
 </dt> <dd> <dl> <dt>
 
-0x804203ffl
+0x804203FFL
 </dt> <dt>
 
 
 
-Definiert die Grenze von Fehlerberichten. alle Fehler im Zusammenhang mit dem Benutzer Stamm Zertifikat treten zuerst zwischen dem **EAP e-Benutzer Stamm Zertifikat \_ \_ \_ \_ \_ First** und dem **EAP \_ e- \_ Benutzer \_ \_ \_** Stamm Zertifikat auf.
+Definiert die Grenze von Fehlerberichten. Ein Fehler im Zusammenhang mit dem Benutzerstammzertifikat tritt zwischen **EAP \_ E USER \_ ROOT \_ \_ CERT \_ FIRST** und **EAP E USER ROOT \_ \_ \_ \_ CERT FIRST \_ auf.**
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="EAP_E_USER_ROOT_CERT_NOT_FOUND"></span><span id="eap_e_user_root_cert_not_found"></span>**EAP \_ E-Stamm \_ Zertifikat für Benutzer \_ \_ \_ nicht \_ gefunden**
+<span id="EAP_E_USER_ROOT_CERT_NOT_FOUND"></span><span id="eap_e_user_root_cert_not_found"></span>**EAP E USER ROOT CERT NOT FOUND (EAP \_ \_ \_ \_ E-BENUTZERSTAMMZERTIFIKAT \_ NICHT \_ GEFUNDEN)**
 </dt> <dd> <dl> <dt>
 
 0x80420300
@@ -586,12 +586,12 @@ Definiert die Grenze von Fehlerberichten. alle Fehler im Zusammenhang mit dem Be
 
 
 
-EAPHost konnte kein Zertifikat in einem vertrauenswürdigen Stamm Zertifikat Speicher für die Validierung der Benutzer Zertifizierungsstelle finden.
+EAPHost konnte kein Zertifikat in einem vertrauenswürdigen Stammzertifikatspeicher für die Überprüfung der Benutzerzertifizierung finden.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="EAP_E_USER_ROOT_CERT_INVALID"></span><span id="eap_e_user_root_cert_invalid"></span>**EAP \_ E-Stamm \_ Zertifikat für Benutzer \_ \_ \_ ungültig**
+<span id="EAP_E_USER_ROOT_CERT_INVALID"></span><span id="eap_e_user_root_cert_invalid"></span>**EAP \_ E \_ USER \_ ROOT \_ CERT \_ INVALID**
 </dt> <dd> <dl> <dt>
 
 0x80420301
@@ -599,12 +599,12 @@ EAPHost konnte kein Zertifikat in einem vertrauenswürdigen Stamm Zertifikat Spe
 
 
 
-Die Authentifizierung ist fehlgeschlagen, weil das für dieses Netzwerk verwendete Stamm Zertifikat ungültig ist.
+Fehler bei der Authentifizierung, weil das für dieses Netzwerk verwendete Stammzertifikat ungültig ist.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="EAP_E_USER_ROOT_CERT_EXPIRED"></span><span id="eap_e_user_root_cert_expired"></span>**EAP \_ E-Stamm \_ Zertifikat für Benutzer \_ \_ \_ abgelaufen**
+<span id="EAP_E_USER_ROOT_CERT_EXPIRED"></span><span id="eap_e_user_root_cert_expired"></span>**EAP \_ E \_ USER \_ ROOT \_ CERT \_ EXPIRED**
 </dt> <dd> <dl> <dt>
 
 0x80420302
@@ -612,38 +612,38 @@ Die Authentifizierung ist fehlgeschlagen, weil das für dieses Netzwerk verwende
 
 
 
-Das für die Validierung des Benutzer Zertifikats erforderliche vertrauenswürdige Stamm Zertifikat ist abgelaufen.
+Das vertrauenswürdige Stammzertifikat, das für die Überprüfung des Benutzerzertifikats erforderlich ist, ist abgelaufen.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="EAP_E_SERVER_ROOT_CERT_FIRST"></span><span id="eap_e_server_root_cert_first"></span>**EAP-E-Server-Stamm \_ \_ \_ \_ Zertifikat \_ zuerst**
+<span id="EAP_E_SERVER_ROOT_CERT_FIRST"></span><span id="eap_e_server_root_cert_first"></span>**EAP \_ E \_ SERVER \_ ROOT \_ CERT \_ FIRST**
 </dt> <dd> <dl> <dt>
 
-0x80420400l
+0x80420400L
 </dt> <dt>
 
 
 
-Definiert die Grenze von Fehlerberichten. alle Fehler im Zusammenhang mit dem Server Stamm Zertifikat treten zuerst zwischen **EAP \_ e \_ Server \_ root \_ CERT \_ First** und **EAP \_ e \_ Server \_ root \_ CERT \_** auf.
+Definiert die Begrenzung von Fehlerberichten. Ein serverstammzertifikatbezogener Fehler tritt zwischen **EAP \_ E SERVER \_ ROOT \_ \_ CERT \_ FIRST** und **EAP E SERVER ROOT \_ \_ \_ \_ CERT FIRST \_ auf.**
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="EAP_E_SERVER_ROOT_CERT_LAST"></span><span id="eap_e_server_root_cert_last"></span>**EAP \_ E-Server-Stamm \_ \_ \_ Zertifikat \_ zuletzt**
+<span id="EAP_E_SERVER_ROOT_CERT_LAST"></span><span id="eap_e_server_root_cert_last"></span>**EAP \_ E \_ SERVER \_ ROOT \_ CERT \_ LAST**
 </dt> <dd> <dl> <dt>
 
-0x804204ffl
+0x804204FFL
 </dt> <dt>
 
 
 
-Definiert die Grenze von Fehlerberichten. alle Fehler im Zusammenhang mit dem Server Stamm Zertifikat treten zuerst zwischen **EAP \_ e \_ Server \_ root \_ CERT \_ First** und **EAP \_ e \_ Server \_ root \_ CERT \_** auf.
+Definiert die Begrenzung von Fehlerberichten. Ein serverstammzertifikatbezogener Fehler tritt zwischen **EAP \_ E SERVER \_ ROOT \_ \_ CERT \_ FIRST** und **EAP E SERVER ROOT \_ \_ \_ \_ CERT FIRST \_ auf.**
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="EAP_E_SERVER_ROOT_CERT_NOT_FOUND"></span><span id="eap_e_server_root_cert_not_found"></span>**Das EAP \_ E- \_ Server Stamm Zertifikat wurde \_ \_ \_ nicht \_ gefunden.**
+<span id="EAP_E_SERVER_ROOT_CERT_NOT_FOUND"></span><span id="eap_e_server_root_cert_not_found"></span>**EAP \_ E \_ SERVER \_ ROOT \_ CERT \_ NOT \_ FOUND**
 </dt> <dd> <dl> <dt>
 
 0x80420400
@@ -651,12 +651,12 @@ Definiert die Grenze von Fehlerberichten. alle Fehler im Zusammenhang mit dem Se
 
 
 
-EAPHost konnte kein Stamm Zertifikat in einem vertrauenswürdigen Stamm Zertifikat Speicher für die Überprüfung der Server Zertifizierung finden.
+EAPHost konnte kein Stammzertifikat in einem vertrauenswürdigen Stammzertifikatspeicher für die Serverzertifizierungsüberprüfung finden.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="EAP_E_SERVER_ROOT_CERT_INVALID__________"></span><span id="eap_e_server_root_cert_invalid__________"></span>**EAP \_ E \_ Server \_ root- \_ Zertifikat \_ ungültig** 
+<span id="EAP_E_SERVER_ROOT_CERT_INVALID__________"></span><span id="eap_e_server_root_cert_invalid__________"></span>**EAP \_ E \_ SERVER \_ ROOT \_ CERT \_ INVALID** 
 </dt> <dd> <dl> <dt>
 
 0x80420401
@@ -664,12 +664,12 @@ EAPHost konnte kein Stamm Zertifikat in einem vertrauenswürdigen Stamm Zertifik
 
 
 
-Die Authentifizierung ist fehlgeschlagen, weil das für dieses Netzwerk auf dem Server Computer erforderliche Serverzertifikat ungültig ist.
+Fehler bei der Authentifizierung, weil das für dieses Netzwerk auf dem Servercomputer erforderliche Serverzertifikat ungültig ist.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="EAP_E_SERVER_ROOT_CERT_NAME_REQUIRED"></span><span id="eap_e_server_root_cert_name_required"></span>**der EAP \_ E- \_ Server Stamm \_ \_ Zertifikat Name ist \_ \_ erforderlich.**
+<span id="EAP_E_SERVER_ROOT_CERT_NAME_REQUIRED"></span><span id="eap_e_server_root_cert_name_required"></span>**EAP \_ E \_ SERVER \_ ROOT \_ CERT \_ NAME \_ REQUIRED**
 </dt> <dd> <dl> <dt>
 
 0x80420406
@@ -677,17 +677,17 @@ Die Authentifizierung ist fehlgeschlagen, weil das für dieses Netzwerk auf dem 
 
 
 
-Die Authentifizierung ist fehlgeschlagen, weil für das Zertifikat auf dem Server Computer kein Servername angegeben ist.
+Fehler bei der Authentifizierung, weil für das Zertifikat auf dem Servercomputer kein Servername angegeben ist.
 
 
 </dt> </dl> </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
 Für bestimmte Fehler gibt es alternative Namen:
 
--   Ein anderer Name für die **EAP \_ E \_ EAPHost- \_ Methode " \_ ungültiges \_ Paket** " ist das **EAP- \_ \_ ungültige \_ Paket**.
--   Ein anderer Name für das **\_ \_ \_ Remote ungültige EAP \_ E \_ EAPHost-Paket** ist ein **Ungültiges EAP- \_ \_ Paket**.
+-   Ein anderer Name für **EAP \_ \_ EAPHOST \_ METHOD INVALID PACKET \_ \_ ist** **EAP METHOD INVALID \_ \_ \_ PACKET**.
+-   Ein anderer Name für **EAP \_ \_ EAPHOST \_ REMOTE INVALID PACKET \_ \_ ist** **EAP INVALID \_ \_ PACKET**.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -695,13 +695,13 @@ Für bestimmte Fehler gibt es alternative Namen:
 
 | Anforderung | Wert |
 |-------------------------------------|-------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                            |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/>                                      |
-| Header<br/>                   | <dl> <dt>EAPHost RoR. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ Vista-Desktop-Apps\]<br/>                                            |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/>                                      |
+| Header<br/>                   | <dl> <dt>Eaphosterror.h</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 

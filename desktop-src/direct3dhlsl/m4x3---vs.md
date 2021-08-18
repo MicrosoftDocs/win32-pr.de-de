@@ -62,9 +62,9 @@ dest.z = (src0.x * src3.x) + (src0.y * src3.y) + (src0.z * src3.z) + (src0.w * s
 
 
 
-Der Eingabevektor befindet sich im Register src0. Die 4x3-Eingabematrix befindet sich im Register src1 und die nächsten beiden höheren Register, wie in der folgenden Erweiterung gezeigt. Es wird ein 3D-Ergebnis erzeugt, ohne dass das andere Element des Zielregisters (dest.w) davon betroffen ist.
+Der Eingabevektor befindet sich im Register src0. Die 4x3-Eingabematrix befindet sich im Register src1 und die nächsten beiden höheren Register, wie in der folgenden Erweiterung gezeigt. Ein 3D-Ergebnis wird erzeugt, ohne dass das andere Element des Zielregisters (dest.w) davon betroffen ist.
 
-Dieser Vorgang wird häufig zum Transformieren eines Positionsvektors durch eine Matrix verwendet, die keinen projektiven Effekt hat, z. B. bei Modellraumtransformationen. Diese Anweisung wird wie unten gezeigt als Paar von Punktprodukten implementiert.
+Dieser Vorgang wird häufig zum Transformieren eines Positionsvektors durch eine Matrix verwendet, die keinen projektiven Effekt hat, z. B. bei Modellraumtransformationen. Diese Anweisung wird wie unten gezeigt als Punktproduktepaar implementiert.
 
 
 ```

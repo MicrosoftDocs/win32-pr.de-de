@@ -1,7 +1,7 @@
 ---
-description: Identifiziert den Hosttyp des wldp-Aufrufers.
+description: Identifiziert den Hosttyp des WLDP-Aufrufers.
 ms.assetid: E8E603CC-9CB2-4C3B-9F06-9B06C7B5D752
-title: WLDP_HOST_ID-Enumeration (wldp. h)
+title: WLDP_HOST_ID -Enumeration (Wldp.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,16 +13,16 @@ api_type:
 - HeaderDef
 api_location:
 - wldp.h
-ms.openlocfilehash: 8914f93ff5936451b71b855473a09cb1d06584b4
-ms.sourcegitcommit: c7add10d695482e1ceb72d62b8a4ebd84ea050f7
+ms.openlocfilehash: fa52bc6259c75d5bb0929cb25610beb2b143515e2874b09bf04c454397a909e6
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104522923"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119758380"
 ---
-# <a name="wldp_host_id-enumeration"></a>Wldp- \_ Host- \_ ID-Enumeration
+# <a name="wldp_host_id-enumeration"></a>\_ \_ WLDP-HOST-ID-Enumeration
 
-Identifiziert den Hosttyp des wldp-Aufrufers.
+Identifiziert den Hosttyp des WLDP-Aufrufers.
 
 ## <a name="syntax"></a>Syntax
 
@@ -46,56 +46,56 @@ typedef enum _WLDP_HOST_ID {
 
 <dl> <dt>
 
-<span id="_WLDP_HOST_ID_UNKNOWN_"></span><span id="_wldp_host_id_unknown_"></span>**Wldp \_ Host- \_ ID \_ unbekannt** 
+<span id="_WLDP_HOST_ID_UNKNOWN_"></span><span id="_wldp_host_id_unknown_"></span>**WLDP \_ \_HOST-ID \_ UNBEKANNT** 
 </dt> <dd>
 
 Der Hosttyp ist unbekannt.
 
 </dd> <dt>
 
-<span id="_WLDP_HOST_ID_GLOBAL"></span><span id="_wldp_host_id_global"></span>**Wldp \_ Host- \_ ID \_ Global**
+<span id="_WLDP_HOST_ID_GLOBAL"></span><span id="_wldp_host_id_global"></span>**WLDP \_ \_HOST-ID \_ GLOBAL**
 </dt> <dd>
 
 Der Hosttyp ist eine globale Richtlinie.
 
 </dd> <dt>
 
-<span id="WLDP_HOST_ID_VBA"></span><span id="wldp_host_id_vba"></span>**wldp- \_ Host- \_ ID \_ VBA**
+<span id="WLDP_HOST_ID_VBA"></span><span id="wldp_host_id_vba"></span>**WLDP \_ HOST \_ ID \_ VBA**
 </dt> <dd>
 
-Der Hosttyp ist "VBScript".
+Der Hosttyp ist VBScript.
 
 </dd> <dt>
 
-<span id="_WLDP_HOST_ID_WSH"></span><span id="_wldp_host_id_wsh"></span>**Wldp \_ Host- \_ ID \_ WSH**
+<span id="_WLDP_HOST_ID_WSH"></span><span id="_wldp_host_id_wsh"></span>**WLDP \_ \_HOST-ID \_ WSH**
 </dt> <dd>
 
-Der Hosttyp ist "Windows Script Host".
+Der Hosttyp ist Windows Skripthost.
 
 </dd> <dt>
 
-<span id="_WLDP_HOST_ID_POWERSHELL"></span><span id="_wldp_host_id_powershell"></span>**Wldp \_ Host- \_ ID \_ PowerShell**
+<span id="_WLDP_HOST_ID_POWERSHELL"></span><span id="_wldp_host_id_powershell"></span>**WLDP \_ \_HOST-ID \_ POWERSHELL**
 </dt> <dd>
 
 Der Hosttyp ist Windows PowerShell.
 
 </dd> <dt>
 
-<span id="_WLDP_HOST_ID_IE"></span><span id="_wldp_host_id_ie"></span>**Wldp \_ Host- \_ ID \_ IE**
+<span id="_WLDP_HOST_ID_IE"></span><span id="_wldp_host_id_ie"></span>**WLDP \_ \_ \_ HOST-ID-IE**
 </dt> <dd>
 
-Der Hosttyp ist "Internet Explorer".
+Der Hosttyp ist Internet Explorer.
 
 </dd> <dt>
 
-<span id="_WLDP_HOST_ID_MSI"></span><span id="_wldp_host_id_msi"></span>**Wldp \_ Host- \_ ID- \_ MSI**
+<span id="_WLDP_HOST_ID_MSI"></span><span id="_wldp_host_id_msi"></span>**WLDP \_ \_HOST-ID \_ MSI**
 </dt> <dd>
 
 Der Hosttyp ist der Microsoft Windows Installer.
 
 </dd> <dt>
 
-<span id="_WLDP_HOST_ID_MAX__"></span><span id="_wldp_host_id_max__"></span>**Wldp \_ Host- \_ ID \_ Max** 
+<span id="_WLDP_HOST_ID_MAX__"></span><span id="_wldp_host_id_max__"></span>**WLDP \_ \_HOST-ID \_ MAX** 
 </dt> <dd>
 
 Der maximale Enumerationswert.
@@ -108,9 +108,9 @@ Der maximale Enumerationswert.
 
 | Anforderung | Wert |
 |-------------------------------------|-----------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows 8 \[ -Desktop-Apps\]<br/>                                        |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2012 \[ -Desktop-Apps\]<br/>                              |
-| Header<br/>                   | <dl> <dt>Wldp. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | \[Windows 8 Nur Desktop-Apps\]<br/>                                        |
+| Unterstützte Mindestversion (Server)<br/> | \[Windows Server 2012 Nur Desktop-Apps\]<br/>                              |
+| Header<br/>                   | <dl> <dt>Wldp.h</dt> </dl> |
 
 
 

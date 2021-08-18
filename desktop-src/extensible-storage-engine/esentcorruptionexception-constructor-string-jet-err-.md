@@ -1,6 +1,6 @@
 ---
-description: 'Weitere Informationen finden Sie unter: esentbeschädigen tionexception-Konstruktor (String, JET_err)'
-title: Esentverdertionexception-Konstruktor (Zeichenfolge, JET_err)
+description: 'Weitere Informationen zu: EsentCorruptionException-Konstruktor (String, JET_err)'
+title: EsentCorruptionException-Konstruktor (String, JET_err)
 TOCTitle: EsentCorruptionException constructor (String, JET_err)
 ms:assetid: M:Microsoft.Isam.Esent.Interop.EsentCorruptionException.#ctor(System.String,Microsoft.Isam.Esent.Interop.JET_err)
 ms:mtpsurl: https://msdn.microsoft.com/library/microsoft.isam.esent.interop.esentcorruptionexception.esentcorruptionexception(v=EXCHG.10)
@@ -20,19 +20,19 @@ api_type:
 api_location:
 - Microsoft.Isam.Esent.Interop.dll
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: 30ed98ea56fe791ed949edc82b548990371c9671
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: bbf059d91d1782588b8f9211b888d7b12b752abbff2637ae1f3f492eb312c6f9
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104525067"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119736593"
 ---
-# <a name="esentcorruptionexception-constructor-string-jet_err"></a>Esentverdertionexception-Konstruktor (Zeichenfolge, JET_err)
+# <a name="esentcorruptionexception-constructor-string-jet_err"></a>EsentCorruptionException-Konstruktor (String, JET_err)
 
-Initialisiert eine neue Instanz der esentkorruptionexception-Klasse.
+Initialisiert eine neue Instanz der EsentCorruptionException-Klasse.
 
-**Namespace:**  [Microsoft. ISAM. ESENT. Interop](./microsoft.isam.esent.interop-namespace.md)  
-**Assembly:**  Microsoft. ISAM. ESENT. Interop (in Microsoft.Isam.Esent.Interop.dll)
+**Namespace:**  [Microsoft.Isam.Esent.Interop](./microsoft.isam.esent.interop-namespace.md)  
+**Assembly:**  Microsoft.Isam.Esent.Interop (in Microsoft.Isam.Esent.Interop.dll)
 
 ## <a name="syntax"></a>Syntax
 
@@ -60,25 +60,25 @@ protected EsentCorruptionException(
 #### <a name="parameters"></a>Parameter
 
   - description  
-    Typ: [System. String](/dotnet/api/system.string)  
+    Typ: [System.String](/dotnet/api/system.string)  
     
     Die Beschreibung des Fehlers.
 
 <!-- end list -->
 
-  - irre  
-    Typ: [Microsoft.ISAM.ESENT.Interop.JET_err](./jet-err-enumeration.md)  
+  - Err  
+    Typ: [Microsoft.Isam.Esent.Interop.JET_err](./jet-err-enumeration.md)  
     
     Der Fehlercode der Ausnahme.
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
-#### <a name="reference"></a>Referenz
+#### <a name="reference"></a>Verweis
 
 [EsentCorruptionException-Klasse](./esentcorruptionexception-class.md)
 
-[Esentverdertionexception-Member](./esentcorruptionexception-members.md)
+[EsentCorruptionException-Member](./esentcorruptionexception-members.md)
 
-[Esentkorruptionexception-Überladung](./esentcorruptionexception-constructor.md)
+[EsentCorruptionException-Überladung](./esentcorruptionexception-constructor.md)
 
-[Microsoft. ISAM. ESENT. Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)
+[Microsoft.Isam.Esent.Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)

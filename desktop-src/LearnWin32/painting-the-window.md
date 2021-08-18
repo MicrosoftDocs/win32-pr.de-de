@@ -1,37 +1,37 @@
 ---
 title: Zeichnen des Fensters
-description: Sie haben Ihr Fenster erstellt. Nun möchten Sie etwas darin anzeigen. In der Windows-Terminologie wird dies als "Zeichnen des Fensters" bezeichnet. Zum Kombinieren von Metaphern ist ein Fenster ein leerer Zeichenbereich, der darauf wartet, dass Sie ihn ausfüllen.
+description: Sie haben Ihr Fenster erstellt. Nun möchten Sie etwas darin anzeigen. In Windows Terminologie wird dies als Zeichnen des Fensters bezeichnet. Um Metaphern zu mischen, ist ein Fenster ein leerer Zeichenbereich, der darauf wartet, dass Sie es ausfüllen.
 ms.assetid: db97a4c9-7592-42d1-a5de-9c468169eefc
 ms.topic: article
 ms.date: 08/16/2019
-ms.openlocfilehash: f0f9d5c2759ea1735e370eb258743364980daee8
-ms.sourcegitcommit: ebd3ce6908ff865f1ef66f2fc96769be0aad82e1
+ms.openlocfilehash: 93d0cb0234975b61ee7ffc05a680b5e1e6b1e01b9d4de7235fc4239ec5573f29
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/19/2020
-ms.locfileid: "104551949"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119897018"
 ---
 # <a name="painting-the-window"></a>Zeichnen des Fensters
 
-Sie haben Ihr Fenster erstellt. Nun möchten Sie etwas darin anzeigen. In der Windows-Terminologie wird dies als "Zeichnen des Fensters" bezeichnet. Zum Kombinieren von Metaphern ist ein Fenster ein leerer Zeichenbereich, der darauf wartet, dass Sie ihn ausfüllen.
+Sie haben Ihr Fenster erstellt. Nun möchten Sie etwas darin anzeigen. In Windows Terminologie wird dies als Zeichnen des Fensters bezeichnet. Um Metaphern zu mischen, ist ein Fenster ein leerer Zeichenbereich, der darauf wartet, dass Sie es ausfüllen.
 
-Manchmal initiiert das Programm das Zeichnen, um die Darstellung des Fensters zu aktualisieren. Zu anderen Zeiten werden Sie vom Betriebssystem benachrichtigt, dass Sie einen Teil des Fensters neu zeichnen müssen. In diesem Fall sendet das Betriebssystem dem Fenster eine [**WM- \_**](/windows/desktop/gdi/wm-paint) Zeichnungs Nachricht. Der Teil des Fensters, der gezeichnet werden muss, wird als *Update Bereich* bezeichnet.
+Manchmal initiiert Ihr Programm das Zeichnen, um die Darstellung des Fensters zu aktualisieren. In anderen Fällen werden Sie vom Betriebssystem benachrichtigt, dass Sie einen Teil des Fensters neu malieren müssen. In diesem Fall sendet das Betriebssystem dem Fenster eine [**WM \_ PAINT-Meldung.**](/windows/desktop/gdi/wm-paint) Der Teil des Fensters, der gezeichnet werden muss, wird als *Updatebereich* bezeichnet.
 
-Wenn ein Fenster zum ersten Mal angezeigt wird, muss der gesamte Client Bereich des Fensters gezeichnet werden. Daher erhalten Sie immer mindestens eine WM-Zeichnungs [**Nachricht \_**](/windows/desktop/gdi/wm-paint) , wenn Sie ein Fenster anzeigen.
+Wenn ein Fenster zum ersten Mal angezeigt wird, muss der gesamte Clientbereich des Fensters gezeichnet werden. Daher erhalten Sie immer mindestens eine [**WM \_ PAINT-Meldung,**](/windows/desktop/gdi/wm-paint) wenn Sie ein Fenster anzeigen.
 
-![Abbildung mit dem Aktualisierungs Bereich eines Fensters](images/painting01.png)
+![Abbildung des Updatebereichs eines Fensters](images/painting01.png)
 
-Sie sind nur für das Zeichnen des Client Bereichs verantwortlich. Der umgebende Frame einschließlich der Titelleiste wird automatisch vom Betriebssystem gezeichnet. Nachdem Sie den Client Bereich gezeichnet haben, löschen Sie den Aktualisierungs Bereich, der dem Betriebssystem mitteilt, dass keine weitere WM-Zeichnungs [**Nachricht \_**](/windows/desktop/gdi/wm-paint) gesendet werden muss, bis etwas geändert wird.
+Sie sind nur für das Zeichnen des Clientbereichs verantwortlich. Der umgebende Frame, einschließlich der Titelleiste, wird automatisch vom Betriebssystem gezeichnet. Nachdem Sie das Zeichnen des Clientbereichs abgeschlossen haben, löschen Sie den Updatebereich, der dem Betriebssystem mitteilt, dass keine weitere [**WM \_ PAINT-Nachricht**](/windows/desktop/gdi/wm-paint) gesendet werden muss, bis sich etwas ändert.
 
-Nehmen Sie jetzt an, dass der Benutzer ein anderes Fenster verschiebt, sodass ein Teil des Fensters verdeckt wird. Wenn der verdeckte Teil wieder sichtbar wird, wird dieser Teil dem Aktualisierungs Bereich hinzugefügt, und Ihr Fenster empfängt eine weitere WM-Zeichnungs Nachricht. [**\_**](/windows/desktop/gdi/wm-paint)
+Angenommen, der Benutzer verschiebt ein anderes Fenster, sodass ein Teil des Fensters verdeckt wird. Wenn der verdeckte Teil wieder sichtbar wird, wird dieser Teil dem Updatebereich hinzugefügt, und Ihr Fenster empfängt eine weitere [**WM \_ PAINT-Meldung.**](/windows/desktop/gdi/wm-paint)
 
-![Abbildung, die zeigt, wie sich der Update Bereich ändert, wenn sich zwei Fenster](images/painting02.png)
+![Abbildung, die zeigt, wie sich der Updatebereich ändert, wenn sich zwei Fenster überlappen](images/painting02.png)
 
-Der Aktualisierungs Bereich ändert sich auch, wenn der Benutzer das Fenster ausdehnt. Im folgenden Diagramm wird das Fenster vom Benutzer nach rechts gestreckt. Der neu verfügbar gemachte Bereich auf der rechten Seite des Fensters wird der Aktualisierungs Region hinzugefügt:
+Der Updatebereich ändert sich auch, wenn der Benutzer das Fenster streckt. Im folgenden Diagramm streckt der Benutzer das Fenster nach rechts. Der neu verfügbar gemachte Bereich auf der rechten Seite des Fensters wird dem Updatebereich hinzugefügt:
 
-![Abbildung, die zeigt, wie sich der Update Bereich ändert, wenn die Größe eines Fensters geändert wird](images/painting03.png)
+![Abbildung, die zeigt, wie sich der Updatebereich ändert, wenn die Größe eines Fensters geändert wird](images/painting03.png)
 
-Im ersten Beispielprogramm ist die Zeichnungs Routine sehr einfach. Es füllt nur den gesamten Client Bereich mit einer voll Tonfarbe aus. Dennoch genügt dieses Beispiel, um einige wichtige Konzepte zu veranschaulichen.
+In unserem ersten Beispielprogramm ist die Zeichnungsroutine sehr einfach. Er füllt nur den gesamten Clientbereich mit einer Volltonfarbe aus. Dennoch reicht dieses Beispiel aus, um einige der wichtigen Konzepte zu veranschaulichen.
 
 ```C++
 switch (uMsg)
@@ -51,28 +51,28 @@ switch (uMsg)
 }
 ```
 
-Starten Sie den Zeichnungs Vorgang, indem Sie die [**BeginPaint**](/windows/desktop/api/winuser/nf-winuser-beginpaint) -Funktion aufrufen. Diese Funktion füllt die [**paintstruct**](/windows/win32/api/winuser/ns-winuser-paintstruct) -Struktur mit Informationen über die Repaint-Anforderung aus. Der aktuelle Aktualisierungs Bereich wird im **rcpaint** -Member von **paintstruct** angegeben. Dieser Aktualisierungs Bereich ist relativ zum Client Bereich definiert:
+Starten Sie den Zeichnungsvorgang, indem Sie die [**BeginPaint-Funktion**](/windows/desktop/api/winuser/nf-winuser-beginpaint) aufrufen. Diese Funktion füllt die [**PAINTSTRUCT-Struktur**](/windows/win32/api/winuser/ns-winuser-paintstruct) mit Informationen zur Anforderung zum erneuten Zeichnen auf. Der aktuelle Updatebereich wird im **rcPaint-Member** von **PAINTSTRUCT angegeben.** Diese Updateregion wird relativ zum Clientbereich definiert:
 
-![Abbildung, die den Ursprung des Client Bereichs anzeigt](images/painting04.png)
+![Abbildung, die den Ursprung des Clientbereichs zeigt](images/painting04.png)
 
-In Ihrem Zeichnungs Code haben Sie zwei grundlegende Optionen:
+In Ihrem Zeichnungscode haben Sie zwei grundlegende Optionen:
 
-- Zeichnen Sie den gesamten Client Bereich unabhängig von der Größe des Aktualisierungs Bereichs. Alle Elemente, die außerhalb des Aktualisierungs Bereichs liegen, werden abgeschnitten. Das heißt, das Betriebssystem ignoriert es.
-- Optimieren Sie, indem Sie nur den Teil des Fensters innerhalb des Aktualisierungs Bereichs zeichnen.
+- Paint den gesamten Clientbereich, unabhängig von der Größe der Updateregion. Alles, was außerhalb des Updatebereichs liegt, wird abgeschnitten. Das heißt, das Betriebssystem ignoriert dies.
+- Optimieren Sie , indem Sie nur den Teil des Fensters innerhalb des Updatebereichs zeichnen.
 
-Wenn Sie immer den gesamten Client Bereich zeichnen, ist der Code einfacher. Wenn Sie jedoch eine komplizierte Zeichnungs Logik haben, kann es effizienter sein, die Bereiche außerhalb der Aktualisierungs Region zu überspringen.
+Wenn Sie immer den gesamten Clientbereich zeichnen, ist der Code einfacher. Wenn Sie jedoch eine komplizierte Zeichnungslogik haben, kann es effizienter sein, die Bereiche außerhalb der Updateregion zu überspringen.
 
-Die folgende Codezeile füllt den Update Bereich mit einer einzelnen Farbe auf, wobei die Hintergrundfarbe des System definierten Fensters (**Farb \_ Fenster**) verwendet wird. Die tatsächliche Farbe, die durch das **Farb \_ Fenster** angegeben ist, hängt vom aktuellen Farbschema des Benutzers ab.
+Die folgende Codezeile füllt den Aktualisierungsbereich mit einer einzelnen Farbe aus, wobei die systemdefinierte Fensterhintergrundfarbe (**COLOR \_ WINDOW**) verwendet wird. Die tatsächliche Farbe, die durch **COLOR \_ WINDOW** angegeben wird, hängt vom aktuellen Farbschema des Benutzers ab.
 
 ```C++
 FillRect(hdc, &ps.rcPaint, (HBRUSH) (COLOR_WINDOW+1));
 ```
 
-Die Details von [**fillRect**](/windows/desktop/api/winuser/nf-winuser-fillrect) sind für dieses Beispiel nicht wichtig, aber der zweite Parameter gibt die Koordinaten des Rechtecks an, das ausgefüllt werden soll. In diesem Fall übergeben wir den gesamten Update Bereich (den **rcpaint** -Member von [**paintstruct**](/windows/win32/api/winuser/ns-winuser-paintstruct)). Bei der ersten [**WM \_**](/windows/desktop/gdi/wm-paint) -Zeichnungs Nachricht muss der gesamte Client Bereich gezeichnet werden, sodass **rcpaint** den gesamten Client Bereich enthält. Bei nachfolgenden **WM \_ Paint** -Meldungen enthält **rcpaint** möglicherweise ein kleineres Rechteck.
+Die Details von [**FillRect**](/windows/desktop/api/winuser/nf-winuser-fillrect) sind für dieses Beispiel nicht wichtig, aber der zweite Parameter gibt die Koordinaten des zu füllenden Rechtecks an. In diesem Fall übergeben wir den gesamten Updatebereich (den **rcPaint-Member** von [**PAINTSTRUCT**](/windows/win32/api/winuser/ns-winuser-paintstruct)). Bei der ersten [**WM \_ PAINT-Nachricht**](/windows/desktop/gdi/wm-paint) muss der gesamte Clientbereich gezeichnet werden, sodass **rcPaint** den gesamten Clientbereich enthält. Bei nachfolgenden **WM \_ PAINT-Nachrichten** kann **rcPaint** ein kleineres Rechteck enthalten.
 
-Die [**fillRect**](/windows/desktop/api/winuser/nf-winuser-fillrect) -Funktion ist Teil des Graphics Device Interface (GDI), das für einen sehr langen Zeitraum Windows-Grafiken betrieben hat. In Windows 7 führte Microsoft eine neue Grafik-Engine mit dem Namen Direct2D ein, die hochleistungsfähige Grafik Vorgänge wie Hardwarebeschleunigung unterstützt. Direct2D ist auch für Windows Vista über das [Platt Form Update für Windows Vista](../win7ip/platform-update-for-windows-vista-overview.md) und für Windows Server 2008 über das Platt Form Update für Windows Server 2008 verfügbar. (GDI wird weiterhin vollständig unterstützt.)
+Die [**FillRect-Funktion**](/windows/desktop/api/winuser/nf-winuser-fillrect) ist Teil des Graphics Device Interface (GDI), das Windows Grafiken sehr lange unterstützt. In Windows 7 hat Microsoft eine neue Grafik-Engine namens Direct2D eingeführt, die leistungsstarke Grafikvorgänge wie die Hardwarebeschleunigung unterstützt. Direct2D ist auch für Windows Vista über das [Plattformupdate für Windows Vista](../win7ip/platform-update-for-windows-vista-overview.md) und für Windows Server 2008 über das Plattformupdate für Windows Server 2008 verfügbar. (GDI wird weiterhin vollständig unterstützt.)
 
-Nachdem Sie das Zeichnen abgeschlossen haben, können Sie die [**endpaint**](/windows/desktop/api/winuser/nf-winuser-endpaint) -Funktion aufzurufen. Diese Funktion löscht den Update Bereich, der Windows signalisiert, dass das Fenster das Zeichnen selbst abgeschlossen hat.
+Nachdem Sie mit dem Zeichnen fertig sind, rufen Sie die [**EndPaint-Funktion**](/windows/desktop/api/winuser/nf-winuser-endpaint) auf. Diese Funktion löscht den Updatebereich, der Windows signalisiert, dass das Fenster das Zeichnen selbst abgeschlossen hat.
 
 ## <a name="next"></a>Nächste
 

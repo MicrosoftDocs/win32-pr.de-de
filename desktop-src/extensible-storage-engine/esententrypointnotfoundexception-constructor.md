@@ -1,6 +1,6 @@
 ---
-description: 'Weitere Informationen finden Sie unter: esententrypointnotfoundexception-Konstruktor'
-title: Esententrypointnotfoundexception-Konstruktor
+description: 'Weitere Informationen zu: EsentEntryPointNotFoundException-Konstruktor'
+title: EsentEntryPointNotFoundException-Konstruktor
 TOCTitle: 'EsentEntryPointNotFoundException constructor '
 ms:assetid: M:Microsoft.Isam.Esent.Interop.EsentEntryPointNotFoundException.#ctor
 ms:mtpsurl: https://msdn.microsoft.com/library/microsoft.isam.esent.interop.esententrypointnotfoundexception.esententrypointnotfoundexception(v=EXCHG.10)
@@ -24,19 +24,19 @@ api_type:
 api_location:
 - Microsoft.Isam.Esent.Interop.dll
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: b19724180f8823eb349531ebb28f5a58ad154540
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: cf5c45ffb71442ff19a3992de0d705121d3b9b9d8e042bf511f5d9b13dfe6867
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "103960524"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119973880"
 ---
-# <a name="esententrypointnotfoundexception-constructor"></a>Esententrypointnotfoundexception-Konstruktor
+# <a name="esententrypointnotfoundexception-constructor"></a>EsentEntryPointNotFoundException-Konstruktor
 
-Initialisiert eine neue Instanz der esententrypointnotfoundexception-Klasse.
+Initialisiert eine neue Instanz der EsentEntryPointNotFoundException-Klasse.
 
-**Namespace:**  [Microsoft. ISAM. ESENT. Interop](./microsoft.isam.esent.interop-namespace.md)  
-**Assembly:**  Microsoft. ISAM. ESENT. Interop (in Microsoft.Isam.Esent.Interop.dll)
+**Namespace:**  [Microsoft.Isam.Esent.Interop](./microsoft.isam.esent.interop-namespace.md)  
+**Assembly:**  Microsoft.Isam.Esent.Interop (in Microsoft.Isam.Esent.Interop.dll)
 
 ## <a name="syntax"></a>Syntax
 
@@ -52,12 +52,12 @@ Dim instance As New EsentEntryPointNotFoundException()
 public EsentEntryPointNotFoundException()
 ```
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
-#### <a name="reference"></a>Referenz
+#### <a name="reference"></a>Verweis
 
-[Esententrypointnotfoundexception-Klasse](./esententrypointnotfoundexception-class.md)
+[EsentEntryPointNotFoundException-Klasse](./esententrypointnotfoundexception-class.md)
 
-[Esententrypointnotfoundexception-Elemente](./esententrypointnotfoundexception-members.md)
+[EsentEntryPointNotFoundException-Member](./esententrypointnotfoundexception-members.md)
 
-[Microsoft. ISAM. ESENT. Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)
+[Microsoft.Isam.Esent.Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)

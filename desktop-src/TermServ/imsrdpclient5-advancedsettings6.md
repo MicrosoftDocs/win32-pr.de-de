@@ -5,18 +5,18 @@ ms.assetid: b6a4efcf-87c3-438c-b6de-8a497ee5939d
 ms.tgt_platform: multiple
 keywords:
 - AdvancedSettings6-Eigenschaft Remotedesktopdienste
-- AdvancedSettings6-Eigenschaften Remotedesktopdienste, IMsRdpClient5-Schnittstelle
-- IMsRdpClient5-Schnittstelle Remotedesktopdienste, AdvancedSettings6-Eigenschaft
-- AdvancedSettings6-Eigenschaften Remotedesktopdienste, IMsRdpClient6-Schnittstelle
-- IMsRdpClient6-Schnittstelle Remotedesktopdienste, AdvancedSettings6-Eigenschaft
-- AdvancedSettings6-Eigenschaften Remotedesktopdienste, IMsRdpClient7-Schnittstelle
-- IMsRdpClient7-Schnittstelle Remotedesktopdienste, AdvancedSettings6-Eigenschaft
-- AdvancedSettings6-Eigenschaften Remotedesktopdienste, IMsRdpClient8-Schnittstelle
-- IMsRdpClient8-Schnittstelle Remotedesktopdienste, AdvancedSettings6-Eigenschaft
-- AdvancedSettings6-Eigenschaften Remotedesktopdienste, IMsRdpClient9-Schnittstelle
-- IMsRdpClient9-Schnittstelle Remotedesktopdienste, AdvancedSettings6-Eigenschaft
-- AdvancedSettings6-Eigenschaften Remotedesktopdienste, IMsRdpClient10-Schnittstelle
-- IMsRdpClient10-Schnittstelle Remotedesktopdienste, AdvancedSettings6-Eigenschaft
+- AdvancedSettings6-Eigenschaft Remotedesktopdienste , IMsRdpClient5-Schnittstelle
+- IMsRdpClient5-Schnittstelle Remotedesktopdienste , AdvancedSettings6-Eigenschaft
+- AdvancedSettings6-Eigenschaft Remotedesktopdienste , IMsRdpClient6-Schnittstelle
+- IMsRdpClient6-Schnittstelle Remotedesktopdienste , AdvancedSettings6-Eigenschaft
+- AdvancedSettings6-Eigenschaft Remotedesktopdienste , IMsRdpClient7-Schnittstelle
+- IMsRdpClient7-Schnittstelle Remotedesktopdienste , AdvancedSettings6-Eigenschaft
+- AdvancedSettings6-Eigenschaft Remotedesktopdienste , IMsRdpClient8-Schnittstelle
+- IMsRdpClient8-Schnittstelle Remotedesktopdienste , AdvancedSettings6-Eigenschaft
+- AdvancedSettings6-Eigenschaft Remotedesktopdienste , IMsRdpClient9-Schnittstelle
+- IMsRdpClient9-Schnittstelle Remotedesktopdienste , AdvancedSettings6-Eigenschaft
+- AdvancedSettings6-Eigenschaft Remotedesktopdienste , IMsRdpClient10-Schnittstelle
+- IMsRdpClient10-Schnittstelle Remotedesktopdienste , AdvancedSettings6-Eigenschaft
 topic_type:
 - apiref
 api_name:
@@ -38,16 +38,16 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 2b93d2395ec7e673e50023867f4602eea5c2d9fb
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: a457cb0f2b638c24682f1fabd54f3309a1c781055f2df6242b3f6340490481da
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "103859263"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119001499"
 ---
-# <a name="imsrdpclient5advancedsettings6-property"></a>IMsRdpClient5:: AdvancedSettings6-Eigenschaft
+# <a name="imsrdpclient5advancedsettings6-property"></a>IMsRdpClient5::AdvancedSettings6-Eigenschaft
 
-Ruft die [**IMsRdpClientAdvancedSettings5**](imsrdpclientadvancedsettings5.md) -Schnittstelle ab.
+Ruft die [**IMsRdpClientAdvancedSettings5-Schnittstelle**](imsrdpclientadvancedsettings5.md) ab.
 
 Diese Eigenschaft ist schreibgeschützt.
 
@@ -64,7 +64,7 @@ HRESULT get_AdvancedSettings6(
 
 ## <a name="property-value"></a>Eigenschaftswert
 
-Ein [**IMsRdpClientAdvancedSettings5**](imsrdpclientadvancedsettings-interface.md) -Schnittstellen Zeiger.
+Ein [**IMsRdpClientAdvancedSettings5-Schnittstellenzeiger.**](imsrdpclientadvancedsettings-interface.md)
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -76,11 +76,11 @@ Ein [**IMsRdpClientAdvancedSettings5**](imsrdpclientadvancedsettings-interface.m
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2008<br/>                                                         |
 | Typbibliothek<br/>             | <dl> <dt>MsTscAx.dll</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>MsTscAx.dll</dt> </dl> |
-| IID<br/>                      | IID \_ IMsRdpClient5 ist als 4eb5335b-6429-477d-B922-e06a28ecd8bf definiert.<br/>       |
+| IID<br/>                      | IID \_ IMsRdpClient5 ist als 4eb5335b-6429-477d-b922-e06a28ecd8bf definiert.<br/>       |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 

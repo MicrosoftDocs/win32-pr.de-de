@@ -1,5 +1,5 @@
 ---
-description: 'Delete-Methode der Win32_SystemDriver-Klasse: Delete&\# 8194; Die WMI-Klassenmethode löscht einen vorhandenen Dienst.'
+description: 'Delete-Methode der Win32_SystemDriver Klasse : Der Delete&\# 8194; Die WMI-Klassenmethode löscht einen vorhandenen Dienst.'
 ms.assetid: 5e437d36-3582-448c-b568-45f7fb13b096
 ms.tgt_platform: multiple
 title: Delete-Methode der Win32_SystemDriver Klasse
@@ -14,18 +14,18 @@ api_type:
 - COM
 api_location:
 - CIMWin32.dll
-ms.openlocfilehash: e1b7435a1bca561b19e7d85299413f88f1ae76c3
-ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
+ms.openlocfilehash: d6422da3de5549f7100caaa3d47d9aaf055f9208a1fd56188d837627b852222e
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2021
-ms.locfileid: "108097088"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119020518"
 ---
 # <a name="delete-method-of-the-win32_systemdriver-class"></a>Delete-Methode der Win32 \_ SystemDriver-Klasse
 
 Die **Delete** [WMI-Klassenmethode](/windows/desktop/WmiSdk/retrieving-a-class) löscht einen vorhandenen Dienst.
 
-In diesem Thema wird Managed Object Format -Syntax (MOF) verwendet. Weitere Informationen zur Verwendung dieser Methode finden Sie unter [Aufrufen einer Methode.](/windows/desktop/WmiSdk/calling-a-method)
+In diesem Thema wird Managed Object Format (MOF)-Syntax verwendet. Weitere Informationen zur Verwendung dieser Methode finden Sie unter [Aufrufen einer Methode.](/windows/desktop/WmiSdk/calling-a-method)
 
 ## <a name="syntax"></a>Syntax
 
@@ -48,7 +48,7 @@ Gibt den Wert 0 (null) zurück, wenn der Dienst erfolgreich gelöscht wurde, 1 (
 
 
 
-| Anforderungen | Wert |
+| Anforderung | Wert |
 |-------------------------------------|-----------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows Vista<br/>                                                                |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2008<br/>                                                          |

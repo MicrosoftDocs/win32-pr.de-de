@@ -1,27 +1,27 @@
 ---
 title: DXCore-Schnittstellen
-description: Die folgenden Schnittstellen und ihre Methoden werden in dxcore_interface. h deklariert.
+description: Die folgenden Schnittstellen und ihre Methoden werden in dxcore_interface.h deklariert.
 ms.localizationpriority: low
 ms.topic: reference
 ms.date: 06/20/2019
-ms.openlocfilehash: 170d7c0cc93614159da449bf0107f7f5ca458f84
-ms.sourcegitcommit: 592c9bbd22ba69802dc353bcb5eb30699f9e9403
+ms.openlocfilehash: 9881eaf577aeea65387632caa6e46b5e5560192567753760e06dc1b2a7504bf9
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "103949081"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119787120"
 ---
 # <a name="dxcore-interfaces"></a>DXCore-Schnittstellen
 
-Die folgenden Schnittstellen und ihre Methoden werden in dxcore_interface. h deklariert.
+Die folgenden Schnittstellen und ihre Methoden werden in dxcore_interface.h deklariert.
 
 ## <a name="in-this-section"></a>In diesem Abschnitt
 
-| Thema | BESCHREIBUNG |
+| Thema | Beschreibung |
 |-|-|
-| [**IDXCoreAdapter**](./dxcore_interface/nn-dxcore_interface-idxcoreadapter.md) | Die **idxcoreadapter**-   Schnittstelle implementiert Methoden zum Abrufen von Details zu einem Adapter Element. |
-| [**IDXCoreAdapterFactory**](./dxcore_interface/nn-dxcore_interface-idxcoreadapterfactory.md) | Die **idxcoreadapterfactory**   -Schnittstelle implementiert Methoden zum Erstellen von enumerationsobjekten für DXCore-Adapter und zum Abrufen Ihrer Details. |
-| [**IDXCoreAdapterList**](./dxcore_interface/nn-dxcore_interface-idxcoreadapterlist.md) | Die **idxcoreadapterlist**-   Schnittstelle implementiert Methoden zum Abrufen von Adapter Elementen aus einer generierten Liste sowie Details zur Liste. |
+| [**IDXCoreAdapter**](./dxcore_interface/nn-dxcore_interface-idxcoreadapter.md) | Die **IDXCoreAdapter-Schnittstelle** implementiert Methoden zum Abrufen von Details zu einem Adapterelement. |
+| [**IDXCoreAdapterFactory**](./dxcore_interface/nn-dxcore_interface-idxcoreadapterfactory.md) | Die **IDXCoreAdapterFactory-Schnittstelle** implementiert Methoden zum Generieren von DXCore-Adapterenumerationsobjekten und zum Abrufen ihrer Details. |
+| [**IDXCoreAdapterList**](./dxcore_interface/nn-dxcore_interface-idxcoreadapterlist.md) | Die **IDXCoreAdapterList-Schnittstelle** implementiert Methoden zum Abrufen von Adapterelementen aus einer generierten Liste sowie Details zur Liste. |
 
 ## <a name="related-topics"></a>Zugehörige Themen
 

@@ -1,9 +1,9 @@
 ---
-title: Openplaylistswitch-Ereignis des AxWindowsMediaPlayer-Objekts
-description: Das openplaylistswitch-Ereignis tritt auf, wenn die Wiedergabe eines Titels auf einer DVD beginnt. | Openplaylistswitch-Ereignis des AxWindowsMediaPlayer-Objekts
+title: OpenPlaylistSwitch-Ereignis des AxWindowsMediaPlayer-Objekts
+description: Das OpenPlaylistSwitch-Ereignis tritt auf, wenn die Wiedergabe eines Titels auf einer DVD beginnt. | OpenPlaylistSwitch-Ereignis des AxWindowsMediaPlayer-Objekts
 ms.assetid: 0b9c37a3-1349-48bd-8e1a-aba286c82abf
 keywords:
-- Openplaylistswitch-Ereignis der AxWindowsMediaPlayer-Objekt Fenster Media Player
+- OpenPlaylistSwitch-Ereignis des AxWindowsMediaPlayer-Objekts Windows Media Player
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - Assembly
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 338d360944b46555be53d5e212561cf906dd33c9
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: c57341488c385b159ce294626a79b7e22287bff83864f7273b0f4432c1db95ae
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106367589"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119764700"
 ---
-# <a name="openplaylistswitch-event-of-the-axwindowsmediaplayer-object"></a>Openplaylistswitch-Ereignis des AxWindowsMediaPlayer-Objekts
+# <a name="openplaylistswitch-event-of-the-axwindowsmediaplayer-object"></a>OpenPlaylistSwitch-Ereignis des AxWindowsMediaPlayer-Objekts
 
-Das openplaylistswitch-Ereignis tritt auf, wenn die Wiedergabe eines Titels auf einer DVD beginnt.
+Das OpenPlaylistSwitch-Ereignis tritt auf, wenn die Wiedergabe eines Titels auf einer DVD beginnt.
 
 ``` syntax
 [C#]
@@ -41,13 +41,13 @@ Private Sub player_OpenPlaylistSwitch(
 
 ## <a name="event-data"></a>Ereignisdaten
 
-Der diesem Ereignis zugeordnete Handler ist vom Typ **AxWMPLib. \_ Wmpocxevents \_ openplaylistswitcheventhandler**. Dieser Handler empfängt ein Argument vom Typ **AxWMPLib. \_ Wmpocxevents \_ openplaylistswitchevent**, das die folgende Eigenschaft enthält, die sich auf dieses Ereignis bezieht.
+Der diesem Ereignis zugeordnete Handler ist vom Typ **AxWMPLib. \_ WMPOCXEvents \_ OpenPlaylistSwitchEventHandler**. Dieser Handler empfängt ein Argument vom Typ **AxWMPLib. \_ WMPOCXEvents \_ OpenPlaylistSwitchEvent**, das die folgende Eigenschaft im Zusammenhang mit diesem Ereignis enthält.
 
 
 
-| Eigenschaft  | BESCHREIBUNG                                                                                                         |
+| Eigenschaft  | Beschreibung                                                                                                         |
 |-----------|---------------------------------------------------------------------------------------------------------------------|
-| **pitem** | System. objectobject, das den Titel darstellt. Sie können dies in eine iwmpwiedergabe-Schnittstelle umwandeln, um darauf zuzugreifen.<br/> |
+| **pItem** | System.ObjectObject, das den Titel darstellt. Sie können diese in eine IWMPPlaylist-Schnittstelle umstellen, um darauf zuzugreifen.<br/> |
 
 
 
@@ -59,20 +59,20 @@ Der diesem Ereignis zugeordnete Handler ist vom Typ **AxWMPLib. \_ Wmpocxevents 
 
 | Anforderung | Wert |
 |----------------------|----------------------------------------------------------------------------------------------------------------------------|
-| Version<br/>   | Windows Media Player 9-Serie oder höher<br/>                                                                          |
+| Version<br/>   | Windows Media Player 9er Serie oder höher<br/>                                                                          |
 | Namespace<br/> | **AxWMPLib**<br/>                                                                                                    |
 | Assembly<br/>  | <dl> <dt>AxInterop.WMPLib.dll (AxInterop.WMPLib.dll.dll)</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**AxWindowsMediaPlayer-Objekt (VB und c#)**](axwindowsmediaplayer-object--vb-and-c.md)
+[**AxWindowsMediaPlayer-Objekt (VB und C#)**](axwindowsmediaplayer-object--vb-and-c.md)
 </dt> <dt>
 
-[**Iwmpwiedergabe-Schnittstelle (VB und c#)**](iwmpplaylist--vb-and-c.md)
+[**IWMPPlaylist-Schnittstelle (VB und C#)**](iwmpplaylist--vb-and-c.md)
 </dt> </dl>
 
  

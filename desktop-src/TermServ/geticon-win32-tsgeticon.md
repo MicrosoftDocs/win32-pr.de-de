@@ -5,8 +5,8 @@ ms.assetid: 9448181c-27b8-40eb-9369-8abe1422243b
 ms.tgt_platform: multiple
 keywords:
 - GetIcon-Methode Remotedesktopdienste
-- GetIcon-Methode Remotedesktopdienste, Win32_TSGetIcon-Klasse
-- Win32_TSGetIcon-Klasse Remotedesktopdienste, GetIcon-Methode
+- GetIcon-Methode Remotedesktopdienste , Win32_TSGetIcon-Klasse
+- Win32_TSGetIcon-Klasse Remotedesktopdienste , GetIcon-Methode
 topic_type:
 - apiref
 api_name:
@@ -17,14 +17,14 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 92cd20cad668b0e3a6bba191c83ecdca2934ca17
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 305316d66ce95659210396a10f22366d64ebdd2b410b056aa3c398cf65edbbf5
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "103949505"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119001538"
 ---
-# <a name="geticon-method-of-the-win32_tsgeticon-class"></a>GetIcon-Methode der Win32- \_ Klasse "zgeticon"
+# <a name="geticon-method-of-the-win32_tsgeticon-class"></a>GetIcon-Methode der Win32 \_ TSGetIcon-Klasse
 
 Gibt den Inhalt des angegebenen Symbols zurück.
 
@@ -45,24 +45,24 @@ uint32 GetIcon(
 
 <dl> <dt>
 
-*FilePath* \[ in\]
+*FilePath* \[ In\]
 </dt> <dd>
 
-Gibt den Pfad zu der Datei an, in der das Symbol enthalten ist.
+Gibt den Pfad zu der Datei an, die das Symbol enthält.
 
 </dd> <dt>
 
-*Index* \[ in\]
+*Index* \[ In\]
 </dt> <dd>
 
 Gibt den Index des Symbols in der Datei an.
 
 </dd> <dt>
 
-*Iconcontent* \[ vorgenommen\]
+*IconContents* \[ out\]
 </dt> <dd>
 
-Nach erfolgreichem Abschluss enthält der Inhalt des Symbols.
+Enthält nach erfolgreichem Abschluss den Inhalt des Symbols.
 
 </dd> </dl>
 
@@ -75,16 +75,16 @@ Nach erfolgreichem Abschluss enthält der Inhalt des Symbols.
 | Unterstützte Mindestversion (Client)<br/> | Nicht unterstützt<br/>                                                               |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2012<br/>                                                          |
 | Namespace<br/>                | Root \\ CIMv2 \\ TerminalServices<br/>                                                |
-| MOF<br/>                      | <dl> <dt>Tsallow. MOF</dt> </dl>  |
+| MOF<br/>                      | <dl> <dt>TsAllow.mof</dt> </dl>  |
 | DLL<br/>                      | <dl> <dt>TsPubWmi.dll</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Win32-Zeit \_ Ticon**](win32-tsgeticon.md)
+[**Win32 \_ TSGetIcon**](win32-tsgeticon.md)
 </dt> </dl>
 
  

@@ -1,11 +1,11 @@
 ---
-title: AxWindowsMediaPlayer. newmedia-Methode
-description: Die newmedia-Methode gibt eine iwmpmedia-Schnittstelle für ein neues Medien Element zurück.
+title: AxWindowsMediaPlayer.newMedia-Methode
+description: Die newMedia-Methode gibt eine IWMPMedia-Schnittstelle für ein neues Medienelement zurück.
 ms.assetid: d10a517e-b4da-4f0b-9d51-9d387578d7dd
 keywords:
-- newmedia-Methode, Windows-Media Player
-- newmedia-Methode, Windows Media Player, AxWindowsMediaPlayer-Klasse
-- AxWindowsMediaPlayer-Klasse, Windows Media Player, newmedia-Methode
+- newMedia-Windows Media Player
+- newMedia-Windows Media Player , AxWindowsMediaPlayer-Klasse
+- AxWindowsMediaPlayer-Klasse Windows Media Player , newMedia-Methode
 topic_type:
 - apiref
 api_name:
@@ -16,16 +16,16 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 093a4e2b8181aac9148686108ad2c5c318a4d0cf
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: cdde19a6cb5da5113cb580c1916052c7ae0d38756bbc120368ffdfd464105591
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106365492"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119618740"
 ---
-# <a name="axwindowsmediaplayernewmedia-method"></a>AxWindowsMediaPlayer. newmedia-Methode
+# <a name="axwindowsmediaplayernewmedia-method"></a>AxWindowsMediaPlayer.newMedia-Methode
 
-Die newmedia-Methode gibt eine iwmpmedia-Schnittstelle für ein neues Medien Element zurück.
+Die newMedia-Methode gibt eine IWMPMedia-Schnittstelle für ein neues Medienelement zurück.
 
 ## <a name="syntax"></a>Syntax
 
@@ -55,17 +55,17 @@ Public Function newMedia( _
 *bstrURL* 
 </dt> <dd>
 
-Ein **System. String** -Wert, der die URL der digitalen Mediendatei ist, die zum Initialisieren des neuen Medien Elements verwendet wird.
+Eine **System.String,die** die URL der digitalen Mediendatei ist, die zum Initialisieren des neuen Medienelements verwendet wird.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Eine WMPLib. iwmpmedia-Schnittstelle, die das neu erstellte Medien Element darstellt.
+Eine WMPLib.IWMPMedia-Schnittstelle, die das neu erstellte Medienelement darstellt.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Der *bstrinurl* -Parameter darf keine Zeichenfolge der Länge 0 ("") oder NULL sein.
+Der *bstrURL-Parameter* darf keine Zeichenfolge der Länge 0 (null) ("") oder NULL sein.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -79,14 +79,14 @@ Der *bstrinurl* -Parameter darf keine Zeichenfolge der Länge 0 ("") oder NULL s
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**AxWindowsMediaPlayer-Objekt (VB und c#)**](axwindowsmediaplayer-object--vb-and-c.md)
+[**AxWindowsMediaPlayer-Objekt (VB und C#)**](axwindowsmediaplayer-object--vb-and-c.md)
 </dt> <dt>
 
-[**Iwmpmedia-Schnittstelle (VB und c#)**](iwmpmedia--vb-and-c.md)
+[**IWMPMedia-Schnittstelle (VB und C#)**](iwmpmedia--vb-and-c.md)
 </dt> </dl>
 
  

@@ -1,8 +1,8 @@
 ---
-description: Die Count-Eigenschaft des Objekts "Swap-Set" enthält die Anzahl der Elemente in einer "taubemqualifierset"-Auflistung. Diese Eigenschaft ist schreibgeschützt.
+description: Die Count-Eigenschaft des SWbemQualifierSet-Objekts enthält die Anzahl der Elemente in einer SWbemQualifierSet-Auflistung. Diese Eigenschaft ist schreibgeschützt.
 ms.assetid: a381916a-a1e2-4b9a-8162-777a04824291
 ms.tgt_platform: multiple
-title: Taubemqualifierset. Count-Eigenschaft (wbemdisp. h)
+title: SWbemQualifierSet.Count-Eigenschaft (Wbemdisp.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,18 +16,18 @@ api_type:
 - COM
 api_location:
 - Wbemdisp.dll
-ms.openlocfilehash: 6c7823cecd91035cd5e78970af981cfd9d15c092
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 9a296343b53ebf57be1b25547f1a7ece02793dcabc7e364f2c5f508c23fa454c
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106347889"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118991800"
 ---
-# <a name="swbemqualifiersetcount-property"></a>Taubemqualifierset. Count-Eigenschaft
+# <a name="swbemqualifiersetcount-property"></a>SWbemQualifierSet.Count-Eigenschaft
 
-Die **count** -Eigenschaft des Objekts " [**Swap-set**](swbemqualifierset.md) " enthält die Anzahl der Elemente in einer " **taubemqualifierset** "-Auflistung. Diese Eigenschaft ist schreibgeschützt.
+Die **Count-Eigenschaft** des [**SWbemQualifierSet-Objekts**](swbemqualifierset.md) enthält die Anzahl der Elemente in einer **SWbemQualifierSet-Auflistung.** Diese Eigenschaft ist schreibgeschützt.
 
-Eine Erläuterung dieser Syntax finden Sie unter [Dokument Konventionen für die Skript-API](document-conventions-for-the-scripting-api.md).
+Eine Erläuterung dieser Syntax finden Sie unter [Dokumentkonventionen für die Skripterstellungs-API.](document-conventions-for-the-scripting-api.md)
 
 Diese Eigenschaft ist schreibgeschützt.
 
@@ -50,19 +50,19 @@ SWbemQualifierSet.Count As Integer
 |-------------------------------------|-----------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows Vista<br/>                                                                |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2008<br/>                                                          |
-| Header<br/>                   | <dl> <dt>Wbemdisp. h</dt> </dl>   |
-| Typbibliothek<br/>             | <dl> <dt>Wbemdisp. tlb</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Wbemdisp.h</dt> </dl>   |
+| Typbibliothek<br/>             | <dl> <dt>Wbemdisp.tlb</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Wbemdisp.dll</dt> </dl> |
-| CLSID<br/>                    | CLSID- \_ Swap-Gruppe<br/>                                                     |
-| IID<br/>                      | IID \_ iswbemqualifierset<br/>                                                      |
+| CLSID<br/>                    | CLSID \_ SWbemQualifierSet<br/>                                                     |
+| IID<br/>                      | IID \_ ISWbemQualifierSet<br/>                                                      |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Swap-qualifierset**](swbemqualifierset.md)
+[**SWbemQualifierSet**](swbemqualifierset.md)
 </dt> </dl>
 
  

@@ -1,19 +1,19 @@
 ---
-description: Die TAPI- \_ linienproxyrequest-Nachricht übermittelt eine Anforderung an einen registrierten Proxy Funktions Handler.
+description: Die TAPI LINE \_ PROXYREQUEST-Nachricht übergibt eine Anforderung an einen registrierten Proxyfunktionshandler.
 ms.assetid: 7f33de55-2482-4558-bd86-ee2ac1e31269
-title: LINE_PROXYREQUEST Meldung (TAPI. h)
+title: LINE_PROXYREQUEST (Tapi.h)
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: d536e85a9c773626bb5aacc4745d9d82817fe3c0
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 31986420cd21178cca8e6f0a1006e743c3250e726b4a1bf79513f6d57e380a01
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106373758"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119003158"
 ---
-# <a name="line_proxyrequest-message"></a>Zeile \_ proxyrequest-Nachricht
+# <a name="line_proxyrequest-message"></a>LINE \_ PROXYREQUEST-Nachricht
 
-Die TAPI **- \_ linienproxyrequest** -Nachricht übermittelt eine Anforderung an einen registrierten Proxy Funktions Handler.
+Die TAPI **LINE \_ PROXYREQUEST-Nachricht** übergibt eine Anforderung an einen registrierten Proxyfunktionshandler.
 
 
 ```C++
@@ -26,24 +26,24 @@ Die TAPI **- \_ linienproxyrequest** -Nachricht übermittelt eine Anforderung an
 
 <dl> <dt>
 
-*hdevice* 
+*hDevice* 
 </dt> <dd>
 
-Das Handle der Anwendung für das liniengerät, auf dem sich der Agentstatus geändert hat.
+Das Handle der Anwendung für das Liniengerät, auf dem sich der Agentstatus geändert hat.
 
 </dd> <dt>
 
-*dwcallbackinstance* 
+*dwCallbackInstance* 
 </dt> <dd>
 
-Die beim Öffnen der Zeile des Aufrufs angegebene Rückruf Instanz.
+Die Rückrufinstanz, die beim Öffnen der Zeile des Aufrufs angegeben wurde.
 
 </dd> <dt>
 
 *dwParam1* 
 </dt> <dd>
 
-Zeiger auf eine [**lineproxyrequest**](/windows/desktop/api/Tapi/ns-tapi-lineproxyrequest) -Struktur, die die Anforderung enthält, die von der proxyhandleranwendung verarbeitet werden soll.
+Zeiger auf eine [**LINEPROXYREQUEST-Struktur,**](/windows/desktop/api/Tapi/ns-tapi-lineproxyrequest) die die Anforderung enthält, die von der Proxyhandleranwendung verarbeitet werden soll.
 
 </dd> <dt>
 
@@ -65,17 +65,17 @@ Reserviert.
 
 Kein Rückgabewert.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die **Zeile \_ proxyrequest** -Nachricht wird nur an die erste Anwendung gesendet, die für die Verarbeitung von Proxy Anforderungen des übermittelten Typs registriert ist.
+Die **LINE \_ PROXYREQUEST-Nachricht** wird nur an die erste Anwendung gesendet, die registriert wurde, um Proxyanforderungen des zugestellten Typs zu verarbeiten.
 
-Die Anwendung sollte die im Proxy Puffer enthaltene Anforderung verarbeiten und [**lineproxyresponse**](/windows/desktop/api/Tapi/nf-tapi-lineproxyresponse) anrufen, um Daten zurückzugeben oder Ergebnisse zu liefern. Die Verarbeitung der Anforderung sollte nur im Kontext der TAPI-Rückruffunktion der Anwendung erfolgen, wenn Sie sofort ausgeführt werden kann, ohne auf eine Antwort von einer anderen Entität zu warten. Wenn die Anwendung mit anderen Entitäten kommunizieren muss (z. b. ein Dienstanbieter zur Handhabung der PBX-basierten ACD oder eines beliebigen anderen System Dienstanbieters, der zu Blockierungen führen kann), sollte die Anforderung in der Anwendung in die Warteschlange eingereiht werden, und die Rückruffunktion wird beendet, um zu vermeiden, dass weitere TAPI-Nachrichten von der Anwendung verzögert werden
+Die Anwendung sollte die im Proxypuffer enthaltene Anforderung verarbeiten und [**lineProxyResponse**](/windows/desktop/api/Tapi/nf-tapi-lineproxyresponse) aufrufen, um Daten zurück- oder Ergebnisse zu liefern. Die Verarbeitung der Anforderung sollte nur im Kontext der TAPI-Rückruffunktion der Anwendung erfolgen, wenn sie sofort ausgeführt werden kann, ohne auf die Antwort einer anderen Entität zu warten. Wenn die Anwendung mit anderen Entitäten kommunizieren muss (z. B. einem Dienstanbieter zur Handhabung PBX-basierter ACD oder einem anderen Systemdienst, der zu einer Blockierung führen kann), sollte die Anforderung innerhalb der Anwendung in die Warteschlange gestellt und die Rückruffunktion beendet werden, um zu vermeiden, dass der Empfang weiterer TAPI-Nachrichten durch die Anwendung verzögert wird.
 
-Zum Zeitpunkt, an dem die **Zeile \_ proxyrequest** an den Proxy Handler übermittelt wird, hat TAPI bereits ein positives Ergebnis der *dwrequestid-* Funktion an die ursprüngliche Anwendung zurückgegeben und die Blockierung des aufrufenden Threads aufgehoben, um die Ausführung fortzusetzen. Die Anwendung wartet auf eine [**Zeilen \_ Antwort**](line-reply.md) Nachricht, die automatisch generiert wird, wenn die Proxy Handler-Anwendung [**lineproxyresponse**](/windows/desktop/api/Tapi/nf-tapi-lineproxyresponse)aufruft.
+Zum Zeitpunkt der Lieferung von **LINE \_ PROXYREQUEST** an den Proxyhandler hat TAPI bereits ein positives *dwRequestID-Funktionsergebnis* an die ursprüngliche Anwendung zurückgegeben und die Blockierung des aufrufenden Threads aufgehoben, um die Ausführung fortzufahren. Die Anwendung wartet auf eine [**LINE \_ REPLY-Nachricht,**](line-reply.md) die automatisch generiert wird, wenn die Proxyhandleranwendung [**lineProxyResponse aufruft.**](/windows/desktop/api/Tapi/nf-tapi-lineproxyresponse)
 
-Die Anwendung darf den Speicher, auf den von *lpproxyrequest* verwiesen wird, nicht freigeben. TAPI gibt den Arbeitsspeicher während der Ausführung von [**lineproxyresponse**](/windows/desktop/api/Tapi/nf-tapi-lineproxyresponse)frei. Die Anwendung kann [**lineproxyresponse**](/windows/desktop/api/Tapi/nf-tapi-lineproxyresponse) für jede **Zeile \_ proxyrequest** -Nachricht genau einmal aufzurufen.
+Die Anwendung darf nicht den Arbeitsspeicher freigeben, auf den *lpProxyRequest zeigt.* TAPI gibt den Arbeitsspeicher während der Ausführung von [**lineProxyResponse frei.**](/windows/desktop/api/Tapi/nf-tapi-lineproxyresponse) Die Anwendung kann [**lineProxyResponse für jede**](/windows/desktop/api/Tapi/nf-tapi-lineproxyresponse) **LINE \_ PROXYREQUEST-Nachricht genau einmal** aufrufen.
 
-Wenn die Anwendung eine Nachricht [**zum \_ Schließen**](line-close.md) der Nachricht empfängt, während Sie ausstehende Proxy Anforderungen hat, sollte Sie [**lineproxyresponse**](/windows/desktop/api/Tapi/nf-tapi-lineproxyresponse) für jede ausstehende Anforderung abrufen und einen entsprechenden *dwresult* -Wert übergeben (z \_ . b. lineerr operationfailed).
+Wenn die Anwendung während ausstehender Proxyanforderungen eine [**LINE \_ CLOSE-Nachricht**](line-close.md) empfängt, sollte sie [**lineProxyResponse**](/windows/desktop/api/Tapi/nf-tapi-lineproxyresponse) für jede ausstehende Anforderung aufrufen und einen entsprechenden *dwResult-Wert* übergeben (z. B. LINEERR \_ OPERATIONFAILED).
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -83,25 +83,25 @@ Wenn die Anwendung eine Nachricht [**zum \_ Schließen**](line-close.md) der Nac
 
 | Anforderung | Wert |
 |-------------------------|-----------------------------------------------------------------------------------|
-| TAPI-Version<br/> | Erfordert TAPI 2,0 oder höher<br/>                                             |
-| Header<br/>       | <dl> <dt>TAPI. h</dt> </dl> |
+| TAPI-Version<br/> | Erfordert TAPI 2.0 oder höher<br/>                                             |
+| Header<br/>       | <dl> <dt>Tapi.h</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Zeilen \_ Schließen**](line-close.md)
+[**LINE \_ CLOSE**](line-close.md)
 </dt> <dt>
 
-[**Zeilen \_ Antwort**](line-reply.md)
+[**LINE \_ REPLY**](line-reply.md)
 </dt> <dt>
 
-[**Lineproxyrequest**](/windows/desktop/api/Tapi/ns-tapi-lineproxyrequest)
+[**LINEPROXYREQUEST**](/windows/desktop/api/Tapi/ns-tapi-lineproxyrequest)
 </dt> <dt>
 
-[**lineproxyresponse**](/windows/desktop/api/Tapi/nf-tapi-lineproxyresponse)
+[**lineProxyResponse**](/windows/desktop/api/Tapi/nf-tapi-lineproxyresponse)
 </dt> </dl>
 
  

@@ -1,19 +1,19 @@
 ---
-description: Die ienumcertviewattribute-Schnittstelle stellt die folgenden Methoden zur Verfügung.
+description: Die IEnumCERTVIEWATTRIBUTE-Schnittstelle macht die folgenden Methoden verfügbar.
 ms.assetid: 54CAB546-5695-4276-9E9B-4DE3EFEFE7A0
-title: Ienumcertviewattribute-Methoden
+title: IEnumCERTVIEWATTRIBUTE-Methoden
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: b35fdbd2b8ec23c364c18af5c4dc452b5a1411cf
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 7798e218c9bad1076cb922297279e1250d6e3aa057ab0c5be9e1ee0becc2bc6c
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "103867647"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119005428"
 ---
-# <a name="ienumcertviewattribute-methods"></a>Ienumcertviewattribute-Methoden
+# <a name="ienumcertviewattribute-methods"></a>IEnumCERTVIEWATTRIBUTE-Methoden
 
-Die [**ienumcertviewattribute**](/windows/desktop/api/Certview/nn-certview-ienumcertviewattribute) -Schnittstelle stellt die folgenden Methoden zur Verfügung.
+Die [**IEnumCERTVIEWATTRIBUTE-Schnittstelle**](/windows/desktop/api/Certview/nn-certview-ienumcertviewattribute) macht die folgenden Methoden verfügbar.
 
 ## <a name="in-this-section"></a>In diesem Abschnitt
 
