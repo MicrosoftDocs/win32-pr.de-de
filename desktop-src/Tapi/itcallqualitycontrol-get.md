@@ -1,21 +1,21 @@
 ---
-description: Mit der Get-Methode wird der Wert einer angegebenen Eigenschaft für die Eigenschaft "Callcenter" abgerufen.
+description: Die Get-Methode ruft den Wert einer angegebenen Eigenschaft für die Aufrufqualitätssteuerung ab.
 ms.assetid: 0fec408e-2751-4c99-afe1-4337d22eff83
-title: 'Itcallqualitycontrol:: Get-Methode (ipmsp. h)'
+title: ITCallQualityControl::Get-Methode (Ipmsp.h)
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 7ea42768c173c0c073abe356e1ae6816a486a03c
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 173ed08a7b8f166e267b32a80416387bd309c0c3a60e4ee06117ae9b8c43e037
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106358732"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119003408"
 ---
-# <a name="itcallqualitycontrolget-method"></a>Itcallqualitycontrol:: Get-Methode
+# <a name="itcallqualitycontrolget-method"></a>ITCallQualityControl::Get-Methode
 
-\[ Diese Methode ist nicht für die Verwendung in Windows Vista, Windows Server 2008 und nachfolgenden Versionen des Betriebssystems verfügbar. Die RTC-Client-API bietet eine ähnliche Funktionalität.\]
+\[Diese Methode ist nicht für die Verwendung in Windows Vista, Windows Server 2008 und nachfolgenden Versionen des Betriebssystems verfügbar. Die RTC-Client-API bietet ähnliche Funktionen.\]
 
-Mit der **Get** -Methode wird der Wert einer angegebenen Eigenschaft für die [Eigenschaft "Callcenter" abgerufen](callqualityproperty.md).
+Die **Get-Methode** ruft den Wert einer angegebenen [Qualitätskontrolleigenschaft für Aufrufe ab.](callqualityproperty.md)
 
 ## <a name="syntax"></a>Syntax
 
@@ -34,24 +34,24 @@ HRESULT Get(
 
 <dl> <dt>
 
-*Eigenschaft* \[ in\]
+*Eigenschaft* \[ In\]
 </dt> <dd>
 
-Member der [**callqualityproperty**](callqualityproperty.md) -Enumeration.
+Member der [**CallQualityProperty-Enumerator.**](callqualityproperty.md)
 
 </dd> <dt>
 
-*plvalue* \[ vorgenommen\]
+*plValue* \[ out\]
 </dt> <dd>
 
-Der Wert der input- *Eigenschaft*.
+Wert der *Eingabeeigenschaft*.
 
 </dd> <dt>
 
-*plflags* \[ vorgenommen\]
+*plFlags* \[ out\]
 </dt> <dd>
 
-Der Wert der [**tapicontrolflags**](tapicontrolflags.md) -Enumeration, die angibt, wie der- *Eigenschafts* Wert gesteuert wird.
+Der Wert der [**TAPIControlFlags-Aufenumerierung,**](tapicontrolflags.md) der angibt, wie der *Eigenschaftswert* gesteuert wird.
 
 </dd> </dl>
 
@@ -64,7 +64,7 @@ Diese Methode kann einen dieser Werte zurückgeben.
 | Rückgabecode                                                                                   | Beschreibung                                                     |
 |-----------------------------------------------------------------------------------------------|-----------------------------------------------------------------|
 | <dl> <dt>**S \_ OK**</dt> </dl>          | Methode war erfolgreich.<br/>                                    |
-| <dl> <dt>**E \_ outo-Memory**</dt> </dl> | Zum Ausführen des Vorgangs ist nicht genügend Arbeitsspeicher vorhanden.<br/> |
+| <dl> <dt>**E \_ OUTOFMEMORY**</dt> </dl> | Es ist nicht genügend Arbeitsspeicher vorhanden, um den Vorgang durchzuführen.<br/> |
 
 
 
@@ -76,24 +76,24 @@ Diese Methode kann einen dieser Werte zurückgeben.
 
 | Anforderung | Wert |
 |-------------------------|--------------------------------------------------------------------------------------|
-| TAPI-Version<br/> | Erfordert TAPI 3,1<br/>                                                         |
-| Header<br/>       | <dl> <dt>Ipmsp. h</dt> </dl>   |
-| Bibliothek<br/>      | <dl> <dt>UUID. lib</dt> </dl>  |
+| TAPI-Version<br/> | Erfordert TAPI 3.1<br/>                                                         |
+| Header<br/>       | <dl> <dt>Ipmsp.h</dt> </dl>   |
+| Bibliothek<br/>      | <dl> <dt>Uuid.lib</dt> </dl>  |
 | DLL<br/>          | <dl> <dt>Tapi3.dll</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Itcallqualitycontrol**](itcallqualitycontrol.md)
+[**ITCallQualityControl**](itcallqualitycontrol.md)
 </dt> <dt>
 
-[**Tapicontrolflags**](tapicontrolflags.md)
+[**TAPIControlFlags**](tapicontrolflags.md)
 </dt> <dt>
 
-[**Callqualityproperty**](callqualityproperty.md)
+[**CallQualityProperty**](callqualityproperty.md)
 </dt> </dl>
 
  

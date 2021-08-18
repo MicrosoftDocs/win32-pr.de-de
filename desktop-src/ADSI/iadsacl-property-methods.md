@@ -1,10 +1,10 @@
 ---
-title: Iadsacl-Eigenschafts Methoden (IADs. h)
-description: Die-Eigenschaften Methode der iadsacl-Schnittstelle legt die-Eigenschaft fest, die in der folgenden Tabelle beschrieben wird. Weitere Informationen finden Sie unter Interface Property Methods.
+title: IADsAcl-Eigenschaftenmethoden (Iads.h)
+description: Die -Eigenschaftsmethode der IADsAcl-Schnittstelle legt die in der folgenden Tabelle beschriebene Eigenschaft fest. Weitere Informationen finden Sie unter Schnittstelleneigenschaftsmethoden.
 ms.assetid: eb4786d7-d366-4924-8255-dc28ea47a246
 ms.tgt_platform: multiple
 keywords:
-- Iadsacl-Eigenschafts Methoden ADSI
+- IADsAcl-Eigenschaftenmethoden ADSI
 topic_type:
 - apiref
 api_name:
@@ -24,16 +24,16 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: b9d8afb1ba3cbf7749ad8e3d14fa970662715909
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: bebe534df506bcf25aa618213a4e274500035c8ea8b21941ae4e57a784d26c30
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104478126"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118961929"
 ---
-# <a name="iadsacl-property-methods"></a>Iadsacl-Eigenschaften Methoden
+# <a name="iadsacl-property-methods"></a>IADsAcl-Eigenschaftenmethoden
 
-Die-Eigenschaften Methode der [**iadsacl**](/windows/desktop/api/Iads/nn-iads-iadsacl) -Schnittstelle legt die-Eigenschaft fest, die in der folgenden Tabelle beschrieben wird. Weitere Informationen finden Sie unter [Interface Property Methods](interface-property-methods.md).
+Die -Eigenschaftsmethode der [**IADsAcl-Schnittstelle**](/windows/desktop/api/Iads/nn-iads-iadsacl) legt die in der folgenden Tabelle beschriebene Eigenschaft fest. Weitere Informationen finden Sie unter [Schnittstelleneigenschaftsmethoden.](interface-property-methods.md)
 
 ## <a name="properties"></a>Eigenschaften
 
@@ -49,7 +49,7 @@ Berechtigungseinstellungen.
 Zugriffstyp: Lesen/Schreiben
 </dt> <dt>
 
-Skript Datentyp: **Long**
+Skriptdatentyp: **LONG**
 </dt> <dt>
 
 
@@ -67,7 +67,7 @@ HRESULT put_Privileges(
 
 </dt> </dl> </dd> <dt>
 
-**Protectedattrname**
+**ProtectedAttrName**
 </dt> <dd> <dl>
 
 Name eines geschützten Attributs.
@@ -77,7 +77,7 @@ Name eines geschützten Attributs.
 Zugriffstyp: Lesen/Schreiben
 </dt> <dt>
 
-Skript Datentyp: **BSTR**
+Skriptdatentyp: **BSTR**
 </dt> <dt>
 
 
@@ -98,14 +98,14 @@ HRESULT put_ProtectedAttrName(
 **SubjectName**
 </dt> <dd> <dl>
 
-Der Name des Subjekts.
+Name des Betreffs.
 
 <dt>
 
 Zugriffstyp: Lesen/Schreiben
 </dt> <dt>
 
-Skript Datentyp: **BSTR**
+Skriptdatentyp: **BSTR**
 </dt> <dt>
 
 
@@ -133,13 +133,13 @@ HRESULT put_SubjectName(
 |-------------------------------------|-----------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows Vista<br/>                                                                |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2008<br/>                                                          |
-| Header<br/>                   | <dl> <dt>IADs. h</dt> </dl>       |
+| Header<br/>                   | <dl> <dt>Iads.h</dt> </dl>       |
 | DLL<br/>                      | <dl> <dt>Activeds.dll</dt> </dl> |
-| IID<br/>                      | IID \_ iadsacl ist als 8452d3ab-0869-11d1-a377-00c04b950 DC definiert.<br/>              |
+| IID<br/>                      | IID \_ IADsAcl ist als 8452D3AB-0869-11D1-A377-00C04FB950DC definiert.<br/>              |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 

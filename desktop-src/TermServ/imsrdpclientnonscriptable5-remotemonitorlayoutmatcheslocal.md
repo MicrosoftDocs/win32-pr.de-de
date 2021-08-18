@@ -1,12 +1,12 @@
 ---
-title: IMsRdpClientNonScriptable5 remotemonitorlayoutmatcheslocal (Eigenschaft)
-description: Gibt an, ob das Remote Monitor Layout mit dem Layout des lokalen Monitors identisch ist.
+title: IMsRdpClientNonScriptable5 RemoteMonitorLayoutMatchesLocal-Eigenschaft
+description: Gibt an, ob das Remotemonitorlayout mit dem Layout des lokalen Monitors identisch ist.
 ms.assetid: 8F3C6650-870C-417C-82FC-E145FC360012
 ms.tgt_platform: multiple
 keywords:
-- Remotemonitorlayoutmatcheslocal-Eigenschaft Remotedesktopdienste
-- Remotemonitorlayoutmatcheslocal-Eigenschaft Remotedesktopdienste, IMsRdpClientNonScriptable5-Schnittstelle
-- IMsRdpClientNonScriptable5 Interface Remotedesktopdienste, remotemonitorlayoutmatcheslocal (Eigenschaft)
+- RemoteMonitorLayoutMatchesLocal-Eigenschaft Remotedesktopdienste
+- RemoteMonitorLayoutMatchesLocal-Eigenschaft Remotedesktopdienste , IMsRdpClientNonScriptable5-Schnittstelle
+- IMsRdpClientNonScriptable5-Schnittstelle Remotedesktopdienste , RemoteMonitorLayoutMatchesLocal-Eigenschaft
 topic_type:
 - apiref
 api_name:
@@ -18,16 +18,16 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: c5018b22865cc683fc9231c857a1b99b8acbfeca
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 235879a80e7e2a90207ee9b7852e73a26874c0961d7394fa80f2cf85e7452362
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104104619"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119138723"
 ---
-# <a name="imsrdpclientnonscriptable5remotemonitorlayoutmatcheslocal-property"></a>IMsRdpClientNonScriptable5:: remotemonitorlayoutmatcheslocal (Eigenschaft)
+# <a name="imsrdpclientnonscriptable5remotemonitorlayoutmatcheslocal-property"></a>IMsRdpClientNonScriptable5::RemoteMonitorLayoutMatchesLocal-Eigenschaft
 
-Gibt an, ob das Remote Monitor Layout mit dem Layout des lokalen Monitors identisch ist. Wenn diese Eigenschaft **Variant \_ true** enthält, ist das Layout des Remote Monitors mit dem Layout des lokalen Monitors identisch. Wenn diese Eigenschaft **Variant \_ false** enthält, haben die Remote-und lokalen Monitore unterschiedliche Layouts.
+Gibt an, ob das Remotemonitorlayout mit dem Layout des lokalen Monitors identisch ist. Wenn diese Eigenschaft **VARIANT \_ TRUE** enthält, ist das Remotemonitorlayout mit dem Layout des lokalen Monitors identisch. Wenn diese Eigenschaft **VARIANT \_ FALSE** enthält, weisen die Remote- und lokalen Monitore unterschiedliche Layouts auf.
 
 Diese Eigenschaft ist schreibgeschützt.
 
@@ -44,7 +44,7 @@ HRESULT get_RemoteMonitorLayoutMatchesLocal(
 
 ## <a name="property-value"></a>Eigenschaftswert
 
-Empfängt den-Eigenschafts Wert.
+Empfängt den Eigenschaftswert.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -56,11 +56,11 @@ Empfängt den-Eigenschafts Wert.
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2008 R2<br/>                                                             |
 | Typbibliothek<br/>             | <dl> <dt>MsTscAx.dll</dt> </dl>        |
 | DLL<br/>                      | <dl> <dt>MsTscAx.dll</dt> </dl>        |
-| IID<br/>                      | IID \_ IMsRdpClientNonScriptable5 ist als 4f 6996d5-d7b1-412c-b0ff-063718566907 definiert.<br/> |
+| IID<br/>                      | \_IID-IMsRdpClientNonScriptable5 ist als 4f6996d5-d7b1-412c-b0ff-063718566907 definiert.<br/> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 

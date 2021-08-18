@@ -1,10 +1,10 @@
 ---
-title: MSMQ-erweiterte Rechte empfangen
+title: erweitertes Recht "msmq-Receive"
 description: Ermöglicht das Empfangen von Nachrichten aus der Warteschlange.
 ms.assetid: 8c889542-f30a-4580-8dfb-96594f7d6ad6
 ms.tgt_platform: multiple
 keywords:
-- MSMQ-AD-Schema für erweiterte Rechte empfangen
+- MSMQ-Receive-AD-Schema mit erweiterten rechten Rechten
 topic_type:
 - apiref
 api_name:
@@ -13,14 +13,14 @@ api_type:
 - Schema
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: f7984a2517bce5e30ac1ee48dc5523e4de5a84b2
-ms.sourcegitcommit: b77ace27b0432e7cd3863191b11926be032fbe2f
+ms.openlocfilehash: 3f403de565e7e976f16d2e0c016ae8651fe2bc1c6481b76ff4f6caae68350f1a
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "104123241"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119021658"
 ---
-# <a name="msmq-receive-extended-right"></a>MSMQ-erweiterte Rechte empfangen
+# <a name="msmq-receive-extended-right"></a>erweitertes Recht "msmq-Receive"
 
 Ermöglicht das Empfangen von Nachrichten aus der Warteschlange.
 
@@ -28,16 +28,16 @@ Ermöglicht das Empfangen von Nachrichten aus der Warteschlange.
 
 | Eingabe | Wert |
 |--------------|--------------------------------------|
-| CN           | MSMQ-empfangen                         |
+| CN           | msmq-Receive                         |
 | Anzeigename | Nachricht empfangen                      |
-| Rights-GUID  | 06bd3200-df3e-11d1-9c86-006008764d0e |
+| Rechte-GUID  | 06bd3200-df3e-11d1-9c86-006008764d0e |
 
 
 
 ## <a name="implementations"></a>Implementierungen
 
 -   [**Windows 2000 Server**](#windows-2000-server)
--   [**Windows Server 2003**](#windows-server-2003)
+-   [**Windows Server 2003**](#windows-server-2003)
 -   [**Windows Server 2003 R2**](#windows-server-2003-r2)
 -   [**Windows Server 2008**](#windows-server-2008)
 -   [**Windows Server 2008 R2**](#windows-server-2008-r2)
@@ -49,19 +49,19 @@ Ermöglicht das Empfangen von Nachrichten aus der Warteschlange.
 
 | Eingabe | Wert |
 |-------------------------|----------------------------------------------|
-| Applies-To              | [**MSMQ-Warteschlange**](c-msmqqueue.md)<br/> |
-| Lokalisierung-Display-ID | 42                                           |
+| Applies-To              | [**MSMQ-Queue**](c-msmqqueue.md)<br/> |
+| Lokalisierungsanzeige-ID | 42                                           |
 
 
 
-## <a name="windows-server-2003"></a>Windows Server 2003
+## <a name="windows-server-2003"></a>Windows Server 2003
 
 
 
 | Eingabe | Wert |
 |-------------------------|----------------------------------------------|
-| Applies-To              | [**MSMQ-Warteschlange**](c-msmqqueue.md)<br/> |
-| Lokalisierung-Display-ID | 42                                           |
+| Applies-To              | [**MSMQ-Queue**](c-msmqqueue.md)<br/> |
+| Lokalisierungsanzeige-ID | 42                                           |
 
 
 
@@ -71,8 +71,8 @@ Ermöglicht das Empfangen von Nachrichten aus der Warteschlange.
 
 | Eingabe | Wert |
 |-------------------------|----------------------------------------------|
-| Applies-To              | [**MSMQ-Warteschlange**](c-msmqqueue.md)<br/> |
-| Lokalisierung-Display-ID | 42                                           |
+| Applies-To              | [**MSMQ-Queue**](c-msmqqueue.md)<br/> |
+| Lokalisierungsanzeige-ID | 42                                           |
 
 
 
@@ -82,8 +82,8 @@ Ermöglicht das Empfangen von Nachrichten aus der Warteschlange.
 
 | Eingabe | Wert |
 |-------------------------|----------------------------------------------|
-| Applies-To              | [**MSMQ-Warteschlange**](c-msmqqueue.md)<br/> |
-| Lokalisierung-Display-ID | 42                                           |
+| Applies-To              | [**MSMQ-Queue**](c-msmqqueue.md)<br/> |
+| Lokalisierungsanzeige-ID | 42                                           |
 
 
 
@@ -93,8 +93,8 @@ Ermöglicht das Empfangen von Nachrichten aus der Warteschlange.
 
 | Eingabe | Wert |
 |-------------------------|----------------------------------------------|
-| Applies-To              | [**MSMQ-Warteschlange**](c-msmqqueue.md)<br/> |
-| Lokalisierung-Display-ID | 42                                           |
+| Applies-To              | [**MSMQ-Queue**](c-msmqqueue.md)<br/> |
+| Lokalisierungsanzeige-ID | 42                                           |
 
 
 
@@ -104,8 +104,8 @@ Ermöglicht das Empfangen von Nachrichten aus der Warteschlange.
 
 | Eingabe | Wert |
 |-------------------------|----------------------------------------------|
-| Applies-To              | [**MSMQ-Warteschlange**](c-msmqqueue.md)<br/> |
-| Lokalisierung-Display-ID | 42                                           |
+| Applies-To              | [**MSMQ-Queue**](c-msmqqueue.md)<br/> |
+| Lokalisierungsanzeige-ID | 42                                           |
 
 
 

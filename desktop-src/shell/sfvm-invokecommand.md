@@ -1,19 +1,19 @@
 ---
-description: 'Benachrichtigt das Rückruf Objekt, dass einer seiner Symbolleisten-oder Menübefehle vom Benutzer aufgerufen wurde. Wird von ishellfolderviewcb:: messagesfvcb verwendet.'
+description: Benachrichtigt das Rückrufobjekt, dass einer seiner Symbolleisten- oder Menübefehle vom Benutzer aufgerufen wurde. Wird von IShellFolderViewCB::MessageSFVCB verwendet.
 ms.assetid: 6b9e4a4d-ec45-489c-bbff-d123d5756b75
-title: SFVM_INVOKECOMMAND Meldung (shlobj. h)
+title: SFVM_INVOKECOMMAND (Shlobj.h)
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 4e5fc9709827250e5cf8060400bbecb714ae5998
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 24b33eba78e0680fe940569c7a7ccfb4a27c61c3ffcb6eead0f2ff6436ec74f6
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "103868695"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118968649"
 ---
-# <a name="sfvm_invokecommand-message"></a>Sfvm \_ InvokeCommand-Meldung
+# <a name="sfvm_invokecommand-message"></a>SFVM \_ INVOKECOMMAND-Nachricht
 
-Benachrichtigt das Rückruf Objekt, dass einer seiner Symbolleisten-oder Menübefehle vom Benutzer aufgerufen wurde. Wird von [**ishellfolderviewcb:: messagesfvcb**](/windows/win32/api/shlobj_core/nf-shlobj_core-ishellfolderviewcb-messagesfvcb)verwendet.
+Benachrichtigt das Rückrufobjekt, dass einer seiner Symbolleisten- oder Menübefehle vom Benutzer aufgerufen wurde. Wird von [**IShellFolderViewCB::MessageSFVCB verwendet.**](/windows/win32/api/shlobj_core/nf-shlobj_core-ishellfolderviewcb-messagesfvcb)
 
 
 ```C++
@@ -30,18 +30,18 @@ SFVM_INVOKECOMMAND
 
 <dl> <dt>
 
-*idcmd* \[ in\]
+*idCmd* \[ in\]
 </dt> <dd>
 
-Die Befehls-ID der ausgewählten Symbolleiste oder des ausgewählten Menü Elements.
+Die Befehls-ID der ausgewählten Symbolleiste oder des ausgewählten Menüelements.
 
 </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Diese Meldung dient im wesentlichen derselben Funktion wie eine [**WM- \_ Befehls**](../menurc/wm-command.md) Nachricht in einer herkömmlichen Fenster Prozedur. Dadurch kann das Rückruf Objekt alle Elemente verarbeiten, die es dem Windows-Explorer-Tool oder der Menüleiste hinzugefügt hat.
+Diese Meldung dient im Wesentlichen der gleichen Funktion wie eine [**WM \_ COMMAND-Nachricht**](../menurc/wm-command.md) in einer herkömmlichen Fensterprozedur. Sie ermöglicht es dem Rückrufobjekt, alle Elemente zu verarbeiten, die es dem Windows Explorer-Tool oder der Menüleiste hinzugefügt hat.
 
-## <a name="requirements"></a>Requirements (Anforderungen)
+## <a name="requirements"></a>Anforderungen
 
 
 
@@ -49,7 +49,7 @@ Diese Meldung dient im wesentlichen derselben Funktion wie eine [**WM- \_ Befehl
 |-------------------------------------|-------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[nur Desktop-Apps\]<br/>                          |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                                |
-| Header<br/>                   | <dl> <dt>Shlobj. h</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Shlobj.h</dt> </dl> |
 
 
 

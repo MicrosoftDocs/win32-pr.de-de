@@ -1,11 +1,11 @@
 ---
-title: MS-SQL-zugswimmediateupdatingabonnement-Attribut
-description: True, wenn die Veröffentlichung synchronisierte Abonnements zum Aktualisieren von Transaktionen zulässt.
+title: MS-SQL-AllowImmediateUpdatingSubscription-Attribut
+description: True, wenn die Veröffentlichung Abonnements für synchronisierte Transaktionsaktualisierungen zulässt.
 ms.assetid: 7efa4b8f-77ad-4f68-9852-7dac9f922d95
 ms.tgt_platform: multiple
 keywords:
-- MS-SQL-zugswimmediateupdatingabonnement-Attribut, AD-Schema
-- MS-SQL-zugswimmediateupdatingabonnement-Attribut, AD-Schema
+- AD-Schema des MS-SQL-AllowImmediateUpdatingSubscription-Attributs
+- mS-SQL-AllowImmediateUpdatingSubscription-Attribut AD-Schema
 topic_type:
 - apiref
 api_name:
@@ -14,36 +14,36 @@ api_type:
 - Schema
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: fed7970aa4b4f26a7221ea9a0c3d4e279ddc5db1
-ms.sourcegitcommit: b77ace27b0432e7cd3863191b11926be032fbe2f
+ms.openlocfilehash: 1f6442d5a719595c0e99e495f4fa4c969c24995aa29ed70ca7db779d4c9a21e7
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "104519516"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118961159"
 ---
-# <a name="ms-sql-allowimmediateupdatingsubscription-attribute"></a>MS-SQL-zugswimmediateupdatingabonnement-Attribut
+# <a name="ms-sql-allowimmediateupdatingsubscription-attribute"></a>MS-SQL-AllowImmediateUpdatingSubscription-Attribut
 
-True, wenn die Veröffentlichung synchronisierte Abonnements zum Aktualisieren von Transaktionen zulässt.
+True, wenn die Veröffentlichung Abonnements für synchronisierte Transaktionsaktualisierungen zulässt.
 
 
 
 | Eingabe | Wert |
 |-------------------|-------------------------------------------|
-| CN                | MS-SQL-zugswimmediateupdatingabonnement |
-| LDAP-Display-Name | MS-SQL-zugswimmediateupdatingabonnement |
+| CN                | MS-SQL-AllowImmediateUpdatingSubscription |
+| Ldap-Anzeigename | mS-SQL-AllowImmediateUpdatingSubscription |
 | Size              | 4 Bytes                                   |
-| Berechtigung aktualisieren  | Dieser Wert wird vom System festgelegt.          |
-| Aktualisierungshäufigkeit  | Wenn die Replikation eingerichtet ist.                |
+| Aktualisieren von Berechtigungen  | Dieser Wert wird vom System festgelegt.          |
+| Updatehäufigkeit  | Wenn die Replikation eingerichtet ist.                |
 | Attribute-Id      | 1.2.840.113556.1.4.1404                   |
 | System-ID-GUID    | c4186b6e-d34b-11d2-999a-0000f87a57d4      |
-| Syntax            | [**Booleschen**](s-boolean.md)              |
+| Syntax            | [**Boolean**](s-boolean.md)              |
 
 
 
 ## <a name="implementations"></a>Implementierungen
 
 -   [**Windows 2000 Server**](#windows-2000-server)
--   [**Windows Server 2003**](#windows-server-2003)
+-   [**Windows Server 2003**](#windows-server-2003)
 -   [**Windows Server 2003 R2**](#windows-server-2003-r2)
 -   [**Windows Server 2008**](#windows-server-2008)
 -   [**Windows Server 2008 R2**](#windows-server-2008-r2)
@@ -58,19 +58,19 @@ True, wenn die Veröffentlichung synchronisierte Abonnements zum Aktualisieren v
 | Link-ID                | \-                                                                  |
 | MAPI-Id                | \-                                                                  |
 | System-Only            | False                                                               |
-| Ist-einwertig       | Richtig                                                                |
+| Ist einwertig       | True                                                                |
 | Ist indiziert             | False                                                               |
 | Im globalen Katalog      | False                                                               |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                        |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                        |
 | Range-Lower            | \-                                                                  |
 | Range-Upper            | \-                                                                  |
 | Search-Flags           | 0x00000000                                                          |
 | System-Flags           | 0x00000010                                                          |
-| In verwendete Klassen        | [**MS-SQL-sqlpublication**](c-ms-sql-sqlpublication.md)<br/> |
+| In verwendete Klassen        | [**MS-SQL-SQLPublication**](c-ms-sql-sqlpublication.md)<br/> |
 
 
 
-## <a name="windows-server-2003"></a>Windows Server 2003
+## <a name="windows-server-2003"></a>Windows Server 2003
 
 
 
@@ -79,15 +79,15 @@ True, wenn die Veröffentlichung synchronisierte Abonnements zum Aktualisieren v
 | Link-ID                | \-                                                                  |
 | MAPI-Id                | \-                                                                  |
 | System-Only            | False                                                               |
-| Ist-einwertig       | Richtig                                                                |
+| Ist einwertig       | True                                                                |
 | Ist indiziert             | False                                                               |
 | Im globalen Katalog      | False                                                               |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                        |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                        |
 | Range-Lower            | \-                                                                  |
 | Range-Upper            | \-                                                                  |
 | Search-Flags           | 0x00000000                                                          |
 | System-Flags           | 0x00000010                                                          |
-| In verwendete Klassen        | [**MS-SQL-sqlpublication**](c-ms-sql-sqlpublication.md)<br/> |
+| In verwendete Klassen        | [**MS-SQL-SQLPublication**](c-ms-sql-sqlpublication.md)<br/> |
 
 
 
@@ -100,15 +100,15 @@ True, wenn die Veröffentlichung synchronisierte Abonnements zum Aktualisieren v
 | Link-ID                | \-                                                                  |
 | MAPI-Id                | \-                                                                  |
 | System-Only            | False                                                               |
-| Ist-einwertig       | Richtig                                                                |
+| Ist einwertig       | True                                                                |
 | Ist indiziert             | False                                                               |
 | Im globalen Katalog      | False                                                               |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                        |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                        |
 | Range-Lower            | \-                                                                  |
 | Range-Upper            | \-                                                                  |
 | Search-Flags           | 0x00000000                                                          |
 | System-Flags           | 0x00000010                                                          |
-| In verwendete Klassen        | [**MS-SQL-sqlpublication**](c-ms-sql-sqlpublication.md)<br/> |
+| In verwendete Klassen        | [**MS-SQL-SQLPublication**](c-ms-sql-sqlpublication.md)<br/> |
 
 
 
@@ -121,15 +121,15 @@ True, wenn die Veröffentlichung synchronisierte Abonnements zum Aktualisieren v
 | Link-ID                | \-                                                                  |
 | MAPI-Id                | \-                                                                  |
 | System-Only            | False                                                               |
-| Ist-einwertig       | Richtig                                                                |
+| Is-Single-Valued       | True                                                                |
 | Ist indiziert             | False                                                               |
 | Im globalen Katalog      | False                                                               |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                        |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                        |
 | Range-Lower            | \-                                                                  |
 | Range-Upper            | \-                                                                  |
 | Search-Flags           | 0x00000000                                                          |
 | System-Flags           | 0x00000010                                                          |
-| In verwendete Klassen        | [**MS-SQL-sqlpublication**](c-ms-sql-sqlpublication.md)<br/> |
+| In verwendete Klassen        | [**MS-SQL-SQLPublication**](c-ms-sql-sqlpublication.md)<br/> |
 
 
 
@@ -142,15 +142,15 @@ True, wenn die Veröffentlichung synchronisierte Abonnements zum Aktualisieren v
 | Link-ID                | \-                                                                  |
 | MAPI-Id                | \-                                                                  |
 | System-Only            | False                                                               |
-| Ist-einwertig       | Richtig                                                                |
+| Is-Single-Valued       | True                                                                |
 | Ist indiziert             | False                                                               |
 | Im globalen Katalog      | False                                                               |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                        |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                        |
 | Range-Lower            | \-                                                                  |
 | Range-Upper            | \-                                                                  |
 | Search-Flags           | 0x00000000                                                          |
 | System-Flags           | 0x00000010                                                          |
-| In verwendete Klassen        | [**MS-SQL-sqlpublication**](c-ms-sql-sqlpublication.md)<br/> |
+| In verwendete Klassen        | [**MS-SQL-SQLPublication**](c-ms-sql-sqlpublication.md)<br/> |
 
 
 
@@ -163,15 +163,15 @@ True, wenn die Veröffentlichung synchronisierte Abonnements zum Aktualisieren v
 | Link-ID                | \-                                                                  |
 | MAPI-Id                | \-                                                                  |
 | System-Only            | False                                                               |
-| Ist-einwertig       | Richtig                                                                |
+| Is-Single-Valued       | True                                                                |
 | Ist indiziert             | False                                                               |
 | Im globalen Katalog      | False                                                               |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                        |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                        |
 | Range-Lower            | \-                                                                  |
 | Range-Upper            | \-                                                                  |
 | Search-Flags           | 0x00000000                                                          |
 | System-Flags           | 0x00000010                                                          |
-| In verwendete Klassen        | [**MS-SQL-sqlpublication**](c-ms-sql-sqlpublication.md)<br/> |
+| In verwendete Klassen        | [**MS-SQL-SQLPublication**](c-ms-sql-sqlpublication.md)<br/> |
 
 
 

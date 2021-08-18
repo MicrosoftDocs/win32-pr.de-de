@@ -1,19 +1,19 @@
 ---
-description: Neu in Windows 7. Container-Element für relatedproperty-Elemente.
+description: Neu für Windows 7. Containerelement für relatedProperty-Elemente.
 ms.assetid: F8BAAE5C-A7EA-487a-B829-91A27E24B58D
-title: relatedpropertyinfo
+title: relatedPropertyInfo
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 442de657bed7e97f74064c39cc0934c65a6f520d
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 203c6e0e65943e90c6106f5e49e1792e6b47345a930f5368bd22df3a1c03885d
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106354616"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118970959"
 ---
-# <a name="relatedpropertyinfo"></a>relatedpropertyinfo
+# <a name="relatedpropertyinfo"></a>relatedPropertyInfo
 
-Neu in Windows 7. Container-Element für [relatedproperty](./propdesc-schema-relatedproperty.md) -Elemente. Es darf nur ein [relatedpropertyinfo]() -Element für jedes [propertydescription](./propdesc-schema-propertydescription.md) -Element vorhanden sein.
+Neu für Windows 7. Containerelement für [relatedProperty-Elemente.](./propdesc-schema-relatedproperty.md) Es sollte nur ein [relatedPropertyInfo-Element]() für jedes [propertyDescription-Element](./propdesc-schema-propertydescription.md) vorhanden sein.
 
 ## <a name="syntax"></a>Syntax
 
@@ -47,7 +47,7 @@ Neu in Windows 7. Container-Element für [relatedproperty](./propdesc-schema-rel
 
 | Übergeordnetes Element                                                   | Untergeordnete Elemente                                           |
 |------------------------------------------------------------------|----------------------------------------------------------|
-| [propertydescription](./propdesc-schema-propertydescription.md) | [relatedProperty](./propdesc-schema-relatedproperty.md) |
+| [propertyDescription](./propdesc-schema-propertydescription.md) | [relatedProperty](./propdesc-schema-relatedproperty.md) |
 
 
 

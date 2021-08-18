@@ -1,6 +1,6 @@
 ---
-description: 'Weitere Informationen finden Sie hier: JET_OSSNAPID. Methode "destring"'
-title: JET_OSSNAPID. Methode "destring"
+description: 'Erfahren Sie mehr über: JET_OSSNAPID. ToString-Methode'
+title: JET_OSSNAPID. ToString-Methode
 TOCTitle: 'ToString method '
 ms:assetid: M:Microsoft.Isam.Esent.Interop.JET_OSSNAPID.ToString
 ms:mtpsurl: https://msdn.microsoft.com/library/microsoft.isam.esent.interop.jet_ossnapid.tostring(v=EXCHG.10)
@@ -20,19 +20,19 @@ api_type:
 api_location:
 - Microsoft.Isam.Esent.Interop.dll
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: 31f35df0e5d7e6939797a06da215ac7566380257
-ms.sourcegitcommit: 4d4a6e9ad5de37e467cd3164276771b71e1f113f
+ms.openlocfilehash: 6246aa390a99db44bdfa6062b199978971c2f2ed859703a45cc51d6edc22788a
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/05/2021
-ms.locfileid: "106388546"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119107669"
 ---
-# <a name="jet_ossnapidtostring-method"></a>JET_OSSNAPID. Methode "destring"
+# <a name="jet_ossnapidtostring-method"></a>JET_OSSNAPID. ToString-Methode
 
-Generiert eine Zeichen folgen Darstellung der-Struktur.
+Generieren Sie eine Zeichenfolgendarstellung der -Struktur.
 
-**Namespace:**  [Microsoft. ISAM. ESENT. Interop](./microsoft.isam.esent.interop-namespace.md)  
-**Assembly:**  Microsoft. ISAM. ESENT. Interop (in Microsoft.Isam.Esent.Interop.dll)
+**Namespace:**  [Microsoft.Isam.Esent.Interop](./microsoft.isam.esent.interop-namespace.md)  
+**Assembly:**  Microsoft.Isam.Esent.Interop (in Microsoft.Isam.Esent.Interop.dll)
 
 ## <a name="syntax"></a>Syntax
 
@@ -52,17 +52,17 @@ public override string ToString()
 
 #### <a name="return-value"></a>Rückgabewert
 
-Typ: [System. String](/dotnet/api/system.string)  
-Die-Struktur als Zeichenfolge.  
+Typ: [System.String](/dotnet/api/system.string)  
+Die -Struktur als Zeichenfolge.  
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
-#### <a name="reference"></a>Referenz
+#### <a name="reference"></a>Verweis
 
-[JET_OSSNAPID Struktur](./jet-ossnapid-structure.md)
+[JET_OSSNAPID-Struktur](./jet-ossnapid-structure.md)
 
-[Mitglieder JET_OSSNAPID](./jet-ossnapid-members.md)
+[JET_OSSNAPID-Member](./jet-ossnapid-members.md)
 
-[Überladung von ""](./jet-ossnapid.tostring-method.md)
+[ToString-Überladung](./jet-ossnapid.tostring-method.md)
 
-[Microsoft. ISAM. ESENT. Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)
+[Microsoft.Isam.Esent.Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)

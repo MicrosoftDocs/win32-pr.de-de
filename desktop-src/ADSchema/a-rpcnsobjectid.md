@@ -1,11 +1,11 @@
 ---
-title: RPC-NS-Object-ID-Attribut
-description: Die Objekt-IDs, die von einem bestimmten Server exportiert wurden.
+title: rpc-Ns-Object-ID-Attribut
+description: Die Objekt-IDs, die von einem bestimmten Server exportiert werden.
 ms.assetid: bfe61b2f-36f5-49fd-861e-71829f44f50d
 ms.tgt_platform: multiple
 keywords:
-- AD-Schema des RPC-NS-Object-id-Attributs
-- rpcnsobjectid-Attribut, AD-Schema
+- RPC-Ns-Object-ID-Attribut AD-Schema
+- RPCNsObjectID-Attribut AD-Schema
 topic_type:
 - apiref
 api_name:
@@ -14,28 +14,28 @@ api_type:
 - Schema
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 30aa2ceefb95edb0f70be3cabbea8b76a4863337
-ms.sourcegitcommit: b77ace27b0432e7cd3863191b11926be032fbe2f
+ms.openlocfilehash: 30aed84b3a25041cf10525310682b3f04eb84abdf232391f98614f44e085ca77
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "104041084"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119022258"
 ---
-# <a name="rpc-ns-object-id-attribute"></a>RPC-NS-Object-ID-Attribut
+# <a name="rpc-ns-object-id-attribute"></a>rpc-Ns-Object-ID-Attribut
 
-Die Objekt-IDs, die von einem bestimmten Server exportiert wurden.
+Die Objekt-IDs, die von einem bestimmten Server exportiert werden.
 
 
 
 | Eingabe | Wert |
 |-------------------|---------------------------------------------|
-| CN                | RPC-NS-Objekt-ID                            |
-| LDAP-Display-Name | rpcnsobjectid                               |
+| CN                | rpc-Ns-Object-ID                            |
+| Ldap-Anzeigename | rpcNsObjectID                               |
 | Size              | \-                                          |
-| Berechtigung aktualisieren  | \-                                          |
-| Aktualisierungshäufigkeit  | \-                                          |
+| Aktualisieren von Berechtigungen  | \-                                          |
+| Updatehäufigkeit  | \-                                          |
 | Attribute-Id      | 1.2.840.113556.1.4.312                      |
-| System-ID-GUID    | 29401c48-7a27-11D0-afd6-00c04f 930c9        |
+| System-Id-Guid    | 29401c48-7a27-11d0-afd6-00c04fd930c9        |
 | Syntax            | [**String(Unicode)**](s-string-unicode.md) |
 
 
@@ -43,7 +43,7 @@ Die Objekt-IDs, die von einem bestimmten Server exportiert wurden.
 ## <a name="implementations"></a>Implementierungen
 
 -   [**Windows 2000 Server**](#windows-2000-server)
--   [**Windows Server 2003**](#windows-server-2003)
+-   [**Windows Server 2003**](#windows-server-2003)
 -   [**Windows Server 2003 R2**](#windows-server-2003-r2)
 -   [**Windows Server 2008**](#windows-server-2008)
 -   [**Windows Server 2008 R2**](#windows-server-2008-r2)
@@ -57,20 +57,20 @@ Die Objekt-IDs, die von einem bestimmten Server exportiert wurden.
 |------------------------|-----------------------------------------------------------------------------------------|
 | Link-ID                | \-                                                                                      |
 | MAPI-Id                | \-                                                                                      |
-| System-Only            | False                                                                                   |
-| Ist-einwertig       | False                                                                                   |
+| System-Only            | Falsch                                                                                   |
+| Is-Single-Valued       | Falsch                                                                                   |
 | Ist indiziert             | Richtig                                                                                    |
-| Im globalen Katalog      | False                                                                                   |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                                            |
+| Im globalen Katalog      | Falsch                                                                                   |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                                            |
 | Range-Lower            | \-                                                                                      |
 | Range-Upper            | \-                                                                                      |
 | Search-Flags           | 0x00000001                                                                              |
 | System-Flags           | 0x00000010                                                                              |
-| In verwendete Klassen        | [**RPC-Gruppe**](c-rpcgroup.md)<br/> [**RPC-Server**](c-rpcserver.md)<br/> |
+| In verwendete Klassen        | [**rpc-Group**](c-rpcgroup.md)<br/> [**rpc-Server**](c-rpcserver.md)<br/> |
 
 
 
-## <a name="windows-server-2003"></a>Windows Server 2003
+## <a name="windows-server-2003"></a>Windows Server 2003
 
 
 
@@ -78,16 +78,16 @@ Die Objekt-IDs, die von einem bestimmten Server exportiert wurden.
 |------------------------|-----------------------------------------------------------------------------------------|
 | Link-ID                | \-                                                                                      |
 | MAPI-Id                | \-                                                                                      |
-| System-Only            | False                                                                                   |
-| Ist-einwertig       | False                                                                                   |
+| System-Only            | Falsch                                                                                   |
+| Is-Single-Valued       | Falsch                                                                                   |
 | Ist indiziert             | Richtig                                                                                    |
-| Im globalen Katalog      | False                                                                                   |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                                            |
+| Im globalen Katalog      | Falsch                                                                                   |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                                            |
 | Range-Lower            | \-                                                                                      |
 | Range-Upper            | \-                                                                                      |
 | Search-Flags           | 0x00000001                                                                              |
 | System-Flags           | 0x00000010                                                                              |
-| In verwendete Klassen        | [**RPC-Gruppe**](c-rpcgroup.md)<br/> [**RPC-Server**](c-rpcserver.md)<br/> |
+| In verwendete Klassen        | [**rpc-Group**](c-rpcgroup.md)<br/> [**rpc-Server**](c-rpcserver.md)<br/> |
 
 
 
@@ -99,16 +99,16 @@ Die Objekt-IDs, die von einem bestimmten Server exportiert wurden.
 |------------------------|-----------------------------------------------------------------------------------------|
 | Link-ID                | \-                                                                                      |
 | MAPI-Id                | \-                                                                                      |
-| System-Only            | False                                                                                   |
-| Ist-einwertig       | False                                                                                   |
+| System-Only            | Falsch                                                                                   |
+| Is-Single-Valued       | Falsch                                                                                   |
 | Ist indiziert             | Richtig                                                                                    |
-| Im globalen Katalog      | False                                                                                   |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                                            |
+| Im globalen Katalog      | Falsch                                                                                   |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                                            |
 | Range-Lower            | \-                                                                                      |
 | Range-Upper            | \-                                                                                      |
 | Search-Flags           | 0x00000001                                                                              |
 | System-Flags           | 0x00000010                                                                              |
-| In verwendete Klassen        | [**RPC-Gruppe**](c-rpcgroup.md)<br/> [**RPC-Server**](c-rpcserver.md)<br/> |
+| In verwendete Klassen        | [**rpc-Group**](c-rpcgroup.md)<br/> [**rpc-Server**](c-rpcserver.md)<br/> |
 
 
 
@@ -120,16 +120,16 @@ Die Objekt-IDs, die von einem bestimmten Server exportiert wurden.
 |------------------------|-----------------------------------------------------------------------------------------|
 | Link-ID                | \-                                                                                      |
 | MAPI-Id                | \-                                                                                      |
-| System-Only            | False                                                                                   |
-| Ist-einwertig       | False                                                                                   |
+| System-Only            | Falsch                                                                                   |
+| Is-Single-Valued       | Falsch                                                                                   |
 | Ist indiziert             | Richtig                                                                                    |
-| Im globalen Katalog      | False                                                                                   |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                                            |
+| Im globalen Katalog      | Falsch                                                                                   |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                                            |
 | Range-Lower            | \-                                                                                      |
 | Range-Upper            | \-                                                                                      |
 | Search-Flags           | 0x00000001                                                                              |
 | System-Flags           | 0x00000010                                                                              |
-| In verwendete Klassen        | [**RPC-Gruppe**](c-rpcgroup.md)<br/> [**RPC-Server**](c-rpcserver.md)<br/> |
+| In verwendete Klassen        | [**rpc-Group**](c-rpcgroup.md)<br/> [**rpc-Server**](c-rpcserver.md)<br/> |
 
 
 
@@ -141,16 +141,16 @@ Die Objekt-IDs, die von einem bestimmten Server exportiert wurden.
 |------------------------|-----------------------------------------------------------------------------------------|
 | Link-ID                | \-                                                                                      |
 | MAPI-Id                | \-                                                                                      |
-| System-Only            | False                                                                                   |
-| Ist-einwertig       | False                                                                                   |
+| System-Only            | Falsch                                                                                   |
+| Is-Single-Valued       | Falsch                                                                                   |
 | Ist indiziert             | Richtig                                                                                    |
-| Im globalen Katalog      | False                                                                                   |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                                            |
+| Im globalen Katalog      | Falsch                                                                                   |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                                            |
 | Range-Lower            | \-                                                                                      |
 | Range-Upper            | \-                                                                                      |
 | Search-Flags           | 0x00000001                                                                              |
 | System-Flags           | 0x00000010                                                                              |
-| In verwendete Klassen        | [**RPC-Gruppe**](c-rpcgroup.md)<br/> [**RPC-Server**](c-rpcserver.md)<br/> |
+| In verwendete Klassen        | [**rpc-Group**](c-rpcgroup.md)<br/> [**rpc-Server**](c-rpcserver.md)<br/> |
 
 
 
@@ -162,16 +162,16 @@ Die Objekt-IDs, die von einem bestimmten Server exportiert wurden.
 |------------------------|-----------------------------------------------------------------------------------------|
 | Link-ID                | \-                                                                                      |
 | MAPI-Id                | \-                                                                                      |
-| System-Only            | False                                                                                   |
-| Ist-einwertig       | False                                                                                   |
+| System-Only            | Falsch                                                                                   |
+| Is-Single-Valued       | Falsch                                                                                   |
 | Ist indiziert             | Richtig                                                                                    |
-| Im globalen Katalog      | False                                                                                   |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                                            |
+| Im globalen Katalog      | Falsch                                                                                   |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                                            |
 | Range-Lower            | \-                                                                                      |
 | Range-Upper            | \-                                                                                      |
 | Search-Flags           | 0x00000001                                                                              |
 | System-Flags           | 0x00000010                                                                              |
-| In verwendete Klassen        | [**RPC-Gruppe**](c-rpcgroup.md)<br/> [**RPC-Server**](c-rpcserver.md)<br/> |
+| In verwendete Klassen        | [**rpc-Group**](c-rpcgroup.md)<br/> [**rpc-Server**](c-rpcserver.md)<br/> |
 
 
 

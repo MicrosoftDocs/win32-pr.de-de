@@ -13,12 +13,12 @@ api_type:
 api_location:
 - Shell32.dll
 ms.assetid: 5cf2610e-fbd2-4e87-a323-f024283db546
-ms.openlocfilehash: 389c07325f4e504424c43b0983eaa643ea608008
-ms.sourcegitcommit: 3caaa3c92dcb1ef12f84464d14ce6262e65e988e
+ms.openlocfilehash: f26f5bb8bc8413c633bfe5a2757eceb7ccab9e32d411020b0bd113d4c4919f12
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/12/2021
-ms.locfileid: "109841612"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118969449"
 ---
 # <a name="didiskquotauserid-property"></a>DIDiskQuotaUser.ID-Eigenschaft
 
@@ -41,7 +41,7 @@ Ein **Ganzzahlwert,** der das [**DIDiskQuotaUser-Objekt**](didiskquotauser-objec
 
 ## <a name="remarks"></a>Hinweise
 
-Diese Eigenschaft ist für die Verwendung durch Sprachen wie Microsoft Visual Basic vorgesehen, die keine Zeiger unterstützen.
+Diese Eigenschaft ist für die Verwendung durch Sprachen wie Microsoft Visual Basic, die keine Zeiger unterstützen.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -49,8 +49,8 @@ Diese Eigenschaft ist für die Verwendung durch Sprachen wie Microsoft Visual Ba
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows 2000 Professional- und Windows \[ XP-Desktop-Apps\]<br/>                                        |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server \[ 2003-Desktop-Apps\]<br/>                                                          |
+| Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional, nur Windows \[ XP-Desktop-Apps\]<br/>                                        |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                                                          |
 | DLL<br/>                      | <dl> <dt>Shell32.dll (Version 5.0 oder höher)</dt> </dl> |
 
 

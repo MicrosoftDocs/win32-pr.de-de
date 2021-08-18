@@ -1,7 +1,7 @@
 ---
-description: Definiert den Abschnitt des Instrumentierungs Manifests, mit dem der Anbieter und die von Ihnen bereitgestellten Indikatoren identifiziert werden.
+description: Definiert den Abschnitt des Instrumentierungsmanifests, der den Anbieter und die von ihnen zur Verfügung stellenden Leistungsindikatoren identifiziert.
 ms.assetid: c661f1af-ebe8-4f8a-b77e-a2229f45facd
-title: komplexer Typ der Leistungsindikatoren
+title: counters Complex Type
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -9,16 +9,16 @@ topic_type:
 api_name: ''
 api_type: ''
 api_location: ''
-ms.openlocfilehash: 5ad87b79175b0cecdec17ad081340fa0be2b90b7
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 14630fa4e0e9461e59d377b4defc3edacee8dca9560d1f7eb42acb317ffd1f57
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "103959755"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119143963"
 ---
-# <a name="counters-complex-type"></a>komplexer Typ der Leistungsindikatoren
+# <a name="counters-complex-type"></a>counters Complex Type
 
-Definiert den Abschnitt des Instrumentierungs Manifests, mit dem der Anbieter und die von Ihnen bereitgestellten Indikatoren identifiziert werden.
+Definiert den Abschnitt des Instrumentierungsmanifests, der den Anbieter und die von ihnen zur Verfügung stellenden Leistungsindikatoren identifiziert.
 
 ``` syntax
 <xs:complexType name="counters">
@@ -50,9 +50,9 @@ Definiert den Abschnitt des Instrumentierungs Manifests, mit dem der Anbieter un
 
 
 
-| Element      | type                                                               | BESCHREIBUNG                                              |
+| Element      | type                                                               | Beschreibung                                              |
 |--------------|--------------------------------------------------------------------|----------------------------------------------------------|
-| **ab** | [**man: Provider**](performance-counters-provider-complex-type.md) | Identifiziert einen Anbieter, der Leistungsindikatoren bereitstellt.<br/> |
+| **Anbieter** | [**man:provider**](performance-counters-provider-complex-type.md) | Identifiziert einen Anbieter, der Leistungsindikatoren bietet.<br/> |
 
 
 
@@ -60,7 +60,7 @@ Definiert den Abschnitt des Instrumentierungs Manifests, mit dem der Anbieter un
 
 
 
-| Name          | type | BESCHREIBUNG                                                      |
+| Name          | type | Beschreibung                                                      |
 |---------------|------|------------------------------------------------------------------|
 | schemaVersion |      | Die Version des Schemas, das zum Schreiben des Manifests verwendet wird.<br/> |
 
@@ -72,16 +72,16 @@ Definiert den Abschnitt des Instrumentierungs Manifests, mit dem der Anbieter un
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>       |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/> |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ Vista-Desktop-Apps\]<br/>       |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Ener**](/windows/desktop/WES/eventmanifestschema-instrumentationtype-complextype)
+[**Instrumentation**](/windows/desktop/WES/eventmanifestschema-instrumentationtype-complextype)
 </dt> </dl>
 
  

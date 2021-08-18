@@ -1,5 +1,5 @@
 ---
-description: 'Weitere Informationen finden Sie unter: JET_RECPOS-Klasse'
+description: 'Weitere Informationen zu: JET_RECPOS-Klasse'
 title: JET_RECPOS-Klasse
 TOCTitle: JET_RECPOS class
 ms:assetid: T:Microsoft.Isam.Esent.Interop.JET_RECPOS
@@ -24,24 +24,24 @@ api_type:
 api_location:
 - Microsoft.Isam.Esent.Interop.dll
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: 09fce4bf1d73ad1b9767e39ae5c90b25eccdea73
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: c25fd9cb9af531f134627ffcc54cd9fa5d37a33b340c53129a83c6538b33b1f1
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106366252"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119107519"
 ---
 # <a name="jet_recpos-class"></a>JET_RECPOS-Klasse
 
-Stellt eine Bruch Position innerhalb eines Indexes dar. Diese wird von jetgotoposition und jetgetrecordposition verwendet.
+Stellt eine Bruchposition innerhalb eines Indexes dar. Dies wird von JetGotoPosition und JetGetRecordPosition verwendet.
 
 ## <a name="inheritance-hierarchy"></a>Vererbungshierarchie
 
 [System.Object](/dotnet/api/system.object)  
   Microsoft.Isam.Esent.Interop.JET_RECPOS  
 
-**Namespace:**  [Microsoft. ISAM. ESENT. Interop](./microsoft.isam.esent.interop-namespace.md)  
-**Assembly:**  Microsoft. ISAM. ESENT. Interop (in Microsoft.Isam.Esent.Interop.dll)
+**Namespace:**  [Microsoft.Isam.Esent.Interop](./microsoft.isam.esent.interop-namespace.md)  
+**Assembly:**  Microsoft.Isam.Esent.Interop (in Microsoft.Isam.Esent.Interop.dll)
 
 ## <a name="syntax"></a>Syntax
 
@@ -64,10 +64,10 @@ public sealed class JET_RECPOS : IContentEquatable<JET_RECPOS>,
 
 Alle öffentlichen statischen Elemente dieses Typs (Shared in Microsoft Visual Basic) sind threadsicher. Bei Instanzmembern ist die Threadsicherheit nicht gewährleistet.
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
-#### <a name="reference"></a>Referenz
+#### <a name="reference"></a>Verweis
 
-[Mitglieder JET_RECPOS](./jet-recpos-members.md)
+[JET_RECPOS-Member](./jet-recpos-members.md)
 
-[Microsoft. ISAM. ESENT. Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)
+[Microsoft.Isam.Esent.Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)

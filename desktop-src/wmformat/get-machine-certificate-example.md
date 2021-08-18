@@ -1,41 +1,41 @@
 ---
-title: Beispiel für Computer Zertifikat
-description: Beispiel für Computer Zertifikat
+title: Beispiel zum Erhalten eines Computerzertifikats
+description: Beispiel zum Erhalten eines Computerzertifikats
 ms.assetid: 4112e29e-7c86-4825-9798-dd1a81b82083
 keywords:
-- Windows Media-Format-SDK, Computer Zertifikate
-- Windows Media-Format-SDK, Zertifikate
-- Windows Media-Format-SDK, Beispielcode
-- Windows Media-Format-SDK, Codebeispiele
-- Digital Rights Management (DRM), Computer Zertifikate
-- DRM (Digital Rights Management), Computer Zertifikate
+- Windows Medienformat-SDK, Computerzertifikate
+- Windows Medienformat-SDK, Zertifikate
+- Windows Medienformat-SDK, Beispielcode
+- Windows Medienformat-SDK, Codebeispiele
+- Digital Rights Management (DRM), Computerzertifikate
+- DRM (Digital Rights Management), Computerzertifikate
 - Digital Rights Management (DRM), Zertifikate
 - DRM (Digital Rights Management), Zertifikate
 - Digital Rights Management (DRM), Beispielcode
 - DRM (Digital Rights Management), Beispielcode
 - Digital Rights Management (DRM), Codebeispiele
 - DRM (Digital Rights Management), Codebeispiele
-- Erweiterte APIs für den DRM-Client, Computer Zertifikate
-- Erweiterte Client-APIs, Computer Zertifikate
-- Erweiterte APIs für den DRM-Client, Zertifikate
+- ERWEITERTE APIs für DEN DRM-Client, Computerzertifikate
+- Erweiterte Client-APIs, Computerzertifikate
+- Erweiterte DRM-Client-APIs, Zertifikate
 - Erweiterte Client-APIs, Zertifikate
-- Erweiterte APIs für den DRM-Client, Beispielcode
+- ERWEITERTE APIs für DEN DRM-Client, Beispielcode
 - Erweiterte Client-APIs, Beispielcode
-- Erweiterte APIs für den DRM-Client, Codebeispiele
+- ERWEITERTE APIs für DEN DRM-Client, Codebeispiele
 - Erweiterte Client-APIs, Codebeispiele
-- Zertifikate, Codebeispiele
+- Zertifikate,Codebeispiele
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 2e68a8ecbaf3e3c0ba8001a7a2094ab2b4a7e09a
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: 855479e90095f204a3ba7abafadcb4a31bbcaeaf7c592221ab0d5906cb1d8b18
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "104388622"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118964009"
 ---
-# <a name="get-machine-certificate-example"></a>Beispiel für Computer Zertifikat
+# <a name="get-machine-certificate-example"></a>Beispiel zum Erhalten eines Computerzertifikats
 
-Das folgende Beispiel zeigt, wie Sie die Computer Zertifikat Sammlung abrufen:
+Das folgende Beispiel zeigt, wie die Computerzertifikatsammlung abgerufen wird:
 
 
 ```C++
@@ -75,12 +75,12 @@ EXIT:
 
 <dl> <dt>
 
-[**DRM-Import Beispiele**](drm-import-examples.md)
+[**BEISPIELE FÜR DRM-Importe**](drm-import-examples.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

@@ -1,7 +1,7 @@
 ---
-description: Ruft die Chiffre Sammlungs Informationen für ein angegebenes Protokoll, eine Verschlüsselungs Sammlung und einen Schlüsseltyp Satz ab.
+description: Ruft die Verschlüsselungssammlungsinformationen für ein angegebenes Protokoll, eine Verschlüsselungssammlung und einen Schlüsseltypsatz ab.
 ms.assetid: ab995d9a-48fa-491a-95b1-d15c5b92f1da
-title: Ssllookupciphersuiteinfo-Funktion (sslprovider. h)
+title: SslLookupCipherSuiteInfo-Funktion (Sslprovider.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,16 +13,16 @@ api_type:
 - DllExport
 api_location:
 - Ncrypt.dll
-ms.openlocfilehash: 7aff6c9e08351ce771669535a98ec817bfc4aaf5
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: bf56f199ae0d367517558a12a0e84bf8ce26e7bdf5f70625b878066152d0b696
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "103869016"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118905609"
 ---
-# <a name="ssllookupciphersuiteinfo-function"></a>Ssllookupciphersuiteinfo-Funktion
+# <a name="ssllookupciphersuiteinfo-function"></a>SslLookupCipherSuiteInfo-Funktion
 
-Die **ssllookupciphersuiteinfo** -Funktion Ruft die Chiffre Sammlungs Informationen für ein angegebenes Protokoll, eine Verschlüsselungs Sammlung und einen Schlüsseltyp Satz ab.
+Die **SslLookupCipherSuiteInfo-Funktion** ruft die Verschlüsselungssammlungsinformationen für ein angegebenes Protokoll, eine Verschlüsselungssammlung und einen Schlüsseltypsatz ab.
 
 ## <a name="syntax"></a>Syntax
 
@@ -44,42 +44,42 @@ SECURITY_STATUS WINAPI SslLookupCipherSuiteInfo(
 
 <dl> <dt>
 
-*hsslprovider* \[ in\]
+*hSslProvider* \[ In\]
 </dt> <dd>
 
-Das Handle für die Protokoll Anbieter Instanz des [*Secure Sockets Layer Protokolls*](/windows/desktop/SecGloss/s-gly) (SSL).
+Das Handle für die [*SECURE SOCKETS LAYER Protokollanbieterinstanz*](/windows/desktop/SecGloss/s-gly) (SSL).
 
 </dd> <dt>
 
-*dwprotocol* \[ in\]
+*dwProtocol* \[ In\]
 </dt> <dd>
 
-Einer der [**CNG-SSL-Anbieter Protokoll-Bezeichnerwerte**](https://msdn.microsoft.com/library/Hh971257(v=VS.85).aspx) .
+Einer der [**CNG SSL Provider Protocol Identifier-Werte.**](https://msdn.microsoft.com/library/Hh971257(v=VS.85).aspx)
 
 </dd> <dt>
 
-*dwciphersuite* \[ in\]
+*dwCipherSuite* \[ In\]
 </dt> <dd>
 
-Einer der [**Cipher Suite-Bezeichner Werte des CNG-SSL-Anbieters**](https://msdn.microsoft.com/library/Hh971253(v=VS.85).aspx) .
+Einer der [**CNG SSL Provider Cipher Suite Identifiers-Werte.**](https://msdn.microsoft.com/library/Hh971253(v=VS.85).aspx)
 
 </dd> <dt>
 
-*dwkeytype* \[ in\]
+*dwKeyType* \[ In\]
 </dt> <dd>
 
-Eine der [**Schlüsseltyp**](https://msdn.microsoft.com/library/Hh971256(v=VS.85).aspx) -ID-Werte des CNG-SSL-Anbieters.
+Einer der [**CNG SSL Provider Key Type Identifiers-Werte.**](https://msdn.microsoft.com/library/Hh971256(v=VS.85).aspx)
 
 </dd> <dt>
 
-*pciphersuite* \[ vorgenommen\]
+*pCipherSuite* \[ out\]
 </dt> <dd>
 
-Die Adresse eines Puffers, der eine [**NCrypt- \_ SSL \_ \_**](https://www.bing.com/search?q=**NCRYPT\_SSL\_CIPHER\_SUITE**) -Verschlüsselungs Sammlungs Struktur enthält, in der die Chiffre Sammlungs Informationen geschrieben werden.
+Die Adresse eines Puffers, der eine [**NCRYPT \_ SSL \_ CIPHER \_ SUITE-Struktur**](https://www.bing.com/search?q=**NCRYPT\_SSL\_CIPHER\_SUITE**) enthält, in die die Verschlüsselungssammlungsinformationen geschrieben werden.
 
 </dd> <dt>
 
-*dwFlags* \[ in\]
+*dwFlags* \[ In\]
 </dt> <dd>
 
 Dieser Parameter ist für die zukünftige Verwendung reserviert.
@@ -88,17 +88,17 @@ Dieser Parameter ist für die zukünftige Verwendung reserviert.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Wenn die Funktion erfolgreich ist, gibt Sie 0 (null) zurück.
+Wenn die Funktion erfolgreich ist, gibt sie 0 (null) zurück.
 
-Wenn die Funktion fehlschlägt, wird ein Fehlerwert ungleich 0 (null) zurückgegeben.
+Wenn die Funktion fehlschlägt, gibt sie einen Fehlerwert ungleich 0 (null) zurück.
 
-Mögliche Rückgabecodes sind u. a. die folgenden:
+Mögliche Rückgabecodes sind u. a. folgende:
 
 
 
 | Rückgabecode/-wert                                                                                                                                                    | BESCHREIBUNG                                        |
 |----------------------------------------------------------------------------------------------------------------------------------------------------------------------|----------------------------------------------------|
-| <dl> <dt>**Ernte \_ Ungültiges \_ handle**</dt> <dt>0x80090026l</dt> </dl> | Das *hsslprovider* -Handle ist ungültig.<br/> |
+| <dl> <dt>**NTE \_ UNGÜLTIGES \_ HANDLE**</dt> <dt>0x80090026L</dt> </dl> | Das *hSslProvider-Handle* ist ungültig.<br/> |
 
 
 
@@ -110,9 +110,9 @@ Mögliche Rückgabecodes sind u. a. die folgenden:
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                           |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/>                                     |
-| Header<br/>                   | <dl> <dt>Sslprovider. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ Vista-Desktop-Apps\]<br/>                                           |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/>                                     |
+| Header<br/>                   | <dl> <dt>Sslprovider.h</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Ncrypt.dll</dt> </dl>    |
 
 

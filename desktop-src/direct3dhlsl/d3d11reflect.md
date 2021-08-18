@@ -1,9 +1,9 @@
 ---
 title: D3D11Reflect-Funktion
-description: Ruft einen Zeiger auf eine reflektionseschnittstelle ab.
+description: Ruft einen Zeiger auf eine Reflektionsschnittstelle ab.
 ms.assetid: 855097c7-988b-4ab6-90c5-e5dd0bc9e1e0
 keywords:
-- D3D11Reflect-Funktion (HLSL)
+- D3D11Reflect-Funktion HLSL
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - DllExport
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: e54a1f388ebb122398ad33c3a8d942496fa55393
-ms.sourcegitcommit: 14010c34b35fa268046c7683f021f86de08ddd0a
+ms.openlocfilehash: 44b980d955dcd37197c8d8ed05a6602025d1e21731ca6d22302b76cc2f2e53da
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "104132397"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118986880"
 ---
 # <a name="d3d11reflect-function"></a>D3D11Reflect-Funktion
 
-Ruft einen Zeiger auf eine reflektionseschnittstelle ab.
+Ruft einen Zeiger auf eine Reflektionsschnittstelle ab.
 
 ## <a name="syntax"></a>Syntax
 
@@ -39,30 +39,30 @@ HRESULT D3D11Reflect(
 
 <dl> <dt>
 
-*pSrcData* \[ in\]
+*pSrcData* \[ In\]
 </dt> <dd>
 
-Geben Sie Folgendes ein: **[ **lpcvoid**](/windows/desktop/WinProg/windows-data-types)**
+Typ: **[ **LPCVOID**](/windows/desktop/WinProg/windows-data-types)**
 
-Ein Zeiger auf Quelldaten als kompilierter HLSL-Code.
+Ein Zeiger auf Quelldaten als kompilierten HLSL-Code.
 
 </dd> <dt>
 
-*Srcdatasize* \[ in\]
+*SrcDataSize* \[ In\]
 </dt> <dd>
 
-Typ: **[ **Größe \_ T**](/windows/desktop/WinProg/windows-data-types)**
+Typ: **[ **SIZE \_ T**](/windows/desktop/WinProg/windows-data-types)**
 
-Länge von *pSrcData*.
+Länge von *pSrcData.*
 
 </dd> <dt>
 
-*ppreflector* \[ vorgenommen\]
+*ppReflector* \[ out\]
 </dt> <dd>
 
 Typ: **[ **ID3D11ShaderReflection**](/windows/desktop/api/d3d11shader/nn-d3d11shader-id3d11shaderreflection)\*\***
 
-Die Adresse eines Zeigers auf die [**ID3D11ShaderReflection**](/windows/desktop/api/d3d11shader/nn-d3d11shader-id3d11shaderreflection) -Schnittstelle.
+Die Adresse eines Zeigers auf die [**ID3D11ShaderReflection-Schnittstelle.**](/windows/desktop/api/d3d11shader/nn-d3d11shader-id3d11shaderreflection)
 
 </dd> </dl>
 
@@ -70,15 +70,15 @@ Die Adresse eines Zeigers auf die [**ID3D11ShaderReflection**](/windows/desktop/
 
 Typ: **[ **HRESULT**](/windows/desktop/WinProg/windows-data-types)**
 
-Gibt einen der Rückgabecodes zurück, die im Thema [Direct3D 11 Return Codes](/windows/desktop/direct3d11/d3d11-graphics-reference-returnvalues)beschrieben werden.
+Gibt einen der Rückgabecodes zurück, die im Thema [Direct3D 11 Return Codes beschrieben sind.](/windows/desktop/direct3d11/d3d11-graphics-reference-returnvalues)
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die Inline- **D3D11Reflect** -Compilerfunktion ist ein Wrapper für die [**D3DReflect**](/windows/win32/api/d3dcompiler/nf-d3dcompiler-d3dreflect) -Compilerfunktion. **D3D11Reflect** kann nur eine [**ID3D11ShaderReflection**](/windows/desktop/api/d3d11shader/nn-d3d11shader-id3d11shaderreflection) -Schnittstelle aus einem Shader abrufen. **D3DReflect** kann eine **ID3D11ShaderReflection** -Schnittstelle oder eine Direct3D 10-oder Direct3D 10,1 Reflection-Schnittstelle abrufen, z. b. [**ID3D10ShaderReflection**](/windows/desktop/api/d3d10shader/nn-d3d10shader-id3d10shaderreflection).
+Die **Inlinecompilerfunktion D3D11Reflect** ist ein Wrapper für die [**D3DReflect-Compilerfunktion.**](/windows/win32/api/d3dcompiler/nf-d3dcompiler-d3dreflect) **D3D11Reflect kann** nur eine [**ID3D11ShaderReflection-Schnittstelle**](/windows/desktop/api/d3d11shader/nn-d3d11shader-id3d11shaderreflection) aus einem Shader abrufen. **D3DReflect** kann eine **ID3D11ShaderReflection-Schnittstelle** oder eine Direct3D 10- oder Direct3D 10.1-Reflektionsschnittstelle abrufen, z. B. [**ID3D10ShaderReflection**](/windows/desktop/api/d3d10shader/nn-d3d10shader-id3d10shaderreflection).
 
-Shader-Code enthält Metadaten, die mithilfe der reflektionsapis überprüft werden können.
+Shadercode enthält Metadaten, die mithilfe der Reflektions-APIs überprüft werden können.
 
-Der folgende Code zeigt, wie eine [**ID3D11ShaderReflection**](/windows/desktop/api/d3d11shader/nn-d3d11shader-id3d11shaderreflection) -Schnittstelle aus einem Shader abgerufen wird.
+Der folgende Code zeigt, wie sie eine [**ID3D11ShaderReflection-Schnittstelle**](/windows/desktop/api/d3d11shader/nn-d3d11shader-id3d11shaderreflection) aus einem Shader abruft.
 
 
 ```C++
@@ -92,14 +92,14 @@ D3D11Reflect( pPixelShaderBuffer->GetBufferPointer(), pPixelShaderBuffer->GetBuf
 
 
 
-## <a name="requirements"></a>Requirements (Anforderungen)
+## <a name="requirements"></a>Anforderungen
 
 
 
 | Anforderung | Wert |
 |--------------------|------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>D3DCompiler. INL</dt> </dl>     |
-| Bibliothek<br/> | <dl> <dt>D3dcompiler \_ 47. lib</dt> </dl> |
+| Header<br/>  | <dl> <dt>D3DCompiler.inl</dt> </dl>     |
+| Bibliothek<br/> | <dl> <dt>D3dcompiler \_ 47.lib</dt> </dl> |
 | DLL<br/>     | <dl> <dt>D3dcompiler \_47.dll</dt> </dl> |
 
 

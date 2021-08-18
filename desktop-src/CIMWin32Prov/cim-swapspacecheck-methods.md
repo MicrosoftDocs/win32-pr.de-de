@@ -1,23 +1,23 @@
 ---
-description: Die CIM- \_ Klasse "tauapspacecheck" stellt die folgenden Methoden zur Verfügung.
+description: Die CIM \_ SwapSpaceCheck-Klasse macht die folgenden Methoden verfügbar.
 ms.assetid: 09149D0A-9AB8-4582-9976-371278E851D0
 ms.tgt_platform: multiple
-title: CIM_SwapSpaceCheck Methoden
+title: CIM_SwapSpaceCheck-Methoden
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: e599b4bf94b0aa695dd48a2b885eda806fbb6253
-ms.sourcegitcommit: c7add10d695482e1ceb72d62b8a4ebd84ea050f7
+ms.openlocfilehash: b25aaa12a3c1d56bccb99fb8aeac201286419174fb0cb26da0d50d8a0c9325c6
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106339709"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119020898"
 ---
-# <a name="cim_swapspacecheck-methods"></a>CIM- \_ Methode "tauapspacecheck"
+# <a name="cim_swapspacecheck-methods"></a>CIM \_ SwapSpaceCheck-Methoden
 
-Die CIM-Klasse " [**\_ tauapspacecheck**](cim-swapspacecheck.md) " stellt die folgenden Methoden zur Verfügung.
+Die [**CIM \_ SwapSpaceCheck-Klasse**](cim-swapspacecheck.md) macht die folgenden Methoden verfügbar.
 
 > [!IMPORTANT]
-> Die Klassen der DMTF-CIM (Common Information Model) sind die übergeordneten Klassen, auf denen WMI-Klassen erstellt werden. WMI unterstützt zurzeit nur die [CIM 2. x-Versions Schemas](https://dmtf.org/standards/cim/schemas).
+> Die CIM-Klassen (Distributed Management Task Force) (DMTF) (Common Information Model) sind die übergeordneten Klassen, auf denen WMI-Klassen erstellt werden. WMI unterstützt derzeit nur die [CIM 2.x-Versionsschemas.](https://dmtf.org/standards/cim/schemas)
 
  
 

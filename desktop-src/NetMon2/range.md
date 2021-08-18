@@ -1,7 +1,7 @@
 ---
-description: Die Bereichs Struktur definiert einen Bereich gültiger Eigenschaftswerte.
+description: Die RANGE-Struktur definiert einen Bereich gültiger Eigenschaftswerte.
 ms.assetid: 7bd14410-f5c1-487b-8776-405567991e5a
-title: Bereichs Struktur (Netmon. h)
+title: RANGE-Struktur (Netmon.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,16 +13,16 @@ api_type:
 - HeaderDef
 api_location:
 - Netmon.h
-ms.openlocfilehash: bf465636f315e60e43350bb370e2002b8a96e635
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 0e0135a6210aebbca38bfdede00231315dd2680461f366930b24925eda830604
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106347118"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119063720"
 ---
-# <a name="range-structure"></a>Bereichs Struktur
+# <a name="range-structure"></a>RANGE-Struktur
 
-Die **Bereichs** Struktur definiert einen Bereich gültiger Eigenschaftswerte.
+Die **RANGE-Struktur** definiert einen Bereich gültiger Eigenschaftswerte.
 
 ## <a name="syntax"></a>Syntax
 
@@ -40,23 +40,23 @@ typedef struct range {
 
 <dl> <dt>
 
-**MinValue**
+**Minvalue**
 </dt> <dd>
 
-Der niedrigste mögliche Wert in einem Bereich.
+Niedrigster möglicher Wert in einem Bereich.
 
 </dd> <dt>
 
-**MaxValue**
+**Maxvalue**
 </dt> <dd>
 
-Höchstmöglicher Wert in einem Bereich.
+Der höchste mögliche Wert in einem Bereich.
 
 </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die **Bereichs** Struktur wird verwendet, um einen gültigen Bereich von Zahlen für eine Protokoll Eigenschaft anzugeben. Wenn das **dataqualifier** -Element der **PropertyInfo** -Struktur auf den **Prop-Wert \_ \_ Bereich** festgelegt ist, muss der **lprange** -Member der [PropertyInfo](propertyinfo.md) -Struktur einen Zeiger auf eine **Bereichs** Struktur bereitstellen.
+Die **RANGE-Struktur** wird verwendet, um einen gültigen Zahlenbereich für eine Protokolleigenschaft anzugeben. Wenn der **DataQualifier-Member** der **PROPERTYINFO-Struktur** auf **PROP \_ QUAL \_ RANGE** festgelegt ist, muss der **lpRange-Member** der [PROPERTYINFO-Struktur](propertyinfo.md) einen Zeiger auf eine **RANGE-Struktur** bereitstellen.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -66,15 +66,15 @@ Die **Bereichs** Struktur wird verwendet, um einen gültigen Bereich von Zahlen 
 |-------------------------------------|-------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[nur Desktop-Apps\]<br/>                          |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                                |
-| Header<br/>                   | <dl> <dt>Netmon. h</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Netmon.h</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[PROPERTYINFO](propertyinfo.md)
+[Propertyinfo](propertyinfo.md)
 </dt> </dl>
 
  

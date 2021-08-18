@@ -1,74 +1,74 @@
 ---
-description: Der Zertifikat Speicher ist für alle Zertifikat Verwaltungsvorgänge von zentraler Bedeutung.
+description: Der Zertifikatspeicher ist für alle Zertifikatverwaltungsvorgänge von zentraler Bedeutung.
 ms.assetid: e5c7c882-cbfc-4343-952c-b13c67326756
-title: Erweitern der certopsstore-Funktionalität
+title: Erweitern der CertOpenStore-Funktionalität
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 4cce198578cc482ba0488bd97ae0f1d7f923511b
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: c770ae56ff597f51248486db2c9eb2d74bea8d63d2e8daad83d5938594b2f1a9
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "104564224"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119007087"
 ---
-# <a name="extending-certopenstore-functionality"></a>Erweitern der certopsstore-Funktionalität
+# <a name="extending-certopenstore-functionality"></a>Erweitern der CertOpenStore-Funktionalität
 
-Der [*Zertifikat Speicher*](../secgloss/c-gly.md) ist für alle Zertifikat Verwaltungsvorgänge von zentraler Bedeutung. Die Funktionalität der [**CertOpenStore**](/windows/win32/api/Wincrypt/nf-wincrypt-certopenstore) -Funktion kann durch die Verwendung einer installierbaren (oder registrierten) Zertifikat Speicher Anbieter-Funktion erweitert werden. Eine Übersicht über das Installieren oder Registrieren von Funktionen für die Verwendung mit der CryptoAPI finden Sie unter [OID Overview](oid-overview.md).
+Der [*Zertifikatspeicher*](../secgloss/c-gly.md) ist für alle Zertifikatverwaltungsvorgänge von zentraler Bedeutung. Die Funktionalität der [**CertOpenStore-Funktion**](/windows/win32/api/Wincrypt/nf-wincrypt-certopenstore) kann durch die Verwendung einer installierbaren (oder registrierten) Zertifikatspeicheranbieterfunktion erweitert werden. Eine Übersicht über das Installieren oder Registrieren von Funktionen für die Verwendung mit cryptoAPI finden Sie unter [Übersicht über OID.](oid-overview.md)
 
 > [!Note]  
-> Benutzerdefinierte Zertifikat Speicher werden beim Ausführen automatisierter bereit Stellungen nicht automatisch migriert. Wenn Sie benutzerdefinierte Zertifikat Speicher migrieren möchten, müssen Sie ein Manifest erstellen, um die benutzerdefinierten Speicher zu migrieren und die Windows-Migrationstool für den Benutzerstatus (Anwendungs-) zu verwenden. Das Windows-Tool steht im Microsoft Download Center unter zum Download zur Verfügung <https://www.microsoft.com/download/details.aspx?id=10837> .
+> Benutzerdefinierte Zertifikatspeicher werden bei automatisierten Bereitstellungen nicht automatisch migriert. Um benutzerdefinierte Zertifikatspeicher zu migrieren, müssen Sie ein Manifest für die Migration der benutzerdefinierten Speicher erstellen und die Windows Migrationstool für den Benutzerstatus (USMT) verwenden. Das USMT steht im Microsoft Download Center unter zum Download zur <https://www.microsoft.com/download/details.aspx?id=10837> Verfügung.
 
  
 
-[**CertOpenStore**](/windows/win32/api/Wincrypt/nf-wincrypt-certopenstore) öffnet einen leeren Speicher im Arbeitsspeicher und ruft die Speicher Anbieter Funktion (sofern Sie registriert oder installiert ist) mithilfe des [*Objekt Bezeichners*](../secgloss/o-gly.md) (OID) auf, der im *lpszstoreprovider* -Parameter übergeben wurde. Eine Liste der vordefinierten Anbieter Typen, die mit der CryptoAPI bereitgestellt werden, finden Sie unter **CertOpenStore**.
+[**CertOpenStore**](/windows/win32/api/Wincrypt/nf-wincrypt-certopenstore) öffnet einen leeren Speicher im Arbeitsspeicher und ruft die Speicheranbieterfunktion auf (sofern registriert oder installiert), indem der [*Objektbezeichner*](../secgloss/o-gly.md) (OID) verwendet wird, der im *lpszStoreProvider-Parameter* übergeben wurde. Eine Liste der vordefinierten Anbietertypen, die mit cryptoAPI bereitgestellt werden, finden Sie unter **CertOpenStore**.
 
-Die Speicher Anbieter Funktion kopiert die Zertifikate und [*Zertifikat Sperr Listen*](../secgloss/c-gly.md) (CRLs) in den Speicher internen Speicher, der durch das an Sie übergebenen *HCERTSTORE* -handle angegeben wird. Die neue Speicher Anbieter Funktion kann jede der kryptoapi-Zertifikat Speicherfunktionen, wie z. b. [**certaddcertificr econtexttostore**](/windows/win32/api/Wincrypt/nf-wincrypt-certaddcertificatecontexttostore) oder [**certaddserializedelta**](/windows/win32/api/Wincrypt/nf-wincrypt-certaddserializedelementtostore)Token, zum Hinzufügen der Zertifikate und CRLs zum Speicher internen Speicher verwenden. Außerdem gibt die Store-Provider-Funktion optional Werte für alle Datenmember der [**Zertifikat \_ Speicher- \_ Prov- \_ Informations**](/windows/win32/api/Wincrypt/ns-wincrypt-cert_store_prov_info) Struktur zurück. Die Funktion muss diese Struktur nur aktualisieren, wenn Sie zusätzliche Rückruf Funktionen unterstützt. Wenn der Speicher z. b. ein Schreib geschützter Speicher wäre, wäre die Unterstützung anderer Rückruf Funktionen wahrscheinlich nicht erforderlich. Ausführliche Informationen und Prototypen der möglichen Rückruf Funktionen finden Sie unter [Rückruf Funktionen für Zertifikat Speicher Anbieter](cryptography-functions.md).
+Die Speicheranbieterfunktion kopiert ihre Zertifikate und [*Zertifikatsperrlisten (Certificate Revocation Lists,*](../secgloss/c-gly.md) CRLs) in den Speicher im Arbeitsspeicher, der durch das *hCertStore-Handle* angegeben wird, das an ihn übergeben wird. Die neue Speicheranbieterfunktion kann jede der CryptoAPI-Zertifikatspeicherfunktionen verwenden, z. B. [**CertAddCertificateContextToStore**](/windows/win32/api/Wincrypt/nf-wincrypt-certaddcertificatecontexttostore) oder [**CertAddSerializedElementToStore,**](/windows/win32/api/Wincrypt/nf-wincrypt-certaddserializedelementtostore)um dem Speicher im Arbeitsspeicher die zugehörigen Zertifikate und CRLs hinzuzufügen. Darüber hinaus gibt die store-provider-Funktion optional Werte für alle Datenmember der [**CERT \_ STORE \_ PROV \_ INFO-Struktur**](/windows/win32/api/Wincrypt/ns-wincrypt-cert_store_prov_info) zurück. Die Funktion muss diese Struktur nur aktualisieren, wenn sie zusätzliche Rückruffunktionen unterstützt. Wenn es sich bei dem Speicher beispielsweise um einen schreibgeschützten Speicher handelt, ist die Unterstützung anderer Rückruffunktionen wahrscheinlich nicht erforderlich. Details und Prototypen der möglichen Rückruffunktionen finden Sie unter [Certificate Store Provider Callback Functions](cryptography-functions.md).
 
-Der Speicher pro Benutzer-Treuhänder ist auf vordefinierte physische Speicher beschränkt. Sie können den Trust dpeople-Speicher pro Benutzer nicht erweitern. Sie können jedoch den Trust dpeople-Speicher des lokalen Computers erweitern.
+Der TrustedPeople-Speicher pro Benutzer ist auf vordefinierte physische Speicher beschränkt. Sie können den TrustedPeople-Speicher pro Benutzer nicht erweitern. Sie können jedoch den TrustedPeople-Speicher des lokalen Computers erweitern.
 
-**Windows XP und Windows Server 2003:** Der Trust-People-Speicher pro Benutzer ist nicht auf vordefinierte physische Speicher beschränkt.
+**Windows XP und Windows Server 2003:** Der TrustedPeople-Speicher pro Benutzer ist nicht auf vordefinierte physische Speicher beschränkt.
 
-Eines der Datenmember der [**CERT \_ Store \_ Prov \_ Info**](/windows/win32/api/Wincrypt/ns-wincrypt-cert_store_prov_info) -Struktur ist das *rgpvstoreprovfunc* -Array. Wenn die Speicher Anbieter Funktion eine oder mehrere der Rückruf Funktionen unterstützen muss, muss Sie Zeiger für dieses Array bereitstellen. Diese Zeiger müssen auf die Rückruf Funktionen verweisen, die für andere Zertifikat Speicher Aktivitäten verwendet werden sollen (z. b. das Schließen des Stores). Die folgende Abbildung zeigt den Ablauf dieses Prozesses.
+Einer der Datenmember der [**CERT \_ STORE \_ PROV \_ INFO-Struktur**](/windows/win32/api/Wincrypt/ns-wincrypt-cert_store_prov_info) ist das *rgpvStoreProvFunc-Array.* Wenn die Speicheranbieterfunktion eine oder mehrere rückruffunktionen unterstützen muss, muss sie Zeiger für dieses Array bereitstellen. Diese Zeiger müssen auf die Rückruffunktionen verweisen, die für andere Zertifikatspeicheraktivitäten (z. B. das Schließen des Speichers) verwendet werden sollen. Die folgende Abbildung zeigt den Ablauf dieses Prozesses.
 
-![certopendstore-Funktionalität](images/openstor.png)
+![Certopenstore-Funktionalität](images/openstor.png)
 
-Wie in der folgenden Abbildung gezeigt, verwenden andere CryptoAPI-Funktionen (z. [**b. certclosestore**](/windows/win32/api/Wincrypt/nf-wincrypt-certclosestore)), nachdem der Speicher geöffnet wurde, das Array von Zeigern für den Zugriff auf die Rückruf Funktionen, die die beabsichtigte Aufgabe ausführen. Die Definition der [**CERT \_ Store \_ Prov- \_ Informations**](/windows/win32/api/Wincrypt/ns-wincrypt-cert_store_prov_info) Struktur und die Prototypen der Standard Rückruf Funktionen, die mit der CryptoAPI bereitgestellt werden, werden in den [Rückruf Funktionen des Zertifikat Speicher Anbieters](cryptography-functions.md)angezeigt.
+Wie in der folgenden Abbildung dargestellt, verwenden andere CryptoAPI-Funktionen (z. B. [**CertCloseStore)**](/windows/win32/api/Wincrypt/nf-wincrypt-certclosestore)nach dem Öffnen des Speichers das Array von Zeigern, um auf die Rückruffunktionen zuzugreifen, die die beabsichtigte Aufgabe ausführen. Die Definition der [**CERT \_ STORE \_ PROV \_ INFO-Struktur**](/windows/win32/api/Wincrypt/ns-wincrypt-cert_store_prov_info) und die Prototypen der Standardrückruffunktionen, die mit der CryptoAPI bereitgestellt werden, werden unter [Certificate Store Provider Callback Functions (Rückruffunktionen des Zertifikatanbieters)](cryptography-functions.md)angezeigt.
 
 ![certclosestore-Funktionalität](images/closstor.png)
 
-Die Store-APIs ermöglichen es einem Speicher Anbieter, die Zertifikate, CRLs und [*Zertifikat Vertrauens Listen*](../secgloss/c-gly.md) (CTLs) außerhalb des Cache Speichers des Speichers zu verwalten (z. b. eine externe Datenbank von Zertifikaten, z. b. von der Microsoft Certificate Server-Datenbank bereitgestellt).
+Die Speicher-APIs ermöglichen es einem Speicheranbieter, die Zertifikate, CRLs und [*Zertifikatvertrauenslisten*](../secgloss/c-gly.md) (Certificate Trust Lists, CTLs) außerhalb des Caches des Speichers zu verwalten (z. B. eine externe Datenbank mit Zertifikaten, wie sie von der Microsoft Certificate Server-Datenbank bereitgestellt werden).
 
-[**CertOpenStore**](/windows/win32/api/Wincrypt/nf-wincrypt-certopenstore) sendet den *pszstoreprovider* -Parameter an die entsprechende installierbare [**certdllopenstoreprov**](/windows/win32/api/Wincrypt/nc-wincrypt-pfn_cert_dll_open_store_prov_func) -Anbieter Funktion. Der Anbieter gibt Informationen im *pstoreprovinfo* -Parameter zurück, der auf eine [**Zertifikat \_ Speicher- \_ Prov- \_ Informations**](/windows/win32/api/Wincrypt/ns-wincrypt-cert_store_prov_info) Struktur verweist. Die **CERT \_ Store \_ Prov \_ Info** -Struktur enthält einen **dwstoreprovflags** -Member. Das Flag für das \_ externe Flag "cert store \_ Prov" \_ \_ wurde hinzugefügt, damit der Anbieter angeben kann, dass die Zertifikate, CRLs und CTLs für den Cache des Speichers extern sind.
+[**CertOpenStore**](/windows/win32/api/Wincrypt/nf-wincrypt-certopenstore) wird über den *pszStoreProvider-Parameter* an die entsprechende [**installierbare Anbieterfunktion CertDllOpenStoreProv**](/windows/win32/api/Wincrypt/nc-wincrypt-pfn_cert_dll_open_store_prov_func) gesendet. Der Anbieter gibt Informationen im *pStoreProvInfo-Parameter* zurück, die auf eine [**CERT \_ STORE \_ PROV \_ INFO-Struktur**](/windows/win32/api/Wincrypt/ns-wincrypt-cert_store_prov_info) verweist. Die **CERT \_ STORE \_ PROV \_ INFO-Struktur** enthält einen **dwStoreProvFlags-Member.** Das \_ Flag \_ CERT STORE PROV EXTERNAL FLAG wurde \_ \_ hinzugefügt, damit der Anbieter angeben kann, dass die Zertifikate, CRLs und CTLs für den Cache des Speichers extern sind.
 
-[**Certdllopenstoreprov**](/windows/win32/api/Wincrypt/nc-wincrypt-pfn_cert_dll_open_store_prov_func) gibt ein Array von Rückruf Funktionen zurück. Ein Anbieter kann die folgenden Rückruf Funktionen implementieren:
+[**CertDllOpenStoreProv**](/windows/win32/api/Wincrypt/nc-wincrypt-pfn_cert_dll_open_store_prov_func) gibt ein Array von Rückruffunktionen zurück. Ein Anbieter kann die folgenden Rückruffunktionen implementieren:
 
--   CERT \_ Store \_ Prov \_ Close \_ Func
--   CERT \_ Store \_ Prov \_ Read \_ CERT \_ Func
--   CERT \_ Store \_ Prov \_ Write \_ CERT \_ Func
--   CERT \_ Store \_ Prov \_ Delete \_ CERT \_ Func
--   CERT \_ Store \_ Prov \_ Set \_ CERT- \_ Eigenschaft \_ Func
--   CERT \_ Store \_ Prov \_ Read \_ CRL \_ Func
--   CERT \_ Store \_ Prov \_ Write \_ CRL \_ Func
--   CERT \_ Store \_ Prov \_ Delete \_ CRL \_ Func
--   Zertifikat Sperr Listen-Eigenschaft (CRL) für Zertifikat \_ Speicher \_ Prov \_ festlegen \_ \_ \_
--   CERT \_ Store \_ Prov \_ Read \_ CTL \_ Func
--   CERT \_ Store \_ Prov \_ Write \_ CTL \_ Func
--   CERT \_ Store \_ Prov \_ Delete \_ CTL \_ Func
--   Zertifikat \_ Speicher \_ Prov \_ Set \_ CTL- \_ Eigenschaft \_ Func
+-   CERT \_ STORE \_ PROV \_ CLOSE \_ FUNC
+-   CERT \_ STORE \_ PROV \_ READ \_ CERT \_ FUNC
+-   CERT \_ STORE \_ PROV \_ WRITE \_ CERT \_ FUNC
+-   CERT \_ STORE \_ PROV \_ DELETE \_ CERT \_ FUNC
+-   CERT \_ STORE \_ PROV \_ SET \_ CERT \_ PROPERTY \_ FUNC
+-   CERT \_ STORE \_ PROV \_ READ \_ CRL \_ FUNC
+-   CERT \_ STORE \_ PROV \_ WRITE \_ CRL \_ FUNC
+-   CERT \_ STORE \_ PROV \_ DELETE \_ CRL \_ FUNC
+-   CERT \_ STORE \_ PROV \_ SET \_ CRL \_ PROPERTY \_ FUNC
+-   CERT \_ STORE \_ PROV \_ READ \_ CTL \_ FUNC
+-   CERT \_ STORE \_ PROV \_ WRITE \_ CTL \_ FUNC
+-   CERT \_ STORE \_ PROV \_ DELETE \_ CTL \_ FUNC
+-   CERT \_ STORE \_ PROV \_ SET \_ CTL \_ PROPERTY \_ FUNC
 
-Bei Aufrufen von "Write \_ CERT", "Write \_ CRL" und "Write \_ CTL Callback"-Funktionen beim Festlegen des "CERT \_ Store \_ Prov \_ Write Add"- \_ \_ Flags enthalten die oberen 16 Bits des *dwFlags* -Parameters den *dwadddisposition* -Wert. Um externe Speicher zu unterstützen, kann ein Anbieter die folgenden Rückruf Funktionen implementieren:
+Bei Aufrufen der Rückruffunktionen WRITE \_ CERT, WRITE \_ CRL und WRITE \_ CTL, wenn das CERT \_ STORE \_ PROV WRITE ADD \_ FLAG \_ festgelegt \_ ist, enthalten die oberen 16 Bits des *dwFlags-Parameters* den *dwAddDisposition-Wert.* Zur Unterstützung externer Speicher kann ein Anbieter die folgenden Rückruffunktionen implementieren:
 
--   CERT \_ Store \_ Prov \_ Find \_ CERT \_ Func
--   Zertifikat \_ Speicher \_ Prov \_ Free \_ Find \_ CERT \_ Func
--   Zertifikat \_ Speicher \_ Prov \_ get \_ CERT- \_ Eigenschaft \_ Func
--   CERT \_ Store \_ Prov \_ Find \_ CRL \_ Func
--   CERT \_ Store \_ Prov \_ Free \_ Find \_ CRL \_ Func
--   Zertifikat \_ Speicher \_ Prov \_ get \_ CRL- \_ Eigenschaft \_ Func
--   Zertifikat \_ Speicher- \_ Prov \_ Find \_ CTL \_ Func
--   Zertifikat \_ Speicher \_ Prov \_ Free \_ Find \_ CTL \_ Func
--   Zertifikat \_ Speicher \_ Prov \_ get \_ CTL- \_ Eigenschaft \_ Func
+-   CERT \_ STORE \_ PROV \_ FIND \_ CERT \_ FUNC
+-   CERT \_ STORE \_ PROV \_ FREE \_ FIND \_ CERT \_ FUNC
+-   CERT \_ STORE \_ PROV \_ GET \_ CERT \_ PROPERTY \_ FUNC
+-   CERT \_ STORE \_ PROV \_ FIND \_ CRL \_ FUNC
+-   CERT \_ STORE \_ PROV \_ FREE \_ FIND \_ CRL \_ FUNC
+-   CERT \_ STORE \_ PROV \_ GET \_ CRL \_ PROPERTY \_ FUNC
+-   CERT \_ STORE \_ PROV \_ FIND \_ CTL \_ FUNC
+-   CERT \_ STORE \_ PROV \_ FREE \_ FIND \_ CTL \_ FUNC
+-   CERT \_ STORE \_ PROV \_ GET \_ CTL \_ PROPERTY \_ FUNC
 
-Die Zertifikat Rückruf Funktionen verfügen über die folgenden Signaturen:
+Die Zertifikatrückruffunktionen verfügen über die folgenden Signaturen:
 
 ``` syntax
 typedef struct _CERT_STORE_PROV_FIND_INFO {
@@ -107,60 +107,60 @@ typedef BOOL (WINAPI *PFN_CERT_STORE_PROV_GET_CERT_PROPERTY)(
         );
 ```
 
-Die Signaturen für die CRL-und CTL-Rückruf Funktionen sind identisch mit dem obigen, wobei der Zeiger auf den [**CERT- \_ Kontext**](/windows/win32/api/Wincrypt/ns-wincrypt-cert_context) durch einen Zeiger auf einen [**CRL- \_ Kontext**](/windows/win32/api/Wincrypt/ns-wincrypt-crl_context) oder einen [**CTL- \_ Kontext**](/windows/win32/api/Wincrypt/ns-wincrypt-ctl_context)ersetzt wurde.
+Die Signaturen für die CRL- und CTL-Rückruffunktionen sind mit dem oben genannten identisch, wobei der Zeiger auf den [**CERT \_ CONTEXT**](/windows/win32/api/Wincrypt/ns-wincrypt-cert_context) durch einen Zeiger auf einen [**CRL \_ CONTEXT**](/windows/win32/api/Wincrypt/ns-wincrypt-crl_context) oder [**CTL \_ CONTEXT**](/windows/win32/api/Wincrypt/ns-wincrypt-ctl_context)ersetzt wird.
 
-Der Rückruf "Zertifikat suchen" \_ wird aufgerufen, wenn die Store-APIs Zertifikate aufzählen, suchen oder hinzufügen. *pprevcertcontext* und *ppvstoreprovfindinfo* sind auf **null** festgelegt, um eine neue Suche zu initiieren. Die zurückgegebene *ppvstoreprovfindinfo* wird bei der nächsten Suche zurückgegeben, ab der Sie vom Anbieter freigegeben werden kann. Der Anbieter kann alle, einige oder keine der Zertifikat Eigenschaften festlegen. Der Anbieter kann die Option zum Zurückstellen des Zertifikats aufrufen, bis der get \_ CERT- \_ Eigenschafts Rückruf aufgerufen wird. Es wird empfohlen, dass Anbieter so viele Eigenschaften wie möglich festlegen, um das Kopieren in einen anderen Speicher zuzulassen.
+Der FIND \_ CERT-Rückruf wird aufgerufen, wenn die Speicher-APIs Zertifikate aufzählen, suchen oder hinzufügen. *pPrevCertContext* und *ppvStoreProvFindInfo* werden auf **NULL** festgelegt, um ein neues FIND zu initiieren. Die zurückgegebene *ppvStoreProvFindInfo* wird bei der nächsten Suche zurückgegeben, zu der sie vom Anbieter freigegeben werden kann. Der Anbieter kann alle, einige oder keine der Zertifikateigenschaften festlegen. Der Anbieter kann zurückstellen, bis der GET \_ CERT \_ PROPERTY-Rückruf aufgerufen wird. Es wird empfohlen, dass Anbieter so viele Eigenschaften wie möglich festlegen, um das Kopieren in einen anderen Speicher zu ermöglichen.
 
-Die folgenden Typen von Zertifikat suchen werden in [**certfindcertifikateinstore**](/windows/win32/api/Wincrypt/nf-wincrypt-certfindcertificateinstore)unterstützt:
+Die folgenden Zertifikatssuchetypen werden in [**CertFindCertificateInStore**](/windows/win32/api/Wincrypt/nf-wincrypt-certfindcertificateinstore)unterstützt:
 
--   CERT \_ Find \_ Any
--   Zertifikat \_ Suche \_ SHA1- \_ Hash
--   Zertifikat \_ Suche \_ MD5- \_ Hash
--   CERT \_ Find- \_ Eigenschaft
--   \_ \_ öffentlicher \_ Schlüssel für Zertifikat Suche
--   Zertifikat suchantrags Teller \_ \_ \_ Name
--   CERT \_ Find \_ Subject \_ attr
--   Zertifikat \_ \_ \_ Suchname suchen
--   Zertifikat \_ Suche \_ Aussteller \_ attr
--   CERT \_ Find \_ Subject \_ Str \_ A
--   CERT \_ Find \_ Subject \_ Str \_ W
--   CERT \_ Find \_ Aussteller \_ Str \_ A
--   Zertifikat \_ Suche \_ Aussteller \_ Str \_ W
--   Zertifikat \_ Suche- \_ Schlüssel \_ Spezifikation
--   CERT \_ Find \_ enhkey- \_ Verwendung
+-   CERT \_ FIND \_ ANY
+-   CERT \_ FIND \_ SHA1 \_ HASH
+-   CERT \_ FIND \_ MD5 \_ HASH
+-   CERT \_ \_ FIND-EIGENSCHAFT
+-   CERT \_ FIND \_ PUBLIC \_ KEY
+-   CERT \_ FIND \_ SUBJECT \_ NAME
+-   CERT \_ FIND \_ SUBJECT \_ ATTR
+-   CERT \_ FIND \_ ISSUER \_ NAME
+-   CERT \_ FIND \_ ISSUER \_ ATTR
+-   CERT \_ FIND \_ SUBJECT \_ STR \_ A
+-   CERT \_ FIND \_ SUBJECT \_ STR \_ W
+-   \_ZERTIFIKATSSUCHE \_ AUSSTELLER STR \_ \_ A
+-   CERT \_ FIND \_ ISSUER \_ STR \_ W
+-   CERT \_ FIND \_ KEY \_ SPEC
+-   CERT \_ FIND \_ ENHKEY \_ USAGE
 
-Der Rückruf "Zertifikat suchen" \_ wird für jeden der obigen Suchtypen aufgerufen. Die an " [**certfindcertifikateinstore**](/windows/win32/api/Wincrypt/nf-wincrypt-certfindcertificateinstore) " übergebenen Parameter werden direkt in die "CERT \_ Store \_ Prov Find Info"-Struktur kopiert, \_ bevor der Befehl " \_ Zertifikat suchen" \_ aufgerufen wird. Ausführliche Informationen zu den Feldwerten für die verschiedenen Suchtypen der CERT \_ Store \_ Prov Find Info-Struktur finden Sie unter \_ \_ **certfindcertifikateinstore**.
+Der FIND \_ CERT-Rückruf wird für jeden der oben genannten Suchtypen aufgerufen. Die an [**CertFindCertificateInStore**](/windows/win32/api/Wincrypt/nf-wincrypt-certfindcertificateinstore) übergebenen Parameter werden direkt in die CERT \_ STORE \_ PROV FIND INFO-Struktur kopiert, bevor der \_ FIND \_ \_ CERT-Rückruf aufgerufen wird. Ausführliche Informationen zu den Feldwerten für die verschiedenen Suchtypen der CERT \_ STORE \_ PROV \_ FIND \_ INFO-Struktur finden Sie unter **CertFindCertificateInStore**.
 
-Die folgenden Typen von Zertifikat suchen unterstützen die Zertifikate [**certgetsubjetcertifipeefromstore**](/windows/win32/api/Wincrypt/nf-wincrypt-certgetsubjectcertificatefromstore) und [**CertGetIssuerCertificateFromStore**](/windows/win32/api/Wincrypt/nf-wincrypt-certgetissuercertificatefromstore) und helfen, zu bestimmen, ob das Zertifikat bereits im Speicher vorhanden ist, bevor Sie Folgendes hinzufügen:
+Die folgenden Zertifikatssuchetypen unterstützen die [**APIs CertGetSubjectCertificateFromStore**](/windows/win32/api/Wincrypt/nf-wincrypt-certgetsubjectcertificatefromstore) und [**CertGetIssuerCertificateFromStore**](/windows/win32/api/Wincrypt/nf-wincrypt-certgetissuercertificatefromstore) und können ermitteln, ob das Zertifikat bereits im Speicher vorhanden ist, bevor Sie hinzufügen:
 
--   CERT \_ Find \_ Subject \_ CERT
--   Zertifikat \_ Suche \_ Aussteller \_ von
--   Zertifikat \_ Suche \_ vorhanden
+-   CERT \_ FIND \_ SUBJECT \_ CERT
+-   CERT \_ FIND \_ ISSUER \_ OF
+-   CERT \_ FIND \_ EXISTING
 
-Für CERT \_ Find \_ Subject \_ CERT zeigt der *pvfindpara* -Parameter auf eine [**CERT \_ Info**](/windows/win32/api/Wincrypt/ns-wincrypt-cert_info) -Struktur, die den Aussteller und die serialNumber des Subjekts enthält. Für \_ den Zertifikat \_ suchaussteller \_ von verweist *pvfindpara* auf eine [**CERT- \_ Kontext**](/windows/win32/api/Wincrypt/ns-wincrypt-cert_context) Struktur des Subjekts. Für \_ \_ ein vorhandenes Zertifikat suchen zeigt *pvfindpara* auf einen Zertifikat **\_ Kontext** des Zertifikats, um zu überprüfen, ob es im Speicher vorhanden ist.
+Für CERT \_ FIND \_ SUBJECT \_ CERT zeigt der *pvFindPara-Parameter* auf eine [**CERT \_ INFO-Struktur,**](/windows/win32/api/Wincrypt/ns-wincrypt-cert_info) die den Issuer und SerialNumber des Antragstellers enthält. Für CERT \_ FIND ISSUER OF verweist \_ \_ *pvFindPara* auf eine [**CERT \_ CONTEXT-Struktur**](/windows/win32/api/Wincrypt/ns-wincrypt-cert_context) des Antragstellers. Für CERT \_ FIND \_ EXISTING verweist *pvFindPara* auf einen **CERT \_ CONTEXT** des Zertifikats, um zu überprüfen, ob es im Speicher vorhanden ist.
 
-Der kostenlose \_ Find \_ CERT-Rückruf wird aufgerufen, wenn das vom Zertifikat "Find CERT" zurückgegebene Zertifikat \_ nicht freigegeben wurde, indem es in einem nachfolgenden nächsten Such Zertifikat verwendet wird, sodass der \_ [*Verweis Zähler*](../secgloss/r-gly.md) auf NULL dekrementiert wurde oder durch einen Aufruf von " [**certclosestore**](/windows/win32/api/Wincrypt/nf-wincrypt-certclosestore)" freigegeben wurde. Vor dem Aufruf des schließenden Rückrufs sollten alle vom Zertifikat suchen-Rückruf zurückgegebenen Zertifikate \_ für den Anbieter freigegeben werden, indem Sie an einen Aufruf des Zertifikats zum Suchen von \_ CERT oder einen Aufruf des kostenlosen c#-Zertifikats-Rückrufs übermittelt werden \_ \_ . Das gleiche gilt für die CRL-und CTL-Rückrufe.
+Der FREE \_ FIND \_ CERT-Rückruf wird aufgerufen, wenn das vom FIND CERT-Rückruf zurückgegebene Zertifikat \_ nicht freigegeben wurde, indem es in einem nachfolgenden \_ FIND-CERT verwendet wurde, wodurch der [*Verweiszähler*](../secgloss/r-gly.md) auf 0 (null) dekrementiert oder durch einen Aufruf von [**CertCloseStore**](/windows/win32/api/Wincrypt/nf-wincrypt-certclosestore)freigegeben wurde. Bevor der CLOSE-Rückruf aufgerufen wird, sollten alle vom FIND CERT-Rückruf zurückgegebenen Zertifikate \_ an den Anbieter freigegeben werden, indem sie an einen Aufruf des FIND \_ CERT-Rückrufs oder einen Aufruf des FREE \_ FIND \_ CERT-Rückrufs übergeben werden. Dasselbe gilt für die CRL- und CTL-Rückrufe.
 
-Der get \_ CERT- \_ Eigenschafts Rückruf wird von [**certgetcertifierecontextproperty**](/windows/win32/api/Wincrypt/nf-wincrypt-certgetcertificatecontextproperty) aufgerufen, wenn er die angegebene Eigenschaft für den *pcertcontext* -Parameter nicht finden kann. Das gleiche gilt für die get \_ CRL \_ -Eigenschaft und die get \_ CTL- \_ Eigenschaft.
+Der GET \_ CERT \_ PROPERTY-Rückruf wird von [**CertGetCertificateContextProperty**](/windows/win32/api/Wincrypt/nf-wincrypt-certgetcertificatecontextproperty) aufgerufen, wenn die angegebene Eigenschaft für den *pCertContext-Parameter* nicht gefunden werden kann. Dasselbe gilt für GET \_ CRL \_ PROPERTY und GET \_ CTL \_ PROPERTY.
 
-Der get \_ CRL-Rückruf wird aufgerufen, wenn die Store-APIs CRLs aufzählen oder Abrufen und bevor Sie eine Zertifikat Sperr Liste hinzufügen. Die folgenden Arten von CRL-suchen werden definiert:
+Der \_ FIND-CRL-Rückruf wird aufgerufen, wenn die Speicher-APIs CRLs auflisten oder abrufen und bevor sie eine Sperrliste hinzufügen. Die folgenden CRL-Suchtypen werden definiert:
 
-Bei \_ der von ausgegebenen CRL-Suche \_ \_ von ist *pvfindpara* ein Zeiger auf einen [**CERT- \_ Kontext**](/windows/win32/api/Wincrypt/ns-wincrypt-cert_context) des Zertifikats der CRL. Wenn die CRL- \_ Suche \_ vorhanden ist, ist *pvfindpara* ein Zeiger auf einen [**CRL- \_ Kontext**](/windows/win32/api/Wincrypt/ns-wincrypt-crl_context) der CRL, um zu bestimmen, ob er bereits im Speicher vorhanden ist.
+Für CRL \_ FIND \_ ISSUED \_ BY ist *pvFindPara* ein Zeiger auf einen [**CERT \_ CONTEXT**](/windows/win32/api/Wincrypt/ns-wincrypt-cert_context) des Zertifikatsperrlistenausstellers. Für CRL \_ FIND \_ EXISTING ist *pvFindPara* ein Zeiger auf einen [**\_ CRL-KONTEXT**](/windows/win32/api/Wincrypt/ns-wincrypt-crl_context) der Sperrliste, um zu bestimmen, ob sie bereits im Speicher vorhanden ist.
 
-Der CTL-Rückruf "Find" \_ wird aufgerufen, wenn die Store-APIs CTLs aufzählen oder suchen. Die folgenden Typen von CTL-suchen werden in [**certfindctlinstore**](/windows/win32/api/Wincrypt/nf-wincrypt-certfindctlinstore)unterstützt:
+Der \_ FIND-CTL-Rückruf wird aufgerufen, wenn die Store-APIs CTLs auflisten oder suchen. Die folgenden CTL-Suchtypen werden in [**CertFindCTLInStore**](/windows/win32/api/Wincrypt/nf-wincrypt-certfindctlinstore)unterstützt:
 
--   CTL- \_ Suche \_
--   CTL- \_ Suche \_ SHA1- \_ Hash
--   CTL- \_ Suche \_ MD5- \_ Hash
--   Verwendung der CTL- \_ Suche \_
--   CTL-Such \_ \_ Betreff
--   CTL- \_ Suche \_ vorhanden
+-   CTL \_ FIND \_ ANY
+-   CTL \_ FIND \_ SHA1 \_ HASH
+-   CTL \_ FIND \_ MD5 \_ HASH
+-   VERWENDUNG \_ DER CTL-SUCHE \_
+-   CTL \_ FIND \_ SUBJECT
+-   CTL \_ FIND \_ EXISTING
 
-Der CTL-Rückruf "Find" \_ wird für jeden der obigen Suchtypen aufgerufen. Die an [**certfindctlinstore**](/windows/win32/api/Wincrypt/nf-wincrypt-certfindctlinstore) übergebenen Parameter werden direkt in die "CERT \_ Store \_ Prov Find Info"-Struktur kopiert, \_ \_ bevor der CTL-Rückruf "Find" \_ aufgerufen wird. Ausführliche Informationen zu den Feldwerten für die verschiedenen Suchtypen der CERT \_ Store \_ Prov Find Info-Struktur finden Sie unter \_ \_ **certfindctlinstore**.
+Der \_ FIND-CTL-Rückruf wird für jeden der oben genannten Suchtypen aufgerufen. Die an [**CertFindCTLInStore**](/windows/win32/api/Wincrypt/nf-wincrypt-certfindctlinstore) übergebenen Parameter werden direkt in die CERT \_ STORE \_ PROV FIND INFO-Struktur kopiert, bevor der \_ FIND \_ \_ CTL-Rückruf aufgerufen wird. Ausführliche Informationen zu den Feldwerten für die verschiedenen Suchtypen der CERT \_ STORE \_ PROV \_ FIND \_ INFO-Struktur finden Sie unter **CertFindCTLInStore**.
 
-Mit dem CTL- \_ \_ Suchtyp "vorhandene CTL suchen" können Sie ermitteln, ob die CTL bereits im Speicher vorhanden ist, bevor Sie ein CTL-Add-in
+Der CTL \_ \_ FIND EXISTING CTL-Suchtyp hilft zu bestimmen, ob die CTL bereits im Speicher vorhanden ist, bevor eine CTL hinzugefügt wird.
 
-Für die CTL- \_ Suche \_ ist " *pvfindpara* " ein Zeiger auf die [**CTL- \_ Kontext**](/windows/win32/api/Wincrypt/ns-wincrypt-ctl_context) Struktur der CTL, um zu bestimmen, ob Sie bereits im Speicher vorhanden ist.
+Für CTL \_ FIND \_ EXISTING ist *pvFindPara* ein Zeiger auf die [**CTL \_ CONTEXT-Struktur**](/windows/win32/api/Wincrypt/ns-wincrypt-ctl_context) der CTL, um zu bestimmen, ob sie bereits im Speicher vorhanden ist.
 
  
 

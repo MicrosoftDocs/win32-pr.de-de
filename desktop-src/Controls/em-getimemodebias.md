@@ -1,9 +1,9 @@
 ---
-title: EM_GETIMEMODEBIAS Meldung (RichEdit. h)
-description: Ruft den IME-Modus (Eingabemethoden-Editor) für ein Microsoft Rich Edit-Steuerelement ab.
+title: EM_GETIMEMODEBIAS (Richedit.h)
+description: Ruft den ImE-Modus (Input Method Editor) für ein Microsoft Rich Edit-Steuerelement ab.
 ms.assetid: e8ca899f-3423-4814-86e9-133dfd11f9a6
 keywords:
-- Windows-Steuerelemente für EM_GETIMEMODEBIAS Meldung
+- EM_GETIMEMODEBIAS meldungssteuerelemente Windows
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: ea13e151ae9d487340ee440e3b123ae70b437a02
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 49ad5504ca2e5ac1a332657c4f539c9f983292617b6e74b949598488ceb38dfa
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104040804"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119019538"
 ---
-# <a name="em_getimemodebias-message"></a>EM \_ getimemodebias-Nachricht
+# <a name="em_getimemodebias-message"></a>EM \_ GETIMEMODEBIAS-Nachricht
 
-Ruft den IME-Modus (Eingabemethoden-Editor) für ein Microsoft Rich Edit-Steuerelement ab.
+Ruft den ImE-Modus (Input Method Editor) für ein Microsoft Rich Edit-Steuerelement ab.
 
 ## <a name="parameters"></a>Parameter
 
@@ -45,13 +45,13 @@ Nicht verwendet; muss 0 (null) sein.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Diese Meldung gibt die aktuelle Einstellung für den IME-Modus zurück.
+Diese Meldung gibt die aktuelle ImE-Modus-Biaseinstellung zurück.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Verwenden Sie [**EM \_ getctfmodebias**](em-getctfmodebias.md), um den Text Dienst-Framework-Modus zu erhalten.
+Verwenden Sie EM [**\_ GETCTFMODEBIAS,**](em-getctfmodebias.md)um den Textdienstframework modus zu erhalten.
 
-Die Anwendung sollte [**EM- \_ isime**](em-isime.md) aufrufen, bevor diese Funktion aufgerufen wird.
+Die Anwendung sollte [**EM \_ ISIME vor dem**](em-isime.md) Aufrufen dieser Funktion aufrufen.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -59,23 +59,23 @@ Die Anwendung sollte [**EM- \_ isime**](em-isime.md) aufrufen, bevor diese Funkt
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows XP mit SP1 \[ Desktop-Apps\]<br/>                                  |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/>                                  |
-| Header<br/>                   | <dl> <dt>RichEdit. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur XP mit \[ SP1-Desktop-Apps\]<br/>                                  |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                                  |
+| Header<br/>                   | <dl> <dt>Richedit.h</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-**Verweis**
+**Referenz**
 </dt> <dt>
 
-[**EM- \_ isime**](em-isime.md)
+[**EM \_ ISIME**](em-isime.md)
 </dt> <dt>
 
-[**EM \_ getctf modebias**](em-getctfmodebias.md)
+[**EM \_ GETCTFMODEBIAS**](em-getctfmodebias.md)
 </dt> </dl>
 
  

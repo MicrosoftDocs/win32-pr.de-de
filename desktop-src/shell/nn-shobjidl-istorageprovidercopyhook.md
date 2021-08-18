@@ -1,5 +1,5 @@
 ---
-description: Definiert eine Methode, die bestimmt, ob die Shell einen Ordner im Synchronisierungs Stamm eines cloudanbieters verschieben, kopieren, löschen oder umbenennen darf.
+description: Definiert eine Methode, die bestimmt, ob die Shell einen Ordner im Synchronisierungsstamm eines Cloudanbieters verschieben, kopieren, löschen oder umbenennen darf.
 title: IStorageProviderCopyHook-Schnittstelle
 ms.topic: reference
 ms.date: 11/11/2020
@@ -12,37 +12,37 @@ api_type:
 - COM
 api_location:
 - shobjidl.h
-ms.openlocfilehash: 52f2a7fb7c8d7b37fc27fd1e91c93d716bc92086
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: aa26a329bd80295a6a46a1bb11d1dc651baf1ea71975576ed704b29a7fee8b57
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104391784"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118968869"
 ---
 # <a name="istorageprovidercopyhook-interface"></a>IStorageProviderCopyHook-Schnittstelle
 
-Macht eine Methode verfügbar, die bestimmt, ob die Shell einen Ordner im Synchronisierungs Stamm eines cloudanbieters verschieben, kopieren, löschen oder umbenennen darf.
+Macht eine Methode verfügbar, die bestimmt, ob die Shell einen Ordner im Synchronisierungsstamm eines Cloudanbieters verschieben, kopieren, löschen oder umbenennen darf.
 
 ## <a name="members"></a>Member
 
-Die **istorageprovidercopyhook** -Schnittstelle erbt von der [**IUnknown**](/windows/win32/api/unknwn/nn-unknwn-iunknown) -Schnittstelle. **Istorageprovidercopyhook** verfügt auch über die folgenden Typen von Membern:
+Die **IStorageProviderCopyHook-Schnittstelle** erbt von der [**IUnknown-Schnittstelle.**](/windows/win32/api/unknwn/nn-unknwn-iunknown) **IStorageProviderCopyHook** verfügt auch über diese Membertypen:
 
 - [Methoden](#methods)
 
 ### <a name="methods"></a>Methoden
 
-Die **istorageprovidercopyhook** -Schnittstelle verfügt über diese Methoden.
+Die **IStorageProviderCopyHook-Schnittstelle** verfügt über diese Methoden.
 
 
 
 | Methode                                           | BESCHREIBUNG                                                                                               |
 |:-------------------------------------------------|:----------------------------------------------------------------------------------------------------------|
-| [**Copycallback**](nf-shobjidl-istorageprovidercopyhook-copycallback.md)               |  Bestimmt, ob die Shell einen Ordner im Synchronisierungs Stamm eines cloudanbieters verschieben, kopieren, löschen oder umbenennen darf.                                                           |
+| [**CopyCallback**](nf-shobjidl-istorageprovidercopyhook-copycallback.md)               |  Bestimmt, ob die Shell einen Ordner im Synchronisierungsstamm eines Cloudanbieters verschieben, kopieren, löschen oder umbenennen darf.                                                           |
 
 
-## <a name="requirements"></a>Requirements (Anforderungen)
+## <a name="requirements"></a>Anforderungen
 
 | Anforderung | Wert |
 |-------------------------------------|-----------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client) | Windows 10 Insider Preview-Build 19624                                                |
-| Header<br/>                   | shobjidl. h   |
+| Unterstützte Mindestversion (Client) | Windows 10 Insider Preview Build 19624                                                |
+| Header<br/>                   | shobjidl.h   |

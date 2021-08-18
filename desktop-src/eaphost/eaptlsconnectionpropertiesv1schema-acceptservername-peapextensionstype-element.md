@@ -1,9 +1,9 @@
 ---
-title: Tlsextensions (V1-Schema)
-description: Erfahren Sie mehr über das tlsextensions (eaptype)-Element. Dieses Element ermöglicht zukünftige Erweiterungen des Schemas.
+title: TLSExtensions (v1-Schema)
+description: Erfahren Sie mehr über das ELEMENT TLSExtensions (EapType). Dieses Element ermöglicht zukünftige Verbesserungen am Schema.
 ms.assetid: f968d91d-e226-44a9-98db-347cbedfa201
 keywords:
-- EAPHost-Element
+- Element EAPHost
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ ms.topic: reference
 ms.date: 05/31/2018
 api_location: ''
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: 886f1ab2a6f00a4a8a9d530fa41865b2fd0cf0b8
-ms.sourcegitcommit: b0ebdefc3dcd5c04bede94091833aa1015a2f95c
+ms.openlocfilehash: 245fcac23de64c6f392cccfbacf1def48fc6465c0f1fbaf7fc004ac628f5864c
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/21/2020
-ms.locfileid: "106338086"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118984200"
 ---
-# <a name="tlsextensions-v1-schema"></a>Tlsextensions (V1-Schema)
+# <a name="tlsextensions-v1-schema"></a>TLSExtensions (v1-Schema)
 
-Das **tlsextensions (eaptype)** -Element ermöglicht zukünftige Erweiterungen des Schemas.
+Das **Element TLSExtensions (EapType)** ermöglicht zukünftige Verbesserungen am Schema.
 
 ``` syntax
 <xs:element
@@ -33,20 +33,20 @@ Das **tlsextensions (eaptype)** -Element ermöglicht zukünftige Erweiterungen d
  />
 ```
 
-Das-Element wird durch das [**eaptype**](eaptlsconnectionpropertiesv1schema-eaptype-element.md) -Element definiert.
+Das -Element wird durch das [**EapType-Element**](eaptlsconnectionpropertiesv1schema-eaptype-element.md) definiert.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Das **tlsextensions** -Element ist optional.
+Das **TLSExtensions-Element** ist optional.
 
 ## <a name="requirements"></a>Anforderungen
 
 
 
-| Role | Mindestens unterstützte Betriebssystemversion |
+| Role | Unterstützte Mindestversion des Betriebssystems |
 |------|------------------------------|
-| Client<br/> | Nur Windows 7 \[ -Desktop-Apps\]<br/>              |
-| Server<br/> | Nur Windows Server 2008 R2 \[ -Desktop-Apps\]<br/> |
+| Client<br/> | nur Windows 7 \[ Desktop-Apps\]<br/>              |
+| Server<br/> | Windows Nur Server 2008 \[ R2-Desktop-Apps\]<br/> |
 
 
 
@@ -54,31 +54,31 @@ Das **tlsextensions** -Element ist optional.
 
 <dl> <dt>
 
-**Definitions Kontext des Elements im Schema**
+**Definitionskontext des Elements im Schema**
 </dt> <dt>
 
-[**Eaptype**](eaptlsconnectionpropertiesv1schema-eaptype-element.md)
+[**EapType**](eaptlsconnectionpropertiesv1schema-eaptype-element.md)
 </dt> <dt>
 
-**Mögliches unmittelbar übergeordnetes Element in der Schema Instanz**
+**Mögliches unmittelbar übergeordnetes Element in der Schemainstanz**
 </dt> <dt>
 
-[**Eaptype**](eaptlsconnectionpropertiesv1schema-eaptype-element.md)
+[**EapType**](eaptlsconnectionpropertiesv1schema-eaptype-element.md)
 </dt> <dt>
 
 
 </dt> <dt>
 
-[EAPHost und Legacy Schema](eaphost-schemas.md)
+[EAPHost und Legacyschema](eaphost-schemas.md)
 </dt> <dt>
 
 [eaptlsconnectionpropertiesv1-Schema](eaptlsconnectionpropertiesv1schema-schema.md)
 </dt> <dt>
 
-[eaptlsconnectionpropertiesv1-Schema Elemente](eaptlsconnectionpropertiesv1schema-elements.md)
+[eaptlsconnectionpropertiesv1-Schemaelemente](eaptlsconnectionpropertiesv1schema-elements.md)
 </dt> <dt>
 
-[**Tlsextensions (tlsextensionstype)**](eaptlsconnectionpropertiesv2schema-performservervalidation-eaptype-element.md)
+[**TLSExtensions (TLSExtensionsType)**](eaptlsconnectionpropertiesv2schema-performservervalidation-eaptype-element.md)
 </dt> </dl>
 
  

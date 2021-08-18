@@ -1,33 +1,33 @@
 ---
-description: Im folgenden Beispiel wird ein Hashwert für einige Daten erstellt und dieser Hash signiert. In einer zweiten Phase werden der Hash und seine Signatur überprüft. Der Hash wird mit dem privaten Schlüssel des Benutzers signiert, und der öffentliche Schlüssel des Signatur Gebers wird exportiert, sodass die Signatur überprüft werden kann.
+description: Im folgenden Beispiel werden einige Daten gehasht und dieser Hash signiert. In einer zweiten Phase werden der Hash und seine Signatur überprüft. Der Hash wird mit dem privaten Schlüssel des Benutzers signiert, und der öffentliche Schlüssel des Signaturers wird exportiert, damit die Signatur überprüft werden kann.
 ms.assetid: 72f5d30a-efd5-4bf5-8057-cb73e5aa0514
-title: 'Beispiel-C-Programm: Signieren eines Hashs und Überprüfen der Hash Signatur'
+title: 'C-Beispielprogramm: Signieren eines Hashs und Überprüfen der Hashsignatur'
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 000db2504b6a7046d040f6519f78de55e5b98c3b
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 32668476939460ecba4d1894bf64be56d9563d6848d9490c93ddb1a7a6091d56
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104393349"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119140853"
 ---
-# <a name="example-c-program-signing-a-hash-and-verifying-the-hash-signature"></a>Beispiel-C-Programm: Signieren eines Hashs und Überprüfen der Hash Signatur
+# <a name="example-c-program-signing-a-hash-and-verifying-the-hash-signature"></a>C-Beispielprogramm: Signieren eines Hashs und Überprüfen der Hashsignatur
 
-Im [*folgenden Beispiel wird*](../secgloss/h-gly.md) ein Hashwert für einige Daten erstellt und dieser Hash signiert. In einer zweiten Phase werden der Hash und seine Signatur überprüft. Der Hash wird mit dem [*privaten Schlüssel*](../secgloss/p-gly.md)des Benutzers signiert, und der [*öffentliche Schlüssel*](../secgloss/p-gly.md) des Signatur Gebers wird exportiert, sodass die Signatur überprüft werden kann.
+Im folgenden Beispiel werden [*einige Daten gehasht*](../secgloss/h-gly.md) und dieser Hash signiert. In einer zweiten Phase werden der Hash und seine Signatur überprüft. Der Hash wird mit dem [](../secgloss/p-gly.md)privaten Schlüssel des Benutzers [](../secgloss/p-gly.md) signiert, und der öffentliche Schlüssel des Signaturers wird exportiert, damit die Signatur überprüft werden kann.
 
-In diesem Beispiel werden die folgenden Aufgaben und [*kryptoapi*](../secgloss/c-gly.md) -Funktionen veranschaulicht:
+Dieses Beispiel veranschaulicht die folgenden Aufgaben und [*CryptoAPI-Funktionen:*](../secgloss/c-gly.md)
 
--   Erwerben eines CSP mithilfe von [**CryptAcquireContext**](/windows/desktop/api/Wincrypt/nf-wincrypt-cryptacquirecontexta).
--   Das Schlüsselpaar des Benutzers bei der Signatur wird mithilfe von " \_ [**CryptGetUserKey**](/windows/desktop/api/Wincrypt/nf-wincrypt-cryptgetuserkey)" erhalten.
--   Erstellen eines PublicKeyBlob mit dem öffentlichen Schlüssel des Signatur Gebers, der im Signatur Überprüfungsprozess mithilfe von [**CryptExportKey**](/windows/desktop/api/Wincrypt/nf-wincrypt-cryptexportkey)verwendet werden soll.
--   Erstellen eines Hash Objekts mithilfe von " [**cryptkreatehash**](/windows/desktop/api/Wincrypt/nf-wincrypt-cryptcreatehash)".
--   Hashwert für die Daten mithilfe von [**CryptHashData**](/windows/desktop/api/Wincrypt/nf-wincrypt-crypthashdata).
--   Signieren des Hashs mithilfe von " [**cryptsignhash**](/windows/desktop/api/Wincrypt/nf-wincrypt-cryptsignhasha)".
--   Zerstören des ursprünglichen Hash Objekts mithilfe von " [**cryptdestroyhash**](/windows/desktop/api/Wincrypt/nf-wincrypt-cryptdestroyhash)".
--   Der öffentliche Schlüssel, der zum Überprüfen des verfügbaren Hashwerts mithilfe von [**cryptimportkey**](/windows/desktop/api/Wincrypt/nf-wincrypt-cryptimportkey)benötigt wird.
--   Erneutes Erstellen des Hash Objekts mithilfe von " [**cryptkreatehash**](/windows/desktop/api/Wincrypt/nf-wincrypt-cryptcreatehash) " und " [**CryptHashData**](/windows/desktop/api/Wincrypt/nf-wincrypt-crypthashdata)".
--   Überprüfen der Signatur für den Hash mithilfe von [**cryptverifysignature**](/windows/desktop/api/Wincrypt/nf-wincrypt-cryptverifysignaturea).
--   Normale Bereinigung wird durchgeführt.
+-   Abrufen eines CSP [**mithilfe von CryptAcquireContext**](/windows/desktop/api/Wincrypt/nf-wincrypt-cryptacquirecontexta).
+-   Abrufen des AT \_ SIGNATURE-Schlüsselpaars des Benutzers [**mithilfe von CryptGetUserKey**](/windows/desktop/api/Wincrypt/nf-wincrypt-cryptgetuserkey).
+-   Erstellen einer PUBLICKEYBLOB-Datei mit dem öffentlichen Schlüssel des Signatursignaturschlüssels, der bei der Signaturüberprüfung mithilfe von [**CryptExportKey verwendet wird.**](/windows/desktop/api/Wincrypt/nf-wincrypt-cryptexportkey)
+-   Erstellen eines Hashobjekts mit [**CryptCreateHash**](/windows/desktop/api/Wincrypt/nf-wincrypt-cryptcreatehash).
+-   Hashing der Daten mit [**CryptHashData**](/windows/desktop/api/Wincrypt/nf-wincrypt-crypthashdata).
+-   Signieren des Hashs mit [**CryptSignHash**](/windows/desktop/api/Wincrypt/nf-wincrypt-cryptsignhasha).
+-   Zerstören des ursprünglichen Hashobjekts mit [**CryptDestroyHash**](/windows/desktop/api/Wincrypt/nf-wincrypt-cryptdestroyhash).
+-   Erstellen des öffentlichen Schlüssels, der zum Überprüfen des Hashs erforderlich ist, [**mithilfe von CryptImportKey**](/windows/desktop/api/Wincrypt/nf-wincrypt-cryptimportkey).
+-   Erstellen Sie das Hashobjekt mit [**CryptCreateHash**](/windows/desktop/api/Wincrypt/nf-wincrypt-cryptcreatehash) und [**CryptHashData neu.**](/windows/desktop/api/Wincrypt/nf-wincrypt-crypthashdata)
+-   Überprüfen der Signatur auf dem Hash [**mithilfe von CryptVerifySignature**](/windows/desktop/api/Wincrypt/nf-wincrypt-cryptverifysignaturea).
+-   Ausführen der normalen Bereinigung.
 
 
 ```C++

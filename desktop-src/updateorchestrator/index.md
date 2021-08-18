@@ -1,46 +1,46 @@
 ---
 title: Update Orchestrator-API
-description: Updateorchestrator plant Ihre automatischen Software Updates mit Benutzer Beeinträchtigung.
+description: UpdateOrchestrator planen Ihre automatischen Softwareupdates mit Blick auf die Auswirkungen auf den Benutzer.
 ms.date: 01/14/2021
 ms.topic: overview
-ms.openlocfilehash: a172cccdc56d2c645bb4e7d048066ca34aea07ba
-ms.sourcegitcommit: 9c8ddec1e955f181beecad0478c1fb79013b5e9d
+ms.openlocfilehash: 6460446397af168a4098a7203179d5587d4dcd9a3cea813991648a5083d07334
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/21/2021
-ms.locfileid: "103869295"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118966104"
 ---
-# <a name="updateorchestrator-api"></a>Updateorchestrator-API
+# <a name="updateorchestrator-api"></a>UpdateOrchestrator-API
 
-**Updateorchestrator** plant Ihre automatischen Software Updates mit Benutzer Beeinträchtigung. Diese API ermöglicht es Ihnen, den automatischen Download und die Installation zusammen mit Ihren Anforderungen zu planen, um Updates zu einem optimalen Zeitpunkt auszuführen, der die Auswirkungen des Benutzers minimiert. Diese Features profitieren insbesondere von niedrigeren Leistungssystemen mit eingeschränkten oder langsameren computingressourcen.
+**UpdateOrchestrator planen** Ihre automatischen Softwareupdates mit Blick auf die Auswirkungen auf den Benutzer. Mit dieser API können Sie automatische Downloads und Installationen sowie deren Anforderungen planen, um Updates zu einem optimalen Zeitpunkt ausführen zu können, der die Auswirkungen der Benutzer minimiert. Diese Features profitieren insbesondere von Leistungssystemen mit eingeschränkten oder langsameren Computingressourcen.
 
-Windows 19h1 umfasst eine erste Generation für automatische Software Update-Anwendungsfälle, die von Betriebssystemupdates übernommen und APP-Updates gespeichert werden, und stellt eine anfängliche "eingeschränkte Zugriffs Version" dieser API für eine ausgewählte Gruppe von Aktualisierer von "User-Mode"-Apps bereit, wie unten beschrieben.
+Windows 19H1 enthält eine Lösung der ersten Generation für Anwendungsfälle für automatische Softwareupdates, die von Betriebssystemupdates und Store-App-Updates übernommen wurden, und macht eine anfängliche Version mit eingeschränktem Zugriff dieser API für eine ausgewählte Gruppe von Updatern von Apps im Benutzermodus verfügbar, wie unten beschrieben.
 
 ## <a name="features"></a>Features
 
-- Registriert Software-updaterer dynamisch.
+- Dynamisches Registrieren von Softwareupdatern
  
-- Ruft registrierte Softwareupdates während der optimalen Zeiten auf, z. b. während des Benutzer Mangels, um "Benutzermodusanwendungen" zu aktualisieren.
-    - Bietet die Möglichkeit, auf der Stromversorgung "aktiv" zu bleiben, um die Auswirkungen auf die Benutzer zu verringern.
+- Ruft registrierte Softwareupdateer zu optimalen Zeiten auf, z. B. während der Abwesenheit von Benutzer, um "Benutzermodus-Apps" zu aktualisieren.
+    - Umfasst die Fähigkeit, die Stromversorgung des Wechselstroms zu "bewachen", um die Auswirkungen auf die Entfernung von Benutzer weiter zu verringern.
 
-- Arbeitet mit einem Vertrauensstellungs Modell, das nur von einem Drittanbieter registrierte Software-Aktualisierungen aufruft.
-    - Beim verfügbar machen von updateorchestrator bei allen Aufrufern, wie z. b. Aktualisieren der BIOS-Firmware oder Treiber, wenn ein Benutzer nicht vorhanden ist, besteht ein erhebliches Risiko.  Updateorchestrator enthält ein Vertrauens Modell, um diese Risiken zu mindern.
+- Arbeitet mit einem Vertrauensstellungsmodell, das nur vertrauenswürdige von Drittanbietern registrierte Softwareupdater aufruft.
+    - Es gibt erhebliche Risiken, wenn UpdateOrchestrator für alle Aufrufer verfügbar ist, z. B. das Aktualisieren der BIOS-Firmware oder Treiber, wenn ein Benutzer nicht vorhanden ist.  UpdateOrchestrator enthält ein Vertrauensmodell, um diese Risiken zu minimieren.
 
 ## <a name="developer-audience"></a>Entwicklerzielgruppe
 
 > [!IMPORTANT]
-> Die updateorchestrator-API ist zurzeit ein [eingeschränktes Zugriffs Feature](/uwp/api/windows.applicationmodel.limitedaccessfeatures). Diese API wird in einer zukünftigen Version öffentlich verfügbar.
+> Die UpdateOrchestrator-API ist derzeit ein Feature [mit eingeschränktem Zugriff.](/uwp/api/windows.applicationmodel.limitedaccessfeatures) Diese API wird in einer zukünftigen Version öffentlich verfügbar sein.
 
-Verwenden Sie die updateorchestrator-API, wenn Sie bereits über hintergrundsoftwareupdateupdaterer für Win32-Benutzermodusanwendungen verfügen, z. b. den Updater von Adobe für Acrobat Reader oder den Diese Schnittstelle ist für UWP-/Store-Anwendungen nicht erforderlich, da die Microsoft Store diese Funktionalität bereits für Software Updates nutzt.
+Verwenden Sie die UpdateOrchestrator-API, wenn Sie bereits über Softwareupdateprogramme im Hintergrund für Win32-Anwendungen im Benutzermodus verfügen, z. B. adobe es updater for Acrobat Reader oder Valve es Valve. Diese Schnittstelle ist für UWP/Store-Anwendungen nicht erforderlich, da die Microsoft Store diese Funktionalität bereits für Softwareupdates nutzt.
 
-Um die bestmögliche Benutzerfreundlichkeit zu gewährleisten, ist diese erste API-Version auf einen ausgewählten Satz registrierter updaterer beschränkt, die die folgenden Kriterien erfüllen:
+Um eine optimale Kundenerfahrung zu bieten, ist dieses erste API-Release auf einen ausgewählten Satz registrierter Updater festgelegt, die die folgenden Kriterien erfüllen:
 
-- Nur Updates für Anwendungen im Benutzermodus
-- BIOS/Firmware/Gerät oder Software Treiber nicht einbeziehen
-    - Das Aktualisieren von BIOS-, Firmware-oder Geräte-/Softwaretreibern, die keine allgemeinen Qualitätskriterien erfüllen, stellt ein erhebliches Risiko dar, insbesondere dann, wenn ein Benutzer nicht vorhanden ist. 
-- Die Teilnahme an der Verwendung dieser API erfordert, dass Sie für alle Inhalte, die von ihren background-softwareupdatern auf den Benutzer Systemen per Überwachungen heruntergeladen und installiert werden, bürgen können. 
+- Updates nur für Benutzermodusanwendungen
+- Keine BIOS-/Firmware-/Geräte- oder Softwaretreiber einbeziehen
+    - Das Aktualisieren von BIOS-, Firmware- oder Geräte-/Softwaretreibern, die kein gemeinsames Qualitätskriterien erfüllt haben, stellt ein erhebliches Risiko dar, insbesondere wenn ein Benutzer nicht vorhanden ist. 
+- Die Teilnahme an der Nutzung dieser API beinhaltet die Möglichkeit, für alle Inhalte zu spricht, die von Ihren Softwareupdatern im Hintergrund über Überwachungen auf Benutzersystemen heruntergeladen und installiert werden. 
 
-Diese API kann vor der öffentlichen Freigabe erheblich geändert werden.   Während sich die updateorchestrator-API in der Entwicklungsphase befindet, ist diese erste Version als beschränkte Zugriffs Funktion nur für Update Entwickler vorgesehen, die zu diesem Zeitpunkt die oben aufgeführten Kriterien erfüllen.
+Diese API kann vor der Veröffentlichung erheblich geändert werden.   Während sich die UpdateOrchestrator-API in der Entwicklung befindet, gilt dieses erste Release als Feature mit eingeschränktem Zugriff nur für Updater, die die oben genannten Kriterien zu diesem Zeitpunkt erfüllen.
 
-Unser Ziel ist es, die Funktionalität dieser API zu verbessern und die Auswirkungen mehrerer automatischer softwareupdateupdaterer unter Windows zu verringern. Wir freuen uns über Ihre Eingaben in dieser [**kurzen Umfrage**](https://aka.ms/UOAPISurvey) , um uns zu helfen, zu verstehen, wie die updateorchestrator-API Ihre Entwickler Anforderungen besser bedienen kann.
+Unser Ziel ist es, die Funktionalität dieser API zu verbessern und die Auswirkungen mehrerer automatischer Softwareupdates auf die Windows. Wir würden uns über Ihre Beiträge in dieser [**kurzen**](https://aka.ms/UOAPISurvey) Umfrage freuen, um zu verstehen, wie die UpdateOrchestrator-API Ihre Entwickleranforderungen besser erfüllen kann.
 

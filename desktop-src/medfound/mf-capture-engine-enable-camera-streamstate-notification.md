@@ -1,25 +1,25 @@
 ---
-description: Gibt an, ob streamstatusbenachrichtigungen aktiviert werden sollen.
+description: Gibt an, ob Streamzustandsbenachrichtigungen aktiviert werden sollen.
 ms.assetid: 97CCEBB6-9634-4BA6-966A-621F9023B59F
-title: MF_CAPTURE_ENGINE_ENABLE_CAMERA_STREAMSTATE_NOTIFICATION-Attribut (MF. Engine. h)
+title: MF_CAPTURE_ENGINE_ENABLE_CAMERA_STREAMSTATE_NOTIFICATION -Attribut (Mfcaptureengine.h)
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: ca293e172a8f8e1a28b5f3934e61d3b90cfb20ee
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: fce100a79f3e8c146dde082a29242920d01c83fbffead5acb2c9adf803319de9
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106373708"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118973989"
 ---
-# <a name="mf_capture_engine_enable_camera_streamstate_notification-attribute"></a>MF- \_ Erfassungs Modul \_ \_ enable \_ Camera \_ streamstate- \_ Benachrichtigungs Attribut
+# <a name="mf_capture_engine_enable_camera_streamstate_notification-attribute"></a>MF \_ CAPTURE ENGINE ENABLE CAMERA \_ \_ \_ \_ STREAMSTATE \_ NOTIFICATION-Attribut
 
-Gibt an, ob streamstatusbenachrichtigungen aktiviert werden sollen.
+Gibt an, ob Streamzustandsbenachrichtigungen aktiviert werden sollen.
 
 ## <a name="data-type"></a>Datentyp
 
 ## <a name="remarks"></a>Bemerkungen
 
-Ein Wert ungleich 0 (null) gibt an, dass Benachrichtigungen aktiviert werden sollen. Wenn das-Attribut nicht vorhanden ist oder wenn der Wert des-Attributs 0 ist, werden Benachrichtigungen nicht aktiviert.
+Ein Wert, der nicht 0 (null) ist, gibt an, dass Benachrichtigungen aktiviert werden sollen. Wenn das Attribut nicht vorhanden ist oder der Wert des Attributs 0 ist, werden Benachrichtigungen nicht aktiviert.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -27,7 +27,7 @@ Ein Wert ungleich 0 (null) gibt an, dass Benachrichtigungen aktiviert werden sol
 
 | Anforderung | Wert |
 |-------------------|----------------------------------------------------------------------------------------------|
-| Header<br/> | <dl> <dt>"MF"-Engine. h</dt> </dl> |
+| Header<br/> | <dl> <dt>Mfcaptureengine.h</dt> </dl> |
 
 
 
@@ -35,7 +35,7 @@ Ein Wert ungleich 0 (null) gibt an, dass Benachrichtigungen aktiviert werden sol
 
 <dl> <dt>
 
-[Alphabetische Liste der Media Foundation Attribute](alphabetical-list-of-media-foundation-attributes.md)
+[Alphabetische Liste Media Foundation Attribute](alphabetical-list-of-media-foundation-attributes.md)
 </dt> </dl>
 
  

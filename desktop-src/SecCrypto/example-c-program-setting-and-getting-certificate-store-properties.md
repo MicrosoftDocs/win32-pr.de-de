@@ -1,34 +1,34 @@
 ---
-description: Im folgenden Beispiel wird eine Zertifikat Speicher Eigenschaft, der lokalisierte Speicher Name, festgelegt und abgerufen. Diese Eigenschaft wird nicht beibehalten, wenn der Speicher geschlossen wird.
+description: Im folgenden Beispiel wird eine Zertifikatspeichereigenschaft , der lokalisierte Speichername, festgelegt und ruft sie ab. Diese Eigenschaft wird nicht beibehalten, wenn der Speicher geschlossen wird.
 ms.assetid: 9fb368c9-a0d7-4c5f-9a38-7ef8f7283354
-title: 'Beispiel-C-Programm: festlegen und erhalten von Zertifikat Speicher Eigenschaften'
+title: 'C-Beispielprogramm: Festlegen und Abrufen von Zertifikatseigenschaften Store'
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 7337027c265376f9145ef7b68f359250223d20f1
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 59d65eeb0ee667b1dbce5a1df6c9c73d1849ef2524ecc3d0674d6fa7a5225fdd
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "104345748"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119007528"
 ---
-# <a name="example-c-program-setting-and-getting-certificate-store-properties"></a>Beispiel-C-Programm: festlegen und erhalten von Zertifikat Speicher Eigenschaften
+# <a name="example-c-program-setting-and-getting-certificate-store-properties"></a>C-Beispielprogramm: Festlegen und Abrufen von Zertifikatseigenschaften Store
 
-Im folgenden Beispiel wird eine Zertifikat Speicher Eigenschaft, der lokalisierte Speicher Name, festgelegt und abgerufen. Diese Eigenschaft wird nicht beibehalten, wenn der Speicher geschlossen wird.
+Im folgenden Beispiel wird eine Zertifikatspeichereigenschaft , der lokalisierte Speichername, festgelegt und ruft sie ab. Diese Eigenschaft wird nicht beibehalten, wenn der Speicher geschlossen wird.
 
-In diesem Beispiel werden die folgenden Aufgaben und [*kryptoapi*](../secgloss/c-gly.md) -Funktionen veranschaulicht:
+In diesem Beispiel werden die folgenden Aufgaben und [*CryptoAPI-Funktionen*](../secgloss/c-gly.md) veranschaulicht:
 
--   Öffnen eines Zertifikat Speicher mithilfe von " [**certopeinstore**](/windows/desktop/api/Wincrypt/nf-wincrypt-certopenstore)".
--   Festlegen des lokalisierten Namens des Stores mithilfe von " [**certsetstoreproperty**](/windows/desktop/api/Wincrypt/nf-wincrypt-certsetstoreproperty)".
--   Abrufen des lokalisierten Namens des Stores mithilfe von " [**certgetstoreproperty**](/windows/desktop/api/Wincrypt/nf-wincrypt-certgetstoreproperty)".
--   Der vordefinierte lokalisierte Speicher Name wird mithilfe von " [**cryptfindlocalizedname**](/windows/desktop/api/Wincrypt/nf-wincrypt-cryptfindlocalizedname)" abgerufen.
--   Speichern Sie den Zertifikat Speicher als [*PKCS \# 7*](../secgloss/p-gly.md) -Nachricht in einer Datei mit [**certsavestore**](/windows/desktop/api/Wincrypt/nf-wincrypt-certsavestore).
--   Speichern Sie den Zertifikat Speicher unter Verwendung von [**certsavestore**](/windows/desktop/api/Wincrypt/nf-wincrypt-certsavestore)in einem [*speicherblob*](../secgloss/b-gly.md) .
--   Bestimmen \# Sie mithilfe von [**cryptgetmessagesignercount**](/windows/desktop/api/Wincrypt/nf-wincrypt-cryptgetmessagesignercount)die Anzahl der Signatur Geber der PKCS 7-Nachricht.
--   Öffnen \# Sie mithilfe von [**cryptgetmessagecertificate**](/windows/desktop/api/Wincrypt/nf-wincrypt-cryptgetmessagecertificates)einen Zertifikat Speicher aus einer PKCS 7-Nachricht im Arbeitsspeicher.
--   Initialisieren des [**crypt- \_ Algorithmus- \_ Bezeichners**](/windows/desktop/api/Wincrypt/ns-wincrypt-crypt_algorithm_identifier) und der [**crypt- \_ Hash \_ Nachrichten \_ para**](/windows/desktop/api/Wincrypt/ns-wincrypt-crypt_hash_message_para) -Struktur, die zum [*Hash*](../secgloss/h-gly.md) der Nachricht erforderlich
--   Hash und Codieren der Nachricht mithilfe von [**crypthashmessage**](/windows/desktop/api/Wincrypt/nf-wincrypt-crypthashmessage).
--   Stellen Sie fest, ob an einem geöffneten Zertifikat Speicher Änderungen vorgenommen wurden, und synchronisieren Sie den Speicher bei Bedarf mithilfe von " [**certcontrolstore**](/windows/desktop/api/Wincrypt/nf-wincrypt-certcontrolstore)".
--   Schließen eines Zertifikat Speicher mit " [**certclosestore**](/windows/desktop/api/Wincrypt/nf-wincrypt-certclosestore) " mit dem "CERT \_ Close \_ Store Force"- \_ \_ Flag.
+-   Öffnen eines Zertifikatspeichers mit [**CertOpenStore**](/windows/desktop/api/Wincrypt/nf-wincrypt-certopenstore).
+-   Festlegen des lokalisierten Namens des Speichers mithilfe von [**CertSetStoreProperty.**](/windows/desktop/api/Wincrypt/nf-wincrypt-certsetstoreproperty)
+-   Abrufen des lokalisierten Namens des Speichers mithilfe von [**CertGetStoreProperty.**](/windows/desktop/api/Wincrypt/nf-wincrypt-certgetstoreproperty)
+-   Abrufen des vordefinierten lokalisierten Speichernamens mit [**CryptFindLocalizedName.**](/windows/desktop/api/Wincrypt/nf-wincrypt-cryptfindlocalizedname)
+-   Speichern Sie den Zertifikatspeicher als [*PKCS \# 7-Nachricht*](../secgloss/p-gly.md) mithilfe von [**CertSaveStore**](/windows/desktop/api/Wincrypt/nf-wincrypt-certsavestore)in einer Datei.
+-   Speichern Sie den Zertifikatspeicher [**mithilfe von CertSaveStore**](/windows/desktop/api/Wincrypt/nf-wincrypt-certsavestore)in einem [*Speicherblob.*](../secgloss/b-gly.md)
+-   Bestimmen Sie die Anzahl der Signierer der PKCS \# 7-Nachricht mithilfe von [**CryptGetMessageSignercount.**](/windows/desktop/api/Wincrypt/nf-wincrypt-cryptgetmessagesignercount)
+-   Öffnen Sie \# mit [**CryptGetMessageCertificates**](/windows/desktop/api/Wincrypt/nf-wincrypt-cryptgetmessagecertificates)einen Zertifikatspeicher aus einer PKCS 7-Nachricht im Arbeitsspeicher.
+-   Initialisieren der [**Datenstrukturen CRYPT \_ ALGORITHM \_ IDENTIFIER**](/windows/desktop/api/Wincrypt/ns-wincrypt-crypt_algorithm_identifier) und [**CRYPT \_ HASH MESSAGE \_ \_ PARA,**](/windows/desktop/api/Wincrypt/ns-wincrypt-crypt_hash_message_para) die zum [*Hashen*](../secgloss/h-gly.md) der Nachricht erforderlich sind
+-   Hashen und Codieren der Nachricht mithilfe von [**CryptHashMessage.**](/windows/desktop/api/Wincrypt/nf-wincrypt-crypthashmessage)
+-   Ermitteln Sie, ob Änderungen an einem geöffneten Zertifikatspeicher vorgenommen wurden, und synchronisieren Sie den Speicher bei Bedarf mithilfe von [**CertControlStore.**](/windows/desktop/api/Wincrypt/nf-wincrypt-certcontrolstore)
+-   Schließen eines Zertifikatspeichers mithilfe von [**CertCloseStore**](/windows/desktop/api/Wincrypt/nf-wincrypt-certclosestore) mit dem CERT \_ CLOSE STORE FORCE \_ \_ \_ FLAG.
 
 
 ```C++

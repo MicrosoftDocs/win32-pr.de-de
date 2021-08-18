@@ -1,6 +1,6 @@
 ---
-description: Weitere Informationen finden Sie in der API. gettablecolumns-Methode.
-title: API. gettablecolumns-Methode
+description: 'Weitere Informationen finden Sie unter: Api.GetTableColumns-Methode'
+title: Api.GetTableColumns-Methode
 TOCTitle: 'GetTableColumns method '
 ms:assetid: Overload:Microsoft.Isam.Esent.Interop.Api.GetTableColumns
 ms:mtpsurl: https://msdn.microsoft.com/library/microsoft.isam.esent.interop.api.gettablecolumns(v=EXCHG.10)
@@ -14,17 +14,17 @@ dev_langs:
 - JScript
 - VB
 - other
-ms.openlocfilehash: b41a28bcd1494fd2fd43f2af530e3eb7353ff1ba
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 87917743dbb13076dd8303f0fffdda6abc4a6177fd0a98223c58649907c79771
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104128065"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118983850"
 ---
-# <a name="apigettablecolumns-method"></a>API. gettablecolumns-Methode
+# <a name="apigettablecolumns-method"></a>Api.GetTableColumns-Methode
 
-Geschützte Member einschließen  
-Geerbte Member einschließen  
+Geschützte Member enthalten  
+Geerbte Member enthalten  
 
 ## <a name="overload-list"></a>Überladeliste
 
@@ -39,13 +39,13 @@ Geerbte Member einschließen
 <tbody>
 <tr class="odd">
 <td><img src="../images/dn292146.pubmethod(exchg.10).gif" title="Öffentliche Methode" alt="Public method" /><img src="../images/dn292146.static(exchg.10).gif" title="Statischer Member" alt="Static member" /></td>
-<td><a href="dn292090(v=exchg.10).md">Gettablecolumns (JET_SESID JET_TABLEID)</a></td>
-<td>Durchläuft alle Spalten in der Tabelle, wobei Informationen zu den einzelnen Spalten zurückgegeben werden.</td>
+<td><a href="dn292090(v=exchg.10).md">GetTableColumns(JET_SESID, JET_TABLEID)</a></td>
+<td>Durch iteriert alle Spalten in der Tabelle und gibt Informationen zu den einzelnen Spalten zurück.</td>
 </tr>
 <tr class="even">
 <td><img src="../images/dn292146.pubmethod(exchg.10).gif" title="Öffentliche Methode" alt="Public method" /><img src="../images/dn292146.static(exchg.10).gif" title="Statischer Member" alt="Static member" /></td>
-<td><a href="dn292089(v=exchg.10).md">Gettablecolumns (JET_SESID, JET_DBID, Zeichenfolge)</a></td>
-<td>Durchläuft alle Spalten in der Tabelle, wobei Informationen zu den einzelnen Spalten zurückgegeben werden.</td>
+<td><a href="dn292089(v=exchg.10).md">GetTableColumns(JET_SESID, JET_DBID, String)</a></td>
+<td>Durch iteriert alle Spalten in der Tabelle und gibt Informationen zu den einzelnen Spalten zurück.</td>
 </tr>
 </tbody>
 </table>
@@ -55,10 +55,10 @@ Oben
 
 ## <a name="see-also"></a>Siehe auch
 
-#### <a name="reference"></a>Referenz
+#### <a name="reference"></a>Verweis
 
 [API-Klasse](./api-class.md)
 
-[API-Mitglieder](./api-members.md)
+[API-Member](./api-members.md)
 
-[Microsoft. ISAM. ESENT. Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)
+[Microsoft.Isam.Esent.Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)

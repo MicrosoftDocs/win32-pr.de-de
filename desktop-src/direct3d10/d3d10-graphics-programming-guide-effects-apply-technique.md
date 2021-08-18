@@ -1,23 +1,23 @@
 ---
-description: Wenn die Konstanten, Texturen und der Shader-Zustand deklariert und initialisiert sind, besteht die einzige Aufgabe darin, den Effekt Zustand im Gerät festzulegen.
+description: Wenn die Konstanten, Texturen und der Shaderzustand deklariert und initialisiert sind, müssen Sie nur noch den Effektzustand auf dem Gerät festlegen.
 ms.assetid: b6c88fa1-53d4-40dc-803d-5d1cdfe4777b
 title: Anwenden einer Technik (Direct3D 10)
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: bfb7cc48c9115dfb81c1688a3a499e24d46cc563
-ms.sourcegitcommit: c7add10d695482e1ceb72d62b8a4ebd84ea050f7
+ms.openlocfilehash: 0b4c920cbc7323ba42f3b099688a962674e3f5c2305746df7a56d1e158330919
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104483014"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119128412"
 ---
 # <a name="apply-a-technique-direct3d-10"></a>Anwenden einer Technik (Direct3D 10)
 
-Wenn die Konstanten, Texturen und der Shader-Zustand deklariert und initialisiert sind, besteht die einzige Aufgabe darin, den Effekt Zustand im Gerät festzulegen.
+Wenn die Konstanten, Texturen und der Shaderzustand deklariert und initialisiert sind, müssen Sie nur noch den Effektzustand auf dem Gerät festlegen.
 
-## <a name="set-non-shader-state-in-the-device"></a>Festlegen des Zustands eines nicht-Shader im Gerät
+## <a name="set-non-shader-state-in-the-device"></a>Festlegen des Zustands ohne Shader auf dem Gerät
 
-Der Pipeline Zustand wird nicht durch einen Effekt festgelegt. Beispielsweise bereitet das Löschen eines Renderziels das Renderziel für Daten vor. Im folgenden finden Sie ein Beispiel für das Löschen von Ausgabe Puffern, bevor Sie den Effekt Zustand im Gerät festlegen.
+Ein Pipelinezustand wird nicht durch einen Effekt festgelegt. Wenn Sie beispielsweise ein Renderziel löschen, wird das Renderziel auf Daten vorbereitet. Vor dem Festlegen des Effektzustands auf dem Gerät finden Sie hier ein Beispiel für das Löschen von Ausgabepuffern.
 
 
 ```
@@ -31,9 +31,9 @@ Der Pipeline Zustand wird nicht durch einen Effekt festgelegt. Beispielsweise be
 
 
 
-## <a name="set-effect-state-in-the-device"></a>Festlegen des Wirkungs Zustands im Gerät
+## <a name="set-effect-state-in-the-device"></a>Festlegen des Effektzustands auf dem Gerät
 
-Der Effekt Zustand wird durch Anwenden des Effekt Zustands innerhalb der Renderschleife festgelegt. Dies erfolgt von außerhalb von in. Das heißt, wählen Sie eine Technik aus, und legen Sie dann den Status für jeden der Durchläufen fest (je nach gewünschtem Ergebnis).
+Das Festlegen des Effektzustands erfolgt durch Anwenden des Effektzustands innerhalb der Renderschleife. Dies erfolgt von außen in . Das heißt, wählen Sie eine Technik aus, und legen Sie dann den Zustand für jeden der Durchläufe fest (je nach gewünschtem Ergebnis).
 
 
 ```
@@ -52,7 +52,7 @@ Der Effekt Zustand wird durch Anwenden des Effekt Zustands innerhalb der Renders
 
 
 
-Ein Effekt führt nichts aus, sondern legt einfach den Effekt auf das Gerät fest. Der Renderingcode wird aufgerufen, nachdem der Status des Effekts den Gerätezustand aktualisiert hat. In diesem Beispiel führt der drawinentxed-Befehl das Rendering aus.
+Ein Effekt rendert nichts, sondern legt einfach den Effektzustand auf das Gerät fest. Der Renderingcode wird aufgerufen, nachdem der Auswirkungsstatus den Gerätezustand aktualisiert hat. In diesem Beispiel führt der DrawIndexed-Aufruf das Rendering aus.
 
 ## <a name="related-topics"></a>Zugehörige Themen
 

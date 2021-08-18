@@ -1,37 +1,37 @@
 ---
-description: Die WSDAPI-Entwicklungs Tools, die im Windows SDK (WSD-CodeGen, WSD-debughost und WSD-Debugclient) enthalten sind, ermöglichen Entwicklern das Erstellen und Debuggen von WSDAPI-basierten Clients und Geräten.
+description: Mit den im Windows SDK enthaltenen WSDAPI-Entwicklungstools (WSD CodeGen, WSD-Debughost und WSD-Debugclient) können Entwickler WSDAPI-basierte Clients und Geräte erstellen und debuggen.
 ms.assetid: 8bf6424e-1eed-4b0a-9d56-7aaf03a47992
-title: WSDAPI-Entwicklungs Tools
+title: WSDAPI-Entwicklungstools
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: dd245e347cab6205a8883126dcae281646a3488f
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 2bdad2d87ffafc337c98743f67ae022eb4d1d11616ac42940157a5785066645b
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106345846"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119130582"
 ---
-# <a name="wsdapi-development-tools"></a>WSDAPI-Entwicklungs Tools
+# <a name="wsdapi-development-tools"></a>WSDAPI-Entwicklungstools
 
-Die WSDAPI-Entwicklungs Tools, die im Windows SDK (WSD-CodeGen, WSD-debughost und WSD-Debugclient) enthalten sind, ermöglichen Entwicklern das Erstellen und Debuggen von WSDAPI-basierten Clients und Geräten. Der Quellcode für diese Tools ist nicht verfügbar. Die SDK-Tools befinden sich im folgenden Verzeichnis: <Windows SDK Install Folder> \\ bin.
+Mit den im Windows SDK enthaltenen WSDAPI-Entwicklungstools (WSD CodeGen, WSD-Debughost und WSD-Debugclient) können Entwickler WSDAPI-basierte Clients und Geräte erstellen und debuggen. Der Quellcode für diese Tools ist nicht verfügbar. SDK-Tools befinden sich im folgenden Verzeichnis: <Windows SDK Install Folder> \\ Bin.
 
-WSD CodeGen (wsdcodegen.exe) konvertiert einen WSDL-Vertrag in generierten C++-Code, der von Entwicklern direkt in aufgerufen werden kann. Sie behandelt die Datenserialisierung und die Netzwerkdarstellung, damit Entwickler sich auf das Entwerfen von Anwendungen konzentrieren können. Weitere Informationen zu WSD CodeGen finden Sie unter [Code-Generator für Webdienste auf Geräten](web-services-for-devices-code-generator.md). Dieses Tool ist im Microsoft Windows Software Development Kit (SDK) und im Windows-Treiberkit (WDK) verfügbar.
+WSD CodeGen (wsdcodegen.exe) konvertiert einen WSDL-Vertrag in generierten C++-Code, in den Entwickler direkt aufrufen können. Er verarbeitet die Datenserialisierung und die Wire-Darstellung, damit sich Entwickler auf das Entwerfen von Anwendungen konzentrieren können. Weitere Informationen zu WSD CodeGen finden Sie unter [Webdienste auf Geräten Code Generator](web-services-for-devices-code-generator.md). Dieses Tool ist im Microsoft Windows Software Development Kit (SDK) und im Windows Driver Kit (WDK) verfügbar.
 
-Die Tools WSD Debug Host (wsddebug \_host.exe) und WSD Debug Client (wsddebug \_client.exe) helfen Entwicklern beim Debuggen Ihrer Clients und Hosts. Diese Tools können zum Überprüfen und Überprüfen von WS-Discovery-und Metadatenaustausch-Datenverkehr verwendet werden. Weitere Informationen zum WSD-debughost und zum WSD-Debugclient finden Sie unter [Debugtools](debugging-tools.md). Diese Tools sind nur in der Windows SDK verfügbar.
+Die Tools WSD Debug Host (wsddebughost.exe) und \_ WSD Debug Client (wsddebugclient.exe) unterstützen Entwickler beim Debuggen ihrer Clients und \_ Hosts. Diese Tools können verwendet werden, um datenverkehrs- WS-Discovery und Metadatenaustausch zu überprüfen und zu überprüfen. Weitere Informationen zum WSD-Debughost und zum WSD-Debugclient finden Sie unter [Debugtools](debugging-tools.md). Diese Tools sind nur im Windows SDK verfügbar.
 
-Es gibt ein zusätzliches Entwicklungs Tool namens [WSDAPI Basic Interoperabilitäts Tool (wsdbit)](https://msdn.microsoft.com/library/cc264250.aspx), das nur im WDK verfügbar ist. Dieses Tool wird zum Testen von Dienst Methoden, MTOM (Message Transmission Optimization Mechanism), Anlagen oder WS-Eventing verwendet.
+Es gibt ein zusätzliches Entwicklungstool mit dem Namen [WSDAPI Basic Interoperability Tool (WSDBIT),](https://msdn.microsoft.com/library/cc264250.aspx)das nur im WDK verfügbar ist. Dieses Tool wird zum Testen von Dienstmethoden, MTOM (Message Transmission Optimization Mechanism), Anlagen oder WS-Eventing verwendet.
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[WSD-Anwendungsentwicklung unter Windows](wsd-application-development-on-windows.md)
+[WSD-Anwendungsentwicklung auf Windows](wsd-application-development-on-windows.md)
 </dt> <dt>
 
-[Code-Generator für Webdienste auf Geräten](web-services-for-devices-code-generator.md)
+[Codegenerator für Webdienste auf Geräten](web-services-for-devices-code-generator.md)
 </dt> <dt>
 
-[WSDAPI Basic Interoperabilitäts Tool (wsdbit)](https://msdn.microsoft.com/library/cc264250.aspx)
+[WSDAPI Basic Interoperability Tool (WSDBIT)](https://msdn.microsoft.com/library/cc264250.aspx)
 </dt> <dt>
 
 [Debugtools](debugging-tools.md)

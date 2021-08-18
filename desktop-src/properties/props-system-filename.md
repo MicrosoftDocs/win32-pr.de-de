@@ -1,21 +1,21 @@
 ---
 description: Der Dateiname, einschließlich der Erweiterung.
 ms.assetid: 40940026-6c67-4196-aff6-5f846dc94f27
-title: System. filename
+title: System.FileName
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 2d8f535eff4625178b3c32a04ea6d325505266a2
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: ff8a92febe0a4f2dfe8cc9d5741118fdb76bcb56c7bcd1ef5c3d881e8c0f9abf
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106367902"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119096919"
 ---
-# <a name="systemfilename"></a>System. filename
+# <a name="systemfilename"></a>System.FileName
 
-Der Dateiname, einschließlich der Erweiterung. System. File Extension wird von dieser Eigenschaft abgeleitet.
+Der Dateiname, einschließlich der Erweiterung. System.FileExtension wird von dieser Eigenschaft abgeleitet.
 
-Es ist möglich, dass das Element in einem Dateisystem nicht vorhanden ist (d. h., es kann nicht mithilfe von "deatefile" geöffnet werden). Wenn das Element jedoch als Datei dargestellt wird und der Name der standardmäßigen Win32-Dateibenennungs Syntax folgt, sollte die Datenquelle diese Eigenschaft ausgeben. Wenn es sich bei dem Element nicht um eine Datei handelt, sollte die Datenquelle diese Eigenschaft als VT \_ empty ausgeben.
+Es ist möglich, dass das Element in einem Dateisystem nicht vorhanden ist (d. h., es kann nicht mit CreateFile geöffnet werden). Wenn das Element jedoch als Datei dargestellt wird und sein Name der standardmäßigen Win32-Dateibenennungssyntax folgt, sollte die Datenquelle diese Eigenschaft aus geben. Wenn das Element keine Datei ist, sollte die Datenquelle diese Eigenschaft als VT \_ EMPTY aus geben.
 
 ## <a name="windows-10-version-1703-windows-10-version-1607-windows-10-version-1511-windows-10-version-1507-windows-81-windows-8-windows-7"></a>Windows 10, Version 1703, Windows 10, Version 1607, Windows 10, Version 1511, Windows 10, Version 1507, Windows 8.1, Windows 8, Windows 7
 
@@ -67,24 +67,24 @@ propertyDescription
             text = Q-Z
 ```
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Pkey-Werte werden in "propkey. h" definiert.
+PKEY-Werte werden in Propkey.h definiert.
 
-Das Element ist möglicherweise nicht in einem Dateisystem vorhanden (d. h. es kann nicht mithilfe von "anatefile" geöffnet werden). wenn das Element jedoch als Datei aus dem logischen Sinne dargestellt wird und der Name der standardmäßigen Win32-Datei namens Syntax folgt, sollte die Datenquelle diese Eigenschaft ausgeben. Wenn es sich bei einem Element nicht um eine Datei handelt, ist der Wert für diese Eigenschaft VT \_ empty. Weitere Informationen finden Sie unter System. itemnamedisplay. Dies hat den gleichen Wert wie System. Parser Name für Elemente, die vom Datei Ordner der Shell bereitgestellt werden.
+Das Element ist möglicherweise nicht in einem Dateisystem vorhanden (d. h., es kann nicht mit CreateFile geöffnet werden). Wenn das Element jedoch als Datei aus logischem Sinn dargestellt wird und sein Name der Win32-Standardsyntax für die Dateibenennung entspricht, sollte die Datenquelle diese Eigenschaft aus geben. Wenn ein Element keine Datei ist, ist der Wert für diese Eigenschaft VT \_ EMPTY. Weitere Informationen finden Sie unter System.ItemNameDisplay. Dies hat den gleichen Wert wie System.ParsingName für Elemente, die vom Dateiordner der Shell bereitgestellt werden.
 
-In der folgenden Tabelle sind Beispiele für Pfad-und Dateinamen Eigenschaftswerte aufgeführt:
+In der folgenden Tabelle sind Beispiele für Pfad- und Dateinameneigenschaftswerte aufgeführt:
 
 
 
 | Pfad                               | Eigenschaftswert |
 |------------------------------------|----------------|
-| c: \\ \\ Eigene Dateien \\hello.txt     | hello.txt      |
-| \\\\Server \\ Freigabe \\ "MyDir" \\news.doc | news.doc       |
-| \\\\Server \\ Freigabe \\numbers.xls     | numbers.xls    |
-| c: \\ Material \\ MyFolder                | MyFolder       |
-| \[e-Mail senden\]                  | VT \_ leer      |
-| \["Song. wma" auf einem tragbaren Gerät\]    | "Song. wma"       |
+| c: \\ Persönliche \\ Dateienhello.txt \\     | hello.txt      |
+| \\\\server \\ share \\ mydir \\news.doc | news.doc       |
+| \\\\\\ \\ Serverfreigabe-numbers.xls     | numbers.xls    |
+| c: \\ Stuff \\ MyFolder                | Myfolder       |
+| \[E-Mail-Nachricht\]                  | VT \_ EMPTY      |
+| \[song.wma auf einem portablen Gerät\]    | song.wma       |
 
 
 
@@ -94,46 +94,46 @@ In der folgenden Tabelle sind Beispiele für Pfad-und Dateinamen Eigenschaftswer
 
 <dl> <dt>
 
-[propertydescription](./propdesc-schema-propertydescription.md)
+[propertyDescription](./propdesc-schema-propertydescription.md)
 </dt> <dt>
 
-[SearchInfo](./propdesc-schema-searchinfo.md)
+[searchInfo](./propdesc-schema-searchinfo.md)
 </dt> <dt>
 
-[Labelinfo](./propdesc-schema-labelinfo.md)
+[labelInfo](./propdesc-schema-labelinfo.md)
 </dt> <dt>
 
-[TypeInfo](./propdesc-schema-typeinfo.md)
+[Typeinfo](./propdesc-schema-typeinfo.md)
 </dt> <dt>
 
-[Display Info](./propdesc-schema-displayinfo.md)
+[displayInfo](./propdesc-schema-displayinfo.md)
 </dt> <dt>
 
-[StringFormat](./propdesc-schema-stringformat.md)
+[Stringformat](./propdesc-schema-stringformat.md)
 </dt> <dt>
 
-[BooleanFormat](./propdesc-schema-booleanformat.md)
+[booleanFormat](./propdesc-schema-booleanformat.md)
 </dt> <dt>
 
-[NumberFormat](./propdesc-schema-numberformat.md)
+[Numberformat](./propdesc-schema-numberformat.md)
 </dt> <dt>
 
 [dateTimeFormat](./propdesc-schema-datetimeformat.md)
 </dt> <dt>
 
-[enumeratedlist](./propdesc-schema-enumeratedlist.md)
+[enumeratedList](./propdesc-schema-enumeratedlist.md)
 </dt> <dt>
 
-[DrawControl](./propdesc-schema-drawcontrol.md)
+[drawControl](./propdesc-schema-drawcontrol.md)
 </dt> <dt>
 
-[editcontrol](./propdesc-schema-editcontrol.md)
+[editControl](./propdesc-schema-editcontrol.md)
 </dt> <dt>
 
-[FilterControl](./propdesc-schema-filtercontrol.md)
+[Filtercontrol](./propdesc-schema-filtercontrol.md)
 </dt> <dt>
 
-[querycontrol](./propdesc-schema-querycontrol.md)
+[queryControl](./propdesc-schema-querycontrol.md)
 </dt> </dl>
 
  

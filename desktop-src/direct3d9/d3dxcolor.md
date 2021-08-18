@@ -13,12 +13,12 @@ api_type:
 - HeaderDef
 api_location:
 - d3dx9math.h
-ms.openlocfilehash: 58b02abc49b695169674a2579b73dc2359801a73
-ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
+ms.openlocfilehash: 28f170814988317cd1cdf3300e4cbb3c2a97fa0fac7a43b2231767914a9b103a
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2021
-ms.locfileid: "108115928"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118988720"
 ---
 # <a name="d3dxcolor-structure-d3dx9mathh"></a>D3DXCOLOR-Struktur (D3dx9math.h)
 
@@ -86,21 +86,21 @@ Alphakomponente der Farbe.
 
 </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-C++-Programmierer können die Operatorüberladung und Typcasting mit den [**D3DXCOLOR-Erweiterungen**](d3dxcolor-extensions.md)nutzen, die überladene Konstruktoren sowie Zuweisungs-, unäre und binäre Operatoren (einschließlich Gleichheit) implementieren.
+C++-Programmierer können die Vorteile der Operatorüberladung und Typüberlegung mit den [**D3DXCOLOR-Erweiterungen**](d3dxcolor-extensions.md)nutzen, die überladene Konstruktoren sowie Zuweisungs-, unäre und binäre Operatoren (einschließlich Gleichheit) implementieren.
 
 ## <a name="requirements"></a>Anforderungen
 
 
 
-| Anforderungen | Wert |
+| Anforderung | Wert |
 |-------------------|----------------------------------------------------------------------------------------|
 | Header<br/> | <dl> <dt>D3dx9math.h</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 

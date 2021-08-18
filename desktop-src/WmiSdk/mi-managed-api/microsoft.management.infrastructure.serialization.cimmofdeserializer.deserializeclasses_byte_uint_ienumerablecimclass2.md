@@ -1,6 +1,6 @@
 ---
-description: 'Weitere Informationen finden Sie unter: cimfufdeserializer. deserializeclasses-Methode (Byte [], UInt32, IEnumerable <CimClass> , onclasserforderliche, getincludedfilecontent)'
-title: Cimfufdeserializer. deserializeclasses-Methode (Byte [], UInt32, IEnumerable (cimclass), onclassbenötigte, getincludedfilecontent) (Microsoft. Management. Infrastructure. Serialization)
+description: 'Weitere Informationen zu: CimMofDeserializer.DeserializeClasses-Methode (Byte[], UInt32, IEnumerable, <CimClass> OnClassNeeded, GetIncludedFileContent)'
+title: CimMofDeserializer.DeserializeClasses-Methode (Byte[], UInt32, IEnumerable(CimClass), OnClassNeeded, GetIncludedFileContent) (Microsoft.Management.Infrastructure.Serialization)
 TOCTitle: CimMofDeserializer.DeserializeClasses method (Byte[], UInt32, IEnumerable(CimClass), OnClassNeeded, GetIncludedFileContent) (Microsoft.Management.Infrastructure.Serialization)
 ms:assetid: M:Microsoft.Management.Infrastructure.Serialization.CimMofDeserializer.DeserializeClasses(System.Byte[],System.UInt32@,System.Collections.Generic.IEnumerable{Microsoft.Management.Infrastructure.CimClass},Microsoft.Management.Infrastructure.Serialization.CimMofDeserializer.OnClassNeeded,Microsoft.Management.Infrastructure.Serialization.CimMofDeserializer.GetIncludedFileContent)
 ms.date: 11/14/2019
@@ -20,19 +20,19 @@ topic_type:
 - apiref
 product_family_name: VS
 ms.topic: reference
-ms.openlocfilehash: 5fd78e1c377db3a8fba0005539bb5d7c28cab232
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 7c09374b19c6e845dbac674b3b8c3e694ae9513c290acb90e1f8a7d5974dab49
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104344338"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119131092"
 ---
-# <a name="cimmofdeserializerdeserializeclasses-method-byteuint32ienumerablecimclass-onclassneeded-getincludedfilecontent"></a>Cimfufdeserializer. deserializeclasses-Methode (Byte \[ \] , UInt32, IEnumerable \<CimClass\> , onclasserforderlich, getincludedfilecontent)
+# <a name="cimmofdeserializerdeserializeclasses-method-byteuint32ienumerablecimclass-onclassneeded-getincludedfilecontent"></a>CimMofDeserializer.DeserializeClasses-Methode (Byte, \[ \] UInt32, IEnumerable \<CimClass\> , OnClassNeeded, GetIncludedFileContent)
 
-Deserialisiert CIM-Klassen auf der Grundlage von serialisierten Daten, eine Auflistung von übergeordneten CIM-Klassen und Rückrufe.
+Deserialisiert CIM-Klassen basierend auf serialisierten Daten, einer Auflistung übergeordneter CIM-Klassen und Rückrufen.
 
-**Namespace:**   [Microsoft. Management. Infrastructure. Serialization](/previous-versions/windows/desktop/wmi_v2/mi-managed-api/hh832966(v=vs.85))  
-**Assembly:**  Microsoft. Management. Infrastructure (in Microsoft.Management.Infrastructure.dll)  
+**Namespace:**   [Microsoft.Management.Infrastructure.Serialization](/previous-versions/windows/desktop/wmi_v2/mi-managed-api/hh832966(v=vs.85))  
+**Assembly:**  Microsoft.Management.Infrastructure (in Microsoft.Management.Infrastructure.dll)  
 
 ## <a name="syntax"></a>Syntax
 
@@ -79,45 +79,45 @@ Public Function DeserializeClasses (
 #### <a name="parameters"></a>Parameter
 
   - serializedData  
-    Typ: [System. Byte](/dotnet/api/system.byte?view=netframework-4.8)\[\]
+    Typ: [System.Byte](/dotnet/api/system.byte?view=netframework-4.8)\[\]
     
     Ein Puffer, der die serialisierten Daten enthält.
 
 <!-- end list -->
 
   - offset  
-    Typ: [System. UInt32](/dotnet/api/system.uint32?view=netframework-4.8)
+    Typ: [System.UInt32](/dotnet/api/system.uint32?view=netframework-4.8)
     
-    Der Byte Offset für den Speicherort, an dem mit dem Lesen der Daten begonnen werden soll. Wenn die-Methode zurückgegeben wird, zeigt der Offset auf das nächste Byte nach den deserialisierten Klassen.
+    Der Byteoffset zu der Position, an der mit dem Lesen der Daten begonnen werden soll. Wenn die Methode zurückgegeben wird, verweist der Offset auf das nächste Byte nach den deserialisierten Klassen.
 
 <!-- end list -->
 
   - Klassen  
-    Typ: [System. Collections. Generic. IEnumerable](/dotnet/api/system.collections.generic.ienumerable-1?view=netframework-4.8)\<[CimClass](/previous-versions/windows/desktop/wmi_v2/mi-managed-api/hh832269(v=vs.85))\>
+    Typ: [System.Collections.Generic.IEnumerable](/dotnet/api/system.collections.generic.ienumerable-1?view=netframework-4.8)\<[CimClass](/previous-versions/windows/desktop/wmi_v2/mi-managed-api/hh832269(v=vs.85))\>
     
-    Ein optionaler Cache von übergeordneten CIM-Klassen.
+    Ein optionaler Cache übergeordneter CIM-Klassen.
 
 <!-- end list -->
 
-  - onclassneeddcallback  
-    Typ: [onclasserforderliche](microsoft.management.infrastructure.serialization.cimmofdeserializer.onclassneeded.md)
+  - onClassNeededCallback  
+    Typ: [OnClassNeeded](microsoft.management.infrastructure.serialization.cimmofdeserializer.onclassneeded.md)
     
-    Eine Rückruffunktion, die zum Bereitstellen eines angeforderten Klassen Objekts während der Deserialisierung verwendet wird.
+    Eine Rückruffunktion, die verwendet wird, um während der Deserialisierung ein angefordertes Klassenobjekt bereitzustellen.
 
 <!-- end list -->
 
-  - getincludfilecallback  
-    Typ: [getincludedfilecontent](microsoft.management.infrastructure.serialization.cimmofdeserializer.getincludedfilecontent.md)
+  - getIncludedFileCallback  
+    Typ: [GetIncludedFileContent](microsoft.management.infrastructure.serialization.cimmofdeserializer.getincludedfilecontent.md)
     
-    Eine Rückruffunktion, die verwendet wird, um den Datei Pufferinhalt einer angegebenen Datei bereitzustellen.
+    Eine Rückruffunktion, die zum Bereitstellen des Dateipufferinhalts einer angegebenen Datei verwendet wird.
 
 #### <a name="return-value"></a>Rückgabewert
 
-Typ: [System. Collections. Generic. IEnumerable](/dotnet/api/system.collections.generic.ienumerable-1?view=netframework-4.8)\<[CimClass](/previous-versions/windows/desktop/wmi_v2/mi-managed-api/hh832269(v=vs.85))\>
+Typ: [System.Collections.Generic.IEnumerable](/dotnet/api/system.collections.generic.ienumerable-1?view=netframework-4.8)\<[CimClass](/previous-versions/windows/desktop/wmi_v2/mi-managed-api/hh832269(v=vs.85))\>
 
-Eine [IEnumerable \<T\> ](/dotnet/api/system.collections.generic.ienumerable-1?view=netframework-4.8) -Schnittstelle, die zum Auflisten der CIM-Klassen verwendet werden kann.
+Eine [ \<T\> IEnumerable-Schnittstelle,](/dotnet/api/system.collections.generic.ienumerable-1?view=netframework-4.8) die zum Aufzählen der CIM-Klassen verwendet werden kann.
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
-[Cimclass-Klasse](/previous-versions/windows/desktop/wmi_v2/mi-managed-api/hh832269(v=vs.85))  
-[Microsoft. Management. Infrastructure. Serialization-Namespace](/previous-versions/windows/desktop/wmi_v2/mi-managed-api/hh832966(v=vs.85))
+[CimClass-Klasse](/previous-versions/windows/desktop/wmi_v2/mi-managed-api/hh832269(v=vs.85))  
+[Microsoft.Management.Infrastructure.Serialization-Namespace](/previous-versions/windows/desktop/wmi_v2/mi-managed-api/hh832966(v=vs.85))

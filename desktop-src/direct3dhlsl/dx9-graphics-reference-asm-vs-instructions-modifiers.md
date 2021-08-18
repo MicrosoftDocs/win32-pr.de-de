@@ -1,6 +1,6 @@
 ---
-title: Anweisungsmodifiziererer (HLSL vs-Referenz)
-description: Anweisungs Modifizierer
+title: Anweisungsmodifizierer (HLSL VS-Referenz)
+description: Anweisungsmodifizierer
 ms.assetid: b713d847-c858-4492-918c-7a105f751624
 ms.topic: article
 ms.date: 05/31/2018
@@ -9,20 +9,20 @@ topic_type:
 api_name: ''
 api_type: ''
 api_location: ''
-ms.openlocfilehash: 573f2ef618c4cd29092fb38fb4c805bdeeecc219
-ms.sourcegitcommit: cba7f424a292fd7f3a8518947b9466439b455419
+ms.openlocfilehash: b2bdad90d13fe960c0d7a5cabfbb508d8abba890e8114c6d4ae1e47d1977e7d9
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "104472076"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119119694"
 ---
-# <a name="instruction-modifiers-hlsl-vs-reference"></a>Anweisungsmodifiziererer (HLSL vs-Referenz)
+# <a name="instruction-modifiers-hlsl-vs-reference"></a>Anweisungsmodifizierer (HLSL VS-Referenz)
 
-Anweisungsmodifiziererer wirken sich auf das Ergebnis der Anweisung aus, bevor Sie in das Ziel Register geschrieben wird.
+Anweisungsmodifizierer beeinflussen das Ergebnis der Anweisung, bevor sie in das Zielregister geschrieben wird.
 
-## <a name="_sat"></a>\_gesetzt
+## <a name="_sat"></a>\_sat
 
-Füllt das Anweisungs Ergebnis (oder bindet es) \[ \] vor dem Schreiben in das Ziel Register in 0, 1 Bereich.
+Saturiert (oder klammscht) das Anweisungsergebnis auf \[ 0,1 \] Bereich, bevor in das Zielregister geschrieben wird.
 
 Beispiel:
 
@@ -35,32 +35,32 @@ add_sat dst, src0, src1
 
 Hierbei gilt:
 
-DST = Klammer \_ zwischen \_ 0 \_ und \_ 1 (src0 + Quelle1)
+dst = Klammer \_ zwischen \_ 0 \_ und \_ 1(src0 + src1)
 
-Der \_ Sat-Anweisungs Modifizierer kostet keine zusätzlichen Anweisungs Slots.
+Der \_ Sat-Anweisungsmodifizierer kostet keine zusätzlichen Anweisungsslots.
 
-Wenn unterstützt, \_ kann der Sat-anweisungsmodifizierer mit einer beliebigen Anweisung verwendet werden, mit Ausnahme von: [FRC-vs](frc---vs.md), [SinCos-vs](sincos---vs.md)und [texldl-vs](texldl---vs.md).
+Falls unterstützt, kann der \_ Sat-Anweisungsmodifizierer mit einer beliebigen Anweisung verwendet werden, mit Ausnahme von [frc - vs](frc---vs.md), [sincos - vs](sincos---vs.md)und [texldl - vs](texldl---vs.md).
 
 
 
-| Vertex-Shader-Versionen | 1\_1 | 2 \_ 0 | 2 \_ x | 2 \_ SW | 3 \_ 0 | 3 \_ SW |
+| Vertex-Shaderversionen | 1\_1 | 2 \_ 0 | 2 \_ x | 2 \_ sw | 3 \_ 0 | 3 \_ sw |
 |------------------------|------|------|------|-------|------|-------|
-| \_gesetzt                  |      |      |      |       | x    | x     |
+| \_sat                  |      |      |      |       | x    | x     |
 
 
 
- 
+ 
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[Vertex-shaderanweisungen](dx9-graphics-reference-asm-vs-instructions.md)
+[Vertex-Shaderanweisungen](dx9-graphics-reference-asm-vs-instructions.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

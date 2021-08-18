@@ -14,16 +14,16 @@ api_type:
 api_location:
 - D3DX10.lib
 - D3DX10.dll
-ms.openlocfilehash: cefcf9a927cee0d8f7c83ff42ae6ca4fc699bb09
-ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
+ms.openlocfilehash: c3df77d7137b369b44d391ea1d8c607ca38dad83c95920d5a1eaf5e359b2b1be
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2021
-ms.locfileid: "108108748"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118991000"
 ---
 # <a name="d3dxquaternionrotationyawpitchroll-function-d3dx10mathh"></a>D3DXQuaternionRotationYawPitchRoll-Funktion (D3DX10Math.h)
 
-Erstellt eine Quaternion mit dem angegebenen Yaw, Pitch und Roll.
+Erstellt eine Quaternion mit dem angegebenen Yaw, der angegebenen Tonhöhe und dem angegebenen Roll.
 
 ## <a name="syntax"></a>Syntax
 
@@ -48,7 +48,7 @@ D3DXQUATERNION* D3DXQuaternionRotationYawPitchRoll(
 
 Typ: **[ **D3DXQUATERNION**](../direct3d9/d3dxquaternion.md)\***
 
-Zeiger auf [**D3DXQUATERNION,**](d3d10-d3dxquaternion.md) das das Ergebnis des Vorgangs ist.
+Zeiger auf das [**D3DXQUATERNION-Steuerelement,**](d3d10-d3dxquaternion.md) das das Ergebnis des Vorgangs ist.
 
 </dd> <dt>
 
@@ -57,16 +57,16 @@ Zeiger auf [**D3DXQUATERNION,**](d3d10-d3dxquaternion.md) das das Ergebnis des V
 
 Typ: **[ **FLOAT**](../winprog/windows-data-types.md)**
 
-Gischen Sie um die y-Achse im Bogenmaß.
+Gieren Sie um die y-Achse im Bogenmaß.
 
 </dd> <dt>
 
-*Tonhöhe* \[ In\]
+*Pitch* \[ In\]
 </dt> <dd>
 
 Typ: **[ **FLOAT**](../winprog/windows-data-types.md)**
 
-Tonhöhe um die x-Achse im Bogenmaß.
+Tonhöhe um die X-Achse im Bogenmaß.
 
 </dd> <dt>
 
@@ -75,7 +75,7 @@ Tonhöhe um die x-Achse im Bogenmaß.
 
 Typ: **[ **FLOAT**](../winprog/windows-data-types.md)**
 
-Rolling um die Z-Achse im Bogenmaß.
+Rollieren Sie um die Z-Achse im Bogenmaß.
 
 </dd> </dl>
 
@@ -85,7 +85,7 @@ Typ: **[ **D3DXQUATERNION**](../direct3d9/d3dxquaternion.md)\***
 
 Zeiger auf eine D3DXQUATERNION-Struktur mit dem angegebenen Yaw, Pitch und Roll.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
 Der Rückgabewert für diese Funktion ist der gleiche Wert, der im pOut-Parameter zurückgegeben wird. Auf diese Weise kann die D3DXQuaternionRotationYawPitchRoll-Funktion als Parameter für eine andere Funktion verwendet werden.
 
@@ -95,14 +95,14 @@ Verwenden [**Sie D3DXQuaternionNormalize**](d3d10-d3dxquaternionnormalize.md) f�
 
 
 
-| Anforderungen | Wert |
+| Anforderung | Wert |
 |--------------------|-----------------------------------------------------------------------------------------|
 | Header<br/>  | <dl> <dt>D3DX10Math.h</dt> </dl> |
 | Bibliothek<br/> | <dl> <dt>D3DX10.lib</dt> </dl>   |
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 

@@ -1,9 +1,9 @@
 ---
-title: Text. hoverfontstyle
-description: Das hoverfontstyle-Attribut gibt den Schriftart Stil an, der für das Text Steuerelement verwendet wird, wenn mit dem Mauszeiger darauf gezeigt wird, oder ruft ihn ab.
+title: TEXT.hoverFontStyle
+description: Das hoverFontStyle-Attribut gibt den für das Text-Steuerelement verwendeten Schriftschnitt an oder ruft ihn ab, wenn der Mauszeiger darüber bewegt wird.
 ms.assetid: 77ca8512-6150-4a75-8220-19de3fe9e719
 keywords:
-- Text. hoverfontstyle-Fenster Media Player
+- TEXT.hoverFontStyle Windows Media Player
 topic_type:
 - apiref
 api_name:
@@ -12,16 +12,16 @@ api_type:
 - NA
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: ebaeed6d9701b6e81ac91bc5292dc5b431aa70d7
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: d04f2ae8e4231ca89f37a65e591271f2536679da649d1efd22ffc1063c89d17d
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106369458"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119134623"
 ---
-# <a name="texthoverfontstyle"></a>Text. hoverfontstyle
+# <a name="texthoverfontstyle"></a>TEXT.hoverFontStyle
 
-Das **hoverfontstyle** -Attribut gibt den Schriftart Stil an, der für das Text Steuerelement verwendet wird, wenn mit dem Mauszeiger darauf gezeigt wird, oder ruft ihn ab.
+Das **hoverFontStyle-Attribut** gibt den für das Text-Steuerelement verwendeten Schriftschnitt an oder ruft ihn ab, wenn der Mauszeiger darüber bewegt wird.
 
 ``` syntax
         elementID.hoverFontStyle
@@ -29,29 +29,29 @@ Das **hoverfontstyle** -Attribut gibt den Schriftart Stil an, der für das Text 
 
 ## <a name="possible-values"></a>Mögliche Werte
 
-Dieses Attribut ist eine Lese- **/schreibzeichenfolge** , die einen oder mehrere der folgenden Werte enthält.
+Dieses Attribut ist eine  Zeichenfolge mit Lese-/Schreibzugriff, die mindestens einen der folgenden Werte enthält.
 
 
 
-| Wert     | BESCHREIBUNG           |
+| Wert     | Beschreibung           |
 |-----------|-----------------------|
-| Fett      | Fett Schriftstil.      |
-| Kursiv    | Kursiv Schriftstil.    |
-| Underline | Unterstreichung der Schriftart. |
-| Durchgestrichen | Stil der Strikeout-Schriftart. |
-| Normal    | Normaler Schriftart Stil.    |
+| Fett      | Fett formatiert.      |
+| Kursiv    | Italischer Schriftschnitt.    |
+| Underline | Unterstreichung des Schriftschnitts. |
+| Durchgestrichen | Durchstreichen des Schriftschnitts. |
+| Normal    | Normaler Schriftschnitt.    |
 
 
 
  
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Eine beliebige Kombination der Werte kann mit Leerzeichen getrennt verwendet werden. Der normale Stil hat Vorrang vor allen anderen Werten, und alle anderen Werte, die zusammen mit normal angegeben werden, werden ignoriert.
+Es kann eine beliebige Kombination der Werte verwendet werden, die durch Leerzeichen getrennt ist. Der Normal-Stil hat Vorrang vor allen anderen Werten, und alle anderen, die zusammen mit Normal angegeben werden, werden ignoriert.
 
-Wenn **hoverfontstyle** nicht angegeben ist, wird **FontStyle** verwendet.
+Wenn **hoverFontStyle** nicht angegeben ist, **wird fontStyle** verwendet.
 
-Im [value](text-value.md) -Attribut finden Sie ein Beispiel, das veranschaulicht, wie die Attribute des **Text** -Elements verwendet werden.
+Ein [Beispiel, das](text-value.md) veranschaulicht, wie die Attribute des TEXT-Elements verwendet werden, finden Sie im **Value-Attribut.**
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -59,18 +59,18 @@ Im [value](text-value.md) -Attribut finden Sie ein Beispiel, das veranschaulicht
 
 | Anforderung | Wert |
 |--------------------|------------------------------------------------------|
-| Version<br/> | Windows Media Player, Version 7,0 oder höher<br/> |
+| Version<br/> | Windows Media Player Version 7.0 oder höher<br/> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Text-Element**](text-element.md)
+[**TEXT-Element**](text-element.md)
 </dt> <dt>
 
-[**Text. FontStyle**](text-fontstyle.md)
+[**TEXT.fontStyle**](text-fontstyle.md)
 </dt> </dl>
 
  

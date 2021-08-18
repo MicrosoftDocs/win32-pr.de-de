@@ -1,24 +1,24 @@
 ---
-description: Die icertencodedatearray-Schnittstelle stellt die folgenden Methoden zur Verfügung.
+description: Die ICertEncodeDateArray-Schnittstelle macht die folgenden Methoden verfügbar.
 ms.assetid: 33105EAD-0F06-464F-A670-EE7628BC7148
-title: Icertencodedatearray-Methoden
+title: ICertEncodeDateArray-Methoden
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 55dac1b4a421f9da1dacb6ce382edaf97c9cabf8
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: cd045ebef6bf709fc47516471dfc4c5072e94222090ce4d5b77e8fa83149bfca
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106362591"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119005968"
 ---
-# <a name="icertencodedatearray-methods"></a>Icertencodedatearray-Methoden
+# <a name="icertencodedatearray-methods"></a>ICertEncodeDateArray-Methoden
 
-Die [**icertencodedatearray**](/windows/desktop/api/Certenc/nn-certenc-icertencodedatearray) -Schnittstelle stellt die folgenden Methoden zur Verfügung.
+Die [**ICertEncodeDateArray-Schnittstelle**](/windows/desktop/api/Certenc/nn-certenc-icertencodedatearray) macht die folgenden Methoden verfügbar.
 
 ## <a name="in-this-section"></a>In diesem Abschnitt
 
 -   [**Decode-Methode**](/windows/desktop/api/Certenc/nf-certenc-icertencodedatearray-decode)
--   [**Methode codieren**](/windows/desktop/api/Certenc/nf-certenc-icertencodedatearray-encode)
+-   [**Encode-Methode**](/windows/desktop/api/Certenc/nf-certenc-icertencodedatearray-encode)
 -   [**GetCount-Methode**](/windows/desktop/api/Certenc/nf-certenc-icertencodedatearray-getcount)
 -   [**GetValue-Methode**](/windows/desktop/api/Certenc/nf-certenc-icertencodedatearray-getvalue)
 -   [**Reset-Methode**](/windows/desktop/api/Certenc/nf-certenc-icertencodedatearray-reset)

@@ -1,7 +1,7 @@
 ---
 description: Erstellt eine zusätzliche Instanz der IEnumWiaItem2-Schnittstelle und sendet einen Zeiger darauf zurück.
 ms.assetid: 0d36d555-d0d9-4a1c-ac54-de611850449c
-title: 'IEnumWiaItem2:: Clone-Methode (WIA. h)'
+title: IEnumWiaItem2::Clone-Methode (Wia.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,16 +13,16 @@ api_type:
 - COM
 api_location:
 - Wia.h
-ms.openlocfilehash: 3279e7db3efe66e940adbcb9677204e5df7867f0
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 21c94c634a6930f28f48cdc35a4d3cf199b8fa33e9fb5f08444797fd76f50c45
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "103752872"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118965849"
 ---
-# <a name="ienumwiaitem2clone-method"></a>IEnumWiaItem2:: Clone-Methode
+# <a name="ienumwiaitem2clone-method"></a>IEnumWiaItem2::Clone-Methode
 
-Erstellt eine zusätzliche Instanz der [**IEnumWiaItem2**](-wia-ienumwiaitem2.md) -Schnittstelle und sendet einen Zeiger darauf zurück.
+Erstellt eine zusätzliche Instanz der [**IEnumWiaItem2-Schnittstelle**](-wia-ienumwiaitem2.md) und sendet einen Zeiger darauf zurück.
 
 ## <a name="syntax"></a>Syntax
 
@@ -39,12 +39,12 @@ HRESULT Clone(
 
 <dl> <dt>
 
-*ppiumum* \[ vorgenommen\]
+*ppIEnum* \[ out\]
 </dt> <dd>
 
 Typ: **[ **IEnumWiaItem2**](-wia-ienumwiaitem2.md)\*\***
 
-Empfängt die Adresse der [**IEnumWiaItem2**](-wia-ienumwiaitem2.md) -Schnittstellen Instanz, die von **IEnumWiaItem2:: Clone** erstellt wird.
+Empfängt die Adresse der [**IEnumWiaItem2-Schnittstelleninstanz,**](-wia-ienumwiaitem2.md) die **IEnumWiaItem2::Clone erstellt.**
 
 </dd> </dl>
 
@@ -52,11 +52,11 @@ Empfängt die Adresse der [**IEnumWiaItem2**](-wia-ienumwiaitem2.md) -Schnittste
 
 Typ: **HRESULT**
 
-Wenn diese Methode erfolgreich ausgeführt wird, gibt Sie **S \_ OK** zurück. Andernfalls wird ein **HRESULT** -Fehlercode zurückgegeben.
+Wenn diese Methode erfolgreich ist, wird **S \_ OK zurückgegeben.** Andernfalls wird ein **HRESULT-Fehlercode** zurückgegeben.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Anwendungen müssen die [IUnknown:: Release](/windows/win32/api/unknwn/nf-unknwn-iunknown-release) -Methode für die Schnittstellen Zeiger aufrufen, die Sie über den *ppienum* -Parameter empfangen.
+Anwendungen müssen die [IUnknown::Release-Methode für](/windows/win32/api/unknwn/nf-unknwn-iunknown-release) die Schnittstellenze0er aufrufen, die sie über *den ppIEnum-Parameter* empfangen.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -64,10 +64,10 @@ Anwendungen müssen die [IUnknown:: Release](/windows/win32/api/unknwn/nf-unknwn
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                     |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/>                               |
-| Header<br/>                   | <dl> <dt>WIA. h</dt> </dl>   |
-| IDL<br/>                      | <dl> <dt>WIA. idl</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ Vista-Desktop-Apps\]<br/>                                     |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/>                               |
+| Header<br/>                   | <dl> <dt>Wia.h</dt> </dl>   |
+| Idl<br/>                      | <dl> <dt>Wia.idl</dt> </dl> |
 
 
 

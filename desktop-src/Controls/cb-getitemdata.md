@@ -1,9 +1,9 @@
 ---
-title: CB_GETITEMDATA Meldung (Winuser. h)
-description: Eine Anwendung sendet eine CB \_ GetItemData-Nachricht an ein Kombinations Feld, um den von der Anwendung bereitgestellten Wert abzurufen, der mit dem angegebenen Element im Kombinations Feld verknüpft ist.
+title: CB_GETITEMDATA (Winuser.h)
+description: Eine Anwendung sendet eine CB GETITEMDATA-Nachricht an ein Kombinationsfeld, um den von der Anwendung bereitgestellten Wert abzurufen, der dem angegebenen Element \_ im Kombinationsfeld zugeordnet ist.
 ms.assetid: 433b7f75-2831-4919-b931-c17ba651d145
 keywords:
-- Windows-Steuerelemente für CB_GETITEMDATA Meldung
+- CB_GETITEMDATA meldungssteuerelemente Windows
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 643954cf266c52ccbeae082ffacf317c91bc7b33
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 8427e666668303456d16c00ae460a608a51bc31cd59e0ee6fa6851031057695b
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "103741456"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119019928"
 ---
-# <a name="cb_getitemdata-message"></a>CB \_ GetItemData-Nachricht
+# <a name="cb_getitemdata-message"></a>CB \_ GETITEMDATA-Nachricht
 
-Eine Anwendung sendet eine **CB \_ GetItemData** -Nachricht an ein Kombinations Feld, um den von der Anwendung bereitgestellten Wert abzurufen, der mit dem angegebenen Element im Kombinations Feld verknüpft ist.
+Eine Anwendung sendet eine **CB \_ GETITEMDATA-Nachricht** an ein Kombinationsfeld, um den von der Anwendung bereitgestellten Wert abzurufen, der dem angegebenen Element im Kombinationsfeld zugeordnet ist.
 
 ## <a name="parameters"></a>Parameter
 
@@ -45,9 +45,9 @@ Dieser Parameter wird nicht verwendet.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Der Rückgabewert ist der Wert, der dem Element zugeordnet ist. Wenn ein Fehler auftritt, ist es CB \_ Err.
+Der Rückgabewert ist der Wert, der dem Element zugeordnet ist. Wenn ein Fehler auftritt, ist dies CB \_ ERR.
 
-Wenn sich das Element in einem von einem Besitzer gezeichneten Kombinations Feld befindet, das ohne den [**CBS \_ hasstrings**](combo-box-styles.md) -Stil erstellt wurde, ist der Rückgabewert der Wert, der im *LPARAM* -Parameter der [**CB \_ AddString**](cb-addstring.md) -oder [**CB \_ InsertString**](cb-insertstring.md) -Nachricht enthalten ist, die das Element dem Kombinations Feld hinzugefügt hat. Wenn der **CBS \_ hasstrings** -Stil nicht verwendet wurde, ist der Rückgabewert der *LPARAM* -Parameter in einer [**CB \_ -Nachricht**](cb-setitemdata.md) .
+Wenn sich das Element in einem vom Besitzer gezeichneten Kombinationsfeld befindet, das ohne [**CBS \_ HASSTRINGS-Format**](combo-box-styles.md) erstellt wurde, ist der Rückgabewert der Wert, der im *lParam-Parameter* der [**CB \_ ADDSTRING-**](cb-addstring.md) oder [**CB \_ INSERTSTRING-Meldung**](cb-insertstring.md) enthalten ist, der das Element dem Kombinationsfeld hinzugefügt hat. Wenn der **CBS \_ HASSTRINGS-Stil** nicht verwendet wurde, ist der Rückgabewert der *lParam-Parameter,* der in einer [**CB \_ SETITEMDATA-Nachricht enthalten**](cb-setitemdata.md) ist.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -55,26 +55,26 @@ Wenn sich das Element in einem von einem Besitzer gezeichneten Kombinations Feld
 
 | Anforderung | Wert |
 |-------------------------------------|----------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                                           |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/>                                                     |
-| Header<br/>                   | <dl> <dt>Winuser. h (Windows. h einschließen)</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ Vista-Desktop-Apps\]<br/>                                                           |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                                                     |
+| Header<br/>                   | <dl> <dt>Winuser.h (include Windows.h)</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-**Verweis**
+**Referenz**
 </dt> <dt>
 
-[**CB \_ AddString**](cb-addstring.md)
+[**CB \_ ADDSTRING**](cb-addstring.md)
 </dt> <dt>
 
-[**CB \_ InsertString**](cb-insertstring.md)
+[**CB \_ INSERTSTRING**](cb-insertstring.md)
 </dt> <dt>
 
-[**CB- \_ Daten**](cb-setitemdata.md)
+[**CB \_ SETITEMDATA**](cb-setitemdata.md)
 </dt> </dl>
 
  

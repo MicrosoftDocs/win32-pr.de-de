@@ -14,12 +14,12 @@ api_type:
 api_location:
 - D3DX10.lib
 - D3DX10.dll
-ms.openlocfilehash: 8c4f167f769a1ed46404028916477d6784e4a436
-ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
+ms.openlocfilehash: e43422e5872708a61b5f066725e61c16e55d04dd94f5c8527c7b86e1f7a543c4
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2021
-ms.locfileid: "108107828"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119128332"
 ---
 # <a name="id3dxmatrixstackrotateyawpitchroll-method-d3dx10h"></a>ID3DXMATRIXStack::RotateYawPitchRoll-Methode (D3DX10.h)
 
@@ -65,7 +65,7 @@ Die Tonhöhe um die x-Achse im Bogenmaß.
 
 Typ: **[ **FLOAT**](../winprog/windows-data-types.md)**
 
-Das Rollback um die Z-Achse im Bogenmaß.
+Der rollt um die Z-Achse im Bogenmaß.
 
 </dd> </dl>
 
@@ -75,7 +75,7 @@ Typ: **[ **HRESULT**](https://msdn.microsoft.com/library/Bb401631(v=MSDN.10).asp
 
 Wenn die Methode erfolgreich ist, lautet der Rückgabewert D3D \_ OK.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
 Diese Methode fügt die Drehung dem Matrixstapel mit der berechneten Drehungsmatrix ähnlich der folgenden hinzu:
 
@@ -94,7 +94,7 @@ Da die Drehung mit dem Matrixstapel rechts multipliziert wird, ist die Drehung r
 
 
 
-| Anforderungen | Wert |
+| Anforderung | Wert |
 |--------------------|---------------------------------------------------------------------------------------|
 | Header<br/>  | <dl> <dt>D3DX10.h</dt> </dl>   |
 | Bibliothek<br/> | <dl> <dt>D3DX10.lib</dt> </dl> |

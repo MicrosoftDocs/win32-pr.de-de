@@ -1,11 +1,11 @@
 ---
-title: Dailydie. daysinterval (Eigenschaft)
-description: Ruft bei der Skripterstellung das Intervall zwischen den Tagen im Zeitplan ab oder legt es fest.
+title: DailyTrigger.DaysInterval-Eigenschaft
+description: Ruft für die Skripterstellung das Intervall zwischen den Tagen im Zeitplan ab oder legt dieses fest.
 ms.assetid: 13e9f6fd-62ee-4b19-8b3d-a6808e146340
 keywords:
-- Daysinterval-Eigenschaft Taskplaner
-- Daysinterval-Eigenschaft Taskplaner, dailyauslöserobjekt
-- Dailyauslöserobjekt Taskplaner, daysinterval-Eigenschaft
+- DaysInterval-Eigenschaft Taskplaner
+- DaysInterval-Eigenschaft Taskplaner , DailyTrigger-Objekt
+- DailyTrigger-Objekt Taskplaner , DaysInterval-Eigenschaft
 topic_type:
 - apiref
 api_name:
@@ -16,16 +16,16 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 6499f3b900fe10b2a2527c2e2ee675cca3151204
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: d4355e6c2a26b197224141018fa5a1d85e7d31e211ac47dc84a9e8c9ef3750fd
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104517915"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119139493"
 ---
-# <a name="dailytriggerdaysinterval-property"></a>Dailydie. daysinterval (Eigenschaft)
+# <a name="dailytriggerdaysinterval-property"></a>DailyTrigger.DaysInterval-Eigenschaft
 
-Ruft bei der Skripterstellung das Intervall zwischen den Tagen im Zeitplan ab oder legt es fest.
+Ruft für die Skripterstellung das Intervall zwischen den Tagen im Zeitplan ab oder legt dieses fest.
 
 ## <a name="syntax"></a>Syntax
 
@@ -40,11 +40,11 @@ DailyTrigger.DaysInterval As short
 
 Das Intervall zwischen den Tagen im Zeitplan.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Ein Intervall von 1 erzeugt einen täglichen Zeitplan. Ein Intervall von 2 erzeugt einen Zeitplan für jeden anderen Tag.
+Ein Intervall von 1 erzeugt einen täglichen Zeitplan. Ein Intervall von 2 erzeugt einen Zeitplan für jeden zweiten Tag.
 
-Beim Lesen oder schreiben Ihrer eigenen XML-Daten für eine Aufgabe wird das Intervall für einen täglichen Zeitplan mit dem [**daysinterval**](taskschedulerschema-daysinterval-dailyscheduletype-element.md) -Element des Taskplaner-Schemas angegeben.
+Beim Lesen oder Schreiben eigener XML-Daten für eine Aufgabe wird das Intervall für einen täglichen Zeitplan mithilfe des [**DaysInterval-Elements**](taskschedulerschema-daysinterval-dailyscheduletype-element.md) des Taskplaner Schemas angegeben.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -52,21 +52,21 @@ Beim Lesen oder schreiben Ihrer eigenen XML-Daten für eine Aufgabe wird das Int
 
 | Anforderung | Wert |
 |-------------------------------------|-----------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                          |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/>                                    |
-| Typbibliothek<br/>             | <dl> <dt>Taskschd. tlb</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur Vista-Desktop-Apps\]<br/>                                          |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/>                                    |
+| Typbibliothek<br/>             | <dl> <dt>Taskschd.tlb</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Taskschd.dll</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
 [Aufgabenplanung](task-scheduler-start-page.md)
 </dt> <dt>
 
-[**Dailylöst**](dailytrigger.md)
+[**DailyTrigger**](dailytrigger.md)
 </dt> </dl>
 
  

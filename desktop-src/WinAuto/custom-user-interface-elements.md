@@ -1,34 +1,34 @@
 ---
-title: Benutzerdefinierte Benutzeroberflächen Elemente
-description: Server Entwickler entwerfen barrierefreie Objekte basierend auf der Benutzeroberfläche einer Anwendung.
+title: Benutzerdefinierte Benutzeroberfläche-Elemente
+description: Serverentwickler entwerfen barrierefreie Objekte basierend auf der Benutzeroberfläche einer Anwendung.
 ms.assetid: d9453fb0-9b4a-4103-81e3-1255091255a0
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: b32a086b977a1737a17206261aaaa94faa754d93
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: 183a7024f546aa3e982b632430dad88c89ae79082ac3d91da97e56c821fde62c
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "103855648"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119133873"
 ---
-# <a name="custom-user-interface-elements"></a>Benutzerdefinierte Benutzeroberflächen Elemente
+# <a name="custom-user-interface-elements"></a>Benutzerdefinierte Benutzeroberfläche-Elemente
 
-Server Entwickler entwerfen barrierefreie Objekte basierend auf der Benutzeroberfläche einer Anwendung. Da [Active Accessibility die IAccessible-Schnittstelle für vom System bereitgestellte Benutzeroberflächen Elemente](appendix-a--supported-user-interface-elements-reference.md) (z. b. Listenfelder, Menüs und TrackBar-Steuerelemente) implementiert, müssen Sie die [**IAccessible**](/windows/desktop/api/oleacc/nn-oleacc-iaccessible) -Schnittstelle nur für die folgenden Arten von benutzerdefinierten Benutzeroberflächen Elementen implementieren:
+Serverentwickler entwerfen barrierefreie Objekte basierend auf der Benutzeroberfläche einer Anwendung. Da Active Accessibility [**IAccessible-Schnittstelle**](/windows/desktop/api/oleacc/nn-oleacc-iaccessible) im Namen von vom System bereitgestellten Benutzeroberflächenelementen wie Listenfeldern, Menüs und Trackbar-Steuerelementen implementiert, müssen Sie die [IAccessible-Schnittstelle](appendix-a--supported-user-interface-elements-reference.md) nur für die folgenden Arten von benutzerdefinierten Benutzeroberflächenelementen implementieren:
 
--   Benutzerdefinierte Steuerelemente, die durch das Registrieren einer Anwendungs definierten Fenster Klasse erstellt werden
--   Benutzerdefinierte Steuerelemente, die direkt auf dem Bildschirm gezeichnet werden, denen kein **HWND** zugeordnet ist
--   Benutzerdefinierte Steuerelemente wie Microsoft ActiveX-und Java-Steuerelemente
--   Steuerelemente oder Objekte im Client Fenster der Anwendung, die noch nicht verfügbar sind
+-   Benutzerdefinierte Steuerelemente, die durch Registrieren einer anwendungsdefinierten Fensterklasse erstellt werden
+-   Benutzerdefinierte Steuerelemente, die direkt auf dem Bildschirm gezeichnet werden und über kein zugeordnetes **HWND verfügen**
+-   Benutzerdefinierte Steuerelemente wie Microsoft ActiveX und Java-Steuerelemente
+-   Steuerelemente oder Objekte im Clientfenster der Anwendung, die noch nicht verfügbar gemacht wurden
 
-Auf Besitzer gezeichnete Steuerelemente und Menüs kann zugegriffen werden, solange Sie die Richtlinien befolgen, die unter Verknüpfungen zum verfügbar machen [benutzerdefinierter Benutzeroberflächen Elemente](shortcuts-for-exposing-custom-user-interface-elements.md)erläutert werden. Wenn Sie diese Richtlinien befolgen, müssen Sie die [**IAccessible**](/windows/desktop/api/oleacc/nn-oleacc-iaccessible) -Schnittstelle nicht für vom Besitzer gezeichnete Steuerelemente und Menüs implementieren.
+Auf vom Besitzer gezeichnete Steuerelemente und Menüs kann zugegriffen werden, solange Sie die Richtlinien befolgen, die unter Verknüpfungen zum Verfügbar machen von benutzerdefinierten Benutzeroberfläche [werden.](shortcuts-for-exposing-custom-user-interface-elements.md) Wenn Sie diese Richtlinien befolgen, müssen Sie die [**IAccessible-Schnittstelle**](/windows/desktop/api/oleacc/nn-oleacc-iaccessible) für Steuerelemente und Menüs, die vom Besitzer gezeichnet werden, nicht implementieren.
 
-In den meisten Fällen sind die über-und untergeordneten Steuerelemente zugänglich, da das System die grundlegenden Funktionen des Steuer Elements behandelt. Wenn jedoch das Verhalten des vom System bereitgestellten Steuer Elements, auf dem es basiert, von einem übergeordneten oder untergeordneten Steuerelement erheblich geändert wird, müssen Sie die [**IAccessible**](/windows/desktop/api/oleacc/nn-oleacc-iaccessible) -Schnittstelle implementieren. Weitere Informationen finden Sie unter verfügbar machen [von Steuerelementen auf der Grundlage von System Steuerelementen](exposing-controls-based-on-system-controls.md).
+In den meisten Fällen kann auf Steuerelemente mit Übergeordneten und Unterklassen zugegriffen werden, da das System die grundlegende Funktionalität des Steuerelements verarbeitet. Wenn ein über- oder unterklassiertes Steuerelement jedoch das Verhalten des vom System bereitgestellten Steuerelements, auf dem es basiert, erheblich ändert, müssen Sie die [**IAccessible-Schnittstelle**](/windows/desktop/api/oleacc/nn-oleacc-iaccessible) implementieren. Weitere Informationen finden Sie unter [Verfügbar machen von Steuerelementen, die auf Systemsteuerelementen basieren.](exposing-controls-based-on-system-controls.md)
 
-Wenn eine Anwendung nur vom System bereitgestellte Benutzeroberflächen Elemente verwendet, muss [**IAccessible**](/windows/desktop/api/oleacc/nn-oleacc-iaccessible)nicht implementiert werden, außer für das Client Fenster. Beispielsweise stellt eine Anwendung, die einen Text-Editor enthält, der nicht mit einem Bearbeitungs Steuerelement implementiert ist, Textzeilen als barrierefreie Objekte zur Verfügung. Beachten Sie, dass Microsoft Active Accessibility den Text in Edit-und Rich Edit-Steuerelementen automatisch als eine einzelne Text Zeichenfolge in der [**value**](value-property.md) -Eigenschaft des-Steuer Elements verfügbar macht.
+Wenn eine Anwendung nur vom System bereitgestellte Benutzeroberflächenelemente verwendet, muss sie mit Ausnahme des Clientfensters nicht [**IAccessible**](/windows/desktop/api/oleacc/nn-oleacc-iaccessible)implementieren. Beispielsweise macht eine Anwendung, die einen Text-Editor enthält, der nicht mit einem Bearbeitungssteuerfeld implementiert wird, Textzeilen als barrierefreie Objekte verfügbar. Beachten Sie Microsoft Active Accessibility dass der Text in Bearbeitungs- und Rich Edit-Steuerelementen automatisch als einzelne Textzeichenfolge in der [**Value-Eigenschaft**](value-property.md) des Steuerelements verfügbar ist.
 
- 
+ 
 
- 
+ 
 
 
 

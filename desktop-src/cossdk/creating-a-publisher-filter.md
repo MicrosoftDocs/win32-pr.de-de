@@ -1,32 +1,32 @@
 ---
-description: Erstellen eines Herausgeber Filters
+description: Erstellen eines Publisher Filters
 ms.assetid: d91efecc-f02a-41c6-acf7-37b74723e7e8
-title: Erstellen eines Herausgeber Filters
+title: Erstellen eines Publisher Filters
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 997fe37cf0021bcb2aa153c2dc4b73597e0c43cc
-ms.sourcegitcommit: c7add10d695482e1ceb72d62b8a4ebd84ea050f7
+ms.openlocfilehash: d2cf3391cd331f7d81c3bb7ff467c140a78b0c8e30fb609ea655596dfe745a74
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104127556"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119128792"
 ---
-# <a name="creating-a-publisher-filter"></a>Erstellen eines Herausgeber Filters
+# <a name="creating-a-publisher-filter"></a>Erstellen eines Publisher Filters
 
-Es gibt zwei Methoden zum Einrichten des Herausgeber Filters: mithilfe der multipublisherfilterclsid-Eigenschaft der Ereignisklasse oder mit [**IEventControl:: setpublisherfilter**](/windows/desktop/api/Eventsys/nf-eventsys-ieventcontrol-setpublisherfilter).
+Es gibt zwei Methoden zum Einrichten des Herausgeberfilters: die Verwendung der MultiPublisherFilterCLSID-Eigenschaft der Ereignisklasse oder die Verwendung von [**IEventControl::SetPublisherFilter.**](/windows/desktop/api/Eventsys/nf-eventsys-ieventcontrol-setpublisherfilter)
 
--   Da es Ihnen ermöglicht, das Ereignis Objekt mit dem com+-Dienst in der [Warteschlange für die Warteschlange](com--queued-components.md) zu verfassen, ist die bevorzugte Methode die Verwendung der multipublisherfilterclsid-Eigenschaft in der Ereignisklasse, um den Herausgeber Filter festzulegen. Dadurch wird ein Filter Objekt für alle Methoden der Ereignis Schnittstellen für ein Ereignis Objekt festgelegt. Das Ereignis Objekt aktiviert den Herausgeber Filter, wenn das Ereignis Klassenobjekt mithilfe von [**cokreateinstance**](/windows/desktop/api/combaseapi/nf-combaseapi-cocreateinstance)instanziiert wird.
--   Sie können auch [**setpublisherfilter**](/windows/desktop/api/Eventsys/nf-eventsys-ieventcontrol-setpublisherfilter)verwenden. Wenn Sie diese Methode auswählen, kann die Schnittstelle jedoch nicht in die Warteschlange eingereiht werden und kann daher nicht das Ereignis Objekt mit dem com+-Dienst in der Warteschlange für die Warteschlange zwischen dem Verleger und dem Ereignis Klassenobjekt verwenden. Weitere Informationen zur Verwendung des Dienstanbieter für die Warteschlange mit com+-Ereignissen finden Sie unter [Verwenden von COM+-Ereignissen mit COM+-Komponenten in der Warteschlange](using-com--events-with-com--queued-components.md).
+-   Da Sie das Ereignisobjekt mit dem [COM+-Komponentendienst](com--queued-components.md) in der Warteschlange zusammenstellen können, ist die bevorzugte Methode die Verwendung der MultiPublisherFilterCLSID-Eigenschaft in der Ereignisklasse, um den Herausgeberfilter festzulegen. Dadurch wird ein Filterobjekt für alle Methoden der Ereignisschnittstellen für ein Ereignisobjekt eingerichtet. Das Ereignisobjekt aktiviert den Herausgeberfilter, wenn das Ereignisklassenobjekt mit [**coCreateInstance**](/windows/desktop/api/combaseapi/nf-combaseapi-cocreateinstance)instanziiert wird.
+-   Sie können auch [**SetPublisherFilter**](/windows/desktop/api/Eventsys/nf-eventsys-ieventcontrol-setpublisherfilter)verwenden. Wenn Sie diese Methode auswählen, ist die Schnittstelle jedoch nicht warteschlangenfähig und kann daher das Ereignisobjekt nicht mit dem COM+-Komponentendienst in der Warteschlange zwischen dem Verleger und dem Ereignisklassenobjekt verwenden. Weitere Informationen zur Verwendung des Diensts für in der Warteschlange enthaltene Komponenten mit COM+-Ereignissen finden Sie unter [Verwenden von COM+-Ereignissen mit COM+-Komponenten in der Warteschlange.](using-com--events-with-com--queued-components.md)
 
-Ein Ereignis kann über ein oder mehrere Filter Objekte oder gar keine verfügen. Die Verleger Filter Objekte müssen entweder [**ipublisherfilter**](/windows/desktop/api/EventSys/nn-eventsys-ipublisherfilter) oder [**imultiinterfacepublisherfilter**](/windows/desktop/api/EventSys/nn-eventsys-imultiinterfacepublisherfilter)unterstützen, je nachdem, ob Sie über eine einzelne auslöserschnittstelle oder mehrere auslösenden Schnittstellen für das Ereignis Klassenobjekt verfügen. Die **ipublisherfilter** -Schnittstelle und die **imultiinterfacepublisherfilter** -Schnittstelle geben beide eine **Initialize** -Methode an. Die **Initialize** -Methode wird direkt nach dem Erstellen des Filter Objekts vom Ereignis Klassenobjekt aufgerufen.
+Ein Ereignis kann über ein oder mehrere Filterobjekte oder gar keins verfügen. Die Herausgeberfilterobjekte müssen entweder [**IPublisherFilter**](/windows/desktop/api/EventSys/nn-eventsys-ipublisherfilter) oder [**IMultiInterfacePublisherFilter**](/windows/desktop/api/EventSys/nn-eventsys-imultiinterfacepublisherfilter)unterstützen, je nachdem, ob Sie über eine einzelne auslösende Schnittstelle oder mehrere auslösende Schnittstellen für das Ereignisklassenobjekt verfügen. Die Schnittstellen **IPublisherFilter** und **IMultiInterfacePublisherFilter** geben beide eine **Initialize-Methode** an. Die **Initialize-Methode** wird vom Ereignisklassenobjekt unmittelbar nach dem Erstellen des Filterobjekts aufgerufen.
 
-Com+-Ereignisse versuchen, zwei Methoden für den Filter aufzurufen. Zuerst wird [**ipublisherfilter::P**](/windows/desktop/api/EventSys/nf-eventsys-ipublisherfilter-preparetofire) Analyse Trigger aufgerufen und ein [**ifiringcontrol**](/windows/desktop/api/EventSys/nn-eventsys-ifiringcontrol) -Schnittstellen Zeiger an den Filter übergibt. Anschließend wird das Filter Objekt für die Ereignis Schnittstelle abgefragt. Wenn der Filter die Ereignis Schnittstelle unterstützt, ruft er eine Methode dafür auf. Dies ermöglicht den Zugriff auf die Verleger Parameter für ein Ereignis. Der Filter kann diese Parameter verwenden, um zu bestimmen, welche Abonnements ausgelöst werden.
+COM+-Ereignisse versucht, zwei Methoden für den Filter aufzurufen. Zuerst ruft sie [**IPublisherFilter::P repareToFire**](/windows/desktop/api/EventSys/nf-eventsys-ipublisherfilter-preparetofire) auf und übergibt einen [**IFiringControl-Schnittstellenzeiger**](/windows/desktop/api/EventSys/nn-eventsys-ifiringcontrol) an den Filter. Anschließend wird das Filterobjekt nach der Ereignisschnittstelle abgefragt. Wenn der Filter die Ereignisschnittstelle unterstützt, ruft er eine -Methode dafür auf. Dies ermöglicht den Zugriff auf die Herausgeberparameter für ein Ereignis. Der Filter kann diese Parameter verwenden, um zu bestimmen, welche Abonnements ausgelöst werden sollen.
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[Filtern von Ereignissen in com+](filtering-events-in-com-.md)
+[Filtern von Ereignissen in COM+](filtering-events-in-com-.md)
 </dt> </dl>
 
  

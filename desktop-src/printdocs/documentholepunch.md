@@ -4,12 +4,12 @@ ms.assetid: 46fd5e22-a2f3-424d-8c2f-2d5ac089a230
 title: DocumentHolePunch
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 760559d3bb155030ff72a616096e5a860ba0d6b0
-ms.sourcegitcommit: 5d4e99f4c8f42f5f543e52cb9beb9fb13ec56c5f
+ms.openlocfilehash: f66cd947aa6a6d78767b97a2fc06b24c2d45f38547d9ce48850db35466eb05f4
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2021
-ms.locfileid: "112409292"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118971549"
 ---
 # <a name="documentholepunch"></a>DocumentHolePunch
 
@@ -27,7 +27,7 @@ Beschreibt die Lücke der Eigenschaften der Ausgabe. Jedes Dokument wird separat
 
 | Name | Wert |
 |----------------------------|--------------------------------------------------------------------------------|
-| Elementtyp <br/>   | Funktion<br/>                                                             |
+| Elementtyp <br/>   | Komponente<br/>                                                             |
 | Bereichspräfix <br/> | Dokument<br/>                                                            |
 | Hinweise <br/>          | Top, Bottom, Left und Right sind relativ zu PageImageableSize.<br/> |
 

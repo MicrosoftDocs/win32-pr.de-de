@@ -1,9 +1,9 @@
 ---
-title: MM_MIM_LONGDATA Meldung (MMSYSTEM. h)
-description: Die mm \_ MIM \_ longdata-Nachricht wird an ein Fenster gesendet, wenn entweder eine vollständige, vom System exklusive System exklusive Nachricht empfangen wird oder wenn ein Puffer mit System exklusiven Daten aufgefüllt wurde.
+title: MM_MIM_LONGDATA (Mmsystem.h)
+description: Die MM \_ MIM LONGDATA-Nachricht wird an ein Fenster gesendet, wenn entweder eine vollständige SYSTEM-exklusive NACHRICHT empfangen wird oder wenn ein Puffer mit system-exklusiven Daten \_ gefüllt wurde.
 ms.assetid: 72b9eade-4224-436f-bfef-32204eaf51ae
 keywords:
-- MM_MIM_LONGDATA-Nachricht (Multimedia)
+- MM_MIM_LONGDATA-Nachricht Windows Multimedia
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 25bf1900ef2e9394b9d8772747eba873f8d607f1
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 9e4748381500f42a5dc4f2bceae8ad862a64f237c9d5024e4b0b7cc96a694e5b
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104105903"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119065520"
 ---
-# <a name="mm_mim_longdata-message"></a>MM \_ MIM \_ longdata-Nachricht
+# <a name="mm_mim_longdata-message"></a>MM \_ MIM \_ LONGDATA-Nachricht
 
-Die **mm \_ MIM \_ longdata** -Nachricht wird an ein Fenster gesendet, wenn entweder eine vollständige, vom System exklusive System exklusive Nachricht empfangen wird oder wenn ein Puffer mit System exklusiven Daten aufgefüllt wurde.
+Die **MM \_ MIM \_ LONGDATA-Nachricht** wird an ein Fenster gesendet, wenn entweder eine vollständige, vom SYSTEM exklusive MELDUNG empfangen wird oder wenn ein Puffer mit system exklusiven Daten gefüllt wurde.
 
 
 ```C++
@@ -38,17 +38,17 @@ lParam = (LPARAM) lpMidiHdr
 
 <dl> <dt>
 
-<span id="hInput"></span><span id="hinput"></span><span id="HINPUT"></span>*hinput*
+<span id="hInput"></span><span id="hinput"></span><span id="HINPUT"></span>*hInput*
 </dt> <dd>
 
-Handle für das MIDI-Eingabegerät, das die Daten empfangen hat.
+Handle für das EINGABE-Eingabegerät, das die Daten empfangen hat.
 
 </dd> <dt>
 
-<span id="lpMidiHdr"></span><span id="lpmidihdr"></span><span id="LPMIDIHDR"></span>*lpmidihdr*
+<span id="lpMidiHdr"></span><span id="lpmidihdr"></span><span id="LPMIDIHDR"></span>*lpMidiHdr*
 </dt> <dd>
 
-Zeiger auf eine [**midihdr**](/windows/win32/api/mmeapi/ns-mmeapi-midihdr) -Struktur, die den Puffer identifiziert.
+Zeiger auf eine [**DABEIHDR-Struktur,**](/windows/win32/api/mmeapi/ns-mmeapi-midihdr) die den Puffer identifiziert.
 
 </dd> </dl>
 
@@ -56,11 +56,11 @@ Zeiger auf eine [**midihdr**](/windows/win32/api/mmeapi/ns-mmeapi-midihdr) -Stru
 
 Diese Meldung gibt keinen Wert zurück.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Der zurückgegebene Puffer ist möglicherweise nicht voll. Um die Anzahl von Bytes zu bestimmen, die im zurückgegebenen Puffer aufgezeichnet wurden, verwenden Sie den **dwbyteslock** -Member der [**midihdr**](/windows/win32/api/mmeapi/ns-mmeapi-midihdr) -Struktur, auf die von *lpmidihdr* verwiesen wird.
+Der zurückgegebene Puffer ist möglicherweise nicht voll. Um die Anzahl der in den zurückgegebenen Puffer aufgezeichneten Bytes zu bestimmen, verwenden Sie den **dwBytesRecorded-Member** [**derSKRIPTHDR-Struktur,**](/windows/win32/api/mmeapi/ns-mmeapi-midihdr) auf die *lpMidiHdr zeigt.*
 
-Mit dieser Meldung ist kein Zeitstempel verfügbar. Für Zeitstempel-Eingabedaten müssen Sie die Nachrichten verwenden, die an Rückruf Funktionen gesendet werden.
+Für diese Nachricht ist kein Zeitstempel verfügbar. Für Eingabedaten mit Zeitstempel müssen Sie die Nachrichten verwenden, die an Rückruffunktionen gesendet werden.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -70,18 +70,18 @@ Mit dieser Meldung ist kein Zeitstempel verfügbar. Für Zeitstempel-Eingabedate
 |-------------------------------------|-----------------------------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[nur Desktop-Apps\]<br/>                                                |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                                                      |
-| Header<br/>                   | <dl> <dt>MMSYSTEM. h (Include Windows. h)</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Mmsystem.h (include Windows.h)</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[Digital Instrumentation Digital Interface (MIDI)](musical-instrument-digital-interface--midi.md)
+[Instrument Digital Interface (KEYBOARD)](musical-instrument-digital-interface--midi.md)
 </dt> <dt>
 
-[MIDI-Nachrichten](midi-messages.md)
+[MESSAGES-Meldungen](midi-messages.md)
 </dt> </dl>
 
  

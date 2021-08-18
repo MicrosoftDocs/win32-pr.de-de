@@ -1,29 +1,29 @@
 ---
 title: Einfache Elemente
-description: Ein einfaches Element ist ein Benutzeroberflächen Element, das ein IAccessible-Objekt mit anderen Elementen gemeinsam nutzt und darauf basiert, dass dieses Objekt (in der Regel sein übergeordnetes Objekt) seine Eigenschaften verfügbar macht.
+description: Ein einfaches Element ist ein Benutzeroberflächenelement, das ein IAccessible-Objekt mit anderen Elementen teilt und dieses IAccessible-Objekt (in der Regel sein übergeordnetes Objekt) verwendet, um seine Eigenschaften verfügbar zu machen.
 ms.assetid: 3f6bd992-4e0a-4dba-b6e9-e70dca77c880
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: e8f8cb00b19719a4a8779a61f37b079633ada40c
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: 9676b8bf4198f8be753b3788fcc6defdec2d6a1d8ad3ff3fed2f41da4f256554
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "106342084"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119133643"
 ---
 # <a name="simple-elements"></a>Einfache Elemente
 
-Ein *einfaches Element* ist ein Benutzeroberflächen Element, das ein [**IAccessible**](/windows/desktop/api/oleacc/nn-oleacc-iaccessible) -Objekt mit anderen Elementen gemeinsam nutzt und darauf basiert, dass dieses Objekt (in der Regel sein übergeordnetes Objekt) seine **Eigenschaften verfügbar macht** . Um die Elemente zu unterscheiden, die ein **IAccessible** -Objekt gemeinsam nutzen, weist der Server jedem einfachen Element einen eindeutigen, positiven untergeordneten Bezeichner zu. Diese Zuweisung erfolgt auf der Basis einer Schnittstelle pro Instanz, sodass die IDs innerhalb dieses Kontexts eindeutig sein müssen. Viele Implementierungen weisen diese IDs sequenziell zu, beginnend mit 1. Mit diesem Schema können einfache Elemente keine eigenen Elemente besitzen. Einfache Elemente werden *auch als unter* geordnete Elemente bezeichnet.
+Ein *einfaches Element* ist ein Benutzeroberflächenelement, das ein [**IAccessible-Objekt**](/windows/desktop/api/oleacc/nn-oleacc-iaccessible) mit anderen Elementen teilt und dieses **IAccessible-Objekt** (in der Regel sein übergeordnetes Objekt) verwendet, um seine Eigenschaften verfügbar zu machen. Um zwischen den Elementen zu unterscheiden, die ein **IAccessible-Objekt** gemeinsam nutzen, weist der Server jedem einfachen Element einen eindeutigen, positiven untergeordneten Bezeichner zu. Diese Zuweisung erfolgt pro Instanz der Schnittstelle, sodass die IDs innerhalb dieses Kontexts eindeutig sein müssen. Viele Implementierungen weisen diese IDs sequenziell zu, beginnend mit 1. Dieses Schema lässt nicht zu, dass einfache Elemente eigene elemente besitzen. Einfache Elemente werden auch als children *bezeichnet.*
 
-Für ein einfaches Element, das eindeutig identifiziert und verfügbar gemacht werden muss, [**ist ein einfaches**](/windows/desktop/api/oleacc/nn-oleacc-iaccessible) Element erforderlich Daher müssen die Clients bei der Kommunikation mit einem Objekt, das nicht **zugänglich** ist, die entsprechende untergeordnete ID angeben. Ein spezieller Bezeichner, " **childID \_ Self**", kann verwendet werden, um auf das barrierefreie Objekt selbst zu verweisen, statt eines seiner untergeordneten Elemente.
+Um eindeutig identifiziert und verfügbar gemacht zu werden, erfordert ein einfaches Element ein [**IAccessible-Objekt**](/windows/desktop/api/oleacc/nn-oleacc-iaccessible) und eine untergeordnete ID. Daher müssen die Clients bei der Kommunikation mit einem **IAccessible-Objekt** die entsprechende untergeordnete ID liefern. Ein spezieller Bezeichner, **CHILDID \_ SELF,** kann verwendet werden, um auf das barrierefreie Objekt selbst statt auf eines seiner untergeordneten Objekte zu verweisen.
 
-Das [**IAccessible**](/windows/desktop/api/oleacc/nn-oleacc-iaccessible) -Objekt, das von einfachen Elementen gemeinsam genutzt wird, entspricht häufig einem gemeinsamen übergeordneten Objekt in der Benutzeroberfläche. So machen z. b. System Listenfelder ein Barrierefreies Objekt für das allgemeine Listenfeld und einfache Elemente für jedes Listenfeld Element verfügbar. In diesem Fall ist das **IAccessible** -Objekt für das Listenfeld auch das übergeordnete Element oder der Container der Listenelemente.
+Das [**IAccessible-Objekt,**](/windows/desktop/api/oleacc/nn-oleacc-iaccessible) das von einfachen Elementen gemeinsam genutzt wird, entspricht häufig einem gemeinsamen übergeordneten Objekt in der Benutzeroberfläche. Beispielsweise machen Systemlistenfelder ein barrierefreies Objekt für das gesamte Listenfeld und einfache Elemente für jedes Listenfeldelement verfügbar. In diesem Fall ist das **IAccessible-Objekt** für das Listenfeld auch das übergeordnete Element oder der Container der Listenelemente.
 
-Weitere Informationen zu zugänglichen Objekten finden Sie unter [barrierefreie Objekte](accessible-objects.md).
+Weitere Informationen zu barrierefreien Objekten finden Sie unter [Barrierefreie Objekte.](accessible-objects.md)
 
- 
+ 
 
- 
+ 
 
 
 

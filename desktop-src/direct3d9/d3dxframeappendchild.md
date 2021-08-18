@@ -1,7 +1,7 @@
 ---
 description: Fügt einem Frame einen untergeordneten Frame hinzu.
 ms.assetid: a04c9bbe-8e54-467a-8e02-27c6469f4dac
-title: D3DXFrameAppendChild-Funktion (D3dx9anim. h)
+title: D3DXFrameAppendChild-Funktion (D3dx9anim.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -14,12 +14,12 @@ api_type:
 api_location:
 - d3dx9.lib
 - d3dx9.dll
-ms.openlocfilehash: a27c8b31abf982c7cfaaa2a53d49d8859fa2c8bb
-ms.sourcegitcommit: 14010c34b35fa268046c7683f021f86de08ddd0a
+ms.openlocfilehash: 4b6bc06eecb036f285e03b984e0fcd645d5c2416377684455dce491a3159d070
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "104219513"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118988470"
 ---
 # <a name="d3dxframeappendchild-function"></a>D3DXFrameAppendChild-Funktion
 
@@ -41,7 +41,7 @@ HRESULT D3DXFrameAppendChild(
 
 <dl> <dt>
 
-*pframeparent* \[ in\]
+*pFrameParent* \[ In\]
 </dt> <dd>
 
 Typ: **[ **LPD3DXFRAME**](d3dxframe.md)**
@@ -50,10 +50,10 @@ Zeiger auf den übergeordneten Knoten.
 
 </dd> <dt>
 
-*pframechild* \[ in\]
+*pFrameChild* \[ In\]
 </dt> <dd>
 
-Typ: **Konstanten [**D3DXFRAME**](d3dxframe.md) \***
+Typ: **const [**D3DXFRAME**](d3dxframe.md) \***
 
 Zeiger auf den untergeordneten Knoten.
 
@@ -63,7 +63,7 @@ Zeiger auf den untergeordneten Knoten.
 
 Typ: **[ **HRESULT**](https://msdn.microsoft.com/library/Bb401631(v=MSDN.10).aspx)**
 
-Wenn die Funktion erfolgreich ausgeführt wird, ist der Rückgabewert D3D \_ OK. Wenn die Funktion fehlschlägt, kann der Rückgabewert einer der folgenden Werte sein: D3DERR \_ invalidcall, E \_ outo fmemory.
+Wenn die Funktion erfolgreich ist, ist der Rückgabewert D3D \_ OK. Wenn die Funktion fehlschlägt, kann der Rückgabewert einer der folgenden Werte sein: D3DERR \_ INVALIDCALL, E \_ OUTOFMEMORY.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -71,8 +71,8 @@ Wenn die Funktion erfolgreich ausgeführt wird, ist der Rückgabewert D3D \_ OK.
 
 | Anforderung | Wert |
 |--------------------|----------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>D3dx9anim. h</dt> </dl> |
-| Bibliothek<br/> | <dl> <dt>D3dx9. lib</dt> </dl>   |
+| Header<br/>  | <dl> <dt>D3dx9anim.h</dt> </dl> |
+| Bibliothek<br/> | <dl> <dt>D3dx9.lib</dt> </dl>   |
 
 
 
@@ -80,7 +80,7 @@ Wenn die Funktion erfolgreich ausgeführt wird, ist der Rückgabewert D3D \_ OK.
 
 <dl> <dt>
 
-[Animations Funktionen](dx9-graphics-reference-d3dx-functions-animation.md)
+[Animationsfunktionen](dx9-graphics-reference-d3dx-functions-animation.md)
 </dt> </dl>
 
  

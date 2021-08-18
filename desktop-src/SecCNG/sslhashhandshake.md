@@ -1,7 +1,7 @@
 ---
-description: Gibt ein Handle für den Handshake-Hash zurück.
+description: Gibt ein Handle für den Handshakehash zurück.
 ms.assetid: c0f20084-c863-42cf-afdf-298c5a96eed9
-title: Sslhashhandshake-Funktion (sslprovider. h)
+title: SslHashHandshake-Funktion (Sslprovider.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,16 +13,16 @@ api_type:
 - DllExport
 api_location:
 - Ncrypt.dll
-ms.openlocfilehash: 1dbfdbceb4242d389669a3eebf14260a3bb396fb
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 5a21bdb3fd655e5c3b39249937f04a4122c64e6c6176c0d39ae1164e48863edb
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "103960469"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118906098"
 ---
-# <a name="sslhashhandshake-function"></a>Sslhashhandshake-Funktion
+# <a name="sslhashhandshake-function"></a>SslHashHandshake-Funktion
 
-Die **sslhashhandshake** -Funktion gibt ein Handle für den Handshake-Hash zurück.
+Die **SslHashHandshake-Funktion** gibt ein Handle für den Handshakehash zurück.
 
 ## <a name="syntax"></a>Syntax
 
@@ -43,35 +43,35 @@ SECURITY_STATUS WINAPI SslHashHandshake(
 
 <dl> <dt>
 
-*hsslprovider* \[ in\]
+*hSslProvider* \[ In\]
 </dt> <dd>
 
-Das Handle für die Protokoll Anbieter Instanz des [*Secure Sockets Layer Protokolls*](/windows/desktop/SecGloss/s-gly) (SSL).
+Das Handle für die SSL-Protokollanbieterinstanz [*(Secure Sockets Layer Protocol).*](/windows/desktop/SecGloss/s-gly)
 
 </dd> <dt>
 
-*hhandshakehash* \[ in, out\]
+*hHandshakeHash* \[ in, out\]
 </dt> <dd>
 
-Das Handle für das Hash Objekt.
+Das Handle für das Hashobjekt.
 
 </dd> <dt>
 
-*pbinput* \[ vorgenommen\]
+*pbInput* \[ out\]
 </dt> <dd>
 
-Die Adresse eines Puffers, der die Daten enthält, für die ein Hashwert erstellt werden soll.
+Die Adresse eines Puffers, der die zu hashingden Daten enthält.
 
 </dd> <dt>
 
-*cbinput* \[ in\]
+*cbInput* \[ In\]
 </dt> <dd>
 
-Die Größe des *pbinput* -Puffers in Bytes.
+Die Größe des *pbInput-Puffers* in Bytes.
 
 </dd> <dt>
 
-*dwFlags* \[ in\]
+*dwFlags* \[ In\]
 </dt> <dd>
 
 Dieser Parameter ist für die zukünftige Verwendung reserviert.
@@ -80,15 +80,15 @@ Dieser Parameter ist für die zukünftige Verwendung reserviert.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Wenn die Funktion erfolgreich ist, gibt Sie 0 (null) zurück.
+Wenn die Funktion erfolgreich ausgeführt wird, gibt sie 0 (null) zurück.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die **sslhashhandshake** -Funktion ist eine von drei Funktionen, die verwendet werden, um einen Hash zu generieren, der während des SSL-Handshake verwendet wird.
+Die **SslHashHandshake-Funktion** ist eine von drei Funktionen, die verwendet werden, um einen Hash zu generieren, der während des SSL-Handshakes verwendet wird.
 
-1.  Die [**sslkreatehandshakehash**](sslcreatehandshakehash.md) -Funktion wird aufgerufen, um ein Hashhandle abzurufen.
-2.  Die **sslhashhandshake** -Funktion wird beliebig oft mit dem Hashhandle aufgerufen, um dem Hash Daten hinzuzufügen.
-3.  Die [**sslcomputefinishedhash**](sslcomputefinishedhash.md) -Funktion wird mit dem Hashhandle aufgerufen, um den Digest der Hash Daten zu erhalten.
+1.  Die [**SslCreateHandshakeHash-Funktion**](sslcreatehandshakehash.md) wird aufgerufen, um ein Hashhandle abzurufen.
+2.  Die **SslHashHandshake-Funktion** wird beliebig oft mit dem Hashhandle aufgerufen, um dem Hash Daten hinzuzufügen.
+3.  Die [**SslComputeFinishedHash-Funktion**](sslcomputefinishedhash.md) wird mit dem Hashhandle aufgerufen, um den Digest der Hashdaten abzurufen.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -96,9 +96,9 @@ Die **sslhashhandshake** -Funktion ist eine von drei Funktionen, die verwendet w
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                           |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/>                                     |
-| Header<br/>                   | <dl> <dt>Sslprovider. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur Vista-Desktop-Apps\]<br/>                                           |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/>                                     |
+| Header<br/>                   | <dl> <dt>Sslprovider.h</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Ncrypt.dll</dt> </dl>    |
 
 

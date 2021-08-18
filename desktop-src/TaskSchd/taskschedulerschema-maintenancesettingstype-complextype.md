@@ -1,9 +1,9 @@
 ---
-title: komplexer maintenancesettingstype-Typ
-description: Definiert die untergeordneten Elemente und Sequenzierungs Informationen für das maintenancesettings-Element.
+title: 'maintenanceSettingsType : Komplexer Typ'
+description: Definiert die untergeordneten Elemente und Sequenzinformationen für das MaintenanceSettings-Element.
 ms.assetid: CA4C452E-CA25-4E2D-B5E2-ED64C59AB3AD
 keywords:
-- komplexer maintenancesettingstype-Typ Taskplaner
+- 'maintenanceSettingsType: komplexer Typ Taskplaner'
 topic_type:
 - apiref
 api_name:
@@ -13,16 +13,16 @@ api_type:
 ms.topic: reference
 ms.date: 05/31/2018
 api_location: ''
-ms.openlocfilehash: 7f261e84fe2af1239cce1bbd377e991ede6e8506
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: f0733d16ec929b4e67774fc436c1530b67d70392b2655525b2aaaa642c2ea346
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "103742761"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119139203"
 ---
-# <a name="maintenancesettingstype-complex-type"></a>komplexer maintenancesettingstype-Typ
+# <a name="maintenancesettingstype-complex-type"></a>maintenanceSettingsType : Komplexer Typ
 
-Definiert die untergeordneten Elemente und Sequenzierungs Informationen für das [**maintenancesettings**](taskschedulerschema-maintenancesettings-maintenancesettingstype-element.md) -Element.
+Definiert die untergeordneten Elemente und Sequenzinformationen für das [**MaintenanceSettings-Element.**](taskschedulerschema-maintenancesettings-maintenancesettingstype-element.md)
 
 ``` syntax
 <xs:complexType name="maintenanceSettingsType">
@@ -68,10 +68,10 @@ Definiert die untergeordneten Elemente und Sequenzierungs Informationen für das
 
 
 
-| Element                                                                        | type    | BESCHREIBUNG                                                                                                                                                                                    |
+| Element                                                                        | type    | Beschreibung                                                                                                                                                                                    |
 |--------------------------------------------------------------------------------|---------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| [**Stichtag**](taskschedulerschema-daysinterval-dailyscheduletype-element.md) |         | Gibt die Zeitspanne an, nach der der Taskplaner versucht, die Aufgabe während der automatischen Notfallwartung zu starten, wenn dieser während der regulären Wartung nicht fertiggestellt werden konnte.<br/> |
-| **Exklusiv**                                                                  | boolean | Wenn diese Einstellung auf "true" festgelegt ist, wird die Aufgabe ausschließlich unter anderen Wartungs Tasks gestartet.<br/>                                                                                                 |
+| [**Stichtag**](taskschedulerschema-daysinterval-dailyscheduletype-element.md) |         | Gibt die Zeitspanne an, nach der der Taskplaner versucht, den Task während der automatischen Notfallwartung zu starten, wenn er während der regulären Wartung nicht abgeschlossen werden konnte.<br/> |
+| **Exklusiv**                                                                  | boolean | Wenn diese Einstellung auf TRUE festgelegt ist, wird der Task ausschließlich mit anderen Wartungstasks gestartet.<br/>                                                                                                 |
 | [**Zeitraum**](taskschedulerschema-daysinterval-dailyscheduletype-element.md)   |         | Gibt an, wie oft der Task während der automatischen Wartung gestartet werden muss.<br/>                                                                                                      |
 
 
@@ -82,16 +82,16 @@ Definiert die untergeordneten Elemente und Sequenzierungs Informationen für das
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows 8 \[ -Desktop-Apps\]<br/>           |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2012 \[ -Desktop-Apps\]<br/> |
+| Unterstützte Mindestversion (Client)<br/> | \[Windows 8 Nur Desktop-Apps\]<br/>           |
+| Unterstützte Mindestversion (Server)<br/> | \[Windows Server 2012 Nur Desktop-Apps\]<br/> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[Komplexe Typen von Taskplaner Schemas](task-scheduler-schema-complex-types.md)
+[komplexe Typen Taskplaner Schemas](task-scheduler-schema-complex-types.md)
 </dt> <dt>
 
 [Aufgabenplanung](task-scheduler-start-page.md)

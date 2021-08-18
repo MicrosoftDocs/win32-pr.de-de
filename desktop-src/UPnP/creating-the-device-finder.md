@@ -1,19 +1,19 @@
 ---
-title: Erstellen des Geräte Suchgeräts
-description: In den folgenden Beispielen wird veranschaulicht, wie eine Instanz des Device Finder-Objekts in C++, Visual Basic und VBScript erstellt wird.
+title: Erstellen des Geräte finders
+description: Die folgenden Beispiele veranschaulichen das Erstellen einer Instanz des Device Finder-Objekts in C++, Visual Basic und VBScript.
 ms.assetid: 0084a64d-458e-471c-a6be-aeb6ed0962d0
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: c3a12fc7e269f2c0ce5b577fe2f49b6d13fe3b5a
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: dc6af75ea5c267e156f89f1ae1e27a08928c097bbfea731f59add575397fbc00
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "103856647"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119137356"
 ---
-# <a name="creating-the-device-finder"></a>Erstellen des Geräte Suchgeräts
+# <a name="creating-the-device-finder"></a>Erstellen des Geräte finders
 
-In den folgenden Beispielen wird veranschaulicht, wie eine Instanz des Device Finder-Objekts in C++, Visual Basic und VBScript erstellt wird. Die Skriptsprachen verwenden die programmgesteuerte ID (ProgID) [**UPnP. upnpdevicefinder**](/windows/desktop/api/Upnp/nn-upnp-iupnpdevicefinder) , um die Geräte Such Klasse zu identifizieren. Der C++-Code verwendet den Klassen Bezeichner.
+Die folgenden Beispiele veranschaulichen das Erstellen einer Instanz des Device Finder-Objekts in C++, Visual Basic und VBScript. Die Skriptsprachen verwenden die programmgesteuerte ID (ProgID) [**UPnP.UPnPDeviceFrau,**](/windows/desktop/api/Upnp/nn-upnp-iupnpdevicefinder) um die Device Finder-Klasse zu identifizieren. Der C++-Code verwendet den Klassenbezeichner.
 
 ## <a name="c-example"></a>C++-Beispiel
 
@@ -31,7 +31,7 @@ hr = CoCreateInstance(CLSID_UPnPDeviceFinder,
 
 
 
-Wie dieses C++-Beispiel zeigt, macht das Device Finder-Objekt eine Standardschnittstelle ( [**IUPnPDeviceFinder) verfügbar**](/windows/desktop/api/Upnp/nn-upnp-iupnpdevicefinder). Mit den Methoden dieser Schnittstelle werden Suchvorgänge gemäß den gültigen Suchkriterien für ein UPnP-basiertes Gerät durchgeführt. Diese Schnittstelle ist Automatisierungs fähig, sodass Ihre Methoden von Skriptcode aufgerufen werden können.
+Wie in diesem C++-Beispiel angegeben, macht das Device Finder-Objekt die Standardschnittstelle [**IUPnPDevice Genauso verfügbar.**](/windows/desktop/api/Upnp/nn-upnp-iupnpdevicefinder) Die Methoden dieser Schnittstelle führen Suchvorgänge gemäß den gültigen Suchkriterien für ein UPnP-basiertes Gerät durch. Diese Schnittstelle ist automatisierungsfähig, sodass ihre Methoden durch Skriptcode aufgerufen werden können.
 
 ## <a name="vbscript-example"></a>VBScript-Beispiel
 
@@ -44,9 +44,9 @@ Set deviceFinder = CreateObject( "UPnP.UPnPDeviceFinder" )
 
 
 
- 
+ 
 
- 
+ 
 
 
 

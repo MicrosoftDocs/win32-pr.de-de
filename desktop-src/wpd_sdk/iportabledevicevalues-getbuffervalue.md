@@ -1,7 +1,7 @@
 ---
-description: Die getbuffervalue-Methode ruft einen Byte Array Wert (Typ VT \_ Vector \| VT \_ UI1) ab, der von einem Schlüssel angegeben wird.
+description: Die GetBufferValue-Methode ruft einen durch einen Schlüssel angegebenen Bytearraywert (Typ VT \_ VECTOR \| VT \_ UI1) ab.
 ms.assetid: 18180a47-7d81-440b-b596-2516089a02bd
-title: 'Iportabledevicevalues:: getbuffervalue-Methode (portabledevicetypes. h)'
+title: IPortableDeviceValues::GetBufferValue-Methode (PortableDeviceTypes.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -14,16 +14,16 @@ api_type:
 api_location:
 - PortableDeviceGUIDs.lib
 - PortableDeviceGUIDs.dll
-ms.openlocfilehash: e5b98bb412ed648cf6ac74ec457b1e6032c009ff
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: c5d209d7ee13f55ab2236166851e2e24143b9cdeb01e947f0463491eb7446eb3
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106371495"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118963699"
 ---
-# <a name="iportabledevicevaluesgetbuffervalue-method"></a>Iportabledevicevalues:: getbuffervalue-Methode
+# <a name="iportabledevicevaluesgetbuffervalue-method"></a>IPortableDeviceValues::GetBufferValue-Methode
 
-Die **getbuffervalue** -Methode ruft einen **Byte Array** Wert (Typ VT \_ Vector \| VT \_ UI1) ab, der von einem Schlüssel angegeben wird.
+Die **GetBufferValue-Methode** ruft einen durch einen Schlüssel angegebenen **Bytearraywert** (Typ VT \_ VECTOR \| VT \_ UI1) ab.
 
 ## <a name="syntax"></a>Syntax
 
@@ -42,46 +42,46 @@ HRESULT GetBufferValue(
 
 <dl> <dt>
 
-*Schlüssel* \[ in\]
+*key* \[ In\]
 </dt> <dd>
 
-Ein **refpropertykey** -Schlüssel, der das abzurufende Element angibt.
+Ein **REFPROPERTYKEY-Schlüssel,** der das abzurufende Element angibt.
 
 </dd> <dt>
 
-*ppValue* \[ vorgenommen\]
+*ppValue* \[ out\]
 </dt> <dd>
 
-Zeiger auf den abgerufenen **Byte \* *_-Wert. Der Aufrufer ist dafür verantwortlich, den Arbeitsspeicher durch Aufrufen von _* CoTaskMemFree freizugeben**.
+Zeiger auf den abgerufenen **\* *BYTE_-Wert. Der Aufrufer ist für die Freigabe des Arbeitsspeichers durch Aufrufen von _* CoTaskMemFree verantwortlich.**
 
 </dd> <dt>
 
-*pcbValue* \[ vorgenommen\]
+*pwValue* \[ out\]
 </dt> <dd>
 
-Ein Zeiger auf die Größe von *ppValue* in Bytes.
+Zeiger auf die Größe von *ppValue* in Bytes.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Die-Methode gibt ein **HRESULT** zurück. Mögliches Werte (aber nicht die Einzigen) sind die in der folgenden Tabelle.
+Die Methode gibt ein **HRESULT** zurück. Mögliches Werte (aber nicht die Einzigen) sind die in der folgenden Tabelle.
 
 
 
 | Rückgabecode                                                                                                            | Beschreibung                                                          |
 |------------------------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------|
 | <dl> <dt>**S \_ OK**</dt> </dl>                                   | Die Methode wurde erfolgreich ausgeführt.<br/>                                     |
-| <dl> <dt>**DISP \_ E \_ typemismatch**</dt> </dl>                   | Die von *Key* angegebene Eigenschaft ist kein  \* Bytetyp.<br/> |
-| <dl> <dt>**HRESULT \_ von \_ Win32 (Fehler \_ nicht \_ gefunden)**</dt> </dl> | Die von *Key* angegebene Eigenschaft ist nicht in der Auflistung.<br/> |
+| <dl> <dt>**DISP \_ E \_ TYPEMISMATCH**</dt> </dl>                   | Die vom *Schlüssel* angegebene Eigenschaft ist kein  \* BYTE-Typ.<br/> |
+| <dl> <dt>**HRESULT \_ AUS \_ WIN32 (FEHLER \_ NICHT \_ GEFUNDEN)**</dt> </dl> | Die vom *Schlüssel* angegebene Eigenschaft befindet sich nicht in der Auflistung.<br/> |
 
 
 
  
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Das Abrufen eines **null** -Puffers oder eines Puffers der Größe 0 wird nicht unterstützt.
+Das Abrufen eines **NULL-Puffers** oder eines Puffers mit einer Größe von null wird nicht unterstützt.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -89,19 +89,19 @@ Das Abrufen eines **null** -Puffers oder eines Puffers der Größe 0 wird nicht 
 
 | Anforderung | Wert |
 |--------------------|----------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Portablede vicetypes. h</dt> </dl>   |
-| Bibliothek<br/> | <dl> <dt>Portabledeviceguids. lib</dt> </dl> |
+| Header<br/>  | <dl> <dt>PortableDeviceTypes.h</dt> </dl>   |
+| Bibliothek<br/> | <dl> <dt>PortableDeviceGUIDs.lib</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Iportabledebug-Schnittstelle**](iportabledevicevalues.md)
+[**IPortableDeviceValues-Schnittstelle**](iportabledevicevalues.md)
 </dt> <dt>
 
-[**Iportabledebug:: setbuffervalue**](iportabledevicevalues-setbuffervalue.md)
+[**IPortableDeviceValues::SetBufferValue**](iportabledevicevalues-setbuffervalue.md)
 </dt> </dl>
 
  

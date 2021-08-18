@@ -1,7 +1,7 @@
 ---
-description: Wendet ein stippingmuster auf die Zeile an.
+description: Wendet ein Ausschnittmuster auf die Zeile an.
 ms.assetid: 53548a9f-cf09-4ab9-9327-d5053645fc1b
-title: 'ID3DXLine:: SetPattern-Methode (D3dx9core. h)'
+title: ID3DXLine::SetPattern-Methode (D3dx9core.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -14,16 +14,16 @@ api_type:
 api_location:
 - d3dx9.lib
 - d3dx9.dll
-ms.openlocfilehash: 80a0485991bc06bdb9fcd3280017d4cc60b492ca
-ms.sourcegitcommit: 14010c34b35fa268046c7683f021f86de08ddd0a
+ms.openlocfilehash: 502fcbc8c3d8a8160ce3390330511d47165493a2bd4cc9a312e5203de7424e29
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "104132389"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119120874"
 ---
-# <a name="id3dxlinesetpattern-method"></a>ID3DXLine:: SetPattern-Methode
+# <a name="id3dxlinesetpattern-method"></a>ID3DXLine::SetPattern-Methode
 
-Wendet ein stippingmuster auf die Zeile an.
+Wendet ein Ausschnittmuster auf die Zeile an.
 
 ## <a name="syntax"></a>Syntax
 
@@ -40,12 +40,12 @@ HRESULT SetPattern(
 
 <dl> <dt>
 
-*dwpattern* \[ in\]
+*dwPattern* \[ In\]
 </dt> <dd>
 
 Typ: **[ **DWORD**](../winprog/windows-data-types.md)**
 
-Beschreibt das Stippel Muster: 1 ist undurchsichtig, 0 ist transparent.
+Beschreibt das Ausschnittmuster: 1 ist nicht transparent, 0 ist transparent.
 
 </dd> </dl>
 
@@ -53,7 +53,7 @@ Beschreibt das Stippel Muster: 1 ist undurchsichtig, 0 ist transparent.
 
 Typ: **[ **HRESULT**](https://msdn.microsoft.com/library/Bb401631(v=MSDN.10).aspx)**
 
-Wenn die Methode erfolgreich ausgeführt wird, ist der Rückgabewert D3D \_ OK. Wenn die Methode fehlschlägt, kann der Rückgabewert einer der folgenden sein: D3DERR \_ invalidcall, D3DXERR \_ InvalidData.
+Wenn die Methode erfolgreich ist, ist der Rückgabewert D3D \_ OK. Wenn bei der Methode ein Fehler auftritt, kann der Rückgabewert einer der folgenden Sein: D3DERR \_ INVALIDCALL, D3DXERR \_ INVALIDDATA.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -61,12 +61,12 @@ Wenn die Methode erfolgreich ausgeführt wird, ist der Rückgabewert D3D \_ OK. 
 
 | Anforderung | Wert |
 |--------------------|----------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>D3dx9core. h</dt> </dl> |
-| Bibliothek<br/> | <dl> <dt>D3dx9. lib</dt> </dl>   |
+| Header<br/>  | <dl> <dt>D3dx9core.h</dt> </dl> |
+| Bibliothek<br/> | <dl> <dt>D3dx9.lib</dt> </dl>   |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 

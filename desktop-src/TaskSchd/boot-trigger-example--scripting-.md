@@ -1,6 +1,6 @@
 ---
-title: Beispiel für einen Start-Beispiel (Skripterstellung)
-description: In diesem Skript Beispiel wird veranschaulicht, wie eine Aufgabe erstellt wird, die für die Ausführung von Notepad geplant ist, wenn das System gestartet wird.
+title: Beispiel für Starttrigger (Skripterstellung)
+description: In diesem Skriptbeispiel wird veranschaulicht, wie sie eine Aufgabe erstellen, die für die Ausführung Editor Systemstarts geplant ist.
 ms.assetid: 73ae9cc4-ef89-4390-ac05-8a773f45fa46
 ms.topic: article
 ms.date: 05/31/2018
@@ -9,29 +9,29 @@ topic_type:
 api_name: ''
 api_type: ''
 api_location: ''
-ms.openlocfilehash: 72b7735c607dfc39b848532a70e4d24b1a14d346
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: ff02bef70b4003c4e7b6e9aff03e2d615f24d7e15707cddcae3a4637ff2b11f8
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "104036975"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119002518"
 ---
-# <a name="boot-trigger-example-scripting"></a>Beispiel für einen Start-Beispiel (Skripterstellung)
+# <a name="boot-trigger-example-scripting"></a>Beispiel für Starttrigger (Skripterstellung)
 
-In diesem Skript Beispiel wird veranschaulicht, wie eine Aufgabe erstellt wird, die für die Ausführung von Notepad geplant ist, wenn das System gestartet wird. Der Task enthält einen Start--Fehler, der eine Start Grenze und eine Verzögerungszeit angibt, nach der der Task gestartet wird, nachdem das System gestartet wurde. Der Task enthält auch eine Aktion, die den Task zum Ausführen von Notepad angibt. Der Task wird mit dem lokalen Dienst Konto als Sicherheitskontext registriert, um den Task auszuführen.
+In diesem Skriptbeispiel wird veranschaulicht, wie sie eine Aufgabe erstellen, die für die Ausführung Editor Systemstarts geplant ist. Die Aufgabe enthält einen Starttrigger, der eine Startgrenze und eine Verzögerungszeit für den Start des Task nach dem Systemstart angibt. Der Task enthält auch eine Aktion, die den Task angibt, der Editor. Die Aufgabe wird mithilfe des lokalen Dienstkontos als Sicherheitskontext registriert, um die Aufgabe auszuführen.
 
-Im folgenden Verfahren wird beschrieben, wie eine ausführbare Datei, z. b. Notepad, beim Starten des Systems gestartet wird.
+Im folgenden Verfahren wird beschrieben, wie Sie eine ausführbare Datei wie Editor starten, wenn das System gestartet wird.
 
-**So planen Sie den Start von Notepad, wenn das System gestartet wird**
+**So planen Sie Editor starten, wenn das System gestartet wird**
 
-1.  Erstellen Sie ein [**TaskService**](taskservice.md) -Objekt. Mit diesem Objekt können Sie die Aufgabe in einem angegebenen Ordner erstellen.
-2.  Rufen Sie einen Aufgaben Ordner ab, und erstellen Sie eine Aufgabe. Verwenden Sie die [**TaskService. GetFolder**](taskservice-getfolder.md) -Methode, um den Ordner zu erhalten, in dem die Aufgabe gespeichert ist, und die [**TaskService. newtask**](taskservice-newtask.md) -Methode zum Erstellen des [**Task Definition**](taskdefinition.md) -Objekts, das die Aufgabe darstellt.
-3.  Definieren von Informationen über den Task mithilfe des [**Taskdefinition**](taskdefinition.md) -Objekts. Verwenden Sie die [**Task Definition. Settings**](taskdefinition-settings.md) -Eigenschaft, um die Einstellungen zu definieren, die bestimmen, wie der Taskplaner Dienst den Task ausführt, und die [**Taskdefinition. RegistrationInfo**](taskdefinition-registrationinfo.md) -Eigenschaft, um die Informationen zu definieren, die die Aufgabe beschreiben.
-4.  Erstellen Sie einen Logon-Trigger mithilfe der [**Taskdefinition.**](taskdefinition-triggers.md) Triggers-Eigenschaft. Diese Eigenschaft ermöglicht den Zugriff auf das [**TriggerCollection**](triggercollection.md) -Objekt. Verwenden Sie die [**TriggerCollection. Create**](triggercollection-create.md) -Methode (die den Typ des zu erstellenden Auslösers angibt), um einen Start Trigger zu erstellen. Legen Sie beim Erstellen des Auslösers die Eigenschaften [**StartBoundary**](trigger-startboundary.md) und [**endboundary**](trigger-endboundary.md) des Auslösers auf Aktivieren und Deaktivieren des Auslösers fest. Sie können auch einen Wert für die [**Delay**](boottrigger-delay.md) -Eigenschaft des Start-Auslösers angeben.
-5.  Erstellen Sie eine Aktion für die Ausführung der Aufgabe, indem Sie die [**Task Definition. Actions**](taskdefinition-actions.md) -Eigenschaft verwenden. Diese Eigenschaft ermöglicht den Zugriff auf das Objekt " [**Aktions Sammlung**](actioncollection.md) ". Verwenden Sie die [**Action Collection. Create**](actioncollection-create.md) -Methode, um den Typ der Aktion anzugeben, die Sie erstellen möchten. In diesem Beispiel wird ein [**execaction**](execaction.md) -Objekt verwendet, das eine Aktion darstellt, die eine ausführbare Datei startet.
-6.  Registrieren Sie die Aufgabe mit der [**Task Folder. RegisterTaskDefinition**](taskfolder-registertaskdefinition.md) -Methode. Der Task wird mit dem lokalen Dienst Konto als Sicherheitskontext registriert, um den Task auszuführen.
+1.  Erstellen Sie ein [**TaskService-Objekt.**](taskservice.md) Mit diesem Objekt können Sie die Aufgabe in einem angegebenen Ordner erstellen.
+2.  Erstellen Sie einen Taskordner, und erstellen Sie einen Task. Verwenden Sie [**die TaskService.GetFolder-Methode,**](taskservice-getfolder.md) um den Ordner zu erhalten, in dem die Aufgabe gespeichert ist, und die [**TaskService.NewTask-Methode,**](taskservice-newtask.md) um das [**TaskDefinition-Objekt**](taskdefinition.md) zu erstellen, das die Aufgabe darstellt.
+3.  Definieren Sie Informationen zum Task mithilfe des [**TaskDefinition-Objekts.**](taskdefinition.md) Verwenden Sie [**die TaskDefinition.Einstellungen-Eigenschaft,**](taskdefinition-settings.md) um die Einstellungen zu definieren, die bestimmen, wie der Taskplaner-Dienst die Aufgabe ausführt, und die [**TaskDefinition.RegistrationInfo-Eigenschaft,**](taskdefinition-registrationinfo.md) um die Informationen zu definieren, die den Task beschreiben.
+4.  Erstellen Sie mithilfe der [**TaskDefinition.Triggers-Eigenschaft einen Logon-Trigger.**](taskdefinition-triggers.md) Diese Eigenschaft ermöglicht den Zugriff auf das [**TriggerCollection-Objekt.**](triggercollection.md) Verwenden Sie [**die TriggerCollection.Create-Methode**](triggercollection-create.md) (unter Angabe des Triggertyps, den Sie erstellen möchten), um einen Starttrigger zu erstellen. Legen Sie beim Erstellen des Triggers die [**Eigenschaften StartBoundary**](trigger-startboundary.md) und [**EndBoundary**](trigger-endboundary.md) des Triggers fest, um den Trigger zu aktivieren und zu deaktivieren. Sie können auch einen Wert für die [**Delay-Eigenschaft**](boottrigger-delay.md) des Starttriggers angeben.
+5.  Erstellen Sie mithilfe der [**TaskDefinition.Actions-Eigenschaft**](taskdefinition-actions.md) eine Aktion für die Auszuführende Aufgabe. Diese Eigenschaft ermöglicht den Zugriff auf das [**ActionCollection-Objekt.**](actioncollection.md) Verwenden Sie [**die ActionCollection.Create-Methode,**](actioncollection-create.md) um den Typ der Aktion anzugeben, die Sie erstellen möchten. In diesem Beispiel wird ein [**ExecAction-Objekt**](execaction.md) verwendet, das eine Aktion darstellt, die eine ausführbare Datei startet.
+6.  Registrieren Sie die Aufgabe mithilfe der [**TaskFolder.RegisterTaskDefinition-Methode.**](taskfolder-registertaskdefinition.md) Die Aufgabe wird mithilfe des lokalen Dienstkontos als Sicherheitskontext registriert, um die Aufgabe auszuführen.
 
-Im folgenden VBScript-Beispiel wird veranschaulicht, wie Sie einen Task zum Ausführen von Notepad 30 Sekunden nach dem Starten des Systems planen.
+Das folgende VBScript-Beispiel zeigt, wie sie eine Aufgabe 30 Sekunden Editor, nachdem das System gestartet wurde, ausgeführt wird.
 
 
 ```VB
@@ -128,9 +128,9 @@ WScript.Echo "Task submitted."
 [Verwenden des Taskplaner](using-the-task-scheduler.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

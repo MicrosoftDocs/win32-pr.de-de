@@ -1,79 +1,79 @@
 ---
-title: Single-Threaded-Apartments
-description: Single-Threaded-Apartments
+title: Single-Threaded Apartment
+description: Single-Threaded Apartment
 ms.assetid: 2f345ae2-8314-4067-a6d6-5a0275941ed4
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 0f0a8cb1422b6866d9e0d043fdd46c895e6d335b
-ms.sourcegitcommit: 5f33645661bf8c825a7a2e73950b1f4ea0f1cd82
+ms.openlocfilehash: 41f9b969a48fd83ac82307c42bf4e801168bcf97f83536045fc078b19e3eb77d
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/21/2020
-ms.locfileid: "104391053"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119129822"
 ---
-# <a name="single-threaded-apartments"></a>Single-Threaded-Apartments
+# <a name="single-threaded-apartments"></a>Single-Threaded Apartment
 
-Die Verwendung von Single Thread-Apartments (der Apartment modellprozess) bietet ein Nachrichten basiertes Paradigma für den Umgang mit mehreren Objekten, die gleichzeitig ausgeführt werden. Damit können Sie effizienteren Code schreiben, indem Sie einen Thread zulassen, während er auf den Abschluss eines zeitaufwändigen Vorgangs wartet, damit ein anderer Thread ausgeführt werden kann.
+Die Verwendung von Singlethread-Apartments (der Apartmentmodellprozess) bietet ein nachrichtenbasiertes Paradigma für den gleichzeitigen Umgang mit mehreren Objekten. Sie ermöglicht es Ihnen, effizienteren Code zu schreiben, indem ein Thread zugelassen wird, während er auf den Abschluss eines zeitaufwändigen Vorgangs wartet, um die Ausführung eines anderen Threads zuzulassen.
 
-Jeder Thread in einem Prozess, der als Apartment modellprozess initialisiert wird und Fenster Nachrichten abruft und sendet, ist ein Single Thread-Apartment Thread. Jeder Thread befindet sich in einem eigenen Apartment. In einem Apartment können Schnittstellen Zeiger ohne Marshalling übermittelt werden, sodass alle Objekte in einem Single Thread-Apartment Thread direkt kommunizieren.
+Jeder Thread in einem Prozess, der als Apartmentmodellprozess initialisiert wird und Fenstermeldungen abruft und verteilt, ist ein Singlethread-Apartmentthread. Jeder Thread befindet sich in seinem eigenen Apartment. Innerhalb eines Apartments können Schnittstellenzeiger ohne Marshalling übergeben werden. Daher kommunizieren alle Objekte in einem Singlethread-Apartmentthread direkt.
 
-Eine logische Gruppierung von verknüpften Objekten, die alle im gleichen Thread ausgeführt werden und daher über eine synchrone Ausführung verfügen müssen, kann im gleichen Single Thread-Apartment Thread Leben. Ein Apartment Modell Objekt kann sich jedoch nicht in mehr als einem Thread befinden. Aufrufe von Objekten in anderen Threads müssen innerhalb des Kontexts des besitzenden Threads erfolgen. daher schaltet der verteilte com automatisch Threads für Sie ein, wenn Sie auf einem Proxy aufrufen.
+Eine logische Gruppierung verwandter Objekte, die alle in demselben Thread ausgeführt werden und daher eine synchrone Ausführung aufweisen müssen, kann sich auf demselben Singlethread-Apartmentthread befinden. Ein Apartmentmodellobjekt darf sich jedoch nicht auf mehr als einem Thread befinden. Aufrufe von Objekten in anderen Threads müssen im Kontext des besitzenden Threads erfolgen, sodass verteilte COM-Threads automatisch für Sie wechseln, wenn Sie für einen Proxy aufrufen.
 
-Die prozessübergreifenden und interthreadmodelle ähneln einander. Wenn es erforderlich ist, einen Schnittstellen Zeiger an ein Objekt in einem anderen Apartment (in einem anderen Thread) innerhalb desselben Prozesses zu übergeben, verwenden Sie das gleiche marshallingmodell, das von Objekten in verschiedenen Prozessen verwendet wird, um Zeiger über Prozess Grenzen hinweg zu übergeben. Wenn Sie einen Zeiger auf das marshallingobjekt "Standard" erhalten, können Sie Schnittstellen Zeiger über Thread Grenzen hinweg (zwischen Apartments) auf die gleiche Weise wie zwischen Prozessen Mars Hallen. (Schnittstellen Zeiger müssen gemarshallt werden, wenn Sie zwischen Apartments übermittelt werden.)
+Die Interprocess- und Interthread-Modelle sind ähnlich. Wenn es erforderlich ist, einen Schnittstellenzeiger an ein Objekt in einem anderen Apartment (in einem anderen Thread) innerhalb desselben Prozesses zu übergeben, verwenden Sie dasselbe Marshallingmodell, mit dem Objekte in verschiedenen Prozessen Zeiger über Prozessgrenzen hinweg übergeben. Indem Sie einen Zeiger auf das Standardmäßige Marshallingobjekt abrufen, können Sie Schnittstellenzeiger über Threadgrenzen (zwischen Apartments) auf die gleiche Weise marshallen wie zwischen Prozessen. (Schnittstellenzeiger müssen gemarshallt werden, wenn sie zwischen Apartments übergeben werden.)
 
-Regeln für Single Thread-Apartments sind einfach, aber es ist wichtig, Sie sorgfältig zu befolgen:
+Regeln für Singlethread-Apartments sind einfach, aber es ist wichtig, sie sorgfältig zu befolgen:
 
--   Jedes Objekt sollte nur in einem Thread (in einem Single Thread-Apartment) Leben.
--   Initialisieren Sie die com-Bibliothek für jeden Thread.
--   Marshallt alle Zeiger auf Objekte, wenn Sie zwischen den Apartments übergeben werden.
--   Jedes Single Thread-Apartment muss über eine Nachrichten Schleife zum Verarbeiten von Aufrufen von anderen Prozessen und Apartments innerhalb desselben Prozesses verfügen. Single Thread-Apartments ohne Objekte (nur Client) benötigen auch eine Nachrichten Schleife, um die Broadcast Nachrichten zu verteilen, die von einigen Anwendungen verwendet werden.
--   DLL-basierte oder in-Process-Objekte werden die com-Initialisierungs Funktionen nicht aufzurufen. Stattdessen registrieren Sie Ihr Threading Modell mit dem Wert " **ThreadingModel** " mit dem Namen "-Value" unter dem Schlüssel " [InProcServer32](inprocserver32.md) " in der Registrierung. Apartment fähige Objekte müssen auch DLL-Einstiegspunkte sorgfältig schreiben. Für das Threading in-Process-Server gelten besondere Überlegungen. Weitere Informationen finden Sie unter [Prozess interne Server Threading Probleme](in-process-server-threading-issues.md).
+-   Jedes Objekt sollte sich nur in einem Thread (innerhalb eines Singlethread-Apartment) befinden.
+-   Initialisieren Sie die COM-Bibliothek für jeden Thread.
+-   Marshallen Sie alle Zeiger auf Objekte, wenn sie zwischen Apartments übergeben werden.
+-   Jedes Singlethread-Apartment muss über eine Nachrichtenschleife verfügen, um Aufrufe von anderen Prozessen und Apartments innerhalb desselben Prozesses zu verarbeiten. Singlethread-Apartments ohne Objekte (nur Client) benötigen auch eine Nachrichtenschleife, um die Von einigen Anwendungen verwendeten Broadcastnachrichten zu senden.
+-   DLL-basierte oder prozessbezogene Objekte rufen die COM-Initialisierungsfunktionen nicht auf. Stattdessen registrieren sie ihr Threadingmodell mit dem **ThreadingModel** named-value unter dem [InprocServer32-Schlüssel](inprocserver32.md) in der Registrierung. Apartmentfähige Objekte müssen auch SORGFÄLTIG DLL-Einstiegspunkte schreiben. Es gibt besondere Überlegungen, die für threading in-process-Server gelten. Weitere Informationen finden Sie unter [In-Process Server Threading Issues](in-process-server-threading-issues.md).
 
-Während mehrere-Objekte in einem einzelnen Thread Live sein können, kann kein Apartment Modell Objekt in mehr als einem Thread Leben.
+Mehrere Objekte können sich zwar in einem einzelnen Thread befinden, aber kein Apartmentmodellobjekt kann sich in mehr als einem Thread befinden.
 
-Jeder Thread eines Client Prozesses oder out-of-Process-Servers muss [**CoInitialize**](/windows/desktop/api/Objbase/nf-objbase-coinitialize)aufrufen, oder [**CoInitializeEx**](/windows/desktop/api/combaseapi/nf-combaseapi-coinitializeex) aufrufen und coinit \_ Apartmentthreaded für den *dwcoinit* -Parameter angeben. Das Haupt Apartment ist der Thread, der zuerst **CoInitializeEx** aufruft. Informationen zu Prozess internen Servern finden Sie unter [Prozess interne Server Threading Probleme](in-process-server-threading-issues.md).
+Jeder Thread eines Clientprozesses oder Out-of-Process-Servers muss [**CoInitialize**](/windows/desktop/api/Objbase/nf-objbase-coinitialize)oder [**CoInitializeEx**](/windows/desktop/api/combaseapi/nf-combaseapi-coinitializeex) aufrufen und COINIT \_ APARTMENTTHREADED für den *dwCoInit-Parameter* angeben. Das Hauptapartment ist der Thread, der **Zuerst CoInitializeEx aufruft.** Informationen zu In-Process-Servern finden Sie unter [Threadingprobleme bei In-Process-Servern.](in-process-server-threading-issues.md)
 
-Alle Aufrufe an ein Objekt müssen in seinem Thread (in seinem Apartment) vorgenommen werden. Es ist unzulässig, ein Objekt direkt von einem anderen Thread aus aufzurufen. die Verwendung von Objekten in dieser frei Thread Weise kann zu Problemen bei Anwendungen führen. Diese Regel impliziert, dass alle Zeiger auf Objekte gemarshallt werden müssen, wenn Sie zwischen den Apartments übermittelt werden. COM stellt für diesen Zweck die folgenden zwei Funktionen bereit:
+Alle Aufrufe eines Objekts müssen in seinem Thread (innerhalb des Apartment) erfolgen. Es ist nicht zulässig, ein Objekt direkt aus einem anderen Thread aufzurufen. Die Verwendung von -Objekten auf diese Freethread-Weise kann zu Problemen für Anwendungen führen. Die Folge dieser Regel ist, dass alle Zeiger auf Objekte gemarshallt werden müssen, wenn sie zwischen Apartments übergeben werden. COM stellt zu diesem Zweck die folgenden beiden Funktionen bereit:
 
--   [**Comarshalinterthreadinterfakeinstream**](/windows/desktop/api/combaseapi/nf-combaseapi-comarshalinterthreadinterfaceinstream) marshalltet eine Schnittstelle in ein Streamobjekt, das an den Aufrufer zurückgegeben wird.
--   [**Cogetinterfaceandreleasestream**](/windows/desktop/api/combaseapi/nf-combaseapi-cogetinterfaceandreleasestream) entfernt einen Schnittstellen Zeiger von einem Stream-Objekt und gibt diesen frei.
+-   [**CoMarshalInterThreadInterfaceInStream**](/windows/desktop/api/combaseapi/nf-combaseapi-comarshalinterthreadinterfaceinstream) marshallt eine Schnittstelle in ein Streamobjekt, das an den Aufrufer zurückgegeben wird.
+-   [**CoGetInterfaceAndReleaseStream**](/windows/desktop/api/combaseapi/nf-combaseapi-cogetinterfaceandreleasestream) entfernt einen Schnittstellenzeiger aus einem Streamobjekt und gibt ihn frei.
 
-Diese Funktionen wrappen Aufrufe an die Funktionen [**comarshalinterface**](/windows/desktop/api/combaseapi/nf-combaseapi-comarshalinterface) und [**countrymarshalinterface**](/windows/desktop/api/combaseapi/nf-combaseapi-counmarshalinterface) , die die Verwendung des mshctx \_ INPROC-Flags erfordern.
+Diese Funktionen umschließen Aufrufe der Funktionen [**CoMarshalInterface**](/windows/desktop/api/combaseapi/nf-combaseapi-comarshalinterface) und [**CoUnmarshalInterface,**](/windows/desktop/api/combaseapi/nf-combaseapi-counmarshalinterface) die die Verwendung des MSHCTX \_ INPROC-Flags erfordern.
 
-Im Allgemeinen wird das Marshalling automatisch durch com erreicht. Wenn z. b. ein Schnittstellen Zeiger als Parameter in einem Methodenaufruf eines Proxys für ein Objekt in einem anderen Apartment oder beim Aufrufen von [**CoCreateInstance**](/windows/desktop/api/combaseapi/nf-combaseapi-cocreateinstance)übergeben wird, führt com das Marshalling automatisch durch. In einigen besonderen Fällen, in denen der anwendungswriter Schnittstellen Zeiger zwischen den Apartments übergibt, ohne die normalen com-Mechanismen zu verwenden, muss der Writer das Marshalling manuell verarbeiten.
+Im Allgemeinen erfolgt das Marshalling automatisch durch COM. Wenn z. B. ein Schnittstellenzeiger als Parameter in einem Methodenaufruf für einen Proxy an ein Objekt in einem anderen Apartment übergeben wird oder [**wenn CoCreateInstance**](/windows/desktop/api/combaseapi/nf-combaseapi-cocreateinstance)aufgerufen wird, führt COM das Marshalling automatisch durch. In einigen besonderen Fällen, in denen der Anwendungswriter Schnittstellenzeiger zwischen Apartments übergibt, ohne die normalen COM-Mechanismen zu verwenden, muss der Writer das Marshalling jedoch manuell verarbeiten.
 
-Wenn ein Apartment (Apartment 1) in einem Prozess über einen Schnittstellen Zeiger verfügt und ein anderes Apartment (Apartment 2) seine Verwendung erfordert, muss Apartment 1 [**comarshalinterthreadinterfakeinstream**](/windows/desktop/api/combaseapi/nf-combaseapi-comarshalinterthreadinterfaceinstream) aufrufen, um die Schnittstelle zu Mars Hallen. Der Stream, der von dieser Funktion erstellt wird, ist Thread sicher und muss in einer Variablen gespeichert werden, auf die von Apartment 2 aus zugegriffen werden kann. Apartment 2 muss diesen Datenstrom an [**cogetinterfaceandreleasestream**](/windows/desktop/api/combaseapi/nf-combaseapi-cogetinterfaceandreleasestream) übergeben, um das Marshalling der Schnittstelle zu entsperren, und erhält einen Zeiger auf einen Proxy, über den Sie auf die Schnittstelle zugreifen kann. Das Haupt Apartment muss aktiv bleiben, bis der Client alle com-Aufgaben abgeschlossen hat (da einige in-Process-Objekte in das Haupt Apartment geladen werden, wie unter [Prozess Server-Threading Probleme](in-process-server-threading-issues.md)beschrieben). Nachdem ein Objekt auf diese Weise zwischen Threads übergeben wurde, ist es sehr einfach, Schnittstellen Zeiger als Parameter zu übergeben. Auf diese Weise führt der verteilte com das Marshalling und den Thread Wechsel für die Anwendung aus.
+Wenn ein Apartment (Apartment 1) in einem Prozess über einen Schnittstellenzeiger verfügt und ein anderes Apartment (Apartment 2) seine Verwendung erfordert, muss Apartment 1 [**CoMarshalInterThreadInterfaceInStream**](/windows/desktop/api/combaseapi/nf-combaseapi-comarshalinterthreadinterfaceinstream) aufrufen, um die Schnittstelle zu marshallen. Der von dieser Funktion erstellte Stream ist threadsicher und muss in einer Variablen gespeichert werden, auf die Apartment 2 zugreifen kann. Apartment 2 muss diesen Stream an [**CoGetInterfaceAndReleaseStream**](/windows/desktop/api/combaseapi/nf-combaseapi-cogetinterfaceandreleasestream) übergeben, um denMarshal der Schnittstelle zu aufheben, und erhält einen Zeiger auf einen Proxy zurück, über den es auf die Schnittstelle zugreifen kann. Das Hauptapartment muss aktiv bleiben, bis der Client alle COM-Arbeiten abgeschlossen hat (da einige in-process-Objekte im Hauptapartment geladen werden, wie unter [In-Process Server Threading Issues (In-Process-Serverthreadingprobleme)](in-process-server-threading-issues.md)beschrieben). Nachdem ein Objekt auf diese Weise zwischen Threads übergeben wurde, ist es sehr einfach, Schnittstellenzeiger als Parameter zu übergeben. Auf diese Weise führt verteiltes COM das Marshalling und Threadwechsel für die Anwendung durch.
 
-Zum Verarbeiten von Aufrufen von anderen Prozessen und Apartments innerhalb desselben Prozesses muss jedes Single Thread-Apartment über eine Nachrichten Schleife verfügen. Dies bedeutet, dass die Arbeitsfunktion des Threads eine GetMessage/DispatchMessage-Schleife aufweisen muss. Wenn für die Kommunikation zwischen Threads andere Synchronisierungs primitiven verwendet werden, kann die [**MsgWaitForMultipleObjects**](/windows/desktop/api/winuser/nf-winuser-msgwaitformultipleobjects) -Funktion verwendet werden, um sowohl auf Nachrichten als auch auf Thread Synchronisierungs Ereignisse zu warten. Die Dokumentation für diese Funktion enthält ein Beispiel für diese Art von Kombinations Schleife.
+Um Aufrufe von anderen Prozessen und Apartments innerhalb desselben Prozesses verarbeiten zu können, muss jedes Singlethread-Apartment über eine Nachrichtenschleife verfügen. Dies bedeutet, dass die Arbeitsfunktion des Threads über eine GetMessage/DispatchMessage-Schleife verfügen muss. Wenn andere Synchronisierungsprimitiven für die Kommunikation zwischen Threads verwendet werden, kann die [**MsgWaitForMultipleObjects-Funktion**](/windows/desktop/api/winuser/nf-winuser-msgwaitformultipleobjects) verwendet werden, um sowohl auf Nachrichten als auch auf Threadsynchronisierungsereignisse zu warten. Die Dokumentation für diese Funktion enthält ein Beispiel für diese Art von Kombinationsschleife.
 
-COM erstellt ein ausgeblendetes Fenster mithilfe der Windows-Klasse "olemainthreadwndclass" in jedem Single Thread-Apartment. Ein-Objekt wird als Fenster Meldung für dieses verborgene Fenster empfangen. Wenn das Apartment des Objekts die Nachricht abruft und sendet, empfängt das verborgene Fenster es. Die Fenster Prozedur ruft dann die entsprechende Schnittstellen Methode des-Objekts auf.
+COM erstellt ein ausgeblendetes Fenster mithilfe der Windows -Klasse "OleMainThreadWndClass" in jedem Singlethread-Apartment. Ein Aufruf eines -Objekts wird als Fensternachricht an dieses ausgeblendete Fenster empfangen. Wenn das Apartment des Objekts die Nachricht abruft und weiterleitet, empfängt das ausgeblendete Fenster sie. Die Fensterprozedur ruft dann die entsprechende Schnittstellenmethode des -Objekts auf.
 
-Wenn mehrere Clients ein Objekt aufrufen, werden die Aufrufe in der Nachrichten Warteschlange eingereiht, und das Objekt erhält jedes Mal einen Aufruf, wenn das Apartment Nachrichten abruft und sendet. Da die Aufrufe durch com synchronisiert werden und die Aufrufe immer durch den Thread übermittelt werden, der zum Apartment des Objekts gehört, müssen die Schnittstellen Implementierungen des Objekts keine Synchronisierung bereitstellen. Single Thread-Apartments können [**IMessageFilter**](/windows/desktop/api/ObjIdl/nn-objidl-imessagefilter) implementieren, damit Sie bei Bedarf Aufrufe abbrechen oder Fenster Meldungen empfangen können.
+Wenn mehrere Clients ein Objekt aufrufen, werden die Aufrufe in der Nachrichtenwarteschlange in die Warteschlange eingereiht, und das Objekt empfängt jedes Mal einen Aufruf, wenn sein Apartment Nachrichten abruft und verteilt. Da die Aufrufe von COM synchronisiert werden und die Aufrufe immer vom Thread übermittelt werden, der zum Apartment des Objekts gehört, müssen die Schnittstellenimplementierungen des Objekts keine Synchronisierung bereitstellen. Singlethread-Apartments können [**IMessageFilter**](/windows/desktop/api/ObjIdl/nn-objidl-imessagefilter) implementieren, damit sie Bei Bedarf Aufrufe abbrechen oder Fenstermeldungen empfangen können.
 
-Das Objekt kann erneut eingegeben werden, wenn eine seiner Schnittstellen Methoden Implementierungen Nachrichten abruft und sendet oder einen ORPC-Rückruf an einen anderen Thread sendet. Dadurch wird ein weiterer aufzurufende Befehl an das Objekt gesendet (durch das gleiche Apartment). OLE verhindert nicht den erneuten eintreten im gleichen Thread, kann jedoch zur Bereitstellung der Thread Sicherheit beitragen. Dies ist identisch mit der Art und Weise, in der eine Fenster Prozedur erneut eingegeben werden kann, wenn beim Verarbeiten einer Nachricht Nachrichten abgerufen und gesendet werden. Wenn Sie jedoch einen Out-of-Process-Single Thread-Apartment Server aufrufen, der einen anderen Single Thread-Apartment Server aufruft, kann der erste Server erneut eingegeben werden.
+Das Objekt kann erneut gesendet werden, wenn eine seiner Schnittstellenmethodenimplementierungen Nachrichten abruft und weiterleitet oder einen ORPC-Aufruf an einen anderen Thread vornimmt, wodurch ein anderer Aufruf an das Objekt übermittelt wird (durch dasselbe Apartment). OLE verhindert nicht die Wiederinvarianz im selben Thread, kann aber zur Sicherheit von Threads beitragen. Dies ist identisch mit der Art und Weise, wie eine Fensterprozedur erneut eingelesen werden kann, wenn sie Nachrichten abruft und während der Verarbeitung einer Nachricht weiterleitet. Wenn Sie jedoch einen out-of-process-Singlethread-Apartmentserver aufrufen, der einen anderen Singlethread-Apartmentserver aufruft, kann der erste Server erneut aufgerufen werden.
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[Zugreifen auf Schnittstellen über mehrere Apartments](accessing-interfaces-across-apartments.md)
+[Zugreifen auf Schnittstellen zwischen Apartments](accessing-interfaces-across-apartments.md)
 </dt> <dt>
 
-[Auswählen des Threading Modells](choosing-the-threading-model.md)
+[Auswählen des Threadingmodells](choosing-the-threading-model.md)
 </dt> <dt>
 
-[Multithread-Apartments](multithreaded-apartments.md)
+[Multithread-Apartment](multithreaded-apartments.md)
 </dt> <dt>
 
-[Threading Probleme im Prozess internen Server](in-process-server-threading-issues.md)
+[Threadingprobleme beim In-Process-Server](in-process-server-threading-issues.md)
 </dt> <dt>
 
-[Prozesse, Threads und Apartments](processes--threads--and-apartments.md)
+[Prozesse, Threads und Apartment](processes--threads--and-apartments.md)
 </dt> <dt>
 
-[Single Thread-und Multithread-Kommunikation](single-threaded-and-multithreaded-communication.md)
+[Singlethread- und Multithreadkommunikation](single-threaded-and-multithreaded-communication.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 

@@ -4,36 +4,36 @@ ms.assetid: a0d5c4ae-e0a3-466b-bf43-6bf7cda7aa21
 title: Leistung (Windows Imaging-Komponente)
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 997c6c5da78567642a29ecc7ac88f6b66c3fb0b7
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: a6a3fedd9ed83e30316dfac260b2dbb9a15e326e576146739b866369f2a5ddb7
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "103960361"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119086873"
 ---
 # <a name="performance-windows-imaging-component"></a>Leistung (Windows Imaging-Komponente)
 
-Das Ziel von Microsoft ist, dass die Leistung der Rohverarbeitung über die WIC-Schnittstelle (Windows Imaging Component) den branchenführenden rohverarbeitungs Tools und-Anwendungen entspricht. Zum Bereitstellen eines Leistungs Leitfadens wurde eine Reihe umfassender Tests durchgeführt, die die Leistung gängiger Rohdaten Workflow Tools vergleichen. Die Tests enthielten sowohl Windows-als auch Apple Macintosh-Betriebssystemversionen von rohdatenverarbeitungs-Produkten, beispielrohdatendateien von aktuellen Reflexkameras und eine Reihe von Funktionen, die allgemeine Workflow Schritte darstellen.
+Das Ziel von Microsoft ist, dass die Leistung der RAW-Verarbeitung über die schnittstelle Windows Imaging Component (WIC) den branchenführenden ROH-Verarbeitungstools und -anwendungen entspricht. Um Leistungsleitfäden zu bieten, wurde eine Reihe umfassender Tests durchgeführt, die die Leistung beliebter RAW-Workflowtools vergleichen. Die Tests umfassten sowohl Windows- als auch Apple Macintosh-Betriebssystemversionen von RAW-Verarbeitungsprodukten, BEISPIEL-RAW-Dateien von aktuellen SLR-Kameras (Single-Lens-Spiegelung) sowie eine Reihe von Funktionen, die allgemeine Workflowschritte darstellen.
 
-Basierend auf diesen Ergebnissen schlägt Microsoft den Partnern die folgenden Empfehlungen für die rohdatenverarbeitungs Leistung vor:
+Basierend auf diesen Ergebnissen schlägt Microsoft partnern die folgenden Empfehlungen für die Raw-Verarbeitungsleistung vor:
 
--   Die Baseline-Leistung sollte gleich oder höher sein als die Verarbeitungszeiten der aktuellen vom Hersteller bereitgestellten rohdatenverarbeitungs-Anwendungen und-Tools.
--   Optimale Leistungsziele sollten der Anwendung mit der höchsten Leistung entsprechen oder diese überschreiten, ohne dass eine hohe Qualität erreicht wird (in diesen Tests wird die Photoshop-Kamera im Allgemeinen am schnellsten ausgeführt).
+-   Die Baselineleistung sollte mit den Verarbeitungszeiten der aktuell vom Hersteller bereitgestellten RAW-Verarbeitungsanwendungen und -tools gleich oder höher sein.
+-   Optimale Leistungsziele sollten mit der Leistung der Anwendung mit der höchsten Leistung übereinstimmen oder diese überschreiten, ohne die Qualität zu beeinträchtigen (in diesen Tests hat Die Raw-Leistung der Camera Von der Camera in der Regel am schnellsten durchgeführt).
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-**Licher**
+**Konzeptionellen**
 </dt> <dt>
 
-[Übersicht über die Windows Imaging-Komponente](-wic-about-windows-imaging-codec.md)
+[Windows Übersicht über Bildverarbeitungskomponenten](-wic-about-windows-imaging-codec.md)
 </dt> <dt>
 
-[WIC-Richtlinien für Kamera Rohbild Formate](-wic-rawguidelines.md)
+[WIC Guidelines for Camera RAW Image Formats](-wic-rawguidelines.md)
 </dt> <dt>
 
-[Schreiben eines WIC-Enabled Codecs](-wic-howtowriteacodec.md)
+[Schreiben eines WIC-Enabled CODEC](-wic-howtowriteacodec.md)
 </dt> </dl>
 
  

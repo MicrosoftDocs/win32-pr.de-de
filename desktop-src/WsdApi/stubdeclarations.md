@@ -4,12 +4,12 @@ ms.assetid: d43baeff-c941-4ce9-a6ae-8aa61ef44048
 title: stubDeclarations-Element
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 1543883b4d41e7571cd4a4725e2aeab181530d30
-ms.sourcegitcommit: b6fe9acffad983c14864b8fe0296f6025cb1f961
+ms.openlocfilehash: 846cea00438a5e2571e0e5c6a2b4af2a5ec519071ece2fa3570e0281fc9a22b6
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2021
-ms.locfileid: "107996407"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118991590"
 ---
 # <a name="stubdeclarations-element"></a>stubDeclarations-Element
 
@@ -31,7 +31,7 @@ Es gibt keine Attribute.
 
 
 
-| Element                                   | BESCHREIBUNG                                                                                      |
+| Element                                   | Beschreibung                                                                                      |
 |-------------------------------------------|--------------------------------------------------------------------------------------------------|
 | [**events**](events.md)<br/>       | Gibt an, ob verknüpfte Ereignisse in den generierten Funktionen enthalten sind.<br/> <br/> |
 | [**Vorgang**](operation.md)<br/> | Gibt einen Vorgang an, für den Code generiert werden soll.<br/> <br/>                 |
@@ -53,7 +53,7 @@ Es gibt keine Attribute.
 
 
 
-| Element                         | BESCHREIBUNG                                                    |
+| Element                         | Beschreibung                                                    |
 |---------------------------------|----------------------------------------------------------------|
 | [**Datei**](file.md)<br/> | Gibt eine Datei aus dem Codegenerator aus.<br/> <br/> |
 

@@ -5,16 +5,16 @@ ms.assetid: ff623d04-ad3f-4846-b9de-aaa280713018
 ms.topic: reference
 ms.date: 10/12/2020
 ms.reviewer: jsimmons
-ms.openlocfilehash: f07d8c200103fa21afc080c60157645fe6730766
-ms.sourcegitcommit: 1e64562147b11f90de802c2431173582d066fae6
+ms.openlocfilehash: 02762a80be9bd60b7f9c8648c9bfb848f3d76184f249567c9e9522189692e0e3
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "106339523"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119064350"
 ---
-# <a name="odj_provision_data-structure"></a>ODJ_PROVISION_DATA Struktur
+# <a name="odj_provision_data-structure"></a>ODJ_PROVISION_DATA-Struktur
 
-Gibt die äußerste Serialisierungsstruktur an, die von den Offline-Domänen Beitritt-APIs
+Gibt die äußerste Serialisierungsstruktur an, die von den Offlinedomänen-Join-APIs verwendet wird.
 
 ## <a name="syntax"></a>Syntax
 
@@ -29,22 +29,22 @@ typedef struct _ODJ_PROVISION_DATA
 
 ## <a name="members"></a>Member
 
-### <a name="ulversion"></a>ulversion
+### <a name="ulversion"></a>ulVersion
 
-Diese muss auf 1 festgelegt werden.
+Dies muss auf 1 festgelegt werden.
 
-### <a name="ulcblobs"></a>ulcblosb
+### <a name="ulcblobs"></a>ulcBlobs
 
-Dies muss auf die Anzahl der Elemente im pblobarray festgelegt werden.
+Dies muss auf die Anzahl der Elemente im pBlobs-Array festgelegt werden.
 
-### <a name="pblobs"></a>pblobcontainer
+### <a name="pblobs"></a>pBlobs
 
-Verweist auf ein Array von ODJ_BLOB Strukturen.
+Zeigt auf ein Array von ODJ_BLOB Strukturen.
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
-[**IDL-Definitionen im Offline-Domänen Beitritt**](odj-idl.md)
+[**IDL-Definitionen für den Offlinedomänen-Join**](odj-idl.md)
 
-[**ODJ- \_ BLOB**](odj-odj_blob.md)
+[**\_ODJ-BLOB**](odj-odj_blob.md)
 
 

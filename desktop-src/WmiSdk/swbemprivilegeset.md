@@ -1,8 +1,8 @@
 ---
-description: Ein "taubemprivilegeset"-Objekt ist eine Sammlung von "taubemprivilege"-Objekten in einem "Swap Security"-Objekt, das bestimmte Berechtigungen für ein Windows-Verwaltungsinstrumentation (WMI)-Objekt anfordert.
+description: Ein SWbemPrivilegeSet-Objekt ist eine Sammlung von SWbemPrivilege-Objekten in einem SWbemSecurity-Objekt, das bestimmte Berechtigungen für ein WMI-Objekt (Windows Management Instrumentation) an fordert.
 ms.assetid: 073cf2d4-f7ee-45a6-8fa6-ca77a4870346
 ms.tgt_platform: multiple
-title: Taubemprivilegeset-Objekt (wbemdisp. h)
+title: SWbemPrivilegeSet-Objekt (Wbemdisp.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -15,39 +15,39 @@ api_type:
 - COM
 api_location:
 - Wbemdisp.dll
-ms.openlocfilehash: b2946f8b1f745c0db123ed33dab312cbbe9d16c9
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 2117aec6fada67bddce9f07a6c985c73a3dcd93ef217ed7fe77dc46cc5659d26
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104344719"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118991950"
 ---
-# <a name="swbemprivilegeset-object"></a>Swap-Objekt
+# <a name="swbemprivilegeset-object"></a>SWbemPrivilegeSet-Objekt
 
-Ein " **taubemprivilegeset** "-Objekt ist eine Sammlung von " [**taubemprivilege**](swbemprivilege.md) "-Objekten in einem " [**Swap Security**](swbemsecurity.md) "-Objekt, das bestimmte Berechtigungen für ein Windows-Verwaltungsinstrumentation (WMI)-Objekt anfordert. Weitere Informationen finden Sie in der Liste der Berechtigungen unter [**Berechtigungs Konstanten**](privilege-constants.md). Der Auflistung werden Elemente mithilfe der [**Add**](swbemprivilegeset-add.md) -Methode und der [**addasstring**](swbemprivilegeset-addasstring.md) -Methode hinzugefügt. Elemente werden mithilfe der- [**Element**](swbemprivilegeset-item.md) Methode aus der-Auflistung abgerufen und mithilfe der [**Remove**](swbemprivilegeset-remove.md) -Methode entfernt. Dieses Objekt kann nicht durch den VBScript-Methoden aufgerufene " [samateobject](/previous-versions//xzysf6hc(v=vs.85)) " erstellt werden. Weitere Informationen finden Sie unter [zugreifen auf eine Sammlung](accessing-a-collection.md).
+Ein **SWbemPrivilegeSet-Objekt** ist eine Sammlung von [**SWbemPrivilege-Objekten**](swbemprivilege.md) in einem [**SWbemSecurity-Objekt,**](swbemsecurity.md) das bestimmte Berechtigungen für ein WMI-Objekt (Windows Management Instrumentation) an fordert. Weitere Informationen finden Sie in der Liste der Berechtigungen unter [**Privilege Constants**](privilege-constants.md). Elemente werden der Auflistung mithilfe der Methoden [**Add**](swbemprivilegeset-add.md) und [**AddAsString**](swbemprivilegeset-addasstring.md) hinzugefügt. Elemente werden mithilfe der [**Item-Methode**](swbemprivilegeset-item.md) aus der Auflistung abgerufen und mithilfe der [**Remove-Methode**](swbemprivilegeset-remove.md) entfernt. Dieses Objekt kann nicht durch den VBScript [CreateObject-Methodenaufruf](/previous-versions//xzysf6hc(v=vs.85)) erstellt werden. Weitere Informationen finden Sie unter [Zugreifen auf eine Auflistung.](accessing-a-collection.md)
 
-Ein-Objekt vom typ' **Swap** ' ist ein Satz von Berechtigungs Überschreibungs Anforderungen für ein bestimmtes Objekt. Wenn ein API-Befehl mit diesem-Objekt ausgeführt wird, werden die Anforderungen zur außer Kraft Setzung von Berechtigungen versucht. Das Objekt " **taubemprivilegeset** " definiert nicht die für den aktuellen Benutzer oder den aktuellen Prozess verfügbaren Berechtigungen. Anders ausgedrückt: durch das Abrufen der Berechtigungen für ein WMI-Objekt werden nicht die Berechtigungseinstellungen identifiziert, die für die Verbindung mit WMI hergestellt werden, oder die Berechtigungen, die beim Übermitteln eines Objekts an eine Senke wirksam werden.
+Ein **SWbemPrivilegeSet-Objekt** ist ein Satz von Anforderungen zur Berechtigungsüberschreibung für ein bestimmtes Objekt. Wenn ein API-Aufruf mit diesem Objekt erfolgt, werden die Anforderungen zur Berechtigungsüberschreibung versucht. Das **SWbemPrivilegeSet-Objekt** definiert nicht die Berechtigungen, die dem aktuellen Benutzer oder Prozess zur Verfügung stehen. Anders ausgedrückt: Durch das Abrufen der Berechtigungen für ein WMI-Objekt werden weder die Berechtigungseinstellungen identifiziert, die für die Verbindung mit WMI vorgenommen werden, noch die Berechtigungen, die wirksam sind, wenn ein Objekt an eine Senke übermittelt wird.
 
 ## <a name="members"></a>Member
 
-Das Objekt " **taubemprivilegeset** " verfügt über diese Typen von Membern:
+Das **SWbemPrivilegeSet-Objekt** verfügt über die folgenden Membertypen:
 
 -   [Methoden](#methods)
 -   [Eigenschaften](#properties)
 
 ### <a name="methods"></a>Methoden
 
-Das **taubemprivilegeset** -Objekt verfügt über diese Methoden.
+Das **SWbemPrivilegeSet-Objekt** verfügt über diese Methoden.
 
 
 
-| Methode                                               | BESCHREIBUNG                                                                                                                                                             |
+| Methode                                               | Beschreibung                                                                                                                                                             |
 |:-----------------------------------------------------|:------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| [**Eren**](swbemprivilegeset-add.md)                 | Fügt der **slibemprivilegeset** -Auflistung mithilfe einer [wbemprivilegeenum](/windows/desktop/api/Wbemdisp/ne-wbemdisp-wbemprivilegeenum) -Konstante ein " [**slibemprivilege**](swbemprivilege.md) "-Objekt hinzu.<br/> |
-| [**Addasstring**](swbemprivilegeset-addasstring.md) | Fügt der-Auflistung von " **taubemprivilegeset** " mithilfe einer Berechtigungs Zeichenfolge ein "" [**-Objekt "**](swbemprivilege.md) ".<br/>                                    |
+| [**Hinzufügen**](swbemprivilegeset-add.md)                 | Fügt der Sammlung **SWbemPrivilegeSet** mithilfe einer [WbemPrivilegeEnum-Konstante ein SWbemPrivilege-Objekt](/windows/desktop/api/Wbemdisp/ne-wbemdisp-wbemprivilegeenum) hinzu. [](swbemprivilege.md)<br/> |
+| [**AddAsString**](swbemprivilegeset-addasstring.md) | Fügt der [**Sammlung SWbemPrivilegeSet**](swbemprivilege.md) mithilfe einer Berechtigungszeichenfolge ein **SWbemPrivilege-Objekt** hinzu.<br/>                                    |
 | [**DeleteAll**](swbemprivilegeset-deleteall.md)     | Löscht alle Berechtigungen aus der Auflistung.<br/>                                                                                                              |
-| [**Element**](swbemprivilegeset-item.md)               | Ruft [**ein-**](swbemprivilege.md) Objekt aus der-Auflistung ab. Dies ist die Standardmethode dieses Objekts.<br/>                                 |
-| [**Aufgeh**](swbemprivilegeset-remove.md)           | Entfernt ein [**-**](swbemprivilege.md) Objekt aus der Auflistung.<br/>                                                                              |
+| [**Element**](swbemprivilegeset-item.md)               | Ruft ein [**SWbemPrivilege-Objekt**](swbemprivilege.md) aus der Auflistung ab. Dies ist die Standardmethode dieses Objekts.<br/>                                 |
+| [**Entfernen**](swbemprivilegeset-remove.md)           | Entfernt ein [**SWbemPrivilege-Objekt**](swbemprivilege.md) aus der Auflistung.<br/>                                                                              |
 
 
 
@@ -55,13 +55,13 @@ Das **taubemprivilegeset** -Objekt verfügt über diese Methoden.
 
 ### <a name="properties"></a>Eigenschaften
 
-Das Objekt " **taubemprivilegeset** " verfügt über diese Eigenschaften.
+Das **SWbemPrivilegeSet-Objekt** verfügt über diese Eigenschaften.
 
 
 
-| Eigenschaft                                            | Zugriffstyp          | BESCHREIBUNG                                       |
+| Eigenschaft                                            | Zugriffstyp          | Beschreibung                                       |
 |:----------------------------------------------------|:---------------------|:--------------------------------------------------|
-| [**Countdown**](swbemprivilegeset-count.md)<br/> | Schreibgeschützt<br/> | Die Anzahl der Elemente in der Auflistung.<br/> |
+| [**Anzahl**](swbemprivilegeset-count.md)<br/> | Schreibgeschützt<br/> | Die Anzahl der Elemente in der Auflistung.<br/> |
 
 
 
@@ -69,7 +69,7 @@ Das Objekt " **taubemprivilegeset** " verfügt über diese Eigenschaften.
 
 ## <a name="examples"></a>Beispiele
 
-Im folgenden VBScript-Codebeispiel wird ein Objekt vom Typ "slibemprivileges" abgerufen, und der Auflistung werden alle verfügbaren Berechtigungen gemäß dem Wert hinzugefügt, wie in [**wbemprivilegeenum**](/windows/desktop/api/Wbemdisp/ne-wbemdisp-wbemprivilegeenum)definiert.
+Das folgende VBScript-Codebeispiel erhält ein SWbemPrivileges-Objekt und fügt der Sammlung alle verfügbaren Berechtigungen nach Berechtigungswert hinzu, wie in [**WbemPrivilegeEnum definiert.**](/windows/desktop/api/Wbemdisp/ne-wbemdisp-wbemprivilegeenum)
 
 
 ```VB
@@ -90,7 +90,7 @@ Next
 
 
 
-Im folgenden VBScript-Codebeispiel wird veranschaulicht, wie Berechtigungen mithilfe des-Objekts von " **Swap** " hinzugefügt werden.
+Im folgenden VBScript-Codebeispiel wird veranschaulicht, wie Berechtigungen mithilfe des **SWbemPrivilegeSet-Objekts hinzugefügt** werden.
 
 
 ```VB
@@ -142,7 +142,7 @@ end if
 
 
 
-Im folgenden perl-Codebeispiel wird das Hinzufügen von Berechtigungen mithilfe des-Objekts " **Swap** " veranschaulicht.
+Im folgenden Perl-Codebeispiel wird veranschaulicht, wie Berechtigungen mithilfe des **SWbemPrivilegeSet-Objekts hinzugefügt** werden.
 
 
 ```
@@ -201,15 +201,15 @@ else
 |-------------------------------------|-----------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows Vista<br/>                                                                |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2008<br/>                                                          |
-| Header<br/>                   | <dl> <dt>Wbemdisp. h</dt> </dl>   |
-| Typbibliothek<br/>             | <dl> <dt>Wbemdisp. tlb</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Wbemdisp.h</dt> </dl>   |
+| Typbibliothek<br/>             | <dl> <dt>Wbemdisp.tlb</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Wbemdisp.dll</dt> </dl> |
-| CLSID<br/>                    | CLSID- \_ Swap-taubemprivilegeset<br/>                                                     |
-| IID<br/>                      | IID \_ iswbemprivilegeset<br/>                                                      |
+| CLSID<br/>                    | CLSID \_ SWbemPrivilegeSet<br/>                                                     |
+| IID<br/>                      | IID \_ ISWbemPrivilegeSet<br/>                                                      |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
@@ -219,13 +219,13 @@ else
 [Ausführen privilegierter Vorgänge mit VBScript](executing-privileged-operations-using-vbscript.md)
 </dt> <dt>
 
-[Wbemprivilegeumum](/windows/desktop/api/Wbemdisp/ne-wbemdisp-wbemprivilegeenum)
+[WbemPrivilegeEnum](/windows/desktop/api/Wbemdisp/ne-wbemdisp-wbemprivilegeenum)
 </dt> <dt>
 
-[API-Skript Objekte](scripting-api-objects.md)
+[Skripterstellung für API-Objekte](scripting-api-objects.md)
 </dt> <dt>
 
-[**Berechtigungs Konstanten**](privilege-constants.md)
+[**Berechtigungskonst constants**](privilege-constants.md)
 </dt> </dl>
 
  

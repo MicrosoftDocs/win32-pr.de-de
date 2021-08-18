@@ -1,9 +1,9 @@
 ---
-title: Settings (TaskType)-Element
-description: Gibt die Einstellungen an, die vom Taskplaner zum Ausführen der Aufgabe verwendet werden.
+title: Einstellungen (taskType) -Element
+description: Gibt die Einstellungen an, die der Taskplaner zum Ausführen der Aufgabe verwendet.
 ms.assetid: 72d2929a-0dd2-44cd-be7b-72eca23a5e14
 keywords:
-- Settings-Element Taskplaner
+- Einstellungen element Taskplaner
 topic_type:
 - apiref
 api_name:
@@ -13,16 +13,16 @@ api_type:
 ms.topic: reference
 ms.date: 05/31/2018
 api_location: ''
-ms.openlocfilehash: 9133d536aef692a5f9928e10963dff8c454f25fc
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: ea754aa883f9c80c4a436357cc159c588bde375aaa66a229b358723b74b9e070
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104391761"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119002238"
 ---
-# <a name="settings-tasktype-element"></a>Settings (TaskType)-Element
+# <a name="settings-tasktype-element"></a>Einstellungen (taskType) -Element
 
-Gibt die Einstellungen an, die vom Taskplaner zum Ausführen der Aufgabe verwendet werden.
+Gibt die Einstellungen an, die der Taskplaner zum Ausführen der Aufgabe verwendet.
 
 ``` syntax
 <xs:element name="Settings"
@@ -31,15 +31,15 @@ Gibt die Einstellungen an, die vom Taskplaner zum Ausführen der Aufgabe verwend
  />
 ```
 
-Das **Settings** -Element wird durch den komplexen [**TaskType**](taskschedulerschema-tasktype-complextype.md) -Typ definiert.
+Das **Einstellungen** element wird durch den [**komplexen taskType-Typ**](taskschedulerschema-tasktype-complextype.md) definiert.
 
 ## <a name="parent-element"></a>Übergeordnetes Element
 
 
 
-| Element                                          | Abgeleitet von                                                 | BESCHREIBUNG                                                                    |
+| Element                                          | Abgeleitet von                                                 | Beschreibung                                                                    |
 |--------------------------------------------------|--------------------------------------------------------------|--------------------------------------------------------------------------------|
-| [**Aufgabe**](taskschedulerschema-task-element.md) | [**taskType**](taskschedulerschema-tasktype-complextype.md) | Gibt die Aufgabe an, die vom Taskplaner-Dienst ausgeführt wird.<br/> |
+| [**Aufgabe**](taskschedulerschema-task-element.md) | [**taskType**](taskschedulerschema-tasktype-complextype.md) | Gibt den Task an, der vom Dienst Taskplaner wird.<br/> |
 
 
 
@@ -47,40 +47,40 @@ Das **Settings** -Element wird durch den komplexen [**TaskType**](taskschedulers
 
 
 
-| Element                                                                                                          | type                                                                                              | BESCHREIBUNG                                                                                                          |
+| Element                                                                                                          | type                                                                                              | Beschreibung                                                                                                          |
 |------------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------|
-| [**Zuweisung aufheben**](taskschedulerschema-allowhardterminate-settingstype-element.md)                        | boolean                                                                                           | Gibt an, dass die Aufgabe mithilfe von TerminateProcess beendet werden kann.<br/>                                         |
-| [**Allowstartondemand**](taskschedulerschema-allowstartondemand-settingstype-element.md)                        | boolean                                                                                           | Gibt an, dass der Task entweder über den Befehl ausführen oder über das Kontextmenü gestartet werden kann.<br/>                  |
-| [**Deleteexpiredtaskafter**](taskschedulerschema-deleteexpiredtaskafter-settingstype-element.md)                | duration                                                                                          | Gibt die Zeitspanne an, die der Taskplaner wartet, bevor der Task nach Ablauf gelöscht wird.<br/> |
-| [**Disallowstartifonakkus**](taskschedulerschema-disallowstartifonbatteries-settingstype-element.md)        | boolean                                                                                           | Gibt an, dass der Task nicht gestartet wird, wenn der Computer unter "Akkus" ausgeführt wird.<br/>                      |
-| [**Aktiviert**](taskschedulerschema-enabled-settingstype-element.md)                                              | boolean                                                                                           | Gibt an, dass der Task aktiviert ist. Der Task kann nur ausgeführt werden, wenn diese Einstellung auf "true" festgelegt ist.<br/>             |
-| [**Executiontimelimit**](taskschedulerschema-executiontimelimit-settingstype-element.md)                        | duration                                                                                          | Die Zeitspanne, die zum Ausführen der Aufgabe zulässig ist.<br/>                                                              |
-| [**Verbirgt**](taskschedulerschema-hidden-settingstype-element.md)                                                | boolean                                                                                           | Gibt an, dass die Aufgabe nicht standardmäßig in der Benutzeroberfläche angezeigt wird.<br/>                                         |
-| [**Idlesettings**](taskschedulerschema-idlesettings-settingstype-element.md)                                    | [**idlesettingstype**](taskschedulerschema-idlesettingstype-complextype.md)                      | Gibt an, wie die Taskplaner Aufgaben ausführt, wenn sich der Computer im Leerlauf befindet.<br/>                    |
-| [**Maintenancesettings**](taskschedulerschema-maintenancesettings-maintenancesettingstype-element.md)           | [**maintenancesettingstype**](taskschedulerschema-maintenancesettingstype-complextype.md)        | Gibt an, wie das Taskplaner während der automatischen Wartung Tasks ausführt.<br/>                             |
-| [**Multipleinstancespolicy**](taskschedulerschema-multipleinstancespolicy-settingstype-element.md)              | [**multipleinstancespolicytype**](taskschedulerschema-multipleinstancespolicytype-simpletype.md) | Gibt die Richtlinie an, mit der definiert wird, wie die Taskplaner mehrere Instanzen der Aufgabe behandelt.<br/>       |
-| [**Priorität**](taskschedulerschema-priority-settingstype-element.md)                                            | [**prioritytype**](taskschedulerschema-prioritytype-simpletype.md)                               | Gibt die Prioritätsstufe für den Task an.<br/>                                                                |
-| [**Neustartonfailure**](taskschedulerschema-restartonfailure-settingstype-element.md)                            | [**neustarttype**](taskschedulerschema-restarttype-complextype.md)                                | Gibt an, dass der Taskplaner den Task neu starten soll, wenn die Aufgabe aus irgendeinem Grund fehlschlägt.<br/>      |
-| [**Runonlyifdle**](taskschedulerschema-runonlyifidle-settingstype-element.md)                                  | boolean                                                                                           | Gibt an, dass der Task nur ausgeführt wird, wenn sich der Computer im Leerlauf befindet.<br/>                                |
-| [**Runonlyifnetworkavailable**](taskschedulerschema-runonlyifnetworkavailable-settingstype-element.md)          | boolean                                                                                           | Gibt an, dass der Taskplaner die Aufgabe nur dann ausgeführt wird, wenn ein Netzwerk verfügbar ist.<br/>                     |
-| [**Startvor verfügbar**](taskschedulerschema-startwhenavailable-settingstype-element.md)                        | boolean                                                                                           | Gibt an, dass die Taskplaner die Aufgabe jederzeit starten kann, nachdem die geplante Zeit abgelaufen ist.<br/>     |
-| [**Stopifgoingonakkus (settingstype)**](taskschedulerschema-stopifgoingonbatteries-settingstype-element.md) | boolean                                                                                           | Gibt an, dass der Task angehalten wird, wenn der Computer auf die Batterie geht.<br/>                          |
-| [**Ständigem**](taskschedulerschema-volatile-element.md)                                                         | boolean                                                                                           | Gibt an, ob die Aufgabe beim Windows-Start automatisch durch Taskplaner deaktiviert wird.<br/>                     |
-| [**Waketor (settingstype)**](taskschedulerschema-waketorun-settingstype-element.md)                           | boolean                                                                                           | Gibt an, dass der Computer von Taskplaner reaktiviert wird, wenn der Task ausgeführt werden soll.<br/>                     |
+| [**AllowHardTerminate**](taskschedulerschema-allowhardterminate-settingstype-element.md)                        | boolean                                                                                           | Gibt an, dass der Task mit TerminateProcess beendet werden kann.<br/>                                         |
+| [**AllowStartOnDemand**](taskschedulerschema-allowstartondemand-settingstype-element.md)                        | boolean                                                                                           | Gibt an, dass die Aufgabe mit dem Befehl Ausführen oder dem Kontextmenü gestartet werden kann.<br/>                  |
+| [**DeleteExpiredTaskAfter**](taskschedulerschema-deleteexpiredtaskafter-settingstype-element.md)                | duration                                                                                          | Gibt die Zeit an, die der Taskplaner, bevor der Task nach ablaufen gelöscht wird.<br/> |
+| [**DisallowStartIfOn Wies**](taskschedulerschema-disallowstartifonbatteries-settingstype-element.md)        | boolean                                                                                           | Gibt an, dass der Task nicht gestartet wird, wenn der Computer mit Akkus ausgeführt wird.<br/>                      |
+| [**Aktiviert**](taskschedulerschema-enabled-settingstype-element.md)                                              | boolean                                                                                           | Gibt an, dass die Aufgabe aktiviert ist. Die Aufgabe kann nur ausgeführt werden, wenn diese Einstellung true ist.<br/>             |
+| [**ExecutionTimeLimit**](taskschedulerschema-executiontimelimit-settingstype-element.md)                        | duration                                                                                          | Zulässige Zeit zum Abschließen der Aufgabe.<br/>                                                              |
+| [**Versteckte**](taskschedulerschema-hidden-settingstype-element.md)                                                | boolean                                                                                           | Gibt an, dass der Task standardmäßig nicht auf der Benutzeroberfläche angezeigt wird.<br/>                                         |
+| [**IdleSettings**](taskschedulerschema-idlesettings-settingstype-element.md)                                    | [**idleSettingsType**](taskschedulerschema-idlesettingstype-complextype.md)                      | Gibt an, wie die Taskplaner Aufgaben ausführt, wenn sich der Computer im Leerlauf befindet.<br/>                    |
+| [**MaintenanceSettings**](taskschedulerschema-maintenancesettings-maintenancesettingstype-element.md)           | [**maintenanceSettingsType**](taskschedulerschema-maintenancesettingstype-complextype.md)        | Gibt an, wie die Taskplaner während der automatischen Wartung Aufgaben ausführt.<br/>                             |
+| [**MultipleInstancesPolicy**](taskschedulerschema-multipleinstancespolicy-settingstype-element.md)              | [**multipleInstancesPolicyType**](taskschedulerschema-multipleinstancespolicytype-simpletype.md) | Gibt die Richtlinie an, die definiert, wie Taskplaner mehrere Instanzen der Aufgabe behandelt.<br/>       |
+| [**Priorität**](taskschedulerschema-priority-settingstype-element.md)                                            | [**priorityType**](taskschedulerschema-prioritytype-simpletype.md)                               | Gibt die Prioritätsebene für den Task an.<br/>                                                                |
+| [**RestartOnFailure**](taskschedulerschema-restartonfailure-settingstype-element.md)                            | [**restartType**](taskschedulerschema-restarttype-complextype.md)                                | Gibt an, dass der Taskplaner versucht, den Task neu zu starten, wenn der Task aus irgendeinem Grund fehlschlägt.<br/>      |
+| [**RunOnlyIfIdle**](taskschedulerschema-runonlyifidle-settingstype-element.md)                                  | boolean                                                                                           | Gibt an, dass der Task nur ausgeführt wird, wenn sich der Computer im Leerlauf befindet.<br/>                                |
+| [**RunOnlyIfNetworkAvailable**](taskschedulerschema-runonlyifnetworkavailable-settingstype-element.md)          | boolean                                                                                           | Gibt an, dass Taskplaner Die Aufgabe nur ausgeführt wird, wenn ein Netzwerk verfügbar ist.<br/>                     |
+| [**StartWhenAvailable**](taskschedulerschema-startwhenavailable-settingstype-element.md)                        | boolean                                                                                           | Gibt an, dass Taskplaner aufgabe jederzeit starten kann, nachdem die geplante Zeit verstrichen ist.<br/>     |
+| [**StopIfGoingOnStopps (settingsType)**](taskschedulerschema-stopifgoingonbatteries-settingstype-element.md) | boolean                                                                                           | Gibt an, dass die Aufgabe beendet wird, wenn der Computer in Akkus gerät.<br/>                          |
+| [**Volatil**](taskschedulerschema-volatile-element.md)                                                         | boolean                                                                                           | Gibt an, ob die Aufgabe automatisch deaktiviert wird, indem Taskplaner beim Windows wird.<br/>                     |
+| [**WakeToRun (settingsType)**](taskschedulerschema-waketorun-settingstype-element.md)                           | boolean                                                                                           | Gibt an, Taskplaner computer reaktiviert wird, wenn es An der Zeit ist, den Task auszuführen.<br/>                     |
 
 
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Sie können mindestens ein untergeordnetes Element auswählen, auf das oben verwiesen wird.
+Sie können eines oder mehrere der untergeordneten Elemente auswählen, auf die oben verwiesen wird.
 
-Bei der C++-Entwicklung werden die Registrierungsinformationen einer Aufgabe mithilfe der [**Settings-Eigenschaft von itaskdefinition**](/windows/desktop/api/taskschd/nf-taskschd-itaskdefinition-get_settings)angegeben.
+Für die C++-Entwicklung werden die Registrierungsinformationen einer Aufgabe mithilfe der Einstellungen [**von ITaskDefinition angegeben.**](/windows/desktop/api/taskschd/nf-taskschd-itaskdefinition-get_settings)
 
-Bei der Skripterstellung werden die Registrierungsinformationen einer Aufgabe mithilfe der [**Task Definition. Settings**](taskdefinition-settings.md) -Eigenschaft angegeben.
+Für die Skriptentwicklung werden die Registrierungsinformationen einer Aufgabe mithilfe der [**TaskDefinition.Einstellungen**](taskdefinition-settings.md) angegeben.
 
 ## <a name="examples"></a>Beispiele
 
-Im folgenden XML-Codebeispiel wird ein Einstellungs Element definiert, das eine harte Beendigung der Aufgabe ermöglicht.
+Im folgenden XML-Codebeispiel wird ein Einstellungselement definiert, das eine harte Beendigung der Aufgabe zulässt.
 
 
 ```XML
@@ -94,7 +94,7 @@ Im folgenden XML-Codebeispiel wird ein Einstellungs Element definiert, das eine 
 
 
 
-Weitere Informationen und ein umfassendes Beispiel für den XML-Code zum Festlegen von Task Einstellungen finden Sie unter [time-auslöserbeispiel (XML)](time-trigger-example--xml-.md).
+Weitere Informationen und ein vollständiges Beispiel für xml zum Festlegen von Aufgabeneinstellungen finden Sie unter [Time Trigger Example (XML) .](time-trigger-example--xml-.md)
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -102,16 +102,16 @@ Weitere Informationen und ein umfassendes Beispiel für den XML-Code zum Festleg
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>       |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/> |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ Vista-Desktop-Apps\]<br/>       |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[Schema Elemente Taskplaner](task-scheduler-schema-elements.md)
+[Taskplaner Schemaelemente](task-scheduler-schema-elements.md)
 </dt> <dt>
 
 [Aufgabenplanung](task-scheduler-start-page.md)

@@ -1,21 +1,21 @@
 ---
-description: Verwenden Sie zum Auflisten der Akku Geräte auf einem lokalen Computer die setupdigetclassbinvs-Funktion.
+description: Verwenden Sie zum Aufzählen der Akkugeräte auf einem lokalen Computer die Funktion SetupDiGetClassDevs.
 ms.assetid: 17e3c779-91ba-4901-9435-b73dedbf0b89
-title: Aufzählen von Akku Geräten
+title: Aufzählen von Akkugeräten
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: d610feda8fd312bbefe2742da50d82a664a8ce2f
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 28ed27979ca8b6abdb8015da58a9b6205f9ee3123cd4a82ccf7bd9c121e10441
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106358450"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119143553"
 ---
-# <a name="enumerating-battery-devices"></a>Aufzählen von Akku Geräten
+# <a name="enumerating-battery-devices"></a>Aufzählen von Akkugeräten
 
-Verwenden Sie zum Auflisten der Akku Geräte auf einem lokalen Computer die [setupdigetclassbinvs](/windows/win32/api/setupapi/nf-setupapi-setupdigetclassdevsw) -Funktion. Der *ClassGuid* -Parameter ist ein Zeiger auf den **GUID- \_ DEVCLASS- \_ Akku** (in batclass. h definiert). Um alle Batterien aufzulisten, legen Sie den *enumeratorparameter* auf **null** fest, und legen Sie den *Flags* -Parameter auf " **digcf \_** " fest, der auf " \| **digcf \_ interfacedevice**" liegt. Um die Namen der Akku Geräte zu erhalten, verwenden Sie die Funktionen [setupdienumdeviceintergesichter](/windows/win32/api/setupapi/nf-setupapi-setupdienumdeviceinterfaces) und [setupdigetdeviceinterfacedetail](https://msdn.microsoft.com/library/ms792901.aspx) für die zurückgegebenen Daten. Um ein Datei Handle für die einzelnen Akku Geräte zu öffnen, müssen Sie die Funktion " [**foratefile**](/windows/desktop/api/fileapi/nf-fileapi-createfilea) " mit diesen Namen aufrufen.
+Verwenden Sie zum Aufzählen der Akkugeräte auf einem lokalen Computer die [Funktion SetupDiGetClassDevs.](/windows/win32/api/setupapi/nf-setupapi-setupdigetclassdevsw) Der *ClassGuid-Parameter* ist ein Zeiger auf **GUID \_ DEVCLASS \_ BATTERY** (definiert in BatClass.h). Um alle Akkus aufzuzählen, legen Sie den *Enumeratorparameter* auf **NULL** und den *Flags-Parameter* auf **DIGCF \_ PRESENT** \| **DIGCF \_ INTERFACEDEVICE fest.** Um die Namen der Akkugeräte zu erhalten, verwenden Sie die [Funktionen SetupDiEnumDeviceInterfaces](/windows/win32/api/setupapi/nf-setupapi-setupdienumdeviceinterfaces) und [SetupDiGetDeviceInterfaceDetail](https://msdn.microsoft.com/library/ms792901.aspx) für die zurückgegebenen Daten. Um ein Dateihand handle für jedes der Akkugeräte zu öffnen, rufen Sie die [**Funktion CreateFile**](/windows/desktop/api/fileapi/nf-fileapi-createfilea) mit diesen Namen auf.
 
-Im folgenden Beispiel wird gezeigt, wie Akku Geräte auf einem lokalen Computer aufgezählt werden.
+Das folgende C++-Beispiel zeigt, wie Akkugeräte auf einem lokalen Computer aufzählt werden.
 
 
 ```C++
@@ -174,28 +174,28 @@ DWORD GetBatteryState()
 
 
 
-Zum Auflisten der Akku Geräte, die mit einem Remote Computer verbunden sind, verwenden Sie die WMI-Klasse für den [**Win32- \_ Akku**](/windows/desktop/CIMWin32Prov/win32-battery) in einem Client Skript oder einer Anwendung.
+Verwenden Sie zum Aufzählen der Akkugeräte, die mit einem Remotecomputer verbunden sind, die WMI-Klasse [**Win32 \_ Battery**](/windows/desktop/CIMWin32Prov/win32-battery) in einem Clientskript oder einer Anwendung.
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[Setupdigetclassbinvs](/windows/win32/api/setupapi/nf-setupapi-setupdigetclassdevsw)
+[SetupDiGetClassDevs](/windows/win32/api/setupapi/nf-setupapi-setupdigetclassdevsw)
 </dt> <dt>
 
-[Setupdienumbinviceintergesichter](/windows/win32/api/setupapi/nf-setupapi-setupdienumdeviceinterfaces)
+[SetupDiEnumDeviceInterfaces](/windows/win32/api/setupapi/nf-setupapi-setupdienumdeviceinterfaces)
 </dt> <dt>
 
-[Setupdigetabviceinterfacedetail](https://msdn.microsoft.com/library/ms792901.aspx)
+[SetupDiGetDeviceInterfaceDetail](https://msdn.microsoft.com/library/ms792901.aspx)
 </dt> <dt>
 
-[**IOCTL \_ Akku \_ - \_ abfragetag**](ioctl-battery-query-tag.md)
+[**IOCTL \_ BATTERY \_ QUERY \_ TAG**](ioctl-battery-query-tag.md)
 </dt> <dt>
 
-[**IOCTL- \_ Akku \_ Abfrage \_ Informationen**](ioctl-battery-query-information.md)
+[**IOCTL \_ BATTERY \_ QUERY \_ INFORMATION**](ioctl-battery-query-information.md)
 </dt> <dt>
 
-[**IOCTL \_ Akku \_ Query- \_ Status**](ioctl-battery-query-status.md)
+[**IOCTL \_ BATTERY \_ QUERY \_ STATUS**](ioctl-battery-query-status.md)
 </dt> </dl>
 
  

@@ -1,23 +1,23 @@
 ---
-description: Exit-Module empfangen Benachrichtigungen von der Server-Engine, wenn Vorgänge wie das Ausstellen eines Zertifikats stattfinden.
+description: Beendigungsmodule erhalten Benachrichtigungen von der Server-Engine, wenn Vorgänge wie die Ausstellung eines Zertifikats auftreten.
 ms.assetid: 5e7ee1f4-7e07-4a08-8e72-89b449804bc2
 title: Beenden von Modulen
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: a5fc0668717c4a7a690cce8a03ff8c140333347b
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 38ba8d821900ece1a4ce3eb3fcb2cc805d87274b451a3d5c8948d1e86ebf3547
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "104217151"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119140753"
 ---
 # <a name="exit-modules"></a>Beenden von Modulen
 
-Exit-Module empfangen Benachrichtigungen von der Server-Engine, wenn Vorgänge wie das Ausstellen eines Zertifikats stattfinden. Ein Beendigungs Modul wird als [*Dynamic Link Library*](../secgloss/d-gly.md) (dll) implementiert. Eine typische Operation für ein Beendigungs Modul besteht darin, ein vollständiges Zertifikat an einem angegebenen Speicherort zu veröffentlichen (das standardmäßige Beendigungs Modul der Unternehmens Zertifizierungsstelle, beispielsweise, veröffentlicht Benutzerzertifikate und [*Zertifikat Sperr Listen*](../secgloss/c-gly.md) (CRLs) für die Active Directory). Ein Beendigungs Modul kann die [**icertserverexit**](/windows/desktop/api/Certif/nn-certif-icertserverexit) -Schnittstelle für die Kommunikation mit Zertifikat Diensten verwenden. Die Zertifikat Dienste kommunizieren mit einem Beendigungs Modul mithilfe von direkten com-aufrufen oder, wenn das Modul direkte com-Aufrufe nicht unterstützt, mithilfe von Automation.
+Beendigungsmodule erhalten Benachrichtigungen von der Server-Engine, wenn Vorgänge wie die Ausstellung eines Zertifikats auftreten. Ein Exitmodul wird als [*DLL (Dynamic Link Library)*](../secgloss/d-gly.md) implementiert. Ein typischer Vorgang für ein Exitmodul ist das Veröffentlichen eines abgeschlossenen Zertifikats an einem angegebenen Speicherort (das Standardmäßige Exitmodul der Unternehmenszertifizierungsstelle veröffentlicht z. B. Benutzerzertifikate und [*Zertifikatsperrlisten*](../secgloss/c-gly.md) (Certificate Revocation Lists, CRLs) in Active Directory. Ein Exitmodul kann die [**ICertServerExit-Schnittstelle**](/windows/desktop/api/Certif/nn-certif-icertserverexit) verwenden, um mit Zertifikatdiensten zu kommunizieren. Zertifikatdienste kommunizieren mit einem Exitmodul über direkte COM-Aufrufe oder , wenn das Modul keine direkten COM-Aufrufe unterstützt, über Automation.
 
-Ein Beendigungs Modul zeigt möglicherweise vorhandene Zertifikat Eigenschaften und-Erweiterungen an und kann auch Anforderungs Attribute und-Eigenschaften anzeigen. Ein Beendigungs Modul kann jedoch keine Eigenschaften ändern.
+Ein Exitmodul kann vorhandene Zertifikateigenschaften und -erweiterungen sowie Anforderungsattribute und -eigenschaften anzeigen. Ein Exitmodul kann jedoch keine Eigenschaften ändern.
 
-Die Zertifikat Dienste stellen ein Standard Beendigungs Modul bereit. Sie können jedoch auch benutzerdefinierte Beendigungs Module erstellen, um besondere Anforderungen zu erfüllen. Bevor Sie jedoch ein benutzerdefiniertes Beendigungs Modul schreiben, sollten Sie das standardmäßige Beendigungs Modul verwenden. Außerdem sollte für eine Unternehmens Zertifizierungsstelle das standardmäßige Beendigungs Modul immer verwendet werden, auch wenn Sie zusätzliche, benutzerdefinierte Beendigungs Module hinzufügen können. Weitere Informationen finden Sie unter [Schreiben von benutzerdefinierten Exit-Modulen](writing-custom-exit-modules.md).
+Zertifikatdienste bieten ein Standard-Exitmodul, aber Sie können auch benutzerdefinierte Exitmodule erstellen, um besondere Anforderungen zu erfüllen. Bevor Sie jedoch ein benutzerdefiniertes Exitmodul schreiben, sollten Sie das Standardmäßige Exitmodul verwenden. Darüber hinaus sollte für eine Unternehmenszertifizierungsstelle immer das Standard-Exitmodul verwendet werden, auch wenn Sie zusätzliche benutzerdefinierte Exitmodule hinzufügen können. Weitere Informationen finden Sie unter [Schreiben von benutzerdefinierten Exitmodulen.](writing-custom-exit-modules.md)
 
  
 

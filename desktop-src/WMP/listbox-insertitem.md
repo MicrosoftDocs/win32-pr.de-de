@@ -1,9 +1,9 @@
 ---
-title: ListBox. InsertItem
-description: Die InsertItem-Methode fügt den angegebenen Text am angegebenen Index im Listenfeld-Steuerelement ein.
+title: LISTBOX.insertItem
+description: Die insertItem-Methode fügt den angegebenen Text am angegebenen Index in das Listenfeld-Steuerelement ein.
 ms.assetid: c45eb75e-074d-4f3f-bfdd-6c3cbbd71f54
 keywords:
-- ListBox. InsertItem-Fenster Media Player
+- LISTBOX.insertItem Windows Media Player
 topic_type:
 - apiref
 api_name:
@@ -13,16 +13,16 @@ api_type:
 ms.topic: reference
 ms.date: 05/31/2018
 api_location: ''
-ms.openlocfilehash: 3600b40ca164c71bd62c0a9a368516d6ad0e1edd
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 0344bbc9fbe4f8f2b680866f70c0fe16398ad08cbf4a916c454223fdff04614e
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106366065"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119135303"
 ---
-# <a name="listboxinsertitem"></a>ListBox. InsertItem
+# <a name="listboxinsertitem"></a>LISTBOX.insertItem
 
-Die **InsertItem** -Methode fügt den angegebenen Text am angegebenen Index im Listenfeld-Steuerelement ein.
+Die **insertItem-Methode** fügt den angegebenen Text am angegebenen Index in das Listenfeld-Steuerelement ein.
 
 ``` syntax
         elementID.insertItem(index, text)
@@ -32,17 +32,17 @@ Die **InsertItem** -Methode fügt den angegebenen Text am angegebenen Index im L
 
 <dl> <dt>
 
-<span id="index"></span><span id="INDEX"></span>*Sin*
+<span id="index"></span><span id="INDEX"></span>*Index*
 </dt> <dd>
 
-**Zahl** (**Long**), die den Index der abzurufenden Zeile enthält.
+**Number** (**long**), die den Index der abzurufenden Zeile enthält.
 
 </dd> <dt>
 
 <span id="text"></span><span id="TEXT"></span>*Text*
 </dt> <dd>
 
-**Zeichenfolge** , die den einzufügenden Text enthält.
+**Eine Zeichenfolge,** die den zu einfügenden Text enthält.
 
 </dd> </dl>
 
@@ -50,9 +50,9 @@ Die **InsertItem** -Methode fügt den angegebenen Text am angegebenen Index im L
 
 Diese Methode gibt keinen Wert zurück.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Wenn eine Zeile eingefügt wird, werden die Zeilen Indizes für die Zeilen unterhalb der eingefügten Zeile um 1 erhöht.
+Wenn eine Zeile eingefügt wird, werden die Zeilenindizes für die Zeilen unterhalb der eingefügten Zeile um eins erhöht.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -64,11 +64,11 @@ Wenn eine Zeile eingefügt wird, werden die Zeilen Indizes für die Zeilen unter
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**ListBox-Element**](listbox-element.md)
+[**LISTBOX-Element**](listbox-element.md)
 </dt> </dl>
 
  

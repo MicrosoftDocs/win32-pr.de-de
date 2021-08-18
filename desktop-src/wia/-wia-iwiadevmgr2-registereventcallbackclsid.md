@@ -1,7 +1,7 @@
 ---
-description: 'Mit der IWiaDevMgr2:: registereventcallbackclsid-Methode wird eine Anwendung zum Empfangen von Ereignissen registriert, auch wenn die Anwendung nicht ausgeführt wird.'
+description: Die IWiaDevMgr2::RegisterEventCallbackCLSID-Methode registriert eine Anwendung, um Ereignisse zu empfangen, auch wenn die Anwendung nicht ausgeführt wird.
 ms.assetid: e0d421a7-ef49-4e27-9661-c358ac819712
-title: 'IWiaDevMgr2:: registereventcallbackclsid-Methode (WIA. h)'
+title: IWiaDevMgr2::RegisterEventCallbackCLSID-Methode (Wia.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,16 +13,16 @@ api_type:
 - COM
 api_location:
 - Wia.h
-ms.openlocfilehash: 63e69d12d47f90ba40f5cc785d8b864c40158774
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 9137fdd33f59eb841a54e84a6d12bb0b08968ac29c8737afbf56f66c57176c20
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104527074"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118965648"
 ---
-# <a name="iwiadevmgr2registereventcallbackclsid-method"></a>IWiaDevMgr2:: registereventcallbackclsid-Methode
+# <a name="iwiadevmgr2registereventcallbackclsid-method"></a>IWiaDevMgr2::RegisterEventCallbackCLSID-Methode
 
-Mit der **IWiaDevMgr2:: registereventcallbackclsid** -Methode wird eine Anwendung zum Empfangen von Ereignissen registriert, auch wenn die Anwendung nicht ausgeführt wird.
+Die **IWiaDevMgr2::RegisterEventCallbackCLSID-Methode** registriert eine Anwendung, um Ereignisse zu empfangen, auch wenn die Anwendung nicht ausgeführt wird.
 
 ## <a name="syntax"></a>Syntax
 
@@ -45,10 +45,10 @@ HRESULT RegisterEventCallbackCLSID(
 
 <dl> <dt>
 
-*lFlags* \[ in\]
+*lFlags* \[ In\]
 </dt> <dd>
 
-Type: **Long**
+Typ: **LONG**
 
 Gibt Registrierungsflags an. Kann auf die folgenden Werte festgelegt werden:
 
@@ -56,9 +56,9 @@ Gibt Registrierungsflags an. Kann auf die folgenden Werte festgelegt werden:
 
 | Registrierungsflag                | Bedeutung                                           |
 |----------------------------------|---------------------------------------------------|
-| WIA- \_ Register \_ Ereignis \_ Rückruf   | Registrieren Sie sich für das-Ereignis.                           |
-| \_ \_ Ereignis Rückruf für die Aufhebung der Registrierung \_ | Löschen Sie die Registrierung für das Ereignis.            |
-| WIA \_ - \_ Standard \_ Handler festlegen       | Legen Sie die Anwendung als Standard Ereignishandler fest. |
+| WIA \_ \_ REGISTER-EREIGNISRÜCKRUF \_   | Registrieren Sie sich für das Ereignis.                           |
+| WIA \_ UNREGISTER \_ EVENT \_ CALLBACK | Löschen Sie die Registrierung für das Ereignis.            |
+| WIA \_ \_ SET-STANDARDHANDLER \_       | Legen Sie die Anwendung als Standardereignishandler fest. |
 
 
 
@@ -66,34 +66,34 @@ Gibt Registrierungsflags an. Kann auf die folgenden Werte festgelegt werden:
 
 </dd> <dt>
 
-*bstraude viceid* \[ in\]
+*bstrDeviceID* \[ In\]
 </dt> <dd>
 
 Typ: **BSTR**
 
-Gibt einen Geräte Bezeichner an. Übergeben Sie **null** , um für das Ereignis auf allen WIA 2,0-Geräten zu registrieren.
+Gibt einen Gerätebezeichner an. Übergeben Sie **NULL,** um sich für das Ereignis auf allen WIA 2.0-Geräten zu registrieren.
 
 </dd> <dt>
 
-" *Peer-GUID* \[ " in\]
+*pEventGUID* \[ In\]
 </dt> <dd>
 
-Geben Sie Folgendes ein: * Konstante *GUID \** _
+Typ: **const \* GUID**
 
-Gibt das Ereignis an, für das die Anwendung registriert wird. Eine Liste der Standard Ereignisse finden Sie unter [WIA-Ereignis](-wia-wia-event-identifiers.md)Bezeichner.
+Gibt das Ereignis an, für das die Anwendung registriert wird. Eine Liste der Standardereignisse finden Sie unter [WIA-Ereignisbezeichner.](-wia-wia-event-identifiers.md)
 
 </dd> <dt>
 
-_pClsID * \[ in\]
+*pClsID* \[ In\]
 </dt> <dd>
 
-Geben Sie Folgendes ein: * Konstante *GUID \** _
+Typ: **const \* GUID**
 
-Zeiger auf die Anwendungs Klassen-ID (_ * CLSID * *). Das WIA 2,0-Laufzeitsystem verwendet die Anwendungs- **CLSID** , um die Anwendung zu starten, wenn ein Ereignis auftritt, das für registriert ist.
+Zeiger auf die Anwendungsklassen-ID (**CLSID**). Das WIA 2.0-Laufzeitsystem verwendet die **Anwendungs-CLSID,** um die Anwendung zu starten, wenn ein Ereignis auftritt, für das es registriert ist.
 
 </dd> <dt>
 
-*bstrinname* \[ in\]
+*bstrName* \[ In\]
 </dt> <dd>
 
 Typ: **BSTR**
@@ -102,7 +102,7 @@ Gibt den Namen der Anwendung an, die für das Ereignis registriert wird.
 
 </dd> <dt>
 
-*bstraudescription* \[ in\]
+*bstrDescription* \[ In\]
 </dt> <dd>
 
 Typ: **BSTR**
@@ -111,7 +111,7 @@ Gibt eine Textbeschreibung der Anwendung an, die für das Ereignis registriert w
 
 </dd> <dt>
 
-*bstricon* \[ in\]
+*bstrIcon* \[ In\]
 </dt> <dd>
 
 Typ: **BSTR**
@@ -124,20 +124,20 @@ Gibt den Namen einer Bilddatei an, die für das Symbol für die Anwendung verwen
 
 Typ: **HRESULT**
 
-Wenn diese Methode erfolgreich ausgeführt wird, gibt Sie **S \_ OK** zurück. Andernfalls wird ein **HRESULT** -Fehlercode zurückgegeben.
+Wenn diese Methode erfolgreich ist, wird **S \_ OK** zurückgegeben. Andernfalls wird ein **HRESULT-Fehlercode** zurückgegeben.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-WIA 2,0-Anwendungen verwenden diese Methode, um sich für den Empfang von Hardware Geräte Ereignissen zu registrieren. Nachdem **IWiaDevMgr2:: registereventcallbackclsid** aufgerufen wurde, wird die Anwendung für den Empfang von WIA 2,0-Geräte Ereignissen registriert, auch wenn Sie nicht ausgeführt wird.
+WIA 2.0-Anwendungen verwenden diese Methode, um sich für den Empfang von Hardwaregeräteereignissen zu registrieren. Nachdem **IWiaDevMgr2::RegisterEventCallbackCLSID** aufgerufen wurde, wird die Anwendung für den Empfang von WIA 2.0-Geräteereignissen registriert, auch wenn sie nicht ausgeführt wird.
 
-Wenn das Ereignis auftritt, bestimmt das WIA 2,0-System, welche Anwendung registriert ist, um das Ereignis zu empfangen. Er verwendet die [cokreateinstance](/windows/win32/api/combaseapi/nf-combaseapi-cocreateinstance) -Funktion und die im *pclsid* -Parameter angegebene CLSID, um eine Instanz der Anwendung zu erstellen, und ruft dann die [**imageeventcallback**](/windows/desktop/api/wia_xp/nf-wia_xp-iwiaeventcallback-imageeventcallback) -Methode auf, um die Ereignis Informationen an die Anwendung zu übertragen.
+Wenn das Ereignis auftritt, bestimmt das WIA 2.0-System, welche Anwendung für den Empfang des Ereignisses registriert ist. Sie verwendet die [CoCreateInstance-Funktion](/windows/win32/api/combaseapi/nf-combaseapi-cocreateinstance) und die im *pClsID-Parameter* angegebene CLSID, um eine Instanz der Anwendung zu erstellen, und ruft dann die [**ImageEventCallback-Methode**](/windows/desktop/api/wia_xp/nf-wia_xp-iwiaeventcallback-imageeventcallback) auf, um die Ereignisinformationen an die Anwendung zu übertragen.
 
-Eine Anwendung kann die [**enumregistereventinfo**](-wia-iwiaitem2-enumregistereventinfo.md) -Methode aufrufen, um Ereignis Registrierungsinformationen aufzuzählen.
+Eine Anwendung kann die [**EnumRegisterEventInfo-Methode**](-wia-iwiaitem2-enumregistereventinfo.md) aufrufen, um Ereignisregistrierungsinformationen aufzuzählen.
 
-Wenn die Anwendung keine registrierte Component Object Model (com)-Komponente ist und nicht mit der WIA 2,0-Architektur kompatibel ist, verwenden Sie die [**IWiaDevMgr2:: registereventcallbackprogram**](-wia-iwiadevmgr2-registereventcallbackprogram.md) -Methode, um eine Anwendung für Geräte Ereignisse zu registrieren.
+Wenn die Anwendung keine registrierte com-Komponente (Component Object Model) ist und nicht mit der WIA 2.0-Architektur kompatibel ist, verwenden Sie die [**IWiaDevMgr2::RegisterEventCallbackProgram-Methode,**](-wia-iwiadevmgr2-registereventcallbackprogram.md) um eine Anwendung für Geräteereignisse zu registrieren.
 
 > [!Note]  
-> In einer Multithreadanwendung gibt es keine Garantie dafür, dass der Rückruf der Ereignis Benachrichtigung für denselben Thread zurückgegeben wird, der den Rückruf registriert hat.
+> In einer Multithreadanwendung gibt es keine Garantie dafür, dass der Ereignisbenachrichtigungsrückruf für denselben Thread zurückgegeben wird, der den Rückruf registriert hat.
 
  
 
@@ -147,9 +147,9 @@ Wenn die Anwendung keine registrierte Component Object Model (com)-Komponente is
 
 | Anforderung | Wert |
 |-------------------------------------|----------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                   |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/>                             |
-| Header<br/>                   | <dl> <dt>WIA. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur Vista-Desktop-Apps\]<br/>                                   |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/>                             |
+| Header<br/>                   | <dl> <dt>Wia.h</dt> </dl> |
 
 
 

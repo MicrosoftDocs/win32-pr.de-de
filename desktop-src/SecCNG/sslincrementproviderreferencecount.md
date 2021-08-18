@@ -1,7 +1,7 @@
 ---
-description: Erhöht den Verweis Zähler auf eine Instanz des Secure Sockets Layer Protocol (SSL)-Anbieters.
+description: Inkrementiert den Verweiszähler auf eine Secure Sockets Layer -Anbieterinstanz (SSL).
 ms.assetid: 67e7b8b4-b073-4936-b1e0-3fc7c1c011a2
-title: Sslinkrementproviderreferencecount-Funktion (sslprovider. h)
+title: SslIncrementProviderReferenceCount-Funktion (Sslprovider.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,16 +13,16 @@ api_type:
 - DllExport
 api_location:
 - Ncrypt.dll
-ms.openlocfilehash: 862697035d978db082c303c6e1df6f2a444d8be3
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: a177d4142d304834aea773e56a09703bc4d56e6b479a2f005f00e3b692980c72
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106351142"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118906000"
 ---
-# <a name="sslincrementproviderreferencecount-function"></a>Sslinkrementproviderreferencecount-Funktion
+# <a name="sslincrementproviderreferencecount-function"></a>SslIncrementProviderReferenceCount-Funktion
 
-Die **sslinkrementproviderreferencecount** -Funktion erhöht den Verweis Zähler auf eine Instanz des [*Secure Sockets Layer Protocol*](/windows/desktop/SecGloss/s-gly) (SSL)-Anbieters.
+Die **SslIncrementProviderReferenceCount-Funktion** erhöht den Verweiszähler auf eine SECURE SOCKETS LAYER (SSL)-Anbieterinstanz. [](/windows/desktop/SecGloss/s-gly)
 
 ## <a name="syntax"></a>Syntax
 
@@ -39,26 +39,26 @@ SECURITY_STATUS WINAPI SslIncrementProviderReferenceCount(
 
 <dl> <dt>
 
-*hsslprovider* \[ in\]
+*hSslProvider* \[ In\]
 </dt> <dd>
 
-Das Handle für die SSL-Protokoll Anbieter Instanz.
+Das Handle für die SSL-Protokollanbieterinstanz.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Wenn die Funktion erfolgreich ist, gibt Sie 0 (null) zurück.
+Wenn die Funktion erfolgreich ist, gibt sie 0 (null) zurück.
 
-Wenn die Funktion fehlschlägt, wird ein Fehlerwert ungleich 0 (null) zurückgegeben.
+Wenn die Funktion fehlschlägt, gibt sie einen Fehlerwert ungleich 0 (null) zurück.
 
-Mögliche Rückgabecodes sind u. a. die folgenden:
+Mögliche Rückgabecodes sind u. a. folgende:
 
 
 
 | Rückgabecode/-wert                                                                                                                                                    | BESCHREIBUNG                                        |
 |----------------------------------------------------------------------------------------------------------------------------------------------------------------------|----------------------------------------------------|
-| <dl> <dt>**Ernte \_ Ungültiges \_ handle**</dt> <dt>0x80090026l</dt> </dl> | Das *hsslprovider* -Handle ist ungültig.<br/> |
+| <dl> <dt>**NTE \_ UNGÜLTIGES \_ HANDLE**</dt> <dt>0x80090026L</dt> </dl> | Das *hSslProvider-Handle* ist ungültig.<br/> |
 
 
 
@@ -70,9 +70,9 @@ Mögliche Rückgabecodes sind u. a. die folgenden:
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                           |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/>                                     |
-| Header<br/>                   | <dl> <dt>Sslprovider. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ Vista-Desktop-Apps\]<br/>                                           |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/>                                     |
+| Header<br/>                   | <dl> <dt>Sslprovider.h</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Ncrypt.dll</dt> </dl>    |
 
 
