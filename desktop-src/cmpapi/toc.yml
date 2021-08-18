@@ -4,38 +4,38 @@
     - name: Verwenden der Komprimierungs-API
       href: using-the-compression-api.md
       items:
-        - name: Verwenden der Komprimierungs-API im Puffer Modus
+        - name: Verwenden der Komprimierungs-API im Puffermodus
           href: using-the-compression-api-in-buffer-mode.md
-        - name: Verwenden der Komprimierungs-API im Block Modus
+        - name: Verwenden der Komprimierungs-API im Blockmodus
           href: using-the-compression-api-in-block-mode.md
-    - name: API-Komprimierungs Funktionen
+    - name: Komprimierungs-API-Funktionen
       href: compression-api-functions.md
       items:
-        - name: Closecompressor
+        - name: CloseCompressor
           href: /windows/desktop/api/compressapi/nf-compressapi-closecompressor
-        - name: Closedebug
+        - name: CloseDecompressor
           href: /windows/desktop/api/compressapi/nf-compressapi-closedecompressor
         - name: Komprimieren
           href: /windows/desktop/api/compressapi/nf-compressapi-compress
-        - name: '"Kreatecompressor"'
+        - name: CreateCompressor
           href: /windows/desktop/api/compressapi/nf-compressapi-createcompressor
-        - name: '"Kreatedecompressor"'
+        - name: CreateDecompressor
           href: /windows/desktop/api/compressapi/nf-compressapi-createdecompressor
         - name: Nachricht
           href: /windows/desktop/api/compressapi/nf-compressapi-decompress
-        - name: Querycompressorinformation
+        - name: QueryCompressorInformation
           href: /windows/desktop/api/compressapi/nf-compressapi-querycompressorinformation
-        - name: Querydecompressorinformation
+        - name: QueryDecompressorInformation
           href: /windows/desktop/api/compressapi/nf-compressapi-querydecompressorinformation
-        - name: Resetcompressor
+        - name: ResetCompressor
           href: /windows/desktop/api/compressapi/nf-compressapi-resetcompressor
-        - name: Resetdebug
+        - name: ResetDecompressor
           href: /windows/desktop/api/compressapi/nf-compressapi-resetdecompressor
-        - name: Setcompressorinformation
+        - name: SetCompressorInformation
           href: /windows/desktop/api/compressapi/nf-compressapi-setcompressorinformation
-        - name: Setdecompressorinformation
+        - name: SetDecompressorInformation
           href: /windows/desktop/api/compressapi/nf-compressapi-setdecompressorinformation
-    - name: Komprimieren von API-Strukturen
+    - name: Komprimierungs-API-Strukturen
       href: compression-api-structures.md
       items:
         - name: COMPRESS_ALLOCATION_ROUTINES

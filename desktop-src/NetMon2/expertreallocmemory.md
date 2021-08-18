@@ -1,7 +1,7 @@
 ---
-description: Die Funktion "expertrebelegcmemory" erhöht oder verringert die Menge an Arbeitsspeicher, die von Netzwerkmonitor zugeordnet wird.
+description: Die ExpertReallocMemory-Funktion erhöht oder verringert die Menge an Arbeitsspeicher, die von der Netzwerkmonitor.
 ms.assetid: 78b99a66-692a-4e83-8b0d-d68caf156bb6
-title: Funktion "expertrebelegcmemory" (Netmon. h)
+title: ExpertReallocMemory-Funktion (Netmon.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,16 +13,16 @@ api_type:
 - DllExport
 api_location:
 - Nmapi.dll
-ms.openlocfilehash: 8f562443f9ca66def7e053f5958b17e70af50140
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: be43fa99021ec5612a148ba42db1b11e1fd6d885fa64fa003c0dfa672688d555
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106342821"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119012258"
 ---
-# <a name="expertreallocmemory-function"></a>Funktion "expertrebelegcmemory"
+# <a name="expertreallocmemory-function"></a>ExpertReallocMemory-Funktion
 
-Die Funktion " **expertrebelegcmemory** " erhöht oder verringert die Menge an Arbeitsspeicher, die von Netzwerkmonitor zugeordnet wird.
+Die **ExpertReallocMemory-Funktion** erhöht oder verringert die Menge an Arbeitsspeicher, die von der Netzwerkmonitor.
 
 ## <a name="syntax"></a>Syntax
 
@@ -42,31 +42,31 @@ LPVOID WINAPI ExpertReallocMemory(
 
 <dl> <dt>
 
-*hexpertkey* \[ in\]
+*hExpertKey* \[ In\]
 </dt> <dd>
 
-Eindeutiger Bezeichner, der beim [**Ausführen**](run.md) oder [**Konfigurieren**](configure.md)an den Experten übermittelt wird
+Eindeutiger Bezeichner, der an den Experten unter [**Ausführen oder**](run.md) Konfigurieren von [**übergeben wird.**](configure.md)
 
 </dd> <dt>
 
-*poriginalmemory* \[ in\]
+*pOriginalMemory* \[ In\]
 </dt> <dd>
 
-Zeiger auf den durch Netzwerkmonitor zugeordneten Arbeitsspeicher. Der *poriginalmemory* -Zeiger kann von einem vorherigen-Befehl von " [**expertenlocmemory**](expertallocmemory.md) " oder " **expertenspeicher**" zurückgegeben werden.
+Zeiger auf den arbeitsspeicher, der von der Netzwerkmonitor. Der *pOriginalMemory-Zeiger* kann durch einen vorherigen Aufruf von [**ExpertAllocMemory**](expertallocmemory.md) oder **ExpertReallocMemory zurückgegeben werden.**
 
 </dd> <dt>
 
-*nbytes* \[ in\]
+*nBytes* \[ In\]
 </dt> <dd>
 
-Größe des neu zugewiesenen Speichers.
+Größe des neu zugewiesenen Arbeitsspeichers.
 
 </dd> <dt>
 
-*perror* \[ vorgenommen\]
+*pError* \[ out\]
 </dt> <dd>
 
-Bei der Rückgabe ein Fehlercode, wenn die Funktion fehlschlägt. Wenn der Fehlercode nmerr- \_ Experte \_ beendet ist, muss der Experte einen Cleanup durchsetzen und sofort zurückkehren.
+Bei Rückgabe ein Fehlercode, wenn die Funktion fehlschlägt. Wenn der Fehlercode NMERR EXPERT TERMINATE ist, muss der Experte sofort bereinigt \_ \_ und zurückkehren.
 
 </dd> </dl>
 
@@ -74,11 +74,11 @@ Bei der Rückgabe ein Fehlercode, wenn die Funktion fehlschlägt. Wenn der Fehle
 
 Wenn die Funktion erfolgreich ist, ist der Rückgabewert ein Zeiger auf den zugeordneten Arbeitsspeicher.
 
-Wenn die Funktion nicht erfolgreich ist, ist der Rückgabewert **null**, und *perror* (wenn es sich um einen nicht-**null** -Wert handelt) gibt den Grund für den Fehler an.
+Wenn die Funktion nicht erfolgreich ist, ist der Rückgabewert **NULL,** und *pError* (wenn es sich um einen Nicht-NULL-Wert handelt) gibt den Grund für den Fehler an.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Es ist wichtig zu beachten, dass ein Experte die Netzwerkmonitor Speicher Belegungs Funktionen für die Speicherverwaltung verwenden sollte. Wenn Ihr Experte während der Laufzeit einen Fehler verursacht, ermöglicht die Verwendung dieser Funktionen Netzwerkmonitor, den zugeordneten Arbeitsspeicher freizugeben.
+Es ist wichtig zu beachten, dass ein Experte die Netzwerkmonitor speicherzuteilungsfunktionen für die Speicherverwaltung verwenden sollte. Wenn Ihr Experte während der Laufzeit ausfällt, ermöglicht die Verwendung dieser Funktionen Netzwerkmonitor, den zugewiesenen Arbeitsspeicher frei zu geben.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -88,8 +88,8 @@ Es ist wichtig zu beachten, dass ein Experte die Netzwerkmonitor Speicher Belegu
 |-------------------------------------|--------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[nur Desktop-Apps\]<br/>                           |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                                 |
-| Header<br/>                   | <dl> <dt>Netmon. h</dt> </dl>  |
-| Bibliothek<br/>                  | <dl> <dt>Nmapi. lib</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Netmon.h</dt> </dl>  |
+| Bibliothek<br/>                  | <dl> <dt>Nmapi.lib</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Nmapi.dll</dt> </dl> |
 
 

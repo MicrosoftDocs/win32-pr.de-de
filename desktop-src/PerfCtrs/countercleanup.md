@@ -1,7 +1,7 @@
 ---
-description: Entfernt die Anbieter Registrierung.
+description: Entfernt die Anbieterregistrierung.
 ms.assetid: e52c1ee0-140a-4277-bddd-d93338a512bc
-title: Countercleanup-Funktion
+title: CounterCleanup-Funktion
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -12,16 +12,16 @@ api_name:
 api_type:
 - NA
 api_location: ''
-ms.openlocfilehash: eb768d3152aad5401c30b18a3f1ff13d1ef2397d
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: fe06923849a12609b6662505df94c927c3d9dfd4aeb8bc6a42bd6a225e042ef0
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106368749"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119011368"
 ---
-# <a name="countercleanup-function"></a>Countercleanup-Funktion
+# <a name="countercleanup-function"></a>CounterCleanup-Funktion
 
-Entfernt die Anbieter Registrierung.
+Entfernt die Registrierung des Anbieters.
 
 ## <a name="syntax"></a>Syntax
 
@@ -40,11 +40,11 @@ Diese Funktion besitzt keine Parameter.
 
 Diese Funktion gibt keinen Wert zurück.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Der Anbieter ruft diese Funktion auf. Die-Funktion Ruft die [**perfstopprovider**](/windows/desktop/api/Perflib/nf-perflib-perfstopprovider) -Funktion auf, um die Registrierung des Anbieters zu entfernen.
+Ihr Anbieter ruft diese Funktion auf. Die Funktion ruft die [**PerfStopProvider-Funktion**](/windows/desktop/api/Perflib/nf-perflib-perfstopprovider) auf, um die Registrierung des Anbieters zu entfernen.
 
-Das [**ctrpp**](ctrpp.md) -Tool generiert diese Inline Funktion, wenn Sie das **-o-** Argument angeben. Der Name der Funktion enthält eine *Präfix* Zeichenfolge, wenn Sie das Argument **-prefix** angeben (z. b. **_prefix_CounterCleanup**.
+Das [**CTRPP-Tool**](ctrpp.md) generiert diese Inlinefunktion, wenn Sie das **Argument -o** angeben. Der Name der Funktion enthält eine *Präfixzeichenfolge,* wenn Sie das **Argument -prefix** angeben (z. **B. _prefix_CounterCleanup.**
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -52,8 +52,8 @@ Das [**ctrpp**](ctrpp.md) -Tool generiert diese Inline Funktion, wenn Sie das **
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows 7 \[ -Desktop-Apps\]<br/>              |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 R2 \[ -Desktop-Apps\]<br/> |
+| Unterstützte Mindestversion (Client)<br/> | Windows 7 \[ Desktop-Apps\]<br/>              |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server 2008 \[ R2-Desktop-Apps\]<br/> |
 
 
 

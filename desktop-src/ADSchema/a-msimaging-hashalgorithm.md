@@ -1,11 +1,11 @@
 ---
-title: MS-Imaging-Hash Algorithmus-Attribut
-description: Enthält den Namen des Hash Algorithmus, mit dem der Fingerabdruck Hash für das scanerepository/das sichere Druck Gerät erstellt wird.
+title: ms-Imaging-Hash-Algorithm-Attribut
+description: Enthält den Namen des Hashalgorithmus, der zum Erstellen des Fingerabdruckhashs für das Scan-Repository bzw. das sichere Druckgerät verwendet wird.
 ms.assetid: eb1500e7-1b43-4dec-98d4-55005a8414c8
 ms.tgt_platform: multiple
 keywords:
-- MS-Imaging-Hash Algorithmus-Attribut AD-Schema
-- msimagung-HashAlgorithm-Attribut AD-Schema
+- MS-Imaging-Hash-Algorithm-Attribut AD-Schema
+- msImaging-HashAlgorithm-Attribut AD-Schema
 topic_type:
 - apiref
 api_name:
@@ -14,26 +14,26 @@ api_type:
 - Schema
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 3b420b2f93e33e9781d898323c18be59953d06ee
-ms.sourcegitcommit: b77ace27b0432e7cd3863191b11926be032fbe2f
+ms.openlocfilehash: db67ba6b2a9f8e01da299c98109c23247b826c6cb9c3c54a2d13a39274fcd6c6
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "106344887"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118960549"
 ---
-# <a name="ms-imaging-hash-algorithm-attribute"></a>MS-Imaging-Hash Algorithmus-Attribut
+# <a name="ms-imaging-hash-algorithm-attribute"></a>ms-Imaging-Hash-Algorithm-Attribut
 
-Enthält den Namen des Hash Algorithmus, mit dem der Fingerabdruck Hash für das scanerepository/das sichere Druck Gerät erstellt wird.
+Enthält den Namen des Hashalgorithmus, der zum Erstellen des Fingerabdruckhashs für das Scan-Repository bzw. das sichere Druckgerät verwendet wird.
 
 
 
 | Eingabe | Wert |
 |-------------------|---------------------------------------------|
-| CN                | MS-Imaging-Hash Algorithmus                   |
-| LDAP-Display-Name | msimaging\hashalgorithm                     |
+| CN                | ms-Imaging-Hash-Algorithm                   |
+| Ldap-Anzeigename | msImaging-HashAlgorithm                     |
 | Size              | \-                                          |
-| Berechtigung aktualisieren  | \-                                          |
-| Aktualisierungshäufigkeit  | \-                                          |
+| Aktualisieren von Berechtigungen  | \-                                          |
+| Updatehäufigkeit  | \-                                          |
 | Attribute-Id      | 1.2.840.113556.1.4.2181                     |
 | System-ID-GUID    | 8ae70db5-6406-4196-92fe-f3bb557520a7        |
 | Syntax            | [**String(Unicode)**](s-string-unicode.md) |
@@ -52,11 +52,11 @@ Enthält den Namen des Hash Algorithmus, mit dem der Fingerabdruck Hash für das
 |------------------------|-------------------------------------------|
 | Link-ID                | \-                                        |
 | MAPI-Id                | \-                                        |
-| System-Only            | False                                     |
-| Ist-einwertig       | Richtig                                      |
-| Ist indiziert             | False                                     |
-| Im globalen Katalog      | False                                     |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                              |
+| System-Only            | Falsch                                     |
+| Ist einwertig       | Richtig                                      |
+| Ist indiziert             | Falsch                                     |
+| Im globalen Katalog      | Falsch                                     |
+| NT-Security-Descriptor | O:BAG:BAD:S:                              |
 | Range-Lower            | \-                                        |
 | Range-Upper            | \-                                        |
 | Search-Flags           | 0x00000000                                |

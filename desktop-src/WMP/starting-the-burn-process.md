@@ -1,29 +1,29 @@
 ---
-title: Der Verbrennungsprozess wird gestartet.
-description: Der Verbrennungsprozess wird gestartet.
+title: Starten des Burn-Prozesses
+description: Starten des Burn-Prozesses
 ms.assetid: 91442bd2-1a68-465c-b865-63d309f33d55
 keywords:
-- Windows Media Player, CD-brennen
-- Windows Media Player-Objektmodell, CD-brennen
-- Objektmodell, CD-brennen
-- Windows Media Player ActiveX-Steuerelement, CD-brennen
-- ActiveX-Steuerelement, CD-brennen
-- Windows Media Player Mobile ActiveX-Steuerelement, CD-brennen
-- Windows Media Player Mobile, CD-brennen
-- CD-brennen, Startvorgang zum Brennen
-- Brennen von CDs, Starten des Brennvorgangs
+- Windows Media Player,CD-1600
+- Windows Media Player Objektmodell, CD-Platte
+- Objektmodell, CD-Umrechnung
+- Windows Media Player ActiveX,CD-Gesteuerte
+- ActiveX-Steuerelement, CD-Gesteuerte
+- Windows Media Player Mobile ActiveX-Steuerelement, CD-Gesteuerte
+- Windows Media Player Mobil, CD-Platte
+- CD-Platte,Starten des Burn-Prozesses
+- CDs für Das Starten des Burn-Prozesses
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: c4a35f473eebe35bffd48ac802dcfe79082689de
-ms.sourcegitcommit: 48d1c892045445bcbd0f22bafa2fd3861ffaa6e7
+ms.openlocfilehash: 50f5620ba8fa6ab911cf0fd594fd27f139b5061d1383575f861dadfec45dabbf
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/19/2020
-ms.locfileid: "103948446"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118995080"
 ---
-# <a name="starting-the-burn-process"></a>Der Verbrennungsprozess wird gestartet.
+# <a name="starting-the-burn-process"></a>Starten des Burn-Prozesses
 
-Bevor Sie beginnen können, müssen Sie eine Wiedergabeliste zum Brennen zuweisen. Verwenden Sie [iwmpcdromburn::p UT \_ burnwiedergabe](/previous-versions/windows/desktop/api/wmp/nf-wmp-iwmpcdromburn-put_burnplaylist) , um eine Wiedergabeliste zum Brennen anzugeben.
+Bevor sie beginnen kann, müssen Sie eine Wiedergabeliste zuweisen, die verbraucht werden soll. Geben Sie mit [IWMPC csvLive::p ut \_ burnPlaylist](/previous-versions/windows/desktop/api/wmp/nf-wmp-iwmpcdromburn-put_burnplaylist) eine Wiedergabeliste für die Wiedergabeliste an.
 
 
 ```C++
@@ -45,9 +45,9 @@ HRESULT CMainDlg::PutPlaylist (void)
 
 
 
-Weitere Informationen zum Verwenden von Wiedergabelisten finden Sie unter [iwmpwiedergabe](/previous-versions/windows/desktop/api/wmp/nn-wmp-iwmpplaylist).
+Informationen zur Verwendung von Wiedergabelisten finden Sie unter [IWMPPlaylist](/previous-versions/windows/desktop/api/wmp/nn-wmp-iwmpplaylist).
 
-Um den Brennvorgang zu starten, nennen Sie [iwmpcdromburn:: startburn](/previous-versions/windows/desktop/api/wmp/nf-wmp-iwmpcdromburn-startburn).
+Um den Vorgang zu starten, rufen [Sie IWMPC csv Überschreiben::start Überschreiben](/previous-versions/windows/desktop/api/wmp/nf-wmp-iwmpcdromburn-startburn)auf.
 
 
 ```C++
@@ -58,7 +58,7 @@ hr = m_spCdromBurn->startBurn();
 
 
 
-Sie können den Brennvorgang beenden, indem Sie [iwmpcdromburn:: stopburn](/previous-versions/windows/desktop/api/wmp/nf-wmp-iwmpcdromburn-stopburn)aufrufen.
+Sie können den Vorgang zum Beenden des Vorgangs beenden, indem [Sie IWMPCaku Überschn.](/previous-versions/windows/desktop/api/wmp/nf-wmp-iwmpcdromburn-stopburn)
 
 
 ```C++
@@ -73,7 +73,7 @@ hr = m_spCdromBurn->stopBurn();
 
 <dl> <dt>
 
-[**Brennen einer CD**](burning-a-cd.md)
+[**Ausknänden einer CD**](burning-a-cd.md)
 </dt> <dt>
 
 [**Abrufen der Schnittstelle zum Brennen von CDs**](retrieving-the-cd-burning-interface.md)
@@ -82,15 +82,15 @@ hr = m_spCdromBurn->stopBurn();
 [**Löschen einer erneut beschreibbaren CD**](erasing-a-rewritable-cd.md)
 </dt> <dt>
 
-[**Abrufen des Laufwerks und des Festplatten Status**](retrieving-the-drive-and-disc-status.md)
+[**Abrufen des Laufwerk- und Datenträgerstatus**](retrieving-the-drive-and-disc-status.md)
 </dt> <dt>
 
-[**Abrufen des Verbrauchs Status**](retrieving-the-burn-status.md)
+[**Abrufen des Burn-Status**](retrieving-the-burn-status.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

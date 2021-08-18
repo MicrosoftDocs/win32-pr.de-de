@@ -1,6 +1,6 @@
 ---
-description: Weitere Informationen finden Sie in der API. deserializeobjectfromcolumn-Methode.
-title: API. deserializeobjectfromcolumn-Methode
+description: 'Weitere Informationen finden Sie unter: Api.DeserializeObjectFromColumn-Methode'
+title: Api.DeserializeObjectFromColumn-Methode
 TOCTitle: 'DeserializeObjectFromColumn method '
 ms:assetid: Overload:Microsoft.Isam.Esent.Interop.Api.DeserializeObjectFromColumn
 ms:mtpsurl: https://msdn.microsoft.com/library/microsoft.isam.esent.interop.api.deserializeobjectfromcolumn(v=EXCHG.10)
@@ -14,17 +14,17 @@ dev_langs:
 - JScript
 - VB
 - other
-ms.openlocfilehash: da36c29f68db517f8ddf1dafea287cb75a87e948
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 89a5bbfd02b43d52862fd216615398b23ad222cbde4742ad1085948086d32d98
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104569524"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118983860"
 ---
-# <a name="apideserializeobjectfromcolumn-method"></a>API. deserializeobjectfromcolumn-Methode
+# <a name="apideserializeobjectfromcolumn-method"></a>Api.DeserializeObjectFromColumn-Methode
 
-Geschützte Member einschließen  
-Geerbte Member einschließen  
+Einschließen geschützter Member  
+Einschließen geerbter Member  
 
 ## <a name="overload-list"></a>Überladeliste
 
@@ -33,18 +33,18 @@ Geerbte Member einschließen
 <tr class="header">
 <th> </th>
 <th>Name</th>
-<th>BESCHREIBUNG</th>
+<th>Beschreibung</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
 <td><img src="../images/dn292146.pubmethod(exchg.10).gif" title="Öffentliche Methode" alt="Public method" /><img src="../images/dn292146.static(exchg.10).gif" title="Statischer Member" alt="Static member" /></td>
-<td><a href="dn292138(v=exchg.10).md">Deserializeobjectfromcolumn (JET_SESID, JET_TABLEID, JET_COLUMNID)</a></td>
+<td><a href="dn292138(v=exchg.10).md">DeserializeObjectFromColumn(JET_SESID, JET_TABLEID, JET_COLUMNID)</a></td>
 <td>Deserialisieren eines Objekts aus einer Spalte.</td>
 </tr>
 <tr class="even">
 <td><img src="../images/dn292146.pubmethod(exchg.10).gif" title="Öffentliche Methode" alt="Public method" /><img src="../images/dn292146.static(exchg.10).gif" title="Statischer Member" alt="Static member" /></td>
-<td><a href="dn292115(v=exchg.10).md">Deserializeobjectfromcolumn (JET_SESID, JET_TABLEID, JET_COLUMNID, retrievecolenngrbit)</a></td>
+<td><a href="dn292115(v=exchg.10).md">DeserializeObjectFromColumn(JET_SESID, JET_TABLEID, JET_COLUMNID, RetrieveColumnGrbit)</a></td>
 <td>Deserialisieren eines Objekts aus einer Spalte.</td>
 </tr>
 </tbody>
@@ -53,12 +53,12 @@ Geerbte Member einschließen
 
 Oben
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
-#### <a name="reference"></a>Referenz
+#### <a name="reference"></a>Verweis
 
 [API-Klasse](./api-class.md)
 
-[API-Mitglieder](./api-members.md)
+[API-Member](./api-members.md)
 
-[Microsoft. ISAM. ESENT. Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)
+[Microsoft.Isam.Esent.Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)

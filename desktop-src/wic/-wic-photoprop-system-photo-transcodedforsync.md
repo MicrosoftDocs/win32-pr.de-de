@@ -1,23 +1,23 @@
 ---
-description: Die fotometadatenrichtlinie für die System. Photo. transcodedforsync-Eigenschaft.
+description: Die Fotometadatenrichtlinie für die System.Photo.TranscodedForSync-Eigenschaft.
 ms.assetid: 1869d845-6264-425a-ab3e-e0a9f942961a
-title: System. Photo. transcodedforsync Photo-metadatenrichtlinie
+title: System.Photo.TranscodedForSync-Fotometadatenrichtlinie
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: a5884ad469fcf7b5dffc8c4ad14f0ee5ff90cd07
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 34e78086284e1ca13b01c5e7cd188b761afe7eeba8acb5f2bca103234f80955b
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "103867327"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118964759"
 ---
-# <a name="systemphototranscodedforsync-photo-metadata-policy"></a>System. Photo. transcodedforsync Photo-metadatenrichtlinie
+# <a name="systemphototranscodedforsync-photo-metadata-policy"></a>System.Photo.TranscodedForSync-Fotometadatenrichtlinie
 
-Die fotometadatenrichtlinie für die [System. Photo. transcodedforsync](../properties/props-system-photo-transcodedforsync.md) -Eigenschaft.
+Die Fotometadatenrichtlinie für die [System.Photo.TranscodedForSync-Eigenschaft.](../properties/props-system-photo-transcodedforsync.md)
 
-### <a name="pkey"></a>Pkey
+### <a name="pkey"></a>PKEY
 
-Pkey- \_ Foto \_ transcodedforsync
+PKEY \_ Photo \_ TranscodedForSync
 
 ### <a name="containers"></a>Container
 
@@ -27,54 +27,54 @@ JPEG, TIFF
 
 Nein
 
-### <a name="output-propvariant-type"></a>Ausgabe-PROPVARIANT-Typ
+### <a name="output-propvariant-type"></a>PROPVARIANT-Ausgabetyp
 
-VT \_ bool
+VT \_ BOOL
 
 ### <a name="input-type"></a>Eingabetyp
 
 Boolesch.
 
-### <a name="conflict-resolution-policy"></a>Richtlinie zur Konfliktlösung
+### <a name="conflict-resolution-policy"></a>Konfliktlösungsrichtlinie
 
-Werte aus unterschiedlichen Schemas sind abgestimmt.
+Werte aus unterschiedlichen Schemas werden abgestimmt.
 
 ### <a name="jpeg-policy"></a>JPEG-Richtlinie
 
-### <a name="read-paths"></a>Pfade lesen
+### <a name="read-paths"></a>Lesepfade
 
 
 
-| Auftrag | Pfad                                  | Datenträger Format  |
+| Auftrag | Pfad                                  | Datenträgerformat  |
 |-------|---------------------------------------|--------------|
-| 1     | /App1/IFD/{ushort = 18248}              | bool \_ UShort |
-| 2     | /XMP/MicrosoftPhoto: transcodedforsync |              |
+| 1     | /app1/ifd/{ushort=18248}              | bool \_ ushort |
+| 2     | /xmp/MicrosoftPhoto:TranscodedForSync |              |
 
 
 
  
 
-### <a name="write-paths"></a>Schreib Pfade
+### <a name="write-paths"></a>Schreibpfade
 
 
 
-| Auftrag | Pfad                                  | Datenträger Format  |
+| Auftrag | Pfad                                  | Datenträgerformat  |
 |-------|---------------------------------------|--------------|
-| 1     | /App1/IFD/{ushort = 18248}              | bool \_ UShort |
-| 2     | /XMP/MicrosoftPhoto: transcodedforsync |              |
+| 1     | /app1/ifd/{ushort=18248}              | bool \_ ushort |
+| 2     | /xmp/MicrosoftPhoto:TranscodedForSync |              |
 
 
 
  
 
-### <a name="remove-paths"></a>Pfade entfernen
+### <a name="remove-paths"></a>Entfernen von Pfaden
 
 
 
 | Auftrag | Pfad                                  |
 |-------|---------------------------------------|
-| 1     | /App1/IFD/{ushort = 18248}              |
-| 2     | /XMP/microsoftphoto: transcodedforsync |
+| 1     | /app1/ifd/{ushort=18248}              |
+| 2     | /xmp/microsoftphoto:transcodedforsync |
 
 
 
@@ -82,52 +82,52 @@ Werte aus unterschiedlichen Schemas sind abgestimmt.
 
 ### <a name="tiff-policies"></a>TIFF-Richtlinien
 
-### <a name="read-paths"></a>Pfade lesen
+### <a name="read-paths"></a>Lesepfade
 
 
 
-| Auftrag | Pfad                                      | Datenträger Format  |
+| Auftrag | Pfad                                      | Datenträgerformat  |
 |-------|-------------------------------------------|--------------|
-| 1     | /IFD/{ushort = 18248}                       | bool \_ UShort |
-| 2     | /IFD/XMP/MicrosoftPhoto: transcodedforsync |              |
+| 1     | /ifd/{ushort=18248}                       | bool \_ ushort |
+| 2     | /ifd/xmp/MicrosoftPhoto:TranscodedForSync |              |
 
 
 
  
 
-### <a name="write-paths"></a>Schreib Pfade
+### <a name="write-paths"></a>Schreibpfade
 
 
 
-| Auftrag | Pfad                                      | Datenträger Format  |
+| Auftrag | Pfad                                      | Datenträgerformat  |
 |-------|-------------------------------------------|--------------|
-| 1     | /IFD/{ushort = 18248}                       | bool \_ UShort |
-| 2     | /IFD/XMP/MicrosoftPhoto: transcodedforsync |              |
+| 1     | /ifd/{ushort=18248}                       | bool \_ ushort |
+| 2     | /ifd/xmp/MicrosoftPhoto:TranscodedForSync |              |
 
 
 
  
 
-### <a name="remove-paths"></a>Pfade entfernen
+### <a name="remove-paths"></a>Entfernen von Pfaden
 
 
 
 | Auftrag | Pfad                                      |
 |-------|-------------------------------------------|
-| 1     | /IFD/{ushort = 18248}                       |
-| 2     | /IFD/XMP/microsoftphoto: transcodedforsync |
+| 1     | /ifd/{ushort=18248}                       |
+| 2     | /ifd/xmp/microsoftphoto:transcodedforsync |
 
 
 
  
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[System. Photo. transcodedforsync](../properties/props-system-photo-transcodedforsync.md)
+[System.Photo.TranscodedForSync](../properties/props-system-photo-transcodedforsync.md)
 </dt> </dl>
 
  

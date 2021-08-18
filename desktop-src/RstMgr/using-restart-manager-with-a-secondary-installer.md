@@ -1,37 +1,37 @@
 ---
-title: Verwenden des Neustart-Managers mit einem sekundären Installer
-description: Im folgenden Verfahren wird die Verwendung des Neustart-Managers mit primären und sekundären Installationsprogrammen beschrieben.
+title: Verwenden des Neustart-Managers mit einem sekundären Installationsprogramm
+description: Das folgende Verfahren beschreibt die Verwendung des Neustart-Managers mit primären und sekundären Installationsprogrammen.
 ms.assetid: aa55ab09-206b-49ed-8cb4-e311c1ed2d9d
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 8bb44105d9f3d391bb2ed793aca8a6da2c330b30
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: 8aefb1f9658752677e7850e939fcb6a3c4c6047c5efc2dc0ceb06ec0f51900ca
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "103855731"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119009988"
 ---
-# <a name="using-restart-manager-with-a-secondary-installer"></a>Verwenden des Neustart-Managers mit einem sekundären Installer
+# <a name="using-restart-manager-with-a-secondary-installer"></a>Verwenden des Neustart-Managers mit einem sekundären Installationsprogramm
 
-Im folgenden Verfahren wird die Verwendung des Neustart-Managers mit primären und sekundären Installationsprogrammen beschrieben.
+Das folgende Verfahren beschreibt die Verwendung des Neustart-Managers mit primären und sekundären Installationsprogrammen.
 
-Bei der Verwendung von primären und sekundären Installationsprogrammen steuert das primäre Installationsprogramm die Benutzeroberfläche.
+Bei Verwendung von primären und sekundären Installationsprogrammen steuert das primäre Installationsprogramm die Benutzeroberfläche.
 
 **So verwenden Sie den Neustart-Manager mit primären und sekundären Installationsprogrammen**
 
-1.  Das primäre Installationsprogramm ruft die [**rmstartession**](/windows/desktop/api/RestartManager/nf-restartmanager-rmstartsession) -Funktion auf, um die Neustart-Manager-Sitzung zu starten und ein Sitzungs Handle und einen Schlüssel zu erhalten.
-2.  Der primäre Installer startet oder kontaktiert den sekundären Installer und stellt ihm den Sitzungsschlüssel zur Verfügung, der im vorherigen Schritt abgerufen wurde.
-3.  Der sekundäre Installer Ruft die [**rmjoinsession**](/windows/desktop/api/RestartManager/nf-restartmanager-rmjoinsession) -Funktion mit dem Sitzungsschlüssel auf, um der Neustart-Manager-Sitzung beizutreten. Ein sekundäres Installationsprogramm kann einer Sitzung beitreten, die vom primären Installer gestartet wird, wenn beide Installationsprogramme im selben Benutzer Kontext ausgeführt werden.
-4.  Die primären und sekundären Installationsprogramme wenden die [**RmRegisterResources**](/windows/desktop/api/RestartManager/nf-restartmanager-rmregisterresources) -Funktion an, um Ressourcen zu registrieren. Mit dem Neustart-Manager können nur registrierte Ressourcen verwendet werden, um zu bestimmen, welche Anwendungen und Dienste heruntergefahren und neu gestartet werden müssen. Alle Ressourcen, die von der Installation betroffen sein können, sollten bei der Sitzung registriert werden. Ressourcen können anhand des Datei namens, des Dienst Kurznamens oder einer [**eindeutigen RM- \_ \_ Prozess**](/windows/desktop/api/RestartManager/ns-restartmanager-rm_unique_process) Struktur identifiziert werden.
-5.  Das primäre Installationsprogramm ruft die [**RmGetList**](/windows/desktop/api/RestartManager/nf-restartmanager-rmgetlist) -Funktion auf, um ein Array von [**RM- \_ Prozess \_ Informations**](/windows/desktop/api/RestartManager/ns-restartmanager-rm_process_info) Strukturen abzurufen, das alle Anwendungen und Dienste auflistet, die heruntergefahren und neu gestartet werden müssen.
+1.  Das primäre Installationsprogramm ruft die [**RmStartSession-Funktion**](/windows/desktop/api/RestartManager/nf-restartmanager-rmstartsession) auf, um die Neustart-Manager-Sitzung zu starten und ein Sitzungshandle und einen Schlüssel abzurufen.
+2.  Das primäre Installationsprogramm startet oder kontaktiert das sekundäre Installationsprogramm und stellt den Sitzungsschlüssel bereit, den Sie im vorherigen Schritt abgerufen haben.
+3.  Das sekundäre Installationsprogramm ruft die [**RmJoinSession-Funktion**](/windows/desktop/api/RestartManager/nf-restartmanager-rmjoinsession) mit dem Sitzungsschlüssel auf, um der Neustart-Manager-Sitzung beizutreten. Ein sekundäres Installationsprogramm kann nur dann einer Sitzung beitreten, die vom primären Installationsprogramm gestartet wird, wenn beide Installationsprogramme im selben Benutzerkontext ausgeführt werden.
+4.  Die primären und sekundären Installationsprogramme rufen die [**RmRegisterResources-Funktion**](/windows/desktop/api/RestartManager/nf-restartmanager-rmregisterresources) auf, um Ressourcen zu registrieren. Der Neustart-Manager kann nur registrierte Ressourcen verwenden, um zu bestimmen, welche Anwendungen und Dienste heruntergefahren und neu gestartet werden müssen. Alle Ressourcen, die von der Installation betroffen sein können, sollten bei der Sitzung registriert werden. Ressourcen können anhand des Dateinamens, des Kurznamens des Diensts oder einer [**RM \_ UNIQUE \_ PROCESS-Struktur**](/windows/desktop/api/RestartManager/ns-restartmanager-rm_unique_process) identifiziert werden.
+5.  Das primäre Installationsprogramm ruft die [**RmGetList-Funktion**](/windows/desktop/api/RestartManager/nf-restartmanager-rmgetlist) auf, um ein Array von [**RM PROCESS \_ \_ INFO-Strukturen**](/windows/desktop/api/RestartManager/ns-restartmanager-rm_process_info) abzurufen, das alle Anwendungen und Dienste auflistet, die heruntergefahren und neu gestartet werden müssen.
 
-    Wenn der Wert des *lpdwrebooverrat* -Parameters, der von der [**RmGetList**](/windows/desktop/api/RestartManager/nf-restartmanager-rmgetlist) -Funktion zurückgegeben wird, nicht NULL ist, kann der Neustart-Manager eine registrierte Ressource nicht durch das Herunterfahren einer Anwendung oder eines Dienstanbieter freigeben. In diesem Fall ist das Herunterfahren und Neustarten des Systems erforderlich, um die Installation fortzusetzen. Das primäre Installationsprogramm muss den Benutzer zur Eingabe einer Aktion auffordern, Programme oder Dienste beenden oder das Herunterfahren und Neustarten des Systems planen.
+    Wenn der Wert des *lpdwRebootReason-Parameters,* der von der [**RmGetList-Funktion**](/windows/desktop/api/RestartManager/nf-restartmanager-rmgetlist) zurückgegeben wird, ungleich 0 (null) ist, kann der Neustart-Manager eine registrierte Ressource nicht freigeben, indem eine Anwendung oder ein Dienst heruntergefahren wird. In diesem Fall ist ein Herunterfahren und Neustarten des Systems erforderlich, um die Installation fortzusetzen. Das primäre Installationsprogramm sollte den Benutzer zur Eingabe einer Aktion auffordern, Programme oder Dienste beenden oder ein Herunterfahren und Neustarten des Systems planen.
 
-    Wenn der Wert des *lpdwrebooverrat* -Parameters, der von der [**RmGetList**](/windows/desktop/api/RestartManager/nf-restartmanager-rmgetlist) -Funktion zurückgegeben wird, 0 (null) ist, sollte das Installationsprogramm die [**rmshutdown**](/windows/desktop/api/RestartManager/nf-restartmanager-rmshutdown) -Funktion aufrufen. Dadurch werden die Dienste und Anwendungen heruntergefahren, die registrierte Ressourcen verwenden. Die primären und sekundären Installationsprogramme sollten dann Systemänderungen ausführen, die zum Abschluss der Installation erforderlich sind. Zum Schluss sollte das primäre Installationsprogramm die [**rmrestart**](/windows/desktop/api/RestartManager/nf-restartmanager-rmrestart) -Funktion anrufen, damit der Neustart-Manager die herunter gefahrenen Anwendungen neu starten kann, die für einen Neustart registriert wurden.
+    Wenn der Wert des *lpdwRebootReason-Parameters,* der von der [**RmGetList-Funktion**](/windows/desktop/api/RestartManager/nf-restartmanager-rmgetlist) zurückgegeben wird, 0 (null) ist, sollte das Installationsprogramm die [**RmShutdown-Funktion**](/windows/desktop/api/RestartManager/nf-restartmanager-rmshutdown) aufrufen. Dadurch werden die Dienste und Anwendungen heruntergefahren, die registrierte Ressourcen verwenden. Die primären und sekundären Installationsprogramme sollten dann Systemänderungen vornehmen, die zum Abschließen der Installation erforderlich sind. Schließlich sollte das primäre Installationsprogramm die [**RmRestart-Funktion**](/windows/desktop/api/RestartManager/nf-restartmanager-rmrestart) aufrufen, damit der Neustart-Manager die heruntergefahrenen Anwendungen neu starten kann, die für einen Neustart registriert wurden.
 
-6.  Das primäre und sekundäre Installationsprogramm ruft die [**RmEndSession**](/windows/desktop/api/RestartManager/nf-restartmanager-rmendsession) -Funktion auf, um die Neustart-Manager-Sitzung zu schließen.
+6.  Das primäre und sekundäre Installationsprogramm ruft die [**RmEndSession-Funktion**](/windows/desktop/api/RestartManager/nf-restartmanager-rmendsession) auf, um die Neustart-Manager-Sitzung zu schließen.
 
-Der folgende Code Ausschnitt zeigt ein Beispiel für einen primären Installer, der gestartet wird und eine Neustart-Manager-Sitzung verwendet. Das Beispiel erfordert Windows 7 oder Windows Server 2008 R2. Unter Windows Vista oder Windows Server 2008 wird die Rechner Anwendung heruntergefahren, aber nicht neu gestartet. Dieses Beispiel zeigt, wie ein primäres Installationsprogramm den Neustart-Manager zum Herunterfahren und Neustarten eines Prozesses verwenden kann. Im Beispiel wird davon ausgegangen, dass der Rechner bereits ausgeführt wird, bevor die Restart Manager-Sitzung gestartet wird.
+Der folgende Codeausschnitt zeigt ein Beispiel für ein primäres Installationsprogramm, das eine Restart Manager-Sitzung startet und verwendet. Für das Beispiel ist Windows 7 oder Windows Server 2008 R2 erforderlich. Auf Windows Vista oder Windows Server 2008 wird die Rechneranwendung heruntergefahren, aber nicht neu gestartet. Dieses Beispiel zeigt, wie ein primäres Installationsprogramm den Neustart-Manager verwenden kann, um einen Prozess herunterzufahren und neu zu starten. Im Beispiel wird davon ausgegangen, dass calculator bereits ausgeführt wird, bevor die Neustart-Manager-Sitzung gestartet wird.
 
 
 ```C++
@@ -238,7 +238,7 @@ int _cdecl wmain()
 
 
 
-Der folgende Code Ausschnitt zeigt ein Beispiel für das Hinzufügen eines sekundären Installationsprogramms zur vorhandenen Restart Manager-Sitzung. Das Beispiel erfordert Windows Vista oder Windows Server 2008. Das sekundäre Installationsprogramm ruft den Sitzungsschlüssel vom primären Installer ab und verwendet diesen, um der Sitzung beizutreten.
+Der folgende Codeausschnitt zeigt ein Beispiel für das Verknüpfen eines sekundären Installationsprogramms mit der vorhandenen Restart Manager-Sitzung. Für das Beispiel ist Windows Vista oder Windows Server 2008 erforderlich. Das sekundäre Installationsprogramm ruft den Sitzungsschlüssel vom primären Installationsprogramm ab und verwendet diesen, um der Sitzung beizutreten.
 
 
 ```C++
@@ -321,9 +321,9 @@ int _cdecl wmain()
 
 
 
- 
+ 
 
- 
+ 
 
 
 

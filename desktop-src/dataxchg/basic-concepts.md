@@ -1,117 +1,117 @@
 ---
 title: Grundlegende Konzepte
-description: In diesem Thema werden wichtige Konzepte zum dynamischen Datenaustausch erläutert.
+description: In diesem Thema werden wichtige Konzepte für den dynamischen Datenaustausch erläutert.
 ms.assetid: 37826d83-4dcd-484f-b1aa-87bf309c5c09
 keywords:
-- Windows-Benutzeroberfläche, dynamischer Datenaustausch (DDE)
-- Windows-Benutzeroberfläche, dynamischer Datenaustausch Verwaltungs Bibliothek (Ddeml)
-- Dynamischer Datenaustausch (DDE), Client Server Interaktion
-- DDE (dynamischer Datenaustausch), Client Server Interaktion
-- Datenaustausch, dynamischer Datenaustausch (DDE)
-- Datenaustausch, dynamischer Datenaustausch Verwaltungs Bibliothek (Ddeml)
-- Dynamischer Datenaustausch (DDE), Client Anwendungen
-- DDE (dynamischer Datenaustausch), Client Anwendungen
-- Dynamischer Datenaustausch (DDE), Server Anwendungen
-- DDE (dynamischer Datenaustausch), Server Anwendungen
-- Dynamischer Datenaustausch (DDE), Rückruf Funktionen
-- DDE (dynamischer Datenaustausch), Rückruf Funktionen
-- Dynamischer Datenaustausch (DDE), Transaktionen
-- DDE (dynamischer Datenaustausch), Transaktionen
-- Dynamischer Datenaustausch (DDE), Dienstnamen
-- DDE (dynamischer Datenaustausch), Dienstnamen
-- Dynamischer Datenaustausch (DDE), Elementnamen
-- DDE (dynamischer Datenaustausch), Elementnamen
-- Dynamischer Datenaustausch (DDE), Themen Namen
-- DDE (dynamischer Datenaustausch), Themen Namen
-- Dynamischer Datenaustausch (DDE), System Thema
-- DDE (dynamischer Datenaustausch), System Thema
-- Dynamischer Datenaustausch Management Library (Ddeml), Initialisierung
-- Ddeml (dynamischer Datenaustausch-Verwaltungs Bibliothek), Initialisierung
-- Dynamischer Datenaustausch Management Library (Ddeml), Rückruf Funktionen
-- Ddeml (dynamischer Datenaustausch Management Library), Rückruf Funktionen
-- Dynamischer Datenaustausch Management Library (Ddeml), Zeichen folgen Verwaltung
-- Ddeml (dynamischer Datenaustausch-Verwaltungs Bibliothek), Zeichen folgen Verwaltung
+- Windows Benutzeroberfläche,dynamische Daten Exchange (DDE)
+- Windows Benutzeroberfläche,dynamische Daten Exchange Management Library (DDEML)
+- dynamische Daten Exchange (DDE), Clientserverinteraktion
+- DDE (dynamische Daten Exchange), Clientserverinteraktion
+- Datenaustausch,dynamische Daten Exchange (DDE)
+- Datenaustausch,dynamische Daten Exchange Management Library (DDEML)
+- dynamische Daten Exchange (DDE), Clientanwendungen
+- DDE (dynamische Daten Exchange),Clientanwendungen
+- dynamische Daten Exchange (DDE), Serveranwendungen
+- DDE (dynamische Daten Exchange),Serveranwendungen
+- dynamische Daten Exchange (DDE), Rückruffunktionen
+- DDE (dynamische Daten Exchange),Rückruffunktionen
+- dynamische Daten Exchange (DDE), Transaktionen
+- DDE (dynamische Daten Exchange),Transaktionen
+- dynamische Daten Exchange (DDE), Dienstnamen
+- DDE (dynamische Daten Exchange),Dienstnamen
+- dynamische Daten Exchange (DDE), Elementnamen
+- DDE (dynamische Daten Exchange),Elementnamen
+- dynamische Daten Exchange (DDE), Themennamen
+- DDE (dynamische Daten Exchange),Themennamen
+- dynamische Daten Exchange (DDE),Systemthema
+- DDE (dynamische Daten Exchange),Systemthema
+- dynamische Daten Exchange Management Library (DDEML), Initialisierung
+- DDEML (dynamische Daten Exchange Management Library), Initialisierung
+- dynamische Daten Exchange Management Library (DDEML), Rückruffunktionen
+- DDEML (dynamische Daten Exchange Management Library), Rückruffunktionen
+- dynamische Daten Exchange Management Library (DDEML), Zeichenfolgenverwaltung
+- DDEML (dynamische Daten Exchange Management Library), Zeichenfolgenverwaltung
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 0c564bffbcbb06ddc3a0e0fa4e0a9ed398d3ca55
-ms.sourcegitcommit: 592c9bbd22ba69802dc353bcb5eb30699f9e9403
+ms.openlocfilehash: fae271c359afd571cf6c51fb3387a15f1496416e5eb54b055ef518fd213f30fe
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "103727920"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119128622"
 ---
-# <a name="basic-concepts-dde"></a>Grundlegende Konzepte (DDE)
+# <a name="basic-concepts-dde"></a>Grundkonzepte (DDE)
 
-Diese Konzepte sind entscheidend, um dynamischer Datenaustausch (DDE) und die dynamischer Datenaustausch Management Library (Ddeml) zu verstehen.
+Diese Konzepte sind entscheidend für das Verständnis dynamische Daten Exchange (DDE) und der dynamische Daten Exchange Management Library (DDEML).
 
--   [Client-und Server Interaktion](#client-and-server-interaction)
+-   [Client- und Serverinteraktion](#client-and-server-interaction)
 -   [Transaktionen und die DDE-Rückruffunktion](#transactions-and-the-dde-callback-function)
--   [Dienstnamen, Themen Namen und Elementnamen](#service-names-topic-names-and-item-names)
--   [System Thema](#system-topic)
+-   [Dienstnamen, Themennamen und Elementnamen](#service-names-topic-names-and-item-names)
+-   [Systemthema](#system-topic)
 -   [Initialisierung](#initialization)
 -   [Rückruffunktion](#callback-function)
--   [Zeichen folgen Verwaltung](#string-management)
--   [Ddeml und Threads](#ddeml-and-threads)
+-   [Zeichenfolgenverwaltung](#string-management)
+-   [DDEML und Threads](#ddeml-and-threads)
 
-## <a name="client-and-server-interaction"></a>Client-und Server Interaktion
+## <a name="client-and-server-interaction"></a>Client- und Serverinteraktion
 
-DDE tritt immer zwischen einer Client Anwendung und einer Serveranwendung auf. Die *DDE-Client Anwendung* initiiert den Austausch, indem Sie eine Konversation mit dem Server herstellt, um Transaktionen an den Server zu senden. Bei einer Transaktion handelt es sich um eine Anforderung für Daten oder Dienste. Die *DDE-Serveranwendung* reagiert auf Transaktionen, indem Daten oder Dienste für den Client bereitgestellt werden. Eine Grafikanwendung könnte z. b. ein Balkendiagramm enthalten, das den Quartalsgewinn einer Corporation repräsentiert, aber die Daten für das Balkendiagramm sind möglicherweise in einer Tabellenkalkulationsanwendung enthalten. Zum Abrufen der neuesten Gewinnzahlen könnte die Grafikanwendung (der Client) eine Konversation mit der Tabellenkalkulationsanwendung (dem Server) herstellen. Die Grafikanwendung könnte dann eine Transaktion an die Tabellenkalkulationsanwendung senden und dabei die neuesten Gewinnzahlen anfordern.
+DDE tritt immer zwischen einer Clientanwendung und einer Serveranwendung auf. Die *DDE-Clientanwendung* initiiert den Austausch, indem eine Konversation mit dem Server hergestellt wird, um Transaktionen an den Server zu senden. Eine Transaktion ist eine Anforderung für Daten oder Dienste. Die *DDE-Serveranwendung* reagiert auf Transaktionen, indem sie Dem Client Daten oder Dienste zur Verfügung stellt. Eine Grafikanwendung kann beispielsweise ein Balkendiagramm enthalten, das den vierteljährlichen Gewinn eines Unternehmens darstellt, aber die Daten für das Balkendiagramm können in einer Tabellenkalkulationsanwendung enthalten sein. Um die neuesten Gewinnzahlen zu erhalten, könnte die Grafikanwendung (der Client) eine Konversation mit der Tabellenkalkulationsanwendung (dem Server) herstellen. Die Grafikanwendung könnte dann eine Transaktion an die Tabellenkalkulationsanwendung senden und die neuesten Gewinnzahlen anfordern.
 
-Ein Server kann über viele Clients gleichzeitig verfügen, und ein Client kann Daten von mehreren Servern anfordern. Bei einer Anwendung kann es sich auch um einen Client und einen Server handeln. Die Konversation kann entweder vom Client oder vom Server jederzeit beendet werden.
+Ein Server kann über viele Clients gleichzeitig verfügen, und ein Client kann Daten von mehreren Servern anfordern. Eine Anwendung kann auch sowohl ein Client als auch ein Server sein. Entweder der Client oder der Server kann die Konversation jederzeit beenden.
 
 ## <a name="transactions-and-the-dde-callback-function"></a>Transaktionen und die DDE-Rückruffunktion
 
-Die Ddeml benachrichtigt eine Anwendung über DDE-Aktivitäten, die sich auf die Anwendung auswirken, indem Transaktionen an die DDE-Rückruffunktion der Anwendung gesendet werden. Eine *DDE-Transaktion* ähnelt einer Nachricht, bei der es sich um eine benannte Konstante handelt, die von anderen Parametern begleitet wird, die zusätzliche Informationen zur Transaktion enthalten.
+Die DDEML benachrichtigt eine Anwendung über DDE-Aktivitäten, die sich auf die Anwendung auswirken, indem Transaktionen an die DDE-Rückruffunktion der Anwendung sendet. Eine *DDE-Transaktion* ähnelt einer Nachricht, bei der es sich um eine benannte Konstante handelt, die von anderen Parametern begleitet wird, die zusätzliche Informationen zur Transaktion enthalten.
 
-Die Ddeml übergibt eine Transaktion an eine Anwendungs definierte DDE-Rückruffunktion, die eine Aktion ausführt, die für den Transaktionstyp geeignet ist. Wenn eine Client Anwendung z. b. versucht, eine Konversation mit einer Serveranwendung herzustellen, ruft der Client die [**ddeconnect**](/windows/desktop/api/Ddeml/nf-ddeml-ddeconnect) -Funktion auf. Diese Funktion bewirkt, dass die Ddeml eine [**XYP \_ Connect**](xtyp-connect.md) -Transaktion an die DDE-Rückruffunktion des Servers sendet. Die Rückruffunktion kann die Konversation zulassen, indem Sie " **true** " an die Ddeml zurückgibt, oder die Konversation durch Rückgabe von " **false**" ablehnen. Eine ausführliche Erläuterung der Transaktionen finden Sie unter [Transaktions Verwaltung](transaction-management.md).
+Die DDEML übergibt eine Transaktion an eine anwendungsdefinierte DDE-Rückruffunktion, die eine Aktion für den Typ der Transaktion ausgibt. Wenn eine Clientanwendung beispielsweise versucht, eine Konversation mit einer Serveranwendung herzustellen, ruft der Client die [**DdeConnect-Funktion**](/windows/desktop/api/Ddeml/nf-ddeml-ddeconnect) auf. Diese Funktion bewirkt, dass DDEML eine [**XTYP \_ CONNECT-Transaktion**](xtyp-connect.md) an die DDE-Rückruffunktion des Servers sendet. Die Rückruffunktion kann die Konversation zulassen, indem **sie TRUE** an die DDEML zurücksendet, oder sie kann die Konversation verweigern, indem FALSE **zurückgegeben wird.** Eine ausführliche Erläuterung der Transaktionen finden Sie unter [Transaktionsverwaltung.](transaction-management.md)
 
-## <a name="service-names-topic-names-and-item-names"></a>Dienstnamen, Themen Namen und Elementnamen
+## <a name="service-names-topic-names-and-item-names"></a>Dienstnamen, Themennamen und Elementnamen
 
-Ein DDE-Server verwendet einen Hierarchie Dienstnamen mit drei Ebenen (in vorheriger DDE-Dokumentation als "Anwendungsname" bezeichnet), den Themen Namen und den Elementnamen zum eindeutigen Identifizieren einer Dateneinheit, die der Server während einer Konversation austauschen kann.
+Ein DDE-Server verwendet einen Drei-Ebenen-Hierarchiedienstnamen (in der vorherigen DDE-Dokumentation als "Anwendungsname" bezeichnet), einen Themennamen und einen Elementnamen, um eine Dateneinheit eindeutig zu identifizieren, die der Server während einer Konversation austauschen kann.
 
-Ein *Dienst Name* ist eine Zeichenfolge, auf die eine Serveranwendung antwortet, wenn ein Client versucht, eine Konversation mit dem Server herzustellen. Ein Client muss diesen Dienstnamen angeben, um eine Konversation mit dem Server herzustellen. Obwohl ein Server auf viele Dienstnamen reagieren kann, reagieren die meisten Server nur auf einen Namen.
+Ein *Dienstname ist* eine Zeichenfolge, auf die eine Serveranwendung reagiert, wenn ein Client versucht, eine Konversation mit dem Server herzustellen. Ein Client muss diesen Dienstnamen angeben, um eine Konversation mit dem Server herzustellen. Obwohl ein Server auf viele Dienstnamen antworten kann, antworten die meisten Server nur auf einen Namen.
 
-Ein *Themenname* ist eine Zeichenfolge, die einen logischen Datenkontext identifiziert. Bei Servern, die auf dateibasierten Dokumenten basieren, sind Themen Namen in der Regeldatei Namen. bei anderen Servern sind Sie andere anwendungsspezifische Zeichen folgen. Ein Client muss einen Themen Namen zusammen mit dem Dienstnamen eines Servers angeben, wenn er versucht, eine Konversation mit einem Server einzurichten.
+Ein *Themenname ist* eine Zeichenfolge, die einen logischen Datenkontext identifiziert. Bei Servern, die dateibasierte Dokumente verwenden, sind Themennamen in der Regel Dateinamen. bei anderen Servern handelt es sich um andere anwendungsspezifische Zeichenfolgen. Ein Client muss einen Themennamen zusammen mit dem Dienstnamen eines Servers angeben, wenn er versucht, eine Konversation mit einem Server herzustellen.
 
-Ein *ElementName* ist eine Zeichenfolge, die eine Dateneinheit identifiziert, die ein Server während einer Transaktion an einen Client übergeben kann. Ein Elementname kann z. b. eine ganze Zahl, eine Zeichenfolge, mehrere Absätze von Text oder eine Bitmap identifizieren.
+Ein *Elementname ist* eine Zeichenfolge, die eine Dateneinheit identifiziert, die ein Server während einer Transaktion an einen Client übergeben kann. Beispielsweise kann ein Elementname eine ganze Zahl, eine Zeichenfolge, mehrere Textzeilen oder eine Bitmap identifizieren.
 
-Mithilfe der Dienst-, Thema-und Elementnamen kann der Client eine Konversation mit einem Server einrichten und Daten vom Server empfangen.
+Mit den Dienst-, Themen- und Elementnamen kann der Client eine Konversation mit einem Server herstellen und Daten vom Server empfangen.
 
-## <a name="system-topic"></a>System Thema
+## <a name="system-topic"></a>Systemthema
 
-Das System Thema bietet einen Kontext für Informationen, die für alle DDE-Clients von allgemeinem Interesse sind. Es wird empfohlen, dass Server Anwendungen immer das Thema "System" unterstützen. Das System Thema ist in der Ddeml definiert. H-Header Datei als szddesys- \_ Thema.
+Das Thema System bietet einen Kontext für Informationen, die für jeden DDE-Client von allgemeinem Interesse sind. Es wird empfohlen, dass Serveranwendungen das Thema System jederzeit unterstützen. Das Thema System wird in der DDEML definiert. H-Headerdatei als SZDDESYS \_ TOPIC.
 
-Um zu ermitteln, welche Server vorhanden sind und welche Informationen Sie bereitstellen können, kann eine Client Anwendung eine Konversation im Thema System anfordern, wenn der Gerätename auf **null** festgelegt wird. Solche Platzhalter Konversationen sind in Bezug auf die Systemleistung kostspielig, sodass Sie auf ein Minimum beschränkt werden sollten. Weitere Informationen zum Initiieren von DDE-Konversationen finden Sie unter [Konversations Verwaltung](conversation-management.md).
+Um zu bestimmen, welche Server vorhanden sind und welche Arten von Informationen sie bereitstellen können, kann eine Clientanwendung beim Start eine Konversation zum Thema System anfordern und den Gerätenamen auf **NULL festlegen.** Solche Platzhalter-Konversationen sind in Bezug auf die Systemleistung kostspielig, daher sollten sie auf ein Minimum beschränkt werden. Weitere Informationen zum Initiieren von DDE-Konversationen finden Sie unter [Conversation Management](conversation-management.md).
 
-Ein Server muss die folgenden Elementnamen innerhalb des System Themas und alle anderen Elementnamen unterstützen, die für einen Client nützlich sind.
+Ein Server muss die folgenden Elementnamen innerhalb des Themas System und alle anderen Elementnamen unterstützen, die für einen Client nützlich sind.
 
 
 
-| Element                     | BESCHREIBUNG                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
+| Element                     | Beschreibung                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
 |--------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| szdde- \_ Element ( \_ itemlist)    | Eine Liste der Elemente, die unter einem nicht-System-Thema unterstützt werden. (Diese Liste kann von Zeit zu Zeit und von Thema zu Thema abweichen.)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
-| szddecosys- \_ Element \_ Formate  | Eine durch Tabstopps getrennte Liste von Zeichen folgen, die alle Zwischenablage Formate darstellen, die potenziell von der Dienst Anwendung unterstützt werden. Zeichen folgen, die vordefinierte Zwischenablage Formate darstellen, entsprechen den CF- \_ Werten, wobei das \_ Präfix "CF" entfernt wurde. Beispielsweise wird das CF- \_ Text Format durch die Zeichenfolge "Text" dargestellt. Diese Zeichen folgen müssen in Großbuchstaben angegeben werden, um Sie als vordefinierte Formate zu identifizieren. Die Liste der Formate muss in der Reihenfolge der meisten Inhalte der Inhalte enthalten sein, um den Inhalt möglichst wenig zu nutzen. Weitere Informationen zu Zwischenablage Formaten und Rendern von Daten finden Sie unter [Zwischenablage](clipboard.md).<br/> |
-| szdde sys- \_ Element \_ Hilfe     | Vom Benutzer lesbare Informationen von allgemeinem Interesse. Dieses Element muss mindestens Informationen zur Verwendung der DDE-Funktionen der Serveranwendung enthalten. Diese Informationen können enthalten, sind jedoch nicht darauf beschränkt, wie Elemente innerhalb von Themen angegeben werden, welche Ausführungs Zeichenfolgen der Server ausführen kann, welche schaffen-Transaktionen zulässig sind und wie Hilfe zu anderen System Themen Elementen gefunden wird.                                                                                                                                                                                                                           |
-| szdde sys- \_ Element \_ rtnmsg   | Unterstützende Details der zuletzt verwendeten [**WM- \_ DDE \_**](wm-dde-ack.md) -Bestätigungsnachricht. Dieses Element ist nützlich, wenn mehr als 8 Bits von anwendungsspezifischen Rückgabe Daten erforderlich sind.                                                                                                                                                                                                                                                                                                                                                                                                                        |
-| szddesys- \_ Element \_ Status   | Ein Hinweis auf den aktuellen Status des Servers. In der Regel unterstützt dieses Element nur das CF \_ -Text Format und enthält die Zeichenfolge Ready oder ausgelastet.                                                                                                                                                                                                                                                                                                                                                                                                                                                            |
-| szdde sys- \_ Element \_ SysItems | Eine Liste der Elemente, die von diesem Server unter dem Thema "System" unterstützt werden.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        |
-| Themen zu szdde sys-Elementen \_ \_   | Eine Liste der Themen, die vom Server zum aktuellen Zeitpunkt unterstützt werden. (Diese Liste kann sich von Zeit zu Zeit unterscheiden.)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               |
+| SZDDE \_ ITEM \_ ITEMLIST    | Eine Liste der Elemente, die unter einem Nicht-Systemthema unterstützt werden. (Diese Liste kann von Moment zu Moment und von Thema zu Thema variieren.)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
+| SZDDESYS-ELEMENTFORMATE \_ \_  | Eine durch Tabstopps getrennte Liste von Zeichenfolgen, die alle Formate der Zwischenablage darstellen, die möglicherweise von der Dienstanwendung unterstützt werden. Zeichenfolgen, die vordefinierte Zwischenablageformate darstellen, entsprechen den CF-Werten, bei denen \_ das Präfix \_ "CF" entfernt wurde. Beispielsweise wird das CF \_ TEXT-Format durch die Zeichenfolge "TEXT" dargestellt. Diese Zeichenfolgen müssen groß geschrieben werden, um sie weiter als vordefinierte Formate zu identifizieren. Die Liste der Formate muss in der Reihenfolge angezeigt werden, in der die Inhalte am meisten zu den am wenigsten inhaltsreich sind. Weitere Informationen zu Zwischenablageformaten und zum Rendern von Daten finden Sie unter [Zwischenablage](clipboard.md).<br/> |
+| \_SZDDESYS-ELEMENTHILFE \_     | Benutzerlesbare Informationen von allgemeinem Interesse. Dieses Element muss mindestens Informationen zur Verwendung der DDE-Funktionen der Serveranwendung enthalten. Diese Informationen können u. a. angeben, wie Elemente in Themen angegeben werden, welche Ausführungszeichenfolgen der Server ausführen kann, welche Poke-Transaktionen zulässig sind und wie Hilfe zu anderen Systemthemaelementen zu finden ist.                                                                                                                                                                                                                           |
+| SZDDESYS \_ ITEM \_ RTNMSG   | Unterstützende Details für die zuletzt verwendete [**WM \_ DDE \_ ACK-Meldung.**](wm-dde-ack.md) Dieses Element ist nützlich, wenn mehr als 8 Bits anwendungsspezifischer Rückgabedaten erforderlich sind.                                                                                                                                                                                                                                                                                                                                                                                                                        |
+| \_SZDDESYS-ELEMENTSTATUS \_   | Ein Hinweis auf den aktuellen Status des Servers. In der Regel unterstützt dieses Element nur das CF \_ TEXT-Format und enthält die Zeichenfolge Bereit oder Ausgelastet.                                                                                                                                                                                                                                                                                                                                                                                                                                                            |
+| SZDDESYS-ELEMENT \_ \_ SYSITEMS | Eine Liste der Elemente, die von diesem Server unter dem Thema System unterstützt werden.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        |
+| \_SZDDESYS-ARTIKELTHEMEN \_   | Eine Liste der Themen, die vom Server zum aktuellen Zeitpunkt unterstützt werden. (Diese Liste kann von Moment zu Moment variieren.)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               |
 
 
 
  
 
-Diese Elementnamen sind Werte, die in der Ddeml definiert werden. H-Header Datei. Um Zeichen folgen Handles für diese Zeichen folgen zu erhalten, muss eine Anwendung die Ddeml-Funktionen für die Zeichen folgen Verwaltung genauso wie für jede andere Zeichenfolge in einer Ddeml-Anwendung verwenden. Weitere Informationen zum Verwalten von Zeichen folgen finden Sie unter [Zeichen folgen Verwaltung](#string-management).
+Diese Elementnamen sind Werte, die in der DDEML definiert sind. H-Headerdatei. Um Zeichenfolgenhandles für diese Zeichenfolgen zu erhalten, muss eine Anwendung die DDEML-Zeichenfolgenverwaltungsfunktionen wie bei jeder anderen Zeichenfolge in einer DDEML-Anwendung verwenden. Weitere Informationen zum Verwalten von Zeichenfolgen finden Sie unter [Zeichenfolgenverwaltung.](#string-management)
 
 ## <a name="initialization"></a>Initialisierung
 
-Vor dem Aufrufen einer anderen Ddeml-Funktion muss eine Anwendung die [**DDEInitialize**](/windows/desktop/api/Ddeml/nf-ddeml-ddeinitializea) -Funktion aufrufen. **DDEInitialize** erhält einen Instanzbezeichner für die Anwendung, registriert die DDE-Rückruffunktion der Anwendung bei DDE und gibt die transaktionsfilterflags für die Rückruffunktion an.
+Vor dem Aufrufen einer anderen DDEML-Funktion muss eine Anwendung die [**DdeInitialize-Funktion**](/windows/desktop/api/Ddeml/nf-ddeml-ddeinitializea) aufrufen. **DdeInitialize** erhält einen Instanzbezeichner für die Anwendung, registriert die DDE-Rückruffunktion der Anwendung beim DDE und gibt die Transaktionsfilterflags für die Rückruffunktion an.
 
-Jede Instanz einer Anwendung oder dll muss den Instanzbezeichner als *idinst* -Parameter an jede andere Ddeml-Funktion übergeben, die Sie benötigt. Der Zweck mehrerer Ddeml-Instanzen besteht darin, DLLs zu unterstützen, die die Ddeml zur gleichen Zeit verwenden müssen, die von einer Anwendung verwendet wird. Eine Anwendung darf nicht mehr als eine Instanz der Ddeml verwenden.
+Jede Instanz einer Anwendung oder DLL muss ihren Instanzbezeichner als *idInst-Parameter* an jede andere DDEML-Funktion übergeben, die sie erfordert. Der Zweck mehrerer DDEML-Instanzen besteht in der Unterstützung von DLLs, die die DDEML gleichzeitig verwenden müssen, wenn eine Anwendung sie verwendet. Eine Anwendung darf nicht mehr als eine Instanz der DDEML verwenden.
 
-*Transaktions Filter* optimieren die Systemleistung, indem verhindert wird, dass die Ddeml unerwünschte Transaktionen an die DDE-Rückruffunktion der Anwendung übergibt. Eine Anwendung legt die Transaktions Filter im Parameter " [**DDEInitialize**](/windows/desktop/api/Ddeml/nf-ddeml-ddeinitializea) *ufcmd* " fest. Eine Anwendung muss ein transaktionsfilterflag für jeden Transaktionstyp angeben, der nicht in der Rückruffunktion verarbeitet wird. Eine Anwendung kann Ihre Transaktions Filter mit einem nachfolgenden Aufrufe von **DDEInitialize** ändern. Weitere Informationen zu Transaktionen finden Sie unter [Transaktions Verwaltung](transaction-management.md).
+*Transaktionsfilter optimieren* die Systemleistung, indem verhindert wird, dass die DDEML unerwünschte Transaktionen an die DDE-Rückruffunktion der Anwendung übergehen kann. Eine Anwendung legt die Transaktionsfilter im [**DdeInitialize-Parameter**](/windows/desktop/api/Ddeml/nf-ddeml-ddeinitializea) *ufCmd* fest. Eine Anwendung muss ein Transaktionsfilterflag für jeden Transaktionstyp angeben, den sie in der Rückruffunktion nicht verarbeiten kann. Eine Anwendung kann ihre Transaktionsfilter mit einem nachfolgenden Aufruf von **DdeInitialize ändern.** Weitere Informationen zu Transaktionen finden Sie unter [Transaktionsverwaltung.](transaction-management.md)
 
-Im folgenden Beispiel wird gezeigt, wie eine Anwendung initialisiert wird, um die Ddeml zu verwenden.
+Das folgende Beispiel zeigt, wie eine Anwendung für die Verwendung der DDEML initialisiert wird.
 
 
 ```
@@ -127,13 +127,13 @@ DdeInitialize(&idInst,         // receives instance identifier
 
 
 
-Eine Anwendung muss die [**ddeuninitialize**](/windows/desktop/api/Ddeml/nf-ddeml-ddeuninitialize) -Funktion aufrufen, wenn die Ddeml nicht mehr verwendet wird. Diese Funktion beendet alle Konversationen, die aktuell für die Anwendung geöffnet sind, und gibt die Ddeml-Ressourcen frei, die für die Anwendung reserviert wurden.
+Eine Anwendung muss die [**DdeUninitialize-Funktion aufrufen,**](/windows/desktop/api/Ddeml/nf-ddeml-ddeuninitialize) wenn sie die DDEML nicht mehr verwenden wird. Diese Funktion beendet alle derzeit für die Anwendung geöffneten Konversationen und gibt die DDEML-Ressourcen frei, die dem System für die Anwendung zugeordnet sind.
 
 ## <a name="callback-function"></a>Rückruffunktion
 
-Eine Anwendung, die die Ddeml verwendet, muss eine Rückruffunktion bereitstellen, die die DDE-Ereignisse verarbeitet, die die Anwendung beeinträchtigen. Die Ddeml benachrichtigt eine Anwendung über solche Ereignisse, indem Transaktionen an die DDE-Rückruffunktion der Anwendung gesendet werden. Die Transaktionen, die eine Rückruffunktion empfängt, hängen davon ab, welcher Rückruf Filter die in [**DDEInitialize**](/windows/desktop/api/Ddeml/nf-ddeml-ddeinitializea) angegebene Anwendung verwendet und ob es sich bei der Anwendung um einen Client, einen Server oder beides handelt. Weitere Informationen finden Sie unter [**ddecallback**](/windows/win32/api/ddeml/nc-ddeml-pfncallback).
+Eine Anwendung, die DDEML verwendet, muss eine Rückruffunktion bereitstellen, die die DDE-Ereignisse verarbeitet, die sich auf die Anwendung ausdehnen. Die DDEML benachrichtigt eine Anwendung über solche Ereignisse, indem Transaktionen an die DDE-Rückruffunktion der Anwendung sendet. Welche Transaktionen eine Rückruffunktion empfängt, hängt davon ab, welcher Rückruffilter die in [**DdeInitialize**](/windows/desktop/api/Ddeml/nf-ddeml-ddeinitializea) angegebene Anwendung kennzeichnet und ob es sich bei der Anwendung um einen Client, einen Server oder beides handelt. Weitere Informationen finden Sie unter [**DdeCallback**](/windows/win32/api/ddeml/nc-ddeml-pfncallback).
 
-Das folgende Beispiel zeigt die allgemeine Struktur einer Rückruffunktion für eine typische Client Anwendung.
+Das folgende Beispiel zeigt die allgemeine Struktur einer Rückruffunktion für eine typische Clientanwendung.
 
 
 ```
@@ -183,13 +183,13 @@ DWORD dwData2;    // transaction-specific data
 
 
 
-Der *uType* -Parameter gibt den Transaktionstyp an, der von der Ddeml an die Rückruffunktion gesendet wird. Die Werte der restlichen Parameter hängen vom Transaktionstyp ab. Die Transaktionstypen und die Ereignisse, die Sie generieren, werden in den folgenden Themen beschrieben. Ausführliche Informationen zu den einzelnen Transaktionstypen finden Sie unter [Transaktions Verwaltung](transaction-management.md).
+Der *uType-Parameter* gibt den Transaktionstyp an, der von der DDEML an die Rückruffunktion gesendet wird. Die Werte der verbleibenden Parameter hängen vom Transaktionstyp ab. Die Transaktionstypen und die Ereignisse, die sie generieren, werden in den folgenden Themen beschrieben. Ausführliche Informationen zu den einzelnen Transaktionstypen finden Sie unter [Transaktionsverwaltung.](transaction-management.md)
 
-## <a name="string-management"></a>Zeichen folgen Verwaltung
+## <a name="string-management"></a>Zeichenfolgenverwaltung
 
-Um eine DDE-Aufgabe auszuführen, benötigen viele Ddeml-Funktionen Zugriff auf Zeichen folgen. Ein Client muss z. b. einen Dienstnamen und einen Themen Namen angeben, wenn er die [**ddeconnect**](/windows/desktop/api/Ddeml/nf-ddeml-ddeconnect) -Funktion aufruft, um eine Konversation mit einem Server anzufordern. Eine Anwendung gibt eine Zeichenfolge an, indem ein Zeichen folgen handle (hsz) anstelle eines Zeigers in einer Ddeml-Funktion übergeben wird. Ein *Zeichen folgen handle* ist ein vom System zugewiesener **DWORD** -Wert, der eine Zeichenfolge identifiziert.
+Um eine DDE-Aufgabe auszuführen, benötigen viele DDEML-Funktionen Zugriff auf Zeichenfolgen. Beispielsweise muss ein Client einen Dienstnamen und einen Themennamen angeben, wenn er die [**DdeConnect-Funktion**](/windows/desktop/api/Ddeml/nf-ddeml-ddeconnect) aufruft, um eine Konversation mit einem Server an fordern. Eine Anwendung gibt eine Zeichenfolge an, indem sie ein Zeichenfolgenhandle (String Handle, HSZ) anstelle eines Zeigers in einer DDEML-Funktion übergibt. Ein *Zeichenfolgenhand* handle ist ein vom System zugewiesener **DWORD-Wert,** der eine Zeichenfolge identifiziert.
 
-Eine Anwendung kann durch Aufrufen der [**ddecreatestringhandle**](/windows/desktop/api/Ddeml/nf-ddeml-ddecreatestringhandlea) -Funktion ein Zeichen folgen Handle für eine bestimmte Zeichenfolge abrufen. Diese Funktion registriert die Zeichenfolge beim System und gibt ein Zeichen folgen Handle an die Anwendung zurück. Die Anwendung kann das Handle an Ddeml-Funktionen übergeben, die auf die Zeichenfolge zugreifen müssen. Im folgenden Beispiel werden Zeichen folgen Handles für die System-Themen Zeichenfolge und die Dienstnamen Zeichenfolge abgerufen.
+Eine Anwendung kann ein Zeichenfolgenhandle für eine bestimmte Zeichenfolge abrufen, indem sie die [**DdeCreateStringHandle-Funktion**](/windows/desktop/api/Ddeml/nf-ddeml-ddecreatestringhandlea) aufruft. Diese Funktion registriert die Zeichenfolge beim System und gibt ein Zeichenfolgenhand handle an die Anwendung zurück. Die Anwendung kann das Handle an DDEML-Funktionen übergeben, die auf die Zeichenfolge zugreifen müssen. Im folgenden Beispiel werden Zeichenfolgenhandles für die Zeichenfolge des Systemthemas und die Dienstnamenzeichenfolge zurückgegeben.
 
 
 ```
@@ -209,9 +209,9 @@ hszSysTopic = DdeCreateStringHandle(
 
 
 
-Der *idinst* -Parameter im vorangehenden Beispiel gibt den Instanzbezeichner an, der von der [**DDEInitialize**](/windows/desktop/api/Ddeml/nf-ddeml-ddeinitializea) -Funktion abgerufen wird.
+Der *idInst-Parameter* im vorherigen Beispiel gibt den Instanzbezeichner an, der von der [**DdeInitialize-Funktion erhalten**](/windows/desktop/api/Ddeml/nf-ddeml-ddeinitializea) wurde.
 
-Die DDE-Rückruffunktion einer Anwendung empfängt bei den meisten DDE-Transaktionen mindestens ein Zeichen folgen handle. Ein Server erhält z. b. zwei Zeichen folgen Handles während der [**xtion- \_ Anforderungs**](xtyp-request.md) Transaktion: eine identifiziert eine Zeichenfolge, die einen Themen Namen angibt, und die andere gibt eine Zeichenfolge an, die einen Elementnamen angibt. Eine Anwendung kann die Länge der Zeichenfolge abrufen, die einem Zeichen folgen Handle entspricht, und die Zeichenfolge in einen Anwendungs definierten Puffer kopieren, indem Sie die [**ddequerystring**](/windows/desktop/api/Ddeml/nf-ddeml-ddequerystringa) -Funktion aufrufen, wie im folgenden Beispiel gezeigt.
+Die DDE-Rückruffunktion einer Anwendung empfängt während der meisten DDE-Transaktionen mindestens ein Zeichenfolgenhandles. Beispielsweise empfängt ein Server während der [**XTYP \_ REQUEST-Transaktion**](xtyp-request.md) zwei Zeichenfolgenhandles: einer identifiziert eine Zeichenfolge, die einen Themennamen angibt, und der andere identifiziert eine Zeichenfolge, die einen Elementnamen angibt. Eine Anwendung kann die Länge der Zeichenfolge abrufen, die einem Zeichenfolgenhand handle entspricht, und die Zeichenfolge in einen anwendungsdefinierten Puffer kopieren, indem sie die [**DdeQueryString-Funktion**](/windows/desktop/api/Ddeml/nf-ddeml-ddequerystringa) aufruft, wie im folgenden Beispiel gezeigt.
 
 
 ```
@@ -227,7 +227,7 @@ DdeQueryString(idInst, hszServ, pszServName, cb, CP_WINANSI);
 
 
 
-Ein instanzspezifisches Zeichen folgen Handle kann nicht vom Zeichen folgen Handle zur Zeichenfolge und zurück zum Zeichen folgen Handle zugeordnet werden. Obwohl [**dabquerystring**](/windows/desktop/api/Ddeml/nf-ddeml-ddequerystringa) beispielsweise eine Zeichenfolge aus einem Zeichen folgen Handle erstellt und [**ddecreatestringhandle**](/windows/desktop/api/Ddeml/nf-ddeml-ddecreatestringhandlea) ein Zeichen folgen Handle aus dieser Zeichenfolge erstellt, sind die beiden Handles nicht identisch, wie im folgenden Beispiel gezeigt.
+Ein instanzspezifisches Zeichenfolgenhand handle kann nicht vom Zeichenfolgenhand handle zur Zeichenfolge und zurück zum Zeichenfolgenhand handle zugeordnet werden. Obwohl [**DdeQueryString**](/windows/desktop/api/Ddeml/nf-ddeml-ddequerystringa) beispielsweise eine Zeichenfolge aus einem Zeichenfolgenhandle erstellt und [**dann DdeCreateStringHandle**](/windows/desktop/api/Ddeml/nf-ddeml-ddecreatestringhandlea) ein Zeichenfolgenhandle aus dieser Zeichenfolge erstellt, sind die beiden Handles nicht identisch, wie im folgenden Beispiel gezeigt.
 
 
 ```
@@ -242,23 +242,23 @@ hszNew = DdeCreateStringHandle(idInst, pszInst, CP_WINANSI);
 
 
 
-Um die Werte von zwei Zeichen folgen Handles zu vergleichen, verwenden Sie die Funktion [**ddecmpstringhandles**](/windows/desktop/api/Ddeml/nf-ddeml-ddecmpstringhandles) .
+Verwenden Sie zum Vergleichen der Werte von zwei Zeichenfolgenhandles die [**DdeCmpStringHandles-Funktion.**](/windows/desktop/api/Ddeml/nf-ddeml-ddecmpstringhandles)
 
-Ein Zeichen folgen handle, das an die DDE-Rückruffunktion einer Anwendung übertragen wird, wird bei Rückgabe der Rückruffunktion ungültig. Eine Anwendung kann ein Zeichen folgen Handle zur Verwendung speichern, nachdem die Rückruffunktion mithilfe der [**DDE keepstringhandle**](/windows/desktop/api/Ddeml/nf-ddeml-ddekeepstringhandle) -Funktion zurückgegeben wurde.
+Ein Zeichenfolgenhand handle, das an die DDE-Rückruffunktion einer Anwendung übergeben wird, wird ungültig, wenn die Rückruffunktion zurückgegeben wird. Eine Anwendung kann ein Zeichenfolgenhandle zur Verwendung speichern, nachdem die Rückruffunktion mithilfe der [**DdeKeepStringHandle-Funktion zurückgegeben**](/windows/desktop/api/Ddeml/nf-ddeml-ddekeepstringhandle) wurde.
 
-Wenn eine Anwendung " [**ddecreatestringhandle**](/windows/desktop/api/Ddeml/nf-ddeml-ddecreatestringhandlea)" aufruft, gibt das System die angegebene Zeichenfolge in eine Zeichen folgen Tabelle ein und generiert ein Handle, das für den Zugriff auf die Zeichenfolge verwendet wird. Das System verwaltet außerdem einen Verwendungs Zähler für jede Zeichenfolge in der Zeichen folgen Tabelle.
+Wenn eine Anwendung [**DdeCreateStringHandle**](/windows/desktop/api/Ddeml/nf-ddeml-ddecreatestringhandlea)aufruft, gibt das System die angegebene Zeichenfolge in eine Zeichenfolgentabelle ein und generiert ein Handle, das für den Zugriff auf die Zeichenfolge verwendet wird. Das System verwaltet auch eine Nutzungsanzahl für jede Zeichenfolge in der Zeichenfolgentabelle.
 
-Wenn eine Anwendung " [**ddecreatestringhandle**](/windows/desktop/api/Ddeml/nf-ddeml-ddecreatestringhandlea) " aufruft und eine Zeichenfolge angibt, die bereits in der Tabelle vorhanden ist, erhöht das System den Verwendungs Zähler, anstatt ein weiteres Vorkommen der Zeichenfolge hinzuzufügen. (Eine Anwendung kann auch die Verwendungs Anzahl mithilfe von [**DDE keepstringhandle**](/windows/desktop/api/Ddeml/nf-ddeml-ddekeepstringhandle)erhöhen.) Wenn eine Anwendung die [**ddefrestringhandle**](/windows/desktop/api/Ddeml/nf-ddeml-ddefreestringhandle) -Funktion aufruft, verringert das System die Verwendungs Anzahl.
+Wenn eine Anwendung [**DdeCreateStringHandle**](/windows/desktop/api/Ddeml/nf-ddeml-ddecreatestringhandlea) aufruft und eine Zeichenfolge angibt, die bereits in der Tabelle vorhanden ist, erhöht das System die Nutzungsanzahl, anstatt ein weiteres Vorkommen der Zeichenfolge hinzufügen zu müssen. (Eine Anwendung kann die Nutzungsanzahl auch mithilfe von [**DdeKeepStringHandle erhöhen.)**](/windows/desktop/api/Ddeml/nf-ddeml-ddekeepstringhandle) Wenn eine Anwendung die [**DdeFreeStringHandle-Funktion**](/windows/desktop/api/Ddeml/nf-ddeml-ddefreestringhandle) aufruft, dekrementiert das System die Nutzungsanzahl.
 
-Eine Zeichenfolge wird aus der Tabelle entfernt, wenn die Verwendungs Anzahl gleich 0 (null) ist. Da mehr als eine Anwendung das Handle für eine bestimmte Zeichenfolge abrufen kann, darf eine Anwendung ein Zeichen folgen Handle nicht mehrmals freigeben, als das Handle erstellt oder beibehalten hat. Andernfalls kann die Anwendung bewirken, dass die Zeichenfolge aus der Tabelle entfernt wird, sodass andere Anwendungen den Zugriff auf die Zeichenfolge verweigern.
+Eine Zeichenfolge wird aus der Tabelle entfernt, wenn ihre Nutzungsanzahl 0 (null) entspricht. Da mehr als eine Anwendung das Handle für eine bestimmte Zeichenfolge abrufen kann, darf eine Anwendung ein Zeichenfolgenhand handle nicht mehrmals frei geben, als sie das Handle erstellt oder beibehalten hat. Andernfalls kann die Anwendung dazu führen, dass die Zeichenfolge aus der Tabelle entfernt wird, was anderen Anwendungen den Zugriff auf die Zeichenfolge verweigert.
 
-Die Funktionen der Ddeml-Zeichen folgen Verwaltung basieren auf dem Atom-Manager und unterliegen denselben Größenbeschränkungen wie Atome.
+Die DDEML-Zeichenfolgenverwaltungsfunktionen basieren auf dem Atom-Manager und unterliegen den gleichen Größenbeschränkungen wie Atome.
 
-## <a name="ddeml-and-threads"></a>Ddeml und Threads
+## <a name="ddeml-and-threads"></a>DDEML und Threads
 
-Die [**DDEInitialize**](/windows/desktop/api/Ddeml/nf-ddeml-ddeinitializea) -Funktion registriert eine Anwendung bei der Ddeml und erstellt dabei eine Ddeml-Instanz. Eine Ddeml-Instanz ist Thread basiert, die dem Thread zugeordnet ist, der **DDEInitialize** aufgerufen hat.
+Die [**DdeInitialize-Funktion**](/windows/desktop/api/Ddeml/nf-ddeml-ddeinitializea) registriert eine Anwendung bei der DDEML und erstellt eine DDEML-Instanz. Eine DDEML-Instanz ist thread-basiert und dem Thread zugeordnet, der **DdeInitialize aufgerufen hat.**
 
-Alle Ddeml-Funktionsaufrufe für Objekte, die zu einer Ddeml-Instanz gehören, müssen aus demselben Thread erstellt werden, der [**DDEInitialize**](/windows/desktop/api/Ddeml/nf-ddeml-ddeinitializea) aufgerufen hat, um die Instanz zu erstellen. Wenn Sie eine Ddeml-Funktion von einem anderen Thread aus aufruft, schlägt die Funktion fehl. Sie können nicht auf eine Ddeml-Konversation von einem anderen Thread als dem, der die Konversation zugeordnet hat, zugreifen.
+Alle DDEML-Funktionsaufrufe für Objekte, die zu einer DDEML-Instanz gehören, müssen aus demselben Thread erstellt werden, der [**DdeInitialize**](/windows/desktop/api/Ddeml/nf-ddeml-ddeinitializea) aufgerufen hat, um die Instanz zu erstellen. Wenn Sie eine DDEML-Funktion aus einem anderen Thread aufrufen, kann die Funktion nicht ausgeführt werden. Sie können nicht von einem anderen Thread als dem, der die Konversation zugeordnet hat, auf eine DDEML-Konversation zugreifen.
 
  
 

@@ -1,85 +1,85 @@
 ---
-title: Standard-DispIds
-description: Es wurden eine Reihe von Standard-DISPIDs für die Steuerelement Spezifikation definiert.
+title: Standard-DISPIDS
+description: Für die Steuerelementspezifikation wurde eine Reihe von Standard-Dispids definiert.
 ms.assetid: f938b64f-5d45-40e7-ad02-665ce9c86a70
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 657a7cd12ac92504bb5d63dcd486b6a45da47310
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: af35ce4e4cad884b54bb0982037721608364a0249d3be6dd566f3aac766bb1f4
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "106341439"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119129782"
 ---
-# <a name="standard-dispids"></a>Standard-DispIds
+# <a name="standard-dispids"></a>Standard-DISPIDS
 
-Es wurden eine Reihe von Standard-DISPIDs für die Steuerelement Spezifikation definiert.
+Für die Steuerelementspezifikation wurde eine Reihe von Standard-Dispids definiert.
 
-## <a name="dispid_mousepointer"></a>DISPID- \_ mouum Zeiger
+## <a name="dispid_mousepointer"></a>DISPID \_ MOUSEPOINTER
 
-Eigenschaft vom Typ Integer.
+Eigenschaft vom Typ integer.
 
 ``` syntax
 #define DISPID_MOUSEPOINTER            -521
 ```
 
-Die MousePointer-Eigenschaft identifiziert Standard Maus Symbole.
+Die Mousepointer-Eigenschaft identifiziert Standardmaussymbole.
 
 
 
-| Wert         | BESCHREIBUNG                                                                |
+| Wert         | Beschreibung                                                                |
 |---------------|----------------------------------------------------------------------------|
-| 0<br/>  | Vorgegebene Die vom-Objekt festgelegte Form.<br/>                       |
+| 0<br/>  | (Standard) Die vom -Objekt bestimmte Form.<br/>                       |
 | 1<br/>  | Pfeil<br/>                                                           |
-| 2<br/>  | Kreuz (Kreuz-Mauszeiger)<br/>                                      |
-| 3<br/>  | I-Strahl<br/>                                                          |
+| 2<br/>  | Cross (Cross-Hair-Zeiger)<br/>                                      |
+| 3<br/>  | I Balken<br/>                                                          |
 | 4<br/>  | Symbol (kleines Quadrat innerhalb eines Quadrats)<br/>                             |
-| 5<br/>  | Größe (vier-Spitze-Pfeil, der nach Nord, Süd, Ost und West zeigt)<br/> |
-| 6<br/>  | Größe ne SW (doppelter Pfeil, der auf Nordost und Südwest zeigt)<br/>      |
-| 7<br/>  | Größe N S (doppelter Pfeil, der nach Norden und Süden zeigt)<br/>                |
+| 5<br/>  | Größe (vier zeigende Pfeile, die nach Norden, Süden, Osten und Westen zeigen)<br/> |
+| 6<br/>  | Größe NE SW (Doppelpfeil, der nach Nordosten und Südosten zeigt)<br/>      |
+| 7<br/>  | Größe N S (Doppelpfeil, der nach Norden und Süden zeigt)<br/>                |
 | 8<br/>  | Größe NW, SE<br/>                                                     |
-| 9<br/>  | Größe E W (doppelter Pfeil, der nach Osten und Westen zeigt)<br/>                  |
+| 9<br/>  | Größe E W (Doppelpfeil, der nach Osten und Westen zeigt)<br/>                  |
 | 10<br/> | NACH-OBEN<br/>                                                        |
-| 11<br/> | Sanduhr (warten)<br/>                                                |
-| 12<br/> | Kein Drop<br/>                                                         |
+| 11<br/> | Sanduhr (Warten)<br/>                                                |
+| 12<br/> | Keine Ablage<br/>                                                         |
 | 13<br/> | Pfeil und Sanduhr<br/>                                             |
 | 14<br/> | Pfeil und Fragezeichen<br/>                                         |
-| 15<br/> | Größe alle<br/>                                                        |
-| 99<br/> | Durch die MouseIcon-Eigenschaft angegebenes benutzerdefiniertes Symbol<br/>                 |
+| 15<br/> | Größe aller<br/>                                                        |
+| 99<br/> | Benutzerdefiniertes Symbol, das von der MouseIcon-Eigenschaft angegeben wird<br/>                 |
 
 
 
  
 
-## <a name="dispid_mouseicon"></a>DISPID \_ MouseIcon
+## <a name="dispid_mouseicon"></a>DISPID \_ MOUSEICON
 
--Eigenschaft des Typs "Bild".
+Eigenschaft vom Typ "Bild".
 
 ``` syntax
 #define DISPID_MOUSEICON               -522
 ```
 
-## <a name="dispid_picture"></a>DISPID- \_ Bild
+## <a name="dispid_picture"></a>\_DISPID-BILD
 
--Eigenschaft des Typs "Bild".
+Eigenschaft vom Typ "Bild".
 
 ``` syntax
 #define DISPID_PICTURE                 -523
 ```
 
-## <a name="dispid_valid"></a>DISPID \_ gültig
+## <a name="dispid_valid"></a>DISPID \_ VALID
 
-Wird verwendet, um zu bestimmen, ob das Steuerelement über gültige Daten verfügt.
+Wird verwendet, um zu bestimmen, ob das Steuerelement über gültige Daten verfügt oder nicht.
 
--Eigenschaft vom Typ bool.
+Eigenschaft vom Typ BOOL.
 
 ``` syntax
 #define DISPID_VALID                   -524
 ```
 
-## <a name="dispid_-ambient_palette"></a>"DISPID \_ AMBIENT \_ Palette"
+## <a name="dispid_-ambient_palette"></a>DISPID \_ AMBIENT \_ PALETTE
 
-Wird verwendet, um dem Steuerelement zu ermöglichen, den hpal des Containers zu erhalten. Wenn der Container eine Ambient-Palette liefert, ist dies die einzige Palette, die möglicherweise im Vordergrund erkannt wird. Steuerelemente, die ihre eigenen Paletten erkennen möchten, müssen dies im Hintergrund tun. Wenn keine Ambient-Palette durch den Container bereitgestellt wird, kann das aktive Steuerelement seine Palette im Vordergrund erkennen. Die palettenbehandlung wird im Palette-Verhalten für OLE-Steuerelemente, die sich im ActiveX SDK befinden, ausführlicher erläutert.
+Wird verwendet, um dem Steuerelement das Abrufen der HPAL des Containers zu ermöglichen. Wenn der Container eine Umgebungspalette bietet, ist dies die einzige Palette, die im Vordergrund realisiert werden kann. Steuerelemente, die ihre eigenen Paletten realisieren möchten, müssen dies im Hintergrund tun. Wenn vom Container keine Umgebungspalette bereitgestellt wird, kann das aktive Steuerelement seine Palette im Vordergrund erkennen. Die Palettenbehandlung wird unter Palettenverhalten für OLE-Steuerelemente im ActiveX SDK näher erläutert.
 
 ``` syntax
 #define DISPID_AMBIENT_PALETTE         -726

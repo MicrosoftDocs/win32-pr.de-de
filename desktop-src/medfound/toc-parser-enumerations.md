@@ -1,25 +1,25 @@
 ---
-description: Inhaltsverzeichnis-Enumerationen
+description: Table of Contents Parser Enumerations
 ms.assetid: d414c0d7-e3f1-4697-8ab1-f38815eaf889
-title: Inhaltsverzeichnis-Enumerationen
+title: Table of Contents Parser Enumerations
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 6a14a8e1b275d103edf36b969a91b84c94b45718
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 4b99f73642a83df758c8e27feea12203672da256cbc0b72777c01c7d55166aec
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106350579"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119034708"
 ---
-# <a name="table-of-contents-parser-enumerations"></a>Inhaltsverzeichnis-Enumerationen
+# <a name="table-of-contents-parser-enumerations"></a>Table of Contents Parser Enumerations
 
-Die folgende Enumeration wird vom Inhaltsverzeichnis für das Inhaltsverzeichnis verwendet.
+Die folgende Enumeration wird vom Inhaltsverzeichnisparser verwendet.
 
 
 
 | Enumeration                            | Beschreibung                                                                                          |
 |----------------------------------------|------------------------------------------------------------------------------------------------------|
-| [**Typ des Inhaltsverzeichnis \_ \_ Typs**](/windows/desktop/api/wmcodecdsp/ne-wmcodecdsp-toc_pos_type) | Identifiziert den [Positionstyp](the-position-type-of-a-table-of-contents.md) eines Inhaltsverzeichnisses. |
+| [**POS-TYP DES TOC \_ \_**](/windows/desktop/api/wmcodecdsp/ne-wmcodecdsp-toc_pos_type) | Identifiziert den [Positionstyp](the-position-type-of-a-table-of-contents.md) eines Inhaltsverzeichnisses. |
 
 
 
@@ -29,7 +29,7 @@ Die folgende Enumeration wird vom Inhaltsverzeichnis für das Inhaltsverzeichnis
 
 <dl> <dt>
 
-[Inhaltsverzeichnis Verweis (Inhaltsverzeichnis)](toc-parser-reference.md)
+[Referenz zum Inhaltsverzeichnisparser](toc-parser-reference.md)
 </dt> </dl>
 
  

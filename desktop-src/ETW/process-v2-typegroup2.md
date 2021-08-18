@@ -1,5 +1,5 @@
 ---
-description: Diese Klasse ist die Ereignistyp Klasse für Prozess-Counter-Ereignisse. Die folgende Syntax wird durch den MOF-Code vereinfacht.
+description: Diese Klasse ist die Ereignistypklasse für Prozesszählerereignisse. Die folgende Syntax wird durch einen MOF-Code vereinfacht.
 ms.assetid: 7f1fa1c4-a2ff-4a1c-ac9d-e922a13c99a1
 title: Process_V2_TypeGroup2-Klasse
 ms.topic: reference
@@ -27,18 +27,18 @@ api_name:
 api_type:
 - NA
 api_location: ''
-ms.openlocfilehash: 284b77da03b53f9c2662c8729a7bf6606c45630a
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 51c24e12ed423b6240daeefee0b69a40f9b14b86813ca83cb09f74f807e24429
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "103867707"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119069950"
 ---
-# <a name="process_v2_typegroup2-class"></a>Process \_ v2 \_ TypeGroup2-Klasse
+# <a name="process_v2_typegroup2-class"></a>Process \_ V2 \_ TypeGroup2-Klasse
 
-Diese Klasse ist die Ereignistyp Klasse für Prozess-Counter-Ereignisse.
+Diese Klasse ist die Ereignistypklasse für Prozesszählerereignisse.
 
-Die folgende Syntax wird durch den MOF-Code vereinfacht.
+Die folgende Syntax wird durch einen MOF-Code vereinfacht.
 
 ## <a name="syntax"></a>Syntax
 
@@ -66,218 +66,218 @@ class Process_V2_TypeGroup2 : Process_V2
 
 ## <a name="members"></a>Member
 
-Die **Process \_ v2 \_ TypeGroup2** -Klasse verfügt über diese Typen von Membern:
+Die **Klasse Process \_ V2 \_ TypeGroup2** verfügt über die folgenden Membertypen:
 
 -   [Eigenschaften](#properties)
 
 ### <a name="properties"></a>Eigenschaften
 
-Die **Process \_ v2 \_ TypeGroup2** -Klasse verfügt über diese Eigenschaften.
+Die **Klasse Process \_ V2 \_ TypeGroup2** verfügt über diese Eigenschaften.
 
 <dl> <dt>
 
 **HandleCount**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt32**
+Datentyp: **uint32**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: wmidataid (3)
+Qualifizierer: WmiDataId(3)
 </dt> </dl>
 
 Anzahl der verwendeten Handles.
 
 </dd> <dt>
 
-**Pagefehlercount**
+**PageFaultCount**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt32**
+Datentyp: **uint32**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: wmidataid (2)
+Qualifizierer: WmiDataId(2)
 </dt> </dl>
 
-Anzahl der Seiten Fehler.
+Anzahl der Seitenfehler.
 
 </dd> <dt>
 
-**PageFileUsage**
+**PagefileUsage**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Object**
+Datentyp: **Objekt**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: wmidataid (12), Erweiterung ("sizet")
+Qualifizierer: WmiDataId(12), Extension("SizeT")
 </dt> </dl>
 
-Aktuelle Verwendung der Auslagerungs Datei.
+Aktuelle Nutzung von Seitendatei.
 
 </dd> <dt>
 
-**"Peer Page File Usage"**
+**PeakPagefileUsage**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Object**
+Datentyp: **Objekt**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: wmidataid (7), Erweiterung ("sizet")
+Qualifizierer: WmiDataId(7), Extension("SizeT")
 </dt> </dl>
 
-Die größte verwendete Seiten Dateigröße.
+Die größte verwendete Seitendateigröße.
 
 </dd> <dt>
 
-**Peakvirtualsize**
+**PeakVirtualSize**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Object**
+Datentyp: **Objekt**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: wmidataid (5), Erweiterung ("sizet")
+Qualifizierer: WmiDataId(5), Extension("SizeT")
 </dt> </dl>
 
-Die größte verwendete Größe der virtuellen Seite.
+Die größte verwendete virtuelle Seitengröße.
 
 </dd> <dt>
 
 **PeakWorkingSetSize**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Object**
+Datentyp: **Objekt**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: wmidataid (6), Erweiterung ("sizet")
+Qualifizierer: WmiDataId(6), Extension("SizeT")
 </dt> </dl>
 
-Die größte verwendete Workingsetgröße.
+Die größte verwendete Arbeitssatzgröße.
 
 </dd> <dt>
 
 **PrivatePageCount**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Object**
+Datentyp: **Objekt**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: wmidataid (15), Extension ("sizet")
+Qualifizierer: WmiDataId(15), Extension("SizeT")
 </dt> </dl>
 
-Aktuelle private physische Seitenanzahl.
+Aktuelle Anzahl privater physischer Seiten.
 
 </dd> <dt>
 
 ProcessId
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt32**
+Datentyp: **uint32**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: wmidataid (1), Format ("x")
+Qualifizierer: WmiDataId(1), Format("x")
 </dt> </dl>
 
-Die globale Prozess-ID, mit der Sie einen Prozess identifizieren können. Der Wert ist gültig ab dem Zeitpunkt, zu dem ein Prozess erstellt wird, bis er beendet wird.
+Globaler Prozessbezeichner, den Sie zum Identifizieren eines Prozesses verwenden können. Der Wert ist ab dem Zeitpunkt gültig, zu dem ein Prozess erstellt wird, bis er beendet wird.
 
 </dd> <dt>
 
-**Quotanonpgedpoolusage**
+**QuotaNonPagedPoolUsage**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Object**
+Datentyp: **Objekt**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: wmidataid (14), Erweiterung ("sizet")
+Qualifizierer: WmiDataId(14), Extension("SizeT")
 </dt> </dl>
 
-Aktuell zugesicherte, nicht auslagerbare Speicherauslastung.
+Aktuelle speicherbasierte Speicherauslastung ohne Aus pagen.
 
 </dd> <dt>
 
-**Quotapgedpoolusage**
+**QuotaPagedPoolUsage**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Object**
+Datentyp: **Objekt**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: wmidataid (13), Erweiterung ("sizet")
+Qualifizierer: WmiDataId(13), Extension("SizeT")
 </dt> </dl>
 
-Aktuelle zugesicherte auslagerter Speicherauslastung.
+Aktuelle Auspagespeicherauslastung mit Committed.
 
 </dd> <dt>
 
-**Quotapeaknonpgedpoolusage**
+**QuotaPeakNonPagedPoolUsage**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Object**
+Datentyp: **Objekt**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: wmidataid (9), Erweiterung ("sizet")
+Qualifizierer: WmiDataId(9), Extension("SizeT")
 </dt> </dl>
 
-Der größte nicht auslagerbare nicht auslagerbare Speicher wurde verwendet.
+Größter verwendeter nicht aus seiteringsseitiger Arbeitsspeicher mit einem Committed.
 
 </dd> <dt>
 
-**Quotapeakpgedpoolusage**
+**QuotaPeakPagedPoolUsage**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Object**
+Datentyp: **Objekt**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: wmidataid (8), Erweiterung ("sizet")
+Qualifizierer: WmiDataId(8), Extension("SizeT")
 </dt> </dl>
 
-Der größte verwendete auslagerter ausgehenster Speicher.
+Der größte aus paged-Speicher, für den ein Committed verwendet wurde.
 
 </dd> <dt>
 
 **Reserved**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt32**
+Datentyp: **uint32**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: wmidataid (4)
+Qualifizierer: WmiDataId(4)
 </dt> </dl>
 
 Reserviert.
@@ -287,47 +287,47 @@ Reserviert.
 **VirtualSize**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Object**
+Datentyp: **Objekt**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: wmidataid (10), Extension ("sizet")
+Qualifizierer: WmiDataId(10), Extension("SizeT")
 </dt> </dl>
 
 Aktuelle Größe der virtuellen Seite.
 
 </dd> <dt>
 
-**Workingsetsize**
+**WorkingSetSize**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Object**
+Datentyp: **Objekt**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: wmidataid (11), Erweiterung ("sizet")
+Qualifizierer: WmiDataId(11), Extension("SizeT")
 </dt> </dl>
 
-Aktuelle Workingsetgröße.
+Aktuelle Arbeitssatzgröße.
 
 </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Diese Ereignisse werden protokolliert, wenn der Prozess beendet wird. Das Ereignis gibt an, wie ein Prozess die Speicherauslastung verarbeitet hat.
+Diese Ereignisse werden protokolliert, wenn der Prozess beendet wird. Das -Ereignis gibt an, wie ein Prozess die Speicherauslastung verarbeitet hat.
 
-## <a name="requirements"></a>Requirements (Anforderungen)
+## <a name="requirements"></a>Anforderungen
 
 
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>       |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/> |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ Vista-Desktop-Apps\]<br/>       |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/> |
 
 
 
@@ -335,7 +335,7 @@ Diese Ereignisse werden protokolliert, wenn der Prozess beendet wird. Das Ereign
 
 <dl> <dt>
 
-[**Prozess \_ v2**](process-v2.md)
+[**Prozess \_ V2**](process-v2.md)
 </dt> </dl>
 
  

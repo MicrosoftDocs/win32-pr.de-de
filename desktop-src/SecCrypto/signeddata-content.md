@@ -1,7 +1,7 @@
 ---
-description: Legt die zu Signier enden Daten fest oder ruft Sie ab. Dies ist die Standard Eigenschaft.
+description: Legt die zu signierten Daten fest oder ruft sie ab. Dies ist die Standardeigenschaft.
 ms.assetid: 554ca500-403d-4c2a-868e-9e635d0b358e
-title: SignedData. Content (Eigenschaft)
+title: SignedData.Content(Eigenschaft)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,18 +13,18 @@ api_type:
 - COM
 api_location:
 - Capicom.dll
-ms.openlocfilehash: 3c2ac97eeee317b4ec170338f666e5b5d9277861
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: b9f4439f7fc7c2a71887fcb78991cf54a814a8682f991545ec33301e2fb9bc95
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106371765"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118899234"
 ---
-# <a name="signeddatacontent-property"></a>SignedData. Content (Eigenschaft)
+# <a name="signeddatacontent-property"></a>SignedData.Content(Eigenschaft)
 
-\[Die **Content** -Eigenschaft ist für die Verwendung in den Betriebssystemen verfügbar, die im Abschnitt "Anforderungen" angegeben sind. Verwenden Sie stattdessen die [**SignedCms-Klasse**](/dotnet/api/system.security.cryptography.pkcs.signedcms?view=dotnet-plat-ext-3.1&preserve-view=true) im [**System. Security. Cryptography. Pkcs**](/dotnet/api/system.security.cryptography.pkcs?view=dotnet-plat-ext-3.1&preserve-view=true) -Namespace.\]
+\[Die **Content-Eigenschaft** ist für die Verwendung in den Betriebssystemen verfügbar, die im Abschnitt Anforderungen angegeben sind. Verwenden Sie stattdessen die [**SignedCms-Klasse**](/dotnet/api/system.security.cryptography.pkcs.signedcms?view=dotnet-plat-ext-3.1&preserve-view=true) im [**Namespace System.Security.Cryptography.Pkcs.**](/dotnet/api/system.security.cryptography.pkcs?view=dotnet-plat-ext-3.1&preserve-view=true)\]
 
-Die **Content** -Eigenschaft legt die zu Signier enden Daten fest oder ruft Sie ab. Dies ist die Standard Eigenschaft.
+Die **Content-Eigenschaft** legt die zu signierten Daten fest oder ruft sie ab. Dies ist die Standardeigenschaft.
 
 ## <a name="syntax"></a>Syntax
 
@@ -39,9 +39,9 @@ SignedData.Content As String
 
 Die zu signierenden Daten.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Diese Eigenschaft muss initialisiert werden, bevor die [**Sign**](signeddata-sign.md) -Methode aufgerufen wird. Wenn der Wert dieser Eigenschaft direkt oder indirekt zurückgesetzt wird, wird der gesamte [*Status*](../secgloss/s-gly.md) des Objekts zurückgesetzt, und alle Signaturen, die dem-Objekt zugeordnet waren, bevor die-Eigenschaft geändert wurde, gehen verloren.
+Diese Eigenschaft muss initialisiert werden, bevor die [**Sign-Methode**](signeddata-sign.md) aufgerufen wird. Wenn der Wert dieser Eigenschaft direkt oder indirekt [](../secgloss/s-gly.md) zurückgesetzt wird, wird der gesamte Zustand des Objekts zurückgesetzt, und jede Signatur, die dem Objekt zugeordnet war, bevor die Eigenschaft geändert wurde, geht verloren.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -49,12 +49,12 @@ Diese Eigenschaft muss initialisiert werden, bevor die [**Sign**](signeddata-sig
 
 | Anforderung | Wert |
 |----------------------------|----------------------------------------------------------------------------------------|
-| Verteilbare Komponente<br/> | CAPICOM 2,0 oder höher unter Windows Server 2003 und Windows XP<br/>                  |
+| Verteilbare Komponente<br/> | CAPICOM 2.0 oder höher auf Windows Server 2003 und Windows XP<br/>                  |
 | DLL<br/>             | <dl> <dt>Capicom.dll</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 

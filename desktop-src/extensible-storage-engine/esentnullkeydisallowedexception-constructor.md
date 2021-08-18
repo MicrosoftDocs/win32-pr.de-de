@@ -1,6 +1,6 @@
 ---
-description: 'Weitere Informationen finden Sie unter: esentnullkeydiszuzudexception-Konstruktor'
-title: Esentnullkeydiszuzudexception-Konstruktor
+description: 'Weitere Informationen finden Sie unter: EsentNullKeyDisallowedException-Konstruktor'
+title: EsentNullKeyDisallowedException-Konstruktor
 TOCTitle: 'EsentNullKeyDisallowedException constructor '
 ms:assetid: M:Microsoft.Isam.Esent.Interop.EsentNullKeyDisallowedException.#ctor
 ms:mtpsurl: https://msdn.microsoft.com/library/microsoft.isam.esent.interop.esentnullkeydisallowedexception.esentnullkeydisallowedexception(v=EXCHG.10)
@@ -24,19 +24,19 @@ api_type:
 api_location:
 - Microsoft.Isam.Esent.Interop.dll
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: f03eae0aadf5176e3b1e9397d2bcc9d710856fa3
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 277c2beb175664dd0559463e6763ccaa301983390aa1837c7dbabbddc42b2ffa
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106357399"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119040158"
 ---
-# <a name="esentnullkeydisallowedexception-constructor"></a>Esentnullkeydiszuzudexception-Konstruktor
+# <a name="esentnullkeydisallowedexception-constructor"></a>EsentNullKeyDisallowedException-Konstruktor
 
-Initialisiert eine neue Instanz der esentnullkeydiszuzudexception-Klasse.
+Initialisiert eine neue Instanz der EsentNullKeyDisallowedException-Klasse.
 
-**Namespace:**  [Microsoft. ISAM. ESENT. Interop](./microsoft.isam.esent.interop-namespace.md)  
-**Assembly:**  Microsoft. ISAM. ESENT. Interop (in Microsoft.Isam.Esent.Interop.dll)
+**Namespace:**  [Microsoft.Isam.Esent.Interop](./microsoft.isam.esent.interop-namespace.md)  
+**Assembly:**  Microsoft.Isam.Esent.Interop (in Microsoft.Isam.Esent.Interop.dll)
 
 ## <a name="syntax"></a>Syntax
 
@@ -52,12 +52,12 @@ Dim instance As New EsentNullKeyDisallowedException()
 public EsentNullKeyDisallowedException()
 ```
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
-#### <a name="reference"></a>Referenz
+#### <a name="reference"></a>Verweis
 
-[Esentnullkeydiszuzudexception-Klasse](./esentnullkeydisallowedexception-class.md)
+[EsentNullKeyDisallowedException-Klasse](./esentnullkeydisallowedexception-class.md)
 
-[Esentnullkeydiszuzudexception-Member](./esentnullkeydisallowedexception-members.md)
+[EsentNullKeyDisallowedException-Member](./esentnullkeydisallowedexception-members.md)
 
-[Microsoft. ISAM. ESENT. Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)
+[Microsoft.Isam.Esent.Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)

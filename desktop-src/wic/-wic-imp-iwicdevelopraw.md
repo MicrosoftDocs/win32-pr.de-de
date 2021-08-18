@@ -4,24 +4,24 @@ ms.assetid: 08371790-b23b-4d2e-9aea-b2c95c854401
 title: Implementieren von IWICDevelopRaw
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 683dc2baf0496694943b7640d3f3ed521dc477a6
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: e68a78705fcfb53651d1099d01d17d9ddff554df9632a5cc322db229bc04d38d
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "104218571"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118965009"
 ---
 # <a name="implementing-iwicdevelopraw"></a>Implementieren von IWICDevelopRaw
 
 ## <a name="iwicdevelopraw"></a>IWICDevelopRaw
 
-Die [**IWICDevelopRaw**](/windows/desktop/api/Wincodec/nn-wincodec-iwicdevelopraw) -Schnittstelle stellt Verarbeitungsoptionen für die Rohbild Verarbeitung bereit. Alle Rohdaten-CODECs müssen die **IWICDevelopRaw** -Schnittstelle unterstützen. Einige unformatierte Codecs können möglicherweise nicht jede Einstellung unterstützen, die von dieser Schnittstelle verfügbar gemacht wird, aber Sie sollten alle Einstellungen unterstützen, die Ihr Codec ausführen kann. Jeder unformatierte Codec muss [**mindestens die Methoden**](/windows/desktop/api/Wincodec/nf-wincodec-iwicdevelopraw-setrotation) "-Methode" und " [**ltrendermode**](/windows/desktop/api/Wincodec/nf-wincodec-iwicdevelopraw-setrendermode) " implementieren.
+Die [**IWICDevelopRaw-Schnittstelle**](/windows/desktop/api/Wincodec/nn-wincodec-iwicdevelopraw) macht Verarbeitungsoptionen verfügbar, die spezifisch für die rohe Bildverarbeitung sind. Alle unformatierten Codecs müssen die **IWICDevelopRaw-Schnittstelle** unterstützen. Einige unformatierte Codecs können möglicherweise nicht jede Einstellung unterstützen, die von dieser Schnittstelle verfügbar gemacht wird. Sie sollten jedoch alle Einstellungen unterstützen, die Ihr Codec ausführen kann. Jeder unformatierte Codec muss mindestens die [**Methoden SetRotation**](/windows/desktop/api/Wincodec/nf-wincodec-iwicdevelopraw-setrotation) und [**SetRenderMode**](/windows/desktop/api/Wincodec/nf-wincodec-iwicdevelopraw-setrendermode) implementieren.
 
-Außerdem werden für unformatierte Codecs dringend einige Methoden und Schnittstellen empfohlen, die für andere Codecs optional sind. Hierzu gehören die Methoden [**GetPreview**](/windows/desktop/api/Wincodec/nf-wincodec-iwicbitmapdecoder-getpreview) und [**getminiatur**](/windows/desktop/api/Wincodec/nf-wincodec-iwicbitmapdecoder-getthumbnail) in der Decoder-Klasse auf Container-Ebene und die [**IWICBitmapSourceTransform**](/windows/desktop/api/Wincodec/nn-wincodec-iwicbitmapsourcetransform) -Schnittstelle in der Klasse "decodieren" auf Frame-Ebene.
+Darüber hinaus werden einige Methoden und Schnittstellen, die für andere Codecs optional sind, für unformatierte Codecs dringend empfohlen. Dazu gehören die [**Methoden GetPreview**](/windows/desktop/api/Wincodec/nf-wincodec-iwicbitmapdecoder-getpreview) und [**GetThumbnail**](/windows/desktop/api/Wincodec/nf-wincodec-iwicbitmapdecoder-getthumbnail) für die Decoderklasse auf Containerebene und die [**IWICBitmapSourceTransform-Schnittstelle**](/windows/desktop/api/Wincodec/nn-wincodec-iwicbitmapsourcetransform) für die Decodierungsklasse auf Frameebene.
 
-Die Einstellungen, die mithilfe der [**IWICDevelopRaw**](/windows/desktop/api/Wincodec/nn-wincodec-iwicdevelopraw) -Methoden festgelegt werden, sollten vom Codec auf eine Weise persistent gespeichert werden, die mit der beibehaltenen Verwendung anderer Metadaten konsistent ist, aber Sie sollten niemals die ursprünglichen "als shot"-Einstellungen überschreiben. Wenn Sie die Metadaten beibehalten und [**LoadParameterSet**](/windows/desktop/api/Wincodec/nf-wincodec-iwicdevelopraw-loadparameterset) und [**GetCurrentParameterSet**](/windows/desktop/api/Wincodec/nf-wincodec-iwicdevelopraw-getcurrentparameterset)implementieren, können Sie rohdatenverarbeitungs Anwendungen zum Abrufen und Anwenden von Verarbeitungseinstellungen Sitzungs übergreifend aktivieren.
+Einstellungen, die mithilfe der [**IWICDevelopRaw-Methoden**](/windows/desktop/api/Wincodec/nn-wincodec-iwicdevelopraw) festgelegt werden, sollten vom Codec auf eine Weise beibehalten werden, die mit der Art und Weise konsistent ist, wie andere Metadaten beibehalten werden, aber Sie sollten die ursprünglichen "As Shot"-Einstellungen nie überschreiben. Indem Sie die Metadaten beibehalten und [**LoadParameterSet**](/windows/desktop/api/Wincodec/nf-wincodec-iwicdevelopraw-loadparameterset) und [**GetCurrentParameterSet**](/windows/desktop/api/Wincodec/nf-wincodec-iwicdevelopraw-getcurrentparameterset)implementieren, ermöglichen Sie Unformatierungsverarbeitungsanwendungen, Verarbeitungseinstellungen sitzungsübergreifend abzurufen und anzuwenden.
 
-Der Hauptzweck der [**IWICDevelopRaw**](/windows/desktop/api/Wincodec/nn-wincodec-iwicdevelopraw) -Schnittstelle besteht darin, Anwendungsentwicklern das Erstellen einer Benutzeroberfläche zum Anpassen von unformatierten Parametern zu ermöglichen, die so konsistent wie möglich über verschiedene Codecs hinweg funktionieren. Angenommen, ein Endbenutzer passt die Parameter mit einem Schieberegler-Steuerelement an, wobei die minimalen und maximalen Werte dem minimalen und maximalen Bereich für den Parameter zugeordnet werden. Um dies zu unterstützen, sollten Sie alle Parameterbereiche als linear behandeln. Um sicherzustellen, dass die Schieberegler-Steuerelemente nicht übermäßig sensibel sind, sollten Sie auch so weit wie möglich einen Bereich für jeden Parameter unterstützen und dabei mindestens 50 Prozent des maximal möglichen Bereichs abdecken. Beispiel: Wenn der maximal mögliche Kontrastbereich von "rein grau" zu "schwarz" und "weiß" ist, wobei der Standardwert "0,0" zugeordnet wird, würde der von einem Codec unterstützte Mindestbereich von mindestens Mitte zwischen dem Standardwert und dem reinen grauen am unteren Ende (– 1,0) liegen 1,0.
+Ein Hauptzweck der [**IWICDevelopRaw-Schnittstelle**](/windows/desktop/api/Wincodec/nn-wincodec-iwicdevelopraw) besteht darin, Anwendungsentwicklern das Erstellen einer Benutzeroberfläche zum Anpassen von rohen Parametern zu ermöglichen, die für verschiedene Codecs so konsistent wie möglich funktionieren. Angenommen, ein Endbenutzer passt die Parameter mithilfe eines Schieberegler-Steuerelements an, wobei die minimalen und maximalen Werte den minimalen und maximalen Bereichen für den Parameter zugeordnet sind. Um dies zu unterstützen, sollten Sie alle Parameterbereiche als linear behandeln. Um sicherzustellen, dass die Schieberegler-Steuerelemente nicht übermäßig empfindlich sind, sollten Sie auch einen möglichst breiten Bereich für jeden Parameter unterstützen, der mindestens 50 Prozent des maximal möglichen Bereichs abdeckt. Wenn der maximal mögliche Kontrastbereich beispielsweise von rein grau bis rein schwarz und weiß liegt und der Standardwert 0,0 zugeordnet wird, würde der von einem Codec unterstützte Mindestbereich von mindestens der Hälfte zwischen dem Standardwert und rein grau am unteren Ende (–1,0) bis mindestens zur Hälfte zwischen dem Standardwert und reinem Schwarz und Weiß am hohen Ende (+1,0) liegen.
 
 
 ```C++
@@ -70,15 +70,15 @@ interface IWICDevelopRaw : IWICBitmapFrameDecode
 
 
 
--   [Queryrawcapabilitiesinfo](#queryrawcapabilitiesinfo)
+-   [QueryRawCapabilitiesInfo](#queryrawcapabilitiesinfo)
 -   [LoadParameterSet](#loadparameterset)
 -   [GetCurrentParameterSet](#getcurrentparameterset)
 -   [Set/GetExposureCompensation](#setgetexposurecompensation)
--   [Set/getcurrentparameterrgb, Set/GetNamedWhitePoint, Set/GetWhitePointKelvin](#setgetcurrentparameterrgb-setgetnamedwhitepoint-setgetwhitepointkelvin)
+-   [Set/GetCurrentParameterRGB, Set/GetNamedWhitePoint, Set/GetwhitePointKelvin](#setgetcurrentparameterrgb-setgetnamedwhitepoint-setgetwhitepointkelvin)
 -   [Set/GetContrast](#setgetcontrast)
 -   [Set/GetGamma](#setgetgamma)
--   [Set/getschärding](#setgetsharpness)
--   [Set/getationations](#setgetsaturation)
+-   [Set/GetSharpness](#setgetsharpness)
+-   [Set/GetSaturation](#setgetsaturation)
 -   [Set/GetTint](#setgettint)
 -   [Set/GetNoiseReduction](#setgetnoisereduction)
 -   [SetDestinationColorContext](#setdestinationcolorcontext)
@@ -87,9 +87,9 @@ interface IWICDevelopRaw : IWICBitmapFrameDecode
 -   [Set/GetRenderMode](#setgetrendermode)
 -   [SetNotificationCallback](#setnotificationcallback)
 
-### <a name="queryrawcapabilitiesinfo"></a>Queryrawcapabilitiesinfo
+### <a name="queryrawcapabilitiesinfo"></a>QueryRawCapabilitiesInfo
 
-[**Queryrawcapabilitiesinfo**](/windows/desktop/api/Wincodec/nf-wincodec-iwicdevelopraw-queryrawcapabilitiesinfo) gibt den Satz unterstützter Funktionen für diese Rohdatendatei zurück. Die [**wicrawcapabilitiesinfo**](/windows/desktop/api/Wincodec/ns-wincodec-wicrawcapabilitiesinfo) -Struktur ist wie folgt definiert:
+[**QueryRawCapabilitiesInfo**](/windows/desktop/api/Wincodec/nf-wincodec-iwicdevelopraw-queryrawcapabilitiesinfo) gibt die unterstützten Funktionen für diese Rohdatendatei zurück. Die [**WICRawCapabilitiesInfo-Struktur**](/windows/desktop/api/Wincodec/ns-wincodec-wicrawcapabilitiesinfo) ist wie folgt definiert:
 
 
 ```C++
@@ -117,7 +117,7 @@ struct WICRawCapabilitiesInfo
 
 
 
-Die in dieser Struktur verwendete [**wicrawfunktionalitäten**](/windows/desktop/api/Wincodec/ne-wincodec-wicrawcapabilities) -Enumeration wird wie folgt definiert:
+Die in dieser Struktur verwendete [**WICRawCapabilities-Enumeration**](/windows/desktop/api/Wincodec/ne-wincodec-wicrawcapabilities) ist wie folgt definiert:
 
 
 ```C++
@@ -131,7 +131,7 @@ enum WICRawCapabilities
 
 
 
-Das letzte Feld ist eine [**wicrawrotationfunktionalitäten**](/windows/desktop/api/Wincodec/ne-wincodec-wicrawrotationcapabilities) -Enumeration, die wie folgt definiert ist:
+Das letzte Feld ist eine [**WICRawRotationCapabilities-Enumeration,**](/windows/desktop/api/Wincodec/ne-wincodec-wicrawrotationcapabilities) die wie folgt definiert ist:
 
 
 ```C++
@@ -148,7 +148,7 @@ enum WICRawRotationCapabilities
 
 ### <a name="loadparameterset"></a>LoadParameterSet
 
-[**LoadParameterSet**](/windows/desktop/api/Wincodec/nf-wincodec-iwicdevelopraw-loadparameterset) ermöglicht dem Benutzer, anzugeben, ob als Erstellungseinstellungen verwendet werden sollen, Benutzer angepasste Einstellungen verwendet oder der Decoder aufgefordert werden soll, das Bild automatisch zu korrigieren.
+[**LoadParameterSet**](/windows/desktop/api/Wincodec/nf-wincodec-iwicdevelopraw-loadparameterset) ermöglicht es dem Benutzer anzugeben, ob As Shot-Einstellungen verwendet, vom Benutzer angepasste Einstellungen verwendet werden sollen, oder den Decoder anzufordern, das Bild automatisch zu korrigieren.
 
 
 ```C++
@@ -164,47 +164,47 @@ enum WICRawParameterSet
 
 ### <a name="getcurrentparameterset"></a>GetCurrentParameterSet
 
-[**GetCurrentParameterSet**](/windows/desktop/api/Wincodec/nf-wincodec-iwicdevelopraw-getcurrentparameterset) gibt ein **IPropertyBag2** mit dem aktuellen Parametersatz zurück. Der Aufrufer kann dann diesen Parametersatz an den Encoder übergeben, der als Codierungsoptionen verwendet werden soll.
+[**GetCurrentParameterSet**](/windows/desktop/api/Wincodec/nf-wincodec-iwicdevelopraw-getcurrentparameterset) gibt ein **IPropertyBag2** mit dem aktuellen Parametersatz zurück. Der Aufrufer kann diesen Parameter dann an den Encoder übergeben, der als Encoderoptionen verwendet werden soll.
 
 ### <a name="setgetexposurecompensation"></a>Set/GetExposureCompensation
 
-[**GetExposureCompensation**](/windows/desktop/api/Wincodec/nf-wincodec-iwicdevelopraw-getexposurecompensation) und [**eintexposurecompensation**](/windows/desktop/api/Wincodec/nf-wincodec-iwicdevelopraw-setexposurecompensation) geben die auf die endgültige Ausgabe anzuwendende ausgabenkompensierung an. Der gültige Bereich für EV ist – 5,0 bis + 5,0 Stopps.
+[**GetExposureCompensation**](/windows/desktop/api/Wincodec/nf-wincodec-iwicdevelopraw-getexposurecompensation) und [**SetExposureCompensation geben die Gefährdungskompensierung**](/windows/desktop/api/Wincodec/nf-wincodec-iwicdevelopraw-setexposurecompensation) an, die auf die endgültige Ausgabe angewendet werden soll. Der gültige Bereich für EV beträgt –5,0 bis +5,0 Stopps.
 
-### <a name="setgetcurrentparameterrgb-setgetnamedwhitepoint-setgetwhitepointkelvin"></a>Set/getcurrentparameterrgb, Set/GetNamedWhitePoint, Set/GetWhitePointKelvin
+### <a name="setgetcurrentparameterrgb-setgetnamedwhitepoint-setgetwhitepointkelvin"></a>Set/GetCurrentParameterRGB, Set/GetNamedWhitePoint, Set/GetwhitePointKelvin
 
-Diese Funktionen bieten alle Möglichkeiten zum Aufrufen und Festlegen des weißen Punkts, entweder als RGB-Wert, als vordefinierter benannter Wert oder als Kelvin-Wert. Der zulässige Bereich für Kelvin ist 1.500 – 30.000.
+Diese Funktionen bieten alle Möglichkeiten zum Abrufen und Festlegen des Weißen Punkts, entweder als RGB-Wert, als voreingestellter benannter Wert oder als Kelvin-Wert. Der zulässige Bereich für Kelvin liegt zwischen 1.500 und 30.000.
 
 ### <a name="setgetcontrast"></a>Set/GetContrast
 
-[**GetContrast**](/windows/desktop/api/Wincodec/nf-wincodec-iwicdevelopraw-getcontrast) und [**SetContrast**](/windows/desktop/api/Wincodec/nf-wincodec-iwicdevelopraw-setcontrast) geben den Kontrast an, der auf die Ausgabe angewendet werden soll. Der gültige Bereich für die Angabe des Kontrasts ist – 1,0 bis + 1,0, wobei der Standard Kontrast 0,0 ist.
+[**GetContrast**](/windows/desktop/api/Wincodec/nf-wincodec-iwicdevelopraw-getcontrast) und [**SetContrast**](/windows/desktop/api/Wincodec/nf-wincodec-iwicdevelopraw-setcontrast) geben den Kontrast an, der auf die Ausgabe angewendet werden soll. Der gültige Bereich zum Angeben des Kontrasts ist –1,0 bis +1,0, wobei der Standardkontrast 0,0 ist.
 
 ### <a name="setgetgamma"></a>Set/GetGamma
 
-[**GetGamma**](/windows/desktop/api/Wincodec/nf-wincodec-iwicdevelopraw-getgamma) und [**SetGamma**](/windows/desktop/api/Wincodec/nf-wincodec-iwicdevelopraw-setgamma) geben das anzuwendende Gamma an. Der gültige Bereich für Gamma ist 0,2 bis 5,0, wobei 1,0 der Standardwert ist. Gamma wird in der Regel mit der herkömmlichen Gamma Power-Funktion implementiert (eine lineare Energie Funktion mit Unity-Gewinn). Die Helligkeit wird mit zunehmender Gamma Steigerung erhöht und verringert, wenn Gamma den Wert 0 erreicht. (Beachten Sie, dass der minimale Wert ungleich 0 (null) ist, weil NULL in herkömmlichen Gamma Berechnungen zu einem Fehler aufgrund einer Division durch Null führt. Das logische Mindestlimit beträgt 1/Max, weshalb das Minimalwert 0,2 ist.)
+[**GetGamma**](/windows/desktop/api/Wincodec/nf-wincodec-iwicdevelopraw-getgamma) und [**SetGamma**](/windows/desktop/api/Wincodec/nf-wincodec-iwicdevelopraw-setgamma) geben das zu übernehmende Gamma an. Der gültige Bereich für Gamma beträgt 0,2 bis 5,0, wobei 1,0 der Standardwert ist. Gamma wird in der Regel mithilfe der herkömmlichen Gamma-Potenzfunktion implementiert (eine lineare Potenzfunktion mit Unity-Gewinn). Die Helligkeit wird mit steigendem Gamma erhöht und verringert, wenn sich Gamma 0 nähert. (Beachten Sie, dass der Mindestwert ungleich 0 (null) ist, da 0 in herkömmlichen Gammaberechnungen zu einem Fehler aufgrund einer Division durch 0 führen würde. Der logische Mindestgrenzwert ist 1/max, weshalb der Mindestwert 0,2 beträgt.)
 
-### <a name="setgetsharpness"></a>Set/getschärding
+### <a name="setgetsharpness"></a>Set/GetSharpness
 
-[**Getschärding**](/windows/desktop/api/Wincodec/nf-wincodec-iwicdevelopraw-getsharpness) und [**setschärding**](/windows/desktop/api/Wincodec/nf-wincodec-iwicdevelopraw-setsharpness) geben den Umfang der anzuwendenden Schärfe an. Der gültige Bereich ist – 1,0 bis + 1,0, wobei 0,0 der Standardwert für die Schärfe ist, und – 1,0, was überhaupt keine Schärfe angibt.
+[**GetSharpness**](/windows/desktop/api/Wincodec/nf-wincodec-iwicdevelopraw-getsharpness) und [**SetSharpness**](/windows/desktop/api/Wincodec/nf-wincodec-iwicdevelopraw-setsharpness) geben den Umfang der zu übernehmenden Schärfe an. Der gültige Bereich liegt zwischen –1,0 und +1,0, wobei 0,0 die Standardmenge der Schärfung ist und –1,0 keine Schärfe angibt.
 
-### <a name="setgetsaturation"></a>Set/getationations
+### <a name="setgetsaturation"></a>Set/GetSaturation
 
-" [**Getationations**](/windows/desktop/api/Wincodec/nf-wincodec-iwicdevelopraw-getsaturation) " und "die fest [**legung**](/windows/desktop/api/Wincodec/nf-wincodec-iwicdevelopraw-setsaturation) " geben den Umfang der anzuwendenden Sättigung an. Der gültige Bereich zum Angeben der Sättigung ist – 1,0 bis + 1,0, wobei 0,0 eine normale Sättigung ist, – 1,0 die vollständige Überlastung darstellt, und + 1,0, die eine vollständige Sättigung darstellt.
+[**GetSaturation**](/windows/desktop/api/Wincodec/nf-wincodec-iwicdevelopraw-getsaturation) und [**SetSaturation**](/windows/desktop/api/Wincodec/nf-wincodec-iwicdevelopraw-setsaturation) geben an, wie viel Sättigung angewendet werden soll. Der gültige Bereich zum Angeben der Sättigung ist –1,0 bis +1,0, wobei 0,0 eine normale Sättigung ist, –1,0 die vollständige Desaturierung und +1,0 die vollständige Sättigung darstellt.
 
 ### <a name="setgettint"></a>Set/GetTint
 
-[**GetTint**](/windows/desktop/api/Wincodec/nf-wincodec-iwicdevelopraw-gettint) und [**settint**](/windows/desktop/api/Wincodec/nf-wincodec-iwicdevelopraw-settint) geben das anzuwendende Tönungs an, wenn ein grünes/Magenta-Bias angezeigt wird. Der gültige Bereich liegt zwischen – 1,0 und + 1,0, wobei grün auf der negativen Seite der Skala und Magenta auf der positiven Seite liegt. Die Tönungs-Skala ist als orthogonal bis Color-Temperatur definiert.
+[**GetTint**](/windows/desktop/api/Wincodec/nf-wincodec-iwicdevelopraw-gettint) und [**SetTint**](/windows/desktop/api/Wincodec/nf-wincodec-iwicdevelopraw-settint) geben die Tönung an, die auf eine Grün-Magenta-Verzerrung angewendet werden soll. Der gültige Bereich ist –1,0 bis +1,0, wobei Grün auf der negativen Seite der Skala und Magenta auf dem positiven liegt. Die Farbtonskala ist als orthogonale farbliche Temperatur definiert.
 
 ### <a name="setgetnoisereduction"></a>Set/GetNoiseReduction
 
-[**GetNoiseReduction**](/windows/desktop/api/Wincodec/nf-wincodec-iwicdevelopraw-getnoisereduction) und [**setnoisereduction**](/windows/desktop/api/Wincodec/nf-wincodec-iwicdevelopraw-setnoisereduction) geben die Menge der anzuwendenden Rauschunterdrückung an. Der gültige Bereich für ist – 1,0 bis + 1,0.0,0 gibt die Standardmenge der Rauschunterdrückung an, – 1,0 bedeutet, dass keine Rauschunterdrückung erfolgt und + 1,0 eine maximale Rauschunterdrückung angibt.
+[**GetNoiseReduction**](/windows/desktop/api/Wincodec/nf-wincodec-iwicdevelopraw-getnoisereduction) und [**SetNoiseReduction**](/windows/desktop/api/Wincodec/nf-wincodec-iwicdevelopraw-setnoisereduction) geben an, wie viel Rauschunterdrückung angewendet werden soll. Der gültige Bereich von ist –1,0 bis +1,0, wobei 0,0 die Standardmenge der Rauschunterdrückung, –1,0 keine Rauschunterdrückung und +1,0 die maximale Rauschunterdrückung angibt.
 
 ### <a name="setdestinationcolorcontext"></a>SetDestinationColorContext
 
-[**SetDestinationColorContext**](/windows/desktop/api/Wincodec/nf-wincodec-iwicdevelopraw-setdestinationcolorcontext) gibt das Farbprofil an, das auf das Bild angewendet werden soll. Sie können [**getcolorkontexte**](/windows/desktop/api/Wincodec/nf-wincodec-iwicbitmapframedecode-getcolorcontexts) aufrufen, um das aktuelle Farbprofil abzurufen.
+[**SetDestinationColorContext**](/windows/desktop/api/Wincodec/nf-wincodec-iwicdevelopraw-setdestinationcolorcontext) gibt das Farbprofil an, das auf das Bild angewendet werden soll. Sie können [**GetColorContexts**](/windows/desktop/api/Wincodec/nf-wincodec-iwicbitmapframedecode-getcolorcontexts) aufrufen, um das aktuelle Farbprofil abzurufen.
 
 ### <a name="setgettonecurve"></a>Set/GetToneCurve
 
-[**GetToneCurve**](/windows/desktop/api/Wincodec/nf-wincodec-iwicdevelopraw-gettonecurve) und [**settonecurve**](/windows/desktop/api/Wincodec/nf-wincodec-iwicdevelopraw-settonecurve) geben Sie die anzuwendende Tonkurve an. Angenommen, lineare Interpolationen zwischen Punkten. **PToneCurve** ist eine [**WICRawToneCurve**](/windows/desktop/api/Wincodec/ns-wincodec-wicrawtonecurve) -Struktur, die ein Array aus [**WICRawToneCurvePoint**](/windows/desktop/api/Wincodec/ns-wincodec-wicrawtonecurvepoint) -Strukturen und eine Anzahl der Punkte im Array enthält.
+[**GetToneCurve**](/windows/desktop/api/Wincodec/nf-wincodec-iwicdevelopraw-gettonecurve) und [**SetToneCurve**](/windows/desktop/api/Wincodec/nf-wincodec-iwicdevelopraw-settonecurve) geben die zu übernehmende Tonkurve an. Angenommen, es wird eine lineare Interpolation zwischen Punkten angenommen. **pToneCurve** ist eine [**WICRawToneCurve-Struktur,**](/windows/desktop/api/Wincodec/ns-wincodec-wicrawtonecurve) die ein Array von [**WICRawToneCurvePoint-Strukturen**](/windows/desktop/api/Wincodec/ns-wincodec-wicrawtonecurvepoint) und eine Anzahl der Punkte im Array enthält.
 
 
 ```C++
@@ -217,7 +217,7 @@ struct WICRawToneCurve
 
 
 
-Ein [**WICRawToneCurvePoint**](/windows/desktop/api/Wincodec/ns-wincodec-wicrawtonecurvepoint) enthält einen Eingabe Wert und einen Ausgabewert.
+Ein [**WICRawToneCurvePoint**](/windows/desktop/api/Wincodec/ns-wincodec-wicrawtonecurvepoint) enthält einen Eingabewert und einen Ausgabewert.
 
 
 ```C++
@@ -230,15 +230,15 @@ struct WICRawToneCurvePoint
 
 
 
-Wenn der Aufrufer **null** im *pToneCurve* -Parameter übergibt, sollten Sie die erforderliche Größe für die [**WICRawToneCurve**](/windows/desktop/api/Wincodec/ns-wincodec-wicrawtonecurve) im *pcbActualToneCurveBufferSize* -Parameter zurückgeben.
+Wenn der Aufrufer **NULL** im *pToneCurve-Parameter* übergibt, sollten Sie die erforderliche Größe für [**WICRawToneCurve**](/windows/desktop/api/Wincodec/ns-wincodec-wicrawtonecurve) im *parameteractualToneCurveBufferSize-Parameter* zurückgeben.
 
 ### <a name="setgetrotation"></a>Set/GetRotation
 
-" [**GetRotation**](/windows/desktop/api/Wincodec/nf-wincodec-iwicdevelopraw-getrotation) " und " [**ttrotation**](/windows/desktop/api/Wincodec/nf-wincodec-iwicdevelopraw-setrotation) " geben den Grad der anzuwendenden Drehung an. Eine Drehung von 90,0 würde eine Drehung von 90 Grad im Uhrzeigersinn angeben. (Der Unterschied zwischen der Verwendung von "  **SetRotation** " und dem Festlegen der Drehung mithilfe der [**CopyPixels**](/windows/desktop/api/Wincodec/nf-wincodec-iwicbitmapsourcetransform-copypixels) -Methode besteht darin, dass der Drehungs Winkel, der mithilfe von " **SetRotation** " festgelegt wird, vom Codec beibehalten werden soll
+[**GetRotation**](/windows/desktop/api/Wincodec/nf-wincodec-iwicdevelopraw-getrotation) und [**SetRotation**](/windows/desktop/api/Wincodec/nf-wincodec-iwicdevelopraw-setrotation) geben den Grad der Rotation an, der angewendet werden soll. Eine Drehung von 90,0 würde eine Drehung von 90 Grad im Uhrzeigersinn angeben. (Der Unterschied zwischen der Verwendung von **SetRotation** und der Einstellungsrotation mithilfe der [**CopyPixels-Methode**](/windows/desktop/api/Wincodec/nf-wincodec-iwicbitmapsourcetransform-copypixels) besteht darin, dass der mit **SetRotation** festgelegte Drehwinkel vom Codec beibehalten werden soll, während das Festlegen der Drehung durch **CopyPixels** nur das Bild im Arbeitsspeicher dreht.
 
 ### <a name="setgetrendermode"></a>Set/GetRenderMode
 
-[**GetRenderMode**](/windows/desktop/api/Wincodec/nf-wincodec-iwicdevelopraw-getrendermode) und [**setrendermode**](/windows/desktop/api/Wincodec/nf-wincodec-iwicdevelopraw-setrendermode) geben die Qualität der Ausgabe an, die der Aufrufer benötigt. Wenn ein Benutzerparameter anpasst, sollte die Anwendung eine sehr schnelle Näherung des tatsächlichen Bilds anzeigen, wenn die Änderungen angewendet werden. Zu diesem Zweck wird das Bild normalerweise bei der Bildschirmauflösung oder weniger angezeigt, anstatt bei der tatsächlichen Bildauflösung, um dem Benutzer sofortiges Feedback zu geben. Dies ist der Fall, wenn eine Anwendung die Qualität des Entwurfs Modus anfordern würde, sodass dies sehr schnell sein sollte. Wenn der Benutzer alle Änderungen vorgenommen hat, Sie in der Vorschau im Entwurfs Modus angezeigt haben und sich entschieden haben, das vollständige Image mit den aktuellen Einstellungen zu decodieren, fordert die Anwendung einen Decodieren der optimalen Qualität an. Dies wird in der Regel auch zum Drucken angefordert. Wenn ein angemessener Kompromiss zwischen Geschwindigkeit und Qualität erforderlich ist, fordert die Anwendung die normale Qualität an.
+[**GetRenderMode**](/windows/desktop/api/Wincodec/nf-wincodec-iwicdevelopraw-getrendermode) und [**SetRenderMode**](/windows/desktop/api/Wincodec/nf-wincodec-iwicdevelopraw-setrendermode) geben die Qualitätsstufe der Ausgabe an, die der Aufrufer benötigt. Wenn ein Benutzer Parameter anpasst, sollte die Anwendung eine sehr schnelle Näherung des tatsächlichen Bilds anzeigen, wenn die Änderungen angewendet werden. Zu diesem Zweck wird das Bild in der Regel mit Bildschirmauflösung oder weniger als der tatsächlichen Bildauflösung angezeigt, um dem Benutzer sofortiges Feedback zu geben. Da eine Anwendung die Entwurfsmodusqualität anfordern würde, sollte dies sehr schnell erfolgen. Wenn der Benutzer alle Änderungen vorgenommen hat, sie im Entwurfsmodus in der Vorschau angezeigt und sich entschieden hat, das vollständige Image mit den aktuellen Einstellungen zu decodieren, fordert die Anwendung eine Best Quality-Decodierung an. Dies wird in der Regel auch für den Druck angefordert. Wenn ein angemessener Kompromiss zwischen der Geschwindigkeit einer Qualität erforderlich ist, fordert die Anwendung normale Qualität an.
 
 
 ```C++
@@ -254,7 +254,7 @@ enum WICRawRenderMode
 
 ### <a name="setnotificationcallback"></a>SetNotificationCallback
 
-[**SetNotificationCallback**](/windows/desktop/api/Wincodec/nf-wincodec-iwicdevelopraw-setnotificationcallback) registriert eine Rückruffunktion, die der Decoder aufruft, wenn sich einer der rohverarbeitungs Parameter ändert. Die Signatur für [**IWICDevelopRawNotificationCallback**](/windows/desktop/api/Wincodec/nn-wincodec-iwicdeveloprawnotificationcallback) verfügt nur über eine Methode, die als " [**Benachrichtigen**](/windows/desktop/api/Wincodec/nf-wincodec-iwicdeveloprawnotificationcallback-notify)" bezeichnet wird. **Notify** weist einen einzelnen Parameter auf, bei dem es sich um eine Maske handelt, die angibt, welche der rohverarbeitungs Parameter geändert wurden.
+[**SetNotificationCallback**](/windows/desktop/api/Wincodec/nf-wincodec-iwicdevelopraw-setnotificationcallback) registriert eine Rückruffunktion für den Decoder, die aufgerufen werden soll, wenn sich einer der Raw-Verarbeitungsparameter ändert. Die Signatur für [**IWICDevelopRawNotificationCallback**](/windows/desktop/api/Wincodec/nn-wincodec-iwicdeveloprawnotificationcallback) verfügt nur über eine Methode namens [**Notify**](/windows/desktop/api/Wincodec/nf-wincodec-iwicdeveloprawnotificationcallback-notify). **Notify** verfügt über einen einzelnen Parameter, bei dem es sich um eine Maske handelt, die angibt, welche der Rohdatenverarbeitungsparameter geändert wurden.
 
 
 ```C++
@@ -263,7 +263,7 @@ HRESULT Notify ( UINT NotificationMask );
 
 
 
-Ein-oder-Vorgang wird für die folgenden Werte für die notificationmask ausgeführt.
+Ein OR-Vorgang wird für die folgenden Werte für notificationMask ausgeführt.
 
 
 ```C++
@@ -295,7 +295,7 @@ WICRawChangeNotification_RenderMode
 [**IWICDevelopRaw**](/windows/desktop/api/Wincodec/nn-wincodec-iwicdevelopraw)
 </dt> <dt>
 
-**Licher**
+**Konzeptionellen**
 </dt> <dt>
 
 [Implementieren von IWICBitmapSourceTransform](-wic-imp-iwicbitmapsourcetransform.md)
@@ -304,10 +304,10 @@ WICRawChangeNotification_RenderMode
 [Implementieren eines WIC-Enabled Encoders](-wic-implementingwicencoder.md)
 </dt> <dt>
 
-[Schreiben eines WIC-Enabled Codecs](-wic-howtowriteacodec.md)
+[Schreiben eines WIC-Enabled CODEC](-wic-howtowriteacodec.md)
 </dt> <dt>
 
-[Übersicht über die Windows Imaging-Komponente](-wic-about-windows-imaging-codec.md)
+[Windows Übersicht über Bildverarbeitungskomponenten](-wic-about-windows-imaging-codec.md)
 </dt> </dl>
 
  

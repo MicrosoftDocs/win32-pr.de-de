@@ -1,27 +1,27 @@
 ---
-title: Verwenden der streampriorisierung
-description: Verwenden der streampriorisierung
+title: Verwenden der Streampriorisierung
+description: Verwenden der Streampriorisierung
 ms.assetid: 5fff212e-b47b-49a6-817f-f0e09c895b3a
 keywords:
-- Windows Media-Format-SDK, streampriorisierung
-- Profile, streampriorisierung
-- Streams, Priorisierung
+- Windows Medienformat-SDK, Streampriorisierung
+- Profile,Streampriorisierung
+- Streams,Priorisierung
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 99a6b0bd3d49db9523ef9ea5585803b4c703c279
-ms.sourcegitcommit: 48d1c892045445bcbd0f22bafa2fd3861ffaa6e7
+ms.openlocfilehash: 3db00466eb27685a33851f7bffa5133e1d94a203985b1a0a56b110a09ad88ab6
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/19/2020
-ms.locfileid: "103948413"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118963949"
 ---
-# <a name="using-stream-prioritization"></a>Verwenden der streampriorisierung
+# <a name="using-stream-prioritization"></a>Verwenden der Streampriorisierung
 
-Die streampriorisierung ermöglicht Ihnen mehr Kontrolle über die Wiedergabe von Inhalten, indem Sie die Prioritäts Reihenfolge für die Datenströme in einem Profil festlegen können. Wenn der Reader und der Streamingserver während der Wiedergabe auf Bandbreite stoßen, müssen möglicherweise Beispiele gelöscht werden, um eine ununterbrochene Wiedergabe zu ermöglichen. Wenn Sie im Profil eine Prioritäts Reihenfolge mit einem streampriorisierungsobjekt angeben, werden die Beispiele zuerst aus den Datenströmen der niedrigsten Priorität gelöscht.
+Mit der Streampriorisierung können Sie mehr Kontrolle über die Wiedergabe von Inhalten haben, indem Sie die Prioritäts reihenfolge für die Streams in einem Profil angeben können. Wenn der Reader und der Streamingserver während der Wiedergabe auf einen Bandbreitenengpass stoßen, müssen die Beispiele möglicherweise gelöscht werden, um eine unterbrechungsfreie Wiedergabe zu ermöglichen. Wenn Sie eine Prioritäts reihenfolge mit einem Streampriorisierungsobjekt im Profil angeben, werden die Stichproben zuerst aus den Streams mit der niedrigsten Priorität gelöscht.
 
-Anders als bei Bandbreiten Freigabe und Objekten mit gegenseitigem Ausschluss verwendet ein streampriorisierungsobjekt die [**iwmstreamlist**](/previous-versions/windows/desktop/api/wmsdkidl/nn-wmsdkidl-iwmstreamlist) -Schnittstelle nicht, um die Liste der Streams nachzuverfolgen. Stattdessen müssen Sie ein Array von [**\_ \_ \_ Daten Satz**](/previous-versions/windows/desktop/api/wmsdkidl/ns-wmsdkidl-wm_stream_priority_record) Strukturen mit WM-Stream-Priorität verwenden. Die Strukturen müssen im Array in absteigender Reihenfolge der Priorität angeordnet werden. Zusätzlich zum Speichern einer streamnummer können Sie mit der Stream-Prioritäts Struktur auch angeben, ob ein Stream obligatorisch ist. Obligatorische Streams werden nicht gelöscht, unabhängig von ihrer Position in der Liste.
+Im Gegensatz zu Objekten der Bandbreitenfreigabe und des gegenseitigen Ausschlusses verwendet ein Streampriorisierungsobjekt nicht die [**IWMStreamList-Schnittstelle,**](/previous-versions/windows/desktop/api/wmsdkidl/nn-wmsdkidl-iwmstreamlist) um die Liste der Streams nachverfolgung zu behalten. Stattdessen müssen Sie ein Array von [**WM \_ STREAM PRIORITY \_ \_ RECORD-Strukturen**](/previous-versions/windows/desktop/api/wmsdkidl/ns-wmsdkidl-wm_stream_priority_record) verwenden. Die Strukturen müssen im Array in absteigender Reihenfolge der Priorität organisiert werden. Zusätzlich zum Halten einer Streamnummer können Sie mit der Streamprioritätsstruktur auch angeben, ob ein Stream obligatorisch ist. Obligatorische Streams werden unabhängig von ihrer Position in der Liste nicht gelöscht.
 
-Der folgende Beispielcode zeigt, wie Sie eine streampriorisierung in ein Profil einschließen. Dieses Profil ist für eine Classroom-Präsentation mit einem Audiostream des Dozenten, einem Videostream des Dozenten und einem Videostream, der die Präsentationsfolien erfasst. Der Audiodatenstrom ist die wichtigste und ist obligatorisch. Die Präsentationsfolien haben die niedrigste Priorität, da das Bild ziemlich konstant ist, sodass einige Bilder hier verloren gehen und es keinen großen Unterschied gibt.
+Der folgende Beispielcode zeigt, wie sie eine Streampriorisierung in ein Profil einordnen. Dieses Profil ist für eine Classroom-Präsentation mit einem Audiostream des Sprechens, einem Videostream der Darstellung und einem Videostream mit den Präsentationsfolien. Der Audiostream ist der wichtigste und obligatorisch. Die Präsentationsfolien haben die niedrigste Priorität, da das Bild ziemlich konstant ist, sodass einige Frames hier verloren gehen und es keinen großen Unterschied machen wird.
 
 
 ```C++
@@ -131,9 +131,9 @@ pProfileMgr = NULL;
 [**Arbeiten mit Profilen**](working-with-profiles.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

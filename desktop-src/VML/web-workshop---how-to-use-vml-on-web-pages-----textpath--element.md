@@ -1,44 +1,44 @@
 ---
-title: Verwenden des TextPath-Elements
-description: Verwenden des TextPath-Elements
+title: Verwenden des Textpath-Elements
+description: Verwenden des Textpath-Elements
 ms.assetid: 7728cdd6-d291-4ec5-b5e0-4a44a7d72eae
 keywords:
-- Webworkshop, TextPath-Element
-- Entwerfen von Webseiten, TextPath-Element
-- Vector Markup Language (VML), TextPath-Element
-- VML (Vector Markup Language), TextPath-Element
-- Vektorgrafiken, TextPath-Element
-- TextPath-Element
-- VML-Elemente, TextPath
-- VML-Formen, TextPath-Element
+- Web-Workshop,Textpath-Element
+- Entwerfen von Webseiten,textpath-Element
+- Vector Markup Language (VML),textpath-Element
+- VML (Vector Markup Language),textpath-Element
+- Vektorgrafik,Textpath-Element
+- textpath-Element
+- VML-Elemente, Textpfad
+- VML-Formen, textpath-Element
 - Vector Markup Language (VML), Zeichnen von Text
 - VML (Vector Markup Language), Zeichnen von Text
-- Vektorgrafiken, Zeichnen von VML-Text
+- Vektorgrafiken,Zeichnen von VML-Text
 - Zeichnen von Text
-- VML-Formen, Zeichnen von Text
+- VML-Formen,Zeichnen von Text
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 148c032d14307dc07ec56911f4c5cc45a4c69664
-ms.sourcegitcommit: 592c9bbd22ba69802dc353bcb5eb30699f9e9403
+ms.openlocfilehash: c5db3b76d0c4ad2e56c59cfcf6dd39a2af51317b63ee190f47d794933282b5a8
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "104102263"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119056976"
 ---
-# <a name="using-the-textpath-element"></a>Verwenden des TextPath-Elements
+# <a name="using-the-textpath-element"></a>Verwenden des Textpath-Elements
 
-In diesem Thema wird VML beschrieben, eine Funktion, die ab Windows Internet Explorer 9 veraltet ist. Webseiten und Anwendungen, die auf VML basieren, sollten zu SVG oder anderen allgemein unterstützten Standards migriert werden.
+In diesem Thema wird VML beschrieben, ein Feature, das ab Version 9 Windows Internet Explorer ist. Webseiten und Anwendungen, die auf VML basieren, sollten zu SVG oder anderen weit verbreiteten Standards migriert werden.
 
 > [!Note]  
-> Ab Dezember 2011 wurde dieses Thema archiviert. Daher wird er nicht mehr aktiv verwaltet. Weitere Informationen finden Sie unter [archivierte Inhalte](/previous-versions/windows/internet-explorer/ie-developer/). Informationen, Empfehlungen und Anleitungen zur aktuellen Version von Windows Internet Explorer finden Sie im [Internet Explorer Developer Center](https://msdn.microsoft.com/ie/).
+> Seit Dezember 2011 wurde dieses Thema archiviert. Daher wird sie nicht mehr aktiv verwaltet. Weitere Informationen finden Sie unter [Archivierter Inhalt.](/previous-versions/windows/internet-explorer/ie-developer/) Informationen, Empfehlungen und Anleitungen zur aktuellen Version von Windows Internet Explorer finden Sie im [Internet Explorer Developer Center.](https://msdn.microsoft.com/ie/)
 
- 
+ 
 
-In diesem Thema wird veranschaulicht, wie das-Element verwendet wird, `<textpath>` um Text mit verschiedenen Stilen zu zeichnen.
+In diesem Thema wird veranschaulicht, wie das -Element verwendet wird, `<textpath>` um Text mit verschiedenen Stilen zu zeichnen.
 
-Sie können das `<textpath>` untergeordnete Element innerhalb `<shape>` von oder platzieren `<shapetype>` , um Text zu zeichnen. Sie können dann die Eigenschafts Attribute des `<textpath>` unter Elements verwenden, um den Text anzupassen. Sie können auch das `<formulas>` untergeordnete-Element verwenden, um die Kontur des Texts zu definieren.
+Sie können das `<textpath>` Unterelement in oder `<shape>` platzieren, `<shapetype>` um Text zu zeichnen. Sie können dann die Eigenschaftenattribute des Unterelements `<textpath>` verwenden, um den Text anzupassen. Sie können auch das `<formulas>` Unterelement verwenden, um die Kontur des Texts zu definieren.
 
-Wenn Sie z. b. den in der folgenden Abbildung gezeigten Text erstellen möchten, können Sie die VML-Darstellung unten eingeben. Beachten Sie, dass wir das- `<shapetype>` Element verwenden, um einen Prototyp für den Text Umriss zu definieren. Anschließend werden zwei Formen aus dem gleichen ShapeType instanziiert. Sie können einfach das Attribut der **Zeichen** folgen Eigenschaft ändern, um anderen Text anzuzeigen.
+Um beispielsweise den in der folgenden Abbildung gezeigten Text zu erstellen, können Sie die folgende VML-Darstellung eingeben. Beachten Sie, dass wir das `<shapetype>` -Element verwenden, um einen Prototyp für die Kontur des Texts zu definieren. Anschließend instanziieren wir zwei Formen aus demselben Formtyp. Sie können einfach das **Zeichenfolgeneigenschaftsattribut** ändern, um anderen Text anzuzeigen.
 
 ![shape1 \-1.gif (4898 Bytes)](images/shape1-1t.gif)
 
@@ -92,8 +92,8 @@ trim="t" fitpath="t" xscale="f" string="VML"/>
 
 
 
-Weitere Informationen zu diesem Element finden Sie in der [VML-Spezifikation](https://www.w3.org/TR/NOTE-VML#-toc416858398) .
+Weitere Informationen zu diesem Element finden Sie in der [VML-Spezifikation.](https://www.w3.org/TR/NOTE-VML#-toc416858398)
 
- 
+ 
 
- 
+ 

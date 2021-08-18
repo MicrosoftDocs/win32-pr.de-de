@@ -1,23 +1,23 @@
 ---
-description: Die fotometadatenrichtlinie für die System. Photo. Contrast-Eigenschaft.
+description: Die Richtlinie für Fotometadaten für die System.Photo.Contrast-Eigenschaft.
 ms.assetid: c5e2589d-507c-4b92-9ada-7d64e7c45dd8
-title: System. Photo. Contrast Foto-metadatenrichtlinie
+title: Richtlinie für System.Photo.Contrast-Fotometadaten
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: a1d6ed34854b525e9eaac2ff5ac7339a75ad10e7
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: f4a9309ecab96a2244e08ebf05ff8896c792f7366c9db21d41072d2d94aacf47
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "104530263"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119087096"
 ---
-# <a name="systemphotocontrast-photo-metadata-policy"></a>System. Photo. Contrast Foto-metadatenrichtlinie
+# <a name="systemphotocontrast-photo-metadata-policy"></a>Richtlinie für System.Photo.Contrast-Fotometadaten
 
-Die fotometadatenrichtlinie für die [System. Photo. Contrast](../properties/props-system-photo-contrast.md) -Eigenschaft.
+Die Richtlinie für Fotometadaten für die [System.Photo.Contrast-Eigenschaft.](../properties/props-system-photo-contrast.md)
 
-### <a name="pkey"></a>Pkey
+### <a name="pkey"></a>PKEY
 
-Kontrast zum pkey- \_ Foto \_
+\_ \_ PKEY-Fotokontrast
 
 ### <a name="containers"></a>Container
 
@@ -27,7 +27,7 @@ JPEG, TIFF
 
 Nein
 
-### <a name="output-propvariant-type"></a>Ausgabe-PROPVARIANT-Typ
+### <a name="output-propvariant-type"></a>PROPVARIANT-Ausgabetyp
 
 VT \_ UI4
 
@@ -35,46 +35,46 @@ VT \_ UI4
 
 UShort
 
-### <a name="conflict-resolution-policy"></a>Richtlinie zur Konfliktlösung
+### <a name="conflict-resolution-policy"></a>Konfliktlösungsrichtlinie
 
-Werte aus unterschiedlichen Schemas sind abgestimmt.
+Werte aus verschiedenen Schemas werden abgestimmt.
 
 ### <a name="jpeg-policy"></a>JPEG-Richtlinie
 
-### <a name="read-paths"></a>Pfade lesen
+### <a name="read-paths"></a>Lesepfade
 
 
 
-| Auftrag | Pfad                          | Datenträger Format |
+| Auftrag | Pfad                          | Datenträgerformat |
 |-------|-------------------------------|-------------|
-| 1     | /App1/IFD/EXIF/{ushort = 41992} | ushort      |
-| 2     | /XMP/EXIF: Kontrast            | Unicode     |
+| 1     | /app1/ifd/exif/{ushort=41992} | ushort      |
+| 2     | /xmp/exif:Contrast            | Unicode     |
 
 
 
  
 
-### <a name="write-paths"></a>Schreib Pfade
+### <a name="write-paths"></a>Schreibpfade
 
 
 
-| Auftrag | Pfad                          | Datenträger Format |
+| Auftrag | Pfad                          | Datenträgerformat |
 |-------|-------------------------------|-------------|
-| 1     | /App1/IFD/EXIF/{ushort = 41992} | ushort      |
-| 2     | /XMP/EXIF: Kontrast            | Unicode     |
+| 1     | /app1/ifd/exif/{ushort=41992} | ushort      |
+| 2     | /xmp/exif:Contrast            | Unicode     |
 
 
 
  
 
-### <a name="remove-paths"></a>Pfade entfernen
+### <a name="remove-paths"></a>Entfernen von Pfaden
 
 
 
 | Auftrag | Pfad                          |
 |-------|-------------------------------|
-| 1     | /App1/IFD/EXIF/{ushort = 41992} |
-| 2     | /XMP/EXIF: Kontrast            |
+| 1     | /app1/ifd/exif/{ushort=41992} |
+| 2     | /xmp/exif:contrast            |
 
 
 
@@ -82,52 +82,52 @@ Werte aus unterschiedlichen Schemas sind abgestimmt.
 
 ### <a name="tiff-policies"></a>TIFF-Richtlinien
 
-### <a name="read-paths"></a>Pfade lesen
+### <a name="read-paths"></a>Lesepfade
 
 
 
-| Auftrag | Pfad                     | Datenträger Format |
+| Auftrag | Pfad                     | Datenträgerformat |
 |-------|--------------------------|-------------|
-| 1     | /IFD/EXIF/{ushort = 41992} | ushort      |
-| 2     | /IFD/XMP/EXIF: Kontrast   | Unicode     |
+| 1     | /ifd/exif/{ushort=41992} | ushort      |
+| 2     | /ifd/xmp/exif:Contrast   | Unicode     |
 
 
 
  
 
-### <a name="write-paths"></a>Schreib Pfade
+### <a name="write-paths"></a>Schreibpfade
 
 
 
-| Auftrag | Pfad                     | Datenträger Format |
+| Auftrag | Pfad                     | Datenträgerformat |
 |-------|--------------------------|-------------|
-| 1     | /IFD/EXIF/{ushort = 41992} | ushort      |
-| 2     | /IFD/XMP/EXIF: Kontrast   | Unicode     |
+| 1     | /ifd/exif/{ushort=41992} | ushort      |
+| 2     | /ifd/xmp/exif:Contrast   | Unicode     |
 
 
 
  
 
-### <a name="remove-paths"></a>Pfade entfernen
+### <a name="remove-paths"></a>Entfernen von Pfaden
 
 
 
 | Auftrag | Pfad                     |
 |-------|--------------------------|
-| 1     | /IFD/EXIF/{ushort = 41992} |
-| 2     | /IFD/XMP/EXIF: Kontrast   |
+| 1     | /ifd/exif/{ushort=41992} |
+| 2     | /ifd/xmp/exif:contrast   |
 
 
 
  
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[System. Photo. Kontrast](../properties/props-system-photo-contrast.md)
+[System.Photo.Contrast](../properties/props-system-photo-contrast.md)
 </dt> </dl>
 
  

@@ -1,6 +1,6 @@
 ---
-description: 'Weitere Informationen finden Sie hier: esentrunninginmultiinstancemodeexception-Konstruktor'
-title: Esentrunninginmultiinstancemodeexception-Konstruktor
+description: 'Weitere Informationen zu: EsentRunningInMultiInstanceModeException-Konstruktor'
+title: EsentRunningInMultiInstanceModeException-Konstruktor
 TOCTitle: 'EsentRunningInMultiInstanceModeException constructor '
 ms:assetid: M:Microsoft.Isam.Esent.Interop.EsentRunningInMultiInstanceModeException.#ctor
 ms:mtpsurl: https://msdn.microsoft.com/library/microsoft.isam.esent.interop.esentrunninginmultiinstancemodeexception.esentrunninginmultiinstancemodeexception(v=EXCHG.10)
@@ -24,19 +24,19 @@ api_type:
 api_location:
 - Microsoft.Isam.Esent.Interop.dll
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: 780b16b3f2b9c26984710f6eb7105fd6bda1316e
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 0cd653ada5aea96a13bbebc109593c73686cbbb334f29543036e7ee15bbbf427
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "103960879"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118981820"
 ---
-# <a name="esentrunninginmultiinstancemodeexception-constructor"></a>Esentrunninginmultiinstancemodeexception-Konstruktor
+# <a name="esentrunninginmultiinstancemodeexception-constructor"></a>EsentRunningInMultiInstanceModeException-Konstruktor
 
-Initialisiert eine neue Instanz der esentrunninginmultiinstancemodeexception-Klasse.
+Initialisiert eine neue Instanz der EsentRunningInMultiInstanceModeException-Klasse.
 
-**Namespace:**  [Microsoft. ISAM. ESENT. Interop](./microsoft.isam.esent.interop-namespace.md)  
-**Assembly:**  Microsoft. ISAM. ESENT. Interop (in Microsoft.Isam.Esent.Interop.dll)
+**Namespace:**  [Microsoft.Isam.Esent.Interop](./microsoft.isam.esent.interop-namespace.md)  
+**Assembly:**  Microsoft.Isam.Esent.Interop (in Microsoft.Isam.Esent.Interop.dll)
 
 ## <a name="syntax"></a>Syntax
 
@@ -52,12 +52,12 @@ Dim instance As New EsentRunningInMultiInstanceModeException()
 public EsentRunningInMultiInstanceModeException()
 ```
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
-#### <a name="reference"></a>Referenz
+#### <a name="reference"></a>Verweis
 
-[Esentrunninginmultiinstancemodeexception-Klasse](./esentrunninginmultiinstancemodeexception-class.md)
+[EsentRunningInMultiInstanceModeException-Klasse](./esentrunninginmultiinstancemodeexception-class.md)
 
-[Esentrunninginmultiinstancemodeexception-Member](./esentrunninginmultiinstancemodeexception-members.md)
+[EsentRunningInMultiInstanceModeException-Member](./esentrunninginmultiinstancemodeexception-members.md)
 
-[Microsoft. ISAM. ESENT. Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)
+[Microsoft.Isam.Esent.Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)

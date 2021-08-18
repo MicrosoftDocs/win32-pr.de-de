@@ -1,7 +1,7 @@
 ---
-description: Gibt an, ob das Element in einem Browser-oder Windows-Explorer-Frame gehostet werden kann.
+description: Gibt an, ob das Element in einem Browser oder in einem Explorer Windows gehostet werden kann.
 ms.assetid: 472e0906-9561-4390-a503-c5e490245ea0
-title: FolderItem. IsBrowsable-Eigenschaft (Shldisp. h)
+title: FolderItem.IsBrowsable-Eigenschaft (Shldisp.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,16 +13,16 @@ api_type:
 - COM
 api_location:
 - Shell32.dll
-ms.openlocfilehash: d7c5f7a9cbde54647c299646bb6350c3be6aa2a0
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 9c417b3a225ba7d9f39329fe274d99ee09c3a98353a9822d1047ea426610411c
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104393246"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119093086"
 ---
-# <a name="folderitemisbrowsable-property"></a>FolderItem. IsBrowsable-Eigenschaft
+# <a name="folderitemisbrowsable-property"></a>FolderItem.IsBrowsable-Eigenschaft
 
-Gibt an, ob das Element in einem Browser-oder Windows-Explorer-Frame gehostet werden kann.
+Gibt an, ob das Element in einem Browser oder in einem Explorer Windows gehostet werden kann.
 
 Diese Eigenschaft ist schreibgeschützt.
 
@@ -37,13 +37,13 @@ bIsBrowsable = FolderItem.IsBrowsable
 
 ## <a name="property-value"></a>Eigenschaftswert
 
-Ein **boolescher** Wert, der **true** empfängt, wenn das Element durchsucht werden kann, andernfalls **false** .
+Ein **boolescher Wert,** der **TRUE empfängt,** wenn das Element durchsucht werden kann, oder **false,** wenn dies nicht der Fall ist.
 
 ## <a name="examples"></a>Beispiele
 
-Im folgenden Beispiel wird **IsBrowsable** verwendet, um den durchsuchbaren Zustand des Windows-Ordners zu bestimmen. Die richtige Verwendung wird für JScript, VBScript und Visual Basic angezeigt.
+Im folgenden Beispiel wird **IsBrowsable** verwendet, um den durchsetzbaren Zustand des Ordners Windows ermitteln. Die richtige Verwendung wird für JScript, VBScript und Visual Basic.
 
-JScript
+JScript:
 
 
 ```JScript
@@ -73,7 +73,7 @@ JScript
 
 
 
-VBScript
+Vbscript:
 
 
 ```VB
@@ -142,17 +142,17 @@ End Sub
 
 
 
-## <a name="requirements"></a>Requirements (Anforderungen)
+## <a name="requirements"></a>Anforderungen
 
 
 
 | Anforderung | Wert |
 |-------------------------------------|----------------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional, Windows XP \[ Desktop-Apps\]<br/>                                         |
+| Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional nur Windows \[ XP-Desktop-Apps\]<br/>                                         |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                                                           |
-| Header<br/>                   | <dl> <dt>Shldisp. h</dt> </dl>                           |
-| IDL<br/>                      | <dl> <dt>Shldisp. idl</dt> </dl>                         |
-| DLL<br/>                      | <dl> <dt>Shell32.dll (Version 4,71 oder höher)</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Shldisp.h</dt> </dl>                           |
+| Idl<br/>                      | <dl> <dt>Shldisp.idl</dt> </dl>                         |
+| DLL<br/>                      | <dl> <dt>Shell32.dll (Version 4.71 oder höher)</dt> </dl> |
 
 
 

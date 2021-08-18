@@ -1,17 +1,17 @@
 ---
 description: Das folgende Makro wird mit Bitmaps verwendet.
 ms.assetid: 8781bbf4-89fe-4212-b9df-e5b5cb07528c
-title: Bitmap-Makros
+title: Bitmapmakros
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: d03f46311db88a59544d45bb8c3414f0ab0a022e
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: f91e0e5ff97b6b18d6f7d94fb95790398623bca13dd537328b7df5d287a44ccd
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104978817"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119038248"
 ---
-# <a name="bitmap-macros"></a>Bitmap-Makros
+# <a name="bitmap-macros"></a>Bitmapmakros
 
 Das folgende Makro wird mit Bitmaps verwendet.
 

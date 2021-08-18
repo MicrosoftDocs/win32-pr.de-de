@@ -1,22 +1,22 @@
 ---
-title: Beispiel Code zum Erstellen eines Benutzers
-description: Dieses Thema enthält Codebeispiele, in denen ein Benutzer in einer Domäne erstellt wird, die von Active Directory Domain Services gesteuert wird.
+title: Beispielcode zum Erstellen eines Benutzers
+description: Dieses Thema enthält Codebeispiele, die einen Benutzer in einer Domäne erstellen, die von Active Directory Domain Services.
 ms.assetid: a2e1be50-0936-4e6b-a712-637156f63be6
 ms.tgt_platform: multiple
 keywords:
-- Active Directory Beispiele Active Directory, Erstellen eines Benutzers
+- 'Active Directory-Beispiele: Active Directory, Erstellen eines Benutzers'
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: ec7f6c5358e72bda444c84ddc407728e4062b3f0
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: 2dca0390bc53b8e72eb2efc185a0ebfb9dc553f233c425e72581d5d67676e690
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "104036370"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118962339"
 ---
-# <a name="example-code-for-creating-a-user"></a>Beispiel Code zum Erstellen eines Benutzers
+# <a name="example-code-for-creating-a-user"></a>Beispielcode zum Erstellen eines Benutzers
 
-Dieses Thema enthält Codebeispiele, in denen ein Benutzer in einer Domäne erstellt wird, die von Active Directory Domain Services gesteuert wird.
+Dieses Thema enthält Codebeispiele, die einen Benutzer in einer Domäne erstellen, die von Active Directory Domain Services.
 
 
 ```VB
@@ -373,9 +373,9 @@ HRESULT CreateUserFromDirObject(LPCWSTR pwszContainerDN,
 
 
 
- 
+ 
 
- 
+ 
 
 
 

@@ -1,6 +1,6 @@
 ---
-description: Weitere Informationen finden Sie in der columnstream. ITAG-Eigenschaft.
-title: Columnstream. ITAG (Eigenschaft)
+description: 'Weitere Informationen zu: ColumnStream.Itag-Eigenschaft'
+title: ColumnStream.Itag-Eigenschaft
 TOCTitle: 'Itag property '
 ms:assetid: P:Microsoft.Isam.Esent.Interop.ColumnStream.Itag
 ms:mtpsurl: https://msdn.microsoft.com/library/microsoft.isam.esent.interop.columnstream.itag(v=EXCHG.10)
@@ -26,19 +26,19 @@ api_type:
 api_location:
 - Microsoft.Isam.Esent.Interop.dll
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: 4ea3a6cab067665ec1aa69a6f473d82ab1c656f4
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 426dc67c40dfd14773bfb2c0d09e0d1be019921501e0908c1a38e6d330e2925b
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106352334"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118982660"
 ---
-# <a name="columnstreamitag-property"></a>Columnstream. ITAG (Eigenschaft)
+# <a name="columnstreamitag-property"></a>ColumnStream.Itag-Eigenschaft
 
-Ruft das ITAG der Spalte ab oder legt es fest.
+Ruft den Itag der Spalte ab oder legt ihn fest.
 
-**Namespace:**  [Microsoft. ISAM. ESENT. Interop](./microsoft.isam.esent.interop-namespace.md)  
-**Assembly:**  Microsoft. ISAM. ESENT. Interop (in Microsoft.Isam.Esent.Interop.dll)
+**Namespace:**  [Microsoft.Isam.Esent.Interop](./microsoft.isam.esent.interop-namespace.md)  
+**Assembly:**  Microsoft.Isam.Esent.Interop (in Microsoft.Isam.Esent.Interop.dll)
 
 ## <a name="syntax"></a>Syntax
 
@@ -62,14 +62,14 @@ public int Itag { get; set; }
 
 #### <a name="property-value"></a>Eigenschaftswert
 
-Typ: [System. Int32](/dotnet/api/system.int32)  
+Typ: [System.Int32](/dotnet/api/system.int32)  
 
 ## <a name="see-also"></a>Siehe auch
 
-#### <a name="reference"></a>Referenz
+#### <a name="reference"></a>Verweis
 
-[Columnstream-Klasse](./columnstream-class.md)
+[ColumnStream-Klasse](./columnstream-class.md)
 
-[Columnstream-Member](./columnstream-members.md)
+[ColumnStream-Elemente](./columnstream-members.md)
 
-[Microsoft. ISAM. ESENT. Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)
+[Microsoft.Isam.Esent.Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)

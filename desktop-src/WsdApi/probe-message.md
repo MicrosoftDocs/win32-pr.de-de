@@ -1,35 +1,35 @@
 ---
-description: Eine WS-Discovery Nachricht, die von einem Client für die Suche nach Diensten im Netzwerk nach Diensttyp verwendet wird.
+description: Eine WS-Discovery Nachricht, die von einem Client verwendet wird, um nach Diensten im Netzwerk nach Diensttyp zu suchen.
 ms.assetid: a0ede1d9-2e13-4d5e-8ccd-9e0c0217cac7
-title: Testnachricht
+title: Testmeldung
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 913c163be8d82297a642b1a97a7d28e0c403ca08
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: abaf4b397abec699dd0a116fe5cddd97578543f917a7994287f5000e17079def
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104131136"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119130632"
 ---
-# <a name="probe-message"></a>Testnachricht
+# <a name="probe-message"></a>Testmeldung
 
-Eine Testnachricht ist eine WS-Discovery Nachricht, die von einem Client für die Suche nach Diensten im Netzwerk nach Diensttyp verwendet wird. Weitere Informationen zu Testnachrichten finden Sie im Abschnitt 5,2 der [WS-Discovery-Spezifikation](https://specs.xmlsoap.org/ws/2005/04/discovery/ws-discovery.pdf).
+Eine Testnachricht ist eine WS-Discovery Nachricht, die von einem Client verwendet wird, um nach Diensten im Netzwerk nach Diensttyp zu suchen. Weitere Informationen zu Testmeldungen finden Sie in Abschnitt 5.2 der [WS-Discovery-Spezifikation.](https://specs.xmlsoap.org/ws/2005/04/discovery/ws-discovery.pdf)
 
-Eine Testnachricht wird von UDP-Multicast an Port 3702 gesendet. Unicasttestnachrichten werden nicht unterstützt.
+Eine Testnachricht wird von UDP Multicast an Port 3702 gesendet. Unicasttestnachrichten werden nicht unterstützt.
 
-DPWS-Clients senden Testnachrichten. In der folgenden Liste werden Szenarien angezeigt, in denen WSDAPI eine Testnachricht sendet.
+DPWS-Clients senden Testnachrichten. Die folgende Liste zeigt Szenarien, in denen WSDAPI eine Testnachricht sendet.
 
--   Funktions Ermittlungs Clients senden Testnachrichten.
--   WSDAPI-Clients, die [**iwsdiscoveryprovider:: searchbyaddress**](/windows/desktop/api/WsdDisco/nf-wsddisco-iwsdiscoveryprovider-searchbyaddress) aufrufen, senden Testnachrichten.
--   WSDAPI-Clients, die [**iwsdiscoveryprovider:: searchbytype**](/windows/desktop/api/WsdDisco/nf-wsddisco-iwsdiscoveryprovider-searchbytype) aufrufen, senden Testnachrichten.
--   Anwendungen, die die gesteuerte Ermittlung verwenden, senden Testnachrichten über HTTP oder HTTPS.
+-   Funktionsermittlungsclients senden Testnachrichten.
+-   WSDAPI-Clients, die [**IWSDiscoveryProvider::SearchByAddress aufrufen,**](/windows/desktop/api/WsdDisco/nf-wsddisco-iwsdiscoveryprovider-searchbyaddress) senden Testnachrichten.
+-   WSDAPI-Clients, die [**IWSDiscoveryProvider::SearchByType**](/windows/desktop/api/WsdDisco/nf-wsddisco-iwsdiscoveryprovider-searchbytype) aufrufen, senden Testnachrichten.
+-   Anwendungen, die die gerichtete Ermittlung verwenden, senden Testnachrichten über HTTP oder HTTPS.
 
 > [!Note]  
-> Dieses Thema zeigt eine DPWS-Beispiel Nachricht, die von WSDAPI-Clients und-Hosts generiert wurde. WSDAPI analysiert und akzeptiert andere DPWS-kompatible Nachrichten, die nicht diesem Beispiel entsprechen. Verwenden Sie dieses Beispiel nicht zum Überprüfen der DPWS-Interoperabilität. Verwenden Sie stattdessen das [WSDAPI-grundlegende Interoperabilitäts Tool (wsdbit)](https://msdn.microsoft.com/library/cc264250.aspx) .
+> In diesem Thema wird eine DPWS-Beispielnachricht gezeigt, die von WSDAPI-Clients und -Hosts generiert wird. WSDAPI analysiert und akzeptiert andere DPWS-kompatible Nachrichten, die diesem Beispiel nicht entsprechen. Verwenden Sie dieses Beispiel nicht, um die DPWS-Interoperabilität zu überprüfen. Verwenden Sie stattdessen das [WSDAPI Basic Interoperability Tool (WSDBIT).](https://msdn.microsoft.com/library/cc264250.aspx)
 
  
 
-Die folgende SOAP-Nachricht zeigt eine Beispiel Testnachricht an.
+Die folgende SOAP-Nachricht zeigt eine Beispieltestmeldung.
 
 ``` syntax
 <?xml version="1.0" encoding="utf-8" ?>
@@ -56,7 +56,7 @@ Die folgende SOAP-Nachricht zeigt eine Beispiel Testnachricht an.
 </soap:Body>
 ```
 
-Eine Testnachricht weist die folgenden Schwerpunkt Punkte auf.
+Eine Testmeldung weist die folgenden Fokuspunkte auf.
 
 
 
@@ -70,7 +70,7 @@ Eine Testnachricht weist die folgenden Schwerpunkt Punkte auf.
 <tr class="header">
 <th>Fokuspunkt</th>
 <th>XML</th>
-<th>BESCHREIBUNG</th>
+<th>Beschreibung</th>
 </tr>
 </thead>
 <tbody>
@@ -79,19 +79,19 @@ Eine Testnachricht weist die folgenden Schwerpunkt Punkte auf.
 <td><pre class="syntax" data-space="preserve"><code><wsa:Action>
     https://schemas.xmlsoap.org/ws/2005/04/discovery/Probe
 </wsa:Action></code></pre></td>
-<td>Die Aktion SOAP testen identifiziert die Nachricht als Testnachricht.</td>
+<td>Die SOAP-Aktion Probe identifiziert die Nachricht als Testnachricht.</td>
 </tr>
 <tr class="even">
 <td>Meldungs-ID</td>
 <td><pre class="syntax" data-space="preserve"><code><wsa:MessageID>
     urn:uuid:29cf10da-5c41-4d55-b184-5ee15e38ce23
 </wsa:MessageID></code></pre></td>
-<td>Enthält die Nachrichten-ID, auf die vom RelatesTo-Element in einer <a href="probematches-message.md">Probe Matches</a> -Meldung verwiesen wird.</td>
+<td>Enthält den Nachrichtenbezeichner, auf den das RelatesTo-Element in einer <a href="probematches-message.md">ProbeMatches-Nachricht</a> verweist.</td>
 </tr>
 <tr class="odd">
 <td>Typen</td>
 <td><pre class="syntax" data-space="preserve"><code><wsd:Types>wsdp:Device</wsd:Types></code></pre></td>
-<td>Enthält die WS-Discovery Typen, für die der Client sucht. Dieses Element darf nicht leer sein.</td>
+<td>Enthält die WS-Discovery Typen, nach denen der Client sucht. Dieses Element darf nicht leer sein.</td>
 </tr>
 </tbody>
 </table>
@@ -104,10 +104,10 @@ Eine Testnachricht weist die folgenden Schwerpunkt Punkte auf.
 
 <dl> <dt>
 
-[Ermittlungs-und metadatenaustauschnachrichten](discovery-and-metadata-exchange-message-patterns.md)
+[Ermittlungs- und Metadaten-Exchange-Meldungen](discovery-and-metadata-exchange-message-patterns.md)
 </dt> <dt>
 
-[Probe Matches-Meldung](probematches-message.md)
+[ProbeMatches-Nachricht](probematches-message.md)
 </dt> </dl>
 
  

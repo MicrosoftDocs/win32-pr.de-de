@@ -1,27 +1,27 @@
 ---
-title: Beispiel Code für das Erstellen einer Klasse
+title: Beispielcode zum Erstellen einer Klasse
 description: Zeigt, wie ein classSchema-Objekt im ADSI-Cache erstellt wird.
 ms.assetid: 021a0c7b-0e08-4d7a-af9a-9e3e868b90b6
 ms.tgt_platform: multiple
 keywords:
-- Beispiel Code für das Erstellen einer Klasse
-- Erstellen einer Klasse, Beispiel Code AD
+- Beispielcode zum Erstellen einer Klasse
+- Erstellen einer Klasse, Beispielcode-AD
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: cef1ca029bd9e53a6fee401168a83294eb2b2915
-ms.sourcegitcommit: 803f3ccd65bdefe36bd851b9c6e7280be9489016
+ms.openlocfilehash: 5a53b1cebfb443e1fa258c80a2e74bb0634496c13a5f3cca3f6c1667aeada141
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "104101447"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118962449"
 ---
-# <a name="example-code-for-creating-a-class"></a>Beispiel Code für das Erstellen einer Klasse
+# <a name="example-code-for-creating-a-class"></a>Beispielcode zum Erstellen einer Klasse
 
-Im folgenden C-und C++-Codebeispiel wird gezeigt, wie ein [**classSchema**](/windows/desktop/ADSchema/c-classschema) -Objekt im ADSI-Cache erstellt wird.
+Das folgende C- und C++-Codebeispiel zeigt, wie ein [**classSchema-Objekt**](/windows/desktop/ADSchema/c-classschema) im ADSI-Cache erstellt wird.
 
-Die Beispiel Funktion " **feateclass** " zeigt, wie das [**classSchema**](/windows/desktop/ADSchema/c-classschema) -Objekt erstellt wird, und gibt einen [**IADs**](/windows/desktop/api/iads/nn-iads-iads) -Zeiger auf das neue Objekt zurück. Beachten Sie, dass von " **anateclass** " nicht " [**IADs:: SetInfo**](/windows/desktop/api/iads/nf-iads-iads-setinfo) " aufgerufen wird, um das neue **classSchema** -Objekt in das Verzeichnis zu übertragen. Der Aufrufer muss den Aufruf mithilfe des zurückgegebenen Zeigers ausführen.
+Die **CreateClass-Beispielfunktion** zeigt, wie das [**classSchema-Objekt**](/windows/desktop/ADSchema/c-classschema) erstellt wird, und gibt einen [**IADs-Zeiger**](/windows/desktop/api/iads/nn-iads-iads) auf das neue Objekt zurück. Beachten Sie, **dass CreateClass** nicht [**IADs::SetInfo**](/windows/desktop/api/iads/nf-iads-iads-setinfo) aufruft, um das neue **classSchema-Objekt** in das Verzeichnis zu commiten. Der Aufrufer muss den Aufruf mit dem zurückgegebenen Zeiger machen.
 
-Das folgende **bytestovariantarray** -Codebeispiel zeigt eine Utility-Funktion, die eine Oktett-Zeichenfolge in ein Variant-Array packt.
+Das folgende **BytesToVariantArray-Codebeispiel** zeigt eine Hilfsfunktion, die eine Oktettzeichenfolge in ein Variantarray packt.
 
 
 ```C++
@@ -390,6 +390,6 @@ HRESULT BytesToVariantArray(
 
 
 
- 
+ 
 
- 
+ 

@@ -3,39 +3,39 @@ title: Grundlagen der Anwendung
 description: Grundlagen der Anwendung
 ms.assetid: 5593d27e-e97d-4f03-99ff-aee856abec8e
 keywords:
-- Windows Media-Format-SDK, DRM-Anwendungs Grundlagen
-- Digital Rights Management (DRM), Grundlagen der Anwendung
-- DRM (Digital Rights Management), Grundlagen der Anwendung
-- Digital Rights Management (DRM), wmdrmstartup-Funktion
-- DRM (Digital Rights Management), wmdrmstartup-Funktion
-- Wmdrmstartup
+- Windows Media Format SDK, GRUNDLAGEN DER DRM-Anwendung
+- Digitale Rechteverwaltung (Digital Rights Management, DRM), Anwendungsgrundlage
+- DRM (Digital Rights Management), Anwendungsgrundlage
+- Digital Rights Management (DRM), WMDRMStartup-Funktion
+- DRM (Digital Rights Management), WMDRMStartup-Funktion
+- WMDRMStartup
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 182a9e54e077c174c4f4cbe74ba392aa44ce5112
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: 8356160565754764ac71cb152799a0fd9d1530e6e6969dc7a56e203b7504645d
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "104206310"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119086206"
 ---
 # <a name="application-basics"></a>Grundlagen der Anwendung
 
-Für jede Anwendung, die die erweiterten APIs des Windows Media DRM-Clients verwendet, müssen zusätzliche Verarbeitungsschritte durchgeführt werden. In diesem Thema werden die Anforderungen für eine einfache Anwendung beschrieben.
+Es gibt einige zusätzliche Verarbeitungsvorgänge, die Sie für jede Anwendung ausführen müssen, die die erweiterten APIs Windows Media DRM-Client verwendet. In diesem Thema werden die Anforderungen für eine einfache Anwendung beschrieben.
 
-Zunächst müssen Sie die erweiterten APIs des Windows Media DRM-Clients initialisieren, indem Sie die [**wmdrmstartup**](wmdrmstartup.md) -Funktion aufrufen. Bei den Objekten des SDK handelt es sich um COM-Objekte, aber Sie müssen **CoInitialize** nicht aufrufen, da die **wmdrmstatuup** -Funktion com für Sie initialisiert.
+Zunächst müssen Sie die erweiterten APIs Windows Media DRM-Clients initialisieren, indem Sie die [**WMDRMStartup-Funktion**](wmdrmstartup.md) aufrufen. Die Objekte des SDK sind COM-Objekte, aber Sie müssen **CoIntialize** nicht aufrufen, da die **WMDRMStatup-Funktion** COM für Sie initialisiert.
 
 > [!Note]  
-> Das Windows Media-Format SDK verwendet nur eine Teilmenge von com. Wenn Sie also COM-Objekte verwenden, die nicht in der erweiterten API des Windows Media DRM-Clients verwendet werden, müssen Sie immer noch **CoInitialize** aufruft.
+> Das Windows Media Format SDK verwendet nur eine Teilmenge von COM. Wenn Sie also andere COM-Objekte als die in der erweiterten API des Windows Media DRM-Clients verwenden, müssen Sie weiterhin **CoInitialize aufrufen.**
 
- 
+ 
 
-Alle Objekte der erweiterten APIs des Windows Media DRM-Clients werden mithilfe von Hilfsfunktionen und-Methoden erstellt. Sie müssen niemals **cokreateinstance** aufrufen, um ein Objekt zu erstellen. Die erste Schnittstelle zum Instanziieren für jede Anwendung, die das SDK verwendet, ist [**iwmdrmprovider**](iwmdrmprovider.md), das Sie verwenden können, um alle anderen Basis Schnittstellen zu instanziieren. Um eine Instanz von **iwmdrmprovider** abzurufen, müssen Sie entweder [**wmdrmkreateprovider**](wmdrmcreateprovider.md) oder [**wmdrmkreateprotectedprovider**](wmdrmcreateprotectedprovider.md)aufrufen. Der Unterschied zwischen diesen Funktionen besteht darin, dass **wmdrmkreateprovider** ein Objekt erstellt, das wiederum nur Objekte erstellen kann, die keine Methoden unterstützen, die die stubbibliothek benötigen.
+Alle Objekte der erweiterten APIs des Windows Media DRM-Clients werden mit Hilfsfunktionen und -methoden erstellt. Sie müssen nicht **CoCreateInstance aufrufen, um** ein Objekt zu erstellen. Die erste Schnittstelle zum Instanziieren für jede Anwendung, die das SDK verwendet, ist [**IWMDRMProvider,**](iwmdrmprovider.md)mit dem Sie alle anderen Basisschnittstellen instanziieren können. Um eine Instanz von **IWMDRMProvider zu erhalten,** müssen Sie [**entweder WMDRMCreateProvider**](wmdrmcreateprovider.md) oder [**WMDRMCreateProtectedProvider aufrufen.**](wmdrmcreateprotectedprovider.md) Der Unterschied zwischen diesen Funktionen ist, dass **WMDRMCreateProvider** ein Objekt erstellt, das wiederum nur Objekte erstellen kann, die keine Methoden unterstützen, die die Stubbibliothek erfordern.
 
-Nachdem Sie über eine Instanz von **iwmdrmprovider** verfügen, können Sie die anderen Objekte erstellen, die Sie benötigen, indem Sie [**iwmdrmprovider:: CreateObject**](iwmdrmprovider-createobject.md)aufrufen.
+Nachdem Sie über eine Instanz von **IWMDRMProvider** verfügen, können Sie die anderen benötigten Objekte erstellen, indem Sie [**IWMDRMProvider::CreateObject aufrufen.**](iwmdrmprovider-createobject.md)
 
-Wenn Sie bereit sind, die Anwendung zu beenden, müssen Sie die DRM-Subsystem-Ressourcen freigeben, indem Sie die [**wmdrmshutdown**](wmdrmshutdown.md) -Funktion aufrufen. Diese Funktion wird auch com für Sie heruntergefahren.
+Wenn Sie bereit sind, Ihre Anwendung zu beenden, müssen Sie die DRM-Subsystemressourcen durch Aufrufen der [**WMDRMShutdown-Funktion**](wmdrmshutdown.md) frei geben. Diese Funktion fährt auch COM für Sie herunter.
 
-Im folgenden Codebeispiel wird veranschaulicht, wie Sie eine Anwendung, die die erweiterten APIs des Windows Media DRM-Clients verwendet, initialisieren und beenden.
+Im folgenden Codebeispiel wird veranschaulicht, wie eine Anwendung initialisiert und beendet wird, die die erweiterten APIs Windows Media DRM-Client verwendet.
 
 
 ```C++
@@ -88,12 +88,12 @@ void main(void)
 
 <dl> <dt>
 
-[**Einstieg**](drm-getting-started.md)
+[**Erste Schritte**](drm-getting-started.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

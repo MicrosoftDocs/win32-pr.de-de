@@ -1,9 +1,9 @@
 ---
-title: Effekte. Zuweisung
-description: Mit dem Attribut "attribuwall" wird ein Wert angegeben oder abgerufen, der angibt, ob alle Visualisierungen eingeschlossen werden sollen, die in der Registrierung enthalten sind.
+title: EFFECTS.allowAll
+description: Das attribut allowAll gibt einen Wert an, der angibt, ob alle Visualisierungen, die sich in der Registrierung befinden, eingeschlossen werden sollen, oder ruft diesen ab.
 ms.assetid: 8552cc06-05b2-4049-ba7d-f6bd770449e0
 keywords:
-- Effekte. Zuweisung-Windows-Media Player
+- EFFECTS.allowAll Windows Media Player
 topic_type:
 - apiref
 api_name:
@@ -12,16 +12,16 @@ api_type:
 - NA
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 56760021fe34522072677e9524fe6636e519e20f
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: c7a87aa8336e3961b31716c8d6bbfaa6aee71374a0f3c6e17b644a47136df550
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106369447"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118996845"
 ---
-# <a name="effectsallowall"></a>Effekte. Zuweisung
+# <a name="effectsallowall"></a>EFFECTS.allowAll
 
-Mit dem Attribut " **attribuwall** " wird ein Wert angegeben oder abgerufen, der angibt, ob alle Visualisierungen eingeschlossen werden sollen, die in der Registrierung enthalten sind.
+Das **attribut allowAll** gibt einen Wert an, der angibt, ob alle Visualisierungen in die Registrierung eingeschlossen werden sollen, oder ruft diesen ab.
 
 ``` syntax
         elementID.allowAll
@@ -29,22 +29,22 @@ Mit dem Attribut " **attribuwall** " wird ein Wert angegeben oder abgerufen, der
 
 ## <a name="possible-values"></a>Mögliche Werte
 
-Dieses Attribut ist ein **boolescher** Wert mit Lese-/Schreibzugriff.
+Dieses Attribut ist ein **boolescher** Lese-/Schreib-Wert.
 
 
 
 | Wert | BESCHREIBUNG                                                         |
 |-------|---------------------------------------------------------------------|
-| true  | Standard. Ermöglicht das Radfahren aller Visualisierungen auf dem System des Benutzers. |
-| false | Beschränkt das Radfahren auf Visualisierungen, die in **Effekten** -Tags angezeigt werden. |
+| true  | Standard. Ermöglicht das Durchlaufen aller Visualisierungen im System des Benutzers. |
+| false | Schränkt das Durchlaufen von Visualisierungen ein, die in **EFFECTS-Tags** angezeigt werden. |
 
 
 
  
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Wenn dieses Attribut auf false festgelegt ist, können nur die Visualisierungen, die in **Effects** -Tags angezeigt werden, mithilfe von Previous/Next durchlaufen werden. Wenn der Wert auf true festgelegt ist, können alle Visualisierungen, die auf dem System des Benutzers registriert sind, durchlaufen werden. Wenn Sie auf true festgelegt ist und Sie alle Visualisierungen innerhalb von **Effects** -Tags angeben, werden die in diesen Tags angegebenen Attribute auf alle Visualisierungen im System des Benutzers angewendet.
+Wenn dieses Attribut auf FALSE festgelegt ist, können nur die Visualisierungen, die in **EFFECTS-Tags** angezeigt werden, mithilfe von previous/next durchlaufen werden. Wenn sie auf TRUE festgelegt ist, können alle Visualisierungen, die auf dem System des Benutzers registriert sind, durchlaufen werden. Wenn sie auf TRUE festgelegt ist und Sie visualisierungen in **EFFECTS-Tags** angeben, werden die in diesen Tags angegebenen Attribute auf alle Visualisierungen im System des Benutzers angewendet.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -52,7 +52,7 @@ Wenn dieses Attribut auf false festgelegt ist, können nur die Visualisierungen,
 
 | Anforderung | Wert |
 |--------------------|------------------------------------------------------|
-| Version<br/> | Windows Media Player, Version 7,0 oder höher<br/> |
+| Version<br/> | Windows Media Player Version 7.0 oder höher<br/> |
 
 
 
@@ -60,7 +60,7 @@ Wenn dieses Attribut auf false festgelegt ist, können nur die Visualisierungen,
 
 <dl> <dt>
 
-[**Effects-Element**](effects-element.md)
+[**EFFECTS-Element**](effects-element.md)
 </dt> </dl>
 
  

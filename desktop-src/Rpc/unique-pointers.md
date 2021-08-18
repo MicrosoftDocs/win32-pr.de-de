@@ -1,19 +1,19 @@
 ---
 title: Eindeutige Zeiger
-description: In C-Programmen können mehr als ein Zeiger die Daten Adresse enthalten.
+description: In C-Programmen können mehr als ein Zeiger die Adresse der Daten enthalten.
 ms.assetid: da4f466d-2c59-4e48-b6c5-1a49b933621a
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 3fc8cf9a45965c82416ec838f8598c2796ba621a
-ms.sourcegitcommit: 592c9bbd22ba69802dc353bcb5eb30699f9e9403
+ms.openlocfilehash: 3adb39d2505daa623f23f47c936fb73d0ecff6e0ad7749c951f9926fd66f33d5
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "104039026"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119010992"
 ---
 # <a name="unique-pointers"></a>Eindeutige Zeiger
 
-In C-Programmen können mehr als ein Zeiger die Daten Adresse enthalten. Die Zeiger werden als [*Alias*](a-glos.md) für die Daten bezeichnet. Aliase werden auch erstellt, wenn Zeiger auf deklarierte Variablen zeigen. Das folgende Code Fragment veranschaulicht beide Methoden der Aliasing:
+In C-Programmen können mehr als ein Zeiger die Adresse der Daten enthalten. Die Zeiger sollen einen [*Alias*](a-glos.md) für die Daten erstellen. Aliase werden auch erstellt, wenn Zeiger auf deklarierte Variablen zeigen. Das folgende Codefragment veranschaulicht beide Methoden des Aliasings:
 
 
 ```C++
@@ -29,7 +29,7 @@ int *ipAnotherIntegerPointer = ipAnIntegerPointer;
 
 
 
-In einem typischen C-Programm können Sie mithilfe der folgenden Definition eine binäre Struktur angeben:
+In einem typischen C-Programm können Sie eine binäre Struktur mit der folgenden Definition angeben:
 
 
 ```C++
@@ -45,22 +45,22 @@ TREETYPE * troot;
 
 
 
-Mehr als ein Zeiger kann auf den Inhalt eines Struktur Knotens zugreifen. Dies eignet sich im Allgemeinen für nicht verteilte Anwendungen. Dieser Programmierstil generiert jedoch komplizierteren RPC-Unterstützungs Code. Die Client-und serverstubdateien erfordern zusätzlichen Code zum Verwalten der Daten und Zeiger. Der zugrunde liegende Stubcode muss die verschiedenen Zeiger auf die Adressen auflösen und ermitteln, welche Kopie der Daten die aktuellste Version darstellt.
+Mehrere Zeiger können auf den Inhalt eines Strukturknotens zugreifen. Dies ist in der Regel für nicht verteilte Anwendungen in Ordnung. Dieser Programmierstil generiert jedoch komplizierteren RPC-Unterstützungscode. Die Client- und Serverstubs erfordern den zusätzlichen Code, um die Daten und Zeiger zu verwalten. Der zugrunde liegende Stubcode muss die verschiedenen Zeiger auf die Adressen auflösen und bestimmen, welche Kopie der Daten die neueste Version darstellt.
 
-Die Verarbeitungs Menge kann reduziert werden, wenn Sie sicherstellen, dass der Zeiger die einzige Möglichkeit ist, auf diesen Speicherbereich zuzugreifen. Der Zeiger kann noch viele der Features eines C-Zeigers aufweisen. Beispielsweise kann er zwischen **null** -Werten und nicht-**null** -Werten wechseln oder unverändert bleiben. Dies wird anhand des folgenden Beispiels veranschaulicht. Der Zeiger ist vor dem-Befehl **null** und zeigt auf eine gültige Zeichenfolge nach dem-Befehl:
+Die Verarbeitungsmenge kann reduziert werden, wenn Sie garantieren, dass Ihr Zeiger die einzige Möglichkeit ist, mit der die Anwendung auf diesen Speicherbereich zugreifen kann. Der Zeiger kann weiterhin viele der Features eines C-Zeigers aufweisen. Sie kann z. B. zwischen **NULL-** und **Nicht-NULL-Werten** wechseln oder gleich bleiben. Dies wird anhand des folgenden Beispiels veranschaulicht. Der Zeiger **ist** null vor dem Aufruf und zeigt nach dem Aufruf auf eine gültige Zeichenfolge:
 
-![Zeiger Wechsel zwischen NULL-Werten und nicht-NULL-Werten](images/prog-a01.png)
+![Zeigerwechsel zwischen NULL- und Nicht-NULL-Werten](images/prog-a01.png)
 
-Standardmäßig wendet der mittlerer l-Compiler das \[ [eindeutige](/windows/desktop/Midl/unique) \] Zeiger Attribut auf alle Zeiger an, die keine Parameter sind. Diese Standardeinstellung kann mit dem \[ [Zeiger \_ default](/windows/desktop/Midl/pointer-default) -Attribut geändert werden \] .
+Standardmäßig wendet der MIDL-Compiler das \[ [eindeutige](/windows/desktop/Midl/unique) \] Zeigerattribut auf alle Zeiger an, die keine Parameter sind. Diese Standardeinstellung kann mit dem \[ [ \_ Zeigerstandardattribut](/windows/desktop/Midl/pointer-default) geändert \] werden.
 
-Ein eindeutiger Zeiger weist die folgenden Eigenschaften auf:
+Ein eindeutiger Zeiger weist die folgenden Merkmale auf:
 
--   Der Wert kann **null** sein.
--   Sie kann während des-Aufrufes von **null** in ungleich **null** wechseln. Wenn der Wert in einen nicht-**null**-Wert geändert wird, wird bei der Rückgabe neuer Speicher zugeordnet.
--   Sie kann während des Aufrufes von ungleich **null** zu **null** wechseln. Wenn der Wert in **null** geändert wird, ist die Anwendung dafür verantwortlich, den Arbeitsspeicher freizugeben.
--   Der Wert kann von einem nicht-**null** -Wert in einen anderen Wert geändert werden.
--   Auf den Speicher, auf den ein eindeutiger Zeiger verweist, kann von keinem anderen Zeiger oder Namen im Vorgang zugegriffen werden.
--   Rückgabe Daten werden in den vorhandenen Speicher geschrieben, wenn der Zeiger nicht den Wert **null** hat.
+-   Sie kann den Wert **NULL** aufweisen.
+-   Sie kann während des Aufrufs von **NULL** in **Nicht-NULL** geändert werden. Wenn sich der Wert in ungleich **NULL** ändert, wird bei der Rückgabe neuer Arbeitsspeicher zugeordnet.
+-   Sie kann während des Aufrufs von ungleich **NULL** in **NULL** geändert werden. Wenn der Wert in **NULL** geändert wird, ist die Anwendung für das Freigeben des Arbeitsspeichers verantwortlich.
+-   Der Wert kann von einem Wert ungleich **NULL** in einen anderen geändert werden.
+-   Auf den Speicher, auf den ein eindeutiger Zeiger zeigt, kann von keinem anderen Zeiger oder Namen im Vorgang zugegriffen werden.
+-   Rückgabedaten werden in den vorhandenen Speicher geschrieben, wenn der Zeiger nicht über den Wert **NULL verfügt.**
 
 Im folgenden Beispiel wird veranschaulicht, wie ein eindeutiger Zeiger definiert wird.
 
@@ -76,8 +76,8 @@ interface RefPtrInterface
 }
 ```
 
-In diesem Beispiel ist der Parameter " *Ach* " ein eindeutiger Zeiger auf Zeichendaten, die an einen Server gesendet werden, der mit der remotefn-Routine verarbeitet wird.
+In diesem Beispiel ist der -Parameter *ein* eindeutiger Zeiger auf Zeichendaten, die an einen Server gesendet werden, der mit der RemoteFn-Routine verarbeitet werden soll.
 
- 
+ 
 
- 
+ 

@@ -1,19 +1,19 @@
 ---
-title: Iagentcommandex getvoicecaption
-description: Iagentcommandex getvoicecaption
+title: IAgentCommandEx GetVoiceCaption
+description: IAgentCommandEx GetVoiceCaption
 ms.assetid: a81accfd-c137-4347-8ead-4ed5e7148751
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: d6f367a7956d1029eae47064a0778264e3b77f5a
-ms.sourcegitcommit: ebd3ce6908ff865f1ef66f2fc96769be0aad82e1
+ms.openlocfilehash: 3d093a971331c6c5cddf467e770dae69960ae0d616ddc9b37863a46d25becb7b
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/19/2020
-ms.locfileid: "104314732"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119105418"
 ---
-# <a name="iagentcommandexgetvoicecaption"></a>Iagentcommandex:: getvoicecaption
+# <a name="iagentcommandexgetvoicecaption"></a>IAgentCommandEx::GetVoiceCaption
 
-\[Der Microsoft-Agent ist ab Windows 7 veraltet und in nachfolgenden Versionen von Windows möglicherweise nicht verfügbar.\]
+\[Microsoft Agent ist ab Version Windows 7 veraltet und in nachfolgenden Versionen von Windows.\]
 
 ``` syntax
 HRESULT GetVoiceCaption(
@@ -21,26 +21,26 @@ HRESULT GetVoiceCaption(
 );
 ```
 
-Ruft die [**voicecaption**](voicecaption-property.md) für einen [**Befehl**](/windows/desktop/lwef/the-command-object)ab.
+Ruft die [**VoiceCaption für einen**](voicecaption-property.md) Befehl [**ab.**](/windows/desktop/lwef/the-command-object)
 
 -   Gibt S \_ OK zurück, um anzugeben, dass der Vorgang erfolgreich war.
 
 <dl> <dt>
 
-<span id="pbszVoiceCaption"></span><span id="pbszvoicecaption"></span><span id="PBSZVOICECAPTION"></span>*pbszvoicecaption*
+<span id="pbszVoiceCaption"></span><span id="pbszvoicecaption"></span><span id="PBSZVOICECAPTION"></span>*pbszVoiceCaption*
 </dt> <dd>
 
-Die Adresse eines BSTR-Werts, der den Wert des [**Beschriftungs**](caption-property.md) Texts empfängt, der für einen [**Befehl**](/windows/desktop/lwef/the-command-object)angezeigt wird.
+Die Adresse eines BSTR, der [](caption-property.md) den Wert des Beschriftungstexts empfängt, der für einen Befehl [**angezeigt wird.**](/windows/desktop/lwef/the-command-object)
 
 </dd> </dl>
 
-Die [**voicecaption**](voicecaption-property.md) ist der Text, der für ein [**Befehls**](/windows/desktop/lwef/the-command-object) Objekt im Fenster "Sprachbefehle" angezeigt wird, wenn die Client Anwendung aktiv ist.
+[**VoiceCaption ist der**](voicecaption-property.md) Text, der für ein [**Command-Objekt**](/windows/desktop/lwef/the-command-object) im Sprachbefehlsfenster angezeigt wird, wenn Ihre Clientanwendung eingabeaktiv ist.
 
 ## <a name="see-also"></a>Weitere Informationen
 
-[**Iagentcommandex:: setvoicecaption**](iagentcommandex--setvoicecaption.md), [**iagentcommand:: SetEnabled**](iagentcommand--setenabled.md), [**iagentcommand:: setVisible**](iagentcommand--setvisible.md), [**iagentcommand:: setvoice**](iagentcommand--setvoice.md), [**iagentcommandsex:: Addex**](iagentcommandsex--addex.md), [**iagentcommandsex:: insertex**](iagentcommandsex--insertex.md), [**iagentcommands:: Add**](iagentcommands--add.md), [**iagentcommands:: Insert**](iagentcommands--insert.md)
+[**IAgentCommandEx::SetVoiceCaption**](iagentcommandex--setvoicecaption.md), [**IAgentCommand::SetEnabled**](iagentcommand--setenabled.md), [**IAgentCommand::SetVisible**](iagentcommand--setvisible.md), [**IAgentCommand::SetVoice**](iagentcommand--setvoice.md), [**IAgentCommandsEx::AddEx**](iagentcommandsex--addex.md), [**IAgentCommandsEx::InsertEx**](iagentcommandsex--insertex.md), [**IAgentCommands::Add**](iagentcommands--add.md), [**IAgentCommands::Insert**](iagentcommands--insert.md)
 
 
- 
+ 
 
- 
+ 

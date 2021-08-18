@@ -1,19 +1,19 @@
 ---
-description: Kontakt zum WPD- \_ \_ Inhaltstyp \_
+description: WPD \_ CONTENT \_ TYPE \_ CONTACT
 ms.assetid: 3ff6191f-d3c0-4bd3-946e-c3fbf68f368c
 title: WPD_CONTENT_TYPE_CONTACT
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: d3fed10e0abb36a482141e5c796f5494b00b99f7
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 6a8354aa444f476e7c0b64d2e3d14d474c6eea02f90e8313c20073db2d0368fc
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106351438"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119083334"
 ---
-# <a name="wpd_content_type_contact"></a>Kontakt zum WPD- \_ \_ Inhaltstyp \_
+# <a name="wpd_content_type_contact"></a>WPD \_ CONTENT \_ TYPE \_ CONTACT
 
-Ein-Objekt, das den Typ als WPD- \_ \_ Inhaltstyp Kontakt beschreibt, \_ stellt persönliche Kontaktdaten dar.
+Ein Objekt, das seinen Typ als WPD \_ CONTENT \_ TYPE CONTACT \_ beschreibt, stellt persönliche Kontaktdaten dar.
 
 Dieser Objekttyp unterstützt die folgenden Eigenschaften.
 
@@ -21,93 +21,93 @@ Dieser Objekttyp unterstützt die folgenden Eigenschaften.
 
 | Eigenschaftsname                                                                                                                   | Erforderlich oder optional                                                           |
 |---------------------------------------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------|
-| [WPD- \_ Objekt- \_ ID](object-properties.md)                                                                          | Erforderlich, schreibgeschützt. Ein Client kann diese Eigenschaft auch zum Zeitpunkt der Erstellung nicht festlegen. |
-| [übergeordnete WPD- \_ Objekt- \_ \_ ID](object-properties.md)                                                           | Erforderlich.                                                                      |
-| [WPD- \_ Objekt \_ Name](object-properties.md)                                                                      | Erforderlich, wenn das-Objekt eine Datei darstellt.                                      |
-| [\_ \_ persistente \_ eindeutige \_ ID für WPD-Objekt](object-properties.md)                                    | Erforderlich, schreibgeschützt. Ein Client kann diese Eigenschaft auch zum Zeitpunkt der Erstellung nicht festlegen. |
-| [WPD- \_ Objekt \_ Format](object-properties.md)                                                                  | Erforderlich.                                                                      |
-| [Inhaltstyp für WPD- \_ Objekt \_ \_](object-properties.md)                                                     | Erforderlich.                                                                      |
-| [WPD- \_ Objekt \_ IsHidden](object-properties.md)                                                              | Erforderlich, wenn das Objekt ausgeblendet ist.                                              |
-| [WPD- \_ Objekt \_ IsSystem](object-properties.md)                                                              | Erforderlich, wenn das Objekt ein Systemobjekt ist (stellt eine Systemdatei dar).          |
-| [WPD- \_ Objekt \_ Größe](object-properties.md)                                                                      | Erforderlich, wenn das Objekt über mindestens eine Ressource verfügt.                              |
-| [\_ \_ ursprünglicher \_ Dateiname \_ des WPD-Objekts](object-properties.md)                                        | Erforderlich, wenn das-Objekt eine Datei darstellt.                                      |
-| [WPD- \_ Objekt \_ nicht \_ verwendbar](object-properties.md)                                                 | Empfohlen, wenn das Objekt nicht für die Verwendung durch das Gerät bestimmt ist.          |
-| [Verweise auf WPD- \_ Objekte \_](object-properties.md)                                                          | Erforderlich, wenn das-Objekt über Verweise auf andere-Objekte verfügt.                        |
-| [WPD- \_ Objekt \_ Schlüsselwörter](object-properties.md)                                                              | Dies ist optional.                                                                      |
-| [WPD- \_ Objekt \_ Synchronisierungs- \_ ID](object-properties.md)                                                               | Dies ist optional.                                                                      |
-| [WPD- \_ Objekt \_ ist DRM- \_ \_ geschützt](object-properties.md)                                            | Erforderlich, wenn das Objekt durch DRM-Technologie geschützt wird.                         |
-| [\_ \_ Erstellungsdatum des WPD-Objekts \_](object-properties.md)                                                     | Dies ist optional.                                                                      |
-| [Datum des WPD- \_ Objekts \_ \_ geändert](object-properties.md)                                                   | Empfohlen.                                                                   |
-| [erstelltes WPD- \_ Objekt \_ Datum \_](object-properties.md)                                                   | Dies ist optional.                                                                      |
-| [\_ \_ zurück \_ Verweise auf WPD-Objekte](object-properties.md)                                                                          | Empfohlen, wenn auf das Objekt von einem anderen Objekt verwiesen wird.                     |
-| [\_ \_ \_ Funktions \_ Objekt- \_ ID des WPD-Objekt Containers](object-properties.md)               | Dies ist optional.                                                                      |
-| [WPD \_ - \_ Objekt \_ generieren \_ der Miniaturansicht aus der \_ Ressource](object-properties.md)           | Dies ist optional.                                                                      |
-| [\_ \_ Anzeige \_ Name des WPD-Kontakts](contact-properties.md)                                                  | Erforderlich.                                                                      |
-| [WPD- \_ Objekt \_ kann \_ Löschen](object-properties.md)                                                                               | Erforderlich, wenn das Objekt nicht gelöscht werden kann.                                      |
-| [Gebiets Schema der WPD- \_ Objekt \_ Sprache \_](object-properties.md)                                                                          | Dies ist optional.                                                                      |
-| [\_ \_ Anzeige \_ Name des WPD-Kontakts](contact-properties.md)                                                                           | Erforderlich.                                                                      |
-| [Vorname des WPD- \_ Kontakts \_ \_](contact-properties.md)                                                      | Empfohlen.                                                                   |
-| [WPD- \_ Kontakt- \_ Middle- \_ Namen](contact-properties.md)                                                  | Empfohlen.                                                                   |
-| [Nachname des WPD- \_ Kontakts \_ \_](contact-properties.md)                                                        | Empfohlen.                                                                   |
-| [WPD- \_ Kontakt \_ Präfix](contact-properties.md)                                                               | Empfohlen.                                                                   |
-| [WPD- \_ Kontakt \_ Suffix](contact-properties.md)                                                               | Empfohlen.                                                                   |
-| [WPD- \_ Kontakt \_ Phonetic- \_ Vorname \_](contact-properties.md)                                   | Dies ist optional.                                                                      |
-| [\_ \_ phonetischer \_ Nachname für WPD-Kontakt \_](contact-properties.md)                                     | Dies ist optional.                                                                      |
-| [\_ \_ persönliche \_ vollständige \_ Post \_ Anschrift für WPD-Kontakt](contact-properties.md)                | Empfohlen.                                                                   |
-| [WPD \_ Contact \_ private \_ Postal \_ Address \_ Zeile 1](contact-properties.md)              | Dies ist optional.                                                                      |
-| [WPD \_ Contact \_ private \_ Postal \_ Address \_ Zeile 2](contact-properties.md)              | Dies ist optional.                                                                      |
-| [WPD \_ Contact \_ private \_ Postal \_ Address \_ City](contact-properties.md)                | Dies ist optional.                                                                      |
-| [\_ \_ persönliche \_ Post \_ Adress \_ Region für WPD-Kontakt](contact-properties.md)            | Dies ist optional.                                                                      |
-| [WPD \_ Contact \_ private \_ Postal \_ Address \_ Postal \_ Code](contact-properties.md) | Dies ist optional.                                                                      |
-| [WPD \_ Contact \_ private \_ Postal \_ Address \_ Land](contact-properties.md)          | Dies ist optional.                                                                      |
-| [WPD \_ Contact \_ Business \_ Full \_ Postal \_ Address](contact-properties.md)                | Dies ist optional.                                                                      |
-| [WPD \_ Contact \_ Business \_ Postal \_ Address \_ Zeile 1](contact-properties.md)              | Dies ist optional.                                                                      |
-| [WPD \_ Contact \_ Business \_ Postal \_ Address \_ Zeile 2](contact-properties.md)              | Dies ist optional.                                                                      |
-| [WPD \_ Contact \_ Business \_ Postal \_ Address \_ City](contact-properties.md)                | Dies ist optional.                                                                      |
-| [WPD- \_ Kontakt \_ Region "Business \_ Postal \_ Address \_ "](contact-properties.md)            | Dies ist optional.                                                                      |
-| [Postleitzahl für WPD- \_ Kontakt \_ \_ Post \_ Anschrift \_ \_](contact-properties.md) | Dies ist optional.                                                                      |
-| [WPD \_ Contact \_ Business \_ Postal \_ Address \_ Land](contact-properties.md)          | Dies ist optional.                                                                      |
-| [WPD \_ kontaktiert \_ andere \_ vollständige \_ Post \_ Anschrift](contact-properties.md)                      | Dies ist optional.                                                                      |
-| [WPD \_ kontaktiert \_ andere \_ Post \_ Anschrift \_ Zeile 1](contact-properties.md)                    | Dies ist optional.                                                                      |
-| [WPD \_ kontaktiert \_ andere \_ Post \_ Anschrift \_ Zeile 2](contact-properties.md)                    | Dies ist optional.                                                                      |
-| [WPD \_ kontaktiert \_ andere \_ Post \_ Anschrift \_ City](contact-properties.md)                      | Dies ist optional.                                                                      |
-| [WPD- \_ Kontakt \_ andere \_ Post \_ Adress \_ Region](contact-properties.md)                  | Dies ist optional.                                                                      |
-| [WPD \_ kontaktiert \_ \_ \_ \_ Postleitzahl für andere Postanschrift \_](contact-properties.md)       | Dies ist optional.                                                                      |
-| [WPD \_ kontaktiert \_ andere \_ Post \_ Anschrift \_ Post \_ Country](contact-properties.md) | Dies ist optional.                                                                      |
-| [\_ \_ primäre \_ e-Mail- \_ Adresse für WPD](contact-properties.md)                               | Empfohlen.                                                                   |
-| [\_ \_ persönliche \_ e-Mail von WPD](contact-properties.md)                                              | Dies ist optional.                                                                      |
-| [WPD \_ Contact \_ Personal \_ EMAIL2](contact-properties.md)                                            | Dies ist optional.                                                                      |
-| [\_ \_ Geschäfts \_ -e-Mail für WPD](contact-properties.md)                                              | Dies ist optional.                                                                      |
-| [WPD \_ Contact \_ Business \_ EMAIL2](contact-properties.md)                                            | Dies ist optional.                                                                      |
-| [WPD \_ \_ andere \_ e-Mails kontaktieren](contact-properties.md)                                                  | Dies ist optional.                                                                      |
-| [WPD- \_ Kontakt- \_ primär \_ Telefon](contact-properties.md)                                                | Empfohlen.                                                                   |
-| [WPD \_ Contact \_ private \_ Phone](contact-properties.md)                                              | Dies ist optional.                                                                      |
-| [WPD \_ Contact \_ Personal \_ PHONE2](contact-properties.md)                                            | Dies ist optional.                                                                      |
-| [WPD \_ - \_ Kontakt \_ Telefon (geschäftlich)](contact-properties.md)                                              | Dies ist optional.                                                                      |
-| [WPD \_ Contact \_ Business \_ PHONE2](contact-properties.md)                                            | Dies ist optional.                                                                      |
-| [WPD- \_ Kontakt \_ Mobil \_ Telefon](contact-properties.md)                                                  | Dies ist optional.                                                                      |
-| [WPD \_ Contact \_ Mobile \_ PHONE2](contact-properties.md)                                                | Dies ist optional.                                                                      |
-| [privates WPD- \_ Kontakt- \_ \_ Fax](contact-properties.md)                                                  | Dies ist optional.                                                                      |
-| [WPD \_ Contact- \_ Geschäfts \_ Fax](contact-properties.md)                                                  | Dies ist optional.                                                                      |
-| [WPD- \_ Kontakt- \_ Pager](contact-properties.md)                                                                 | Dies ist optional.                                                                      |
-| [WPD \_ \_ andere \_ Telefone kontaktieren](contact-properties.md)                                                  | Dies ist optional.                                                                      |
-| [\_ \_ primäre \_ \_ Webadresse für WPD-Kontakte](contact-properties.md)                                   | Empfohlen.                                                                   |
-| [\_ \_ persönliche \_ \_ Webadresse für WPD-Kontakt](contact-properties.md)                                 | Dies ist optional.                                                                      |
-| [Webadresse für WPD- \_ Kontakt \_ geschäftliche \_ \_ Webadresse](contact-properties.md)                                 | Dies ist optional.                                                                      |
-| [WPD \_ Contact \_ Instant \_ Messenger](contact-properties.md)                                        | Empfohlen                                                                    |
-| [WPD- \_ Kontakt \_ Instant \_ MESSENGER2](contact-properties.md)                                      | Dies ist optional.                                                                      |
-| [WPD- \_ Kontakt \_ Instant \_ MESSENGER3](contact-properties.md)                                      | Dies ist optional.                                                                      |
-| [\_ \_ Firmen \_ Name für WPD-Kontakt](contact-properties.md)                                                  | Dies ist optional.                                                                      |
-| [WPD- \_ Kontakt \_ Phonetic- \_ Firmen \_ Name](contact-properties.md)                               | Optional                                                                       |
-| [WPD- \_ Kontakt \_ Rolle](contact-properties.md)                                                                   | Dies ist optional.                                                                      |
-| [Geburtsdatum des WPD- \_ Kontakts \_](contact-properties.md)                                                         | Dies ist optional.                                                                      |
-| [\_ \_ Primäres Fax für WPD-Kontakt \_](contact-properties.md)                                                                            | Dies ist optional.                                                                      |
-| [WPD- \_ Kontakt- \_ Ehepartner](contact-properties.md)                                                                                  | Dies ist optional.                                                                      |
-| [WPD-Kontakt untergeordnete Elemente \_ \_](contact-properties.md)                                                                                | Dies ist optional.                                                                      |
-| [WPD- \_ Kontakt- \_ Assistent](contact-properties.md)                                                                               | Dies ist optional.                                                                      |
-| [Datum der WPD- \_ Kontaktaufnahme \_ \_](contact-properties.md)                                                                       | Dies ist optional.                                                                      |
-| [WPD- \_ Kontakt- \_ Rington](contact-properties.md)                                                                                | Dies ist optional.                                                                      |
-| [\_Allgemeine Informationen zu \_ WPD \_](object-properties.md)                                                                        | Dies ist optional.                                                                      |
+| [\_WPD-OBJEKT-ID \_](object-properties.md)                                                                          | Erforderlich, schreibgeschützt. Ein Client kann diese Eigenschaft nicht festlegen, auch nicht zum Zeitpunkt der Erstellung. |
+| [ÜBERGEORDNETE ID DES \_ \_ WPD-OBJEKTS \_](object-properties.md)                                                           | Erforderlich.                                                                      |
+| [\_WPD-OBJEKTNAME \_](object-properties.md)                                                                      | Erforderlich, wenn das -Objekt eine Datei darstellt.                                      |
+| [PERSISTENTE EINDEUTIGE ID \_ DES WPD-OBJEKTS \_ \_ \_](object-properties.md)                                    | Erforderlich, schreibgeschützt. Ein Client kann diese Eigenschaft nicht festlegen, auch nicht zum Zeitpunkt der Erstellung. |
+| [\_WPD-OBJEKTFORMAT \_](object-properties.md)                                                                  | Erforderlich.                                                                      |
+| [\_ \_ WPD-OBJEKTINHALTSTYP \_](object-properties.md)                                                     | Erforderlich.                                                                      |
+| [\_WPD-OBJEKT \_ ISHIDDEN](object-properties.md)                                                              | Erforderlich, wenn das Objekt ausgeblendet ist.                                              |
+| [\_WPD-OBJEKT \_ ISSYSTEM](object-properties.md)                                                              | Erforderlich, wenn das -Objekt ein Systemobjekt ist (stellt eine Systemdatei dar).          |
+| [\_WPD-OBJEKTGRÖßE \_](object-properties.md)                                                                      | Erforderlich, wenn das Objekt über mindestens eine Ressource verfügt.                              |
+| [\_WPD-OBJEKT \_ \_ URSPRÜNGLICHER \_ DATEINAME](object-properties.md)                                        | Erforderlich, wenn das -Objekt eine Datei darstellt.                                      |
+| [\_WPD-OBJEKT \_ NICHT \_ VERWENDBAR](object-properties.md)                                                 | Empfohlen, wenn das Objekt nicht für die Verwendung durch das Gerät bestimmt ist.          |
+| [\_ \_ WPD-OBJEKTVERWEISE](object-properties.md)                                                          | Erforderlich, wenn das -Objekt Verweise auf andere Objekte enthält.                        |
+| [\_WPD-OBJEKTSCHLÜSSELWÖRTER \_](object-properties.md)                                                              | Optional.                                                                      |
+| [\_ \_ WPD-OBJEKTSYNCHRONISIERUNGS-ID \_](object-properties.md)                                                               | Optional.                                                                      |
+| [\_WPD-OBJEKT \_ IST \_ \_ DRM-GESCHÜTZT](object-properties.md)                                            | Erforderlich, wenn das Objekt durch DRM-Technologie geschützt ist.                         |
+| [ERSTELLUNGSDATUM \_ DES WPD-OBJEKTS \_ \_](object-properties.md)                                                     | Optional.                                                                      |
+| [\_WPD-OBJEKTDATUM \_ \_ GEÄNDERT](object-properties.md)                                                   | Empfohlen.                                                                   |
+| [ERSTELLUNGSDATUM \_ DES WPD-OBJEKTS \_ \_](object-properties.md)                                                   | Optional.                                                                      |
+| [WPD \_ OBJECT BACK REFERENCES (WPD-OBJEKTVERWEISE \_ \_ ZURÜCK)](object-properties.md)                                                                          | Wird empfohlen, wenn auf das Objekt von einem anderen Objekt verwiesen wird.                     |
+| [\_ \_ WPD-OBJEKTCONTAINER \_ FUNKTIONALE \_ \_ OBJEKT-ID](object-properties.md)               | Optional.                                                                      |
+| [\_WPD-OBJEKT \_ GENERIERT \_ \_ MINIATURANSICHT AUS \_ RESSOURCE](object-properties.md)           | Optional.                                                                      |
+| [\_ \_ WPD-KONTAKTANZEIGENAME \_](contact-properties.md)                                                  | Erforderlich.                                                                      |
+| [\_WPD-OBJEKT \_ KANN LÖSCHEN \_](object-properties.md)                                                                               | Erforderlich, wenn das Objekt nicht gelöscht werden kann.                                      |
+| [WPD \_ OBJECT \_ LANGUAGE \_ LOCALE](object-properties.md)                                                                          | Optional.                                                                      |
+| [\_ \_ WPD-KONTAKTANZEIGENAME \_](contact-properties.md)                                                                           | Erforderlich.                                                                      |
+| [\_ \_ WPD-KONTAKTNAME \_](contact-properties.md)                                                      | Empfohlen.                                                                   |
+| [WPD \_ CONTACT \_ MIDDLE \_ NAMES](contact-properties.md)                                                  | Empfohlen.                                                                   |
+| [WPD \_ CONTACT \_ LAST \_ NAME](contact-properties.md)                                                        | Empfohlen.                                                                   |
+| [\_ \_ WPD-KONTAKTPRÄFIX](contact-properties.md)                                                               | Empfohlen.                                                                   |
+| [\_WPD-KONTAKTSUFFIX \_](contact-properties.md)                                                               | Empfohlen.                                                                   |
+| [WPD \_ CONTACT \_ PHONETIC FIRST NAME (PHONETISCHER VORNAME DES \_ \_ WPD-KONTAKTS)](contact-properties.md)                                   | Optional.                                                                      |
+| [WPD \_ CONTACT \_ PHONETIC LAST NAME (PHONETISCHER \_ NACHNAME DES \_ WPD-KONTAKTS)](contact-properties.md)                                     | Optional.                                                                      |
+| [WPD \_ CONTACT \_ PERSONAL \_ FULL \_ POSTAL \_ ADDRESS](contact-properties.md)                | Empfohlen.                                                                   |
+| [WPD \_ CONTACT \_ PERSONAL \_ POSTAL \_ ADDRESS \_ LINE1](contact-properties.md)              | Optional.                                                                      |
+| [WPD \_ CONTACT \_ PERSONAL \_ POSTAL \_ ADDRESS \_ LINE2](contact-properties.md)              | Optional.                                                                      |
+| [WPD \_ CONTACT \_ PERSONAL \_ POSTAL \_ ADDRESS \_ CITY](contact-properties.md)                | Optional.                                                                      |
+| [WPD \_ CONTACT \_ PERSONAL \_ POSTAL \_ ADDRESS \_ REGION](contact-properties.md)            | Optional.                                                                      |
+| [WPD \_ CONTACT \_ PERSONAL \_ POSTAL \_ ADDRESS \_ POSTAL \_ CODE](contact-properties.md) | Optional.                                                                      |
+| [WPD \_ CONTACT \_ PERSONAL \_ POSTAL \_ ADDRESS \_ COUNTRY](contact-properties.md)          | Optional.                                                                      |
+| [WPD \_ CONTACT \_ BUSINESS \_ FULL \_ POSTAL \_ ADDRESS](contact-properties.md)                | Optional.                                                                      |
+| [WPD \_ CONTACT \_ BUSINESS \_ POSTAL \_ ADDRESS \_ LINE1](contact-properties.md)              | Optional.                                                                      |
+| [WPD \_ CONTACT \_ BUSINESS \_ POSTAL \_ ADDRESS \_ LINE2](contact-properties.md)              | Optional.                                                                      |
+| [WPD \_ CONTACT \_ BUSINESS \_ POSTAL \_ ADDRESS \_ CITY](contact-properties.md)                | Optional.                                                                      |
+| [WPD \_ CONTACT \_ BUSINESS \_ POSTAL \_ ADDRESS \_ REGION](contact-properties.md)            | Optional.                                                                      |
+| [WPD \_ CONTACT \_ BUSINESS \_ POSTAL \_ ADDRESS \_ POSTAL \_ CODE](contact-properties.md) | Optional.                                                                      |
+| [WPD \_ CONTACT \_ BUSINESS \_ POSTAL \_ ADDRESS \_ COUNTRY](contact-properties.md)          | Optional.                                                                      |
+| [WPD \_ CONTACT OTHER FULL POSTAL ADDRESS (WPD-KONTAKT MIT ANDERER VOLLSTÄNDIGER \_ \_ \_ \_ POSTADRESSE)](contact-properties.md)                      | Optional.                                                                      |
+| [WPD \_ CONTACT \_ OTHER \_ POSTAL \_ ADDRESS \_ LINE1](contact-properties.md)                    | Optional.                                                                      |
+| [WPD \_ CONTACT \_ OTHER \_ POSTAL \_ ADDRESS \_ LINE2](contact-properties.md)                    | Optional.                                                                      |
+| [WPD \_ CONTACT \_ OTHER \_ POSTAL \_ ADDRESS \_ CITY](contact-properties.md)                      | Optional.                                                                      |
+| [WPD CONTACT OTHER POSTAL ADDRESS REGION (WPD \_ KONTAKT MIT EINER ANDEREN \_ \_ \_ \_ POSTANSCHRIFTSREGION)](contact-properties.md)                  | Optional.                                                                      |
+| [WPD CONTACT OTHER POSTAL ADDRESS POSTAL CODE (WPD \_ KONTAKT \_ MIT ANDERER \_ \_ \_ \_ POSTLEITZAHL)](contact-properties.md)       | Optional.                                                                      |
+| [WPD \_ CONTACT \_ OTHER \_ POSTAL \_ ADDRESS \_ POSTAL \_ COUNTRY](contact-properties.md) | Optional.                                                                      |
+| [\_WPD-KONTAKT PRIMÄRE \_ \_ E-MAIL-ADRESSE \_](contact-properties.md)                               | Empfohlen.                                                                   |
+| [WPD CONTACT PERSONAL EMAIL (PERSÖNLICHE \_ \_ \_ E-MAIL-ADRESSE DES WPD-KONTAKT](contact-properties.md)                                              | Optional.                                                                      |
+| [WPD \_ CONTACT \_ PERSONAL \_ EMAIL2](contact-properties.md)                                            | Optional.                                                                      |
+| [WPD \_ CONTACT \_ BUSINESS \_ EMAIL](contact-properties.md)                                              | Optional.                                                                      |
+| [WPD \_ CONTACT \_ BUSINESS \_ EMAIL2](contact-properties.md)                                            | Optional.                                                                      |
+| [WPD \_ KONTAKT MIT ANDEREN \_ \_ E-MAILS](contact-properties.md)                                                  | Optional.                                                                      |
+| [WPD \_ CONTACT \_ PRIMARY \_ PHONE](contact-properties.md)                                                | Empfohlen.                                                                   |
+| [WPD \_ CONTACT \_ PERSONAL \_ PHONE](contact-properties.md)                                              | Optional.                                                                      |
+| [WPD \_ CONTACT \_ PERSONAL \_ PHONE2](contact-properties.md)                                            | Optional.                                                                      |
+| [WPD \_ CONTACT \_ BUSINESS \_ PHONE](contact-properties.md)                                              | Optional.                                                                      |
+| [WPD \_ CONTACT \_ BUSINESS \_ PHONE2](contact-properties.md)                                            | Optional.                                                                      |
+| [\_WPD-KONTAKT \_ MOBILTELEFON \_](contact-properties.md)                                                  | Optional.                                                                      |
+| [WPD \_ CONTACT \_ MOBILE \_ PHONE2](contact-properties.md)                                                | Optional.                                                                      |
+| [WPD \_ CONTACT \_ PERSONAL \_ FAX](contact-properties.md)                                                  | Optional.                                                                      |
+| [WPD \_ CONTACT \_ BUSINESS \_ FAX](contact-properties.md)                                                  | Optional.                                                                      |
+| [WPD \_ CONTACT \_ PAGER](contact-properties.md)                                                                 | Optional.                                                                      |
+| [WPD \_ KONTAKT MIT ANDEREN \_ \_ TELEFONEN](contact-properties.md)                                                  | Optional.                                                                      |
+| [WPD \_ CONTACT \_ PRIMARY \_ WEB \_ ADDRESS](contact-properties.md)                                   | Empfohlen.                                                                   |
+| [WPD CONTACT PERSONAL WEB ADDRESS (PERSÖNLICHE \_ \_ WEBADRESSE DES \_ \_ WPD-KONTAKTS)](contact-properties.md)                                 | Optional.                                                                      |
+| [WPD \_ CONTACT \_ BUSINESS \_ WEB \_ ADDRESS](contact-properties.md)                                 | Optional.                                                                      |
+| [WPD \_ CONTACT \_ INSTANT \_ MESSENGER](contact-properties.md)                                        | Empfohlen                                                                    |
+| [WPD \_ CONTACT \_ INSTANT \_ MESSENGER2](contact-properties.md)                                      | Optional.                                                                      |
+| [WPD \_ CONTACT \_ INSTANT \_ MESSENGER3](contact-properties.md)                                      | Optional.                                                                      |
+| [\_WPD-KONTAKTNAME \_ DES \_ UNTERNEHMENS](contact-properties.md)                                                  | Optional.                                                                      |
+| [WPD \_ CONTACT \_ PHONETIC \_ COMPANY \_ NAME](contact-properties.md)                               | Optional                                                                       |
+| [\_WPD-KONTAKTROLLE \_](contact-properties.md)                                                                   | Optional.                                                                      |
+| [WPD \_ CONTACT \_ BIRTHDATE](contact-properties.md)                                                         | Optional.                                                                      |
+| [WPD \_ CONTACT \_ PRIMARY \_ FAX](contact-properties.md)                                                                            | Optional.                                                                      |
+| [\_WPD-KONTAKTKONTAKT \_](contact-properties.md)                                                                                  | Optional.                                                                      |
+| [WPD \_ CONTACT \_ CHILDREN](contact-properties.md)                                                                                | Optional.                                                                      |
+| [WPD \_ CONTACT \_ ASSISTANT](contact-properties.md)                                                                               | Optional.                                                                      |
+| [WPD \_ CONTACT \_ ANNIVERSARY \_ DATE](contact-properties.md)                                                                       | Optional.                                                                      |
+| [WPD \_ CONTACT \_ RINGTONE](contact-properties.md)                                                                                | Optional.                                                                      |
+| [WPD \_ – ALLGEMEINE INFORMATIONEN \_ \_ HINWEISE](object-properties.md)                                                                        | Optional.                                                                      |
 
 
 
@@ -119,10 +119,10 @@ Diese Objekte enthalten in der Regel die folgenden Ressourcen.
 
 
 
-| Ressourcenname                                                       | Erforderlich oder optional       | BESCHREIBUNG                        |
+| Ressourcenname                                                       | Erforderlich oder optional       | Beschreibung                        |
 |---------------------------------------------------------------------|----------------------------|------------------------------------|
-| [**WPD- \_ Ressourcen \_ Standard**](wpd-resource-default.md)              | Dies ist optional.                  | Enthält die Kontaktdaten.         |
-| [**WPD- \_ Ressourcen \_ Kontakt \_ Foto**](wpd-resource-contact-photo.md) | Empfohlen, falls verfügbar. | Enthält ein Bild des Kontakts. |
+| [**WPD \_ RESOURCE \_ DEFAULT**](wpd-resource-default.md)              | Optional.                  | Enthält die Kontaktdaten.         |
+| [**WPD \_ RESOURCE \_ CONTACT \_ PHOTO**](wpd-resource-contact-photo.md) | Empfohlen, falls verfügbar. | Enthält ein Bild des Kontakts. |
 
 
 

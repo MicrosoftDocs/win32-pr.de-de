@@ -1,9 +1,9 @@
 ---
-title: WM_NCPOINTERDOWN Meldung
-description: Wird gepostet, wenn ein Zeiger einen Kontakt über den nicht-Client Bereich eines Fensters herstellt.
+title: WM_NCPOINTERDOWN-Nachricht
+description: Wird gepostet, wenn ein Zeiger den Kontakt über den nicht clientseitigen Bereich eines Fensters vor stellt.
 ms.assetid: 3bdc37da-217c-4be1-bf0b-99704bda1322
 keywords:
-- Eingabe Meldungen und Benachrichtigungen der WM_NCPOINTERDOWN Nachricht
+- WM_NCPOINTERDOWN von Nachrichteneingabemeldungen und -benachrichtigungen
 topic_type:
 - apiref
 api_name:
@@ -14,21 +14,21 @@ api_type:
 - HeaderDef
 ms.topic: article
 ms.date: 02/03/2020
-ms.openlocfilehash: 6f4c3ef8ed75c5bd29250cd2f9ce4d666b6d961d
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 419af1c613c979d30f479fc0739cd82f01b538f9ff4d3caa63839af8a40b0caf
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "103956837"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119036058"
 ---
-# <a name="wm_ncpointerdown-message"></a>WM_NCPOINTERDOWN Meldung
+# <a name="wm_ncpointerdown-message"></a>WM_NCPOINTERDOWN-Nachricht
 
-Wird gepostet, wenn ein Zeiger einen Kontakt über den nicht-Client Bereich eines Fensters herstellt. Die Meldung zielt auf das Fenster ab, über das der Zeiger Kontakt herstellt. Der Zeiger wird implizit im Fenster erfasst, sodass das Fenster weiterhin Eingaben für den Zeiger empfängt, bis der Kontakt unterbrochen wird.
+Wird gepostet, wenn ein Zeiger den Kontakt über den nicht clientseitigen Bereich eines Fensters vor stellt. Die Nachricht ist auf das Fenster festgelegt, über das der Zeiger kontakt mit ihr kontaktt. Der Zeiger wird implizit auf das Fenster erfasst, sodass das Fenster weiterhin Eingaben für den Zeiger erhält, bis er den Kontakt unterbricht.
 
-Wenn ein Fenster diesen Zeiger aufgezeichnet hat, wird diese Meldung nicht gepostet. Stattdessen wird ein [**WM_POINTERDOWN**](wm-pointerdown.md) an das Fenster gesendet, das diesen Zeiger aufgezeichnet hat.
+Wenn ein Fenster diesen Zeiger erfasst hat, wird diese Meldung nicht gesendet. Stattdessen wird [**ein WM_POINTERDOWN**](wm-pointerdown.md) an das Fenster gesendet, das diesen Zeiger erfasst hat.
 
 > \[! Wichtig\]  
-> Desktop-Apps sollten dpi-fähig sein. Wenn Ihre APP nicht dpi-fähig ist, können Bildschirm Koordinaten, die in Zeiger Nachrichten und zugehörigen Strukturen enthalten sind, aufgrund der dpi-Virtualisierung ungenau erscheinen. Die dpi-Virtualisierung bietet Unterstützung für die automatische Skalierung für Anwendungen, die nicht mit dpi-Werten kompatibel sind und standardmäßig aktiv sind (Benutzer können Sie deaktivieren). Weitere Informationen finden Sie unter [Schreiben von High-dpi-Win32-Anwendungen](/previous-versions//dd464660(v=vs.85)).
+> Desktop-Apps sollten DPI-bewusst sein. Wenn Ihre App keine DPI-Unterstützung hat, können Bildschirmkoordinaten, die in Zeigermeldungen und verwandten Strukturen enthalten sind, aufgrund der DPI-Virtualisierung ungenau erscheinen. Die DPI-Virtualisierung bietet Unterstützung für die automatische Skalierung für Anwendungen, die nicht DPI-bewusst sind und standardmäßig aktiv sind (Benutzer können sie deaktivieren). Weitere Informationen finden Sie unter [Writing High-DPI Win32 Applications ( Schreiben von Win32-Anwendungen mit hohem DPI-Code).](/previous-versions//dd464660(v=vs.85))
 
  
 
@@ -46,11 +46,11 @@ Wenn ein Fenster diesen Zeiger aufgezeichnet hat, wird diese Meldung nicht gepos
 *wParam* 
 </dt> <dd>
 
-Enthält den Zeiger Bezeichner und zusätzliche Informationen. Verwenden Sie die folgenden Makros, um diese Informationen abzurufen.
+Enthält den Zeigerbezeichner und zusätzliche Informationen. Verwenden Sie die folgenden Makros, um diese Informationen abzurufen.
 
-[**GET_POINTERID_WPARAM**](/previous-versions/windows/desktop/api)(wParam): Zeiger Bezeichner.
+[**GET_POINTERID_WPARAM**](/previous-versions/windows/desktop/api)(wParam): Zeigerbezeichner.
 
-[**HIWORD**](/previous-versions/windows/desktop/legacy/ms632657(v=vs.85))(wParam): Treffer Test Wert, der von der Verarbeitung der [**WM_NCHITTEST**](../inputdev/wm-nchittest.md) Nachricht zurückgegeben wurde.
+[**HIWORD**](/previous-versions/windows/desktop/legacy/ms632657(v=vs.85))(wParam): Treffertestwert, der von der Verarbeitung der WM_NCHITTEST [**zurückgegeben**](../inputdev/wm-nchittest.md) wird.
 
 </dd> <dt>
 
@@ -60,26 +60,26 @@ Enthält den Zeiger Bezeichner und zusätzliche Informationen. Verwenden Sie die
 Enthält die Punktposition des Zeigers.
 
 > [!Note]  
-> Da der Zeiger über einen nicht trivialen Bereich eine Verbindung mit dem Gerät herstellen kann, kann es sein, dass diese Punktposition eine Vereinfachung eines komplexeren Zeiger Bereichs ist. Wenn möglich, sollte eine Anwendung anstelle der Punktposition die gesamten Zeiger Bereichs Informationen verwenden.
+> Da der Zeiger den Kontakt mit dem Gerät über einen nicht trivialen Bereich stellen kann, kann diese Punktposition eine Vereinfachung eines komplexeren Zeigerbereichs sein. Wenn möglich, sollte eine Anwendung die vollständigen Zeigerbereichsinformationen anstelle der Punktposition verwenden.
 
  
 
-Verwenden Sie die folgenden Makros zum Abrufen der physischen Bildschirm Koordinaten des Punkts.
+Verwenden Sie die folgenden Makros, um die physischen Bildschirmkoordinaten des Punkts abzurufen.
 
--   [**GET_X_LPARAM**](/windows/win32/api/windowsx/nf-windowsx-get_x_lparam)(LPARAM): die X-Koordinate (horizontal Punkt).
--   [**GET_Y_LPARAM**](/windows/win32/api/windowsx/nf-windowsx-get_y_lparam)(LPARAM): die Y-Koordinate (vertikal Punkt).
+-   [**GET_X_LPARAM**](/windows/win32/api/windowsx/nf-windowsx-get_x_lparam)(lParam): Die x-Koordinate (horizontaler Punkt).
+-   [**GET_Y_LPARAM**](/windows/win32/api/windowsx/nf-windowsx-get_y_lparam)(lParam): die y-Koordinate (vertikaler Punkt).
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Wenn eine Anwendung diese Nachricht verarbeitet, sollte Sie 0 (null) zurückgeben.
+Wenn eine Anwendung diese Nachricht verarbeitet, sollte sie 0 (null) zurückgeben.
 
-Wenn die Anwendung diese Nachricht nicht verarbeitet, sollte Sie [**defwindowproc**](/windows/win32/api/winuser/nf-winuser-defwindowproca)aufgerufen werden.
+Wenn die Anwendung diese Nachricht nicht verarbeiten kann, sollte sie [**DefWindowProc aufrufen.**](/windows/win32/api/winuser/nf-winuser-defwindowproca)
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Wenn die Anwendung diese Nachricht nicht verarbeitet, kann [**defwindowproc**](/windows/win32/api/winuser/nf-winuser-defwindowproca) eine oder mehrere System Aktionen ausführen, je nachdem, welches Treffer Testergebnis in der Nachricht enthalten ist. In der Regel sollten Anwendungen diese Nachricht nicht verarbeiten müssen.
+Wenn die Anwendung diese Nachricht nicht verarbeiten kann, kann [**DefWindowProc**](/windows/win32/api/winuser/nf-winuser-defwindowproca) je nach treffertestbasiertem Ergebnis, das in der Nachricht enthalten ist, eine oder mehrere Systemaktionen ausführen. In der Regel sollten Anwendungen diese Meldung nicht verarbeiten müssen.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -87,13 +87,13 @@ Wenn die Anwendung diese Nachricht nicht verarbeitet, kann [**defwindowproc**](/
 
 | Anforderung | Wert |
 |-------------------------------------|----------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows 8 \[ -Desktop-Apps\]<br/>                                                               |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2012 \[ -Desktop-Apps\]<br/>                                                     |
-| Header<br/>                   | <dl> <dt>Winuser. h (Windows. h einschließen)</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | \[Windows 8 Nur Desktop-Apps\]<br/>                                                               |
+| Unterstützte Mindestversion (Server)<br/> | \[Windows Server 2012 Nur Desktop-Apps\]<br/>                                                     |
+| Header<br/>                   | <dl> <dt>Winuser.h (include Windows.h)</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 

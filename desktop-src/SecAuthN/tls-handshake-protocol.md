@@ -25,7 +25,7 @@ Der Client und der Server nehmen Kontakt auf und wählen die Verschlüsselungssa
 
 ## <a name="authentication"></a>Authentifizierung
 
-In TLS bestätigt ein Server seine Identität gegenüber dem Client. Der Client muss möglicherweise auch seine Identität gegenüber dem Server nachweisen. PKI, die Verwendung von [*Paaren aus öffentlichem und privatem Schlüssel,*](../secgloss/p-gly.md)ist die Grundlage dieser Authentifizierung. Die genaue Methode, die für die Authentifizierung verwendet wird, wird durch die ausgehandelte Verschlüsselungssammlung bestimmt.
+In TLS bestätigt ein Server seine Identität gegenüber dem Client. Der Client muss möglicherweise auch seine Identität gegenüber dem Server nachweisen. PKI, die Verwendung von [*Paaren aus öffentlichem und privatem Schlüssel,*](../secgloss/p-gly.md)ist die Grundlage dieser Authentifizierung. Die genaue Methode, die für die Authentifizierung verwendet wird, wird von der ausgehandelten Verschlüsselungssammlung bestimmt.
 
 ## <a name="key-exchange"></a>Key Exchange
 
@@ -39,7 +39,7 @@ Das TLS Handshake-Protokoll umfasst die folgenden Schritte:
 2.  Der Server antwortet, indem er eine "Server hello"-Nachricht zusammen mit dem zufälligen Wert des Servers an den Client sendet.
 3.  Der Server sendet sein Zertifikat zur Authentifizierung an den Client und kann ein Zertifikat vom Client anfordern. Der Server sendet die Meldung "Server hello done".
 4.  Wenn der Server ein Zertifikat vom Client angefordert hat, sendet der Client es.
-5.  Der Client erstellt ein zufälliges Pre-Master Secret und verschlüsselt es mit dem [*öffentlichen Schlüssel*](../secgloss/p-gly.md) aus dem Serverzertifikat und sendet den verschlüsselten Pre-Master Secret an den Server.
+5.  Der Client erstellt einen zufälligen Geheimen Prämasterschlüssel und verschlüsselt ihn mit dem [*öffentlichen Schlüssel*](../secgloss/p-gly.md) aus dem Serverzertifikat und sendet den verschlüsselten Pre-Master Secret an den Server.
 6.  Der Server empfängt den Geheimen Pre-Master-Schlüssel. Server und Client generieren jeweils den geheimen Hauptschlüssel und [*die Sitzungsschlüssel*](../secgloss/s-gly.md) basierend auf dem Geheimen Prähauptschlüssel.
 7.  Der Client sendet die Benachrichtigung "Verschlüsselungsspezifikation ändern" an den Server, um anzugeben, dass der Client die neuen [*Sitzungsschlüssel*](../secgloss/s-gly.md) zum [*Hashen*](../secgloss/h-gly.md) und Verschlüsseln von Nachrichten verwendet. Der Client sendet auch die Meldung "Client abgeschlossen".
 8.  Der Server empfängt "Verschlüsselungsspezifikation ändern" und schaltet den Sicherheitsstatus der Datensatzebene mithilfe der [*Sitzungsschlüssel*](../secgloss/s-gly.md)in [*symmetrische Verschlüsselung*](../secgloss/s-gly.md) um. Der Server sendet die Meldung "Server finished" an den Client.

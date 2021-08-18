@@ -1,5 +1,5 @@
 ---
-description: 'D3DXMatrixLookAtLH-Funktion (D3dx9math.h): Erstellt eine linkshändige Look-At-Matrix.'
+description: 'D3DXMatrixLookAtLH-Funktion (D3dx9math.h): Erstellt eine linkshändige Look-at-Matrix.'
 ms.assetid: bf34d3d8-725d-4fc1-b4c8-6c98f9dac329
 title: D3DXMatrixLookAtLH-Funktion (D3dx9math.h)
 ms.topic: reference
@@ -14,16 +14,16 @@ api_type:
 api_location:
 - d3dx9.lib
 - d3dx9.dll
-ms.openlocfilehash: 94a423e700c4a42e2ae7f7e522d83a5a4bd9bf3a
-ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
+ms.openlocfilehash: 32907d972a9f53eafeea4183d7c7152a922f589ec75bd9a1d378a2ed433f02f7
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2021
-ms.locfileid: "108107588"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119044838"
 ---
 # <a name="d3dxmatrixlookatlh-function-d3dx9mathh"></a>D3DXMatrixLookAtLH-Funktion (D3dx9math.h)
 
-Erstellt eine linkshändige Look-At-Matrix.
+Erstellt eine linkshändige Look-at-Matrix.
 
 ## <a name="syntax"></a>Syntax
 
@@ -66,7 +66,7 @@ Zeiger auf die [**D3DXVECTOR3-Struktur,**](d3dxvector3.md) die den Augenpunkt de
 
 Typ: **const [**D3DXVECTOR3**](d3dxvector3.md) \***
 
-Zeiger auf die [**D3DXVECTOR3-Struktur,**](d3dxvector3.md) die das Kamera-Look-at-Ziel definiert.
+Zeiger auf die [**D3DXVECTOR3-Struktur,**](d3dxvector3.md) die das Kamera-Look-At-Ziel definiert.
 
 </dd> <dt>
 
@@ -75,7 +75,7 @@ Zeiger auf die [**D3DXVECTOR3-Struktur,**](d3dxvector3.md) die das Kamera-Look-a
 
 Typ: **const [**D3DXVECTOR3**](d3dxvector3.md) \***
 
-Zeiger auf die [**D3DXVECTOR3-Struktur,**](d3dxvector3.md) die den Up der aktuellen Welt definiert, in der Regel \[ 0, 1, 0 \] .
+Zeiger auf die [**D3DXVECTOR3-Struktur,**](d3dxvector3.md) die die aktuelle Welt definiert, in der Regel \[ 0, 1, 0 \] .
 
 </dd> </dl>
 
@@ -83,11 +83,11 @@ Zeiger auf die [**D3DXVECTOR3-Struktur,**](d3dxvector3.md) die den Up der aktuel
 
 Typ: **[ **D3DXMATRIX**](d3dxmatrix.md)\***
 
-Zeiger auf eine [**D3DXMATRIX-Struktur,**](d3dxmatrix.md) die eine linkshändige Look-at-Matrix ist.
+Zeiger auf eine [**D3DXMATRIX-Struktur,**](d3dxmatrix.md) bei der es sich um eine linkshändige Look-At-Matrix handelt.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Der Rückgabewert für diese Funktion ist der gleiche Wert, der im *pOut-Parameter* zurückgegeben wird. Auf diese Weise kann die **D3DXMatrixLookAtLH-Funktion** als Parameter für eine andere Funktion verwendet werden.
+Der Rückgabewert für diese Funktion ist der gleiche Wert, der im *pOut-Parameter zurückgegeben* wird. Auf diese Weise kann die **D3DXMatrixLookAtLH-Funktion** als Parameter für eine andere Funktion verwendet werden.
 
 Diese Funktion verwendet die folgende Formel, um die zurückgegebene Matrix zu berechnen.
 
@@ -109,7 +109,7 @@ yaxis = cross(zaxis, xaxis)
 
 
 
-| Anforderungen | Wert |
+| Anforderung | Wert |
 |--------------------|----------------------------------------------------------------------------------------|
 | Header<br/>  | <dl> <dt>D3dx9math.h</dt> </dl> |
 | Bibliothek<br/> | <dl> <dt>D3dx9.lib</dt> </dl>   |

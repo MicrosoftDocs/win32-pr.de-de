@@ -1,52 +1,52 @@
 ---
-description: Informationen zur Raten Kontrolle
+description: Informationen zur Rate Control
 ms.assetid: 509b2cc8-6017-41a9-ae80-9af21dce9367
-title: Informationen zur Raten Kontrolle
+title: Informationen zur Rate Control
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: b3757e4d1d8a374061ff0c0e7fe02ba3c62243c8
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 61ae8ad5bcfaaf415c888418a7a6bd5d77f72434150e30fcac071d078b8ee6d3
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106346306"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119035658"
 ---
-# <a name="about-rate-control"></a>Informationen zur Raten Kontrolle
+# <a name="about-rate-control"></a>Informationen zur Rate Control
 
-In Media Foundation wird die *Wiedergabe Rate* als Verhältnis zwischen der aktuellen Wiedergabe Rate und der normalen Wiedergabe Rate ausgedrückt. Beispielsweise ist die Rate 2,0 doppelt so hoch, dass 0,5 eine halbe normale Geschwindigkeit ist. Negative Werte geben die umgekehrte Wiedergabe an. Die Wiedergabe Rate von-2,0 wird mit der doppelten Geschwindigkeit der normalen Geschwindigkeit rückwärts durchlaufen. Eine Rate von NULL bewirkt, dass ein Frame gerendert wird. Danach wird die Präsentationszeit nicht Fortschritt. Um einen weiteren Frame mit der Rate 0 zu erhalten, muss die Anwendung an einer neuen Position suchen.
+In Media Foundation wird die *Wiedergaberate* als Verhältnis der aktuellen Wiedergaberate zur normalen Wiedergaberate ausgedrückt. Beispielsweise ist eine Rate von 2,0 doppelt normal und 0,5 halb normal. Negative Werte geben die umgekehrte Wiedergabe an. Eine Wiedergaberate von -2,0 wird mit doppelter Normalgeschwindigkeit rückwärts durch den Stream übertragen. Eine Rate von 0 (null) bewirkt, dass ein Frame gerendert wird. Danach wird die Präsentationsuhr nicht mehr voran. Um einen weiteren Frame mit der Rate von 0 (null) zu erhalten, muss die Anwendung eine neue Position suchen.
 
-Anwendungen verwenden die folgenden Schnittstellen zum Steuern der Wiedergabe Rate.
+Anwendungen verwenden die folgenden Schnittstellen, um die Wiedergaberate zu steuern.
 
--   [**Imfratesupport**](/windows/desktop/api/mfidl/nn-mfidl-imfratesupport). Wird verwendet, um die schnellsten und langsamsten Wiedergabe Raten zu ermitteln, die möglich sind.
--   [**Imfratecontrol**](/windows/desktop/api/mfidl/nn-mfidl-imfratecontrol). Wird verwendet, um die Wiedergabe Rate zu ändern.
+-   [**DURCHATTENRateSupport**](/windows/desktop/api/mfidl/nn-mfidl-imfratesupport). Wird verwendet, um die schnellsten und langsamsten Wiedergaberaten zu finden, die möglich sind.
+-   [**ATRATEControl**](/windows/desktop/api/mfidl/nn-mfidl-imfratecontrol). Wird verwendet, um die Wiedergaberate zu ändern.
 
-Um diese beiden Schnittstellen abzurufen, nennen Sie [**imfgetservice:: GetService**](/windows/desktop/api/mfidl/nf-mfidl-imfgetservice-getservice) für die Medien Sitzung. Der Dienst Bezeichner ist der MF- \_ Raten \_ Steuerungs \_ Dienst.
+Um diese beiden Schnittstellen zu erhalten, rufen [**Sie INTGETService::GetService in**](/windows/desktop/api/mfidl/nf-mfidl-imfgetservice-getservice) der Mediensitzung auf. Der Dienstbezeichner ist MF \_ RATE \_ CONTROL \_ SERVICE.
 
-Mithilfe des Raten Steuerungs Dienstanbieter kann eine Anwendung die schnelle Vorwärts-und Rückwärts Wiedergabe implementieren.
+Mithilfe des Rate Control-Diensts kann eine Anwendung eine schnelle Vorwärts- und Umgekehrtwiedergabe implementieren.
 
-## <a name="thinning"></a>Wird dünner
+## <a name="thinning"></a>Ausdünnung
 
-Die *Verdünnung* ist ein beliebiger Prozess, bei dem die Anzahl der Stichproben in einem Stream verringert wird, um die allgemeine Bitrate zu verringern. Bei Video wird die Verdünnung in der Regel durch Löschen der Delta Frames und Bereitstellung der Keyframes erreicht. Häufig kann die Pipeline schnellere Wiedergabe Raten mithilfe der dünnen Wiedergabe unterstützen, da die Datenrate geringer ist, da Delta Frames nicht decodiert werden.
+*Thinning ist* ein beliebiger Prozess, der die Anzahl der Stichproben in einem Stream reduziert, um die Bitrate insgesamt zu reduzieren. Bei Videos erfolgt die Verankerung in der Regel durch Löschen der Deltaframes und Bereitstellen nur der Keyframes. Häufig kann die Pipeline schnellere Wiedergaberaten mit schlanker Wiedergabe unterstützen, da die Datenrate niedriger ist, da Deltaframes nicht decodiert werden.
 
-Beim dünken werden die Zeitstempel oder die Dauer der Stichproben nicht geändert. Wenn die nominale Rate des Videodaten Stroms z. b. 25 Frames pro Sekunde beträgt, wird die Dauer jedes Frames weiterhin als 40 Millisekunden gekennzeichnet, auch wenn die Medienquelle alle Delta Frames löscht. Dies bedeutet, dass zwischen dem Ende eines Frames und dem Beginn der nächsten ein Zeitunterschied besteht.
+Die Verankerung ändert weder die Zeitstempel noch die Dauer der Stichproben. Wenn die Nominalrate des Videostreams beispielsweise 25 Frames pro Sekunde beträgt, wird die Dauer jedes Frames weiterhin als 40 Millisekunden markiert, auch wenn die Medienquelle alle Deltaframes verdrungen hat. Das bedeutet, dass zwischen dem Ende eines Frames und dem Anfang des nächsten Frames eine Zeitlücke besteht.
 
 ## <a name="scrubbing"></a>Scrubbing (Bereinigung)
 
-*Scrubbing* ist der Prozess der sofortigen Suche nach bestimmten Punkten im Stream durch Interaktion mit einer Scrollleiste, einer Zeitachse oder einer anderen visuellen Darstellung der Zeit. Die Bezeichnung ergibt sich aus dem Zeitpunkt der Band-zu-Band-bandspieler, wenn eine Bewegung hin und her herumrollt, um zu ermitteln, ob der Wiedergabe Kopf mit dem Band bereinigt wurde.
+*Bereinigung ist* der Prozess der sofortigen Suche nach bestimmten Punkten im Stream durch Interaktion mit einer Bildlaufleiste, Zeitachse oder einer anderen visuellen Darstellung der Zeit. Der Begriff stammt aus der Zeit von Bandplayern, die eine Rolle hin und her geschoben haben, um einen Abschnitt zu finden, wie das Bereinigung des Wiedergabekopfs mit dem Band.
 
-Das Scrubbing wird in Media Foundation implementiert, indem die Wiedergabe Rate auf NULL festgelegt wird. Weitere Informationen finden Sie unter Vorgehens [Weise beim Ausführen von Scrubbing](how-to-perform-scrubbing.md).
+Die Bereinigung wird in der Media Foundation, indem die Wiedergaberate auf 0 (null) gesetzt wird. Weitere Informationen finden Sie unter [How to Perform Scrubbing](how-to-perform-scrubbing.md).
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[Raten Steuerung](rate-control.md)
+[Rate Control](rate-control.md)
 </dt> <dt>
 
-[Suchen, schnelles vorwärts und umgekehrtes spielen](seeking--fast-forward--and-reverse-play.md)
+[Suchen, Vorlauf und Umgekehrtes Wiederkehren](seeking--fast-forward--and-reverse-play.md)
 </dt> <dt>
 
-[Dienst Schnittstellen](service-interfaces.md)
+[Dienstschnittstellen](service-interfaces.md)
 </dt> </dl>
 
  

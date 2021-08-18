@@ -1,26 +1,26 @@
 ---
-description: Dieser Abschnitt der Dokumentation enthält Informationen zur Peer Infrastruktur.
+description: Dieser Abschnitt der Dokumentation enthält Informationen zur Peerinfrastruktur.
 ms.assetid: 7a641d26-af87-4a96-b718-5b7598c87da7
-title: Informationen zu Peer Netzwerken
+title: Informationen zu Peernetzwerken
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 4e5b4ac1540fe4740e7864893cc77ca17d454fc0
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 83cc41f11187d67e8e338a37fce41810c2b0c0484004b6cadd4537ddd91788c3
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "103959796"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119011798"
 ---
-# <a name="about-peer-networking"></a>Informationen zu Peer Netzwerken
+# <a name="about-peer-networking"></a>Informationen zu Peernetzwerken
 
-Dieser Abschnitt der Dokumentation enthält Informationen zur Peer Infrastruktur und umfasst die folgenden Themen:
+Dieser Abschnitt der Dokumentation enthält Informationen zur Peerinfrastruktur sowie die folgenden Themen:
 
--   [Was ist Peer Netzwerk?](what-is-peer-networking-.md)
--   [Vorteile von Peer Netzwerken](benefits-of-peer-networking.md)
--   [Peer Netzwerk Szenarios](peer-networking-scenarios.md)
--   [Was ist die Peer Infrastruktur?](what-is-the-peer-infrastructure-.md)
+-   [Was ist Peernetzwerk?](what-is-peer-networking-.md)
+-   [Vorteile von Peernetzwerken](benefits-of-peer-networking.md)
+-   [Peernetzwerkszenarien](peer-networking-scenarios.md)
+-   [Was ist die Peerinfrastruktur?](what-is-the-peer-infrastructure-.md)
 
-Informationen zu einzelnen APIs, wie z. b. der graphingapi, finden Sie im Thema zur jeweiligen API. Weitere Informationen zu allgemeinen API-Elementen finden Sie unter [Allgemeine Dokumentation zur Peer Infrastruktur](peer-infrastructure-common-documentation.md).
+Informationen zu einzelnen APIs wie der Graphing-API finden Sie im jeweiligen API-Thema. Informationen zu allgemeinen API-Elementen finden Sie in der [allgemeinen Dokumentation zur Peerinfrastruktur.](peer-infrastructure-common-documentation.md)
 
  
 

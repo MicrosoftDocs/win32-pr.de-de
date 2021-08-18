@@ -4,8 +4,8 @@ description: Enthält den phonetischen Nachnamen der Person.
 ms.assetid: 43c98f1c-b72c-4f59-a6a0-d2083bd8f1bb
 ms.tgt_platform: multiple
 keywords:
-- "\"ms-DS-Phonetic-Last-Name\"-Attribut AD-Schema"
-- AD-Schema für das msDS-phoneticlastname-Attribut
+- MS-DS-Phonetic-Last-Name-Attribut AD-Schema
+- AD-Schema des msDS-PhoneticLastName-Attributs
 topic_type:
 - apiref
 api_name:
@@ -14,12 +14,12 @@ api_type:
 - Schema
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: e99efd849cb61dd31c3f0ea09f052133950188eb
-ms.sourcegitcommit: b77ace27b0432e7cd3863191b11926be032fbe2f
+ms.openlocfilehash: aa71a7cdfe4ca08f5a43f40f45ca2d29fddcea527610d3903aa096af053a1982
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "103859840"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118960639"
 ---
 # <a name="ms-ds-phonetic-last-name-attribute"></a>ms-DS-Phonetic-Last-Name-Attribut
 
@@ -30,12 +30,12 @@ Enthält den phonetischen Nachnamen der Person.
 | Eingabe | Wert |
 |-------------------|---------------------------------------------|
 | CN                | ms-DS-Phonetic-Last-Name                    |
-| LDAP-Display-Name | MSDS-phoneticlastname                       |
+| Ldap-Anzeigename | msDS-PhoneticLastName                       |
 | Size              | \-                                          |
-| Berechtigung aktualisieren  | \-                                          |
-| Aktualisierungshäufigkeit  | \-                                          |
+| Aktualisieren von Berechtigungen  | \-                                          |
+| Updatehäufigkeit  | \-                                          |
 | Attribute-Id      | 1.2.840.113556.1.4.1943                     |
-| System-ID-GUID    | f217e4ec-0836-4b90-88af-2f5d4bbda2bc        |
+| System-Id-Guid    | f217e4ec-0836-4b90-88af-2f5d4bbda2bc        |
 | Syntax            | [**String(Unicode)**](s-string-unicode.md) |
 
 
@@ -53,12 +53,12 @@ Enthält den phonetischen Nachnamen der Person.
 | Eingabe | Wert |
 |------------------------|--------------------------------------------------------------------|
 | Link-ID                | \-                                                                 |
-| MAPI-Id                | 0x8c8f                                                             |
+| MAPI-Id                | 0x8C8F                                                             |
 | System-Only            | False                                                              |
-| Ist-einwertig       | Richtig                                                               |
-| Ist indiziert             | Richtig                                                               |
-| Im globalen Katalog      | Richtig                                                               |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                       |
+| Is-Single-Valued       | True                                                               |
+| Ist indiziert             | True                                                               |
+| Im globalen Katalog      | True                                                               |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                       |
 | Range-Lower            | 1                                                                  |
 | Range-Upper            | 64                                                                 |
 | Search-Flags           | 0x00000005                                                         |
@@ -74,12 +74,12 @@ Enthält den phonetischen Nachnamen der Person.
 | Eingabe | Wert |
 |------------------------|--------------------------------------------------------------------|
 | Link-ID                | \-                                                                 |
-| MAPI-Id                | 0x8c8f                                                             |
+| MAPI-Id                | 0x8C8F                                                             |
 | System-Only            | False                                                              |
-| Ist-einwertig       | Richtig                                                               |
-| Ist indiziert             | Richtig                                                               |
-| Im globalen Katalog      | Richtig                                                               |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                       |
+| Is-Single-Valued       | True                                                               |
+| Ist indiziert             | True                                                               |
+| Im globalen Katalog      | True                                                               |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                       |
 | Range-Lower            | 1                                                                  |
 | Range-Upper            | 64                                                                 |
 | Search-Flags           | 0x00000005                                                         |
@@ -95,12 +95,12 @@ Enthält den phonetischen Nachnamen der Person.
 | Eingabe | Wert |
 |------------------------|--------------------------------------------------------------------|
 | Link-ID                | \-                                                                 |
-| MAPI-Id                | 0x8c8f                                                             |
+| MAPI-Id                | 0x8C8F                                                             |
 | System-Only            | False                                                              |
-| Ist-einwertig       | Richtig                                                               |
-| Ist indiziert             | Richtig                                                               |
-| Im globalen Katalog      | Richtig                                                               |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                       |
+| Is-Single-Valued       | True                                                               |
+| Ist indiziert             | True                                                               |
+| Im globalen Katalog      | True                                                               |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                       |
 | Range-Lower            | 1                                                                  |
 | Range-Upper            | 64                                                                 |
 | Search-Flags           | 0x00000005                                                         |

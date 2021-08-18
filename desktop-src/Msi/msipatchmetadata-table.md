@@ -1,30 +1,30 @@
 ---
-description: Die MsiPatchMetadata-Tabelle enthält Informationen zu einem Windows Installer Patch, der erforderlich ist, um den Patch zu entfernen, und der von "Software" verwendet wird.
+description: Die MsiPatchMetadata-Tabelle enthält Informationen zu einem Windows Installer-Patch, der zum Entfernen des Patches erforderlich ist und von Add/Remove Programs verwendet wird.
 ms.assetid: b1c30e16-6c91-451a-8b75-7ddbcefcc092
 title: MsiPatchMetadata-Tabelle
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 2642661a8f9dc067086926f8e993fc32c95a4a85
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 7094e644ff02caa1cbf4b3e53e5761740ff9a5492c92ca746404b1d243e09285
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106350159"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119012898"
 ---
 # <a name="msipatchmetadata-table"></a>MsiPatchMetadata-Tabelle
 
-Die MsiPatchMetadata-Tabelle enthält Informationen zu einem Windows Installer Patch, der erforderlich ist, um den Patch zu entfernen, und **der von "** Software" verwendet wird.
+Die MsiPatchMetadata-Tabelle enthält Informationen zu einem Windows Installer-Patch, der zum Entfernen des Patches erforderlich ist und von **Add/Remove Programs** verwendet wird.
 
-Patches, die ohne diese Tabelle in der Patchdatenbank (MSP-Datei) installiert werden, können nicht entfernt werden, und es fehlen **Informationen von Software**. Die Tabelle muss sich in der Datenbank der Patchdatei befinden und nicht in einer Transformation im Patch.
+Patches, die ohne diese Tabelle in der Patchdatenbank (MSP-Datei) installiert wurden, können nicht entfernt werden, und es fehlen einige Informationen unter **Software .** Die Tabelle muss sich in der Datenbank der Patchdatei und nicht in einer Transformation im Patch befinden.
 
 Die MsiPatchMetadata-Tabelle weist die folgenden Spalten auf.
 
 
 
-| Spalte   | Typ                         | Schlüssel | Nullwerte zulässig |
+| Spalte   | Typ                         | Key | Nullwerte zulässig |
 |----------|------------------------------|-----|----------|
-| Company  | [Bezeichner](identifier.md) | J   | J        |
-| Eigenschaft | [Bezeichner](identifier.md) | J   | N        |
+| Company  | [Identifier](identifier.md) | J   | J        |
+| Eigenschaft | [Identifier](identifier.md) | J   | N        |
 | Wert    | [Text](text.md)             | N   | N        |
 
 
@@ -35,16 +35,16 @@ Die MsiPatchMetadata-Tabelle weist die folgenden Spalten auf.
 
 <dl> <dt>
 
-<span id="Company"></span><span id="company"></span><span id="COMPANY"></span>Geschäfts
+<span id="Company"></span><span id="company"></span><span id="COMPANY"></span>Unternehmen
 </dt> <dd>
 
-Der Name des Unternehmens. Ein leeres Feld (ein NULL-Wert) gibt an, dass die Zeile eine der standardmetadateneigenschaften der Windows Installer enthält. Weitere Informationen finden Sie im Abschnitt "Hinweise" in diesem Thema.
+Der Name des Unternehmens. Ein leeres Feld (ein NULL-Wert) gibt an, dass die Zeile eine der Standardmetadateneigenschaften des Windows Installers enthält. Weitere Informationen finden Sie im Abschnitt "Hinweise" dieses Themas.
 
-Wenn Sie der Tabelle eine Zeile hinzufügen und einen Firmennamen in dieses Feld eingeben, können Sie ein beliebiges Unternehmen hinzufügen, um den Eigenschaften Satz zu erweitern.
+Indem Sie der Tabelle eine Zeile hinzufügen und einen Firmennamen in dieses Feld eingeben, können Sie ein beliebiges Unternehmen hinzufügen, um den Eigenschaftensatz zu erweitern.
 
 </dd> <dt>
 
-<span id="Property"></span><span id="property"></span><span id="PROPERTY"></span>Property
+<span id="Property"></span><span id="property"></span><span id="PROPERTY"></span>Eigenschaft
 </dt> <dd>
 
 Der Name einer Metadateneigenschaft.
@@ -54,15 +54,15 @@ Der Name einer Metadateneigenschaft.
 <span id="Value"></span><span id="value"></span><span id="VALUE"></span>Wert
 </dt> <dd>
 
-Der Wert der Metadateneigenschaft. Dies kann niemals NULL oder eine leere Zeichenfolge sein.
+Der Wert der Metadateneigenschaft. Dies darf nie NULL oder eine leere Zeichenfolge sein.
 
 </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Verfügbar in Windows Installer 3,0 und höher.
+Verfügbar in Windows Installer 3.0 und höher.
 
-Zeilen in der MsiPatchMetadata-Tabelle, die einen NULL-Wert im Feld "Unternehmenname" enthalten, verweisen auf eine der folgenden Standard-Windows Installer Metadateneigenschaften.
+Zeilen in der MsiPatchMetadata-Tabelle, die einen NULL-Wert im Feld CompanyName enthalten, verweisen auf eine der folgenden Standardeigenschaften Windows Installer-Metadaten.
 
 
 
@@ -79,32 +79,32 @@ Zeilen in der MsiPatchMetadata-Tabelle, die einen NULL-Wert im Feld "Unternehmen
 </thead>
 <tbody>
 <tr class="odd">
-<td>Allowremoval</td>
-<td>Gibt an, ob der Patch ein <a href="uninstallable-patches.md">nicht installier barer Patch</a>ist. Wenn das Wertfeld 0 (null) enthält, kann der Patch nicht entfernt werden. Wenn das Wertfeld eins (1) enthält, ist der Patch ein nicht installier barer Patch. diese Eigenschaft wird registriert, und ihr Wert kann mithilfe der Funktion " <a href="/windows/desktop/api/Msi/nf-msi-msigetpatchinfoexa"><strong>msigetpatchinfoex</strong></a> " abgerufen werden. <br/></td>
+<td>AllowRemoval</td>
+<td>Gibt an, ob der Patch ein <a href="uninstallable-patches.md">deinstallationsfähiger Patch</a>ist oder nicht. Wenn das Wertfeld 0 (null) enthält, kann der Patch nicht entfernt werden. Wenn das Wertfeld eins (1) enthält, ist der Patch ein Deinstallationsfähiger Patch. Diese Eigenschaft ist registriert, und ihr Wert kann mithilfe der <a href="/windows/desktop/api/Msi/nf-msi-msigetpatchinfoexa"><strong>MsiGetPatchInfoEx-Funktion</strong></a> ermittelt werden. <br/></td>
 </tr>
 <tr class="even">
 <td>ManufacturerName</td>
-<td>Der Name des Herstellers der Anwendung.</td>
+<td>Name des Herstellers der Anwendung.</td>
 </tr>
 <tr class="odd">
-<td>Minorupdatetargetrtm</td>
-<td>Gibt an, dass der Patch die RTM-Version des Produkts oder den neuesten wichtigen Upgradepatch als Ziel hat. Erstellen Sie diese optionale Eigenschaft in hilfsupgradepatches, die Sequenz Informationen enthalten, um anzugeben, dass der Patch alle Patches bis zur RTM-Version des Produkts entfernt hat, oder bis zum neuesten wichtigen Upgradepatch. Diese Eigenschaft ist in Windows Installer 3,1 und höher verfügbar. <br/></td>
+<td>MinorUpdateTargetRTM</td>
+<td>Gibt an, dass der Patch auf die RTM-Version des Produkts oder den letzten größeren Upgradepatch ausgerichtet ist. Erstellen Sie diese optionale Eigenschaft in kleineren Upgradepatches, die Sequenzinformationen enthalten, um anzugeben, dass der Patch alle Patches bis zur RTM-Version des Produkts oder bis zum letzten Hauptupgradepatch entfernt. Diese Eigenschaft ist in Windows Installer 3.1 und höher verfügbar. <br/></td>
 </tr>
 <tr class="even">
-<td>Targetproductname</td>
-<td>Der Name der Anwendungs-oder Ziel Anwendungssuite.</td>
+<td>TargetProductName</td>
+<td>Name der Anwendung oder Zielanwendungssammlung.</td>
 </tr>
 <tr class="odd">
-<td>MoreInfoUrl</td>
-<td>Eine URL, die für diesen Patch spezifische Informationen bereitstellt. Diese Eigenschaft ist registriert, und ihr Wert kann mithilfe der Funktion " <a href="/windows/desktop/api/Msi/nf-msi-msigetpatchinfoexa"><strong>msigetpatchinfoex</strong></a> " abgerufen werden. Ab Windows XP mit Service Pack 2 (SP2) kann dieser Wert der Support-Link für <strong>den in Software</strong>angezeigte Patch sein.<br/></td>
+<td>MoreInfoURL</td>
+<td>Eine URL, die spezifische Informationen zu diesem Patch bereitstellt. Diese Eigenschaft wird registriert, und ihr Wert kann mithilfe der <a href="/windows/desktop/api/Msi/nf-msi-msigetpatchinfoexa"><strong>MsiGetPatchInfoEx-Funktion</strong></a> abgerufen werden. Ab Windows XP mit Service Pack 2 (SP2) kann dieser Wert der Supportlink für den Patch sein, der unter <strong>Software hinzufügen/entfernen</strong>angezeigt wird.<br/></td>
 </tr>
 <tr class="even">
-<td>"Kreationtimeutc"</td>
-<td>Erstellungszeit der MSP-Datei im Format mm-dd-yy HH: mm (month-day-year Hour: Minute).</td>
+<td>CreationTimeUTC</td>
+<td>Erstellungszeit der MSP-Datei in Form von mm-dd-yyy HH:MM (Monat-Tag-Jahr Stunde:Minute).</td>
 </tr>
 <tr class="odd">
 <td>DisplayName</td>
-<td>Ein Titel für den Patch, der für die öffentliche Anzeige geeignet ist. Diese Eigenschaft ist registriert, und ihr Wert kann mithilfe der Funktion " <a href="/windows/desktop/api/Msi/nf-msi-msigetpatchinfoexa"><strong>msigetpatchinfoex</strong></a> " abgerufen werden. Ab Windows XP mit SP2 ist dieser Wert der Name des Patches, der unter "Software" angezeigt <strong>wird.</strong><br/></td>
+<td>Ein Titel für den Patch, der für die öffentliche Anzeige geeignet ist. Diese Eigenschaft ist registriert, und ihr Wert kann mithilfe der <a href="/windows/desktop/api/Msi/nf-msi-msigetpatchinfoexa"><strong>MsiGetPatchInfoEx-Funktion</strong></a> abgerufen werden. Ab Windows XP mit SP2 ist dieser Wert der Name des Patches, der unter <strong>Add/Remove Programs (Software hinzufügen/entfernen)</strong>angezeigt wird.<br/></td>
 </tr>
 <tr class="even">
 <td>BESCHREIBUNG</td>
@@ -112,22 +112,22 @@ Zeilen in der MsiPatchMetadata-Tabelle, die einen NULL-Wert im Feld "Unternehmen
 </tr>
 <tr class="odd">
 <td>Klassifizierung</td>
-<td>Ein Zeichen folgen Wert, der die beliebige Kategorie von Updates enthält, wie vom Autor des Patches definiert. Beispielsweise können patchautoren angeben, dass jeder Patch als Hotfix, Sicherheitsrollup, wichtiges Update, Update, Service Pack oder Updaterollup klassifiziert werden soll. Diese Eigenschaft ist obligatorisch.</td>
+<td>Ein Zeichenfolgenwert, der die beliebige Kategorie von Updates enthält, wie vom Autor des Patches definiert. Patchautoren können beispielsweise angeben, dass jeder Patch als Hotfix, Sicherheitsrollup, Kritisches Update, Update, Service Pack oder Updaterollup klassifiziert werden soll. Diese Eigenschaft ist erforderlich.</td>
 </tr>
 <tr class="even">
-<td>Optimizeca</td>
-<td>Gibt an, ob die Windows Installer beim Anwenden des Patches benutzerdefinierte Aktionen überspringen soll. Dadurch kann die Zeit, die zum Anwenden des Patches erforderlich ist, reduziert werden. Die optimizeca-Eigenschaft kann einen der folgenden Werte aufweisen:<br/>
+<td>OptimizeCA</td>
+<td>Gibt an, ob der Windows Installer beim Anwenden des Patches benutzerdefinierte Aktionen überspringen soll. Dies kann die Zeit verkürzen, die zum Anwenden des Patches erforderlich ist. Die OptimizeCA-Eigenschaft kann einen der folgenden Werte aufweisen:<br/>
 <ul>
-<li>0-keine benutzerdefinierten Aktionen überspringen.</li>
-<li>1-überspringen Sie benutzerdefinierte Aktionen für die Eigenschaft und Verzeichnis Zuweisung. Der benutzerdefinierte <a href="custom-action-type-35.md">Aktionstyp 35</a> und der <a href="custom-action-type-51.md">benutzerdefinierte Aktionstyp 51</a> können benutzerdefinierte Aktionen der Eigenschaft und Verzeichnis Zuweisung sein.</li>
-<li>2: überspringen Sie unmittelbare benutzerdefinierte Aktionen, die nicht in die Eigenschaften-oder Verzeichnis Zuweisungen fallen. Die benutzerdefinierten Aktionen enthalten in der Type-Spalte der <a href="customaction-table.md">CustomAction-Tabelle</a>nicht die msidbcustomaction typeinscript-Option.</li>
-<li>4: überspringen Sie benutzerdefinierte Aktionen, die im Skript ausgeführt werden.</li>
+<li>0 : Überspringen Sie keine benutzerdefinierten Aktionen.</li>
+<li>1: Überspringt benutzerdefinierte Aktionen zur Eigenschaften- und Verzeichniszuweisung. <a href="custom-action-type-35.md">Benutzerdefinierter Aktionstyp 35</a> und <a href="custom-action-type-51.md">benutzerdefinierter Aktionstyp 51</a> können benutzerdefinierte Aktionen für Eigenschaften- und Verzeichniszuweisungen sein.</li>
+<li>2: Überspringen Sie sofortige benutzerdefinierte Aktionen, die nicht in die Eigenschaften- oder Verzeichniszuweisungen fallen. Die unmittelbaren benutzerdefinierten Aktionen enthalten keine msidbCustomActionTypeInScript-Option in der Spalte Type der <a href="customaction-table.md">CustomAction-Tabelle.</a></li>
+<li>4: Überspringen sie benutzerdefinierte Aktionen, die im Skript ausgeführt werden.</li>
 </ul>
-Der Wert von optimizeca muss für alle Patches, die installiert werden, identisch sein, oder es werden keine benutzerdefinierten Aktionen übersprungen. Wenn beispielsweise zwei Patches installiert werden und optimizeca auf die Werte 1 und 2 festgelegt ist, werden keine benutzerdefinierten Aktionen übersprungen. <br/> Die Werte von optimizeca können kombiniert werden, wenn mehrere neue Patches verarbeitet werden. Wenn alle Patches über eine (eins) in den Werten verfügen, werden alle benutzerdefinierten Aktionen der Eigenschaft und Verzeichnis Zuweisung übersprungen. Wenn ein Patch den Wert 3 (drei) für die-Eigenschaft aufweist und ein Patch den Wert 1 (eins) für die-Eigenschaft aufweist, werden die benutzerdefinierten Eigenschaften und Verzeichnis Zuweisungs Aktionen übersprungen. Die anderen unmittelbaren benutzerdefinierten Aktionen werden jedoch ausgeführt, da nicht alle angeforderten Patches übersprungen werden. <br/></td>
+Der Wert von OptimizeCA muss für alle installierten Patches identisch sein, oder es werden keine benutzerdefinierten Aktionen übersprungen. Wenn beispielsweise zwei Patches installiert werden und OptimizeCA auf die Werte 1 bzw. 2 festgelegt ist, werden keine benutzerdefinierten Aktionen übersprungen. <br/> Die Werte von OptimizeCA können kombiniert werden, wenn mehrere neue Patches verarbeitet werden. Wenn alle Patches eine 1 (eins) in den Werten enthalten, werden alle benutzerdefinierten Aktionen zur Eigenschaften- und Verzeichniszuweisung übersprungen. Wenn ein Patch den Wert 3 (drei) für die Eigenschaft und ein Patch den Wert 1 (eins) für die Eigenschaft hat, werden die benutzerdefinierten Aktionen für die Eigenschaft und verzeichniszuweisung übersprungen. Die anderen unmittelbaren benutzerdefinierten Aktionen werden jedoch ausgeführt, da nicht alle angeforderten Patches übersprungen werden. <br/></td>
 </tr>
 <tr class="odd">
 <td>OptimizedInstallMode</td>
-<td>Wenn diese Eigenschaft in allen Patches, die in einer Transaktion angewendet werden sollen, auf 1 (eins) festgelegt ist, wird nach Möglichkeit eine Anwendung des Patches optimiert. Weitere Informationen finden Sie unter <a href="patch-optimization.md">Patch Optimization</a>. Verfügbar ab Windows Installer 3,1.</td>
+<td>Wenn diese Eigenschaft in allen Patches, die in einer Transaktion angewendet werden sollen, auf 1 (eins) festgelegt ist, wird eine Anwendung des Patches nach Möglichkeit optimiert. Weitere Informationen finden Sie unter <a href="patch-optimization.md">Patchoptimierung.</a> Verfügbar ab Windows Installer 3.1.</td>
 </tr>
 </tbody>
 </table>
@@ -136,7 +136,7 @@ Der Wert von optimizeca muss für alle Patches, die installiert werden, identisc
 
  
 
-## <a name="validation"></a>Überprüfen
+## <a name="validation"></a>Überprüfung
 
 <dl>
 
@@ -148,7 +148,7 @@ Der Wert von optimizeca muss für alle Patches, die installiert werden, identisc
 
 <dl> <dt>
 
-[Wird in Windows Installer 2,0 und früher nicht unterstützt.](not-supported-in-windows-installer-version-2-0.md)
+[Nicht unterstützt in Windows Installer 2.0 und früher](not-supported-in-windows-installer-version-2-0.md)
 </dt> </dl>
 
  

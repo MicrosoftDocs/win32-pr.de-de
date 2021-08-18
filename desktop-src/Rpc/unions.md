@@ -1,26 +1,26 @@
 ---
-title: Union-Schlüsselwort (RPC)
-description: Unions benötigen besondere Mittel Schlüssel Schlüsselwörter zur Unterstützung ihrer Verwendung mit Remote Prozedur Aufruf (RPC).
+title: union-Schlüsselwort (RPC)
+description: Unions erfordern spezielle MIDL-Schlüsselwörter, um ihre Verwendung mit Remote Procedure Call (RPC) zu unterstützen.
 ms.assetid: e7c8296c-893d-4df7-913a-f969733e1917
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 0c562815d78ab931bd4d6590b5465647e72f4bf6
-ms.sourcegitcommit: 592c9bbd22ba69802dc353bcb5eb30699f9e9403
+ms.openlocfilehash: 5fde18cca09f4db81af8eada2ae102a1bea373ed7859b3a7fc2bb9637f28d584
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "104315242"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119011008"
 ---
-# <a name="union-keyword-rpc"></a>Union-Schlüsselwort (RPC)
+# <a name="union-keyword-rpc"></a>union-Schlüsselwort (RPC)
 
-Einige Features der Programmiersprache C (z. b. Unions) erfordern spezielle Mittel Schlüssel Schlüsselwörter, um ihre Verwendung in Remote Prozedur aufrufen zu unterstützen. Eine Union in der Programmiersprache C ist eine Variable, die Objekte mit unterschiedlichen Typen und Größen enthält. Der Entwickler erstellt in der Regel eine Variable, um die in der Union gespeicherten Typen nachzuverfolgen. Um ordnungsgemäß in einer verteilten Umgebung auszuführen, muss die Variable, die den Typ der Union oder die *Diskriminante* angibt, auch für den Remote Computer verfügbar sein. In der Mitte werden der \[ [**\_ Switchtyp**](/windows/desktop/Midl/switch-type) \] und die \[ [**Switch \_ is**](/windows/desktop/Midl/switch-is) - \] Schlüsselwörter zur Identifizierung des diskriminatentyps und des Namens angegeben
+Einige Features der Programmiersprache C, z. B. Unions, erfordern spezielle MIDL-Schlüsselwörter, um ihre Verwendung in Remoteprozeduraufrufen zu unterstützen. Eine Union in der Programmiersprache C ist eine Variable, die Objekte verschiedener Typen und Größen enthält. Der Entwickler erstellt in der Regel eine Variable, um die in der Union gespeicherten Typen nachzuverfolgen. Um in einer verteilten Umgebung ordnungsgemäß zu funktionieren, muss die Variable, die den Typ der Union angibt, oder die *diskriminante*, auch für den Remotecomputer verfügbar sein. MIDL stellt den \[ [**\_ Switchtyp**](/windows/desktop/Midl/switch-type) bereit, \] und \[ [**switch \_ ist**](/windows/desktop/Midl/switch-is) \] schlüsselwörter, um den diskriminanten Typ und Namen zu identifizieren.
 
-Bei der Verwendung von "Mittel l" muss die Diskriminante mit der Union auf zwei Arten übertragen werden:
+MIDL erfordert, dass die Diskriminanz auf zwei Arten mit der Union übertragen wird:
 
--   Die Union und die Diskriminante müssen als Parameter bereitgestellt werden.
--   Die Union und die Diskriminante müssen in einer Struktur verpackt werden.
+-   Die Union und die Diskriminanz müssen als Parameter bereitgestellt werden.
+-   Die Union und die Diskriminanz müssen in einer -Struktur gepackt werden.
 
-Zwei grundlegende Typen von Unterscheidungs-Unions werden von mittlerer l bereitgestellt: [**nicht gekapselte \_ Union**](/windows/desktop/Midl/nonencapsulated-unions) und [**gekapselte \_**](/windows/desktop/Midl/encapsulated-unions) Die Diskriminante einer nicht gekapselten Union ist ein weiterer Parameter, wenn die Union ein Parameter ist. Es ist ein weiteres Feld, wenn die Union ein Feld einer Struktur ist. Die Definition einer gekapselten Union wird in eine Struktur Definition umgewandelt, deren erstes Feld die Diskriminante ist und deren zweite und letzte Felder die Union darstellen. Im folgenden Beispiel wird veranschaulicht, wie die Union und die Diskriminante als Parameter bereitgestellt werden:
+Midl stellt zwei grundlegende Typen von Unterscheidungs-Unions bereit: [**nicht gekapselte \_ Union**](/windows/desktop/Midl/nonencapsulated-unions) und [**gekapselte \_ Union.**](/windows/desktop/Midl/encapsulated-unions) Die Diskriminanz einer nicht gekapselten Union ist ein weiterer Parameter, wenn die Union ein Parameter ist. Es ist ein weiteres Feld, wenn die Union ein Feld einer -Struktur ist. Die Definition einer gekapselten Union wird in eine Strukturdefinition umgewandelt, deren erstes Feld diskriminant ist und deren zweite und letzte Felder die Union sind. Im folgenden Beispiel wird veranschaulicht, wie die Union und diskriminant als Parameter angegeben werden:
 
 ``` syntax
 typedef [switch_type(short)] union 
@@ -36,11 +36,11 @@ short UnionParamProc(
     [in] short sUtype);
 ```
 
-Die Union im vorangehenden Beispiel kann einen einzelnen Wert enthalten: " **Short**", " **float**" oder " **char**". Die Typdefinition für die Union enthält das Attribut "Mittelwert **Switch \_ Type** ", das den Typ des Diskriminanten angibt. Hier \[ gibt Switch \_ Type (Short) \] an, dass der diskriminant vom Typ **Short** ist. Der Switch muss ein ganzzahliger Typ sein.
+Die Union im vorherigen Beispiel kann einen einzelnen Wert enthalten: **entweder short**, **float** oder **char**. Die Typdefinition für die Union enthält das MIDL-Switchtypattribut, das den Typ des Diskriminanten angibt. **\_** Hier \[ \_ gibt switch type(short) \] an, dass das diskriminante vom Typ **short** ist. Der Schalter muss ein ganzzahliger Typ sein.
 
-Wenn die Union ein Member einer Struktur ist, muss die Diskriminante ein Member derselben Struktur sein. Wenn die Union ein Parameter ist, muss der diskriminant ein weiterer Parameter sein. Der Prototyp für die Funktion **unionparamproc** im vorangehenden Beispiel zeigt den Diskriminanten *sutype* als letzten Parameter des Aufrufes. (Die Diskriminante kann an einer beliebigen Position im-Befehl angezeigt werden.) Der im Switch angegebene Typ des Parameters muss dem Typ entsprechen, der im **\[ Switch \_ Type \]** -Attribut angegeben **\[ \_ ist \]** .
+Wenn die Union ein Member einer -Struktur ist, muss der Diskriminant ein Member derselben Struktur sein. Wenn die Union ein Parameter ist, muss die Diskriminanz ein anderer Parameter sein. Der Prototyp für die Funktion **UnionParamProc** im vorherigen Beispiel zeigt den diskriminanten *sUtype* als letzten Parameter des Aufrufs. (Die Diskriminanz kann an jeder Position im Aufruf angezeigt werden.) Der Typ des parameters, der im Switch angegeben **\[ \_ ist, muss \]** mit dem im **\[ \_ \] Switchtypattribut** angegebenen Typ übereinstimmen.
 
-Im folgenden Beispiel wird die Verwendung einer einzelnen-Struktur veranschaulicht, die den Diskriminanten mit der Union verpackt:
+Im folgenden Beispiel wird die Verwendung einer einzelnen -Struktur veranschaulicht, die die Diskriminanz mit der Union packt:
 
 ``` syntax
 typedef struct 
@@ -59,8 +59,8 @@ short UnionStructProc(
     [in] DISCRIM_UNION_STRUCT_TYPE u1);
 ```
 
-Der Microsoft RPC-Mittell-Compiler ermöglicht Union-Deklarationen außerhalb von [**typedef**](/windows/desktop/Midl/typedef) -Konstrukten. Diese Funktion ist eine Erweiterung der DCE-IDL. Weitere Informationen finden Sie unter [**Union**](/windows/desktop/Midl/union).
+Der Microsoft RPC MIDL-Compiler [](/windows/desktop/Midl/typedef) lässt Union-Deklarationen außerhalb von typedef-Konstrukten zu. Dieses Feature ist eine Erweiterung der DCE-IDL. Weitere Informationen finden Sie unter [**union**](/windows/desktop/Midl/union).
 
- 
+ 
 
- 
+ 

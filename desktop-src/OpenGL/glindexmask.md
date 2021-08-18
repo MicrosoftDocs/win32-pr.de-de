@@ -1,9 +1,9 @@
 ---
-title: glindexmask-Funktion (GL. h)
-description: Die Funktion "glindexmask" steuert das Schreiben einzelner Bits in den Farb Index Puffern.
+title: glIndexMask-Funktion (Gl.h)
+description: Die glIndexMask-Funktion steuert das Schreiben einzelner Bits in den Farbindexpuffern.
 ms.assetid: f4b5df36-390f-4254-95fb-98589750a11b
 keywords:
-- glindexmask-Funktion OpenGL
+- glIndexMask-Funktion OpenGL
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - DllExport
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 0d426cb1f4bb2e794bef53853d0336db1d64b263
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: f8e022bb3cbb5be5ac15049b5e8bc128d2ac7e100d5bcec6a87988dd2d14c5d8
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "106340569"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119012198"
 ---
-# <a name="glindexmask-function"></a>glindexmask-Funktion
+# <a name="glindexmask-function"></a>glIndexMask-Funktion
 
-Die Funktion " **glindexmask** " steuert das Schreiben einzelner Bits in den Farb Index Puffern.
+Die **glIndexMask-Funktion** steuert das Schreiben einzelner Bits in den Farbindexpuffern.
 
 ## <a name="syntax"></a>Syntax
 
@@ -43,7 +43,7 @@ void WINAPI glIndexMask(
 *mask* 
 </dt> <dd>
 
-Eine Bitmaske, um das Schreiben einzelner Bits in den Farb Index Puffern zu aktivieren und zu deaktivieren. Anfänglich ist die Maske alle.
+Eine Bitmaske zum Aktivieren und Deaktivieren des Schreibens einzelner Bits in den Farbindexpuffern. Anfänglich ist die Maske alle.
 
 </dd> </dl>
 
@@ -53,25 +53,25 @@ Diese Funktion gibt keinen Wert zurück.
 
 ## <a name="error-codes"></a>Fehlercodes
 
-Der folgende Fehlercode kann von der Funktion " [**glgeterror**](glgeterror.md) " abgerufen werden.
+Der folgende Fehlercode kann von der [**glGetError-Funktion**](glgeterror.md) abgerufen werden.
 
 
 
 | Name                                                                                                  | Bedeutung                                                                                                                               |
 |-------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------|
-| <dl> <dt>**\_ungültiger \_ Vorgang**</dt> </dl> | Die Funktion wurde zwischen einem Aufruf von [**glBegin**](glbegin.md) und dem entsprechenden Aufruf von [**glEnd**](glend.md)aufgerufen.<br/> |
+| <dl> <dt>**GL \_ INVALID \_ OPERATION**</dt> </dl> | Die Funktion wurde zwischen einem Aufruf von [**glBegin**](glbegin.md) und dem entsprechenden Aufruf von [**glEnd**](glend.md)aufgerufen.<br/> |
 
 
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die Funktion " **glindexmask** " steuert das Schreiben einzelner Bits in den Farb Index Puffern. Die am wenigsten signifikanten *n* Bits der *Maske*, wobei *1* die Anzahl der Bits in einem Farb Index Puffer ist, geben eine Maske an. Wenn ein solches in der Maske angezeigt wird, wird das entsprechende Bit im Farb Index Puffer (oder Puffer) als beschreibbar festgelegt. Wenn ein NULL-Wert angezeigt wird, ist das Bit schreibgeschützt.
+Die **glIndexMask-Funktion** steuert das Schreiben einzelner Bits in den Farbindexpuffern. Geben Sie eine *Maske* an, wobei *1* die Anzahl der Bits in einem Farbindexpuffer ist.  Überall dort, wo eine in der Maske angezeigt wird, wird das entsprechende Bit im Farbindexpuffer (oder puffern) schreibbar gemacht. Wenn eine 0 (null) angezeigt wird, ist das Bit schreibgeschützt.
 
-Diese Maske wird nur im Farb Index Modus verwendet und wirkt sich nur auf die Puffer aus, die zurzeit zum Schreiben ausgewählt werden (siehe [**gldrawbuffer**](gldrawbuffer.md)). Anfänglich werden alle Bits zum Schreiben aktiviert.
+Diese Maske wird nur im Farbindexmodus verwendet und wirkt sich nur auf die Puffer aus, die derzeit zum Schreiben ausgewählt sind (siehe [**glDrawBuffer**](gldrawbuffer.md)). Anfänglich sind alle Bits für das Schreiben aktiviert.
 
-Die folgende Funktion Ruft Informationen im Zusammenhang mit **glindexmask** ab:
+Die folgende Funktion ruft Informationen im Zusammenhang mit **glIndexMask** ab:
 
-[**glget**](glgetbooleanv--glgetdoublev--glgetfloatv--glgetintegerv.md) mit dem Argument GL- \_ Index \_ schreibfrage
+[**glGet**](glgetbooleanv--glgetdoublev--glgetfloatv--glgetintegerv.md) mit dem Argument GL \_ INDEX \_ WRITEMASK
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -81,32 +81,32 @@ Die folgende Funktion Ruft Informationen im Zusammenhang mit **glindexmask** ab:
 |-------------------------------------|-----------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[nur Desktop-Apps\]<br/>                              |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                                    |
-| Header<br/>                   | <dl> <dt>GL. h</dt> </dl>         |
-| Bibliothek<br/>                  | <dl> <dt>Opengl32. lib</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Gl.h</dt> </dl>         |
+| Bibliothek<br/>                  | <dl> <dt>Opengl32.lib</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Opengl32.dll</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
 [**glBegin**](glbegin.md)
 </dt> <dt>
 
-[**gldepthmask**](gldepthmask.md)
+[**glDepthMask**](gldepthmask.md)
 </dt> <dt>
 
-[**gldrawbuffer**](gldrawbuffer.md)
+[**glDrawBuffer**](gldrawbuffer.md)
 </dt> <dt>
 
 [**glEnd**](glend.md)
 </dt> <dt>
 
-[**glindex**](glindex-functions.md)
+[**glIndex**](glindex-functions.md)
 </dt> <dt>
 
-[**glstencilmask**](glstencilmask.md)
+[**glStencilMask**](glstencilmask.md)
 </dt> </dl>
 
  

@@ -1,19 +1,19 @@
 ---
-title: " ifdef"
-description: Die \ ifdef-Direktive steuert die bedingte Kompilierung der Ressourcen Datei, indem der angegebene Name überprüft wird.
+title: " Ifdef"
+description: Die \ifdef-Direktive steuert die bedingte Kompilierung der Ressourcendatei durch Überprüfen des angegebenen Namens.
 ms.assetid: 877c6b58-d8a1-4e68-8b69-29fe106d6cbd
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 38170fb2140f8405a86529c0899c1e4d4e93c026
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: 6e834dc84d54e1d6f7725008b8bcf28f4ed49fc3fe45f36fb291ddc397d30eb6
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "104388343"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119034478"
 ---
-# <a name="ifdef"></a>\#ifdef
+# <a name="ifdef"></a>\#Ifdef
 
-Die **\# ifdef** -Direktive steuert die bedingte Kompilierung der Ressourcen Datei, indem der angegebene Name überprüft wird. Wenn der Name mithilfe einer **\# define** -Direktive oder mithilfe der Befehlszeilenoption **/d** mit dem Ressourcen Compiler definiert wurde, weist **\# ifdef** den Compiler an, mit der Anweisung unmittelbar nach der **\# ifdef** -Direktive fortzufahren. Wenn der Name nicht definiert wurde, weist **\# ifdef** den Compiler an, alle Anweisungen bis zur nächsten **\# EndIf** -Direktive zu überspringen.
+Die **\# ifdef-Direktive** steuert die bedingte Kompilierung der Ressourcendatei durch Überprüfen des angegebenen Namens. Wenn der Name mithilfe einer **\# define-Direktive** oder der Befehlszeilenoption **/d** mit dem Ressourcencompiler definiert wurde, weist **\# ifdef** den Compiler an, direkt nach der **\# ifdef-Direktive** mit der Anweisung fortzufahren. Wenn der Name nicht definiert wurde, weist **\# ifdef** den Compiler an, alle Anweisungen bis zur nächsten **\# endif-Direktive** zu überspringen.
 
 ``` syntax
 #ifdef name
@@ -21,16 +21,16 @@ Die **\# ifdef** -Direktive steuert die bedingte Kompilierung der Ressourcen Dat
 
 <dl> <dt>
 
-<span id="name"></span><span id="NAME"></span>*Benennen*
+<span id="name"></span><span id="NAME"></span>*Namen*
 </dt> <dd>
 
-Der Name, der von der Direktive geprüft werden soll.
+Name, der von der -Anweisung überprüft werden soll.
 
 </dd> </dl>
 
 ## <a name="example"></a>Beispiel
 
-In diesem Beispiel wird die [**Bitmap**](bitmap-resource.md) -Anweisung nur kompiliert, wenn DEBUG definiert ist:
+In diesem Beispiel wird die [**BITMAP-Anweisung**](bitmap-resource.md) nur kompiliert, wenn Debug definiert ist:
 
 ``` syntax
 #ifdef Debug
@@ -45,9 +45,9 @@ BITMAP 1 errbox.bmp
 [Präprozessordirektiven](preprocessor-directives.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

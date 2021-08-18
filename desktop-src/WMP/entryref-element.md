@@ -1,9 +1,9 @@
 ---
 title: ENTRYREF-Element
-description: Das ENTRYREF-Element verweist auf die Eintrags Elemente in einer externen Metadatei.
+description: Das ENTRYREF-Element zeigt auf die ENTRY-Elemente in einer externen Metadatei.
 ms.assetid: ba39db39-fa90-455b-b278-ca866ce0b69c
 keywords:
-- Fenster "ENTRYREF-Element" Media Player
+- ENTRYREF-Element Windows Media Player
 topic_type:
 - apiref
 api_name:
@@ -13,16 +13,16 @@ api_type:
 ms.topic: reference
 ms.date: 05/31/2018
 api_location: ''
-ms.openlocfilehash: 520a4262baf17badb136b55e7b2e216bf89d7edf
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 61fa3403fc56c6a02f97330b3c2f62d1c3e3c723f50672520ea42fb4a2018705
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106369570"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118996669"
 ---
 # <a name="entryref-element"></a>ENTRYREF-Element
 
-Das **ENTRYREF** -Element verweist auf die **Eintrags** Elemente in einer externen Metadatei.
+Das **ENTRYREF-Element** zeigt auf die **ENTRY-Elemente** in einer externen Metadatei.
 
 ``` syntax
 <ENTRYREF
@@ -32,21 +32,21 @@ Das **ENTRYREF** -Element verweist auf die **Eintrags** Elemente in einer extern
 
 ## <a name="attributes"></a>Attribute
 
-**Href** (erforderlich)
+**HREF** (erforderlich)
 
 URL zu einer Metadatei, auf die verwiesen wird.
 
-**Clientbind**
+**CLIENTBIND**
 
 Dieses Attribut wird nicht mehr unterstützt.
 
-## <a name="parentchild-elements"></a>Über-/unterordnungselemente
+## <a name="parentchild-elements"></a>Übergeordnete/untergeordnete Elemente
 
 
 
 | Hierarchy       | Elemente                       |
 |-----------------|--------------------------------|
-| Übergeordnete Elemente | **ASX**, **Ereignis**, **Wiederholung** |
+| Übergeordnete Elemente | **ASX**, **EVENT**, **REPEAT** |
 | Untergeordnete Elemente  | Keine                           |
 
 
@@ -55,11 +55,11 @@ Dieses Attribut wird nicht mehr unterstützt.
 
 ## <a name="remarks"></a>Bemerkungen
 
-Dieses Element verweist auf den Inhalt einer externen Metadatendatei. Windows Media Player verarbeitet die **Einstiegs** Elemente der Metadatei, auf die verwiesen wird, als wären Sie in der primären Metadatendatei an der Position des **ENTRYREF** -Elements enthalten. Allerdings werden alle **Eingabe** Elemente in der Metadatei, auf die verwiesen wird, ausgelassen, deren **skipifref** -Attribut auf "yes" festgelegt ist.
+Dieses Element verweist auf den Inhalt einer externen Metadatei. Windows Media Player verarbeitet die **ENTRY-Elemente** der Metadatei, auf die verwiesen wird, als ob sie in der primären Metadatei an der Position des **ENTRYREF-Elements enthalten** sind. Allerdings werden alle **ENTRY-Elemente** in der Metadatei, auf die verwiesen wird, übersprungen, für die das **SKIPIFREF-Attribut** auf YES festgelegt ist.
 
-In Windows Media Player 7,0, 7,1 und Windows Media Player für Windows XP werden alle **ENTRYREF** -Elemente in der Metadatei ignoriert, auf die verwiesen wird. Folglich können Metadateien nur eine Ebene tief verschachtelt werden, wenn diese Versionen des Players verwendet werden. Windows Media Player ignoriert auch das Element " **ASX** " in der Datei, auf die verwiesen wird, sowie die zugehörigen Attribute. Windows Media Player 9 oder höher unterstützt das Schachteln von Metadateien mit einer Tiefe von bis zu fünf Ebenen.
+Windows Media Player 7.0, 7.1 und Windows Media Player für Windows XP ignorieren alle **ENTRYREF-Elemente** in der Metadatei, auf die verwiesen wird. Daher können Metadateien nur eine Ebene tief geschachtelt werden, wenn diese Versionen des Players verwendet werden. Windows Media Player ignoriert auch das **ASX-Element** in der Datei, auf die verwiesen wird, zusammen mit seinen Attributen. Windows Media Player 9-Serie oder höher unterstützt das Schachteln von Metadateien mit einer Tiefe von bis zu fünf Ebenen.
 
-Die im **href** -Attribut angegebene URL wird zur Basis-URL für alle relativen URLs in der externen Metadatendatei. Diese URL wird verwendet, wenn ein Eintrag aus der externen Metadatei abgespielt wird und der Benutzer Sie der Bibliothek hinzufügt.
+Die im **HREF-Attribut angegebene URL** wird zur Basis-URL für alle relativen URLs in der externen Metadatei. Diese URL wird verwendet, wenn ein Eintrag aus der externen Metadatei abspielt und der Benutzer ihn der Bibliothek hinzufügt.
 
 ## <a name="examples"></a>Beispiele
 
@@ -80,18 +80,18 @@ Die im **href** -Attribut angegebene URL wird zur Basis-URL für alle relativen 
 
 | Anforderung | Wert |
 |--------------------|-----------------------------------------------------|
-| Version<br/> | Windows Media Player, Version 70 oder höher<br/> |
+| Version<br/> | Windows Media Player Version 70 oder höher<br/> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Verweis auf Windows Media-Metadateielemente**](windows-media-metafile-elements-reference.md)
+[**Windows Referenz zu Medienmetadateielementen**](windows-media-metafile-elements-reference.md)
 </dt> <dt>
 
-[**Referenz zu Windows Media-Metadateien**](windows-media-metafile-reference.md)
+[**Windows Referenz zur Medienmetadatei**](windows-media-metafile-reference.md)
 </dt> </dl>
 
  

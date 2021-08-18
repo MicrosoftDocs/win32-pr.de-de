@@ -70,7 +70,7 @@ Dieser Wert kann durch Schreiben in System.GPS.LatitudeNumerator und System.GPS.
 | Auftrag | Pfad                     |
 |-------|--------------------------|
 | 1     | /app1/ifd/gps/{ushort=2} |
-| 2     | /xmp/exif:gpsl veralten    |
+| 2     | /xmp/exif:gpsl zu    |
 
 
 

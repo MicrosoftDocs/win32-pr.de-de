@@ -1,27 +1,27 @@
 ---
-title: Beispiel für universelle Windows-Plattform Protokollierung
-description: In diesem Beispiel wird gezeigt, wie die Protokollierungs-APIs im Windows. Foundation. Diagnostics-Namespace verwendet werden, einschließlich loggingchannel, loggingactivity, loggingsession und fileloggingsession.
+title: Beispiel für die Protokollierung der universellen Windows-Plattform
+description: In diesem Beispiel wird gezeigt, wie die Protokollierungs-APIs im Windows verwendet werden. Foundation.Diagnostics-Namespace, einschließlich LoggingChannel, LoggingActivity, LoggingSession und FileLoggingSession.
 ms.assetid: 23B4752F-43B5-41DE-B01D-9625CFEE2E1D
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 7d3815478a15fcc7fd4e80596b90c51689cfd39c
-ms.sourcegitcommit: 3e70ae762629e244028b437420ed50b5850db4e3
+ms.openlocfilehash: 65004734db73b10f4b8b209c1f2125382ddfbe5564125b00ee2110ad76d4356d
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/20/2020
-ms.locfileid: "106342115"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118966106"
 ---
-# <a name="universal-windows-platform-logging-example"></a>Beispiel für universelle Windows-Plattform Protokollierung
+# <a name="universal-windows-platform-logging-example"></a>Beispiel für die Protokollierung der universellen Windows-Plattform
 
-In diesem Beispiel wird gezeigt, wie die Protokollierungs-APIs im Windows. Foundation. Diagnostics-Namespace verwendet werden, einschließlich loggingchannel, loggingactivity, loggingsession und fileloggingsession. Diese Klassen sind für die Diagnoseprotokollierung innerhalb einer Windows-App konzipiert. Diese APIs wurden in Windows 8.1 hinzugefügt.
+In diesem Beispiel wird gezeigt, wie die Protokollierungs-APIs im Windows verwendet werden. Foundation.Diagnostics-Namespace, einschließlich LoggingChannel, LoggingActivity, LoggingSession und FileLoggingSession. Diese Klassen sind für die Diagnoseprotokollierung in einer Windows-App konzipiert. Diese APIs wurden in Windows 8.1 hinzugefügt.
 
-Die loggingchannel-und loggingactivity-APIs wurden in Windows 10 erweitert, um das Schreiben komplexer Ereignisse mithilfe der tracelogging-Ereignis Codierung zu unterstützen.
+Die LoggingChannel- und LoggingActivity-APIs wurden in Windows 10 erweitert, um das Schreiben komplexer Ereignisse mithilfe der TraceLogging-Ereigniscodierung zu unterstützen.
 
-Das universelle Windows-Plattform Protokollierungs Beispiel kann von [GitHub](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/Logging)heruntergeladen werden.
+Das Beispiel für die Universal Windows Platform-Protokollierung kann von GitHub heruntergeladen [werden.](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/Logging)
 
- 
+ 
 
- 
+ 
 
 
 

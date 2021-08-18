@@ -1,6 +1,6 @@
 ---
-description: 'Weitere Informationen finden Sie unter: jetrollback-Funktion'
-title: Jetrollback-Funktion
+description: Weitere Informationen finden Sie unter JetRollback-Funktion.
+title: JetRollback-Funktion
 TOCTitle: JetRollback Function
 ms:assetid: 685c51f4-8fe4-47cc-8a8e-c42014431b8b
 ms:mtpsurl: https://msdn.microsoft.com/library/Gg269273(v=EXCHG.10)
@@ -18,21 +18,21 @@ api_type:
 api_location:
 - ESENT.DLL
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: eda0c8947e9609717bbb3f1a16999b450d7e4882
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: e96e28924578945685c58b3bd0a1fa1380e8abd330b546678cfe1ff1af47c666
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106352543"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118978830"
 ---
-# <a name="jetrollback-function"></a>Jetrollback-Funktion
+# <a name="jetrollback-function"></a>JetRollback-Funktion
 
 
 _**Gilt für:** Windows | Windows Server_
 
-## <a name="jetrollback-function"></a>Jetrollback-Funktion
+## <a name="jetrollback-function"></a>JetRollback-Funktion
 
-Die **jetrollback** -Funktion macht die am Status der Datenbank vorgenommenen Änderungen rückgängig und kehrt zum letzten Sicherungspunkt zurück. **Jetrollback** schließt auch alle Cursor, die während des Speicher Punkts geöffnet werden. Wenn der äußerste Speicherpunkt rückgängig gemacht wird, beendet die Sitzung die Transaktion.
+Die **JetRollback-Funktion** rückgängig gemachte Änderungen am Zustand der Datenbank und kehrt zum letzten Speicherpunkt zurück. **JetRollback** schließt auch alle Cursor, die während des Speicherpunkts geöffnet wurden. Wenn der äußerste Speicherpunkt rückgängig gemacht wird, beendet die Sitzung die Transaktion.
 
 ```cpp
     JET_ERR JET_API JetRollback(
@@ -43,13 +43,13 @@ Die **jetrollback** -Funktion macht die am Status der Datenbank vorgenommenen Ä
 
 ### <a name="parameters"></a>Parameter
 
-*-sid*
+*sesid*
 
-Die Sitzung, die für diesen-Befehl verwendet werden soll.
+Die Sitzung, die für diesen Aufruf verwendet werden soll.
 
 *grbit*
 
-Eine Gruppe von Bits, die die für diesen-Befehl zu verwendenden Optionen enthalten, die NULL oder mehr der folgenden Elemente enthalten:
+Eine Gruppe von Bits, die die für diesen Aufruf zu verwendenden Optionen enthalten, die null oder mehr der folgenden Elemente enthalten:
 
 <table>
 <colgroup>
@@ -65,7 +65,7 @@ Eine Gruppe von Bits, die die für diesen-Befehl zu verwendenden Optionen enthal
 <tbody>
 <tr class="odd">
 <td><p>JET_bitRollbackAll</p></td>
-<td><p>Mit dieser Option wird angefordert, dass alle Änderungen, die an dem Status der Datenbank vorgenommen wurden, bei allen Speicher Punkten rückgängig gemacht werden. Dies führt dazu, dass die Sitzung die Transaktion beendet.</p></td>
+<td><p>Diese Option fordert an, dass alle Änderungen, die während aller Speicherpunkte am Zustand der Datenbank vorgenommen wurden, rückgängig gemacht werden. Dies führt dazu, dass die Sitzung die Transaktion beendet.</p></td>
 </tr>
 </tbody>
 </table>
@@ -73,7 +73,7 @@ Eine Gruppe von Bits, die die für diesen-Befehl zu verwendenden Optionen enthal
 
 ### <a name="return-value"></a>Rückgabewert
 
-Diese Funktion gibt den [JET_ERR](./jet-err.md) Datentyp mit einem der folgenden Rückgabecodes zurück. Weitere Informationen zu den möglichen ESE-Fehlern finden Sie unter [Extensible Storage Engine Errors](./extensible-storage-engine-errors.md) und [Error Handling Parameters](./error-handling-parameters.md).
+Diese Funktion gibt den [JET_ERR](./jet-err.md) datentyp mit einem der folgenden Rückgabecodes zurück. Weitere Informationen zu den möglichen ESE-Fehlern finden Sie unter [Extensible Storage Engine Errors](./extensible-storage-engine-errors.md) and [Error Handling Parameters](./error-handling-parameters.md).
 
 <table>
 <colgroup>
@@ -93,49 +93,49 @@ Diese Funktion gibt den [JET_ERR](./jet-err.md) Datentyp mit einem der folgenden
 </tr>
 <tr class="even">
 <td><p>JET_errClientRequestToStopJetService</p></td>
-<td><p>Der Vorgang kann nicht ausgeführt werden, da alle Aktivitäten auf der Instanz, die der Sitzung zugeordnet ist, aufgrund eines Aufrufens von <a href="gg269240(v=exchg.10).md">jetstopservice</a>beendet wurden.</p></td>
+<td><p>Es ist nicht möglich, den Vorgang abschließen, da alle Aktivitäten auf der -Instanz, die der Sitzung zugeordnet ist, aufgrund eines Aufrufs von <a href="gg269240(v=exchg.10).md">JetStopService beendet wurden.</a></p></td>
 </tr>
 <tr class="odd">
 <td><p>JET_errInstanceUnavailable</p></td>
-<td><p>Der Vorgang kann nicht ausgeführt werden, da bei der der Sitzung zugeordneten Instanz ein schwerwiegender Fehler aufgetreten ist, der erfordert, dass der Zugriff auf alle Daten widerrufen wird, um die Integrität der Daten zu schützen. Dieser Fehler wird nur von Windows XP und höheren Versionen zurückgegeben.</p></td>
+<td><p>Der Vorgang kann nicht abgeschlossen werden, da für die der Sitzung zugeordnete Instanz ein schwerwiegender Fehler aufgetreten ist, der erfordert, dass der Zugriff auf alle Daten widerrufen wird, um die Integrität dieser Daten zu schützen. Dieser Fehler wird nur von xp Windows und späteren Versionen zurückgegeben.</p></td>
 </tr>
 <tr class="even">
 <td><p>JET_errNotInitialized</p></td>
-<td><p>Der Vorgang kann nicht abgeschlossen werden, da die Instanz, die der Sitzung zugeordnet ist, noch nicht initialisiert wurde.</p></td>
+<td><p>Der Vorgang kann nicht abgeschlossen werden, da die der Sitzung zugeordnete Instanz noch nicht initialisiert wurde.</p></td>
 </tr>
 <tr class="odd">
 <td><p>JET_errNotInTransaction</p></td>
-<td><p>Der Vorgang ist fehlgeschlagen, da die angegebene Sitzung nicht in einer Transaktion ausgeführt wird.</p></td>
+<td><p>Der Vorgang ist fehlgeschlagen, da sich die gegebene Sitzung nicht in einer Transaktion befindet.</p></td>
 </tr>
 <tr class="even">
 <td><p>JET_errRestoreInProgress</p></td>
-<td><p>Der Vorgang kann nicht abgeschlossen werden, da für die-Instanz, die der Sitzung zugeordnet ist, ein Wiederherstellungs Vorgang ausgeführt wird.</p></td>
+<td><p>Der Vorgang kann nicht abgeschlossen werden, da ein Wiederherstellungsvorgang für die -Instanz durchgeführt wird, die der Sitzung zugeordnet ist.</p></td>
 </tr>
 <tr class="odd">
 <td><p>JET_errRollbackError</p></td>
-<td><p>Aufgrund eines schwerwiegenden Fehlers war es nicht möglich, die Änderungen zurückzusetzen.</p></td>
+<td><p>Aufgrund eines schwerwiegenden Fehlers konnte kein Rollback für die Änderungen vorgenommen werden.</p></td>
 </tr>
 <tr class="even">
 <td><p>JET_errSessionSharingViolation</p></td>
-<td><p>Dieselbe Sitzung kann nicht für mehr als einen Thread gleichzeitig verwendet werden. Dieser Fehler wird nur von Windows XP und höheren Versionen zurückgegeben.</p></td>
+<td><p>Dieselbe Sitzung kann nicht gleichzeitig für mehrere Threads verwendet werden. Dieser Fehler wird nur von xp Windows und späteren Versionen zurückgegeben.</p></td>
 </tr>
 <tr class="odd">
 <td><p>JET_errTermInProgress</p></td>
-<td><p>Der Vorgang kann nicht ausgeführt werden, da die Instanz, die der Sitzung zugeordnet ist, heruntergefahren wird.</p></td>
+<td><p>Der Vorgang kann nicht abgeschlossen werden, da die der Sitzung zugeordnete Instanz heruntergefahren wird.</p></td>
 </tr>
 </tbody>
 </table>
 
 
-Bei Erfolg werden alle Änderungen, die während des aktuellen Speicher Punkts für die jeweilige Sitzung an der Datenbank vorgenommen wurden, rückgängig gemacht, und der Sicherungspunkt wird beendet. Wenn der letzte Sicherungspunkt für die Sitzung beendet wurde, wird die Transaktion von der Sitzung beendet.
+Bei Erfolg werden alle Änderungen, die während des aktuellen Speicherpunkts für die bestimmte Sitzung an der Datenbank vorgenommen wurden, rückgängig gemacht, und dieser Speicherpunkt wird beendet. Wenn der letzte Speicherpunkt für die Sitzung beendet wurde, beendet die Sitzung die Transaktion.
 
-Bei einem Fehler bleibt der Transaktionsstatus der Sitzung unverändert. Es erfolgt keine Änderung des Daten Bank Status. Ein Fehler während des Rollbacks wird als schwerwiegender Datenbankfehler betrachtet.
+Bei einem Fehler bleibt der Transaktionszustand der Sitzung unverändert. Es erfolgt keine Änderung des Datenbankstatus. Ein Fehler während des Rollbacks wird als schwerwiegender Datenbankfehler betrachtet.
 
-#### <a name="remarks"></a>Bemerkungen
+#### <a name="remarks"></a>Hinweise
 
-Es muss ein Aufrufen von [jetcommittransaction](./jetcommittransaction-function.md) oder **jetrollback** vorhanden sein, um jeden beliebigen [jetbegintransaction](./jetbegintransaction-function.md) -Befehl für eine bestimmte Sitzung abzugleichen.
+Es muss einen Aufruf von [JetCommitTransaction oder](./jetcommittransaction-function.md) **JetRollback** geben, damit jeder Aufruf von [JetBeginTransaction](./jetbegintransaction-function.md) für eine bestimmte Sitzung übereinstimmen kann.
 
-Wenn z. b. bei einem Sicherungspunkt, für den ein Rollback ausgeführt wird, beliebige Cursor (z. [b. jetopentable](./jetopentable-function.md)) geöffnet wurden, wird der Cursor geschlossen.
+Wenn cursors während eines Speicherpunkts geöffnet wurden (z. B. [mit JetOpenTable),](./jetopentable-function.md)der zurückgesetzt wird, wird dieser Cursor geschlossen.
 
 #### <a name="requirements"></a>Anforderungen
 
@@ -155,14 +155,14 @@ Wenn z. b. bei einem Sicherungspunkt, für den ein Rollback ausgeführt wird, be
 </tr>
 <tr class="odd">
 <td><p><strong>Header</strong></p></td>
-<td><p>In "ESENT. h" deklariert.</p></td>
+<td><p>Wird in Esent.h deklariert.</p></td>
 </tr>
 <tr class="even">
 <td><p><strong>Bibliothek</strong></p></td>
-<td><p>Verwenden Sie ESENT. lib.</p></td>
+<td><p>Verwenden Sie ESENT.lib.</p></td>
 </tr>
 <tr class="odd">
-<td><p><strong>DLL</strong></p></td>
+<td><p><strong>Dll</strong></p></td>
 <td><p>Erfordert ESENT.dll.</p></td>
 </tr>
 </tbody>
@@ -174,5 +174,5 @@ Wenn z. b. bei einem Sicherungspunkt, für den ein Rollback ausgeführt wird, be
 [JET_ERR](./jet-err.md)  
 [JET_GRBIT](./jet-grbit.md)  
 [JET_SESID](./jet-sesid.md)  
-[Jetbegintransaction](./jetbegintransaction-function.md)  
-[Jetcommittransaction](./jetcommittransaction-function.md)
+[JetBeginTransaction](./jetbegintransaction-function.md)  
+[JetCommitTransaction](./jetcommittransaction-function.md)

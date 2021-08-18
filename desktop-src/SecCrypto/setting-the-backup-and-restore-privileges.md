@@ -1,19 +1,19 @@
 ---
-description: Um die Backup-und Restore-API der Zertifikat Dienste erfolgreich aufzurufen, muss das Token des Aufrufers die Sicherungs-und Wiederherstellungs Berechtigungen enthalten.
+description: Das Token des Aufrufers muss die Sicherungs- und Wiederherstellungsberechtigungen enthalten, damit die Api für die Sicherung und Wiederherstellung der Zertifikatdienste erfolgreich aufgerufen werden kann.
 ms.assetid: 409a9fad-7141-4ba8-ab3d-fb590366001e
-title: Festlegen der Sicherungs-und Wiederherstellungs Berechtigungen
+title: Festlegen der Sicherungs- und Wiederherstellungsberechtigungen
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 9dd70c3726c435efa1f000add101bbf50b725bb5
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 990f1009ec5b57d6dcc9f11ef505e705fb483362518d6e54f5d0c9a0167cc211
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106344239"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118900310"
 ---
-# <a name="setting-the-backup-and-restore-privileges"></a>Festlegen der Sicherungs-und Wiederherstellungs Berechtigungen
+# <a name="setting-the-backup-and-restore-privileges"></a>Festlegen der Sicherungs- und Wiederherstellungsberechtigungen
 
-Um die Backup-und Restore-API der Zertifikat Dienste erfolgreich aufzurufen, muss das Token des Aufrufers die Sicherungs-und Wiederherstellungs [*Berechtigungen*](../secgloss/p-gly.md)enthalten. Diese Berechtigungen können Programm gesteuert festgelegt werden, und das folgende Beispiel kann verwendet werden, um diese Berechtigungen festzulegen oder zu entfernen. Die Sicherungs-und Wiederherstellungs Berechtigungen sind für alle Sicherungs-und Wiederherstellungs Anwendungen erforderlich, nicht nur für die Sicherung und Wiederherstellung von Zertifikat Diensten. Informationen zu den Sicherheitsauswirkungen der Änderung von Berechtigungen finden Sie unter [Ausführen mit besonderen Berechtigungen](../secbp/running-with-special-privileges.md).
+Zum erfolgreichen Aufrufen der Sicherungs- und Wiederherstellungs-API der Zertifikatdienste muss das Token des Aufrufers die Sicherungs- und [*Wiederherstellungsberechtigungen*](../secgloss/p-gly.md)enthalten. Diese Berechtigungen können programmgesteuert festgelegt werden, und im folgenden Beispiel können diese Berechtigungen festgelegt oder entfernt werden. Die Sicherungs- und Wiederherstellungsberechtigungen sind für alle Sicherungs- und Wiederherstellungsanwendungen erforderlich, nicht nur für die Sicherung und Wiederherstellung von Zertifikatdiensten. Informationen zu den Sicherheitsauswirkungen beim Ändern von Berechtigungen finden Sie unter [Ausführen mit speziellen Berechtigungen.](../secbp/running-with-special-privileges.md)
 
 
 ```C++

@@ -1,36 +1,36 @@
 ---
-title: Audiokomprimierungs Strukturen
-description: Audiokomprimierungs Strukturen
+title: Audiokomprimierungsstrukturen
+description: Audiokomprimierungsstrukturen
 ms.assetid: 19ef4569-e6fc-480a-8659-98df3d36d05f
 keywords:
-- Multimedia-Audiodaten, ACM-Strukturen
-- Audiodaten, ACM-Strukturen
+- Multimediaaudio, ACM-Strukturen
+- Audio, ACM-Strukturen
 - Audiokomprimierungs-Manager (ACM), Strukturen
 - ACM (Audiokomprimierungs-Manager), Strukturen
-- ACM-Referenz, Strukturen
+- ACM-Referenz,Strukturen
 - Referenz für ACM, Strukturen
 - ACM-Strukturen
-- Audiokomprimierung, Strukturen
+- Audiokomprimierung,Strukturen
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 4cdbdb992778881ac26e606649bee1eab0bb457c
-ms.sourcegitcommit: cb844c9ab17577ce171fd7b03add668645867bc7
+ms.openlocfilehash: 8ac8d53d84ccf36cd99ad9c3a307c0fc3bb34ed0c3110014ad512a71bebf5f25
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/27/2020
-ms.locfileid: "103948479"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118941798"
 ---
-# <a name="audio-compression-structures"></a>Audiokomprimierungs Strukturen
+# <a name="audio-compression-structures"></a>Audiokomprimierungsstrukturen
 
-Die folgenden Strukturen werden mit der Audiokomprimierung verwendet.
+Die folgenden Strukturen werden mit Audiokomprimierung verwendet.
 
--   [**Acmdriverdetails**](/windows/win32/api/msacm/ns-msacm-acmdriverdetails)
--   [**Acmfilterchoose**](/windows/win32/api/msacm/ns-msacm-acmfilterchoose)
--   [**Acmfilterdetails**](/windows/win32/api/msacm/ns-msacm-acmfilterdetails)
--   [**Acmfiltertagdetails**](/windows/win32/api/msacm/ns-msacm-acmfiltertagdetails)
--   [**Acmformatchoose**](/windows/win32/api/msacm/ns-msacm-acmformatchoose)
--   [**Acmformatdetails**](/windows/win32/api/msacm/ns-msacm-acmformatdetails)
--   [**Acmformattagdetails**](/windows/win32/api/msacm/ns-msacm-acmformattagdetails)
+-   [**ACMDRIVERDETAILS**](/windows/win32/api/msacm/ns-msacm-acmdriverdetails)
+-   [**ACMFILTERCHOOSE**](/windows/win32/api/msacm/ns-msacm-acmfilterchoose)
+-   [**ACMFILTERDETAILS**](/windows/win32/api/msacm/ns-msacm-acmfilterdetails)
+-   [**ACMFILTERTAGDETAILS**](/windows/win32/api/msacm/ns-msacm-acmfiltertagdetails)
+-   [**ACMFORMATCHOOSE**](/windows/win32/api/msacm/ns-msacm-acmformatchoose)
+-   [**ACMFORMATDETAILS**](/windows/win32/api/msacm/ns-msacm-acmformatdetails)
+-   [**ACMFORMATTAGDETAILS**](/windows/win32/api/msacm/ns-msacm-acmformattagdetails)
 -   [**ACMSTREAMHEADER**](/windows/win32/api/msacm/ns-msacm-acmstreamheader)
 
 ## <a name="related-topics"></a>Zugehörige Themen
@@ -40,9 +40,9 @@ Die folgenden Strukturen werden mit der Audiokomprimierung verwendet.
 [Referenz zum Audiokomprimierungs-Manager](audio-compression-manager-reference.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

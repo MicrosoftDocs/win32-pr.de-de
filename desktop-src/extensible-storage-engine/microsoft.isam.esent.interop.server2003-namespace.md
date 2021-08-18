@@ -1,6 +1,6 @@
 ---
-description: 'Weitere Informationen finden Sie unter: Microsoft. ISAM. ESENT. Interop. Server2003-Namespace'
-title: Microsoft. ISAM. ESENT. Interop. Server2003-Namespace ()
+description: 'Weitere Informationen zu: Microsoft.Isam.Esent.Interop.Server2003-Namespace'
+title: Microsoft.Isam.Esent.Interop.Server2003-Namespace ()
 TOCTitle: '@NoTitle'
 ms:assetid: N:Microsoft.Isam.Esent.Interop.Server2003
 ms:mtpsurl: https://msdn.microsoft.com/library/microsoft.isam.esent.interop.server2003(v=EXCHG.10)
@@ -14,14 +14,14 @@ dev_langs:
 - JScript
 - VB
 - other
-ms.openlocfilehash: 46b1db7c8da8ab4399357a978ece2b7af7516fc6
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: c32704b0d91f2943bf65a9601255f6c4dbc78966cddca84f6871351ffb050930
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "104345849"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118978714"
 ---
-# <a name="microsoftisamesentinteropserver2003-namespace"></a>Microsoft. ISAM. ESENT. Interop. Server2003-Namespace
+# <a name="microsoftisamesentinteropserver2003-namespace"></a>Microsoft.Isam.Esent.Interop.Server2003-Namespace
 
 ## <a name="classes"></a>Klassen
 
@@ -47,7 +47,7 @@ ms.locfileid: "104345849"
 <tr class="odd">
 <td><img src="../images/dn292085.pubclass(EXCHG.10).gif" title="Öffentliche Klasse" alt="Public class" /></td>
 <td><a href="dn335279(v=exchg.10).md">Server2003Param</a></td>
-<td>System Parameter, die der Windows Server 2003-Version von ESENT hinzugefügt wurden.</td>
+<td>Systemparameter, die der Windows Server 2003-Version von ESENT hinzugefügt wurden.</td>
 </tr>
 </tbody>
 </table>
@@ -66,13 +66,13 @@ ms.locfileid: "104345849"
 <tbody>
 <tr class="odd">
 <td><img src="../images/hh596136.pubenumeration(exchg.10).gif" title="Öffentliche Enumeration" alt="Public enumeration" /></td>
-<td><a href="hh163377(v=exchg.10).md">Snapshotabortgrbit</a></td>
-<td>Optionen für <a href="dn351279(v=exchg.10).md">jedessnapshotabort (JET_OSSNAPID, snapshotabortgrbit)</a>.</td>
+<td><a href="hh163377(v=exchg.10).md">SnapshotAbortGrbit</a></td>
+<td>Optionen für <a href="dn351279(v=exchg.10).md">JetOSSnapshotAbort(JET_OSSNAPID, SnapshotAbortGrbit)</a>.</td>
 </tr>
 <tr class="even">
 <td><img src="../images/hh596136.pubenumeration(exchg.10).gif" title="Öffentliche Enumeration" alt="Public enumeration" /></td>
-<td><a href="hh558389(v=exchg.10).md">Updategrbit</a></td>
-<td>Optionen für <a href="dn351205(v=exchg.10).md">JetUpdate2 (JET_SESID, JET_TABLEID, [], Int32, Int32, updategrbit)</a>.</td>
+<td><a href="hh558389(v=exchg.10).md">UpdateGrbit</a></td>
+<td>Optionen für <a href="dn351205(v=exchg.10).md">JetUpdate2(JET_SESID, JET_TABLEID, [], Int32, Int32, UpdateGrbit)</a>.</td>
 </tr>
 </tbody>
 </table>

@@ -1,6 +1,6 @@
 ---
 title: HttpPurchaseOrderServiceExample
-description: Sehen Sie sich ein C++-Beispiel für die Windows Web Services-API (WWSAPI) an, in dem sie erfahren, wie Sie einen Diensthost zum Hosten eines Bestelldiensts über HTTP verwenden.
+description: Lesen Sie ein C++-Beispiel Windows Web Services API (WWSAPI), in dem beschrieben wird, wie Sie einen Diensthost zum Hosten eines Bestelldiensts über HTTP verwenden.
 ms.assetid: 03da84b6-082f-41cd-810d-b593a55fa563
 keywords:
 - HttpPurchaseOrderServiceExample Native-Web-Services
@@ -8,16 +8,16 @@ keywords:
 - WWS
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: cb30e875129c1f1ddde09ccce4afd4cfe009e7d9
-ms.sourcegitcommit: 5d4e99f4c8f42f5f543e52cb9beb9fb13ec56c5f
+ms.openlocfilehash: 419764136fe48687db342dede2ae0ba35d0f70f660e9ecf92c5e9b3e0d2dde39
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2021
-ms.locfileid: "112404113"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118963209"
 ---
 # <a name="httppurchaseorderserviceexample"></a>HttpPurchaseOrderServiceExample
 
-In diesem Beispiel wird gezeigt, wie Sie den Diensthost zum Hosten eines PurchaseOrder-Diensts über HTTP verwenden.
+In diesem Beispiel wird gezeigt, wie der Diensthost zum Hosten eines PurchaseOrder-Diensts über HTTP verwendet wird.
 
 -   [HttpPurchaseOrderService.cpp](#httppurchaseorderservicecpp)
 -   [PurchaseOrder.wsdl](#purchaseorderwsdl)

@@ -1,47 +1,47 @@
 ---
 title: Portieren von Punkten
-description: OpenGL hat keinen Befehl zum Zeichnen eines einzelnen Punkts. Andernfalls ist das Portieren von Punkt Funktionen einfach. In der folgenden Tabelle sind die Funktionen von IRIS GL für Zeichnungs Punkte und ihre entsprechenden OpenGL-Funktionen aufgelistet.
+description: OpenGL verfügt über keinen Befehl zum Zeichnen eines einzelnen Punkts. Andernfalls ist das Portieren von Punktfunktionen einfach. In der folgenden Tabelle sind IRIS GL-Funktionen für Zeichnungspunkte und die entsprechenden OpenGL-Funktionen aufgeführt.
 ms.assetid: 348c7767-321a-43c6-bc88-7dc00f426f50
 keywords:
-- IRIS GL portieren, Punkte
-- Portieren von IRIS GL, Points
-- Portieren auf OpenGL von IRIS GL, Points
-- OpenGL-Portierung von IRIS GL, Points
-- Zeichnungsfunktionen, Punkte
+- IRIS GL-Portierung, Punkte
+- Portieren von IRIS GL,Points
+- Portieren von IRIS GL zu OpenGL,Punkte
+- OpenGL-Portierung von IRIS GL,Points
+- Zeichnungsfunktionen,Punkte
 - Punkte
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 322413cd6a11a589884bce2628e229984c7936ed
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: 18ef24ad81942681b3d70a303a22e89e9573aa609d3f08f52a92583ae88e0e9a
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "106338602"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119012068"
 ---
 # <a name="porting-points"></a>Portieren von Punkten
 
-OpenGL hat keinen Befehl zum Zeichnen eines einzelnen Punkts. Andernfalls ist das Portieren von Punkt Funktionen einfach. In der folgenden Tabelle sind die Funktionen von IRIS GL für Zeichnungs Punkte und ihre entsprechenden OpenGL-Funktionen aufgelistet.
+OpenGL verfügt über keinen Befehl zum Zeichnen eines einzelnen Punkts. Andernfalls ist das Portieren von Punktfunktionen einfach. In der folgenden Tabelle sind IRIS GL-Funktionen für Zeichnungspunkte und die entsprechenden OpenGL-Funktionen aufgeführt.
 
 
 
 | IRIS GL-Funktion           | OpenGL-Funktion                                                   | Bedeutung                                                                                                                                              |
 |----------------------------|-------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------|
-| **Pnt**                    |                                                                   | Zeichnet einen einzelnen Punkt.                                                                                                                                |
-| **bgnpoint**, **Endpunkt** | [**glBegin**](glbegin.md) (GL- \_ Punkte), [ **glEnd**](glend.md) | Interpretiert Scheitel Punkte als Punkte.                                                                                                                       |
+| **pnt**                    |                                                                   | Zeichnet einen einzelnen Punkt.                                                                                                                                |
+| **bgnpoint,** **endpoint** | [**glBegin**](glbegin.md) ( GL \_ POINTS ), [ **glEnd**](glend.md) | Interpretiert Scheitelpunkte als Punkte.                                                                                                                       |
 | **pntsize**                | [**glPointSize**](glpointsize.md)                                | Legt die Punktgröße in Pixel fest.                                                                                                                           |
-| **PNP**              | [**glEnable**](glenable.md) (GL- \_ Punkt \_ glatt)                | Schaltet das Antialiasing von Punkten um. (Weitere Informationen zum Punkt-Antialiasing finden Sie unter [Portieren von Antialiasing-Funktionen](porting-antialiasing-functions.md).) |
+| **pntsmooth**              | [**glEnable**](glenable.md) ( GL \_ POINT \_ SMOOTH )                | Aktiviert Punkt-Antialiasing. (Weitere Informationen zum Antialiasing von Punkt finden Sie unter [Portieren von Antialiasingfunktionen](porting-antialiasing-functions.md).) |
 
 
 
- 
+ 
 
-Weitere Informationen zu verwandten Get-Funktionen finden Sie unter [**glPointSize**](glpointsize.md).
+Informationen zu verwandten get-Funktionen finden Sie [**unter glPointSize**](glpointsize.md).
 
 ??
 
- 
+ 
 
- 
+ 
 
 
 

@@ -1,7 +1,7 @@
 ---
 description: Legt den Namen des Elements fest oder ruft diesen ab.
 ms.assetid: 079efc8d-3d08-48b1-bdb1-83f4b89fd633
-title: FolderItem.Name-Eigenschaft (Shldisp. h)
+title: FolderItem.Name -Eigenschaft (Shldisp.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,12 +13,12 @@ api_type:
 - COM
 api_location:
 - Shell32.dll
-ms.openlocfilehash: 5f5eb757455b8bbbd4161eae477ca4677eef4fc2
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 42f5a111d5ef992635d03be8c4b67a5c50bd22df4298ac7412a98f0ba8d6fb83
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "103861787"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119093066"
 ---
 # <a name="folderitemname-property"></a>FolderItem.Name-Eigenschaft
 
@@ -38,13 +38,13 @@ FolderItem.Name = strName
 
 ## <a name="property-value"></a>Eigenschaftswert
 
-Eine Variable vom Typ [**BSTR**](/previous-versions/windows/desktop/automat/bstr) , die den Namen des Elements angibt oder empfängt.
+Eine Variable vom Typ [**BSTR,**](/previous-versions/windows/desktop/automat/bstr) die den Namen des Elements angibt oder empfängt.
 
 ## <a name="examples"></a>Beispiele
 
-Im folgenden Beispiel wird **Name** verwendet, um den Namen der Autoexec.bat Datei abzurufen. Anschließend wird der Name auf Test.bat zurückgesetzt. Die richtige Verwendung wird für JScript, VBScript und Visual Basic angezeigt.
+Im folgenden Beispiel wird **Name verwendet,** um den Namen der Autoexec.bat abzurufen und dann den Namen auf Test.bat. Die richtige Verwendung wird für JScript, VBScript und Visual Basic.
 
-JScript
+JScript:
 
 
 ```JScript
@@ -74,7 +74,7 @@ JScript
 
 
 
-VBScript
+Vbscript:
 
 
 ```VB
@@ -141,17 +141,17 @@ End Sub
 
 
 
-## <a name="requirements"></a>Requirements (Anforderungen)
+## <a name="requirements"></a>Anforderungen
 
 
 
 | Anforderung | Wert |
 |-------------------------------------|----------------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional, Windows XP \[ Desktop-Apps\]<br/>                                         |
+| Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional, nur Windows \[ XP-Desktop-Apps\]<br/>                                         |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                                                           |
-| Header<br/>                   | <dl> <dt>Shldisp. h</dt> </dl>                           |
-| IDL<br/>                      | <dl> <dt>Shldisp. idl</dt> </dl>                         |
-| DLL<br/>                      | <dl> <dt>Shell32.dll (Version 4,71 oder höher)</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Shldisp.h</dt> </dl>                           |
+| Idl<br/>                      | <dl> <dt>Shldisp.idl</dt> </dl>                         |
+| DLL<br/>                      | <dl> <dt>Shell32.dll (Version 4.71 oder höher)</dt> </dl> |
 
 
 

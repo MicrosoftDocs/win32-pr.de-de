@@ -1,6 +1,6 @@
 ---
-description: 'Weitere Informationen finden Sie unter: esentnullkeydiszuzudexception-Klasse'
-title: Esentnullkeydiszuzudexception-Klasse
+description: 'Weitere Informationen finden Sie unter: EsentNullKeyDisallowedException-Klasse'
+title: EsentNullKeyDisallowedException-Klasse
 TOCTitle: EsentNullKeyDisallowedException class
 ms:assetid: T:Microsoft.Isam.Esent.Interop.EsentNullKeyDisallowedException
 ms:mtpsurl: https://msdn.microsoft.com/library/microsoft.isam.esent.interop.esentnullkeydisallowedexception(v=EXCHG.10)
@@ -24,29 +24,29 @@ api_type:
 api_location:
 - Microsoft.Isam.Esent.Interop.dll
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: b3b38e043572b1182cd099664cf09dfc229efc8c
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: d66b9ec2193835e4b9a0f791a4f981fa18ff70399d6ba59cda2f7975a06e7d6e
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106348081"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119040148"
 ---
-# <a name="esentnullkeydisallowedexception-class"></a>Esentnullkeydiszuzudexception-Klasse
+# <a name="esentnullkeydisallowedexception-class"></a>EsentNullKeyDisallowedException-Klasse
 
-Basisklasse für JET_err. Nullkeyunallowed-Ausnahmen.
+Basisklasse für JET_err. NullKeyAusnahmen sind nicht möglich.
 
 ## <a name="inheritance-hierarchy"></a>Vererbungshierarchie
 
 [System.Object](/dotnet/api/system.object)  
   [System.Exception](/dotnet/api/system.exception)  
-    [Microsoft. ISAM. ESENT. esentexception](./esentexception-class.md)  
-      [Microsoft. ISAM. ESENT. Interop. esenterrorexception](./esenterrorexception-class.md)  
-        [Microsoft. ISAM. ESENT. Interop. esentapiexception](./esentapiexception-class.md)  
-          [Microsoft. ISAM. ESENT. Interop. esentusageexception](./esentusageexception-class.md)  
-            Microsoft. ISAM. ESENT. Interop. esentnullkeydiszuzuwedexception  
+    [Microsoft.Isam.Esent.EsentException](./esentexception-class.md)  
+      [Microsoft.Isam.Esent.Interop.EsentErrorException](./esenterrorexception-class.md)  
+        [Microsoft.Isam.Esent.Interop.EsentApiException](./esentapiexception-class.md)  
+          [Microsoft.Isam.Esent.Interop.EsentUsageException](./esentusageexception-class.md)  
+            Microsoft.Isam.Esent.Interop.EsentNullKeyDisallowedException  
 
-**Namespace:**  [Microsoft. ISAM. ESENT. Interop](./microsoft.isam.esent.interop-namespace.md)  
-**Assembly:**  Microsoft. ISAM. ESENT. Interop (in Microsoft.Isam.Esent.Interop.dll)
+**Namespace:**  [Microsoft.Isam.Esent.Interop](./microsoft.isam.esent.interop-namespace.md)  
+**Assembly:**  Microsoft.Isam.Esent.Interop (in Microsoft.Isam.Esent.Interop.dll)
 
 ## <a name="syntax"></a>Syntax
 
@@ -68,10 +68,10 @@ public sealed class EsentNullKeyDisallowedException : EsentUsageException
 
 Alle öffentlichen statischen Elemente dieses Typs (Shared in Microsoft Visual Basic) sind threadsicher. Bei Instanzmembern ist die Threadsicherheit nicht gewährleistet.
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
-#### <a name="reference"></a>Referenz
+#### <a name="reference"></a>Verweis
 
-[Esentnullkeydiszuzudexception-Member](./esentnullkeydisallowedexception-members.md)
+[EsentNullKeyDisallowedException-Member](./esentnullkeydisallowedexception-members.md)
 
-[Microsoft. ISAM. ESENT. Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)
+[Microsoft.Isam.Esent.Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)

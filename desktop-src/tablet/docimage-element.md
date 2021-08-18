@@ -1,19 +1,19 @@
 ---
-description: Wenn der gelesene Journalhinweis mit dem Druckertreiber Journal Note Writer erstellt wurde, wird das Hintergrunddokumentbild in diesem Element enthalten.
+description: Wenn die gelesene Journalnotiz mithilfe des Druckertreibers Journal Note Writer erstellt wurde, wird das Hintergrunddokumentbild in diesem Element aufbewahrt.
 ms.assetid: 98ee234f-13b8-4da4-ac64-60943e76a3ba
 title: DocImage-Element
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: ff0291f384504b3be4e04ac7a0de2b36e496cc82
-ms.sourcegitcommit: c3f669dc1d52278432bf75ad9fddba3257d26aa2
+ms.openlocfilehash: 30d6c86e80e250291db6df463bcca93eaffa966c3c6a666967d9dbacfde6012e
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/04/2021
-ms.locfileid: "111432532"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119092667"
 ---
 # <a name="docimage-element"></a>DocImage-Element
 
-Wenn der gelesene Journalhinweis mit dem Druckertreiber Journal Note Writer erstellt wurde, wird das Hintergrunddokumentbild in diesem Element enthalten.
+Wenn die gelesene Journalnotiz mithilfe des Druckertreibers Journal Note Writer erstellt wurde, wird das Hintergrunddokumentbild in diesem Element aufbewahrt.
 
 ## <a name="definition"></a>Definition
 

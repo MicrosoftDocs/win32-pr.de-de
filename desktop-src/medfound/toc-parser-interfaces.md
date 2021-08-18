@@ -1,29 +1,29 @@
 ---
-description: Tabelle mit Inhalts parserschnittstellen
+description: Inhaltsverzeichnisparserschnittstellen
 ms.assetid: 25039e6c-dd2a-4516-bf27-8e9d6ca0f00e
-title: Tabelle mit Inhalts parserschnittstellen
+title: Inhaltsverzeichnisparserschnittstellen
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: c4bf66f5df1474e95b96bf14a073cce0ecb0d2b1
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 6d20bc6a0a61c73e016b3eb62733fff76f61c4172614036c7af9588bddb6f9a9
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104131112"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119034718"
 ---
-# <a name="table-of-contents-parser-interfaces"></a>Tabelle mit Inhalts parserschnittstellen
+# <a name="table-of-contents-parser-interfaces"></a>Inhaltsverzeichnisparserschnittstellen
 
-Die folgenden Schnittstellen haben den Zugriff auf die Dienste des Parsers für Inhaltsverzeichnisse bewiesen.
+Die folgenden Schnittstellen haben den Zugriff auf die Dienste des Inhaltsverzeichnisparsers ermöglicht.
 
 
 
 | Schnittstelle                                | BESCHREIBUNG                                                                                                           |
 |------------------------------------------|-----------------------------------------------------------------------------------------------------------------------|
-| [**Iinhalts Verzeichnis**](/windows/desktop/api/wmcodecdsp/nn-wmcodecdsp-itoc)                     | Stellt ein einzelnes Inhaltsverzeichnis dar.                                                                           |
-| [**Ideccollection**](/windows/desktop/api/wmcodecdsp/nn-wmcodecdsp-itoccollection) | Stellt eine Auflistung von Inhalts Tabellen dar.                                                                        |
-| [**IIn Centry**](/windows/desktop/api/wmcodecdsp/nn-wmcodecdsp-itocentry)           | Stellt einen einzelnen Eintrag in einem Inhaltsverzeichnis dar.                                                                |
-| [**Iycentrylist**](/windows/desktop/api/wmcodecdsp/nn-wmcodecdsp-itocentrylist)   | Stellt eine Liste von Einträgen in einem Inhaltsverzeichnis dar.                                                                  |
-| [**Idecparser**](/windows/desktop/api/wmcodecdsp/nn-wmcodecdsp-itocparser)         | Stellt Methoden zum Einbetten von Inhalts Tabellen in eine Videodatei und zum Lesen von Inhalts Tabellen aus einer Videodatei bereit. |
+| [**IToc**](/windows/desktop/api/wmcodecdsp/nn-wmcodecdsp-itoc)                     | Stellt ein einzelnes Inhaltsverzeichnis dar.                                                                           |
+| [**ITocCollection**](/windows/desktop/api/wmcodecdsp/nn-wmcodecdsp-itoccollection) | Stellt eine Auflistung von Inhaltstabellen dar.                                                                        |
+| [**ITocEntry**](/windows/desktop/api/wmcodecdsp/nn-wmcodecdsp-itocentry)           | Stellt einen einzelnen Eintrag in einem Inhaltsverzeichnis dar.                                                                |
+| [**ITocEntryList**](/windows/desktop/api/wmcodecdsp/nn-wmcodecdsp-itocentrylist)   | Stellt eine Liste von Einträgen in einem Inhaltsverzeichnis dar.                                                                  |
+| [**ITocParser**](/windows/desktop/api/wmcodecdsp/nn-wmcodecdsp-itocparser)         | Stellt Methoden zum Einbetten von Inhaltstabellen in eine Videodatei und zum Lesen von Inhaltstabellen aus einer Videodatei zur Auswahl. |
 
 
 
@@ -33,7 +33,7 @@ Die folgenden Schnittstellen haben den Zugriff auf die Dienste des Parsers für 
 
 <dl> <dt>
 
-[Inhaltsverzeichnis Verweis (Inhaltsverzeichnis)](toc-parser-reference.md)
+[Inhaltsverzeichnisparserreferenz](toc-parser-reference.md)
 </dt> </dl>
 
  

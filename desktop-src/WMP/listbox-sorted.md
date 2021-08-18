@@ -1,9 +1,9 @@
 ---
-title: ListBox. sortiert
-description: Mit dem sortierten Attribut wird ein Wert angegeben oder abgerufen, der angibt, ob das Listenfeld-Steuerelement alphabetisch sortiert ist. Kann nur zur Entwurfszeit festgelegt werden.
+title: LISTBOX.sorted
+description: Das sortierte Attribut gibt einen Wert an, der angibt, ob das Listenfeld-Steuerelement alphabetisch sortiert ist, oder ruft einen Wert ab. Kann nur zur Entwurfszeit festgelegt werden.
 ms.assetid: f07bf9bf-fe01-4d7c-a630-075ea809fd32
 keywords:
-- ListBox. sortiertes Windows-Media Player
+- LISTBOX.sorted Windows Media Player
 topic_type:
 - apiref
 api_name:
@@ -12,16 +12,16 @@ api_type:
 - NA
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: dc0f6ca663d3bd5b934208061b0d7cd7b19a267d
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: aa099c6164478a30ae87fc5415327a2c8643935ef70cd8a1d236b9a2217082b9
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106367005"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118996430"
 ---
-# <a name="listboxsorted"></a>ListBox. sortiert
+# <a name="listboxsorted"></a>LISTBOX.sorted
 
-Mit dem **sortierten** Attribut wird ein Wert angegeben oder abgerufen, der angibt, ob das Listenfeld-Steuerelement alphabetisch sortiert ist. Kann nur zur Entwurfszeit festgelegt werden.
+Das **sortierte** Attribut gibt einen Wert an, der angibt, ob das Listenfeld-Steuerelement alphabetisch sortiert ist, oder ruft einen Wert ab. Kann nur zur Entwurfszeit festgelegt werden.
 
 ``` syntax
         elementID.sorted
@@ -29,7 +29,7 @@ Mit dem **sortierten** Attribut wird ein Wert angegeben oder abgerufen, der angi
 
 ## <a name="possible-values"></a>Mögliche Werte
 
-Dieses Attribut ist ein **boolescher** Wert mit Lese-/Schreibzugriff.
+Dieses Attribut ist ein boolescher Wert mit **Lese-/Schreibzugriff.**
 
 
 
@@ -56,7 +56,7 @@ Dieses Attribut ist ein **boolescher** Wert mit Lese-/Schreibzugriff.
 
 <dl> <dt>
 
-[**ListBox-Element**](listbox-element.md)
+[**LISTBOX-Element**](listbox-element.md)
 </dt> </dl>
 
  

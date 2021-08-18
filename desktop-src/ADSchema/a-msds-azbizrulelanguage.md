@@ -1,11 +1,11 @@
 ---
-title: ms-DS-AZ-BIZ-Rule-Language-Attribut
-description: Die Sprache, in der sich das Geschäftsregel Skript befindet (JScript, VBScript).
+title: ms-DS-Az-Biz-Rule-Language-Attribut
+description: Die Sprache, in der sich das Geschäftsregelskript befindet (JScript, VBScript).
 ms.assetid: 980f4715-b905-41aa-8274-de320be4a5a7
 ms.tgt_platform: multiple
 keywords:
-- AD-Schema für ms-DS-AZ-BIZ-Rule-Language-Attribut
-- AD-Schema des msDS-azbizrulelanguage-Attributs
+- ms-DS-Az-Biz-Rule-Language-Attribut AD-Schema
+- msDS-AzBizRuleLanguage-Attribut AD-Schema
 topic_type:
 - apiref
 api_name:
@@ -14,41 +14,41 @@ api_type:
 - Schema
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 980fb7e08e972bef367c06187a88f0a3ef0a4979
-ms.sourcegitcommit: b77ace27b0432e7cd3863191b11926be032fbe2f
+ms.openlocfilehash: d1c29767322d8d211b051d13e58db9a9e4f8b1e30dfacc3423f95bdd3993299c
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "103859697"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118960919"
 ---
-# <a name="ms-ds-az-biz-rule-language-attribute"></a>ms-DS-AZ-BIZ-Rule-Language-Attribut
+# <a name="ms-ds-az-biz-rule-language-attribute"></a>ms-DS-Az-Biz-Rule-Language-Attribut
 
-Die Sprache, in der sich das Geschäftsregel Skript befindet (JScript, VBScript).
+Die Sprache, in der sich das Geschäftsregelskript befindet (JScript, VBScript).
 
 
 
 | Eingabe | Wert |
 |-------------------|---------------------------------------------|
-| CN                | ms-DS-AZ-BIZ-Rule-Language                  |
-| LDAP-Display-Name | MSDS-azbizrulelanguage                      |
+| CN                | ms-DS-Az-Biz-Rule-Language                  |
+| Ldap-Anzeigename | msDS-AzBizRuleLanguage                      |
 | Size              | 20 Zeichen                               |
-| Berechtigung aktualisieren  | Azrollen-Administrator                               |
-| Aktualisierungshäufigkeit  | Während der Initialisierung oder Richtlinien Änderung.     |
+| Aktualisieren von Berechtigungen  | AzRoles admin                               |
+| Updatehäufigkeit  | Während der Initialisierung oder Richtlinienänderung.     |
 | Attribute-Id      | 1.2.840.113556.1.4.1802                     |
-| System-ID-GUID    | 52994b56-0e6c-4e07-aa5c-ef9d7f 5a0e25        |
+| System-ID-GUID    | 52994b56-0e6c-4e07-aa5c-ef9d7f5a0e25        |
 | Syntax            | [**String(Unicode)**](s-string-unicode.md) |
 
 
 
 ## <a name="implementations"></a>Implementierungen
 
--   [**Windows Server 2003**](#windows-server-2003)
+-   [**Windows Server 2003**](#windows-server-2003)
 -   [**Windows Server 2003 R2**](#windows-server-2003-r2)
 -   [**Windows Server 2008**](#windows-server-2008)
 -   [**Windows Server 2008 R2**](#windows-server-2008-r2)
 -   [**Windows Server 2012**](#windows-server-2012)
 
-## <a name="windows-server-2003"></a>Windows Server 2003
+## <a name="windows-server-2003"></a>Windows Server 2003
 
 
 
@@ -57,15 +57,15 @@ Die Sprache, in der sich das Geschäftsregel Skript befindet (JScript, VBScript)
 | Link-ID                | \-                                                |
 | MAPI-Id                | \-                                                |
 | System-Only            | False                                             |
-| Ist-einwertig       | Richtig                                              |
+| Ist einwertig       | True                                              |
 | Ist indiziert             | False                                             |
 | Im globalen Katalog      | False                                             |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                      |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                      |
 | Range-Lower            | 0                                                 |
 | Range-Upper            | 64                                                |
 | Search-Flags           | 0x00000000                                        |
 | System-Flags           | 0x00000010                                        |
-| In verwendete Klassen        | [**ms-DS-AZ-Task**](c-msds-aztask.md)<br/> |
+| In verwendete Klassen        | [**ms-DS-Az-Task**](c-msds-aztask.md)<br/> |
 
 
 
@@ -78,15 +78,15 @@ Die Sprache, in der sich das Geschäftsregel Skript befindet (JScript, VBScript)
 | Link-ID                | \-                                                |
 | MAPI-Id                | \-                                                |
 | System-Only            | False                                             |
-| Ist-einwertig       | Richtig                                              |
+| Ist einwertig       | True                                              |
 | Ist indiziert             | False                                             |
 | Im globalen Katalog      | False                                             |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                      |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                      |
 | Range-Lower            | 0                                                 |
 | Range-Upper            | 64                                                |
 | Search-Flags           | 0x00000000                                        |
 | System-Flags           | 0x00000010                                        |
-| In verwendete Klassen        | [**ms-DS-AZ-Task**](c-msds-aztask.md)<br/> |
+| In verwendete Klassen        | [**ms-DS-Az-Task**](c-msds-aztask.md)<br/> |
 
 
 
@@ -99,15 +99,15 @@ Die Sprache, in der sich das Geschäftsregel Skript befindet (JScript, VBScript)
 | Link-ID                | \-                                                                                    |
 | MAPI-Id                | \-                                                                                    |
 | System-Only            | False                                                                                 |
-| Ist-einwertig       | Richtig                                                                                  |
+| Ist einwertig       | True                                                                                  |
 | Ist indiziert             | False                                                                                 |
 | Im globalen Katalog      | False                                                                                 |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                                          |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                                          |
 | Range-Lower            | 0                                                                                     |
 | Range-Upper            | 64                                                                                    |
 | Search-Flags           | 0x00000000                                                                            |
 | System-Flags           | 0x00000010                                                                            |
-| In verwendete Klassen        | [**Gruppe**](c-group.md)<br/> [**ms-DS-AZ-Task**](c-msds-aztask.md)<br/> |
+| In verwendete Klassen        | [**Gruppe**](c-group.md)<br/> [**ms-DS-Az-Task**](c-msds-aztask.md)<br/> |
 
 
 
@@ -120,15 +120,15 @@ Die Sprache, in der sich das Geschäftsregel Skript befindet (JScript, VBScript)
 | Link-ID                | \-                                                                                    |
 | MAPI-Id                | \-                                                                                    |
 | System-Only            | False                                                                                 |
-| Ist-einwertig       | Richtig                                                                                  |
+| Ist einwertig       | True                                                                                  |
 | Ist indiziert             | False                                                                                 |
 | Im globalen Katalog      | False                                                                                 |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                                          |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                                          |
 | Range-Lower            | 0                                                                                     |
 | Range-Upper            | 64                                                                                    |
 | Search-Flags           | 0x00000000                                                                            |
 | System-Flags           | 0x00000010                                                                            |
-| In verwendete Klassen        | [**Gruppe**](c-group.md)<br/> [**ms-DS-AZ-Task**](c-msds-aztask.md)<br/> |
+| In verwendete Klassen        | [**Gruppe**](c-group.md)<br/> [**ms-DS-Az-Task**](c-msds-aztask.md)<br/> |
 
 
 
@@ -141,15 +141,15 @@ Die Sprache, in der sich das Geschäftsregel Skript befindet (JScript, VBScript)
 | Link-ID                | \-                                                                                    |
 | MAPI-Id                | \-                                                                                    |
 | System-Only            | False                                                                                 |
-| Ist-einwertig       | Richtig                                                                                  |
+| Ist einwertig       | True                                                                                  |
 | Ist indiziert             | False                                                                                 |
 | Im globalen Katalog      | False                                                                                 |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                                          |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                                          |
 | Range-Lower            | 0                                                                                     |
 | Range-Upper            | 64                                                                                    |
 | Search-Flags           | 0x00000000                                                                            |
 | System-Flags           | 0x00000010                                                                            |
-| In verwendete Klassen        | [**Gruppe**](c-group.md)<br/> [**ms-DS-AZ-Task**](c-msds-aztask.md)<br/> |
+| In verwendete Klassen        | [**Gruppe**](c-group.md)<br/> [**ms-DS-Az-Task**](c-msds-aztask.md)<br/> |
 
 
 

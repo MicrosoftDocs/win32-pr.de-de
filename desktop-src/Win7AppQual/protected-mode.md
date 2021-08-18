@@ -4,22 +4,22 @@ ms.assetid: 88810916-A85E-4EC7-A6AE-1CA2A2205DBC
 title: Geschützter Modus
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: dbc1b8b1e6931ed83ec59ccfe4c3c63d8e5b5eed
-ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
+ms.openlocfilehash: 2d2f16b9f923215af6c2211339859d8eab4803e6793be248a83760e298ed084c
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2021
-ms.locfileid: "108116448"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118994780"
 ---
 # <a name="protected-mode"></a>Geschützter Modus
 
-Die meisten Windows Internet Explorer 8-Sicherheitsfeatures sind in Internet Explorer 8 für windows XP mit dem Betriebssystem Service Pack 2 (SP2) und höher verfügbar. Der geschützte Modus ist nur für Windows Vista oder höhere Versionen verfügbar, da er auf den folgenden Sicherheitsfeatures basiert, die für Windows Vista neu sind:
+Die meisten sicherheitsfeatures Windows Internet Explorer 8 sind in Internet Explorer 8 für Windows XP mit dem Betriebssystem Service Pack 2 (SP2) und höher verfügbar. Der geschützte Modus ist nur für Windows Vista oder höhere Versionen verfügbar, da er auf den folgenden Sicherheitsfeatures basiert, die für Windows Vista neu sind:
 
--   [Die Benutzerkontensteuerung (User Account Control, UAC)](https://msdn.microsoft.com/library/aa511445.aspx) erleichtert die Ausführung ohne Administratorrechte. Wenn Benutzer Programme mit eingeschränkten Benutzerberechtigungen ausführen, sind sie sicherer vor Angriffen als bei der Ausführung mit Administratorrechten. Das Windows-Betriebssystem kann verhindern, dass bösartiger Code schädliche Aktionen ausführt.
+-   [Die Benutzerkontensteuerung (User Account Control, UAC)](https://msdn.microsoft.com/library/aa511445.aspx) erleichtert die Ausführung ohne Administratorrechte. Wenn Benutzer Programme mit eingeschränkten Benutzerberechtigungen ausführen, sind sie sicherer vor Angriffen als bei der Ausführung mit Administratorrechten. Das Windows Betriebssystem kann verhindern, dass schädliche Aktionen durch schädlichen Code ausgeführt werden.
 -   Ein Integritätsmechanismus schränkt den Schreibzugriff auf [sicherungsfähige Objekte](../secauthz/securable-objects.md) durch Prozesse mit niedrigerer Integrität ein, genauso wie die Mitgliedschaft in Benutzerkontengruppen die Rechte von Benutzern auf den Zugriff auf sensible Systemkomponenten einschränkt.
 -   [Benutzeroberfläche Privilege Isolation (UIPI)](/previous-versions/dotnet/articles/bb625963(v=msdn.10)) verhindert, dass Prozesse ausgewählte Fenstermeldungen und andere USER-APIs an Prozesse senden, die mit höherer Integrität ausgeführt werden.
 
-Die Sicherheitsinfrastruktur des Windows-Integritätsmechanismus ermöglicht es dem geschützten Modus, Windows Internet Explorer die Berechtigungen zur Verfügung zu stellen, die Benutzer zum Durchsuchen des Webs benötigen, während Benutzer Berechtigungen einbehalten, die Benutzer benötigen, um Programme unbeaufsichtigt zu installieren oder sensible Systemdaten zu ändern.
+Die Sicherheitsinfrastruktur Windows Integritätsmechanismus ermöglicht es dem geschützten Modus, Windows Internet Explorer mit den Berechtigungen bereitzustellen, die Benutzer zum Durchsuchen des Webs benötigen, während Berechtigungen, die Benutzer benötigen, um Programme automatisch zu installieren oder vertrauliche Systemdaten zu ändern, einbehalten werden.
 
 Benutzer können dieses Feature über ein Kontrollkästchen deaktivieren, und Administratoren können es mithilfe von Gruppenrichtlinie deaktivieren.
 

@@ -3,65 +3,65 @@ title: Lesen von Dateien mit dem asynchronen Reader
 description: Lesen von Dateien mit dem asynchronen Reader
 ms.assetid: 3cc72f8d-bf1f-416d-bc90-21dfb92a55aa
 keywords:
-- Windows Media-Format-SDK, Lesen von Dateien
-- SDK für den Windows Media-Format, asynchrone Leser
-- Advanced Systems Format (ASF), asynchrone Leser
-- ASF (Advanced Systems Format), asynchrone Leser
+- Windows Medienformat-SDK, Lesen von Dateien
+- Windows Medienformat-SDK, asynchrone Reader
+- Advanced Systems Format (ASF), asynchrone Reader
+- ASF (Advanced Systems Format), asynchrone Reader
 - Advanced Systems Format (ASF), Lesen von Dateien
 - ASF (Advanced Systems Format), Lesen von Dateien
-- asynchrone Reader, iwmreadercallback-Schnittstelle
-- Iwmreadercallback, asynchrone Reader
-- asynchrone Leser, Lesen von Dateien
+- asynchrone Reader,IWMReaderCallback-Schnittstelle
+- IWMReaderCallback, asynchrone Reader
+- asynchrone Reader,Lesen von Dateien
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 0807c0701dd596f943010ad613b08ef9fe2c415c
-ms.sourcegitcommit: 48d1c892045445bcbd0f22bafa2fd3861ffaa6e7
+ms.openlocfilehash: bea24a8f09cff8fe3e4a1f1cfb383f5569e968200bbbe6f25f2c8f225b3c18f5
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/19/2020
-ms.locfileid: "104389851"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119084507"
 ---
 # <a name="reading-files-with-the-asynchronous-reader"></a>Lesen von Dateien mit dem asynchronen Reader
 
-Der asynchrone Reader liest den Inhalt aus den ASF-Dateien mit mehreren Threads und asynchronen Aufrufen. Die Funktionen, die vom asynchronen Reader unterstützt werden, eignen sich gut für Anwendungen, die Inhalte für Endbenutzer darstellen.
+Der asynchrone Reader liest den Inhalt aus ASF-Dateien mithilfe mehrerer Threads und asynchroner Aufrufe. Die vom asynchronen Reader unterstützten Features eignen sich gut für Anwendungen, die Inhalte für Endbenutzer rendern.
 
-Die grundlegende Funktionalität des Reader-Objekts kann in die folgenden Schritte aufgeteilt werden. In den folgenden Schritten bezieht sich "die Anwendung" auf das Programm, das Sie mit dem Windows Media-Format-SDK schreiben.
+Die grundlegendsten Funktionen des Readerobjekts können in die folgenden Schritte aufgeschlüsselt werden. In diesen Schritten bezieht sich "die Anwendung" auf das Programm, das Sie mit dem Windows Media Format SDK schreiben.
 
-1.  Die Anwendung implementiert die [**iwmreadercallback**](/previous-versions/windows/desktop/api/wmsdkidl/nn-wmsdkidl-iwmreadercallback) -Schnittstelle zum Verarbeiten von Nachrichten vom Reader. Dies schließt zwei Rückruf Methoden ein: **OnStatus**, das Nachrichten im Zusammenhang mit dem Status verschiedener Aspekte von Reader und **onsample** empfängt, die nicht komprimierte Beispiele vom Reader empfangen.
-2.  Die Anwendung übergibt an den Reader den Namen einer zu lesenden Datei. Wenn der Reader die Datei öffnet, wird jedem Stream eine Ausgabe Nummer zugewiesen. Wenn die Datei einen gegenseitigen Ausschluss verwendet, weist der Reader eine einzelne Ausgabe für alle sich gegenseitig ausschließenden Streams zu.
-3.  Die Anwendung ruft Informationen zur Konfiguration der verschiedenen Ausgaben des Readers ab. Die gesammelten Informationen ermöglichen der Anwendung das ordnungsgemäße Rendering von Medien Beispielen.
-4.  Die Anwendung weist den Reader an, mit dem Lesen von Daten aus der Datei zu beginnen. Der Reader beginnt mit der Bereitstellung von nicht komprimierten Beispielen für den **onsample** -Rückruf nacheinander in Puffern, die in Puffer Objekten eingebunden sind. Die vom Reader gelieferten Beispiele sind in der Präsentationszeit sortiert. Der Reader liefert weiterhin Beispiele, bis die Anwendung beendet wird oder bis das Ende der Datei erreicht ist.
-5.  Die Anwendung ist für das Rendern von Daten verantwortlich, nachdem Sie vom Reader zugestellt wurde. Das Windows Media-Format-SDK stellt keine renderingroutinen bereit. In der Regel verwenden Anwendungen andere SDKs zum Rendering von Daten, wie z. b. das Microsoft DirectX® SDK oder die Multimedia-Funktionen des Microsoft Windows Platform SDK.
-6.  Wenn der Lesevorgang abgeschlossen ist, weist die Anwendung den Reader an, die Datei zu schließen.
+1.  Die Anwendung implementiert die [**IWMReaderCallback-Schnittstelle,**](/previous-versions/windows/desktop/api/wmsdkidl/nn-wmsdkidl-iwmreadercallback) um Nachrichten vom Reader zu verarbeiten. Dies umfasst zwei Rückrufmethoden: **OnStatus**, das Nachrichten empfängt, die sich auf den Status verschiedener Aspekte des Readers bezieht, und **OnSample**, das unkomprimierte Beispiele vom Reader empfängt.
+2.  Die Anwendung übergibt den Namen einer zu lesenden Datei an den Reader. Wenn der Reader die Datei öffnet, weist er jedem Stream eine Ausgabenummer zu. Wenn die Datei gegenseitigen Ausschluss verwendet, weist der Reader eine einzelne Ausgabe für alle sich gegenseitig ausschließenden Streams zu.
+3.  Die Anwendung ruft Informationen zur Konfiguration der verschiedenen Ausgaben vom Reader ab. Die gesammelten Informationen ermöglichen der Anwendung das ordnungsgemäße Rendern von Medienbeispielen.
+4.  Die Anwendung weist den Leser an, mit dem Lesen von Daten aus der Datei zu beginnen. Der Reader beginnt damit, unkomprimierte Beispiele in Puffern, die in Pufferobjekten umschlossen sind, nach und nach an den **OnSample-Rückruf** zu übertragen. Die vom Reader bereitgestellten Beispiele befinden sich in der Reihenfolge der Präsentationszeit. Der Reader wird weiterhin Stichproben bereitstellen, bis er von der Anwendung beendet wird oder bis das Ende der Datei erreicht ist.
+5.  Die Anwendung ist für das Rendern von Daten verantwortlich, nachdem sie vom Reader übermittelt wurden. Das Windows Media Format SDK stellt keine Renderingroutinen bereit. In der Regel verwenden Anwendungen andere SDKs zum Rendern von Daten, z. B. das Microsoft DirectX® SDK oder die Multimediafunktionen des Microsoft Windows Platform SDK.
+6.  Wenn das Lesen abgeschlossen ist, weist die Anwendung den Reader an, die Datei zu schließen.
 
-Diese Schritte werden unter anderem in der Audioplayer-Beispielanwendung veranschaulicht. Weitere Informationen finden Sie unter [Beispielanwendungen](sample-applications.md).
+Diese Schritte werden unter anderem in der AudioPlayer-Beispielanwendung veranschaulicht. Weitere Informationen finden Sie unter [Beispielanwendungen](sample-applications.md).
 
-Der Reader unterstützt auch erweiterte Funktionen. Der Reader ermöglicht Ihnen Folgendes:
+Der Reader unterstützt auch erweiterte Funktionen. Der Reader ermöglicht Folgendes:
 
--   Hält die Wiedergabe einer Datei an.
--   Abrufen von Leistungsstatistiken für Reader.
+-   Anhalten der Wiedergabe einer Datei.
+-   Abrufen von Readerleistungsstatistiken.
 -   Steuern der Streamauswahl für sich gegenseitig ausschließende Streams.
--   Puffer für Ausgabe manuell zuordnen.
--   Geben Sie eine eigene Uhr an.
--   Abrufen des Status von Datei Vorgängen (Pufferung, herunterladen oder speichern).
--   Öffnen Sie eine Datei mit der Standard-COM-Schnittstelle **IStream**.
+-   Manuelles Zuordnen von Puffern für die Ausgabe.
+-   Geben Sie Ihre eigene Uhr an.
+-   Rufen Sie den Status von Dateivorgängen ab (Pufferung, Download oder Speichern).
+-   Öffnen Sie eine Datei mithilfe der COM-Standardschnittstelle **IStream**.
 -   Suchen Sie nach bestimmten Punkten in einer ASF-Datei.
 -   Liest Profildaten aus dem Header der Datei.
 
-In den folgenden Abschnitten wird die Verwendung des Reader-Objekts ausführlich beschrieben.
+In den folgenden Abschnitten wird die Verwendung des Readerobjekts ausführlich beschrieben.
 
--   [So implementieren Sie readernachrichten im OnStatus-Rückruf](to-implement-reader-messages-in-the-onstatus-callback.md)
--   [So implementieren Sie den onsample-Rückruf](to-implement-the-onsample-callback.md)
+-   [So implementieren Sie Readernachrichten im OnStatus-Rückruf](to-implement-reader-messages-in-the-onstatus-callback.md)
+-   [So implementieren Sie den OnSample-Rückruf](to-implement-the-onsample-callback.md)
 -   [So erstellen Sie einen Reader und öffnen eine Datei](to-create-a-reader-and-open-a-file.md)
--   [So rufen Sie Medien Beispiele mit dem asynchronen Reader ab](to-retrieve-media-samples-with-the-asynchronous-reader.md)
+-   [So rufen Sie Medienbeispiele mit dem asynchronen Reader ab](to-retrieve-media-samples-with-the-asynchronous-reader.md)
 -   [So suchen Sie nach Zeit mithilfe des asynchronen Readers](to-seek-by-time-using-the-asynchronous-reader.md)
--   [So suchen Sie nach der Frame Nummer mithilfe des asynchronen Readers](to-seek-by-frame-number-using-the-asynchronous-reader.md)
--   [So suchen Sie nach SMPTE-Zeit Code mithilfe des asynchronen Readers](to-seek-by-smpte-time-code-using-the-asynchronous-reader.md)
--   [So suchen Sie Marker](to-seek-to-markers.md)
--   [Anhalten oder Anhalten der Wiedergabe](to-pause-or-stop-playback.md)
--   [So erhalten Sie Leistungsstatistiken für Leser](to-get-reader-performance-statistics.md)
--   [So verwenden Sie die manuelle Datenstrom Auswahl](to-use-manual-stream-selection.md)
--   [So liefern Sie komprimierte Beispiele mit dem asynchronen Reader](to-deliver-compressed-samples-with-the-asynchronous-reader.md)
+-   [So suchen Sie nach Framenummer mithilfe des asynchronen Readers](to-seek-by-frame-number-using-the-asynchronous-reader.md)
+-   [So suchen Sie mithilfe des asynchronen Readers nach SMPTE-Zeitcode](to-seek-by-smpte-time-code-using-the-asynchronous-reader.md)
+-   [So suchen Sie nach Markern](to-seek-to-markers.md)
+-   [So halten Sie die Wiedergabe an oder beenden sie](to-pause-or-stop-playback.md)
+-   [So erhalten Sie Leseleistungsstatistiken](to-get-reader-performance-statistics.md)
+-   [So verwenden Sie die manuelle Streamauswahl](to-use-manual-stream-selection.md)
+-   [So stellen Sie komprimierte Beispiele mit dem asynchronen Reader zur Verfügung](to-deliver-compressed-samples-with-the-asynchronous-reader.md)
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
@@ -73,9 +73,9 @@ In den folgenden Abschnitten wird die Verwendung des Reader-Objekts ausführlich
 [**Reader-Objekt**](reader-object.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

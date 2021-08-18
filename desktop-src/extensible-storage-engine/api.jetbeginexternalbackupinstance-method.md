@@ -1,6 +1,6 @@
 ---
-description: Weitere Informationen finden Sie in der API. jetbeginexternalbackupinstance-Methode.
-title: API. jetbeginexternalbackupinstance-Methode
+description: 'Weitere Informationen finden Sie unter: Api.JetBeginExternalBackupInstance-Methode'
+title: Api.JetBeginExternalBackupInstance-Methode
 TOCTitle: 'JetBeginExternalBackupInstance method '
 ms:assetid: M:Microsoft.Isam.Esent.Interop.Api.JetBeginExternalBackupInstance(Microsoft.Isam.Esent.Interop.JET_INSTANCE,Microsoft.Isam.Esent.Interop.BeginExternalBackupGrbit)
 ms:mtpsurl: https://msdn.microsoft.com/library/microsoft.isam.esent.interop.api.jetbeginexternalbackupinstance(v=EXCHG.10)
@@ -24,19 +24,19 @@ api_type:
 api_location:
 - Microsoft.Isam.Esent.Interop.dll
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: 1c42f5d1f62de0af7582247fb47d407f82981a42
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: b590ed0fb13c4540a4fad15eea1de5c4ad24e40611285d976ebf04b6269c6b6a
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "103958813"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118983640"
 ---
-# <a name="apijetbeginexternalbackupinstance-method"></a>API. jetbeginexternalbackupinstance-Methode
+# <a name="apijetbeginexternalbackupinstance-method"></a>Api.JetBeginExternalBackupInstance-Methode
 
-Initiiert eine externe Sicherung, während die-Engine und die-Datenbank online und aktiv sind.
+Initiiert eine externe Sicherung, während die Engine und die Datenbank online und aktiv sind.
 
-**Namespace:**  [Microsoft. ISAM. ESENT. Interop](./microsoft.isam.esent.interop-namespace.md)  
-**Assembly:**  Microsoft. ISAM. ESENT. Interop (in Microsoft.Isam.Esent.Interop.dll)
+**Namespace:**  [Microsoft.Isam.Esent.Interop](./microsoft.isam.esent.interop-namespace.md)  
+**Assembly:**  Microsoft.Isam.Esent.Interop (in Microsoft.Isam.Esent.Interop.dll)
 
 ## <a name="syntax"></a>Syntax
 
@@ -62,23 +62,23 @@ public static void JetBeginExternalBackupInstance(
 #### <a name="parameters"></a>Parameter
 
   - instance  
-    Typ: [Microsoft.ISAM.ESENT.Interop.JET_INSTANCE](./jet-instance-structure.md)  
+    Typ: [Microsoft.Isam.Esent.Interop.JET_INSTANCE](./jet-instance-structure.md)  
     
-    Die-Instanz bereitet eine Sicherung vor.
+    Die -Instanz bereitet die Sicherung vor.
 
 <!-- end list -->
 
   - grbit  
-    Typ: [Microsoft. ISAM. ESENT. Interop. beginexternalbackupgrbit](./beginexternalbackupgrbit-enumeration.md)  
+    Typ: [Microsoft.Isam.Esent.Interop.BeginExternalBackupGrbit](./beginexternalbackupgrbit-enumeration.md)  
     
-    Sicherungs Optionen.
+    Sicherungsoptionen.
 
 ## <a name="see-also"></a>Siehe auch
 
-#### <a name="reference"></a>Referenz
+#### <a name="reference"></a>Verweis
 
 [API-Klasse](./api-class.md)
 
-[API-Mitglieder](./api-members.md)
+[API-Member](./api-members.md)
 
-[Microsoft. ISAM. ESENT. Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)
+[Microsoft.Isam.Esent.Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)

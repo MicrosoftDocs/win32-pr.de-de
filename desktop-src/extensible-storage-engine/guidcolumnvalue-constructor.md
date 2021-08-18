@@ -1,6 +1,6 @@
 ---
-description: 'Weitere Informationen finden Sie hier: guidcolumnvalue-Konstruktor'
-title: Guidcolumnvalue-Konstruktor
+description: 'Weitere Informationen finden Sie unter: GuidColumnValue-Konstruktor'
+title: GuidColumnValue-Konstruktor
 TOCTitle: 'GuidColumnValue constructor '
 ms:assetid: M:Microsoft.Isam.Esent.Interop.GuidColumnValue.#ctor
 ms:mtpsurl: https://msdn.microsoft.com/library/microsoft.isam.esent.interop.guidcolumnvalue.guidcolumnvalue(v=EXCHG.10)
@@ -24,17 +24,17 @@ api_type:
 api_location:
 - Microsoft.Isam.Esent.Interop.dll
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: 0588beaa44da97870ead73cc1f394cb4138c8f31
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: ac69ad6464dd48f24fa823676860de572e3f22f3eb887752160e7d99ebcad04b
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104527983"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118980730"
 ---
-# <a name="guidcolumnvalue-constructor"></a>Guidcolumnvalue-Konstruktor
+# <a name="guidcolumnvalue-constructor"></a>GuidColumnValue-Konstruktor
 
-**Namespace:**  [Microsoft. ISAM. ESENT. Interop](./microsoft.isam.esent.interop-namespace.md)  
-**Assembly:**  Microsoft. ISAM. ESENT. Interop (in Microsoft.Isam.Esent.Interop.dll)
+**Namespace:**  [Microsoft.Isam.Esent.Interop](./microsoft.isam.esent.interop-namespace.md)  
+**Assembly:**  Microsoft.Isam.Esent.Interop (in Microsoft.Isam.Esent.Interop.dll)
 
 ## <a name="syntax"></a>Syntax
 
@@ -50,12 +50,12 @@ Dim instance As New GuidColumnValue()
 public GuidColumnValue()
 ```
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
-#### <a name="reference"></a>Referenz
+#### <a name="reference"></a>Verweis
 
-[Guidcolumnvalue-Klasse](./guidcolumnvalue-class.md)
+[GuidColumnValue-Klasse](./guidcolumnvalue-class.md)
 
-[Guidcolumnvalue-Member](./guidcolumnvalue-members.md)
+[GuidColumnValue-Member](./guidcolumnvalue-members.md)
 
-[Microsoft. ISAM. ESENT. Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)
+[Microsoft.Isam.Esent.Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)
