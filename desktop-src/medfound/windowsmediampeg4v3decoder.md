@@ -1,69 +1,69 @@
 ---
 description: Der Windows Media MPEG-4 V3-Decoder decodiert MPEG-4 V3-Videostreams.
 ms.assetid: 5143b0cc-c171-46af-8d7f-4d029af71fb4
-title: Windows Media MPEG-4 V3-Decoder (wmcodecdsp. h)
+title: Windows Media MPEG-4 V3 Decoder (Wmcodecdsp.h)
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 5ee98a0a3c4b221da6f2000e32d4c75bc3e3a93b
-ms.sourcegitcommit: c16214e53680dc71d1c07111b51f72b82a4512d8
+ms.openlocfilehash: 975351d04b0876b5f1793d442e41d54a585062bd1fed778902fee5c4c83dcd6a
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/03/2021
-ms.locfileid: "106355714"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119100916"
 ---
-# <a name="windows-media-mpeg-4-v3-decoder"></a>Windows Media MPEG-4 V3-Decoder
+# <a name="windows-media-mpeg-4-v3-decoder"></a>Windows Mpeg-4 V3-Mediendecoder
 
 Der Windows Media MPEG-4 V3-Decoder decodiert MPEG-4 V3-Videostreams.
 
-## <a name="class-identifier"></a>Klassen Bezeichner
+## <a name="class-identifier"></a>Klassenbezeichner
 
-Der Klassen Bezeichner (CLSID) für den Windows MPEG-4 V3-Decoder wird durch die Konstante **CLSID \_ CMpeg43DecMediaObject** dargestellt. Sie können eine Instanz des MPEG-4 V3-Decoders erstellen, indem Sie **CoCreateInstance** aufrufen.
+Der Klassenbezeichner (CLSID) für den Windows MPEG-4 V3-Decoder wird durch die Konstante **CLSID \_ CMpeg43DecMediaObject dargestellt.** Sie können eine Instanz des MPEG-4 V3-Decoders erstellen, indem Sie **CoCreateInstance aufrufen.**
 
 ## <a name="formats"></a>Formate
 
-Der Windows Media MPEG-4 V3-Decoder unterstützt die folgenden Eingabemedien Typen.
+Der Windows Media MPEG-4 V3-Decoder unterstützt die folgenden Eingabemedientypen.
 
--   Mediasubtype \_ MP43
--   Mediasubtype \_ MP43
+-   MEDIASUBTYPE \_ MP43
+-   MEDIASUBTYPE \_ mp43
 
-Der Windows Media MPEG-4 V3-Decoder unterstützt die folgenden Ausgabemedien-Untertypen, wenn er als DirectX-Medienobjekt (DMO) fungiert.
+Der Windows Media MPEG-4 V3-Decoder unterstützt die folgenden Ausgabemedienuntertypen, wenn er als DirectX Media Object (DMO.
 
--   Mediasubtype \_ im YUY2
--   mediasubtype \_ UYVY
--   Mediasubtype \_ RGB32
--   Mediasubtype \_ RGB24
--   Mediasubtype \_ RGB565
--   Mediasubtype \_ RGB8
--   Mediasubtype \_ RGB555
+-   MEDIASUBTYPE \_ YUY2
+-   MEDIASUBTYPE \_ UY WIE
+-   MEDIASUBTYPE \_ RGB32
+-   MEDIASUBTYPE \_ RGB24
+-   MEDIASUBTYPE \_ RGB565
+-   MEDIASUBTYPE \_ RGB8
+-   MEDIASUBTYPE \_ RGB555
 
-Der Windows Media MPEG-4 V3-Decoder unterstützt die folgenden Ausgabemedien-Untertypen, wenn er als Media Foundation Transformation (MFT) fungiert.
+Der Windows Media MPEG-4 V3-Decoder unterstützt die folgenden Ausgabemedienuntertypen, wenn er als Media Foundation Transform (MFT) agiert.
 
--   MF-Format \_ im YUY2
--   MF-Format ( \_ UYVY)
--   MF-Format \_ RGB32
--   MF-Format \_ RGB24
--   MF-Format \_ RGB565
--   MF-Format \_ RGB8
--   MF-Format \_ RGB555
+-   MFVideoFormat \_ YUY2
+-   MFVideoFormat \_ UY WIES
+-   MFVideoFormat \_ RGB32
+-   MFVideoFormat \_ RGB24
+-   MFVideoFormat \_ RGB565
+-   MFVideoFormat \_ RGB8
+-   MFVideoFormat \_ RGB555
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Das Windows Media MPEG-4 V3-Decoder-Objekt macht die [**imediaobject**](/previous-versions/windows/desktop/api/mediaobj/nn-mediaobj-imediaobject) -Schnittstelle verfügbar, sodass das Objekt als DirectX Media Object (DMO) verwendet werden kann, und stellt die [**imftransform**](/windows/desktop/api/mftransform/nn-mftransform-imftransform) -Schnittstelle zur Verfügung, sodass das Objekt als Media Foundation Transformation (MFT) verwendet werden kann. Das-Objekt verfügt über denselben Klassen Bezeichner (CLSID), unabhängig davon, ob er als DMO oder MFT fungiert.
+Das Windows Media MPEG-4 V3-Decoderobjekt macht die [**IMediaObject-Schnittstelle**](/previous-versions/windows/desktop/api/mediaobj/nn-mediaobj-imediaobject) verfügbar, sodass das Objekt als DirectX-Medienobjekt (DMO) verwendet werden kann, und macht die [**INTERFACETRANSFORM-Schnittstelle**](/windows/desktop/api/mftransform/nn-mftransform-imftransform) verfügbar, sodass das Objekt als Media Foundation Transform (MFT) verwendet werden kann. Das Objekt hat denselben Klassenbezeichner (CLSID), unabhängig davon, ob es als DMO oder MFT fungiert.
 
-Der MPEG-4 V3-Decoder verhält sich je nachdem, welche Schnittstellen Sie erhalten und welche Version von Windows ausgeführt wird, als DMO oder MFT. In der folgenden Tabelle sind die Bedingungen aufgeführt, unter denen sich ein MPEG-4 V3-Decoder als DMO oder MFT verhält.
+Der MPEG-4 V3-Decoder verhält sich wie DMO oder MFT, je nachdem, welche Schnittstellen Sie abrufen und welche Version Windows wird. Die folgende Tabelle zeigt die Bedingungen, unter denen sich ein MPEG-4 V3-Decoder als DMO MFT verhält.
 
 
 
 | Betriebssystem            | Decoderverhalten                                                                                                                                                    |
 |-----------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Windows XP                  | Der MPEG-4 V3-Decoder verhält sich immer als DMO.                                                                                                                      |
-| Windows Vista und Windows 7 | Standardmäßig verhält sich der MPEG-4 V3-Decoder als DMO. Wenn Sie eine [**imftransform**](/windows/desktop/api/mftransform/nn-mftransform-imftransform) -Schnittstelle für den MPEG-4 V3-Decoder erhalten, verhält sie sich wie eine MFT. |
+| Windows XP                  | Der MPEG-4 V3-Decoder verhält sich immer wie ein DMO.                                                                                                                      |
+| Windows Vista und Windows 7 | Standardmäßig verhält sich der MPEG-4 V3-Decoder wie DMO. Wenn Sie im MPEG-4 V3-Decoder eine [**BERTRANSFORM-Schnittstelle**](/windows/desktop/api/mftransform/nn-mftransform-imftransform) abrufen, verhält sie sich wie ein MFT. |
 
 
 
  
 
-Die global eindeutigen Bezeichner (GUIDs) für RGB-Medien Untertypen unterscheiden sich abhängig davon, ob ein Decoder als DMO oder MFT fungiert. Die GUIDs für nicht-RGB-Medien Untertypen sind identisch, unabhängig davon, ob ein Decoder als DMO oder MFT fungiert. Informationen zu den GUIDs, die Medien Untertypen darstellen, finden Sie [unter Video Untertyp-GUIDs](video-subtype-guids.md).
+Die GUIDs (Globally Unique Identifiers) für RGB-Medienuntertypen unterscheiden sich abhängig davon, ob ein Decoder als DMO oder MFT agiert. Die GUIDs für Nicht-RGB-Medienuntertypen sind identisch, unabhängig davon, ob ein Decoder als DMO oder MFT agiert. Informationen zu den GUIDs, die Medienuntertypen darstellen, finden Sie unter [Video Subtype GUIDs](video-subtype-guids.md).
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -71,14 +71,14 @@ Die global eindeutigen Bezeichner (GUIDs) für RGB-Medien Untertypen unterscheid
 
 | Anforderung | Wert |
 |-------------------------------------|-----------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows XP \[ -Desktop-Apps\]<br/>                                             |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/>                                    |
-| Header<br/>                   | <dl> <dt>Wmcodecdsp. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ XP-Desktop-Apps\]<br/>                                             |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                                    |
+| Header<br/>                   | <dl> <dt>Wmcodecdsp.h</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>MP43DECD.dll</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 

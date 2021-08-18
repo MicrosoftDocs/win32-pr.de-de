@@ -1,6 +1,6 @@
 ---
-description: 'Weitere Informationen finden Sie unter: JET_RECORDLIST. crecords-Eigenschaft'
-title: JET_RECORDLIST. crecords (Eigenschaft)
+description: 'Weitere Informationen finden Sie unter: JET_RECORDLIST.cRecords-Eigenschaft'
+title: JET_RECORDLIST.cRecords-Eigenschaft
 TOCTitle: 'cRecords property '
 ms:assetid: P:Microsoft.Isam.Esent.Interop.JET_RECORDLIST.cRecords
 ms:mtpsurl: https://msdn.microsoft.com/library/microsoft.isam.esent.interop.jet_recordlist.crecords(v=EXCHG.10)
@@ -26,19 +26,19 @@ api_type:
 api_location:
 - Microsoft.Isam.Esent.Interop.dll
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: 1b6160dc906c681b73812aec78843118a6ac8020
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 7bd852011c018a4e43a7bf52a270567681fcd2640e3d2c264494242a0839ca31
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106353952"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118764019"
 ---
-# <a name="jet_recordlistcrecords-property"></a>JET_RECORDLIST. crecords (Eigenschaft)
+# <a name="jet_recordlistcrecords-property"></a>JET_RECORDLIST.cRecords-Eigenschaft
 
 Ruft die Anzahl der Datensätze in der temporären Tabelle ab.
 
-**Namespace:**  [Microsoft. ISAM. ESENT. Interop](./microsoft.isam.esent.interop-namespace.md)  
-**Assembly:**  Microsoft. ISAM. ESENT. Interop (in Microsoft.Isam.Esent.Interop.dll)
+**Namespace:**  [Microsoft.Isam.Esent.Interop](./microsoft.isam.esent.interop-namespace.md)  
+**Assembly:**  Microsoft.Isam.Esent.Interop (in Microsoft.Isam.Esent.Interop.dll)
 
 ## <a name="syntax"></a>Syntax
 
@@ -60,14 +60,14 @@ public int cRecords { get; internal set; }
 
 #### <a name="property-value"></a>Eigenschaftswert
 
-Typ: [System. Int32](/dotnet/api/system.int32)  
+Typ: [System.Int32](/dotnet/api/system.int32)  
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
-#### <a name="reference"></a>Referenz
+#### <a name="reference"></a>Verweis
 
 [JET_RECORDLIST-Klasse](./jet-recordlist-class.md)
 
-[Mitglieder JET_RECORDLIST](./jet-recordlist-members.md)
+[JET_RECORDLIST Member](./jet-recordlist-members.md)
 
-[Microsoft. ISAM. ESENT. Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)
+[Microsoft.Isam.Esent.Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)

@@ -1,5 +1,5 @@
 ---
-description: Die FileHash-Methode des Installer-Objekts verwendet den Pfad zu einer Datei und gibt einen 128-Bit-Hash dieser Datei zurück. Die Dateihashinformationen werden als Datensatzobjekt zurückgegeben. Der gesamte 128-Bit-Dateihash wird als vier 32-Bit-IntegerData-Eigenschaftenfelder zurückgegeben.
+description: Die FileHash-Methode des Installer-Objekts verwendet den Pfad zu einer Datei und gibt einen 128-Bit-Hash dieser Datei zurück. Die Dateihashinformationen werden als Datensatzobjekt zurückgegeben. Der gesamte 128-Bit-Dateihash wird als vier 32-Bit-IntegerData-Eigenschaftsfelder zurückgegeben.
 ms.assetid: 065ffde1-4d7c-4e71-9315-7926d4cd38ed
 title: Installer.FileHash-Methode
 ms.topic: reference
@@ -22,9 +22,9 @@ ms.locfileid: "118630791"
 ---
 # <a name="installerfilehash-method"></a>Installer.FileHash-Methode
 
-Die **FileHash-Methode** des [**Installer-Objekts**](installer-object.md) verwendet den Pfad zu einer Datei und gibt einen 128-Bit-Hash dieser Datei zurück. Die Dateihashinformationen werden als [**Datensatzobjekt zurückgegeben.**](record-object.md) Der gesamte 128-Bit-Dateihash wird als vier [**32-Bit-IntegerData-Eigenschaftenfelder**](record-integerdata.md) zurückgegeben.
+Die **FileHash-Methode** des [**Installer-Objekts**](installer-object.md) verwendet den Pfad zu einer Datei und gibt einen 128-Bit-Hash dieser Datei zurück. Die Dateihashinformationen werden als [**Datensatzobjekt**](record-object.md)zurückgegeben. Der gesamte 128-Bit-Dateihash wird als [](record-integerdata.md) vier 32-Bit-IntegerData-Eigenschaftsfelder zurückgegeben.
 
-Die im [**Datensatzobjekt**](record-object.md) zurückgegebenen Werte entsprechen den vier Feldern der [**MSIFILEHASHINFO-Struktur,**](/windows/desktop/api/Msi/ns-msi-msifilehashinfo) die von [**MsiGetFileHash zurückgegeben wird.**](/windows/desktop/api/Msi/nf-msi-msigetfilehasha) Die Nummerierung von vier Feldern basiert in der [MsiFileHash-Tabelle auf 1.](msifilehash-table.md)
+Die im [**Datensatzobjekt**](record-object.md) zurückgegebenen Werte entsprechen den vier Feldern der [**MSIFILEHASHINFO-Struktur,**](/windows/desktop/api/Msi/ns-msi-msifilehashinfo) die von [**MsiGetFileHash**](/windows/desktop/api/Msi/nf-msi-msigetfilehasha)zurückgegeben wird. Die Nummerierung von vier Feldern basiert in der [MsiFileHash-Tabelle](msifilehash-table.md)auf 1.
 
 -   Feld 1 entspricht der HashPart1-Spalte.
 -   Feld 2 entspricht der HashPart2-Spalte.
@@ -50,7 +50,7 @@ Installer.FileHash(
 *Filepath* 
 </dt> <dd>
 
-Pfad zur Datei, für die ein Hashwert verwendet werden soll.
+Pfad zu der Datei, für die ein Hashwert erfolgen soll.
 
 </dd> <dt>
 
@@ -65,7 +65,7 @@ Der Wert dieses Parameters muss 0 (null) sein.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Bei Erfolg gibt diese Methode ein [**Datensatzobjekt zurück,**](record-object.md) das den Hash der Datei enthält.
+Bei Erfolg gibt diese Methode ein [**Datensatzobjekt**](record-object.md) zurück, das den Hash der Datei enthält.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -73,13 +73,13 @@ Bei Erfolg gibt diese Methode ein [**Datensatzobjekt zurück,**](record-object.m
 
 | Anforderung | Wert |
 |--------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Version<br/> | Windows Installer 5.0 auf Windows Server 2012, Windows 8, Windows Server 2008 R2 oder Windows 7. Windows Installer 4.0 oder Windows Installer 4.5 auf Windows Server 2008 oder Windows Vista. Windows Installationsprogramm auf Windows Server 2003 oder Windows XP<br/> |
+| Version<br/> | Windows Installationsprogramm 5.0 auf Windows Server 2012, Windows 8, Windows Server 2008 R2 oder Windows 7. Windows Installer 4.0 oder Windows Installer 4.5 auf Windows Server 2008 oder Windows Vista. Windows Installationsprogramm auf Windows Server 2003 oder Windows XP<br/> |
 | DLL<br/>     | <dl> <dt>Msi.dll</dt> </dl>                                                                                                                                                                      |
-| IID<br/>     | IID \_ IInstaller ist als 000C1090-0000-0000-C000-00000000046 definiert.<br/>                                                                                                                                                                           |
+| IID<br/>     | IID \_ IInstaller ist als 000C1090-0000-0000-C000-0000000000046 definiert.<br/>                                                                                                                                                                           |
 
 
 
-## <a name="see-also"></a>Weitere Informationen:
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 

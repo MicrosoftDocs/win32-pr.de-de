@@ -1,7 +1,7 @@
 ---
-description: Die usingdifferentzuzuweisungs-Methode bestimmt, ob die Eingabe-und Ausgabe Pins verschiedene Zuweisungen verwenden.
+description: Die UsingDifferentAllocators-Methode bestimmt, ob die Eingabe- und Ausgabepins unterschiedliche Zuweisungen verwenden.
 ms.assetid: 75feaa6e-6395-4d47-ae92-10a857f8764b
-title: Ctransinplacefilter. usingdifferenentzugewiesene-Methode (transip. h)
+title: CTransInPlaceFilter.UsingDifferentAllocators-Methode (Transip.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,16 +16,16 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: f20802836adb665614e2bbfb8cb79bdccd5a36ef
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 0033c0f5ded1fe741d27397078367049d72061c40a993833f714686d9f8a96fc
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106371540"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118953419"
 ---
-# <a name="ctransinplacefilterusingdifferentallocators-method"></a>Ctransinplacefilter. usingdifferenentzugewiesene-Methode
+# <a name="ctransinplacefilterusingdifferentallocators-method"></a>CTransInPlaceFilter.UsingDifferentAllocators-Methode
 
-Die `UsingDifferentAllocators` -Methode bestimmt, ob die Eingabe-und Ausgabe Pins verschiedene Zuweisungen verwenden.
+Die `UsingDifferentAllocators` -Methode bestimmt, ob die Eingabe- und Ausgabepins unterschiedliche Zuweisungen verwenden.
 
 ## <a name="syntax"></a>Syntax
 
@@ -42,7 +42,7 @@ Diese Methode hat keine Parameter.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt **true** zurück, wenn die Eingabe-und Ausgabe Pins verschiedene Zuweisungen verwenden, andernfalls **false** .
+Gibt **TRUE** zurück, wenn die Eingabe- und Ausgabepins unterschiedliche Zuweisungen verwenden, andernfalls **FALSE.**
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -50,16 +50,16 @@ Gibt **true** zurück, wenn die Eingabe-und Ausgabe Pins verschiedene Zuweisunge
 
 | Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Transip. h (Include Streams. h)</dt> </dl>                                                                                   |
-| Bibliothek<br/> | <dl> " <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Transip.h (include Streams.h)</dt> </dl>                                                                                   |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Verkaufsbuilds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Ctransinplacefilter-Klasse**](ctransinplacefilter.md)
+[**CTransInPlaceFilter-Klasse**](ctransinplacefilter.md)
 </dt> </dl>
 
  

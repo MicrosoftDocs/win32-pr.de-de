@@ -1,9 +1,9 @@
 ---
 title: Install-Element
-description: In diesem Abschnitt werden die Funktionen beschrieben, die für die Verwendung durch Online Stores entwickelt wurden. Die Verwendung dieser Funktion außerhalb des Kontexts eines Online Stores wird nicht unterstützt. Das install-Element gibt Werte an, die von Windows Media Player verwendet werden, um einen Online Shop zu installieren.
+description: Hinweis In diesem Abschnitt werden Funktionen beschrieben, die für die Verwendung durch Onlineshops entwickelt wurden. Die Verwendung dieser Funktionalität außerhalb des Kontexts eines Onlineshops wird nicht unterstützt. Das Install-Element gibt Werte an, die von Windows Media Player zum Installieren eines Onlineshops verwendet werden.
 ms.assetid: 9a5e15ee-ec36-48d3-a1c2-bf20b6d2da48
 keywords:
-- Element Windows-Media Player installieren
+- Install-Windows Media Player
 topic_type:
 - apiref
 api_name:
@@ -13,21 +13,21 @@ api_type:
 ms.topic: reference
 ms.date: 05/31/2018
 api_location: ''
-ms.openlocfilehash: bba56240651f789b45c18b006b16e5e07b10676e
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 05a946cbab6a6334faa7483c0f3201a98ff0abe32dca32fe1f4f7eed5d0a2408
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106372257"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118996520"
 ---
 # <a name="install-element"></a>Install-Element
 
 > [!Note]  
-> In diesem Abschnitt werden die-Funktionen beschrieben, die für die Verwendung durch Online Stores Die Verwendung dieser Funktion außerhalb des Kontexts eines Online Stores wird nicht unterstützt.
+> In diesem Abschnitt werden Funktionen beschrieben, die für die Verwendung durch Onlineshops entwickelt wurden. Die Verwendung dieser Funktionalität außerhalb des Kontexts eines Onlineshops wird nicht unterstützt.
 
  
 
-Das **install** -Element gibt Werte an, die von Windows Media Player verwendet werden, um einen Online Shop zu installieren.
+Das **Install-Element** gibt Werte an, die von Windows Media Player zum Installieren eines Onlineshops verwendet werden.
 
 ``` syntax
 <Install
@@ -44,49 +44,49 @@ Das **install** -Element gibt Werte an, die von Windows Media Player verwendet w
 
 <dl> <dt>
 
-<span id="EULAURL__required_"></span><span id="eulaurl__required_"></span><span id="EULAURL__REQUIRED_"></span>**Eulaurl** (erforderlich)
+<span id="EULAURL__required_"></span><span id="eulaurl__required_"></span><span id="EULAURL__REQUIRED_"></span>**EULAURL** (erforderlich)
 </dt> <dd>
 
-Voll qualifizierte URL für eine Datei mit der Dateinamenerweiterung ". txt", die Windows Media Player verwendet, um einen Endbenutzer-Lizenzvertrag (EULA) anzuzeigen. Diese Datei muss im ANSI-Format codiert werden.
+Vollqualifizierte URL für eine Datei mit .txt Dateierweiterung, die Windows Media Player zum Anzeigen eines Endbenutzer-Lizenzvertrags (EULA) verwendet. Diese Datei muss im ANSI-Format codiert sein.
 
 </dd> <dt>
 
-<span id="CodeURL__required_"></span><span id="codeurl__required_"></span><span id="CODEURL__REQUIRED_"></span>**Codeurl** (erforderlich)
+<span id="CodeURL__required_"></span><span id="codeurl__required_"></span><span id="CODEURL__REQUIRED_"></span>**CodeURL** (erforderlich)
 </dt> <dd>
 
-Voll qualifizierte URL für ein Paket mit der Dateinamenerweiterung ". cab", die zur Installation des Online Ladens verwendet wird. Das Paket und alle Code Module im Paket müssen signiert sein. Weitere Informationen zum Signieren von Code finden Sie unter Einführung in die [Code Signatur](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/ms537361(v=vs.85)) in der MSDN Library.
+Vollqualifizierte URL für ein Paket mit .cab Dateierweiterung, die zum Installieren des Onlineshops verwendet wird. Das Paket und alle Codemodule im Paket müssen signiert sein. Informationen zum Signieren von Code finden Sie [unter Einführung in die Codesignatur](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/ms537361(v=vs.85)) in der MSDN Library.
 
 </dd> <dt>
 
-<span id="PrivacyInfoURL__required_"></span><span id="privacyinfourl__required_"></span><span id="PRIVACYINFOURL__REQUIRED_"></span>**Privacyinfourl** (erforderlich)
+<span id="PrivacyInfoURL__required_"></span><span id="privacyinfourl__required_"></span><span id="PRIVACYINFOURL__REQUIRED_"></span>**PrivacyInfoURL** (erforderlich)
 </dt> <dd>
 
-Voll qualifizierte URL für eine Webseite, die Informationen zu Datenschutzbestimmungen für den Online Store enthält.
+Vollqualifizierte URL für eine Webseite, die Datenschutzrichtlinieninformationen für den Onlineshop enthält.
 
 </dd> <dt>
 
-<span id="InstallApp__required_"></span><span id="installapp__required_"></span><span id="INSTALLAPP__REQUIRED_"></span>**Installapp** (erforderlich)
+<span id="InstallApp__required_"></span><span id="installapp__required_"></span><span id="INSTALLAPP__REQUIRED_"></span>**InstallApp** (erforderlich)
 </dt> <dd>
 
-Der Name der exe-oder INF-Datei, die ausgeführt werden soll. Diese Datei muss in der vom Attribut " **codeurl** " angegebenen CAB-Datei enthalten sein.
+Der Name der exe- oder INF-Datei, die ausgeführt werden soll. Diese Datei muss in der CAB-Datei enthalten sein, die durch das **CodeURL-Attribut angegeben** wird.
 
 </dd> <dt>
 
-<span id="InstallData__optional_"></span><span id="installdata__optional_"></span><span id="INSTALLDATA__OPTIONAL_"></span>**Installdata** (optional)
+<span id="InstallData__optional_"></span><span id="installdata__optional_"></span><span id="INSTALLDATA__OPTIONAL_"></span>**InstallData** (optional)
 </dt> <dd>
 
-Befehlszeilen Zeichenfolge, die an die durch das **installapp** -Attribut angegebene Anwendung übermittelt wird. Dieses Attribut ist nur anwendbar, wenn der Wert für **installapp** eine ausführbare Datei angibt.
+Befehlszeilenzeichenfolge, die an die durch das **InstallApp-Attribut** angegebene Anwendung übergeben wird. Dieses Attribut ist nur anwendbar, wenn der Wert für **InstallApp** eine ausführbare Datei angibt.
 
 </dd> <dt>
 
-<span id="CatalogURL__required_for_type_1__ignored_for_type_2_"></span><span id="catalogurl__required_for_type_1__ignored_for_type_2_"></span><span id="CATALOGURL__REQUIRED_FOR_TYPE_1__IGNORED_FOR_TYPE_2_"></span>**Catalogurl** (erforderlich für Typ 1, wird für Typ 2 ignoriert)
+<span id="CatalogURL__required_for_type_1__ignored_for_type_2_"></span><span id="catalogurl__required_for_type_1__ignored_for_type_2_"></span><span id="CATALOGURL__REQUIRED_FOR_TYPE_1__IGNORED_FOR_TYPE_2_"></span>**CatalogURL** (für Typ 1 erforderlich, für Typ 2 ignoriert)
 </dt> <dd>
 
-Voll qualifizierte URL für den kompilierten Katalog des Online Stores.
+Vollqualifizierte URL für den kompilierten Katalog des Onlineshops.
 
 </dd> </dl>
 
-## <a name="parentchild-elements"></a>Über-/unterordnungselemente
+## <a name="parentchild-elements"></a>Übergeordnete/untergeordnete Elemente
 
 
 
@@ -101,10 +101,10 @@ Voll qualifizierte URL für den kompilierten Katalog des Online Stores.
 
 ## <a name="remarks"></a>Bemerkungen
 
-Wenn eines der erforderlichen Attribute fehlt oder nicht verfügbar ist, versucht das Windows Media Player-Setup nicht, den Code des Online Store-Anbieters herunterzuladen und zu installieren. Setup konfiguriert die Offline Standardwerte entsprechend den Angaben im **serviceInfo** -Dokument. **ServiceInfo** kann verwendet werden, wenn keine Internet Verbindung besteht, indem der Standardanbieter Name und die **serviceInfo** -Informationen als Befehlszeilenparameter übergeben werden. Ausführliche Informationen zu Befehlszeilenoptionen finden Sie unter [Neuverteilen von Windows Media Player-Software](redistributing-windows-media-player-software.md) .
+Wenn eines der erforderlichen Attribute fehlt oder nicht verfügbar ist, versucht Windows Media Player Setup nicht, den Code des Onlineshopanbieters herunterzuladen und zu installieren. Setup konfiguriert die Offline-Standardwerte wie im **ServiceInfo-Dokument** angegeben. **ServiceInfo** kann verwendet werden, wenn keine Internetverbindung besteht, indem der Standardanbietername und die **ServiceInfo-Informationen** als Befehlszeilenparameter übergeben werden. Weitere [Informationen zu Befehlszeilenoptionen finden Sie unter Redistributing Windows Media Player Software](redistributing-windows-media-player-software.md) ( Redistributing Windows Media Player Software ).
 
 > [!Note]  
-> Die Verwendung dieses Elements erfordert, dass Sie eine Verteilungs Vereinbarung mit Microsoft signieren. Weitere Informationen erhalten Sie von Ihrem Unternehmens Beauftragten.
+> Die Verwendung dieses Elements erfordert, dass Sie einen Weiterverteilungsvertrag mit Microsoft unterzeichnen. Wenden Sie sich an Ihren Geschäftsmitarbeiter, um Weitere Informationen zu erhalten.
 
  
 
@@ -118,17 +118,17 @@ Wenn eines der erforderlichen Attribute fehlt oder nicht verfügbar ist, versuch
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Beispiel eines serviceInfo-Dokuments für einen Online Store vom Typ 1**](example-serviceinfo-document-for-a-type-1-online-store.md)
+[**ServiceInfo-Beispieldokument für eine Online-Store**](example-serviceinfo-document-for-a-type-1-online-store.md)
 </dt> <dt>
 
-[**Beispiel eines serviceInfo-Dokuments für einen Typ 2-Online Store**](example-serviceinfo-document-for-a-type-2-online-store.md)
+[**ServiceInfo-Beispieldokument für eine Online-Store**](example-serviceinfo-document-for-a-type-2-online-store.md)
 </dt> <dt>
 
-[**Servicinfo-Dokument**](serviceinfo-document.md)
+[**ServiceInfo-Dokument**](serviceinfo-document.md)
 </dt> </dl>
 
  

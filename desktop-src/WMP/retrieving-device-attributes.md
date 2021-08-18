@@ -1,31 +1,31 @@
 ---
-title: Abrufen von Geräte Attributen
-description: Abrufen von Geräte Attributen
+title: Abrufen von Geräteattributen
+description: Abrufen von Geräteattributen
 ms.assetid: c553d495-d8fc-4483-a3dc-6679c6b9d1f1
 keywords:
-- Windows Media Player, portable Geräte
-- Windows Media Player-Objektmodell, portable Geräte
+- Windows Media Player,portable Geräte
+- Windows Media Player Objektmodell, portable Geräte
 - Objektmodell, portable Geräte
-- Windows Media Player ActiveX-Steuerelement, portable Geräte
-- ActiveX-Steuerelement, portable Geräte
+- Windows Media Player ActiveX,portable Geräte
+- ActiveX,portable Geräte
 - Windows Media Player Mobile ActiveX-Steuerelement, portable Geräte
-- Windows Media Player Mobile, tragbare Geräte
-- Portable Geräte, Abrufen von Attributen
-- Attribute, portable Geräte
+- Windows Media Player Mobile, portable Geräte
+- Portable Geräte,Abrufen von Attributen
+- Attribute,portable Geräte
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 2f486b94fe6a9a5c78f238d78a7f79dec9df3376
-ms.sourcegitcommit: 48d1c892045445bcbd0f22bafa2fd3861ffaa6e7
+ms.openlocfilehash: d5e6ac2794782c728de16f23f88e26d1f458258959e1c3e9e7e490cdf7bf6971
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/19/2020
-ms.locfileid: "104038592"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118995530"
 ---
-# <a name="retrieving-device-attributes"></a>Abrufen von Geräte Attributen
+# <a name="retrieving-device-attributes"></a>Abrufen von Geräteattributen
 
-Windows Media Player speichert Informationen zu Geräten, die eine Verbindung mit dem Player hergestellt haben. Einige Attribute sind verfügbar, indem Sie die einzelnen Methoden von **iwmpsyncdevice** aufrufen, einige können mithilfe von **iwmpsyncdevice:: getiteminfo** abgerufen werden, und einige können mithilfe der beiden Techniken abgerufen werden.
+Windows Media Player speichert Informationen zu Geräten, die mit dem Player verbunden sind. Einige Attribute sind durch Aufrufen einzelner Methoden von **IWMPSyncDevice** verfügbar, einige können mithilfe von **IWMPSyncDevice::getItemInfo** abgerufen werden, und einige können mit beiden Methoden abgerufen werden.
 
-Der folgende Beispielcode füllt ein Listenfeld-Steuerelement mit den verfügbaren Attributen für das angegebene Gerät. Der erste Teil der Funktion Ruft Eigenschaften ab, die mit bestimmten Methoden verfügbar sind. Der zweite Teil der Funktion ruft Attributwerte mithilfe von **iwmpsyncdevice:: getiteminfo** ab. Der Funktionsparameter ( *Lindex*) ist der Index des Geräts in Ihrem benutzerdefinierten Geräte Array, auf das von m \_ ppwmpdevices verwiesen wird.
+Im folgenden Beispielcode wird ein Listenfeld-Steuerelement mit den verfügbaren Attributen für das angegebene Gerät auffüllt. Der erste Teil der Funktion ruft die verfügbaren Eigenschaften mithilfe bestimmter Methoden ab. Der zweite Teil der Funktion ruft Attributwerte mithilfe von **IWMPSyncDevice::getItemInfo ab.** Der Funktionsparameter *lIndex* ist der Index für das Gerät in Ihrem benutzerdefinierten Gerätearray, auf das m \_ ppWMPDevices zeigt.
 
 
 ```C++
@@ -157,21 +157,21 @@ STDMETHODIMP CMainDlg::ShowDeviceAttributes(long lIndex)
 
 <dl> <dt>
 
-[**Auflisten von Geräten**](enumerating-devices.md)
+[**Aufzählen von Geräten**](enumerating-devices.md)
 </dt> <dt>
 
-[**Iwmpsyncdevice-Schnittstelle**](/previous-versions/windows/desktop/api/wmp/nn-wmp-iwmpsyncdevice)
+[**IWMPSyncDevice-Schnittstelle**](/previous-versions/windows/desktop/api/wmp/nn-wmp-iwmpsyncdevice)
 </dt> <dt>
 
-[**Iwmpsyncdevice:: getiteminfo**](/previous-versions/windows/desktop/api/wmp/nf-wmp-iwmpsyncdevice-getiteminfo)
+[**IWMPSyncDevice::getItemInfo**](/previous-versions/windows/desktop/api/wmp/nf-wmp-iwmpsyncdevice-getiteminfo)
 </dt> <dt>
 
-[**Arbeiten mit tragbaren Geräten**](working-with-portable-devices.md)
+[**Arbeiten mit portablen Geräten**](working-with-portable-devices.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

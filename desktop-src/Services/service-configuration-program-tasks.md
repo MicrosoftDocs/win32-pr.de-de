@@ -1,30 +1,30 @@
 ---
-description: 'Die folgenden Aufgaben werden von Dienst Konfigurations Programmen ausgeführt:'
+description: 'Die folgenden Aufgaben werden von Dienstkonfigurationsprogrammen ausgeführt:'
 ms.assetid: f5205814-0897-4a59-b6d3-49d5b8115d29
-title: Tasks für Dienst Konfigurationsprogramm
+title: Aufgaben des Dienstkonfigurationsprogramms
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 62b8b1099a19dbba005368a99f7766fc32f7043f
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 6629d45e0ff3adb83cfb9642b9cb60580e959d2bc10fe1ed91bd97ad31096c98
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106345699"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118889090"
 ---
-# <a name="service-configuration-program-tasks"></a>Tasks für Dienst Konfigurationsprogramm
+# <a name="service-configuration-program-tasks"></a>Aufgaben des Dienstkonfigurationsprogramms
 
-Die folgenden Aufgaben werden von [Dienst Konfigurations Programmen](service-configuration-programs.md)ausgeführt:
+Die folgenden Aufgaben werden von [Dienstkonfigurationsprogrammen](service-configuration-programs.md)ausgeführt:
 
--   [Installieren eines Dienstanbieter](installing-a-service.md)
--   [Löschen eines Dienstanbieter](deleting-a-service.md)
--   [Ändern der Konfiguration eines Dienstanbieter](changing-a-service-configuration.md)
--   [Abfragen einer Dienst Konfiguration](querying-a-service-s-configuration.md)
+-   [Installieren eines Diensts](installing-a-service.md)
+-   [Löschen eines Diensts](deleting-a-service.md)
+-   [Ändern der Konfiguration eines Diensts](changing-a-service-configuration.md)
+-   [Abfragen der Konfiguration eines Diensts](querying-a-service-s-configuration.md)
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[Das Complete Service-Beispiel](the-complete-service-sample.md)
+[Beispiel für den vollständigen Dienst](the-complete-service-sample.md)
 </dt> </dl>
 
  

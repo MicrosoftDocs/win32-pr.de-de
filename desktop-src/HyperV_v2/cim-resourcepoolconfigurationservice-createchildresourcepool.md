@@ -1,7 +1,7 @@
 ---
-description: Starten Sie einen Auftrag zum Erstellen eines Unterpools aus einem übergeordneten Pool mithilfe der angegebenen Zuordnungseinstellungen.
+description: Starten Sie einen Auftrag zum Erstellen eines Unterpools aus einem übergeordneten Pool unter Verwendung der angegebenen Zuordnungseinstellungen.
 ms.assetid: 9b09221a-7c4e-4648-a2a8-012df1818c3e
-title: CreateChildResourcePool-Methode der CIM_ResourcePoolConfigurationService Klasse
+title: CreateChildResourcePool-Methode der CIM_ResourcePoolConfigurationService-Klasse
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -20,9 +20,9 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 08/11/2021
 ms.locfileid: "118648152"
 ---
-# <a name="createchildresourcepool-method-of-the-cim_resourcepoolconfigurationservice-class"></a>CreateChildResourcePool-Methode der \_ CIM-Klasse "ResourcePoolConfigurationService"
+# <a name="createchildresourcepool-method-of-the-cim_resourcepoolconfigurationservice-class"></a>CreateChildResourcePool-Methode der CIM \_ ResourcePoolConfigurationService-Klasse
 
-Starten Sie einen Auftrag zum Erstellen eines Unterpools aus einem übergeordneten Pool mithilfe der angegebenen Zuordnungseinstellungen.
+Starten Sie einen Auftrag zum Erstellen eines Unterpools aus einem übergeordneten Pool unter Verwendung der angegebenen Zuordnungseinstellungen.
 
 ## <a name="syntax"></a>Syntax
 
@@ -46,14 +46,14 @@ uint32 CreateChildResourcePool(
 *ElementName* \[ In\]
 </dt> <dd>
 
-Ein für den Endbenutzer relevanter Name für den Pool, der erstellt wird. Bei **NULL** kann ein vom System bereitgestellter Standardname verwendet werden. Der Wert wird in der **ElementName-Eigenschaft** für das erstellte Element gespeichert.
+Ein für den Endbenutzer relevanter Name für den pool, der erstellt wird. Bei **NULL** kann ein vom System bereitgestellter Standardname verwendet werden. Der Wert wird in der **ElementName-Eigenschaft** für das erstellte Element gespeichert.
 
 </dd> <dt>
 
 *Einstellungen* \[ In\]
 </dt> <dd>
 
-Eine Zeichenfolge, die eine Darstellung einer [**CIM \_ SettingData-Instanz**](cim-settingdata.md) enthält, die zum Angeben der Einstellungen für den untergeordneten Pool verwendet wird.
+Zeichenfolge, die eine Darstellung einer [**CIM \_ SettingData-Instanz**](cim-settingdata.md) enthält, die zum Angeben der Einstellungen für den untergeordneten Pool verwendet wird.
 
 </dd> <dt>
 
@@ -67,7 +67,7 @@ Ein [**\_ CIM-Ressourcenpool,**](cim-resourcepool.md) aus dem der neue Pool erst
 *Pool* \[ out\]
 </dt> <dd>
 
-Ein [**\_ CIM-Ressourcenpool,**](cim-resourcepool.md) der auf den resultierenden Pool verweist.
+Ein [**CIM \_ ResourcePool,**](cim-resourcepool.md) der auf den resultierenden Pool verweist.
 
 </dd> <dt>
 
@@ -80,11 +80,11 @@ Verweis auf den Auftrag (kann NULL sein, wenn der Auftrag abgeschlossen ist).
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt bei Erfolg eine 0 zurück. andernfalls gibt einen Fehler zurück.
+Gibt bei Erfolg den Wert 0 zurück. andernfalls wird ein Fehler zurückgegeben.
 
 <dl> <dt>
 
-**Auftrag ohne Fehler** abgeschlossen (0)
+**Auftrag ohne Fehler abgeschlossen** (0)
 </dt> <dt>
 
 **Nicht unterstützt** (1)
@@ -102,7 +102,7 @@ Gibt bei Erfolg eine 0 zurück. andernfalls gibt einen Fehler zurück.
 **Ungültiger Parameter** (5)
 </dt> <dt>
 
-**Wird verwendet** (6)
+**In Verwendung** (6)
 </dt> <dt>
 
 **Falscher ResourceType für den Pool** (7)
@@ -114,10 +114,10 @@ Gibt bei Erfolg eine 0 zurück. andernfalls gibt einen Fehler zurück.
 **DMTF Reserved** (..)
 </dt> <dt>
 
-**Überprüfte Methodenparameter – Auftrag gestartet** (4096)
+**Überprüfte Methodenparameter – Auftragsstart** (4096)
 </dt> <dt>
 
-**Größe nicht unterstützt** (4097)
+**Größe wird nicht unterstützt** (4097)
 </dt> <dt>
 
 **Reservierte Methode** (4098..32767)
@@ -134,13 +134,13 @@ Gibt bei Erfolg eine 0 zurück. andernfalls gibt einen Fehler zurück.
 |-------------------------------------|---------------------------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 8.1<br/>                                                                                  |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2012 R2<br/>                                                                       |
-| Namespace<br/>                | \\Stammvirtualisierung \\ v2<br/>                                                                     |
+| Namespace<br/>                | \\Root-Virtualisierung \\ v2<br/>                                                                     |
 | MOF<br/>                      | <dl> <dt>WindowsVirtualization.V2.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Vmms.exe</dt> </dl>                     |
 
 
 
-## <a name="see-also"></a>Weitere Informationen:
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 

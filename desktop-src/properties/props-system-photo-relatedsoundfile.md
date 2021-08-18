@@ -1,5 +1,5 @@
 ---
-description: Der Dateiname einer Soundanmerkungsdatei, die dem Foto zugeordnet ist.
+description: Der Dateiname einer Audioanmerkungsdatei, die dem Foto zugeordnet ist.
 ms.assetid: 9654303b-8483-4691-820a-4bfd440f2e93
 title: System.Photo.RelatedSoundFile
 ms.topic: article
@@ -13,7 +13,7 @@ ms.locfileid: "118723670"
 ---
 # <a name="systemphotorelatedsoundfile"></a>System.Photo.RelatedSoundFile
 
-Der Dateiname einer Soundanmerkungsdatei, die dem Foto zugeordnet ist.
+Der Dateiname einer Audioanmerkungsdatei, die dem Foto zugeordnet ist.
 
 ## <a name="windows-10-version-1703-windows-10-version-1607-windows-10-version-1511-windows-10-version-1507-windows-81-windows-8-windows-7-windows-vista"></a>Windows 10, Version 1703, Windows 10, Version 1607, Windows 10, Version 1511, Windows 10, Version 1507, Windows 8.1, Windows 8, Windows 7, Windows Vista
 

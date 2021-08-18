@@ -31,7 +31,7 @@ Der Fotodruck-Assistent bietet mehrere Optionen, die in gängigen Druckerdialogf
     -   Druckqualität in Bezug auf unterstützte Auflösungen von DPI-Auflösungen (Dots per Inch).
     -   Papiertyp. Beispiel: "Plain" oder "Plainy".
 -   Starten der Druckeinstellungen und -eigenschaften für einen bestimmten Drucker.
--   Festlegen **der Drehfeldwerte Kopien jedes Bilds** (auf Windows Vista) oder **Anzahl der Verwendeten Bilder** (auf Windows XP).
+-   Festlegen **der Bildkopien** (auf Windows Vista) oder **Anzahl der Verwendeten bilder** (auf Windows XP) Drehfeldwerte.
 -   Angeben einer Drucklayoutvorlage. Beispiel: **Vollständiges Seitenfoto** oder **Wallet gibt aus.**
 -   Auswählen der Option **Bild an Frame anpassen** (nur auf Windows Vista verfügbar).
 -   Anzeigen einer Vorschau des gedruckten Fotos mit den derzeit angegebenen Optionen.

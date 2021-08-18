@@ -22,7 +22,7 @@ ms.locfileid: "118721908"
 ---
 # <a name="iidentitychangenotify-interface"></a>IIdentityChangeNotify-Schnittstelle
 
-\[Die **IIdentityChangeNotify-Schnittstelle** ist für die Verwendung in Windows 2000 verfügbar. In Windows XP wurde diese Funktion durch Benutzerkonten [mit schnellem Benutzerwechsel und Remotedesktop](fastuserswitching.md)ersetzt und kann in nachfolgenden Versionen geändert oder nicht verfügbar sein.\]
+\[Die **IIdentityChangeNotify-Schnittstelle** ist für die Verwendung in Windows 2000 verfügbar. In Windows XP wurde diese Funktion durch [Benutzerkonten mit schnellem Benutzerwechsel und Remotedesktop](fastuserswitching.md)ersetzt und kann in nachfolgenden Versionen geändert oder nicht verfügbar sein.\]
 
 Veraltet. Stellt Benachrichtigungen zu Änderungen an Benutzeridentitäten im System sowie Benutzeranforderungen zum Wechseln der aktuellen Benutzeridentität bereit.
 

@@ -1,19 +1,19 @@
 ---
 title: Meldungen
-description: Die Themen in diesem Abschnitt enthalten die Referenz Spezifikationen für bestimmte Zeiger Eingabe Meldungen und-Benachrichtigungen.
+description: Die Themen in diesem Abschnitt enthalten die Referenzspezifikationen für bestimmte Zeigereingabenachrichten und Benachrichtigungen.
 ms.assetid: 65F4DCD0-DAE1-4AC2-AB36-23D114803138
 ms.topic: article
 ms.date: 02/03/2020
-ms.openlocfilehash: 3e143990c65daad306ef6f743d25ef4e0cca8001
-ms.sourcegitcommit: ebd3ce6908ff865f1ef66f2fc96769be0aad82e1
+ms.openlocfilehash: 076ba9d8b33bf2848d6088c4bac42b60ce9e19646abe5163358f25b063250b9e
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/19/2020
-ms.locfileid: "104390298"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118756952"
 ---
 # <a name="messages"></a>Meldungen
 
-Die Themen in diesem Abschnitt enthalten die Referenz Spezifikationen für bestimmte [Zeiger Eingabe Meldungen und-Benachrichtigungen](messages-and-notifications-portal.md).
+Die Themen in diesem Abschnitt enthalten die Referenzspezifikationen für bestimmte [Zeigereingabenachrichten und Benachrichtigungen.](messages-and-notifications-portal.md)
 
 ## <a name="in-this-section"></a>In diesem Abschnitt
 
@@ -32,133 +32,133 @@ Die Themen in diesem Abschnitt enthalten die Referenz Spezifikationen für besti
 </thead>
 <tbody>
 <tr class="odd">
-<td>[<strong>DM_POINTERHITTEST</strong>] (DM-pointerhittest.MD)<br/></td>
-<td>Wird an ein Fenster gesendet, wenn eine Zeiger Eingabe zuerst erkannt wird, um das wahrscheinlichste Eingabe Ziel für die [direkte Bearbeitung](/previous-versions/windows/desktop/directmanipulation/direct-manipulation-portal)zu ermitteln. <br/></td>
+<td>[<strong>DM_POINTERHITTEST</strong>] (dm-pointerhittest.md)<br/></td>
+<td>Wird an ein Fenster gesendet, wenn die Zeigereingabe zum ersten Mal erkannt wird, um das wahrscheinlichste Eingabeziel für die direkte [Bearbeitung zu bestimmen.](/previous-versions/windows/desktop/directmanipulation/direct-manipulation-portal) <br/></td>
 </tr>
 <tr class="even">
-<td>[<strong>WM_NCPOINTERDOWN</strong>] (WM-ncpointerdown.MD)<br/></td>
-<td>Wird gepostet, wenn ein Zeiger einen Kontakt über den nicht-Client Bereich eines Fensters herstellt. Die Meldung zielt auf das Fenster ab, über das der Zeiger Kontakt herstellt. Der Zeiger wird implizit im Fenster erfasst, sodass das Fenster weiterhin Eingaben für den Zeiger empfängt, bis der Kontakt unterbrochen wird. <br/> Wenn ein Fenster diesen Zeiger aufgezeichnet hat, wird diese Meldung nicht gepostet. Stattdessen wird ein [<strong>WM_POINTERDOWN</strong>] (WM-pointerdown.MD) an das Fenster gesendet, das diesen Zeiger aufgezeichnet hat. <br/>
+<td>[<strong>WM_NCPOINTERDOWN</strong>] (wm-ncpointerdown.md)<br/></td>
+<td>Wird gepostet, wenn ein Zeiger den Kontakt über den nicht clientseitigen Bereich eines Fensters vor stellt. Die Nachricht ist auf das Fenster festgelegt, über das der Zeiger kontakt mit ihr kontaktt. Der Zeiger wird implizit auf das Fenster erfasst, sodass das Fenster weiterhin Eingaben für den Zeiger erhält, bis er den Kontakt unterbricht. <br/> Wenn ein Fenster diesen Zeiger erfasst hat, wird diese Meldung nicht gesendet. Stattdessen wird ein [<strong>WM_POINTERDOWN</strong>](wm-pointerdown.md) an das Fenster gesendet, das diesen Zeiger erfasst hat. <br/>
 <blockquote>
 [!Important]<br />
-Desktop-Apps sollten dpi-fähig sein. Wenn Ihre APP nicht dpi-fähig ist, können Bildschirm Koordinaten, die in Zeiger Nachrichten und zugehörigen Strukturen enthalten sind, aufgrund der dpi-Virtualisierung ungenau erscheinen. Die dpi-Virtualisierung bietet Unterstützung für die automatische Skalierung für Anwendungen, die nicht mit dpi-Werten kompatibel sind und standardmäßig aktiv sind (Benutzer können Sie deaktivieren). Weitere Informationen finden Sie unter [Schreiben von High-dpi-Win32-Anwendungen](/previous-versions//dd464660(v=vs.85)).
+Desktop-Apps sollten DPI-bewusst sein. Wenn Ihre App keine DPI-Unterstützung hat, können Bildschirmkoordinaten, die in Zeigermeldungen und verwandten Strukturen enthalten sind, aufgrund der DPI-Virtualisierung ungenau erscheinen. Die DPI-Virtualisierung bietet Unterstützung für die automatische Skalierung für Anwendungen, die nicht DPI-bewusst sind und standardmäßig aktiv sind (Benutzer können sie deaktivieren). Weitere Informationen finden Sie unter [Writing High-DPI Win32 Applications ( Schreiben von Win32-Anwendungen mit hohem DPI-Code).](/previous-versions//dd464660(v=vs.85))
 </blockquote>
 <br/></td>
 </tr>
 <tr class="odd">
-<td>[<strong>WM_NCPOINTERUP</strong>] (WM-ncpointerup.MD)<br/></td>
-<td>Wird gepostet, wenn ein Zeiger, der den Kontakt über den nicht-Client Bereich eines Fensters hergestellt hat, den Kontakt unterbricht. Die Nachricht bezieht sich auf das Fenster, über das der Zeiger Kontakt herstellt, und der Zeiger ist an diesem Punkt implizit im Fenster erfasst, sodass das Fenster weiterhin Eingaben für den Zeiger empfängt, bis der Kontakt unterbrochen wird, einschließlich der [<strong>WM_NCPOINTERUP</strong>] (WM-ncpointerup.MD)-Benachrichtigung. <br/> Wenn ein Fenster diesen Zeiger aufgezeichnet hat, wird diese Meldung nicht gepostet. Stattdessen wird ein [<strong>WM_POINTERUP</strong>] (WM-pointerup.MD) an das Fenster gesendet, das diesen Zeiger aufgezeichnet hat. <br/>
+<td>[<strong>WM_NCPOINTERUP</strong>] (wm-ncpointerup.md)<br/></td>
+<td>Wird veröffentlicht, wenn ein Zeiger, der den Kontakt über den Nicht-Clientbereich eines Fensters hergestellt hat, den Kontakt unterbricht. Die Nachricht zielt auf das Fenster ab, über das der Zeiger kontaktiert, und der Zeiger wird an diesem Punkt implizit im Fenster erfasst, sodass das Fenster weiterhin Eingaben für den Zeiger erhält, bis er den Kontakt unterbricht, einschließlich der Benachrichtigung [<strong>WM_NCPOINTERUP</strong>](wm-ncpointerup.md). <br/> Wenn ein Fenster diesen Zeiger erfasst hat, wird diese Meldung nicht gesendet. Stattdessen wird ein [<strong>WM_POINTERUP</strong>](wm-pointerup.md) an das Fenster gesendet, das diesen Zeiger erfasst hat. <br/>
 <blockquote>
 [!Important]<br />
-Desktop-Apps sollten dpi-fähig sein. Wenn Ihre APP nicht dpi-fähig ist, können Bildschirm Koordinaten, die in Zeiger Nachrichten und zugehörigen Strukturen enthalten sind, aufgrund der dpi-Virtualisierung ungenau erscheinen. Die dpi-Virtualisierung bietet Unterstützung für die automatische Skalierung für Anwendungen, die nicht mit dpi-Werten kompatibel sind und standardmäßig aktiv sind (Benutzer können Sie deaktivieren). Weitere Informationen finden Sie unter [Schreiben von High-dpi-Win32-Anwendungen](/previous-versions//dd464660(v=vs.85)).
+Desktop-Apps sollten DPI-bewusst sein. Wenn Ihre App keine DPI-Unterstützung hat, können Bildschirmkoordinaten, die in Zeigermeldungen und verwandten Strukturen enthalten sind, aufgrund der DPI-Virtualisierung ungenau erscheinen. Die DPI-Virtualisierung bietet Unterstützung für die automatische Skalierung für Anwendungen, die nicht DPI-bewusst sind und standardmäßig aktiv sind (Benutzer können sie deaktivieren). Weitere Informationen finden Sie unter [Writing High-DPI Win32 Applications ( Schreiben von Win32-Anwendungen mit hohem DPI-Code).](/previous-versions//dd464660(v=vs.85))
 </blockquote>
 <br/></td>
 </tr>
 <tr class="even">
-<td>[<strong>WM_NCPOINTERUPDATE</strong>] (WM-ncpointerupdate.MD)<br/></td>
-<td>Wird bereitgestellt, um ein Update für einen Zeiger bereitzustellen, der den Kontakt über den nicht-Client Bereich eines Fensters hergestellt hat, oder wenn ein nicht erfasster Kontakt, der sich im nicht-Client Bereich eines Fensters bewegt, verschoben wird Während der Mauszeiger bewegt wird, wird die Nachricht auf das Fenster ausgerichtet, über das sich der Zeiger befindet. Während sich der Mauszeiger auf der-Oberfläche befindet, wird der Zeiger implizit in dem Fenster erfasst, über das der Zeiger den Kontakt hergestellt hat, und dieses Fenster empfängt weiterhin Eingaben für den Zeiger, bis der Kontakt unterbrochen wird. <br/> Wenn ein Fenster diesen Zeiger aufgezeichnet hat, wird diese Meldung nicht gepostet. Stattdessen wird ein [<strong>WM_POINTERUPDATE</strong>] (WM-pointerupdate.MD) an das Fenster gesendet, das diesen Zeiger aufgezeichnet hat.<br/>
+<td>[<strong>WM_NCPOINTERUPDATE</strong>] (wm-ncpointerupdate.md)<br/></td>
+<td>Veröffentlicht, um ein Update für einen Zeiger zur Verfügung zu stellen, der den Kontakt über den Nicht-Clientbereich eines Fensters hergestellt hat, oder wenn ein nicht gekapselter Kontakt mit dem Zeigen auf den Nicht-Clientbereich eines Fensters bewegt wird. Während der Zeiger darauf zeigt, richtet sich die Nachricht an das Fenster, über dem sich der Zeiger befindet. Während der Zeiger mit der Oberfläche in Kontakt ist, wird der Zeiger implizit auf das Fenster erfasst, über das der Zeiger kontaktiert wurde, und dieses Fenster erhält weiterhin Eingaben für den Zeiger, bis er den Kontakt unterbricht. <br/> Wenn ein Fenster diesen Zeiger erfasst hat, wird diese Meldung nicht gesendet. Stattdessen wird ein [<strong>WM_POINTERUPDATE</strong>](wm-pointerupdate.md) an das Fenster gesendet, das diesen Zeiger erfasst hat.<br/>
 <blockquote>
 [!Important]<br />
-Desktop-Apps sollten dpi-fähig sein. Wenn Ihre APP nicht dpi-fähig ist, können Bildschirm Koordinaten, die in Zeiger Nachrichten und zugehörigen Strukturen enthalten sind, aufgrund der dpi-Virtualisierung ungenau erscheinen. Die dpi-Virtualisierung bietet Unterstützung für die automatische Skalierung für Anwendungen, die nicht mit dpi-Werten kompatibel sind und standardmäßig aktiv sind (Benutzer können Sie deaktivieren). Weitere Informationen finden Sie unter [Schreiben von High-dpi-Win32-Anwendungen](/previous-versions//dd464660(v=vs.85)).
+Desktop-Apps sollten DPI-bewusst sein. Wenn Ihre App keine DPI-Unterstützung hat, können Bildschirmkoordinaten, die in Zeigermeldungen und verwandten Strukturen enthalten sind, aufgrund der DPI-Virtualisierung ungenau erscheinen. Die DPI-Virtualisierung bietet Unterstützung für die automatische Skalierung für Anwendungen, die nicht DPI-bewusst sind und standardmäßig aktiv sind (Benutzer können sie deaktivieren). Weitere Informationen finden Sie unter [Writing High-DPI Win32 Applications ( Schreiben von Win32-Anwendungen mit hohem DPI-Code).](/previous-versions//dd464660(v=vs.85))
 </blockquote>
 <br/></td>
 </tr>
 <tr class="odd">
-<td>[<strong>WM_PARENTNOTIFY</strong>] (WM-parentnotify.MD)<br/></td>
-<td>Wird an ein Fenster gesendet, wenn eine bedeutende Aktion in einem Nachfolger Fenster auftritt. Diese Nachricht ist nun so erweitert, dass Sie das [<strong>WM_POINTERDOWN</strong>] (WM-pointerdown.MD)-Ereignis einschließt. Wenn das untergeordnete Fenster erstellt wird, sendet das System [<strong>WM_PARENTNOTIFY</strong>] (/Previous-Versions/Windows/Desktop/inputmsg/WM-parentnotify) direkt vor der Funktion [up<strong>Window</strong>] (/Windows/Win32/API/winuser/NF-winuser-createwindowa) oder [up-<strong>windowex</strong>] (/Windows/Win32/API/winuser/NF-winuser-createwindowexa), die das Fenster erstellt, zurückgibt. Wenn das untergeordnete Fenster zerstört wird, sendet das System die Nachricht, bevor eine Verarbeitung zum Zerstören des Fensters erfolgt.<br/> Ein Fenster empfängt diese Meldung über seine [<strong>WindowProc</strong>] (/Previous-Versions/Windows/Desktop/Legacy/ms633573 (v = vs. 85))-Funktion. <br/>
+<td>[<strong>WM_PARENTNOTIFY</strong>] (wm-parentnotify.md)<br/></td>
+<td>Wird an ein Fenster gesendet, wenn eine wichtige Aktion in einem Nachfolgerfenster auftritt. Diese Meldung wurde nun erweitert, um das Ereignis [<strong>WM_POINTERDOWN</strong>](wm-pointerdown.md) ein. Wenn das untergeordnete Fenster erstellt wird, Das System sendet [<strong>WM_PARENTNOTIFY</strong>](/previous-versions/windows/desktop/inputmsg/wm-parentnotify) direkt vor der<strong>[CreateWindow</strong>](/windows/win32/api/winuser/nf-winuser-createwindowa) oder [<strong>CreateWindowEx</strong>](/windows/win32/api/winuser/nf-winuser-createwindowexa), die die Fensterrückgaben erstellt. Wenn das untergeordnete Fenster zerstört wird, sendet das System die Nachricht, bevor eine Verarbeitung zum Zerstören des Fensters stattfindet.<br/> Ein Fenster empfängt diese Meldung über die<strong>[WindowProc</strong>](/previous-versions/windows/desktop/legacy/ms633573(v=vs.85)))-Funktion. <br/>
 <blockquote>
 [!Important]<br />
-Desktop-Apps sollten dpi-fähig sein. Wenn Ihre APP nicht dpi-fähig ist, können Bildschirm Koordinaten, die in Zeiger Nachrichten und zugehörigen Strukturen enthalten sind, aufgrund der dpi-Virtualisierung ungenau erscheinen. Die dpi-Virtualisierung bietet Unterstützung für die automatische Skalierung für Anwendungen, die nicht mit dpi-Werten kompatibel sind und standardmäßig aktiv sind (Benutzer können Sie deaktivieren). Weitere Informationen finden Sie unter [Schreiben von High-dpi-Win32-Anwendungen](/previous-versions//dd464660(v=vs.85)).
+Desktop-Apps sollten DPI-bewusst sein. Wenn Ihre App keine DPI-Unterstützung hat, können Bildschirmkoordinaten, die in Zeigermeldungen und verwandten Strukturen enthalten sind, aufgrund der DPI-Virtualisierung ungenau erscheinen. Die DPI-Virtualisierung bietet Unterstützung für die automatische Skalierung für Anwendungen, die nicht DPI-bewusst sind und standardmäßig aktiv sind (Benutzer können sie deaktivieren). Weitere Informationen finden Sie unter [Writing High-DPI Win32 Applications ( Schreiben von Win32-Anwendungen mit hohem DPI-Code).](/previous-versions//dd464660(v=vs.85))
 </blockquote>
 <br/></td>
 </tr>
 <tr class="even">
-<td>[<strong>WM_POINTERACTIVATE</strong>] (WM-pointeractivate.MD)<br/></td>
-<td>Wird an ein inaktives Fenster gesendet, wenn ein primärer Zeiger eine [<strong>WM_POINTERDOWN</strong>] (WM-pointerdown.MD) über das Fenster generiert. Solange die Nachricht nicht behandelt wird, wird die übergeordnete Fenster Kette nach oben verschoben, bis Sie das Fenster der obersten Ebene erreicht. Anwendungen können auf diese Meldung reagieren, um anzugeben, ob Sie aktiviert werden sollen.<br/> Ein Fenster empfängt diese Meldung über seine [<strong>WindowProc</strong>] (/Previous-Versions/Windows/Desktop/Legacy/ms633573 (v = vs. 85))-Funktion. <br/></td>
+<td>[<strong>WM_POINTERACTIVATE</strong>] (wm-pointeractivate.md)<br/></td>
+<td>Wird an ein inaktives Fenster gesendet, wenn ein primärer Zeiger eine<strong>[WM_POINTERDOWN</strong>](wm-pointerdown.md) über das Fenster generiert. Solange die Nachricht nicht behandelt wird, wird die übergeordnete Fensterkette nach oben geworfen, bis sie das Fenster der obersten Ebene erreicht. Anwendungen können auf diese Meldung antworten, um anzugeben, ob sie aktiviert werden möchten.<br/> Ein Fenster empfängt diese Meldung über die<strong>[WindowProc</strong>](/previous-versions/windows/desktop/legacy/ms633573(v=vs.85)))-Funktion. <br/></td>
 </tr>
 <tr class="odd">
-<td>[<strong>WM_POINTERCAPTURECHANGED</strong>] (WM-pointercapturechanged.MD)<br/></td>
-<td>Wird an ein Fenster gesendet, das die Erfassung eines Eingabe Zeigers verliert.<br/> Ein Fenster empfängt diese Meldung über seine [<strong>WindowProc</strong>] (/Previous-Versions/Windows/Desktop/Legacy/ms633573 (v = vs. 85))-Funktion.<br/></td>
+<td>[<strong>WM_POINTERCAPTURECHANGED</strong>] (wm-pointercapturechanged.md)<br/></td>
+<td>Wird an ein Fenster gesendet, das die Erfassung eines Eingabezeigers verliert.<br/> Ein Fenster empfängt diese Meldung über die<strong>[WindowProc</strong>](/previous-versions/windows/desktop/legacy/ms633573(v=vs.85)))-Funktion.<br/></td>
 </tr>
 <tr class="even">
-<td>[<strong>WM_POINTERDEVICECHANGE</strong>] (WM-pointerdevicechange.MD)<br/></td>
-<td>Wird an ein Fenster gesendet, wenn eine Änderung in den Einstellungen eines Monitors vorliegt, dem ein Digitalisierer angefügt ist. Diese Meldung enthält Informationen zur Skalierung des Anzeigemodus. <br/></td>
+<td>[<strong>WM_POINTERDEVICECHANGE</strong>] (wm-pointerdevicechange.md)<br/></td>
+<td>Wird an ein Fenster gesendet, wenn sich die Einstellungen eines Monitors ändern, an den ein Digitizer angefügt ist. Diese Meldung enthält Informationen zur Skalierung des Anzeigemodus. <br/></td>
 </tr>
 <tr class="odd">
-<td>[<strong>WM_POINTERDEVICEINRANGE</strong>] (WM-pointerdeviceinrange.MD)<br/></td>
-<td>Wird an ein Fenster gesendet, wenn ein Zeiger Gerät innerhalb des Bereichs eines eingabedigitalisierers erkannt wird. Diese Meldung enthält Informationen zum Gerät und seiner Nähe. <br/></td>
+<td>[<strong>WM_POINTERDEVICEINRANGE</strong>] (wm-pointerdeviceinrange.md)<br/></td>
+<td>Wird an ein Fenster gesendet, wenn ein Zeigergerät innerhalb des Bereichs eines Eingabededisierers erkannt wird. Diese Meldung enthält Informationen zum Gerät und seiner Nähe. <br/></td>
 </tr>
 <tr class="even">
-<td>[<strong>WM_POINTERDEVICEOUTOFRANGE</strong>] (WM-pointerdeviceoutofrange.MD)<br/></td>
-<td>Wird an ein Fenster gesendet, wenn ein Zeiger Gerät den Bereich eines eingabedigitalisierers verlassen hat. Diese Meldung enthält Informationen zum Gerät und seiner Nähe. <br/></td>
+<td>[<strong>WM_POINTERDEVICEOUTOFRANGE</strong>] (wm-pointerdeviceoutofrange.md)<br/></td>
+<td>Wird an ein Fenster gesendet, wenn ein Zeigergerät den Bereich eines Eingabededisierers entfernt hat. Diese Meldung enthält Informationen zum Gerät und seiner Nähe. <br/></td>
 </tr>
 <tr class="odd">
-<td>[<strong>WM_POINTERDOWN</strong>] (WM-pointerdown.MD)<br/></td>
-<td>Wird gepostet, wenn ein Zeiger über den Client Bereich eines Fensters kontaktiert wird. Diese Eingabe Nachricht bezieht sich auf das Fenster, über das der Zeiger Kontakt herstellt, und der Zeiger wird implizit im Fenster erfasst, sodass das Fenster weiterhin Eingaben für den Zeiger empfängt, bis der Kontakt unterbrochen wird. <br/> Ein Fenster empfängt diese Meldung über seine [<strong>WindowProc</strong>] (/Previous-Versions/Windows/Desktop/Legacy/ms633573 (v = vs. 85))-Funktion.<br/>
+<td>[<strong>WM_POINTERDOWN</strong>] (wm-pointerdown.md)<br/></td>
+<td>Wird gepostet, wenn ein Zeiger über den Clientbereich eines Fensters kontaktiert. Diese Eingabenachricht zielt auf das Fenster ab, über das der Zeiger kontaktiert, und der Zeiger wird implizit auf das Fenster erfasst, sodass das Fenster weiterhin Eingaben für den Zeiger erhält, bis er den Kontakt unterbricht. <br/> Ein Fenster empfängt diese Meldung über die<strong>[WindowProc</strong>](/previous-versions/windows/desktop/legacy/ms633573(v=vs.85)))-Funktion.<br/>
 <blockquote>
 [!Important]<br />
-Desktop-Apps sollten dpi-fähig sein. Wenn Ihre APP nicht dpi-fähig ist, können Bildschirm Koordinaten, die in Zeiger Nachrichten und zugehörigen Strukturen enthalten sind, aufgrund der dpi-Virtualisierung ungenau erscheinen. Die dpi-Virtualisierung bietet Unterstützung für die automatische Skalierung für Anwendungen, die nicht mit dpi-Werten kompatibel sind und standardmäßig aktiv sind (Benutzer können Sie deaktivieren). Weitere Informationen finden Sie unter [Schreiben von High-dpi-Win32-Anwendungen](/previous-versions//dd464660(v=vs.85)).
+Desktop-Apps sollten DPI-bewusst sein. Wenn Ihre App keine DPI-Unterstützung hat, können Bildschirmkoordinaten, die in Zeigermeldungen und verwandten Strukturen enthalten sind, aufgrund der DPI-Virtualisierung ungenau erscheinen. Die DPI-Virtualisierung bietet Unterstützung für die automatische Skalierung für Anwendungen, die nicht DPI-bewusst sind und standardmäßig aktiv sind (Benutzer können sie deaktivieren). Weitere Informationen finden Sie unter [Writing High-DPI Win32 Applications ( Schreiben von Win32-Anwendungen mit hohem DPI-Code).](/previous-versions//dd464660(v=vs.85))
 </blockquote>
 <br/></td>
 </tr>
 <tr class="even">
-<td>[<strong>WM_POINTERENTER</strong>] (WM-pointerenter.MD)<br/></td>
-<td>Wird an ein Fenster gesendet, wenn ein neuer Zeiger über das Fenster (Hover) in den Erkennungsbereich wechselt oder wenn ein vorhandener Zeiger innerhalb der Fenstergrenzen bewegt wird. <br/></td>
+<td>[<strong>WM_POINTERENTER</strong>] (wm-pointerenter.md)<br/></td>
+<td>Wird an ein Fenster gesendet, wenn ein neuer Zeiger in den Erkennungsbereich über dem Fenster wechselt (mit dem Zeigen darauf), oder wenn ein vorhandener Zeiger innerhalb der Fenstergrenzen bewegt wird. <br/></td>
 </tr>
 <tr class="odd">
-<td>[<strong>WM_POINTERLEAVE</strong>] (WM-pointerleave.MD)<br/></td>
-<td>Wird an ein Fenster gesendet, wenn ein Zeiger den Erkennungsbereich über dem Fenster verlässt (Hover) oder wenn ein Zeiger außerhalb der Fenstergrenzen bewegt wird. <br/></td>
+<td>[<strong>WM_POINTERLEAVE</strong>] (wm-pointerleave.md)<br/></td>
+<td>Wird an ein Fenster gesendet, wenn ein Zeiger den Erkennungsbereich über dem Fenster verlässt (mit dem Zeigen darauf), oder wenn ein Zeiger außerhalb der Fenstergrenzen bewegt wird. <br/></td>
 </tr>
 <tr class="even">
-<td>[<strong>WM_POINTERROUTEDAWAY</strong>] (WM-pointerroutedaway.MD)<br/></td>
-<td>Tritt für den Prozess auf, der Eingaben empfängt, wenn die Zeiger Eingabe an einen anderen Prozess weitergeleitet wird.<br/></td>
+<td>[<strong>WM_POINTERROUTEDAWAY</strong>] (wm-pointerroutedaway.md)<br/></td>
+<td>Tritt auf dem Prozess ein, der Eingaben empfängt, wenn die Zeigereingabe an einen anderen Prozess geroutet wird.<br/></td>
 </tr>
 <tr class="odd">
-<td>[<strong>WM_POINTERROUTEDRELEASED</strong>] (WM-pointerroutedreleased.MD)<br/></td>
-<td>Wird an alle Prozesse gesendet (für die prozessübergreifende Verkettung durch [<strong>addcontentwithcrossprocesschaining</strong>] (/Windows/Win32/API/directmanipulation/NF-directmanipulation-idirectmanipulationcompositor2-addcontentwithcrossprocesschaining) und derzeit nicht für die Verarbeitung von Zeiger Eingaben), wenn eine [<strong>WM_POINTERUP</strong>] (WM-pointerup.MD)-Meldung für den aktuellen Prozess empfangen wird. <br/></td>
+<td>[<strong>WM_POINTERROUTEDRELEASED</strong>] (wm-pointerroutedreleased.md)<br/></td>
+<td>Wird an alle Prozesse gesendet (konfiguriert für prozessübergreifende Verkettung über [<strong>AddContentWithCrossProcessChaining</strong>](/windows/win32/api/directmanipulation/nf-directmanipulation-idirectmanipulationcompositor2-addcontentwithcrossprocesschaining) und verarbeitet derzeit keine Zeigereingaben), die jemals einer bestimmten Zeiger-ID zugeordnet sind, wenn eine [<strong>WM_POINTERUP</strong>](wm-pointerup.md)-Nachricht für den aktuellen Prozess empfangen wird. <br/></td>
 </tr>
 <tr class="even">
-<td>[<strong>WM_POINTERROUTEDTO</strong>] (WM-pointerroutedto.MD)<br/></td>
-<td>Wird gesendet, wenn eine vorhandene Zeiger Eingabe für eine vorhandene Zeiger-ID von einem Prozess in einen anderen über den für prozessübergreifende Verkettung konfigurierten Inhalt übergeht ([<strong>addcontentwithcrossprocesschaining</strong>] (/Windows/Win32/API/directmanipulation/NF-directmanipulation-idirectmanipulationcompositor2-addcontentwithcrossprocesschaining)).<br/></td>
+<td>[<strong>WM_POINTERROUTEDTO</strong>] (wm-pointerroutedto.md)<br/></td>
+<td>Wird bei laufender Zeigereingabe für eine vorhandene Zeiger-ID zwischen den für prozessübergreifende Verkettung konfigurierten Inhalten ([<strong>AddContentWithCrossProcessChaining</strong>](/windows/win32/api/directmanipulation/nf-directmanipulation-idirectmanipulationcompositor2-addcontentwithcrossprocesschaining)) gesendet.<br/></td>
 </tr>
 <tr class="odd">
-<td>[<strong>WM_POINTERUP</strong>] (WM-pointerup.MD)<br/></td>
-<td>Wird gepostet, wenn ein Zeiger, der den Kontakt über den Client Bereich eines Fensters hergestellt hat, den Kontakt unterbricht. Diese Eingabe Nachricht bezieht sich auf das Fenster, über das der Zeiger Kontakt herstellt, und der Zeiger ist an diesem Punkt implizit im Fenster erfasst, sodass das Fenster weiterhin Eingabe Nachrichten empfängt, einschließlich der [<strong>WM_POINTERUP</strong>] (WM-pointerup.MD)-Benachrichtigung für den Zeiger, bis die Verbindung unterbrochen wird. <br/> Ein Fenster empfängt diese Meldung über seine [<strong>WindowProc</strong>] (/Previous-Versions/Windows/Desktop/Legacy/ms633573 (v = vs. 85))-Funktion. <br/>
+<td>[<strong>WM_POINTERUP</strong>] (wm-pointerup.md)<br/></td>
+<td>Wird veröffentlicht, wenn ein Zeiger, der den Kontakt über den Clientbereich eines Fensters hergestellt hat, den Kontakt unterbricht. Diese Eingabenachricht zielt auf das Fenster ab, über das der Zeiger kontaktiert, und der Zeiger wird an diesem Punkt implizit im Fenster erfasst, sodass das Fenster weiterhin Eingabemeldungen einschließlich der Benachrichtigung [<strong>WM_POINTERUP</strong>](wm-pointerup.md) für den Zeiger erhält, bis er den Kontakt unterbricht. <br/> Ein Fenster empfängt diese Meldung über die<strong>[WindowProc</strong>](/previous-versions/windows/desktop/legacy/ms633573(v=vs.85)))-Funktion. <br/>
 <blockquote>
 [!Important]<br />
-Desktop-Apps sollten dpi-fähig sein. Wenn Ihre APP nicht dpi-fähig ist, können Bildschirm Koordinaten, die in Zeiger Nachrichten und zugehörigen Strukturen enthalten sind, aufgrund der dpi-Virtualisierung ungenau erscheinen. Die dpi-Virtualisierung bietet Unterstützung für die automatische Skalierung für Anwendungen, die nicht mit dpi-Werten kompatibel sind und standardmäßig aktiv sind (Benutzer können Sie deaktivieren). Weitere Informationen finden Sie unter [Schreiben von High-dpi-Win32-Anwendungen](/previous-versions//dd464660(v=vs.85)).
+Desktop-Apps sollten DPI-bewusst sein. Wenn Ihre App keine DPI-Unterstützung hat, können Bildschirmkoordinaten, die in Zeigermeldungen und verwandten Strukturen enthalten sind, aufgrund der DPI-Virtualisierung ungenau erscheinen. Die DPI-Virtualisierung bietet Unterstützung für die automatische Skalierung für Anwendungen, die nicht DPI-bewusst sind und standardmäßig aktiv sind (Benutzer können sie deaktivieren). Weitere Informationen finden Sie unter [Writing High-DPI Win32 Applications ( Schreiben von Win32-Anwendungen mit hohem DPI-Code).](/previous-versions//dd464660(v=vs.85))
 </blockquote>
 <br/></td>
 </tr>
 <tr class="even">
-<td>[<strong>WM_POINTERUPDATE</strong>] (WM-pointerupdate.MD)<br/></td>
-<td>Wird bereitgestellt, um ein Update für einen Zeiger bereitzustellen, der den Kontakt über den Client Bereich eines Fensters hergestellt hat, oder auf einem nicht aufgezeichneten Zeiger, der auf den Client Bereich eines Fensters zeigt. Während der Mauszeiger bewegt wird, wird die Nachricht auf das Fenster ausgerichtet, über das sich der Zeiger befindet. Während sich der Mauszeiger auf der-Oberfläche befindet, wird der Zeiger implizit in dem Fenster erfasst, über das der Zeiger den Kontakt hergestellt hat, und dieses Fenster empfängt weiterhin Eingaben für den Zeiger, bis der Kontakt unterbrochen wird. <br/>
+<td>[<strong>WM_POINTERUPDATE</strong>] (wm-pointerupdate.md)<br/></td>
+<td>Veröffentlicht, um ein Update für einen Zeiger zur Verfügung zu stellen, der den Kontakt über den Clientbereich eines Fensters hergestellt hat, oder auf einen nicht gekapselten Zeiger, der auf den Clientbereich eines Fensters zeigt. Während der Zeiger darauf zeigt, richtet sich die Nachricht an das Fenster, über dem sich der Zeiger befindet. Während der Zeiger mit der Oberfläche in Kontakt ist, wird der Zeiger implizit auf das Fenster erfasst, über das der Zeiger kontaktiert wurde, und dieses Fenster erhält weiterhin Eingaben für den Zeiger, bis er den Kontakt unterbricht. <br/>
 <blockquote>
 [!Important]<br />
-Desktop-Apps sollten dpi-fähig sein. Wenn Ihre APP nicht dpi-fähig ist, können Bildschirm Koordinaten, die in Zeiger Nachrichten und zugehörigen Strukturen enthalten sind, aufgrund der dpi-Virtualisierung ungenau erscheinen. Die dpi-Virtualisierung bietet Unterstützung für die automatische Skalierung für Anwendungen, die nicht mit dpi-Werten kompatibel sind und standardmäßig aktiv sind (Benutzer können Sie deaktivieren). Weitere Informationen finden Sie unter [Schreiben von High-dpi-Win32-Anwendungen](/previous-versions//dd464660(v=vs.85)).
+Desktop-Apps sollten DPI-bewusst sein. Wenn Ihre App keine DPI-Unterstützung hat, können Bildschirmkoordinaten, die in Zeigermeldungen und verwandten Strukturen enthalten sind, aufgrund der DPI-Virtualisierung ungenau erscheinen. Die DPI-Virtualisierung bietet Unterstützung für die automatische Skalierung für Anwendungen, die nicht DPI-bewusst sind und standardmäßig aktiv sind (Benutzer können sie deaktivieren). Weitere Informationen finden Sie unter [Writing High-DPI Win32 Applications ( Schreiben von Win32-Anwendungen mit hohem DPI-Code).](/previous-versions//dd464660(v=vs.85))
 </blockquote>
 <br/></td>
 </tr>
 <tr class="odd">
-<td>[<strong>WM_POINTERWHEEL</strong>] (WM-pointerwheel.MD)<br/></td>
-<td>Wird im Fenster mit dem Vordergrund Tastaturfokus gesendet, wenn ein Mausrad gedreht wird. <br/> Ein Fenster empfängt diese Meldung über seine [<strong>WindowProc</strong>] (/Previous-Versions/Windows/Desktop/Legacy/ms633573 (v = vs. 85))-Funktion.<br/>
+<td>[<strong>WM_POINTERWHEEL</strong>] (wm-pointerwheel.md)<br/></td>
+<td>Wird an das Fenster mit Vordergrundtastenfokus gesendet, wenn ein Scrollrad gedreht wird. <br/> Ein Fenster empfängt diese Meldung über die Funktion<strong>[WindowProc</strong>](/previous-versions/windows/desktop/legacy/ms633573(v=vs.85)).<br/>
 <blockquote>
 [!Important]<br />
-Desktop-Apps sollten dpi-fähig sein. Wenn Ihre APP nicht dpi-fähig ist, können Bildschirm Koordinaten, die in Zeiger Nachrichten und zugehörigen Strukturen enthalten sind, aufgrund der dpi-Virtualisierung ungenau erscheinen. Die dpi-Virtualisierung bietet Unterstützung für die automatische Skalierung für Anwendungen, die nicht mit dpi-Werten kompatibel sind und standardmäßig aktiv sind (Benutzer können Sie deaktivieren). Weitere Informationen finden Sie unter [Schreiben von High-dpi-Win32-Anwendungen](/previous-versions//dd464660(v=vs.85)).
+Desktop-Apps sollten DPI-fähige Apps sein. Wenn Ihre App nicht DPI-bewusst ist, können Bildschirmkoordinaten, die in Zeigermeldungen und zugehörigen Strukturen enthalten sind, aufgrund der DPI-Virtualisierung ungenau erscheinen. Die DPI-Virtualisierung bietet Unterstützung für die automatische Skalierung für Anwendungen, die nicht DPI-bewusst sind und standardmäßig aktiv sind (Benutzer können sie deaktivieren). Weitere Informationen finden Sie unter [Schreiben von Win32-Anwendungen mit hohem DPI-Anteil.](/previous-versions//dd464660(v=vs.85))
 </blockquote>
 <br/></td>
 </tr>
 <tr class="even">
-<td>[<strong>WM_POINTERHWHEEL</strong>] (WM-pointerhwheel.MD)<br/></td>
-<td>Wird im Fenster mit dem Vordergrund Tastaturfokus gesendet, wenn ein horizontales Mausrad gedreht wird. <br/> Ein Fenster empfängt diese Meldung über seine [<strong>WindowProc</strong>] (/Previous-Versions/Windows/Desktop/Legacy/ms633573 (v = vs. 85))-Funktion.<br/>
+<td>[<strong>WM_POINTERHWHEEL</strong>] (wm-pointerhwheel.md)<br/></td>
+<td>Wird an das Fenster mit Vordergrundtastenfokus gesendet, wenn ein horizontales Scrollrad gedreht wird. <br/> Ein Fenster empfängt diese Meldung über die Funktion<strong>[WindowProc</strong>](/previous-versions/windows/desktop/legacy/ms633573(v=vs.85)).<br/>
 <blockquote>
 [!Important]<br />
-Desktop-Apps sollten dpi-fähig sein. Wenn Ihre APP nicht dpi-fähig ist, können Bildschirm Koordinaten, die in Zeiger Nachrichten und zugehörigen Strukturen enthalten sind, aufgrund der dpi-Virtualisierung ungenau erscheinen. Die dpi-Virtualisierung bietet Unterstützung für die automatische Skalierung für Anwendungen, die nicht mit dpi-Werten kompatibel sind und standardmäßig aktiv sind (Benutzer können Sie deaktivieren). Weitere Informationen finden Sie unter [Schreiben von High-dpi-Win32-Anwendungen](/previous-versions//dd464660(v=vs.85)).
+Desktop-Apps sollten DPI-fähige Apps sein. Wenn Ihre App nicht DPI-bewusst ist, können Bildschirmkoordinaten, die in Zeigermeldungen und zugehörigen Strukturen enthalten sind, aufgrund der DPI-Virtualisierung ungenau erscheinen. Die DPI-Virtualisierung bietet Unterstützung für die automatische Skalierung für Anwendungen, die nicht DPI-bewusst sind und standardmäßig aktiv sind (Benutzer können sie deaktivieren). Weitere Informationen finden Sie unter [Schreiben von Win32-Anwendungen mit hohem DPI-Anteil.](/previous-versions//dd464660(v=vs.85))
 </blockquote>
 <br/></td>
 </tr>
 <tr class="odd">
-<td>[<strong>WM_TOUCHHITTESTING</strong>] (WM-touchhittesting.MD)<br/></td>
-<td>Wird an ein Fenster in einem Touchscreen gesendet, um das wahrscheinlichste Berührungs Ziel zu ermitteln. <br/></td>
+<td>[<strong>WM_TOUCHHITTESTING</strong>] (wm-touchhittesting.md)<br/></td>
+<td>Wird in einem Touch-Down an ein Fenster gesendet, um das wahrscheinlichste Touchziel zu ermitteln. <br/></td>
 </tr>
 </tbody>
 </table>
@@ -171,7 +171,7 @@ Desktop-Apps sollten dpi-fähig sein. Wenn Ihre APP nicht dpi-fähig ist, könne
 
 <dl> <dt>
 
-[Verweis auf Zeiger-Eingabe Nachricht](wmpointer-reference.md)
+[Zeigereingabe-Meldungsverweis](wmpointer-reference.md)
 </dt> </dl>
 
  

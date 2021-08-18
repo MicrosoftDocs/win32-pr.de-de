@@ -13,13 +13,13 @@ ms.locfileid: "118796614"
 ---
 # <a name="dxgi"></a>DXGI
 
-Microsoft DirectX Graphic Infrastructure (DXGI) verarbeitet das Aufzählen von Grafikkarten, das Aufzählen von Anzeigemodi, das Auswählen von Pufferformaten, das Freigeben von Ressourcen zwischen Prozessen (z. B. zwischen Anwendungen und dem Desktopfenster-Manager (DWM)) und das Präsentieren gerenderter Frames in einem Fenster oder Monitor für die Anzeige.
+Microsoft DirectX Graphic Infrastructure (DXGI) verarbeitet das Auflisten von Grafikkarten, das Aufzählen von Anzeigemodi, das Auswählen von Pufferformaten, das Freigeben von Ressourcen zwischen Prozessen (z. B. zwischen Anwendungen und dem Desktopfenster-Manager (DWM)) und die Darstellung gerenderte Frames in einem Fenster oder Monitor für die Anzeige.
 
 DXGI wird von Direct3D 10, Direct3D 11 und Direct3D 12 verwendet.
 
-Obwohl die meisten Grafikprogrammierung mit Direct3D erfolgt, können Sie DXGI verwenden, um Frames für ein Fenster, einen Monitor oder eine andere Grafikkomponente für die endgültige Komposition und Anzeige zu präsentieren. Sie können DXGI auch verwenden, um den Inhalt auf einem Monitor zu lesen.
+Obwohl die meisten Grafikprogrammierungen mit Direct3D durchgeführt werden, können Sie DXGI verwenden, um Frames für ein Fenster, einen Monitor oder eine andere Grafikkomponente für die spätere Komposition und Anzeige darzustellen. Sie können dxgi auch verwenden, um den Inhalt eines Monitors zu lesen.
 
-Dieser Dokumentationssatz enthält Informationen zur Programmierung mit DXGI.
+Dieser Dokumentationssatz enthält Informationen zum Programmieren mit DXGI.
 
 
 

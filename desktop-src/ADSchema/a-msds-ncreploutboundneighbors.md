@@ -121,7 +121,7 @@ Replikationspartner für diese Partition. Dieser Server sendet Replikationsdaten
 | Link-ID                | \-                              |
 | MAPI-Id                | \-                              |
 | System-Only            | Falsch                           |
-| Is-Single-Valued       | Falsch                           |
+| Ist einwertig       | Falsch                           |
 | Ist indiziert             | Falsch                           |
 | Im globalen Katalog      | Falsch                           |
 | NT-Security-Descriptor | O:BAG:BAD:S:                    |
@@ -142,7 +142,7 @@ Replikationspartner für diese Partition. Dieser Server sendet Replikationsdaten
 | Link-ID                | \-                              |
 | MAPI-Id                | \-                              |
 | System-Only            | Falsch                           |
-| Is-Single-Valued       | Falsch                           |
+| Ist einwertig       | Falsch                           |
 | Ist indiziert             | Falsch                           |
 | Im globalen Katalog      | Falsch                           |
 | NT-Security-Descriptor | O:BAG:BAD:S:                    |
@@ -163,7 +163,7 @@ Replikationspartner für diese Partition. Dieser Server sendet Replikationsdaten
 | Link-ID                | \-                              |
 | MAPI-Id                | \-                              |
 | System-Only            | Falsch                           |
-| Is-Single-Valued       | Falsch                           |
+| Ist einwertig       | Falsch                           |
 | Ist indiziert             | Falsch                           |
 | Im globalen Katalog      | Falsch                           |
 | NT-Security-Descriptor | O:BAG:BAD:S:                    |

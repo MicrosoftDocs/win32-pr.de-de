@@ -4,12 +4,12 @@ ms.assetid: f8566b9a-0b21-4ff1-80d4-6423b4b67e6d
 title: System.Contact.BusinessEmailAddresses
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 63e271e188b932dc597823a736476e07ae712660
-ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
+ms.openlocfilehash: 790ca8771773c8e81fd9716f16497d7cd345e5252b8cd99c23d49d143561612c
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2021
-ms.locfileid: "108102558"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118730240"
 ---
 # <a name="systemcontactbusinessemailaddresses"></a>System.Contact.BusinessEmailAddresses
 
@@ -28,7 +28,7 @@ propertyDescription
       type = Multivalue String
 ```
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
 PKEY-Werte werden in Propkey.h definiert.
 

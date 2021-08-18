@@ -1,5 +1,5 @@
 ---
-description: Definiert die Einstellungen für die Migration virtueller Systeme, die von einer Instanz der CIM \_ virtualsystemmigrationservice-Klasse verwaltet werden.
+description: Definiert die Einstellungen für die Migration virtueller Systeme, die von einer Instanz der CIM \_ VirtualSystemMigrationService-Klasse verwaltet werden.
 ms.assetid: c28ed48b-bacc-49c8-9131-2543c0edb3fd
 title: CIM_VirtualSystemMigrationSettingData-Klasse
 ms.topic: reference
@@ -19,16 +19,16 @@ api_type:
 - DllExport
 api_location:
 - vmms.exe
-ms.openlocfilehash: 0d33479d0148bc4004fbbbda216e508c276c7ee9
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 24a48877a4195d17398457912314186d0220ace8016a4c9cc3edd3e06c378ee4
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "103756271"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118950669"
 ---
-# <a name="cim_virtualsystemmigrationsettingdata-class"></a>CIM \_ virtualsystemmigrationsettingdata-Klasse
+# <a name="cim_virtualsystemmigrationsettingdata-class"></a>CIM \_ VirtualSystemMigrationSettingData-Klasse
 
-Definiert die Einstellungen für die Migration virtueller Systeme, die von einer Instanz der [**CIM \_ virtualsystemmigrationservice**](cim-virtualsystemmigrationservice.md) -Klasse verwaltet werden.
+Definiert die Einstellungen für die Migration virtueller Systeme, die von einer Instanz der [**CIM \_ VirtualSystemMigrationService-Klasse verwaltet**](cim-virtualsystemmigrationservice.md) werden.
 
 ## <a name="syntax"></a>Syntax
 
@@ -47,58 +47,58 @@ class CIM_VirtualSystemMigrationSettingData : CIM_SettingData
 
 ## <a name="members"></a>Member
 
-Die **CIM- \_ virtualsystemmigrationsettingdata** -Klasse verfügt über diese Typen von Membern:
+Die **CIM \_ VirtualSystemMigrationSettingData-Klasse** verfügt über die folgenden Membertypen:
 
 -   [Eigenschaften](#properties)
 
 ### <a name="properties"></a>Eigenschaften
 
-Die **CIM \_ virtualsystemmigrationsettingdata** -Klasse verfügt über diese Eigenschaften.
+Die **CIM \_ VirtualSystemMigrationSettingData-Klasse** verfügt über diese Eigenschaften.
 
 <dl> <dt>
 
-**Bandwidth**
+**Bandbreite**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt16**
+Datentyp: **uint16**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**Messgerät**](/windows/desktop/WmiSdk/standard-qualifiers), [**modelcorrespondence**](/windows/desktop/WmiSdk/standard-qualifiers) ("**CIM \_ virtualsystemmigrationsettingdata**.**Bandwidthunit**")
+Qualifizierer: [**Messgerät**](/windows/desktop/WmiSdk/standard-qualifiers), [**ModelCorrespondence**](/windows/desktop/WmiSdk/standard-qualifiers) ("**CIM \_ VirtualSystemMigrationSettingData**.**BandwidthUnit**")
 </dt> </dl>
 
-Die Bandbreite, die einem virtuellen System Migrations Vorgang zugewiesen oder angefordert wurde. "0" ist die Standard Bandbreite für Migrations Anforderungen.
+Die Bandbreite, die einem Migrationsvorgang des virtuellen Systems zugewiesen oder angefordert wurde. "0" ist die Standardbandbreite für Migrationsanforderungen.
 
-Die Eigenschaften **Bandbreite** und **Priorität** können zusammen verwendet werden. Migrationsprozesse mit den höchsten Werten für die gleiche **Priorität** haben die verfügbare Bandbreite basierend auf der angeforderten Bandbreite gemeinsam. Wenn nicht die gesamte Bandbreite von diesem Satz von Prozessen genutzt wird, nutzen Migrationsprozesse mit den nächst niedrigeren Werten mit gleicher **Priorität** die verbleibende Bandbreite gemeinsam. Wenn noch mehr Bandbreite verbleiben, werden Migrationsprozesse mit den nächst niedrigeren Werten der gleichen **Priorität** berücksichtigt.
+Die **Eigenschaften Bandbreite** und **Priorität** können in Verbindung verwendet werden. Migrationsprozesse mit den höchsten **prioritätsbasierten** Werten teilen sich die verfügbare Bandbreite basierend auf der angeforderten Bandbreite. Wenn nicht die ganze Bandbreite von dieser Gruppe von Prozessen  verbraucht wird, teilen sich Migrationsprozesse mit den nächsten niedrigeren Prioritätswerten die verbleibende Bandbreite. Wenn mehr Bandbreite verbleibt, werden Migrationsprozesse mit den nächsten niedrigeren **Prioritätswerten** berücksichtigt.
 
-Die in der **Bandbreiten** Eigenschaft verwendete Einheit wird durch den Wert der **bandwidthunit** -Eigenschaft angegeben.
+Die in der **Bandwidth-Eigenschaft** verwendete Einheit wird durch den Wert der **BandwidthUnit-Eigenschaft** angegeben.
 
-Wenn der Wert der **bandwidthunit** -Eigenschaft "Prozent" ist, gelten die folgenden Regeln:
+Wenn der Wert der **BandwidthUnit-Eigenschaft** "percent" ist, gelten die folgenden Regeln:
 
--   Der Wert der **Bandbreiten** Eigenschaft muss zwischen "0" und "100" liegen, wobei höhere Werte eine höhere Bandbreite angeben.
--   Der Wert "100" gibt die gesamte verfügbare Bandbreite für die Durchführung von virtuellen System Migrations Vorgängen an.
--   Werte zwischen "1" und "100" sind linear mit dem verfügbaren Bandbreiten Bereich korreliert. Beispielsweise fordert der Wert 50 die Hälfte der verfügbaren Bandbreite an.
+-   Der Wert der **Bandwidth-Eigenschaft** muss zwischen "0" und "100" liegen, und höhere Werte geben eine höhere Bandbreite an.
+-   Der Wert "100" gibt die verfügbare Bandbreite für die Durchführung von Migrationsvorgängen für virtuelle Systeme an.
+-   Werte zwischen "1" und "100" korrelieren linear mit dem verfügbaren Bandbreitenbereich. Beispielsweise fordert ein Wert von 50 die Hälfte der verfügbaren Bandbreite an.
 
 </dd> <dt>
 
-**Bandwidthunit**
+**BandwidthUnit**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**modelcorrespondence**](/windows/desktop/WmiSdk/standard-qualifiers) ("**CIM \_ virtualsystemmigrationsettingdata**".**Bandbreite**"), **ispunit**
+Qualifizierer: [**ModelCorrespondence**](/windows/desktop/WmiSdk/standard-qualifiers) ("**CIM \_ VirtualSystemMigrationSettingData**.**Bandbreite**"), **IsPUnit**
 </dt> </dl>
 
-Die Einheit, die von der **Bandbreiten** Eigenschaft verwendet wird. Der Wert dieser Eigenschaft muss ein gültiger Wert des Qualifizierers für programmgesteuerte Einheiten sein, der in Anhang C. 1 von DSP0004 v 2.4 oder höher definiert ist.
+Die von der **Bandwidth-Eigenschaft verwendete** Einheit. Der Wert dieser Eigenschaft muss ein rechtlicher Wert des in Anhang C.1 von DSP0004 V2.4 oder höher definierten Qualifizierers Programmatic Units sein.
 
 > [!Note]  
-> Profile wie DMTF DSP1081 definieren, wie Clients die Gruppe von Einheiten ermitteln können, die von einer Implementierung unterstützt werden, und Bereiche und Inkremente für Werte der **Bandbreiten** Eigenschaft.
+> Profile wie DMTF DSP1081 definieren, wie Clients den Satz von Einheiten, die von einer Implementierung unterstützt werden, sowie Bereiche und Inkremente für Werte der **Bandwidth-Eigenschaft entdecken** können.
 
  
 
@@ -107,13 +107,13 @@ Die Einheit, die von der **Bandbreiten** Eigenschaft verwendet wird. Der Wert di
 **MigrationType**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt16**
+Datentyp: **uint16**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Der Typ des auszuführenden Migrations Vorgangs.
+Der Typ des durchzuführenden Migrationsvorgang.
 
 <dt>
 
@@ -140,30 +140,30 @@ Der Typ des auszuführenden Migrations Vorgangs.
 
 <span id="Resume"></span><span id="resume"></span><span id="RESUME"></span>
 
-Fort **setzen (3** )
+**Fortsetzen** (3)
 
 
 </dt> <dd></dd> <dt>
 
 <span id="Restart"></span><span id="restart"></span><span id="RESTART"></span>
 
-**Neu starten** (4)
+**Neustart** (4)
 
 
 </dt> <dd></dd> </dl>
 
 </dd> <dt>
 
-**Othertransporttype**
+**OtherTransportType**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**modelcorrespondence**](/windows/desktop/WmiSdk/standard-qualifiers) ("**CIM \_ virtualsystemmigrationsettingdata**".**TransportType**")
+Qualifizierer: [**ModelCorrespondence**](/windows/desktop/WmiSdk/standard-qualifiers) ("**CIM \_ VirtualSystemMigrationSettingData**.**TransportType**")
 </dt> </dl>
 
 Der Transporttyp, der angewendet werden soll, wenn der Wert von **TransportType** "1" (sonstige) ist.
@@ -173,29 +173,29 @@ Der Transporttyp, der angewendet werden soll, wenn der Wert von **TransportType*
 **Priority**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt16**
+Datentyp: **uint16**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Die relative Migrations Wichtigkeit, die von der Implementierung der virtuellen System Migration verwendet werden kann, um mehrere ausstehende Migrations Anforderungen zu sortieren oder zuzuweisen. Je niedriger der Wert, desto höher ist die Priorität. "0" ist die Standard Bandbreite für Migrations Anforderungen.
+Die relative Migrationsanforderung, die die Implementierung der Migration des virtuellen Systems verwenden kann, um mehrere ausstehende Migrationsanforderungen zu ordnen oder zu bevorzugen. Je niedriger der Wert, desto höher die Priorität. "0" ist die Standardbandbreite für Migrationsanforderungen.
 
 </dd> <dt>
 
 **TransportType**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt16**
+Datentyp: **uint16**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**modelcorrespondence**](/windows/desktop/WmiSdk/standard-qualifiers) ("**CIM \_ virtualsystemmigrationsettingdata**".**Othertransporttype**")
+Qualifizierer: [**ModelCorrespondence**](/windows/desktop/WmiSdk/standard-qualifiers) ("**CIM \_ VirtualSystemMigrationSettingData**.**OtherTransportType**")
 </dt> </dl>
 
-Der Transporttyp, der auf einen virtuellen System Migrations Vorgang angewendet werden soll.
+Der Transporttyp, der auf einen Migrationsvorgang des virtuellen Systems angewendet werden soll.
 
 <dt>
 
@@ -250,14 +250,14 @@ Der Transporttyp, der auf einen virtuellen System Migrations Vorgang angewendet 
 
 <span id="DMTF_Reserved"></span><span id="dmtf_reserved"></span><span id="DMTF_RESERVED"></span>
 
-**DMTF reserviert** (..)
+**DMTF Reserved** (..)
 
 
 </dt> <dd></dd> <dt>
 
 <span id="Vendor_Reserved"></span><span id="vendor_reserved"></span><span id="VENDOR_RESERVED"></span>
 
-**Anbieter reserviert** (32768..)
+**Anbieter reserviert** (32768.)
 
 
 </dt> <dd></dd> </dl>
@@ -273,16 +273,16 @@ Der Transporttyp, der auf einen virtuellen System Migrations Vorgang angewendet 
 | Unterstützte Mindestversion (Client)<br/> | Windows 8<br/>                                                                                    |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2012<br/>                                                                          |
 | Namespace<br/>                | \\Stammvirtualisierung \\ v2<br/>                                                                     |
-| MOF<br/>                      | <dl> <dt>Windowsvirtualization. v2. MOF</dt> </dl> |
+| MOF<br/>                      | <dl> <dt>WindowsVirtualization.V2.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Vmms.exe</dt> </dl>                     |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**CIM- \_ SettingData**](cim-settingdata.md)
+[**CIM \_ SettingData**](cim-settingdata.md)
 </dt> </dl>
 
  

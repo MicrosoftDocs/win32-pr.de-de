@@ -20,7 +20,7 @@ ms.locfileid: "118907685"
 
 ## <a name="key-storage-architecture"></a>Wichtige Storage Architektur
 
-CNG bietet ein Modell für die Speicherung privater Schlüssel, das die Anpassung an die aktuellen und zukünftigen Anforderungen der Erstellung von Anwendungen ermöglicht, die Kryptografiefeatures wie verschlüsselung mit öffentlichem oder privatem Schlüssel verwenden, sowie die Anforderungen der Speicherung von Schlüsselmaterial. Der Schlüsselspeicherrouter ist die zentrale Routine in diesem Modell und wird in Ncrypt.dll. Eine Anwendung greifen auf die Schlüsselspeicheranbieter (Key Storage Providers, KSPs) auf dem System über den Schlüsselspeicherrouter zu, der Details, z. B. die Schlüsselisolation, sowohl von der Anwendung als auch vom Speicheranbieter selbst verdeckt. Die folgende Abbildung zeigt den Entwurf und die Funktion der CNG-Schlüsselisolationsarchitektur.
+CNG bietet ein Modell für die Speicherung privater Schlüssel, das die Anpassung an die aktuellen und zukünftigen Anforderungen der Erstellung von Anwendungen ermöglicht, die Kryptografiefeatures wie verschlüsselung mit öffentlichem oder privatem Schlüssel verwenden, sowie die Anforderungen der Speicherung von Schlüsselmaterial. Der Schlüsselspeicherrouter ist die zentrale Routine in diesem Modell und wird in Ncrypt.dll. Eine Anwendung greifen über den Schlüsselspeicherrouter auf die Schlüsselspeicheranbieter (Key Storage Providers, KSPs) im System zu, wodurch Details, z. B. die Schlüsselisolation, sowohl von der Anwendung als auch vom Speicheranbieter selbst verdeckt werden. Die folgende Abbildung zeigt den Entwurf und die Funktion der CNG-Schlüsselisolationsarchitektur.
 
 ![CNG-Schlüsselspeicheranbieter](images/cng-key-storage-provider.png)
 
@@ -44,7 +44,7 @@ CNG unterstützt die folgenden Schlüsseltypen:
 -   Öffentlicher und privater Schlüssel des Digital Signature Algorithm (DSA, FIPS 186-2).
 -   Öffentliche und private RSA-Schlüssel (PKCS \# 1).
 -   Mehrere ältere öffentliche und private Schlüssel (CryptoAPI).
--   Kryptografieschlüssel für elliptische Kurven: öffentliche und private Schlüssel.
+-   Kryptografie für elliptische Kurven: öffentliche und private Schlüssel.
 
 ## <a name="supported-algorithms"></a>Unterstützte Algorithmen
 
@@ -101,7 +101,7 @@ CNG speichert private Schlüssel in den folgenden Verzeichnissen.
 
 Im Folgenden finden Sie einige Unterschiede zwischen den Schlüsselcontainern CryptoAPI und CNG.
 
--   CNG verwendet andere Dateinamen für Schlüsseldateien als Schlüsseldateien, die von den Rsaenh.dll und Dssenh.dll CSPs erstellt werden. Die älteren Schlüsseldateien haben auch die Erweiterung .key, CNG-Schlüsseldateien haben jedoch nicht die Erweiterung .key.
+-   CNG verwendet andere Dateinamen für Schlüsseldateien als Schlüsseldateien, die vom Rsaenh.dll und Dssenh.dll CSPs erstellt werden. Die älteren Schlüsseldateien haben auch die Erweiterung .key, CNG-Schlüsseldateien haben jedoch nicht die Erweiterung .key.
 -   CNG unterstützt Unicode-Schlüsselcontainernamen vollständig. CNG verwendet einen Hash des Unicode-Containernamens, während CryptoAPI einen Hash des ANSI-Containernamens verwendet.
 -   CNG ist in Bezug auf RSA-Schlüsselpaare flexibler. CNG unterstützt beispielsweise öffentliche Exponenten mit einer Länge von mehr als 32 Bits und Schlüssel, bei denen p und q unterschiedliche Längen haben.
 -   In CryptoAPI wird die Schlüsselcontainerdatei in einem Verzeichnis gespeichert, dessen Name der Textentsprechung der SID des Benutzers entspricht. Dies ist in CNG nicht mehr der Fall, wodurch die Schwierigkeiten beim Verschieben von Benutzern aus einer Domäne in eine andere beseitigt werden, ohne dass alle privaten Schlüssel verloren geht.

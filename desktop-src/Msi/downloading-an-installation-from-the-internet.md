@@ -15,7 +15,7 @@ ms.locfileid: "118637767"
 
 Windows Das Installationsprogramm akzeptiert eine Uniform Resource Locator (URL) als gültige Quelle für eine Installation. Windows Das Installationsprogramm kann Pakete, Patches und Transformationen über einen URL-Speicherort installieren.
 
-Wenn sich die Installationsdatenbank unter einer URL befindet, lädt das Installationsprogramm die Datenbank an einen Cachespeicherort herunter, bevor die Installation gestartet wird. Das Installationsprogramm lädt auch die Dateien und Cab-Dateien aus der Internetquelle herunter, die für die Auswahl des Benutzers geeignet sind. Weitere Informationen finden Sie unter Beispiel für die [Installation eines URL-basierten Windows Installers.](a-url-based-windows-installer-installation-example.md)
+Wenn sich die Installationsdatenbank unter einer URL befindet, lädt das Installationsprogramm die Datenbank an einen Cachespeicherort herunter, bevor die Installation gestartet wird. Das Installationsprogramm lädt auch die Dateien und Cab-Dateien aus der Internetquelle herunter, die für die Auswahl des Benutzers geeignet sind. Weitere Informationen finden Sie unter Installationsbeispiel für [einen URL-basierten Windows Installer.](a-url-based-windows-installer-installation-example.md)
 
 Um beispielsweise ein Paket mit einer Quelle auf einem Webserver unter zu installieren, https://server/share/package.msi können Sie die [Befehlszeilenoptionen](command-line-options.md) verwenden, um das Paket zu installieren und [öffentliche](public-properties.md) Eigenschaften festzulegen.
 
@@ -52,7 +52,7 @@ set Installer=Nothing
 
 Da bei einigen Webservern die Groß-/Kleinschreibung beachtet wird, muss das Feld FileName in der [Dateitabelle](file-table.md) genau mit der Groß-/Kleinschreibung der Quelldateien übereinstimmen, um die Unterstützung von Internetdownloads sicherzustellen.
 
-Weitere Informationen finden [Sie unter Herunterladen und Installieren eines Patches aus dem Internet.](downloading-and-installing-a-patch-from-the-internet.md) Weitere Informationen zum Sichern von Installationen und zur Verwendung digitaler Zertifikate finden Sie unter [Richtlinien für die Erstellung sicherer Installationen](guidelines-for-authoring-secure-installations.md) und digitaler [Signaturen und Windows Installer.](digital-signatures-and-windows-installer.md) Weitere Informationen zum Erstellen einer Webinstallation eines Windows Installer-Pakets finden Sie unter [InternetDownload Bootstrapping](internet-download-bootstrapping.md).
+Weitere Informationen finden [Sie unter Herunterladen und Installieren eines Patches aus dem Internet.](downloading-and-installing-a-patch-from-the-internet.md) Weitere Informationen zum Sichern von Installationen und zum Verwenden digitaler Zertifikate finden Sie unter [Richtlinien für die Erstellung sicherer Installationen](guidelines-for-authoring-secure-installations.md) und digitaler [Signaturen und Windows Installer.](digital-signatures-and-windows-installer.md) Weitere Informationen zum Erstellen einer Webinstallation eines Windows Installer-Pakets finden Sie unter [InternetDownload Bootstrapping](internet-download-bootstrapping.md).
 
 ## <a name="available-internet-protocols"></a>Verfügbare Internetprotokolle
 

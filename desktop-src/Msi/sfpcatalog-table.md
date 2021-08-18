@@ -1,5 +1,5 @@
 ---
-description: Die SFPCatalog-Tabelle enthält die Kataloge, die von Windows Me verwendet werden.
+description: Die SFPCatalog-Tabelle enthält die Kataloge, die von Windows Verwendet werden.
 ms.assetid: e9dc65a9-4ec9-4310-b03a-a2c38720ca8c
 title: SFPCatalog-Tabelle
 ms.topic: article
@@ -13,9 +13,9 @@ ms.locfileid: "118624891"
 ---
 # <a name="sfpcatalog-table"></a>SFPCatalog-Tabelle
 
-Die SFPCatalog-Tabelle enthält die Kataloge, die von Windows Me verwendet werden.
+Die SFPCatalog-Tabelle enthält die Kataloge, die von Windows Verwendet werden.
 
-Die SFPCatalog-Tabelle enthält die folgenden Spalten.
+Die Tabelle SFPCatalog enthält die folgenden Spalten.
 
 
 
@@ -36,7 +36,7 @@ Die SFPCatalog-Tabelle enthält die folgenden Spalten.
 <span id="SFPCatalog"></span><span id="sfpcatalog"></span><span id="SFPCATALOG"></span>SFPCatalog
 </dt> <dd>
 
-Der kurze Dateiname für den Katalog. Da Kataloge keine Version aufweisen, kann der in dieser Spalte angegebene Katalog einen Katalog mit dem gleichen Namen überschreiben, der bereits auf dem lokalen System installiert ist. Weitere Informationen finden Sie im Thema Dateiversionsierung. [Keine Datei verfügt über eine Version.](neither-file-has-a-version.md)
+Der kurze Dateiname für den Katalog. Da Kataloge keine Version haben, kann der in dieser Spalte angegebene Katalog einen Katalog überschreiben, der denselben Namen hat und bereits auf dem lokalen System installiert ist. Weitere Informationen finden Sie im Thema Zur Dateiversionsversionsierung [hat keine Datei eine Version.](neither-file-has-a-version.md)
 
 </dd> <dt>
 
@@ -50,19 +50,19 @@ Binärdaten für den Katalog.
 <span id="Dependency"></span><span id="dependency"></span><span id="DEPENDENCY"></span>Abhängigkeit
 </dt> <dd>
 
-Der in diesem Feld angegebene Katalog ist das übergeordnete Element des abhängigen Katalogs, der im Feld SFPCatalog angegeben ist. Geben Sie den kurzen Dateinamen des übergeordneten Katalogs in das Feld Abhängigkeit ein. Dieses Feld ist ein Schlüssel zurück in die Spalte SFPCatalog. Bei der Abhängigkeits übereinstimmung wird die Groß-/Kleinschreibung beachtet.
+Der in diesem Feld angegebene Katalog ist das übergeordnete Element des abhängigen Katalogs, der im Feld SFPCatalog angegeben ist. Geben Sie den kurzen Dateinamen des übergeordneten Katalogs in das Feld Abhängigkeit ein. Dieses Feld ist ein Schlüssel zurück in die Spalte SFPCatalog. Bei der Abhängigkeits übereinstimmung wird die Kleinschreibung beachtet.
 
-Wenn das Dependency-Feld auf einen anderen Datensatz in dieser SFPCatalog-Tabelle verweist, wird der übergeordnete Katalog vor dem abhängigen Katalog installiert.
+Wenn das Feld Abhängigkeit auf einen anderen Datensatz in dieser SFPCatalog-Tabelle verweist, wird der übergeordnete Katalog vor dem abhängigen Katalog installiert.
 
-Wenn das Dependency-Feld auf einen übergeordneten Katalog verweist, der nicht im SFPCatalog-Feld dieser Tabelle vorhanden ist, und wenn der übergeordnete Katalog noch nicht installiert ist, tritt bei der Installation ein Fehler auf.
+Wenn das Feld Abhängigkeit auf einen übergeordneten Katalog verweist, der nicht im Feld SFPCatalog dieser Tabelle vorhanden ist, und wenn der übergeordnete Katalog noch nicht installiert ist, schlägt die Installation fehl.
 
 </dd> </dl>
 
 ## <a name="remarks"></a>Hinweise
 
-Die [InstallSFPCatalogFile-Aktion](installsfpcatalogfile-action.md) fragt die [Komponententabelle,](component-table.md) [die Dateitabelle,](file-table.md)die [FileSFPCatalog-Tabelle](filesfpcatalog-table.md) und die SFPCatalog-Tabelle ab.
+Die [InstallSFPCatalogFile-Aktion](installsfpcatalogfile-action.md) fragt die [Component-Tabelle,](component-table.md)die [Dateitabelle,](file-table.md)die [FileSFPCatalog-Tabelle](filesfpcatalog-table.md) und die SFPCatalog-Tabelle ab.
 
-## <a name="validation"></a>Überprüfen
+## <a name="validation"></a>Überprüfung
 
 <dl>
 

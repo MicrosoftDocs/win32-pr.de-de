@@ -45,7 +45,7 @@ uint32 InitiateFailback(
 *ComputerSystem* \[ In\]
 </dt> <dd>
 
-Ein Verweis auf eine [**CIM \_ ComputerSystem-Instanz,**](/windows/desktop/CIMWin32Prov/cim-computersystem) die den virtuellen Computer darstellt, für den ein Failback initiiert werden soll.
+Ein Verweis auf eine [**\_ CIM-ComputerSysteminstanz,**](/windows/desktop/CIMWin32Prov/cim-computersystem) die den virtuellen Computer darstellt, für den ein Failback initiiert werden soll.
 
 </dd> <dt>
 
@@ -59,14 +59,14 @@ Eine Zeichenfolgendarstellung einer eingebetteten Instanz der [**Msvm \_ Replica
 *RecoveryPointIdentifier* \[ In\]
 </dt> <dd>
 
-Optionale Eingabe, die den Wiederherstellungspunkt identifiziert, an den ein Failback angefordert wird.
+Optionale Eingabe, die den Wiederherstellungspunkt identifiziert, für den ein Failback angefordert wird.
 
 </dd> <dt>
 
 *Auftrag* \[ out\]
 </dt> <dd>
 
-Wenn der Vorgang asynchron ausgeführt wird, gibt diese Methode 4096 zurück, und dieser Parameter enthält einen Verweis auf ein objekt, das von [**CIM \_ ConcreteJob**](/previous-versions//cc136808(v=vs.85))abgeleitet wurde. Dieser Verweis kann verwendet werden, um den Fortschritt zu überwachen und das Ergebnis der -Methode abzurufen.
+Wenn der Vorgang asynchron ausgeführt wird, gibt diese Methode 4096 zurück, und dieser Parameter enthält einen Verweis auf ein Objekt, das von [**CIM \_ ConcreteJob abgeleitet wurde.**](/previous-versions//cc136808(v=vs.85)) Dieser Verweis kann verwendet werden, um den Fortschritt zu überwachen und das Ergebnis der -Methode zu erhalten.
 
 </dd> </dl>
 
@@ -79,7 +79,7 @@ Diese Methode gibt einen der folgenden Werte zurück.
 **Abgeschlossen ohne Fehler** (0)
 </dt> <dt>
 
-**Überprüfte Methodenparameter – Auftragsstart** (4096)
+**Überprüfte Methodenparameter – Auftrag gestartet** (4096)
 </dt> <dt>
 
 **Fehler** (32768)
@@ -97,7 +97,7 @@ Diese Methode gibt einen der folgenden Werte zurück.
 **Timeout** (32772)
 </dt> <dt>
 
-**Ungültiger Parameter** (32773)
+**Ungültiger** Parameter (32773)
 </dt> <dt>
 
 **System wird verwendet** (32774)
@@ -120,7 +120,7 @@ Diese Methode gibt einen der folgenden Werte zurück.
 
 ## <a name="remarks"></a>Hinweise
 
-**InitiateFailback** funktioniert auf einem virtuellen Wiederherstellungscomputer und setzt den virtuellen Computer in den Zustand *WaitingForFailback* um. **InitiateFailback** leitet die Failbackanforderung an den entsprechenden Anbieter weiter, der den Wiederherstellungspunkt von der neuen primären Seite umgekehrt synchronisiert. Nach Abschluss des Failbacks des angeforderten Wiederherstellungspunkts wechselt der Replikationsstatus in den Status *FailbackCompleted.*
+**InitiateFailback** funktioniert auf einem virtuellen Wiederherstellungscomputer und nimmt den virtuellen Computer in den *Zustand WaitingForFailback* auf. **InitiateFailback** leitet die Failbackanforderung an den entsprechenden Anbieter weiter, der den Wiederherstellungspunkt von der neuen primären Seite umgekehrt synchronisiert. Nach Abschluss des Failbacks des angeforderten Wiederherstellungspunkts wechselt der Replikationsstatus in den *Status FailbackCompleted.*
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -136,7 +136,7 @@ Diese Methode gibt einen der folgenden Werte zurück.
 
 
 
-## <a name="see-also"></a>Weitere Informationen:
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 

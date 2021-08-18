@@ -1,9 +1,9 @@
 ---
-title: ComboBox-Steuerelement (Menüs und andere Ressourcen)
-description: Definiert ein Kombinations Feld-Steuerelement (ein Kombinations Feld).
+title: COMBOBOX-Steuerelement (Menüs und andere Ressourcen)
+description: Definiert ein Kombinationsfeld-Steuerelement (ein Kombinationsfeld).
 ms.assetid: 0a0fcfa8-b65c-44c1-89d8-f5020af10f0f
 keywords:
-- Menüs für ComboBox-Steuerelemente und andere Ressourcen
+- COMBOBOX-Steuerelementmenüs und andere Ressourcen
 topic_type:
 - apiref
 api_name:
@@ -12,16 +12,16 @@ api_type:
 - NA
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 311cb45282b949a166add8d3aececc0698803fe5
-ms.sourcegitcommit: ebd3ce6908ff865f1ef66f2fc96769be0aad82e1
+ms.openlocfilehash: bd2ffaa64266d9b370cca5215725eb45d0f620054c66562e3f60492441e38890
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/19/2020
-ms.locfileid: "104390209"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118972119"
 ---
-# <a name="combobox-control"></a>ComboBox-Steuerelement
+# <a name="combobox-control"></a>COMBOBOX-Steuerelement
 
-Definiert ein Kombinations Feld-Steuerelement (ein Kombinations Feld). Ein Kombinations Feld besteht aus einem statischen Textfeld oder einem Bearbeitungsfeld, das mit einem Listenfeld kombiniert ist. Das Listenfeld kann jederzeit angezeigt oder vom Benutzer abgerufen werden. Wenn das Kombinations Feld ein statisches Textfeld enthält, zeigt das Textfeld immer die Auswahl (sofern vorhanden) im Listenfeld Bereich des Kombinations Felds an. Wenn ein Bearbeitungsfeld verwendet wird, kann der Benutzer die gewünschte Auswahl eingeben. im Listenfeld wird das erste Element (sofern vorhanden) hervorgehoben, das dem entspricht, was der Benutzer im Bearbeitungsfeld eingegeben hat. Der Benutzer kann dann das im Listenfeld hervorgehobene Element auswählen, um die Auswahl abzuschließen. Außerdem kann das Kombinations Feld vom Besitzer gezeichnet werden und eine Höhe mit fester oder variabler Höhe aufweisen.
+Definiert ein Kombinationsfeld-Steuerelement (ein Kombinationsfeld). Ein Kombinationsfeld besteht entweder aus einem statischen Textfeld oder einem Bearbeitungsfeld in Kombination mit einem Listenfeld. Das Listenfeld kann jederzeit angezeigt oder vom Benutzer heruntergefahren werden. Wenn das Kombinationsfeld ein statisches Textfeld enthält, zeigt das Textfeld immer die Auswahl (sofern verfügbar) im Listenfeldbereich des Kombinationsfelds an. Wenn ein Bearbeitungsfeld verwendet wird, kann der Benutzer die gewünschte Auswahl eingeben. Im Listenfeld wird das erste Element (sofern verfügbar) angezeigt, das mit dem im Bearbeitungsfeld eingegebenen Element entspricht. Der Benutzer kann dann das im Listenfeld hervorgehobene Element auswählen, um die Auswahl zu treffen. Darüber hinaus kann das Kombinationsfeld vom Besitzer gezeichnet werden und eine feste oder variable Höhe haben.
 
 ``` syntax
 COMBOBOX id, x, y, width, height [, style [, extended-style]]
@@ -29,34 +29,34 @@ COMBOBOX id, x, y, width, height [, style [, extended-style]]
 
 <dl> <dt>
 
-<span id="style"></span><span id="STYLE"></span>*Vorbild*
+<span id="style"></span><span id="STYLE"></span>*Stil*
 </dt> <dd>
 
-Steuerelement Stile. Bei diesem Wert kann es sich um eine Kombination der ComboBox-Klassen Stile und eines der folgenden Stile handeln: " **WS \_ Tabstopps**", " **WS \_ Group**", " **WS \_ VScroll**" und " **WS \_ deaktiviert**".
+Steuerelementstile. Dieser Wert kann eine Kombination aus den COMBOBOX-Klassenstilen und einem der folgenden Stile sein: **WS \_ TABSTOP,** **WS \_ GROUP,** **WS \_ VSCROLL** und **WS \_ DISABLED**.
 
 Wenn Sie keinen Stil angeben, ist der Standardstil `CBS_SIMPLE | WS_TABSTOP` .
 
 </dd> </dl>
 
-Der *height* -Parameter gilt für die Höhe eines Kombinations Felds, in dem eine Dropdown Liste vollständig erweitert ist.
+Der *Height-Parameter* gilt für die Höhe eines Kombinationsfelds mit einer vollständig erweiterten Dropdownliste.
 
-Weitere Informationen zur allgemeinen Syntax einer Control-Anweisung finden Sie unter allgemeine [Steuerelement Parameter](common-control-parameters.md).
+Weitere Informationen zur allgemeinen Syntax einer Steuerelement-Anweisung finden Sie unter [Allgemeine Steuerelementparameter](common-control-parameters.md).
 
 ## <a name="examples"></a>Beispiele
 
-In diesem Beispiel wird ein Kombinations Feld-Steuerelement mit einer vertikalen Scrollleiste definiert:
+In diesem Beispiel wird ein Kombinationsfeld-Steuerelement mit einer vertikalen Bildlaufleiste definiert:
 
 ``` syntax
 COMBOBOX 777, 10, 10, 50, 54, CBS_SIMPLE | WS_VSCROLL | WS_TABSTOP 
 ```
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[Kombinations Felder](../controls/about-combo-boxes.md)
+[Kombinationsfelder](../controls/about-combo-boxes.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 

@@ -23,7 +23,7 @@ In den folgenden Abschnitten wird die Verwendung von Assemblys mit dem Windows b
 -   [Installieren und Entfernen von Assemblys](installing-and-removing-assemblies.md)
 -   [Aktualisieren von Assemblys](updating-assemblies.md)
 -   [Neuinstallationsmodi von Common Language Runtime-Assemblys](reinstallation-modes-of-common-language-runtime-assemblies.md)
--   [Assemblyregistrierungsschlüssel, die vom Windows werden](assembly-registry-keys-written-by-windows-installer-.md)
+-   [Assemblyregistrierungsschlüssel, die vom Windows geschrieben wurden](assembly-registry-keys-written-by-windows-installer-.md)
 
 Informationen zum Installieren von COM- und COM+1.0-Anwendungen finden Sie unter Installieren einer [COM+-Anwendung](installing-a-com--application-with-the-windows-installer.md)mit dem Windows-Installer, Installieren einer [COM-Komponente](installing-a-com-component-to-a-private-location.md)an einem privaten Speicherort und Erstellen einer COM-Komponente in einem vorhandenen privaten [Paket.](make-a-com-component-in-an-existing-package-private.md)
 

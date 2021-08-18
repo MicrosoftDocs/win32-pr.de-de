@@ -3,7 +3,7 @@ title: MPSCAN_RESOURCES-Struktur (MpClient.h)
 description: Ressourceninformationen, die während eines Scanvorgangs übergeben werden.
 ms.assetid: D97712A6-547D-44CC-B55D-039A5CCE20BF
 keywords:
-- MPSCAN_RESOURCES Struktur legacy Windows Environment Features
+- MPSCAN_RESOURCES Struktur legacy Windows Umgebungsfeatures
 - PMPSCAN_RESOURCES Strukturzeiger Legacy Windows Umgebungsfeatures
 topic_type:
 - apiref

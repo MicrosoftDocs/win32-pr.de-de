@@ -9,8 +9,8 @@ keywords:
 - Clients,Abrufen von Eigenschaften
 - Clients,Benutzeroberflächenautomatisierung Eigenschaften
 - Benutzeroberflächenautomatisierung,Abrufen von Elementen
-- Benutzeroberflächenautomatisierung,Elements
-- Benutzeroberflächenautomatisierung,Eigenschaften
+- Benutzeroberflächenautomatisierung,elements
+- Benutzeroberflächenautomatisierung,Properties
 - Benutzeroberflächenautomatisierung,Abrufen von Eigenschaften
 - Abrufen von Eigenschaften
 ms.topic: article
@@ -42,7 +42,7 @@ Dieses Thema enthält folgende Abschnitte:
 
 Eigenschaftsbezeichner werden in Uiautomationclient.h definiert. Sie werden verwendet, um Eigenschaften anzugeben, wenn Sie Durch Eigenschaften geänderte Ereignisse abonnieren, Eigenschaftswerte abrufen und Eigenschaftsbedingungen erstellen. Eigenschaftenbezeichner identifizieren auch die Eigenschaft, die sich geändert hat, wenn [**IUIAutomationPropertyChangedEventHandler::HandlePropertyChangedEvent**](/windows/desktop/api/UIAutomationClient/nf-uiautomationclient-iuiautomationpropertychangedeventhandler-handlepropertychangedevent) aufgerufen wird.
 
-Eine Liste der Eigenschaftenbezeichner Benutzeroberflächenautomatisierung Eigenschaftenbezeichner finden Sie unter [Eigenschaftenbezeichner](uiauto-entry-propids.md).
+Eine Liste der Eigenschaftenbezeichner Benutzeroberflächenautomatisierung Eigenschaftenbezeichner finden Sie unter [Eigenschaftenbezeichner.](uiauto-entry-propids.md)
 
 ## <a name="property-conditions"></a>Eigenschaftsbedingungen
 
@@ -57,7 +57,7 @@ Weitere Informationen finden Sie unter den folgenden Referenzthemen:
 
 ## <a name="retrieving-properties"></a>Abrufen von Eigenschaften
 
-Einige generische Eigenschaften und alle Steuerelementmustereigenschaften sind als Eigenschaften auf der [**IUIAutomationElement-**](/windows/desktop/api/UIAutomationClient/nn-uiautomationclient-iuiautomationelement) oder Steuerelementmusterschnittstelle verfügbar und können mithilfe eines Accessors wie [**IUIAutomationElement::CurrentName**](/windows/desktop/api/UIAutomationClient/nf-uiautomationclient-iuiautomationelement-get_currentname) oder [**CachedDockPosition**](/windows/desktop/api/UIAutomationClient/nf-uiautomationclient-iuiautomationdockpattern-get_cacheddockposition)abgerufen werden.
+Einige generische Eigenschaften und alle Steuerelementmustereigenschaften sind als Eigenschaften auf der [**IUIAutomationElement-**](/windows/desktop/api/UIAutomationClient/nn-uiautomationclient-iuiautomationelement) oder Steuerelementmusterschnittstelle verfügbar und können mithilfe eines Accessors wie [**IUIAutomationElement::CurrentName**](/windows/desktop/api/UIAutomationClient/nf-uiautomationclient-iuiautomationelement-get_currentname) oder [**CachedDockPosition abgerufen**](/windows/desktop/api/UIAutomationClient/nf-uiautomationclient-iuiautomationdockpattern-get_cacheddockposition)werden.
 
 Darüber hinaus kann jede aktuelle oder zwischengespeicherte Eigenschaft (abgesehen von Steuerelementmustereigenschaften) mit einer der folgenden Methoden abgerufen werden:
 
@@ -70,7 +70,7 @@ Diese Methoden bieten eine etwas bessere Leistung und einen etwas besseren Zugri
 
 ## <a name="default-property-values"></a>Standardeigenschaftswerte
 
-Wenn ein Benutzeroberflächenautomatisierung-Anbieter keine -Eigenschaft implementiert, Benutzeroberflächenautomatisierung einen Standardwert festlegen. Wenn der Anbieter für ein Steuerelement beispielsweise die durch [**UIA \_ HelpTextPropertyId**](uiauto-automation-element-propids.md)identifizierte Eigenschaft nicht unterstützt, gibt Benutzeroberflächenautomatisierung eine leere Zeichenfolge zurück. Wenn der Anbieter die durch [**UIA \_ IsDockPatternAvailablePropertyId**](uiauto-control-pattern-availability-propids.md)identifizierte Eigenschaft nicht unterstützt, gibt Benutzeroberflächenautomatisierung **FALSE zurück.**
+Wenn ein Benutzeroberflächenautomatisierung-Anbieter keine Eigenschaft implementiert, Benutzeroberflächenautomatisierung einen Standardwert festlegen. Wenn der Anbieter für ein Steuerelement beispielsweise die durch [**UIA \_ HelpTextPropertyId**](uiauto-automation-element-propids.md)identifizierte Eigenschaft nicht unterstützt, gibt Benutzeroberflächenautomatisierung eine leere Zeichenfolge zurück. Wenn der Anbieter die von [**UIA \_ IsDockPatternAvailablePropertyId**](uiauto-control-pattern-availability-propids.md)identifizierte Eigenschaft nicht unterstützt, gibt Benutzeroberflächenautomatisierung **false zurück.**
 
 Der Unterschied zwischen [**IUIAutomationElement::GetCurrentPropertyValue**](/windows/desktop/api/UIAutomationClient/nf-uiautomationclient-iuiautomationelement-getcurrentpropertyvalue) und [**GetCurrentPropertyValueEx**](/windows/desktop/api/UIAutomationClient/nf-uiautomationclient-iuiautomationelement-getcurrentpropertyvalueex) (und zwischen ähnlichen Methodenpaaren) ist, dass die "Ex"-Methode angeben kann, dass kein Standardwert zurückgegeben werden soll. In diesem Fall ist der Rückgabewert eine spezielle eindeutige Konstante, die angibt, dass die -Eigenschaft nicht unterstützt wird. Bei Empfang dieses Werts kann die Anwendung einen eigenen Wert liefern oder einfach die -Eigenschaft ignorieren.
 

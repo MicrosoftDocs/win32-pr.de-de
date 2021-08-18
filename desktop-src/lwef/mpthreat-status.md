@@ -4,7 +4,7 @@ description: Möglicher Bedrohungsstatus.
 ms.assetid: 64B57C8B-231B-4A2C-BF2E-45DB62B8350E
 keywords:
 - MPTHREAT_STATUS enumeration Legacy Windows Environment Features (Legacy-Windows-Umgebungsfeatures)
-- PMPTHREAT_STATUS enumeration pointer Legacy Windows Environment Features (Legacy Windows-Umgebungsfeatures)
+- PMPTHREAT_STATUS-Enumerationszeiger Legacy Windows-Umgebungsfeatures
 topic_type:
 - apiref
 api_name:

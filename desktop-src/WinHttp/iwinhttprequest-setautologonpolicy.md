@@ -55,10 +55,10 @@ Der Rückgabewert ist **S \_ OK bei** Erfolg oder andernfalls ein Fehlerwert.
 
 Die Standardrichtlinie ist [**AutoLogonPolicy \_ OnlyIfBypassProxy.**](winhttprequestautologonpolicy.md)
 
-Rufen **Sie SetAutoLogonPolicy auf,** um die Richtlinie für die automatische Anmeldung vor dem Aufruf [**von Send**](iwinhttprequest-send.md) zum Senden der Anforderung zu festlegen.
+Rufen **Sie SetAutoLogonPolicy auf,** um die Richtlinie für die automatische Anmeldung vor dem Aufruf von [**Send**](iwinhttprequest-send.md) zum Senden der Anforderung zu festlegen.
 
 > [!Note]  
-> Informationen Windows XP und Windows 2000 finden Sie im Abschnitt Laufzeitanforderungen der [WinHTTP-Startseite.](winhttp-start-page.md)
+> Informationen Windows XP und Windows 2000 finden [](winhttp-start-page.md) Sie im Abschnitt Laufzeitanforderungen der WinHTTP-Startseite.
 
  
 
@@ -98,7 +98,7 @@ HttpReq.Send();
 
 
 
-## <a name="see-also"></a>Weitere Informationen:
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 

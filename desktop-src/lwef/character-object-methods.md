@@ -13,7 +13,7 @@ ms.locfileid: "118480314"
 ---
 # <a name="character-object-methods"></a>Zeichenobjektmethoden
 
-\[Der Microsoft-Agent ist ab Windows 7 veraltet und in nachfolgenden Versionen von Windows möglicherweise nicht mehr verfügbar.\]
+\[Microsoft Agent ist ab Version Windows 7 veraltet und in nachfolgenden Versionen von Windows.\]
 
 Der Server macht auch Methoden für jedes Zeichen in einer [**Characters-Auflistung**](/windows/desktop/lwef/the-characters-object) verfügbar. Folgende Methoden werden unterstützt:
 
@@ -33,7 +33,7 @@ Der Server macht auch Methoden für jedes Zeichen in einer [**Characters-Auflist
 -   [**Denke**](think-method.md)
 -   [**Wait**](wait-method.md)
 
-Um eine Methode zu verwenden, verweisen Sie auf das Zeichen in der Auflistung. In VBScript und Visual Basic geben Sie dazu die ID für ein Zeichen an:
+Um eine Methode zu verwenden, verweisen Sie auf das Zeichen in der Auflistung. In VBScript und Visual Basic sie dies, indem Sie die ID für ein Zeichen angeben:
 
 
 ```
@@ -52,7 +52,7 @@ Um eine Methode zu verwenden, verweisen Sie auf das Zeichen in der Auflistung. I
 
 
 
-Um die Syntax Ihres Codes zu vereinfachen, können Sie eine Objektvariable definieren und festlegen, um auf ein Zeichenobjekt in der [**Characters-Auflistung**](/windows/desktop/lwef/the-characters-object) zu verweisen. dann können Sie ihre Variable verwenden, um auf Methoden oder Eigenschaften des Zeichens zu verweisen. Im folgenden Beispiel wird veranschaulicht, wie Sie dies mithilfe der set-Anweisung Visual Basic:
+Um die Syntax Ihres Codes zu vereinfachen, können Sie eine Objektvariable definieren und so festlegen, dass sie auf ein Zeichenobjekt in der [**Characters-Auflistung**](/windows/desktop/lwef/the-characters-object) verweist. anschließend können Sie ihre Variable verwenden, um auf Methoden oder Eigenschaften des Zeichens zu verweisen. Im folgenden Beispiel wird veranschaulicht, wie Sie dies mithilfe der Visual Basic Set-Anweisung erreichen können:
 
 
 ```
@@ -81,7 +81,7 @@ Um die Syntax Ihres Codes zu vereinfachen, können Sie eine Objektvariable defin
 
 
 
-In Visual Basic 5.0 können Sie den Verweis auch erstellen, indem Sie Ihre Variable als [**Zeichenobjekt**](/windows/desktop/lwef/the-characters-object)deklarieren:
+In Visual Basic 5.0 können Sie ihren Verweis auch erstellen, indem Sie Ihre Variable als [**Character-Objekt deklarieren:**](/windows/desktop/lwef/the-characters-object)
 
 
 ```
@@ -103,7 +103,7 @@ In Visual Basic 5.0 können Sie den Verweis auch erstellen, indem Sie Ihre Varia
 
 
 
-Das Deklarieren ihres Objekts vom Typ IAgentCtlCharacterEx ermöglicht eine frühe Bindung des Objekts, was zu einer besseren Leistung führt.
+Das Deklarieren Ihres Objekts vom Typ IAgentCtlCharacterEx ermöglicht eine frühe Bindung an das Objekt, was zu einer besseren Leistung führt.
 
 In VBScript können Sie einen Verweis nicht als bestimmten Typ deklarieren. Sie können jedoch einfach den Variablenverweis deklarieren:
 
@@ -145,7 +145,7 @@ Einige Programmiersprachen unterstützen keine Sammlungen. Sie können jedoch mi
 
 
 
-Darüber hinaus können Sie auch einen Verweis auf das [**Character-Objekt**](/windows/desktop/lwef/the-characters-object) erstellen, damit Ihr Skriptcode leichter zu befolgen ist:
+Darüber hinaus können Sie auch einen Verweis auf das [**Character-Objekt**](/windows/desktop/lwef/the-characters-object) erstellen, damit Ihr Skriptcode einfacher zu befolgen ist:
 
 
 ```

@@ -1,11 +1,11 @@
 ---
 title: INapEnforcementClientConnection GetEnforcerPrivateData-Methode (NapEnforcementClient.h)
-description: Wird vom Enforcer verwendet, um private Daten abzurufen.
+description: Wird vom Erzwinger verwendet, um private Daten zu erhalten.
 ms.assetid: a1f5b5a7-c862-4e5b-bf9c-b137f99f6165
 keywords:
-- NAP-Methode "GetEnforcerPrivateData"
+- GetEnforcerPrivateData-Methode NAP
 - GetEnforcerPrivateData-Methode NAP, INapEnforcementClientConnection-Schnittstelle
-- INapEnforcementClientConnection-Schnittstelle NAP , GetEnforcerPrivateData-Methode
+- INapEnforcementClientConnection-Schnittstelle NAP, GetEnforcerPrivateData-Methode
 topic_type:
 - apiref
 api_name:
@@ -26,11 +26,11 @@ ms.locfileid: "118940063"
 # <a name="inapenforcementclientconnectiongetenforcerprivatedata-method"></a>INapEnforcementClientConnection::GetEnforcerPrivateData-Methode
 
 > [!Note]  
-> Die Netzwerkzugriffsschutz-Plattform ist ab Windows 10 nicht verfügbar.
+> Die Netzwerkzugriffsschutz-Plattform ist ab dem Windows 10
 
  
 
-Die **INapEnforcementClientConnection::GetEnforcerPrivateData-Methode** wird vom Enforcer verwendet, um private Daten abzurufen.
+Die **INapEnforcementClientConnection::GetEnforcerPrivateData-Methode** wird vom Erzwinger verwendet, um private Daten zu erhalten.
 
 ## <a name="syntax"></a>Syntax
 
@@ -50,13 +50,13 @@ HRESULT GetEnforcerPrivateData(
 *privateData* \[ out\]
 </dt> <dd>
 
-Ein Zeiger auf einen [](/windows/win32/api/naptypes/ns-naptypes-privatedata) Zeiger auf ein nicht transparentes PrivateData-Datenblob, das nur der Erzwingende interpretieren kann.
+Ein Zeiger auf einen Zeiger [](/windows/win32/api/naptypes/ns-naptypes-privatedata) auf ein nicht transparentes PrivateData-Datenblob, das nur vom Erzwinger interpretiert werden kann.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Andere COM-spezifische Fehlercodes können ebenfalls zurückgegeben werden.
+Es können auch andere COM-spezifische Fehlercodes zurückgegeben werden.
 
 
 
@@ -76,7 +76,7 @@ Andere COM-spezifische Fehlercodes können ebenfalls zurückgegeben werden.
 
 | Anforderung | Wert |
 |-------------------------------------|-----------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur Vista-Desktop-Apps\]<br/>                                                      |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ Vista-Desktop-Apps\]<br/>                                                      |
 | Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/>                                                |
 | Header<br/>                   | <dl> <dt>NapEnforcementClient.h</dt> </dl>   |
 | Idl<br/>                      | <dl> <dt>NapEnforcementClient.idl</dt> </dl> |
@@ -84,7 +84,7 @@ Andere COM-spezifische Fehlercodes können ebenfalls zurückgegeben werden.
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 

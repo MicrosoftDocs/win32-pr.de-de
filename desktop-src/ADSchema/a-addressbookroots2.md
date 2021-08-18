@@ -1,10 +1,10 @@
 ---
 title: Address-Book-Roots2-Attribut
-description: Wird von Exchange. Exchange konfiguriert Strukturen von Adressbuchcontainern so, dass sie im MAPI-Adressbuch angezeigt werden. Dieses Attribut im Exchange Config-Objekt listet die Stämme der Containerstrukturen des Adressbuchs auf. | Address-Book-Roots2-Attribut
+description: Wird von Exchange verwendet. Exchange konfiguriert Strukturen von Adressbuchcontainern, die im MAPI-Adressbuch angezeigt werden. Dieses Attribut für das Exchange Config-Objekt listet die Stammstrukturen der Adressbuchcontainerstrukturen auf. | Address-Book-Roots2-Attribut
 ms.assetid: 1ca41a60-b8ba-4489-9238-b469811d68ac
 ms.tgt_platform: multiple
 keywords:
-- AD-Schema des Address-Book-Roots2-Attributs
+- Ad-Schema des Address-Book-Roots2-Attributs
 - addressBookRoots2-Attribut AD-Schema
 topic_type:
 - apiref
@@ -23,7 +23,7 @@ ms.locfileid: "118688943"
 ---
 # <a name="address-book-roots2-attribute"></a>Address-Book-Roots2-Attribut
 
-Wird von Exchange. Exchange konfiguriert Strukturen von Adressbuchcontainern so, dass sie im MAPI-Adressbuch angezeigt werden. Dieses Attribut im Exchange Config-Objekt listet die Stämme der Containerstrukturen des Adressbuchs auf.
+Wird von Exchange verwendet. Exchange konfiguriert Strukturen von Adressbuchcontainern, die im MAPI-Adressbuch angezeigt werden. Dieses Attribut für das Exchange Config-Objekt listet die Stammstrukturen der Adressbuchcontainerstrukturen auf.
 
 
 
@@ -35,7 +35,7 @@ Wird von Exchange. Exchange konfiguriert Strukturen von Adressbuchcontainern so,
 | Aktualisieren von Berechtigungen  | \-                                      |
 | Updatehäufigkeit  | \-                                      |
 | Attribute-Id      | 1.2.840.113556.1.4.2046                 |
-| System-Id-Guid    | 508ca374-a511-4e4e-9f4f-856f61a6b7e4    |
+| System-ID-GUID    | 508ca374-a511-4e4e-9f4f-856f61a6b7e4    |
 | Syntax            | [**Object(DS-DN)**](s-object-ds-dn.md) |
 
 
@@ -55,7 +55,7 @@ Wird von Exchange. Exchange konfiguriert Strukturen von Adressbuchcontainern so,
 | Link-ID                | 2122                                                                                 |
 | MAPI-Id                | \-                                                                                   |
 | System-Only            | Falsch                                                                                |
-| Is-Single-Valued       | Falsch                                                                                |
+| Ist einwertig       | Falsch                                                                                |
 | Ist indiziert             | Falsch                                                                                |
 | Im globalen Katalog      | Falsch                                                                                |
 | NT-Security-Descriptor | O:BAG:BAD:S:                                                                         |
@@ -76,7 +76,7 @@ Wird von Exchange. Exchange konfiguriert Strukturen von Adressbuchcontainern so,
 | Link-ID                | 2122                                                                                 |
 | MAPI-Id                | \-                                                                                   |
 | System-Only            | Falsch                                                                                |
-| Is-Single-Valued       | Falsch                                                                                |
+| Ist einwertig       | Falsch                                                                                |
 | Ist indiziert             | Falsch                                                                                |
 | Im globalen Katalog      | Falsch                                                                                |
 | NT-Security-Descriptor | O:BAG:BAD:S:                                                                         |
@@ -97,7 +97,7 @@ Wird von Exchange. Exchange konfiguriert Strukturen von Adressbuchcontainern so,
 | Link-ID                | 2122                                                                                 |
 | MAPI-Id                | \-                                                                                   |
 | System-Only            | Falsch                                                                                |
-| Is-Single-Valued       | Falsch                                                                                |
+| Ist einwertig       | Falsch                                                                                |
 | Ist indiziert             | Falsch                                                                                |
 | Im globalen Katalog      | Falsch                                                                                |
 | NT-Security-Descriptor | O:BAG:BAD:S:                                                                         |

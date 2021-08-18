@@ -1,11 +1,11 @@
 ---
-title: Mediacollection. getmediaatom-Methode
-description: Die getmediaatom-Methode ruft den Index ab, bei dem ein angegebenes Attribut innerhalb des Satzes verfügbarer Attribute liegt.
+title: MediaCollection.getMediaAtom-Methode
+description: Die getMediaAtom-Methode ruft den Index ab, an dem sich ein angegebenes Attribut innerhalb des Sets verfügbarer Attribute befindet.
 ms.assetid: 17501a95-1196-43ff-9a4e-a78cf28e7a2d
 keywords:
-- getmediaatom-Methode, Windows-Media Player
-- getmediaatom-Methode, Windows Media Player, mediacollection-Klasse
-- Mediacollection-Klasse, Windows Media Player, getmediaatom-Methode
+- getMediaAtom-Windows Media Player
+- getMediaAtom-Methode Windows Media Player , MediaCollection-Klasse
+- MediaCollection-Klasse Windows Media Player , getMediaAtom-Methode
 topic_type:
 - apiref
 api_name:
@@ -16,16 +16,16 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 16728b20c26b90c10f144f278f7dec24195b536a
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 8f537b759516d5fa0f382d0c72aabbc0edb836ad8e4ae6d7f210d012fa19ea60
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106370066"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118837203"
 ---
-# <a name="mediacollectiongetmediaatom-method"></a>Mediacollection. getmediaatom-Methode
+# <a name="mediacollectiongetmediaatom-method"></a>MediaCollection.getMediaAtom-Methode
 
-Die **getmediaatom** -Methode ruft den Index ab, bei dem ein angegebenes Attribut innerhalb des Satzes verfügbarer Attribute liegt.
+Die **getMediaAtom-Methode** ruft den Index ab, an dem sich ein angegebenes Attribut innerhalb des Sets verfügbarer Attribute befindet.
 
 ## <a name="syntax"></a>Syntax
 
@@ -42,22 +42,22 @@ retVal = MediaCollection.getMediaAtom(
 
 <dl> <dt>
 
-*Attribut* \[ in\]
+*Attribut* \[ In\]
 </dt> <dd>
 
-**Zeichenfolge** , die den Attributnamen enthält. Informationen zu den Attributen, die von Windows Media Player unterstützt werden, finden Sie in der [Referenz](attribute-reference.md)zu Windows Media Player-Attributen.
+**Eine Zeichenfolge,** die den Attributnamen enthält. Informationen zu den attributes, die von Windows Media Player unterstützt werden, finden Sie in der Windows Media Player [Attribute Reference](attribute-reference.md).
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Diese Methode gibt eine **Zahl** (**Long**) zurück.
+Diese Methode gibt eine **Zahl** **(long) zurück.**
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die mit dieser Methode abgerufene Indexnummer kann an die *Medien* übermittelt werden. die **getiteminfobyatom** -Methode, um auf Attributwerte zuzugreifen. Diese Technik ist in der Regel effizienter, wenn Sie mit großen Wiedergabelisten arbeiten, als der Zugriff auf einen Attribut Wert nach Namen über das *Medium*. **getiteminfo** oder *Medium*. **getItemInfoByType**.
+Die mit dieser Methode abgerufene Indexnummer kann an das Medium *übergeben werden.* **getItemInfoByAtom-Methode** für den Zugriff auf Attributwerte. Diese Technik ist im Allgemeinen effizienter bei der Arbeit mit großen Wiedergabelisten als der Zugriff auf einen Attributwert nach Namen über *Media*. **getItemInfo** oder *Media*. **getItemInfoByType**.
 
-Um diese Methode verwenden zu können, ist Lesezugriff auf die Bibliothek erforderlich. Weitere Informationen finden Sie unter [Bibliotheks Zugriff](library-access.md).
+Um diese Methode verwenden zu können, ist Lesezugriff auf die Bibliothek erforderlich. Weitere Informationen finden Sie unter [Bibliothekszugriff.](library-access.md)
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -65,31 +65,31 @@ Um diese Methode verwenden zu können, ist Lesezugriff auf die Bibliothek erford
 
 | Anforderung | Wert |
 |--------------------|------------------------------------------------------------------------------------|
-| Version<br/> | Windows Media Player Version 7,0 oder höher.<br/>                              |
+| Version<br/> | Windows Media Player Version 7.0 oder höher.<br/>                              |
 | DLL<br/>     | <dl> <dt>Wmp.dll</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Media. getiteminfo**](media-getiteminfo.md)
+[**Media.getItemInfo**](media-getiteminfo.md)
 </dt> <dt>
 
-[**Media. getiteminfobyatom**](media-getiteminfobyatom.md)
+[**Media.getItemInfoByAtom**](media-getiteminfobyatom.md)
 </dt> <dt>
 
-[**Media. getItemInfoByType**](media-getiteminfobytype.md)
+[**Media.getItemInfoByType**](media-getiteminfobytype.md)
 </dt> <dt>
 
-[**Mediacollection-Objekt**](mediacollection-object.md)
+[**MediaCollection-Objekt**](mediacollection-object.md)
 </dt> <dt>
 
-[**Settings. mediaaccessrights**](settings-mediaaccessrights.md)
+[**Einstellungen.mediaAccessRights**](settings-mediaaccessrights.md)
 </dt> <dt>
 
-[**Settings. requestmediaaccessrights**](settings-requestmediaaccessrights.md)
+[**Einstellungen.requestMediaAccessRights**](settings-requestmediaaccessrights.md)
 </dt> </dl>
 
  

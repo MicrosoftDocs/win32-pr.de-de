@@ -1,11 +1,11 @@
 ---
 title: MS-TS-ExpireDate2-Attribut
-description: Das Ablaufdatum der zweiten TS pro Benutzer-CAL.
+description: Ablaufdatum des zweiten TS pro Benutzer-CAL.
 ms.assetid: d594dbcf-249a-4d72-a9fa-06a4c62fc895
 ms.tgt_platform: multiple
 keywords:
-- AD-Schema für MS-TS-ExpireDate2-Attribut
-- msTSExpireDate2-Attribut AD-Schema
+- AD-Schema des MS-TS-ExpireDate2-Attributs
+- AD-Schema des msTSExpireDate2-Attributs
 topic_type:
 - apiref
 api_name:
@@ -14,28 +14,28 @@ api_type:
 - Schema
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: af30b760485b519770ec1014dc12148fd5340850
-ms.sourcegitcommit: b77ace27b0432e7cd3863191b11926be032fbe2f
+ms.openlocfilehash: 32afe84d3bbda149b8fa4e65746e06b6b2cf0f975a316076ac6cbf77ef58d31f
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "104122822"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118960169"
 ---
 # <a name="ms-ts-expiredate2-attribute"></a>MS-TS-ExpireDate2-Attribut
 
-Das Ablaufdatum der zweiten TS pro Benutzer-CAL.
+Ablaufdatum des zweiten TS pro Benutzer-CAL.
 
 
 
 | Eingabe | Wert |
 |-------------------|---------------------------------------------------------------|
 | CN                | MS-TS-ExpireDate2                                             |
-| LDAP-Display-Name | msTSExpireDate2                                               |
+| Ldap-Anzeigename | msTSExpireDate2                                               |
 | Size              | \-                                                            |
-| Berechtigung aktualisieren  | \-                                                            |
-| Aktualisierungshäufigkeit  | \-                                                            |
+| Aktualisieren von Berechtigungen  | \-                                                            |
+| Updatehäufigkeit  | \-                                                            |
 | Attribute-Id      | 1.2.840.113556.1.4.2000                                       |
-| System-ID-GUID    | 54dfcf71-bc3f-4f0b-9d5a-4b2476bb8925                          |
+| System-Id-Guid    | 54dfcf71-bc3f-4f0b-9d5a-4b2476bb8925                          |
 | Syntax            | [**String(Generalized-Time)**](s-string-generalized-time.md) |
 
 
@@ -55,10 +55,10 @@ Das Ablaufdatum der zweiten TS pro Benutzer-CAL.
 | Link-ID                | \-           |
 | MAPI-Id                | \-           |
 | System-Only            | False        |
-| Ist-einwertig       | Richtig         |
-| Ist indiziert             | Richtig         |
+| Is-Single-Valued       | True         |
+| Ist indiziert             | True         |
 | Im globalen Katalog      | False        |
-| NT-Security-Descriptor | o:Bag: schlecht: S: |
+| NT-Security-Descriptor | O:BAG:BAD:S: |
 | Range-Lower            | \-           |
 | Range-Upper            | \-           |
 | Search-Flags           | 0x00000001   |
@@ -76,10 +76,10 @@ Das Ablaufdatum der zweiten TS pro Benutzer-CAL.
 | Link-ID                | \-           |
 | MAPI-Id                | \-           |
 | System-Only            | False        |
-| Ist-einwertig       | Richtig         |
-| Ist indiziert             | Richtig         |
+| Is-Single-Valued       | True         |
+| Ist indiziert             | True         |
 | Im globalen Katalog      | False        |
-| NT-Security-Descriptor | o:Bag: schlecht: S: |
+| NT-Security-Descriptor | O:BAG:BAD:S: |
 | Range-Lower            | \-           |
 | Range-Upper            | \-           |
 | Search-Flags           | 0x00000001   |
@@ -97,10 +97,10 @@ Das Ablaufdatum der zweiten TS pro Benutzer-CAL.
 | Link-ID                | \-           |
 | MAPI-Id                | \-           |
 | System-Only            | False        |
-| Ist-einwertig       | Richtig         |
-| Ist indiziert             | Richtig         |
+| Is-Single-Valued       | True         |
+| Ist indiziert             | True         |
 | Im globalen Katalog      | False        |
-| NT-Security-Descriptor | o:Bag: schlecht: S: |
+| NT-Security-Descriptor | O:BAG:BAD:S: |
 | Range-Lower            | \-           |
 | Range-Upper            | \-           |
 | Search-Flags           | 0x00000001   |

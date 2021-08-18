@@ -1,6 +1,6 @@
 ---
 title: Prozessinteroperabilität
-description: Sie können Win32-basierte Anwendungen auf 64-Bit-Windows mithilfe einer Emulationsebene ausführen. Windows 10 auf ARM enthält eine x86-auf-ARM64-Emulationsebene. Weitere Informationen finden Sie unter Ausführen von 32-Bit-Anwendungen.
+description: Sie können Win32-basierte Anwendungen auf 64-Bit-Windows mithilfe einer Emulationsebene ausführen. Windows 10 auf ARM enthält eine x86-on-ARM64-Emulationsebene. Weitere Informationen finden Sie unter Ausführen von 32-Bit-Anwendungen.
 ms.assetid: a573f26c-7577-4ff0-b314-ae0a33274738
 keywords:
 - Prozessinteroperabilität 64-Bit-Windows-Programmierung
@@ -16,7 +16,7 @@ ms.locfileid: "118561516"
 ---
 # <a name="process-interoperability"></a>Prozessinteroperabilität
 
-Sie können Win32-basierte Anwendungen auf 64-Bit-Windows mithilfe einer Emulationsebene ausführen. Windows 10 auf ARM enthält eine x86-auf-ARM64-Emulationsebene. Weitere Informationen finden Sie unter [Ausführen von 32-Bit-Anwendungen.](running-32-bit-applications.md)
+Sie können Win32-basierte Anwendungen auf 64-Bit-Windows mithilfe einer Emulationsebene ausführen. Windows 10 auf ARM enthält eine x86-on-ARM64-Emulationsebene. Weitere Informationen finden Sie unter [Ausführen von 32-Bit-Anwendungen.](running-32-bit-applications.md)
 
 Auf 64-Bit-Windows kann ein 64-Bit-Prozess keine 32-Bit-DLL (Dynamic Link Library) laden. Darüber hinaus kann ein 32-Bit-Prozess keine 64-Bit-DLL laden. 64-Bit-Windows unterstützt jedoch Remoteprozeduraufrufe (RPC) zwischen 64-Bit- und 32-Bit-Prozessen (sowohl auf demselben Computer als auch computerübergreifend). Auf 64-Bit-Windows kann ein Out-of-Process-32-Bit-COM-Server mit einem 64-Bit-Client kommunizieren, und ein Out-of-Process-64-Bit-COM-Server kann mit einem 32-Bit-Client kommunizieren. Wenn Sie also über eine 32-Bit-DLL verfügen, die nicht COM-fähige DLL ist, können Sie sie in einem OUT-of-Process-COM-Server umschließen und COM verwenden, um Aufrufe an einen und aus einem 64-Bit-Prozess zu marshallen.
 

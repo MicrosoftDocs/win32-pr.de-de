@@ -1,5 +1,5 @@
 ---
-description: Gibt die Auflösungseinheiten an. Wird für Bilder mit einem nicht quadratischen Seitenverhältnis verwendet, jedoch ohne sinnvolle absolute Dimensionen. 1 = Keine absolute Maßeinheit. 2 = Zoll. 3 = Zentimeter. Der Standardwert ist 2 (Zoll).
+description: Gibt die Auflösungseinheiten an. Wird für Bilder mit einem nicht quadratischen Seitenverhältnis verwendet, jedoch ohne sinnvolle absolute Dimensionen. 1 = Keine absolute Maßeinheit. 2 = Zoll. 3 = Beschn. Der Standardwert ist 2 (Zoll).
 ms.assetid: ff10ed8a-d73b-4d9b-b224-9ecfcc37d5af
 title: System.Image.ResolutionUnit
 ms.topic: article
@@ -13,7 +13,7 @@ ms.locfileid: "118726498"
 ---
 # <a name="systemimageresolutionunit"></a>System.Image.ResolutionUnit
 
-Gibt die Auflösungseinheiten an. Wird für Bilder mit einem nicht quadratischen Seitenverhältnis verwendet, jedoch ohne sinnvolle absolute Dimensionen. 1 = Keine absolute Maßeinheit. 2 = Zoll. 3 = Zentimeter. Der Standardwert ist 2 (Zoll).
+Gibt die Auflösungseinheiten an. Wird für Bilder mit einem nicht quadratischen Seitenverhältnis verwendet, jedoch ohne sinnvolle absolute Dimensionen. 1 = Keine absolute Maßeinheit. 2 = Zoll. 3 = Beschn. Der Standardwert ist 2 (Zoll).
 
 ## <a name="windows-10-version-1703-windows-10-version-1607-windows-10-version-1511-windows-10-version-1507-windows-81-windows-8-windows-7-windows-vista"></a>Windows 10, Version 1703, Windows 10, Version 1607, Windows 10, Version 1511, Windows 10, Version 1507, Windows 8.1, Windows 8, Windows 7, Windows Vista
 

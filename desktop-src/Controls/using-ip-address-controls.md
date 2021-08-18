@@ -19,9 +19,9 @@ Die Codebeispiele in diesem Abschnitt veranschaulichen das Ausführen von Aufgab
 
 
 
-| Thema                                                                              | BESCHREIBUNG                                                                            |
+| Thema                                                                              | Beschreibung                                                                            |
 |------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------|
-| [Erstellen eines IP-Adresssteuer steuerelements](create-an-ip-address-control.md)<br/> | In diesem Thema wird veranschaulicht, wie eine Instanz eines IP-Adresssteuer steuerelements erstellt wird.<br/> |
+| [Erstellen eines IP-Adresssteuer steuerelements](create-an-ip-address-control.md)<br/> | In diesem Thema wird veranschaulicht, wie sie eine Instanz eines IP-Adresssteuer steuerelements erstellen.<br/> |
 
 
 

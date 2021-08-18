@@ -16,7 +16,7 @@ ms.locfileid: "118694563"
 ---
 # <a name="example-code-for-binding-to-the-users-container"></a>Beispielcode für die Bindung an den Container des Benutzers
 
-Das folgende C++-Codebeispiel bindet an den Benutzercontainer in der aktuellen Domäne und gibt die Schnittstelle und [**IADsContainer**](/windows/desktop/api/iads/nn-iads-iadscontainer) für den Container zurück. Weitere Informationen zum Binden an bekannte Objekte finden Sie unter [Binden an Well-Known Objekte mithilfe von WKGUID.](binding-to-well-known-objects-using-wkguid.md)
+Das folgende C++-Codebeispiel bindet an den Benutzercontainer in der aktuellen Domäne und gibt die Schnittstelle und [**IADsContainer**](/windows/desktop/api/iads/nn-iads-iadscontainer) für den Container zurück. Weitere Informationen zum Binden an bekannte Objekte finden Sie unter [Binding to Well-Known Objects Using WKGUID (Binden an Well-Known-Objekte mithilfe von WKGUID).](binding-to-well-known-objects-using-wkguid.md)
 
 
 ```C++

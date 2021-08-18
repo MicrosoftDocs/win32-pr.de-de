@@ -42,7 +42,7 @@ library | coclass lib-or-coclassname
 *Attributliste* 
 </dt> <dd>
 
-Gibt null oder mehr Attribute an, die für die Bibliothek [**oder**](library.md) [**coclass-Anweisung gelten.**](coclass.md) Trennen Sie mehrere Attribute durch Kommas.
+Gibt null oder mehr Attribute an, die für die Bibliothek oder [**coclass-Anweisung gelten.**](coclass.md) [](library.md) Trennen Sie mehrere Attribute durch Kommas.
 
 </dd> <dt>
 

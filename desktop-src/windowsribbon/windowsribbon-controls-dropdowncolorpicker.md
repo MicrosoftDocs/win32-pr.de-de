@@ -28,7 +28,7 @@ Durch das Emulieren der Darstellung und Funktionalität der Microsoft Office Far
 
 ## <a name="markup"></a>Markup
 
-Wie alle Menübandsteuerelemente auch, wird die Drop-Down Farbwähler einfach implementiert und durch Markup angepasst. Das Framework stellt eine Reihe von Elementattributen für die Drop-Down Farbwähler bereit, um verschiedene Funktionalitätsebenen verfügbar zu machen. In der folgenden Tabelle sind die Drop-Down Farbwähler Attribute aufgeführt.
+Wie alle Menübandsteuerelemente kann die Drop-Down Farbwähler problemlos über Markup implementiert und angepasst werden. Das Framework stellt eine Reihe von Elementattributen für die Drop-Down Farbwähler bereit, um verschiedene Funktionalitätsebenen verfügbar zu machen. In der folgenden Tabelle sind die Drop-Down Farbwähler Attribute aufgeführt.
 
 
 
@@ -109,7 +109,7 @@ Die folgenden Screenshots veranschaulichen die Standardlayouts Drop-Down Farbwä
 
  
 
-Das grundlegende Markup, das für jeden Drop-Down Farbwähler Erforderlich ist, wird in den folgenden Beispielen veranschaulicht:
+Das grundlegende Markup, das für jeden Drop-Down Farbwähler Typ erforderlich ist, wird in den folgenden Beispielen veranschaulicht:
 
 > [!Note]  
 > Der Drop-Down Farbwähler ist ein gültiges [Button-Steuerelement](windowsribbon-controls-button.md) in einer [**SizeDefinition-Vorlage.**](windowsribbon-element-sizedefinition.md)
@@ -283,7 +283,7 @@ Die <a href="/windows/win32/gdi/colorref">COLORREF-Werte</a> aus den ursprüngli
 <td>Definiert ein Zeichenfolgenarray mit QuickInfos für Farbmuster für das <code>StandardColors</code> Raster.<br/> Jede Drop-Down Farbwähler <em>ColorTemplate</em> enthält ein <code>StandardColors</code> Raster. <br/>
 <blockquote>
 [!Note]<br />
-Es werden nur die Tooltipps verwendet, die zum Beschriften der im Raster angezeigten <code>StandardColors</code> Farbuhren erforderlich sind. Wenn weniger Bezeichnungen angegeben werden als die Anzahl der Überwachten im Raster, wird ein Standardwert für die <code>StandardColors</code> zurückgestellten Überwachten bereitgestellt.
+Es werden nur die Tooltipps verwendet, die zum Beschriften der im Raster angezeigten <code>StandardColors</code> Farbanzeigen erforderlich sind. Wenn weniger Bezeichnungen angegeben werden als die Anzahl der Überwachten im Raster, wird ein Standardwert für die <code>StandardColors</code> zurückgestellten Überwachten bereitgestellt.
 </blockquote>
 <br/></td>
 <td>Unterstützt <a href="/windows/desktop/api/uiribbon/nf-uiribbon-iuiframework-getuicommandproperty"><strong>IUIFramework::GetUICommandProperty</strong></a> und <a href="/windows/desktop/api/uiribbon/nf-uiribbon-iuiframework-setuicommandproperty"><strong>IUIFramework::SetUICommandProperty.</strong></a></td>
@@ -303,7 +303,7 @@ Die <a href="/windows/win32/gdi/colorref">COLORREF-Werte</a> aus den <em>anfäng
 <td>Definiert das Zeichenfolgenarray mit QuickInfos für Farbmuster für das <code>ThemeColors</code> Raster.<br/> Nur gültig, <em>wenn ColorTemplate</em> über den Wert <code>ThemeColors</code> verfügt. <br/>
 <blockquote>
 [!Note]<br />
-Es werden nur die Tooltipps verwendet, die zum Beschriften der im Raster angezeigten <code>ThemeColors</code> Farbuhren erforderlich sind. Wenn weniger Bezeichnungen angegeben werden als die Anzahl der Überwachten im Raster, wird ein Standardwert für die <code>ThemeColors</code> zurückgestellten Überwachten bereitgestellt.
+Es werden nur die Tooltipps verwendet, die zum Beschriften der im Raster angezeigten <code>ThemeColors</code> Farbanzeigen erforderlich sind. Wenn weniger Bezeichnungen angegeben werden als die Anzahl der Überwachten im Raster, wird ein Standardwert für die <code>ThemeColors</code> zurückgestellten Überwachten bereitgestellt.
 </blockquote>
 <br/></td>
 <td>Unterstützt <a href="/windows/desktop/api/uiribbon/nf-uiribbon-iuiframework-getuicommandproperty"><strong>IUIFramework::GetUICommandProperty</strong></a> und <a href="/windows/desktop/api/uiribbon/nf-uiribbon-iuiframework-setuicommandproperty"><strong>IUIFramework::SetUICommandProperty.</strong></a></td>
@@ -394,7 +394,7 @@ STDMETHODIMP DropDownColorPickerHandler::UpdateProperty(
 
 
 
-Im folgenden Beispiel wird eine Implementierung der [**IUICommandHandler::Execute-Methode**](/windows/desktop/api/uiribbon/nf-uiribbon-iuicommandhandler-execute) veranschaulicht, die die Drop-Down Farbwähler für die Menübandanwendung verfügbar macht.
+Im folgenden Beispiel wird eine Implementierung der [**IUICommandHandler::Execute-Methode**](/windows/desktop/api/uiribbon/nf-uiribbon-iuicommandhandler-execute) veranschaulicht, die die Drop-Down Farbwähler der Menübandanwendung verfügbar macht.
 
 
 ```C++

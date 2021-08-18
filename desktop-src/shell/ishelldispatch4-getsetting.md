@@ -131,7 +131,7 @@ Wird nicht verwendet.
 
 </dt> <dd>
 
-Der Status des Symbols, der in der Windows Explorer-Listenansicht angezeigt wird. Wenn diese Option aktiv ist, werden in der Listenansicht keine Symbole angezeigt.
+Der Status des Symbols, der in der Listenansicht Windows Explorer angezeigt wird. Wenn diese Option aktiv ist, werden in der Listenansicht keine Symbole angezeigt.
 
 </dd> <dt>
 
@@ -285,7 +285,7 @@ Der Status der Option **Geschützte Betriebssystemdateien ausblenden.**
 
 </dt> <dd>
 
-Der Status der Option **Ausgeblendete Dateien und Ordner.** In Windows Vista und höher entspricht dies SSF \_ SHOWALLOBJECTS. In Versionen von Windows vor Windows Vista bezieht sich dieser Wert auf den Status der Option **Nicht ausgeblendete Dateien und Ordner anzeigen.**
+Der Status der Option **Ausgeblendete Dateien und Ordner.** In Windows Vista und höher entspricht dies SSF \_ SHOWALLOBJECTS. In Versionen von Windows vor Windows Vista bezieht sich dieser Wert auf den Status der Option **Ausgeblendete Dateien und Ordner nicht anzeigen.**
 
 </dd> <dt>
 

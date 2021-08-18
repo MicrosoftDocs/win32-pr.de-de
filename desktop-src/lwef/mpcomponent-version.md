@@ -1,10 +1,10 @@
 ---
-title: MPCOMPONENT_VERSION Struktur (mpclient. h)
-description: Versions-und Aktualisierungszeit für eine einzelne Komponente.
+title: MPCOMPONENT_VERSION -Struktur (MpClient.h)
+description: Versions- und Aktualisierungszeit für eine einzelne Komponente.
 ms.assetid: 43468230-EE13-4630-8C09-F8DF983EF748
 keywords:
-- MPCOMPONENT_VERSION Struktur Funktionen der Legacy-Windows-Umgebung
-- PMPCOMPONENT_VERSION Struktur Zeiger Legacy-Windows-Umgebungs Features
+- MPCOMPONENT_VERSION struktur Legacy Windows Umgebungsfeatures
+- PMPCOMPONENT_VERSION strukturzeiger Legacy-Windows-Umgebungsfeatures
 topic_type:
 - apiref
 api_name:
@@ -15,16 +15,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 9a1d4b5011bb185dc8ca0892e0a0e65bc4a7d8b2
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 6092fe2f3ec7ba921b1ef3adfc9355feeeae67f2381836056f2af65b276921cb
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "103949824"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118976070"
 ---
-# <a name="mpcomponent_version-structure"></a>Mpcomponent- \_ Versions Struktur
+# <a name="mpcomponent_version-structure"></a>\_MPCOMPONENT-VERSIONSstruktur
 
-Versions-und Aktualisierungszeit für eine einzelne Komponente.
+Versions- und Aktualisierungszeit für eine einzelne Komponente.
 
 ## <a name="syntax"></a>Syntax
 
@@ -49,18 +49,18 @@ Typ: **ULONGLONG**
 
 </dd> <dd>
 
-Versions Feld. Jedes **Wort** stellt die Haupt-, neben Version, Build und Revision dar.
+Versionsfeld. Jedes **WORD stellt** Haupt-, Neben-, Build- und Revisionsversionen dar.
 
 </dd> <dt>
 
-**Update time**
+**UpdateTime**
 </dt> <dd>
 
-Typ: **ularge \_ Integer**
+Typ: **ULARGE \_ INTEGER**
 
 </dd> <dd>
 
-Der Zeitpunkt der letzten Aktualisierung der Komponente im **FILETIME** -Format.
+Zeitpunkt der letzten Aktualisierung der Komponente im **FILETIME-Format.**
 
 </dd> </dl>
 
@@ -70,9 +70,9 @@ Der Zeitpunkt der letzten Aktualisierung der Komponente im **FILETIME** -Format.
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows 8 \[ -Desktop-Apps\]<br/>                                            |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2012 \[ -Desktop-Apps\]<br/>                                  |
-| Header<br/>                   | <dl> <dt>Mpclient. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | \[Windows 8 Nur Desktop-Apps\]<br/>                                            |
+| Unterstützte Mindestversion (Server)<br/> | \[Windows Server 2012 Nur Desktop-Apps\]<br/>                                  |
+| Header<br/>                   | <dl> <dt>MpClient.h</dt> </dl> |
 
 
 

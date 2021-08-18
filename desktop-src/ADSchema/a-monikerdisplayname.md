@@ -4,7 +4,7 @@ description: Der Anzeigename für einen Moniker.
 ms.assetid: 6c352e25-5834-414d-af3f-c4a17b6bee7d
 ms.tgt_platform: multiple
 keywords:
-- Ad-Schema des Moniker-Display-Name-Attributs
+- Moniker-Display-Name-Attribut AD-Schema
 - monikerDisplayName-Attribut AD-Schema
 topic_type:
 - apiref
@@ -29,13 +29,13 @@ Der Anzeigename für einen Moniker.
 
 | Eingabe | Wert |
 |-------------------|---------------------------------------------|
-| CN                | Moniker-Display-Name                        |
+| CN                | Moniker-Anzeigename                        |
 | Ldap-Anzeigename | monikerDisplayName                          |
 | Size              | \-                                          |
 | Aktualisieren von Berechtigungen  | \-                                          |
 | Updatehäufigkeit  | \-                                          |
 | Attribute-Id      | 1.2.840.113556.1.4.83                       |
-| System-Id-Guid    | bf9679c8-0de6-11d0-a285-00aa003049e2        |
+| System-ID-GUID    | bf9679c8-0de6-11d0-a285-00aa003049e2        |
 | Syntax            | [**String(Unicode)**](s-string-unicode.md) |
 
 
@@ -58,7 +58,7 @@ Der Anzeigename für einen Moniker.
 | Link-ID                | \-                                                                                                      |
 | MAPI-Id                | \-                                                                                                      |
 | System-Only            | Falsch                                                                                                   |
-| Is-Single-Valued       | Falsch                                                                                                   |
+| Ist einwertig       | Falsch                                                                                                   |
 | Ist indiziert             | Falsch                                                                                                   |
 | Im globalen Katalog      | Falsch                                                                                                   |
 | NT-Security-Descriptor | O:BAG:BAD:S:                                                                                            |
@@ -66,7 +66,7 @@ Der Anzeigename für einen Moniker.
 | Range-Upper            | \-                                                                                                      |
 | Search-Flags           | 0x00000000                                                                                              |
 | System-Flags           | 0x00000010                                                                                              |
-| In verwendete Klassen        | [**Com-Connection-Point**](c-comconnectionpoint.md)<br/> [**Storage**](c-storage.md)<br/> |
+| In verwendete Klassen        | [**Com-Connection Point**](c-comconnectionpoint.md)<br/> [**Storage**](c-storage.md)<br/> |
 
 
 
@@ -79,7 +79,7 @@ Der Anzeigename für einen Moniker.
 | Link-ID                | \-                                                                                                      |
 | MAPI-Id                | \-                                                                                                      |
 | System-Only            | Falsch                                                                                                   |
-| Is-Single-Valued       | Falsch                                                                                                   |
+| Ist einwertig       | Falsch                                                                                                   |
 | Ist indiziert             | Falsch                                                                                                   |
 | Im globalen Katalog      | Falsch                                                                                                   |
 | NT-Security-Descriptor | O:BAG:BAD:S:                                                                                            |
@@ -87,7 +87,7 @@ Der Anzeigename für einen Moniker.
 | Range-Upper            | \-                                                                                                      |
 | Search-Flags           | 0x00000000                                                                                              |
 | System-Flags           | 0x00000010                                                                                              |
-| In verwendete Klassen        | [**Com-Connection-Point**](c-comconnectionpoint.md)<br/> [**Storage**](c-storage.md)<br/> |
+| In verwendete Klassen        | [**Com-Connection Point**](c-comconnectionpoint.md)<br/> [**Storage**](c-storage.md)<br/> |
 
 
 
@@ -100,7 +100,7 @@ Der Anzeigename für einen Moniker.
 | Link-ID                | \-                                                                                                      |
 | MAPI-Id                | \-                                                                                                      |
 | System-Only            | Falsch                                                                                                   |
-| Is-Single-Valued       | Falsch                                                                                                   |
+| Ist einwertig       | Falsch                                                                                                   |
 | Ist indiziert             | Falsch                                                                                                   |
 | Im globalen Katalog      | Falsch                                                                                                   |
 | NT-Security-Descriptor | O:BAG:BAD:S:                                                                                            |
@@ -108,7 +108,7 @@ Der Anzeigename für einen Moniker.
 | Range-Upper            | \-                                                                                                      |
 | Search-Flags           | 0x00000000                                                                                              |
 | System-Flags           | 0x00000010                                                                                              |
-| In verwendete Klassen        | [**Com-Connection-Point**](c-comconnectionpoint.md)<br/> [**Storage**](c-storage.md)<br/> |
+| In verwendete Klassen        | [**Com-Connection Point**](c-comconnectionpoint.md)<br/> [**Storage**](c-storage.md)<br/> |
 
 
 

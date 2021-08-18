@@ -103,7 +103,7 @@ Der SHA muss [**Initialize aufrufen,**](inapsystemhealthagentbinding-initialize-
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 

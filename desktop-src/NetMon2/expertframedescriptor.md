@@ -1,5 +1,5 @@
 ---
-description: Die EXPERTFRAMEDESCRIPTOR-Struktur enthält Informationen zu einem Frame. Wenn der Experte die ExpertGetFrame-Funktion erfolgreich aufruft, übergibt Netzwerkmonitor die EXPERTFRAMEDESCRIPTOR-Struktur an den Experten zurück.
+description: Die EXPERTFRAMEDESCRIPTOR-Struktur enthält Informationen zu einem Frame. Wenn der Experte die ExpertGetFrame-Funktion erfolgreich aufruft, Netzwerkmonitor die EXPERTFRAMEDESCRIPTOR-Struktur an den Experten zurück.
 ms.assetid: 6cf99498-3cf9-46da-b6a0-3012229f6908
 title: EXPERTFRAMEDESCRIPTOR-Struktur (Netmon.h)
 ms.topic: reference
@@ -22,7 +22,7 @@ ms.locfileid: "118939027"
 ---
 # <a name="expertframedescriptor-structure"></a>EXPERTFRAMEDESCRIPTOR-Struktur
 
-Die **EXPERTFRAMEDESCRIPTOR-Struktur** enthält Informationen zu einem Frame. Wenn der Experte die [**ExpertGetFrame-Funktion**](expertgetframe.md) erfolgreich aufruft, übergibt Netzwerkmonitor die **EXPERTFRAMEDESCRIPTOR-Struktur** an den Experten zurück.
+Die **EXPERTFRAMEDESCRIPTOR-Struktur** enthält Informationen zu einem Frame. Wenn der Experte die [**ExpertGetFrame-Funktion**](expertgetframe.md) erfolgreich aufruft, Netzwerkmonitor **die EXPERTFRAMEDESCRIPTOR-Struktur** an den Experten zurück.
 
 ## <a name="syntax"></a>Syntax
 
@@ -46,7 +46,7 @@ typedef struct {
 **FrameNumber**
 </dt> <dd>
 
-Nummer eines angegebenen Frames.
+Die Nummer eines angegebenen Frames.
 
 </dd> <dt>
 
@@ -60,7 +60,7 @@ Handle für einen Frame.
 **pFrame**
 </dt> <dd>
 
-Zeiger auf einen rohen Frame.
+Zeiger auf einen unformatten Frame.
 
 </dd> <dt>
 
@@ -74,15 +74,15 @@ Tabelle, die angibt, wo jeder Parser den Anfang der Daten identifiziert.
 **lpPropertyTable**
 </dt> <dd>
 
-Tabelle der Frameeigenschaften, die der Parser identifiziert.
+Tabelle mit Frameeigenschaften, die der Parser identifiziert.
 
 </dd> </dl>
 
 ## <a name="remarks"></a>Hinweise
 
-Wenn der Experte beim Aufrufen von ExpertGetFrame FLAGS \_ ATTACH PROPERTIES angibt, ist der \_ **szPropertyText-Member** in jeder [**PROPERTYINST-Struktur**](propertyinst.md) **NULL.** [](expertgetframe.md)
+Wenn der Experte FLAGS ATTACH PROPERTIES beim Aufrufen von \_ \_ [**ExpertGetFrame**](expertgetframe.md)angibt, ist der **szPropertyText-Member** in jeder [**PROPERTYINST-Struktur**](propertyinst.md) **NULL.**
 
-Wenn der Experte beim \_ Aufrufen der ExpertGetFrame-Funktion keine FLAGS ATTACH PROPERTIES angibt, \_ ist der **lpPropertyTable-Member** bei der Rückgabe **NULL.** [](expertgetframe.md)
+Wenn der Experte beim Aufrufen der ExpertGetFrame-Funktion keine FLAGS ATTACH PROPERTIES angibt, ist der \_ \_ **lpPropertyTable-Member** **bei** der Rückgabe NULL. [](expertgetframe.md)
 
 ## <a name="requirements"></a>Anforderungen
 

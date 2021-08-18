@@ -1,36 +1,36 @@
 ---
-description: Gibt die Video Codierungs Bitrate für die Präsentation in Bits pro Sekunde an. Dieses Attribut gilt für Präsentations Deskriptoren.
+description: Gibt die Videocodierungsbitrate für die Präsentation in Bits pro Sekunde an. Dieses Attribut gilt für Präsentationsdeskriptoren.
 ms.assetid: 0fe8cf64-2256-4e48-9853-2c734f97f3c7
-title: MF_PD_VIDEO_ENCODING_BITRATE-Attribut (mspdl. h)
+title: MF_PD_VIDEO_ENCODING_BITRATE-Attribut (Mfidl.h)
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 477d0954b4db8fa11c1540153c096e42f6d255b3
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: d8de8c7e250ab446714a3d9afb2c7d07e0d3ac76a671bb50dcd46785368a77cd
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106355400"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119102906"
 ---
-# <a name="mf_pd_video_encoding_bitrate-attribute"></a>MF \_ PD- \_ Video \_ Codierung- \_ Bitrate-Attribut
+# <a name="mf_pd_video_encoding_bitrate-attribute"></a>MF \_ PD VIDEO ENCODING \_ \_ \_ BITRATE-Attribut
 
-Gibt die Video Codierungs Bitrate für die Präsentation in Bits pro Sekunde an. Dieses Attribut gilt für Präsentations Deskriptoren.
+Gibt die Videocodierungsbitrate für die Präsentation in Bits pro Sekunde an. Dieses Attribut gilt für Präsentationsdeskriptoren.
 
 ## <a name="data-type"></a>Datentyp
 
 **UINT32**
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Dieses Attribut ist optional. Einige Formate verfügen über komplexere Codierungs Schemas, die nicht mithilfe dieses Attributs zusammengefasst werden können. Bei ASF-Dateien (Advanced Systems Format) beschreiben die folgenden Attribute kollektiv die Codierungs Bitrate:
+Dieses Attribut ist optional. Einige Formate verfügen über komplexere Codierungsschemas, die nicht mit diesem Attribut zusammengefasst werden können. Für ASF-Dateien (Advanced Systems Format) beschreiben die folgenden Attribute zusammen die Codierungsbitrate:
 
--   [**MF \_ PD \_ ASF \_ File Properties \_ Max. \_ Bitrate**](mf-pd-asf-fileproperties-max-bitrate-attribute.md)
--   [**MF SD-Datei (in Bytes) \_ \_ \_ \_ \_ \_**](mf-sd-asf-extstrmprop-avg-data-bitrate-attribute.md)
--   [**MF \_ SD \_ , \_ \_ maximal zulässige \_ Daten \_ Bitrate**](mf-sd-asf-extstrmprop-max-data-bitrate-attribute.md)
--   [**MF \_ SD, \_ ASF \_ streambitraten \_ Bitrate**](mf-sd-asf-streambitrates-bitrate-attribute.md)
+-   [**MF \_ PD \_ ASF \_ FILEPROPERTIES \_ MAX \_ BITRATE**](mf-pd-asf-fileproperties-max-bitrate-attribute.md)
+-   [**MF \_ SD \_ ASF \_ EXTSTRMPROP \_ AVG \_ DATA \_ BITRATE**](mf-sd-asf-extstrmprop-avg-data-bitrate-attribute.md)
+-   [**MF \_ SD \_ ASF \_ EXTSTRMPROP \_ MAX \_ DATA \_ BITRATE**](mf-sd-asf-extstrmprop-max-data-bitrate-attribute.md)
+-   [**MF \_ SD \_ ASF \_ STREAMBITRATES \_ BITRATE**](mf-sd-asf-streambitrates-bitrate-attribute.md)
 
 Formate von Drittanbietern können andere benutzerdefinierte Attribute verwenden.
 
-Die GUID-Konstante für dieses Attribut wird aus "mfuuid. lib" exportiert.
+Die GUID-Konstante für dieses Attribut wird aus mfuuid.lib exportiert.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -38,29 +38,29 @@ Die GUID-Konstante für dieses Attribut wird aus "mfuuid. lib" exportiert.
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Windows Vista \[ -Desktop-Apps \| UWP-apps\]<br/>                              |
-| Unterstützte Mindestversion (Server)<br/> | Windows Server 2008 \[ -Desktop-Apps \| UWP-apps\]<br/>                        |
-| Header<br/>                   | <dl> <dt>Mspdl. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Vista-Desktop-Apps \| UWP-Apps\]<br/>                              |
+| Unterstützte Mindestversion (Server)<br/> | Windows UWP-Apps für Server \[ 2008-Desktop-Apps \|\]<br/>                        |
+| Header<br/>                   | <dl> <dt>Mfidl.h</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
 [Alphabetische Liste der Media Foundation Attribute](alphabetical-list-of-media-foundation-attributes.md)
 </dt> <dt>
 
-[**Imfattributes:: GetUINT32**](/windows/desktop/api/mfobjects/nf-mfobjects-imfattributes-getuint32)
+[**ATTRIBUTEAttributes::GetUINT32**](/windows/desktop/api/mfobjects/nf-mfobjects-imfattributes-getuint32)
 </dt> <dt>
 
-[**Imfattributes:: SetUINT32**](/windows/desktop/api/mfobjects/nf-mfobjects-imfattributes-setuint32)
+[**DENKattribute::SetUINT32**](/windows/desktop/api/mfobjects/nf-mfobjects-imfattributes-setuint32)
 </dt> <dt>
 
-[**IMF presentationdescriptor**](/windows/desktop/api/mfidl/nn-mfidl-imfpresentationdescriptor)
+[**PRESENTPresentationDescriptor**](/windows/desktop/api/mfidl/nn-mfidl-imfpresentationdescriptor)
 </dt> <dt>
 
-[Präsentations deskriptorattribute](presentation-descriptor-attributes.md)
+[Darstellungsdeskriptorattribute](presentation-descriptor-attributes.md)
 </dt> </dl>
 
  

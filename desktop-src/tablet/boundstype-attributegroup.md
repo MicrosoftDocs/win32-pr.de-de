@@ -4,12 +4,12 @@ ms.assetid: 7841aa65-fb35-4909-a34e-3c883555f764
 title: BoundsType-Attributgruppe
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 78c51fcb9bc0041bbc030f2c67e434a964212562
-ms.sourcegitcommit: 5a78723ad484955ac91a23cf282cf9c176c1eab6
+ms.openlocfilehash: aba91269660875e55b92797609969ebee38d221016914d9473cd5eddd245cfc7
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/22/2021
-ms.locfileid: "114436507"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118967769"
 ---
 # <a name="boundstype-attribute-group"></a>BoundsType-Attributgruppe
 
@@ -34,7 +34,7 @@ Keine
 
 
 
-| attribute  | type                      | Erforderlich | BESCHREIBUNG                                                                                        | PossibleValues                       |
+| attribute  | type                      | Erforderlich | Beschreibung                                                                                        | PossibleValues                       |
 |------------|---------------------------|----------|----------------------------------------------------------------------------------------------------|--------------------------------------|
 | **Left**   | **xs:integer**            | Erforderlich | Der Abstand zwischen dem Ursprung und dem äußersten linken Punkt im Begrenzungsfeld für das Element.<br/> | Eine beliebige ganze Zahl.<br/>              |
 | **Top**    | **xs:integer**            | Erforderlich | Der Abstand zwischen dem Ursprung und dem obersten Punkt im Begrenzungsfeld für das Element.<br/>  | Eine beliebige ganze Zahl.<br/>              |

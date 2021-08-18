@@ -1,5 +1,5 @@
 ---
-description: 'Weitere Informationen zu: Markierte, feste und variable Spalten'
+description: 'Weitere Informationen finden Sie unter: Markierte, feste und variable Spalten'
 title: Markierte, feste und variable Spalten
 TOCTitle: Tagged, Fixed and Variable Columns
 ms:assetid: 78a905b8-71a9-4b2e-b9f2-c81bfe3aef8e
@@ -21,9 +21,9 @@ _**Gilt für:** Windows | Windows Server_
 
 ## <a name="tagged-fixed-and-variable-columns"></a>Markierte, feste und variable Spalten
 
-Markierte Spalten, Spalten variabler Länge und fester Länge sind die primären Spaltentypen, die von ESE unterstützt werden. Markierte Spalten sind nicht in einem Datensatz vorhanden, es sei denn, daten werden in der Spalte gespeichert und können eine feste oder variable Länge aufweisen. Markierte Spalten können auch mehr als einen Wert in einem einzelnen Datensatz enthalten. Feste Spalten benötigen in jeder Zeile die gleiche Menge an Speicherplatz und benötigen 1 Bit, um den NULL-Wert darzustellen. Spalten variabler Länge erfordern 2 Bytes, um die Größe und den NULL-Wert darzustellen, und belegen eine variable Menge an Speicherplatz in jedem Datensatz. Weitere Informationen zu den markierten und festen Spalten finden Sie unter der option Jet_bitColumnTagged und Jet_bitColumnFixed im **grbit-Member** der [JET_COLUMNDEF](./jet-columndef-structure.md) Struktur, die im Aufruf von [JetAddColumn](./jetaddcolumn-function.md)verwendet wird.
+Markierte Spalten, feste Spalten und Spalten variabler Länge sind die primären Spaltentypen, die von ESE unterstützt werden. Markierte Spalten sind in einem Datensatz nur vorhanden, wenn Daten in der Spalte gespeichert werden und eine feste oder variable Länge haben können. Markierte Spalten können auch mehr als einen Wert in einem einzelnen Datensatz enthalten. Feste Spalten nehmen dieselbe Menge an Speicherplatz in jeder Zeile an und erfordern 1 Bit, um den NULL-Wert darstellen zu können. Spalten variabler Länge erfordern 2 Bytes, um die Größe und den NULL-Wert darstellen zu können, und belegen eine variable Menge an Speicherplatz in jedem Datensatz. Weitere Informationen zu den markierten und festen Spalten finden Sie unter der Option Jet_bitColumnTagged und Jet_bitColumnFixed im **grbit-Member** der [JET_COLUMNDEF-Struktur,](./jet-columndef-structure.md) der im Aufruf von [JetAddColumn verwendet wird.](./jetaddcolumn-function.md)
 
-Spalten variabler Länge werden durch den Spaltentyp bestimmt, der im *coltyp-Parameter* beim Aufruf von [JetAddColumn](./jetaddcolumn-function.md)festgelegt wird. Die folgenden Spaltentypen können eine feste oder variable Länge aufweisen, je nachdem, ob die option Jet_bitColumnFixed festgelegt ist:
+Spalten variabler Länge werden durch den Spaltentyp bestimmt, der im *Coltyp-Parameter* im Aufruf von [JetAddColumn festgelegt wird.](./jetaddcolumn-function.md) Die folgenden Spaltentypen können eine feste oder variable Länge haben, je nachdem, ob die Jet_bitColumnFixed festgelegt ist:
 
   - JET_coltypBinary
 
@@ -33,6 +33,6 @@ Spalten variabler Länge werden durch den Spaltentyp bestimmt, der im *coltyp-Pa
 
   - JET_coltypLongText
 
-Im Allgemeinen werden Daten im Datensatz mit dem festen Bereich zuerst, dem Variablenbereich als nächstem und dem zuletzt gespeicherten markierten Bereich gespeichert. Das folgende Diagramm zeigt, wie die Datensätze in der Tabelle gespeichert werden. Wie im Diagramm dargestellt, kann der markierte Bereich Spalten mit mehreren Werten enthalten.
+Im Allgemeinen werden die Daten im Datensatz zuerst mit dem festen Bereich, dem variablen Bereich next und dem zuletzt gespeicherten markierten Bereich gespeichert. Das folgende Diagramm zeigt, wie die Datensätze in der Tabelle gespeichert werden. Wie im Diagramm dargestellt, kann der markierte Bereich Spalten mit mehreren Werten enthalten.
 
 ![ESE_Documentation_TagFixVar](images/Gg269304.ESE_Documentation_TagFixVar(EXCHG.10).gif "ESE_Documentation_TagFixVar")

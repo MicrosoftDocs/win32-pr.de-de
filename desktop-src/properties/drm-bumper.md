@@ -4,12 +4,12 @@ ms.assetid: c131cf72-8b01-4430-94d2-13b7f2a32aff
 title: DRM
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: d88b8755ee1d77cce75b3e33a20f56b75505fbd6
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: c699043eba9790abf1313205ceec2db164739995c68395325875bc23f7657d3c
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106349954"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118971039"
 ---
 # <a name="drm"></a>DRM
 
@@ -17,14 +17,14 @@ ms.locfileid: "106349954"
 
 
 
-| Thema                                                                                | BESCHREIBUNG                                                              |
+| Thema                                                                                | Beschreibung                                                              |
 |--------------------------------------------------------------------------------------|--------------------------------------------------------------------------|
-| [System. DRM. dateplayablaufen](./props-system-drm-dateplayexpires.md)<br/> | Gibt an, wann die Wiedergabe Rechte abläuft.<br/>                            |
-| [System. DRM. dateplaystarts](./props-system-drm-dateplaystarts.md)<br/>   | Gibt an, wann die Wiedergabe Rechte beginnen.<br/>                             |
-| [System. DRM. Description](./props-system-drm-description.md)<br/>         | Zeigt die Beschreibung für Digital Rights Management (DRM) an.<br/> |
-| [System. DRM. isdeaktiviert](props-system-drm-isdisabled.md)<br/>                  | Gibt an, ob die Mediendatei von DRM deaktiviert wurde.<br/>    |
-| [System. DRM. IsProtected](./props-system-drm-isprotected.md)<br/>         | Gibt an, ob die Datei unter DRM geschützt ist.<br/>            |
-| [System. DRM. playcount](./props-system-drm-playcount.md)<br/>             | Gibt an, wie oft die Datei wiedergegeben wurde.<br/>       |
+| [System.DRM.DatePlayExpires](./props-system-drm-dateplayexpires.md)<br/> | Gibt an, wann Wiedergaberechte ablaufen.<br/>                            |
+| [System.DRM.DatePlayStarts](./props-system-drm-dateplaystarts.md)<br/>   | Gibt an, wann Wiedergaberechte beginnen.<br/>                             |
+| [System.DRM.Description](./props-system-drm-description.md)<br/>         | Zeigt die Beschreibung für Digital Rights Management (DRM) an.<br/> |
+| [System.DRM.IsDisabled](props-system-drm-isdisabled.md)<br/>                  | Gibt an, ob die Mediendatei vom DRM deaktiviert wurde.<br/>    |
+| [System.DRM.IsProtected](./props-system-drm-isprotected.md)<br/>         | Gibt an, ob die Datei unter DRM geschützt ist.<br/>            |
+| [System.DRM.PlayCount](./props-system-drm-playcount.md)<br/>             | Gibt an, wie oft die Datei wiedergegeben wurde.<br/>       |
 
 
 

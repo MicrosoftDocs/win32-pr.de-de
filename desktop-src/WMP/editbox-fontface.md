@@ -1,9 +1,9 @@
 ---
-title: EditBox. fontface
-description: Das fontface-Attribut gibt die Schriftart für Text im Bearbeitungsfeld-Steuerelement an oder ruft diese ab.
+title: EDITBOX.fontFace
+description: Das fontFace-Attribut gibt die Schriftart für Text im Bearbeitungsfeld-Steuerelement an oder ruft sie ab.
 ms.assetid: 5fb5e6d2-8535-402e-9ca1-d43e334e94e3
 keywords:
-- EditBox. fontface-Fenster Media Player
+- EDITBOX.fontFace-Windows Media Player
 topic_type:
 - apiref
 api_name:
@@ -12,16 +12,16 @@ api_type:
 - NA
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 49c5794da93821db840a48facbba45540da9249a
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: c3994c9cef1f645dc9c1129876b9144471caf9f608f5911641b180deae437194
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106362064"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118996860"
 ---
-# <a name="editboxfontface"></a>EditBox. fontface
+# <a name="editboxfontface"></a>EDITBOX.fontFace
 
-Das **fontface** -Attribut gibt die Schriftart für Text im Bearbeitungsfeld-Steuerelement an oder ruft diese ab.
+Das **fontFace-Attribut** gibt die Schriftart für Text im Bearbeitungsfeld-Steuerelement an oder ruft sie ab.
 
 ``` syntax
         elementID.fontFace
@@ -29,13 +29,13 @@ Das **fontface** -Attribut gibt die Schriftart für Text im Bearbeitungsfeld-Ste
 
 ## <a name="possible-values"></a>Mögliche Werte
 
-Dieses Attribut ist eine Lese- **/schreibzeichenfolge**.
+Dieses Attribut ist eine Zeichenfolge mit **Lese-/Schreibzugriff.**
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Dieses Attribut kann der Name einer beliebigen gültigen Schriftart sein, die in Windows verfügbar ist. Das Installieren von Schriftarten wird von Windows Media Player nicht unterstützt. Wählen Sie also eine Schriftart aus, die Sie auf dem vorgesehenen System kennen.
+Dieses Attribut kann der Name einer beliebigen gültigen Schriftart sein, die in der Windows. Windows Media Player die Installation von Schriftarten nicht unterstützt, wählen Sie daher eine Schriftart aus, von der Sie wissen, dass sie sich auf dem vorgesehenen System befingt.
 
-Wenn die angegebene **fontface** nicht auf dem System des Benutzers verfügbar ist, wird für das Steuerelement "Bearbeitungsfeld" standardmäßig die Schriftart des Windows-Systems verwendet. Der Standardwert für englischsprachige Systeme ist "Tahoma". Bei internationalen Systemen wird der Standardwert aus einer Ressourcen Datei geladen.
+Wenn das **angegebene fontFace-Steuerelement** auf dem System des Benutzers nicht verfügbar ist, verwendet das Bearbeitungsfeld-Steuerelement standardmäßig die Windows Systemschriftart. Der Standardwert für englischsprachige Systeme ist "Tahoma". Bei internationalen Systemen wird der Standardwert aus einer Ressourcendatei geladen.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -47,17 +47,17 @@ Wenn die angegebene **fontface** nicht auf dem System des Benutzers verfügbar i
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**EditBox-Element**](editbox-element.md)
+[**EDITBOX-Element**](editbox-element.md)
 </dt> <dt>
 
-[**EditBox. FontSize**](editbox-fontsize.md)
+[**EDITBOX.fontSize**](editbox-fontsize.md)
 </dt> <dt>
 
-[**EditBox. FontStyle**](editbox-fontstyle.md)
+[**EDITBOX.fontStyle**](editbox-fontstyle.md)
 </dt> </dl>
 
  

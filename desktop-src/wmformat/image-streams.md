@@ -6,8 +6,8 @@ keywords:
 - Windows Medienformat-SDK, Bildstreams
 - Advanced Systems Format (ASF), Imagestreams
 - ASF (Advanced Systems Format), Imagestreams
-- Windows Medienformat-SDK, Streams
-- Advanced Systems Format (ASF), Streams
+- Windows Medienformat-SDK,Streams
+- Advanced Systems Format (ASF),streams
 - ASF (Advanced Systems Format), Streams
 - Imagestreams, Informationen
 ms.topic: article
@@ -21,9 +21,9 @@ ms.locfileid: "118702864"
 ---
 # <a name="image-streams"></a>Image Streams
 
-Ein Bildstream ist ein spezieller Streamtyp, der Standbilder enthält, die Präsentationszeiten zugewiesen sind. Eine Anwendung kann die Bilder wie gewünscht in einem Bildstream anzeigen, aber die typische Implementierung besteht darin, jedes Bild anzuzeigen, bis das nächste Bild übermittelt wird, z. B. eine Bildschirmpräsentation. Normalerweise wird ein Bildstream in einer Datei mit einem Audiostream codiert, um eine einfache Darstellung von Bildern zu erzeugen, die mit Musik oder Sprache synchronisiert werden.
+Ein Bildstream ist ein spezieller Streamtyp, der noch Bilder enthält, die Präsentationszeiten zugewiesen sind. Eine Anwendung kann die Bilder wie gewünscht in einem Bildstream anzeigen, aber die typische Implementierung besteht in der Anzeige jedes Bilds, bis das nächste Bild übermittelt wird, z. B. eine Diashow. In der Regel wird ein Bildstream in einer Datei mit einem Audiostream codiert, um eine einfache Darstellung von Bildern zu erzeugen, die mit Musik oder Sprache synchronisiert werden.
 
-Bildstreams ähneln Videostreams darin, dass sie aus unkomprimierten Beispielen erstellt werden, die im Rahmen des Dateischreibvorgangs komprimiert werden. Sie ähneln aber auch beliebigen Streams, da Sie eine Bitrate und ein Pufferfenster zuweisen müssen, das für den Inhalt geeignet ist, ohne sich auf codec-zugewiesene Eigenschaften zu verlassen.
+Bildstreams sind wie Videostreams, da sie aus unkomprimierten Beispielen erstellt werden, die im Rahmen des Dateischreibenprozesses komprimiert werden. Sie sind jedoch auch wie beliebige Streams, da Sie dem Inhalt eine Bitrate und ein Pufferfenster zuweisen müssen, ohne codec-zugewiesene Eigenschaften zu verwenden.
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
@@ -35,7 +35,7 @@ Bildstreams ähneln Videostreams darin, dass sie aus unkomprimierten Beispielen 
 [**ASF-Dateifeatures**](asf-file-features.md)
 </dt> <dt>
 
-[**Audio- und Video-Streams**](audio-and-video-streams.md)
+[**Audio- und Streams**](audio-and-video-streams.md)
 </dt> <dt>
 
 [**Schreiben von Streams**](writing-image-streams.md)

@@ -1,6 +1,6 @@
 ---
 title: Zeigerflags
-description: Werte, die im Feld pointerflags der POINTER_INFO Struktur angezeigt werden können.
+description: Werte, die im pointerFlags-Feld der POINTER_INFO-Struktur angezeigt werden können.
 ms.assetid: CC3F8E21-F4FF-495C-922E-A3708D3F2093
 topic_type:
 - apiref
@@ -30,16 +30,16 @@ api_type:
 - HeaderDef
 ms.topic: article
 ms.date: 02/03/2020
-ms.openlocfilehash: 21a4191aa09bcb0cb9fda1a4c9bc011d978e203a
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 0ae56ebfc016b0e4497db7cc998753189ce36a87962c0305962800ad133e8bca
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "103742329"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118482036"
 ---
 # <a name="pointer-flags"></a>Zeigerflags
 
-Werte, die im Feld **pointerflags** der [**POINTER_INFO**](/previous-versions/windows/desktop/api) Struktur angezeigt werden können.
+Werte, die im **pointerFlags-Feld** der [**POINTER_INFO-Struktur**](/previous-versions/windows/desktop/api) angezeigt werden können.
 
 <dl> <dt>
 
@@ -77,9 +77,9 @@ Gibt den Eingang eines neuen Zeigers an.
 
 
 
-Gibt an, dass dieser Zeiger weiterhin vorhanden ist. Wenn dieses Flag nicht festgelegt ist, gibt es an, dass der Zeiger den linken Erkennungsbereich aufweist.
+Gibt an, dass dieser Zeiger weiterhin vorhanden ist. Wenn dieses Flag nicht festgelegt ist, gibt es an, dass der Zeiger über den linken Erkennungsbereich verfügt.
 
-Dieses Flag wird in der Regel nicht festgelegt, wenn ein Mauszeiger den Erkennungsbereich verlässt (**POINTER_FLAG_UPDATE** festgelegt ist) oder wenn ein Zeiger im Kontakt mit einer Fenster Oberfläche den Erkennungsbereich verlässt (**POINTER_FLAG_UP** ist festgelegt).
+Dieses Flag wird in der Regel nicht nur festgelegt, wenn ein zeigerender Zeiger den Erkennungsbereich verlässt **(POINTER_FLAG_UPDATE** festgelegt ist) oder wenn ein Zeiger in Kontakt mit einer Fensteroberfläche den Erkennungsbereich verlässt (**POINTER_FLAG_UP** festgelegt ist).
 
 
 </dt> </dl> </dd> <dt>
@@ -92,7 +92,7 @@ Dieses Flag wird in der Regel nicht festgelegt, wenn ein Mauszeiger den Erkennun
 
 
 
-Gibt an, dass sich dieser Zeiger in Verbindung mit der Digitalisierungs Oberfläche befindet. Wenn dieses Flag nicht festgelegt ist, gibt es einen Mauszeiger an.
+Gibt an, dass dieser Zeiger mit der Digitizeroberfläche in Kontakt steht. Wenn dieses Flag nicht festgelegt ist, gibt es einen Zeigenzeiger an.
 
 
 </dt> </dl> </dd> <dt>
@@ -105,13 +105,13 @@ Gibt an, dass sich dieser Zeiger in Verbindung mit der Digitalisierungs Oberflä
 
 
 
-Gibt eine primäre Aktion an, analog zu einer linken Maustaste.
+Gibt eine primäre Aktion analog zu einer linken Maustaste nach unten an.
 
-Für einen Fingerabdruck wird dieses Flag festgelegt, wenn es sich im Kontakt mit der Digitalisierungs Oberfläche befindet.
+Für einen Touchzeiger ist dieses Flag festgelegt, wenn es mit der Digitizeroberfläche in Kontakt steht.
 
-Bei einem Stift Zeiger wird dieses Flag festgelegt, wenn es sich auf der digitalisiereroberfläche befindet und keine Schaltflächen gedrückt sind.
+Für einen Stiftzeiger ist dieses Flag festgelegt, wenn es mit der Digitizeroberfläche in Kontakt steht und keine Schaltflächen gedrückt werden.
 
-Ein Mauszeiger hat dieses Flag festgelegt, wenn die linke Maustaste gedrückt ist.
+Für einen Mauszeiger ist dieses Flag festgelegt, wenn die linke Maustaste gedrückt ist.
 
 
 </dt> </dl> </dd> <dt>
@@ -124,13 +124,13 @@ Ein Mauszeiger hat dieses Flag festgelegt, wenn die linke Maustaste gedrückt is
 
 
 
-Gibt eine sekundäre Aktion analog zu einer rechten Maustaste an.
+Gibt eine sekundäre Aktion analog zu einer rechten Maustaste nach unten an.
 
-Ein Fingerabdruck verwendet dieses Flag nicht.
+Ein Berührungszeiger verwendet dieses Flag nicht.
 
-Bei einem Stift Zeiger wird dieses Flag festgelegt, wenn es sich im Kontakt mit der Digitalisierungs Oberfläche befindet, auf die die Stift Taste gedrückt wird.
+Für einen Stiftzeiger ist dieses Flag festgelegt, wenn es mit der Digitizeroberfläche in Kontakt steht und die Stiftschaltfläche gedrückt wird.
 
-Bei einem Mauszeiger wird dieses Flag festgelegt, wenn die Rechte Maustaste gedrückt ist.
+Für einen Mauszeiger ist dieses Flag festgelegt, wenn die rechte Maustaste gedrückt ist.
 
 
 </dt> </dl> </dd> <dt>
@@ -143,13 +143,13 @@ Bei einem Mauszeiger wird dieses Flag festgelegt, wenn die Rechte Maustaste gedr
 
 
 
-Analog zu einem Mausrad-Button.
+Analog zu einer Mausradschaltfläche nach unten.
 
-Ein Fingerabdruck verwendet dieses Flag nicht.
+Ein Berührungszeiger verwendet dieses Flag nicht.
 
-Dieses Flag wird von einem Stift Zeiger nicht verwendet.
+Ein Stiftzeiger verwendet dieses Flag nicht.
 
-Bei einem Mauszeiger wird dieses Flag festgelegt, wenn die Maustaste gedrückt ist.
+Für einen Mauszeiger ist dieses Flag festgelegt, wenn das Mausrad gedrückt ist.
 
 
 </dt> </dl> </dd> <dt>
@@ -162,13 +162,13 @@ Bei einem Mauszeiger wird dieses Flag festgelegt, wenn die Maustaste gedrückt i
 
 
 
-Analog zu einer ersten erweiterten mouseschaltfläche (XButton1).
+Analog zu einer ersten erweiterten Mausschaltfläche (XButton1) nach unten.
 
-Ein Fingerabdruck verwendet dieses Flag nicht.
+Ein Berührungszeiger verwendet dieses Flag nicht.
 
-Dieses Flag wird von einem Stift Zeiger nicht verwendet.
+Ein Stiftzeiger verwendet dieses Flag nicht.
 
-Bei einem Mauszeiger wird dieses Flag festgelegt, wenn die erste erweiterte Maus (XButton1) gedrückt ist.
+Für einen Mauszeiger ist dieses Flag festgelegt, wenn die erste erweiterte Mausschaltfläche (XBUTTON1) ausgeschaltet ist.
 
 
 </dt> </dl> </dd> <dt>
@@ -181,13 +181,13 @@ Bei einem Mauszeiger wird dieses Flag festgelegt, wenn die erste erweiterte Maus
 
 
 
-Analog zu einer zweiten erweiterten mouseschaltfläche (XButton2).
+Analog zu einer zweiten erweiterten Mausschaltfläche (XButton2) nach unten.
 
-Ein Fingerabdruck verwendet dieses Flag nicht.
+Ein Berührungszeiger verwendet dieses Flag nicht.
 
-Dieses Flag wird von einem Stift Zeiger nicht verwendet.
+Ein Stiftzeiger verwendet dieses Flag nicht.
 
-Ein Mauszeiger hat dieses Flag festgelegt, wenn die zweite erweiterte Maus (XButton2) gedrückt ist.
+Für einen Mauszeiger ist dieses Flag festgelegt, wenn die zweite erweiterte Mausschaltfläche (XBUTTON2) ausgeschaltet ist.
 
 
 </dt> </dl> </dd> <dt>
@@ -200,9 +200,9 @@ Ein Mauszeiger hat dieses Flag festgelegt, wenn die zweite erweiterte Maus (XBut
 
 
 
-Gibt an, dass dieser Zeiger als primärer Zeiger festgelegt wurde. Ein primärer Zeiger ist ein einzelner Zeiger, der über diejenigen hinaus Aktionen ausführen kann, die für nicht-primär Zeiger verfügbar sind. Wenn ein primärer Zeiger z. b. einen Kontakt mit einer Fenster-Oberfläche herstellt, kann er das Fenster aktivieren, indem er eine [**WM_POINTERACTIVATE**](wm-pointeractivate.md) Nachricht sendet.
+Gibt an, dass dieser Zeiger als primärer Zeiger festgelegt wurde. Ein primärer Zeiger ist ein einzelner Zeiger, der Aktionen ausführen kann, die über diejenigen hinausgehen, die für nicht primäre Zeiger verfügbar sind. Wenn beispielsweise ein primärer Zeiger Kontakt mit der Oberfläche eines Fensters nimmt, kann er dem Fenster die Möglichkeit geben, sich zu aktivieren, indem er eine [**WM_POINTERACTIVATE**](wm-pointeractivate.md) Nachricht sendet.
 
-Der primäre Zeiger wird von allen aktuellen Benutzerinteraktionen im System (Maus, Toucheingabe, Stift usw.) identifiziert. Daher ist der primäre Zeiger möglicherweise nicht mit Ihrer APP verknüpft. Der erste Kontakt in einer Multitouch-Interaktion ist als primärer Zeiger festgelegt. Wenn ein primärer Zeiger identifiziert wird, müssen alle Kontakte angehoben werden, bevor ein neuer Kontakt als primärer Zeiger identifiziert werden kann. Für apps, die keine Zeiger Eingaben verarbeiten, werden nur die Ereignisse des primären Zeigers zu Mausereignissen herauf gestuft.
+Der primäre Zeiger wird aus allen aktuellen Benutzerinteraktionen auf dem System identifiziert (Maus, Fingereingabe, Stift usw.). Daher ist der primäre Zeiger ihrer App möglicherweise nicht zugeordnet. Der erste Kontakt in einer Multitouch-Interaktion wird als primärer Zeiger festgelegt. Sobald ein primärer Zeiger identifiziert wurde, müssen alle Kontakte aufgehoben werden, bevor ein neuer Kontakt als primärer Zeiger identifiziert werden kann. Für Apps, die zeigereingaben nicht verarbeiten, werden nur die Ereignisse des primären Zeigers zu Mausereignissen heraufgestuft.
 
 
 </dt> </dl> </dd> <dt>
@@ -215,7 +215,7 @@ Der primäre Zeiger wird von allen aktuellen Benutzerinteraktionen im System (Ma
 
 
 
-Vertrauen ist ein Vorschlag vom Quellgerät, ob der Zeiger eine beabsichtigte oder versehentliche Interaktion darstellt. Dies ist besonders relevant für PT_TOUCH Zeiger, bei denen eine versehentliche Interaktion (z. b. mit der Handtasche) Eingaben auslöst. Das vorhanden sein dieses Flags gibt an, dass das Quellgerät sehr sicher ist, dass diese Eingabe Teil einer beabsichtigten Interaktion ist.
+Vertrauen ist ein Vorschlag des Quellgeräts, ob der Zeiger eine beabsichtigte oder versehentliche Interaktion darstellt. Dies ist besonders relevant für PT_TOUCH Zeiger, bei denen eine versehentliche Interaktion (z. B. mit der Handfläche) Eingaben auslösen kann. Das Vorhandensein dieses Flags gibt an, dass das Quellgerät sehr sicher ist, dass diese Eingabe Teil einer beabsichtigten Interaktion ist.
 
 
 </dt> </dl> </dd> <dt>
@@ -228,7 +228,7 @@ Vertrauen ist ein Vorschlag vom Quellgerät, ob der Zeiger eine beabsichtigte od
 
 
 
-Gibt an, dass der Zeiger nicht ordnungsgemäß abbricht, z. b. wenn das System ungültige Eingaben für den Zeiger empfängt oder wenn ein Gerät mit aktiven Zeigern abrupt abweicht. Wenn sich die Anwendung, die die Eingabe empfängt, an einer anderen Position befindet, sollte Sie die Interaktion als nicht abgeschlossen behandeln und alle Auswirkungen des betreffenden Zeigers umkehren.
+Gibt an, dass der Zeiger auf ungewöhnliche Weise abweicht, z. B. wenn das System ungültige Eingaben für den Zeiger empfängt oder wenn ein Gerät mit aktiven Zeigern plötzlich ausfällt. Wenn die Anwendung, die die Eingabe empfängt, dazu in der Lage ist, sollte sie die Interaktion als nicht abgeschlossen behandeln und alle Auswirkungen des betreffenden Zeigers umkehren.
 
 
 </dt> </dl> </dd> <dt>
@@ -241,7 +241,7 @@ Gibt an, dass der Zeiger nicht ordnungsgemäß abbricht, z. b. wenn das System u
 
 
 
-Gibt an, dass dieser Zeiger in den Zustand "nach unten" übergeht. Das heißt, es wurde eine Verbindung mit der digitalisiereroberfläche hergestellt.
+Gibt an, dass dieser Zeiger in einen Abwärtszustand übergewechselt wurde. Das heißt, es hat Kontakt mit der Digitizeroberfläche hergestellt.
 
 
 </dt> </dl> </dd> <dt>
@@ -254,7 +254,7 @@ Gibt an, dass dieser Zeiger in den Zustand "nach unten" übergeht. Das heißt, e
 
 
 
-Gibt an, dass es sich hierbei um ein einfaches Update handelt, das keine Zeiger Zustandsänderungen einschließt.
+Gibt an, dass dies ein einfaches Update ist, das keine Zeigerzustandsänderungen enthält.
 
 
 </dt> </dl> </dd> <dt>
@@ -267,7 +267,7 @@ Gibt an, dass es sich hierbei um ein einfaches Update handelt, das keine Zeiger 
 
 
 
-Gibt an, dass dieser Zeiger in den Zustand "up" übergeht. Das heißt, der Kontakt mit der digitalisiereroberfläche wurde beendet.
+Gibt an, dass dieser Zeiger in einen Auf-Zustand übergewechselt wurde. Das heißt, der Kontakt mit der Digitizeroberfläche wurde beendet.
 
 
 </dt> </dl> </dd> <dt>
@@ -280,7 +280,7 @@ Gibt an, dass dieser Zeiger in den Zustand "up" übergeht. Das heißt, der Konta
 
 
 
-Gibt Eingaben an, die einem zeigerrad zugeordnet sind. Bei Maus Zeigern entspricht dies der Aktion des Mausrades ([**WM_MOUSEHWHEEL**](../inputdev/wm-mousehwheel.md)).
+Gibt die Eingabe an, die einem Zeigerrad zugeordnet ist. Bei Mauszeigern entspricht dies der Aktion des Mausrades ([**WM_MOUSEHWHEEL**](../inputdev/wm-mousehwheel.md)).
 
 
 </dt> </dl> </dd> <dt>
@@ -293,7 +293,7 @@ Gibt Eingaben an, die einem zeigerrad zugeordnet sind. Bei Maus Zeigern entspric
 
 
 
-Gibt Eingaben an, die einem Zeiger-h-Rad zugeordnet sind. Bei Maus Zeigern entspricht dies der Aktion des horizontalen Mausrads ([**WM_MOUSEHWHEEL**](../inputdev/wm-mousehwheel.md)).
+Gibt die Eingabe an, die einem Zeiger-H-Wheel zugeordnet ist. Bei Mauszeigern entspricht dies der Aktion des horizontalen Mausrades ([**WM_MOUSEHWHEEL**](../inputdev/wm-mousehwheel.md)).
 
 
 </dt> </dl> </dd> <dt>
@@ -306,7 +306,7 @@ Gibt Eingaben an, die einem Zeiger-h-Rad zugeordnet sind. Bei Maus Zeigern entsp
 
 
 
-Gibt an, dass dieser Zeiger von einem anderen Element (zugeordnet) aufgezeichnet und das ursprüngliche Element die Erfassung verloren hat (siehe [**WM_POINTERCAPTURECHANGED**](wm-pointercapturechanged.md)).
+Gibt an, dass dieser Zeiger von (zugeordnet) einem anderen Element erfasst wurde und das ursprüngliche Element die Erfassung verloren hat (siehe [**WM_POINTERCAPTURECHANGED**](wm-pointercapturechanged.md)).
 
 
 </dt> </dl> </dd> <dt>
@@ -319,14 +319,14 @@ Gibt an, dass dieser Zeiger von einem anderen Element (zugeordnet) aufgezeichnet
 
 
 
-Gibt an, dass dieser Zeiger über eine zugeordnete Transformation verfügt.
+Gibt an, dass diesem Zeiger eine Transformation zugeordnet ist.
 
 
 </dt> </dl> </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-XButton1 und XButton2 sind zusätzliche Schaltflächen, die auf vielen Maus Geräten verwendet werden. Sie geben dieselben Daten zurück wie Standard-Maustasten.
+XBUTTON1 und XBUTTON2 sind zusätzliche Schaltflächen, die auf vielen Mausgeräten verwendet werden. Sie geben die gleichen Daten wie Standard-Maustasten zurück.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -334,13 +334,13 @@ XButton1 und XButton2 sind zusätzliche Schaltflächen, die auf vielen Maus Ger�
 
 | Anforderung | Wert |
 |-------------------------------------|--------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows 8 \[ -Desktop-Apps\]<br/>                                           |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2012 \[ -Desktop-Apps\]<br/>                                 |
-| Header<br/>                   | <dl> <dt>Winuser. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | \[Windows 8 Nur Desktop-Apps\]<br/>                                           |
+| Unterstützte Mindestversion (Server)<br/> | \[Windows Server 2012 Nur Desktop-Apps\]<br/>                                 |
+| Header<br/>                   | <dl> <dt>Winuser.h</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 

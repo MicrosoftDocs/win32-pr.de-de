@@ -1,11 +1,11 @@
 ---
 title: ms-DS-OIDToGroup-Link-BL-Attribut
-description: Rückwärtsverknüpfung für ms-DS-OIDToGroup-Link. Identifiziert die Ausstellungsrichtlinie, dargestellt durch ein OID-Objekt, das dieser Gruppe zugeordnet ist.
+description: Abwärtslink für ms-DS-OIDToGroup-Link. Identifiziert die Ausstellungsrichtlinie, die durch ein OID-Objekt dargestellt wird, das dieser Gruppe zugeordnet ist.
 ms.assetid: e8c52b91-faba-4b8e-a378-70b92e2aa6cb
 ms.tgt_platform: multiple
 keywords:
 - MS-DS-OIDToGroup-Link-BL-Attribut AD-Schema
-- MSDS-OIDToGroupLinkBl-Attribut AD-Schema
+- AD-Schema des msDS-OIDToGroupLinkBl-Attributs
 topic_type:
 - apiref
 api_name:
@@ -23,7 +23,7 @@ ms.locfileid: "118683440"
 ---
 # <a name="ms-ds-oidtogroup-link-bl-attribute"></a>ms-DS-OIDToGroup-Link-BL-Attribut
 
-Rückwärtsverknüpfung für [**ms-DS-OIDToGroup-Link**](a-msds-oidtogrouplink.md). Identifiziert die Ausstellungsrichtlinie, dargestellt durch ein OID-Objekt, das dieser Gruppe zugeordnet ist.
+Abwärtslink für [**ms-DS-OIDToGroup-Link**](a-msds-oidtogrouplink.md). Identifiziert die Ausstellungsrichtlinie, die durch ein OID-Objekt dargestellt wird, das dieser Gruppe zugeordnet ist.
 
 
 
@@ -35,7 +35,7 @@ Rückwärtsverknüpfung für [**ms-DS-OIDToGroup-Link**](a-msds-oidtogrouplink.m
 | Aktualisieren von Berechtigungen  | \-                                      |
 | Updatehäufigkeit  | \-                                      |
 | Attribute-Id      | 1.2.840.113556.1.4.2052                 |
-| System-ID-GUID    | 1a3d0d20-5844-4199-ad25-0f5039a76ada    |
+| System-Id-Guid    | 1a3d0d20-5844-4199-ad25-0f5039a76ada    |
 | Syntax            | [**Object(DS-DN)**](s-object-ds-dn.md) |
 
 
@@ -54,7 +54,7 @@ Rückwärtsverknüpfung für [**ms-DS-OIDToGroup-Link**](a-msds-oidtogrouplink.m
 | Link-ID                | 2165                            |
 | MAPI-Id                | \-                              |
 | System-Only            | Richtig                            |
-| Ist einwertig       | Falsch                           |
+| Is-Single-Valued       | Falsch                           |
 | Ist indiziert             | Falsch                           |
 | Im globalen Katalog      | Falsch                           |
 | NT-Security-Descriptor | O:BAG:BAD:S:                    |
@@ -75,7 +75,7 @@ Rückwärtsverknüpfung für [**ms-DS-OIDToGroup-Link**](a-msds-oidtogrouplink.m
 | Link-ID                | 2165                            |
 | MAPI-Id                | \-                              |
 | System-Only            | Richtig                            |
-| Ist einwertig       | Falsch                           |
+| Is-Single-Valued       | Falsch                           |
 | Ist indiziert             | Falsch                           |
 | Im globalen Katalog      | Falsch                           |
 | NT-Security-Descriptor | O:BAG:BAD:S:                    |

@@ -1,9 +1,9 @@
 ---
-title: NM_NCHITTEST Benachrichtigungscode (Rebar) (Commctrl.h)
-description: 'NM_NCHITTEST Benachrichtigungscode (Rebar): Wird von einem Rebar-Steuerelement gesendet, wenn das Steuerelement eine WM \_ NCHITTEST-Nachricht empfängt. Dieser Benachrichtigungscode wird in Form einer WM \_ NOTIFY-Nachricht gesendet.'
+title: NM_NCHITTEST(Rebar)-Benachrichtigungscode (Commctrl.h)
+description: 'NM_NCHITTEST(Rebar)-Benachrichtigungscode: Wird von einem Rebar-Steuerelement gesendet, wenn das Steuerelement eine \_ WM-NCHITTEST-Nachricht empfängt. Dieser Benachrichtigungscode wird in Form einer WM \_ NOTIFY-Nachricht gesendet.'
 ms.assetid: b345d83e-682d-4067-a783-689d64f9b7bc
 keywords:
-- NM_NCHITTEST -Benachrichtigungscode (Rebar) Windows Controls
+- NM_NCHITTEST -Benachrichtigungscode (Neuleiste) Windows-Steuerelemente
 topic_type:
 - apiref
 api_name:
@@ -21,9 +21,9 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 08/11/2021
 ms.locfileid: "118410701"
 ---
-# <a name="nm_nchittest-rebar-notification-code"></a>NM \_ NCHITTEST-Benachrichtigungscode (Rebar)
+# <a name="nm_nchittest-rebar-notification-code"></a>\_NM-NCHITTEST-Benachrichtigungscode (Rebar)
 
-Wird von einem Rebar-Steuerelement gesendet, wenn das Steuerelement eine [**WM \_ NCHITTEST-Nachricht**](/windows/desktop/inputdev/wm-nchittest) empfängt. Dieser Benachrichtigungscode wird in Form einer [**WM \_ NOTIFY-Nachricht**](wm-notify.md) gesendet.
+Wird von einem Rebar-Steuerelement gesendet, wenn das Steuerelement eine [**WM \_ NCHITTEST-Nachricht empfängt.**](/windows/desktop/inputdev/wm-nchittest) Dieser Benachrichtigungscode wird in Form einer [**WM \_ NOTIFY-Nachricht**](wm-notify.md) gesendet.
 
 
 ```C++
@@ -41,13 +41,13 @@ NM_NCHITTEST
 *lParam* 
 </dt> <dd>
 
-Zeiger auf eine [**NMMOUSE-Struktur,**](/windows/win32/api/commctrl/ns-commctrl-nmmouse) die Informationen zum Benachrichtigungscode enthält. Das **dwItemSpec-Member** enthält den Bandindex, über den die Treffertestnachricht aufgetreten ist, und das **pt-Member** enthält die Mauskoordinaten der Treffertestnachricht.
+Zeiger auf eine [**NMMOUSE-Struktur,**](/windows/win32/api/commctrl/ns-commctrl-nmmouse) die Informationen zum Benachrichtigungscode enthält. Das **dwItemSpec-Element** enthält den Bandindex, über den die Treffertestmeldung aufgetreten ist, und das **pt-Element** enthält die Mauskoordinaten der Treffertestmeldung.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Geben Sie 0 (null) zurück, damit die Leiste die Standardverarbeitung der Treffertestnachricht ausführen kann, oder geben Sie einen der unter \* [**WM \_ NCHITTEST**](/windows/desktop/inputdev/wm-nchittest) dokumentierten HT-Werte zurück, um die Standardmäßige Treffertestverarbeitung zu überschreiben.
+Geben Sie 0 (null) zurück, damit die Rebar die Standardverarbeitung der Treffertestmeldung durchführen kann, oder geben Sie einen der \* unter [**WM \_ NCHITTEST**](/windows/desktop/inputdev/wm-nchittest) dokumentierten HT-Werte zurück, um die Standardmäßige Verarbeitung von Treffertests zu überschreiben.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -55,7 +55,7 @@ Geben Sie 0 (null) zurück, damit die Leiste die Standardverarbeitung der Treffe
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ Vista-Desktop-Apps\]<br/>                                        |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur Vista-Desktop-Apps\]<br/>                                        |
 | Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                                  |
 | Header<br/>                   | <dl> <dt>Commctrl.h</dt> </dl> |
 

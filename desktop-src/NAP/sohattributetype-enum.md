@@ -1,6 +1,6 @@
 ---
 title: SoHAttributeType-Enumeration (NapProtocol.h)
-description: Gibt den Typ des Attributs an, das im TLV-Objekt (Type Length Value) des Attributs gespeichert ist.
+description: Gibt den Typ des Attributs an, das im TLV-Objekt (Type-Length-Value) des Attributs gespeichert ist.
 ms.assetid: ba725bf1-1d0a-4489-b912-3e761557d772
 keywords:
 - SoHAttributeType-Enumerations-NAP
@@ -69,7 +69,7 @@ Gibt den Attributtyp der Systemzustands-ID an.
 <span id="sohAttributeTypeIpv4FixupServers"></span><span id="sohattributetypeipv4fixupservers"></span><span id="SOHATTRIBUTETYPEIPV4FIXUPSERVERS"></span>**sohAttributeTypeIpv4FixupServers**
 </dt> <dd>
 
-Gibt den IPv4-Fix up-Serverattributtyp an.
+Gibt den Typ des IPv4-Fix up-Serverattributs an.
 
 </dd> <dt>
 
@@ -153,7 +153,7 @@ Gibt den Attributtyp der Fehlerkategorie an.
 <span id="sohAttributeTypeIpv6FixupServers"></span><span id="sohattributetypeipv6fixupservers"></span><span id="SOHATTRIBUTETYPEIPV6FIXUPSERVERS"></span>**sohAttributeTypeIpv6FixupServers**
 </dt> <dd>
 
-Gibt den IPv6-Fix up-Serverattributtyp an.
+Gibt den Typ des IPv6-Fix up-Serverattributs an.
 
 </dd> <dt>
 
@@ -191,7 +191,7 @@ Die restlichen Typen dienen nur dazu, die Verwendung durch SHAs und SHVs zu leit
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 

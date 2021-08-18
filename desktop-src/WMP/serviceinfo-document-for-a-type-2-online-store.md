@@ -1,68 +1,68 @@
 ---
-title: ServiceInfo-Dokument für einen Typ 2-Online Store
-description: ServiceInfo-Dokument für einen Typ 2-Online Store
+title: ServiceInfo-Dokument für eine Online-Store
+description: ServiceInfo-Dokument für eine Online-Store
 ms.assetid: ca83e9bf-c7fb-4212-8fa2-1fae11ed26e9
 keywords:
-- Windows Media Player Online Stores, serviceingefo-Dokument
-- Online Stores, serviceingefo-Dokument
-- Typ 2 Online Stores, serviceInfo-Dokument
-- Servicinfo-Dokument
+- Windows Media Player,ServiceInfo-Dokument
+- Onlineshops,ServiceInfo-Dokument
+- Typ 2 Onlineshops,ServiceInfo-Dokument
+- ServiceInfo-Dokument
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 6fb558661332ab08edd2057fa024a1a0e2034b9f
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: dd6830b4c54b037f254adb21624ed893ec16fa9b3973dfe1536170dff1b4f9e2
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "104037107"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118995430"
 ---
-# <a name="serviceinfo-document-for-a-type-2-online-store"></a>ServiceInfo-Dokument für einen Typ 2-Online Store
+# <a name="serviceinfo-document-for-a-type-2-online-store"></a>ServiceInfo-Dokument für eine Online-Store
 
-Typ 2 Online Store-Anbieter müssen Microsoft die URL eines XML-Dokuments bereitstellen, das den Online Shop beschreibt. Windows Media Player 10 und Windows Media Player 11 verwenden Sie dieses Dokument, um zu bestimmen, wie die Benutzeroberfläche zum Hosten des Online Stores konfiguriert wird.
+Anbieter von Onlineshops vom Typ 2 müssen Microsoft die URL eines XML-Dokuments bereitstellen, das den Onlineshop beschreibt. Windows Media Player 10 und Windows Media Player 11 verwenden Sie dieses Dokument, um zu bestimmen, wie die Benutzeroberfläche zum Hosten des Onlineshops konfiguriert wird.
 
-In Windows Media Player 10 bietet das servicinput Info-Dokument Folgendes:
+In Windows Media Player 10 enthält das ServiceInfo-Dokument Folgendes:
 
--   Informationen zum Konfigurieren der Aufgabenbereiche, die von Windows Media Player angezeigt werden, wenn der Online Store aktiv ist. Ein Online Store kann über einen, zwei oder drei Aufgabenbereiche verfügen.
--   Informationen, die zum Konfigurieren der Aufgabenbereichs Schaltflächen verwendet werden, z. b. der Schaltflächen Text, die Schaltflächen Farbe und Quick Infos für die Schaltflächen.
--   URLs für Images, die von Windows Media Player angezeigt werden, um den Online Store zu identifizieren.
--   URLs von Webseiten, die vom Online Store bereitgestellt werden, die von Windows Media Player in der Benutzeroberfläche gehostet werden.
--   Informationen dazu, wie das Windows Media Player-Setup den ersten Online Store konfigurieren soll, den der Benutzer sieht.
+-   Informationen zum Konfigurieren der Aufgabenbereiche, die Windows Media Player, wenn der Onlineshop aktiv ist. Ein Onlineshop kann einen, zwei oder drei Aufgabenbereiche haben.
+-   Informationen, die zum Konfigurieren der Aufgabenbereichschaltflächen verwendet werden, z. B. der Schaltflächentext, die Schaltflächenfarbe und Tooltipps für die Schaltflächen.
+-   URLs für Bilder, die Windows Media Player werden, um den Onlineshop zu identifizieren.
+-   URLs von Webseiten, die vom Onlineshop bereitgestellt werden und Windows Media Player hosten.
+-   Informationen dazu, Windows Media Player Setup den ersten Onlineshop konfigurieren soll, der dem Benutzer angezeigt wird.
 
-In Windows Media Player 11 bietet das servicinput Info-Dokument Folgendes:
+In Windows Media Player 11 bietet das ServiceInfo-Dokument Folgendes:
 
--   Informationen, die verwendet werden, um die Schaltfläche für die Registerkarte "Online Stores" zu konfigurieren, z. b. den Schaltflächen Text und die QuickInfo
--   URLs für Images, die von Windows Media Player angezeigt werden, um den Online Store zu identifizieren.
--   URLs von Webseiten, die vom Online Store bereitgestellt werden, die von Windows Media Player in der Benutzeroberfläche gehostet werden.
+-   Informationen, die zum Konfigurieren der Schaltfläche für die Registerkarte Onlineshops verwendet werden, z. B. der Schaltflächentext und die Tipps für die Schaltfläche.
+-   URLs für Bilder, die Windows Media Player werden, um den Onlineshop zu identifizieren.
+-   URLs von Webseiten, die vom Onlineshop bereitgestellt werden und Windows Media Player hosten.
 
-Wenn Sie mit der Entwicklung Ihres Online Stores beginnen, müssen Sie Microsoft die URL Ihres serviceInfo-Dokuments bereitstellen. Während der Entwicklungsphase wird der Online Shop in Windows Media Player nur angezeigt, wenn ein spezieller Registrierungsschlüssel festgelegt ist.
+Wenn Sie mit der Entwicklung Ihres Onlineshops beginnen, müssen Sie Microsoft die URL zu Ihrem ServiceInfo-Dokument bereitstellen. Während der Entwicklungsphase wird Ihr Onlineshop nur dann in Windows Media Player, wenn ein spezieller Registrierungsschlüssel festgelegt ist.
 
-Nach der Veröffentlichung des Online Stores ist das Szenario, in dem Windows Media Player das serviceInfo-Dokument automatisch aus dem Internet abruft. In einigen Fällen ruft Windows Media Player jedoch das serviceInfo-Dokument vom Computer des Benutzers ab. Weitere Informationen finden Sie unter [Festlegen des ersten Online Stores](setting-the-initial-online-store.md).
+Nach der Veröffentlichung Ihres Onlineshops besteht das szenario der Benutzer, Windows Media Player ServiceInfo-Dokument automatisch aus dem Web abruft. In einigen Fällen ruft Windows Media Player ServiceInfo-Dokument jedoch vom Computer des Benutzers ab. Weitere Informationen finden Sie unter [Setting the Initial Online Store](setting-the-initial-online-store.md).
 
-Wenn Windows Media Player das servicanfo-Dokument aus dem Web abruft, fügt es eine Abfrage Zeichenfolge an die URL an. Die Abfrage Zeichenfolge enthält Parameter, die Informationen über das Gebiets Schema des Benutzers und die Windows-Media Player Version bereitstellen.
+Wenn Windows Media Player ServiceInfo-Dokument aus dem Web abruft, wird eine Abfragezeichenfolge an die URL angefügt. Die Abfragezeichenfolge enthält Parameter, die Informationen über das Benutzer-Locale und die Windows Media Player bereitstellen.
 
-Sie können statische oder dynamische serviceingefo-Dokumente erstellen. Ein statisches serviceInfo-Dokument verfügt über die Dateinamenerweiterung. Xml. Ein dynamisches serviceInfo-Dokument ist eine ASP-Seite mit der Dateinamenerweiterung ". asp" oder ". aspx".
+Sie können statische oder dynamische ServiceInfo-Dokumente erstellen. Ein statisches ServiceInfo-Dokument verfügt über .xml Dateinamenerweiterung. Ein dynamisches ServiceInfo-Dokument ist eine ASP-Seite mit der Dateierweiterung ASP oder ASPX.
 
-Nicht alle Elemente, die für die Verwendung im serviceInfo-Dokument verfügbar sind, können von jedem Online Store verwendet werden, und einige Elemente sind für alle Online Stores optional. Informationen zu den von Ihnen erstellten online speichern und den verfügbaren Funktionen für die einzelnen Typen finden Sie unter [Windows Media Player Online Stores](windows-media-player-online-stores.md).
+Nicht alle Elemente, die im ServiceInfo-Dokument zur Verfügung stehen, können von jedem Onlineshop verwendet werden, und einige Elemente sind für alle Onlineshops optional. Informationen zu den Typen von Onlineshops, die Sie erstellen können, und den für jeden Typ verfügbaren Features finden Sie [unter Windows Media Player Online Stores](windows-media-player-online-stores.md).
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[**Informationen zu Typ 2 Online Stores**](about-type-2-online-stores.md)
+[**Informationen zu Onlineshops vom Typ 2**](about-type-2-online-stores.md)
 </dt> <dt>
 
-[**Dynamisches Erstellen des serviceingefo-Dokuments**](creating-the-serviceinfo-document-dynamically.md)
+[**Dynamisches Erstellen des ServiceInfo-Dokuments**](creating-the-serviceinfo-document-dynamically.md)
 </dt> <dt>
 
-[**Beispiel eines serviceInfo-Dokuments für einen Typ 2-Online Store**](example-serviceinfo-document-for-a-type-2-online-store.md)
+[**ServiceInfo-Beispieldokument für eine Online-Store**](example-serviceinfo-document-for-a-type-2-online-store.md)
 </dt> <dt>
 
-[**Servicinfo-Dokument**](serviceinfo-document.md)
+[**ServiceInfo-Dokument**](serviceinfo-document.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

@@ -1,44 +1,44 @@
 ---
 description: Die folgenden Funktionen werden in der Geräteverwaltung verwendet.
 ms.assetid: 3918ba49-1549-4f0c-b9fd-303ef46b810e
-title: Geräte Verwaltungsfunktionen
+title: Geräteverwaltung Functions
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 587778b489b16355046b0b5af5cbba31c1a39639
-ms.sourcegitcommit: c7add10d695482e1ceb72d62b8a4ebd84ea050f7
+ms.openlocfilehash: a648fb5141d9efa977e573e3b0abb32fe6c504f11647a2dc392e9838da63ca6e
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "103958334"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118956899"
 ---
-# <a name="device-management-functions"></a>Geräte Verwaltungsfunktionen
+# <a name="device-management-functions"></a>Geräteverwaltung Functions
 
 Die folgenden Funktionen werden in der Geräteverwaltung verwendet.
 
 
 
-| Funktion                                                             | BESCHREIBUNG                                                                           |
+| Funktion                                                             | Beschreibung                                                                           |
 |----------------------------------------------------------------------|---------------------------------------------------------------------------------------|
-| [**DeviceIoControl**](/windows/win32/api/ioapiset/nf-ioapiset-deviceiocontrol)                           | Sendet einen Steuerungs Code direkt an einen angegebenen Gerätetreiber.                           |
-| [**Installnewdevice**](installnewdevice.md)                         | Installiert ein neues Gerät. Der Benutzer wird aufgefordert, das Gerät auszuwählen.                     |
-| [**Registerdevicenotifizierung**](/windows/desktop/api/Winuser/nf-winuser-registerdevicenotificationa)     | Registriert das Gerät oder den Typ des Geräts, für das ein Fenster Benachrichtigungen empfängt. |
-| [**Unregisterdevicenotifizierung**](/windows/desktop/api/Winuser/nf-winuser-unregisterdevicenotification) | Schließt das angegebene Benachrichtigungs Handle des Geräts.                                      |
+| [**Deviceiocontrol**](/windows/win32/api/ioapiset/nf-ioapiset-deviceiocontrol)                           | Sendet einen Steuerungscode direkt an einen angegebenen Gerätetreiber.                           |
+| [**InstallNewDevice**](installnewdevice.md)                         | Installiert ein neues Gerät. Der Benutzer wird aufgefordert, das Gerät auszuwählen.                     |
+| [**RegisterDeviceNotification**](/windows/desktop/api/Winuser/nf-winuser-registerdevicenotificationa)     | Registriert das Gerät oder den Gerätetyp, für das ein Fenster Benachrichtigungen erhält. |
+| [**UnregisterDeviceNotification**](/windows/desktop/api/Winuser/nf-winuser-unregisterdevicenotification) | Schließt das angegebene Gerätebenachrichtigungshand handle.                                      |
 
 
 
  
 
-Die folgenden Funktionen werden mit CD-ROM-und DVD-Laufwerken verwendet.
+Die folgenden Funktionen werden mit CD-ROM- und DVD-Laufwerken verwendet.
 
 
 
-| Funktion                                                               | BESCHREIBUNG                                                                                         |
+| Funktion                                                               | Beschreibung                                                                                         |
 |------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------|
-| [**Cdromdisabledigitalplayback**](/windows/desktop/api/StorProp/nf-storprop-cdromdisabledigitalplayback)     | Deaktiviert die digitale Wiedergabe für das angegebene CD-ROM-oder DVD-Laufwerk.                                    |
-| [**Cdromenabledigitalplayback**](/windows/desktop/api/StorProp/nf-storprop-cdromenabledigitalplayback)       | Aktiviert die digitale Wiedergabe für das angegebene CD-ROM-oder DVD-Laufwerk.                                     |
-| [**Cdromisdigitalplaybackaktivierte**](/windows/desktop/api/StorProp/nf-storprop-cdromisdigitalplaybackenabled) | Bestimmt, ob die digitale Wiedergabe für das angegebene CD-ROM-oder DVD-Laufwerk aktiviert ist.               |
-| [**Cdromknowngooddigitalplayback**](/windows/desktop/api/Storprop/nf-storprop-cdromknowngooddigitalplayback) | Bestimmt, ob das angegebene CD-ROM-oder DVD-Laufwerk eine digitale Wiedergabe aufweist, die bekanntermaßen gut ist. |
-| [**DVDLauncher**](dvdlauncher.md)                                     | Überprüft, ob der Medienbereich im DVD-Laufwerk mit dem DVD-Laufwerks Bereich übereinstimmt.                       |
+| [**CodiDisableDigitalPlayback**](/windows/desktop/api/StorProp/nf-storprop-cdromdisabledigitalplayback)     | Deaktiviert die digitale Wiedergabe für das angegebene CD-ROM- oder DVD-Laufwerk.                                    |
+| [**C skriptfähigesDigitalPlayback**](/windows/desktop/api/StorProp/nf-storprop-cdromenabledigitalplayback)       | Aktiviert die digitale Wiedergabe für das angegebene CD-ROM- oder DVD-Laufwerk.                                     |
+| [**ComeIsDigitalPlaybackEnabled**](/windows/desktop/api/StorProp/nf-storprop-cdromisdigitalplaybackenabled) | Bestimmt, ob die digitale Wiedergabe für das angegebene CD-ROM- oder DVD-Laufwerk aktiviert ist.               |
+| [**CodiKnownGoodDigitalPlayback**](/windows/desktop/api/Storprop/nf-storprop-cdromknowngooddigitalplayback) | Bestimmt, ob das angegebene CD-ROM- oder DVD-Laufwerk über eine als gut bekannte digitale Wiedergabe verfügt. |
+| [**DvdLauncher**](dvdlauncher.md)                                     | Überprüft, ob der Medienbereich auf dem DVD-Laufwerk dem DVD-Laufwerksbereich entspricht.                       |
 
 
 

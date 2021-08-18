@@ -1,7 +1,7 @@
 ---
-description: Zerstört ein zuvor erstelltes Microsoft DirectDraw-Geräte Objekt im Kernel Modus.
+description: Zerstört ein zuvor erstelltes Microsoft DirectDraw-Geräteobjekt im Kernelmodus.
 ms.assetid: 0b2e1bae-8291-4fe4-9528-980680906e0a
-title: Ntgdidddeletedirectdrawobject-Funktion (ntgdi. h)
+title: NtGdiDdDeleteDirectDrawObject-Funktion (Ntgdi.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,18 +16,18 @@ api_location:
 - Ext-MS-Win-GDI-Internal-Desktop-L1-1-0.dll
 - GDI32.dll
 - GDI32Full.dll
-ms.openlocfilehash: 9ac10798f83fe7e1a07a0803dd29cfa9cd8b1c98
-ms.sourcegitcommit: c7add10d695482e1ceb72d62b8a4ebd84ea050f7
+ms.openlocfilehash: 866624e35c5c05afa14692a2e83d1c15293af9435aa68deddf9c602b80820708
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104125936"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118956549"
 ---
-# <a name="ntgdidddeletedirectdrawobject-function"></a>Ntgdidddeletedirectdrawobject-Funktion
+# <a name="ntgdidddeletedirectdrawobject-function"></a>NtGdiDdDeleteDirectDrawObject-Funktion
 
-\[Diese Funktion kann bei jeder Betriebssystem Revision geändert werden. Verwenden Sie stattdessen DirectDraw und Microsoft Direct3DAPIs; Diese APIs isolieren Anwendungen vor solchen Betriebssystem Änderungen und verbergen viele andere Schwierigkeiten bei der direkten Interaktion mit Anzeige Treibern.\]
+\[Diese Funktion kann bei jeder Betriebssystemrevision geändert werden. Verwenden Sie stattdessen DirectDraw und Microsoft Direct3DAPIs. Diese APIs isolieren Anwendungen vor solchen Betriebssystemänderungen und verbergen viele andere Schwierigkeiten bei der direkten Interaktion mit Anzeigetreibern.\]
 
-Zerstört ein zuvor erstelltes Microsoft DirectDraw-Geräte Objekt im Kernel Modus.
+Zerstört ein zuvor erstelltes Microsoft DirectDraw-Geräteobjekt im Kernelmodus.
 
 ## <a name="syntax"></a>Syntax
 
@@ -44,20 +44,20 @@ BOOL APIENTRY NtGdiDdDeleteDirectDrawObject(
 
 <dl> <dt>
 
-*hdirectdrawlocal* 
+*hDirectDrawLocal* 
 </dt> <dd>
 
-Handle für das DirectDraw-Geräte Objekt im Kernel Modus.
+Handle für das DirectDraw-Geräteobjekt im Kernelmodus.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Wenn erfolgreich, gibt diese Funktion **true** zurück. Andernfalls wird **false** zurückgegeben.
+Wenn dies erfolgreich ist, gibt diese Funktion **TRUE zurück.** Andernfalls wird **FALSE zurückgegeben.**
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Anwendungen wird empfohlen, die DirectDraw-und [Direct3D](../direct3d10/d3d10-graphics-reference.md) -APIs zu verwenden, um Grafikgeräte Objekte zu erstellen und zu verwalten. Diese Konstrukte abstrahieren den Geräte Erstellungs Prozess auf vereinfachte und betriebssystemunabhängige Weise.
+Anwendungen wird empfohlen, die DirectDraw- und [Direct3D-APIs zum](../direct3d10/d3d10-graphics-reference.md) Erstellen und Verwalten von Grafikgeräteobjekten zu verwenden. Diese Konstrukte abstrahieren den Prozess der Geräteerstellung auf vereinfachte und betriebssystemunabhängige Weise.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -67,21 +67,21 @@ Anwendungen wird empfohlen, die DirectDraw-und [Direct3D](../direct3d10/d3d10-gr
 |-------------------------------------|------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[nur Desktop-Apps\]<br/>                         |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                               |
-| Header<br/>                   | <dl> <dt>Ntgdi. h</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Ntgdi.h</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[Unterstützung der untergeordneten Grafik Ebene](-dxgkernel-low-level-client-support.md)
+[Clientunterstützung auf niedriger Grafikebene](-dxgkernel-low-level-client-support.md)
 </dt> <dt>
 
-[**Ntgdiddkreatedirectdrawobject**](-dxgkernel-ntgdiddcreatedirectdrawobject.md)
+[**NtGdiDdCreateDirectDrawObject**](-dxgkernel-ntgdiddcreatedirectdrawobject.md)
 </dt> <dt>
 
-[**Dddeletedirectdrawobject**](/windows/desktop/api/Ddrawgdi/nf-ddrawgdi-dddeletedirectdrawobject)
+[**DdDeleteDirectDrawObject**](/windows/desktop/api/Ddrawgdi/nf-ddrawgdi-dddeletedirectdrawobject)
 </dt> </dl>
 
  

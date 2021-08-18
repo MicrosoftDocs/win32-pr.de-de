@@ -39,14 +39,14 @@ Im Standardmodus ist das RpcSs-Paket nur aktiviert, wenn entweder die Prozedur o
 
 **midl /rpcss filename.idl**
 
-## <a name="see-also"></a>Weitere Informationen:
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
 [Allgemeine MIDL-Befehlszeilensyntax](general-midl-command-line-syntax.md)
 </dt> <dt>
 
-[Schnittstellendefinitionsdatei (IDL)](interface-definition-idl-file.md)
+[IDL-Datei (Interface Definition)](interface-definition-idl-file.md)
 </dt> <dt>
 
 [**\_"Allocate" aktivieren**](enable-allocate.md)

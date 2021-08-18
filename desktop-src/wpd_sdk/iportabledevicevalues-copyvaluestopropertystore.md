@@ -65,7 +65,7 @@ Die Methode gibt ein **HRESULT** zurück. Mögliches Werte (aber nicht die Einzi
 
 Diese Methode konvertiert keine Werte von VT \_ LPWSTR in VT \_ BSTR. Viele externe Anwendungen oder Komponenten, die mit Ihrer Anwendung kommunizieren, z. B. einige Shellanwendungen, verwenden die **IPropertyStore-Schnittstelle.** Diese Methode bietet eine schnelle und einfache Möglichkeit zum Austauschen von Daten mit diesen Programmen.
 
-Diese Methode wird in Windows Vista und neueren Versionen von Windows unterstützt.
+Diese Methode wird in Windows Vista und neueren Versionen von Windows.
 
 ## <a name="requirements"></a>Anforderungen
 

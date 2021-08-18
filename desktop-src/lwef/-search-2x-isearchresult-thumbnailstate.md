@@ -5,7 +5,7 @@ ms.assetid: b91727a6-a193-4767-a8ff-05ac64f1f27f
 keywords:
 - ThumbnailState-Methode Legacy Windows Umgebungsfeatures
 - ThumbnailState-Methode Legacy Windows Umgebungsfeatures, ISearchResult-Schnittstelle
-- ISearchResult interface Legacy Windows Environment Features , ThumbnailState method
+- ISearchResult-Schnittstelle Legacy Windows Umgebungsfeatures, ThumbnailState-Methode
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:

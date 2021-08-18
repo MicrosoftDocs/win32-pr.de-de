@@ -1,6 +1,6 @@
 ---
 title: HelpContextID-Eigenschaft (Characters-Objekt)
-description: Erfahren Sie mehr über die HelpContextID-Eigenschaft des Characters-Objekts. Microsoft Agent ist ab 7 Windows veraltet.
+description: Erfahren Sie mehr über die HelpContextID-Eigenschaft des Characters-Objekts. Der Microsoft-Agent ist ab Windows 7 veraltet.
 ms.assetid: 7ef190ba-c194-4386-a8d6-d32d902a1c03
 ms.topic: article
 ms.date: 05/31/2018
@@ -13,21 +13,21 @@ ms.locfileid: "118478717"
 ---
 # <a name="helpcontextid-property-characters-object"></a>HelpContextID-Eigenschaft (Characters-Objekt)
 
-\[Microsoft Agent ist ab Version Windows 7 veraltet und möglicherweise in nachfolgenden Versionen von Windows.\]
+\[Der Microsoft-Agent ist ab Windows 7 veraltet und in nachfolgenden Versionen von Windows möglicherweise nicht mehr verfügbar.\]
 
 <dl> <dt>
 
 <span id="Description"></span><span id="description"></span><span id="DESCRIPTION"></span>**Beschreibung**
 </dt> <dd>
 
-Gibt eine zugeordnete Kontextnummer für das Zeichen zurück oder legt diese fest. Wird verwendet, um kontextsensitive Hilfe für das Zeichen zur Verfügung zu stellen.
+Gibt eine zugeordnete Kontextnummer für das Zeichen zurück oder legt diese fest. Wird verwendet, um kontextbezogene Hilfe für das Zeichen bereitzustellen.
 
 </dd> <dt>
 
 <span id="Syntax"></span><span id="syntax"></span><span id="SYNTAX"></span>**Syntax**
 </dt> <dd>
 
-*agent.***Characters("**_CharacterID_*_"). HelpContextID-Nummer_ *  \[  =  \]
+*agent.***Characters("**_CharacterID_*_")._ *  \[  =  *HelpContextID-Nummer*\]
 
 
 
@@ -43,9 +43,9 @@ Gibt eine zugeordnete Kontextnummer für das Zeichen zurück oder legt diese fes
 
 ## <a name="remarks"></a>Hinweise
 
-Um kontextorientierte Hilfe für das Zeichen zu unterstützen, weisen Sie die Kontextnummer dem Zeichen zu, das Sie beim Kompilieren der Hilfedatei für das zugeordnete Hilfethema verwenden. Diese Eigenschaft gilt nur für den Client des Zeichens. Die Einstellung wirkt sich nicht auf andere Clients des Zeichens oder anderer Zeichen des Clients aus.
+Um kontextbezogene Hilfe für das Zeichen zu unterstützen, weisen Sie die Kontextnummer dem Zeichen zu, das Sie beim Kompilieren der Hilfedatei für das zugeordnete Hilfethema verwenden. Diese Eigenschaft gilt nur für den Client des Zeichens. Die Einstellung wirkt sich nicht auf andere Clients des Zeichens oder andere Zeichen des Clients aus.
 
-Wenn Sie eine Windows-Hilfedatei für Ihre Anwendung erstellt und die [**HelpFile-Eigenschaft**](helpfile-property.md) des Zeichens festgelegt haben, ruft der -Agent die Hilfe automatisch auf, wenn [**HelpModeOn**](helpmodeon-property.md) auf **True** festgelegt ist und der Benutzer auf das Zeichen klickt. Wenn die [**HelpContextID**](helpcontextid-property.md)eine Kontextnummer enthält, ruft der -Agent die Hilfe auf und sucht nach dem Thema, das durch die aktuelle Kontextnummer identifiziert wird. Die aktuelle Kontextnummer ist der Wert von **HelpContextID** für das Zeichen.
+Wenn Sie eine Windows Hilfedatei für Ihre Anwendung erstellt und die [**HelpFile-Eigenschaft**](helpfile-property.md) des Zeichens festgelegt haben, ruft der -Agent die Hilfe automatisch auf, wenn [**HelpModeOn**](helpmodeon-property.md) auf **True** festgelegt ist und der Benutzer auf das Zeichen klickt. Wenn die [**HelpContextID**](helpcontextid-property.md)eine Kontextnummer enthält, ruft der -Agent die Hilfe auf und sucht nach dem Thema, das durch die aktuelle Kontextnummer identifiziert wird. Die aktuelle Kontextnummer ist der Wert von **HelpContextID** für das Zeichen.
 
 > [!Note]  
 > Zum Erstellen einer Hilfedatei ist der Microsoft Windows Help Compiler erforderlich.

@@ -1,10 +1,10 @@
 ---
-title: MPSAMPLE_DATA-Struktur (MpClient.h)
+title: MPSAMPLE_DATA -Struktur (MpClient.h)
 description: Benachrichtigungsdaten, die an die Rückruffunktion für die Beispielübermittlung übergeben werden.
 ms.assetid: 58F348C6-411D-4545-9D4D-A80095FD139B
 keywords:
-- MPSAMPLE_DATA Struktur legacy Windows Environment Features (Legacy-Windows-Umgebungsfeatures)
-- PMPSAMPLE_DATA Strukturzeiger Legacy Windows-Umgebungsfeatures
+- MPSAMPLE_DATA struktur Legacy Windows Umgebungsfeatures
+- PMPSAMPLE_DATA strukturzeiger Legacy-Windows-Umgebungsfeatures
 topic_type:
 - apiref
 api_name:

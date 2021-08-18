@@ -1,11 +1,11 @@
 ---
 title: Address-Type-Attribut
-description: Eine Zeichenfolge, die das Format der Adresse des Benutzers beschreibt. Adresstypen werden Adressformaten zugeordnet. Das heißt, dass Clientanwendungen anhand des Adresstyps eines Empfängers bestimmen können, wie eine für den Empfänger geeignete Adresse formatiert werden soll.
+description: Eine Zeichenfolge, die das Format der Adresse des Benutzers beschreibt. Adresstypen werden Adressformaten zuordnen. Das bedeutet, dass Clientanwendungen mithilfe des Adresstyps eines Empfängers bestimmen können, wie eine für den Empfänger geeignete Adresse formatiert werden soll.
 ms.assetid: ff39b1f5-1844-43e9-a4a5-2b5f7c396f34
 ms.tgt_platform: multiple
 keywords:
-- Address-Type AD-Attributschema
-- ADDRESSTYPE-Attribut AD-Schema
+- Address-Type AD-Schema
+- addressType-Attribut AD-Schema
 topic_type:
 - apiref
 api_name:
@@ -23,7 +23,7 @@ ms.locfileid: "118688487"
 ---
 # <a name="address-type-attribute"></a>Address-Type-Attribut
 
-Eine Zeichenfolge, die das Format der Adresse des Benutzers beschreibt. Adresstypen werden Adressformaten zugeordnet. Das heißt, dass Clientanwendungen anhand des Adresstyps eines Empfängers bestimmen können, wie eine für den Empfänger geeignete Adresse formatiert werden soll.
+Eine Zeichenfolge, die das Format der Adresse des Benutzers beschreibt. Adresstypen werden Adressformaten zuordnen. Das bedeutet, dass Clientanwendungen mithilfe des Adresstyps eines Empfängers bestimmen können, wie eine für den Empfänger geeignete Adresse formatiert werden soll.
 
 
 
@@ -33,9 +33,9 @@ Eine Zeichenfolge, die das Format der Adresse des Benutzers beschreibt. Adressty
 | Ldap-Anzeigename | Addresstype                                                                                                               |
 | Size              | Adresstypen: 3COM, ATT, CCMAIL, COMPUSERVE, EX, FAX, MSFAX, MCI, MHS, MS, MSA, MSN, PROFS, SMTP, SNADS, TELEX, X400, X500 |
 | Aktualisieren von Berechtigungen  | Dieser Wert wird vom System festgelegt.                                                                                          |
-| Updatehäufigkeit  | Legen Sie fest, wenn das Objekt erstellt wird.                                                                                           |
+| Updatehäufigkeit  | Wird festgelegt, wenn das Objekt erstellt wird.                                                                                           |
 | Attribute-Id      | 1.2.840.113556.1.2.350                                                                                                    |
-| System-ID-GUID    | 5fd42464-1262-11d0-a060-00aa006c33ed                                                                                      |
+| System-Id-Guid    | 5fd42464-1262-11d0-a060-00aa006c33ed                                                                                      |
 | Syntax            | [**String(Teletex)**](s-string-teletex.md)                                                                               |
 
 
@@ -58,7 +58,7 @@ Eine Zeichenfolge, die das Format der Adresse des Benutzers beschreibt. Adressty
 | Link-ID                | \-                                                       |
 | MAPI-Id                | 0x8048                                                   |
 | System-Only            | Falsch                                                    |
-| Ist einwertig       | Richtig                                                     |
+| Is-Single-Valued       | Richtig                                                     |
 | Ist indiziert             | Falsch                                                    |
 | Im globalen Katalog      | Falsch                                                    |
 | NT-Security-Descriptor | O:BAG:BAD:S:                                             |
@@ -79,7 +79,7 @@ Eine Zeichenfolge, die das Format der Adresse des Benutzers beschreibt. Adressty
 | Link-ID                | \-                                                       |
 | MAPI-Id                | 0x8048                                                   |
 | System-Only            | Falsch                                                    |
-| Ist einwertig       | Richtig                                                     |
+| Is-Single-Valued       | Richtig                                                     |
 | Ist indiziert             | Falsch                                                    |
 | Im globalen Katalog      | Falsch                                                    |
 | NT-Security-Descriptor | O:BAG:BAD:S:                                             |
@@ -100,7 +100,7 @@ Eine Zeichenfolge, die das Format der Adresse des Benutzers beschreibt. Adressty
 | Link-ID                | \-                                                       |
 | MAPI-Id                | 0x8048                                                   |
 | System-Only            | Falsch                                                    |
-| Ist einwertig       | Richtig                                                     |
+| Is-Single-Valued       | Richtig                                                     |
 | Ist indiziert             | Falsch                                                    |
 | Im globalen Katalog      | Falsch                                                    |
 | NT-Security-Descriptor | O:BAG:BAD:S:                                             |

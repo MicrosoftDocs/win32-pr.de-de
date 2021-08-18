@@ -1,25 +1,25 @@
 ---
-description: Der Multiple Provider Router (MPR) ruft NPgetCaps auf, um herauszufinden, wann die Netzwerkanbieter gestartet werden (nIndex ist auf wnnc Start festgelegt \_ ).
+description: Der Multiple Provider Router (MPR) ruft NPGetCaps auf, um herauszufinden, wann die Netzwerkanbieter gestartet werden (nIndex ist auf WNNC \_ START festgelegt).
 ms.assetid: f57bd8ff-647d-42f8-abaf-7937b24416dd
-title: Überschreiben des standardmpr-Timeout Intervalls
+title: Überschreiben des MPR-Standardzeitintervalls
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 0b4308d94f4b16a7f67786c8a0856f23922e6f25
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: c51c2c9db2fb892b7c2fc9646a9328fb9de4b7f9782ff5204ed261b16471ca4c
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "103960334"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118921134"
 ---
-# <a name="overriding-the-default-mpr-time-out-interval"></a>Überschreiben des standardmpr-Timeout Intervalls
+# <a name="overriding-the-default-mpr-time-out-interval"></a>Überschreiben des MPR-Standardzeitintervalls
 
-Der [*Multiple Provider Router*](../secgloss/m-gly.md) (MPR) ruft [**NPgetCaps**](/windows/desktop/api/Npapi/nf-npapi-npgetcaps) auf, um herauszufinden, wann die Netzwerkanbieter gestartet werden (*nIndex* ist auf wnnc Start festgelegt \_ ). Die MPR wartet dann auf den längsten Timeout Zeitraum, der von allen Netzwerkanbietern festgelegt wird, bevor das konsolidierte Netzwerk dem Benutzer präsentiert wird. Wenn einer der Netzwerkanbieter nicht weiß, wann er gestartet wird, verwendet MPR für diesen Anbieter ein Standard Timeout von 60 Sekunden.
+Der [*Multiple Provider Router*](../secgloss/m-gly.md) (MPR) ruft [**NPGetCaps**](/windows/desktop/api/Npapi/nf-npapi-npgetcaps) auf, um herauszufinden, wann die Netzwerkanbieter gestartet werden (*nIndex* ist auf WNNC \_ START festgelegt). Die MPR wartet dann für den längsten time out-Zeitraum, der von allen Netzwerkanbietern angegeben wurde, bevor sie dem Benutzer das konsolidierte Netzwerk präsentiert. Wenn einer der Netzwerkanbieter nicht weiß, wann er gestartet wird, verwendet MPR ein Standard-Time out von 60 Sekunden für diesen Anbieter.
 
-Falls erforderlich, kann der Administrator das Standard Timeout überschreiben, indem er das folgende Registrierungs Timeout für " **reg \_ DWORD** " erstellt, wobei " *n* " das Timeout Intervall in Millisekunden ist:
+Bei Bedarf kann der Administrator das Standard-Time out überschreiben, indem er das folgende **REG \_ DWORD-Registrierungs-Time** out erstellt, wobei *n* das Time out-Intervall in Millisekunden ist:
 
-**HKEY \_ Lokales \_ Computer** \\ **System** \\ **CurrentControlSet** \\ **Control** \\ **Network Provider** \\ **restoretimeout**  =  *n*
+**HKEY \_ LOCAL \_ MACHINE** \\ **SYSTEM** \\ **CurrentControlSet** \\ **Control** \\ **NetworkProvider** \\ **RestoreTimeout**  =  *n*
 
-Der folgende Pseudo Code zeigt den gesamten Logik Fluss für die Timeout Behandlung durch die MPR.
+Der folgende Pseudocode zeigt den vollständigen Logikfluss für die Time out-Behandlung durch mpr.
 
 
 ```C++

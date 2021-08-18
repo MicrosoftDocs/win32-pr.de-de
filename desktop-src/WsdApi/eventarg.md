@@ -33,7 +33,7 @@ Es gibt keine untergeordneten Elemente.
 
 
 
-| Element                                                               | Beschreibung                                                                                     |
+| Element                                                               | BESCHREIBUNG                                                                                     |
 |-----------------------------------------------------------------------|-------------------------------------------------------------------------------------------------|
 | [**idlFunctionDeclarations**](idlfunctiondeclarations.md)<br/> | Generiert IDL-Deklarationen für Proxyfunktionen für Porttypvorgänge.<br/> <br/> |
 | [**stubDefinitions**](stubdefinitions.md)<br/>                 | Generiert Implementierungen für Stubfunktionen für Porttypvorgänge.<br/> <br/>   |

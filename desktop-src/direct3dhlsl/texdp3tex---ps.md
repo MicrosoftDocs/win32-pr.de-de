@@ -1,6 +1,6 @@
 ---
-title: texdp3tex-PS
-description: Führt ein 3-Komponenten-Punktprodukt aus und verwendet das Ergebnis, um eine 1D-Textur Suche durchzuführen.
+title: texdp3tex – ps
+description: Führt ein Punktprodukt mit drei Komponenten aus und verwendet das Ergebnis für eine 1D-Textursuche.
 ms.assetid: vs|directx_sdk|~\texdp3tex___ps.htm
 ms.topic: reference
 ms.date: 05/31/2018
@@ -9,46 +9,46 @@ topic_type:
 api_name: ''
 api_type: ''
 api_location: ''
-ms.openlocfilehash: dfe74dd0a73bc47cd2855d35b239e80a1b5153c1
-ms.sourcegitcommit: fe03c5d92ca6a0d66a114b2303e99c0a19241ffb
-ms.translationtype: HT
+ms.openlocfilehash: 91014b52b04417bbb23e76988beeb0bd4c473bd1e1d116433a8fd1dbf09a47ad
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "104992975"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118788036"
 ---
-# <a name="texdp3tex---ps"></a>texdp3tex-PS
+# <a name="texdp3tex---ps"></a>texdp3tex – ps
 
-Führt ein 3-Komponenten-Punktprodukt aus und verwendet das Ergebnis, um eine 1D-Textur Suche durchzuführen.
+Führt ein Punktprodukt mit drei Komponenten aus und verwendet das Ergebnis für eine 1D-Textursuche.
 
 ## <a name="syntax"></a>Syntax
 
 
 
-| texdp3tex DST, src |
+| texdp3tex dst, src |
 |--------------------|
 
 
 
- 
+ 
 
 where
 
--   DST ist das Ziel Register.
--   src ist ein Quell Register.
+-   dst ist das Zielregister.
+-   src ist ein Quellregister.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
 
 
-| Pixel-Shader-Versionen | 1\_1 | 1\_2 | 1 \_ 3 | 1\_4 | 2 \_ 0 | 2 \_ x | 2 \_ SW | 3 \_ 0 | 3 \_ SW |
+| Pixelshaderversionen | 1\_1 | 1\_2 | 1 \_ 3 | 1\_4 | 2 \_ 0 | 2 \_ x | 2 \_ sw | 3 \_ 0 | 3 \_ sw |
 |-----------------------|------|------|------|------|------|------|-------|------|-------|
 | texdp3tex             |      | x    | x    |      |      |      |       |      |       |
 
 
 
- 
+ 
 
-Textur Register müssen die folgende Sequenz verwenden.
+Texturregister müssen die folgende Sequenz verwenden.
 
 
 ```
@@ -64,15 +64,15 @@ texdp3tex t(m), t(n)  // where m > n
 
 
 
-Hier finden Sie weitere Details dazu, wie das Punktprodukt und die Textur Suche durchgeführt werden.
+Hier finden Sie weitere Details dazu, wie das Punktprodukt und die Textursuche durchgeführt werden.
 
-Die texdp3tex-Anweisung führt ein 3-Komponenten-Punktprodukt aus.
+Die texdp3tex-Anweisung führt ein Punktprodukt mit drei Komponenten aus.
 
-u ' = TextureCoordinates (Stufe m)<sub>UVW</sub> \* t (n)<sub>RGB</sub>
+u' = TextureCoordinates(stage m)<sub>UVW</sub> \* t(n)<sub>RGB</sub>
 
-Das Ergebnis wird verwendet, um eine Stichprobe der Textur in Textur Phase m Durchführen einer 1D-Suche durchzuführen.
+Das Ergebnis wird verwendet, um die Textur in der Texturphase m zu untersuchen, indem eine 1D-Suche durchgeführt wird.
 
-t (m)<sub>RGBA</sub> = texturesample (Phase m)<sub>RGBA</sub> mit (u ', 0, 0) als Koordinaten
+t(m)<sub>RGBA</sub> = TextureSample(stage m)<sub>RGBA</sub> using (u',0,0) as coordinates
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
@@ -81,9 +81,9 @@ t (m)<sub>RGBA</sub> = texturesample (Phase m)<sub>RGBA</sub> mit (u ', 0, 0) al
 [Pixelshaderanweisungen](dx9-graphics-reference-asm-ps-instructions.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

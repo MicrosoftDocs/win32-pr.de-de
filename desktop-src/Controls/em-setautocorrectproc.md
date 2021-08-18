@@ -1,9 +1,9 @@
 ---
-title: EM_SETAUTOCORRECTPROC Meldung (RichEdit. h)
-description: Definiert die aktuelle AutoKorrektur-Rückruf Prozedur.
+title: EM_SETAUTOCORRECTPROC (Richedit.h)
+description: Definiert die aktuelle Autokorrektur-Rückrufprozedur.
 ms.assetid: 2FA48CFC-0D7C-41EF-8207-5EDC644FF3BC
 keywords:
-- Windows-Steuerelemente für EM_SETAUTOCORRECTPROC Meldung
+- EM_SETAUTOCORRECTPROC meldungssteuerelemente Windows
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: a7359c86c3fdabe4c410f600d0af3100dde4c4ed
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: b46e838cf18a345272b7983de1522a0c55a2565c5df3e11e3c89cd820653fb73
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104478591"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118958719"
 ---
-# <a name="em_setautocorrectproc-message"></a>EM- \_ Nachricht
+# <a name="em_setautocorrectproc-message"></a>EM \_ SETAUTOCORRECTPROC-Nachricht
 
-Definiert die aktuelle AutoKorrektur-Rückruf Prozedur.
+Definiert die aktuelle Autokorrektur-Rückrufprozedur.
 
 
 ```C++
@@ -39,14 +39,14 @@ Definiert die aktuelle AutoKorrektur-Rückruf Prozedur.
 *wParam* 
 </dt> <dd>
 
-Die [*autocorrectproc*](/windows/desktop/api/Richedit/nc-richedit-autocorrectproc) -Rückruffunktion.
+Die [*AutoCorrectProc-Rückruffunktion.*](/windows/desktop/api/Richedit/nc-richedit-autocorrectproc)
 
 </dd> <dt>
 
 *lParam* 
 </dt> <dd>
 
-Nicht verwendet; muss NULL sein.
+Nicht verwendet; muss 0 (null) sein.
 
 </dd> </dl>
 
@@ -60,23 +60,23 @@ Wenn der Vorgang erfolgreich ist, ist der Rückgabewert 0 (null). Wenn der Vorga
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows 8 \[ -Desktop-Apps\]<br/>                                            |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2012 \[ -Desktop-Apps\]<br/>                                  |
-| Header<br/>                   | <dl> <dt>RichEdit. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | \[Windows 8 Nur Desktop-Apps\]<br/>                                            |
+| Unterstützte Mindestversion (Server)<br/> | \[Windows Server 2012 Nur Desktop-Apps\]<br/>                                  |
+| Header<br/>                   | <dl> <dt>Richedit.h</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[*Autocorrectproc*](/windows/desktop/api/Richedit/nc-richedit-autocorrectproc)
+[*AutoCorrectProc*](/windows/desktop/api/Richedit/nc-richedit-autocorrectproc)
 </dt> <dt>
 
-[**EM \_ callautocorrectproc**](em-callautocorrectproc.md)
+[**EM \_ CALLAUTOCORRECTPROC**](em-callautocorrectproc.md)
 </dt> <dt>
 
-[**EM \_ getautocorrectproc**](em-getautocorrectproc.md)
+[**EM \_ GETAUTOCORRECTPROC**](em-getautocorrectproc.md)
 </dt> </dl>
 
  

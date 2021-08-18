@@ -1,11 +1,11 @@
 ---
 title: ms-DS-NC-Replica-Locations-Attribut
-description: Eine Liste der Server, die die Replikatgruppe für den entsprechenden Nicht-Domänenbenennungskontext sind.
+description: Eine Liste der Server, die die Replikatgruppe für den entsprechenden Nichtdomänenbenennungskontext sind.
 ms.assetid: b0379bb6-feee-432a-b484-1a6c8100d027
 ms.tgt_platform: multiple
 keywords:
 - MS-DS-NC-Replica-Locations-Attribut AD-Schema
-- AD-Schema des msDS-NC-Replica-Locations-Attributs
+- MSDS-NC-Replica-Locations-Attribut AD-Schema
 topic_type:
 - apiref
 api_name:
@@ -23,7 +23,7 @@ ms.locfileid: "118684544"
 ---
 # <a name="ms-ds-nc-replica-locations-attribute"></a>ms-DS-NC-Replica-Locations-Attribut
 
-Eine Liste der Server, die die Replikatgruppe für den entsprechenden Nicht-Domänenbenennungskontext sind.
+Eine Liste der Server, die die Replikatgruppe für den entsprechenden Nichtdomänenbenennungskontext sind.
 
 
 
@@ -35,7 +35,7 @@ Eine Liste der Server, die die Replikatgruppe für den entsprechenden Nicht-Dom�
 | Aktualisieren von Berechtigungen  | \-                                      |
 | Updatehäufigkeit  | \-                                      |
 | Attribute-Id      | 1.2.840.113556.1.4.1661                 |
-| System-Id-Guid    | 97de9615-b537-46bc-ac0f-10720f3909f3    |
+| System-ID-GUID    | 97de9615-b537-46bc-ac0f-10720f3909f3    |
 | Syntax            | [**Object(DS-DN)**](s-object-ds-dn.md) |
 
 
@@ -58,7 +58,7 @@ Eine Liste der Server, die die Replikatgruppe für den entsprechenden Nicht-Dom�
 | Link-ID                | 1044                                       |
 | MAPI-Id                | \-                                         |
 | System-Only            | Falsch                                      |
-| Is-Single-Valued       | Falsch                                      |
+| Ist einwertig       | Falsch                                      |
 | Ist indiziert             | Falsch                                      |
 | Im globalen Katalog      | Falsch                                      |
 | NT-Security-Descriptor | O:BAG:BAD:S:                               |
@@ -66,7 +66,7 @@ Eine Liste der Server, die die Replikatgruppe für den entsprechenden Nicht-Dom�
 | Range-Upper            | \-                                         |
 | Search-Flags           | 0x00000000                                 |
 | System-Flags           | 0x00000010                                 |
-| In verwendete Klassen        | [**Ref-übergreifend**](c-crossref.md)<br/> |
+| In verwendete Klassen        | [**Cross-Ref**](c-crossref.md)<br/> |
 
 
 
@@ -79,7 +79,7 @@ Eine Liste der Server, die die Replikatgruppe für den entsprechenden Nicht-Dom�
 | Link-ID                | 1044                                       |
 | MAPI-Id                | \-                                         |
 | System-Only            | Falsch                                      |
-| Is-Single-Valued       | Falsch                                      |
+| Ist einwertig       | Falsch                                      |
 | Ist indiziert             | Falsch                                      |
 | Im globalen Katalog      | Falsch                                      |
 | NT-Security-Descriptor | O:BAG:BAD:S:                               |
@@ -87,7 +87,7 @@ Eine Liste der Server, die die Replikatgruppe für den entsprechenden Nicht-Dom�
 | Range-Upper            | \-                                         |
 | Search-Flags           | 0x00000000                                 |
 | System-Flags           | 0x00000010                                 |
-| In verwendete Klassen        | [**Ref-übergreifend**](c-crossref.md)<br/> |
+| In verwendete Klassen        | [**Cross-Ref**](c-crossref.md)<br/> |
 
 
 
@@ -100,7 +100,7 @@ Eine Liste der Server, die die Replikatgruppe für den entsprechenden Nicht-Dom�
 | Link-ID                | 1044                                       |
 | MAPI-Id                | \-                                         |
 | System-Only            | Falsch                                      |
-| Is-Single-Valued       | Falsch                                      |
+| Ist einwertig       | Falsch                                      |
 | Ist indiziert             | Falsch                                      |
 | Im globalen Katalog      | Falsch                                      |
 | NT-Security-Descriptor | O:BAG:BAD:S:                               |
@@ -108,7 +108,7 @@ Eine Liste der Server, die die Replikatgruppe für den entsprechenden Nicht-Dom�
 | Range-Upper            | \-                                         |
 | Search-Flags           | 0x00000000                                 |
 | System-Flags           | 0x00000010                                 |
-| In verwendete Klassen        | [**Ref-übergreifend**](c-crossref.md)<br/> |
+| In verwendete Klassen        | [**Cross-Ref**](c-crossref.md)<br/> |
 
 
 
@@ -121,7 +121,7 @@ Eine Liste der Server, die die Replikatgruppe für den entsprechenden Nicht-Dom�
 | Link-ID                | 1044                                       |
 | MAPI-Id                | \-                                         |
 | System-Only            | Falsch                                      |
-| Ist einwertig       | Falsch                                      |
+| Is-Single-Valued       | Falsch                                      |
 | Ist indiziert             | Falsch                                      |
 | Im globalen Katalog      | Falsch                                      |
 | NT-Security-Descriptor | O:BAG:BAD:S:                               |
@@ -129,7 +129,7 @@ Eine Liste der Server, die die Replikatgruppe für den entsprechenden Nicht-Dom�
 | Range-Upper            | \-                                         |
 | Search-Flags           | 0x00000000                                 |
 | System-Flags           | 0x00000010                                 |
-| In verwendete Klassen        | [**Cross-Ref**](c-crossref.md)<br/> |
+| In verwendete Klassen        | [**Ref-übergreifend**](c-crossref.md)<br/> |
 
 
 
@@ -142,7 +142,7 @@ Eine Liste der Server, die die Replikatgruppe für den entsprechenden Nicht-Dom�
 | Link-ID                | 1044                                       |
 | MAPI-Id                | \-                                         |
 | System-Only            | Falsch                                      |
-| Ist einwertig       | Falsch                                      |
+| Is-Single-Valued       | Falsch                                      |
 | Ist indiziert             | Falsch                                      |
 | Im globalen Katalog      | Falsch                                      |
 | NT-Security-Descriptor | O:BAG:BAD:S:                               |
@@ -150,7 +150,7 @@ Eine Liste der Server, die die Replikatgruppe für den entsprechenden Nicht-Dom�
 | Range-Upper            | \-                                         |
 | Search-Flags           | 0x00000000                                 |
 | System-Flags           | 0x00000010                                 |
-| In verwendete Klassen        | [**Cross-Ref**](c-crossref.md)<br/> |
+| In verwendete Klassen        | [**Ref-übergreifend**](c-crossref.md)<br/> |
 
 
 
@@ -163,7 +163,7 @@ Eine Liste der Server, die die Replikatgruppe für den entsprechenden Nicht-Dom�
 | Link-ID                | 1044                                       |
 | MAPI-Id                | \-                                         |
 | System-Only            | Falsch                                      |
-| Ist einwertig       | Falsch                                      |
+| Is-Single-Valued       | Falsch                                      |
 | Ist indiziert             | Falsch                                      |
 | Im globalen Katalog      | Falsch                                      |
 | NT-Security-Descriptor | O:BAG:BAD:S:                               |
@@ -171,7 +171,7 @@ Eine Liste der Server, die die Replikatgruppe für den entsprechenden Nicht-Dom�
 | Range-Upper            | \-                                         |
 | Search-Flags           | 0x00000000                                 |
 | System-Flags           | 0x00000010                                 |
-| In verwendete Klassen        | [**Cross-Ref**](c-crossref.md)<br/> |
+| In verwendete Klassen        | [**Ref-übergreifend**](c-crossref.md)<br/> |
 
 
 

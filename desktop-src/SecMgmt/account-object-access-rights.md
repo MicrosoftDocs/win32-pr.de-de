@@ -1,36 +1,36 @@
 ---
-description: Der Typ der Konto Objekt-Zugriffsrechte weist die folgenden Zugriffs Typen auf.
+description: Der Kontoobjekt-Zugriffsberechtigungstyp weist die folgenden Zugriffstypen auf.
 ms.assetid: 42fb22bb-8135-4a8f-bce6-e767d6c5aaea
-title: Zugriffsrechte für Konto Objekte
+title: Zugriffsrechte für Kontoobjekte
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: d69ba0939286564517c7293da136e88aa0367a60
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 6bb1251eecfd32bc574307cbc4f0f1327e4f96eb7fa7051d1dd638beb59e7ccd
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "104529648"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118895107"
 ---
-# <a name="account-object-access-rights"></a>Zugriffsrechte für Konto Objekte
+# <a name="account-object-access-rights"></a>Zugriffsrechte für Kontoobjekte
 
-Der Typ der Konto Objekt-Zugriffsrechte weist die folgenden Zugriffs Typen auf.
+Der Kontoobjekt-Zugriffsberechtigungstyp weist die folgenden Zugriffstypen auf.
 
 
 
 | Zugriffstyp                     | BESCHREIBUNG                                                                                                                                                                                                                                           |
 |---------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Konto \_ Ansicht                   | Dieser Zugriffstyp ist erforderlich, um die Kontoinformationen zu lesen. Dies schließt die dem Konto zugewiesenen [*Berechtigungen*](/windows/desktop/SecGloss/p-gly) , zugewiesene Arbeitsspeicher Kontingente und alle gewährten speziellen Zugriffs Typen ein. |
-| Konto \_ Anpassungs \_ Berechtigungen     | Dieser Zugriffstyp ist erforderlich, um Berechtigungen für ein Konto zuzuweisen oder zu entfernen.                                                                                                                                                            |
-| Konto \_ Anpassungs \_ Kontingente         | Dieser Zugriffstyp ist erforderlich, um die einem Konto zugewiesenen System Kontingente zu ändern.                                                                                                                                                                      |
-| Konto \_ Anpassung des \_ System \_ Zugriffs | Dieser Zugriffstyp ist erforderlich, um die systemzugriffsflags für das Konto zu aktualisieren.                                                                                                                                                                       |
+| \_KONTOANSICHT                   | Dieser Zugriffstyp ist erforderlich, um die Kontoinformationen zu lesen. Dies schließt die dem Konto zugewiesenen [*Berechtigungen,*](/windows/desktop/SecGloss/p-gly) zugewiesene Arbeitsspeicherkontingente und alle gewährten speziellen Zugriffstypen ein. |
+| \_ \_ KONTOANPASSUNGSBERECHTIGUNGEN     | Dieser Zugriffstyp ist erforderlich, um einem Konto Berechtigungen zuzuweisen oder Berechtigungen daraus zu entfernen.                                                                                                                                                            |
+| KONTINGENTE ANPASSEN DES \_ \_ KONTOS         | Dieser Zugriffstyp ist erforderlich, um die einem Konto zugewiesenen Systemkontingente zu ändern.                                                                                                                                                                      |
+| KONTO \_ ANPASSEN \_ DES \_ SYSTEMZUGRIFFS | Dieser Zugriffstyp ist erforderlich, um die Systemzugriffsflags für das Konto zu aktualisieren.                                                                                                                                                                       |
 
 
 
  
 
-## <a name="generic-access-masks"></a>Generische Zugriffs Masken
+## <a name="generic-access-masks"></a>Generische Zugriffsmasken
 
-Das [**Account**](account-object.md) -Objekt veröffentlicht die folgenden Zuordnungen von generischen Zugriffs Typen auf bestimmte Zugriffs Typen.
+Das [**Account-Objekt**](account-object.md) veröffentlicht die folgenden Zuordnungen von generischen Zugriffstypen zu bestimmten Zugriffstypen.
 
 ``` syntax
     GENERIC_READ        STANDARD_RIGHTS_READ |
@@ -44,9 +44,9 @@ Das [**Account**](account-object.md) -Objekt veröffentlicht die folgenden Zuord
     GENERIC_EXECUTE        STANDARD_RIGHTS_EXECUTE
 ```
 
-## <a name="standard-access-types"></a>Standard Zugriffs Typen
+## <a name="standard-access-types"></a>Standardzugriffstypen
 
-Dieses Objekt unterstützt den (optionalen) Standard Zugriffstyp "synchronisieren" nicht. Alle erforderlichen Zugriffs Typen werden unterstützt. Die Maske aller unterstützten Zugriffs Typen für diesen Objekttyp lautet wie folgt.
+Dieses Objekt unterstützt den (optionalen) SYNCHRONIZE-Standardzugriffstyp nicht. Alle erforderlichen Zugriffstypen werden unterstützt. Die Maske aller unterstützten Zugriffstypen für diesen Objekttyp lautet wie folgt.
 
 ``` syntax
     ACCOUNT_ALL_ACCESS  STANDARD_RIGHTS_REQUIRED |

@@ -1,9 +1,9 @@
 ---
-title: ButtonGroup. hoverdownimage
-description: Das hoverdownimage-Attribut gibt den Namen des Bilds an oder Ruft den Namen des Bilds ab, das den Hover-Down-Zustand einer Schaltfläche in der ButtonGroup darstellt. Der Hover-Down-Zustand tritt auf, wenn sich die Schaltfläche im Zustand "gedrückt" befindet und der Benutzer mit der Maus darauf zeigt.
+title: BUTTONGROUP.hoverDownImage
+description: Das hoverDownImage-Attribut gibt den Namen des Bilds an, das den Hoverdownzustand einer Schaltfläche in buttongroup darstellt, oder ruft den Namen ab. Der Zustand des Mauszeigers tritt auf, wenn sich die Schaltfläche im Zustand "Unten" befindet und der Benutzer mit der Maus darauf zeigen soll.
 ms.assetid: dc048303-21d1-40ba-99bb-8d1c2f46628b
 keywords:
-- ButtonGroup. hoverdownimage-Fenster Media Player
+- BUTTONGROUP.hoverDownImage Windows Media Player
 topic_type:
 - apiref
 api_name:
@@ -12,16 +12,16 @@ api_type:
 - NA
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 7a40788fafffd6eb4626bc834a941f7330c988fa
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: c84d907a9b3fd1fc1a2eaf2dcf30337d016ae0732b147f435f49343d791b65c6
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106353789"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118119879"
 ---
-# <a name="buttongrouphoverdownimage"></a>ButtonGroup. hoverdownimage
+# <a name="buttongrouphoverdownimage"></a>BUTTONGROUP.hoverDownImage
 
-Das **hoverdownimage** -Attribut gibt den Namen des Bilds an oder Ruft den Namen des Bilds ab, das den Hover-Down-Zustand einer Schaltfläche in der **ButtonGroup** darstellt. Der Hover-Down-Zustand tritt auf, wenn sich die Schaltfläche im Zustand "gedrückt" befindet und der Benutzer mit der Maus darauf zeigt.
+Das **hoverDownImage-Attribut** gibt den Namen des Bilds an, das den Hoverdownzustand einer Schaltfläche in **buttongroup darstellt,** oder ruft den Namen des Bilds ab. Der Zustand des Mauszeigers tritt auf, wenn sich die Schaltfläche im Zustand "Unten" befindet und der Benutzer mit der Maus darauf zeigen soll.
 
 ``` syntax
         elementID.hoverDownImage
@@ -29,17 +29,17 @@ Das **hoverdownimage** -Attribut gibt den Namen des Bilds an oder Ruft den Namen
 
 ## <a name="possible-values"></a>Mögliche Werte
 
-Dieses Attribut ist eine Lese- **/schreibzeichenfolge**.
+Dieses Attribut ist eine **Zeichenfolge** mit Lese-/Schreibzugriff.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die unterstützten Bildformate sind BMP, JPG, PNG und GIF. Wenn es sich bei dem Bild um eine 8-Bit-BMP-Datei handelt, können seine Farbton-und Sättigungswerte mithilfe der Attribute **hueshift** und **Sättigung** dynamisch geändert werden.
+Die unterstützten Bildformate sind BMP, JPG, PNG und GIF. Wenn es sich bei dem Bild um eine 8-Bit-BMP-Datei handelt, können die Farbton- und Sättigungswerte mithilfe der Attribute **hueShift** und **saturation** dynamisch geändert werden.
 
-Das Standard Image ist das im " **downImage** "-Attribut angegebene Standard Image oder der Standardwert.
+Das Standardimage ist das im **downImage-Attribut** angegebene Image oder dessen Standardimage.
 
-Wenn das Bild mit dem Mauszeiger größer als der definierte Bereich ist, wird das Bild mit dem Mauszeiger abgeschnitten.
+Wenn das Bild mit dem Mauszeiger nach unten größer als der definierte Bereich ist, wird das Bild mit dem Mauszeiger nach unten zugeschnitten.
 
-Wenn das Bild nicht abgerufen werden kann, wird ein Standardbild (das rot-x-Bild) angezeigt.
+Wenn das Bild nicht abgerufen werden kann, wird ein Standardbild (das bild red-x) angezeigt.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -47,24 +47,24 @@ Wenn das Bild nicht abgerufen werden kann, wird ein Standardbild (das rot-x-Bild
 
 | Anforderung | Wert |
 |--------------------|------------------------------------------------------|
-| Version<br/> | Windows Media Player, Version 7,0 oder höher<br/> |
+| Version<br/> | Windows Media Player Version 7.0 oder höher<br/> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**ButtonGroup-Element**](buttongroup-element.md)
+[**BUTTONGROUP-Element**](buttongroup-element.md)
 </dt> <dt>
 
-[**ButtonGroup. downImage**](buttongroup-downimage.md)
+[**BUTTONGROUP.downImage**](buttongroup-downimage.md)
 </dt> <dt>
 
-[**ButtonGroup. hueshift**](buttongroup-hueshift.md)
+[**BUTTONGROUP.hueShift**](buttongroup-hueshift.md)
 </dt> <dt>
 
-[**ButtonGroup. Sättigung**](buttongroup-saturation.md)
+[**BUTTONGROUP.saturation**](buttongroup-saturation.md)
 </dt> </dl>
 
  

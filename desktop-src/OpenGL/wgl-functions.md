@@ -1,43 +1,43 @@
 ---
 title: WGL-Funktionen
-description: Im folgenden werden die mit OpenGL verknüpften WGL-Funktionen behandelt.
+description: Es folgen die WGL-Funktionen, die OpenGL zugeordnet sind.
 ms.assetid: 52053370-d88b-4faf-bdcd-4663c6d5270d
 keywords:
-- OpenGL, WGL-Funktionen
-- WGL-Referenz OpenGL, Functions
+- OpenGL,WGL-Funktionen
+- WGL-Referenz OpenGL , Funktionen
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 150871ed1e059a5a7711c5921c43860a309c4367
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: ece9b08b165a820bab43da6ecfc1de5c1ce98f63b7a3d4ce7775627765a1365a
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "106340613"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118932790"
 ---
 # <a name="wgl-functions"></a>WGL-Funktionen
 
-Im folgenden sind die mit OpenGL verknüpften WGL-Funktionen aufgeführt:
+Es folgen die WGL-Funktionen, die OpenGL zugeordnet sind:
 
--   [**wglcopycontext**](/windows/desktop/api/wingdi/nf-wingdi-wglcopycontext)
--   [**wglkreatecontext**](/windows/desktop/api/wingdi/nf-wingdi-wglcreatecontext)
--   [**wglkreatelayercontext**](/windows/desktop/api/wingdi/nf-wingdi-wglcreatelayercontext)
--   [**wgldeletecontext**](/windows/desktop/api/wingdi/nf-wingdi-wgldeletecontext)
--   [**wgldescribelayerplane**](/windows/desktop/api/wingdi/nf-wingdi-wgldescribelayerplane)
--   [**wglgetcurrentcontext**](/windows/desktop/api/wingdi/nf-wingdi-wglgetcurrentcontext)
--   [**wglgetcurrentdc**](/windows/desktop/api/wingdi/nf-wingdi-wglgetcurrentdc)
--   [**wglgetlayerpaletteentries**](/windows/desktop/api/wingdi/nf-wingdi-wglgetlayerpaletteentries)
--   [**wglgetprocaddress**](/windows/desktop/api/wingdi/nf-wingdi-wglgetprocaddress)
--   [**wglmakecurrent**](/windows/desktop/api/wingdi/nf-wingdi-wglmakecurrent)
--   [**wglrealizelayerpalette**](/windows/desktop/api/wingdi/nf-wingdi-wglrealizelayerpalette)
--   [**wglsetlayerpaletteentries**](/windows/desktop/api/wingdi/nf-wingdi-wglsetlayerpaletteentries)
--   [**wglsharelists**](/windows/desktop/api/wingdi/nf-wingdi-wglsharelists)
--   [**wglswaplayerbuffers**](/windows/desktop/api/wingdi/nf-wingdi-wglswaplayerbuffers)
--   [**wgluseefontbitmaps**](/windows/desktop/api/wingdi/nf-wingdi-wglusefontbitmapsa)
--   [**wgluseelfontgliederungen**](/windows/desktop/api/wingdi/nf-wingdi-wglusefontoutlinesa)
+-   [**wglCopyContext**](/windows/desktop/api/wingdi/nf-wingdi-wglcopycontext)
+-   [**wglCreateContext**](/windows/desktop/api/wingdi/nf-wingdi-wglcreatecontext)
+-   [**wglCreateLayerContext**](/windows/desktop/api/wingdi/nf-wingdi-wglcreatelayercontext)
+-   [**wglDeleteContext**](/windows/desktop/api/wingdi/nf-wingdi-wgldeletecontext)
+-   [**wglDescribeLayerPlane**](/windows/desktop/api/wingdi/nf-wingdi-wgldescribelayerplane)
+-   [**wglGetCurrentContext**](/windows/desktop/api/wingdi/nf-wingdi-wglgetcurrentcontext)
+-   [**wglGetCurrentDC**](/windows/desktop/api/wingdi/nf-wingdi-wglgetcurrentdc)
+-   [**wglGetLayerPaletteEntries**](/windows/desktop/api/wingdi/nf-wingdi-wglgetlayerpaletteentries)
+-   [**wglGetProcAddress**](/windows/desktop/api/wingdi/nf-wingdi-wglgetprocaddress)
+-   [**wglMakeCurrent**](/windows/desktop/api/wingdi/nf-wingdi-wglmakecurrent)
+-   [**wglRealizeLayerPalette**](/windows/desktop/api/wingdi/nf-wingdi-wglrealizelayerpalette)
+-   [**wglSetLayerPaletteEntries**](/windows/desktop/api/wingdi/nf-wingdi-wglsetlayerpaletteentries)
+-   [**wglShareLists**](/windows/desktop/api/wingdi/nf-wingdi-wglsharelists)
+-   [**wglSwapLayerBuffers**](/windows/desktop/api/wingdi/nf-wingdi-wglswaplayerbuffers)
+-   [**wglUseFontBitmaps**](/windows/desktop/api/wingdi/nf-wingdi-wglusefontbitmapsa)
+-   [**wglUseFontOutlines**](/windows/desktop/api/wingdi/nf-wingdi-wglusefontoutlinesa)
 
- 
+ 
 
- 
+ 
 
 
 

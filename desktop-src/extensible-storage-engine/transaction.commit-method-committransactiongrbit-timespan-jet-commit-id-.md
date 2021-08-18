@@ -1,6 +1,6 @@
 ---
-description: 'Weitere Informationen finden Sie unter: Transaction. Commit-Methode (committransaktiongrbit, TimeSpan, JET_COMMIT_ID)'
-title: Transaction. Commit-Methode (committransaktiongrbit, TimeSpan, JET_COMMIT_ID)
+description: 'Weitere Informationen zu: Transaction.Commit-Methode (CommitTransactionGrbit, TimeSpan, JET_COMMIT_ID)'
+title: Transaction.Commit-Methode (CommitTransactionGrbit, TimeSpan, JET_COMMIT_ID)
 TOCTitle: Commit method (CommitTransactionGrbit, TimeSpan, JET_COMMIT_ID)
 ms:assetid: M:Microsoft.Isam.Esent.Interop.Transaction.Commit(Microsoft.Isam.Esent.Interop.CommitTransactionGrbit,System.TimeSpan,Microsoft.Isam.Esent.Interop.Windows8.JET_COMMIT_ID@)
 ms:mtpsurl: https://msdn.microsoft.com/library/microsoft.isam.esent.interop.transaction.commit(v=EXCHG.10)
@@ -20,19 +20,19 @@ api_type:
 api_location:
 - Microsoft.Isam.Esent.Interop.dll
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: 18df363e4320a4b1a53c34e15fcf68939fce96ef
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 90fd53fd7097db98ab84148b3f32710c369c948ed64c3606d0018cc8e79c877a
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "104042727"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117890513"
 ---
-# <a name="transactioncommit-method-committransactiongrbit-timespan-jet_commit_id"></a>Transaction. Commit-Methode (committransaktiongrbit, TimeSpan, JET_COMMIT_ID)
+# <a name="transactioncommit-method-committransactiongrbit-timespan-jet_commit_id"></a>Transaction.Commit-Methode (CommitTransactionGrbit, TimeSpan, JET_COMMIT_ID)
 
-Commit für eine Transaktion durchsetzen. Dieses Objekt sollte sich in einer Transaktion befinden.
+Committen einer Transaktion. Dieses Objekt sollte sich in einer Transaktion befindet.
 
-**Namespace:**  [Microsoft. ISAM. ESENT. Interop](./microsoft.isam.esent.interop-namespace.md)  
-**Assembly:**  Microsoft. ISAM. ESENT. Interop (in Microsoft.Isam.Esent.Interop.dll)
+**Namespace:**  [Microsoft.Isam.Esent.Interop](./microsoft.isam.esent.interop-namespace.md)  
+**Assembly:**  Microsoft.Isam.Esent.Interop (in Microsoft.Isam.Esent.Interop.dll)
 
 ## <a name="syntax"></a>Syntax
 
@@ -64,32 +64,32 @@ public void Commit(
 #### <a name="parameters"></a>Parameter
 
   - grbit  
-    Typ: [Microsoft. ISAM. ESENT. Interop. committransaktiongrbit](./committransactiongrbit-enumeration.md)  
+    Typ: [Microsoft.Isam.Esent.Interop.CommitTransactionGrbit](./committransactiongrbit-enumeration.md)  
     
-    Jetcommittransaction-Optionen.
+    JetCommitTransaction-Optionen.
 
 <!-- end list -->
 
-  - durablecommit  
-    Typ: [System. TimeSpan](/dotnet/api/system.timespan)  
+  - durableCommit  
+    Typ: [System.TimeSpan](/dotnet/api/system.timespan)  
     
-    Dauer für das Commit von verzögerten Transaktionen.
+    Dauer des Commits für verzögerte Transaktionen.
 
 <!-- end list -->
 
   - commitId  
-    Typ: [Microsoft.ISAM.ESENT.Interop.Windows8.JET_COMMIT_ID](./jet-commit-id-class.md)  
+    Typ: [Microsoft.Isam.Esent.Interop.Windows8.JET_COMMIT_ID](./jet-commit-id-class.md)  
     
     Commit-ID für diesen Commitdatensatz.
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
-#### <a name="reference"></a>Referenz
+#### <a name="reference"></a>Verweis
 
 [Transaktionsklasse](./transaction-class.md)
 
-[Transaktions Mitglieder](./transaction-members.md)
+[Transaktionsmember](./transaction-members.md)
 
-[Commit-Überladung](./transaction.commit-method.md)
+[Commitüberladung](./transaction.commit-method.md)
 
-[Microsoft. ISAM. ESENT. Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)
+[Microsoft.Isam.Esent.Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)

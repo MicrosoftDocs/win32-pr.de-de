@@ -24,24 +24,24 @@ api_type:
 api_location:
 - Microsoft.Isam.Esent.Interop.dll
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: 2066e6b4b3039ba150f17630afaef967c215823d
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: c584347c88c5da4959694bb9ce0be9404d107027fc8e53ac1eec618102b76090
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106346680"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118765976"
 ---
 # <a name="jet_enumcolumnvalue-class"></a>JET_ENUMCOLUMNVALUE-Klasse
 
-Listet die Spaltenwerte eines Datensatzes mithilfe der jetenumeratecolumns-Funktion auf. [Jetenumeratecolumns (JET_SESID, JET_TABLEID, Int32, \[ \] , Int32, \[ \] , JET_PFNREALLOC, IntPtr, Int32, enumeratecolumnsgrbit)](./api.jetenumeratecolumns-method.md) gibt ein Array mit JET_ENUMCOLUMNVALUE Strukturen zurück. Das Array wird im Arbeitsspeicher zurückgegeben, der mithilfe des Rückrufs zugewiesen wurde, der für diese Funktion angegeben wurde.
+Aufzählt die Spaltenwerte eines Datensatzes mithilfe der JetEnumerateColumns-Funktion. [JetEnumerateColumns(JET_SESID, JET_TABLEID, Int32, , \[ \] Int32, \[ \] , JET_PFNREALLOC, IntPtr, Int32, EnumerateColumnsGrbit)](./api.jetenumeratecolumns-method.md) gibt ein Array von JET_ENUMCOLUMNVALUE-Strukturen zurück. Das Array wird im Arbeitsspeicher zurückgegeben, der mithilfe des Rückrufs zugeordnet wurde, der für diese Funktion bereitgestellt wurde.
 
 ## <a name="inheritance-hierarchy"></a>Vererbungshierarchie
 
 [System.Object](/dotnet/api/system.object)  
   Microsoft.Isam.Esent.Interop.JET_ENUMCOLUMNVALUE  
 
-**Namespace:**  [Microsoft. ISAM. ESENT. Interop](./microsoft.isam.esent.interop-namespace.md)  
-**Assembly:**  Microsoft. ISAM. ESENT. Interop (in Microsoft.Isam.Esent.Interop.dll)
+**Namespace:**  [Microsoft.Isam.Esent.Interop](./microsoft.isam.esent.interop-namespace.md)  
+**Assembly:**  Microsoft.Isam.Esent.Interop (in Microsoft.Isam.Esent.Interop.dll)
 
 ## <a name="syntax"></a>Syntax
 
@@ -60,10 +60,10 @@ public class JET_ENUMCOLUMNVALUE
 
 Alle öffentlichen statischen Elemente dieses Typs (Shared in Microsoft Visual Basic) sind threadsicher. Bei Instanzmembern ist die Threadsicherheit nicht gewährleistet.
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
-#### <a name="reference"></a>Referenz
+#### <a name="reference"></a>Verweis
 
-[Mitglieder JET_ENUMCOLUMNVALUE](./jet-enumcolumnvalue-members.md)
+[JET_ENUMCOLUMNVALUE Member](./jet-enumcolumnvalue-members.md)
 
-[Microsoft. ISAM. ESENT. Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)
+[Microsoft.Isam.Esent.Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)

@@ -1,7 +1,7 @@
 ---
-description: Definiert den hellen Typ.
+description: Definiert den Lichttyp.
 ms.assetid: 90ad82d3-ffa8-42bb-9d9c-cf28a416c32d
-title: D3DLIGHTTYPE-Enumeration (D3D9Types. h)
+title: D3DLIGHTTYPE-Enumeration (D3D9Types.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,16 +13,16 @@ api_type:
 - HeaderDef
 api_location:
 - D3D9Types.h
-ms.openlocfilehash: 83c94db3126443f757f01a69d7d773417f70683a
-ms.sourcegitcommit: 14010c34b35fa268046c7683f021f86de08ddd0a
+ms.openlocfilehash: 66aefec5d614e5fc51f82741fbb30ace71222997273b7647c0bf51f2d5038878
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "106357246"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118804775"
 ---
 # <a name="d3dlighttype-enumeration"></a>D3DLIGHTTYPE-Enumeration
 
-Definiert den hellen Typ.
+Definiert den Lichttyp.
 
 ## <a name="syntax"></a>Syntax
 
@@ -42,37 +42,37 @@ typedef enum D3DLIGHTTYPE {
 
 <dl> <dt>
 
-<span id="D3DLIGHT_POINT"></span><span id="d3dlight_point"></span>**D3DLIGHT \_ Punkt**
+<span id="D3DLIGHT_POINT"></span><span id="d3dlight_point"></span>**D3DLIGHT \_ POINT**
 </dt> <dd>
 
-Light ist eine Punktquelle. Das Licht hat eine Position im Raum und strahlt das Licht in alle Richtungen aus.
+Licht ist eine Punktquelle. Das Licht hat eine Position im Raum und glüht in alle Richtungen.
 
 </dd> <dt>
 
-<span id="D3DLIGHT_SPOT"></span><span id="d3dlight_spot"></span>**D3DLIGHT \_ Spot**
+<span id="D3DLIGHT_SPOT"></span><span id="d3dlight_spot"></span>**D3DLIGHT \_ SPOT**
 </dt> <dd>
 
-Light ist eine Spotlight-Quelle. Dieses Licht ist wie ein Punktlicht, mit dem Unterschied, dass die Beleuchtung auf einen Kegel beschränkt ist. Dieser Light-Typ hat eine Richtung und einige andere Parameter, die die Form des von ihm erzeugten Diagrammes bestimmen. Weitere Informationen zu diesen Parametern finden Sie in der [**D3DLIGHT9**](d3dlight9.md) -Struktur.
+Licht ist eine Spotlightquelle. Dieses Licht ist wie ein Punktlicht, mit der Ausnahme, dass die Glühbirnen auf einen Kegel beschränkt sind. Dieser Lichttyp hat eine Richtung und mehrere andere Parameter, die die Form des Kegels bestimmen, den er erzeugt. Informationen zu diesen Parametern finden Sie in der [**D3DLIGHT9-Struktur.**](d3dlight9.md)
 
 </dd> <dt>
 
-<span id="D3DLIGHT_DIRECTIONAL"></span><span id="d3dlight_directional"></span>**D3DLIGHT \_ direktional**
+<span id="D3DLIGHT_DIRECTIONAL"></span><span id="d3dlight_directional"></span>**D3DLIGHT \_ DIRECTIONAL**
 </dt> <dd>
 
-Light ist eine direktionale Lichtquelle. Dies entspricht der Verwendung einer Point Light-Quelle in unbegrenzter Entfernung.
+Licht ist eine direktionale Lichtquelle. Dies entspricht der Verwendung einer Punktlichtquelle in unendlicher Entfernung.
 
 </dd> <dt>
 
-<span id="D3DLIGHT_FORCE_DWORD"></span><span id="d3dlight_force_dword"></span>**D3DLIGHT \_ Erzwingen von \_ DWORD**
+<span id="D3DLIGHT_FORCE_DWORD"></span><span id="d3dlight_force_dword"></span>**D3DLIGHT \_ FORCE \_ DWORD**
 </dt> <dd>
 
-Erzwingt die Kompilierung dieser Enumeration in 32 Bits. Ohne diesen Wert können einige Compiler zulassen, dass diese Enumeration in eine andere Größe als 32 Bits kompiliert wird. Dieser Wert wird nicht verwendet.
+Erzwingt, dass diese Enumeration auf eine Größe von 32 Bits kompiliert wird. Ohne diesen Wert würden einige Compiler zulassen, dass diese Enumeration in eine andere Größe als 32 Bits kompiliert wird. Dieser Wert wird nicht verwendet.
 
 </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Direktionale Lichter sind etwas schneller als Punktlicht Quellen, aber die Punkt Lichter sehen etwas besser aus. Die Scheinwerfer bieten interessante visuelle Effekte, sind aber Rechenzeit aufwändig.
+Richtungslichter sind etwas schneller als Punktlichtquellen, aber Punktlichter sehen etwas besser aus. Spotlights bieten interessante visuelle Effekte, sind aber rechenintensiv.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -80,11 +80,11 @@ Direktionale Lichter sind etwas schneller als Punktlicht Quellen, aber die Punkt
 
 | Anforderung | Wert |
 |-------------------|----------------------------------------------------------------------------------------|
-| Header<br/> | <dl> <dt>D3D9Types. h</dt> </dl> |
+| Header<br/> | <dl> <dt>D3D9Types.h</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 

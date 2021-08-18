@@ -13,11 +13,11 @@ ms.locfileid: "118644862"
 ---
 # <a name="input-classes"></a>Eingabeklassen
 
-Die Benutzereingabegeräte werden durch diese Klassen dargestellt. Einem virtuellen Computer ist immer eine Instanz jeder Klasse zugeordnet. Diese Geräte werden dem virtuellen Computer möglicherweise nicht hinzugefügt oder daraus entfernt. Daher gibt es keine Ressourcenpoolinstanzen für Tastatur- oder Mausgeräte.
+Die Benutzereingabegeräte werden durch diese Klassen dargestellt. Einem virtuellen Computer ist immer eine Instanz jeder Klasse zugeordnet. Diese Geräte können dem virtuellen Computer nicht hinzugefügt oder daraus entfernt werden. Daher gibt es keine Ressourcenpoolinstanzen für Tastatur- oder Mausgeräte.
 
-Die Tastatur- und Mausgeräte werden über die [**Msvm \_ SystemDevice-Zuordnung**](msvm-systemdevice.md) mit dem virtuellen Computer verknüpft. Ein virtueller Computer enthält sowohl ein PS2- als auch ein synthetisches Mausgerät. Es ist immer nur ein zeigende Gerät aktiv.
+Die Tastatur- und Mausgeräte werden über die [**Zuordnung Msvm \_ SystemDevice**](msvm-systemdevice.md) mit dem virtuellen Computer verknüpft. Ein virtueller Computer enthält sowohl ein PS2- als auch ein synthetisches Mausgerät. Es ist jeweils nur ein zeigendes Gerät aktiv.
 
-Im Folgenden finden Sie Virtualisierungs-WMI-Klassen im Zusammenhang mit Eingaben.
+Im Folgenden sind Virtualisierungs-WMI-Klassen im Zusammenhang mit Eingaben.
 
 ## <a name="in-this-section"></a>In diesem Abschnitt
 
@@ -25,7 +25,7 @@ Im Folgenden finden Sie Virtualisierungs-WMI-Klassen im Zusammenhang mit Eingabe
 
 | Thema                                                          | Beschreibung                                     |
 |----------------------------------------------------------------|-------------------------------------------------|
-| [**Msvm-Tastatur \_**](msvm-keyboard.md)<br/>             | Stellt ein Tastaturgerät dar.<br/>        |
+| [**\_Msvm-Tastatur**](msvm-keyboard.md)<br/>             | Stellt ein Tastaturgerät dar.<br/>        |
 | [**Msvm \_ Ps2Mouse**](msvm-ps2mouse.md)<br/>             | Stellt ein PS2-Mausgerät dar.<br/>       |
 | [**Msvm \_ SyntheticMouse**](msvm-syntheticmouse.md)<br/> | Stellt ein synthetisches Mausgerät dar.<br/> |
 

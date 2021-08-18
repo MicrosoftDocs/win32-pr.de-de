@@ -1,24 +1,24 @@
 ---
-description: Die selectandactivatebutton-Methode wählt die angegebene Schaltfläche aus und aktiviert Sie.
+description: Die SelectAndActivateButton-Methode wählt die angegebene Schaltfläche aus und aktiviert sie.
 ms.assetid: fa6239ea-0478-41f1-9515-d67a7fad11db
-title: Selectandactivatebutton-Methode
+title: SelectAndActivateButton-Methode
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 717af00becd5f00f55b166353246f92ea7dfd1bd
-ms.sourcegitcommit: a47bd86f517de76374e4fff33cfeb613eb259a7e
+ms.openlocfilehash: d141616356db5daf2ebcb19579b924f6d4cab956e03d876d0254666d55b5702b
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/06/2021
-ms.locfileid: "106346187"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118951909"
 ---
-# <a name="selectandactivatebutton-method"></a>Selectandactivatebutton-Methode
+# <a name="selectandactivatebutton-method"></a>SelectAndActivateButton-Methode
 
 > [!Note]  
 > Diese Komponente ist für die Verwendung in den Betriebssystemen Microsoft Windows 2000, Windows XP und Windows Server 2003 verfügbar. Es kann in nachfolgenden Versionen geändert oder entfernt werden.
 
  
 
-Die `SelectAndActivateButton` -Methode wählt die angegebene Schaltfläche aus und aktiviert Sie.
+Die `SelectAndActivateButton` -Methode wählt die angegebene Schaltfläche aus und aktiviert sie.
 
 ``` syntax
 MSWebDVD.SelectAndActivateButton(iButton)
@@ -28,10 +28,10 @@ MSWebDVD.SelectAndActivateButton(iButton)
 
 <dl> <dt>
 
-<span id="iButton"></span><span id="ibutton"></span><span id="IBUTTON"></span>*iButton*
+<span id="iButton"></span><span id="ibutton"></span><span id="IBUTTON"></span>*Ibutton*
 </dt> <dd>
 
-Gibt die Schaltfläche als Ganzzahl an.
+Gibt die Schaltfläche als ganze Zahl an.
 
 </dd> </dl>
 
@@ -39,32 +39,32 @@ Gibt die Schaltfläche als Ganzzahl an.
 
 Kein Rückgabewert.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Verwenden Sie diese Methode, wenn Sie die benutzerdefinierte Maus Behandlung nach dem Festlegen von [**disableautomouseprocessing**](disableautomouseprocessing-property.md) auf **true** festlegen.
+Verwenden Sie diese Methode, wenn Sie eine benutzerdefinierte Mausbehandlung implementieren, nachdem [**Sie DisableAutoMouseProcessing auf**](disableautomouseprocessing-property.md) **TRUE festlegen.**
 
-Mit dieser Methode wird die angegebene Schaltfläche hervorgehoben und automatisch aktiviert.
+Diese Methode hebt die angegebene Schaltfläche hervor und aktiviert sie automatisch.
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Buttonsavailable**](buttonsavailable-property.md)
+[**Schaltflächen Verfügbar**](buttonsavailable-property.md)
 </dt> <dt>
 
-[**Currentbutton**](currentbutton-property.md)
+[**CurrentButton**](currentbutton-property.md)
 </dt> <dt>
 
-[**Activatebutton**](activatebutton-method.md)
+[**ActivateButton**](activatebutton-method.md)
 </dt> <dt>
 
-[**Getbuttonatposition**](getbuttonatposition-method.md)
+[**GetButtonAtPosition**](getbuttonatposition-method.md)
 </dt> <dt>
 
-[**Getbuttonrect**](getbuttonrect-method.md)
+[**GetButtonRect**](getbuttonrect-method.md)
 </dt> <dt>
 
-[**Selectatposition**](selectatposition-method.md)
+[**SelectAtPosition**](selectatposition-method.md)
 </dt> </dl>
 
  

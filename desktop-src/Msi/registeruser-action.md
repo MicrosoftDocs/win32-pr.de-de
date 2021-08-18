@@ -19,7 +19,7 @@ Die Aktion RegisterUser registriert die Benutzerinformationen beim Installations
 
 Es gibt keine Sequenzeinschränkungen.
 
-## <a name="actiondata-messages"></a>ActionData-Nachrichten
+## <a name="actiondata-messages"></a>ActionData-Meldungen
 
 
 
@@ -33,7 +33,7 @@ Es gibt keine Sequenzeinschränkungen.
 
 ## <a name="remarks"></a>Hinweise
 
-Die RegisterUser-Aktion wird während einer Administratorinstallation nicht ausgeführt. Wenn der vom Benutzer eingegebene Produktbezeichner nicht von der [ValidateProductID-Aktion](validateproductid-action.md)überprüft wurde, wird die [**ProductID-Eigenschaft**](productid.md) nicht festgelegt, und diese Aktion führt keine Aktion aus.
+Die Aktion RegisterUser wird während einer Administratorinstallation nicht ausgeführt. Wenn der vom Benutzer eingegebene Produktbezeichner nicht durch die [ValidateProductID-Aktion](validateproductid-action.md)überprüft wurde, wird die [**ProductID-Eigenschaft**](productid.md) nicht festgelegt, und diese Aktion führt nichts aus.
 
 ## <a name="related-topics"></a>Zugehörige Themen
 

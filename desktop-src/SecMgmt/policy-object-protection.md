@@ -1,26 +1,26 @@
 ---
-description: Beschreibt, wie das Richtlinien Objekt standardmäßig geschützt wird.
+description: Beschreibt, wie das Policy-Objekt standardmäßig geschützt wird.
 ms.assetid: e2d65ebf-5fbd-4e25-9862-a8188abb5492
-title: Richtlinien Objektschutz
+title: Richtlinienobjektschutz
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 802fea6ce37a070c8230c3c9993df78a45f439bf
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 3317d9cef2a6ff1dfa29753f9a807286d62f31abb0e8c0c9d0150ee10535a1fd
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "103750889"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118894060"
 ---
-# <a name="policy-object-protection"></a>Richtlinien Objektschutz
+# <a name="policy-object-protection"></a>Richtlinienobjektschutz
 
-Das [**Richtlinien**](policy-object.md) Objekt ist standardmäßig mit den folgenden Einstellungen geschützt:
+Das [**Richtlinienobjekt**](policy-object.md) ist standardmäßig mit den folgenden Einstellungen geschützt:
 
--   Die lokale Gruppenumgebung hat allgemeinen \_ Ausführungs Zugriff.
--   Das bekannte ID-System erhält Zugriff auf die Richtlinie \_ \_ .
--   Der lokale Administrator der lokalen Gruppe \_ verfügt über generische \_ Lese-, generischer \_ Schreib-und generischer \_ Ausführungs Zugriff.
--   Der lokale Administrator der Gruppe \_ wird als Besitzer und primäre Gruppe dieses Objekts zugewiesen.
+-   Die lokale Gruppe WORLD verfügt über GENERIC \_ EXECUTE-Zugriff.
+-   Dem bekannten ID-System wird POLICY \_ ALL \_ ACCESS gewährt.
+-   Die lokale Gruppe LOCAL \_ ADMIN verfügt \_ über \_ GENERISCHEN LESE-, GENERISCHEN SCHREIB- und GENERISCHEN \_ EXECUTE-Zugriff.
+-   Die Gruppe LOCAL \_ ADMIN wird als Besitzer und primäre Gruppe dieses Objekts zugewiesen.
 
-Das [**Richtlinien**](policy-object.md) Objekt kann nicht erstellt oder zerstört werden.
+Das [**Richtlinienobjekt**](policy-object.md) kann nicht erstellt oder zerstört werden.
 
  
 

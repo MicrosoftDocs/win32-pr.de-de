@@ -5,7 +5,7 @@ ms.assetid: 14ba189a-e745-44b0-b729-522087d4e08b
 keywords:
 - CompareSoHRequests-Methode NAP
 - CompareSoHRequests-Methode NAP, INapSystemHealthAgentCallback-Schnittstelle
-- INapSystemHealthAgentCallback-Schnittstelle NAP, CompareSoHRequests-Methode
+- INapSystemHealthAgentCallback-Schnittstelle NAP , CompareSoHRequests-Methode
 topic_type:
 - apiref
 api_name:
@@ -108,7 +108,7 @@ Wenn SHAs keine Zeitstempel oder IDs in ihre SoHs setzen, können sie diese Funk
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 

@@ -1,6 +1,6 @@
 ---
-description: 'Weitere Informationen finden Sie unter: esentexception-Konstruktor'
-title: Esentexception-Konstruktor (Microsoft. ISAM. ESENT)
+description: 'Weitere Informationen zu: EsentException-Konstruktor'
+title: EsentException-Konstruktor (Microsoft.Isam.Esent)
 TOCTitle: 'EsentException constructor '
 ms:assetid: M:Microsoft.Isam.Esent.EsentException.#ctor
 ms:mtpsurl: https://msdn.microsoft.com/library/microsoft.isam.esent.esentexception.esentexception(v=EXCHG.10)
@@ -20,19 +20,19 @@ api_type:
 api_location:
 - Microsoft.Isam.Esent.Interop.dll
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: ce79844bcc5efdf4e49cde4c25929bdb93c0c2e4
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 44824fdd8c423e187af7452b93faac19d4c16f8a037d9ee0dc79093c3bf8a026
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "104050502"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118778829"
 ---
-# <a name="esentexception-constructor"></a>Esentexception-Konstruktor
+# <a name="esentexception-constructor"></a>EsentException-Konstruktor
 
-Initialisiert eine neue Instanz der esentexception-Klasse.
+Initialisiert eine neue Instanz der EsentException-Klasse.
 
-**Namespace:**  [Microsoft. ISAM. ESENT](./microsoft.isam.esent-namespace.md)  
-**Assembly:**  Microsoft. ISAM. ESENT. Interop (in Microsoft.Isam.Esent.Interop.dll)
+**Namespace:**  [Microsoft.Isam.Esent](./microsoft.isam.esent-namespace.md)  
+**Assembly:**  Microsoft.Isam.Esent.Interop (in Microsoft.Isam.Esent.Interop.dll)
 
 ## <a name="syntax"></a>Syntax
 
@@ -48,14 +48,14 @@ Dim instance As New EsentException()
 protected EsentException()
 ```
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
-#### <a name="reference"></a>Referenz
+#### <a name="reference"></a>Verweis
 
-[Esentexception-Klasse](./esentexception-class.md)
+[EsentException-Klasse](./esentexception-class.md)
 
-[Esentexception-Member](./esentexception-members.md)
+[EsentException-Member](./esentexception-members.md)
 
-[Esentexception-Überladung](./esentexception-constructor.md)
+[EsentException-Überladung](./esentexception-constructor.md)
 
-[Microsoft. ISAM. ESENT-Namespace](./microsoft.isam.esent-namespace.md)
+[Microsoft.Isam.Esent-Namespace](./microsoft.isam.esent-namespace.md)

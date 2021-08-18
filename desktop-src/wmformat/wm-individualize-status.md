@@ -91,13 +91,13 @@ Der Wert des [**\_ DRM-HTTP \_ STATUS-Enumerationstyps.**](drm-http-status.md)
 **dwHTTPReadTotal**
 </dt> <dd>
 
-**DWORD** mit der Gesamtzahl der herunterzuladenden Bytes. Verwenden Sie diesen Wert und **dwHTTPReadProgress,** um eine Benutzeroberfläche anzuzeigen, die angibt, wie viel der Download abgeschlossen wurde und wie viel noch zu tun ist.
+**DWORD** mit der Gesamtzahl der herunterzuladenden Bytes. Verwenden Sie diesen Wert und **dwHTTPReadProgress,** um eine Benutzeroberfläche anzuzeigen, die angibt, wie viel des Downloads abgeschlossen wurde und wie viel noch zu tun ist.
 
 </dd> </dl>
 
 ## <a name="remarks"></a>Hinweise
 
-Diese Struktur wird von den DRM-Laufzeitkomponenten ausgefüllt und an Anwendungen im *pValue-Parameter* der [**IWMStatusCallback::OnStatus-Methode**](/previous-versions/windows/desktop/api/Wmsdkidl/nf-wmsdkidl-iwmstatuscallback-onstatus) der Anwendung gesendet, wenn das Ereignis WMT \_ INDIVIDUALIZE entspricht. Die Anwendung empfängt dieses Ereignis mehrmals während des Downloadprozesses.
+Diese Struktur wird von den DRM-Laufzeitkomponenten ausgefüllt und an Anwendungen im *pValue-Parameter* der [**IWMStatusCallback::OnStatus-Methode**](/previous-versions/windows/desktop/api/Wmsdkidl/nf-wmsdkidl-iwmstatuscallback-onstatus) der Anwendung gesendet, wenn das Ereignis WMT \_ INDIVIDUALIZE entspricht. Die Anwendung empfängt dieses Ereignis mehrmals während des Downloadvorgangs.
 
 ## <a name="requirements"></a>Anforderungen
 

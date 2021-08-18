@@ -4,12 +4,12 @@ description: Es gibt zwei Versionen des Serialisierungsformats für Eigenschafte
 ms.assetid: 10544118-5e80-47e2-b75b-c1a43be15b2e
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 52d8dfc1c51a6d33d6eb6f9c22b513a9a5397c87
-ms.sourcegitcommit: 5a78723ad484955ac91a23cf282cf9c176c1eab6
+ms.openlocfilehash: 9412fd2a83ab7c71b97888d4ae7911a96fdc4cfe5a9ebbceb5d985b3a5e2b418
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/22/2021
-ms.locfileid: "114436288"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118886475"
 ---
 # <a name="property-set-serialization"></a>Serialisierung von Eigenschaftensatz
 
@@ -44,15 +44,15 @@ Die folgenden Elemente identifizieren die Unterschiede zwischen den Serialisieru
     | VT_VARIANT  |          |             |           |
     |             |          |             |           |
 
-    Wenn der VT_VARIANT Datentyp angegeben wird, gibt er an, dass safeArray selbst [**PROPVARIANT-Strukturen**](/windows/win32/api/propidlbase/ns-propidlbase-propvariant) enthält. Die Typen für diese Elemente müssen aus der vorherigen Liste stammen, mit der Ausnahme, dass sie keine geschachtelten VT_VARIANT Typen enthalten können.
+    Wenn der VT_VARIANT Datentyp angegeben wird, gibt er an, dass safeArray selbst [**PROPVARIANT-Strukturen**](/windows/win32/api/propidlbase/ns-propidlbase-propvariant) enthält. Die Typen für diese Elemente müssen aus der vorherigen Liste stammen, es sei denn, sie dürfen keine geschachtelten VT_VARIANT Typen enthalten.
     
     Beachten Sie, dass Implementierungen von [**IPropertyStorage**](/windows/desktop/api/Propidl/nn-propidl-ipropertystorage) ordnungsgemäß wiederhergestellt werden können müssen, indem ein Fehler zurückgegeben wird, wenn ein neuer Typ auftritt. z. B. VARENUM-Typen.
 
--   Eigenschaftennamen, bei der die Groß-/Kleinschreibung beachtet wird. Bei Eigenschaftsnamen, z. B. den in der [**IPropertyStorage::WritePropertyNames-Methode angegebenen**](/windows/desktop/api/Propidl/nf-propidl-ipropertystorage-writepropertynames) Namen, wird in Eigenschaftssätzen der Version 0 die Groß-/Kleinschreibung nicht beachtet. In Eigenschaftssätzen der Version 1 kann bei Eigenschaftsnamen die Groß-/Kleinschreibung abhängig vom Wert der neuen Behavior-Eigenschaft beachtet werden.
+-   Eigenschaftennamen, bei der die Groß-/Kleinschreibung beachtet wird. Bei Eigenschaftsnamen, z.B. den in der [**IPropertyStorage::WritePropertyNames-Methode angegebenen**](/windows/desktop/api/Propidl/nf-propidl-ipropertystorage-writepropertynames) Namen, wird in Eigenschaftssätzen der Version 0 die Groß-/Kleinschreibung nicht beachtet. In Eigenschaftssätzen der Version 1 kann die Groß-/Kleinschreibung bei Eigenschaftsnamen abhängig vom Wert der neuen Behavior-Eigenschaft beachtet werden.
 
     Die Behavior-Eigenschaft ist [eigenschaften-ID 0x80000003](/windows/desktop/Stg/reserved-property-identifiers) mit dem Typ VT_UI4. Wenn das niedrigste Bit dieses Werts festgelegt ist, wird bei den Eigenschaftensatznamen die Groß-/Kleinschreibung beachtet. Legen Sie das PROPSETFLAG_CASE_SENSITIVE-Flag im *grfFlags-Parameter* der [**IPropertySetStorage::Create-Methode**](/windows/desktop/api/Propidl/nf-propidl-ipropertysetstorage-create) fest, um einen Eigenschaftensatz anzugeben, bei dem die Groß-/Kleinschreibung beachtet wird.
 
--   Lange Eigenschaftsnamen. Eigenschaftennamen für Eigenschaftssätze der Version 0 müssen kleiner als oder gleich 256 Zeichen sein, einschließlich des Zeichenfolgenabschlusszeichens, für Eigenschaftssätze auf der Unicode-Codepage. Wenn sie nicht auf der Unicode-Codepage enthalten sind, müssen sie kleiner als 256 Bytes sein. Eigenschaftssätze der Version 1 können dagegen Eigenschaftsnamen mit unbegrenzter Länge aufweisen, obwohl sie weiterhin durch die Größenbeschränkung des gesamten Eigenschaftensatzes von 256 Kilobyte (KB) begrenzt sind.
+-   Lange Eigenschaftsnamen. Eigenschaftsnamen für Eigenschaftssätze der Version 0 müssen kleiner als oder gleich 256 Zeichen sein, einschließlich des Zeichenfolgenabschlusszeichens, für Eigenschaftssätze auf der Unicode-Codepage. Wenn sie sich nicht auf der Unicode-Codepage befinden, müssen sie kleiner als 256 Bytes sein. Eigenschaftssätze der Version 1 können dagegen Eigenschaftsnamen mit unbegrenzter Länge aufweisen, obwohl sie weiterhin durch die Größenbeschränkung des gesamten Eigenschaftensatzes von 256 Kilobyte (KB) begrenzt sind.
 
 Es wird empfohlen, dass Implementierungen von [**IPropertyStorage**](/windows/desktop/api/Propidl/nn-propidl-ipropertystorage) eigenschaftssätze der Version 0 standardmäßig erstellen und verwalten. Wenn ein Aufrufer anschließend ein Feature anfordert, das für das Format version 1 spezifisch ist, sollte nur die Version des Eigenschaftensatzes aktualisiert werden. Wenn z. B. eine Eigenschaft vom Typ VT_ARRAY geschrieben wird oder wenn ein langer Eigenschaftenname geschrieben wird, sollte die Implementierung das Eigenschaftensatzformat auf Version 1 aktualisieren. Eine Ausnahme von dieser Richtlinie tritt auf, wenn der PROPSETFLAG_CASE_SENSITIVE Enumerationswert im Aufruf von [**IPropertySetStorage::Create**](/windows/desktop/api/Propidl/nf-propidl-ipropertysetstorage-create)angegeben wird. In diesem Fall muss der Eigenschaftensatz als Eigenschaftensatz der Version 1 erstellt werden.
 

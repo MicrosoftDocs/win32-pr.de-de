@@ -1,5 +1,5 @@
 ---
-description: 'InkCollector.DoubleClick-Ereignis: Tritt auf, wenn auf das InkCollector- oder InkOverlay-Objekt doppelklickt wird.'
+description: 'InkCollector.DoubleClick-Ereignis: Tritt auf, wenn auf das InkCollector- oder InkOverlay-Objekt doppelklickt.'
 ms.assetid: 48c3a695-0ec4-46ea-b1ea-a846e39d53ec
 title: InkCollector.DoubleClick-Ereignis (Msinkaut.h)
 ms.topic: reference
@@ -13,7 +13,7 @@ ms.locfileid: "118718166"
 ---
 # <a name="inkcollectordoubleclick-event"></a>InkCollector.DoubleClick-Ereignis
 
-Tritt ein, wenn auf das [**InkCollector-**](inkcollector-class.md) oder [**InkOverlay-Objekt**](inkoverlay-class.md) doppelklickt wird.
+Tritt ein, wenn auf [**das InkCollector-**](inkcollector-class.md) oder [**InkOverlay-Objekt**](inkoverlay-class.md) doppelklickt.
 
 ## <a name="syntax"></a>Syntax
 
@@ -33,7 +33,7 @@ void DoubleClick(
 *Abbrechen* \[ in, out\]
 </dt> <dd>
 
-**VARIANT \_ TRUE,** um das Ereignis für das übergeordnete Steuerelement abzubrechen. Andernfalls **VARIANT \_ FALSE**.
+**VARIANT \_ TRUE,** um das Ereignis für das übergeordnete Steuerelement abzubricht; andernfalls **VARIANT \_ FALSE**.
 
 </dd> </dl>
 
@@ -43,7 +43,7 @@ Dieses Ereignis gibt keinen Wert zurück.
 
 ## <a name="remarks"></a>Hinweise
 
-Diese Ereignismethode wird in den \_ \_ Dispatch-Only-Schnittstellen IInkCollectorEvents, IInkOverlayEvents und \_ IInkPictureEvents (dispinterfaces) mit der ID DISPID \_ IPEDblClick definiert.
+Diese Ereignismethode wird in den \_ Dispatch-Schnittstellen IInkCollectorEvents, \_ IInkOverlayEvents und \_ IInkPictureEvents (dispinterfaces) mit der ID DISPID \_ IPEDblClick definiert.
 
 ## <a name="requirements"></a>Anforderungen
 

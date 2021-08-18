@@ -4,71 +4,71 @@ ms.assetid: c1570669-6e9c-4614-af4d-2a148f12e36f
 title: ASF-Attribute
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: f5ccf09542c8b96cc262cbe029111d3cb74e5b53
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: babbb8697126ae6882c11526ed9e6cb31e2233b81685c820d200fbd21bab08c3
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106345642"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118975029"
 ---
 # <a name="asf-attributes"></a>ASF-Attribute
 
-### <a name="profile-attributes"></a>Profil Attribute
+### <a name="profile-attributes"></a>Profilattribute
 
 Die folgenden Attribute gelten für ASF-Profile.
 
 
 
-| Attribut                                                                      | BESCHREIBUNG                                                  |
+| attribute                                                                      | Beschreibung                                                  |
 |--------------------------------------------------------------------------------|--------------------------------------------------------------|
-| [**MF \_ asfprofile \_ MaxPacketSize**](mf-asfprofile-maxpacketsize-attribute.md) | Gibt die maximale Paketgröße für eine ASF-Datei in Bytes an. |
-| [**MF \_ asfprofile \_ MinPacketSize**](mf-asfprofile-minpacketsize-attribute.md) | Gibt die minimale Paketgröße für eine ASF-Datei in Bytes an. |
+| [**MF \_ ASFPROFILE \_ MAXPACKETSIZE**](mf-asfprofile-maxpacketsize-attribute.md) | Gibt die maximale Paketgröße für eine ASF-Datei in Bytes an. |
+| [**MF \_ ASFPROFILE \_ MINPACKETSIZE**](mf-asfprofile-minpacketsize-attribute.md) | Gibt die minimale Paketgröße für eine ASF-Datei in Bytes an. |
 
 
 
  
 
-### <a name="stream-configuration-attributes"></a>Stream-Konfigurations Attribute
+### <a name="stream-configuration-attributes"></a>Streamkonfigurationsattribute
 
-Die folgenden Attribute gelten für das Konfigurationsobjekt des ASF-Streams.
+Die folgenden Attribute gelten für das ASF-Streamkonfigurationsobjekt.
 
 
 
-| Attribut                                                                              | BESCHREIBUNG                                                                   |
+| attribute                                                                              | Beschreibung                                                                   |
 |----------------------------------------------------------------------------------------|-------------------------------------------------------------------------------|
-| [**MF \_ asfstreamconfig \_ LEAKYBUCKET1**](mf-asfstreamconfig-leakybucket1-attribute.md) | Legt die durchschnittlichen "Leaky Bucket"-Parameter für das Codieren einer Windows-Mediendatei fest. |
-| [**MF \_ asfstreamconfig \_ LEAKYBUCKET2**](mf-asfstreamconfig-leakybucket2-attribute.md) | Legt die Spitzen Parameter "Leaky Bucket" für das Codieren einer Windows-Mediendatei fest.    |
+| [**MF \_ ASFSTREAMCONFIG \_ LEAKYBUCKET1**](mf-asfstreamconfig-leakybucket1-attribute.md) | Legt die durchschnittlichen Parameter für "Leaky Bucket" für die Codierung einer Windows Mediendatei fest. |
+| [**MF \_ ASFSTREAMCONFIG \_ LEAKYBUCKET2**](mf-asfstreamconfig-leakybucket2-attribute.md) | Legt die Spitzenparameter "Leaky Bucket" für die Codierung einer Windows Mediendatei fest.    |
 
 
 
  
 
-### <a name="media-buffer-attributes"></a>Medien Puffer Attribute
+### <a name="media-buffer-attributes"></a>Medienpufferattribute
 
-Die folgenden Attribute gelten für Medien Puffer für ASF-Pakete.
+Die folgenden Attribute gelten für Medienpuffer für ASF-Pakete.
 
 
 
-| Attribut                                                                          | BESCHREIBUNG                                                                               |
+| attribute                                                                          | Beschreibung                                                                               |
 |------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------|
-| [**mfastsplitter- \_ Paket \_ Grenze**](mfasfsplitter-packet-boundary-attribute.md) | Gibt an, ob ein Puffer den Anfang eines Pakets für das Advanced Systems Format (ASF) enthält. |
+| [**\_MFASFSPLITTER-PAKETGRENZE \_**](mfasfsplitter-packet-boundary-attribute.md) | Gibt an, ob ein Puffer den Anfang eines ASF-Pakets (Advanced Systems Format) enthält. |
 
 
 
  
 
-### <a name="presentation-descriptor-attributes"></a>Präsentations deskriptorattribute
+### <a name="presentation-descriptor-attributes"></a>Darstellungsdeskriptorattribute
 
-Eine Liste der Attribute, die für die ASF-Präsentations Deskriptoren gelten, finden Sie unter [Präsentations deskriptorattribute](presentation-descriptor-attributes.md).
+Eine Liste der Attribute, die für ASF-Präsentationsdeskriptoren gelten, finden Sie unter [Presentation Descriptor Attributes](presentation-descriptor-attributes.md).
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[**Imfasf profile**](/windows/desktop/api/wmcontainer/nn-wmcontainer-imfasfprofile)
+[**IMFASFProfile**](/windows/desktop/api/wmcontainer/nn-wmcontainer-imfasfprofile)
 </dt> <dt>
 
-[**Imfasf streamconfig**](/windows/desktop/api/wmcontainer/nn-wmcontainer-imfasfstreamconfig)
+[**IMFASFStreamConfig**](/windows/desktop/api/wmcontainer/nn-wmcontainer-imfasfstreamconfig)
 </dt> <dt>
 
 [Media Foundation Attribute](media-foundation-attributes.md)

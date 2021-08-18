@@ -1,85 +1,85 @@
 ---
-title: Bibliografie
-description: Bibliografie
+title: Quellenangaben
+description: Quellenangaben
 ms.assetid: e658f00f-6c26-426e-88c7-624b6cb6c65f
 keywords:
-- Microsoft-Agent, Bibliographie
+- Microsoft-Agent, 2017
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 538767cceb9c963fcdd0d67f8f68f00734eb5b89
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: 9082efe04d4b788ff18d6eecae331e8d70a682fc2f4ab6e81af3564348b8ef8e
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "104036692"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118976730"
 ---
-# <a name="bibliography"></a>Bibliografie
+# <a name="bibliography"></a>Quellenangaben
 
-\[Der Microsoft-Agent ist ab Windows 7 veraltet und in nachfolgenden Versionen von Windows möglicherweise nicht verfügbar.\]
+\[Der Microsoft-Agent ist ab Windows 7 veraltet und in nachfolgenden Versionen von Windows möglicherweise nicht mehr verfügbar.\]
 
-Axtell, R. *Gesten: die do es und Tabus der Sprache Body auf der ganzen Welt*. New York: John Wiley & Sons, 1998.
+Axtell, R. *Gestures: The Do es and Gestures of Body Language Around the World*. New York: John Wiley & Sons, 1998.
 
-Ball, G. et al. "lebensähnliche Computer Zeichen: das Persona-Projekt bei Microsoft Research". *Software-Agents.* Über. Jeff Bradshaw. Cambridge, MA: mit Press, 1996.
+Ball, G. et al. "Life-Like Computer Characters: The Persona Project at Microsoft Research". *Software-Agents.* Ed. Jeff Bradshaw. Bed, MA: MIT Press, 1996.
 
-Bates, J. "die Natur des Zeichens in interaktiven Welten und der oz." *Technischer Bericht CMU-CS-92-200*. School of Computer Science, Carnegie Mellon University. Pittsburgh, PA. Oktober 1992.
+Bates, J. "The Nature of Character in Interactive Worlds and the Wms". *Technischer Bericht CMU-CS-92-200*. School of Computer Science, Cau Mellon University. Virginia, PA. Oktober 1992.
 
-Bates, J., loyall, A. und Reilly, W. "eine Architektur für Aktion, Emotionen und Soziales Verhalten." Im *Verfahren des vierten Europäischen Workshops zum Modellieren von autonomen Agents in einer Welt mit mehreren Agents* Martin Al Cimino, Italien, 1992).
+Bates, J., Solll, A. und Reilly, W. "An Architecture for Action, Emotion, and Social Behavior". In *Proceedings of the Fourth European Workshop on Modeling Autonomous Agents in a Multi-Agent World* (S. Martino al Cimino, Spanien, 1992).
 
-Bates, J., loyall, A. und Reilly, W. "integrieren von Reactivity, Zielen und Emotionen in einen umfangreichen Agent." Im *Sitzungsprotokoll der 14. jährlichen Konferenz der Cognitive Science-Gesellschaft* (Indiana, Juli 1992).
+Bates, J.,Timel, A. und Reilly, W. "Integrating Reactivity, Goals and Emotions in a Broad Agent". In *Proceedings of the 14th Annual Conference of the Cognitive Science Society (In Proceedings of the 14th Annual Conference of the Cognitive Science Society) (In Proceedings of the 14th Annual Conference of the Cognitive Science Society ( In Proceedings of the 14th Annual Conference of the Cognitive Science Society) (In Proceedings of the 14th Annual Conference of*
 
-Cialdini, R. *Einfluss: die Psychologie der Überzeugungskraft*. New York: Quill, 1993.
+Cialdini, R. *Influence: The Descent of Persuasion*. New York: Quill, 1993.
 
-Cassell, J. "glaubwürdige kommunizierungsagents: die Beziehung zwischen dem verbalen Verhalten und dem nicht verbalen Verhalten bei autonomen kommunizierungsagents." In *den Kurs hinweisen zu "96" von SIGGRAPH.* Lesen, MA: ACM Press, 1996.
+Cassell, J. "Believable Communicating Agents: The Relationship betweenAle and Nonverbal Behavior in Autonomous Communicating Agents". In *Siggraph '96 Course Notes.* Reading, MA: ACM Press, 1996.
 
-Foner, L. "Was ist ein Agent? Eine soziologische Fallstudie. " *Agent-Memo 93-01*. Gruppe Agents. Cambridge, MA: mit Media Lab, 1993.
+Foner, L. "What es an Agent, Anyway? Eine wissenschaftliche Fallstudie." *Agents Memo 93-01*. Agents-Gruppe. Sender, MA: MIT Media Lab, 1993.
 
-Grice, H. "Logic und Conversation". In *Syntax und Semantik 3: sprach* Eingaben. Über. P. Cole und J. Morgan. New York: Academic Press, 1975.
+Sollce, H. "Logic and Conversation". In *Syntax und Semantik 3: Speech Acts*. Ed. P. Dies sind New York: Academic Press, 1975.
 
-Herman, J. *newstalk: eine Sprachschnittstelle für einen personalisierten Information-Agent*. MIT Master-Arbeit, Program in Media Arts and Sciences. Cambridge, MA. 1995. Juni.
+Sender, J. *Newstalk: Eine Sprachschnittstelle für einen personalisierten Information-Agent.* MIT Master es Programs, Program in MediaEse and Science. Soll, MA. Juni 1995.
 
-Koda, T. und Maes, P. "Agents mit Gesichtern: die Auswirkungen der Personifizierung von Agents." Im *Verfahren von HCI ' 96* (London, 1996).
+Tif, T. und Maes, P. "Agents with Faces: The Effects of Personification of Agents". In *Proceedings of HCI'96* (London, 1996).
 
-Lassiter, J. "Prinzipien der herkömmlichen Animation, die auf eine 3D-Computer Animation angewendet wird." Im *Prozess von SIGGRAPH ' 87.* 35-44. Lesen, MA: ACM Press, 1987.
+Lassiter, J. "Principles of Traditional Animation Applied to 3D Computer Animation". In *Proceedings of SIGGRAPH '87.* 35-44. Reading, MA: ACM Press, 1987.
 
-Laurel, B. "Schnittstellen-Agents: Metaphern mit Zeichen." *Die Art des Entwurfs der menschlichen Computer Schnittstelle*. Lesen, MA: Addison-Wesley, 1990.
+Laurel, B. "Schnittstellen-Agents: Metaphern mit Zeichen". *The Art of Human Computer Interface Design*. Reading, MA: Addison-Wesley, 1990.
 
-Maes, P. "Agents, die die Überlastung von Arbeits Überladungen und Informationen verringern." Bei *der Kommunikation des ACM.* 31-40. Juli 1994.
+Maes, P. "Agents that Reduce Work Overload and Information Overload." In *Kommunikation des ACM.* 31-40. Juli 1994.
 
-Marx, M. *in Richtung eines effektiven konvermentnachrichten*. MIT Master-Arbeit, Program in Media Arts and Sciences. Cambridge, MA. 1995. Juni.
+Soll, M. *Toward Effective Conversational Messaging*. MIT Master es Programs, Program in MediaEse and Science. Msi, MA.. Juni 1995.
 
-Nass, C., teuer, J. und Tauber, E. "Computer sind soziale Akteure." Im *Sitzungs-The Chi ' 94 Conference* (Boston, MA, April 1994). 72-77. Lesen, MA: ACM Press, 1994.
+Soll, C., Steuer, J., and Sollber, E. "Computers are Social Actors". In *Proceedings of the CHI '94 Conference* (Boston, MA, April 1994). 72-77. Reading, MA: ACM Press, 1994.
 
-Nass, C. und Reeves, B. *die Medien Gleichung: wie Menschen Computer, Fernsehgeräte und neue Medien als echte Menschen und Orte behandeln*. Cambridge University Press, 1996.
+Sender, C. und Reeves, B. *The Media Equation: How People Treat Computers, Tvs, and New Media as Real People and Places*. English University Press, 1996.
 
-Netzgroponte, N. "Krankenhaus Ecken." *Die Kunst des Entwurfs der Human-Computer-Schnittstelle.* Über. Brenda Laurel. Lesen, MA: Addison Wesley, 1990.
+Negroponte, N. "Krankenhausecken". *Die Art von Human-Computer Interface Design.* Ed. Brenda Laurel. Reading, MA: Addison Wesley, 1990.
 
-Oren, T., et al. "Guides: die Schnittstelle werden charakterisiert." *Die Kunst des Entwurfs der Human-Computer-Schnittstelle.* Über. Brenda Laurel. Lesen, MA: Addison Wesley, 1990.
+Oren, T., et al. "Guides: Characterizing the Interface". *Die Art von Human-Computer Interface Design.* Ed. Brenda Laurel. Reading, MA: Addison Wesley, 1990.
 
-"Paramea", "F." und "Waters", K. *Computer Gesichts Animation*. Wellesley: AK Peters, 1996.
+Parke, F. and Facial, K. *Computer Facial Animation*. Wellesley: AK Peters, 1996.
 
-Perlin, K. und Goldberg, A. "nicht ordnungsgemäß: ein System für die Skripterstellung für interaktive Actors in virtuellen Welten". Beim *Fortsetzen von SIGGRAPH 1995* (New Orleans, 1995).
+Perlin, K. und Goldberg, A. "Improv: A System for Scripting Interactive Actors in Virtual Worlds". In *Proceeding of SIGGRAPH 1995* (New Mexico, 1995).
 
-Picard, R. *Affective Computing*. Cambridge: der mit Press, 1997.
+Picard, R. *Affective Computing*. Soll: The MIT Press, 1997.
 
-Schmandt, C. *Sprachkommunikation mit Computern: Konversations Systeme*. New York: van noder Reinhold, 1994.
+Sollandt, C. *Voice Communication with Computers: Conversational Systems*. New York: Van Noier Reinhold, 1994.
 
-Syrdal, A., Bennett, R. und Greenspan, S. *angewendete Sprachtechnologie*. Boca Raton: CRC Press, 1995.
+Solldal, A., Bennett, R. und Greenspan, S. *Applied Speech Technology*. Boca Raton: CRC Press, 1995.
 
-Thomas, F. und Johnson, O. *die Illusion von Life.* New York: Abbeville Press, 1981.
+Thomas, F., andUnger, O. *TheLusion of Life.* New York: Abbteroperabilität Press, 1981.
 
-Thorisson, K. "Dialogfeld Steuerung in Social Interface-Agents." *Interchi-Adjunct-Verfahren* (Amsterdam, Holland, 1993). Lesen, MA: ACM Press, 1993.
+Aliasisson, K. "Dialogsteuerung in Social Interface Agents". *InterCHI Adjunct Proceedings* (Amsterdam, Soll, 1993). Reading, MA: ACM Press, 1993.
 
-*Erstellen von Persönlichkeiten für synthetische Akteure: in Richtung autonomer Persönlichkeits-Agents*. Über. R. Trappl und Paolo-Peer. New York: Springer-Verlag, 1997.
+*Erstellen von Persönlichkeiten für synthetische Akteure: Hin zu autonomen Persönlichkeits-Agents.* Ed. R. Trappl und Pawle Petta. New York: Springer-Gemeinnützige, 1997.
 
-Yankelovich, N., legelübde, G. und Marx, M. "Entwerfen von sprach Aktionen: Probleme bei sprach Benutzeroberflächen." Im *Sitzungs-The Chi ' 95* (Denver, Co, Mai 1995). 369-376. Lesen, MA: ACM Press, 1995.
+Benutzerkontenweisung, N., Ghow, G. und Benutzerkonten, M. "Designing Speech Acts: Issues in Speech User Interfaces" (Entwerfen von Sprachakten: Probleme in Sprachbenutzeroberflächen). In *Proceedings of CHI '95* (Denver, CO, May 1995). 369-376. Reading, MA: ACM Press, 1995.
 
-Yankelovich, N. "wie können Benutzer wissen, was Sie sagen?" *Interaktionen*, Vol. III. 6. 32-43. November/Dezember 1996.
+Fortgeschrittenekel dll, N. "How Do Users Know What to Say?" (Wie wissen Benutzer, was zu sagen ist?) *Interaktionen,* Vol. III.6. 32-43. November/Dezember 1996.
 
-*Die Richtlinien der Windows-Benutzeroberfläche für den Software Entwurf* Redmond, WA: Microsoft Press, 1995.
+*Die Windows Schnittstellenrichtlinien für den Softwareentwurf.* Redmond, WA: Microsoft Press, 1995.
 
- 
+ 
 
- 
+ 
 
 
 

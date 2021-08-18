@@ -1,5 +1,5 @@
 ---
-description: 'Weitere Informationen zu: EsentSLVFileIOException-Klasse'
+description: 'Weitere Informationen finden Sie unter: EsentSLVFileIOException-Klasse'
 title: EsentSLVFileIOException-Klasse
 TOCTitle: EsentSLVFileIOException class
 ms:assetid: T:Microsoft.Isam.Esent.Interop.EsentSLVFileIOException
