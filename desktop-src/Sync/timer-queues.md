@@ -1,29 +1,29 @@
 ---
-description: Die Funktion "kreatetimerqueue" erstellt eine Warteschlange für Timer.
+description: Die CreateTimerQueue-Funktion erstellt eine Warteschlange für Timer.
 ms.assetid: ee85a6c3-3a1d-4f94-9112-cb8247b2a189
-title: Timer-Warteschlangen
+title: Timerwarteschlangen
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 80ad2f94612c234b3ec0d1d75fa723c4e86e6fc0
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: d16e0ae30e02ad9fbc8889c0d7b1094895ebec27c3db8b67acf509ee02e9da85
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106363498"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118885878"
 ---
-# <a name="timer-queues"></a>Timer-Warteschlangen
+# <a name="timer-queues"></a>Timerwarteschlangen
 
-Die Funktion " [**kreatetimerqueue**](/windows/win32/api/threadpoollegacyapiset/nf-threadpoollegacyapiset-createtimerqueue) " erstellt eine Warteschlange für Timer. Timer in dieser Warteschlange, die als *Timer-Queue-Timer* bezeichnet werden, sind Lightweight-Objekte, die es Ihnen ermöglichen, eine Rückruffunktion anzugeben, die aufgerufen wird, wenn die angegebene Fälligkeits Zeit erreicht wird. Der Warte Vorgang wird von einem Thread im [Thread Pool](../procthread/thread-pooling.md)ausgeführt.
+Die [**CreateTimerQueue-Funktion**](/windows/win32/api/threadpoollegacyapiset/nf-threadpoollegacyapiset-createtimerqueue) erstellt eine Warteschlange für Timer. Timer in dieser Warteschlange, die als *Timer-Warteschlangen-Timer* bezeichnet werden, sind einfache Objekte, mit denen Sie eine Rückruffunktion angeben können, die aufgerufen werden soll, wenn die angegebene zeitbasierte Zeit eintrifft. Der Wartevorgang wird von einem Thread im [Threadpool ausgeführt.](../procthread/thread-pooling.md)
 
-Um der Warteschlange einen Zeitgeber hinzuzufügen, müssen Sie [**die Funktion "**](/windows/win32/api/threadpoollegacyapiset/nf-threadpoollegacyapiset-createtimerqueuetimer) die Funktion" "" ". Um einen Timer für Timer-Queue zu aktualisieren, nennen Sie die [**changetimerqueuetimer**](/windows/win32/api/threadpoollegacyapiset/nf-threadpoollegacyapiset-changetimerqueuetimer) -Funktion. Sie können eine Rückruffunktion angeben, die von einem Arbeits Thread aus dem Thread Pool ausgeführt wird, wenn der Zeitgeber abläuft.
+Um der Warteschlange einen Timer hinzuzufügen, rufen Sie die [**CreateTimerQueueTimer-Funktion**](/windows/win32/api/threadpoollegacyapiset/nf-threadpoollegacyapiset-createtimerqueuetimer) auf. Um einen Timer-Queue-Timer zu aktualisieren, rufen Sie die [**ChangeTimerQueueTimer-Funktion**](/windows/win32/api/threadpoollegacyapiset/nf-threadpoollegacyapiset-changetimerqueuetimer) auf. Sie können eine Rückruffunktion angeben, die von einem Arbeitsthread aus dem Threadpool ausgeführt werden soll, wenn der Timer abläuft.
 
-Um einen ausstehenden Timer abzubrechen, rufen Sie die [**deletetimerqueuetimer**](/windows/win32/api/threadpoollegacyapiset/nf-threadpoollegacyapiset-deletetimerqueuetimer) -Funktion auf. Wenn Sie mit der Warteschlange für Timer fertig sind, müssen Sie die [**deletetimerqueueex**](/windows/win32/api/threadpoollegacyapiset/nf-threadpoollegacyapiset-deletetimerqueueex) -Funktion aufrufen, um die Zeit Geber Warteschlange zu löschen. Alle ausstehenden Timer in der Warteschlange werden abgebrochen und gelöscht.
+Um einen ausstehenden Timer abzubruchen, rufen Sie die [**DeleteTimerQueueTimer-Funktion**](/windows/win32/api/threadpoollegacyapiset/nf-threadpoollegacyapiset-deletetimerqueuetimer) auf. Wenn Sie mit der Warteschlange von Timern fertig sind, rufen Sie die [**DeleteTimerQueueEx-Funktion**](/windows/win32/api/threadpoollegacyapiset/nf-threadpoollegacyapiset-deletetimerqueueex) auf, um die Timerwarteschlange zu löschen. Alle ausstehenden Timer in der Warteschlange werden abgebrochen und gelöscht.
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[Verwenden von Timer](using-timer-queues.md)
+[Verwenden von Timerwarteschlangen](using-timer-queues.md)
 </dt> </dl>
 
  

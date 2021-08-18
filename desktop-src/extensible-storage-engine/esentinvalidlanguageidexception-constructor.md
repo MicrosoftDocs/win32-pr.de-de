@@ -1,6 +1,6 @@
 ---
-description: 'Weitere Informationen finden Sie unter: esentinvalidlanguageidexception-Konstruktor'
-title: Esentinvalidlanguageidexception-Konstruktor
+description: 'Weitere Informationen finden Sie unter: EsentInvalidLanguageIdException-Konstruktor'
+title: EsentInvalidLanguageIdException-Konstruktor
 TOCTitle: 'EsentInvalidLanguageIdException constructor '
 ms:assetid: M:Microsoft.Isam.Esent.Interop.EsentInvalidLanguageIdException.#ctor
 ms:mtpsurl: https://msdn.microsoft.com/library/microsoft.isam.esent.interop.esentinvalidlanguageidexception.esentinvalidlanguageidexception(v=EXCHG.10)
@@ -24,19 +24,19 @@ api_type:
 api_location:
 - Microsoft.Isam.Esent.Interop.dll
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: 6800003f0e7719380d79c435ab9d14d9dbdd9c4b
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: eed6b75c2d18e4bda4141291031d37dd120594b5cd7cf81744fcc5090dc8bef1
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106360641"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118777967"
 ---
-# <a name="esentinvalidlanguageidexception-constructor"></a>Esentinvalidlanguageidexception-Konstruktor
+# <a name="esentinvalidlanguageidexception-constructor"></a>EsentInvalidLanguageIdException-Konstruktor
 
-Initialisiert eine neue Instanz der esentinvalidlanguageidexception-Klasse.
+Initialisiert eine neue Instanz der EsentInvalidLanguageIdException-Klasse.
 
-**Namespace:**  [Microsoft. ISAM. ESENT. Interop](./microsoft.isam.esent.interop-namespace.md)  
-**Assembly:**  Microsoft. ISAM. ESENT. Interop (in Microsoft.Isam.Esent.Interop.dll)
+**Namespace:**  [Microsoft.Isam.Esent.Interop](./microsoft.isam.esent.interop-namespace.md)  
+**Assembly:**  Microsoft.Isam.Esent.Interop (in Microsoft.Isam.Esent.Interop.dll)
 
 ## <a name="syntax"></a>Syntax
 
@@ -52,12 +52,12 @@ Dim instance As New EsentInvalidLanguageIdException()
 public EsentInvalidLanguageIdException()
 ```
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
-#### <a name="reference"></a>Referenz
+#### <a name="reference"></a>Verweis
 
-[Esentinvalidlanguageidexception-Klasse](./esentinvalidlanguageidexception-class.md)
+[EsentInvalidLanguageIdException-Klasse](./esentinvalidlanguageidexception-class.md)
 
-[Esentinvalidlanguageidexception-Member](./esentinvalidlanguageidexception-members.md)
+[EsentInvalidLanguageIdException-Member](./esentinvalidlanguageidexception-members.md)
 
-[Microsoft. ISAM. ESENT. Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)
+[Microsoft.Isam.Esent.Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)

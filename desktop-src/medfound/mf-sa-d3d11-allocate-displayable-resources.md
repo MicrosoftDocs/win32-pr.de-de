@@ -3,12 +3,12 @@ description: Gibt an, ob die Sample Allocator (SA) des MFT die zugrunde liegende
 title: MF_SA_D3D11_ALLOCATE_DISPLAYABLE_RESOURCES (Mftransform.h)
 ms.topic: reference
 ms.date: 03/31/2018
-ms.openlocfilehash: fedcfbe98344dd9b424c1a8ce90e847e98f1af51
-ms.sourcegitcommit: f848119a8faa29b27585f4df53f6e50ee9666684
+ms.openlocfilehash: b039eff2c46281dcad4754d73f05ecd982f7fe3e75ed1aa9c8b576fe573f921c
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/27/2021
-ms.locfileid: "110548705"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119102600"
 ---
 # <a name="mf_sa_d3d_allocate_displayable_resources-attribute"></a>MF \_ SA \_ D3D \_ ALLOCATE \_ DISPLAYABLE \_ RESOURCES-Attribut
 
@@ -20,16 +20,16 @@ Gibt an, ob die Sample Allocator (SA) des MFT die zugrunde liegende Direct3D-Tex
 
 ## <a name="remarks"></a>Hinweise
 
-Dieses Attribut ist mit dem Windows 10 Build 20348 verfügbar. 
+Dieses Attribut ist mit Windows 10 Build 20348 verfügbar. 
 
 > [!NOTE]
-> Das **D3D11_RESOURCE_MISC_SHARED_DISPLAYABLE-Memberfeld** der [](/windows/win32/api/d3d11/ne-d3d11-d3d11_resource_misc_flag) D3D11_RESOURCE_MISC_FLAG wird in einer zukünftigen Version des SDK verfügbar sein.
+> Das  D3D11_RESOURCE_MISC_SHARED_DISPLAYABLE-Memberfeld der [D3D11_RESOURCE_MISC_FLAG-Enumeration](/windows/win32/api/d3d11/ne-d3d11-d3d11_resource_misc_flag) wird in einer zukünftigen Version des SDK verfügbar sein.
 
 Die Media Foundation-Plattformebene legt **das** MF_SA_D3D11_ALLOCATE_DISPLAYABLE_RESOURCES beim Rendern von Videos fest. Eine App kann dieses Attribut auch festlegen, wenn sie einen eigenen Videorenderer implementieren und D3D11 Displayable Resources verwenden möchte. 
 
 ## <a name="example"></a>Beispiel
 
-Im folgenden Codebeispiel wird die Verwendung des -Attributs MF_SA_D3D11_ALLOCATE_DISPLAYABLE_RESOURCES **veranschaulicht.**
+Im folgenden Codebeispiel wird die Verwendung des Attributs MF_SA_D3D11_ALLOCATE_DISPLAYABLE_RESOURCES **veranschaulicht.**
 
 ```cpp
 class DecoderMFT : public IMFAttributes, public IMFTransform 
@@ -137,7 +137,7 @@ private:
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 

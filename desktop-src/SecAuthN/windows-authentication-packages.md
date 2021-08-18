@@ -1,25 +1,25 @@
 ---
-description: Windows-Authentifizierungs Pakete stellen Authentifizierungsdienste bereit, indem Paket spezifische Funktionen für die LsaLogonUser-und lsacallauthenticationpackage-Funktionen implementiert werden, die von der LSA bereitgestellt werden.
+description: Windows Authentifizierungspakete stellen Authentifizierungsdienste bereit, indem paketspezifische Funktionen für die LsaLogonUser- und LsaCallAuthenticationPackage-Funktionen implementiert werden, die vom LSA bereitgestellt werden.
 ms.assetid: 71f7eccd-694d-475f-b6d0-1eaf9ac468f5
-title: Windows-Authentifizierungs Pakete
+title: Windows Authentifizierungspakete
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: c4b14f74ad466e0010f7ab5ac766af908a7b4704
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: a8288e54398702994938627b13c745a67f96fbc44dc710e2e5a7ac65a8620685
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104525844"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118915079"
 ---
-# <a name="windows-authentication-packages"></a>Windows-Authentifizierungs Pakete
+# <a name="windows-authentication-packages"></a>Windows Authentifizierungspakete
 
-Windows-Authentifizierungs Pakete stellen Authentifizierungsdienste bereit, indem Paket spezifische Funktionen für die [**LsaLogonUser**](/windows/desktop/api/Ntsecapi/nf-ntsecapi-lsalogonuser) -und [**lsacallauthenticationpackage**](/windows/desktop/api/Ntsecapi/nf-ntsecapi-lsacallauthenticationpackage) -Funktionen implementiert werden, die von der LSA bereitgestellt werden.
+Windows Authentifizierungspakete stellen Authentifizierungsdienste bereit, indem paketspezifische Funktionen für die funktionen [**LsaLogonUser**](/windows/desktop/api/Ntsecapi/nf-ntsecapi-lsalogonuser) und [**LsaCallAuthenticationPackage**](/windows/desktop/api/Ntsecapi/nf-ntsecapi-lsacallauthenticationpackage) implementiert werden, die vom LSA bereitgestellt werden.
 
-MSV1 \_ 0 ist ein Beispiel für ein Windows- [*Authentifizierungs Paket*](../secgloss/a-gly.md). Das \_ Paket MSV1 0 akzeptiert einen Benutzernamen und ein [](../secgloss/h-gly.md) Hash Kennwort, das in der [*Security Accounts Manager*](../secgloss/s-gly.md) (Sam)-Datenbank nachgeschlagen ist. Abhängig von den Ergebnissen der Suche \_ akzeptiert das Authentifizierungs Paket MSV1 0 den Authentifizierungs Versuch oder lehnt ihn ab.
+MSV1 \_ 0 ist ein Beispiel für ein Windows [*Authentifizierungspaket.*](../secgloss/a-gly.md) Das MSV1 \_ 0-Paket akzeptiert einen Benutzernamen und ein Hashkennwort, das in der SAM-Datenbank [*(Security Accounts Manager)*](../secgloss/s-gly.md) gesucht wird. [](../secgloss/h-gly.md) Abhängig von den Ergebnissen der Suche akzeptiert oder lehnt das MSV1 \_ 0-Authentifizierungspaket den Authentifizierungsversuch ab.
 
-Eine Liste der Unterstützungsfunktionen, die von der LSA zur Verwendung durch Windows-Authentifizierungs Pakete bereitgestellt werden, die Systemdienste erfordern, finden Sie unter [LSA Functions called by Authentication Packages](authentication-functions.md).
+Eine Liste der Vom LSA zur Verwendung durch Windows Authentifizierungspakete, die Systemdienste erfordern, bietet, finden Sie unter [Von Authentifizierungspaketen aufgerufene LSA-Funktionen.](authentication-functions.md)
 
-Windows-Authentifizierungs Pakete müssen eine Reihe von Funktionen implementieren, die von der LSA aufgerufen werden. Eine umfassende Liste der Funktionen finden Sie unter [von Authentifizierungs Paketen implementierte Funktionen](authentication-functions.md).
+Windows Authentifizierungspakete müssen eine Reihe von Funktionen implementieren, die vom LSA aufgerufen werden. Eine vollständige Liste der Funktionen finden Sie unter [Von Authentifizierungspaketen implementierte Funktionen.](authentication-functions.md)
 
  
 

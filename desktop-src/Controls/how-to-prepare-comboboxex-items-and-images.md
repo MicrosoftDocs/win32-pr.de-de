@@ -1,40 +1,40 @@
 ---
-title: Vorbereiten von ComboBoxEx-Elementen und-Images
-description: In diesem Thema wird veranschaulicht, wie Elemente einem ComboBoxEx-Steuerelement hinzugefügt werden.
+title: Vorbereiten von ComboBoxEx-Elementen und -Bildern
+description: In diesem Thema wird veranschaulicht, wie Einem ComboBoxEx-Steuerelement Elemente hinzugefügt werden.
 ms.assetid: 2603DFBE-9E7A-4B2F-BE33-418997D323B2
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 1a7474b46e5227d91b1cc2b51462a43a0fb75d8b
-ms.sourcegitcommit: 5f33645661bf8c825a7a2e73950b1f4ea0f1cd82
+ms.openlocfilehash: e0ea0b6defc7e99bd98c3dac551346280f0650da9e58a948e77ccc98aec81cda
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/21/2020
-ms.locfileid: "103858487"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118958699"
 ---
-# <a name="how-to-prepare-comboboxex-items-and-images"></a>Vorbereiten von ComboBoxEx-Elementen und-Images
+# <a name="how-to-prepare-comboboxex-items-and-images"></a>Vorbereiten von ComboBoxEx-Elementen und -Bildern
 
-In diesem Thema wird veranschaulicht, wie Elemente einem ComboBoxEx-Steuerelement hinzugefügt werden.
+In diesem Thema wird veranschaulicht, wie Einem ComboBoxEx-Steuerelement Elemente hinzugefügt werden.
 
-Wenn Sie ein Element einem ComboBoxEx-Steuerelement hinzufügen möchten, definieren Sie zunächst eine [**COMBOBOXEXITEM**](/windows/win32/api/commctrl/ns-commctrl-comboboxexitema) -Struktur. Legen Sie dann den **Mask** -Member der-Struktur fest, um anzugeben, welche Elemente das Steuerelement verwenden soll. Legen Sie schließlich die angegebenen Member der Struktur auf die gewünschten Werte fest, und senden Sie die [**CBEM \_ InsertItem**](cbem-insertitem.md) -Nachricht, um das Element dem Steuerelement hinzuzufügen.
+Um einem ComboBoxEx-Steuerelement ein Element hinzuzufügen, definieren Sie zunächst eine [**COMBOBOXEXITEM-Struktur.**](/windows/win32/api/commctrl/ns-commctrl-comboboxexitema) Legen Sie dann den Masken **member** der -Struktur fest, um anzugeben, welche Member das Steuerelement verwenden soll. Legen Sie abschließend die angegebenen Member der -Struktur auf die gewünschten Werte fest, und senden Sie die [**CBEM \_ INSERTITEM-Nachricht,**](cbem-insertitem.md) um das Element dem Steuerelement hinzuzufügen.
 
-Die folgende Anwendungs definierte Funktion fügt einem vorhandenen ComboBoxEx-Steuerelement 15 Elemente hinzu.
+Die folgende anwendungsdefinierte Funktion fügt einem vorhandenen ComboBoxEx-Steuerelement 15 Elemente hinzu.
 
-## <a name="what-you-need-to-know"></a>Was Sie wissen müssen
+## <a name="what-you-need-to-know"></a>Wichtige Informationen
 
 ### <a name="technologies"></a>Technologien
 
--   [Windows-Steuerelemente](window-controls.md)
+-   [Windows Steuerelemente](window-controls.md)
 
 ### <a name="prerequisites"></a>Voraussetzungen
 
 -   C/C++
--   Programmieren der Windows-Benutzeroberfläche
+-   Windows Benutzeroberfläche-Programmierung
 
 ## <a name="instructions"></a>Anweisungen
 
 ### <a name="step-1"></a>Schritt 1:
 
-Wenn Sie ein Element einem ComboBoxEx-Steuerelement hinzufügen möchten, definieren Sie zunächst eine [**COMBOBOXEXITEM**](/windows/win32/api/commctrl/ns-commctrl-comboboxexitema) -Struktur.
+Um einem ComboBoxEx-Steuerelement ein Element hinzuzufügen, definieren Sie zunächst eine [**COMBOBOXEXITEM-Struktur.**](/windows/win32/api/commctrl/ns-commctrl-comboboxexitema)
 
 
 ```C++
@@ -72,7 +72,7 @@ ITEMINFO IInf[ ] = {
 
 ### <a name="step-2"></a>Schritt 2:
 
-Legen Sie den **Mask** -Member der-Struktur fest, um anzugeben, welche Elemente das Steuerelement verwenden soll. Beachten Sie, dass der **Mask** -Member der [**COMBOBOXEXITEM**](/windows/win32/api/commctrl/ns-commctrl-comboboxexitema) -Struktur Flagwerte enthält, die dem Steuerelement mitteilen, dass Bilder für jedes Element angezeigt werden.
+Legen Sie das **Maskenmitglied** der -Struktur fest, um anzugeben, welche Elemente das Steuerelement verwenden soll. Beachten Sie, **dass das Maskenelement** der [**COMBOBOXEXITEM-Struktur**](/windows/win32/api/commctrl/ns-commctrl-comboboxexitema) Flagwerte enthält, die das Steuerelement anleiten, Bilder für jedes Element anzuzeigen.
 
 
 ```C++
@@ -85,7 +85,7 @@ cbei.mask = CBEIF_TEXT | CBEIF_INDENT |
 
 ### <a name="step-3"></a>Schritt 3:
 
-Legen Sie die angegebenen Member der Struktur auf die gewünschten Werte fest, und senden Sie dann die [**CBEM \_ InsertItem**](cbem-insertitem.md) -Nachricht, um das Element dem Steuerelement hinzuzufügen.
+Legen Sie die angegebenen Member der -Struktur auf die werte fest, die Sie wünschen, und senden Sie dann die [**CBEM \_ INSERTITEM-Nachricht,**](cbem-insertitem.md) um das Element dem Steuerelement hinzuzufügen.
 
 
 ```C++
@@ -109,7 +109,7 @@ for(iCnt=0;iCnt<MAX_ITEMS;iCnt++){
 
 ### <a name="step-4"></a>Schritt 4:
 
-Weisen Sie die vorhandene Bildliste dem ComboBoxEx-Steuerelement zu, und legen Sie die Größe des Steuer Elements fest.
+Weisen Sie die vorhandene Bildliste dem ComboBoxEx-Steuerelement zu, und legen Sie die Größe des Steuerelements fest.
 
 
 ```C++
@@ -208,7 +208,7 @@ BOOL WINAPI AddItems(HWND hwndCB)
 [Informationen zu ComboBoxEx-Steuerelementen](comboboxex-controls.md)
 </dt> <dt>
 
-[ComboBoxEx-Steuerelement Verweis](bumper-comboboxex-comboboxex-control-reference.md)
+[ComboBoxEx-Steuerelementreferenz](bumper-comboboxex-comboboxex-control-reference.md)
 </dt> <dt>
 
 [Verwenden von ComboBoxEx-Steuerelementen](/windows/desktop/Controls/using-comboboxex)
@@ -217,6 +217,6 @@ BOOL WINAPI AddItems(HWND hwndCB)
 [ComboBoxEx](comboboxex-control-reference.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 

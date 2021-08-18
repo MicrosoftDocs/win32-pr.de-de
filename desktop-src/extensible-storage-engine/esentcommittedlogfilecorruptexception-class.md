@@ -1,6 +1,6 @@
 ---
-description: 'Weitere Informationen finden Sie unter: esentcommittedlogfilebeschädigte TException-Klasse'
-title: Esentcommittedlogfilebeschädigte TException-Klasse
+description: 'Weitere Informationen zu: EsentCommittedLogFileCorruptException-Klasse'
+title: EsentCommittedLogFileCorruptException-Klasse
 TOCTitle: EsentCommittedLogFileCorruptException class
 ms:assetid: T:Microsoft.Isam.Esent.Interop.EsentCommittedLogFileCorruptException
 ms:mtpsurl: https://msdn.microsoft.com/library/microsoft.isam.esent.interop.esentcommittedlogfilecorruptexception(v=EXCHG.10)
@@ -24,29 +24,29 @@ api_type:
 api_location:
 - Microsoft.Isam.Esent.Interop.dll
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: fbc9d9342da650838aca4a291cc0196bc40fc77f
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 5d313f7cea566f807e71cf6a0a9557101927e97b2be6a526198d7e93d230f4a3
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106343641"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118782111"
 ---
-# <a name="esentcommittedlogfilecorruptexception-class"></a>Esentcommittedlogfilebeschädigte TException-Klasse
+# <a name="esentcommittedlogfilecorruptexception-class"></a>EsentCommittedLogFileCorruptException-Klasse
 
-Basisklasse für JET_err. committedlogfilebeschädigte-Ausnahmen.
+Basisklasse für JET_err.CommittedLogFileCorrupt-Ausnahmen.
 
 ## <a name="inheritance-hierarchy"></a>Vererbungshierarchie
 
 [System.Object](/dotnet/api/system.object)  
   [System.Exception](/dotnet/api/system.exception)  
-    [Microsoft. ISAM. ESENT. esentexception](./esentexception-class.md)  
-      [Microsoft. ISAM. ESENT. Interop. esenterrorexception](./esenterrorexception-class.md)  
-        [Microsoft. ISAM. ESENT. Interop. esentdataexception](./esentdataexception-class.md)  
-          [Microsoft. ISAM. ESENT. Interop. esentverdertionexception](./esentcorruptionexception-class.md)  
-            Microsoft. ISAM. ESENT. Interop. esentcommittedlogfilebeschädigen TException  
+    [Microsoft.Isam.Esent.EsentException](./esentexception-class.md)  
+      [Microsoft.Isam.Esent.Interop.EsentErrorException](./esenterrorexception-class.md)  
+        [Microsoft.Isam.Esent.Interop.EsentDataException](./esentdataexception-class.md)  
+          [Microsoft.Isam.Esent.Interop.EsentCorruptionException](./esentcorruptionexception-class.md)  
+            Microsoft.Isam.Esent.Interop.EsentCommittedLogFileCorruptException  
 
-**Namespace:**  [Microsoft. ISAM. ESENT. Interop](./microsoft.isam.esent.interop-namespace.md)  
-**Assembly:**  Microsoft. ISAM. ESENT. Interop (in Microsoft.Isam.Esent.Interop.dll)
+**Namespace:**  [Microsoft.Isam.Esent.Interop](./microsoft.isam.esent.interop-namespace.md)  
+**Assembly:**  Microsoft.Isam.Esent.Interop (in Microsoft.Isam.Esent.Interop.dll)
 
 ## <a name="syntax"></a>Syntax
 
@@ -68,10 +68,10 @@ public sealed class EsentCommittedLogFileCorruptException : EsentCorruptionExcep
 
 Alle öffentlichen statischen Elemente dieses Typs (Shared in Microsoft Visual Basic) sind threadsicher. Bei Instanzmembern ist die Threadsicherheit nicht gewährleistet.
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
-#### <a name="reference"></a>Referenz
+#### <a name="reference"></a>Verweis
 
-[Esentcommittedlogfilekorruptexception-Elemente](./esentcommittedlogfilecorruptexception-members.md)
+[EsentCommittedLogFileCorruptException-Member](./esentcommittedlogfilecorruptexception-members.md)
 
-[Microsoft. ISAM. ESENT. Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)
+[Microsoft.Isam.Esent.Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)

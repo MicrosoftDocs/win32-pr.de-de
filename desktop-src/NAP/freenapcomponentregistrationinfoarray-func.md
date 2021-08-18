@@ -1,9 +1,9 @@
 ---
-title: Freenapcomponentregistrationinfoarray-Funktion (naputil. h)
-description: Gibt eine angegebene Anzahl von napcomponentregistrationinfo-Datenstrukturen aus einem Array frei.
+title: FreeNapComponentRegistrationInfoArray-Funktion (NapUtil.h)
+description: Gibt eine angegebene Anzahl von NapComponentRegistrationInfo-Datenstrukturen aus einem Array frei.
 ms.assetid: 6fcb1394-04dd-4d8a-87f7-6b69b6ef29ff
 keywords:
-- Freenapcomponentregistrationinfoarray-Funktion NAP
+- NAP-Funktion "FreeNapComponentRegistrationInfoArray"
 topic_type:
 - apiref
 api_name:
@@ -14,21 +14,21 @@ api_type:
 - DllExport
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: df823ad8086c57a6ee193bd0d58678786cfe325b
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 20d9d1aba35e7bf1ef332231836bd986b881f0e2dc995bc430075dfadf7bd482
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104105417"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118940498"
 ---
-# <a name="freenapcomponentregistrationinfoarray-function"></a>Freenapcomponentregistrationinfoarray-Funktion
+# <a name="freenapcomponentregistrationinfoarray-function"></a>FreeNapComponentRegistrationInfoArray-Funktion
 
 > [!Note]  
-> Die Netzwerk Zugriffsschutz-Plattform ist ab Windows 10 nicht verfügbar.
+> Die Netzwerkzugriffsschutz-Plattform ist ab Windows 10 nicht verfügbar.
 
  
 
-Die **freenapcomponentregistrationinfoarray** -Funktion gibt eine angegebene Anzahl von [**napcomponentregistrationinfo**](/windows/win32/api/naptypes/ns-naptypes-napcomponentregistrationinfo) -Datenstrukturen aus einem Array frei.
+Die **FreeNapComponentRegistrationInfoArray-Funktion** gibt eine angegebene Anzahl von [**NapComponentRegistrationInfo-Datenstrukturen**](/windows/win32/api/naptypes/ns-naptypes-napcomponentregistrationinfo) aus einem Array frei.
 
 ## <a name="syntax"></a>Syntax
 
@@ -46,29 +46,29 @@ NAPAPI VOID WINAPI FreeNapComponentRegistrationInfoArray(
 
 <dl> <dt>
 
-*Anzahl* \[ in\]
+*count* \[ In\]
 </dt> <dd>
 
-Die Anzahl der [**napcomponentregistrationinfo**](/windows/win32/api/naptypes/ns-naptypes-napcomponentregistrationinfo) -Strukturen in *Informationen* , die freigegeben werden sollen.
+Die Anzahl der [**NapComponentRegistrationInfo-Strukturen**](/windows/win32/api/naptypes/ns-naptypes-napcomponentregistrationinfo) in frei zu machende *Informationen.*
 
 </dd> <dt>
 
-*Info* \[ in\]
+*Info zu* \[ In\]
 </dt> <dd>
 
-Ein Zeiger auf ein Array von [**napcomponentregistrationinfo**](/windows/win32/api/naptypes/ns-naptypes-napcomponentregistrationinfo) -Datenstrukturen, die freigegeben werden sollen.
+Ein Zeiger auf ein Array von [**NapComponentRegistrationInfo-Datenstrukturen,**](/windows/win32/api/naptypes/ns-naptypes-napcomponentregistrationinfo) die freigegeben werden sollen.
 
 </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Alle vom NAP-System unterstützten com-Schnittstellen verwenden Standard-com-Speicher Verwaltungsregeln und die com-Speicher Belegungs Funktion (**cotaskmembelegc** und **CoTaskMemFree**):
+Alle com-Schnittstellen, die vom NAP-System unterstützt werden, verwenden COM-Standardspeicherverwaltungsregeln und die COM-Speicherbezuweisungen (**CoTaskMemAlloc** und **CoTaskMemFree**):
 
--   **In** -Parameter werden vom Aufrufer zugeordnet und freigegeben.
--   Out-Parameter werden vom **aufgerufenen** zugeordnet und vom Aufrufer mithilfe von **cotaskmem** freigegeben.
--   **In/out-** Parameter werden vom Aufrufer zugeordnet, vom aufgerufenen freigegeben und neu zugeordnet und schließlich mit **cotaskmem** vom Aufrufer freigegeben.
+-   **In** werden Parameter vom Aufrufer zugeordnet und freigegeben.
+-   **Out-Parameter** werden vom Aufgerufenen zugeordnet und vom Aufrufer mit **coTaskMem** freigegeben.
+-   **Ein-/Aus-Parameter** werden vom Aufrufer zugeordnet, vom Aufgerufenen freigegeben und neu zugeordnet und schließlich vom Aufrufer freigegeben, indem **CoTaskMem** verwendet wird.
 
-Alle NAP-Funktionen zum Freigeben von Speicher freigeben auch alle eingebetteten Zeiger.
+Alle NAP-Funktionen zum Freigeben von Arbeitsspeicher gibt auch alle eingebetteten Zeiger frei.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -76,9 +76,9 @@ Alle NAP-Funktionen zum Freigeben von Speicher freigeben auch alle eingebetteten
 
 | Anforderung | Wert |
 |-------------------------------------|--------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                       |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/>                                 |
-| Header<br/>                   | <dl> <dt>Naputil. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur Vista-Desktop-Apps\]<br/>                                       |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/>                                 |
+| Header<br/>                   | <dl> <dt>NapUtil.h</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Qutil.dll</dt> </dl> |
 
 

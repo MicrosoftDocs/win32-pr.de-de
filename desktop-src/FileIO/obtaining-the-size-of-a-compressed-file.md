@@ -1,5 +1,5 @@
 ---
-description: Um die komprimierte Größe einer Datei zu erhalten, verwenden Sie die GetCompressedFileSize-Funktion.
+description: Verwenden Sie die GetCompressedFileSize-Funktion, um die komprimierte Größe einer Datei abzurufen.
 ms.assetid: c6bfd221-f125-48b4-b38b-822a23639c40
 title: Abrufen der Größe einer komprimierten Datei
 ms.topic: article
@@ -13,7 +13,7 @@ ms.locfileid: "118648565"
 ---
 # <a name="obtaining-the-size-of-a-compressed-file"></a>Abrufen der Größe einer komprimierten Datei
 
-Verwenden Sie [**die GetCompressedFileSize-Funktion,**](/windows/desktop/api/fileapi/nf-fileapi-getcompressedfilesizea) um die komprimierte Größe einer Datei zu erhalten. Wenn die Datei komprimiert ist, ist ihre komprimierte Größe kleiner als die nicht komprimierte Größe. Verwenden Sie [**die GetFileSize-Funktion,**](/windows/desktop/api/FileAPI/nf-fileapi-getfilesize) um die unkomprimierte Größe einer Datei zu bestimmen.
+Verwenden Sie die [**GetCompressedFileSize-Funktion,**](/windows/desktop/api/fileapi/nf-fileapi-getcompressedfilesizea) um die komprimierte Größe einer Datei abzurufen. Wenn die Datei komprimiert ist, ist ihre komprimierte Größe kleiner als die unkomprimierte Größe. Verwenden Sie die [**GetFileSize-Funktion,**](/windows/desktop/api/FileAPI/nf-fileapi-getfilesize) um die nicht komprimierte Größe einer Datei zu bestimmen.
 
  
 

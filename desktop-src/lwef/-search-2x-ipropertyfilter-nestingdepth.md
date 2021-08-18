@@ -1,11 +1,11 @@
 ---
-title: "' Ipropertyfilter '-Eigenschaft ' nestingtiefe ' (wdssharedidl. h)"
-description: Filtert die Tiefe innerhalb eines geschachtelten Satzes von Klammern.
+title: IPropertyFilter NestingDepth-Eigenschaft (WdsSharedIDL.h)
+description: Filtert die Tiefe in einem geschachtelten Satz von Klammern.
 ms.assetid: a52992b3-d232-46a5-907c-8df6bd5ad6fc
 keywords:
-- Eigenschaften der Legacy-Windows-Umgebung von nestingtiefe
-- Nestingtiefe-Eigenschaft Legacy Windows-Umgebungs Funktionen, ipropertyfilter-Schnittstelle
-- Ipropertyfilter Interface Legacy Windows-Umgebungs Features, nestingtiefe (Eigenschaft)
+- NestingDepth-Eigenschaft Legacy Windows Umgebungsfeatures
+- NestingDepth-Eigenschaft Legacy Windows Umgebungsfeatures, IPropertyFilter-Schnittstelle
+- IPropertyFilter-Schnittstelle Legacy Windows Umgebungsfeatures, NestingDepth-Eigenschaft
 topic_type:
 - apiref
 api_name:
@@ -18,19 +18,19 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 2a2bda4e12bb68b501fa42003ac145113dade3ff
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 2499d7a3d5505f4cb428cbc8831ec0ea4e0a71843693f5a8ba1250995071df32
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104391885"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118481208"
 ---
-# <a name="ipropertyfilternestingdepth-property"></a>Ipropertyfilter:: nestingtiefe-Eigenschaft
+# <a name="ipropertyfilternestingdepth-property"></a>IPropertyFilter::NestingDepth-Eigenschaft
 
 > [!NOTE]
-> Windows-Desktop Suche 2. x ist eine veraltete Technologie, die ursprünglich als Add-in für Windows XP und Windows Server 2003 verfügbar war. Verwenden Sie in späteren Versionen stattdessen die [Windows Search-API](../search/-search-reference-entry-page.md) . 
+> Windows Desktop Search 2.x ist eine veraltete Technologie, die ursprünglich als Add-In für Windows XP und Windows Server 2003 verfügbar war. Verwenden Sie in späteren Versionen stattdessen [die Windows Search-API.](../search/-search-reference-entry-page.md) 
 
-Filtert die Tiefe innerhalb eines geschachtelten Satzes von Klammern.
+Filtert die Tiefe in einem geschachtelten Satz von Klammern.
 
 Dies ist eine Eigenschaft mit Lese- und Schreibzugriff.
 
@@ -51,7 +51,7 @@ HRESULT get_NestingDepth(
 
 ## <a name="property-value"></a>Eigenschaftswert
 
-Legt die Zahl fest, die die Tiefe der geschachtelten Klammern angibt.
+Legt die Zahl fest, die die Tiefe geschachtelter Klammern angibt.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -59,10 +59,10 @@ Legt die Zahl fest, die die Tiefe der geschachtelten Klammern angibt.
 
 | Anforderung | Wert |
 |-------------------------------------|-------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows XP mit SP2 \[ Desktop-Apps\]<br/>                                      |
-| Unterstützte Mindestversion (Server)<br/> | Windows Server 2003 mit SP1 \[ Desktop-Apps\]<br/>                             |
-| Verteilbare Komponente<br/>          | Windows-Desktop Suche (WDS) 2.6.5<br/>                                             |
-| Header<br/>                   | <dl> <dt>Wdssharedidl. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur XP mit \[ SP2-Desktop-Apps\]<br/>                                      |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server 2003 mit \[ SP1-Desktop-Apps\]<br/>                             |
+| Verteilbare Komponente<br/>          | Windows Desktopsuche (WDS) 2.6.5<br/>                                             |
+| Header<br/>                   | <dl> <dt>WdsSharedIDL.h</dt> </dl> |
 
 
 

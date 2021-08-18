@@ -1,9 +1,9 @@
 ---
-title: Fontgrouphdr-Struktur
-description: Enthält die Informationen, die für eine Anwendung erforderlich sind, um auf eine bestimmte Schriftart zuzugreifen. Die hier bereitgestellte Struktur Definition dient nur der Erläuterung. Es ist in keiner Standard Header Datei vorhanden.
+title: FONTGROUPHDR-Struktur
+description: Enthält die Informationen, die eine Anwendung für den Zugriff auf eine bestimmte Schriftart benötigt. Die hier bereitgestellte Strukturdefinition ist nur zur Erklärung vorgesehen. sie ist in einer Standardheaderdatei nicht vorhanden.
 ms.assetid: 180b3dfd-3f20-4100-b45b-2f253b7c0582
 keywords:
-- Fontgrouphdr-Struktur Menüs und weitere Ressourcen
+- FONTGROUPHDR-Strukturmenüs und andere Ressourcen
 topic_type:
 - apiref
 api_name:
@@ -13,16 +13,16 @@ api_type:
 ms.topic: reference
 ms.date: 05/31/2018
 api_location: ''
-ms.openlocfilehash: 1d67d9ecfa451970422f21d05817f26170a9c8eb
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 51b307b7f5798a57e344096fe46227edf97babbf3547c4c851d71fd8ecdc28da
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104213734"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118734478"
 ---
-# <a name="fontgrouphdr-structure"></a>Fontgrouphdr-Struktur
+# <a name="fontgrouphdr-structure"></a>FONTGROUPHDR-Struktur
 
-Enthält die Informationen, die für eine Anwendung erforderlich sind, um auf eine bestimmte Schriftart zuzugreifen. Die hier bereitgestellte Struktur Definition dient nur der Erläuterung. Es ist in keiner Standard Header Datei vorhanden.
+Enthält die Informationen, die eine Anwendung für den Zugriff auf eine bestimmte Schriftart benötigt. Die hier bereitgestellte Strukturdefinition ist nur zur Erklärung vorgesehen. sie ist in einer Standardheaderdatei nicht vorhanden.
 
 ## <a name="syntax"></a>Syntax
 
@@ -40,10 +40,10 @@ typedef struct {
 
 <dl> <dt>
 
-**Numoffonts**
+**NumberOfFonts**
 </dt> <dd>
 
-Typ: **Word**
+Typ: **WORD**
 
 </dd> <dd>
 
@@ -54,17 +54,17 @@ Die Anzahl der einzelnen Schriftarten, die dieser Ressource zugeordnet sind.
 **DE**
 </dt> <dd>
 
-Typ: **[ **direntry**](direntry.md)**
+Typ: **[ **DIRENTRY**](direntry.md)**
 
 </dd> <dd>
 
-Eine-Struktur, die einen eindeutigen ordinalbezeichner für jede Schriftart in der Ressource enthält. Der Member " **de** " ist ein Platzhalter für das Array mit [**direntry**](direntry.md) -Strukturen variabler Länge.
+Eine -Struktur, die einen eindeutigen Ordinalbezeichner für jede Schriftart in der Ressource enthält. Der **DE-Member** ist ein Platzhalter für das Array variabler Länge von [**DIRENTRY-Strukturen.**](direntry.md)
 
 </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die **fontgrouphdr** -Struktur folgt den Daten für die einzelnen Schriftarten in. Res-Datei. Der Ressourcen Compiler fügt die **fontgrouphdr** -Struktur in der Regel automatisch als letzten Eintrag in der Datei hinzu.
+Die **FONTGROUPHDR-Struktur** folgt den Daten für die einzelnen Schriftarten im . Res-Datei. Der Ressourcencompiler fügt automatisch die **FONTGROUPHDR-Struktur** hinzu, in der Regel als letzten Eintrag in der Datei.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -77,20 +77,20 @@ Die **fontgrouphdr** -Struktur folgt den Daten für die einzelnen Schriftarten i
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-**Verweis**
+**Referenz**
 </dt> <dt>
 
-[**Direntry**](direntry.md)
+[**DIRENTRY**](direntry.md)
 </dt> <dt>
 
-[**Fontdirentry**](fontdirentry.md)
+[**FONTDIRENTRY**](fontdirentry.md)
 </dt> <dt>
 
-**Licher**
+**Konzeptionellen**
 </dt> <dt>
 
 [Ressourcen](resources.md)

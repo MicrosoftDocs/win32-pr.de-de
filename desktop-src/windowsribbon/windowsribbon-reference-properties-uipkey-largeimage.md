@@ -1,46 +1,46 @@
 ---
 title: UI_PKEY_LargeImage
-description: Identifiziert die Benutzeroberflächen- \_ pkey \_ largeimage-Eigenschaft.
+description: Identifiziert die \_ PKEY \_ LargeImage-Eigenschaft der Benutzeroberfläche.
 ms.assetid: 0e09ad71-d8b3-4321-8765-7fccf02288f0
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 354066bc84eab678025bfaf255e7edf3289631e9
-ms.sourcegitcommit: 592c9bbd22ba69802dc353bcb5eb30699f9e9403
+ms.openlocfilehash: aae6c7a0774b9d7f17cfa8bc95c6eda1e786d2e3a56765ebe752c0d832e0a345
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "104039457"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118706346"
 ---
-# <a name="ui_pkey_largeimage"></a>UI \_ pkey \_ largeimage
+# <a name="ui_pkey_largeimage"></a>UI \_ PKEY \_ LargeImage
 
-Identifiziert die Benutzeroberflächen- \_ pkey \_ largeimage-Eigenschaft.
+Identifiziert die \_ PKEY \_ LargeImage-Eigenschaft der Benutzeroberfläche.
 
 ```
 propertyDescription
-   name = UI_PKEY_LargeImage
-   shellPKey = UI_PKEY_LargeImage
-   formatID = 00000007-7363-696e-8441798acf5aebb7
-   propID = 7
-   typeInfo
-      type = IUIImage
+   name = UI_PKEY_LargeImage
+   shellPKey = UI_PKEY_LargeImage
+   formatID = 00000007-7363-696e-8441798acf5aebb7
+   propID = 7
+   typeInfo
+      type = IUIImage
 ```
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-\_Die UI pkey \_ largeimage wird von einer Anwendung verwendet, um das große Bild abzufragen, das einem Menüband-Steuerelement zugeordnet ist.
+Ui PKEY LargeImage wird von einer Anwendung zum Abfragen des großen Bilds \_ \_ verwendet, das einem Menüband-Steuerelement zugeordnet ist.
 
-Der Eigenschafts Wert ist ein [**iuiimage**](/windows/desktop/api/uiribbon/nn-uiribbon-iuiimage) -Objekt.
+Der Eigenschaftswert ist ein [**IUIImage-Objekt.**](/windows/desktop/api/uiribbon/nn-uiribbon-iuiimage)
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[Ressourcen Eigenschaften](windowsribbon-reference-properties-resource.md)
+[Ressourceneigenschaften](windowsribbon-reference-properties-resource.md)
 </dt> <dt>
 
-[Angeben von Menüband-Bild Ressourcen](windowsribbon-imageformats.md)
+[Angeben von Menübandbildressourcen](windowsribbon-imageformats.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 

@@ -1,10 +1,10 @@
 ---
-title: departmentnumber-Attribut
-description: Identifiziert eine Abteilung innerhalb eines Unternehmens.
+title: departmentNumber-Attribut
+description: Identifiziert eine Abteilung innerhalb einer Organisation.
 ms.assetid: c0189634-53fa-41bb-af6b-e0fa1fce944d
 ms.tgt_platform: multiple
 keywords:
-- departmentnumber-Attribut AD-Schema
+- departmentNumber-Attribut AD-Schema
 topic_type:
 - apiref
 api_name:
@@ -13,41 +13,41 @@ api_type:
 - Schema
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: c9f99108e4ea00e44ffc11a8e56acc386b7ed5af
-ms.sourcegitcommit: b77ace27b0432e7cd3863191b11926be032fbe2f
+ms.openlocfilehash: ee7793cd8fc64d1e3f5626184e6d264af41fc94dbb78ce5af6166843aeefb989
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "104107133"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118961719"
 ---
-# <a name="departmentnumber-attribute"></a>departmentnumber-Attribut
+# <a name="departmentnumber-attribute"></a>departmentNumber-Attribut
 
-Identifiziert eine Abteilung innerhalb eines Unternehmens.
+Identifiziert eine Abteilung innerhalb einer Organisation.
 
 
 
 | Eingabe | Wert |
 |-------------------|---------------------------------------------|
-| CN                | departmentnumber                            |
-| LDAP-Display-Name | departmentnumber                            |
+| CN                | departmentNumber                            |
+| Ldap-Anzeigename | departmentNumber                            |
 | Size              | \-                                          |
-| Berechtigung aktualisieren  | \-                                          |
-| Aktualisierungshäufigkeit  | \-                                          |
+| Aktualisieren von Berechtigungen  | \-                                          |
+| Updatehäufigkeit  | \-                                          |
 | Attribute-Id      | 2.16.840.1.113730.3.1.2                     |
-| System-ID-GUID    | be9ef6ee-cbc7-4f22-b27b-96967e7ee585        |
+| System-Id-Guid    | be9ef6ee-cbc7-4f22-b27b-96967e7ee585        |
 | Syntax            | [**String(Unicode)**](s-string-unicode.md) |
 
 
 
 ## <a name="implementations"></a>Implementierungen
 
--   [**Windows Server 2003**](#windows-server-2003)
+-   [**Windows Server 2003**](#windows-server-2003)
 -   [**Windows Server 2003 R2**](#windows-server-2003-r2)
 -   [**Windows Server 2008**](#windows-server-2008)
 -   [**Windows Server 2008 R2**](#windows-server-2008-r2)
 -   [**Windows Server 2012**](#windows-server-2012)
 
-## <a name="windows-server-2003"></a>Windows Server 2003
+## <a name="windows-server-2003"></a>Windows Server 2003
 
 
 
@@ -56,10 +56,10 @@ Identifiziert eine Abteilung innerhalb eines Unternehmens.
 | Link-ID                | \-                                                                                    |
 | MAPI-Id                | \-                                                                                    |
 | System-Only            | False                                                                                 |
-| Ist-einwertig       | False                                                                                 |
+| Is-Single-Valued       | False                                                                                 |
 | Ist indiziert             | False                                                                                 |
 | Im globalen Katalog      | False                                                                                 |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                                          |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                                          |
 | Range-Lower            | \-                                                                                    |
 | Range-Upper            | \-                                                                                    |
 | Search-Flags           | 0x00000000                                                                            |
@@ -77,10 +77,10 @@ Identifiziert eine Abteilung innerhalb eines Unternehmens.
 | Link-ID                | \-                                                                                    |
 | MAPI-Id                | \-                                                                                    |
 | System-Only            | False                                                                                 |
-| Ist-einwertig       | False                                                                                 |
+| Is-Single-Valued       | False                                                                                 |
 | Ist indiziert             | False                                                                                 |
 | Im globalen Katalog      | False                                                                                 |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                                          |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                                          |
 | Range-Lower            | \-                                                                                    |
 | Range-Upper            | \-                                                                                    |
 | Search-Flags           | 0x00000000                                                                            |
@@ -98,10 +98,10 @@ Identifiziert eine Abteilung innerhalb eines Unternehmens.
 | Link-ID                | \-                                                                                    |
 | MAPI-Id                | \-                                                                                    |
 | System-Only            | False                                                                                 |
-| Ist-einwertig       | False                                                                                 |
+| Is-Single-Valued       | False                                                                                 |
 | Ist indiziert             | False                                                                                 |
 | Im globalen Katalog      | False                                                                                 |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                                          |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                                          |
 | Range-Lower            | \-                                                                                    |
 | Range-Upper            | \-                                                                                    |
 | Search-Flags           | 0x00000000                                                                            |
@@ -119,10 +119,10 @@ Identifiziert eine Abteilung innerhalb eines Unternehmens.
 | Link-ID                | \-                                                                                    |
 | MAPI-Id                | \-                                                                                    |
 | System-Only            | False                                                                                 |
-| Ist-einwertig       | False                                                                                 |
+| Ist einwertig       | False                                                                                 |
 | Ist indiziert             | False                                                                                 |
 | Im globalen Katalog      | False                                                                                 |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                                          |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                                          |
 | Range-Lower            | \-                                                                                    |
 | Range-Upper            | \-                                                                                    |
 | Search-Flags           | 0x00000000                                                                            |
@@ -140,10 +140,10 @@ Identifiziert eine Abteilung innerhalb eines Unternehmens.
 | Link-ID                | \-                                                                                    |
 | MAPI-Id                | \-                                                                                    |
 | System-Only            | False                                                                                 |
-| Ist-einwertig       | False                                                                                 |
+| Ist einwertig       | False                                                                                 |
 | Ist indiziert             | False                                                                                 |
 | Im globalen Katalog      | False                                                                                 |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                                          |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                                          |
 | Range-Lower            | \-                                                                                    |
 | Range-Upper            | \-                                                                                    |
 | Search-Flags           | 0x00000000                                                                            |

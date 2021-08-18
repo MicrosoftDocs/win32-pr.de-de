@@ -1,11 +1,11 @@
 ---
-title: Imediarendererfactory-Methode "kreatemediarendererasync"
-description: Erstellt asynchron eine neue Instanz eines Objekts, das die imediarenderer-Schnittstelle mit dem angegebenen eindeutigen Gerätenamen (User Name, udn) implementiert.
+title: IMediaRendererFactory CreateMediaRendererAsync-Methode
+description: Erstellt asynchron eine neue Instanz eines Objekts, das die IMediaRenderer-Schnittstelle mit dem angegebenen eindeutigen Gerätenamen (Unique Device Name, UDN) implementiert.
 ms.assetid: FD1242F8-4C2E-4027-B1DE-5FD69557684C
 keywords:
-- Methode für die Media Streaming-API von "kreatemediarendererasync"
-- Methode "Media Streaming API" der Methode "kreatemediarendererasync", imediarendererfactory-Schnittstelle
-- Imediarendererfactory-Schnittstelle Medien Streaming-API, Methode "kreatemediarendererasync"
+- 'CreateMediaRendererAsync-Methode: Medienstreaming-API'
+- CreateMediaRendererAsync-Methode Media Streaming-API, IMediaRendererFactory-Schnittstelle
+- IMediaRendererFactory-Schnittstelle Medienstreaming-API , CreateMediaRendererAsync-Methode
 topic_type:
 - apiref
 api_name:
@@ -15,16 +15,16 @@ api_type:
 ms.topic: reference
 ms.date: 05/31/2018
 api_location: ''
-ms.openlocfilehash: b152e5889ad83440a48e178be0b89a97d2a9f664
-ms.sourcegitcommit: ebd3ce6908ff865f1ef66f2fc96769be0aad82e1
+ms.openlocfilehash: 3e459324d96f031ab3433f0d8bfe8ba5de562d76c95f51affd7b72d130655fab
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/19/2020
-ms.locfileid: "103725881"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118735487"
 ---
-# <a name="imediarendererfactorycreatemediarendererasync-method"></a>Imediarendererfactory:: kreatemediarendererasync-Methode
+# <a name="imediarendererfactorycreatemediarendererasync-method"></a>IMediaRendererFactory::CreateMediaRendererAsync-Methode
 
-Erstellt asynchron eine neue Instanz eines Objekts, das die [**imediarenderer**](imediarenderer.md) -Schnittstelle mit dem angegebenen eindeutigen Gerätenamen (User Name, udn) implementiert.
+Erstellt asynchron eine neue Instanz eines Objekts, das die [**IMediaRenderer-Schnittstelle**](imediarenderer.md) mit dem angegebenen eindeutigen Gerätenamen (Unique Device Name, UDN) implementiert.
 
 ## <a name="syntax"></a>Syntax
 
@@ -42,23 +42,23 @@ HRESULT CreateMediaRendererAsync(
 
 <dl> <dt>
 
-Geräte Bezeichner  \[ in\]
+*deviceIdentifier* \[ In\]
 </dt> <dd>
 
-Ein hstring-Wert, der einen udn enthält, der das DLNA-DMR-Gerät identifiziert, für das eine Instanz von [**imediarenderer**](imediarenderer.md) erstellt wird.
+Ein HSTRING mit einem UDN, der das DLNA DMR-Gerät identifiziert, für das eine Instanz von [**IMediaRenderer**](imediarenderer.md) erstellt wird.
 
 </dd> <dt>
 
-*Wert* \[ Out, retval\]
+*wert* \[ out, retval\]
 </dt> <dd>
 
-Empfängt einen Verweis auf ein Objekt vom Typ " [**kreatemediarendereroperation**](createmediarendereroperation.md) ", das verwendet wird, um Ergebnisse aus dem asynchronen Vorgang zu erhalten.
+Empfängt einen Verweis auf ein [**CreateMediaRendererOperation-Objekt,**](createmediarendereroperation.md) das zum Abrufen der Ergebnisse des asynchronen Vorgangs verwendet wird.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Die-Methode gibt ein **HRESULT** zurück. Mögliches Werte (aber nicht die Einzigen) sind die in der folgenden Tabelle.
+Die Methode gibt ein **HRESULT** zurück. Mögliches Werte (aber nicht die Einzigen) sind die in der folgenden Tabelle.
 
 
 
@@ -70,11 +70,11 @@ Die-Methode gibt ein **HRESULT** zurück. Mögliches Werte (aber nicht die Einzi
 
  
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Imediarendererfactory**](/previous-versions/windows/desktop/api/windows.media.streaming/nn-windows-media-streaming-imediarendererfactory)
+[**IMediaRendererFactory**](/previous-versions/windows/desktop/api/windows.media.streaming/nn-windows-media-streaming-imediarendererfactory)
 </dt> </dl>
 
  

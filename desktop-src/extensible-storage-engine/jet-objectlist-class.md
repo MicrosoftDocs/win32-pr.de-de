@@ -1,5 +1,5 @@
 ---
-description: 'Weitere Informationen finden Sie unter: JET_OBJECTLIST-Klasse'
+description: 'Weitere Informationen zu: JET_OBJECTLIST-Klasse'
 title: JET_OBJECTLIST-Klasse
 TOCTitle: JET_OBJECTLIST class
 ms:assetid: T:Microsoft.Isam.Esent.Interop.JET_OBJECTLIST
@@ -24,24 +24,24 @@ api_type:
 api_location:
 - Microsoft.Isam.Esent.Interop.dll
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: 2d5d137829b605b577559ddd8e3bce03dd5a8234
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: e201c26ce1076b942d614e90f55a1ddacf88b24fa41154d448ca471c3d4fed23
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106348743"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118765006"
 ---
 # <a name="jet_objectlist-class"></a>JET_OBJECTLIST-Klasse
 
-Informationen zu einer temporären Tabelle mit Informationen zu allen Tabellen für eine bestimmte Datenbank.
+Informationen zu einer temporären Tabelle, die Informationen zu allen Tabellen für eine bestimmte Datenbank enthält.
 
 ## <a name="inheritance-hierarchy"></a>Vererbungshierarchie
 
 [System.Object](/dotnet/api/system.object)  
   Microsoft.Isam.Esent.Interop.JET_OBJECTLIST  
 
-**Namespace:**  [Microsoft. ISAM. ESENT. Interop](./microsoft.isam.esent.interop-namespace.md)  
-**Assembly:**  Microsoft. ISAM. ESENT. Interop (in Microsoft.Isam.Esent.Interop.dll)
+**Namespace:**  [Microsoft.Isam.Esent.Interop](./microsoft.isam.esent.interop-namespace.md)  
+**Assembly:**  Microsoft.Isam.Esent.Interop (in Microsoft.Isam.Esent.Interop.dll)
 
 ## <a name="syntax"></a>Syntax
 
@@ -60,10 +60,10 @@ public class JET_OBJECTLIST
 
 Alle öffentlichen statischen Elemente dieses Typs (Shared in Microsoft Visual Basic) sind threadsicher. Bei Instanzmembern ist die Threadsicherheit nicht gewährleistet.
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
-#### <a name="reference"></a>Referenz
+#### <a name="reference"></a>Verweis
 
-[Mitglieder JET_OBJECTLIST](./jet-objectlist-members.md)
+[JET_OBJECTLIST-Member](./jet-objectlist-members.md)
 
-[Microsoft. ISAM. ESENT. Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)
+[Microsoft.Isam.Esent.Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)

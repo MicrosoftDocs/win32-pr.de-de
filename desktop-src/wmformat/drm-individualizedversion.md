@@ -1,9 +1,9 @@
 ---
 title: DRM_IndividualizedVersion
-description: Das DRM \_ -Attribut "IndividualizedVersion" wird im DRM-Header gespeichert und enthält die für den Zugriff auf den Inhalt erforderliche minimale individualisierte Version.
+description: Das ATTRIBUT DRM IndividualizedVersion wird im DRM-Header gespeichert und enthält die mindestens erforderliche individualisierte Version für \_ den Zugriff auf den Inhalt.
 ms.assetid: ed3e165c-c6b0-4eea-be79-a715abd4dd0a
 keywords:
-- DRM_IndividualizedVersion Windows Media-Format
+- DRM_IndividualizedVersion des Windows-Medienformats
 topic_type:
 - apiref
 api_name:
@@ -12,39 +12,39 @@ api_type:
 - NA
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 03ecde48ef3d68e30116cdd7fc8a77179f2282c4
-ms.sourcegitcommit: 48d1c892045445bcbd0f22bafa2fd3861ffaa6e7
+ms.openlocfilehash: 85d7c9f64a7d4d00e95f8e877e7f33c9e6a8177977eff3b523c25cc1432ac57d
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/19/2020
-ms.locfileid: "104314357"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118704682"
 ---
-# <a name="drm_individualizedversion"></a>DRM- \_ IndividualizedVersion
+# <a name="drm_individualizedversion"></a>DRM \_ IndividualizedVersion
 
-Das DRM-Attribut " **\_ IndividualizedVersion** " wird im DRM-Header gespeichert und enthält die für den Zugriff auf den Inhalt erforderliche minimale individualisierte Version.
+Das **ATTRIBUT DRM \_ IndividualizedVersion** wird im DRM-Header gespeichert und enthält die mindestens erforderliche individualisierte Version für den Zugriff auf den Inhalt.
 
 ## <a name="global-constant"></a>Globale Konstante
 
-g \_ wszwmdrm \_ IndividualizedVersion
+g \_ wszWMDRM \_ IndividualizedVersion
 
 ## <a name="data-type"></a>Datentyp
 
-**WMT \_ - \_ Typzeichenfolge**
+**\_WMT-TYPZEICHENFOLGE \_**
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Dieses Attribut ist nur für den DRM-Inhalt von DRM Version 7 vorhanden. Sie kann mithilfe von [**iwmdrmwriter:: setdrmattribute**](/previous-versions/windows/desktop/api/Wmsdkidl/nf-wmsdkidl-iwmdrmwriter-setdrmattribute) festgelegt werden und kann mit " [**iwmdrmreader:: getdrmproperty**](/previous-versions/windows/desktop/api/Wmsdkidl/nf-wmsdkidl-iwmdrmreader-getdrmproperty)" abgerufen werden. Das gleiche Datei Attribut kann mit [**DRM \_ drmHeader \_ Individual Version**](drm-drmheader-individualizedversion.md)abgerufen werden.
+Dieses Attribut ist nur mit DRM Version 7-Inhalt vorhanden. Sie kann [**mitHILFE von IWMDRMWriter::SetDRMAttribute**](/previous-versions/windows/desktop/api/Wmsdkidl/nf-wmsdkidl-iwmdrmwriter-setdrmattribute) festgelegt und mit [**IWMDRMReader::GetDRMProperty abgerufen werden.**](/previous-versions/windows/desktop/api/Wmsdkidl/nf-wmsdkidl-iwmdrmreader-getdrmproperty) Dasselbe Dateiattribut kann mit [**DRM \_ DRMHeader \_ IndividualizedVersion abgerufen werden.**](drm-drmheader-individualizedversion.md)
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
 [**Attributliste**](attribute-list.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

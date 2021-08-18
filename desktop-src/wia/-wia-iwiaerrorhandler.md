@@ -1,7 +1,7 @@
 ---
-description: Die iwiaerrorhandler-Schnittstelle stellt Methoden bereit, um Fehler zu behandeln, die auftreten können, wenn eine Anwendung Bilddaten anfordert, ob für die Vorschau oder die endgültige Bits.
+description: Die IWiaErrorHandler-Schnittstelle stellt Methoden zum Behandeln von Fehlern bereit, die auftreten können, wenn eine Anwendung Bilddaten anfordert, unabhängig davon, ob es sich um Vorschau- oder letzte Bits handelt.
 ms.assetid: 33d8ccc5-6856-4a54-b1f0-d015933d63ab
-title: Iwiaerrorhandler-Schnittstelle (WIA. h)
+title: IWiaErrorHandler-Schnittstelle (Wia.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -14,43 +14,43 @@ api_type:
 api_location:
 - Wiaguid.lib
 - Wiaguid.dll
-ms.openlocfilehash: 7b3ea9f5556f1f919336e4abb4085f9e0c32d81d
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 6e97c5a146c23ce1ecdb2ba77cde5d37cd9091fc9d77e288042f02fc118816e7
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104130012"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118965589"
 ---
-# <a name="iwiaerrorhandler-interface"></a>Iwiaerrorhandler-Schnittstelle
+# <a name="iwiaerrorhandler-interface"></a>IWiaErrorHandler-Schnittstelle
 
-Die **iwiaerrorhandler** -Schnittstelle stellt Methoden bereit, um Fehler zu behandeln, die auftreten können, wenn eine Anwendung Bilddaten anfordert, ob für die Vorschau oder die endgültige Bits.
+Die **IWiaErrorHandler-Schnittstelle** stellt Methoden zum Behandeln von Fehlern bereit, die auftreten können, wenn eine Anwendung Bilddaten anfordert, unabhängig davon, ob es sich um Vorschau- oder letzte Bits handelt.
 
 ## <a name="members"></a>Member
 
-Die **iwiaerrorhandler** -Schnittstelle erbt von der [**IUnknown**](/windows/win32/api/unknwn/nn-unknwn-iunknown) -Schnittstelle. **Iwiaerrorhandler** verfügt auch über die folgenden Typen von Membern:
+Die **IWiaErrorHandler-Schnittstelle** erbt von der [**IUnknown-Schnittstelle.**](/windows/win32/api/unknwn/nn-unknwn-iunknown) **IWiaErrorHandler** verfügt auch über diese Typen von Membern:
 
 -   [Methoden](#methods)
 
 ### <a name="methods"></a>Methoden
 
-Die **iwiaerrorhandler** -Schnittstelle verfügt über diese Methoden.
+Die **IWiaErrorHandler-Schnittstelle** verfügt über diese Methoden.
 
 
 
-| Methode                                                                     | BESCHREIBUNG                                                                                             |
+| Methode                                                                     | Beschreibung                                                                                             |
 |:---------------------------------------------------------------------------|:--------------------------------------------------------------------------------------------------------|
-| [**GetStatus Description**](-wia-iwiaerrorhandler-getstatusdescription.md) | Gibt eine Zeichenfolge zurück, die den Statuscode beschreibt.<br/>                                             |
-| [**Report Status**](-wia-iwiaerrorhandler-reportstatus.md)                 | Verarbeitet Status-und Fehlermeldungen während der Bild Datenübertragungen und zeigt Sie dem Benutzer an.<br/> |
+| [**GetStatusDescription**](-wia-iwiaerrorhandler-getstatusdescription.md) | Gibt eine Zeichenfolge zurück, die den Statuscode beschreibt.<br/>                                             |
+| [**ReportStatus**](-wia-iwiaerrorhandler-reportstatus.md)                 | Verarbeitet Status- und Fehlermeldungen während Bilddatenübertragungen und zeigt sie dem Benutzer an.<br/> |
 
 
 
  
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Das Anwendungs Rückruf Objekt kann **iwiaerrorhandler** implementieren.
+Das Anwendungsrückrufobjekt kann **IWiaErrorHandler** implementieren.
 
-Diese Schnittstelle ist nicht für die Behandlung von Fehlern konzipiert, die außerhalb der Bild Datenübertragungen aufgetreten sind, z. b. Fehler beim Aufrufen oder Festlegen von Geräteeigenschaften oder nicht zurückgegebene Rückrufe an einen Treiber.
+Diese Schnittstelle ist nicht für die Behandlung von Fehlern konzipiert, die außerhalb von Bilddatenübertragungen auftreten, z. B. Fehler beim Abrufen oder Festlegen von Geräteeigenschaften oder nicht ausgeführte Rückrufe in einem Treiber.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -58,11 +58,11 @@ Diese Schnittstelle ist nicht für die Behandlung von Fehlern konzipiert, die au
 
 | Anforderung | Wert |
 |-------------------------------------|----------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                         |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/>                                   |
-| Header<br/>                   | <dl> <dt>WIA. h</dt> </dl>       |
-| IDL<br/>                      | <dl> <dt>WIA. idl</dt> </dl>     |
-| Bibliothek<br/>                  | <dl> <dt>Wiaguid. lib</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur Vista-Desktop-Apps\]<br/>                                         |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/>                                   |
+| Header<br/>                   | <dl> <dt>Wia.h</dt> </dl>       |
+| Idl<br/>                      | <dl> <dt>Wia.idl</dt> </dl>     |
+| Bibliothek<br/>                  | <dl> <dt>Wiaguid.lib</dt> </dl> |
 
 
 

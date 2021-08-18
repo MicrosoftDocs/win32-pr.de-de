@@ -4,8 +4,8 @@ description: Eine Grammatik zum Codieren der Anzeigetabelleneigenschaften als Ze
 ms.assetid: 809981da-8572-4a9f-a4c3-06cff95c8bdc
 ms.tgt_platform: multiple
 keywords:
-- Address-Syntax AD-Attributschema
-- ADDRESSSyntax-Attribut AD-Schema
+- Address-Syntax AD-Schema
+- addressSyntax-Attribut AD-Schema
 topic_type:
 - apiref
 api_name:
@@ -35,7 +35,7 @@ Eine Grammatik zum Codieren der Anzeigetabelleneigenschaften als Zeichenfolge.
 | Aktualisieren von Berechtigungen  | \-                                                    |
 | Updatehäufigkeit  | \-                                                    |
 | Attribute-Id      | 1.2.840.113556.1.2.255                                |
-| System-ID-GUID    | 5fd42463-1262-11d0-a060-00aa006c33ed                  |
+| System-Id-Guid    | 5fd42463-1262-11d0-a060-00aa006c33ed                  |
 | Syntax            | [**Object(Replica-Link)**](s-object-replica-link.md) |
 
 
@@ -58,7 +58,7 @@ Eine Grammatik zum Codieren der Anzeigetabelleneigenschaften als Zeichenfolge.
 | Link-ID                | \-                                                       |
 | MAPI-Id                | 0x8018                                                   |
 | System-Only            | Falsch                                                    |
-| Ist einwertig       | Richtig                                                     |
+| Is-Single-Valued       | Richtig                                                     |
 | Ist indiziert             | Falsch                                                    |
 | Im globalen Katalog      | Falsch                                                    |
 | NT-Security-Descriptor | O:BAG:BAD:S:                                             |
@@ -79,7 +79,7 @@ Eine Grammatik zum Codieren der Anzeigetabelleneigenschaften als Zeichenfolge.
 | Link-ID                | \-                                                       |
 | MAPI-Id                | 0x8018                                                   |
 | System-Only            | Falsch                                                    |
-| Ist einwertig       | Richtig                                                     |
+| Is-Single-Valued       | Richtig                                                     |
 | Ist indiziert             | Falsch                                                    |
 | Im globalen Katalog      | Falsch                                                    |
 | NT-Security-Descriptor | O:BAG:BAD:S:                                             |
@@ -100,7 +100,7 @@ Eine Grammatik zum Codieren der Anzeigetabelleneigenschaften als Zeichenfolge.
 | Link-ID                | \-                                                       |
 | MAPI-Id                | 0x8018                                                   |
 | System-Only            | Falsch                                                    |
-| Ist einwertig       | Richtig                                                     |
+| Is-Single-Valued       | Richtig                                                     |
 | Ist indiziert             | Falsch                                                    |
 | Im globalen Katalog      | Falsch                                                    |
 | NT-Security-Descriptor | O:BAG:BAD:S:                                             |

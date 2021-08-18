@@ -1,7 +1,7 @@
 ---
-description: Die iscardlocate-Schnittstelle stellt Dienste für die Suche nach einer Smartcard anhand ihres Namens bereit.
+description: Die ISCardLocate-Schnittstelle stellt Dienste zum Suchen einer Smartcard anhand ihres Namens bereit.
 ms.assetid: add00705-69d5-4562-a74f-94c6864f6bd8
-title: Iscardlocate-Schnittstelle (scardmgr. h)
+title: ISCardLocate-Schnittstelle (Scardmgr.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -14,48 +14,48 @@ api_type:
 - COM
 api_location:
 - Scardssp.dll
-ms.openlocfilehash: e65a8315e796db032dfa6e9cb8898d19437bad05
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 70679a2decc62011df70e68c119365bb8a98f7bdb06af6d7989eac18e7c14fd0
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106368825"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118922929"
 ---
-# <a name="iscardlocate-interface"></a>Iscardlocate-Schnittstelle
+# <a name="iscardlocate-interface"></a>ISCardLocate-Schnittstelle
 
-\[Die **iscardlocate** -Schnittstelle ist für die Verwendung in den Betriebssystemen verfügbar, die im Abschnitt "Anforderungen" angegeben sind. Es ist nicht für die Verwendung in Windows Server 2003 mit Service Pack 1 (SP1) und höher, Windows Vista, Windows Server 2008 und nachfolgenden Versionen des Betriebssystems verfügbar. Die [Smartcard-Module](/previous-versions/windows/desktop/secsmart/smart-card-modules) bieten eine ähnliche Funktionalität.\]
+\[Die **ISCardLocate-Schnittstelle** ist für die Verwendung in den im Abschnitt Anforderungen angegebenen Betriebssystemen verfügbar. Es ist nicht für die Verwendung in Windows Server 2003 mit Service Pack 1 (SP1) und höher, Windows Vista, Windows Server 2008 und nachfolgenden Versionen des Betriebssystems verfügbar. Die [Smartcardmodule](/previous-versions/windows/desktop/secsmart/smart-card-modules) bieten ähnliche Funktionen.\]
 
-Die **iscardlocate** -Schnittstelle stellt Dienste für die Suche nach einer [*Smartcard*](../secgloss/s-gly.md) anhand ihres Namens bereit.
+Die **ISCardLocate-Schnittstelle** stellt Dienste zum Suchen einer [*Smartcard*](../secgloss/s-gly.md) anhand ihres Namens bereit.
 
-Diese Schnittstelle kann die Smartcard- [*Benutzeroberfläche*](../secgloss/u-gly.md) anzeigen, wenn Sie erforderlich ist.
+Diese Schnittstelle kann die [*Smartcard-Benutzeroberfläche*](../secgloss/u-gly.md) anzeigen, falls erforderlich.
 
-Das folgende Szenario zeigt eine typische Verwendung der **iscardlocate** -Schnittstelle. Die **iscardlocate** -Schnittstelle wird verwendet, um eine [*Anwendungsprotokoll-Dateneinheit*](../secgloss/a-gly.md) (APDU) zu erstellen.
+Das folgende Szenario zeigt eine typische Verwendung der **ISCardLocate-Schnittstelle.** Die **ISCardLocate-Schnittstelle** wird verwendet, um eine [*Anwendungsprotokolldateneinheit*](../secgloss/a-gly.md) (Application Protocol Data Unit, APDU) zu erstellen.
 
-**So suchen Sie eine bestimmte Karte mithilfe Ihres Namens**
+**So suchen Sie eine bestimmte Karte mit ihrem Namen**
 
-1.  Erstellen Sie eine **iscardlocate** -Schnittstelle.
-2.  Wenn Sie den Namen "konfigurierter Smartcard" verwenden möchten, müssen Sie " [**konfigurierter**](iscardlocate-configurecardnamesearch.md) Name" konfigurieren.
-3.  Ruft [**findcard**](iscardlocate-findcard.md) auf, um nach der Smartcard zu suchen.
+1.  Erstellen Sie eine **ISCardLocate-Schnittstelle.**
+2.  Rufen [**Sie ConfigureCardNameSearch**](iscardlocate-configurecardnamesearch.md) auf, um nach einem Smartcardnamen zu suchen.
+3.  Rufen [**Sie FindCard**](iscardlocate-findcard.md) auf, um nach der Smartcard zu suchen.
 4.  Interpretieren der Ergebnisse
-5.  Geben Sie die **iscardlocate** -Schnittstelle frei.
+5.  Geben Sie die **ISCardLocate-Schnittstelle** frei.
 
 ## <a name="members"></a>Member
 
-Die **iscardlocate** -Schnittstelle erbt von der [**IDispatch**](/windows/win32/api/oaidl/nn-oaidl-idispatch) -Schnittstelle. **Iscardlocate** verfügt auch über die folgenden Typen von Membern:
+Die **ISCardLocate-Schnittstelle** erbt von der [**IDispatch-Schnittstelle.**](/windows/win32/api/oaidl/nn-oaidl-idispatch) **ISCardLocate** verfügt auch über diese Typen von Membern:
 
 -   [Methoden](#methods)
 
 ### <a name="methods"></a>Methoden
 
-Die **iscardlocate** -Schnittstelle verfügt über diese Methoden.
+Die **ISCardLocate-Schnittstelle** verfügt über diese Methoden.
 
 
 
 | Methode                                                                  | BESCHREIBUNG                                                                |
 |:------------------------------------------------------------------------|:---------------------------------------------------------------------------|
-| **Konfigurieren von "Konfigurations-guidsearch"**                                             | Für die zukünftige Verwendung reserviert.<br/>                                        |
-| [**Konfigurieren von "Konfigurations namesearch"**](iscardlocate-configurecardnamesearch.md) | Gibt den Namen der Karte an, die bei der Suche verwendet werden soll.<br/>               |
-| [**Findcard**](iscardlocate-findcard.md)                               | Sucht nach der Smartcard und öffnet eine gültige Verbindung.<br/> |
+| **ConfigureCardGuidSearch**                                             | Für die zukünftige Verwendung reserviert.<br/>                                        |
+| [**ConfigureCardNameSearch**](iscardlocate-configurecardnamesearch.md) | Gibt den Kartennamen an, der bei der Suche verwendet werden soll.<br/>               |
+| [**FindCard**](iscardlocate-findcard.md)                               | Sucht nach der Smartcard und öffnet eine gültige Verbindung mit ihr.<br/> |
 
 
 
@@ -67,14 +67,14 @@ Die **iscardlocate** -Schnittstelle verfügt über diese Methoden.
 
 | Anforderung | Wert |
 |-------------------------------------|-----------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows XP \[ -Desktop-Apps\]<br/>                                             |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/>                                    |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur XP-Desktop-Apps\]<br/>                                             |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                                    |
 | Ende des Supports (Client)<br/>    | Windows XP<br/>                                                                   |
-| Ende des Supports (Server)<br/>    | Windows Server 2003<br/>                                                          |
-| Header<br/>                   | <dl> <dt>"Scardmgr. h"</dt> </dl>   |
-| Typbibliothek<br/>             | <dl> <dt>Scardmgr. tlb</dt> </dl> |
+| Ende des Supports (Server)<br/>    | Windows Server 2003<br/>                                                          |
+| Header<br/>                   | <dl> <dt>Scardmgr.h</dt> </dl>   |
+| Typbibliothek<br/>             | <dl> <dt>Scardmgr.tlb</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Scardssp.dll</dt> </dl> |
-| IID<br/>                      | IID \_ iscardlocate ist als 1461aacd-6810-11D0-918f -00aa00c18068 definiert.<br/>         |
+| IID<br/>                      | IID \_ ISCardLocate ist als 1461AACD-6810-11D0-918F-00AA00C18068 definiert.<br/>         |
 
 
 

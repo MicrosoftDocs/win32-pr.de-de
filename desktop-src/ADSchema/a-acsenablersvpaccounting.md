@@ -5,7 +5,7 @@ ms.assetid: 9899a695-e414-4e8d-8651-794efa457d67
 ms.tgt_platform: multiple
 keywords:
 - AD-Schema des ACS-Enable-RSVP-Accounting-Attributs
-- AD-Schema des aCSEnableRSVPAccounting-Attributs
+- aCSEnableRSVPAccounting-Attribut-AD-Schema
 topic_type:
 - apiref
 api_name:
@@ -35,7 +35,7 @@ True, wenn die RSVP-Kontoführung aktiviert ist.
 | Aktualisieren von Berechtigungen  | \-                                   |
 | Updatehäufigkeit  | \-                                   |
 | Attribute-Id      | 1.2.840.113556.1.4.899               |
-| System-Id-Guid    | f072230e-aef5-11d1-bdcf-0000f80367c1 |
+| System-ID-GUID    | f072230e-aef5-11d1-bdcf-0000f80367c1 |
 | Syntax            | [**Boolean**](s-boolean.md)         |
 
 
@@ -58,7 +58,7 @@ True, wenn die RSVP-Kontoführung aktiviert ist.
 | Link-ID                | \-                                           |
 | MAPI-Id                | \-                                           |
 | System-Only            | Falsch                                        |
-| Is-Single-Valued       | Richtig                                         |
+| Ist einwertig       | Richtig                                         |
 | Ist indiziert             | Falsch                                        |
 | Im globalen Katalog      | Falsch                                        |
 | NT-Security-Descriptor | O:BAG:BAD:S:                                 |
@@ -79,7 +79,7 @@ True, wenn die RSVP-Kontoführung aktiviert ist.
 | Link-ID                | \-                                           |
 | MAPI-Id                | \-                                           |
 | System-Only            | Falsch                                        |
-| Is-Single-Valued       | Richtig                                         |
+| Ist einwertig       | Richtig                                         |
 | Ist indiziert             | Falsch                                        |
 | Im globalen Katalog      | Falsch                                        |
 | NT-Security-Descriptor | O:BAG:BAD:S:                                 |
@@ -100,7 +100,7 @@ True, wenn die RSVP-Kontoführung aktiviert ist.
 | Link-ID                | \-                                           |
 | MAPI-Id                | \-                                           |
 | System-Only            | Falsch                                        |
-| Is-Single-Valued       | Richtig                                         |
+| Ist einwertig       | Richtig                                         |
 | Ist indiziert             | Falsch                                        |
 | Im globalen Katalog      | Falsch                                        |
 | NT-Security-Descriptor | O:BAG:BAD:S:                                 |

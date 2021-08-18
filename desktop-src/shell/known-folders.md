@@ -9,12 +9,12 @@ api_type: ''
 api_location: ''
 topic_type:
 - kbArticle
-ms.openlocfilehash: 3b5fbdaf0086f88fc4eed42ce47749a99ab07b40
-ms.sourcegitcommit: 8bfe4f468ee5de7bbe096e5db81e427db53d977c
+ms.openlocfilehash: cd44bfe1090f25cb93d8a6fa8162901eb730a53cfb9dfec7ae3f1986fa65e1db
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/26/2021
-ms.locfileid: "114680313"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118720409"
 ---
 # <a name="known-folders"></a>Bekannte Ordner
 
@@ -23,7 +23,7 @@ Windows Vista führt neue Speicherszenarien und einen neuen Benutzerprofilnamesp
 Das System für bekannte Ordner bietet die folgenden Vorteile:
 
 -   Unabhängige Softwarehersteller (Independent Software Vendors, ISVs) können den Satz bekannter Ordner-IDs um ihre eigenen erweitern. Sie können Ordner definieren, ihnen IDs geben und sie beim System registrieren. CSIDL-Werte konnten nicht erweitert werden.
--   Alle bekannten Ordner in einem System können aufzählen. Diese Funktionalität für CSIDL-Werte wurde nicht von der API bereitgestellt. Weitere Informationen finden Sie unter [**IKnownFolderManager::GetFolderIds.**](/windows/desktop/api/shobjidl_core/nf-shobjidl_core-iknownfoldermanager-getfolderids)
+-   Alle bekannten Ordner in einem System können aufzählt werden. Diese Funktionalität für CSIDL-Werte wurde nicht von der API bereitgestellt. Weitere Informationen finden Sie unter [**IKnownFolderManager::GetFolderIds.**](/windows/desktop/api/shobjidl_core/nf-shobjidl_core-iknownfoldermanager-getfolderids)
 -   Ein bekannter Ordner, der von einem ISV hinzugefügt wird, kann benutzerdefinierte Eigenschaften hinzufügen, mit denen der Zweck und die beabsichtigte Verwendung erläutert werden können.
 -   Viele bekannte Ordner können an neue Speicherorte umgeleitet werden, einschließlich Netzwerkadressen. Unter dem CSIDL-System konnte nur der **ordner Eigene Dokumente** umgeleitet werden.
 -   Bekannte Ordner können benutzerdefinierte Handler für die Verwendung während der Erstellung oder Löschung aufweisen.
@@ -31,7 +31,7 @@ Das System für bekannte Ordner bietet die folgenden Vorteile:
 Das CSIDL-System und die APIs, die CSIDL-Werte verwenden, werden aus Kompatibilitätsgründen weiterhin unterstützt. Es wird jedoch nicht empfohlen, sie in einer neuen Entwicklung zu verwenden.
 
 
-In den folgenden Themen werden die Besonderheiten des Systems für bekannte Ordner behandelt.
+In den folgenden Themen werden die Besonderheiten des Systems für bekannte Ordner erörtert.
 
 -   [Arbeiten mit bekannten Ordnern in Anwendungen](working-with-known-folders.md)
 -   [Erweitern bekannter Ordner mit benutzerdefinierten Ordnern](how-to-extend-known-folders-with-custom-folders.md)
@@ -58,7 +58,7 @@ Auf den folgenden Referenzseiten werden die COM-APIs für bekannte Ordner erläu
 
 Ein C++-Beispiel, das die APIs für bekannte Ordner veranschaulicht, ist im Windows Software Development Kit (SDK) enthalten. Nachdem Sie das Windows SDK auf Ihrem Computer installiert haben, finden Sie das Beispiel unter %ProgramFiles% \\ Microsoft SDKs \\ Windows \\ v6.0 \\ Samples \\ WinUI Shell \\ \\ AppPlatform \\ KnownFolders.
 
-## <a name="related-topics"></a>Verwandte Themen
+## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 

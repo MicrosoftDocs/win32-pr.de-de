@@ -3,79 +3,79 @@ title: Verwenden der High-Level Monitor-Konfigurationsfunktionen
 description: Verwenden der High-Level Monitor-Konfigurationsfunktionen
 ms.assetid: 23e5d45d-a924-4119-b21d-b24764b53a94
 keywords:
-- überwachen, Funktionen
-- Überwachen von Konfigurationsfunktionen auf hoher Ebene
-- überwachen und auflisten physischer Monitore
-- überwachen, fortlaufende Einstellungen
-- Überwachen der Konfiguration, allgemeine Konfigurationsfunktionen
-- Monitor Konfiguration, Funktionen
-- Überwachen der Konfiguration, auflisten physischer Monitore
-- Monitor Konfiguration, kontinuierliche Einstellungen
-- Auflisten physischer Monitore
-- Allgemeine Konfigurationsfunktionen
-- fortlaufende Monitoreinstellungen
+- monitor,functions
+- Monitor, high-level configuration functions (Überwachen, Konfigurationsfunktionen auf hoher Ebene)
+- Überwachen,Aufzählen physischer Monitore
+- Überwachen, kontinuierliche Einstellungen
+- Überwachen der Konfiguration, übergeordnete Konfigurationsfunktionen
+- Überwachen der Konfiguration, Funktionen
+- Überwachen der Konfiguration, Aufzählen physischer Monitore
+- Überwachen der Konfiguration, kontinuierliche Einstellungen
+- Aufzählen physischer Monitore
+- Konfigurationsfunktionen auf hoher Ebene
+- Einstellungen für fortlaufende Überwachung
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: ff494388aac91d8aacd92ed4fe345722ea18659f
-ms.sourcegitcommit: ebd3ce6908ff865f1ef66f2fc96769be0aad82e1
+ms.openlocfilehash: 827d19ef0006dc89208061c18ef34c28c8f993c3e0d6ebd0d1c1005daf2cd640
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/19/2020
-ms.locfileid: "106337426"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119066600"
 ---
 # <a name="using-the-high-level-monitor-configuration-functions"></a>Verwenden der High-Level Monitor-Konfigurationsfunktionen
 
-## <a name="enumerating-physical-monitors"></a>Auflisten physischer Monitore
+## <a name="enumerating-physical-monitors"></a>Aufzählen physischer Monitore
 
-Es gibt mehrere Funktionen, die Anzeigegeräte aufzählen, einschließlich " [**enumdisplaymonitors**](/windows/desktop/api/winuser/nf-winuser-enumdisplaymonitors) " und " [**monitorfromwindow**](/windows/desktop/api/winuser/nf-winuser-monitorfromwindow)". Diese Funktionen sind in der Dokumentation zu Windows GDI unter dem Thema [Multiple Display Monitors](/windows/desktop/gdi/multiple-display-monitors)dokumentiert. Diese Funktionen geben **Hmonitor** -Handles zurück. Trotz des Namens kann ein **Hmonitor** -handle jedoch mehr als einem physischen Monitor zugeordnet werden. Um die Einstellungen für einen Monitor zu konfigurieren, muss die Anwendung einen eindeutigen Handle für den physischen Monitor abrufen, indem [**getphysicalmonitorsfromhmonitor**](/windows/desktop/api/PhysicalMonitorEnumerationAPI/nf-physicalmonitorenumerationapi-getphysicalmonitorsfromhmonitor)aufgerufen wird.
+Es gibt mehrere Funktionen, die Anzeigegeräte aufzählen, einschließlich [**EnumDisplayMonitors**](/windows/desktop/api/winuser/nf-winuser-enumdisplaymonitors) und [**MonitorFromWindow.**](/windows/desktop/api/winuser/nf-winuser-monitorfromwindow) Diese Funktionen sind in der Windows GDI-Dokumentation unter dem Thema [Multiple Display Monitors](/windows/desktop/gdi/multiple-display-monitors)dokumentiert. Diese Funktionen geben **HMONITOR-Handles** zurück. Trotz des Namens kann ein **HMONITOR-Handle** jedoch mehreren physischen Monitoren zugeordnet werden. Um die Einstellungen auf einem Monitor zu konfigurieren, muss die Anwendung ein eindeutiges Handle für den physischen Monitor abrufen, indem [**Sie GetPhysicalMonitorsFromHMONITOR**](/windows/desktop/api/PhysicalMonitorEnumerationAPI/nf-physicalmonitorenumerationapi-getphysicalmonitorsfromhmonitor)aufrufen.
 
-Wenn Ihre Anwendung Direct3D verwendet, können Sie ein Monitor Handle von einem Direct3D-Gerät abrufen, indem Sie [**GetPhysicalMonitorsFromIDirect3DDevice9**](/windows/desktop/api/PhysicalMonitorEnumerationAPI/nf-physicalmonitorenumerationapi-getphysicalmonitorsfromidirect3ddevice9)aufrufen.
+Wenn Ihre Anwendung Direct3D verwendet, können Sie ein Monitorhandle von einem Direct3D-Gerät abrufen, indem [**Sie GetPhysicalMonitorsFromIDirect3DDevice9**](/windows/desktop/api/PhysicalMonitorEnumerationAPI/nf-physicalmonitorenumerationapi-getphysicalmonitorsfromidirect3ddevice9)aufrufen.
 
 ## <a name="supported-functions"></a>Unterstützte Funktionen
 
-Ein Monitor unterstützt möglicherweise nicht alle Monitor Konfigurationsfunktionen. Um herauszufinden, welche Funktionen von einem Monitor unterstützt werden, können Sie [**getmonitorfunctions**](/windows/desktop/api/HighLevelMonitorConfigurationAPI/nf-highlevelmonitorconfigurationapi-getmonitorcapabilities)aufrufen.
+Ein Monitor unterstützt möglicherweise nicht alle Monitorkonfigurationsfunktionen. Um herauszufinden, welche Funktionen ein Monitor unterstützt, rufen [**Sie GetMonitorCapabilities auf.**](/windows/desktop/api/HighLevelMonitorConfigurationAPI/nf-highlevelmonitorconfigurationapi-getmonitorcapabilities)
 
-## <a name="continuous-monitor-settings"></a>Fortlaufende Monitor Einstellungen
+## <a name="continuous-monitor-settings"></a>Continuous Monitor-Einstellungen
 
-Eine *kontinuierliche* Monitor Einstellung kann zwischen einem minimalen und einem maximalen Wert liegen. Die meisten der Monitor Konfigurationsfunktionen auf hoher Ebene steuern die kontinuierlichen Monitoreinstellungen. Beispielsweise sind "Helligkeit" und "Kontrast" kontinuierliche Einstellungen.
+Eine *Kontinuierliche* Überwachungseinstellung kann zwischen einem minimalen und einem maximalen Wert liegen. Die meisten der übergeordneten Monitorkonfigurationsfunktionen steuern einstellungen für fortlaufende Monitore. Helligkeit und Kontrast sind beispielsweise kontinuierliche Einstellungen.
 
-Die Einstellungen des kontinuierlichen Monitors haben nicht definierte reale Einheiten. Die Einheiten sind willkürlich und können von einem Hersteller zu einem anderen abweichen. Wenn beispielsweise zwei Monitore denselben Wert für die Helligkeit aufweisen, kann ein Monitor viel heller aussehen als ein anderer. In der Regel werden dem Benutzer in einer Anwendung Schieberegler-Steuerelemente oder auf-ab-Steuerelemente angezeigt. Der Benutzer kann die Einstellungen dann anpassen, um die beste subjektive Qualität zu erhalten.
+Kontinuierliche Überwachungseinstellungen verfügen nicht über definierte reale Einheiten. Die Einheiten sind willkürlich und können von Hersteller zu Hersteller variieren. Wenn zwei Monitore z. B. den gleichen Helligkeitswert aufweisen, sieht ein Monitor möglicherweise viel besser aus als ein anderer. In der Regel stellt eine Anwendung dem Benutzer Schieberegler- oder Nach-unten-Steuerelemente bereit. Der Benutzer kann dann die Einstellungen anpassen, um die beste subjektive Qualität zu bieten.
 
-## <a name="changes-in-monitor-state"></a>Änderungen im Monitor Status
+## <a name="changes-in-monitor-state"></a>Änderungen im Überwachungsstatus
 
-Ein Monitor kann sich aus verschiedenen Gründen wie folgt ändern:
+Ein Monitor kann Zustände aus verschiedenen Gründen ändern, z. B.:
 
--   Der Benutzer ändert die Einstellungen mit den Front-Panel-Steuerelementen des Monitors.
--   Der Benutzer ändert die Bildschirmauflösung, die Aktualisierungsrate oder die Bittiefe des Monitors.
--   Die Anwendung verwendet die Monitor Funktionen auf niedriger Ebene, um eine Einstellung zu ändern, auf die von den Funktionen auf hoher Ebene aus nicht zugegriffen werden kann.
--   Die Anwendung ruft [**restoremonitorfactorycolordefaults**](/windows/desktop/api/HighLevelMonitorConfigurationAPI/nf-highlevelmonitorconfigurationapi-restoremonitorfactorycolordefaults) oder [**restoremonitorfactorydefaults**](/windows/desktop/api/HighLevelMonitorConfigurationAPI/nf-highlevelmonitorconfigurationapi-restoremonitorfactorydefaults)auf.
+-   Der Benutzer ändert die Einstellungen mit den Frontpanel-Steuerelementen des Monitors.
+-   Der Benutzer ändert die Bildschirmauflösung, Aktualisierungsrate oder Bittiefe des Monitors.
+-   Die Anwendung verwendet die Monitorfunktionen auf niedriger Ebene, um eine Einstellung zu ändern, auf die von den funktionen auf hoher Ebene nicht zugegriffen werden kann.
+-   Die Anwendung ruft [**RestoreMonitorFactoryColorDefaults**](/windows/desktop/api/HighLevelMonitorConfigurationAPI/nf-highlevelmonitorconfigurationapi-restoremonitorfactorycolordefaults) oder [**RestoreMonitorFactoryDefaults auf.**](/windows/desktop/api/HighLevelMonitorConfigurationAPI/nf-highlevelmonitorconfigurationapi-restoremonitorfactorydefaults)
 
-Alle diese Ereignisse können die Monitoreinstellungen ändern. Sie können auch den minimalen und maximalen Wert einer Einstellung ändern.
+Alle diese Ereignisse können die Überwachungseinstellungen ändern. Sie können auch den Minimal- und Höchstwert einer Einstellung ändern.
 
-## <a name="dependencies-among-monitor-settings"></a>Abhängigkeiten zwischen den Monitor Einstellungen
+## <a name="dependencies-among-monitor-settings"></a>Abhängigkeiten zwischen Monitor-Einstellungen
 
-Wenn Sie die Farbtemperatur ändern, kann das aktuelle Laufwerk geändert und Einstellungen abgerufen werden. das Gegenteil gilt auch für das Gegenteil. Dies sind die einzigen Abhängigkeiten zwischen den Monitor Konfigurationsfunktionen auf hoher Ebene. Andere Einstellungen sind möglicherweise nur über die Low-Level-Monitor Funktion verfügbar. Möglicherweise sind Abhängigkeiten zwischen diesen Einstellungen und den Einstellungen auf hoher Ebene vorhanden. Diese Abhängigkeiten sind Anbieter spezifisch. Eine Anwendung kann dieses Problem auf verschiedene Weise behandeln:
+Das Ändern der Farbtemperatur kann das aktuelle Laufwerk ändern und einstellungen gewinnen, und das Gegenteil ist ebenfalls der Fall. Dies sind die einzigen Abhängigkeiten zwischen den übergeordneten Monitorkonfigurationsfunktionen. Auf andere Einstellungen kann nur über die Monitorfunktionen auf niedriger Ebene zugegriffen werden. Möglicherweise bestehen Abhängigkeiten zwischen diesen Einstellungen und den einstellungen auf hoher Ebene. Diese Abhängigkeiten sind herstellerspezifisch. Eine Anwendung kann dieses Problem auf verschiedene Weise behandeln:
 
--   Verwenden Sie nur Funktionen auf hoher Ebene.
--   Nachdem Sie eine Funktion auf niedriger Ebene aufgerufen haben, rufen Sie den aktuellen Wert jeder Monitor Einstellung ab. Leider kann dieser Ansatz langsam sein, da das erzielen der einzelnen Einstellungen ungefähr 40 Millisekunden dauert.
--   Verwenden Sie Funktionen auf niedriger Ebene nur mit bestimmten überwachungsmodellen, deren Verhalten Sie verstehen.
+-   Verwenden Sie nur funktionen auf hoher Ebene.
+-   Rufen Sie nach dem Aufrufen einer Funktion auf niedriger Ebene den aktuellen Wert jeder Überwachungseinstellung ab. Leider kann dieser Ansatz langsam sein, da das Abrufen jeder Einstellung etwa 40 Millisekunden dauert.
+-   Verwenden Sie Funktionen auf niedriger Ebene nur mit bestimmten Überwachungsmodellen, deren Verhalten Sie verstehen.
 
-## <a name="disabled-monitor-settings"></a>Deaktivierte Monitor Einstellungen
+## <a name="disabled-monitor-settings"></a>Deaktivierte monitor-Einstellungen
 
-Eine Anwendung kann keine Monitoreinstellungen deaktivieren, indem Sie die übergeordneten Monitor Funktionen aufrufen. Allerdings kann eine Anwendung versehentlich eine Einstellung deaktivieren, wenn Sie die Funktionen auf niedriger Ebene verwendet, um eine Monitor Einstellung zu ändern, die von den Funktionen auf hoher Ebene nicht unterstützt wird. Außerdem kann ein Benutzer eine Einstellung mithilfe des Front-Panel-Steuer Elements deaktivieren. Diese Verhalten sind Anbieter spezifisch.
+Eine Anwendung kann keine Monitoreinstellungen deaktivieren, indem sie die übergeordneten Monitorfunktionen aufruft. Eine Anwendung kann jedoch versehentlich eine Einstellung deaktivieren, wenn sie die Funktionen auf niedriger Ebene verwendet, um eine Überwachungseinstellung zu ändern, die von den funktionen auf hoher Ebene nicht unterstützt wird. Darüber hinaus kann ein Benutzer eine Einstellung mithilfe des Front-Panel-Steuerelements deaktivieren. Diese Verhaltensweisen sind herstellerspezifisch.
 
-Wenn eine Monitor Einstellung deaktiviert wird, schlagen alle Funktionen, die diese Einstellung festlegen oder abrufen, fehl, und legen Sie den letzten Fehlercode auf Fehler \_ deaktivierte \_ Monitor \_ Einstellungen fest. In diesem Fall kann die Anwendung eine der folgenden Aktionen ausführen:
+Wenn eine Überwachungseinstellung deaktiviert wird, schlägt jede Funktion, die diese Einstellung festlegt oder abruft, fehl und legt den Code für den letzten Fehler auf ERROR \_ DISABLED \_ MONITOR SETTING \_ fest. In diesem Fall kann die Anwendung eine der folgenden Schritte ausführen:
 
--   Zeigen Sie eine Fehlermeldung an, und zeigen Sie dem Benutzer an, dass er die Einstellung mithilfe des Front-Panel-Steuer Elements anpassen soll.
--   Der [**restoremonitorfactorydefaults**](/windows/desktop/api/HighLevelMonitorConfigurationAPI/nf-highlevelmonitorconfigurationapi-restoremonitorfactorydefaults) -Funktion wird aufgerufen. Wenn für einen Monitor das Flag "MC \_ Restore Factory-Standardeinstellungen" \_ aktiviert ist \_ \_ \_ \_ , werden von dieser Funktion alle Monitoreinstellungen aktiviert, die von den übergeordneten Monitor Funktionen unterstützt werden. Leider setzt die Funktion auch die Monitoreinstellungen auf ihren standardmäßigen Werkseinstellungen zurück.
+-   Zeigen Sie eine Fehlermeldung an, und schlagen Sie dem Benutzer vor, die Einstellung mithilfe des Frontpanel-Steuerelements anzupassen.
+-   Rufen Sie die [**RestoreMonitorFactoryDefaults-Funktion auf.**](/windows/desktop/api/HighLevelMonitorConfigurationAPI/nf-highlevelmonitorconfigurationapi-restoremonitorfactorydefaults) Wenn ein Monitor über das \_ Funktionsflag MC RESTORE \_ FACTORY \_ DEFAULTS ENABLES MONITOR SETTINGS \_ \_ \_ verfügt, aktiviert diese Funktion alle Monitoreinstellungen, die von den übergeordneten Monitorfunktionen unterstützt werden. Leider setzt die Funktion auch die Monitoreinstellungen auf die Werkseinstellungen zurück.
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[Verwenden der Monitor Konfiguration](using-monitor-configuration.md)
+[Verwenden der Monitorkonfiguration](using-monitor-configuration.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 

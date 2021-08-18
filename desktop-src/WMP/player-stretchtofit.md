@@ -1,9 +1,9 @@
 ---
-title: Player. stretchdefit
-description: Mit der Eigenschaft stretchdefit wird ein Wert angegeben oder abgerufen, der angibt, ob das Video, das von der Windows-Media Player Steuerung angezeigt wird, automatisch an das Videofenster angepasst wird, wenn das Videofenster größer als die Abmessungen des Video Bilds ist.
+title: Player.stretchToFit
+description: Die stretchToFit-Eigenschaft gibt einen Wert an, der angibt, ob das vom Windows Media Player-Steuerelement angezeigte Video automatisch an das Videofenster passt, wenn das Videofenster größer als die Abmessungen des Videobilds ist, oder ruft einen Wert ab.
 ms.assetid: 9ea02959-602e-4bac-a8aa-dce502d1bb54
 keywords:
-- Player. stretchdefit-Fenster Media Player
+- Player.stretchToFit Windows Media Player
 topic_type:
 - apiref
 api_name:
@@ -14,41 +14,41 @@ api_type:
 - DllExport
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: fb7b68042cf2a5bd0e7f718d1e19641edecdf548
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 570d0b9bf7e266af769944b675a85c0ac1518c321d11038ff94cab035dfb316c
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106368291"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118995840"
 ---
-# <a name="playerstretchtofit"></a>Player. stretchdefit
+# <a name="playerstretchtofit"></a>Player.stretchToFit
 
-Mit der Eigenschaft **stretchdefit** wird ein Wert angegeben oder abgerufen, der angibt, ob das Video, das von der Windows-Media Player Steuerung angezeigt wird, automatisch an das Videofenster angepasst wird, wenn das Videofenster größer als die Abmessungen des Video Bilds ist.
+Die **stretchToFit-Eigenschaft** gibt einen Wert an oder ruft einen Wert ab, der angibt, ob das vom Windows Media Player-Steuerelement angezeigte Video automatisch an das Videofenster passt, wenn das Videofenster größer als die Abmessungen des Videobilds ist.
 
 ## <a name="syntax"></a>Syntax
 
-*Player*. **stretchdefit**
+*Player*. **stretchToFit**
 
 ## <a name="possible-values"></a>Mögliche Werte
 
-Diese Eigenschaft ist ein **boolescher** Wert mit Lese-/Schreibzugriff.
+Diese Eigenschaft ist ein boolescher Wert mit **Lese-/Schreibzugriff.**
 
 
 
 | Wert | BESCHREIBUNG                                            |
 |-------|--------------------------------------------------------|
-| true  | Das Video wird so gestreckt, dass es an das Fenster angepasst wird.              |
-| false | Standard. Das Video wird nicht so gestreckt, dass es an das Fenster angepasst wird. |
+| true  | Das Video wird gestreckt, damit es in das Fenster passt.              |
+| false | Standard. Das Video wird nicht so gestreckt, dass es in das Fenster passt. |
 
 
 
  
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Wenn **stretchdefit** auf true festgelegt ist, wird das ursprüngliche Seitenverhältnis des Videos vom Windows Media Player-Steuerelement beibehalten. Wenn das Seitenverhältnis des Videos nicht mit dem Seitenverhältnis des Videofensters identisch ist, können schwarze Masken Bereiche entweder am oberen und unteren Rand des Video Bilds angezeigt werden.
+Wenn **stretchToFit** auf TRUE festgelegt ist, behält das Windows Media Player-Steuerelement das ursprüngliche Seitenverhältnis des Videos bei. Wenn das Seitenverhältnis des Videos nicht mit dem Seitenverhältnis des Videofensters überein passt, können schwarze Maskenbereiche entweder oben und unten oder links und rechts des Videobilds angezeigt werden.
 
-Diese Eigenschaft gilt nur für das Windows Media Player-Steuerelement, wenn Sie in eine Webseite eingebettet ist.
+Diese Eigenschaft gilt für das Windows Media Player Steuerelement nur, wenn es in eine Webseite eingebettet ist.
 
 **Windows Media Player 10 Mobile:** Diese Eigenschaft wird nicht unterstützt.
 
@@ -58,12 +58,12 @@ Diese Eigenschaft gilt nur für das Windows Media Player-Steuerelement, wenn Sie
 
 | Anforderung | Wert |
 |--------------------|------------------------------------------------------------------------------------|
-| Version<br/> | Windows Media Player Version 7,1 oder höher.<br/>                              |
+| Version<br/> | Windows Media Player Version 7.1 oder höher.<br/>                              |
 | DLL<br/>     | <dl> <dt>Wmp.dll</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 

@@ -1,25 +1,25 @@
 ---
-description: Zum Erstellen eines Anwendungs Wörterbuchs muss die WordList-Eigenschaft des erkennzercontext-Objekts festgelegt werden.
+description: Zum Erstellen eines Anwendungswörterbuchs muss die WordList-Eigenschaft des RecognizerContext-Objekts festgelegt werden.
 ms.assetid: 24dbf617-fa16-44f1-ba59-d4d99b8f1375
-title: Verwenden eines Anwendungs Wörterbuchs mit InkEdit
+title: Verwenden eines Anwendungswörterbuchs mit InkEdit
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: a4bc919fc071f249611d42b8decb6ce4fb0b0f88
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 35b090b0822afba691012ef19d51068a18c3cf8d6c9afb9070f43f63cd86ef34
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106345047"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118966639"
 ---
-# <a name="using-an-application-dictionary-with-inkedit"></a>Verwenden eines Anwendungs Wörterbuchs mit InkEdit
+# <a name="using-an-application-dictionary-with-inkedit"></a>Verwenden eines Anwendungswörterbuchs mit InkEdit
 
-Zum Erstellen eines Anwendungs Wörterbuchs muss die [**WordList**](/windows/desktop/api/msinkaut/nf-msinkaut-iinkrecognizercontext-get_wordlist) -Eigenschaft des [**erkennzercontext**](inkrecognizercontext-class.md) -Objekts festgelegt werden. Das **Erkennungs Kontext** Objekt wird vom [InkEdit](inkedit-control-reference.md) -Steuerelement nicht verfügbar gemacht, daher ist es nicht möglich, die **WordList** -Eigenschaft des **Erkennungs Kontext** Objekts des InkEdit-Steuer Elements direkt festzulegen.
+Zum Erstellen eines Anwendungswörterbuchs muss die [**WordList-Eigenschaft**](/windows/desktop/api/msinkaut/nf-msinkaut-iinkrecognizercontext-get_wordlist) des [**RecognizerContext-Objekts festgelegt**](inkrecognizercontext-class.md) werden. Das [InkEdit-Steuerelement](inkedit-control-reference.md) macht das **RecognizerContext-Objekt** nicht verfügbar, sodass es nicht möglich ist, die **WordList-Eigenschaft** des **RecognizerContext-Objekts** des InkEdit-Steuerelements direkt fest zu legen.
 
-Wenn Sie ein Anwendungs Wörterbuch mit einem [InkEdit](inkedit-control-reference.md) -Steuerelement verwenden möchten, müssen Sie die Striche aus dem InkEdit-Steuerelement entfernen, Sie an ein neues [**erkenzercontext**](inkrecognizercontext-class.md) **-Objekt übergeben** , wobei die [**WordList**](/windows/desktop/api/msinkaut/nf-msinkaut-iinkrecognizercontext-get_wordlist) -Eigenschaft auf eine [**WordList**](inkwordlist-class.md) mit dem Anwendungs Wörterbuch festgelegt ist
+Um ein Anwendungswörterbuch mit einem [InkEdit-Steuerelement](inkedit-control-reference.md) zu verwenden, müssen Sie die Striche aus dem InkEdit-Steuerelement entfernen, sie an ein neues [**RecognizerContext-Objekt**](inkrecognizercontext-class.md) übergeben, bei dem die [**WordList-Eigenschaft**](/windows/desktop/api/msinkaut/nf-msinkaut-iinkrecognizercontext-get_wordlist) auf eine [**WordList**](inkwordlist-class.md) festgelegt ist, die das Anwendungswörterbuch enthält, die Ergebnisse aus diesem **RecognizerContext-Objekt** speichern und die Ergebnisse dann an das InkEdit-Steuerelement zurück übergeben.
 
 ## <a name="example"></a>Beispiel
 
-Der folgende C- \# Code zeigt ein Beispiel für diese Technik.
+Der folgende \# C-Code zeigt ein Beispiel für diese Technik.
 
 
 ```C++
@@ -117,10 +117,10 @@ private void Form1_Closed(object sender, System.EventArgs e)
 [InkEdit-Steuerelement](/previous-versions/ms552265(v=vs.100))
 </dt> <dt>
 
-[Microsoft. Ink. erkenzercontext-Klasse](/previous-versions/ms552546(v=vs.100))
+[Microsoft.Ink.RecognizerContext-Klasse](/previous-versions/ms552546(v=vs.100))
 </dt> <dt>
 
-[Microsoft. Ink. WordList-Klasse](/previous-versions/ms827589(v=msdn.10))
+[Microsoft.Ink.Wordlist-Klasse](/previous-versions/ms827589(v=msdn.10))
 </dt> </dl>
 
  

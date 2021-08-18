@@ -1,11 +1,11 @@
 ---
-title: MSMQ-Digests-MiG-Attribut
-description: Enthält im gemischten Modus von MSMQ den vorherigen Wert von msmqdigests.
+title: MSMQ-Digests-Mig-Attribut
+description: Enthält im gemischten MSMQ-Modus den vorherigen Wert von mSMQDigests.
 ms.assetid: a1ce47cb-bfa2-4a49-b5fd-0a88b15b5757
 ms.tgt_platform: multiple
 keywords:
-- AD-Schema für MSMQ-Digests-MiG-Attribut
-- AD-Schema des msmqdigestsmig-Attributs
+- AD-Schema des MSMQ-Digests-Mig-Attributs
+- mSMQDigestsMig-Attribut AD-Schema
 topic_type:
 - apiref
 api_name:
@@ -14,28 +14,28 @@ api_type:
 - Schema
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: d91d34764075a26b244c08fe27c08cd3369242c9
-ms.sourcegitcommit: b77ace27b0432e7cd3863191b11926be032fbe2f
+ms.openlocfilehash: e0f7485cfb8eb9b033e49673d597ac137a60190fb5885d4a7346e0c9a12f3b2a
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "104480050"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118960509"
 ---
-# <a name="msmq-digests-mig-attribute"></a>MSMQ-Digests-MiG-Attribut
+# <a name="msmq-digests-mig-attribute"></a>MSMQ-Digests-Mig-Attribut
 
-Enthält im gemischten Modus von MSMQ den vorherigen Wert von msmqdigests.
+Enthält im gemischten MSMQ-Modus den vorherigen Wert von mSMQDigests.
 
 
 
 | Eingabe | Wert |
 |-------------------|-------------------------------------------------------|
-| CN                | MSMQ-Digests-MiG                                      |
-| LDAP-Display-Name | msmqdigestsmig                                        |
+| CN                | MSMQ-Digests-Mig                                      |
+| Ldap-Anzeigename | mSMQDigestsMig                                        |
 | Size              | \-                                                    |
-| Berechtigung aktualisieren  | \-                                                    |
-| Aktualisierungshäufigkeit  | \-                                                    |
+| Aktualisieren von Berechtigungen  | \-                                                    |
+| Updatehäufigkeit  | \-                                                    |
 | Attribute-Id      | 1.2.840.113556.1.4.966                                |
-| System-ID-GUID    | 0F 71d8e0-da3b-11d1-90a5-00c04f d91ab1                  |
+| System-Id-Guid    | 0f71d8e0-da3b-11d1-90a5-00c04fd91ab1                  |
 | Syntax            | [**Object(Replica-Link)**](s-object-replica-link.md) |
 
 
@@ -43,7 +43,7 @@ Enthält im gemischten Modus von MSMQ den vorherigen Wert von msmqdigests.
 ## <a name="implementations"></a>Implementierungen
 
 -   [**Windows 2000 Server**](#windows-2000-server)
--   [**Windows Server 2003**](#windows-server-2003)
+-   [**Windows Server 2003**](#windows-server-2003)
 -   [**Windows Server 2003 R2**](#windows-server-2003-r2)
 -   [**Windows Server 2008**](#windows-server-2008)
 -   [**Windows Server 2008 R2**](#windows-server-2008-r2)
@@ -58,19 +58,19 @@ Enthält im gemischten Modus von MSMQ den vorherigen Wert von msmqdigests.
 | Link-ID                | \-                                                                                            |
 | MAPI-Id                | \-                                                                                            |
 | System-Only            | False                                                                                         |
-| Ist-einwertig       | False                                                                                         |
+| Is-Single-Valued       | False                                                                                         |
 | Ist indiziert             | False                                                                                         |
-| Im globalen Katalog      | Richtig                                                                                          |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                                                  |
+| Im globalen Katalog      | True                                                                                          |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                                                  |
 | Range-Lower            | \-                                                                                            |
 | Range-Upper            | \-                                                                                            |
 | Search-Flags           | 0x00000000                                                                                    |
 | System-Flags           | 0x00000010                                                                                    |
-| In verwendete Klassen        | [**MSMQ-migriert-Benutzer**](c-msmqmigrateduser.md)<br/> [**Benutzer**](c-user.md)<br/> |
+| In verwendete Klassen        | [**MSMQ-Migrated-User**](c-msmqmigrateduser.md)<br/> [**Benutzer**](c-user.md)<br/> |
 
 
 
-## <a name="windows-server-2003"></a>Windows Server 2003
+## <a name="windows-server-2003"></a>Windows Server 2003
 
 
 
@@ -79,15 +79,15 @@ Enthält im gemischten Modus von MSMQ den vorherigen Wert von msmqdigests.
 | Link-ID                | \-                                                                                            |
 | MAPI-Id                | \-                                                                                            |
 | System-Only            | False                                                                                         |
-| Ist-einwertig       | False                                                                                         |
+| Is-Single-Valued       | False                                                                                         |
 | Ist indiziert             | False                                                                                         |
-| Im globalen Katalog      | Richtig                                                                                          |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                                                  |
+| Im globalen Katalog      | True                                                                                          |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                                                  |
 | Range-Lower            | \-                                                                                            |
 | Range-Upper            | \-                                                                                            |
 | Search-Flags           | 0x00000000                                                                                    |
 | System-Flags           | 0x00000010                                                                                    |
-| In verwendete Klassen        | [**MSMQ-migriert-Benutzer**](c-msmqmigrateduser.md)<br/> [**Benutzer**](c-user.md)<br/> |
+| In verwendete Klassen        | [**MSMQ-Migrated-User**](c-msmqmigrateduser.md)<br/> [**Benutzer**](c-user.md)<br/> |
 
 
 
@@ -100,15 +100,15 @@ Enthält im gemischten Modus von MSMQ den vorherigen Wert von msmqdigests.
 | Link-ID                | \-                                                                                            |
 | MAPI-Id                | \-                                                                                            |
 | System-Only            | False                                                                                         |
-| Ist-einwertig       | False                                                                                         |
+| Is-Single-Valued       | False                                                                                         |
 | Ist indiziert             | False                                                                                         |
-| Im globalen Katalog      | Richtig                                                                                          |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                                                  |
+| Im globalen Katalog      | True                                                                                          |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                                                  |
 | Range-Lower            | \-                                                                                            |
 | Range-Upper            | \-                                                                                            |
 | Search-Flags           | 0x00000000                                                                                    |
 | System-Flags           | 0x00000010                                                                                    |
-| In verwendete Klassen        | [**MSMQ-migriert-Benutzer**](c-msmqmigrateduser.md)<br/> [**Benutzer**](c-user.md)<br/> |
+| In verwendete Klassen        | [**MSMQ-Migrated-User**](c-msmqmigrateduser.md)<br/> [**Benutzer**](c-user.md)<br/> |
 
 
 
@@ -121,15 +121,15 @@ Enthält im gemischten Modus von MSMQ den vorherigen Wert von msmqdigests.
 | Link-ID                | \-                                                                                            |
 | MAPI-Id                | \-                                                                                            |
 | System-Only            | False                                                                                         |
-| Ist-einwertig       | False                                                                                         |
+| Ist einwertig       | False                                                                                         |
 | Ist indiziert             | False                                                                                         |
-| Im globalen Katalog      | Richtig                                                                                          |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                                                  |
+| Im globalen Katalog      | True                                                                                          |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                                                  |
 | Range-Lower            | \-                                                                                            |
 | Range-Upper            | \-                                                                                            |
 | Search-Flags           | 0x00000000                                                                                    |
 | System-Flags           | 0x00000010                                                                                    |
-| In verwendete Klassen        | [**MSMQ-migriert-Benutzer**](c-msmqmigrateduser.md)<br/> [**Benutzer**](c-user.md)<br/> |
+| In verwendete Klassen        | [**MSMQ-Migrated-User**](c-msmqmigrateduser.md)<br/> [**Benutzer**](c-user.md)<br/> |
 
 
 
@@ -142,15 +142,15 @@ Enthält im gemischten Modus von MSMQ den vorherigen Wert von msmqdigests.
 | Link-ID                | \-                                                                                            |
 | MAPI-Id                | \-                                                                                            |
 | System-Only            | False                                                                                         |
-| Ist-einwertig       | False                                                                                         |
+| Ist einwertig       | False                                                                                         |
 | Ist indiziert             | False                                                                                         |
-| Im globalen Katalog      | Richtig                                                                                          |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                                                  |
+| Im globalen Katalog      | True                                                                                          |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                                                  |
 | Range-Lower            | \-                                                                                            |
 | Range-Upper            | \-                                                                                            |
 | Search-Flags           | 0x00000000                                                                                    |
 | System-Flags           | 0x00000010                                                                                    |
-| In verwendete Klassen        | [**MSMQ-migriert-Benutzer**](c-msmqmigrateduser.md)<br/> [**Benutzer**](c-user.md)<br/> |
+| In verwendete Klassen        | [**MSMQ-Migrated-User**](c-msmqmigrateduser.md)<br/> [**Benutzer**](c-user.md)<br/> |
 
 
 
@@ -163,15 +163,15 @@ Enthält im gemischten Modus von MSMQ den vorherigen Wert von msmqdigests.
 | Link-ID                | \-                                                                                            |
 | MAPI-Id                | \-                                                                                            |
 | System-Only            | False                                                                                         |
-| Ist-einwertig       | False                                                                                         |
+| Ist einwertig       | False                                                                                         |
 | Ist indiziert             | False                                                                                         |
-| Im globalen Katalog      | Richtig                                                                                          |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                                                  |
+| Im globalen Katalog      | True                                                                                          |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                                                  |
 | Range-Lower            | \-                                                                                            |
 | Range-Upper            | \-                                                                                            |
 | Search-Flags           | 0x00000000                                                                                    |
 | System-Flags           | 0x00000010                                                                                    |
-| In verwendete Klassen        | [**MSMQ-migriert-Benutzer**](c-msmqmigrateduser.md)<br/> [**Benutzer**](c-user.md)<br/> |
+| In verwendete Klassen        | [**MSMQ-Migrated-User**](c-msmqmigrateduser.md)<br/> [**Benutzer**](c-user.md)<br/> |
 
 
 

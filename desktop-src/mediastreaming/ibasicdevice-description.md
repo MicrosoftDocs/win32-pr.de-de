@@ -1,11 +1,11 @@
 ---
-title: Ibasicdevice-Beschreibungs Methode
+title: IBasicDevice Description-Methode
 description: Ruft eine Beschreibung des Geräts ab.
 ms.assetid: 9973AC46-E6BA-4931-BDEB-E64B147AB291
 keywords:
-- Beschreibungs Methode für Medien Streaming-API
-- Description-Methode Medien Streaming-API, ibasicdevice-Schnittstelle
-- Ibasicdevice-Schnittstelle Medien Streaming-API, Description-Methode
+- Beschreibungsmethode Media Streaming-API
+- 'Beschreibungsmethode: Media Streaming-API, IBasicDevice-Schnittstelle'
+- IBasicDevice-Schnittstelle Media Streaming-API, Beschreibungsmethode
 topic_type:
 - apiref
 api_name:
@@ -15,14 +15,14 @@ api_type:
 ms.topic: reference
 ms.date: 05/31/2018
 api_location: ''
-ms.openlocfilehash: f094246d1424c458e624d4a49358b63a84b9b7d2
-ms.sourcegitcommit: 57758ecb246c84d65e6e0e4bd5570d9176fa39cd
+ms.openlocfilehash: cfaf3ba8ca9c74d094aa8cdc15f4c190d6e5141fb11ff255b6e7682b667846d3
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "104037862"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118972349"
 ---
-# <a name="ibasicdevicedescription-method"></a>Ibasicdevice::D escription-Methode
+# <a name="ibasicdevicedescription-method"></a>IBasicDevice::D escription-Methode
 
 Ruft eine Beschreibung des Geräts ab.
 
@@ -41,7 +41,7 @@ HRESULT Description(
 
 <dl> <dt>
 
-*Wert* \[ vorgenommen\]
+*value* \[ out\]
 </dt> <dd>
 
 Empfängt einen Zeiger auf die Beschreibung des Geräts.
@@ -50,7 +50,7 @@ Empfängt einen Zeiger auf die Beschreibung des Geräts.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Die-Methode gibt ein **HRESULT** zurück. Mögliches Werte (aber nicht die Einzigen) sind die in der folgenden Tabelle.
+Die Methode gibt ein **HRESULT** zurück. Mögliches Werte (aber nicht die Einzigen) sind die in der folgenden Tabelle.
 
 
 
@@ -62,11 +62,11 @@ Die-Methode gibt ein **HRESULT** zurück. Mögliches Werte (aber nicht die Einzi
 
  
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Ibasicdevice**](ibasicdevice.md)
+[**IBasicDevice**](ibasicdevice.md)
 </dt> </dl>
 
  

@@ -1,7 +1,7 @@
 ---
-description: Stellt den Status des frei Hand Analyse Vorgangs dar, indem beschrieben wird, ob die Analyse erfolgreich abgeschlossen wurde und ob Warnungen aufgetreten sind.
+description: Stellt den Status des Ink-Analysevorgangs dar, indem beschrieben wird, ob die Analyse erfolgreich abgeschlossen wurde und ob Warnungen aufgetreten sind.
 ms.assetid: 57910a1d-3472-4689-ba0d-a220145e77c4
-title: Ianalysisstatus-Schnittstelle (iacom. h)
+title: IAnalysisStatus-Schnittstelle (IACom.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,34 +13,34 @@ api_type:
 - COM
 api_location:
 - IACom.dll
-ms.openlocfilehash: e14f7fabea8090f5471513eca524f6fcdb939b2c
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 006b042981392ecdd52508181c7a5cde270d2e0195fe9c8b971c142361ab6081
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104129520"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118719997"
 ---
-# <a name="ianalysisstatus-interface"></a>Ianalysisstatus-Schnittstelle
+# <a name="ianalysisstatus-interface"></a>IAnalysisStatus-Schnittstelle
 
-Stellt den Status des frei Hand Analyse Vorgangs dar, indem beschrieben wird, ob die Analyse erfolgreich abgeschlossen wurde und ob Warnungen aufgetreten sind.
+Stellt den Status des Ink-Analysevorgangs dar, indem beschrieben wird, ob die Analyse erfolgreich abgeschlossen wurde und ob Warnungen aufgetreten sind.
 
 ## <a name="members"></a>Member
 
-Die **ianalysisstatus** -Schnittstelle erbt von der [**IUnknown**](/windows/desktop/api/unknwn/nn-unknwn-iunknown) -Schnittstelle. **Ianalysisstatus** verfügt auch über die folgenden Typen von Membern:
+Die **IAnalysisStatus-Schnittstelle** erbt von der [**IUnknown-Schnittstelle.**](/windows/desktop/api/unknwn/nn-unknwn-iunknown) **IAnalysisStatus** verfügt auch über diese Typen von Membern:
 
 -   [Methoden](#methods)
 
 ### <a name="methods"></a>Methoden
 
-Die **ianalysisstatus** -Schnittstelle verfügt über diese Methoden.
+Die **IAnalysisStatus-Schnittstelle** verfügt über diese Methoden.
 
 
 
-| Methode                                                                     | BESCHREIBUNG                                                                                                                                                                                    |
+| Methode                                                                     | Beschreibung                                                                                                                                                                                    |
 |:---------------------------------------------------------------------------|:-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| [**Getappliedchangesregion**](ianalysisstatus-getappliedchangesregion.md) | Ruft den Bereich des Dokuments ab, der den Änderungen entspricht, die in der Kontext Knoten Struktur des [**iinkanalyzer**](iinkanalyzer.md) -Objekts als Ergebnis einer frei Hand Analyse vorgenommen wurden.<br/> |
-| [**GetWarnings**](ianalysisstatus-getwarnings.md)                         | Ruft eine [**ianalysiswarning**](ianalysiswarnings.md) -Auflistung ab, die alle Fehler und Warnungen beschreibt, die vom Analyse Vorgang generiert werden.<br/>                                  |
-| [**IsSuccessful**](ianalysisstatus-issuccessful.md)                       | Ruft eine boolesche Zusammenfassung der Ergebnisse des Analyse Vorgangs ab.<br/>                                                                                                               |
+| [**GetAppliedChangesRegion**](ianalysisstatus-getappliedchangesregion.md) | Ruft den Bereich des Dokuments ab, der Änderungen entspricht, die in der Kontextknotenstruktur des [**IInkAnalyzer-Objekts**](iinkanalyzer.md) als Ergebnis der Freihandanalyse vorgenommen wurden.<br/> |
+| [**GetWarnings**](ianalysisstatus-getwarnings.md)                         | Ruft eine [**IAnalysisWarnings-Auflistung**](ianalysiswarnings.md) ab, die alle vom Analysevorgang generierten Fehler und Warnungen beschreibt.<br/>                                  |
+| [**IsSuccessful**](ianalysisstatus-issuccessful.md)                       | Ruft eine boolesche Zusammenfassung der Ergebnisse des Analysevorgangs ab.<br/>                                                                                                               |
 
 
 
@@ -48,7 +48,7 @@ Die **ianalysisstatus** -Schnittstelle verfügt über diese Methoden.
 
 ## <a name="examples"></a>Beispiele
 
-Das folgende Beispiel zeigt eine Gliederung eines Ereignis Handlers für das [**\_ ianalysil Vents:: results**](-ianalysisevents-results.md) -Ereignis. Der Handler überprüft [**ianalysisstatus:: iserfolg**](ianalysisstatus-issuccessful.md). Wenn der Analyse Vorgang Warnungen generiert, durchläuft der Handler die Auflistung von [**ianalysiswarning**](ianalysiswarning.md) -Objekten.
+Das folgende Beispiel zeigt eine Gliederung eines Ereignishandlers für das [**\_ IAnalysisEvents::Results-Ereignis.**](-ianalysisevents-results.md) Der Handler überprüft [**IAnalysisStatus::IsSuccessful**](ianalysisstatus-issuccessful.md). Wenn der Analysevorgang Warnungen generiert, durchläuft der Handler die Auflistung der [**IAnalysisWarning-Objekte.**](ianalysiswarning.md)
 
 
 ```C++
@@ -135,24 +135,24 @@ STDMETHODIMP CMyClass::Results(
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows XP Tablet PC Edition \[ Desktop-Apps\]<br/>                                                 |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur Desktop-Apps der XP Tablet PC Edition \[\]<br/>                                                 |
 | Unterstützte Mindestversion (Server)<br/> | Nicht unterstützt<br/>                                                                                     |
-| Header<br/>                   | <dl> <dt>Iacom. h (erfordert auch iacom \_ i. c)</dt> </dl> |
+| Header<br/>                   | <dl> <dt>IACom.h (erfordert auch IACom \_ i.c)</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>IACom.dll</dt> </dl>                          |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Iinkanalyzer:: analysierungsmethode**](iinkanalyzer-analyze.md)
+[**IInkAnalyzer::Analyze-Methode**](iinkanalyzer-analyze.md)
 </dt> <dt>
 
-[**Iinkanalyzer:: BackgroundAnalyze-Methode**](iinkanalyzer-backgroundanalyze.md)
+[**IInkAnalyzer::BackgroundAnalyze-Methode**](iinkanalyzer-backgroundanalyze.md)
 </dt> <dt>
 
-[Ink-Analyse Referenz](ink-analysis-reference.md)
+[Referenz zur Ink-Analyse](ink-analysis-reference.md)
 </dt> </dl>
 
  

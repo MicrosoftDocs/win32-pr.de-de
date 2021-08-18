@@ -1,27 +1,27 @@
 ---
-description: Der Schannel-SSP implementiert Versionen der PROTOKOLLE TLS, DTLS und SSL. Verschiedene Windows Versionen unterstützen verschiedene Protokollversionen.
+description: Der Schannel-SSP implementiert Versionen der Protokolle TLS, DTLS und SSL. Verschiedene Windows unterstützen verschiedene Protokollversionen.
 ms.assetid: FF716A4E-ABF2-4773-9588-9D200945A866
 title: Protokolle in TLS/SSL (Schannel SSP)
 ms.topic: article
 ms.date: 01/20/2021
 ms.custom: contperf-fy21q3
-ms.openlocfilehash: 0aa3c3900a422a1460a2163043fb736e590ca2fe
-ms.sourcegitcommit: 5a78723ad484955ac91a23cf282cf9c176c1eab6
+ms.openlocfilehash: a03264a40ab6d632165fe4cf75aa0dfd7ee85ac0474ef391c36a2b1980010422
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/22/2021
-ms.locfileid: "114436265"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118920658"
 ---
 # <a name="protocols-in-tlsssl-schannel-ssp"></a>Protokolle in TLS/SSL (Schannel SSP)
 
-Der Schannel-SSP implementiert Versionen der PROTOKOLLE TLS, DTLS und SSL. Verschiedene Windows Versionen unterstützen verschiedene Protokollversionen.
+Der Schannel-SSP implementiert Versionen der Protokolle TLS, DTLS und SSL. Verschiedene Windows unterstützen verschiedene Protokollversionen.
 
 ## <a name="tls-protocol-version-support"></a>Unterstützung der TLS-Protokollversion
 
 In der folgenden Tabelle wird die Unterstützung von TLS-Protokollversionen durch den Microsoft Schannel-Anbieter angezeigt.
 
 > [!TIP]
-> Möglicherweise müssen Sie horizontal scrollen, um alle Spalten in der Tabelle anzuzeigen.
+> Möglicherweise müssen Sie horizontal scrollen, um alle Spalten in der Tabelle anzeigen zu können.
 
 | Windows-Betriebssystem | TLS 1.0-Client | TLS 1.0-Server | TLS 1.1-Client | TLS 1.1-Server | TLS 1.2-Client | TLS 1.2-Server | TLS 1.3-Client | TLS 1.3-Server |
 |-----|-----|-----|-----|-----|-----|-----|-----|-----|
@@ -72,7 +72,7 @@ Im Folgenden wird die Unterstützung von DTLS-Protokollversionen durch den Micro
 
 ## <a name="pre-tls-standard-protocols-support"></a>Unterstützung von Vor-TLS-Standardprotokollen
 
-Im Folgenden sind die Unterstützung von Vor-TLS-Standardprotokollen durch den Microsoft Schannel-Anbieter aufgeführt:
+Im Folgenden wird die Unterstützung von Vor-TLS-Standardprotokollen durch den Microsoft Schannel-Anbieter aufgeführt:
 
 *Tipp: Möglicherweise müssen Sie horizontal scrollen, um alle Spalten in dieser Tabelle anzuzeigen:*
 
@@ -100,4 +100,4 @@ Im Folgenden sind die Unterstützung von Vor-TLS-Standardprotokollen durch den M
 > Ab Windows 10 Version 1607 und Windows Server 2016 wurde SSL 2.0 entfernt und wird nicht mehr unterstützt.
 
 > [!TIP]  
-> Alle Versionen von Windows akzeptieren die Meldung "ClientHello" im einheitlichen Format, auch wenn SSL-Version 2 deaktiviert oder nicht mehr unterstützt wird.
+> Alle Versionen von Windows akzeptieren eine ClientHello-Nachricht im einheitlichen Format, auch wenn SSL Version 2 deaktiviert ist oder nicht mehr unterstützt wird.

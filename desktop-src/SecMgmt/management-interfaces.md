@@ -1,36 +1,36 @@
 ---
-description: Listet die von der Anlage-Engine bereitgestellten Schnittstellen auf.
+description: Listet die Schnittstellen auf, die von der Anlagen-Engine bereitgestellt werden.
 ms.assetid: 451587bd-a7ab-446b-b647-be98de251915
-title: Sicherheits Verwaltungs Schnittstellen
+title: Sicherheitsverwaltungsschnittstellen
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 9b3a205757a3bf324a5308a5f6fbc3d63374b4af
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 6adc6cbaa24be46508e2a4f72181c96d4ccb65e589fdad95808c65a57262b73b
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106373243"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118894327"
 ---
-# <a name="security-management-interfaces"></a>Sicherheits Verwaltungs Schnittstellen
+# <a name="security-management-interfaces"></a>Sicherheitsverwaltungsschnittstellen
 
-Dieser Abschnitt enthält Referenzseiten für die folgenden Gruppen von Schnittstellen:
+Dieser Abschnitt enthält Referenzseiten für die folgenden Schnittstellengruppen:
 
--   [Schnittstellen des Anlagen Moduls](#attachment-engine-interfaces)
+-   [Schnittstellen der Anlagen-Engine](#attachment-engine-interfaces)
 
-## <a name="attachment-engine-interfaces"></a>Schnittstellen des Anlagen Moduls
+## <a name="attachment-engine-interfaces"></a>Schnittstellen der Anlagen-Engine
 
 
 
 | Schnittstelle                                                            | BESCHREIBUNG                                                                                                                                                                                                                                                                                                                |
 |----------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| [**Iscesvstreamtachmentdata**](/windows/desktop/api/Scesvc/nn-scesvc-iscesvcattachmentdata)               | Ruft Konfigurations-und Analysedaten zu einem angegebenen Sicherheitsdienst aus den Snap-Ins für die Sicherheitskonfiguration ab. Die Sicherheitskonfigurations-Snap-Ins machen diese Schnittstelle verfügbar, welche Anlagen-Snap-in-Erweiterungen zum Abfragen von Konfigurations-oder Analyse Informationen aufruft.                                                 |
-| [**Iscesvplattachmentpersistinfo**](/windows/desktop/api/Scesvc/nn-scesvc-iscesvcattachmentpersistinfo) | Ruft geänderte Konfigurations-oder Analyse Informationen von einem Anlage-Snap-in ab. Mithilfe der Sicherheitskonfigurations-Snap-Ins wird diese Schnittstelle aufgerufen, um geänderte Informationen aus der Erweiterungs-Snap-in-Erweiterung abzurufen. Das Sicherheitskonfigurations-Snap-in speichert diese Daten dann entsprechend in der Sicherheitsdatenbank. |
+| [**ISceSvcAttachmentData**](/windows/desktop/api/Scesvc/nn-scesvc-iscesvcattachmentdata)               | Ruft Konfigurations- und Analysedaten zu einem angegebenen Sicherheitsdienst aus den Sicherheitskonfigurations-Snap-Ins ab. Die Sicherheitskonfigurations-Snap-Ins machen diese Schnittstelle verfügbar, die die Erweiterungen des Anlagen-Snap-Ins aufrufen, um Konfigurations- oder Analyseinformationen abzufragen.                                                 |
+| [**ISceSvcAttachmentPersistInfo**](/windows/desktop/api/Scesvc/nn-scesvc-iscesvcattachmentpersistinfo) | Ruft geänderte Konfigurations- oder Analyseinformationen aus einem Anlagen-Snap-In ab. Die Sicherheitskonfigurations-Snap-Ins rufen diese Schnittstelle auf, um alle geänderten Informationen aus der Erweiterung für das Anfüge-Snap-In abzurufen. Das Sicherheitskonfigurations-Snap-In speichert diese Daten dann entsprechend in der Sicherheitsdatenbank. |
 
 
 
  
 
-Weitere Informationen zu den COM-Schnittstellen, die von Snap-in-Erweiterungen implementiert werden müssen, finden Sie in der Dokumentation zu [Microsoft Management Console](/previous-versions/windows/desktop/mmc/microsoft-management-console-start-page) .
+Weitere Informationen zu den COM-Schnittstellen, die von Snap-In-Erweiterungen implementiert werden müssen, finden Sie in der [Microsoft Management Console-Dokumentation.](/previous-versions/windows/desktop/mmc/microsoft-management-console-start-page)
 
  
 

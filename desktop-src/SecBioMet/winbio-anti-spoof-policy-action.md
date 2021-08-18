@@ -1,10 +1,10 @@
 ---
-title: WINBIO_ANTI_SPOOF_POLICY_ACTION-Enumeration (winbio \_ types. h)
-description: Gibt die Typen von Aktionen an, die Sie für die Antispoofing-Richtlinie eines Benutzers durchführen.
+title: WINBIO_ANTI_SPOOF_POLICY_ACTION-Enumeration (Winbio \_ types.h)
+description: Gibt die Arten von Aktionen an, die Sie für die Antispoofingrichtlinie eines Benutzers ausführen.
 ms.assetid: 846C0725-1796-49E4-883C-44AC7D618317
 keywords:
-- WINBIO_ANTI_SPOOF_POLICY_ACTION Enumeration Windows-Biometrieframework-API
-- PWINBIO_ANTI_SPOOF_POLICY enumerationszeiger Windows-Biometrieframework-API
+- WINBIO_ANTI_SPOOF_POLICY_ACTION enumeration Windows Biometric Framework-API
+- PWINBIO_ANTI_SPOOF_POLICY Enumerationszeiger Windows Biometrieframework-API
 topic_type:
 - apiref
 api_name:
@@ -15,16 +15,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 5905624bad252475cdde12c003f31a734e64dd2e
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: f65fec198a0784bf076eb90224318bd36a88ba3ed96258ffd2014a27da5c8f8d
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "103956691"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118911269"
 ---
-# <a name="winbio_anti_spoof_policy_action-enumeration"></a>\_ \_ \_ Aktions Enumeration für winbio Anti Spoof-Richtlinie \_
+# <a name="winbio_anti_spoof_policy_action-enumeration"></a>WINBIO \_ ANTI \_ SPOOF POLICY \_ \_ ACTION-Enumeration
 
-Gibt die Typen von Aktionen an, die Sie für die Antispoofing-Richtlinie eines Benutzers durchführen.
+Gibt die Arten von Aktionen an, die Sie für die Antispoofingrichtlinie eines Benutzers ausführen.
 
 ## <a name="syntax"></a>Syntax
 
@@ -43,24 +43,24 @@ typedef enum _WINBIO_ANTI_SPOOF_POLICY_ACTION {
 
 <dl> <dt>
 
-<span id="WINBIO_ANTI_SPOOF_DISABLE"></span><span id="winbio_anti_spoof_disable"></span>**winbio \_ - \_ antispoof \_ Deaktivieren**
+<span id="WINBIO_ANTI_SPOOF_DISABLE"></span><span id="winbio_anti_spoof_disable"></span>**WINBIO \_ ANTI \_ SPOOF \_ DISABLE**
 </dt> <dd>
 
-Deaktiviert die Erkennung des Spoofing für einen biometrischen Faktor.
+Deaktiviert die Erkennung von Spoofing für einen biometrischen Faktor.
 
 </dd> <dt>
 
-<span id="WINBIO_ANTI_SPOOF_ENABLE"></span><span id="winbio_anti_spoof_enable"></span>**winbio \_ - \_ antispoof \_ aktivieren**
+<span id="WINBIO_ANTI_SPOOF_ENABLE"></span><span id="winbio_anti_spoof_enable"></span>**WINBIO \_ ANTI \_ SPOOF \_ ENABLE**
 </dt> <dd>
 
-Schaltet die Erkennung von Spoofing für einen biometrischen Faktor ein.
+Aktiviert die Erkennung von Spoofing für einen biometrischen Faktor.
 
 </dd> <dt>
 
-<span id="WINBIO_ANTI_SPOOF_REMOVE"></span><span id="winbio_anti_spoof_remove"></span>**winbio \_ Anti \_ Spoof \_ Entfernen**
+<span id="WINBIO_ANTI_SPOOF_REMOVE"></span><span id="winbio_anti_spoof_remove"></span>**WINBIO \_ ANTI \_ SPOOF \_ REMOVE**
 </dt> <dd>
 
-Entfernt die gesamte Antispoofing-Richtlinie für den biometrischen Faktor aus dem Konto.
+Entfernt die gesamte Antispoofingrichtlinie für den biometrischen Faktor aus dem Konto.
 
 </dd> </dl>
 
@@ -70,20 +70,20 @@ Entfernt die gesamte Antispoofing-Richtlinie für den biometrischen Faktor aus d
 
 | Anforderung | Wert |
 |-------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows 10 \[ -Desktop-Apps\]<br/>                                                                                                                              |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2016 \[ -Desktop-Apps\]<br/>                                                                                                                     |
-| Header<br/>                   | <dl> <dt>Winbio \_ types. h (Include winbio. h für Client Anwendungen oder winbio \_ Adapters. h für Adapter)</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | \[Windows 10 Nur Desktop-Apps\]<br/>                                                                                                                              |
+| Unterstützte Mindestversion (Server)<br/> | \[Windows Server 2016 Nur Desktop-Apps\]<br/>                                                                                                                     |
+| Header<br/>                   | <dl> <dt>Winbio \_ types.h (winbio.h für Clientanwendungen oder Winbio \_ adapters.h für Adapter einschließen)</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Aktion für winbio- \_ \_ antispoof- \_ Richtlinie \_**](winbio-anti-spoof-policy-action.md)
+[**WINBIO \_ ANTI \_ SPOOF \_ POLICY \_ ACTION**](winbio-anti-spoof-policy-action.md)
 </dt> <dt>
 
-[**Quelle der winbio- \_ Richtlinie \_**](winbio-policy-source.md)
+[**\_WINBIO-RICHTLINIENQUELLE \_**](winbio-policy-source.md)
 </dt> </dl>
 
  

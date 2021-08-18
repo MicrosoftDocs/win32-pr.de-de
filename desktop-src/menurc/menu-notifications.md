@@ -4,12 +4,12 @@ description: Menübenachrichtigungen
 ms.assetid: 8ff5671e-a666-483c-9ac1-f8be6eb58ffa
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: f593e3007dff82241dc9e917a6cfa140cc443679
-ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
+ms.openlocfilehash: e7370da93f430c62618b5d459e40bfa56cb7a9ff9f960f95eb6ce614cc7273e0
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2021
-ms.locfileid: "108112528"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118734256"
 ---
 # <a name="menu-notifications"></a>Menübenachrichtigungen
 
@@ -23,7 +23,7 @@ ms.locfileid: "108112528"
 -   [**\_WM-MENÜBEFEHL**](wm-menucommand.md)
 -   [**WM \_ MENUDRAG**](wm-menudrag.md)
 -   [**\_WM-MENÜGETOBJECT**](wm-menugetobject.md)
--   [**\_WM-MENÜRBUTTONUP**](wm-menurbuttonup.md)
+-   [**WM \_ MENURBUTTONUP**](wm-menurbuttonup.md)
 -   [**WM \_ NEXTMENU**](wm-nextmenu.md)
 -   [**WM \_ UNINITMENUPOPUP**](wm-uninitmenupopup.md)
 
@@ -58,7 +58,7 @@ BOOL AboutDlg (
     return bRet;
 }
 ```
-Beispiel aus [klassischen Windows-Beispielen](https://github.com/microsoft/Windows-classic-samples) auf GitHub.
+Beispiel aus [Windows klassischen Beispielen](https://github.com/microsoft/Windows-classic-samples) auf GitHub.
 
  
 

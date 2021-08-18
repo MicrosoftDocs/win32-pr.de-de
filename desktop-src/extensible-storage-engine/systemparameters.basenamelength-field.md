@@ -1,6 +1,6 @@
 ---
-description: Weitere Informationen finden Sie im Feld "System Parameters. basenamelength".
-title: SystemParameters. basenamelength-Feld
+description: Erfahren Sie mehr über das Feld SystemParameters.BaseNameLength.
+title: SystemParameters.BaseNameLength-Feld
 TOCTitle: BaseNameLength field
 ms:assetid: F:Microsoft.Isam.Esent.Interop.SystemParameters.BaseNameLength
 ms:mtpsurl: https://msdn.microsoft.com/library/microsoft.isam.esent.interop.systemparameters.basenamelength(v=EXCHG.10)
@@ -24,19 +24,19 @@ api_type:
 api_location:
 - Microsoft.Isam.Esent.Interop.dll
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: 688e6efcf51fc874e89140c2543fcca9d26c194c
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 752aef95613b1d91536034b7e6d7bdcc5082623b436cc3b448ce8403cb586a3e
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "104348758"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117890648"
 ---
-# <a name="systemparametersbasenamelength-field"></a>SystemParameters. basenamelength-Feld
+# <a name="systemparametersbasenamelength-field"></a>SystemParameters.BaseNameLength-Feld
 
-Die Länge des Präfixes, das verwendet wird, um die von der Datenbank-Engine verwendeten Dateien zu benennen.
+Die Länge des Präfixes, das zum Benennen von Dateien verwendet wird, die von der Datenbank-Engine verwendet werden.
 
-**Namespace:**  [Microsoft. ISAM. ESENT. Interop](./microsoft.isam.esent.interop-namespace.md)  
-**Assembly:**  Microsoft. ISAM. ESENT. Interop (in Microsoft.Isam.Esent.Interop.dll)
+**Namespace:**  [Microsoft.Isam.Esent.Interop](./microsoft.isam.esent.interop-namespace.md)  
+**Assembly:**  Microsoft.Isam.Esent.Interop (in Microsoft.Isam.Esent.Interop.dll)
 
 ## <a name="syntax"></a>Syntax
 
@@ -53,12 +53,12 @@ value = SystemParameters.BaseNameLength
 public const int BaseNameLength
 ```
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
-#### <a name="reference"></a>Referenz
+#### <a name="reference"></a>Verweis
 
 [SystemParameters-Klasse](./systemparameters-class.md)
 
 [SystemParameters-Member](./systemparameters-members.md)
 
-[Microsoft. ISAM. ESENT. Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)
+[Microsoft.Isam.Esent.Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)

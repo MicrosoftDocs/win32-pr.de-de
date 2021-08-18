@@ -1,9 +1,9 @@
 ---
-title: gezündet
-description: Gibt einen Beleuchtungs Koeffizient-Vektor zurück.
+title: Beleuchtet
+description: Gibt einen Beleuchtungskoeffizientenvektor zurück.
 ms.assetid: 6ae116df-41b7-42f1-96cb-da480a7c1bab
 keywords:
-- Lit HLSL
+- lit HLSL
 topic_type:
 - apiref
 api_name:
@@ -13,33 +13,33 @@ api_type:
 ms.topic: reference
 ms.date: 05/31/2018
 api_location: ''
-ms.openlocfilehash: 6dbf6f1e53218355ba1ee9ccf58dac6176007218
-ms.sourcegitcommit: 592c9bbd22ba69802dc353bcb5eb30699f9e9403
+ms.openlocfilehash: 4d3f941fe3aad52f352f5a36d3642141b31e08ef00c25dd8687c8fc7a8ed2de3
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "103858264"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118791625"
 ---
-# <a name="lit"></a>gezündet
+# <a name="lit"></a>Beleuchtet
 
-Gibt einen Beleuchtungs Koeffizient-Vektor zurück.
+Gibt einen Beleuchtungskoeffizientenvektor zurück.
 
 
 
-| *ret* beleuchtet (*n \_ Punkt \_ l*, *n \_ Punkt \_ h*, *m*) |
+| *ret* lit(*n \_ dot \_ l*, *n \_ dot \_ h*, *m*) |
 |------------------------------------------|
 
 
 
  
 
-Diese Funktion gibt einen Beleuchtungs Koeffizienten (Ambient, diffuse, Glanz, 1) zurück, wobei Folgendes gilt:
+Diese Funktion gibt einen Beleuchtungskoeffizientenvektor (ambient, diffuse, specular, 1) zurück, wobei:
 
--   Ambient = 1
--   diffuses = n l < 0? 0: n int
--   Glanz = n l < 0 \| \| n = h < 0? 0: (n = h) ^ m
+-   ambient = 1
+-   diffuse = n · l < 0 ? 0 : n · L
+-   specular = n · l < 0 \| \| n · h < 0 ? 0 : (n · h) ^ m
 
-Wenn der Vektor n der normale Vektor ist, ist l die Richtung zu hell und h ist der halbvektor.
+Wobei der Vektor n der normale Vektor ist, ist l die Richtung zum Licht und h der halbe Vektor.
 
 ## <a name="parameters"></a>Parameter
 
@@ -47,9 +47,9 @@ Wenn der Vektor n der normale Vektor ist, ist l die Richtung zu hell und h ist d
 
 | Element                                                                       | BESCHREIBUNG                                                                              |
 |----------------------------------------------------------------------------|------------------------------------------------------------------------------------------|
-| <span id="n_dot_l"></span><span id="N_DOT_L"></span>*n \_ Punkt \_ l*<br/> | \[im \] Punktprodukt der normalisierten Oberflächen normal und der Licht Vektor.<br/> |
-| <span id="n_dot_h"></span><span id="N_DOT_H"></span>*n \_ Punkt \_ h*<br/> | \[im \] Punktprodukt des halb Winkel Vektors und der Oberflächen normalen.<br/>       |
-| <span id="m"></span><span id="M"></span>*800*<br/>                     | \[in \] einem Glanz Exponenten.<br/>                                                   |
+| <span id="n_dot_l"></span><span id="N_DOT_L"></span>*n \_ Punkt \_ l*<br/> | \[in \] Das Punktprodukt der normalisierten Oberflächennorm und des Lichtvektors.<br/> |
+| <span id="n_dot_h"></span><span id="N_DOT_H"></span>*n \_ punkt \_ h*<br/> | \[in \] Das Punktprodukt des Halbwinkelvektors und der Oberflächennorm normal.<br/>       |
+| <span id="m"></span><span id="M"></span>*M*<br/>                     | \[in \] einem Glanzlicht exponenten.<br/>                                                   |
 
 
 
@@ -57,7 +57,7 @@ Wenn der Vektor n der normale Vektor ist, ist l die Richtung zu hell und h ist d
 
 ## <a name="return-value"></a>Rückgabewert
 
-Der Beleuchtungs Koeffizient-Vektor.
+Der Beleuchtungskoeffizientenvektor.
 
 ## <a name="type-description"></a>Typbeschreibung
 
@@ -65,25 +65,25 @@ Der Beleuchtungs Koeffizient-Vektor.
 
 | Name        | [**Vorlagentyp**](dx-graphics-hlsl-intrinsic-functions.md)                       | [**Komponententyp**](dx-graphics-hlsl-intrinsic-functions.md) | Size |
 |-------------|-------------------------------------------------------------------------------------|----------------------------------------------------------------|------|
-| *n \_ Punkt \_ l* | [**Skalar**](dx-graphics-hlsl-intrinsic-functions.md) | [**float**](/windows/desktop/WinProg/windows-data-types)                        | 1    |
-| *n \_ Punkt \_ h* | [**Skalar**](dx-graphics-hlsl-intrinsic-functions.md) | [**float**](/windows/desktop/WinProg/windows-data-types)                        | 1    |
-| *m*         | [**Skalar**](dx-graphics-hlsl-intrinsic-functions.md) | [**float**](/windows/desktop/WinProg/windows-data-types)                        | 1    |
-| *TZI*       | [**ve**](dx-graphics-hlsl-intrinsic-functions.md) | [**float**](/windows/desktop/WinProg/windows-data-types)                        | 4    |
+| *n \_ Punkt \_ l* | [**Skalare**](dx-graphics-hlsl-intrinsic-functions.md) | [**float**](/windows/desktop/WinProg/windows-data-types)                        | 1    |
+| *n \_ punkt \_ h* | [**Skalare**](dx-graphics-hlsl-intrinsic-functions.md) | [**float**](/windows/desktop/WinProg/windows-data-types)                        | 1    |
+| *m*         | [**Skalare**](dx-graphics-hlsl-intrinsic-functions.md) | [**float**](/windows/desktop/WinProg/windows-data-types)                        | 1    |
+| *Ret*       | [**Vektor**](dx-graphics-hlsl-intrinsic-functions.md) | [**float**](/windows/desktop/WinProg/windows-data-types)                        | 4    |
 
 
 
  
 
-## <a name="minimum-shader-model"></a>Minimaler Shader-Modell
+## <a name="minimum-shader-model"></a>Shader-Mindestmodell
 
-Diese Funktion wird in den folgenden shadermodellen unterstützt.
+Diese Funktion wird in den folgenden Shadermodellen unterstützt.
 
 
 
 | Shadermodell                                                                       | Unterstützt           |
 |------------------------------------------------------------------------------------|---------------------|
-| [Shader Model 2 (DirectX HLSL)](dx-graphics-hlsl-sm2.md) und höhere Shader-Modelle | ja                 |
-| [Shader-Modell 1 (DirectX HLSL)](dx-graphics-hlsl-sm1.md)                          | Ja ( \_ nur vs 1 \_ 1) |
+| [Shadermodell 2 (DirectX HLSL)](dx-graphics-hlsl-sm2.md) und höhere Shadermodelle | Ja                 |
+| [Shadermodell 1 (DirectX HLSL)](dx-graphics-hlsl-sm1.md)                          | ja (im Vergleich \_ \_ zu nur 1 1) |
 
 
 
@@ -93,7 +93,7 @@ Diese Funktion wird in den folgenden shadermodellen unterstützt.
 
 <dl> <dt>
 
-[**Intrinsische Funktionen (DirectX HLSL)**](dx-graphics-hlsl-intrinsic-functions.md)
+[**Systeminterne Funktionen (DirectX HLSL)**](dx-graphics-hlsl-intrinsic-functions.md)
 </dt> </dl>
 
  

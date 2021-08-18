@@ -1,10 +1,10 @@
 ---
-title: shadowflag-Attribut
-description: Enthält den Abschnitt der schattenkarte, der zum Speichern des Flagwerts verwendet wird.
+title: shadowFlag-Attribut
+description: Enthält den Abschnitt der Schattenkarte, der zum Speichern des Flagwerts verwendet wird.
 ms.assetid: 2cac9ae5-4f37-4b96-a376-d34e66925e8f
 ms.tgt_platform: multiple
 keywords:
-- shadowflag-Attribut AD-Schema
+- AD-Schema des shadowFlag-Attributs
 topic_type:
 - apiref
 api_name:
@@ -13,28 +13,28 @@ api_type:
 - Schema
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: d24549c5b002378558aa9cc63ca681b816e55b3d
-ms.sourcegitcommit: b77ace27b0432e7cd3863191b11926be032fbe2f
+ms.openlocfilehash: 175ecdfb1181bb83a3b921e579fbeb3e94729b049f904adef79592d30b0065db
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "104519996"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119022168"
 ---
-# <a name="shadowflag-attribute"></a>shadowflag-Attribut
+# <a name="shadowflag-attribute"></a>shadowFlag-Attribut
 
-Enthält den Abschnitt der schattenkarte, der zum Speichern des Flagwerts verwendet wird.
+Enthält den Abschnitt der Schattenkarte, der zum Speichern des Flagwerts verwendet wird.
 
 
 
 | Eingabe | Wert |
 |-------------------|--------------------------------------|
-| CN                | shadowflag                           |
-| LDAP-Display-Name | shadowflag                           |
+| CN                | shadowFlag                           |
+| Ldap-Anzeigename | shadowFlag                           |
 | Size              | \-                                   |
-| Berechtigung aktualisieren  | \-                                   |
-| Aktualisierungshäufigkeit  | \-                                   |
+| Aktualisieren von Berechtigungen  | \-                                   |
+| Updatehäufigkeit  | \-                                   |
 | Attribute-Id      | 1.3.6.1.1.1.1.11                     |
-| System-ID-GUID    | 8dfeb70d-c5db-46b6-b15e-a4389e6cee9b |
+| System-Id-Guid    | 8dfeb70d-c5db-46b6-b15e-a4389e6cee9b |
 | Syntax            | [**Enumeration**](s-enumeration.md) |
 
 
@@ -54,11 +54,11 @@ Enthält den Abschnitt der schattenkarte, der zum Speichern des Flagwerts verwen
 |------------------------|-----------------------------------------------------|
 | Link-ID                | \-                                                  |
 | MAPI-Id                | \-                                                  |
-| System-Only            | False                                               |
-| Ist-einwertig       | Richtig                                                |
-| Ist indiziert             | False                                               |
-| Im globalen Katalog      | False                                               |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                        |
+| System-Only            | Falsch                                               |
+| Is-Single-Valued       | Richtig                                                |
+| Ist indiziert             | Falsch                                               |
+| Im globalen Katalog      | Falsch                                               |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                        |
 | Range-Lower            | \-                                                  |
 | Range-Upper            | \-                                                  |
 | Search-Flags           | 0x00000000                                          |
@@ -75,11 +75,11 @@ Enthält den Abschnitt der schattenkarte, der zum Speichern des Flagwerts verwen
 |------------------------|-----------------------------------------------------|
 | Link-ID                | \-                                                  |
 | MAPI-Id                | \-                                                  |
-| System-Only            | False                                               |
-| Ist-einwertig       | Richtig                                                |
-| Ist indiziert             | False                                               |
-| Im globalen Katalog      | False                                               |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                        |
+| System-Only            | Falsch                                               |
+| Is-Single-Valued       | Richtig                                                |
+| Ist indiziert             | Falsch                                               |
+| Im globalen Katalog      | Falsch                                               |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                        |
 | Range-Lower            | \-                                                  |
 | Range-Upper            | \-                                                  |
 | Search-Flags           | 0x00000000                                          |
@@ -96,11 +96,11 @@ Enthält den Abschnitt der schattenkarte, der zum Speichern des Flagwerts verwen
 |------------------------|-----------------------------------------------------|
 | Link-ID                | \-                                                  |
 | MAPI-Id                | \-                                                  |
-| System-Only            | False                                               |
-| Ist-einwertig       | Richtig                                                |
-| Ist indiziert             | False                                               |
-| Im globalen Katalog      | False                                               |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                        |
+| System-Only            | Falsch                                               |
+| Is-Single-Valued       | Richtig                                                |
+| Ist indiziert             | Falsch                                               |
+| Im globalen Katalog      | Falsch                                               |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                        |
 | Range-Lower            | \-                                                  |
 | Range-Upper            | \-                                                  |
 | Search-Flags           | 0x00000000                                          |
@@ -117,11 +117,11 @@ Enthält den Abschnitt der schattenkarte, der zum Speichern des Flagwerts verwen
 |------------------------|-----------------------------------------------------|
 | Link-ID                | \-                                                  |
 | MAPI-Id                | \-                                                  |
-| System-Only            | False                                               |
-| Ist-einwertig       | Richtig                                                |
-| Ist indiziert             | False                                               |
-| Im globalen Katalog      | False                                               |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                        |
+| System-Only            | Falsch                                               |
+| Is-Single-Valued       | Richtig                                                |
+| Ist indiziert             | Falsch                                               |
+| Im globalen Katalog      | Falsch                                               |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                        |
 | Range-Lower            | \-                                                  |
 | Range-Upper            | \-                                                  |
 | Search-Flags           | 0x00000000                                          |
@@ -130,7 +130,7 @@ Enthält den Abschnitt der schattenkarte, der zum Speichern des Flagwerts verwen
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 

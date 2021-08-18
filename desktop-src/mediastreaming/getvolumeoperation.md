@@ -1,10 +1,10 @@
 ---
-title: Getvolumeoperation-Klasse
-description: Registriert einen Ereignishandler, der aufgerufen wird, wenn der von getvolumeasync gestartete asynchrone Vorgang abgeschlossen ist, und stellt eine Methode bereit, die die Ergebnisse des Vorgangs zurückgibt.
+title: GetVolumeOperation-Klasse
+description: Registriert einen Ereignishandler, der aufgerufen wird, wenn der von GetVolumeAsync gestartete asynchrone Vorgang abgeschlossen wird, und stellt eine Methode bereit, die die Ergebnisse des Vorgangs zurückgibt.
 ms.assetid: F7BCE2AB-89B5-44CE-8BDF-347F2E3FD6C9
 keywords:
-- Getvolumeoperation-Klasse Medien Streaming-API
-- Getvolumeoperation-Klasse Medien Streaming-API, beschrieben
+- Medienstreaming-API der GetVolumeOperation-Klasse
+- GetVolumeOperation-Klasse Media Streaming-API , beschrieben
 topic_type:
 - apiref
 api_name:
@@ -14,31 +14,31 @@ api_type:
 ms.topic: reference
 ms.date: 05/31/2018
 api_location: ''
-ms.openlocfilehash: 0ac06bfb85e8ebbf10306da43cb44c7e3b3e862a
-ms.sourcegitcommit: ebd3ce6908ff865f1ef66f2fc96769be0aad82e1
+ms.openlocfilehash: edecfc68e243066ca8e0cda4df43d6ca9a654e04b538c9352c2d90624d5682ab
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/19/2020
-ms.locfileid: "106340703"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118972369"
 ---
-# <a name="getvolumeoperation-class"></a>Getvolumeoperation-Klasse
+# <a name="getvolumeoperation-class"></a>GetVolumeOperation-Klasse
 
-Registriert einen Ereignishandler, der aufgerufen wird, wenn der von [**getvolumeasync**](/previous-versions/windows/desktop/api/windows.media.streaming/nf-windows-media-streaming-imediarenderer-getvolumeasync) gestartete asynchrone Vorgang abgeschlossen ist, und stellt eine Methode bereit, die die Ergebnisse des Vorgangs zurückgibt.
+Registriert einen Ereignishandler, der aufgerufen wird, wenn der von [**GetVolumeAsync gestartete asynchrone**](/previous-versions/windows/desktop/api/windows.media.streaming/nf-windows-media-streaming-imediarenderer-getvolumeasync) Vorgang abgeschlossen wird, und stellt eine Methode bereit, die die Ergebnisse des Vorgangs zurückgibt.
 
-**Getvolumeoperation** verfügt über folgende Typen von Membern:
+**GetVolumeOperation** verfügt über diese Typen von Membern:
 
 -   [Methoden](#methods)
 -   [Eigenschaften](#properties)
 
 ### <a name="methods"></a>Methoden
 
-Die **getvolumeoperation** -Klasse verfügt über diese Methoden.
+Die **GetVolumeOperation-Klasse** verfügt über diese Methoden.
 
 
 
-| Methode                                              | BESCHREIBUNG                                                                                                                      |
+| Methode                                              | Beschreibung                                                                                                                      |
 |:----------------------------------------------------|:---------------------------------------------------------------------------------------------------------------------------------|
-| [**GetResults**](getvolumeoperation-getresults.md) | Gibt die Ergebnisse des asynchronen Vorgangs zurück, der von [**getvolumeasync**](/previous-versions/windows/desktop/api/windows.media.streaming/nf-windows-media-streaming-imediarenderer-getvolumeasync)gestartet wurde.<br/> |
+| [**GetResults**](getvolumeoperation-getresults.md) | Gibt die Ergebnisse des asynchronen Vorgangs zurück, der von [**GetVolumeAsync**](/previous-versions/windows/desktop/api/windows.media.streaming/nf-windows-media-streaming-imediarenderer-getvolumeasync)gestartet wurde.<br/> |
 
 
 
@@ -46,13 +46,13 @@ Die **getvolumeoperation** -Klasse verfügt über diese Methoden.
 
 ### <a name="properties"></a>Eigenschaften
 
-Die **getvolumeoperation** -Klasse verfügt über diese Eigenschaften.
+Die **GetVolumeOperation-Klasse** verfügt über diese Eigenschaften.
 
 
 
-| Eigenschaft                                                     | Zugriffstyp           | BESCHREIBUNG                                                                                                                                                                |
+| Eigenschaft                                                     | Zugriffstyp           | Beschreibung                                                                                                                                                                |
 |:-------------------------------------------------------------|:----------------------|:---------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| [**Abgeschlossen**](getvolumeoperation-completed.md)<br/> | Lesen/Schreiben<br/> | Ruft einen Ereignishandler ab, der aufgerufen wird, wenn der von [**getvolumeasync**](/previous-versions/windows/desktop/api/windows.media.streaming/nf-windows-media-streaming-imediarenderer-getvolumeasync) gestartete asynchrone Vorgang abgeschlossen ist, oder legt diesen fest. <br/> |
+| [**Abgeschlossen**](getvolumeoperation-completed.md)<br/> | Lesen/Schreiben<br/> | Ruft einen Ereignishandler ab, der aufgerufen wird, wenn der von [**GetVolumeAsync gestartete asynchrone**](/previous-versions/windows/desktop/api/windows.media.streaming/nf-windows-media-streaming-imediarenderer-getvolumeasync) Vorgang abgeschlossen wird, oder legt diesen fest. <br/> |
 
 
 

@@ -1,7 +1,7 @@
 ---
-description: Hiermit werden alle diesem Volume zugeordneten Schlüssel Schutzvorrichtungen deaktiviert oder angehalten.
+description: Deaktiviert oder unter suspendiert alle Schlüsselschutzvorrichtungen, die diesem Volume zugeordnet sind.
 ms.assetid: 19eed858-a116-4ec8-937a-2eea7aadbdc6
-title: Disablekeyprotector-Methode der Win32_EncryptableVolume-Klasse
+title: DisableKeyProtectors-Methode der Win32_EncryptableVolume Klasse
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,16 +13,16 @@ api_type:
 - COM
 api_location:
 - Root\CIMV2\Security\MicrosoftVolumeEncryption
-ms.openlocfilehash: 1de392c50f6665d793883582e2679cd502efbe37
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 79b9db0043e04d3ab6399677a9e103961d5f1a9b5c5214558bcf53359bedc61a
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106359072"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118892539"
 ---
-# <a name="disablekeyprotectors-method-of-the-win32_encryptablevolume-class"></a>Disablekeyprotector-Methode der Win32- \_ Klasse "verschlüsseltablevolume"
+# <a name="disablekeyprotectors-method-of-the-win32_encryptablevolume-class"></a>DisableKeyProtectors-Methode der Win32 \_ EncryptableVolume-Klasse
 
-Mit der **disablekeyprotector** -Methode der Win32-Klasse " [**\_ verschlüsseltablevolume**](win32-encryptablevolume.md) " werden alle diesem Volume zugeordneten Schlüssel Schutzvorrichtungen deaktiviert oder angehalten.
+Die **DisableKeyProtectors-Methode** der [**Win32 \_ EncryptableVolume-Klasse**](win32-encryptablevolume.md) deaktiviert oder unter suspendiert alle Schlüsselschutzvorrichtungen, die diesem Volume zugeordnet sind.
 
 ## <a name="syntax"></a>Syntax
 
@@ -39,18 +39,18 @@ uint32 DisableKeyProtectors(
 
 <dl> <dt>
 
-*Disablecount* \[ in, optional\]
+*DisableCount* \[ in, optional\]
 </dt> <dd>
 
-Typ: **UInt32**
+Typ: **uint32**
 
-Eine ganze Zahl, die die Anzahl der Neustarts angibt, für die die Schlüssel Schutzvorrichtungen deaktiviert werden. Dieser Parameter ist nur auf Betriebssystemvolumes verfügbar.
+Eine ganze Zahl, die die Anzahl der Neustarts angibt, für die die Schlüsselschutzvorrichtungen deaktiviert werden. Dieser Parameter ist nur auf Betriebssystemvolumes verfügbar.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Typ: **UInt32**
+Typ: **uint32**
 
 Diese Methode gibt einen der folgenden Codes oder einen anderen Fehlercode zurück, wenn ein Fehler auftritt.
 
@@ -59,7 +59,7 @@ Diese Methode gibt einen der folgenden Codes oder einen anderen Fehlercode zurü
 | Rückgabecode/-wert                                                                                                                                                                  | BESCHREIBUNG                           |
 |------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------------------------------|
 | <dl> <dt>**S \_ OK**</dt> <dt>0 (0x0)</dt> </dl>                                  | Die Methode war erfolgreich.<br/> |
-| <dl> <dt>**F \_ E \_ gesperrt \_ Volume**</dt> <dt>2150694912 (0x80310000)</dt> </dl> | Das Volume ist gesperrt.<br/>      |
+| <dl> <dt>**FVE \_ E \_ LOCKED \_ VOLUME**</dt> <dt>2150694912 (0x80310000)</dt> </dl> | Das Volume ist gesperrt.<br/>      |
 
 
 
@@ -67,13 +67,13 @@ Diese Methode gibt einen der folgenden Codes oder einen anderen Fehlercode zurü
 
 ## <a name="security-considerations"></a>Überlegungen zur Sicherheit
 
-Diese Methode macht den Verschlüsselungsschlüssel des Volumes im Klartext auf der Festplatte verfügbar und deaktiviert den volumeschutz. Es wird davon abgeraten, ein Kennwort oder einen Verschlüsselungsschlüssel als Klartext anzugeben.
+Mit dieser Methode wird der Verschlüsselungsschlüssel des Volumes auf der Festplatte im Klarschalten verfügbar gemacht, und der Volumeschutz wird deaktiviert. Wir raten davon ab, ein Kennwort oder einen Verschlüsselungsschlüssel in Klartext zu verwenden.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Neue Schlüssel Schutzvorrichtungen können auch dann hinzugefügt werden, wenn Schlüssel Schutzvorrichtungen deaktiviert oder angehalten wurden. Diese Schlüsselschutz Vorrichtungen bleiben deaktiviert, sofern [**enablekeyprotector**](enablekeyprotectors-win32-encryptablevolume.md) nicht aufgerufen wird.
+Neue Schlüsselschutzvorrichtungen können hinzugefügt werden, auch wenn Schlüsselschutzvorrichtungen deaktiviert oder angehalten werden. Diese Schlüsselschutzvorrichtungen bleiben deaktiviert, es sei [**denn, EnableKeyProtectors**](enablekeyprotectors-win32-encryptablevolume.md) wird aufgerufen.
 
-Managed Object Format-Dateien (MOF) enthalten die Definitionen für Windows-Verwaltungsinstrumentation (WMI)-Klassen. MOF-Dateien werden nicht als Teil des Windows SDK installiert. Sie werden auf dem Server installiert, wenn Sie die zugehörige Rolle mithilfe der Server-Manager hinzufügen. Weitere Informationen zu MOF-Dateien finden Sie unter [Managed Object Format (MOF)](../wmisdk/managed-object-format--mof-.md).
+Managed Object Format (MOF) enthalten die Definitionen für WMI-Klassen (Windows Management Instrumentation). MOF-Dateien werden nicht als Teil des Windows SDK installiert. Sie werden auf dem Server installiert, wenn Sie die zugeordnete Rolle mithilfe der Server-Manager. Weitere Informationen zu MOF-Dateien finden Sie unter [Managed Object Format (MOF).](../wmisdk/managed-object-format--mof-.md)
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -81,21 +81,21 @@ Managed Object Format-Dateien (MOF) enthalten die Definitionen für Windows-Verw
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | \[Nur Desktop-Apps Windows 8.1\]<br/>                                                            |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2012 R2 \[ -Desktop-Apps\]<br/>                                                 |
-| Namespace<br/>                | Root \\ CIMV2 \\ Sicherheit ( \\ microsoftvolumeencryption)<br/>                                             |
-| MOF<br/>                      | <dl> <dt>Win32 \_ verschlüsseltablevolume. MOF</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | \[Windows 8.1 Nur Desktop-Apps\]<br/>                                                            |
+| Unterstützte Mindestversion (Server)<br/> | Windows Server 2012 Nur \[ R2-Desktop-Apps\]<br/>                                                 |
+| Namespace<br/>                | \\CimV2-Stammsicherheit \\ \\ MicrosoftVolumeEncryption<br/>                                             |
+| MOF<br/>                      | <dl> <dt>Win32 \_ encryptablevolume.mof</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Win32- \_ verschlüsseltablevolume**](win32-encryptablevolume.md)
+[**Win32 \_ EncryptableVolume**](win32-encryptablevolume.md)
 </dt> <dt>
 
-[**Enablekeyprotector**](enablekeyprotectors-win32-encryptablevolume.md)
+[**EnableKeyProtectors**](enablekeyprotectors-win32-encryptablevolume.md)
 </dt> </dl>
 
  

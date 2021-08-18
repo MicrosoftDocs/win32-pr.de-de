@@ -1,7 +1,7 @@
 ---
-description: Definiert Methoden, die die iTablet-Schnittstellen Ereignisse verarbeiten.
+description: Definiert Methoden, die die ITablet-Schnittstellenereignisse behandeln.
 ms.assetid: 9acf32fa-b33f-4b9a-be73-804b7d5434e8
-title: Itableteventsink-Schnittstelle
+title: ITabletEventSink-Schnittstelle
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -14,51 +14,51 @@ api_type:
 api_location:
 - wisptis.exe
 - wisptis.exe.dll
-ms.openlocfilehash: fc42bfe8a6e69504c35d7926c4c5a8b688404897
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: a1a773f7b4e08a718c419de2d51c0ff3bd9bba551267188b12889b9ec99d4ded
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "104218367"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118716459"
 ---
-# <a name="itableteventsink-interface"></a>Itableteventsink-Schnittstelle
+# <a name="itableteventsink-interface"></a>ITabletEventSink-Schnittstelle
 
-Definiert Methoden, die die [**iTablet-Schnittstellen**](itablet.md) Ereignisse verarbeiten.
+Definiert Methoden, die die [**ITablet-Schnittstellenereignisse**](itablet.md) behandeln.
 
 ## <a name="members"></a>Member
 
-Die **itableteventsink** -Schnittstelle erbt von der [**IUnknown**](/windows/desktop/api/unknwn/nn-unknwn-iunknown) -Schnittstelle. **Itableteventsink** verfügt auch über die folgenden Typen von Membern:
+Die **ITabletEventSink-Schnittstelle** erbt von der [**IUnknown-Schnittstelle.**](/windows/desktop/api/unknwn/nn-unknwn-iunknown) **ITabletEventSink verfügt** auch über diese Typen von Membern:
 
 -   [Methoden](#methods)
 
 ### <a name="methods"></a>Methoden
 
-Die **itableteventsink** -Schnittstelle verfügt über diese Methoden.
+Die **ITabletEventSink-Schnittstelle** verfügt über diese Methoden.
 
 
 
-| Methode                                                        | BESCHREIBUNG                                                                                      |
+| Methode                                                        | Beschreibung                                                                                      |
 |:--------------------------------------------------------------|:-------------------------------------------------------------------------------------------------|
-| [**Contextcreate**](itableteventsink-contextcreate.md)       | Tritt auf, wenn ein neuer Tablet-Kontext erstellt wird.<br/>                                          |
-| [**Contextdestroy**](itableteventsink-contextdestroy.md)     | Tritt auf, wenn ein Tablet-Kontext zerstört wird.<br/>                                      |
-| [**Cursor**](itableteventsink-cursordown.md)             | Tritt auf, wenn der tablettstifttipp die digitalisierende Tablet-Oberfläche kontaktiert.<br/>                    |
-| [**Cursor Bereich**](itableteventsink-cursorinrange.md)       | Tritt auf, wenn ein Tablettstift in den Bereich der Erkennung des Digitalisierungsprogramms kommt.<br/>                 |
-| [**Cursor verschieben**](itableteventsink-cursormove.md)             | Tritt auf, wenn der Cursor über den Tablet-Digitalisierer bewegt wird.<br/>                               |
-| [**Currsornew**](itableteventsink-cursornew.md)               | Tritt auf, wenn dem System ein neuer Tablettstift hinzugefügt wird.<br/>                                      |
-| [**Cursor-Ausgabe**](itableteventsink-cursoroutofrange.md) | Tritt auf, wenn der Tablettstift den physischen Erkennungsbereich (Nähe) des Tablets verlässt.<br/> |
-| [**Cursor**](itableteventsink-cursorup.md)                 | Tritt auf, wenn der Benutzer den Tablettstift von der tabletdigitalisiereroberfläche ausgelöst hat.<br/>         |
-| [**Pakete**](itableteventsink-packets.md)                   | Tritt auf, wenn sich der Tablettstift auf dem Digitalisierer bewegt.<br/>                                    |
-| [**System Event**](itableteventsink-systemevent.md)           | Tritt auf, wenn ein System Ereignis verfügbar ist.<br/>                                              |
+| [**ContextCreate**](itableteventsink-contextcreate.md)       | Tritt ein, wenn ein neuer Tablet-Kontext erstellt wird.<br/>                                          |
+| [**ContextDestroy**](itableteventsink-contextdestroy.md)     | Tritt ein, wenn ein Tablet-Kontext zerstört wird.<br/>                                      |
+| [**Cursordown**](itableteventsink-cursordown.md)             | Tritt ein, wenn die Tablettstiftspitze mit der Digitalisierungsoberfläche des Tablettstifts in Kontakt tritt.<br/>                    |
+| [**Cursorinrange**](itableteventsink-cursorinrange.md)       | Tritt ein, wenn ein Stift innerhalb des Erkennungsbereichs des Digitizers liegt.<br/>                 |
+| [**CursorMove**](itableteventsink-cursormove.md)             | Tritt ein, wenn der Cursor über den Tablettdiger bewegt wird.<br/>                               |
+| [**CursorNeu**](itableteventsink-cursornew.md)               | Tritt ein, wenn dem System ein neuer Stift hinzugefügt wird.<br/>                                      |
+| [**Cursoroutofrange**](itableteventsink-cursoroutofrange.md) | Tritt ein, wenn der Tablettstift den physischen Erkennungsbereich (Nähe) des Tablets verlässt.<br/> |
+| [**CursorUp**](itableteventsink-cursorup.md)                 | Tritt ein, wenn der Benutzer den Tablettstift von der Tablettdigisiereroberfläche ausgelöst hat.<br/>         |
+| [**Pakete**](itableteventsink-packets.md)                   | Tritt ein, wenn sich der Stift auf dem Digitizer bewegt.<br/>                                    |
+| [**SystemEvent**](itableteventsink-systemevent.md)           | Tritt ein, wenn ein Systemereignis verfügbar ist.<br/>                                              |
 
 
 
  
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
 Entwickler sollten diese Schnittstelle nicht verwenden.
 
-Der folgende Code zeigt, wie die **itableteventsink** -Schnittstelle definiert wird.
+Der folgende Code zeigt, wie die **ITabletEventSink-Schnittstelle** definiert ist.
 
 ``` syntax
 [
@@ -138,7 +138,7 @@ interface ITabletEventSink: IUnknown
 
 | Anforderung | Wert |
 |-------------------------------------|----------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows XP Tablet PC Edition \[ Desktop-Apps\]<br/>                          |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur Desktop-Apps der XP Tablet PC Edition \[\]<br/>                          |
 | Unterstützte Mindestversion (Server)<br/> | Nicht unterstützt<br/>                                                              |
 | Bibliothek<br/>                  | <dl> <dt>Wisptis.exe</dt> </dl> |
 

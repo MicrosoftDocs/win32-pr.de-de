@@ -1,9 +1,9 @@
 ---
-title: /notlb-Schalter
-description: Der/notlb-Schalter verhindert, dass der Mittell-Compiler eine Typbibliotheks Datei (TLB-Datei) erzeugt.
+title: Schalter "/notlb"
+description: Der Schalter /notlb verhindert, dass der MIDL-Compiler eine Typbibliotheksdatei (TLB) generiert.
 ms.assetid: 58f4210d-d3c3-42ce-b311-4ddd85bc396a
 keywords:
-- /notlb-Schalter-Mittel l
+- /notlb switch MIDL
 topic_type:
 - apiref
 api_name:
@@ -12,41 +12,41 @@ api_type:
 - NA
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 81911b6afb00d61713f966ba9e1981b979e51008
-ms.sourcegitcommit: 57758ecb246c84d65e6e0e4bd5570d9176fa39cd
+ms.openlocfilehash: e309ed753d1549c31c9e3dea0a5c7aa87b32217aa12e5ee04934a183927adf87
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "104471965"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119067520"
 ---
-# <a name="notlb-switch"></a>/notlb-Schalter
+# <a name="notlb-switch"></a>Schalter "/notlb"
 
-Der **/notlb** -Schalter verhindert, dass der Mittell-Compiler eine Typbibliotheks Datei (TLB-Datei) erzeugt.
+Der **Schalter /notlb** verhindert, dass der MIDL-Compiler eine Typbibliotheksdatei (TLB) generiert.
 
 ``` syntax
 midl /notlb
 ```
 
-## <a name="switch-options"></a>Optionen wechseln
+## <a name="switch-options"></a>Switch-Optionen
 
-Dieser Switch hat keine Parameter.
+Dieser Schalter verfügt über keine Parameter.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Standardmäßig generiert der mittlerer l-Compiler eine TLB-Datei, wenn eine [**Library**](library.md) -Anweisung gefunden wird. Dieser Schalter überschreibt das Standardverhalten.
+Standardmäßig generiert der MIDL-Compiler immer dann eine TLB-Datei, wenn eine [**LIBRARY-Anweisung gefunden**](library.md) wird. Dieser Schalter überschreibt das Standardverhalten.
 
-Wenn die **/notlb** -Option angegeben wird, werden alle anderen Stub-, Header-usw. wie üblich generiert.
+Wenn die **Option /notlb** angegeben wird, werden alle anderen Stubs, Header usw. wie gewohnt generiert.
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**/TLB**](-tlb.md)
+[**/tlb**](-tlb.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

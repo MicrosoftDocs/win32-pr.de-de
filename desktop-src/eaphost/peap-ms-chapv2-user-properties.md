@@ -1,19 +1,19 @@
 ---
-title: Eigenschaften von "Peer-MS-CHAPv2 Benutzer"
-description: Erfahren Sie mehr über die Eigenschaften des Peer-MS-CHAPv2 Benutzers. Sehen Sie sich ein Beispiel an, das eine Instanz des mschapv2userpropertiesv1-Legacy Schemas ist.
+title: PEAP MS-CHAPv2 Benutzereigenschaften
+description: Erfahren Sie mehr über die PEAP MS-CHAPv2 Benutzereigenschaften. Sehen Sie sich ein Beispiel an, das eine Instanz des Legacyschemas mschapv2userpropertiesv1 ist.
 ms.assetid: af1ed6b1-712e-4b55-9ab4-b6b38f486fb1
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: d6b2d3d48e35c300be2baf9c563c8168f5914a39
-ms.sourcegitcommit: 773fa6257ead6c74154ad3cf46d21e49adc900aa
+ms.openlocfilehash: 0d5f5218510f87def8253e3a3f5bd30978523f95e50d7e5aa1b9ede55b96d655
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/09/2020
-ms.locfileid: "104391127"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118784880"
 ---
-# <a name="peap-ms-chapv2-user-properties"></a>Eigenschaften von "Peer-MS-CHAPv2 Benutzer"
+# <a name="peap-ms-chapv2-user-properties"></a>PEAP MS-CHAPv2 Benutzereigenschaften
 
-Bei diesem Beispiel handelt es sich um eine Instanz des [mschapv2userpropertiesv1](mschapv2userpropertiesv1schema-schema.md) -Legacy Schemas.
+Dieses Beispiel ist eine Instanz des Legacyschemas [mschapv2userpropertiesv1.](mschapv2userpropertiesv1schema-schema.md)
 
 ``` syntax
   <?xml version="1.0" ?> 
@@ -54,12 +54,12 @@ Bei diesem Beispiel handelt es sich um eine Instanz des [mschapv2userpropertiesv
 [Benutzereigenschaften](user-profiles.md)
 </dt> <dt>
 
-[EAPHost und Legacy Schema](eaphost-schemas.md)
+[EAPHost und Legacyschema](eaphost-schemas.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

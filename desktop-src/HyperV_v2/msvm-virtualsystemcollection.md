@@ -53,7 +53,7 @@ class Msvm_VirtualSystemCollection : CIM_CollectionOfMSEs
 
 ## <a name="members"></a>Member
 
-Die **Msvm \_ VirtualSystemCollection-Klasse** verfügt über folgende Typen von Membern:
+Die **Msvm \_ VirtualSystemCollection-Klasse** verfügt über die folgenden Membertypen:
 
 -   [Eigenschaften](#properties)
 
@@ -72,7 +72,7 @@ Datentyp: **string**
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**Schlüssel,**](/windows/desktop/WmiSdk/key-qualifier) [**Außerkraftsetzung**](/windows/desktop/WmiSdk/standard-qualifiers) ("CollectionID"), [**MaxLen**](/windows/desktop/WmiSdk/standard-qualifiers) (256)
+Qualifizierer: [**Key**](/windows/desktop/WmiSdk/key-qualifier), [**Override**](/windows/desktop/WmiSdk/standard-qualifiers) ("CollectionID"), [**MaxLen**](/windows/desktop/WmiSdk/standard-qualifiers) (256)
 </dt> </dl>
 
 Die eindeutige Identifikation des Auflistungsobjekts.
@@ -88,7 +88,7 @@ Datentyp: **string**
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**Überschreiben**](/windows/desktop/WmiSdk/standard-qualifiers) ("ElementName")
+Qualifizierer: [**Außerkraftsetzung**](/windows/desktop/WmiSdk/standard-qualifiers) ("ElementName")
 </dt> </dl>
 
 Ein benutzerdefinierter Name für die Auflistung. Beachten Sie, dass dies nicht garantiert eindeutig ist.
@@ -104,7 +104,7 @@ Datentyp: **uint16**
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Typ des Failovers, das für die Sammlung des virtuellen Systems ausgeführt wurde.
+Typ des Failovers, der für die Sammlung des virtuellen Systems ausgeführt wurde.
 
 > [!Note]  
 > Hinzugefügt in Windows 10 Version 1703.
@@ -115,14 +115,14 @@ Typ des Failovers, das für die Sammlung des virtuellen Systems ausgeführt wurd
 
 <span id="None"></span><span id="none"></span><span id="NONE"></span>
 
-**None** (0)
+**Keine** (0)
 
 
 </dt> <dd></dd> <dt>
 
 <span id="Regular"></span><span id="regular"></span><span id="REGULAR"></span>
 
-**Normal** (1)
+**Regular** (1)
 
 
 </dt> <dd></dd> <dt>
@@ -163,34 +163,34 @@ Konsistenzebene des zuletzt angewendeten Deltas.
 
 <span id="Application_Consistent"></span><span id="application_consistent"></span><span id="APPLICATION_CONSISTENT"></span>
 
-<span id="Application_Consistent"></span><span id="application_consistent"></span><span id="APPLICATION_CONSISTENT"></span>**Anwendungskonsens** (1)
+<span id="Application_Consistent"></span><span id="application_consistent"></span><span id="APPLICATION_CONSISTENT"></span>**Anwendungs konsistent** (1)
 
 
 </dt> <dd>
 
-Das zuletzt angewendete Delta gibt einen Zeitpunkt an, zu dem sich das virtuelle System im anwendungskonsistenten Zustand befand.
+Das zuletzt angewendete Delta gibt einen Zeitpunkt an, zu dem sich das virtuelle System im anwendungs konsistenten Zustand hatte.
 
 </dd> <dt>
 
 <span id="Crash_Consistent"></span><span id="crash_consistent"></span><span id="CRASH_CONSISTENT"></span>
 
-<span id="Crash_Consistent"></span><span id="crash_consistent"></span><span id="CRASH_CONSISTENT"></span>**Absturzkons konsistent** (2)
+<span id="Crash_Consistent"></span><span id="crash_consistent"></span><span id="CRASH_CONSISTENT"></span>**Absturz konsistent** (2)
 
 
 </dt> <dd>
 
-Das zuletzt angewendete Delta gibt einen Zeitpunkt an, zu dem sich das virtuelle System im absturzkonsistenten Zustand befand.
+Das zuletzt angewendete Delta gibt einen Zeitpunkt an, zu dem sich das virtuelle System im absturzeinheitlichen Zustand hatte.
 
 </dd> <dt>
 
 <span id="Group_Crash_Consistent"></span><span id="group_crash_consistent"></span><span id="GROUP_CRASH_CONSISTENT"></span>
 
-<span id="Group_Crash_Consistent"></span><span id="group_crash_consistent"></span><span id="GROUP_CRASH_CONSISTENT"></span>**Gruppenabsturz konsistent** (3)
+<span id="Group_Crash_Consistent"></span><span id="group_crash_consistent"></span><span id="GROUP_CRASH_CONSISTENT"></span>**Absturz konsistent für Gruppe** (3)
 
 
 </dt> <dd>
 
-Das zuletzt angewendete Delta gibt einen Zeitpunkt an, zu dem sich die Gruppe im absturzkonsistenten Zustand befand.
+Das zuletzt angewendete Delta gibt einen Zeitpunkt an, zu dem sich die Gruppe im absturzeinheitlichen Zustand hatte.
 
 </dd> </dl>
 
@@ -205,7 +205,7 @@ Datentyp: **DateTime**
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Der Zeitpunkt, zu dem die letzte Replikation auf die Wiederherstellung für die virtuelle Systemsammlung angewendet wird.
+Der Zeitpunkt, zu dem die letzte Replikation auf die Wiederherstellung für die Sammlung des virtuellen Systems angewendet wird.
 
 > [!Note]  
 > Hinzugefügt in Windows 10 Version 1703.
@@ -223,7 +223,7 @@ Datentyp: **Zeichenfolgenarray**
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Array von VM-IDs, die im letzten Anwendungszyklus erfolgreich angewendet wurden.
+Array von ID-Kennungen für virtuelle Computer, die im letzten Anwendungszyklus erfolgreich angewendet wurden.
 
 > [!Note]  
 > Hinzugefügt in Windows 10 Version 1703.
@@ -252,7 +252,7 @@ Replikationstyp für die Sammlung des virtuellen Systems.
 
 <span id="None"></span><span id="none"></span><span id="NONE"></span>
 
-**None** (0)
+**Keine** (0)
 
 
 </dt> <dd></dd> <dt>
@@ -342,7 +342,7 @@ Replikationsstatus für die Sammlung des virtuellen Systems.
 
 <span id="Committed"></span><span id="committed"></span><span id="COMMITTED"></span>
 
-**Commit** (6)
+**Committed** (6)
 
 
 </dt> <dd></dd> <dt>
@@ -363,21 +363,21 @@ Replikationsstatus für die Sammlung des virtuellen Systems.
 
 <span id="Waiting_to_start_resynchronization"></span><span id="waiting_to_start_resynchronization"></span><span id="WAITING_TO_START_RESYNCHRONIZATION"></span>
 
-**Warten auf den Start der erneuten Synchronisierung** (9)
+**Warten auf den Start der Neusynchronisierung** (9)
 
 
 </dt> <dd></dd> <dt>
 
 <span id="Resynchronizing"></span><span id="resynchronizing"></span><span id="RESYNCHRONIZING"></span>
 
-**Neusynchronisierung** (10)
+**Erneute Synchronisierung** (10)
 
 
 </dt> <dd></dd> <dt>
 
 <span id="Planned_failover_initiatedRepurpose_initiatedTest_failover_initiatedPartially_enabled"></span><span id="planned_failover_initiatedrepurpose_initiatedtest_failover_initiatedpartially_enabled"></span><span id="PLANNED_FAILOVER_INITIATEDREPURPOSE_INITIATEDTEST_FAILOVER_INITIATEDPARTIALLY_ENABLED"></span>
 
-**Geplantes Failover initiiertRepurpose-initiiertTestfailover initiiertPartially aktiviert** (11)
+**Geplantes Failover initiiertRepurposeinitiatedTest failover initiatedPartially enabled** (11)
 
 
 </dt> <dd></dd> <dt>
@@ -427,13 +427,13 @@ Replikationsstatus für die Sammlung des virtuellen Systems.
 |-------------------------------------|---------------------------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | \[Windows 10 Nur Desktop-Apps\]<br/>                                                             |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2016<br/>                                                                          |
-| Namespace<br/>                | \\Root-Virtualisierung \\ v2<br/>                                                                     |
+| Namespace<br/>                | \\Stammvirtualisierung \\ v2<br/>                                                                     |
 | MOF<br/>                      | <dl> <dt>WindowsVirtualization.V2.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Vmms.exe</dt> </dl>                     |
 
 
 
-## <a name="see-also"></a>Weitere Informationen:
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 

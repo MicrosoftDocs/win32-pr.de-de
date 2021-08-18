@@ -1,7 +1,7 @@
 ---
-description: Die issrkauthcompatible-Methode der Win32- \_ TPM-Klasse gibt an, ob die SRK-Autorisierung (Storage Root Key) mit dem von Windows Vista erwarteten Wert kompatibel ist.
+description: Die IsSrkAuthCompatible-Methode der Win32 \_ Tpm-Klasse gibt an, ob die SRK-Autorisierung (Storage Root Key) mit dem von Windows Vista erwarteten Wert kompatibel ist.
 ms.assetid: ce6d05b8-673a-40ab-a1d7-3fedfd099306
-title: Issrkauthcompatible-Methode der Win32_Tpm-Klasse
+title: IsSrkAuthCompatible-Methode der Win32_Tpm-Klasse
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,16 +13,16 @@ api_type:
 - COM
 api_location:
 - Win32_tpm.dll
-ms.openlocfilehash: f5250f8d3f9ad38f9d4c46350e06e0fe32f756dc
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 435829389749d7f7e81552aa88dd00aa211fd74ae079c93c97b5baff3c7a3c4d
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "103866956"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118891852"
 ---
-# <a name="issrkauthcompatible-method-of-the-win32_tpm-class"></a>Issrkauthcompatible-Methode der Win32- \_ TPM-Klasse
+# <a name="issrkauthcompatible-method-of-the-win32_tpm-class"></a>IsSrkAuthCompatible-Methode der Win32 \_ Tpm-Klasse
 
-Die **issrkauthcompatible** -Methode der [**Win32- \_ TPM**](win32-tpm.md) -Klasse gibt an, ob die SRK-Autorisierung (Storage Root Key) mit dem von Windows Vista erwarteten Wert kompatibel ist.
+Die **IsSrkAuthCompatible-Methode** der [**Win32 \_ Tpm-Klasse**](win32-tpm.md) gibt an, ob die SRK-Autorisierung (Storage Root Key) mit dem von Windows Vista erwarteten Wert kompatibel ist.
 
 ## <a name="syntax"></a>Syntax
 
@@ -39,20 +39,20 @@ uint32 IsSrkAuthCompatible(
 
 <dl> <dt>
 
-*Issrkauthcompatible* \[ vorgenommen\]
+*IsSrkAuthCompatible* \[ out\]
 </dt> <dd>
 
-Typ: **booleschen**
+Typ: **boolescher Wert**
 
-**True** gibt an, dass der SRK-Autorisierungs Wert den Wert 0 (null) aufweist.
+True gibt an, dass der SRK-Autorisierungswert den Wert 0 (null) hat.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Typ: **UInt32**
+Typ: **uint32**
 
-Alle TPM-Fehler sowie Fehler, die für die TPM-Basisdienste spezifisch sind, können zurückgegeben werden.
+Alle TPM-Fehler sowie Fehler, die spezifisch für TPM-Basisdienste sind, können zurückgegeben werden.
 
 Allgemeine Rückgabecodes sind unten aufgeführt.
 
@@ -66,9 +66,9 @@ Allgemeine Rückgabecodes sind unten aufgeführt.
 
  
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Managed Object Format-Dateien (MOF) enthalten die Definitionen für Windows-Verwaltungsinstrumentation (WMI)-Klassen. MOF-Dateien werden nicht als Teil des Windows SDK installiert. Sie werden auf dem Server installiert, wenn Sie die zugehörige Rolle mithilfe der Server-Manager hinzufügen. Weitere Informationen zu MOF-Dateien finden Sie unter [Managed Object Format (MOF)](../wmisdk/managed-object-format--mof-.md).
+Managed Object Format -Dateien (MOF) enthalten die Definitionen für Windows Management Instrumentation (WMI)-Klassen. MOF-Dateien werden nicht als Teil des Windows SDK installiert. Sie werden auf dem Server installiert, wenn Sie die zugeordnete Rolle mithilfe der Server-Manager hinzufügen. Weitere Informationen zu MOF-Dateien finden Sie unter [Managed Object Format (MOF).](../wmisdk/managed-object-format--mof-.md)
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -76,19 +76,19 @@ Managed Object Format-Dateien (MOF) enthalten die Definitionen für Windows-Verw
 
 | Anforderung | Wert |
 |-------------------------------------|-------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                            |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/>                                      |
-| Namespace<br/>                | Root \\ CIMV2 \\ Security- \\ mikrosofttpm<br/>                                            |
-| MOF<br/>                      | <dl> <dt>Win32- \_ TPM. MOF</dt> </dl> |
-| DLL<br/>                      | <dl> <dt>Win32- \_tpm.dll</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur Vista-Desktop-Apps\]<br/>                                            |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/>                                      |
+| Namespace<br/>                | Root \\ CIMV2 \\ Security \\ MicrosoftTpm<br/>                                            |
+| MOF<br/>                      | <dl> <dt>Win32 \_ tpm.mof</dt> </dl> |
+| DLL<br/>                      | <dl> <dt>Win32 \_tpm.dll</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Win32- \_ TPM**](win32-tpm.md)
+[**Win32 \_ Tpm**](win32-tpm.md)
 </dt> </dl>
 
  

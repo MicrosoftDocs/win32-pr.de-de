@@ -1,11 +1,11 @@
 ---
 title: Generation-Qualifier-Attribut
-description: 'Gibt eine Person-Generierung an. Beispiel: Jr. oder II.'
+description: 'Gibt eine Personengenerierung an. Beispiel: Jr. oder II.'
 ms.assetid: 6b882114-3273-43ff-8df3-5b23c98a2dae
 ms.tgt_platform: multiple
 keywords:
-- AD-Schema für Generation-Qualifier-Attribut
-- generationqualifier-Attribut, AD-Schema
+- Generation-Qualifier AD-Schema
+- generationQualifier-Attribut AD-Schema
 topic_type:
 - apiref
 api_name:
@@ -14,28 +14,28 @@ api_type:
 - Schema
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: cc29fdc6bc32273113c5daab2482465535dee145
-ms.sourcegitcommit: b77ace27b0432e7cd3863191b11926be032fbe2f
+ms.openlocfilehash: c7c438269199f55533d2d379a2cd059dc421d80060f504ed18e0ff72ab37bd97
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "106340042"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118961359"
 ---
 # <a name="generation-qualifier-attribute"></a>Generation-Qualifier-Attribut
 
-Gibt eine Person-Generierung an. Beispiel: Jr. oder II.
+Gibt eine Personengenerierung an. Beispiel: Jr. oder II.
 
 
 
 | Eingabe | Wert |
 |-------------------|---------------------------------------------|
 | CN                | Generation-Qualifier                        |
-| LDAP-Display-Name | generationqualifizierer                         |
+| Ldap-Anzeigename | generationQualifier                         |
 | Size              | \-                                          |
-| Berechtigung aktualisieren  | Domänenadministrator                        |
-| Aktualisierungshäufigkeit  | \-                                          |
+| Aktualisieren von Berechtigungen  | Domänenadministrator                        |
+| Updatehäufigkeit  | \-                                          |
 | Attribute-Id      | 2.5.4.44                                    |
-| System-ID-GUID    | 16775804-47F 3-11d1-a9c3-0000 C1        |
+| System-Id-Guid    | 16775804-47f3-11d1-a9c3-0000f80367c1        |
 | Syntax            | [**String(Unicode)**](s-string-unicode.md) |
 
 
@@ -43,7 +43,7 @@ Gibt eine Person-Generierung an. Beispiel: Jr. oder II.
 ## <a name="implementations"></a>Implementierungen
 
 -   [**Windows 2000 Server**](#windows-2000-server)
--   [**Windows Server 2003**](#windows-server-2003)
+-   [**Windows Server 2003**](#windows-server-2003)
 -   [**Windows Server 2003 R2**](#windows-server-2003-r2)
 -   [**Windows Server 2008**](#windows-server-2008)
 -   [**Windows Server 2008 R2**](#windows-server-2008-r2)
@@ -56,12 +56,12 @@ Gibt eine Person-Generierung an. Beispiel: Jr. oder II.
 | Eingabe | Wert |
 |------------------------|--------------------------------------------------------------------|
 | Link-ID                | \-                                                                 |
-| MAPI-Id                | 0x8c53                                                             |
+| MAPI-Id                | 0x8C53                                                             |
 | System-Only            | False                                                              |
-| Ist-einwertig       | Richtig                                                               |
+| Is-Single-Valued       | True                                                               |
 | Ist indiziert             | False                                                              |
 | Im globalen Katalog      | False                                                              |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                       |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                       |
 | Range-Lower            | 1                                                                  |
 | Range-Upper            | 64                                                                 |
 | Search-Flags           | 0x00000000                                                         |
@@ -70,19 +70,19 @@ Gibt eine Person-Generierung an. Beispiel: Jr. oder II.
 
 
 
-## <a name="windows-server-2003"></a>Windows Server 2003
+## <a name="windows-server-2003"></a>Windows Server 2003
 
 
 
 | Eingabe | Wert |
 |------------------------|--------------------------------------------------------------------|
 | Link-ID                | \-                                                                 |
-| MAPI-Id                | 0x8c53                                                             |
+| MAPI-Id                | 0x8C53                                                             |
 | System-Only            | False                                                              |
-| Ist-einwertig       | Richtig                                                               |
+| Is-Single-Valued       | True                                                               |
 | Ist indiziert             | False                                                              |
 | Im globalen Katalog      | False                                                              |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                       |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                       |
 | Range-Lower            | 1                                                                  |
 | Range-Upper            | 64                                                                 |
 | Search-Flags           | 0x00000000                                                         |
@@ -98,12 +98,12 @@ Gibt eine Person-Generierung an. Beispiel: Jr. oder II.
 | Eingabe | Wert |
 |------------------------|--------------------------------------------------------------------|
 | Link-ID                | \-                                                                 |
-| MAPI-Id                | 0x8c53                                                             |
+| MAPI-Id                | 0x8C53                                                             |
 | System-Only            | False                                                              |
-| Ist-einwertig       | Richtig                                                               |
+| Is-Single-Valued       | True                                                               |
 | Ist indiziert             | False                                                              |
 | Im globalen Katalog      | False                                                              |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                       |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                       |
 | Range-Lower            | 1                                                                  |
 | Range-Upper            | 64                                                                 |
 | Search-Flags           | 0x00000000                                                         |
@@ -119,12 +119,12 @@ Gibt eine Person-Generierung an. Beispiel: Jr. oder II.
 | Eingabe | Wert |
 |------------------------|--------------------------------------------------------------------|
 | Link-ID                | \-                                                                 |
-| MAPI-Id                | 0x8c53                                                             |
+| MAPI-Id                | 0x8C53                                                             |
 | System-Only            | False                                                              |
-| Ist-einwertig       | Richtig                                                               |
+| Is-Single-Valued       | True                                                               |
 | Ist indiziert             | False                                                              |
 | Im globalen Katalog      | False                                                              |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                       |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                       |
 | Range-Lower            | 1                                                                  |
 | Range-Upper            | 64                                                                 |
 | Search-Flags           | 0x00000000                                                         |
@@ -140,12 +140,12 @@ Gibt eine Person-Generierung an. Beispiel: Jr. oder II.
 | Eingabe | Wert |
 |------------------------|--------------------------------------------------------------------|
 | Link-ID                | \-                                                                 |
-| MAPI-Id                | 0x8c53                                                             |
+| MAPI-Id                | 0x8C53                                                             |
 | System-Only            | False                                                              |
-| Ist-einwertig       | Richtig                                                               |
+| Is-Single-Valued       | True                                                               |
 | Ist indiziert             | False                                                              |
 | Im globalen Katalog      | False                                                              |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                       |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                       |
 | Range-Lower            | 1                                                                  |
 | Range-Upper            | 64                                                                 |
 | Search-Flags           | 0x00000000                                                         |
@@ -161,12 +161,12 @@ Gibt eine Person-Generierung an. Beispiel: Jr. oder II.
 | Eingabe | Wert |
 |------------------------|--------------------------------------------------------------------|
 | Link-ID                | \-                                                                 |
-| MAPI-Id                | 0x8c53                                                             |
+| MAPI-Id                | 0x8C53                                                             |
 | System-Only            | False                                                              |
-| Ist-einwertig       | Richtig                                                               |
+| Is-Single-Valued       | True                                                               |
 | Ist indiziert             | False                                                              |
 | Im globalen Katalog      | False                                                              |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                       |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                       |
 | Range-Lower            | 1                                                                  |
 | Range-Upper            | 64                                                                 |
 | Search-Flags           | 0x00000000                                                         |

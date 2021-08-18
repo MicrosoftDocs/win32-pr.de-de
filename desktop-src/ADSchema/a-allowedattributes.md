@@ -4,8 +4,8 @@ description: Attribute, die einer Klasse zugewiesen werden dürfen.
 ms.assetid: ea73d3b9-51fc-486e-a5c7-f5123c5620bf
 ms.tgt_platform: multiple
 keywords:
-- Allowed-Attributes AD-Attributschema
-- ALLOWEDAttributes-Attribut AD-Schema
+- Allowed-Attributes AD-Schema
+- allowedAttributes-Attribut AD-Schema
 topic_type:
 - apiref
 api_name:
@@ -35,7 +35,7 @@ Attribute, die einer Klasse zugewiesen werden dürfen.
 | Aktualisieren von Berechtigungen  | \-                                                              |
 | Updatehäufigkeit  | \-                                                              |
 | Attribute-Id      | 1.2.840.113556.1.4.913                                          |
-| System-ID-GUID    | 9a7ad940-ca53-11d1-bbd0-0080c76670c0                            |
+| System-Id-Guid    | 9a7ad940-ca53-11d1-bbd0-0080c76670c0                            |
 | Syntax            | [**String(Object-Identifier)**](s-string-object-identifier.md) |
 
 
@@ -59,7 +59,7 @@ Attribute, die einer Klasse zugewiesen werden dürfen.
 | Link-ID                | \-                              |
 | MAPI-Id                | \-                              |
 | System-Only            | Richtig                            |
-| Ist einwertig       | Falsch                           |
+| Is-Single-Valued       | Falsch                           |
 | Ist indiziert             | Falsch                           |
 | Im globalen Katalog      | Falsch                           |
 | NT-Security-Descriptor | O:BAG:BAD:S:                    |
@@ -80,7 +80,7 @@ Attribute, die einer Klasse zugewiesen werden dürfen.
 | Link-ID                | \-                              |
 | MAPI-Id                | \-                              |
 | System-Only            | Richtig                            |
-| Ist einwertig       | Falsch                           |
+| Is-Single-Valued       | Falsch                           |
 | Ist indiziert             | Falsch                           |
 | Im globalen Katalog      | Falsch                           |
 | NT-Security-Descriptor | O:BAG:BAD:S:                    |
@@ -101,7 +101,7 @@ Attribute, die einer Klasse zugewiesen werden dürfen.
 | Link-ID                | \-                              |
 | MAPI-Id                | \-                              |
 | System-Only            | Richtig                            |
-| Ist einwertig       | Falsch                           |
+| Is-Single-Valued       | Falsch                           |
 | Ist indiziert             | Falsch                           |
 | Im globalen Katalog      | Falsch                           |
 | NT-Security-Descriptor | O:BAG:BAD:S:                    |
@@ -122,7 +122,7 @@ Attribute, die einer Klasse zugewiesen werden dürfen.
 | Link-ID                | \-                              |
 | MAPI-Id                | \-                              |
 | System-Only            | Richtig                            |
-| Is-Single-Valued       | Falsch                           |
+| Ist einwertig       | Falsch                           |
 | Ist indiziert             | Falsch                           |
 | Im globalen Katalog      | Falsch                           |
 | NT-Security-Descriptor | O:BAG:BAD:S:                    |
@@ -143,7 +143,7 @@ Attribute, die einer Klasse zugewiesen werden dürfen.
 | Link-ID                | \-                              |
 | MAPI-Id                | \-                              |
 | System-Only            | Richtig                            |
-| Is-Single-Valued       | Falsch                           |
+| Ist einwertig       | Falsch                           |
 | Ist indiziert             | Falsch                           |
 | Im globalen Katalog      | Falsch                           |
 | NT-Security-Descriptor | O:BAG:BAD:S:                    |
@@ -164,7 +164,7 @@ Attribute, die einer Klasse zugewiesen werden dürfen.
 | Link-ID                | \-                              |
 | MAPI-Id                | \-                              |
 | System-Only            | Richtig                            |
-| Is-Single-Valued       | Falsch                           |
+| Ist einwertig       | Falsch                           |
 | Ist indiziert             | Falsch                           |
 | Im globalen Katalog      | Falsch                           |
 | NT-Security-Descriptor | O:BAG:BAD:S:                    |
@@ -185,7 +185,7 @@ Attribute, die einer Klasse zugewiesen werden dürfen.
 | Link-ID                | \-                              |
 | MAPI-Id                | \-                              |
 | System-Only            | Richtig                            |
-| Is-Single-Valued       | Falsch                           |
+| Ist einwertig       | Falsch                           |
 | Ist indiziert             | Falsch                           |
 | Im globalen Katalog      | Falsch                           |
 | NT-Security-Descriptor | O:BAG:BAD:S:                    |

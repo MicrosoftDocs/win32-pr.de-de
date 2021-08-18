@@ -3,7 +3,7 @@ title: WM_POINTERDOWN Meldung
 description: Wird gesendet, wenn ein Zeiger den Kontakt über den Clientbereich eines Fensters annimmt.
 ms.assetid: 3bdc37da-227c-4be1-bf0b-99704b8ac000
 keywords:
-- WM_POINTERDOWN Der Nachrichteneingabenachrichten und -benachrichtigungen
+- WM_POINTERDOWN Nachrichteneingabenachrichten und -benachrichtigungen
 topic_type:
 - apiref
 api_name:
@@ -14,12 +14,12 @@ api_type:
 - HeaderDef
 ms.topic: article
 ms.date: 02/03/2020
-ms.openlocfilehash: 9f94bf4474e208d0b1d29df7a5e2939d7826ca77
-ms.sourcegitcommit: 1f917afc149b5cc449a4a25a87de311e4842734b
+ms.openlocfilehash: fd2c5900cba4a66b4f7cf94f1df362ddc0f29f3d258b972b77ad63f3fd45a5ea
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/13/2021
-ms.locfileid: "113689203"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118481981"
 ---
 # <a name="wm_pointerdown-message"></a>WM_POINTERDOWN Meldung
 
@@ -28,7 +28,7 @@ Wird gesendet, wenn ein Zeiger den Kontakt über den Clientbereich eines Fenster
 Ein Fenster empfängt diese Meldung über seine [**WindowProc-Funktion.**](/previous-versions/windows/desktop/legacy/ms633573(v=vs.85))
 
 > \[! Wichtig\]  
-> Desktop-Apps sollten DPI-fähige Apps sein. Wenn Ihre App nicht DPI-bewusst ist, können Bildschirmkoordinaten, die in Zeigermeldungen und zugehörigen Strukturen enthalten sind, aufgrund der DPI-Virtualisierung ungenau erscheinen. Die DPI-Virtualisierung bietet Unterstützung für die automatische Skalierung für Anwendungen, die nicht DPI-fähige Anwendungen sind und standardmäßig aktiv sind (Benutzer können sie deaktivieren). Weitere Informationen finden Sie unter [Schreiben von Win32-Anwendungen mit hohem DPI-Anteil.](/previous-versions//dd464660(v=vs.85))
+> Desktop-Apps sollten DPI-fähige Apps sein. Wenn Ihre App nicht DPI-bewusst ist, können Bildschirmkoordinaten, die in Zeigermeldungen und zugehörigen Strukturen enthalten sind, aufgrund der DPI-Virtualisierung ungenau erscheinen. Die DPI-Virtualisierung bietet Unterstützung für die automatische Skalierung für Anwendungen, die nicht DPI-bewusst sind und standardmäßig aktiv sind (Benutzer können sie deaktivieren). Weitere Informationen finden Sie unter [Schreiben von Win32-Anwendungen mit hohem DPI-Anteil.](/previous-versions//dd464660(v=vs.85))
 
  
 
@@ -60,14 +60,14 @@ Enthält Informationen über den Zeiger. Verwenden Sie die folgenden Makros, um 
 -   [**IS_POINTER_SECONDBUTTON_WPARAM**](/previous-versions/windows/desktop/api)(wParam): Ein Flag, das angibt, ob eine sekundäre Aktion vorhanden ist.
     -   Dies entspricht einer Nach-unten-Taste mit der rechten Maustaste.
     -   Für einen Stiftzeiger wird dieser festgelegt, wenn er mit der Digitizeroberfläche in Kontakt steht und die Stiftschaltfläche gedrückt wird.
--   [**IS_POINTER_THIRDBUTTON_WPARAM**](/previous-versions/windows/desktop/api)(wParam): ein Flag, das angibt, ob eine oder mehrere tertiäre Aktionen basierend auf dem Zeigertyp vorhanden sind; -Anwendungen, die auf bildungsbezogene Aktionen reagieren möchten, müssen spezifische Informationen für den Zeigertyp abrufen, um zu bestimmen, auf welche tertiären Schaltflächen gedrückt werden. Beispielsweise kann eine Anwendung die Schaltflächenzustände eines Stifts bestimmen, indem [**Sie GetPointerPenInfo**](/previous-versions/windows/desktop/api) aufrufen und die Flags untersuchen, die Schaltflächenzustände angeben.
+-   [**IS_POINTER_THIRDBUTTON_WPARAM**](/previous-versions/windows/desktop/api)(wParam): ein Flag, das angibt, ob eine oder mehrere tertiäre Aktionen basierend auf dem Zeigertyp vorhanden sind. -Anwendungen, die auf bildungsbezogene Aktionen reagieren möchten, müssen spezifische Informationen für den Zeigertyp abrufen, um zu bestimmen, auf welche tertiären Schaltflächen gedrückt werden. Beispielsweise kann eine Anwendung die Schaltflächenzustände eines Stifts bestimmen, indem [**Sie GetPointerPenInfo**](/previous-versions/windows/desktop/api) aufrufen und die Flags untersuchen, die Schaltflächenzustände angeben.
 -   [**IS_POINTER_FOURTHBUTTON_WPARAM**](/previous-versions/windows/desktop/api)(wParam): Ein Flag, das angibt, ob der angegebene Zeiger die vierte Aktion ausgeführt hat. Anwendungen, die auf vierte Aktionen reagieren möchten, müssen spezifische Informationen für den Zeigertyp abrufen, um zu bestimmen, ob die erste erweiterte Mausschaltfläche (XButton1) gedrückt wird.
 -   [**IS_POINTER_FIFTHBUTTON_WPARAM**](/previous-versions/windows/desktop/api)(wParam): Ein [**Flag,**](pointer-flags-contants.md) das angibt, ob der angegebene Zeiger die fünfte Aktion ausgeführt hat. Anwendungen, die auf fünfte Aktionen reagieren möchten, müssen spezifische Informationen für den Zeigertyp abrufen, um zu bestimmen, ob die zweite erweiterte Maustaste (XButton2) gedrückt wird.
 
     Weitere Informationen finden Sie unter [**Zeigerflags.**](pointer-flags-contants.md)
 
     > [!Note]  
-    > Für einen zeigenden Zeiger ist keines der Schaltflächenflags festgelegt. Dies entspricht einer Mauszeigerbewegung ohne Nach-unten-Maustasten. Eine Anwendung kann die Schaltflächenzustände eines Mauszeigers bestimmen, z. B. durch Aufrufen von [**GetPointerPenInfo**](/previous-versions/windows/desktop/api) und Untersuchen der Flags, die Schaltflächenzustände angeben.
+    > Für einen zeigenden Zeiger ist keines der Schaltflächenflags festgelegt. Dies entspricht einer Mauszeigerbewegung ohne Nach-unten-Maustasten. Eine Anwendung kann die Schaltflächenzustände eines Stifts mit dem Mauszeiger bestimmen, indem sie beispielsweise [**GetPointerPenInfo**](/previous-versions/windows/desktop/api) aufruft und die Flags untersucht, die Schaltflächenzustände angeben.
 
      
 
@@ -94,7 +94,7 @@ Verwenden Sie die folgenden Makros, um die physischen Bildschirmkoordinaten des 
 
 Wenn eine Anwendung diese Nachricht verarbeitet, sollte sie 0 (null) zurückgeben.
 
-Wenn die Anwendung diese Nachricht nicht verarbeitet, sollte [**sie DefWindowProc**](/windows/win32/api/winuser/nf-winuser-defwindowproca)aufrufen.
+Wenn die Anwendung diese Nachricht nicht verarbeitet, sollte sie [**DefWindowProc**](/windows/win32/api/winuser/nf-winuser-defwindowproca)aufrufen.
 
 ## <a name="remarks"></a>Hinweise
 
@@ -105,7 +105,7 @@ Wenn die Anwendung diese Nachricht nicht verarbeitet, sollte [**sie DefWindowPro
 
 Jeder Zeiger verfügt während seiner Lebensdauer über einen eindeutigen Zeigerbezeichner. Die Lebensdauer eines Zeigers beginnt, wenn er zum ersten Mal erkannt wird.
 
-Eine [**WM_POINTERENTER**](wm-pointerenter.md) Meldung wird generiert, wenn ein Zeiger mit dem Mauszeiger erkannt wird. Eine **WM_POINTERDOWN** Nachricht gefolgt von einer **WM_POINTERENTER** Meldung wird generiert, wenn ein Zeiger erkannt wird, der nicht mit dem Mauszeiger zeigt.
+Eine [**WM_POINTERENTER**](wm-pointerenter.md) Meldung wird generiert, wenn ein Zeiger mit dem Mauszeiger erkannt wird. Eine **WM_POINTERDOWN** Nachricht gefolgt von einer **WM_POINTERENTER** Nachricht wird generiert, wenn ein Zeiger erkannt wird, der nicht mit dem Mauszeiger zeigt.
 
 Während seiner Lebensdauer kann ein Zeiger eine Reihe von [**WM_POINTERUPDATE**](wm-pointerupdate.md) Nachrichten generieren, während er mit dem Mauszeiger oder im Kontakt ist.
 
@@ -131,7 +131,7 @@ Verwenden Sie die [**GetPointerInfo-Funktion,**](/previous-versions/windows/desk
 
 Verwenden Sie die [**GetKeyState-Funktion,**](/windows/win32/api/winuser/nf-winuser-getkeystate) um die dieser Meldung zugeordneten Tastenzustände des Tastaturmodifizierer zu bestimmen. Um beispielsweise zu erkennen, dass die ALT-Taste gedrückt wurde, überprüfen Sie, ob GetKeyState(VK_MENU) &lt; 0 lautet.
 
-Beachten Sie Folgendes: Wenn die Anwendung diese Nachricht nicht verarbeitet, generiert [**DefWindowProc**](/windows/win32/api/winuser/nf-winuser-defwindowproca) möglicherweise eine oder mehrere [**WM_GESTURE**](../wintouch/wm-gesture.md) Nachrichten, wenn die Sequenz der Eingabe von diesem und möglicherweise anderen Zeigern als Geste erkannt wird. Wenn eine Geste nicht erkannt wird, generiert **DefWindowProc** möglicherweise Mauseingaben.
+Beachten Sie Folgendes: Wenn die Anwendung diese Nachricht nicht verarbeitet, generiert [**DefWindowProc**](/windows/win32/api/winuser/nf-winuser-defwindowproca) möglicherweise eine oder mehrere [**WM_GESTURE**](../wintouch/wm-gesture.md) Nachrichten, wenn die Sequenz der Eingabe von dieser und möglicherweise anderen Zeigern als Geste erkannt wird. Wenn eine Geste nicht erkannt wird, generiert **DefWindowProc** möglicherweise Mauseingaben.
 
 Wenn eine Anwendung selektiv Zeigereingaben nutzt und den Rest an [**DefWindowProc**](/windows/win32/api/winuser/nf-winuser-defwindowproca)übergibt, ist das resultierende Verhalten nicht definiert.
 
@@ -139,7 +139,7 @@ Wenn ein Fenster die Erfassung eines Zeigers verliert und die [**WM_POINTERCAPTU
 
 ## <a name="examples"></a>Beispiele
 
-Das folgende Codebeispiel zeigt, wie [**sie IS_POINTER_FIRSTBUTTON_WPARAM**](/previous-versions/windows/desktop/api), [**GET_X_LPARAM**](/windows/win32/api/windowsx/nf-windowsx-get_x_lparam), [**GET_Y_LPARAM**](/windows/win32/api/windowsx/nf-windowsx-get_y_lparam)und [**IS_POINTER_SECONDBUTTON_WPARAM**](/previous-versions/windows/desktop/api)verwenden, um die relevanten Informationen abzurufen, die der **WM_POINTERDOWN** Nachricht zugeordnet sind.
+Im folgenden Codebeispiel wird gezeigt, wie [**sie IS_POINTER_FIRSTBUTTON_WPARAM**](/previous-versions/windows/desktop/api), [**GET_X_LPARAM**](/windows/win32/api/windowsx/nf-windowsx-get_x_lparam), [**GET_Y_LPARAM**](/windows/win32/api/windowsx/nf-windowsx-get_y_lparam)und [**IS_POINTER_SECONDBUTTON_WPARAM**](/previous-versions/windows/desktop/api)verwenden, um die relevanten Informationen abzurufen, die der **WM_POINTERDOWN** Nachricht zugeordnet sind.
 
 
 ```
@@ -158,7 +158,7 @@ else if (IS_POINTER_SECONDARYBUTTON_WPARAM(wParam))
 
 
 
-Das folgende Codebeispiel zeigt, wie [**GET_POINTERID_WPARAM**](/previous-versions/windows/desktop/api) verwendet wird, um die Zeiger-ID aus der **WM_POINTERDOWN-Nachricht** abzurufen.
+Im folgenden Codebeispiel wird veranschaulicht, wie [**GET_POINTERID_WPARAM**](/previous-versions/windows/desktop/api) verwendet wird, um die Zeiger-ID aus der **WM_POINTERDOWN-Nachricht** abzurufen.
 
 
 ```
@@ -255,7 +255,7 @@ default:
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 

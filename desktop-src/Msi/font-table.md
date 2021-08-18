@@ -1,27 +1,27 @@
 ---
-description: Die Schriftart Tabelle enthält die Informationen zum Registrieren von Schriftart Dateien beim System.
+description: Die Tabelle Schriftart enthält die Informationen zum Registrieren von Schriftartdateien beim System.
 ms.assetid: 5ddff430-a6f8-473b-8006-ac0124469a99
-title: Schriftart Tabelle
+title: Schriftarttabelle
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: c10208c7b9a14ca7f311aff71653a53a3da9ed0c
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 65efb786d4379bbe14fec0239cd8f3edee50f1b79a6413904b6e00331bc49a25
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "103960055"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118946981"
 ---
-# <a name="font-table"></a>Schriftart Tabelle
+# <a name="font-table"></a>Schriftarttabelle
 
-Die Schriftart Tabelle enthält die Informationen zum Registrieren von Schriftart Dateien beim System.
+Die Tabelle Schriftart enthält die Informationen zum Registrieren von Schriftartdateien beim System.
 
-Die Schriftart Tabelle enthält die folgenden Spalten.
+Die Tabelle Font enthält die folgenden Spalten.
 
 
 
-| Spalte    | Typ                         | Schlüssel | Nullwerte zulässig |
+| Spalte    | Typ                         | Key | Nullwerte zulässig |
 |-----------|------------------------------|-----|----------|
-| Datei\_    | [Bezeichner](identifier.md) | J   | N        |
+| Datei\_    | [Identifier](identifier.md) | J   | N        |
 | FontTitle | [Text](text.md)             | N   | J        |
 
 
@@ -35,28 +35,28 @@ Die Schriftart Tabelle enthält die folgenden Spalten.
 <span id="File_"></span><span id="file_"></span><span id="FILE_"></span>Datei\_
 </dt> <dd>
 
-Externer Schlüssel in den [Datei Tabellen](file-table.md) Eintrag für die Schriftart Datei. Es wird empfohlen, dass für die Komponente mit der Schriftart Datei der Ordner "fontsfolder" in der Verzeichnis \_ Spalte der [Komponenten Tabelle](component-table.md)angegeben ist.
+Externer Schlüssel in den [Dateitabelleneintrag](file-table.md) für die Schriftartdatei. Es wird empfohlen, dass für die Komponente, die die Schriftartdatei enthält, der in der Directory -Spalte der \_ [Component-Tabelle angegebene FontsFolder angegeben ist.](component-table.md)
 
 </dd> <dt>
 
 <span id="FontTitle"></span><span id="fonttitle"></span><span id="FONTTITLE"></span>FontTitle
 </dt> <dd>
 
-Der Schriftart Name. Es wird empfohlen, dass Sie diese Spalte für TrueType-Schriftarten und TrueType-Auflistungen Null belassen, da das Installationsprogramm die Schriftart nach dem Lesen des richtigen Schriftart Titels aus der Schriftart Datei registrieren kann. Wenn der Schriftart Name eingegeben wird, muss er mit dem Schriftart Titel aus der Schriftart Datei identisch sein. Sie müssen einen Titel für Schriftarten angeben, die keine eingebetteten Namen haben, z. b.. FON-Dateien.
+Schriftartname. Es wird empfohlen, diese Spalte für TrueType-Schriftarten und TrueType-Auflistungen null zu lassen, da das Installationsprogramm die Schriftart registrieren kann, nachdem der richtige Schriftarttitel aus der Schriftartdatei gelesen wurde. Wenn der Schriftartname eingegeben wird, muss er mit dem Titel der Schriftart aus der Schriftartdatei identisch sein. Sie müssen einen Titel für Schriftarten angeben, die keine eingebetteten Namen haben, z. B. FON-Dateien.
 
 </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Diese Tabelle wird beim Ausführen der [RegisterFonts-Aktion](registerfonts-action.md) oder der [unregisterfonts-Aktion](unregisterfonts-action.md) bezeichnet.
+Auf diese Tabelle wird verwiesen, wenn die [RegisterFonts-Aktion](registerfonts-action.md) oder die [UnregisterFonts-Aktion](unregisterfonts-action.md) ausgeführt wird.
 
-Wenn das FontTitle-Feld den Wert NULL hat, wird der Schriftart Name direkt aus der angegebenen Schriftart Datei gelesen. Wenn sich der in das FontTitle-Feld aufgezeichnete Schriftart Name von dem internen Schriftart Namen unterscheidet, der in der Schriftart Datei aufgezeichnet wurde, wird die Schriftart zweimal von der [RegisterFonts-Aktion](registerfonts-action.md)registriert.
+Wenn das FontTitle-Feld null gelassen wird, wird der Schriftartname direkt aus der angegebenen Schriftartdatei gelesen. Wenn sich der im Feld FontTitle aufgezeichnete Schriftartname vom internen Schriftartnamen unterscheidet, der in der Schriftartdatei aufgezeichnet wurde, wird die Schriftart zweimal von der [RegisterFonts-Aktion registriert.](registerfonts-action.md)
 
-Schriftart Dateien sollten nicht mit einer Sprach-ID erstellt werden, da die Schriftarten nicht über eine eingebettete Sprachen-ID-Ressource verfügen. Daher sollte die sprach Spalte der [Dateitabelle](file-table.md) für Schriftart Dateien Null belassen.
+Schriftartdateien sollten nicht mit einer Sprach-ID verfasst werden, da Schriftarten keine eingebettete Sprach-ID-Ressource haben. Daher sollte die Spalte Language der [Tabelle File](file-table.md) für Schriftartdateien NULL bleiben.
 
-Da das Installationsprogramm Schriftart Dateien nicht standardmäßig neu anzählt, können bereits vorhandene Schriftart Dateien beim Deinstallieren einer Anwendung mit Ihrer Komponente entfernt werden. Um sicherzustellen, dass eine Schriftart Datei nicht entfernt wird, können Autoren die **msidbcomponentattributesshareddllrefcount** -oder **msidbcomponentattributestribute** -Bitflags \_ \_ \_ für die Komponente, die die Schriftart Datei enthält, in der Spalte Attribute der MSI-Komponenten Tabelle festlegen.
+Da das Installationsprogramm schriftartendateien standardmäßig nicht aufzählt, können bereits vorhandene Schriftartdateien mit ihrer Komponente entfernt werden, wenn eine Anwendung deinstalliert wird. Um sicherzustellen, dass eine Schriftartdatei nicht entfernt wird, können Autoren die **Bitflags msidbComponentAttributesSharedDllRefCount** oder **msidbComponentAttributesPermanent** in der Spalte Attribute der Msi-Komponententabelle der Komponententabelle für die Komponente festlegen, die die \_ \_ \_ Schriftartdatei enthält.
 
-## <a name="validation"></a>Überprüfen
+## <a name="validation"></a>Überprüfung
 
 <dl>
 

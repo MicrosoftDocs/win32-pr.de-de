@@ -120,7 +120,7 @@ Dieses Attribut bestimmt die Dateiserverfreigabe. Sie wird in Verbindung mit ms-
 | Link-ID                | \-                                |
 | MAPI-Id                | \-                                |
 | System-Only            | Falsch                             |
-| Ist einwertig       | Richtig                              |
+| Is-Single-Valued       | Richtig                              |
 | Ist indiziert             | Falsch                             |
 | Im globalen Katalog      | Falsch                             |
 | NT-Security-Descriptor | O:BAG:BAD:S:                      |
@@ -141,7 +141,7 @@ Dieses Attribut bestimmt die Dateiserverfreigabe. Sie wird in Verbindung mit ms-
 | Link-ID                | \-                                |
 | MAPI-Id                | \-                                |
 | System-Only            | Falsch                             |
-| Ist einwertig       | Richtig                              |
+| Is-Single-Valued       | Richtig                              |
 | Ist indiziert             | Falsch                             |
 | Im globalen Katalog      | Falsch                             |
 | NT-Security-Descriptor | O:BAG:BAD:S:                      |

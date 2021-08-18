@@ -1,7 +1,7 @@
 ---
-description: Die Startzeit für das Beispiel. Dieser Wert ist nur gültig, wenn die%% amp; quot;%% amp; quot; \_ \_ \_ .
+description: Beispielstartzeit. Dieser Wert ist nur gültig, wenn die Membervariable CMediaSample::m \_ dwFlags das AM \_ SAMPLE \_ TIMEVALID-Flag enthält.
 ms.assetid: 31af979b-4c10-4f15-aa8a-90807b5cc156
-title: 'Cmediasample:: m_Start Member (amfilter. h)'
+title: CMediaSample::m_Start-Member (Amfilter.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,16 +16,16 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: 1c8be533c28a2b8a166d87d1751682cf6b09329b
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: c3d441bcea087614626bc107283e4d4905442774df586e3f10df5b78f472da19
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106369417"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118954429"
 ---
-# <a name="cmediasamplem_start-member"></a>Cmediasample:: m- \_ StartMember
+# <a name="cmediasamplem_start-member"></a>CMediaSample::m-Startmember \_
 
-Die Startzeit für das Beispiel. Dieser Wert ist nur gültig, wenn die%% amp [**; quot \_ ;**](cmediasample-m-dwflags.md) %% amp; quot \_ ; \_ .
+Beispielstartzeit. Dieser Wert ist nur gültig, wenn die [**Membervariable CMediaSample::m \_ dwFlags**](cmediasample-m-dwflags.md) das AM \_ SAMPLE \_ TIMEVALID-Flag enthält.
 
 ## <a name="syntax"></a>Syntax
 
@@ -42,16 +42,16 @@ REFERENCE_TIME m_Start;
 
 | Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Amfilter. h (Include Streams. h)</dt> </dl>                                                                                  |
-| Bibliothek<br/> | <dl> " <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Amfilter.h (include Streams.h)</dt> </dl>                                                                                  |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Verkaufsbuilds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Cmediasample-Klasse**](cmediasample.md)
+[**CMediaSample-Klasse**](cmediasample.md)
 </dt> </dl>
 
  

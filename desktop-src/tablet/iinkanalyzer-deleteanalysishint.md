@@ -1,7 +1,7 @@
 ---
-description: Entfernt einen Analyse Hinweis aus iinkanalyzer.
+description: Entfernt einen Analysehinweis aus IInkAnalyzer.
 ms.assetid: ba5498d4-d31c-4b3f-9004-0448e18d4835
-title: Iinkanalyzer::D eleteanalysishint-Methode (iacom. h)
+title: IInkAnalyzer::D eleteAnalysisHint-Methode (IACom.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,16 +13,16 @@ api_type:
 - COM
 api_location:
 - IACom.dll
-ms.openlocfilehash: f84f718701abd5bc76b55427aab9df072f758c3a
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 6f514f20ed99f7fc56725f582b815639cb9d8b3179e9e428845d7e066b6e3bf2
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104129468"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118967289"
 ---
-# <a name="iinkanalyzerdeleteanalysishint-method"></a>Iinkanalyzer::D eleteanalysishint-Methode
+# <a name="iinkanalyzerdeleteanalysishint-method"></a>IInkAnalyzer::D eleteAnalysisHint-Methode
 
-Entfernt einen Analyse Hinweis aus [**iinkanalyzer**](iinkanalyzer.md).
+Entfernt einen Analysehinweis aus [**IInkAnalyzer**](iinkanalyzer.md).
 
 ## <a name="syntax"></a>Syntax
 
@@ -39,24 +39,24 @@ HRESULT DeleteAnalysisHint(
 
 <dl> <dt>
 
-*phintto DELETE* \[ in\]
+*pHintToDelete* \[ In\]
 </dt> <dd>
 
-Der Analyse Hinweis von [**iinkanalyzer**](iinkanalyzer.md).
+Der Analysehinweis von [**IInkAnalyzer**](iinkanalyzer.md).
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Eine Beschreibung der Rückgabewerte finden Sie unter [Klassen und Schnittstellen-Ink-Analyse](classes-and-interfaces---ink-analysis.md).
+Eine Beschreibung der Rückgabewerte finden Sie unter [Klassen und Schnittstellen – Ink-Analyse](classes-and-interfaces---ink-analysis.md).
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Durch das Entfernen eines Analyse Hinweises wird der Bereich des Hinweises für die erneute Analyse nicht markiert. Um den Bereich innerhalb des Hinweises für die erneute Analyse zu markieren, verwenden Sie die [**iinkanalyzer:: setdirtyregion-Methode**](iinkanalyzer-setdirtyregion.md) , um den geänderten Bereich auf die Vereinigung des aktuellen geänderten Bereichs und Bereichs des Analyse Hinweises festzulegen.
+Durch das Entfernen eines Analysehinweises wird der Bereich des Hinweises nicht für die Erneute Analyse bezeichnet. Um den Bereich innerhalb des Hinweises für die Erneute Analyse zu markieren, verwenden Sie die [**IInkAnalyzer::SetDirtyRegion-Methode,**](iinkanalyzer-setdirtyregion.md) um den dirty-Bereich auf die Vereinigung des aktuellen dirty-Bereichs und -Bereichs des Analysehinweises zu setzen.
 
-Der Hinweis wird aus dem Analyzer entfernt. der [**icontextnode**](icontextnode.md) selbst wird jedoch nicht gelöscht.
+Der Hinweis wird aus dem Analyseprogramm entfernt. [**IContextNode selbst**](icontextnode.md) wird jedoch nicht gelöscht.
 
-Diese Methode gibt einen Fehlercode zurück, wenn ' *phintdedelete* ' ein [**icontextnode**](icontextnode.md) ist, der nicht vom Typ ' AnalysisHint ' ist (siehe [**icontextnode:: GetType**](icontextnode-gettype.md)).
+Diese Methode gibt einen Fehlercode zurück, wenn *pHintToDelete* ein [**IContextNode**](icontextnode.md) ist, der nicht vom Typ AnalysisHint ist (siehe [**IContextNode::GetType**](icontextnode-gettype.md)).
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -64,30 +64,30 @@ Diese Methode gibt einen Fehlercode zurück, wenn ' *phintdedelete* ' ein [**ico
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows XP Tablet PC Edition \[ Desktop-Apps\]<br/>                                                 |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur Desktop-Apps der XP Tablet PC Edition \[\]<br/>                                                 |
 | Unterstützte Mindestversion (Server)<br/> | Nicht unterstützt<br/>                                                                                     |
-| Header<br/>                   | <dl> <dt>Iacom. h (erfordert auch iacom \_ i. c)</dt> </dl> |
+| Header<br/>                   | <dl> <dt>IACom.h (erfordert auch IACom \_ i.c)</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>IACom.dll</dt> </dl>                          |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Iinkanalyzer**](iinkanalyzer.md)
+[**IInkAnalyzer**](iinkanalyzer.md)
 </dt> <dt>
 
-[**Iinkanalyzer:: feateanalysishint-Methode**](iinkanalyzer-createanalysishint.md)
+[**IInkAnalyzer::CreateAnalysisHint-Methode**](iinkanalyzer-createanalysishint.md)
 </dt> <dt>
 
-[**Iinkanalyzer:: GetAnalysisHints-Methode**](iinkanalyzer-getanalysishints.md)
+[**IInkAnalyzer::GetAnalysisHints-Methode**](iinkanalyzer-getanalysishints.md)
 </dt> <dt>
 
-[**Iinkanalyzer:: getanalysishintsbyname-Methode**](iinkanalyzer-getanalysishintsbyname.md)
+[**IInkAnalyzer::GetAnalysisHintsByName-Methode**](iinkanalyzer-getanalysishintsbyname.md)
 </dt> <dt>
 
-[Ink-Analyse Referenz](ink-analysis-reference.md)
+[Referenz zur Ink-Analyse](ink-analysis-reference.md)
 </dt> </dl>
 
  

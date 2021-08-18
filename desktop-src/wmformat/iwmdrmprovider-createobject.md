@@ -1,11 +1,11 @@
 ---
-title: Iwmdrmprovider-Methode "kreateobject" (wmdrmsdk. h)
-description: Die Methode "kreateobject" Ruft einen Zeiger auf eine angegebene Schnittstelle ab und erstellt bei Bedarf das implementierende Objekt.
+title: IWMDRMProvider CreateObject-Methode (Wmdrmsdk.h)
+description: Die CreateObject-Methode ruft einen Zeiger auf eine angegebene Schnittstelle ab und erstellt bei Bedarf das implementierende Objekt.
 ms.assetid: d408f7f3-9e49-4747-ac8f-d39db31d1240
 keywords:
-- Methode "kreateobject" Windows Media Format
-- Kreateobject-Methode Windows Media-Format, iwmdrmprovider-Schnittstelle
-- Iwmdrmprovider-Schnittstelle Windows Media-Format, Methode "kreateobject"
+- CreateObject-Methode windows Media Format
+- CreateObject-Methode windows Media Format , IWMDRMProvider-Schnittstelle
+- IWMDRMProvider-Schnittstelle windows Media Format , CreateObject-Methode
 topic_type:
 - apiref
 api_name:
@@ -17,16 +17,16 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 0c0422138391b0d6f5e38fbc81fd5141bd3d8535
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: f50341e33092b33b19ec3f41d968e0a1b7bc883ae959b200f6c7062e4c69996b
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106356358"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118700776"
 ---
-# <a name="iwmdrmprovidercreateobject-method"></a>Iwmdrmprovider:: kreateobject-Methode
+# <a name="iwmdrmprovidercreateobject-method"></a>IWMDRMProvider::CreateObject-Methode
 
-Die Methode " **kreateobject** " Ruft einen Zeiger auf eine angegebene Schnittstelle ab und erstellt bei Bedarf das implementierende Objekt.
+Die **CreateObject-Methode** ruft einen Zeiger auf eine angegebene Schnittstelle ab und erstellt bei Bedarf das implementierende Objekt.
 
 ## <a name="syntax"></a>Syntax
 
@@ -44,20 +44,20 @@ HRESULT CreateObject(
 
 <dl> <dt>
 
-*riid* \[ in\]
+*riid* \[ In\]
 </dt> <dd>
 
-Der Bezeichner der zu erstellenden Schnittstelle. Legen Sie auf einen der folgenden Werte fest.
+Bezeichner der zu erstellenden Schnittstelle. Legen Sie auf einen der folgenden Werte fest.
 
--   IID \_ iwmdrmlicenabmanagement
--   IID \_ iwmdrmlicensequery
--   IID \_ iwmdrmnetreceiver
--   IID \_ iwmdrmnettransmitter
--   IID \_ iwmdrmsecurity
+-   IID \_ IWMDRMLicenseManagement
+-   IID \_ IWMDRMLicenseQuery
+-   IID \_ IWMDRMNetReceiver
+-   IID \_ IWMDRMNetTransmitter
+-   IID \_ IWMDRMSecurity
 
 </dd> <dt>
 
-*ppvobject* \[ vorgenommen\]
+*ppvObject* \[ out\]
 </dt> <dd>
 
 Adresse eines Zeigers, der die Adresse der angeforderten Schnittstelle empfängt.
@@ -66,7 +66,7 @@ Adresse eines Zeigers, der die Adresse der angeforderten Schnittstelle empfängt
 
 ## <a name="return-value"></a>Rückgabewert
 
-Die-Methode gibt ein **HRESULT** zurück. Mögliches Werte (aber nicht die Einzigen) sind die in der folgenden Tabelle.
+Die Methode gibt ein **HRESULT** zurück. Mögliches Werte (aber nicht die Einzigen) sind die in der folgenden Tabelle.
 
 
 
@@ -88,31 +88,31 @@ Keine.
 
 | Anforderung | Wert |
 |--------------------|-----------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Wmdrmsdk. h</dt> </dl>   |
-| Bibliothek<br/> | <dl> <dt>Wmdrmsdk. lib</dt> </dl> |
+| Header<br/>  | <dl> <dt>Wmdrmsdk.h</dt> </dl>   |
+| Bibliothek<br/> | <dl> <dt>Wmdrmsdk.lib</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Iwmdrmprovider-Schnittstelle**](iwmdrmprovider.md)
+[**IWMDRMProvider-Schnittstelle**](iwmdrmprovider.md)
 </dt> <dt>
 
-[**Iwmdrmlicenabmanagement-Schnittstelle**](iwmdrmlicensemanagement.md)
+[**IWMDRMLicenseManagement-Schnittstelle**](iwmdrmlicensemanagement.md)
 </dt> <dt>
 
-[**Iwmdrmlicensequery-Schnittstelle**](iwmdrmlicensequery.md)
+[**IWMDRMLicenseQuery-Schnittstelle**](iwmdrmlicensequery.md)
 </dt> <dt>
 
-[**Iwmdrmnetreceiver-Schnittstelle**](iwmdrmnetreceiver.md)
+[**IWMDRMNetReceiver-Schnittstelle**](iwmdrmnetreceiver.md)
 </dt> <dt>
 
-[**Iwmdrmnettransmitter-Schnittstelle**](iwmdrmnettransmitter.md)
+[**IWMDRMNetTransmitter-Schnittstelle**](iwmdrmnettransmitter.md)
 </dt> <dt>
 
-[**Iwmdrmsecurity-Schnittstelle**](iwmdrmsecurity.md)
+[**IWMDRMSecurity-Schnittstelle**](iwmdrmsecurity.md)
 </dt> </dl>
 
  

@@ -1,40 +1,40 @@
 ---
-title: Sensor Anforderungen für sichere Biometrie
-description: Sensor Anforderungen für sichere Biometrie
+title: Sensoranforderungen für sichere Biometrie
+description: Sensoranforderungen für sichere Biometrie
 ms.assetid: 6D5709E9-7B6B-4D6C-BF85-C6FB5DF5A7EE
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 82f4e41f8300a124115c2b6cd380f904f216f491
-ms.sourcegitcommit: 592c9bbd22ba69802dc353bcb5eb30699f9e9403
+ms.openlocfilehash: ba76ee3b114f79d3c60adfa252f59cd2b8f98aa135e50faf93cf5ecf7314ad99
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "106337443"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118911792"
 ---
-# <a name="sensor-requirements-for-secure-biometrics"></a>Sensor Anforderungen für sichere Biometrie
+# <a name="sensor-requirements-for-secure-biometrics"></a>Sensoranforderungen für sichere Biometrie
 
-Microsoft nutzt Trusted Platform Module (TPM) 2,0, um sicherzustellen, dass auf der entsprechenden Hardware Software (bis auf Kernel Ebene) keine gültige biometrische Authentifizierung erzeugt, wenn der biometrische Benutzer des Benutzers zum Zeitpunkt der Authentifizierung nicht zur Verfügung gestellt wurde.
+Microsoft nutzt Trusted Platform Module (TPM) 2.0, um sicherzustellen, dass software (bis zu und einschließlich Schadsoftware auf Kernelebene) auf geeigneter Hardware keine gültige biometrische Authentifizierung erzeugen kann, wenn die biometrischen Daten des Benutzers zum Zeitpunkt der Authentifizierung nicht bereitgestellt wurden.
 
-Zu diesem Zweck verwenden wir Sitzungs basierte TPM 2,0-Autorisierungen und den Sensor zum Extrahieren und Abgleichen von Features in einer vertrauenswürdigen Ausführungsumgebung. Beim ersten Mal, wenn das Windows-Biometrieframework einen sicheren Sensor sieht (wie von der sicheren Sensor Funktion gemeldet), wird ein geheimer Schlüssel bereitgestellt, der zwischen dem sicheren biometrischen Sensor und dem TPM gemeinsam genutzt wird. Dieser geheime Schlüssel wird nie wieder für das Betriebssystem verfügbar gemacht und ist für jeden Sensor eindeutig.
+Hierzu verwenden wir sitzungsbasierte TPM 2.0-Autorisierungen und den Sensor, der die Featureextraktion und den Abgleich in einer vertrauenswürdigen Ausführungsumgebung vorträgt. Wenn das Windows Biometric Framework zum ersten Mal einen sicheren Sensor erkennt (wie von der Funktion für den sicheren Sensor gemeldet), wird ein Geheimnis bereitgestellt, das vom sicheren biometrischen Sensor und dem TPM gemeinsam genutzt wird. Dieses Geheimnis wird nie wieder für das Betriebssystem verfügbar gemacht und ist für jeden Sensor eindeutig.
 
-Zum Durchführen einer Authentifizierung wird vom Windows-Biometrieframework eine Sitzung mit dem TPM geöffnet und eine Nonce abgerufen. Die Nonce wird als Teil eines sicheren Vergleichs Vorgangs an den sicheren Sensor übermittelt. Der Sensor führt die Entsprechung in der vertrauenswürdigen Ausführungsumgebung aus. ist er erfolgreich, berechnet er einen HMAC über diese Nonce und die Identität des identifizierten Benutzers.
+Um eine Authentifizierung durchzuführen, öffnet das Windows Biometric Framework eine Sitzung mit dem TPM und erhält eine Nonce. Die Nonce wird im Rahmen eines Secure Match-Vorgangs an den sicheren Sensor übergeben. Der Sensor führt die Übereinstimmung in der vertrauenswürdigen Ausführungsumgebung aus und berechnet bei Erfolg einen HMAC über diese Nonce und die Identität des identifizierten Benutzers.
 
-Dieser HMAC kann vom Windows-Biometrieframework verwendet werden, um für den identifizierten Benutzer Kryptografievorgänge im TPM auszuführen. Der HMAC ist kurzlebig und läuft nach einigen Sekunden ab.
+Dieser HMAC kann vom Windows Biometric Framework verwendet werden, um kryptografische Vorgänge im TPM für den identifizierten Benutzer durchzuführen. Der HMAC ist kurzlebig und läuft nach einigen Sekunden ab.
 
-Mithilfe dieses Protokolls sind nach der anfänglichen Bereitstellung keine sensiblen Daten im Betriebssystem enthalten. Geheimnisse werden von TPM und dem sicheren Sensor gehalten, und das einzige, was während der Authentifizierung verfügbar gemacht wird, ist der kurzlebige HMAC.
+Bei Verwendung dieses Protokolls sind nach der ersten Bereitstellung keine vertraulichen Daten im Betriebssystem enthalten. Geheimnisse werden vom TPM und vom sicheren Sensor gespeichert, und während der Authentifizierung wird nur der kurzlebige HMAC verfügbar gemacht.
 
-## <a name="secure-sensor-capability"></a>Funktion des sicheren Sensors
+## <a name="secure-sensor-capability"></a>Sichere Sensorfunktion
 
-Die Funktion für den sicheren Windows-Funktions \_ \_ \_ Sensor muss vom Sensor gemeldet werden, wenn Sie die neuen Engine-Adapter Methoden in v 4,0 der Engine-Adapter Schnittstelle unterstützt.
+Die WINBIO CAPABILITY SECURE SENSOR-Funktion muss vom Sensor gemeldet werden, wenn sie die neuen Engine-Adaptermethoden \_ \_ in Version \_ 4.0 der Engine-Adapterschnittstelle unterstützt.
 
 Um zu beanspruchen, dass ein Sensor ein sicherer Sensor ist, muss er die folgenden Anforderungen erfüllen:
 
--   Die passende Engine des Sensors muss vom normalen Betriebssystem isoliert werden (z. b. mithilfe einer vertrauenswürdigen Ausführungsumgebung).
--   Der Sensor muss eine sichere Eingabe von Beispielen für das isolierte übereinstimmende Modul unterstützen. der Inhalt der Beispiele darf niemals dem normalen Betriebssystem verfügbar gemacht werden.
--   Die entsprechende Engine muss die Freigabe sicherer Anmelde Informationen unterstützen, indem die unten aufgeführten neuen V4-Methoden implementiert werden.
--   Der Sensor muss die Erkennung von Präsentations Angriffen unterstützen.
+-   Die übereinstimmende Engine des Sensors muss vom normalen Betriebssystem isoliert werden (z. B. mithilfe einer vertrauenswürdigen Ausführungsumgebung).
+-   Der Sensor muss die sichere Eingabe von Stichproben für die isolierte Abgleichs-Engine unterstützen. Der Inhalt der Beispiele darf nie für das normale Betriebssystem verfügbar gemacht werden.
+-   Die Abgleichs-Engine muss die Freigabe sicherer Anmeldeinformationen unterstützen, indem die unten beschriebenen neuen v4-Methoden implementieren.
+-   Der Sensor muss die Erkennung von Präsentationsangriffen unterstützen.
 
-Der Wert für den sicheren winbio- \_ Fähigkeits \_ \_ Sensor ist in der Struktur der [**winbio- \_ Funktionen**](/windows-hardware/drivers/ddi/winbio_ioctl/ns-winbio_ioctl-_winbio_sensor_attributes) enthalten. Im folgenden finden Sie ein Beispiel dafür, wie Sie es definieren.
+Der WINBIO \_ CAPABILITY \_ SECURE \_ SENSOR-Wert ist in der [**WINBIO \_ CAPABILITIES-Struktur**](/windows-hardware/drivers/ddi/winbio_ioctl/ns-winbio_ioctl-_winbio_sensor_attributes) enthalten. Hier ist ein Beispiel für die Definition.
 
 
 ```
@@ -77,12 +77,12 @@ Der Wert für den sicheren winbio- \_ Fähigkeits \_ \_ Sensor ist in der Strukt
 
 
 
-## <a name="engine-adapter-interface-v-40"></a>Engine-Adapter Schnittstelle v 4,0
+## <a name="engine-adapter-interface-v-40"></a>Engine-Adapterschnittstelle v 4.0
 
-Die Engine-Adapter Schnittstellen Version wurde auf 4,0 erhöht. Die zusätzlichen Funktionen in der neuen Schnittstelle ermöglichen es dem Sensor, an TPM 2,0 teilzunehmen. Sie lauten wie folgt:
+Die Version der Engine-Adapterschnittstelle wurde auf 4.0 erhöht. Die zusätzlichen Funktionen in der neuen Schnittstelle ermöglichen dem Sensor die Teilnahme an TPM 2.0. Sie lauten wie folgt:
 
--   [**Engineadapterkreatekey**](/windows/desktop/api/Winbio_adapter/nc-winbio_adapter-pibio_engine_create_key_fn)
--   [**Engineadapteridentifyfeaturesetsecure**](/windows/desktop/api/Winbio_adapter/nc-winbio_adapter-pibio_engine_identify_feature_set_secure_fn)
+-   [**EngineAdapterCreateKey**](/windows/desktop/api/Winbio_adapter/nc-winbio_adapter-pibio_engine_create_key_fn)
+-   [**EngineAdapterIdentifyFeatureSetSecure**](/windows/desktop/api/Winbio_adapter/nc-winbio_adapter-pibio_engine_identify_feature_set_secure_fn)
 
 
 ```
@@ -277,8 +277,8 @@ typedef struct _WINBIO_ENGINE_INTERFACE {
 
 ## <a name="requirements"></a>Anforderungen
 
-Windows 10
+Windows 10
 
- 
+ 
 
- 
+ 

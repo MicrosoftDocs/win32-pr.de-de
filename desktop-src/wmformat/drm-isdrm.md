@@ -1,9 +1,9 @@
 ---
 title: DRM_IsDRM
-description: Die DRM \_ -isdrm-Eigenschaft gibt an, ob eine Datei eine DRM-geschützte Datei ist.
+description: Die DRM \_ IsDRM-Eigenschaft gibt an, ob eine Datei eine DRM-geschützte Datei ist.
 ms.assetid: 1d728135-25e9-4ab8-873d-b7df3e8cae83
 keywords:
-- DRM_IsDRM Windows Media-Format
+- DRM_IsDRM windows Media Format
 topic_type:
 - apiref
 api_name:
@@ -12,37 +12,37 @@ api_type:
 - NA
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 7cf26b1e6d1d347b0b6754b69d2fa770770c39a0
-ms.sourcegitcommit: 48d1c892045445bcbd0f22bafa2fd3861ffaa6e7
+ms.openlocfilehash: 7c7fbf33fdd313126fbee5ffdf3546a08031686f9efb4c888d2ab780e75792cb
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/19/2020
-ms.locfileid: "106339871"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118704672"
 ---
-# <a name="drm_isdrm"></a>DRM- \_ isdrm
+# <a name="drm_isdrm"></a>DRM \_ IsDRM
 
-Die **DRM- \_ isdrm** -Eigenschaft gibt an, ob eine Datei eine DRM-geschützte Datei ist.
+Die **DRM \_ IsDRM-Eigenschaft** gibt an, ob eine Datei eine DRM-geschützte Datei ist.
 
 ## <a name="global-constant"></a>Globale Konstante
 
-g \_ wszwmdrm \_ isdrm
+g \_ wszWMDRM \_ IsDRM
 
 ## <a name="data-type"></a>Datentyp
 
-**WMT- \_ Typ \_ bool**
+**\_WMT-TYP \_ BOOL**
 
-Dies ist eine schreibgeschützte Eigenschaft, die mithilfe von [**iwmdrmreader:: getdrmproperty**](/previous-versions/windows/desktop/api/Wmsdkidl/nf-wmsdkidl-iwmdrmreader-getdrmproperty)abgerufen wird.
+Dies ist eine schreibgeschützte Eigenschaft, die mithilfe von [**IWMDRMReader::GetDRMProperty abgerufen wird.**](/previous-versions/windows/desktop/api/Wmsdkidl/nf-wmsdkidl-iwmdrmreader-getdrmproperty)
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
 [**DRM-Eigenschaften**](drm-properties.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

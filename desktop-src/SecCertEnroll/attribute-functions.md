@@ -1,24 +1,24 @@
 ---
-description: Attribute können einer Zertifikat Anforderung hinzugefügt werden, um eine Zertifizierungsstelle (Certification Authority, ca) mit zusätzlichen Informationen bereitzustellen, die Sie beim Erstellen und Ausstellen eines Zertifikats verwenden kann.
+description: Attribute können einer Zertifikatanforderung hinzugefügt werden, um einer Zertifizierungsstelle zusätzliche Informationen bereitzustellen, die sie beim Erstellen und Ausstellen eines Zertifikats verwenden kann.
 ms.assetid: 3eba5a2f-eeac-4e38-8705-b12bc183b7eb
-title: Attribut Funktionen
+title: Attributfunktionen
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 6413da0d43c142373e6f3cabe3d8e31636b82ef2
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 0a353b5beb5b7da048edf8712c5d82545fd326a7d1720748705ae093aaa2cc44
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104215873"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118903112"
 ---
-# <a name="attribute-functions"></a>Attribut Funktionen
+# <a name="attribute-functions"></a>Attributfunktionen
 
-Attribute können einer Zertifikat Anforderung hinzugefügt werden, um eine [*Zertifizierungsstelle (Certification Authority*](/windows/desktop/SecGloss/c-gly) , ca) mit zusätzlichen Informationen bereitzustellen, die Sie beim Erstellen und Ausstellen eines Zertifikats verwenden kann.
+Attribute können einer Zertifikatanforderung hinzugefügt werden, um einer [*Zertifizierungsstelle*](/windows/desktop/SecGloss/c-gly) zusätzliche Informationen bereitzustellen, die sie beim Erstellen und Ausstellen eines Zertifikats verwenden kann.
 
-CertEnroll.dll implementiert die folgenden Schnittstellen zum Definieren von Attributen und Attribut Auflistungen:
+CertEnroll.dll implementiert die folgenden Schnittstellen, um Attribute und Attributsammlungen zu definieren:
 
--   [**Icryptattribute**](/windows/desktop/api/CertEnroll/nn-certenroll-icryptattribute)
--   [**Icryptattributes**](/windows/desktop/api/CertEnroll/nn-certenroll-icryptattributes)
+-   [**ICryptAttribute**](/windows/desktop/api/CertEnroll/nn-certenroll-icryptattribute)
+-   [**ICryptAttributes**](/windows/desktop/api/CertEnroll/nn-certenroll-icryptattributes)
 -   [**IX509Attribute**](/windows/desktop/api/CertEnroll/nn-certenroll-ix509attribute)
 -   [**IX509Attributes**](/windows/desktop/api/CertEnroll/nn-certenroll-ix509attributes)
 -   [**IX509AttributeClientId**](/windows/desktop/api/CertEnroll/nn-certenroll-ix509attributeclientid)
@@ -29,84 +29,84 @@ CertEnroll.dll implementiert die folgenden Schnittstellen zum Definieren von Att
 -   [**IX509AttributeOSVersion**](/windows/desktop/api/CertEnroll/nn-certenroll-ix509attributeosversion)
 -   [**IX509AttributeRenewalCertificate**](/windows/desktop/api/CertEnroll/nn-certenroll-ix509attributerenewalcertificate)
 
-In den folgenden Abschnitten werden die von Xenroll.dll exportierten Funktionen identifiziert, um kryptografieattribute Zertifikat Anforderungen zuzuordnen, und es wird erläutert, wie CertEnroll.dll verwendet wird, um die Funktion zu ersetzen oder anzugeben, dass keine Zuordnung zwischen den beiden Bibliotheken besteht:
+In den folgenden Abschnitten werden von Xenroll.dll exportierte Funktionen identifiziert, um Zertifikatanforderungen kryptografische Attribute zuzuordnen. Außerdem wird erläutert, wie sie CertEnroll.dll verwenden, um die Funktion zu ersetzen, oder sie zeigen an, dass keine Zuordnung zwischen den beiden Bibliotheken vorhanden ist:
 
--   [addattributetor equestwstr](#addattributetorequestwstr)
+-   [addAttributeToRequestWStr](#addattributetorequestwstr)
 -   [AddAuthenticatedAttributesToPKCS7Request](#addauthenticatedattributestopkcs7request)
--   [addnamevaluepuntor equestwstr](#addnamevaluepairtorequestwstr)
--   [Addnamevaluepaar-zu-signaturewstr](#addnamevaluepairtosignaturewstr)
--   [ClientID](#clientid)
--   [Erneuerungs Zertifikat](#renewalcertificate)
--   [reantattributes](#resetattributes)
+-   [addNameValuePairToRequestWStr](#addnamevaluepairtorequestwstr)
+-   [AddNameValuePairToSignatureWStr](#addnamevaluepairtosignaturewstr)
+-   [Clientid](#clientid)
+-   [RenewalCertificate](#renewalcertificate)
+-   [resetAttributes](#resetattributes)
 -   [Zugehörige Themen](#related-topics)
 
-## <a name="addattributetorequestwstr"></a>addattributetor equestwstr
+## <a name="addattributetorequestwstr"></a>addAttributeToRequestWStr
 
-Die [**addattributetorequestwstr**](/windows/desktop/api/xenroll/nf-xenroll-ienroll4-addattributetorequestwstr) -Funktion in Xenroll.dll fügt einer Zertifikat Anforderung ein Attribut hinzu.
+Die [**addAttributeToRequestWStr-Funktion**](/windows/desktop/api/xenroll/nf-xenroll-ienroll4-addattributetorequestwstr) in Xenroll.dll fügt einer Zertifikatanforderung ein Attribut hinzu.
 
-Im Allgemeinen können Sie zum Hinzufügen eines Attributs zu einer Anforderung mithilfe der in CertEnroll.dll implementierten Objekte die folgenden Aktionen ausführen:
+Um einer Anforderung mithilfe der in CertEnroll.dll implementierten Objekte ein Attribut hinzuzufügen, können Sie im Allgemeinen die folgenden Aktionen ausführen:
 
-1.  Erstellen Sie ein [**IX509Attributes**](/windows/desktop/api/CertEnroll/nn-certenroll-ix509attributes) -Sammlungsobjekt.
-2.  Erstellen Sie ein [**IX509Attribute**](/windows/desktop/api/CertEnroll/nn-certenroll-ix509attribute) -Objekt, und rufen Sie die [**Initialize**](/windows/desktop/api/CertEnroll/nf-certenroll-ix509attribute-initialize) -Methode auf, um ein Attribut aus einem Objekt Bezeichner und einem Attribut Wert zu erstellen, oder verwenden Sie eine der zuvor aufgelisteten Schnittstellen, um eines der allgemeineren Attribute zu definieren.
-3.  Fügen Sie jedes neue Attribut, das im vorherigen Schritt erstellt wurde, mithilfe der [**Add**](/windows/desktop/api/CertEnroll/nf-certenroll-ix509attributes-add) -Methode der [**IX509Attributes**](/windows/desktop/api/CertEnroll/nn-certenroll-ix509attributes) -Auflistung hinzu.
-4.  Erstellen Sie ein [**icryptattribute**](/windows/desktop/api/CertEnroll/nn-certenroll-icryptattribute) -Objekt, und initialisieren Sie es, indem Sie die [**initializefromvalues**](/windows/desktop/api/CertEnroll/nf-certenroll-icryptattribute-initializefromvalues) -Methode aufrufen und die [**IX509Attributes**](/windows/desktop/api/CertEnroll/nn-certenroll-ix509attributes) -Auflistung bei der Eingabe angeben.
-5.  Rufen Sie ein [**icryptattributes**](/windows/desktop/api/CertEnroll/nn-certenroll-icryptattributes) -Sammlungsobjekt ab, indem Sie die [**cryptattributes**](/windows/desktop/api/CertEnroll/nf-certenroll-ix509certificaterequestpkcs10-get_cryptattributes) -Eigenschaft für ein vorhandenes [**IX509CertificateRequestPkcs10**](/windows/desktop/api/CertEnroll/nn-certenroll-ix509certificaterequestpkcs10) -oder [**IX509CertificateRequestCmc**](/windows/desktop/api/CertEnroll/nn-certenroll-ix509certificaterequestcmc) Request-Objekt aufrufen.
-6.  Fügen Sie das [**icryptattribute**](/windows/desktop/api/CertEnroll/nn-certenroll-icryptattribute) -Objekt der [**icryptattributes**](/windows/desktop/api/CertEnroll/nn-certenroll-icryptattributes) -Auflistung hinzu.
+1.  Erstellen Sie ein [**IX509Attributes-Auflistungsobjekt.**](/windows/desktop/api/CertEnroll/nn-certenroll-ix509attributes)
+2.  Erstellen Sie ein [**IX509Attribute-Objekt,**](/windows/desktop/api/CertEnroll/nn-certenroll-ix509attribute) und rufen Sie die [**Initialize-Methode**](/windows/desktop/api/CertEnroll/nf-certenroll-ix509attribute-initialize) auf, um ein Attribut aus einem Objektbezeichner und Attributwert zu erstellen, oder verwenden Sie eine der zuvor aufgeführten Schnittstellen, um eines der allgemeineren Attribute zu definieren.
+3.  Fügen Sie jedes im vorherigen Schritt erstellte neue Attribut mithilfe der Add-Methode der [**IX509Attributes-Auflistung**](/windows/desktop/api/CertEnroll/nn-certenroll-ix509attributes) [**hinzu.**](/windows/desktop/api/CertEnroll/nf-certenroll-ix509attributes-add)
+4.  Erstellen Sie ein [**ICryptAttribute-Objekt,**](/windows/desktop/api/CertEnroll/nn-certenroll-icryptattribute) und initialisieren Sie es, indem Sie die [**InitializeFromValues-Methode**](/windows/desktop/api/CertEnroll/nf-certenroll-icryptattribute-initializefromvalues) aufrufen und die [**IX509Attributes-Auflistung**](/windows/desktop/api/CertEnroll/nn-certenroll-ix509attributes) bei der Eingabe angeben.
+5.  Rufen Sie ein [**ICryptAttributes-Auflistungsobjekt**](/windows/desktop/api/CertEnroll/nn-certenroll-icryptattributes) ab, indem Sie die [**CryptAttributes-Eigenschaft**](/windows/desktop/api/CertEnroll/nf-certenroll-ix509certificaterequestpkcs10-get_cryptattributes) für ein vorhandenes [**IX509CertificateRequestPkcs10-**](/windows/desktop/api/CertEnroll/nn-certenroll-ix509certificaterequestpkcs10) oder [**IX509CertificateRequestCmc-Anforderungsobjekt**](/windows/desktop/api/CertEnroll/nn-certenroll-ix509certificaterequestcmc) aufrufen.
+6.  Fügen Sie das [**ICryptAttribute-Objekt**](/windows/desktop/api/CertEnroll/nn-certenroll-icryptattribute) der [**ICryptAttributes-Auflistung**](/windows/desktop/api/CertEnroll/nn-certenroll-icryptattributes) hinzu.
 
 ## <a name="addauthenticatedattributestopkcs7request"></a>AddAuthenticatedAttributesToPKCS7Request
 
-Authentifizierte Attribute sind Name-Wert-Paare, die signiert werden und einer Signatur hinzugefügt werden. Die [**AddAuthenticatedAttributesToPKCS7Request**](/windows/desktop/api/xenroll/nf-xenroll-ienroll-addauthenticatedattributestopkcs7request) -Funktion in Xenroll.dll fügt ein Array von authentifizierten Attributen zu einer [*PKCS \# 7*](/windows/desktop/SecGloss/p-gly) -Anforderung hinzu.
+Authentifizierte Attribute sind Name-Wert-Paare, die von signiert und einer Signatur hinzugefügt werden. Die [**AddAuthenticatedAttributesToPKCS7Request-Funktion**](/windows/desktop/api/xenroll/nf-xenroll-ienroll-addauthenticatedattributestopkcs7request) in Xenroll.dll fügt einer [*PKCS \# 7-Anforderung*](/windows/desktop/SecGloss/p-gly) ein Array authentifizierter Attribute hinzu.
 
-Wie bereits erwähnt, können [](/windows/desktop/api/xenroll/nf-xenroll-ienroll4-addattributetorequestwstr) Sie CertEnroll.dll verwenden, um eine Auflistung von Attributen auf einfache Weise zu definieren und einer Zertifikat Anforderung hinzuzufügen. Sie können jedoch nicht auswählen, ob das Attribut authentifiziert ist. Der Registrierungsvorgang trifft diese Entscheidung automatisch.
+Wie oben für die [**addAttributeToRequestWStr-Funktion**](/windows/desktop/api/xenroll/nf-xenroll-ienroll4-addattributetorequestwstr) erläutert, können Sie CertEnroll.dll verwenden, um eine Sammlung von Attributen einfach zu definieren und einer Zertifikatanforderung hinzuzufügen. Sie können jedoch nicht auswählen, ob das Attribut authentifiziert ist. Der Registrierungsprozess trifft diese Entscheidung automatisch.
 
-## <a name="addnamevaluepairtorequestwstr"></a>addnamevaluepuntor equestwstr
+## <a name="addnamevaluepairtorequestwstr"></a>addNameValuePairToRequestWStr
 
-Die [**addnamevaluepairren torequestwstr**](/windows/desktop/api/xenroll/nf-xenroll-ienroll4-addnamevaluepairtorequestwstr) -Funktion in Xenroll.dll fügt einer Anforderung ein nicht authentifiziertes Name-Wert-Paar hinzu.
+Die [**addNameValuePairToRequestWStr-Funktion**](/windows/desktop/api/xenroll/nf-xenroll-ienroll4-addnamevaluepairtorequestwstr) in Xenroll.dll fügt einer Anforderung ein nicht authentifiziertes Name-Wert-Paar hinzu.
 
-Sie können die [**IX509NameValuePair**](/windows/desktop/api/CertEnroll/nn-certenroll-ix509namevaluepair) -Schnittstelle in CertEnroll.dll verwenden, um ein Name-Wert-Paar zu definieren, und Sie können eine Auflistung von Name-Wert-Paaren zu einem Objekt der CMC-Anforderung hinzufügen, indem Sie die folgenden Aktionen ausführen:
+Sie können die [**IX509NameValuePair-Schnittstelle**](/windows/desktop/api/CertEnroll/nn-certenroll-ix509namevaluepair) in CertEnroll.dll verwenden, um ein Name-Wert-Paar zu definieren, und Sie können einem CMC-Anforderungsobjekt eine Auflistung von Name-Wert-Paaren hinzufügen, indem Sie die folgenden Aktionen ausführen:
 
-1.  Erstellen und initialisieren Sie ein [**IX509CertificateRequestCmc**](/windows/desktop/api/CertEnroll/nn-certenroll-ix509certificaterequestcmc) -Objekt. Der Initialisierungs Prozess erstellt eine leere [**IX509NameValuePairs**](/windows/desktop/api/CertEnroll/nn-certenroll-ix509namevaluepairs) -Auflistung.
-2.  Rufen Sie die [**NameValuePairs**](/windows/desktop/api/CertEnroll/nf-certenroll-ix509certificaterequestcmc-get_namevaluepairs) -Eigenschaft für ein vorhandenes Objekt "CMC Request" auf, um die Auflistung abzurufen.
-3.  Erstellen und initialisieren Sie ein [**IX509NameValuePair**](/windows/desktop/api/CertEnroll/nn-certenroll-ix509namevaluepair) -Objekt.
-4.  Fügen Sie jedes neue Name/Wert-Paar der [**IX509NameValuePairs**](/windows/desktop/api/CertEnroll/nn-certenroll-ix509namevaluepairs) -Auflistung hinzu, indem [**Sie die Add**](/windows/desktop/api/CertEnroll/nf-certenroll-ix509namevaluepairs-add) -Methode aufrufen.
+1.  Erstellen und initialisieren Sie ein [**IX509CertificateRequestCmc-Objekt.**](/windows/desktop/api/CertEnroll/nn-certenroll-ix509certificaterequestcmc) Beim Initialisierungsprozess wird eine leere [**IX509NameValuePairs-Auflistung**](/windows/desktop/api/CertEnroll/nn-certenroll-ix509namevaluepairs) erstellt.
+2.  Rufen Sie die [**NameValuePairs-Eigenschaft**](/windows/desktop/api/CertEnroll/nf-certenroll-ix509certificaterequestcmc-get_namevaluepairs) für ein vorhandenes CMC-Anforderungsobjekt auf, um die Auflistung abzurufen.
+3.  Erstellen und initialisieren Sie ein [**IX509NameValuePair-Objekt.**](/windows/desktop/api/CertEnroll/nn-certenroll-ix509namevaluepair)
+4.  Fügen Sie jedes neue Name-Wert-Paar der [**IX509NameValuePairs-Auflistung**](/windows/desktop/api/CertEnroll/nn-certenroll-ix509namevaluepairs) hinzu, indem Sie die [**Add-Methode**](/windows/desktop/api/CertEnroll/nf-certenroll-ix509namevaluepairs-add) aufrufen.
 
-Bei der Registrierung wird die Auflistung von Name-Wert-Paaren in die **taggedattribute** -Struktur der CMC-Anforderung eingefügt.
+Der Registrierungsprozess platziert die Auflistung von Name-Wert-Paaren in der **TaggedAttribute-Struktur** der CMC-Anforderung.
 
-## <a name="addnamevaluepairtosignaturewstr"></a>Addnamevaluepaar-zu-signaturewstr
+## <a name="addnamevaluepairtosignaturewstr"></a>AddNameValuePairToSignatureWStr
 
-Die [**addnamevaluepairitosignaturewstr**](/windows/desktop/api/xenroll/nf-xenroll-ienroll-addnamevaluepairtosignaturewstr) -Funktion in Xenroll.dll fügt einer Anforderung ein authentifiziertes Name/Wert-Paar hinzu. Dies wird normalerweise verwendet, um den Anforderer Namen in einer eobo-Anforderung (ENROLL-on-Auftrag-of) anzugeben.
+Die [**Funktion AddNameValuePairToSignatureWStr**](/windows/desktop/api/xenroll/nf-xenroll-ienroll-addnamevaluepairtosignaturewstr) in Xenroll.dll fügt einer Anforderung ein authentifiziertes Name-Wert-Paar hinzu. Dies wird in der Regel verwendet, um den Anforderernamen in einer EOBO-Anforderung (Enroll-on-behalf-of) anzugeben.
 
-Verwenden Sie in CertEnroll.dll die Eigenschaft [**requestername**](/windows/desktop/api/CertEnroll/nf-certenroll-ix509certificaterequestpkcs7-get_requestername) , um den Namen in einer eobo-Anforderung anzugeben.
+Verwenden Sie in CertEnroll.dll die [**RequesterName-Eigenschaft,**](/windows/desktop/api/CertEnroll/nf-certenroll-ix509certificaterequestpkcs7-get_requestername) um den Namen in einer EOBO-Anforderung anzugeben.
 
 ## <a name="clientid"></a>ClientId
 
-Die [**ClientID-**](/windows/desktop/api/xenroll/nf-xenroll-ienroll4-get_clientid) Funktion in Xenroll.dll gibt ein **ClientID-** Attribut an oder ruft es ab.
+Die [**ClientId-Funktion**](/windows/desktop/api/xenroll/nf-xenroll-ienroll4-get_clientid) in Xenroll.dll gibt ein **ClientId-Attribut** an oder ruft es ab.
 
-Verwenden Sie die [**ClientID-**](/windows/desktop/api/CertEnroll/nf-certenroll-ix509certificaterequest-get_clientid) Eigenschaft in CertEnroll.dll, um dieses Attribut einer CMC-oder PKCS 10-Anforderung hinzuzufügen \# .
+Verwenden Sie die [**ClientId-Eigenschaft**](/windows/desktop/api/CertEnroll/nf-certenroll-ix509certificaterequest-get_clientid) in CertEnroll.dll, um dieses Attribut einer CMC- oder PKCS \# 10-Anforderung hinzuzufügen.
 
-## <a name="renewalcertificate"></a>Erneuerungs Zertifikat
+## <a name="renewalcertificate"></a>RenewalCertificate
 
-Die [**renewalcertificate**](/windows/desktop/api/xenroll/nf-xenroll-ienroll-get_renewalcertificate) -Funktion in Xenroll.dll gibt ein **renewalcertificate** -Attribut an oder ruft es ab.
+Die [**RenewalCertificate-Funktion**](/windows/desktop/api/xenroll/nf-xenroll-ienroll-get_renewalcertificate) in Xenroll.dll gibt ein **RenewalCertificate-Attribut** an oder ruft es ab.
 
-Wenn Sie in CertEnroll.dll den Befehl [**initializefromcertificate**](/windows/desktop/api/CertEnroll/nf-certenroll-ix509certificaterequestpkcs7-initializefromcertificate) für ein PKCS \# 7-oder PKCS-Objekt aufgerufen haben, wird automatisch erstellt.
+In CertEnroll.dll wird beim Aufrufen [**von InitializeFromCertificate**](/windows/desktop/api/CertEnroll/nf-certenroll-ix509certificaterequestpkcs7-initializefromcertificate) für ein PKCS \# 7- oder PKCS -Objekt automatisch erstellt.
 
-## <a name="resetattributes"></a>reantattributes
+## <a name="resetattributes"></a>resetAttributes
 
-Die [**resettattributes**](/windows/desktop/api/xenroll/nf-xenroll-ienroll4-resetattributes) -Funktion in Xenroll.dll entfernt die Attribut Auflistung aus einer Anforderung.
+Die [**resetAttributes-Funktion**](/windows/desktop/api/xenroll/nf-xenroll-ienroll4-resetattributes) in Xenroll.dll entfernt die Attributauflistung aus einer Anforderung.
 
-Zum Entfernen eines Attributs aus einer Anforderung durch einen Index mithilfe von CertEnroll.dll, nennen Sie die [**Remove**](/windows/desktop/api/CertEnroll/nf-certenroll-ix509attributes-remove) -Methode für die [**IX509Attributes**](/windows/desktop/api/CertEnroll/nn-certenroll-ix509attributes) -Auflistung. Um alle Attribute aus einer Anforderung zu entfernen, müssen Sie die [**Clear**](/windows/desktop/api/CertEnroll/nf-certenroll-ix509attributes-clear) -Methode aufzurufen.
+Um ein Attribut mithilfe von CertEnroll.dll aus einer Anforderung nach Index zu entfernen, rufen Sie die [**Remove-Methode**](/windows/desktop/api/CertEnroll/nf-certenroll-ix509attributes-remove) für die [**IX509Attributes-Auflistung**](/windows/desktop/api/CertEnroll/nn-certenroll-ix509attributes) auf. Um alle Attribute aus einer Anforderung zu entfernen, rufen Sie die [**Clear-Methode**](/windows/desktop/api/CertEnroll/nf-certenroll-ix509attributes-clear) auf.
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[Zuordnung von Xenroll.dll zu CertEnroll.dll](mapping-xenroll-dll-to-certenroll-dll.md)
+[Zuordnen von Xenroll.dll zu CertEnroll.dll](mapping-xenroll-dll-to-certenroll-dll.md)
 </dt> <dt>
 
-[**Icryptattribute**](/windows/desktop/api/CertEnroll/nn-certenroll-icryptattribute)
+[**ICryptAttribute**](/windows/desktop/api/CertEnroll/nn-certenroll-icryptattribute)
 </dt> <dt>
 
-[**Icryptattributes**](/windows/desktop/api/CertEnroll/nn-certenroll-icryptattributes)
+[**ICryptAttributes**](/windows/desktop/api/CertEnroll/nn-certenroll-icryptattributes)
 </dt> <dt>
 
 [**IX509Attribute**](/windows/desktop/api/CertEnroll/nn-certenroll-ix509attribute)

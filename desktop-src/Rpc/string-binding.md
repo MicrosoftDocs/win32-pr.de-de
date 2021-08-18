@@ -4,12 +4,12 @@ description: Die Zeichenfolgenbindung ist eine Zeichenfolge ohne Vorzeichen, die
 ms.assetid: 5e55ddd0-d71c-42ef-90cc-dd1f0b9ed305
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 8b3f925c03c85be3c47ab174a85f31e72e40d828
-ms.sourcegitcommit: cb87082135319cbdc5df541e3071eebb83a58972
+ms.openlocfilehash: 10b2219aa4bb9ed77d2c59732a87a138f620e1910a4ca9f518c22c39a59a7dfa
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/04/2021
-ms.locfileid: "111386979"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118924988"
 ---
 # <a name="string-binding"></a>Zeichenfolgenbindung
 
@@ -24,14 +24,14 @@ Die Zeichenfolgenbindung ist eine Zeichenfolge ohne Vorzeichen, die aus Zeichenf
 <span id="ObjectUUID"></span><span id="objectuuid"></span><span id="OBJECTUUID"></span>*ObjectUUID*
 </dt> <dd>
 
-[UUID](/windows/desktop/Midl/uuid) des Objekts, das vom Remoteprozeduraufruf verwendet wird. Auf dem Server ordnet die RPC-Laufzeitbibliothek den Objekttyp einem Manager-Einstiegspunktvektor (einem Array von Funktionszektoren) zu, um die richtige Managerroutine aufrufen. Eine Erörterung der Zuordnung von Objekt-UUIDs zu Manager-Einstiegspunktvektoren finden Sie unter [Registrieren von Schnittstellen.](registering-interfaces.md)
+[UUID](/windows/desktop/Midl/uuid) des Objekts, das vom Remoteprozeduraufruf verwendet wird. Auf dem Server ordnet die RPC-Laufzeitbibliothek den Objekttyp einem Manager-Einstiegspunktvektor (einem Array von Funktionszektoren) zu, um die richtige Managerroutine auf rufen zu können. Eine Erörterung der Zuordnung von Objekt-UUIDs zu Manager-Einstiegspunktvektoren finden Sie unter [Registrieren von Schnittstellen.](registering-interfaces.md)
 
 </dd> <dt>
 
 <span id="ProtocolSequence"></span><span id="protocolsequence"></span><span id="PROTOCOLSEQUENCE"></span>*ProtocolSequence*
 </dt> <dd>
 
-Zeichenfolge, die eine gültige Kombination aus einem RPC-Protokoll (z. B. ncacn), einem Transportprotokoll (z. B. TCP) und einem Netzwerkprotokoll (z. B. IP) darstellt. Microsoft RPC unterstützt die folgenden Protokolle, die unter [Protokollsequenzkonst constants angegeben sind.](protocol-sequence-constants.md)
+Zeichenfolge, die eine gültige Kombination aus einem RPC-Protokoll (z. B. ncacn), einem Transportprotokoll (z. B. TCP) und einem Netzwerkprotokoll (z. B. IP) darstellt. Microsoft RPC unterstützt die folgenden Protokolle, die in [Protokollsequenzkonst constants angegeben sind.](protocol-sequence-constants.md)
 
 </dd> <dt>
 
@@ -41,7 +41,7 @@ Zeichenfolge, die eine gültige Kombination aus einem RPC-Protokoll (z. B. ncacn
 Netzwerkadresse des Systems zum Empfangen von Remoteprozeduraufrufen.
 
 > [!Note]  
-> Die folgenden Protokollsequenzen werden ab Windows XP nicht unterstützt:
+> Die folgenden Protokollsequenzen werden ab dem xp-Windows nicht unterstützt:
 
  
 
@@ -164,12 +164,12 @@ Die Werte der Sicherheitsoption haben die folgende Bedeutung.
 
 
 
-| Wert der Sicherheitsoption | BESCHREIBUNG                                                                                                                                                                                                                                                                                                                                              |
+| Wert der Sicherheitsoption | Beschreibung                                                                                                                                                                                                                                                                                                                                              |
 |-----------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Anonym             | Der Client ist gegenüber dem Server anonym.                                                                                                                                                                                                                                                                                                                   |
 | Dynamisch               | Änderungen an der Clientsicherheitsidentität werden vom Server erkannt, wenn der Server Transportsicherheit verwendet. Dies ist der Standardmodus für die Sicherheit auf LRPC-Transportebene (ncalrpc) und für die Sicherheit auf lokaler Named Pipe-Transportebene (ncacn \_ np).                                                                                                             |
-| **False**             | Effective = **FALSE**; Alle Tokenberechtigungseinstellungen, einschließlich der auf OFF festgelegten Einstellungen, sind im Token auf dem Server enthalten und können vom Server aktiviert werden. Berechtigungen sind nur für RPC-Aufrufe desselben Computers relevant.                                                                                                                                     |
-| **Identifikation**    | Der Server verfügt über Informationen zum Client, kann aber keine Identität annehmen.                                                                                                                                                                                                                                                                                      |
+| **False**             | Effective = **FALSE**; Alle Einstellungen für Tokenberechtigungen, einschließlich der auf OFF festgelegten Einstellungen, sind im Token auf dem Server enthalten und können vom Server aktiviert werden. Berechtigungen sind nur für RPC-Aufrufe desselben Computers relevant.                                                                                                                                     |
+| **Identification**    | Der Server verfügt über Informationen zum Client, kann aber keine Identität annehmen.                                                                                                                                                                                                                                                                                      |
 | **Identitätswechsel**     | Der Server kann im Namen des Clients innerhalb des lokalen Systems agieren (die Sicherheit auf Transportebene unterstützt keine Delegierung).                                                                                                                                                                                                                               |
 | **Statisch**            | Änderungen an der Clientsicherheitsidentität werden vom Server nicht erkannt, wenn der Server Transportsicherheit verwendet. Dies ist der einzige Modus, der für die Sicherheit auf Remote-Named Pipe -Transportebene (ncacn np) verfügbar \_ ist. Die Identität des Aufrufers wird während des ersten Remoteprozeduraufrufs für dieses Bindungshandle gespeichert, nicht zum Zeitpunkt der Erstellung des Bindungshandle. |
 | **True**              | Effective = **TRUE**; Im Token auf dem Server sind nur einstellungen für Tokenberechtigungen enthalten, die auf ON festgelegt sind. Berechtigungen, die auf OFF festgelegt sind, können vom Server nicht aktiviert werden, wenn diese Option verwendet wird. Berechtigungen sind nur für RPC-Aufrufe desselben Computers relevant.                                                                                                         |
@@ -192,11 +192,11 @@ Eine Zeichenfolgenbindung enthält die Zeichendarstellung eines Bindungshandle u
 
 Darüber hinaus enthält eine Zeichenfolgenbindung nicht alle Informationen aus einem Bindungshandle. Die Authentifizierungsinformationen, die einem Bindungshandle zugeordnet sind, werden beispielsweise nicht in die Zeichenfolgenbindung übersetzt, die durch Aufrufen von [**RpcBindingToStringBinding**](/windows/desktop/api/Rpcdce/nf-rpcdce-rpcbindingtostringbinding)zurückgegeben wird.
 
-Während der Entwicklung einer verteilten Anwendung können Server ihre Bindungsinformationen mithilfe von Zeichenfolgenbindungen an Clients übermitteln, um eine Client-Server-Beziehung herzustellen, ohne die Datenbank endpoint-map oder name-service zu verwenden. Verwenden Sie zum Einrichten einer solchen Beziehung die [**Funktion RpcBindingToStringBinding,**](/windows/desktop/api/Rpcdce/nf-rpcdce-rpcbindingtostringbinding) um einen oder mehrere Bindungshandles aus einem Bindungshandlesvektor in eine Zeichenfolgenbindung zu konvertieren und die Zeichenfolgenbindung für den Client zur Verfügung zu stellen.
+Während der Entwicklung einer verteilten Anwendung können Server ihre Bindungsinformationen mithilfe von Zeichenfolgenbindungen an Clients übermitteln, um eine Client-Server-Beziehung herzustellen, ohne die Endpunktzuordnungs- oder Namensdienstdatenbank zu verwenden. Um eine solche Beziehung herzustellen, verwenden Sie die Funktion [**RpcBindingToStringBinding,**](/windows/desktop/api/Rpcdce/nf-rpcdce-rpcbindingtostringbinding) um einen oder mehrere Bindungshandles von einem Bindungshandlevektor in eine Zeichenfolgenbindung zu konvertieren und die Zeichenfolgenbindung für den Client bereitzustellen.
 
 ## <a name="examples"></a>Beispiele
 
-Im Folgenden finden Sie Beispiele für gültige Zeichenfolgenbindungen. In diesen Beispielen wird *obj-uuid* zur Vereinfachung verwendet, um eine gültige UUID in Zeichenfolgenform zu darstellen. Anstelle der UUID 308FB580-1EB2-11CA-923B-08002B1075A7 zeigen die Beispiele *obj-uuid*.
+Im Folgenden sind Beispiele für gültige Zeichenfolgenbindungen aufgeführt. In diesen Beispielen wird *obj-uuid* zur Vereinfachung verwendet, um eine gültige UUID in Zeichenfolgenform darzustellen. Anstatt die UUID 308FB580-1EB2-11CA-923B-08002B1075A7 anzuzeigen, zeigen die Beispiele *obj-uuid* an.
 
 ``` syntax
 obj-uuid@ncadg_mq:mymqserver

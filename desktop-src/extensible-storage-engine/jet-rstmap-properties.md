@@ -1,25 +1,25 @@
 ---
-description: 'Weitere Informationen finden Sie hier: JET_RSTMAP-Eigenschaften'
-title: Eigenschaften von JET_RSTMAP
+description: Weitere Informationen finden Sie unter JET_RSTMAP Eigenschaften.
+title: JET_RSTMAP Eigenschaften
 TOCTitle: JET_RSTMAP properties
 ms:assetid: Properties.T:Microsoft.Isam.Esent.Interop.JET_RSTMAP
 ms:mtpsurl: https://msdn.microsoft.com/library/microsoft.isam.esent.interop.jet_rstmap_properties(v=EXCHG.10)
 ms:contentKeyID: 55103836
 ms.date: 07/30/2014
 ms.topic: article
-ms.openlocfilehash: ca37f47925b37f6e93604daca20c463f328a65cf
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: d080c27b5f4ae685423271842d3e1a79ba24357f2c216e3f2974c60d87b0f21b
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104214481"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118763155"
 ---
-# <a name="jet_rstmap-properties"></a>Eigenschaften von JET_RSTMAP
+# <a name="jet_rstmap-properties"></a>JET_RSTMAP Eigenschaften
 
-Geschützte Member einschließen  
-Geerbte Member einschließen  
+Geschützte Member enthalten  
+Geerbte Member enthalten  
 
-Der [JET_RSTMAP](./jet-rstmap-class.md) -Typ macht die folgenden Member verfügbar.
+Der [JET_RSTMAP](./jet-rstmap-class.md) macht die folgenden Member verfügbar.
 
 ## <a name="properties"></a>Eigenschaften
 
@@ -34,13 +34,13 @@ Der [JET_RSTMAP](./jet-rstmap-class.md) -Typ macht die folgenden Member verfügb
 <tbody>
 <tr class="odd">
 <td><img src="../images/dn292128.pubproperty(exchg.10).gif" title="Öffentliche Eigenschaft" alt="Public property" /></td>
-<td><a href="dn351049(v=exchg.10).md">szdatabasename</a></td>
-<td>Ruft den alten Namen/Pfad der Datenbank ab oder legt ihn fest. Kann NULL sein, wenn Sie unverändert ist.</td>
+<td><a href="dn351049(v=exchg.10).md">szDatabaseName</a></td>
+<td>Ruft den alten Namen/Pfad der Datenbank ab oder legt diesen fest. Kann NULL sein, wenn es unverändert ist.</td>
 </tr>
 <tr class="even">
 <td><img src="../images/dn292128.pubproperty(exchg.10).gif" title="Öffentliche Eigenschaft" alt="Public property" /></td>
-<td><a href="dn335254(v=exchg.10).md">sznewdatabasename</a></td>
-<td>Ruft den aktuellen Namen/Pfad der Datenbank ab oder legt ihn fest. Darf nicht NULL sein.</td>
+<td><a href="dn335254(v=exchg.10).md">szNewDatabaseName</a></td>
+<td>Ruft den aktuellen Namen bzw. Pfad der Datenbank ab oder legt diesen fest. Darf nicht NULL sein.</td>
 </tr>
 </tbody>
 </table>
@@ -48,10 +48,10 @@ Der [JET_RSTMAP](./jet-rstmap-class.md) -Typ macht die folgenden Member verfügb
 
 Oben
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
-#### <a name="reference"></a>Referenz
+#### <a name="reference"></a>Verweis
 
 [JET_RSTMAP-Klasse](./jet-rstmap-class.md)
 
-[Microsoft. ISAM. ESENT. Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)
+[Microsoft.Isam.Esent.Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)

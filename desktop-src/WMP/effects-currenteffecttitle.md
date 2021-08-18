@@ -1,9 +1,9 @@
 ---
-title: Effekte. Currency-ffecttitle
-description: Das Attribut "attributeffecttitle" Ruft den anzeigen Titel der aktuellen Visualisierung ab.
+title: EFFECTS.currentEffectTitle
+description: Das attribut currentEffectTitle ruft den Anzeigetitel der aktuellen Visualisierung ab.
 ms.assetid: a6b5417c-e2a5-42fe-b25c-58c9590bbc88
 keywords:
-- Effekte. Currency-ffecttitle-Fenster Media Player
+- EFFECTS.currentEffectTitle Windows Media Player
 topic_type:
 - apiref
 api_name:
@@ -12,16 +12,16 @@ api_type:
 - NA
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 348d8ae1eed421d9e5da594f34a9b10f5b439469
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 4a4cb48d92f7f4ad0eb801c90e46ad20f04a639b20550a1dbf910e93347e2429
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106364850"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118996740"
 ---
-# <a name="effectscurrenteffecttitle"></a>Effekte. Currency-ffecttitle
+# <a name="effectscurrenteffecttitle"></a>EFFECTS.currentEffectTitle
 
-Das Attribut " **attributeffecttitle** " Ruft den anzeigen Titel der aktuellen Visualisierung ab.
+Das **attribut currentEffectTitle** ruft den Anzeigetitel der aktuellen Visualisierung ab.
 
 ``` syntax
         elementID.currentEffectTitle
@@ -29,7 +29,7 @@ Das Attribut " **attributeffecttitle** " Ruft den anzeigen Titel der aktuellen V
 
 ## <a name="possible-values"></a>Mögliche Werte
 
-Bei diesem Attribut handelt es sich um eine schreibgeschützte **Zeichenfolge**.
+Dieses Attribut ist eine schreibgeschützte **Zeichenfolge.**
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -37,21 +37,21 @@ Bei diesem Attribut handelt es sich um eine schreibgeschützte **Zeichenfolge**.
 
 | Anforderung | Wert |
 |--------------------|------------------------------------------------------|
-| Version<br/> | Windows Media Player, Version 7,0 oder höher<br/> |
+| Version<br/> | Windows Media Player Version 7.0 oder höher<br/> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Effects-Element**](effects-element.md)
+[**EFFECTS-Element**](effects-element.md)
 </dt> <dt>
 
-[**Effekte. Currency-ffect**](effects-currenteffect.md)
+[**EFFECTS.currentEffect**](effects-currenteffect.md)
 </dt> <dt>
 
-[**Effects. EffectTitle**](effects-effecttitle.md)
+[**EFFECTS.effectTitle**](effects-effecttitle.md)
 </dt> </dl>
 
  

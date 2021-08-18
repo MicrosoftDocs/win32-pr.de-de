@@ -1,6 +1,6 @@
 ---
-title: Schalter "/o"
-description: Der Schalter /o leitet die Ausgabe, z. B. Fehlermeldungen und Warnungen, von der Standardausgabe an die angegebene Datei um.
+title: /o-Schalter
+description: Mit dem Schalter /o wird die Ausgabe, z. B. Fehlermeldungen und Warnungen, von der Standardausgabe an die angegebene Datei umgeleitet.
 ms.assetid: 68398a38-bda6-499a-a4ee-6e90937eccd0
 keywords:
 - /o switch MIDL
@@ -19,26 +19,26 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 08/11/2021
 ms.locfileid: "118643902"
 ---
-# <a name="o-switch"></a>Schalter "/o"
+# <a name="o-switch"></a>/o-Schalter
 
-Der **Schalter /o** leitet die Ausgabe, z. B. Fehlermeldungen und Warnungen, von der Standardausgabe an die angegebene Datei um.
+Mit **dem Schalter /o** wird die Ausgabe, z. B. Fehlermeldungen und Warnungen, von der Standardausgabe an die angegebene Datei umgeleitet.
 
 ``` syntax
 midl /o outputfile
 ```
 
-## <a name="switch-options"></a>Switch-Optionen
+## <a name="switch-options"></a>Optionen wechseln
 
 <dl> <dt>
 
 *Outputfile* 
 </dt> <dd>
 
-Gibt den Namen der Datei an, an die der MIDL-Compiler die Ausgabe umleiten wird, z. B. Fehlermeldungen und Warnungen.
+Gibt den Namen der Datei an, an die der MIDL-Compiler die Ausgabe umleitet, z. B. Fehlermeldungen und Warnungen.
 
 </dd> </dl>
 
-## <a name="see-also"></a>Weitere Informationen:
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 

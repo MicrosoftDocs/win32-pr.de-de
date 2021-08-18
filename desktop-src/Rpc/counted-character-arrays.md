@@ -1,25 +1,25 @@
 ---
-title: Arrays von gezählten Zeichen
-description: Das \ size \_ is \-Attribut gibt die obere Grenze des Arrays an, während das \ length \_ ist \-Attribut die Anzahl der zu übermittelten Array Elemente angibt.
+title: Arrays mit gezählten Zeichen
+description: Das Attribut \size is\ gibt die Obergrenze des Arrays an, während das Attribut \length is\ die Anzahl der zu übertragenden \_ \_ Arrayelemente angibt.
 ms.assetid: bed10259-3034-4be8-91f5-5201c2e19c6b
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 360652436a73b445aa2dbb013e0e05145154e20e
-ms.sourcegitcommit: 592c9bbd22ba69802dc353bcb5eb30699f9e9403
+ms.openlocfilehash: ea8abb7a391c617cadae5af396c4b4216dc9d14abf0f6d31ead3a6e075c7357b
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "104473645"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118931129"
 ---
-# <a name="counted-character-arrays"></a>Arrays von gezählten Zeichen
+# <a name="counted-character-arrays"></a>Arrays mit gezählten Zeichen
 
-Die \[ [Größe \_ ist](/windows/desktop/Midl/size-is) " \] Attribute" gibt die obere Grenze des Arrays an, während die \[ [ \_ Länge](/windows/desktop/Midl/length-is) " \] Attribute" die Anzahl der zu übermittelten Array Elemente angibt. Zusätzlich zum-Array muss der Remote Prozedur Prototyp alle Variablen enthalten, die die Länge oder Größe darstellen, die die übertragenen Array Elemente bestimmen (Sie können separate Parameter sein oder mit der Zeichenfolge in einer Struktur gebündelt werden). Diese Attribute können mit breit Zeichen-oder Einzel Byte-Zeichen Arrays genauso wie mit Arrays anderer Typen verwendet werden.
+Die \[ [Größe ist \_ ein](/windows/desktop/Midl/size-is) Attribut, das die Obergrenze des Arrays angibt, während das Length-Attribut die Anzahl der zu \] \[ [ \_ ](/windows/desktop/Midl/length-is) \] übertragenden Arrayelemente angibt. Zusätzlich zum Array muss der Prototyp der Remoteprozedur alle Variablen enthalten, die Länge oder Größe darstellen, die die übertragenen Arrayelemente bestimmen (sie können separate Parameter sein oder mit der Zeichenfolge in einer Struktur gebündelt werden). Diese Attribute können mit Breitzeichen- oder Einzel-Byte-Zeichenarrays genauso verwendet werden wie bei Arrays anderer Typen.
 
-Die Informationen in diesem Abschnitt beschreiben Parameter Prototypen für Remote Prozeduren für Zeichen Arrays. Es ist in die folgenden Themen unterteilt:
+Die Informationen in diesem Abschnitt beschreiben Remoteprozedurparameterprototypen für Zeichenarrays. Sie ist in die folgenden Themen unterteilt:
 
 -   [\[in, out, size \_ ist \] Prototype](-in-out-size-is-prototype.md)
--   [\[in, Größe \_ ist und ausgehend, Größe \_ ist \] Prototyp](-in-size-is-and-out-size-is-prototype.md)
+-   [\[in, size \_ is and out, size \_ is \] Prototype](-in-size-is-and-out-size-is-prototype.md)
 
- 
+ 
 
- 
+ 

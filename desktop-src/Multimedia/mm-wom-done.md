@@ -1,9 +1,9 @@
 ---
-title: MM_WOM_DONE Meldung (MMSYSTEM. h)
-description: Die \_ Meldung mm WOM \_ done wird an ein Fenster gesendet, wenn der angegebene Ausgabepuffer an die Anwendung zurückgegeben wird. Puffer werden an die Anwendung zurückgegeben, wenn Sie abgespielt wurden, oder als Ergebnis eines Aufrufes der wavesetzset-Funktion.
+title: MM_WOM_DONE Meldung (Mmsystem.h)
+description: Die \_ MM WOM \_ DONE-Nachricht wird an ein Fenster gesendet, wenn der angegebene Ausgabepuffer an die Anwendung zurückgegeben wird. Puffer werden an die Anwendung zurückgegeben, wenn sie wiedergegeben wurden, oder als Ergebnis eines Aufrufs der waveOutReset-Funktion.
 ms.assetid: bbdebb68-82e5-4963-90bb-f93f8a91a8cf
 keywords:
-- MM_WOM_DONE-Nachricht (Multimedia)
+- MM_WOM_DONE nachricht Windows Multimedia
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 7198aa2f60a7f5a0e6d839a3ee5b453a3a4d3f59
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 225ba32f780831ab8b40f487a312a940219abc2e976be75a4e903648344afc89
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "103743913"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119065460"
 ---
-# <a name="mm_wom_done-message"></a>MM- \_ WOM- \_ Nachricht abgeschlossen
+# <a name="mm_wom_done-message"></a>MM \_ WOM \_ DONE-Meldung
 
-Die Meldung **mm \_ WOM \_ done** wird an ein Fenster gesendet, wenn der angegebene Ausgabepuffer an die Anwendung zurückgegeben wird. Puffer werden an die Anwendung zurückgegeben, wenn Sie abgespielt wurden, oder als Ergebnis eines Aufrufes der [**wavesetzset**](/windows/win32/api/mmeapi/nf-mmeapi-waveoutreset) -Funktion.
+Die **MM \_ WOM \_ DONE-Nachricht** wird an ein Fenster gesendet, wenn der angegebene Ausgabepuffer an die Anwendung zurückgegeben wird. Puffer werden an die Anwendung zurückgegeben, wenn sie wiedergegeben wurden, oder als Ergebnis eines Aufrufs der [**waveOutReset-Funktion.**](/windows/win32/api/mmeapi/nf-mmeapi-waveoutreset)
 
 
 ```C++
@@ -38,17 +38,17 @@ lParam = (LONG) lpwvhdr
 
 <dl> <dt>
 
-<span id="hOutputDev"></span><span id="houtputdev"></span><span id="HOUTPUTDEV"></span>*houtputdev*
+<span id="hOutputDev"></span><span id="houtputdev"></span><span id="HOUTPUTDEV"></span>*hOutputDev*
 </dt> <dd>
 
-Handle für das Waveform-Audioausgabegerät, das den Puffer wiedergegeben hat.
+Handle für das Waveform-Audio-Ausgabegerät, das den Puffer wiedergegeben hat.
 
 </dd> <dt>
 
 <span id="lpwvhdr"></span><span id="LPWVHDR"></span>*lpwvhdr*
 </dt> <dd>
 
-Zeiger auf eine [**wavehdr**](/windows/win32/api/mmeapi/ns-mmeapi-wavehdr) -Struktur, die den Puffer identifiziert.
+Zeiger auf eine [**WAVEHDR-Struktur,**](/windows/win32/api/mmeapi/ns-mmeapi-wavehdr) die den Puffer identifiziert.
 
 </dd> </dl>
 
@@ -64,18 +64,18 @@ Diese Meldung gibt keinen Wert zurück.
 |-------------------------------------|-----------------------------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[nur Desktop-Apps\]<br/>                                                |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                                                      |
-| Header<br/>                   | <dl> <dt>MMSYSTEM. h (Include Windows. h)</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Mmsystem.h (include Windows.h)</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[Waveform-Audiodatei](waveform-audio.md)
+[Waveform-Audio](waveform-audio.md)
 </dt> <dt>
 
-[Wellenform Meldungen](waveform-messages.md)
+[Wellenformnachrichten](waveform-messages.md)
 </dt> </dl>
 
  

@@ -1,25 +1,25 @@
 ---
-description: Die meisten LSA-Richtlinien Funktionen erfordern ein Handle für das Richtlinien Objekt, das vom System abgefragt oder geändert werden soll. Rufen Sie zum Abrufen eines Handles für ein Richtlinien Objekt LsaOpenPolicy auf, und geben Sie den Namen des Systems an, auf das Sie zugreifen möchten, sowie den Satz der erforderlichen Zugriffsberechtigungen.
+description: Die meisten LSA-Richtlinienfunktionen erfordern ein Handle für das Policy-Objekt, damit das System abfragen oder ändern kann. Um ein Handle für ein Policy-Objekt zu erhalten, rufen Sie LsaOpenPolicy auf, und geben Sie den Namen des Systems, auf das Sie zugreifen möchten, und den Satz der erforderlichen Zugriffsberechtigungen an.
 ms.assetid: 66fdc878-d9c4-421c-b79f-9df08984611c
-title: Öffnen eines Policy-Objekt Handles
+title: Öffnen eines Richtlinienobjekthandpunkts
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 9c187720692db4937b6e1299dd2bb63fac647852
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 16baf2cf7e722faca1f0441505ec325b8e64c8aad95522e697b4905f566985af
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106362956"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118894051"
 ---
-# <a name="opening-a-policy-object-handle"></a>Öffnen eines Policy-Objekt Handles
+# <a name="opening-a-policy-object-handle"></a>Öffnen eines Richtlinienobjekthandpunkts
 
-Die meisten LSA-Richtlinien Funktionen erfordern ein Handle für das [**Richtlinien**](policy-object.md) Objekt, das vom System abgefragt oder geändert werden soll. Rufen Sie zum Abrufen eines Handles für ein **Richtlinien** Objekt [**LsaOpenPolicy**](/windows/desktop/api/ntsecapi/nf-ntsecapi-lsaopenpolicy) auf, und geben Sie den Namen des Systems an, auf das Sie zugreifen möchten, sowie den Satz der erforderlichen Zugriffsberechtigungen.
+Die meisten LSA-Richtlinienfunktionen erfordern ein Handle für das [**Policy-Objekt,**](policy-object.md) damit das System abfragen oder ändern kann. Um ein Handle für ein **Policy-Objekt** zu erhalten, rufen Sie [**LsaOpenPolicy**](/windows/desktop/api/ntsecapi/nf-ntsecapi-lsaopenpolicy) auf, und geben Sie den Namen des Systems, auf das Sie zugreifen möchten, und den Satz der erforderlichen Zugriffsberechtigungen an.
 
-Welche Zugriffsberechtigungen für die Anwendung erforderlich sind, hängt von den Aktionen ab, die Sie ausführt. Ausführliche Informationen zu den Berechtigungen, die für die einzelnen Funktionen erforderlich sind, finden Sie in der Beschreibung dieser Funktion in [LSA-Richtlinien Funktionen](management-functions.md).
+Welche Zugriffsberechtigungen für Ihre Anwendung erforderlich sind, hängt von den aktionen ab, die sie ausführt. Ausführliche Informationen zu den berechtigungen, die für jede Funktion erforderlich sind, finden Sie in der Beschreibung dieser Funktion in [LSA Policy Functions](management-functions.md).
 
-Wenn der [**LsaOpenPolicy**](/windows/desktop/api/ntsecapi/nf-ntsecapi-lsaopenpolicy) -Aufrufvorgang erfolgreich ist, wird ein Handle für das [**Richtlinien**](policy-object.md) Objekt für das angegebene System zurückgegeben. Die Anwendung übergibt dann dieses Handle in nachfolgenden LSA-Richtlinien Funktionsaufrufen. Wenn die Anwendung das Handle nicht mehr benötigt, sollte Sie [**lsaclose**](/windows/desktop/api/Ntsecapi/nf-ntsecapi-lsaclose) zum Freigeben von anrufen.
+Wenn der Aufruf von [**LsaOpenPolicy**](/windows/desktop/api/ntsecapi/nf-ntsecapi-lsaopenpolicy) erfolgreich ist, wird ein Handle an das [**Policy-Objekt**](policy-object.md) für das angegebene System zurückgegeben. Die Anwendung übergibt dieses Handle dann in nachfolgenden LSA Policy-Funktionsaufrufen. Wenn Ihre Anwendung das Handle nicht mehr benötigt, sollte sie [**LsaClose aufrufen,**](/windows/desktop/api/Ntsecapi/nf-ntsecapi-lsaclose) um es frei zu geben.
 
-Im folgenden Beispiel wird gezeigt, wie ein [**Richtlinien**](policy-object.md) Objekt Handle geöffnet wird.
+Das folgende Beispiel zeigt, wie sie ein [**Policy-Objekthand**](policy-object.md) handle öffnen.
 
 
 ```C++
@@ -66,9 +66,9 @@ LSA_HANDLE GetPolicyHandle()
 
 
 
-Im vorherigen Beispiel hat die Anwendung Richtlinien für \_ alle \_ Zugriffs [*Berechtigungen*](/windows/desktop/SecGloss/p-gly)angefordert. Ausführliche Informationen zu den Berechtigungen, die Ihre Anwendung beim Aufrufen von [**LsaOpenPolicy**](/windows/desktop/api/ntsecapi/nf-ntsecapi-lsaopenpolicy)anfordern soll, finden Sie in den Beschreibungen der Funktionen, an die die Anwendung das [**Richtlinien**](policy-object.md) Objekt Handle übergibt.
+Im vorherigen Beispiel hat die Anwendung die BERECHTIGUNGEN POLICY \_ ALL \_ ACCESS [*angefordert.*](/windows/desktop/SecGloss/p-gly) Ausführliche Informationen dazu, welche Berechtigungen Ihre Anwendung beim Aufrufen von [**LsaOpenPolicy**](/windows/desktop/api/ntsecapi/nf-ntsecapi-lsaopenpolicy)anfordern soll, finden Sie in den Beschreibungen der Funktionen, an die Ihre Anwendung das Handle des [**Policy-Objekts**](policy-object.md) übergehen wird.
 
-Rufen Sie zum Öffnen eines Handles für das [**Richtlinien**](policy-object.md) Objekt einer vertrauenswürdigen Domäne [**lsacreatetrusteddomainex**](/windows/desktop/api/Ntsecapi/nf-ntsecapi-lsacreatetrusteddomainex) auf (um eine neue Vertrauensstellung mit einer Domäne zu erstellen), oder rufen Sie [**lsaopentrusteddomainbyname**](/windows/desktop/api/Ntsecapi/nf-ntsecapi-lsaopentrusteddomainbyname) auf (um auf eine vorhandene Vertrauenswürdige Domäne zuzugreifen). Beide Funktionen legen einen Zeiger auf ein [**LSA- \_ handle**](lsa-handle.md)fest, das Sie dann in nachfolgenden LSA-Richtlinien Funktionsaufrufen angeben können. Wie bei [**LsaOpenPolicy**](/windows/desktop/api/ntsecapi/nf-ntsecapi-lsaopenpolicy)sollte Ihre Anwendung auch [**lsaclose**](/windows/desktop/api/Ntsecapi/nf-ntsecapi-lsaclose) aufgerufen werden, wenn das Handle für das **Richtlinien** Objekt der vertrauenswürdigen Domäne nicht mehr benötigt wird.
+Um ein Handle für das [**Policy-Objekt**](policy-object.md) einer vertrauenswürdigen Domäne zu öffnen, rufen Sie [**LsaCreateTrustedDomainEx**](/windows/desktop/api/Ntsecapi/nf-ntsecapi-lsacreatetrusteddomainex) auf (um eine neue Vertrauensstellung mit einer Domäne zu erstellen), oder rufen [**Sie LsaOpenTrustedDomainByName**](/windows/desktop/api/Ntsecapi/nf-ntsecapi-lsaopentrusteddomainbyname) auf (um auf eine vorhandene vertrauenswürdige Domäne zu zugreifen). Beide Funktionen legen einen Zeiger auf ein [**LSA \_ HANDLE**](lsa-handle.md)fest, das Sie dann in nachfolgenden LSA Policy-Funktionsaufrufen angeben können. Wie bei [**LsaOpenPolicy**](/windows/desktop/api/ntsecapi/nf-ntsecapi-lsaopenpolicy)sollte Ihre Anwendung [**LsaClose**](/windows/desktop/api/Ntsecapi/nf-ntsecapi-lsaclose) aufrufen, wenn sie das Handle für das Policy-Objekt der vertrauenswürdigen **Domäne nicht mehr** benötigt.
 
  
 

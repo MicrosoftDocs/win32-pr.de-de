@@ -1,19 +1,19 @@
 ---
-description: Definiert einen Satz von zwei booleschen Werten, die in der meshfacewrapper-Vorlage verwendet werden, um die Textur Topologie eines einzelnen Gesichts zu definieren. Verwenden Sie anstelle von Boolean2d, wenn die Texturkoordinaten (u, v) den Bereich von 0 bis 2 anstelle von 0 bis 1 umfassen.
+description: Definiert einen Satz von zwei booleschen Werten, die in der MeshFaceWraps-Vorlage verwendet werden, um die Texturtopologie eines einzelnen Gesichts zu definieren. Verwenden Sie anstelle von Boolean2d, wenn die Texturkoordinaten (u, v) den Bereich von 0 bis 2 anstelle von 0 bis 1 umfassen.
 ms.assetid: 0d1755fc-66cb-4372-b9d0-fb320c55d6a7
-title: Materialwrap
+title: MaterialWrap
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 6797719919a4f52421751a5cad008aa8a581089a
-ms.sourcegitcommit: a47bd86f517de76374e4fff33cfeb613eb259a7e
+ms.openlocfilehash: 656c5f7d4eaad52a75cffca0189a1e6fa36e3e89714d8ee0225a3aeec21c8e10
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/06/2021
-ms.locfileid: "106340066"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118798921"
 ---
-# <a name="materialwrap"></a>Materialwrap
+# <a name="materialwrap"></a>MaterialWrap
 
-Definiert einen Satz von zwei booleschen Werten, die in der [**meshfacewrapper**](meshfacewraps.md) -Vorlage verwendet werden, um die Textur Topologie eines einzelnen Gesichts zu definieren. Verwenden Sie anstelle von [**Boolean2d**](boolean2d.md) , wenn die Texturkoordinaten (u, v) den Bereich von 0 bis 2 anstelle von 0 bis 1 umfassen.
+Definiert einen Satz von zwei booleschen Werten, die in der [**MeshFaceWraps-Vorlage**](meshfacewraps.md) verwendet werden, um die Texturtopologie eines einzelnen Gesichts zu definieren. Verwenden Sie anstelle von [**Boolean2d,**](boolean2d.md) wenn die Texturkoordinaten (u, v) den Bereich von 0 bis 2 anstelle von 0 bis 1 umfassen.
 
 ``` syntax
 template MaterialWrap
@@ -26,15 +26,15 @@ template MaterialWrap
 
 Hierbei gilt:
 
--   u-boolescher Wert. Siehe [**Boolean**](boolean.md).
--   v-boolescher Wert. Siehe [**Boolean**](boolean.md).
+-   u : Boolescher Wert. Weitere Informationen finden Sie unter [**Boolescher**](boolean.md)Wert.
+-   v: Boolescher Wert. Weitere Informationen finden Sie unter [**Boolescher**](boolean.md)Wert.
 
 > [!Note]  
-> Die Vorlage " [**meshfacewrapper**](meshfacewraps.md) " wird nicht mehr verwendet.
+> Die [**MeshFaceWraps-Vorlage**](meshfacewraps.md) wird nicht mehr verwendet.
 
  
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 

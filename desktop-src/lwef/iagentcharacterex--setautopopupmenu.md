@@ -1,19 +1,19 @@
 ---
-title: Iagentcharakteriex-"stautopopupmenu"
-description: Iagentcharakteriex-"stautopopupmenu"
+title: IAgentCharacterEx SetAutoPopupMenu
+description: IAgentCharacterEx SetAutoPopupMenu
 ms.assetid: f2402b1f-a39b-4fd5-a046-c0a3245d2af9
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: fcfd1bd7ea0b02f226ed6f0365b466577807a193
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: 5a616bd95836d8f8131aaccabe0bb6db4f35a5caf22c480c17908935d80f2b12
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "103947774"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118477958"
 ---
-# <a name="iagentcharacterexsetautopopupmenu"></a>Iagentcharakteriex:: abtautopopupmenu
+# <a name="iagentcharacterexsetautopopupmenu"></a>IAgentCharacterEx::SetAutoPopupMenu
 
-\[Der Microsoft-Agent ist ab Windows 7 veraltet und in nachfolgenden Versionen von Windows möglicherweise nicht verfügbar.\]
+\[Der Microsoft-Agent ist ab Windows 7 veraltet und in nachfolgenden Versionen von Windows möglicherweise nicht mehr verfügbar.\]
 
 ``` syntax
 HRESULT SetAutoPopupMenu(
@@ -21,31 +21,31 @@ HRESULT SetAutoPopupMenu(
 );
 ```
 
-Legt fest, ob der Server das Popup Menü des Zeichens automatisch anzeigt.
+Legt fest, ob der Server automatisch das Popupmenü des Zeichens anzeigt.
 
 -   Gibt S \_ OK zurück, um anzugeben, dass der Vorgang erfolgreich war.
 
 <dl> <dt>
 
-<span id="bAutoPopupMenu"></span><span id="bautopopupmenu"></span><span id="BAUTOPOPUPMENU"></span>*bautopopupmenu*
+<span id="bAutoPopupMenu"></span><span id="bautopopupmenu"></span><span id="BAUTOPOPUPMENU"></span>*bAutoPopupMenu*
 </dt> <dd>
 
-Das automatische Popup-Menü Anzeigeflag. Wenn dieser Parameter **true** ist, zeigt der Microsoft-Agent automatisch das Popup Menü des Zeichens an, wenn der Benutzer mit der rechten Maustaste auf das Symbol der Taskleiste des Zeichens oder Zeichens klickt.
+Das Anzeigeflag des automatischen Popupmenüs. Wenn dieser Parameter **True** ist, zeigt der Microsoft-Agent automatisch das Popupmenü des Zeichens an, wenn der Benutzer mit der rechten Maustaste auf das Zeichen oder das Taskleistensymbol des Zeichens klickt.
 
 </dd> </dl>
 
-Diese Eigenschaft gilt nur für die Verwendung des Zeichens durch die Client Anwendung. Diese Einstellung wirkt sich nicht auf andere Clients des Zeichens oder andere Zeichen ihrer Client Anwendung aus.
+Diese Eigenschaft gilt nur für die Verwendung des Zeichens durch Ihre Clientanwendung. Die Einstellung wirkt sich nicht auf andere Clients des Zeichens oder anderer Zeichen Ihrer Clientanwendung aus.
 
-Wenn Sie diese Eigenschaft auf " **false**" festlegen, können Sie ein eigenes Menü Verarbeitungs Verhalten erstellen. Um das Menü nach dem Festlegen dieser Eigenschaft auf **false** anzuzeigen, verwenden Sie die [**iagentcharakteriex:: showPopupMenu**](iagentcharacterex--showpopupmenu.md) -Methode.
+Wenn Sie diese Eigenschaft auf **False** festlegen, können Sie Ein eigenes Menübehandlungsverhalten erstellen. Um das Menü nach dem Festlegen dieser Eigenschaft auf **False** anzuzeigen, verwenden Sie die [**IAgentCharacterEx::ShowPopupMenu-Methode.**](iagentcharacterex--showpopupmenu.md)
 
 ## <a name="see-also"></a>Weitere Informationen
 
-[**Iagentcharakteriex:: GetAutoPopupMenu**](iagentcharacterex--getautopopupmenu.md), [ **iagentcharakteriex:: showPopupMenu**](iagentcharacterex--showpopupmenu.md)
+[**IAgentCharacterEx::GetAutoPopupMenu**](iagentcharacterex--getautopopupmenu.md), [ **IAgentCharacterEx::ShowPopupMenu**](iagentcharacterex--showpopupmenu.md)
 
 
- 
+ 
 
- 
+ 
 
 
 

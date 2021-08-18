@@ -1,7 +1,7 @@
 ---
-description: 'Die Hilfe Methode ruft die Hilfe der Eigenschaften Seite auf. Diese Methode implementiert die IPropertyPage:: Help-Methode.'
+description: Die Help-Methode ruft die Hilfe zur Eigenschaftenseite auf. Diese Methode implementiert die IPropertyPage::Help-Methode.
 ms.assetid: 8fe72b2e-a9f1-435d-8eda-27056f112c6d
-title: Cbasepropertypage. Help-Methode (cprop. h)
+title: CBasePropertyPage.Help-Methode (Cprop.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,16 +16,16 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: b87c8ba76928fbf0e465a8b6a3a0aaf4730759f1
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: e2f97f7edd1e719eb44ff1d41929d7cb3864d8117eabb383b4318688adfa537f
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106360944"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118955089"
 ---
-# <a name="cbasepropertypagehelp-method"></a>Cbasepropertypage. Help-Methode
+# <a name="cbasepropertypagehelp-method"></a>CBasePropertyPage.Help-Methode
 
-Die- `Help` Methode ruft die Hilfe der Eigenschaften Seite auf. Diese Methode implementiert die **IPropertyPage:: Help** -Methode.
+Die `Help` -Methode ruft die Hilfe zur Eigenschaftenseite auf. Diese Methode implementiert die **IPropertyPage::Help-Methode.**
 
 ## <a name="syntax"></a>Syntax
 
@@ -42,20 +42,20 @@ HRESULT Help(
 
 <dl> <dt>
 
-*lpszhelpdir* 
+*lpszHelpDir* 
 </dt> <dd>
 
-Zeiger auf die Zeichenfolge unter dem **helpDir** -Schlüssel in den CLSID-Informationen der Eigenschaften Seite in der Registrierung.
+Zeiger auf die Zeichenfolge unter dem **HelpDir-Schlüssel** in den CLSID-Informationen der Eigenschaftenseite in der Registrierung.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt "E \_ notimpl" zurück.
+Gibt E \_ NOTIMPL zurück.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-In der-Basisklasse gibt die-Methode immer E \_ notimpl zurück. Wenn die Methode fehlschlägt, ruft der Frame **IPropertyPage:: GetPageInfo** auf, um den Namen der Hilfedatei und des Kontext Bezeichners zu erhalten. Standardmäßig sind diese **null**-Werte. Um Hilfe bereitzustellen, kann die abgeleitete Klasse entweder die- `Help` Methode oder die [**cbasepropertypage:: getpagumfo**](cbasepropertypage-getpageinfo.md) -Methode überschreiben.
+In der Basisklasse gibt die Methode immer E \_ NOTIMPL zurück. Wenn die Methode fehlschlägt, ruft der Frame **IPropertyPage::GetPageInfo** auf, um den Namen der Hilfedatei und den Kontextbezeichner abzurufen. Standardmäßig sind dies **NULL.** Um Hilfe bereitzustellen, kann die abgeleitete Klasse daher entweder die `Help` -Methode oder die [**CBasePropertyPage::GetPageInfo-Methode**](cbasepropertypage-getpageinfo.md) überschreiben.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -63,16 +63,16 @@ In der-Basisklasse gibt die-Methode immer E \_ notimpl zurück. Wenn die Methode
 
 | Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Cprop. h (Include Streams. h)</dt> </dl>                                                                                     |
-| Bibliothek<br/> | <dl> " <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Cprop.h (include Streams.h)</dt> </dl>                                                                                     |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Verkaufsbuilds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Cbasepropertypage-Klasse**](cbasepropertypage.md)
+[**CBasePropertyPage-Klasse**](cbasepropertypage.md)
 </dt> </dl>
 
  
