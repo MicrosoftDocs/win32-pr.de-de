@@ -4,20 +4,20 @@ ms.assetid: 65EB0A92-C82A-4248-A3AD-CAC89D25BE31
 title: SMTP
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: b9caa0d3b48ac8601e469ba92228ff52924acec7
-ms.sourcegitcommit: c7add10d695482e1ceb72d62b8a4ebd84ea050f7
+ms.openlocfilehash: a35d08c19abd9c718b78cd2f47327718acd0c8e60583b98eabbc0a9de6baa5eb
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104522795"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119075804"
 ---
 # <a name="smtp"></a>SMTP
 
 ## <a name="in-this-section"></a>In diesem Abschnitt
 
 -   [AsyncTrace](asynctrace.md)
--   [Csharelocknh-Methoden](csharelocknh-methods.md)
--   [-Bibliothek](fcachdll-library.md)
+-   [CShareLockNH-Methoden](csharelocknh-methods.md)
+-   [FCachDLL-Bibliothek](fcachdll-library.md)
 
  
 

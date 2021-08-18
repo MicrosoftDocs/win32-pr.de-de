@@ -1,5 +1,5 @@
 ---
-description: 'IInkAnalyzer::Search-Methode: Stellt eine fuzzybasierte Suche nach analysierten Schreibstrichen und analysierten Zeichnungsstrichen mit erkannten Typen ohne Unterschiedliche Groß-/Kleinschreibung zur Unterstützung der Groß-/Kleinschreibung zur Lage.'
+description: 'IInkAnalyzer::Search-Methode: Bietet eine fuzzybasierte Suche nach analysierten Schreibstrichen und analysierten Zeichnungsstrichen, die erkannte Typen haben.'
 ms.assetid: 5b5ce4b5-45ef-42ef-866b-2f38c32d8c86
 title: IInkAnalyzer::Search-Methode (IACom.h)
 ms.topic: reference
@@ -13,16 +13,16 @@ api_type:
 - COM
 api_location:
 - IACom.dll
-ms.openlocfilehash: 94ccdebf8c8a134a845ff3df3017d710d1da93f1
-ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
+ms.openlocfilehash: a5ebbec010d84f510d9bd2786b20fee1deaa34039720d842df77cbe0f1ca9825
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2021
-ms.locfileid: "108113728"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119091498"
 ---
 # <a name="iinkanalyzersearch-method"></a>IInkAnalyzer::Search-Methode
 
-Stellt eine fuzzybasierte Suche nach analysierten Schreibstrichen und analysierten Zeichnungsstrichen mit erkannten Typen ohne Unterschiedliche Groß-/Kleinschreibung zur Unterstützung der Groß-/Kleinschreibung zur Lage.
+Stellt eine fuzzybasierte Suche nach analysierten Schreibstrichen und analysierten Zeichnungsstrichen mit erkannten Typen ohne Unterschiedliche Groß-/Kleinschreibung zur Unterstützung der Groß-/Kleinschreibung zur Unterstützung von Strichen.
 
 ## <a name="syntax"></a>Syntax
 
@@ -67,7 +67,7 @@ Zeiger auf ein Array der Anzahl von Strichen in jedem Suchergebnis.
 *pulStrokeIdsCount* \[ in, out\]
 </dt> <dd>
 
-Die Anzahl der Strich-IDs in *ppulStrokeIds*.
+Die Anzahl der Strich-IDs in *ppulStrokeIds.*
 
 </dd> <dt>
 
@@ -82,17 +82,17 @@ Zeiger auf ein Array von Strich-IDs, die einen Satz von Strichen darstellen.
 
 Eine Beschreibung der Rückgabewerte finden Sie unter [Klassen und Schnittstellen – Ink-Analyse](classes-and-interfaces---ink-analysis.md).
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
 Bei dieser Suche werden Teilzeichenfolgen mit mehreren Wörtern und einzelnen Wörtern gefunden. Sowohl alternative Erkennungsergebnisse als auch alternative Segmentierungen werden durchsucht.
 
 Alle eingehenden Zeichenfolgen werden für den Vergleich mithilfe der LCID des aktuellen Threads in eine einzelne Zeichenfolge konvertiert, um diese Konvertierung zur Einhaltung von Kulturfallkonventionen zu ermöglichen.
 
-Die übergebene Zeichenfolge wird als Ausdruck behandelt. Wörter und Zeichen müssen in den Alterantes für die Striche in der angegebenen Reihenfolge angezeigt werden. Die ersten und letzten Wörter des Ausdrucks können als Teilzeichenfolgen abgeglichen werden (das erste Wort, das am Ende eines alternativen und das letzte Wort beim Umbetten eines worts angezeigt wird), aber alle anderen Wörter (innerhalb des Ausdrucks) müssen als ganze Wörter angezeigt werden.
+Die übergebene Zeichenfolge wird als Ausdruck behandelt. Wörter und Zeichen müssen in den Alterantes für die Striche in der angegebenen Reihenfolge angezeigt werden. Das erste und das letzte Wort des Ausdrucks können als Teilzeichenfolgen übereinstimmen (das erste Wort, das am Ende eines alternativen Worts und das letzte Wort, das beim Umhügen eines Worts angezeigt wird), aber alle anderen Wörter (die innerhalb des Ausdrucks) müssen als ganze Wörter angezeigt werden.
 
-Wenn die übergebene Zeichenfolge keine Leerzeichen zwischen Zeichen enthält, kann die Teilzeichenfolge an einer beliebigen Stelle innerhalb eines einzelnen Worts in einer alternativen Zeichenfolge gefunden werden.
+Wenn die übergebene Zeichenfolge keine Leerzeichen zwischen Zeichen enthält, kann die Teilzeichenfolge an einer beliebigen Stelle innerhalb eines einzelnen Worts in einem alternativen Gefunden werden.
 
-Nur das Vorhandensein oder Fehlen von Leerzeichen zwischen Zeichen ändert die Ergebnisse der Suche. Leerzeichen, die nicht von Zeichen umgeben sind, werden ignoriert. Der Typ des Leerraums wird ignoriert (eine Registerkarte oder ein Leerzeichen zwischen Zeichen führt zum gleichen Ergebnis). Die Leerraummenge spielt keine Rolle. Ein leerzeichen oder zwei Leerzeichen zwischen Zeichen ergeben das gleiche Ergebnis.
+Nur das Vorhandensein oder Fehlen von Leerzeichen zwischen Zeichen ändert die Ergebnisse der Suche. Leerzeichen, die nicht von Zeichen umgeben sind, werden ignoriert. Der Typ des Leerraums wird ignoriert (eine Registerkarte oder ein Leerzeichen zwischen Zeichen führt zu demselben Ergebnis). Die Menge an Leerzeichen spielt keine Rolle. Ein oder zwei Leerzeichen zwischen Zeichen führen zu demselben Ergebnis.
 
 Die Suche generiert keine PopulateContextNode-Ereignisse. Nur die Striche, die bereits aufgefüllt wurden, werden durchsucht.
 
@@ -100,9 +100,9 @@ Die Suche generiert keine PopulateContextNode-Ereignisse. Nur die Striche, die b
 
 
 
-| Anforderungen | Wert |
+| Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Desktop-Apps der Windows XP Tablet PC Edition \[\]<br/>                                                 |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur Desktop-Apps der XP Tablet PC Edition \[\]<br/>                                                 |
 | Unterstützte Mindestversion (Server)<br/> | Nicht unterstützt<br/>                                                                                     |
 | Header<br/>                   | <dl> <dt>IACom.h (erfordert auch IACom \_ i.c)</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>IACom.dll</dt> </dl>                          |

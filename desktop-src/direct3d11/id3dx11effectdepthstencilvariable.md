@@ -1,10 +1,10 @@
 ---
-title: ID3DX11EffectDepthStencilVariable-Schnittstelle (D3dx11effect. h)
-description: Eine tiefen Schablone-Variablen-Schnittstelle greift auf den Status der tiefen Schablone zu.
+title: ID3DX11EffectDepthStencilVariable-Schnittstelle (D3dx11effect.h)
+description: Eine Tiefenschablonenvariablenschnittstelle greift auf den Tiefenschablonenzustand zu.
 ms.assetid: 8fb1be19-eed4-4d69-bbbe-94484531eba2
 keywords:
 - ID3DX11EffectDepthStencilVariable-Schnittstelle Direct3D 11
-- ID3DX11EffectDepthStencilVariable Interface Direct3D 11, beschrieben
+- ID3DX11EffectDepthStencilVariable-Schnittstelle Direct3D 11 , beschrieben
 topic_type:
 - apiref
 api_name:
@@ -16,59 +16,59 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 4d7aa520df0c13c81435421d5f605f901a61da6e
-ms.sourcegitcommit: 14010c34b35fa268046c7683f021f86de08ddd0a
+ms.openlocfilehash: 9d743bfebfa9722261d220800a633bdc8b268a520b883c9fea11f9f7948f7bca
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "103961717"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118989770"
 ---
 # <a name="id3dx11effectdepthstencilvariable-interface"></a>ID3DX11EffectDepthStencilVariable-Schnittstelle
 
-Eine tiefen Schablone-Variablen-Schnittstelle greift auf den Status der tiefen Schablone zu.
+Eine Tiefenschablonenvariablenschnittstelle greift auf den Tiefenschablonenzustand zu.
 
 ## <a name="members"></a>Member
 
-Die **ID3DX11EffectDepthStencilVariable** -Schnittstelle erbt von [**ID3DX11EffectVariable**](id3dx11effectvariable.md). **ID3DX11EffectDepthStencilVariable** verfügt auch über die folgenden Typen von Membern:
+Die **ID3DX11EffectDepthStencilVariable-Schnittstelle** erbt von [**ID3DX11EffectVariable**](id3dx11effectvariable.md). **ID3DX11EffectDepthStencilVariable** verfügt auch über diese Typen von Membern:
 
 -   [Methoden](#methods)
 
 ### <a name="methods"></a>Methoden
 
-Die **ID3DX11EffectDepthStencilVariable** -Schnittstelle verfügt über diese Methoden.
+Die **ID3DX11EffectDepthStencilVariable-Schnittstelle** verfügt über diese Methoden.
 
 
 
-| Methode                                                                                         | BESCHREIBUNG                                                               |
+| Methode                                                                                         | Beschreibung                                                               |
 |:-----------------------------------------------------------------------------------------------|:--------------------------------------------------------------------------|
-| [**Getbackingstore**](id3dx11effectdepthstencilvariable-getbackingstore.md)                   | Einen Zeiger auf eine Variable mit dem Status der tiefen Schablone erhalten.<br/> |
-| [**Getdepthstencilstate**](id3dx11effectdepthstencilvariable-getdepthstencilstate.md)         | Einen Zeiger auf eine tiefen Schablone-Schnittstelle erhalten.<br/>                    |
-| [**Setdepthstencilstate**](id3dx11effectdepthstencilvariable-setdepthstencilstate.md)         | Legt den Status der tiefen Schablone fest.<br/>                                  |
-| [**Undosetdepthstencilstate**](id3dx11effectdepthstencilvariable-undosetdepthstencilstate.md) | Stellt einen zuvor festgelegten tiefen Schablone Zustand wieder her.<br/>                  |
+| [**GetBackingStore**](id3dx11effectdepthstencilvariable-getbackingstore.md)                   | Abrufen eines Zeigers auf eine Variable, die den Tiefenschablonenzustand enthält.<br/> |
+| [**GetDepthStencilState**](id3dx11effectdepthstencilvariable-getdepthstencilstate.md)         | Abrufen eines Zeigers auf eine Tiefenschablonenschnittstelle.<br/>                    |
+| [**SetDepthStencilState**](id3dx11effectdepthstencilvariable-setdepthstencilstate.md)         | Legt den Tiefenschablonenzustand fest.<br/>                                  |
+| [**UndoSetDepthStencilState**](id3dx11effectdepthstencilvariable-undosetdepthstencilstate.md) | Setzt einen zuvor festgelegten Tiefenschablonenzustand zurück.<br/>                  |
 
 
 
  
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Eine [**ID3DX11EffectVariable**](id3dx11effectvariable.md) -Schnittstelle wird erstellt, wenn ein Effekt in den Arbeitsspeicher gelesen wird.
+Eine [**ID3DX11EffectVariable-Schnittstelle**](id3dx11effectvariable.md) wird erstellt, wenn ein Effekt in den Arbeitsspeicher gelesen wird.
 
-Effekt Variablen werden im Sicherungs Speicher im Arbeitsspeicher gespeichert. Wenn eine Technik angewendet wird, werden die Werte im Sicherungs Speicher auf das Gerät kopiert. Sie können eine dieser Methoden verwenden, um den Status zurückzugeben.
+Effektvariablen werden im Speicher im Sicherungsspeicher gespeichert. Wenn eine Technik angewendet wird, werden die Werte im Sicherungsspeicher auf das Gerät kopiert. Sie können eine dieser Methoden verwenden, um den Zustand zurückzugeben.
 
 > [!Note]  
-> Das DirectX SDK stellt keine kompilierten Binärdateien für Effekte bereit. Sie müssen die Effekte 11-Quelle verwenden, um die Effekte-Anwendung zu erstellen. Weitere Informationen zum Verwenden der Effekte 11-Quelle finden Sie [unter Unterschiede zwischen den Effekten 10 und Effekte 11](d3d11-graphics-programming-guide-effects-differences.md).
+> Das DirectX SDK stellt keine kompilierten Binärdateien für Effekte zur Verfügung. Sie müssen die Effects 11-Quelle verwenden, um ihre Effekte-Typ-Anwendung zu erstellen. Weitere Informationen zur Verwendung der Quelle Effects 11 finden Sie unter [Unterschiede zwischen Effekten 10 und Effekten 11.](d3d11-graphics-programming-guide-effects-differences.md)
 
  
 
-## <a name="requirements"></a>Requirements (Anforderungen)
+## <a name="requirements"></a>Anforderungen
 
 
 
 | Anforderung | Wert |
 |--------------------|----------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>D3dx11effect. h</dt> </dl>                                                    |
-| Bibliothek<br/> | <dl> <dt>N/v (die "Effects 11"-Bibliothek ist online als freigegebene Quelle verfügbar.)</dt> </dl> |
+| Header<br/>  | <dl> <dt>D3dx11effect.h</dt> </dl>                                                    |
+| Bibliothek<br/> | <dl> <dt>N/A (Eine Effects 11-Bibliothek ist online als freigegebene Quelle verfügbar.)</dt> </dl> |
 
 
 
@@ -79,7 +79,7 @@ Effekt Variablen werden im Sicherungs Speicher im Arbeitsspeicher gespeichert. W
 [**ID3DX11EffectVariable**](id3dx11effectvariable.md)
 </dt> <dt>
 
-[Effekte 11-Schnittstellen](d3d11-graphics-reference-effects11-interfaces.md)
+[Effekte 11 Schnittstellen](d3d11-graphics-reference-effects11-interfaces.md)
 </dt> <dt>
 
 [D3DX-Schnittstellen](d3d11-graphics-reference-d3dx11-interfaces.md)

@@ -3,20 +3,20 @@ title: Zuschneiden eines Bilds
 description: Zuschneiden eines Bilds
 ms.assetid: 6600751c-d4b6-481d-bf69-be2d34244c05
 keywords:
-- Mciwndgetsource-Makro
-- Mciwndputsource-Makro
+- MCIWndGetSource-Makro
+- MCIWndPutSource-Makro
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: b2d73eb37792c124ad907f660d4b906ca80e715d
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: d0150962dc85e1e179e52a06c7af6c29193b40b50e9acc7a9feecd0570ab4214
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "104471189"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119144607"
 ---
 # <a name="cropping-an-image"></a>Zuschneiden eines Bilds
 
-Im folgenden Beispiel wird ein mciwnd-Fenster erstellt und eine AVI-Datei geladen. Das Fenster enthält einen Befehl zum Zuschneiden im Menü, das eine Viertel der Höhe oder Breite von jeder der vier Seiten des Frames aufbindet. Im Beispiel werden die aktuellen (anfänglichen) Dimensionen des Quell Rechtecks mithilfe des [**mciwndgetsource**](/windows/desktop/api/Vfw/nf-vfw-mciwndgetsource) -Makros abgerufen. Das geänderte Quell Rechteck ist die Hälfte der ursprünglichen Höhe und Breite und wird im ursprünglichen Frame zentriert. Der-Befehl zum [**mciwndputsource**](/windows/desktop/api/Vfw/nf-vfw-mciwndputsource) -Makro definiert die Koordinaten des Quell Rechtecks neu.
+Im folgenden Beispiel wird ein MCIWnd-Fenster erstellt und eine AVI-Datei geladen. Das Fenster enthält einen Zuschneidebefehl im Menü, der ein Viertel der Höhe oder Breite von jeder der vier Seiten des Rahmens zuschneiden kann. Im Beispiel werden die aktuellen (anfänglichen) Dimensionen des Quellrechtecks mithilfe des [**MCIWndGetSource-Makros**](/windows/desktop/api/Vfw/nf-vfw-mciwndgetsource) abgerufen. Das geänderte Quellrechteck ist halb so groß wie die ursprüngliche Höhe und Breite und wird im ursprünglichen Rahmen zentriert. Der Aufruf des [**MCIWndPutSource-Makros**](/windows/desktop/api/Vfw/nf-vfw-mciwndputsource) definiert die Koordinaten des Quellrechtecks neu.
 
 
 ```C++
@@ -51,9 +51,9 @@ case WM_COMMAND:
 
 
 
- 
+ 
 
- 
+ 
 
 
 

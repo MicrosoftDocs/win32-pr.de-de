@@ -1,5 +1,5 @@
 ---
-description: 'D3DXMatrixDecompose-Funktion (D3dx9math.h): Unterbricht eine allgemeine 3D-Transformationsmatrix in ihre skalaren, rotierten und übersetzungsbasierten Komponenten.'
+description: 'D3DXMatrixDecompose-Funktion (D3dx9math.h): Unterbricht eine allgemeine 3D-Transformationsmatrix in ihre skalaren, drehlichen und übersetzungsbasierten Komponenten.'
 ms.assetid: 73d3c248-1254-444e-9fd8-4f144424ddb7
 title: D3DXMatrixDecompose-Funktion (D3dx9math.h)
 ms.topic: reference
@@ -14,16 +14,16 @@ api_type:
 api_location:
 - d3dx9.lib
 - d3dx9.dll
-ms.openlocfilehash: aaaa1059c4ffeafa453694d9c348656c856decaa
-ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
+ms.openlocfilehash: ffb6ce07713b4f66f4a85a678b5b28b589f8ae797c5a7b5c578ed136bbb9e3f1
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2021
-ms.locfileid: "108098188"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119460390"
 ---
 # <a name="d3dxmatrixdecompose-function-d3dx9mathh"></a>D3DXMatrixDecompose-Funktion (D3dx9math.h)
 
-Unterteilen einer allgemeinen 3D-Transformationsmatrix in ihre skalaren, drehlichen und übersetzungsübergreifenden Komponenten.
+Unterteilen einer allgemeinen 3D-Transformationsmatrix in ihre skalaren, rotierten und übersetzungsübergreifenden Komponenten.
 
 ## <a name="syntax"></a>Syntax
 
@@ -89,7 +89,7 @@ Wenn die Funktion erfolgreich ist, ist der Rückgabewert S \_ OK. Wenn die Funkt
 
 
 
-| Anforderungen | Wert |
+| Anforderung | Wert |
 |--------------------|----------------------------------------------------------------------------------------|
 | Header<br/>  | <dl> <dt>D3dx9math.h</dt> </dl> |
 | Bibliothek<br/> | <dl> <dt>D3dx9.lib</dt> </dl>   |

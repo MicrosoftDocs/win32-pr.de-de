@@ -1,19 +1,19 @@
 ---
-description: Weist ein IME-Fenster an, die Position des Status Fensters zu erhalten. Um diesen Befehl zu senden, verwendet die Anwendung die WM- \_ IME- \_ Steuerungs Meldung mit den unten gezeigten Parametereinstellungen.
+description: Weist ein IME-Fenster an, die Position des Statusfensters abzurufen. Zum Senden dieses Befehls verwendet die Anwendung die WM \_ IME \_ CONTROL-Nachricht mit den unten gezeigten Parametereinstellungen.
 ms.assetid: 59c7baae-1b8a-4761-9814-31afd8d39691
-title: IMC_GETSTATUSWINDOWPOS Befehl (IMM. h)
+title: IMC_GETSTATUSWINDOWPOS Befehl (Imm.h)
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: cfd17c5787d9ef8c787e62a556afa2f136bd65c3
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: cfb542ef95a7825e4809e0fa2ce9175493bffeffbbaa36926a91299746026d51
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106356800"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119068080"
 ---
-# <a name="imc_getstatuswindowpos-command"></a>Befehl "IMC \_ GetStatus-WINDOWPOS"
+# <a name="imc_getstatuswindowpos-command"></a>IMC \_ GETSTATUSWINDOWPOS-Befehl
 
-Weist ein IME-Fenster an, die Position des Status Fensters zu erhalten. Um diesen Befehl zu senden, verwendet die Anwendung die [**WM- \_ IME- \_ Steuerungs**](wm-ime-control.md) Meldung mit den unten gezeigten Parametereinstellungen.
+Weist ein IME-Fenster an, die Position des Statusfensters abzurufen. Zum Senden dieses Befehls verwendet die Anwendung die [**WM \_ IME \_ CONTROL-Nachricht**](wm-ime-control.md) mit den unten gezeigten Parametereinstellungen.
 
 
 ```C++
@@ -26,23 +26,23 @@ LRESULT IMC_GETSTATUSWINDOWPOS
 
 <dl> <dt>
 
-<span id="wParam"></span><span id="wparam"></span><span id="WPARAM"></span>*wParam*
+<span id="wParam"></span><span id="wparam"></span><span id="WPARAM"></span>*Wparam*
 </dt> <dd>
 
-Legen Sie auf "IMC \_ GetStatus-WINDOWPOS" fest.
+Legen Sie diese Einstellung auf IMC \_ GETSTATUSWINDOWPOS fest.
 
 </dd> <dt>
 
-<span id="lParam"></span><span id="lparam"></span><span id="LPARAM"></span>*LParam*
+<span id="lParam"></span><span id="lparam"></span><span id="LPARAM"></span>*Lparam*
 </dt> <dd>
 
-Nicht verwendet.
+Wird nicht verwendet.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt eine [**Points**](/previous-versions//dd162808(v=vs.85)) -Struktur zurück, die die x-Koordinate und die y-Koordinate der Statusfenster Position in Bildschirm Koordinaten relativ zur oberen linken Ecke des Bildschirms enthält.
+Gibt eine [**POINTS-Struktur**](/previous-versions//dd162808(v=vs.85)) zurück, die die x-Koordinate und die y-Koordinate der Statusfensterposition in Bildschirmkoordinaten relativ zur oberen linken Ecke des Bildschirms enthält.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -52,21 +52,21 @@ Gibt eine [**Points**](/previous-versions//dd162808(v=vs.85)) -Struktur zurück,
 |-------------------------------------|------------------------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[nur Desktop-Apps\]<br/>                                           |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                                                 |
-| Header<br/>                   | <dl> <dt>Imm. h (Include Windows. h)</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Imm.h (include Windows.h)</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
 [Eingabemethoden-Manager](input-method-manager.md)
 </dt> <dt>
 
-[Eingabemethoden-Manager-Befehle](input-method-manager-commands.md)
+[Befehle des Eingabemethoden-Managers](input-method-manager-commands.md)
 </dt> <dt>
 
-[**WM \_ IME- \_ Steuerelement**](wm-ime-control.md)
+[**WM \_ IME \_ CONTROL**](wm-ime-control.md)
 </dt> </dl>
 
  

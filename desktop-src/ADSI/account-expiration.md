@@ -1,23 +1,23 @@
 ---
-title: Konto Ablauf (LDAP-Anbieter)
-description: Um das Ablaufdatum des Kontos festzulegen, legen Sie die IADsUser. AccountExpirationDate-Eigenschaft auf den gewünschten Datumswert fest.
+title: Kontoablauf (LDAP-Anbieter)
+description: Legen Sie zum Festlegen des Ablaufdatums des Kontos die IADsUser.AccountExpirationDate-Eigenschaft auf den gewünschten Datumswert fest.
 ms.assetid: d0b90bb3-ad7c-4394-956d-061a915f210d
 ms.tgt_platform: multiple
 keywords:
-- Konto Ablauf ADSI, LDAP-Anbieter
-- LDAP-Anbieter ADSI, Beispiele für die Benutzerverwaltung, Konto Ablauf
+- Kontoablauf ADSI, LDAP-Anbieter
+- LDAP-Anbieter ADSI , Benutzerverwaltungsbeispiele, Kontoablauf
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: c03ea33d8d5abb219c2b562aa05058b5dec45919
-ms.sourcegitcommit: b0ebdefc3dcd5c04bede94091833aa1015a2f95c
+ms.openlocfilehash: 645ce5e2e1ae72ace0a8a642642eb5c15e7eabd63d51dba3f03596869bfb9efc
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/21/2020
-ms.locfileid: "106337253"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119024068"
 ---
-# <a name="account-expiration-ldap-provider"></a>Konto Ablauf (LDAP-Anbieter)
+# <a name="account-expiration-ldap-provider"></a>Kontoablauf (LDAP-Anbieter)
 
-Um das Ablaufdatum des Kontos festzulegen, legen Sie die [**IADsUser. AccountExpirationDate**](iadsuser-property-methods.md) -Eigenschaft auf den gewünschten Datumswert fest. Um das Ablaufdatum des Kontos zu deaktivieren, legen Sie das [**AccountExpires**](/windows/desktop/ADSchema/a-accountexpires) -Attribut auf NULL fest. In den folgenden Codebeispielen wird gezeigt, wie das Ablaufdatum festgelegt wird.
+Legen Sie zum Festlegen des Ablaufdatums des Kontos die [**IADsUser.AccountExpirationDate-Eigenschaft**](iadsuser-property-methods.md) auf den gewünschten Datumswert fest. Um das Ablaufdatum des Kontos zu deaktivieren, legen Sie das [**AccountExpires-Attribut**](/windows/desktop/ADSchema/a-accountexpires) auf 0 (null) fest. In den folgenden Codebeispielen wird gezeigt, wie das Ablaufdatum festgelegt wird.
 
 
 ```VB
@@ -84,10 +84,10 @@ HRESULT SetUserAccountExpirationDate(IADsUser *pUser, DATE date)
 
 
 > [!Note]  
-> Das [**AccountExpires**](/windows/desktop/ADSchema/a-accountexpires) -Attribut enthält das Ablaufdatum des Kontos. Das MMC-Snap-in "Active Directory-Benutzer und-Computer" zeigt das Datum an, an dem das Konto am Ende von abläuft. Das heißt, das MMC-Snap-in "Active Directory-Benutzer und-Computer" zeigt das Ablaufdatum des Kontos als einen Tag vor dem Datum im **AccountExpires** -Attribut an.
+> Das [**AccountExpires-Attribut**](/windows/desktop/ADSchema/a-accountexpires) enthält das Ablaufdatum des Kontos. Das Active Directory-Benutzer und -Computer MMC-Snap-In zeigt das Datum an, an dem das Konto am Ende abläuft. Das heißt, das Active Directory-Benutzer und -Computer MMC-Snap-In zeigt das Ablaufdatum des Kontos als einen Tag vor dem Im **accountExpires-Attribut enthaltenen Datum** an.
 
- 
+ 
 
- 
+ 
 
- 
+ 

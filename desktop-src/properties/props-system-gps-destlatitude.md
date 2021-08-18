@@ -4,18 +4,18 @@ ms.assetid: 63d8a3a3-76ec-4121-b48b-eb5034117d04
 title: System.GPS.DestL persistent
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: cbed51e89926b8bb505457bd9fd7bf7bd3b69ff2
-ms.sourcegitcommit: 6fc8a7419bd01787cf6a1c52c355a4a2d1aec471
+ms.openlocfilehash: e4ff03532d4f377eb0b8d890c88a2dca5f7b17911132faae7a0b9b5cae806e39
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/10/2021
-ms.locfileid: "111988965"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119096859"
 ---
 # <a name="systemgpsdestlatitude"></a>System.GPS.DestL persistent
 
-Gibt den Breitengrad des Zielpunkts an. Dies ist ein Array von drei Werten: Index 0 ist der Grad, Index 1 ist die Minuten, Index 2 die Sekunden. Jede wird anhand der Werte in PKEY \_ GPS \_ DestLatorsNumerator und PKEY \_ GPS \_ DestLoloDenominator berechnet.
+Gibt den Breitengrad des Zielpunkts an. Dies ist ein Array mit drei Werten: Index 0 ist der Grad, Index 1 ist die Minuten, Index 2 die Sekunden. Jede wird anhand der Werte in PKEY \_ GPS \_ DestLatorsNumerator und PKEY \_ GPS \_ DestLoloDenominator berechnet.
 
-## <a name="windows-10-version-1703-windows-10-version-1607-windows-10-version-1511-windows-10-version-1507-windows-81-windows-8-windows-7-windows-vista"></a>Windows 10, version 1703, Windows 10, version 1607, Windows 10, version 1511, Windows 10, version 1507, Windows 8.1, Windows 8, Windows 7, Windows Vista
+## <a name="windows-10-version-1703-windows-10-version-1607-windows-10-version-1511-windows-10-version-1507-windows-81-windows-8-windows-7-windows-vista"></a>Windows 10, Version 1703, Windows 10, Version 1607, Windows 10, Version 1511, Windows 10, Version 1507, Windows 8.1, Windows 8, Windows 7, Windows Vista
 
 ```
 propertyDescription

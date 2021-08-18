@@ -1,19 +1,19 @@
 ---
-description: Definiert das Präfix, das im generierten Code für Die Namen von Makros im Namespace verwendet werden soll.
+description: Definiert das Präfix, das im generierten Code für Namen von Makros im Namespace verwendet werden soll.
 ms.assetid: ead82070-5546-4036-bff2-8da2714d4264
 title: macroPrefix-Element
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 7c9590092d78ea4700715a868bb7e50f15833011
-ms.sourcegitcommit: b6fe9acffad983c14864b8fe0296f6025cb1f961
+ms.openlocfilehash: 970232b86aa226f16fa06cf2d3c9de40c156702c802c6f6254e45157e1df58ca
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2021
-ms.locfileid: "107998747"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119130712"
 ---
 # <a name="macroprefix-element"></a>macroPrefix-Element
 
-Definiert das Präfix, das im generierten Code für Die Namen von Makros im Namespace verwendet werden soll.
+Definiert das Präfix, das im generierten Code für Namen von Makros im Namespace verwendet werden soll.
 
 ## <a name="usage"></a>Verbrauch
 
@@ -33,7 +33,7 @@ Es gibt keine untergeordneten Elemente.
 
 
 
-| Element                                   | BESCHREIBUNG                                                        |
+| Element                                   | Beschreibung                                                        |
 |-------------------------------------------|--------------------------------------------------------------------|
 | [**Namespace**](namespace.md)<br/> | Ein Namespace, der für die Codegenerierung verwendet werden soll.<br/> <br/> |
 
@@ -41,7 +41,7 @@ Es gibt keine untergeordneten Elemente.
 
 ## <a name="remarks"></a>Hinweise
 
-Dieses Element überschreibt das Standard-URI-Präfix, das für generierte Makros verwendet wird. Wenn das Makropräfix beispielsweise "AV" und der Name "Tuner" ist, ist das für den qualifizierten Namen generierte Makro \_ "AV \_ Tuner".
+Dieses Element überschreibt das Standard-URI-Präfix, das für generierte Makros verwendet wird. Wenn das Makropräfix beispielsweise \_ "AV" und der Name "Tuner" lautet, lautet das für den qualifizierten Namen generierte Makro "AV \_ Tuner".
 
 Standardmäßig erstellt der generierte Code ein bevorzugtes Makropräfix aus dem URI.
 

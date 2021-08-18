@@ -1,9 +1,9 @@
 ---
-title: Downloadaditem. DownloadState
-description: In diesem Abschnitt werden die Funktionen beschrieben, die für die Verwendung durch Online Stores entwickelt wurden. Die Verwendung dieser Funktion außerhalb des Kontexts eines Online Stores wird nicht unterstützt. Die DownloadState-Eigenschaft ruft den Status des Downloads ab.
+title: DownloadItem.downloadState
+description: Hinweis In diesem Abschnitt werden Funktionen beschrieben, die für die Verwendung durch Onlineshops entwickelt wurden. Die Verwendung dieser Funktionalität außerhalb des Kontexts eines Onlineshops wird nicht unterstützt. Die downloadState-Eigenschaft ruft den Status des Downloads ab.
 ms.assetid: dde27f43-40ee-4eb9-b316-42312ee937d0
 keywords:
-- Download Status-Windows-Media Player
+- DownloadItem.downloadState Windows Media Player
 topic_type:
 - apiref
 api_name:
@@ -14,21 +14,21 @@ api_type:
 - DllExport
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: fbd2af2fab2ecb69df5b4695b227631b5be2dd96
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: a3f2f1d7338370aaa5132c479d155ffbfc4282a686d082df37446be053efab3d
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106358142"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118997050"
 ---
-# <a name="downloaditemdownloadstate"></a>Downloadaditem. DownloadState
+# <a name="downloaditemdownloadstate"></a>DownloadItem.downloadState
 
 > [!Note]  
-> In diesem Abschnitt werden die-Funktionen beschrieben, die für die Verwendung durch Online Stores Die Verwendung dieser Funktion außerhalb des Kontexts eines Online Stores wird nicht unterstützt.
+> In diesem Abschnitt werden funktionen beschrieben, die für die Verwendung durch Onlineshops entwickelt wurden. Die Verwendung dieser Funktionalität außerhalb des Kontexts eines Onlineshops wird nicht unterstützt.
 
  
 
-Die **DownloadState** -Eigenschaft ruft den Status des Downloads ab.
+Die **downloadState-Eigenschaft** ruft den Status des Downloads ab.
 
 ## <a name="syntax"></a>Syntax
 
@@ -43,11 +43,11 @@ DownloadManager.getDownloadCollection(
 
 ## <a name="possible-values"></a>Mögliche Werte
 
-Diese Eigenschaft ist eine schreibgeschützte **Zahl** , die einen der folgenden Werte enthält.
+Diese Eigenschaft ist eine schreibgeschützte **Zahl,** die einen der folgenden Werte enthält.
 
 
 
-| Wert | BESCHREIBUNG |
+| Wert | Beschreibung |
 |-------|-------------|
 | 0     | Herunterladen |
 | 1     | Angehalten      |
@@ -59,9 +59,9 @@ Diese Eigenschaft ist eine schreibgeschützte **Zahl** , die einen der folgenden
 
  
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Download Zustände können in beliebiger Reihenfolge auftreten. Schreiben Sie keinen Code, der von dem Vorkommen eines bestimmten Download Status abhängt.
+Downloadzustände können in beliebiger Reihenfolge auftreten. Schreiben Sie keinen Code, der vom Auftreten eines bestimmten Downloadzustands abhängt.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -69,16 +69,16 @@ Download Zustände können in beliebiger Reihenfolge auftreten. Schreiben Sie ke
 
 | Anforderung | Wert |
 |--------------------|------------------------------------------------------------------------------------|
-| Version<br/> | Windows Media Player 9-Serie oder höher<br/>                                  |
+| Version<br/> | Windows Media Player 9er Serie oder höher<br/>                                  |
 | DLL<br/>     | <dl> <dt>Wmp.dll</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Download Item-Objekt**](downloaditem-object.md)
+[**DownloadItem-Objekt**](downloaditem-object.md)
 </dt> </dl>
 
  

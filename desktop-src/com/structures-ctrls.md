@@ -1,33 +1,33 @@
 ---
-title: Strukturen (Steuerelemente und Eigenschaften Seiten)
-description: Die folgenden Strukturen werden verwendet, um com-Standardobjekte und-Eigenschaften Seiten zu erstellen.
+title: Strukturen (Steuerelemente und Eigenschaftenseiten)
+description: Die folgenden Strukturen werden verwendet, um COM-Standardobjekte und Eigenschaftenseiten zu erstellen.
 ms.assetid: ab884119-0d8c-459f-b28a-6890fbe8c297
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 16966522faffcb3e8282075b3ee0b3aa7a83163e
-ms.sourcegitcommit: 8fa6614b715bddf14648cce36d2df22e5232801a
+ms.openlocfilehash: 469423f11e46512a73f4ed4dd85adf4e2951833c0d62acb0db22d3ebac931c84
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/10/2020
-ms.locfileid: "104102707"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119129672"
 ---
-# <a name="structures-controls-and-property-pages"></a>Strukturen (Steuerelemente und Eigenschaften Seiten)
+# <a name="structures-controls-and-property-pages"></a>Strukturen (Steuerelemente und Eigenschaftenseiten)
 
-Die folgenden Strukturen werden verwendet, um com-Standardobjekte und-Eigenschaften Seiten zu erstellen.
+Die folgenden Strukturen werden verwendet, um COM-Standardobjekte und Eigenschaftenseiten zu erstellen.
 
--   [**Kadword**](/windows/win32/api/ocidl/ns-ocidl-cadword)
--   [**Calpolestr**](/windows/win32/api/ocidl/ns-ocidl-calpolestr)
--   [**Cauuid**](/windows/win32/api/ocidl/ns-ocidl-cauuid)
--   [**ControlInfo**](/windows/win32/api/ocidl/ns-ocidl-controlinfo)
--   [**Fontde**](/windows/win32/api/olectl/ns-olectl-fontdesc)
+-   [**CADWORD**](/windows/win32/api/ocidl/ns-ocidl-cadword)
+-   [**CALPOLESTR**](/windows/win32/api/ocidl/ns-ocidl-calpolestr)
+-   [**CAUUID**](/windows/win32/api/ocidl/ns-ocidl-cauuid)
+-   [**CONTROLINFO**](/windows/win32/api/ocidl/ns-ocidl-controlinfo)
+-   [**FONTDESC**](/windows/win32/api/olectl/ns-olectl-fontdesc)
 -   [**LICINFO**](/windows/win32/api/ocidl/ns-ocidl-licinfo)
--   [**Ocpfiparametriams**](/windows/win32/api/olectl/ns-olectl-ocpfiparams)
--   [**PAGERANGE**](/windows/win32/api/docobj/ns-docobj-pagerange)
+-   [**OCPFIPARAMS**](/windows/win32/api/olectl/ns-olectl-ocpfiparams)
+-   [**Pagerange**](/windows/win32/api/docobj/ns-docobj-pagerange)
 -   [**PAGESET**](/windows/win32/api/docobj/ns-docobj-pageset)
--   [**Pictde**](/windows/win32/api/olectl/ns-olectl-pictdesc)
--   [**Proppageingefo**](/windows/win32/api/ocidl/ns-ocidl-proppageinfo)
+-   [**PICTDESC**](/windows/win32/api/olectl/ns-olectl-pictdesc)
+-   [**PROPPAGEINFO**](/windows/win32/api/ocidl/ns-ocidl-proppageinfo)
 -   [**QACONTAINER**](/windows/win32/api/ocidl/ns-ocidl-qacontainer)
--   [**Qacontrol**](/windows/win32/api/ocidl/ns-ocidl-qacontrol)
+-   [**QACONTROL**](/windows/win32/api/ocidl/ns-ocidl-qacontrol)
 
  
 

@@ -1,45 +1,45 @@
 ---
-title: Animation (directcomposition)
-description: In diesem Thema werden die Grundlagen der Microsoft directcomposition-Animation erläutert.
+title: Animation (DirectComposition)
+description: In diesem Thema werden die Grundlagen der Microsoft DirectComposition-Animation erläutert.
 ms.assetid: 65DA3971-97C0-4B59-BC67-287AAEAAE340
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 5f7462a10fd83b45c1b90450fdde806ef306a2f6
-ms.sourcegitcommit: 8fa6614b715bddf14648cce36d2df22e5232801a
+ms.openlocfilehash: 75b1f021d5a11fac70f47d5fe87f9389d2ad3e3108d224835fb295a8c3216354
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/10/2020
-ms.locfileid: "106341982"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119119133"
 ---
-# <a name="animation-directcomposition"></a>Animation (directcomposition)
+# <a name="animation-directcomposition"></a>Animation (DirectComposition)
 
 > [!NOTE]
-> Für apps unter Windows 10 wird die Verwendung von Windows. UI. Composition-APIs anstelle von directcomposition empfohlen. Weitere Informationen finden Sie unter [modernisieren ihrer Desktop-App mithilfe der visuellen Ebene](/windows/uwp/composition/visual-layer-in-desktop-apps).
+> Für Apps auf Windows 10 empfehlen wir die Verwendung von Windows.UI.Composition-APIs anstelle von DirectComposition. Weitere Informationen finden Sie unter [Modernisieren Ihrer Desktop-App mithilfe der visuellen Ebene.](/windows/uwp/composition/visual-layer-in-desktop-apps)
 
-In diesem Thema werden die Grundlagen der Microsoft directcomposition-Animation erläutert. Die Lektion enthält die folgenden Themen:
+In diesem Thema werden die Grundlagen der Microsoft DirectComposition-Animation erläutert. Die Lektion enthält die folgenden Themen:
 
 -   [Was ist eine Animation?](#what-is-an-animation)
 -   [Eigenschaften, die animiert werden können](#properties-that-can-be-animated)
--   [Animations Funktionen](#animation-functions)
--   [Animations Segmente](#animation-segments)
+-   [Animationsfunktionen](#animation-functions)
+-   [Animationssegmente](#animation-segments)
     -   [Kubisches Segment](#cubic-segment)
-    -   [Sinusoidal-Segment](#sinusoidal-segment)
+    -   [Sinusoidales Segment](#sinusoidal-segment)
     -   [Segment wiederholen](#repeat-segment)
-    -   [Segment Ende](#end-segment)
+    -   [Endsegment](#end-segment)
 -   [Kompatibilität mit Windows Animation Manager](#compatibility-with-windows-animation-manager)
 -   [Zugehörige Themen](#related-topics)
 
 ## <a name="what-is-an-animation"></a>Was ist eine Animation?
 
-*Animation* ist eine optische Illusion, die erstellt wird, indem in einem bestimmten Zeitraum schnell inkrementelle Änderungen an einem visuellen Element vorgenommen werden, während die Visualisierung nach jeder Änderung neu gezeichnet wird. Da die Neuzeichnungen schnell ausgeführt werden, spürt das Gehirn die inkrementellen Änderungen als eine einzelne, sich ändernde Szene auf, genau wie bei einem Film oder einer Live Aktion.
+*Animation* ist eine optische Täuschung, die durch schnelle inkrementelle Änderungen an einem Visual über einen bestimmten Zeitraum erstellt wird, während das Visual nach jeder Änderung neu gedrammt wird. Da die Neuzeichnungen schnell erfolgen, nimmt das Gehirn die inkrementellen Änderungen als eine einzelne sich ändernde Szene wahr, genau wie in einem Film oder Video der Liveaktion.
 
-In der folgenden Tabelle werden einige der typischen Möglichkeiten der Verwendung von Animationen beschrieben.
+In der folgenden Tabelle werden einige der typischen Methoden zur Verwendung von Animationen beschrieben.
 
-| Animation                 | BESCHREIBUNG                                                                                                                                                                                                                                          |
+| Animation                 | Beschreibung                                                                                                                                                                                                                                          |
 |---------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Bildlauf                 | Verwenden Sie Animationen zum Hinzufügen von Funktionen wie "Physik-emulating Momentum" zu einem scrolllisten-Steuerelement.                                                                                                                                                           |
-| Szenen Übergänge         | Verwenden Sie Animationen, um Navigations Szenen Übergänge zu erstellen, die die Kontinuität zwischen Aufgaben in einem Workflow bereitstellen. Navigations Szenen Übergänge stellen Kontext bereit, der den Benutzer anzeigt, wo Sie sich befinden, wo Sie sich befinden und wo Sie als nächstes wechseln müssen. |
-| Fenster übergreifende Interaktionen | Animieren Sie Benutzeroberflächen Elemente verschiedener Anwendungen auf eine Weise, die eine nahtlose Kontinuität zwischen Ihnen ermöglicht, um dem Benutzer zu helfen, Aufgaben auszuführen, die den Wechsel von einer Anwendung zu einer anderen ermöglichen.                                         |
+| Bildlauf                 | Verwenden Sie Animationen, um einem Bildlauflisten-Steuerelement Features wie physikalische Emulationsfeatures hinzuzufügen.                                                                                                                                                           |
+| Szenenübergänge         | Verwenden Sie Animationen, um Navigationsszenenübergänge zu erstellen, die Kontinuität zwischen Aufgaben in einem Workflow bereitstellen. Navigationsszenenübergänge bieten Kontext, der dem Benutzer zeigt, wo er sich auftrat, wo er sich befinden und wo er als Nächstes wechseln muss. |
+| Fensterübergreifende Interaktionen | Animieren Von Benutzeroberflächenelementen verschiedener Anwendungen auf eine Weise, die die Wahrnehmung der nahtlosen Kontinuität zwischen ihnen vermittelt, um dem Benutzer beim Ausführen von Aufgaben zu helfen, die den Wechsel von einer Anwendung zu einer anderen beinhalten.                                         |
 
 
 
@@ -47,83 +47,83 @@ In der folgenden Tabelle werden einige der typischen Möglichkeiten der Verwendu
 
 ## <a name="properties-that-can-be-animated"></a>Eigenschaften, die animiert werden können
 
-In directcomposition animieren Sie ein visuelles Element durch Anwenden von Animationen auf einzelne Eigenschaften der Objekte, die die Visualisierung definieren. Wenn Sie ein visuelles Element z. b. horizontal auf den Bildschirm verschieben möchten, wenden Sie die Animation auf die OffsetX-Eigenschaft des visuellen Elements an. Wenn Sie eine einfache animierte 2D-Drehung eines visuellen Elements durchführen möchten, wenden Sie die Animation auf die Angle-Eigenschaft eines 2D-Transformations Objekts an, und wenden Sie dann das 2D-Transformations Objekt auf die Transform-Eigenschaft des visuellen Elements an.
+In DirectComposition animieren Sie ein Visual, indem Sie Animationen auf einzelne Eigenschaften der Objekte anwenden, die das Visual definieren. Wenn Sie z. B. ein Visual horizontal über den Bildschirm verschieben möchten, wenden Sie animation auf die OffsetX-Eigenschaft des Visuals an. Wenn Sie eine einfache animierte 2D-Drehung eines Visuals verwenden möchten, wenden Sie animation auf die Angle-Eigenschaft eines 2D-Transformationsobjekts an und wenden dann das 2D-Transformationsobjekt auf die Transform-Eigenschaft des Visuals an.
 
-Directcomposition ermöglicht das Anwenden von Animationen auf jede Objekt Eigenschaft, die einen skalaren Wert annimmt. Sie können gleichzeitige Animationen auf mehrere Eigenschaften und mehrere Objekte anwenden.
+Mit DirectComposition können Sie Animationen auf jede Objekteigenschaft anwenden, die einen Skalarwert verwendet. Sie können gleichzeitige Animationen auf mehrere Eigenschaften und Objekte anwenden.
 
-Directcomposition führt Animationen in einem separaten Thread aus. Sie können eine Animation oder einen Satz von Animationen starten und dann andere Aufgaben an Ihren Anwendungsthreads ausführen oder sogar Threads in den Standbymodus versetzen, während die Kompositions-Engine die Animationen mit der entsprechenden Framerate ausführt.
+DirectComposition führt Animationen in einem separaten Thread aus. Sie können eine Animation oder einen Satz von Animationen starten und dann andere Arbeit an Ihren Anwendungsthreads ausführen oder threads sogar in den Ruhezustand setzen, während die Kompositions-Engine die Animationen mit der entsprechenden Framerate ausarbeitiert.
 
-## <a name="animation-functions"></a>Animations Funktionen
+## <a name="animation-functions"></a>Animationsfunktionen
 
-Directcomposition animiert eine Objekt Eigenschaft, die auf einer von Ihnen definierten Animations Funktion basiert. Eine *Animations Funktion* ist ein Konstrukt, das angibt, wie sich der Wert einer Objekt Eigenschaft über einen bestimmten Zeitraum ändert. Sie können z. b. eine Animations Funktion definieren, die den Wert einer Eigenschaft im Verlauf von 4 Sekunden von 1 auf 360 ändert. Wenn Sie dann die Animations Funktion auf die Angle-Eigenschaft eines 2D-Transformations Objekts Drehung anwenden und dann das Transform-Objekt auf die Transform-Eigenschaft eines visuellen Elements anwenden, würde die Animations Funktion die Visualisierung im Verlauf von 4 Sekunden in einem vollständigen Kreis drehen.
+DirectComposition animiert eine Objekteigenschaft basierend auf einer von Ihnen definierten Animationsfunktion. Eine *Animationsfunktion ist* ein Konstrukt, das angibt, wie sich der Wert einer Objekteigenschaft über einen bestimmten Zeitraum ändert. Beispielsweise können Sie eine Animationsfunktion definieren, die den Wert einer Eigenschaft im Laufe von 4 Sekunden von 1 in 360 ändert. Wenn Sie dann die Animationsfunktion auf die Angle-Eigenschaft eines 2D-Transformationsobjekts anwenden und dann das Transformationsobjekt auf die Transform-Eigenschaft eines Visuals anwenden, würde die Animationsfunktion das Visual im Laufe von 4 Sekunden in einem vollständigen Kreis drehen.
 
-Eine Animations Funktion wird durch ein *Animations Objekt* dargestellt, das durch einen Aufrufen der [**idcompositiondevice:: up Animation**](/windows/win32/api/dcomp/nf-dcomp-idcompositiondevice-createanimation) -Methode erstellt wird. Sie erstellen eine Animations Funktion mithilfe der Methoden der [**idcompositionanimation**](/windows/desktop/api/DcompAnimation/nn-dcompanimation-idcompositionanimation) -Schnittstelle eines Animations Objekts, um *Animations Segmente* nacheinander an das Array anzufügen, das die Animations Funktion definiert. Wenn Sie ein Segment anfügen, geben Sie einen NULL basierten Offset an, der die Anfangszeit des Segments relativ zum Anfang der Animations Funktion markiert. Animations Segmente müssen in zunehmender Reihenfolge der Anfangszeiten angehängt werden. Wenn Sie versuchen, ein Animations Segment anzufügen, dessen Anfangszeit vor oder gleich einem vorangehenden Segment ist, tritt ein Fehler auf. Eine Animations Funktion kann eine angegebene Endzeit aufweisen, die angibt, wann die Funktion abgeschlossen werden soll.
+Eine Animationsfunktion wird durch ein *Animationsobjekt dargestellt,* das durch einen Aufruf der [**IDCompositionDevice::CreateAnimation-Methode erstellt**](/windows/win32/api/dcomp/nf-dcomp-idcompositiondevice-createanimation) wurde. Sie erstellen eine Animationsfunktion, indem Sie die Methoden der [**IDCompositionAnimation-Schnittstelle**](/windows/desktop/api/DcompAnimation/nn-dcompanimation-idcompositionanimation) eines Animationsobjekts verwenden, um Animationssegmente nach und nach an das Array anfügen, das die Animationsfunktion definiert.  Beim Anfügen eines Segments geben Sie einen nullbasierten Offset an, der die Anfangszeit des Segments relativ zum Anfang der Animationsfunktion markiert. Animationssegmente müssen in zunehmender Reihenfolge der Startzeiten angefügt werden. Beim Versuch, ein Animationssegment anfügen, dessen Startzeit vor oder gleich einem vorherigen Segment liegt, wird ein Fehler angezeigt. Eine Animationsfunktion kann eine angegebene Endzeit haben, die angibt, wann die Funktion beendet werden soll.
 
-Sofern nicht anders angegeben, wird eine Animations Funktion gestartet, wenn der Desktopfenster-Manager (DWM) den Befehl empfängt, um die Animation auszuführen. Jedes Segment wird ausgeführt, bis die Startzeit des nächsten Segments erreicht ist. Alle diskontinuierlichen Änderungen, die im animierten Eigenschafts Wert zwischen Segmenten auftreten, gelten als diskrete Änderungen.
+Sofern nicht anders angegeben, wird eine Animationsfunktion gestartet, wenn der Desktopfenster-Manager (DWM) den Befehl zum Ausführen der Animation empfängt. Jedes Segment wird ausgeführt, bis die Startzeit des nächsten Segments erreicht ist. Alle nicht mehr reagierenden Änderungen, die im Wert der animierten Eigenschaft zwischen Segmenten auftreten, werden als diskrete Änderungen betrachtet.
 
-Sie wenden eine Animations Funktion auf eine Eigenschaft an, indem Sie den Eigenschafts Wert auf den [**idcompositionanimation**](/windows/desktop/api/DcompAnimation/nn-dcompanimation-idcompositionanimation) -Zeiger des Animations Objekts festlegen, das die Animations Funktion darstellt. Das gleiche Animations Objekt kann auf mehrere Eigenschaften desselben Objekts und auf die Eigenschaften anderer Objekte angewendet werden, die vom gleichen Gerät erstellt wurden.
+Sie wenden eine Animationsfunktion auf eine Eigenschaft an, indem Sie den Eigenschaftswert auf den [**IDCompositionAnimation-Zeiger**](/windows/desktop/api/DcompAnimation/nn-dcompanimation-idcompositionanimation) des Animationsobjekts festlegen, das die Animationsfunktion darstellt. Dasselbe Animationsobjekt kann auf mehrere Eigenschaften desselben Objekts sowie auf die Eigenschaften anderer Objekte angewendet werden, die von demselben Gerät erstellt wurden.
 
-## <a name="animation-segments"></a>Animations Segmente
+## <a name="animation-segments"></a>Animationssegmente
 
-Animations Segmente sind die grundlegenden zeitlichen Definitionen einer Animations Funktion. Dabei handelt es sich um die primitiven, aus denen komplexere und übergeordnete Animations Funktionen erstellt werden. Ein Animations Segment wird aus einer Reihe von Parametern erstellt, die die Funktion und die Uhrzeit, zu der das Segment beginnt, relativ zum Anfang der Animations Funktion beschreiben. Für jedes Segment verläuft die Zeit (*t*) entlang der horizontalen Achse und beginnt bei *t* = 0.
+Animationssegmente sind die grundlegenden Zeitsteuerungsdefinitionen einer Animationsfunktion. sie sind die Grundtypen, aus denen komplexere Animationsfunktionen und Animationsfunktionen höherer Ebene erstellt werden. Ein Animationssegment wird aus einer Reihe von Parametern erstellt, die die Funktion und den Zeitpunkt des Beginns des Segments relativ zum Anfang der Animationsfunktion beschreiben. Für jedes Segment verschreitet die Zeit (*t*) entlang der horizontalen Achse und beginnt bei *t* = 0.
 
 ### <a name="cubic-segment"></a>Kubisches Segment
 
-Die zeitliche Steuerung eines kubischen Segments wird durch einen kubischen polynomal definiert. Für eine gegebene Zeiteingabe (*t*) wird der Ausgabewert durch die folgende Gleichung angegeben:
+Der Zeitpunkt eines kubischen Segments wird durch ein kubisches Polynom definiert. Für eine bestimmte Zeiteingabe (*t*) wird der Ausgabewert durch die folgende Gleichung angegeben:
 
-*x*(*t*) = *bei*³ + *BT*² + *CT*  +  *d*
+*x*(*t*) = *bei* 2 + *bt* TASTE + *CT*  +  *D*
 
-Das folgende Diagramm zeigt eine Animations Funktion, die zwei kubische Segmente enthält. Im ersten Segment wird ein Wert von 0 (null) zu 16 über 4 Sekunden übergegangen, während der zweite Wert in den nächsten 4 Sekunden den Wert linear von 16 in 0 ändert. Der erste Übergang erfolgt entlang dieses kubischen Polynomen:
+Das folgende Diagramm zeigt eine Animationsfunktion, die zwei kubische Segmente enthält. Das erste Segment überträgt einen Wert von 0 in 16 über 4 Sekunden, und das zweite ändert den Wert in den nächsten 4 Sekunden linear von 16 in 0. Der erste Übergang erfolgt entlang dieses kubischen Polynoms:
 
-*x*(*t*) = *t*³-6 *t*² + 12 *t*
+*x*(*t*) = *t* 2 - 6 *t*× 12 *t*
 
-der zweite Übergang erfolgt an dieser:
+und der zweite Übergang erfolgt entlang dieses:
 
-*x*(*t*) =-4 *t* + 16
+*x*(*t*) = - 4 *t* + 16
 
-![Diagramm einer Animations Funktion mit zwei kubischen Segmenten](images/cubicsegment.png)
+![Diagramm einer Animationsfunktion mit zwei kubischen Segmenten](images/cubicsegment.png)
 
-Mithilfe der [**idcompositionanimation:: addcubic**](/windows/desktop/api/DcompAnimation/nf-dcompanimation-idcompositionanimation-addcubic) -Methode fügen Sie einer Animations Funktion ein kubisches Segment hinzu.
+Sie fügen einer Animationsfunktion mithilfe der [**IDCompositionAnimation::AddCubic-Methode**](/windows/desktop/api/DcompAnimation/nf-dcompanimation-idcompositionanimation-addcubic) ein kubisches Segment hinzu.
 
-### <a name="sinusoidal-segment"></a>Sinusoidal-Segment
+### <a name="sinusoidal-segment"></a>Sinusoidales Segment
 
-Die zeitliche Steuerung eines Sinus förmigem-Segments wird durch die folgende Gleichung definiert:
+Die zeitliche Steuerung eines sinusförmigen Segments wird durch die folgende Gleichung definiert:
 
-*x*(*t*) = *Bias*  +  *Amplitude* \* Sin (*t* \* *Frequency* \* 2 \* Pi + *Phase* \* PI/180,0)
+*x*(*t*) = *Bias*  +  *Amplitude* \* sin(*t* \* *Frequency* \* 2 PI + \* *Phase* \* PI/180.0)
 
-Sie fügen ein Sinus förmigem-Segment zu einer Animations Funktion hinzu, indem Sie die [**idcompositionanimation:: addsinusoidal**](/windows/desktop/api/DcompAnimation/nf-dcompanimation-idcompositionanimation-addsinusoidal) -Methode verwenden.
+Sie fügen einer Animationsfunktion mithilfe der [**IDCompositionAnimation::AddSinusoidal-Methode ein sinusförmiges Segment**](/windows/desktop/api/DcompAnimation/nf-dcompanimation-idcompositionanimation-addsinusoidal) hinzu.
 
 ### <a name="repeat-segment"></a>Segment wiederholen
 
-Ein Wiederholungs Segment wiederholt einen angegebenen vorangehenden Teil einer Animations Funktion. Ein Wiederholungs Segment bewirkt, dass der angegebene Teil der Animations Funktion eine unbegrenzte Schleife durchläuft, bis das nächste Segment erreicht oder das angegebene Ende der Animation erreicht wird. Der vorherige Teil einer Animation besteht aus anderen Segmenten, einschließlich anderer Wiederholungs Segmente. Ein Wiederholungs Segment kann nicht als erstes Segment in einer Animations Funktion verwendet werden.
+Ein Wiederholungssegment wiederholt einen angegebenen vorangehenden Teil einer Animationsfunktion. Ein Wiederholungssegment bewirkt, dass der angegebene Teil der Animationsfunktion unbegrenzt in eine Schleife einschlang, bis das nächste Segment gefunden wird oder das angegebene Ende der Animation erreicht ist. Der vorherige Teil einer Animation besteht aus anderen Segmenten, einschließlich anderer Wiederholungssegmente. Ein Wiederholungssegment kann nicht als erstes Segment in einer Animationsfunktion verwendet werden.
 
-Das folgende Diagramm zeigt eine Animations Funktion, die zwei eckige Segmente mit jeweils einer Dauer von 4 Sekunden umfasst, gefolgt von einem Wiederholungs Segment, das 12 Sekunden dauert. Das Wiederholungs Segment beginnt 8 Sekunden in der Animation und wiederholt die vorhergehenden 6 Sekunden der Animation zweimal, bis das Endsegment um 20 Sekunden erreicht wird.
+Das folgende Diagramm zeigt eine Animationsfunktion, die zwei kubische Segmente mit jeweils 4 Sekunden Dauer gefolgt von einem Wiederholungssegment von 12 Sekunden umfasst. Das Wiederholungssegment beginnt 8 Sekunden in der Animation und wiederholt die vorherigen 6 Sekunden der Animation zweimal, bis das Endsegment bei 20 Sekunden erreicht ist.
 
-![Diagramm einer Animations Funktion, die zwei kubische Segmente und ein Wiederholungs Segment enthält](images/repeatsegment.png)
+![Diagramm einer Animationsfunktion, die zwei kubische Segmente und ein Wiederholungssegment enthält](images/repeatsegment.png)
 
-Verwenden Sie zum Hinzufügen eines Wiederholungs Segments zu einer Animations Funktion die [**idcompositionanimation:: adresspeat**](/windows/desktop/api/DcompAnimation/nf-dcompanimation-idcompositionanimation-addrepeat) -Methode.
+Um einer Animationsfunktion ein Wiederholungssegment hinzuzufügen, verwenden Sie die [**IDCompositionAnimation::AddRepeat-Methode.**](/windows/desktop/api/DcompAnimation/nf-dcompanimation-idcompositionanimation-addrepeat)
 
-### <a name="end-segment"></a>Segment Ende
+### <a name="end-segment"></a>Endsegment
 
-Nachdem Sie eine Animations Funktion aus Segmenten erstellt haben, können Sie ein Endsegment anfügen, um die Animation zu einem bestimmten Zeitpunkt zu beenden. Wenn Sie kein Endsegment anfügen, wird das letzte Segment der Animations Funktion unbegrenzt ausgeführt.
+Nachdem Sie eine Animationsfunktion aus Segmenten erstellt haben, können Sie ein Endsegment anfügen, damit die Animationsfunktion zu einem bestimmten Zeitpunkt beendet wird. Wenn Sie kein Endsegment anfügen, wird das letzte Segment der Animationsfunktion unbegrenzt ausgeführt.
 
-Sie fügen ein Endsegment an, indem Sie die [**idcompositionanimation:: End**](/windows/desktop/api/DcompAnimation/nf-dcompanimation-idcompositionanimation-end) -Methode aufrufen und einen Offset vom Anfang der Animations Funktion angeben, die den Endpunkt der Funktion angibt. Der Offset muss größer sein als der Anfangs Offset des vorangehenden Segments. Außerdem kann ein Endsegment nicht als erstes primitiv in einer Animations Funktion verwendet werden.
+Sie fügen ein Endsegment an, indem Sie die [**IDCompositionAnimation::End-Methode**](/windows/desktop/api/DcompAnimation/nf-dcompanimation-idcompositionanimation-end) aufrufen und einen Offset vom Anfang der Animationsfunktion angeben, der den Endpunkt der Funktion angibt. Der Offset muss größer als der Anfangsoffset des vorherigen Segments sein. Außerdem kann ein Endsegment nicht als erste Primitive in einer Animationsfunktion verwendet werden.
 
-Wenn Sie " [**Ende**](/windows/desktop/api/DcompAnimation/nf-dcompanimation-idcompositionanimation-end)" aufgerufen haben, geben Sie auch einen Endwert für die zu animierende Eigenschaft an. Die-Eigenschaft wird auf den angegebenen endgültigen Wert festgelegt, wenn der Endpunkt der Animations Funktion erreicht wird.
+Wenn Sie End [**aufrufen,**](/windows/desktop/api/DcompAnimation/nf-dcompanimation-idcompositionanimation-end)geben Sie auch einen endgültigen Wert für die animierte Eigenschaft an. Die -Eigenschaft wird auf den angegebenen endgültigen Wert in dem Moment festgelegt, an dem der Endpunkt der Animationsfunktion erreicht ist.
 
-Nachdem Sie ein Endsegment angefügt haben, können Sie keine weiteren Segmente an die Animations Funktion anfügen. Das heißt, dass alle Methodenaufrufe für das Animations Objekt mit Ausnahme von [**idcompositionanimation:: Reset**](/windows/desktop/api/DcompAnimation/nf-dcompanimation-idcompositionanimation-reset)fehlschlagen. Beim Aufrufen von **Reset** wird das Animations Objekt zum Bereinigen des Zustands zurückgegeben, in dem die Animations Funktion keine Segmente enthält. an diesem Punkt können Sie erneut Segmente hinzufügen.
+Nach dem Anfügen eines Endsegments können Sie keine anderen Segmente an die Animationsfunktion anfügen. Das heißt, dass alle Methodenaufrufe für das Animationsobjekt mit Ausnahme [**von IDCompositionAnimation::Reset fehlschlagen.**](/windows/desktop/api/DcompAnimation/nf-dcompanimation-idcompositionanimation-reset) Der **Aufruf von Reset** gibt das Animationsobjekt zurück, um den Zustand zu bereinigt, in dem die Animationsfunktion keine Segmente enthält. An diesem Punkt können Sie wieder Segmente hinzufügen.
 
 ## <a name="compatibility-with-windows-animation-manager"></a>Kompatibilität mit Windows Animation Manager
 
-Windows Animation Manager (Windows-Animation) gibt Animations primitive in einem Format aus, das mit der directcomposition-API kompatibel ist. Dies bedeutet, dass directcomposition Animationen auf der Grundlage von Animations primitiven erstellen kann, die von der Windows-Animation erstellt wurden.
+Windows Animation Manager (Windows Animation) gibt Animationsprimitiven in einem Format aus, das mit der DirectComposition-API kompatibel ist. Dies bedeutet, dass DirectComposition Animationen basierend auf Animationsprimitiven erstellen kann, die von der animation Windows werden.
 
-Weitere Informationen finden Sie unter [Windows Animation Manager](/windows/desktop/UIAnimation/-main-portal), the [**IUIAnimationVariable2:: getcurve**](/windows/desktop/api/uianimation/nf-uianimation-iuianimationvariable2-getcurve) Method und [Managing directcomposition Animation with Windows Animation Manager v2](https://github.com/microsoft/Windows-classic-samples/tree/master/Samples/DirectCompositionWindowsAnimationManager).
+Weitere Informationen finden Sie unter [Windows Animation Manager](/windows/desktop/UIAnimation/-main-portal), der [**IUIAnimationVariable2::GetCurve-Methode**](/windows/desktop/api/uianimation/nf-uianimation-iuianimationvariable2-getcurve) und [Managing DirectComposition Animation with Windows Animation Manager v2](https://github.com/microsoft/Windows-classic-samples/tree/master/Samples/DirectCompositionWindowsAnimationManager).
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[Directcomposition-Konzepte](directcomposition-concepts.md)
+[DirectComposition-Konzepte](directcomposition-concepts.md)
 </dt> </dl>
 
  

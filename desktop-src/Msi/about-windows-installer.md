@@ -1,46 +1,46 @@
 ---
-description: Um Ihre Anwendungen effizient zu installieren und die Gesamtbetriebskosten (TCO) für Ihre Kunden zu reduzieren, können Sie die Windows Installer verwenden.
+description: Um Ihre Anwendungen effizient zu installieren und die Gesamtbetriebskosten (Total Cost of Ownership, TCO) für Ihre Kunden zu reduzieren, können Sie den Windows Installer verwenden.
 ms.assetid: fdeb8cc2-af4e-419d-a234-6d86061219fe
-title: Informationen zu Windows Installer
+title: Informationen zum Windows Installer
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: f4834370107c7a8ce70145634e7549583dfee836
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 1f1d1e92191c9230ed89828dde87c0dc55f3c3a5d45a46ea9dc348344eafee20
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106349171"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119146013"
 ---
-# <a name="about-windows-installer"></a>Informationen zu Windows Installer
+# <a name="about-windows-installer"></a>Informationen zum Windows Installer
 
-Um Ihre Anwendungen effizient zu installieren und die Gesamtbetriebskosten (TCO) für Ihre Kunden zu reduzieren, können Sie die Windows Installer verwenden. In diesem Abschnitt werden die wichtigsten funktionalen Bereiche des Installers behandelt:
+Um Ihre Anwendungen effizient zu installieren und die Gesamtbetriebskosten (Total Cost of Ownership, TCO) für Ihre Kunden zu reduzieren, können Sie den Windows Installer verwenden. In diesem Abschnitt werden die wichtigsten Funktionsbereiche des Installationsprogramms behandelt:
 
 -   [Übersicht über Windows Installer](overview-of-windows-installer.md)
--   [Administrative Installation](administrative-installation.md)
--   [Rollback-Installation](rollback-installation.md)
--   [Wartungs Installation](maintenance-installation.md)
--   [Dateierweiterungen Windows Installer](windows-installer-file-extensions.md)
+-   [Administratorinstallation](administrative-installation.md)
+-   [Rollbackinstallation](rollback-installation.md)
+-   [Wartungsinstallation](maintenance-installation.md)
+-   [Windows Installer-Dateierweiterungen](windows-installer-file-extensions.md)
 -   [Befehlszeilenoptionen](command-line-options.md)
--   [System Neustarts](system-reboots.md)
+-   [Systemneustarts](system-reboots.md)
 -   [Systemrichtlinie](system-policy.md)
--   [Quellen Resilienz](source-resiliency.md)
--   [Verwenden von Windows Installer und Windows-Ressourcenschutz](windows-resource-protection-on-windows-vista.md)
--   [System Wiederherstellungspunkte und die Windows Installer](system-restore-points-and-the-windows-installer.md)
--   [Regeln für die Datei Versionsverwaltung](file-versioning-rules.md)
--   [Produkt Codes](product-codes.md)
--   [Paket Codes](package-codes.md)
+-   [Quellresilienz](source-resiliency.md)
+-   [Verwenden von Windows Installer und Windows Resource Protection](windows-resource-protection-on-windows-vista.md)
+-   [Systemwiederherstellungspunkte und das Windows Installer](system-restore-points-and-the-windows-installer.md)
+-   [Regeln für die Dateiversionsierung](file-versioning-rules.md)
+-   [Produktcodes](product-codes.md)
+-   [Paketcodes](package-codes.md)
 -   [Zusammenführungen und Transformationen](merges-and-transforms.md)
 -   [Qualifizierte Komponenten](qualified-components.md)
--   [Windows Installer Protokollierung](windows-installer-logging.md)
--   [Begleit Dateien](companion-files.md)
+-   [Windows Installerprotokollierung](windows-installer-logging.md)
+-   [Begleitdateien](companion-files.md)
 -   [Isolierte Komponenten](isolated-components.md)
--   [Installations Kontext](installation-context.md)
+-   [Installationskontext](installation-context.md)
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[Veröffentlichte Versionen, Tools und verteilbare Dateien](released-versions-tools-and-redistributables.md)
+[Veröffentlichte Versionen, Tools und Redistributables](released-versions-tools-and-redistributables.md)
 </dt> </dl>
 
  

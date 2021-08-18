@@ -1,28 +1,28 @@
 ---
-title: Das beste von Windows und dem Web
-description: Mit Windows 7 können Sie problemlos verbunden werden und bleiben verbunden.
+title: Das Beste aus Windows und dem Web
+description: Mit Windows 7 ist es einfach, verbunden zu sein und verbunden zu bleiben.
 ms.assetid: fd37fbc4-7253-48fc-b8d3-ad58b0c8091b
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 2b67451b721f869622f7178b985495b632f8b6bb
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: e7da5e4e923ff87244866d605980b3373accc0adcdea1f6492c2a24825079057
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "104515567"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119086613"
 ---
-# <a name="the-best-of-windows-and-the-web"></a>Das beste von Windows und dem Web
+# <a name="the-best-of-windows-and-the-web"></a>Das Beste aus Windows und dem Web
 
-Mit Windows 7 können Sie problemlos verbunden werden und bleiben verbunden. Windows-Netzwerke bieten Entwicklern Optionen zur besseren Zwischenspeicherung und Freigabe von Daten, um die Netzwerkleistung zu verbessern. Die Netzwerk Diagnose in Windows 7 bietet Entwicklern relevante Informationen zum Überwachen von Netzwerkproblemen. Unabhängig davon, ob das Ziel darin besteht, Geräte zu verbinden, eine Verbindung mit einem Netzwerk herzustellen oder einfach den Status der Verbindung zu verstehen, bietet Windows 7 eine verbesserte Plattform.
+Mit Windows 7 ist es einfach, verbunden zu sein und verbunden zu bleiben. Windows Netzwerk bietet Entwicklern Optionen für eine bessere Zwischenspeicherung und Freigabe von Daten, um die Netzwerkleistung zu verbessern. Die Netzwerkdiagnose in Windows 7 gibt Entwicklern relevante Informationen zur Überwachung von Netzwerkproblemen. Unabhängig davon, ob das Ziel darin besteht, Geräte zu verbinden, eine Verbindung mit einem Netzwerk herzustellen oder einfach den Status Ihrer Verbindung zu verstehen, bietet Windows 7 eine erweiterte Plattform.
 
 -   [Dienste](services.md)
--   [Verbund Suche](federated-search.md)
--   [Sensor Plattform](sensor-platform.md)
+-   [Verbundsuche](federated-search.md)
+-   [Sensorplattform](sensor-platform.md)
 -   [Internet Explorer 8](internet-explorer-8.md)
 
- 
+ 
 
- 
+ 
 
 
 

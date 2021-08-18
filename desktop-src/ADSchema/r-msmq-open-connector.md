@@ -1,10 +1,10 @@
 ---
-title: MSMQ-Open-Connector erweitert rechts
-description: Ermöglicht das Öffnen der Connector-Warteschlange.
+title: erweiterte Rechte für msmq-Open-Connector
+description: Ermöglicht das Öffnen der Connectorwarteschlange.
 ms.assetid: 5eb63190-5a64-4dad-a3bb-3fc317faabd7
 ms.tgt_platform: multiple
 keywords:
-- MSMQ-Open-Connector-Schema für erweiterte Rechte AD
+- msmq-Open-Connector erweitertes rechtes AD-Schema
 topic_type:
 - apiref
 api_name:
@@ -13,23 +13,23 @@ api_type:
 - Schema
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 3ea75f7148848fb5a9cecee4297679d28976d588
-ms.sourcegitcommit: b77ace27b0432e7cd3863191b11926be032fbe2f
+ms.openlocfilehash: acfa52a3d2a227ad5bd5696ecbdf02a09f6b4b2840adaa29942c63ec6e038c5a
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "104520263"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119021648"
 ---
-# <a name="msmq-open-connector-extended-right"></a>MSMQ-Open-Connector erweitert rechts
+# <a name="msmq-open-connector-extended-right"></a>erweiterte Rechte für msmq-Open-Connector
 
-Ermöglicht das Öffnen der Connector-Warteschlange.
+Ermöglicht das Öffnen der Connectorwarteschlange.
 
 
 
 | Eingabe | Wert |
 |--------------|--------------------------------------|
-| CN           | MSMQ-Open-Connector                  |
-| Anzeigename | Connector-Warteschlange öffnen                 |
+| CN           | msmq-Open-Connector                  |
+| Anzeigename | Öffnen der Connectorwarteschlange                 |
 | Rights-GUID  | b4e60130-df3f-11d1-9c86-006008764d0e |
 
 
@@ -37,7 +37,7 @@ Ermöglicht das Öffnen der Connector-Warteschlange.
 ## <a name="implementations"></a>Implementierungen
 
 -   [**Windows 2000 Server**](#windows-2000-server)
--   [**Windows Server 2003**](#windows-server-2003)
+-   [**Windows Server 2003**](#windows-server-2003)
 -   [**Windows Server 2003 R2**](#windows-server-2003-r2)
 -   [**Windows Server 2008**](#windows-server-2008)
 -   [**Windows Server 2008 R2**](#windows-server-2008-r2)
@@ -50,18 +50,18 @@ Ermöglicht das Öffnen der Connector-Warteschlange.
 | Eingabe | Wert |
 |-------------------------|-----------------------------------|
 | Applies-To              | [**Website**](c-site.md)<br/> |
-| Lokalisierung-Display-ID | 46                                |
+| Lokalisierungsanzeige-ID | 46                                |
 
 
 
-## <a name="windows-server-2003"></a>Windows Server 2003
+## <a name="windows-server-2003"></a>Windows Server 2003
 
 
 
 | Eingabe | Wert |
 |-------------------------|-----------------------------------|
 | Applies-To              | [**Website**](c-site.md)<br/> |
-| Lokalisierung-Display-ID | 46                                |
+| Lokalisierungsanzeige-ID | 46                                |
 
 
 
@@ -72,7 +72,7 @@ Ermöglicht das Öffnen der Connector-Warteschlange.
 | Eingabe | Wert |
 |-------------------------|-----------------------------------|
 | Applies-To              | [**Website**](c-site.md)<br/> |
-| Lokalisierung-Display-ID | 46                                |
+| Lokalisierungsanzeige-ID | 46                                |
 
 
 
@@ -83,7 +83,7 @@ Ermöglicht das Öffnen der Connector-Warteschlange.
 | Eingabe | Wert |
 |-------------------------|-----------------------------------|
 | Applies-To              | [**Website**](c-site.md)<br/> |
-| Lokalisierung-Display-ID | 46                                |
+| Lokalisierungsanzeige-ID | 46                                |
 
 
 
@@ -94,7 +94,7 @@ Ermöglicht das Öffnen der Connector-Warteschlange.
 | Eingabe | Wert |
 |-------------------------|-----------------------------------|
 | Applies-To              | [**Website**](c-site.md)<br/> |
-| Lokalisierung-Display-ID | 46                                |
+| Lokalisierungsanzeige-ID | 46                                |
 
 
 
@@ -105,7 +105,7 @@ Ermöglicht das Öffnen der Connector-Warteschlange.
 | Eingabe | Wert |
 |-------------------------|-----------------------------------|
 | Applies-To              | [**Website**](c-site.md)<br/> |
-| Lokalisierung-Display-ID | 46                                |
+| Lokalisierungsanzeige-ID | 46                                |
 
 
 

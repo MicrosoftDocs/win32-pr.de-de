@@ -1,5 +1,5 @@
 ---
-description: Stellt Informationen zu einer Momentaufnahme in einer VHD-Datei bereit.
+description: Stellt Informationen zu einer Momentaufnahme in einer VHD-Set-Datei bereit.
 ms.assetid: 922bf0b8-523d-488e-9a41-1a27594e2e44
 title: Msvm_VHDSnapshotInformation-Klasse
 ms.topic: reference
@@ -19,16 +19,16 @@ api_type:
 - DllExport
 api_location:
 - vmms.exe
-ms.openlocfilehash: 1a1e2a573546d62d79170f15abddd8d5c17e30f6
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: c256ee2d3fb277fc98fa440403cf385377d7f64160267ff39a2d905c59f9d3ba
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "103863287"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119068450"
 ---
-# <a name="msvm_vhdsnapshotinformation-class"></a>MSVM \_ vhdsnapshotinformation-Klasse
+# <a name="msvm_vhdsnapshotinformation-class"></a>Msvm \_ VHDSnapshotInformation-Klasse
 
-Stellt Informationen zu einer Momentaufnahme in einer VHD-Datei fest.
+Stellt Informationen zu einer Momentaufnahme in einer VHD-Set-Datei bereit.
 
 Die folgende Syntax wurde aus MOF-Code (Managed Object Format, verwaltetes Objektformat) vereinfacht und enthält alle geerbten Eigenschaften.
 
@@ -49,91 +49,91 @@ class Msvm_VHDSnapshotInformation
 
 ## <a name="members"></a>Member
 
-Die **MSVM \_ vhdsnapshotinformation** -Klasse verfügt über diese Typen von Membern:
+Die **\_ Msvm-VHDSnapshotInformation-Klasse** verfügt über folgende Typen von Membern:
 
 -   [Eigenschaften](#properties)
 
 ### <a name="properties"></a>Eigenschaften
 
-Die **MSVM \_ vhdsnapshotinformation** -Klasse verfügt über diese Eigenschaften.
+Die **Msvm \_ VHDSnapshotInformation-Klasse** verfügt über diese Eigenschaften.
 
 <dl> <dt>
 
-**CreationTime**
+**Creationtime**
 </dt> <dd> <dl> <dt>
 
-**Datentyp: DateTime**
+Datentyp: **DATETIME**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Das Datum und die Uhrzeit der Erstellung der Momentaufnahme.
+Datum und Uhrzeit der Erstellung dieser Momentaufnahme.
 
 </dd> <dt>
 
-**FilePath**
+**Filepath**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Der Pfad der VHD-Satz Datei.
+Der Pfad der VHD-Set-Datei.
 
 </dd> <dt>
 
-**"Parametripathslist"**
+**ParentPathsList**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichen** folgen Array
+Datentyp: **Zeichenfolgenarray**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Eine Liste der Dateipfade, die alle Dateien darstellen, von denen diese Momentaufnahme abhängt. Dieses Feld ist leer, es sei denn, es wird ausdrücklich angefordert. Der erste Eintrag ist das unmittelbar übergeordnete Element der Datei, wobei der letzte Eintrag der Stamm ist.
+Eine Liste von Dateipfaden, die alle Dateien darstellen, von denen diese Momentaufnahme abhängt. Dieses Feld ist leer, sofern nicht ausdrücklich angefordert. Der erste Eintrag ist das unmittelbar übergeordnete Element der Datei, wobei der letzte Eintrag der Stamm ist.
 
 </dd> <dt>
 
-**Resilientchangetrackingid**
+**ResilientChangeTrackingId**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Die robuste Änderungsnachverfolgungs-ID, die dieser Momentaufnahme zugeordnet ist, sofern vorhanden.
+Die robuste Änderungsnachverfolgungs-ID, sofern vorhanden, die dieser Momentaufnahme zugeordnet ist.
 
 </dd> <dt>
 
 **SnapshotId**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Eine GUID, die diese Momentaufnahme innerhalb der VHD-Satz Datei eindeutig identifiziert.
+Eine GUID, die diese Momentaufnahme innerhalb der VHD-Set-Datei eindeutig identifiziert.
 
 </dd> <dt>
 
 **SnapshotPath**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Der Pfad der Datei, die durch diese Momentaufnahme dargestellt wird. Dieses Feld ist möglicherweise leer, wenn dieser Momentaufnahme keine Datei zugeordnet ist.
+Der Pfad der durch diese Momentaufnahme dargestellten Datei. Dieses Feld ist möglicherweise leer, wenn dieser Momentaufnahme keine Datei zugeordnet ist.
 
 </dd> </dl>
 
@@ -143,10 +143,10 @@ Der Pfad der Datei, die durch diese Momentaufnahme dargestellt wird. Dieses Feld
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows 10 \[ -Desktop-Apps\]<br/>                                                             |
+| Unterstützte Mindestversion (Client)<br/> | \[Windows 10 Nur Desktop-Apps\]<br/>                                                             |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2016<br/>                                                                          |
-| Namespace<br/>                | \\Stammvirtualisierung \\ v2<br/>                                                                     |
-| MOF<br/>                      | <dl> <dt>Windowsvirtualization. v2. MOF</dt> </dl> |
+| Namespace<br/>                | \\Root-Virtualisierung \\ v2<br/>                                                                     |
+| MOF<br/>                      | <dl> <dt>WindowsVirtualization.V2.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Vmms.exe</dt> </dl>                     |
 
 

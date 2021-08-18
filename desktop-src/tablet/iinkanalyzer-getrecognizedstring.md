@@ -1,7 +1,7 @@
 ---
-description: Ruft die Zeichenfolge mit dem besten Ergebnis des Erkennungs Vorgangs für die gesamte Kontext Knoten Struktur in iinkanalyzer ab.
+description: Ruft die Zeichenfolge mit dem besten Ergebnis des Erkennungsvorgangs für die gesamte Kontextknotenstruktur im IInkAnalyzer ab.
 ms.assetid: 4aa57f41-3122-47a9-a60d-4a229e23f63c
-title: 'Iinkanalyzer:: GetRecognizedString-Methode (iacom. h)'
+title: IInkAnalyzer::GetRecognizedString-Methode (IACom.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,16 +13,16 @@ api_type:
 - COM
 api_location:
 - IACom.dll
-ms.openlocfilehash: 67afe9909fcabb8df880706b2b077ea602ccade6
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 3defa68f68e0c2e81bdb093005db1e173442b9686ca4c98a4966c755b2fb52dc
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "103751808"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119092248"
 ---
-# <a name="iinkanalyzergetrecognizedstring-method"></a>Iinkanalyzer:: GetRecognizedString-Methode
+# <a name="iinkanalyzergetrecognizedstring-method"></a>IInkAnalyzer::GetRecognizedString-Methode
 
-Ruft die Zeichenfolge mit dem besten Ergebnis des Erkennungs Vorgangs für die gesamte Kontext Knoten Struktur in [**iinkanalyzer**](iinkanalyzer.md)ab.
+Ruft die Zeichenfolge mit dem besten Ergebnis des Erkennungsvorgangs für die gesamte Kontextknotenstruktur im [**IInkAnalyzer**](iinkanalyzer.md)ab.
 
 ## <a name="syntax"></a>Syntax
 
@@ -39,33 +39,33 @@ HRESULT GetRecognizedString(
 
 <dl> <dt>
 
-*pbstrauerkenzedstring* \[ vorgenommen\]
+*pbstrRecognizedString* \[ out\]
 </dt> <dd>
 
-Die beste Ergebnis Zeichenfolge des Erkennungs Vorgangs für die gesamte Kontext Knoten Struktur in [**iinkanalyzer**](iinkanalyzer.md).
+Die zeichenfolge mit dem besten Ergebnis des Erkennungsvorgangs für die gesamte Kontextknotenstruktur in [**IInkAnalyzer.**](iinkanalyzer.md)
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Eine Beschreibung der Rückgabewerte finden Sie unter [Klassen und Schnittstellen-Ink-Analyse](classes-and-interfaces---ink-analysis.md).
+Eine Beschreibung der Rückgabewerte finden Sie unter Klassen und Schnittstellen – [Ink-Analyse.](classes-and-interfaces---ink-analysis.md)
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
 > [!Caution]  
-> Um einen Speicherplatz zu vermeiden, nennen Sie [**sysfrestring**](/windows/win32/api/oleauto/nf-oleauto-sysfreestring) für *pbstrauerkenzedstring* , wenn Sie die Zeichenfolge nicht mehr verwenden müssen.
+> Um einen Speicherverlust zu vermeiden, rufen Sie [**SysFreeString**](/windows/win32/api/oleauto/nf-oleauto-sysfreestring) für *pbstrRecognizedString* auf, wenn Sie die Zeichenfolge nicht mehr verwenden müssen.
 
  
 
-Diese Methode gibt den gleichen Wert wie die Eigenschaften Daten des Stamm Knotens für die erkannte Zeichenfolge zurück. (Weitere Informationen finden Sie unter [**iinkanalyzer:: GetRootNode-Methode**](iinkanalyzer-getrootnode.md), [**icontextnode:: GetPropertyData**](icontextnode-getpropertydata.md)und [Kontext Knoten Eigenschaften](context-node-properties.md).)
+Diese Methode gibt den gleichen Wert wie die Eigenschaftsdaten des Stammknotens für die erkannte Zeichenfolge zurück. (Siehe [**IInkAnalyzer::GetRootNode-Methode,**](iinkanalyzer-getrootnode.md) [**IContextNode::GetPropertyData**](icontextnode-getpropertydata.md)und [Kontextknoteneigenschaften](context-node-properties.md).)
 
 ## <a name="examples"></a>Beispiele
 
-Das folgende Beispiel zeigt eine Methode, die die [**icontextnode**](icontextnode.md) -Ergebnis Struktur der Ink Analyzer durchläuft. Wenn der iinkanlyzer zurzeit keine frei Hand Analyse ausführt, führt die-Methode Folgendes aus.
+Das folgende Beispiel zeigt eine Methode, die die [**IContextNode-Ergebnisstruktur**](icontextnode.md) des Ink-Analysetools durchläuft. Wenn der IInkAnlyzer derzeit keine Freihandanalyse durchführt, führt die Methode folgende Schritte aus.
 
--   Ruft die Top-Erkennungs Zeichenfolge ab.
--   Ruft den Stamm Knoten der Ink Analyzer ab.
--   Ruft die Hilfsmethode `ExploreContextNode` auf, um den Stamm Knoten und seine untergeordneten Knoten zu untersuchen.
+-   Ruft die oberste Erkennungszeichenfolge ab.
+-   Ruft den Stammknoten des Ink-Analysetools ab.
+-   Ruft die Hilfsmethode `ExploreContextNode` auf, um den Stammknoten und seine untergeordneten Knoten zu untersuchen.
 
 
 ```C++
@@ -127,21 +127,21 @@ HRESULT CMyClass::ExploreAnalysisResults(
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows XP Tablet PC Edition \[ Desktop-Apps\]<br/>                                                 |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur Desktop-Apps der XP Tablet PC Edition \[\]<br/>                                                 |
 | Unterstützte Mindestversion (Server)<br/> | Nicht unterstützt<br/>                                                                                     |
-| Header<br/>                   | <dl> <dt>Iacom. h (erfordert auch iacom \_ i. c)</dt> </dl> |
+| Header<br/>                   | <dl> <dt>IACom.h (erfordert auch IACom \_ i.c)</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>IACom.dll</dt> </dl>                          |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Iinkanalyzer**](iinkanalyzer.md)
+[**IInkAnalyzer**](iinkanalyzer.md)
 </dt> <dt>
 
-[Ink-Analyse Referenz](ink-analysis-reference.md)
+[Referenz zur Ink-Analyse](ink-analysis-reference.md)
 </dt> </dl>
 
  

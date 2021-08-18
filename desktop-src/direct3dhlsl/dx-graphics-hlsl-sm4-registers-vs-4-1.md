@@ -1,6 +1,6 @@
 ---
-title: Register-vs_4_1
-description: Dieser Abschnitt enthält Referenzinformationen zu den Eingabe-und Ausgabe Registern, die von Vertex Shader Version 4 1 implementiert werden \_ .
+title: Register – vs_4_1
+description: Dieser Abschnitt enthält Referenzinformationen zu den Eingabe- und Ausgaberegistern, die von Vertex-Shader Version 4 \_ 1 implementiert werden.
 ms.assetid: ea449195-d012-4a14-9760-b738a8623343
 ms.topic: article
 ms.date: 05/31/2018
@@ -9,47 +9,47 @@ topic_type:
 api_name: ''
 api_type: ''
 api_location: ''
-ms.openlocfilehash: df2254c111303129327d255f94727a5e42ac1c0c
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: 0164b1d82a9d371e735177f381e2a1a97aa062aaca8c65a00d4959a32279ed11
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "104206944"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119119924"
 ---
-# <a name="registers---vs_4_1"></a>Register-vs \_ 4 \_ 1
+# <a name="registers---vs_4_1"></a>Register im Vergleich zu \_ 4 \_ 1
 
-Dieser Abschnitt enthält Referenzinformationen zu den Eingabe-und Ausgabe Registern, die von Vertex Shader Version 4 1 implementiert werden \_ .
+Dieser Abschnitt enthält Referenzinformationen zu den Eingabe- und Ausgaberegistern, die von Vertex-Shader Version 4 \_ 1 implementiert werden.
 
-## <a name="input-registers"></a>Eingabe Register
+## <a name="input-registers"></a>Eingaberegister
 
 
 
-| Register      | Name | Anzahl              | R/W | Dimension | Indizierbar durch r\# | der Arbeitszeittabelle | Erfordert DCL |
+| Registrieren      | Name | Anzahl              | R/W | Dimension | Indizierbar durch r\# | Standardeinstellungen | Erfordert DCL |
 |---------------|------|--------------------|-----|-----------|------------------|----------|--------------|
-| r\#           |      | 4096 (r \# + x \# \[ n \] ) | R/W | 4         | Nein               | Keine     | Ja          |
-| x \# \[ n\]      |      | 4096 (r \# + x \# \[ n \] ) | R/W | 4         | Ja              | Keine     | Ja          |
-| Ramelow\#           |      | 32                 | R   | 4         | Ja              | Keine     | Ja          |
+| R\#           |      | 4096(r \# +x \# \[ n \] ) | R/W | 4         | Nein               | Keine     | Ja          |
+| x \# \[ n\]      |      | 4096(r \# +x \# \[ n \] ) | R/W | 4         | Ja              | Keine     | Ja          |
+| V\#           |      | 32                 | R   | 4         | Ja              | Keine     | Ja          |
 | t\#           |      | 128                | R   | 1         | Nein               | Keine     | Ja          |
 | s\#           |      | 16                 | R   | 1         | Nein               | Keine     | Ja          |
-| CB- \# \[ Index\] |      | 15                 | R   | 4         | Ja (Inhalt)    | Keine     | Ja          |
-| ICB- \[ Index\]  |      | 1                  | R   | 4         | Ja (Inhalt)    | Keine     | Ja          |
+| cb \# \[ index\] |      | 15                 | R   | 4         | Ja (Inhalt)    | Keine     | Ja          |
+| \[icb-Index\]  |      | 1                  | R   | 4         | Ja (Inhalt)    | Keine     | Ja          |
 
 
 
- 
+ 
 
-## <a name="output-registers"></a>Ausgabe Register
+## <a name="output-registers"></a>Ausgaberegister
 
 
 
-| Register | Name            | Anzahl | R/W | Dimension | Indizierbar durch r\# | der Arbeitszeittabelle | Erfordert DCL |
+| Registrieren | Name            | Anzahl | R/W | Dimension | Indizierbar durch r\# | Standardeinstellungen | Erfordert DCL |
 |----------|-----------------|-------|-----|-----------|------------------|----------|--------------|
-| NULL     | Ergebnis verwerfen  | –   | W   | –       | –              | –      | Nein           |
-| o\#      | Ausgabe Register | 32    | W   | –       | N/V              | 4        | Ja          |
+| NULL     | Verwerfen des Ergebnisses  | Nicht zutreffend   | W   | Nicht zutreffend       | Nicht zutreffend              | –      | Nein           |
+| O\#      | Ausgaberegister | 32    | W   | Nicht zutreffend       | N/V              | 4        | Ja          |
 
 
 
- 
+ 
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
@@ -58,9 +58,9 @@ Dieser Abschnitt enthält Referenzinformationen zu den Eingabe-und Ausgabe Regis
 [Shadermodell 4](dx-graphics-hlsl-sm4.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

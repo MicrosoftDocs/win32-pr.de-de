@@ -1,6 +1,6 @@
 ---
-description: 'Weitere Informationen finden Sie hier: Windows8Grbits. ttdotnetguid-Feld'
-title: Windows8Grbits. ttdotnetguid-Feld (Microsoft. ISAM. ESENT. Interop. Windows8)
+description: 'Weitere Informationen finden Sie unter: Feld "Windows8Grbits.TTDotNetGuid".'
+title: Feld "Windows8Grbits.TTDotNetGuid" (Microsoft.Isam.Esent.Interop.Windows8)
 TOCTitle: TTDotNetGuid field
 ms:assetid: F:Microsoft.Isam.Esent.Interop.Windows8.Windows8Grbits.TTDotNetGuid
 ms:mtpsurl: https://msdn.microsoft.com/library/microsoft.isam.esent.interop.windows8.windows8grbits.ttdotnetguid(v=EXCHG.10)
@@ -24,19 +24,19 @@ api_type:
 api_location:
 - Microsoft.Isam.Esent.Interop.dll
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: 0e2d7b67e438b3e72f7df7db5bb381cec548c0fe
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 2236ccb0f2901cf0bb124d3d5b421e8cf53d6c5fb471ead36df9b43c3179ea36
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "103863295"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117889227"
 ---
-# <a name="windows8grbitsttdotnetguid-field"></a>Windows8Grbits. ttdotnetguid-Feld
+# <a name="windows8grbitsttdotnetguid-field"></a>Feld "Windows8Grbits.TTDotNetGuid"
 
-Mit dieser Option wird angefordert, dass die temporäre Tabelle Spalten vom Typ JET_coltypGUID entsprechend .NET Framework GUID-Sortierreihenfolge sortiert.
+Diese Option fordert an, dass die Spalten der temporären Tabelle JET_coltypGUID der GUID.NET Framework Sortierreihenfolge sortiert werden.
 
-**Namespace:**  [Microsoft. ISAM. ESENT. Interop. Windows8](./microsoft.isam.esent.interop.windows8-namespace.md)  
-**Assembly:**  Microsoft. ISAM. ESENT. Interop (in Microsoft.Isam.Esent.Interop.dll)
+**Namespace:**  [Microsoft.Isam.Esent.Interop.Windows8](./microsoft.isam.esent.interop.windows8-namespace.md)  
+**Assembly:**  Microsoft.Isam.Esent.Interop (in Microsoft.Isam.Esent.Interop.dll)
 
 ## <a name="syntax"></a>Syntax
 
@@ -53,12 +53,12 @@ value = Windows8Grbits.TTDotNetGuid
 public const TempTableGrbit TTDotNetGuid
 ```
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
-#### <a name="reference"></a>Referenz
+#### <a name="reference"></a>Verweis
 
 [Windows8Grbits-Klasse](./windows8grbits-class.md)
 
 [Windows8Grbits-Member](./windows8grbits-members.md)
 
-[Microsoft. ISAM. ESENT. Interop. Windows8-Namespace](./microsoft.isam.esent.interop.windows8-namespace.md)
+[Microsoft.Isam.Esent.Interop.Windows8-Namespace](./microsoft.isam.esent.interop.windows8-namespace.md)

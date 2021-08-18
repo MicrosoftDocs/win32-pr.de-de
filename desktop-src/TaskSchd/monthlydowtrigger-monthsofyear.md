@@ -1,11 +1,11 @@
 ---
-title: Monthlydowauslöst. MONTHSOFYEAR (Eigenschaft)
-description: Ruft bei der Skripterstellung die Monate des Jahres ab, in denen die Aufgabe ausgeführt wird, oder legt diese fest. | Monthlydowauslöst. MONTHSOFYEAR (Eigenschaft)
+title: MonthlyDOWTrigger.MonthsOfYear -Eigenschaft
+description: Für die Skripterstellung ruft die Monate des Jahres ab, in denen der Task ausgeführt wird, oder legt diese fest. | MonthlyDOWTrigger.MonthsOfYear -Eigenschaft
 ms.assetid: 4ab7ab43-9c9b-4cd3-be8f-1989b83e8cf3
 keywords:
-- MONTHSOFYEAR-Eigenschaft Taskplaner
-- MONTHSOFYEAR-Eigenschaft Taskplaner, monthlydowauslöserobjekt
-- Monthlydowauslöserobjekt Taskplaner, MONTHSOFYEAR (Eigenschaft)
+- MonthsOfYear-Taskplaner
+- MonthsOfYear-Eigenschaft Taskplaner , MonthlyDOWTrigger-Objekt
+- MonthlyDOWTrigger-Objekt Taskplaner , MonthsOfYear-Eigenschaft
 topic_type:
 - apiref
 api_name:
@@ -16,16 +16,16 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: c345cd3de12d7dba3450f62bdb18bfdcee496b13
-ms.sourcegitcommit: 92e74c99f8f4d097676959d0c317f533c2400a80
+ms.openlocfilehash: 7f8dc9752cf241218a95a9816824bc6ccf560f47c3445df9e5f40406381de3b5
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/09/2021
-ms.locfileid: "103869979"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119253820"
 ---
-# <a name="monthlydowtriggermonthsofyear-property"></a>Monthlydowauslöst. MONTHSOFYEAR (Eigenschaft)
+# <a name="monthlydowtriggermonthsofyear-property"></a>MonthlyDOWTrigger.MonthsOfYear -Eigenschaft
 
-Ruft bei der Skripterstellung die Monate des Jahres ab, in denen die Aufgabe ausgeführt wird, oder legt diese fest.
+Für die Skripterstellung ruft die Monate des Jahres ab, in denen der Task ausgeführt wird, oder legt diese fest.
 
 ## <a name="syntax"></a>Syntax
 
@@ -38,15 +38,15 @@ MonthlyDOWTrigger.MonthsOfYear As short
 
 ## <a name="property-value"></a>Eigenschaftswert
 
-Eine bitweise Maske, die die Monate des Jahres angibt, in dem die Aufgabe ausgeführt wird.
+Eine bitweise Maske, die die Monate des Jahres angibt, in denen der Task ausgeführt wird.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die folgende Tabelle zeigt die Zuordnung der bitweisen Maske, die von dieser Eigenschaft verwendet wird.
+Die folgende Tabelle zeigt die Zuordnung der bitweise Maske, die von dieser Eigenschaft verwendet wird.
 
 
 
-| Monat     | Farbtonwert | Dezimalzahl |
+| Month (Monat)     | Farbtonwert | Dezimalzahl |
 |-----------|-----------|---------------|
 | January   | 0X01      | 1             |
 | Februar  | 0x02      | 2             |
@@ -65,7 +65,7 @@ Die folgende Tabelle zeigt die Zuordnung der bitweisen Maske, die von dieser Eig
 
  
 
-Beim Lesen oder Schreiben von XML für eine Aufgabe werden die Monate des Jahres eines monatlichen wochentags im Taskplaner Schema durch das [**Monate**](taskschedulerschema-months-monthlydayofweekscheduletype-element.md) -Element angegeben.
+Beim Lesen oder Schreiben von XML für eine Aufgabe werden die Monate des Jahres eines monatlichen Wochentagskalenders durch das [**Months-Element**](taskschedulerschema-months-monthlydayofweekscheduletype-element.md) des Taskplaner angegeben.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -73,18 +73,18 @@ Beim Lesen oder Schreiben von XML für eine Aufgabe werden die Monate des Jahres
 
 | Anforderung | Wert |
 |-------------------------------------|-----------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                          |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/>                                    |
-| Typbibliothek<br/>             | <dl> <dt>Taskschd. tlb</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ Vista-Desktop-Apps\]<br/>                                          |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/>                                    |
+| Typbibliothek<br/>             | <dl> <dt>Taskschd.tlb</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Taskschd.dll</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Monthlydowlöst**](monthlydowtrigger.md)
+[**MonthlyDOWTrigger**](monthlydowtrigger.md)
 </dt> <dt>
 
 [Aufgabenplanung](task-scheduler-start-page.md)

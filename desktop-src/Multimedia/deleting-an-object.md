@@ -4,16 +4,16 @@ description: Löschen eines Objekts
 ms.assetid: 54ea1e7d-75b5-461f-b0d6-a976c33d66fe
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 31f77ad42700e01e5594faa5b8bb299fcc5841d7
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: 5e94e55c025d3358f50170b83042b6e888622e14897d02607b9fc24ed0dea1c4
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "104471404"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119144533"
 ---
 # <a name="deleting-an-object"></a>Löschen eines Objekts
 
-Die **releasemethode** löscht das-Objekt, wenn der Verweis Zähler Null ist.
+Die **Release-Methode** löscht das Objekt, wenn der Verweiszähler 0 (null) ist.
 
 
 ```C++
@@ -31,9 +31,9 @@ STDMETHODIMP_(ULONG) CAVIFileCF::Release()
 
 
 
- 
+ 
 
- 
+ 
 
 
 

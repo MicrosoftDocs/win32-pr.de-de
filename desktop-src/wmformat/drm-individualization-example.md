@@ -1,28 +1,28 @@
 ---
-title: Beispiel für DRM-Individualisierung
-description: Beispiel für DRM-Individualisierung
+title: Beispiel für die DRM-Individualisierung
+description: Beispiel für die DRM-Individualisierung
 ms.assetid: 665a5005-d435-4783-b48e-2d8400aa7638
 keywords:
-- Windows Media-Format-SDK, DRM-Individualisierung
-- Windows Media-Format-SDK, Individualisierung
+- Windows Medienformat-SDK, DRM-Individualisierung
+- Windows Medienformat-SDK,Individualisierung
 - Digital Rights Management (DRM), Individualisierung
 - DRM (Digital Rights Management), Individualisierung
 - Digital Rights Management (DRM), DRM-Individualisierung
 - DRM (Digital Rights Management), DRM-Individualisierung
-- Erweiterte APIs für den DRM-Client, Individualisierung
+- Erweiterte APIs des DRM-Clients, Individualisierung
 - Erweiterte Client-APIs, Individualisierung
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 1252fe951e306f837f2df95245b3cfc81dac03c2
-ms.sourcegitcommit: cb844c9ab17577ce171fd7b03add668645867bc7
+ms.openlocfilehash: 4eeb13f44eaa5fe3a3d67560d6fa7bb1e39250842ba0707ef62969b91fb50d47
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/27/2020
-ms.locfileid: "104389993"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119085999"
 ---
-# <a name="drm-individualization-example"></a>Beispiel für DRM-Individualisierung
+# <a name="drm-individualization-example"></a>Beispiel für die DRM-Individualisierung
 
-Der folgende Code ist ein Beispiel für die erzwungene Individual alisierung und zeigt, wie Sie das Modell für die synchrone Ereignis Behandlung mit Ereignissen verwenden, die über zugeordnete Status Schnittstellen verfügen.
+Der folgende Code ist ein Beispiel für erzwungene Individualisierung und zeigt auch, wie das synchrone Ereignisbehandlungsmodell mit Ereignissen verwendet wird, denen Statusschnittstellen zugeordnet sind.
 
 
 ```C++
@@ -178,12 +178,12 @@ HRESULT Individualize(IWMDRMSecurity* pSecurity)
 [**Durchführen der DRM-Individualisierung**](performing-drm-individualization.md)
 </dt> <dt>
 
-[**Verwenden des Media Foundation-Ereignis Modells**](using-the-media-foundation-model.md)
+[**Verwenden des Media Foundation-Ereignismodells**](using-the-media-foundation-model.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

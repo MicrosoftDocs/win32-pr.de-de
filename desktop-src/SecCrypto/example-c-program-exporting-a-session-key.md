@@ -1,30 +1,30 @@
 ---
-description: Im folgenden Beispiel wird ein zufälliger Sitzungsschlüssel erstellt und ein exportier barer Schlüsselblob erstellt. Das Beispiel veranschaulicht die Verwendung von "CryptGetUserKey", "CryptExportKey" und verwandter Funktionen.
+description: Im folgenden Beispiel wird ein zufälliger Sitzungsschlüssel und ein exportierbares Schlüsselblob erstellt. Das Beispiel veranschaulicht die Verwendung von CryptGetUserKey, CryptExportKey und zugehörigen Funktionen.
 ms.assetid: a7f2fdd1-9514-4cda-bae2-2f379dd9a27d
-title: 'Beispiel-C-Programm: Exportieren eines Sitzungsschlüssels'
+title: 'C-Beispielprogramm: Exportieren eines Sitzungsschlüssels'
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 5252e5eced86dd4e671f5080cf6dab5e1ec96b9d
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: d10e3f8ea93d11460522383584d5847473a17497ad13ccfae72b0415e958bf52
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "103755569"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119140913"
 ---
-# <a name="example-c-program-exporting-a-session-key"></a>Beispiel-C-Programm: Exportieren eines Sitzungsschlüssels
+# <a name="example-c-program-exporting-a-session-key"></a>C-Beispielprogramm: Exportieren eines Sitzungsschlüssels
 
-Im folgenden Beispiel wird ein zufälliger Sitzungsschlüssel erstellt und ein exportier barer [*Schlüsselblob*](../secgloss/k-gly.md)erstellt. Das Beispiel veranschaulicht die Verwendung von " [**CryptGetUserKey**](/windows/desktop/api/Wincrypt/nf-wincrypt-cryptgetuserkey)", " [**CryptExportKey**](/windows/desktop/api/Wincrypt/nf-wincrypt-cryptexportkey)" und verwandter Funktionen.
+Im folgenden Beispiel wird ein zufälliger Sitzungsschlüssel und ein exportierbarer [*Schlüssel BLOB*](../secgloss/k-gly.md)erstellt. Das Beispiel veranschaulicht die Verwendung von [**CryptGetUserKey,**](/windows/desktop/api/Wincrypt/nf-wincrypt-cryptgetuserkey) [**CryptExportKey**](/windows/desktop/api/Wincrypt/nf-wincrypt-cryptexportkey)und verwandten Funktionen.
 
-In diesem Beispiel werden die folgenden Aufgaben und kryptoapi-Funktionen veranschaulicht:
+In diesem Beispiel werden die folgenden Aufgaben und CryptoAPI-Funktionen veranschaulicht:
 
--   Abrufen eines CSP-Kontexts mithilfe von [**CryptAcquireContext**](/windows/desktop/api/Wincrypt/nf-wincrypt-cryptacquirecontexta).
--   Zugriff auf zwei verschiedene Paare von öffentlichen/privaten Schlüsseln mithilfe von [**CryptGetUserKey**](/windows/desktop/api/Wincrypt/nf-wincrypt-cryptgetuserkey).
--   Generieren eines exportierbaren Sitzungsschlüssels mithilfe von [**CryptGenKey**](/windows/desktop/api/Wincrypt/nf-wincrypt-cryptgenkey).
--   Erstellen eines [*einfachen Schlüsselblobs*](../secgloss/s-gly.md) , das einen Sitzungsschlüssel mithilfe von [**CryptExportKey**](/windows/desktop/api/Wincrypt/nf-wincrypt-cryptexportkey)enthält.
--   Zerstören eines Sitzungsschlüssels und Zugreifen auf die beiden Paare von öffentlichen/privaten Schlüsseln mithilfe von [**cryptdestroykey**](/windows/desktop/api/Wincrypt/nf-wincrypt-cryptdestroykey).
--   Freigeben des CSP-Kontexts mithilfe von [**cryptreleasecontext**](/windows/desktop/api/Wincrypt/nf-wincrypt-cryptreleasecontext).
+-   Abrufen eines CSP-Kontexts mit [**CryptAcquireContext**](/windows/desktop/api/Wincrypt/nf-wincrypt-cryptacquirecontexta).
+-   Erhalten des Zugriffs auf zwei verschiedene Paare von öffentlichen/privaten Schlüsseln mithilfe von [**CryptGetUserKey**](/windows/desktop/api/Wincrypt/nf-wincrypt-cryptgetuserkey).
+-   Generieren eines exportierbaren Sitzungsschlüssels mit [**CryptGenKey**](/windows/desktop/api/Wincrypt/nf-wincrypt-cryptgenkey).
+-   Erstellen eines [*einfachen Schlüsselblobs*](../secgloss/s-gly.md) mit einem Sitzungsschlüssel mithilfe von [**CryptExportKey**](/windows/desktop/api/Wincrypt/nf-wincrypt-cryptexportkey).
+-   Zerstören eines Sitzungsschlüssels und Zugriff auf die beiden Paare aus öffentlichen und privaten Schlüsseln mithilfe von [**CryptDestroyKey**](/windows/desktop/api/Wincrypt/nf-wincrypt-cryptdestroykey).
+-   Freigeben des CSP-Kontexts mit [**CryptReleaseContext.**](/windows/desktop/api/Wincrypt/nf-wincrypt-cryptreleasecontext)
 
-In diesem Beispiel wird die Funktion " [**myhanderror**](myhandleerror.md)" verwendet. Der Code für diese Funktion ist im Beispiel enthalten. Der Code für dieses und andere Hilfsfunktionen ist auch unter [universell Funktionen](general-purpose-functions.md)aufgeführt.
+In diesem Beispiel wird die Funktion [**MyHandleError verwendet.**](myhandleerror.md) Der Code für diese Funktion ist im Beispiel enthalten. Code für diese und andere Hilfsfunktionen ist auch unter [Universell Functions](general-purpose-functions.md)aufgeführt.
 
 
 ```C++

@@ -52,11 +52,11 @@ Ein Zeiger auf das Profil.
 
 Typ: **HRESULT**
 
-Wenn diese Methode erfolgreich ist, wird **S \_ OK** zurückgegeben. Andernfalls wird ein **HRESULT-Fehlercode** zurückgegeben.
+Wenn diese Methode erfolgreich ist, wird **S \_ OK zurückgegeben.** Andernfalls wird ein **HRESULT-Fehlercode** zurückgegeben.
 
 ## <a name="remarks"></a>Hinweise
 
-Verwenden Sie die **IScanProfileMgr::SetDefault-Methode,** um dem Profil ein Element hinzuzufügen `<Default>` oder dieses Element aus dem vorherigen Standardprofil des Geräts zu entfernen.
+Verwenden Sie **die IScanProfileMgr::SetDefault-Methode,** um dem Profil ein Element hinzuzufügen oder dieses Element aus dem vorherigen Standardprofil `<Default>` des Geräts zu entfernen.
 
 Verwenden Sie die [**ScanProfileDialog-Methode,**](-wia-iscanprofileui-scanprofiledialog.md) um das Standardprofil zu ändern.
 
@@ -66,7 +66,7 @@ Verwenden Sie die [**ScanProfileDialog-Methode,**](-wia-iscanprofileui-scanprofi
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur Vista-Desktop-Apps\]<br/>                                              |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ Vista-Desktop-Apps\]<br/>                                              |
 | Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/>                                        |
 | Header<br/>                   | <dl> <dt>Scanprofilemgr.h</dt> </dl> |
 | Idl<br/>                      | <dl> <dt>Scanprofiles.idl</dt> </dl> |
@@ -80,7 +80,7 @@ Verwenden Sie die [**ScanProfileDialog-Methode,**](-wia-iscanprofileui-scanprofi
 [**IScanProfileMgr**](-wia-iscanprofilemgr.md)
 </dt> <dt>
 
-[Scanprofilschema](-wia-scan-profile-schema.md)
+[Scan Profile Schema](-wia-scan-profile-schema.md)
 </dt> </dl>
 
  

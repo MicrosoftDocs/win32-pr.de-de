@@ -13,49 +13,49 @@ api_type:
 ms.topic: reference
 ms.date: 05/31/2018
 api_location: ''
-ms.openlocfilehash: effe4819c674a7909cc445b9e9f7b5322fae7676
-ms.sourcegitcommit: 5724b38883e518ac565e1b266defa85ad0941bb2
-ms.translationtype: HT
+ms.openlocfilehash: a23c45ea5f21667bde6817469bce43e8f7e9a0a41d8b62b016e739abb744b53c
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/14/2021
-ms.locfileid: "104218958"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118985780"
 ---
 # <a name="texture2dmsarray"></a>Texture2DMSArray
 
-Texture2DMSArray Type (wie er in Shader Model 4 vorhanden ist) plus Ressourcenvariablen.
+Texture2DMSArray-Typ (wie in Shadermodell 4 vorhanden) plus Ressourcenvariablen.
 
 
 
-| Methode                                                                             | BESCHREIBUNG                                        |
+| Methode                                                                             | Beschreibung                                        |
 |------------------------------------------------------------------------------------|----------------------------------------------------|
-| [**GetDimensions**](sm5-object-texture2dmsarray-getdimensions.md)                  | Ruft die Ressourcen Dimensionen ab.                      |
-| [**Getsampleposition**](sm5-object-texture2dmsarray-getsampleposition.md)          | Ruft die Position des angegebenen Beispiels ab.         |
+| [**GetDimensions**](sm5-object-texture2dmsarray-getdimensions.md)                  | Ruft die Ressourcendimensionen ab.                      |
+| [**GetSamplePosition**](sm5-object-texture2dmsarray-getsampleposition.md)          | Ruft die Position des angegebenen Beispiels ab.         |
 | [**Laden**](texture2dmsarray-load.md)                                               | Ruft einen Wert ab.                                    |
-| [**Blutprobe. KOM\[\]\[\]**](sm5-object-texture2dmsarray-sampleoperatorindex.md)  | Ruft eine schreibgeschützte Ressourcen Variable ab.                |
+| [**Beispiel. Operator\[\]\[\]**](sm5-object-texture2dmsarray-sampleoperatorindex.md)  | Ruft eine schreibgeschützte Ressourcenvariable ab.                |
 
 
 
  
 
-## <a name="minimum-shader-model"></a>Minimaler Shader-Modell
+## <a name="minimum-shader-model"></a>Shader-Mindestmodell
 
-Dieses Objekt wird in den folgenden shadermodellen unterstützt.
+Dieses Objekt wird in den folgenden Shadermodellen unterstützt.
 
 
 
 | Shadermodell                                                                | Unterstützt |
 |-----------------------------------------------------------------------------|-----------|
-| [Shader Model 5](d3d11-graphics-reference-sm5.md) und höhere shadermodelle | ja       |
+| [Shadermodell 5](d3d11-graphics-reference-sm5.md) und höhere Shadermodelle | Ja       |
 
 
 
  
 
-Dieses Objekt wird für die folgenden Typen von Shadern unterstützt:
+Dieses Objekt wird für die folgenden Shadertypen unterstützt:
 
 
 
-| Scheitelpunkt | Hülle | Domain | Geometrie | Pixel | Compute |
+| Scheitelpunkt | Rumpf | Domain | Geometrie | Pixel | Compute |
 |--------|------|--------|----------|-------|---------|
 | x      | x    | x      | x        | x     | x       |
 
@@ -67,7 +67,7 @@ Dieses Objekt wird für die folgenden Typen von Shadern unterstützt:
 
 <dl> <dt>
 
-[Shader Model 5-Objekte](d3d11-graphics-reference-sm5-objects.md)
+[Shadermodell 5-Objekte](d3d11-graphics-reference-sm5-objects.md)
 </dt> </dl>
 
  

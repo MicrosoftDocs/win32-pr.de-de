@@ -1,131 +1,131 @@
 ---
-title: Benutzeroberflächenautomatisierungs-Unterstützung für Drag & Drop
-description: In diesem Thema werden die Steuerelement Muster beschrieben, die Informationen über die Drag & Drop-Funktionalität eines Elements verfügbar machen.
+title: Benutzeroberflächenautomatisierung-Unterstützung für Drag & Drop
+description: In diesem Thema werden die Steuerelementmuster beschrieben, die Informationen über die Drag & Drop-Funktionalität eines Elements verfügbar machen.
 ms.assetid: FFF5A296-C9FF-4B47-AAF8-A9DD581D9DBE
 keywords:
-- Benutzeroberflächenautomatisierungs-, Drag & Drop-Unterstützung
-- UI-Automatisierung, Übersicht über Drag Pattern
-- UI-Automatisierung, DropTarget-Muster (Übersicht)
-- UI-Automatisierung, Drag & amp; Drop (Übersicht)
-- Drag & Drop-Muster, Informationen zu
-- Steuerelement Muster ziehen
-- DropTarget-Steuerelement Muster
-- Steuerelement Muster, ziehen
-- Steuerelement Muster, DropTarget
+- Benutzeroberflächenautomatisierung,Drag & Drop-Unterstützung
+- Benutzeroberflächenautomatisierung,Übersicht über das Drag-Muster
+- Benutzeroberflächenautomatisierung,DropTarget-Muster – Übersicht
+- Benutzeroberflächenautomatisierung,Drag & Drop–Übersicht
+- Drag & Drop-Muster, Informationen
+- Ziehen des Steuerelementmusters
+- DropTarget-Steuerelementmuster
+- Steuerelementmuster,Ziehen
+- Steuerelementmuster,DropTarget
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 4194613d15aadac4a925303ef2322d4cf53c341c
-ms.sourcegitcommit: 592c9bbd22ba69802dc353bcb5eb30699f9e9403
+ms.openlocfilehash: 1eab48f4319c51a5ccbbaadae22f1ae337740df5b6d0fdf325a01ba1323f8630
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "106339894"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119133563"
 ---
-# <a name="ui-automation-support-for-drag-and-drop"></a>Benutzeroberflächenautomatisierungs-Unterstützung für Drag & Drop
+# <a name="ui-automation-support-for-drag-and-drop"></a>Benutzeroberflächenautomatisierung-Unterstützung für Drag & Drop
 
-Die Microsoft-Benutzeroberflächen Automatisierung definiert zwei Steuerelement Muster für die Unterstützung von Drag & Drop-Szenarien, das [Drag](/windows/desktop/WinAuto/uiauto-implementingdrag) -Steuerelement Muster und das [DropTarget](/windows/desktop/WinAuto/uiauto-implementingdroptarget) -Steuerelement Muster. Sie implementieren das Drag-Steuerelement Muster für ein Element, das gezogen werden kann, und das DropTarget-Steuerelement Muster für ein Element, das ein gezogenes Element empfangen kann. Das heißt, ein Ablage Ziel. Die zwei-Steuerelement Muster machen Informationen verfügbar, die eine Hilfstechnologie verwenden kann, um einem Benutzer mit Eingabe Hilfen einen Drag & Drop-Vorgang abzuschließen.
+Microsoft UI Automation defines two control patterns for supporting drag-and-drop scenarios, the [Drag](/windows/desktop/WinAuto/uiauto-implementingdrag) control pattern, and the [DropTarget](/windows/desktop/WinAuto/uiauto-implementingdroptarget) control pattern. Sie implementieren das Drag-Steuerelementmuster für ein Element, das gezogen werden kann, und das DropTarget-Steuerelementmuster für ein Element, das ein gezogenes Element empfangen kann. das heißt, ein Abbruchziel. Die beiden Steuerelementmuster machen Informationen verfügbar, die eine Hilfstechnologie verwenden kann, um einem Benutzer für die Barrierefreiheit beim Abschließen eines Drag & Drop-Vorgangs zu helfen.
 
 -   [Ziehen von Stilen](#dragging-styles)
     -   [Quell-/Zielstil](#sourcetarget-style)
     -   [Nur-Quelle-Stil](#source-only-style)
 -   [Ziehen mehrerer Elemente](#dragging-multiple-items)
--   [Client Schnittstellen für Drag & Drop](#client-interfaces-for-drag-and-drop)
+-   [Client Interfaces for Drag-and-Drop](#client-interfaces-for-drag-and-drop)
 
 ## <a name="dragging-styles"></a>Ziehen von Stilen
 
-Wenn Sie das [Drag](/windows/desktop/WinAuto/uiauto-implementingdrag) -Steuerelement Muster für ein Draggable-Element implementieren, müssen Sie entscheiden, ob Sie den Zieh Stil für das Quell-oder *Ziel* Element oder das Zieh Element der reinen *Quelle* implementieren möchten.
+Wenn Sie das *Drag-Steuerelementmuster* für ein ziehbares Element implementieren, müssen Sie entscheiden, ob der Ziehstil für *Quelle/Ziel* oder der Ziehstil nur für die Quelle implementiert werden soll. [](/windows/desktop/WinAuto/uiauto-implementingdrag)
 
 ### <a name="sourcetarget-style"></a>Quell-/Zielstil
 
-Im Quell-/Zielstil von Drag & amp; Drop sind das gezogene Element (die "Quelle") und das Drop-Target-Element (das "Ziel") verschieden, und jede löst einen eindeutigen Satz von Ereignissen aus. Hier ist der Lebenszyklus für einen Zieh Vorgang, der den Quell-/Zielstil verwendet: <dl> Wenn der Benutzer einen Zieh Vorgang startet:
+Im Quell-/Zielstil von Drag & Drop sind das gezogene Element (die "Quelle") und das Drop-Target-Element (das "Ziel") unterschiedlich, und jedes löst einen eigenen Satz von Ereignissen aus. Hier ist der Lebenszyklus für einen Ziehvorgang, der den Quell-/Zielstil verwendet: <dl> Wenn der Benutzer einen Ziehvorgang startet:
 
--   Die Quelle löst das Ereignis DragStart ([**UIA \_ Drag \_ dragstarteventid**](uiauto-event-ids.md)) aus.
--   Die Quelle legt die [**idragprovider:: isgrab**](/windows/desktop/api/UIAutomationCore/nf-uiautomationcore-idragprovider-get_isgrabbed) -Eigenschaft auf **true** fest.
--   Ziele aktualisieren Ihre [**droptargeteffect**](/windows/desktop/api/UIAutomationCore/nf-uiautomationcore-idroptargetprovider-get_droptargeteffect) -Eigenschaften.
-
-  
-Wenn der Zieh Vorgang in eine Zielregion Eintritt:
-
--   Das Ziel löst das DragEnter-Ereignis ([**UIA \_ DropTarget \_ dragentereventid**](uiauto-event-ids.md)) aus.
+-   Die Quelle löst das [**DragStart(UIA \_ \_ DragStartEventId)-Ereignis**](uiauto-event-ids.md)aus.
+-   Die Quelle legt die [**IDragProvider::IsGrabbed-Eigenschaft**](/windows/desktop/api/UIAutomationCore/nf-uiautomationcore-idragprovider-get_isgrabbed) auf **TRUE fest.**
+-   Ziele aktualisieren ihre [**DropTargetEffect-Eigenschaften.**](/windows/desktop/api/UIAutomationCore/nf-uiautomationcore-idroptargetprovider-get_droptargeteffect)
 
   
-Wenn der Zieh Vorgang einen Zielbereich verlässt:
+Wenn der Ziehvorgang in einen Zielbereich eintritt:
 
--   Das Ziel löst das DragLeave-Ereignis ([**UIA \_ DropTarget \_ dragleaveeventid**](uiauto-event-ids.md)) aus.
-
-  
-Wenn der Benutzer das gezogene Element über ein nicht--Ziel freigibt:
-
--   Die Quelle löst das Ereignis dragcancel ([**UIA \_ Drag \_ dragcanceleventid**](uiauto-event-ids.md)) aus.
--   Die Quelle legt die [**idragprovider:: isgrab**](/windows/desktop/api/UIAutomationCore/nf-uiautomationcore-idragprovider-get_isgrabbed) -Eigenschaft auf **false** fest.
+-   Das Ziel löst das DragEnter-Ereignis ([**UIA \_ DropTarget \_ DragEnterEventId**](uiauto-event-ids.md)) aus.
 
   
-Wenn der Benutzer das gezogene Element über einem Ziel freigibt:
+Wenn der Ziehvorgang einen Zielbereich verlässt:
 
--   Die Quelle löst das Ereignis dragcomplete ([**UIA \_ Drag \_ dragcompleteeventid**](uiauto-event-ids.md)) aus.
--   Die Quelle legt die [**idragprovider:: isgrab**](/windows/desktop/api/UIAutomationCore/nf-uiautomationcore-idragprovider-get_isgrabbed) -Eigenschaft auf **false** fest.
--   Das Ziel legt die [**idroptargetprovider::D roptargeteffect**](/windows/desktop/api/UIAutomationCore/nf-uiautomationcore-idroptargetprovider-get_droptargeteffect) -Eigenschaft fest, um den Effekt anzugeben, der aufgetreten ist.
--   Das Ziel löst das gelöschte Ereignis ([**UIA \_ DropTarget \_ droppedeventid**](uiauto-event-ids.md)) aus.
+-   Das Ziel löst das DragLeave [**(UIA \_ DropTarget \_ DragLeaveEventId)-Ereignis**](uiauto-event-ids.md)aus.
+
+  
+Wenn der Benutzer das gezogene Element über einem Nichtziel freilässt:
+
+-   Die Quelle löst das [**DragCancel(UIA \_ \_ DragCancelEventId)-Ereignis**](uiauto-event-ids.md)aus.
+-   Die Quelle legt die [**IDragProvider::IsGrabbed-Eigenschaft**](/windows/desktop/api/UIAutomationCore/nf-uiautomationcore-idragprovider-get_isgrabbed) auf **FALSE fest.**
+
+  
+Wenn der Benutzer das gezogene Element über einem Ziel freilässt:
+
+-   Die Quelle löst das DragComplete-Ereignis ([**UIA \_ \_ DragCompleteEventId**](uiauto-event-ids.md)) aus.
+-   Die Quelle legt die [**IDragProvider::IsGrabbed-Eigenschaft**](/windows/desktop/api/UIAutomationCore/nf-uiautomationcore-idragprovider-get_isgrabbed) auf **FALSE fest.**
+-   Das Ziel legt die [**IDropTargetProvider::D ropTargetEffect-Eigenschaft**](/windows/desktop/api/UIAutomationCore/nf-uiautomationcore-idroptargetprovider-get_droptargeteffect) fest, um den aufgetretenen Effekt anzugeben.
+-   Das Ziel löst das Dropped [**(UIA \_ DropTarget \_ DroppedEventId)-Ereignis**](uiauto-event-ids.md)aus.
 
   
 </dl>
 
-Die Ereignisse aus den Quell-und Ziel Objekten sind eng verwandt, aber unterschiedlich. Die Daten über die gezogenen Daten stammen aus der Quelle, während die Daten zu "was passieren können" und "Was ist passiert" aus dem Ziel stammen.
+Die Ereignisse aus den Quell- und Zielobjekten sind eng miteinander verknüpft, aber eindeutig. Die Daten darüber, was gezogen wird, stammen aus der Quelle, während die Daten zu "Was könnte passieren" und "Was ist passiert" aus dem Ziel stammen.
 
-Wenn ein Zieh Vorgang ausgeführt wird, kann das gezogene Element beliebig oft in die Zielbereiche gezogen und aus diesen verschoben werden, bevor der Vorgang abgeschlossen ist.
+Wenn ein Ziehvorgang durchgeführt wird, kann das gezogene Element vor Abschluss des Vorgangs so oft wie möglich in die Zielregionen und aus den Zielregionen gezogen werden.
 
-Alle Ablage Ziele, die die [**idroptargetprovider::D roptargeteffect**](/windows/desktop/api/UIAutomationCore/nf-uiautomationcore-idroptargetprovider-get_droptargeteffect) -Eigenschaft im Handumdrehen aktualisieren müssen, sollten ein zusätzliches Eigenschaften Änderungs Ereignis für diese Eigenschaft aufrufen.
+Jedes Abbruchziel, das seine [**IDropTargetProvider::D ropTargetEffect-Eigenschaft**](/windows/desktop/api/UIAutomationCore/nf-uiautomationcore-idroptargetprovider-get_droptargeteffect) im Fluge aktualisieren muss, sollte ein zusätzliches Eigenschaftsänderungsereignis für diese Eigenschaft erstellen.
 
 ### <a name="source-only-style"></a>Nur-Quelle-Stil
 
-Durch das Ziehen der reinen Quelle kann ein Anbieter das Implementieren von Drop-Zielen vermeiden. Wenn Sie Drop Targets nicht implementieren, werden die Implementierungskosten gesenkt, aber Barrierefreiheits Client Anwendungen erhalten keine Informationen über das Objekt, das den Löschvorgang erhalten hat. Hier ist der Lebenszyklus für einen Zieh Vorgang, der den reinen Quell Stil verwendet: <dl> Wenn der Benutzer einen Zieh Vorgang startet:
+Mit dem Ziehstil "Nur Quelle" kann ein Anbieter das Implementieren von Abbruchzielen vermeiden. Das Nichtimplementierung von Abbruchzielen trägt zur Senkung der Implementierungskosten bei, bietet clientanwendungen für die Barrierefreiheit jedoch keine Informationen über das Objekt, das den Absturz empfangen hat. Im Folgenden finden Sie den Lebenszyklus für einen Ziehvorgang, bei dem nur der Quellstil verwendet wird: <dl> Wenn der Benutzer einen Ziehvorgang startet:
 
--   Die Quelle löst das Ereignis DragStart ([**UIA \_ Drag \_ dragstarteventid**](uiauto-event-ids.md)) aus.
--   Die Quelle legt die [**idragprovider:: isgrab**](/windows/desktop/api/UIAutomationCore/nf-uiautomationcore-idragprovider-get_isgrabbed) -Eigenschaft auf **true** fest.
-
-  
-Wenn der Zieh Vorgang in eine Zielregion Eintritt:
-
--   Die Quelle legt die [**idragprovider::D ropeer ffect**](/windows/desktop/api/UIAutomationCore/nf-uiautomationcore-idragprovider-get_dropeffect) -Eigenschaft auf den entsprechenden Wert fest.
+-   Die Quelle löst das [**DragStart(UIA \_ \_ DragStartEventId)-Ereignis**](uiauto-event-ids.md)aus.
+-   Die Quelle legt die [**IDragProvider::IsGrabbed-Eigenschaft**](/windows/desktop/api/UIAutomationCore/nf-uiautomationcore-idragprovider-get_isgrabbed) auf **TRUE fest.**
 
   
-Wenn der Zieh Vorgang einen Zielbereich verlässt:
+Wenn der Ziehvorgang in einen Zielbereich eintritt:
 
--   Die Quelle legt die [**idragprovider::D ropeer ffect**](/windows/desktop/api/UIAutomationCore/nf-uiautomationcore-idragprovider-get_dropeffect) -Eigenschaft auf den entsprechenden Wert fest.
-
-  
-Wenn der Benutzer das gezogene Element über ein nicht--Ziel freigibt:
-
--   Die Quelle löst das Ereignis dragcancel ([**UIA \_ Drag \_ dragcanceleventid**](uiauto-event-ids.md)) aus.
--   Die Quelle legt die [**idragprovider:: isgrab**](/windows/desktop/api/UIAutomationCore/nf-uiautomationcore-idragprovider-get_isgrabbed) -Eigenschaft auf **false** fest.
+-   Die Quelle legt die [**IDragProvider::D ropEffect-Eigenschaft**](/windows/desktop/api/UIAutomationCore/nf-uiautomationcore-idragprovider-get_dropeffect) auf den entsprechenden Wert fest.
 
   
-Wenn der Benutzer das gezogene Element über einem Ziel freigibt:
+Wenn der Ziehvorgang einen Zielbereich verlässt:
 
--   Die Quelle löst das Ereignis dragcomplete ([**UIA \_ Drag \_ dragcompleteeventid**](uiauto-event-ids.md)) aus.
--   Die Quelle legt die [**idragprovider::D ropeer ffect**](/windows/desktop/api/UIAutomationCore/nf-uiautomationcore-idragprovider-get_dropeffect) -Eigenschaft fest, um die Auswirkung anzugeben, die beim Löschen des Elements aufgetreten ist.
+-   Die Quelle legt die [**IDragProvider::D ropEffect-Eigenschaft**](/windows/desktop/api/UIAutomationCore/nf-uiautomationcore-idragprovider-get_dropeffect) auf den entsprechenden Wert fest.
+
+  
+Wenn der Benutzer das gezogene Element über einem Nichtziel freilässt:
+
+-   Die Quelle löst das [**DragCancel(UIA \_ \_ DragCancelEventId)-Ereignis**](uiauto-event-ids.md)aus.
+-   Die Quelle legt die [**IDragProvider::IsGrabbed-Eigenschaft**](/windows/desktop/api/UIAutomationCore/nf-uiautomationcore-idragprovider-get_isgrabbed) auf **FALSE fest.**
+
+  
+Wenn der Benutzer das gezogene Element über einem Ziel freilässt:
+
+-   Die Quelle löst das DragComplete-Ereignis ([**UIA \_ \_ DragCompleteEventId**](uiauto-event-ids.md)) aus.
+-   Die Quelle legt die [**IDragProvider::D ropEffect-Eigenschaft**](/windows/desktop/api/UIAutomationCore/nf-uiautomationcore-idragprovider-get_dropeffect) fest, um den Effekt anzugeben, der beim Löschen des Elements stattgefunden hat.
 
   
 </dl>
 
 ## <a name="dragging-multiple-items"></a>Ziehen mehrerer Elemente
 
-Wenn ein Anbieter Drag & amp; Drop-Vorgänge implementiert, bei denen der Benutzer mehrere Objekte gleichzeitig ziehen kann, verwendet der Anbieter den Quell-/Ziel-oder Quellen reinen Stil, wie im vorherigen Abschnitt beschrieben, aber mit einem kleinen Unterschied. Wenn der Benutzer den Zieh Vorgang startet, erstellt der Anbieter ein Master Quell Element, das den vollständigen Satz von Elementen darstellt, die gezogen werden. Das Master Quell Element löst alle Ereignisse für den Satz der gezogenen Elemente aus. die Elemente machen keine eigenen Ereignisse aus.<dl> Wenn der Benutzer einen Zieh Vorgang startet:
+Wenn ein Anbieter Drag & Drop-Vorgänge implementiert, bei denen der Benutzer mehrere Objekte gleichzeitig ziehen kann, verwendet der Anbieter die Im vorherigen Abschnitt beschriebenen Quell-/Ziel- oder Quellformatvorlagen, jedoch mit einem kleinen Unterschied. Wenn der Benutzer den Ziehvorgang startet, erstellt der Anbieter ein Masterquellenelement, das den vollständigen Satz von Elementen darstellt, die gezogen werden. Das Masterquellenelement löst alle Ereignisse im Namen der Gruppe gezogener Elemente aus. Die Elemente geben keine eigenen Ereignisse aus.<dl> Wenn der Benutzer einen Ziehvorgang startet:
 
--   Der Anbieter erstellt das Master Quell Element.
--   Das Master Source-Element löst das DragStart-Ereignis ([**UIA \_ Drag \_ dragstarteventid**](uiauto-event-ids.md)) aus.
--   Das Master Source-Element legt die [**idragprovider:: isgrab**](/windows/desktop/api/UIAutomationCore/nf-uiautomationcore-idragprovider-get_isgrabbed) -Eigenschaft auf **true** fest.
--   Das Master Quell Element aktualisiert die Liste der gepackten Elemente so, dass alle gezogenen Elemente eingeschlossen werden, sodass die [**getgrabbeditems**](/windows/desktop/api/UIAutomationCore/nf-uiautomationcore-idragprovider-getgrabbeditems) -Methode die Liste abrufen kann.
+-   Der Anbieter erstellt das Masterquellenelement.
+-   Das Master-Quellelement löst das DragStart [**(UIA \_ \_ DragStartEventId)-Ereignis**](uiauto-event-ids.md)aus.
+-   Das Master-Quellelement legt die [**IDragProvider::IsGrabbed-Eigenschaft**](/windows/desktop/api/UIAutomationCore/nf-uiautomationcore-idragprovider-get_isgrabbed) auf **TRUE fest.**
+-   Das Master-Quellelement aktualisiert die Liste der abgerufenen Elemente so, dass alle gezogenen Elemente enthalten sind, sodass die [**GetGrabbedItems-Methode**](/windows/desktop/api/UIAutomationCore/nf-uiautomationcore-idragprovider-getgrabbeditems) die Liste abrufen kann.
 
   
 </dl>
 
-Zu diesem Zeitpunkt führt das Master Quell Element dieselbe Rolle wie das des Quell Elements aus, wie im vorherigen Abschnitt beschrieben.
+Zu diesem Zeitpunkt übernimmt das Masterquellenelement die gleiche Rolle wie das Quellelement, wie im vorherigen Abschnitt beschrieben.
 
-## <a name="client-interfaces-for-drag-and-drop"></a>Client Schnittstellen für Drag & Drop
+## <a name="client-interfaces-for-drag-and-drop"></a>Clientschnittstellen für Drag & Drop
 
-Benutzeroberflächenautomatisierungs-Client Anwendungen verwenden die [**iuiautomationdragpattern**](/windows/desktop/api/UIAutomationClient/nn-uiautomationclient-iuiautomationdragpattern) -Schnittstelle und die [**iuiautomationdroptargetpattern**](/windows/desktop/api/UIAutomationClient/nn-uiautomationclient-iuiautomationdroptargetpattern) -Schnittstelle für den Zugriff auf Drag & Drop-Informationen von Benutzeroberflächen Elementen.
+UI Automation client applications use the [**IUIAutomationDragPattern**](/windows/desktop/api/UIAutomationClient/nn-uiautomationclient-iuiautomationdragpattern) and [**IUIAutomationDropTargetPattern**](/windows/desktop/api/UIAutomationClient/nn-uiautomationclient-iuiautomationdroptargetpattern) interfaces to access drag-and-drop information from UI elements.
 
- 
+ 
 
- 
+ 

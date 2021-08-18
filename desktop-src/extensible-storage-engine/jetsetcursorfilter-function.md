@@ -1,6 +1,6 @@
 ---
-description: Weitere Informationen finden Sie in der jetsetcurrsorfilter-Funktion.
-title: Jetsetcurrsorfilter-Funktion
+description: Weitere Informationen finden Sie unter JetSetCursorFilter-Funktion.
+title: JetSetCursorFilter-Funktion
 TOCTitle: JetSetCursorFilter Function
 ms:assetid: 3cea5beb-2cf8-4053-8e7f-7b8645580ef0
 ms:mtpsurl: https://msdn.microsoft.com/library/JJ835040(v=EXCHG.10)
@@ -19,21 +19,21 @@ api_type:
 api_location:
 - ESENT.DLL
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: ad589fecb190ad0f0676325b78adc7c96028a3fa
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 76e92f768fd99cdd755e435caf4ba24dbbba0e3b0ee6338ffe7f49c2f506f2f0
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104128633"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118978800"
 ---
-# <a name="jetsetcursorfilter-function"></a>Jetsetcurrsorfilter-Funktion
+# <a name="jetsetcursorfilter-function"></a>JetSetCursorFilter-Funktion
 
 
 _**Gilt für:** Windows | Windows Server_
 
-Die **jetsetcurrsorfilter** -Funktion legt ein Array einfacher Filter für die [jetmove](./jetmove-function.md) -Funktion fest.
+Die **JetSetCursorFilter-Funktion** legt ein Array einfacher Filter für die [JetMove-Funktion](./jetmove-function.md) fest.
 
-Die **jetsetcurrsorfilter** -Funktion wurde im Windows 8-Betriebssystem eingeführt.
+Die **JetSetCursorFilter-Funktion** wurde im Windows 8 eingeführt.
 
 ``` c++
 JET_ERR JET_API JetSetCursorFilter(
@@ -47,25 +47,25 @@ JET_ERR JET_API JetSetCursorFilter(
 
 ### <a name="parameters"></a>Parameter
 
-*-sid*
+*sesid*
 
-Der für den API-Befehl zu verwendende Daten Bank Sitzungs Kontext.
+Der Datenbanksitzungskontext, der für den API-Aufruf verwendet werden soll.
 
-*TableID*
+*tableid*
 
 Der Cursor, der positioniert werden soll.
 
-*rgfilters*
+*rgFilters*
 
-Die einfachen Daten Satz Filter.
+Die einfachen Datensatzfilter.
 
-*cfilters*
+*cFilters*
 
 Die Anzahl der Filter.
 
 *grbit*
 
-Eine Gruppe von Bits, die NULL oder mehr der in der folgenden Tabelle aufgeführten Verschiebungs Optionen angibt.
+Eine Gruppe von Bits, die null oder mehr der in der folgenden Tabelle aufgeführten Optionen zum Verschieben angibt.
 
 <table>
 <colgroup>
@@ -89,7 +89,7 @@ Eine Gruppe von Bits, die NULL oder mehr der in der folgenden Tabelle aufgeführ
 
 ### <a name="return-value"></a>Rückgabewert
 
-Diese Funktion gibt den [JET_ERR](./jet-err.md) -Datentyp mit einem der in der folgenden Tabelle aufgelisteten Rückgabecodes zurück. Weitere Informationen zu den möglichen ESE-Fehlern (Extensible Storage Engine) finden Sie unter [Extensible Storage Engine Errors](./extensible-storage-engine-errors.md) und [Fehler Behandlungsparameter](./error-handling-parameters.md).
+Diese Funktion gibt den [JET_ERR](./jet-err.md) datentyp mit einem der in der folgenden Tabelle aufgeführten Rückgabecodes zurück. Weitere Informationen zu den möglichen ESE-Fehlern (Extensible Storage Engine) finden Sie unter [Extensible Storage Engine Errors](./extensible-storage-engine-errors.md) and [Error Handling Parameters](./error-handling-parameters.md).
 
 <table>
 <colgroup>
@@ -129,21 +129,21 @@ Diese Funktion gibt den [JET_ERR](./jet-err.md) -Datentyp mit einem der in der f
 </tr>
 <tr class="odd">
 <td><p><strong>Header</strong></p></td>
-<td><p>In "ESENT. h" deklariert.</p></td>
+<td><p>In Esent.h deklariert.</p></td>
 </tr>
 <tr class="even">
 <td><p><strong>Bibliothek</strong></p></td>
-<td><p>Verwenden Sie ESENT. lib.</p></td>
+<td><p>Verwenden Sie ESENT.lib.</p></td>
 </tr>
 <tr class="odd">
-<td><p><strong>DLL</strong></p></td>
+<td><p><strong>Dll</strong></p></td>
 <td><p>Erfordert ESENT.dll.</p></td>
 </tr>
 </tbody>
 </table>
 
 
-#### <a name="see-also"></a>Siehe auch
+#### <a name="see-also"></a>Weitere Informationen
 
-[Jetmove](./jetmove-function.md)  
+[JetMove](./jetmove-function.md)  
 [JET_ERR](./jet-err.md)

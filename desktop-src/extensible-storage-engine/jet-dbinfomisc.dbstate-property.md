@@ -1,6 +1,6 @@
 ---
-description: 'Weitere Informationen finden Sie hier: JET_DBINFOMISC. dbstate-Eigenschaft'
-title: JET_DBINFOMISC. dbstate (Eigenschaft)
+description: 'Weitere Informationen finden Sie unter: JET_DBINFOMISC.dbstate-Eigenschaft.'
+title: JET_DBINFOMISC.dbstate-Eigenschaft
 TOCTitle: 'dbstate property '
 ms:assetid: P:Microsoft.Isam.Esent.Interop.JET_DBINFOMISC.dbstate
 ms:mtpsurl: https://msdn.microsoft.com/library/microsoft.isam.esent.interop.jet_dbinfomisc.dbstate(v=EXCHG.10)
@@ -26,19 +26,19 @@ api_type:
 api_location:
 - Microsoft.Isam.Esent.Interop.dll
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: 90d1cbb9ed4418d88a2a76f9a9922305d83d3ac2
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: fece25cfd46154168216d197c114fa2f688855d10556aeeb925d9ba970ad9c9f
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104525046"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118980420"
 ---
-# <a name="jet_dbinfomiscdbstate-property"></a>JET_DBINFOMISC. dbstate (Eigenschaft)
+# <a name="jet_dbinfomiscdbstate-property"></a>JET_DBINFOMISC.dbstate-Eigenschaft
 
-Ruft den konsistenten/inkonsistenten Status der Datenbank ab.
+Ruft den konsistenten/inkonsistenten Zustand der Datenbank ab.
 
-**Namespace:**  [Microsoft. ISAM. ESENT. Interop](./microsoft.isam.esent.interop-namespace.md)  
-**Assembly:**  Microsoft. ISAM. ESENT. Interop (in Microsoft.Isam.Esent.Interop.dll)
+**Namespace:**  [Microsoft.Isam.Esent.Interop](./microsoft.isam.esent.interop-namespace.md)  
+**Assembly:**  Microsoft.Isam.Esent.Interop (in Microsoft.Isam.Esent.Interop.dll)
 
 ## <a name="syntax"></a>Syntax
 
@@ -60,14 +60,14 @@ public JET_dbstate dbstate { get; internal set; }
 
 #### <a name="property-value"></a>Eigenschaftswert
 
-Typ: [Microsoft.ISAM.ESENT.Interop.JET_dbstate](./jet-dbstate-enumeration.md)  
+Typ: [Microsoft.Isam.Esent.Interop.JET_dbstate](./jet-dbstate-enumeration.md)  
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
-#### <a name="reference"></a>Referenz
+#### <a name="reference"></a>Verweis
 
 [JET_DBINFOMISC-Klasse](./jet-dbinfomisc-class.md)
 
-[Mitglieder JET_DBINFOMISC](./jet-dbinfomisc-members.md)
+[JET_DBINFOMISC Member](./jet-dbinfomisc-members.md)
 
-[Microsoft. ISAM. ESENT. Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)
+[Microsoft.Isam.Esent.Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)

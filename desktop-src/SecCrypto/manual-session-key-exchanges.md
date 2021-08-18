@@ -1,41 +1,41 @@
 ---
 description: Zeigt, wie eine verschlüsselte Nachricht gesendet wird.
 ms.assetid: 928b1863-7a54-4bf0-b447-85b8c2868bcd
-title: Manueller Austausch von Sitzungs Schlüsseln
+title: Manueller Sitzungsschlüsselaustausch
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: b0114f8173084126a72519d291158f15f3e1c171
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 38c9f7338b40ed1675b2186e478c8c124719b376889ce691d305e246016e0d9c
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104556173"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119425594"
 ---
-# <a name="manual-session-key-exchanges"></a>Manueller Austausch von Sitzungs Schlüsseln
+# <a name="manual-session-key-exchanges"></a>Manueller Sitzungsschlüsselaustausch
 
 > [!Note]  
-> Bei dem in diesem Abschnitt beschriebenen Verfahren wird davon ausgegangen, dass die Benutzer (oder CryptoAPI-Clients) bereits über einen eigenen Satz von [*öffentlichen/privaten Schlüsselpaaren*](../secgloss/p-gly.md) verfügen und auch die [*öffentlichen Schlüssel*](../secgloss/p-gly.md)der anderen abgerufen haben.
+> Bei der in diesem Abschnitt beschriebenen Vorgehensweise wird davon ausgegangen, dass [](../secgloss/p-gly.md) die Benutzer (oder CryptoAPI-Clients) bereits über einen eigenen Satz von Paaren aus öffentlichem und privatem Schlüssel verfügen und auch die öffentlichen Schlüssel des jeweils anderen erhalten [*haben.*](../secgloss/p-gly.md)
 
  
 
-In der folgenden Abbildung wird gezeigt, wie Sie mit diesem Verfahren eine verschlüsselte Nachricht senden.
+Die folgende Abbildung zeigt, wie Sie dieses Verfahren verwenden, um eine verschlüsselte Nachricht zu senden.
 
 ![Senden einer verschlüsselten Nachricht](images/capi04.png)
 
-Diese Vorgehensweise ist anfällig für mindestens eine gängige Angriffs Form. Ein eavesdroppergerät kann Kopien von mindestens einer verschlüsselten Nachricht und den verschlüsselten Schlüsseln abrufen. Zu einem späteren Zeitpunkt kann der eavesdropperdienst eine dieser Nachrichten an den Empfänger senden, und der Empfänger hat keine Möglichkeit zu wissen, dass die Nachricht nicht direkt vom ursprünglichen Absender stammt. Dieses Risiko kann durch ein Zeitstempel aller Nachrichten oder durch die Verwendung von Seriennummern verringert werden.
+Dieser Ansatz ist anfällig für mindestens eine gängige Angriffsform. Ein Lauschangriff kann Kopien einer oder mehrere verschlüsselter Nachrichten und der verschlüsselten Schlüssel erhalten. Zu einem späteren Zeitpunkt kann der Lauschangriff dann eine dieser Nachrichten an den Empfänger senden, und der Empfänger kann nicht wissen, dass die Nachricht nicht direkt vom ursprünglichen Absender stammt. Dieses Risiko kann verringert werden, indem alle Nachrichten mit einem Zeitstempel versehen oder Seriennummern verwendet werden.
 
-Die einfachste Möglichkeit zum Senden verschlüsselter Nachrichten an einen anderen Benutzer besteht darin, die Nachricht, die mit einem zufälligen Sitzungsschlüssel verschlüsselt ist, zusammen mit dem Sitzungsschlüssel zu senden, der mit dem [*öffentlichen Schlüsselaustausch*](../secgloss/k-gly.md)Schlüssel des Empfängers verschlüsselt ist
+Die einfachste Möglichkeit, verschlüsselte Nachrichten an einen anderen Benutzer zu senden, ist das Senden der Nachricht, die mit einem zufälligen Sitzungsschlüssel verschlüsselt ist, zusammen mit dem Sitzungsschlüssel, der mit dem öffentlichen Schlüsselaustauschschlüssel des Empfängers [*verschlüsselt ist.*](../secgloss/k-gly.md)
 
-Im folgenden werden die Schritte zum Senden eines verschlüsselten Sitzungsschlüssels beschrieben.
+Im Folgenden finden Sie die Schritte zum Senden eines verschlüsselten Sitzungsschlüssels.
 
 **So senden Sie einen verschlüsselten Sitzungsschlüssel**
 
-1.  Erstellen Sie einen zufälligen [*Sitzungsschlüssel*](../secgloss/s-gly.md) mithilfe der [**CryptGenKey**](/windows/desktop/api/Wincrypt/nf-wincrypt-cryptgenkey) -Funktion.
-2.  Verschlüsseln Sie die Nachricht mit dem Sitzungsschlüssel. Dieses Verfahren wird unter [Datenverschlüsselung und Entschlüsselung](data-encryption-and-decryption.md)erläutert.
-3.  Exportieren Sie den Sitzungsschlüssel in ein [*Schlüssel-BLOB*](../secgloss/k-gly.md) mit der [**CryptExportKey**](/windows/desktop/api/Wincrypt/nf-wincrypt-cryptexportkey) -Funktion, und geben Sie dabei an, dass der Schlüssel mit dem öffentlichen Schlüsselaustausch Schlüssel des Ziel Benutzers verschlüsselt werden soll.
-4.  Senden Sie sowohl die verschlüsselte Nachricht als auch das verschlüsselte Schlüsselblob an den Ziel Benutzer.
-5.  Der Ziel Benutzer importiert das Schlüsselblob mithilfe der [**cryptimportkey**](/windows/desktop/api/Wincrypt/nf-wincrypt-cryptimportkey) -Funktion in seinen CSP. Dadurch wird der Sitzungsschlüssel automatisch entschlüsselt, sofern der öffentliche Schlüssel für den Schlüsselaustausch des Ziel Benutzers in Schritt 3 angegeben wurde.
-6.  Der Ziel Benutzer kann die Nachricht anschließend mithilfe des Sitzungsschlüssels entschlüsseln. Befolgen Sie hierzu das unter [Datenverschlüsselung und Entschlüsselung](data-encryption-and-decryption.md)beschriebene Verfahren.
+1.  Erstellen Sie [*mithilfe der*](../secgloss/s-gly.md) [**CryptGenKey-Funktion einen zufälligen Sitzungsschlüssel.**](/windows/desktop/api/Wincrypt/nf-wincrypt-cryptgenkey)
+2.  Verschlüsseln Sie die Nachricht mithilfe des Sitzungsschlüssels. Dieses Verfahren wird unter [Datenverschlüsselung und -entschlüsselung erläutert.](data-encryption-and-decryption.md)
+3.  Exportieren Sie den [](../secgloss/k-gly.md) Sitzungsschlüssel mit der [**CryptExportKey-Funktion**](/windows/desktop/api/Wincrypt/nf-wincrypt-cryptexportkey) in ein Schlüsselblob, und geben Sie dabei an, dass der Schlüssel mit dem öffentlichen Schlüsselaustauschschlüssel des Zielbenutzers verschlüsselt werden soll.
+4.  Senden Sie sowohl die verschlüsselte Nachricht als auch das verschlüsselte Schlüssel-BLOB an den Zielbenutzer.
+5.  Der Zielbenutzer importiert das Schlüsselblob mithilfe der [**CryptImportKey-Funktion**](/windows/desktop/api/Wincrypt/nf-wincrypt-cryptimportkey) in seinen CSP. Dadurch wird der Sitzungsschlüssel automatisch entschlüsselt, sofern der öffentliche Schlüsselaustauschschlüssel des Zielbenutzers in Schritt 3 angegeben wurde.
+6.  Der Zielbenutzer kann die Nachricht dann mithilfe des Sitzungsschlüssels entschlüsseln, indem er das unter Datenverschlüsselung und -entschlüsselung [erläuterte Verfahren verwendet.](data-encryption-and-decryption.md)
 
  
 

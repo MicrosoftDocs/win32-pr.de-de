@@ -1,25 +1,25 @@
 ---
-description: Allgemeine Informationen zu anonymen Pipes. Eine anonyme Pipe ist eine unbenannte, unidirektionale Pipe, die in der Regel Daten zwischen einem übergeordneten Prozess und einem untergeordneten Prozess überträgt.
+description: Allgemeine Informationen zu anonymen Pipes. Eine anonyme Pipe ist eine unbenannte, einseitige Pipe, die in der Regel Daten zwischen einem übergeordneten prozess und einem untergeordneten Prozess überträgt.
 ms.assetid: 43c2a76e-7873-4d93-90a6-c956f06e2f3e
 title: Anonyme Pipes
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 01dac73b1cb83693a432c32bd53a1f2c7ff19122
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: c18e56d65b8bd9078e513620061a3325b5340100564aa4cf2c9fb532ab4e9152
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "103864256"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119350470"
 ---
 # <a name="anonymous-pipes"></a>Anonyme Pipes
 
-Eine *Anonyme Pipe* ist eine unbenannte, unidirektionale Pipe, die in der Regel Daten zwischen einem übergeordneten Prozess und einem untergeordneten Prozess überträgt. Anonyme Pipes sind immer lokal. Sie können nicht für die Kommunikation über ein Netzwerk verwendet werden.
+Eine *anonyme Pipe* ist eine unbenannte, einseitige Pipe, die in der Regel Daten zwischen einem übergeordneten prozess und einem untergeordneten Prozess überträgt. Anonyme Pipes sind immer lokal. sie können nicht für die Kommunikation über ein Netzwerk verwendet werden.
 
-Weitere Informationen finden Sie unter den folgenden Themen:
+Weitere Informationen finden Sie in den folgenden Themen:
 
--   [Anonyme Pipe-Vorgänge](anonymous-pipe-operations.md)
--   [Vererbung von Pipehandles](pipe-handle-inheritance.md)
--   [Sicherheit und Zugriffsrechte für anonyme Pipe](anonymous-pipe-security-and-access-rights.md)
+-   [Anonyme Pipevorgänge](anonymous-pipe-operations.md)
+-   [Pipehandlevererbung](pipe-handle-inheritance.md)
+-   [Sicherheit und Zugriffsrechte für anonyme Pipes](anonymous-pipe-security-and-access-rights.md)
 
  
 

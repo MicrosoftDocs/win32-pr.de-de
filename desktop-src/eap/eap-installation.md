@@ -1,33 +1,33 @@
 ---
 title: EAP-Installation
-description: Anbieter implementieren eaps, auch als Authentifizierungsprotokolle bezeichnet, in Dynamic Link Libraries (DLLs).
+description: Anbieter implementieren EAPs, auch als Authentifizierungsprotokolle bezeichnet, in DlLs (Dynamic Link Libraries).
 ms.assetid: af10b1e9-45c9-4640-ba79-fc9c23cc3c47
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 619505a55108ebde0e14d7ff20c78394c6c90fad
-ms.sourcegitcommit: c20a43b333f03175ac23823c55f3204bfe8cd243
+ms.openlocfilehash: f9a790f4282ef2658bacdd7f25be647234c3cf32d62ca80e8ce2745da3f4f738
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/26/2019
-ms.locfileid: "104389634"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118984450"
 ---
 # <a name="eap-installation"></a>EAP-Installation
 
-Anbieter implementieren eaps, auch als Authentifizierungsprotokolle bezeichnet, in Dynamic Link Libraries (DLLs). Eine DLL für das Authentifizierungsprotokoll muss sowohl auf dem Client-als auch auf dem Server Computer gespeichert werden. Der Einfachheit halber können die Client-und Server-DLLs identisch sein. Dies ist jedoch keine Voraussetzung. Beachten Sie außerdem, dass dieselbe DLL mehr als ein Authentifizierungsprotokoll unterstützen kann.
+Anbieter implementieren EAPs, auch als Authentifizierungsprotokolle bezeichnet, in DlLs (Dynamic Link Libraries). Eine DLL für das Authentifizierungsprotokoll muss sich sowohl auf dem Client- als auch auf dem Servercomputer befinden. Der Einfachheit halber können die Client- und Server-DLLs identisch sein. Dies ist jedoch keine Voraussetzung. Beachten Sie außerdem, dass dieselbe DLL möglicherweise mehr als ein Authentifizierungsprotokoll unterstützt.
 
-Der Anbieter sollte Setup Software zum Installieren und Entfernen der DLL bereitstellen. Von der Setup Software sollten außerdem die entsprechenden Schlüssel und Werte für das Authentifizierungsprotokoll in der Systemregistrierung erstellt und bei der Deinstallation entfernt werden.
+Der Hersteller sollte Setupsoftware bereitstellen, um die DLL zu installieren und zu entfernen. Die Setupsoftware sollte auch die entsprechenden Schlüssel und Werte für das Authentifizierungsprotokoll in der Systemregistrierung erstellen und sie bei der Deinstallation entfernen.
 
-Die Installation der einzelnen EAP-dll sollte den folgenden Registrierungsschlüssel erstellen.
+Bei der Installation jeder EAP-DLL sollte der folgende Registrierungsschlüssel erstellt werden.
 
-**HKEY \_ Lokales \_ Computer** \\ **System** \\ **CurrentControlSet** \\ **Services** \\ **rasman** \\ **PPP** \\ **EAP** \\ **&lt; eaptypeid &gt;**
+**HKEY \_ LOCAL \_ MACHINE** \\ **System** \\ **CurrentControlSet** \\ **Services** \\ **Rasman** \\ **COMMERCE** \\ **EAP** \\ **&lt; eaptypeid &gt;**
 
-Im vorangehenden Pfad ist **&lt; eaptypeid &gt;** die ID des Authentifizierungs Protokolls. Der Anbieter muss diese ID von der Internet Assigned Numbers Authority (IANA) abrufen.
+Im vorherigen Pfad ist **&lt; eaptypeid &gt;** die ID des Authentifizierungsprotokolls. Der Anbieter muss diese ID von der Internet Assigned Numbers Authority (IANA) abrufen.
 
-Weitere Informationen und eine Beschreibung der unterstützten Werte für diesen Schlüssel finden Sie unter [Registrierungs Werte für das Authentifizierungsprotokoll](authentication-protocol-registry-values.md).
+Weitere Informationen und eine Beschreibung der unterstützten Werte für diesen Schlüssel finden Sie unter [Authentication Protocol Registry Values](authentication-protocol-registry-values.md).
 
- 
+ 
 
- 
+ 
 
 
 

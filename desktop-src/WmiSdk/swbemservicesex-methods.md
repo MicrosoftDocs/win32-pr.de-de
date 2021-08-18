@@ -1,25 +1,25 @@
 ---
-description: Das Objekt "Swap Service Type" stellt die folgenden Methoden zur Verfügung.
+description: Das SWbemServicesEx-Objekt macht die folgenden Methoden verfügbar.
 ms.assetid: 5140A6CF-3ACB-4130-9E2E-D5CF2A0B2183
 ms.tgt_platform: multiple
-title: "' Swap servicesex '-Methoden"
+title: SWbemServicesEx-Methoden
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 66434a753fdb79cf2624ac6bc61cd4730cd918d4
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: bfc0b00ffb40dd598255adaee1131137df089d888c98ddc3d67e649134e39fce
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106353594"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119130827"
 ---
-# <a name="swbemservicesex-methods"></a>' Swap servicesex '-Methoden
+# <a name="swbemservicesex-methods"></a>SWbemServicesEx-Methoden
 
-Das Objekt " [**Swap Service**](swbemservicesex.md) Type" stellt die folgenden Methoden zur Verfügung.
+Das [**SWbemServicesEx-Objekt**](swbemservicesex.md) macht die folgenden Methoden verfügbar.
 
 ## <a name="in-this-section"></a>In diesem Abschnitt
 
 -   [**Put-Methode**](swbemservicesex-put.md)
--   [**Putasync-Methode**](swbemservicesex-putasync.md)
+-   [**PutAsync-Methode**](swbemservicesex-putasync.md)
 
  
 

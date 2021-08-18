@@ -1,5 +1,5 @@
 ---
-description: 'Weitere Informationen finden Sie unter: esentioexception-Klasse'
+description: 'Weitere Informationen finden Sie unter: EsentIOException-Klasse'
 title: EsentIOException-Klasse
 TOCTitle: EsentIOException class
 ms:assetid: T:Microsoft.Isam.Esent.Interop.EsentIOException
@@ -24,33 +24,33 @@ api_type:
 api_location:
 - Microsoft.Isam.Esent.Interop.dll
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: b5fbcbf38ae60ae17f74e650c403611a88d89662
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 82c10cc71e7621aa5fb338acc8964a3e221af3cc068eafb1d32aab6273182501
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106366260"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119115950"
 ---
 # <a name="esentioexception-class"></a>EsentIOException-Klasse
 
-Basisklasse für e/a-Ausnahmen.
+Basisklasse für E/A-Ausnahmen.
 
 ## <a name="inheritance-hierarchy"></a>Vererbungshierarchie
 
 [System.Object](/dotnet/api/system.object)  
   [System.Exception](/dotnet/api/system.exception)  
-    [Microsoft. ISAM. ESENT. esentexception](./esentexception-class.md)  
-      [Microsoft. ISAM. ESENT. Interop. esenterrorexception](./esenterrorexception-class.md)  
-        [Microsoft. ISAM. ESENT. Interop. esentoperationexception](./esentoperationexception-class.md)  
-          Microsoft. ISAM. ESENT. Interop. esentioexception  
-            [Microsoft. ISAM. ESENT. Interop. esentdeletebackupfilefailexception](./esentdeletebackupfilefailexception-class.md)  
-            [Microsoft. ISAM. ESENT. Interop. esentdiskioexception](./esentdiskioexception-class.md)  
-            [Microsoft. ISAM. ESENT. Interop. esentfileaccessdeniedexception](./esentfileaccessdeniedexception-class.md)  
-            [Microsoft. ISAM. ESENT. Interop. esentlogschreitefailexception](./esentlogwritefailexception-class.md)  
-            [Microsoft. ISAM. ESENT. Interop. esentmakebackupdirectoriyfailexception](./esentmakebackupdirectoryfailexception-class.md)  
+    [Microsoft.Isam.Esent.EsentException](./esentexception-class.md)  
+      [Microsoft.Isam.Esent.Interop.EsentErrorException](./esenterrorexception-class.md)  
+        [Microsoft.Isam.Esent.Interop.EsentOperationException](./esentoperationexception-class.md)  
+          Microsoft.Isam.Esent.Interop.EsentIOException  
+            [Microsoft.Isam.Esent.Interop.EsentDeleteBackupFileFailException](./esentdeletebackupfilefailexception-class.md)  
+            [Microsoft.Isam.Esent.Interop.EsentDiskIOException](./esentdiskioexception-class.md)  
+            [Microsoft.Isam.Esent.Interop.EsentFileAccessDeniedException](./esentfileaccessdeniedexception-class.md)  
+            [Microsoft.Isam.Esent.Interop.EsentLogWriteFailException](./esentlogwritefailexception-class.md)  
+            [Microsoft.Isam.Esent.Interop.EsentMakeBackupDirectoryFailException](./esentmakebackupdirectoryfailexception-class.md)  
 
-**Namespace:**  [Microsoft. ISAM. ESENT. Interop](./microsoft.isam.esent.interop-namespace.md)  
-**Assembly:**  Microsoft. ISAM. ESENT. Interop (in Microsoft.Isam.Esent.Interop.dll)
+**Namespace:**  [Microsoft.Isam.Esent.Interop](./microsoft.isam.esent.interop-namespace.md)  
+**Assembly:**  Microsoft.Isam.Esent.Interop (in Microsoft.Isam.Esent.Interop.dll)
 
 ## <a name="syntax"></a>Syntax
 
@@ -72,10 +72,10 @@ public abstract class EsentIOException : EsentOperationException
 
 Alle öffentlichen statischen Elemente dieses Typs (Shared in Microsoft Visual Basic) sind threadsicher. Bei Instanzmembern ist die Threadsicherheit nicht gewährleistet.
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
-#### <a name="reference"></a>Referenz
+#### <a name="reference"></a>Verweis
 
-[Esentioexception-Member](./esentioexception-members.md)
+[EsentIOException-Member](./esentioexception-members.md)
 
-[Microsoft. ISAM. ESENT. Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)
+[Microsoft.Isam.Esent.Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)

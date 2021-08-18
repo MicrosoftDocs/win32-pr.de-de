@@ -1,7 +1,7 @@
 ---
-description: Erweiterte Fenster Stile für das Fenster.
+description: Erweiterte Fensterstile für das Fenster.
 ms.assetid: 53e71d4c-1620-45d9-b082-fdf2a7f3d2f7
-title: 'Cbasewindow:: m_WindowStylesEx Member (winutil. h)'
+title: CBaseWindow::m_WindowStylesEx-Member (Winutil.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,16 +16,16 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: 25548953ff624e88690c4a5a5bed4510a4236be6
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 7e9cd1e7d5ae161ca2b66f59faee4252a8e1c02b0d4cd47d1db0aefb73dc53db
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106358285"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119074594"
 ---
-# <a name="cbasewindowm_windowstylesex-member"></a>Cbasewindow:: m \_ windowstylesex-Member
+# <a name="cbasewindowm_windowstylesex-member"></a>CBaseWindow::m \_ WindowStylesEx-Member
 
-Erweiterte Fenster Stile für das Fenster.
+Erweiterte Fensterstile für das Fenster.
 
 ## <a name="syntax"></a>Syntax
 
@@ -42,16 +42,16 @@ DWORD m_WindowStylesEx;
 
 | Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Winutil. h (Include Streams. h)</dt> </dl>                                                                                   |
-| Bibliothek<br/> | <dl> " <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Winutil.h (include Streams.h)</dt> </dl>                                                                                   |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Einzelhandels-Builds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Cbasewindow-Klasse**](cbasewindow.md)
+[**CBaseWindow-Klasse**](cbasewindow.md)
 </dt> </dl>
 
  

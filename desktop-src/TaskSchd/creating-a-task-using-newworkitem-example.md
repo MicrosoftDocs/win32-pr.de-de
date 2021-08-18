@@ -1,61 +1,61 @@
 ---
-title: Erstellen einer Aufgabe mit NewWorkItem-Beispiel
-description: Wenn Sie einen Task erstellen, verwenden Sie die beiden Taskplaner-Schnittstellen itaskscheduler und ITask.
+title: Erstellen einer Aufgabe mithilfe eines NewWorkItem-Beispiels
+description: Beim Erstellen einer Aufgabe verwenden Sie zwei schnittstellen Taskplaner ITaskScheduler und ITask.
 ms.assetid: 1cbdba6a-e017-4f00-87cb-970686a69e0a
 keywords:
-- Erstellen von Arbeits Elementen Taskplaner
-- Arbeitselemente Taskplaner, Erstellen von Aufgaben
+- Erstellen von Arbeitselementen Taskplaner
+- Arbeitselemente Taskplaner , Erstellen von Aufgaben
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 5b4e0f05e76ea54b57a101e31515fe089c5f445c
-ms.sourcegitcommit: 592c9bbd22ba69802dc353bcb5eb30699f9e9403
+ms.openlocfilehash: fc6d0e0d216c5aaccee6a51cbac939b2b3bfa421338e12d66ffdd3b8cf055862
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "104315819"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119139583"
 ---
-# <a name="creating-a-task-using-newworkitem-example"></a>Erstellen einer Aufgabe mit NewWorkItem-Beispiel
+# <a name="creating-a-task-using-newworkitem-example"></a>Erstellen einer Aufgabe mithilfe eines NewWorkItem-Beispiels
 
-Beim Erstellen einer Aufgabe verwenden Sie zwei Taskplaner Schnittstellen: [**itaskscheduler**](/windows/desktop/api/Mstask/nn-mstask-itaskscheduler) und [**ITask**](/windows/desktop/api/Mstask/nn-mstask-itask). Sie müssen einen eindeutigen Namen für den Task, den Klassen Bezeichner des Task-Objekts und den Schnittstellen Bezeichner " **ITask**" angeben. Der Klassen Bezeichner und der Schnittstellen Bezeichner werden im folgenden Codebeispiel gezeigt:
-
-> [!Note]  
-> Sie können auch einen Task erstellen, indem Sie [**itaskscheduler:: addworkitem**](/windows/desktop/api/Mstask/nf-mstask-itaskscheduler-addworkitem)aufrufen. Wenn Sie diese Route verwenden, liegt es in ihrer Verantwortung, eine Instanz des **Task** -Objekts (das die [**ITask**](/windows/desktop/api/Mstask/nn-mstask-itask) -Schnittstelle unterstützt) zu erstellen und dann die Aufgabe mit dem Namen hinzuzufügen, den Sie angeben.
-
- 
+Beim Erstellen einer Aufgabe verwenden Sie zwei Taskplaner Schnittstellen: [**ITaskScheduler**](/windows/desktop/api/Mstask/nn-mstask-itaskscheduler) und [**ITask**](/windows/desktop/api/Mstask/nn-mstask-itask). Sie müssen einen eindeutigen Namen für die Aufgabe, den Klassenbezeichner des Aufgabenobjekts und den Schnittstellenbezeichner **von ITask angeben.** Der Klassenbezeichner und der Schnittstellenbezeichner werden im Codebeispiel nach diesem Thema gezeigt.
 
 > [!Note]  
-> Standardmäßig können nur Mitglieder der Gruppe "Administratoren", "Sicherungs-Operatoren" oder "Server Operatoren" auf Windows Server 2003 Aufgaben erstellen. Ein Mitglied der Gruppe "Administratoren" kann die Sicherheits Beschreibung des Windows- \\ Task Ordners ändern, damit andere Aufgaben erstellen können.
+> Sie können eine Aufgabe auch erstellen, indem Sie [**ITaskScheduler::AddWorkItem aufrufen.**](/windows/desktop/api/Mstask/nf-mstask-itaskscheduler-addworkitem) Wenn Sie diese Route verwenden, liegt es in Ihrer Verantwortung, eine Instanz des **Task-Objekts** (das die [**ITask-Schnittstelle**](/windows/desktop/api/Mstask/nn-mstask-itask) unterstützt) zu erstellen und dann die Aufgabe mit dem von Ihnen genannten Namen hinzuzufügen.
 
- 
+ 
 
-Der Name, den Sie für die Aufgabe angeben, muss innerhalb des Ordners für geplante Aufgaben eindeutig sein. Wenn bereits eine Aufgabe mit dem gleichen Namen vorhanden ist, gibt [**itaskscheduler:: NewWorkItem**](/windows/desktop/api/Mstask/nf-mstask-itaskscheduler-newworkitem) eine Fehler \_ Datei \_ vorhanden. Wenn Sie diesen Rückgabewert erhalten, geben Sie einen anderen Namen an, und versuchen Sie erneut, die Aufgabe zu erstellen.
+> [!Note]  
+> Standardmäßig kann nur ein Mitglied der Gruppe Administratoren, Sicherungsoperatoren oder Serveroperatoren Aufgaben auf Windows Server 2003 erstellen. Ein Mitglied der Gruppe Administratoren kann die Sicherheitsbeschreibung des Ordners Windows Task ändern, damit \\ andere Personen Aufgaben erstellen können.
 
-Im folgenden Verfahren wird beschrieben, wie eine neue Arbeits Element Aufgabe erstellt wird.
+ 
 
-**So erstellen Sie eine neue Arbeits Element Aufgabe**
+Der Name, den Sie für den Task angeben, muss innerhalb des Ordners Geplante Aufgaben eindeutig sein. Wenn bereits eine Aufgabe mit dem gleichen Namen vorhanden ist, gibt [**ITaskScheduler::NewWorkItem**](/windows/desktop/api/Mstask/nf-mstask-itaskscheduler-newworkitem) ERROR \_ FILE EXISTS \_ zurück. Wenn Sie diesen Rückgabewert erhalten, sollten Sie einen anderen Namen angeben und versuchen, die Aufgabe erneut zu erstellen.
 
-1.  Aufrufen von [**CoInitialize**](/windows/win32/api/objbase/nf-objbase-coinitialize) zum Initialisieren der com-Bibliothek und von [**cokreateinstance**](/windows/win32/api/combaseapi/nf-combaseapi-cocreateinstance) zum Abrufen eines Taskplaner Objekts. (In diesem Beispiel wird davon ausgegangen, dass der Taskplaner-Dienst ausgeführt wird.)
-2.  Rufen Sie [**itaskscheduler:: NewWorkItem**](/windows/desktop/api/Mstask/nf-mstask-itaskscheduler-newworkitem) auf, um eine neue Aufgabe zu erstellen. (Diese Methode gibt einen Zeiger auf eine [**ITask**](/windows/desktop/api/Mstask/nn-mstask-itask) -Schnittstelle zurück.)
-3.  Speichern Sie die neue Aufgabe auf einem Datenträger, indem Sie [**IPersistFile:: Save**](/windows/win32/api/objidl/nf-objidl-ipersistfile-save)aufrufen. (Die [**IPersistFile**](/windows/win32/api/objidl/nn-objidl-ipersistfile) -Schnittstelle ist eine von der **ITask** -Schnittstelle unterstützte Standard-COM-Schnittstelle.)
-4.  Wenden Sie **ITask:: Release** an, um alle Ressourcen freizugeben. (Beachten Sie, dass [**Release**](/windows/win32/api/unknwn/nf-unknwn-iunknown-release) eine [**IUnknown**](/windows/win32/api/unknwn/nn-unknwn-iunknown) -Methode ist, die von [**ITask**](/windows/desktop/api/Mstask/nn-mstask-itask)geerbt wird.)
+Im folgenden Verfahren wird beschrieben, wie Sie eine neue Arbeitselementaufgabe erstellen.
+
+**So erstellen Sie eine neue Arbeitselementaufgabe**
+
+1.  Rufen [**Sie CoInitialize auf,**](/windows/win32/api/objbase/nf-objbase-coinitialize) um die COM-Bibliothek zu initialisieren, und [**CoCreateInstance,**](/windows/win32/api/combaseapi/nf-combaseapi-cocreateinstance) um ein Taskplaner zu erhalten. (In diesem Beispiel wird davon ausgegangen, dass der Taskplaner ausgeführt wird.)
+2.  Rufen [**Sie ITaskScheduler::NewWorkItem auf,**](/windows/desktop/api/Mstask/nf-mstask-itaskscheduler-newworkitem) um eine neue Aufgabe zu erstellen. (Diese Methode gibt einen Zeiger auf eine [**ITask-Schnittstelle**](/windows/desktop/api/Mstask/nn-mstask-itask) zurück.)
+3.  Speichern Sie die neue Aufgabe auf dem Datenträger, indem [**Sie IPersistFile::Save aufrufen.**](/windows/win32/api/objidl/nf-objidl-ipersistfile-save) (Die [**IPersistFile-Schnittstelle**](/windows/win32/api/objidl/nn-objidl-ipersistfile) ist eine com-Standardschnittstelle, die von der **ITask-Schnittstelle unterstützt** wird.)
+4.  Rufen **Sie ITask::Release auf,** um alle Ressourcen frei zu geben. (Beachten Sie, [**dass Release**](/windows/win32/api/unknwn/nf-unknwn-iunknown-release) eine [**IUnknown-Methode**](/windows/win32/api/unknwn/nn-unknwn-iunknown) ist, die von [**ITask geerbt wird.)**](/windows/desktop/api/Mstask/nn-mstask-itask)
 
 
 
 | Ein Codebeispiel für  | Siehe                                                                                                             |
 |------------------------|-----------------------------------------------------------------------------------------------------------------|
-| Erstellen einer einzelnen Aufgabe | [C/C++-Code Beispiel: Erstellen einer Aufgabe mit NewWorkItem](c-c-code-example-creating-a-task-using-newworkitem.md) |
+| Erstellen einer einzelnen Aufgabe | [C/C++-Codebeispiel: Erstellen einer Aufgabe mit NewWorkItem](c-c-code-example-creating-a-task-using-newworkitem.md) |
 
 
 
- 
+ 
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[Taskplaner 1,0-Beispiele](task-scheduler-1-0-examples.md)
+[Taskplaner 1.0-Beispiele](task-scheduler-1-0-examples.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 

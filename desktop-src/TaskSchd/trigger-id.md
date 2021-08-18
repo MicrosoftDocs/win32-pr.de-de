@@ -1,11 +1,11 @@
 ---
-title: Trigger.ID-Eigenschaft
-description: Ruft bei der Skripterstellung den Bezeichner für den-Typ ab oder legt ihn fest.
+title: Trigger.Id-Eigenschaft
+description: Ruft für die Skripterstellung den Bezeichner für den Trigger ab oder legt den Bezeichner fest.
 ms.assetid: 15dd3aaa-f3ee-459d-a0bd-327c7a4beb03
 keywords:
-- ID-Eigenschaft Taskplaner
-- ID-Eigenschaften Taskplaner, Auslöserobjekt
-- Auslöse Objekt Taskplaner, ID-Eigenschaft
+- Id-Eigenschaft Taskplaner
+- ID-Eigenschaft Taskplaner , Trigger-Objekt
+- Triggerobjekt Taskplaner , ID-Eigenschaft
 topic_type:
 - apiref
 api_name:
@@ -16,16 +16,16 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 91a3868f76368b19e6a316b222b8ddaf4cbbff96
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: e2c9ff851eab7b5e9cfb124bf03c83986d24b391d5ea109865ff2d59e2e33536
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104517558"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119002158"
 ---
-# <a name="triggerid-property"></a>Trigger.ID-Eigenschaft
+# <a name="triggerid-property"></a>Trigger.Id-Eigenschaft
 
-Ruft bei der Skripterstellung den Bezeichner für den-Typ ab oder legt ihn fest.
+Ruft für die Skripterstellung den Bezeichner für den Trigger ab oder legt den Bezeichner fest.
 
 ## <a name="syntax"></a>Syntax
 
@@ -38,11 +38,11 @@ Trigger.Id As String
 
 ## <a name="property-value"></a>Eigenschaftswert
 
-Der Bezeichner für den-Auslösers. Dieser Bezeichner wird von der-Taskplaner zu Protokollierungs Zwecken verwendet.
+Der Bezeichner für den Trigger. Dieser Bezeichner wird vom Taskplaner zu Protokollierungszwecken verwendet.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Beim Lesen oder Schreiben von XML für eine Aufgabe wird der auslöserbezeichner im ID-Attribut der einzelnen auslöserelemente (z. b. des ID-Attributs des [**boottrigger**](taskschedulerschema-boottrigger-triggergroup-element.md) -Elements) des Taskplaner Schemas angegeben.
+Beim Lesen oder Schreiben von XML für eine Aufgabe wird der Triggerbezeichner im Id-Attribut der einzelnen Triggerelemente (z. B. das Id-Attribut des [**BootTrigger-Elements)**](taskschedulerschema-boottrigger-triggergroup-element.md) des Taskplaner Schemas angegeben.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -50,14 +50,14 @@ Beim Lesen oder Schreiben von XML für eine Aufgabe wird der auslöserbezeichner
 
 | Anforderung | Wert |
 |-------------------------------------|-----------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                          |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/>                                    |
-| Typbibliothek<br/>             | <dl> <dt>Taskschd. tlb</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur Vista-Desktop-Apps\]<br/>                                          |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/>                                    |
+| Typbibliothek<br/>             | <dl> <dt>Taskschd.tlb</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Taskschd.dll</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 

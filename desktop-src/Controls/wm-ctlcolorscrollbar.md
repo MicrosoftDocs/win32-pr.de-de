@@ -1,9 +1,9 @@
 ---
-title: WM_CTLCOLORSCROLLBAR Meldung (Winuser. h)
-description: Die WM- \_ ctlcolorscrollbar-Meldung wird an das übergeordnete Fenster eines ScrollBar-Steuer Elements gesendet, wenn das Steuerelement gezeichnet wird.
+title: WM_CTLCOLORSCROLLBAR (Winuser.h)
+description: Die WM CTLCOLORSCROLLBAR-Meldung wird an das übergeordnete Fenster eines Bildlaufleisten-Steuerelements gesendet, wenn das Steuerelement \_ gezeichnet werden soll.
 ms.assetid: 35832a23-96f1-42cb-a986-06726bf2a124
 keywords:
-- Windows-Steuerelemente für WM_CTLCOLORSCROLLBAR Meldung
+- WM_CTLCOLORSCROLLBAR von Windows Steuerelementen
 topic_type:
 - apiref
 api_name:
@@ -14,18 +14,18 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: a3f8282e8e15bf1d1a668e1f57e17048f0babac2
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 35dba3394c3d8fd99fef88d6fa1869ea1129d95ae8a82cc33f2935e5688871a5
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "103949814"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119018558"
 ---
-# <a name="wm_ctlcolorscrollbar-message"></a>WM \_ ctlcolorscrollbar-Meldung
+# <a name="wm_ctlcolorscrollbar-message"></a>WM \_ CTLCOLORSCROLLBAR-Meldung
 
-Die **WM- \_ ctlcolorscrollbar** -Meldung wird an das übergeordnete Fenster eines ScrollBar-Steuer Elements gesendet, wenn das Steuerelement gezeichnet wird. Wenn Sie auf diese Meldung reagieren, kann das übergeordnete Fenster den Kontext Zieh Punkt der Anzeige verwenden, um die Hintergrundfarbe des ScrollBar-Steuer Elements festzulegen.
+Die **WM \_ CTLCOLORSCROLLBAR-Meldung** wird an das übergeordnete Fenster eines Bildlaufleisten-Steuerelements gesendet, wenn das Steuerelement gezeichnet werden soll. Wenn auf diese Meldung reagiert wird, kann das übergeordnete Fenster das Anzeigekontexthand handle verwenden, um die Hintergrundfarbe des Bildlaufleisten-Steuerelements fest zu legen.
 
-Ein Fenster empfängt diese Meldung über seine [*WindowProc*](/previous-versions/windows/desktop/legacy/ms633573(v=vs.85)) -Funktion.
+Ein Fenster empfängt diese Nachricht über seine [*WindowProc-Funktion.*](/previous-versions/windows/desktop/legacy/ms633573(v=vs.85))
 
 
 ```C++
@@ -44,32 +44,32 @@ WM_CTLCOLORSCROLLBAR
 *wParam* 
 </dt> <dd>
 
-Handle für den Gerätekontext für das ScrollBar-Steuerelement.
+Handle für den Gerätekontext für das Bildlaufleisten-Steuerelement.
 
 </dd> <dt>
 
 *lParam* 
 </dt> <dd>
 
-Handle für die Bild Lauf Leiste.
+Handle für die Bildlaufleiste.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Wenn eine Anwendung diese Nachricht verarbeitet, muss Sie das Handle an einen Pinsel zurückgeben. Das System verwendet den Pinsel zum Zeichnen des Hintergrunds des ScrollBar-Steuer Elements.
+Wenn eine Anwendung diese Nachricht verarbeitet, muss sie das Handle an einen Pinsel zurückgeben. Das System verwendet den Pinsel, um den Hintergrund des Bildlaufleisten-Steuerelements zu zeichnen.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Wenn die Anwendung einen Pinsel zurückgibt, den Sie erstellt hat (z. b. durch die Verwendung [**der Funktion "**](/windows/desktop/api/wingdi/nf-wingdi-createbrushindirect) [**kreatesolidbrush**](/windows/desktop/api/wingdi/nf-wingdi-createsolidbrush) " oder "-Funktion"), muss die Anwendung den Pinsel freigeben. Wenn die Anwendung einen System Pinsel zurückgibt (z. b. einen, der von der [**GetStockObject**](/windows/desktop/api/wingdi/nf-wingdi-getstockobject) -Funktion oder der [**getsyscolorbrush**](/windows/desktop/api/winuser/nf-winuser-getsyscolorbrush) -Funktion abgerufen wurde), muss die Anwendung den Pinsel nicht freigeben.
+Wenn die Anwendung einen von ihr erstellten Pinsel zurückgibt (z. B. mithilfe der [**CreateSolidBrush-**](/windows/desktop/api/wingdi/nf-wingdi-createsolidbrush) oder [**CreateBrushIndirect-Funktion),**](/windows/desktop/api/wingdi/nf-wingdi-createbrushindirect) muss die Anwendung den Pinsel frei geben. Wenn die Anwendung einen Systempinsel zurückgibt (z. B. einen, der von der [**GetStockObject-**](/windows/desktop/api/wingdi/nf-wingdi-getstockobject) oder [**GetSysColorBrush-Funktion**](/windows/desktop/api/winuser/nf-winuser-getsyscolorbrush) abgerufen wurde), muss die Anwendung den Pinsel nicht freigibt.
 
-Standardmäßig wählt die [**defwindowproc**](/windows/desktop/api/winuser/nf-winuser-defwindowproca) -Funktion die Standardsystem Farben für das ScrollBar-Steuerelement aus.
+Standardmäßig wählt die [**DefWindowProc-Funktion**](/windows/desktop/api/winuser/nf-winuser-defwindowproca) die Standardsystemfarben für das Bildlaufleisten-Steuerelement aus.
 
-Die " **WM \_ ctlcolorscrollbar** "-Nachricht wird nie zwischen Threads gesendet, sondern nur innerhalb desselben Threads.
+Die **WM \_ CTLCOLORSCROLLBAR-Nachricht** wird nie zwischen Threads gesendet, sondern nur innerhalb desselben Threads.
 
-Wenn eine Dialogfeld Prozedur diese Nachricht behandelt, sollte Sie den gewünschten Rückgabewert in ein **int- \_ ptr** umwandeln und den Wert direkt zurückgeben. Wenn die Dialogfeld Prozedur **false** zurückgibt, wird die standardmäßige Nachrichtenverarbeitung ausgeführt. Der \_ von der [**SetWindowLong**](/windows/desktop/api/winuser/nf-winuser-setwindowlonga) -Funktion festgelegte DWL-msgresult-Wert wird ignoriert.
+Wenn eine Dialogfeldprozedur diese Meldung verarbeitet, sollte sie den gewünschten Rückgabewert **in eine INT \_ PTR-Datei** casten und den Wert direkt zurückgeben. Wenn die Dialogfeldprozedur **FALSE zurückgibt,** wird die Standardnachrichtenbehandlung ausgeführt. Der von der \_ [**SetWindowLong-Funktion festgelegte**](/windows/desktop/api/winuser/nf-winuser-setwindowlonga) MSGRESULT-DWL-Wert wird ignoriert.
 
-Die " **WM \_ ctlcolorscrollbar** "-Meldung wird nur von untergeordneten ScrollBar-Steuerelementen verwendet. Bild Lauf leisten, die an ein Fenster angefügt sind (WS \_ Scroll und WS \_ VScroll), generieren diese Meldung nicht. Verwenden Sie zum Anpassen der Darstellung von Bild Lauf leisten, die an ein Fenster angefügt sind, die Funktionen der flatscrollleiste.
+Die **WM \_ CTLCOLORSCROLLBAR-Meldung** wird nur von untergeordneten Scrollleisten-Steuerelementen verwendet. Scrollleisten, die an ein Fenster angefügt sind (WS \_ SCROLL und WS \_ VSCROLL), generieren diese Meldung nicht. Verwenden Sie zum Anpassen der Darstellung von Scrollleisten, die an ein Fenster angefügt sind, die Funktionen für flache Scrollleisten.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -77,29 +77,29 @@ Die " **WM \_ ctlcolorscrollbar** "-Meldung wird nur von untergeordneten ScrollB
 
 | Anforderung | Wert |
 |-------------------------------------|----------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                                           |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/>                                                     |
-| Header<br/>                   | <dl> <dt>Winuser. h (Windows. h einschließen)</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ Vista-Desktop-Apps\]<br/>                                                           |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                                                     |
+| Header<br/>                   | <dl> <dt>Winuser.h (include Windows.h)</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-**Verweis**
+**Referenz**
 </dt> <dt>
 
-[**WM \_ ctlcolorbtn**](wm-ctlcolorbtn.md)
+[**WM \_ CTLCOLORBTN**](wm-ctlcolorbtn.md)
 </dt> <dt>
 
-[**WM \_ ctlcoloredit**](wm-ctlcoloredit.md)
+[**WM \_ CTLCOLOREDIT**](wm-ctlcoloredit.md)
 </dt> <dt>
 
-[**WM \_ ctlcolorlistbox**](wm-ctlcolorlistbox.md)
+[**WM \_ CTLCOLORLISTBOX**](wm-ctlcolorlistbox.md)
 </dt> <dt>
 
-[**WM \_ ctlcolorstatic**](wm-ctlcolorstatic.md)
+[**WM \_ CTLCOLORSTATIC**](wm-ctlcolorstatic.md)
 </dt> <dt>
 
 **Andere Ressourcen**
@@ -111,10 +111,10 @@ Die " **WM \_ ctlcolorscrollbar** "-Meldung wird nur von untergeordneten ScrollB
 [**RealizePalette**](/windows/desktop/api/wingdi/nf-wingdi-realizepalette)
 </dt> <dt>
 
-[**SelectPalette**](/windows/desktop/api/wingdi/nf-wingdi-selectpalette)
+[**Wählen SiePalette aus.**](/windows/desktop/api/wingdi/nf-wingdi-selectpalette)
 </dt> <dt>
 
-[**WM \_ ctlcolordlg**](/windows/desktop/dlgbox/wm-ctlcolordlg)
+[**WM \_ CTLCOLORDLG**](/windows/desktop/dlgbox/wm-ctlcolordlg)
 </dt> </dl>
 
  

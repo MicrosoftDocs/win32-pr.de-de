@@ -1,7 +1,7 @@
 ---
-description: Gibt den Kernel Modus-Microsoft DirectX-API-Handle zurück, der bei nachfolgenden Aufrufen der kernelmoduseinstiegs Punkte verwendet werden soll, die den DirectX-API-Mechanismus steuern.
+description: Gibt das Microsoft DirectX-API-Handle im Kernelmodus zurück, das in nachfolgenden Aufrufen der Einstiegspunkte im Kernelmodus verwendet werden soll, die den DirectX-API-Mechanismus steuern.
 ms.assetid: c95cb188-305f-4b60-be55-0511b57f0597
-title: Ntgdiddgetdxhandle-Funktion (ntgdi. h)
+title: NtGdiDdGetDxHandle-Funktion (Ntgdi.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,18 +16,18 @@ api_location:
 - Ext-MS-Win-GDI-Internal-Desktop-L1-1-0.dll
 - GDI32.dll
 - GDI32Full.dll
-ms.openlocfilehash: f1b304216c518765be73d9f3a3e63d39ec4b37fb
-ms.sourcegitcommit: c7add10d695482e1ceb72d62b8a4ebd84ea050f7
+ms.openlocfilehash: 13234c7ebe350f096164f0a5de0bde7a60e819e80899aa87258a76727855b869
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106342765"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119331920"
 ---
-# <a name="ntgdiddgetdxhandle-function"></a>Ntgdiddgetdxhandle-Funktion
+# <a name="ntgdiddgetdxhandle-function"></a>NtGdiDdGetDxHandle-Funktion
 
-\[Diese Funktion kann bei jeder Betriebssystem Revision geändert werden. Verwenden Sie stattdessen Microsoft DirectDraw und Microsoft Direct3DAPIs; Diese APIs isolieren Anwendungen vor solchen Betriebssystem Änderungen und verbergen viele andere Schwierigkeiten bei der direkten Interaktion mit Anzeige Treibern.\]
+\[Diese Funktion kann bei jeder Betriebssystemrevision geändert werden. Verwenden Sie stattdessen Microsoft DirectDraw und Microsoft Direct3DAPIs. Diese APIs isolieren Anwendungen vor solchen Betriebssystemänderungen und verbergen viele andere Schwierigkeiten bei der direkten Interaktion mit Anzeigetreibern.\]
 
-Gibt den Kernel Modus-Microsoft DirectX-API-Handle zurück, der bei nachfolgenden Aufrufen der kernelmoduseinstiegs Punkte verwendet werden soll, die den DirectX-API-Mechanismus steuern.
+Gibt das Microsoft DirectX-API-Handle im Kernelmodus zurück, das in nachfolgenden Aufrufen der Einstiegspunkte im Kernelmodus verwendet werden soll, die den DirectX-API-Mechanismus steuern.
 
 ## <a name="syntax"></a>Syntax
 
@@ -46,34 +46,34 @@ DWORD APIENTRY NtGdiDdGetDxHandle(
 
 <dl> <dt>
 
-*hdirectdraw* \[ in\]
+*hDirectDraw* \[ In\]
 </dt> <dd>
 
-Handle für das DirectDraw-Objekt, das die Oberfläche besitzt. Dieser Parameter ist optional und kann auf **null** festgelegt werden.
+Handle für directDraw-Objekt, das die Oberfläche besitzt. Dieser Parameter ist optional und kann auf NULL **festgelegt werden.**
 
 </dd> <dt>
 
-*hsurface* \[ in\]
+*hSurface* \[ In\]
 </dt> <dd>
 
-Handle für die Oberfläche, für die ein DirectX-API-Handle im Kernel Modus zurückgegeben werden soll. Dieser Parameter ist optional und kann auf **null** festgelegt werden.
+Handle für die Oberfläche, für die ein DirectX-API-Handle im Kernelmodus zurückgeben werden soll. Dieser Parameter ist optional und kann auf NULL **festgelegt werden.**
 
 </dd> <dt>
 
-*brelease* \[ in\]
+*bRelease* \[ In\]
 </dt> <dd>
 
-Legen Sie diese Einstellung auf " **true** " fest, wenn die DirectX API-kernelmodusschnittstelle Andernfalls **false**.
+Legen Sie auf **TRUE** fest, wenn die Schnittstelle für den DirectX-API-Kernelmodus freigegeben werden soll. Andernfalls **FALSE.**
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Ein DirectX-API-handle, das in nachfolgenden DirectX-API-orientierten Kernel Einstiegspunkten verwendet wird.
+Ein DirectX-API-Handle, das in nachfolgenden DirectX-API-orientierten Kerneleinstiegspunkten verwendet wird.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Wenn sowohl *hdirectdraw* als auch *hsurface* angegeben werden, wird *hsurface* ignoriert.
+Wenn *sowohl hDirectDraw als* *auch hSurface* angegeben sind, *wird hSurface* ignoriert.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -83,15 +83,15 @@ Wenn sowohl *hdirectdraw* als auch *hsurface* angegeben werden, wird *hsurface* 
 |-------------------------------------|------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[nur Desktop-Apps\]<br/>                         |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                               |
-| Header<br/>                   | <dl> <dt>Ntgdi. h</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Ntgdi.h</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[Unterstützung der untergeordneten Grafik Ebene](-dxgkernel-low-level-client-support.md)
+[Clientunterstützung auf niedriger Grafikebene](-dxgkernel-low-level-client-support.md)
 </dt> </dl>
 
  

@@ -1,7 +1,7 @@
 ---
-description: Extrahiert die Cluster-IDs pro Beispiel aus einem komprimierten ID3DXPRTCompBuffer-Datenpuffer.
+description: Extrahiert die pro Beispiel verwendeten Cluster-IDs aus einem komprimierten ID3DXPRTCompBuffer-Datenpuffer.
 ms.assetid: d78d82ab-58bc-4b73-9ca0-8b7f06867618
-title: 'ID3DXPRTCompBuffer:: extractclusterids-Methode (D3DX9Mesh. h)'
+title: ID3DXPRTCompBuffer::ExtractClusterIDs-Methode (D3DX9Mesh.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -14,16 +14,16 @@ api_type:
 api_location:
 - d3dx9.lib
 - d3dx9.dll
-ms.openlocfilehash: ef68a972109e89e318adb83ab388c653c6a3deed
-ms.sourcegitcommit: 14010c34b35fa268046c7683f021f86de08ddd0a
+ms.openlocfilehash: 94cbf51aaedd8cc0d5505ca91663eb014e2a3d417a631e93d71b8a0ebc600ceb
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "106364011"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118987180"
 ---
-# <a name="id3dxprtcompbufferextractclusterids-method"></a>ID3DXPRTCompBuffer:: extractclusterids-Methode
+# <a name="id3dxprtcompbufferextractclusterids-method"></a>ID3DXPRTCompBuffer::ExtractClusterIDs-Methode
 
-Extrahiert die Cluster-IDs pro Beispiel aus einem komprimierten [**ID3DXPRTCompBuffer**](id3dxprtcompbuffer.md) -Datenpuffer.
+Extrahiert die pro Beispiel verwendeten Cluster-IDs aus einem komprimierten [**ID3DXPRTCompBuffer-Datenpuffer.**](id3dxprtcompbuffer.md)
 
 ## <a name="syntax"></a>Syntax
 
@@ -40,12 +40,12 @@ HRESULT ExtractClusterIDs(
 
 <dl> <dt>
 
-*pclusterids* \[ in, out\]
+*pClusterIDs* \[ in, out\]
 </dt> <dd>
 
-Typ: **[ **uint**](../winprog/windows-data-types.md)\***
+Typ: **[ **UINT**](../winprog/windows-data-types.md)\***
 
-Zeiger auf den Speicherort im Arbeitsspeicher, an dem IDs geschrieben werden. Die erforderliche Arbeitsspeicher Länge ist der von [**ID3DXPRTCompBuffer:: getnumsamples**](id3dxprtcompbuffer--getnumsamples.md)zurückgegebene Wert.
+Zeiger auf die Position im Arbeitsspeicher, an der IDs geschrieben werden. Die erforderliche Arbeitsspeicherlänge ist der Wert, der von [**ID3DXPRTCompBuffer::GetNumSamples**](id3dxprtcompbuffer--getnumsamples.md)zurückgegeben wird.
 
 </dd> </dl>
 
@@ -53,7 +53,7 @@ Zeiger auf den Speicherort im Arbeitsspeicher, an dem IDs geschrieben werden. Di
 
 Typ: **[ **HRESULT**](https://msdn.microsoft.com/library/Bb401631(v=MSDN.10).aspx)**
 
-Wenn die Methode erfolgreich ausgeführt wird, ist der Rückgabewert S \_ OK. Wenn die Methode fehlschlägt, wird der folgende Wert zurückgegeben.
+Wenn die Methode erfolgreich ist, lautet der Rückgabewert S \_ OK. Wenn die Methode fehlschlägt, wird der folgende Wert zurückgegeben.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -61,12 +61,12 @@ Wenn die Methode erfolgreich ausgeführt wird, ist der Rückgabewert S \_ OK. We
 
 | Anforderung | Wert |
 |--------------------|----------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>D3DX9Mesh. h</dt> </dl> |
-| Bibliothek<br/> | <dl> <dt>D3dx9. lib</dt> </dl>   |
+| Header<br/>  | <dl> <dt>D3DX9Mesh.h</dt> </dl> |
+| Bibliothek<br/> | <dl> <dt>D3dx9.lib</dt> </dl>   |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 

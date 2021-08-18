@@ -1,7 +1,7 @@
 ---
-description: Legt einen Microsoft Windows HTTP-Dienste (WinHTTP)-Optionswert fest oder ruft ihn ab.
+description: Legt einen WinHTTP-Optionswert (Microsoft Windows HTTP Services) fest oder ruft sie ab.
 ms.assetid: 913573e6-fad3-42a5-bb5d-25a3d2ac9616
-title: 'Iwinhttprequest:: Option-Eigenschaft'
+title: IWinHttpRequest::Option-Eigenschaft
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,16 +16,16 @@ api_type:
 - COM
 api_location:
 - Winhttp.dll
-ms.openlocfilehash: c76df3f09871984da9f4bc093e9ac96d7484558f
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 05368f1a5179dcaa94bc07a32035e308e9848e867d89f42f4dffb94c765ee448
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106360832"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119133093"
 ---
-# <a name="iwinhttprequestoption-property"></a>Iwinhttprequest:: Option-Eigenschaft
+# <a name="iwinhttprequestoption-property"></a>IWinHttpRequest::Option-Eigenschaft
 
-Die **options** -Eigenschaft legt einen Microsoft Windows HTTP-Dienste (WinHTTP)-Optionswert fest oder ruft ihn ab.
+Die **Option-Eigenschaft** legt einen Microsoft Windows HTTP Services (WinHTTP)-Optionswert fest oder ruft sie ab.
 
 Dies ist eine Eigenschaft mit Lese- und Schreibzugriff.
 
@@ -57,24 +57,24 @@ WinHttpRequest.Option = vtOption
 
 ## <a name="property-value"></a>Eigenschaftswert
 
-Ein **Variant** -Wert, der den Optionswert enthält.
+Ein **Variant-Wert,** der den Optionswert enthält.
 
-Der *options* -Parameter gibt die [**winhttprequestoption**](winhttprequestoption.md) an, die festgelegt oder abgerufen werden soll.
+Der *Parameter Option* gibt die [**WinHttpRequestOption**](winhttprequestoption.md) an, die festgelegt oder abgerufen werden soll.
 
 ## <a name="error-codes"></a>Fehlercodes
 
-Der Rückgabewert ist bei Erfolg **S \_ OK** oder andernfalls ein Fehlerwert.
+Der Rückgabewert ist bei Erfolg **S \_ OK,** andernfalls ein Fehlerwert.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
 > [!Note]  
-> Informationen zu Windows XP und Windows 2000 finden Sie im Abschnitt [Lauf Zeitanforderungen](winhttp-start-page.md) auf der WinHTTP-Start Seite.
+> Informationen zu Windows XP und Windows 2000 finden Sie im Abschnitt [Laufzeitanforderungen](winhttp-start-page.md) der WinHTTP-Startseite.
 
  
 
 ## <a name="examples"></a>Beispiele
 
-Im folgenden Beispiel wird gezeigt, wie Sie die Option [*Benutzer-Agent*](glossary.md) -Zeichenfolge festlegen und anzeigen und verschiedene andere Optionen anzeigen können.
+Das folgende Beispiel zeigt, wie Sie die Zeichenfolgenoption des [*Benutzer-Agents*](glossary.md) festlegen und anzeigen und verschiedene andere Optionen anzeigen.
 
 
 ```C++
@@ -207,7 +207,7 @@ int main()
 
 
 
-Im folgenden Beispielskript wird veranschaulicht, wie Optionen festgelegt und angezeigt werden.
+Das folgende Skriptbeispiel zeigt, wie Sie Optionen festlegen und anzeigen.
 
 
 ```JScript
@@ -246,20 +246,20 @@ WScript.Echo( 'Escape percents: '+
 
 | Anforderung | Wert |
 |-------------------------------------|--------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Windows XP, Windows 2000 Professional mit SP3 \[ Desktop-Apps\]<br/>            |
-| Unterstützte Mindestversion (Server)<br/> | Windows Server 2003, Windows 2000-Server mit \[ nur SP3-Desktop-Apps\]<br/>         |
-| Verteilbare Komponente<br/>          | WinHTTP 5,0 und Internet Explorer 5,01 oder höher unter Windows XP und Windows 2000.<br/> |
-| IDL<br/>                      | <dl> <dt>HttpRequest. idl</dt> </dl> |
-| Bibliothek<br/>                  | <dl> <dt>WinHTTP. lib</dt> </dl>     |
+| Unterstützte Mindestversion (Client)<br/> | Windows XP, Windows 2000 Professional nur mit \[ SP3-Desktop-Apps\]<br/>            |
+| Unterstützte Mindestversion (Server)<br/> | Windows Server 2003, Windows 2000 Server nur mit \[ SP3-Desktop-Apps\]<br/>         |
+| Verteilbare Komponente<br/>          | WinHTTP 5.0 und Internet Explorer 5.01 oder höher auf Windows XP und Windows 2000.<br/> |
+| Idl<br/>                      | <dl> <dt>HttpRequest.idl</dt> </dl> |
+| Bibliothek<br/>                  | <dl> <dt>Winhttp.lib</dt> </dl>     |
 | DLL<br/>                      | <dl> <dt>Winhttp.dll</dt> </dl>     |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Iwinhttprequest**](iwinhttprequest-interface.md)
+[**IWinHttpRequest**](iwinhttprequest-interface.md)
 </dt> <dt>
 
 [**WinHttpRequest**](winhttprequest.md)
@@ -268,7 +268,7 @@ WScript.Echo( 'Escape percents: '+
 [WinHTTP-Versionen](winhttp-versions.md)
 </dt> <dt>
 
-[**Winhttprequestoption**](winhttprequestoption.md)
+[**WinHttpRequestOption**](winhttprequestoption.md)
 </dt> </dl>
 
  

@@ -1,28 +1,28 @@
 ---
-description: Im folgenden Beispiel wird die Prozedur veranschaulicht, die im vorherigen Abschnitt beschrieben wurde. In diesem Beispiel wird eine einfache Zertifikat Anforderung mit einem Signatur Geber, einem einzelnen RDN-Attribut (Relative Distinguished Name) und keinen allgemeinen Attributen erstellt.
+description: Im folgenden Beispiel wird die im vorherigen Abschnitt beschriebene Prozedur veranschaulicht. In diesem Beispiel wird eine einfache Zertifikatanforderung mit einem Signator, einem einzelnen RDN-Attribut (Relative Distinguished Name) und ohne allgemeine Attribute erstellt.
 ms.assetid: bd3d0259-f0e8-460e-9f18-95d2492da3d8
-title: 'Beispiel-C-Programm: Erstellen einer Zertifikat Anforderung'
+title: 'Beispiel C-Programm: Senden einer Zertifikatanforderung'
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: d6e02d9faa51d405f02bb46729621f65d43c7ab2
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 0c4417eca6a6cc7537b4c284cfc5d37aeb6d0ed69d9d0a00bd6cb06efe6cb387
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "104529573"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119140893"
 ---
-# <a name="example-c-program-making-a-certificate-request"></a>Beispiel-C-Programm: Erstellen einer Zertifikat Anforderung
+# <a name="example-c-program-making-a-certificate-request"></a>Beispiel C-Programm: Senden einer Zertifikatanforderung
 
-Im folgenden Beispiel wird die Prozedur veranschaulicht, die im vorherigen Abschnitt beschrieben wurde. In diesem Beispiel wird eine einfache [*Zertifikat Anforderung*](../secgloss/c-gly.md) mit einem Signatur Geber, einem einzelnen RDN- [*Attribut*](../secgloss/a-gly.md)( [*Relative Distinguished Name*](../secgloss/r-gly.md) ) und keinen allgemeinen Attributen erstellt.
+Im folgenden Beispiel wird die im vorherigen Abschnitt beschriebene Prozedur veranschaulicht. In diesem Beispiel wird eine einfache [*Zertifikatanforderung*](../secgloss/c-gly.md) mit einem Signator, einem einzelnen RDN-Attribut [](../secgloss/a-gly.md) [*(Relative Distinguished Name)*](../secgloss/r-gly.md) und ohne allgemeine Attribute erstellt.
 
-In diesem Beispiel werden die folgenden [*CryptoAPI*](../secgloss/c-gly.md) -Funktionen veranschaulicht:
+Dieses Beispiel veranschaulicht die folgenden [*CryptoAPI-Funktionen:*](../secgloss/c-gly.md)
 
--   [**Bei cryptencodeobject**](/windows/desktop/api/Wincrypt/nf-wincrypt-cryptencodeobject)
+-   [**CryptEncodeObject**](/windows/desktop/api/Wincrypt/nf-wincrypt-cryptencodeobject)
 -   [**CryptAcquireContext**](/windows/desktop/api/Wincrypt/nf-wincrypt-cryptacquirecontexta)
--   [**Bei CryptExportPublicKeyInfo**](/windows/desktop/api/Wincrypt/nf-wincrypt-cryptexportpublickeyinfo)
--   [**Bei cryptsignandencodecertificate**](/windows/desktop/api/Wincrypt/nf-wincrypt-cryptsignandencodecertificate)
+-   [**CryptExportPublicKeyInfo**](/windows/desktop/api/Wincrypt/nf-wincrypt-cryptexportpublickeyinfo)
+-   [**CryptSignAndEncodeCertificate**](/windows/desktop/api/Wincrypt/nf-wincrypt-cryptsignandencodecertificate)
 
-In diesem Beispiel werden auch die Funktionen [**bytedestr**](bytetostr.md) und [**mylenker Error**](myhandleerror.md)verwendet. Der Code für diese Funktionen ist im Beispiel enthalten. [Universell Funktionen](general-purpose-functions.md) listet Code für diese und andere Hilfsfunktionen auf.
+In diesem Beispiel werden auch die Funktionen [**ByteToStr**](bytetostr.md) und [**MyHandleError verwendet.**](myhandleerror.md) Code für diese Funktionen ist im Beispiel enthalten. [Universell Functions](general-purpose-functions.md) listet Code für diese und andere Hilfsfunktionen auf.
 
 
 ```C++

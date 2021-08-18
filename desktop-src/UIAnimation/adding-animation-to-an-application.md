@@ -1,33 +1,33 @@
 ---
-title: Erstellen der Haupt Animations Objekte
-description: Um die Windows-Animation in Ihrer Anwendung zu verwenden, besteht der erste Schritt darin, eine kleine Gruppe von Haupt Animations Objekten zu erstellen.
+title: Erstellen der Hauptanimationsobjekte
+description: Um Windows Animation in Ihrer Anwendung zu verwenden, besteht der erste Schritt darin, einen kleinen Satz von Hauptanimationsobjekten zu erstellen.
 ms.assetid: 4005819e-482c-4052-89f8-b8e457c0c3dc
 keywords:
-- Animation-Manager-Objekte Windows-Animation, erstellen
-- Animation Zeit Geber Objekte Windows-Animation, erstellen
-- Übergangs Bibliotheksobjekte Windows-Animation, erstellen
+- Animation Manager-Objekte Windows Animation , erstellen
+- Animation timer objects Windows Animation , creating
+- Übergangsbibliotheksobjekte Windows Animation , erstellen
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 2ccd1cab32e72bf1382469ada52abeecee47b6a1
-ms.sourcegitcommit: 592c9bbd22ba69802dc353bcb5eb30699f9e9403
+ms.openlocfilehash: b3023e5934581850bb6aa21e7d41d92642bb01fadfcf7531fcacabca74b411f2
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "104390787"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119137403"
 ---
-# <a name="create-the-main-animation-objects"></a>Erstellen der Haupt Animations Objekte
+# <a name="create-the-main-animation-objects"></a>Erstellen der Hauptanimationsobjekte
 
-Um die Windows-Animation in Ihrer Anwendung zu verwenden, besteht der erste Schritt darin, eine kleine Gruppe von Haupt Animations Objekten zu erstellen.
+Um Windows Animation in Ihrer Anwendung zu verwenden, besteht der erste Schritt darin, einen kleinen Satz von Hauptanimationsobjekten zu erstellen.
 
 ## <a name="overview"></a>Übersicht
 
-Verwenden Sie die [**cokreatanstance**](/windows/desktop/api/combaseapi/nf-combaseapi-cocreateinstance) -Funktion, um den Animations-Manager, den Animations Timer und die Übergangs Bibliotheksobjekte zu erstellen.
+Verwenden Sie die [**CoCreateInstance-Funktion,**](/windows/desktop/api/combaseapi/nf-combaseapi-cocreateinstance) um den Animations-Manager, den Animationstimer und die Übergangsbibliotheksobjekte zu erstellen.
 
-Diese Objekte werden zum Erstellen und Anzeigen von Animationen benötigt, sodass Sie normalerweise erst freigegeben werden, wenn die Anwendung heruntergefahren wird. Wenn keine Möglichkeit besteht, dass registrierte Rückrufe einen Verweis Durchlauf erstellt haben, reicht das Freigeben der Objekte für eine ordnungsgemäße Bereinigung aus. Andernfalls kann die Anwendung bereinigt werden, indem die Rückrufe (an der Stelle von **null** ) oder durch Aufrufen der [**Shutdown**](/windows/desktop/api/UIAnimation/nf-uianimation-iuianimationmanager-shutdown) -Methode des Animations-Managers gelöscht werden.
+Diese Objekte werden zum Erstellen und Anzeigen von Animationen benötigt, sodass sie in der Regel erst freigegeben werden sollten, wenn die Anwendung heruntergefahren wird. Wenn keine Möglichkeit besteht, dass registrierte Rückrufe einen Verweiszyklus erstellt haben könnten, ist die Freigabe der Objekte für eine ordnungsgemäße Bereinigung ausreichend. Andernfalls kann die Anwendung die Bereinigung durch Löschen der Rückrufe (Übergabe von **NULL** anstelle der einzelnen) oder durch Aufrufen der [**Shutdown-Methode**](/windows/desktop/api/UIAnimation/nf-uianimation-iuianimationmanager-shutdown) des Animations-Managers erreichen.
 
 ## <a name="example-code"></a>Beispielcode
 
-Der folgende Beispielcode stammt aus der Datei "MainWindow. cpp" in den Windows-Animations Beispielen. Weitere Informationen finden Sie unter der CMainWindow:: initializeanimation-Methode.
+Der folgende Beispielcode stammt aus MainWindow.cpp in den beispielen für Windows Animationen. siehe die CMainWindow::InitializeAnimation-Methode.
 
 
 ```C++
@@ -73,7 +73,7 @@ if (SUCCEEDED(hr))
 
 
 
-Beachten Sie die folgenden Definitionen von "MainWindow. h".
+Beachten Sie die folgenden Definitionen aus MainWindow.h.
 
 
 ```
@@ -99,27 +99,27 @@ private:
 
 ## <a name="next-step"></a>Nächster Schritt
 
-Nachdem Sie diesen Schritt abgeschlossen haben, ist der nächste Schritt: [Erstellen von Animations Variablen](create-animation-variables.md).
+Nach Abschluss dieses Schritts ist der nächste Schritt: [Erstellen von Animationsvariablen](create-animation-variables.md).
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[**CoCreateInstance**](/windows/desktop/api/combaseapi/nf-combaseapi-cocreateinstance)
+[**Cocreateinstance**](/windows/desktop/api/combaseapi/nf-combaseapi-cocreateinstance)
 </dt> <dt>
 
-[**Iuianimationmanager**](/windows/desktop/api/UIAnimation/nn-uianimation-iuianimationmanager)
+[**IUIAnimationManager**](/windows/desktop/api/UIAnimation/nn-uianimation-iuianimationmanager)
 </dt> <dt>
 
-[**Iuianimationtimer**](/windows/desktop/api/UIAnimation/nn-uianimation-iuianimationtimer)
+[**IUIAnimationTimer**](/windows/desktop/api/UIAnimation/nn-uianimation-iuianimationtimer)
 </dt> <dt>
 
-[**Iuianimationtransitionlibrary**](/windows/desktop/api/UIAnimation/nn-uianimation-iuianimationtransitionlibrary)
+[**IUIAnimationTransitionLibrary**](/windows/desktop/api/UIAnimation/nn-uianimation-iuianimationtransitionlibrary)
 </dt> <dt>
 
-[Übersicht über Windows-Animationen](scenic-animation-api-overview.md)
+[Windows Übersicht über Animationen](scenic-animation-api-overview.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 

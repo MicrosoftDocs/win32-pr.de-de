@@ -1,7 +1,7 @@
 ---
-description: Die Put \_ ScaleY-Methode gibt den Betrag an, um den die Löschung vertikal gestreckt wird.
+description: Die Put \_ ScaleY-Methode gibt den Betrag an, um den die Zurücksetzung vertikal gestreckt wird.
 ms.assetid: 1dd84540-b249-482c-9cb7-aab8c7dc4d25
-title: Idxtjpeg::p ut_ScaleY-Methode (qedit. h)
+title: IDxtJpeg::p ut_ScaleY-Methode (Qedit.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -14,21 +14,21 @@ api_type:
 api_location:
 - strmiids.lib
 - strmiids.dll
-ms.openlocfilehash: 65a8b736dc66ec9dad20b1e261ecd7b0c4556774
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: e16b3e2e94a2878bd425b705544701362242f305471b063cdbaff70cbaba63cd
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106354096"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119213310"
 ---
-# <a name="idxtjpegput_scaley-method"></a>Idxtjpeg::p UT \_ ScaleY-Methode
+# <a name="idxtjpegput_scaley-method"></a>IDxtJpeg::p ut \_ ScaleY-Methode
 
 > [!Note]  
-> \[Veraltet. Diese API kann aus zukünftigen Versionen von Windows entfernt werden.\]
+> \[Veraltet. Diese API wird möglicherweise aus zukünftigen Releases von Windows.\]
 
  
 
-Die- `put_ScaleY` Methode gibt den Betrag an, um den die Löschung vertikal gestreckt wird.
+Die `put_ScaleY` -Methode gibt den Betrag an, um den die Zurücksetzung vertikal gestreckt wird.
 
 ## <a name="syntax"></a>Syntax
 
@@ -45,26 +45,26 @@ HRESULT put_ScaleY(
 
 <dl> <dt>
 
-*NewVal* \[ in\]
+*newVal* \[ In\]
 </dt> <dd>
 
-Der Betrag, um den das Löschen vertikal als Prozentsatz der ursprünglichen Definition für das Löschen gestreckt wird. Der Wert 1,0 bedeutet beispielsweise keine Streckung, und 2,0 bedeutet, dass 200% gestreckt wird.
+Der Betrag, um den die Zurücksetzung vertikal gestreckt wird, als Prozentsatz der ursprünglichen Zurücksetzungsdefinition. Beispielsweise bedeutet der Wert 1,0 kein Strecken, und 2,0 bedeutet 200 % Stretching.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Wenn diese Methode erfolgreich ausgeführt wird, gibt Sie **S \_ OK** zurück. Andernfalls wird ein **HRESULT** -Fehlercode zurückgegeben.
+Wenn diese Methode erfolgreich ist, wird **S \_ OK zurückgegeben.** Andernfalls wird ein **HRESULT-Fehlercode** zurückgegeben.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
 > [!Note]  
-> Die Header Datei "qedit. h" ist nicht mit Direct3D-Headern nach Version 7 kompatibel.
+> Die Headerdatei Qedit.h ist nicht mit Direct3D-Headern nach Version 7 kompatibel.
 
  
 
 > [!Note]  
-> Zum Abrufen von "qedit. h" Laden Sie das [Microsoft Windows SDK Update für Windows Vista und .NET Framework 3,0](https://msdn.microsoft.com/windowsvista/bb980924.aspx)herunter. "Qedit. h" ist im Microsoft Windows SDK für Windows 7 und .NET Framework 3,5 Service Pack 1 nicht verfügbar.
+> Um Qedit.h zu erhalten, laden Sie das [Microsoft Windows SDK-Update für Windows Vista und .NET Framework 3.0 herunter.](https://msdn.microsoft.com/windowsvista/bb980924.aspx) Qedit.h ist im Microsoft Windows SDK für Windows 7 und .NET Framework 3.5 Service Pack 1 nicht verfügbar.
 
  
 
@@ -74,16 +74,16 @@ Wenn diese Methode erfolgreich ausgeführt wird, gibt Sie **S \_ OK** zurück. A
 
 | Anforderung | Wert |
 |--------------------|-----------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>"Qedit. h"</dt> </dl>      |
-| Bibliothek<br/> | <dl> <dt>"" "" ". Lib"</dt> </dl> |
+| Header<br/>  | <dl> <dt>Qedit.h</dt> </dl>      |
+| Bibliothek<br/> | <dl> <dt>Strmiids.lib</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Idxtjpeg-Schnittstelle**](idxtjpeg.md)
+[**IDxtJpeg-Schnittstelle**](idxtjpeg.md)
 </dt> </dl>
 
  

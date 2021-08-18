@@ -1,12 +1,12 @@
 ---
-title: Explizilogon-Methode der Win32_TSLogonSetting-Klasse
-description: Die explizlogon-Methode legt die Anmelde Informationen fest, die für die Authentifizierung verwendet werden.
+title: ExplicitLogon-Methode der Win32_TSLogonSetting-Klasse
+description: Die ExplicitLogon-Methode legt die Anmeldeinformationen fest, die für die Authentifizierung verwendet werden sollen.
 ms.assetid: cfd43396-0d66-4d5e-81c8-5c0e66422dc5
 ms.tgt_platform: multiple
 keywords:
-- Explizlogon-Methode Remotedesktopdienste
-- Explizitlogon-Methode Remotedesktopdienste, Win32_TSLogonSetting-Klasse
-- Win32_TSLogonSetting-Klasse Remotedesktopdienste, explizilogon-Methode
+- ExplicitLogon-Methode Remotedesktopdienste
+- ExplicitLogon-Methode Remotedesktopdienste , Win32_TSLogonSetting-Klasse
+- Win32_TSLogonSetting Klasse Remotedesktopdienste , ExplicitLogon-Methode
 topic_type:
 - apiref
 api_name:
@@ -17,16 +17,16 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: ef72b6b0f0ede0954a6fc74030a9f0f1d4976935
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 7303f06967d26276c7b43e06109cd9b37d664b960946afdffbb4f6a5a7c18821
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104392062"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119137783"
 ---
-# <a name="explicitlogon-method-of-the-win32_tslogonsetting-class"></a>Explizilogon-Methode der Win32- \_ Klasse "tlogonsetting"
+# <a name="explicitlogon-method-of-the-win32_tslogonsetting-class"></a>ExplicitLogon-Methode der Win32 \_ TSLogonSetting-Klasse
 
-Die **explizlogon** -Methode legt die Anmelde Informationen fest, die für die Authentifizierung verwendet werden.
+Die **ExplicitLogon-Methode** legt die Anmeldeinformationen fest, die für die Authentifizierung verwendet werden sollen.
 
 ## <a name="syntax"></a>Syntax
 
@@ -45,34 +45,34 @@ uint32 ExplicitLogon(
 
 <dl> <dt>
 
-*Benutzername* \[ in\]
+*UserName* \[ In\]
 </dt> <dd>
 
-Die Anmelde Informationen für den Benutzernamen.
+Die Anmeldeinformationen für den Benutzernamen.
 
 </dd> <dt>
 
-*Domäne* \[ in\]
+*Domäne* \[ In\]
 </dt> <dd>
 
-Anmelde Informationen für die Domäne.
+Die Anmeldeinformationen für die Domäne.
 
 </dd> <dt>
 
-*Kennwort* \[ in\]
+*Kennwort* \[ In\]
 </dt> <dd>
 
-Die Anmelde Informationen für die Kenn Wort Anmeldung.
+Die Anmeldeinformationen für das Kennwort.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt bei Erfolg Erfolg zurück, andernfalls wird ein WMI-Fehlercode zurückgegeben. Eine Liste dieser Werte finden Sie unter [Remotedesktopdienste Fehler Codes des WMI-Anbieters](terminal-services-wmi-provider-error-codes.md) . Die-Methode gibt einen Fehler zurück, wenn die Einstellung Untergruppen Richtlinien Steuerung liegt.
+Gibt Erfolg bei Erfolg zurück, andernfalls einen WMI-Fehlercode. Eine Liste dieser Werte finden Sie unter [Remotedesktopdienste WMI-Anbieterfehlercodes.](terminal-services-wmi-provider-error-codes.md) Die -Methode gibt einen Fehler zurück, wenn die Einstellung der Gruppenrichtliniensteuerung unterliegt.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Managed Object Format-Dateien (MOF) enthalten die Definitionen für Windows-Verwaltungsinstrumentation (WMI)-Klassen. MOF-Dateien werden nicht als Teil des Microsoft Windows Software Development Kit (SDK) installiert. Sie werden auf dem Server installiert, wenn Sie die zugehörige Rolle mithilfe der Server-Manager hinzufügen. Weitere Informationen zu MOF-Dateien finden Sie unter [Managed Object Format (MOF)](/windows/desktop/WmiSdk/managed-object-format--mof-).
+Managed Object Format -Dateien (MOF) enthalten die Definitionen für WMI-Klassen (Windows Management Instrumentation). MOF-Dateien werden nicht als Teil des Microsoft Windows Software Development Kit (SDK) installiert. Sie werden auf dem Server installiert, wenn Sie die zugeordnete Rolle mithilfe der Server-Manager hinzufügen. Weitere Informationen zu MOF-Dateien finden Sie unter [Managed Object Format (MOF).](/windows/desktop/WmiSdk/managed-object-format--mof-)
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -83,16 +83,16 @@ Managed Object Format-Dateien (MOF) enthalten die Definitionen für Windows-Verw
 | Unterstützte Mindestversion (Client)<br/> | Windows Vista<br/>                                                                |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2008<br/>                                                          |
 | Namespace<br/>                | Root \\ CIMv2 \\ TerminalServices<br/>                                                |
-| MOF<br/>                      | <dl> <dt>Tscsgwmi. MOF</dt> </dl> |
+| MOF<br/>                      | <dl> <dt>TSCfgWmi.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>TSCfgWmi.dll</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Win32-Anmelde \_ Einstellung**](win32-tslogonsetting.md)
+[**Win32 \_ TSLogonSetting**](win32-tslogonsetting.md)
 </dt> </dl>
 
  

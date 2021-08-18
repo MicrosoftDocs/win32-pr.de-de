@@ -1,6 +1,6 @@
 ---
-description: 'Weitere Informationen finden Sie hier: JET_LGPOS Struktur'
-title: JET_LGPOS Struktur
+description: 'Weitere Informationen zu: JET_LGPOS-Struktur'
+title: JET_LGPOS-Struktur
 TOCTitle: JET_LGPOS Structure
 ms:assetid: dbce1a60-b32b-40c1-a215-e93bb77cd8c1
 ms:mtpsurl: https://msdn.microsoft.com/library/Gg294113(v=EXCHG.10)
@@ -15,21 +15,21 @@ api_type:
 - COM
 api_location: ''
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: 25f00c73a4bb922a8152335babe222b539c70ade
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: abf3ca2996e75d2abfe6fc766ec6f5bbd30054eeb9dd8406fe2747307a00c4a2
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "104042665"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119109257"
 ---
-# <a name="jet_lgpos-structure"></a>JET_LGPOS Struktur
+# <a name="jet_lgpos-structure"></a>JET_LGPOS-Struktur
 
 
 _**Gilt für:** Windows | Windows Server_
 
-## <a name="jet_lgpos-structure"></a>JET_LGPOS Struktur
+## <a name="jet_lgpos-structure"></a>JET_LGPOS-Struktur
 
-Die **JET_LGPOS** -Struktur enthält Daten, die für den Protokollierungs Mechanismus der Datenbank-Engine intern sind. Diese Struktur wird als intern betrachtet.
+Die **JET_LGPOS-Struktur** enthält Daten, die für den Protokollierungsmechanismus der Datenbank-Engine intern sind. Diese Struktur wird als intern betrachtet.
 
 ```cpp
     typedef struct {
@@ -41,11 +41,11 @@ Die **JET_LGPOS** -Struktur enthält Daten, die für den Protokollierungs Mechan
 
 ### <a name="members"></a>Member
 
-**besiegt**
+**Ib**
 
 Unterstützt die ESE-Infrastruktur und kann nicht in Ihrem Code verwendet werden.
 
-**ISEC**
+**isec**
 
 Unterstützt die ESE-Infrastruktur und kann nicht in Ihrem Code verwendet werden.
 
@@ -71,7 +71,7 @@ Unterstützt die ESE-Infrastruktur und kann nicht in Ihrem Code verwendet werden
 </tr>
 <tr class="odd">
 <td><p><strong>Header</strong></p></td>
-<td><p>In "ESENT. h" deklariert.</p></td>
+<td><p>Deklariert in Esent.h.</p></td>
 </tr>
 </tbody>
 </table>

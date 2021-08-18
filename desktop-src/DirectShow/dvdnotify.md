@@ -1,24 +1,24 @@
 ---
-description: Das dvdnotify-Ereignis benachrichtigt eine Anwendung über viele verschiedene DVD-Ereignisse und Disk-Anweisungen.
+description: Das DVDNotify-Ereignis benachrichtigt eine Anwendung über viele verschiedene DVD-Ereignisse und Datenträgeranweisungen.
 ms.assetid: 8e7d85fb-95c0-472d-ab17-a82da303b68f
-title: Dvdnotify (Segment. h)
+title: DVDNotify (Segment.h)
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: b31a2974bec428cb8ffe290edc9a384445e42070
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 988deaf53fb2b50555b4cf19a38684610aa0822a270dfba079defab92ce8aec0
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106371600"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119148703"
 ---
-# <a name="dvdnotify"></a>Dvdnotify
+# <a name="dvdnotify"></a>DVDNotify
 
 > [!Note]  
 > Diese Komponente ist für die Verwendung in den Betriebssystemen Microsoft Windows 2000, Windows XP und Windows Server 2003 verfügbar. Es kann in nachfolgenden Versionen geändert oder entfernt werden.
 
  
 
-Das `DVDNotify` Ereignis benachrichtigt eine Anwendung über viele verschiedene DVD-Ereignisse und Disk-Anweisungen.
+Das Ereignis benachrichtigt eine Anwendung über viele verschiedene `DVDNotify` DVD-Ereignisse und Datenträgeranweisungen.
 
 ``` syntax
 DVDNotify(EventCode, Param1, Param2)
@@ -31,27 +31,27 @@ DVDNotify(EventCode, Param1, Param2)
 <span id="EventCode"></span><span id="eventcode"></span><span id="EVENTCODE"></span>*EventCode*
 </dt> <dd>
 
-Gibt den DVD-Ereignis Benachrichtigungs Code an.
+Gibt den DVD-Ereignisbenachrichtigungscode an.
 
 </dd> <dt>
 
 <span id="Param1"></span><span id="param1"></span><span id="PARAM1"></span>*Param1*
 </dt> <dd>
 
-Kann zusätzliche Informationen enthalten, die sich auf das Ereignis beziehen.
+Kann zusätzliche Informationen im Zusammenhang mit dem Ereignis enthalten.
 
 </dd> <dt>
 
 <span id="Param2"></span><span id="param2"></span><span id="PARAM2"></span>*Param2*
 </dt> <dd>
 
-Kann zusätzliche Informationen enthalten, die sich auf das Ereignis beziehen.
+Kann zusätzliche Informationen im Zusammenhang mit dem Ereignis enthalten.
 
 </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Mit [DVD-Ereignis Benachrichtigungs Codes](dvd-notification-codes.md) erhalten Sie eine vollständige Erläuterung aller DVD-Ereignis Benachrichtigungs Codes und ihrer Parameter.
+[DVD-Ereignisbenachrichtigungscodes](dvd-notification-codes.md) enthalten eine vollständige Erläuterung aller DVD-Ereignisbenachrichtigungscodes und ihrer Parameter.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -59,7 +59,7 @@ Mit [DVD-Ereignis Benachrichtigungs Codes](dvd-notification-codes.md) erhalten S
 
 | Anforderung | Wert |
 |-------------------|--------------------------------------------------------------------------------------|
-| Header<br/> | <dl> <dt>Segment. h</dt> </dl> |
+| Header<br/> | <dl> <dt>Segment.h</dt> </dl> |
 
 
 

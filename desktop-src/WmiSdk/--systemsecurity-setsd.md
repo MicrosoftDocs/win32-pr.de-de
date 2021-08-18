@@ -1,8 +1,8 @@
 ---
-description: Legt die Sicherheits Beschreibung für den Namespace fest, mit dem ein Benutzer verbunden ist. Diese Methode erfordert eine Sicherheits Beschreibung im Format des binären Byte Arrays. Wenn Sie ein Skript schreiben, verwenden Sie die SETSECURITYDESCRIPTOR-Methode.
+description: Legt die Sicherheitsbeschreibung für den Namespace fest, mit dem ein Benutzer verbunden ist. Diese Methode erfordert einen Sicherheitsdeskriptor im binären Bytearrayformat. Wenn Sie ein Skript schreiben, verwenden Sie die SetSecurityDescriptor-Methode.
 ms.assetid: 049f8722-1674-4c4f-9300-09b1cc1412fb
 ms.tgt_platform: multiple
-title: Die Methode "SZD" der __SystemSecurity-Klasse
+title: SetSD-Methode der __SystemSecurity-Klasse
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -14,23 +14,23 @@ api_type:
 - COM
 api_location:
 - All
-ms.openlocfilehash: 21f09a412a662cec8629fa9237d8dbb5902426c9
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 04da59b6370e2e9a381f2e3889b75ac37cb926e54c46cc0e616ec5353ed6f665
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106347411"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119132033"
 ---
-# <a name="setsd-method-of-the-__systemsecurity-class"></a>Die Methode "-Methode" der \_ \_ Klasse "System Security"
+# <a name="setsd-method-of-the-__systemsecurity-class"></a>SetSD-Methode der \_ \_ SystemSecurity-Klasse
 
-Die **sezd-** Methode legt die Sicherheits Beschreibung für den Namespace fest, mit dem ein Benutzer verbunden ist. Diese Methode erfordert eine Sicherheits Beschreibung im Format des binären Byte Arrays. Wenn Sie ein Skript schreiben, verwenden Sie die [**SETSECURITYDESCRIPTOR**](setsecuritydescriptor-method-in-class---systemsecurity.md) -Methode. Weitere Informationen finden Sie unter [Sichern von WMI-Namespaces](securing-wmi-namespaces.md) und [Ändern der Zugriffssicherheit für Sicherungs fähige Objekte](changing-access-security-on-securable-objects.md).
+Die **SetSD-Methode** legt den Sicherheitsdeskriptor für den Namespace fest, mit dem ein Benutzer verbunden ist. Diese Methode erfordert einen Sicherheitsdeskriptor im binären Bytearrayformat. Wenn Sie ein Skript schreiben, verwenden Sie die [**SetSecurityDescriptor-Methode.**](setsecuritydescriptor-method-in-class---systemsecurity.md) Weitere Informationen finden Sie unter [Sichern von WMI-Namespaces](securing-wmi-namespaces.md) und [Ändern der Zugriffssicherheit für sicherungsfähige Objekte.](changing-access-security-on-securable-objects.md)
 
-Wenn Sie in C++ programmieren, können Sie den binären Sicherheits Deskriptor mithilfe von [SDDL](/windows/desktop/SecAuthZ/security-descriptor-definition-language)und die Konvertierungs Methoden [**convertsecuritydescriptortostringsecuritydescriptor**](/windows/desktop/api/sddl/nf-sddl-convertsecuritydescriptortostringsecuritydescriptora) und [**convertstringsecuritydescriptortosecuritydescriptor**](/windows/desktop/api/sddl/nf-sddl-convertstringsecuritydescriptortosecuritydescriptora)bearbeiten.
+Wenn Sie in C++ programmieren, können Sie den binären Sicherheitsdeskriptor mit [sddl](/windows/desktop/SecAuthZ/security-descriptor-definition-language)und den Konvertierungsmethoden [**ConvertSecurityDescriptorToStringSecurityDescriptor**](/windows/desktop/api/sddl/nf-sddl-convertsecuritydescriptortostringsecuritydescriptora) und [**ConvertStringSecurityDescriptorToSecurityDescriptor**](/windows/desktop/api/sddl/nf-sddl-convertstringsecuritydescriptortosecuritydescriptora)bearbeiten.
 
-Ein Benutzer muss über die Berechtigung zum **Schreiben von \_ DAC** verfügen, und ein Administrator verfügt standardmäßig über diese Berechtigung. Der einzige Teil der Sicherheits Beschreibung, der verwendet wird, ist der nicht geerbte Zugriffs Steuerungs Eintrag (ACE) in der freigegebenen Zugriffs Steuerungs Liste (DACL). Wenn Sie das **\_ containervererbungs** -Flag in den ACEs festlegen, wirkt sich die Sicherheits Beschreibung auf untergeordnete Namespaces aus. Sowohl Allow-als auch deny-ACEs sind zulässig.
+Ein Benutzer muss über die **\_ WRITE-DAC-Berechtigung** verfügen, und standardmäßig verfügt ein Administrator über diese Berechtigung. Der einzige Teil der Sicherheitsbeschreibung, der verwendet wird, ist der nicht überwachte Zugriffssteuerungseintrag (ACE) in der DACL (Discretionary Access Control List). Durch Festlegen des **CONTAINER \_ INHERIT-Flags** in den ACEs wirkt sich der Sicherheitsdeskriptor auf untergeordnete Namespaces aus. AcEs zum Zulassen und Verweigern sind zulässig.
 
 > [!Note]  
-> Da Deny-und allow-ACEs in einer DACL zulässig sind, ist die Reihenfolge der ACEs wichtig. Weitere Informationen finden Sie unter [Reihenfolge von ACEs in einer DACL](/windows/desktop/SecAuthZ/order-of-aces-in-a-dacl).
+> Da Verweigerungs- und Zulassungs-ACEs in einer DACL zulässig sind, ist die Reihenfolge der ACEs wichtig. Weitere Informationen finden Sie unter [Sortieren von ACEs in einer DACL.](/windows/desktop/SecAuthZ/order-of-aces-in-a-dacl)
 
  
 
@@ -49,18 +49,18 @@ HRESULT SetSD(
 
 <dl> <dt>
 
-*SD* \[ in\]
+*SD* \[ In\]
 </dt> <dd>
 
-Bytearray, das die Sicherheits Beschreibung bildet.
+Bytearray, das den Sicherheitsdeskriptor bildet.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt ein **HRESULT** zurück, das den Status eines Methoden Aufrufes angibt. Für Skript-und Visual Basic Anwendungen kann das Ergebnis aus " [OutParameters. returnValue](parsing-outparameters-objects.md)" abgerufen werden. Weitere Informationen finden Sie unter [Erstellen von inparameter-Objekten und Überprüfen von outparameter-Objekten](constructing-inparameters-objects-and-parsing-outparameters-objects.md).
+Gibt ein **HRESULT** zurück, das den Status eines Methodenaufrufs angibt. Für Skripts und Visual Basic Anwendungen kann das Ergebnis aus [OutParameters.ReturnValue](parsing-outparameters-objects.md)abgerufen werden. Weitere Informationen finden Sie unter [Erstellen von InParameters-Objekten und Analysieren von OutParameters-Objekten.](constructing-inparameters-objects-and-parsing-outparameters-objects.md)
 
-In der folgenden Liste sind die Rückgabewerte aufgelistet, die für " **-** ID" von Bedeutung sind.
+In der folgenden Liste sind die Rückgabewerte aufgeführt, die für **SetSD** von Bedeutung sind.
 
 <dl> <dt>
 
@@ -71,52 +71,52 @@ Die Methode wurde erfolgreich ausgeführt.
 
 </dd> <dt>
 
-**WBEM \_ E- \_ Zugriff \_ verweigert**
+**WBEM \_ E \_ ACCESS \_ DENIED**
 </dt> <dd>
 
-Der Aufrufer verfügt nicht über ausreichende Rechte, um diese Methode aufzurufen.
+Der Aufrufer verfügt nicht über ausreichende Rechte zum Aufrufen dieser Methode.
 
 </dd> <dt>
 
-**WBEM \_ E- \_ Methode \_ deaktiviert**
+**WBEM \_ \_ E-METHODE \_ DEAKTIVIERT**
 </dt> <dd>
 
-Es wurde versucht, diese Methode auf dem Betriebssystem auszuführen, das diese Methode nicht unterstützt.
+Es wurde versucht, diese Methode unter einem Betriebssystem auszuführen, das sie nicht unterstützt.
 
 </dd> <dt>
 
-**ungültiges WBEM- \_ \_ \_ Objekt**
+**WBEM \_ E \_ UNGÜLTIGES \_ OBJEKT**
 </dt> <dd>
 
-Die SD übergibt keine grundlegenden Validierungstests.
+SD bestanden keine grundlegenden Gültigkeitstests.
 
 </dd> <dt>
 
-**\_Ungültiger WBEM E- \_ \_ Parameter**
+**WBEM \_ E \_ INVALID \_ PARAMETER**
 </dt> <dd>
 
-SD ist aufgrund einer der folgenden Aktionen ungültig:
+SD ist aufgrund einer der folgenden Punkte ungültig:
 
 -   DACL fehlt.
--   Die DACL ist ungültig.
--   Bei ACE ist das WBEM-Flag " **\_ Full \_ Write \_ Rep** " festgelegt, und der WBEM-Flag für **\_ partielle \_ Schreib \_** Vorgänge oder **WBEM- \_ Schreib \_ Anbieter** wurde nicht festgelegt.
--   Bei ACE ist **das \_ \_ ACE** -Flag "nur Erben" ohne das Flag " **Container \_ Vererbung \_** " festgelegt.
--   Der ACE hat ein unbekanntes Zugriffs Bit festgelegt.
--   ACE verfügt über ein Flag, das nicht in der Tabelle angezeigt wird.
--   ACE weist einen Typ auf, der nicht in der Tabelle ist.
+-   DACL ist ungültig.
+-   Für ACE ist das **WBEM \_ FULL \_ WRITE \_ REP-Flag** festgelegt, und das **WBEM \_ PARTIAL WRITE \_ \_ REP-** oder **WBEM \_ WRITE \_ PROVIDER-Flag** ist nicht festgelegt.
+-   Für ACE ist das INHERIT **\_ ONLY \_ ACE-Flag** ohne das **CONTAINER INHERIT \_ \_ ACE-Flag** festgelegt.
+-   Ace hat ein unbekanntes Zugriffsbit festgelegt.
+-   Ace hat ein Flag festgelegt, das nicht in der Tabelle enthalten ist.
+-   ACE weist einen Typ auf, der nicht in der Tabelle enthalten ist.
 -   Der Besitzer und die Gruppe fehlen in der SD.
 
-Weitere Informationen zu den ACE-Flags (Access Control Entry) finden Sie unter [WMI-Sicherheits Konstanten](wmi-security-constants.md).
+Weitere Informationen zu den ACE-Flags (Access Control Entry, Zugriffssteuerungseintrag) finden Sie unter [WMI-Sicherheitskonstanten.](wmi-security-constants.md)
 
 </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Weitere Informationen zum programmgesteuerten oder manuellen Ändern der Namespace Sicherheit finden Sie unter [Sichern von WMI-Namespaces](securing-wmi-namespaces.md).
+Weitere Informationen zum programmgesteuerten oder manuellen Ändern der Namespacesicherheit finden Sie unter [Schützen von WMI-Namespaces.](securing-wmi-namespaces.md)
 
 ## <a name="examples"></a>Beispiele
 
-Das folgende Skript zeigt, wie Sie **sezd** verwenden, um die Namespace-Sicherheits Beschreibung für den Stamm Namespace festzulegen und in das Bytearray zu ändern, das in " *strausd*" angezeigt wird.
+Das folgende Skript zeigt, wie **Sie setSD** verwenden, um den Namespacesicherheitsdeskriptor für den Stammnamespace festzulegen und in das bytearray zu ändern, das in *strSD* gezeigt wird.
 
 
 ```VB
@@ -150,7 +150,7 @@ WScript.Echo "ReturnValue " & nReturn
 
 
 
-Im folgenden c#-Codebeispiel wird der System. Security. AccessControl. RawSecurityDescriptor verwendet, um neue CommonAce-Objekte in RawSecurityDescriptor. diskretionaryacl aufzulisten, einzufügen und zu entfernen und Sie dann wieder in ein Bytearray zu konvertieren, um Sie über sezd zu speichern. Ein SecurityIdentifier kann mithilfe von NTAccount abgerufen und übersetzt werden.
+Im folgenden C#-Codebeispiel wird System.Security.AccessControl.RawSecurityDescriptor verwendet, um neue CommonAce-Objekte in RawSecurityDescriptor.DiscretionaryAcl aufzuzählen, einzufügen und zu entfernen und sie dann wieder in ein Bytearray zu konvertieren, um es über SetSD zu speichern. Ein SecurityIdentifier kann mit NTAccount und Translate abgerufen werden.
 
 
 ```CSharp
@@ -236,26 +236,26 @@ Im folgenden c#-Codebeispiel wird der System. Security. AccessControl. RawSecuri
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[WMI-System Klassen](wmi-system-classes.md)
+[WMI-Systemklassen](wmi-system-classes.md)
 </dt> <dt>
 
 [**\_\_SystemSecurity**](--systemsecurity.md)
 </dt> <dt>
 
-[**\_\_SystemSecurity:: getd**](--systemsecurity-getsd.md)
+[**\_\_SystemSecurity::GetSD**](--systemsecurity-getsd.md)
 </dt> <dt>
 
-[WMI-Sicherheits Konstanten](wmi-security-constants.md)
+[WMI-Sicherheitskonstanten](wmi-security-constants.md)
 </dt> <dt>
 
-[**Win32- \_ ACE**](/previous-versions/windows/desktop/secrcw32prov/win32-ace)
+[**Win32 \_ ACE**](/previous-versions/windows/desktop/secrcw32prov/win32-ace)
 </dt> <dt>
 
-[**Win32- \_ securityDescriptor**](/previous-versions/windows/desktop/secrcw32prov/win32-securitydescriptor)
+[**Win32 \_ SecurityDescriptor**](/previous-versions/windows/desktop/secrcw32prov/win32-securitydescriptor)
 </dt> <dt>
 
 [Sichern von WMI-Namespaces](securing-wmi-namespaces.md)

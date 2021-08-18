@@ -1,9 +1,9 @@
 ---
 title: KeyUp-Ereignis des AxWindowsMediaPlayer-Objekts
-description: Das KeyUp-Ereignis tritt auf, wenn eine Taste losgelassen wird. | KeyUp-Ereignis des AxWindowsMediaPlayer-Objekts
+description: Das KeyUp-Ereignis tritt auf, wenn ein Schlüssel freigegeben wird. | KeyUp-Ereignis des AxWindowsMediaPlayer-Objekts
 ms.assetid: db814481-6099-4dbd-8ab1-808e1875ae35
 keywords:
-- Das KeyUp-Ereignis der AxWindowsMediaPlayer-Objekt Fenster Media Player
+- KeyUp-Ereignis des AxWindowsMediaPlayer-Objekts Windows Media Player
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - Assembly
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 509f520ff7624b0b29302d7bf5cd825cd45b4254
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 6c3a2666268e2c12e74c6498446ff49bde69dd30cf9819a7899e88a8b8ee4466
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106370207"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119136013"
 ---
 # <a name="keyup-event-of-the-axwindowsmediaplayer-object"></a>KeyUp-Ereignis des AxWindowsMediaPlayer-Objekts
 
-Das KeyUp-Ereignis tritt auf, wenn eine Taste losgelassen wird.
+Das KeyUp-Ereignis tritt auf, wenn ein Schlüssel freigegeben wird.
 
 ``` syntax
 [C#]
@@ -41,14 +41,14 @@ Private Sub player_KeyUpEvent(
 
 ## <a name="event-data"></a>Ereignisdaten
 
-Der diesem Ereignis zugeordnete Handler ist vom Typ **AxWMPLib. \_ Wmpocxevents \_ keyugventhandler**. Dieser Handler empfängt ein Argument vom Typ **AxWMPLib. \_ Wmpocxevents \_ keyupeer Vent**, das die folgenden Eigenschaften enthält, die mit diesem Ereignis verknüpft sind.
+Der diesem Ereignis zugeordnete Handler ist vom Typ **AxWMPLib. \_ WMPOCXEvents \_ KeyUpEventHandler**. Dieser Handler empfängt ein Argument vom Typ **AxWMPLib. \_ WMPOCXEvents \_ KeyUpEvent**, das die folgenden Eigenschaften im Zusammenhang mit diesem Ereignis enthält.
 
 
 
-| Eigenschaft    | BESCHREIBUNG                                                                                                                                                                                                                                                                                                                                                                          |
+| Eigenschaft    | Beschreibung                                                                                                                                                                                                                                                                                                                                                                          |
 |-------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| nKeyCode    | System. Int16Specifies der physische Schlüssel, auf den geklickt wird. Mögliche Werte finden Sie im Abschnitt "Hinweise" des KeyDown-Ereignisses.<br/>                                                                                                                                                                                                                                                   |
-| nshiftstate | System. Int16A Bitfeld mit den geringsten signifikanten Bits, die der Umschalttaste (Bit 0), der STRG-Taste (Bit 1) und der Alt-Taste (Bit 2) entsprechen. Diese Bits entsprechen den Werten 1, 2 und 4. Das Shift-Argument gibt den Zustand dieser Schlüssel an. Einige, alle oder keine der Bits können festgelegt werden. Dies deutet darauf hin, dass einige, alle oder keine der Schlüssel gedrückt werden.<br/> |
+| nKeyCode    | System.Int16 Gibt an, welche physische Taste gedrückt wird. Mögliche Werte finden Sie im Abschnitt Hinweise des KeyDown-Ereignisses.<br/>                                                                                                                                                                                                                                                   |
+| nShiftState | System.Int16A-Bitfeld mit den am wenigsten signifikanten Bits, die der UMSCHALTTASTE (Bit 0), der STRG-Taste (Bit 1) und der ALT-Taste (Bit 2) entsprechen. Diese Bits entsprechen den Werten 1, 2 bzw. 4. Das Shift-Argument gibt den Zustand dieser Schlüssel an. Einige, alle oder keine der Bits können festgelegt werden, was darauf hinweist, dass einige, alle oder keine der Tasten gedrückt werden.<br/> |
 
 
 
@@ -60,17 +60,17 @@ Der diesem Ereignis zugeordnete Handler ist vom Typ **AxWMPLib. \_ Wmpocxevents 
 
 | Anforderung | Wert |
 |----------------------|----------------------------------------------------------------------------------------------------------------------------|
-| Version<br/>   | Windows Media Player 9-Serie oder höher<br/>                                                                          |
+| Version<br/>   | Windows Media Player 9er Serie oder höher<br/>                                                                          |
 | Namespace<br/> | **AxWMPLib**<br/>                                                                                                    |
 | Assembly<br/>  | <dl> <dt>AxInterop.WMPLib.dll (AxInterop.WMPLib.dll.dll)</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**AxWindowsMediaPlayer-Objekt (VB und c#)**](axwindowsmediaplayer-object--vb-and-c.md)
+[**AxWindowsMediaPlayer-Objekt (VB und C#)**](axwindowsmediaplayer-object--vb-and-c.md)
 </dt> </dl>
 
  

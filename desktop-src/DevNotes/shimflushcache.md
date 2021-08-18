@@ -1,7 +1,7 @@
 ---
-description: Leert den Shim-Daten Bank Cache. Diese Funktion sollte nach der Installation einer neuen Shimdatenbank aufgerufen werden.
+description: Leert den Shim-Datenbankcache. Diese Funktion sollte nach der Installation einer neuen Shim-Datenbank aufgerufen werden.
 ms.assetid: 7e5bbdca-7b58-4c51-9cd1-105b05ee7fbe
-title: Shimflushcache-Funktion
+title: ShimFlushCache-Funktion
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,16 +13,16 @@ api_type:
 - DllExport
 api_location:
 - Apphelp.dll
-ms.openlocfilehash: 35e279c5036142ec87c5bad6d7c512388033bc94
-ms.sourcegitcommit: c7add10d695482e1ceb72d62b8a4ebd84ea050f7
+ms.openlocfilehash: ecf1291b7fdcfb43170ec7e269fa140c321fafdbc09989fc7ee2b392f11c1160
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104041322"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119075914"
 ---
-# <a name="shimflushcache-function"></a>Shimflushcache-Funktion
+# <a name="shimflushcache-function"></a>ShimFlushCache-Funktion
 
-Leert den Shim-Daten Bank Cache. Diese Funktion sollte nach der Installation einer neuen Shimdatenbank aufgerufen werden.
+Leert den Shim-Datenbankcache. Diese Funktion sollte nach der Installation einer neuen Shim-Datenbank aufgerufen werden.
 
 ## <a name="syntax"></a>Syntax
 
@@ -42,39 +42,39 @@ BOOL WINAPI ShimFlushCache(
 
 <dl> <dt>
 
-*HWND* \[ in, optional\]
+*hwnd* \[ in, optional\]
 </dt> <dd>
 
-Genutzt muss 0 sein.
+Nicht verwendet; muss 0 sein.
 
 </dd> <dt>
 
-*HINSTANCE* \[ in, optional\]
+*hInstance* \[ in, optional\]
 </dt> <dd>
 
-Genutzt muss 0 sein.
+Nicht verwendet; muss 0 sein.
 
 </dd> <dt>
 
 *lpszCmdLine* \[ in, optional\]
 </dt> <dd>
 
-Genutzt muss 0 sein.
+Nicht verwendet; muss 0 sein.
 
 </dd> <dt>
 
-*nCmdShow* \[ in\]
+*nCmdShow* \[ In\]
 </dt> <dd>
 
-Genutzt muss 0 sein.
+Nicht verwendet; muss 0 sein.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Bei einem Fehler gibt die Funktion **true** oder **false** zurück.
+Die Funktion gibt **TRUE** bei Erfolg oder **FALSE** bei Einem Fehler zurück.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
 Der Aufrufer muss ein Administrator sein.
 
@@ -84,17 +84,17 @@ Der Aufrufer muss ein Administrator sein.
 
 | Anforderung | Wert |
 |-------------------------------------|----------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                         |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/>                                   |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur Vista-Desktop-Apps\]<br/>                                         |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/>                                   |
 | DLL<br/>                      | <dl> <dt>Apphelp.dll</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Baseflushappcompatcache**](baseflushappcompatcache.md)
+[**BaseFlushAppcompatCache**](baseflushappcompatcache.md)
 </dt> </dl>
 
  

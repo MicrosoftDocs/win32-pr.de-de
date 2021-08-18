@@ -1,7 +1,7 @@
 ---
-description: 'StartService-Methode der Msvm_CollectionManagementService-Klasse: Beendet den Dienst.'
+description: 'StartService-Methode der Msvm_CollectionManagementService Klasse: Beendet den Dienst.'
 ms.assetid: 0f9a015d-b895-496a-a4c6-2737c0742746
-title: StartService-Methode der Msvm_CollectionManagementService-Klasse
+title: StartService-Methode der Msvm_CollectionManagementService Klasse
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,12 +13,12 @@ api_type:
 - COM
 api_location:
 - vmms.exe
-ms.openlocfilehash: 18f58ae22cee06c439b6238df4c2a147405f7aca
-ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
+ms.openlocfilehash: 8f2e3a721ab21bc28ed97505f80a2da68aaca7e71db0847f95c288d032520a1d
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2021
-ms.locfileid: "108112138"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119252740"
 ---
 # <a name="startservice-method-of-the-msvm_collectionmanagementservice-class"></a>StartService-Methode der Msvm \_ CollectionManagementService-Klasse
 
@@ -39,7 +39,7 @@ Diese Methode hat keine Parameter.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt bei Erfolg 0 zurück. andernfalls wird ein Fehler zurückgegeben.
+Gibt bei Erfolg 0 zurück. andernfalls gibt einen Fehler zurück.
 
 <dl> <dt>
 
@@ -53,11 +53,11 @@ Gibt bei Erfolg 0 zurück. andernfalls wird ein Fehler zurückgegeben.
 
 
 
-| Anforderungen | Wert |
+| Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | nur Windows 10 \[ Desktop-Apps\]<br/>                                                             |
+| Unterstützte Mindestversion (Client)<br/> | \[Windows 10 Nur Desktop-Apps\]<br/>                                                             |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2016<br/>                                                                          |
-| Namespace<br/>                | \\Root-Virtualisierung \\ v2<br/>                                                                     |
+| Namespace<br/>                | \\Stammvirtualisierung \\ v2<br/>                                                                     |
 | MOF<br/>                      | <dl> <dt>WindowsVirtualization.V2.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Vmms.exe</dt> </dl>                     |
 

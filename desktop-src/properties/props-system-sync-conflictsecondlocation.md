@@ -4,16 +4,16 @@ ms.assetid: 436aec48-518b-4759-b06a-d23b8e422ca8
 title: System.Sync.ConflictSecondLocation
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 7fcbaf0a1a75ec1f1c42fef230037695afdeb13b
-ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
+ms.openlocfilehash: e87d67c69eb7e772f80e6d189b8b2d2afea5d2b6577664446751c38214c23cd5
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2021
-ms.locfileid: "108091528"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119095487"
 ---
 # <a name="systemsyncconflictsecondlocation"></a>System.Sync.ConflictSecondLocation
 
-## <a name="windows-10-version-1703-windows-10-version-1607-windows-10-version-1511-windows-10-version-1507-windows-81-windows-8-windows-7-windows-vista"></a>Windows 10, version 1703, Windows 10, version 1607, Windows 10, version 1511, Windows 10, version 1507, Windows 8.1, Windows 8, Windows 7, Windows Vista
+## <a name="windows-10-version-1703-windows-10-version-1607-windows-10-version-1511-windows-10-version-1507-windows-81-windows-8-windows-7-windows-vista"></a>Windows 10, Version 1703, Windows 10, Version 1607, Windows 10, Version 1511, Windows 10, Version 1507, Windows 8.1, Windows 8, Windows 7, Windows Vista
 
 ```
 propertyDescription
@@ -28,7 +28,7 @@ propertyDescription
       type = String
 ```
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
 PKEY-Werte werden in Propkey.h definiert.
 

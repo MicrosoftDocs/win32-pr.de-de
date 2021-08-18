@@ -1,29 +1,29 @@
 ---
-description: Die CIM \_ physicalpackage-Klasse stellt die folgenden Methoden zur Verfügung.
+description: Die CIM \_ PhysicalPackage-Klasse macht die folgenden Methoden verfügbar.
 ms.assetid: B5D5B2C4-0F8F-4888-A101-121DCAD75321
 ms.tgt_platform: multiple
-title: CIM_PhysicalPackage Methoden
+title: CIM_PhysicalPackage-Methoden
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 4be61b6fbba418feeeba5ad1276e63396e984739
-ms.sourcegitcommit: c7add10d695482e1ceb72d62b8a4ebd84ea050f7
+ms.openlocfilehash: ac0ae2c2539b1400e6a2b865a8a53253735e0a1264500e4513a7c548f127d6ad
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104524008"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119020978"
 ---
-# <a name="cim_physicalpackage-methods"></a>CIM \_ physicalpackage-Methoden
+# <a name="cim_physicalpackage-methods"></a>CIM \_ PhysicalPackage-Methoden
 
-Die [**CIM \_ physicalpackage**](cim-physicalpackage.md) -Klasse stellt die folgenden Methoden zur Verfügung.
+Die [**CIM \_ PhysicalPackage-Klasse**](cim-physicalpackage.md) macht die folgenden Methoden verfügbar.
 
 > [!IMPORTANT]
-> Die Klassen der DMTF-CIM (Common Information Model) sind die übergeordneten Klassen, auf denen WMI-Klassen erstellt werden. WMI unterstützt zurzeit nur die [CIM 2. x-Versions Schemas](https://dmtf.org/standards/cim/schemas).
+> Die CIM-Klassen (Distributed Management Task Force) (DMTF) (Common Information Model) sind die übergeordneten Klassen, auf denen WMI-Klassen erstellt werden. WMI unterstützt derzeit nur die [CIM 2.x-Versionsschemas.](https://dmtf.org/standards/cim/schemas)
 
  
 
 ## <a name="in-this-section"></a>In diesem Abschnitt
 
--   [**Iscompatible-Methode**](iscompatible-method-in-class-cim-physicalpackage.md)
+-   [**IsCompatible-Methode**](iscompatible-method-in-class-cim-physicalpackage.md)
 
  
 

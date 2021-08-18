@@ -21,14 +21,14 @@ api_type:
 - DllExport
 api_location:
 - vmms.exe
-ms.openlocfilehash: 81c2d31a6497325ac77003ded266333518de890a
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 0758858e9e45066cdfaddf36616c7861bbae914b12e3698665f8650c6c57d67c
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106344255"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119340170"
 ---
-# <a name="msvm_virtualsystemresourcecomponent-class"></a>MSVM \_ virtualsystemresourcecomponent-Klasse
+# <a name="msvm_virtualsystemresourcecomponent-class"></a>Msvm \_ VirtualSystemResourceComponent-Klasse
 
 Stellt einen Dienst für virtuelle Geräte der Microsoft Windows Hyper-V-Plattform dar.
 
@@ -52,30 +52,30 @@ class Msvm_VirtualSystemResourceComponent : Msvm_VirtualizationComponent
 
 ## <a name="members"></a>Member
 
-Die **MSVM \_ virtualsystemresourcecomponent** -Klasse verfügt über diese Typen von Membern:
+Die **Msvm \_ VirtualSystemResourceComponent-Klasse** verfügt über die folgenden Membertypen:
 
 -   [Eigenschaften](#properties)
 
 ### <a name="properties"></a>Eigenschaften
 
-Die **MSVM \_ virtualsystemresourcecomponent** -Klasse verfügt über diese Eigenschaften.
+Die **Msvm \_ VirtualSystemResourceComponent-Klasse** verfügt über diese Eigenschaften.
 
 <dl> <dt>
 
-**Additionalclassnames**
+**AdditionalClassNames**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichen** folgen Array
+Datentyp: **Zeichenfolgenarray**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Ein Array von Zeichen folgen, das zusätzliche nicht Zuordnungs Klassen enthält, die von dieser **MSVM \_ virtualsystemresourcecomponent** -Instanz bereitgestellt werden. Diese Klassen müssen von weder [**CIM \_ LogicalDevice**](/windows/desktop/CIMWin32Prov/cim-logicaldevice) noch [**CIM \_ resourcezucationsettingdata abgeleitet werden**](/previous-versions/windows/desktop/clushyperv/cim-resourceallocationsettingdata).
+Ein Array von Zeichenfolgen, die zusätzliche Klassen enthalten, die keine Zuordnungen sind, die von dieser **Msvm \_ VirtualSystemResourceComponent-Instanz zur Hand gestellt** werden. Diese Klassen dürfen weder von [**CIM \_ LogicalDevice**](/windows/desktop/CIMWin32Prov/cim-logicaldevice) noch [**von CIM \_ ResourceAllocationSettingData ableiten.**](/previous-versions/windows/desktop/clushyperv/cim-resourceallocationsettingdata)
 
 </dd> <dt>
 
-**CLSID**
+**Clsid**
 </dt> <dd> <dl> <dt>
 
 Datentyp: **Zeichenfolge**
@@ -84,59 +84,59 @@ Datentyp: **Zeichenfolge**
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Eine GUID, die den Klassen Bezeichner des COM-Objekts des dienstanders darstellt. Diese Eigenschaft wird von [**MSVM \_ virtualizationcomponent**](msvm-virtualizationcomponent.md)geerbt.
+Eine GUID, die den Klassenbezeichner des COM-Objekts des Diensts darstellt. Diese Eigenschaft wird von [**Msvm \_ VirtualizationComponent geerbt.**](msvm-virtualizationcomponent.md)
 
 </dd> <dt>
 
 **Context**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt32**
+Datentyp: **uint32**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Der Kontext, in dem das neu erstellte-Objekt ausgeführt wird. Dieser Wert wird im *dwClsContext* -Parameter an [**cokreateingestance**](/windows/desktop/api/combaseapi/nf-combaseapi-cocreateinstance)übergeben. Diese Eigenschaft wird von [**MSVM \_ virtualizationcomponent**](msvm-virtualizationcomponent.md)geerbt und ist immer auf 1 festgelegt.
+Der Kontext, in dem das neu erstellte Objekt ausgeführt wird. Dieser Wert wird im *dwClsContext-Parameter* an [**CoCreateInstance übergeben.**](/windows/desktop/api/combaseapi/nf-combaseapi-cocreateinstance) Diese Eigenschaft wird von [**Msvm \_ VirtualizationComponent geerbt**](msvm-virtualizationcomponent.md)und immer auf 1 festgelegt.
 
 </dd> <dt>
 
 **Aktiviert**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **boolescher** Wert
+Datentyp: **boolescher Wert**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-**True** , wenn diese Instanz aktiviert ist und verwendet werden kann, um Client Anforderungen abzuschließen. andernfalls **false**. Diese Eigenschaft wird von [**MSVM \_ virtualizationcomponent**](msvm-virtualizationcomponent.md)geerbt und ist immer auf " **true**" festgelegt.
+**True,** wenn diese Instanz aktiviert ist und zum Abschließen von Clientanforderungen verwendet werden kann. andernfalls **False.** Diese Eigenschaft wird von [**Msvm \_ VirtualizationComponent**](msvm-virtualizationcomponent.md)geerbt und immer auf **True festgelegt.**
 
 </dd> <dt>
 
-**Hotadd**
+**HotAdd**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **boolescher** Wert
+Datentyp: **boolescher Wert**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-**True** , wenn diese Instanz einem virtuellen Computer hinzugefügt werden kann. andernfalls **false**. Der Standardwert ist **False**.
+**True,** wenn diese Instanz einem virtuellen Computer hinzugefügt werden kann. andernfalls **False.** Der Standardwert ist **False**.
 
 </dd> <dt>
 
-**Baum verschieben**
+**HotRemove**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **boolescher** Wert
+Datentyp: **boolescher Wert**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-**True** , wenn diese Instanz von einem virtuellen Computer entfernt werden kann. andernfalls **false**. Der Standardwert ist **False**.
+**TRUE,** wenn diese Instanz von einem virtuellen Computer entfernt werden kann. andernfalls **False.** Der Standardwert ist **False**.
 
 </dd> <dt>
 
@@ -152,14 +152,14 @@ Zugriffstyp: Schreibgeschützt
 Qualifizierer: **Schlüssel**
 </dt> </dl>
 
-Eine sprachneutrale Zeichenfolge, die den Dienst eindeutig identifiziert. Das folgende Format wird vorgeschlagen, um Namenskonflikte zu vermeiden: "Hersteller \| Komponenten \| Version". Dieser Name repräsentiert beispielsweise Version 1,0 der Microsoft emulierten Netzwerk Port Komponente: "Microsoft \| emulatednetworkportcomponent \| v 1.0". Diese Eigenschaft wird von [**MSVM \_ virtualizationcomponent**](msvm-virtualizationcomponent.md)geerbt.
+Eine sprachneutrale Zeichenfolge, die den Dienst eindeutig identifiziert. Das folgende Format wird empfohlen, um Namenskonflikte zu vermeiden: \| \| "Herstellerkomponentenversion". Dieser Name stellt beispielsweise Version 1.0 der Microsoft Emulated Network Port Component dar: "Microsoft \| EmulatedNetworkPortComponent \| V1.0". Diese Eigenschaft wird von [**Msvm \_ VirtualizationComponent geerbt.**](msvm-virtualizationcomponent.md)
 
 </dd> <dt>
 
-**Type**
+**Typ**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt16**
+Datentyp: **uint16**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
@@ -171,10 +171,10 @@ Die Beziehung des WMI-Objekts, das hier mit dem virtuellen Gerät beschrieben wi
 
 | Wert                                                                                                                                                                                                                                                           | Bedeutung                                                                                                                                                                                                        |
 |-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| <span id="_Not_Changeable_"></span><span id="_not_changeable_"></span><span id="_NOT_CHANGEABLE_"></span><dl> <dt>**"Nicht änderbar"**</dt> <dt>0</dt> </dl> |                                                                                                                                                                                                                |
+| <span id="_Not_Changeable_"></span><span id="_not_changeable_"></span><span id="_NOT_CHANGEABLE_"></span><dl> <dt>**"Not Changeable"**</dt> <dt>0</dt> </dl> |                                                                                                                                                                                                                |
 | <span id="_Singleton_"></span><span id="_singleton_"></span><span id="_SINGLETON_"></span><dl> <dt>**"Singleton"**</dt> <dt>1</dt> </dl>                     | Singleton ist ein WMI-Objekt der obersten Ebene, das 1:1 an ein virtuelles Gerät gebunden ist und nur einmal pro virtuellem Computer vorhanden sein kann. Dies ist der Standardwert.<br/>                                                  |
 | <span id="_MultiInstance_"></span><span id="_multiinstance_"></span><span id="_MULTIINSTANCE_"></span><dl> <dt>**"MultiInstance"**</dt> <dt>2</dt> </dl>     | MultiInstance ist ein WMI-Objekt der obersten Ebene, das mehrmals pro virtuellem Computer vorhanden sein kann und 1:1 an ein virtuelles Gerät gebunden ist.<br/>                                                                    |
-| <span id="_Subdevice_"></span><span id="_subdevice_"></span><span id="_SUBDEVICE_"></span><dl> <dt>**"Subdevice"**</dt> <dt>3</dt> </dl>                     | Bei dem Subgerät handelt es sich um ein WMI-Objekt, das nicht über einen übergeordneten Verweis verfügt, sondern nur von einem virtuellen Gerät gesteuert wird, das nur einmal pro virtuellem Computer Das WMI-Objekt kann jedoch vielfachen vorhanden sein.<br/> |
+| <span id="_Subdevice_"></span><span id="_subdevice_"></span><span id="_SUBDEVICE_"></span><dl> <dt>**"Subdevice"**</dt> <dt>3</dt> </dl>                     | Subdevice ist ein WMI-Objekt, das über keinen übergeordneten Verweis verfügt, aber nur von einem virtuellen Gerät gesteuert wird, das nur einmal pro virtuellem Computer vorhanden sein kann. Das WMI-Objekt kann jedoch mehrfach vorhanden sein.<br/> |
 
 
 
@@ -182,9 +182,9 @@ Die Beziehung des WMI-Objekts, das hier mit dem virtuellen Gerät beschrieben wi
 
 </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Der Zugriff auf die **MSVM \_ virtualsystemresourcecomponent** -Klasse kann durch die UAC-Filterung eingeschränkt werden. Weitere Informationen finden Sie unter [Benutzerkontensteuerung und WMI](/windows/desktop/WmiSdk/user-account-control-and-wmi).
+Der Zugriff auf die **Msvm \_ VirtualSystemResourceComponent-Klasse** kann durch UAC-Filterung eingeschränkt werden. Weitere Informationen finden Sie unter [Benutzerkontensteuerung und WMI.](/windows/desktop/WmiSdk/user-account-control-and-wmi)
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -192,24 +192,24 @@ Der Zugriff auf die **MSVM \_ virtualsystemresourcecomponent** -Klasse kann durc
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows 8 \[ -Desktop-Apps\]<br/>                                                              |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2012 \[ -Desktop-Apps\]<br/>                                                    |
+| Unterstützte Mindestversion (Client)<br/> | \[Windows 8 Nur Desktop-Apps\]<br/>                                                              |
+| Unterstützte Mindestversion (Server)<br/> | \[Windows Server 2012 Nur Desktop-Apps\]<br/>                                                    |
 | Ende des Supports (Client)<br/>    | Windows 8.1<br/>                                                                                  |
 | Ende des Supports (Server)<br/>    | Windows Server 2012 R2<br/>                                                                       |
-| Namespace<br/>                | \\Stammvirtualisierung \\ v2<br/>                                                                     |
-| MOF<br/>                      | <dl> <dt>Windowsvirtualization. v2. MOF</dt> </dl> |
+| Namespace<br/>                | Root \\ Virtualization \\ V2<br/>                                                                     |
+| MOF<br/>                      | <dl> <dt>WindowsVirtualization.V2.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Vmms.exe</dt> </dl>                     |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**MSVM \_ virtualizationcomponent**](/windows/desktop/HyperV_v2/msvm-virtualizationcomponent)
+[**Msvm \_ VirtualizationComponent**](/windows/desktop/HyperV_v2/msvm-virtualizationcomponent)
 </dt> <dt>
 
-[**MSVM \_ virtualizationcomponent**](msvm-virtualizationcomponent.md)
+[**Msvm \_ VirtualizationComponent**](msvm-virtualizationcomponent.md)
 </dt> </dl>
 
  

@@ -1,31 +1,31 @@
 ---
 title: Abrufen einer Link-ID
-description: Ab Windows Server 2003 ist es nicht mehr erforderlich, ein linkid von Microsoft anzufordern. Es gibt einen Prozess zum automatischen Erstellen eines linkid.
+description: Ab Windows Server 2003 ist es nicht mehr erforderlich, eine linkID von Microsoft an fordern. es gibt einen Prozess zum automatischen Generieren einer linkID.
 ms.assetid: e3bf2936-40b1-46b5-8ee9-ab208bb388f6
 ms.tgt_platform: multiple
 keywords:
 - Abrufen einer Link-ID
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: a6893baab780d7fb481de0af77a607e988c3f87a
-ms.sourcegitcommit: 803f3ccd65bdefe36bd851b9c6e7280be9489016
+ms.openlocfilehash: 1800448e8cc665e0a28a88800a592e33d7b6ee5a766743d8a681a121c5ad02c0
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "104101439"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119025558"
 ---
 # <a name="obtaining-a-link-id"></a>Abrufen einer Link-ID
 
-Ab Windows Server 2003 ist es nicht mehr erforderlich, ein [**linkid**](/windows/desktop/ADSchema/a-linkid) von Microsoft anzufordern. Es gibt einen Prozess zum automatischen Erstellen eines **linkid**. Das System generiert automatisch eine Link-ID für ein neues Verknüpftes Attribut, wenn das **linkid** -Attribut des Attributs auf 1.2.840.113556.1.2.50 festgelegt ist. Ein Backlink für diesen vorwärts Link wird erstellt, indem der " **linkid** " auf " [**attributeId**](/windows/desktop/ADSchema/a-attributeid) " oder " [**ldapDisplayName**](/windows/desktop/ADSchema/a-ldapdisplayname) " des vorwärts links festgelegt wird. Der Schema Cache muss erneut geladen werden, nachdem der Forward-Link und vor dem Erstellen des Backlinks erstellt wurde. Andernfalls wird die **attributeId** oder der **ldapDisplayName** des vorwärts Links beim Erstellen des Backlinks nicht gefunden. Der Schema Cache wird nach Bedarf neu geladen, ein paar Minuten nach dem durchgeführt einer Schema Änderung oder beim Neustart des DC. Erstellen Sie alle vorwärts Verknüpfungen, laden Sie den Schema Cache neu, und erstellen Sie dann alle Backlinks.
+Ab Windows Server 2003 ist es nicht mehr erforderlich, eine [**linkID**](/windows/desktop/ADSchema/a-linkid) von Microsoft an fordern. es gibt einen Prozess zum automatischen Generieren einer **linkID**. Das System generiert automatisch eine Link-ID für ein neues verknüpftes Attribut, wenn das **linkID-Attribut** des Attributs auf 1.2.840.113556.1.2.50 festgelegt ist. Ein Rücklink für diesen Vorwärtslink wird erstellt, indem die **linkID** auf [**die attributeID**](/windows/desktop/ADSchema/a-attributeid) oder [**ldapDisplayName**](/windows/desktop/ADSchema/a-ldapdisplayname) des Forward-Links festlegen. Der Schemacache muss nach dem Erstellen des Forwardlinks und vor dem Erstellen des Backlinks erneut geladen werden. Andernfalls werden **attributeId** oder **ldapDisplayName** des Forwardlinks nicht gefunden, wenn der Backlink erstellt wird. Der Schemacache wird bei Bedarf, einige Minuten nach einer Schemaänderung oder beim Neustart des Domänencontrollers erneut geladen. Erstellen Sie alle Vorwärtslinks, laden Sie den Schemacache neu, und erstellen Sie dann alle Backlinks.
 
-Wenn Sie z. b. die neuen Attribute **myforwardlinkattr** und **mybacklinkattr** erstellt haben und diese verknüpfen möchten:
+Wenn Sie beispielsweise die neuen Attribute **myForwardLinkAttr** und **myBackLinkAttr** erstellt haben und diese verknüpfen möchten:
 
 > [!Note]  
-> Die OIDs in diesem Beispiel sind erfunden. Anweisungen zum Abrufen von OIDs für neue Attribute finden Sie unter Abrufen [eines Objekt Bezeichners von Microsoft](obtaining-an-object-identifier-from-microsoft.md) .
+> Die OIDs in diesem Beispiel werden konverkriert. Anweisungen [zum Abrufen von](obtaining-an-object-identifier-from-microsoft.md) OIDs für neue Attribute finden Sie unter Abrufen eines Objektbezeichners von Microsoft.
 
- 
+ 
 
-1.  Legen Sie diese Attribute für das Attribut fest, das der Forward-Link sein soll:
+1.  Legen Sie diese Attribute für das Attribut fest, das als Vorwärtslink verwendet werden soll:
     ```C++
     ldapDisplayName: myForwardLinkAttr
     OID: 1.2.840.113556.6.1234
@@ -34,8 +34,8 @@ Wenn Sie z. b. die neuen Attribute **myforwardlinkattr** und **mybacklinkattr** 
 
     
 
-2.  Erneutes Laden des Schemas.
-3.  Legen Sie diese Attribute für das Attribut fest, das als Backlink festgelegt werden soll:
+2.  Laden Sie das Schema erneut.
+3.  Legen Sie diese Attribute für das Attribut fest, das als Backlink verwendet werden soll:
     ```C++
     ldapDisplayName: myBackLinkAttr
     OID: 1.2.840.113556.6.1235
@@ -54,6 +54,6 @@ Wenn Sie z. b. die neuen Attribute **myforwardlinkattr** und **mybacklinkattr** 
 [Erweitern des Schemas](how-to-extend-the-schema.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 

@@ -1,5 +1,5 @@
 ---
-description: Dieses Thema enthält ein Beispiel für das Schreiben eines Skripts, mit dem Daten über Microsoft Windows HTTP-Dienste (WinHTTP) entweder synchron oder asynchron abgerufen werden.
+description: Dieses Thema enthält ein Beispiel für das Schreiben eines Skripts, das Daten über Microsoft Windows HTTP Services (WinHTTP) entweder synchron oder asynchron erhält.
 ms.assetid: 84b847f8-4d9e-4fea-9e87-df4c65b54a02
 title: Abrufen von Daten mithilfe eines Skripts
 ms.topic: article
@@ -9,16 +9,16 @@ topic_type:
 api_name: ''
 api_type: ''
 api_location: ''
-ms.openlocfilehash: 734516cf75f92cc43ab4cb15f22bd97aa803ec33
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 9e018aa680808feddc021c7c03937d085b0d0f787c3213720cbb5e94a46a85c0
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "103958669"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119133063"
 ---
 # <a name="retrieving-data-using-script"></a>Abrufen von Daten mithilfe eines Skripts
 
-Dieses Thema enthält ein Beispiel für das Schreiben eines Skripts, mit dem Daten über Microsoft Windows HTTP-Dienste (WinHTTP) entweder synchron oder asynchron abgerufen werden. Die in diesem Beispiel dargestellten Konzepte stellen die Grundlage für das Schreiben von Client-oder Server Anwendungen mittlerer Ebene dar, die über das HTTP-Protokoll Zugriff auf Daten benötigen.
+Dieses Thema enthält ein Beispiel für das Schreiben eines Skripts, das Daten über Microsoft Windows HTTP Services (WinHTTP) entweder synchron oder asynchron erhält. Die in diesem Beispiel veranschaulichten Konzepte bilden die Grundlage für das Schreiben von Client- oder Serveranwendungen der mittleren Ebene, die zugriff auf Daten mithilfe des HTTP-Protokolls benötigen.
 
 -   [Voraussetzungen und Anforderungen](#prerequisites-and-requirements)
 -   [Synchrones Abrufen von Daten](#retrieving-data-synchronously)
@@ -27,15 +27,15 @@ Dieses Thema enthält ein Beispiel für das Schreiben eines Skripts, mit dem Dat
 
 ## <a name="prerequisites-and-requirements"></a>Voraussetzungen und Anforderungen
 
-Zusätzlich zu den in Microsoft JScript funktionierenden Kenntnissen erfordert dieses Beispiel Folgendes:
+Zusätzlich zu den Kenntnissen von Microsoft JScript erfordert dieses Beispiel Folgendes:
 
 -   Die aktuelle Version des Microsoft Windows Software Development Kit (SDK).
--   Das Proxy Konfigurationstool zum Einrichten der Proxy Einstellungen für Microsoft Windows HTTP-Dienste (WinHTTP), wenn die Internetverbindung über einen Proxy Server erfolgt. Weitere Informationen finden Sie unter [ProxyCfg.exe, einem Proxy Konfigurations Tool](proxycfg-exe--a-proxy-configuration-tool.md).
--   Eine Vertrautheit mit der [Netzwerkterminologie](network-terminology.md) und den Konzepten.
+-   Das Proxykonfigurationstool zum Einrichten der Proxyeinstellungen für Microsoft Windows HTTP Services (WinHTTP), wenn Ihre Verbindung mit dem Internet über einen Proxyserver hergestellt wird. Weitere Informationen finden Sie unter [ProxyCfg.exe, einem Proxykonfigurationstool.](proxycfg-exe--a-proxy-configuration-tool.md)
+-   Vertrautheit mit [Netzwerkterminologie](network-terminology.md) und -konzepten.
 
 ## <a name="retrieving-data-synchronously"></a>Synchrones Abrufen von Daten
 
-**Gehen Sie folgendermaßen vor, um ein Skript zu erstellen, mit dem der Text von einer Webseite synchron abgerufen wird:**
+**Gehen Sie wie folgt vor, um ein Skript zu erstellen, das den Text von einer Webseite synchron erhält:**
 
 1.  Öffnen Sie einen Text-Editor.
 2.  Kopieren Sie den folgenden Code in den Text-Editor.
@@ -78,11 +78,11 @@ Zusätzlich zu den in Microsoft JScript funktionierenden Kenntnissen erfordert d
     
 
 3.  Speichern Sie die Datei als "Retrieve.js".
-4.  Geben Sie an einer Eingabeaufforderung "Cscript Retrieve.js" ein, und drücken Sie die EINGABETASTE.
+4.  Geben Sie an einer Eingabeaufforderung "cscript Retrieve.js" ein, und drücken Sie die EINGABETASTE.
 
-Sie verfügen jetzt über ein Skript, das ein [**WinHttpRequest**](winhttprequest.md) -Objekt verwendet, um den HTML-Quellcode für die Webseite unter zu erhalten https://www.microsoft.com . Möglicherweise müssen Sie einige Sekunden warten, bis der Code angezeigt wird.
+Sie verfügen jetzt über ein Skript, das ein [**WinHttpRequest-Objekt**](winhttprequest.md) verwendet, um den HTML-Quellcode für die Webseite unter https://www.microsoft.com abzurufen. Möglicherweise müssen Sie einige Sekunden warten, bis der Code angezeigt wird.
 
-Die Anwendung enthält nur eine Funktion, "gettext". Die erste Zeile des Skripts erstellt das [**WinHttpRequest**](winhttprequest.md) -Objekt.
+Die Anwendung enthält nur eine Funktion, "getText". In der ersten Zeile des Skripts wird das [**WinHttpRequest-Objekt**](winhttprequest.md) erstellt.
 
 
 ```JScript
@@ -92,9 +92,9 @@ Die Anwendung enthält nur eine Funktion, "gettext". Die erste Zeile des Skripts
 
 
 
-Wenn die JScript-Engine auf diese Zeile stößt, wird eine Instanz dieses Objekts erstellt. Wenn Sie die Fehlermeldung "ActiveX Component Can Can Create Object" (ActiveX-Komponente kann nicht erstellt werden) erhalten, ist die WinHttp.dll in dieser Zeile höchstwahrscheinlich nicht ordnungsgemäß registriert oder nicht auf dem System vorhanden.
+Wenn die JScript-Engine diese Zeile erkennt, wird eine Instanz dieses Objekts erstellt. Wenn Sie die Fehlermeldung "ActiveX Komponente kann kein Objekt erstellen" erhalten, wurde in dieser Zeile höchstwahrscheinlich der WinHttp.dll nicht ordnungsgemäß registriert oder ist auf dem System nicht vorhanden.
 
-Die nächste Zeile des Skripts Ruft die [**Open**](iwinhttprequest-open.md) -Methode auf.
+Die nächste Zeile des Skripts ruft die [**Open-Methode auf.**](iwinhttprequest-open.md)
 
 
 ```JScript
@@ -104,9 +104,9 @@ Die nächste Zeile des Skripts Ruft die [**Open**](iwinhttprequest-open.md) -Met
 
 
 
-Drei Parameter geben an, welches [*http-Verb*](glossary.md) verwendet werden soll, den Namen der Ressource und ob WinHTTP synchron oder asynchron verwendet werden soll. In diesem Beispiel verwendet die-Methode das *http-Verb*"Get" zum Abrufen von Daten aus https://www.microsoft.com . Wenn Sie für den letzten Parameter **false** angeben, wird festgelegt, dass die Transaktion synchron erfolgt. Die [**Open**](iwinhttprequest-open.md) -Methode stellt keine Verbindung mit der Ressource her, wie der Name vermuten könnte. Stattdessen werden die internen Datenstrukturen initialisiert, die Informationen über die Sitzung, die Verbindung und die Anforderung verwalten.
+Drei Parameter geben an, welches [*HTTP-Verb*](glossary.md) verwendet werden soll, den Namen der Ressource und ob WinHTTP synchron oder asynchron verwendet werden soll. In diesem Beispiel verwendet die -Methode das *HTTP-Verb*"GET", um Daten aus https://www.microsoft.com abzurufen. Die Angabe von **FALSE** für den letzten Parameter bestimmt, dass die Transaktion synchron erfolgt. Die [**Open-Methode**](iwinhttprequest-open.md) stellt keine Verbindung mit der Ressource her, wie der Name möglicherweise impliziert. Stattdessen werden die internen Datenstrukturen initialisiert, die Informationen zur Sitzung, Verbindung und Anforderung verwalten.
 
-Die [**Send**](iwinhttprequest-send.md) -Methode assembliert die Anforderungs Header und sendet die Anforderung. Wenn Sie im synchronen Modus aufgerufen wird, wartet die [**Send**](iwinhttprequest-send.md) -Methode auch auf eine Antwort, bevor die Anwendung fortgesetzt werden kann.
+Die [**Send-Methode**](iwinhttprequest-send.md) stellt die Anforderungsheader zusammen und sendet die Anforderung. Beim Aufruf im synchronen Modus wartet die [**Send-Methode**](iwinhttprequest-send.md) auch auf eine Antwort, bevor die Anwendung fortgesetzt werden kann.
 
 
 ```JScript
@@ -116,7 +116,7 @@ Die [**Send**](iwinhttprequest-send.md) -Methode assembliert die Anforderungs He
 
 
 
-Nach dem Senden der Anforderung gibt das Skript den Wert der [**responseText**](iwinhttprequest-responsetext.md) -Eigenschaft des [**WinHttpRequest**](winhttprequest.md) -Objekts zurück. Diese Eigenschaft enthält den Entitäts Text der Antwort, in diesem Fall die Quelle eines Dokuments.
+Nach dem Senden der Anforderung gibt das Skript den Wert der [**ResponseText-Eigenschaft**](iwinhttprequest-responsetext.md) des [**WinHttpRequest-Objekts**](winhttprequest.md) zurück. Diese Eigenschaft enthält den Entitätstext der Antwort, in diesem Fall die Quelle eines Dokuments.
 
 
 ```JScript
@@ -126,15 +126,15 @@ Nach dem Senden der Anforderung gibt das Skript den Wert der [**responseText**](
 
 
 
-Die Ausführung des Skripts wird angehalten, während der gesamte Text der Ressource abgerufen wird. Der Ressourcen Text wird von der Funktion zurückgegeben und angezeigt.
+Die Ausführung des Skripts wird angehalten, während der gesamte Text der Ressource abgerufen wird. Der Ressourcentext wird von der Funktion zurückgegeben und angezeigt.
 
-Das [**WinHttpRequest**](winhttprequest.md) -Objekt stellt sicher, dass alle internen Ressourcen, die für die HTTP-Transaktion zugeordnet sind, freigegeben werden.
+Das [**WinHttpRequest-Objekt**](winhttprequest.md) stellt sicher, dass alle internen Ressourcen, die für die HTTP-Transaktion zugeordnet sind, freigegeben werden.
 
 ## <a name="retrieving-data-asynchronously"></a>Asynchrones Abrufen von Daten
 
-Das asynchrone Abrufen von Daten mithilfe von WinHTTP ähnelt dem synchronen Abrufen von Daten. Ändern Sie das Skript aus dem vorherigen Abschnitt, indem Sie zwei kleine Änderungen vornehmen.
+Das asynchrone Abrufen von Daten mit WinHTTP ähnelt dem synchronen Abrufen von Daten. Ändern Sie das Skript aus dem vorherigen Abschnitt, indem Sie zwei kleine Änderungen vornehmen.
 
-1.  Legen Sie den dritten Parameter der [**Open**](iwinhttprequest-open.md) -Methode auf "true" anstelle von "false" fest, um anzugeben, dass WinHTTP-Methoden asynchron ausgeführt werden sollen.
+1.  Legen Sie den dritten Parameter der [**Open-Methode**](iwinhttprequest-open.md) auf "true" anstelle von "false" fest, um anzugeben, dass WinHTTP-Methoden asynchron ausgeführt werden sollen.
     ```JScript
        //  Create a HTTP request.
         var temp = WinHttpReq.Open("GET", strURL, true);
@@ -142,7 +142,7 @@ Das asynchrone Abrufen von Daten mithilfe von WinHTTP ähnelt dem synchronen Abr
 
     
 
-2.  Rufen Sie die [**WaitForResponse**](iwinhttprequest-waitforresponse.md) -Methode auf, bevor Sie auf die Response [**Text**](iwinhttprequest-responsetext.md) -Eigenschaft zugreifen, um sicherzustellen, dass die gesamte Antwort empfangen wurde.
+2.  Rufen Sie die [**WaitForResponse-Methode**](iwinhttprequest-waitforresponse.md) auf, bevor Sie auf die [**ResponseText-Eigenschaft**](iwinhttprequest-responsetext.md) zugreifen, um sicherzustellen, dass die gesamte Antwort empfangen wurde.
     ```JScript
         //  Send the HTTP request.
         WinHttpReq.Send();
@@ -156,9 +156,9 @@ Das asynchrone Abrufen von Daten mithilfe von WinHTTP ähnelt dem synchronen Abr
 
     
 
-Der Hauptvorteil der asynchronen Verwendung von WinHTTP im Skript besteht darin, dass die [**Send**](iwinhttprequest-send.md) -Methode sofort zurückgegeben wird. Die Anforderung wird von einem Arbeits Thread vorbereitet und gesendet. Dadurch kann Ihre Anwendung andere Aufgaben ausführen, während Sie auf die Antwort wartet. Bevor Sie versuchen, auf die Antwort zuzugreifen, stellen Sie sicher, dass die gesamte Antwort empfangen wurde, indem Sie die [**WaitForResponse**](iwinhttprequest-waitforresponse.md) -Methode aufrufen. Andernfalls kann ein Fehler auftreten.
+Der Hauptvorteil bei der asynchronen Verwendung von WinHTTP im Skript besteht darin, dass die [**Send-Methode**](iwinhttprequest-send.md) sofort zurückgibt. Die Anforderung wird von einem Arbeitsthread vorbereitet und gesendet. Dadurch kann Ihre Anwendung andere Dinge erledigen, während sie auf die Antwort wartet. Bevor Sie versuchen, auf die Antwort zuzugreifen, stellen Sie sicher, dass die gesamte Antwort empfangen wurde, indem Sie die [**WaitForResponse-Methode**](iwinhttprequest-waitforresponse.md) aufrufen. Andernfalls kann ein Fehler auftreten.
 
-Die [**WaitForResponse**](iwinhttprequest-waitforresponse.md) -Methode kann auch verwendet werden, um einen Timeout Wert für die Transaktion anzugeben. Mit einem optionalen Parameter können Sie den Timeout Wert in Sekunden angeben.
+Die [**WaitForResponse-Methode**](iwinhttprequest-waitforresponse.md) kann auch verwendet werden, um einen Time out-Wert für die Transaktion anzugeben. Mit einem optionalen Parameter können Sie den Time out-Wert in Sekunden angeben.
 
 ## <a name="related-topics"></a>Zugehörige Themen
 

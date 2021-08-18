@@ -1,19 +1,19 @@
 ---
-description: Die Struktur der Datei \_ System \_ Erkennungs \_ Struktur, die intern von Windows definiert und von der Dateisystem Erkennung (File System RECOGNITION, FRS) verwendet wird, enthält einen Prüfsummen Wert, der ordnungsgemäß berechnet werden muss, damit FRS ordnungsgemäß mit einem angegebenen nicht erkannten Dateisystem funktioniert.
+description: Die FILE SYSTEM RECOGNITION STRUCTURE-Struktur, die intern von Windows definiert und von der Dateisystemerkennung \_ (File System \_ Recognition, FRS) verwendet wird, enthält einen Prüfsummenwert, der ordnungsgemäß berechnet werden muss, damit FRS ordnungsgemäß mit einem angegebenen unbekannten Dateisystem \_ funktioniert.
 ms.assetid: 8f76784f-7d03-4874-ae7f-e8bdc42638c3
-title: Berechnen einer Prüfsumme für die Datei System Erkennung
+title: Berechnen einer Prüfsumme für die Dateisystemerkennung
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 74cac3975d4e1845dd1ff4aa218526e942fda152
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: ce146fda589668d39f1f7ff4158384986fb719f2bbbee6ce0584ad9f1e540b08
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "103960934"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119329180"
 ---
-# <a name="computing-a-file-system-recognition-checksum"></a>Berechnen einer Prüfsumme für die Datei System Erkennung
+# <a name="computing-a-file-system-recognition-checksum"></a>Berechnen einer Prüfsumme für die Dateisystemerkennung
 
-Die Struktur der [**Datei \_ System \_ Erkennungs \_ Struktur**](file-system-recognition-structure.md) , die intern von Windows definiert und von der [Dateisystem Erkennung (File System RECOGNITION](file-system-recognition.md) , FRS) verwendet wird, enthält einen Prüfsummen Wert, der ordnungsgemäß berechnet werden muss, damit FRS ordnungsgemäß mit einem angegebenen nicht erkannten Dateisystem funktioniert. Im folgenden Beispiel wird diese Berechnung durchgeführt.
+Die [**FILE SYSTEM RECOGNITION \_ \_ \_ STRUCTURE-Struktur,**](file-system-recognition-structure.md) die intern von Windows definiert und von der Dateisystemerkennung (File System [Recognition,](file-system-recognition.md) FRS) verwendet wird, enthält einen Prüfsummenwert, der ordnungsgemäß berechnet werden muss, damit FRS ordnungsgemäß mit einem angegebenen nicht ermittelten Dateisystem funktioniert. Im folgenden Beispiel wird diese Berechnung durchgeführt.
 
 
 ```C++
@@ -83,10 +83,10 @@ Return Value:
 
 <dl> <dt>
 
-[Datei System Erkennung](file-system-recognition.md)
+[Dateisystemerkennung](file-system-recognition.md)
 </dt> <dt>
 
-[**Datei \_ System- \_ Erkennungs \_ Struktur**](file-system-recognition-structure.md)
+[**\_ \_ \_ DATEISYSTEMERKENNUNGSSTRUKTUR**](file-system-recognition-structure.md)
 </dt> </dl>
 
  
