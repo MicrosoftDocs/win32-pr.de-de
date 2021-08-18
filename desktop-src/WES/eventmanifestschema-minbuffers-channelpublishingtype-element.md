@@ -1,9 +1,9 @@
 ---
-title: minbuffers (channelpublishingtype)-Element
-description: Die Mindestanzahl an Puffern, die für die Sitzung zuzuordnen sind.
+title: minBuffers -Element (ChannelPublishingType)
+description: Die Mindestanzahl von Puffern, die für die Sitzung reserviert werden.
 ms.assetid: 949d64c5-60c1-4ef1-9992-76370e2b10e8
 keywords:
-- minbuffers-Element (Ereignisprotokoll)
+- minBuffers-Element EventLog
 topic_type:
 - apiref
 api_name:
@@ -13,16 +13,16 @@ api_type:
 ms.topic: reference
 ms.date: 05/31/2018
 api_location: ''
-ms.openlocfilehash: ce941da1e74df8a51a2900de4507e1277f4e34c7
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 12d693b7f04356ac9103cb6ce85efcf9470a34b026b61007aeb4ecf88d49a119
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "106342426"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118120685"
 ---
-# <a name="minbuffers-channelpublishingtype-element"></a>minbuffers (channelpublishingtype)-Element
+# <a name="minbuffers-channelpublishingtype-element"></a>minBuffers -Element (ChannelPublishingType)
 
-Die Mindestanzahl an Puffern, die für die Sitzung zuzuordnen sind.
+Die Mindestanzahl von Puffern, die für die Sitzung reserviert werden.
 
 ``` syntax
 <xs:element name="minBuffers"
@@ -30,7 +30,7 @@ Die Mindestanzahl an Puffern, die für die Sitzung zuzuordnen sind.
  />
 ```
 
-Das **minbuffers** -Element wird durch den komplexen [**channelpublishingtype**](eventmanifestschema-channelpublishingtype-complextype.md) -Typ definiert.
+Das **minBuffers-Element** wird durch den komplexen [**ChannelPublishingType-Typ**](eventmanifestschema-channelpublishingtype-complextype.md) definiert.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -38,19 +38,19 @@ Das **minbuffers** -Element wird durch den komplexen [**channelpublishingtype**]
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>       |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/> |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ Vista-Desktop-Apps\]<br/>       |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
 **Übergeordnetes Element**
 </dt> <dt>
 
-[**Veröffentlichung (channelType)**](eventmanifestschema-publishing-channeltype-element.md)
+[**publishing (ChannelType)**](eventmanifestschema-publishing-channeltype-element.md)
 </dt> </dl>
 
  

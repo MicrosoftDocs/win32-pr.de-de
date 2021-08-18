@@ -1,9 +1,9 @@
 ---
-title: Closedcaption. samifilename
-description: Die samifilename-Eigenschaft gibt den Namen der Datei an, die die für den Untertitel erforderlichen Informationen enthält, oder ruft ihn ab.
+title: ClosedCaption.SAMIFileName
+description: Die SAMIFileName-Eigenschaft gibt den Namen der Datei an, die die für die Untertitelung erforderlichen Informationen enthält, oder ruft sie ab.
 ms.assetid: f2090500-6c9f-4d2d-9855-a9c193b00a41
 keywords:
-- Closedcaption. samifilename-Fenster Media Player
+- ClosedCaption.SAMIFileName Windows Media Player
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - DllExport
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 8bd748076eec80b5b7d97e7c041f454c4f9193f6
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 22ba314208db3cb5529042011f269f026a4cf2bd4d4b01d1b8d64719b96a5f90
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106364896"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118119511"
 ---
-# <a name="closedcaptionsamifilename"></a>Closedcaption. samifilename
+# <a name="closedcaptionsamifilename"></a>ClosedCaption.SAMIFileName
 
-Die **samifilename** -Eigenschaft gibt den Namen der Datei an, die die für den Untertitel erforderlichen Informationen enthält, oder ruft ihn ab.
+Die **SAMIFileName-Eigenschaft** gibt den Namen der Datei an, die die für die Untertitelung erforderlichen Informationen enthält, oder ruft diesen ab.
 
 ``` syntax
 player.closedCaption.SAMIFileName
@@ -31,23 +31,23 @@ player.closedCaption.SAMIFileName
 
 ## <a name="possible-values"></a>Mögliche Werte
 
-Diese Eigenschaft ist eine Lese- **/schreibzeichenfolge**.
+Diese Eigenschaft ist eine Zeichenfolge mit **Lese-/Schreibzugriff.**
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die in der Synchronisierung verfügbare Medienaustausch Datei (Sami) muss eine SMI-oder. Sami-Dateinamenerweiterung verwenden.
+Die SAMI-Datei (Synchronized Accessible Media Interchange) muss die Dateierweiterung SMI oder SAMI verwenden.
 
-Wenn Sie keinen Wert für **samifilename** angeben, ruft diese Eigenschaft eine Zeichenfolge ab, die den Dateinamen oder die URL enthält, die dem aktuellen Medien Element zugeordnet ist. Diese Zuordnung kann auftreten, wenn eine Sami-Datei mithilfe des *Sami* URL-Parameters angegeben wird, oder automatisch, wenn die Sami-Datei den gleichen Namen hat wie der Name der digitalen Mediendatei (mit Ausnahme der Dateinamenerweiterung). Wenn dem aktuellen Medium keine samische Datei zugeordnet ist, ruft diese Eigenschaft eine leere Zeichenfolge ("") ab.
+Wenn Sie keinen Wert für **SAMIFileName** angeben, ruft diese Eigenschaft eine Zeichenfolge ab, die den Dateinamen oder die URL enthält, die dem aktuellen Medienelement zugeordnet ist. Diese Zuordnung kann auftreten, wenn eine  SAMI-Datei mithilfe des sami-URL-Parameters angegeben wird, oder automatisch, wenn die SAMI-Datei denselben Namen wie der Name der Digitalen Mediendatei hat (mit Ausnahme der Dateierweiterung). Wenn dem aktuellen Medium keine SAMI-Datei zugeordnet ist, ruft diese Eigenschaft eine leere Zeichenfolge ("") ab.
 
-Nachdem Sie einen Wert für **samifilename** angegeben haben, wird dieser Wert beibehalten, bis Sie einen neuen Wert angeben (oder bis ein neues Medien Element mithilfe des *Sami* URL-Parameters geöffnet wird). Daher müssen Sie einen neuen Wert für diese Eigenschaft angeben, bevor Sie die einzelnen neuen Medienelemente wiedergeben. Auf diese Weise wird der neue Wert für **samifilename** wirksam, wenn das nächste Medien Element geöffnet wird (oder wenn *Player*.**Close** wird aufgerufen.) Das Angeben eines neuen Werts für **samifilename** hat keine Auswirkung auf das aktuelle Medium.
+Nachdem Sie einen Wert für **SAMIFileName** angegeben haben, wird dieser Wert beibehalten, bis Sie einen neuen Wert angeben (oder bis ein neues Medienelement mithilfe des *sami* URL-Parameters geöffnet wird). Daher müssen Sie einen neuen Wert für diese Eigenschaft angeben, bevor Sie jedes neue Medienelement wieder geben. Auf diese Weise wird der neue Wert für **SAMIFileName** wirksam, wenn das nächste Medienelement geöffnet wird (oder *wenn Player*.**close** wird aufgerufen. Die Angabe eines neuen Werts **für SAMIFileName** hat keine Auswirkungen auf das aktuelle Medium.
 
-Um zu bewirken, dass Windows Media Player die mit einem bestimmten Medien Element verknüpfte Sami-Datei zurückgibt, geben Sie einen Wert für **samifilename** an, der einer leeren Zeichenfolge ("") entspricht, bevor Sie das nächste Medien Element wiedergeben.
+Damit Windows Media Player die SAMI-Datei zurückgibt, die einem bestimmten Medienelement zugeordnet ist, geben Sie einen Wert für **SAMIFileName** an, der einer leeren Zeichenfolge ("") entspricht, bevor Sie das nächste Medienelement wiedergibt.
 
 **Windows Media Player 10 Mobile:** Diese Eigenschaft ist schreibgeschützt und gibt immer eine leere Zeichenfolge zurück.
 
 ## <a name="examples"></a>Beispiele
 
-In den folgenden drei JScript-Beispielen wird *closedcaption* verwendet. **Samifilename** zum Angeben des Namens einer Textdatei mit geschlossener Beschriftung. Das **Player** -Objekt wurde mit ID = "Player" erstellt.
+In den folgenden JScript Beispielen *wird ClosedCaption verwendet.* **SAMIFileName,** um den Namen einer Untertiteltextdatei anzugeben. Das **Player-Objekt** wurde mit der ID = "Player" erstellt.
 
 
 ```JScript
@@ -72,22 +72,22 @@ Player.closedCaption.SAMIFileName="C:\\WMSDK\\WMPSDK9\\samples\\media\\ccsample.
 
 | Anforderung | Wert |
 |--------------------|------------------------------------------------------------------------------------|
-| Version<br/> | Windows Media Player Version 7,0 oder höher.<br/>                              |
+| Version<br/> | Windows Media Player Version 7.0 oder höher.<br/>                              |
 | DLL<br/>     | <dl> <dt>Wmp.dll</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
 [**Hinzufügen von Untertiteln zu digitalen Medien**](adding-closed-captions-to-digital-media.md)
 </dt> <dt>
 
-[**Closedcaption-Objekt**](closedcaption-object.md)
+[**ClosedCaption-Objekt**](closedcaption-object.md)
 </dt> <dt>
 
-[**Player. Close**](player-close.md)
+[**Player.close**](player-close.md)
 </dt> </dl>
 
  

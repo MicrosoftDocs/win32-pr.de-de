@@ -1,25 +1,25 @@
 ---
-description: Veranschaulicht den Prozess zum Hinzufügen eines Geräte Handlers zu einem Gerät.
-title: Zuweisen eines Geräte Handlers zu einem Gerät
+description: Veranschaulicht den Prozess zum Hinzufügen eines Gerätehandlers zu einem Gerät.
+title: Zuweisen eines Gerätehandlers zu einem Gerät
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 16db6a39406e3d8ba7cd8b497e12883685b80d93
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 8de091a7206e8fe2d9ea2781e2c5b3475cb71446bae2effa9e017795ced8b9bf
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104979616"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119092974"
 ---
-# <a name="how-to-assign-a-device-handler-to-a-device"></a>Zuweisen eines Geräte Handlers zu einem Gerät
+# <a name="how-to-assign-a-device-handler-to-a-device"></a>Zuweisen eines Gerätehandlers zu einem Gerät
 
-Veranschaulicht den Prozess zum Hinzufügen eines Geräte Handlers zu einem Gerät.
+Veranschaulicht den Prozess zum Hinzufügen eines Gerätehandlers zu einem Gerät.
 
-## <a name="instructions"></a>Instructions
+## <a name="instructions"></a>Anweisungen
 
 
-Fügen Sie zum Zuweisen eines Geräte Handlers zu einem Gerät unter dem Unterschlüssel **Geräteparameter** der Geräte Instanz einen Wert vom Typ **reg \_ SZ** namens **devicehandlers** hinzu. Der Dateneintrag für diesen Wert ist der Name des Geräte Handlers.
+Um einem Gerät einen Gerätehandler zuzuweisen, fügen Sie unter dem Unterschlüssel **Geräteparameter** der Geräteinstanz einen Wert vom Typ **REG \_ SZ** mit dem Namen **DeviceHandlers hinzu.** Der Dateneintrag für diesen Wert ist der Name des Gerätehandlers.
 
-Im folgenden finden Sie einen Beispiel Eintrag für ein fiktives vid \_ 059&PID-Wert- \_ Gerät.
+Im Folgenden finden Sie einen Beispieleintrag für ein fiktives Vid \_ 059&Pid \_ 0031-Gerät.
 
 ```
 HKEY_LOCAL_MACHINE
@@ -33,7 +33,7 @@ HKEY_LOCAL_MACHINE
                         DeviceHandlers = MyDeviceHandler
 ```
 
-Geräte Handler können auch mithilfe von [Gerätegruppen](how-to-specify-an-icon--label--or-device-handler-for-a-device-using-a-device-group.md) -oder [Geräteklassen](how-to-specify-an-icon--label--or-device-handler-for-a-device-using-a-device-class.md) Einstellungen zugewiesen werden.
+Gerätehandler können auch mithilfe von [Gerätegruppen-](how-to-specify-an-icon--label--or-device-handler-for-a-device-using-a-device-group.md) oder [Geräteklasseneinstellungen](how-to-specify-an-icon--label--or-device-handler-for-a-device-using-a-device-class.md) zugewiesen werden.
 
  
 

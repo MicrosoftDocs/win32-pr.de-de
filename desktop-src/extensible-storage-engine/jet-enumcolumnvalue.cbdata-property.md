@@ -1,6 +1,6 @@
 ---
-description: Weitere Informationen finden Sie in der JET_ENUMCOLUMNVALUE. cbData-Eigenschaft.
-title: JET_ENUMCOLUMNVALUE. cbData (Eigenschaft)
+description: 'Weitere Informationen zu: JET_ENUMCOLUMNVALUE.cbData-Eigenschaft'
+title: JET_ENUMCOLUMNVALUE.cbData-Eigenschaft
 TOCTitle: 'cbData property '
 ms:assetid: P:Microsoft.Isam.Esent.Interop.JET_ENUMCOLUMNVALUE.cbData
 ms:mtpsurl: https://msdn.microsoft.com/library/microsoft.isam.esent.interop.jet_enumcolumnvalue.cbdata(v=EXCHG.10)
@@ -26,19 +26,19 @@ api_type:
 api_location:
 - Microsoft.Isam.Esent.Interop.dll
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: b297479329d02d8a30b79c502619cb0fd0b6f624
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 68f2e2f134b700bcaa4ee0251043d635c5a12059f396eae36ef42c81e0ddbffb
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106351046"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119110170"
 ---
-# <a name="jet_enumcolumnvaluecbdata-property"></a>JET_ENUMCOLUMNVALUE. cbData (Eigenschaft)
+# <a name="jet_enumcolumnvaluecbdata-property"></a>JET_ENUMCOLUMNVALUE.cbData-Eigenschaft
 
 Ruft die Größe des Spaltenwerts für die Spalte ab.
 
-**Namespace:**  [Microsoft. ISAM. ESENT. Interop](./microsoft.isam.esent.interop-namespace.md)  
-**Assembly:**  Microsoft. ISAM. ESENT. Interop (in Microsoft.Isam.Esent.Interop.dll)
+**Namespace:**  [Microsoft.Isam.Esent.Interop](./microsoft.isam.esent.interop-namespace.md)  
+**Assembly:**  Microsoft.Isam.Esent.Interop (in Microsoft.Isam.Esent.Interop.dll)
 
 ## <a name="syntax"></a>Syntax
 
@@ -60,14 +60,14 @@ public int cbData { get; internal set; }
 
 #### <a name="property-value"></a>Eigenschaftswert
 
-Typ: [System. Int32](/dotnet/api/system.int32)  
+Typ: [System.Int32](/dotnet/api/system.int32)  
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
-#### <a name="reference"></a>Referenz
+#### <a name="reference"></a>Verweis
 
 [JET_ENUMCOLUMNVALUE-Klasse](./jet-enumcolumnvalue-class.md)
 
-[Mitglieder JET_ENUMCOLUMNVALUE](./jet-enumcolumnvalue-members.md)
+[JET_ENUMCOLUMNVALUE-Member](./jet-enumcolumnvalue-members.md)
 
-[Microsoft. ISAM. ESENT. Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)
+[Microsoft.Isam.Esent.Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)

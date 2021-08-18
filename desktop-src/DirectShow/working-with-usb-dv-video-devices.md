@@ -1,49 +1,49 @@
 ---
-description: Arbeiten mit USB-DV-Video Geräten
+description: Arbeiten mit USB-DV-Videogeräten
 ms.assetid: 6244f006-db9f-42b2-81cd-26eba583613e
-title: Arbeiten mit USB-DV-Video Geräten
+title: Arbeiten mit USB-DV-Videogeräten
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 75647aa7b53bac45c155b4e0a9283418c9af58b7
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: cd1f83fb490f4bd1e71714dcb0658d01a41d6e45af6f3e89436f6e32c1cdc985
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104214999"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119071743"
 ---
-# <a name="working-with-usb-dv-video-devices"></a>Arbeiten mit USB-DV-Video Geräten
+# <a name="working-with-usb-dv-video-devices"></a>Arbeiten mit USB-DV-Videogeräten
 
-In diesem Thema wird beschrieben, wie Sie Anwendungen für USB-Videogeräte (Universal Serial Bus) schreiben, mit denen DV-Videos aufgezeichnet werden.
+In diesem Thema wird beschrieben, wie Sie Anwendungen für USB-Videogeräte (Universal Serial Bus) schreiben, die DV-Videos erfassen.
 
-Das Standard-DV-Format hat eine Datenrate von ungefähr 25 meits pro Sekunde (Mbit/s). Bei der ersten Einführung von USB war nicht genügend Bandbreite für die Unterstützung von DV-Videos vorhanden. USB 2,0 kann jedoch bis zu 480 Mbit/s unterstützen, was für das DV-Video mehr als ausreichend ist. Die in 2003 freigegebene Spezifikation der USB-Videogeräte Klasse (UVC) definiert das Nutz Last Format für USB-DV-Video Geräte. Ein Windows-Treibermodell (WDM)-Klassen Treiber für UVC-Geräte wurde in Windows XP Service Pack 2 eingeführt.
+Das DV-Standardformat hat eine Datenrate von ca. 25 Megabit pro Sekunde (MBit/s). Bei der ersten Einführung von USB war nicht genügend Bandbreite vorhanden, um DV-Videos zu unterstützen. USB 2.0 kann jedoch bis zu 480 MBit/s unterstützen, was für DV-Videos mehr als ausreicht. Die SPEZIFIKATION DER USB Video Device Class (UVC), die 2003 veröffentlicht wurde, definiert das Nutzlastformat für USB DV-Videogeräte. In Windows Windows XP Service Pack 2 wurde ein WDM-Klassentreiber (Windows Driver Model) für UVC-Geräte eingeführt.
 
-In den meisten Fällen unterstützt der UVC-Treiber dasselbe Programmiermodell wie der msdv-Treiber für IEEE 1394-Geräte. Für msdv geschriebene Anwendungen sollten nur geringfügige Änderungen zur Unterstützung von UVC-Geräten erforderlich sein.
+In den meisten Hinsicht unterstützt der UVC-Treiber das gleiche Programmiermodell wie der MSDV-Treiber für IEEE 1394 Geräte. Für MSDV geschriebene Anwendungen sollten nur geringfügige Änderungen erfordern, um UVC-Geräte zu unterstützen.
 
-Der UVC-Treiber verhält sich anders als der msdv-Treiber in den folgenden Bereichen:
+Der UVC-Treiber verhält sich in den folgenden Bereichen anders als der MSDV-Treiber:
 
 -   [Gerätemodus](device-mode.md)
 -   [Streamformat](stream-format.md)
--   [Signal Format](signal-format.md)
--   [Band Speicherort Suche](tape-location-search.md)
--   [Übertragen von DV von der Datei auf das Band](transmit-dv-from-file-to-tape.md).
+-   [Signalformat](signal-format.md)
+-   [Bandspeicherortsuche](tape-location-search.md)
+-   [Übertragen Sie DV aus der Datei auf band.](transmit-dv-from-file-to-tape.md)
 
-Um zu ermitteln, welcher Treiber verwendet wird, nennen Sie [**IAMExtDevice:: get \_ deviceport**](/windows/desktop/api/Strmif/nf-strmif-iamextdevice-get_deviceport). Der msdv-Treiber gibt das \_ Flag dev Port \_ 1394 zurück, und der UVC-Treiber gibt das \_ USB-Flag für den dev-Port zurück \_ .
+Um zu bestimmen, welcher Treiber verwendet wird, rufen [**Sie IAMExtDevice::get \_ DevicePort auf.**](/windows/desktop/api/Strmif/nf-strmif-iamextdevice-get_deviceport) Der MSDV-Treiber gibt das DEV \_ PORT \_ 1394-Flag zurück, und der UVC-Treiber gibt das DEV \_ \_ PORT-USB-Flag zurück.
 
 **Geräteknoten**
 
-In der USB-Terminologie sind Endpunkte die Punkte, an denen Daten das Gerät eingibt oder verlässt. Ein Endpunkt hat eine Richtung des Datenflusses, entweder Eingabe (von Gerät zum Host) oder Ausgabe (von Host zu Gerät). Es kann hilfreich sein, sich diese Richtungen als relativ zum Host vorzustellen. Die Eingabe wird an den Host weitergeleitet. die Ausgabe stammt vom Host. Das folgende Diagramm veranschaulicht die beiden Endpunkte.
+In der USB-Terminologie sind Endpunkte die Punkte, an denen Daten in das Gerät ein- oder aus dem Gerät übertragen werden. Ein Endpunkt hat eine Richtung des Datenflusses, entweder Eingabe (vom Gerät zum Host) oder Ausgabe (vom Host zum Gerät). Es kann helfen, diese Richtungen als relativ zum Host zu sehen. Die Eingabe geht an den Host. Die Ausgabe stammt vom Host. Das folgende Diagramm veranschaulicht die beiden Endpunkte.
 
 ![USB-Endpunkte](images/ksnodes01.png)
 
-In einem UVC-Gerät sind die Funktionen des Geräts logisch in Komponenten unterteilt, die als Einheiten und Terminals bezeichnet werden. Eine Einheit empfängt mindestens einen Datenstream als Eingabe und liefert genau einen Stream als Ausgabe. Ein Terminal ist der Ausgangspunkt oder Endpunkt für einen Datenstrom. USB-Endpunkte entsprechen Terminals, aber die Anweisungen sind umgekehrt: ein Eingabe Endpunkt wird durch ein Ausgabe Terminal dargestellt und umgekehrt. Das folgende Diagramm zeigt die Beziehung zwischen Terminals und Endpunkten.
+In einem UVC-Gerät werden die Funktionen des Geräts logisch in Komponenten unterteilt, die als Einheiten und Terminals bezeichnet werden. Eine Einheit empfängt einen oder mehrere Datenströme als Eingabe und liefert genau einen Stream als Ausgabe. Ein Terminal ist der Ausgangspunkt oder Endpunkt für einen Datenstrom. USB-Endpunkte entsprechen Terminals, aber die Richtungen sind umgekehrt: Ein Eingabeendpunkt wird durch ein Ausgabeterminal dargestellt und umgekehrt. Das folgende Diagramm zeigt die Beziehung zwischen Terminals und Endpunkten.
 
-![UVC-Einheiten und-Terminals](images/ksnodes02.png)
+![UVC-Einheiten und Terminals](images/ksnodes02.png)
 
-Außerdem entspricht nicht jedes Terminal einem USB-Endpunkt. Der Begriff Endpunkt bezieht sich speziell auf USB-Verbindungen, und ein Gerät kann Daten über nicht-USB-Verbindungen senden oder empfangen. Eine Videokamera ist z. b. ein Eingabe Terminal, und ein LCD-Bildschirm ist ein Ausgabe Terminal.
+Außerdem entspricht nicht jedes Terminal einem USB-Endpunkt. Der Begriff Endpunkt bezieht sich speziell auf USB-Verbindungen, und ein Gerät kann Daten über Nicht-USB-Verbindungen senden oder empfangen. Eine Videokamera ist z. B. ein Eingabeterminal, und ein SCREENSHOT ist ein Ausgabeterminal.
 
-Im-Server-Proxy Filter werden Einheiten und Terminals als Knoten innerhalb des Filters dargestellt. Der Begriff Knoten ist allgemeiner als die Begriffe Unit und Terminal, da nicht-USB-Geräte auch über Knoten verfügen können. Um Informationen zu den Knoten in einem Filter zu erhalten, Fragen Sie den Filter nach der " [**IKsTopologyInfo**](/previous-versions/windows/desktop/api/Vidcap/nn-vidcap-ikstopologyinfo) "-Schnittstelle ab. Knoten Typen werden von GUIDs identifiziert. Auswahl Knoten sind Knoten, die zwischen zwei oder mehr Eingaben wechseln können. Auswahl Knoten machen die [**ISelector**](/previous-versions/windows/desktop/api/Vidcap/nn-vidcap-iselector) -Schnittstelle verfügbar.
+Im KS-Proxyfilter werden Einheiten und Terminals als Knoten innerhalb des Filters dargestellt. Der Begriff Knoten ist allgemeiner als die Begriffe Einheit und Terminal, da Nicht-USB-Geräte auch Knoten enthalten können. Um Informationen zu den Knoten in einem Filter zu erhalten, fragen Sie den Filter für die [**IKsTopologyInfo-Schnittstelle**](/previous-versions/windows/desktop/api/Vidcap/nn-vidcap-ikstopologyinfo) ab. Knotentypen werden durch GUIDs identifiziert. Selektorknoten sind Knoten, die zwischen zwei oder mehr Eingaben wechseln können. Selektorknoten machen die [**ISelector-Schnittstelle**](/previous-versions/windows/desktop/api/Vidcap/nn-vidcap-iselector) verfügbar.
 
-Der folgende Code testet, ob eine Ausgabe-PIN für einen Filter Eingaben von einem Knoten eines bestimmten Typs empfängt.
+Der folgende Code testet, ob ein Ausgabepin auf einem Filter Eingaben von einem Knoten eines bestimmten Typs empfängt.
 
 
 ```C++

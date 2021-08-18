@@ -1,9 +1,9 @@
 ---
-title: Pauenelement
-description: Dies ist ein vordefiniertes ButtonElement mit den folgenden Standardwerten. | Pauenelement
+title: PAUSEELEMENT
+description: Dies ist ein vordefiniertes BUTTONELEMENT mit den folgenden Standardwerten. | PAUSEELEMENT
 ms.assetid: 9472ea68-daab-4969-b407-287aedb00fbf
 keywords:
-- Fenster Media Player von "pausegelement"
+- PAUSEELEMENT-Windows Media Player
 topic_type:
 - apiref
 api_name:
@@ -13,16 +13,16 @@ api_type:
 ms.topic: reference
 ms.date: 05/31/2018
 api_location: ''
-ms.openlocfilehash: ee55b347db98e14360200257c2dedd314f61ce4e
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: ae9a19c532fcee6c57d6bc318631447eefcdc421b4f57dd2284e0f05b4b86b32
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106371318"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118996040"
 ---
-# <a name="pauseelement"></a>Pauenelement
+# <a name="pauseelement"></a>PAUSEELEMENT
 
-Dies ist ein vordefiniertes **ButtonElement** mit den folgenden Standardwerten.
+Dies ist ein vordefiniertes **BUTTONELEMENT** mit den folgenden Standardwerten.
 
 ``` syntax
 onclick="jscript:player.controls.pause()" 
@@ -31,9 +31,9 @@ cursor="system"
 enabled="wmpenabled:player.controls.pause"
 ```
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Alle Eigenschaften dieses **buttonelements** können überschrieben werden, indem Sie explizit angegeben werden.
+Alle Eigenschaften dieses **BUTTONELEMENT-Steuerelements** können überschrieben werden, indem sie explizit angegeben werden.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -41,7 +41,7 @@ Alle Eigenschaften dieses **buttonelements** können überschrieben werden, inde
 
 | Anforderung | Wert |
 |--------------------|------------------------------------------------------|
-| Version<br/> | Windows Media Player, Version 7,0 oder höher<br/> |
+| Version<br/> | Windows Media Player Version 7.0 oder höher<br/> |
 
 
 
@@ -49,7 +49,7 @@ Alle Eigenschaften dieses **buttonelements** können überschrieben werden, inde
 
 <dl> <dt>
 
-[**ButtonElement-Element**](buttonelement-element.md)
+[**BUTTONELEMENT-Element**](buttonelement-element.md)
 </dt> </dl>
 
  

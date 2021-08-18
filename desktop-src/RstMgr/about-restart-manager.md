@@ -1,41 +1,41 @@
 ---
 title: Informationen zum Neustart-Manager
-description: Der primäre Grund für die Installation und Aktualisierung von Software erfordert einen Systemneustart, da einige der Dateien, die aktualisiert werden, zurzeit von einer ausgelaufenden Anwendung oder einem Dienst verwendet werden.
+description: Der Hauptgrund für die Softwareinstallation und Updates ist, dass ein Systemneustart erforderlich ist, da einige der zu aktualisierenden Dateien derzeit von einer ausgeführten Anwendung oder einem Dienst verwendet werden.
 ms.assetid: 9a1166d7-a0e1-4948-9077-278c84afccac
 keywords:
-- Neustart-Manager neu starten, Info
+- Neustart-Manager Restart Mgr , Informationen
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: ec1cfd300d554e311ab43cc0a9413514b6b60081
-ms.sourcegitcommit: 592c9bbd22ba69802dc353bcb5eb30699f9e9403
+ms.openlocfilehash: 98003ff4193ce26eb4ed2a3bdab60db8d58adf86698c6b9369a80b8043458579
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "103729576"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119010298"
 ---
 # <a name="about-restart-manager"></a>Informationen zum Neustart-Manager
 
-Der primäre Grund für die Installation und Aktualisierung von Software erfordert einen Systemneustart, da einige der Dateien, die aktualisiert werden, zurzeit von einer ausgelaufenden Anwendung oder einem Dienst verwendet werden. Mit dem Neustart-Manager können alle außer wichtigen Anwendungen und Dienste heruntergefahren und neu gestartet werden. Dadurch werden die verwendeten Dateien freigegeben, und die Installations Vorgänge können ausgeführt werden. Außerdem kann die Anzahl der Systemneustarts, die zum Durchführen einer Installation oder eines Updates erforderlich sind, beseitigt oder reduziert werden.
+Der Hauptgrund für die Softwareinstallation und Updates ist, dass ein Systemneustart erforderlich ist, da einige der zu aktualisierenden Dateien derzeit von einer ausgeführten Anwendung oder einem Dienst verwendet werden. Der Neustart-Manager ermöglicht das Herunterfahren und Neustarten aller wichtigen Anwendungen und Dienste bis auf . Dadurch werden die verwendeten Dateien freigegeben, und Installationsvorgänge können abgeschlossen werden. Es kann auch die Anzahl von Systemneustarts beseitigen oder verringern, die zum Abschließen einer Installation oder eines Updates erforderlich sind.
 
-Der Neustart-Manager stoppt Anwendungen in der folgenden Reihenfolge und startet Anwendungen, die für den Neustart in umgekehrter Reihenfolge registriert wurden, nach der Aktualisierung der Anwendungen neu.
+Der Neustart-Manager beendet Anwendungen in der folgenden Reihenfolge, und nachdem die Anwendungen aktualisiert wurden, werden Anwendungen, die für den Neustart registriert wurden, in umgekehrter Reihenfolge neu gestartet.
 
 1.  GUI-Anwendungen
 2.  Konsolenanwendungen
 3.  Windows-Dienste
 4.  Windows-Explorer
 
-Durch den Neustart-Manager werden Anwendungen oder Dienste nur dann heruntergefahren, wenn der Aufrufer über die entsprechende Berechtigung verfügt. Beachten Sie, dass das Sitzungs übergreifende Herunterfahren nicht unterstützt wird.
+Neustart-Manager fährt Anwendungen oder Dienste nur herunter, wenn der Aufrufer dazu berechtigt ist. Beachten Sie, dass das sitzungsübergreifende Herunterfahren nicht unterstützt wird.
 
-Anwendungen, die die [Windows Installer](/windows/desktop/Msi/windows-installer-portal) Version 4,0 für die Installation und Wartung verwenden, verwenden automatisch den Neustart-Manager, um die Systemneustarts zu verringern. Benutzerdefinierte Installationsprogramme können auch so entworfen werden, dass Sie die Restart Manager-API zum Herunterfahren und Neustarten von Anwendungen und Diensten aufruft. In Fällen, in denen ein Systemneustart unvermeidlich ist, können Installer die Neustart-Manager-API verwenden, um Neustarts so zu planen, dass die Unterbrechung des Arbeits Flusses des Benutzers minimiert wird.
+Anwendungen, die den [Windows Installer](/windows/desktop/Msi/windows-installer-portal) Version 4.0 für die Installation und Wartung verwenden, verwenden automatisch den Neustart-Manager, um Systemneustarts zu reduzieren. Benutzerdefinierte Installationsprogramme können auch so entworfen werden, dass sie die Restart Manager-API aufrufen, um Anwendungen und Dienste herunterzufahren und neu zu starten. In Fällen, in denen ein Systemneustart unvermeidlich ist, können Installationsprogramme die Restart Manager-API verwenden, um Neustarts so zu planen, dass die Unterbrechung des Arbeitsablaufs des Benutzers minimiert wird.
 
-Informationen zur Verwendung der Neustart-Manager-API während der Installation und Updates finden Sie unter [Verwenden des Neustart-Managers](using-restart-manager.md).
+Informationen zur Verwendung der Restart Manager-API während der Installation und updates finden Sie unter [Verwenden von Restart Manager.](using-restart-manager.md)
 
-Kritische Systemdienste können vom Neustart-Manager ohne Systemneustart nicht beendet und neu gestartet werden. Weitere Informationen zum Identifizieren kritischer Systemdienste finden Sie unter [wichtige Systemdienste](critical-system-services.md).
+Kritische Systemdienste können vom Neustart-Manager nicht ohne Systemneustart beendet und neu gestartet werden. Weitere Informationen zum Identifizieren kritischer Systemdienste finden Sie unter [Wichtige Systemdienste.](critical-system-services.md)
 
-Ihre Anwendungen und Dienste sollten so vorbereitet sein, dass Sie vom Neustart-Manager heruntergefahren werden und Benutzerdaten und Zustandsinformationen speichern, die für einen sauberen Neustart erforderlich sind. Weitere Informationen zum Vorbereiten von Anwendungen und Diensten für die Zusammenarbeit mit dem Neustart-Manager finden Sie unter [Richtlinien für Anwendungen und Dienste](guidelines-for-applications-and-services.md).
+Ihre Anwendungen und Dienste sollten darauf vorbereitet sein, vom Neustart-Manager heruntergefahren zu werden und Benutzerdaten und Zustandsinformationen zu speichern, die für einen sauberen Neustart erforderlich sind. Weitere Informationen zum Vorbereiten Ihrer Anwendungen und Dienste für die Arbeit mit dem Neustart-Manager finden Sie unter [Richtlinien für Anwendungen und Dienste.](guidelines-for-applications-and-services.md)
 
-Referenzinformationen zu den Enumerationen, Strukturen und Funktionen der Neustart-Manager-API finden Sie im Abschnitt " [Neustart-Manager-Referenz](restart-manager-reference.md) ".
+Referenzinformationen zu den Enumerationen, Strukturen und Funktionen der Restart Manager-API finden Sie im Abschnitt Restart Manager Reference (Referenz zum [Neustart-Manager).](restart-manager-reference.md)
 
- 
+ 
 
- 
+ 

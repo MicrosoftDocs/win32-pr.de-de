@@ -1,6 +1,6 @@
 ---
-description: 'Weitere Informationen finden Sie hier: esenttablenotemptyexception-Konstruktor'
-title: Esenttablenotemptyexception-Konstruktor
+description: 'Weitere Informationen zu: EsentTableNotEmptyException-Konstruktor'
+title: EsentTableNotEmptyException-Konstruktor
 TOCTitle: 'EsentTableNotEmptyException constructor '
 ms:assetid: M:Microsoft.Isam.Esent.Interop.EsentTableNotEmptyException.#ctor
 ms:mtpsurl: https://msdn.microsoft.com/library/microsoft.isam.esent.interop.esenttablenotemptyexception.esenttablenotemptyexception(v=EXCHG.10)
@@ -24,19 +24,19 @@ api_type:
 api_location:
 - Microsoft.Isam.Esent.Interop.dll
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: 5abe32294105f281a8fe3f242419dffd2965cfe8
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 23a35ed5a87a206c1ff448274ef2b5f9921b014b71d116599b3d334add62982e
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "104216111"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118981030"
 ---
-# <a name="esenttablenotemptyexception-constructor"></a>Esenttablenotemptyexception-Konstruktor
+# <a name="esenttablenotemptyexception-constructor"></a>EsentTableNotEmptyException-Konstruktor
 
-Initialisiert eine neue Instanz der esenttablenotemptyexception-Klasse.
+Initialisiert eine neue Instanz der EsentTableNotEmptyException-Klasse.
 
-**Namespace:**  [Microsoft. ISAM. ESENT. Interop](./microsoft.isam.esent.interop-namespace.md)  
-**Assembly:**  Microsoft. ISAM. ESENT. Interop (in Microsoft.Isam.Esent.Interop.dll)
+**Namespace:**  [Microsoft.Isam.Esent.Interop](./microsoft.isam.esent.interop-namespace.md)  
+**Assembly:**  Microsoft.Isam.Esent.Interop (in Microsoft.Isam.Esent.Interop.dll)
 
 ## <a name="syntax"></a>Syntax
 
@@ -52,12 +52,12 @@ Dim instance As New EsentTableNotEmptyException()
 public EsentTableNotEmptyException()
 ```
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
-#### <a name="reference"></a>Referenz
+#### <a name="reference"></a>Verweis
 
-[Esenttablenotemptyexception-Klasse](./esenttablenotemptyexception-class.md)
+[EsentTableNotEmptyException-Klasse](./esenttablenotemptyexception-class.md)
 
-[Esenttablenotemptyexception-Member](./esenttablenotemptyexception-members.md)
+[EsentTableNotEmptyException-Member](./esenttablenotemptyexception-members.md)
 
-[Microsoft. ISAM. ESENT. Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)
+[Microsoft.Isam.Esent.Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)

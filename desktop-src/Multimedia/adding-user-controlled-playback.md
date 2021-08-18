@@ -3,19 +3,19 @@ title: Hinzufügen User-Controlled Wiedergabe
 description: Hinzufügen User-Controlled Wiedergabe
 ms.assetid: c865bbc1-f78a-4d88-ab60-fba76818d175
 keywords:
-- Mciwndcreate-Funktion
+- MCIWndCreate-Funktion
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 198ae0bb72a5da82042b5448d2a9213358f0174d
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: a62d4e4af43be9877ec5bf3fae452e44ae415bc47047448cb65b64ad3446e0b6
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "106338188"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118941818"
 ---
 # <a name="adding-user-controlled-playback"></a>Hinzufügen User-Controlled Wiedergabe
 
-Sie können eine benutzergesteuerte Wiedergabe zu einer vorhandenen Anwendung hinzufügen, indem Sie die [**mciwndcreate**](/windows/desktop/api/Vfw/nf-vfw-mciwndcreatea) -Funktion wie folgt aufrufen:
+Sie können einer vorhandenen Anwendung eine benutzergesteuerte Wiedergabe hinzufügen, indem Sie die [**MCIWndCreate-Funktion**](/windows/desktop/api/Vfw/nf-vfw-mciwndcreatea) wie folgt aufrufen:
 
 
 ```C++
@@ -24,20 +24,20 @@ MCIWndCreate(hwndParent, hInstModule, NULL, "filename.typ");
 
 
 
-Mit den [**mciwndcreate**](/windows/desktop/api/Vfw/nf-vfw-mciwndcreatea) -Parametern werden Handles für das übergeordnete Fenster und die Modul Instanz identifiziert, die dem mciwnd-Fenster zugeordnet ist. Sie geben auch Fenster Stile und den Dateinamen (bzw. den Gerätenamen) an, die dem mciwnd-Fenster zugeordnet werden sollen.
+Die [**MCIWndCreate-Parameter**](/windows/desktop/api/Vfw/nf-vfw-mciwndcreatea) identifizieren Handles für das übergeordnete Fenster und die Modulinstanz, die dem MCIWnd-Fenster zugeordnet ist. Sie geben auch Fensterstile und den Dateinamen (oder Gerätenamen) an, die dem MCIWnd-Fenster zugeordnet werden sollen.
 
-**Mciwndcreate** führt automatisch die folgenden Schritte aus, die für andere Fenster Klassen selbst in Ihrem Code implementiert werden:
+**MCIWndCreate** führt automatisch die folgenden Schritte aus, die Sie für andere Fensterklassen selbst in Ihren Code implementieren würden:
 
-1.  Registrieren Sie die mciwnd-Fenster Klasse.
-2.  Erstellen Sie das Fenster mciwnd.
-3.  Lädt den angegebenen Inhalt.
-4.  Legen Sie die aktuelle Wiedergabe Position am Anfang des Inhalts fest.
-5.  Zeigen Sie das Geräte Steuerelement an.
-6.  Zeigen Sie bei Bedarf den Wiedergabe Bereich des Fensters an.
+1.  Registrieren Sie die MCIWnd-Fensterklasse.
+2.  Erstellen Sie das MCIWnd-Fenster.
+3.  Laden Sie den angegebenen Inhalt.
+4.  Legen Sie die aktuelle Wiedergabeposition am Anfang des Inhalts fest.
+5.  Zeigt das Gerätesteuerelement an.
+6.  Zeigen Sie bei Bedarf den Wiedergabebereich des Fensters an.
 
- 
+ 
 
- 
+ 
 
 
 

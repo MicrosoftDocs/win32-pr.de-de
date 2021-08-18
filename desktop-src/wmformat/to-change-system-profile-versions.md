@@ -1,29 +1,29 @@
 ---
-title: So ändern Sie System Profil Versionen
-description: So ändern Sie System Profil Versionen
+title: So ändern Sie Systemprofilversionen
+description: So ändern Sie Systemprofilversionen
 ms.assetid: 66bf4041-47b5-41b4-abb4-eb08d05e3b28
 keywords:
 - Profile, System
 - Systemprofile, Versionen
-- Systemprofile, Ändern von Versionen
+- Systemprofile, Versionsänderungen
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 824e2b1cf4a43cef0e87daa461c6510a6672472d
-ms.sourcegitcommit: 48d1c892045445bcbd0f22bafa2fd3861ffaa6e7
+ms.openlocfilehash: c963a142c879242b5e2ae734dedb4073a120a57a9121c3f3f95e5838c15110a6
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/19/2020
-ms.locfileid: "104314303"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119084270"
 ---
-# <a name="to-change-system-profile-versions"></a>So ändern Sie System Profil Versionen
+# <a name="to-change-system-profile-versions"></a>So ändern Sie Systemprofilversionen
 
-Wenn Sie ein Profil-Manager-Objekt erstellen, werden die Systemprofile analysiert. Sie können die Systemprofile mithilfe der [**iwmprofilemanager:: getsystemprofilecount**](/previous-versions/windows/desktop/api/Wmsdkidl/nf-wmsdkidl-iwmprofilemanager-getsystemprofilecount) -Methode und der [**iwmprofilemanager:: loadsystemprofile**](/previous-versions/windows/desktop/api/Wmsdkidl/nf-wmsdkidl-iwmprofilemanager-loadsystemprofile) -Methode durchlaufen, aber der Profil-Manager zählt und listet nur die Profile einer einzelnen Version gleichzeitig auf. Wenn Sie diese Methode für die Suche nach Systemprofilen verwenden möchten, müssen Sie sicherstellen, dass der Profil-Manager die gewünschte Version behandelt. Verwenden Sie die Methoden der [**IWMProfileManager2**](/previous-versions/windows/desktop/api/wmsdkidl/nn-wmsdkidl-iwmprofilemanager2) -Schnittstelle, um die vom Profil-Manager verwendete Systemprofil Version festzulegen und abzurufen.
+Jedes Mal, wenn Sie ein Profil-Manager-Objekt erstellen, werden die Systemprofile analysiert. Sie können die Systemprofile mithilfe der Methoden [**IWMProfileManager::GetSystemProfileCount**](/previous-versions/windows/desktop/api/Wmsdkidl/nf-wmsdkidl-iwmprofilemanager-getsystemprofilecount) und [**IWMProfileManager::LoadSystemProfile**](/previous-versions/windows/desktop/api/Wmsdkidl/nf-wmsdkidl-iwmprofilemanager-loadsystemprofile) durchlaufen, aber der Profil-Manager zählt und listet nur die Profile einer einzelnen Version auf. Wenn Sie diese Methode zum Suchen von Systemprofilen verwenden möchten, müssen Sie sicherstellen, dass der Profil-Manager die gewünschte Version verarbeitet. Verwenden Sie die Methoden der [**IWMProfileManager2-Schnittstelle,**](/previous-versions/windows/desktop/api/wmsdkidl/nn-wmsdkidl-iwmprofilemanager2) um die vom Profil-Manager verwendete Systemprofilversion festzulegen und abzurufen.
 
-Versionen werden mithilfe der Member des Enumerationstyps der [**WMT- \_ Version**](/previous-versions/windows/desktop/api/Wmsdkidl/ne-wmsdkidl-wmt_version) angegeben. Wenn Sie die Systemprofil Version auf WMT \_ ver \_ 9 0 festlegen \_ , wird der-Vorgang erfolgreich ausgeführt, aber die Anzahl der Systemprofile ist 0 (null). Dies liegt daran, dass keine vordefinierten Systemprofile die Codecs Windows Media Audio und der Video 9-Serie verwenden. Weitere Informationen zum Aktualisieren von Profilen für die Verwendung der neuesten Codecs finden Sie unter [wieder verwenden von streamkonfigurationen](reusing-stream-configurations.md).
+Versionen werden mithilfe der Member des [**WMT \_ VERSION-Enumerationstyps**](/previous-versions/windows/desktop/api/Wmsdkidl/ne-wmsdkidl-wmt_version) angegeben. Wenn Sie die Systemprofilversion auf WMT \_ VER \_ 9 \_ 0 festlegen, wird der Aufruf erfolgreich ausgeführt, aber die Anzahl der Systemprofile ist 0 (null). Dies liegt daran, dass keine vordefinierten Systemprofile die Codecs Windows Medienaudio- und Video 9-Serie verwenden. Weitere Informationen zum Aktualisieren von Profilen für die Verwendung der neuesten Codecs finden Sie unter [Wiederverwenden von Streamkonfigurationen.](reusing-stream-configurations.md)
 
-Wenn Sie ein Systemprofil mit dem GUID-Bezeichner laden, spielt es keine Rolle, welche Systemprofil Version der Profil-Manager verwendet. Weitere Informationen zum Laden von Systemprofilen finden [Sie unter So laden Sie ein Systemprofil](to-load-a-system-profile.md).
+Wenn Sie ein Systemprofil anhand seines GUID-Bezeichners laden, spielt es keine Rolle, welche Systemprofilversion der Profil-Manager verwendet. Weitere Informationen zum Laden von Systemprofilen finden Sie unter [So laden Sie ein Systemprofil.](to-load-a-system-profile.md)
 
-Der folgende Beispielcode zeigt, wie die Systemprofil Version festgelegt und abgerufen wird. In diesem Beispiel wird printf für die Konsolenausgabe verwendet, und es muss "stdio. h" eingeschlossen werden. Weitere Informationen zur Verwendung dieses Codes finden Sie unter [Verwenden der Codebeispiele](using-the-code-examples.md).
+Der folgende Beispielcode zeigt, wie die Systemprofilversion festgelegt und abgerufen wird. In diesem Beispiel wird printf für die Konsolenausgabe verwendet, und stdio.h muss eingeschlossen werden. Weitere Informationen zur Verwendung dieses Codes finden Sie unter [Verwenden der Codebeispiele.](using-the-code-examples.md)
 
 
 ```C++
@@ -134,12 +134,12 @@ int main(void)
 
 <dl> <dt>
 
-[**Verwenden von System Profilen**](using-system-profiles.md)
+[**Verwenden von Systemprofilen**](using-system-profiles.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

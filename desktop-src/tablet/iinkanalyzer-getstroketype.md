@@ -1,7 +1,7 @@
 ---
 description: Ruft den Typ des angegebenen Strichs ab.
 ms.assetid: bbd0bc23-89f9-4033-bc32-f9bd737c960c
-title: 'Iinkanalyzer:: GetStrokeType-Methode (iacom. h)'
+title: IInkAnalyzer::GetStrokeType-Methode (IACom.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,14 +13,14 @@ api_type:
 - COM
 api_location:
 - IACom.dll
-ms.openlocfilehash: d9358b2583f31fd26310ea880470f36404021fec
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 71bf3775be1c21e59cf41a51fa5a6140e86e44ac81a2863892c1f252666e0f3b
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104214659"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119092140"
 ---
-# <a name="iinkanalyzergetstroketype-method"></a>Iinkanalyzer:: GetStrokeType-Methode
+# <a name="iinkanalyzergetstroketype-method"></a>IInkAnalyzer::GetStrokeType-Methode
 
 Ruft den Typ des angegebenen Strichs ab.
 
@@ -40,14 +40,14 @@ HRESULT GetStrokeType(
 
 <dl> <dt>
 
-*lstrokeid* \[ in\]
+*lStrokeId* \[ In\]
 </dt> <dd>
 
-Der Strich Bezeichner.
+Der Strichbezeichner.
 
 </dd> <dt>
 
-*pstroketype* \[ vorgenommen\]
+*pStrokeType* \[ out\]
 </dt> <dd>
 
 Die Klassifizierung des angegebenen Strichs.
@@ -56,13 +56,13 @@ Die Klassifizierung des angegebenen Strichs.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Eine Beschreibung der Rückgabewerte finden Sie unter [Klassen und Schnittstellen-Ink-Analyse](classes-and-interfaces---ink-analysis.md).
+Eine Beschreibung der Rückgabewerte finden Sie unter Klassen und Schnittstellen – [Ink-Analyse.](classes-and-interfaces---ink-analysis.md)
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Wenn der Typ des Strichs der [**StrokeType**](stroketype.md) -Wert \_ nicht klassifiziert ist, klassifiziert [**iinkanalyzer**](iinkanalyzer.md) den Strich während der frei Hand Analyse. Andernfalls verwendet **iinkanalyzer** den Typ, der auf dem Strich festgelegt ist.
+Wenn der Typ des Strichs der [**StrokeType-Wert StrokeType**](stroketype.md) \_ Unclassified ist, klassifiziert [**IInkAnalyzer**](iinkanalyzer.md) den Strich während der Freihandanalyse. Andernfalls verwendet **IInkAnalyzer** den für den Strich festgelegten Typ.
 
-Der Wert von "Stroke Type" wird von [**iinkanalyzer**](iinkanalyzer.md) nicht als Teil der Ink-Analyse festgelegt. Verwenden Sie die [**iinkanalyzer:: SetStrokeType-Methode**](iinkanalyzer-setstroketype.md) oder die [**iinkanalyzer:: SetStrokesType-Methode**](iinkanalyzer-setstrokestype.md), um den strichentyp anzugeben oder zu ändern.
+[**IInkAnalyzer**](iinkanalyzer.md) legt den Strichtypwert nicht als Teil der Freihandanalyse fest. Verwenden Sie zum Angeben oder Ändern des Strichtyps die [**IInkAnalyzer::SetStrokeType-Methode**](iinkanalyzer-setstroketype.md) oder [**die IInkAnalyzer::SetStrokesType-Methode.**](iinkanalyzer-setstrokestype.md)
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -70,27 +70,27 @@ Der Wert von "Stroke Type" wird von [**iinkanalyzer**](iinkanalyzer.md) nicht al
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows XP Tablet PC Edition \[ Desktop-Apps\]<br/>                                                 |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur Desktop-Apps der XP Tablet PC Edition \[\]<br/>                                                 |
 | Unterstützte Mindestversion (Server)<br/> | Nicht unterstützt<br/>                                                                                     |
-| Header<br/>                   | <dl> <dt>Iacom. h (erfordert auch iacom \_ i. c)</dt> </dl> |
+| Header<br/>                   | <dl> <dt>IACom.h (erfordert auch IACom \_ i.c)</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>IACom.dll</dt> </dl>                          |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Iinkanalyzer**](iinkanalyzer.md)
+[**IInkAnalyzer**](iinkanalyzer.md)
 </dt> <dt>
 
-[**Iinkanalyzer:: SetStrokeType-Methode**](iinkanalyzer-setstroketype.md)
+[**IInkAnalyzer::SetStrokeType-Methode**](iinkanalyzer-setstroketype.md)
 </dt> <dt>
 
-[**Iinkanalyzer:: SetStrokesType-Methode**](iinkanalyzer-setstrokestype.md)
+[**IInkAnalyzer::SetStrokesType-Methode**](iinkanalyzer-setstrokestype.md)
 </dt> <dt>
 
-[Ink-Analyse Referenz](ink-analysis-reference.md)
+[Referenz zur Ink-Analyse](ink-analysis-reference.md)
 </dt> </dl>
 
  

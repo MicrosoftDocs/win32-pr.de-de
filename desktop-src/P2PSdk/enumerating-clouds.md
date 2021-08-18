@@ -1,29 +1,29 @@
 ---
-description: Beim Auflisten von Clouds muss eine Anwendung den Bereich der Suche nach Clouds bereitstellen. Nachdem der Bereich identifiziert wurde, kann die Anwendung den enumerationsprozess starten.
+description: Beim Aufzählen von Clouds muss eine Anwendung den Bereich der Suche nach Clouds bereitstellen. Nachdem der Bereich identifiziert wurde, kann die Anwendung den Enumerationsprozess starten.
 ms.assetid: efd16cca-ac63-4bfa-bc6c-d7465cc374ee
-title: Auflisten von Clouds
+title: Aufzählen von Clouds
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: f958a2cc958c10bd85e674b43a3b41354fc344c0
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: c651fcfd003e4cafdf9b0f04c7cfc993a1e677b03630a61556523eed8c3aaece
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106351688"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119011558"
 ---
-# <a name="enumerating-clouds"></a>Auflisten von Clouds
+# <a name="enumerating-clouds"></a>Aufzählen von Clouds
 
-Beim Auflisten von Clouds muss eine Anwendung den Bereich der Suche nach Clouds bereitstellen. Nachdem der Bereich identifiziert wurde, kann die Anwendung den enumerationsprozess starten.
+Beim Aufzählen von Clouds muss eine Anwendung den Bereich der Suche nach Clouds bereitstellen. Nachdem der Bereich identifiziert wurde, kann die Anwendung den Enumerationsprozess starten.
 
-Mit dem folgenden Verfahren werden die Aufrufe identifiziert, die zum Auflisten von Clouds durchgeführt werden müssen.
+Im folgenden Verfahren werden die Aufrufe identifiziert, die zum Aufzählen von Clouds vorgenommen werden müssen.
 
-**So zählen Sie Clouds auf**
+**So aufzählen Sie Clouds**
 
-1.  [**Wsalookupservicebegin**](pnrp-and-wsalookupservicebegin.md) aufrufen, um den Prozess zu starten und ein Handle zurückzugeben.
-2.  Rufen Sie [**WSALookupServiceNext**](pnrp-and-wsalookupservicenext.md) auf, um einen Satz von Clouds abzurufen, und rufen Sie dann diese Funktion auf, bis die Anwendung alle Clouds abgerufen hat.
-3.  [**WSALookupServiceEnd**](pnrp-and-wsalookupserviceend.md) aufrufen, um die-Enumeration abzuschließen.
+1.  Rufen [**Sie WSALookupServiceBegin auf,**](pnrp-and-wsalookupservicebegin.md) um den Prozess zu starten und ein Handle zurück zu geben.
+2.  Rufen [**Sie WSALookupServiceNext**](pnrp-and-wsalookupservicenext.md) auf, um eine Reihe von Clouds abzurufen, und rufen Sie dann diese Funktion auf, bis die Anwendung alle Clouds abgerufen hat.
+3.  Rufen [**Sie WSALookupServiceEnd auf,**](pnrp-and-wsalookupserviceend.md) um die Enumeration fertig zu stellen.
 
-## <a name="example-enumerating-and-printing-the-names-of-available-link-local-clouds"></a>Beispiel: Auflisten und Drucken der Namen von verfügbaren Link-Local-Clouds
+## <a name="example-enumerating-and-printing-the-names-of-available-link-local-clouds"></a>Beispiel: Aufzählen und Drucken der Namen verfügbarer linker lokaler Clouds
 
 
 ```C++

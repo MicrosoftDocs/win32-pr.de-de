@@ -1,6 +1,6 @@
 ---
-description: 'Weitere Informationen finden Sie hier: objectinfogrbit-Enumeration'
-title: Objectinfogrbit-Enumeration
+description: Weitere Informationen finden Sie unter ObjectInfoGrbit-Enumeration.
+title: ObjectInfoGrbit-Enumeration
 TOCTitle: ObjectInfoGrbit enumeration
 ms:assetid: T:Microsoft.Isam.Esent.Interop.ObjectInfoGrbit
 ms:mtpsurl: https://msdn.microsoft.com/library/microsoft.isam.esent.interop.objectinfogrbit(v=EXCHG.10)
@@ -30,21 +30,21 @@ api_type:
 api_location:
 - Microsoft.Isam.Esent.Interop.dll
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: 4028a2a337b32394029960e45bb0e485c2b6b705
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: cfd4bd427321137add1d0669fcaf798a353309a825d1ccf9544f45098d3454f3
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106349889"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118978640"
 ---
-# <a name="objectinfogrbit-enumeration"></a>Objectinfogrbit-Enumeration
+# <a name="objectinfogrbit-enumeration"></a>ObjectInfoGrbit-Enumeration
 
-Tabellen Optionen, die in [JET_OBJECTINFO](./jet-objectinfo-class.md)verwendet werden.
+Tabellenoptionen, die in [JET_OBJECTINFO](./jet-objectinfo-class.md)verwendet werden.
 
 Diese Enumeration enthält ein [FlagsAttribute](/dotnet/api/system.flagsattribute)-Attribut, das eine bitweise Kombination der Memberwerte zulässt.
 
-**Namespace:**  [Microsoft. ISAM. ESENT. Interop](./microsoft.isam.esent.interop-namespace.md)  
-**Assembly:**  Microsoft. ISAM. ESENT. Interop (in Microsoft.Isam.Esent.Interop.dll)
+**Namespace:**  [Microsoft.Isam.Esent.Interop](./microsoft.isam.esent.interop-namespace.md)  
+**Assembly:**  Microsoft.Isam.Esent.Interop (in Microsoft.Isam.Esent.Interop.dll)
 
 ## <a name="syntax"></a>Syntax
 
@@ -91,8 +91,8 @@ public enum ObjectInfoGrbit
 </table>
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
-#### <a name="reference"></a>Referenz
+#### <a name="reference"></a>Verweis
 
-[Microsoft. ISAM. ESENT. Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)
+[Microsoft.Isam.Esent.Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)

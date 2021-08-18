@@ -1,9 +1,9 @@
 ---
-title: EditBox. Value
-description: Das value-Attribut gibt den Text an, der im Bearbeitungsfeld-Steuerelement angezeigt wird, oder ruft ihn ab.
+title: EDITBOX.value
+description: Das Value-Attribut gibt den Text an, der im Bearbeitungsfeld-Steuerelement angezeigt wird, oder ruft diesen ab.
 ms.assetid: e9dea029-389a-4d52-8739-4a570e275840
 keywords:
-- EditBox. Value-Fenster Media Player
+- EDITBOX.value-Windows Media Player
 topic_type:
 - apiref
 api_name:
@@ -12,16 +12,16 @@ api_type:
 - NA
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 358dcafe73dd08ffa14e27c67742b6c630c19f59
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: c2de47d276e882f58ddc2b99d39e89ad43c3265c263e7841701ba32d8d502def
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106372280"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118996844"
 ---
-# <a name="editboxvalue"></a>EditBox. Value
+# <a name="editboxvalue"></a>EDITBOX.value
 
-Das **value** -Attribut gibt den Text an, der im Bearbeitungsfeld-Steuerelement angezeigt wird, oder ruft ihn ab.
+Das **Value-Attribut** gibt den Text an, der im Bearbeitungsfeld-Steuerelement angezeigt wird, oder ruft diesen ab.
 
 ``` syntax
         elementID.value
@@ -29,7 +29,7 @@ Das **value** -Attribut gibt den Text an, der im Bearbeitungsfeld-Steuerelement 
 
 ## <a name="possible-values"></a>Mögliche Werte
 
-Dieses Attribut ist eine Lese- **/schreibzeichenfolge** mit dem Standardwert "" (leere Zeichenfolge).
+Dieses Attribut ist eine  Zeichenfolge mit Lese-/Schreibzugriff mit dem Standardwert "" (leere Zeichenfolge).
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -45,7 +45,7 @@ Dieses Attribut ist eine Lese- **/schreibzeichenfolge** mit dem Standardwert "" 
 
 <dl> <dt>
 
-[**EditBox-Element**](editbox-element.md)
+[**EDITBOX-Element**](editbox-element.md)
 </dt> </dl>
 
  

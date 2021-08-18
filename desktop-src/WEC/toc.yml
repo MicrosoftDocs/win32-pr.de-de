@@ -1,40 +1,40 @@
 - name: Windows-Ereignissammlung
   href: windows-event-collector.md
   items:
-    - name: Verwenden der Windows-Ereignis Sammlung
+    - name: Verwenden Windows Ereignissammlers
       href: using-windows-event-collector.md
       items:
-        - name: Erstellen eines vom Collector initiierten Abonnements
+        - name: Erstellen eines collectorinitiiertes Abonnement
           href: creating-an-event-collector-subscription.md
         - name: Einrichten eines von der Quelle initiierten Abonnements
           href: setting-up-a-source-initiated-subscription.md
           items:
             - name: Erstellen eines von der Quelle initiierten Abonnements
               href: creating-a-source-initiated-subscription.md
-        - name: Hinzufügen einer Ereignis Quelle zu einem vom Collector initiierten Abonnement
+        - name: Hinzufügen einer Ereignisquelle zu einem vom Collector initiierten Abonnement
           href: adding-an-event-source-to-an-event-collector-subscription.md
-        - name: Erstellen von Hardware Ereignis Abonnements
+        - name: Erstellen von Hardwareereignisabonnements
           href: creating-hardware-event-subscriptions.md
-        - name: Löschen eines Ereignis Sammler Abonnements
+        - name: Löschen eines Ereignissammlerabonnements
           href: deleting-an-event-collector-subscription.md
-        - name: Anzeigen der Eigenschaften des Ereignis Sammler Abonnements
+        - name: Anzeigen von Ereignissammlerabonnementeigenschaften
           href: displaying-the-properties-of-an-event-collector-subscription.md
-        - name: Anzeigen des Status eines Ereignis Sammler Abonnements
+        - name: Anzeigen des Status eines Ereignissammlerabonnements
           href: displaying-the-status-of-an-event-collector-subscription.md
-        - name: Auflisten von Event Collector-Abonnements
+        - name: Auflisten von Ereignissammlerabonnements
           href: listing-event-collector-subscriptions.md
-        - name: Entfernen einer Ereignis Quelle aus einem vom Collector initiierten Abonnement
+        - name: Entfernen einer Ereignisquelle aus einem vom Collector initiierten Abonnement
           href: removing-an-event-source-from-an-event-collector-subscription.md
-        - name: Wiederholungsversuch für ein Ereignis Sammler Abonnement
+        - name: Wiederholen eines Ereignissammlerabonnements
           href: retrying-an-event-collector-subscription.md
-    - name: Referenz zur Windows-Ereignis Sammlung
+    - name: Windows Ereignissammlerreferenz
       href: windows-event-collector-reference.md
       items:
-        - name: Windows-Ereignis Sammler Konstanten
+        - name: Windows Ereignissammlerkonstanten
           href: windows-event-collector-constants.md
-        - name: Windows-Ereignis Sammler Datentypen
+        - name: Windows Ereignissammlerdatentypen
           href: windows-event-collector-data-types.md
-        - name: Windows-Ereignis Sammler-Enumerationen
+        - name: Windows Ereignissammlerenumerationen
           href: windows-event-collector-enumerations.md
           items:
             - name: EC_SUBSCRIPTION_CONFIGURATION_MODE
@@ -55,40 +55,40 @@
               href: /windows/win32/api/Evcoll/ne-evcoll-ec_subscription_type
             - name: EC_VARIANT_TYPE
               href: /windows/win32/api/Evcoll/ne-evcoll-ec_variant_type
-        - name: Funktionen der Windows-Ereignis Sammlung
+        - name: Windows Ereignissammlerfunktionen
           href: windows-event-collector-functions.md
           items:
-            - name: Ecclose
+            - name: EcClose
               href: /windows/desktop/api/Evcoll/nf-evcoll-ecclose
-            - name: Ecdelta etesub-Abonnement
+            - name: EcDeleteSubscription
               href: /windows/desktop/api/Evcoll/nf-evcoll-ecdeletesubscription
-            - name: Ecenumnextabonnement
+            - name: EcEnumNextSubscription
               href: /windows/desktop/api/Evcoll/nf-evcoll-ecenumnextsubscription
-            - name: Ecgetobjectarrayproperty
+            - name: EcGetObjectArrayProperty
               href: /windows/desktop/api/Evcoll/nf-evcoll-ecgetobjectarrayproperty
-            - name: Ecgetobjectarraysize
+            - name: EcGetObjectArraySize
               href: /windows/desktop/api/Evcoll/nf-evcoll-ecgetobjectarraysize
-            - name: Ecgetsubscribe ptionproperty
+            - name: EcGetSubscriptionProperty
               href: /windows/desktop/api/Evcoll/nf-evcoll-ecgetsubscriptionproperty
-            - name: Ecgetabonptionruntimestatus
+            - name: EcGetSubscriptionRunTimeStatus
               href: /windows/desktop/api/Evcoll/nf-evcoll-ecgetsubscriptionruntimestatus
-            - name: Ecinsertobjectarrayelement
+            - name: EcInsertObjectArrayElement
               href: /windows/desktop/api/Evcoll/nf-evcoll-ecinsertobjectarrayelement
-            - name: Ecopenabonptionenum
+            - name: EcOpenSubscriptionEnum
               href: /windows/desktop/api/Evcoll/nf-evcoll-ecopensubscriptionenum
-            - name: Ecopenabonnement
+            - name: EcOpenSubscription
               href: /windows/desktop/api/Evcoll/nf-evcoll-ecopensubscription
-            - name: Ecsavesub-Abonnement
+            - name: EcSaveSubscription
               href: /windows/desktop/api/Evcoll/nf-evcoll-ecsavesubscription
-            - name: Ectartobjectarrayproperty
+            - name: EcSetObjectArrayProperty
               href: /windows/desktop/api/Evcoll/nf-evcoll-ecsetobjectarrayproperty
-            - name: Ecsetabonptionproperty
+            - name: EcSetSubscriptionProperty
               href: /windows/desktop/api/Evcoll/nf-evcoll-ecsetsubscriptionproperty
-            - name: Ecremoveobjectarrayelement
+            - name: EcRemoveObjectArrayElement
               href: /windows/desktop/api/Evcoll/nf-evcoll-ecremoveobjectarrayelement
-            - name: Ecretryabonnement
+            - name: EcRetrySubscription
               href: /windows/desktop/api/Evcoll/nf-evcoll-ecretrysubscription
-        - name: Strukturen der Windows-Ereignis Sammlung
+        - name: Windows Ereignissammlerstrukturen
           href: windows-event-collector-structures.md
           items:
             - name: EC_VARIANT

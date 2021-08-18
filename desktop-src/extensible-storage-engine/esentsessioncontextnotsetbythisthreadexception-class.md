@@ -1,6 +1,6 @@
 ---
-description: 'Weitere Informationen finden Sie unter: esentsessioncontextnotsetbythisthreadexception-Klasse'
-title: Esentsessioncontextnotsetbythisthreadexception-Klasse
+description: 'Weitere Informationen zu: EsentSessionContextNotSetByThisThreadException-Klasse'
+title: EsentSessionContextNotSetByThisThreadException-Klasse
 TOCTitle: EsentSessionContextNotSetByThisThreadException class
 ms:assetid: T:Microsoft.Isam.Esent.Interop.EsentSessionContextNotSetByThisThreadException
 ms:mtpsurl: https://msdn.microsoft.com/library/microsoft.isam.esent.interop.esentsessioncontextnotsetbythisthreadexception(v=EXCHG.10)
@@ -24,29 +24,29 @@ api_type:
 api_location:
 - Microsoft.Isam.Esent.Interop.dll
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: 097712353336a9a412dd4255781a42c74eac1782
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 64339a51d0c2afe917ff1fbd41cab996ac0765bf24e2b4b6ae97e98d366f3a64
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106353924"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119039958"
 ---
-# <a name="esentsessioncontextnotsetbythisthreadexception-class"></a>Esentsessioncontextnotsetbythisthreadexception-Klasse
+# <a name="esentsessioncontextnotsetbythisthreadexception-class"></a>EsentSessionContextNotSetByThisThreadException-Klasse
 
-Basisklasse für JET_err. Sessioncontextnotsetbythisthread-Ausnahmen.
+Basisklasse für JET_err. SessionContextNotSetByThisThread-Ausnahmen.
 
 ## <a name="inheritance-hierarchy"></a>Vererbungshierarchie
 
 [System.Object](/dotnet/api/system.object)  
   [System.Exception](/dotnet/api/system.exception)  
-    [Microsoft. ISAM. ESENT. esentexception](./esentexception-class.md)  
-      [Microsoft. ISAM. ESENT. Interop. esenterrorexception](./esenterrorexception-class.md)  
-        [Microsoft. ISAM. ESENT. Interop. esentapiexception](./esentapiexception-class.md)  
-          [Microsoft. ISAM. ESENT. Interop. esentusageexception](./esentusageexception-class.md)  
-            Microsoft. ISAM. ESENT. Interop. esentsessioncontextnotsetbythisthreadexception  
+    [Microsoft.Isam.Esent.EsentException](./esentexception-class.md)  
+      [Microsoft.Isam.Esent.Interop.EsentErrorException](./esenterrorexception-class.md)  
+        [Microsoft.Isam.Esent.Interop.EsentApiException](./esentapiexception-class.md)  
+          [Microsoft.Isam.Esent.Interop.EsentUsageException](./esentusageexception-class.md)  
+            Microsoft.Isam.Esent.Interop.EsentSessionContextNotSetByThisThreadException  
 
-**Namespace:**  [Microsoft. ISAM. ESENT. Interop](./microsoft.isam.esent.interop-namespace.md)  
-**Assembly:**  Microsoft. ISAM. ESENT. Interop (in Microsoft.Isam.Esent.Interop.dll)
+**Namespace:**  [Microsoft.Isam.Esent.Interop](./microsoft.isam.esent.interop-namespace.md)  
+**Assembly:**  Microsoft.Isam.Esent.Interop (in Microsoft.Isam.Esent.Interop.dll)
 
 ## <a name="syntax"></a>Syntax
 
@@ -68,10 +68,10 @@ public sealed class EsentSessionContextNotSetByThisThreadException : EsentUsageE
 
 Alle öffentlichen statischen Elemente dieses Typs (Shared in Microsoft Visual Basic) sind threadsicher. Bei Instanzmembern ist die Threadsicherheit nicht gewährleistet.
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
-#### <a name="reference"></a>Referenz
+#### <a name="reference"></a>Verweis
 
-[Esentsessioncontextnotsetbythisthreadexception-Elemente](./esentsessioncontextnotsetbythisthreadexception-members.md)
+[EsentSessionContextNotSetByThisThreadException-Member](./esentsessioncontextnotsetbythisthreadexception-members.md)
 
-[Microsoft. ISAM. ESENT. Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)
+[Microsoft.Isam.Esent.Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)

@@ -1,6 +1,6 @@
 ---
 title: Netzwerkobjekt
-description: Das Netzwerkobjekt stellt Eigenschaften und Methoden bereit, die für den Zugriff auf Statistiken im Zusammenhang mit der Qualität einer Netzwerkverbindung sowie zum Angeben und Abrufen der Netzwerkproxyeinstellungen verwendet werden.
+description: Das Network-Objekt stellt Eigenschaften und Methoden für den Zugriff auf Statistiken im Zusammenhang mit der Qualität einer Netzwerkverbindung sowie zum Angeben und Abrufen der Netzwerkproxyeinstellungen zur Auswahl.
 ms.assetid: 5ae6137e-22f5-4a65-8793-b6f66adb4cba
 keywords:
 - Netzwerkobjekt-Windows Media Player
@@ -22,7 +22,7 @@ ms.locfileid: "118996110"
 ---
 # <a name="network-object"></a>Netzwerkobjekt
 
-Das **Netzwerkobjekt** stellt Eigenschaften und Methoden bereit, die für den Zugriff auf Statistiken im Zusammenhang mit der Qualität einer Netzwerkverbindung sowie zum Angeben und Abrufen der Netzwerkproxyeinstellungen verwendet werden.
+Das **Network-Objekt** stellt Eigenschaften und Methoden für den Zugriff auf Statistiken im Zusammenhang mit der Qualität einer Netzwerkverbindung sowie zum Angeben und Abrufen der Netzwerkproxyeinstellungen zur Auswahl.
 
 Das **Network-Objekt** unterstützt die folgenden Eigenschaften.
 
@@ -32,18 +32,18 @@ Das **Network-Objekt** unterstützt die folgenden Eigenschaften.
 |----------------------------------------------------|---------------------------------------------------------------------------------------------|
 | [Bandbreite](network-bandwidth.md)                 | Ruft die aktuelle Bandbreite des Medienelements ab.                                          |
 | [Bitrate](network-bitrate.md)                     | Ruft die aktuelle Bitrate ab, die empfangen wird.                                              |
-| [bufferingCount](network-bufferingcount.md)       | Ruft ab, wie oft die Pufferung während der Wiedergabe erfolgt ist.                           |
+| [bufferingCount](network-bufferingcount.md)       | Ruft ab, wie oft die Pufferung während der Wiedergabe aufgetreten ist.                           |
 | [bufferingProgress](network-bufferingprogress.md) | Ruft den Prozentsatz der abgeschlossenen Pufferung ab.                                            |
-| [bufferingTime](network-bufferingtime.md)         | Gibt die Pufferzeit in Millisekunden vor Beginn der Wiedergabe an oder ruft sie ab. |
+| [bufferingTime](network-bufferingtime.md)         | Gibt die Pufferzeit in Millisekunden an oder ruft sie ab, bevor die Wiedergabe beginnt. |
 | [downloadProgress](network-downloadprogress.md)   | Ruft den Prozentsatz des abgeschlossenen Downloads ab.                                             |
 | [encodedFrameRate](network-encodedframerate.md)   | Ruft die vom Inhaltsautor angegebene Videobildrate ab.                             |
 | [frameRate](network-framerate.md)                 | Ruft die aktuelle Videobildrate ab.                                                     |
-| [framesSkipped](network-framesskipped.md)         | Ruft die Gesamtanzahl von Frames ab, die während der Wiedergabe übersprungen wurden.                               |
-| [lostPackets](network-lostpackets.md)             | Ruft die Anzahl verlorener Pakete ab.                                                       |
+| [framesSkipped](network-framesskipped.md)         | Ruft die Gesamtanzahl der Frames ab, die während der Wiedergabe übersprungen wurden.                               |
+| [lostPackets](network-lostpackets.md)             | Ruft die Anzahl der verlorenen Pakete ab.                                                       |
 | [Maxbandwidth](network-maxbandwidth.md)           | Gibt die maximal zulässige Bandbreite an oder ruft sie ab.                                       |
 | [maxBitRate](network-maxbitrate.md)               | Ruft die maximal mögliche Videobitrate ab.                                              |
 | [receivedPackets](network-receivedpackets.md)     | Ruft die Anzahl der empfangenen Pakete ab.                                                   |
-| [empfangQuality](network-receptionquality.md)   | Ruft den Prozentsatz der Pakete ab, die in den letzten 30 Sekunden empfangen wurden.                        |
+| [receptionQuality](network-receptionquality.md)   | Ruft den Prozentsatz der Pakete ab, die in den letzten 30 Sekunden empfangen wurden.                        |
 | [recoveredPackets](network-recoveredpackets.md)   | Ruft die Anzahl der wiederhergestellten Pakete ab.                                                  |
 | [sourceProtocol](network-sourceprotocol.md)       | Ruft das Quellprotokoll ab, das zum Empfangen von Daten verwendet wird.                                         |
 
@@ -72,7 +72,7 @@ Das **Network-Objekt** unterstützt die folgenden Methoden.
 
  
 
-Der Zugriff auf das **Netzwerkobjekt** erfolgt über die folgende Eigenschaft.
+Auf **das Network-Objekt** wird über die folgende Eigenschaft zugegriffen.
 
 
 
@@ -84,11 +84,11 @@ Der Zugriff auf das **Netzwerkobjekt** erfolgt über die folgende Eigenschaft.
 
  
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 
-[**Objektmodellreferenz für Skripterstellung**](object-model-reference-for-scripting.md)
+[**Objektmodellreferenz für die Skripterstellung**](object-model-reference-for-scripting.md)
 </dt> </dl>
 
  

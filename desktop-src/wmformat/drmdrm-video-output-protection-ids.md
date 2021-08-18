@@ -1,10 +1,10 @@
 ---
-title: DRM_VIDEO_OUTPUT_PROTECTION_IDS Struktur (wmdrmsdk. h)
-description: Die Struktur der DRM- \_ Video- \_ Ausgabe \_ Schutz- \_ IDs enthält ein Array von DRM- \_ Video- \_ Ausgabe \_ Schutzstrukturen.
+title: DRM_VIDEO_OUTPUT_PROTECTION_IDS -Struktur (Wmdrmsdk.h)
+description: Die DRM \_ VIDEO \_ OUTPUT PROTECTION \_ \_ IDS-Struktur enthält ein Array von DRM \_ VIDEO OUTPUT \_ \_ PROTECTION-Strukturen.
 ms.assetid: 9f206a7e-c92b-4f29-a591-72784086d1db
 keywords:
-- DRM_VIDEO_OUTPUT_PROTECTION_IDS Struktur-Windows Media-Format
-- Struktur des Windows-Medien Formats
+- DRM_VIDEO_OUTPUT_PROTECTION_IDS struktur windows media format
+- Strukturfenster Medienformat
 topic_type:
 - apiref
 api_name:
@@ -15,16 +15,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 51af3ccebec52ab6f6863aeb376ed27f8c8e2467
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 9439328ed817da40630c3a600cf7e6db553738a12799babbe9e71c48f28923b4
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106364423"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119085872"
 ---
-# <a name="drm_video_output_protection_ids-structure"></a>Struktur der DRM- \_ Video- \_ Ausgabe \_ Schutz- \_ IDs
+# <a name="drm_video_output_protection_ids-structure"></a>\_IDS-Struktur des DRM-VIDEOAUSGABESCHUTZES \_ \_ \_
 
-Die Struktur der **DRM- \_ Video- \_ Ausgabe Schutz- \_ \_ IDs** enthält ein Array von **DRM-Video- \_ \_ Ausgabe \_ Schutz** Strukturen.
+Die **DRM \_ VIDEO OUTPUT PROTECTION \_ \_ \_ IDS-Struktur** enthält ein Array von **DRM VIDEO OUTPUT \_ \_ \_ PROTECTION-Strukturen.**
 
 ## <a name="syntax"></a>Syntax
 
@@ -42,23 +42,23 @@ typedef struct DRM_VIDEO_OUTPUT_PROTECTION_IDS {
 
 <dl> <dt>
 
-**centries**
+**cEntries**
 </dt> <dd>
 
-Anzahl der Elemente in dem Array, auf das von **rgvop** verwiesen wird.
+Anzahl der Elemente im Array, auf die von **rgVop verwiesen wird.**
 
 </dd> <dt>
 
-**rgvop**
+**rgVop**
 </dt> <dd>
 
-Die Adresse eines Arrays von **DRM- \_ Video- \_ ausgabeschutzstrukturen \_** . **DRM \_ Der Video \_ Ausgabe \_ Schutz** ist ein Typ, der als [**DRM- \_ Ausgabe \_ Schutz**](drm-output-protection.md)definiert ist.
+Adresse eines Arrays von **DRM \_ VIDEO OUTPUT \_ \_ PROTECTION-Strukturen.** **DRM \_ VIDEO \_ OUTPUT \_ PROTECTION ist** ein Typ, der als [**DRM OUTPUT PROTECTION definiert \_ \_ ist.**](drm-output-protection.md)
 
 </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Diese Struktur wird als Mitglied der [**DRM-Wiedergabe- \_ \_ OPL**](drmdrm-play-opl.md) -Struktur verwendet.
+Diese Struktur wird als Member der [**DRM \_ PLAY \_ OPL-Struktur**](drmdrm-play-opl.md) verwendet.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -66,18 +66,18 @@ Diese Struktur wird als Mitglied der [**DRM-Wiedergabe- \_ \_ OPL**](drmdrm-play
 
 | Anforderung | Wert |
 |-------------------|---------------------------------------------------------------------------------------|
-| Header<br/> | <dl> <dt>Wmdrmsdk. h</dt> </dl> |
+| Header<br/> | <dl> <dt>Wmdrmsdk.h</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**DRM \_ - \_ Audioausgabe- \_ Schutz- \_ IDs**](drm-audio-output-protection-ids.md)
+[**\_ \_ \_ DRM-AUDIOAUSGABESCHUTZ-IDS \_**](drm-audio-output-protection-ids.md)
 </dt> <dt>
 
-[**DRM- \_ Video- \_ Ausgabe Schutz- \_ \_ IDs \_ Ex**](drm-video-output-protection-ids-ex.md)
+[**DRM \_ VIDEO \_ OUTPUT \_ PROTECTION \_ IDS \_ EX**](drm-video-output-protection-ids-ex.md)
 </dt> <dt>
 
 [**Strukturen**](drm-structures.md)

@@ -1,5 +1,5 @@
 ---
-description: "\"Fidemdmconfigprofile\" \\/ ... \\/ Komprimierung (v4)"
+description: ModemDMConfigProfile \/ ... \/ Komprimierung (v4)
 MS-HAID: WWAN\_profile\_v4.element\_1\_Compression
 MSHAttr:
 - PreferredSiteName:MSDN
@@ -16,18 +16,18 @@ api_location: ''
 topic_type:
 - APIRef
 - kbSyntax
-ms.openlocfilehash: 5796afb061bdc758bba020384501699fe3627e16
-ms.sourcegitcommit: 4d4a6e9ad5de37e467cd3164276771b71e1f113f
+ms.openlocfilehash: c3be80fd71504f068da3ab8d40974b6ee397074e1b476e21c1f5f6901235671a
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/05/2021
-ms.locfileid: "106388840"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119035928"
 ---
-# <a name="span-idwwan_profile_v4element_1_compressionspanmodemdmconfigprofilecompression-v4"></a><span id="WWAN_profile_v4.element_1_Compression"></span>"Fidemdmconfigprofile" \/ ... \/ Komprimierung (v4)
+# <a name="span-idwwan_profile_v4element_1_compressionspanmodemdmconfigprofilecompression-v4"></a><span id="WWAN_profile_v4.element_1_Compression"></span>ModemDMConfigProfile \/ ... \/ Komprimierung (v4)
 
-Gibt an, ob die Komprimierung im Daten Link für Header und Datenübertragung verwendet wird.
+Gibt an, ob die Komprimierung am Datenlink für Header und Datenübertragung verwendet wird.
 
-Weitere Informationen finden Sie in der Dokumentation für das v1- [**Komprimierungs**](./schema-compression-contexttype-element.md) Element.
+Weitere Informationen finden Sie in der [](./schema-compression-contexttype-element.md) Dokumentation zum Komprimierungselement v1.
 
 ## <a name="element-hierarchy"></a>Elementhierarchie
 

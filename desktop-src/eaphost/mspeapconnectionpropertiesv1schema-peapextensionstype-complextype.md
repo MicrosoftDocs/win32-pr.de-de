@@ -1,9 +1,9 @@
 ---
-title: Komplexer Typ von "Peer apextensionstype"
-description: Enthält in Windows 7 vorgenommene Schema Erweiterungen. Zukünftige Schema Erweiterungen werden von PeapExtensionsTypeV2 behandelt.
+title: Komplexer PeapExtensionsType-Typ
+description: Enthält Schemaerweiterungen, die in Windows 7 vorgenommen wurden. Zukünftige Schemaerweiterungen werden von PeapExtensionsTypeV2 verarbeitet.
 ms.assetid: a8fb8474-a375-4401-83b0-4fa87d637209
 keywords:
-- Komplexer Typ von "etapextensionstype" EAPHost
+- Komplexer PeapExtensionsType-Typ EAPHost
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ ms.topic: reference
 ms.date: 05/31/2018
 api_location: ''
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: 7cb8c698122c5a466ae95f728838425a5f10c665
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 212c8bf6b1421cfc461288e8f57258b40e11e9118c9ea2b2f620986e91d226f8
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "103742841"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118984030"
 ---
-# <a name="peapextensionstype-complex-type"></a>Komplexer Typ von "Peer apextensionstype"
+# <a name="peapextensionstype-complex-type"></a>Komplexer PeapExtensionsType-Typ
 
-Der komplexe Typ " **etapextensionstype** " enthält in Windows 7 vorgenommene Schema Erweiterungen. Zukünftige Schema Erweiterungen werden von [**PeapExtensionsTypeV2**](mspeapconnectionpropertiesv2-peapextensionstypev2-complextype.md)behandelt.
+Der **komplexe PeapExtensionsType-Typ** enthält Schemaerweiterungen, die in Windows 7 vorgenommen wurden. Zukünftige Schemaerweiterungen werden von [**PeapExtensionsTypeV2 verarbeitet.**](mspeapconnectionpropertiesv2-peapextensionstypev2-complextype.md)
 
 ``` syntax
 <xs:complexType name="PeapExtensionsType">
@@ -52,18 +52,18 @@ Der komplexe Typ " **etapextensionstype** " enthält in Windows 7 vorgenommene S
 
 
 
-| Element                                                                                                                               | type | BESCHREIBUNG                                                                                                |
+| Element                                                                                                                               | type | Beschreibung                                                                                                |
 |---------------------------------------------------------------------------------------------------------------------------------------|------|------------------------------------------------------------------------------------------------------------|
-| [**extendedpeer: performservervalidation**](mspeapconnectionpropertiesv1schema-performservervalidation-peapextensionstype-element.md) |      | Windows 7 und höher: gibt an, ob die Server Validierung durchgeführt wird.<br/>                          |
-| [**extendedetap: akzeptservername**](mspeapconnectionpropertiesv1schema-acceptservername-peapextensionstype-element.md)               |      | Windows 7 und höher: gibt an, ob der Name eines Servers gelesen wird.<br/>                            |
-| [**extendedpeer: identityprivacy**](mspeapconnectionpropertiesv1schema-identityprivacy-peapextensionstype-element.md)                 |      | Windows 7 und höher: gibt an, ob die tatsächliche Identität eines Benutzers oder eine anonyme Identität gesendet wird.<br/> |
-| [**extendedpeer: PeapExtensionsV2**](mspeapconnectionpropertiesv1-peapextensionsv2-peapextensionstype-element.md)                     |      | Windows 7 und höher: ermöglicht zukünftige Erweiterungen des Schemas.<br/>                                 |
+| [**extendedPeap:PerformServerValidation**](mspeapconnectionpropertiesv1schema-performservervalidation-peapextensionstype-element.md) |      | Windows 7 und höher: Gibt an, ob die Serverüberprüfung ausgeführt wird.<br/>                          |
+| [**extendedPeap:AcceptServerName**](mspeapconnectionpropertiesv1schema-acceptservername-peapextensionstype-element.md)               |      | Windows 7 und höher: Gibt an, ob der Name eines Servers gelesen wird.<br/>                            |
+| [**extendedPeap:IdentityPrivacy**](mspeapconnectionpropertiesv1schema-identityprivacy-peapextensionstype-element.md)                 |      | Windows 7 und höher: Gibt an, ob die echte Identität eines Benutzers oder eine anonyme Identität gesendet wird.<br/> |
+| [**extendedPeap:PeapExtensionsV2**](mspeapconnectionpropertiesv1-peapextensionsv2-peapextensionstype-element.md)                     |      | Windows 7 und höher: ermöglicht zukünftige Erweiterungen des Schemas.<br/>                                 |
 
 
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Das Element " **Peer-extensionstype** " ist optional.
+Das **PeapExtensionsType-Element** ist optional.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -71,22 +71,22 @@ Das Element " **Peer-extensionstype** " ist optional.
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows 7 \[ -Desktop-Apps\]<br/>              |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 R2 \[ -Desktop-Apps\]<br/> |
+| Unterstützte Mindestversion (Client)<br/> | Windows 7 \[ Desktop-Apps\]<br/>              |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server 2008 \[ R2-Desktop-Apps\]<br/> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[EAPHost und Legacy Schema](eaphost-schemas.md)
+[EAPHost und Legacyschema](eaphost-schemas.md)
 </dt> <dt>
 
 [mspeapconnectionpropertiesv1-Schema](mspeapconnectionpropertiesv1schema-schema.md)
 </dt> <dt>
 
-[komplexe mspeapconnectionpropertiesv1-Schema Typen](mspeapconnectionpropertiesv1schema-complex-types.md)
+[mspeapconnectionpropertiesv1 Schema Complex Types](mspeapconnectionpropertiesv1schema-complex-types.md)
 </dt> </dl>
 
  

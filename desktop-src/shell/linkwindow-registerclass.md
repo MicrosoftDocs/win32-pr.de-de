@@ -22,7 +22,7 @@ ms.locfileid: "118968959"
 ---
 # <a name="linkwindow_registerclass-function"></a>LinkWindow \_ RegisterClass-Funktion
 
-\[Diese Funktion ist über Windows XP mit Service Pack 2 (SP2) und Windows Server 2003 verfügbar. Er kann in nachfolgenden Versionen von Windows geändert oder nicht verfügbar sein. Verwenden Sie stattdessen [**InitCommonControlsEx.**](/windows/win32/api/commctrl/nf-commctrl-initcommoncontrolsex)\]
+\[Diese Funktion ist über Windows XP mit Service Pack 2 (SP2) und Windows Server 2003 verfügbar. Sie kann in nachfolgenden Versionen von geändert oder nicht verfügbar Windows. Verwenden [**Sie stattdessen InitCommonControlsEx.**](/windows/win32/api/commctrl/nf-commctrl-initcommoncontrolsex)\]
 
 Registriert eine Fensterklasse, die die Verwendung des allgemeinen [SysLink-Steuerelements](../controls/syslink-overview.md) in einem Fenster ermöglicht.
 
@@ -43,13 +43,13 @@ Diese Funktion besitzt keine Parameter.
 
 Typ: **BOOL**
 
-Gibt **TRUE** zurück, wenn die Registrierung erfolgreich war. **Andernfalls FALSE.**
+Gibt **TRUE zurück,** wenn die Registrierung erfolgreich war. **Andernfalls FALSE.**
 
 ## <a name="remarks"></a>Hinweise
 
-Dieser Funktion ist kein Header oder eine Bibliotheksdatei zugeordnet, daher muss sie als Ordinalwert aufgerufen werden. Rufen Sie [**LoadLibrary**](/windows/win32/api/libloaderapi/nf-libloaderapi-loadlibrarya) mit dem DLL-Namen Shell32.dll auf, um ein Modulhandle abzurufen. Rufen Sie dann [**GetProcAddress**](/windows/win32/api/libloaderapi/nf-libloaderapi-getprocaddress) mit diesem Modulhandle und der Ordnungszahl 258 auf, um diese Funktion zu verwenden.
+Diese Funktion verfügt nicht über einen zugeordneten Header oder eine Bibliotheksdatei, daher muss sie nach Ordinalwert aufgerufen werden. Rufen [**Sie LoadLibrary mit**](/windows/win32/api/libloaderapi/nf-libloaderapi-loadlibrarya) dem DLL-Namen Shell32.dll, um ein Modulhand handle zu erhalten. Rufen Sie [**dann GetProcAddress**](/windows/win32/api/libloaderapi/nf-libloaderapi-getprocaddress) mit diesem Modulhandle und der Ordnungszahl 258 auf, um diese Funktion zu verwenden.
 
-Verwenden Sie [**LinkWindow \_ UnregisterClass,**](linkwindow-unregisterclass.md) um die Registrierung der Klasse nach der Verwendung zu aufheben.
+Verwenden [**Sie LinkWindow \_ UnregisterClass,**](linkwindow-unregisterclass.md) um die Registrierung der Klasse nach der Verwendung zu aufheben.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -63,7 +63,7 @@ Verwenden Sie [**LinkWindow \_ UnregisterClass,**](linkwindow-unregisterclass.md
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 

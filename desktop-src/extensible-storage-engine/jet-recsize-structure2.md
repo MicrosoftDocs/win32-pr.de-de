@@ -1,6 +1,6 @@
 ---
-description: 'Weitere Informationen finden Sie hier: JET_RECSIZE Struktur'
-title: JET_RECSIZE Struktur (Microsoft. ISAM. ESENT. Interop. Vista)
+description: 'Erfahren Sie mehr über: JET_RECSIZE Struktur'
+title: JET_RECSIZE -Struktur (Microsoft.Isam.Esent.Interop.Vista)
 TOCTitle: JET_RECSIZE structure
 ms:assetid: T:Microsoft.Isam.Esent.Interop.Vista.JET_RECSIZE
 ms:mtpsurl: https://msdn.microsoft.com/library/microsoft.isam.esent.interop.vista.jet_recsize(v=EXCHG.10)
@@ -24,19 +24,19 @@ api_type:
 api_location:
 - Microsoft.Isam.Esent.Interop.dll
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: e741d91187a138d7b8d9a57d0c4e76f54979d99e
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 58ac34dd551b38dc6179bbe1448d0b96e09073fff4ce716ac6efaf74037c0f3e
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106346679"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119107456"
 ---
-# <a name="jet_recsize-structure"></a>JET_RECSIZE Struktur
+# <a name="jet_recsize-structure"></a>JET_RECSIZE-Struktur
 
-Wird von [jetgetrecordsize (JET_SESID, JET_TABLEID, JET_RECSIZE, getrecordsizegrbit)](./vistaapi.jetgetrecordsize-method.md) verwendet, um Informationen über die Verwendungs Anforderungen eines Datensatzes im Benutzerdaten Bereich, die Anzahl der Mengen Spalten, die Anzahl der Werte und den mehr Aufwand für die ESENT-Daten Satzstruktur zurückzugeben.
+Wird von [JetGetRecordSize(JET_SESID, JET_TABLEID, JET_RECSIZE, GetRecordSizeGrbit)](./vistaapi.jetgetrecordsize-method.md) verwendet, um Informationen über die Nutzungsanforderungen eines Datensatzes im Benutzerdatenbereich, die Anzahl der festgelegten Spalten, die Anzahl von Werten und den Mehraufwand für die ESENT-Datensatzstruktur zurück zu geben.
 
-**Namespace:**  [Microsoft. ISAM. ESENT. Interop. Vista](./microsoft.isam.esent.interop.vista-namespace.md)  
-**Assembly:**  Microsoft. ISAM. ESENT. Interop (in Microsoft.Isam.Esent.Interop.dll)
+**Namespace:**  [Microsoft.Isam.Esent.Interop.Vista](./microsoft.isam.esent.interop.vista-namespace.md)  
+**Assembly:**  Microsoft.Isam.Esent.Interop (in Microsoft.Isam.Esent.Interop.dll)
 
 ## <a name="syntax"></a>Syntax
 
@@ -58,10 +58,10 @@ public struct JET_RECSIZE : IEquatable<JET_RECSIZE>
 
 Alle öffentlichen statischen Elemente dieses Typs (Shared in Microsoft Visual Basic) sind threadsicher. Bei Instanzmembern ist die Threadsicherheit nicht gewährleistet.
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
-#### <a name="reference"></a>Referenz
+#### <a name="reference"></a>Verweis
 
-[Mitglieder JET_RECSIZE](./jet-recsize-members.md)
+[JET_RECSIZE Mitglieder](./jet-recsize-members.md)
 
-[Microsoft. ISAM. ESENT. Interop. Vista-Namespace](./microsoft.isam.esent.interop.vista-namespace.md)
+[Microsoft.Isam.Esent.Interop.Vista-Namespace](./microsoft.isam.esent.interop.vista-namespace.md)

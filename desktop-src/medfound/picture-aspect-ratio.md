@@ -1,83 +1,83 @@
 ---
-description: In diesem Thema werden zwei verwandte Konzepte, das Bildseiten Verhältnis und das Pixel Seitenverhältnis beschrieben.
+description: 'In diesem Thema werden zwei verwandte Konzepte beschrieben: Bildseitenverhältnis und Pixel-Seitenverhältnis.'
 ms.assetid: 384bdeaa-5360-42af-9f95-b791af2dcafc
-title: Bildseiten Verhältnis
+title: Bildseitenverhältnis
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 74e81f1b8e26af753a5c8c1bc7ecb09d8a658582
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 71ae59cf213a9d44c9075f33be4bd422b81ced6dea270cf4fc9408990442529e
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104215020"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118972981"
 ---
-# <a name="picture-aspect-ratio"></a>Bildseiten Verhältnis
+# <a name="picture-aspect-ratio"></a>Bildseitenverhältnis
 
-In diesem Thema werden zwei verwandte Konzepte, das Bildseiten Verhältnis und das Pixel Seitenverhältnis beschrieben. Anschließend wird beschrieben, wie diese Konzepte in Microsoft Media Foundation mithilfe von Medientypen ausgedrückt werden.
+In diesem Thema werden zwei verwandte Konzepte beschrieben: Bildseitenverhältnis und Pixel-Seitenverhältnis. Anschließend wird beschrieben, wie diese Konzepte in Microsoft Media Foundation mithilfe von Medientypen ausgedrückt werden.
 
--   [Bildseiten Verhältnis](#picture-aspect-ratio)
-    -   [Letterbox](#letterboxing)
-    -   [Schwenken und überprüfen](#pan-and-scan)
--   [Pixel Seitenverhältnis](#pixel-aspect-ratio)
+-   [Bildseitenverhältnis](#picture-aspect-ratio)
+    -   [Letterboxing](#letterboxing)
+    -   [Schwenken und Scannen](#pan-and-scan)
+-   [Pixel-Seitenverhältnis](#pixel-aspect-ratio)
 -   [Arbeiten mit Seitenverhältnissen](#working-with-aspect-ratios)
--   [Code Beispiele](#code-examples)
-    -   [Suchen des Anzeige Bereichs](#finding-the-display-area)
-    -   [Zwischen Pixel-Seitenverhältnissen](#converting-between-pixel-aspect-ratios)
-    -   [Berechnen des Bereichs "Briefkasten"](#calculating-the-letterbox-area)
+-   [Codebeispiele](#code-examples)
+    -   [Suchen des Anzeigebereichs](#finding-the-display-area)
+    -   [Konvertieren zwischen Pixel-Seitenverhältnissen](#converting-between-pixel-aspect-ratios)
+    -   [Berechnen des Letterbox-Bereichs](#calculating-the-letterbox-area)
 -   [Zugehörige Themen](#related-topics)
 
-## <a name="picture-aspect-ratio"></a>Bildseiten Verhältnis
+## <a name="picture-aspect-ratio"></a>Bildseitenverhältnis
 
-*Bildseiten Verhältnis* definiert die Form des angezeigten Video Bilds. Das Seitenverhältnis des Bilds ist als "x:y" gekennzeichnet, wobei "x:y" das Verhältnis der Bildbreite zur Bildhöhe ist. Bei den meisten Videostandards wird das Seitenverhältnis von 4:3 oder 16:9 verwendet. Das 16:9-Seitenverhältnis wird häufig als " *Breitbild*" bezeichnet. Der Kino Film verwendet häufig ein Seitenverhältnis von 1:85:1 oder 1:66:1. Das Seitenverhältnis des Bilds wird auch als *Seitenverhältnis anzeigen* bezeichnet.
+*Bildseitenverhältnis* definiert die Form des angezeigten Videobilds. Das Seitenverhältnis des Bilds wird mit X:Y notiert, wobei X:Y das Verhältnis von Bildbreite zu Bildhöhe ist. Die meisten Videostandards verwenden entweder das Bildseitenverhältnis 4:3 oder 16:9. Das Seitenverhältnis 16:9 wird häufig als *Widescreen* bezeichnet. Der Film verwendet häufig ein Seitenverhältnis von 1:85:1 oder 1:66:1. Bildseitenverhältnis wird auch als *Anzeigeseitenverhältnis (Display Aspect Ratio,* DAR) bezeichnet.
 
-![Diagramm, das 4:3-und 16:9-Seitenverhältnisse anzeigt](images/aspect-ratio01.png)
+![Diagramm der Seitenverhältnisse 4:3 und 16:9](images/aspect-ratio01.png)
 
-Manchmal hat das Video Bild nicht dieselbe Form wie der Anzeigebereich. Beispielsweise kann ein 4:3-Video in einem Breitbild (16 × 9) angezeigt werden. In Computer Videos wird das Video möglicherweise in einem Fenster angezeigt, das eine beliebige Größe aufweist. In diesem Fall gibt es drei Möglichkeiten, wie das Bild im Anzeigebereich angepasst werden kann:
+Manchmal hat das Videobild nicht die gleiche Form wie der Anzeigebereich. Beispielsweise kann ein 4:3-Video auf einem Widescreen (16×9)-Fernsehgerät angezeigt werden. Im Computervideo kann das Video in einem Fenster mit einer beliebigen Größe angezeigt werden. In diesem Fall gibt es drei Möglichkeiten, wie das Bild in den Anzeigebereich passen kann:
 
--   Strecken Sie das Bild entlang einer Achse, sodass es an den Anzeigebereich angepasst ist.
--   Skalieren Sie das Bild so, dass es in den Anzeigebereich passt, während Sie das ursprüngliche Bildseiten Verhältnis beibehalten.
+-   Strecken Sie das Bild entlang einer Achse, um es an den Anzeigebereich anzupassen.
+-   Skalieren Sie das Bild so, dass es dem Anzeigebereich entspricht, und behalten Sie dabei das ursprüngliche Seitenverhältnis des Bilds bei.
 -   Zuschneiden des Bilds.
 
-Das Strecken des Bilds an den Anzeigebereich ist fast immer falsch, da es das richtige Bildseiten Verhältnis nicht beibehält.
+Das Strecken des Bilds an den Anzeigebereich ist fast immer falsch, da das richtige Bildseitenverhältnis nicht beibehalten wird.
 
-### <a name="letterboxing"></a>Letterbox
+### <a name="letterboxing"></a>Letterboxing
 
-Der Prozess der Skalierung eines Bildschirm Bilds an eine 4:3-Anzeige wird im nächsten Diagramm als *Letterbox* bezeichnet. Die resultierenden rechteckigen Bereiche am oberen und unteren Rand des Bilds sind in der Regel mit schwarz gefüllt, auch wenn andere Farben verwendet werden können.
+Der Prozess der Skalierung eines Breitbilds für eine 4:3-Anzeige wird als *Letterboxing* bezeichnet, wie im nächsten Diagramm dargestellt. Die resultierenden retanglularen Bereiche am oberen und unteren Rand des Bilds werden in der Regel mit Schwarz gefüllt, obwohl andere Farben verwendet werden können.
 
-![Diagramm mit der korrekten Methode zum Briefkasten](images/aspect-ratio02.png)
+![Diagramm, das die richtige Methode zum Letterbox-Schreiben zeigt](images/aspect-ratio02.png)
 
-Der umgekehrte Fall, das Skalieren eines 4:3-Bilds an eine Bildschirm Abbildung zeigt, wird manchmal als *Pillarboxing* bezeichnet. Der Begriff " *Letterbox* " wird jedoch auch allgemein verwendet, um ein Video Bild so zu skalieren, dass es an einen beliebigen Anzeigebereich angepasst wird.
+Der umgekehrte Fall, das Skalieren eines 4:3-Bilds für eine Breitbildanzeige, wird manchmal als *Pillarboxing* bezeichnet. Der Begriff *Letterbox* wird jedoch auch im allgemeinen Sinn verwendet, um die Skalierung eines Videobilds für einen beliebigen Anzeigebereich zu bedeuten.
 
 ![Diagramm mit Pillarboxing](images/aspect-ratio03.png)
 
-### <a name="pan-and-scan"></a>Schwenken und überprüfen
+### <a name="pan-and-scan"></a>Schwenken und Scannen
 
-"Pan-and-Scan" ist ein Verfahren, bei dem ein Breitbild auf einen vier × 3-rechteckigen Bereich zugeschnitten wird, um auf einem 4:3-Display Gerät angezeigt zu werden. Das resultierende Bild füllt die gesamte Anzeige aus, ohne dass schwarze Letterbox-Bereiche erforderlich sind, aber Teile des ursprünglichen Bilds werden aus dem Bild herausgeschnitten. Der Bereich, der zugeschnitten wird, kann sich von Frame zu Frame bewegen, während sich der Bereich des Interesses verschiebt. Der Begriff "Pan" in "Pan *-and-Scan* " bezieht sich auf den Schwenk Effekt, der durch das Verschieben des Bereichs "schwenken" und "Scannen" verursacht wird.
+Schwenken und Scannen ist eine Technik, bei der ein Breitbild auf einen rechteckigen Bereich von 4×3 zugeschnitten wird, um es auf einem 4:3-Anzeigegerät anzuzeigen. Das resultierende Bild füllt die gesamte Anzeige aus, ohne dass schwarze Letterboxbereiche erforderlich sind, aber Teile des ursprünglichen Bilds werden aus dem Bild zugeschnitten. Der bereich, der zugeschnitten wird, kann von Frame zu Frame verschoben werden, wenn sich der bereichliche Bereich verschiebt. Der Begriff "Schwenken" in *Schwenken und Scannen* bezieht sich auf den Schwenkeffekt, der durch das Verschieben des Schwenk- und Scanbereichs verursacht wird.
 
-![Diagramm mit Pan-and-Scan](images/aspect-ratio04.png)
+![Diagramm mit Schwenken und Scannen](images/aspect-ratio04.png)
 
-## <a name="pixel-aspect-ratio"></a>Pixel Seitenverhältnis
+## <a name="pixel-aspect-ratio"></a>Pixel-Seitenverhältnis
 
-*Pixel Seitenverhältnis* (par) misst die Form eines Pixels.
+*Das Pixel-Seitenverhältnis* (PAR) misst die Form eines Pixels.
 
-Wenn ein digitales Bild aufgezeichnet wird, wird das Bild sowohl vertikal als auch horizontal entnommen. Dies führt zu einem rechteckigen Array von quantifizierten Beispielen, die als *Pixel* oder *Pels* bezeichnet werden. Die Form des Stichproben Rasters bestimmt die Form der Pixel im digitalisierten Bild.
+Wenn ein digitales Bild erfasst wird, wird das Bild sowohl vertikal als auch horizontal entnommen, was zu einem rechteckigen Array von quantisierten Stichproben führt, die als *Pixel* oder *Kästchen* bezeichnet werden. Die Form des Stichprobenrasters bestimmt die Form der Pixel im digitalisierten Bild.
 
-Im folgenden finden Sie ein Beispiel, in dem kleine Zahlen verwendet werden, um die mathematische Mathematik beizubehalten. Angenommen, das ursprüngliche Bild ist quadratisch (das Bildseiten Verhältnis ist 1:1); angenommen, das Stichproben Raster enthält 12 Elemente, die in einem 4 × 3-Raster angeordnet sind. Die Form jedes resultierenden Pixels ist größer als die Breite. Insbesondere ist die Form jedes Pixels 3 × 4. Pixel, die nicht quadratisch sind, werden als *nicht quadratische Pixel* bezeichnet.
+Im Folgenden finden Sie ein Beispiel, in dem kleine Zahlen verwendet werden, um die Mathematische Berechnung einfach zu halten. Angenommen, das ursprüngliche Bild ist quadratisch (d. b. das Seitenverhältnis des Bilds ist 1:1). und nehmen wir an, dass das Samplingraster 12 Elemente enthält, die in einem 4×3-Raster angeordnet sind. Die Form jedes resultierenden Pixels ist größer als die Breite. Die Form jedes Pixels ist 3×4. Pixel, die nicht quadratisch sind, werden als *nicht quadratische Pixel* bezeichnet.
 
-![Diagramm mit einem nicht quadratischen Stichproben Raster](images/aspect-ratio05.png)
+![Diagramm mit einem Raster für nicht quadratische Stichprobenentnahme](images/aspect-ratio05.png)
 
-Das Pixel Seitenverhältnis gilt auch für das Anzeigegerät. Die physische Form des Anzeige Geräts und die Auflösung des physischen Pixels (über-und Abgleich) bestimmen das par des Anzeige Geräts. Computer Monitore verwenden im allgemeinen quadratische Pixel. Wenn das Bild par und das Anzeige-par nicht übereinstimmen, muss das Bild in einer Dimension, entweder vertikal oder horizontal, skaliert werden, damit es ordnungsgemäß angezeigt wird. Die folgende Formel bezieht sich auf par, das Anzeige Seitenverhältnis (dar) und die Bildgröße in Pixel:
+Das Pixel-Seitenverhältnis gilt auch für das Anzeigegerät. Die physische Form des Anzeigegeräts und die physische Pixelauflösung (über- und herunter) bestimmen den PAR des Anzeigegeräts. Computermonitore verwenden im Allgemeinen quadratische Pixel. Wenn bildPAR und display PAR nicht übereinstimmen, muss das Bild vertikal oder horizontal in einer Dimension skaliert werden, um ordnungsgemäß angezeigt zu werden. Die folgende Formel bezieht sich auf PAR, das Seitenverhältnis (Display Aspect Ratio, DAR) und die Bildgröße in Pixel:
 
-*Dar* = (*Bildbreite in Pixel*  /  *Bildhöhe in Pixel*) × *par*
+*DAR* = (*Bildbreite in Pixel*  /  *Bildhöhe in Pixel*) × *PAR*
 
-Beachten Sie, dass Bildbreite und Bildhöhe in dieser Formel auf das Bild im Speicher verweisen, nicht auf das angezeigte Bild.
+Beachten Sie, dass Bildbreite und Bildhöhe in dieser Formel auf das Bild im Arbeitsspeicher und nicht auf das angezeigte Bild verweisen.
 
-Im folgenden finden Sie ein Beispiel für eine reale Darstellung: NTSC-M-Analog Video enthält 480-Scan Zeilen im aktiven Bildbereich. "ITU-R Rec. BT. 601" gibt eine horizontale Samplingrate von 704 sichtbaren Pixeln pro Zeile an und ergibt ein digitales Bild mit 704 x 480 Pixeln. Das gewünschte Bildseiten Verhältnis ist 4:3 und ergibt ein par von 10:11.
+Hier sehen Sie ein beispiel aus der Praxis: Das analoge NTSC-M-Video enthält 480 Scanzeilen im aktiven Bildbereich. ITU-R Rec. BT.601 gibt eine horizontale Samplingrate von 704 sichtbaren Pixeln pro Zeile an, die ein digitales Bild mit 704 x 480 Pixel ergibt. Das beabsichtigte Bildseitenverhältnis ist 4:3 und ergibt einen PAR von 10:11.
 
 -   DAR: 4:3
 -   Breite in Pixel: 704
 -   Höhe in Pixel: 480
--   Par: 10/11
+-   PAR: 10/11
 
 4/3 = (704/420) x (10/11)
 
@@ -85,20 +85,20 @@ Um dieses Bild ordnungsgemäß auf einem Anzeigegerät mit quadratischen Pixeln 
 
 ## <a name="working-with-aspect-ratios"></a>Arbeiten mit Seitenverhältnissen
 
-Die korrekte Form eines Video Frames wird durch das *Pixel Seitenverhältnis* (par) und den *Anzeigebereich* definiert.
+Die richtige Form eines Videoframes wird durch das *Pixel-Seitenverhältnis (PAR)* und den *Anzeigebereich* definiert.
 
--   Der par-Typ definiert die Form der Pixel in einem Bild. Quadratische Pixel haben ein Seitenverhältnis von 1:1. Jedes andere Seitenverhältnis beschreibt ein nicht quadratisches Pixel. Beispielsweise verwendet NTSC TV eine 10:11-par-. Wenn Sie das Video auf einem Computermonitor präsentieren, hat die Anzeige quadratische Pixel (1:1 PAR). Der Inhalt des Quell Inhalts ist im MF-Attribut [**\_ Pixel- \_ \_ Seiten \_ Verhältnis**](mf-mt-pixel-aspect-ratio-attribute.md) für den Medientyp angegeben.
--   Der Anzeigebereich ist der Bereich des Video Bilds, das angezeigt werden soll. Es gibt zwei relevante Anzeige Bereiche, die im Medientyp angegeben werden können:
-    -   Pan-and-Scan-blenden. Die Pan-and-Scan-Öffnung ist ein 4 × 3-Videobereich, der im Pan/Scan-Modus angezeigt werden soll. Es wird verwendet, um breit Bildinhalte in einer 4 × 3-Anzeige ohne Letterboxing anzuzeigen. Die "Pan-and-Scan"- **Öffnung ist im** MF-Attribut " [**MF \_ MT \_ Pan \_ Scan \_ Aperture**](mf-mt-pan-scan-aperture-attribute.md) " angegeben und sollte nur verwendet werden, wenn das MF MT-Attribut für die Überprüfung [**\_ \_ \_ \_ aktiviert**](mf-mt-pan-scan-enabled-attribute.md) ist.
-    -   Anzeige Öffnung. Diese Öffnung ist in einigen Videostandards definiert. Alles außerhalb der Anzeige Öffnung ist der Overscan-Bereich und sollte nicht angezeigt werden. Beispielsweise beträgt das NTSC-Fernsehen 720 × 480 Pixel mit einer Anzeige Öffnung von 704 × 480. Die Anzeige Öffnung ist im MF-Master-Attribut für die [**\_ \_ minimale \_ Anzeige \_ Öffnung**](mf-mt-minimum-display-aperture-attribute.md) angegeben. Wenn Sie vorhanden ist, sollte Sie verwendet werden, wenn der Pan-and-Scan-Modus **false** ist.
+-   Der PAR definiert die Form der Pixel in einem Bild. Quadratpixel weisen ein Seitenverhältnis von 1:1 auf. Jedes andere Seitenverhältnis beschreibt ein nicht quadratisches Pixel. NtSC-Fernsehgerät verwendet z.B. einen 10:11 PAR. Angenommen, Sie stellen das Video auf einem Computermonitor vor, hat die Anzeige quadratische Pixel (1:1 PAR). Der PAR-Wert des Quellinhalts wird im [**MF MT PIXEL ASPECT \_ \_ \_ \_ RATIO-Attribut**](mf-mt-pixel-aspect-ratio-attribute.md) für den Medientyp angegeben.
+-   Der Anzeigebereich ist der Bereich des Videobilds, das angezeigt werden soll. Es gibt zwei relevante Anzeigebereiche, die im Medientyp angegeben werden können:
+    -   Pan-and-Scan-Öffnung. Die Pan-and-Scan-Öffnung ist eine 4×3-Videoregion, die im Schwenk-/Scanmodus angezeigt werden soll. Es wird verwendet, um Breitbildinhalte in einer 4×3-Anzeige ohne Letterboxing anzuzeigen. Die Pan-and-Scan-Öffnung wird im [**MF MT PAN SCAN \_ \_ \_ \_ APERTURE-Attribut**](mf-mt-pan-scan-aperture-attribute.md) angegeben und sollte nur verwendet werden, wenn das [**MF MT PAN SCAN \_ \_ \_ \_ ENABLED-Attribut**](mf-mt-pan-scan-enabled-attribute.md) **TRUE** ist.
+    -   Anzeigeaufblendung. Diese Öffnung ist in einigen Videostandards definiert. Alles außerhalb der Anzeigegeblendung ist der überscannte Bereich und sollte nicht angezeigt werden. Ntsc-Fernsehgerät hat z. B. 720×480 Pixel mit einer Öffnung von 704×480. Die Anzeigeblende wird im [**MF MT MINIMUM DISPLAY \_ \_ \_ \_ APERTURE-Attribut**](mf-mt-minimum-display-aperture-attribute.md) angegeben. Falls vorhanden, sollte es verwendet werden, wenn der Schwenk- und Scanmodus **FALSE** ist.
 
-Wenn der Pan-and-can-Modus **false** ist und keine Anzeige Öffnung definiert ist, sollte der gesamte Videoframe angezeigt werden. Dies gilt auch für die meisten Videoinhalte außer für Fernseh-und DVD-Videos. Das Seitenverhältnis des gesamten Bilds wird als (*Anzeige Bereichs Breite* Anzeige  /  *Bereichs Höhe*) × *par* berechnet.
+Wenn schwenk- und kann-Modus **FALSE** ist und keine Anzeigeaufblendung definiert ist, sollte der gesamte Videoframe angezeigt werden. Tatsächlich ist dies bei den meisten Videoinhalten mit Ausnahme von Fernseh- und DVD-Videos der Fall. Das Seitenverhältnis des gesamten Bilds wird als *(Anzeigebereichsbreitenhöhe*  /  ) × *PAR* berechnet.
 
 ## <a name="code-examples"></a>Codebeispiele
 
-### <a name="finding-the-display-area"></a>Suchen des Anzeige Bereichs
+### <a name="finding-the-display-area"></a>Suchen des Anzeigebereichs
 
-Der folgende Code zeigt, wie Sie den Anzeigebereich vom Medientyp aus aufrufen.
+Der folgende Code zeigt, wie sie den Anzeigebereich vom Medientyp abrufen.
 
 
 ```C++
@@ -184,9 +184,9 @@ MFVideoArea MakeArea(float x, float y, DWORD width, DWORD height)
 
 
 
-### <a name="converting-between-pixel-aspect-ratios"></a>Zwischen Pixel-Seitenverhältnissen
+### <a name="converting-between-pixel-aspect-ratios"></a>Konvertieren zwischen Pixel-Seitenverhältnissen
 
-Der folgende Code zeigt, wie ein Rechteck von einem Pixel Seitenverhältnis (par) in ein anderes konvertiert wird, während gleichzeitig das Bildseiten Verhältnis beibehalten wird.
+Der folgende Code zeigt, wie Ein Rechteck von einem Pixel-Seitenverhältnis (PAR) in ein anderes konvertiert wird, während das Seitenverhältnis des Bilds beibehalten wird.
 
 
 ```C++
@@ -246,9 +246,9 @@ RECT CorrectAspectRatio(const RECT& src, const MFRatio& srcPAR, const MFRatio& d
 
 
 
-### <a name="calculating-the-letterbox-area"></a>Berechnen des Bereichs "Briefkasten"
+### <a name="calculating-the-letterbox-area"></a>Berechnen des Letterbox-Bereichs
 
-Der folgende Code berechnet den Briefkasten Bereich bei Angabe eines Quell-und Ziel Rechtecks. Es wird davon ausgegangen, dass beide Rechtecke denselben Wert aufweisen.
+Der folgende Code berechnet den Letterboxbereich mit einem Quell- und Zielrechteck. Es wird davon ausgegangen, dass beide Rechtecke denselben PAR haben.
 
 
 ```C++
@@ -297,19 +297,19 @@ RECT LetterBoxRect(const RECT& rcSrc, const RECT& rcDst)
 [Medientypen](media-types.md)
 </dt> <dt>
 
-[Video Medientypen](video-media-types.md)
+[Videomedientypen](video-media-types.md)
 </dt> <dt>
 
-[**minimale Anzahl von MF- \_ MT- \_ \_ anzeigen \_**](mf-mt-minimum-display-aperture-attribute.md)
+[**MF \_ MT \_ MINIMUM \_ DISPLAY \_ APERTURE**](mf-mt-minimum-display-aperture-attribute.md)
 </dt> <dt>
 
-[**MF- \_ MT- \_ Schwenken- \_ Überprüfung \_**](mf-mt-pan-scan-aperture-attribute.md)
+[**MF \_ MT \_ PAN \_ SCAN \_ APERTURE**](mf-mt-pan-scan-aperture-attribute.md)
 </dt> <dt>
 
-[**MF- \_ MT- \_ Schwenken- \_ Scan \_ aktiviert**](mf-mt-pan-scan-enabled-attribute.md)
+[**MF \_ MT \_ PAN \_ SCAN \_ ENABLED**](mf-mt-pan-scan-enabled-attribute.md)
 </dt> <dt>
 
-[**Verhältnis der MF- \_ MT- \_ Pixel \_ Seite \_**](mf-mt-pixel-aspect-ratio-attribute.md)
+[**MF \_ MT PIXEL \_ \_ \_ SEITENVERHÄLTNIS**](mf-mt-pixel-aspect-ratio-attribute.md)
 </dt> </dl>
 
  

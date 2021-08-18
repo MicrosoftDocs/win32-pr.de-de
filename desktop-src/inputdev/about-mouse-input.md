@@ -1,299 +1,284 @@
 ---
 title: Informationen zur Mauseingabe
-description: In diesem Thema werden Maus Eingaben behandelt.
+description: In diesem Thema wird die Mauseingabe erläutert.
 ms.assetid: 1f945a31-76d5-4e23-a55a-769ca114dbe9
 keywords:
 - Benutzereingabe, Mauseingabe
-- Erfassen von Benutzereingaben, Maus Eingaben
+- Erfassen von Benutzereingaben, Mauseingaben
 - Mauseingabe
 - Mauszeiger
-- Cursor, Maus Eingaben
-- Maus Erfassung
-- Maus mit ClickLock
-- Xbuttons
-- Maus Konfiguration
-- Maus Meldungen
+- Cursor, Mauseingabe
+- Mauserfassung
+- Mouse ClickLock
+- XBUTTONs
+- Mauskonfiguration
+- Mausnachrichten
 - WM_NCHITTEST Meldung
-- Barrierefreiheits Feature der Maus nicht mehr
-- "\"Mouse"
+- Mouse Vanish-Barrierefreiheitsfeature
+- Barrierefreiheitsfeature für Maus-Sonar
 - Mausrad
 - WM_MOUSEWHEEL Meldung
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: f2294027cb4ca2c97371a7a06c90a7e46188e3b7
-ms.sourcegitcommit: ebd3ce6908ff865f1ef66f2fc96769be0aad82e1
+ms.openlocfilehash: b0c4978babd6322102908699dbf88b68e2d3b92f57fa9bfa79b9b8c3eae88931
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/19/2020
-ms.locfileid: "103726984"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119105789"
 ---
 # <a name="about-mouse-input"></a>Informationen zur Mauseingabe
 
-Die Maus ist ein wichtiges, aber optionales Benutzereingabe Gerät für Anwendungen. Eine gut geschriebene Anwendung sollte eine Maus Schnittstelle enthalten, sollte jedoch nicht allein von der Maus zum Abrufen von Benutzereingaben abhängen. Die Anwendung sollte auch vollständige Tastatur Unterstützung bereitstellen.
+Die Maus ist ein wichtiges, aber optionales Benutzereingabegerät für Anwendungen. Eine gut geschriebene Anwendung sollte eine Mausschnittstelle enthalten, aber sie sollte nicht ausschließlich von der Maus abhängen, um Benutzereingaben zu erhalten. Die Anwendung sollte auch vollständige Tastaturunterstützung bieten.
 
-Eine Anwendung empfängt Maus Eingaben in Form von Nachrichten, die an Ihre Fenster gesendet oder an diese gesendet werden.
+Eine Anwendung empfängt Mauseingaben in Form von Nachrichten, die an ihre Fenster gesendet oder gesendet werden.
 
 Dieser Abschnitt enthält die folgenden Themen:
 
--   [Mauszeiger](#mouse-cursor)
+-   [Mauscursor](#mouse-cursor)
 -   [Mausaufzeichnung](#mouse-capture)
--   [Maus mit ClickLock](#mouse-clicklock)
--   [Maus Konfiguration](#mouse-configuration)
--   [Xbuttons](#xbuttons)
--   [Maus Meldungen](#mouse-messages)
-    -   [Client Bereich-Maus Meldungen](#client-area-mouse-messages)
-    -   [Nicht-Client-Bereich-Maus Meldungen](#nonclient-area-mouse-messages)
-    -   [Die WM- \_ nchittest-Meldung](/windows)
--   [Maus, Sonar](#mouse-sonar)
--   [Maus verschwindet](#mouse-vanish)
+-   [Mouse ClickLock](#mouse-clicklock)
+-   [Mauskonfiguration](#mouse-configuration)
+-   [XBUTTONs](#xbuttons)
+-   [Mausnachrichten](#mouse-messages)
+    -   [Clientbereichs-Mausmeldungen](#client-area-mouse-messages)
+    -   [Nichtclientbereichs-Mausmeldungen](#nonclient-area-mouse-messages)
+    -   [\_Wm-NCHITTEST-Nachricht](/windows)
+-   [Mouse Sonar](#mouse-sonar)
+-   [Mouse Vanish](#mouse-vanish)
 -   [Das Mausrad](#the-mouse-wheel)
--   [Aktivieren von Fenstern](#window-activation)
+-   [Fensteraktivierung](#window-activation)
 
-## <a name="mouse-cursor"></a>Mauszeiger
+## <a name="mouse-cursor"></a>Mauscursor
 
-Wenn der Benutzer die Maus bewegt, verschiebt das System eine Bitmap auf dem Bildschirm mit dem *Mauszeiger*. Der Mauszeiger enthält einen Single-Pixel-Punkt, der als *Hot-Spot* bezeichnet wird, einen Punkt, den das System nachverfolgt und als Position des Cursors erkennt. Wenn ein Maus Ereignis auftritt, empfängt das Fenster, das den Hotspot enthält, in der Regel die Maus Nachricht, die sich aus dem Ereignis ergibt. Das Fenster muss nicht aktiv sein oder den Tastaturfokus haben, um eine Maus Meldung zu empfangen.
+Wenn der Benutzer die Maus bewegt, verschiebt das System eine Bitmap auf dem Bildschirm, die als *Mauscursor* bezeichnet wird. Der Mauscursor enthält einen Punkt mit einem Pixel, der als *Hotspots* bezeichnet wird. Dies ist ein Punkt, den das System verfolgt und als Position des Cursors erkennt. Wenn ein Mausereignis auftritt, empfängt das Fenster, das den Hotspots enthält, in der Regel die Mausnachricht, die sich aus dem Ereignis ergibt. Das Fenster muss nicht aktiv sein oder den Tastaturfokus haben, um eine Mausnachricht zu empfangen.
 
-Das System verwaltet eine Variable, die die Maus Geschwindigkeit steuert – d. h. die Entfernung, die der Cursor bewegt, wenn der Benutzer die Maus bewegt. Sie können die [**SystemParametersInfo**](/windows/desktop/api/winuser/nf-winuser-systemparametersinfoa) -Funktion mit dem **SPI \_ getmouse** -oder **SPI \_ setmouse** -Flag verwenden, um die Geschwindigkeit abzurufen oder festzulegen. Weitere Informationen zu Maus Cursorn finden Sie unter [Cursors](/windows/desktop/menurc/cursors).
+Das System verwaltet eine Variable, die die Mausgeschwindigkeit steuert, d. h. den Abstand, den der Cursor bewegt, wenn der Benutzer die Maus bewegt. Sie können die [**SystemParametersInfo-Funktion**](/windows/desktop/api/winuser/nf-winuser-systemparametersinfoa) mit dem **SPI \_ GETMOUSE-** oder **SPI \_ SETMOUSE-Flag** verwenden, um die Mausgeschwindigkeit abzurufen oder festzulegen. Weitere Informationen zu Mauscursorn finden Sie unter [Cursor.](/windows/desktop/menurc/cursors)
 
 ## <a name="mouse-capture"></a>Mausaufzeichnung
 
-Das System sendet in der Regel eine Maus Meldung an das Fenster, das den Cursor Hotspot enthält, wenn ein Maus Ereignis auftritt. Eine Anwendung kann dieses Verhalten ändern, indem Sie die [**SetCapture**](/windows/win32/api/winuser/nf-winuser-setcapture) -Funktion verwendet, um Maus Meldungen an ein bestimmtes Fenster weiterzuleiten. Das Fenster empfängt alle Maus Meldungen, bis die Anwendung die [**releasecapture**](/windows/win32/api/winuser/nf-winuser-releasecapture) -Funktion aufruft oder ein anderes Erfassungsfenster angibt, oder bis der Benutzer auf ein Fenster klickt, das von einem anderen Thread erstellt wurde.
+Das System sendet in der Regel eine Mausnachricht an das Fenster, das den Cursor-Hot Spot enthält, wenn ein Mausereignis auftritt. Eine Anwendung kann dieses Verhalten ändern, indem sie die [**SetCapture-Funktion**](/windows/win32/api/winuser/nf-winuser-setcapture) verwendet, um Mausnachrichten an ein bestimmtes Fenster weiterzuleiten. Das Fenster empfängt alle Mausmeldungen, bis die Anwendung die [**ReleaseCapture-Funktion**](/windows/win32/api/winuser/nf-winuser-releasecapture) aufruft oder ein anderes Erfassungsfenster angibt oder bis der Benutzer auf ein von einem anderen Thread erstelltes Fenster klickt.
 
-Wenn sich die Maus Aufzeichnung ändert, sendet das System eine [**WM \_ capturechanged**](wm-capturechanged.md) -Meldung an das Fenster, das die Maus Aufzeichnung verliert. Der *LPARAM* -Parameter der Meldung gibt ein Handle für das Fenster an, das die Maus Aufzeichnung gewinnt.
+Wenn sich die Mauserfassung ändert, sendet das System eine [**WM \_ CAPTURECHANGED-Meldung**](wm-capturechanged.md) an das Fenster, in dem die Mauserfassung verloren geht. Der *lParam-Parameter* der Nachricht gibt ein Handle für das Fenster an, das die Mausaufnahme erhält.
 
-Nur im Vordergrund Fenster können Maus Eingaben erfasst werden. Wenn ein Hintergrund Fenster versucht, Maus Eingaben zu erfassen, empfängt es nur Meldungen für Mausereignisse, die auftreten, wenn sich der Cursor-Hotspot innerhalb des sichtbaren Teils des Fensters befindet.
+Nur das Vordergrundfenster kann Mauseingaben erfassen. Wenn ein Hintergrundfenster versucht, Mauseingaben zu erfassen, empfängt es Meldungen nur für Mausereignisse, die auftreten, wenn sich der Cursor-Hot spot innerhalb des sichtbaren Teils des Fensters befindet.
 
-Das Erfassen von Maus Eingaben ist nützlich, wenn ein Fenster alle Maus Eingaben empfangen muss, auch wenn der Cursor außerhalb des Fensters bewegt wird. Beispielsweise verfolgt eine Anwendung in der Regel die Cursorposition nach einem MouseButton-Down-Ereignis nach dem Cursor, bis ein mausbuttonup-Ereignis auftritt. Wenn eine Anwendung keine Maus Eingaben erfasst hat und der Benutzer die Maustaste außerhalb des Fensters loslässt, empfängt das Fenster die Schaltfläche nicht.
+Das Erfassen von Mauseingaben ist nützlich, wenn ein Fenster alle Mauseingaben empfangen muss, auch wenn der Cursor sich außerhalb des Fensters bewegt. Eine Anwendung verfolgt z. B. in der Regel die Cursorposition nach einem Ereignis mit der Maustaste nach unten und folgt dem Cursor, bis ein Mouse Button Up-Ereignis auftritt. Wenn eine Anwendung keine Mauseingabe erfasst hat und der Benutzer die Maustaste außerhalb des Fensters freigibt, empfängt das Fenster die Schaltflächen-up-Meldung nicht.
 
-Ein Thread kann die [**GetCapture**](/windows/win32/api/winuser/nf-winuser-getcapture) -Funktion verwenden, um zu bestimmen, ob eines seiner Fenster die Maus erfasst hat. Wenn eines der Fenster des Threads die Maus erfasst hat, ruft **GetCapture** ein Handle für das Fenster ab.
+Ein Thread kann die [**GetCapture-Funktion**](/windows/win32/api/winuser/nf-winuser-getcapture) verwenden, um zu bestimmen, ob eines seiner Fenster die Maus erfasst hat. Wenn eines der Threadfenster die Maus erfasst hat, ruft **GetCapture** ein Handle für das Fenster ab.
 
-## <a name="mouse-clicklock"></a>Maus mit ClickLock
+## <a name="mouse-clicklock"></a>Mouse ClickLock
 
-Mit dem Barrierefreiheits Feature "Mausklicks" können Benutzer die primäre Maustaste nach einem einzigen Mausklick sperren. Für eine Anwendung scheint die Schaltfläche nach unten gedrückt zu werden. Zum Entsperren der Schaltfläche kann eine Anwendung jede beliebige Maus Nachricht senden, oder der Benutzer kann auf eine beliebige Maustaste klicken. Mit dieser Funktion können Benutzer komplexe Maus Kombinationen einfacher ausführen. Beispielsweise können solche mit bestimmten physischen Einschränkungen Text hervorheben, Objekte ziehen oder Menüs leichter öffnen. Weitere Informationen finden Sie unter den folgenden Flags und den Hinweisen in [**SystemParametersInfo**](/windows/desktop/api/winuser/nf-winuser-systemparametersinfoa):
+Die Barrierefreiheitsfunktion Mouse ClickLock ermöglicht es einem Benutzer, die primäre Maustaste nach einem einzigen Klick zu sperren. Für eine Anwendung scheint die Schaltfläche weiterhin gedrückt zu sein. Um die Schaltfläche zu entsperren, kann eine Anwendung eine beliebige Mausnachricht senden, oder der Benutzer kann auf eine beliebige Maustaste klicken. Mit diesem Feature können Benutzer komplexere Mauskombinationen einfacher durchführen. Beispielsweise können Personen mit bestimmten physischen Einschränkungen Text hervorheben, Objekte ziehen oder Menüs einfacher öffnen. Weitere Informationen finden Sie unter den folgenden Flags und den Hinweisen in [**SystemParametersInfo:**](/windows/desktop/api/winuser/nf-winuser-systemparametersinfoa)
 
--   **SPI \_ getmoucclicklock**
--   **SPI-abversions- \_ ClickLock**
--   **SPI \_ getmou\clicklocktime**
--   **SPI- \_ Sekunden-/Uhrzeitangabe**
+-   **SPI \_ GETMOUSECLICKLOCK**
+-   **SPI \_ SETMOUSECLICKLOCK**
+-   **SPI \_ GETMOUSECLICKLOCKTIME**
+-   **SPI \_ SETMOUSECLICKLOCKTIME**
 
-## <a name="mouse-configuration"></a>Maus Konfiguration
+## <a name="mouse-configuration"></a>Mauskonfiguration
 
-Obwohl es sich bei der Maus um ein wichtiges Eingabegerät für Anwendungen handelt, hat nicht jeder Benutzer notwendigerweise eine Maus. Eine Anwendung kann ermitteln, ob das System eine Maus enthält, indem der **SM- \_ mousepresent** -Wert an die [**GetSystemMetrics**](/windows/desktop/api/winuser/nf-winuser-getsystemmetrics) -Funktion übergeben wird.
+Obwohl die Maus ein wichtiges Eingabegerät für Anwendungen ist, verfügt nicht jeder Benutzer notwendigerweise über eine Maus. Eine Anwendung kann bestimmen, ob das System eine Maus enthält, indem der **SM \_ MOUSEPRESENT-Wert** an die [**GetSystemMetrics-Funktion**](/windows/desktop/api/winuser/nf-winuser-getsystemmetrics) übergeben wird.
 
-Windows unterstützt eine Maus mit bis zu drei Schaltflächen. Bei einer drei-Schaltflächen-Maus werden die Schaltflächen als linke, mittlere und Rechte Schaltfläche bezeichnet. Bei Nachrichten und benannten Konstanten, die sich auf die Maustasten beziehen, werden die Schaltflächen mit den Buchstaben L, M und R identifiziert. Die Schaltfläche auf einer Einzel Schaltfläche-Maus wird als linke Schaltfläche betrachtet. Obwohl Windows eine Maus mit mehreren Schaltflächen unterstützt, verwenden die meisten Anwendungen die linke Schaltfläche Primär und die anderen minimal, wenn überhaupt.
+Windows unterstützt eine Maus mit bis zu drei Schaltflächen. Mit einer Maus mit drei Tasten werden die Schaltflächen als linke, mittlere und rechte Schaltflächen festgelegt. Nachrichten und benannte Konstanten im Zusammenhang mit den Maustasten verwenden die Buchstaben L, M und R, um die Schaltflächen zu identifizieren. Die Schaltfläche mit einer einzelnen Maustaste wird als linke Schaltfläche betrachtet. Obwohl Windows eine Maus mit mehreren Schaltflächen unterstützt, verwenden die meisten Anwendungen die linke Schaltfläche in erster Linie und die anderen minimal, wenn überhaupt.
 
-Anwendungen können auch ein Mausrad unterstützen. Das Mausrad kann gedrückt oder gedreht werden. Wenn das Mausrad gedrückt ist, fungiert es als die mittlere (dritte) Schaltfläche und sendet normale Meldungen der mittleren Schaltfläche an die Anwendung. Beim Drehen wird eine radnachricht an Ihre Anwendung gesendet. Weitere Informationen finden Sie [im Mausrad](#the-mouse-wheel) Abschnitt.
+Anwendungen können auch ein Mausrad unterstützen. Das Mausrad kann gedrückt oder gedreht werden. Wenn das Mausrad gedrückt wird, fungiert es als mittlere (dritte) Schaltfläche und sendet normale Nachrichten der mittleren Schaltfläche an Ihre Anwendung. Wenn sie gedreht wird, wird eine Wheelnachricht an Ihre Anwendung gesendet. Weitere Informationen finden Sie im Abschnitt [Das Mausrad.](#the-mouse-wheel)
 
-Anwendungen können Anwendungs Befehls Schaltflächen unterstützen. Diese Schaltflächen, die als X-Schaltflächen bezeichnet werden, sind so konzipiert, dass Sie einen einfacheren Zugriff auf einen Internet Browser, elektronische e-Mails und Media Services ermöglichen. Wenn eine X-Schaltfläche gedrückt wird, wird eine [**WM \_ appcommand**](wm-appcommand.md) -Meldung an die Anwendung gesendet. Weitere Informationen finden Sie in der Beschreibung in der **WM- \_ appcommand** -Nachricht.
+Anwendungen können Anwendungsbefehlsschaltflächen unterstützen. Diese Schaltflächen, die als X-Schaltflächen bezeichnet werden, sind so konzipiert, dass sie den Zugriff auf einen Internetbrowser, E-Mail- und Mediendienste vereinfachen. Wenn eine X-Schaltfläche gedrückt wird, wird eine [**\_ WM-APPCOMMAND-Nachricht**](wm-appcommand.md) an Ihre Anwendung gesendet. Weitere Informationen finden Sie in der Beschreibung in der **WM \_ APPCOMMAND-Meldung.**
 
-Eine Anwendung kann die Anzahl der Schaltflächen auf der Maus ermitteln, indem der Wert von **SM \_ cmousebuttons** an die [**GetSystemMetrics**](/windows/desktop/api/winuser/nf-winuser-getsystemmetrics) -Funktion übergeben wird. Um die Maus für einen links gerichteten Benutzer zu konfigurieren, kann die Anwendung mithilfe der Funktion " [**Swap**](/windows/win32/api/winuser/nf-winuser-swapmousebutton) " die Bedeutung der linken und rechten Maustasten umkehren. Das Übergeben des **SPI \_ setmousebuttonswap** -Werts an die [**SystemParametersInfo**](/windows/desktop/api/winuser/nf-winuser-systemparametersinfoa) -Funktion ist eine andere Möglichkeit, die Bedeutung der Schaltflächen umzukehren. Beachten Sie jedoch, dass es sich bei der Maus um eine freigegebene Ressource handelt, sodass das Umkehren der Bedeutung der Schaltflächen alle Anwendungen betrifft.
+Eine Anwendung kann die Anzahl der Schaltflächen auf der Maus ermitteln, indem sie den **SM \_ CMOUSEBUTTONS-Wert** an die [**GetSystemMetrics-Funktion**](/windows/desktop/api/winuser/nf-winuser-getsystemmetrics) übergibt. Um die Maus für einen linkshändigen Benutzer zu konfigurieren, kann die Anwendung die [**SwapMouseButton-Funktion**](/windows/win32/api/winuser/nf-winuser-swapmousebutton) verwenden, um die Bedeutung der linken und rechten Maustasten umzukehren. Die Übergabe des **SPI \_ SETMOUSEBUTTONSWAP-Werts** an die [**SystemParametersInfo-Funktion**](/windows/desktop/api/winuser/nf-winuser-systemparametersinfoa) ist eine weitere Möglichkeit, die Bedeutung der Schaltflächen umzukehren. Beachten Sie jedoch, dass die Maus eine freigegebene Ressource ist, sodass sich die Umkehrung der Bedeutung der Schaltflächen auf alle Anwendungen auswirkt.
 
-## <a name="xbuttons"></a>Xbuttons
+## <a name="xbuttons"></a>XBUTTONs
 
-Windows unterstützt eine Maus mit fünf Schaltflächen. Zusätzlich zu den Schaltflächen Left, Middle und right gibt es XButton1 und XButton2, die die rückwärts-und Vorwärtsnavigation bei Verwendung Ihres Browsers bereitstellen.
+Windows unterstützt eine Maus mit fünf Schaltflächen. Zusätzlich zu den Schaltflächen links, mitte und rechts gibt es XBUTTON1 und XBUTTON2, die rückwärts und vorwärts navigieren, wenn Sie Ihren Browser verwenden.
 
-Der Fenster-Manager unterstützt XButton1 und XButton2 über die Nachrichten **WM \_ XButton \*** und **WM \_ ncxbutton \*** . Das HIWORD des **wParam** in diesen Meldungen enthält ein Flag, das angibt, welche X-Schaltfläche gedrückt wurde. Da diese Maus Meldungen auch zwischen den Konstanten **WM \_ mousefirst** und **WM \_ mouselast** passen, kann eine Anwendung alle Maus Meldungen mit [**GetMessage**](/windows/desktop/api/winuser/nf-winuser-getmessage) oder [**Peer Message**](/windows/desktop/api/winuser/nf-winuser-peekmessagea)filtern.
+Der Fenster-Manager unterstützt XBUTTON1 und XBUTTON2 über die **MELDUNGEN WM \_ XBUTTON \* *_ und _* WM \_ NCXBUTTON \* *_ . Das HIWORD des _WPARAM*** in diesen Meldungen enthält ein Flag, das angibt, auf welche X-Schaltfläche gedrückt wurde. Da diese Mausnachrichten auch zwischen den Konstanten **WM \_ MOUSEFIRST** und **WM \_ MOUSELAST** passen, kann eine Anwendung alle Mausnachrichten mit [**GetMessage**](/windows/desktop/api/winuser/nf-winuser-getmessage) oder [**PeekMessage**](/windows/desktop/api/winuser/nf-winuser-peekmessagea)filtern.
 
-Die folgenden unterstützten XButton1-und XButton2-Unterstützung:
+Die folgenden Unterstützen XBUTTON1 und XBUTTON2:
 
--   [**WM- \_ appcommand**](wm-appcommand.md)
--   [**WM \_ ncxbuttondblclk**](wm-ncxbuttondblclk.md)
--   [**WM- \_ ncxbuttondown**](wm-ncxbuttondown.md)
--   [**WM- \_ ncxbuttonup**](wm-ncxbuttonup.md)
--   [**WM- \_ xbuttondblclk**](wm-xbuttondblclk.md)
--   [**WM- \_ xbuttondown**](wm-xbuttondown.md)
--   [**WM- \_ xbuttonup**](wm-xbuttonup.md)
--   [**Mouselhuokstructex**](/windows/win32/api/winuser/ns-winuser-mousehookstructex)
+-   [**WM \_ APPCOMMAND**](wm-appcommand.md)
+-   [**WM \_ NCXBUTTONDBLCLK**](wm-ncxbuttondblclk.md)
+-   [**WM \_ NCXBUTTONDOWN**](wm-ncxbuttondown.md)
+-   [**WM \_ NCXBUTTONUP**](wm-ncxbuttonup.md)
+-   [**WM \_ XBUTTONDBLCLK**](wm-xbuttondblclk.md)
+-   [**WM \_ XBUTTONDOWN**](wm-xbuttondown.md)
+-   [**WM \_ XBUTTONUP**](wm-xbuttonup.md)
+-   [**MOUSEHOOKSTRUCTEX**](/windows/win32/api/winuser/ns-winuser-mousehookstructex)
 
 Die folgenden APIs wurden geändert, um diese Schaltflächen zu unterstützen:
 
--   [**Maus \_ Ereignis**](/windows/win32/api/winuser/nf-winuser-mouse_event)
--   [**Shellproc**](/previous-versions/windows/desktop/legacy/ms644991(v=vs.85))
--   [**Msllhuokstruct**](/windows/win32/api/winuser/ns-winuser-msllhookstruct)
--   [**Mouseinput**](/windows/win32/api/winuser/ns-winuser-mouseinput)
--   [**WM- \_ Parser**](/previous-versions/windows/desktop/inputmsg/wm-parentnotify)
+-   [**\_Mausereignis**](/windows/win32/api/winuser/nf-winuser-mouse_event)
+-   [**ShellProc**](/previous-versions/windows/desktop/legacy/ms644991(v=vs.85))
+-   [**MSLLHOOKSTRUCT**](/windows/win32/api/winuser/ns-winuser-msllhookstruct)
+-   [**MOUSEINPUT**](/windows/win32/api/winuser/ns-winuser-mouseinput)
+-   [**WM \_ PARENTNOTIFY**](/previous-versions/windows/desktop/inputmsg/wm-parentnotify)
 
-Es ist unwahrscheinlich, dass ein untergeordnetes Fenster in einer Komponenten Anwendung Befehle für XButton1 und XButton2 direkt implementieren kann. Daher sendet [**defwindowproc**](/windows/desktop/api/winuser/nf-winuser-defwindowproca) eine [**WM- \_ appcommand**](wm-appcommand.md) -Meldung an ein Fenster, wenn auf eine X-Schaltfläche geklickt wird. **Defwindowproc** sendet außerdem die **WM- \_ appcommand** -Nachricht an das übergeordnete Fenster. Dies ähnelt der Art und Weise, wie Kontextmenüs mit einem Rechtsklick aufgerufen werden –**defwindowproc** sendet eine [**WM- \_ ContextMenu**](/windows/desktop/menurc/wm-contextmenu) -Meldung an das Menü und sendet Sie an das übergeordnete Element. Wenn **defwindowproc** außerdem eine WM- **\_ appcommand** -Nachricht für ein Fenster der obersten Ebene empfängt, wird ein ShellHook mit dem Code hshell \_ appcommand aufgerufen.
+Es ist unwahrscheinlich, dass ein untergeordnetes Fenster in einer Komponentenanwendung Befehle für XBUTTON1 und XBUTTON2 direkt implementieren kann. [**DefWindowProc sendet also**](/windows/desktop/api/winuser/nf-winuser-defwindowproca) eine [**WM \_ APPCOMMAND-Nachricht**](wm-appcommand.md) an ein Fenster, wenn auf eine X-Schaltfläche geklickt wird. **DefWindowProc sendet** auch die **WM \_ APPCOMMAND-Nachricht** an das übergeordnete Fenster. Dies ähnelt der Art und Weise, wie Kontextmenüs mit einem Rechtsklick aufgerufen werden.**DefWindowProc** sendet eine [**WM \_ CONTEXTMENU-Nachricht**](/windows/desktop/menurc/wm-contextmenu) an das Menü und sendet sie auch an das übergeordnete Element. Wenn **DefWindowProc** außerdem eine **WM \_ APPCOMMAND-Nachricht** für ein Fenster der obersten Ebene empfängt, wird ein Shellhook mit Dem Code HSHELL \_ APPCOMMANDaufgerufen.
 
-Es gibt Unterstützung für die Tastaturen mit zusätzlichen Schlüsseln für Browserfunktionen, Medienfunktionen, Anwendungs Starts und die Energie Verwaltung. Weitere Informationen finden Sie unter [Tastaturtasten für das Browsen und andere Funktionen](about-keyboard-input.md).
+Tastaturen mit zusätzlichen Tasten für Browserfunktionen, Medienfunktionen, Anwendungsstart und Energieverwaltung werden unterstützt. Weitere Informationen finden Sie unter [Tastaturtasten für das Durchsuchen und andere Funktionen.](about-keyboard-input.md)
 
-## <a name="mouse-messages"></a>Maus Meldungen
+## <a name="mouse-messages"></a>Mausnachrichten
 
-Die Maus generiert ein Eingabe Ereignis, wenn der Benutzer die Maus bewegt oder eine Maustaste drückt oder loslässt. Das System konvertiert Mauseingabe Ereignisse in Nachrichten und sendet Sie in der Meldungs Warteschlange des entsprechenden Threads. Wenn Maus Meldungen schneller gepostet werden, als Sie von einem Thread verarbeitet werden können, verwirft das System alle bis auf die aktuellste Maus Nachricht.
+Die Maus generiert ein Eingabeereignis, wenn der Benutzer die Maus bewegt oder eine Maustaste drückt oder loslässt. Das System konvertiert Mauseingabeereignisse in Nachrichten und übermittelt sie an die Nachrichtenwarteschlange des entsprechenden Threads. Wenn Mausnachrichten schneller gesendet werden, als ein Thread sie verarbeiten kann, verwirft das System alle bis auf die letzte Mausnachricht.
 
-Ein Fenster empfängt eine Maus Meldung, wenn ein Maus Ereignis auftritt, während sich der Cursor innerhalb der Rahmen des Fensters befindet oder wenn das Fenster die Maus erfasst hat. Maus Nachrichten werden in zwei Gruppen unterteilt: Client Bereichs Meldungen und nicht-Client Bereichs Nachrichten. In der Regel verarbeitet eine Anwendung Client Bereichs Nachrichten und ignoriert nicht-Client Bereichs Nachrichten.
+Ein Fenster empfängt eine Mausmeldung, wenn ein Mausereignis auftritt, während sich der Cursor innerhalb der Rahmen des Fensters befindet oder wenn das Fenster die Maus erfasst hat. Mausnachrichten sind in zwei Gruppen unterteilt: Clientbereichsmeldungen und Nicht-Clientbereichsmeldungen. In der Regel verarbeitet eine Anwendung Clientbereichsmeldungen und ignoriert Nichtclientbereichsnachrichten.
 
 Dieser Abschnitt enthält die folgenden Themen:
 
--   [Client Bereich-Maus Meldungen](#client-area-mouse-messages)
--   [Nicht-Client-Bereich-Maus Meldungen](#nonclient-area-mouse-messages)
--   [Die WM- \_ nchittest-Meldung](/windows)
+-   [Clientbereichs-Mausmeldungen](#client-area-mouse-messages)
+-   [Nichtclientbereichs-Mausmeldungen](#nonclient-area-mouse-messages)
+-   [Die WM \_ NCHITTEST-Nachricht](/windows)
 
-### <a name="client-area-mouse-messages"></a>Client Bereich-Maus Meldungen
+### <a name="client-area-mouse-messages"></a>Clientbereichs-Mausmeldungen
 
-Ein Fenster empfängt eine Client Bereich-Maus Nachricht, wenn ein Maus Ereignis innerhalb des Client Bereichs des Fensters auftritt. Das System stellt die [**WM- \_ mousetmove**](wm-mousemove.md) -Meldung an das Fenster an, wenn der Benutzer den Cursor innerhalb des Client Bereichs verschiebt. Sie sendet eine der folgenden Meldungen, wenn der Benutzer eine Maustaste drückt oder loslässt, während sich der Cursor im Client Bereich befindet.
+Ein Fenster empfängt eine Clientbereichsmausmeldung, wenn ein Mausereignis im Clientbereich des Fensters auftritt. Das System übermittelt die [**WM \_ MOUSEMOVE-Nachricht**](wm-mousemove.md) an das Fenster, wenn der Benutzer den Cursor innerhalb des Clientbereichs bewegt. Es wird eine der folgenden Meldungen gesendet, wenn der Benutzer eine Maustaste drückt oder loslässt, während sich der Cursor im Clientbereich befindet.
 
 
 
 | Nachricht                                       | Bedeutung                                     |
 |-----------------------------------------------|---------------------------------------------|
-| [**WM \_ lbuttondblclk**](wm-lbuttondblclk.md) | Es wurde auf die linke Maustaste Doppel geklickt.   |
-| [**WM \_ lbuttondown**](wm-lbuttondown.md)     | Die linke Maustaste wurde gedrückt.          |
-| [**WM- \_ lbuttonup**](wm-lbuttonup.md)         | Die linke Maustaste wurde losgelassen.         |
-| [**WM- \_ mbuttondblclk**](wm-mbuttondblclk.md) | Es wurde auf die mittlere Maustaste Doppel geklickt. |
-| [**WM- \_ mbuttondown**](wm-mbuttondown.md)     | Die mittlere Maustaste wurde gedrückt.        |
-| [**WM- \_ mbuttonup**](wm-mbuttonup.md)         | Die mittlere Maustaste wurde losgelassen.       |
-| [**WM- \_ rbuttondblclk**](wm-rbuttondblclk.md) | Auf die Rechte Maustaste wurde Doppel geklickt.  |
-| [**WM- \_ rbuttondown**](wm-rbuttondown.md)     | Die rechte Maustaste wurde gedrückt.         |
-| [**WM- \_ rbuttonup**](wm-rbuttonup.md)         | Die Rechte Maustaste wurde losgelassen.        |
-| [**WM- \_ xbuttondblclk**](wm-xbuttondblclk.md) | Es wurde auf eine X-Maustaste Doppel geklickt.       |
-| [**WM- \_ xbuttondown**](wm-xbuttondown.md)     | Eine X-Maustaste wurde gedrückt.              |
-| [**WM- \_ xbuttonup**](wm-xbuttonup.md)         | Eine X-Maustaste wurde losgelassen.             |
+| [**WM \_ LBUTTONDBLCLK**](wm-lbuttondblclk.md) | Auf die linke Maustaste wurde doppelklicken.   |
+| [**WM \_ LBUTTONDOWN**](wm-lbuttondown.md)     | Die linke Maustaste wurde gedrückt.          |
+| [**WM \_ LBUTTONUP**](wm-lbuttonup.md)         | Die linke Maustaste wurde losgelassen.         |
+| [**WM \_ MBUTTONDBLCLK**](wm-mbuttondblclk.md) | Die mittlere Maustaste wurde doppelt angeklickt. |
+| [**WM \_ MBUTTONDOWN**](wm-mbuttondown.md)     | Die mittlere Maustaste wurde gedrückt.        |
+| [**WM \_ MBUTTONUP**](wm-mbuttonup.md)         | Die mittlere Maustaste wurde losgelassen.       |
+| [**WM \_ RBUTTONDBLCLK**](wm-rbuttondblclk.md) | Auf die rechte Maustaste wurde doppelklicken.  |
+| [**WM \_ RBUTTONDOWN**](wm-rbuttondown.md)     | Die rechte Maustaste wurde gedrückt.         |
+| [**WM \_ RBUTTONUP**](wm-rbuttonup.md)         | Die rechte Maustaste wurde losgelassen.        |
+| [**WM \_ XBUTTONDBLCLK**](wm-xbuttondblclk.md) | Es wurde auf eine X-Maustaste doppelklickt.       |
+| [**WM \_ XBUTTONDOWN**](wm-xbuttondown.md)     | Eine X-Maustaste wurde gedrückt.              |
+| [**WM \_ XBUTTONUP**](wm-xbuttonup.md)         | Eine X-Maustaste wurde losgelassen.             |
 
 
 
- 
+ 
 
-Außerdem kann eine Anwendung die [**TrackMouseEvent**](/windows/win32/api/winuser/nf-winuser-trackmouseevent) -Funktion aufrufen, damit das System zwei andere Nachrichten sendet. Sie sendet die [**WM- \_ MouseHover**](wm-mousehover.md) -Nachricht, wenn der Cursor für einen bestimmten Zeitraum über den Client Bereich bewegt wird. Sie sendet die [**WM- \_ MouseLeave**](wm-mouseleave.md) -Nachricht, wenn der Cursor den Client Bereich verlässt.
+Darüber hinaus kann eine Anwendung die [**TrackMouseEvent-Funktion**](/windows/win32/api/winuser/nf-winuser-trackmouseevent) aufrufen, damit das System zwei weitere Nachrichten sendet. Es wird die [**WM \_ MOUSEHOVER-Meldung**](wm-mousehover.md) gesendet, wenn der Cursor für einen bestimmten Zeitraum über den Clientbereich bewegt wird. Es wird die [**WM \_ MOUSELEAVE-Nachricht**](wm-mouseleave.md) gesendet, wenn der Cursor den Clientbereich verlässt.
 
-### <a name="message-parameters"></a>Nachrichten Parameter
+### <a name="message-parameters"></a>Meldungsparameter
 
-Der *LPARAM* -Parameter einer Client Bereich-Maus Meldung gibt die Position des Cursor-Hot-Spots an. Das nieder wertige Wort gibt die x-Koordinate des Hotspots an, und das hochwertige Wort gibt die y-Koordinate an. Die Koordinaten werden in Client Koordinaten angegeben. Im Client Koordinatensystem werden alle Punkte auf dem Bildschirm relativ zu den Koordinaten (0,0) der oberen linken Ecke des Client Bereichs angegeben.
+Der *lParam-Parameter* einer Clientbereichsmausmeldung gibt die Position des Cursor-Hotspots an. Das niedrige Wort gibt die x-Koordinate des Hotspots an, und das obere Wort gibt die y-Koordinate an. Die Koordinaten werden in Clientkoordinaten angegeben. Im Clientkoordinatensystem werden alle Punkte auf dem Bildschirm relativ zu den Koordinaten (0,0) der oberen linken Ecke des Clientbereichs angegeben.
 
-Der *wParam* -Parameter enthält Flags, die den Status der anderen Maustasten und die STRG-Taste und die UMSCHALTTASTE zum Zeitpunkt des Maus Ereignisses angeben. Sie können diese Flags überprüfen, wenn die Maus Nachrichtenverarbeitung vom Zustand einer anderen Maustaste oder von der STRG-oder der Umschalttaste abhängt. Der *wParam* -Parameter kann eine Kombination der folgenden Werte sein.
+Der *wParam-Parameter* enthält Flags, die den Status der anderen Maustasten sowie die STRG- und UMSCHALTTASTEn zum Zeitpunkt des Mausereignisses angeben. Sie können diese Flags überprüfen, wenn die Verarbeitung von Mausnachrichten vom Zustand einer anderen Maustaste oder der STRG- oder UMSCHALTTASTE abhängt. Der *wParam-Parameter* kann eine Kombination der folgenden Werte sein.
 
 
 
-| Wert            | BESCHREIBUNG                      |
+| Wert            | Beschreibung                      |
 |------------------|----------------------------------|
-| **MK- \_ Steuerelement**  | Die STRG-Taste ist nicht gedrückt.            |
-| **MK \_ lbutton**  | Die linke Maustaste ist nicht mehr vorhanden.   |
-| **MK- \_ MButton**  | Die mittlere Maustaste ist nicht mehr angezeigt. |
-| **MK \_ rbutton**  | Die Rechte Maustaste ist nicht mehr angezeigt.  |
-| **MK \_ UMSCHALT**    | Die UMSCHALTTASTE ist nicht mehr festgelegt.           |
-| **MK \_ XButton1** | Die erste X-Schaltfläche ist nicht angezeigt.      |
-| **MK \_ XButton2** | Die zweite X-Schaltfläche ist nicht mehr festgelegt.     |
+| **\_MK-STEUERELEMENT**  | Die STRG-TASTE ist gedrückt.            |
+| **MK \_ LBUTTON**  | Die linke Maustaste ist nach unten.   |
+| **MK \_ MBUTTON**  | Die mittlere Maustaste ist nach unten. |
+| **MK \_ RBUTTON**  | Die rechte Maustaste ist nach unten.  |
+| **MK \_ SHIFT**    | Die UMSCHALTTASTE ist heruntergefahren.           |
+| **MK \_ XBUTTON1** | Die erste X-Schaltfläche ist nicht mehr zu sehen.      |
+| **MK \_ XBUTTON2** | Die zweite X-Schaltfläche ist nicht mehr zu sehen.     |
 
 
 
- 
+ 
 
-### <a name="double-click-messages"></a>Double-Click Meldungen
+### <a name="double-click-messages"></a>Double-Click Nachrichten
 
-Das System generiert eine Doppelklick Nachricht, wenn der Benutzer zweimal in der schnell Folge auf eine Maustaste klickt. Wenn der Benutzer auf eine Schaltfläche klickt, erstellt das System ein Rechteck, das sich um den Cursor-Hotspot dreht. Außerdem wird die Uhrzeit gekennzeichnet, zu der der Klick aufgetreten ist. Wenn der Benutzer ein zweites Mal auf dieselbe Schaltfläche klickt, bestimmt das System, ob sich der Hotspot noch innerhalb des Rechtecks befindet, und berechnet die verstrichene Zeit seit dem ersten klicken. Wenn sich der Hotspot noch innerhalb des Rechtecks befindet und die verstrichene Zeit den Doppelklick-Timeout Wert nicht überschreitet, generiert das System eine Doppelklick Nachricht.
+Das System generiert eine Doppelklickmeldung, wenn der Benutzer in schneller Folge zweimal auf eine Maustaste klickt. Wenn der Benutzer auf eine Schaltfläche klickt, richtet das System ein Rechteck ein, das um den Hotspot des Cursors zentriert ist. Außerdem wird der Zeitpunkt markiert, zu dem der Klick aufgetreten ist. Wenn der Benutzer ein zweites Mal auf dieselbe Schaltfläche klickt, bestimmt das System, ob sich der Hotspot noch innerhalb des Rechtecks befindet, und berechnet die seit dem ersten Klick verstrichene Zeit. Wenn sich der Hotspot noch innerhalb des Rechtecks befindet und die verstrichene Zeit den Time out-Wert für Doppelklicks nicht überschreitet, generiert das System eine Doppelklickmeldung.
 
-Eine Anwendung kann Timeout Werte für den Doppelklick mithilfe der Funktionen [**getdoubleclicktime**](/windows/win32/api/winuser/nf-winuser-getdoubleclicktime) und [**setdoubleclicktime**](/windows/win32/api/winuser/nf-winuser-setdoubleclicktime) erhalten und festlegen. Alternativ kann die Anwendung den Timeout Wert für den Doppelklick – mit dem SPI-Flag **\_ setdoubleclicktime** und der [**SystemParametersInfo**](/windows/desktop/api/winuser/nf-winuser-systemparametersinfoa) -Funktion festlegen. Sie kann auch die Größe des Rechtecks festlegen, das vom System zum Erkennen von Doppelklicks verwendet wird, indem die SPI-Flags **\_ setdoubleclkwidth** und **SPI \_ setdoubleclkheight** an **SystemParametersInfo** übergeben werden. Beachten Sie jedoch, dass das Festlegen des Timeout Werts für den Doppelklick – und das Rechteck alle Anwendungen betrifft.
+Eine Anwendung kann mithilfe der Funktionen [**GetDoubleClickTime**](/windows/win32/api/winuser/nf-winuser-getdoubleclicktime) bzw. [**SetDoubleClickTime**](/windows/win32/api/winuser/nf-winuser-setdoubleclicktime) Time Time-Werte für Doppelklicks erhalten und festlegen. Alternativ kann die Anwendung den Wert für das Doppelklicktimeout mithilfe des SPI-Flags **\_ SETDOUBLECLICKTIME** mit der [**SystemParametersInfo-Funktion**](/windows/desktop/api/winuser/nf-winuser-systemparametersinfoa) festlegen. Sie kann auch die Größe des Rechtecks festlegen, das das System zum Erkennen von Doppelklicks verwendet, indem die **FLAGs SPI \_ SETDOUBLECLKWIDTH** und **SPI \_ SETDOUBLECLKHEIGHT** an **SystemParametersInfo** übergeben werden. Beachten Sie jedoch, dass sich das Festlegen des Double-Click-Time out-Werts und des Rechtecks auf alle Anwendungen auswirken.
 
-Ein von der Anwendung definiertes Fenster empfängt standardmäßig keine Doppelklick Nachrichten. Aufgrund des System Aufwands beim Generieren von Doppelklick-Nachrichten werden diese Nachrichten nur für Windows generiert, die zu Klassen gehören, die über den Klassen Stil **CS \_ dblclert** verfügen. Die Anwendung muss diesen Stil festlegen, wenn die Fenster Klasse registriert wird. Weitere Informationen finden Sie unter [Fenster Klassen](/windows/desktop/winmsg/window-classes).
+Ein anwendungsdefiniertes Fenster erhält standardmäßig keine Doppelklicknachrichten. Aufgrund des Systemaufwands beim Generieren von Doppelklicknachrichten werden diese Meldungen nur für Fenster generiert, die Klassen im **CS \_ DBLCLKS-Klassenstil** angehören. Die Anwendung muss diesen Stil beim Registrieren der Fensterklasse festlegen. Weitere Informationen finden Sie unter [Fensterklassen](/windows/desktop/winmsg/window-classes).
 
-Eine Doppelklick Nachricht ist immer die dritte Nachricht in einer Serie mit vier Nachrichten. Bei den ersten beiden Nachrichten handelt es sich um die Schaltflächen-und Schaltflächen, die durch den ersten Mausklick generiert werden. Mit dem zweiten Klick wird die Doppelklick Nachricht generiert, gefolgt von einer weiteren Schaltfläche nach oben. Wenn Sie z. b. mit der linken Maustaste doppelklicken, wird die folgende Nachrichten Sequenz generiert:
+Eine Doppelklicknachricht ist immer die dritte Nachricht in einer Vier-Nachrichten-Reihe. Die ersten beiden Meldungen sind die durch den ersten Klick generierten Button-down- und Button-up-Meldungen. Beim zweiten Klick wird die Doppelklicknachricht gefolgt von einer weiteren Schaltflächen-Up-Meldung generiert. Wenn Sie beispielsweise auf die linke Maustaste doppelklicken, wird die folgende Meldungssequenz generiert:
 
-1.  [**WM \_ lbuttondown**](wm-lbuttondown.md)
-2.  [**WM- \_ lbuttonup**](wm-lbuttonup.md)
-3.  [**WM \_ lbuttondblclk**](wm-lbuttondblclk.md)
-4.  [**WM- \_ lbuttonup**](wm-lbuttonup.md)
+1.  [**WM \_ LBUTTONDOWN**](wm-lbuttondown.md)
+2.  [**WM \_ LBUTTONUP**](wm-lbuttonup.md)
+3.  [**WM \_ LBUTTONDBLCLK**](wm-lbuttondblclk.md)
+4.  [**WM \_ LBUTTONUP**](wm-lbuttonup.md)
 
-Da ein Fenster immer eine Schaltfläche nach unten empfängt, bevor eine Doppelklick Nachricht empfangen wird, verwendet eine Anwendung in der Regel eine Doppelklick Nachricht, um eine Aufgabe zu erweitern, die Sie während einer Schaltfläche nach unten gestartet hat. Wenn der Benutzer z. b. in der Farbpalette von Microsoft Paint auf eine Farbe klickt, zeigt Paint die ausgewählte Farbe neben der Palette an. Wenn der Benutzer auf eine Farbe doppelklickt, zeigt Paint die Farbe an und öffnet das Dialogfeld **Farben bearbeiten** .
+Da ein Fenster immer eine Schaltflächen-nach-unten-Nachricht empfängt, bevor eine Doppelklicknachricht empfangen wird, verwendet eine Anwendung in der Regel eine Doppelklicknachricht, um eine Aufgabe zu erweitern, die während einer Schaltflächen-Down-Nachricht gestartet wurde. Wenn der Benutzer beispielsweise auf eine Farbe in der Farbpalette von Microsoft Paint klickt, zeigt Paint die ausgewählte Farbe neben der Palette an. Wenn der Benutzer auf eine Farbe doppelklickt, zeigt Paint die Farbe an und öffnet das Dialogfeld **Farben bearbeiten.**
 
-### <a name="nonclient-area-mouse-messages"></a>Nicht-Client-Bereich-Maus Meldungen
+### <a name="nonclient-area-mouse-messages"></a>Nichtclientbereichs-Mausmeldungen
 
-Ein Fenster empfängt eine nicht-Client Bereichs Maus, wenn ein Maus Ereignis in einem beliebigen Teil eines Fensters mit Ausnahme des Client Bereichs auftritt. Der nicht-Client Bereich eines Fensters besteht aus dessen Rahmen, Menüleiste, Titelleiste, Schiebe Leiste, Fenstermenü, minimieren und Schaltfläche maximieren.
+Ein Fenster empfängt eine Nicht-Clientbereich-Mausmeldung, wenn ein Mausereignis in einem beliebigen Teil eines Fensters mit Ausnahme des Clientbereichs auftritt. Der Nichtclientbereich eines Fensters besteht aus Rahmen, Menüleiste, Titelleiste, Scrollleiste, Fenstermenü, Schaltfläche "Minimieren" und Schaltfläche "Maximieren".
 
-Das System generiert nicht-Client Bereichs Nachrichten in erster Linie für die eigene Verwendung. Beispielsweise verwendet das System nicht-Client Bereichs Nachrichten, um den Cursor in einen Pfeil mit zwei Spitzen zu ändern, wenn der Cursor-Hotspot in den Rahmen eines Fensters verschoben wird. Ein Fenster muss nicht-Client Bereichs Maus-Meldungen an die [**defwindowproc**](/windows/desktop/api/winuser/nf-winuser-defwindowproca) -Funktion übergeben, um die integrierte Maus Oberfläche zu nutzen.
+Das System generiert Nicht-Clientbereichsmeldungen in erster Linie für die eigene Verwendung. Das System verwendet beispielsweise Nicht-Clientbereichsmeldungen, um den Cursor in einen Pfeil mit zwei Pfeilen zu ändern, wenn der Cursor-Hot Spot in den Rahmen eines Fensters verschoben wird. Ein Fenster muss Nicht-Clientbereich-Mausmeldungen an die [**DefWindowProc-Funktion**](/windows/desktop/api/winuser/nf-winuser-defwindowproca) übergeben, um die integrierte Mausschnittstelle nutzen zu können.
 
-Es ist eine entsprechende nicht-Client-Bereich-Maus Meldung für jede Client Bereichs-Maus Nachricht vorhanden. Die Namen dieser Meldungen sind ähnlich, mit der Ausnahme, dass die benannten Konstanten für die nicht-Client Bereichs Nachrichten die Buchstaben NC enthalten. Wenn Sie z. b. den Cursor in den nicht-Client Bereich bewegen, wird eine [**WM- \_ ncmousemove**](wm-ncmousemove.md) -Nachricht generiert. Wenn Sie die linke Maustaste drücken, während sich der Cursor im nicht-Client Bereich befindet, generiert eine [**WM- \_ nclbuttondown**](wm-nclbuttondown.md) -Meldung.
+Für jede Clientbereichsmausmeldung gibt es eine entsprechende Nicht-Clientbereichsmausmeldung. Die Namen dieser Nachrichten sind ähnlich, außer dass die benannten Konstanten für die Nicht-Clientbereichsnachrichten die Buchstaben NC enthalten. Wenn Sie z. B. den Cursor im Nichtclientbereich bewegen, wird eine [**WM \_ NCMOUSEMOVE-Nachricht**](wm-ncmousemove.md) generiert, und wenn Sie die linke Maustaste drücken, während sich der Cursor im Nichtclientbereich befindet, wird eine [**\_ WM-NCLBUTTONDOWN-Meldung**](wm-nclbuttondown.md) generiert.
 
-Der *LPARAM* -Parameter einer nicht-Client Bereich-Maus Nachricht ist eine Struktur, die die x-und y-Koordinaten des Cursor-Hot-Spots enthält. Anders als Koordinaten von Client Bereich-Maus Nachrichten werden die Koordinaten in Bildschirm Koordinaten anstelle von Client Koordinaten angegeben. Im Bildschirm Koordinatensystem sind alle Punkte auf dem Bildschirm relativ zu den Koordinaten (0,0) der oberen linken Ecke des Bildschirms.
+Der *lParam-Parameter* einer Nicht-Clientbereich-Mausnachricht ist eine -Struktur, die die x- und y-Koordinaten des Cursor-Hotspots enthält. Im Gegensatz zu Koordinaten von Clientbereich-Mausnachrichten werden die Koordinaten in Bildschirmkoordinaten und nicht in Clientkoordinaten angegeben. Im Bildschirmkoordinatensystem sind alle Punkte auf dem Bildschirm relativ zu den Koordinaten (0,0) der oberen linken Ecke des Bildschirms.
 
-Der *wParam* -Parameter enthält einen Treffer Test Wert, einen Wert, der angibt, an welcher Stelle im nicht-Client Bereich das Maus Ereignis aufgetreten ist. Im folgenden Abschnitt wird der Zweck von Treffer Testwerten erläutert.
+Der *wParam-Parameter* enthält einen Treffertestwert, einen Wert, der angibt, wo im Nicht-Clientbereich das Mausereignis aufgetreten ist. Im folgenden Abschnitt wird der Zweck von Treffertestwerten erläutert.
 
-### <a name="the-wm_nchittest-message"></a>Die WM- \_ nchittest-Meldung
+### <a name="the-wm_nchittest-message"></a>\_Wm-NCHITTEST-Nachricht
 
-Jedes Mal, wenn ein Maus Ereignis auftritt, sendet das System eine [**WM- \_ nchittest**](wm-nchittest.md) -Nachricht an das Fenster, das den Cursor Hotspot enthält, oder an das Fenster, das die Maus erfasst hat. Das System verwendet diese Meldung, um zu bestimmen, ob ein Client Bereich oder eine nicht-Client Bereich-Maus Nachricht gesendet werden soll. Eine Anwendung, die Mausbewegung und Maustasten Meldungen empfangen muss, muss die **WM- \_ nchittest** -Nachricht an die [**defwindowproc**](/windows/desktop/api/winuser/nf-winuser-defwindowproca) -Funktion übergeben.
+Jedes Mal, wenn ein Mausereignis auftritt, sendet das System eine [**\_ WM-NCHITTEST-Nachricht**](wm-nchittest.md) an das Fenster, das den Cursor-Hot spot enthält, oder an das Fenster, das die Maus erfasst hat. Das System verwendet diese Meldung, um zu bestimmen, ob ein Clientbereich oder eine Nicht-Clientbereich-Mausnachricht gesendet werden soll. Eine Anwendung, die Mausbewegungen und Maustastennachrichten empfangen muss, muss die **WM \_ NCHITTEST-Nachricht** an die [**DefWindowProc-Funktion**](/windows/desktop/api/winuser/nf-winuser-defwindowproca) übergeben.
 
-Der *LPARAM* -Parameter der [**WM- \_ nchittest**](wm-nchittest.md) -Nachricht enthält die Bildschirm Koordinaten des Cursor-Hot-Spots. Die [**defwindowproc**](/windows/desktop/api/winuser/nf-winuser-defwindowproca) -Funktion untersucht die Koordinaten und gibt einen Treffer Test Wert zurück, der den Speicherort des Hotspots angibt. Der Treffer Test Wert kann einer der folgenden Werte sein.
+Der *lParam-Parameter* der [**WM \_ NCHITTEST-Nachricht**](wm-nchittest.md) enthält die Bildschirmkoordinaten des Cursor-Hotspots. Die [**DefWindowProc-Funktion**](/windows/desktop/api/winuser/nf-winuser-defwindowproca) untersucht die Koordinaten und gibt einen Treffertestwert zurück, der die Position des Hotspots angibt. Der Treffertestwert kann einer der folgenden Werte sein.
 
 
 
 | Wert             | Speicherort des Hotspots                                                                                                                                                                                |
 |-------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| **"Htborder"**      | Im Rahmen eines Fensters ohne Größen Anpassungsrahmen.                                                                                                                                       |
-| **Htbottom**      | Am unteren horizontalen Rand eines Fensters.                                                                                                                                                         |
-| **Htbottomleft**  | In der unteren linken Ecke eines Fensterrahmens.                                                                                                                                                        |
-| **Htbottomright** | In der unteren rechten Ecke eines Fensterrahmens.                                                                                                                                                       |
-| **Htcaption**     | In einer Titelleiste.                                                                                                                                                                                     |
-| **Htclient**      | In einem Client Bereich.                                                                                                                                                                                   |
-| **"Htclose"**       | In einer Schaltfläche **Schließen** .                                                                                                                                                                              |
-| **HTError**       | Auf dem Bildschirm Hintergrund oder in einer Trennlinie zwischen Fenstern (identisch mit "htnirgendwo", mit der Ausnahme, dass die [**defwindowproc**](/windows/desktop/api/winuser/nf-winuser-defwindowproca) -Funktion ein Systemsignal erzeugt, um einen Fehler anzugeben). |
-| **"Htgrowbox"**     | In einem Größen Feld (identisch mit " **htsize**").                                                                                                                                                                 |
-| **Hthelp**        | In einer **Hilfe** Schaltfläche.                                                                                                                                                                               |
-| **Hthscroll**     | In einer horizontalen Schiebe Leiste.                                                                                                                                                                         |
-| **Htleft**        | Am linken Rand eines Fensters.                                                                                                                                                                     |
-| **"Htmenu"**        | In einem Menü.                                                                                                                                                                                          |
-| **Htmaxbutton**   | Auf der Schaltfläche **maximieren** .                                                                                                                                                                           |
-| **Htminbutton**   | Auf der Schaltfläche **minimieren** .                                                                                                                                                                           |
-| **Htnirgendwo**     | Auf dem Bildschirm Hintergrund oder auf einer Trennlinie zwischen Fenstern.                                                                                                                                     |
-| **Htreduce**      | Auf der Schaltfläche **minimieren** .                                                                                                                                                                           |
-| **Htright**       | Am rechten Rand eines Fensters.                                                                                                                                                                    |
-| **"Htsize"**        | In einem Größen Feld (identisch mit " **htgrowbox**").                                                                                                                                                              |
-| **"Htsysmenu"**     | In einem **System** Menü oder in einer Schaltfläche **Schließen** in einem untergeordneten Fenster.                                                                                                                                    |
-| **Httop**         | Am oberen horizontalen Rand eines Fensters.                                                                                                                                                         |
-| **Httopleft**     | In der oberen linken Ecke eines Fensterrahmens.                                                                                                                                                        |
-| **Httopright**    | In der oberen rechten Ecke eines Fensterrahmens.                                                                                                                                                       |
-| **Httransparent** | In einem Fenster, das zurzeit von einem anderen Fenster im gleichen Thread abgedeckt wird.                                                                                                                                 |
-| **Htvscroll**     | Auf der vertikalen Schiebe Leiste.                                                                                                                                                                         |
-| **Htzoom**        | Auf der Schaltfläche **maximieren** .                                                                                                                                                                           |
+| **HTBORDER**      | Im Rahmen eines Fensters, das keinen Größenrahmen besitzt.                                                                                                                                       |
+| **HTBOTTOM**      | Im unteren horizontalen Rahmen eines Fensters.                                                                                                                                                         |
+| **HTBOTTOMLEFT**  | In der unteren linken Ecke eines Fensterrahmens.                                                                                                                                                        |
+| **HTBOTTOMRIGHT** | In der unteren rechten Ecke eines Fensterrahmens.                                                                                                                                                       |
+| **ICEAPTION**     | In einer Titelleiste.                                                                                                                                                                                     |
+| **HTCLIENT**      | In einem Clientbereich.                                                                                                                                                                                   |
+| **NOKIALOSE**       | In einer Schaltfläche **Schließen.**                                                                                                                                                                              |
+| **HTERROR**       | Auf dem Bildschirmhintergrund oder auf einer Trennlinie zwischen Fenstern (identisch mit HTNOWHERE, mit der Ausnahme, dass die [**DefWindowProc-Funktion**](/windows/desktop/api/winuser/nf-winuser-defwindowproca) einen Systemsignal erzeugt, um auf einen Fehler hinzuweisen). |
+| **HTGROWBOX**     | In einem Größenfeld (identisch mit **HTSIZE**).                                                                                                                                                                 |
+| **HTHELP**        | In  einer Hilfeschaltfläche.                                                                                                                                                                               |
+| **HTHSCROLL**     | In einer horizontalen Bildlaufleiste.                                                                                                                                                                         |
+| **HTLEFT**        | Im linken Rahmen eines Fensters.                                                                                                                                                                     |
+| **HTMENU**        | In einem Menü.                                                                                                                                                                                          |
+| **HTMAXBUTTON**   | In einer Schaltfläche **Maximieren.**                                                                                                                                                                           |
+| **HTMINBUTTON**   | In einer Schaltfläche **Minimieren.**                                                                                                                                                                           |
+| **HTNOWHERE**     | Auf dem Bildschirmhintergrund oder auf einer Trennlinie zwischen Fenstern.                                                                                                                                     |
+| **HTREDUCE**      | In einer Schaltfläche **Minimieren.**                                                                                                                                                                           |
+| **HTRIGHT**       | Im rechten Rahmen eines Fensters.                                                                                                                                                                    |
+| **HTSIZE**        | In einem Größenfeld (identisch mit **HTGROWBOX**).                                                                                                                                                              |
+| **HTSYSMENU**     | In einem **Systemmenü** oder in einer Schaltfläche **Schließen** in einem untergeordneten Fenster.                                                                                                                                    |
+| **HTTOP**         | Im oberen horizontalen Rahmen eines Fensters.                                                                                                                                                         |
+| **HTTOPLEFT**     | In der oberen linken Ecke eines Fensterrahmens.                                                                                                                                                        |
+| **HTTOPRIGHT**    | In der oberen rechten Ecke eines Fensterrahmens.                                                                                                                                                       |
+| **HTTRANSPARENT** | In einem Fenster, das derzeit von einem anderen Fenster im gleichen Thread abgedeckt wird.                                                                                                                                 |
+| **HTVSCROLL**     | In der vertikalen Bildlaufleiste.                                                                                                                                                                         |
+| **HTZOOM**        | In einer Schaltfläche **Maximieren.**                                                                                                                                                                           |
 
 
 
- 
+ 
 
-Wenn sich der Cursor im Client Bereich eines Fensters befindet, gibt [**defwindowproc**](/windows/desktop/api/winuser/nf-winuser-defwindowproca) den Wert von " **htclient** Hit-Test" an die Fenster Prozedur zurück. Wenn die Fenster Prozedur diesen Code an das System zurückgibt, konvertiert das System die Bildschirm Koordinaten des Cursor-Hotspots in Client Koordinaten und stellt dann die entsprechende Client Bereich-Maus Nachricht zur Auswahl.
+Wenn sich der Cursor im Clientbereich eines Fensters befindet, gibt [**DefWindowProc**](/windows/desktop/api/winuser/nf-winuser-defwindowproca) den **HTCLIENT-Treffertestwert** an die Fensterprozedur zurück. Wenn die Fensterprozedur diesen Code an das System zurückgibt, konvertiert das System die Bildschirmkoordinaten des Cursor-Hotspots in Clientkoordinaten und sendet dann die entsprechende Clientbereich-Mausnachricht.
 
-Die [**defwindowproc**](/windows/desktop/api/winuser/nf-winuser-defwindowproca) -Funktion gibt einen der anderen Treffer Test Werte zurück, wenn sich der Cursor-Hotspot im nicht-Client Bereich eines Fensters befindet. Wenn die Fenster Prozedur einen dieser Treffer Test Werte zurückgibt, stellt das System eine nicht-Client-Bereich-Maus Nachricht zur Verfügung, wobei der Treffer Test Wert im *wParam* -Parameter der Meldung und die Cursor Koordinaten im *LPARAM* -Parameter abgelegt werden.
+Die [**DefWindowProc-Funktion**](/windows/desktop/api/winuser/nf-winuser-defwindowproca) gibt einen der anderen Treffertestwerte zurück, wenn sich der Cursor-Hot Spot im Nichtclientbereich eines Fensters befindet. Wenn die Fensterprozedur einen dieser Treffertestwerte zurückgibt, sendet das System eine Nicht-Clientbereich-Mausnachricht, wobei der Treffertestwert im *wParam-Parameter* der Nachricht und die Cursorkoordinaten im *lParam-Parameter* platziert werden.
 
-## <a name="mouse-sonar"></a>Maus, Sonar
+## <a name="mouse-sonar"></a>Mouse Sonar
 
-Die Funktion "Mouse Sonar Accessibility" zeigt kurz einige konzentrische Kreise um den Zeiger an, wenn der Benutzer die STRG-Taste drückt und freigibt. Mit dieser Funktion kann ein Benutzer den Mauszeiger auf einem Bildschirm, der überlastet ist, oder mit Auflösung auf hoch, auf einem schlechtesten Qualitäts Monitor oder für Benutzer mit eingeschränkter Sehfähigkeit suchen. Weitere Informationen finden Sie unter den folgenden Flags in [**SystemParametersInfo**](/windows/desktop/api/winuser/nf-winuser-systemparametersinfoa):
+Die Barrierefreiheitsfunktion Mouse Sonar zeigt kurz mehrere konzentrische Kreise um den Zeiger, wenn der Benutzer die STRG-TASTE drückt und freigibt. Dieses Feature hilft einem Benutzer, den Mauszeiger auf einem Bildschirm zu finden, der überladen ist oder dessen Auflösung auf hoch, auf einem Monitor mit schlechter Qualität oder für Benutzer mit sehbehinderter Sehfähigkeit festgelegt ist. Weitere Informationen finden Sie in den folgenden Flags in [**SystemParametersInfo:**](/windows/desktop/api/winuser/nf-winuser-systemparametersinfoa)
 
-**SPI \_ getmousesonar**
+**SPI \_ GETMOUSESONAR**
 
-**SPI- \_ abversions Analyse**
+**SPI \_ SETMOUSESONAR**
 
-## <a name="mouse-vanish"></a>Maus verschwindet
+## <a name="mouse-vanish"></a>Mouse Vanish
 
-Mit der Funktion zur Barrierefreiheit der Maus verschwindet wird der Zeiger ausgeblendet, wenn der Benutzer die Eingabe durchläuft Der Mauszeiger wird erneut angezeigt, wenn der Benutzer die Maus bewegt. Diese Funktion verhindert, dass der Zeiger den eingegebenen Text verdeckt, z. b. in einer e-Mail oder einem anderen Dokument. Weitere Informationen finden Sie unter den folgenden Flags in [**SystemParametersInfo**](/windows/desktop/api/winuser/nf-winuser-systemparametersinfoa):
+Die Barrierefreiheitsfunktion Mouse Vanish blendet den Zeiger aus, wenn der Benutzer eingibt. Der Mauszeiger wird erneut angezeigt, wenn der Benutzer die Maus bewegt. Dieses Feature verhindert, dass der Zeiger den eingegebenen Text verdeckt, z. B. in einer E-Mail oder einem anderen Dokument. Weitere Informationen finden Sie in den folgenden Flags in [**SystemParametersInfo:**](/windows/desktop/api/winuser/nf-winuser-systemparametersinfoa)
 
-**SPI \_ getmouseelvanish**
+**SPI \_ GETMOUSEVANISH**
 
-**SPI-abversions Ausgabe \_**
+**SPI \_ SETMOUSEVANISH**
 
 ## <a name="the-mouse-wheel"></a>Das Mausrad
 
-Das Mausrad kombiniert die Funktionen eines Rades und einer Maustaste. Das Rad verfügt über diskrete, gleichmäßig mit Abstand getrennte Notches. Wenn Sie das Rad drehen, wird eine radnachricht an Ihre Anwendung gesendet, sobald jede Kerb gefunden wird. Die Radtaste kann auch als normale Windows-Schaltfläche in der Mitte (dritte) fungieren. Beim Drücken und Freigeben des Mausrades werden Standard- [**WM- \_ mbuttonup**](wm-mbuttonup.md) -und [**WM- \_ mbuttondown**](wm-mbuttondown.md) -Meldungen gesendet. Durch Doppelklicken auf die dritte Schaltfläche wird die standardmäßige [**WM- \_ mbuttondblclk**](wm-mbuttondblclk.md) -Nachricht gesendet.
+Das Mausrad kombiniert die Features eines Rads und einer Maustaste. Das Rad verfügt über diskrete Notches mit gleichmäßigen Leerräumen. Wenn Sie das Rad drehen, wird eine Radmeldung an Ihre Anwendung gesendet, wenn jede Notch gefunden wird. Die Radschaltfläche kann auch als normale Windows mittlere (dritte) Schaltfläche ausgeführt werden. Wenn Sie das Mausrad drücken und loslassen, werden die Standardmeldungen [**WM \_ MBUTTONUP**](wm-mbuttonup.md) und [**WM \_ MBUTTONDOWN**](wm-mbuttondown.md) gesendet. Wenn Sie auf die dritte Schaltfläche doppelklicken, wird die [**\_ WM-Standardmeldung MBUTTONDBLCLK**](wm-mbuttondblclk.md) gesendet.
 
-Das Mausrad wird durch die [**WM- \_ MouseWheel**](wm-mousewheel.md) -Meldung unterstützt.
+Das Mausrad wird über die [**WM \_ MOUSEWHEEL-Meldung**](wm-mousewheel.md) unterstützt.
 
-Beim Drehen der Maus wird die [**WM- \_ MouseWheel**](wm-mousewheel.md) -Meldung an das Fokus Fenster gesendet. Die [**defwindowproc**](/windows/desktop/api/winuser/nf-winuser-defwindowproca) -Funktion gibt die Nachricht an das übergeordnete Fenster des Fensters weiter. Es sollte keine interne Weiterleitung der Nachricht vorhanden sein, da **defwindowproc** Sie in der übergeordneten Kette weitergibt, bis ein Fenster, in dem Sie verarbeitet wird, gefunden wird.
+Durch Drehen der Maus wird die [**WM \_ MOUSEWHEEL-Nachricht**](wm-mousewheel.md) an das Fokusfenster gesendet. Die [**DefWindowProc-Funktion**](/windows/desktop/api/winuser/nf-winuser-defwindowproca) gibt die Nachricht an das übergeordnete Element des Fensters weiter. Es sollte keine interne Weiterleitung der Nachricht erfolgen, da **DefWindowProc** sie in der übergeordneten Kette weiterleitet, bis ein Fenster gefunden wird, das sie verarbeitet.
 
-### <a name="determining-the-number-of-scroll-lines"></a>Festlegen der Anzahl der scrolllinien
+### <a name="determining-the-number-of-scroll-lines"></a>Bestimmen der Anzahl von Bildlauflinien
 
-Anwendungen sollten die [**SystemParametersInfo**](/windows/desktop/api/winuser/nf-winuser-systemparametersinfoa) -Funktion verwenden, um die Anzahl der Zeilen abzurufen, die für die einzelnen Bild Lauf Vorgänge in einem Dokument gefiltert werden. Zum Abrufen der Zeilen Anzahl führt eine Anwendung den folgenden Befehl aus:
-
-
-```
-SystemParametersInfo(SPI_GETWHEELSCROLLLINES, 0, pulScrollLines, 0)
-```
-
-
-
-Die Variable "pulscrolllines" verweist auf einen ganzzahligen Wert ohne Vorzeichen, der die empfohlene Anzahl von Zeilen für den Bildlauf empfängt, wenn das Mausrad ohne Modifizierertasten gedreht wird:
-
--   Wenn diese Zahl 0 ist, sollte kein Bildlauf ausgeführt werden.
--   Wenn diese Zahl ein **Rad- \_ PageScroll** ist, sollte ein radrollup so interpretiert werden, dass es in der Bild-ab-oder der Bild Lauf Leiste der Bild Lauf Leiste auf einmal klickt.
--   Wenn die Anzahl der auszuscrollenden Zeilen größer als die Anzahl der angezeigten Zeilen ist, sollte der scrollvorgang auch als Bild-auf-oder Bild-ab-Vorgang interpretiert werden.
-
-Der Standardwert für die Anzahl der scrollzeilen ist 3. Wenn ein Benutzer die Anzahl der Bild Lauf Linien mithilfe des Maus Eigenschaften Blatts in der Systemsteuerung ändert, überträgt das Betriebssystem eine [**WM- \_ settingchange**](../winmsg/wm-settingchange.md) -Meldung an alle Fenster der obersten Ebene, wobei **SPI \_ setwheelscrolllines** angegeben ist. Wenn eine Anwendung die **WM- \_ settingchange** -Nachricht empfängt, kann Sie die neue Anzahl von scrollzeilen abrufen, indem Sie Folgendes aufrufen:
+Anwendungen sollten die [**SystemParametersInfo-Funktion**](/windows/desktop/api/winuser/nf-winuser-systemparametersinfoa) verwenden, um die Anzahl der Zeilen abzurufen, die ein Dokument für jeden Scrollvorgang (Wheel Notch) scrollt. Um die Anzahl der Zeilen abzurufen, ruft eine Anwendung den folgenden Aufruf ab:
 
 
 ```
@@ -302,32 +287,47 @@ SystemParametersInfo(SPI_GETWHEELSCROLLLINES, 0, pulScrollLines, 0)
 
 
 
-### <a name="controls-that-scroll"></a>Steuerelemente zum Scrollen
+Die Variable "pulScrollLines" zeigt auf einen ganzzahligen Wert ohne Vorzeichen, der die vorgeschlagene Anzahl von Zeilen empfängt, die gescrollt werden sollen, wenn das Mausrad ohne Modifizierertasten gedreht wird:
 
-In der folgenden Tabelle sind die Steuerelemente mit scrollfunktionen (einschließlich der vom Benutzer festgelegten Bild Lauf Zeilen) aufgelistet. 
+-   Wenn diese Zahl 0 ist, sollte kein Bildlauf erfolgen.
+-   Wenn diese Zahl **WHEEL \_ PAGESCROLL** ist, sollte ein Radroll so interpretiert werden, dass er einmal in den Seitenab- oder Seitenupbereichen der Scrollleiste klickt.
+-   Wenn die Anzahl der Zeilen, für die ein Bildlauf durchgeführt werden soll, größer als die Anzahl der anzuzeigenden Zeilen ist, sollte der Bildlaufvorgang auch als Bildlauf nach unten oder nach oben interpretiert werden.
+
+Der Standardwert für die Anzahl der Bildlaufzeilen ist 3. Wenn ein Benutzer die Anzahl der Bildlauflinien mithilfe des Blatts Mauseigenschaften in Systemsteuerung ändert, überträgt das Betriebssystem eine [**WM \_ SETTINGCHANGE-Meldung**](../winmsg/wm-settingchange.md) an alle Fenster der obersten Ebene, wobei **SPI \_ SETWHEELSCROLLLINES** angegeben ist. Wenn eine Anwendung die **WM \_ SETTINGCHANGE-Nachricht** empfängt, kann sie die neue Anzahl von Scrollzeilen abrufen, indem sie Folgendes aufruft:
+
+
+```
+SystemParametersInfo(SPI_GETWHEELSCROLLLINES, 0, pulScrollLines, 0)
+```
+
+
+
+### <a name="controls-that-scroll"></a>Steuerelemente, die scrollen
+
+In der folgenden Tabelle sind die Steuerelemente mit Scrollfunktionen (einschließlich vom Benutzer festgelegter Scrollzeilen) aufgeführt. 
 
 | Control                 | Bildlauf                                                                                                                                                               |
 |-------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Steuerelement bearbeiten            | Vertikal und horizontal.                                                                                                                                                |
 | Listenfeld-Steuerelement        | Vertikal und horizontal.                                                                                                                                                |
-| Kombinationsfeld               | Wenn die Option nicht gelöscht wird, ruft jeder Bild Lauf das nächste oder vorherige Element ab. Beim Ablegen leitet jeder scrollvorgang die Nachricht an das Listenfeld weiter, das entsprechend einen Bildlauf durchführt. |
-| Cmd (Befehlszeile)      | Vertikal.                                                                                                                                                               |
+| Kombinationsfeld               | Wenn sie nicht gelöscht wird, ruft jeder Bildlauf das nächste oder vorherige Element ab. Wenn sie nach unten verschoben wird, führt jeder Bildlauf die Nachricht nach vorn zum Listenfeld aus, in dem entsprechend gescrollt wird. |
+| CMD (Befehlszeile)      | Vertikal.                                                                                                                                                               |
 | Strukturansicht               | Vertikal und horizontal.                                                                                                                                                |
 | Listenansicht               | Vertikal und horizontal.                                                                                                                                                |
-| Bildlauf nach oben/nach unten         | Ein Element gleichzeitig.                                                                                                                                                     |
-| TrackBar-Scrollleiste        | Ein Element gleichzeitig.                                                                                                                                                     |
-| Microsoft Rich Edit 1,0 | Vertikal. Beachten Sie, dass der Exchange-Client seine eigenen Versionen der Listenansicht und Strukturansicht-Steuerelemente enthält, die keine Wheel-Unterstützung haben.                                        |
-| Microsoft Rich Edit 2,0 | Vertikal.                                                                                                                                                               |
+| Bildlauf nach oben/unten         | Ein Element nach dem anderen.                                                                                                                                                     |
+| Trackbar-Scrolls        | Ein Element nach dem anderen.                                                                                                                                                     |
+| Microsoft Rich Edit 1.0 | Vertikal. Beachten Sie, dass der Exchange-Client über eigene Versionen der Listenansichts- und Strukturansichtssteuerelemente verfügt, die keine Radunterstützung aufweisen.                                        |
+| Microsoft Rich Edit 2.0 | Vertikal.                                                                                                                                                               |
 
 
 
- 
+ 
 
 ### <a name="detecting-a-mouse-with-a-wheel"></a>Erkennen einer Maus mit einem Rad
 
-Um zu ermitteln, ob eine Maus mit einem Rad verbunden ist, müssen Sie [**GetSystemMetrics**](/windows/desktop/api/winuser/nf-winuser-getsystemmetrics) mit **SM \_ MouseWheelPresent** aufrufen. Der Rückgabewert **true** gibt an, dass die Maus verbunden ist.
+Um zu bestimmen, ob eine Maus mit einem Rad verbunden ist, rufen [**Sie GetSystemMetrics**](/windows/desktop/api/winuser/nf-winuser-getsystemmetrics) mit **SM \_ MOUSEWHEELPRESENT** auf. Der Rückgabewert **TRUE** gibt an, dass die Maus verbunden ist.
 
-Das folgende Beispiel erfolgt aus der Fenster Prozedur für ein mehrzeilige Bearbeitungs Steuerelement:
+Das folgende Beispiel stammt aus der Fensterprozedur für ein mehrzeiliges Bearbeitungssteuerelement:
 
 
 ```
@@ -383,19 +383,19 @@ case WM_MOUSEWHEEL:
 
 ## <a name="window-activation"></a>Aktivieren von Fenstern
 
-Wenn der Benutzer auf ein inaktives Fenster der obersten Ebene oder das untergeordnete Fenster eines inaktiven Fensters der obersten Ebene klickt, sendet das System die [**WM- \_ mouseaktivierungs**](wm-mouseactivate.md) -Nachricht (unter anderem) an das Fenster der obersten Ebene oder an das untergeordnete Fenster. Das System sendet diese Nachricht nach dem Bereitstellen der [**WM- \_ nchittest**](wm-nchittest.md) -Nachricht an das Fenster, jedoch vor dem Veröffentlichen der Schaltfläche mit der Schaltfläche. Wenn **WM \_ mouseaktivierungs** an die [**defwindowproc**](/windows/desktop/api/winuser/nf-winuser-defwindowproca) -Funktion weitergegeben wird, aktiviert das System das Fenster der obersten Ebene und stellt dann die Schaltfläche auf der obersten Ebene oder im untergeordneten Fenster wieder her.
+Wenn der Benutzer auf ein inaktives Fenster der obersten Ebene oder auf das untergeordnete Fenster eines inaktiven Fensters der obersten Ebene klickt, sendet das System die [**WM \_ MOUSEACTIVATE-Nachricht**](wm-mouseactivate.md) (unter anderem) an das Fenster der obersten Ebene oder an das untergeordnete Fenster. Das System sendet diese Nachricht, nachdem die [**\_ WM-NCHITTEST-Nachricht**](wm-nchittest.md) an das Fenster gesendet wurde, aber bevor die Schaltflächen-down-Nachricht gepostet wird. Wenn **WM \_ MOUSEACTIVATE** an die [**DefWindowProc-Funktion**](/windows/desktop/api/winuser/nf-winuser-defwindowproca) übergeben wird, aktiviert das System das Fenster der obersten Ebene und sendet dann die Schaltflächen-nach-unten-Meldung an das Fenster der obersten Ebene oder des untergeordneten Fensters.
 
-Durch die Verarbeitung von [**WM \_ mouseaktivierungs**](wm-mouseactivate.md)kann ein Fenster steuern, ob das Fenster der obersten Ebene das aktive Fenster ist, das durch einen Mausklick angezeigt wird, und ob das Fenster, auf das geklickt wurde, die nachfolgende Schaltfläche nach unten empfängt. Dies erfolgt durch Zurückgeben eines der folgenden Werte nach der Verarbeitung von **WM \_ mousaktivierungs**.
+Durch die Verarbeitung von [**WM \_ MOUSEACTIVATE**](wm-mouseactivate.md)kann ein Fenster steuern, ob das Fenster der obersten Ebene als Ergebnis eines Mausklicks zum aktiven Fenster wird und ob das fenster, auf das geklickt wurde, die nachfolgende Schaltflächen-Down-Meldung empfängt. Dazu wird einer der folgenden Werte zurückgegeben, nachdem **WM \_ MOUSEACTIVATE** verarbeitet wurde.
 
 
 
 | Wert                    | Bedeutung                                                              |
 |--------------------------|----------------------------------------------------------------------|
-| **MA- \_ Aktivierung**         | Aktiviert das Fenster, und die Maus Meldung wird nicht verworfen.         |
-| **MA \_ noaktivierungs**       | Das Fenster wird nicht aktiviert, und die Maus Meldung wird nicht verworfen. |
-| **MA \_ activateandeat**   | Aktiviert das Fenster und verwirft die Maus Meldung.                 |
-| **MA \_ noactivateandeat** | Aktiviert das Fenster nicht, sondern verwirft die Maus Nachricht.         |
+| **MA \_ ACTIVATE**         | Aktiviert das Fenster und verwirft die Mausnachricht nicht.         |
+| **MA \_ NOACTIVATE**       | Aktiviert das Fenster nicht und verwirft die Mausnachricht nicht. |
+| **MA \_ ACTIVATEANDEAT**   | Aktiviert das Fenster und verwirft die Mausnachricht.                 |
+| **MA \_ NOACTIVATEANDEAT** | Aktiviert das Fenster nicht, sondern verwirft die Mausnachricht.         |
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
-[Nutzen der High-Definition Mausbewegung](../dxtecharts/taking-advantage-of-high-dpi-mouse-movement.md)
+[Nutzen von High-Definition Mausbewegung](../dxtecharts/taking-advantage-of-high-dpi-mouse-movement.md)

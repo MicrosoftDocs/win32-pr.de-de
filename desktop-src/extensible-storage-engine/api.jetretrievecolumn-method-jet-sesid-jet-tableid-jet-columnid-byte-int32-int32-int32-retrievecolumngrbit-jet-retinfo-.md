@@ -1,6 +1,6 @@
 ---
-description: 'Weitere Informationen finden Sie unter: API. jetretrievecolumschlag-Methode (JET_SESID, JET_TABLEID, JET_COLUMNID, Byte, Int32, Int32, Int32, retrievecolumgengrbit, JET_RETINFO)'
-title: API. jetretrievecolumschlag-Methode (JET_SESID, JET_TABLEID, JET_COLUMNID, Byte, Int32, Int32, Int32, retrievecolumgengrbit, JET_RETINFO)
+description: 'Weitere Informationen zu: Api.JetRetrieveColumn-Methode (JET_SESID, JET_TABLEID, JET_COLUMNID, Byte, Int32, Int32, Int32, RetrieveColumnGrbit, JET_RETINFO)'
+title: Api.JetRetrieveColumn-Methode (JET_SESID, JET_TABLEID, JET_COLUMNID, Byte, Int32, Int32, Int32, RetrieveColumnGrbit, JET_RETINFO)
 TOCTitle: JetRetrieveColumn method (JET_SESID, JET_TABLEID, JET_COLUMNID, Byte , Int32, Int32, Int32, RetrieveColumnGrbit, JET_RETINFO)
 ms:assetid: M:Microsoft.Isam.Esent.Interop.Api.JetRetrieveColumn(Microsoft.Isam.Esent.Interop.JET_SESID,Microsoft.Isam.Esent.Interop.JET_TABLEID,Microsoft.Isam.Esent.Interop.JET_COLUMNID,System.Byte[],System.Int32,System.Int32,System.Int32@,Microsoft.Isam.Esent.Interop.RetrieveColumnGrbit,Microsoft.Isam.Esent.Interop.JET_RETINFO)
 ms:mtpsurl: https://msdn.microsoft.com/library/microsoft.isam.esent.interop.api.jetretrievecolumn(v=EXCHG.10)
@@ -20,19 +20,19 @@ api_type:
 api_location:
 - Microsoft.Isam.Esent.Interop.dll
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: 832e6d6cc123e4a85a2cacb2df688348732fcc0b
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: c0d2144b0c60ce4d9a7aa9c1198839dd43be3a4c5b682fc8a7e92ce3f3c637a7
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "104349599"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118983220"
 ---
-# <a name="apijetretrievecolumn-method-jet_sesid-jet_tableid-jet_columnid-byte--int32-int32-int32-retrievecolumngrbit-jet_retinfo"></a>API. jetretrievecolumschlag-Methode (JET_SESID, JET_TABLEID, JET_COLUMNID, Byte, Int32, Int32, Int32, retrievecolumgengrbit, JET_RETINFO)
+# <a name="apijetretrievecolumn-method-jet_sesid-jet_tableid-jet_columnid-byte--int32-int32-int32-retrievecolumngrbit-jet_retinfo"></a>Api.JetRetrieveColumn-Methode (JET_SESID, JET_TABLEID, JET_COLUMNID, Byte, Int32, Int32, Int32, RetrieveColumnGrbit, JET_RETINFO)
 
-Ruft einen einzelnen Spaltenwert aus dem aktuellen Datensatz ab. Der Datensatz ist der Datensatz, der mit dem Index Eintrag an der aktuellen Position des Cursors verknüpft ist. Alternativ kann diese Funktion eine Spalte aus einem Datensatz abrufen, der im Cursor Kopier Puffer erstellt wird. Diese Funktion kann auch Spaltendaten aus einem Index Eintrag abrufen, der auf den aktuellen Datensatz verweist. Zusätzlich zum Abrufen des tatsächlichen Spaltenwerts kann jetretrievecolumschlag auch verwendet werden, um die Größe einer Spalte abzurufen, bevor die Spaltendaten selbst abgerufen werden, sodass die Größe der Anwendungs Puffer entsprechend angepasst werden kann.
+Ruft einen einzelnen Spaltenwert aus dem aktuellen Datensatz ab. Der Datensatz ist der Datensatz, der dem Indexeintrag an der aktuellen Position des Cursors zugeordnet ist. Alternativ kann diese Funktion eine Spalte aus einem Datensatz abrufen, der im Cursorkopierpuffer erstellt wird. Diese Funktion kann auch Spaltendaten aus einem Indexeintrag abrufen, der auf den aktuellen Datensatz verweist. Neben dem Abrufen des tatsächlichen Spaltenwerts kann JetRetrieveColumn auch verwendet werden, um die Größe einer Spalte abzurufen, bevor die Spaltendaten selbst abgerufen werden, damit die Größe der Anwendungspuffer entsprechend angepasst werden kann.
 
-**Namespace:**  [Microsoft. ISAM. ESENT. Interop](./microsoft.isam.esent.interop-namespace.md)  
-**Assembly:**  Microsoft. ISAM. ESENT. Interop (in Microsoft.Isam.Esent.Interop.dll)
+**Namespace:**  [Microsoft.Isam.Esent.Interop](./microsoft.isam.esent.interop-namespace.md)  
+**Assembly:**  Microsoft.Isam.Esent.Interop (in Microsoft.Isam.Esent.Interop.dll)
 
 ## <a name="syntax"></a>Syntax
 
@@ -83,84 +83,84 @@ public static JET_wrn JetRetrieveColumn(
 
 #### <a name="parameters"></a>Parameter
 
-  - -sid  
-    Typ: [Microsoft.ISAM.ESENT.Interop.JET_SESID](./jet-sesid-structure.md)  
+  - sesid  
+    Typ: [Microsoft.Isam.Esent.Interop.JET_SESID](./jet-sesid-structure.md)  
     
     Die zu verwendende Sitzung.
 
 <!-- end list -->
 
-  - TableID  
-    Typ: [Microsoft.ISAM.ESENT.Interop.JET_TABLEID](./jet-tableid-structure.md)  
+  - tableid  
+    Typ: [Microsoft.Isam.Esent.Interop.JET_TABLEID](./jet-tableid-structure.md)  
     
-    Der Cursor, von dem die Spalte abgerufen werden soll.
+    Der Cursor, aus dem die Spalte abgerufen werden soll.
 
 <!-- end list -->
 
   - columnid  
-    Typ: [Microsoft.ISAM.ESENT.Interop.JET_COLUMNID](./jet-columnid-structure.md)  
+    Typ: [Microsoft.Isam.Esent.Interop.JET_COLUMNID](./jet-columnid-structure.md)  
     
-    Das abzurufende ColumnID.
+    Die abzurufende columnid.
 
 <!-- end list -->
 
-  - Daten  
-    Sorte \[\]  
+  - data  
+    Typ: \[\]  
     
-    Der Datenpuffer, in den der abgerufen werden soll.
+    Der Datenpuffer, in den abgerufen werden soll.
 
 <!-- end list -->
 
   - dataSize  
-    Typ: [System. Int32](/dotnet/api/system.int32)  
+    Typ: [System.Int32](/dotnet/api/system.int32)  
     
-    Die Größe des Daten Puffers.
+    Die Größe des Datenpuffers.
 
 <!-- end list -->
 
   - dataOffset  
-    Typ: [System. Int32](/dotnet/api/system.int32)  
+    Typ: [System.Int32](/dotnet/api/system.int32)  
     
-    Offset im Datenpuffer, in den Daten gelesen werden sollen.
+    Offset in den Datenpuffer, in den Daten gelesen werden sollen.
 
 <!-- end list -->
 
-  - actualdatasize  
-    Typ: [System. Int32](/dotnet/api/system.int32)  
+  - actualDataSize  
+    Typ: [System.Int32](/dotnet/api/system.int32)  
     
-    Gibt die tatsächliche Größe des Daten Puffers zurück.
+    Gibt die tatsächliche Größe des Datenpuffers zurück.
 
 <!-- end list -->
 
   - grbit  
-    Typ: [Microsoft. ISAM. ESENT. Interop. retrievecolenngrbit](./retrievecolumngrbit-enumeration.md)  
+    Typ: [Microsoft.Isam.Esent.Interop.RetrieveColumnGrbit](./retrievecolumngrbit-enumeration.md)  
     
-    Abrufen von Spalten Optionen.
+    Abrufen von Spaltenoptionen.
 
 <!-- end list -->
 
   - retinfo  
-    Typ: [Microsoft.ISAM.ESENT.Interop.JET_RETINFO](./jet-retinfo-class.md)  
+    Typ: [Microsoft.Isam.Esent.Interop.JET_RETINFO](./jet-retinfo-class.md)  
     
-    Wenn pretinfo als NULL angegeben wird, verhält sich die Funktion so, als ob eine itagsequence von 1 und ein iblongvalue-Wert von 0 (null) angegeben wurde. Dies bewirkt, dass der Spalten Abruf den ersten Wert einer mehrwertigen Spalte abruft und lange Daten bei Offset 0 (null) abruft.
+    Wenn pretinfo als NULL angegeben wird, verhält sich die Funktion so, als ob eine ItagSequence von 1 und ein ibLongValue von 0 (null) angegeben worden wären. Dies bewirkt, dass der Spaltenabruf den ersten Wert einer mehrwertigen Spalte abruft und lange Daten bei Offset 0 (null) abruft.
 
 #### <a name="return-value"></a>Rückgabewert
 
-Typ: [Microsoft.ISAM.ESENT.Interop.JET_wrn](./jet-wrn-enumeration.md)  
-Ein ESENT-Warnungs Code.  
+Typ: [Microsoft.Isam.Esent.Interop.JET_wrn](./jet-wrn-enumeration.md)  
+Ein ESENT-Warnungscode.  
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Dies ist eine interne Methode, die einen Puffer Offset und eine Größe einnimmt.
+Dies ist eine interne Methode, die sowohl einen Pufferoffset als auch eine Größe annimmt.
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
-#### <a name="reference"></a>Referenz
+#### <a name="reference"></a>Verweis
 
 [API-Klasse](./api-class.md)
 
-[API-Mitglieder](./api-members.md)
+[API-Member](./api-members.md)
 
-[Jetretrievecolübern-Überladung](./api.jetretrievecolumn-method.md)
+[JetRetrieveColumn-Überladung](./api.jetretrievecolumn-method.md)
 
-[Microsoft. ISAM. ESENT. Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)
+[Microsoft.Isam.Esent.Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)

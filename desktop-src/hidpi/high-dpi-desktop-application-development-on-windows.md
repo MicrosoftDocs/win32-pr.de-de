@@ -1,6 +1,6 @@
 ---
-title: Hohe dpi-Entwicklung für Desktop Anwendungen unter Windows
-description: Dieser Inhalt richtet sich an Entwickler, die Desktop Anwendungen aktualisieren möchten, um den dynamischen Bildschirm Skalierungsfaktor (auch
+title: Entwicklung von Desktopanwendungen mit hohem DPI-Windows
+description: Dieser Inhalt richtet sich an Entwickler, die Desktopanwendungen aktualisieren möchten, um den dynamischen Anzeigeskalierfaktor (auch als
 ms.assetid: 6C419EEF-D898-4B50-8D16-E65A594487AA
 ms.topic: article
 ms.date: 05/31/2018
@@ -9,65 +9,65 @@ topic_type:
 api_name: ''
 api_type: ''
 api_location: ''
-ms.openlocfilehash: 7af4a7a1d65077838dfa65f7cf89dee475a0b4dc
-ms.sourcegitcommit: ae73f4dd3cf5a3c6a1ea7d191ca32a5b01f6686b
+ms.openlocfilehash: c6389553ce2265752e3552fdaaf848e3ac70eede8df3b4fd9e560861bf15f33d
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "104102486"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119036252"
 ---
-# <a name="high-dpi-desktop-application-development-on-windows"></a>Hohe dpi-Entwicklung für Desktop Anwendungen unter Windows
+# <a name="high-dpi-desktop-application-development-on-windows"></a>Entwicklung von Desktopanwendungen mit hohem DPI-Windows
 
-Dieser Inhalt richtet sich an Entwickler, die Desktop Anwendungen aktualisieren möchten, um die Änderung der Anzeige Skalierungsfaktor (dpi, dpi, dpi, dpi) dynamisch durchzuführen, sodass Ihre Anwendungen auf jeder Anzeige, auf der Sie gerendert werden, auf einen Spitzenwert ausgerichtet werden.
+Dieser Inhalt richtet sich an Entwickler, die Desktopanwendungen aktualisieren möchten, um Änderungen des Anzeigeskalierfaktors (Punkte pro Zoll oder DPI) dynamisch zu verarbeiten, sodass ihre Anwendungen auf jeder Anzeige, auf der sie gerendert werden, klar sein können.
 
-Wenn Sie eine neue Windows-APP von Grund auf neu erstellen, empfiehlt es sich, eine universelle Windows-Plattform-Anwendung [(UWP)](/windows/uwp/get-started/whats-a-uwp) zu erstellen. UWP-Anwendungen &mdash; &mdash; werden für jede Anzeige, auf der Sie ausgeführt werden, automatisch und dynamisch skaliert.
+Wenn Sie eine neue Windows-App von Grund auf neu erstellen, wird dringend empfohlen, eine [UWP-Anwendung (Universelle](/windows/uwp/get-started/whats-a-uwp) Windows-Plattform) zu erstellen. UWP-Anwendungen werden automatisch und dynamisch für jede Anzeige skaliert, &mdash; auf der sie ausgeführt &mdash; werden.
 
-Desktop Anwendungen, die ältere Windows-Programmiertechnologien verwenden (unformatierte Win32-Programmierung, Windows Forms, Windows Presentation Framework (WPF) usw.) können die DPI-Skalierung nicht automatisch verarbeiten, ohne dass zusätzliche Entwickler arbeiten müssen. Ohne diese Arbeit werden Anwendungen in vielen gängigen Verwendungs Szenarien verschwommen oder falsch formatiert. Dieses Dokument enthält Kontext und Informationen dazu, was beim Aktualisieren einer Desktop Anwendung zum ordnungsgemäßen Rendering beteiligt ist.
+Desktopanwendungen, die ältere Windows-Programmiertechnologien (unformatiert win32-Programmierung, Windows Forms, Windows Presentation Framework (WPF) usw.) verwenden, können die DPI-Skalierung ohne zusätzliche Entwicklerarbeit nicht automatisch verarbeiten. Ohne diese Arbeit erscheinen Anwendungen in vielen gängigen Verwendungsszenarien unscharf oder falsch dimensioniert. Dieses Dokument enthält Kontext und Informationen dazu, was an der Aktualisierung einer Desktopanwendung beteiligt ist, damit sie ordnungsgemäß gerendert wird.
 
-## <a name="display-scale-factor--dpi"></a>Skalierungsfaktor & dpi anzeigen
+## <a name="display-scale-factor--dpi"></a>Anzeigen des Skalierungsfaktors & DPI
 
-Wenn die Anzeige Technologie fortgeschritten ist, haben die Hersteller der Anzeige Bereiche eine wachsende Anzahl von Pixeln in jede Einheit von physischem Raum in ihren Bereichen gepackt. Dies hat zur Folge, dass die Punkte pro Zoll (dpi) moderner Anzeige Bereiche viel höher sind als in der Vergangenheit. In der Vergangenheit hatten die meisten Anzeige 96 Pixel pro linearer Zoll von physischem Speicher (96 dpi). in 2017 sind anzeigen mit fast 300 dpi oder höher sofort verfügbar.
+Im Verlauf der Entwicklung der Anzeigetechnologie haben Hersteller von Anzeigepanels eine zunehmende Anzahl von Pixeln in jede Einheit des physischen Raums auf ihren Panels gepackt. Dies hat dazu führen, dass die DPI-Punkte (Dots per Inch) moderner Anzeigepanels viel höher sind als in der Vergangenheit. In der Vergangenheit hatten die meisten Anzeigen 96 Pixel pro linearem Zoll physischen Raum (96 DPI). im Jahr 2017 sind Displays mit fast 300 DPI oder höher sofort verfügbar.
 
-Die meisten Legacy-Desktop Benutzeroberflächen-Frameworks verfügen über integrierte Annahmen, dass die Anzeige dpi während der Lebensdauer des Prozesses nicht geändert wird.  Diese Annahme ist nicht mehr true, und die Anzeige von DPIs ändert sich häufig mehrmals während der Lebensdauer eines Anwendungsprozesses. Einige häufige Szenarien, in denen die Anzeige Skalierungsfaktor/dpi-Änderungen:
+Die meisten Legacy-Desktopbenutzeroberflächenframeworks verfügen über integrierte Annahmen, dass sich der Anzeige-DPI während der Lebensdauer des Prozesses nicht ändert.  Diese Annahme gilt nicht mehr, da sich Anzeige-DPIs während der Lebensdauer eines Anwendungsprozesses häufig mehrmals ändern. Einige häufige Szenarien, in denen sich der Skalierungsfaktor/DPI-Anzeigefaktor ändert, sind:
 
--   Konfigurationen mit mehreren Monitoren, bei denen jede Anzeige einen anderen Skalierungsfaktor hat und die Anwendung von einer Anzeige in eine andere verschoben wird (z. b. ein 4K und eine 1080p-Anzeige)
--   Andocken und Andocken eines großen dpi-Laptops mit einer externen Anzeige mit niedriger dpi (oder umgekehrt)
--   Herstellen einer Verbindung über Remotedesktop von einem Laptop/Tablet mit hoher dpi-Verbindung mit einem Gerät mit geringer dpi (oder umgekehrt)
--   Ändern der Einstellungen für die Anzeige des Skalierungsfaktors während der Ausführung von Anwendungen
+-   Setups mit mehreren Monitoren, bei denen jede Anzeige über einen anderen Skalierungsfaktor verfügt und die Anwendung von einer Anzeige auf eine andere verschoben wird (z. B. eine 4K- und eine 1080p-Anzeige).
+-   Andocken und Abdocken eines Laptops mit hohem DPI-Wert mit einem externen Display mit geringem DPI-Wert (oder umgekehrt)
+-   Herstellen einer Verbindung Remotedesktop von einem Laptop/Tablet mit hohem DPI-Wert mit einem Gerät mit geringem DPI-Wert (oder umgekehrt)
+-   Ändern der Einstellungen für den Anzeigeskalierenfaktor, während Anwendungen ausgeführt werden
 
-In diesen Szenarien zeichnen sich UWP-Anwendungen automatisch selbst für den neuen dpi-Abschnitt neu auf. Standardmäßig und ohne zusätzliche Entwickler Arbeit ist dies bei Desktop Anwendungen nicht der Fall. Desktop Anwendungen, die diese zusätzlichen Aufgaben nicht ausführen, um auf dpi-Änderungen zu reagieren, werden möglicherweise unscharf oder falsch für den Benutzer angezeigt.
+In diesen Szenarien werden UWP-Anwendungen automatisch für den neuen DPI neu gezeichnet. Standardmäßig und ohne zusätzliche Entwicklerarbeit werden Desktopanwendungen nicht verwendet. Desktopanwendungen, die diese zusätzliche Arbeit nicht zum Reagieren auf DPI-Änderungen vornehmen, können für den Benutzer unscharf oder falsch dimensioniert erscheinen.
 
-## <a name="dpi-awareness-mode"></a>DPI-Awareness-Modus
+## <a name="dpi-awareness-mode"></a>DPI-Bewusstseinsmodus
 
-Desktop Anwendungen müssen Windows informieren, wenn Sie die DPI-Skalierung unterstützen. Standardmäßig betrachtet das System Desktop Anwendungen mit dpi-Wert und Bitmap. Wenn Sie einen der folgenden verfügbaren dpi-Awareness-Modi festlegen, können die Anwendungen explizit angeben, wie die DPI-Skalierung verarbeitet werden soll:
+Desktopanwendungen müssen Windows, ob sie die DPI-Skalierung unterstützen. Standardmäßig berücksichtigt das System Desktopanwendungen als DPI nicht und streckt ihre Fenster durch Bitmaps. Durch Festlegen eines der folgenden verfügbaren DPI-Bewusstseinsmodi können Anwendungen explizit Windows, wie sie die DPI-Skalierung behandeln möchten:
 
 ### <a name="dpi-unaware"></a>DPI nicht bekannt
 
-Dpi-abhängige Anwendungen werden mit einem Fixed-dpi-Wert von 96 (100%). Wenn diese Anwendungen auf einem Bildschirm mit einer Anzeige Skala größer als 96 dpi ausgeführt werden, wird die Anwendungs Bitmap von Windows auf die erwartete physische Größe gestreckt. Dies führt dazu, dass die Anwendung verschwommen erscheint.
+Nicht DPI-anwendungen werden mit einem festen DPI-Wert von 96 (100 %) gerendert. Wenn diese Anwendungen auf einem Bildschirm mit einer Anzeigeskala von mehr als 96 DPI ausgeführt werden, streckt Windows die Anwendungsbitmap auf die erwartete physische Größe. Dies führt dazu, dass die Anwendung unscharf erscheint.
 
-### <a name="system-dpi-awareness"></a>System-dpi-Informationen
+### <a name="system-dpi-awareness"></a>System-DPI-Bewusstsein
 
-Desktop Anwendungen, die System-dpi-fähig sind, erhalten in der Regel den dpi-Wert des primären verbundenen Monitors zum Zeitpunkt der Benutzeranmeldung. Während der Initialisierung legen Sie die Benutzeroberfläche entsprechend fest (Größenänderung, auswählen von Schriftgrößen, Laden von Assets usw.), indem Sie diesen System-dpi-Wert verwenden. Auf diese Weise werden System-dpi-fähige Anwendungen nicht auf dpi skaliert (Bitmap gestreckt) von Windows on zeigt das Rendering bei diesem einzelnen dpi an. Wenn die Anwendung in eine Anzeige mit einem anderen Skalierungsfaktor verschoben wird, oder wenn sich der Anzeige Skalierungsfaktor auf andere Weise ändert, wird Windows das Fenster der Anwendung skalieren, sodass Sie unscharf angezeigt werden. Effektiv werden System-dpi-fähige Desktop Anwendungen nur mit einem einzigen Display scale-Faktor nur mit einem einzigen Display Skalierungsfaktor versehen, wenn sich der dpi-Faktor ändert.
+Desktopanwendungen mit System-DPI-Unterstützung erhalten in der Regel die DPI des primären verbundenen Monitors zum Zeitpunkt der Benutzeranmeldezeit. Während der Initialisierung wird die Benutzeroberfläche mithilfe dieses System-DPI-Werts entsprechend angepasst (Größensteuerelemente, Auswahl von Schriftgraden, Laden von Ressourcen usw.). Daher werden DPI-orientierte Systemanwendungen nicht durch DPI skaliert (Bitmap gestreckt) Windows auf Anzeigen, die mit diesem einzelnen DPI gerendert werden. Wenn die Anwendung auf eine Anzeige mit einem anderen Skalierungsfaktor verschoben wird oder sich der Anzeigeskalierenfaktor andernfalls ändert, skaliert Windows die Fenster der Anwendung in bitmaps, wodurch sie unscharf erscheinen. System-DPI-orientierte Desktopanwendungen rendern effektiv nur mit einem einzigen Anzeigeskalierenfaktor und werden unscharf, wenn sich der DPI ändert.
 
-### <a name="per-monitor-and-per-monitor-v2-dpi-awareness"></a>Per-Monitor und Per-Monitor (v2) dpi-Informationen
+### <a name="per-monitor-and-per-monitor-v2-dpi-awareness"></a>Per-Monitor und Per-Monitor (V2) DPI Awareness
 
-Es wird empfohlen, Desktop Anwendungen so zu aktualisieren, dass Sie den dpi-Modus pro Monitor verwenden, sodass Sie sofort ordnungsgemäß renderfähig werden, wenn sich der dpi-Wert ändert. Wenn in einer Anwendung Windows angezeigt wird, dass Sie in diesem Modus ausgeführt werden soll, wird die Anwendung von Windows nicht mit Bitmap gestreckt, wenn der dpi-Wert geändert wird. stattdessen wird [WM \_ dpichanged](wm-dpichanged.md) an das Anwendungsfenster gesendet. Dann ist die gesamte Aufgabe der Anwendung, die Größe der neuen dpi-Größe selbst zu verarbeiten. Die meisten Benutzeroberflächen-Frameworks, die von Desktop Anwendungen verwendet werden (allgemeine Windows-Steuerelemente (Comctl32), Windows Forms, Windows Presentation Framework usw.) unterstützen keine automatische DPI-Skalierung, sodass Entwickler die Größe der Inhalte ihrer Fenster selbst ändern und neu positionieren müssen.
+Es wird empfohlen, Desktopanwendungen so zu aktualisieren, dass sie den DPI-Bewusstseinsmodus pro Monitor verwenden, sodass sie sofort ordnungsgemäß gerendert werden können, wenn sich der DPI ändert. Wenn eine Anwendung meldet Windows dass sie in diesem Modus ausgeführt werden soll, streckt Windows die Anwendung nicht per Bitmap, wenn sich der DPI ändert, sondern sendet [stattdessen WM \_ DPICHANGED](wm-dpichanged.md) an das Anwendungsfenster. Es liegt dann in der vollständigen Verantwortung der Anwendung, die Größenverstellung für den neuen DPI selbst zu verarbeiten. Die meisten benutzeroberflächenframeworks, die von Desktopanwendungen (Windows gängigen Steuerelementen (comctl32), Windows Forms, Windows Presentation Framework usw.) verwendet werden, unterstützen keine automatische DPI-Skalierung. Entwickler müssen die Größe ihrer Fenster selbst ändern und deren Inhalt neu positionieren.
 
-Es gibt zwei Versionen von Per-Monitor Awareness, dass sich eine Anwendung selbst registrieren kann: Version 1 und Version 2 (PMv2). Das Registrieren eines Prozesses als Ausführung im PMv2-Awareness-Modus führt zu folgenden Ergebnissen:
+Es gibt zwei Versionen von Per-Monitor, dass sich eine Anwendung als registrieren kann: Version 1 und Version 2 (PMv2). Das Registrieren eines Prozesses als Ausführung im PMv2-Bewusstseinsmodus führt zu:
 
-1.  Die Anwendung, die benachrichtigt wird, wenn sich der dpi-Wert ändert (sowohl die der obersten als auch die untergeordneten HWNDs)
-2.  Die Anwendung, die die unformatierten Pixel der einzelnen anzeigen anzeigen
-3.  Die Anwendung wird von Windows nie als Bitmap skaliert.
-4.  Automatischer nicht-Client Bereich (Fenster Beschriftung, Scrollleisten usw.) DPI-Skalierung nach Windows
-5.  Win32-Dialoge (aus " [deatedialog](/windows/desktop/api/winuser/nf-winuser-createdialogw)") werden von Windows automatisch mit dpi skaliert
-6.  Design-gezeichnete Bitmap-Objekte in allgemeinen Steuerelementen (Kontrollkästchen, Schaltflächen Hintergründe usw.) werden automatisch am richtigen dpi-Skalierungsfaktor gerendert.
+1.  Die Anwendung, die benachrichtigt wird, wenn sich der DPI ändert (sowohl die HWNDs der obersten Ebene als auch die untergeordneten HWNDs).
+2.  Die Anwendung zeigt die unformatten Pixel jeder Anzeige an.
+3.  Die Anwendung wird nie per Bitmap skaliert Windows
+4.  Automatischer Nicht-Clientbereich (Fensterbeschriftung, Scrollleisten usw.) DPI-Skalierung nach Windows
+5.  Win32-Dialoge [(von CreateDialog](/windows/desktop/api/winuser/nf-winuser-createdialogw)) automatisch DPI skaliert durch Windows
+6.  Bitmapressourcen mit Designdesign in allgemeinen Steuerelementen (Kontrollkästchen, Schaltflächenhintergrund usw.), die automatisch mit dem entsprechenden DPI-Skalierungsfaktor gerendert werden
 
-Bei der Ausführung im Per-Monitor v2-Awareness-Modus werden Anwendungen benachrichtigt, wenn sich Ihr dpi-Zeitpunkt geändert hat. Wenn die Größe einer Anwendung für den neuen dpi-Wert nicht geändert wird, wird die Benutzeroberfläche der Anwendung zu klein oder zu groß angezeigt (abhängig von der Differenz der vorherigen und neuen dpi-Werte).
+Bei der Ausführung im Per-Monitor v2-Benachrichtigungsmodus werden Anwendungen benachrichtigt, wenn sich ihr DPI geändert hat. Wenn sich die Größe einer Anwendung für den neuen DPI nicht ändert, wird die Benutzeroberfläche der Anwendung zu klein oder zu groß angezeigt (je nach Unterschied in den vorherigen und neuen DPI-Werten).
 
 > [!Note]  
-> Das PMv1-Bewusstsein (Per-Monitor v1) ist sehr begrenzt. Es wird empfohlen, dass Anwendungen PMv2 verwenden.
+> Per-Monitor V1 (PMv1) ist sehr eingeschränkt. Es wird empfohlen, dass Anwendungen PMv2 verwenden.
 
-In der folgenden Tabelle wird gezeigt, wie Anwendungen in verschiedenen Szenarien dargestellt werden:
+Die folgende Tabelle zeigt, wie Anwendungen unter verschiedenen Szenarien gerendert werden:
 
 <table>
 <colgroup>
@@ -78,68 +78,68 @@ In der folgenden Tabelle wird gezeigt, wie Anwendungen in verschiedenen Szenarie
 </colgroup>
 <thead>
 <tr class="header">
-<th>DPI-Awareness-Modus</th>
-<th>Eingeführte Windows-Version</th>
-<th>Anwendungs Ansicht von dpi</th>
-<th>Verhalten bei dpi-Änderungen</th>
+<th>DPI-Bewusstseinsmodus</th>
+<th>Windows Eingeführte Version</th>
+<th>DPI-Ansicht der Anwendung</th>
+<th>Verhalten bei DPI-Änderungen</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td>Bewusste</td>
-<td>–</td>
-<td>Alle anzeigen sind 96 dpi.</td>
-<td>Bitmap-Streckung (Blurry)</td>
+<td>Nicht bekannt</td>
+<td>Nicht zutreffend</td>
+<td>Alle Anzeigen sind 96 DPI</td>
+<td>Bitmapstreckung (unscharf)</td>
 </tr>
 <tr class="even">
 <td>System</td>
 <td>Vista</td>
-<td>Alle anzeigen weisen denselben dpi-Vorgang auf (der dpi-Zeitpunkt der primären Anzeige zum Zeitpunkt des Starts der aktuellen Benutzersitzung).</td>
-<td>Bitmap-Streckung (Blurry)</td>
+<td>Alle Anzeigen verfügen über den gleichen DPI-Status (DPI der primären Anzeige zum Zeitpunkt des Startes der aktuellen Benutzersitzung).</td>
+<td>Bitmapstreckung (unscharf)</td>
 </tr>
 <tr class="odd">
 <td>Per-Monitor</td>
 <td>8.1</td>
-<td>Der dpi-Wert der Anzeige, in der sich das Anwendungsfenster hauptsächlich befindet</td>
+<td>DPI der Anzeige, auf der sich das Anwendungsfenster hauptsächlich befindet</td>
 <td><ul>
-<li>HWND der obersten Ebene wird bei dpi-Änderungen benachrichtigt</li>
-<li>Keine DPI-Skalierung von Benutzeroberflächen Elementen.</li>
+<li>HWND der obersten Ebene wird über DPI-Änderungen benachrichtigt</li>
+<li>Keine DPI-Skalierung von Benutzeroberflächenelementen.</li>
 </ul>
 <br/></td>
 </tr>
 <tr class="even">
-<td>Per-Monitor v2</td>
+<td>Per-Monitor V2</td>
 <td>Windows 10 Creators Update (1703)</td>
-<td>Der dpi-Wert der Anzeige, in der sich das Anwendungsfenster hauptsächlich befindet</td>
+<td>DPI der Anzeige, auf der sich das Anwendungsfenster hauptsächlich befindet</td>
 <td><ul>
-<li>Auf oberster Ebene <span class="underline">und</span> untergeordnete HWNDs werden bei dpi-Änderungen benachrichtigt</li>
+<li>HWNDs der <span class="underline">obersten</span> Ebene und untergeordneten HWNDs werden über DPI-Änderungen benachrichtigt.</li>
 </ul>
 <br/> <span class="underline">Automatische DPI-Skalierung von:</span>
 <ul>
-<li>Nicht-Client Bereich</li>
-<li>Design-gezeichnete Bitmaps in allgemeinen Steuerelementen (Comctl32 V6)</li>
-<li>Dialogfelder ("<a href="/windows/desktop/api/winuser/nf-winuser-createdialogw">kreatedialog</a>")</li>
+<li>Nicht-Clientbereich</li>
+<li>Design gezeichnete Bitmaps in gängigen Steuerelementen (comctl32 V6)</li>
+<li>Dialoge (<a href="/windows/desktop/api/winuser/nf-winuser-createdialogw">CreateDialog</a>)</li>
 </ul>
 <br/></td>
 </tr>
 </tbody>
 </table>
 
-### <a name="per-monitor-v1-dpi-awareness"></a>DPI-Informationen pro Monitor (v1)
+### <a name="per-monitor-v1-dpi-awareness"></a>DPI-Bewusstsein pro Monitor (V1)
 
-Per-Monitor v1-dpi-Awareness-Modus (PMv1) wurde mit Windows 8.1 eingeführt. Dieser dpi-Awareness-Modus ist sehr begrenzt und bietet nur die unten aufgeführten Funktionen. Es wird empfohlen, dass Desktop Anwendungen den Per-Monitor v2-Sensibilisierungs Modus verwenden, der unter Windows 10 1703 oder höher unterstützt wird.
+Per-Monitor V1 DPI Awareness Mode (PMv1) wurde mit Windows 8.1. Dieser DPI-Bewusstseinsmodus ist sehr begrenzt und bietet nur die unten aufgeführten Funktionen. Es wird empfohlen, dass Desktopanwendungen Per-Monitor v2-Awareness-Modus verwenden, der für Windows 10 1703 oder höher unterstützt wird.
 
-Die anfängliche Unterstützung für die Überwachung pro Monitor bot nur Anwendungen wie folgt:
+Die anfängliche Unterstützung für monitorspezifisches Bewusstsein bot nur Anwendungen Folgendes:
 
-1.  HWNDs der obersten Ebene werden über eine dpi-Änderung benachrichtigt und eine neue vorgeschlagene Größe bereitgestellt.
-2.  Windows wird keine bitmapstreckung der Anwendungs Benutzeroberfläche durchführt
-3.  Die Anwendung sieht alle anzeigen in physischen Pixeln (siehe Virtualisierung).
+1.  HWNDs der obersten Ebene werden über eine DPI-Änderung benachrichtigt und stellen eine neue vorgeschlagene Größe zur Verfügung.
+2.  Windows die Benutzeroberfläche der Anwendung wird nicht gestreckt.
+3.  Die Anwendung sieht alle Anzeigen in physischen Pixeln (siehe Virtualisierung).
 
-Unter Windows 10 1607 oder höher können PMv1-Anwendungen bei WM nccreate auch [enablenonclientdpiscalingaufgerufen](/windows/desktop/api/winuser/nf-winuser-enablenonclientdpiscaling) werden, \_ um anzufordern, dass Windows den nicht-Client Bereich des Fensters ordnungsgemäß skaliert.
+In Windows 10 1607 oder höher können PMv1-Anwendungen während WM NCCREATE auch [EnableNonClientDpiScaling](/windows/desktop/api/winuser/nf-winuser-enablenonclientdpiscaling) aufrufen, um an fordern, dass Windows den Nicht-Clientbereich des Fensters ordnungsgemäß \_ skaliert.
 
-## <a name="per-monitor-dpi-scaling-support-by-ui-framework--technology"></a>DPI-Skalierungs Unterstützung pro Monitor durch Benutzeroberflächen Framework/-Technologie
+## <a name="per-monitor-dpi-scaling-support-by-ui-framework--technology"></a>Unterstützung der DPI-Skalierung pro Monitor nach UI-Framework/-Technologie
 
-Die folgende Tabelle zeigt die Ebene der Unterstützung für dpi-Informationen pro Monitor, die von verschiedenen Windows-Benutzeroberflächen-Frameworks ab Windows 10 1703 angeboten wird:
+Die folgende Tabelle zeigt den Grad der DPI-Unterstützung pro Monitor, der von verschiedenen Frameworks für Windows-Benutzeroberfläche ab Windows 10 1703 angeboten wird:
 
 <table>
 <colgroup>
@@ -154,7 +154,7 @@ Die folgende Tabelle zeigt die Ebene der Unterstützung für dpi-Informationen p
 <th>Framework/Technologie</th>
 <th>Support</th>
 <th>Betriebssystemversion</th>
-<th>DPI-Skalierung verarbeitet von</th>
+<th>DPI-Skalierung, die von</th>
 <th>Weitere Informationen</th>
 </tr>
 </thead>
@@ -163,54 +163,54 @@ Die folgende Tabelle zeigt die Ebene der Unterstützung für dpi-Informationen p
 <td>Universelle Windows-Plattform (UWP)</td>
 <td>Vollständig</td>
 <td>1607</td>
-<td>UI-Framework</td>
+<td>Benutzeroberflächenframework</td>
 <td><a href="/windows/uwp/get-started/whats-a-uwp">Universelle Windows-Plattform (UWP)</a></td>
 </tr>
 <tr class="even">
-<td>Unformatierte Win32-/Common-Steuerelemente V6 (comctl32.dll)</td>
+<td>Unformatierte Win32/Common Controls V6 (comctl32.dll)</td>
 <td><ul>
-<li>An alle HWNDs gesendete dpi-Änderungs Benachrichtigungs Meldungen</li>
-<li>Design-gezeichnete Objekte werden korrekt in allgemeinen Steuerelementen dargestellt.</li>
+<li>DPI-Änderungsbenachrichtigungsmeldungen, die an alle HWNDs gesendet werden</li>
+<li>Designgezeichnete Objekte werden in gängigen Steuerelementen ordnungsgemäß gerendert.</li>
 <li>Automatische DPI-Skalierung für Dialoge</li>
 </ul></td>
 <td>1703</td>
-<td>Application</td>
-<td><a href="https://github.com/Microsoft/Windows-classic-samples/tree/master/Samples/DPIAwarenessPerWindow">GitHub-Beispiel</a></td>
+<td>Anwendung</td>
+<td><a href="https://github.com/Microsoft/Windows-classic-samples/tree/master/Samples/DPIAwarenessPerWindow">GitHub Beispiel</a></td>
 </tr>
 <tr class="odd">
 <td>Windows Forms</td>
-<td>Eingeschränkte automatische pro-Monitor-DPI-Skalierung für einige Steuerelemente</td>
+<td>Eingeschränkte automatische DPI-Skalierung pro Monitor für einige Steuerelemente</td>
 <td>1703</td>
-<td>UI-Framework</td>
-<td><a href="/dotnet/framework/winforms/high-dpi-support-in-windows-forms">Hohe dpi-Unterstützung in Windows Forms</a></td>
+<td>Benutzeroberflächenframework</td>
+<td><a href="/dotnet/framework/winforms/high-dpi-support-in-windows-forms">Unterstützung hoher DPI-Daten in Windows Forms</a></td>
 </tr>
 <tr class="even">
 <td>Windows Presentation Framework (WPF)</td>
-<td>Systemeigene WPF-Anwendungen, die in anderen Frameworks gehostete WPF-Anwendungen und andere in WPF gehostete Frameworks nicht automatisch skalieren</td>
+<td>Native WPF-Anwendungen skalieren WPF, das in anderen Frameworks gehostet wird, und andere in WPF gehostete Frameworks werden nicht automatisch skaliert.</td>
 <td>1607</td>
-<td>UI-Framework</td>
-<td><a href="https://github.com/Microsoft/WPF-Samples/tree/master/PerMonitorDPI">GitHub-Beispiel</a></td>
+<td>Benutzeroberflächenframework</td>
+<td><a href="https://github.com/Microsoft/WPF-Samples/tree/master/PerMonitorDPI">GitHub Beispiel</a></td>
 </tr>
 <tr class="odd">
 <td>GDI</td>
 <td>Keine</td>
 <td>–</td>
-<td>Application</td>
-<td>Siehe <a href="https://blogs.windows.com/buildingapps/2017/05/19/improving-high-dpi-experience-gdi-based-desktop-apps/">GDI High-DPI-Skalierung</a></td>
+<td>Anwendung</td>
+<td>Weitere Informationen finden Sie unter <a href="https://blogs.windows.com/buildingapps/2017/05/19/improving-high-dpi-experience-gdi-based-desktop-apps/">GDI High-DPI Scaling (GDI-Skalierung mit hohem DPI-Anteil).</a></td>
 </tr>
 <tr class="even">
 <td>GDI+</td>
 <td>Keine</td>
 <td>–</td>
-<td>Application</td>
-<td>Siehe <a href="https://blogs.windows.com/buildingapps/2017/05/19/improving-high-dpi-experience-gdi-based-desktop-apps/">GDI High-DPI-Skalierung</a></td>
+<td>Anwendung</td>
+<td>Weitere Informationen finden Sie unter <a href="https://blogs.windows.com/buildingapps/2017/05/19/improving-high-dpi-experience-gdi-based-desktop-apps/">GDI High-DPI Scaling (GDI-Skalierung mit hohem DPI-Anteil).</a></td>
 </tr>
 <tr class="odd">
 <td>MFC</td>
 <td>Keine</td>
 <td>–</td>
-<td>Application</td>
-<td>–</td>
+<td>Anwendung</td>
+<td>Nicht zutreffend</td>
 </tr>
 </tbody>
 </table>
@@ -221,30 +221,30 @@ Die folgende Tabelle zeigt die Ebene der Unterstützung für dpi-Informationen p
 
 ## <a name="updating-existing-applications"></a>Aktualisieren bestehender Anwendungen
 
-Um eine vorhandene Desktop Anwendung zum ordnungsgemäßen verarbeiten der DPI-Skalierung zu aktualisieren, muss Sie so aktualisiert werden, dass zumindest die wichtigen Teile der Benutzeroberfläche aktualisiert werden, um auf dpi-Änderungen zu reagieren.
+Um eine vorhandene Desktopanwendung so zu aktualisieren, dass sie die DPI-Skalierung ordnungsgemäß verarbeitet, muss sie so aktualisiert werden, dass mindestens die wichtigen Teile der Benutzeroberfläche aktualisiert werden, um auf DPI-Änderungen zu reagieren.
 
-Die meisten Desktop Anwendungen werden im System-dpi-Modus ausgeführt. Anwendungen mit System-dpi-Unterstützung Skalieren in der Regel auf den dpi-Wert der primären Anzeige (die Anzeige, in der sich die Taskleiste zum Zeitpunkt der Windows-Sitzung befand). Wenn sich der dpi-Wert ändert, wird die Benutzeroberfläche dieser Anwendungen von Windows durch Bitmap gestreckt, was häufig zu einer Unschärfe führt. Beim Aktualisieren einer System-DPI-fähigen Anwendung, die pro Monitor-dpi-Wert unterstützt wird, muss der Code, der das Benutzeroberflächen Layout verarbeitet, so aktualisiert werden, dass es nicht nur während der Anwendungs Initialisierung ausgeführt wird, sondern auch, wenn eine dpi-Änderungs Benachrichtigung ([WM \_ dpichanged](wm-dpichanged.md) im Fall von Win32) empfangen wird. Dies umfasst in der Regel das erneute Aufrufen von Annahmen im Code, dass die Benutzeroberfläche nur einmal skaliert werden muss.
+Die meisten Desktopanwendungen werden im DPI-Systemerkennungsmodus ausgeführt. System-DPI-fähige Anwendungen werden in der Regel auf den DPI der primären Anzeige skaliert (die Anzeige, auf der sich die Taskleiste zum Zeitpunkt des Startens der Windows Sitzung befand). Wenn sich der DPI ändert, gestreckt Windows die Benutzeroberfläche dieser Anwendungen durch Bitmaps, was häufig dazu führt, dass sie unscharf sind. Wenn eine System-DPI-fähige Anwendung aktualisiert wird, um monitor-DPI-fähige Anwendungen zu erhalten, muss der Code, der das Benutzeroberflächenlayout behandelt, so aktualisiert werden, dass er nicht nur während der Anwendungsinitialisierung ausgeführt wird, sondern auch, wenn eine DPI-Änderungsbenachrichtigung[(WM \_ DPICHANGED](wm-dpichanged.md) im Fall von Win32) empfangen wird. Dies umfasst in der Regel die erneute Überprüfung aller Annahmen im Code, dass die Benutzeroberfläche nur einmal skaliert werden muss.
 
-Im Fall von Win32-Programmierung haben viele Win32-APIs auch keinen dpi-oder Anzeige Kontext, sodass Sie nur Werte relativ zum System-dpi-Wert zurückgeben. Es kann nützlich sein, den Code zu durchlaufen, um nach einigen dieser APIs zu suchen und diese durch dpi-abhängige Varianten zu ersetzen. Einige der gängigen APIs mit dpi-abhängigen Varianten sind:
+Im Fall der Win32-Programmierung verfügen viele Win32-APIs über keinen DPI- oder Anzeigekontext, sodass sie nur Werte relativ zum System-DPI zurückgeben. Es kann hilfreich sein, ihren Code zu durchsuchen, um nach einigen dieser APIs zu suchen und sie durch DPI-fähige Varianten zu ersetzen. Einige der gängigen APIs mit DPI-fähigen Varianten sind:
 
 
 
-| Single dpi-Version   | Per-Monitor Version        |
+| Einzelne DPI-Version   | Per-Monitor Version        |
 |----------------------|----------------------------|
-| GetSystemMetrics     | Getsystemmetricsfordpi     |
-| "Setting windowrectex"   | "Setting windowrectexfordpi"   |
-| SystemParametersInfo | Systemparametersinfofordpi |
-| Getdpiformonitor     | Getdpiforwindow            |
+| Getsystemmetrics     | GetSystemMetricsForDpi     |
+| AdjustWindowRectEx   | AdjustWindowRectExForDpi   |
+| Systemparametersinfo | SystemParametersInfoForDpi |
+| GetDpiForMonitor     | GetDpiForWindow            |
 
 
 
  
 
-Es ist auch eine gute Idee, in Ihrer Codebasis nach hart codierten Größen zu suchen, die einen konstanten dpi-Wert annehmen. Diese werden durch Code ersetzt, der die DPI-Skalierung ordnungsgemäß berücksichtigt. Im folgenden finden Sie ein Beispiel, das alle diese Vorschläge umfasst:
+Es empfiehlt sich auch, in Ihrer Codebasis nach hart codierten Größen zu suchen, die von einem konstanten DPI ausgehen, und sie durch Code zu ersetzen, der die DPI-Skalierung ordnungsgemäß einberechnen. Im Folgenden finden Sie ein Beispiel, das alle diese Vorschläge enthält:
 
 ### <a name="example"></a>Beispiel:
 
-Das folgende Beispiel zeigt einen vereinfachten Win32-Fall, bei dem ein untergeordnetes HWND erstellt wird. Beim Aufrufen von "upatewindow" wird davon ausgegangen, dass die Anwendung mit 96 dpi ausgeführt wird und weder die Größe der Schaltfläche noch die Position bei höheren DPIs korrekt ist:
+Das folgende Beispiel zeigt einen vereinfachten Win32-Fall zum Erstellen eines untergeordneten HWND. Beim Aufruf von CreateWindow wird davon ausgegangen, dass die Anwendung mit 96 DPI ausgeführt wird und weder die Größe noch die Position der Schaltfläche bei höheren DPIs korrekt ist:
 
 
 ```
@@ -265,9 +265,9 @@ case WM_CREATE:
 
 Der aktualisierte Code unten zeigt Folgendes:
 
-1.  Der Code Erstellungs Code dpi, der die Position und die Größe des untergeordneten HWND für den dpi-Wert des übergeordneten Fensters skaliert.
-2.  Reagieren auf dpi-Änderungen durch Neupositionieren und Ändern der Größe des untergeordneten HWND
-3.  Die hart codierten Größen wurden entfernt und durch Code ersetzt, der auf dpi-Änderungen antwortet.
+1.  Der DPI für die Fenstererstellungscodeskalierung der Position und Größe des untergeordneten HWND für den DPI des übergeordneten Fensters
+2.  Reagieren auf DPI-Änderungen durch Neupositionieren und Ändern der Größe des untergeordneten HWND
+3.  Hart codierte Größen wurden entfernt und durch Code ersetzt, der auf DPI-Änderungen reagiert.
 
 
 ```
@@ -321,77 +321,77 @@ break;
 
 
 
-Beim Aktualisieren einer System-DPI-fähigen Anwendung sind einige häufige Schritte zu befolgen:
+Beim Aktualisieren einer System-DPI-fähigen Anwendung sind einige gängige Schritte zu befolgen:
 
-1.  Markieren Sie den Prozess mit dpi-Werten pro Monitor (v2), indem Sie ein Anwendungs Manifest (oder eine andere Methode, abhängig von den verwendeten Benutzeroberflächen-Frameworks) verwenden.
-2.  Machen Sie die Benutzeroberflächen-Layoutlogik wiederverwendbar, und verschieben Sie Sie aus dem Anwendungs Initialisierungs Code so, dass Sie wieder verwendet werden kann, wenn eine dpi-Änderung auftritt (WM \_ dpichanged im Fall von Windows-Programmierung (Win32)).
-3.  Für ungültig erklärten Code, der annimmt, dass dpi-sensible Daten (dpi/Fonts/sizes usw.) niemals aktualisiert werden müssen. Es ist eine gängige Vorgehensweise, bei der Prozess Initialisierung Schriftgrößen und dpi-Werte zwischenzuspeichern. Wenn Sie eine Anwendung so aktualisieren, dass Sie mit dpi-Werten pro Monitor erreicht wird, müssen dpi-sensible Daten neu ausgewertet werden, wenn ein neuer dpi-Wert erreicht wird.
-4.  Wenn eine dpi-Änderung durchgeführt wird, laden Sie alle bitmapassets für den neuen dpi-Vorgang neu bzw. ändern Sie Sie neu, oder verwenden Sie optional Bitmap die aktuell geladenen Assets auf die richtige Größe.
-5.  Grep für APIs, die nicht Per-Monitor dpi-fähig sind und Sie durch Per-Monitor dpi-fähigen APIs ersetzen (falls zutreffend). Beispiel: Ersetzen Sie GetSystemMetrics durch getsystemmetricsfordpi.
-6.  Testen Sie die Anwendung auf einem Multidisplay-/Multi-dpi-System.
-7.  Verwenden Sie für alle Fenster der obersten Ebene in Ihrer Anwendung, die Sie nicht auf die richtige dpi-Skala aktualisieren können, die DPI-Skalierung im gemischten Modus (unten beschrieben), um die Bitmap-Streckung dieser Fenster der obersten Ebene durch das System zuzulassen.
+1.  Markieren Sie den Prozess mithilfe eines Anwendungsmanifests (oder einer anderen Methode, abhängig von den verwendeten Benutzeroberflächenframeworks) als monitorabhängige DPI-fähige (V2)-Methode.
+2.  Machen Sie die Benutzeroberflächenlayoutlogik wiederverwendbar, und verschieben Sie sie aus dem Anwendungsinitialisierungscode, sodass sie wiederverwendet werden kann, wenn eine DPI-Änderung auftritt (WM \_ DPICHANGED im Fall von Windows (Win32)-Programmierung).
+3.  Macht Code ungültig, der annimmt, dass DPI-sensible Daten (DPI/fonts/sizes/etc.) nie aktualisiert werden müssen. Es ist sehr üblich, Schriftgrade und DPI-Werte bei der Prozessinitialisierung zwischenzuspeichern. Wenn eine Anwendung aktualisiert wird, um monitorspezifische DPI-fähige Daten zu erhalten, müssen DPI-sensible Daten immer dann neu ausgewertet werden, wenn ein neuer DPI gefunden wird.
+4.  Wenn eine DPI-Änderung auftritt, laden Sie alle Bitmapressourcen für den neuen DPI neu (oder rastern Sie sie erneut), oder strecken Sie optional die aktuell geladenen Objekte auf die richtige Größe.
+5.  Grep für APIs, die nicht Per-Monitor DPI-fähigen sind, und ersetzen sie durch Per-Monitor DPI-fähige APIs (falls zutreffend). Beispiel: Ersetzen Sie GetSystemMetrics durch GetSystemMetricsForDpi.
+6.  Testen Sie Ihre Anwendung auf einem Mehrfachanzeige-/Multi-DPI-System.
+7.  Verwenden Sie für alle Fenster der obersten Ebene in Ihrer Anwendung, die Sie nicht auf die richtige DPI-Skalierung aktualisieren können, die DPI-Skalierung im gemischten Modus (siehe unten), um bitmap-Stretching dieser Fenster der obersten Ebene durch das System zu ermöglichen.
 
-## <a name="mixed-mode-dpi-scaling-sub-process-dpi-scaling"></a>Mixed-Mode DPI-Skalierung (DPI-Skalierung unter Prozess)
+## <a name="mixed-mode-dpi-scaling-sub-process-dpi-scaling"></a>Mixed-Mode DPI-Skalierung (Subprozess-DPI-Skalierung)
 
-Beim Aktualisieren einer Anwendung zur Unterstützung der dpi-Konformität pro Monitor kann es manchmal unpraktisch sein, jedes Fenster in der Anwendung in einem einzigen Schritt zu aktualisieren. Dies kann einfach auf die Zeit und den Aufwand zurückzuführen sein, die zum Aktualisieren und Testen der gesamten Benutzeroberfläche erforderlich sind, oder weil Sie nicht den gesamten UI-Code besitzen, den Sie ausführen müssen (wenn die Anwendung möglicherweise die Benutzeroberfläche von Drittanbietern lädt). In diesen Situationen bietet Windows eine Möglichkeit zur Erleichterung der Überwachung pro Monitor, indem es Ihnen ermöglicht, einige ihrer Anwendungsfenster (nur auf oberster Ebene) in Ihrem ursprünglichen dpi-Kompatibilitätsmodus auszuführen, während Sie sich auf Ihre Zeit und ihre Energie konzentrieren, um die wichtigsten Teile Ihrer Benutzeroberfläche zu aktualisieren.
+Beim Aktualisieren einer Anwendung zur Unterstützung der DPI-Überwachung pro Monitor kann es manchmal unpraktisch oder unmöglich werden, jedes Fenster in der Anwendung auf einmal zu aktualisieren. Dies kann einfach auf die Zeit und den Aufwand zurückzuführen sein, die erforderlich sind, um die gesamte Benutzeroberfläche zu aktualisieren und zu testen, oder weil Sie nicht den gesamten Ui-Code besitzen, den Sie ausführen müssen (wenn Ihre Anwendung möglicherweise die Benutzeroberfläche von Drittanbietern lädt). In diesen Situationen bietet Windows eine Möglichkeit, sich in die Welt der Pro-Monitor-Wahrnehmung zu versetzen, indem Sie einige Ihrer Anwendungsfenster (nur auf oberster Ebene) im ursprünglichen DPI-Awareness-Modus ausführen können, während Sie Ihre Zeit und Energie auf die wichtigeren Teile der Benutzeroberfläche konzentrieren.
 
-Im folgenden wird veranschaulicht, wie das aussehen könnte: Sie aktualisieren die Benutzeroberfläche der Hauptanwendung ("Hauptfenster" in der Abbildung), sodass Sie mit dem dpi-Bewusstsein pro Monitor ausgeführt werden können, während Sie andere Fenster im vorhandenen Modus ausführen ("sekundäres Fenster").
+Im Folgenden wird veranschaulicht, wie dies aussehen könnte: Sie aktualisieren die Benutzeroberfläche der Hauptanwendung ("Hauptfenster" in der Abbildung), damit sie mit DPI-Informationen pro Monitor ausgeführt wird, während Sie andere Fenster im vorhandenen Modus ausführen ("Sekundäres Fenster").
 
-![Unterschiede bei der DPI-Skalierung zwischen den Informations Modi](images/hub-page-illustrations.png)
+![Unterschiede bei der DPI-Skalierung zwischen Denkmodi](images/hub-page-illustrations.png)
 
-Vor dem Windows 10 Anniversary Update (1607) war der dpi-Awareness-Modus eines Prozesses eine Prozess weite Eigenschaft. Ab dem Windows 10 Anniversary Update kann diese Eigenschaft jetzt pro Fenster der **obersten Ebene** festgelegt werden. (**Unter** geordnete Fenster müssen weiterhin der Skalierungs Größe ihres übergeordneten Elements entsprechen.) Ein Fenster der obersten Ebene ist als Fenster ohne übergeordnetes Element definiert. Dies ist in der Regel ein "reguläres" Fenster mit den Schaltflächen Minimieren, maximieren und schließen. Das Szenario, für das das unter Prozess-dpi-Bewusstsein vorgesehen ist, besteht darin, dass die sekundäre Benutzeroberfläche von Windows (Bitmap gestreckt) skaliert wird, während Sie sich auf die Aktualisierung Ihrer primären Benutzeroberfläche konzentrieren.
+Vor dem Windows 10 Anniversary Update (1607) war der DPI-Awareness-Modus eines Prozesses eine prozessweite Eigenschaft. Ab Windows 10 Anniversary Update kann diese Eigenschaft jetzt pro Fenster der **obersten Ebene** festgelegt werden. (**Untergeordnete** Fenster müssen weiterhin der Skalierungsgröße ihres übergeordneten Elements entsprechen.) Ein Fenster der obersten Ebene wird als Fenster ohne übergeordnetes Element definiert. Dies ist in der Regel ein "reguläres" Fenster mit Schaltflächen zum Minimieren, Maximieren und Schließen. Das Szenario, für das die DPI-Unterprozesserkennung vorgesehen ist, besteht darin, die sekundäre Benutzeroberfläche durch Windows (Bitmap gestreckt) zu skalieren, während Sie Ihre Zeit und Ressourcen auf die Aktualisierung Ihrer primären Benutzeroberfläche konzentrieren.
 
-Um unter Prozess-dpi-Informationen zu aktivieren, rufen Sie [**setthreaddpiawareness Context**](/windows/desktop/api/Winuser/nf-winuser-setthreaddpiawarenesscontext) vor und nach jedem Fenster Erstellungs Aufruf auf. Das Fenster, das erstellt wird, wird mit dem dpi-Bewusstsein verknüpft, das Sie über setthreaddpiawareness Context festgelegt haben. Verwenden Sie den zweiten-Befehl, um die dpi-Informationen des aktuellen Threads wiederherzustellen.
+Um die DPI-Unterprozesserkennung zu aktivieren, rufen [**Sie SetThreadDpiAwarenessContext**](/windows/desktop/api/Winuser/nf-winuser-setthreaddpiawarenesscontext) vor und nach allen Aufrufen der Fenstererstellung auf. Das fenster, das erstellt wird, wird der DPI-Kenntnis zugeordnet, die Sie über SetThreadDpiAwarenessContext festlegen. Verwenden Sie den zweiten Aufruf, um die DPI-Kenntnis des aktuellen Threads wiederherzustellen.
 
-Wenn Sie die unter Prozess-DPI-Skalierung verwenden, können Sie sich auf Windows verlassen, um einige der DPI-Skalierung für Ihre Anwendung durchzuführen. Dadurch können Sie die Komplexität Ihrer Anwendung erhöhen. Es ist wichtig, dass Sie die Nachteile dieses Ansatzes und die Art der komplexen Komplexität verstehen. Weitere Informationen zu unter Prozess-dpi-Informationen finden Sie unter die [DPI-Skalierung im gemischten Modus und die dpi-fähigen APIs.](high-dpi-improvements-for-desktop-applications.md)
+Wenn Sie die DPI-Skalierung des Untergeordneten Prozesses verwenden, können Sie sich auf Windows verlassen, um einen Teil der DPI-Skalierung für Ihre Anwendung zu erledigen. Dies kann die Komplexität Ihrer Anwendung erhöhen. Es ist wichtig, dass Sie die Nachteile dieses Ansatzes und die Komplexität verstehen, die er einführt. Weitere Informationen zur DPI-Unterprozesserkennung finden Sie unter [DPI-Skalierung im gemischten Modus und DPI-fähige APIs.](high-dpi-improvements-for-desktop-applications.md)
 
-## <a name="testing-your-changes"></a>Testen der Änderungen
+## <a name="testing-your-changes"></a>Testen Ihrer Änderungen
 
-Nachdem Sie die Anwendung so aktualisiert haben, dass Sie pro Monitor-dpi-Wert ist, ist es wichtig sicherzustellen, dass Ihre Anwendung ordnungsgemäß auf dpi-Änderungen in einer gemischten dpi-Umgebung antwortet. Zu Test enden Besonderheiten zählen:
+Nachdem Sie Ihre Anwendung so aktualisiert haben, dass sie monitorspezifische DPI-bezogene Daten erkennt, ist es wichtig zu überprüfen, ob Ihre Anwendung ordnungsgemäß auf DPI-Änderungen in einer Gemischt-DPI-Umgebung reagiert. Zu testspezifischen Merkmalen gehören:
 
-1.  Verschieben von Anwendungs Fenstern zwischen Anzeigen verschiedener dpi-Werte
-2.  Starten der Anwendung für die Anzeige verschiedener dpi-Werte
-3.  Ändern des Skalierungsfaktors für den Monitor, während die Anwendung ausgeführt wird
-4.  Ändern Sie die Anzeige, die Sie als primäre Anzeige verwenden, und melden Sie sich _von Windows_ ab, und testen Sie die Anwendung nach dem erneuten Anmelden erneut. Dies ist besonders nützlich für die Suche nach Code, der hart codierte Größen/Dimensionen verwendet.
+1.  Verschieben von Anwendungsfenstern zwischen Anzeigen unterschiedlicher DPI-Werte
+2.  Starten der Anwendung auf Anzeigen unterschiedlicher DPI-Werte
+3.  Ändern des Skalierungsfaktors für Ihren Monitor während der Ausführung der Anwendung
+4.  Ändern der Anzeige, die Sie als primäre Anzeige verwenden, _Abmelden von Windows_ und erneutes Testen Ihrer Anwendung nach der anmeldung. Dies ist besonders nützlich bei der Suche nach Code, der hart codierte Größen/Dimensionen verwendet.
 
 ## <a name="common-pitfalls-win32"></a>Häufige Fehler (Win32)
 
-**Das vorgeschlagene Rechteck, das in WM dpichanged bereitgestellt wird, wird nicht verwendet. \_**
+**Das vorgeschlagene Rechteck, das in WM DPICHANGED bereitgestellt wird, wird nicht verwendet. \_**
 
-Wenn Windows das Anwendungsfenster an eine [**WM- \_ dpichanged**](wm-dpichanged.md) -Meldung sendet, enthält diese Meldung ein empfohlenes Rechteck, das Sie zum Ändern der Größe des Fensters verwenden sollten. Es ist wichtig, dass Ihre Anwendung dieses Rechteck verwendet, um die Größe selbst zu ändern. Dies geschieht wie folgt:
+Wenn Windows dem Anwendungsfenster eine [**\_ WM-DPICHANGED-Nachricht**](wm-dpichanged.md) sendet, enthält diese Nachricht ein vorgeschlagenes Rechteck, das Sie zum Ändern der Fenstergröße verwenden sollten. Es ist wichtig, dass Ihre Anwendung dieses Rechteck verwendet, um die Größe selbst zu ändern, wie dies geschieht:
 
-1.  Stellen Sie sicher, dass sich der Mauszeiger beim Ziehen zwischen den Anzeigen an derselben relativen Position im Fenster verbleibt.
-2.  Verhindern, dass das Anwendungsfenster in einen rekursiven dpi-Änderungs-Cycle gelangt, bei dem eine dpi-Änderung eine nachfolgende dpi-Änderung auslöst, die eine andere dpi-Änderung auslöst.
+1.  Stellen Sie sicher, dass sich der Mauszeiger beim Ziehen zwischen den Anzeigen in der gleichen relativen Position im Fenster befindet.
+2.  Verhindern Sie, dass das Anwendungsfenster in einen rekursiven DPI-Änderungszyklus wechselt, bei dem eine DPI-Änderung eine nachfolgende DPI-Änderung auslöst, wodurch eine weitere DPI-Änderung ausgelöst wird.
 
-Wenn Sie über anwendungsspezifische Anforderungen verfügen, die die Verwendung des vorgeschlagenen Rechtecks verhindern, das Windows in der WM \_ dpichanged-Meldung bereitstellt, finden Sie weitere Informationen unter [**WM \_ getdpiscaledsize**](wm-getdpiscaledsize.md). Diese Meldung kann verwendet werden, um Windows eine gewünschte Größe zu geben, die Sie verwenden möchten, sobald die dpi-Änderung aufgetreten ist, während die oben beschriebenen Probleme weiterhin vermieden werden.
+Wenn Sie anwendungsspezifische Anforderungen haben, die sie daran hindern, das vorgeschlagene Rechteck zu verwenden, das Windows in der \_ WM-DPICHANGED-Nachricht bereitstellt, finden Sie weitere Informationen unter [**WM \_ GETDPISCALEDSIZE.**](wm-getdpiscaledsize.md) Diese Meldung kann verwendet werden, um Windows nach der DPI-Änderung eine gewünschte Größe zuzuweisen und gleichzeitig die oben beschriebenen Probleme zu vermeiden.
 
 **Fehlende Dokumentation zur Virtualisierung**
 
-Wenn ein HWND oder ein Prozess entweder als dpi-oder System-dpi-fähig ausgeführt wird, kann es sich um eine von Fenstern gestreckte Bitmap handeln. In diesem Fall skaliert und konvertiert Windows dpi-sensible Informationen von einigen APIs in den Koordinatenraum des aufrufenden Threads. Wenn z. b. ein dpi-abhängiger Thread die Bildschirmgröße beim Ausführen auf einer High-dpi-Anzeige abfragt, wird die Antwort der Anwendung von Windows virtualisiert, als ob der Bildschirm in 96 dpi-Einheiten enthalten wäre. Wenn ein System-dpi-fähiger Thread mit einer Anzeige auf einem anderen dpi-Wert interagiert, als beim Starten der Sitzung des aktuellen Benutzers verwendet wurde, werden von Windows möglicherweise einige API-Aufrufe in den Koordinaten Bereich, den das HWND verwenden würde, beim ursprünglichen dpi-Skalierungsfaktor von Windows in dpi skaliert.
+Wenn ein HWND- oder Prozess entweder als DPI-unwissend oder systemdepi-fähigen Prozess ausgeführt wird, kann die Bitmap durch Windows gestreckt werden. In diesem Fall skaliert Windows DPI-sensible Informationen von einigen APIs in den Koordinatenraum des aufrufenden Threads und konvertiert sie. Wenn z. B. ein DPI-nicht bekannter Thread die Bildschirmgröße abfragt, während er auf einer Anzeige mit hohem DPI-Anteil ausgeführt wird, virtualisiert Windows die Antwort an die Anwendung so, als ob der Bildschirm 96 DPI-Einheiten aufwies. Wenn ein System-DPI-fähigen Thread mit einer Anzeige mit einem anderen DPI interagiert, als beim Starten der Sitzung des aktuellen Benutzers verwendet wurde, skaliert Windows alternativ einige API-Aufrufe in den Koordinatenbereich, den der HWND verwendet, wenn er mit seinem ursprünglichen DPI-Skalierungsfaktor ausgeführt wird.
 
-Wenn Sie Ihre Desktop Anwendung auf die DPI-Skalierung aktualisieren, kann es schwierig zu wissen, welche API-Aufrufe virtualisierte Werte basierend auf dem Thread Kontext zurückgeben können. Diese Informationen sind zurzeit von Microsoft nicht ausreichend dokumentiert. Beachten Sie, dass der Rückgabewert möglicherweise virtualisiert wird, wenn Sie eine System-API von einem dpi-abhängigen oder System-DPI-fähigen Thread Kontext abrufen. Stellen Sie daher sicher, dass der Thread im dpi-Kontext ausgeführt wird, den Sie bei der Interaktion mit dem Bildschirm oder den einzelnen Fenstern erwarten. Wenn Sie den dpi-Kontext eines Threads mithilfe von [setthreaddpiawarenesscontext](/windows/desktop/api/Winuser/nf-winuser-setthreaddpiawarenesscontext)vorübergehend ändern, stellen Sie sicher, dass Sie den alten Kontext wiederherstellen, wenn Sie fertig sind, um an anderer Stelle in der Anwendung ein falsches Verhalten zu vermeiden.
+Wenn Sie Ihre Desktopanwendung ordnungsgemäß auf die DPI-Skalierung aktualisieren, kann es schwierig zu wissen, welche API-Aufrufe virtualisierte Werte basierend auf dem Threadkontext zurückgeben können. Diese Informationen werden von Microsoft derzeit nicht ausreichend dokumentiert. Beachten Sie, dass der Rückgabewert virtualisiert werden kann, wenn Sie eine System-API aus einem DPI-fähigen oder system-DPI-fähigen Threadkontext aufrufen. Stellen Sie daher sicher, dass Ihr Thread im DPI-Kontext ausgeführt wird, den Sie bei der Interaktion mit dem Bildschirm oder einzelnen Fenstern erwarten. Wenn Sie den DPI-Kontext eines Threads vorübergehend mit [SetThreadDpiAwarenessContext](/windows/desktop/api/Winuser/nf-winuser-setthreaddpiawarenesscontext)ändern, stellen Sie sicher, dass Sie den alten Kontext wiederherstellen, wenn Sie fertig sind, um zu vermeiden, dass an anderer Stelle in Ihrer Anwendung falsches Verhalten verursacht wird.
 
-**Viele Windows-APIs haben keinen dpi-Kontext.**
+**Viele Windows-APIs haben keinen DPI-Kontext.**
 
-Viele ältere Windows-APIs enthalten keinen dpi-oder HWND-Kontext als Teil ihrer Schnittstelle. Infolgedessen müssen Entwickler häufig zusätzliche Aufgaben ausführen, um die Skalierung von dpi-sensiblen Informationen, wie z. b. Größen, Punkten oder Symbolen, zu verarbeiten. Beispielsweise müssen Entwickler, die [LoadIcon](/windows/desktop/api/winuser/nf-winuser-loadiconw) verwenden, entweder ein Stretch geladenes Symbol oder alternative APIs verwenden, um korrekte Symbole für den entsprechenden dpi-Wert (z. b. [LoadImage](/windows/desktop/api/winuser/nf-winuser-loadimagew)) zu laden.
+Viele Legacy-Windows-APIs enthalten keinen DPI- oder HWND-Kontext als Teil ihrer Schnittstelle. Daher müssen Entwickler häufig zusätzliche Arbeit leisten, um die Skalierung von DPI-vertraulichen Informationen wie Größen, Punkten oder Symbolen zu verarbeiten. Beispielsweise müssen Entwickler, die [LoadIcon](/windows/desktop/api/winuser/nf-winuser-loadiconw) verwenden, entweder bitmapgeladene Symbole stretchen oder alternative APIs verwenden, um symbole der richtigen Größe für den entsprechenden DPI zu laden, z. B. [LoadImage.](/windows/desktop/api/winuser/nf-winuser-loadimagew)
 
-**Erzwungene zurück setzung der Prozess weiten dpi-Informationen**
+**Erzwungenes Zurücksetzen prozessweiter DPI-Informationen**
 
-Im Allgemeinen kann der dpi-Awareness-Modus des Prozesses nach der Prozess Initialisierung nicht geändert werden. Windows kann jedoch zwangsweise den dpi-Informationsmodus Ihres Prozesses ändern, wenn Sie versuchen, die Anforderung zu unterbrechen, dass alle hwnds in einer Fenster Struktur denselben dpi-Awareness-Modus aufweisen. In allen Versionen von Windows, ab Windows 10 1703, ist es nicht möglich, verschiedene hwnds in einer HWND-Struktur in verschiedenen dpi-Bekanntheits Modi auszuführen. Wenn Sie versuchen, eine Beziehung zwischen untergeordneten und übergeordneten Elementen zu erstellen, die diese Regel unterbricht, kann die dpi-Bekanntheit des gesamten Prozesses zurückgesetzt werden. Dies kann durch folgende Aktionen ausgelöst werden:
+Im Allgemeinen kann der DPI-Erkennungsmodus Ihres Prozesses nach der Prozessinitialisierung nicht mehr geändert werden. Windows können jedoch den DPI-Erkennungsmodus Ihres Prozesses ändern, wenn Sie versuchen, die Anforderung zu unterbrechen, dass alle HWNDs in einer Fensterstruktur denselben DPI-Wahrnehmungsmodus aufweisen. Ab Windows 10 1703 ist es in allen Versionen von Windows nicht möglich, unterschiedliche HWNDs in einer HWND-Struktur in verschiedenen DPI-Wahrnehmungsmodi auszuführen. Wenn Sie versuchen, eine untergeordnete und übergeordnete Beziehung zu erstellen, die diese Regel unterbricht, kann die DPI-Kenntnis des gesamten Prozesses zurückgesetzt werden. Dies kann durch Dies ausgelöst werden:
 
-1.  Ein CreateWindow-Aufruf, bei dem das übergeordnete Fenster über einen anderen dpi-Awareness-Modus als der aufrufende Thread verfügt.
-2.  Ein SetParent-Befehl, bei dem die beiden Fenster mit unterschiedlichen dpi-Informations Modi verknüpft sind.
+1.  Ein CreateWindow-Aufruf, bei dem das übergebene übergeordnete Fenster einen anderen DPI-Wahrnehmungsmodus als der aufrufende Thread hat.
+2.  Ein SetParent-Aufruf, bei dem die beiden Fenster verschiedenen DPI-Wahrnehmungsmodi zugeordnet sind.
 
-Die folgende Tabelle zeigt, was geschieht, wenn Sie versuchen, diese Regel zu verletzen:
+Die folgende Tabelle zeigt, was geschieht, wenn Sie versuchen, gegen diese Regel zu verstoßen:
 
 
 
 | Vorgang                 | Windows 8.1                                  | Windows 10 (1607 und früher)                | Windows 10 (1703 und höher)                  |
 |---------------------------|----------------------------------------------|----------------------------------------------|----------------------------------------------|
-| Up Window (in-proc)    | –                                          | **Child erbt** (gemischter Modus)              | **Child erbt** (gemischter Modus)              |
-| "Kreatewindow" (Kreuz proc) | **Erzwungene zurück** Setzung (der Prozess des Aufrufers)       | **Child erbt** (gemischter Modus)              | **Erzwungene zurück** Setzung (der Prozess des Aufrufers)       |
-| SetParent (in-proc)       | –                                          | **Erzwungene zurück** Setzung (aktueller Prozess)        |  Fehler ( \_ ungültiger \_ Zustand)             |
-| SetParent (Cross-proc)    | **Erzwungene zurück** Setzung (der Prozess des untergeordneten Fensters) | **Erzwungene zurück** Setzung (der Prozess des untergeordneten Fensters) | **Erzwungene zurück** Setzung (der Prozess des untergeordneten Fensters) |
+| CreateWindow (In-Proc)    | Nicht zutreffend                                          | **Untergeordnete Erben** (gemischter Modus)              | **Untergeordnete Erben** (gemischter Modus)              |
+| CreateWindow (Prozessübergreifend) | **Erzwungenes Zurücksetzen** (des Prozesses des Aufrufers)       | **Untergeordnete Erben** (gemischter Modus)              | **Erzwungenes Zurücksetzen** (des Prozesses des Aufrufers)       |
+| SetParent (In-Proc)       | Nicht zutreffend                                          | **Erzwungenes Zurücksetzen** (des aktuellen Prozesses)        | **Fehler** (FEHLER \_ UNGÜLTIGER \_ ZUSTAND)             |
+| SetParent (Prozessübergreifend)    | **Erzwungenes Zurücksetzen** (des Prozesses des untergeordneten Fensters) | **Erzwungenes Zurücksetzen** (des Prozesses des untergeordneten Fensters) | **Erzwungenes Zurücksetzen** (des Prozesses des untergeordneten Fensters) |
 
 
 
@@ -401,9 +401,9 @@ Die folgende Tabelle zeigt, was geschieht, wenn Sie versuchen, diese Regel zu ve
 
 <dl> <dt>
 
-[Hohe dpi-API-Referenz](high-dpi-reference.md)
+[Api-Referenz zu hohen DPI-Daten](high-dpi-reference.md)
 </dt> <dt>
 
-[Dpi-Skalierungs-und dpi-kompatible APIs im gemischten Modus.](high-dpi-improvements-for-desktop-applications.md)
+[DPI-Skalierung im gemischten Modus und DPI-fähige APIs.](high-dpi-improvements-for-desktop-applications.md)
 </dt> </dl>
 

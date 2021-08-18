@@ -1,27 +1,27 @@
 ---
 title: Verwenden von Serialisierungsdiensten
-description: "\"Mittel l\" generiert einen serialisierungsstub für die Prozedur mit den Attributen \\ \"Codieren \\\" und \"\\ Decode \\\"."
+description: MIDL generiert einen Serialisierungsstub für die Prozedur mit den Attributen \encode\ und \ decode\ .
 ms.assetid: b1fce133-32e3-4b5e-9f9d-ffbe60e9d9cd
 keywords:
-- Remote Prozedur Aufruf RPC, Tasks, mithilfe von Serialisierungsdiensten
+- REMOTE PROCEDURE Call RPC , Tasks, using serialization services (Rpc-Aufruf von Remoteprozeduren, Tasks mitHilfe von Serialisierungsdiensten)
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 317156a2da954e001b687cca12eb0c6df23ef4ee
-ms.sourcegitcommit: 592c9bbd22ba69802dc353bcb5eb30699f9e9403
+ms.openlocfilehash: be20d513bdb74eca316b022dd8536e8988e32e93099981cc77830035048e55e1
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "104039562"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119010628"
 ---
 # <a name="using-serialization-services"></a>Verwenden von Serialisierungsdiensten
 
-"Mittel l" generiert einen serialisierungsstub für die Prozedur mit den Attributen \[ [**Codieren**](/windows/desktop/Midl/encode) \] und \[ [**decodieren**](/windows/desktop/Midl/decode) \] . Wenn Sie diese Routine aufrufen, führen Sie einen serialisierungsbefehl anstelle eines Remote Aufrufes aus. Die Prozedur Argumente werden auf die übliche Weise an einen Puffer gemarshallt bzw. aus diesem entfernt. Sie haben dann die komplette Kontrolle über die Puffer.
+MIDL generiert einen Serialisierungsstub für die Prozedur, bei dem die Attribute \[ [**codiert**](/windows/desktop/Midl/encode) \] und \[ [**decodiert werden.**](/windows/desktop/Midl/decode) \] Wenn Sie diese Routine aufrufen, führen Sie einen Serialisierungsaufruf anstelle eines Remoteaufrufs aus. Die Prozedurargumente werden auf die übliche Weise an einen Puffer gemarshallt oder aus einem Puffer nicht gemarshallt. Anschließend haben Sie die vollständige Kontrolle über die Puffer.
 
-Wenn das Programm hingegen die Typserialisierung ausführt (ein Typ wird mit Serialisierungsattributen bezeichnet), generiert die Mittel l Routinen zum Anpassen, codieren und Decodieren von Objekten dieses Typs. Zum Serialisieren von Daten müssen Sie diese Routinen in geeigneter Weise aufzurufen. Die Typserialisierung ist eine Microsoft-Erweiterung und nicht verfügbar, wenn Sie im DCE-Kompatibilitätsmodus ([**/OSF**](/windows/desktop/Midl/-osf)) kompilieren. Durch die Verwendung der \[ Attribute [**Codieren**](/windows/desktop/Midl/encode) \] und \[ [**decodieren**](/windows/desktop/Midl/decode) \] als Schnittstellen Attribute wendet RPC die Codierung auf alle Typen und Routinen an, die in der IDL-Datei definiert sind.
+Wenn das Programm dagegen die Typserialisierung ausführt (ein Typ ist mit Serialisierungsattributen bezeichnet), generiert MIDL Routinen zur Größe, Codierung und Decodierung von Objekten dieses Typs. Um Daten zu serialisieren, müssen Sie diese Routinen auf die entsprechende Weise aufrufen. Die Typserialisierung ist eine Microsoft-Erweiterung und daher nicht verfügbar, wenn Sie im DCE-Kompatibilitätsmodus [**(/osf)**](/windows/desktop/Midl/-osf)kompilieren. Indem die \[ [**Codierungs-**](/windows/desktop/Midl/encode) und Decodierungsattribute als Schnittstellenattribute verwendet werden, wendet RPC die Codierung auf alle Typen und Routinen an, die \] in der \[ [](/windows/desktop/Midl/decode) \] IDL-Datei definiert sind.
 
-Sie müssen bei der Verwendung von Serialisierungsdiensten ausreichend ausgerichtete Puffer angeben. Der Anfang des Puffers muss an einer Adresse ausgerichtet werden, die ein Vielfaches von 8 oder eine Ausrichtung mit 8 Bytes ist. Bei der prozedurerialisierung von Prozeduren muss jeder Prozedur Aufrufvorgang von einer Puffer Position, die 8-Byte-ausgerichtet ist, in eine marshallt Bei der Serialisierung des Typs müssen Größe, Codierung und Decodierung an einer Position beginnen, die mit 8 Bytes ausgerichtet ist.
+Sie müssen angemessen ausgerichtete Puffer bei der Verwendung von Serialisierungsdiensten zur Verfügung stellen. Der Anfang des Puffers muss an einer Adresse ausgerichtet werden, die ein Vielfaches von 8 oder 8 Byte ist. Für die Prozedurserialisierung muss jeder Prozeduraufruf an einer 8-Byte-ausgerichteten Pufferposition marshallen oder das Marshallen von einer Pufferposition aus unmarshalieren. Für die Typserialisierung müssen Größe, Codierung und Decodierung an einer 8-Byte-ausgerichteten Position beginnen.
 
-Eine Möglichkeit für Ihre Anwendung, sicherzustellen, dass Ihre Puffer ausgerichtet sind, besteht darin, die Funktion " [**Mittell- \_ Benutzer \_ zuweisen**](/windows/desktop/Midl/midl-user-allocate-1) " so zu schreiben, dass Sie ausgerichtete Puffer erstellt. Im folgenden Codebeispiel wird veranschaulicht, wie dies durchgeführt werden kann.
+Eine Möglichkeit für Ihre Anwendung, sicherzustellen, dass ihre Puffer ausgerichtet sind, besteht im Schreiben der Midl-Benutzer-Zuordnungsfunktion, damit sie ausgerichtete Puffer erstellt. [**\_ \_**](/windows/desktop/Midl/midl-user-allocate-1) Im folgenden Codebeispiel wird veranschaulicht, wie dies möglich ist.
 
 
 ```C++
@@ -47,7 +47,7 @@ void __RPC_FAR *__RPC_USER  MIDL_user_allocate(size_t sizeInBytes)
 
 
 
-Im folgenden Beispiel wird die entsprechende [**\_ Benutzer \_ freie Funktion "Mittel l**](/windows/desktop/Midl/midl-user-free-1) " gezeigt.
+Das folgende Beispiel zeigt die entsprechende [**funktion midl \_ user \_ free.**](/windows/desktop/Midl/midl-user-free-1)
 
 
 ```C++
@@ -65,6 +65,6 @@ void __RPC_USER  MIDL_user_free(void __RPC_FAR *f)
 
 
 
- 
+ 
 
- 
+ 

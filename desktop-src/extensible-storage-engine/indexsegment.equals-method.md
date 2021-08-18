@@ -1,6 +1,6 @@
 ---
-description: 'Weitere Informationen finden Sie hier: Indexsegment. Gleichheits Methode'
-title: Indexsegment. Gleichheits Methode
+description: 'Weitere Informationen zu: IndexSegment.Equals-Methode'
+title: IndexSegment.Equals-Methode
 TOCTitle: 'Equals method '
 ms:assetid: Overload:Microsoft.Isam.Esent.Interop.IndexSegment.Equals
 ms:mtpsurl: https://msdn.microsoft.com/library/microsoft.isam.esent.interop.indexsegment.equals(v=EXCHG.10)
@@ -14,17 +14,17 @@ dev_langs:
 - JScript
 - VB
 - other
-ms.openlocfilehash: 4425448b25f8f7ad0186e98ed2a7e181ae831fd4
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 2fce90e1d0a2ac27011250c9b7ebc80980555c82246801464f3bbbd98ad55d14
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104569475"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119112639"
 ---
-# <a name="indexsegmentequals-method"></a>Indexsegment. Gleichheits Methode
+# <a name="indexsegmentequals-method"></a>IndexSegment.Equals-Methode
 
-Geschützte Member einschließen  
-Geerbte Member einschließen  
+Einschließen geschützter Member  
+Einschließen geerbter Member  
 
 ## <a name="overload-list"></a>Überladeliste
 
@@ -33,18 +33,18 @@ Geerbte Member einschließen
 <tr class="header">
 <th> </th>
 <th>Name</th>
-<th>BESCHREIBUNG</th>
+<th>Beschreibung</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
 <td><img src="../images/dn292146.pubmethod(exchg.10).gif" title="Öffentliche Methode" alt="Public method" /></td>
-<td><a href="dn350913(v=exchg.10).md">Ist gleich(Objekt)</a></td>
-<td>Gibt einen Wert zurück, der angibt, ob diese Instanz gleich einer anderen Instanz ist. (Überschreibt <a href="/dotnet/api/system.object.equals#System_Object_Equals_System_Object_">Object. gleich(Objekt)</a>.)</td>
+<td><a href="dn350913(v=exchg.10).md">Equals(Object)</a></td>
+<td>Gibt einen Wert zurück, der angibt, ob diese Instanz gleich einer anderen Instanz ist. (Überschreibt <a href="/dotnet/api/system.object.equals#System_Object_Equals_System_Object_">Object.Equals(Object)</a>.)</td>
 </tr>
 <tr class="even">
 <td><img src="../images/dn292146.pubmethod(exchg.10).gif" title="Öffentliche Methode" alt="Public method" /></td>
-<td><a href="dn350936(v=exchg.10).md">Ist gleich(Indexsegment)</a></td>
+<td><a href="dn350936(v=exchg.10).md">Equals(IndexSegment)</a></td>
 <td>Gibt einen Wert zurück, der angibt, ob diese Instanz gleich einer anderen Instanz ist.</td>
 </tr>
 </tbody>
@@ -53,12 +53,12 @@ Geerbte Member einschließen
 
 Oben
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
-#### <a name="reference"></a>Referenz
+#### <a name="reference"></a>Verweis
 
-[Indexsegment-Klasse](./indexsegment-class.md)
+[IndexSegment-Klasse](./indexsegment-class.md)
 
-[Indexsegment-Member](./indexsegment-members.md)
+[IndexSegment-Member](./indexsegment-members.md)
 
-[Microsoft. ISAM. ESENT. Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)
+[Microsoft.Isam.Esent.Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)

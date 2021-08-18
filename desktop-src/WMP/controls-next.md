@@ -1,11 +1,11 @@
 ---
-title: Controls. Next-Methode
-description: Die Next-Methode legt das aktuelle Element auf das nächste Element in der Wiedergabeliste fest.
+title: Controls.next-Methode
+description: Die nächste Methode legt das aktuelle Element auf das nächste Element in der Wiedergabeliste fest.
 ms.assetid: 67436c76-8fb9-4350-86f3-67f5e9e6dca1
 keywords:
-- nächste Methode, Windows Media Player
-- Next Method Windows Media Player, Controls-Klasse
-- Steuerelemente-Klasse, Windows Media Player, nächste Methode
+- next-Methode Windows Media Player
+- next-Methode Windows Media Player , Controls-Klasse
+- Steuert die Klasse Windows Media Player , next-Methode
 topic_type:
 - apiref
 api_name:
@@ -16,16 +16,16 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 8f58e6d11eafe38b4ab26e0275bd5c986cd4e4a4
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 83a40c063163b0dadaa3db2d0d6281ace64312f68ee999763e6b27d4bd98f84d
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106371790"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118997470"
 ---
-# <a name="controlsnext-method"></a>Controls. Next-Methode
+# <a name="controlsnext-method"></a>Controls.next-Methode
 
-Die **Next** -Methode legt das aktuelle Element auf das nächste Element in der Wiedergabeliste fest.
+Die **nächste** Methode legt das aktuelle Element auf das nächste Element in der Wiedergabeliste fest.
 
 ## <a name="syntax"></a>Syntax
 
@@ -44,17 +44,17 @@ Diese Methode hat keine Parameter.
 
 Diese Methode gibt keinen Wert zurück.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Wenn sich die Wiedergabeliste auf dem letzten Eintrag befindet, wenn **Next** aufgerufen wird, wird der erste Eintrag in der Wiedergabeliste zum aktuellen Eintrag.
+Wenn sich die Wiedergabeliste beim **nächsten** Aufruf auf dem letzten Eintrag befindet, wird der erste Eintrag in der Wiedergabeliste zum aktuellen Eintrag.
 
-Bei serverseitigen Wiedergabelisten springt diese Methode zum nächsten Element in der serverseitigen Wiedergabeliste, nicht zur Client Wiedergabeliste.
+Bei serverseitigen Wiedergabelisten überspringt diese Methode das nächste Element in der serverseitigen Wiedergabeliste, nicht die Clientwiedergabeliste.
 
-Beim Abspielen einer DVD überspringt diese Methode das nächste logische Kapitel in der Wiedergabe Sequenz, das möglicherweise nicht das nächste Kapitel in der Wiedergabeliste ist. Bei der Wiedergabe von DVD-Stills springt diese Methode zum nächsten weiter.
+Beim Wiedergeben einer DVD überspringt diese Methode das nächste logische Kapitel in der Wiedergabesequenz, das möglicherweise nicht das nächste Kapitel in der Wiedergabeliste ist. Bei der Wiedergabe von DVD-Dateien wird diese Methode weiterhin mit der nächsten Methode übersprungen.
 
 ## <a name="examples"></a>Beispiele
 
-Im folgenden Beispiel wird ein HTML-Schaltflächen Element erstellt, das **Next** verwendet, um zum nächsten Element in der aktuellen Wiedergabeliste zu wechseln. Das **Player** -Objekt wurde mit ID = "Player" erstellt.
+Im folgenden Beispiel wird ein HTML BUTTON-Element erstellt, das **neben** verwendet, um zum nächsten Element in der aktuellen Wiedergabeliste zu wechseln. Das **Player-Objekt** wurde mit der ID = "Player" erstellt.
 
 
 ```JScript
@@ -78,22 +78,22 @@ Im folgenden Beispiel wird ein HTML-Schaltflächen Element erstellt, das **Next*
 
 | Anforderung | Wert |
 |--------------------|------------------------------------------------------------------------------------|
-| Version<br/> | Windows Media Player Version 7,0 oder höher.<br/>                              |
+| Version<br/> | Windows Media Player Version 7.0 oder höher.<br/>                              |
 | DLL<br/>     | <dl> <dt>Wmp.dll</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
 [**Controls-Objekt**](controls-object.md)
 </dt> <dt>
 
-[**Controls. Previous**](controls-previous.md)
+[**Controls.previous**](controls-previous.md)
 </dt> <dt>
 
-[**Controls. Pause**](controls-stop.md)
+[**Controls.stop**](controls-stop.md)
 </dt> </dl>
 
  

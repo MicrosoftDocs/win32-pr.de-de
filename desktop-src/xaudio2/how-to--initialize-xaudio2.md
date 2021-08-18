@@ -1,23 +1,23 @@
 ---
-description: XAudio2 wird für die Audiowiedergabe initialisiert, indem eine Instanz der XAudio2-Engine erstellt und eine Mastering-Stimme erstellt wird.
+description: XAudio2 wird für die Audiowiedergabe initialisiert, indem eine Instanz der XAudio2-Engine und eine Masterstimme erstellt werden.
 ms.assetid: 4db2e7fc-0a87-0344-a07c-3abf2b21af32
 title: "So wird's gemacht: Initialisieren von XAudio2"
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: e4a613c1ae2b7c3a7f0c55ab5349a0a605aaeb2a
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 4eb55425c92e6d28a2689fb388869bbf42339d14bec3550e3f9e17798c1af68f
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "103862951"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118962729"
 ---
 # <a name="how-to-initialize-xaudio2"></a>So wird's gemacht: Initialisieren von XAudio2
 
-XAudio2 wird für die Audiowiedergabe initialisiert, indem eine Instanz der XAudio2-Engine erstellt und eine Mastering-Stimme erstellt wird.
+XAudio2 wird für die Audiowiedergabe initialisiert, indem eine Instanz der XAudio2-Engine und eine Masterstimme erstellt werden.
 
 **So initialisieren Sie XAudio2**
 
-1.  Stellen Sie sicher, dass Sie com initialisiert haben. Für eine Windows Store-App erfolgt dies im Rahmen der Initialisierung der Windows-Runtime. Andernfalls verwenden Sie [**CoInitializeEx**](/windows/win32/api/combaseapi/nf-combaseapi-coinitializeex).
+1.  Stellen Sie sicher, dass Sie COM initialisiert haben. Für eine Windows Store-App erfolgt dies im Rahmen der Initialisierung der Windows Runtime. Verwenden Sie andernfalls [**CoInitializeEx.**](/windows/win32/api/combaseapi/nf-combaseapi-coinitializeex)
 
     ```
     HRESULT hr;
@@ -28,7 +28,7 @@ XAudio2 wird für die Audiowiedergabe initialisiert, indem eine Instanz der XAud
 
 
 
-2.  Verwenden Sie die [**XAudio2Create**](/windows/desktop/api/xaudio2/nf-xaudio2-xaudio2create) -Funktion, um eine Instanz der XAudio2-Engine zu erstellen.
+2.  Verwenden Sie [**die XAudio2Create-Funktion,**](/windows/desktop/api/xaudio2/nf-xaudio2-xaudio2create) um eine Instanz der XAudio2-Engine zu erstellen.
 
     ```
     IXAudio2* pXAudio2 = nullptr;
@@ -38,9 +38,9 @@ XAudio2 wird für die Audiowiedergabe initialisiert, indem eine Instanz der XAud
 
     
 
-3.  Verwenden Sie die Methode " [**kreatemasteringvoice**](/windows/win32/api/xaudio2/nf-xaudio2-ixaudio2-createmasteringvoice) ", um eine Stimme zu erstellen.
+3.  Verwenden Sie [**die CreateMasteringVoice-Methode,**](/windows/win32/api/xaudio2/nf-xaudio2-ixaudio2-createmasteringvoice) um eine Masterstimme zu erstellen.
 
-    Die Mastering-Stimmen Kapseln ein Audiogerät. Es ist das ultimative Ziel für alle Audiodaten, die über ein audiodiagramm geleitet werden.
+    Die Masterstimmen kapseln ein Audiogerät. Es ist das endgültige Ziel für alle Audiodaten, die einen Audiographen durchläuft.
 
     ```
     IXAudio2MasteringVoice* pMasterVoice = nullptr;
@@ -52,7 +52,7 @@ XAudio2 wird für die Audiowiedergabe initialisiert, indem eine Instanz der XAud
 
 ## <a name="notes-for-windows-store-apps"></a>Hinweise für Windows Store-Apps
 
-Es wird empfohlen, einen [intelligenten Zeiger](/previous-versions/visualstudio/visual-studio-2012/hh279674(v=vs.110)) zu verwenden, um die Lebensdauer von XAUDIO2-Objekten auf sichere Weise zu verwalten. Für Windows Store-Apps können Sie die Vorlage " [**comptr**](/previous-versions/visualstudio/visual-studio-2012/br244983(v=vs.110)) -intelligenter Zeiger" aus der Windows-Runtime C++ Template Library (WRL) verwenden.
+Es wird empfohlen, einen [](/previous-versions/visualstudio/visual-studio-2012/hh279674(v=vs.110)) intelligenten Zeiger zu verwenden, um die Lebensdauer von XAUDIO2-Objekten auf ausnahmesichere Weise zu verwalten. Für Windows Store-Apps können Sie die [**Intelligente ComPtr-Zeigervorlage**](/previous-versions/visualstudio/visual-studio-2012/br244983(v=vs.110)) aus der C++-Vorlagenbibliothek (WRL Windows Runtime) verwenden.
 
 
 ```C++
@@ -69,7 +69,7 @@ if ( FAILED(hr = pXAudio2->CreateMasteringVoice( &pMasterVoice ) ) )
 
 
 > [!Note]  
-> Stellen Sie sicher, dass alle untergeordneten XAUDIO2-Objekte vollständig freigegeben werden, bevor Sie das [**IXAudio2**](/windows/desktop/api/xaudio2/nn-xaudio2-ixaudio2) -Objekt
+> Stellen Sie sicher, dass alle untergeordneten XAUDIO2-Objekte vollständig freigegeben werden, bevor Sie das [**IXAudio2-Objekt**](/windows/desktop/api/xaudio2/nn-xaudio2-ixaudio2) veröffentlichen.
 
  
 
@@ -77,7 +77,7 @@ if ( FAILED(hr = pXAudio2->CreateMasteringVoice( &pMasterVoice ) ) )
 
 <dl> <dt>
 
-[XAudio2](getting-started.md)
+[XAudio2-Erste Schritte](getting-started.md)
 </dt> <dt>
 
 [So wird's gemacht: Laden von Datendateien in XAudio2](how-to--load-audio-data-files-in-xaudio2.md)

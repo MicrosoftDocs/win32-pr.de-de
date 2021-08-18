@@ -1,79 +1,79 @@
 ---
-title: Datentyp Zuordnung zwischen Active Directory und LDAP
-description: In der folgenden Tabelle wird der benutzerfreundliche Syntax Name der entsprechenden LDAP-Syntax OID und dem adstypeer-Wert zugeordnet.
+title: Datentypzuordnung zwischen Active Directory und LDAP
+description: Die folgende Tabelle ordnet den Anzeigesyntaxnamen dem entsprechenden OID- und ADSTYPEENUM-Wert der LDAP-Syntax zu.
 ms.assetid: 07952de0-0389-473a-84ca-b5f35fdc5b1f
 ms.tgt_platform: multiple
 keywords:
-- Datentyp Zuordnung zwischen Active Directory und LDAP ADSI
-- LDAP-Dienstanbieter ADSI, Datentyp Zuordnung zwischen Active Directory und LDAP
+- Datentypzuordnung zwischen Active Directory und LDAP ADSI
+- LDAP-Dienstanbieter ADSI , Datentypzuordnung zwischen Active Directory und LDAP
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 45157fb7cefe1a993e6e16dffe28f101bc73759b
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: e1aed0ff0071c55e381e1eb66f1f84e5a98aa8acf2c361816444533c6d0ad886
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "106340194"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118961969"
 ---
-# <a name="data-type-mapping-between-active-directory-and-ldap"></a>Datentyp Zuordnung zwischen Active Directory und LDAP
+# <a name="data-type-mapping-between-active-directory-and-ldap"></a>Datentypzuordnung zwischen Active Directory und LDAP
 
-In der folgenden Tabelle wird der benutzerfreundliche Syntax Name der entsprechenden LDAP-Syntax OID und dem [**adstypeer**](/windows/win32/api/iads/ne-iads-adstypeenum) -Wert zugeordnet.
+Die folgende Tabelle ordnet den Anzeigesyntaxnamen dem entsprechenden OID- und [**ADSTYPEENUM-Wert der LDAP-Syntax**](/windows/win32/api/iads/ne-iads-adstypeenum) zu.
 
 
 
-| Anzeige Syntax Name              | LDAP-Syntax OID               | Adstypum-Datentyp                 |
+| Name der Benutzersyntax              | LDAP-Syntax OID               | ADSTYPEENUM-Datentyp                 |
 |-----------------------------------|-------------------------------|---------------------------------------|
-| Access spointdn                     | 1.3.6.1.4.1.1466.115.121.1.2  | **adstype \_ Case \_ - \_ Zeichenfolge ignorieren**     |
-| Attributetypedescription          | 1.3.6.1.4.1.1466.115.121.1.3  | **adstype \_ Case \_ - \_ Zeichenfolge ignorieren**     |
-| Audio                             | 1.3.6.1.4.1.1466.115.121.1.4  | **Zeichenfolge des adstype- \_ Oktetts \_**            |
-| Binary                            | 1.3.6.1.4.1.1466.115.121.1.5  | **Zeichenfolge des adstype- \_ Oktetts \_**            |
-| Bitstring                         | 1.3.6.1.4.1.1466.115.121.1.6  | **adstype \_ Case \_ - \_ Zeichenfolge ignorieren**     |
-| Boolean                           | 1.3.6.1.4.1.1466.115.121.1.7  | **boolescher Wert von adstype \_**                  |
-| Caseexactstring                   | 1.2.840.113556.1.4.1362       | **exakte Groß-/Kleinschreibung von adstype \_ \_ \_**      |
-| Caseignorestring                  | 1.2.840.113556.1.4.1221       | **adstype \_ Case \_ - \_ Zeichenfolge ignorieren**     |
-| Zertifikat                       | 1.3.6.1.4.1.1466.115.121.1.8  | **Zeichenfolge des adstype- \_ Oktetts \_**            |
-| CertificateList                   | 1.3.6.1.4.1.1466.115.121.1.9  | **Zeichenfolge des adstype- \_ Oktetts \_**            |
-| Certificatepair                   | 1.3.6.1.4.1.1466.115.121.1.10 | **Zeichenfolge des adstype- \_ Oktetts \_**            |
-| Land/Region                    | 1.3.6.1.4.1.1466.115.121.1.11 | **adstype \_ Case \_ - \_ Zeichenfolge ignorieren**     |
-| Dataqualitysyntax                 | 1.3.6.1.4.1.1466.115.121.1.13 | **adstype \_ Case \_ - \_ Zeichenfolge ignorieren**     |
-| DeliveryMethod                    | 1.3.6.1.4.1.1466.115.121.1.14 | **adstype \_ Case \_ - \_ Zeichenfolge ignorieren**     |
-| Directoriystring                   | 1.3.6.1.4.1.1466.115.121.1.15 | **adstype \_ Case \_ - \_ Zeichenfolge ignorieren**     |
-| DN                                | 1.3.6.1.4.1.1466.115.121.1.12 | **adstype- \_ DN- \_ Zeichenfolge**               |
-| Dsaqualitysyntax                  | 1.3.6.1.4.1.1466.115.121.1.19 | **adstype \_ Case \_ - \_ Zeichenfolge ignorieren**     |
-| Enhancedguide                     | 1.3.6.1.4.1.1466.115.121.1.21 | **adstype \_ Case \_ - \_ Zeichenfolge ignorieren**     |
-| "FacsimileTelephoneNumber"          | 1.3.6.1.4.1.1466.115.121.1.22 | **adstype \_ Case \_ - \_ Zeichenfolge ignorieren**     |
-| Fax                               | 1.3.6.1.4.1.1466.115.121.1.23 | **Zeichenfolge des adstype- \_ Oktetts \_**            |
-| Generalizedtime                   | 1.3.6.1.4.1.1466.115.121.1.24 | **adstype- \_ UTC- \_ Zeit**                |
-| Zeit (nur der Standort Server übernimmt dies) | 1.3.6.1.4.1.1466.115.121.1.24 | **adstype- \_ UTC- \_ Zeit**                |
-| Handbuch                             | 1.3.6.1.4.1.1466.115.121.1.25 | **adstype \_ Case \_ - \_ Zeichenfolge ignorieren**     |
-| IA5String                         | 1.3.6.1.4.1.1466.115.121.1.26 | **adstype \_ Case \_ - \_ Zeichenfolge ignorieren**     |
-| INTEGER                           | 1.3.6.1.4.1.1466.115.121.1.27 | **adstype- \_ Ganzzahl**                  |
-| INTEGER8 (nicht in LDAP, NTDS)      | 1.2.840.113556.1.4.906        | **\_hohe Ganzzahl von adstype \_**           |
-| JPEG                              | 1.3.6.1.4.1.1466.115.121.1.28 | **Zeichenfolge des adstype- \_ Oktetts \_**            |
-| Mail Preference                    | 1.3.6.1.4.1.1466.115.121.1.32 | **adstype \_ Case \_ - \_ Zeichenfolge ignorieren**     |
-| Nameandoptionaluid                | 1.3.6.1.4.1.1466.115.121.1.34 | **adstype \_ Case \_ - \_ Zeichenfolge ignorieren**     |
-| NumericString                     | 1.3.6.1.4.1.1466.115.121.1.36 | **\_numerische \_ Zeichenfolge von adstype**          |
-| Objectclassdescription            | 1.3.6.1.4.1.1466.115.121.1.37 | **adstype \_ Case \_ - \_ Zeichenfolge ignorieren**     |
-| Octetstring (nicht in RFC)          | 1.3.6.1.4.1.1466.115.121.1.40 | **Zeichenfolge des adstype- \_ Oktetts \_**            |
-| OID                               | 1.3.6.1.4.1.1466.115.121.1.38 | **adstype \_ Case \_ - \_ Zeichenfolge ignorieren**     |
-| Orname                            | 1.2.840.113556.1.4.1221       | **adstype \_ Case \_ - \_ Zeichenfolge ignorieren**     |
-| Othermailbox                      | 1.3.6.1.4.1.1466.115.121.1.39 | **adstype \_ Case \_ - \_ Zeichenfolge ignorieren**     |
-| PostalAddress                     | 1.3.6.1.4.1.1466.115.121.1.41 | **adstype \_ Case \_ - \_ Zeichenfolge ignorieren**     |
-| Presentationaddress               | 1.3.6.1.4.1.1466.115.121.1.43 | **adstype \_ Case \_ - \_ Zeichenfolge ignorieren**     |
-| PrintableString                   | 1.3.6.1.4.1.1466.115.121.1.44 | **Druckbare adstype- \_ \_ Zeichenfolge**        |
-| Objectsecuritydescriptor          | 1.2.840.113556.1.4.907        | **adstype \_ NT- \_ Sicherheits \_ Beschreibung** |
-| TelephoneNumber                   | 1.3.6.1.4.1.1466.115.121.1.50 | **adstype \_ Case \_ - \_ Zeichenfolge ignorieren**     |
-| Teletexterminalidentifier         | 1.3.6.1.4.1.1466.115.121.1.51 | **Zeichenfolge des adstype- \_ Oktetts \_**            |
-| Telexnumber                       | 1.3.6.1.4.1.1466.115.121.1.52 | **adstype \_ Case \_ - \_ Zeichenfolge ignorieren**     |
-| UtcTime                           | 1.3.6.1.4.1.1466.115.121.1.53 | **adstype- \_ UTC- \_ Zeit**                |
+| AccessPointDN                     | 1.3.6.1.4.1.1466.115.121.1.2  | **ADSTYPE \_ CASE \_ IGNORE \_ STRING**     |
+| AttributeTypeDescription          | 1.3.6.1.4.1.1466.115.121.1.3  | **ADSTYPE \_ CASE \_ IGNORE \_ STRING**     |
+| Audio                             | 1.3.6.1.4.1.1466.115.121.1.4  | **ADSTYPE \_ OCTET \_ STRING**            |
+| Binary                            | 1.3.6.1.4.1.1466.115.121.1.5  | **ADSTYPE \_ OCTET \_ STRING**            |
+| BitString                         | 1.3.6.1.4.1.1466.115.121.1.6  | **ADSTYPE \_ CASE \_ IGNORE \_ STRING**     |
+| Boolean                           | 1.3.6.1.4.1.1466.115.121.1.7  | **ADSTYPE \_ BOOLEAN**                  |
+| CaseExactString                   | 1.2.840.113556.1.4.1362       | **ADSTYPE \_ CASE \_ EXACT \_ STRING**      |
+| CaseIgnoreString                  | 1.2.840.113556.1.4.1221       | **ADSTYPE \_ CASE \_ IGNORE \_ STRING**     |
+| Zertifikat                       | 1.3.6.1.4.1.1466.115.121.1.8  | **ADSTYPE \_ OCTET \_ STRING**            |
+| CertificateList                   | 1.3.6.1.4.1.1466.115.121.1.9  | **ADSTYPE \_ OCTET \_ STRING**            |
+| CertificatePair                   | 1.3.6.1.4.1.1466.115.121.1.10 | **ADSTYPE \_ OCTET \_ STRING**            |
+| Land/Region                    | 1.3.6.1.4.1.1466.115.121.1.11 | **ADSTYPE \_ CASE \_ IGNORE \_ STRING**     |
+| DataQualitySyntax                 | 1.3.6.1.4.1.1466.115.121.1.13 | **ADSTYPE \_ CASE \_ IGNORE \_ STRING**     |
+| DeliveryMethod                    | 1.3.6.1.4.1.1466.115.121.1.14 | **ADSTYPE \_ CASE \_ IGNORE \_ STRING**     |
+| DirectoryString                   | 1.3.6.1.4.1.1466.115.121.1.15 | **ADSTYPE \_ CASE \_ IGNORE \_ STRING**     |
+| DN                                | 1.3.6.1.4.1.1466.115.121.1.12 | **ADSTYPE \_ DN \_ STRING**               |
+| DSAQualitySyntax                  | 1.3.6.1.4.1.1466.115.121.1.19 | **ADSTYPE \_ CASE \_ IGNORE \_ STRING**     |
+| EnhancedGuide                     | 1.3.6.1.4.1.1466.115.121.1.21 | **ADSTYPE \_ CASE \_ IGNORE \_ STRING**     |
+| FacsimileTelephoneNumber          | 1.3.6.1.4.1.1466.115.121.1.22 | **ADSTYPE \_ CASE \_ IGNORE \_ STRING**     |
+| Fax                               | 1.3.6.1.4.1.1466.115.121.1.23 | **ADSTYPE \_ OCTET \_ STRING**            |
+| GeneralizedTime                   | 1.3.6.1.4.1.1466.115.121.1.24 | **ADSTYPE \_ UTC \_ TIME**                |
+| Zeit (dies wird nur vom Standortserver ausgeführt) | 1.3.6.1.4.1.1466.115.121.1.24 | **ADSTYPE \_ UTC \_ TIME**                |
+| Handbuch                             | 1.3.6.1.4.1.1466.115.121.1.25 | **ADSTYPE \_ CASE \_ IGNORE \_ STRING**     |
+| IA5String                         | 1.3.6.1.4.1.1466.115.121.1.26 | **ADSTYPE \_ CASE \_ IGNORE \_ STRING**     |
+| INTEGER                           | 1.3.6.1.4.1.1466.115.121.1.27 | **ADSTYPE \_ INTEGER**                  |
+| INTEGER8 (nicht in LDAP, NTDS)      | 1.2.840.113556.1.4.906        | **ADSTYPE \_ LARGE \_ INTEGER**           |
+| JPEG                              | 1.3.6.1.4.1.1466.115.121.1.28 | **ADSTYPE \_ OCTET \_ STRING**            |
+| MailPreference                    | 1.3.6.1.4.1.1466.115.121.1.32 | **ADSTYPE \_ CASE \_ IGNORE \_ STRING**     |
+| NameAndOptionalUID                | 1.3.6.1.4.1.1466.115.121.1.34 | **ADSTYPE \_ CASE \_ IGNORE \_ STRING**     |
+| NumericString                     | 1.3.6.1.4.1.1466.115.121.1.36 | **NUMERISCHE \_ \_ ADSTYPE-ZEICHENFOLGE**          |
+| ObjectClassDescription            | 1.3.6.1.4.1.1466.115.121.1.37 | **ADSTYPE \_ CASE \_ IGNORE \_ STRING**     |
+| OctetString (nicht in RFC)          | 1.3.6.1.4.1.1466.115.121.1.40 | **ADSTYPE \_ OCTET \_ STRING**            |
+| OID                               | 1.3.6.1.4.1.1466.115.121.1.38 | **ADSTYPE \_ CASE \_ IGNORE \_ STRING**     |
+| ORName                            | 1.2.840.113556.1.4.1221       | **ADSTYPE \_ CASE \_ IGNORE \_ STRING**     |
+| OtherMailbox                      | 1.3.6.1.4.1.1466.115.121.1.39 | **ADSTYPE \_ CASE \_ IGNORE \_ STRING**     |
+| PostalAddress                     | 1.3.6.1.4.1.1466.115.121.1.41 | **ADSTYPE \_ CASE \_ IGNORE \_ STRING**     |
+| PresentationAddress               | 1.3.6.1.4.1.1466.115.121.1.43 | **ADSTYPE \_ CASE \_ IGNORE \_ STRING**     |
+| PrintableString                   | 1.3.6.1.4.1.1466.115.121.1.44 | **DRUCKBARE \_ \_ ADSTYPE-ZEICHENFOLGE**        |
+| ObjectSecurityDescriptor          | 1.2.840.113556.1.4.907        | **ADSTYPE \_ NT \_ SECURITY \_ DESCRIPTOR** |
+| TelephoneNumber                   | 1.3.6.1.4.1.1466.115.121.1.50 | **ADSTYPE \_ CASE \_ IGNORE \_ STRING**     |
+| TeletexTerminalIdentifier         | 1.3.6.1.4.1.1466.115.121.1.51 | **ADSTYPE \_ OCTET \_ STRING**            |
+| TelexNumber                       | 1.3.6.1.4.1.1466.115.121.1.52 | **ADSTYPE \_ CASE \_ IGNORE \_ STRING**     |
+| UTCTime                           | 1.3.6.1.4.1.1466.115.121.1.53 | **ADSTYPE \_ UTC \_ TIME**                |
 
 
 
- 
+ 
 
- 
+ 
 
- 
+ 
 
 
 

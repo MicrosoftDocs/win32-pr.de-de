@@ -1,40 +1,40 @@
 ---
-description: Einführung (WIC-Richtlinien für Kamera Rohbild Formate)
+description: Introduction (WIC Guidelines for Camera RAW Image Formats)
 ms.assetid: 3c588386-1d4d-4ee0-b633-bfc94ca751ea
-title: Einführung (WIC-Richtlinien für Kamera Rohbild Formate)
+title: Introduction (WIC Guidelines for Camera RAW Image Formats)
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: ec6ee2607326afe289e0a3e54b254dcf581cbf86
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 3d96da37d36fed6af0aef271471eb2a0e5dae44bef71dfe14a4da37eba3f658c
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "104217372"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119086863"
 ---
-# <a name="introduction-wic-guidelines-for-camera-raw-image-formats"></a>Einführung (WIC-Richtlinien für Kamera Rohbild Formate)
+# <a name="introduction-wic-guidelines-for-camera-raw-image-formats"></a>Introduction (WIC Guidelines for Camera RAW Image Formats)
 
-Die Windows Imaging Component (WIC) stellt ein erweiterbares Framework zum Arbeiten mit Bildern und Bild Metadaten bereit. Mit WIC können Software-und Hardwarehersteller Codecs entwickeln, sodass Ihre eigenen Bildformate die gleiche Platt Form Unterstützung wie Native Image Formate wie z. b. TIFF (Tagged Image File Format), Joint Photographic Experts Group (JPEG) oder HD-Foto erhalten.
+Die Windows Imaging Component (WIC) bietet ein erweiterbares Framework für die Arbeit mit Bildern und Bildmetadaten. WIC ermöglicht Software- und Hardwareanbietern die Entwicklung von Codecs, sodass ihre eigenen Bildformate die gleiche Plattformunterstützung wie native Bildformate wie TIFF (Tagged Image File Format), Joint Photographic Experts Group (JPEG) oder HD Photo erhalten können.
 
-WIC stellt unabhängig vom Bildformat einen einzelnen, konsistenten Satz von Schnittstellen für die gesamte Bildverarbeitung bereit. Daher erhält jede Anwendung, die WIC verwendet, automatische Unterstützung für neue Bildformate, sobald der Codec installiert ist. WIC bietet auch ein erweiterbares metadatenframework, das es Anwendungen ermöglicht, eigene proprietäre Metadaten direkt in Bilddateien zu lesen und zu schreiben, sodass die Metadaten niemals verloren gehen oder von dem Image getrennt werden.
+WIC bietet einen einzelnen, konsistenten Satz von Schnittstellen für die gesamte Bildverarbeitung, unabhängig vom Bildformat. Daher erhält jede Anwendung, die WIC verwendet, automatische Unterstützung für neue Bildformate, sobald der Codec installiert ist. WIC bietet auch ein erweiterbares Metadatenframework, mit dem Anwendungen ihre eigenen proprietären Metadaten direkt in Bilddateien lesen und schreiben können, sodass die Metadaten niemals verloren geht oder vom Image getrennt werden.
 
-WIC ist in Windows Presentation Foundation (WPF) enthalten und ist in Windows Vista und spätere Windows-Versionen integriert. Es ist auch als eigenständige verteilbare Komponente für Windows XP verfügbar.
+WIC ist in Windows Presentation Foundation (WPF) enthalten und in Windows Vista und höher Windows Versionen integriert. Sie ist auch als eigenständige verteilbare Komponente für Windows XP verfügbar.
 
-Diese Richtlinien sind so konzipiert, dass Sie Rohformat Herstellern bei der Entwicklung von WIC-Codecs unterstützen.
+Diese Richtlinien sollen RAW-Formathersteller bei der Entwicklung von WIC-Codecs unterstützen.
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-**Licher**
+**Konzeptionellen**
 </dt> <dt>
 
-[Übersicht über die Windows Imaging-Komponente](-wic-about-windows-imaging-codec.md)
+[Windows Übersicht über Bildverarbeitungskomponenten](-wic-about-windows-imaging-codec.md)
 </dt> <dt>
 
-[WIC-Richtlinien für Kamera Rohbild Formate](-wic-rawguidelines.md)
+[WIC Guidelines for Camera RAW Image Formats](-wic-rawguidelines.md)
 </dt> <dt>
 
-[Schreiben eines WIC-Enabled Codecs](-wic-howtowriteacodec.md)
+[Schreiben eines WIC-Enabled CODEC](-wic-howtowriteacodec.md)
 </dt> </dl>
 
  

@@ -13,12 +13,12 @@ api_type:
 - COM
 api_location:
 - Shell32.dll
-ms.openlocfilehash: dc8fe6277208808ad5f5b182f3eee416daf4a5d0
-ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
+ms.openlocfilehash: e4202cf2b57798de76784f4117665d92054fcbc74de76f1bd9a3f371dba66056
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2021
-ms.locfileid: "108083738"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118968589"
 ---
 # <a name="shellgetsetting-method"></a>Shell.GetSetting-Methode
 
@@ -76,7 +76,7 @@ Ein -Wert, der die aktuelle abzurufende Shelleinstellung angibt. In jedem Aufruf
 
 </dt> <dd>
 
-Nicht verwendet.
+Wird nicht verwendet.
 
 </dd> <dt>
 
@@ -109,7 +109,7 @@ Der Status der Option **Doppelklicken, um ein Element zu öffnen (einfaches Klic
 
 </dt> <dd>
 
-Nicht verwendet.
+Wird nicht verwendet.
 
 </dd> <dt>
 
@@ -120,7 +120,7 @@ Nicht verwendet.
 
 </dt> <dd>
 
-Nicht verwendet.
+Wird nicht verwendet.
 
 </dd> <dt>
 
@@ -131,7 +131,7 @@ Nicht verwendet.
 
 </dt> <dd>
 
-Der Status des Symbols, der in der listenansicht Windows-Explorer angezeigt wird. Wenn diese Option aktiv ist, werden in der Listenansicht keine Symbole angezeigt.
+Der Status des Symbols wird in der Windows Explorer-Listenansicht angezeigt. Wenn diese Option aktiv ist, werden in der Listenansicht keine Symbole angezeigt.
 
 </dd> <dt>
 
@@ -142,7 +142,7 @@ Der Status des Symbols, der in der listenansicht Windows-Explorer angezeigt wird
 
 </dt> <dd>
 
-**Windows Vista und höher.** Der Status des Anzeigenamens, der in der Windows-Explorer Listenansicht angezeigt wird. Wenn diese Option aktiv ist, werden Symbole in der Listenansicht angezeigt, Anzeigenamen jedoch nicht.
+**Windows Vista und höher.** Der Anzeigestatus des Anzeigenamens in der Windows Explorer-Listenansicht. Wenn diese Option aktiv ist, werden Symbole in der Listenansicht angezeigt, anzeigenamen jedoch nicht.
 
 </dd> <dt>
 
@@ -153,7 +153,7 @@ Der Status des Symbols, der in der listenansicht Windows-Explorer angezeigt wird
 
 </dt> <dd>
 
-Der Status der **Schaltfläche Kartennetzwerklaufwerk anzeigen in der Symbolleistenoption.** Ab Windows Vista ist diese Option nicht mehr verfügbar.
+Der Status der Schaltfläche Netzwerklaufwerk anzeigen **in der Symbolleiste.** Ab Windows Vista ist diese Option nicht mehr verfügbar.
 
 </dd> <dt>
 
@@ -164,7 +164,7 @@ Der Status der **Schaltfläche Kartennetzwerklaufwerk anzeigen in der Symbolleis
 
 </dt> <dd>
 
-Der Status der **Bestätigungsdialogoption Löschbestätigung anzeigen** des Papierkorb.
+Der Status der Bestätigungsoption Papierkorb Anzeigen **des Löschdialogfelds.**
 
 </dd> <dt>
 
@@ -186,7 +186,7 @@ Der Status der Option **Automatisch nach Netzwerkordnern und Druckern suchen.** 
 
 </dt> <dd>
 
-Der Status der **Ordnerfenster in einem separaten Prozess starten.**
+Der Status der Option **Ordner starten in einem separaten** Prozess.
 
 </dd> <dt>
 
@@ -197,7 +197,7 @@ Der Status der **Ordnerfenster in einem separaten Prozess starten.**
 
 </dt> <dd>
 
-Nicht verwendet.
+Wird nicht verwendet.
 
 </dd> <dt>
 
@@ -263,7 +263,7 @@ Der Status der Option **Popupbeschreibung für Ordner** und Desktopelemente anze
 
 </dt> <dd>
 
-Nicht verwendet.
+Wird nicht verwendet.
 
 </dd> <dt>
 
@@ -285,7 +285,7 @@ Der Status der Option **Geschützte Betriebssystemdateien ausblenden.**
 
 </dt> <dd>
 
-Der Status der Option **Ausgeblendete Dateien und** Ordner. In Windows Vista und höher entspricht dies SSF \_ SHOWALLOBJECTS. In Windows-Versionen vor Windows Vista wurde dieser Wert auf den Status der Option **Ausgeblendete** Dateien und Ordner nicht anzeigen verwiesen.
+Der Status der Option **Ausgeblendete Dateien und** Ordner. In Windows Vista und höher entspricht dies SSF \_ SHOWALLOBJECTS. In Versionen von Windows vor Windows Vista wurde dieser Wert auf den Status der Option **Ausgeblendete** Dateien und Ordner nicht anzeigen verwiesen.
 
 </dd> <dt>
 
@@ -296,7 +296,7 @@ Der Status der Option **Ausgeblendete Dateien und** Ordner. In Windows Vista und
 
 </dt> <dd>
 
-**Windows Vista und höher.** Der Status der Option **Dateisymbol für Miniaturansichten** anzeigen. Wenn diese Option aktiv ist, wird eine Dateitypüberlagerung angewendet, wenn eine Datei eine Miniaturansichtsdarstellung liefert.
+**Windows Vista und höher.** Der Status der Option **Dateisymbol für Miniaturansichten** anzeigen. Wenn diese Option aktiv ist, wird eine Dateitypüberlagerung angewendet, wenn eine Datei eine Miniaturansichtsdarstellung angibt.
 
 </dd> <dt>
 
@@ -307,7 +307,7 @@ Der Status der Option **Ausgeblendete Dateien und** Ordner. In Windows Vista und
 
 </dt> <dd>
 
-Nicht verwendet.
+Wird nicht verwendet.
 
 </dd> <dt>
 
@@ -318,7 +318,7 @@ Nicht verwendet.
 
 </dt> <dd>
 
-Der Status der Windows XP-Anzeigeoption, die zwischen dem Windows XP-Stil und dem klassischen Stil auswählt. Ab Windows Vista ist diese Option nicht mehr verfügbar.
+Der Status der Windows XP-Anzeigeoption, die zwischen dem xp Windows und dem klassischen Stil auswählt. Ab Windows Vista ist diese Option nicht mehr verfügbar.
 
 </dd> <dt>
 
@@ -329,7 +329,7 @@ Der Status der Windows XP-Anzeigeoption, die zwischen dem Windows XP-Stil und de
 
 </dt> <dd>
 
-Der Status der **Option Als Webansicht anzeigen.** Ab Windows Vista ist diese Option nicht mehr verfügbar.
+Der Status der **Option Als Webansicht anzeigen**. Ab Windows Vista ist diese Option nicht mehr verfügbar.
 
 </dd> <dt>
 
@@ -340,7 +340,7 @@ Der Status der **Option Als Webansicht anzeigen.** Ab Windows Vista ist diese Op
 
 </dt> <dd>
 
-Der Status der Option **"Klassischer Stil".** Ab Windows Vista ist diese Option nicht mehr verfügbar.
+Der Status der Option **Klassischer** Stil. Ab Windows Vista ist diese Option nicht mehr verfügbar.
 
 </dd> </dl> </dd> </dl>
 
@@ -350,19 +350,19 @@ Der Status der Option **"Klassischer Stil".** Ab Windows Vista ist diese Option 
 
 Typ: **VARIANT \_ BOOL \***
 
-Legen Sie auf **TRUE** fest, wenn die Einstellung vorhanden ist. andernfalls **FALSE.**
+Legen Sie auf **TRUE fest,** wenn die Einstellung vorhanden ist. andernfalls **FALSE.**
 
 ### <a name="vb"></a>VB
 
 Typ: **VARIANT \_ BOOL \***
 
-Legen Sie auf **TRUE** fest, wenn die Einstellung vorhanden ist. andernfalls **FALSE.**
+Legen Sie auf **TRUE fest,** wenn die Einstellung vorhanden ist. andernfalls **FALSE.**
 
 ## <a name="examples"></a>Beispiele
 
 Die folgenden Beispiele zeigen die Verwendung von **GetSetting** für JScript, VBScript und Visual Basic.
 
-Jscript:
+JScript:
 
 
 ```JScript
@@ -430,10 +430,10 @@ End Sub
 
 
 
-| Anforderungen | Wert |
+| Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows \[ XP-Desktop-Apps\]<br/>                                                                   |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server \[ 2003-Desktop-Apps\]<br/>                                                          |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ XP-Desktop-Apps\]<br/>                                                                   |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                                                          |
 | Header<br/>                   | <dl> <dt>Shldisp.h</dt> </dl>                          |
 | Idl<br/>                      | <dl> <dt>Shldisp.idl</dt> </dl>                        |
 | DLL<br/>                      | <dl> <dt>Shell32.dll (Version 6.0 oder höher)</dt> </dl> |

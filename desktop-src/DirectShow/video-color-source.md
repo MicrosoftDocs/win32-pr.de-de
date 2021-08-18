@@ -1,50 +1,50 @@
 ---
-description: Video Farbquelle
+description: Videofarbquelle
 ms.assetid: e6addd55-06ca-4d4b-b2b0-fde281fab244
-title: Video Farbquelle
+title: Videofarbquelle
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 56e9c751d74a78b027d50f033acb3709d18fe8f6
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 331640a9240ef0ea16ff565180503066f22ce5ae2550fa1e1ec524dcf05c8fa5
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "104216777"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119071934"
 ---
-# <a name="video-color-source"></a>Video Farbquelle
+# <a name="video-color-source"></a>Videofarbquelle
 
 > [!Note]  
-> \[Veraltet. Diese API kann aus zukünftigen Versionen von Windows entfernt werden.\]
+> \[Veraltet. Diese API wird möglicherweise aus zukünftigen Releases von Windows.\]
 
  
 
-Die Video Farbquelle erstellt ein kontinuierliches Video Bild mit einer voll Tonfarbe.
+Die Videofarbquelle erstellt ein fortlaufendes Videobild einer Volltonfarbe.
 
-Klassen-ID (CLSID): **{0cfdd070-581a-11d2-9ee6-006008039e37}**
+Klassen-ID (CLSID): **{0CFDD070-581A-11D2-9EE6-006008039E37}**
 
-CLSID-Variablen Name: **CLSID \_ ColorSource**
+CLSID-Variablenname: **CLSID \_ ColorSource**
 
 Eigenschaften
 
 
 
-| Eigenschaft | type      | Standard | BESCHREIBUNG                                   |
+| Eigenschaft | type      | Standard | Beschreibung                                   |
 |----------|-----------|---------|-----------------------------------------------|
-| Codes  | **DWORD** | 0       | Gibt die zu Generier gende Farbe an. Siehe Hinweise. |
+| "Farbe"  | **DWORD** | 0       | Gibt die zu generierende Farbe an. Siehe Hinweise. |
 
 
 
  
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die Video Farb Quelle wird mit Quell Objekten verwendet. Erstellen Sie zunächst ein neues Quell Objekt. Legen Sie dann die untergeordnete GUID des Quell Objekts auf CLSID \_ ColorSource fest, indem Sie die [**iamtimelineobj:: setsubobjectguid**](iamtimelineobj-setsubobjectguid.md) -Methode aufrufen.
+Die Videofarbquelle wird mit Quellobjekten verwendet. Erstellen Sie zunächst ein neues Quellobjekt. Legen Sie dann die UNTEROBJEKT-GUID des Quellobjekts auf CLSID ColorSource fest, indem Sie die \_ [**IAMTimelineObj::SetSubObjectGUID-Methode**](iamtimelineobj-setsubobjectguid.md) aufrufen.
 
-Um die Farbe festzulegen, erstellen Sie ein [Eigenschaften Setter](property-setter.md) -Objekt, und wenden Sie die Color-Eigenschaft zur Zeit 0 (null) an. Der Wert dieser Eigenschaft ist eine hexadezimale Zahl im Format *0xaarrggbb*, wobei *AA* der Alpha Wert, *RR* der rote Wert, *GG* der grüne Wert und *BB* der blaue Wert ist. Alpha Werte reichen von 0x00 (transparent) bis 0xFF (undurchsichtig). Die-Eigenschaft ist statisch und muss zum Zeitpunkt 0 (null) angewendet werden.
+Erstellen Sie zum Festlegen der Farbe ein [Property Setter-Objekt,](property-setter.md) und wenden Sie die Eigenschaft "Color" zum Zeitpunkt 0 (null) an. Der Wert dieser Eigenschaft ist eine Hexadezimalzahl im Format *0xAARRGGBB,* wobei *AA* der Alphawert, *RR* der rote Wert, *GG* der grüne Wert und *BB* der blaue Wert ist. Alphawerte reichen von 0x00 (transparent) bis 0xFF (nicht transparent). Die -Eigenschaft ist statisch und muss zum Zeitpunkt 0 (null) angewendet werden.
 
-Wenn Sie den Alpha Wert nicht angeben, wird der Wert standardmäßig auf 0 (null) (transparent) festgelegt. In einem 32-Bit-Color-Videoprojekt bewirkt dies, dass Übergänge oder Effekte, bei denen Alpha verwendet wird, um die Video Farb Quelle als vollständig transparent darzustellen. Um sicher zu sein, geben Sie immer das Alpha an. Beispielsweise ist " **0xFF000000**" ein undurchsichtiges Schwarzes.
+Wenn Sie den Alphawert nicht angeben, wird standardmäßig 0 (transparent) verwendet. In einem 32-Bit-Farbvideoprojekt verursacht dies Übergänge oder Effekte, die Alpha verwenden, um die Videofarbquelle als vollständig transparent zu rendern. Um sicher zu sein, geben Sie immer das Alpha an. Beispielsweise ist opakes Schwarz **0xFF000000.**
 
-Im folgenden Codebeispiel wird gezeigt, wie dieses-Objekt verwendet wird. Weitere Informationen zur Verwendung von [**ipropertysetter**](ipropertysetter.md)finden Sie unter [Festlegen von Eigenschaften für Effekte und Übergänge](setting-properties-on-effects-and-transitions.md):
+Im folgenden Codebeispiel wird die Verwendung dieses -Objekts veranschaulicht. Weitere Informationen zur Verwendung von [**IPropertySetter finden**](ipropertysetter.md)Sie unter [Festlegen von Eigenschaften für Effekte und Übergänge:](setting-properties-on-effects-and-transitions.md)
 
 
 ```C++
@@ -108,7 +108,7 @@ if (SUCCEEDED(hr))
 
 
 
-Das folgende Beispiel zeigt die XML-Darstellung des-Objekts, das im vorherigen Beispiel erstellt wurde. In diesem Fall unterstützt das [**param**](param-element.md) -Element keine oder [**lineare**](linear-element.md) Elemente, da das Objekt dynamische Eigenschaften nicht [**unterstützt:**](at-element.md)
+Das folgende Beispiel zeigt die XML-Darstellung des -Objekts, das im vorherigen Beispiel erstellt wurde. In diesem Fall unterstützt [**das param-Element**](param-element.md) keine [**at-**](at-element.md) oder [**linearen**](linear-element.md) Elemente, da das -Objekt keine dynamischen Eigenschaften unterstützt:
 
 
 ```C++

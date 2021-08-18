@@ -1,7 +1,7 @@
 ---
-description: Weist der aktuellen Instanz von XMUDECN4 Vektor Komponenten Daten zu.
+description: Weist der aktuellen Instanz von XMUDECN4 Vektorkomponentendaten zu.
 ms.assetid: 'overload:microsoft.directx_sdk.reference.xmudecn4.operator = '
-title: XMUDECN4 Operator =-Operatoren
+title: XMUDECN4-Operator = Operatoren
 ms.topic: reference
 ms.date: 12/06/2018
 topic_type:
@@ -11,18 +11,18 @@ api_name: ''
 api_type:
 - NA
 api_location: ''
-ms.openlocfilehash: b5aa856512922c8dafdc40d853bea20f6273a660
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 1bd755713e34c5c151e6d04a2c845948ea393fec28a7b789993676b41280248a
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106348495"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118984520"
 ---
-# <a name="xmudecn4-operator--operators"></a>XMUDECN4 Operator =-Operatoren
+# <a name="xmudecn4-operator--operators"></a>XMUDECN4-Operator = Operatoren
 
-Weist der aktuellen Instanz von Vektor Komponenten Daten zu `XMUDECN4` .
+Weist der aktuellen Instanz von Vektorkomponentendaten `XMUDECN4` zu.
 
-Weist der aktuellen Instanz von [**XMUDECN4**](/windows/win32/api/directxpackedvector/ns-directxpackedvector-xmudecn4)Vektor Komponenten Daten zu.
+Weist der aktuellen Instanz von [**XMUDECN4 Vektorkomponentendaten zu.**](/windows/win32/api/directxpackedvector/ns-directxpackedvector-xmudecn4)
 
 ### <a name="overload-list"></a>Überladeliste
 
@@ -36,13 +36,13 @@ Weist der aktuellen Instanz von [**XMUDECN4**](/windows/win32/api/directxpackedv
 <thead>
 <tr class="header">
 <th style="text-align: left;">Operator</th>
-<th style="text-align: left;">BESCHREIBUNG</th>
+<th style="text-align: left;">Beschreibung</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td style="text-align: left;"><a href="/windows/desktop/api/directxpackedvector/nf-directxpackedvector-xmudecn4-operator-assign(uint32_t)"><strong>XMUDECN4:: Operator = (Konstante uint32_t)</strong></a></td>
-<td style="text-align: left;">Weist die Vektor Komponenten Daten, die in einer Instanz von verpackt sind <code>uint32_t</code> , der aktuellen Instanz von zu <code>XMUDECN4</code> . <br/> Dieser Operator weist die Vektor Komponenten Daten, die in einer Instanz von verpackt sind <code>uint32_t</code> , der aktuellen Instanz von <a href="/windows/desktop/api/directxpackedvector/ns-directxpackedvector-xmudecn4"><strong>XMUDECN4</strong></a>zu. <br/>
+<td style="text-align: left;"><a href="/windows/desktop/api/directxpackedvector/nf-directxpackedvector-xmudecn4-operator-assign(uint32_t)"><strong>XMUDECN4::operator = (const uint32_t)</strong></a></td>
+<td style="text-align: left;">Weist die in einer Instanz von gepackten Vektorkomponentendaten <code>uint32_t</code> der aktuellen Instanz von <code>XMUDECN4</code> zu. <br/> Dieser Operator weist die in einer Instanz von gepackten Vektorkomponentendaten <code>uint32_t</code> der aktuellen Instanz von <a href="/windows/desktop/api/directxpackedvector/ns-directxpackedvector-xmudecn4"><strong>XMUDECN4 zu.</strong></a> <br/>
 <blockquote>
 [!Note]<br />
 Dieser Operator ist nur unter C++ verfügbar.
@@ -50,8 +50,8 @@ Dieser Operator ist nur unter C++ verfügbar.
 <br/></td>
 </tr>
 <tr class="even">
-<td style="text-align: left;"><a href="/windows/desktop/api/directxpackedvector/nf-directxpackedvector-xmudecn4-operator-assign(xmudecn4__)"><strong>XMUDECN4:: Operator = (konstant XMUDECN4&)</strong></a></td>
-<td style="text-align: left;">Weist die Vektor Komponenten Daten einer Instanz von <code>XMUDECN4</code> der aktuellen Instanz von zu <code>XMUDECN4</code> . <br/> Dieser Operator weist die Vektor Komponenten Daten von einer Instanz von <a href="/windows/desktop/api/directxpackedvector/ns-directxpackedvector-xmudecn4"><strong>XMUDECN4</strong></a> der aktuellen Instanz von zu <code>XMUDECN4</code> . <br/>
+<td style="text-align: left;"><a href="/windows/desktop/api/directxpackedvector/nf-directxpackedvector-xmudecn4-operator-assign(xmudecn4__)"><strong>XMUDECN4::operator = (const XMUDECN4&)</strong></a></td>
+<td style="text-align: left;">Weist der aktuellen Instanz von die Vektorkomponentendaten von <code>XMUDECN4</code> einer Instanz von <code>XMUDECN4</code> zu. <br/> Dieser Operator weist die Vektorkomponentendaten aus einer Instanz von <a href="/windows/desktop/api/directxpackedvector/ns-directxpackedvector-xmudecn4"><strong>XMUDECN4</strong></a> der aktuellen Instanz von <code>XMUDECN4</code> zu. <br/>
 <blockquote>
 [!Note]<br />
 Dieser Operator ist nur unter C++ verfügbar.
@@ -63,14 +63,14 @@ Dieser Operator ist nur unter C++ verfügbar.
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
 [XMUDECN4-Operatoren](ovw-xmudecn4-operators.md)
 </dt> <dt>
 
-**Verweis**
+**Referenz**
 </dt> <dt>
 
 [**XMUDECN4**](/windows/win32/api/directxpackedvector/ns-directxpackedvector-xmudecn4)

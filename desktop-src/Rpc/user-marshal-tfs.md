@@ -1,19 +1,19 @@
 ---
-title: Benutzer Mars Hallen
-description: Benutzer Mars Hall im Remote Prozedur Aufruf (RPC).
+title: Benutzer-Marshalling
+description: Benutzer-Marshalling im Remoteprozeduraufruf (RPC).
 ms.assetid: 5119e959-d8b8-4fca-8910-568bb9063a9d
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 8c901fd8c75137b4657322a89692ff8a3afb5408
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: b6dcc9574b49a46b6e867fc4bca314944589ccf68b9d6e3fb8695a099eb255c2
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "103856140"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119010847"
 ---
-# <a name="user-marshal"></a>Benutzer Mars Hallen
+# <a name="user-marshal"></a>Benutzer-Marshalling
 
-Der Benutzer Mars Hall hat eine Format Zeichenfolge, die der folgenden ähnelt \_ :
+Das Benutzer-Marshalling verfügt über eine Formatzeichenfolge, die der Übertragung \_ ähnelt:
 
 ``` syntax
 FC_USER_MARSHAL
@@ -24,9 +24,9 @@ transmitted_type_buffer size<2>
 offset_to_the_transmitted_type<2>
 ```
 
-Die Flags<1> Byte bestehen aus dem oberen Flag-Halbbyte und dem unteren Ausrichtungs-Halbbyte.
+Die Flags<1> Byte bestehen aus dem oberen Flag nibble und dem unteren Ausrichtungsnabzeichen.
 
-Die oberen 2 Bits des Flag-Halbbyte werden verwendet, um zu beschreiben, ob der Wire-Typ als eindeutiger Zeiger, Verweis Zeiger oder kein Zeiger definiert ist (er kann kein PTR sein). Die folgenden Manifeste wurden definiert, um die Flags festzulegen/zu erhalten:
+Die oberen 2 Bits des Flag-Nibbles werden verwendet, um zu beschreiben, ob der Wire-Typ als eindeutiger Zeiger, Verweiszeiger oder kein Zeiger definiert ist (es kann kein Ptr sein). Die folgenden Manifeste wurden definiert, um die Flags festzulegen/abzurufen:
 
 ``` syntax
 #define USER_MARSHAL_UNIQUE         0x80
@@ -35,17 +35,17 @@ Die oberen 2 Bits des Flag-Halbbyte werden verwendet, um zu beschreiben, ob der 
 #define USER_MARSHAL_IID            0x20  /* JIT compiler only */
 ```
 
-Der Ausrichtungs Halbbyte des flagworts behält die Netzwerk Ausrichtung des übertragenen Typs bei.
+Der Ausrichtungsnuss des Flagworts behält die Kabelausrichtung des übertragenen Typs bei.
 
-Der vierfache \_ Index<2> ist ein Index der Rückruf Routine, vervierfachen der Benutzer Mars Hall Funktionen. Die Routine Positionen lauten wie folgt: Größenanpassung, Marshalling, Marshalling und Freigeben von Routinen.
+Der \_ Vierfachindex<2> ist ein Index der Vierfachzahl der Rückrufroutine der Marshallingfunktionen des Benutzers. Die Routinepositionen sind wie folgt: Dimensionierung, Marshalling, Unmarshaling und Freisetzungsroutine.
 
-Die Arbeits \_ Speichergröße des Benutzer Typs \_ \_<2> bietet eine Größe für den benutzerspezifischen Typ, einschließlich unbekannter Typen.
+Die \_ Arbeitsspeichergröße des Benutzertyps \_ \_<2> bietet eine Größe für den benutzerspezifischen Typ, einschließlich unbekannter Typen.
 
-Die übertragene \_ \_ typpuffer \_ Größe<2> ist entweder 0 (null), wenn die Größe variiert, oder die tatsächliche Größe. Dies ist eine Optimierung, die es mittlerer l ermöglicht, Rückrufe bei der Größenanpassung des Puffers und auch bei der Freigabe zu überspringen.
+Die Puffergröße des übertragenen \_ Typs \_<\_ 2> ist entweder 0 (null), wenn die Größe variiert, oder die tatsächliche feste Größe. Dies ist eine Optimierung, mit der MIDL Rückrufe beim Dimensionieren des Puffers und beim Freigeben überspringen kann.
 
 ## <a name="range"></a>Range
 
-Die \[ Bereichs \] Überprüfung bietet zusätzliche Mittel für die Argument Validierung auf der NDR-Ebene. Der \[ Bereichs \] Deskriptor weist das folgende Format auf:
+Die \[ \] Bereichsüberprüfung bietet zusätzliche Mittel für die Argumentvalidierung auf der NDR-Ebene. Der \[ \] Bereichsdeskriptor hat das folgende Format:
 
 ``` syntax
 FC_RANGE,   flags_type <1>
@@ -53,13 +53,13 @@ low value<4>
 high value<4>
 ```
 
-Die Flags nehmen den oberen Halbbyte und den Typ den unteren Halbbyte des zweiten bytes. Der niedrige und hohe Wert hängen vom Typ der Variablen ab, die geprüft werden soll.
+Die Flags nehmen den oberen Nibble und geben den unteren Nibble des zweiten Byte ein. Die niedrigen und hohen Werte hängen vom Typ der zu überprüfenden Variablen ab.
 
-Die Flags sind als Erweiterungs Fahrzeuge gedacht. der Compiler hat das Halbbyte auf 0 (null) festgelegt.
+Die Flags sind als Erweiterungs fahrzeug vorgesehen. der Compiler hat den Nibble auf 0 (null) festgelegt.
 
- 
+ 
 
- 
+ 
 
 
 

@@ -1,5 +1,5 @@
 ---
-description: 'Image_V1_Load-Klasse: Diese Klasse ist die Ereignistypklasse für Bildladeereignisse. Die folgende Syntax wird aus MOF-Code vereinfacht.'
+description: 'Image_V1_Load Klasse: Diese Klasse ist die Ereignistypklasse für Bildladeereignisse. Die folgende Syntax wird durch einen MOF-Code vereinfacht.'
 ms.assetid: 43bf0b2b-3ab4-4561-b48c-65fbace38a79
 title: Image_V1_Load-Klasse
 ms.topic: reference
@@ -16,18 +16,18 @@ api_name:
 api_type:
 - NA
 api_location: ''
-ms.openlocfilehash: 2e8a8c31cee7e45311887c16a1d10545e6a38e41
-ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
+ms.openlocfilehash: 35144317b67a8d24ec07d72633897366e83628d6cc66d9c4661980fc44c373b8
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2021
-ms.locfileid: "108106498"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119070160"
 ---
 # <a name="image_v1_load-class"></a>Image \_ V1 \_ Load-Klasse
 
 Diese Klasse ist die Ereignistypklasse für Bildladeereignisse.
 
-Die folgende Syntax wird aus MOF-Code vereinfacht.
+Die folgende Syntax wird durch einen MOF-Code vereinfacht.
 
 ## <a name="syntax"></a>Syntax
 
@@ -44,7 +44,7 @@ class Image_V1_Load : Image_V1
 
 ## <a name="members"></a>Member
 
-Die **Image \_ V1 \_ Load-Klasse** verfügt über diese Typen von Membern:
+Die **Image \_ V1 \_ Load-Klasse** verfügt über die folgenden Membertypen:
 
 -   [Eigenschaften](#properties)
 
@@ -57,7 +57,7 @@ Die **Image \_ V1 \_ Load-Klasse** verfügt über diese Eigenschaften.
 FileName
 </dt> <dd> <dl> <dt>
 
-Datentyp: **String**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
@@ -66,7 +66,7 @@ Zugriffstyp: Schreibgeschützt
 Qualifizierer: WmiDataId(4), StringTermination("NullTerminated"), Format("w")
 </dt> </dl>
 
-Dateiname und Erweiterung der zu ladende DLL oder des ausführbaren Images.
+Dateiname und Erweiterung der zu ladenden DLL oder des ausführbaren Images.
 
 </dd> <dt>
 
@@ -98,9 +98,9 @@ Zugriffstyp: Schreibgeschützt
 Qualifizierer: WmiDataId(2), Zeiger
 </dt> </dl>
 
-Größe des geladenen Images.
+Größe des images, das geladen wird.
 
-Beim Verwenden dieser Eigenschaft ist der Datentyp für diese Eigenschaft tatsächlich die Größe \_ t. Der Zeigerqualifizierer wird verwendet, um zu bestimmen, ob die Größe \_ t 4 Byte oder 8 Bytes beträgt.
+Bei der Verarbeitung dieser Eigenschaft ist der Datentyp für diese Eigenschaft tatsächlich die Größe \_ t. Der Zeigerqualifizierer wird verwendet, um zu bestimmen, ob die Größe \_ t 4 Byte oder 8 Bytes beträgt.
 
 </dd> <dt>
 
@@ -124,10 +124,10 @@ Identifiziert den Prozess, in den das Image geladen wird.
 
 
 
-| Anforderungen | Wert |
+| Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows \[ XP-Desktop-Apps\]<br/>          |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server \[ 2003-Desktop-Apps\]<br/> |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ XP-Desktop-Apps\]<br/>          |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/> |
 
 
 

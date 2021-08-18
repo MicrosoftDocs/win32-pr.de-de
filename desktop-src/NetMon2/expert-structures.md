@@ -17,7 +17,7 @@ Expertenhilfsfunktionen, die von Netzwerkmonitor und allgemeinen Hilfsfunktionen
 
 
 
-| Struktur                                              | BESCHREIBUNG                                                                                            |
+| Struktur                                              | Beschreibung                                                                                            |
 |--------------------------------------------------------|--------------------------------------------------------------------------------------------------------|
 | [**CONFIGUREDEXPERT**](configuredexpert.md)           | Ordnet der Konfiguration eine Experten-DLL zu.                                                       |
 | [**EXPERTCONFIG**](expertconfig.md)                   | Stellt Unformatierte Konfigurationsdaten bereit.                                                                       |

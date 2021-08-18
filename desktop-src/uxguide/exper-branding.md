@@ -1,82 +1,82 @@
 ---
-title: Software Branding
-description: Branding ist die emotionale Positionierung eines Produkts, die von seinen Kunden wahrgenommen wird. Ein erfolgreiches Branding erfordert eine geschickte Erstellung eines Produkt Images und wird nicht nur über Produktlogos und Farbschemas erzielt.
+title: Softwarebranding
+description: Branding ist die emotionale Positionierung eines Produkts, das von seinen Kunden wahrgenommen wird. Ein erfolgreiches Branding erfordert eine qualifikationsreiche Entwicklung eines Produktbilds und wird nicht nur durch Produktlogos und Farbschemas erreicht.
 ms.assetid: 49c10879-2f3a-4dff-b628-8d70e389fae6
 ms.topic: article
 ms.date: 10/20/2020
-ms.openlocfilehash: ea9954c7ce0c082cf6b1b692cdccf5a7d6a3a132
-ms.sourcegitcommit: 3bdf30edb314e0fcd17dc4ddbc70e4ec7d3596e6
+ms.openlocfilehash: 91d1446d3d3f499f0b56f857b4e2806e266e32df1bb4120d93416eb1cb225581
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/10/2021
-ms.locfileid: "104568624"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119090535"
 ---
-# <a name="software-branding"></a>Software Branding
+# <a name="software-branding"></a>Softwarebranding
 
 > [!NOTE]
-> Dieses Entwurfs Handbuch wurde für Windows 7 erstellt und wurde für neuere Versionen von Windows nicht aktualisiert. Ein Großteil der Anleitungen gilt weiterhin im Prinzip, aber die Präsentation und die Beispiele entsprechen nicht unseren [aktuellen Entwurfs Anleitungen](/windows/uwp/design/).
+> Dieses Entwurfshandbuch wurde für Windows 7 erstellt und für neuere Versionen von Windows. Ein Teil der Anleitungen gilt weiterhin im Prinzip, aber die Darstellung und die Beispiele spiegeln nicht unsere [aktuelle Entwurfsanleitung wider.](/windows/uwp/design/)
 
-Branding ist die emotionale Positionierung eines Produkts, die von seinen Kunden wahrgenommen wird. Ein erfolgreiches Branding erfordert eine geschickte Erstellung eines Produkt Images und wird nicht nur über Produktlogos und Farbschemas erzielt.
+Branding ist die emotionale Positionierung eines Produkts, das von seinen Kunden wahrgenommen wird. Ein erfolgreiches Branding erfordert eine qualifikationsreiche Entwicklung eines Produktbilds und wird nicht nur durch Produktlogos und Farbschemas erreicht.
 
-Branding ist die emotionale Positionierung eines Produkts, die von seinen Kunden wahrgenommen wird. Das Branding von Produkten wird durch eine Kombination von Faktoren erzielt, einschließlich Produktname und Logo, Verwendung von Farbe, Text, Grafiken und Sound, dem Stil verschiedener anderer Entwurfs Elemente, Marketing und allem, den Attributen der Produktdarstellung.
+Branding ist die emotionale Positionierung eines Produkts, das von seinen Kunden wahrgenommen wird. Produktbranding wird durch eine Kombination von Faktoren erreicht, einschließlich Produktname und Logo, Verwendung von Farbe, Text, Grafiken und Sound, dem Stil verschiedener anderer Entwurfselemente, Marketing und vor allem den Attributen der Produkterfahrung selbst.
 
-Ein erfolgreiches Branding erfordert eine geschickte Erstellung eines Produkt Images und wird nicht einfach durch das Durcharbeiten eines Produktlogos auf jeder Oberfläche und die Verwendung des Farbschemas des Produkts bei jeder Gelegenheit erreicht. Vielmehr ist ein sinnvolles und qualitativ hochwertiges Branding, das die Benutzer Möglichkeiten verbessert, viel erfolgreicher.
+Ein erfolgreiches Branding erfordert ein gekonntes Erstellen eines Produktbilds und wird nicht einfach erreicht, indem ein Produktlogo auf jeder Oberfläche farbig dargestellt und das Farbschema des Produkts bei jeder Gelegenheit verwendet wird. Stattdessen ist ein aussagekräftiges und hochwertiges Branding, das die Benutzererfahrung verbessert, viel erfolgreicher.
 
-**Hinweis:** Richtlinien, die sich auf [Symbole](vis-icons.md), [Schriftarten](vis-fonts.md), [Farben](vis-color.md), [Animationen](vis-animations.md) , [Sound](https://msdn.microsoft.com/library/windows/desktop/aa511278.aspx)und [Fensterrahmen](win-window-frames.md) beziehen, werden in separaten Artikeln dargestellt.
+**Hinweis:** Richtlinien im Zusammenhang [mit Symbolen,](vis-icons.md) [Schriftarten,](vis-fonts.md) [Farben,](vis-color.md) [Animationen,](vis-animations.md) [](https://msdn.microsoft.com/library/windows/desktop/aa511278.aspx)Sound- und [Fensterrahmen](win-window-frames.md) werden in separaten Artikeln dargestellt.
 
 ## <a name="design-concepts"></a>Entwurfskonzepte
 
-In einem wettbewerbsfähigen Marketplace setzen Unternehmen ihre Produkte ein, um Sie beim Wettbewerb zu unterscheiden. Es wäre naiv, vorzuschlagen, dass das Produkt Branding im Allgemeinen falsch ist oder vermieden werden sollte, aber es ist ziemlich gut zu sagen, dass das Software Branding zu oft schlecht ausgeführt wird. Das Ziel des Software Brandings besteht darin, die Marke mit dem Stil und der Qualität des Produkts und seiner Umgebung zu verknüpfen. Zu oft versuchen Entwickler, dies zu erreichen, indem Sie auf das Programm selbst achten. Das Ergebnis besteht darin, die Benutzer abzugleichen, anstatt Sie zu begeistern.
+In einem wettbewerbsintensiven Marketplace geben Unternehmen ihre Produkte als Marke an, um sie von der Konkurrenz zu unterscheiden. Es wäre naiv, zu empfehlen, dass das Produktbranding im Allgemeinen falsch ist oder vermieden werden sollte, aber es ist fair zu sagen, dass das Softwarebranding zu oft schlecht ausgeführt wird. Ziel des Softwarebrandings ist es, die Marke dem Stil und der Qualität des Produkts und seiner Erfahrung zu zuordnen. Zu oft versuchen Entwickler, dies zu erreichen, indem sie auf das Programm selbst aufmerksam machen. Dies führt dazu, dass Benutzer abgelenkt werden, anstatt sie zu stören.
 
-### <a name="attributes-of-good-software-branding"></a>Attribute eines guten Software Brandings
+### <a name="attributes-of-good-software-branding"></a>Attribute eines guten Softwarebrandings
 
-Wenn dies der Fall ist, weist das Software Branding folgende Attribute auf:
+Wenn Sie fertig sind, verfügt das Softwarebranding über die folgenden Attribute:
 
--   Legt einen klaren, eindeutigen Stil und eine klare Persönlichkeit fest.
+-   Legt einen klaren, eindeutigen Stil und eine eindeutige Persönlichkeit fest.
 -   Erstellt eine emotionale Verbindung.
--   Hat hohe Qualität.
+-   Hat eine hohe Qualität.
 -   Wird strategisch platziert und konsistent ausgeführt.
--   Richtet sich an die gesamte Markenstrategie.
--   Ist lange Dauer... die Tausendstel Zeit war der erste.
+-   Entspricht der gesamten Markenstrategie.
+-   Ist lang anhaltend... als tausendstes Mal, wie es das erste war.
 
-Im Gegensatz dazu weisen schlechte Versuche beim Software Branding folgende Attribute auf:
+Im Gegensatz dazu haben schlechte Versuche, Softwarebranding zu verwenden, die folgenden Attribute:
 
--   Hat kein offensichtliches Design oder einen Punkt.
--   Befindet sich in der Benutzeroberfläche.
+-   Hat kein offensichtliches Design oder keinen offensichtlichen Punkt.
+-   Befindet sich im Gesicht des Benutzers.
 -   Ist lästig.
 -   Ist überall.
--   Verfügt über ein benutzerdefiniertes Aussehen und Gefühl ohne Benutzer Vorteils.
--   Wird schneller zu werden.
+-   Verfügt über ein benutzerdefiniertes Aussehen und Verhalten ohne Benutzervorteil.
+-   Wird schnell ermüdend.
 
-### <a name="start-with-the-product-itself"></a>Beginnen Sie mit dem Produkt selbst
+### <a name="start-with-the-product-itself"></a>Beginnen Sie mit dem Produkt selbst.
 
-Das erfolgreiche Software Branding beginnt mit dem Entwurf des Produkts selbst. Ein gut konzipiertes Programm verfügt über sorgfältig gestaltete Funktionen, die auf eine geeignete Zielgruppe ausgerichtet sind. Einzigartige Funktionen und besondere Aufmerksamkeit für Details machen leistungsstarke brandinganweisungen. Weitere Informationen finden Sie unter [Entwerfen eines hervorragend Benutzer Erlebnisses](how-to-design-desktop-ux.md).
+Erfolgreiches Softwarebranding beginnt mit dem Entwurf des Produkts selbst. Ein gut entworfenes Programm verfügt über sorgfältig erstellte Funktionen, die auf eine geeignete Zielgruppe ausgerichtet sind. Einzigartige Funktionalität und besondere Aufmerksamkeit für Details machen leistungsstarke Branding-Anweisungen. Weitere Informationen finden Sie unter [How to Design a Great User Experience](how-to-design-desktop-ux.md).
 
 ### <a name="carefully-choose-the-products-name"></a>Wählen Sie den Namen des Produkts sorgfältig aus.
 
-Tolle Produktnamen fördern starke Marken. Ein großartiger Softwareprodukt Name ist unvergesslich und bietet den Vorteil des Produkts, was die Unterscheidung auf einem überfüllten Markt bringt. Beauftragen Sie einen Branding-Experten, der Sie bei der Auswahl des richtigen Produkt namens unterstützt. Langfristig ist ein gut ausgewählter Name für Ihren brandingaufwand weitaus wichtiger als Details wie Logos, Farbschemas und Steuerelement Themen.
+Gute Produktnamen sind die Führenden von Marken. Ein hervorragender Softwareproduktname ist einprägsam und vermittelt prägnant den Vorteil des Produkts, der eine Unterscheidung in einem unerschlossenen Markt bietet. Stellen Sie einen Brandingprofi ein, der Ihnen bei der Auswahl des richtigen Produktnamens hilft. Langfristig ist ein gut gewählter Name viel wichtiger für Ihren Brandingaufwand als Details wie Logos, Farbschemas und Steuerungsschemas.
 
-### <a name="what-to-brand"></a>Was ist eine Marke?
+### <a name="what-to-brand"></a>Was sie als Marke anbranden
 
-Software Brandingelemente können wie folgt kategorisiert werden:
+Softwarebrandingelemente können wie folgt kategorisiert werden:
 
 **Primärer Server/verwaltete Instanz**
 
 -   Produktname
 -   Produktlogo
--   Produkt Farbschema
+-   Produktfarbschema
 -   Produktspezifische Sounds
 
-![Screenshot des Windows-Logos ](images/exper-branding-image1.png)![Screenshot der Windows-Designs ](images/exper-branding-image2.png)
+![Screenshot des Windows-Logos ](images/exper-branding-image1.png)![Screenshot von Windows-Designs ](images/exper-branding-image2.png)
 
-Einige primäre Branding-Elemente aus Windows Vista.
+Einige primäre Brandingelemente aus Windows Vista.
 
-Primäre Brandingelemente zeichnen tendenziell sehr viel Aufmerksamkeit, daher sollten Sie mit der Unterhaltung verwendet werden. **Beschränken Sie die Verwendung primärer Brandingelemente auf einige strategische Umgebungen.** Produktspezifische Sounds werden für die meisten Programme nicht empfohlen.
+Primäre Brandingelemente ziehen in der Regel viel Aufmerksamkeit auf sich, daher sollten sie mit Schubladen verwendet werden. **Beschränken Sie die Verwendung primärer Brandingelemente auf einige strategische Erfahrungen.** Produktspezifische Sounds werden für die meisten Programme nicht empfohlen.
 
 **Sekundärer Server/verwaltete Instanz**
 
--   Element Formen
--   Symbol-und Grafikstile
+-   Elementformen
+-   Symbol- und Grafikstile
 -   Sekundäre Grafikelemente
 -   Akzentfarben
 -   Animationen
@@ -84,124 +84,124 @@ Primäre Brandingelemente zeichnen tendenziell sehr viel Aufmerksamkeit, daher s
 -   Shadows
 -   Hintergründe und Transparenz
 
-![zum Branding verwendete Abbildungen von Stempeln und Kalendern ](images/exper-branding-image3.png)
+![Abbildungen von Stempeln und Kalendern, die für das Branding verwendet werden ](images/exper-branding-image3.png)
 
-![Abbildung des Entwurfs in voll Tonfarbe, Primärfarben ](images/exper-branding-image4.png)![Abbildung des blauen und grünen Menüband-ähnlichen Entwurfs ](images/exper-branding-image5.png)
+![Abbildung des Entwurfs in Vollbild, Primärfarben ](images/exper-branding-image4.png)![Abbildung des blau-grünen Menübanddesigns ](images/exper-branding-image5.png)
 
 Einige sekundäre Brandingelemente aus Windows Vista.
 
-Sekundäre Brandingelemente sind tendenziell feiner und können daher häufiger verwendet werden. Obwohl einige dieser sekundären Brandingelemente möglicherweise nicht einzeln beeinträchtigt werden, können Sie Ihr Produkt Zeichen und ihren eigenen Stil zuordnen. Übergänge können mehr Auswirkungen haben als festgelegte Grafiken, die von Benutzern im Laufe der Zeit ignoriert werden. Bevorzugen der sekundären Ebene des Brandings auf der primären Ebene.
+Sekundäre Brandingelemente sind in der Regel feiner, und daher können sie häufiger verwendet werden. Während einige dieser sekundären Brandingelemente möglicherweise nicht viel Einfluss auf die einzelnen Elemente haben, können sie ihrem Produkt zeichen- und stillich sein, wenn sie zusammengenommen werden. Übergänge können mehr Auswirkungen haben als feste Grafiken, die Benutzer im Laufe der Zeit ignorieren. Bevorzugen Sie die sekundäre Ebene des Brandings gegenüber der primären Ebene.
 
-**Aten**
+**Tertiären**
 
-Schließlich gibt es eine weitere Kategorie von Branding-Elementen, die Sie kennen sollten.
+Schließlich gibt es eine weitere Kategorie von Brandingelementen, die Sie beachten sollten.
 
 -   Benutzerdefinierte Fensterrahmen
 -   Benutzerdefinierte Steuerelemente
 
-Wenngleich es für bestimmte Arten von Programmen (z. b. Spiele) geeignet ist, eine vollständig getrennte, immersive Darstellung basierend auf benutzerdefinierten Steuerelementen und Fenstern zu erstellen, sollten die meisten Programme die Standardvarianten verwenden. Das Aussehen und reagieren Ihrer Programme führt nicht zu einer starken Markenidentität. Ihr Ziel sollte es sein, ein Programm mit Zeichen zu erstellen – ein Produkt, das sich bei der Anpassung in befindet.
+Es ist zwar für bestimmte Arten von Programmen (z. B. Spiele) geeignet, eine vollständig unterschiedliche, immersive Umgebung basierend auf benutzerdefinierten Steuerelementen und Fenstern zu erstellen, aber die meisten Programme sollten die Standardvarianten verwenden. Eine starke Markenidentität wird durch das Aussehen und Verhalten Ihrer Programme nicht unterstützt. Ihr Ziel sollte es vielmehr sein, ein Programm mit Zeichen zu erstellen– ein Produkt, das sich beim Einpassen ausdringt.
 
-### <a name="where-to-brand"></a>Marke
+### <a name="where-to-brand"></a>Markenname
 
-Nicht alles muss mit einem Branding versehen werden. Einige strategisch platzierte Brandingelemente können einen leistungsfähigeren Eindruck machen als das Erstellung von nicht koordinierten Brandingelementen überall.
+Nicht alles muss mit Einem Branding bezeichnet werden. Einige strategisch platzierte Brandingelemente können einen leistungsfähigeren Eindruck vermitteln, als unkoordinierte Brandingelemente überall zu slappingen.
 
-Konzentrieren Sie sich auf die besonderen Erfahrungen in Ihrem Programm. Dies sind die Orte mit den meisten emotionalen Auswirkungen, wie z. b.:
+Konzentrieren Sie ihre Branding-Bemühungen auf die besonderen Erfahrungen in Ihrem Programm. Dies sind die Orte, die die emotionalsten Auswirkungen haben, z. B.:
 
--   Die [ersten Erfahrungen](exper-first-exper.md), insbesondere wenn das Programm zum ersten Mal verwendet wird.
+-   Die [erste Erfahrung](exper-first-exper.md)ist , insbesondere, wenn das Programm zum ersten Mal verwendet wird.
 -   Das Hauptfenster oder die Startseite.
--   Der Beginn und die Beendigung wichtiger Aufgaben.
+-   Start und Abschluss wichtiger Aufgaben.
 -   Wichtige Übergänge zwischen Aufgaben oder Programmbereichen.
 -   Wartezeit bei Aufgaben mit langer Ausführungszeit.
--   Melden Sie sich an und melden Sie sich ab.
+-   Melden Sie sich an, und melden Sie sich ab.
 
-### <a name="where-not-to-brand"></a>WHERE NOT to Brand
+### <a name="where-not-to-brand"></a>Where not to brand
 
-Wenngleich Sie ein beliebiges Element in Ihrem Programm als brandingchance verwenden können, verwenden Sie nicht den Windows-Desktop (einschließlich [Arbeitsbereich](glossary.md), [Schnellstartleiste](glossary.md)oder [Benachrichtigungsbereich](winenv-notification.md)) für das Branding.
+Sie können zwar potenziell ein beliebiges Element in Ihrem Programm als Brandingmöglichkeit verwenden, verwenden Sie [](glossary.md)jedoch nicht den Windows-Desktop (einschließlich des Arbeitsbereichs, [](glossary.md)der Schnellstart-Leiste oder des Benachrichtigungsbereichs) [](winenv-notification.md)für das Branding.
 
-**Der Desktop ist der Einstiegspunkt des Benutzers für Windows. Belassen Sie den Benutzer in die Kontrolle.** Verwenden Sie diese Einstiegspunkte entsprechend – zeigen Sie Sie nicht als Methoden an, um das Bewusstsein Ihres Programms oder seiner Marke zu fördern. Weitere Informationen finden Sie unter [Desktop](winenv-desktop.md).
+**Der Desktop ist der Einstiegspunkt des Benutzers für Windows. Lassen Sie den Benutzer die Kontrolle.** Verwenden Sie diese Einstiegspunkte entsprechend, und betrachten Sie sie niemals als Möglichkeiten, das Bewusstsein für Ihr Programm oder seine Marke zu fördern. Weitere Informationen finden Sie unter [Desktop](winenv-desktop.md).
 
-### <a name="use-branding-professionals"></a>Branding-Fachleute verwenden
+### <a name="use-branding-professionals"></a>Verwenden von Brandingexperten
 
-Branding ist eine spezialisierte Qualifikation, die erfahrene Fachleute am besten durchgeführt haben. Es ist viel besser, die Benutzer für ein minimales Branding verfügbar zu machen, als das umfangreiche Branding zu verwenden, das lästig und wirkungslos ist. Arbeiten Sie mit Ihrem Branding-und Marketing Team zusammen, um eine gute End-to-End-Branding-Funktion zu erstellen.
+Branding ist eine spezielle Qualifikation, die von erfahrenen Experten am besten erledigt wird. Es ist viel besser, Ihre Benutzer einem minimalen Branding zur Verfügung zu stellen, als ein umfangreiches Branding zu verwenden, das lästig und ineffektiv ist. Arbeiten Sie mit Ihrem Branding- und Marketingteam zusammen, um eine gute End-to-End-Brandingerfahrung zu schaffen.
 
 **Wenn Sie nur fünf Dinge tun...**
 
-1.  Beginnen Sie mit dem Produktdesign. Die leistungsfähigste brandingerklärung besteht darin, die Anforderungen Ihrer Kunden besonders gut zu erfüllen.
-2.  Wählen Sie einen guten Produktnamen aus, der einprägsam und unverwechselbar ist und den Vorteil des Produkts vermittelt.
-3.  Stellen Sie sich das Branding in Bezug auf die Erfahrungen vor, und machen Sie eine emotionale Verbindung, keine Produktlogos und Farbschemas.
-4.  Sekundäre Brandingelemente bevorzugen. Beschränken Sie die Verwendung primärer Brandingelemente auf einige strategische Umgebungen.
-5.  Erhalten Sie Hilfe von einem Branding-Experten.
+1.  Beginnen Sie mit dem Produktentwurf. Die leistungsstärkste Branding-Aussage besteht darin, die Anforderungen Ihrer Kunden besonders gut zu erfüllen.
+2.  Wählen Sie einen guten Produktnamen aus, der einprägsam, unverrückbar und präzise den Vorteil des Produkts vermittelt.
+3.  Stellen Sie sich branding in Bezug auf Erfahrungen vor, und stellen Sie eine emotionale Verbindung her, nicht Produktlogos und Farbschemas.
+4.  Sekundäre Brandingelemente bevorzugen. Beschränken Sie Die Verwendung primärer Brandingelemente auf einige strategische Erfahrungen.
+5.  Erhalten Sie Hilfe von einem Brandingexperten.
 
 ## <a name="guidelines"></a>Richtlinien
 
 ### <a name="general"></a>Allgemein
 
--   **Wählen Sie einen guten Produktnamen aus, der einprägsam und unverwechselbar ist und den Vorteil des Produkts vermittelt.** Dabei handelt es sich um die Grundlage ihrer Marke.
--   **Konzentrieren Sie sich auf die besonderen Erfahrungen in Ihrem Programm,** wie z. b.:
-    -   Die [ersten Erfahrungen](exper-first-exper.md), insbesondere während des Setups und beim ersten Verwenden des Programms.
+-   **Wählen Sie einen guten Produktnamen aus, der einprägsam, unverrückbar und präzise den Vorteil des Produkts vermittelt.** Dies ist die Grundlage Ihrer Marke.
+-   **Konzentrieren Sie sich bei Ihrem Branding auf die besonderen Erfahrungen in Ihrem Programm,** z. B.:
+    -   Die [ersten Erfahrungen sind](exper-first-exper.md), insbesondere während des Setups und wenn das Programm zum ersten Mal verwendet wird.
     -   Das Hauptfenster oder die Startseite.
-    -   Der Beginn und die Beendigung wichtiger Aufgaben.
+    -   Start und Abschluss wichtiger Aufgaben.
     -   Wichtige Übergänge zwischen Aufgaben oder Programmbereichen.
-    -   Melden Sie sich an und melden Sie sich ab.
--   **Sekundäre Brandingelemente bevorzugen.** Beschränken Sie die Verwendung primärer Brandingelemente auf einige strategische Umgebungen. Verwenden Sie z. b. sekundäre Grafiken, Übergänge und Farben anstelle von Logos. Vermeiden Sie außerdem wichtige primäre Branding-Elemente an Orten, an denen Benutzer viel Zeit aufwenden, da Sie als Übersichtlichkeit angesehen werden können.
+    -   Melden Sie sich an, und melden Sie sich ab.
+-   **Sekundäre Brandingelemente bevorzugen.** Beschränken Sie Die Verwendung primärer Brandingelemente auf einige strategische Erfahrungen. Erwägen Sie beispielsweise die Verwendung sekundärer Grafiken, Übergänge und Farben anstelle von Logos. Vermeiden Sie außerdem prominente primäre Brandingelemente an Orten, an denen Benutzer viel Zeit verbringen, da sie möglicherweise als unübersichtlich wahrgenommen werden.
 
     **Annehmbar:**
 
     ![Screenshot der Systemsteuerung mit Windows-Logo ](images/exper-branding-image6.png)
 
-    **Besserer**
+    **Besser:**
 
     ![Screenshot der Systemsteuerung ohne Logo](images/exper-branding-image7.png)
 
-    Im besseren Beispiel wird ein sekundäres Grafik Element anstelle des Produktlogos für Windows-System Steuerungselemente verwendet.
+    Im besseren Beispiel wird ein sekundäres Grafikelement anstelle des Produktlogos für Windows Systemsteuerungselemente verwendet.
 
--   **Verwenden Sie kein brandingzeichen, das die Benutzerfreundlichkeit oder Leistung beeinträchtigt.**
--   **Verwenden Sie zum Branding nicht den Windows-Desktop.** Weitere Informationen finden Sie unter [Desktop](winenv-desktop.md).
+-   **Verwenden Sie kein Branding, das ablenkt oder die Benutzerfreundlichkeit oder Leistung beeinträchtigt.**
+-   **Verwenden Sie den Windows Desktop nicht für das Branding.** Weitere Informationen finden Sie unter [Desktop](winenv-desktop.md).
 
 ### <a name="names-and-logos"></a>Namen und Logos
 
--   **Beschränken Sie die Verwendung von Produkt-und Unternehmens Logos in der Benutzeroberfläche.** Sie sollten keine Firmen-oder Produktlogos auf jeder UI-Oberfläche ablegen.
+-   **Beschränken Sie die Verwendung von Produkt- und Unternehmenslogos auf der Benutzeroberfläche.** Geben Sie unternehmens- oder produktlogos nicht auf jeder Benutzeroberflächenoberfläche an.
 
-    -   Beschränken Sie Produkte und Unternehmens Logos auf höchstens zwei verschiedene Oberflächen, z. b. auf das Hauptfenster oder auf die Startseite und das Feld Info.
-    -   Beschränken Sie Produkte und Unternehmens Logos höchstens zweimal auf jeder einzelnen Oberfläche.
-    -   Beschränken Sie Produkt-und Unternehmens Namen höchstens dreimal auf eine beliebige Oberfläche.
+    -   Beschränken Sie Produkt- und Unternehmenslogos auf höchstens zwei verschiedene Oberflächen, z. B. das Hauptfenster oder die Startseite und das Feld "About".
+    -   Beschränken Sie Produkt- und Unternehmenslogos auf höchstens zweimal auf einer einzelnen Oberfläche.
+    -   Beschränken Sie Produkt- und Unternehmensnamen auf höchstens dreimal auf einer beliebigen Oberfläche.
 
     **Falsch:**
 
-    ![Screenshot der Grafik über Verwendung des Firmennamens ](images/exper-branding-image8.png)
+    ![Screenshot der Grafik zur Überschreitung des Unternehmensnamens ](images/exper-branding-image8.png)
 
-    In diesem Beispiel wird der Unternehmens Name über verwendet.
+    In diesem Beispiel ist der Unternehmensname überbraucht.
 
     **Falsch:**
 
     ![Screenshot von Fenstern mit mehreren Logos ](images/exper-branding-image9.png)
 
-    In diesem Beispiel ist die Verwendung der Logos einzeln akzeptabel, aber der Gesamteffekt ist überwältigend.
+    In diesem Beispiel ist die Verwendung der Logos zwar einzeln akzeptabel, aber der Gesamteffekt ist überwältigend.
 
--   **Verwenden Sie kleine Produkt-und Unternehmens Logos.** Platzieren Sie das Logo aus dem Workflow des Benutzers, und wählen Sie eine Größe aus, die für seinen Standort geeignet ist.
--   **Verwenden Sie grafische Logos.** Grafische Logos sind stabiler als Text Logos, da Sie nicht von Schriftart, Textgröße, Sprachpaket oder Designänderungen betroffen sind.
+-   **Verwenden Sie kleine Produkt- und Unternehmenslogos.** Platzieren Sie das Logo aus dem Workflow des Benutzers, und wählen Sie eine Größe aus, die für seine Position geeignet ist.
+-   **Verwenden Sie grafische Logos.** Grafiklogos sind stabiler als Textlogos, da sie von Schriftart-, Textgrößen-, Sprachpaket- oder Designänderungen nicht betroffen sind.
 -   **Verwenden Sie keine animierten Logos.**
 
 ### <a name="controls"></a>Steuerelemente
 
--   **Verwenden Sie keine benutzerdefinierten Steuerelemente für Branding.** Verwenden Sie stattdessen benutzerdefinierte Steuerelemente, wenn dies erforderlich ist, um ein besonderes immersives Verhalten zu schaffen, oder wenn spezielle Funktionen erforderlich sind.
+-   **Verwenden Sie keine benutzerdefinierten Steuerelemente für das Branding.** Verwenden Sie stattdessen bei Bedarf benutzerdefinierte Steuerelemente, um eine besondere immersive Benutzeroberfläche zu erstellen oder wenn spezielle Funktionen erforderlich sind.
 
     **Falsch:**
 
-    ![Screenshot der Anmelde Schaltfläche mit Branding ](images/exper-branding-image10.png)
+    ![Screenshot der Anmeldeschaltfläche mit Branding ](images/exper-branding-image10.png)
 
-    Dieses Beispiel zeigt ein benutzerdefiniertes Steuerelement, das fälschlicherweise zum Branding verwendet wird
+    Dieses Beispiel zeigt ein benutzerdefiniertes Steuerelement, das fälschlicherweise für das Branding verwendet wird.
 
 ### <a name="splash-screens"></a>Begrüßungsbildschirme
 
--   **Verwenden Sie keine Begrüßungs Bildschirme zum Branding.** Vermeiden Sie die Verwendung von Begrüßungs Bildschirmen, da Sie dazu führen können, dass Benutzer Ihr Programm mit schlechter Leistung verknüpfen. Verwenden Sie Sie nur, um Feedback zu geben und die Zeit für Programme zu verkürzen, die ungewöhnlich lange Ladezeiten haben.
--   **Verwenden Sie keine animierten Begrüßungs Bildschirme.** Benutzer nehmen häufig an, dass der animierte Begrüßungsbildschirm der Grund für eine lange Ladezeit ist. Zu oft ist diese Annahme richtig.
+-   **Verwenden Sie keine Begrüßungsbildschirme für das Branding.** Vermeiden Sie die Verwendung von Begrüßungsbildschirmen, da sie dazu führen können, dass Benutzer Ihr Programm mit schlechter Leistung verknüpfen. Verwenden Sie sie nur, um Feedback zu geben und die Wahrnehmung von Zeit für Programme mit ungewöhnlich langen Ladezeiten zu reduzieren.
+-   **Verwenden Sie keine animierten Begrüßungsbildschirme.** Benutzer gehen häufig davon aus, dass der animierte Begrüßungsbildschirm der Grund für eine lange Ladezeit ist. Zu oft ist diese Annahme richtig.
 
 ### <a name="sound"></a>Sound
 
--   **Im Allgemeinen wird Sound nur für Branding empfohlen.** Wenn Sie Sound für Branding verwenden:
-    -   Wieder **Gabe eines Sounds nur beim Programmstart,** aber nur, wenn das Programm vom Benutzer gestartet wurde.
-    -   **Synchronisieren Sie den Sound mit einem visuellen Ereignis,** z. b. einem Benutzeroberflächen Übergang wie dem Anzeigen eines Programmfensters.
+-   **Im Allgemeinen wird Sound nicht nur für das Branding empfohlen.** Wenn Sie Sound für das Branding verwenden:
+    -   **Wiedergeben eines Sounds nur beim Programmstart,** aber nur, wenn das Programm vom Benutzer gestartet wurde.
+    -   **Synchronisieren Sie den Sound mit einem visuellen Ereignis,** z. B. einem Benutzeroberflächenübergang wie der Anzeige eines Programmfensters.
 
 Weitere Informationen finden Sie unter [Sound](vis-sound.md).
 

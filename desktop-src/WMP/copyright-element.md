@@ -3,7 +3,7 @@ title: COPYRIGHT-Element (Msfeeds.h)
 description: Das COPYRIGHT-Element definiert eine Textzeichenfolge, die die Copyrightinformationen für ein ASX- oder ENTRY-Element angibt.
 ms.assetid: 264b92de-b10c-41b9-b219-727879079f15
 keywords:
-- COPYRIGHT-Windows Media Player
+- COPYRIGHT-Element Windows Media Player
 topic_type:
 - apiref
 api_name:
@@ -35,7 +35,7 @@ Das **COPYRIGHT-Element** definiert eine Textzeichenfolge, die die Copyrightinfo
 
 Dieses Element weist keine Attribute auf.
 
-## <a name="parentchild-elements"></a>Übergeordnete/untergeordnete Elemente
+## <a name="parentchild-elements"></a>Über- und untergeordnete Elemente
 
 
 
@@ -79,7 +79,7 @@ Wenn die Metadatei mit UTF-8 codiert wird, werden Copyright- und Markensymbole o
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 

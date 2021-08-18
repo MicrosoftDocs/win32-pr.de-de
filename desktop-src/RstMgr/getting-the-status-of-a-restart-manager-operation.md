@@ -1,25 +1,25 @@
 ---
 title: Abrufen des Status eines Neustart-Manager-Vorgangs
-description: Wenn viele Anwendungen und Dienste heruntergefahren oder neu gestartet werden müssen, kann der Neustart-Manager-Vorgang eine längere Zeit in Anspruch nehmen. Die folgende Methode kann verwendet werden, um den Status des aktuellen Vorgangs abzurufen.
+description: Wenn viele Anwendungen und Dienste heruntergefahren oder neu gestartet werden müssen, kann der Neustart-Manager-Vorgang einen längeren Zeitraum in Anspruch nehmen. Die folgende Methode kann verwendet werden, um den Status des aktuellen Vorgangs abzurufen.
 ms.assetid: 0df9de1f-df37-46a5-8010-6c8b34429376
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 7afa5f329a8f21aa625c5c7b61a3e65b2c907bbf
-ms.sourcegitcommit: 592c9bbd22ba69802dc353bcb5eb30699f9e9403
+ms.openlocfilehash: f96b7e247bdeb661e29d39cbb64bd8b7aaaa5caf9478bd1f1acc483c1dfbd614
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "104102175"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119010188"
 ---
 # <a name="getting-the-status-of-a-restart-manager-operation"></a>Abrufen des Status eines Neustart-Manager-Vorgangs
 
-Wenn viele Anwendungen und Dienste heruntergefahren oder neu gestartet werden müssen, kann der Neustart-Manager-Vorgang eine längere Zeit in Anspruch nehmen. Die folgende Methode kann verwendet werden, um den Status des aktuellen Vorgangs abzurufen.
+Wenn viele Anwendungen und Dienste heruntergefahren oder neu gestartet werden müssen, kann der Neustart-Manager-Vorgang einen längeren Zeitraum in Anspruch nehmen. Die folgende Methode kann verwendet werden, um den Status des aktuellen Vorgangs abzurufen.
 
-**So erhalten Sie den Status des aktuellen Vorgangs zum Neustart-Manager**
+**So erhalten Sie den Status des aktuellen Neustart-Manager-Vorgangs**
 
-1.  Das Installationsprogramm sollte eine [**RM- \_ Schreib \_ Status- \_ Rückruf**](/windows/win32/api/restartmanager/nc-restartmanager-rm_write_status_callback) Funktion implementieren, die den Status der herunter gefahrenen oder neu gestarteten Anwendungen bestimmt. Die-Funktion kann die Informationen für die Benutzeroberfläche oder das Protokoll bereitstellen.
-2.  Das Installationsprogramm übergibt den Zeiger an die [**RM- \_ Schreib Status- \_ \_ Rückruf**](/windows/win32/api/restartmanager/nc-restartmanager-rm_write_status_callback) Funktion, wenn die Funktion [**rmshutdown**](/windows/desktop/api/RestartManager/nf-restartmanager-rmshutdown) oder [**rmrestart**](/windows/desktop/api/RestartManager/nf-restartmanager-rmrestart) aufgerufen wird.
+1.  Das Installationsprogramm sollte eine [**RM \_ WRITE STATUS \_ \_ CALLBACK-Funktion**](/windows/win32/api/restartmanager/nc-restartmanager-rm_write_status_callback) implementieren, die den Status der Anwendungen bestimmt, die heruntergefahren oder neu gestartet wurden. Die Funktion kann die Informationen für die Benutzeroberfläche oder das Protokoll bereitstellen.
+2.  Das Installationsprogramm übergibt beim Aufrufen der [**RmShutdown-**](/windows/desktop/api/RestartManager/nf-restartmanager-rmshutdown) oder [**RmRestart-Funktion**](/windows/desktop/api/RestartManager/nf-restartmanager-rmrestart) den Zeiger auf die [**RM WRITE STATUS \_ \_ \_ CALLBACK-Funktion.**](/windows/win32/api/restartmanager/nc-restartmanager-rm_write_status_callback)
 
- 
+ 
 
- 
+ 

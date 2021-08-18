@@ -1,9 +1,9 @@
 ---
-title: Effects. EffectTitle
-description: Die EffectTitle-Methode ruft den anzeigen Titel der Visualisierung mit dem angegebenen Registrierungs Index ab.
+title: EFFECTS.effectTitle
+description: Die effectTitle-Methode ruft den Anzeigetitel der Visualisierung mit dem angegebenen Registrierungsindex ab.
 ms.assetid: f3ea33f6-a8fc-4a18-993e-69b549fbea16
 keywords:
-- Effekte. EffectTitle-Fenster Media Player
+- EFFECTS.effectTitle Windows Media Player
 topic_type:
 - apiref
 api_name:
@@ -13,16 +13,16 @@ api_type:
 ms.topic: reference
 ms.date: 05/31/2018
 api_location: ''
-ms.openlocfilehash: 99d5bcbc25dc12891241cfcd99d770242a581475
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 0173f5d1bd4755da1feb024b26fc581e63029f48dcde27f5009fd508db3c9d40
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106366932"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118996680"
 ---
-# <a name="effectseffecttitle"></a>Effects. EffectTitle
+# <a name="effectseffecttitle"></a>EFFECTS.effectTitle
 
-Die **EffectTitle** -Methode ruft den anzeigen Titel der Visualisierung mit dem angegebenen Registrierungs Index ab.
+Die **effectTitle-Methode** ruft den Anzeigetitel der Visualisierung mit dem angegebenen Registrierungsindex ab.
 
 ``` syntax
         elementID.effectTitle(index)
@@ -32,10 +32,10 @@ Die **EffectTitle** -Methode ruft den anzeigen Titel der Visualisierung mit dem 
 
 <dl> <dt>
 
-<span id="index"></span><span id="INDEX"></span>*Sin*
+<span id="index"></span><span id="INDEX"></span>*Index*
 </dt> <dd>
 
-**Zahl** (**Long**), die den Registrierungs Index einer Visualisierung enthält.
+**Zahl** (**long**), die den Registrierungsindex einer Visualisierung enthält.
 
 </dd> </dl>
 
@@ -43,9 +43,9 @@ Die **EffectTitle** -Methode ruft den anzeigen Titel der Visualisierung mit dem 
 
 Diese Methode gibt eine **Zeichenfolge** zurück.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Diese Methode wird zum Anzeigen von Visualisierungs Titeln in einer Benutzeroberfläche verwendet.
+Diese Methode wird zum Anzeigen von Visualisierungstiteln auf einer Benutzeroberfläche verwendet.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -53,18 +53,18 @@ Diese Methode wird zum Anzeigen von Visualisierungs Titeln in einer Benutzerober
 
 | Anforderung | Wert |
 |--------------------|---------------------------------------------------|
-| Version<br/> | Windows Media Player 9-Serie oder höher<br/> |
+| Version<br/> | Windows Media Player 9er Serie oder höher<br/> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Effects-Element**](effects-element.md)
+[**EFFECTS-Element**](effects-element.md)
 </dt> <dt>
 
-[**Effekte. Currency-ffecttitle**](effects-currenteffecttitle.md)
+[**EFFECTS.currentEffectTitle**](effects-currenteffecttitle.md)
 </dt> </dl>
 
  

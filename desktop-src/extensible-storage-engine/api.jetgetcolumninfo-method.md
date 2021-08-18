@@ -1,6 +1,6 @@
 ---
-description: Weitere Informationen finden Sie in der API. jetgetcolumninfo-Methode
-title: API. jetgetcolumninfo-Methode
+description: 'Weitere Informationen finden Sie unter: Api.JetGetColumnInfo-Methode'
+title: Api.JetGetColumnInfo-Methode
 TOCTitle: 'JetGetColumnInfo method '
 ms:assetid: Overload:Microsoft.Isam.Esent.Interop.Api.JetGetColumnInfo
 ms:mtpsurl: https://msdn.microsoft.com/library/microsoft.isam.esent.interop.api.jetgetcolumninfo(v=EXCHG.10)
@@ -14,17 +14,17 @@ dev_langs:
 - JScript
 - VB
 - other
-ms.openlocfilehash: 9a0d0b7c4a8996c7093a57b370c8d0a03dc409e3
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 13d01bc1ced977f5412d311669da0c1b3fd54b50da3bd221188d5c38581a1f8d
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104565895"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119042618"
 ---
-# <a name="apijetgetcolumninfo-method"></a>API. jetgetcolumninfo-Methode
+# <a name="apijetgetcolumninfo-method"></a>Api.JetGetColumnInfo-Methode
 
-Geschützte Member einschließen  
-Geerbte Member einschließen  
+Einschließen geschützter Member  
+Einschließen geerbter Member  
 
 ## <a name="overload-list"></a>Überladeliste
 
@@ -33,23 +33,23 @@ Geerbte Member einschließen
 <tr class="header">
 <th> </th>
 <th>Name</th>
-<th>BESCHREIBUNG</th>
+<th>Beschreibung</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
 <td><img src="../images/dn292146.pubmethod(exchg.10).gif" title="Öffentliche Methode" alt="Public method" /><img src="../images/dn292146.static(exchg.10).gif" title="Statischer Member" alt="Static member" /></td>
-<td><a href="dn292158(v=exchg.10).md">Jetgetcolumninfo (JET_SESID, JET_DBID, Zeichenfolge, Zeichenfolge, JET_COLUMNBASE)</a></td>
+<td><a href="dn292158(v=exchg.10).md">JetGetColumnInfo(JET_SESID, JET_DBID, String, String, JET_COLUMNBASE)</a></td>
 <td>Ruft Informationen zu einer Spalte in einer Tabelle ab.</td>
 </tr>
 <tr class="even">
 <td><img src="../images/dn292146.pubmethod(exchg.10).gif" title="Öffentliche Methode" alt="Public method" /><img src="../images/dn292146.static(exchg.10).gif" title="Statischer Member" alt="Static member" /></td>
-<td><a href="dn292151(v=exchg.10).md">Jetgetcolumninfo (JET_SESID, JET_DBID, Zeichenfolge, Zeichenfolge, JET_COLUMNDEF)</a></td>
-<td>Ruft Informationen über eine Tabellenspalte ab.</td>
+<td><a href="dn292151(v=exchg.10).md">JetGetColumnInfo(JET_SESID, JET_DBID, String, String, JET_COLUMNDEF)</a></td>
+<td>Ruft Informationen zu einer Tabellenspalte ab.</td>
 </tr>
 <tr class="odd">
 <td><img src="../images/dn292146.pubmethod(exchg.10).gif" title="Öffentliche Methode" alt="Public method" /><img src="../images/dn292146.static(exchg.10).gif" title="Statischer Member" alt="Static member" /></td>
-<td><a href="dn292152(v=exchg.10).md">Jetgetcolumninfo (JET_SESID, JET_DBID, Zeichenfolge, Zeichenfolge, JET_COLUMNLIST)</a></td>
+<td><a href="dn292152(v=exchg.10).md">JetGetColumnInfo(JET_SESID, JET_DBID, String, String, JET_COLUMNLIST)</a></td>
 <td>Ruft Informationen zu allen Spalten in einer Tabelle ab.</td>
 </tr>
 </tbody>
@@ -58,12 +58,12 @@ Geerbte Member einschließen
 
 Oben
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
-#### <a name="reference"></a>Referenz
+#### <a name="reference"></a>Verweis
 
 [API-Klasse](./api-class.md)
 
-[API-Mitglieder](./api-members.md)
+[API-Member](./api-members.md)
 
-[Microsoft. ISAM. ESENT. Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)
+[Microsoft.Isam.Esent.Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)

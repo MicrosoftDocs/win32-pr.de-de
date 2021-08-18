@@ -1,8 +1,8 @@
 ---
-description: Der strprivilege-Parameter der Methode "slibemprivilegeset. addasstring" und der Parameter "iprivilege" für "slibemprivilegeset. Add" erfordern Berechtigungs Zeichenfolgen aus "wbemprivilegeenum".
+description: Der strPrivilege-Parameter der SWbemPrivilegeSet.AddAsString-Methode und der iPrivilege-Parameter für SWbemPrivilegeSet.Add erfordern Berechtigungszeichenfolgen aus WbemPrivilegeEnum.
 ms.assetid: f9400597-81bb-44a8-80dc-aba0160aea26
 ms.tgt_platform: multiple
-title: Berechtigungs Konstanten (wbemdisp. h)
+title: Berechtigungskonstanten (Wbemdisp.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -40,20 +40,20 @@ api_type:
 - HeaderDef
 api_location:
 - Wbemdisp.h
-ms.openlocfilehash: 73fb9167af63f40f3a6e1c00470d871f749d228a
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 38d104c99885d4328ce8b12413e91607655ab1e260a61b511e3ea4a600b80b4d
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "103759768"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119131022"
 ---
-# <a name="privilege-constants"></a>Berechtigungs Konstanten
+# <a name="privilege-constants"></a>Berechtigungskonstanten
 
-Der *strprivilege* -Parameter der Methode " [**slibemprivilegeset. addasstring**](swbemprivilegeset-addasstring.md) " und der Parameter " *iprivilege* " für " [**slibemprivilegeset. Add**](swbemprivilegeset-add.md) " erfordern Berechtigungs Zeichenfolgen aus " [wbemprivilegeenum](/windows/desktop/api/Wbemdisp/ne-wbemdisp-wbemprivilegeenum)". Weitere Informationen zum Verwenden von Berechtigungs Konstanten finden Sie unter [Ausführen privilegierter Vorgänge](executing-privileged-operations.md).
+Der *strPrivilege-Parameter* der [**SWbemPrivilegeSet.AddAsString-Methode**](swbemprivilegeset-addasstring.md) und der *iPrivilege-Parameter* für [**SWbemPrivilegeSet.Add**](swbemprivilegeset-add.md) erfordern Berechtigungszeichenfolgen aus [WbemPrivilegeEnum.](/windows/desktop/api/Wbemdisp/ne-wbemdisp-wbemprivilegeenum) Weitere Informationen zur Verwendung von Berechtigungskonstanten finden Sie unter [Ausführen privilegierter Vorgänge.](executing-privileged-operations.md)
 
-Die folgenden Konstanten sind in [**wbemprivilegeenumeration**](/windows/desktop/api/Wbemdisp/ne-wbemdisp-wbemprivilegeenum)definiert. Die folgende Liste enthält die äquivalenten Konstanten für C++ und Zeichen folgen für die Skripterstellung. Um den Namen der Skripterstellung zu bilden, entfernen Sie "SE" und "Privilege" aus dem C++-Konstantennamen.
+Die folgenden Konstanten sind in [**WbemPrivilegeEnum**](/windows/desktop/api/Wbemdisp/ne-wbemdisp-wbemprivilegeenum)definiert. Die folgende Liste enthält die entsprechenden Konstanten für C++ und Zeichenfolgen für die Skripterstellung. Um den Kurznamen der Skripterstellung zu bilden, entfernen Sie "Se" und "Privilege" aus dem C++-Konstantennamen.
 
-Im folgenden VBScript-Codebeispiel wird gezeigt, wie die RemoteShutdown-Berechtigung in einem Skript aktiviert wird.
+Das folgende VBScript-Codebeispiel zeigt, wie Sie die RemoteShutdown-Berechtigung in einem Skript aktivieren.
 
 
 ```VB
@@ -62,11 +62,11 @@ Set Service = GetObject("winmgmts:{impersonationLevel=impersonate, (RemoteShutdo
 
 
 
-Viele WMI-Methoden erfordern, dass mindestens eine Berechtigung aktiviert ist. Wenn einem Konto keine Berechtigung erteilt wurde, kann es für den Methoden Aufrufvorgang nicht aktiviert werden.
+Viele WMI-Methoden erfordern, dass mindestens eine Berechtigung aktiviert ist. Wenn einem Konto keine Berechtigung erteilt wurde, kann es nicht für den Methodenaufruf aktiviert werden.
 
 <dl> <dt>
 
-<span id="wbemPrivilegeCreateToken"></span><span id="wbemprivilegecreatetoken"></span><span id="WBEMPRIVILEGECREATETOKEN"></span>**wbemprivilegekreatetoken**
+<span id="wbemPrivilegeCreateToken"></span><span id="wbemprivilegecreatetoken"></span><span id="WBEMPRIVILEGECREATETOKEN"></span>**wbemPrivilegeCreateToken**
 </dt> <dd> <dl> <dt>
 
 1 (0x1)
@@ -74,16 +74,16 @@ Viele WMI-Methoden erfordern, dass mindestens eine Berechtigung aktiviert ist. W
 
 
 
-C++ Constant: **SE \_ Create \_ Token \_ Name** String: **secreatetokenprivilege**
+C++-Konstante: **SE \_ CREATE TOKEN \_ \_ NAME-Zeichenfolge:** **SeCreateTokenPrivilege**
 
-Name der Skripterstellung **: "** ".
+Kurzname der Skripterstellung: **CreateToken**
 
 Erforderlich, um ein primäres Tokenobjekt zu erstellen.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="wbemPrivilegePrimaryToken"></span><span id="wbemprivilegeprimarytoken"></span><span id="WBEMPRIVILEGEPRIMARYTOKEN"></span>**wbemprivilegeprimarytoken**
+<span id="wbemPrivilegePrimaryToken"></span><span id="wbemprivilegeprimarytoken"></span><span id="WBEMPRIVILEGEPRIMARYTOKEN"></span>**wbemPrivilegePrimaryToken**
 </dt> <dd> <dl> <dt>
 
 2 (0x2)
@@ -91,16 +91,16 @@ Erforderlich, um ein primäres Tokenobjekt zu erstellen.
 
 
 
-C++-Konstante: **seassignprimaryaufkenprivilege** -Zeichenfolge: **seassignprimaryanmelkenprivilege**
+C++-Konstante: **SeAssignPrimaryTokenPrivilege** string: **SeAssignPrimaryTokenPrivilege**
 
-Name der Skripterstellung: **zugriffprimarytoken**
+Kurzname der Skripterstellung: **AssignPrimaryToken**
 
-Ist erforderlich, um ein Token auf Prozessebene zu ersetzen.
+Erforderlich, um ein Token auf Prozessebene zu ersetzen.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="wbemPrivilegeLockMemory"></span><span id="wbemprivilegelockmemory"></span><span id="WBEMPRIVILEGELOCKMEMORY"></span>**wbemprivilegelockmemory**
+<span id="wbemPrivilegeLockMemory"></span><span id="wbemprivilegelockmemory"></span><span id="WBEMPRIVILEGELOCKMEMORY"></span>**wbemPrivilegeLockMemory**
 </dt> <dd> <dl> <dt>
 
 3 (0x3)
@@ -108,16 +108,16 @@ Ist erforderlich, um ein Token auf Prozessebene zu ersetzen.
 
 
 
-C++-Konstante: Zeichenfolge für den **\_ \_ Speicher \_ Namen der SE-Sperre** : **SeLockMemoryPrivilege**
+C++-Konstante: **SE \_ LOCK MEMORY \_ \_ NAME-Zeichenfolge:** **SeLockMemoryPrivilege**
 
-Kurzname für Skripterstellung: **lockmemory**
+Kurzname der Skripterstellung: **LockMemory**
 
-Zum Sperren von Seiten im Arbeitsspeicher erforderlich.
+Erforderlich, um Seiten im Arbeitsspeicher zu sperren.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="wbemPrivilegeIncreaseQuota"></span><span id="wbemprivilegeincreasequota"></span><span id="WBEMPRIVILEGEINCREASEQUOTA"></span>**wbemprivilegilegeingekreasequota**
+<span id="wbemPrivilegeIncreaseQuota"></span><span id="wbemprivilegeincreasequota"></span><span id="WBEMPRIVILEGEINCREASEQUOTA"></span>**wbemPrivilegeIncreaseQuota**
 </dt> <dd> <dl> <dt>
 
 4 (0x4)
@@ -125,16 +125,16 @@ Zum Sperren von Seiten im Arbeitsspeicher erforderlich.
 
 
 
-C++-Konstante: **SE \_ Erhöhung des \_ Kontingent \_ namens** String: **seinkreasequotaprivilege**
+C++-Konstante: **SE \_ INCREASE QUOTA \_ \_ NAME-Zeichenfolge:** **SeIncreaseQuotaPrivilege**
 
-Kurzname für Skripterstellung: Erstellungs **Berechtigung**
+Kurzname der Skripterstellung: **IncreaseQuotaPrivilege**
 
-Erforderlich zum Anpassen von Speicher Kontingenten für einen Prozess.
+Erforderlich, um Speicherkontingente für einen Prozess anzupassen.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="wbemPrivilegeMachineAccount"></span><span id="wbemprivilegemachineaccount"></span><span id="WBEMPRIVILEGEMACHINEACCOUNT"></span>**wbemprivilegemachineaccount**
+<span id="wbemPrivilegeMachineAccount"></span><span id="wbemprivilegemachineaccount"></span><span id="WBEMPRIVILEGEMACHINEACCOUNT"></span>**wbemPrivilegeMachineAccount**
 </dt> <dd> <dl> <dt>
 
 5 (0x5)
@@ -142,16 +142,16 @@ Erforderlich zum Anpassen von Speicher Kontingenten für einen Prozess.
 
 
 
-C++-Konstante: **SE \_ Macine \_ Account \_ Name** String: **tarmachineaccountprivilege**
+C++-Konstante: **SE \_ MACINE ACCOUNT \_ \_ NAME-Zeichenfolge:** **SeMachineAccountPrivilege**
 
-Kurzname für Skripterstellung: **MachineAccount**
+Kurzname der Skripterstellung: **MachineAccount**
 
 Erforderlich zum Hinzufügen von Arbeitsstationen zu einer Domäne.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="wbemPrivilegeTcb"></span><span id="wbemprivilegetcb"></span><span id="WBEMPRIVILEGETCB"></span>**wbemprivilegetcb**
+<span id="wbemPrivilegeTcb"></span><span id="wbemprivilegetcb"></span><span id="WBEMPRIVILEGETCB"></span>**wbemPrivilegeTcb**
 </dt> <dd> <dl> <dt>
 
 6 (0x6)
@@ -159,16 +159,16 @@ Erforderlich zum Hinzufügen von Arbeitsstationen zu einer Domäne.
 
 
 
-C++-Konstante: **SE \_ TCB \_ Name** String: **SeTcbPrivilege**
+C++-Konstante: **SE \_ TCB \_ NAME-Zeichenfolge:** **SeTcbPrivilege**
 
-Kurzname für Skripterstellung: **TCB**
+Kurzname der Skripterstellung: **Tcb**
 
-Erforderlich, um als Teil des Betriebssystems zu agieren. Der Inhaber ist Teil der vertrauenswürdigen Computer Basis.
+Erforderlich, um als Teil des Betriebssystems zu fungieren. Der Besitzer ist Teil der vertrauenswürdigen Computerbasis.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="wbemPrivilegeSecurity"></span><span id="wbemprivilegesecurity"></span><span id="WBEMPRIVILEGESECURITY"></span>**wbemprivilegeseatur**
+<span id="wbemPrivilegeSecurity"></span><span id="wbemprivilegesecurity"></span><span id="WBEMPRIVILEGESECURITY"></span>**wbemPrivilegeSecurity**
 </dt> <dd> <dl> <dt>
 
 7 (0x7)
@@ -176,16 +176,16 @@ Erforderlich, um als Teil des Betriebssystems zu agieren. Der Inhaber ist Teil d
 
 
 
-C++-Konstante: **SE- \_ Sicherheits \_ Namen** Zeichenfolge: **SeSecurityPrivilege**
+C++-Konstante: **SE \_ SECURITY \_ NAME-Zeichenfolge:** **SeSecurityPrivilege**
 
-Skript Kurzname: **Sicherheit**
+Kurzname der Skripterstellung: **Sicherheit**
 
 Erforderlich zum Verwalten der Überwachung und des NT-Sicherheitsprotokolls.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="wbemPrivilegeTakeOwnership"></span><span id="wbemprivilegetakeownership"></span><span id="WBEMPRIVILEGETAKEOWNERSHIP"></span>**wbemprivilegetakeownership**
+<span id="wbemPrivilegeTakeOwnership"></span><span id="wbemprivilegetakeownership"></span><span id="WBEMPRIVILEGETAKEOWNERSHIP"></span>**wbemPrivilegeTakeOwnership**
 </dt> <dd> <dl> <dt>
 
 8 (0x8)
@@ -193,16 +193,16 @@ Erforderlich zum Verwalten der Überwachung und des NT-Sicherheitsprotokolls.
 
 
 
-C++-Konstante **: \_ SE \_ Besitz \_ Name** Zeichenfolge **: "** "
+C++-Konstante: **SE \_ TAKE OWNERSHIP \_ \_ NAME-Zeichenfolge:** **SeTakeOwnershipPrivilege**
 
-Kurzname der Skripterstellung: **Take Ownership**
+Kurzname der Skripterstellung: **TakeOwnership**
 
-Erforderlich, um den Besitz von Dateien oder anderen Objekten ohne einen [*Access Control Eintrag*](/windows/desktop/SecGloss/a-gly) (ACE) in der *Zugriffs Steuerungs Liste* (DACL) zu übernehmen.
+Erforderlich, um den Besitz von Dateien oder anderen Objekten zu übernehmen, ohne dass ein [*Access Control Entry*](/windows/desktop/SecGloss/a-gly) (ACE) in der *DACL (Discretionary Access Control List)* vorhanden ist.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="wbemPrivilegeLoadDriver"></span><span id="wbemprivilegeloaddriver"></span><span id="WBEMPRIVILEGELOADDRIVER"></span>**wbemprivilegeloaddriver**
+<span id="wbemPrivilegeLoadDriver"></span><span id="wbemprivilegeloaddriver"></span><span id="WBEMPRIVILEGELOADDRIVER"></span>**wbemPrivilegeLoadDriver**
 </dt> <dd> <dl> <dt>
 
 9 (0x9)
@@ -210,33 +210,33 @@ Erforderlich, um den Besitz von Dateien oder anderen Objekten ohne einen [*Acces
 
 
 
-C++-Konstante **: \_ \_ Treiber** Zeichenfolge für "SE laden": **SeLoadDriverPrivilege**
+C++-Konstante: **SE \_ LOAD \_ DRIVER-Zeichenfolge:** **SeLoadDriverPrivilege**
 
-Kurzname für Skripterstellung: **LoadDriver**
+Kurzname der Skripterstellung: **LoadDriver**
 
 Erforderlich zum Laden oder Entladen eines Gerätetreibers.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="wbemPrivilegeSystemProfile"></span><span id="wbemprivilegesystemprofile"></span><span id="WBEMPRIVILEGESYSTEMPROFILE"></span>**wbemprivilegesystemprofile**
+<span id="wbemPrivilegeSystemProfile"></span><span id="wbemprivilegesystemprofile"></span><span id="WBEMPRIVILEGESYSTEMPROFILE"></span>**wbemPrivilegeSystemProfile**
 </dt> <dd> <dl> <dt>
 
-10 (0xa)
+10 (0xA)
 </dt> <dt>
 
 
 
-C++-Konstante: Name der namens Zeichenfolge für das **\_ System \_ Profil \_** : **sesystemprofileprivilege**
+C++-Konstante: **SE \_ ZEICHENFOLGE SYSTEM PROFILE \_ \_ NAME:** **SeSystemProfilePrivilege**
 
-Kurzname für Skripterstellung: **Systemprofile**
+Kurzname der Skripterstellung: **SystemProfile**
 
-Erforderlich, um Profilinformationen zur Systemleistung zu erfassen.
+Erforderlich, um Profilinformationen zur Systemleistung zu sammeln.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="wbemPrivilegeSystemtime"></span><span id="wbemprivilegesystemtime"></span><span id="WBEMPRIVILEGESYSTEMTIME"></span>**wbemprivilegesystemtime**
+<span id="wbemPrivilegeSystemtime"></span><span id="wbemprivilegesystemtime"></span><span id="WBEMPRIVILEGESYSTEMTIME"></span>**wbemPrivilegeSystemtime**
 </dt> <dd> <dl> <dt>
 
 11 (0xB)
@@ -244,33 +244,33 @@ Erforderlich, um Profilinformationen zur Systemleistung zu erfassen.
 
 
 
-C++-Konstante: **SE \_ SYSTEMTIME**- \_ namens Zeichenfolge: **SeSystemtimePrivilege**
+C++-Konstante: **SE \_ SYSTEMTIME** \_ NAME-Zeichenfolge: **SeSystemtimePrivilege**
 
-Kurzname für Skripterstellung: **SYSTEMTIME**
+Kurzname der Skripterstellung: **Systemtime**
 
 Erforderlich, um die Systemzeit zu ändern.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="wbemPrivilegeProfileSingleProcess"></span><span id="wbemprivilegeprofilesingleprocess"></span><span id="WBEMPRIVILEGEPROFILESINGLEPROCESS"></span>**wbemprivilegeprofilesingleprocess**
+<span id="wbemPrivilegeProfileSingleProcess"></span><span id="wbemprivilegeprofilesingleprocess"></span><span id="WBEMPRIVILEGEPROFILESINGLEPROCESS"></span>**wbemPrivilegeProfileSingleProcess**
 </dt> <dd> <dl> <dt>
 
-12 (0xc)
+12 (0xC)
 </dt> <dt>
 
 
 
-C++-Konstante: **SE \_ Prof \_ Single \_ Process \_ Name** String: **sprofilesingleprocessprivilege**
+C++-Konstante: **SE \_ PROF SINGLE PROCESS \_ \_ \_ NAME-Zeichenfolge:** **SeProfileSingleProcessPrivilege**
 
-Skript Kurzname: **profilesingleprocess**
+Kurzname der Skripterstellung: **ProfileSingleProcess**
 
-Erforderlich, um Profilinformationen für einen einzelnen Prozess zu erfassen.
+Erforderlich, um Profilinformationen für einen einzelnen Prozess zu sammeln.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="wbemPrivilegeIncreaseBasePriority"></span><span id="wbemprivilegeincreasebasepriority"></span><span id="WBEMPRIVILEGEINCREASEBASEPRIORITY"></span>**wbemprivilegilegeingekreasebasepriority**
+<span id="wbemPrivilegeIncreaseBasePriority"></span><span id="wbemprivilegeincreasebasepriority"></span><span id="WBEMPRIVILEGEINCREASEBASEPRIORITY"></span>**wbemPrivilegeIncreaseBasePriority**
 </dt> <dd> <dl> <dt>
 
 13 (0xD)
@@ -278,33 +278,33 @@ Erforderlich, um Profilinformationen für einen einzelnen Prozess zu erfassen.
 
 
 
-C++ Constant: **SE \_ Inc \_ \_ \_ Name der Basis Priorität** Zeichenfolge: **seinkreasebasepriorityprivilege**
+C++-Konstante: **SE INC BASE PRIORITY \_ \_ \_ \_ NAME-Zeichenfolge:** **SeIncreaseBasePriorityPrivilege**
 
-Name der Skripterstellung: **erstellebasepriority**
+Kurzname der Skripterstellung: **IncreaseBasePriority**
 
-Erforderlich, um die Planungs Priorität zu erhöhen.
+Erforderlich, um die Planungspriorität zu erhöhen.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="wbemPrivilegeCreatePagefile"></span><span id="wbemprivilegecreatepagefile"></span><span id="WBEMPRIVILEGECREATEPAGEFILE"></span>**wbemprivilegekreatepagefile**
+<span id="wbemPrivilegeCreatePagefile"></span><span id="wbemprivilegecreatepagefile"></span><span id="WBEMPRIVILEGECREATEPAGEFILE"></span>**wbemPrivilegeCreatePagefile**
 </dt> <dd> <dl> <dt>
 
-14 (0xe)
+14 (0xE)
 </dt> <dt>
 
 
 
-C++-Konstante: **SE \_ Create \_ Pagefile \_ Name** String: **secreatepagefileprivilege**
+C++-Konstante: **SE \_ CREATE \_ PAGEFILE \_ NAME-Zeichenfolge:** **SeCreatePagefilePrivilege**
 
-Kurzname für Skript **Erstellung: "** ".
+Kurzname der Skripterstellung: **CreatePagefile**
 
-Erforderlich zum Erstellen einer Pagefile-Datei.
+Erforderlich, um eine Auslagerungsdatei zu erstellen.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="wbemPrivilegeCreatePermanent"></span><span id="wbemprivilegecreatepermanent"></span><span id="WBEMPRIVILEGECREATEPERMANENT"></span>**wbemprivilegekreatepermanent**
+<span id="wbemPrivilegeCreatePermanent"></span><span id="wbemprivilegecreatepermanent"></span><span id="WBEMPRIVILEGECREATEPERMANENT"></span>**wbemPrivilegeCreatePermanent**
 </dt> <dd> <dl> <dt>
 
 15 (0xF)
@@ -312,16 +312,16 @@ Erforderlich zum Erstellen einer Pagefile-Datei.
 
 
 
-C++-Konstante: **SE \_ Create \_ permanent \_ Name** String: **SeCreatePermanentPrivilege**
+C++-Konstante: **SE \_ CREATE PERMANENT \_ \_ NAME-Zeichenfolge:** **SeCreatePermanentPrivilege**
 
-Kurzname für Skripterstellung: " **kreatepermanent** "
+Kurzname der Skripterstellung: **CreatePermanent**
 
 Erforderlich, um permanente freigegebene Objekte zu erstellen.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="wbemPrivilegeBackup"></span><span id="wbemprivilegebackup"></span><span id="WBEMPRIVILEGEBACKUP"></span>**wbemprivilegebackup**
+<span id="wbemPrivilegeBackup"></span><span id="wbemprivilegebackup"></span><span id="WBEMPRIVILEGEBACKUP"></span>**wbemPrivilegeBackup**
 </dt> <dd> <dl> <dt>
 
 16 (0x10)
@@ -329,16 +329,16 @@ Erforderlich, um permanente freigegebene Objekte zu erstellen.
 
 
 
-C++-Konstante: **SE \_ Backup \_ Name** String: " **sbackupprivilege** "
+C++-Konstante: **SE \_ BACKUP \_ NAME-Zeichenfolge:** **SeBackupPrivilege**
 
-Kurzname für Skripterstellung: **Sicherung**
+Kurzname der Skripterstellung: **Sicherung**
 
-Zum Sichern von Dateien und Verzeichnissen erforderlich, unabhängig von der für die Datei angegebenen ACL.
+Erforderlich zum Sichern von Dateien und Verzeichnissen, unabhängig von der für die Datei angegebenen ACL.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="wbemPrivilegeRestore"></span><span id="wbemprivilegerestore"></span><span id="WBEMPRIVILEGERESTORE"></span>**wbemprivilegerestore**
+<span id="wbemPrivilegeRestore"></span><span id="wbemprivilegerestore"></span><span id="WBEMPRIVILEGERESTORE"></span>**wbemPrivilegeRestore**
 </dt> <dd> <dl> <dt>
 
 17 (0x11)
@@ -346,16 +346,16 @@ Zum Sichern von Dateien und Verzeichnissen erforderlich, unabhängig von der fü
 
 
 
-C++ Constant: **SE \_ Restore \_ Name** String: **SeRestorePrivilege**
+C++-Konstante: **SE \_ RESTORE \_ NAME-Zeichenfolge:** **SeRestorePrivilege**
 
-Skript Kurzname: **Restore**
+Kurzname der Skripterstellung: **Wiederherstellen**
 
-Ist erforderlich, um Dateien und Verzeichnisse unabhängig von der für die Datei angegebenen ACL wiederherzustellen.
+Erforderlich zum Wiederherstellen von Dateien und Verzeichnissen, unabhängig von der für die Datei angegebenen ACL.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="wbemPrivilegeShutdown"></span><span id="wbemprivilegeshutdown"></span><span id="WBEMPRIVILEGESHUTDOWN"></span>**wbemprivilegeshutdown**
+<span id="wbemPrivilegeShutdown"></span><span id="wbemprivilegeshutdown"></span><span id="WBEMPRIVILEGESHUTDOWN"></span>**wbemPrivilegeShutdown**
 </dt> <dd> <dl> <dt>
 
 18 (0x12)
@@ -363,16 +363,16 @@ Ist erforderlich, um Dateien und Verzeichnisse unabhängig von der für die Date
 
 
 
-C++-Konstante: **SE \_ Shutdown \_ Name** String: **SeShutdownPrivilege**
+C++-Konstante: **SE \_ SHUTDOWN \_ NAME-Zeichenfolge:** **SeShutdownPrivilege**
 
-Kurzname für Skripterstellung: **herunter** fahren
+Kurzname der Skripterstellung: **Herunterfahren**
 
 Erforderlich, um das lokale System herunterzufahren.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="wbemPrivilegeDebug"></span><span id="wbemprivilegedebug"></span><span id="WBEMPRIVILEGEDEBUG"></span>**wbemprivilegedebug**
+<span id="wbemPrivilegeDebug"></span><span id="wbemprivilegedebug"></span><span id="WBEMPRIVILEGEDEBUG"></span>**wbemPrivilegeDebug**
 </dt> <dd> <dl> <dt>
 
 19 (0x13)
@@ -380,16 +380,16 @@ Erforderlich, um das lokale System herunterzufahren.
 
 
 
-C++-Konstante: **SE \_ Debug \_ Name** String: " **sdebugprivilege** "
+C++-Konstante: **SE \_ DEBUG \_ NAME-Zeichenfolge:** **SeDebugPrivilege**
 
-Kurzname für Skripterstellung: **Debug**
+Kurzname der Skripterstellung: **Debuggen**
 
-Erforderlich, um den Arbeitsspeicher eines Prozesses zu Debuggen und anzupassen, der im Besitz eines anderen Kontos ist
+Erforderlich zum Debuggen und Anpassen des Arbeitsspeichers eines Prozesses, der sich im Besitz eines anderen Kontos befindet.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="wbemPrivilegeAudit"></span><span id="wbemprivilegeaudit"></span><span id="WBEMPRIVILEGEAUDIT"></span>**wbemprivilegeaudit**
+<span id="wbemPrivilegeAudit"></span><span id="wbemprivilegeaudit"></span><span id="WBEMPRIVILEGEAUDIT"></span>**wbemPrivilegeAudit**
 </dt> <dd> <dl> <dt>
 
 20 (0x14)
@@ -397,16 +397,16 @@ Erforderlich, um den Arbeitsspeicher eines Prozesses zu Debuggen und anzupassen,
 
 
 
-C++-Konstante: SE-Überwachungs **\_ \_ Name** Zeichen **Folge: "** ".
+C++-Konstante: **SE \_ AUDIT \_ NAME-Zeichenfolge:** **SeAuditPrivilege**
 
-Kurzname für Skripterstellung: **Audit**
+Kurzname der Skripterstellung: **Überwachung**
 
-Erforderlich, um Überwachungs Einträge im NT-Sicherheitsprotokoll zu generieren. Nur sichere Server sollten über dieses Privileg verfügen.
+Erforderlich, um Überwachungseinträge im NT-Sicherheitsprotokoll zu generieren. Nur sichere Server sollten über diese Berechtigung verfügen.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="wbemPrivilegeSystemEnvironment"></span><span id="wbemprivilegesystemenvironment"></span><span id="WBEMPRIVILEGESYSTEMENVIRONMENT"></span>**wbemprivilegesystemenvironment**
+<span id="wbemPrivilegeSystemEnvironment"></span><span id="wbemprivilegesystemenvironment"></span><span id="WBEMPRIVILEGESYSTEMENVIRONMENT"></span>**wbemPrivilegeSystemEnvironment**
 </dt> <dd> <dl> <dt>
 
 21 (0x15)
@@ -414,16 +414,16 @@ Erforderlich, um Überwachungs Einträge im NT-Sicherheitsprotokoll zu generiere
 
 
 
-C++-Konstante: namens Zeichenfolge für die **SE- \_ System Umgebung: \_ \_** **sesystemenvironment Privilege**
+C++-Konstante: **SE \_ SYSTEM ENVIRONMENT \_ \_ NAME-Zeichenfolge:** **SeSystemEnvironmentPrivilege**
 
-Kurzname für Skripterstellung: **systemenvironment**
+Kurzname der Skripterstellung: **SystemUmgebung**
 
-Erforderlich, um das nicht flüchtige RAM von Systemen zu ändern, die diese Art von Arbeitsspeicher zum Speichern von Konfigurationsdaten verwenden.
+Erforderlich, um den nicht flüchtigen RAM von Systemen zu ändern, die diesen Speichertyp zum Speichern von Konfigurationsdaten verwenden.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="wbemPrivilegeChangeNotify"></span><span id="wbemprivilegechangenotify"></span><span id="WBEMPRIVILEGECHANGENOTIFY"></span>**wbemprivilegechangenotifizieren**
+<span id="wbemPrivilegeChangeNotify"></span><span id="wbemprivilegechangenotify"></span><span id="WBEMPRIVILEGECHANGENOTIFY"></span>**wbemPrivilegeChangeNotify**
 </dt> <dd> <dl> <dt>
 
 22 (0x16)
@@ -431,16 +431,16 @@ Erforderlich, um das nicht flüchtige RAM von Systemen zu ändern, die diese Art
 
 
 
-C++-Konstante: **SE- \_ Änderungs \_ \_ Name** Zeichenfolge: " **abchangenotifyprivilege** "
+C++-Konstante: **SE \_ CHANGE NOTIFY \_ \_ NAME** Zeichenfolge: **SeChangeNotifyPrivilege**
 
-Kurzname für Skripterstellung: **changenotifizieren**
+Kurzname der Skripterstellung: **ChangeNotify**
 
-Ist erforderlich, um Benachrichtigungen über Änderungen an Dateien oder Verzeichnissen zu empfangen und durchgängige Zugriffs Überprüfungen zu umgehen. Dieses Privileg ist standardmäßig für alle Benutzer aktiviert.
+Erforderlich, um Benachrichtigungen über Änderungen an Dateien oder Verzeichnissen zu empfangen und Überprüfungen des Durchlaufzugriffs zu umgehen. Diese Berechtigung ist standardmäßig für alle Benutzer aktiviert.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="wbemPrivilegeRemoteShutdown"></span><span id="wbemprivilegeremoteshutdown"></span><span id="WBEMPRIVILEGEREMOTESHUTDOWN"></span>**wbemprivilegeremuteshutdown**
+<span id="wbemPrivilegeRemoteShutdown"></span><span id="wbemprivilegeremoteshutdown"></span><span id="WBEMPRIVILEGEREMOTESHUTDOWN"></span>**wbemPrivilegeRemoteShutdown**
 </dt> <dd> <dl> <dt>
 
 23 (0x17)
@@ -448,16 +448,16 @@ Ist erforderlich, um Benachrichtigungen über Änderungen an Dateien oder Verzei
 
 
 
-C++-Konstante: **SE \_ Remote \_ Shutdown \_ Name** String: **SeRemoteShutdownPrivilege**
+C++-Konstante: **SE ZEICHENFOLGE REMOTE SHUTDOWN \_ \_ \_ NAME:** **SeRemoteShutdownPrivilege**
 
-Kurzname für Skripterstellung: **RemoteShutdown**
+Kurzname der Skripterstellung: **RemoteShutdown**
 
-Zum Herunterfahren eines Remote Computers erforderlich.
+Erforderlich, um einen Remotecomputer herunterzufahren.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="wbemPrivilegeUndock"></span><span id="wbemprivilegeundock"></span><span id="WBEMPRIVILEGEUNDOCK"></span>**wbemprivilegeundock**
+<span id="wbemPrivilegeUndock"></span><span id="wbemprivilegeundock"></span><span id="WBEMPRIVILEGEUNDOCK"></span>**wbemPrivilegeUndock**
 </dt> <dd> <dl> <dt>
 
 24 (0x18)
@@ -465,16 +465,16 @@ Zum Herunterfahren eines Remote Computers erforderlich.
 
 
 
-C++-Konstante: **SE \_ Undock- \_ namens** Zeichenfolge: " **sundockprivilege** "
+C++-Konstante: **SE \_ UNDOCK \_ NAME-Zeichenfolge:** **SeUndockPrivilege**
 
-Skript Kurzname: **Abdocken**
+Kurzname der Skripterstellung: **Abdocken**
 
-Ist erforderlich, um einen Laptop von einer Docking Station zu entfernen.
+Erforderlich, um einen Laptop von einer Dockingstation zu entfernen.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="wbemPrivilegeSyncAgent"></span><span id="wbemprivilegesyncagent"></span><span id="WBEMPRIVILEGESYNCAGENT"></span>**wbemprivilegesyncagent**
+<span id="wbemPrivilegeSyncAgent"></span><span id="wbemprivilegesyncagent"></span><span id="WBEMPRIVILEGESYNCAGENT"></span>**wbemPrivilegeSyncAgent**
 </dt> <dd> <dl> <dt>
 
 25 (0x19)
@@ -482,16 +482,16 @@ Ist erforderlich, um einen Laptop von einer Docking Station zu entfernen.
 
 
 
-C++-Konstante: Name Zeichenfolge für den **SE \_ Sync- \_ Agent \_** : **sesyncagentprivilege**
+C++-Konstante: **SE \_ SYNC AGENT \_ \_ NAME-Zeichenfolge:** **SeSyncAgentPrivilege**
 
-Kurzname für Skripterstellung: **SyncAgent**
+Kurzname der Skripterstellung: **SyncAgent**
 
-Erforderlich zum Synchronisieren von Verzeichnisdienst Daten.
+Erforderlich zum Synchronisieren von Verzeichnisdienstdaten.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="wbemPrivilegeEnableDelegation"></span><span id="wbemprivilegeenabledelegation"></span><span id="WBEMPRIVILEGEENABLEDELEGATION"></span>**wbemprivilegeenabledelegation**
+<span id="wbemPrivilegeEnableDelegation"></span><span id="wbemprivilegeenabledelegation"></span><span id="WBEMPRIVILEGEENABLEDELEGATION"></span>**wbemPrivilegeEnableDelegation**
 </dt> <dd> <dl> <dt>
 
 26 (0x1A)
@@ -499,16 +499,16 @@ Erforderlich zum Synchronisieren von Verzeichnisdienst Daten.
 
 
 
-C++-Konstante: **SE \_ Aktivieren der \_ Delegierungs \_ namens** Zeichenfolge: **seenabledelegationprivilege**
+C++-Konstante: **SE \_ ENABLE DELEGATION \_ \_ NAME** Zeichenfolge: **SeEnableDelegationPrivilege**
 
-Skript Kurzname: **enabledelegation**
+Kurzname der Skripterstellung: **EnableDelegation**
 
-Erforderlich, damit Computer-und Benutzerkonten für die Delegierung vertrauenswürdig sind.
+Erforderlich, damit Computer- und Benutzerkonten für die Delegierung als vertrauenswürdig eingestuft werden können.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="wbemPrivilegeManageVolume"></span><span id="wbemprivilegemanagevolume"></span><span id="WBEMPRIVILEGEMANAGEVOLUME"></span>**wbemprivilegemanagevolume**
+<span id="wbemPrivilegeManageVolume"></span><span id="wbemprivilegemanagevolume"></span><span id="WBEMPRIVILEGEMANAGEVOLUME"></span>**wbemPrivilegeManageVolume**
 </dt> <dd> <dl> <dt>
 
 27 (0x1B)
@@ -516,9 +516,9 @@ Erforderlich, damit Computer-und Benutzerkonten für die Delegierung vertrauensw
 
 
 
-C++-Konstante: **SE \_ Manage \_ Volume \_ Name** String: " **smanagevolumeprivilege** "
+C++-Konstante: **SE \_ MANAGE VOLUME \_ \_ NAME-Zeichenfolge:** **SeManageVolumePrivilege**
 
-Skript Kurzname: **managevolume**
+Kurzname der Skripterstellung: **ManageVolume**
 
 Erforderlich zum Ausführen von Volumewartungsaufgaben.
 
@@ -533,22 +533,22 @@ Erforderlich zum Ausführen von Volumewartungsaufgaben.
 |-------------------------------------|-----------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows Vista<br/>                                                                |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2008<br/>                                                          |
-| Header<br/>                   | <dl> <dt>Wbemdisp. h</dt> </dl>   |
-| IDL<br/>                      | <dl> <dt>Wbemdisp. idl</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Wbemdisp.h</dt> </dl>   |
+| Idl<br/>                      | <dl> <dt>Wbemdisp.idl</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[Skript-API-Konstanten](scripting-api-constants.md)
+[Skripterstellungs-API-Konstanten](scripting-api-constants.md)
 </dt> <dt>
 
-[**Austausch Sicherheit**](swbemsecurity.md)
+[**SWbemSecurity**](swbemsecurity.md)
 </dt> <dt>
 
-[**Wbemprivilegeumum**](/windows/desktop/api/Wbemdisp/ne-wbemdisp-wbemprivilegeenum)
+[**WbemPrivilegeEnum**](/windows/desktop/api/Wbemdisp/ne-wbemdisp-wbemprivilegeenum)
 </dt> <dt>
 
 [Ausführen privilegierter Vorgänge](executing-privileged-operations.md)

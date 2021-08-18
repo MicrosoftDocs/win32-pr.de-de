@@ -4,20 +4,20 @@ ms.assetid: 87331C1D-F468-4CA4-92BD-D4E5D4E930BC
 title: Sicherheit (Windows 7 und Windows Server 2008 R2 Application Quality Cookbook)
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 9f320f4cb561079380e19a969eba95f3f6b321fb
-ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
+ms.openlocfilehash: 7d392f5bf14997962173b9054baba861003877d851d6bd62a947b15757feec23
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2021
-ms.locfileid: "108116228"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118994660"
 ---
 # <a name="security-windows-7-and-windows-server-2008-r2-application-quality-cookbook"></a>Sicherheit (Windows 7 und Windows Server 2008 R2 Application Quality Cookbook)
 
-Ab Windows Internet Explorer 7 wird Windows Internet Explorer in einem Sicherheitskontext namens *Geschützter Modus* ausgeführt, wenn Benutzer sie unter dem Betriebssystem Windows Vista oder einer neueren Version ausführen. Dieser Modus wird Internet Explorer in einer Einstellung mit niedrigeren Berechtigungen als eine Standardbenutzeranwendung ausgeführt, sodass bestimmte Funktionen eingeschränkt sind, insbesondere ActiveX-Steuerelemente und bestimmte Arten von Plug-Ins. Weitere Informationen zum geschützten Modus in Internet Explorer und seinen Auswirkungen auf die Kompatibilität finden Sie unter [Understanding and Working in Protected Mode Internet Explorer](/previous-versions/windows/internet-explorer/ie-developer/) in der MSDN Library.
+Ab Version Windows Internet Explorer 7 wird Windows Internet Explorer in einem Sicherheitskontext namens Geschützter *Modus* ausgeführt, wenn Benutzer ihn unter dem Betriebssystem Windows Vista oder einer neueren Version ausführen. Dieser Modus Internet Explorer in einer Einstellung mit niedrigeren Berechtigungen als eine Standardbenutzeranwendung ausgeführt, sodass bestimmte Funktionen eingeschränkt sind, insbesondere ActiveX-Steuerelemente und bestimmte Arten von Plug-Ins. Weitere Informationen zum geschützten Modus in Internet Explorer und seinen Auswirkungen auf die Kompatibilität finden Sie unter [Understanding and Working in Protected Mode Internet Explorer](/previous-versions/windows/internet-explorer/ie-developer/) in der MSDN Library.
 
-Standardmäßig ermöglicht Windows Internet Explorer 8 auch die Verhinderung der Datenausführung (Data Execution Prevention, DEP), wodurch Anwendungen das Ausführen von beliebigem Code bei Onlineangriffen vermeiden können. Einige Add-Ons verwenden diese Sicherheitsfunktion jedoch möglicherweise nicht (z. B. alle Add-Ons, die nicht nur codeausgeführt werden sollen, der sich im Arbeitsspeicher befindet, der speziell als ausführbare Datei markiert wurde, z. B. Anwendungen, die mit einer älteren Version des ATL-Frameworks (ActiveX Template Library) erstellt wurden).
+Standardmäßig aktiviert Windows Internet Explorer 8 auch die Datenausführungsverhindung (Data Execution Prevention, DEP), mit der Anwendungen verhindern können, dass bei Onlineangriffen beliebiger Code ausgeführt wird. Einige Add-Ons verwenden dieses Sicherheitsfeature jedoch möglicherweise nicht (z. B. alle Add-Ons, die nicht für die Ausführung von nur Code im Arbeitsspeicher ausgelegt sind, der speziell als ausführbare Datei gekennzeichnet wurde, z. B. Anwendungen, die mit einer älteren Version des ATL-Frameworks (ActiveX Template Library) erstellt wurden).
 
-Internet Explorer 8 schützt Benutzer auch vor potenziellen Sicherheitsrisiken, die Skripts verwenden. Beispielsweise können Sie nur durch explizite Benutzerinteraktion von einer URL in einer weniger vertrauenswürdigen Zone zu einer URL in einer vertrauenswürdigeren Zone navigieren. Sie können auch bestimmte Elemente der Benutzeroberfläche des Browsers (z. B. die Adressleiste) nicht in einer nicht vertrauenswürdigen Zone (Internetzone) ausblenden.
+Internet Explorer 8 schützt Benutzer auch vor potenziellen Sicherheitsrisiken, die Skripts verwenden. Beispielsweise können Sie nicht von einer URL in einer weniger vertrauenswürdigen Zone zu einer URL in einer vertrauenswürdigeren Zone navigieren, außer durch explizite Benutzerinteraktion. Sie können auch bestimmte Elemente der Benutzeroberfläche des Browsers (z. B. die Adressleiste) in einer nicht vertrauenswürdigen Zone (Internet) nicht ausblenden.
 
 ## <a name="related-topics"></a>Zugehörige Themen
 

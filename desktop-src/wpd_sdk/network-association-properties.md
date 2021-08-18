@@ -1,7 +1,7 @@
 ---
-description: Tragbare Windows-Geräte unterstützen die folgenden Netzwerk Zuordnungs Eigenschaften.
+description: Windows Portable Geräte unterstützen die folgenden Netzwerkzuordnungseigenschaften.
 ms.assetid: 5e1b3e8d-9620-4b68-b7ef-1642404ed6ed
-title: Netzwerk Zuordnungs Eigenschaften (portabledevice. h)
+title: Netzwerkzuordnungseigenschaften (PortableDevice.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,23 +13,23 @@ api_type:
 - HeaderDef
 api_location:
 - PortableDevice.h
-ms.openlocfilehash: 41e40e456d4671d1aa8fb190274afd2f5ace98b9
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: ebad4534976d14e6b620a8e42b70e8ece68022201cec5235295d199e453ef818
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106351335"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118963529"
 ---
-# <a name="network-association-properties"></a>Netzwerk Zuordnungs Eigenschaften
+# <a name="network-association-properties"></a>Netzwerkzuordnungseigenschaften
 
-Tragbare Windows-Geräte unterstützen die folgenden Netzwerk Zuordnungs Eigenschaften.
+Windows Portable Geräte unterstützen die folgenden Netzwerkzuordnungseigenschaften.
 
 
 
 | Eigenschaft                                                  | VarType                   | BESCHREIBUNG                                                                                                                                                                                                                                                                                                                                                                                                                                                                              |
 |-----------------------------------------------------------|---------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| **WPD-Netzwerk Zuordnungs \_ \_ \_ Host \_ Netzwerk \_ -Bezeichner** | **VT \_ Vector \| VT \_ UI1** | Die Liste der für diese Zuordnung gültigen EUI-64-Host Bezeichner. Dies ist ein Bytearray, das eine ganzzahlige Anzahl von physischen EUI-64-Netzwerkadressen enthält. Diese EUI-64-Werte sind die physischen Netzwerkadressen, die auf dem Host zur Netzwerk Zuordnungs Zeit verfügbar sind. Wenn der Host über Mac-48 physische Netzwerkadressen (typisch für IPv4-Netzwerke) verfügt, wird jede Mac-48-Adresse in der EUI-64-Adresse als die zwei Hälften der Mac-48-Adresse als getrennt durch FF-FF codiert.<br/> |
-| **WPD- \_ Netzwerk Zuordnung \_ \_ X509V3SEQUENCE**             | **VT \_ Vector \| VT \_ UI1** | Die Sequenz der X. 509 v3-Zertifikate, die für die TLS-Server Authentifizierung bereitgestellt werden sollen.                                                                                                                                                                                                                                                                                                                                                                                                      |
+| **\_ \_ \_ \_ WPD-NETZWERKZUORDNUNGSHOST-NETZWERKBEZEICHNER \_** | **VT \_ VECTOR \| VT \_ UI1** | Die Liste der EUI-64-Hostbezeichner, die für diese Zuordnung gültig sind. Dies ist ein Bytearray, das eine ganzzahlige Anzahl physischer Netzwerkadressen vom EuI-64 enthält. Diese EUI-64-Werte sind die physischen Netzwerkadressen, die zum Zeitpunkt der Netzwerkzuordnung auf dem Host verfügbar sind. Wenn der Host über physische MAC-48-Netzwerkadressen verfügt (typisch für IPv4-Netzwerke), wird jede MAC-48-Adresse in der EUI-64-Adresse als die beiden Hälften der MAC-48-Adresse codiert, die durch FF-FF getrennt sind.<br/> |
+| **\_WPD-NETZWERKZUORDNUNG \_ \_ X509V3SEQUENCE**             | **VT \_ VECTOR \| VT \_ UI1** | Die Sequenz von X.509 v3-Zertifikaten, die für die TLS-Serverauthentifizierung bereitgestellt werden sollen.                                                                                                                                                                                                                                                                                                                                                                                                      |
 
 
 
@@ -41,15 +41,15 @@ Tragbare Windows-Geräte unterstützen die folgenden Netzwerk Zuordnungs Eigensc
 
 | Anforderung | Wert |
 |-------------------|---------------------------------------------------------------------------------------------|
-| Header<br/> | <dl> <dt>Portabledevice. h</dt> </dl> |
+| Header<br/> | <dl> <dt>PortableDevice.h</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**WPD-Eigenschaften und-Attribute**](properties-and-attributes.md)
+[**WPD-Eigenschaften und -Attribute**](properties-and-attributes.md)
 </dt> </dl>
 
  

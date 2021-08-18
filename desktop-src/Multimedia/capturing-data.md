@@ -3,20 +3,20 @@ title: Erfassen von Daten
 description: Erfassen von Daten
 ms.assetid: de029673-9929-40f9-b29b-2598e1e5c988
 keywords:
-- capcapturesequence-Makro
-- capfilesaveas-Makro
+- capCaptureSequence-Makro
+- capFileSaveAs-Makro
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: f24b2110da9a85faaa991e67efdd1ef48e3d9c29
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: 764ff00dedcc044ed5234f8b647b08eaded35ce191bcb56e05cb35f47450677b
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "104037316"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118941298"
 ---
 # <a name="capturing-data"></a>Erfassen von Daten
 
-Im folgenden Beispiel wird das [**capcapturesequence**](/windows/desktop/api/Vfw/nf-vfw-capcapturesequence) -Makro zum Starten der Video Erfassung und das [**capfilesaveas**](/windows/desktop/api/Vfw/nf-vfw-capfilesaveas) -Makro zum Kopieren der aufgezeichneten Daten aus der Erfassungs Datei in die Datei NEWFILE.AVI verwendet.
+Im folgenden Beispiel werden das [**CapCaptureSequence-Makro**](/windows/desktop/api/Vfw/nf-vfw-capcapturesequence) zum Starten der Videoaufnahme und das [**capFileSaveAs-Makro**](/windows/desktop/api/Vfw/nf-vfw-capfilesaveas) verwendet, um die erfassten Daten aus der Aufzeichnungsdatei in die Datei NEWFILE.AVI zu kopieren.
 
 
 ```C++
@@ -38,12 +38,12 @@ capFileSaveAs(hWndC, szNewName);
 
 <dl> <dt>
 
-[Verwenden der Video Erfassung](using-video-capture.md)
+[Verwenden von Video capture](using-video-capture.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

@@ -1,6 +1,6 @@
 ---
-description: 'Erfahren Sie mehr über: esentinvalidloggedoperationexception-Konstruktor'
-title: Esentinvalidloggedoperationexception-Konstruktor
+description: 'Weitere Informationen finden Sie unter: EsentInvalidLoggedOperationException-Konstruktor'
+title: EsentInvalidLoggedOperationException-Konstruktor
 TOCTitle: 'EsentInvalidLoggedOperationException constructor '
 ms:assetid: M:Microsoft.Isam.Esent.Interop.EsentInvalidLoggedOperationException.#ctor
 ms:mtpsurl: https://msdn.microsoft.com/library/microsoft.isam.esent.interop.esentinvalidloggedoperationexception.esentinvalidloggedoperationexception(v=EXCHG.10)
@@ -24,19 +24,19 @@ api_type:
 api_location:
 - Microsoft.Isam.Esent.Interop.dll
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: 63f283c9ad67e860656e2fcec2b35290d872ea86
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: fcb070d34bdf09a12617c588ba1c1b713f9e3f4f72358aed76ed0c83669e79ef
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "104216138"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119041108"
 ---
-# <a name="esentinvalidloggedoperationexception-constructor"></a>Esentinvalidloggedoperationexception-Konstruktor
+# <a name="esentinvalidloggedoperationexception-constructor"></a>EsentInvalidLoggedOperationException-Konstruktor
 
-Initialisiert eine neue Instanz der esentinvalidloggedoperationexception-Klasse.
+Initialisiert eine neue Instanz der EsentInvalidLoggedOperationException-Klasse.
 
-**Namespace:**  [Microsoft. ISAM. ESENT. Interop](./microsoft.isam.esent.interop-namespace.md)  
-**Assembly:**  Microsoft. ISAM. ESENT. Interop (in Microsoft.Isam.Esent.Interop.dll)
+**Namespace:**  [Microsoft.Isam.Esent.Interop](./microsoft.isam.esent.interop-namespace.md)  
+**Assembly:**  Microsoft.Isam.Esent.Interop (in Microsoft.Isam.Esent.Interop.dll)
 
 ## <a name="syntax"></a>Syntax
 
@@ -52,12 +52,12 @@ Dim instance As New EsentInvalidLoggedOperationException()
 public EsentInvalidLoggedOperationException()
 ```
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
-#### <a name="reference"></a>Referenz
+#### <a name="reference"></a>Verweis
 
-[Esentinvalidloggedoperationexception-Klasse](./esentinvalidloggedoperationexception-class.md)
+[EsentInvalidLoggedOperationException-Klasse](./esentinvalidloggedoperationexception-class.md)
 
-[Esentinvalidloggedoperationexception-Member](./esentinvalidloggedoperationexception-members.md)
+[EsentInvalidLoggedOperationException-Member](./esentinvalidloggedoperationexception-members.md)
 
-[Microsoft. ISAM. ESENT. Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)
+[Microsoft.Isam.Esent.Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)

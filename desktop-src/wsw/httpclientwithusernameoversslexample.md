@@ -1,29 +1,29 @@
 ---
-title: Httpclientwithusernameoversslexample
-description: Dieses Beispiel zeigt einen HTTP-Client, der Anforderungs-/Antwort-Nachrichten mit einem Benutzernamen über SSL-Sicherheit im gemischten Modus sendet.
+title: HttpClientWithUsernameOverSslExample
+description: Dieses Beispiel zeigt einen HTTP-Client, der Anforderung-Antwort-Nachrichten mit Benutzername über SSL-Sicherheit im gemischten Modus sendet.
 ms.assetid: aaaad584-d861-4abd-9d76-95aba5090676
 keywords:
-- Httpclientwithusernameoversslexample Native Webdienste
-- Wwsapi
+- HttpClientWithUsernameOverSslExample Native-Web-Services
+- WWSAPI
 - WWS
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: ede0ff3f22ff4c12703d68d978269fd4360e9a20
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: ac268dba6b81765d4e126a4985433ea720dc750c932a6e349d48d77bff3b6331
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "104037153"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118963329"
 ---
-# <a name="httpclientwithusernameoversslexample"></a>Httpclientwithusernameoversslexample
+# <a name="httpclientwithusernameoversslexample"></a>HttpClientWithUsernameOverSslExample
 
-Dieses Beispiel zeigt einen HTTP-Client, der Anforderungs-/Antwort-Nachrichten mit einem Benutzernamen über SSL-Sicherheit im gemischten Modus sendet. In diesem Setup wird die Transport Verbindung von SSL geschützt (signiert, verschlüsselt), der auch die Server Authentifizierung bereitstellt. Die Client Authentifizierung wird von einem Paar aus Benutzername und Kennwort in einem WS-Security-Header in der Nachricht bereitgestellt.
+Dieses Beispiel zeigt einen HTTP-Client, der Anforderung-Antwort-Nachrichten mit Benutzername über SSL-Sicherheit im gemischten Modus sendet. In diesem Setup wird die Transportverbindung durch SSL geschützt (signiert, verschlüsselt), wodurch auch die Serverauthentifizierung ermöglicht wird. Die Clientauthentifizierung wird durch ein Benutzername-Kennwort-Paar in einem WS-Security-Header in der Nachricht bereitgestellt.
 
--   [Httpclientwithusernameoverssl. cpp](#httpclientwithusernameoversslcpp)
--   [PurchaseOrder. WSDL](#purchaseorderwsdl)
+-   [HttpClientWithUsernameOverSsl.cpp](#httpclientwithusernameoversslcpp)
+-   [PurchaseOrder.wsdl](#purchaseorderwsdl)
 -   [Makefile](#makefile)
 
-## <a name="httpclientwithusernameoversslcpp"></a>Httpclientwithusernameoverssl. cpp
+## <a name="httpclientwithusernameoversslcpp"></a>HttpClientWithUsernameOverSsl.cpp
 
 
 ```C++
@@ -436,7 +436,7 @@ Exit:
 
 
 
-## <a name="purchaseorderwsdl"></a>PurchaseOrder. WSDL
+## <a name="purchaseorderwsdl"></a>PurchaseOrder.wsdl
 
 ``` syntax
 <wsdl:definitions 
@@ -580,9 +580,9 @@ clean:
     $(CLEANUP)
 ```
 
- 
+ 
 
- 
+ 
 
 
 

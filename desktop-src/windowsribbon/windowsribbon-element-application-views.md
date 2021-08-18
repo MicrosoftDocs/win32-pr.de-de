@@ -1,9 +1,9 @@
 ---
-title: Application. views (Eigenschaft)
-description: Stellt einen Container für jede Menüband-frameworkansicht dar, insbesondere das Menüband und das contextpopup.
+title: Application.Views-Eigenschaft
+description: Stellt einen Container für jede Menübandframeworkansicht dar, insbesondere das Menüband und contextPopup.
 ms.assetid: e7549b8b-0f95-477a-9024-1a99ee1412c2
 keywords:
-- Application. views-Eigenschaften Fenster (Menüband)
+- Application.Views-Eigenschaft Windows Menüband
 topic_type:
 - apiref
 api_name:
@@ -12,16 +12,16 @@ api_type:
 - NA
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 57e7d106d346a790ee3bd8879b2367f38341f0a9
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: fe063397698a74da0421cf0c9c3b2ef46861f1477e0f4ac99fe5d6e6063c7251
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "106339970"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118964309"
 ---
-# <a name="applicationviews-property"></a>Application. views (Eigenschaft)
+# <a name="applicationviews-property"></a>Application.Views-Eigenschaft
 
-Stellt einen Container für jede Menüband-frameworkansicht dar, insbesondere das [**Menüband**](windowsribbon-element-ribbon.md) und das [**contextpopup**](windowsribbon-element-contextpopup.md).
+Stellt einen Container für jede Menübandframeworkansicht dar, insbesondere [**das Menüband**](windowsribbon-element-ribbon.md) und [**den ContextPopup.**](windowsribbon-element-contextpopup.md)
 
 ## <a name="usage"></a>Verbrauch
 
@@ -41,7 +41,7 @@ Es gibt keine Attribute.
 
 | Element                                                               | BESCHREIBUNG                                        |
 |-----------------------------------------------------------------------|----------------------------------------------------|
-| [**Contextpopup**](windowsribbon-element-contextpopup.md)<br/> | Kann ein-oder mehrmals vorkommen<br/> <br/> |
+| [**ContextPopup**](windowsribbon-element-contextpopup.md)<br/> | Kann ein oder mehrere Male auftreten.<br/> <br/> |
 | [**Menüband**](windowsribbon-element-ribbon.md)<br/>             | Muss genau einmal auftreten<br/> <br/>     |
 
 
@@ -52,19 +52,19 @@ Es gibt keine Attribute.
 
 | Element                                                             |
 |---------------------------------------------------------------------|
-| [**Application**](windowsribbon-element-application.md)<br/> |
+| [**Anwendung**](windowsribbon-element-application.md)<br/> |
 
 
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
 Erforderlich.
 
-Muss für jedes [**Anwendungs**](windowsribbon-element-application.md) Element genau einmal auftreten.
+Muss genau einmal für jedes [**Application-Element**](windowsribbon-element-application.md) auftreten.
 
 ## <a name="examples"></a>Beispiele
 
-Das folgende Beispiel zeigt ein **Application. views** -Element, das ein Manifest von Menü Band Steuerelementen enthält, die jeweils über einen Verweis auf einen Befehl verfügen, der im [**Application. Commands**](windowsribbon-element-application-commands.md) -Element deklariert ist.
+Das folgende Beispiel zeigt ein **Application.Views-Element,** das ein Manifest von Menübandsteuerelementen enthält, die jeweils einen Verweis auf einen Befehl enthalten, der im [**Application.Commands-Element deklariert**](windowsribbon-element-application-commands.md) ist.
 
 
 ```C++
@@ -104,16 +104,16 @@ Das folgende Beispiel zeigt ein **Application. views** -Element, das ein Manifes
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows 7 \[ -Desktop-Apps\]<br/>              |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 R2 \[ -Desktop-Apps\]<br/> |
+| Unterstützte Mindestversion (Client)<br/> | Windows 7 \[ Desktop-Apps\]<br/>              |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server 2008 \[ R2-Desktop-Apps\]<br/> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Application. Commands**](windowsribbon-element-application-commands.md)
+[**Application.Commands**](windowsribbon-element-application-commands.md)
 </dt> </dl>
 
  

@@ -1,9 +1,9 @@
 ---
-title: Slider. BackgroundColor
-description: Das BackgroundColor-Attribut gibt die Hintergrundfarbe des Schieberegler-Steuer Elements an oder ruft diese ab.
+title: SLIDER.backgroundColor
+description: Das backgroundColor-Attribut gibt die Hintergrundfarbe des Schiebereglersteuerelements an oder ruft sie ab.
 ms.assetid: 8f2c48ec-29f5-4fbe-aa62-c7cfb8a8678c
 keywords:
-- Schieberegler. BackgroundColor-Fenster Media Player
+- SLIDER.backgroundColor Windows Media Player
 topic_type:
 - apiref
 api_name:
@@ -12,16 +12,16 @@ api_type:
 - NA
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 06cc595af13b28541fcc570e130da4e804fdeafe
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 4fc2de30392c58cfad151e2d3c209f0407880a47522a536bf08dbe42d7f56dc0
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106365939"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118995230"
 ---
-# <a name="sliderbackgroundcolor"></a>Slider. BackgroundColor
+# <a name="sliderbackgroundcolor"></a>SLIDER.backgroundColor
 
-Das **BackgroundColor** -Attribut gibt die Hintergrundfarbe des Schieberegler-Steuer Elements an oder ruft diese ab.
+Das **backgroundColor-Attribut** gibt die Hintergrundfarbe des Schiebereglersteuerelements an oder ruft sie ab.
 
 ``` syntax
         elementID.backgroundColor
@@ -29,17 +29,17 @@ Das **BackgroundColor** -Attribut gibt die Hintergrundfarbe des Schieberegler-St
 
 ## <a name="possible-values"></a>Mögliche Werte
 
-Dieses Attribut ist eine Lese- **/schreibzeichenfolge** mit einem beliebigen Microsoft Internet Explorer-Farbwert. Er besitzt keinen Standardwert.
+Dieses Attribut ist eine **Zeichenfolge** mit Lese-/Schreibzugriff, die einen beliebigen Microsoft Internet Explorer Farbwert enthält. Er besitzt keinen Standardwert.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Ein grundlegendes Schieberegler-Steuerelement kann erstellt werden, indem **Background Color** oder **BackgroundImage** und **ForegroundColor** oder **foregroundimage** angegeben werden.
+Ein einfaches Schieberegler-Steuerelement kann erstellt werden, indem **backgroundColor** oder **backgroundImage** und **foregroundColor** oder **foregroundImage** angegeben werden.
 
-Wenn die Farben verwendet werden, definieren die Abmessungen des Schieberegler-Steuer Elements den Bereich, der von der Hintergrundfarbe ausgefüllt wird. Die Vordergrundfarbe deckt die Hintergrundfarbe ab, wenn die Schiebereglerposition zunimmt.
+Bei Verwendung der Farben definieren die Abmessungen des Schieberegler-Steuerelements den Bereich, der durch die Hintergrundfarbe gefüllt wird. Die Vordergrundfarbe deckt die Hintergrundfarbe ab, wenn die Position des Schiebereglers zunimmt.
 
-Geben Sie die **backgroundendcolor** -oder **foregroundendcolor** -Attribute an, um eine Verlaufs Füllung des Bereichs zu erstellen, der durch die Hintergrund-oder Vordergrundfarbe belegt ist.
+Um eine Farbverlaufsfüllung des Bereichs zu erstellen, der von der Hintergrund- oder Vordergrundfarbe belegt wird, geben Sie die Attribute **backgroundEndColor** oder **foregroundEndColor** an.
 
-Weitere Informationen finden Sie unter *customslider*. [positionImage](customslider-positionimage.md) -Attribut für ein Beispiel, das veranschaulicht, wie die Attribute des **Slider** -Elements verwendet werden.
+Weitere Informationen finden Sie unter *UNTER DEM -Artikel.* [das attribut positionImage](customslider-positionimage.md) für ein Beispiel, das veranschaulicht, wie die Attribute des **SLIDER-Elements** verwendet werden.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -47,33 +47,33 @@ Weitere Informationen finden Sie unter *customslider*. [positionImage](customsli
 
 | Anforderung | Wert |
 |--------------------|------------------------------------------------------|
-| Version<br/> | Windows Media Player, Version 7,0 oder höher<br/> |
+| Version<br/> | Windows Media Player Version 7.0 oder höher<br/> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Farb Verweis**](color-reference.md)
+[**Farbreferenz**](color-reference.md)
 </dt> <dt>
 
-[**Slider-Element**](slider-element.md)
+[**SLIDER-Element**](slider-element.md)
 </dt> <dt>
 
-[**Slider. backgroundendcolor**](slider-backgroundendcolor.md)
+[**SLIDER.backgroundEndColor**](slider-backgroundendcolor.md)
 </dt> <dt>
 
-[**Slider. BackgroundImage**](slider-backgroundimage.md)
+[**SLIDER.backgroundImage**](slider-backgroundimage.md)
 </dt> <dt>
 
-[**Slider. ForegroundColor**](slider-foregroundcolor.md)
+[**SLIDER.foregroundColor**](slider-foregroundcolor.md)
 </dt> <dt>
 
-[**Slider. foregroundendcolor**](slider-foregroundendcolor.md)
+[**SLIDER.foregroundEndColor**](slider-foregroundendcolor.md)
 </dt> <dt>
 
-[**Slider. foregroundimage**](slider-foregroundimage.md)
+[**SLIDER.foregroundImage**](slider-foregroundimage.md)
 </dt> </dl>
 
  

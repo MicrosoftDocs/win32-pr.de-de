@@ -3,7 +3,7 @@
   items:
     - name: Einführung
       href: introduction.md
-    - name: Solide Grundlage
+    - name: Solid Foundation
       href: solid-foundation.md
       items:
         - name: Kompatibilität und Zuverlässigkeit
@@ -14,37 +14,37 @@
           href: security.md
         - name: Leistung
           href: performance.md
-        - name: Dokumente und Dokument Peripheriegeräte
+        - name: Peripheriegeräte für Dokumente und Dokumente
           href: documents-and-document-peripherals.md
-        - name: Barrierefreiheit und globaler Support
+        - name: Barrierefreiheit und globale Unterstützung
           href: accessibility-and-global-support.md
-    - name: Umfangreichere Anwendungsumgebungen
+    - name: Vielfältigere Anwendungserfahrungen
       href: richer-application-experiences.md
       items:
-        - name: Intuitive Benutzer Darstellung
+        - name: Intuitive Benutzererfahrung
           href: intuitive-user-experience.md
-        - name: Handschrift und Freihand
+        - name: Handschrift und Ink
           href: handwriting-and-ink.md
-        - name: Desktop Darstellung
+        - name: Desktoperfahrung
           href: the-desktop-experience.md
         - name: Verwalten von Dateien und Daten
           href: managing-files-and-data.md
         - name: Hohe DPI-Werte
           href: high-dpi.md
-        - name: High Fidelity-Grafiken mit DirectX
+        - name: High Fidelity Graphics mit DirectX
           href: high-fidelity-graphics-with-directx.md
         - name: Medienplattform
           href: media-platform.md
         - name: Geräte
           href: devices.md
-    - name: Das beste von Windows und dem Web
+    - name: The Best of Windows and the Web
       href: the-best-of-windows-and-the-web.md
       items:
         - name: Dienste
           href: services.md
-        - name: Verbund Suche
+        - name: Verbundsuche
           href: federated-search.md
-        - name: Sensor Plattform
+        - name: Sensorplattform
           href: sensor-platform.md
         - name: Internet Explorer 8
           href: internet-explorer-8.md

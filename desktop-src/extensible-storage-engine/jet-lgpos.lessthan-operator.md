@@ -1,5 +1,5 @@
 ---
-description: 'Weitere Informationen finden Sie hier: JET_LGPOS. LessThan-Operator'
+description: 'Erfahren Sie mehr über: JET_LGPOS. LessThan-Operator'
 title: JET_LGPOS. LessThan-Operator
 TOCTitle: 'LessThan operator '
 ms:assetid: M:Microsoft.Isam.Esent.Interop.JET_LGPOS.op_LessThan(Microsoft.Isam.Esent.Interop.JET_LGPOS,Microsoft.Isam.Esent.Interop.JET_LGPOS)
@@ -25,19 +25,19 @@ api_type:
 api_location:
 - Microsoft.Isam.Esent.Interop.dll
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: 8ec121f9d13686d3d5c8ad22aa0fb3aed8562b5e
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 5ddc1b94ad90476d9ab154d10b87ea3c137226b949fd58b9e6b32af02c7018fa
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "104346988"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119109198"
 ---
 # <a name="jet_lgposlessthan-operator"></a>JET_LGPOS. LessThan-Operator
 
-Bestimmen Sie, ob eine Protokoll Position vor einer anderen Protokoll Position liegt.
+Bestimmen Sie, ob sich eine Protokollposition vor einer anderen Protokollposition befindet.
 
-**Namespace:**  [Microsoft. ISAM. ESENT. Interop](./microsoft.isam.esent.interop-namespace.md)  
-**Assembly:**  Microsoft. ISAM. ESENT. Interop (in Microsoft.Isam.Esent.Interop.dll)
+**Namespace:**  [Microsoft.Isam.Esent.Interop](./microsoft.isam.esent.interop-namespace.md)  
+**Assembly:**  Microsoft.Isam.Esent.Interop (in Microsoft.Isam.Esent.Interop.dll)
 
 ## <a name="syntax"></a>Syntax
 
@@ -64,29 +64,29 @@ public static bool operator <(
 
 #### <a name="parameters"></a>Parameter
 
-  - LHS  
-    Typ: [Microsoft.ISAM.ESENT.Interop.JET_LGPOS](./jet-lgpos-structure2.md)  
+  - Lhs  
+    Typ: [Microsoft.Isam.Esent.Interop.JET_LGPOS](./jet-lgpos-structure2.md)  
     
-    Die erste zu vergleichende Protokoll Position.
+    Die erste zu vergleichende Protokollposition.
 
 <!-- end list -->
 
   - rhs  
-    Typ: [Microsoft.ISAM.ESENT.Interop.JET_LGPOS](./jet-lgpos-structure2.md)  
+    Typ: [Microsoft.Isam.Esent.Interop.JET_LGPOS](./jet-lgpos-structure2.md)  
     
-    Die zweite Protokoll Position, die verglichen werden soll.
+    Die zweite zu vergleichende Protokollposition.
 
 #### <a name="return-value"></a>Rückgabewert
 
-Typ: [System. Boolean](/dotnet/api/system.boolean)  
-True, wenn LHS vor RHS steht.  
+Typ: [System.Boolean](/dotnet/api/system.boolean)  
+True, wenn "ls" vor "rhs" steht.  
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
-#### <a name="reference"></a>Referenz
+#### <a name="reference"></a>Verweis
 
 [JET_LGPOS Struktur](./jet-lgpos-structure2.md)
 
-[Mitglieder JET_LGPOS](./jet-lgpos-members.md)
+[JET_LGPOS-Member](./jet-lgpos-members.md)
 
-[Microsoft. ISAM. ESENT. Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)
+[Microsoft.Isam.Esent.Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)

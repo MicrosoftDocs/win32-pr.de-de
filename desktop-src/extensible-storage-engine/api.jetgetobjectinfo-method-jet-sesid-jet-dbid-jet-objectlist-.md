@@ -77,9 +77,9 @@ public static void JetGetObjectInfo(
   - objectlist  
     Typ: [Microsoft.Isam.Esent.Interop.JET_OBJECTLIST](./jet-objectlist-class.md)  
     
-    Ausgefüllt mit Informationen zu den Objekten in der Datenbank.
+    Mit Informationen zu den Objekten in der Datenbank ausgefüllt.
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 #### <a name="reference"></a>Verweis
 

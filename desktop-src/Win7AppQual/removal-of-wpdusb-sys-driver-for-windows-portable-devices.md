@@ -51,7 +51,7 @@ Benutzer einer Anwendung, die von den privaten IOCTL-Codes abhängig ist, müsse
 
 ## <a name="solution"></a>Lösung
 
-Anwendungen sollten die WPD-API (Windows Portable Devices) verwenden, um wpd-Geräte zu suchen und mit ihnen zu interagieren. Obwohl ein erheblicher Prozentsatz der WPD-Geräte MTP für die Kommunikation mit dem PC implementiert, ist WPD nicht auf MTP-Geräte beschränkt. Darüber hinaus wird durch die Verwendung der WPD-API die Liste der Konnektivitätsoptionen auf andere Kommunikationsprotokolle (z. B. WLAN) erweitert, wenn der direkte Zugriff auf das Gerät über die privaten IOCTLs die Anwendung auf die Kommunikation mit geräten beschränkt hätte, die mit USB verbunden sind. In den seltenen Fällen, in dem die Anwendung MTP-fähigen Muss, stellt die WPD-API einen Pass-Through-Mechanismus für unformatierte MTP-Befehle bereit.
+Anwendungen sollten die APD-API (Windows Portable Devices) verwenden, um wpd-Geräte zu suchen und mit ihnen zu interagieren. Obwohl ein erheblicher Prozentsatz der WPD-Geräte MTP für die Kommunikation mit dem PC implementiert, ist WPD nicht auf MTP-Geräte beschränkt. Darüber hinaus wird durch die Verwendung der WPD-API die Liste der Konnektivitätsoptionen auf andere Kommunikationsprotokolle (z. B. WLAN) erweitert, wenn der direkte Zugriff auf das Gerät über die privaten IOCTLs die Anwendung auf die Kommunikation mit geräten beschränkt hätte, die mit USB verbunden sind. In den seltenen Fällen, in dem die Anwendung MTP-fähigen Muss, stellt die WPD-API einen Pass-Through-Mechanismus für unformatierte MTP-Befehle bereit.
 
 ## <a name="leveraging-feature-capabilities"></a>Nutzen von Featurefunktionen
 

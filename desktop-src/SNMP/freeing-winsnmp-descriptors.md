@@ -1,36 +1,36 @@
 ---
 title: Freigeben von WinSNMP-Deskriptoren
-description: Die WinSNMP-Programmierumgebung weist die Freigabe der deskriptorressourcen der WinSNMP-Implementierung oder der WinSNMP-Anwendung zu, je nachdem, welche Komponente den Arbeitsspeicher für den Deskriptor zuordnet.
+description: Die WinSNMP-Programmierumgebung weist die Freigabe von Deskriptorressourcen der WinSNMP-Implementierung oder der WinSNMP-Anwendung zu, je nachdem, welche Komponente den Arbeitsspeicher für den Deskriptor zuweist.
 ms.assetid: 3e4cbbc5-18bc-4731-971c-6e533d904f56
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: f97828c55d59932b7f4bdb75cbcf98964edd4a7e
-ms.sourcegitcommit: 592c9bbd22ba69802dc353bcb5eb30699f9e9403
+ms.openlocfilehash: 86081a69cd5455bc3c58ca2bcea50154d75920a17655a1feef30ac2d29675d0c
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "104102278"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119009528"
 ---
 # <a name="freeing-winsnmp-descriptors"></a>Freigeben von WinSNMP-Deskriptoren
 
-Die WinSNMP-Programmierumgebung weist die Freigabe der deskriptorressourcen der WinSNMP-Implementierung oder der WinSNMP-Anwendung zu, je nachdem, welche Komponente den Arbeitsspeicher für den Deskriptor zuordnet.
+Die WinSNMP-Programmierumgebung weist die Freigabe von Deskriptorressourcen der WinSNMP-Implementierung oder der WinSNMP-Anwendung zu, je nachdem, welche Komponente den Arbeitsspeicher für den Deskriptor zuweist.
 
-Zum Freigeben der Ressourcen für einen [**smioid**](/windows/desktop/api/Winsnmp/ns-winsnmp-smioid) -oder [**smioctets**](/windows/desktop/api/Winsnmp/ns-winsnmp-smioctets) -Deskriptor gelten die folgenden Regeln:
+Um die Ressourcen für einen [**smiOID-**](/windows/desktop/api/Winsnmp/ns-winsnmp-smioid) oder [**smiOCTETS-Deskriptor**](/windows/desktop/api/Winsnmp/ns-winsnmp-smioctets) frei zu machen, gelten die folgenden Regeln:
 
 -   Für Eingabeparameter
 
-    Da die WinSNMP-Anwendung den Speicher für Eingabe Objekte mit variabler Länge zuordnet, muss die Anwendung diesen Arbeitsspeicher mit einer entsprechenden Funktion freigeben. Wenn die Anwendung z. b. die Ressourcen mit einem Aufrufder [**GlobalAlloc**](/windows/desktop/api/winbase/nf-winbase-globalalloc) -Funktion zugewiesen hat, sollte Sie die [**GlobalFree**](/windows/desktop/api/winbase/nf-winbase-globalfree) -Funktion verwenden, um die Zuordnung der Ressourcen freizugeben. Wenn die Anwendung die Ressourcen mit einem aufzurufenden [**Befehl für die heapzugewiesc**](/windows/desktop/api/heapapi/nf-heapapi-heapalloc) -Funktion reserviert hat, sollte Sie die [**HeapFree**](/windows/desktop/api/heapapi/nf-heapapi-heapfree) -Funktion aufzurufen.
+    Da die WinSNMP-Anwendung den Arbeitsspeicher für Eingabeobjekte mit variabler Länge zuordnet, muss die Anwendung diesen Arbeitsspeicher mithilfe einer entsprechenden Funktion freigeben. Wenn die Anwendung beispielsweise die Ressourcen mit einem Aufruf der [**GlobalAlloc-Funktion**](/windows/desktop/api/winbase/nf-winbase-globalalloc) zugeordnet hat, sollte sie die [**GlobalFree-Funktion**](/windows/desktop/api/winbase/nf-winbase-globalfree) verwenden, um die Zuordnung der Ressourcen freizugeben. Wenn die Anwendung die Ressourcen mit einem Aufruf der [**HeapAlloc-Funktion**](/windows/desktop/api/heapapi/nf-heapapi-heapalloc) zugeordnet hat, sollte sie die [**HeapFree-Funktion**](/windows/desktop/api/heapapi/nf-heapapi-heapfree) aufrufen.
 
 -   Für Ausgabeparameter
 
-    Ein Aufrufen einer der folgenden Funktionen führt dazu, dass die Implementierung für einen [**smioid**](/windows/desktop/api/Winsnmp/ns-winsnmp-smioid) -oder [**smioctets**](/windows/desktop/api/Winsnmp/ns-winsnmp-smioctets) -Deskriptor Arbeitsspeicher belegt: [**snmpgetvb**](/windows/desktop/api/Winsnmp/nf-winsnmp-snmpgetvb), [**snmpencodemsg**](/windows/desktop/api/Winsnmp/nf-winsnmp-snmpencodemsg), [**snmpoidcopy**](/windows/desktop/api/Winsnmp/nf-winsnmp-snmpoidcopy), [**snmpcontexttostr**](/windows/desktop/api/Winsnmp/nf-winsnmp-snmpcontexttostr)und [**snmpstrautooid**](/windows/desktop/api/Winsnmp/nf-winsnmp-snmpstrtooid).
+    Ein Aufruf einer der folgenden Funktionen führt dazu, dass die Implementierung Speicher für einen [**smiOID-**](/windows/desktop/api/Winsnmp/ns-winsnmp-smioid) oder [**smiOCTETS-Deskriptor**](/windows/desktop/api/Winsnmp/ns-winsnmp-smioctets) zuweise: [**SnmpGetVb**](/windows/desktop/api/Winsnmp/nf-winsnmp-snmpgetvb), [**SnmpEncodeMsg**](/windows/desktop/api/Winsnmp/nf-winsnmp-snmpencodemsg), [**SnmpOidCopy**](/windows/desktop/api/Winsnmp/nf-winsnmp-snmpoidcopy), [**SnmpContextToStr**](/windows/desktop/api/Winsnmp/nf-winsnmp-snmpcontexttostr)und [**SnmpStrToOid**](/windows/desktop/api/Winsnmp/nf-winsnmp-snmpstrtooid).
 
-    Da die-Implementierung den Speicher für diese Ausgabe Objekte zuordnet, muss die Anwendung die [**snmpfredescriptor**](/windows/desktop/api/Winsnmp/nf-winsnmp-snmpfreedescriptor) -Funktion aufzurufen, um die Zuordnung der Ressourcen freizugeben. Diese Funktion ermöglicht der Implementierung, den Arbeitsspeicher freizugeben, der für den **ptr** -Member dieser Strukturen reserviert ist.
+    Da die Implementierung den Arbeitsspeicher für diese Ausgabeobjekte zuordnet, muss die Anwendung die [**SnmpFreeDescriptor-Funktion**](/windows/desktop/api/Winsnmp/nf-winsnmp-snmpfreedescriptor) aufrufen, um die Zuordnung der Ressourcen freizugeben. Mit dieser Funktion kann die Implementierung den Arbeitsspeicher freigeben, der dem **ptr-Member** dieser Strukturen zugeordnet ist.
 
-Um die Ressourcen für eine [**smivalue**](/windows/desktop/api/Winsnmp/ns-winsnmp-smivalue) -Struktur freizugeben, muss eine WinSNMP-Anwendung den **Syntax** Member einer [**smivalue**](/windows/desktop/api/Winsnmp/ns-winsnmp-smivalue) -Struktur überprüfen, um den **Wertmember** der Struktur korrekt auszuwerten. Wenn das- **Syntax** Element angibt, dass der **Wertmember** ein [**smioctets**](/windows/desktop/api/Winsnmp/ns-winsnmp-smioctets) oder ein [**smioid**](/windows/desktop/api/Winsnmp/ns-winsnmp-smioid) -Deskriptor ist, und die Implementierung die Ressourcen für den Deskriptor zugeordnet hat, muss die Anwendung [**snmpfredescriptor**](/windows/desktop/api/Winsnmp/nf-winsnmp-snmpfreedescriptor)aufgerufen werden. Dies ermöglicht der Implementierung, den Arbeitsspeicher freizugeben. Wenn die Anwendung die Ressourcen zugewiesen hat, muss Sie den Arbeitsspeicher mithilfe einer geeigneten Funktion freigeben, wie zuvor angegeben.
+Um die Ressourcen für eine [**smiVALUE-Struktur**](/windows/desktop/api/Winsnmp/ns-winsnmp-smivalue) frei zu machen, muss eine WinSNMP-Anwendung den **Syntaxmember** einer [**smiVALUE-Struktur**](/windows/desktop/api/Winsnmp/ns-winsnmp-smivalue) überprüfen, um den **Wertmember** der Struktur ordnungsgemäß auszuwerten. Wenn der **Syntaxmember** angibt, dass der **Wertmember** ein [**smiOCTETS-**](/windows/desktop/api/Winsnmp/ns-winsnmp-smioctets) oder [**smiOID-Deskriptor**](/windows/desktop/api/Winsnmp/ns-winsnmp-smioid) ist und die Implementierung die Ressourcen für den Deskriptor zugeordnet hat, muss die Anwendung [**SnmpFreeDescriptor**](/windows/desktop/api/Winsnmp/nf-winsnmp-snmpfreedescriptor)aufrufen. Dadurch kann die Implementierung den Arbeitsspeicher freigeben. Wenn die Anwendung die Ressourcen zugeordnet hat, muss sie den Arbeitsspeicher mithilfe einer entsprechenden Funktion freigeben, wie zuvor angegeben.
 
-Weitere Informationen finden Sie unter [Zuordnen von WinSNMP-Speicher Objekten](allocating-winsnmp-memory-objects.md).
+Weitere Informationen finden Sie unter [Zuordnen von WinSNMP-Speicherobjekten.](allocating-winsnmp-memory-objects.md)
 
- 
+ 
 
- 
+ 

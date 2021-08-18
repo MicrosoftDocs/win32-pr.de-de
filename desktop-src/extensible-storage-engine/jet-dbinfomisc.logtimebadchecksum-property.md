@@ -1,6 +1,6 @@
 ---
-description: 'Weitere Informationen finden Sie hier: JET_DBINFOMISC. logtimebadchecksum-Eigenschaft'
-title: JET_DBINFOMISC. logtimebadchecksum (Eigenschaft)
+description: 'Weitere Informationen zu: JET_DBINFOMISC.logtimeBadChecksum-Eigenschaft'
+title: JET_DBINFOMISC.logtimeBadChecksum-Eigenschaft
 TOCTitle: 'logtimeBadChecksum property '
 ms:assetid: P:Microsoft.Isam.Esent.Interop.JET_DBINFOMISC.logtimeBadChecksum
 ms:mtpsurl: https://msdn.microsoft.com/library/microsoft.isam.esent.interop.jet_dbinfomisc.logtimebadchecksum(v=EXCHG.10)
@@ -26,19 +26,19 @@ api_type:
 api_location:
 - Microsoft.Isam.Esent.Interop.dll
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: 1d0db5a0eb9a6cdc5c31e833259c776cf2c63a85
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 70675ddbeb37ba3f32b23f02a801c9236d4d6695e551245be99033755c04c5a0
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104041716"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119112189"
 ---
-# <a name="jet_dbinfomisclogtimebadchecksum-property"></a>JET_DBINFOMISC. logtimebadchecksum (Eigenschaft)
+# <a name="jet_dbinfomisclogtimebadchecksum-property"></a>JET_DBINFOMISC.logtimeBadChecksum-Eigenschaft
 
-Ruft den Zeitpunkt ab, zu dem ein nicht korrigier barer Prüfsummen Fehler zuletzt gefunden wurde.
+Ruft den Zeitpunkt ab, zu dem zuletzt ein nicht behebbarer Prüfsummenfehler gefunden wurde.
 
-**Namespace:**  [Microsoft. ISAM. ESENT. Interop](./microsoft.isam.esent.interop-namespace.md)  
-**Assembly:**  Microsoft. ISAM. ESENT. Interop (in Microsoft.Isam.Esent.Interop.dll)
+**Namespace:**  [Microsoft.Isam.Esent.Interop](./microsoft.isam.esent.interop-namespace.md)  
+**Assembly:**  Microsoft.Isam.Esent.Interop (in Microsoft.Isam.Esent.Interop.dll)
 
 ## <a name="syntax"></a>Syntax
 
@@ -60,14 +60,14 @@ public JET_LOGTIME logtimeBadChecksum { get; internal set; }
 
 #### <a name="property-value"></a>Eigenschaftswert
 
-Typ: [Microsoft.ISAM.ESENT.Interop.JET_LOGTIME](./jet-logtime-structure2.md)  
+Typ: [Microsoft.Isam.Esent.Interop.JET_LOGTIME](./jet-logtime-structure2.md)  
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
-#### <a name="reference"></a>Referenz
+#### <a name="reference"></a>Verweis
 
 [JET_DBINFOMISC-Klasse](./jet-dbinfomisc-class.md)
 
-[Mitglieder JET_DBINFOMISC](./jet-dbinfomisc-members.md)
+[JET_DBINFOMISC-Member](./jet-dbinfomisc-members.md)
 
-[Microsoft. ISAM. ESENT. Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)
+[Microsoft.Isam.Esent.Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)

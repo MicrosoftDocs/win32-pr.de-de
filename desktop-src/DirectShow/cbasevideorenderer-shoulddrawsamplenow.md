@@ -1,7 +1,7 @@
 ---
-description: Die Methode "schulddrawsamplenow" bestimmt, ob das Video gezeichnet werden soll, ohne einen Zeit Geber-anweichung-Link mit der Uhr festzulegen
+description: Die ShouldDrawSampleNow-Methode bestimmt, ob das Video gezeichnet werden soll, ohne einen Timer-Advise-Link mit der Uhr zu setzen.
 ms.assetid: 2cbefc66-0d99-4559-b210-3163cd413dbf
-title: Cbasevideorenderer. schulddrawsamplenow-Methode (renbase. h)
+title: CBaseVideoRenderer.ShouldDrawSampleNow-Methode (Renbase.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,16 +16,16 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: 8c96b7453eb6009121fd6782030f7988663f5e8f
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: e3c0297ccf670de12380c5f02af2c67d6050bac29dd1fa7e7e89a6e6c7c20592
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106367578"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119074685"
 ---
-# <a name="cbasevideorenderershoulddrawsamplenow-method"></a>Cbasevideorenderer. schulddrawsamplenow-Methode
+# <a name="cbasevideorenderershoulddrawsamplenow-method"></a>CBaseVideoRenderer.ShouldDrawSampleNow-Methode
 
-Die- `ShouldDrawSampleNow` Methode bestimmt, ob das Video gezeichnet werden soll, ohne eine Zeit Geber Empfehlung mit der Uhr festzulegen.
+Die `ShouldDrawSampleNow` -Methode bestimmt, ob das Video gezeichnet werden soll, ohne einen Timer-Advise-Link mit der Uhr zu setzen.
 
 ## <a name="syntax"></a>Syntax
 
@@ -44,34 +44,34 @@ virtual HRESULT ShouldDrawSampleNow(
 
 <dl> <dt>
 
-*pmediasample* 
+*pMediaSample* 
 </dt> <dd>
 
-Zeiger auf die [**imediasample**](/windows/desktop/api/Strmif/nn-strmif-imediasample) -Schnittstelle für das Beispiel.
+Zeiger auf die [**IMediaSample-Schnittstelle**](/windows/desktop/api/Strmif/nn-strmif-imediasample) für das Beispiel.
 
 </dd> <dt>
 
-*ptrstart* 
+*ptrStart* 
 </dt> <dd>
 
-Zeiger auf den Zeitpunkt, zu dem das Rendering begonnen wird.
+Zeiger auf die Zeit, zu der mit dem Rendern begonnen werden soll.
 
 </dd> <dt>
 
-*ptrend* 
+*ptrEnd* 
 </dt> <dd>
 
-Zeiger auf die Zeit zum Abbrechen des Renderings.
+Zeiger auf die Zeit, zu der das Rendering nicht mehr möglich ist.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt einen **HRESULT** -Wert zurück. Gibt den Wert "s OK" zurück, \_ um gleichzeitig zu zeichnen, ohne zu warten, "s false", um zum \_ Zeitpunkt " *ptrstart*" zu zeichnen, oder ein Fehler, der bedeutet, dass das Beispiel nicht gezeichnet wird
+Gibt einen **HRESULT-Wert** zurück. Gibt S OK zurück, um gleichzeitiges Zeichnen ohne Warten zu bedeuten, S FALSE bedeutet Zeichnen zum Zeitpunkt \_ \_ *ptrStart* oder einen Fehler, der bedeutet, dass das Beispiel nicht ge zeichnen soll. Das heißt, es zu überspringen, um Zeit zu sparen.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Diese Member-Funktion überschreibt [**cbaserenderer:: schulddrawsamplenow**](cbaserenderer-shoulddrawsamplenow.md).
+Diese Memberfunktion überschreibt [**CBaseRenderer::ShouldDrawSampleNow**](cbaserenderer-shoulddrawsamplenow.md).
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -79,16 +79,16 @@ Diese Member-Funktion überschreibt [**cbaserenderer:: schulddrawsamplenow**](cb
 
 | Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Renbase. h (Include Streams. h)</dt> </dl>                                                                                   |
-| Bibliothek<br/> | <dl> " <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Renbase.h (include Streams.h)</dt> </dl>                                                                                   |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Einzelhandels-Builds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Cbasevideorenderer-Klasse**](cbasevideorenderer.md)
+[**CBaseVideoRenderer-Klasse**](cbasevideorenderer.md)
 </dt> </dl>
 
  

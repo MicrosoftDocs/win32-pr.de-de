@@ -1,23 +1,23 @@
 ---
-description: Der ISABOUT-Begriff vergleicht Spalten mit einer Gruppe von mindestens einem Suchbegriff.
+description: Der ISABOUT-Begriff gleicht Spalten mit einer Gruppe von einem oder mehreren Suchbegriffen ab.
 ms.assetid: e2629c4c-4b44-4427-ac1d-17f55fd969e3
 title: ISABOUT-Begriff
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 6f79fc2fa4a56b3ca6b3b412141f096b282e3aa9
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 5665e7bf62da4858cf2e7d68e65d0f42771903d55e3189db12f19cdd5414530d
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "103750384"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118969609"
 ---
 # <a name="isabout-term"></a>ISABOUT-Begriff
 
 **Veraltet**
 
-Diese Funktion wurde ab Windows 8 entfernt. Wenn Sie neue Anwendungen schreiben, sollten Sie diese veraltete Funktion nicht verwenden. Wenn Sie vorhandene Anwendungen ändern, wird dringend empfohlen, jegliche Abhängigkeit von dieser Funktion zu entfernen.
+Dieses Feature wurde ab Windows 8 entfernt. Wenn Sie neue Anwendungen schreiben, vermeiden Sie die Verwendung dieser veralteten Funktion. Wenn Sie vorhandene Anwendungen ändern, wird dringend empfohlen, alle Abhängigkeiten von diesem Feature zu entfernen.
 
-Der ISABOUT-Begriff vergleicht Spalten mit einer Gruppe von mindestens einem Suchbegriff. Es weist die folgende Syntax auf:
+Der ISABOUT-Begriff gleicht Spalten mit einer Gruppe von einem oder mehreren Suchbegriffen ab. Sie weist die folgende Syntax auf:
 
 
 ```
@@ -26,11 +26,11 @@ ISABOUT(<components>) [RANKMETHOD <method>]
 
 
 
-Der optionale RankMethod-Begriff gibt die Berechnungsmethode an, mit der die mit einer oder mehreren Komponenten abgeglichen Dokumente eingestuft werden. Wenn keine RankMethod angegeben ist, wird die standardmäßige Jaccard-Koeffizienten-Rang Folge Methode verwendet.
+Der optionale RANKMETHOD-Begriff gibt die Berechnungsmethode an, die zum Bewerten der Dokumente verwendet wird, die einer oder mehreren Komponenten entsprechen. Wenn keine RANKMETHOD angegeben ist, wird die standardmäßige Csv-Koeffizient-Rangfolgemethode verwendet.
 
-Der ISABOUT-Begriff kann über eine oder mehrere Komponenten verfügen. Die im-Prädikat [enthalten](-search-sql-contains.md) angegebenen Spalten werden für jede Komponente getestet. Das Dokument ist in den Ergebnissen enthalten, wenn mindestens eine der Komponenten übereinstimmt. Kommas trennen mehrere Komponenten.
+Der ISABOUT-Begriff kann eine oder mehrere Komponenten enthalten. Die im [CONTAINS-Prädikat](-search-sql-contains.md) angegebenen Spalten werden für jede Komponente getestet. Das Dokument ist in den Ergebnissen enthalten, wenn mindestens eine der Komponenten übereinstimmt. Kommas trennen mehrere Komponenten.
 
-Der Komponenten Teil weist die folgende Syntax auf:
+Der Komponententeil weist die folgende Syntax auf:
 
 
 ```
@@ -39,9 +39,9 @@ Der Komponenten Teil weist die folgende Syntax auf:
 
 
 
-Sie können den optionalen Gewichtungs Begriff verwenden, um die relative Wichtigkeit der einzelnen Begriffe innerhalb des ISABOUT-Begriffs zu ändern. Wenn kein Gewichtungs Begriff angewendet wird, wird die Standard Gewichtung 1,0 impliziert.
+Sie können den optionalen WEIGHT-Begriff verwenden, um die relative Wichtigkeit jedes Begriffs innerhalb des ISABOUT-Begriffs zu ändern. Wenn kein Gewichtungsbegriff angewendet wird, wird die Standardgewichtung 1,0 impliziert.
 
-In der folgenden Tabelle werden mögliche Übereinstimmungs Typen beschrieben.
+In der folgenden Tabelle werden mögliche Übereinstimmungsbegriffstypen beschrieben.
 
 
 
@@ -61,7 +61,7 @@ In der folgenden Tabelle werden mögliche Übereinstimmungs Typen beschrieben.
 <tbody>
 <tr class="odd">
 <td>Word</td>
-<td>Ein einzelnes Wort ohne Leerzeichen oder ein anderes Interpunktions Zeichen.</td>
+<td>Ein einzelnes Wort ohne Leerzeichen oder andere Interpunktion.</td>
 <td><span data-codelanguage=""></span>
 <table>
 <colgroup>
@@ -78,7 +78,7 @@ In der folgenden Tabelle werden mögliche Übereinstimmungs Typen beschrieben.
 </tr>
 <tr class="even">
 <td>Ausdruck</td>
-<td>Mehrere Wörter oder enthaltene Leerzeichen.</td>
+<td>Mehrere Wörter oder eingeschlossene Leerzeichen.</td>
 <td><div class="code">
 <span data-codelanguage=""></span>
 <table>
@@ -97,7 +97,7 @@ In der folgenden Tabelle werden mögliche Übereinstimmungs Typen beschrieben.
 </tr>
 <tr class="odd">
 <td>Platzhalter</td>
-<td>Wörter oder Ausdrücke mit dem Sternchen (*) am Ende hinzugefügt. Weitere Informationen finden Sie unter Verwenden von Platzhaltern <a href="-search-sql-wildcards.md">im enthält-Prädikat</a>.</td>
+<td>Wörter oder Ausdrücke mit dem Sternchen (*) werden am Ende hinzugefügt. Weitere Informationen finden Sie unter <a href="-search-sql-wildcards.md">Verwenden von Platzhaltern im CONTAINS-Prädikat</a>.</td>
 <td><div class="code">
 <span data-codelanguage=""></span>
 <table>
@@ -124,9 +124,9 @@ and &quot;compulsory&quot;</code></pre></td>
 
  
 
-## <a name="isabout-column-weighting"></a>ISABOUT-Spalten Gewichtung
+## <a name="isabout-column-weighting"></a>ISABOUT-Spaltengewichtung
 
-Der ISABOUT-Begriff ordnet den übereinstimmenden Dokumenten zu, je nachdem, wie genau jedes Dokument mit den übereinstimmenden Begriffen in der Abfrage übereinstimmt. Mit der Spalten Gewichtung können Sie eine größere Wichtigkeit beim Vergleichen einiger Vergleichs Begriffe als andere verwenden. Für jeden Vergleichs Begriff im ISABOUT-Begriff kann ein Gewichtungswert angewendet werden. Die Gewichtung wird auf einen einzelnen Übereinstimmungs Begriff angewendet und wird durch das Schlüsselwort "Weight" angegeben. Der Gewichtungs Begriff verfügt über zwei alternative Syntaxen:
+Der ISABOUT-Begriff bewertet übereinstimmende Dokumente basierend darauf, wie genau jedes Dokument mit dem Satz von Übereinstimmungsbegriffen in der Abfrage übereinstimmt. Sie können die Spaltengewichtung verwenden, um die Übereinstimmung einiger Übereinstimmungsbegriffe wichtiger zu machen als andere. Auf jeden Übereinstimmungsbegriff im ISABOUT-Begriff kann ein Gewichtungswert angewendet werden. Die Gewichtung wird auf einen einzelnen Übereinstimmungsbegriff angewendet und durch das Schlüsselwort "WEIGHT" angegeben. Der WEIGHT-Begriff verfügt über zwei alternative Syntaxen:
 
 
 ```
@@ -136,13 +136,13 @@ Der ISABOUT-Begriff ordnet den übereinstimmenden Dokumenten zu, je nachdem, wie
 
 
 
-Der Gewichtungswert muss zwischen 0 und 1,0 liegen und darf nicht mehr als drei Dezimalstellen aufweisen. Wenn ein Gewichtungswert außerhalb dieses Bereichs angegeben wird, führt dies zu einer Fehlermeldung. Der nicht gewichtete Rang Folge Wert für einen Begriff wird mit dem Gewichtungswert für den Begriff multipliziert.
+Der Gewichtungswert muss zwischen 0 und 1,0 und nicht mehr als drei Dezimalstellen sein. Das Angeben eines Gewichtungswerts außerhalb dieses Bereichs führt zu einer Fehlermeldung. Der nicht gewichtete Rangfolgewert für einen Begriff wird mit dem Gewichtungswert für den Begriff multipliziert.
 
-Wenn für einen Übereinstimmungs Begriff keine Gewichtung angegeben wird, wird der Standardwert 1,0 impliziert.
+Wenn für einen Übereinstimmungsbegriff keine Gewichtung angegeben ist, wird der Standardwert 1,0 impliziert.
 
 ### <a name="example"></a>Beispiel
 
-Im folgenden Beispiel werden Gewichtungen auf die zwei ISABOUT-Übereinstimmungs Bedingungen angewendet, wobei die Long-und Short-Syntax für Gewichtungswerte verwendet wird.
+Im folgenden Beispiel werden Gewichtungen auf die beiden ISABOUT-Übereinstimmungsbegriffe angewendet, wobei sowohl die lange als auch die kurze Syntax für Gewichtungswerte verwendet werden.
 
 
 ```
@@ -159,7 +159,7 @@ WHERE CONTAINS( System.FileName,
 **Referenz**
 </dt> <dt>
 
-[Frei Text Prädikat](-search-sql-freetext.md)
+[FREETEXT-Prädikat](-search-sql-freetext.md)
 </dt> <dt>
 
 [WHERE-Klausel](-search-sql-where.md)

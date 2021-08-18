@@ -1,6 +1,6 @@
 ---
-description: Weitere Informationen finden Sie im esentnotintransaktionexception-Konstruktor.
-title: Esentnotintransaktionexception-Konstruktor
+description: 'Weitere Informationen finden Sie unter: EsentNotInTransactionException-Konstruktor'
+title: EsentNotInTransactionException-Konstruktor
 TOCTitle: 'EsentNotInTransactionException constructor '
 ms:assetid: M:Microsoft.Isam.Esent.Interop.EsentNotInTransactionException.#ctor
 ms:mtpsurl: https://msdn.microsoft.com/library/microsoft.isam.esent.interop.esentnotintransactionexception.esentnotintransactionexception(v=EXCHG.10)
@@ -24,19 +24,19 @@ api_type:
 api_location:
 - Microsoft.Isam.Esent.Interop.dll
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: 6201a3f8eea52cfadfadaa37cb39657441083a63
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 8ce7ccf2a59feda189f9363ec80dec5071dc8ed2215101fa75a7548cc34da725
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106358479"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119040468"
 ---
-# <a name="esentnotintransactionexception-constructor"></a>Esentnotintransaktionexception-Konstruktor
+# <a name="esentnotintransactionexception-constructor"></a>EsentNotInTransactionException-Konstruktor
 
-Initialisiert eine neue Instanz der esentnotintransaktionexception-Klasse.
+Initialisiert eine neue Instanz der EsentNotInTransactionException-Klasse.
 
-**Namespace:**  [Microsoft. ISAM. ESENT. Interop](./microsoft.isam.esent.interop-namespace.md)  
-**Assembly:**  Microsoft. ISAM. ESENT. Interop (in Microsoft.Isam.Esent.Interop.dll)
+**Namespace:**  [Microsoft.Isam.Esent.Interop](./microsoft.isam.esent.interop-namespace.md)  
+**Assembly:**  Microsoft.Isam.Esent.Interop (in Microsoft.Isam.Esent.Interop.dll)
 
 ## <a name="syntax"></a>Syntax
 
@@ -52,12 +52,12 @@ Dim instance As New EsentNotInTransactionException()
 public EsentNotInTransactionException()
 ```
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
-#### <a name="reference"></a>Referenz
+#### <a name="reference"></a>Verweis
 
-[Esentnotintransaktionexception-Klasse](./esentnotintransactionexception-class.md)
+[EsentNotInTransactionException-Klasse](./esentnotintransactionexception-class.md)
 
-[Esentnotintransaktionexception-Member](./esentnotintransactionexception-members.md)
+[EsentNotInTransactionException-Member](./esentnotintransactionexception-members.md)
 
-[Microsoft. ISAM. ESENT. Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)
+[Microsoft.Isam.Esent.Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)

@@ -1,37 +1,37 @@
 ---
-description: Gibt den Bildtyp an, der von einem Video Encoder ausgegeben wird.
+description: Gibt den Bildtyp an, der von einem Videoencoder ausgegeben wird.
 ms.assetid: 18A47033-3EAC-46C3-94AB-6ED20732F63C
-title: MFSampleExtension_VideoEncodePictureType-Attribut (mfapi. h)
+title: MFSampleExtension_VideoEncodePictureType Attribut (Mfapi.h)
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 5bfe0df0e4f3163e7c8c0581c5c7c2a854555eec
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 3be87284be3b605e3af70d64df98e5d762aa7cc353bb83b5f61a110d1242ae1d
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106348487"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118973169"
 ---
-# <a name="mfsampleextension_videoencodepicturetype-attribute"></a>MF Sample Extension- \_ videoencodepicturetype-Attribut
+# <a name="mfsampleextension_videoencodepicturetype-attribute"></a>MFSampleExtension \_ VideoEncodePictureType-Attribut
 
-Gibt den Bildtyp an, der von einem Video Encoder ausgegeben wird.
+Gibt den Bildtyp an, der von einem Videoencoder ausgegeben wird.
 
 ## <a name="data-type"></a>Datentyp
 
-**eAVEncH264PictureType \_ B** gespeichert als **UInt32**
+**eAVEncH264PictureType \_ Als** **UINT32** gespeichertes B
 
 ## <a name="getset"></a>Abrufen/Festlegen
 
-Um dieses Attribut abzurufen, nennen Sie [**imfattributes:: GetUINT32**](/windows/desktop/api/mfobjects/nf-mfobjects-imfattributes-getuint32).
+Rufen Sie ZUM Abrufen dieses [**Attributs DIE ATTRIBUTEAttributes::GetUINT32 auf.**](/windows/desktop/api/mfobjects/nf-mfobjects-imfattributes-getuint32)
 
-Um dieses Attribut festzulegen, nennen Sie [**imfattributes:: SetUINT32**](/windows/desktop/api/mfobjects/nf-mfobjects-imfattributes-setuint32).
+Rufen Sie ZUM Festlegen dieses [**Attributs DIE ATTRIBUTEAttributes::SetUINT32 auf.**](/windows/desktop/api/mfobjects/nf-mfobjects-imfattributes-setuint32)
 
 ## <a name="applies-to"></a>Gilt für:
 
-[**IMF Sample**](/windows/desktop/api/mfobjects/nn-mfobjects-imfsample)
+[**DIESSAMPLE**](/windows/desktop/api/mfobjects/nn-mfobjects-imfsample)
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Der [**H. 264-Video Encoder**](h-264-video-encoder.md) legt dieses Attribut für die generierten Ausgabe Beispiele fest. Der Wert des-Attributs ist ein Member der [**eAVEncH264PictureType**](/windows/desktop/api/codecapi/ne-codecapi-eavench264picturetype) -Enumeration.
+[**H.264 Video Encoder**](h-264-video-encoder.md) legt dieses Attribut für die generierten Ausgabebeispiele fest. Der Wert des Attributs ist ein Member der [**eAVEncH264PictureType-Enumeration.**](/windows/desktop/api/codecapi/ne-codecapi-eavench264picturetype)
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -39,26 +39,26 @@ Der [**H. 264-Video Encoder**](h-264-video-encoder.md) legt dieses Attribut für
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Windows 8 \[ -Desktop-Apps \| UWP-apps\]<br/>                                  |
+| Unterstützte Mindestversion (Client)<br/> | \[Windows 8 \|Desktop-Apps UWP-Apps\]<br/>                                  |
 | Unterstützte Mindestversion (Server)<br/> | Nicht unterstützt<br/>                                                          |
-| Header<br/>                   | <dl> <dt>Mfapi. h</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Mfapi.h</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
 [Alphabetische Liste der Media Foundation Attribute](alphabetical-list-of-media-foundation-attributes.md)
 </dt> <dt>
 
-[**H. 264-Video Encoder**](h-264-video-encoder.md)
+[**H.264 Video Encoder**](h-264-video-encoder.md)
 </dt> <dt>
 
-[Beispiel Attribute](sample-attributes.md)
+[Beispielattribute](sample-attributes.md)
 </dt> <dt>
 
-[Medien Beispiele](media-samples.md)
+[Medienbeispiele](media-samples.md)
 </dt> </dl>
 
  

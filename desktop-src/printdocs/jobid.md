@@ -1,5 +1,5 @@
 ---
-description: Erfahren Sie mehr über das JobID-Element, das eine eindeutige ID für den Auftrag angibt. Aktuelle Informationen finden Sie unter Print Schema Specification (Spezifikation des Druckschemas).
+description: Erfahren Sie mehr über das JobID-Element, das eine eindeutige ID für den Auftrag angibt. Die aktuellen Informationen finden Sie unter Spezifikation des Druckschemas.
 ms.assetid: 138a0ae5-160d-46f2-91ae-596d8892351a
 title: JobID
 ms.topic: article
@@ -13,12 +13,12 @@ ms.locfileid: "118971289"
 ---
 # <a name="jobid"></a>JobID
 
-Dieses Thema ist nicht aktuell. Die aktuellsten Informationen finden Sie unter Print Schema Specification (Spezifikation des [Druckschemas).](https://download.microsoft.com/download/D/E/C/DECA6E6B-3E81-48E7-B7EF-6D92A547D03C/print-schema-spec-2-0.zip)
+Dieses Thema ist nicht aktuell. Die aktuellen Informationen finden Sie unter [Print Schema Specification (Spezifikation des Druckschemas).](https://download.microsoft.com/download/D/E/C/DECA6E6B-3E81-48E7-B7EF-6D92A547D03C/print-schema-spec-2-0.zip)
 
 Gibt eine eindeutige ID für den Auftrag an.
 
 -   [Elementinformationen](#element-information)
--   [Strukturell](#structural-content)
+-   [Strukturelle Inhalte](#structural-content)
 -   [Extensible Markup Language (XML)-Inhalt](#extensible-markup-language-xml-content)
 
 ## <a name="element-information"></a>Elementinformationen
@@ -35,9 +35,9 @@ Gibt eine eindeutige ID für den Auftrag an.
 
  
 
-## <a name="structural-content"></a>Strukturell
+## <a name="structural-content"></a>Strukturelle Inhalte
 
-Die XML-Struktur dieses Elements lautet:
+Die XML-Struktur dieses Elements ist:
 
 ``` syntax
 <psf:Property name="psk:JobID">
@@ -47,7 +47,7 @@ Die XML-Struktur dieses Elements lautet:
 
 ## <a name="structure-variables"></a>Strukturvariablen
 
-In der folgenden Tabelle werden die Merkmale der in der XML-Struktur definierten Variablen beschrieben.
+In der folgenden Tabelle werden die Merkmale der Variablen beschrieben, die in der XML-Struktur definiert sind.
 
 
 

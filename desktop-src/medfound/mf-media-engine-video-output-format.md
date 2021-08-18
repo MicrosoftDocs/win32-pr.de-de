@@ -1,27 +1,27 @@
 ---
-description: Legt das Renderziel-Format für die Medien-Engine fest.
+description: Legt das Renderzielformat für die Medien-Engine fest.
 ms.assetid: 70FFDD44-9FDE-4D86-AD65-60019AC4A2BC
-title: MF_MEDIA_ENGINE_VIDEO_OUTPUT_FORMAT-Attribut (MF mediaengine. h)
+title: MF_MEDIA_ENGINE_VIDEO_OUTPUT_FORMAT-Attribut (Mfmediaengine.h)
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 004025da1ad5258e5b04a3afba4a359f50f7444c
-ms.sourcegitcommit: c16214e53680dc71d1c07111b51f72b82a4512d8
+ms.openlocfilehash: eaa0dab3c3ea1c9ce23d767458df0b68a9b3c787f80ca1af786061536343a356
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/03/2021
-ms.locfileid: "103761385"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118973729"
 ---
-# <a name="mf_media_engine_video_output_format-attribute"></a>Format Attribut der MF- \_ Medien-Engine- \_ \_ Video \_ Ausgabe \_
+# <a name="mf_media_engine_video_output_format-attribute"></a>MF \_ MEDIA ENGINE VIDEO OUTPUT \_ \_ \_ \_ FORMAT-Attribut
 
-Legt das Renderziel-Format für die Medien-Engine fest.
+Legt das Renderzielformat für die Medien-Engine fest.
 
 ## <a name="data-type"></a>Datentyp
 
-**DXGI \_** Als **UInt32** gespeicherter Format
+**DXGI \_ ALS** **UINT32** gespeichertes FORMAT
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Legen Sie dieses Attribut fest, wenn Sie die Medien-Engine im Frame Server Modus erstellen. Weitere Informationen finden Sie unter [**IMF mediaengineclassfactory:: forateinstance**](/windows/desktop/api/mfmediaengine/nf-mfmediaengine-imfmediaengineclassfactory-createinstance). Der Wert des-Attributs ist ein [DXGI- \_ Format](../direct3d9/d3dformat.md) Wert.
+Legen Sie dieses Attribut fest, wenn Sie die Medien-Engine im Frameservermodus erstellen. Weitere Informationen finden Sie unter [**ÜBERMEDIAMediaEngineClassFactory::CreateInstance**](/windows/desktop/api/mfmediaengine/nf-mfmediaengine-imfmediaengineclassfactory-createinstance). Der Wert des Attributs ist ein [DXGI \_ FORMAT-Wert.](../direct3d9/d3dformat.md)
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -29,13 +29,13 @@ Legen Sie dieses Attribut fest, wenn Sie die Medien-Engine im Frame Server Modus
 
 | Anforderung | Wert |
 |-------------------------------------|--------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Windows 8 \[ -Desktop-Apps \| UWP-apps\]<br/>                                          |
-| Unterstützte Mindestversion (Server)<br/> | Windows Server 2012 \[ -Desktop-Apps \| UWP-apps\]<br/>                                |
-| Header<br/>                   | <dl> <dt>MF mediaengine. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | \[Windows 8 \|Desktop-Apps UWP-Apps\]<br/>                                          |
+| Unterstützte Mindestversion (Server)<br/> | \[Windows Server 2012 \|Desktop-Apps UWP-Apps\]<br/>                                |
+| Header<br/>                   | <dl> <dt>Mfmediaengine.h</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 

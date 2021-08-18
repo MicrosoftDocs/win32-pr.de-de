@@ -1,22 +1,22 @@
 ---
-description: Verhindert, dass ein Startmenü Eintrag für eine neu installierte Anwendungs Verknüpfung eine Hervorhebung empfängt.
+description: Verhindert Startmenü dass ein Eintrag für eine neu installierte Anwendungsverknüpfung eine Hervorhebung empfängt.
 ms.assetid: ff85da6f-a506-4225-8ac9-4a8a7be8d599
-title: System. appusermodel. excludefromshowinnetwinstall
+title: System.AppUserModel.ExcludeFromShowInNewInstall
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 206cbbc6b07b0d3fec5833c046d4cb44c1e5e4e5
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: ba75b28b789fd9972eb484797957601dbcb5e93694b469eeb8b81bf9ba198d13
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106362495"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118970899"
 ---
-# <a name="systemappusermodelexcludefromshowinnewinstall"></a>System. appusermodel. excludefromshowinnetwinstall
+# <a name="systemappusermodelexcludefromshowinnewinstall"></a>System.AppUserModel.ExcludeFromShowInNewInstall
 
-Verhindert, dass ein Startmenü Eintrag für eine neu installierte Anwendungs **Verknüpfung eine hervor** Hebung empfängt. Dies entspricht dem Löschen der Option **neu installierte Programme markieren** im Menü Fenster "Start" für ein einzelnes Element **Anpassen** . Diese Eigenschaft sollte für Tastenkombinationen für Tools und sekundäre Anwendungen festgelegt werden.
+Verhindert, **dass ein Startmenüeintrag** für eine neu installierte Anwendungsverknüpfung eine Hervorhebung empfängt. Dies entspricht dem Deaktivieren der Option **Neu** installierte Programme hervorheben im Fenster **Startmenü** anpassen für ein einzelnes Element. Diese Eigenschaft sollte für Verknüpfungen für Tools und sekundäre Anwendungen festgelegt werden.
 
 > [!Note]  
-> Diese Eigenschaft ist Eigenschaft wird nur vom Startmenü unter Windows Vista und Windows 7 verwendet. Die Eigenschaft wird nicht vom Startbildschirm oder Startmenü unter Windows 8 und höher verwendet.
+> Diese Eigenschaft ist eine Eigenschaft, die nur von der Startmenü unter Windows Vista und Windows 7 verwendet wird. Die -Eigenschaft wird nicht von der -Startbildschirm oder Startmenü-Windows 8 und höher verwendet.
 
  
 
@@ -38,15 +38,15 @@ propertyDescription
       IsInnate = false
 ```
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Pkey-Werte werden in "propkey. h" definiert.
+PKEY-Werte werden in Propkey.h definiert.
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[Anwendungs Benutzer Modell-IDs (appusermudelids)](../shell/appids.md)
+[Anwendungsbenutzermodell-IDs (AppUserModelIDs)](../shell/appids.md)
 </dt> <dt>
 
 [System.AppUserModel.ID](./props-system-appusermodel-id.md)
@@ -55,70 +55,70 @@ Pkey-Werte werden in "propkey. h" definiert.
 [**SHGetPropertyStoreForWindow**](/windows/desktop/api/Shellapi/nf-shellapi-shgetpropertystoreforwindow)
 </dt> <dt>
 
-[propertydescriptionlist](./propdesc-schema-propertydescriptionlist.md)
+[propertyDescriptionList](./propdesc-schema-propertydescriptionlist.md)
 </dt> <dt>
 
-[propertydescription](./propdesc-schema-propertydescription.md)
+[propertyDescription](./propdesc-schema-propertydescription.md)
 </dt> <dt>
 
-[SearchInfo](./propdesc-schema-searchinfo.md)
+[searchInfo](./propdesc-schema-searchinfo.md)
 </dt> <dt>
 
-[Labelinfo](./propdesc-schema-labelinfo.md)
+[labelInfo](./propdesc-schema-labelinfo.md)
 </dt> <dt>
 
-[TypeInfo](./propdesc-schema-typeinfo.md)
+[Typeinfo](./propdesc-schema-typeinfo.md)
 </dt> <dt>
 
-[Display Info](./propdesc-schema-displayinfo.md)
+[displayInfo](./propdesc-schema-displayinfo.md)
 </dt> <dt>
 
 [aliasInfo](./propdesc-schema-aliasinfo.md)
 </dt> <dt>
 
-[StringFormat](./propdesc-schema-stringformat.md)
+[Stringformat](./propdesc-schema-stringformat.md)
 </dt> <dt>
 
-[BooleanFormat](./propdesc-schema-booleanformat.md)
+[booleanFormat](./propdesc-schema-booleanformat.md)
 </dt> <dt>
 
-[NumberFormat](./propdesc-schema-numberformat.md)
+[Numberformat](./propdesc-schema-numberformat.md)
 </dt> <dt>
 
 [dateTimeFormat](./propdesc-schema-datetimeformat.md)
 </dt> <dt>
 
-[enumeratedlist](./propdesc-schema-enumeratedlist.md)
+[enumeratedList](./propdesc-schema-enumeratedlist.md)
 </dt> <dt>
 
 [enum](./propdesc-schema-enum.md)
 </dt> <dt>
 
-[enumbereich](./propdesc-schema-enumrange.md)
+[enumRange](./propdesc-schema-enumrange.md)
 </dt> <dt>
 
 [image](./propdesc-schema-image.md)
 </dt> <dt>
 
-[DrawControl](./propdesc-schema-drawcontrol.md)
+[drawControl](./propdesc-schema-drawcontrol.md)
 </dt> <dt>
 
-[editcontrol](./propdesc-schema-editcontrol.md)
+[editControl](./propdesc-schema-editcontrol.md)
 </dt> <dt>
 
-[FilterControl](./propdesc-schema-filtercontrol.md)
+[Filtercontrol](./propdesc-schema-filtercontrol.md)
 </dt> <dt>
 
-[querycontrol](./propdesc-schema-querycontrol.md)
+[queryControl](./propdesc-schema-querycontrol.md)
 </dt> <dt>
 
-[relatedpropertyinfo](./propdesc-schema-relatedpropertyinfo.md)
+[relatedPropertyInfo](./propdesc-schema-relatedpropertyinfo.md)
 </dt> <dt>
 
 [relatedProperty](./propdesc-schema-relatedproperty.md)
 </dt> <dt>
 
-[startpinoption](/previous-versions//jj553605(v=vs.85))
+[startPinOption](/previous-versions//jj553605(v=vs.85))
 </dt> </dl>
 
  

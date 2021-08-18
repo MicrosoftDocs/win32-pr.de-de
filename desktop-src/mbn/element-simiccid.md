@@ -1,22 +1,22 @@
 ---
-description: Mbnprofileext \/ simiccid (v4)
+description: MBNProfileExt \/ SimIccID (v4)
 MS-HAID: WWAN\_profile\_v4.element\_SimIccID
 MSHAttr:
 - PreferredSiteName:MSDN
 - PreferredLib:/library/windows/desktop
-title: Simiccid
+title: SimIccID
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 7369604267c692166e5ebc3201f732789ecd450d
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 1f5685b2ec317291aa0561714d67fd9d4a992f9dace7972f6de81e49372fdcec
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "103751952"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119035888"
 ---
-# <a name="span-idwwan_profile_v4element_simiccidspanmbnprofileextsimiccid-v4"></a><span id="WWAN_profile_v4.element_SimIccID"></span>Mbnprofileext \/ simiccid (v4)
+# <a name="span-idwwan_profile_v4element_simiccidspanmbnprofileextsimiccid-v4"></a><span id="WWAN_profile_v4.element_SimIccID"></span>MBNProfileExt \/ SimIccID (v4)
 
-Die SIM-identikations Nummer für GSM-Geräte. Weitere Informationen finden Sie in der Dokumentation für das v1 [**simiccid-**](./schema-simiccid-mbnprofile-element.md) Element.
+Die SIM-Identifikationsnummer für GSM-Geräte. Weitere Informationen finden Sie in der Dokumentation für das [**SimIccID-Element**](./schema-simiccid-mbnprofile-element.md) v1.
 
 ## <a name="element-hierarchy"></a>Elementhierarchie
 
@@ -56,18 +56,18 @@ Keine.
 <thead>
 <tr class="header">
 <th>Übergeordnetes Element</th>
-<th>BESCHREIBUNG</th>
+<th>Beschreibung</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
 <td><a href="element-mbnprofileext.md">MBNProfileExt</a></td>
-<td><p>Das <strong>mbnprofileext</strong> -Element ist eine Erweiterung des früheren mbnprofile-Elements. Es identifiziert ein mobiles Breitband Profil mit einem umfassenderen Satz von Optionen als das mbnprofile-Element.</p>
-<p>Es kann mehr als ein mbnprofileext-Element in einem Profil geben, das Profileinstellungen für einen bestimmten Satz von Betriebszuständen beschreibt. Verwenden Sie das untergeordnete <a href="element-profileconditionedon.md"><strong>profileconditionedon</strong></a> -Element von <strong>mbnprofileext</strong> , um anzugeben, welche Betriebsbedingungen ein bestimmtes Profil zum aktiven Profil machen.</p></td>
+<td><p>Das <strong>MBNProfileExt-Element</strong> ist eine Erweiterung des früheren MBNProfile-Elements. Es identifiziert ein Mobile Broadband-Profil mit einem vielfältigeren Satz von Optionen als das MBNProfile-Element.</p>
+<p>Es kann mehrere MbnProfileExt-Elemente in einem Profil geben, die Profileinstellungen für einen bestimmten Satz von Betriebsbedingungen beschreiben. Verwenden Sie <a href="element-profileconditionedon.md"><strong>das untergeordnete ProfileConditionedOn-Element</strong></a> von <strong>MBNProfileExt,</strong> um anzugeben, welche Betriebsbedingungen ein bestimmtes Profil zum aktiven Profil machen.</p></td>
 </tr>
 <tr class="even">
 <td><a href="element-modemdmconfigprofile.md">ModemDMConfigProfile</a></td>
-<td><p>Modem-DM-Konfigurations Profil.</p></td>
+<td><p>Modem-DM-Konfigurationsprofil.</p></td>
 </tr>
 </tbody>
 </table>

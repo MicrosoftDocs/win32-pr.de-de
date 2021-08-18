@@ -1,11 +1,11 @@
 ---
-title: Initialize-Methode von inapenforcementclientconnection (napforcementclient. h)
-description: Initialisiert die Client Verbindung.
+title: INapEnforcementClientConnection Initialize-Methode (NapEnforcementClient.h)
+description: Initialisiert die Clientverbindung.
 ms.assetid: da72bfc3-9551-4fb0-b9a5-2931c14f618f
 keywords:
-- Methode "NAP initialisieren"
-- Initialize-Methode NAP, inapenforcementclientconnection-Schnittstelle
-- Inapenforcementclientconnection-Schnittstelle NAP, Initialize-Methode
+- Initialisieren der NAP-Methode
+- Initialisieren der NAP-Methode, INapEnforcementClientConnection-Schnittstelle
+- INapEnforcementClientConnection-Schnittstelle NAP, Initialize-Methode
 topic_type:
 - apiref
 api_name:
@@ -16,21 +16,21 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: b51f12025bbddb8a9e795a97f2ed443344327a17
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 034fd83ac9337f6b2529b4035e6daa1b9bd06c3022ed30dbce0af74e5f6ef6cd
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104475993"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118939661"
 ---
-# <a name="inapenforcementclientconnectioninitialize-method"></a>Inapenforcementclientconnection:: Initialize-Methode
+# <a name="inapenforcementclientconnectioninitialize-method"></a>INapEnforcementClientConnection::Initialize-Methode
 
 > [!Note]  
-> Die Netzwerk Zugriffsschutz-Plattform ist ab Windows 10 nicht verfügbar.
+> Die Netzwerkzugriffsschutz-Plattform ist ab dem Windows 10
 
  
 
-Die **inapenforcementclientconnection:: Initialize** -Methode initialisiert die Client Verbindung.
+Die **INapEnforcementClientConnection::Initialize-Methode** initialisiert die Clientverbindung.
 
 ## <a name="syntax"></a>Syntax
 
@@ -47,24 +47,24 @@ HRESULT Initialize(
 
 <dl> <dt>
 
-*ID* \[ in\]
+*id* \[ in\]
 </dt> <dd>
 
-Ein Zeiger auf eine [**enforemententityid**](nap-datatypes.md) , die den Erzwingungs Client identifiziert, der die Verbindung anfordert. Dieser Wert wird von NAPAgent während der Verbindungs Erstellung festgelegt.
+Ein Zeiger auf eine [**EnforementEntityId,**](nap-datatypes.md) die den Erzwingungsclient identifiziert, der die Verbindung an fordert. Dieser Wert wird während der Verbindungserstellung vom NapAgent festgelegt.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Es können auch andere com-spezifische Fehlercodes zurückgegeben werden.
+Es können auch andere COM-spezifische Fehlercodes zurückgegeben werden.
 
 
 
 | Rückgabecode                                                                                     | Beschreibung                                                        |
 |-------------------------------------------------------------------------------------------------|--------------------------------------------------------------------|
 | <dl> <dt>**S \_ OK**</dt> </dl>           | Vorgang erfolgreich.<br/>                                    |
-| <dl> <dt>**E \_ Access verweigert**</dt> </dl> | Berechtigungs Fehler, Zugriff verweigert.<br/>                       |
-| <dl> <dt>**E \_ Outo-Memory**</dt> </dl>  | System Ressourcen Limit, der Vorgang konnte nicht durchgeführt werden.<br/> |
+| <dl> <dt>**E \_ ACCESSDENIED**</dt> </dl> | Berechtigungsfehler, Zugriff verweigert.<br/>                       |
+| <dl> <dt>**E \_ OUTOFMEMORY**</dt> </dl>  | Systemressourcenlimit, konnte den Vorgang nicht ausführen.<br/> |
 
 
 
@@ -76,10 +76,10 @@ Es können auch andere com-spezifische Fehlercodes zurückgegeben werden.
 
 | Anforderung | Wert |
 |-------------------------------------|-----------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                                      |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/>                                                |
-| Header<br/>                   | <dl> <dt>Napforcementclient. h</dt> </dl>   |
-| IDL<br/>                      | <dl> <dt>Napforcementclient. idl</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ Vista-Desktop-Apps\]<br/>                                                      |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/>                                                |
+| Header<br/>                   | <dl> <dt>NapEnforcementClient.h</dt> </dl>   |
+| Idl<br/>                      | <dl> <dt>NapEnforcementClient.idl</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Qagent.dll</dt> </dl>               |
 
 
@@ -88,7 +88,7 @@ Es können auch andere com-spezifische Fehlercodes zurückgegeben werden.
 
 <dl> <dt>
 
-[**Inapenforcementclientconnection**](inapenforcementclientconnection.md)
+[**INapEnforcementClientConnection**](inapenforcementclientconnection.md)
 </dt> </dl>
 
  

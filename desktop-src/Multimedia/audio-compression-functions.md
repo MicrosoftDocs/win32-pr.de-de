@@ -4,13 +4,13 @@ description: Audiokomprimierungsfunktionen
 ms.assetid: da207a50-9c67-4cf3-920b-5878637060db
 keywords:
 - Multimediaaudio, ACM-Funktionen
-- Audio,ACM-Funktionen
+- Audio, ACM-Funktionen
 - Audiokomprimierungs-Manager (ACM), Funktionen
-- ACM (Audiokomprimierungs-Manager), Funktionen
+- ACM (Audiokomprimierungs-Manager),Funktionen
 - ACM-Referenz, Funktionen
-- Referenz für ACM, Functions
+- Referenz für ACM,Functions
 - ACM-Funktionen
-- Audiokomprimierung,Funktionen
+- Audiokomprimierung, Funktionen
 ms.topic: article
 ms.date: 05/31/2018
 ms.openlocfilehash: 142be3301841f8d9ecf083a5eed2004e77fb9f9b7fe100959ac562cdd11843ca
@@ -22,7 +22,7 @@ ms.locfileid: "118941808"
 ---
 # <a name="audio-compression-functions"></a>Audiokomprimierungsfunktionen
 
-Die folgenden Funktionen werden mit Audiokomprimierung verwendet.
+Die folgenden Funktionen werden bei der Audiokomprimierung verwendet.
 
 -   [**acmDriverAdd**](/windows/desktop/api/Msacm/nf-msacm-acmdriveradd)
 -   [**acmDriverClose**](/windows/desktop/api/Msacm/nf-msacm-acmdriverclose)

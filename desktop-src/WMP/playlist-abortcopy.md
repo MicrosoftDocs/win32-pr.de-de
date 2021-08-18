@@ -1,9 +1,9 @@
 ---
-title: Wiedergabeliste. abortcopy
-description: Mit der abortcopy-Methode wird ein Kopiervorgang abgebrochen.
+title: PLAYLIST.abortCopy
+description: Die abortCopy-Methode bricht einen Kopiervorgang ab.
 ms.assetid: 1d13b160-a43b-419c-bd97-e0f4eb0fa429
 keywords:
-- Wiedergabeliste. Abbrechen von Windows-Media Player
+- PLAYLIST.abortCopy Windows Media Player
 topic_type:
 - apiref
 api_name:
@@ -13,16 +13,16 @@ api_type:
 ms.topic: reference
 ms.date: 05/31/2018
 api_location: ''
-ms.openlocfilehash: 48fcc4e9dfe2960a45d4de1fac80d534e8d551a6
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 2d6ef43afa2630c1f02c30ea3db05b09852d7f720ffd63e99a63984d0ca45800
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106371691"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118995790"
 ---
-# <a name="playlistabortcopy"></a>Wiedergabeliste. abortcopy
+# <a name="playlistabortcopy"></a>PLAYLIST.abortCopy
 
-Mit der **abortcopy** -Methode wird ein Kopiervorgang abgebrochen.
+Die **abortCopy-Methode** bricht einen Kopiervorgang ab.
 
 ``` syntax
         elementID.abortCopy()
@@ -42,21 +42,21 @@ Diese Methode gibt keinen Wert zurück.
 
 | Anforderung | Wert |
 |--------------------|------------------------------------------------------|
-| Version<br/> | Windows Media Player, Version 7,0 oder höher<br/> |
+| Version<br/> | Windows Media Player Version 7.0 oder höher<br/> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Wiedergabelisten Element**](playlist-element.md)
+[**PLAYLIST-Element**](playlist-element.md)
 </dt> <dt>
 
-[**Wiedergabeliste. Kopieren**](playlist-copy.md)
+[**PLAYLIST.copy**](playlist-copy.md)
 </dt> <dt>
 
-[**Wiedergabeliste. Kopieren**](playlist-copying.md)
+[**PLAYLIST.copying**](playlist-copying.md)
 </dt> </dl>
 
  

@@ -1,11 +1,11 @@
 ---
-title: Controls. getaudiolanguagedescription-Methode
-description: Die getaudiolanguagedescription-Methode ruft die Beschreibung für die Audiosprache ab, die dem angegebenen 1-basierten Index entspricht.
+title: Controls.getAudioLanguageDescription-Methode
+description: Die getAudioLanguageDescription-Methode ruft die Beschreibung für die Audiosprache ab, die dem angegebenen einbasierten Index entspricht.
 ms.assetid: 995a2568-f15f-4b92-9782-92ba5273f444
 keywords:
-- getaudiolanguagedescription-Methode, Windows Media Player
-- getaudiolanguagedescription-Methode, Windows Media Player, Controls-Klasse
-- Steuerelemente-Klasse, Windows Media Player, getaudiolanguagedescription-Methode
+- getAudioLanguageDescription-Windows Media Player
+- getAudioLanguageDescription-Methode Windows Media Player , Controls-Klasse
+- Steuert die Windows Media Player , getAudioLanguageDescription-Methode
 topic_type:
 - apiref
 api_name:
@@ -16,16 +16,16 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 1d28e82648a1047252402694f4948d2a2734f344
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 29aa5f7b5c0ad72ff13b571505283b243bd62d79ebc4339717ed8283cccb2a5b
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106354095"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118997500"
 ---
-# <a name="controlsgetaudiolanguagedescription-method"></a>Controls. getaudiolanguagedescription-Methode
+# <a name="controlsgetaudiolanguagedescription-method"></a>Controls.getAudioLanguageDescription-Methode
 
-Die **getaudiolanguagedescription** -Methode ruft die Beschreibung für die Audiosprache ab, die dem angegebenen 1-basierten Index entspricht.
+Die **getAudioLanguageDescription-Methode** ruft die Beschreibung für die Audiosprache ab, die dem angegebenen einbasierten Index entspricht.
 
 ## <a name="syntax"></a>Syntax
 
@@ -42,22 +42,22 @@ strRetVal = Controls.getAudioLanguageDescription(
 
 <dl> <dt>
 
-*Index* \[ in\]
+*Index* \[ In\]
 </dt> <dd>
 
-**Zahl** (**Long**), die den einbasierten audiosprachindex angibt.
+**Zahl** (**long**), die den 1-basierten Audiosprachindex an gibt.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Diese Methode gibt einen **Zeichen** folgen Wert zurück.
+Diese Methode gibt einen **Zeichenfolgenwert** zurück.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Bei Windows Media-basierten Inhalten unterstützen Eigenschaften und Methoden im Zusammenhang mit der Sprachauswahl nur eine einzelne Ausgabe.
+Für Windows Medienbasierte Inhalte unterstützen Eigenschaften und Methoden im Zusammenhang mit der Sprachauswahl nur eine einzelne Ausgabe.
 
-Verwenden Sie die Eigenschaft **audiolanguagecount** , um die Anzahl der unterstützten Audiosprachen abzurufen, und greifen Sie dann einzeln mithilfe eines 1-basierten Indexes auf eine Audiosprache zu.
+Verwenden Sie **die audioLanguageCount-Eigenschaft,** um die Anzahl der unterstützten Audiosprachen zu erhalten, und greifen Sie dann einzeln mithilfe eines einbasierten Indexes auf eine Audiosprache zu.
 
 **Windows Media Player 10 Mobile:** Diese Methode wird nicht unterstützt.
 
@@ -67,31 +67,31 @@ Verwenden Sie die Eigenschaft **audiolanguagecount** , um die Anzahl der unterst
 
 | Anforderung | Wert |
 |--------------------|------------------------------------------------------------------------------------|
-| Version<br/> | Windows Media Player 9 oder höher.<br/>                                 |
+| Version<br/> | Windows Media Player 9-Serie oder höher.<br/>                                 |
 | DLL<br/>     | <dl> <dt>Wmp.dll</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
 [**Controls-Objekt**](controls-object.md)
 </dt> <dt>
 
-[**Controls. audiolanguagecount**](controls-audiolanguagecount.md)
+[**Controls.audioLanguageCount**](controls-audiolanguagecount.md)
 </dt> <dt>
 
-[**Controls. currentaudiolanguage**](controls-currentaudiolanguage.md)
+[**Controls.currentAudioLanguage**](controls-currentaudiolanguage.md)
 </dt> <dt>
 
-[**Controls. currentaudiolanguageindex**](controls-currentaudiolanguageindex.md)
+[**Controls.currentAudioLanguageIndex**](controls-currentaudiolanguageindex.md)
 </dt> <dt>
 
-[**Controls. getaudiolanguageid**](controls-getaudiolanguageid.md)
+[**Controls.getAudioLanguageID**](controls-getaudiolanguageid.md)
 </dt> <dt>
 
-[**Controls. getlanguagename**](controls-getlanguagename.md)
+[**Controls.getLanguageName**](controls-getlanguagename.md)
 </dt> </dl>
 
  
