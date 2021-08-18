@@ -13,7 +13,7 @@ ms.locfileid: "119996830"
 ---
 # <a name="qos-updates"></a>QoS-Updates
 
-Die Implementierungsdetails für Quality of Service (QoS) werden im Microsoft Windows Software Development Kit (SDK) in einem separaten, dedizierten QoS-Abschnitt bereitgestellt. Informationen zu QoS-Updates finden Sie im Abschnitt [Quality of Service](/previous-versions/windows/desktop/qos/qos-start-page) des Windows SDK.
+Die Implementierungsdetails für Quality of Service (QoS) werden im Microsoft Windows Software Development Kit (SDK) in einem separaten, dedizierten QoS-Abschnitt bereitgestellt. Informationen zu QoS-Updates finden Sie im [Abschnitt Quality of Service](/previous-versions/windows/desktop/qos/qos-start-page) des Windows SDK.
 
 ## <a name="related-topics"></a>Zugehörige Themen
 

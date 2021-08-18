@@ -22,7 +22,7 @@ Dieser Abschnitt enthält Themen, die für Windows Server 2008 R2 spezifisch sin
 -   [Nur 64-Bit](64-bit-only.md)
 -   [WoW64 ist jetzt ein optionales Feature für Server Core](wow64-is-now-an-optional-feature-for-server-core.md)
 -   [Teilmenge von .NET 2.0 jetzt unter Server Core](subset-of--net-2-0-now-on-server-core.md)
--   [.NET 3.0 und 3.5 jetzt unter Server Core](-net-3-0-and-3-5-now-on-server-core.md)
+-   [.NET 3.0 und 3.5 jetzt auf Server Core](-net-3-0-and-3-5-now-on-server-core.md)
 
  
 

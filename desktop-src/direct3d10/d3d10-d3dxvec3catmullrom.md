@@ -22,7 +22,7 @@ ms.locfileid: "119989650"
 ---
 # <a name="d3dxvec3catmullrom-function-d3dx10mathh"></a>D3DXVec3CatmullRom-Funktion (D3DX10Math.h)
 
-Führt eine Catmull-Rom Interpolation mit den angegebenen 3D-Vektoren aus.
+Führt eine Catmull-Rom Interpolation unter Verwendung der angegebenen 3D-Vektoren aus.
 
 ## <a name="syntax"></a>Syntax
 
@@ -177,7 +177,7 @@ Q(s) = [(-s3 + 2s2 - s)p1 + (3s3 - 5s2 + 2)p2 + (-3s3 + 4s2 + s)p3 + (s3 - s2)p4
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 

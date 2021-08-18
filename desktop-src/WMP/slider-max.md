@@ -1,6 +1,6 @@
 ---
 title: SLIDER.max
-description: Das Max-Attribut gibt den maximalen Wert des bereichs an, der vom Schiebereglersteuerelement definiert wird, oder ruft es ab.
+description: Das max-Attribut gibt den maximalen Wert des bereichs an, der vom Schieberegler-Steuerelement definiert wird, oder ruft den Wert ab.
 ms.assetid: c38e7868-d144-4e40-871a-e70181a6dfb5
 keywords:
 - SLIDER.max Windows Media Player
@@ -21,7 +21,7 @@ ms.locfileid: "118995180"
 ---
 # <a name="slidermax"></a>SLIDER.max
 
-Das **Max-Attribut** gibt den maximalen Wert des bereichs an, der vom Schiebereglersteuerelement definiert wird, oder ruft es ab.
+Das **max-Attribut** gibt den maximalen Wert des bereichs an, der vom Schieberegler-Steuerelement definiert wird, oder ruft den Wert ab.
 
 ``` syntax
         elementID.max
@@ -29,13 +29,13 @@ Das **Max-Attribut** gibt den maximalen Wert des bereichs an, der vom Schiebereg
 
 ## <a name="possible-values"></a>Mögliche Werte
 
-Dieses Attribut ist eine  Lese-/Schreibnummer **(float)** mit dem Standardwert 100.
+Dieses Attribut ist eine Lese-/Schreibnummer (**float**) mit dem Standardwert 100. 
 
 ## <a name="remarks"></a>Hinweise
 
-Der für **max** angegebene Wert muss größer als der wert für **min** sein.
+Der für **max angegebene Wert** muss größer als der für min **sein.**
 
-Weitere Informationen finden Sie unter **DEM UNTERENLIDER.** [das attribut positionImage](customslider-positionimage.md) für ein Beispiel, das veranschaulicht, wie die Attribute des **SLIDER-Elements** verwendet werden.
+Weitere Informationen **finden Sie unter DER -1000-000-0** [positionImage-Attribut](customslider-positionimage.md) für ein Beispiel, das veranschaulicht, wie die Attribute des **SLIDER-Elements** verwendet werden.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -47,7 +47,7 @@ Weitere Informationen finden Sie unter **DEM UNTERENLIDER.** [das attribut posit
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 

@@ -1,6 +1,6 @@
 ---
-title: MCI_SAVE_PARMS-Struktur (mciapi. h)
-description: Die MCI \_ - \_ Struktur zum Speichern von Parametern enthält die Dateinamen Informationen für den MCI- \_ Befehl "Save".
+title: MCI_SAVE_PARMS-Struktur (Mciapi.h)
+description: Die MCI \_ SAVE \_ PARMS-Struktur enthält die Dateinameninformationen für den MCI \_ SAVE-Befehl.
 ms.assetid: fbaff175-e521-4b93-853a-f444726932d3
 keywords:
 - MCI_SAVE_PARMS Struktur Windows Multimedia
@@ -14,16 +14,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: d6252788b1ffc251d2fa6a3f993f074edc31aaac
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 0d87f581e753265796259fbd33bfeeba3d4c2957e107c7edeb8d08c063e34e32
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "106341781"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120038330"
 ---
-# <a name="mci_save_parms-structure"></a>MCI- \_ Struktur zum Speichern von \_ Parametern
+# <a name="mci_save_parms-structure"></a>MCI \_ SAVE \_ PARMS-Struktur
 
-Die **MCI-Struktur zum \_ Speichern von \_ Parametern** enthält die Dateinamen Informationen für den MCI-Befehl " [**\_ Save**](mci-save.md) ".
+Die **MCI \_ SAVE \_ PARMS-Struktur** enthält die Dateinameninformationen für den [**MCI \_ SAVE-Befehl.**](mci-save.md)
 
 ## <a name="syntax"></a>Syntax
 
@@ -41,23 +41,23 @@ typedef struct {
 
 <dl> <dt>
 
-**dwcallback**
+**dwCallback**
 </dt> <dd>
 
-Das nieder wertige Wort gibt ein Fenster Handle an, das für das MCI-Benachrichtigungs Kennzeichen verwendet wird \_ .
+Das Wort mit niedriger Reihenfolge gibt ein Fensterhandle an, das für das MCI \_ NOTIFY-Flag verwendet wird.
 
 </dd> <dt>
 
-**lpFileName**
+**lpfilename**
 </dt> <dd>
 
-Der Name der zu speichernden Datei.
+Name der zu speichernde Datei.
 
 </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Wenn Sie den Membern dieser Strukturdaten zuweisen, legen Sie die entsprechenden Flags im *fdwcommand* -Parameter der [**mciSendCommand**](/previous-versions//dd757160(v=vs.85)) -Funktion fest, um die Elemente zu überprüfen.
+Legen Sie beim Zuweisen von Daten zu den Membern dieser Struktur die entsprechenden Flags im *fdwCommand-Parameter* der [**mciSendCommand-Funktion**](/previous-versions//dd757160(v=vs.85)) fest, um die Member zu überprüfen.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -67,21 +67,21 @@ Wenn Sie den Membern dieser Strukturdaten zuweisen, legen Sie die entsprechenden
 |-------------------------------------|-------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[nur Desktop-Apps\]<br/>                          |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                                |
-| Header<br/>                   | <dl> <dt>Mciapi. h</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Mciapi.h</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**MCI**](mci.md)
+[**Mci**](mci.md)
 </dt> <dt>
 
 [**MCI-Strukturen**](mci-structures.md)
 </dt> <dt>
 
-[**MCI- \_ Speicherung**](mci-save.md)
+[**MCI \_ SAVE**](mci-save.md)
 </dt> <dt>
 
 [**mciSendCommand**](/previous-versions//dd757160(v=vs.85))

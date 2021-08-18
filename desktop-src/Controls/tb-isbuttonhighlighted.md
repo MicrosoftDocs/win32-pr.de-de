@@ -1,9 +1,9 @@
 ---
-title: TB_ISBUTTONHIGHLIGHTED Meldung (kommstrg. h)
-description: Überprüft den Hervorhebungs Zustand einer Symbolleisten-Schaltfläche.
+title: TB_ISBUTTONHIGHLIGHTED-Nachricht (Commctrl.h)
+description: Überprüft den Hervorhebungsstatus einer Symbolleistenschaltfläche.
 ms.assetid: d5aab670-a989-46f2-b4f8-d8a8968cbe07
 keywords:
-- Windows-Steuerelemente für TB_ISBUTTONHIGHLIGHTED Meldung
+- TB_ISBUTTONHIGHLIGHTED Windows-Steuerelemente für Nachrichten
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: f53e25058fee8fa5dcac218a641277ac46aed4e7
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 903932fddb7bf356a89adda0513a045d099a22c459add6401818eec54a3f0657
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104040364"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119918370"
 ---
-# <a name="tb_isbuttonhighlighted-message"></a>TB \_ isbuttonmarkierte Meldung
+# <a name="tb_isbuttonhighlighted-message"></a>\_TB ISBUTTONHIGHLIGHTED-Nachricht
 
-Überprüft den Hervorhebungs Zustand einer Symbolleisten-Schaltfläche.
+Überprüft den Hervorhebungsstatus einer Symbolleistenschaltfläche.
 
 ## <a name="parameters"></a>Parameter
 
@@ -32,7 +32,7 @@ ms.locfileid: "104040364"
 *wParam* 
 </dt> <dd>
 
-Befehls Bezeichner für eine Symbolleisten-Schaltfläche.
+Befehlsbezeichner für eine Symbolleistenschaltfläche.
 
 </dd> <dt>
 
@@ -41,7 +41,7 @@ Befehls Bezeichner für eine Symbolleisten-Schaltfläche.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt einen Wert ungleich 0 (null) zurück, wenn die Schaltfläche markiert ist, andernfalls NULL
+Gibt einen Wert ungleich 0 (null) zurück, wenn die Schaltfläche hervorgehoben ist, andernfalls 0 (null).
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -49,9 +49,9 @@ Gibt einen Wert ungleich 0 (null) zurück, wenn die Schaltfläche markiert ist, 
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                        |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/>                                  |
-| Header<br/>                   | <dl> <dt>Kommstrg. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur Vista-Desktop-Apps\]<br/>                                        |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                                  |
+| Header<br/>                   | <dl> <dt>Commctrl.h</dt> </dl> |
 
 
 

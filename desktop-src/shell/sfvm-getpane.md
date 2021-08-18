@@ -1,21 +1,21 @@
 ---
-description: Sfvm \_ GetPane kann geändert oder nicht verfügbar sein.
+description: SFVM \_ GETPANE kann geändert oder nicht verfügbar sein.
 ms.assetid: 9621b921-e97f-4219-953a-7c961a81c379
-title: SFVM_GETPANE Meldung (shlobj. h)
+title: SFVM_GETPANE Meldung (Shlobj.h)
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 2800be1b7b427e13014686e587b51fc4bf7d7617
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 58ef936d4218c29c8d0574e97b8de73c1a0d54f4d62df7dba4f43f371bfeaf95
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "103960086"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118968669"
 ---
-# <a name="sfvm_getpane-message"></a>Sfvm \_ GetPane-Nachricht
+# <a name="sfvm_getpane-message"></a>SFVM \_ GETPANE-Nachricht
 
-\[**Sfvm \_ "GetPane** " ist für die Verwendung in den Betriebssystemen verfügbar, die im Abschnitt "Anforderungen" angegeben sind. Es kann in nachfolgenden Versionen geändert oder entfernt werden.\]
+\[**SFVM \_ GETPANE** steht für die Verwendung in den Betriebssystemen zur Verfügung, die im Abschnitt Anforderungen angegeben sind. Es kann in nachfolgenden Versionen geändert oder entfernt werden.\]
 
-Ermöglicht dem Rückruf Objekt, den Status Leistenbereich bereitzustellen, in dem die Internet Zonen Informationen angezeigt werden. Wird von [**ishellfolderviewcb:: messagesfvcb**](/windows/win32/api/shlobj_core/nf-shlobj_core-ishellfolderviewcb-messagesfvcb)verwendet.
+Ermöglicht es dem Rückrufobjekt, den Statusleistenbereich bereitzustellen, in dem die Informationen zur Internetzone angezeigt werden sollen. Wird von [**IShellFolderViewCB::MessageSFVCB**](/windows/win32/api/shlobj_core/nf-shlobj_core-ishellfolderviewcb-messagesfvcb)verwendet.
 
 
 ```C++
@@ -31,16 +31,16 @@ SFVM_GETPANE
 
 <dl> <dt>
 
-*paneid* \[ in\]
+*paneID* \[ In\]
 </dt> <dd>
 
-ID des angeforderten Bereichs. Dabei handelt es sich normalerweise um \_ eine Bereichs Zone, bei der es sich um einen der folgenden Werte handeln kann.
+ID des angeforderten Bereichs. Dies ist normalerweise PANE \_ ZONE, kann aber einer der folgenden Werte sein.
 
 <dt>
 
 <span id="PANE_NONE"></span><span id="pane_none"></span>
 
-<span id="PANE_NONE"></span><span id="pane_none"></span>**Bereich " \_ None"**
+<span id="PANE_NONE"></span><span id="pane_none"></span>**BEREICH \_ KEINE**
 
 
 </dt> <dd>
@@ -51,51 +51,51 @@ Kein Bereich.
 
 <span id="PANE_ZONE"></span><span id="pane_zone"></span>
 
-<span id="PANE_ZONE"></span><span id="pane_zone"></span>**\_Bereichs Zone**
+<span id="PANE_ZONE"></span><span id="pane_zone"></span>**\_BEREICHSZONE**
 
 
 </dt> <dd>
 
-Der Bereich "Internet Zone".
+Der Bereich Internetzone.
 
 </dd> <dt>
 
 <span id="PANE_OFFLINE"></span><span id="pane_offline"></span>
 
-<span id="PANE_OFFLINE"></span><span id="pane_offline"></span>**Bereich \_ Offline**
+<span id="PANE_OFFLINE"></span><span id="pane_offline"></span>**\_BEREICH OFFLINE**
 
 
 </dt> <dd>
 
-Der Offline-Bereich.
+Der Offlinebereich.
 
 </dd> <dt>
 
 <span id="PANE_PRINTER"></span><span id="pane_printer"></span>
 
-<span id="PANE_PRINTER"></span><span id="pane_printer"></span>**Bereichs \_ Drucker**
+<span id="PANE_PRINTER"></span><span id="pane_printer"></span>**\_BEREICHSDRUCKER**
 
 
 </dt> <dd>
 
-Der Druckanzeige Bereich.
+Der Bereich für die Druckanzeige.
 
 </dd> <dt>
 
 <span id="PANE_SSL"></span><span id="pane_ssl"></span>
 
-<span id="PANE_SSL"></span><span id="pane_ssl"></span>**Bereich- \_ SSL**
+<span id="PANE_SSL"></span><span id="pane_ssl"></span>**PANE \_ SSL**
 
 
 </dt> <dd>
 
-Der SSL-Bereich.
+Der Bereich SSL.
 
 </dd> <dt>
 
 <span id="PANE_NAVIGATION"></span><span id="pane_navigation"></span>
 
-<span id="PANE_NAVIGATION"></span><span id="pane_navigation"></span>**Bereichs \_ Navigation**
+<span id="PANE_NAVIGATION"></span><span id="pane_navigation"></span>**NAVIGATION IM BEREICH \_**
 
 
 </dt> <dd>
@@ -106,44 +106,44 @@ Der Navigationsbereich.
 
 <span id="PANE_PROGRESS"></span><span id="pane_progress"></span>
 
-<span id="PANE_PROGRESS"></span><span id="pane_progress"></span>**Bereichs Status \_**
+<span id="PANE_PROGRESS"></span><span id="pane_progress"></span>**\_BEREICHSFORTSCHRITT**
 
 
 </dt> <dd>
 
-Der Bereich der Statusanzeige.
+Der Statusanzeigebereich.
 
 </dd> <dt>
 
 <span id="PANE_PRIVACY"></span><span id="pane_privacy"></span>
 
-<span id="PANE_PRIVACY"></span><span id="pane_privacy"></span>**\_Datenschutz im Bereich**
+<span id="PANE_PRIVACY"></span><span id="pane_privacy"></span>**\_BEREICH "DATENSCHUTZ"**
 
 
 </dt> <dd>
 
-Der Datenschutz Indikator Bereich.
+Der Bereich "Datenschutzindikator".
 
 </dd> </dl> </dd> <dt>
 
- Bereich \[ vorgenommen\]
+*Bereich* \[ out\]
 </dt> <dd>
 
-Zeiger auf ein **DWORD** , das die Bereichs Nummer enthält.
+Zeiger auf ein **DWORD** mit der Bereichsnummer.
 
 </dd> </dl>
 
-## <a name="requirements"></a>Requirements (Anforderungen)
+## <a name="requirements"></a>Anforderungen
 
 
 
 | Anforderung | Wert |
 |-------------------------------------|-------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows XP \[ -Desktop-Apps\]<br/>                                         |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/>                                |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur XP-Desktop-Apps\]<br/>                                         |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                                |
 | Ende des Supports (Client)<br/>    | Windows XP mit SP2<br/>                                                      |
-| Ende des Supports (Server)<br/>    | Windows Server 2003<br/>                                                      |
-| Header<br/>                   | <dl> <dt>Shlobj. h</dt> </dl> |
+| Ende des Supports (Server)<br/>    | Windows Server 2003<br/>                                                      |
+| Header<br/>                   | <dl> <dt>Shlobj.h</dt> </dl> |
 
 
 

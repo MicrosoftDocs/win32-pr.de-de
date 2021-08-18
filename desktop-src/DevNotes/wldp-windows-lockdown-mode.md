@@ -1,7 +1,7 @@
 ---
-description: Beschreibt die Modi der sicheren Modi für ein Windows-Gerät.
+description: Beschreibt die Sicherheitsmodi (S-Modi) für ein Windows Gerät.
 ms.assetid: CE50AC56-0295-477C-93CB-ABAB92482A59
-title: WLDP_WINDOWS_LOCKDOWN_MODE-Enumeration (wldp. h)
+title: WLDP_WINDOWS_LOCKDOWN_MODE -Enumeration (Wldp.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,16 +13,16 @@ api_type:
 - HeaderDef
 api_location:
 - wldp.h
-ms.openlocfilehash: 438a44bec0745ea67b2b40c3f8aa9c0dd6bd0072
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 93a3ae8ef00c306d93995a3a97236fc9086185147144c4314726c507d8b52e57
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106361466"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119911340"
 ---
-# <a name="wldp_windows_lockdown_mode-enumeration"></a>Wldp \_ Windows \_ Lockdown \_ Mode-Enumeration
+# <a name="wldp_windows_lockdown_mode-enumeration"></a>WLDP WINDOWS \_ \_ LOCKDOWN \_ MODE-Enumeration
 
-Beschreibt die Modi der sicheren Modi für ein Windows-Gerät. Wird hauptsächlich in [**wldpquerywindowslockdownmode**](wldpquerywindowslockdownmode.md)verwendet.
+Beschreibt die Sicherheitsmodi (S-Modi) für ein Windows Gerät. Wird hauptsächlich in [**WldpQueryWindowsLockdownMode verwendet.**](wldpquerywindowslockdownmode.md)
 
 ## <a name="syntax"></a>Syntax
 
@@ -42,28 +42,28 @@ typedef enum _WLDP_WINDOWS_LOCKDOWN_MODE {
 
 <dl> <dt>
 
-<span id="WLDP_WINDOWS_LOCKDOWN_MODE_UNLOCKED"></span><span id="wldp_windows_lockdown_mode_unlocked"></span>**wldp- \_ Windows- \_ \_ \_ Sperrmodus gesperrt**
+<span id="WLDP_WINDOWS_LOCKDOWN_MODE_UNLOCKED"></span><span id="wldp_windows_lockdown_mode_unlocked"></span>**WLDP WINDOWS \_ LOCKDOWN MODE UNLOCKED (WLDP-WINDOWS-SPERRMODUS \_ \_ \_ ENTSPERRT)**
 </dt> <dd>
 
-Geschaltet. Wird hauptsächlich für Windows-Geräte ohne den S-Modus verwendet.
+Entsperrt. Wird hauptsächlich für Windows ohne den S-Modus verwendet.
 
 </dd> <dt>
 
-<span id="WLDP_WINDOWS_LOCKDOWN_MODE_TRIAL"></span><span id="wldp_windows_lockdown_mode_trial"></span>**wldp- \_ Windows- \_ Sperrmodus- \_ \_ Testversion**
+<span id="WLDP_WINDOWS_LOCKDOWN_MODE_TRIAL"></span><span id="wldp_windows_lockdown_mode_trial"></span>**WLDP \_ WINDOWS \_ LOCKDOWN \_ MODE \_ TRIAL**
 </dt> <dd>
 
-Versuchten. Wird hauptsächlich für ein Windows 10-Testgerät mit dem S-Modus verwendet. Der Test Modus ist ein Sonderfall für Windows 10-Geräte mit dem S-Modus: Richtlinien werden erzwungen, aber es gibt keinen Schutz vor der Durchsetzung der Richtlinie.
+Probephase. Wird hauptsächlich für ein Windows 10-Testgerät mit dem S-Modus verwendet. Der Testmodus ist ein Sonderfall für Windows 10-Geräte mit dem S-Modus: Richtlinien werden erzwungen, es gibt jedoch keinen Antirollbackschutz für die Erzwingung der Richtlinie.
 
 </dd> <dt>
 
-<span id="WLDP_WINDOWS_LOCKDOWN_MODE_LOCKED"></span><span id="wldp_windows_lockdown_mode_locked"></span>**wldp- \_ Windows- \_ \_ \_ Sperrmodus gesperrt**
+<span id="WLDP_WINDOWS_LOCKDOWN_MODE_LOCKED"></span><span id="wldp_windows_lockdown_mode_locked"></span>**WLDP \_ WINDOWS \_ LOCKDOWN \_ MODE \_ LOCKED**
 </dt> <dd>
 
-Ene. Wird hauptsächlich für ein Windows 10-Gerät mit dem S-Modus verwendet. Ein gesperrtes Gerät erzwingt die signierten Device Guard-Richtlinien, die mit dem Windows 10-Betriebssystem Image im S-Modus ausgeliefert werden.
+Gesperrt. Wird hauptsächlich für ein Windows 10 mit dem S-Modus verwendet. Ein gesperrtes Gerät erzwingt die signierten Device Guard-Richtlinien, die mit dem Windows 10-Betriebssystemimage im S-Modus ausgeliefert werden.
 
 </dd> <dt>
 
-<span id="WLDP_WINDOWS_LOCKDOWN_MODE_MAX"></span><span id="wldp_windows_lockdown_mode_max"></span>**wldp- \_ Windows- \_ \_ Sperrmodus ( \_ max)**
+<span id="WLDP_WINDOWS_LOCKDOWN_MODE_MAX"></span><span id="wldp_windows_lockdown_mode_max"></span>**WLDP \_ WINDOWS \_ LOCKDOWN \_ MODE \_ MAX**
 </dt> <dd>
 
 Der maximale Enumerationswert.
@@ -76,7 +76,7 @@ Der maximale Enumerationswert.
 
 | Anforderung | Wert |
 |-------------------|-----------------------------------------------------------------------------------|
-| Header<br/> | <dl> <dt>Wldp. h</dt> </dl> |
+| Header<br/> | <dl> <dt>Wldp.h</dt> </dl> |
 
 
 

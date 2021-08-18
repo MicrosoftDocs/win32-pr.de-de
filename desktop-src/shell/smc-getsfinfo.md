@@ -1,6 +1,6 @@
 ---
-description: Fordert Informationen zu einem Menü Element eines shellordners an.
-title: SMC_GETSFINFO Meldung (shobjidl. h)
+description: Fordert Informationen zu einem Shellordner-Menüelement an.
+title: SMC_GETSFINFO (Shobjidl.h)
 ms.topic: reference
 ms.date: 05/31/2018
 ms.assetid: 4459670c-f0fd-4ae8-8a1f-810e1dcac713
@@ -13,16 +13,16 @@ api_location:
 topic_type:
 - APIRef
 - kbSyntax
-ms.openlocfilehash: f3a02b61565eb08f623978900d6ce47e30eea85e
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: ff74e59d0ef445a74d1141950b2b10e79ebce5502a02ec38c446bddc7317a885
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "104994838"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118968079"
 ---
-# <a name="smc_getsfinfo-message"></a>SMC \_ gezfinfo-Nachricht
+# <a name="smc_getsfinfo-message"></a>SMC \_ GETSFINFO-Meldung
 
-Fordert Informationen zu einem Menü Element eines shellordners an.
+Fordert Informationen zu einem Shellordner-Menüelement an.
 
 
 ```C++
@@ -40,19 +40,19 @@ SMC_GETINFO
 *psminfo* 
 </dt> <dd>
 
-Zeiger auf eine [**sminfo**](/windows/win32/api/shobjidl_core/ns-shobjidl_core-sminfo) -Struktur. Füllen Sie die Struktur mit den entsprechenden Informationen aus, und geben Sie \_ OK zurück.
+Zeiger auf eine [**SMINFO-Struktur.**](/windows/win32/api/shobjidl_core/ns-shobjidl_core-sminfo) Füllen Sie die Struktur mit den entsprechenden Informationen aus, und geben Sie S \_ OK zurück.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt "S OK" zurück \_ .
+Geben Sie S \_ OK zurück.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Diese Benachrichtigung wird von der [**ishellmenucallback:: callbacksm**](/windows/desktop/api/shobjidl_core/nf-shobjidl_core-ishellmenucallback-callbacksm) -Methode empfangen.
+Diese Benachrichtigung wird von der [**IShellMenuCallback::CallbackSM-Methode**](/windows/desktop/api/shobjidl_core/nf-shobjidl_core-ishellmenucallback-callbacksm) empfangen.
 
-## <a name="requirements"></a>Requirements (Anforderungen)
+## <a name="requirements"></a>Anforderungen
 
 
 
@@ -60,8 +60,8 @@ Diese Benachrichtigung wird von der [**ishellmenucallback:: callbacksm**](/windo
 |-------------------------------------|-----------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[nur Desktop-Apps\]<br/>                              |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                                    |
-| Header<br/>                   | <dl> <dt>Shobjidl. h</dt> </dl>   |
-| IDL<br/>                      | <dl> <dt>Shobjidl. idl</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Shobjidl.h</dt> </dl>   |
+| Idl<br/>                      | <dl> <dt>Shobjidl.idl</dt> </dl> |
 
 
 

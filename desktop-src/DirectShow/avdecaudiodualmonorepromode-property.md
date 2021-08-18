@@ -1,37 +1,37 @@
 ---
-description: Gibt an, wie der Decoder Dual Mono-Audiodaten wiederherstellt.
+description: Gibt an, wie der Decoder duale Mono-Audiodaten reproduziert.
 ms.assetid: 3ef1f52c-13b2-4d9f-99fe-3317846be8a0
-title: Avdecaudiodualmonorepromode-Eigenschaft (codecapi. h)
+title: AVDecAudioDualMonoReproMode-Eigenschaft (Codecapi.h)
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: a71ebe7e003b2dc4b6eebc30901525ffb918a9a9
-ms.sourcegitcommit: a47bd86f517de76374e4fff33cfeb613eb259a7e
+ms.openlocfilehash: 9151ed6b996ec4ab92791221b7fb4c920913c818eac4a079ee6f40d04591a9db
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/06/2021
-ms.locfileid: "103747081"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119917060"
 ---
-# <a name="avdecaudiodualmonorepromode-property"></a>Avdecaudiodualmonorepromode (Eigenschaft)
+# <a name="avdecaudiodualmonorepromode-property"></a>AVDecAudioDualMonoReproMode (Eigenschaft)
 
-Gibt an, wie der Decoder Dual Mono-Audiodaten wiederherstellt.
+Gibt an, wie der Decoder duale Mono-Audiodaten reproduziert.
 
 Dies ist eine Eigenschaft mit Lese- und Schreibzugriff.
 
 ## <a name="data-type"></a>Datentyp
 
-**UInt32** (**VT \_ UI4**)
+**UINT32** (**VT \_ UI4**)
 
 ## <a name="property-guid"></a>Eigenschaften-GUID
 
-**Codecapi \_ avdecaudiodualmonorepromode**
+**CODECAPI \_ AVDecAudioDualMonoReproMode**
 
 ## <a name="property-value"></a>Eigenschaftswert
 
-Der Wert dieser Eigenschaft ist ein Member der [**eavdecaudiodualmonorepromode**](/windows/desktop/api/codecapi/ne-codecapi-eavdecaudiodualmonorepromode) -Enumeration.
+Der Wert dieser Eigenschaft ist ein Member der [**eAVDecAudioDualMonoReproMode-Enumeration.**](/windows/desktop/api/codecapi/ne-codecapi-eavdecaudiodualmonorepromode)
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Diese Eigenschaften sind nur anwendbar, wenn der Eingabe Bitstream des Decoders Dual Mono-Audiodaten enthält. Um diese Bedingung zu testen, müssen Sie den Wert der [avdecaudiodualmono](avdecaudiodualmono-property.md) -Eigenschaft erhalten.
+Diese Eigenschaften gelten nur, wenn der Eingabebitstream des Decoders duale Mono-Audiodaten enthält. Um diese Bedingung zu testen, erhalten Sie den Wert der [AVDecAudioDualMono-Eigenschaft.](avdecaudiodualmono-property.md)
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -39,20 +39,20 @@ Diese Eigenschaften sind nur anwendbar, wenn der Eingabe Bitstream des Decoders 
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[ Desktop Apps \| UWP-apps\]<br/>                     |
-| Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[ Desktop Apps \| UWP-apps\]<br/>                           |
-| Header<br/>                   | <dl> <dt>Codecapi. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[ Desktop-Apps \| UWP-Apps\]<br/>                     |
+| Unterstützte Mindestversion (Server)<br/> | Windows 2000 \[ Server-Desktop-Apps \| UWP-Apps\]<br/>                           |
+| Header<br/>                   | <dl> <dt>Codecapi.h</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[Eigenschaften der Codec-API](codec-api-properties.md)
+[Codec-API-Eigenschaften](codec-api-properties.md)
 </dt> <dt>
 
-[**Icodecapi-Schnittstelle**](/windows/desktop/api/Strmif/nn-strmif-icodecapi)
+[**ICodecAPI-Schnittstelle**](/windows/desktop/api/Strmif/nn-strmif-icodecapi)
 </dt> </dl>
 
  

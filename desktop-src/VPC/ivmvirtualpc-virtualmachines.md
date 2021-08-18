@@ -1,10 +1,10 @@
 ---
 title: IVMVirtualPC VirtualMachines-Eigenschaft (VPCCOMInterfaces.h)
-description: Ruft eine aufzählbare Auflistung von virtuellen Computern ab.
+description: Ruft eine aufzählbare Sammlung virtueller Computer ab.
 ms.assetid: 9e8dcd65-7cf8-4cdd-a412-62cbb96eb8ec
 keywords:
 - VirtualMachines-Eigenschaft Virtueller PC
-- VirtualMachines-Eigenschaft Virtueller PC, IVMVirtualPC-Schnittstelle
+- VirtualMachines-Eigenschaft Virtual PC, IVMVirtualPC-Schnittstelle
 - IVMVirtualPC-Schnittstelle Virtueller PC, VirtualMachines-Eigenschaft
 topic_type:
 - apiref
@@ -26,9 +26,9 @@ ms.locfileid: "118998490"
 ---
 # <a name="ivmvirtualpcvirtualmachines-property"></a>IVMVirtualPC::VirtualMachines-Eigenschaft
 
-\[Windows Der virtuelle PC ist ab Windows 8 nicht mehr für die Verwendung verfügbar. Verwenden Sie stattdessen den [Hyper-V-WMI-Anbieter (V2).](/windows/desktop/HyperV_v2/windows-virtualization-portal)\]
+\[Windows Der virtuelle PC ist ab diesem Zeitraum nicht mehr Windows 8. Verwenden Sie stattdessen den [Hyper-V-WMI-Anbieter (V2).](/windows/desktop/HyperV_v2/windows-virtualization-portal)\]
 
-Ruft eine aufzählbare Auflistung von virtuellen Computern ab.
+Ruft eine aufzählbare Sammlung virtueller Computer ab.
 
 Diese Eigenschaft ist schreibgeschützt.
 
@@ -54,9 +54,9 @@ Eine Auflistung von [**IVMVirtualMachine-Objekten.**](ivmvirtualmachine.md) Sieh
 | Name/Wert                                                                                                                                                                           | Bedeutung                                                                                         |
 |--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------|
 | <dl> <dt>S \_ OK</dt> <dt>0</dt> </dl>                                              | Der Vorgang wurde durchgeführt.<br/>                                                        |
-| <dl> <dt>E \_ POINTER</dt> <dt>0x80004003</dt> </dl>                                | Der Parameter ist **NULL.**<br/>                                                           |
+| <dl> <dt>E \_ ZEIGER 0X80004003</dt> <dt></dt> </dl>                                | Der Parameter ist **NULL.**<br/>                                                           |
 | <dl> <dt>DISP \_ E \_ EXCEPTION</dt> <dt>0x80020009</dt> </dl>                        | Ein unerwarteter Fehler ist aufgetreten.<br/>                                                    |
-| <dl> <dt>VM \_ E \_ \_ HARDWAREVIRTUALISIERUNG \_ DEAKTIVIERT</dt> <dt>0xA0040951</dt> </dl> | Der Prozessor unterstützt keine HAV-Erweiterungen (Hardware Accelerated Virtualization).<br/> |
+| <dl> <dt>VM \_ E \_ \_ HARDWAREVIRTUALISIERUNG \_ DEAKTIVIERT</dt> <dt>0XA0040951</dt> </dl> | Der Prozessor unterstützt keine HAV-Erweiterungen (Hardware Accelerated Virtualization).<br/> |
 
 
 
@@ -66,7 +66,7 @@ Eine Auflistung von [**IVMVirtualMachine-Objekten.**](ivmvirtualmachine.md) Sieh
 
 | Anforderung | Wert |
 |-------------------------------------|-----------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | nur Windows 7 \[ Desktop-Apps\]<br/>                                                    |
+| Unterstützte Mindestversion (Client)<br/> | Windows 7 \[ Desktop-Apps\]<br/>                                                    |
 | Unterstützte Mindestversion (Server)<br/> | Nicht unterstützt<br/>                                                                     |
 | Ende des Supports (Client)<br/>    | Windows 7<br/>                                                                          |
 | Product (Produkt)<br/>                  | Windows Virtual PC<br/>                                                                 |
@@ -75,7 +75,7 @@ Eine Auflistung von [**IVMVirtualMachine-Objekten.**](ivmvirtualmachine.md) Sieh
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 

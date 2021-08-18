@@ -1,21 +1,21 @@
 ---
-description: Verwenden Sie die EventWrite-Funktion, wenn mehrere Komponenten Ihre Ereignisse in einem End-to-End-Ablauf Verfolgungs Szenario miteinander verknüpfen möchten.
+description: Verwenden Sie die EventWriteTransfer-Funktion, wenn mehrere Komponenten ihre Ereignisse in einem End-to-End-Ablaufverfolgungsszenario in Beziehung setzen möchten.
 ms.assetid: 715e3161-d85a-45c0-84df-c6c360b266a1
-title: Schreiben verwandter Ereignisse in einem Manifest-basierten Anbieter
+title: Schreiben verwandter Ereignisse in einem manifestbasierten Anbieter
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: bb9508996503f53c738d62fac32905919a8c73ef
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 9f7f6d09e7e95617b662c3530497b199925921ef9abfd4f3825a5ac799886f95
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104527281"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119015208"
 ---
-# <a name="writing-related-events-in-a-manifest-based-provider"></a>Schreiben verwandter Ereignisse in einem Manifest-basierten Anbieter
+# <a name="writing-related-events-in-a-manifest-based-provider"></a>Schreiben verwandter Ereignisse in einem manifestbasierten Anbieter
 
-Verwenden Sie die [**EventWrite**](/windows/desktop/api/Evntprov/nf-evntprov-eventwritetransfer) -Funktion, wenn mehrere Komponenten Ihre Ereignisse in einem End-to-End-Ablauf Verfolgungs Szenario miteinander verknüpfen möchten. Die Komponenten A, B und C arbeiten z. b. für eine verwandte Aktivität und möchten alle Ereignisse verknüpfen, die mit dieser Aktivität verknüpft sind.
+Verwenden Sie die [**EventWriteTransfer-Funktion,**](/windows/desktop/api/Evntprov/nf-evntprov-eventwritetransfer) wenn mehrere Komponenten ihre Ereignisse in einem End-to-End-Ablaufverfolgungsszenario in Beziehung setzen möchten. Beispielsweise führen die Komponenten A, B und C Arbeiten an einer verwandten Aktivität aus und möchten alle Ereignisse im Zusammenhang mit dieser Aktivität verknüpfen.
 
-Etw verwendet den lokalen Thread Speicher, um den Aktivitäts Bezeichner der vorherigen Komponente für die nächste Komponente verfügbar zu machen. Die Komponente ruft den Bezeichner der vorherigen Komponente aus dem lokalen Speicher ab und legt den zugehörigen Aktivitäts Bezeichner darauf fest. Der Consumer kann dann den zugehörigen Aktivitäts Bezeichner verwenden, um die Kette der Ereignisse von einer Komponente zum nächsten zu durchlaufen.
+ETW verwendet lokalen Threadspeicher, um den Aktivitätsbezeichner der vorherigen Komponente für die nächste Komponente verfügbar zu machen. Die Komponente ruft den Bezeichner der vorherigen Komponente aus dem lokalen Speicher ab und legt den zugehörigen Aktivitätsbezeichner darauf fest. Der Consumer kann dann den zugehörigen Aktivitätsbezeichner verwenden, um die Kette der Ereignisse von einer Komponente zur nächsten zu durchgehen.
 
  
 

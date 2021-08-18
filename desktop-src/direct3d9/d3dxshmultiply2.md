@@ -1,7 +1,7 @@
 ---
-description: Berechnet das Produkt von zwei Funktionen, die mit sh (f und g) dargestellt werden.
+description: Berechnet das Produkt von zwei Funktionen, die mit SH dargestellt werden (f und g).
 ms.assetid: 632400a4-2ac9-438d-85f7-869101f350c8
-title: D3DXSHMultiply2-Funktion (D3dx9math. h)
+title: D3DXSHMultiply2-Funktion (D3dx9math.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -17,16 +17,16 @@ api_type:
 - HeaderDef
 api_location:
 - d3dx9math.h
-ms.openlocfilehash: f7b9adaf5caf7b4b2d35035fd5c2a916298b0c8c
-ms.sourcegitcommit: 14010c34b35fa268046c7683f021f86de08ddd0a
+ms.openlocfilehash: 00219ed1c38105562591b63e6bef64b949b2ab4443aed68e0e6b9d64cb156cc7
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "106355800"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119849690"
 ---
-# <a name="d3dxshmultiply2-function-d3dx9mathh"></a>D3DXSHMultiply2-Funktion (D3dx9math. h)
+# <a name="d3dxshmultiply2-function-d3dx9mathh"></a>D3DXSHMultiply2-Funktion (D3dx9math.h)
 
-Berechnet das Produkt von zwei Funktionen, die mit sh (f und g) dargestellt werden.
+Berechnet das Produkt von zwei Funktionen, die mit SH dargestellt werden (f und g).
 
 ## <a name="syntax"></a>Syntax
 
@@ -45,44 +45,44 @@ FLOAT* D3DXSHMultiply2(
 
 <dl> <dt>
 
-*Pout* \[ in\]
+*pOut* \[ In\]
 </dt> <dd>
 
-Typ: **[ **float**](../winprog/windows-data-types.md)\***
+Typ: **[ **FLOAT**](../winprog/windows-data-types.md)\***
 
-Ein Zeiger auf die Ausgabe-SH-Basis Funktion "ylm" wird in l \* l + m + l gespeichert.
+Zeiger auf die SH-Ausgabekoeffizienten – Basisfunktion Ylm wird unter l \* l + m+l gespeichert.
 
 </dd> <dt>
 
-*PF* \[ in\]
+*pF* \[ In\]
 </dt> <dd>
 
-Typ: Konstante **[**float**](../winprog/windows-data-types.md) \***
+Typ: **const [**FLOAT**](../winprog/windows-data-types.md) \***
 
-Geben Sie sh coeffs als erste Funktion ein.
+Eingabe-SH-Coeffs für die erste Funktion.
 
 </dd> <dt>
 
-*PG* \[ in\]
+*pG* \[ In\]
 </dt> <dd>
 
-Typ: Konstante **[**float**](../winprog/windows-data-types.md) \***
+Typ: **const [**FLOAT**](../winprog/windows-data-types.md) \***
 
-Der zweite Satz von Eingabe-SH-coeffs.
+Zweiter Satz von EINGABE-SH-Coeffs.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Typ: **[ **float**](../winprog/windows-data-types.md)\***
+Typ: **[ **FLOAT**](../winprog/windows-data-types.md)\***
 
-Zeiger auf SH-Ausgabe Koeffizienten.
+Zeiger auf SH-Ausgabekoeffizienten.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die Reihenfolge ist eine Zahl zwischen 2 und einschließlich 6. Auf dieser Seite werden also mehrere Funktionen dokumentiert: D3DXSHMultiply2, D3DXSHMultiply3,... D3DXSHMultiply6.
+Die Reihenfolge ist eine Zahl zwischen 2 und einschließlich 6. Diese Seite dokumentiert also mehrere Funktionen: D3DXSHMultiply2, D3DXSHMultiply3, ... D3DXSHMultiply6.
 
-Berechnet das Produkt von zwei Funktionen, die mit sh (f und g) dargestellt werden, wobei *Pout* \[ i \] = int (y i (s) f (s) \_ g (s)) ist \* \* , wobei y \_ i (s) die ITH-Basis Funktion ist, f (s) und g (s) SH Functions (Sum \_ i (y \_ i (s) \* c \_ i)). Die Reihenfolge o bestimmt die Längen der Arrays, bei denen immer O ^ 2-Koeffizienten vorhanden sein sollten. Im allgemeinen generiert das Produkt von zwei SH-Funktionen von Order O eine sh-Funktion von Order 2 \* O-1, aber die Ergebnisse werden abgeschnitten. Dies bedeutet, dass das Produkt sich (f \* g = = g \* f), aber nicht zuordnen lässt (f \* (g \* h)! = (f \* g) \* h.
+Berechnet das Produkt von zwei Funktionen, die mit SH (f und g) dargestellt werden, wobei *pOut* \[ i = \] int(y \_ \* i(s) \* f(s) g(s)), wobei y \_ i(s) die ITH SH-Basisfunktion ist, f(s) und g(s) SH-Funktionen sind (sum \_ i(y \_ i(s) \* c \_ i)). Die Reihenfolge O bestimmt die Längen der Arrays, wobei immer O^2-Koeffizienten vorhanden sein sollten. Im Allgemeinen generiert das Produkt von zwei SH-Funktionen der Reihenfolge O eine SH-Funktion der Reihenfolge 2 \* O bis 1, aber die Ergebnisse werden abgeschnitten. Dies bedeutet, dass das Produkt (f \* g == g \* f) funktioniert, aber nicht zugeordnet wird (f \* (g \* h) != (f \* g) \* h.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -90,11 +90,11 @@ Berechnet das Produkt von zwei Funktionen, die mit sh (f und g) dargestellt werd
 
 | Anforderung | Wert |
 |-------------------|----------------------------------------------------------------------------------------|
-| Header<br/> | <dl> <dt>D3dx9math. h</dt> </dl> |
+| Header<br/> | <dl> <dt>D3dx9math.h</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 

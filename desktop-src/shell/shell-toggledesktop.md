@@ -1,5 +1,5 @@
 ---
-description: 'Shell.ToggleDesktop-Methode: Zeigt den Desktop an oder blendet den Desktop aus.'
+description: 'Shell.ToggleDesktop-Methode: Zeigt den Desktop an oder blendet diesen aus.'
 title: Shell.ToggleDesktop-Methode (Shldisp.h)
 ms.topic: reference
 ms.date: 05/31/2018
@@ -13,12 +13,12 @@ api_type:
 api_location:
 - Shell32.dll
 ms.assetid: BD07F7F2-A588-4189-95F4-3A8E2905E8F5
-ms.openlocfilehash: 472f6141b8aaed47ac05c8eaf670a0d039ce5561
-ms.sourcegitcommit: 3caaa3c92dcb1ef12f84464d14ce6262e65e988e
+ms.openlocfilehash: 2007b133e6ef13ab4c4284ddff8486307c5beb6e0450b067699a0f6316df8d7e
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/12/2021
-ms.locfileid: "109841011"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118968509"
 ---
 # <a name="shelltoggledesktop-method"></a>Shell.ToggleDesktop-Methode
 
@@ -57,13 +57,13 @@ Diese Methode gibt keinen Wert zurück.
 
 ## <a name="remarks"></a>Hinweise
 
-Diese Methode hat die gleiche Wirkung wie die **Schaltfläche Desktop** anzeigen auf der Taskleiste. Sie blendet entweder alle geöffneten Fenster aus, um den Desktop einblenden, oder sie blendet den Desktop aus, indem alle geöffneten Fenster angezeigt werden. Die **ToggleDesktop-Methode** zeigt keine Benutzeroberfläche an, sondern ruft lediglich die Umschaltaktion auf.
+Diese Methode hat die gleiche Auswirkung wie die Schaltfläche **Desktop anzeigen** auf der Taskleiste. Sie blendet entweder alle geöffneten Fenster aus, um den Desktop anzuzeigen, oder sie blendet den Desktop aus, indem alle geöffneten Fenster angezeigt werden. Die **ToggleDesktop-Methode** zeigt keine Benutzeroberfläche an, sie ruft lediglich die Umschaltaktion auf.
 
 ## <a name="examples"></a>Beispiele
 
 Die folgenden Beispiele zeigen die ordnungsgemäße Verwendung von **ToggleDesktop** für JScript, VBScript und Visual Basic.
 
-Jscript:
+JScript:
 
 
 ```JScript
@@ -117,8 +117,8 @@ End Sub
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows \[ XP-Desktop-Apps\]<br/>                                                                   |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server \[ 2003-Desktop-Apps\]<br/>                                                          |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur XP-Desktop-Apps\]<br/>                                                                   |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                                                          |
 | Header<br/>                   | <dl> <dt>Shldisp.h</dt> </dl>                          |
 | Idl<br/>                      | <dl> <dt>Shldisp.idl</dt> </dl>                        |
 | DLL<br/>                      | <dl> <dt>Shell32.dll (Version 6.0 oder höher)</dt> </dl> |

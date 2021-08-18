@@ -1,42 +1,42 @@
 ---
-description: Mit der Aktion selfunregmodules werden alle in der Tabelle selfreg aufgeführten Module, deren deinstallieren geplant ist, aufgehoben. Das Installationsprogramm führt keine Selbstregistrierung durch. EXE-Dateien.
+description: Mit der SelfUnregModules-Aktion wird die Registrierung aller Module aufgehoben, die in der SelfReg-Tabelle aufgeführt sind und deinstalliert werden sollen. Das Installationsprogramm registriert .EXE Dateien nicht selbst.
 ms.assetid: fa5a5abb-ecd4-434c-b176-83cdca280a13
-title: Selfunregmodules-Aktion
+title: SelfUnregModules-Aktion
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 3c3a0d98d8a8afe45b9b78f5c8af8ca2f84b2244
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: f2ba95a745716d512a72e9541064f56bdc663e2e6c9658a9c35744449217952f
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106357073"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120040330"
 ---
-# <a name="selfunregmodules-action"></a>Selfunregmodules-Aktion
+# <a name="selfunregmodules-action"></a>SelfUnregModules-Aktion
 
-Mit der Aktion selfunregmodules werden alle in der [Tabelle selfreg](selfreg-table.md) aufgeführten Module, deren deinstallieren geplant ist, aufgehoben. Das Installationsprogramm führt keine Selbstregistrierung durch. EXE-Dateien.
+Mit der SelfUnregModules-Aktion wird die Registrierung aller Module aufgehoben, die in der [SelfReg-Tabelle](selfreg-table.md) aufgeführt sind und deinstalliert werden sollen. Das Installationsprogramm registriert .EXE Dateien nicht selbst.
 
-## <a name="sequence-restrictions"></a>Sequenz Einschränkungen
+## <a name="sequence-restrictions"></a>Sequenzeinschränkungen
 
-Die [InstallValidate](installvalidate-action.md) -Aktion muss vor der selfunregmodules-Aktion in der Sequenz angezeigt werden. Wenn eine [SelfRegModules](selfregmodules-action.md) -Aktion verwendet wird, muss Sie nach der selfunregmodules-Aktion in der Sequenz angezeigt werden. Wenn eine [RemoveFiles-Aktion](removefiles-action.md) verwendet wird, muss Sie nach der selfunregmodules-Aktion in der Sequenz angezeigt werden.
+Die [InstallValidate-Aktion](installvalidate-action.md) muss vor der SelfUnregModules-Aktion in der Sequenz angezeigt werden. Wenn eine [SelfRegModules-Aktion](selfregmodules-action.md) verwendet wird, muss sie nach der SelfUnregModules-Aktion in der Sequenz angezeigt werden. Wenn eine [RemoveFiles-Aktion](removefiles-action.md) verwendet wird, muss sie nach der SelfUnregModules-Aktion in der Sequenz angezeigt werden.
 
-## <a name="actiondata-messages"></a>Aktions Daten Meldungen
+## <a name="actiondata-messages"></a>ActionData-Nachrichten
 
 
 
-| Feld | Beschreibung der Aktions Daten                             |
+| Feld | Beschreibung der Aktionsdaten                             |
 |-------|--------------------------------------------------------|
-| \[1\] | Bezeichner der nicht registrierten Modul Datei.                |
-| \[2\] | Bezeichner des Ordners, der die nicht registrierte Modul Datei enthält. |
+| \[1\] | Bezeichner der nicht registrierten Moduldatei.                |
+| \[2\] | Bezeichner des Ordners mit nicht registrierter Moduldatei. |
 
 
 
  
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die selfunregmodules-Aktion versucht, die [**DllUnregisterServer**](/windows/win32/api/olectl/nf-olectl-dllunregisterserver) -Funktion des Moduls aufzurufen, dessen Registrierung aufgehoben werden soll. Diese Aktion wird mit erhöhten Rechten ausgeführt, wenn die Installation mit erweiterten Berechtigungen ausgeführt wird, z. b. während einer Installation pro Computer. Während einer Installation pro Benutzer führt das Installationsprogramm diese Aktion mit Benutzerberechtigungen aus.
+Die SelfUnregModules-Aktion versucht, die [**DllUnregisterServer-Funktion**](/windows/win32/api/olectl/nf-olectl-dllunregisterserver) des Moduls aufzurufen, für das die Registrierung aufgehoben werden soll. Diese Aktion wird mit erhöhten Rechten ausgeführt, wenn die Installation mit erhöhten Rechten ausgeführt wird, z. B. während einer Computerinstallation. Während einer Benutzerinstallation führt das Installationsprogramm diese Aktion mit Benutzerberechtigungen aus.
 
-Beachten Sie, dass Sie nicht die Reihenfolge angeben können, in der das Installationsprogramm die Registrierung selbst Registrierender DLLs mithilfe der selfunregmodules-Aktion aufgehoben hat.
+Beachten Sie, dass Sie nicht die Reihenfolge angeben können, in der das Installationsprogramm die Registrierung selbstregistrierender DLLs mithilfe der SelfUnRegModules-Aktion aufheben kann.
 
 ## <a name="related-topics"></a>Zugehörige Themen
 

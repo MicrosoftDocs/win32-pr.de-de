@@ -131,7 +131,7 @@ Verwaltet erweiterte Clienteinstellungen. Wird von der [**IMsRdpClientAdvancedSe
 [**IMsRdpClientAdvancedSettings6**](imsrdpclientadvancedsettings6.md)
 </dt> <dd>
 
-Macht Eigenschaften verfügbar, die erweiterte Einstellungen ActiveX verwalten.
+Macht Eigenschaften verfügbar, die erweiterte ActiveX-Steuerelementeinstellungen verwalten.
 
 </dd> <dt>
 
@@ -152,49 +152,49 @@ Macht Methoden und Eigenschaften verfügbar, die erweiterte Einstellungen des st
 [**IMsRdpClientNonScriptable**](imsrdpclientnonscriptable-interface.md)
 </dt> <dd>
 
-Ermöglicht den Zugriff auf die nicht feststellbaren Eigenschaften der Remotesitzung eines Clients auf dem Remotedesktop ActiveX Steuerelements. Wird von der [**IMsTscNonScriptable-Schnittstelle**](imstscnonscriptable-interface.md) ableiten.
+Ermöglicht den Zugriff auf die nicht feststellbaren Eigenschaften der Remotesitzung eines Clients auf dem Remotedesktop ActiveX Steuerelement. Wird von der [**IMsTscNonScriptable-Schnittstelle**](imstscnonscriptable-interface.md) ableiten.
 
 </dd> <dt>
 
 [**IMsRdpClientNonScriptable2**](imsrdpclientnonscriptable2.md)
 </dt> <dd>
 
-Ermöglicht den Zugriff auf die nicht feststellbaren Eigenschaften der Remotesitzung eines Clients auf dem Remotedesktop ActiveX Steuerelements. Wird von der [**IMsRdpClientNonScriptable-Schnittstelle**](imsrdpclientnonscriptable-interface.md) ableiten.
+Ermöglicht den Zugriff auf die nicht feststellbaren Eigenschaften der Remotesitzung eines Clients auf dem Remotedesktop ActiveX Steuerelement. Wird von der [**IMsRdpClientNonScriptable-Schnittstelle**](imsrdpclientnonscriptable-interface.md) ableiten.
 
 </dd> <dt>
 
 [**IMsRdpClientNonScriptable3**](imsrdpclientnonscriptable3.md)
 </dt> <dd>
 
-Ermöglicht den Zugriff auf die nicht feststellbaren Eigenschaften der Remotesitzung eines Clients auf dem Remotedesktop ActiveX Steuerelements. Wird von der [**IMsRdpClientNonScriptable2-Schnittstelle**](imsrdpclientnonscriptable2.md) ableiten.
+Ermöglicht den Zugriff auf die nicht feststellbaren Eigenschaften der Remotesitzung eines Clients auf dem Remotedesktop ActiveX Steuerelement. Wird von der [**IMsRdpClientNonScriptable2-Schnittstelle**](imsrdpclientnonscriptable2.md) ableiten.
 
 </dd> <dt>
 
 [**IMsRdpClientNonScriptable4**](imsrdpclientnonscriptable4.md)
 </dt> <dd>
 
-Ermöglicht den Zugriff auf die nicht feststellbaren Eigenschaften der Remotesitzung eines Clients auf dem Remotedesktop ActiveX Steuerelements. Wird von der [**IMsRdpClientNonScriptable3-Schnittstelle**](imsrdpclientnonscriptable3.md) ableiten.
+Ermöglicht den Zugriff auf die nicht feststellbaren Eigenschaften der Remotesitzung eines Clients auf dem Remotedesktop ActiveX Steuerelement. Wird von der [**IMsRdpClientNonScriptable3-Schnittstelle**](imsrdpclientnonscriptable3.md) ableiten.
 
 </dd> <dt>
 
 [**IMsRdpClientNonScriptable5**](imsrdpclientnonscriptable5.md)
 </dt> <dd>
 
-Ermöglicht den Zugriff auf die nicht feststellbaren Eigenschaften der Remotesitzung eines Clients auf dem Remotedesktop ActiveX Steuerelements. Wird von der [**IMsRdpClientNonScriptable4-Schnittstelle**](imsrdpclientnonscriptable4.md) ableiten.
+Ermöglicht den Zugriff auf die nicht feststellbaren Eigenschaften der Remotesitzung eines Clients auf dem Remotedesktop ActiveX Steuerelement. Wird von der [**IMsRdpClientNonScriptable4-Schnittstelle**](imsrdpclientnonscriptable4.md) ableiten.
 
 </dd> <dt>
 
 [**IMsRdpClientSecuredSettings**](imsrdpclientsecuredsettings-interface.md)
 </dt> <dd>
 
-Enthält Methoden zum Abrufen und Festlegen von Eigenschaften des Remotedesktop ActiveX Steuerelements, die auf bestimmte url Internet Explorer sicherheitszonen beschränkt sind.
+Enthält Methoden zum Abrufen und Festlegen von Eigenschaften des Remotedesktop ActiveX Steuerelements, die auf bestimmte URL Internet Explorer Sicherheitszonen beschränkt sind.
 
 </dd> <dt>
 
 [**IMsRdpClientSecuredSettings2**](imsrdpclientsecuredsettings2.md)
 </dt> <dd>
 
-Definiert zusätzliche Eigenschaften des Remotedesktop ActiveX-Steuerelements, die auf bestimmte URL Internet Explorer Sicherheitszonen beschränkt sind.
+Definiert zusätzliche Eigenschaften des Remotedesktop ActiveX-Steuerelements, die auf bestimmte URL Internet Explorer-Sicherheitszonen beschränkt sind.
 
 </dd> <dt>
 
@@ -334,7 +334,7 @@ Enthält Eigenschaften und Methoden, die sich auf die Anwendung eines Kennworts 
 [**IMsTscSecuredSettings**](imstscsecuredsettings-interface.md)
 </dt> <dd>
 
-Enthält Methoden zum Abrufen und Festlegen von Eigenschaften des Remotedesktop ActiveX Steuerelements, die auf bestimmte url Internet Explorer sicherheitszonen beschränkt sind.
+Enthält Methoden zum Abrufen und Festlegen von Eigenschaften des Remotedesktop ActiveX Steuerelements, die auf bestimmte URL Internet Explorer Sicherheitszonen beschränkt sind.
 
 </dd> <dt>
 
@@ -348,7 +348,7 @@ Stellt Methoden und Eigenschaften zum Konfigurieren und Verwenden des Clientsteu
 [**IRemoteDesktopClientActions**](/windows/win32/api/rdpappcontainerclient/nn-rdpappcontainerclient-iremotedesktopclientactions)
 </dt> <dd>
 
-Stellt die Methoden für die Interaktion mit dem Clientsteuer Remotedesktopprotokoll-App (RDP) zur Interaktion zur Anwendung zur Anwendung.
+Stellt die Methoden für die Interaktion mit dem Clientsteuer Remotedesktopprotokoll -App -App (RDP) zur Interaktion zur Anwendung.
 
 </dd> <dt>
 
@@ -362,7 +362,7 @@ Stellt Methoden zum Empfangen von Informationen vom Server im Zusammenhang mit C
 [**IRemoteDesktopClientSettings**](/windows/win32/api/rdpappcontainerclient/nn-rdpappcontainerclient-iremotedesktopclientsettings)
 </dt> <dd>
 
-Stellt die Methoden zur Konfiguration der Verbindungseinstellungen für das Clientsteuersteuersystem des Remotedesktopprotokoll-App (RDP) zur Anwendung zur Anwendung zur Konfiguration von .
+Stellt die Methoden zum Konfigurieren der Verbindungseinstellungen für das Clientsteuersystem des Remotedesktopprotokoll-App (RDP) zur Anwendung.
 
 Verwenden Sie [**die IRemoteDesktopClient Einstellungen eigenschaft,**](/windows/win32/api/rdpappcontainerclient/nn-rdpappcontainerclient-iremotedesktopclient)[](iremotedesktopclient-settings.md) um einen Zeiger auf diese Schnittstelle zu erhalten.
 
@@ -371,7 +371,7 @@ Verwenden Sie [**die IRemoteDesktopClient Einstellungen eigenschaft,**](/windows
 [**IRemoteDesktopClientTouchPointer**](/windows/win32/api/rdpappcontainerclient/nn-rdpappcontainerclient-iremotedesktopclienttouchpointer)
 </dt> <dd>
 
-Stellt die Eigenschaften zur Steuerung des Touchzeigerfeatures des Remotedesktopprotokoll-App-Containerclientsteuerfelds (RDP) zur Steuerung zur Anwendung.
+Stellt die Eigenschaften zur Steuerung des Touchzeigerfeatures des Clientsteuerfelds des Remotedesktopprotokoll(RDP)-App-Containers zur Steuerung zur Anwendung.
 
 </dd> <dt>
 

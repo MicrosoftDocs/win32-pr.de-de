@@ -3,16 +3,16 @@ title: Verwenden von allgemeinen Dialogfeldern
 description: In diesem Abschnitt werden Aufgaben behandelt, die allgemeine Dialogfelder aufrufen.
 ms.assetid: ba038bc1-fb5c-4576-be80-7eae7339ba05
 keywords:
-- Common Dialog Box Library,tasks
-- Allgemeine Dialogfelder, verwenden
+- Allgemeine Dialogfeldbibliothek,Aufgaben
+- Allgemeine Dialogfelder, mit
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 773382a34b048e812a3fb093da0492b0c628fb14
-ms.sourcegitcommit: 8e083a10b3a480dec8a8d74dbd5889f49dea15e4
+ms.openlocfilehash: 5da09fcc99cdde617c3fbdaf34e4465d9a768b0073c5dbd6d461a19060ca92bb
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/17/2021
-ms.locfileid: "107590657"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118985300"
 ---
 # <a name="using-common-dialog-boxes"></a>Verwenden von allgemeinen Dialogfeldern
 
@@ -22,18 +22,18 @@ In diesem Abschnitt werden Aufgaben behandelt, die allgemeine Dialogfelder aufru
 -   [Auswählen einer Schriftart](#choosing-a-font)
 -   [Öffnen einer Datei](#opening-a-file)
 -   [Anzeigen des Dialogfelds "Drucken"](#displaying-the-print-dialog-box)
--   [Verwenden des Druckeigenschaftenblatts](#using-the-print-property-sheet)
+-   [Verwenden des Druckeigenschaftsblatts](#using-the-print-property-sheet)
 -   [Einrichten der gedruckten Seite](#setting-up-the-printed-page)
 -   [Suchen von Text](#finding-text)
 
 ## <a name="choosing-a-color"></a>Auswählen einer Farbe
 
-In diesem Thema wird Beispielcode beschrieben, in dem ein Dialogfeld **Farbe** angezeigt wird, sodass ein Benutzer eine Farbe auswählen kann. Der Beispielcode initialisiert zuerst eine [**CHOOSECOLOR-Struktur**](/windows/win32/api/commdlg/ns-commdlg-choosecolora-r1) und ruft dann die [**ChooseColor-Funktion**](/previous-versions/windows/desktop/legacy/ms646912(v=vs.85)) auf, um das Dialogfeld anzuzeigen. Wenn die Funktion **TRUE** zurückgibt und angibt, dass der Benutzer eine Farbe ausgewählt hat, verwendet der Beispielcode die ausgewählte Farbe, um einen neuen Volltonpinsel zu erstellen.
+In diesem Thema wird Beispielcode beschrieben, in dem ein **Dialogfeld Farbe** angezeigt wird, sodass ein Benutzer eine Farbe auswählen kann. Der Beispielcode initialisiert zuerst eine [**CHOOSECOLOR-Struktur**](/windows/win32/api/commdlg/ns-commdlg-choosecolora-r1) und ruft dann die [**ChooseColor-Funktion**](/previous-versions/windows/desktop/legacy/ms646912(v=vs.85)) auf, um das Dialogfeld anzuzeigen. Wenn die Funktion **TRUE zurückgibt** und angibt, dass der Benutzer eine Farbe ausgewählt hat, verwendet der Beispielcode die ausgewählte Farbe, um einen neuen Volltonpinsel zu erstellen.
 
 In diesem Beispiel wird die [**CHOOSECOLOR-Struktur**](/windows/win32/api/commdlg/ns-commdlg-choosecolora-r1) verwendet, um das Dialogfeld wie folgt zu initialisieren:
 
--   Initialisiert den **lpCustColors-Member** mit einem Zeiger auf ein statisches Array von Werten. Die Farben im Array sind anfänglich schwarz, aber das statische Array behält benutzerdefinierte Farben bei, die vom Benutzer für nachfolgende [**ChooseColor-Aufrufe**](/previous-versions/windows/desktop/legacy/ms646912(v=vs.85)) erstellt wurden.
--   Legt das **CC \_ RGBINIT-Flag** fest und initialisiert den **rgbResult-Member,** um die Farbe anzugeben, die beim Öffnen des Dialogfelds anfänglich ausgewählt wird. Wenn keine Angabe erfolgt, ist die anfängliche Auswahl schwarz. Im Beispiel wird die *statische Variable rgbCurrent* verwendet, um den ausgewählten Wert zwischen Aufrufen von [**ChooseColor beibewahren.**](/previous-versions/windows/desktop/legacy/ms646912(v=vs.85))
+-   Initialisiert das **lpCustColors-Member** mit einem Zeiger auf ein statisches Array von Werten. Die Farben im Array sind anfänglich schwarz, aber das statische Array behält benutzerdefinierte Farben bei, die vom Benutzer für nachfolgende [**ChooseColor-Aufrufe erstellt**](/previous-versions/windows/desktop/legacy/ms646912(v=vs.85)) wurden.
+-   Legt das **CC \_ RGBINIT-Flag** fest und initialisiert das **rgbResult-Element,** um die Farbe anzugeben, die beim Öffnen des Dialogfelds anfänglich ausgewählt wird. Wenn keine Angabe getroffen wird, ist die anfängliche Auswahl schwarz. Im Beispiel wird die *statische Variable rgbCurrent* verwendet, um den ausgewählten Wert zwischen den Aufrufen von [**ChooseColor beibewahren.**](/previous-versions/windows/desktop/legacy/ms646912(v=vs.85))
 -   Legt das **CC \_ FULLOPEN-Flag** fest, sodass die benutzerdefinierte Farberweiterung des Dialogfelds immer angezeigt wird.
 
 
@@ -65,9 +65,9 @@ if (ChooseColor(&cc)==TRUE)
 
 In diesem Thema wird Beispielcode beschrieben, in dem ein **Dialogfeld Schriftart** angezeigt wird, sodass ein Benutzer die Attribute einer Schriftart auswählen kann. Der Beispielcode initialisiert zuerst eine [**CHOOSEFONT-Struktur**](/windows/win32/api/commdlg/ns-commdlg-choosefonta) und ruft dann die [**ChooseFont-Funktion**](/windows/win32/api/commdlg/ns-commdlg-choosefonta) auf, um das Dialogfeld anzuzeigen.
 
-In diesem Beispiel wird das **CF \_ SCREENFONTS-Flag** so festgelegt, dass im Dialogfeld nur Bildschirmschriftarten angezeigt werden sollen. Es legt das **CF \_ EFFECTS-Flag** so fest, dass Steuerelemente angezeigt werden, die es dem Benutzer ermöglichen, Diebungs-, Unterstrich- und Farboptionen auszuwählen.
+In diesem Beispiel wird das **CF \_ SCREENFONTS-Flag** so festgelegt, dass im Dialogfeld nur Bildschirmschriftarten angezeigt werden sollen. Es legt das **CF \_ EFFECTS-Flag** fest, um Steuerelemente anzuzeigen, die es dem Benutzer ermöglichen, Optionen für Ausstreichung, Unterstreichung und Farbe auszuwählen.
 
-Wenn [**ChooseFont**](/windows/win32/api/commdlg/ns-commdlg-choosefonta) **TRUE** zurückgibt und angibt, dass der Benutzer auf die Schaltfläche **OK** geklickt hat, enthält die [**CHOOSEFONT-Struktur**](/windows/win32/api/commdlg/ns-commdlg-choosefonta) Informationen, die die vom Benutzer ausgewählten Schriftart- und Schriftartattribute beschreiben, einschließlich der Elemente der [**LOGFONT-Struktur,**](/windows/win32/api/wingdi/ns-wingdi-logfonta) auf die das **lpLogFont-Element** zeigt. Das **rgbColors-Element** enthält die ausgewählte Textfarbe. Im Beispielcode werden diese Informationen verwendet, um die Schriftart und Textfarbe für den Gerätekontext, der dem Besitzerfenster zugeordnet ist, zu setzen.
+Wenn [**ChooseFont**](/windows/win32/api/commdlg/ns-commdlg-choosefonta) **TRUE** zurückgibt und angibt, dass der Benutzer auf die Schaltfläche **OK** geklickt hat, enthält die [**CHOOSEFONT-Struktur**](/windows/win32/api/commdlg/ns-commdlg-choosefonta) Informationen, die die vom Benutzer ausgewählten Schriftart- und Schriftartattribute beschreiben, einschließlich der Elemente der [**LOGFONT-Struktur,**](/windows/win32/api/wingdi/ns-wingdi-logfonta) auf die der **lpLogFont-Member** zeigt. Das **rgbColors-Element** enthält die ausgewählte Textfarbe. Der Beispielcode verwendet diese Informationen, um die Schriftart und Textfarbe für den Gerätekontext, der dem Besitzerfenster zugeordnet ist, zu setzen.
 
 
 ```
@@ -109,18 +109,18 @@ if (ChooseFont(&cf)==TRUE)
 
  
 
-In diesem Thema wird Beispielcode beschrieben, in dem ein Dialogfeld Öffnen angezeigt wird, sodass ein Benutzer das Laufwerk, das Verzeichnis und den Namen einer zu öffnenden Datei angeben kann.  Der Beispielcode initialisiert zunächst eine [**OPENFILENAME-Struktur**](/windows/win32/api/commdlg/ns-commdlg-openfilenamea) und ruft dann die [**GetOpenFileName-Funktion**](/windows/desktop/api/Commdlg/nf-commdlg-getopenfilenamea) auf, um das Dialogfeld anzuzeigen.
+In diesem Thema wird Beispielcode beschrieben, in dem ein Dialogfeld Öffnen angezeigt wird, sodass ein Benutzer das Laufwerk, das Verzeichnis und den Namen einer zu öffnenden Datei angeben kann.  Der Beispielcode initialisiert zuerst eine [**OPENFILENAME-Struktur**](/windows/win32/api/commdlg/ns-commdlg-openfilenamea) und ruft dann die [**GetOpenFileName-Funktion**](/windows/desktop/api/Commdlg/nf-commdlg-getopenfilenamea) auf, um das Dialogfeld anzuzeigen.
 
-In diesem Beispiel ist der **lpstrFilter-Member** ein Zeiger auf einen Puffer, der zwei Dateinamenfilter angibt, die der Benutzer auswählen kann, um die angezeigten Dateinamen einzuschränken. Der Puffer enthält ein auf doppelt NULL endendes Array von Zeichenfolgen, in dem jedes Zeichenfolgenpaar einen Filter angibt. Der **nFilterIndex-Member** gibt an, dass beim Erstellen des Dialogfelds das erste Muster verwendet wird.
+In diesem Beispiel ist der **lpstrFilter-Member** ein Zeiger auf einen Puffer, der zwei Dateinamenfilter angibt, die der Benutzer auswählen kann, um die angezeigten Dateinamen zu beschränken. Der Puffer enthält ein mit double-NULL beendetes Array von Zeichenfolgen, in dem jedes Zeichenfolgenpaar einen Filter angibt. Der **nFilterIndex-Member** gibt an, dass das erste Muster verwendet wird, wenn das Dialogfeld erstellt wird.
 
-In diesem Beispiel werden die Flags **OFN \_ PATHMUSTEXIST** und **OFN \_ FILEMUSTEXIST** im **Flags-Member** festgelegt. Diese Flags bewirken, dass das Dialogfeld vor der Rückgabe überprüft, ob der vom Benutzer angegebene Pfad und Dateiname tatsächlich vorhanden ist.
+In diesem Beispiel werden die **Flags OFN \_ PATHMUSTEXIST** und **OFN \_ FILEMUSTEXIST** im **Flags-Member** definiert. Diese Flags bewirken, dass das Dialogfeld vor der Rückgabe überprüft, ob der vom Benutzer angegebene Pfad und Dateiname tatsächlich vorhanden sind.
 
-Die [**GetOpenFileName-Funktion**](/windows/desktop/api/Commdlg/nf-commdlg-getopenfilenamea) gibt **TRUE** zurück, wenn der Benutzer auf die Schaltfläche **OK** klickt und der angegebene Pfad und Dateiname vorhanden sind. In diesem Fall enthält der Puffer, auf den der **lpstrFile-Member** zeigt, den Pfad und den Dateinamen. Im Beispielcode werden diese Informationen in einem Aufruf der -Funktion verwendet, um die Datei zu öffnen.
+Die [**GetOpenFileName-Funktion**](/windows/desktop/api/Commdlg/nf-commdlg-getopenfilenamea) gibt **TRUE zurück,** wenn der Benutzer auf die **Schaltfläche OK** klickt und der angegebene Pfad und Dateiname vorhanden sind. In diesem Fall enthält der Puffer, auf den der **lpstrFile-Member** zeigt, den Pfad und den Dateinamen. Der Beispielcode verwendet diese Informationen in einem Aufruf der -Funktion, um die Datei zu öffnen.
 
-Obwohl in diesem Beispiel das **\_ OFN-EXPLORER-Flag** nicht festgelegt ist, wird weiterhin das Standarddialogfeld **Öffnen** im Explorer-Stil angezeigt. Wenn Sie jedoch eine Hookprozedur oder eine benutzerdefinierte Vorlage bereitstellen möchten und die Explorer-Benutzeroberfläche verwenden möchten, müssen Sie das **FLAG OFN \_ EXPLORER** festlegen.
+Obwohl in diesem Beispiel das **OFN-EXPLORER-Flag \_** nicht festgelegt wird, wird weiterhin das Standardmäßige Dialogfeld Öffnen im **Explorer-Stil** angezeigt. Wenn Sie jedoch eine Hookprozedur oder eine benutzerdefinierte Vorlage bereitstellen möchten und die Explorer-Benutzeroberfläche verwenden möchten, müssen Sie das **OFN \_ EXPLORER-Flag** festlegen.
 
 > [!Note]  
-> In der Programmiersprache C ist eine Zeichenfolge, die in Anführungszeichen eingeschlossen ist, NULL-terminiert.
+> In der Programmiersprache C ist eine in Anführungszeichen eingeschlossene Zeichenfolge null-terminiert.
 
  
 
@@ -163,9 +163,9 @@ if (GetOpenFileName(&ofn)==TRUE)
 
 ## <a name="displaying-the-print-dialog-box"></a>Anzeigen des Dialogfelds "Drucken"
 
-In diesem Thema wird Beispielcode beschrieben, in dem ein Dialogfeld **Drucken** angezeigt wird, sodass ein Benutzer Optionen zum Drucken eines Dokuments auswählen kann. Der Beispielcode initialisiert zuerst eine [**PRINTDLG-Struktur**](/windows/win32/api/commdlg/ns-commdlg-printdlga) und ruft dann die [**PrintDlg-Funktion**](/previous-versions/windows/desktop/legacy/ms646940(v=vs.85)) auf, um das Dialogfeld anzuzeigen.
+In diesem Thema wird Beispielcode beschrieben, in dem ein **Dialogfeld** Drucken angezeigt wird, sodass ein Benutzer Optionen zum Drucken eines Dokuments auswählen kann. Der Beispielcode initialisiert zuerst eine [**PRINTDLG-Struktur**](/windows/win32/api/commdlg/ns-commdlg-printdlga) und ruft dann die [**PrintDlg-Funktion**](/previous-versions/windows/desktop/legacy/ms646940(v=vs.85)) auf, um das Dialogfeld anzuzeigen.
 
-In diesem Beispiel wird das **PD \_ RETURNDC-Flag** im **Flags-Member** der [**PRINTDLG-Struktur**](/windows/win32/api/commdlg/ns-commdlg-printdlga) festgelegt. Dadurch gibt [**PrintDlg**](/previous-versions/windows/desktop/legacy/ms646940(v=vs.85)) ein Gerätekontexthandle an den ausgewählten Drucker im **hDC-Member** zurück. Sie können das Handle verwenden, um die Ausgabe auf dem Drucker zu rendern.
+In diesem Beispiel wird das **PD \_ RETURNDC-Flag** im **Flags-Member** der [**PRINTDLG-Struktur**](/windows/win32/api/commdlg/ns-commdlg-printdlga) definiert. Dadurch gibt [**PrintDlg**](/previous-versions/windows/desktop/legacy/ms646940(v=vs.85)) ein Gerätekontexthandl an den ausgewählten Drucker im **hDC-Mitglied** zurück. Sie können das Handle verwenden, um die Ausgabe auf dem Drucker zu rendern.
 
 Bei der Eingabe legt der Beispielcode die **Member hDevMode** und **hDevNames auf** **NULL fest.** Wenn die Funktion **TRUE zurückgibt,** geben diese Member Handles an [**DEVNAMES-Strukturen**](/windows/win32/api/commdlg/ns-commdlg-devnames) zurück, die die Benutzereingabe und Informationen zum Drucker enthalten. Sie können diese Informationen verwenden, um die Ausgabe vorzubereiten, die an den ausgewählten Drucker gesendet wird.
 
@@ -275,9 +275,9 @@ HRESULT DisplayPrintPropertySheet(HWND hWnd)
 
 In diesem Thema wird Beispielcode beschrieben, der ein Dialogfeld "Seiteneinrichtung" anzeigt, sodass ein Benutzer die Attribute der gedruckten Seite auswählen kann, z. B. den Papiertyp, die Papierquelle, die Seitenausrichtung und die Seitenränder.  Der Beispielcode initialisiert zuerst eine [**PAGESETUPDLG-Struktur**](/windows/win32/api/commdlg/ns-commdlg-pagesetupdlga) und ruft dann die [**PageSetupDlg-Funktion**](/previous-versions/windows/desktop/legacy/ms646937(v=vs.85)) auf, um das Dialogfeld anzuzeigen.
 
-In diesem Beispiel wird das **\_ PSD-MARGIN-Flag** im **Flags-Member** festgelegt und der **rtMargin-Member** verwendet, um die anfänglichen Randwerte anzugeben. Es legt das **\_ PSD-Flag INTHOUSANDTHSOFINCHES** fest, um sicherzustellen, dass das Dialogfeld Randdimensionen in Tausendstel Zoll ausdrückt.
+In diesem Beispiel wird das **PSD \_ MARGIN-Flag** im **Flags-Member** festgelegt und das **rtMargin-Member** verwendet, um die Werte für den anfänglichen Rand anzugeben. Es legt das **\_ PSD-Flag INTHOUSANDTHSOFINCHES** fest, um sicherzustellen, dass das Dialogfeld Randdimensionen in Tausendstel zoll ausdrückt.
 
-Bei der Eingabe legt der Beispielcode die Member **hDevMode** und **hDevNames** auf **NULL** fest. Wenn die Funktion **TRUE** zurückgibt, verwendet die Funktion diese Member, um Handles an [**DEVNAMES-Strukturen**](/windows/win32/api/commdlg/ns-commdlg-devnames) zurückzugeben, die die Benutzereingabe und Informationen zum Drucker enthalten. Sie können diese Informationen verwenden, um die Ausgabe vorzubereiten, die an den ausgewählten Drucker gesendet werden soll.
+Bei der Eingabe legt der Beispielcode die **Member hDevMode** und **hDevNames auf** **NULL fest.** Wenn die Funktion **TRUE zurückgibt,** verwendet die Funktion diese Member, um Handles an [**DEVNAMES-Strukturen**](/windows/win32/api/commdlg/ns-commdlg-devnames) zurückgibt, die die Benutzereingabe und Informationen zum Drucker enthalten. Sie können diese Informationen verwenden, um die Ausgabe vorzubereiten, die an den ausgewählten Drucker gesendet wird.
 
 Im folgenden Beispiel wird auch eine [**PagePaintHook-Hookprozedur**](/windows/win32/api/commdlg/nc-commdlg-lppagepainthook) aktiviert, um das Zeichnen des Inhalts der Beispielseite anzupassen.
 
@@ -308,7 +308,7 @@ if (PageSetupDlg(&psd)==TRUE)
 
 
 
-Das folgende Beispiel zeigt eine [**PagePaintHook-Beispielhook-Hookprozedur,**](/windows/win32/api/commdlg/nc-commdlg-lppagepainthook) die das Randrechteck im Beispielseitenbereich zeichnet:
+Das folgende Beispiel zeigt eine [**PagePaintHook-Beispielhookprozedur,**](/windows/win32/api/commdlg/nc-commdlg-lppagepainthook) die das Randrechteck im Beispielseitenbereich zeichnet:
 
 
 ```
@@ -350,17 +350,17 @@ BOOL CALLBACK PaintHook(HWND hwndDlg, UINT uMsg, WPARAM wParam, LPARAM lParam)
 
 ## <a name="finding-text"></a>Suchen von Text
 
-In diesem Thema wird Beispielcode beschrieben, der **ein** Suchdialogfeld anzeigt und verwaltet, sodass der Benutzer die Parameter eines Suchvorgangs angeben kann. Das Dialogfeld sendet Nachrichten an die Fensterprozedur, damit Sie den Suchvorgang ausführen können.
+In diesem Thema wird Beispielcode  beschrieben, der ein Dialogfeld Suchen anzeigt und verwaltet, sodass der Benutzer die Parameter eines Suchvorgang angeben kann. Das Dialogfeld sendet Nachrichten an die Fensterprozedur, damit Sie den Suchvorgang ausführen können.
 
-Der Code zum Anzeigen und Verwalten eines Dialogfelds **Ersetzen** ist ähnlich, mit der Ausnahme, dass die [**Funktion ReplaceText**](/windows/desktop/api/Commdlg/nf-commdlg-replacetexta) verwendet wird, um das Dialogfeld anzuzeigen. Das Dialogfeld **Ersetzen** sendet auch Nachrichten als Reaktion auf Benutzerklicks auf die Schaltflächen **Ersetzen** und **Alle ersetzen.**
+Der Code zum Anzeigen und Verwalten eines **Dialogfelds** Ersetzen ist ähnlich, mit der Ausnahme, dass das Dialogfeld mit der [**ReplaceText-Funktion**](/windows/desktop/api/Commdlg/nf-commdlg-replacetexta) angezeigt wird. Das **Dialogfeld** Ersetzen sendet auch Nachrichten als Reaktion auf Benutzerklicks auf die **Schaltflächen Ersetzen** und Alle **ersetzen.**
 
-Um das Dialogfeld **Suchen** oder **Ersetzen** zu verwenden, müssen Sie drei separate Aufgaben ausführen:
+Um das Dialogfeld **Suchen oder** **Ersetzen** zu verwenden, müssen Sie drei separate Aufgaben ausführen:
 
-1.  Abrufen eines Nachrichtenbezeichners für die registrierte [**FINDMSGSTRING-Nachricht.**](findmsgstring.md)
+1.  Hier erfahren Sie, wie Sie einen Nachrichtenbezeichner für die [**registrierte FINDMSGSTRING-Nachricht**](findmsgstring.md) erhalten.
 2.  Zeigt das Dialogfeld an.
-3.  Verarbeiten Sie [**FINDMSGSTRING-Meldungen,**](findmsgstring.md) wenn das Dialogfeld geöffnet ist.
+3.  Verarbeiten [**Sie FINDMSGSTRING-Meldungen,**](findmsgstring.md) wenn das Dialogfeld geöffnet ist.
 
-Wenn Sie Ihre Anwendung initialisieren, rufen Sie die [**RegisterWindowMessage-Funktion**](/windows/desktop/api/winuser/nf-winuser-registerwindowmessagea) auf, um einen Nachrichtenbezeichner für die registrierte [**FINDMSGSTRING-Nachricht**](findmsgstring.md) abzurufen.
+Rufen Sie beim Initialisieren Ihrer Anwendung die [**RegisterWindowMessage-Funktion**](/windows/desktop/api/winuser/nf-winuser-registerwindowmessagea) auf, um einen Nachrichtenbezeichner für die registrierte [**FINDMSGSTRING-Nachricht**](findmsgstring.md) zu erhalten.
 
 
 ```
@@ -371,7 +371,7 @@ uFindReplaceMsg = RegisterWindowMessage(FINDMSGSTRING);
 
 
 
-Initialisieren Sie zum **Anzeigen eines Dialogfelds** Suchen zuerst eine [**FINDREPLACE-Struktur,**](/windows/win32/api/commdlg/ns-commdlg-findreplacea) und rufen Sie dann die [**FindText-Funktion**](/windows/desktop/api/Commdlg/nf-commdlg-findtexta) auf. Beachten Sie, dass die **FINDREPLACE-Struktur** und der Puffer für die Suchzeichenfolge eine globale oder statische Variable sein sollten, damit sie nicht aus dem Gültigkeitsbereich geht, bevor das Dialogfeld geschlossen wird. Sie müssen das **hwndOwner-Member** festlegen, um das Fenster anzugeben, das die registrierten Nachrichten empfängt. Nachdem Sie das Dialogfeld erstellt haben, können Sie es mithilfe des zurückgegebenen Handles verschieben oder bearbeiten.
+Um ein Dialogfeld **Suchen anzuzeigen,** initialisieren Sie zunächst eine [**FINDREPLACE-Struktur**](/windows/win32/api/commdlg/ns-commdlg-findreplacea) und rufen dann die [**FindText-Funktion**](/windows/desktop/api/Commdlg/nf-commdlg-findtexta) auf. Beachten Sie, dass die **FINDREPLACE-Struktur** und der Puffer für die Suchzeichenfolge eine globale oder statische Variable sein sollten, damit sie nicht den Gültigkeitsbereich übergibt, bevor das Dialogfeld geschlossen wird. Sie müssen das **hwndOwner-Mitglied** festlegen, um das Fenster anzugeben, das die registrierten Nachrichten empfängt. Nachdem Sie das Dialogfeld erstellt haben, können Sie es mithilfe des zurückgegebenen Handles verschieben oder bearbeiten.
 
 
 ```

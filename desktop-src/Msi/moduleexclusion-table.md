@@ -1,5 +1,5 @@
 ---
-description: Die Tabelle ModuleExclusion enthält eine Liste mit anderen Mergemodulen, die in derselben Installationsdatenbank nicht kompatibel sind.
+description: Die Tabelle ModuleExclusion enthält eine Liste mit anderen Mergemodulen, die in derselben Installer-Datenbank nicht kompatibel sind.
 ms.assetid: c28d9afa-152c-43b5-9892-7a38fae8c593
 title: Tabelle "ModuleExclusion"
 ms.topic: article
@@ -13,7 +13,7 @@ ms.locfileid: "119996440"
 ---
 # <a name="moduleexclusion-table"></a>Tabelle "ModuleExclusion"
 
-Die Tabelle ModuleExclusion enthält eine Liste mit anderen Mergemodulen, die in derselben Installationsdatenbank nicht kompatibel sind. Diese Tabelle ermöglicht es einem Merge- oder Überprüfungstool, zu überprüfen, ob in Konflikt stehende Mergemodule nicht in der Installer-Datenbank des Benutzers zusammengeführt werden. Das Tool überprüft, indem es auf diese Tabelle mit der Tabelle ModuleSignature in der Installer-Datenbank verweist.
+Die Tabelle ModuleExclusion enthält eine Liste mit anderen Mergemodulen, die in derselben Installer-Datenbank nicht kompatibel sind. Diese Tabelle ermöglicht es einem Merge- oder Überprüfungstool, zu überprüfen, ob in Konflikt stehende Mergemodule nicht in der Installer-Datenbank des Benutzers zusammengeführt werden. Das Tool überprüft, indem es auf diese Tabelle mit der Tabelle ModuleSignature in der Installer-Datenbank verweist.
 
 Die Tabelle ModuleExclusion enthält die folgenden Spalten.
 
@@ -90,7 +90,7 @@ Maximale Version, die aus einem Bereich ausgeschlossen ist. Wenn das Feld Exclud
 
 </dd> </dl>
 
-## <a name="validation"></a>Überprüfen
+## <a name="validation"></a>Überprüfung
 
 <dl>
 

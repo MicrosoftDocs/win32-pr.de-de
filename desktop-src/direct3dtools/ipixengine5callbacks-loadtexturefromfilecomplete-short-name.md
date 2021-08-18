@@ -1,22 +1,22 @@
 ---
-description: Eine Rückruffunktion, die verwendet wird, um den Host zu benachrichtigen, wenn ein Textur Ladevorgang abgeschlossen wurde.
+description: Eine Rückruffunktion, die verwendet wird, um den Host zu benachrichtigen, wenn eine Texturlast abgeschlossen wurde.
 MS-HAID: vspixengine.IPixEngine5Callbacks\_LoadTextureFromFileComplete\_UINT\_PixEngineTextureDescriptor\_UINT\_PixEngineTextureSliceIndex\_arr\_PixEngineTextureSliceDescriptor\_arr\_UINT\_int\_arr\_PixEngineHistogram\_ptr
 MSHAttr:
 - PreferredSiteName:MSDN
 - PreferredLib:/library/windows/desktop
-title: 'IPixEngine5Callbacks:: loadtexturefromfilecomplete-Methode'
+title: IPixEngine5Callbacks::LoadTextureFromFileComplete-Methode
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: ef7fb4c38b733a7e85a237260404b5b253e3eb88
-ms.sourcegitcommit: a47bd86f517de76374e4fff33cfeb613eb259a7e
+ms.openlocfilehash: f8e9a9530fb9ada600d818494565765655c2c8cfb3bca938d8b9dff9d240aa6a
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/06/2021
-ms.locfileid: "106341109"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118985970"
 ---
-# <a name="span-idvspixengineipixengine5callbacks_loadtexturefromfilecomplete_uint_pixenginetexturedescriptor_uint_pixenginetexturesliceindex_arr_pixenginetextureslicedescriptor_arr_uint_int_arr_pixenginehistogram_ptrspanipixengine5callbacksloadtexturefromfilecomplete-method"></a><span id="vspixengine.ipixengine5callbacks_loadtexturefromfilecomplete_uint_pixenginetexturedescriptor_uint_pixenginetexturesliceindex_arr_pixenginetextureslicedescriptor_arr_uint_int_arr_pixenginehistogram_ptr"></span>IPixEngine5Callbacks:: loadtexturefromfilecomplete-Methode
+# <a name="span-idvspixengineipixengine5callbacks_loadtexturefromfilecomplete_uint_pixenginetexturedescriptor_uint_pixenginetexturesliceindex_arr_pixenginetextureslicedescriptor_arr_uint_int_arr_pixenginehistogram_ptrspanipixengine5callbacksloadtexturefromfilecomplete-method"></a><span id="vspixengine.ipixengine5callbacks_loadtexturefromfilecomplete_uint_pixenginetexturedescriptor_uint_pixenginetexturesliceindex_arr_pixenginetextureslicedescriptor_arr_uint_int_arr_pixenginehistogram_ptr"></span>IPixEngine5Callbacks::LoadTextureFromFileComplete-Methode
 
-Eine Rückruffunktion, die verwendet wird, um den Host zu benachrichtigen, wenn ein Textur Ladevorgang abgeschlossen wurde.
+Eine Rückruffunktion, die verwendet wird, um den Host zu benachrichtigen, wenn eine Texturlast abgeschlossen wurde.
 
 ## <a name="syntax"></a>Syntax
 
@@ -36,25 +36,25 @@ HRESULT LoadTextureFromFileComplete(
 
 ## <a name="parameters"></a>Parameter
 
-*textureid*   
+*textureId*   
 Die ID der geladenen Textur.
 
-*texturede*   
-Der Textur Deskriptor der geladenen Textur.
+*textureDesc*   
+Der Texturdeskriptor der geladenen Textur.
 
-*numslices*   
-Die Anzahl der Slices, die in der Textur angezeigt werden.
+*numSlices*   
+Die Anzahl der Slices, über die die Textur verfügt.
 
-*COUNT2 \_ sliceindicies*   
-Slice, die der Textur zugeordnet sind.
+*count2 \_ sliceIndicies*   
+Sliceindicies, die der Textur zugeordnet sind.
 
-*COUNT2 \_ slicedescriptors*   
+*count2 \_ sliceDescriptors*   
 Deskriptoren für jeden Slice.
 
-*numformatoverrides*   
-Die Anzahl der Formatierungs Überschreibungen.
+*numFormatOverrides*   
+Die Anzahl der Formatüberschreibungen.
 
-*count5 \_ formatoverrides*   
+*count5 \_ formatOverrides*   
 Das Format überschreibt.
 
 *Histogramm*   
@@ -62,11 +62,11 @@ Die Adresse der Histogrammdaten für die geladene Textur.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Wenn diese Methode erfolgreich ausgeführt wird, gibt Sie **S \_ OK** zurück. Andernfalls wird ein **HRESULT** -Fehlercode zurückgegeben.
+Wenn diese Methode erfolgreich ist, wird **S \_ OK** zurückgegeben. Andernfalls wird ein **HRESULT-Fehlercode** zurückgegeben.
 
 ## <a name="requirements"></a>Anforderungen
 
-<table><colgroup><col style="width: 50%" /><col style="width: 50%" /></colgroup><tbody><tr class="odd"><td><p>Header</p></td><td>Vspixengine. h</td></tr></tbody></table>
+<table><colgroup><col style="width: 50%" /><col style="width: 50%" /></colgroup><tbody><tr class="odd"><td><p>Header</p></td><td>Vspixengine.h</td></tr></tbody></table>
 
 ## <a name="span-idsee_alsospansee-also"></a><span id="see_also"></span>Siehe auch
 

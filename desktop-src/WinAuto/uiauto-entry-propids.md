@@ -1,25 +1,25 @@
 ---
-title: Eigenschafts Bezeichner (Windows-Barrierefreiheits Funktionen)
-description: Dieser Abschnitt enthält Informationen zu Eigenschafts bezeichgern von Microsoft UI Automation.
+title: Eigenschaftenbezeichner (Windows Barrierefreiheitsfunktionen)
+description: Dieser Abschnitt enthält Informationen zu Microsoft Benutzeroberflächenautomatisierung-Eigenschaftsbezeichnern.
 ms.assetid: c05163ea-ba06-4005-9b80-661015b9d2ef
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 9e5ae21ca5ad01217e9a7769b7d5505f9090c81f
-ms.sourcegitcommit: 8fa6614b715bddf14648cce36d2df22e5232801a
+ms.openlocfilehash: 6a822ba9ec21295f3124dc841bb91fe217c3802af7c291a0ad8e64f3a80fcdae
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/10/2020
-ms.locfileid: "104391392"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119795440"
 ---
-# <a name="property-identifiers-windows-accessibility-features"></a>Eigenschafts Bezeichner (Windows-Barrierefreiheits Funktionen)
+# <a name="property-identifiers-windows-accessibility-features"></a>Eigenschaftenbezeichner (Windows Barrierefreiheitsfunktionen)
 
-Dieser Abschnitt enthält Informationen zu Eigenschafts bezeichgern von Microsoft UI Automation.
+Dieser Abschnitt enthält Informationen zu Microsoft Benutzeroberflächenautomatisierung-Eigenschaftsbezeichnern.
 
 ## <a name="in-this-section"></a>In diesem Abschnitt
 
--   [**Eigenschaften Bezeichner für Automatisierungselemente**](uiauto-automation-element-propids.md)
--   [**Steuerelement Muster-Eigenschaften Bezeichner**](uiauto-control-pattern-propids.md)
--   [**Eigenschaften Bezeichner für die Steuerelement Muster Verfügbarkeit**](uiauto-control-pattern-availability-propids.md)
+-   [**Automation-Elementeigenschaftenbezeichner**](uiauto-automation-element-propids.md)
+-   [**Steuerelementmustereigenschaftenbezeichner**](uiauto-control-pattern-propids.md)
+-   [**Verfügbarkeitseigenschaftenbezeichner für Steuerelementmuster**](uiauto-control-pattern-availability-propids.md)
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
@@ -28,7 +28,7 @@ Dieser Abschnitt enthält Informationen zu Eigenschafts bezeichgern von Microsof
 [Übersicht über die Benutzeroberflächenautomatisierungs-Eigenschaften](uiauto-propertiesoverview.md)
 </dt> <dt>
 
-[Abrufen von Eigenschaften aus Benutzeroberflächenautomatisierungs-Elementen](uiauto-propertiesforclients.md)
+[Abrufen von Eigenschaften aus Benutzeroberflächenautomatisierung Elementen](uiauto-propertiesforclients.md)
 </dt> </dl>
 
  

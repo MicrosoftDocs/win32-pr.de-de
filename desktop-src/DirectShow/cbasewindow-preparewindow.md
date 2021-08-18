@@ -1,7 +1,7 @@
 ---
-description: Die preparewindow-Methode erstellt das Fenster.
+description: Die PrepareWindow-Methode erstellt das Fenster.
 ms.assetid: c4c0d177-6351-4ecc-b1eb-399b4a94c463
-title: Cbasewindow. preparewindow-Methode (winutil. h)
+title: CBaseWindow.PrepareWindow-Methode (Winutil.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,16 +16,16 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: 91331ede15feb756f3ddd08d0d368621b35eda00
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 7b2811e307b370323c331d3f894116ad0ff01af25ad76e1ea775dae5489dfb15
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106370318"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119074564"
 ---
-# <a name="cbasewindowpreparewindow-method"></a>Cbasewindow. preparewindow-Methode
+# <a name="cbasewindowpreparewindow-method"></a>CBaseWindow.PrepareWindow-Methode
 
-Mit der- `PrepareWindow` Methode wird das-Fenster erstellt.
+Die `PrepareWindow` -Methode erstellt das Fenster.
 
 ## <a name="syntax"></a>Syntax
 
@@ -42,22 +42,22 @@ Diese Methode hat keine Parameter.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt einen **HRESULT** -Wert zurück. Mögliche Werte sind in der folgenden Tabelle aufgeführt.
+Gibt einen **HRESULT-Wert** zurück. Mögliche Werte sind die in der folgenden Tabelle aufgeführten Werte.
 
 
 
 | Rückgabecode                                                                            | Beschreibung         |
 |----------------------------------------------------------------------------------------|---------------------|
 | <dl> <dt>**S \_ OK**</dt> </dl>   | Erfolg.<br/> |
-| <dl> <dt>**E \_ fehlschlagen**</dt> </dl> | Fehler.<br/> |
+| <dl> <dt>**E \_ FAIL**</dt> </dl> | Fehler.<br/> |
 
 
 
  
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Ruft diese Methode auf, nachdem das-Objekt erstellt wurde. Diese Methode führt eine anfängliche Buchführung aus und ruft dann die [**cbasewindow::D okreatewindow**](cbasewindow-docreatewindow.md) -Methode auf, um das Fenster zu erstellen.
+Rufen Sie diese Methode nach dem Erstellen des -Objekts auf. Diese Methode führt eine anfängliche Buchhaltung durch und ruft dann die [**CBaseWindow::D oCreateWindow-Methode**](cbasewindow-docreatewindow.md) auf, um das Fenster zu erstellen.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -65,16 +65,16 @@ Ruft diese Methode auf, nachdem das-Objekt erstellt wurde. Diese Methode führt 
 
 | Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Winutil. h (Include Streams. h)</dt> </dl>                                                                                   |
-| Bibliothek<br/> | <dl> " <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Winutil.h (include Streams.h)</dt> </dl>                                                                                   |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Verkaufsbuilds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Cbasewindow-Klasse**](cbasewindow.md)
+[**CBaseWindow-Klasse**](cbasewindow.md)
 </dt> </dl>
 
  

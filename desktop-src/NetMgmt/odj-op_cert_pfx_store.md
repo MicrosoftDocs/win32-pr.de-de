@@ -5,14 +5,14 @@ ms.assetid: 10773feb-623c-4256-a973-f006ed66d936
 ms.topic: reference
 ms.date: 10/12/2020
 ms.reviewer: jsimmons
-ms.openlocfilehash: b07d0b8e5572763cc42fe2f5b19a4dde2cfe2157
-ms.sourcegitcommit: 1e64562147b11f90de802c2431173582d066fae6
+ms.openlocfilehash: 28e8b9e1a6d73f3d93e1700f812b21a0edf21982b7d5b9c927f4e7391b961850
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "106341566"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119911540"
 ---
-# <a name="op_cert_pfx_store-structure"></a>OP_CERT_PFX_STORE Struktur
+# <a name="op_cert_pfx_store-structure"></a>OP_CERT_PFX_STORE-Struktur
 
 Enthält eine serialisierte PFX-Struktur.
 
@@ -33,34 +33,34 @@ typedef struct _OP_CERT_PFX_STORE
 
 ## <a name="members"></a>Member
 
-### <a name="ptemplatename"></a>ptemplatename
+### <a name="ptemplatename"></a>pTemplateName
 
-Muss auf den Namen der Zertifikat Vorlage festgelegt werden, die zum Erstellen des Zertifikats verwendet wurde.
+Muss auf den Namen der Zertifikatvorlage festgelegt werden, die zum Erstellen des Zertifikats verwendet wird.
 
-### <a name="ulprivatekeyexportpolicy"></a>ulprivatekeyexportpolicy
+### <a name="ulprivatekeyexportpolicy"></a>ulPrivateKeyExportPolicy
 
-Enthält einen Wert aus der [**X509PrivateKeyExportFlags**](/windows/win32/api/certenroll/ne-certenroll-x509privatekeyexportflags) -Enumeration.
+Enthält einen Wert aus der [**X509PrivateKeyExportFlags-Enumeration.**](/windows/win32/api/certenroll/ne-certenroll-x509privatekeyexportflags)
 
 ### <a name="ppolicyserverurl"></a>pPolicyServerUrl
 
-Muss die URL des Richtlinien Servers festgelegt werden.
+Muss die URL des Richtlinienservers festgelegt werden.
 
 ### <a name="ulpolicyserverurlflags"></a>ulPolicyServerUrlFlags
 
-Enthält einen Wert aus der [**PolicyServerUrlFlags**](/windows/win32/api/certenroll/ne-certenroll-policyserverurlflags) -Enumeration.
+Enthält einen Wert aus der [**PolicyServerUrlFlags-Enumeration.**](/windows/win32/api/certenroll/ne-certenroll-policyserverurlflags)
 
-### <a name="ppolicyserverid"></a>ppolicyserverid
+### <a name="ppolicyserverid"></a>pPolicyServerId
 
-Enthält eine Zeichenfolge, die den Richtlinien Server eindeutig identifiziert.
+Enthält eine Zeichenfolge, die den Richtlinienserver eindeutig identifiziert.
 
-### <a name="cbpfx"></a>cbpfx
+### <a name="cbpfx"></a>cbPfx
 
-Enthält die Größe von ppfx in Bytes.
+Enthält die Größe von pPfx in Bytes.
 
-### <a name="ppfx"></a>ppfx
+### <a name="ppfx"></a>pPfx
 
 Enthält eine serialisierte PFX-Struktur (siehe [**RFC 7292**](https://tools.ietf.org/html/rfc7292)).
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
-[**IDL-Definitionen im Offline-Domänen Beitritt**](odj-idl.md)
+[**IDL-Definitionen für den Offlinedomänen-Join**](odj-idl.md)

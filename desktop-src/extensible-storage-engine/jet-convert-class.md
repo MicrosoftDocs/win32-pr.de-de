@@ -1,5 +1,5 @@
 ---
-description: 'Weitere Informationen finden Sie unter: JET_CONVERT-Klasse'
+description: 'Weitere Informationen zu: JET_CONVERT-Klasse'
 title: JET_CONVERT-Klasse
 TOCTitle: JET_CONVERT class
 ms:assetid: T:Microsoft.Isam.Esent.Interop.JET_CONVERT
@@ -24,26 +24,26 @@ api_type:
 api_location:
 - Microsoft.Isam.Esent.Interop.dll
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: 427361962ee2161e4f4c7448eb9ef21b7369e36c
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: ee601d51acb75e4a6338952837e980d0e09da7d0cb06431a4bd197f04d495693
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104130161"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120017600"
 ---
 # <a name="jet_convert-class"></a>JET_CONVERT-Klasse
 
-**Hinweis: Diese API ist mittlerweile veraltet.**
+**HINWEIS: Diese API ist jetzt veraltet.**
 
-Konvertierungsoptionen für [jetcompact (JET_SESID, String, String, JET_PFNSTATUS, JET_CONVERT, compactgrbit)](./api.jetcompact-method.md). Diese Funktion wurde in Windows Server 2003 nicht mehr unterstützt.
+Konvertierungsoptionen für [JetCompact(JET_SESID, String, String, JET_PFNSTATUS, JET_CONVERT, CompactGrbit)](./api.jetcompact-method.md). Dieses Feature wurde in Windows Server 2003 eingestellt.
 
 ## <a name="inheritance-hierarchy"></a>Vererbungshierarchie
 
 [System.Object](/dotnet/api/system.object)  
   Microsoft.Isam.Esent.Interop.JET_CONVERT  
 
-**Namespace:**  [Microsoft. ISAM. ESENT. Interop](./microsoft.isam.esent.interop-namespace.md)  
-**Assembly:**  Microsoft. ISAM. ESENT. Interop (in Microsoft.Isam.Esent.Interop.dll)
+**Namespace:**  [Microsoft.Isam.Esent.Interop](./microsoft.isam.esent.interop-namespace.md)  
+**Assembly:**  Microsoft.Isam.Esent.Interop (in Microsoft.Isam.Esent.Interop.dll)
 
 ## <a name="syntax"></a>Syntax
 
@@ -66,8 +66,8 @@ Alle öffentlichen statischen Elemente dieses Typs (Shared in Microsoft Visual�
 
 ## <a name="see-also"></a>Siehe auch
 
-#### <a name="reference"></a>Referenz
+#### <a name="reference"></a>Verweis
 
-[Mitglieder JET_CONVERT](./jet-convert-members.md)
+[JET_CONVERT-Member](./jet-convert-members.md)
 
-[Microsoft. ISAM. ESENT. Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)
+[Microsoft.Isam.Esent.Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)

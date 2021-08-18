@@ -1,11 +1,11 @@
 ---
-title: ACS-RSVP-Account-files-Location-Attribut
-description: Der Verzeichnis Speicherort der RSVP-Konto Dateien. Der Standardwert ist "\ 0034; System32 \ 0034;". das Unterverzeichnis im Standardsystem Verzeichnis.
+title: ATTRIBUT "ACS-RSVP-Account-Files-Location"
+description: Der Verzeichnisspeicherort der RSVP-Kontodateien. Der Standardwert ist \0034;system32 \ 0034; Das Unterverzeichnis befindet sich im Standardsystemverzeichnis.
 ms.assetid: 84303766-0d17-4728-aa61-6a5377b7de04
 ms.tgt_platform: multiple
 keywords:
-- AD-Schema des ACS-RSVP-Account-files-location-Attributs
-- acsrsvpaccountfilesloationattribute AD-Schema
+- AD-Schema des ACS-RSVP-Account-Files-Location-Attributs
+- AD-Schema des aCSRSVPAccountFilesLocation-Attributs
 topic_type:
 - apiref
 api_name:
@@ -14,28 +14,28 @@ api_type:
 - Schema
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 40876018ffeeacc49fe666ab1a9d69363edb73c4
-ms.sourcegitcommit: b77ace27b0432e7cd3863191b11926be032fbe2f
+ms.openlocfilehash: 2c7a2485bb49ee9ce79a500ea0f1dc4296466a3fbd6b69e73199ae768353e382
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "103859930"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120054260"
 ---
-# <a name="acs-rsvp-account-files-location-attribute"></a>ACS-RSVP-Account-files-Location-Attribut
+# <a name="acs-rsvp-account-files-location-attribute"></a>ATTRIBUT "ACS-RSVP-Account-Files-Location"
 
-Der Verzeichnis Speicherort der RSVP-Konto Dateien. Der Standardwert ist das Unterverzeichnis "System32", das sich im Standardsystem Verzeichnis befindet.
+Der Verzeichnisspeicherort der RSVP-Kontodateien. Der Standardwert ist das Unterverzeichnis "system32", das sich im Standardsystemverzeichnis befindet.
 
 
 
 | Eingabe | Wert |
 |-------------------|---------------------------------------------|
-| CN                | ACS-RSVP-Account-files-Location             |
-| LDAP-Display-Name | acsrsvpaccountfilesloation                 |
+| CN                | ACS-RSVP-Account-Files-Location             |
+| Ldap-Anzeigename | aCSRSVPAccountFilesLocation                 |
 | Size              | \-                                          |
-| Berechtigung aktualisieren  | \-                                          |
-| Aktualisierungshäufigkeit  | \-                                          |
+| Aktualisieren von Berechtigungen  | \-                                          |
+| Updatehäufigkeit  | \-                                          |
 | Attribute-Id      | 1.2.840.113556.1.4.900                      |
-| System-ID-GUID    | f072230f-aef5-11d1-bdcf-0000f80367c1        |
+| System-Id-Guid    | f072230f-aef5-11d1-bdcf-0000f80367c1        |
 | Syntax            | [**String(Unicode)**](s-string-unicode.md) |
 
 
@@ -43,7 +43,7 @@ Der Verzeichnis Speicherort der RSVP-Konto Dateien. Der Standardwert ist das Unt
 ## <a name="implementations"></a>Implementierungen
 
 -   [**Windows 2000 Server**](#windows-2000-server)
--   [**Windows Server 2003**](#windows-server-2003)
+-   [**Windows Server 2003**](#windows-server-2003)
 -   [**Windows Server 2003 R2**](#windows-server-2003-r2)
 -   [**Windows Server 2008**](#windows-server-2008)
 -   [**Windows Server 2008 R2**](#windows-server-2008-r2)
@@ -57,11 +57,11 @@ Der Verzeichnis Speicherort der RSVP-Konto Dateien. Der Standardwert ist das Unt
 |------------------------|----------------------------------------------|
 | Link-ID                | \-                                           |
 | MAPI-Id                | \-                                           |
-| System-Only            | False                                        |
-| Ist-einwertig       | Richtig                                         |
-| Ist indiziert             | False                                        |
-| Im globalen Katalog      | False                                        |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                 |
+| System-Only            | Falsch                                        |
+| Is-Single-Valued       | Richtig                                         |
+| Ist indiziert             | Falsch                                        |
+| Im globalen Katalog      | Falsch                                        |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                 |
 | Range-Lower            | \-                                           |
 | Range-Upper            | \-                                           |
 | Search-Flags           | 0x00000000                                   |
@@ -70,7 +70,7 @@ Der Verzeichnis Speicherort der RSVP-Konto Dateien. Der Standardwert ist das Unt
 
 
 
-## <a name="windows-server-2003"></a>Windows Server 2003
+## <a name="windows-server-2003"></a>Windows Server 2003
 
 
 
@@ -78,11 +78,11 @@ Der Verzeichnis Speicherort der RSVP-Konto Dateien. Der Standardwert ist das Unt
 |------------------------|----------------------------------------------|
 | Link-ID                | \-                                           |
 | MAPI-Id                | \-                                           |
-| System-Only            | False                                        |
-| Ist-einwertig       | Richtig                                         |
-| Ist indiziert             | False                                        |
-| Im globalen Katalog      | False                                        |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                 |
+| System-Only            | Falsch                                        |
+| Is-Single-Valued       | Richtig                                         |
+| Ist indiziert             | Falsch                                        |
+| Im globalen Katalog      | Falsch                                        |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                 |
 | Range-Lower            | \-                                           |
 | Range-Upper            | \-                                           |
 | Search-Flags           | 0x00000000                                   |
@@ -99,11 +99,11 @@ Der Verzeichnis Speicherort der RSVP-Konto Dateien. Der Standardwert ist das Unt
 |------------------------|----------------------------------------------|
 | Link-ID                | \-                                           |
 | MAPI-Id                | \-                                           |
-| System-Only            | False                                        |
-| Ist-einwertig       | Richtig                                         |
-| Ist indiziert             | False                                        |
-| Im globalen Katalog      | False                                        |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                 |
+| System-Only            | Falsch                                        |
+| Is-Single-Valued       | Richtig                                         |
+| Ist indiziert             | Falsch                                        |
+| Im globalen Katalog      | Falsch                                        |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                 |
 | Range-Lower            | \-                                           |
 | Range-Upper            | \-                                           |
 | Search-Flags           | 0x00000000                                   |
@@ -120,11 +120,11 @@ Der Verzeichnis Speicherort der RSVP-Konto Dateien. Der Standardwert ist das Unt
 |------------------------|----------------------------------------------|
 | Link-ID                | \-                                           |
 | MAPI-Id                | \-                                           |
-| System-Only            | False                                        |
-| Ist-einwertig       | Richtig                                         |
-| Ist indiziert             | False                                        |
-| Im globalen Katalog      | False                                        |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                 |
+| System-Only            | Falsch                                        |
+| Ist einwertig       | Richtig                                         |
+| Ist indiziert             | Falsch                                        |
+| Im globalen Katalog      | Falsch                                        |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                 |
 | Range-Lower            | \-                                           |
 | Range-Upper            | \-                                           |
 | Search-Flags           | 0x00000000                                   |
@@ -141,11 +141,11 @@ Der Verzeichnis Speicherort der RSVP-Konto Dateien. Der Standardwert ist das Unt
 |------------------------|----------------------------------------------|
 | Link-ID                | \-                                           |
 | MAPI-Id                | \-                                           |
-| System-Only            | False                                        |
-| Ist-einwertig       | Richtig                                         |
-| Ist indiziert             | False                                        |
-| Im globalen Katalog      | False                                        |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                 |
+| System-Only            | Falsch                                        |
+| Ist einwertig       | Richtig                                         |
+| Ist indiziert             | Falsch                                        |
+| Im globalen Katalog      | Falsch                                        |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                 |
 | Range-Lower            | \-                                           |
 | Range-Upper            | \-                                           |
 | Search-Flags           | 0x00000000                                   |
@@ -162,11 +162,11 @@ Der Verzeichnis Speicherort der RSVP-Konto Dateien. Der Standardwert ist das Unt
 |------------------------|----------------------------------------------|
 | Link-ID                | \-                                           |
 | MAPI-Id                | \-                                           |
-| System-Only            | False                                        |
-| Ist-einwertig       | Richtig                                         |
-| Ist indiziert             | False                                        |
-| Im globalen Katalog      | False                                        |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                 |
+| System-Only            | Falsch                                        |
+| Ist einwertig       | Richtig                                         |
+| Ist indiziert             | Falsch                                        |
+| Im globalen Katalog      | Falsch                                        |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                 |
 | Range-Lower            | \-                                           |
 | Range-Upper            | \-                                           |
 | Search-Flags           | 0x00000000                                   |

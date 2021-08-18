@@ -1,7 +1,7 @@
 ---
-description: 'D3DX10_MESHOPT Enumeration: Gibt den Typ der durchzuführenden Gitternetzoptimierung an.'
+description: 'D3DX10_MESHOPT Enumeration: Gibt den Typ der durchzuführenden Meshoptimierung an.'
 ms.assetid: 20d1da8c-8c3d-4045-9a37-d534a8682716
-title: D3DX10_MESHOPT -Enumeration (D3DX10Mesh.h)
+title: D3DX10_MESHOPT-Enumeration (D3DX10Mesh.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -22,7 +22,7 @@ ms.locfileid: "119989220"
 ---
 # <a name="d3dx10_meshopt-enumeration"></a>D3DX10 \_ MESHOPT-Enumeration
 
-Gibt den Typ der durchzuführenden Gitternetzoptimierung an.
+Gibt den Typ der durchzuführenden Meshoptimierung an.
 
 ## <a name="syntax"></a>Syntax
 
@@ -48,14 +48,14 @@ typedef enum D3DX10_MESHOPT {
 <span id="D3DX10_MESHOPT_COMPACT"></span><span id="d3dx10_meshopt_compact"></span>**D3DX10 \_ MESHOPT \_ COMPACT**
 </dt> <dd>
 
-Ordnet Gesichter neu an, um nicht verwendete Scheitelungen und Gesichter zu entfernen.
+Ordnet Gesichter neu an, um nicht verwendete Scheitelpunkte und Gesichter zu entfernen.
 
 </dd> <dt>
 
 <span id="D3DX10_MESHOPT_ATTR_SORT"></span><span id="d3dx10_meshopt_attr_sort"></span>**D3DX10 \_ MESHOPT \_ ATTR \_ SORT**
 </dt> <dd>
 
-Ordnet Gesichter neu an, um für weniger Attributbündelzustandsänderungen und verbesserte DrawSubset-Leistung zu optimieren.
+Ordnet Gesichter neu an, um weniger Änderungen am Attributbündelzustand und eine verbesserte DrawSubset-Leistung zu erzielen.
 
 </dd> <dt>
 
@@ -73,32 +73,32 @@ Ordnet Gesichter neu an, um die Länge benachbarter Dreiecke zu maximieren.
 
 </dd> <dt>
 
-<span id="D3DX10_MESHOPT_IGNORE_VERTS"></span><span id="d3dx10_meshopt_ignore_verts"></span>**D3DX10 \_ MESHOPT \_ \_ VERTS IGNORIEREN**
+<span id="D3DX10_MESHOPT_IGNORE_VERTS"></span><span id="d3dx10_meshopt_ignore_verts"></span>**D3DX10 \_ MESHOPT \_ IGNORE \_ VERTS**
 </dt> <dd>
 
-Nur die Gesichter optimieren; optimieren Sie die Scheitelungen nicht.
+Nur die Gesichter optimieren; optimieren Sie die Scheitelpunkte nicht.
 
 </dd> <dt>
 
-<span id="D3DX10_MESHOPT_DO_NOT_SPLIT"></span><span id="d3dx10_meshopt_do_not_split"></span>**D3DX10 \_ MESHOPT \_ NICHT \_ \_ TEILEN**
+<span id="D3DX10_MESHOPT_DO_NOT_SPLIT"></span><span id="d3dx10_meshopt_do_not_split"></span>**D3DX10 \_ MESHOPT \_ \_ NICHT \_ TEILEN**
 </dt> <dd>
 
-Teilen Sie bei der Attributsortierung keine Scheitelungen auf, die von Attributgruppen gemeinsam genutzt werden.
+Teilen Sie beim Sortieren von Attributen keine Scheitelpunkte, die von Attributgruppen gemeinsam genutzt werden.
 
 </dd> <dt>
 
-<span id="D3DX10_MESHOPT_DEVICE_INDEPENDENT"></span><span id="d3dx10_meshopt_device_independent"></span>**D3DX10 \_ MESHOPT \_ \_ GERÄTEUNABHÄNGIG**
+<span id="D3DX10_MESHOPT_DEVICE_INDEPENDENT"></span><span id="d3dx10_meshopt_device_independent"></span>**D3DX10 \_ MESHOPT \_ DEVICE \_ INDEPENDENT**
 </dt> <dd>
 
-Wirkt sich auf die Größe des Scheitelpunktcaches aus. Mit diesem Flag wird eine Standardgröße für den Scheitelpunktcache angegeben, die auf Legacyhardware gut funktioniert.
+Wirkt sich auf die Größe des Scheitelpunktcaches aus. Die Verwendung dieses Flags gibt eine Standardgröße des Scheitelpunktcaches an, die auf Legacyhardware gut funktioniert.
 
 </dd> </dl>
 
 ## <a name="remarks"></a>Hinweise
 
-Die D3DXMESHOPT \_ STRIPREORDER- und D3DXMESHOPT \_ VERTEXCACHE-Optimierungsflags schließen sich gegenseitig aus.
+Die Optimierungsflags D3DXMESHOPT \_ STRIPREORDER und D3DXMESHOPT \_ VERTEXCACHE schließen sich gegenseitig aus.
 
-Das SHAREVB-Flag D3DXMESHOPT \_ wurde aus dieser Enumeration entfernt. Verwenden Sie stattdessen D3DXMESH \_ VB \_ SHARE in D3DXMESH.
+Das D3DXMESHOPT \_ SHAREVB-Flag wurde aus dieser Enumeration entfernt. Verwenden Sie stattdessen D3DXMESH \_ VB \_ SHARE in D3DXMESH.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -110,7 +110,7 @@ Das SHAREVB-Flag D3DXMESHOPT \_ wurde aus dieser Enumeration entfernt. Verwenden
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 

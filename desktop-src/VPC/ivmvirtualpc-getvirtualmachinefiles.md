@@ -1,11 +1,11 @@
 ---
 title: IVMVirtualPC GetVirtualMachineFiles-Methode (VPCCOMInterfaces.h)
-description: Ruft ein Array bekannter VM-Konfigurationsdateien ab.
+description: Ruft ein Array bekannter Konfigurationsdateien für virtuelle Computer ab.
 ms.assetid: 38771573-66fa-408a-95db-1281efdf8b73
 keywords:
 - GetVirtualMachineFiles-Methode Virtueller PC
 - GetVirtualMachineFiles-Methode Virtueller PC, IVMVirtualPC-Schnittstelle
-- IVMVirtualPC-Schnittstelle Virtueller PC , GetVirtualMachineFiles-Methode
+- IVMVirtualPC-Schnittstelle Virtueller PC, GetVirtualMachineFiles-Methode
 topic_type:
 - apiref
 api_name:
@@ -25,9 +25,9 @@ ms.locfileid: "118998600"
 ---
 # <a name="ivmvirtualpcgetvirtualmachinefiles-method"></a>IVMVirtualPC::GetVirtualMachineFiles-Methode
 
-\[Windows Der virtuelle PC ist ab Windows 8 nicht mehr für die Verwendung verfügbar. Verwenden Sie stattdessen den [Hyper-V-WMI-Anbieter (V2).](/windows/desktop/HyperV_v2/windows-virtualization-portal)\]
+\[Windows Der virtuelle PC ist ab diesem Zeitraum nicht mehr Windows 8. Verwenden Sie stattdessen den [Hyper-V-WMI-Anbieter (V2).](/windows/desktop/HyperV_v2/windows-virtualization-portal)\]
 
-Ruft ein Array bekannter VM-Konfigurationsdateien ab.
+Ruft ein Array bekannter Konfigurationsdateien für virtuelle Computer ab.
 
 ## <a name="syntax"></a>Syntax
 
@@ -56,7 +56,7 @@ Diese Pfade werden zusammen mit den Pfaden durchsucht, die in den Eigenschaften 
 *inExcludedRegisteredVMs* \[ In\]
 </dt> <dd>
 
-**TRUE,** wenn registrierte virtuelle Computer aus dem Array ausgeschlossen werden sollen, geben Sie im *outVirtualMachineFileList-Parameter* zurück, andernfalls **FALSE.**
+**TRUE,** wenn registrierte virtuelle Computer aus der Array-Rückgabe im *outVirtualMachineFileList-Parameter* ausgeschlossen werden sollen, andernfalls **FALSE.**
 
 </dd> <dt>
 
@@ -76,10 +76,10 @@ Diese Methode kann einen dieser Werte zurückgeben.
 | Rückgabecode/-wert                                                                                                                                                                        | BESCHREIBUNG                                                                                     |
 |------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------|
 | <dl> <dt>**S \_ OK**</dt> <dt>0</dt> </dl>                                              | Der Vorgang wurde durchgeführt.<br/>                                                        |
-| <dl> <dt>**E \_ POINTER**</dt> <dt>0x80004003</dt> </dl>                                | Der *outVirtualMachineFileList-Parameter* ist **NULL.**<br/>                               |
-| <dl> <dt>**E \_ INVALIDARG-0x80000003**</dt> <dt></dt> </dl>                             | Der *inAdditionalSearchPaths-Parameter* ist kein Array von Zeichenfolgen.<br/>                  |
+| <dl> <dt>**E \_ ZEIGER 0X80004003**</dt> <dt></dt> </dl>                                | Der *outVirtualMachineFileList-Parameter* ist **NULL.**<br/>                               |
+| <dl> <dt>**E \_ INVALIDARG-0x80000003**</dt> <dt></dt> </dl>                             | Der *parameter inAdditionalSearchPaths* ist kein Array von Zeichenfolgen.<br/>                  |
 | <dl> <dt>**DISP \_ E \_ EXCEPTION**</dt> <dt>0x80020009</dt> </dl>                        | Ein unerwarteter Fehler ist aufgetreten.<br/>                                                    |
-| <dl> <dt>**VM \_ E \_ HARDWARE \_ VIRTUALIZATION \_ DISABLED**</dt> <dt>0xA0040951</dt> </dl> | Der Prozessor unterstützt keine HAV-Erweiterungen (Hardware Accelerated Virtualization).<br/> |
+| <dl> <dt>**VM \_ E \_ \_ HARDWAREVIRTUALISIERUNG \_ DEAKTIVIERT**</dt> <dt>0XA0040951</dt> </dl> | Der Prozessor unterstützt keine HAV-Erweiterungen (Hardware Accelerated Virtualization).<br/> |
 
 
 
@@ -87,7 +87,7 @@ Diese Methode kann einen dieser Werte zurückgeben.
 
 ## <a name="remarks"></a>Hinweise
 
-Die Suchpfade, die zum Abrufen des Arrays von Konfigurationsdateien verwendet werden, enthalten die zuvor von [**IVMVirtualPC::SearchPaths**](ivmvirtualpc-searchpaths.md) und [**IVMVirtualPC::D efaultVMConfigurationPath**](ivmvirtualpc-defaultvmconfigurationpath.md) festgelegten Pfade zusätzlich zu den durch den *InAdditionalSearchPaths-Parameter* angegebenen Pfaden.
+Die Suchpfade, die zum Abrufen des Arrays von Konfigurationsdateien verwendet werden, enthalten die zuvor von [**IVMVirtualPC::SearchPaths**](ivmvirtualpc-searchpaths.md) und [**IVMVirtualPC::D efaultVMConfigurationPath**](ivmvirtualpc-defaultvmconfigurationpath.md) festgelegten Pfade zusätzlich zu den durch den *Parameter inAdditionalSearchPaths* angegebenen Pfaden.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -95,7 +95,7 @@ Die Suchpfade, die zum Abrufen des Arrays von Konfigurationsdateien verwendet we
 
 | Anforderung | Wert |
 |-------------------------------------|-----------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | nur Windows 7 \[ Desktop-Apps\]<br/>                                                    |
+| Unterstützte Mindestversion (Client)<br/> | Windows 7 \[ Desktop-Apps\]<br/>                                                    |
 | Unterstützte Mindestversion (Server)<br/> | Nicht unterstützt<br/>                                                                     |
 | Ende des Supports (Client)<br/>    | Windows 7<br/>                                                                          |
 | Product (Produkt)<br/>                  | Windows Virtual PC<br/>                                                                 |
@@ -104,7 +104,7 @@ Die Suchpfade, die zum Abrufen des Arrays von Konfigurationsdateien verwendet we
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 

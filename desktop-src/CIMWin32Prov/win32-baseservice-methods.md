@@ -1,20 +1,20 @@
 ---
-description: Die Win32 \_ baseservice-Klasse stellt die folgenden Methoden zur Verfügung.
+description: Die Win32 \_ BaseService-Klasse macht die folgenden Methoden verfügbar.
 ms.assetid: 30CBACF4-F2E0-4FBD-BB81-ABDDADF0740D
 ms.tgt_platform: multiple
-title: Win32_BaseService Methoden
+title: Win32_BaseService-Methoden
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 80dc74f1e67fa1944547abe047597302a32fc7ab
-ms.sourcegitcommit: c7add10d695482e1ceb72d62b8a4ebd84ea050f7
+ms.openlocfilehash: 9cd100d8499a26d5ad15d6118214e77ccd91cfb100e5e38b47b6ddd24b672b35
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104483806"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119918000"
 ---
-# <a name="win32_baseservice-methods"></a>Win32- \_ baseservice-Methoden
+# <a name="win32_baseservice-methods"></a>Win32 \_ BaseService-Methoden
 
-Die [**Win32 \_ baseservice**](win32-baseservice.md) -Klasse stellt die folgenden Methoden zur Verfügung.
+Die [**Win32 \_ BaseService-Klasse**](win32-baseservice.md) macht die folgenden Methoden verfügbar.
 
 ## <a name="in-this-section"></a>In diesem Abschnitt
 
@@ -26,7 +26,7 @@ Die [**Win32 \_ baseservice**](win32-baseservice.md) -Klasse stellt die folgende
 -   [**PauseService-Methode**](pauseservice-method-in-class-win32-baseservice.md)
 -   [**ResumeService-Methode**](resumeservice-method-in-class-win32-baseservice.md)
 -   [**StartService-Methode**](startservice-method-in-class-win32-baseservice.md)
--   [**Stop Service-Methode**](stopservice-method-in-class-win32-baseservice.md)
+-   [**StopService-Methode**](stopservice-method-in-class-win32-baseservice.md)
 -   [**UserControlService-Methode**](usercontrolservice-method-in-class-win32-baseservice.md)
 
  

@@ -16,12 +16,12 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: 4e893b4e1c7d4f396644a468d3d71fa3046fb712
-ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
+ms.openlocfilehash: 76c19a883e7cfb416e557a23cf2a689e46dab36641ffc98cde5cbe5fe460f686
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2021
-ms.locfileid: "108095048"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120053570"
 ---
 # <a name="ctransforminputpinctransforminputpin-constructor"></a>CTransformInputPin.CTransformInputPin-Konstruktor
 
@@ -73,7 +73,7 @@ Breitzeichenzeichenfolge, die den Pinnamen enthält.
 
 </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
 Der *pName-Parameter* gibt den Pinnamen an, der von der [**IPin::QueryPinInfo-Methode zurückgegeben**](/windows/desktop/api/Strmif/nf-strmif-ipin-querypininfo) wird. Die Zeichenfolge wird jedoch nicht für den Pinbezeichner verwendet. Der Pinbezeichner für diese Klasse ist immer "In". Weitere Informationen finden Sie unter [**QueryId**](ctransforminputpin-queryid.md).
 
@@ -81,10 +81,10 @@ Der *pName-Parameter* gibt den Pinnamen an, der von der [**IPin::QueryPinInfo-Me
 
 
 
-| Anforderungen | Wert |
+| Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Transfrm.h (streams.h enthalten)</dt> </dl>                                                                                  |
-| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Verkaufsbuilds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Transfrm.h (include Streams.h)</dt> </dl>                                                                                  |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Einzelhandels-Builds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 

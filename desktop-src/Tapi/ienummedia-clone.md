@@ -1,5 +1,5 @@
 ---
-description: 'IEnumMedia::Clone-Methode: Die Clone-Methode erstellt einen weiteren Enumerator, der denselben Enumerationszustand wie der aktuelle enthält.'
+description: 'IEnumMedia::Clone-Methode: Die Clone-Methode erstellt einen weiteren Enumerator, der den gleichen Enumerationszustand wie der aktuelle enthält.'
 ms.assetid: b48399f5-daaa-40e4-bd80-a918539d25c6
 title: IEnumMedia::Clone-Methode (Sdpblb.h)
 ms.topic: reference
@@ -13,7 +13,7 @@ ms.locfileid: "119992440"
 ---
 # <a name="ienummediaclone-method"></a>IEnumMedia::Clone-Methode
 
-\[Steuerelemente und Schnittstellen für Rendezvous-IP-Telefoniekonferenzen sind nicht für die Verwendung in Windows Vista, Windows Server 2008 und nachfolgenden Versionen des Betriebssystems verfügbar. Die RTC-Client-API bietet ähnliche Funktionen.\]
+\[Rendezvous-IP-Telefoniekonferenz-Steuerelemente und -Schnittstellen sind nicht für die Verwendung in Windows Vista, Windows Server 2008 und nachfolgenden Versionen des Betriebssystems verfügbar. Die RTC-Client-API bietet ähnliche Funktionen.\]
 
 Die **Clone-Methode** erstellt einen weiteren Enumerator, der den gleichen Enumerationszustand wie der aktuelle enthält.
 
@@ -48,8 +48,8 @@ Diese Methode kann einen dieser Werte zurückgeben.
 | Wert                                                                                         | Bedeutung                                                         |
 |-----------------------------------------------------------------------------------------------|-----------------------------------------------------------------|
 | <dl> <dt>**S \_ OK**</dt> </dl>          | Methode war erfolgreich.<br/>                                    |
-| <dl> <dt>**\_E-ZEIGER**</dt> </dl>     | Der *ppEnum-Parameter* ist kein gültiger Zeiger.<br/>       |
-| <dl> <dt>**E \_ OUTOFMEMORY**</dt> </dl> | Es ist nicht genügend Arbeitsspeicher vorhanden, um den Vorgang durchzuführen.<br/> |
+| <dl> <dt>**E \_ POINTER**</dt> </dl>     | Der *ppEnum-Parameter* ist kein gültiger Zeiger.<br/>       |
+| <dl> <dt>**E \_ OUTOFMEMORY**</dt> </dl> | Es ist nicht genügend Arbeitsspeicher zum Ausführen des Vorgangs vorhanden.<br/> |
 | <dl> <dt>**E \_ UNEXPECTED**</dt> </dl>  | Fehler aus unbekannten Gründen.<br/>                          |
 
 
@@ -58,7 +58,7 @@ Diese Methode kann einen dieser Werte zurückgeben.
 
 ## <a name="remarks"></a>Hinweise
 
-TAPI ruft die **AddRef-Methode** auf der [**IEnumMedia-Schnittstelle auf,**](ienummedia.md) die von **IEnumMedia::Clone zurückgegeben wird.** Die Anwendung muss **Release auf der** **IEnumMedia-Schnittstelle** aufrufen, um zugeordnete Ressourcen frei zu geben.
+TAPI ruft die **AddRef-Methode** für die [**IEnumMedia-Schnittstelle**](ienummedia.md) auf, die von **IEnumMedia::Clone** zurückgegeben wird. Die Anwendung muss **Release** auf der **IEnumMedia-Schnittstelle** aufrufen, um zugeordnete Ressourcen freizugeben.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -73,7 +73,7 @@ TAPI ruft die **AddRef-Methode** auf der [**IEnumMedia-Schnittstelle auf,**](ien
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 

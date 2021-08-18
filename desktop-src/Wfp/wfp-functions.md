@@ -17,7 +17,7 @@ Mit den folgenden Funktionen können Sie geschützte Ressourcen aufzählen.
 
 
 
-| Funktion                                         | BESCHREIBUNG                                                 |
+| Funktion                                         | Beschreibung                                                 |
 |--------------------------------------------------|-------------------------------------------------------------|
 | [**SfcIsFileProtected**](/windows/desktop/api/Sfc/nf-sfc-sfcisfileprotected) | Bestimmt, ob die angegebene Datei geschützt ist.         |
 | [**SfcIsKeyProtected**](/windows/desktop/api/Sfc/nf-sfc-sfciskeyprotected)   | Bestimmt, ob der angegebene Registrierungsschlüssel geschützt ist. |
@@ -26,7 +26,7 @@ Mit den folgenden Funktionen können Sie geschützte Ressourcen aufzählen.
 
  
 
-Falls für das Betriebssystem verfügbar, sollten die Funktionen in dieser Tabelle anstelle der veralteten Funktionen verwendet werden: [**SfcGetNextProtectedFile**](/windows/desktop/api/Sfc/nf-sfc-sfcgetnextprotectedfile) und [**SfcGetFiles**](sfcgetfiles.md).
+Falls für das Betriebssystem verfügbar, sollten die Funktionen in dieser Tabelle anstelle der veralteten Funktionen verwendet werden: [**SfcGetNextProtectedFile**](/windows/desktop/api/Sfc/nf-sfc-sfcgetnextprotectedfile) und [**SfcGetFiles.**](sfcgetfiles.md)
 
  
 

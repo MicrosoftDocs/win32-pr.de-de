@@ -1,21 +1,21 @@
 ---
-description: Benachrichtigt eine Anwendung über eine Änderung an der Hardwarekonfiguration eines Geräts oder Computers.
+description: Benachrichtigt eine Anwendung über eine Änderung der Hardwarekonfiguration eines Geräts oder Computers.
 ms.assetid: b64a3983-ee75-4199-9778-1e5b7cec59e4
-title: WM_DEVICECHANGE (Winuser.h)
+title: WM_DEVICECHANGE-Meldung (Winuser.h)
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 91cc45d7a7978d5501e51cc1355c43afcf12b956
-ms.sourcegitcommit: 8c1942ac6731488abbeae46a7dbe3da166fee2d6
+ms.openlocfilehash: b32936d36e01a34acc9ace512703db7584768e8b51a9fe06a791b2a285ee2add
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/16/2021
-ms.locfileid: "107581502"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119017798"
 ---
 # <a name="wm_devicechange-message"></a>WM \_ DEVICECHANGE-Nachricht
 
-Benachrichtigt eine Anwendung über eine Änderung an der Hardwarekonfiguration eines Geräts oder Computers.
+Benachrichtigt eine Anwendung über eine Änderung der Hardwarekonfiguration eines Geräts oder Computers.
 
-Ein Fenster empfängt diese Nachricht über seine [**WindowProc-Funktion.**](/previous-versions/windows/desktop/legacy/ms633573(v=vs.85))
+Ein Fenster empfängt diese Meldung über seine [**WindowProc-Funktion.**](/previous-versions/windows/desktop/legacy/ms633573(v=vs.85))
 
 ```C++
 LRESULT CALLBACK WindowProc(HWND   hwnd,     // handle to window
@@ -45,22 +45,22 @@ Der **WM \_ DEVICECHANGE-Bezeichner.**
 *wParam* 
 </dt> <dd>
 
-Das aufgetretene Ereignis. Dieser Parameter kann einer der folgenden Werte aus der Dbt.h-Headerdatei sein.
+Das Ereignis, das aufgetreten ist. Dieser Parameter kann einer der folgenden Werte aus der Dbt.h-Headerdatei sein.
 
 | Wert | Bedeutung |
 |-------|---------|
 | **[DBT \_ DEVNODES \_ GEÄNDERT](dbt-devnodes-changed.md)**</br>0x0007 | Ein Gerät wurde dem System hinzugefügt oder daraus entfernt. |
-| **[DBT \_ QUERYCHANGECONFIG](dbt-querychangeconfig.md)**</br>0x0017 | Die Berechtigung zum Ändern der aktuellen Konfiguration (Dock oder Abdocken) wird angefordert. |
-| **[DBT \_ CONFIGCHANGED](dbt-configchanged.md)**</br>0x0018 | Die aktuelle Konfiguration wurde aufgrund eines Andocks oder Abdockens geändert. |
-| **[DBT \_ CONFIGCHANGECANCELED](dbt-configchangecanceled.md)**</br>0x0019 | Eine Anforderung zum Ändern der aktuellen Konfiguration (Dock oder Abdocken) wurde abgebrochen. |
-| **[DBT \_ DEVICEARRARRARR](dbt-devicearrival.md)**</br>0x8000 | Ein Gerät oder Medienteil wurde eingefügt und ist jetzt verfügbar. |
-| **[DBT \_ DEVICEQUERYREMOVE](dbt-devicequeryremove.md)**</br>0x8001 | Die Berechtigung zum Entfernen eines Geräts oder Medienstücks wird angefordert. Jede Anwendung kann diese Anforderung verweigern und die Entfernung abbrechen. |
-| **[DBT \_ DEVICEQUERYREMOVEFAILED](dbt-devicequeryremovefailed.md)**</br>0x8002 | Eine Anforderung zum Entfernen eines Geräts oder Medienstücks wurde abgebrochen. |
-| **[DBT \_ DEVICEREMOVEPENDING](dbt-deviceremovepending.md)**</br>0x8003 | Ein Gerät oder Medienteil wird entfernt. Kann nicht verweigert werden. |
-| **[DBT \_ DEVICEREMOVECOMPLETE](dbt-deviceremovecomplete.md)**</br>0x8004 | Ein Gerät oder Medienteil wurde entfernt. |
+| **[DBT \_ QUERYCHANGECONFIG](dbt-querychangeconfig.md)**</br>0x0017 | Die Berechtigung zum Ändern der aktuellen Konfiguration (Andocken oder Abdocken) wird angefordert. |
+| **[DBT \_ CONFIGCHANGED](dbt-configchanged.md)**</br>0x0018 | Die aktuelle Konfiguration wurde aufgrund eines Andockens oder Abdockens geändert. |
+| **[DBT \_ CONFIGCHANGECANCELED](dbt-configchangecanceled.md)**</br>0x0019 | Eine Anforderung zum Ändern der aktuellen Konfiguration (Andocken oder Abdocken) wurde abgebrochen. |
+| **[DBT \_ DEVICECONTEXTVAL](dbt-devicearrival.md)**</br>0x8000 | Ein Gerät oder ein Medienelement wurde eingefügt und ist jetzt verfügbar. |
+| **[DBT \_ DEVICEQUERYREMOVE](dbt-devicequeryremove.md)**</br>0x8001 | Die Berechtigung zum Entfernen eines Geräts oder Eines Mediums wird angefordert. Jede Anwendung kann diese Anforderung ablehnen und die Entfernung abbrechen. |
+| **[DBT \_ DEVICEQUERYREMOVEFAILED](dbt-devicequeryremovefailed.md)**</br>0x8002 | Eine Anforderung zum Entfernen eines Geräts oder Eines Mediums wurde abgebrochen. |
+| **[DBT \_ DEVICEREMOVEPENDING](dbt-deviceremovepending.md)**</br>0x8003 | Ein Gerät oder ein Medienelement wird entfernt. Kann nicht verweigert werden. |
+| **[DBT \_ DEVICEREMOVECOMPLETE](dbt-deviceremovecomplete.md)**</br>0x8004 | Ein Gerät oder ein Medienelement wurde entfernt. |
 | **[DBT \_ DEVICETYPESPECIFIC](dbt-devicetypespecific.md)**</br>0x8005 | Ein gerätespezifisches Ereignis ist aufgetreten. |
 | **[DBT \_ CUSTOMEVENT](dbt-customevent.md)**</br>0x8006 | Ein benutzerdefiniertes Ereignis ist aufgetreten. |
-| **[DBT \_ USERDEFINED](dbt-userdefined.md)**</br>0xffff | Die Bedeutung dieser Nachricht ist benutzerdefiniert. |
+| **[DBT \_ USERDEFINED](dbt-userdefined.md)**</br>0xFFFF | Die Bedeutung dieser Nachricht ist benutzerdefiniert. |
 
 </dd> <dt>
 
@@ -75,21 +75,21 @@ Ein Zeiger auf eine -Struktur, die ereignisspezifische Daten enthält. Das Forma
 
 Gibt **TRUE** zurück, um die Anforderung zu gewähren.
 
-Geben Sie **BROADCAST \_ QUERY \_ DENY** zurück, um die Anforderung zu verweigern.
+Gibt **BROADCAST \_ QUERY \_ DENY** zurück, um die Anforderung zu verweigern.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Für Geräte, die softwarekontrollierbare Features wie z. B. Einschleien und Sperren bieten, sendet das System in der Regel eine [DBT \_ DEVICEREMOVEPENDING-Nachricht,](dbt-deviceremovepending.md) damit Anwendungen und Gerätetreiber die Verwendung des Geräts ordnungsgemäß beenden können. Wenn das System ein Gerät entfernt, sendet es möglicherweise keine [DBT \_ DEVICEQUERYREMOVE-Nachricht,](dbt-devicequeryremove.md) bevor dies der Fall ist.
+Für Geräte, die softwaresteuerbare Features wie Einschleien und Sperren bieten, sendet das System in der Regel eine [DBT \_ DEVICEREMOVEPENDING-Nachricht,](dbt-deviceremovepending.md) damit Anwendungen und Gerätetreiber die Nutzung des Geräts ordnungsgemäß beenden können. Wenn das System ein Gerät entfernt, sendet es möglicherweise keine [DBT \_ DEVICEQUERYREMOVE-Nachricht,](dbt-devicequeryremove.md) bevor dies der Fall ist.
 
 ## <a name="requirements"></a>Anforderungen
 
 | Anforderung | Wert |
 |-------------------------------------|-------------------------------------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client) | Windows XP |
-| Unterstützte Mindestversion (Server) | Windows Server 2003|
-| Header | <dl> <dt>Winuser.h (einschließlich Windows.h oder Dbt.h)</dt> </dl> |
+| Unterstützte Mindestversion (Server) | Windows Server 2003|
+| Header | <dl> <dt>Winuser.h (include Windows.h oder Dbt.h)</dt> </dl> |
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 

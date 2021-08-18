@@ -1,9 +1,9 @@
 ---
-title: 'Inputpatch:: Operator-Funktion'
-description: 'Gibt den n-ten Steuerungspunkt im Patch zurück. | Inputpatch:: Operator-Funktion'
+title: InputPatch::Operator-Funktion
+description: Gibt den n-ten Steuerungspunkt im Patch zurück. | InputPatch::Operator-Funktion
 ms.assetid: 2c1eda6b-a9c1-40d3-be91-7a2e8f1da9fc
 keywords:
-- Operator Function HLSL
+- Operatorfunktion HLSL
 topic_type:
 - apiref
 api_name:
@@ -13,16 +13,16 @@ api_type:
 ms.topic: reference
 ms.date: 05/31/2018
 api_location: ''
-ms.openlocfilehash: 5d95cb8adae6e7a91629614e0ae10b4161dbac3f
-ms.sourcegitcommit: 92e74c99f8f4d097676959d0c317f533c2400a80
+ms.openlocfilehash: 81c768d138f6ee1853f9930a56f1a1864b468e8be9ff421f4dba1698b790053c
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/09/2021
-ms.locfileid: "104219218"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118986030"
 ---
-# <a name="inputpatchoperator--function"></a>Inputpatch:: Operator-Funktion
+# <a name="inputpatchoperator--function"></a>InputPatch::Operator-Funktion
 
-Gibt den *n*-<sup>ten Steuerungspunkt</sup> im Patch zurück.
+Gibt den *n-ten*<sup></sup> Steuerungspunkt im Patch zurück.
 
 ## <a name="syntax"></a>Syntax
 
@@ -41,7 +41,7 @@ T Operator[](
 
 Typ: **uint**
 
-Der Eingabe Index.
+Der Eingabeindex.
 
 </dd> </dl>
 
@@ -49,15 +49,15 @@ Der Eingabe Index.
 
 Typ: **T**
 
-Der *n*-<sup>te Steuerungspunkt</sup> .
+Der *n-ten*<sup></sup> Kontrollpunkt.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Diese Funktion wird für die folgenden Typen von Shadern unterstützt:
+Diese Funktion wird für die folgenden Shadertypen unterstützt:
 
 
 
-| Scheitelpunkt | Hülle | Domain | Geometrie | Pixel | Compute |
+| Scheitelpunkt | Rumpf | Domain | Geometrie | Pixel | Compute |
 |--------|------|--------|----------|-------|---------|
 |        | x    |        |          |       |         |
 
@@ -69,10 +69,10 @@ Diese Funktion wird für die folgenden Typen von Shadern unterstützt:
 
 <dl> <dt>
 
-[Input Patch](sm5-object-inputpatch.md)
+[InputPatch](sm5-object-inputpatch.md)
 </dt> <dt>
 
-[Shader-Modell 5](d3d11-graphics-reference-sm5.md)
+[Shadermodell 5](d3d11-graphics-reference-sm5.md)
 </dt> </dl>
 
  

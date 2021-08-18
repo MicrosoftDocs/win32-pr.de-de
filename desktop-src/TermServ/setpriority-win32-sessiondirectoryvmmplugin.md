@@ -1,12 +1,12 @@
 ---
-title: SetPriority-Methode der Win32_SessionDirectoryVMMPlugin Klasse
+title: SetPriority-Methode der Win32_SessionDirectoryVMMPlugin-Klasse
 description: Legt die Priorität des Plug-Ins fest.
 ms.assetid: ddcf30cd-b87c-4869-80fc-ec92092e0df3
 ms.tgt_platform: multiple
 keywords:
-- SetPriority-Remotedesktopdienste
+- SetPriority-Methode Remotedesktopdienste
 - SetPriority-Methode Remotedesktopdienste , Win32_SessionDirectoryVMMPlugin-Klasse
-- Win32_SessionDirectoryVMMPlugin klasse Remotedesktopdienste , SetPriority-Methode
+- Win32_SessionDirectoryVMMPlugin-Klasse Remotedesktopdienste , SetPriority-Methode
 topic_type:
 - apiref
 api_name:
@@ -52,7 +52,7 @@ Die Priorität des Plug-Ins. Je höher der Wert, desto höher ist die Priorität
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt bei Erfolg 0 zurück, andernfalls wird ein WMI-Fehlercode zurückgegeben. Eine Liste dieser Remotedesktopdienste finden Sie unter [Fehlercodes](terminal-services-wmi-provider-error-codes.md) für WMI-Anbieter.
+Gibt bei Erfolg 0 zurück, andernfalls einen WMI-Fehlercode. Eine Liste dieser Werte finden Sie unter [Remotedesktopdienste WMI-Anbieterfehlercodes.](terminal-services-wmi-provider-error-codes.md)
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -62,7 +62,7 @@ Gibt bei Erfolg 0 zurück, andernfalls wird ein WMI-Fehlercode zurückgegeben. E
 |-------------------------------------|----------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Nicht unterstützt<br/>                                                              |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2008 R2<br/>                                                      |
-| Namespace<br/>                | \\ \\ CiMv2-Stammterminaldienste<br/>                                               |
+| Namespace<br/>                | Root \\ CIMv2 \\ TerminalServices<br/>                                               |
 | MOF<br/>                      | <dl> <dt>TssdWmi.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>TssdWmi.dll</dt> </dl> |
 

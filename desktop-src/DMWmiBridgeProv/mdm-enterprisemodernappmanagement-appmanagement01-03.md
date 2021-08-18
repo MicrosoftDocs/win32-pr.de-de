@@ -1,6 +1,6 @@
 ---
 title: MDM_EnterpriseModernAppManagement_AppManagement01_03-Klasse
-description: Die MDM \_ enterprismodernappmanagement \_ AppManagement01 \_ 03-Klasse stellt spezifische Informationen über die APP bereit, wie z. b. Name, Version und Verleger.
+description: Die MDM \_ EnterpriseModernAppManagement \_ AppManagement01 03-Klasse enthält spezifische Informationen zur App, z. B. Name, Version \_ und Herausgeber.
 ms.assetid: 424e68de-1411-490f-b33b-5243ffa5a31e
 keywords:
 - MDM_EnterpriseModernAppManagement_AppManagement01_03-Klasse
@@ -17,18 +17,18 @@ api_type:
 - DllExport
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: f24c028c6a1f0d551fc54cb078376dcdef968abc
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 9395f59519d37b5a86ec3aa1c8e53b03c5c75ee86b8431d2cd98239aef717b3d
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104104985"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119018168"
 ---
-# <a name="mdm_enterprisemodernappmanagement_appmanagement01_03-class"></a>MDM \_ enterprismodernappmanagement \_ AppManagement01 \_ 03-Klasse
+# <a name="mdm_enterprisemodernappmanagement_appmanagement01_03-class"></a>MDM \_ EnterpriseModernAppManagement \_ AppManagement01 \_ 03-Klasse
 
 \[Einige Informationen beziehen sich auf Vorabversionen, die vor der kommerziellen Freigabe grundlegend geändert werden können. Microsoft übernimmt keine Garantie, weder ausdrücklich noch stillschweigend, für die hier bereitgestellten Informationen.\]
 
-Die **MDM \_ enterprismodernappmanagement \_ AppManagement01 \_ 03** -Klasse stellt spezifische Informationen über die APP bereit, wie z. b. Name, Version und Verleger.
+Die **MDM \_ EnterpriseModernAppManagement \_ AppManagement01 \_ 03-Klasse** enthält spezifische Informationen zur App, z. B. Name, Version und Herausgeber.
 
 Die folgende Syntax enthält vereinfachten MOF-Code und schließt alle geerbten Eigenschaften ein.
 
@@ -58,20 +58,20 @@ class MDM_EnterpriseModernAppManagement_AppManagement01_03
 
 ## <a name="members"></a>Member
 
-Die **MDM \_ enterpritarmodernappmanagement \_ AppManagement01 \_ 03** -Klasse verfügt über diese Typen von Membern:
+Die **MDM \_ EnterpriseModernAppManagement \_ AppManagement01 \_ 03-Klasse** verfügt über die folgenden Membertypen:
 
 -   [Eigenschaften](#properties)
 
 ### <a name="properties"></a>Eigenschaften
 
-Die **MDM \_ enterprismodernappmanagement \_ AppManagement01 \_ 03** -Klasse verfügt über diese Eigenschaften.
+Die **MDM \_ EnterpriseModernAppManagement \_ AppManagement01 \_ 03-Klasse** verfügt über diese Eigenschaften.
 
 <dl> <dt>
 
 [Architektur](/windows/client-management/mdm/enterprisemodernappmanagement-csp#----packagefamilyname-packagefullname-architecture)
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
@@ -82,7 +82,7 @@ Zugriffstyp: Lesen/Schreiben
 [InstallDate](/windows/client-management/mdm/enterprisemodernappmanagement-csp#----packagefamilyname-packagefullname-installdate)
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
@@ -90,10 +90,10 @@ Zugriffstyp: Lesen/Schreiben
 
 </dd> <dt>
 
-[INSTALLLOCATION](/windows/client-management/mdm/enterprisemodernappmanagement-csp#----packagefamilyname-packagefullname-installlocation)
+[Installlocation](/windows/client-management/mdm/enterprisemodernappmanagement-csp#----packagefamilyname-packagefullname-installlocation)
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
@@ -104,7 +104,7 @@ Zugriffstyp: Lesen/Schreiben
 **InstanceID**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
@@ -113,11 +113,11 @@ Zugriffstyp: Schreibgeschützt
 Qualifizierer: [ **Schlüssel**](/windows/desktop/WmiSdk/key-qualifier)
 </dt> </dl>
 
-Gibt den Namen des übergeordneten Knotens an. Bei dieser Klasse ist die Zeichenfolge die Instanz des vollständigen Paket namens.
+Identifiziert den Namen des übergeordneten Knotens. Für diese Klasse ist die Zeichenfolge die Instanz des vollständigen Paketnamens.
 
 </dd> <dt>
 
-[Isbundle](/windows/client-management/mdm/enterprisemodernappmanagement-csp#----packagefamilyname-packagefullname-isbundle)
+[IsBundle](/windows/client-management/mdm/enterprisemodernappmanagement-csp#----packagefamilyname-packagefullname-isbundle)
 </dt> <dd> <dl> <dt>
 
 Datentyp: **sint32**
@@ -128,7 +128,7 @@ Zugriffstyp: Lesen/Schreiben
 
 </dd> <dt>
 
-[Isframework](/windows/client-management/mdm/enterprisemodernappmanagement-csp#----packagefamilyname-packagefullname-isframework)
+[IsFramework](/windows/client-management/mdm/enterprisemodernappmanagement-csp#----packagefamilyname-packagefullname-isframework)
 </dt> <dd> <dl> <dt>
 
 Datentyp: **sint32**
@@ -139,7 +139,7 @@ Zugriffstyp: Lesen/Schreiben
 
 </dd> <dt>
 
-[Isprovisioning](/windows/client-management/mdm/enterprisemodernappmanagement-csp#----packagefamilyname-packagefullname-isprovisioned)
+[IsProvisioned](/windows/client-management/mdm/enterprisemodernappmanagement-csp#----packagefamilyname-packagefullname-isprovisioned)
 </dt> <dd> <dl> <dt>
 
 Datentyp: **sint32**
@@ -153,7 +153,7 @@ Zugriffstyp: Lesen/Schreiben
 [Name](/windows/client-management/mdm/enterprisemodernappmanagement-csp#----packagefamilyname-packagefullname-name)
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
@@ -161,7 +161,7 @@ Zugriffstyp: Lesen/Schreiben
 
 </dd> <dt>
 
-[Packagestatus](/windows/client-management/mdm/enterprisemodernappmanagement-csp#----packagefamilyname-packagefullname-packagestatus)
+[PackageStatus](/windows/client-management/mdm/enterprisemodernappmanagement-csp#----packagefamilyname-packagefullname-packagestatus)
 </dt> <dd> <dl> <dt>
 
 Datentyp: **sint32**
@@ -172,10 +172,10 @@ Zugriffstyp: Lesen/Schreiben
 
 </dd> <dt>
 
-**ParentID**
+**Parentid**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
@@ -184,14 +184,14 @@ Zugriffstyp: Schreibgeschützt
 Qualifizierer: [ **Schlüssel**](/windows/desktop/WmiSdk/key-qualifier)
 </dt> </dl>
 
-Beschreibt den vollständigen Pfad zum übergeordneten Knoten. Für diese Klasse lautet die Zeichenfolge "./Vendor/MSFT/EnterpriseModernAppManagement/AppManagement/*enterpriseid* / *packagefamilyname*".
+Beschreibt den vollständigen Pfad zum übergeordneten Knoten. Für diese Klasse ist die Zeichenfolge "./Vendor/MSFT/EnterpriseModernAppManagement/AppManagement/*EnterpriseID* / *PackageFamilyName*"
 
 </dd> <dt>
 
 [Publisher](/windows/client-management/mdm/enterprisemodernappmanagement-csp#----packagefamilyname-packagefullname-publisher)
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
@@ -199,7 +199,7 @@ Zugriffstyp: Lesen/Schreiben
 
 </dd> <dt>
 
-[Requirements-Installation](/windows/client-management/mdm/enterprisemodernappmanagement-csp#----packagefamilyname-packagefullname-requiresreinstall)
+[RequiresReinstall](/windows/client-management/mdm/enterprisemodernappmanagement-csp#----packagefamilyname-packagefullname-requiresreinstall)
 </dt> <dd> <dl> <dt>
 
 Datentyp: **sint32**
@@ -213,7 +213,7 @@ Zugriffstyp: Lesen/Schreiben
 [ResourceID](/windows/client-management/mdm/enterprisemodernappmanagement-csp#----packagefamilyname-packagefullname-resourceid)
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
@@ -224,7 +224,7 @@ Zugriffstyp: Lesen/Schreiben
 [Benutzer](/windows/client-management/mdm/enterprisemodernappmanagement-csp#----packagefamilyname-packagefullname-users)
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
@@ -235,7 +235,7 @@ Zugriffstyp: Lesen/Schreiben
 [Version](/windows/client-management/mdm/enterprisemodernappmanagement-csp#----packagefamilyname-packagefullname-version)
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
@@ -249,19 +249,19 @@ Zugriffstyp: Lesen/Schreiben
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows 10 \[ -Desktop-Apps\]<br/>                                                    |
+| Unterstützte Mindestversion (Client)<br/> | \[Windows 10 Nur Desktop-Apps\]<br/>                                                    |
 | Unterstützte Mindestversion (Server)<br/> | Nicht unterstützt<br/>                                                                      |
-| Namespace<br/>                | Root \\ CIMV2 \\ MDM- \\ dmmap<br/>                                                             |
-| MOF<br/>                      | <dl> <dt>Dmwmibridgeprov. MOF</dt> </dl> |
+| Namespace<br/>                | Root \\ cimv2 \\ mdm \\ dmmap<br/>                                                             |
+| MOF<br/>                      | <dl> <dt>DMWmiBridgeProv.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>DMWmiBridgeProv.dll</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[Verwenden von PowerShell-Skripts mit dem WMI-Bridge Anbieter](/windows/client-management/mdm/using-powershell-scripting-with-the-wmi-bridge-provider)
+[Verwenden von PowerShell-Skripts mit dem WMI-Bridge-Anbieter](/windows/client-management/mdm/using-powershell-scripting-with-the-wmi-bridge-provider)
 </dt> </dl>
 
  

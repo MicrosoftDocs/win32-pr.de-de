@@ -1,228 +1,228 @@
 ---
-description: In diesem Abschnitt werden die Konstanten definiert, die NLS zum Angeben von bestimmten Gebiets Schema Informationen verwendet.
+description: In diesem Abschnitt werden die Konstanten definiert, die NLS verwendet, um bestimmte Gebietsschemainformationen anzugeben.
 ms.assetid: 45798dd1-34bb-4e99-8f84-94f28e76711f
-title: Gebiets Schema Informations Konstanten
+title: Gebietsschemainformationskonstanten
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 7802002ff572ec148351a0abea02922205409b08
-ms.sourcegitcommit: 4af3e9ec3142ba499d20ed8b174c2b219c5eacd2
+ms.openlocfilehash: 0cfd5f3436eed055af6956e538276402f617eb0d6a0e8c3f6d914c82e1457aaf
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/30/2021
-ms.locfileid: "106372548"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120106590"
 ---
-# <a name="locale-information-constants"></a>Gebiets Schema Informations Konstanten
+# <a name="locale-information-constants"></a>Gebietsschemainformationskonstanten
 
-In diesem Abschnitt werden die Konstanten definiert, die NLS zum Angeben von bestimmten Gebiets Schema Informationen verwendet. Alle Namen beginnen mit "locale \_ ". Namen von Konstanten, die ganzzahlige Werte darstellen, beginnen mit "locale \_ I". Alle Werte für diese Konstanten sind NULL-terminierte Unicode-Zeichen folgen. Maximale Zeichen folgen Länge schließt das abschließende Null-Zeichen ein. Wenn für eine Konstante keine maximale Länge angegeben ist, können die Werte der Länge abweichen.
+In diesem Abschnitt werden die Konstanten definiert, die NLS verwendet, um bestimmte Gebietsschemainformationen anzugeben. Alle Namen beginnen mit \_ "LOCALE". Namen von Konstanten, die ganzzahlige Werte darstellen, beginnen mit "LOCALE \_ I". Alle Werte für diese Konstanten sind auf NULL endende Unicode-Zeichenfolgen. Zu den maximalen Zeichenfolgenlängen gehört das abschließende NULL-Zeichen. Wenn für eine Konstante keine maximale Länge angegeben wird, können deren Werte in der Länge variieren.
 
-Die folgenden Gebiets Schema Informations Konstanten werden von NLS definiert:
+Die folgenden Gebietsschemainformationskonstanten werden von NLS definiert:
 
 <dl>
 
-[LOCALE \_ all](locale-all.md)  
-[Gebiets \_ Schema \_ neutral zulassen](locale-allow-neutral.md)  
-[Gebiets \_ Schema \_ neutrale \_ Namen zulassen](locale-allow-neutral-names.md)  
-[Gebiets Schema Alternative Sortierungen \_ \_](locale-alternate-sorts.md)  
-[\_Benutzerdefinierte Gebiets Schema \* Konstanten](locale-custom-constants.md)  
-[Gebiets Schema \_ fontSignature](locale-fontsignature.md)  
-[Gebiets Schema \_ icalendartype](locale-icalendartype.md)  
-[Gebiets Schema- \_ ijahrhundert](locale-icentury.md)  
-[Gebiets Schema \_ iconstructedlocale](locale-iconstructedlocale.md)  
-[Gebiets Schema- \_ iCountry](locale-icountry.md)  
-[Gebiets Schema- \_ icurrdigits](locale-icurrdigits.md)  
-[Gebiets Schema- \_ icurrency](locale-icurrency.md)  
-[Gebiets Schema- \_ IDATE](locale-idate.md)  
-[Gebiets Schema \_ idaylzero](locale-idaylzero.md)  
-[Gebiets Schema- \_ idefault- \* Konstanten](locale-idefault-constants.md)  
-[LOCALE \_ idialingcode](locale-icountry.md)  
-[Gebiets Schema- \_ idigits](locale-idigits.md)  
-[LOCALE \_ idigitsubstitution](locale-idigitsubstitution.md)  
-[Gebiets Schema \_ ifirstdayosweek](locale-ifirstdayofweek.md)  
-[Gebiets Schema \_ ifirstweekosyear](locale-ifirstweekofyear.md)  
-[Gebiets Schema- \_ igeoid](locale-igeoid.md)  
-[Gebiets Schema \_ iintlcurrdigits](locale-iintlcurrdigits.md)  
-[Gebiets Schema- \_ iLanguage](locale-ilanguage.md)  
-[Gebiets Schema- \_ ildate](locale-ildate.md)  
-[Gebiets Schema \_ ilnull](locale-ilzero.md)  
-[Gebiets Schema- \_ imeasure](locale-imeasure.md)  
-[Gebiets Schema \_ imonlzero](locale-imonlzero.md)  
-[Gebiets Schema- \_ InEG- \* Konstanten](locale-ineg-constants.md)  
-[Gebiets \_ Schema inegativeprozent](locale-inegativepercent.md)  
-[Gebiets Schema \_ ineutral](locale-ineutral.md)  
-[Gebiets Schema \_ invariant](locale-invariant.md)  
-[LOCALE \_ ioptionalcalendar](locale-ioptionalcalendar.md)  
-[LOCALE \_ ipapersize](locale-ipapersize.md)  
-[Gebiets Schema \_ ipositiveprozent](locale-ipositivepercent.md)  
-[Gebiets Schema- \_ IPOs- \* Konstanten](locale-ipos-constants.md)  
-[Gebiets Schema \_ ileslayout](locale-ireadinglayout.md)  
-[Gebiets Schema- \_ Itime](locale-itime.md)  
-[Gebiets Schema \_ itimemarkposn](locale-itimemarkposn.md)  
-[Gebiets Schema- \_ itlzero](locale-itlzero.md)  
+[LOCALE \_ ALL](locale-all.md)  
+[LOCALE \_ ALLOW \_ NEUTRAL](locale-allow-neutral.md)  
+[\_GEBIETSSCHEMA: \_ NEUTRALE NAMEN ZULASSEN \_](locale-allow-neutral-names.md)  
+[\_GEBIETSSCHEMA ALTERNATIVE \_ SORTIERUNGEN](locale-alternate-sorts.md)  
+[LOCALE \_ CUSTOM \* Constants](locale-custom-constants.md)  
+[\_GEBIETSSCHEMASCHRIFTARTENSIGNATUR](locale-fontsignature.md)  
+[LOCALE \_ ICALENDARTYPE](locale-icalendartype.md)  
+[LOCALE \_ ICENTURY](locale-icentury.md)  
+[\_GEBIETSSCHEMASYMBOLSTRUCTEDLOCALE](locale-iconstructedlocale.md)  
+[LOCALE \_ ICOUNTRY](locale-icountry.md)  
+[LOCALE \_ ICURRDIGITS](locale-icurrdigits.md)  
+[\_GEBIETSSCHEMA-ICURRENCY](locale-icurrency.md)  
+[LOCALE \_ IDATE](locale-idate.md)  
+[LOCALE \_ IDAYLZERO](locale-idaylzero.md)  
+[LOCALE \_ \* IDEFAULT-Konstanten](locale-idefault-constants.md)  
+[LOCALE \_ IDIALINGCODE](locale-icountry.md)  
+[LOCALE \_ IDIGITS](locale-idigits.md)  
+[LOCALE \_ IDIGITSUBS CYBERSECURITY](locale-idigitsubstitution.md)  
+[LOCALE \_ IFIRSTDAYOFWEEK](locale-ifirstdayofweek.md)  
+[LOCALE \_ IFIRSTWEEKOFYEAR](locale-ifirstweekofyear.md)  
+[LOCALE \_ IGEOID](locale-igeoid.md)  
+[LOCALE \_ IINTLCURRDIGITS](locale-iintlcurrdigits.md)  
+[\_GEBIETSSCHEMA-ILANGUAGE](locale-ilanguage.md)  
+[LOCALE \_ ILDATE](locale-ildate.md)  
+[LOCALE \_ ILZERO](locale-ilzero.md)  
+[GEBIETSSCHEMA \_ IMEASURE](locale-imeasure.md)  
+[GEBIETSSCHEMA \_ IMONLZERO](locale-imonlzero.md)  
+[LOCALE \_ \* INEG-Konstanten](locale-ineg-constants.md)  
+[GEBIETSSCHEMA \_ INEGATIVEPERCENT](locale-inegativepercent.md)  
+[LOCALE \_ INEUTRAL](locale-ineutral.md)  
+[GEBIETSSCHEMA \_ INVARIANT](locale-invariant.md)  
+[LOCALE \_ IOPTIONALCALENDAR](locale-ioptionalcalendar.md)  
+[LOCALE \_ IPAPERSIZE](locale-ipapersize.md)  
+[LOCALE \_ IPOSITIVEPERCENT](locale-ipositivepercent.md)  
+[LOCALE \_ \* IPOS-Konstanten](locale-ipos-constants.md)  
+[LOCALE \_ IREADINGLAYOUT](locale-ireadinglayout.md)  
+[LOCALE \_ ITIME](locale-itime.md)  
+[LOCALE \_ ITIMEMARKPOSN](locale-itimemarkposn.md)  
+[GEBIETSSCHEMA \_ ITLZERO](locale-itlzero.md)  
 [LOCALE \_ IUSEUTF8LEGACYACP](locale_iuseutf8legacyacp.md)  
 [LOCALE \_ IUSEUTF8LEGACYOEMCP](locale_iuseutf8legacyoemcp.md)  
-[Gebiets Schema \_ Namen \* Konstanten](locale-name-constants.md)  
-[Gebiets Schema \_ neutral](locale-neutral.md)  
-[Gebiets Schema- \_ neutraldata](locale-neutraldata.md)  
-[Gebiets Schema \_ nouseroverride](locale-nouseroverride.md)  
-[Gebiets Schema \_ Ersetzung](locale-replacement.md)  
-[Gebiets Schema \_ Rückgabe \* Konstanten](locale-return-constants.md)  
-[LOCALE \_ S1159](locale-s1159.md)  
-[LOCALE \_ S2359](locale-s2359.md)  
-[Gebiets Schema- \_ sabbrev- \* Konstanten](locale-sabbrev-constants.md)  
-[Gebiets Schema \_ Sam](locale-s1159.md)  
-[LOCALE \_ sconsolefallbackname](locale-sconsolefallbackname.md)  
-[\_Gebiets Schema scountry](locale-scountry.md)  
-[Gebiets Schema- \_ scurrency](locale-scurrency.md)  
-[LOCALE \_ sdate](locale-sdate.md)  
-[LOCALE \_ sdayname- \* Konstanten](locale-sdayname-constants.md)  
-[sdecimal (locale) \_](locale-sdecimal.md)  
-[LOCALE \_ sduration](locale-sduration.md)  
-[LOCALE- \_ Seng- \* Konstanten](locale-seng-constants.md)  
-[LOCALE- \_ senglish- \* Konstanten](locale-senglish-constants.md)  
-[Gebiets Schema- \_ sgruppierung](locale-sgrouping.md)  
-[LOCALE \_ sietf-Sprache](locale-sietflanguage.md)  
-[LOCALE- \_ sintlsymbol](locale-sintlsymbol.md)  
-[LOCALE- \_ SISO- \* Konstanten](locale-siso-constants.md)  
-[LOCALE \_ skeyboardstoinstall](locale-skeyboardstoinstall.md)  
-[LOCALE \_ slangdisplayname](locale-slangdisplayname.md)  
-[LOCALE \_ SLanguage](locale-slanguage.md)  
-[LOCALE \_ slist](locale-slist.md)  
-[\_Slocalized- \* Konstanten](locale-slocalized-constants.md)  
-[\_Gebiets Schema slongdate](locale-slongdate.md)  
-[Gebiets Schema- \_ smon- \* Konstanten](locale-smon-constants.md)  
-[LOCALE \_ smonthday](locale-smonthday.md)  
-[\_Smonthname- \* Konstanten für locale](locale-smonthname-constants.md)  
-[Name des Gebiets Schemas \_](locale-sname.md)  
-[Gebiets Schema- \_ Snan](locale-snan.md)  
-[Gebiets Schema- \_ snative \* Konstanten](locale-snative-constants.md)  
-[LOCALE \_ snegativesign](locale-snegativesign.md)  
-[LOCALE- \_ spoginfinity](locale-sneginfinity.md)  
-[Gebiets \_ Schema sopentypelanguagetag](locale-sopentypelanguagetag.md)  
-[\_sortName für locale](locale-sortname.md)  
-[LOCALE- \_ sparent](locale-sparent.md)  
-[LOCALE \_ specificdata](locale-specificdata.md)  
-[Gebiets Schema- \_ spercent](locale-spercent.md)  
-[Gebiets Schema- \_ spermille](locale-spermille.md)  
-[Gebiets Schema- \_ SPM](locale-s2359.md)  
-[Gebiets Schema \_ sposinfinity](locale-sposinfinity.md)  
-[Gebiets Schema \_ spositivesign](locale-spositivesign.md)  
-[Gebiets Schema- \_ sscripts](locale-sscripts.md)  
-[LOCALE \_ sshortdate](locale-sshortdate.md)  
-[LOCALE \_ sshortestam](locale-sshortestam.md)  
-[LOCALE \_ sshortestdayname- \* Konstanten](locale-sshortestdayname-constants.md)  
-[\_Gebiets Schema sshortestpm](locale-sshortestpm.md)  
-[LOCALE \_ sshorttime](locale-sshorttime.md)  
-[LOCALE- \_ ssort- \* Konstanten](locale-ssort-constants.md)  
-[\_Gebiets Schema stausendstel](locale-sthousand.md)  
-[LOCALE \_ stime- \* Konstanten](locale-stime-constants.md)  
-[zusätzliches Gebiets Schema \_](locale-supplemental.md)  
-[\_Gebiets Schema syearmonth](locale-syearmonth.md)  
-[Standard für Gebiets Schema \_ System \_](locale-system-default.md)  
-[Gebiets Schema \_ verwenden \_ CP \_ ACP](locale-use-cp-acp.md)  
-[\_Standardbenutzer Name für locale \_](locale-user-default.md)  
-[Gebiets Schema \_ Fenster](locale-windows.md)  
+[LOCALE \_ \* NAME-Konstanten](locale-name-constants.md)  
+[\_GEBIETSSCHEMANEUTRAL](locale-neutral.md)  
+[LOCALE \_ NEUTRALDATA](locale-neutraldata.md)  
+[LOCALE \_ NOUSEROVERRIDE](locale-nouseroverride.md)  
+[\_GEBIETSSCHEMAAUSTAUSCH](locale-replacement.md)  
+[LOCALE \_ \* RETURN-Konstanten](locale-return-constants.md)  
+[GEBIETSSCHEMA \_ S1159](locale-s1159.md)  
+[GEBIETSSCHEMA \_ S2359](locale-s2359.md)  
+[\_LOCALE-KONSTANTENBREV \*](locale-sabbrev-constants.md)  
+[\_GEBIETSSCHEMA-SAM](locale-s1159.md)  
+[LOCALE \_ SCONSOLEFALLBACKNAME](locale-sconsolefallbackname.md)  
+[LOCALE \_ SCOUNTRY](locale-scountry.md)  
+[\_GEBIETSSCHEMA-SCURRENCY](locale-scurrency.md)  
+[LOCALE \_ SDATE](locale-sdate.md)  
+[LOCALE \_ \* SDAYNAME-Konstanten](locale-sdayname-constants.md)  
+[LOCALE \_ SDECIMAL](locale-sdecimal.md)  
+[LOCALE \_ SDURATION](locale-sduration.md)  
+[\_LOCALE-SENG-Konstanten \*](locale-seng-constants.md)  
+[\_LOCALE-SENGLISH-Konstanten \*](locale-senglish-constants.md)  
+[\_GEBIETSSCHEMA-SGROUPING](locale-sgrouping.md)  
+[LOCALE \_ SIETFLANGUAGE](locale-sietflanguage.md)  
+[LOCALE \_ SINTLSYMBOL](locale-sintlsymbol.md)  
+[\_LOCALE-SISO-Konstanten \*](locale-siso-constants.md)  
+[LOCALE \_ SKEYBOARDSTOINSTALL](locale-skeyboardstoinstall.md)  
+[LOCALE \_ SLANGDISPLAYNAME](locale-slangdisplayname.md)  
+[\_GEBIETSSCHEMA-SLANGUAGE](locale-slanguage.md)  
+[LOCALE \_ SLIST](locale-slist.md)  
+[\_ \* LOCALE-SLOCALIZED-Konstanten](locale-slocalized-constants.md)  
+[LOCALE \_ SLONGDATE](locale-slongdate.md)  
+[\_LOCALE-SMON-Konstanten \*](locale-smon-constants.md)  
+[LOCALE \_ SMONTHDAY](locale-smonthday.md)  
+[\_LOCALE-SMONTHNAME-Konstanten \*](locale-smonthname-constants.md)  
+[LOCALE \_ SNAME](locale-sname.md)  
+[\_GEBIETSSCHEMA-SNAN](locale-snan.md)  
+[\_LOCALE-SNATIVE-Konstanten \*](locale-snative-constants.md)  
+[LOCALE \_ SNEGATIVESIGN](locale-snegativesign.md)  
+[LOCALE \_ SNEGINFINITY](locale-sneginfinity.md)  
+[LOCALE \_ SOPENTYPELANGUAGETAG](locale-sopentypelanguagetag.md)  
+[LOCALE \_ SORTNAME](locale-sortname.md)  
+[LOCALE \_ SPARENT](locale-sparent.md)  
+[LOCALE \_ SPECIFICDATA](locale-specificdata.md)  
+[LOCALE \_ SPERCENT](locale-spercent.md)  
+[\_GEBIETSSCHEMA(EN) (GEBIETSSCHEMA)](locale-spermille.md)  
+[LOCALE \_ SPM](locale-s2359.md)  
+[LOCALE \_ SPOSINFINITY](locale-sposinfinity.md)  
+[LOCALE \_ SPOSITIVESIGN](locale-spositivesign.md)  
+[\_GEBIETSSCHEMA-SSCRIPTS](locale-sscripts.md)  
+[LOCALE \_ SSHORTDATE](locale-sshortdate.md)  
+[LOCALE \_ SSHORTESTAM](locale-sshortestam.md)  
+[LOCALE \_ SSHORTESTDAYNAME-Konstanten \*](locale-sshortestdayname-constants.md)  
+[LOCALE \_ SSHORTESTPM](locale-sshortestpm.md)  
+[LOCALE \_ SSHORTTIME](locale-sshorttime.md)  
+[\_LOCALE-SSORT-Konstanten \*](locale-ssort-constants.md)  
+[LOCALE \_ STHOUSAND](locale-sthousand.md)  
+[\_LOCALE-STIME-Konstanten \*](locale-stime-constants.md)  
+[LOCALE \_ SUPPLEMENTAL](locale-supplemental.md)  
+[LOCALE \_ SYEARMONTH](locale-syearmonth.md)  
+[\_LOCALE-SYSTEMSTANDARD \_](locale-system-default.md)  
+[\_GEBIETSSCHEMA: VERWENDEN VON CP \_ \_ ACP](locale-use-cp-acp.md)  
+[\_ \_ GEBIETSSCHEMABENUTZERSTANDARD](locale-user-default.md)  
+[\_GEBIETSSCHEMAFENSTER](locale-windows.md)  
 </dl>
 
 ## <a name="combining-constants"></a>Kombinieren von Konstanten
 
-Die folgenden Konstanten können mithilfe des binären OR-Operators mit anderen Konstanten kombiniert werden. Die übrigen Konstanten schließen sich gegenseitig aus und können daher nicht miteinander kombiniert werden.
+Die folgenden Konstanten können mithilfe des binären OR-Operators mit anderen Konstanten kombiniert werden. Die restlichen Konstanten schließen sich gegenseitig aus und können daher nicht miteinander kombiniert werden.
 
--   Gebiets Schema \_ nouseroverride
--   Gebiets Schema- \_ Rückgabe \_ Nummer
--   Gebiets Schema \_ verwenden \_ CP \_ ACP
+-   LOCALE \_ NOUSEROVERRIDE
+-   LOCALE \_ RETURN \_ NUMBER
+-   \_GEBIETSSCHEMA: VERWENDEN VON CP \_ \_ ACP
 
-## <a name="default-and-neutral-locale-identifier-constants"></a>Standardmäßige und neutrale Gebiets Schema Bezeichner-Konstanten
+## <a name="default-and-neutral-locale-identifier-constants"></a>Standardkonstanten und Neutrale Gebietsschemabezeichnerkonstanten
 
-Die folgenden Konstanten stellen standardmäßige und neutrale Gebiets Schema Bezeichner dar.
+Die folgenden Konstanten stellen Standard- und neutrale Gebietsschemabezeichner dar.
 
--   \_benutzerdefinierter locale- \_ Standard
--   benutzerdefinierte Benutzeroberflächen- \_ \_ \_ Standardeinstellung
--   Gebiets Schema \_ Benutzer \_ definiert nicht angegeben
--   Gebiets Schema \_ invariant
--   Gebiets Schema \_ neutral
--   Standard für Gebiets Schema \_ System \_
--   \_Standardbenutzer Name für locale \_
+-   LOCALE \_ CUSTOM \_ DEFAULT
+-   LOCALE \_ CUSTOM \_ UI \_ DEFAULT
+-   LOCALE \_ CUSTOM \_ UNSPECIFIED
+-   GEBIETSSCHEMA \_ INVARIANT
+-   \_GEBIETSSCHEMANEUTRAL
+-   \_LOCALE-SYSTEMSTANDARD \_
+-   \_ \_ GEBIETSSCHEMABENUTZERSTANDARD
 
-## <a name="locale-name-constants"></a>Gebiets Schema Namen Konstanten
+## <a name="locale-name-constants"></a>Gebietsschema-Namenskonstanten
 
-Die folgenden Konstanten werden verwendet, um einen Gebiets Schema [Namen](locale-names.md)anzugeben. Sie werden von Funktionen wie z. b. [**getlocaleinifoex**](/windows/desktop/api/Winnls/nf-winnls-getlocaleinfoex)verwendet.
+Die folgenden Konstanten werden verwendet, um einen [Gebietsschemanamen](locale-names.md)anzugeben. Sie werden von Funktionen wie [**GetLocaleInfoEx**](/windows/desktop/api/Winnls/nf-winnls-getlocaleinfoex)verwendet.
 
--   Gebiets Schema \_ Name \_ invariant
--   Standardwert des Gebiets Schema \_ namens \_ Systems \_
--   \_Standard Name \_ des Gebiets Schemas \_
+-   LOCALE \_ NAME \_ INVARIANT
+-   LOCALE \_ NAME \_ SYSTEM \_ DEFAULT
+-   LOCALE \_ NAME \_ USER \_ DEFAULT
 
-## <a name="locale-definition-constants"></a>Gebiets Schema-Definitions Konstanten
+## <a name="locale-definition-constants"></a>Gebietsschemadefinitionskonstanten
 
-Die folgenden Konstanten definieren das Gebiets Schema für NLS-Funktionen, wie z. b. [**enumsystemlocalesex**](/windows/desktop/api/Winnls/nf-winnls-enumsystemlocalesex) und [**enumlocalesprocex**](/windows/win32/api/winnls/nc-winnls-locale_enumprocex).
+Die folgenden Konstanten definieren das Gebietsschema für NLS-Funktionen wie [**EnumSystemLocalesEx**](/windows/desktop/api/Winnls/nf-winnls-enumsystemlocalesex) und [**EnumLocalesProcEx.**](/windows/win32/api/winnls/nc-winnls-locale_enumprocex)
 
--   LOCALE \_ all
--   Gebiets Schema Alternative Sortierungen \_ \_
--   Gebiets Schema \_ Ersetzung
--   zusätzliches Gebiets Schema \_
--   Gebiets Schema \_ Fenster
+-   LOCALE \_ ALL
+-   \_GEBIETSSCHEMA ALTERNATIVE \_ SORTIERUNGEN
+-   \_GEBIETSSCHEMAAUSTAUSCH
+-   LOCALE \_ SUPPLEMENTAL
+-   \_GEBIETSSCHEMAFENSTER
 
-## <a name="constants-used-in-the-lctype-parameter-of-getlocaleinfo-getlocaleinfoex-and-setlocaleinfo"></a>Konstanten, die im LCTYPE-Parameter von GetLocaleInfo, GetLocaleInfoEx und SetLocaleInfo verwendet werden
+## <a name="constants-used-in-the-lctype-parameter-of-getlocaleinfo-getlocaleinfoex-and-setlocaleinfo"></a>Im LCType-Parameter von GetLocaleInfo, GetLocaleInfoEx und SetLocaleInfo verwendete Konstanten
 
-In diesem Abschnitt werden die Gebiets Schema Informations Konstanten aufgelistet, die von der Anwendung für den *LCTYPE* -Parameter von [**GetLocaleInfo**](/windows/desktop/api/Winnls/nf-winnls-getlocaleinfoa) (Windows Me/98, Windows NT 4,0), [**GetLocaleInfoEx**](/windows/desktop/api/Winnls/nf-winnls-getlocaleinfoex) (Windows Vista) und [**SetLocaleInfo**](/windows/desktop/api/Winnls/nf-winnls-setlocaleinfoa)verwendet werden können. Die Gebiets Schema Informationen werden entweder als Zeichen folgen (Standard) oder als ganze Zahlen übermittelt. Ein ganzzahliger Wert wird angegeben, indem der binäre or-Operator verwendet wird, um eine bestimmte Konstante mit einer kombinierten Konstante zu kombinieren. Siehe [Kombinieren von Konstanten](#combining-constants).
+In diesem Abschnitt werden die Gebietsschemainformationskonstanten aufgelistet, die die Anwendung für den *LCType-Parameter* von [**GetLocaleInfo**](/windows/desktop/api/Winnls/nf-winnls-getlocaleinfoa) (Windows Me/98, Windows NT 4.0), [**GetLocaleInfoEx**](/windows/desktop/api/Winnls/nf-winnls-getlocaleinfoex) (Windows Vista) und [**SetLocaleInfo**](/windows/desktop/api/Winnls/nf-winnls-setlocaleinfoa)verwenden kann. Die Gebietsschemainformationen werden entweder als Zeichenfolgen (Standard) oder als ganze Zahlen übergeben. Ein ganzzahliger Wert wird mithilfe des binären OR-Operators angegeben, um eine bestimmte Konstante mit einer kombinierenden Konstante zu kombinieren. Weitere Informationen finden Sie unter [Kombinieren von Konstanten.](#combining-constants)
 
  
 
-**Nur von getlocaleingefo und getlocaleingefoex verwendete Konstanten**
+**Nur von GetLocaleInfo und GetLocaleInfoEx verwendete Konstanten**
 
-[**GetLocaleInfo**](/windows/desktop/api/Winnls/nf-winnls-getlocaleinfoa) und [**GetLocaleInfoEx**](/windows/desktop/api/Winnls/nf-winnls-getlocaleinfoex) verwenden die folgenden Konstanten, um bestimmte Teile der Gebiets Schema Informationen abzurufen, die von [**SetLocaleInfo**](/windows/desktop/api/Winnls/nf-winnls-setlocaleinfoa) nicht festgelegt werden können. Diese Konstanten schließen sich gegenseitig und die Konstanten aus, die von [**SetLocaleInfo**](/windows/desktop/api/Winnls/nf-winnls-setlocaleinfoa) und [**GetLocaleInfo**](/windows/desktop/api/Winnls/nf-winnls-getlocaleinfoa) / [**GetLocaleInfoEx**](/windows/desktop/api/Winnls/nf-winnls-getlocaleinfoex)verwendet werden. Allerdings können Sie mithilfe des binären OR-Operators mit den kombinierten Konstanten kombiniert werden. Siehe [Kombinieren von Konstanten](#combining-constants).
+[**GetLocaleInfo**](/windows/desktop/api/Winnls/nf-winnls-getlocaleinfoa) und [**GetLocaleInfoEx**](/windows/desktop/api/Winnls/nf-winnls-getlocaleinfoex) verwenden die folgenden Konstanten, um bestimmte Gebietsschemainformationen abzurufen, die [**Von SetLocaleInfo**](/windows/desktop/api/Winnls/nf-winnls-setlocaleinfoa) nicht festgelegt werden können. Diese Konstanten schließen sich gegenseitig und von den Konstanten aus, die sowohl von [**SetLocaleInfo**](/windows/desktop/api/Winnls/nf-winnls-setlocaleinfoa) als auch von [**GetLocaleInfo**](/windows/desktop/api/Winnls/nf-winnls-getlocaleinfoa) / [**GetLocaleInfoEx**](/windows/desktop/api/Winnls/nf-winnls-getlocaleinfoex)verwendet werden. Sie können jedoch mithilfe des binären OR-Operators mit den kombinierenden Konstanten kombiniert werden. Weitere Informationen finden Sie unter [Kombinieren von Konstanten.](#combining-constants)
 
--   Gebiets Schema \_ fontSignature
--   Gebiets Schema- \_ ijahrhundert
--   Gebiets Schema- \_ iCountry
--   Gebiets Schema \_ iconstructedlocale
--   Gebiets Schema- \_ IDATE
--   Gebiets Schema \_ idaylzero
--   Gebiets Schema \_ idefaultansicodepage
--   Gebiets Schema \_ idefehlercodepage
--   Gebiets Schema \_ idefehlerland
--   Gebiets \_ Schema idefaultebcdicodepage
--   Gebiets Schema \_ idefehlersprache
--   Gebiets Schema \_ idefehlermaccodepage
--   LOCALE \_ idialingcode
--   Gebiets Schema- \_ igeoid
--   Gebiets Schema \_ iintlcurrdigits
--   Gebiets Schema- \_ iLanguage
--   Gebiets Schema- \_ ildate
--   Gebiets Schema \_ imonlzero
--   Gebiets \_ Schema inegativeprozent
--   Gebiets Schema \_ inegsepbyspace
--   Gebiets Schema \_ inegsignposn
--   Gebiets Schema \_ inegsymvor
--   LOCALE \_ ioptionalcalendar
--   Gebiets Schema \_ ipositiveprozent
--   Gebiets Schema \_ ipossepbyspace
--   LOCALE \_ ipossignposn
--   Gebiets Schema \_ ipossymprees
--   Gebiets Schema \_ itimemarkposn
--   Gebiets Schema- \_ itlzero
--   Gebiets Schema " \_ sabbrevctryname"
--   LOCALE \_ SABBREVDAYNAME1
--   LOCALE \_ SABBREVDAYNAME2
--   LOCALE \_ SABBREVDAYNAME3
--   LOCALE \_ SABBREVDAYNAME4
--   LOCALE \_ SABBREVDAYNAME5
--   LOCALE \_ SABBREVDAYNAME6
--   LOCALE \_ SABBREVDAYNAME7
--   Gebiets Schema " \_ sabbrevlangname"
--   LOCALE \_ SABBREVMONTHNAME1
--   LOCALE \_ SABBREVMONTHNAME2
--   LOCALE \_ SABBREVMONTHNAME3
--   LOCALE \_ SABBREVMONTHNAME4
--   LOCALE \_ SABBREVMONTHNAME5
--   LOCALE \_ SABBREVMONTHNAME6
--   LOCALE \_ SABBREVMONTHNAME7
--   LOCALE \_ SABBREVMONTHNAME8
--   LOCALE \_ SABBREVMONTHNAME9
--   LOCALE \_ SABBREVMONTHNAME10
--   LOCALE \_ SABBREVMONTHNAME11
--   LOCALE \_ SABBREVMONTHNAME12
--   LOCALE \_ SABBREVMONTHNAME13
--   LOCALE \_ sconsolefallbackname
+-   \_GEBIETSSCHEMASCHRIFTARTENSIGNATUR
+-   LOCALE \_ ICENTURY
+-   LOCALE \_ ICOUNTRY
+-   \_GEBIETSSCHEMASYMBOLSTRUCTEDLOCALE
+-   LOCALE \_ IDATE
+-   LOCALE \_ IDAYLZERO
+-   LOCALE \_ IDEFAULTANSICODEPAGE
+-   LOCALE \_ IDEFAULTCODEPAGE
+-   LOCALE \_ IDEFAULTCOUNTRY
+-   LOCALE \_ IDEFAULTEBCDICCODEPAGE
+-   LOCALE \_ IDEFAULTLANGUAGE
+-   LOCALE \_ IDEFAULTMACCODEPAGE
+-   LOCALE \_ IDIALINGCODE
+-   LOCALE \_ IGEOID
+-   LOCALE \_ IINTLCURRDIGITS
+-   \_GEBIETSSCHEMA-ILANGUAGE
+-   LOCALE \_ ILDATE
+-   GEBIETSSCHEMA \_ IMONLZERO
+-   GEBIETSSCHEMA \_ INEGATIVEPERCENT
+-   GEBIETSSCHEMA \_ INEGSEPBYSPACE
+-   LOCALE \_ INEGSIGNPOSN
+-   GEBIETSSCHEMA \_ INEGSYMPRECEDES
+-   LOCALE \_ IOPTIONALCALENDAR
+-   LOCALE \_ IPOSITIVEPERCENT
+-   LOCALE \_ IPOSSEPBYSPACE
+-   LOCALE \_ IPOSSIGNPOSN
+-   LOCALE \_ IPOSSYMPRECEDES
+-   LOCALE \_ ITIMEMARKPOSN
+-   GEBIETSSCHEMA \_ ITLZERO
+-   \_LOCALEBELBREVCTRYNAME
+-   LOCALE \_ QUADBREVDAYNAME1
+-   LOCALE \_ QUADBREVDAYNAME2
+-   LOCALE \_ QUADBREVDAYNAME3
+-   LOCALE \_ QUADBREVDAYNAME4
+-   LOCALE \_ KALIBREVDAYNAME5
+-   LOCALE \_ QUADBREVDAYNAME6
+-   LOCALE \_ QUADBREVDAYNAME7
+-   LOCALE \_ QUADBREVLANGNAME
+-   \_LOCALEBELBREVMONTHNAME1
+-   LOCALE \_ QUADBREVMONTHNAME2
+-   LOCALE \_ KALIBREVMONTHNAME3
+-   LOCALE \_ KALIBREVMONTHNAME4
+-   LOCALE \_ QUADBREVMONTHNAME5
+-   LOCALE \_ QUADBREVMONTHNAME6
+-   LOCALE \_ KALIBREVMONTHNAME7
+-   LOCALE \_ QUADBREVMONTHNAME8
+-   LOCALE \_ KALIBREVMONTHNAME9
+-   LOCALE \_ KALIBREVMONTHNAME10
+-   \_GEBIETSSCHEMA: KALIBREVMONTHNAME11
+-   LOCALE \_ QUADBREVMONTHNAME12
+-   LOCALE \_ QUADBREVMONTHNAME13
+-   LOCALE \_ SCONSOLEFALLBACKNAME
 -   LOCALE \_ SDAYNAME1
 -   LOCALE \_ SDAYNAME2
 -   LOCALE \_ SDAYNAME3
@@ -230,18 +230,18 @@ In diesem Abschnitt werden die Gebiets Schema Informations Konstanten aufgeliste
 -   LOCALE \_ SDAYNAME5
 -   LOCALE \_ SDAYNAME6
 -   LOCALE \_ SDAYNAME7
--   LOCALE \_ sduration
--   LOCALE \_ sengcurrname
--   LOCALE \_ senglishcountryname
--   LOCALE \_ senglishdisplayname
--   LOCALE \_ senglishlanguagename
--   LOCALE- \_ sintlsymbol
--   LOCALE \_ sietf-Sprache
+-   LOCALE \_ SDURATION
+-   LOCALE \_ SENGCURRNAME
+-   LOCALE \_ SENGLISHCOUNTRYNAME
+-   LOCALE \_ SENGLISHDISPLAYNAME
+-   LOCALE \_ SENGLISHLANGUAGENAME
+-   LOCALE \_ SINTLSYMBOL
+-   LOCALE \_ SIETFLANGUAGE
 -   LOCALE \_ SISO3166CTRYNAME
 -   LOCALE \_ SISO3166CTRYNAME2
 -   LOCALE \_ SISO639LANGNAME
 -   LOCALE \_ SISO639LANGNAME2
--   LOCALE \_ skeyboardstoinstall
+-   LOCALE \_ SKEYBOARDSTOINSTALL
 -   LOCALE \_ SMONTHNAME1
 -   LOCALE \_ SMONTHNAME2
 -   LOCALE \_ SMONTHNAME3
@@ -255,18 +255,18 @@ In diesem Abschnitt werden die Gebiets Schema Informations Konstanten aufgeliste
 -   LOCALE \_ SMONTHNAME11
 -   LOCALE \_ SMONTHNAME12
 -   LOCALE \_ SMONTHNAME13
--   Name des Gebiets Schemas \_
--   Gebiets Schema- \_ Snan
--   Gebiets \_ Schema snativecountryname
--   LOCALE \_ snativecurrname
--   LOCALE \_ snativedisplayname
--   LOCALE \_ snativelanguagename
--   LOCALE- \_ spoginfinity
--   LOCALE- \_ sparent
--   Gebiets Schema- \_ spercent
--   Gebiets Schema \_ sposinfinity
--   Gebiets Schema- \_ sscripts
--   LOCALE \_ sshortestam
+-   LOCALE \_ SNAME
+-   \_GEBIETSSCHEMA-SNAN
+-   LOCALE \_ SNATIVECOUNTRYNAME
+-   LOCALE \_ SNATIVECURRNAME
+-   LOCALE \_ SNATIVEDISPLAYNAME
+-   LOCALE \_ SNATIVELANGUAGENAME
+-   LOCALE \_ SNEGINFINITY
+-   LOCALE \_ SPARENT
+-   LOCALE \_ SPERCENT
+-   LOCALE \_ SPOSINFINITY
+-   \_GEBIETSSCHEMA-SSCRIPTS
+-   LOCALE \_ SSHORTESTAM
 -   LOCALE \_ SSHORTESTDAYNAME1
 -   LOCALE \_ SSHORTESTDAYNAME2
 -   LOCALE \_ SSHORTESTDAYNAME3
@@ -274,65 +274,65 @@ In diesem Abschnitt werden die Gebiets Schema Informations Konstanten aufgeliste
 -   LOCALE \_ SSHORTESTDAYNAME5
 -   LOCALE \_ SSHORTESTDAYNAME6
 -   LOCALE \_ SSHORTESTDAYNAME7
--   \_Gebiets Schema sshortestpm
--   LOCALE \_ ssortname
+-   LOCALE \_ SSHORTESTPM
+-   LOCALE \_ SSORTNAME
 
  
 
-**Konstanten, die von "setlocaleingefo" und "getlocaleingefo/getlocaleingefoex" verwendet werden**
+**Von SetLocaleInfo und GetLocaleInfo/GetLocaleInfoEx verwendete Konstanten**
 
-[**SetLocaleInfo**](/windows/desktop/api/Winnls/nf-winnls-setlocaleinfoa) verwendet die folgenden Konstanten, um bestimmte Teile der Gebiets Schema Informationen des Benutzers festzulegen, und [**GetLocaleInfo**](/windows/desktop/api/Winnls/nf-winnls-getlocaleinfoa) oder [**GetLocaleInfoEx**](/windows/desktop/api/Winnls/nf-winnls-getlocaleinfoex) verwendet dieselben Konstanten, um diese Informationen abzurufen. Diese Konstanten schließen sich gegenseitig und von den Konstanten aus, die nur von [**GetLocaleInfo**](/windows/desktop/api/Winnls/nf-winnls-getlocaleinfoa) oder [**GetLocaleInfoEx**](/windows/desktop/api/Winnls/nf-winnls-getlocaleinfoex) verwendet werden. Allerdings können Sie mithilfe des binären OR-Operators mit den kombinierten Konstanten kombiniert werden. Siehe [Kombinieren von Konstanten](#combining-constants).
+[**SetLocaleInfo**](/windows/desktop/api/Winnls/nf-winnls-setlocaleinfoa) verwendet die folgenden Konstanten, um bestimmte Teile des Benutzerschemas festzulegen, und [**GetLocaleInfo**](/windows/desktop/api/Winnls/nf-winnls-getlocaleinfoa) oder [**GetLocaleInfoEx**](/windows/desktop/api/Winnls/nf-winnls-getlocaleinfoex) verwendet diese Konstanten, um diese Informationen abzurufen. Diese Konstanten schließen sich gegenseitig und von den Konstanten aus, die nur von [**GetLocaleInfo**](/windows/desktop/api/Winnls/nf-winnls-getlocaleinfoa) oder [**GetLocaleInfoEx**](/windows/desktop/api/Winnls/nf-winnls-getlocaleinfoex) verwendet werden. Sie können jedoch mithilfe des binären OR-Operators mit den kombinierenden Konstanten kombiniert werden. Weitere Informationen finden Sie unter [Kombinieren von Konstanten.](#combining-constants)
 
--   Gebiets Schema \_ icalendartype
--   Gebiets Schema- \_ icurrdigits
--   Gebiets Schema- \_ icurrency
--   Gebiets Schema- \_ idigits
--   LOCALE \_ idigitsubstitution
--   Gebiets Schema \_ ifirstdayosweek
--   Gebiets Schema \_ ifirstweekosyear
--   Gebiets Schema \_ ilnull
--   Gebiets Schema- \_ imeasure
--   Gebiets Schema \_ inegcurrr
--   Gebiets Schema- \_ inegnumber
--   LOCALE \_ ipapersize
--   Gebiets Schema \_ ileslayout
--   Gebiets Schema- \_ Itime
--   LOCALE \_ S1159
--   LOCALE \_ S2359
--   Gebiets Schema \_ Sam
--   Gebiets Schema- \_ scurrency
--   LOCALE \_ sdate
--   sdecimal (locale) \_
--   Gebiets Schema- \_ sgruppierung
--   LOCALE \_ slist
--   \_Gebiets Schema slongdate
--   \_Gebiets Schema smondecimalsep
--   Gebiets Schema- \_ smongruppierung
--   \_Gebiets Schema smontausendandsep
--   Gebiets \_ Schema-snativedigits
--   LOCALE \_ snegativesign
--   Gebiets Schema- \_ SPM
--   Gebiets Schema \_ spositivesign
--   LOCALE \_ sshortdate
--   LOCALE \_ sshorttime
--   \_Gebiets Schema stausendstel
--   Gebiets Schema- \_ stime
--   LOCALE \_ stimeformat
--   \_Gebiets Schema syearmonth
+-   LOCALE \_ ICALENDARTYPE
+-   LOCALE \_ ICURRDIGITS
+-   \_GEBIETSSCHEMA-ICURRENCY
+-   LOCALE \_ IDIGITS
+-   LOCALE \_ IDIGITSUBS CYBERSECURITY
+-   LOCALE \_ IFIRSTDAYOFWEEK
+-   LOCALE \_ IFIRSTWEEKOFYEAR
+-   LOCALE \_ ILZERO
+-   GEBIETSSCHEMA \_ IMEASURE
+-   \_GEBIETSSCHEMAINEGCURR
+-   LOCALE \_ INEGNUMBER
+-   LOCALE \_ IPAPERSIZE
+-   LOCALE \_ IREADINGLAYOUT
+-   LOCALE \_ ITIME
+-   GEBIETSSCHEMA \_ S1159
+-   GEBIETSSCHEMA \_ S2359
+-   \_GEBIETSSCHEMA-SAM
+-   \_GEBIETSSCHEMA-SCURRENCY
+-   LOCALE \_ SDATE
+-   LOCALE \_ SDECIMAL
+-   \_GEBIETSSCHEMA-SGROUPING
+-   LOCALE \_ SLIST
+-   LOCALE \_ SLONGDATE
+-   LOCALE \_ SMONDECIMALSEP
+-   LOCALE \_ SMONGROUPING
+-   GEBIETSSCHEMA \_ SMONTHOUSANDSEP
+-   LOCALE \_ SNATIVEDIGITS
+-   LOCALE \_ SNEGATIVESIGN
+-   LOCALE \_ SPM
+-   LOCALE \_ SPOSITIVESIGN
+-   LOCALE \_ SSHORTDATE
+-   LOCALE \_ SSHORTTIME
+-   LOCALE \_ STHOUSAND
+-   LOCALE \_ STIME
+-   LOCALE \_ STIMEFORMAT
+-   LOCALE \_ SYEARMONTH
 
-## <a name="closely-related-locale-information-constants"></a>Eng verwandte Gebiets Schema Informations Konstanten
+## <a name="closely-related-locale-information-constants"></a>Eng verwandte Gebietsschemainformationskonstanten
 
-Viele der zuvor aufgeführten Gebiets Schema Informations Konstanten sind eng miteinander verknüpft, sodass sich das Ändern eines solchen Werts auf den Wert der anderen auswirkt. In der folgenden Tabelle werden die Beziehungen zwischen diesen Konstanten aufgeführt.
+Viele der zuvor aufgeführten Gebietsschemainformationskonstanten sind eng miteinander verknüpft, sodass sich eine Änderung auf den Wert der anderen auswirkt. Die folgende Tabelle zeigt die Beziehungen zwischen diesen Konstanten.
 
 
 
 | Wert               | Betroffene Konstanten                                                                                                 |
 |---------------------|--------------------------------------------------------------------------------------------------------------------|
-| Gebiets Schema- \_ icurrency   | locale \_ ipossepbyspace, locale \_ ipossympreists                                                                    |
-| Gebiets Schema \_ inegcurrr    | locale \_ spositivesign, locale \_ inegsepbyspace, locale \_ inegsympreum, locale \_ inegsignposn, locale \_ ipossignposn |
-| LOCALE \_ sshortdate  | locale \_ sdate, locale \_ IDATE, locale \_ ijahr, locale \_ idaylzero, locale \_ imonlzero                               |
-| \_Gebiets Schema slongdate   | Gebiets Schema- \_ ildate                                                                                                     |
-| LOCALE \_ stimeformat | locale \_ stime, locale \_ Itime, locale \_ itlzero, locale \_ itimemarkposn                                               |
+| LOCALE \_ ICURRENCY   | LOCALE \_ IPOSSEPBYSPACE, LOCALE \_ IPOSSYMPRECEDES                                                                    |
+| LOCALE \_ INEGCURR    | LOCALE \_ SPOSITIVESIGN, LOCALE \_ INEGSEPBYSPACE, LOCALE \_ INEGSYMPRECEDES, LOCALE \_ INEGSIGNPOSN, LOCALE \_ IPOSSIGNPOSN |
+| LOCALE \_ SSHORTDATE  | LOCALE \_ SDATE, LOCALE \_ IDATE, LOCALE \_ ICENTURY, LOCALE \_ IDAYLZERO, LOCALE \_ IMONLZERO                               |
+| LOCALE \_ SLONGDATE   | LOCALE \_ ILDATE                                                                                                     |
+| LOCALE \_ STIMEFORMAT | LOCALE \_ STIME, LOCALE \_ ITIME, LOCALE \_ ITLZERO, LOCALE \_ ITIMEMARKPOSN                                               |
 
 
 

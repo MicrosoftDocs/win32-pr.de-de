@@ -1,5 +1,5 @@
 ---
-description: 'IEnumPStoreItems::Clone-Methode: Erstellt einen weiteren Enumerator, der den gleichen Enumerationszustand wie der aktuelle enthält.'
+description: 'IEnumPStoreItems::Clone-Methode: Erstellt einen weiteren Enumerator, der denselben Enumerationszustand wie der aktuelle enthält.'
 ms.assetid: ab9eaf63-54e4-4322-9bb5-227982b15c73
 title: IEnumPStoreItems::Clone-Methode (Pstore.h)
 ms.topic: reference
@@ -13,16 +13,16 @@ api_type:
 - COM
 api_location:
 - Pstorec.dll
-ms.openlocfilehash: 29b618881305296a560dc9102f7571c08236d1bb
-ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
+ms.openlocfilehash: 7337f6d6fde2f778259aa1db933e13f64dcda41e694a40c5880f6015e2740045
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2021
-ms.locfileid: "108089328"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119911690"
 ---
 # <a name="ienumpstoreitemsclone-method"></a>IEnumPStoreItems::Clone-Methode
 
-\[Geschützter Speicher (Pstore) ist für die Verwendung in Windows Server 2003 und Windows XP verfügbar. Sie ist nur für schreibgeschützte Vorgänge in Windows Server 2008 und Windows Vista verfügbar, ist in nachfolgenden Versionen jedoch möglicherweise nicht verfügbar. Pstore verwendet eine ältere Implementierung des Datenschutzes. Entwicklern wird dringend empfohlen, den verstärkten Datenschutz zu nutzen, der von den Funktionen [**CryptProtectData**](/windows/win32/api/dpapi/nf-dpapi-cryptprotectdata) und [**CryptUnprotectData**](/windows/win32/api/dpapi/nf-dpapi-cryptunprotectdata) bereitgestellt wird.\]
+\[Protected Storage (Pstore) ist für die Verwendung in Windows Server 2003 und Windows XP verfügbar. Sie ist nur für schreibgeschützte Vorgänge in Windows Server 2008 und Windows Vista verfügbar, aber in nachfolgenden Versionen möglicherweise nicht verfügbar. Pstore verwendet eine ältere Implementierung des Datenschutzes. Entwicklern wird dringend empfohlen, den stärkeren Datenschutz zu nutzen, der von den [**Funktionen CryptProtectData**](/windows/win32/api/dpapi/nf-dpapi-cryptprotectdata) und [**CryptUnprotectData bereitgestellt**](/windows/win32/api/dpapi/nf-dpapi-cryptunprotectdata) wird.\]
 
 Erstellt einen weiteren Enumerator, der den gleichen Enumerationszustand wie der aktuelle Enumerator enthält.
 
@@ -56,7 +56,7 @@ Der Rückgabewert ist ein **HRESULT-Wert.**
 
 
 
-| Anforderungen | Wert |
+| Anforderung | Wert |
 |-------------------|----------------------------------------------------------------------------------------|
 | Header<br/> | <dl> <dt>Pstore.h</dt> </dl>    |
 | DLL<br/>    | <dl> <dt>Pstorec.dll</dt> </dl> |

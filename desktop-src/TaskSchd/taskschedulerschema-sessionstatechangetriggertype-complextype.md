@@ -1,9 +1,9 @@
 ---
-title: komplexer SessionStateChangeTriggerType-Typ
-description: Definiert die Elemente, die zum Erstellen eines Aufgabentriggers für Konsolenverbindung oder -trennung, Remoteverbindung oder -trennung oder Benachrichtigungen zum Sperren oder Entsperren der Arbeitsstation verwendet werden.
+title: sessionStateChangeTriggerType Complex Type
+description: Definiert die Elemente, die zum Erstellen eines Aufgabentriggers für Konsolenverbinden oder Trennen, Remote verbinden oder Trennen oder Sperren oder Entsperren von Benachrichtigungen für die Arbeitsstation verwendet werden.
 ms.assetid: 0d452476-1e1f-417d-a97a-5f39d80145f2
 keywords:
-- komplexer sessionStateChangeTriggerType-Typ Taskplaner
+- komplexer sessionStateChangeTriggerType-Taskplaner
 topic_type:
 - apiref
 api_name:
@@ -20,9 +20,9 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 08/11/2021
 ms.locfileid: "119990940"
 ---
-# <a name="sessionstatechangetriggertype-complex-type"></a>komplexer SessionStateChangeTriggerType-Typ
+# <a name="sessionstatechangetriggertype-complex-type"></a>sessionStateChangeTriggerType Complex Type
 
-Definiert die Elemente, die zum Erstellen eines Aufgabentriggers für Konsolenverbindung oder -trennung, Remoteverbindung oder -trennung oder Benachrichtigungen zum Sperren oder Entsperren der Arbeitsstation verwendet werden.
+Definiert die Elemente, die zum Erstellen eines Aufgabentriggers für Konsolenverbinden oder Trennen, Remote verbinden oder Trennen oder Sperren oder Entsperren von Benachrichtigungen für die Arbeitsstation verwendet werden.
 
 ``` syntax
 <xs:complexType name="sessionStateChangeTriggerType">
@@ -55,11 +55,11 @@ Definiert die Elemente, die zum Erstellen eines Aufgabentriggers für Konsolenve
 
 
 
-| Element                                                                                      | type                                                                                    | BESCHREIBUNG                                                                                                                                           |
+| Element                                                                                      | type                                                                                    | Beschreibung                                                                                                                                           |
 |----------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------|
-| [**Verzögern**](taskschedulerschema-delay-sessionstatechangetriggertype-element.md)             | duration                                                                                | Gibt einen Wert an, der die Länge der Verzögerung angibt, bevor ein Task gestartet wird, wenn eine Änderung des Terminalserver-Sitzungszustands erkannt wird.<br/> |
-| [**StateChange**](taskschedulerschema-statechange-sessionstatechangetriggertype-element.md) | [**sessionStateChangeType**](taskschedulerschema-sessionstatechangetype-simpletype.md) | Gibt die Art der Terminalserversitzungsänderung an, die einen Taskstart auslösen würde.<br/>                                                     |
-| [**Userid**](taskschedulerschema-userid-sessionstatechangetriggertype-element.md)           | [**nonEmptyString**](taskschedulerschema-nonemptystring-simpletype.md)                 | Gibt den Benutzer für die Terminalserversitzung an. Wenn eine Sitzungszustandsänderung für diesen Benutzer erkannt wird, wird eine Aufgabe gestartet.<br/>              |
+| [**Verzögern**](taskschedulerschema-delay-sessionstatechangetriggertype-element.md)             | duration                                                                                | Gibt einen Wert an, der die Länge der Verzögerung angibt, bevor ein Task gestartet wird, wenn eine Änderung des Sitzungszustands des Terminalservers erkannt wird.<br/> |
+| [**StateChange**](taskschedulerschema-statechange-sessionstatechangetriggertype-element.md) | [**sessionStateChangeType**](taskschedulerschema-sessionstatechangetype-simpletype.md) | Gibt die Art der Terminalserver-Sitzungsänderung an, die einen Taskstart auslösen würde.<br/>                                                     |
+| [**Userid**](taskschedulerschema-userid-sessionstatechangetriggertype-element.md)           | [**nonEmptyString**](taskschedulerschema-nonemptystring-simpletype.md)                 | Gibt den Benutzer für die Terminalserversitzung an. Wenn eine Änderung des Sitzungszustands für diesen Benutzer erkannt wird, wird eine Aufgabe gestartet.<br/>              |
 
 
 
@@ -69,7 +69,7 @@ Definiert die Elemente, die zum Erstellen eines Aufgabentriggers für Konsolenve
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur Vista-Desktop-Apps\]<br/>       |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ Vista-Desktop-Apps\]<br/>       |
 | Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/> |
 
 

@@ -17,7 +17,7 @@ Dieser Abschnitt enthält Referenzinformationen zu den Vergrößerungs-API-Struk
 
 ## <a name="in-this-section"></a>In diesem Abschnitt
 
-| Thema | BESCHREIBUNG |
+| Thema | Beschreibung |
 |:---|:---|
 | [**MAGCOLOREFFECT**](/windows/win32/api/magnification/ns-magnification-magcoloreffect)<br/>  | Beschreibt eine Farbtransformationsmatrix, die ein Bildschirmlupe-Steuerelement verwendet, um einen Farbeffekt auf vergrößerten Bildschirminhalt anzuwenden.<br/> |
 | [***MAGIMAGEHEADER** _](/windows/win32/api/magnification/ns-magnification-magimageheader)<br/> | _*in Windows 7 und höher als veraltet gekennzeichnet**<br/>Beschreibt ein Bildformat. |

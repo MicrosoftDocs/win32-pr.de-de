@@ -1,53 +1,53 @@
 ---
-title: StatusBar-Steuer Elementtyp
-description: Dieses Thema enthält Informationen zur Unterstützung der Microsoft-Benutzeroberflächen Automatisierung für den StatusBar-Steuer Elementtyp.
+title: StatusBar-Steuerelementtyp
+description: Dieses Thema enthält Informationen zur Unterstützung von Microsoft Benutzeroberflächenautomatisierung für den StatusBar-Steuerelementtyp.
 ms.assetid: a28df0a1-95a8-4941-a00d-1f5570589626
 keywords:
-- Benutzeroberflächen Automatisierung, Unterstützung für StatusBar-Steuer Elementtyp
-- Benutzeroberflächenautomatisierungs, StatusBar-Steuer Elementtyp
-- UI-Automatisierung, Struktur für StatusBar-Steuer Elementtyp
-- Benutzeroberflächenautomatisierungs, Eigenschaften für StatusBar-Steuer Elementtyp
-- UI-Automatisierung, Steuerelement Muster für StatusBar-Steuer Elementtyp
-- Benutzeroberflächenautomatisierungs, Ereignisse für StatusBar-Steuer Elementtyp
-- Baumstrukturen, StatusBar-Steuer Elementtyp
-- Eigenschaften, StatusBar-Steuer Elementtyp
-- Steuerelement Muster, StatusBar-Steuer Elementtyp
-- Ereignisse, StatusBar-Steuer Elementtyp
-- Unterstützung für StatusBar-Steuer Elementtyp
+- Benutzeroberflächenautomatisierung,Unterstützung des StatusBar-Steuerelementtyps
+- Benutzeroberflächenautomatisierung,StatusBar-Steuerelementtyp
+- Benutzeroberflächenautomatisierung,Struktur für StatusBar-Steuerelementtyp
+- Benutzeroberflächenautomatisierung,Eigenschaften für den StatusBar-Steuerelementtyp
+- Benutzeroberflächenautomatisierung,Steuerelementmuster für den StatusBar-Steuerelementtyp
+- Benutzeroberflächenautomatisierung,Ereignisse für den StatusBar-Steuerelementtyp
+- Strukturstrukturen, StatusBar-Steuerelementtyp
+- Properties, StatusBar-Steuerelementtyp
+- Steuerelementmuster, StatusBar-Steuerelementtyp
+- Ereignisse, StatusBar-Steuerelementtyp
+- Unterstützung für den StatusBar-Steuerelementtyp
 - StatusBar-Steuerelementtyp
-- Steuerelement Typen, Baumstruktur für StatusBar-Steuer Elementtyp
-- Steuerelement Typen, Steuerelement Muster für StatusBar-Steuer Elementtyp
-- Steuerelement Typen, Unterstützung für StatusBar
-- Steuerelement Typen, StatusBar
+- Steuerelementtypen, Struktur für StatusBar-Steuerelementtyp
+- Steuerelementtypen,Steuerelementmuster für StatusBar-Steuerelementtyp
+- Steuerelementtypen,Unterstützung für StatusBar
+- Steuerelementtypen,StatusBar
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 65ace64d34429a6d381dfdef2d99d82a3693fca2
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: f52f3f04db86a8c8ff0e9cad9a3938a17e996e8210960912c3abc5039468e178
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "104310592"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119614250"
 ---
-# <a name="statusbar-control-type"></a>StatusBar-Steuer Elementtyp
+# <a name="statusbar-control-type"></a>StatusBar-Steuerelementtyp
 
-Dieses Thema enthält Informationen zur Unterstützung der Microsoft-Benutzeroberflächen Automatisierung für den **StatusBar** -Steuer Elementtyp.
+Dieses Thema enthält Informationen zur Unterstützung von Microsoft Benutzeroberflächenautomatisierung für den **StatusBar-Steuerelementtyp.**
 
 Ein StatusBar-Steuerelement zeigt Informationen zu einem Objekt an, das in einem Fenster einer Anwendung angezeigt wird, zur Komponente des Objekts oder Kontextinformationen, die sich auf die Operation dieses Objekts in Ihrer Anwendung beziehen.
 
-In den folgenden Abschnitten werden die erforderliche Benutzeroberflächenautomatisierungs-Struktur, Eigenschaften, Steuerelement Muster und Ereignisse für den Steuer Elementtyp " **StatusBar** " definiert. Die Benutzeroberflächenautomatisierungs-Anforderungen gelten für alle StatusBar-Steuerelemente, bei denen Benutzeroberflächen-Framework/Plattform die Unterstützung der Benutzeroberflächen Automatisierung für Steuerelement Typen
+In den folgenden Abschnitten werden die erforderlichen Benutzeroberflächenautomatisierung Struktur, Eigenschaften, Steuerelementmuster und Ereignisse für den **StatusBar-Steuerelementtyp** definiert. Die Benutzeroberflächenautomatisierung Anforderungen gelten für alle Statusleistensteuerelemente, bei denen das Benutzeroberflächenframework bzw. die Plattform Benutzeroberflächenautomatisierung Unterstützung für Steuerelementtypen und Steuerelementmuster integriert.
 
 Dieses Thema enthält folgende Abschnitte:
 
--   [Typische Baumstruktur](#typical-tree-structure)
+-   [Typische Struktur](#typical-tree-structure)
 -   [Relevante Eigenschaften](#relevant-properties)
--   [Erforderliche Steuerelement Muster](#required-control-patterns)
+-   [Erforderliche Steuerelementmuster](#required-control-patterns)
 -   [Erforderliche Ereignisse](#required-events)
 -   [Anmerkungen](#remarks)
 -   [Zugehörige Themen](#related-topics)
 
-## <a name="typical-tree-structure"></a>Typische Baumstruktur
+## <a name="typical-tree-structure"></a>Typische Struktur
 
-In der folgenden Tabelle wird eine typische Steuerelement-und Inhaltsansicht der Benutzeroberflächenautomatisierungs-Struktur für Status leisten-Steuerelemente sowie die möglichen Inhalte der Ansichten beschrieben. Weitere Informationen zur Benutzeroberflächenautomatisierungs-Struktur finden Sie unter [UI Automation Tree Overview](uiauto-treeoverview.md).
+Die folgende Tabelle zeigt eine typische Steuerelement- und Inhaltsansicht der Benutzeroberflächenautomatisierung Struktur, die sich auf Statusleistensteuerelemente bezieht, und beschreibt, was in jeder Ansicht enthalten sein kann. Weitere Informationen zur Benutzeroberflächenautomatisierung-Struktur finden Sie unter [Benutzeroberflächenautomatisierung Tree Overview](uiauto-treeoverview.md).
 
 
 
@@ -88,74 +88,74 @@ In der folgenden Tabelle wird eine typische Steuerelement-und Inhaltsansicht der
 
 
 
- 
+ 
 
 ## <a name="relevant-properties"></a>Relevante Eigenschaften
 
-In der folgenden Tabelle sind die Benutzeroberflächenautomatisierungs-Eigenschaften aufgelistet, deren Wert oder Definition für die Status leisten-Steuerelemente besonders relevant ist. Weitere Informationen zu Eigenschaften von Benutzeroberflächen Automatisierung finden Sie unter [Abrufen von Eigenschaften aus Benutzeroberflächenautomatisierungs-Elementen](uiauto-propertiesforclients.md).
+In der folgenden Tabelle sind die Benutzeroberflächenautomatisierung Eigenschaften aufgeführt, deren Wert oder Definition für die Statusleistensteuerelemente besonders relevant ist. Weitere Informationen zu Benutzeroberflächenautomatisierung Eigenschaften finden Sie unter [Abrufen von Eigenschaften aus Benutzeroberflächenautomatisierung Elements](uiauto-propertiesforclients.md).
 
 
 
-| Benutzeroberflächenautomatisierungs-Eigenschaft                                                                                              | Wert         | Notizen                                                                                                                                                                                                               |
+| Benutzeroberflächenautomatisierungs-Eigenschaft                                                                                              | Wert         | Hinweise                                                                                                                                                                                                               |
 |---------------------------------------------------------------------------------------------------------------------|---------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| [**UIA \_ automationidpropertyid**](uiauto-automation-element-propids.md)                 | Siehe Hinweise.    | Der Wert dieser Eigenschaft muss für alle Peer Elemente in der unformatierten Ansicht der Benutzeroberflächenautomatisierungs-Struktur eindeutig sein.                                                                                                        |
-| [**UIA \_ boundingrechglepropertyid**](uiauto-automation-element-propids.md)       | Siehe Hinweise.    | Das umschließende Rechteck einer Statusleiste muss alle darin enthaltenen Steuerelemente umfassen.                                                                                                                      |
-| [**UIA \_ clickablepointpropertyid**](uiauto-automation-element-propids.md)             | Siehe Hinweise.    | Unterstützt, wenn es ein umschließendes Rechteck gibt. Wenn Bereiche innerhalb des umgebenden Rechtecks vorhanden sind, die nicht klickbar sind, und das-Element spezialisierte Treffer Tests durchführt, überschreiben Sie diese, und stellen Sie einen klickbaren Punkt bereit. |
-| [**UIA \_ controltypepropertyid**](uiauto-automation-element-propids.md)                   | **StatusBar** |                                                                                                                                                                                                                     |
-| [**UIA \_ iscontentelementpropertyid**](uiauto-automation-element-propids.md)         | TRUE          | Das StatusBar-Steuerelement ist immer in der Inhaltsansicht der Benutzeroberflächenautomatisierungs-Struktur enthalten.                                                                                                                            |
-| [**UIA \_ iscontrolelementpropertyid**](uiauto-automation-element-propids.md)         | TRUE          | Das StatusBar-Steuerelement ist immer in der Steuerelement Ansicht der Benutzeroberflächenautomatisierungs-Struktur enthalten.                                                                                                                            |
-| [**UIA \_ iskeyboardfocus ablepropertyid**](uiauto-automation-element-propids.md)   | Depends (Abhängig)       | Wenn das Steuerelement den Tastaturfokus erhalten kann, muss es diese Eigenschaft unterstützen.                                                                                                                                           |
-| [**UIA \_ isoffscreenpropertyid**](uiauto-automation-element-propids.md)                   | Depends (Abhängig)       | Wenn ein StatusBar-Steuerelement momentan nicht sichtbar ist, wird für diese Eigenschaft der Wert true zurückgegeben.                                                                                                                            |
-| [**UIA \_ labeledbypropertyid**](uiauto-automation-element-propids.md)                       | NULL          | Das StatusBar-Steuerelement verfügt in der Regel nicht über eine Bezeichnung.                                                                                                                                                             |
-| [**UIA \_ localizedcontroltypepropertyid**](uiauto-automation-element-propids.md) | Siehe Hinweise.    | Lokalisierte Zeichenfolge für den Steuer Elementtyp " **StatusBar** ". Der Standardwert ist "Statusleiste" für en-US oder Englisch (USA).                                                                           |
-| [**UIA- \_ namepropertyid**](uiauto-automation-element-propids.md)                                 | Siehe Hinweise.    | Das StatusBar-Steuerelement muss nur dann einen Namen haben, wenn in einer Anwendung mehrere Statusleisten verwendet werden. Unterscheiden Sie in diesem Fall die einzelnen Balken mit Namen wie "Internet Status" oder "Anwendungs Status".                    |
-| [**UIA- \_ orientationpropertyid**](uiauto-automation-element-propids.md)                   | Depends (Abhängig)       | Ein Wert, der die Ausrichtung des Steuer Elements angibt: horizontal oder vertikal.                                                                                                                                               |
+| [**UIA \_ AutomationIdPropertyId**](uiauto-automation-element-propids.md)                 | Siehe Hinweise.    | Der Wert dieser Eigenschaft muss für alle Peerelemente in der Rohansicht der Benutzeroberflächenautomatisierung-Struktur eindeutig sein.                                                                                                        |
+| [**UIA \_ BoundingRectanglePropertyId**](uiauto-automation-element-propids.md)       | Siehe Hinweise.    | Das umschließende Rechteck einer Statusleiste muss alle darin enthaltenen Steuerelemente umfassen.                                                                                                                      |
+| [**UIA \_ ClickablePointPropertyId**](uiauto-automation-element-propids.md)             | Siehe Hinweise.    | Unterstützt, wenn es ein umschließendes Rechteck gibt. Wenn innerhalb des umschließenden Rechtecks Bereiche vorhanden sind, die nicht angeklickt werden können, und das Element spezielle Treffertests durchführt, überschreiben Sie dies, und geben Sie einen klickbaren Punkt an. |
+| [**UIA \_ ControlTypePropertyId**](uiauto-automation-element-propids.md)                   | **StatusBar** |                                                                                                                                                                                                                     |
+| [**UIA \_ IsContentElementPropertyId**](uiauto-automation-element-propids.md)         | TRUE          | Das Statusleisten-Steuerelement ist immer in der Inhaltsansicht der Benutzeroberflächenautomatisierung-Struktur enthalten.                                                                                                                            |
+| [**UIA \_ IsControlElementPropertyId**](uiauto-automation-element-propids.md)         | TRUE          | Das Statusleisten-Steuerelement ist immer in der Steuerelementansicht der Benutzeroberflächenautomatisierung-Struktur enthalten.                                                                                                                            |
+| [**UIA \_ IsKeyboardFocusablePropertyId**](uiauto-automation-element-propids.md)   | Depends (Abhängig)       | Wenn das Steuerelement den Tastaturfokus erhalten kann, muss es diese Eigenschaft unterstützen.                                                                                                                                           |
+| [**UIA \_ IsOffscreenPropertyId**](uiauto-automation-element-propids.md)                   | Depends (Abhängig)       | Wenn ein Statusleisten-Steuerelement derzeit nicht sichtbar ist, gibt es TRUE für diese Eigenschaft zurück.                                                                                                                            |
+| [**UIA \_ LabeledByPropertyId**](uiauto-automation-element-propids.md)                       | NULL          | Das Statusleisten-Steuerelement verfügt in der Regel nicht über eine Bezeichnung.                                                                                                                                                             |
+| [**UIA \_ LocalizedControlTypePropertyId**](uiauto-automation-element-propids.md) | Siehe Hinweise.    | Lokalisierte Zeichenfolge, die dem **StatusBar-Steuerelementtyp entspricht.** Der Standardwert ist "Statusleiste" für en-US oder Englisch (USA).                                                                           |
+| [**\_UIA-NamePropertyId**](uiauto-automation-element-propids.md)                                 | Siehe Hinweise.    | Das StatusBar-Steuerelement muss nur dann einen Namen haben, wenn in einer Anwendung mehrere Statusleisten verwendet werden. Unterscheiden Sie in diesem Fall jede Leiste mit Namen wie "Internetstatus" oder "Anwendungsstatus".                    |
+| [**UIA \_ OrientationPropertyId**](uiauto-automation-element-propids.md)                   | Depends (Abhängig)       | Ein -Wert, der die Ausrichtung des Steuerelements angibt: horizontal oder vertikal.                                                                                                                                               |
 
 
 
- 
+ 
 
-## <a name="required-control-patterns"></a>Erforderliche Steuerelement Muster
+## <a name="required-control-patterns"></a>Erforderliche Steuerelementmuster
 
-In der folgenden Tabelle sind die Benutzeroberflächenautomatisierungs-Steuerelement Muster aufgelistet, die für Status leisten-Steuerelemente unterstützt Weitere Informationen zu Steuerelementmustern finden Sie unter [UI Automation Control Patterns Overview](uiauto-controlpatternsoverview.md).
+In der folgenden Tabelle sind die Benutzeroberflächenautomatisierung Steuerelementmuster aufgeführt, die für Statusleistensteuerelemente unterstützt werden müssen. Weitere Informationen zu Steuerelementmustern finden Sie unter [UI Automation Control Patterns Overview](uiauto-controlpatternsoverview.md).
 
 
 
 | Steuerelementmuster                               | Support  | Notizen                                                                                                                                                                        |
 |-----------------------------------------------|----------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| [**IGridProvider**](/windows/desktop/api/UIAutomationCore/nn-uiautomationcore-igridprovider) | Optional | StatusBar-Steuerelemente sollten das [Raster](uiauto-implementinggrid.md) -Steuerelement Muster unterstützen, damit einzelne Teile überwacht und leicht referenziert werden können. |
+| [**IGridProvider**](/windows/desktop/api/UIAutomationCore/nn-uiautomationcore-igridprovider) | Optional | Statusleistensteuerelemente sollten das [Raster-Steuerelementmuster](uiauto-implementinggrid.md) unterstützen, damit einzelne Teile überwacht und leicht auf Informationen verwiesen werden können. |
 
 
 
- 
+ 
 
 ## <a name="required-events"></a>Erforderliche Ereignisse
 
-In der folgenden Tabelle sind die Benutzeroberflächenautomatisierungs-Ereignisse aufgeführt, die für die Unterstützung von StatusBar- Weitere Informationen zu Ereignissen finden Sie unter [UI Automation Events Overview](uiauto-eventsoverview.md).
+In der folgenden Tabelle sind die Benutzeroberflächenautomatisierung Ereignisse aufgeführt, die von Statusleistensteuerelementen unterstützt werden müssen. Weitere Informationen zu Ereignissen finden Sie unter [UI Automation Events Overview](uiauto-eventsoverview.md).
 
 
 
-| Benutzeroberflächen-Automatisierungs Ereignis                                                                                                                   | Notizen                                                                             |
+| Benutzeroberflächenautomatisierung-Ereignis                                                                                                                   | Hinweise                                                                             |
 |---------------------------------------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------|
-| [**UIA \_ automationfocuschangedebug-ID**](uiauto-event-ids.md)                                      |                                                                                   |
-| [**UIA \_ Boundingrechglepropertyid**](uiauto-automation-element-propids.md) -Eigenschaft-geändertes Ereignis. |                                                                                   |
-| [**UIA \_ Isenabledpropertyid**](uiauto-automation-element-propids.md) -Eigenschaft-geändertes Ereignis.                 | Wenn das Steuerelement die **isaktivierte** Eigenschaft unterstützt, muss es dieses Ereignis unterstützen.   |
-| [**UIA \_ Isoffscreenpropertyid**](uiauto-automation-element-propids.md) -Eigenschaft-geändertes Ereignis.             | Wenn das Steuerelement die **IsOffscreen** -Eigenschaft unterstützt, muss es dieses Ereignis unterstützen. |
-| [**UIA \_ structurechangedebug**](uiauto-event-ids.md)                                                  |                                                                                   |
+| [**UIA \_ AutomationFocusChangedEventId**](uiauto-event-ids.md)                                      |                                                                                   |
+| [**UIA \_ BoundingRectanglePropertyId-Eigenschaftsänderungsereignis.**](uiauto-automation-element-propids.md) |                                                                                   |
+| [**UIA \_ IsEnabledPropertyId-Eigenschaftsänderungsereignis.**](uiauto-automation-element-propids.md)                 | Wenn das Steuerelement die **IsEnabled-Eigenschaft unterstützt,** muss es dieses Ereignis unterstützen.   |
+| [**UIA \_ IsOffscreenPropertyId-Eigenschaftsänderungsereignis.**](uiauto-automation-element-propids.md)             | Wenn das Steuerelement die **IsOffscreen-Eigenschaft unterstützt,** muss es dieses Ereignis unterstützen. |
+| [**UIA \_ StructureChangedEventId**](uiauto-event-ids.md)                                                  |                                                                                   |
 
 
 
- 
+ 
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Es wird empfohlen, Bearbeitungs Steuerelemente als untergeordnete Raster Elemente in einer Statusleiste zu verwenden. Die Verwendung von Bearbeitungs Steuerelementen erleichtert das Zuordnen des Zwecks des Status Felds mit dem Wert, indem der Elementname und die Value-Eigenschaft verwendet werden. Da Text Steuerelemente das **value** -Steuerelement Muster nicht unterstützen sollten, sollten Sie nicht als untergeordnete Raster Elemente verwendet werden.
+Es wird empfohlen, Bearbeitungssteuerelemente als untergeordnete Rasterelemente in einer Statusleiste zu verwenden. Die Verwendung von Bearbeitungssteuerelementen erleichtert das Zuordnen des Zwecks des Statusfelds zu dessen Wert mithilfe des Elementnamens und der Werteigenschaft. Da Textsteuerelemente das  Value-Steuerelementmuster nicht unterstützen sollten, sollten sie nicht als untergeordnete Rasterelemente verwendet werden.
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-**Licher**
+**Konzeptionellen**
 </dt> <dt>
 
 [Übersicht über Steuerelementtypen für Benutzeroberflächenautomatisierung](uiauto-controltypesoverview.md)
@@ -164,9 +164,9 @@ Es wird empfohlen, Bearbeitungs Steuerelemente als untergeordnete Raster Element
 [Übersicht über die Benutzeroberflächenautomatisierung](uiauto-uiautomationoverview.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

@@ -3,7 +3,7 @@ title: RBN_DELETINGBAND Benachrichtigungscode (Commctrl.h)
 description: Wird von einem Rebar-Steuerelement gesendet, wenn ein Band gelöscht werden soll. Dieser Benachrichtigungscode wird in Form einer WM \_ NOTIFY-Nachricht gesendet.
 ms.assetid: 92840cb1-375e-4c37-bde4-7ba02a1ff4f1
 keywords:
-- RBN_DELETINGBAND Benachrichtigungscode Windows Steuerelementen
+- RBN_DELETINGBAND Benachrichtigungscode Windows Controls
 topic_type:
 - apiref
 api_name:
@@ -55,7 +55,7 @@ Der Rückgabewert für diese Benachrichtigung wird nicht verwendet.
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ Vista-Desktop-Apps\]<br/>                                        |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur Vista-Desktop-Apps\]<br/>                                        |
 | Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                                  |
 | Header<br/>                   | <dl> <dt>Commctrl.h</dt> </dl> |
 

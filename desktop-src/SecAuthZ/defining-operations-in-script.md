@@ -1,5 +1,5 @@
 ---
-description: Im Autorisierungs-Manager ist ein Vorgang eine Funktion oder Methode auf niedriger Ebene einer Anwendung.
+description: Im Autorisierungs-Manager ist ein Vorgang eine Low-Level-Funktion oder -Methode einer Anwendung.
 ms.assetid: 6b35d25e-150c-4760-b358-fa517a00dd79
 title: Definieren von Vorgängen in Skripts
 ms.topic: article
@@ -18,9 +18,9 @@ ms.locfileid: "119994449"
 ---
 # <a name="defining-operations-in-script"></a>Definieren von Vorgängen in Skripts
 
-Im Autorisierungs-Manager ist ein Vorgang eine Funktion oder Methode auf niedriger Ebene einer Anwendung. Diese Vorgänge werden als Aufgaben gruppiert. Benutzer der Anwendung fordern die Berechtigung zum Ausführen von Aufgaben an. Ein Vorgang wird durch ein [**IAzOperation-Objekt**](/windows/desktop/api/Azroles/nn-azroles-iazoperation) dargestellt. Weitere Informationen zu Vorgängen finden Sie unter [Vorgänge und Tasks.](operations-and-tasks.md)
+Im Autorisierungs-Manager ist ein Vorgang eine Low-Level-Funktion oder -Methode einer Anwendung. Diese Vorgänge werden als Aufgaben gruppiert. Benutzer der Anwendung fordern die Berechtigung zum Ausführen von Aufgaben an. Ein Vorgang wird durch ein [**IAzOperation-Objekt**](/windows/desktop/api/Azroles/nn-azroles-iazoperation) dargestellt. Weitere Informationen zu Vorgängen finden Sie unter [Vorgänge und Aufgaben.](operations-and-tasks.md)
 
-Das folgende Beispiel zeigt, wie Vorgänge in einem Autorisierungsrichtlinienspeicher definiert werden. Im Beispiel wird davon ausgegangen, dass ein vorhandener XML-Richtlinienspeicher namens MyStore.xml im Stammverzeichnis von Laufwerk C vorhanden ist und dass dieser Speicher eine Anwendung namens Expense enthält.
+Das folgende Beispiel zeigt, wie Vorgänge in einem Autorisierungsrichtlinienspeicher definiert werden. Im Beispiel wird davon ausgegangen, dass im Stammverzeichnis von Laufwerk C ein XML-Richtlinienspeicher namens MyStore.xml vorhanden ist und dass dieser Speicher eine Anwendung mit dem Namen Expense enthält.
 
 
 ```VB

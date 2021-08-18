@@ -1,6 +1,6 @@
 ---
 title: MDM_Policy_Config01_LocalPoliciesSecurityOptions02-Klasse
-description: Die MDM- \_ Richtlinie \_ Config01 \_ LocalPoliciesSecurityOptions02 konfiguriert die Sicherheitsoptionen der lokalen Richtlinien.
+description: Die \_ MDM-Richtlinie \_ Config01 \_ LocalPoliciesSecurityOptions02 konfiguriert die Sicherheitsoptionen für lokale Richtlinien.
 ms.assetid: 07688109-f14a-4a04-91b2-ee928d8911b4
 keywords:
 - MDM_Policy_Config01_LocalPoliciesSecurityOptions02-Klasse
@@ -17,18 +17,18 @@ api_type:
 - DllExport
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: bf39e1db2f5d6f823667865054a8c72b18dc916f
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 74a23ff538e5381e9853fca48df4703dc09dd110940128af2caed98b0fcec2af
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104040586"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119017918"
 ---
-# <a name="mdm_policy_config01_localpoliciessecurityoptions02-class"></a>MDM- \_ Richtlinie \_ Config01 \_ LocalPoliciesSecurityOptions02-Klasse
+# <a name="mdm_policy_config01_localpoliciessecurityoptions02-class"></a>MDM \_ Policy \_ Config01 \_ LocalPoliciesSecurityOptions02-Klasse
 
 \[Einige Informationen beziehen sich auf Vorabversionen, die vor der kommerziellen Freigabe grundlegend geändert werden können. Microsoft übernimmt keine Garantie, weder ausdrücklich noch stillschweigend, für die hier bereitgestellten Informationen.\]
 
-Die MDM- \_ Richtlinie \_ Config01 \_ LocalPoliciesSecurityOptions02 konfiguriert die Sicherheitsoptionen der lokalen Richtlinien.
+Die \_ MDM-Richtlinie \_ Config01 \_ LocalPoliciesSecurityOptions02 konfiguriert die Sicherheitsoptionen für lokale Richtlinien.
 
 Die folgende Syntax enthält vereinfachten MOF-Code und schließt alle geerbten Eigenschaften ein.
 
@@ -79,17 +79,17 @@ class MDM_Policy_Config01_LocalPoliciesSecurityOptions02
 
 ## <a name="members"></a>Member
 
-Die **MDM- \_ Richtlinie \_ Config01 \_ LocalPoliciesSecurityOptions02** -Klasse verfügt über diese Typen von Membern:
+Die **MDM \_ Policy \_ Config01 \_ LocalPoliciesSecurityOptions02-Klasse** verfügt über die folgenden Membertypen:
 
 -   [Eigenschaften](#properties)
 
 ### <a name="properties"></a>Eigenschaften
 
-Die **MDM- \_ Richtlinie \_ Config01 \_ LocalPoliciesSecurityOptions02** -Klasse verfügt über diese Eigenschaften.
+Die **MDM \_ Policy \_ Config01 \_ LocalPoliciesSecurityOptions02-Klasse** verfügt über diese Eigenschaften.
 
 <dl> <dt>
 
-[Konten \_ blockmicrosoftaccounts](/windows/client-management/mdm/policy-csp-localpoliciessecurityoptions#localpoliciessecurityoptions-accounts-blockmicrosoftaccounts)
+[Accounts \_ BlockMicrosoftAccounts](/windows/client-management/mdm/policy-csp-localpoliciessecurityoptions#localpoliciessecurityoptions-accounts-blockmicrosoftaccounts)
 </dt> <dd> <dl> <dt>
 
 Datentyp: **sint32**
@@ -122,7 +122,7 @@ Zugriffstyp: Lesen/Schreiben
 
 </dd> <dt>
 
-[Konten \_ limitlocalaccountuseofblankpasswordstoconsolelogononly](/windows/client-management/mdm/policy-csp-localpoliciessecurityoptions#localpoliciessecurityoptions-accounts-limitlocalaccountuseofblankpasswordstoconsolelogononly)
+[Konten \_ LimitLocalAccountUseOfBlankPasswordsToConsoleLogonOnly](/windows/client-management/mdm/policy-csp-localpoliciessecurityoptions#localpoliciessecurityoptions-accounts-limitlocalaccountuseofblankpasswordstoconsolelogononly)
 </dt> <dd> <dl> <dt>
 
 Datentyp: **sint32**
@@ -144,7 +144,7 @@ Zugriffstyp: Lesen/Schreiben
 
 </dd> <dt>
 
-[Konten \_ renameguestaccount](/windows/client-management/mdm/policy-csp-localpoliciessecurityoptions#localpoliciessecurityoptions-accounts-renameguestaccount)
+[Konten \_ RenameGuestAccount](/windows/client-management/mdm/policy-csp-localpoliciessecurityoptions#localpoliciessecurityoptions-accounts-renameguestaccount)
 </dt> <dd> <dl> <dt>
 
 Datentyp: **Zeichenfolge**
@@ -155,7 +155,7 @@ Zugriffstyp: Lesen/Schreiben
 
 </dd> <dt>
 
-[Geräte "- \_ Zuweisung"](/windows/client-management/mdm/policy-csp-localpoliciessecurityoptions#localpoliciessecurityoptions-devices-allowedtoformatandejectremovablemedia)
+[Geräte \_ AllowedToFormatAndEjectRemovableMedia](/windows/client-management/mdm/policy-csp-localpoliciessecurityoptions#localpoliciessecurityoptions-devices-allowedtoformatandejectremovablemedia)
 </dt> <dd> <dl> <dt>
 
 Datentyp: **Zeichenfolge**
@@ -166,7 +166,7 @@ Zugriffstyp: Lesen/Schreiben
 
 </dd> <dt>
 
-[Geräte " \_ zugewundockwithouthavingtologon"](/windows/client-management/mdm/policy-csp-localpoliciessecurityoptions#localpoliciessecurityoptions-devices-allowundockwithouthavingtologon)
+[Geräte \_ AllowUndockWithoutHavingToLogon](/windows/client-management/mdm/policy-csp-localpoliciessecurityoptions#localpoliciessecurityoptions-devices-allowundockwithouthavingtologon)
 </dt> <dd> <dl> <dt>
 
 Datentyp: **sint32**
@@ -177,7 +177,7 @@ Zugriffstyp: Lesen/Schreiben
 
 </dd> <dt>
 
-[Geräte \_ preventusersfrominstallingprinterdrivers\connectingdesharedprinter](/windows/client-management/mdm/policy-csp-localpoliciessecurityoptions#localpoliciessecurityoptions-devices-preventusersfrominstallingprinterdriverswhenconnectingtosharedprinters)
+[Geräte \_ PreventUsersFromInstallingPrinterDriversWhenConnectingToSharedPrinters](/windows/client-management/mdm/policy-csp-localpoliciessecurityoptions#localpoliciessecurityoptions-devices-preventusersfrominstallingprinterdriverswhenconnectingtosharedprinters)
 </dt> <dd> <dl> <dt>
 
 Datentyp: **sint32**
@@ -188,7 +188,7 @@ Zugriffstyp: Lesen/Schreiben
 
 </dd> <dt>
 
-[Geräte \_ restrictcdromaccesstolocallyloggedonuseronly](/windows/client-management/mdm/policy-csp-localpoliciessecurityoptions#localpoliciessecurityoptions-devices-restrictcdromaccesstolocallyloggedonuseronly)
+[Geräte \_ RestrictCACCESSToLocallyLoggedOnUserOnly](/windows/client-management/mdm/policy-csp-localpoliciessecurityoptions#localpoliciessecurityoptions-devices-restrictcdromaccesstolocallyloggedonuseronly)
 </dt> <dd> <dl> <dt>
 
 Datentyp: **Zeichenfolge**
@@ -213,7 +213,7 @@ Qualifizierer: [ **Schlüssel**](/windows/desktop/WmiSdk/key-qualifier)
 
 </dd> <dt>
 
-[Interactivelogon \_ displayuserinformationwhenthesessionislock](/windows/client-management/mdm/policy-csp-localpoliciessecurityoptions#localpoliciessecurityoptions-interactivelogon-displayuserinformationwhenthesessionislocked)
+[InteractiveLogon \_ DisplayUserInformationWhenTheSessionIsLocked](/windows/client-management/mdm/policy-csp-localpoliciessecurityoptions#localpoliciessecurityoptions-interactivelogon-displayuserinformationwhenthesessionislocked)
 </dt> <dd> <dl> <dt>
 
 Datentyp: **sint32**
@@ -224,7 +224,7 @@ Zugriffstyp: Lesen/Schreiben
 
 </dd> <dt>
 
-[Interactivelogon \_ donotdisplaylastsignetdin](/windows/client-management/mdm/policy-csp-localpoliciessecurityoptions#localpoliciessecurityoptions-interactivelogon-donotdisplaylastsignedin)
+[Interactivelogon \_ DoNotDisplayLastSignedIn](/windows/client-management/mdm/policy-csp-localpoliciessecurityoptions#localpoliciessecurityoptions-interactivelogon-donotdisplaylastsignedin)
 </dt> <dd> <dl> <dt>
 
 Datentyp: **sint32**
@@ -235,7 +235,7 @@ Zugriffstyp: Lesen/Schreiben
 
 </dd> <dt>
 
-[Interactivelogon \_ donotdisplayusernameatsignin](/windows/client-management/mdm/policy-csp-localpoliciessecurityoptions#localpoliciessecurityoptions-interactivelogon-donotdisplayusernameatsignin)
+[Interactivelogon \_ DoNotDisplayUsernameAtSignIn](/windows/client-management/mdm/policy-csp-localpoliciessecurityoptions#localpoliciessecurityoptions-interactivelogon-donotdisplayusernameatsignin)
 </dt> <dd> <dl> <dt>
 
 Datentyp: **sint32**
@@ -246,7 +246,7 @@ Zugriffstyp: Lesen/Schreiben
 
 </dd> <dt>
 
-[Interactivelogon \_ donotrequirectrlaltdel](/windows/client-management/mdm/policy-csp-localpoliciessecurityoptions#localpoliciessecurityoptions-interactivelogon-donotrequirectrlaltdel)
+[Interactivelogon \_ DoNotRequireCTRLALTDEL](/windows/client-management/mdm/policy-csp-localpoliciessecurityoptions#localpoliciessecurityoptions-interactivelogon-donotrequirectrlaltdel)
 </dt> <dd> <dl> <dt>
 
 Datentyp: **sint32**
@@ -257,7 +257,7 @@ Zugriffstyp: Lesen/Schreiben
 
 </dd> <dt>
 
-[Interactivelogon \_ machineinactivitylimit](/windows/client-management/mdm/policy-csp-localpoliciessecurityoptions#localpoliciessecurityoptions-interactivelogon-machineinactivitylimit)
+[InteractiveLogon \_ MachineInactivityLimit](/windows/client-management/mdm/policy-csp-localpoliciessecurityoptions#localpoliciessecurityoptions-interactivelogon-machineinactivitylimit)
 </dt> <dd> <dl> <dt>
 
 Datentyp: **sint32**
@@ -268,7 +268,7 @@ Zugriffstyp: Lesen/Schreiben
 
 </dd> <dt>
 
-[Interactivelogon \_ messagetextforusersattemptingtologon](/windows/client-management/mdm/policy-csp-localpoliciessecurityoptions#localpoliciessecurityoptions-interactivelogon-messagetextforusersattemptingtologon)
+[InteractiveLogon \_ MessageTextForUsersAttemptingToLogOn](/windows/client-management/mdm/policy-csp-localpoliciessecurityoptions#localpoliciessecurityoptions-interactivelogon-messagetextforusersattemptingtologon)
 </dt> <dd> <dl> <dt>
 
 Datentyp: **Zeichenfolge**
@@ -279,7 +279,7 @@ Zugriffstyp: Lesen/Schreiben
 
 </dd> <dt>
 
-[Interactivelogon \_ messagetitleforusersattemptingtologon](/windows/client-management/mdm/policy-csp-localpoliciessecurityoptions#localpoliciessecurityoptions-interactivelogon-messagetitleforusersattemptingtologon)
+[InteractiveLogon \_ MessageTitleForUsersAttemptingToLogOn](/windows/client-management/mdm/policy-csp-localpoliciessecurityoptions#localpoliciessecurityoptions-interactivelogon-messagetitleforusersattemptingtologon)
 </dt> <dd> <dl> <dt>
 
 Datentyp: **Zeichenfolge**
@@ -290,7 +290,7 @@ Zugriffstyp: Lesen/Schreiben
 
 </dd> <dt>
 
-[Network Access \_ donotallowanonymousenproerationofsamaccountsandshares](/windows/client-management/mdm/policy-csp-localpoliciessecurityoptions#localpoliciessecurityoptions-networkaccess-donotallowanonymousenumerationofsamaccountsandshares)
+[NetworkAccess \_ DoNotAllowAnonymousEnumerationOfSAMAccountsAndShares](/windows/client-management/mdm/policy-csp-localpoliciessecurityoptions#localpoliciessecurityoptions-networkaccess-donotallowanonymousenumerationofsamaccountsandshares)
 </dt> <dd> <dl> <dt>
 
 Datentyp: **sint32**
@@ -301,7 +301,7 @@ Zugriffstyp: Lesen/Schreiben
 
 </dd> <dt>
 
-[Network Access \_ restrictanonymousaccesstonamedpipesandshares](/windows/client-management/mdm/policy-csp-localpoliciessecurityoptions#localpoliciessecurityoptions-networkaccess-restrictanonymousaccesstonamedpipesandshares)
+[NetworkAccess \_ RestrictAnonymousAccessToNamedPipesAndShares](/windows/client-management/mdm/policy-csp-localpoliciessecurityoptions#localpoliciessecurityoptions-networkaccess-restrictanonymousaccesstonamedpipesandshares)
 </dt> <dd> <dl> <dt>
 
 Datentyp: **sint32**
@@ -312,7 +312,7 @@ Zugriffstyp: Lesen/Schreiben
 
 </dd> <dt>
 
-[Network Access \_ restrictclientsallowedtomakeremotecallstosam](/windows/client-management/mdm/policy-csp-localpoliciessecurityoptions#localpoliciessecurityoptions-networkaccess-restrictclientsallowedtomakeremotecallstosam)
+[NetworkAccess \_ RestrictClientsAllowedToMakeRemoteCallsToSAM](/windows/client-management/mdm/policy-csp-localpoliciessecurityoptions#localpoliciessecurityoptions-networkaccess-restrictclientsallowedtomakeremotecallstosam)
 </dt> <dd> <dl> <dt>
 
 Datentyp: **Zeichenfolge**
@@ -323,7 +323,7 @@ Zugriffstyp: Lesen/Schreiben
 
 </dd> <dt>
 
-[Network Security \_ AllowPKU2UAuthenticationRequests](/windows/client-management/mdm/policy-csp-localpoliciessecurityoptions#localpoliciessecurityoptions-networksecurity-allowpku2uauthenticationrequests)
+[NetworkSecurity \_ AllowPKU2UAuthenticationRequests](/windows/client-management/mdm/policy-csp-localpoliciessecurityoptions#localpoliciessecurityoptions-networksecurity-allowpku2uauthenticationrequests)
 </dt> <dd> <dl> <dt>
 
 Datentyp: **sint32**
@@ -334,7 +334,7 @@ Zugriffstyp: Lesen/Schreiben
 
 </dd> <dt>
 
-**ParentID**
+**Parentid**
 </dt> <dd> <dl> <dt>
 
 Datentyp: **Zeichenfolge**
@@ -348,7 +348,7 @@ Qualifizierer: [ **Schlüssel**](/windows/desktop/WmiSdk/key-qualifier)
 
 </dd> <dt>
 
-[Wiederherstellbarkeits Konsole \_ allowautomaticadministrativelogon](/windows/client-management/mdm/policy-csp-localpoliciessecurityoptions#localpoliciessecurityoptions-recoveryconsole-allowautomaticadministrativelogon)
+[RecoveryConsole \_ AllowAutomaticAdministrativeLogon](/windows/client-management/mdm/policy-csp-localpoliciessecurityoptions#localpoliciessecurityoptions-recoveryconsole-allowautomaticadministrativelogon)
 </dt> <dd> <dl> <dt>
 
 Datentyp: **sint32**
@@ -359,7 +359,7 @@ Zugriffstyp: Lesen/Schreiben
 
 </dd> <dt>
 
-[\_Allowsystempobeshutdownwithouthavingtologon Herunterfahren](/windows/client-management/mdm/policy-csp-localpoliciessecurityoptions#localpoliciessecurityoptions-shutdown-allowsystemtobeshutdownwithouthavingtologon)
+[\_AllowSystemToBeShutDownWithoutHavingToLogOn herunterfahren](/windows/client-management/mdm/policy-csp-localpoliciessecurityoptions#localpoliciessecurityoptions-shutdown-allowsystemtobeshutdownwithouthavingtologon)
 </dt> <dd> <dl> <dt>
 
 Datentyp: **sint32**
@@ -370,7 +370,7 @@ Zugriffstyp: Lesen/Schreiben
 
 </dd> <dt>
 
-[\_Clearvirtualmemorypagefile Herunterfahren](/windows/client-management/mdm/policy-csp-localpoliciessecurityoptions#localpoliciessecurityoptions-shutdown-clearvirtualmemorypagefile)
+[Shutdown \_ ClearVirtualMemoryPageFile](/windows/client-management/mdm/policy-csp-localpoliciessecurityoptions#localpoliciessecurityoptions-shutdown-clearvirtualmemorypagefile)
 </dt> <dd> <dl> <dt>
 
 Datentyp: **sint32**
@@ -381,7 +381,7 @@ Zugriffstyp: Lesen/Schreiben
 
 </dd> <dt>
 
-[UserAccountControl \_ zusicherungs-ID-Objekt](/windows/client-management/mdm/policy-csp-localpoliciessecurityoptions#localpoliciessecurityoptions-useraccountcontrol-allowuiaccessapplicationstopromptforelevation)
+[UserAccountControl \_ AllowUIAccessApplicationsToPromptForElevation](/windows/client-management/mdm/policy-csp-localpoliciessecurityoptions#localpoliciessecurityoptions-useraccountcontrol-allowuiaccessapplicationstopromptforelevation)
 </dt> <dd> <dl> <dt>
 
 Datentyp: **sint32**
@@ -392,7 +392,7 @@ Zugriffstyp: Lesen/Schreiben
 
 </dd> <dt>
 
-[UserAccountControl \_ verhaltoferelevationpromptforadministrators](/windows/client-management/mdm/policy-csp-localpoliciessecurityoptions#localpoliciessecurityoptions-useraccountcontrol-behavioroftheelevationpromptforadministrators)
+[UserAccountControl \_ BehaviorOfTheElevationPromptForAdministrators](/windows/client-management/mdm/policy-csp-localpoliciessecurityoptions#localpoliciessecurityoptions-useraccountcontrol-behavioroftheelevationpromptforadministrators)
 </dt> <dd> <dl> <dt>
 
 Datentyp: **sint32**
@@ -403,7 +403,7 @@ Zugriffstyp: Lesen/Schreiben
 
 </dd> <dt>
 
-[UserAccountControl \_ verhaltoferelevationpromptforstandardusers](/windows/client-management/mdm/policy-csp-localpoliciessecurityoptions#localpoliciessecurityoptions-useraccountcontrol-behavioroftheelevationpromptforstandardusers)
+[UserAccountControl \_ BehaviorOfTheElevationPromptForStandardUsers](/windows/client-management/mdm/policy-csp-localpoliciessecurityoptions#localpoliciessecurityoptions-useraccountcontrol-behavioroftheelevationpromptforstandardusers)
 </dt> <dd> <dl> <dt>
 
 Datentyp: **sint32**
@@ -414,7 +414,7 @@ Zugriffstyp: Lesen/Schreiben
 
 </dd> <dt>
 
-[UserAccountControl \_ detectapplicationinstallationsandpromptforelevation](/windows/client-management/mdm/policy-csp-localpoliciessecurityoptions#localpoliciessecurityoptions-useraccountcontrol-detectapplicationinstallationsandpromptforelevation)
+[UserAccountControl \_ DetectApplicationInstallationsAndPromptForElevation](/windows/client-management/mdm/policy-csp-localpoliciessecurityoptions#localpoliciessecurityoptions-useraccountcontrol-detectapplicationinstallationsandpromptforelevation)
 </dt> <dd> <dl> <dt>
 
 Datentyp: **sint32**
@@ -425,7 +425,7 @@ Zugriffstyp: Lesen/Schreiben
 
 </dd> <dt>
 
-[UserAccountControl \_ onlyelevateexecutablefilesthataresignedandvalidieren](/windows/client-management/mdm/policy-csp-localpoliciessecurityoptions#localpoliciessecurityoptions-useraccountcontrol-onlyelevateexecutablefilesthataresignedandvalidated)
+[UserAccountControl \_ OnlyElevateExecutableFilesThatAreSignedAndValidated](/windows/client-management/mdm/policy-csp-localpoliciessecurityoptions#localpoliciessecurityoptions-useraccountcontrol-onlyelevateexecutablefilesthataresignedandvalidated)
 </dt> <dd> <dl> <dt>
 
 Datentyp: **sint32**
@@ -436,7 +436,7 @@ Zugriffstyp: Lesen/Schreiben
 
 </dd> <dt>
 
-[UserAccountControl \_ onlyelevateuiaccessapplicationsthatareinstalledinsecuumumsetzungen](/windows/client-management/mdm/policy-csp-localpoliciessecurityoptions#localpoliciessecurityoptions-useraccountcontrol-onlyelevateuiaccessapplicationsthatareinstalledinsecurelocations)
+[UserAccountControl \_ OnlyElevateUIAccessApplicationsThatAreInstalledInSecureLocations](/windows/client-management/mdm/policy-csp-localpoliciessecurityoptions#localpoliciessecurityoptions-useraccountcontrol-onlyelevateuiaccessapplicationsthatareinstalledinsecurelocations)
 </dt> <dd> <dl> <dt>
 
 Datentyp: **sint32**
@@ -458,7 +458,7 @@ Zugriffstyp: Lesen/Schreiben
 
 </dd> <dt>
 
-[UserAccountControl \_ switchtothesecuredesktop\promptingforelevation](/windows/client-management/mdm/policy-csp-localpoliciessecurityoptions#localpoliciessecurityoptions-useraccountcontrol-switchtothesecuredesktopwhenpromptingforelevation)
+[UserAccountControl \_ SwitchToTheSecureDesktopWhenPromptingForElevation](/windows/client-management/mdm/policy-csp-localpoliciessecurityoptions#localpoliciessecurityoptions-useraccountcontrol-switchtothesecuredesktopwhenpromptingforelevation)
 </dt> <dd> <dl> <dt>
 
 Datentyp: **sint32**
@@ -469,7 +469,7 @@ Zugriffstyp: Lesen/Schreiben
 
 </dd> <dt>
 
-[UserAccountControl \_ useadminapprovalmode](/windows/client-management/mdm/policy-csp-localpoliciessecurityoptions#localpoliciessecurityoptions-useraccountcontrol-useadminapprovalmode)
+[UserAccountControl \_ UseAdminApprovalMode](/windows/client-management/mdm/policy-csp-localpoliciessecurityoptions#localpoliciessecurityoptions-useraccountcontrol-useadminapprovalmode)
 </dt> <dd> <dl> <dt>
 
 Datentyp: **sint32**
@@ -480,7 +480,7 @@ Zugriffstyp: Lesen/Schreiben
 
 </dd> <dt>
 
-[UserAccountControl \_ virtualizefileandregistryschreitefailurestoperuserlocations](/windows/client-management/mdm/policy-csp-localpoliciessecurityoptions#localpoliciessecurityoptions-useraccountcontrol-virtualizefileandregistrywritefailurestoperuserlocations)
+[UserAccountControl \_ VirtualizeFileAndRegistryWriteFailuresToPerUserLocations](/windows/client-management/mdm/policy-csp-localpoliciessecurityoptions#localpoliciessecurityoptions-useraccountcontrol-virtualizefileandregistrywritefailurestoperuserlocations)
 </dt> <dd> <dl> <dt>
 
 Datentyp: **sint32**
@@ -497,10 +497,10 @@ Zugriffstyp: Lesen/Schreiben
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows 10 \[ -Desktop-Apps\]<br/>                                                    |
+| Unterstützte Mindestversion (Client)<br/> | \[Windows 10 Nur Desktop-Apps\]<br/>                                                    |
 | Unterstützte Mindestversion (Server)<br/> | Nicht unterstützt<br/>                                                                      |
-| Namespace<br/>                | Root \\ CIMV2 \\ MDM- \\ dmmap<br/>                                                             |
-| MOF<br/>                      | <dl> <dt>Dmwmibridgeprov. MOF</dt> </dl> |
+| Namespace<br/>                | Root \\ cimv2 \\ mdm \\ dmmap<br/>                                                             |
+| MOF<br/>                      | <dl> <dt>DMWmiBridgeProv.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>DMWmiBridgeProv.dll</dt> </dl> |
 
 

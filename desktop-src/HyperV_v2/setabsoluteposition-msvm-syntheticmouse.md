@@ -1,7 +1,7 @@
 ---
-description: Legt die horizontale und vertikale Position des Mauszeigers fest.
+description: Legt die horizontale und vertikale Position des Mauscursors fest.
 ms.assetid: 7845E10A-7F61-4134-BF81-AED5483F36AD
-title: Die Methode "settabsoluteposition" der Msvm_SyntheticMouse Klasse ("dbdao. h")
+title: SetAbsolutePosition-Methode der Msvm_SyntheticMouse-Klasse (Dbdao.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,16 +13,16 @@ api_type:
 - COM
 api_location:
 - vmms.exe
-ms.openlocfilehash: 4b8ffb3a4d415f76dedf30acba5869b4cc585eb5
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 1f7f04975d85be1cb176839c80c19710534237b3be15ca06e606dad58a099519
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "103864888"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119014308"
 ---
-# <a name="setabsoluteposition-method-of-the-msvm_syntheticmouse-class"></a>SetAbsolutePosition-Methode der MSVM- \_ syntheticmouse-Klasse
+# <a name="setabsoluteposition-method-of-the-msvm_syntheticmouse-class"></a>SetAbsolutePosition-Methode der Msvm \_ SyntheticMouse-Klasse
 
-Legt die horizontale und vertikale Position des Mauszeigers fest.
+Legt die horizontale und vertikale Position des Mauscursors fest.
 
 ## <a name="syntax"></a>Syntax
 
@@ -40,7 +40,7 @@ uint32 SetAbsolutePosition(
 
 <dl> <dt>
 
-*HorizontalPosition* \[ in\]
+*horizontalPosition* \[ In\]
 </dt> <dd>
 
 Typ: **sint32**
@@ -49,7 +49,7 @@ Die neue horizontale Position des Mauszeigers in Pixel.
 
 </dd> <dt>
 
-*VerticalPosition* \[ in\]
+*verticalPosition* \[ In\]
 </dt> <dd>
 
 Typ: **sint32**
@@ -60,19 +60,19 @@ Die neue vertikale Position des Mauszeigers in Pixel.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Typ: **UInt32**
+Typ: **uint32**
 
-Der Rückgabewert 0 (null) gibt den Erfolg an. Ein Wert ungleich 0 (null) gibt an, dass die Scrollposition nicht geändert werden konnte.
+Der Rückgabewert 0 (null) gibt den Erfolg an. Ein Wert ungleich 0 (null) gibt an, dass die Bildlaufposition nicht geändert werden kann.
 
 <dl> <dt>
 
 **Abgeschlossen ohne Fehler** (0)
 </dt> <dt>
 
-Über **prüfte Methoden Parameter-Auftrag gestartet** (4096)
+**Überprüfte Methodenparameter – Auftragsstart** (4096)
 </dt> <dt>
 
-Fehler **(32768** )
+**Fehler** (32768)
 </dt> <dt>
 
 **Zugriff verweigert** (32769)
@@ -81,7 +81,7 @@ Fehler **(32768** )
 **Nicht unterstützt** (32770)
 </dt> <dt>
 
-Der **Status ist "Unknown** " (32771).
+**Status ist unbekannt** (32771)
 </dt> <dt>
 
 **Timeout** (32772)
@@ -90,24 +90,24 @@ Der **Status ist "Unknown** " (32771).
 **Ungültiger Parameter** (32773)
 </dt> <dt>
 
-Das **System wird verwendet** (32774).
+**System wird verwendet** (32774)
 </dt> <dt>
 
-**Ungültiger Status für diesen Vorgang** (32775).
+**Ungültiger Zustand für diesen Vorgang** (32775)
 </dt> <dt>
 
-**Falscher Datentyp** (32776).
+**Falscher Datentyp** (32776)
 </dt> <dt>
 
-Das **System ist nicht verfügbar** (32777).
+**System ist nicht verfügbar** (32777)
 </dt> <dt>
 
-**Nicht** genügend Arbeitsspeicher (32778)
+**Nicht genügend Arbeitsspeicher** (32778)
 </dt> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Der Zugriff auf die [**MSVM \_ syntheticmouse**](msvm-syntheticmouse.md) -Klasse kann durch die UAC-Filterung eingeschränkt werden. Weitere Informationen finden Sie unter [Benutzerkontensteuerung und WMI](/windows/desktop/WmiSdk/user-account-control-and-wmi).
+Der Zugriff auf die [**Msvm \_ SyntheticMouse-Klasse**](msvm-syntheticmouse.md) kann durch UAC-Filterung eingeschränkt werden. Weitere Informationen finden Sie unter [Benutzerkontensteuerung und WMI.](/windows/desktop/WmiSdk/user-account-control-and-wmi)
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -115,20 +115,20 @@ Der Zugriff auf die [**MSVM \_ syntheticmouse**](msvm-syntheticmouse.md) -Klasse
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows 8 \[ -Desktop-Apps\]<br/>                                                              |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2012 \[ -Desktop-Apps\]<br/>                                                    |
-| Namespace<br/>                | \\Stammvirtualisierung \\ v2<br/>                                                                     |
-| Header<br/>                   | <dl> <dt>Dbdao. h</dt> </dl>                      |
-| MOF<br/>                      | <dl> <dt>Windowsvirtualization. v2. MOF</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | \[Windows 8 Nur Desktop-Apps\]<br/>                                                              |
+| Unterstützte Mindestversion (Server)<br/> | \[Windows Server 2012 Nur Desktop-Apps\]<br/>                                                    |
+| Namespace<br/>                | Root \\ Virtualization \\ V2<br/>                                                                     |
+| Header<br/>                   | <dl> <dt>Dbdao.h</dt> </dl>                      |
+| MOF<br/>                      | <dl> <dt>WindowsVirtualization.V2.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Vmms.exe</dt> </dl>                     |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**MSVM \_ syntheticmouse**](msvm-syntheticmouse.md)
+[**Msvm \_ SyntheticMouse**](msvm-syntheticmouse.md)
 </dt> </dl>
 
  

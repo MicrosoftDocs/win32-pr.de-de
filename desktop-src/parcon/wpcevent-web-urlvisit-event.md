@@ -1,19 +1,19 @@
 ---
-description: Pro-Benutzer-Ereignis, das durch den Webinhalts Filter generiert wurde, weil versucht wurde, auf eine URL zuzugreifen.
+description: Benutzerspezifisches Ereignis, das vom Webinhaltsfilter aufgrund des Zugriffs auf eine URL generiert wurde.
 ms.assetid: 636b0ce8-cf08-4536-9b41-79512b02a066
-title: WPCEVENT_WEB_URLVISIT-Ereignis (wpcevent. h)
+title: WPCEVENT_WEB_URLVISIT -Ereignis (Wpcevent.h)
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: b1075ae930cdaa9ee539dbc17a8c13d5c2a41add
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 4b9524909ee78d14395e2f208fe265b3abc31240d2036788b8b84c4fea05aac9
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104042216"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120112700"
 ---
-# <a name="wpcevent_web_urlvisit-event"></a>Wpcevent \_ Web \_ urlvisit-Ereignis
+# <a name="wpcevent_web_urlvisit-event"></a>WPCEVENT \_ WEB \_ URLVISIT-Ereignis
 
-Pro-Benutzer-Ereignis, das durch den Webinhalts Filter generiert wurde, weil versucht wurde, auf eine URL zuzugreifen.
+Benutzerspezifisches Ereignis, das vom Webinhaltsfilter aufgrund des Zugriffs auf eine URL generiert wurde.
 
 
 ```C++
@@ -36,32 +36,32 @@ Die URL, die geöffnet werden soll.
 *Anwendung* 
 </dt> <dd>
 
-Die Anwendung, die das Ereignis erzeugt.
+Die Anwendung, die das Ereignis generiert.
 
 </dd> <dt>
 
 *Version* 
 </dt> <dd>
 
-Die Versions Zeichenfolge für die Anwendung.
+Die Versionszeichenfolge für die Anwendung.
 
 </dd> <dt>
 
 *`Reason`* 
 </dt> <dd>
 
-Ein Wert der [**wpcflag \_ isblockierte**](/windows/win32/api/wpcevent/ne-wpcevent-wpcflag_isblocked) -Enumeration, die Informationen darüber angibt, welche Ereignisse von der Verwendung blockiert werden und welche Steuerelemente vorhanden sind.
+Ein Wert der [**WPCFLAG \_ ISBLOCKED-Enumeration,**](/windows/win32/api/wpcevent/ne-wpcevent-wpcflag_isblocked) der Informationen darüber angibt, welche Ereignisse nicht verwendet werden und welche Steuerelemente verwendet werden.
 
 </dd> <dt>
 
-*Ratingsystemid* 
+*RatingSystemID* 
 </dt> <dd>
 
 Eine GUID, die das aktuelle Bewertungssystem identifiziert.
 
 </dd> <dt>
 
-*Anzahl von Kategorien* 
+*CatCount* 
 </dt> <dd>
 
 Die Anzahl der blockierten Einträge im Kategoriefeld.
@@ -71,7 +71,7 @@ Die Anzahl der blockierten Einträge im Kategoriefeld.
 *Kategorie* 
 </dt> <dd>
 
-Eine durch Trennzeichen getrennte Zeichenfolge von kategorienbezeichnerids, die blockiert werden.
+Eine durch Trennzeichen getrennte Zeichenfolge von Kategoriebezeichnern, die blockiert werden.
 
 </dd> </dl>
 
@@ -81,20 +81,20 @@ Eine durch Trennzeichen getrennte Zeichenfolge von kategorienbezeichnerids, die 
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                        |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ Vista-Desktop-Apps\]<br/>                                        |
 | Unterstützte Mindestversion (Server)<br/> | Nicht unterstützt<br/>                                                             |
-| Header<br/>                   | <dl> <dt>Wpcevent. h</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Wpcevent.h</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[Verwenden von Protokollierungs-APIs für Eltern Steuerelemente](using-logging-apis-for-parental-controls.md)
+[Verwenden von Protokollierungs-APIs für Jugendschutz](using-logging-apis-for-parental-controls.md)
 </dt> <dt>
 
-[**WPC \_ args \_ Conversation ationinitevent**](/windows/win32/api/wpcevent/ne-wpcevent-wpc_args_conversationinitevent)
+[**WPC \_ ARGS \_ CONVERSATIONINITEVENT**](/windows/win32/api/wpcevent/ne-wpcevent-wpc_args_conversationinitevent)
 </dt> </dl>
 
  

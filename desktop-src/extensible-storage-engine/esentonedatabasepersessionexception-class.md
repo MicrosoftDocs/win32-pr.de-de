@@ -1,6 +1,6 @@
 ---
-description: 'Weitere Informationen finden Sie unter: esentonedatabasepersessionexception-Klasse'
-title: Esentonedatabasepersessionexception-Klasse
+description: 'Weitere Informationen finden Sie unter: EsentOneDatabasePerSessionException-Klasse'
+title: EsentOneDatabasePerSessionException-Klasse
 TOCTitle: EsentOneDatabasePerSessionException class
 ms:assetid: T:Microsoft.Isam.Esent.Interop.EsentOneDatabasePerSessionException
 ms:mtpsurl: https://msdn.microsoft.com/library/microsoft.isam.esent.interop.esentonedatabasepersessionexception(v=EXCHG.10)
@@ -24,29 +24,29 @@ api_type:
 api_location:
 - Microsoft.Isam.Esent.Interop.dll
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: 4b5f8c69397c9105eed8b0788faf3fe24af744d1
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: b7473add15117f7912abbb66aee5cfc407c07cba45d8281a2b74aea02108abeb
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106356104"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119782510"
 ---
-# <a name="esentonedatabasepersessionexception-class"></a>Esentonedatabasepersessionexception-Klasse
+# <a name="esentonedatabasepersessionexception-class"></a>EsentOneDatabasePerSessionException-Klasse
 
-Basisklasse für JET_err. Onedatabasepersession-Ausnahmen.
+Basisklasse für JET_err. OneDatabasePerSession-Ausnahmen.
 
 ## <a name="inheritance-hierarchy"></a>Vererbungshierarchie
 
 [System.Object](/dotnet/api/system.object)  
   [System.Exception](/dotnet/api/system.exception)  
-    [Microsoft. ISAM. ESENT. esentexception](./esentexception-class.md)  
-      [Microsoft. ISAM. ESENT. Interop. esenterrorexception](./esenterrorexception-class.md)  
-        [Microsoft. ISAM. ESENT. Interop. esentapiexception](./esentapiexception-class.md)  
-          [Microsoft. ISAM. ESENT. Interop. esentusageexception](./esentusageexception-class.md)  
-            Microsoft. ISAM. ESENT. Interop. esentonedatabasepersessionexception  
+    [Microsoft.Isam.Esent.EsentException](./esentexception-class.md)  
+      [Microsoft.Isam.Esent.Interop.EsentErrorException](./esenterrorexception-class.md)  
+        [Microsoft.Isam.Esent.Interop.EsentApiException](./esentapiexception-class.md)  
+          [Microsoft.Isam.Esent.Interop.EsentUsageException](./esentusageexception-class.md)  
+            Microsoft.Isam.Esent.Interop.EsentOneDatabasePerSessionException  
 
-**Namespace:**  [Microsoft. ISAM. ESENT. Interop](./microsoft.isam.esent.interop-namespace.md)  
-**Assembly:**  Microsoft. ISAM. ESENT. Interop (in Microsoft.Isam.Esent.Interop.dll)
+**Namespace:**  [Microsoft.Isam.Esent.Interop](./microsoft.isam.esent.interop-namespace.md)  
+**Assembly:**  Microsoft.Isam.Esent.Interop (in Microsoft.Isam.Esent.Interop.dll)
 
 ## <a name="syntax"></a>Syntax
 
@@ -68,10 +68,10 @@ public sealed class EsentOneDatabasePerSessionException : EsentUsageException
 
 Alle öffentlichen statischen Elemente dieses Typs (Shared in Microsoft Visual Basic) sind threadsicher. Bei Instanzmembern ist die Threadsicherheit nicht gewährleistet.
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
-#### <a name="reference"></a>Referenz
+#### <a name="reference"></a>Verweis
 
-[Esentonedatabasepersessionexception-Member](./esentonedatabasepersessionexception-members.md)
+[EsentOneDatabasePerSessionException-Member](./esentonedatabasepersessionexception-members.md)
 
-[Microsoft. ISAM. ESENT. Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)
+[Microsoft.Isam.Esent.Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)

@@ -1,35 +1,35 @@
 ---
-description: Damit die Anwendung mit mehreren Monitoren sowohl auf Systemen mit als auch ohne Unterstützung mehrerer Monitore funktioniert, verknüpfen Sie Ihre Anwendung mit "multimon. h".
+description: Damit Ihre Anwendung mit mehreren Monitorawares sowohl auf Systemen mit als auch ohne Unterstützung mehrerer Monitore funktioniert, verknüpfen Sie Ihre Anwendung mit Multimon.h.
 ms.assetid: 8667305e-ca76-49cb-878e-07814431e6db
-title: Mehrere Monitor Anwendungen auf verschiedenen Systemen
+title: Mehrere Monitoranwendungen auf unterschiedlichen Systemen
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: ec5d470861136ac9362d986b8647c86abee7021b
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: a4c597261063f49b6e6856576e3528698291348afb2b8478d854a824b92d2cc4
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104978528"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119037718"
 ---
-# <a name="multiple-monitor-applications-on-different-systems"></a>Mehrere Monitor Anwendungen auf verschiedenen Systemen
+# <a name="multiple-monitor-applications-on-different-systems"></a>Mehrere Monitoranwendungen auf unterschiedlichen Systemen
 
-Damit die Anwendung mit mehreren Monitoren sowohl auf Systemen mit als auch ohne Unterstützung mehrerer Monitore funktioniert, verknüpfen Sie Ihre Anwendung mit "multimon. h". Sie müssen auch \_ multitimon- \_ Stub für die Kompilierung in genau einer C-Datei definieren. Wenn das System mehrere Monitore nicht unterstützt, werden Standardwerte von " [**GetSystemMetrics**](/windows/win32/api/winuser/nf-winuser-getsystemmetrics) " zurückgegeben, und die Funktionen mehrerer Monitore fungieren so, als ob nur eine Anzeige vorhanden ist. Auf mehreren Überwachungssystemen funktioniert die Anwendung normal.
+Damit Ihre Anwendung mit mehreren Monitorawares sowohl auf Systemen mit als auch ohne Unterstützung mehrerer Monitore funktioniert, verknüpfen Sie Ihre Anwendung mit Multimon.h. Außerdem müssen Sie COMPILE \_ MULTIMON \_ STUBS in genau einer C-Datei definieren. Wenn das System nicht mehrere Monitore unterstützt, gibt dies Standardwerte von [**GetSystemMetrics**](/windows/win32/api/winuser/nf-winuser-getsystemmetrics) zurück, und die verschiedenen Monitorfunktionen fungieren so, als ob nur eine Anzeige zur Verfügung steht. Auf mehreren Überwachungssystemen funktioniert Ihre Anwendung normal.
 
-Da negative Koordinaten problemlos in einem Multimonitor-System ausgeführt werden können, sollten Sie Koordinaten, die in lParam verpackt sind, mithilfe der Makros **get \_ X \_ LPARAM** und **get \_ Y \_ LPARAM** abrufen.
+Da negative Koordinaten in einem System mit mehreren Monitoren leicht vorkommen können, sollten Sie koordinaten, die im lParam gepackt sind, mithilfe der **Get \_ X \_ LPARAM-** und **GET \_ Y \_ LPARAM-Makros** abrufen.
 
-Verwenden Sie keine negativen Koordinaten oder Koordinaten, die größer als SM \_ cxscreen und SM \_ cyscreen sind, um ein Fenster auszublenden. Windows, die diese Grenzwerte zum Ausblenden verwenden, werden möglicherweise auf einem anderen Monitor angezeigt. Verwenden Sie diese Grenzwerte auch nicht, um ein Fenster sichtbar zu machen, da dies dazu führen kann, dass ein Fenster an den primären Monitor angedostet wird. Es empfiehlt sich, vorhandene Anwendungen auf diese Probleme zu überprüfen. Sie können jedoch Probleme in vorhandenen Anwendungen minimieren, indem Sie die Anwendung auf dem primären Monitor ausführen oder den primären Monitor in der oberen linken Ecke des virtuellen Bildschirms aufbewahren.
+Verwenden Sie keine negativen Koordinaten oder Koordinaten, die größer als SM CXSCREEN und \_ SM \_ CYSCREEN sind, um ein Fenster auszublenden. Windows, die diese Grenzwerte zum Ausblenden verwenden, werden möglicherweise auf einem anderen Monitor angezeigt. Verwenden Sie diese Grenzwerte nicht, um ein Fenster sichtbar zu halten, da dies dazu führen kann, dass ein Fenster am primären Monitor angezeigt wird. Es ist am besten, vorhandene Anwendungen für diese Probleme erneut zu verwenden. Sie können jedoch Probleme in vorhandenen Anwendungen minimieren, indem Sie die Anwendung auf dem primären Monitor ausführen oder den primären Monitor in der oberen linken Ecke des virtuellen Bildschirms befingen.
 
-Beachten Sie, dass SM \_ cxmaxtrack und SM \_ cymaxtrack für den Desktop und nicht nur für einen Monitor definiert sind. Windows, das diese Grenzen verwendet, muss möglicherweise neu definiert werden.
+Beachten Sie, dass SM \_ CXMAXTRACK und SM CYMAXTRACK nicht nur für einen Monitor, sondern für den \_ Desktop definiert sind. Windows verwendung dieser Grenzwerte müssen möglicherweise neu definiert werden.
 
-Ein übergeordnetes oder verwandtes Fenster ist möglicherweise nicht auf dem gleichen Monitor wie ein untergeordnetes Fenster. Zum Auffinden des Monitors eines Fensters sollten Anwendungen die [**monitorfromwindow**](/windows/desktop/api/Winuser/nf-winuser-monitorfromwindow) -Funktion verwenden.
+Ein übergeordnetes oder verwandtes Fenster ist möglicherweise nicht auf demselben Monitor wie ein untergeordnetes Fenster. Um den Monitor eines Fensters zu suchen, sollten Anwendungen die [**MonitorFromWindow-Funktion**](/windows/desktop/api/Winuser/nf-winuser-monitorfromwindow) verwenden.
 
-Um einen Bildschirmschoner auf allen Monitoren anzuzeigen, verknüpfen Sie mit der aktuellen Version von SCRNSAVE. lib. Andernfalls wird der Bildschirmschoner möglicherweise nur auf dem primären Monitor angezeigt, und die anderen Monitore bleiben unverändert. Mit der aktuellen Datei "Scrnsave. lib" verknüpfte Bildschirmschoner funktionieren sowohl für einzelne als auch für mehrere Monitorsysteme. Um für jeden Monitor einen anderen Bildschirmschoner zu verwenden, verwenden Sie die Funktionen mehrerer Monitore, um die einzelnen Monitore separat zu verarbeiten.
+Damit ein Bildschirmschoner auf allen Monitoren angezeigt wird, verknüpfen Sie die Datei mit der neuesten Version von "Scrnsave.lib". Andernfalls wird der Bildschirmschoner möglicherweise nur auf dem primären Monitor angezeigt, und die anderen Monitore bleiben unverändert. Bildschirmschoner, die mit der neuesten Datei "Scrnsave.lib" verknüpft sind, funktionieren sowohl auf einzel- als auch auf mehreren Überwachungssystemen. Um einen anderen Bildschirmschoner auf jedem Monitor zu verwenden, verwenden Sie die verschiedenen Monitorfunktionen, um jeden Monitor separat zu verarbeiten.
 
-Eingabegeräte, die Koordinaten für das System in absoluten Koordinaten (z. b. Tablets) bereitzustellen, haben ihre Cursor Eingabe auf den primären Monitor beschränkt. Informationen zum Wechseln von Tablet-Eingaben zwischen Monitoren finden Sie in den Anweisungen des OEM.
+Eingabegeräte, die Koordinaten in absoluten Koordinaten an das System liefern, z. B. Tablets, haben ihre Cursoreingabe auf den primären Monitor beschränkt. Informationen zum Wechseln der Tableteingabe zwischen Monitoren finden Sie in den Anweisungen des OEM.
 
-Zum Zuordnen von Maus Eingaben, die in absoluten Koordinaten an den gesamten virtuellen Bildschirm gesendet werden, verwenden Sie die [**Eingabe**](/windows/win32/api/winuser/ns-winuser-input) Struktur mit mouseeventf \_ absolute und mouseeventf \_ virtualdesktop.
+Verwenden Sie die [**INPUT-Struktur**](/windows/win32/api/winuser/ns-winuser-input) mit \_ MOUSEEVENTF ABSOLUTE und MOUSEEVENTF VIRTUALDESKTOP, um Mauseingaben, die in absoluten Koordinaten gesendet werden, dem gesamten virtuellen Bildschirm \_ zu zuordnen.
 
-Die [**BitBLT**](/windows/desktop/api/Wingdi/nf-wingdi-bitblt) -Funktion funktioniert gut für mehrere Monitorsysteme. Die Funktionen [**MaskBlt**](/windows/desktop/api/Wingdi/nf-wingdi-maskblt), [**plgblt**](/windows/desktop/api/Wingdi/nf-wingdi-plgblt), [**StretchBlt**](/windows/desktop/api/Wingdi/nf-wingdi-stretchblt)und [**TransparentBlt**](/windows/desktop/api/WinGdi/nf-wingdi-transparentblt) schlagen jedoch fehl, wenn sich die Quell-und Zielgeräte Kontexte unterscheiden.
+Die [**BitBlt-Funktion**](/windows/desktop/api/Wingdi/nf-wingdi-bitblt) funktioniert gut für mehrere Überwachungssysteme. Die Funktionen [**MaskBlt,**](/windows/desktop/api/Wingdi/nf-wingdi-maskblt) [**PlgBlt,**](/windows/desktop/api/Wingdi/nf-wingdi-plgblt) [**StretchBlt**](/windows/desktop/api/Wingdi/nf-wingdi-stretchblt)und [**TransparentBlt**](/windows/desktop/api/WinGdi/nf-wingdi-transparentblt) können jedoch nicht verwendet werden, wenn sich die Quell- und Zielgerätekontexte unterscheiden.
 
  
 

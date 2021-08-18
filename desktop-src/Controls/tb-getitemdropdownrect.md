@@ -1,9 +1,9 @@
 ---
-title: TB_GETITEMDROPDOWNRECT Meldung (kommstrg. h)
-description: Ruft das umgebende Rechteck des Dropdown Fensters für ein Symbolleisten Element mit der btns-Dropdown Liste für den Stil \_ ab.
+title: TB_GETITEMDROPDOWNRECT (Commctrl.h)
+description: Ruft das umgebundene Rechteck des Dropdownfensters für ein Symbolleistenelement mit dem Stil BTNS \_ DROPDOWN ab.
 ms.assetid: 4b59c96b-8d75-44c1-b771-c1d62502a2c2
 keywords:
-- Windows-Steuerelemente für TB_GETITEMDROPDOWNRECT Meldung
+- TB_GETITEMDROPDOWNRECT meldungssteuerelemente Windows
 topic_type:
 - apiref
 api_name:
@@ -14,38 +14,38 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: dbcbcef725b0ade0bfc776200fa5b191618d2ccb
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: ecd2dfc8a48ff735bfb8bcc99bc0baf36555eee9d995c3f453a95ea2910948a6
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104040231"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119918700"
 ---
-# <a name="tb_getitemdropdownrect-message"></a>TB \_ getitemdropdownrect-Meldung
+# <a name="tb_getitemdropdownrect-message"></a>TB \_ GETITEMDROPDOWNRECT-Nachricht
 
-Ruft das umgebende Rechteck des Dropdown Fensters für ein Symbolleisten Element mit der [**btns- \_ Dropdown**](toolbar-control-and-button-styles.md)Liste für den Stil ab.
+Ruft das umgebundene Rechteck des Dropdownfensters für ein Symbolleistenelement mit dem Stil [**BTNS \_ DROPDOWN ab.**](toolbar-control-and-button-styles.md)
 
 ## <a name="parameters"></a>Parameter
 
 <dl> <dt>
 
-*wParam* \[ in\]
+*wParam* \[ In\]
 </dt> <dd>
 
-Der null basierte Index des Symbolleisten-Steuer Elements, für das das umgebende Rechteck abgerufen werden soll.
+Der nullbasierte Index des Symbolleisten-Steuerelementelements, für das das umgebundene Rechteck abgerufen werden soll.
 
 </dd> <dt>
 
-*LPARAM* \[ in, out\]
-</dt> <dd>Ein Zeiger auf eine <a href="/previous-versions//dd162897(v=vs.85)">**Rect**</a> -Struktur, um die umschließenden Rechteck Informationen zu erhalten. Der Absender der Nachricht ist für die Zuordnung dieser Struktur verantwortlich. Die in der **Rect** -Struktur zurückgegebenen Koordinaten werden als Client Koordinaten ausgedrückt.</dd> </dl>
+*lParam* \[ in, out\]
+</dt> <dd>Ein Zeiger auf eine <a href="/previous-versions//dd162897(v=vs.85)">**RECT-Struktur,**</a> um die Informationen zum umgebundenen Rechteck zu empfangen. Der Absender der Nachricht ist für die Zuordnung dieser Struktur verantwortlich. Die in der **RECT-Struktur zurückgegebenen Koordinaten** werden als Clientkoordinaten ausgedrückt.</dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt immer einen Wert ungleich 0 zurück.
+Gibt immer einen Wert ungleich 0 (null) zurück.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Das Element muss den [**btns- \_ Dropdown**](toolbar-control-and-button-styles.md) Stil aufweisen.
+Das Element muss das [**BTNS-DROPDOWN-Format \_**](toolbar-control-and-button-styles.md) haben.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -53,9 +53,9 @@ Das Element muss den [**btns- \_ Dropdown**](toolbar-control-and-button-styles.m
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                        |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/>                                  |
-| Header<br/>                   | <dl> <dt>Kommstrg. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ Vista-Desktop-Apps\]<br/>                                        |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                                  |
+| Header<br/>                   | <dl> <dt>Commctrl.h</dt> </dl> |
 
 
 

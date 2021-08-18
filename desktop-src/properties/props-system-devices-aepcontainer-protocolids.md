@@ -1,19 +1,19 @@
 ---
-description: Liste der Protokoll-IDs, die zum Aufbau des Geräte Zuordnungs Endpunkt-Containers beigetragen haben.
+description: Liste der Protokoll-IDs, die zum Erstellen des Gerätezuordnungsendpunktcontainers beigetragen haben.
 ms.assetid: 23009ff1-1749-48b2-8a45-dfddaea22f9d
 title: System.Devices.AepContainer.ProtocolIds
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: d5bd1c16ff517791c8d06d59dff6161ef88b8b7a
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: f2c70fcae634c34b1b0e004a598d7046f3bdf5cd3234e951df8adedcace5e5fb
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106349932"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119775900"
 ---
 # <a name="systemdevicesaepcontainerprotocolids"></a>System.Devices.AepContainer.ProtocolIds
 
-Liste der Protokoll-IDs, die zum Aufbau des Geräte Zuordnungs Endpunkt-Containers beigetragen haben
+Liste der Protokoll-IDs, die zum Erstellen des Gerätezuordnungsendpunktcontainers beigetragen haben
 
 ## <a name="windows-10-version-1703-windows-10-version-1607-windows-10-version-1511-windows-10-version-1507"></a>Windows 10, Version 1703, Windows 10, Version 1607, Windows 10, Version 1511, Windows 10, Version 1507
 
@@ -31,54 +31,54 @@ propertyDescription
       IsInnate = true
 ```
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Pkey-Werte werden in "propkey. h" definiert.
+PKEY-Werte werden in Propkey.h definiert.
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[propertydescription](./propdesc-schema-propertydescription.md)
+[propertyDescription](./propdesc-schema-propertydescription.md)
 </dt> <dt>
 
-[SearchInfo](./propdesc-schema-searchinfo.md)
+[searchInfo](./propdesc-schema-searchinfo.md)
 </dt> <dt>
 
-[Labelinfo](./propdesc-schema-labelinfo.md)
+[labelInfo](./propdesc-schema-labelinfo.md)
 </dt> <dt>
 
-[TypeInfo](./propdesc-schema-typeinfo.md)
+[Typeinfo](./propdesc-schema-typeinfo.md)
 </dt> <dt>
 
-[Display Info](./propdesc-schema-displayinfo.md)
+[displayInfo](./propdesc-schema-displayinfo.md)
 </dt> <dt>
 
-[StringFormat](./propdesc-schema-stringformat.md)
+[Stringformat](./propdesc-schema-stringformat.md)
 </dt> <dt>
 
-[BooleanFormat](./propdesc-schema-booleanformat.md)
+[booleanFormat](./propdesc-schema-booleanformat.md)
 </dt> <dt>
 
-[NumberFormat](./propdesc-schema-numberformat.md)
+[Numberformat](./propdesc-schema-numberformat.md)
 </dt> <dt>
 
 [dateTimeFormat](./propdesc-schema-datetimeformat.md)
 </dt> <dt>
 
-[enumeratedlist](./propdesc-schema-enumeratedlist.md)
+[enumeratedList](./propdesc-schema-enumeratedlist.md)
 </dt> <dt>
 
-[DrawControl](./propdesc-schema-drawcontrol.md)
+[drawControl](./propdesc-schema-drawcontrol.md)
 </dt> <dt>
 
-[editcontrol](./propdesc-schema-editcontrol.md)
+[editControl](./propdesc-schema-editcontrol.md)
 </dt> <dt>
 
-[FilterControl](./propdesc-schema-filtercontrol.md)
+[Filtercontrol](./propdesc-schema-filtercontrol.md)
 </dt> <dt>
 
-[querycontrol](./propdesc-schema-querycontrol.md)
+[queryControl](./propdesc-schema-querycontrol.md)
 </dt> </dl>
 
  

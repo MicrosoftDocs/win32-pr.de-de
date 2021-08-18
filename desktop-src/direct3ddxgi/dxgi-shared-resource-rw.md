@@ -1,5 +1,5 @@
 ---
-description: Freigegebene Ressourcenkonstanten.
+description: Freigegebene Ressourcenkonst constants.
 ms.assetid: 91FD9AAC-D13F-499E-BC17-73F5D5E2FE91
 title: DXGI_SHARED_RESOURCE_RW (Dxgi1 \_ 2.h)
 ms.topic: reference
@@ -13,14 +13,14 @@ ms.locfileid: "119984110"
 ---
 # <a name="dxgi_shared_resource_rw"></a>DXGI \_ SHARED \_ RESOURCE \_ RW
 
-Freigegebene Ressourcenkonstanten.
+Freigegebene Ressourcenkonst constants.
 
 
 
-| Konstante/Wert                                                                                                                                                                                                                                                       | BESCHREIBUNG                              |
+| Konstante/Wert                                                                                                                                                                                                                                                       | Beschreibung                              |
 |:---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|:-----------------------------------------|
-| <span id="DXGI_SHARED_RESOURCE_READ"></span><span id="dxgi_shared_resource_read"></span><dl> <dt>**DXGI \_ FREIGEGEBENE \_ RESSOURCE \_ READ**</dt> <dt>0x80000000L</dt> </dl> | Die freigegebene Ressource ist schreibgeschützt.<br/> |
-| <span id="DXGI_SHARED_RESOURCE_WRITE"></span><span id="dxgi_shared_resource_write"></span><dl> <dt>**DXGI \_ FREIGEGEBENE \_ \_ RESSOURCE: SCHREIBEN**</dt> <dt>1</dt> </dl>        | Die freigegebene Ressource kann geschrieben werden.<br/> |
+| <span id="DXGI_SHARED_RESOURCE_READ"></span><span id="dxgi_shared_resource_read"></span><dl> <dt>**DXGI \_ FREIGEGEBENE \_ \_ RESSOURCE READ**</dt> <dt>0x80000000L</dt> </dl> | Freigegebene Ressourcen sind schreibgeschützt.<br/> |
+| <span id="DXGI_SHARED_RESOURCE_WRITE"></span><span id="dxgi_shared_resource_write"></span><dl> <dt>**DXGI \_ FREIGEGEBENE \_ RESSOURCE \_ WRITE**</dt> <dt>1</dt> </dl>        | Freigegebene Ressource kann geschrieben werden.<br/> |
 
 
 

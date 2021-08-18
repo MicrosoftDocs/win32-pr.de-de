@@ -1,9 +1,9 @@
 ---
-title: Component (debugdatatype)-Element
-description: Der Name der Komponente, die die Ablauf Verfolgungs Meldung protokolliert hat.
+title: Component(DebugDataType)-Element
+description: Der Name der Komponente, die die Ablaufverfolgungsmeldung protokolliert hat.
 ms.assetid: fa837d46-086b-4be1-b5a3-f68aebc9fe1c
 keywords:
-- Komponenten Element-Ereignisprotokoll
+- Komponentenelement EventLog
 topic_type:
 - apiref
 api_name:
@@ -13,16 +13,16 @@ api_type:
 ms.topic: reference
 ms.date: 05/31/2018
 api_location: ''
-ms.openlocfilehash: dce9919a07715aeb7058f811e60faf763459e27b
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: b31e3ae5bded11736a3af6efc4b237f999afa4e4348ec84ddafa0b314ee69d1d
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104105182"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118120368"
 ---
-# <a name="component-debugdatatype-element"></a>Component (debugdatatype)-Element
+# <a name="component-debugdatatype-element"></a>Component(DebugDataType)-Element
 
-Der Name der Komponente, die die Ablauf Verfolgungs Meldung protokolliert hat.
+Der Name der Komponente, die die Ablaufverfolgungsmeldung protokolliert hat.
 
 ``` syntax
 <xs:element name="Component"
@@ -30,7 +30,7 @@ Der Name der Komponente, die die Ablauf Verfolgungs Meldung protokolliert hat.
  />
 ```
 
-Das **Component** -Element wird durch den komplexen Typ [**debugdatatype**](eventschema-debugdatatype-complextype.md) definiert.
+Das **Component-Element** wird durch den komplexen [**DebugDataType-Typ**](eventschema-debugdatatype-complextype.md) definiert.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -38,12 +38,12 @@ Das **Component** -Element wird durch den komplexen Typ [**debugdatatype**](even
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>       |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/> |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ Vista-Desktop-Apps\]<br/>       |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 

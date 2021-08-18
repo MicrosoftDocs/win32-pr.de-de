@@ -1,36 +1,36 @@
 ---
-title: Vorgehensweise beim Verwenden von Statusanzeige-Steuerelementen
-description: In diesem Thema wird erläutert, wie Sie eine Statusanzeige verwenden, um den Fortschritt eines langen Datei Verarbeitungsvorgangs anzuzeigen.
+title: Verwenden von Statusleisten-Steuerelementen
+description: In diesem Thema wird erläutert, wie Sie mithilfe einer Statusleiste den Fortschritt eines längeren Dateiparsing-Vorgangs angeben.
 ms.assetid: 4CC25F3A-9CAF-4ADC-B29C-3FACDD73D5A0
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 6c71ff33a14f2d2af5fa8735c5197c50acaa948b
-ms.sourcegitcommit: 5f33645661bf8c825a7a2e73950b1f4ea0f1cd82
+ms.openlocfilehash: e65d47d6b41422853d401a1fb2686e03e3d3f5bc378b78b7ba762b86fc7ffe30
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/21/2020
-ms.locfileid: "103949167"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119826420"
 ---
-# <a name="how-to-use-progress-bar-controls"></a>Vorgehensweise beim Verwenden von Statusanzeige-Steuerelementen
+# <a name="how-to-use-progress-bar-controls"></a>Verwenden von Statusleisten-Steuerelementen
 
-In diesem Thema wird erläutert, wie Sie eine Statusanzeige verwenden, um den Fortschritt eines langen Datei Verarbeitungsvorgangs anzuzeigen.
+In diesem Thema wird erläutert, wie Sie mithilfe einer Statusleiste den Fortschritt eines längeren Dateiparsing-Vorgangs angeben.
 
-## <a name="what-you-need-to-know"></a>Was Sie wissen müssen
+## <a name="what-you-need-to-know"></a>Wichtige Informationen
 
 ### <a name="technologies"></a>Technologien
 
--   [Windows-Steuerelemente](window-controls.md)
+-   [Windows Steuerelemente](window-controls.md)
 
 ### <a name="prerequisites"></a>Voraussetzungen
 
 -   C/C++
--   Programmieren der Windows-Benutzeroberfläche
+-   Windows Benutzeroberfläche-Programmierung
 
 ## <a name="instructions"></a>Anweisungen
 
-### <a name="create-a-progress-bar-control"></a>Erstellen eines Statusanzeige-Steuer Elements
+### <a name="create-a-progress-bar-control"></a>Erstellen eines Statusleisten-Steuerelements
 
-Der folgende Beispielcode erstellt eine Statusanzeige und positioniert Sie am unteren Rand des Client Bereichs des übergeordneten Fensters. Die Höhe der Statusanzeige basiert auf der Höhe der in einer Schiebe Leiste verwendeten Pfeil Bitmap. Der Bereich basiert auf der Größe der Datei dividiert durch 2.048, d. h. der Größe jedes "Blocks" der aus der Datei gelesenen Daten. Im Beispiel wird außerdem ein Inkrement festgelegt, und die aktuelle Position der Statusanzeige wird um das Inkrement erhöht, nachdem die einzelnen Blöcke verarbeitet wurden.
+Der folgende Beispielcode erstellt eine Statusleiste und positioniert sie am unteren Rand des Clientbereichs des übergeordneten Fensters. Die Höhe der Statusleiste basiert auf der Höhe der Pfeilbitmap, die in einer Bildlaufleiste verwendet wird. Der Bereich basiert auf der Größe der Datei geteilt durch 2.048. Dies ist die Größe jedes "Daten chunks", der aus der Datei gelesen wird. Das Beispiel legt auch ein Inkrement fest und erhöht die aktuelle Position der Statusleiste um das Inkrement, nachdem die einzelnen Blocke analyset wurden.
 
 
 ```C++
@@ -124,24 +124,24 @@ BOOL ParseALargeFile(HWND hwndParent, LPTSTR lpszFileName)
 
 
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Sie müssen sicherstellen, dass die Funktion "read [**File**](/windows/desktop/api/fileapi/nf-fileapi-readfile) " ordnungsgemäß verwendet wird, um die Sicherheit Ihrer Anwendung zu gewährleisten. Im Beispielcode sollten Sie z. b. überprüfen, ob `ReadFile` alle angeforderten Daten tatsächlich von gelesen werden.
+Sie müssen sicherstellen, dass Die [**ReadFile-Funktion**](/windows/desktop/api/fileapi/nf-fileapi-readfile) ordnungsgemäß verwendet wird, um die Sicherheit Ihrer Anwendung sicherzustellen. Im Beispielcode sollten Sie beispielsweise überprüfen, ob tatsächlich alle `ReadFile` angeforderten Daten gelesen werden.
 
-Beachten Sie auch, [**dass der vierte Parameter von "**](/windows/desktop/api/fileapi/nf-fileapi-createfilea)–" (lpsecurity- \_ Attribute)**null**– Standard Sicherheitswerte festlegt. Wenn Sie bestimmte Sicherheitseinstellungen benötigen, müssen Sie die entsprechenden Werte in den Elementen der-Struktur festlegen. Ruft **sizeof** auf, um die korrekte Größe der **lpsecurity- \_ Attribut** Struktur festzulegen.
+Beachten Sie auch, dass der vierte Parameter von [**CreateFile**](/windows/desktop/api/fileapi/nf-fileapi-createfilea)–(LPSECURITY \_ ATTRIBUTES)**NULL**– Standardwerte für die Sicherheit legt. Wenn Sie bestimmte Sicherheitseinstellungen benötigen, müssen Sie die entsprechenden Werte in den -Membern der -Struktur festlegen. Rufen **Sie sizeof** auf, um die richtige Größe der **LPSECURITY \_ ATTRIBUTES-Struktur** fest.
 
-Weitere Informationen finden Sie unter [Sicherheitsüberlegungen: Microsoft Windows](sec-comctls.md)-Steuerelemente.
+Weitere Informationen finden Sie unter [Sicherheitsüberlegungen: Microsoft Windows Controls](sec-comctls.md).
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[Verwenden von Statusanzeige-Steuerelementen](using-progress-bar-controls.md)
+[Verwenden von Statusleisten-Steuerelementen](using-progress-bar-controls.md)
 </dt> <dt>
 
-[Überlegungen zur Sicherheit: Microsoft Windows-Steuerelemente](sec-comctls.md)
+[Sicherheitsüberlegungen: Microsoft Windows Controls](sec-comctls.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 

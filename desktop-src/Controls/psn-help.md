@@ -1,9 +1,9 @@
 ---
-title: PSN_HELP Benachrichtigungs Code (prsht. h)
-description: Benachrichtigt eine Seite, dass der Benutzer auf die Schaltfläche "Hilfe" geklickt hat. Dieser Benachrichtigungs Code wird in Form einer WM-Benachrichtigungs \_ Meldung gesendet.
+title: PSN_HELP Benachrichtigungscode (Prsht.h)
+description: Benachrichtigt eine Seite, dass der Benutzer auf die Schaltfläche Hilfe geklickt hat. Dieser Benachrichtigungscode wird in Form einer WM \_ NOTIFY-Nachricht gesendet.
 ms.assetid: 4ad2c608-8caa-44c6-845d-4c0c1bd80763
 keywords:
-- Windows-Steuerelemente für PSN_HELP Benachrichtigungs
+- PSN_HELP Benachrichtigungscode Windows Controls
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: fa60e039211e4c8e63a831ae547c3db116ede3f5
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 9f03dc1e016780494c8c5ca35e62baf2570af04ee77daf21f404d7371e9df168
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "106342455"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119588200"
 ---
-# <a name="psn_help-notification-code"></a>\_Benachrichtigungs Code für PSN-Hilfe
+# <a name="psn_help-notification-code"></a>PSN \_ HELP-Benachrichtigungscode
 
-Benachrichtigt eine Seite, dass der Benutzer auf die Schaltfläche "Hilfe" geklickt hat. Dieser Benachrichtigungs Code wird in Form einer WM- [**\_ Benachrichtigungs**](wm-notify.md) Meldung gesendet.
+Benachrichtigt eine Seite, dass der Benutzer auf die Schaltfläche Hilfe geklickt hat. Dieser Benachrichtigungscode wird in Form einer [**WM \_ NOTIFY-Nachricht**](wm-notify.md) gesendet.
 
 
 ```C++
@@ -41,7 +41,7 @@ PSN_HELP
 *lParam* 
 </dt> <dd>
 
-Zeiger auf eine [**pshnotify**](/windows/desktop/api/Prsht/ns-prsht-pshnotify) -Struktur, die Informationen über den Benachrichtigungs Code enthält. Diese Struktur enthält eine [**NMHDR**](/windows/desktop/api/richedit/ns-richedit-nmhdr) -Struktur als ersten Member, **HDR**. Der **hwndfrom** -Member dieser **NMHDR** -Struktur enthält das Handle für das Eigenschaften Blatt. Der **LPARAM** -Member der **pshnotify** -Struktur enthält keine Informationen.
+Zeiger auf eine [**PSHNOTIFY-Struktur,**](/windows/desktop/api/Prsht/ns-prsht-pshnotify) die Informationen zum Benachrichtigungscode enthält. Diese Struktur enthält eine [**NMHDR-Struktur**](/windows/desktop/api/richedit/ns-richedit-nmhdr) als erstes Element, **hdr.** Der **hwndFrom-Member** dieser **NMHDR-Struktur** enthält das Handle für das Eigenschaftenblatt. Der **lParam-Member** der **PSHNOTIFY-Struktur** enthält keine Informationen.
 
 </dd> </dl>
 
@@ -49,12 +49,12 @@ Zeiger auf eine [**pshnotify**](/windows/desktop/api/Prsht/ns-prsht-pshnotify) -
 
 Kein Rückgabewert.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-In einer Anwendung sollten Hilfe Informationen für die Seite angezeigt werden.
+Eine Anwendung sollte Hilfeinformationen für die Seite anzeigen.
 
 > [!Note]  
-> Dieser Benachrichtigungs Code wird nicht unterstützt, wenn der Aero Wizard Style ([**PSH \_ aerowizard**](/windows/desktop/api/Prsht/ns-prsht-propsheetheadera_v2)) verwendet wird.
+> Dieser Benachrichtigungscode wird nicht unterstützt, wenn sie den Stil des Assistenten Für Dies verwendet wird ([**\_ PSHWIEWIESWIZARD**](/windows/desktop/api/Prsht/ns-prsht-propsheetheadera_v2)).
 
  
 
@@ -64,9 +64,9 @@ In einer Anwendung sollten Hilfe Informationen für die Seite angezeigt werden.
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                     |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/>                               |
-| Header<br/>                   | <dl> <dt>Prsht. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur Vista-Desktop-Apps\]<br/>                                     |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                               |
+| Header<br/>                   | <dl> <dt>Prsht.h</dt> </dl> |
 
 
 

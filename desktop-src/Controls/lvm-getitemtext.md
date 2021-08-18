@@ -1,9 +1,9 @@
 ---
-title: LVM_GETITEMTEXT Meldung (kommstrg. h)
-description: Ruft den Text eines Listen Ansichts Elements oder unter Elements ab. Sie können diese Nachricht explizit oder mithilfe des ListView \_ GetItemText-Makros senden.
+title: LVM_GETITEMTEXT Meldung (Commctrl.h)
+description: Ruft den Text eines Listenansichtselements oder -unterelements ab. Sie können diese Nachricht explizit oder mithilfe des ListView \_ GetItemText-Makros senden.
 ms.assetid: 5711ed18-a766-4e7f-9e9d-b9203231b369
 keywords:
-- Windows-Steuerelemente für LVM_GETITEMTEXT Meldung
+- LVM_GETITEMTEXT Windows-Steuerelemente für Nachrichten
 topic_type:
 - apiref
 api_name:
@@ -16,16 +16,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: c71eec6b9dab4c649b11da5b24568eea816774ef
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 32d5292f9814b3ef62667d44582eab44a2f18ac6c274682d180dd26f1b7cdd9f
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104105501"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120062580"
 ---
-# <a name="lvm_getitemtext-message"></a>LVM- \_ GetItemText-Nachricht
+# <a name="lvm_getitemtext-message"></a>LVM \_ GETITEMTEXT-Nachricht
 
-Ruft den Text eines Listen Ansichts Elements oder unter Elements ab. Sie können diese Nachricht explizit oder mithilfe des [**ListView \_ GetItemText**](/windows/desktop/api/Commctrl/nf-commctrl-listview_getitemtext) -Makros senden.
+Ruft den Text eines Listenansichtselements oder -unterelements ab. Sie können diese Nachricht explizit oder mithilfe des [**ListView \_ GetItemText-Makros**](/windows/desktop/api/Commctrl/nf-commctrl-listview_getitemtext) senden.
 
 ## <a name="parameters"></a>Parameter
 
@@ -34,26 +34,26 @@ Ruft den Text eines Listen Ansichts Elements oder unter Elements ab. Sie können
 *wParam* 
 </dt> <dd>
 
-Der Index des Listen Ansichts Elements.
+Index des Listenansichtselements.
 
 </dd> <dt>
 
 *lParam* 
 </dt> <dd>
 
-Zeiger auf eine [**lvitem**](/windows/win32/api/commctrl/ns-commctrl-lvitema) -Struktur. Um den Element Text abzurufen, legen Sie **iSubItem** auf NULL fest. Um den Text eines unter Elements abzurufen, legen Sie **iSubItem** auf den Index des unter Elements fest. Der **pszText** -Member verweist auf einen Puffer, der den Text empfängt. Der **cchtextmax** -Member gibt die Anzahl der Zeichen im Puffer an.
+Zeiger auf eine [**LVITEM-Struktur.**](/windows/win32/api/commctrl/ns-commctrl-lvitema) Legen Sie **iSubItem** auf 0 (null) fest, um den Elementtext abzurufen. Legen Sie **iSubItem** auf den Index des Unteritems fest, um den Text eines Unteritems abzurufen. Der **pszText-Member** zeigt auf einen Puffer, der den Text empfängt. Das **cchTextMax-Element** gibt die Anzahl der Zeichen im Puffer an.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Wenn Sie diese Meldung explizit senden, wird die Anzahl der Zeichen im **pszText** -Member der [**lvitem**](/windows/win32/api/commctrl/ns-commctrl-lvitema) -Struktur zurückgegeben.
+Wenn Sie diese Nachricht explizit senden, wird die Anzahl der Zeichen im **pszText-Member** der [**LVITEM-Struktur**](/windows/win32/api/commctrl/ns-commctrl-lvitema) zurückgegeben.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Sie können diese Nachricht auch senden, indem Sie das [**ListView \_ GetItemText**](/windows/desktop/api/Commctrl/nf-commctrl-listview_getitemtext) -Makro aufrufen. Dieses Makro gibt jedoch nicht die Länge der Zeichenfolge zurück.
+Sie können diese Nachricht auch senden, indem Sie das [**ListView \_ GetItemText-Makro**](/windows/desktop/api/Commctrl/nf-commctrl-listview_getitemtext) aufrufen. Dieses Makro gibt jedoch nicht die Zeichenfolgenlänge zurück.
 
-**LVM \_ GetItemText** wird unter dem [**LVS-Besitzer \_ Daten**](list-view-window-styles.md) Stil nicht unterstützt.
+**LVM \_ GETITEMTEXT** wird im [**LVS \_ OWNERDATA-Stil**](list-view-window-styles.md) nicht unterstützt.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -61,10 +61,10 @@ Sie können diese Nachricht auch senden, indem Sie das [**ListView \_ GetItemTex
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                        |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/>                                  |
-| Header<br/>                   | <dl> <dt>Kommstrg. h</dt> </dl> |
-| Unicode- und ANSI-Name<br/>   | **LVM \_ Getitemtextw** (Unicode) und **LVM \_ getitemtexta** (ANSI)<br/>           |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur Vista-Desktop-Apps\]<br/>                                        |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                                  |
+| Header<br/>                   | <dl> <dt>Commctrl.h</dt> </dl> |
+| Unicode- und ANSI-Name<br/>   | **LVM \_ GETITEMTEXTW** (Unicode) und **LVM \_ GETITEMTEXTA** (ANSI)<br/>           |
 
 
 

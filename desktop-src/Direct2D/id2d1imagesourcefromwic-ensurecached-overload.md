@@ -1,9 +1,9 @@
 ---
-title: ID2D1ImageSourceFromWic ensurecmore-Methoden (D2d1 \_ 3. h)
-description: Lädt Bilddaten in Caches der Bildquellen, wenn diese Daten noch nicht zwischengespeichert wurden.
+title: ID2D1ImageSourceFromWic EnsureCached-Methoden (D2d1 \_ 3.h)
+description: Lädt Bilddaten in Caches von Bildquellen, wenn diese Daten noch nicht zwischengespeichert sind.
 ms.assetid: 9addc82b-7446-1f2c-5666-f817b8b5707d
 keywords:
-- Ensurecme-Methoden Direct2D
+- EnsureCached-Methoden Direct2D
 topic_type:
 - apiref
 api_location:
@@ -12,25 +12,25 @@ api_type:
 - HeaderDef
 ms.date: 07/02/2019
 ms.topic: reference
-ms.openlocfilehash: 348931ab760379efd6fbe3a31bfd07b1bf19179a
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: e6379c290f3d4ee3de6e60d0d1f5edf0eb7d6c1439395e920eed807af1b9ecfb
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106365672"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119917620"
 ---
-# <a name="id2d1imagesourcefromwicensurecached-methods"></a>ID2D1ImageSourceFromWic:: ensurecme-Methoden
+# <a name="id2d1imagesourcefromwicensurecached-methods"></a>ID2D1ImageSourceFromWic::EnsureCached-Methoden
 
-Lädt Bilddaten in Caches der Bildquellen, wenn diese Daten noch nicht zwischengespeichert wurden.
+Lädt Bilddaten in Caches von Bildquellen, wenn diese Daten noch nicht zwischengespeichert sind.
 
 ### <a name="overload-list"></a>Überladeliste
 
 
 
-| Methode                                                                          | BESCHREIBUNG                                                                        |
+| Methode                                                                          | Beschreibung                                                                        |
 |:--------------------------------------------------------------------------------|:-----------------------------------------------------------------------------------|
-| [**Ensurecus (D2D1 \_ Rect \_ \* )**](/windows/win32/api/d2d1_3/nf-d2d1_3-id2d1imagesourcefromwic-ensurecached(constd2d1_rect_u))  | Stellt sicher, dass ein angegebener Bereich des Abbild Quell Caches aufgefüllt wird.<br/> |
-| [**Ensurecus (D2D1 \_ Rect \_&)**](/windows/win32/api/d2d1_3/nf-d2d1_3-id2d1imagesourcefromwic-ensurecached(constd2d1_rect_u_)) | Stellt sicher, dass ein angegebener Bereich des Abbild Quell Caches aufgefüllt wird.<br/> |
+| [**EnsureCached (D2D1 \_ RECT \_ U \* )**](/windows/win32/api/d2d1_3/nf-d2d1_3-id2d1imagesourcefromwic-ensurecached(constd2d1_rect_u))  | Stellt sicher, dass ein angegebener Bereich des Imagequellencaches aufgefüllt wird.<br/> |
+| [**EnsureCached (D2D1 \_ RECT \_ U&)**](/windows/win32/api/d2d1_3/nf-d2d1_3-id2d1imagesourcefromwic-ensurecached(constd2d1_rect_u_)) | Stellt sicher, dass ein angegebener Bereich des Imagequellencaches aufgefüllt wird.<br/> |
 
 
 
@@ -40,11 +40,11 @@ Lädt Bilddaten in Caches der Bildquellen, wenn diese Daten noch nicht zwischeng
 
 | Anforderung | Wert |
 |-------------------|--------------------------------------------------------------------------------------|
-| Header<br/> | <dl> <dt>D2d1 \_ 3. h</dt> </dl> |
+| Header<br/> | <dl> <dt>D2d1 \_ 3.h</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 

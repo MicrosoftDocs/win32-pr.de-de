@@ -1,29 +1,29 @@
 ---
-description: Eine Erkennung kann verschiedene Möglichkeiten finden, ein Ink-Beispiel in Erkennungs Segmente zu unterteilen. Daher kann die Anzahl der Erkennungs Alternativen auch für ein kleines frei Hand Beispiel sehr erstaunlich sein.
+description: Eine Erkennung kann mehrere Möglichkeiten finden, ein Ink-Beispiel in Erkennungssegmente zu unterteilen. Aus diesem Grund kann die Anzahl der Erkennungs alternativer Erkennungen auch für eine kleine Ink-Stichprobe gestaffelt sein.
 ms.assetid: 7ecffe3f-cbe4-4e65-a1cc-9b08534b26c9
-title: Frei Hand Segmente und-Alternativen
+title: Ink Segments and Alternates
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 91183f6c9628ea798b66d703a59e44b26049e692
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 702c2da4984afd22490827acdf65962abc789d7ad9f0ddab3e602bc688ac6542
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104041705"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119883990"
 ---
-# <a name="ink-segments-and-alternates"></a>Frei Hand Segmente und-Alternativen
+# <a name="ink-segments-and-alternates"></a>Ink Segments and Alternates
 
-Eine Erkennung kann verschiedene Möglichkeiten finden, ein Ink-Beispiel in Erkennungs Segmente zu unterteilen. Daher kann die Anzahl der Erkennungs Alternativen auch für ein kleines frei Hand Beispiel sehr erstaunlich sein.
+Eine Erkennung kann mehrere Möglichkeiten finden, ein Ink-Beispiel in Erkennungssegmente zu unterteilen. Aus diesem Grund kann die Anzahl der Erkennungs alternativer Erkennungen auch für eine kleine Ink-Stichprobe gestaffelt sein.
 
 Beispielsweise kann "t o g e t h e r" die folgenden Ergebnisse liefern:
 
--   "um Sie zu erhalten" (plus Alternativen für jedes Wort)
--   "to Gather" (plus-Alternativen für jedes Wort)
--   "ein-oder-Äther" (Pluszeichen für jedes Wort)
--   "ein/aus" (plus Schalter für jedes Wort)
--   "zusammen" (plus Alternativen für das Wort)
+-   "to get her" (plus Alternativen für jedes Wort)
+-   "to gather" (plus Alternativen für jedes Wort)
+-   "tog ether" (plus Alternativen für jedes Wort)
+-   "tog at her" (plus Alternativen für jedes Wort)
+-   "together" (plus Alternativen für das Wort)
 
-Das [**erkentionresult**](/windows/desktop/api/msinkaut/nn-msinkaut-iinkrecognitionresult) -Objekt unterstützt die effiziente Speicherung vollständiger Erkennungsergebnisse innerhalb des [**Ink**](inkdisp-class.md) -Objekts. Das **Ink** -Objekt ordnet die Erkennungs Alternativen den Strichen im **Ink** -Objekt zu und kann auch andere Informationen enthalten, wie z. b. baselineposition, Linien Indizes und Sprachbereiche.
+Das [**RecognitionResult-Objekt**](/windows/desktop/api/msinkaut/nn-msinkaut-iinkrecognitionresult) unterstützt die effiziente Speicherung vollständiger Erkennungsergebnisse innerhalb des [**Ink-Objekts.**](inkdisp-class.md) Das **Ink-Objekt** ordnet die Erkennungsverwechselungen den Strichen im **Ink-Objekt** zu und kann auch andere Informationen wie Baselineposition, Zeilenindizes und Sprachbereiche enthalten.
 
  
 

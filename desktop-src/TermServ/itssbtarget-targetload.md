@@ -1,13 +1,13 @@
 ---
-title: ITsSbTarget-TargetLoad-Eigenschaft
+title: ITsSbTarget TargetLoad-Eigenschaft
 description: Ruft die relative Last auf einem Ziel ab.
 ms.assetid: 56618dcf-1319-4310-80ba-7ed71b8b02e8
 ms.tgt_platform: multiple
 keywords:
-- TargetLoad-Remotedesktopdienste
-- TargetLoad-Remotedesktopdienste , ITsSbTarget-Schnittstelle
+- TargetLoad-Eigenschaft Remotedesktopdienste
+- TargetLoad-Eigenschaft Remotedesktopdienste , ITsSbTarget-Schnittstelle
 - ITsSbTarget-Schnittstelle Remotedesktopdienste , TargetLoad-Eigenschaft
-- TargetLoad-Remotedesktopdienste , ITsSbTargetEx-Schnittstelle
+- TargetLoad-Eigenschaft Remotedesktopdienste , ITsSbTargetEx-Schnittstelle
 - ITsSbTargetEx-Schnittstelle Remotedesktopdienste , TargetLoad-Eigenschaft
 topic_type:
 - apiref
@@ -29,9 +29,9 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 08/11/2021
 ms.locfileid: "119989860"
 ---
-# <a name="itssbtargettargetload-property"></a>ITsSbTarget::TargetLoad (Eigenschaft)
+# <a name="itssbtargettargetload-property"></a>ITsSbTarget::TargetLoad-Eigenschaft
 
-Ruft die relative Last auf einem Ziel ab. Dieser Wert basiert auf der Anzahl der vorhandenen und ausstehenden Sitzungen. Standardmäßig hat eine ausstehende Sitzung den gleichen Wert wie eine vorhandene Sitzung.
+Ruft die relative Last auf einem Ziel ab. Dieser Wert basiert auf der Anzahl vorhandener und ausstehender Sitzungen. Standardmäßig hat eine ausstehende Sitzung den gleichen Wert wie eine vorhandene Sitzung.
 
 Diese Eigenschaft ist schreibgeschützt.
 
@@ -52,9 +52,9 @@ Eine Zahl, die die relative Last auf einem Ziel darstellt.
 
 ## <a name="remarks"></a>Hinweise
 
-Die Gewichtung einer ausstehenden Sitzung relativ zu einer aktiven Sitzung kann durch Festlegen des Werts des *LB \_ ConnectionEstablishmentPenalty-Parameters* für den Verbindungsbroker geändert werden. Dieser Parameter befindet sich unter dem **Registrierungsschlüssel HKLM \\ System \\ CurrentControlSet \\ Services \\ Tssdis \\ Parameters.** Der Standardwert 1 gibt an, dass ausstehende Sitzungen die gleiche Gewichtung wie aktive Sitzungen haben.
+Die Gewichtung einer ausstehenden Sitzung relativ zu einer aktiven Sitzung kann durch Festlegen des Werts des *Parameters LB \_ ConnectionEstablishmentPenalty* für den Verbindungsbroker geändert werden. Dieser Parameter befindet sich unter dem **Registrierungsschlüssel HKLM \\ System \\ CurrentControlSet \\ Services \\ Tssdis \\ Parameters.** Der Standardwert 1 gibt an, dass ausstehende Sitzungen die gleiche Gewichtung wie aktive Sitzungen haben.
 
-Diese Eigenschaft ist auf Windows Server 2012 R2 mit [KB3091411](https://support.microsoft.com/kb/3091411) verfügbar, das in der [**ITsSbTargetEx-Schnittstelle installiert**](itssbtargetex.md) ist.
+Diese Eigenschaft ist auf Windows Server 2012 R2 verfügbar, wobei [KB3091411](https://support.microsoft.com/kb/3091411) in der [**ITsSbTargetEx-Schnittstelle**](itssbtargetex.md) installiert ist.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -80,7 +80,7 @@ Diese Eigenschaft ist auf Windows Server 2012 R2 mit [KB3091411](https://support
 </tr>
 <tr class="even">
 <td>IID<br/></td>
-<td>IID_ITsSbTarget ist wie:
+<td>IID_ITsSbTarget wird wie folgt definiert:
 <ul>
 <li>16616ECC-272D-411D-B324-126893033856</li>
 <li>e85e10ea-db0b-4752-b456-5fd5840901c0 auf Windows Server 2008 R2</li>

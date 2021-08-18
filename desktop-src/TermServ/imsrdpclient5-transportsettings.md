@@ -1,5 +1,5 @@
 ---
-title: IMsRdpClient5 TransportSettings(Eigenschaft)
+title: IMsRdpClient5- TransportSettings-Eigenschaft
 description: Ruft ab, was über ein Skript an die IMsRdpClientTransportSettings-Schnittstelle übergeben wurde.
 ms.assetid: 38f5a735-55c7-425a-835b-22f6e0900d57
 ms.tgt_platform: multiple

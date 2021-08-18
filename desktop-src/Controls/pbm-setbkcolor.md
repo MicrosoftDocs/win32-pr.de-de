@@ -1,9 +1,9 @@
 ---
-title: PBM_SETBKCOLOR (Commctrl.h)
+title: PBM_SETBKCOLOR Meldung (Commctrl.h)
 description: Legt die Hintergrundfarbe in der Statusleiste fest.
 ms.assetid: e28af958-babb-4c2e-9202-89b608c22f8e
 keywords:
-- PBM_SETBKCOLOR von Windows Steuerelementen
+- PBM_SETBKCOLOR Windows-Steuerelemente für Nachrichten
 topic_type:
 - apiref
 api_name:
@@ -21,7 +21,7 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 08/11/2021
 ms.locfileid: "119986180"
 ---
-# <a name="pbm_setbkcolor-message"></a>PBM \_ SETBKCOLOR-Meldung
+# <a name="pbm_setbkcolor-message"></a>PBM \_ SETBKCOLOR-Nachricht
 
 Legt die Hintergrundfarbe in der Statusleiste fest.
 
@@ -39,13 +39,13 @@ Muss Null sein.
 *lParam* 
 </dt> <dd>
 
-**COLORREF-Wert,** der die neue Hintergrundfarbe angibt. Geben Sie den CLR \_ DEFAULT-Wert an, damit die Statusleiste ihre Standardhintergrundfarbe verwendet.
+**COLORREF-Wert,** der die neue Hintergrundfarbe angibt. Geben Sie den CLR \_ DEFAULT-Wert an, damit die Statusanzeige die Standardhintergrundfarbe verwendet.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt die vorherige Hintergrundfarbe oder CLR DEFAULT zurück, wenn \_ die Hintergrundfarbe die Standardfarbe ist.
+Gibt die vorherige Hintergrundfarbe oder CLR \_ DEFAULT zurück, wenn die Hintergrundfarbe die Standardfarbe ist.
 
 ## <a name="remarks"></a>Hinweise
 
@@ -57,7 +57,7 @@ Wenn visuelle Stile aktiviert sind, hat diese Meldung keine Auswirkungen.
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ Vista-Desktop-Apps\]<br/>                                        |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur Vista-Desktop-Apps\]<br/>                                        |
 | Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                                  |
 | Header<br/>                   | <dl> <dt>Commctrl.h</dt> </dl> |
 

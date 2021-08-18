@@ -1,21 +1,21 @@
 ---
-description: Techniken stellen den renderingmuskel bereit. Eine Technik kapselt den Effekt Zustand, der einen Renderingstil bestimmt. Eine Technik besteht aus einem oder mehreren Durchläufen.
+description: Techniken stellen die Rendering-Darstellung zur Verfügung. Eine Technik kapselt den Effektzustand, der einen Renderingstil bestimmt. Eine Technik besteht aus einem oder mehr Durchläufen.
 ms.assetid: 0a4d8f44-c7c0-4355-ac7f-6bc3315eeff0
-title: Techniken und Pässe (Direct3D 9)
+title: Techniken und Durchläufe (Direct3D 9)
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 7f3a68ac40db16b3e6819adf6fcd1f8a6f790325
-ms.sourcegitcommit: a47bd86f517de76374e4fff33cfeb613eb259a7e
+ms.openlocfilehash: 9999927d96a914b80f870a2128b0eae12074616e4ae787b011551b6aab919220
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/06/2021
-ms.locfileid: "106345602"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119044208"
 ---
-# <a name="techniques-and-passes-direct3d-9"></a>Techniken und Pässe (Direct3D 9)
+# <a name="techniques-and-passes-direct3d-9"></a>Techniken und Durchläufe (Direct3D 9)
 
-Techniken stellen den renderingmuskel bereit. Eine Technik kapselt den Effekt Zustand, der einen Renderingstil bestimmt. Eine Technik besteht aus einem oder mehreren Durchläufen.
+Techniken stellen die Rendering-Darstellung zur Verfügung. Eine Technik kapselt den Effektzustand, der einen Renderingstil bestimmt. Eine Technik besteht aus einem oder mehr Durchläufen.
 
-## <a name="techniques"></a>O
+## <a name="techniques"></a>Techniken
 
 Die Syntax zum Aufrufen einer Technik lautet wie folgt:
 
@@ -29,13 +29,13 @@ technique [ id ]  [< annotation(s) >]
 
 Hierbei gilt:
 
--   ID ist ein optionaler eindeutiger Name.
--   die Anmerkung ist 0 (null) oder mehr optionale benutzerspezifische Informationen. Weitere [Informationen finden Sie unter Hinzufügen von Informationen zu Effekt Parametern mit \_ Anmerkungen](using-an-effect.md).
--   "Pass (es)" ist 0 (null) oder größer. Jeder Durchlauf enthält Zustands Zuweisungen. Siehe unten.
+-   id ist ein optionaler eindeutiger Name.
+-   annotation ist 0 (null) oder mehr optionale Teile von benutzerspezifischen Informationen. Weitere [Informationen finden Sie unter Hinzufügen von Informationen zu Effektparametern mit \_ Anmerkungen.](using-an-effect.md)
+-   pass(es) ist 0 (null) oder mehr Durchläufe. Jeder Durchgang enthält Zustandszuweisungen. Siehe unten.
 
-## <a name="passes"></a>Ausweisen
+## <a name="passes"></a>Übergibt
 
-Ein Durchlauf enthält die zum renderbedarf erforderlichen Zustands Zuweisungen.
+Ein Durchgang enthält die Zustandszuweisungen, die zum Rendern erforderlich sind.
 
 
 ```
@@ -47,17 +47,17 @@ pass  [ id ]  [< annotation(s) >]
 
 Hierbei gilt:
 
--   ID ist ein optionaler eindeutiger Name.
--   die Anmerkung ist eine oder mehrere optionale benutzerspezifische Informationen. Weitere [Informationen finden Sie unter Hinzufügen von Informationen zu Effekt Parametern mit \_ Anmerkungen](using-an-effect.md).
--   Zuweisung (en) weist NULL oder mehr Zustands Werte zu oder wertet mindestens einen Ausdruck aus. Weitere Informationen finden Sie unter [Wirkungs Zustände (Direct3D 9)](effect-states.md) und [Ausdrücke (Direct3D 9)](expressions.md).
+-   id ist ein optionaler eindeutiger Name.
+-   annotation ist ein oder mehrere optionale benutzerspezifische Informationen. Weitere [Informationen finden Sie unter Hinzufügen von Informationen zu Effektparametern mit \_ Anmerkungen.](using-an-effect.md)
+-   -Zuweisung(en) weist 0 (null) oder mehr Zustandswerte zu oder wertet einen oder mehrere Ausdrücke aus. Siehe [Effektzustände (Direct3D 9)](effect-states.md) und [Ausdrücke (Direct3D 9).](expressions.md)
 
-Übergibt alle außer der letzten Zuweisung in einem Satz von wiederholten Zuweisungen in denselben Zustand.
+Übergibt alle bis auf die letzte Zuweisung in einer Reihe von wiederholten Zuweisungen zum gleichen Zustand.
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[Effekt Format](dx9-graphics-reference-effects-file-format.md)
+[Effect-Format](dx9-graphics-reference-effects-file-format.md)
 </dt> </dl>
 
  

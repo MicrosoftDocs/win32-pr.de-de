@@ -1,10 +1,10 @@
 ---
-title: DRM_LICENSE_STATE_CATEGORY-Enumeration (drmexternals. h)
-description: Der \_ \_ Enumerationstyp der DRM-Lizenzstatus \_ Kategorie definiert die Kategorien für DRM-Lizenz Zeichenfolgen, die dem Benutzer angezeigt werden.
+title: DRM_LICENSE_STATE_CATEGORY-Enumeration (Drmexternals.h)
+description: Der DRM \_ LICENSE \_ STATE \_ CATEGORY-Enumerationstyp definiert die Kategorien für DRM-Lizenzzeichenfolgen, die dem Benutzer angezeigt werden.
 ms.assetid: f5c5aa78-84f9-4ee4-b551-05bf864243ab
 keywords:
-- DRM_LICENSE_STATE_CATEGORY-Enumeration Windows Media-Format
-- Enumeration Windows Media-Format
+- DRM_LICENSE_STATE_CATEGORY Enumerationsfenster Medienformat
+- Enumerationsfenster Medienformat
 topic_type:
 - apiref
 api_name:
@@ -15,16 +15,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 40763ec7f610073784e3bd1516d4c955abcd65b3
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 2bbfd6c566d6c58314416c787110ea77da25416ed73d80ec87fd2d66602d820b
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104477943"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119931000"
 ---
-# <a name="drm_license_state_category-enumeration-drmexternalsh"></a>DRM_LICENSE_STATE_CATEGORY-Enumeration (drmexternals. h)
+# <a name="drm_license_state_category-enumeration-drmexternalsh"></a>DRM_LICENSE_STATE_CATEGORY-Enumeration (Drmexternals.h)
 
-Der Enumerationstyp der **DRM- \_ Lizenz \_ Status \_ Kategorie** definiert die Kategorien für DRM- [*Lizenz*](wmformat-glossary.md) Zeichenfolgen, die dem Benutzer angezeigt werden.
+Der **DRM \_ LICENSE STATE \_ CATEGORY-Enumerationstyp \_** definiert die Kategorien für DRM-Lizenzzeichenfolgen, die dem Benutzer angezeigt werden. [](wmformat-glossary.md)
 
 ## <a name="syntax"></a>Syntax
 
@@ -50,79 +50,79 @@ typedef enum DRM_LICENSE_STATE_CATEGORY {
 
 <dl> <dt>
 
-<span id="WM_DRM_LICENSE_STATE_NORIGHT"></span><span id="wm_drm_license_state_noright"></span>**WM \_ DRM- \_ Lizenz \_ Status " \_ noright"**
+<span id="WM_DRM_LICENSE_STATE_NORIGHT"></span><span id="wm_drm_license_state_noright"></span>**WM \_ DRM \_ LICENSE \_ STATE \_ NORIGHT**
 </dt> <dd>
 
-Gibt an, dass die Zeichenfolge die Form "Wiedergabe nicht zulässig" hat.
+Gibt an, dass die Zeichenfolge das Format "Wiedergabe nicht zulässig" hat.
 
 </dd> <dt>
 
-<span id="WM_DRM_LICENSE_STATE_UNLIM"></span><span id="wm_drm_license_state_unlim"></span>**WM- \_ DRM- \_ Lizenz \_ Status \_ Unlim**
+<span id="WM_DRM_LICENSE_STATE_UNLIM"></span><span id="wm_drm_license_state_unlim"></span>**WM \_ DRM \_ LICENSE \_ STATE \_ UNLIM**
 </dt> <dd>
 
-Gibt an, dass die Zeichenfolge in der Form "Wiedergabe unbegrenzt" verwendet wird.
+Gibt an, dass die Zeichenfolge das Format "Playback unlimited" hat.
 
 </dd> <dt>
 
-<span id="WM_DRM_LICENSE_STATE_COUNT"></span><span id="wm_drm_license_state_count"></span>**WM- \_ DRM- \_ Lizenz \_ Status \_ Anzahl**
+<span id="WM_DRM_LICENSE_STATE_COUNT"></span><span id="wm_drm_license_state_count"></span>**ANZAHL DER \_ WM-DRM-LIZENZSTATUS \_ \_ \_**
 </dt> <dd>
 
-Gibt an, dass die Zeichenfolge das Format "Wiedergabe gültig fünfmal" annimmt.
+Gibt an, dass die Zeichenfolge das Format "5-mal gültig wiedergeben" hat.
 
 </dd> <dt>
 
-<span id="WM_DRM_LICENSE_STATE_FROM"></span><span id="wm_drm_license_state_from"></span>**WM- \_ DRM- \_ Lizenz \_ Status \_ von**
+<span id="WM_DRM_LICENSE_STATE_FROM"></span><span id="wm_drm_license_state_from"></span>**WM \_ \_ DRM-LIZENZSTATUS \_ \_ VON**
 </dt> <dd>
 
-Gibt an, dass die Zeichenfolge die Form "Wiedergabe gültig aus 7/12/00" hat.
+Gibt an, dass die Zeichenfolge das Format "Playback valid from 7/12/00" hat.
 
 </dd> <dt>
 
-<span id="WM_DRM_LICENSE_STATE_UNTIL"></span><span id="wm_drm_license_state_until"></span>**WM- \_ DRM- \_ Lizenz \_ Status \_ bis**
+<span id="WM_DRM_LICENSE_STATE_UNTIL"></span><span id="wm_drm_license_state_until"></span>**WM \_ \_ DRM-LIZENZSTATUS \_ \_ BIS**
 </dt> <dd>
 
-Gibt an, dass die Zeichenfolge die Form "Wiedergabe gültig bis 7/12/00" hat.
+Gibt an, dass die Zeichenfolge das Format "Playback valid until 7/12/00" hat.
 
 </dd> <dt>
 
-<span id="WM_DRM_LICENSE_STATE_FROM_UNTIL"></span><span id="wm_drm_license_state_from_until"></span>**WM- \_ DRM- \_ Lizenz \_ Status \_ \_ bis**
+<span id="WM_DRM_LICENSE_STATE_FROM_UNTIL"></span><span id="wm_drm_license_state_from_until"></span>**WM \_ \_ DRM-LIZENZSTATUS \_ \_ VON \_ BIS**
 </dt> <dd>
 
-Gibt an, dass die Zeichenfolge die Form "Wiedergabe gültig von 5/12 bis 9/12" hat.
+Gibt an, dass die Zeichenfolge das Format "Playback valid from 5/12 to 9/12" hat.
 
 </dd> <dt>
 
-<span id="WM_DRM_LICENSE_STATE_COUNT_FROM"></span><span id="wm_drm_license_state_count_from"></span>**\_Anzahl von WM-DRM- \_ Lizenz Zuständen \_ \_ \_ aus**
+<span id="WM_DRM_LICENSE_STATE_COUNT_FROM"></span><span id="wm_drm_license_state_count_from"></span>**ANZAHL DER \_ WM-DRM-LIZENZSTATUS \_ \_ \_ \_ VON**
 </dt> <dd>
 
-Gibt an, dass die Zeichenfolge das Format "Wiedergabe gültig 5-Mal von 5/12 bis 9/12" annimmt.
+Gibt an, dass die Zeichenfolge das Format "5 Mal vom 12.05.bis zum 12.9.2012 gültig wiedergeben" hat.
 
 </dd> <dt>
 
-<span id="WM_DRM_LICENSE_STATE_COUNT_UNTIL"></span><span id="wm_drm_license_state_count_until"></span>**Anzahl der WM- \_ DRM- \_ Lizenz \_ Status \_ \_ bis**
+<span id="WM_DRM_LICENSE_STATE_COUNT_UNTIL"></span><span id="wm_drm_license_state_count_until"></span>**ANZAHL DER WM \_ \_ DRM-LIZENZSTATUS \_ \_ \_ BIS**
 </dt> <dd>
 
-Gibt an, dass die Zeichenfolge die Form "Wiedergabe gültig 5 Mal bis 7/12/00" hat.
+Gibt an, dass die Zeichenfolge das Format "5 mal bis zum 00.07.2012 gültig wiedergeben" hat.
 
 </dd> <dt>
 
-<span id="WM_DRM_LICENSE_STATE_COUNT_FROM_UNTIL"></span><span id="wm_drm_license_state_count_from_until"></span>**WM- \_ DRM- \_ Lizenz \_ Status \_ Anzahl \_ von \_ bis**
+<span id="WM_DRM_LICENSE_STATE_COUNT_FROM_UNTIL"></span><span id="wm_drm_license_state_count_from_until"></span>**ANZAHL \_ DER WM-DRM-LIZENZSTATUS \_ VON \_ \_ \_ \_ BIS**
 </dt> <dd>
 
-Gibt an, dass die Zeichenfolge das Format "Wiedergabe gültig 5-Mal von 5/12 bis 9/12" annimmt.
+Gibt an, dass die Zeichenfolge das Format "5 Mal vom 12.05.bis zum 12.9.2012 gültig wiedergeben" hat.
 
 </dd> <dt>
 
-<span id="WM_DRM_LICENSE_STATE_EXPIRATION_AFTER_FIRSTUSE"></span><span id="wm_drm_license_state_expiration_after_firstuse"></span>**Ablaufdatum des WM- \_ DRM- \_ Lizenz \_ Zustands \_ nach dem \_ \_ firdieren**
+<span id="WM_DRM_LICENSE_STATE_EXPIRATION_AFTER_FIRSTUSE"></span><span id="wm_drm_license_state_expiration_after_firstuse"></span>**ABLAUF DES \_ WM-DRM-LIZENZSTATUS \_ \_ NACH \_ \_ \_ FIRSTUSE**
 </dt> <dd>
 
-Gibt an, dass die Zeichenfolge die Form "Wiedergabe gültig für 24 Stunden nach der ersten Verwendung" hat.
+Gibt an, dass die Zeichenfolge das Format "Wiedergabe gültig für 24 Stunden ab der ersten Verwendung" hat.
 
 </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Diese Enumeration gibt die Kategorie für jede mögliche Ausgabe Zeichenfolge an, die angezeigt werden soll. Es ist ein Mitglied der [**DRM- \_ Lizenz \_ Zustands \_ Daten**](drm-license-state-data.md) Struktur.
+Diese Enumeration gibt die Kategorie für jede mögliche Ausgabezeichenfolge an, die angezeigt werden soll. Es ist ein Member der [**DRM \_ LICENSE STATE \_ \_ DATA-Struktur.**](drm-license-state-data.md)
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -132,12 +132,12 @@ Diese Enumeration gibt die Kategorie für jede mögliche Ausgabe Zeichenfolge an
 |-------------------------------------|-------------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[nur Desktop-Apps\]<br/>                                |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                                      |
-| Version<br/>                  | SDK für Windows Media-Format 7 oder höhere Versionen des SDKs<br/>                       |
-| Header<br/>                   | <dl> <dt>Drmexternals. h</dt> </dl> |
+| Version<br/>                  | Windows Media Format 7 SDK oder höhere Versionen des SDK<br/>                       |
+| Header<br/>                   | <dl> <dt>Drmexternals.h</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 

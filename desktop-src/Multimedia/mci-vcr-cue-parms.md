@@ -1,6 +1,6 @@
 ---
-title: MCI_VCR_CUE_PARMS Struktur (VCR. h)
-description: Die Struktur der MCI- \_ VCR-Hinweis \_ \_ Parameter enthält Parameter für den MCI-Hinweis \_ Befehl für Video-Kassetten-Recorder.
+title: MCI_VCR_CUE_PARMS-Struktur (Vcr.h)
+description: Die MCI \_ VCR \_ CUE \_ PARMS-Struktur enthält Parameter für den MCI \_ CUE-Befehl für Video-Cassette-Aufzeichnungen.
 ms.assetid: b2ac0c43-93ea-41c9-b886-542bda57b59e
 keywords:
 - MCI_VCR_CUE_PARMS Struktur Windows Multimedia
@@ -14,16 +14,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 8eeae20495281640718f95066476f0f3ac89dc6f
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 2ff14bf6db2fee24b2cee426114b460dc5e4682bd00e14f7b68a91695bab1f66
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "103859222"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120038240"
 ---
-# <a name="mci_vcr_cue_parms-structure"></a>Struktur von MCI VCR-Hinweis- \_ \_ \_ Parametern
+# <a name="mci_vcr_cue_parms-structure"></a>MCI \_ VCR \_ CUE \_ PARMS-Struktur
 
-Die Struktur der **MCI- \_ VCR \_ \_** -Hinweis Parameter enthält Parameter für den [**MCI \_**](mci-cue.md) -Hinweis Befehl für Video-Kassetten-Recorder.
+Die **MCI \_ VCR \_ CUE \_ PARMS-Struktur** enthält Parameter für den [**MCI \_ CUE-Befehl**](mci-cue.md) für Video-Cassette-Aufzeichnungen.
 
 ## <a name="syntax"></a>Syntax
 
@@ -42,30 +42,30 @@ typedef struct tagMCI_VCR_CUE_PARMS {
 
 <dl> <dt>
 
-**dwcallback**
+**dwCallback**
 </dt> <dd>
 
-Das nieder wertige Wort gibt ein Fenster Handle an, das für das MCI-Benachrichtigungs Kennzeichen verwendet wird \_ .
+Das Wort mit niedriger Reihenfolge gibt ein Fensterhandle an, das für das MCI \_ NOTIFY-Flag verwendet wird.
 
 </dd> <dt>
 
-**dwfrom**
+**dwFrom**
 </dt> <dd>
 
-Die Position, an der Sie sich orientieren
+Position, aus der ein Hinweis entnommen werden soll.
 
 </dd> <dt>
 
-**dwto**
+**dwTo**
 </dt> <dd>
 
-Positions Position
+Position, zu der ein Hinweis zu machen ist.
 
 </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Wenn Sie den Membern dieser Strukturdaten zuweisen, legen Sie die entsprechenden Flags im *fdwcommand* -Parameter der [**mciSendCommand**](/previous-versions//dd757160(v=vs.85)) -Funktion fest, um die Elemente zu überprüfen.
+Legen Sie beim Zuweisen von Daten zu den Membern dieser Struktur die entsprechenden Flags im *fdwCommand-Parameter* der [**mciSendCommand-Funktion**](/previous-versions//dd757160(v=vs.85)) fest, um die Member zu überprüfen.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -75,21 +75,21 @@ Wenn Sie den Membern dieser Strukturdaten zuweisen, legen Sie die entsprechenden
 |-------------------------------------|----------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[nur Desktop-Apps\]<br/>                       |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                             |
-| Header<br/>                   | <dl> <dt>VCR. h</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Vcr.h</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**MCI**](mci.md)
+[**Mci**](mci.md)
 </dt> <dt>
 
 [**MCI-Strukturen**](mci-structures.md)
 </dt> <dt>
 
-[**MCI \_ -Hinweis**](mci-cue.md)
+[**MCI \_ CUE**](mci-cue.md)
 </dt> <dt>
 
 [**mciSendCommand**](/previous-versions//dd757160(v=vs.85))

@@ -1,6 +1,6 @@
 ---
-description: 'Weitere Informationen finden Sie unter: floatcolumnvalue-Klasse'
-title: Floatcolumnvalue-Klasse
+description: Weitere Informationen finden Sie unter FloatColumnValue-Klasse.
+title: FloatColumnValue-Klasse
 TOCTitle: FloatColumnValue class
 ms:assetid: T:Microsoft.Isam.Esent.Interop.FloatColumnValue
 ms:mtpsurl: https://msdn.microsoft.com/library/microsoft.isam.esent.interop.floatcolumnvalue(v=EXCHG.10)
@@ -24,26 +24,26 @@ api_type:
 api_location:
 - Microsoft.Isam.Esent.Interop.dll
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: 54d6c21fe623e7ee7544098c7487523f2c5f86e7
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: bb42fd6aae84bea83202efbe6badceaa1d66694fb77bd1fda73500460cca9f52
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "103959250"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119968820"
 ---
-# <a name="floatcolumnvalue-class"></a>Floatcolumnvalue-Klasse
+# <a name="floatcolumnvalue-class"></a>FloatColumnValue-Klasse
 
-Ein [einzelner](/dotnet/api/system.single) Spaltenwert.
+Ein [](/dotnet/api/system.single) Einzelspaltenwert.
 
 ## <a name="inheritance-hierarchy"></a>Vererbungshierarchie
 
 [System.Object](/dotnet/api/system.object)  
-  [Microsoft. ISAM. ESENT. Interop. ColumnValue](./columnvalue-class.md)  
-    [Microsoft. ISAM. ESENT. Interop. columnvalueofistruct](./columnvalueofstruct-t-class.md)\<[Single](/dotnet/api/system.single)\>  
-      Microsoft. ISAM. ESENT. Interop. floatcolumnvalue  
+  [Microsoft.Isam.Esent.Interop.ColumnValue](./columnvalue-class.md)  
+    [Microsoft.Isam.Esent.Interop.ColumnValueOfStruct](./columnvalueofstruct-t-class.md)\<[Single](/dotnet/api/system.single)\>  
+      Microsoft.Isam.Esent.Interop.FloatColumnValue  
 
-**Namespace:**  [Microsoft. ISAM. ESENT. Interop](./microsoft.isam.esent.interop-namespace.md)  
-**Assembly:**  Microsoft. ISAM. ESENT. Interop (in Microsoft.Isam.Esent.Interop.dll)
+**Namespace:**  [Microsoft.Isam.Esent.Interop](./microsoft.isam.esent.interop-namespace.md)  
+**Assembly:**  Microsoft.Isam.Esent.Interop (in Microsoft.Isam.Esent.Interop.dll)
 
 ## <a name="syntax"></a>Syntax
 
@@ -63,10 +63,10 @@ public class FloatColumnValue : ColumnValueOfStruct<float>
 
 Alle öffentlichen statischen Elemente dieses Typs (Shared in Microsoft Visual Basic) sind threadsicher. Bei Instanzmembern ist die Threadsicherheit nicht gewährleistet.
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
-#### <a name="reference"></a>Referenz
+#### <a name="reference"></a>Verweis
 
-[Floatcolumnvalue-Member](./floatcolumnvalue-members.md)
+[FloatColumnValue-Member](./floatcolumnvalue-members.md)
 
-[Microsoft. ISAM. ESENT. Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)
+[Microsoft.Isam.Esent.Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)

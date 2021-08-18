@@ -1,24 +1,24 @@
 ---
-description: Bereitstellen von Rückrufen für Els-Dienste
+description: Bereitstellen von Rückrufen für ELS-Dienste
 ms.assetid: 48609c55-9e82-4407-ae28-41b07b1e1161
-title: Bereitstellen von Rückrufen für Els-Dienste
+title: Bereitstellen von Rückrufen für ELS-Dienste
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: a1d22091f666649aab43c66f3d532f8e8f971d49
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: ec6704bcf11d2619431aa1b855cd711f82e75e71fc4a762c0e8cf2cb35082341
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104215365"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120040490"
 ---
-# <a name="providing-callbacks-for-els-services"></a>Bereitstellen von Rückrufen für Els-Dienste
+# <a name="providing-callbacks-for-els-services"></a>Bereitstellen von Rückrufen für ELS-Dienste
 
-Wenn Ihre Anwendung asynchrone Vorgänge für die Texterkennung verwendet, muss Sie eine Rückruffunktion für den zu verwendenden Els-Dienst bereitstellen. Die Rückruffunktion basiert auf dem Prototyp [**mappingcallbackproc**](/windows/desktop/api/Elscore/nc-elscore-pfn_mappingcallbackproc) .
+Wenn Ihre Anwendung asynchrone Vorgänge für die Texterkennung verwendet, muss sie eine Rückruffunktion bereitstellen, die der ELS-Dienst verwenden kann. Die Rückruffunktion basiert auf dem [**MappingCallbackProc-Prototyp.**](/windows/desktop/api/Elscore/nc-elscore-pfn_mappingcallbackproc)
 
-Im Thema [anfordern von Texterkennung](requesting-text-recognition.md) wird beschrieben, wie Ihre Anwendung die asynchrone Texterkennung von einem Els-Dienst anfordern kann. Das folgende Beispiel zeigt eine Anwendung, die einen asynchronen Rückruf von [**mappingrecognizetext**](/windows/desktop/api/Elscore/nf-elscore-mappingrecognizetext)ausführt. Die Rückruffunktion für die Texterkennung heißt " **erkennzecallback**". Beachten Sie, dass die Anwendung sicherstellen muss, dass der Eigenschaften Behälter, der Eingabetext, die Optionen und der Dienst gültig sind, bis die Ausführung der Rückruffunktion abgeschlossen ist. Darüber hinaus muss die Anwendung sicherstellen, dass [**mappingfrepropertybag**](/windows/desktop/api/Elscore/nf-elscore-mappingfreepropertybag) unmittelbar nach dem verbrauchen durch die Rückruffunktion aufgerufen wird.
+Im Thema [Anfordern der Texterkennung](requesting-text-recognition.md) wird beschrieben, wie Ihre Anwendung asynchrone Texterkennung von einem ELS-Dienst anfordern kann. Das folgende Beispiel zeigt eine Anwendung, die [**mappingRecognizeText**](/windows/desktop/api/Elscore/nf-elscore-mappingrecognizetext)asynchron aufruft. Die Rückruffunktion für die Texterkennung heißt **RecognizeCallback.** Beachten Sie, dass die Anwendung sicherstellen muss, dass der Eigenschaftenbehälter, der Eingabetext, die Optionen und der Dienst alle gültig sind, bis die Rückruffunktion ausgeführt wurde. Darüber hinaus muss die Anwendung sicherstellen, dass [**MappingFreePropertyBag**](/windows/desktop/api/Elscore/nf-elscore-mappingfreepropertybag) sofort aufgerufen wird, nachdem der Behälter von der Rückruffunktion verbraucht wurde.
 
 > [!Note]  
-> Es könnte ratsam sein, dass Ihre Anwendung die Rückruffunktion verwendet, um die Ressourcen freizugeben, nachdem Sie sie verarbeitet oder kopiert haben.
+> Es kann eine gute Idee sein, dass Ihre Anwendung die Rückruffunktion verwendet, um die Ressourcen frei zu machen, nachdem sie die Verarbeitung abgeschlossen oder sie kopiert hat.
 
  
 
@@ -152,16 +152,16 @@ void RecognizeCallback(PMAPPING_PROPERTY_BAG pBag, LPVOID data, DWORD dwDataSize
 [Verwenden erweiterter linguistischer Dienste](using-extended-linguistic-services.md)
 </dt> <dt>
 
-[Anfordern von Text Erkennung](requesting-text-recognition.md)
+[Anfordern der Texterkennung](requesting-text-recognition.md)
 </dt> <dt>
 
-[**Mappingcallbackproc**](/windows/desktop/api/Elscore/nc-elscore-pfn_mappingcallbackproc)
+[**MappingCallbackProc**](/windows/desktop/api/Elscore/nc-elscore-pfn_mappingcallbackproc)
 </dt> <dt>
 
-[**Mappingfrepropertybag**](/windows/desktop/api/Elscore/nf-elscore-mappingfreepropertybag)
+[**MappingFreePropertyBag**](/windows/desktop/api/Elscore/nf-elscore-mappingfreepropertybag)
 </dt> <dt>
 
-[**Mappingrecognizetext**](/windows/desktop/api/Elscore/nf-elscore-mappingrecognizetext)
+[**MappingRecognizeText**](/windows/desktop/api/Elscore/nf-elscore-mappingrecognizetext)
 </dt> </dl>
 
  

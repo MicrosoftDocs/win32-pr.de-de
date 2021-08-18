@@ -18,7 +18,7 @@ ms.locfileid: "119999380"
 
  
 
-Das Ereignis wird gesendet, wenn der Datenträger das Ändern des `ChangeCurrentSubpictureStream` Unterbilddatenstroms aktiviert oder deaktiviert.
+Das `ChangeCurrentSubpictureStream` Ereignis wird gesendet, wenn der Datenträger das Ändern des Unterbilddatenstroms aktiviert oder deaktiviert.
 
 ``` syntax
 ChangeCurrentSubpictureStream(bEnabled)

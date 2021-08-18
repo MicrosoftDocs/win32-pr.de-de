@@ -1,9 +1,9 @@
 ---
-title: Autorisiert (eapmethodtype)-Element
-description: Erfahren Sie mehr über das Autorität-Element (eapmethodtype). Das Element "AutorID" (eapmethodtype) verweist auf den Autor der Methode.
+title: AuthorId (EapMethodType)-Element
+description: Erfahren Sie mehr über das AuthorId-Element (EapMethodType). Das AuthorID-Element (EapMethodType) verweist auf den Methodenautor.
 ms.assetid: 1eb16a50-25b8-4883-b9ff-fde329d8dd81
 keywords:
-- AutorID-Element EAPHost
+- AuthorId-Element EAPHost
 topic_type:
 - apiref
 api_name:
@@ -14,18 +14,18 @@ ms.topic: reference
 ms.date: 05/31/2018
 api_location: ''
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: 1c9a756d8ad1fc88154d3d99d4304de6dd50166b
-ms.sourcegitcommit: b0ebdefc3dcd5c04bede94091833aa1015a2f95c
+ms.openlocfilehash: f15c5fc981592bb82f9ad52d590f12ac0b1f4b20af3537a511d01dd0a8cc15e4
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/21/2020
-ms.locfileid: "103949124"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120021750"
 ---
-# <a name="authorid-eapmethodtype-element"></a>Autorisiert (eapmethodtype)-Element
+# <a name="authorid-eapmethodtype-element"></a>AuthorId (EapMethodType)-Element
 
-Das Element " **AutorID" (eapmethodtype)** verweist auf den Autor der Methode.
+Das **AuthorId-Element (EapMethodType)** verweist auf den Methodenautor.
 
-Die Autorisierungs-ID ist eine eindeutige Zahl, die von der Internet Assigned Numbers Authority (IANA) ausgestellt wird.
+Die AuthorId ist eine eindeutige Zahl, die von der Internet Assigned Numbers Authority (IANA) ausgegeben wird.
 
 ``` syntax
 <xs:element name="AuthorId"
@@ -33,20 +33,20 @@ Die Autorisierungs-ID ist eine eindeutige Zahl, die von der Internet Assigned Nu
  />
 ```
 
-Das **Autorität-** Element wird durch den komplexen [**eapmethodtype**](eapcommonschema-eapmethodtype-complextype.md) -Typ definiert.
+Das **AuthorId-Element** wird durch den komplexen [**EapMethodType-Typ**](eapcommonschema-eapmethodtype-complextype.md) definiert.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die Elemente " **AutorID** " und " [**VendorID**](eapcommonschema-vendorid-eapmethodtype-element.md) " müssen für eine bestimmte Methode nicht identisch sein.
+Die **Elemente AuthorId** [**und VendorId**](eapcommonschema-vendorid-eapmethodtype-element.md) müssen für eine bestimmte Methode nicht identisch sein.
 
 ## <a name="requirements"></a>Anforderungen
 
 
 
-| Role | Mindestens unterstützte Betriebssystemversion |
+| Role | Unterstützte Mindestversion des Betriebssystems |
 |------|------------------------------|
-| Client<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>       |
-| Server<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/> |
+| Client<br/> | Windows Nur \[ Vista-Desktop-Apps\]<br/>       |
+| Server<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/> |
 
 
 
@@ -54,13 +54,13 @@ Die Elemente " **AutorID** " und " [**VendorID**](eapcommonschema-vendorid-eapme
 
 <dl> <dt>
 
-**Definitions Kontext des Elements im Schema**
+**Definitionskontext des Elements im Schema**
 </dt> <dt>
 
-[**Eapmethodtype**](eapcommonschema-eapmethodtype-complextype.md)
+[**EapMethodType**](eapcommonschema-eapmethodtype-complextype.md)
 </dt> <dt>
 
-[EAPHost und Legacy Schema](eaphost-schemas.md)
+[EAPHost und Legacyschema](eaphost-schemas.md)
 </dt> <dt>
 
 [eapcommon-Schema](eapcommonschema-schema.md)

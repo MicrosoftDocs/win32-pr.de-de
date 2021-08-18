@@ -1,23 +1,23 @@
 ---
-description: Die Drucker Escapezeichen werden von Windows-Geräten mit 16-Bit-Zugriff auf spezielle Geräte bereitgestellt.
+description: Die von 16-Bit-Windows bereitgestellten Drucker-Escapezeichen lassen den Zugriff auf spezielle Gerätefeatures zu.
 ms.assetid: 4bdd1d47-8cf4-4088-aec8-88193e71a828
-title: Drucker Escapezeichen
+title: Drucker-Escapen
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 59463c4201e97c5ac1ec689a772581fab28314b4
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 5dd8bc842e60ca0019fc523b27a4657e66a623cda4802bfdb489213b694fd432
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "104216631"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119711560"
 ---
-# <a name="printer-escapes"></a>Drucker Escapezeichen
+# <a name="printer-escapes"></a>Drucker-Escapen
 
-Die Drucker Escapezeichen werden von Windows-Geräten mit 16-Bit-Zugriff auf spezielle Geräte bereitgestellt. Die meisten dieser Escapezeichen sind veraltet, aber einige werden bereitgestellt, um das Portieren von Windows-basierten 16-Bit-Anwendungen zu vereinfachen. GDI unterstützt einen kompletten Satz von Pfad Funktionen, die von Anwendungen anstelle der Escapezeichen zum Zeichnen von Pfaden auf beliebigen Geräten verwendet werden können. Eine Liste der Funktionen, die einige der Escapezeichen ersetzen, finden Sie in der [**Escape**](/windows/desktop/api/Wingdi/nf-wingdi-escape) -Funktion.
+Die von 16-Bit-Windows bereitgestellten Drucker-Escapezeichen lassen den Zugriff auf spezielle Gerätefeatures zu. Die meisten dieser Escapezeichen sind veraltet, aber einige werden bereitgestellt, um die Portierung von 16-Bit-Windows-basierten Anwendungen zu vereinfachen. GDI unterstützt einen vollständigen Satz von Pfadfunktionen, die Anwendungen anstelle der Escapes verwenden können, um Pfade auf jedem Gerät zu zeichnen. Eine Liste der Funktionen, die einige der Escapes ersetzen, finden Sie unter Der [**Escape-Funktion.**](/windows/desktop/api/Wingdi/nf-wingdi-escape)
 
-Von den 64 ursprünglichen Drucker Escapezeichen können nur **queryescsupport** und **Passthrough** verwendet werden.
+Von den 64 ursprünglichen Drucker-Escapedateien können nur **QUERYESCSUPPORT** und **PASSTHROUGH** verwendet werden.
 
-Es ist auch eine erweiterte escapefunktion mit dem Namen " [**extescape**](/windows/desktop/api/Wingdi/nf-wingdi-extescape)" vorhanden. Diese Funktion ermöglicht Anwendungen den Zugriff auf Funktionen eines bestimmten Geräts, das nicht direkt über GDI verfügbar ist.
+Es gibt auch eine erweiterte Escapefunktion namens [**ExtEscape.**](/windows/desktop/api/Wingdi/nf-wingdi-extescape) Mit dieser Funktion können Anwendungen auf Funktionen eines bestimmten Geräts zugreifen, die nicht direkt über GDI verfügbar sind.
 
  
 

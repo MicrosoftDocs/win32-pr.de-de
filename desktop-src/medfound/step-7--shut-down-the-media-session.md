@@ -1,28 +1,28 @@
 ---
-description: Dieses Thema ist Schritt 7 des Tutorials zum Wiedergeben von Mediendateien mit Media Foundation.
+description: Dieses Thema ist Schritt 7 des Tutorials Wiedergeben von Mediendateien mit Media Foundation.
 ms.assetid: c31444df-8717-4ca8-a9ec-72cbb0ee4125
-title: 'Schritt 7: Herunterfahren der Medien Sitzung'
+title: 'Schritt 7: Herunterfahren der Mediensitzung'
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: ae9fd11cde51b06d932b212f4effabf315deecb7
-ms.sourcegitcommit: c16214e53680dc71d1c07111b51f72b82a4512d8
+ms.openlocfilehash: aa1eec6e798ee260c83fc1532c2012aed8a53625b12195848ac00fcdcf8fae3b
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/03/2021
-ms.locfileid: "104132188"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119721944"
 ---
-# <a name="step-7-shut-down-the-media-session"></a>Schritt 7: Herunterfahren der Medien Sitzung
+# <a name="step-7-shut-down-the-media-session"></a>Schritt 7: Herunterfahren der Mediensitzung
 
-Dieses Thema ist Schritt 7 des Tutorials zum Wiedergeben von [Mediendateien mit Media Foundation](how-to-play-unprotected-media-files.md). Der gesamte Code wird im Thema Beispiel für die [Wiedergabe von Medien Sitzungen](media-session-playback-example.md)angezeigt.
+Dieses Thema ist Schritt 7 des Tutorials Wiedergeben von [Mediendateien mit Media Foundation](how-to-play-unprotected-media-files.md). Der vollständige Code wird im Thema [Mediensitzung – Wiedergabebeispiel](media-session-playback-example.md)gezeigt.
 
-Um die [Medien Sitzung](media-session.md)herunterzufahren, führen Sie die folgenden Schritte aus:
+Führen Sie die folgenden Schritte aus, um die [Mediensitzung](media-session.md)herunterzufahren:
 
-1.  [**Imfmediasession:: Close**](/windows/desktop/api/mfidl/nf-mfidl-imfmediasession-close) wird aufgerufen, um die aktuelle Präsentation zu schließen.
-2.  Warten Sie auf das Ereignis [mesessionclosed](mesessionclosed.md) . Dieses Ereignis ist garantiert das letzte Ereignis der Medien Sitzung.
-3.  Rückrufe [**imfmediasession:: Shutdown**](/windows/desktop/api/mfidl/nf-mfidl-imfmediasession-shutdown). Diese Methode bewirkt, dass die Medien Sitzungen Ressourcen freigeben.
-4.  Rückruf von [**imfmediasource:: Shutdown**](/windows/desktop/api/mfidl/nf-mfidl-imfmediasource-shutdown) für die aktuelle Medienquelle.
+1.  Rufen Sie [**DEN AUFRUF VONMEDIASESSION::Close**](/windows/desktop/api/mfidl/nf-mfidl-imfmediasession-close) auf, um die aktuelle Präsentation zu schließen.
+2.  Warten Sie auf das [MESessionClosed-Ereignis.](mesessionclosed.md) Dieses Ereignis ist garantiert das letzte Ereignis aus der Mediensitzung.
+3.  Rufen Sie [**ÜBERMEDIASESSION::Shutdown auf.**](/windows/desktop/api/mfidl/nf-mfidl-imfmediasession-shutdown) Diese Methode bewirkt, dass die Mediensitzungen Ressourcen freigeben.
+4.  Rufen Sie FÜR DIE aktuelle Medienquelle [**DEN AUFRUF VONMEDIASOURCE::Shutdown**](/windows/desktop/api/mfidl/nf-mfidl-imfmediasource-shutdown) auf.
 
-Mit der folgenden Methode wird die Medien Sitzung heruntergefahren. Er verwendet ein Ereignis handle (*m \_ hcloseevent*), um auf das [mesessionclosed](mesessionclosed.md) -Ereignis zu warten. Weitere Informationen finden Sie unter [Step 5: handle Media Session Events](step-5--handle-media-session-events.md).
+Mit der folgenden Methode wird die Mediensitzung heruntergefahren. Er verwendet ein Ereignishandle (*m \_ hCloseEvent*), um auf das [MESessionClosed-Ereignis](mesessionclosed.md) zu warten. Weitere Informationen finden Sie unter [Schritt 5: Behandeln von Mediensitzungsereignissen.](step-5--handle-media-session-events.md)
 
 
 ```C++
@@ -83,7 +83,7 @@ HRESULT CPlayer::CloseSession()
 
 
 
-Beenden Sie vor dem Beenden der Anwendung die Medien Sitzung, und klicken Sie dann auf [**mfshutdown**](/windows/desktop/api/mfapi/nf-mfapi-mfshutdown) , um die Microsoft Media Foundation Plattform zu beenden.
+Bevor die Anwendung beendet wird, fahren Sie die Mediensitzung herunter, und rufen Sie dann [**MFShutdown**](/windows/desktop/api/mfapi/nf-mfapi-mfshutdown) auf, um die Microsoft Media Foundation Plattform herunterzufahren.
 
 
 ```C++

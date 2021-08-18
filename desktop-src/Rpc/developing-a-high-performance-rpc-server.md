@@ -1,34 +1,34 @@
 ---
-title: Entwickeln eines Hochleistungs-RPC-Servers
-description: Die Informationen in diesem Abschnitt gelten für Remote Protokoll Sequenzen ncacn \_ IP \_ TCP, ncacn \_ http, ncacn \_ NP und Windows 2000 und Windows XP.
+title: Entwickeln eines RPC-Servers mit hoher Leistung
+description: Die Informationen in diesem Abschnitt gelten für Die Remoteprotokollsequenzen ncacn \_ ip \_ tcp, ncacn \_ http, ncacn np und Windows \_ 2000 und Windows XP.
 ms.assetid: 7b4239af-951b-4d1b-8ac3-224279f6929e
 keywords:
-- Remote Prozedur Aufruf RPC, bewährte Methoden, entwickeln eines Hochleistungs Servers
+- Remoteprozeduraufruf-RPC , bewährte Methoden, Entwickeln eines Hochleistungsservers
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 0a18319c1f4ade80ae026b68c8f5540030b992b7
-ms.sourcegitcommit: 592c9bbd22ba69802dc353bcb5eb30699f9e9403
+ms.openlocfilehash: 841c52587410b10ae17f2ebd858863327aaf5ab1def92600259c8e49edc87946
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "104473989"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120021769"
 ---
-# <a name="developing-a-high-performance-rpc-server"></a>Entwickeln eines Hochleistungs-RPC-Servers
+# <a name="developing-a-high-performance-rpc-server"></a>Entwickeln eines RPC-Servers mit hoher Leistung
 
-Die Informationen in diesem Abschnitt gelten für Remote Protokoll Sequenzen: [**ncacn \_ IP \_ TCP**](/windows/desktop/Midl/ncacn-ip-tcp), [**ncacn \_ http**](/windows/desktop/Midl/ncacn-http), [**ncacn \_ NP**](/windows/desktop/Midl/ncacn-np)und Windows 2000 und Windows XP.
+Die Informationen in diesem Abschnitt gelten für Remoteprotokollsequenzen: [**ncacn \_ ip \_ tcp,**](/windows/desktop/Midl/ncacn-ip-tcp) [**ncacn \_ http,**](/windows/desktop/Midl/ncacn-http) [**ncacn \_ np**](/windows/desktop/Midl/ncacn-np)und für Windows 2000 und Windows XP.
 
 In diesem Abschnitt werden drei Hauptaspekte der RPC-Serverleistung behandelt:
 
--   [Netzwerk Latenz und Durchsatz](network-latency-and-throughput.md)
+-   [Netzwerklatenz und Durchsatz](network-latency-and-throughput.md)
 -   [Skalierbarkeit](scalability.md)
--   [Sonstige RPC-Leistungs Tipps](miscellaneous-rpc-performance-tips.md)
+-   [Verschiedene RPC-Tipps](miscellaneous-rpc-performance-tips.md)
 
-Die Codepfad-Länge ist eine weitere primäre Leistungs Überlegung für RPC. Die Länge des Codepfade ist im Allgemeinen gut verständlich, und da Literatur und Tools in diesem Thema allgemein verfügbar sind, wird es in diesem Artikel nicht behandelt.
+Die Länge des Codepfads ist ein weiterer haupter Aspekt der Leistung für RPC. Die Länge des Codepfads ist allgemein gut bekannt, und da die Themen und Tools zu diesem Thema allgemein verfügbar sind, wird dies in diesem Artikel nicht behandelt.
 
-Eine wichtige und bewährte allgemeine Leistungs Regel, die bei der Betrachtung der RPC-Leistung beachtet werden muss, ist dies: ermitteln Sie den Engpass im System, und arbeiten Sie daran, diesen zu beheben. Beim Gating-Engpass darf es sich nicht um die RPC-Programmierung handeln. wenn dies der Fall ist, führt die Leistungsoptimierung in RPC nicht zu einer verbesserten Leistung, bis der Engpass behoben wird. Beispielsweise muss ein System, das von Ressourcenkonflikten geplagt ist, nicht die effizientere Verwendung des Netzwerks durchführen.
+Eine wichtige und bewährte allgemeine Leistungsregel, die Sie bei der Berücksichtigung der RPC-Leistung beachten sollten, ist folgende: Suchen Sie den Engpass im System, und arbeiten Sie daran, dies zu beheben. Der Gatingengpass ist möglicherweise nicht die RPC-Programmierung. Wenn dies der Fall ist, führt die Leistungsoptimierung in RPC erst dann zu einer verbesserten Leistung, wenn dieser Engpass behoben wird. Beispielsweise muss ein System, das durch Ressourcengeplagt wird, das Netzwerk nicht effizienter nutzen.
 
-Wenn Ihr System in verschiedenen Umgebungen bereitgestellt wird, ist es ratsam, sicherzustellen, dass alle Aspekte des IT-Systems gut optimiert sind, da unterschiedliche Umgebungen zu unterschiedlichen Leistungs Engpässen führen können.
+Wenn Ihr System in verschiedenen Umgebungen bereitgestellt wird, sollten Sie sicherstellen, dass alle Aspekte des Systems gut optimiert sind, da verschiedene Umgebungen zu unterschiedlichen Leistungsengpässen führen können.
 
- 
+ 
 
- 
+ 

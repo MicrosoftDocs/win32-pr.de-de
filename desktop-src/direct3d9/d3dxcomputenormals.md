@@ -1,7 +1,7 @@
 ---
-description: Berechnet Einheiten normale für jeden Scheitelpunkt in einem Mesh. Wird zur Unterstützung von Legacy Anwendungen bereitgestellt. Verwenden Sie D3DXComputeTangentFrameEx, um bessere Ergebnisse zu erzielen.
+description: Berechnet Einheitennormle für jeden Scheitelpunkt in einem Gitternetz. Wird zur Unterstützung von Legacyanwendungen bereitgestellt. Verwenden Sie D3DXComputeTangentFrameEx, um bessere Ergebnisse zu erzielen.
 ms.assetid: 7c879149-2c4c-4824-9604-e88696cc6ddc
-title: D3DXComputeNormals-Funktion (D3DX9Mesh. h)
+title: D3DXComputeNormals-Funktion (D3DX9Mesh.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -14,16 +14,16 @@ api_type:
 api_location:
 - d3dx9.lib
 - d3dx9.dll
-ms.openlocfilehash: 3f95e5e353c318429f5340d1a831f9ca3050ba3c
-ms.sourcegitcommit: 14010c34b35fa268046c7683f021f86de08ddd0a
+ms.openlocfilehash: d136e7c3d01b595273127c500ccc52cd310357df2147f3df5d97df9dbd38d38d
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "103961654"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120069310"
 ---
 # <a name="d3dxcomputenormals-function"></a>D3DXComputeNormals-Funktion
 
-Berechnet Einheiten normale für jeden Scheitelpunkt in einem Mesh. Wird zur Unterstützung von Legacy Anwendungen bereitgestellt. Verwenden Sie [**D3DXComputeTangentFrameEx**](d3dxcomputetangentframeex.md) , um bessere Ergebnisse zu erzielen.
+Berechnet Einheitennormle für jeden Scheitelpunkt in einem Gitternetz. Wird zur Unterstützung von Legacyanwendungen bereitgestellt. Verwenden [**Sie D3DXComputeTangentFrameEx,**](d3dxcomputetangentframeex.md) um bessere Ergebnisse zu erzielen.
 
 ## <a name="syntax"></a>Syntax
 
@@ -41,21 +41,21 @@ HRESULT D3DXComputeNormals(
 
 <dl> <dt>
 
-*pmesh* \[ in, out\]
+*pMesh* \[ in, out\]
 </dt> <dd>
 
 Typ: **[ **LPD3DXBASEMESH**](id3dxbasemesh.md)**
 
-Zeiger auf eine [**ID3DXBaseMesh**](id3dxbasemesh.md) -Schnittstelle, die das normalisierte Mesh-Objekt darstellt.
+Zeiger auf eine [**ID3DXBaseMesh-Schnittstelle,**](id3dxbasemesh.md) die das normalisierte Gittermodellobjekt darstellt.
 
 </dd> <dt>
 
-*padjacency* \[ in\]
+*pAdjacency* \[ In\]
 </dt> <dd>
 
-Typ: Konstante **[**DWORD**](../winprog/windows-data-types.md) \***
+Typ: **const [**DWORD**](../winprog/windows-data-types.md) \***
 
-Zeiger auf ein Array von drei DWORDs pro Gesicht, das die drei Nachbarn für jedes Gesicht im erstellten progressiven Mesh angibt. Dieser Parameter ist optional und sollte auf **null** festgelegt werden, wenn er nicht verwendet wird.
+Zeiger auf ein Array von drei DWORDs pro Gesicht, die die drei Nachbarn für jedes Gesicht im erstellten progressiven Gitter angeben. Dieser Parameter ist optional und sollte auf **NULL festgelegt werden,** wenn er nicht verwendet wird.
 
 </dd> </dl>
 
@@ -63,17 +63,17 @@ Zeiger auf ein Array von drei DWORDs pro Gesicht, das die drei Nachbarn für jed
 
 Typ: **[ **HRESULT**](https://msdn.microsoft.com/library/Bb401631(v=MSDN.10).aspx)**
 
-Wenn die Funktion erfolgreich ausgeführt wird, ist der Rückgabewert S \_ OK. Wenn die Funktion fehlschlägt, kann der Rückgabewert einer der folgenden sein: D3DERR \_ invalidcall, D3DXERR \_ InvalidData, E \_ oudefmemory.
+Wenn die Funktion erfolgreich ist, ist der Rückgabewert S \_ OK. Wenn die Funktion fehlschlägt, kann der Rückgabewert einer der folgenden sein: D3DERR \_ INVALIDCALL, D3DXERR \_ INVALIDDATA, E \_ OUTOFMEMORY.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Für das eingabemesh muss das Flag [D3DFVF \_ Normal](d3dfvf.md) in seinem flexiblen Scheitelpunkt Format (FVF) angegeben werden.
+Für das Eingabegitternetz muss das [Flag D3DFVF \_ NORMAL](d3dfvf.md) im flexiblen Scheitelpunktformat (Flexible Vertex Format, FVF) angegeben sein.
 
-Ein normaler Wert für einen Scheitelpunkt wird generiert, indem die normale aller Gesichter, die den Scheitelpunkt teilen, überdurchschnittlich werden.
+Ein Normalwert für einen Scheitelpunkt wird generiert, indem die Normaldaten aller Gesichter, die diesen Scheitelpunkt gemeinsam haben, durchschnittlich abschn.
 
-Wenn eine Angabe bereitgestellt wird, werden replizierte Scheitel Punkte ignoriert und "gegläoniert". Wenn keine Angabe bereitgestellt wird, weisen replizierte Scheitel Punkte, die von nur den Gesichtern abgeleitet werden, die explizit auf Sie verweisen.
+Wenn Adjacency bereitgestellt wird, werden replizierte Scheitelungen ignoriert und "geglättet". Wenn keine Adjacency bereitgestellt wird, weisen replizierte Scheitelpunktwerte normal aus, die nur von den Gesichtern gemittelt werden, die explizit auf sie verweisen.
 
-Diese Funktion ruft einfach [**D3DXComputeTangentFrameEx**](d3dxcomputetangentframeex.md) mit den folgenden Eingabe Parametern auf:
+Diese Funktion ruft einfach [**D3DXComputeTangentFrameEx mit**](d3dxcomputetangentframeex.md) den folgenden Eingabeparametern auf:
 
 
 ```
@@ -103,12 +103,12 @@ D3DXComputeTangentFrameEx( pMesh,
 
 | Anforderung | Wert |
 |--------------------|----------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>D3DX9Mesh. h</dt> </dl> |
-| Bibliothek<br/> | <dl> <dt>D3dx9. lib</dt> </dl>   |
+| Header<br/>  | <dl> <dt>D3DX9Mesh.h</dt> </dl> |
+| Bibliothek<br/> | <dl> <dt>D3dx9.lib</dt> </dl>   |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 

@@ -1,30 +1,30 @@
 ---
-description: Die Zeilen eines Listen Felds werden nicht als einzelne Steuerelemente behandelt, aber Sie sind Teil eines Listen Felds, das als Steuerelement fungiert. Die ListBox-Tabelle definiert die Werte für alle Listenfelder.
+description: Die Zeilen eines Listenfelds werden nicht als einzelne Steuerelemente behandelt, sie sind jedoch Teil eines Listenfelds, das als Steuerelement fungiert. Die ListBox-Tabelle definiert die Werte für alle Listenfelder.
 ms.assetid: 1963adcf-f682-4371-ab44-f91e90105dc0
 title: ListBox-Tabelle
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: e5f60fb6ac48860c7893b0320b54e6e54dcf1691
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 4b8877db002185cd675914eca6d5be38454796c7b50af6a48f88e0e63c10c195
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "103960036"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120043190"
 ---
 # <a name="listbox-table"></a>ListBox-Tabelle
 
-Die Zeilen eines Listen Felds werden nicht als einzelne Steuerelemente behandelt, aber Sie sind Teil eines Listen Felds, das als Steuerelement fungiert. Die ListBox-Tabelle definiert die Werte für alle Listenfelder.
+Die Zeilen eines Listenfelds werden nicht als einzelne Steuerelemente behandelt, sie sind jedoch Teil eines Listenfelds, das als Steuerelement fungiert. Die ListBox-Tabelle definiert die Werte für alle Listenfelder.
 
-Die ListBox-Tabelle weist die folgenden Spalten auf.
+Die ListBox-Tabelle enthält die folgenden Spalten.
 
 
 
-| Spalte   | Typ                         | Schlüssel | Nullwerte zulässig |
+| Spalte   | Typ                         | Key | Nullwerte zulässig |
 |----------|------------------------------|-----|----------|
-| Eigenschaft | [Bezeichner](identifier.md) | J   | N        |
+| Eigenschaft | [Identifier](identifier.md) | J   | N        |
 | Auftrag    | [Integer](integer.md)       | J   | N        |
-| Wert    | [Großformatige](formatted.md)   | N   | N        |
-| Text     | [Großformatige](formatted.md)   | N   | J        |
+| Wert    | [Formatiert](formatted.md)   | N   | N        |
+| Text     | [Formatiert](formatted.md)   | N   | J        |
 
 
 
@@ -34,39 +34,39 @@ Die ListBox-Tabelle weist die folgenden Spalten auf.
 
 <dl> <dt>
 
-<span id="Property"></span><span id="property"></span><span id="PROPERTY"></span>Property
+<span id="Property"></span><span id="property"></span><span id="PROPERTY"></span>Eigenschaft
 </dt> <dd>
 
-Eine benannte Eigenschaft, die an dieses Element gebunden werden soll. Alle Elemente, die an dieselbe Eigenschaft gebunden sind, werden Teil desselben Listen Felds.
+Eine benannte Eigenschaft, die an dieses Element gebunden werden soll. Alle Elemente, die an dieselbe Eigenschaft gebunden sind, werden Teil desselben Listenfelds.
 
 </dd> <dt>
 
-<span id="Order"></span><span id="order"></span><span id="ORDER"></span>Reihenfolge
+<span id="Order"></span><span id="order"></span><span id="ORDER"></span>Bestellung
 </dt> <dd>
 
-Eine positive ganze Zahl, die verwendet wird, um die Reihenfolge der Elemente zu bestimmen, die in einem einzelnen Listenfeld angezeigt werden. Wenn das Listenfeld als sortiert definiert ist, sollten alle Elemente über einen Bestellwert verfügen. Die ganzen Zahlen müssen nicht aufeinander folgen. Wenn das Listenfeld als nicht geordnet definiert ist, wird diese Spalte ignoriert.
+Eine positive ganze Zahl, die verwendet wird, um die Reihenfolge der Elemente zu bestimmen, die in einem einzelnen Listenfeld angezeigt werden. Wenn das Listenfeld als geordnet definiert ist, sollten alle Elemente einen Order-Wert haben. Die ganzen Zahlen müssen nicht aufeinander folgenden sein. Wenn das Listenfeld als ungeordnet definiert ist, wird diese Spalte ignoriert.
 
 </dd> <dt>
 
 <span id="Value"></span><span id="value"></span><span id="VALUE"></span>Wert
 </dt> <dd>
 
-Die diesem Element zugeordnete Wert Zeichenfolge. Durch Auswählen der Zeile wird die zugehörige Eigenschaft auf diesen Wert festgelegt.
+Die diesem Element zugeordnete Wertzeichenfolge. Wenn Sie die Zeile auswählen, wird die zugeordnete Eigenschaft auf diesen Wert fest.
 
 </dd> <dt>
 
 <span id="Text"></span><span id="text"></span><span id="TEXT"></span>Text
 </dt> <dd>
 
-Der lokalisierbare, sichtbare Text, der dem Element zugewiesen werden soll. Wenn dieser Eintrag oder die gesamte Spalte fehlt, wird der Text standardmäßig auf den entsprechenden Eintrag in value eingestellt.
+Der lokalisierbare, sichtbare Text, der dem Element zugewiesen werden soll. Wenn dieser Eintrag oder die gesamte Spalte fehlt, wird der Text standardmäßig auf den entsprechenden Eintrag in Value festgelegt.
 
 </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Wenn das Steuerelement erstellt wird, werden die Inhalte der Werte und Text Felder von der [**msiformatrecord**](/windows/desktop/api/Msiquery/nf-msiquery-msiformatrecorda) -Funktion formatiert und können daher jeden beliebigen Ausdruck enthalten, der von der **msiformatrecord** -Funktion interpretiert werden kann. Die Formatierung erfolgt nur, wenn das Steuerelement erstellt wird, und es wird nicht aktualisiert, wenn eine Eigenschaft, die an dem Ausdruck beteiligt ist, während der Lebensdauer des Steuer Elements geändert wird.
+Der Inhalt der Felder Value und Text wird beim Erstellen des Steuerelements von der [**MsiFormatRecord-Funktion**](/windows/desktop/api/Msiquery/nf-msiquery-msiformatrecorda) formatiert. Daher können sie jeden Ausdruck enthalten, den die **MsiFormatRecord-Funktion** interpretieren kann. Die Formatierung tritt nur auf, wenn das Steuerelement erstellt wird, und wird nicht aktualisiert, wenn eine am Ausdruck beteiligte Eigenschaft während der Lebensdauer des Steuerelements geändert wird.
 
-## <a name="validation"></a>Überprüfen
+## <a name="validation"></a>Überprüfung
 
 <dl>
 

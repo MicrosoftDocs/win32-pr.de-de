@@ -1,33 +1,33 @@
 ---
-description: In diesem Thema wird beschrieben, wie Text in ein XPS-OM geschrieben wird.
+description: In diesem Thema wird beschrieben, wie Sie Text in ein XPS OM schreiben.
 ms.assetid: 5552b7b0-1c95-43fa-ad06-c167c69c5a56
-title: Schreiben von Text in ein XPS-OM
+title: Schreiben von Text in ein XPS OM
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: c4cca953d5281620cf7b7d9b7b07c133bee0d4de
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: ff2c77106649960982888d7ee8d6e4b679bd62e44be1e0dc9786206261b62bbe
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "104216867"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119718530"
 ---
-# <a name="write-text-to-an-xps-om"></a>Schreiben von Text in ein XPS-OM
+# <a name="write-text-to-an-xps-om"></a>Schreiben von Text in ein XPS OM
 
-In diesem Thema wird beschrieben, wie Text in ein XPS-OM geschrieben wird.
+In diesem Thema wird beschrieben, wie Sie Text in ein XPS OM schreiben.
 
-Der Text wird in ein XPS-OM eingefügt, indem eine [**ixpsomglyphs**](/windows/desktop/api/xpsobjectmodel/nn-xpsobjectmodel-ixpsomglyphs) -Schnittstelle erstellt und formatiert und dann die **ixpsomglyphs** -Schnittstelle zur Liste der visuellen Objekte der Seite oder Canvas hinzugefügt wird. Jede **ixpsomglyphs** -Schnittstelle stellt eine Symbol Führung dar, bei der es sich um eine fortlaufende Zeichenfolge handelt, die ein gemeinsames Format aufweist. Wenn sich ein Zeichenformat Element (z. b. Schriftart Type oder size) ändert oder wenn ein Zeilenumbruch durchgeführt wird, muss eine neue **ixpsomglyphs** -Schnittstelle erstellt und der Liste der visuellen Objekte hinzugefügt werden.
+Text wird in einem XPS OM platziert, indem eine [**IXpsOMGlyphs-Schnittstelle**](/windows/desktop/api/xpsobjectmodel/nn-xpsobjectmodel-ixpsomglyphs) erstellt und formatiert und dann die **IXpsOMGlyphs-Schnittstelle** der Liste der visuellen Objekte der Seite oder canvas hinzugefügt wird. Jede **IXpsOMGlyphs-Schnittstelle** stellt eine Glyphen-Ausführung dar, bei der es sich um eine fortlaufende Ausführung von Zeichen handelt, die ein gemeinsames Format verwenden. Wenn sich ein Zeichenformatelement (z. B. Schriftart oder Schriftgrad) ändert oder wenn eine Zeile umbricht, muss eine neue **IXpsOMGlyphs-Schnittstelle** erstellt und der Liste der visuellen Objekte hinzugefügt werden.
 
-Einige der Eigenschaften einer Glyphe können mithilfe der Methoden der [**ixpsomglyphs**](/windows/desktop/api/xpsobjectmodel/nn-xpsobjectmodel-ixpsomglyphs) -Schnittstelle festgelegt werden. Einige Eigenschaften interagieren jedoch mit anderen und müssen mithilfe einer [**ixpsomglyphseditor**](/windows/desktop/api/xpsobjectmodel/nn-xpsobjectmodel-ixpsomglyphseditor) -Schnittstelle festgelegt werden.
+Einige der Eigenschaften einer Glyphen-Ausführung können mithilfe der Methoden der [**IXpsOMGlyphs-Schnittstelle festgelegt**](/windows/desktop/api/xpsobjectmodel/nn-xpsobjectmodel-ixpsomglyphs) werden. Einige Eigenschaften interagieren jedoch mit anderen und müssen mithilfe einer [**IXpsOMGlyphsEditor-Schnittstelle festgelegt**](/windows/desktop/api/xpsobjectmodel/nn-xpsobjectmodel-ixpsomglyphseditor) werden.
 
-Bevor Sie die folgenden Codebeispiele in Ihrem Programm verwenden, lesen Sie den Haftungsausschluss in [Allgemeine XPS-Dokument Programmieraufgaben](common-xps-document-tasks.md).
+Bevor Sie die folgenden Codebeispiele in Ihrem Programm verwenden, lesen Sie den Haftungsausschluss in [Allgemeine XPS-Dokumentprogrammieraufgaben](common-xps-document-tasks.md).
 
 ## <a name="code-example"></a>Codebeispiel
 
-### <a name="create-a-glyph-run-from-a-string"></a>Erstellen eines Symbols, das aus einer Zeichenfolge ausgeführt wird
+### <a name="create-a-glyph-run-from-a-string"></a>Erstellen einer Glyphen-Ausführung aus einer Zeichenfolge
 
-Eine Symbol Führung wird häufig in mehreren Schritten erstellt, die das Laden der Schriftart Ressourcen, die von der Symbol Suche verwendet werden, das Festlegen eines Füll Pinsel, das Festlegen des Schrift Grads und des Start Orts sowie das Festlegen der Unicode-Zeichenfolge beinhalten.
+Eine Glyphen-Ausführung wird häufig in mehreren Schritten erstellt. Dazu gehören das Laden der Schriftartressourcen, die von der Glyphen-Ausführung verwendet werden, das Festlegen eines Füllpinsels, das Angeben des Schriftgrads und der Startposition sowie das Festlegen der Unicode-Zeichenfolge.
 
-Der folgende Abschnitt des Code Beispiels enthält eine Routine, die einige Variablen annimmt, einschließlich Schriftart Größe, Farbe und Position sowie der zu schreibenden Zeichen. Der Code erstellt dann ein Symbol, das ausgeführt wird, und fügt es einer Seite hinzu. Im Codebeispiel wird davon ausgegangen, dass die in [Initialisieren eines XPS-OMS](xps-object-model-initialization.md) beschriebene Initialisierung aufgetreten ist und dass das Dokument mindestens eine Seite enthält. Weitere Informationen zum Erstellen eines leeren XPS-OMS finden Sie unter [Erstellen eines leeren XPS-OMS](create-a-blank-xps-om.md).
+Der folgende Abschnitt des Codebeispiels enthält eine Routine, die einige Variablen akzeptiert, einschließlich Schriftgrad, Farbe und Position sowie der zu schreibenden Zeichen. Der Code erstellt dann eine Glyphenausführung und fügt sie dann einer Seite hinzu. Im Codebeispiel wird davon ausgegangen, dass die in Initialisieren eines [XPS OM](xps-object-model-initialization.md) beschriebene Initialisierung erfolgt ist und dass das Dokument mindestens eine Seite hat. Weitere Informationen zum Erstellen eines leeren XPS OM finden Sie unter [Erstellen eines leeren XPS OM.](create-a-blank-xps-om.md)
 
 
 ```C++
@@ -88,7 +88,7 @@ WriteText_AddTextToPage(
 
 ### <a name="load-and-create-resources"></a>Laden und Erstellen von Ressourcen
 
-Die Erstellung einer [**ixpsomglyphs**](/windows/desktop/api/xpsobjectmodel/nn-xpsobjectmodel-ixpsomglyphs) -Schnittstelle erfordert eine Schriftart Ressource. In vielen Fällen verwendet ein TextBlock die gleiche Schriftart und Farbe. Daher werden in diesem Abschnitt des Code Beispiels die Schriftart Ressourcen Schnittstellen erstellt, die in den Aufrufen verwendet werden, die den Text auf der Seite platzieren.
+Für die Erstellung einer [**IXpsOMGlyphs-Schnittstelle**](/windows/desktop/api/xpsobjectmodel/nn-xpsobjectmodel-ixpsomglyphs) ist eine Schriftartressource erforderlich. In vielen Fällen verwendet ein Textblock die gleiche Schriftart und Farbe. Daher werden in diesem Abschnitt des Codebeispiels die Schriftartressourcenschnittstellen erstellt, die in den Aufrufen verwendet werden, die den Text auf der Seite platzieren.
 
 
 ```C++
@@ -164,7 +164,7 @@ Die Erstellung einer [**ixpsomglyphs**](/windows/desktop/api/xpsobjectmodel/nn-x
 
 ### <a name="draw-text-in-a-page"></a>Zeichnen von Text auf einer Seite
 
-Im letzten Abschnitt des Code Beispiels werden die Symbole für jede Ausführung von ähnlich formatiertem Text erstellt. Um den Code in diesem letzten Abschnitt auszuführen, sind die **xpsfactory** -Schnittstelle sowie die Schriftart Ressource und ein Text Pinsel erforderlich und müssen instanziiert und initialisiert worden sein. In diesem Beispiel wird die im ersten Abschnitt beschriebene Funktion verwendet, um die ausgeführten Symbole zu erstellen und Sie der Seite hinzuzufügen.
+Im letzten Abschnitt des Codebeispiels werden die Glyphenausführungen für jede Ausführung von ähnlich formatiertem Text erstellt. Um den Code in diesem letzten Abschnitt auszuführen, sind die **xpsFactory-Schnittstelle** sowie die Schriftartressource und ein Textfarbpinsel erforderlich und müssen instanziiert und initialisiert worden sein. In diesem Beispiel wird die im ersten Abschnitt beschriebene Funktion verwendet, um die Glyphenläufe zu erstellen und der Seite hinzuzufügen.
 
 
 ```C++
@@ -223,58 +223,58 @@ Im letzten Abschnitt des Code Beispiels werden die Symbole für jede Ausführung
 **Next Steps**
 </dt> <dt>
 
-[Navigieren im XPS-OM](navigate-the-xps-om.md)
+[Navigieren im XPS OM](navigate-the-xps-om.md)
 </dt> <dt>
 
-[Zeichnen von Grafiken in einem XPS-OM](draw-graphics-in-an-xps-om.md)
+[Zeichnen von Grafiken in einem XPS OM](draw-graphics-in-an-xps-om.md)
 </dt> <dt>
 
-[Platzieren von Bildern in einem XPS-OM](place-images-in-an-xps-om.md)
+[Platzieren von Bildern in einem XPS OM](place-images-in-an-xps-om.md)
 </dt> <dt>
 
-[Schreiben eines XPS-om in ein XPS-Dokument](write-an-xps-om-to-an-xps-document.md)
+[Schreiben eines XPS OM in ein XPS-Dokument](write-an-xps-om-to-an-xps-document.md)
 </dt> <dt>
 
-[Drucken eines XPS-OM](print-an-xps-om.md)
+[Drucken eines XPS OM](print-an-xps-om.md)
 </dt> <dt>
 
-**In diesem Abschnitt verwendet**
+**Wird in diesem Abschnitt verwendet**
 </dt> <dt>
 
-[**Iopcparamei**](/previous-versions/windows/desktop/api/msopc/nn-msopc-iopcparturi)
+[**IOpcPartUri**](/previous-versions/windows/desktop/api/msopc/nn-msopc-iopcparturi)
 </dt> <dt>
 
-[**Ixpsomfontresource**](/windows/desktop/api/xpsobjectmodel/nn-xpsobjectmodel-ixpsomfontresource)
+[**IXpsOMFontResource**](/windows/desktop/api/xpsobjectmodel/nn-xpsobjectmodel-ixpsomfontresource)
 </dt> <dt>
 
-[**Ixpsomglyphs**](/windows/desktop/api/xpsobjectmodel/nn-xpsobjectmodel-ixpsomglyphs)
+[**IXpsOMGlyphs**](/windows/desktop/api/xpsobjectmodel/nn-xpsobjectmodel-ixpsomglyphs)
 </dt> <dt>
 
-[**Ixpsomglyphseditor**](/windows/desktop/api/xpsobjectmodel/nn-xpsobjectmodel-ixpsomglyphseditor)
+[**IXpsOMGlyphsEditor**](/windows/desktop/api/xpsobjectmodel/nn-xpsobjectmodel-ixpsomglyphseditor)
 </dt> <dt>
 
-[**Ixpsomobjectfactory**](/windows/desktop/api/xpsobjectmodel/nn-xpsobjectmodel-ixpsomobjectfactory)
+[**IXpsOMObjectFactory**](/windows/desktop/api/xpsobjectmodel/nn-xpsobjectmodel-ixpsomobjectfactory)
 </dt> <dt>
 
-[**Ixpsompage**](/windows/desktop/api/xpsobjectmodel/nn-xpsobjectmodel-ixpsompage)
+[**IXpsOMPage**](/windows/desktop/api/xpsobjectmodel/nn-xpsobjectmodel-ixpsompage)
 </dt> <dt>
 
-[**Ixpsomsolidcolorbrush**](/windows/desktop/api/xpsobjectmodel/nn-xpsobjectmodel-ixpsomsolidcolorbrush)
+[**IXpsOMSolidColorBrush**](/windows/desktop/api/xpsobjectmodel/nn-xpsobjectmodel-ixpsomsolidcolorbrush)
 </dt> <dt>
 
-[**Ixpsomvisual**](/windows/desktop/api/xpsobjectmodel/nn-xpsobjectmodel-ixpsomvisual)
+[**IXpsOMVisual**](/windows/desktop/api/xpsobjectmodel/nn-xpsobjectmodel-ixpsomvisual)
 </dt> <dt>
 
-[**Ixpsomvisualcollection**](/windows/desktop/api/xpsobjectmodel/nn-xpsobjectmodel-ixpsomvisualcollection)
+[**IXpsOMVisualCollection**](/windows/desktop/api/xpsobjectmodel/nn-xpsobjectmodel-ixpsomvisualcollection)
 </dt> <dt>
 
 **Weitere Informationen**
 </dt> <dt>
 
-[Initialisieren eines XPS-OMS](xps-object-model-initialization.md)
+[Initialisieren eines XPS OM](xps-object-model-initialization.md)
 </dt> <dt>
 
-[XPS-Dokument-API-Referenz](xps-programming-reference.md)
+[REFERENZ ZUR XPS-Dokument-API](xps-programming-reference.md)
 </dt> <dt>
 
 [XML Paper Specification](https://www.ecma-international.org/activities/XML%20Paper%20Specification/XPS%20Standard%20WD%201.6.pdf)

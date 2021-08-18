@@ -21,11 +21,11 @@ Dieser Abschnitt enthält Informationen zur DXGI-API.
 
 | Thema                                                                      | BESCHREIBUNG                                                                     |
 |----------------------------------------------------------------------------|---------------------------------------------------------------------------------|
-| [DXGI-Schnittstellen](d3d10-graphics-reference-dxgi-interfaces.md)<br/> | Dieser Abschnitt enthält Informationen zu den von DXGI bereitgestellten Schnittstellen.<br/>    |
-| [DXGI-Funktionen](d3d10-graphics-reference-dxgi-functions.md)<br/>   | Dieser Abschnitt enthält Informationen zu den von DXGI bereitgestellten Funktionen.<br/>     |
-| [DXGI-Strukturen](d3d10-graphics-reference-dxgi-structures.md)<br/> | Dieser Abschnitt enthält Informationen zu den von DXGI bereitgestellten Strukturen.<br/>    |
+| [DXGI-Schnittstellen](d3d10-graphics-reference-dxgi-interfaces.md)<br/> | Dieser Abschnitt enthält Informationen zu den schnittstellen, die von DXGI bereitgestellt werden.<br/>    |
+| [DXGI-Funktionen](d3d10-graphics-reference-dxgi-functions.md)<br/>   | Dieser Abschnitt enthält Informationen zu den funktionen, die von DXGI bereitgestellt werden.<br/>     |
+| [DXGI-Strukturen](d3d10-graphics-reference-dxgi-structures.md)<br/> | Dieser Abschnitt enthält Informationen zu den strukturen, die von DXGI bereitgestellt werden.<br/>    |
 | [DXGI-Enumerationen](d3d10-graphics-reference-dxgi-enums.md)<br/>    | Dieser Abschnitt enthält Informationen zu den von DXGI bereitgestellten Enumerationen. <br/> |
-| [DXGI-Konstanten](d3d10-graphics-reference-dxgi-constants.md)<br/>   | Dieser Abschnitt enthält Informationen zu den konstanten, die von DXGI bereitgestellt werden.<br/>     |
+| [DXGI-Konstanten](d3d10-graphics-reference-dxgi-constants.md)<br/>   | Dieser Abschnitt enthält Informationen zu den Konstanten, die von DXGI bereitgestellt werden.<br/>     |
 
 
 
