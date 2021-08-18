@@ -1,10 +1,10 @@
 ---
-title: 'Verwalten: optional: Features erweitert rechts'
+title: Erweiterte Rechte "Manage-Optional-Features"
 description: Verwalten optionaler Features für Active Directory.
 ms.assetid: 58a8d3f9-e736-40e1-8253-ed00bf150e1f
 ms.tgt_platform: multiple
 keywords:
-- AD-Schema "Manage-optional-Features erweitert"
+- Manage-Optional-Features extended right AD Schema
 topic_type:
 - apiref
 api_name:
@@ -13,14 +13,14 @@ api_type:
 - Schema
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 348f961ec635dcb7d3a185ec8670ae4de56949d1
-ms.sourcegitcommit: b77ace27b0432e7cd3863191b11926be032fbe2f
+ms.openlocfilehash: b5b7b1982a9028b731c3e87549a33a3b6072f630acdfa48069131770f7ded641
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "106342712"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119531800"
 ---
-# <a name="manage-optional-features-extended-right"></a>Verwalten: optional: Features erweitert rechts
+# <a name="manage-optional-features-extended-right"></a>Erweiterte Rechte "Manage-Optional-Features"
 
 Verwalten optionaler Features für Active Directory.
 
@@ -28,9 +28,9 @@ Verwalten optionaler Features für Active Directory.
 
 | Eingabe | Wert |
 |--------------|-----------------------------------------------|
-| CN           | Verwalten-optionale-Features                      |
+| CN           | Manage-Optional-Features                      |
 | Anzeigename | Verwalten optionaler Features für Active Directory |
-| Rights-GUID  | 7c0e2a7c-A419-48e4-A995-10180aad54dd          |
+| Rechte-GUID  | 7c0e2a7c-a419-48e4-a995-10180aad54dd          |
 
 
 
@@ -46,7 +46,7 @@ Verwalten optionaler Features für Active Directory.
 | Eingabe | Wert |
 |-------------------------|---------------------------------------------------------------|
 | Applies-To              | [**Cross-Ref-Container**](c-crossrefcontainer.md)<br/> |
-| Lokalisierung-Display-ID | 79                                                            |
+| Lokalisierungsanzeige-ID | 79                                                            |
 
 
 
@@ -57,7 +57,7 @@ Verwalten optionaler Features für Active Directory.
 | Eingabe | Wert |
 |-------------------------|---------------------------------------------------------------|
 | Applies-To              | [**Cross-Ref-Container**](c-crossrefcontainer.md)<br/> |
-| Lokalisierung-Display-ID | 79                                                            |
+| Lokalisierungsanzeige-ID | 79                                                            |
 
 
 

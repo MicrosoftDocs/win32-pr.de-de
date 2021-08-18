@@ -1,7 +1,7 @@
 ---
-description: Die inaktive Methode benachrichtigt die PIN, dass der Filter beendet wurde.
+description: Die inaktive Methode benachrichtigt den Stecknadel, dass der Filter beendet wurde.
 ms.assetid: f7efb67b-cc3f-47c4-a8ba-b2365aef0d96
-title: Cdynamicoutputpin. inaktive Methode (amfilter. h)
+title: CDynamicOutputPin.Inactive-Methode (Amfilter.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,16 +16,16 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: 4501025e844056a83be3e20a19f8ad52f935097f
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: d52ec1735be6d4e89885295a9d9c2d382142fdc9d31f95b6368d0ef2f331608e
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106356303"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119317710"
 ---
-# <a name="cdynamicoutputpininactive-method"></a>Cdynamicoutputpin. inaktive Methode
+# <a name="cdynamicoutputpininactive-method"></a>CDynamicOutputPin.Inactive-Methode
 
-Die- `Inactive` Methode benachrichtigt die PIN, dass der Filter beendet wurde.
+Die `Inactive` -Methode benachrichtigt den Pin, dass der Filter beendet wurde.
 
 ## <a name="syntax"></a>Syntax
 
@@ -42,11 +42,11 @@ Diese Methode hat keine Parameter.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt \_ bei Erfolg S OK oder einen **HRESULT** -Wert zurück, der die Ursache des Fehlers angibt.
+Gibt bei Erfolg S \_ OK oder einen **HRESULT-Wert** zurück, der die Ursache des Fehlers angibt.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Diese Methode überschreibt die [**cbaseoutputpin:: inaktive**](cbaseoutputpin-inactive.md) -Methode. Das Ereignis [**cdynamicoutputpin:: m \_ hstopevent**](cdynamicoutputpin-m-hstopevent.md) wird festgelegt.
+Diese Methode überschreibt die [**CBaseOutputPin::Inactive-Methode.**](cbaseoutputpin-inactive.md) Es legt das [**CDynamicOutputPin::m \_ hStopEvent-Ereignis**](cdynamicoutputpin-m-hstopevent.md) fest.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -54,16 +54,16 @@ Diese Methode überschreibt die [**cbaseoutputpin:: inaktive**](cbaseoutputpin-i
 
 | Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Amfilter. h (Include Streams. h)</dt> </dl>                                                                                  |
-| Bibliothek<br/> | <dl> " <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Amfilter.h (include Streams.h)</dt> </dl>                                                                                  |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Verkaufsbuilds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Cdynamicoutputpin-Klasse**](cdynamicoutputpin.md)
+[**CDynamicOutputPin-Klasse**](cdynamicoutputpin.md)
 </dt> </dl>
 
  

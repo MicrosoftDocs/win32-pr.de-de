@@ -1,19 +1,19 @@
 ---
-description: Wird an die CPlApplet-Funktion einer System Steuerungsanwendung gesendet, um Sie zur Ausführung einer globalen Initialisierung aufzufordern, insbesondere für die Speicher Belegung.
+description: Wird an die CPlApplet-Funktion einer Systemsteuerung gesendet, um sie zur Durchführung der globalen Initialisierung zu auffordern, insbesondere zur Speicherzuweisung.
 ms.assetid: 0e7e9b14-9f44-496e-a518-5d3ae92868c5
-title: CPL_INIT Meldung (cpl. h)
+title: CPL_INIT (Cpl.h)
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 5f5206d773a7a0b1786b8c95104bbcf71561d120
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 8be6acdf58822e6f10f35880a97a7b5bbb9ce0b7bbbf7556b4c18c3f7ad96f72
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104977353"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119456370"
 ---
-# <a name="cpl_init-message"></a>CPL- \_ Init-Nachricht
+# <a name="cpl_init-message"></a>CPL \_ INIT-Nachricht
 
-Wird an die [**CPlApplet**](/windows/win32/api/cpl/nc-cpl-applet_proc) -Funktion einer System Steuerungsanwendung gesendet, um Sie zur Ausführung einer globalen Initialisierung aufzufordern, insbesondere für die Speicher Belegung.
+Wird an die [**CPlApplet-Funktion**](/windows/win32/api/cpl/nc-cpl-applet_proc) einer Systemsteuerung- gesendet, um sie zur Durchführung der globalen Initialisierung zu auffordern, insbesondere der Speicherzuweisung.
 
 
 ```C++
@@ -47,25 +47,25 @@ Wird an die [**CPlApplet**](/windows/win32/api/cpl/nc-cpl-applet_proc) -Funktion
 
 ## <a name="return-value"></a>Rückgabewert
 
-Wenn die Initialisierung erfolgreich ist, sollte die [**CPlApplet**](/windows/win32/api/cpl/nc-cpl-applet_proc) -Funktion ungleich 0 (null) zurückgeben. Andernfalls sollte NULL zurückgegeben werden.
+Wenn die Initialisierung erfolgreich ist, sollte die [**CPlApplet-Funktion**](/windows/win32/api/cpl/nc-cpl-applet_proc) ungleich 0 (null) zurückgeben. Andernfalls sollte 0 (null) zurückgeben werden.
 
-Wenn [**CPlApplet**](/windows/win32/api/cpl/nc-cpl-applet_proc) NULL zurückgibt, beendet die steuernde Anwendung die Kommunikation und gibt die dll frei, die die System Steuerungsanwendung enthält.
+Wenn [**CPlApplet 0**](/windows/win32/api/cpl/nc-cpl-applet_proc) (null) zurückgibt, beendet die steuernde Anwendung die Kommunikation und gibt die DLL frei, die die Systemsteuerung enthält.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Da dies die einzige Möglichkeit ist, dass eine System Steuerungsanwendung einen Fehlerzustand signalisieren kann, sollte die Anwendung Arbeitsspeicher als Reaktion auf diese Nachricht zuweisen.
+Da dies die einzige Möglichkeit ist, Systemsteuerung Anwendung einen Fehlerzustand signalisieren kann, sollte die Anwendung als Reaktion auf diese Meldung Speicher zuweisen.
 
-Diese Nachricht wird unmittelbar nach dem Laden der dll, die die Anwendung enthält, gesendet.
+Diese Meldung wird unmittelbar nach dem Laden der DLL mit der Anwendung gesendet.
 
-## <a name="requirements"></a>Requirements (Anforderungen)
+## <a name="requirements"></a>Anforderungen
 
 
 
 | Anforderung | Wert |
 |-------------------------------------|----------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows XP \[ -Desktop-Apps\]<br/>                                      |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ XP-Desktop-Apps\]<br/>                                      |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                             |
-| Header<br/>                   | <dl> <dt>CPL. h</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Cpl.h</dt> </dl> |
 
 
 

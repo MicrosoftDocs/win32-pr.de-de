@@ -4,32 +4,32 @@ description: Definitionen von OpenGL-Begriffen, die mit dem Buchstaben J beginne
 ROBOTS: NOINDEX, NOFOLLOW
 ms.assetid: 182cc66c-afff-490b-8338-e592ce43a083
 keywords:
-- Verzweigungen
+- jaggies
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 2d9c898697d13b5a6e59e44ded64ad17d6e217bc
-ms.sourcegitcommit: fdd00b445ee88366e9cdd1eed0cb3e42e2a73eca
+ms.openlocfilehash: f2c71773d538b3da755a9a2682355b5b5012cea5d608c31c0291e46b11f442bf
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/10/2019
-ms.locfileid: "104389695"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119061448"
 ---
 # <a name="j-k"></a>J K
 
-[a](a.md) [B](b.md) [C](c.md) [D](d.md) [E](e.md) [F](f.md) [G](g.md) [H](h.md) [I](i.md) J K [L](l.md) [M](m.md) [N](n.md) [O](o.md) [P](p.md) [Q](q.md) [R](r.md) [S](s.md) [T](t.md) [U V](u-v.md) [W](w.md) [X Y Z](x-y-z.md)
+[A](a.md) [B](b.md) [C](c.md) [D](d.md) [E](e.md) [F](f.md) [G](g.md) [H](h.md) [I](i.md) J K [L](l.md) [M](m.md) [N](n.md) [O](o.md) [P](p.md) [Q](q.md) [R](r.md) [S](s.md) [T](t.md) U [V](u-v.md) [W](w.md) X [Y Z](x-y-z.md)
 
 <dl> <dt>
 
-<span id="opengl_jaggies"></span><span id="OPENGL_JAGGIES"></span>**Verzweigungen**
+<span id="opengl_jaggies"></span><span id="OPENGL_JAGGIES"></span>**jaggies**
 </dt> <dd>
 
-Artefakte von Aliasing Rendering. Die Ränder primitiver Elemente, die mit Aliasing gerendert werden, sind verzweigt und nicht glatt. Eine fast horizontale, mit einem Alias ausgelegte Linie wird z. b. als Satz horizontaler Linien in angrenzenden Pixel Zeilen und nicht als glatte, kontinuierliche Linie gerendert.
+Artifacts des Renderings mit Alias. Die Ränder von Primitiven, die mit Aliasing gerendert werden, sind verzweigt und nicht reibungslos. Eine nahezu horizontale Linie mit Alias wird z. B. als Satz horizontaler Linien in angrenzenden Pixelzeilen gerendert, anstatt als reibungslose, kontinuierliche Linie.
 
 </dd> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

@@ -1,31 +1,31 @@
 ---
 title: Beispiel für eine asynchrone Funktion
-description: Dieses Beispiel veranschaulicht das Implementieren und Aufrufen von asynchronen Funktionen.
+description: Dieses Beispiel veranschaulicht das Implementieren und Aufrufen asynchroner Funktionen.
 ms.assetid: e71bd231-c69c-409f-874c-a0798b844ee6
 keywords:
-- Asyncmodelexample-Webdienste für Windows
-- Wwsapi
+- AsyncModelExample-Webdienste für Windows
+- WWSAPI
 - WWS
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: fbfc0963ef1f62a5458f9353245e96959be2f32d
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: 3c2c5470596bf34a2d0d0e96311445de262f68c13f2684a26bac7f773cd2959f
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "104310292"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119444760"
 ---
 # <a name="asynchronous-function-example"></a>Beispiel für eine asynchrone Funktion
 
-Dieses Beispiel veranschaulicht das Implementieren und Aufrufen von asynchronen Funktionen.
+Dieses Beispiel veranschaulicht das Implementieren und Aufrufen asynchroner Funktionen.
 
 Das Beispiel besteht aus den folgenden Teilen:
 
--   Die Add-Funktion, mit der zwei Zahlen synchron oder asynchron addiert werden. Es wird ein Thread als Implementierungsdetail für den asynchronen Fall erstellt.
--   Die calladdsync-Funktion Ruft die Funktionen zum Hinzufügen synchron auf.
--   Die calladdasync-Funktion Ruft die Add-Funktionen asynchron auf.
+-   Die Add-Funktion, die zwei Zahlen synchron oder asynchron hinzufüge. Es erstellt einen Thread als Implementierungsdetail für den asynchronen Fall.
+-   Die CallAddSync-Funktion ruft die Add-Funktionen synchron auf.
+-   Die CallAddAsync-Funktion ruft die Add-Funktionen asynchron auf.
 
-## <a name="asyncmodelcpp"></a>Asyncmodel. cpp
+## <a name="asyncmodelcpp"></a>AsyncModel.cpp
 
 
 ```C++
@@ -383,9 +383,9 @@ int __cdecl wmain(int argc, __in_ecount(argc) wchar_t **argv)
 
 
 
- 
+ 
 
- 
+ 
 
 
 

@@ -1,27 +1,27 @@
 ---
-description: Sie können einen Pinsel verwenden, um das Innere von praktisch beliebigen Formen mithilfe einer GDI-Funktion (Graphics Device Interface) zu zeichnen.
+description: Sie können einen Pinsel verwenden, um das Innere praktisch jeder Form mithilfe einer GDI-Funktion (Graphics Device Interface) zu zeichnen.
 ms.assetid: 64cd6e82-7a0d-4b5e-b491-450f37eea43a
 title: Verwenden von Pinseln
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: b65ad4b14ba445642f224b0002eb1e7517c1008b
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: c42e09dc5731ceba7961dfd66b296df531897f2915cff53ccdacf1b5b5740160
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104528820"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119037498"
 ---
 # <a name="using-brushes"></a>Verwenden von Pinseln
 
-Sie können einen Pinsel verwenden, um das Innere von praktisch beliebigen Formen mithilfe einer GDI-Funktion (Graphics Device Interface) zu zeichnen. Dies umfasst das Innere von Rechtecke, Ellipsen, Polygonen und Pfaden. Abhängig von den Anforderungen Ihrer Anwendung können Sie einen Pinsel mit einer angegebenen Farbe, einem vordefinierten Pinsel, einem Schraffurpinsel oder einem Muster Pinsel verwenden.
+Sie können einen Pinsel verwenden, um das Innere praktisch jeder Form mithilfe einer GDI-Funktion (Graphics Device Interface) zu zeichnen. Dies schließt das Innere von Rechtecke, Ellipsen, Polygonen und Pfaden ein. Abhängig von den Anforderungen Ihrer Anwendung können Sie einen Volltonpinsel mit einer angegebenen Farbe, einen Stockpinsel, einen Schraffierungspinsel oder einen Musterpinsel verwenden.
 
-Dieser Abschnitt enthält Codebeispiele, die die Erstellung eines benutzerdefinierten Pinsel Dialogfelds veranschaulichen. Das Dialogfeld enthält ein Raster, das die Bitmap darstellt, die vom System als Pinsel verwendet wird. Ein Benutzer kann dieses Raster verwenden, um eine Pattern-Brush-Bitmap zu erstellen und dann das benutzerdefinierte Muster anzuzeigen, indem Sie auf die Schaltfläche **Test Muster** klicken.
+Dieser Abschnitt enthält Codebeispiele, die die Erstellung eines benutzerdefinierten Pinseldialogfelds veranschaulichen. Das Dialogfeld enthält ein Raster, das die Bitmap darstellt, die das System als Pinsel verwendet. Ein Benutzer kann dieses Raster verwenden, um eine Musterpinselbitmap zu erstellen und dann das benutzerdefinierte Muster durch Klicken auf die **Schaltfläche Testmuster** anzeigen.
 
-Die folgende Abbildung zeigt ein Muster, das mit dem Dialogfeld **benutzerdefinierter Pinsel** erstellt wurde.
+Die folgende Abbildung zeigt ein Muster, das mithilfe des Dialogfelds **Benutzerdefinierter Pinsel** erstellt wurde.
 
-![Screenshot des Dialog Felds "benutzerdefinierter Pinsel"](images/custbrush.png)
+![Screenshot des Dialogfelds "Benutzerdefinierter Pinsel"](images/custbrush.png)
 
-Um ein Dialogfeld anzuzeigen, müssen Sie zuerst eine Dialogfeld Vorlage erstellen. In der folgenden Dialogfeld Vorlage wird das Dialogfeld **benutzerdefinierter Pinsel** definiert.
+Um ein Dialogfeld anzuzeigen, müssen Sie zunächst eine Dialogfeldvorlage erstellen. Die folgende Dialogfeldvorlage definiert das **Dialogfeld Benutzerdefinierter Pinsel.**
 
 
 ```C++
@@ -42,9 +42,9 @@ END
 
 
 
-Das Dialogfeld **benutzerdefinierter Pinsel** enthält fünf Steuerelemente: ein Bitmap-Raster Fenster, ein Fenster zum Anzeigen von Mustern und drei pushschaltflächen mit der Bezeichnung **Test Muster**, **OK** und **Abbrechen**. Mithilfe der Schaltfläche " **Test Pattern** -Push" kann der Benutzer das Muster anzeigen. Die Dialogfeld Vorlage gibt die Gesamtabmessungen des Dialogfeld Fensters an, weist jedem Steuerelement einen Wert zu, gibt den Speicherort der einzelnen Steuerelemente an usw. Weitere Informationen finden Sie unter [Dialog Felder](../dlgbox/dialog-boxes.md).
+Das **Dialogfeld Benutzerdefinierter** Pinsel enthält fünf Steuerelemente: ein Bitmaprasterfenster, ein Fenster zum Anzeigen von Mustern und drei Schaltflächen mit der Bezeichnung **Testmuster**, **OK** und **Abbrechen**. Mit **der Pushschaltfläche** Testmuster kann der Benutzer das Muster anzeigen. Die Dialogfeldvorlage gibt die Gesamtdimensionen des Dialogfeldfensters an, weist jedem Steuerelement einen Wert zu, gibt die Position jedes Steuerelements an usw. Weitere Informationen finden Sie unter [Dialogfelder](../dlgbox/dialog-boxes.md).
 
-Die Steuerelement Werte in der Dialogfeld Vorlage sind Konstanten, die in der Header Datei der Anwendung wie folgt definiert wurden.
+Die Steuerelementwerte in der Dialogfeldvorlage sind Konstanten, die wie folgt in der Headerdatei der Anwendung definiert wurden.
 
 
 ```C++
@@ -57,7 +57,7 @@ Die Steuerelement Werte in der Dialogfeld Vorlage sind Konstanten, die in der He
 
 
 
-Nachdem Sie eine Dialogfeld Vorlage erstellt und in die Ressourcen Definitionsdatei der Anwendung eingeschlossen haben, müssen Sie eine Dialogfeld Prozedur schreiben. Diese Prozedur verarbeitet Nachrichten, die das System an das Dialogfeld sendet. Der folgende Auszug aus dem Quellcode einer Anwendung zeigt die Dialogfeld Prozedur für das Dialogfeld **benutzerdefinierter Pinsel** und die beiden von ihr aufgerufenen Anwendungs definierten Funktionen.
+Nachdem Sie eine Dialogfeldvorlage erstellt und in die Ressourcendefinitionsdatei der Anwendung einfügen, müssen Sie eine Dialogprozedur schreiben. Diese Prozedur verarbeitet Nachrichten, die das System an das Dialogfeld sendet. Der folgende Auszug aus dem Quellcode einer Anwendung zeigt die Dialogfeldprozedur für das Dialogfeld Benutzerdefinierter **Pinsel** und die beiden anwendungsdefinierten Funktionen, die es aufruft.
 
 
 ```C++
@@ -291,26 +291,26 @@ DWORD RetrieveWidth(LPTSTR cArray, int iLength)
 
 
 
-Die Dialogfeld Prozedur für das Dialogfeld **benutzerdefinierter Pinsel** verarbeitet vier Meldungen, wie in der folgenden Tabelle beschrieben.
+Die Dialogfeldprozedur für das **Dialogfeld Benutzerdefinierter Pinsel** verarbeitet vier Meldungen, wie in der folgenden Tabelle beschrieben.
 
 
 
-| `Message`                                          | Action                                                                                                                                                                                                                                                                                                     |
+| `Message`                                          | Aktion                                                                                                                                                                                                                                                                                                     |
 |--------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| [**WM \_ InitDialog**](../dlgbox/wm-initdialog.md)   | Ruft ein Fenster Handle und Dimensionen für die Steuerelemente des Raster Fensters und des pattern-Pinsels ab, berechnet die Abmessungen einer einzelnen Zelle im Raster Fenster-Steuerelement und initialisiert ein Array von Rasterzellen Koordinaten.                                                                                           |
-| [**WM- \_ Paint**](wm-paint.md)                    | Zeichnet das Raster Muster im Raster Fenster-Steuerelement.                                                                                                                                                                                                                                                         |
-| [**WM \_ lbuttondown**](../inputdev/wm-lbuttondown.md) | Bestimmt, ob sich der Cursor innerhalb des Raster Fenster-Steuer Elements befindet, wenn der Benutzer die linke Maustaste drückt. Wenn dies der Fall ist, kehrt die Dialogfeld Prozedur die entsprechende Raster Zelle um und zeichnet den Zustand dieser Zelle in einem Array von Bits auf, das zum Erstellen der Bitmap für den benutzerdefinierten Pinsel verwendet wird.              |
-| [**WM- \_ Befehl**](../menurc/wm-command.md)         | Verarbeitet Eingaben für die drei Push-Schaltflächen-Steuerelemente. Wenn der Benutzer auf die Schaltfläche **Testmuster** klickt, zeichnet die Dialogfeld Prozedur das Testmuster-Steuerelement mit dem neuen benutzerdefinierten Pinsel Muster. Wenn der Benutzer auf die Schaltfläche **OK** oder **Abbrechen** klickt, führt die Dialogfeld Prozedur Aktionen entsprechend aus. |
+| [**WM \_ INITDIALOG**](../dlgbox/wm-initdialog.md)   | Ruft ein Fensterhand handle und Dimensionen für die Rasterfenster- und Musterpinsel-Steuerelemente ab, berechnet die Dimensionen einer einzelnen Zelle im Rasterfenster-Steuerelement und initialisiert ein Array von Rasterzellenkoordinaten.                                                                                           |
+| [**WM \_ PAINT**](wm-paint.md)                    | Zeichnet das Rastermuster im Rasterfenster-Steuerelement.                                                                                                                                                                                                                                                         |
+| [**WM \_ LBUTTONDOWN**](../inputdev/wm-lbuttondown.md) | Bestimmt, ob sich der Cursor innerhalb des Rasterfenster-Steuerelements befindet, wenn der Benutzer die linke Maustaste drückt. Wenn dies der Ansicht ist, wird die entsprechende Rasterzelle von der Dialogfeldprozedur invertiert, und der Zustand dieser Zelle wird in einem Array von Bits erfasst, das zum Erstellen der Bitmap für den benutzerdefinierten Pinsel verwendet wird.              |
+| [**\_WM-BEFEHL**](../menurc/wm-command.md)         | Verarbeitet Eingaben für die drei Steuerelemente der Schaltfläche "Push". Wenn der Benutzer auf die Schaltfläche **Testmuster** klickt, zeichnet die Dialogfeldprozedur das Testmuster-Steuerelement mit dem neuen benutzerdefinierten Pinselmuster. Wenn der Benutzer auf die Schaltfläche **OK oder** **Abbrechen** klickt, führt die Dialogfeldprozedur aktionen entsprechend aus. |
 
 
 
  
 
-Weitere Informationen zu Nachrichten und Nachrichtenverarbeitung finden Sie unter [Meldungen und Nachrichten Warteschlangen](../winmsg/messages-and-message-queues.md).
+Weitere Informationen zur Nachrichten- und Nachrichtenverarbeitung finden Sie unter [Nachrichten und Nachrichtenwarteschlangen.](../winmsg/messages-and-message-queues.md)
 
-Nachdem Sie die Dialogfeld Prozedur geschrieben haben, schließen Sie die Funktionsdefinition für die Prozedur in die Header Datei der Anwendung ein, und wenden Sie dann die Dialogfeld Prozedur an der entsprechenden Stelle in der Anwendung an.
+Nachdem Sie die Dialogfeldprozedur geschrieben haben, schließen Sie die Funktionsdefinition für die Prozedur in die Headerdatei der Anwendung ein, und rufen Sie dann die Dialogfeldprozedur an der entsprechenden Stelle in der Anwendung auf.
 
-Der folgende Auszug aus der Header Datei der Anwendung zeigt die Funktionsdefinition für die Dialogfeld Prozedur und die beiden von ihr aufgerufenen Funktionen.
+Der folgende Auszug aus der Headerdatei der Anwendung zeigt die Funktionsdefinition für die Dialogfeldprozedur und die beiden funktionen, die sie aufruft.
 
 
 ```C++
@@ -321,7 +321,7 @@ DWORD RetrieveWidth(LPTSTR, int);
 
 
 
-Der folgende Code zeigt, wie die Dialogfeld Prozedur aus der Quell Code Datei der Anwendung aufgerufen wird.
+Schließlich zeigt der folgende Code, wie die Dialogfeldprozedur aus der Quellcodedatei der Anwendung aufgerufen wird.
 
 
 ```C++
@@ -333,7 +333,7 @@ Der folgende Code zeigt, wie die Dialogfeld Prozedur aus der Quell Code Datei de
 
 
 
-Dieser Befehl wird in der Regel als Reaktion darauf ausgelöst, dass der Benutzer eine Option aus dem Menü der Anwendung auswählt.
+Dieser Aufruf erfolgt in der Regel als Reaktion auf den Benutzer, der im Menü der Anwendung eine Option auswählt.
 
  
 

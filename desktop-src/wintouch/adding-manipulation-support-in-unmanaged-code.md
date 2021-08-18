@@ -1,52 +1,52 @@
 ---
-title: Hinzufügen von Manipulations Unterstützung in nicht verwaltetem Code
-description: In diesem Abschnitt wird erläutert, wie Sie nicht verwaltetem Code Manipulations Unterstützung hinzufügen, indem Sie eine Ereignis Senke für die \_ imanipulationevents-Schnittstelle implementieren.
+title: Hinzufügen von Manipulationsunterstützung in nicht verwaltetem Code
+description: In diesem Abschnitt wird erläutert, wie Sie Manipulationsunterstützung zu nicht verwaltetem Code hinzufügen, indem Sie eine Ereignissenke für die \_ IManipulationEvents-Schnittstelle implementieren.
 ms.assetid: 7d8c6230-eaca-43c7-ad2f-651851b69d7f
 keywords:
-- Windows-Fingereingabe, Manipulationen
-- Windows-Touchscreen, _IManipulationEvents-Schnittstelle
-- Windows-Berührungs-, IManipulationProcessor-Schnittstelle
-- Manipulationen, Hinzufügen von Unterstützung in nicht verwaltetem Code
-- Manipulationen, Unterstützung von nicht verwaltetem Code
-- Manipulationen, Unterstützung in nicht verwaltetem Code
-- Manipulationen, _IManipulationEvents-Schnittstelle
-- Manipulationen, IManipulationProcessor-Schnittstelle
-- _IManipulationEvents-Schnittstelle, Manipulations Unterstützung in nicht verwaltetem Code
-- IManipulationProcessor-Schnittstelle, Manipulations Unterstützung in nicht verwaltetem Code
+- Windows Touch,Manipulationen
+- Windows Touch-,_IManipulationEvents-Schnittstelle
+- Windows Touch,IManipulationProcessor-Schnittstelle
+- Manipulationen,Hinzufügen von Unterstützung in nicht verwaltetem Code
+- Manipulationen,Unterstützung von nicht verwaltetem Code
+- Manipulationen,Unterstützung in nicht verwaltetem Code
+- Manipulationen,_IManipulationEvents Schnittstelle
+- Manipulationen,IManipulationProcessor-Schnittstelle
+- _IManipulationEvents-Schnittstelle,Bearbeitungsunterstützung in nicht verwaltetem Code
+- IManipulationProcessor-Schnittstelle, Manipulationsunterstützung in nicht verwaltetem Code
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 6a2e000b6d3518c4e90eb5ae03b581e81037edf9
-ms.sourcegitcommit: 592c9bbd22ba69802dc353bcb5eb30699f9e9403
+ms.openlocfilehash: 7ff526c128b6da83fae3a74b88cd3bb21bc3a81c507c0a76a7c70dbddc5f76d0
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "104102070"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119710000"
 ---
-# <a name="adding-manipulation-support-in-unmanaged-code"></a>Hinzufügen von Manipulations Unterstützung in nicht verwaltetem Code
+# <a name="adding-manipulation-support-in-unmanaged-code"></a>Hinzufügen von Manipulationsunterstützung in nicht verwaltetem Code
 
-In diesem Abschnitt wird erläutert, wie Sie nicht verwaltetem Code Manipulations Unterstützung hinzufügen, indem Sie eine Ereignis Senke für die [**\_ imanipulationevents**](/windows/win32/api/manipulations/nn-manipulations-_imanipulationevents) -Schnittstelle implementieren.
+In diesem Abschnitt wird erläutert, wie Sie Manipulationsunterstützung zu nicht verwaltetem Code hinzufügen, indem Sie eine Ereignissenke für die [**\_ IManipulationEvents-Schnittstelle**](/windows/win32/api/manipulations/nn-manipulations-_imanipulationevents) implementieren.
 
-In der folgenden Abbildung wird die Manipulations Architektur dargestellt.
+Die folgende Abbildung zeigt die Bearbeitungsarchitektur.
 
-![Darstellung von Windows-Finger Eingabenachrichten, die an den Manipulations Prozessor eines Objekts übermittelt werden, das Ereignisse mit der \- imanipulationevents-Schnittstelle behandelt](images/manipulation-arch.png)
+![Abbildung, die Touchnachrichten von Fenstern zeigt, die an den Bearbeitungsprozessor eines Objekts übergeben werden, das Ereignisse mit der \- Imanipulationevents-Schnittstelle behandelt](images/manipulation-arch.png)
 
-Berührungs Daten, die von [**WM- \_**](wm-touchdown.md) Fingereingabe Nachrichten empfangen werden, werden in Verbindung mit der Kontakt-ID aus der Fingereingabe Nachricht an [**IManipulationProcessor**](/windows/desktop/api/manipulations/nn-manipulations-imanipulationprocessor) übermittelt. Basierend auf der Nachrichten Sequenz wird von der **IManipulationProcessor** -Schnittstelle berechnet, welche Art von Transformation ausgeführt wird und welche Werte dieser Transformation zugeordnet sind. Der **IManipulationProcessor** generiert dann [**\_ imanipulationevents**](/windows/win32/api/manipulations/nn-manipulations-_imanipulationevents) , die von einer Ereignis Senke behandelt werden. Die Ereignis Senke kann diese Werte dann verwenden, um benutzerdefinierte Vorgänge für das Objekt auszuführen, das transformiert wird.
+Touchdaten, die von [**WM \_ TOUCH-Nachrichten**](wm-touchdown.md) empfangen werden, werden zusammen mit der Kontakt-ID aus der Touchnachricht an den [**IManipulationProcessor**](/windows/desktop/api/manipulations/nn-manipulations-imanipulationprocessor) übergeben. Basierend auf der Nachrichtensequenz berechnet die **IManipulationProcessor-Schnittstelle,** welche Art von Transformation ausgeführt wird und welche Werte dieser Transformation zugeordnet sind. Der **IManipulationProcessor** generiert dann [**\_ IManipulationEvents,**](/windows/win32/api/manipulations/nn-manipulations-_imanipulationevents) die von einer Ereignissenke verarbeitet werden. Die Ereignissenke kann diese Werte dann verwenden, um benutzerdefinierte Vorgänge für das zu transformierte Objekt durchzuführen.
 
-Sie müssen die folgenden Schritte ausführen, um der Anwendung Bearbeitungs Unterstützung hinzuzufügen:
+Um Ihrer Anwendung Manipulationsunterstützung hinzuzufügen, müssen Sie die folgenden Schritte ausführen:
 
-1.  Implementieren Sie eine Ereignis Senke für die [**\_ imanipulationevents**](/windows/win32/api/manipulations/nn-manipulations-_imanipulationevents) -Schnittstelle.
-2.  Erstellen Sie eine Instanz einer [**IManipulationProcessor**](/windows/desktop/api/manipulations/nn-manipulations-imanipulationprocessor) -Schnittstelle.
-3.  Erstellen Sie eine Instanz der Ereignis Senke, und richten Sie Berührungs Ereignisse ein.
-4.  Senden von Berührungs Ereignisdaten an den Manipulations Prozessor.
+1.  Implementieren Sie eine Ereignissenke für die [**\_ IManipulationEvents-Schnittstelle.**](/windows/win32/api/manipulations/nn-manipulations-_imanipulationevents)
+2.  Erstellen Sie eine Instanz einer [**IManipulationProcessor-Schnittstelle.**](/windows/desktop/api/manipulations/nn-manipulations-imanipulationprocessor)
+3.  Erstellen Sie eine Instanz Ihrer Ereignissenke, und richten Sie Touchereignisse ein.
+4.  Senden von Touchereignisdaten an den Bearbeitungsprozessor.
 
-In diesem Abschnitt werden die Schritte erläutert, die Sie befolgen müssen, um der Anwendung Bearbeitungs Unterstützung hinzuzufügen. In jedem Schritt wird Code bereitgestellt, um Ihnen den Einstieg zu erleichtern.
+In diesem Abschnitt werden die Schritte erläutert, die Sie ausführen müssen, um Ihrer Anwendung Bearbeitungsunterstützung hinzuzufügen. Code wird in jedem Schritt bereitgestellt, um Ihnen den Einstieg zu geben.
 
 > [!Note]  
-> Manipulationen und Gesten können nicht gleichzeitig verwendet werden, da Gesten-und touchnachrichten sich gegenseitig ausschließen.
+> Manipulationen und Gesten können nicht gleichzeitig verwendet werden, da gesten- und berührungsmeldungen sich gegenseitig ausschließen.
 
-### <a name="implement-an-event-sink-for-_imanipualtionevents-interface"></a>Implementieren einer Ereignis Senke für die \_ IManipualtionEvents-Schnittstelle
+### <a name="implement-an-event-sink-for-_imanipualtionevents-interface"></a>Implementieren einer Ereignissenke für \_ die IManipualtionEvents-Schnittstelle
 
-Bevor Sie eine Instanz der Ereignis Senke erstellen können, müssen Sie eine Klasse erstellen, die die [**\_ imanipulationevents**](/windows/win32/api/manipulations/nn-manipulations-_imanipulationevents) -Schnittstelle für Ereignisse implementiert. Dies ist die Ereignis Senke. Ereignisse, die von der [**IManipulationProcessor**](/windows/desktop/api/manipulations/nn-manipulations-imanipulationprocessor) -Schnittstelle generiert werden, werden von der Ereignis Senke behandelt. Der folgende Code zeigt einen Beispiel Header für eine Klasse, die die **\_ imanipulationevents** -Schnittstelle erbt.
+Bevor Sie eine Instanz Ihrer Ereignissenke erstellen können, müssen Sie eine Klasse erstellen, die die [**\_ IManipulationEvents-Schnittstelle**](/windows/win32/api/manipulations/nn-manipulations-_imanipulationevents) für Das Ereignis implementiert. Dies ist Ihre Ereignissenke. Ereignisse, die von der [**IManipulationProcessor-Schnittstelle**](/windows/desktop/api/manipulations/nn-manipulations-imanipulationprocessor) generiert werden, werden von Ihrer Ereignissenke verarbeitet. Der folgende Code zeigt einen Beispielheader für eine Klasse, die die **\_ IManipulationEvents-Schnittstelle** erbt.
 
 ```C++
 // Manipulation Header Files
@@ -122,7 +122,7 @@ private:
 };     
 ```
 
-Wenn der Header angegeben ist, müssen Sie eine Implementierung der Ereignis Schnittstelle erstellen, damit Ihre Klasse die Aktionen ausführt, die der Manipulations Prozessor ausführen soll. Der folgende Code ist eine Vorlage, die die minimale Funktionalität einer Ereignis Senke für die [**\_ imanipulationevents**](/windows/win32/api/manipulations/nn-manipulations-_imanipulationevents) -Schnittstelle implementiert.
+Angesichts des Headers müssen Sie eine Implementierung der Ereignisschnittstelle erstellen, damit Ihre Klasse die Aktionen ausführt, die der Bearbeitungsprozessor ausführen soll. Der folgende Code ist eine Vorlage, die die Mindestfunktionalität einer Ereignissenke für die [**\_ IManipulationEvents-Schnittstelle**](/windows/win32/api/manipulations/nn-manipulations-_imanipulationevents) implementiert.
 
 ```C++
 #include "stdafx.h"
@@ -299,11 +299,11 @@ HRESULT CManipulationEventSink::QueryInterface(REFIID riid, LPVOID *ppvObj)
 }         
 ```
 
-Achten Sie besonders auf Implementierungen von [**ManipulationStarted**](/windows/win32/api/manipulations/nf-manipulations-_imanipulationevents-manipulationstarted)-, [**ManipulationDelta**](/windows/win32/api/manipulations/nf-manipulations-_imanipulationevents-manipulationdelta)-und [**manipulationabgeschlossene**](/windows/win32/api/manipulations/nf-manipulations-_imanipulationevents-manipulationcompleted) -Methoden in der-Klasse. Dies sind die wahrscheinlichsten Methoden in der-Schnittstelle, die das Ausführen von Vorgängen auf der Grundlage der Bearbeitungs Informationen erfordern, die im Ereignis weitergegeben werden. Beachten Sie auch, dass der zweite Parameter im Konstruktor das Objekt ist, das in den Ereignis Manipulationen verwendet wird. Im Code, der zum Erstellen des Beispiels verwendet wird, wird das HWND für die Anwendung an den Konstruktor gesendet, sodass es neu positioniert und seine Größe geändert werden kann.
+Achten Sie besonders auf Implementierungen der [**ManipulationStarted-,**](/windows/win32/api/manipulations/nf-manipulations-_imanipulationevents-manipulationstarted) [**ManipulationDelta-**](/windows/win32/api/manipulations/nf-manipulations-_imanipulationevents-manipulationdelta)und [**ManipulationCompleted-Methoden**](/windows/win32/api/manipulations/nf-manipulations-_imanipulationevents-manipulationcompleted) in der -Klasse. Dies sind die wahrscheinlichsten Methoden in der -Schnittstelle, die erfordern, dass Sie Vorgänge basierend auf den Manipulationsinformationen ausführen, die im Ereignis übergeben werden. Beachten Sie auch, dass der zweite Parameter im Konstruktor das Objekt ist, das in den Ereignisbearbeitungen verwendet wird. In dem Code, der zum Erstellen des Beispiels verwendet wird, wird der hWnd für die Anwendung an den Konstruktor gesendet, damit er neu positioniert und die Größe geändert werden kann.
 
 ### <a name="create-an-instance-of-an-imanipulationprocessor-interface"></a>Erstellen einer Instanz einer IManipulationProcessor-Schnittstelle
 
-In dem Code, in dem Sie Manipulationen verwenden werden, müssen Sie eine Instanz einer [**IManipulationProcessor**](/windows/desktop/api/manipulations/nn-manipulations-imanipulationprocessor) -Schnittstelle erstellen. Zuerst müssen Sie Unterstützung für die Manipulations Klasse hinzufügen. Der folgende Code zeigt, wie Sie dies in der-Klasse durchführen können.
+In dem Code, in dem Sie Manipulationen verwenden, müssen Sie eine Instanz einer [**IManipulationProcessor-Schnittstelle**](/windows/desktop/api/manipulations/nn-manipulations-imanipulationprocessor) erstellen. Zuerst müssen Sie Unterstützung für die Manipulationsklasse hinzufügen. Der folgende Code zeigt, wie Sie dies in Ihrer -Klasse tun können.
 
 ```C++
 //Include windows.h for touch events
@@ -316,7 +316,7 @@ In dem Code, in dem Sie Manipulationen verwenden werden, müssen Sie eine Instan
 IManipulationProcessor* g_pIManipProc;     
 ```
 
-Nachdem Sie über die Variable für den Manipulations Prozessor verfügen und die Header für Manipulationen eingefügt haben, müssen Sie eine Instanz der [**IManipulationProcessor**](/windows/desktop/api/manipulations/nn-manipulations-imanipulationprocessor) -Schnittstelle erstellen. Dies ist ein COM-Objekt. Daher müssen Sie [cokreateinstance](/windows/win32/api/combaseapi/nf-combaseapi-cocreateinstance)aufrufen und dann eine Instanz des Verweises auf **IManipulationProcessor** erstellen. Der folgende Code zeigt, wie Sie eine Instanz dieser Schnittstelle erstellen können.
+Nachdem Sie über die Variable für den Bearbeitungsprozessor verfügen und die Header für Manipulationen eingeschlossen haben, müssen Sie eine Instanz der [**IManipulationProcessor-Schnittstelle**](/windows/desktop/api/manipulations/nn-manipulations-imanipulationprocessor) erstellen. Dies ist ein COM-Objekt. Daher müssen Sie [CoCreateInstance](/windows/win32/api/combaseapi/nf-combaseapi-cocreateinstance)aufrufen und dann eine Instanz Ihres Verweises auf **den IManipulationProcessor erstellen.** Der folgende Code zeigt, wie Sie eine Instanz dieser Schnittstelle erstellen können.
 
 ```C++
    HRESULT hr = CoInitialize(0);
@@ -329,9 +329,9 @@ Nachdem Sie über die Variable für den Manipulations Prozessor verfügen und di
    );
 ```
 
-### <a name="create-an-instance-of-your-event-sink-and-set-up-touch-events"></a>Erstellen Sie eine Instanz der Ereignis Senke, und richten Sie Berührungs Ereignisse ein.
+### <a name="create-an-instance-of-your-event-sink-and-set-up-touch-events"></a>Erstellen einer Instanz Ihrer Ereignissenke und Einrichten von Touchereignissen
 
-Schließen Sie die Definition für die Klasse "Event Sink" in Ihren Code ein, und fügen Sie dann eine Variable für die Klasse "Manipulation Event Sink" hinzu. Das folgende Codebeispiel enthält den-Header für die-Klassen Implementierung und richtet eine globale Variable zum Speichern der Ereignis Senke ein.
+Fügen Sie dem Code die Definition für die Ereignissenkenklasse hinzu, und fügen Sie dann eine Variable für die Senkeklasse des Manipulationsereignis hinzu. Das folgende Codebeispiel enthält den Header für die Klassenimplementierung und richtet eine globale Variable zum Speichern der Ereignissenke ein.
 
 ```C++
 //Include your definition of the event sink, CManipulationEventSink.h in this case
@@ -341,7 +341,7 @@ Schließen Sie die Definition für die Klasse "Event Sink" in Ihren Code ein, un
 CManipulationEventSink* g_pManipulationEventSink;   
 ```
 
-Nachdem Sie die-Variable verwendet haben und die Definition für die neue Ereignis Senke-Klasse eingefügt haben, können Sie die-Klasse mit dem Bearbeitungs Prozessor erstellen, den Sie im vorherigen Schritt eingerichtet haben. Der folgende Code zeigt, wie eine Instanz dieser Klasse aus **OnInitDialog** erstellt wird.
+Nachdem Sie über die -Variable verfügen und Ihre Definition für die neue Ereignissenkenklasse eingeschlossen haben, können Sie die -Klasse mithilfe des Bearbeitungsprozessors erstellen, den Sie im vorherigen Schritt eingerichtet haben. Der folgende Code zeigt, wie eine Instanz dieser Klasse aus **OnInitDialog erstellt wird.**
 
 ```C++
    g_pManipulationEventSink = new CManipulationEventSink(g_pIManipProc, hWnd);
@@ -351,16 +351,16 @@ Nachdem Sie die-Variable verwendet haben und die Definition für die neue Ereign
 ```
 
 > [!Note]  
-> Die Art und Weise, wie Sie eine Instanz Ihrer Ereignis Senke erstellen, hängt davon ab, was Sie mit den Manipulations Daten tun. In den meisten Fällen erstellen Sie eine Ereignis Senke für den Manipulations Prozessor, die nicht denselben Konstruktor wie dieses Beispiel hat.
+> Die Art und Weise, wie Sie eine Instanz Ihrer Ereignissenke erstellen, hängt davon ab, was Sie mit den Bearbeitungsdaten machen. In den meisten Fällen erstellen Sie eine Manipulationsprozessor-Ereignissenke, die nicht über den gleichen Konstruktor wie in diesem Beispiel verfügt.
 
-### <a name="send-touch-event-data-to-the-manipulation-processor"></a>Senden von Berührungs Ereignisdaten an den Manipulations Prozessor
+### <a name="send-touch-event-data-to-the-manipulation-processor"></a>Senden von Touchereignisdaten an den Manipulationsprozessor
 
-Nachdem Sie den Manipulations Prozessor und die Ereignis Senke eingerichtet haben, müssen Sie die Berührungs Daten in den Manipulations Prozessor einspeisen, um Manipulations Ereignisse zu initiieren.
+Nachdem Sie den Bearbeitungsprozessor und die Ereignissenke eingerichtet haben, müssen Sie Touchdaten an den Bearbeitungsprozessor weiterverlangen, um Manipulationsereignisse auszulösen.
 
 > [!Note]  
-> Dies ist das gleiche Verfahren wie unter " [Getting Started with Windows Touchscreen Messages](getting-started-with-multi-touch-messages.md)" erläutert.
+> Dies ist das gleiche Verfahren, das in der Erste Schritte [mit touch messages Windows erläutert wird.](getting-started-with-multi-touch-messages.md)
 
-Zuerst erstellen Sie Code zum Decodieren der WM-Finger [**Abdruck \_**](wm-touchdown.md) Nachrichten und senden Sie an die [**IManipulationProcessor**](/windows/desktop/api/manipulations/nn-manipulations-imanipulationprocessor) -Schnittstelle, um Ereignisse zu erzeugen. Der folgende Code zeigt eine Beispiel Implementierung, die von der **WndProc** -Methode aufgerufen wird und ein **LRESULT** für Messaging zurückgibt.
+Zunächst erstellen Sie Code zum Decodieren der [**WM \_ TOUCH-Nachrichten**](wm-touchdown.md) und senden sie an die [**IManipulationProcessor-Schnittstelle,**](/windows/desktop/api/manipulations/nn-manipulations-imanipulationprocessor) um Ereignisse zu erzeugen. Der folgende Code zeigt eine Beispielimplementierung, die von der **WndProc-Methode aufgerufen** wird und ein **LRESULT für Messaging** zurückgibt.
 
 ```C++
 LRESULT OnTouch(HWND hWnd, WPARAM wParam, LPARAM lParam )
@@ -408,7 +408,7 @@ LRESULT OnTouch(HWND hWnd, WPARAM wParam, LPARAM lParam )
 }
 ```
 
-Nachdem Sie nun über eine hilfsprogrammmethode zum Decodieren der [**WM- \_ Berührungs**](wm-touchdown.md) Nachricht verfügen, müssen Sie die WM-Fingereingabe Meldungen von der **WndProc** -Methode an die Utility-Funktion übergeben. **\_** Der folgende Code zeigt, wie Sie dies tun können.
+Nachdem Sie nun über eine Hilfsmethode zum Decodieren der [**WM \_ TOUCH-Nachricht**](wm-touchdown.md) verfügen, müssen Sie die **WM \_ TOUCH-Nachrichten** von Ihrer **WndProc-Methode** an die Hilfsfunktion übergeben. Der folgende Code zeigt, wie Sie dies tun können.
 
 ```C++
 LRESULT CALLBACK WndProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam)
@@ -452,7 +452,7 @@ LRESULT CALLBACK WndProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam)
 }
 ```
 
-Die benutzerdefinierten Methoden, die Sie in der Ereignis Senke implementiert haben, sollten jetzt funktionieren. In diesem Beispiel wird Sie durch Berühren des Fensters verschoben.
+Die benutzerdefinierten Methoden, die Sie in der Ereignissenke implementiert haben, sollten nun funktionieren. In diesem Beispiel wird es durch Das Berühren des Fensters bewegt.
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
@@ -462,4 +462,4 @@ Die benutzerdefinierten Methoden, die Sie in der Ereignis Senke implementiert ha
 </dt> </dl>
 
 
- 
+ 

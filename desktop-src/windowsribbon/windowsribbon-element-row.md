@@ -3,7 +3,7 @@ title: Row-Element
 description: Stellt eine Zeile von Steuerelementen in einer benutzerdefinierten SizeDefinition-Layoutvorlage dar.
 ms.assetid: c3dac35f-3537-4eb7-b378-501ea88813f5
 keywords:
-- Zeilenelement Im Windows-Menüband
+- Zeilenelement Windows Menüband
 topic_type:
 - apiref
 api_name:
@@ -13,18 +13,18 @@ api_type:
 ms.topic: reference
 ms.date: 05/31/2018
 api_location: ''
-ms.openlocfilehash: 7d642cd209b3e00e2c63f7376e321132a1c0e686
-ms.sourcegitcommit: 099ecdda1e83618b844387405da0db0ebda93a65
+ms.openlocfilehash: d59913d8a733e4186f2c00e35431d68ebdea839e67103a46873e6f3f64f3a72b
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/04/2021
-ms.locfileid: "111445021"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119449560"
 ---
 # <a name="row-element"></a>Row-Element
 
 Stellt eine Zeile von Steuerelementen in einer benutzerdefinierten SizeDefinition-Layoutvorlage dar.
 
-## <a name="usage"></a>Verwendung
+## <a name="usage"></a>Verbrauch
 
 ``` syntax
 <Row>
@@ -40,7 +40,7 @@ Es gibt keine Attribute.
 
 
 
-| Element                                                                                 | BESCHREIBUNG                                        |
+| Element                                                                                 | Beschreibung                                        |
 |-----------------------------------------------------------------------------------------|----------------------------------------------------|
 | [**ControlGroup**](windowsribbon-element-controlgroup.md)<br/>                   | Kann ein oder mehrere Male auftreten.<br/> <br/> |
 | [**ControlSizeDefinition**](windowsribbon-element-controlsizedefinition.md)<br/> | Kann ein oder mehrere Male auftreten.<br/> <br/> |
@@ -59,7 +59,7 @@ Es gibt keine Attribute.
 
 ## <a name="remarks"></a>Hinweise
 
-Dies ist optional.
+Optional.
 
 Kann ein oder mehrere Male für jedes [**GroupSizeDefinition-Element**](windowsribbon-element-groupsizedefinition.md) auftreten.
 
@@ -165,7 +165,7 @@ Im folgenden Codebeispiel wird das grundlegende Markup für eine benutzerdefinie
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen:
 
 <dl> <dt>
 

@@ -1,6 +1,6 @@
 ---
 title: Abbildung einer Symbolleisten-Standardschaltfläche, Indexwerte (CommCtrl.h)
-description: In diesem Abschnitt werden die Indexwerte von Bildern in Standard Bitmaps angegeben.
+description: In diesem Abschnitt werden Indexwerte von Bildern innerhalb von Standardbitmaps angegeben.
 ms.assetid: 58605c48-a306-4b89-9d70-c3248ada4cb0
 topic_type:
 - apiref
@@ -43,156 +43,156 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 319445e5a5961023062e09a04481f0376ff3493c
-ms.sourcegitcommit: ee06501cc29132927ade9813e0888aaa4decc487
+ms.openlocfilehash: a7b582d0477600acb69447c0d82c93092f486618e93b27b3f166c1324938d4ca
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/28/2021
-ms.locfileid: "103961040"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119387717"
 ---
-# <a name="toolbar-standard-button-image-index-values"></a>Bild-/Indexwerte der Symbolleiste Standard
+# <a name="toolbar-standard-button-image-index-values"></a>Symbolleiste Standardschaltfläche – Bildindexwerte
 
-In diesem Abschnitt werden die Indexwerte von Bildern in Standard Bitmaps angegeben.
+In diesem Abschnitt werden Indexwerte von Bildern innerhalb von Standardbitmaps angegeben.
 
-Index Werte für die \_ hohe IDB \_ \_ -Farbe und die hohe IDB- \_ \_ \_ Farbe:
+Indexwerte für IDB \_ HIST \_ LARGE COLOR und \_ IDB \_ HIST SMALL \_ \_ COLOR:
 
 
 
-| Konstante                                                                                                                                                                        | BESCHREIBUNG                       |
+| Konstante                                                                                                                                                                        | Beschreibung                       |
 |:--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|:----------------------------------|
-| <span id="HIST_ADDTOFAVORITES"></span><span id="hist_addtofavorites"></span><dl> <dt>**Hist \_ AddTo Favoriten**</dt> </dl> | Zu Favoriten hinzufügen.<br/>      |
-| <span id="HIST_BACK"></span><span id="hist_back"></span><dl> <dt>**\_zurück**</dt> </dl>                               | Wechseln Sie zurück.<br/>             |
-| <span id="HIST_FAVORITES"></span><span id="hist_favorites"></span><dl> <dt>**Hist- \_ Favoriten**</dt> </dl>                | Öffnen Sie den Ordner Favoriten.<br/> |
-| <span id="HIST_FORWARD"></span><span id="hist_forward"></span><dl> <dt>**Hist \_ Forward**</dt> </dl>                      | Vorwärts verschieben.<br/>          |
-| <span id="HIST_VIEWTREE"></span><span id="hist_viewtree"></span><dl> <dt>**Hist- \_ viewtree**</dt> </dl>                   | Struktur anzeigen.<br/>             |
+| <span id="HIST_ADDTOFAVORITES"></span><span id="hist_addtofavorites"></span><dl> <dt>**HIST \_ ADDTOFAVORITES**</dt> </dl> | Zu Favoriten hinzufügen.<br/>      |
+| <span id="HIST_BACK"></span><span id="hist_back"></span><dl> <dt>**HIST \_ BACK**</dt> </dl>                               | Wechseln Sie zurück.<br/>             |
+| <span id="HIST_FAVORITES"></span><span id="hist_favorites"></span><dl> <dt>**\_HIST-FAVORITEN**</dt> </dl>                | Öffnen Sie den Ordner favorites.<br/> |
+| <span id="HIST_FORWARD"></span><span id="hist_forward"></span><dl> <dt>**HIST \_ FORWARD**</dt> </dl>                      | Vorankommen.<br/>          |
+| <span id="HIST_VIEWTREE"></span><span id="hist_viewtree"></span><dl> <dt>**HIST \_ VIEWTREE**</dt> </dl>                   | Ansichtsstruktur.<br/>             |
 
 
 
 <dl></dl>
 
-Index Werte für IDB \_ Std \_ Large \_ Color und IDB \_ Std \_ Small \_ Color:
+Indexwerte für IDB \_ STD \_ LARGE COLOR und \_ IDB \_ STD SMALL \_ \_ COLOR:
 
 
 
-| Konstante                                                                                                                                                         | BESCHREIBUNG                         |
+| Konstante                                                                                                                                                         | Beschreibung                         |
 |:-----------------------------------------------------------------------------------------------------------------------------------------------------------------|:------------------------------------|
-| <span id="STD_COPY"></span><span id="std_copy"></span><dl> <dt>**Std- \_ Kopie**</dt> </dl>                   | Kopiervorgang.<br/>          |
-| <span id="STD_CUT"></span><span id="std_cut"></span><dl> <dt>**Std- \_ Ausschneiden**</dt> </dl>                      | Ausschneide Vorgang.<br/>           |
-| <span id="STD_DELETE"></span><span id="std_delete"></span><dl> <dt>**Std. \_ Löschen**</dt> </dl>             | Löschvorgang.<br/>        |
-| <span id="STD_FILENEW"></span><span id="std_filenew"></span><dl> <dt>**Std- \_ Datei**</dt> </dl>          | Neuer Datei Vorgang.<br/>      |
-| <span id="STD_FILEOPEN"></span><span id="std_fileopen"></span><dl> <dt>**Std \_ FileOpen**</dt> </dl>       | Öffnen Sie den Datei Vorgang.<br/>     |
-| <span id="STD_FILESAVE"></span><span id="std_filesave"></span><dl> <dt>**Std \_ filesave**</dt> </dl>       | Datei Vorgang speichern.<br/>     |
-| <span id="STD_FIND"></span><span id="std_find"></span><dl> <dt>**Std. \_ Suchen**</dt> </dl>                   | Vorgang suchen.<br/>          |
-| <span id="STD_HELP"></span><span id="std_help"></span><dl> <dt>**Std- \_ Hilfe**</dt> </dl>                   | Hilfe Vorgang.<br/>          |
-| <span id="STD_PASTE"></span><span id="std_paste"></span><dl> <dt>**Std \_ Einfügen**</dt> </dl>                | Vorgang einfügen.<br/>         |
-| <span id="STD_PRINT"></span><span id="std_print"></span><dl> <dt>**Std- \_ Druck**</dt> </dl>                | Druckvorgang.<br/>         |
-| <span id="STD_PRINTPRE"></span><span id="std_printpre"></span><dl> <dt>**Std. \_ printpre**</dt> </dl>       | Druckvorschau Vorgang.<br/> |
-| <span id="STD_PROPERTIES"></span><span id="std_properties"></span><dl> <dt>**Std- \_ Eigenschaften**</dt> </dl> | Eigenschaften Vorgang.<br/>    |
-| <span id="STD_REDOW"></span><span id="std_redow"></span><dl> <dt>**Std- \_ redow**</dt> </dl>                | Wiederholungs Vorgang. <br/>         |
-| <span id="STD_REPLACE"></span><span id="std_replace"></span><dl> <dt>**Std. \_ ersetzen**</dt> </dl>          | Ersetzen Sie den Vorgang.<br/>       |
-| <span id="STD_UNDO"></span><span id="std_undo"></span><dl> <dt>**Std \_ rückgängig machen**</dt> </dl>                   | Rückgängigmachen.<br/>          |
+| <span id="STD_COPY"></span><span id="std_copy"></span><dl> <dt>**STD \_ COPY**</dt> </dl>                   | Kopiervorgang.<br/>          |
+| <span id="STD_CUT"></span><span id="std_cut"></span><dl> <dt>**STD \_ CUT**</dt> </dl>                      | Ausschneidevorgang.<br/>           |
+| <span id="STD_DELETE"></span><span id="std_delete"></span><dl> <dt>**STD \_ DELETE**</dt> </dl>             | Löschvorgang.<br/>        |
+| <span id="STD_FILENEW"></span><span id="std_filenew"></span><dl> <dt>**STD \_ FILENEW**</dt> </dl>          | Neuer Dateivorgang.<br/>      |
+| <span id="STD_FILEOPEN"></span><span id="std_fileopen"></span><dl> <dt>**STD \_ FILEOPEN**</dt> </dl>       | Öffnen Sie den Dateivorgang.<br/>     |
+| <span id="STD_FILESAVE"></span><span id="std_filesave"></span><dl> <dt>**STD \_ FILESAVE**</dt> </dl>       | Dateispeichervorgang.<br/>     |
+| <span id="STD_FIND"></span><span id="std_find"></span><dl> <dt>**STD \_ FIND**</dt> </dl>                   | Suchvorgang.<br/>          |
+| <span id="STD_HELP"></span><span id="std_help"></span><dl> <dt>**\_STD-HILFE**</dt> </dl>                   | Hilfevorgang.<br/>          |
+| <span id="STD_PASTE"></span><span id="std_paste"></span><dl> <dt>**STD \_ PASTE**</dt> </dl>                | Einfügevorgang.<br/>         |
+| <span id="STD_PRINT"></span><span id="std_print"></span><dl> <dt>**STD \_ PRINT**</dt> </dl>                | Druckvorgang.<br/>         |
+| <span id="STD_PRINTPRE"></span><span id="std_printpre"></span><dl> <dt>**STD \_ PRINTPRE**</dt> </dl>       | Druckvorschauvorgang.<br/> |
+| <span id="STD_PROPERTIES"></span><span id="std_properties"></span><dl> <dt>**\_STD-EIGENSCHAFTEN**</dt> </dl> | Eigenschaftenvorgang.<br/>    |
+| <span id="STD_REDOW"></span><span id="std_redow"></span><dl> <dt>**STD \_ REDOW**</dt> </dl>                | Wiederholungsvorgang. <br/>         |
+| <span id="STD_REPLACE"></span><span id="std_replace"></span><dl> <dt>**STD \_ REPLACE**</dt> </dl>          | Ersetzungsvorgang.<br/>       |
+| <span id="STD_UNDO"></span><span id="std_undo"></span><dl> <dt>**STD \_ UNDO**</dt> </dl>                   | Rückgängig-Vorgang.<br/>          |
 
 
 
-Index Werte für IDB \_ View \_ Large \_ Color und IDB \_ View \_ Small \_ Color:
+Indexwerte für IDB \_ VIEW LARGE COLOR und \_ \_ IDB VIEW SMALL \_ \_ \_ COLOR:
 
 
 
-| Konstante                                                                                                                                                                     | BESCHREIBUNG                               |
+| Konstante                                                                                                                                                                     | Beschreibung                               |
 |:-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------|:------------------------------------------|
-| <span id="VIEW_DETAILS"></span><span id="view_details"></span><dl> <dt>**\_Details anzeigen**</dt> </dl>                   | Detailansicht.<br/>                  |
-| <span id="VIEW_LARGEICONS"></span><span id="view_largeicons"></span><dl> <dt>**Anzeigen von \_ LargeIcons**</dt> </dl>          | Ansicht für große Symbole.<br/>              |
-| <span id="VIEW_LIST"></span><span id="view_list"></span><dl> <dt>**\_Liste anzeigen**</dt> </dl>                            | Listenansicht.<br/>                     |
-| <span id="VIEW_NETCONNECT"></span><span id="view_netconnect"></span><dl> <dt>**\_NetConnect anzeigen**</dt> </dl>          | Verbinden Sie sich mit dem Netzwerklaufwerk.<br/>      |
-| <span id="VIEW_NETDISCONNECT"></span><span id="view_netdisconnect"></span><dl> <dt>**\_netdisconnect anzeigen**</dt> </dl> | Verbindung mit dem Netzwerklaufwerk trennen.<br/> |
-| <span id="VIEW_NEWFOLDER"></span><span id="view_newfolder"></span><dl> <dt>**\_NewFolder anzeigen**</dt> </dl>             | Neuer Ordner.<br/>                    |
-| <span id="VIEW_PARENTFOLDER"></span><span id="view_parentfolder"></span><dl> <dt>**"Element Ordner anzeigen" \_**</dt> </dl>    | Wechseln Sie zum übergeordneten Ordner.<br/>           |
-| <span id="VIEW_SMALLICONS"></span><span id="view_smallicons"></span><dl> <dt>**Anzeigen von \_ SmallIcons**</dt> </dl>          | Kleine Symbol Ansicht.<br/>               |
-| <span id="VIEW_SORTDATE"></span><span id="view_sortdate"></span><dl> <dt>**\_SORTDATE anzeigen**</dt> </dl>                | Nach Datum sortieren.<br/>                  |
-| <span id="VIEW_SORTNAME"></span><span id="view_sortname"></span><dl> <dt>**\_sortName anzeigen**</dt> </dl>                | Nach Namen sortieren.<br/>                  |
-| <span id="VIEW_SORTSIZE"></span><span id="view_sortsize"></span><dl> <dt>**\_SORTSIZE anzeigen**</dt> </dl>                | Sortieren nach Größe.<br/>                  |
-| <span id="VIEW_SORTTYPE"></span><span id="view_sorttype"></span><dl> <dt>**\_SortType anzeigen**</dt> </dl>                | Nach Typ sortieren.<br/>                  |
+| <span id="VIEW_DETAILS"></span><span id="view_details"></span><dl> <dt>**ANZEIGEN \_ VON DETAILS**</dt> </dl>                   | Detailansicht.<br/>                  |
+| <span id="VIEW_LARGEICONS"></span><span id="view_largeicons"></span><dl> <dt>**ANZEIGEN VON \_ LARGEICONS**</dt> </dl>          | Große Symbolansicht.<br/>              |
+| <span id="VIEW_LIST"></span><span id="view_list"></span><dl> <dt>**VIEW \_ LIST**</dt> </dl>                            | Listenansicht.<br/>                     |
+| <span id="VIEW_NETCONNECT"></span><span id="view_netconnect"></span><dl> <dt>**ANZEIGEN VON \_ NETCONNECT**</dt> </dl>          | Verbinden zum Netzwerklaufwerk.<br/>      |
+| <span id="VIEW_NETDISCONNECT"></span><span id="view_netdisconnect"></span><dl> <dt>**ANZEIGEN VON \_ NETDISCONNECT**</dt> </dl> | Trennen Sie die Verbindung mit dem Netzwerklaufwerk.<br/> |
+| <span id="VIEW_NEWFOLDER"></span><span id="view_newfolder"></span><dl> <dt>**VIEW \_ NEWFOLDER**</dt> </dl>             | Neuer Ordner.<br/>                    |
+| <span id="VIEW_PARENTFOLDER"></span><span id="view_parentfolder"></span><dl> <dt>**VIEW \_ PARENTFOLDER**</dt> </dl>    | Wechseln Sie zum übergeordneten Ordner.<br/>           |
+| <span id="VIEW_SMALLICONS"></span><span id="view_smallicons"></span><dl> <dt>**ANZEIGEN VON \_ SMALLICONS**</dt> </dl>          | Kleine Symbolansicht.<br/>               |
+| <span id="VIEW_SORTDATE"></span><span id="view_sortdate"></span><dl> <dt>**VIEW \_ SORTDATE**</dt> </dl>                | Sortieren nach Datum.<br/>                  |
+| <span id="VIEW_SORTNAME"></span><span id="view_sortname"></span><dl> <dt>**VIEW \_ SORTNAME**</dt> </dl>                | Sortieren Sie nach Namen.<br/>                  |
+| <span id="VIEW_SORTSIZE"></span><span id="view_sortsize"></span><dl> <dt>**VIEW \_ SORTSIZE**</dt> </dl>                | Sortieren Sie nach Größe.<br/>                  |
+| <span id="VIEW_SORTTYPE"></span><span id="view_sorttype"></span><dl> <dt>**VIEW \_ SORTTYPE**</dt> </dl>                | Sortieren Sie nach Typ.<br/>                  |
 
 
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Sie verwenden diese Werte, um einen Bildindex in einer Standard Image Liste anzugeben, die mit der [**TB- \_ loadimages**](tb-loadimages.md) -Nachricht geladen wurde. Die Indexwerte entsprechen Bildern in den standardmäßigen Bitmaps, die von allgemeinen Steuerelementen verwendet werden.
+Sie verwenden diese Werte, um einen Imageindex in einer Standardimageliste anzugeben, die mit der [**TB \_ LOADIMAGES-Nachricht**](tb-loadimages.md) geladen wurde. Die Indexwerte entsprechen Bildern innerhalb der Standardbitmaps, die von allgemeinen Steuerelementen verwendet werden.
 
-Jede der folgenden Überschriften enthält eine Bildliste der großen Symbole, eine Bildliste der kleinen Symbole und eine Tabelle, die mit der Konstante der einzelnen Symbole mit Ihrem Indexwert übereinstimmt.
+Jede der folgenden Überschriften enthält eine Bildliste der großen Symbole, eine Bildliste der kleinen Symbole und eine Tabelle, die der Konstante jedes Symbols mit ihrem Indexwert entspricht.
 
-**IDB \_ Hist \_ Large \_ Color und IDB \_ Hist \_ Small \_ Color:**
+**IDB \_ HIST \_ LARGE COLOR UND \_ IDB \_ HIST SMALL \_ \_ COLOR:**
 
-![Screenshot, der die großen Hist-Symbole anzeigt.](images/tb-stdhistimages.png)
+![Screenshot: große HIST-Symbole](images/tb-stdhistimages.png)
 
-![Screenshot, der die kleinen Hist-Symbole anzeigt.](images/tb-stdsmallhistimages.png)
+![Screenshot: kleine HIST-Symbole](images/tb-stdsmallhistimages.png)
 
 
 
 | Definieren               | Wert |
 |----------------------|-------|
-| \_zurück           | 0     |
-| Hist \_ Forward        | 1     |
-| Hist- \_ Favoriten      | 2     |
-| Hist \_ AddTo Favoriten | 3     |
-| Hist- \_ viewtree       | 4     |
+| HIST \_ BACK           | 0     |
+| HIST \_ FORWARD        | 1     |
+| \_HIST-FAVORITEN      | 2     |
+| HIST \_ ADDTOFAVORITES | 3     |
+| HIST \_ VIEWTREE       | 4     |
 
 
 
  
 
-**IDB \_ Std \_ Large \_ Color und IDB \_ Std \_ Small \_ Color:**
+**IDB \_ STD \_ LARGE COLOR und \_ IDB \_ STD SMALL \_ \_ COLOR:**
 
-![Screenshot, der die großen S T D-Symbole anzeigt.](images/tb-stdimages.png)
+![Screenshot, der die großen S T D-Symbole zeigt.](images/tb-stdimages.png)
 
-![Screenshot, der die kleinen S T D-Symbole anzeigt.](images/tb-stdsmallimages.png)
+![Screenshot, der die kleinen S T D-Symbole zeigt.](images/tb-stdsmallimages.png)
 
 
 
 | Definieren          | Wert |
 |-----------------|-------|
-| Std- \_ Ausschneiden        | 0     |
-| Std- \_ Kopie       | 1     |
-| Std \_ Einfügen      | 2     |
-| Std \_ rückgängig machen       | 3     |
-| Std- \_ redow      | 4     |
-| Std. \_ Löschen     | 5     |
-| Std- \_ Datei    | 6     |
-| Std \_ FileOpen   | 7     |
-| Std \_ filesave   | 8     |
-| Std. \_ printpre   | 9     |
-| Std- \_ Eigenschaften | 10    |
-| Std- \_ Hilfe       | 11    |
-| Std. \_ Suchen       | 12    |
-| Std. \_ ersetzen    | 13    |
-| Std- \_ Druck      | 14    |
+| STD \_ CUT        | 0     |
+| STD \_ COPY       | 1     |
+| STD \_ PASTE      | 2     |
+| STD \_ UNDO       | 3     |
+| STD \_ REDOW      | 4     |
+| STD \_ DELETE     | 5     |
+| STD \_ FILENEW    | 6     |
+| STD \_ FILEOPEN   | 7     |
+| STD \_ FILESAVE   | 8     |
+| STD \_ PRINTPRE   | 9     |
+| \_STD-EIGENSCHAFTEN | 10    |
+| \_STD-HILFE       | 11    |
+| STD \_ FIND       | 12    |
+| STD \_ REPLACE    | 13    |
+| STD \_ PRINT      | 14    |
 
 
 
  
 
-**IDB \_ View \_ Large \_ Color und IDB \_ View \_ Small \_ Color:**
+**IDB \_ VIEW LARGE COLOR UND \_ \_ IDB VIEW SMALL \_ \_ \_ COLOR:**
 
-![Screenshot, der die Symbole für große Ansichten anzeigt.](images/tb-stdviewimages.png)
+![Screenshot, der die großen VIEW-Symbole zeigt.](images/tb-stdviewimages.png)
 
-![Screenshot, der die kleinen Anzeige Symbole anzeigt.](images/tb-stdsmallviewimages.png)
+![Screenshot mit den kleinen ANSICHT-Symbolen](images/tb-stdsmallviewimages.png)
 
 
 
 | Definieren              | Wert |
 |---------------------|-------|
-| Anzeigen von \_ LargeIcons    | 0     |
-| Anzeigen von \_ SmallIcons    | 1     |
-| \_Liste anzeigen          | 2     |
-| \_Details anzeigen       | 3     |
-| \_sortName anzeigen      | 4     |
-| \_SORTSIZE anzeigen      | 5     |
-| \_SORTDATE anzeigen      | 6     |
-| \_SortType anzeigen      | 7     |
-| "Element Ordner anzeigen" \_  | 8     |
-| \_NetConnect anzeigen    | 9     |
-| \_netdisconnect anzeigen | 10    |
-| \_NewFolder anzeigen     | 11    |
+| ANZEIGEN VON \_ LARGEICONS    | 0     |
+| ANZEIGEN VON \_ SMALLICONS    | 1     |
+| VIEW \_ LIST          | 2     |
+| ANZEIGEN \_ VON DETAILS       | 3     |
+| VIEW \_ SORTNAME      | 4     |
+| VIEW \_ SORTSIZE      | 5     |
+| VIEW \_ SORTDATE      | 6     |
+| VIEW \_ SORTTYPE      | 7     |
+| VIEW \_ PARENTFOLDER  | 8     |
+| ANZEIGEN VON \_ NETCONNECT    | 9     |
+| ANZEIGEN VON \_ NETDISCONNECT | 10    |
+| VIEW \_ NEWFOLDER     | 11    |
 
 
 
@@ -204,7 +204,7 @@ Jede der folgenden Überschriften enthält eine Bildliste der großen Symbole, e
 
 | Definieren                  | Wert                                                                                      |
 |-------------------|---------------------------------------------------------------------------------------|
-| Header<br/> | <dl> <dt>Kommstrg. h</dt> </dl> |
+| Header<br/> | <dl> <dt>CommCtrl.h</dt> </dl> |
 
 
 

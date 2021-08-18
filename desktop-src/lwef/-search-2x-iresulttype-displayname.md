@@ -1,11 +1,11 @@
 ---
-title: Iresulttype DisplayName-Eigenschaft (wdssharedidl. h)
-description: Lokalisierter Anzeige Name des Typs.
+title: IResultType DisplayName-Eigenschaft (WdsSharedIDL.h)
+description: Lokalisierter Anzeigename des Typs
 ms.assetid: 21695ba3-aa6d-419b-961a-0643caa5ea1f
 keywords:
-- Display Name-Eigenschaft Legacy-Windows-Umgebungs Features
-- Display Name-Eigenschaft Legacy-Windows-Umgebungs Features, iresulttype-Schnittstelle
-- Iresulttype-Schnittstelle Legacy Windows-Umgebungs Features, Display Name-Eigenschaft
+- DisplayName-Eigenschaft Legacy Windows Umgebungsfeatures
+- DisplayName-Eigenschaft Legacy Windows Environment Features , IResultType-Schnittstelle
+- IResultType-Schnittstelle Legacy Windows Environment Features , DisplayName-Eigenschaft
 topic_type:
 - apiref
 api_name:
@@ -17,19 +17,19 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 94080a2b5c6121bbaa9b611a7d55c2d5aaeed5e3
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: e045306250d2642ae281d81c8ffb8ab5a298134bf999ddba6abd5fd1660aeb1f
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "106338723"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119399786"
 ---
-# <a name="iresulttypedisplayname-property"></a>Iresulttype::D isplayname-Eigenschaft
+# <a name="iresulttypedisplayname-property"></a>IResultType::D isplayName-Eigenschaft
 
 > [!NOTE]
-> Windows-Desktop Suche 2. x ist eine veraltete Technologie, die ursprünglich als Add-in für Windows XP und Windows Server 2003 verfügbar war. Verwenden Sie in späteren Versionen stattdessen die [Windows Search-API](../search/-search-reference-entry-page.md) . 
+> Windows Desktop Search 2.x ist eine veraltete Technologie, die ursprünglich als Add-In für Windows XP und Windows Server 2003 verfügbar war. Verwenden Sie in späteren Versionen stattdessen die [Windows Search-API.](../search/-search-reference-entry-page.md) 
 
-Lokalisierter Anzeige Name des Typs:
+Lokalisierter Anzeigename des Typs:
 
 Diese Eigenschaft ist schreibgeschützt.
 
@@ -46,7 +46,7 @@ HRESULT get_DisplayName(
 
 ## <a name="property-value"></a>Eigenschaftswert
 
-Gibt die Adresse des lokalisierten anzeigen Amens für den Typ zurück.
+gibt die Adresse des lokalisierten Anzeigenamens für den Typ zurück.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -54,10 +54,10 @@ Gibt die Adresse des lokalisierten anzeigen Amens für den Typ zurück.
 
 | Anforderung | Wert |
 |-------------------------------------|-------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows XP mit SP2 \[ Desktop-Apps\]<br/>                                      |
-| Unterstützte Mindestversion (Server)<br/> | Windows Server 2003 mit SP1 \[ Desktop-Apps\]<br/>                             |
-| Verteilbare Komponente<br/>          | Windows-Desktop Suche (WDS) 2.6.5<br/>                                             |
-| Header<br/>                   | <dl> <dt>Wdssharedidl. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur XP mit \[ SP2-Desktop-Apps\]<br/>                                      |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server 2003 mit \[ SP1-Desktop-Apps\]<br/>                             |
+| Verteilbare Komponente<br/>          | Windows Desktopsuche (WDS) 2.6.5<br/>                                             |
+| Header<br/>                   | <dl> <dt>WdsSharedIDL.h</dt> </dl> |
 
 
 

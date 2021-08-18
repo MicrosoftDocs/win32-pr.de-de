@@ -1,7 +1,7 @@
 ---
-description: Gibt die Knotenadresse (nad) an, die mit der iscardcmd-Schnittstelle verwendet werden soll.
+description: Gibt die Knotenadresse (Eigenschaft) an, die mit der ISCardCmd-Schnittstelle verwendet werden soll.
 ms.assetid: 49de8264-9491-41a4-a8e0-68d0db088ded
-title: Iscardcmd::p ut_Nad-Methode (scarddat. h)
+title: ISCardCmd::p ut_Schriftmethode (Scarddat.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,18 +13,18 @@ api_type:
 - COM
 api_location:
 - Scardssp.dll
-ms.openlocfilehash: 64ed9c502811db5666e561a1f290cc234e6c81e6
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 84ade2e2ca69c328650f4c7df485814e4eaacedf3fdb0190fc883cde864a8082
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "103863264"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119481390"
 ---
-# <a name="iscardcmdput_nad-method"></a>Iscardcmd::p UT \_ nad-Methode
+# <a name="iscardcmdput_nad-method"></a>ISCardCmd::p ut-Methode \_
 
-\[Die **Put \_ nad** -Methode ist für die Verwendung in den Betriebssystemen verfügbar, die im Abschnitt "Anforderungen" angegeben sind. Es ist nicht für die Verwendung in Windows Server 2003 mit Service Pack 1 (SP1) und höher, Windows Vista, Windows Server 2008 und nachfolgenden Versionen des Betriebssystems verfügbar. Die [Smartcard-Module](/previous-versions/windows/desktop/secsmart/smart-card-modules) bieten eine ähnliche Funktionalität.\]
+\[Die **\_ put-Methode steht** für die Verwendung in den im Abschnitt Anforderungen angegebenen Betriebssystemen zur Verfügung. Es ist nicht für die Verwendung in Windows Server 2003 mit Service Pack 1 (SP1) und höher, Windows Vista, Windows Server 2008 und nachfolgenden Versionen des Betriebssystems verfügbar. Die [Smartcardmodule](/previous-versions/windows/desktop/secsmart/smart-card-modules) bieten ähnliche Funktionen.\]
 
-Die **Put \_ nad** -Methode gibt die Knotenadresse (nad) an, die mit der [**iscardcmd**](iscardcmd.md) -Schnittstelle verwendet werden soll. Dies gilt für die Kommunikation, die nur die [*Protokoll Kommunikation T = 1*](../secgloss/t-gly.md) verwendet. Standardmäßig verwendet das [**iscardcmd**](iscardcmd.md) -Objekt einen nad-Wert von 0 (null).
+Die **\_ put-Methode gibt** die Knotenadresse (Eigenschaft) an, die mit der [**ISCardCmd-Schnittstelle verwendet werden**](iscardcmd.md) soll. Dies gilt nur für die Kommunikation mit [*dem T=1-Protokoll.*](../secgloss/t-gly.md) Standardmäßig verwendet das [**ISCardCmd-Objekt**](iscardcmd.md) einen Wert von 0 (null).
 
 ## <a name="syntax"></a>Syntax
 
@@ -41,35 +41,35 @@ HRESULT put_Nad(
 
 <dl> <dt>
 
-*bnad* \[ in\]
+*bNad* \[ In\]
 </dt> <dd>
 
-Byte, das das zu verwendende nad darstellt.
+Byte, das die zu verwendende Beimeine darstellt.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Die-Methode gibt einen der folgenden möglichen Werte zurück.
+Die -Methode gibt einen der folgenden möglichen Werte zurück.
 
 
 
 | Rückgabecode                                                                                  | Beschreibung                                      |
 |----------------------------------------------------------------------------------------------|--------------------------------------------------|
 | <dl> <dt>**S \_ OK**</dt> </dl>         | Der Vorgang wurde erfolgreich abgeschlossen.<br/> |
-| <dl> <dt>**E \_ invalidArg**</dt> </dl> | Der *bnad* -Parameter ist ungültig.<br/>    |
+| <dl> <dt>**E \_ INVALIDARG**</dt> </dl> | Der *bNad-Parameter* ist ungültig.<br/>    |
 
 
 
  
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Diese Methode sollte nur aufgerufen werden, wenn es erforderlich ist, einen anderen Wert als 0 (null) für die nad zu verwenden.
+Diese Methode sollte nur aufgerufen werden, wenn es erforderlich ist, einen anderen Wert als 0 (null) für das -System zu verwenden.
 
 ## <a name="examples"></a>Beispiele
 
-Im folgenden Beispiel wird gezeigt, wie eine mit der [**iscardcmd**](iscardcmd.md) -Schnittstelle zu verwendende Knotenadresse angegeben wird. Im Beispiel wird davon ausgegangen, dass bynadvalue eine Variable vom Typ " **Byte** " ist, der zuvor ein Wert zugewiesen wurde, und dass "piscardcmd" ein gültiger Zeiger auf eine Instanz der **iscardcmd** -Schnittstelle ist.
+Das folgende Beispiel zeigt, wie Sie eine Knotenadresse angeben, die mit der [**ISCardCmd-Schnittstelle verwendet werden**](iscardcmd.md) soll. Im Beispiel wird davon ausgegangen, dass byNadValue eine Variable vom Typ **BYTE** ist, der zuvor ein Wert zugewiesen wurde, und dass pISCardCmd ein gültiger Zeiger auf eine Instanz der **ISCardCmd-Schnittstelle** ist.
 
 
 ```C++
@@ -93,22 +93,22 @@ if (FAILED(hr))
 
 | Anforderung | Wert |
 |-------------------------------------|-----------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows XP \[ -Desktop-Apps\]<br/>                                             |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/>                                    |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ XP-Desktop-Apps\]<br/>                                             |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                                    |
 | Ende des Supports (Client)<br/>    | Windows XP<br/>                                                                   |
-| Ende des Supports (Server)<br/>    | Windows Server 2003<br/>                                                          |
-| Header<br/>                   | <dl> <dt>"Scarddat. h"</dt> </dl>   |
-| Typbibliothek<br/>             | <dl> <dt>Scarddat. tlb</dt> </dl> |
+| Ende des Supports (Server)<br/>    | Windows Server 2003<br/>                                                          |
+| Header<br/>                   | <dl> <dt>Scarddat.h</dt> </dl>   |
+| Typbibliothek<br/>             | <dl> <dt>Scarddat.tlb</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Scardssp.dll</dt> </dl> |
-| IID<br/>                      | IID \_ iscardcmd ist als D5778AE3-43DE-11D0-9171-00AA00C18068 definiert.<br/>            |
+| IID<br/>                      | IID \_ ISCardCmd ist als D5778AE3-43DE-11D0-9171-00AA00C18068 definiert.<br/>            |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Iscardcmd**](iscardcmd.md)
+[**ISCardCmd**](iscardcmd.md)
 </dt> </dl>
 
  

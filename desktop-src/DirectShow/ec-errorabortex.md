@@ -4,12 +4,12 @@ ms.assetid: de7b5222-3a29-40cc-af1a-2672bd68b7c9
 title: EC_ERRORABORTEX (Dshow.h)
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 9b3bf1e1f24f9d5b07312f542c1ce4ea671f601d
-ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
+ms.openlocfilehash: 18f0cb010e6ebf94f69cd8bbebfc7cdeea16d1d085069ad2f12fedb6fbf4a266
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2021
-ms.locfileid: "108094608"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119015978"
 ---
 # <a name="ec_errorabortex"></a>EC \_ ERRORABORTEX
 
@@ -37,15 +37,15 @@ Ein Vorgang wurde aufgrund eines Fehlers abgebrochen.
 
 Keine.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Der ältere [Windows Media Source-Filter](windows-media-source-filter.md) sendet dieses Ereignis. Neue Filter sollten dieses Ereignis nicht senden.
+Der [Legacyfilter Windows Medienquelle](windows-media-source-filter.md) sendet dieses Ereignis. Neue Filter sollten dieses Ereignis nicht senden.
 
 ## <a name="requirements"></a>Anforderungen
 
 
 
-| Anforderungen | Wert |
+| Anforderung | Wert |
 |-------------------|------------------------------------------------------------------------------------|
 | Header<br/> | <dl> <dt>Dshow.h</dt> </dl> |
 

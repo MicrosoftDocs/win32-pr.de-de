@@ -1,6 +1,6 @@
 ---
-title: komplexe baseeapuserpropertiesv1 Schema-Typen (Benutzer)
-description: Erfahren Sie mehr über das baseeapuserpropertiesv1-Schema. Dieses Schema definiert die komplexen Typen baseeapparameters und baseeaptypeparameters.
+title: baseeapuserpropertiesv1 Schema Complex Types (User)
+description: Erfahren Sie mehr über das Schema baseeapuserpropertiesv1. Dieses Schema definiert die komplexen Typen BaseEapParameters und BaseEapTypeParameters.
 ms.assetid: 543e574a-ec3b-47fc-9e8b-1a057228277b
 ms.topic: article
 ms.date: 05/31/2018
@@ -9,25 +9,25 @@ topic_type:
 api_name: ''
 api_type: ''
 api_location: ''
-ms.openlocfilehash: b16b0942ff8d64b30221d13eade7d44183a79a2a
-ms.sourcegitcommit: 4d4a6e9ad5de37e467cd3164276771b71e1f113f
+ms.openlocfilehash: c9485ab187df87fca5145b98362354f3095d93b90ee68108e8fae97dac528aa1
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/05/2021
-ms.locfileid: "106389099"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119483410"
 ---
-# <a name="baseeapuserpropertiesv1-schema-complex-types"></a>komplexe baseeapuserpropertiesv1-Schema Typen
+# <a name="baseeapuserpropertiesv1-schema-complex-types"></a>baseeapuserpropertiesv1 Schema Complex Types
 
-Das [baseeapuserpropertiesv1](baseeapuserpropertiesv1schema-schema.md) -Schema definiert die folgenden komplexen Typen.
+Das [Schema baseeapuserpropertiesv1](baseeapuserpropertiesv1schema-schema.md) definiert die folgenden komplexen Typen.
 
--   [**Baseeapparameters**](baseeapuserpropertiesv1schema-baseeapparameters-complextype.md)
--   [**Baseeaptypeparameters**](baseeapuserpropertiesv1schema-baseeaptypeparameters-complextype.md)
+-   [**BaseEapParameters**](baseeapuserpropertiesv1schema-baseeapparameters-complextype.md)
+-   [**BaseEapTypeParameters**](baseeapuserpropertiesv1schema-baseeaptypeparameters-complextype.md)
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[EAPHost und Legacy Schema](eaphost-schemas.md)
+[EAPHost und Legacyschema](eaphost-schemas.md)
 </dt> <dt>
 
 [baseeapuserpropertiesv1-Schema](baseeapuserpropertiesv1schema-schema.md)

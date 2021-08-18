@@ -1,33 +1,33 @@
 ---
-description: Die linelocationoption- \_ Konstanten definieren Werte, die im dwOptions-Member der linelocationentry-Struktur verwendet werden, die als Teil der linetranslatecaps-Struktur zurückgegeben wird, die von linegettranslatecaps zurückgegeben wurde.
+description: Die LINELOCATIONOPTION-Konstanten definieren Werte, die im dwOptions-Member der LINELOCATIONENTRY-Struktur verwendet werden, die als Teil der LINETRANSLATECAPS-Struktur zurückgegeben wird, die von \_ lineGetTranslateCaps zurückgegeben wird.
 ms.assetid: 3b185c16-2535-4a90-855b-29e52828ea4c
-title: LINELOCATIONOPTION_ Konstanten (TAPI. h)
+title: LINELOCATIONOPTION_ Konstanten (Tapi.h)
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 0f60398953d2f809e29a78323e3b1dedfcac7a1b
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: c45de77a6d887b6fb0c5fa0e45e7005a621aa10ca44cc3218078eea74d00a2fd
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106372653"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119003048"
 ---
-# <a name="linelocationoption_-constants"></a>Linelocationoption- \_ Konstanten
+# <a name="linelocationoption_-constants"></a>\_LINELOCATIONOPTION-Konstanten
 
-Die **linelocationoption \_** -Konstanten definieren Werte, die im **dwOptions** -Member der [**linelocationentry**](/windows/desktop/api/Tapi/ns-tapi-linelocationentry) -Struktur verwendet werden, die als Teil der [**linetranslatecaps**](/windows/desktop/api/Tapi/ns-tapi-linetranslatecaps) -Struktur zurückgegeben wird, die von [**linegettranslatecaps**](/windows/desktop/api/Tapi/nf-tapi-linegettranslatecaps)zurückgegeben wurde.
+Die **\_ LINELOCATIONOPTION-Konstanten** definieren Werte, die im **dwOptions-Member** der [**LINELOCATIONENTRY-Struktur**](/windows/desktop/api/Tapi/ns-tapi-linelocationentry) verwendet werden, die als Teil der [**LINETRANSLATECAPS-Struktur**](/windows/desktop/api/Tapi/ns-tapi-linetranslatecaps) zurückgegeben wird, die von [**lineGetTranslateCaps**](/windows/desktop/api/Tapi/nf-tapi-linegettranslatecaps)zurückgegeben wird.
 
 <dl> <dt>
 
-<span id="LINELOCATIONOPTION_PULSEDIAL"></span><span id="linelocationoption_pulsedial"></span>**linelocationoption \_ Pull Dial**
+<span id="LINELOCATIONOPTION_PULSEDIAL"></span><span id="linelocationoption_pulsedial"></span>**LINELOCATIONOPTION \_ PULSEDIAL**
 </dt> <dd> <dl> <dt>
 
 
 
-Der standardmäßige Wähl Modus an diesem Speicherort ist Pulse Wähl. Wenn dieses Bit festgelegt ist, fügt [**linetranslateaddress**](/windows/desktop/api/Tapi/nf-tapi-linetranslateaddress) einen "P"-Wähl Modifizierer an den Anfang der als DFÜ-Zeichenfolge zurückgegebenen Zeichenfolge ein, wenn dieser Speicherort ausgewählt wird. Wenn dieses Bit nicht festgelegt ist, fügt **linetranslateaddress** einen "T"-wählmodifizierer am Anfang der DFÜ-Zeichenfolge ein.
+Der Standardwählmodus an diesem Standort ist Pulse Dialing. Wenn dieses Bit festgelegt ist, fügt [**lineTranslateAddress**](/windows/desktop/api/Tapi/nf-tapi-linetranslateaddress) einen "P"-Wählmodifizierer am Anfang der Wählbaren Zeichenfolge ein, die bei Auswahl dieses Standorts zurückgegeben wird. Wenn dieses Bit nicht festgelegt ist, fügt **lineTranslateAddress** den Wählmodifizierer "T" am Anfang der Wählzeichenfolge ein.
 
 
 </dt> </dl> </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
 Nicht erweiterbar. Alle 32 Bits sind reserviert.
 
@@ -37,8 +37,8 @@ Nicht erweiterbar. Alle 32 Bits sind reserviert.
 
 | Anforderung | Wert |
 |-------------------------|-----------------------------------------------------------------------------------|
-| TAPI-Version<br/> | Erfordert TAPI 2,0 oder höher<br/>                                             |
-| Header<br/>       | <dl> <dt>TAPI. h</dt> </dl> |
+| TAPI-Version<br/> | Erfordert TAPI 2.0 oder höher<br/>                                             |
+| Header<br/>       | <dl> <dt>Tapi.h</dt> </dl> |
 
 
 

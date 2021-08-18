@@ -1,6 +1,6 @@
 ---
-description: 'Weitere Informationen finden Sie unter: esentlogtornschreiteduringhardrecoveryexception-Konstruktor'
-title: Esentlogtornschreiteduringhardrecoveryexception-Konstruktor
+description: 'Weitere Informationen zu: EsentLogTornWriteDuringHardRecoveryException-Konstruktor'
+title: EsentLogTornWriteDuringHardRecoveryException-Konstruktor
 TOCTitle: 'EsentLogTornWriteDuringHardRecoveryException constructor '
 ms:assetid: M:Microsoft.Isam.Esent.Interop.EsentLogTornWriteDuringHardRecoveryException.#ctor
 ms:mtpsurl: https://msdn.microsoft.com/library/microsoft.isam.esent.interop.esentlogtornwriteduringhardrecoveryexception.esentlogtornwriteduringhardrecoveryexception(v=EXCHG.10)
@@ -24,19 +24,19 @@ api_type:
 api_location:
 - Microsoft.Isam.Esent.Interop.dll
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: d4fef3d3ea69d158ab7db0d2a543a80cad4e3a22
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 0fac94eaaedc1c6d3f7000ebade9ec6630870a0796d96fb0aa48f3351a214012
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "103754681"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119040858"
 ---
-# <a name="esentlogtornwriteduringhardrecoveryexception-constructor"></a>Esentlogtornschreiteduringhardrecoveryexception-Konstruktor
+# <a name="esentlogtornwriteduringhardrecoveryexception-constructor"></a>EsentLogTornWriteDuringHardRecoveryException-Konstruktor
 
-Initialisiert eine neue Instanz der esentlogtornschreiteduringhardrecoveryexception-Klasse.
+Initialisiert eine neue Instanz der EsentLogTornWriteDuringHardRecoveryException-Klasse.
 
-**Namespace:**  [Microsoft. ISAM. ESENT. Interop](./microsoft.isam.esent.interop-namespace.md)  
-**Assembly:**  Microsoft. ISAM. ESENT. Interop (in Microsoft.Isam.Esent.Interop.dll)
+**Namespace:**  [Microsoft.Isam.Esent.Interop](./microsoft.isam.esent.interop-namespace.md)  
+**Assembly:**  Microsoft.Isam.Esent.Interop (in Microsoft.Isam.Esent.Interop.dll)
 
 ## <a name="syntax"></a>Syntax
 
@@ -52,12 +52,12 @@ Dim instance As New EsentLogTornWriteDuringHardRecoveryException()
 public EsentLogTornWriteDuringHardRecoveryException()
 ```
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
-#### <a name="reference"></a>Referenz
+#### <a name="reference"></a>Verweis
 
-[Esentlogtornwrite teduringhardrecoveryexception-Klasse](./esentlogtornwriteduringhardrecoveryexception-class.md)
+[EsentLogTornWriteDuringHardRecoveryException-Klasse](./esentlogtornwriteduringhardrecoveryexception-class.md)
 
-[Esentlogtornschreiteduringhardrecoveryexception-Member](./esentlogtornwriteduringhardrecoveryexception-members.md)
+[EsentLogTornWriteDuringHardRecoveryException-Member](./esentlogtornwriteduringhardrecoveryexception-members.md)
 
-[Microsoft. ISAM. ESENT. Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)
+[Microsoft.Isam.Esent.Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)

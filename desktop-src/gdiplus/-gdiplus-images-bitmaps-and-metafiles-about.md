@@ -1,19 +1,19 @@
 ---
-description: Windows GDI+ bietet die Image-Klasse zum Arbeiten mit Rasterbildern (Bitmaps) und Vektorbildern (Metafiles).
+description: Windows GDI+ stellt die Image-Klasse für die Arbeit mit Rasterbildern (Bitmaps) und Vektorbildern (Metadateien) zurEntspricht.
 ms.assetid: ddde257c-41a6-4f6e-8d81-10d66c60085c
 title: Bilder, Bitmaps und Metadateien
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 75c3c0e88226bc32619a8f0fc03f8c25f2963cd6
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: f30f52c6c72d64191bac6ddb7640f9ea0662197d93fa491c13eff5490a2803d9
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104042105"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120115020"
 ---
 # <a name="images-bitmaps-and-metafiles"></a>Bilder, Bitmaps und Metadateien
 
-Windows GDI+ bietet die [**Image**](/windows/desktop/api/gdiplusheaders/nl-gdiplusheaders-image) -Klasse zum Arbeiten mit Rasterbildern (Bitmaps) und Vektorbildern (Metafiles). Die [**Bitmap**](/windows/desktop/api/gdiplusheaders/nl-gdiplusheaders-bitmap) -Klasse und die [**Metafile**](/windows/desktop/api/gdiplusheaders/nl-gdiplusheaders-metafile) -Klasse erben beide von der **Image** -Klasse. Die **Bitmap** -Klasse erweitert die Funktionen der **Image** -Klasse, indem zusätzliche Methoden zum Laden, speichern und Bearbeiten von Rasterbildern bereitgestellt werden. Die **Metafile** -Klasse erweitert die Funktionen der **Image** -Klasse, indem zusätzliche Methoden zum Aufzeichnen und untersuchen von Vektorbildern bereitgestellt werden.
+Windows GDI+ stellt die [**Image-Klasse für**](/windows/desktop/api/gdiplusheaders/nl-gdiplusheaders-image) die Arbeit mit Rasterbildern (Bitmaps) und Vektorbildern (Metadateien) zurUng. Die [**Bitmap-Klasse**](/windows/desktop/api/gdiplusheaders/nl-gdiplusheaders-bitmap) und [**die Metafile-Klasse**](/windows/desktop/api/gdiplusheaders/nl-gdiplusheaders-metafile) erben beide von der **Image-Klasse.** Die **Bitmap-Klasse** erweitert die Funktionen der **Image-Klasse,** indem zusätzliche Methoden zum Laden, Speichern und Bearbeiten von Rasterbildern zur Verfügung stehen. Die **Metafile-Klasse** erweitert die Funktionen der **Image-Klasse,** indem zusätzliche Methoden zum Aufzeichnen und Untersuchen von Vektorbildern zur Verfügung stehen.
 
 -   [Bitmaptypen](-gdiplus-types-of-bitmaps-about.md)
 -   [Metadateien](-gdiplus-metafiles-about.md)

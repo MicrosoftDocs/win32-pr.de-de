@@ -1,9 +1,9 @@
 ---
-title: Albuminfo-Element
-description: Das Element "Albuminfo" gibt die URL für die Webseite an, die von Windows Media Player angezeigt wird, wenn der Benutzer weitere Informationen zu einem bestimmten Medien Element anzeigen möchte.
+title: AlbumInfo-Element
+description: Das AlbumInfo-Element gibt die URL für die Webseite an, die Windows Media Player, wenn der Benutzer sich für die Anzeige weiterer Informationen zu einem bestimmten Medienelement entscheidet.
 ms.assetid: c872e95a-3723-4ce8-8d61-e2bc9e12c785
 keywords:
-- Fenster Media Player des Albuminfo-Elements
+- Element "AlbumInfo Windows Media Player
 topic_type:
 - apiref
 api_name:
@@ -12,21 +12,21 @@ api_type:
 - NA
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: c3805ae2d5fca687ce024efca74e0254db7c8ae3
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 1d9a5f8fab7da8f61ce6ee5451ebcef4dc33517aae2396f0817fac19222713db
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106361526"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119055378"
 ---
-# <a name="albuminfo-element"></a>Albuminfo-Element
+# <a name="albuminfo-element"></a>AlbumInfo-Element
 
 > [!Note]  
-> In diesem Abschnitt werden die-Funktionen beschrieben, die für die Verwendung durch Online Stores Die Verwendung dieser Funktion außerhalb des Kontexts eines Online Stores wird nicht unterstützt.
+> In diesem Abschnitt werden Funktionen beschrieben, die für die Verwendung durch Onlineshops entwickelt wurden. Die Verwendung dieser Funktionalität außerhalb des Kontexts eines Onlineshops wird nicht unterstützt.
 
  
 
-Das Element " **Albuminfo** " gibt die URL für die Webseite an, die von Windows Media Player angezeigt wird, wenn der Benutzer weitere Informationen zu einem bestimmten Medien Element anzeigen möchte.
+Das **AlbumInfo-Element** gibt die URL für die Webseite an, die Windows Media Player, wenn der Benutzer sich für die Anzeige weiterer Informationen zu einem bestimmten Medienelement entscheidet.
 
 ``` syntax
 <AlbumInfo
@@ -42,11 +42,11 @@ Das Element " **Albuminfo** " gibt die URL für die Webseite an, die von Windows
 <span id="URL__required_"></span><span id="url__required_"></span><span id="URL__REQUIRED_"></span>**URL** (erforderlich)
 </dt> <dd>
 
-Die URL für die Webseite, die von Windows Media Player angezeigt wird.
+URL für die Webseite, die Windows Media Player wird.
 
 </dd> </dl>
 
-## <a name="parentchild-elements"></a>Über-/unterordnungselemente
+## <a name="parentchild-elements"></a>Über- und untergeordnete Elemente
 
 
 
@@ -61,20 +61,20 @@ Die URL für die Webseite, die von Windows Media Player angezeigt wird.
 
 ## <a name="remarks"></a>Bemerkungen
 
-Wenn der Benutzer auf eine Schaltfläche in Windows Media Player klickt, um zusätzliche Informationen zu einem bestimmten Medien Element anzuzeigen, sendet der Player die URL-Anforderung mit Parametern, die mithilfe eines Fragezeichens (?) Abfrage Zeichenfolgen-Trennzeichen angehängt werden. In der folgenden Tabelle werden die mit der URL-Anforderung gesendeten Parameter ausführlich erläutert. Andere können für Legacy Kompatibilitätszwecke vorhanden sein.
+Wenn der Benutzer in Windows Media Player auf eine Schaltfläche klickt, um zusätzliche Informationen zu einem bestimmten Medienelement anzeigen zu können, sendet der Player die URL-Anforderung mit angefügten Parametern unter Verwendung eines Fragezeichens (?) als Trennzeichen für Abfragezeichenfolgen. In der folgenden Tabelle sind die mit der URL-Anforderung gesendeten Parameter aufgeführt. Andere sind möglicherweise aus Gründen der Legacykompatibilität vorhanden.
 
 
 
 | Name         | Wert                                                                                                                                                               |
 |--------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| *Aufzunehmen*      | Der Wert des **WM/albumtitle-** Attributs für das Medien Element.                                                                                                        |
-| *Interpret*     | Der Wert des **WM/Album-** Attributs, sofern vorhanden, oder andernfalls der Wert des **Author** -Attributs für das Medien Element.                                         |
-| *Geoid*      | ID des geografischen Standorts für Windows. Die Speicherort-ID wird vom Benutzer im Bereich **Speicherort** der Einstellungen für Regions-und Sprachoptionen in der Systemsteuerung angegeben. |
-| *locale*     | Windows Media Player-Gebiets Schema-ID.                                                                                                                                     |
-| *Titel*      | Der Wert des **Title** -Attributs für das Medien Element.                                                                                                                |
-| *UFID*       | Der Wert des **WM/UniqueFileIdentifier-** Attributs für das Medien Element.                                                                                              |
-| *UserLocale* | Windows-Gebiets Schema-ID. Das Gebiets Schema wird vom Benutzer im Bereich " **Standards und Formate** " der Einstellungen für Regions-und Sprachoptionen in der Systemsteuerung angegeben.        |
-| *version*    | Windows Media Player-Versionsnummer im folgenden Format: 10.0. x. xxxx oder 11.0. x. xxxx.                                                                         |
+| *Album*      | Der Wert des **WM/AlbumTitle-Attributs** für das Medienelement.                                                                                                        |
+| *Künstler*     | Der Wert des **WM/AlbumArtist-Attributs,** sofern vorhanden, oder der Wert des **Author-Attributs** für das Medienelement.                                         |
+| *Geoid*      | Windows geografische Standort-ID. Die Standort-ID wird vom Benutzer im Bereich **Standort** der Einstellungen für regionale Optionen und Sprachoptionen in Systemsteuerung. |
+| *locale*     | Windows Media Player-ID.                                                                                                                                     |
+| *Titel*      | Der Wert des **Title-Attributs** für das Medienelement.                                                                                                                |
+| *UFID*       | Der Wert des **WM/UniqueFileIdentifier-Attributs** für das Medienelement.                                                                                              |
+| *userlocale* | Windows-ID. Das Gebiets anders wird vom Benutzer im Bereich **Standards und Formate** der Einstellungen "Regionale Optionen" und "Sprachoptionen" in Systemsteuerung.        |
+| *version*    | Windows Media Player Versionsnummer im folgenden Format: 10.0.x.xxxx oder 11.0.x.xxxx.                                                                         |
 
 
 
@@ -90,17 +90,17 @@ Wenn der Benutzer auf eine Schaltfläche in Windows Media Player klickt, um zus�
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Beispiel eines serviceInfo-Dokuments für einen Online Store vom Typ 1**](example-serviceinfo-document-for-a-type-1-online-store.md)
+[**ServiceInfo-Beispieldokument für eine Online-Store**](example-serviceinfo-document-for-a-type-1-online-store.md)
 </dt> <dt>
 
-[**Beispiel eines serviceInfo-Dokuments für einen Typ 2-Online Store**](example-serviceinfo-document-for-a-type-2-online-store.md)
+[**ServiceInfo-Beispieldokument für eine Online-Store**](example-serviceinfo-document-for-a-type-2-online-store.md)
 </dt> <dt>
 
-[**Servicinfo-Dokument**](serviceinfo-document.md)
+[**ServiceInfo-Dokument**](serviceinfo-document.md)
 </dt> </dl>
 
  

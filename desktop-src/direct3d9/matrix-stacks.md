@@ -1,57 +1,57 @@
 ---
-description: Die D3DX Utility Library stellt die ID3DXMATRIXStack-Schnittstelle bereit.
+description: Die Hilfsprogrammbibliothek D3DX stellt die ID3DXMATRIXStack-Schnittstelle bereit.
 ms.assetid: e3cfb29e-4ef6-4b48-ad6b-f0371f526507
-title: Matrix Stapel (Direct3D 9)
+title: Matrixstapel (Direct3D 9)
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 4d535307fb99d8743b910f2f3f8c6d55e197748e
-ms.sourcegitcommit: a47bd86f517de76374e4fff33cfeb613eb259a7e
+ms.openlocfilehash: a480236bc42142b725e232a9fb92807be73fb03097104a0cc4fc08643f4361af
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/06/2021
-ms.locfileid: "103860318"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119044328"
 ---
-# <a name="matrix-stacks-direct3d-9"></a>Matrix Stapel (Direct3D 9)
+# <a name="matrix-stacks-direct3d-9"></a>Matrixstapel (Direct3D 9)
 
-Die D3DX Utility Library stellt die [**ID3DXMATRIXStack**](id3dxmatrixstack.md) -Schnittstelle bereit. Es stellt einen Mechanismus bereit, mit dem Matrizen auf einem Matrix Stapel abgelegt und aus diesem entfernt werden können. Das Implementieren eines Matrix Stapels ist eine effiziente Möglichkeit zum Nachverfolgen von Matrizen beim Durchlaufen einer Transformations Hierarchie.
+Die Hilfsprogrammbibliothek D3DX stellt die [**ID3DXMATRIXStack-Schnittstelle**](id3dxmatrixstack.md) bereit. Sie stellt einen Mechanismus bereit, mit dem Matrizen auf einen Matrixstapel gepusht und daraus entfernt werden können. Die Implementierung eines Matrixstapels ist eine effiziente Möglichkeit, Matrizen beim Durchlaufen einer Transformationshierarchie nachzuverfolgen.
 
-Die D3DX Utility Library verwendet einen Matrix Stapel zum Speichern von Transformationen als Matrizen. Die verschiedenen Methoden der [**ID3DXMATRIXStack**](id3dxmatrixstack.md) -Schnittstelle befassen sich mit der aktuellen Matrix oder der Matrix, die sich über dem Stapel befindet. Sie können die aktuelle Matrix mit der [**ID3DXMATRIXStack:: loadidentity**](id3dxmatrixstack--loadidentity.md) -Methode löschen. Um explizit eine bestimmte Matrix anzugeben, die als aktuelle Transformationsmatrix geladen werden soll, verwenden Sie die [**ID3DXMATRIXStack:: loadmatrix**](id3dxmatrixstack--loadmatrix.md) -Methode. Anschließend können Sie entweder die [**ID3DXMATRIXStack:: mehrtmatrix**](id3dxmatrixstack--multmatrix.md) -Methode oder die [**ID3DXMATRIXStack:: multmatrixlocal**](id3dxmatrixstack--multmatrixlocal.md) -Methode aufzurufen, um die aktuelle Matrix mit der angegebenen Matrix zu multiplizieren.
+Die D3DX-Hilfsprogrammbibliothek verwendet einen Matrixstapel, um Transformationen als Matrizen zu speichern. Die verschiedenen Methoden der [**ID3DXMATRIXStack-Schnittstelle**](id3dxmatrixstack.md) befassen sich mit der aktuellen Matrix oder der Matrix, die sich oben auf dem Stapel befindet. Sie können die aktuelle Matrix mit der [**ID3DXMATRIXStack::LoadIdentity-Methode**](id3dxmatrixstack--loadidentity.md) löschen. Um explizit eine bestimmte Matrix anzugeben, die als aktuelle Transformationsmatrix geladen werden soll, verwenden Sie die [**ID3DXMATRIXStack::LoadMatrix-Methode.**](id3dxmatrixstack--loadmatrix.md) Anschließend können Sie entweder die [**ID3DXMATRIXStack::MultMatrix-Methode**](id3dxmatrixstack--multmatrix.md) oder die [**ID3DXMATRIXStack::MultMatrixLocal-Methode**](id3dxmatrixstack--multmatrixlocal.md) aufrufen, um die aktuelle Matrix mit der angegebenen Matrix zu multiplizieren.
 
-Die [**ID3DXMATRIXStack::P op**](id3dxmatrixstack--pop.md) -Methode ermöglicht es Ihnen, zur vorherigen Transformationsmatrix zurückzukehren, und die [**ID3DXMATRIXStack::P USH**](id3dxmatrixstack--push.md) -Methode fügt dem Stapel eine Transformationsmatrix hinzu.
+Mit der [**ID3DXMATRIXStack::P op-Methode**](id3dxmatrixstack--pop.md) können Sie zur vorherigen Transformationsmatrix zurückkehren, und die [**ID3DXMATRIXStack::P ush-Methode**](id3dxmatrixstack--push.md) fügt dem Stapel eine Transformationsmatrix hinzu.
 
-Die einzelnen Matrizen im Matrix Stapel werden als 4 x 4-Matrizen dargestellt, die von der D3DX Utility Library [**D3DXMATRIX**](d3dxmatrix.md) -Struktur definiert werden.
+Die einzelnen Matrizen im Matrixstapel werden als homogene Matrizen dargestellt, die durch die D3DX-Hilfsprogrammbibliothek [**D3DXMATRIX-Struktur**](d3dxmatrix.md) definiert werden.
 
-Die D3DX Utility Library bietet einen Matrix Stapel über ein COM-Objekt (Component Object Model).
+Die D3DX-Hilfsprogrammbibliothek stellt einen Matrixstapel über ein COM-Objekt (Component Object Model) bereit.
 
-## <a name="implementing-a-scene-hierarchy"></a>Implementieren einer Szenen Hierarchie
+## <a name="implementing-a-scene-hierarchy"></a>Implementieren einer Szenenhierarchie
 
-Ein Matrix Stapel vereinfacht die Erstellung von hierarchischen Modellen, in denen komplizierte Objekte aus einer Reihe von einfacheren Objekten erstellt werden.
+Ein Matrixstapel vereinfacht die Erstellung hierarchischer Modelle, bei denen komplizierte Objekte aus einer Reihe einfacherer Objekte erstellt werden.
 
-Eine Szene-oder Transformations Hierarchie wird normalerweise durch eine Strukturdaten Struktur dargestellt. Jeder Knoten in der Strukturdaten Struktur enthält eine Matrix. Eine bestimmte Matrix stellt die Änderung in Koordinatensystemen zwischen dem übergeordneten Knoten des Knotens und dem Knoten dar. Wenn Sie z. b. eine menschliche Arm modellieren, können Sie die Hierarchie implementieren, die in der folgenden Abbildung dargestellt ist.
+Eine Szenen- oder Transformationshierarchie wird in der Regel durch eine Struktur von Strukturdaten dargestellt. Jeder Knoten in der Struktur der Struktur enthält eine Matrix. Eine bestimmte Matrix stellt die Änderung der Koordinatensysteme vom übergeordneten Knoten zum Knoten dar. Wenn Sie beispielsweise einen menschlichen Arm modellieren, können Sie die Hierarchie implementieren, die im folgenden Diagramm dargestellt ist.
 
-![Diagramm der Hierarchie einer menschlichen Arm](images/stack1.png)
+![Diagramm der Hierarchie eines menschlichen Armes](images/stack1.png)
 
-In dieser Hierarchie platziert die Text Matrix den Text der Welt. Die Upperarm-Matrix enthält die Drehung der Schulter, die lowerarm-Matrix enthält die Drehung des Bogens, und die Hand Matrix enthält die Drehung des Handgelenks. Um zu ermitteln, wo sich die Hand in Bezug auf die Welt befindet, Multiplizieren Sie alle Matrizen vom Text nach unten.
+In dieser Hierarchie platziert die Body-Matrix den Text in der Welt. Die UpperArm-Matrix enthält die Drehung der Achse, die LowerArm-Matrix enthält die Drehung des Ellenbogens, und die Handmatrix enthält die Drehung des Handbands. Um zu bestimmen, wo die Hand relativ zur Welt ist, multiplizieren Sie alle Matrizen von Körper nach unten durch Hand zusammen.
 
-Die vorherige Hierarchie ist übermäßig simpel, da jeder Knoten nur über ein untergeordnetes Element verfügt. Wenn Sie die Hand ausführlicher modellieren, werden Sie wahrscheinlich Finger und ein Thumb-Steuer Punkt hinzufügen. Jede Ziffer kann der Hierarchie als untergeordnete Elemente hinzugefügt werden, wie im folgenden Diagramm dargestellt.
+Die vorherige Hierarchie ist zu einfach, da jeder Knoten nur über ein untergeordnetes Element verfügt. Wenn Sie beginnen, die Hand ausführlicher zu modellieren, fügen Sie wahrscheinlich Finger und einen Daumen hinzu. Jede Ziffer kann der Hierarchie als untergeordnete Elemente von Hand hinzugefügt werden, wie im folgenden Diagramm dargestellt.
 
-![Diagramm der Hierarchie einer Menschenhand](images/stack2.png)
+![Diagramm der Hierarchie einer menschlichen Hand](images/stack2.png)
 
-Wenn Sie das vollständige Diagramm des Arm-nach-oben-nach-unten-Reihenfolge durchlaufen, bevor Sie mit dem nächsten Pfad fortfahren, um die Szene zu zeichnen, führen Sie eine Sequenz segmentierter Rendering aus. Um z. b. die Hand und die Finger zu erzeugen, implementieren Sie das folgende Muster.
+Wenn Sie den vollständigen Graphen des Arms in der Reihenfolge der tiefen ersten Tiefe durchlaufen ( so weit wie möglich einen Pfad nach unten durchlaufen, bevor Sie zum nächsten Pfad wechseln), um die Szene zu zeichnen, führen Sie eine Sequenz des segmentierten Renderings aus. Um z. B. die Hand und die Finger zu rendern, implementieren Sie das folgende Muster.
 
-1.  Überträgt die Hand Matrix auf den Matrix Stapel.
+1.  Pushen Sie die Handmatrix auf den Matrixstapel.
 2.  Zeichnen Sie die Hand.
-3.  Übertragung der Ziehpunkt Matrix auf den Matrix Stapel.
-4.  Ziehen Sie den Ziehpunkt.
-5.  Blättern Sie die Ziehpunkt Matrix aus dem Stapel.
-6.  Übertragung der Finger 1-Matrix auf den Matrix Stapel.
+3.  Pushen Sie die Thumb-Matrix auf den Matrixstapel.
+4.  Zeichnen Sie den Daumen.
+5.  Legen Sie die Thumb-Matrix vom Stapel ab.
+6.  Drücken Sie die Finger-1-Matrix auf den Matrixstapel.
 7.  Zeichnen Sie den ersten Finger.
-8.  Schalten Sie die Finger 1-Matrix aus dem Stapel.
-9.  Übertragung der Finger 2-Matrix auf den Matrix Stapel. Sie werden auf diese Weise fortgesetzt, bis alle Finger und Thumb gerendert werden.
+8.  Pop the Finger 1 matrix off the stack.
+9.  Drücken Sie die Finger 2-Matrix auf den Matrixstapel. Sie fahren auf diese Weise fort, bis alle Finger und der Daumen gerendert werden.
 
-Nachdem Sie das Rendering der Finger abgeschlossen haben, würden Sie die Hand Matrix aus dem Stapel aufklappen.
+Nachdem Sie das Rendern der Finger abgeschlossen haben, würden Sie die Handmatrix aus dem Stapel popen.
 
-Sie können diesen grundlegenden Prozess in Code mit den folgenden Beispielen ausführen. Wenn während der tiefen Suche der Strukturdaten Struktur ein Knoten angezeigt wird, verschieben Sie die Matrix an den oberen Rand des Matrix Stapels.
+Sie können diesen grundlegenden Prozess mit den folgenden Beispielen im Code ausführen. Wenn sie während der tiefen ersten Suche der Struktur der Struktur auf einen Knoten stoßen, pushen Sie die Matrix an den oberen Rand des Matrixstapels.
 
 
 ```
@@ -62,7 +62,7 @@ MatrixStack->MultMatrix(pNode->matrix);
 
 
 
-Wenn Sie mit einem Knoten fertig sind, können Sie die Matrix am oberen Rand des Matrix Stapels aufklappen.
+Wenn Sie mit einem Knoten fertig sind, legen Sie die Matrix am oberen Rand des Matrixstapels ab.
 
 
 ```
@@ -71,7 +71,7 @@ MatrixStack->Pop();
 
 
 
-Auf diese Weise stellt die Matrix am Anfang des Stapels immer die weltweite Transformation des aktuellen Knotens dar. Vor dem Zeichnen der einzelnen Knoten sollten Sie daher die Direct3D-Matrix festlegen.
+Auf diese Weise stellt die Matrix oben im Stapel immer die Welttransformation des aktuellen Knotens dar. Daher sollten Sie vor dem Zeichnen der einzelnen Knoten die Direct3D-Matrix festlegen.
 
 
 ```
@@ -80,13 +80,13 @@ pD3DDevice->SetTransform(D3DTS_WORLDMATRIX(0), *MatrixStack->GetTop());
 
 
 
-Weitere Informationen zu den spezifischen Methoden, die Sie für einen D3DX-Matrix Stapel ausführen können, finden Sie im [**ID3DXMATRIXStack**](id3dxmatrixstack.md) Reference Topic.
+Weitere Informationen zu den spezifischen Methoden, die Sie für einen D3DX-Matrixstapel ausführen können, finden Sie im Referenzthema [**ID3DXMATRIXStack.**](id3dxmatrixstack.md)
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[Scheitelpunkt Pipeline](vertex-pipeline.md)
+[Vertexpipeline](vertex-pipeline.md)
 </dt> </dl>
 
  

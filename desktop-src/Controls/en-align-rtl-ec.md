@@ -1,9 +1,9 @@
 ---
-title: EN_ALIGN_RTL_EC Benachrichtigungs Code (Winuser. h)
-description: Wird gesendet, wenn der Benutzer die Richtung des Bearbeitungs Steuer Elements von rechts nach links geändert hat. Das übergeordnete Fenster des Bearbeitungs Steuer Elements empfängt diesen Benachrichtigungs Code über eine WM- \_ Befehls Meldung.
+title: EN_ALIGN_RTL_EC Benachrichtigungscode (Winuser.h)
+description: Wird gesendet, wenn der Benutzer die Bearbeitungssteuerungsrichtung von rechts nach links geändert hat. Das übergeordnete Fenster des Bearbeitungssteuer elements empfängt diesen Benachrichtigungscode über eine WM \_ COMMAND-Meldung.
 ms.assetid: c53bc808-48c6-4a8f-ae5d-af2164fe419a
 keywords:
-- Windows-Steuerelemente für EN_ALIGN_RTL_EC Benachrichtigungs
+- EN_ALIGN_RTL_EC Benachrichtigungscode Windows Steuerelementen
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: eca94073b86ea44b192360e593f4b76d4227cf82
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: d16b44ecd143715eb5c1bc895ca5c20fa066b17b71ab31ee667e2d6b2b6a0852
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "103858787"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119437090"
 ---
-# <a name="en_align_rtl_ec-notification-code"></a>De \_ Ausrichten des \_ RTL-EC- \_ Benachrichtigungs Codes
+# <a name="en_align_rtl_ec-notification-code"></a>EN ALIGN RTL EC notification code (EN \_ ALIGN \_ RTL \_ EC-Benachrichtigungscode)
 
-Wird gesendet, wenn der Benutzer die Richtung des Bearbeitungs Steuer Elements von rechts nach links geändert hat. Das übergeordnete Fenster des Bearbeitungs Steuer Elements empfängt diesen Benachrichtigungs Code über eine [**WM- \_ Befehls**](/windows/desktop/menurc/wm-command) Meldung.
+Wird gesendet, wenn der Benutzer die Bearbeitungssteuerungsrichtung von rechts nach links geändert hat. Das übergeordnete Fenster des Bearbeitungssteuer elements empfängt diesen Benachrichtigungscode über eine [**WM \_ COMMAND-Meldung.**](/windows/desktop/menurc/wm-command)
 
 
 ```C++
@@ -42,22 +42,22 @@ EN_ALIGN_RTL_EC
 *wParam* 
 </dt> <dd>
 
-Das [**LoWord**](/previous-versions/windows/desktop/legacy/ms632659(v=vs.85)) enthält den Bezeichner des Bearbeitungs Steuer Elements. Das [**HIWORD**](/previous-versions/windows/desktop/legacy/ms632657(v=vs.85)) gibt den Benachrichtigungs Code an.
+Das [**LOWORD enthält**](/previous-versions/windows/desktop/legacy/ms632659(v=vs.85)) den Bezeichner des Bearbeitungssteuerzeichens. Das [**HIWORD gibt**](/previous-versions/windows/desktop/legacy/ms632657(v=vs.85)) den Benachrichtigungscode an.
 
 </dd> <dt>
 
 *lParam* 
 </dt> <dd>
 
-Ein Handle für das Bearbeitungs Steuerelement, das den Benachrichtigungs Code sendet.
+Ein Handle für das Bearbeitungssteuer steuerelement, das den Benachrichtigungscode sendet.
 
 </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Wenn eine bidirektionale Sprache auf dem System installiert ist (z. b. Arabisch oder Hebräisch), können Sie die Bearbeitungs Steuerelement-Richtung mithilfe von STRG + LShift (von links nach rechts) und STRG + rshift (von rechts nach links) ändern.
+Wenn auf Ihrem System eine bidirektionale Sprache installiert ist, z. B. Arabisch oder Hebräisch, können Sie die Bearbeitungssteuerungsrichtung ändern, indem Sie STRG+LSHIFT (für von links nach rechts) und STRG+RSHIFT (für von rechts nach links) verwenden.
 
-Umfassende **Bearbeitung:** Dieser Benachrichtigungs Code wird nicht unterstützt.
+**Umfangreiche Bearbeitung:** Dieser Benachrichtigungscode wird nicht unterstützt.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -65,17 +65,17 @@ Umfassende **Bearbeitung:** Dieser Benachrichtigungs Code wird nicht unterstütz
 
 | Anforderung | Wert |
 |-------------------------------------|----------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                                           |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/>                                                     |
-| Header<br/>                   | <dl> <dt>Winuser. h (Windows. h einschließen)</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ Vista-Desktop-Apps\]<br/>                                                           |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                                                     |
+| Header<br/>                   | <dl> <dt>Winuser.h (include Windows.h)</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen:
 
 <dl> <dt>
 
-[**WM- \_ Befehl**](/windows/desktop/menurc/wm-command)
+[**\_WM-BEFEHL**](/windows/desktop/menurc/wm-command)
 </dt> </dl>
 
  

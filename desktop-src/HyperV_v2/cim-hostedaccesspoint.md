@@ -1,5 +1,5 @@
 ---
-description: Stellt eine Zuordnung zwischen einem Dienst Zugriffspunkt (SAP) und dem System dar, von dem es gehostet wird.
+description: Stellt eine Zuordnung zwischen einem Dienstzugriffspunkt (SAP) und dem System dar, das ihn hostet.
 ms.assetid: 82db71d6-6d14-408e-87e0-fe869e454d4d
 title: CIM_HostedAccessPoint-Klasse (Hyper-V-Verwaltung)
 ms.topic: reference
@@ -15,16 +15,16 @@ api_type:
 - DllExport
 api_location:
 - vmms.exe
-ms.openlocfilehash: 0684c2855e7966a0c01d1d9f9bfa0cbd71c2397a
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 2079d34af64b7819f7c7dc4991a00a9a01b350ee45c54b910a35f1008d45e510
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104484211"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119014628"
 ---
 # <a name="cim_hostedaccesspoint-class-hyper-v-management"></a>CIM_HostedAccessPoint-Klasse (Hyper-V-Verwaltung)
 
-Stellt eine Zuordnung zwischen einem Dienst Zugriffspunkt (SAP) und dem System dar, von dem es gehostet wird. Ein System kann mehrere Zugriffspunkte hosten. Wenn die Implementierung von SAP modelliert ist, muss Sie von einem Gerät oder einer Software Funktion implementiert werden, die Teil des Systems ist, das SAP hostet.
+Stellt eine Zuordnung zwischen einem Dienstzugriffspunkt (SAP) und dem System dar, das ihn hostet. Ein System kann mehrere Zugriffspunkte hosten. Wenn die Implementierung von SAP modelliert ist, muss sie von einem Geräte- oder Softwarefeature implementiert werden, das Teil des Systems ist, das den SAP hostet.
 
 ## <a name="syntax"></a>Syntax
 
@@ -39,45 +39,45 @@ class CIM_HostedAccessPoint : CIM_HostedDependency
 
 ## <a name="members"></a>Member
 
-Die CIM-Klasse " **\_ tarstedaccesspoint** " verfügt über diese Typen von Membern:
+Die **\_ CIM-Klasse HostedAccessPoint** verfügt über folgende Typen von Membern:
 
 -   [Eigenschaften](#properties)
 
 ### <a name="properties"></a>Eigenschaften
 
-Die CIM-Klasse " **\_ stestedaccesspoint** " verfügt über diese Eigenschaften.
+Die **\_ CIM-Klasse HostedAccessPoint** verfügt über diese Eigenschaften.
 
 <dl> <dt>
 
-**Vorgänger**
+**Vorläufer**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **CIM- \_ System**
+Datentyp: **\_ CIM-System**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**außer Kraft**](/windows/desktop/WmiSdk/standard-qualifiers) Setzung ("Vorgänger"), [**Min**](/windows/desktop/WmiSdk/standard-qualifiers) (1), [**Max**](/windows/desktop/WmiSdk/standard-qualifiers) (1)
+Qualifizierer: [**Außerkraftsetzung**](/windows/desktop/WmiSdk/standard-qualifiers) ("Vorgänger"), [**Min(**](/windows/desktop/WmiSdk/standard-qualifiers) 1), [**Max**](/windows/desktop/WmiSdk/standard-qualifiers) (1)
 </dt> </dl>
 
-Das Host System.
+Das Hostsystem.
 
 </dd> <dt>
 
-**Dependent**
+**Abhängigen**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **CIM \_ serviceaccesspoint**
+Datentyp: **CIM \_ ServiceAccessPoint**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**außer Kraft**](/windows/desktop/WmiSdk/standard-qualifiers) Setzung ("abhängig"), [**schwach**](/windows/desktop/WmiSdk/standard-qualifiers)
+Qualifizierer: [**Überschreiben**](/windows/desktop/WmiSdk/standard-qualifiers) ("abhängig"), [**Schwach**](/windows/desktop/WmiSdk/standard-qualifiers)
 </dt> </dl>
 
-Die SAPS, die auf dem System gehostet werden.
+Die SAPs, die auf dem System gehostet werden.
 
 </dd> </dl>
 
@@ -89,17 +89,17 @@ Die SAPS, die auf dem System gehostet werden.
 |-------------------------------------|---------------------------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 8.1<br/>                                                                                  |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2012 R2<br/>                                                                       |
-| Namespace<br/>                | \\Stammvirtualisierung \\ v2<br/>                                                                     |
-| MOF<br/>                      | <dl> <dt>Windowsvirtualization. v2. MOF</dt> </dl> |
+| Namespace<br/>                | \\Root-Virtualisierung \\ v2<br/>                                                                     |
+| MOF<br/>                      | <dl> <dt>WindowsVirtualization.V2.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Vmms.exe</dt> </dl>                     |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**CIM- \_ hubabhängigkeit**](cim-hosteddependency.md)
+[**CIM \_ HostedDependency**](cim-hosteddependency.md)
 </dt> </dl>
 
  

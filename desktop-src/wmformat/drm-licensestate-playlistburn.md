@@ -1,9 +1,9 @@
 ---
 title: DRM_LicenseState_PlaylistBurn
-description: Die \_ Eigenschaft DRM licenmenstate \_ playlistburn enthält eine Datenstruktur des WM- \_ Lizenz \_ Zustands \_ , die Details dazu enthält, wie dieses Recht auf den Inhalt angewendet wurde.
+description: Die EIGENSCHAFT DRM LicenseState PlaylistPlayList enthält eine WM LICENSE STATE DATA-Struktur, die Details dazu enthält, wie dieses Recht \_ auf den Inhalt angewendet \_ \_ \_ \_ wurde.
 ms.assetid: 21d2a284-1f0c-499a-94fd-f66d6437bd49
 keywords:
-- DRM_LicenseState_PlaylistBurn Windows Media-Format
+- DRM_LicenseState_PlaylistBurn windows Media Format
 topic_type:
 - apiref
 api_name:
@@ -12,36 +12,36 @@ api_type:
 - NA
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 812fe11f1318eadcc37fde242187695ef5101387
-ms.sourcegitcommit: 592c9bbd22ba69802dc353bcb5eb30699f9e9403
+ms.openlocfilehash: 362689f9a6946674c5102fa4c73042c08d610197d6e771c3159fbe5fc959e846
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "103948755"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119708970"
 ---
-# <a name="drm_licensestate_playlistburn"></a>DRM \_ licenanstate \_ playlistburn
+# <a name="drm_licensestate_playlistburn"></a>DRM \_ LicenseState \_ Playlist Playlist
 
-Die Eigenschaft **DRM \_ licenmenstate \_ playlistburn** enthält eine [**Datenstruktur des WM- \_ Lizenz \_ Zustands \_**](/previous-versions/windows/desktop/legacy/dd757942(v=vs.85)) , die Details dazu enthält, wie dieses Recht auf den Inhalt angewendet wurde.
+Die **EIGENSCHAFT DRM \_ LicenseState \_ PlaylistPlayList enthält** eine WM LICENSE STATE [**\_ \_ \_ DATA-Struktur,**](/previous-versions/windows/desktop/legacy/dd757942(v=vs.85)) die Details dazu enthält, wie dieses Recht auf den Inhalt angewendet wurde.
 
 ## <a name="global-constant"></a>Globale Konstante
 
-g \_ wszwmdrm \_ licenanstate \_ playlistburn
+g \_ wszWMDRM \_ LicenseState \_ PlaylistPlayList
 
 ## <a name="data-type"></a>Datentyp
 
-**WMT \_ - \_ typbinär Datei**
+**\_WMT-TYP \_ BINARY**
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Dies ist eine schreibgeschützte Eigenschaft, die mithilfe von [**iwmdrmreader:: getdrmproperty**](/previous-versions/windows/desktop/api/Wmsdkidl/nf-wmsdkidl-iwmdrmreader-getdrmproperty)abgerufen wird.
+Dies ist eine schreibgeschützte Eigenschaft, die mitHILFE von [**IWMDRMReader::GetDRMProperty abgerufen wird.**](/previous-versions/windows/desktop/api/Wmsdkidl/nf-wmsdkidl-iwmdrmreader-getdrmproperty)
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
 [**DRM-Eigenschaften**](drm-properties.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 

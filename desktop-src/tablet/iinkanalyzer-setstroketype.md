@@ -1,7 +1,7 @@
 ---
 description: Ändert den Typ des angegebenen Strichs.
 ms.assetid: 1608fed1-cd6c-46c3-a35f-3d262279ec2e
-title: 'Iinkanalyzer:: SetStrokeType-Methode (iacom. h)'
+title: IInkAnalyzer::SetStrokeType-Methode (IACom.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,14 +13,14 @@ api_type:
 - COM
 api_location:
 - IACom.dll
-ms.openlocfilehash: 8a5f77cbefb200bad973c0f2cf28fea5d3efe1da
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 6d65c01ba3618bad563ee2b8c8a9c4fee3479a12c796b2f2f570832fac1d826c
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104129436"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119709030"
 ---
-# <a name="iinkanalyzersetstroketype-method"></a>Iinkanalyzer:: SetStrokeType-Methode
+# <a name="iinkanalyzersetstroketype-method"></a>IInkAnalyzer::SetStrokeType-Methode
 
 Ändert den Typ des angegebenen Strichs.
 
@@ -40,39 +40,39 @@ HRESULT SetStrokeType(
 
 <dl> <dt>
 
-*lstrokeid* \[ in\]
+*lStrokeId* \[ In\]
 </dt> <dd>
 
-Der Strich Bezeichner des Strichs, dem *StrokeType* zugewiesen werden soll.
+Der Strichbezeichner des Strichs, dem *StrokeType* zugewiesen werden soll.
 
 </dd> <dt>
 
-*StrokeType* \[ in\]
+*StrokeType* \[ In\]
 </dt> <dd>
 
-Der [**StrokeType**](stroketype.md) -Wert, der dem Strich zugewiesen werden soll.
+Der [**StrokeType-Wert,**](stroketype.md) der dem Strich zugewiesen werden soll.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Eine Beschreibung der Rückgabewerte finden Sie unter [Klassen und Schnittstellen-Ink-Analyse](classes-and-interfaces---ink-analysis.md).
+Eine Beschreibung der Rückgabewerte finden Sie unter Klassen und Schnittstellen – [Ink-Analyse.](classes-and-interfaces---ink-analysis.md)
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Wenn der Typ des Strichs der [**StrokeType**](stroketype.md) -Wert **\_ nicht klassifiziert** ist, klassifiziert [**iinkanalyzer**](iinkanalyzer.md) den Strich während der frei Hand Analyse. Andernfalls verwendet **iinkanalyzer** den Typ, der auf dem Strich festgelegt ist.
+Wenn der Typ des Strichs der [**StrokeType-Wert StrokeType**](stroketype.md) **\_ Unclassified** ist, klassifiziert [**IInkAnalyzer**](iinkanalyzer.md) den Strich während der Freihandanalyse. Andernfalls verwendet **IInkAnalyzer** den für den Strich festgelegten Typ.
 
-Der Wert von "Stroke Type" wird von [**iinkanalyzer**](iinkanalyzer.md) nicht als Teil der Ink-Analyse festgelegt. Verwenden Sie die **iinkanalyzer:: SetStrokeType-Methode** oder die [**iinkanalyzer:: SetStrokesType-Methode**](iinkanalyzer-setstrokestype.md), um den strichentyp anzugeben oder zu ändern.
+[**IInkAnalyzer**](iinkanalyzer.md) legt den Strichtypwert nicht als Teil der Freihandanalyse fest. Verwenden Sie zum Angeben oder Ändern des Strichtyps die **IInkAnalyzer::SetStrokeType-Methode** oder [**die IInkAnalyzer::SetStrokesType-Methode.**](iinkanalyzer-setstrokestype.md)
 
-Wenn ein Strich einem [**icontextnode**](icontextnode.md) zugeordnet ist, bei dem es sich nicht um einen nicht klassifizierten frei Hand Knoten handelt (siehe [**icontextnode:: GetType**](icontextnode-gettype.md)), verschiebt diese Methode den Strich auf einen nicht klassifizierten Ink-Knoten, der Striche derselben Sprache enthält. Wenn kein solcher Kontext Knoten vorhanden ist, erstellt diese Methode einen neuen nicht klassifizierten frei Hand Knoten und fügt diesen dem Strich hinzu. Bei einem nicht klassifizierten Ink-Knoten handelt es sich um einen **icontextnode** , der vom Typ unclassimeedink ist.
+Wenn ein Strich einem [**IContextNode**](icontextnode.md) zugeordnet ist, der kein nicht klassifizierter Freihandknoten ist (siehe [**IContextNode::GetType),**](icontextnode-gettype.md)verschiebt diese Methode den Strich in einen nicht klassifizierten Freihandknoten, der Striche derselben Sprache enthält. Wenn kein solcher Kontextknoten vorhanden ist, erstellt diese Methode einen neuen nicht klassifizierten Ink-Knoten und fügt ihm den Strich hinzu. Ein nicht klassifizierter Freihandknoten ist ein **IContextNode** vom Typ UnclassifiedInk.
 
-Wenn diese Methode einen Strich von einem [**icontextnode**](icontextnode.md) verschiebt, bei dem es sich nicht um einen nicht klassifizierten frei Hand Knoten handelt, fügt diese Methode auch das umgebende Feld des Strichs zum geänderten Bereich der Ink Analyzer hinzu (siehe [**iinkanalyzer:: getdirtyregion-Methode**](iinkanalyzer-getdirtyregion.md)).
+Wenn diese Methode einen Strich aus einem [**IContextNode**](icontextnode.md) verschiebt, der kein nicht klassifizierter Freihandknoten ist, fügt diese Methode auch das umgebende Feld des Strichs dem geänderten Bereich des Freihandanalysetools hinzu (siehe [**IInkAnalyzer::GetDirtyRegion-Methode).**](iinkanalyzer-getdirtyregion.md)
 
-Diese Methode verschiebt keinen Strich, wenn der *StrokeType* -Parameter mit dem aktuellen Typ des Strichs übereinstimmt.
+Diese Methode bewegt keinen Strich, wenn der *StrokeType-Parameter* mit dem aktuellen Typ des Strichs übereinstimmt.
 
-Beim Festlegen des Strich Typs für Striche, die einem ContextNode zugeordnet sind, für das NodeTypeAndProperties bestätigt ist, wird eine InvalidOperationException ausgelöst.
+Wenn Sie den Strichtyp für Striche festlegen, die einem ContextNode zugeordnet sind, für den NodeTypeAndProperties bestätigt wurde, wird eine InvalidOperationException ausgelöst.
 
-Wenn der angegebene Strich nicht mit [**iinkanalyzer**](iinkanalyzer.md)verknüpft ist, gibt diese Methode zurück, ohne **iinkanalyzer** zu aktualisieren.
+Wenn der angegebene Strich nicht dem [**IInkAnalyzer**](iinkanalyzer.md)zugeordnet ist, gibt diese Methode zurück, ohne den **IInkAnalyzer** zu aktualisieren.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -80,27 +80,27 @@ Wenn der angegebene Strich nicht mit [**iinkanalyzer**](iinkanalyzer.md)verknüp
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows XP Tablet PC Edition \[ Desktop-Apps\]<br/>                                                 |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur Desktop-Apps der XP Tablet PC Edition \[\]<br/>                                                 |
 | Unterstützte Mindestversion (Server)<br/> | Nicht unterstützt<br/>                                                                                     |
-| Header<br/>                   | <dl> <dt>Iacom. h (erfordert auch iacom \_ i. c)</dt> </dl> |
+| Header<br/>                   | <dl> <dt>IACom.h (erfordert auch IACom \_ i.c)</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>IACom.dll</dt> </dl>                          |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Iinkanalyzer**](iinkanalyzer.md)
+[**IInkAnalyzer**](iinkanalyzer.md)
 </dt> <dt>
 
-[**Iinkanalyzer:: GetStrokeType-Methode**](iinkanalyzer-getstroketype.md)
+[**IInkAnalyzer::GetStrokeType-Methode**](iinkanalyzer-getstroketype.md)
 </dt> <dt>
 
-[**Iinkanalyzer:: SetStrokesType-Methode**](iinkanalyzer-setstrokestype.md)
+[**IInkAnalyzer::SetStrokesType-Methode**](iinkanalyzer-setstrokestype.md)
 </dt> <dt>
 
-[Ink-Analyse Referenz](ink-analysis-reference.md)
+[Referenz zur Ink-Analyse](ink-analysis-reference.md)
 </dt> </dl>
 
  

@@ -1,42 +1,42 @@
 ---
-description: Hashes und Codieren eine Textnachricht und decodiert und überprüft dann die Meldung.
+description: codiert und codiert eine Textnachricht und decodiert und überprüft dann die Nachricht.
 ms.assetid: effe4080-63c1-4f35-a5e3-e7e60754b28f
-title: 'Beispiel-C-Programm: Codieren und Decodieren einer Hash Nachricht'
+title: 'Beispiel C-Programm: Codieren und Decodieren einer Hashnachricht'
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 5904a684d02a81acba1502162c779b9f124d3dbe
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 1119ff8c54e0a181e5b99cdb70b6a3a62825a7d2b05879a85547bee4bcb7c310
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106351428"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119007718"
 ---
-# <a name="example-c-program-encoding-and-decoding-a-hashed-message"></a>Beispiel-C-Programm: Codieren und Decodieren einer Hash Nachricht
+# <a name="example-c-program-encoding-and-decoding-a-hashed-message"></a>Beispiel C-Programm: Codieren und Decodieren einer Hashnachricht
 
-Im [*folgenden Beispiel wird*](../secgloss/h-gly.md) eine Textnachricht mit einem Hashwert codiert und dann decodiert und überprüft.
+Im folgenden Beispiel [*wird eine*](../secgloss/h-gly.md) Textnachricht gehasht und codiert und anschließend decodiert und überprüft.
 
-Obwohl die beiden unterschiedlichen Funktionen aus Gründen der Einfachheit in diesem Beispiel kombiniert wurden, werden die beiden Teile in einer realistischeren Einstellung separat verwendet.
+Obwohl die beiden verschiedenen Funktionen in diesem Beispiel der Einfachheit halber kombiniert wurden, werden die beiden Teile in einer realistischeren Einstellung separat verwendet.
 
-In diesem Beispiel werden die folgenden Aufgaben und kryptoapi-Funktionen veranschaulicht:
+Dieses Beispiel veranschaulicht die folgenden Aufgaben und CryptoAPI-Funktionen:
 
--   [**CryptAcquireContext**](/windows/desktop/api/Wincrypt/nf-wincrypt-cryptacquirecontexta) wird aufgerufen, um einen CSP-Anbieter zu erhalten.
--   Verwenden von [**cryptmsgcalculateencodedlength**](/windows/desktop/api/Wincrypt/nf-wincrypt-cryptmsgcalculateencodedlength) zum Berechnen der Länge der codierten Nachricht.
--   Belegen von Speicher für einen Puffer, der die codierten Daten enthalten soll.
--   Öffnen einer Meldung, die mithilfe von [**cryptmsgopentoencode**](/windows/desktop/api/Wincrypt/nf-wincrypt-cryptmsgopentoencode)codiert werden soll.
--   Hinzufügen von Inhalt zur Nachricht zum Codieren mithilfe von [**cryptmsgupdate**](/windows/desktop/api/Wincrypt/nf-wincrypt-cryptmsgupdate).
--   Verwenden von [**cryptmsggetparam**](/windows/desktop/api/Wincrypt/nf-wincrypt-cryptmsggetparam) zum Kopieren der codierten Nachricht in den zugeordneten Puffer.
--   Öffnen einer Meldung zum Decodieren mithilfe von [**cryptmsgopentodecode**](/windows/desktop/api/Wincrypt/nf-wincrypt-cryptmsgopentodecode).
--   Die codierte Nachricht wird der Nachricht hinzugefügt, um Sie mithilfe von [**cryptmsgupdate**](/windows/desktop/api/Wincrypt/nf-wincrypt-cryptmsgupdate)zu decodieren.
--   Erstellen eines doppelten Zeigers auf die Nachricht mithilfe von [**cryptmsgduplicate**](/windows/desktop/api/Wincrypt/nf-wincrypt-cryptmsgduplicate).
--   Der Nachrichtentyp wird mit [**cryptmsggetparam**](/windows/desktop/api/Wincrypt/nf-wincrypt-cryptmsggetparam)überprüft.
--   Verwenden von [**cryptmsggetparam**](/windows/desktop/api/Wincrypt/nf-wincrypt-cryptmsggetparam) zum Decodieren der Nachricht.
--   Überprüfen des Hashs mithilfe von [**cryptmsgcontrol**](/windows/desktop/api/Wincrypt/nf-wincrypt-cryptmsgcontrol).
--   Verwenden von [**cryptmsgclose**](/windows/desktop/api/Wincrypt/nf-wincrypt-cryptmsgclose) , um das Nachrichten Handle freizugeben.
--   Verwenden von [**cryptreleasecontext**](/windows/desktop/api/Wincrypt/nf-wincrypt-cryptreleasecontext) zum Freigeben des CSP.
+-   Aufrufen [**von CryptAcquireContext,**](/windows/desktop/api/Wincrypt/nf-wincrypt-cryptacquirecontexta) um einen CSP-Anbieter zu erhalten.
+-   Verwenden [**von CryptMsgCalculateEncodedLength**](/windows/desktop/api/Wincrypt/nf-wincrypt-cryptmsgcalculateencodedlength) zum Berechnen der Länge der codierten Nachricht.
+-   Zuweisen von Arbeitsspeicher für einen Puffer zum Aufnehmen der codierten Daten.
+-   Öffnen einer Nachricht zum Codieren mit [**CryptMsgOpenToEncode**](/windows/desktop/api/Wincrypt/nf-wincrypt-cryptmsgopentoencode).
+-   Hinzufügen von Inhalt zur Zu codierenden Nachricht mit [**CryptMsgUpdate**](/windows/desktop/api/Wincrypt/nf-wincrypt-cryptmsgupdate).
+-   Verwenden [**von CryptMsgGetParam**](/windows/desktop/api/Wincrypt/nf-wincrypt-cryptmsggetparam) zum Kopieren der codierten Nachricht in den zugeordneten Puffer.
+-   Öffnen einer Nachricht zum Decodieren mit [**CryptMsgOpenToDecode**](/windows/desktop/api/Wincrypt/nf-wincrypt-cryptmsgopentodecode).
+-   Hinzufügen der codierten Nachricht zur Zu decodierenden Nachricht [**mithilfe von CryptMsgUpdate**](/windows/desktop/api/Wincrypt/nf-wincrypt-cryptmsgupdate).
+-   Erstellen eines doppelten Zeigers auf die Nachricht [**mithilfe von CryptMsgDuplicate**](/windows/desktop/api/Wincrypt/nf-wincrypt-cryptmsgduplicate).
+-   Überprüfen des Nachrichtentyps [**mit CryptMsgGetParam**](/windows/desktop/api/Wincrypt/nf-wincrypt-cryptmsggetparam).
+-   Verwenden [**von CryptMsgGetParam zum**](/windows/desktop/api/Wincrypt/nf-wincrypt-cryptmsggetparam) Decodieren der Nachricht.
+-   Überprüfen des Hashs mit [**CryptMsgControl**](/windows/desktop/api/Wincrypt/nf-wincrypt-cryptmsgcontrol).
+-   Verwenden [**von CryptMsgClose zum**](/windows/desktop/api/Wincrypt/nf-wincrypt-cryptmsgclose) Veröffentlichen des Nachrichtenhandlers.
+-   Verwenden [**von CryptReleaseContext**](/windows/desktop/api/Wincrypt/nf-wincrypt-cryptreleasecontext) zum Veröffentlichen des CSP.
 
-In diesem Beispiel wird die Funktion " [**myhanderror**](myhandleerror.md)" verwendet. Der Code für diese Funktion ist im Beispiel enthalten.
+In diesem Beispiel wird die [**MyHandleError-Funktion verwendet.**](myhandleerror.md) Code für diese Funktion ist im Beispiel enthalten.
 
-Der Code für dieses und andere Hilfsfunktionen ist auch unter [universell Funktionen](general-purpose-functions.md)aufgeführt.
+Der Code für diese und andere Hilfsfunktionen ist auch unter Universell [Functions aufgeführt.](general-purpose-functions.md)
 
 
 ```C++

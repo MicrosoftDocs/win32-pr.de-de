@@ -4,16 +4,16 @@ ms.assetid: 6073a891-e9f5-442d-a2d9-3a7b97f7f735
 title: Erfassen in mehreren Dateien
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 3b40091acff8edffbe84550b03d1ccd4073ddb6b
-ms.sourcegitcommit: a47bd86f517de76374e4fff33cfeb613eb259a7e
+ms.openlocfilehash: 79ce7a1b4b91a0f78031a661e2c2e10895b4a21b1cfb068ca505429468a3af1b
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/06/2021
-ms.locfileid: "104124088"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119017578"
 ---
 # <a name="capturing-to-multiple-files"></a>Erfassen in mehreren Dateien
 
-Nachdem Sie einige Videos in einer Datei aufgezeichnet haben, können Sie zu einer neuen Datei wechseln, indem Sie das Diagramm beenden und den Dateinamen für den [dateiwriter](file-writer-filter.md) -Filter festlegen. Aufrufen der [**ifilesinkfilter:: setFileName**](/windows/desktop/api/Strmif/nf-strmif-ifilesinkfilter-setfilename) -Methode für den dateiwriter. Sie können einen Zeiger auf die [**ifilesinkfilter**](/windows/desktop/api/Strmif/nn-strmif-ifilesinkfilter) -Schnittstelle erhalten, wenn Sie das Diagramm mit dem *psink* -Parameter der setoutputfilename-Methode erstellen. Dies wird im folgenden Code veranschaulicht:
+Nachdem Sie einige Videos in einer Datei erfasst haben, können Sie zu einer neuen Datei wechseln, indem Sie den Graphen beenden und den Dateinamen im [Filter File Writer](file-writer-filter.md) festlegen. Rufen Sie [**die IFileSinkFilter::SetFileName-Methode**](/windows/desktop/api/Strmif/nf-strmif-ifilesinkfilter-setfilename) für den File Writer auf. Sie können einen Zeiger auf die [**IFileSinkFilter-Schnittstelle**](/windows/desktop/api/Strmif/nn-strmif-ifilesinkfilter) beim Erstellen des Graphen über den *pSink-Parameter* der SetOutputFileName-Methode erhalten. Dies wird im folgenden Code veranschaulicht:
 
 
 ```C++
@@ -46,7 +46,7 @@ if (SUCCEEDED(hr))
 
 <dl> <dt>
 
-[Aufzeichnen von Videos in einer Datei](capturing-video-to-a-file.md)
+[Erfassen von Videos in einer Datei](capturing-video-to-a-file.md)
 </dt> </dl>
 
  

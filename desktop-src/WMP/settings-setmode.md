@@ -1,11 +1,11 @@
 ---
-title: Settings. setmode-Methode
-description: Die setmode-Methode legt verschiedene Modi auf aktiv oder inaktiv fest.
+title: Einstellungen.setMode-Methode
+description: Die setMode-Methode legt verschiedene Modi auf aktiv oder inaktiv fest.
 ms.assetid: 9ab88aeb-53f6-4798-9299-14961e373ca6
 keywords:
-- setmode-Methode, Windows-Media Player
-- setmode-Methode, Windows Media Player, Einstellungs Klasse
-- Einstellungs Klasse, Windows Media Player, setmode-Methode
+- setMode-Methode Windows Media Player
+- setMode-Methode Windows Media Player , Einstellungen-Klasse
+- Einstellungen-Klasse Windows Media Player , setMode-Methode
 topic_type:
 - apiref
 api_name:
@@ -16,16 +16,16 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: cf5740bf5638ce34e161414ac96eaa0fc80fcdb7
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: f504fe429dddf1b3db191545e2f34a3605a8fc390346c8f00afe8c3d005f0277
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106356444"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118995320"
 ---
-# <a name="settingssetmode-method"></a>Settings. setmode-Methode
+# <a name="settingssetmode-method"></a>Einstellungen.setMode-Methode
 
-Die **setmode** -Methode legt verschiedene Modi auf aktiv oder inaktiv fest.
+Die **setMode-Methode** legt verschiedene Modi auf aktiv oder inaktiv fest.
 
 ## <a name="syntax"></a>Syntax
 
@@ -43,19 +43,19 @@ Settings.setMode(
 
 <dl> <dt>
 
-" *Name* \[ " in\]
+*modeName* \[ In\]
 </dt> <dd>
 
-Eine **Zeichenfolge** , die den Namen des geänderten Modus angibt, der einen der folgenden Werte enthält.
+**Zeichenfolge,** die den Namen des modus angibt, der geändert wird und einen der folgenden Werte enthält.
 
 
 
 | Zeichenfolge     | Beschreibung                                                                                                                                                       |
 |------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| autorewind | Der Modus, der angibt, ob die Nachverfolgung an den Anfang nach dem Ende wiederholt wird. Der Standardstatus ist "true".                                                  |
-| loop       | Der Modus, der angibt, ob sich die Reihenfolge der Spuren wiederholt Der Standardstatus ist false.                                                                            |
-| showframe  | Modus, der angibt, ob der nächste Video Keyframe an der aktuellen Position angezeigt wird, wenn er nicht wiedergegeben wird. Der Standardstatus ist false. Hat keine Auswirkung auf Audiospuren. |
-| Shuffle    | Modus, der angibt, ob die Spuren in zufälliger Reihenfolge wiedergegeben werden Der Standardstatus ist false.                                                                            |
+| autoRewind | Modus, der angibt, ob die Spuren nach der Wiedergabe bis zum Ende an den Anfang zurückgerundet werden. Der Standardzustand ist TRUE.                                                  |
+| loop       | Der Modus, der angibt, ob sich die Sequenz von Spuren selbst wiederholt. Der Standardzustand ist "false".                                                                            |
+| showFrame  | Modus, der angibt, ob der nächstgelegene Videoschlüsselrahmen an der aktuellen Position angezeigt wird, wenn er nicht wiedergegeben wird. Der Standardzustand ist "false". Hat keine Auswirkungen auf Audiospuren. |
+| Shuffle    | Modus, der angibt, ob die Spuren in zufälliger Reihenfolge wiedergegeben werden. Der Standardzustand ist "false".                                                                            |
 
 
 
@@ -63,10 +63,10 @@ Eine **Zeichenfolge** , die den Namen des geänderten Modus angibt, der einen de
 
 </dd> <dt>
 
-*Status* \[ in\]
+*state* \[ In\]
 </dt> <dd>
 
-**Boolescher** Wert, der angibt, ob der neue angegebene Modus aktiv ist.
+**Boolescher Wert,** der angibt, ob der neue angegebene Modus aktiv ist oder nicht.
 
 </dd> </dl>
 
@@ -74,9 +74,9 @@ Eine **Zeichenfolge** , die den Namen des geänderten Modus angibt, der einen de
 
 Diese Methode gibt keinen Wert zurück.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Wenn der showframe-Modus aktiv ist, muss der Spieler auf den Inhalt des Titels zugreifen, um den Videoframe abzurufen. Aufgrund von Bandbreiten Überlegungen sollten Sie diesen Modus bei der Wiedergabe nicht lokaler Inhalte vorsichtig verwenden.
+Wenn der ShowFrame-Modus aktiv ist, muss der Player auf den Titelinhalt zugreifen, um den Videoframe abzurufen. Verwenden Sie diesen Modus aus Gründen der Bandbreite vorsichtig, wenn Sie nicht lokale Inhalte wiedergeben.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -84,7 +84,7 @@ Wenn der showframe-Modus aktiv ist, muss der Spieler auf den Inhalt des Titels z
 
 | Anforderung | Wert |
 |--------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Version<br/> | Für Schleifen-und Shuffle-Modi ist Windows Media Player Version 7,0 oder höher. Für den Modus "autorewind" und "showframe", Windows Media Player 9 oder höher.<br/> |
+| Version<br/> | Für Schleifen- und Shufflemodi Windows Media Player Version 7.0 oder höher. Für autoRewind- und showFrame-Modi Windows Media Player serie 9 oder höher.<br/> |
 | DLL<br/>     | <dl> <dt>Wmp.dll</dt> </dl>                                                                            |
 
 
@@ -93,10 +93,10 @@ Wenn der showframe-Modus aktiv ist, muss der Spieler auf den Inhalt des Titels z
 
 <dl> <dt>
 
-[**Einstellungs Objekt**](settings-object.md)
+[**Einstellungen Objekt**](settings-object.md)
 </dt> <dt>
 
-[**Settings. getMode**](settings-getmode.md)
+[**Einstellungen.getMode**](settings-getmode.md)
 </dt> </dl>
 
  

@@ -1,19 +1,19 @@
 ---
-description: Das optionale- <locationProvider> Element gibt den Suchanbieter an, der vom Webdienstanbieter-Suchconnector verwendet werden soll. Dieses Element enthält ein obligatorisches Attribut und ein optionales untergeordnetes Element.
+description: Das <locationProvider> optionale -Element gibt den Suchanbieter an, der vom Suchconnector des Webdienstanbieters verwendet werden soll. Dieses Element enthält ein obligatorisches Attribut und ein optionales untergeordnetes Element.
 ms.assetid: 5481b1ae-e166-4f09-bf0d-d6b7f7c8a331
-title: locationprovider-Element (Suchconnector-Schema)
+title: locationProvider-Element (Connectorschema suchen)
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 26c68732300c190b44b984bbe64ca031a81ced84
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 21101fd0e7c57b73af7bc9de525baaca9583d11e425b168d806f750063ac7203
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106346907"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119711040"
 ---
-# <a name="locationprovider-element-search-connector-schema"></a>locationprovider-Element (Suchconnector-Schema)
+# <a name="locationprovider-element-search-connector-schema"></a>locationProvider-Element (Connectorschema suchen)
 
-Das optionale- <locationProvider> Element gibt den Suchanbieter an, der vom Webdienstanbieter-Suchconnector verwendet werden soll. Dieses Element enthält ein obligatorisches Attribut und ein optionales untergeordnetes Element.
+Das <locationProvider> optionale -Element gibt den Suchanbieter an, der vom Suchconnector des Webdienstanbieters verwendet werden soll. Dieses Element enthält ein obligatorisches Attribut und ein optionales untergeordnetes Element.
 
 ## <a name="syntax"></a>Syntax
 
@@ -46,7 +46,7 @@ Das optionale- <locationProvider> Element gibt den Suchanbieter an, der vom Webd
 
 | Übergeordnetes Element                                                                                                   | Untergeordnete Elemente                                                                       |
 |------------------------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------|
-| [searchconnectordescriptiontype-Element (suchconnectorschema)](search-schema-searchconnectordescription.md) | [PropertyBag-Element (Suchconnector-Schema)](search-schema-sconn-propertybag.md) |
+| [searchConnectorDescriptionType-Element (Search Connector Schema)](search-schema-searchconnectordescription.md) | [propertyBag-Element (Suchconnectorschema)](search-schema-sconn-propertybag.md) |
 
 
 
@@ -56,22 +56,22 @@ Das optionale- <locationProvider> Element gibt den Suchanbieter an, der vom Webd
 
 
 
-| Attribut | BESCHREIBUNG                                                    |
+| attribute | Beschreibung                                                    |
 |-----------|----------------------------------------------------------------|
-| @clsid    | Erforderlich. Der Klassen Bezeichner (CLSID) des Such Anbieters. |
-| codebase  | Dies ist optional.                                                      |
+| @clsid    | Erforderlich. Der Klassenbezeichner (CLSID) des Suchanbieters. |
+| codebase  | Optional.                                                      |
 
 
 
  
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Der @clsid Attribut Wert für den OpenSearch-Anbieter ist {48e277f 6-4e74-4cd6-ba6s-fa4s42898223}.
+Der Attributwert für den @clsid OpenSearch-Anbieter ist {48E277F6-4E74-4cd6-BA6F-FA4F42898223}.
 
-Auf Dateisystem-und protokollhandlerbasierten Suchconnectors kann stattdessen das-Element verwendet werden [<simpleLocation>](search-schema-sconn-simplelocation.md) . Wenn <locationProvider> vorhanden ist, darf <simpleLocation> in der Suchconnector-Beschreibung kein-Element vorhanden sein.
+Dateisystem- und Protokollhandler-basierte Suchconnectors können stattdessen das [<simpleLocation>](search-schema-sconn-simplelocation.md) -Element verwenden. Wenn <locationProvider> vorhanden ist, DARF KEIN -Element in der Beschreibung des <simpleLocation> Search-Connectors vorhanden sein.
 
-## <a name="example-of-a-locationprovider-element"></a>Beispiel für ein locationprovider-Element
+## <a name="example-of-a-locationprovider-element"></a>Beispiel für ein locationProvider-Element
 
 
 ```

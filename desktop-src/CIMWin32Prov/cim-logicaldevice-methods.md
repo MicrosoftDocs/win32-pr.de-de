@@ -1,23 +1,23 @@
 ---
-description: Die CIM \_ LogicalDevice-Klasse stellt die folgenden Methoden zur Verfügung.
+description: Die CIM \_ LogicalDevice-Klasse macht die folgenden Methoden verfügbar.
 ms.assetid: 74961DA0-0AE9-4B47-8FE7-541705BCDAB7
 ms.tgt_platform: multiple
-title: CIM_LogicalDevice Methoden
+title: CIM_LogicalDevice-Methoden
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: dee970428510a3bf1e00b0c854607eb68c061fff
-ms.sourcegitcommit: c7add10d695482e1ceb72d62b8a4ebd84ea050f7
+ms.openlocfilehash: 3717a6fb90d71360927dee2ba5c68c11cc0b385d7eebac310961f011a8e7a988
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104523755"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119438420"
 ---
 # <a name="cim_logicaldevice-methods"></a>CIM \_ LogicalDevice-Methoden
 
-Die [**CIM \_ LogicalDevice**](cim-logicaldevice.md) -Klasse stellt die folgenden Methoden zur Verfügung.
+Die [**CIM \_ LogicalDevice-Klasse**](cim-logicaldevice.md) macht die folgenden Methoden verfügbar.
 
 > [!IMPORTANT]
-> Die Klassen der DMTF-CIM (Common Information Model) sind die übergeordneten Klassen, auf denen WMI-Klassen erstellt werden. WMI unterstützt zurzeit nur die [CIM 2. x-Versions Schemas](https://dmtf.org/standards/cim/schemas).
+> Die CIM-Klassen (Distributed Management Task Force) (DMTF (Distributed Management Task Force) (Common Information Model) sind die übergeordneten Klassen, auf denen WMI-Klassen erstellt werden. WMI unterstützt derzeit nur die [CIM 2.x-Versionsschemas.](https://dmtf.org/standards/cim/schemas)
 
  
 

@@ -1,6 +1,6 @@
 ---
-description: Weitere Informationen finden Sie in der JET_TABLECREATE. ulpages-Eigenschaft.
-title: JET_TABLECREATE. ulpages (Eigenschaft)
+description: 'Weitere Informationen zu: JET_TABLECREATE.ulPages-Eigenschaft'
+title: JET_TABLECREATE.ulPages-Eigenschaft
 TOCTitle: 'ulPages property '
 ms:assetid: P:Microsoft.Isam.Esent.Interop.JET_TABLECREATE.ulPages
 ms:mtpsurl: https://msdn.microsoft.com/library/microsoft.isam.esent.interop.jet_tablecreate.ulpages(v=EXCHG.10)
@@ -26,19 +26,19 @@ api_type:
 api_location:
 - Microsoft.Isam.Esent.Interop.dll
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: a562915574f4730e52e8bf9b4bd49c51573a5c0e
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 63c62c37b35d129abd95409ff2498f4a82a189e1b5e4f99e9a04158094d751c0
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "103749744"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120115830"
 ---
-# <a name="jet_tablecreateulpages-property"></a>JET_TABLECREATE. ulpages (Eigenschaft)
+# <a name="jet_tablecreateulpages-property"></a>JET_TABLECREATE.ulPages-Eigenschaft
 
-Ruft die für die Tabelle zuzuordnenden anfangs Seiten ab oder legt diese fest.
+Ruft die anfänglichen Seiten ab, die der Tabelle zugeordnet werden sollen, oder legt sie fest.
 
-**Namespace:**  [Microsoft. ISAM. ESENT. Interop](./microsoft.isam.esent.interop-namespace.md)  
-**Assembly:**  Microsoft. ISAM. ESENT. Interop (in Microsoft.Isam.Esent.Interop.dll)
+**Namespace:**  [Microsoft.Isam.Esent.Interop](./microsoft.isam.esent.interop-namespace.md)  
+**Assembly:**  Microsoft.Isam.Esent.Interop (in Microsoft.Isam.Esent.Interop.dll)
 
 ## <a name="syntax"></a>Syntax
 
@@ -62,14 +62,14 @@ public int ulPages { get; set; }
 
 #### <a name="property-value"></a>Eigenschaftswert
 
-Typ: [System. Int32](/dotnet/api/system.int32)  
+Typ: [System.Int32](/dotnet/api/system.int32)  
 
 ## <a name="see-also"></a>Siehe auch
 
-#### <a name="reference"></a>Referenz
+#### <a name="reference"></a>Verweis
 
 [JET_TABLECREATE-Klasse](./jet-tablecreate-class.md)
 
-[Mitglieder JET_TABLECREATE](./jet-tablecreate-members.md)
+[JET_TABLECREATE-Member](./jet-tablecreate-members.md)
 
-[Microsoft. ISAM. ESENT. Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)
+[Microsoft.Isam.Esent.Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)

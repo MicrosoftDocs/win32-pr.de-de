@@ -1,6 +1,6 @@
 ---
-description: 'Erfahren Sie mehr über: esentinvalidoperationexception-Konstruktor'
-title: Esentinvalidoperationexception-Konstruktor
+description: 'Weitere Informationen zu: EsentInvalidOperationException-Konstruktor'
+title: EsentInvalidOperationException-Konstruktor
 TOCTitle: 'EsentInvalidOperationException constructor '
 ms:assetid: M:Microsoft.Isam.Esent.Interop.EsentInvalidOperationException.#ctor
 ms:mtpsurl: https://msdn.microsoft.com/library/microsoft.isam.esent.interop.esentinvalidoperationexception.esentinvalidoperationexception(v=EXCHG.10)
@@ -24,19 +24,19 @@ api_type:
 api_location:
 - Microsoft.Isam.Esent.Interop.dll
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: ba04ed35e120f2c395d3d2de93ff0c65dc92a56c
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: d7c2b6530fd1cb68457e4dd76bcd6ca07f27380391995e340e57843a5b311f6d
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "103960983"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119454530"
 ---
-# <a name="esentinvalidoperationexception-constructor"></a>Esentinvalidoperationexception-Konstruktor
+# <a name="esentinvalidoperationexception-constructor"></a>EsentInvalidOperationException-Konstruktor
 
-Initialisiert eine neue Instanz der esentinvalidoperationexception-Klasse.
+Initialisiert eine neue Instanz der EsentInvalidOperationException-Klasse.
 
-**Namespace:**  [Microsoft. ISAM. ESENT. Interop](./microsoft.isam.esent.interop-namespace.md)  
-**Assembly:**  Microsoft. ISAM. ESENT. Interop (in Microsoft.Isam.Esent.Interop.dll)
+**Namespace:**  [Microsoft.Isam.Esent.Interop](./microsoft.isam.esent.interop-namespace.md)  
+**Assembly:**  Microsoft.Isam.Esent.Interop (in Microsoft.Isam.Esent.Interop.dll)
 
 ## <a name="syntax"></a>Syntax
 
@@ -52,12 +52,12 @@ Dim instance As New EsentInvalidOperationException()
 public EsentInvalidOperationException()
 ```
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
-#### <a name="reference"></a>Referenz
+#### <a name="reference"></a>Verweis
 
-[Esentinvalidoperationexception-Klasse](./esentinvalidoperationexception-class.md)
+[EsentInvalidOperationException-Klasse](./esentinvalidoperationexception-class.md)
 
-[Esentinvalidoperationexception-Member](./esentinvalidoperationexception-members.md)
+[EsentInvalidOperationException-Member](./esentinvalidoperationexception-members.md)
 
-[Microsoft. ISAM. ESENT. Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)
+[Microsoft.Isam.Esent.Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)

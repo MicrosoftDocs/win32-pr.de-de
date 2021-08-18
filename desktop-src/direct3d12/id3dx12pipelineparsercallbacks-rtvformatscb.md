@@ -1,11 +1,11 @@
 ---
-title: ID3DX12PipelineParserCallbacks rtvformatscb-Methode (D3DX12. h)
-description: Ruft den untergeordneten Rückruf des renderzielformatarrays eines Objekts auf, das diese Schnittstelle implementiert.
+title: ID3DX12PipelineParserCallbacks RTVFormatsCb-Methode (D3DX12.h)
+description: Ruft den Arrayunterobjektrückruf des Renderzielformats eines Objekts auf, das diese Schnittstelle implementiert.
 ms.assetid: 0D5F0BC4-D9E2-4B16-99B5-509454AF8C02
 keywords:
-- Rtvformatscb-Methode
-- Rtvformatscb-Methode, ID3DX12PipelineParserCallbacks-Schnittstelle
-- ID3DX12PipelineParserCallbacks Interface, rtvformatscb-Methode
+- RTVFormatsCb-Methode
+- RTVFormatsCb-Methode, ID3DX12PipelineParserCallbacks-Schnittstelle
+- ID3DX12PipelineParserCallbacks-Schnittstelle, RTVFormatsCb-Methode
 topic_type:
 - apiref
 api_name:
@@ -17,16 +17,16 @@ api_type:
 ms.localizationpriority: low
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: caaa1df508e1a448de3851d408f9aad5ac94d957
-ms.sourcegitcommit: 14010c34b35fa268046c7683f021f86de08ddd0a
+ms.openlocfilehash: d826bd2c2f3c5f1c0783a4be2cba132e4874f5a54776c227590dd87f5365d347
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "106353381"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119045438"
 ---
-# <a name="id3dx12pipelineparsercallbacksrtvformatscb-method"></a>ID3DX12PipelineParserCallbacks:: rtvformatscb-Methode
+# <a name="id3dx12pipelineparsercallbacksrtvformatscb-method"></a>ID3DX12PipelineParserCallbacks::RTVFormatsCb-Methode
 
-Ruft den untergeordneten Rückruf des renderzielformatarrays eines Objekts auf, das diese Schnittstelle implementiert.
+Ruft den Arrayunterobjektrückruf des Renderzielformats eines Objekts auf, das diese Schnittstelle implementiert.
 
 ## <a name="syntax"></a>Syntax
 
@@ -43,12 +43,12 @@ void RTVFormatsCb(
 
 <dl> <dt>
 
-*RTV-Formate* \[ atur\]
+*RTVFormats* \[ Ref\]
 </dt> <dd>
 
-Type: **Konstanten [**D3D12 \_ RT- \_ Format \_ Array**](/windows/desktop/api/d3d12/ns-d3d12-d3d12_rt_format_array)**
+Typ: **const [**D3D12 \_ RT FORMAT \_ \_ ARRAY**](/windows/desktop/api/d3d12/ns-d3d12-d3d12_rt_format_array)**
 
-Details zum Array des renderzielformatarrays, das aus einem Pipeline Status-Stream analysiert wurde.
+Details des Arrayunterobjekts im Renderzielformat, das aus einem Pipelinezustandsstream analysiert wird.
 
 </dd> </dl>
 
@@ -62,13 +62,13 @@ Gibt nichts zurück.
 
 | Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>D3DX12. h</dt> </dl>  |
-| Bibliothek<br/> | <dl> <dt>D3D12. lib</dt> </dl> |
+| Header<br/>  | <dl> <dt>D3DX12.h</dt> </dl>  |
+| Bibliothek<br/> | <dl> <dt>D3D12.lib</dt> </dl> |
 | DLL<br/>     | <dl> <dt>D3D12.dll</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
@@ -78,7 +78,7 @@ Gibt nichts zurück.
 [**ID3DX12PipelineParserCallbacks**](id3dx12pipelineparsercallbacks.md)
 </dt> <dt>
 
-[**D3D12 \_ RT- \_ Format \_ Array**](/windows/desktop/api/d3d12/ns-d3d12-d3d12_rt_format_array)
+[**D3D12 \_ RT \_ FORMAT \_ ARRAY**](/windows/desktop/api/d3d12/ns-d3d12-d3d12_rt_format_array)
 </dt> </dl>
 
  

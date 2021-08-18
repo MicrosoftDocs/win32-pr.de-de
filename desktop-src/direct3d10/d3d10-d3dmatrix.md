@@ -1,7 +1,7 @@
 ---
-description: Eine 4 x 4-Zeilen hauptmatrix.
+description: Eine 4x4-Zeilen-Hauptmatrix.
 ms.assetid: 2253f486-7bb6-4966-b3ec-dba47e53e372
-title: D3DMATRIX-Struktur (D3DX10Math. h)
+title: D3DMATRIX-Struktur (D3DX10Math.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,16 +13,16 @@ api_type:
 - HeaderDef
 api_location:
 - D3DX10Math.h
-ms.openlocfilehash: 1df0d2171e828b14fba87f6587c604146360d0e2
-ms.sourcegitcommit: 14010c34b35fa268046c7683f021f86de08ddd0a
+ms.openlocfilehash: 7a8ba1b9d0aebf45ae376f6adbdf02dd4c3d8ff6590ecb49e5af8cd72d37a79f
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "104355487"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119498710"
 ---
 # <a name="d3dmatrix-structure"></a>D3DMATRIX-Struktur
 
-Eine 4 x 4-Zeilen hauptmatrix.
+Eine 4x4-Zeilen-Hauptmatrix.
 
 ## <a name="syntax"></a>Syntax
 
@@ -46,7 +46,7 @@ Typ: **float**
 
 </dd> <dd>
 
-Die 4 x 4-Zeilen hauptmatrix.
+Die 4x4-Zeilen-Hauptmatrix.
 
 </dd> </dl>
 
@@ -56,11 +56,11 @@ Die 4 x 4-Zeilen hauptmatrix.
 
 | Anforderung | Wert |
 |-------------------|-----------------------------------------------------------------------------------------|
-| Header<br/> | <dl> <dt>D3DX10Math. h</dt> </dl> |
+| Header<br/> | <dl> <dt>D3DX10Math.h</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 

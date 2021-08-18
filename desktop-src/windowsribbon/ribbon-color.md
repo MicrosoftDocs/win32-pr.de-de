@@ -1,95 +1,95 @@
 ---
-title: Anpassen von Menü Band Farben
-description: Das Windows-Menüband-Framework macht eine Reihe von Farbeigenschaften verfügbar, die es einer Anwendung ermöglichen, die Darstellung verschiedener Elemente der Multifunktionsleisten-Benutzeroberfläche zur Laufzeit anzupassen.
+title: Anpassen von Menübandfarben
+description: Das Windows Menübandframework macht eine Reihe von Farbeigenschaften verfügbar, die es einer Anwendung ermöglichen, die Darstellung verschiedener Menüband-Benutzeroberflächenelemente zur Laufzeit anzupassen.
 ms.assetid: e070aaca-d350-4336-8e5d-d5d9c8167287
 keywords:
-- Windows-Menüband, Anpassen von Farben
-- Multifunktionsleiste, Anpassen von Farben
-- Anpassen von Windows-Menü Band Farben
+- Windows Menüband, Anpassen von Farben
+- Menüband, Anpassen von Farben
+- Anpassen von Windows Menübandfarben
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 55ff6527dc67ee18df4723fc33e4b764e20127e8
-ms.sourcegitcommit: 3e70ae762629e244028b437420ed50b5850db4e3
+ms.openlocfilehash: e7ef83c40d49656c82aabfbf41c4ec5375f7f3f54f063ccf30d917e740f87408
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/20/2020
-ms.locfileid: "103723821"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119710890"
 ---
-# <a name="customizing-ribbon-colors"></a>Anpassen von Menü Band Farben
+# <a name="customizing-ribbon-colors"></a>Anpassen von Menübandfarben
 
-Das Windows-Menüband-Framework macht eine Reihe von Farbeigenschaften verfügbar, die es einer Anwendung ermöglichen, die Darstellung verschiedener Elemente der Multifunktionsleisten-Benutzeroberfläche zur Laufzeit anzupassen.
+Das Windows Menübandframework macht eine Reihe von Farbeigenschaften verfügbar, die es einer Anwendung ermöglichen, die Darstellung verschiedener Menüband-Benutzeroberflächenelemente zur Laufzeit anzupassen.
 
 -   [Introduction (Einführung)](#introduction)
--   [Menü Band Farben angeben](#specify-ribbon-colors)
+-   [Angeben von Menübandfarben](#specify-ribbon-colors)
 -   [Konvertieren von RGB in HSB](#convert-rgb-to-hsb)
 -   [Zugehörige Themen](#related-topics)
 
 ## <a name="introduction"></a>Einführung
 
-Die in der folgenden Tabelle aufgeführten [Frameworks-Eigenschaften Schlüssel](windowsribbon-reference-properties-framework.md) werden verwendet, um die Farbe verschiedener Benutzeroberflächen Elemente in einer Menü Bandanwendung festzulegen. Diese Eigenschaften ermöglichen es dem Menüband-Framework, die Personalisierungs-, Identitäts-und brandingspezifikationen Anwendungs übergreifend zu unterstützen.
+Die [in der folgenden Tabelle](windowsribbon-reference-properties-framework.md) aufgeführten Framework-Eigenschaftsschlüssel werden verwendet, um die Farbe verschiedener Benutzeroberflächenelemente in einer Menübandanwendung fest zu legen. Diese Eigenschaften ermöglichen es dem Menübandframework, Personalisierung, Identitätsanforderungen und Brandingspezifikationen anwendungsübergreifend zu unterstützen.
 
-| Menüband-Farbe                     | Framework-Eigenschaften Schlüssel                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
+| Menübandfarbe                     | Framework-Eigenschaftsschlüssel                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
 |----------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Hintergrundfarbe                 | [UI \_ pkey \_ globalbackgroundcolor](windowsribbon-reference-properties-uipkey-globalbackgroundcolor.md)                                                                                                                                                                                                                                                                                                                                                                 |
-| Hervorhebungs Farbe (nur Windows 7) | [Benutzeroberfläche \_ Pkey \_ globalhighlightcolor](windowsribbon-reference-properties-uipkey-globalhighlightcolor.md)* * * * eingeführt in Windows 8 * *: * * [UI \_ pkey \_ globalhighlightcolor](windowsribbon-reference-properties-uipkey-globalhighlightcolor.md) kann nicht unabhängig von [UI \_ pkey \_ globalbackgroundcolor](windowsribbon-reference-properties-uipkey-globalbackgroundcolor.md)festgelegt werden.<br/> <br/>                                                              |
-| Textfarbe                       | [Benutzeroberfläche \_ Pkey \_ globaltextcolor](windowsribbon-reference-properties-uipkey-globaltextcolor.md)* * * * eingeführt in Windows 8 **:** Änderungen am Standardwert von [UI \_ pkey \_ globalbackgroundcolor](windowsribbon-reference-properties-uipkey-globalbackgroundcolor.md) in Windows 8 erfordern möglicherweise eine Anpassung an [UI \_ pkey \_ globaltextcolor](windowsribbon-reference-properties-uipkey-globaltextcolor.md) in Menüband-apps, die für Windows 7 entworfen wurden.<br/> <br/> |
+| Hintergrundfarbe                 | [UI \_ PKEY \_ GlobalBackgroundColor](windowsribbon-reference-properties-uipkey-globalbackgroundcolor.md)                                                                                                                                                                                                                                                                                                                                                                 |
+| Hervorhebungsfarbe (nur Windows 7) | [Benutzeroberfläche \_ PKEY \_ GlobalHighlightColor](windowsribbon-reference-properties-uipkey-globalhighlightcolor.md)**Eingeführt in Windows 8**: ** [Ui \_ PKEY \_ GlobalHighlightColor](windowsribbon-reference-properties-uipkey-globalhighlightcolor.md) cannot be set independently of [UI \_ PKEY \_ GlobalBackgroundColor](windowsribbon-reference-properties-uipkey-globalbackgroundcolor.md).<br/> <br/>                                                              |
+| Textfarbe                       | [Benutzeroberfläche \_ PKEY \_ GlobalTextColor](windowsribbon-reference-properties-uipkey-globaltextcolor.md)–Eingeführt in Windows 8 **:** Änderungen am Standardwert von [UI \_ PKEY \_ GlobalBackgroundColor](windowsribbon-reference-properties-uipkey-globalbackgroundcolor.md) in Windows 8 erfordern möglicherweise eine Anpassung der [ \_ Benutzeroberfläche PKEY \_ GlobalTextColor](windowsribbon-reference-properties-uipkey-globaltextcolor.md) in Menüband-Apps, die für Windows 7 entwickelt wurden.<br/> <br/> |
 
 
 
  
 
-## <a name="specify-ribbon-colors"></a>Menü Band Farben angeben
+## <a name="specify-ribbon-colors"></a>Angeben von Menübandfarben
 
-Das Menüband-Framework verwendet ein HSB-Farbmodell (Hue, Sättigung, Helligkeit), das sich von den Farbräumen der gängigeren Farbton, Sättigung, Leuchtkraft (HSL) oder Hue, Sättigung, Wert (HSV) unterscheidet. Insbesondere stellt B eine allgemeine Helligkeit oder eine Helligkeit dar, nicht die Helligkeit einer bestimmten Farbe.
+Das Menübandframework verwendet ein Farbmodell für Farbton, Sättigung, Helligkeit (HSB), das sich von den gängigeren Farbräumen für Farbton, Sättigung, Helligkeit (HSL) oder Farbton, Sättigung, Wert (HSV) unterscheidet. B stellt insbesondere eine gesamter Helligkeits- oder Helligkeitsstufe dar, anstatt die Helligkeit einer bestimmten Farbe.
 
-Um die Farbe der Benutzeroberflächen Elemente im Menüband-Framework anzugeben, weist eine Anwendung den einzelnen globalen Farbeigenschaften HSB-Werte zu. Diese Werte werden dann universell auf alle Menü Band Elemente angewendet, wie dies für die Multifunktionsleistenanwendung erforderlich ist (das Zuweisen von HSB-Werten zu einzelnen Elementen und Steuerelementen wird vom Framework nicht unterstützt).
+Um die Farbe von Benutzeroberflächenelementen im Menübandframework anzugeben, weist eine Anwendung jeder der globalen Farbeigenschaften HSB-Werte zu. Diese Werte werden dann universell auf alle Menübandelemente angewendet, wie dies für die Menübandanwendung erforderlich ist (das Framework unterstützt das Zuweisen von HSB-Werten zu einzelnen Elementen und Steuerelementen nicht).
 
-Eingeführt in Windows 8 * *: * *[UI \_ pkey \_ globalhighlightcolor](windowsribbon-reference-properties-uipkey-globalhighlightcolor.md) erhält denselben Wert wie [UI \_ pkey \_ globalbackgroundcolor](windowsribbon-reference-properties-uipkey-globalbackgroundcolor.md).
+Eingeführt in Windows 8**: **[Ui \_ PKEY \_ GlobalHighlightColor](windowsribbon-reference-properties-uipkey-globalhighlightcolor.md) is assigned the same value as [UI \_ PKEY \_ GlobalBackgroundColor](windowsribbon-reference-properties-uipkey-globalbackgroundcolor.md).
 
-In der folgenden Tabelle werden die HSB-Parameter für das Menüband Framework beschrieben
+In der folgenden Tabelle werden die HSB-Parameter des Menübandframework beschrieben.
 
 
 
 Komponente
 
-BESCHREIBUNG
+Beschreibung
 
 Angepasste Werte\*
 
-Farbton (H)
+Hue (H)
 
-Die Farbe für das Pigment oder die tatsächliche Farbe wird in der Regel als Wert von einem zirkulär Bereich von 0 bis 359 Grad identifiziert.
+Die Tatsächliche Farbe wird in der Regel als Wert aus einem ringförmigen Bereich von 0 bis 359 Grad identifiziert.
 
 0 (rot) bis 255 (rot)
 
-Sättigung (en)
+Sättigung (S)
 
-Die Reinheit oder Sättigung der Farbe, gemessen als Prozentsatz zwischen 0 und 100%.
+Die Bzw. die Sättigung der Farbe, gemessen als Prozentsatz von 0 bis 100 %.
 
-0 (grau) bis 255 (vollständig ausgelastet)
+0 (grau) bis 255 (vollständig ausgesättigt)
 
 Helligkeit (B)
 
-Die Gesamthelligkeit oder Dunkelheit der Farbe, gemessen als Prozentsatz zwischen 0 und 100%.
+Die Gesamtstärke oder Die Helligkeit der Farbe, gemessen als Prozentsatz von 0 bis 100 %.
 
 0 (dunkel) bis 255 (hell)
 
-\* Der ursprüngliche Bereich für jeden Parameterwert wird in einen Bereich von 0 bis 255 für das Framework übersetzt.
+\* Der ursprüngliche Bereich für jeden Parameterwert wird für das Framework in einen Bereich von 0 bis 255 übersetzt.
 
 
 
  
 
-HSB-Werte identifizieren keine bestimmten Farben. Stattdessen wirkt sich die Kombination von HSB-Eigenschafts Werten darauf aus, wie Farbverläufe in der gesamten Benutzeroberfläche relativ zueinander angepasst werden.
+HSB-Werte identifizieren keine bestimmten Farben. Stattdessen beeinflusst die Kombination von HSB-Eigenschaftswerten, wie Farbverläufe in der gesamten Benutzeroberfläche relativ zueinander angepasst werden.
 
-Beim Zuweisen von benutzerdefinierten HSB-Werten zu [UI \_ pkey \_ globaltextcolor](windowsribbon-reference-properties-uipkey-globaltextcolor.md) und [UI \_ pkey \_ globalbackgroundcolor](windowsribbon-reference-properties-uipkey-globalbackgroundcolor.md)wird empfohlen, dass diese Werte einen hohen Kontrast aufweisen, um die Lesbarkeit zu gewährleisten. Die Textfarbe sollte vor allem dunkler sein als der leichtesten Farbton der Menüband-Benutzeroberfläche. Bei Bedarf passt das Framework den Benutzeroberflächen- \_ pkey \_ Global TextColor-HSB-Wert automatisch an, um einen ausreichenden Kontrast gegen alle Hintergrund Schattierungen oder Farbverläufe zu bieten, die von UI \_ pkey \_ globalbackgroundcolor abgeleitet werden.
+Beim Zuweisen benutzerdefinierter HSB-Werte zu [ \_ UI PKEY \_ GlobalTextColor](windowsribbon-reference-properties-uipkey-globaltextcolor.md) und [UI \_ PKEY \_ GlobalBackgroundColor](windowsribbon-reference-properties-uipkey-globalbackgroundcolor.md)wird empfohlen, dass diese Werte einen ausreichend hohen Kontrast haben, um die Lesbarkeit sicherzustellen. Insbesondere sollte die Textfarbe dunkler als der hellste Schattierung der Menübandbenutzeroberfläche sein. Bei Bedarf passt das Framework den \_ PKEY GlobalTextColor HSB-Wert der Benutzeroberfläche automatisch an, um ausreichend Kontrast zu jedem Hintergrundton oder Farbverlauf zu bieten, der von \_ \_ PKEY GlobalBackgroundColor der Benutzeroberfläche abgeleitet \_ ist.
 
 > [!Note]  
-> In Windows 7 kann [UI \_ pkey \_ globalhighlightcolor](windowsribbon-reference-properties-uipkey-globalhighlightcolor.md) unabhängig von [UI \_ pkey \_ globalbackgroundcolor](windowsribbon-reference-properties-uipkey-globalbackgroundcolor.md)festgelegt werden.
+> In Windows 7 kann [ \_ ui PKEY \_ GlobalHighlightColor](windowsribbon-reference-properties-uipkey-globalhighlightcolor.md) unabhängig von [ \_ PKEY \_ GlobalBackgroundColor](windowsribbon-reference-properties-uipkey-globalbackgroundcolor.md)der Benutzeroberfläche festgelegt werden.
 
  
 
-Im folgenden Beispiel wird veranschaulicht, wie eine benutzerdefinierte Farbe für die Eigenschaften " [UI \_ pkey \_ globaltextcolor](windowsribbon-reference-properties-uipkey-globaltextcolor.md)", " [UI \_ pkey \_ globalbackgroundcolor](windowsribbon-reference-properties-uipkey-globalbackgroundcolor.md)" und " [UI \_ pkey \_ globalhighlightcolor](windowsribbon-reference-properties-uipkey-globalhighlightcolor.md) " angegeben wird.
+Im folgenden Beispiel wird veranschaulicht, wie sie eine benutzerdefinierte Farbe für die Eigenschaften [ \_ PKEY \_ GlobalTextColor,](windowsribbon-reference-properties-uipkey-globaltextcolor.md) [UI \_ PKEY \_ GlobalBackgroundColor](windowsribbon-reference-properties-uipkey-globalbackgroundcolor.md)und [UI \_ PKEY \_ GlobalHighlightColor](windowsribbon-reference-properties-uipkey-globalhighlightcolor.md) angeben.
 
 
 ```C++
@@ -124,31 +124,31 @@ if (SUCCEEDED(_spFramework->QueryInterface(&spPropertyStore)))
 
 ## <a name="convert-rgb-to-hsb"></a>Konvertieren von RGB in HSB
 
-In diesem Abschnitt wird die Formel beschrieben, die für die dynamische Übereinstimmung eines HSB-Werts für den Menüband-Framework, die [Benutzeroberfläche \_ pkey \_ globalbackgroundcolor](windowsribbon-reference-properties-uipkey-globalbackgroundcolor.md) in diesem Beispiel, für eine bestimmte RGB-Farbe zur Laufzeit erforderlich ist.
+In diesem Abschnitt wird die Formel beschrieben, die erforderlich ist, um einen HSB-Wert des Menübandframework, in diesem Beispiel die [ \_ Ui PKEY \_ GlobalBackgroundColor,](windowsribbon-reference-properties-uipkey-globalbackgroundcolor.md) dynamisch mit einer bestimmten RGB-Farbe zur Laufzeit zu abgleichen.
 
-Der Hintergrund der Registerkarten Zeile wird als Bezugspunkt verwendet, da er im Vergleich zum Helligkeits Farbverlauf des Menüband-Hintergrunds als flache Farbfläche gerendert wird.
+Der Hintergrund der Registerkartenzeile wird als Bezugspunkt verwendet, da er im Vergleich zum Helligkeitsverlauf des Menübandhintergrunds als flache Farboberfläche gerendert wird.
 
-Zum Abrufen eines zwischen-HSL-Werts ist eine vorläufige Konvertierung erforderlich. Dieser HSL-Wert kann dann in einen HSB-Wert konvertiert werden.
+Eine vorläufige Konvertierung ist erforderlich, um einen HSL-Zwischenwert zu erhalten. Dieser HSL-Wert kann dann in einen HSB-Wert konvertiert werden.
 
 > [!Note]  
-> Die Konvertierung von RGB in HSL kann mit der meisten Fotobearbeitungssoftware problemlos durchgeführt werden.
+> Die Konvertierung von RGB in HSL lässt sich mit den meisten Fotobearbeitungssoftware problemlos erreichen.
 
  
 
-Die Konvertierung von HSL (mit jeder Komponente im Bereich von 0,0 bis 1,0) in eine Menüband-HSB-Einstellung wird durch die folgenden Formeln erreicht:
+Die Konvertierung von HSL (mit jeder Komponente im Bereich von 0,0 bis 1,0) in eine Menüband-HSB-Einstellung wird mithilfe der folgenden Formeln durchgeführt:
 
--   H<sub>Background</sub> = Round (255.0 h)
--   S<sub>Background</sub> = Round (255.0 s)
--   B<sub>Background</sub> = Round (257.7 + 149,9 ln (L)), wenn 0,1793 <= L <= 0,9821
+-   H<sub>background</sub> = Round(255.0 H)
+-   S<sub>background</sub> = Round(255.0 S)
+-   B<sub>background</sub> = Round(257.7 + 149.9 ln(L)) if 0.1793 <= L <= 0.9821
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[Farb Richtlinien](https://msdn.microsoft.com/library/aa511283.aspx)
+[Farbrichtlinien](https://msdn.microsoft.com/library/aa511283.aspx)
 </dt> <dt>
 
-[Framework-Eigenschaften](windowsribbon-reference-properties-framework.md)
+[Frameworkeigenschaften](windowsribbon-reference-properties-framework.md)
 </dt> </dl>
 
  

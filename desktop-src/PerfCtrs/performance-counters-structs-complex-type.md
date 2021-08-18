@@ -1,7 +1,7 @@
 ---
-description: Definiert eine Liste von-Strukturen, die Gegenwerte enthalten.
+description: Definiert eine Liste von Strukturen, die Indikatorwerte enthalten.
 ms.assetid: 6f6b33ed-6440-456c-8379-61a37798c95f
-title: komplexer Strukturen-Typ
+title: Komplexe Typen von Strukturen
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -9,16 +9,16 @@ topic_type:
 api_name: ''
 api_type: ''
 api_location: ''
-ms.openlocfilehash: c36de698d1e0eb136f17034e0740851fc751d157
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 0dfa7f72ee537d857f19301aa4df906d94b0bf7ba9e3f7a76bdb6ab82c84dfd0
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106362226"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119314420"
 ---
-# <a name="structs-complex-type"></a>komplexer Strukturen-Typ
+# <a name="structs-complex-type"></a>Komplexe Typen von Strukturen
 
-Definiert eine Liste von-Strukturen, die Gegenwerte enthalten.
+Definiert eine Liste von Strukturen, die Indikatorwerte enthalten.
 
 ``` syntax
 <xs:complexType name="structs">
@@ -39,7 +39,7 @@ Definiert eine Liste von-Strukturen, die Gegenwerte enthalten.
 
 | Element    | type                                                           | BESCHREIBUNG                                                      |
 |------------|----------------------------------------------------------------|------------------------------------------------------------------|
-| **struct** | [**man: struct**](performance-counters-struct-complex-type.md) | Der Name einer-Struktur, die die Werte für den Zählers enthält.<br/> |
+| **struct** | [**man:struct**](performance-counters-struct-complex-type.md) | Der Name einer Struktur, die Indikatorwerte enthält.<br/> |
 
 
 
@@ -49,8 +49,8 @@ Definiert eine Liste von-Strukturen, die Gegenwerte enthalten.
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>       |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/> |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur Vista-Desktop-Apps\]<br/>       |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/> |
 
 
 

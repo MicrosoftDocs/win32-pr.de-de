@@ -1,11 +1,11 @@
 ---
-title: Betriebs System-Hotfix-Attribut
+title: Operating-System-Hotfix-Attribut
 description: Die Hotfixebene des Betriebssystems.
 ms.assetid: 46fc7eb2-9e68-4036-be71-2d38766f8b4b
 ms.tgt_platform: multiple
 keywords:
-- Betriebs System-hotfixattribut AD-Schema
-- operatingsystemhotfix-Attribut AD-Schema
+- AD-Schema des Operating-System-Hotfix-Attributs
+- operatingSystemHotfix-Attribut AD-Schema
 topic_type:
 - apiref
 api_name:
@@ -14,14 +14,14 @@ api_type:
 - Schema
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: c32ced3ea760eab9d97828369b51ec596d561ebd
-ms.sourcegitcommit: b77ace27b0432e7cd3863191b11926be032fbe2f
+ms.openlocfilehash: f0ece851b703c543740716ec042331c4ede69aa79b7dc06b4ee9fdce8c974c4f
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "103859792"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119442150"
 ---
-# <a name="operating-system-hotfix-attribute"></a>Betriebs System-Hotfix-Attribut
+# <a name="operating-system-hotfix-attribute"></a>Operating-System-Hotfix-Attribut
 
 Die Hotfixebene des Betriebssystems.
 
@@ -29,13 +29,13 @@ Die Hotfixebene des Betriebssystems.
 
 | Eingabe | Wert |
 |-------------------|---------------------------------------------|
-| CN                | Betriebs System-Hotfix                     |
-| LDAP-Display-Name | operatingsystemhotfix                       |
+| CN                | Betriebssystem-Hotfix                     |
+| Ldap-Anzeigename | operatingSystemHotfix                       |
 | Size              | \-                                          |
-| Berechtigung aktualisieren  | \-                                          |
-| Aktualisierungshäufigkeit  | \-                                          |
+| Aktualisieren von Berechtigungen  | \-                                          |
+| Updatehäufigkeit  | \-                                          |
 | Attribute-Id      | 1.2.840.113556.1.4.415                      |
-| System-ID-GUID    | bd951b3c-9c96-11d0-afdd-00c04fd930c9        |
+| System-Id-Guid    | bd951b3c-9c96-11d0-afdd-00c04fd930c9        |
 | Syntax            | [**String(Unicode)**](s-string-unicode.md) |
 
 
@@ -43,7 +43,7 @@ Die Hotfixebene des Betriebssystems.
 ## <a name="implementations"></a>Implementierungen
 
 -   [**Windows 2000 Server**](#windows-2000-server)
--   [**Windows Server 2003**](#windows-server-2003)
+-   [**Windows Server 2003**](#windows-server-2003)
 -   [**Windows Server 2003 R2**](#windows-server-2003-r2)
 -   [**Windows Server 2008**](#windows-server-2008)
 -   [**Windows Server 2008 R2**](#windows-server-2008-r2)
@@ -57,20 +57,20 @@ Die Hotfixebene des Betriebssystems.
 |------------------------|------------------------------------------------------------------------------------------|
 | Link-ID                | \-                                                                                       |
 | MAPI-Id                | \-                                                                                       |
-| System-Only            | False                                                                                    |
-| Ist-einwertig       | Richtig                                                                                     |
-| Ist indiziert             | False                                                                                    |
-| Im globalen Katalog      | False                                                                                    |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                                             |
+| System-Only            | Falsch                                                                                    |
+| Is-Single-Valued       | Richtig                                                                                     |
+| Ist indiziert             | Falsch                                                                                    |
+| Im globalen Katalog      | Falsch                                                                                    |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                                             |
 | Range-Lower            | \-                                                                                       |
 | Range-Upper            | \-                                                                                       |
 | Search-Flags           | 0x00000000                                                                               |
 | System-Flags           | 0x00000010                                                                               |
-| In verwendete Klassen        | [**Computer**](c-computer.md)<br/> [**Druck Warteschlange**](c-printqueue.md)<br/> |
+| In verwendete Klassen        | [**Computer**](c-computer.md)<br/> [**Druckwarteschlange**](c-printqueue.md)<br/> |
 
 
 
-## <a name="windows-server-2003"></a>Windows Server 2003
+## <a name="windows-server-2003"></a>Windows Server 2003
 
 
 
@@ -78,16 +78,16 @@ Die Hotfixebene des Betriebssystems.
 |------------------------|------------------------------------------------------------------------------------------|
 | Link-ID                | \-                                                                                       |
 | MAPI-Id                | \-                                                                                       |
-| System-Only            | False                                                                                    |
-| Ist-einwertig       | Richtig                                                                                     |
-| Ist indiziert             | False                                                                                    |
-| Im globalen Katalog      | False                                                                                    |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                                             |
+| System-Only            | Falsch                                                                                    |
+| Is-Single-Valued       | Richtig                                                                                     |
+| Ist indiziert             | Falsch                                                                                    |
+| Im globalen Katalog      | Falsch                                                                                    |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                                             |
 | Range-Lower            | \-                                                                                       |
 | Range-Upper            | \-                                                                                       |
 | Search-Flags           | 0x00000000                                                                               |
 | System-Flags           | 0x00000010                                                                               |
-| In verwendete Klassen        | [**Computer**](c-computer.md)<br/> [**Druck Warteschlange**](c-printqueue.md)<br/> |
+| In verwendete Klassen        | [**Computer**](c-computer.md)<br/> [**Druckwarteschlange**](c-printqueue.md)<br/> |
 
 
 
@@ -99,16 +99,16 @@ Die Hotfixebene des Betriebssystems.
 |------------------------|------------------------------------------------------------------------------------------|
 | Link-ID                | \-                                                                                       |
 | MAPI-Id                | \-                                                                                       |
-| System-Only            | False                                                                                    |
-| Ist-einwertig       | Richtig                                                                                     |
-| Ist indiziert             | False                                                                                    |
-| Im globalen Katalog      | False                                                                                    |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                                             |
+| System-Only            | Falsch                                                                                    |
+| Is-Single-Valued       | Richtig                                                                                     |
+| Ist indiziert             | Falsch                                                                                    |
+| Im globalen Katalog      | Falsch                                                                                    |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                                             |
 | Range-Lower            | \-                                                                                       |
 | Range-Upper            | \-                                                                                       |
 | Search-Flags           | 0x00000000                                                                               |
 | System-Flags           | 0x00000010                                                                               |
-| In verwendete Klassen        | [**Computer**](c-computer.md)<br/> [**Druck Warteschlange**](c-printqueue.md)<br/> |
+| In verwendete Klassen        | [**Computer**](c-computer.md)<br/> [**Druckwarteschlange**](c-printqueue.md)<br/> |
 
 
 
@@ -120,16 +120,16 @@ Die Hotfixebene des Betriebssystems.
 |------------------------|------------------------------------------------------------------------------------------|
 | Link-ID                | \-                                                                                       |
 | MAPI-Id                | \-                                                                                       |
-| System-Only            | False                                                                                    |
-| Ist-einwertig       | Richtig                                                                                     |
-| Ist indiziert             | False                                                                                    |
-| Im globalen Katalog      | False                                                                                    |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                                             |
+| System-Only            | Falsch                                                                                    |
+| Ist einwertig       | Richtig                                                                                     |
+| Ist indiziert             | Falsch                                                                                    |
+| Im globalen Katalog      | Falsch                                                                                    |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                                             |
 | Range-Lower            | \-                                                                                       |
 | Range-Upper            | \-                                                                                       |
 | Search-Flags           | 0x00000000                                                                               |
 | System-Flags           | 0x00000010                                                                               |
-| In verwendete Klassen        | [**Computer**](c-computer.md)<br/> [**Druck Warteschlange**](c-printqueue.md)<br/> |
+| In verwendete Klassen        | [**Computer**](c-computer.md)<br/> [**Druckwarteschlange**](c-printqueue.md)<br/> |
 
 
 
@@ -141,16 +141,16 @@ Die Hotfixebene des Betriebssystems.
 |------------------------|------------------------------------------------------------------------------------------|
 | Link-ID                | \-                                                                                       |
 | MAPI-Id                | \-                                                                                       |
-| System-Only            | False                                                                                    |
-| Ist-einwertig       | Richtig                                                                                     |
-| Ist indiziert             | False                                                                                    |
-| Im globalen Katalog      | False                                                                                    |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                                             |
+| System-Only            | Falsch                                                                                    |
+| Ist einwertig       | Richtig                                                                                     |
+| Ist indiziert             | Falsch                                                                                    |
+| Im globalen Katalog      | Falsch                                                                                    |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                                             |
 | Range-Lower            | \-                                                                                       |
 | Range-Upper            | \-                                                                                       |
 | Search-Flags           | 0x00000000                                                                               |
 | System-Flags           | 0x00000010                                                                               |
-| In verwendete Klassen        | [**Computer**](c-computer.md)<br/> [**Druck Warteschlange**](c-printqueue.md)<br/> |
+| In verwendete Klassen        | [**Computer**](c-computer.md)<br/> [**Druckwarteschlange**](c-printqueue.md)<br/> |
 
 
 
@@ -162,16 +162,16 @@ Die Hotfixebene des Betriebssystems.
 |------------------------|------------------------------------------------------------------------------------------|
 | Link-ID                | \-                                                                                       |
 | MAPI-Id                | \-                                                                                       |
-| System-Only            | False                                                                                    |
-| Ist-einwertig       | Richtig                                                                                     |
-| Ist indiziert             | False                                                                                    |
-| Im globalen Katalog      | False                                                                                    |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                                             |
+| System-Only            | Falsch                                                                                    |
+| Ist einwertig       | Richtig                                                                                     |
+| Ist indiziert             | Falsch                                                                                    |
+| Im globalen Katalog      | Falsch                                                                                    |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                                             |
 | Range-Lower            | \-                                                                                       |
 | Range-Upper            | \-                                                                                       |
 | Search-Flags           | 0x00000000                                                                               |
 | System-Flags           | 0x00000010                                                                               |
-| In verwendete Klassen        | [**Computer**](c-computer.md)<br/> [**Druck Warteschlange**](c-printqueue.md)<br/> |
+| In verwendete Klassen        | [**Computer**](c-computer.md)<br/> [**Druckwarteschlange**](c-printqueue.md)<br/> |
 
 
 

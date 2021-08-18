@@ -1,6 +1,6 @@
 ---
-description: 'Weitere Informationen finden Sie unter: API. jetgetdatabasefileingefo-Methode (String, Int64, JET_DbInfo)'
-title: API. jetgetdatabasefileingefo-Methode (String, Int64, JET_DbInfo)
+description: 'Weitere Informationen finden Sie unter: Api.JetGetDatabaseFileInfo-Methode (String, Int64, JET_DbInfo)'
+title: Api.JetGetDatabaseFileInfo-Methode (String, Int64, JET_DbInfo)
 TOCTitle: JetGetDatabaseFileInfo method (String, Int64, JET_DbInfo)
 ms:assetid: M:Microsoft.Isam.Esent.Interop.Api.JetGetDatabaseFileInfo(System.String,System.Int64@,Microsoft.Isam.Esent.Interop.JET_DbInfo)
 ms:mtpsurl: https://msdn.microsoft.com/library/microsoft.isam.esent.interop.api.jetgetdatabasefileinfo(v=EXCHG.10)
@@ -20,19 +20,19 @@ api_type:
 api_location:
 - Microsoft.Isam.Esent.Interop.dll
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: cc036a1c1eceedd39fd265bcf85a2dbaf779a432
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: ba9426e53be08001940802a7bcc66e45fc71e8883252ce9d5a3b529e9a8c82c2
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104128700"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118983420"
 ---
-# <a name="apijetgetdatabasefileinfo-method-string-int64-jet_dbinfo"></a>API. jetgetdatabasefileingefo-Methode (String, Int64, JET_DbInfo)
+# <a name="apijetgetdatabasefileinfo-method-string-int64-jet_dbinfo"></a>Api.JetGetDatabaseFileInfo-Methode (String, Int64, JET_DbInfo)
 
-Ruft bestimmte Informationen über die angegebene Datenbank ab.
+Ruft bestimmte Informationen zur angegebenen Datenbank ab.
 
-**Namespace:**  [Microsoft. ISAM. ESENT. Interop](./microsoft.isam.esent.interop-namespace.md)  
-**Assembly:**  Microsoft. ISAM. ESENT. Interop (in Microsoft.Isam.Esent.Interop.dll)
+**Namespace:**  [Microsoft.Isam.Esent.Interop](./microsoft.isam.esent.interop-namespace.md)  
+**Assembly:**  Microsoft.Isam.Esent.Interop (in Microsoft.Isam.Esent.Interop.dll)
 
 ## <a name="syntax"></a>Syntax
 
@@ -61,32 +61,32 @@ public static void JetGetDatabaseFileInfo(
 #### <a name="parameters"></a>Parameter
 
   - databaseName  
-    Typ: [System. String](/dotnet/api/system.string)  
+    Typ: [System.String](/dotnet/api/system.string)  
     
     Der Dateiname der Datenbank.
 
 <!-- end list -->
 
   - value  
-    Typ: [System. Int64](/dotnet/api/system.int64)  
+    Typ: [System.Int64](/dotnet/api/system.int64)  
     
     Der abzurufende Wert.
 
 <!-- end list -->
 
-  - infolevel  
-    Typ: [Microsoft.ISAM.ESENT.Interop.JET_DbInfo](./jet-dbinfo-enumeration.md)  
+  - infoLevel  
+    Typ: [Microsoft.Isam.Esent.Interop.JET_DbInfo](./jet-dbinfo-enumeration.md)  
     
-    Die Daten, die abgerufen werden sollen.
+    Die spezifischen abzurufenden Daten.
 
 ## <a name="see-also"></a>Siehe auch
 
-#### <a name="reference"></a>Referenz
+#### <a name="reference"></a>Verweis
 
 [API-Klasse](./api-class.md)
 
-[API-Mitglieder](./api-members.md)
+[API-Member](./api-members.md)
 
-[Jetgetdatabasefileingefo-Überladung](./api.jetgetdatabasefileinfo-method.md)
+[JetGetDatabaseFileInfo-Überladung](./api.jetgetdatabasefileinfo-method.md)
 
-[Microsoft. ISAM. ESENT. Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)
+[Microsoft.Isam.Esent.Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)

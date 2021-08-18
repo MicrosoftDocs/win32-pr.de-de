@@ -1,9 +1,9 @@
 ---
-title: Zeichen folgen Struktur
-description: Stellt die Organisation von Daten in einer Datei Versions Ressource dar. Sie enthält eine Zeichenfolge, die einen bestimmten Aspekt einer Datei beschreibt, z. b. die Version einer Datei, die Copyright Hinweise oder ihre Marken.
+title: Zeichenfolgenstruktur
+description: Stellt die Organisation von Daten in einer Dateiversionsressource dar. Sie enthält eine Zeichenfolge, die einen bestimmten Aspekt einer Datei beschreibt, z. B. die Version einer Datei, ihre Urheberrechtshinweise oder ihre Marken.
 ms.assetid: fcc5ac68-4aec-4a3b-aa92-96fc50cc4ca2
 keywords:
-- Zeichen folgen Struktur-Menüs und andere Ressourcen
+- Zeichenfolgenstrukturmenüs und andere Ressourcen
 topic_type:
 - apiref
 api_name:
@@ -13,16 +13,16 @@ api_type:
 ms.topic: reference
 ms.date: 05/31/2018
 api_location: ''
-ms.openlocfilehash: 7035223082a9e446caebd6e07d3d55c84536d09f
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: a6db2c10e981ae059a46e84e7abfc4d6dfc372fc3c75c76cfc20fd8a8f42735d
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "106337302"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119776730"
 ---
-# <a name="string-structure"></a>Zeichen folgen Struktur
+# <a name="string-structure"></a>Zeichenfolgenstruktur
 
-Stellt die Organisation von Daten in einer Datei Versions Ressource dar. Sie enthält eine Zeichenfolge, die einen bestimmten Aspekt einer Datei beschreibt, z. b. die Version einer Datei, die Copyright Hinweise oder ihre Marken.
+Stellt die Organisation von Daten in einer Dateiversionsressource dar. Sie enthält eine Zeichenfolge, die einen bestimmten Aspekt einer Datei beschreibt, z. B. die Version einer Datei, ihre Urheberrechtshinweise oder ihre Marken.
 
 ## <a name="syntax"></a>Syntax
 
@@ -44,69 +44,69 @@ typedef struct {
 
 <dl> <dt>
 
-**wlength**
+**wLength**
 </dt> <dd>
 
-Typ: **Word**
+Typ: **WORD**
 
 </dd> <dd>
 
-Die Länge dieser **Zeichen** folgen Struktur in Bytes.
+Die Länge dieser Zeichenfolgenstruktur in **Bytes.**
 
 </dd> <dt>
 
-**wvaluelength**
+**wValueLength**
 </dt> <dd>
 
-Typ: **Word**
+Typ: **WORD**
 
 </dd> <dd>
 
-Die Größe des **Wertmembers** in Wörtern.
+Die Größe des Value-Members in **Wörtern.**
 
 </dd> <dt>
 
 **wType**
 </dt> <dd>
 
-Typ: **Word**
+Typ: **WORD**
 
 </dd> <dd>
 
-Der Typ der Daten in der Versions Ressource. Dieser Member ist 1, wenn die Versions Ressource Textdaten enthält, und 0, wenn die Versions Ressource binäre Daten enthält.
+Der Datentyp in der Versionsressource. Dieser Member ist 1, wenn die Versionsressource Textdaten enthält, und 0, wenn die Versionsressource Binärdaten enthält.
 
 </dd> <dt>
 
-**szkey**
+**szKey**
 </dt> <dd>
 
 Typ: **WCHAR**
 
 </dd> <dd>
 
-Eine beliebige Unicode-Zeichenfolge. Der **szkey** -Member kann einen oder mehrere der folgenden Werte aufweisen. Diese Werte sind nur Richtlinien.
+Eine beliebige Unicode-Zeichenfolge. Der **szKey-Member** kann einer oder mehrere der folgenden Werte sein. Diese Werte sind nur Richtlinien.
 
 <dt>
 
 <span id="Comments"></span><span id="comments"></span><span id="COMMENTS"></span>
 
-<span id="Comments"></span><span id="comments"></span><span id="COMMENTS"></span>**Iny**
+<span id="Comments"></span><span id="comments"></span><span id="COMMENTS"></span>**Kommentare**
 
 
 </dt> <dd>
 
-Der **Wert** Mitglied enthält alle zusätzlichen Informationen, die zu Diagnose Zwecken angezeigt werden sollen. Diese Zeichenfolge kann eine beliebige Länge aufweisen.
+Das **Value-Member** enthält alle zusätzlichen Informationen, die zu Diagnosezwecken angezeigt werden sollen. Diese Zeichenfolge kann eine beliebige Länge haben.
 
 </dd> <dt>
 
 <span id="CompanyName"></span><span id="companyname"></span><span id="COMPANYNAME"></span>
 
-<span id="CompanyName"></span><span id="companyname"></span><span id="COMPANYNAME"></span>**CompanyName**
+<span id="CompanyName"></span><span id="companyname"></span><span id="COMPANYNAME"></span>**Companyname**
 
 
 </dt> <dd>
 
-Der **Wert** Mitglied identifiziert das Unternehmen, das die Datei erstellt hat. Beispiel: "Microsoft Corporation" oder "Standard Microsystems Corporation, Inc."
+Das **Value-Mitglied** identifiziert das Unternehmen, das die Datei erstellt hat. Beispiel: "Microsoft Corporation" oder "Standard Microsystems Corporation, Inc."
 
 </dd> <dt>
 
@@ -117,18 +117,18 @@ Der **Wert** Mitglied identifiziert das Unternehmen, das die Datei erstellt hat.
 
 </dt> <dd>
 
-Das **Wertmember** beschreibt die Datei so, dass Sie Benutzern angezeigt werden kann. Diese Zeichenfolge wird möglicherweise in einem Listenfeld angezeigt, wenn der Benutzer die zu installierenden Dateien auswählt. Beispiel: "Tastaturtreiber für im Stil Formatierungs Tastatur" oder "Microsoft Word für Windows".
+Der **Value-Member** beschreibt die Datei so, dass sie Benutzern präsentiert werden kann. Diese Zeichenfolge kann in einem Listenfeld angezeigt werden, wenn der Benutzer zu installierende Dateien auswählt. Beispiel: "Tastaturtreiber für Tastaturen im AT-Stil" oder "Microsoft Word für Windows".
 
 </dd> <dt>
 
 <span id="FileVersion"></span><span id="fileversion"></span><span id="FILEVERSION"></span>
 
-<span id="FileVersion"></span><span id="fileversion"></span><span id="FILEVERSION"></span>**File Version**
+<span id="FileVersion"></span><span id="fileversion"></span><span id="FILEVERSION"></span>**FileVersion**
 
 
 </dt> <dd>
 
-Der **Wertmember** identifiziert die Version dieser Datei. Der **Wert** könnte z. b. "3.00 a" oder "5.00. RC2" lauten.
+Der **Value-Member** identifiziert die Version dieser Datei. Der Wert **kann** beispielsweise "3.00A" oder "5.00.RC2" sein.
 
 </dd> <dt>
 
@@ -139,7 +139,7 @@ Der **Wertmember** identifiziert die Version dieser Datei. Der **Wert** könnte 
 
 </dt> <dd>
 
-Der **Wertmember** identifiziert den internen Namen der Datei, sofern vorhanden. Diese Zeichenfolge kann z. b. den Modulnamen für eine DLL, den Namen eines virtuellen Geräts für ein virtuelles Windows-Gerät oder einen Gerätenamen für einen MS-DOS-Gerätetreiber enthalten.
+Das **Value-Member** identifiziert den internen Namen der Datei, sofern vorhanden. Diese Zeichenfolge kann beispielsweise den Modulnamen für eine DLL, einen Namen eines virtuellen Geräts für ein virtuelles Windows-Gerät oder einen Gerätenamen für einen MS-DOS-Gerätetreiber enthalten.
 
 </dd> <dt>
 
@@ -150,29 +150,29 @@ Der **Wertmember** identifiziert den internen Namen der Datei, sofern vorhanden.
 
 </dt> <dd>
 
-Der **Wert** Mitglied beschreibt alle Copyright Hinweise, Marken und registrierten Marken, die auf die Datei angewendet werden. Dies sollte den vollständigen Text aller Hinweise, rechtliche Symbole, Copyright-Datumsangaben, Markennummern usw. umfassen. In englischer Sprache sollte diese Zeichenfolge das folgende Format aufweisen: "Copyright Microsoft Corp. 1990 1994".
+Das **Value-Mitglied** beschreibt alle Urheberrechtshinweise, Marken und registrierten Marken, die für die Datei gelten. Dies sollte den vollständigen Text aller Hinweise, rechtliche Symbole, Copyright-Datumsangaben, Markennummern usw. umfassen. Auf Englisch sollte diese Zeichenfolge das Format "Copyright Microsoft Corp. 1990 1994" haben.
 
 </dd> <dt>
 
 <span id="LegalTrademarks"></span><span id="legaltrademarks"></span><span id="LEGALTRADEMARKS"></span>
 
-<span id="LegalTrademarks"></span><span id="legaltrademarks"></span><span id="LEGALTRADEMARKS"></span>**Legalmarken**
+<span id="LegalTrademarks"></span><span id="legaltrademarks"></span><span id="LEGALTRADEMARKS"></span>**Legal Zustempel**
 
 
 </dt> <dd>
 
-Der **Wert** Mitglied beschreibt alle Marken und registrierten Marken, die auf die Datei angewendet werden. Dies sollte den vollständigen Text aller Hinweise, rechtliche Symbole, Markennummern usw. umfassen. Im Deutschen sollte diese Zeichenfolge das folgende Format aufweisen: "Windows ist eine Marke der Microsoft Corporation".
+Das **Value-Mitglied** beschreibt alle Marken und registrierten Marken, die für die Datei gelten. Dies sollte den vollständigen Text aller Hinweise, rechtliche Symbole, Markennummern usw. umfassen. Im Deutschen sollte diese Zeichenfolge das folgende Format aufweisen: "Windows ist eine Marke der Microsoft Corporation".
 
 </dd> <dt>
 
 <span id="OriginalFilename"></span><span id="originalfilename"></span><span id="ORIGINALFILENAME"></span>
 
-<span id="OriginalFilename"></span><span id="originalfilename"></span><span id="ORIGINALFILENAME"></span>**Optio**
+<span id="OriginalFilename"></span><span id="originalfilename"></span><span id="ORIGINALFILENAME"></span>**OriginalFilename**
 
 
 </dt> <dd>
 
-Das **Wertmember** identifiziert den ursprünglichen Namen der Datei ohne einen Pfad. Dadurch kann eine Anwendung ermitteln, ob eine Datei von einem Benutzer umbenannt wurde. Dieser Name ist möglicherweise nicht MS-DOS 8,3-Format, wenn die Datei für ein nicht-FAT-Dateisystem spezifisch ist.
+Das **Value-Member** identifiziert den ursprünglichen Namen der Datei, ohne einen Pfad. Dadurch kann eine Anwendung bestimmen, ob eine Datei von einem Benutzer umbenannt wurde. Dieser Name darf nicht im MS-DOS 8.3-Format vorliegen, wenn die Datei für ein Nicht-FAT-Dateisystem spezifisch ist.
 
 </dd> <dt>
 
@@ -183,29 +183,29 @@ Das **Wertmember** identifiziert den ursprünglichen Namen der Datei ohne einen 
 
 </dt> <dd>
 
-Das **Wertmember** beschreibt, von wem, wo und warum diese private Version der Datei erstellt wurde. Diese Zeichenfolge sollte nur vorhanden sein, wenn das **vs \_ FF \_ PrivateBuild** -Flag im **dwFileFlags** -Member der [**vs \_ FixedFileInfo**](/windows/win32/api/verrsrc/ns-verrsrc-vs_fixedfileinfo) -Struktur festgelegt ist. Der **Wert** könnte z. b. "von Oscar auf \\ OSCAR2 erstellt" lauten.
+Der **Value-Member** beschreibt, von wem, wo und warum diese private Version der Datei erstellt wurde. Diese Zeichenfolge sollte nur vorhanden sein, wenn das **VS \_ FF \_ PRIVATEBUILD-Flag** im **dwFileFlags-Member** der [**VS \_ FIXEDFILEINFO-Struktur festgelegt**](/windows/win32/api/verrsrc/ns-verrsrc-vs_fixedfileinfo) ist. Der Wert könnte **z.** B. "Built by WIES \\ onNOM2" sein.
 
 </dd> <dt>
 
 <span id="ProductName"></span><span id="productname"></span><span id="PRODUCTNAME"></span>
 
-<span id="ProductName"></span><span id="productname"></span><span id="PRODUCTNAME"></span>**ProductName**
+<span id="ProductName"></span><span id="productname"></span><span id="PRODUCTNAME"></span>**Productname**
 
 
 </dt> <dd>
 
-Der **Wertmember** identifiziert den Namen des Produkts, mit dem diese Datei verteilt wird. Diese Zeichenfolge könnte z. b. "Microsoft Windows" lauten.
+Das **Value-Member** identifiziert den Namen des Produkts, mit dem diese Datei verteilt wird. Diese Zeichenfolge könnte beispielsweise "Microsoft Windows" sein.
 
 </dd> <dt>
 
 <span id="ProductVersion"></span><span id="productversion"></span><span id="PRODUCTVERSION"></span>
 
-<span id="ProductVersion"></span><span id="productversion"></span><span id="PRODUCTVERSION"></span>**ProductVersion**
+<span id="ProductVersion"></span><span id="productversion"></span><span id="PRODUCTVERSION"></span>**Productversion**
 
 
 </dt> <dd>
 
-Das **Wertmember** identifiziert die Version des Produkts, mit dem diese Datei verteilt wird. Der **Wert** könnte z. b. "3.00 a" oder "5.00. RC2" lauten.
+Der **Value-Member** identifiziert die Version des Produkts, mit dem diese Datei verteilt wird. Der Wert **kann** beispielsweise "3.00A" oder "5.00.RC2" sein.
 
 </dd> <dt>
 
@@ -216,37 +216,37 @@ Das **Wertmember** identifiziert die Version des Produkts, mit dem diese Datei v
 
 </dt> <dd>
 
-Das **Wertmember** beschreibt, wie sich diese Version der Datei von der normalen Version unterscheidet. Dieser Eintrag sollte nur vorhanden sein, wenn das **vs \_ FF \_ SpecialBuild** -Flag im **dwFileFlags** -Member der [**vs \_ FixedFileInfo**](/windows/win32/api/verrsrc/ns-verrsrc-vs_fixedfileinfo) -Struktur festgelegt ist. Der **Wert** könnte z. b. "private Build for Olivetti lösen von Maus Problemen auf M250 und M250E Computers" lauten.
+Der **Value-Member** beschreibt, wie sich diese Version der Datei von der normalen Version unterscheidet. Dieser Eintrag sollte nur vorhanden sein, wenn das **VS \_ FF \_ SPECIALBUILD-Flag** im **dwFileFlags-Member** der [**VS \_ FIXEDFILEINFO-Struktur festgelegt**](/windows/win32/api/verrsrc/ns-verrsrc-vs_fixedfileinfo) ist. Der Wert **könnte** z. B. "Privater Build für Die Lösung von Mausproblemen auf M250- und M250E-Computern" sein.
 
 </dd> </dl> </dd> <dt>
 
 **Auffüllen**
 </dt> <dd>
 
-Typ: **Word**
+Typ: **WORD**
 
 </dd> <dd>
 
-So viele Null-Wörter, wie erforderlich, um den **Wertmember** an einer 32-Bit-Grenze auszurichten.
+So viele Nullwörter wie erforderlich, um das **Value-Member** an einer 32-Bit-Grenze auszurichten.
 
 </dd> <dt>
 
 **Wert**
 </dt> <dd>
 
-Typ: **Word**
+Typ: **WORD**
 
 </dd> <dd>
 
-Eine NULL terminierte Zeichenfolge. Weitere Informationen finden Sie in der Beschreibung des **szkey** -Members.
+Eine auf 0 (null) beendete Zeichenfolge. Weitere Informationen **finden Sie** in der SzKey-Memberbeschreibung.
 
 </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Diese Struktur ist keine echte C-Sprachstruktur, da Sie Member variabler Länge enthält. Diese Struktur wurde ausschließlich zur Darstellung der Organisation von Daten in einer Versions Ressource erstellt und wird nicht in den Header Dateien angezeigt, die im Windows Software Development Kit (SDK) enthalten sind.
+Diese Struktur ist keine echte C-Sprachstruktur, da sie Member variabler Länge enthält. Diese Struktur wurde ausschließlich zur Darstellung der Organisation von Daten in einer Versionsressource erstellt und wird nicht in den Headerdateien angezeigt, die im Lieferumfang des Windows Software Development Kit (SDK) enthalten sind.
 
-Eine **Zeichen** folgen Struktur kann einen **szkey** -Wert von haben, z. b. "CompanyName" und den **Wert** "Microsoft Corporation". Eine andere **Zeichen** folgen Struktur mit dem gleichen **szkey** -Wert könnte den **Wert** "Microsoft GmbH" enthalten. Dies kann vorkommen, wenn die zweite **Zeichen** folgen Struktur einer [**STRINGTABLE**](stringtable.md) -Struktur zugeordnet wäre, deren **szkey** -Wert 040704b0 ist, d. h. Deutsch/Unicode.
+Eine **String-Struktur** kann den **szKey-Wert** z. B. "CompanyName" und den **Wert** "Microsoft Corporation" haben. Eine **andere String-Struktur** mit dem gleichen **szKey-Wert** kann den **Wert** "Microsoft GmbH" enthalten. This might occur if the second **String** structure were associated with a [**StringTable**](stringtable.md) structure whose **szKey** value is 040704b0   that is, German/Unicode.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -259,26 +259,26 @@ Eine **Zeichen** folgen Struktur kann einen **szkey** -Wert von haben, z. b. "Co
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-**Verweis**
+**Referenz**
 </dt> <dt>
 
-[**STRINGTABLE**](stringtable.md)
+[**Stringtable**](stringtable.md)
 </dt> <dt>
 
-[**VS \_ fixedfileingefo**](/windows/win32/api/verrsrc/ns-verrsrc-vs_fixedfileinfo)
+[**VS \_ FIXEDFILEINFO**](/windows/win32/api/verrsrc/ns-verrsrc-vs_fixedfileinfo)
 </dt> <dt>
 
-[**Stringfileingefo**](stringfileinfo.md)
+[**StringFileInfo**](stringfileinfo.md)
 </dt> <dt>
 
 [**VS \_ VERSIONINFO**](vs-versioninfo.md)
 </dt> <dt>
 
-**Licher**
+**Konzeptionellen**
 </dt> <dt>
 
 [Versionsinformationen](version-information.md)

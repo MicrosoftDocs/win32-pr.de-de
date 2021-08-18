@@ -44,7 +44,7 @@ HRESULT SuggestBrowserPolicy(
 
 Typ: **DWORD**
 
-Der Kontextbezeichner für den Vorgang. Überschreiben Sie *den dwContext-Standardwert,* um den Kontextbezeichner auf einen Wert Ihrer Wahl zu setzen.
+Der Kontextbezeichner für den Vorgang. Überschreiben Sie den *dwContext-Standardwert,* um den Kontextbezeichner auf einen Wert Ihrer Wahl festzulegen.
 
 </dd> <dt>
 
@@ -53,7 +53,7 @@ Der Kontextbezeichner für den Vorgang. Überschreiben Sie *den dwContext-Standa
 
 Typ: **DWORD \***
 
-Ein Zeiger auf einen DWORD-Wert, der Überprüfungsflags enthält. Das **FLAG BROWSERPOLICY \_ UNTRUSTED \_ CONTENT** deaktiviert die Möglichkeit, dass die Vorschau skript- oder ActiveX. Der Parameter *pdwFlags darf* kein **NULL-Zeiger** sein.
+Ein Zeiger auf einen DWORD-Wert, der Überprüfungsüberprüfungsflags enthält. Das **FLAG BROWSERPOLICY \_ UNTRUSTED \_ CONTENT** deaktiviert jede Möglichkeit, dass die Vorschau skript- oder ActiveX ausführen kann. Der *Parameter pdwFlags* darf kein **NULL-Zeiger** sein.
 
 </dd> </dl>
 
@@ -61,15 +61,15 @@ Ein Zeiger auf einen DWORD-Wert, der Überprüfungsflags enthält. Das **FLAG BR
 
 Typ: **HRESULT**
 
-Wenn diese Methode erfolgreich ist, wird **S \_ OK zurückgegeben.** Andernfalls wird ein **HRESULT-Fehlercode** zurückgegeben.
+Wenn diese Methode erfolgreich ist, wird **S \_ OK** zurückgegeben. Andernfalls wird ein **HRESULT-Fehlercode** zurückgegeben.
 
 ## <a name="remarks"></a>Hinweise
 
 Die [**IItemPreviewerExt-Schnittstelle**](-search-iitempreviewerext.md) wird nur auf Windows XP und Windows Server 2003 unterstützt und sollte nicht mehr verwendet werden.
 
-Um eine Vorschau von Anlagen mit einem Protokollhandler eines Drittanbieters auf Computern anzuzeigen, auf denen Windows XP oder Windows Server 2003 ausgeführt wird, ist es möglicherweise erforderlich, die [**IItemPreviewerExt-Schnittstelle**](-search-iitempreviewerext.md) und die folgenden APIs zu verwenden: die [**Schnittstellen ISearchProtocolUI,**](-search-isearchprotocolui.md) [**IItemPropertyBag**](iitempropertybag.md) und [**ISearchItem,**](-search-isearchitem.md) die [**LINKINFO-Struktur**](-search-linkinfo.md) und die [**LINKTYPE-Enumeration.**](-search-linktype.md)
+Zum Anzeigen einer Vorschau von Anlagen mit einem Protokollhandler eines Drittanbieters auf Computern, auf denen Windows XP oder Windows Server 2003 ausgeführt wird, ist es möglicherweise erforderlich, die [**IItemPreviewerExt-Schnittstelle**](-search-iitempreviewerext.md) und die folgenden APIs zu verwenden: die Schnittstellen [**ISearchProtocolUI,**](-search-isearchprotocolui.md) [**IItemPropertyBag**](iitempropertybag.md) und [**ISearchItem,**](-search-isearchitem.md) die [**LINKINFO-Struktur**](-search-linkinfo.md) und die [**LINKTYPE-Enumeration.**](-search-linktype.md)
 
-Die Verwendung **des FLAGS BROWSERPOLICY \_ UNTRUSTED \_ CONTENT** wird dringend empfohlen, um die Möglichkeit zu deaktivieren, dass die Vorschau skript- oder ActiveX. Die **IItemPreviewerExt::SuggestBrowserPolicy-Methode** kann Informationen darüber zurückgeben, ob das Element, für das die Vorschauversion angezeigt wird, vertrauenswürdig ist oder nicht. Dadurch kann das Trident-Steuerelement der Vorschauversion Skripts ausführen und sogar ActiveX ausführen. Da die Vorschauversion häufig temporäre Dateien verwendet, um die Vorschau zu generieren, kann dies zu unerwarteten Skript- und Codeausführungen in der Zone Lokaler Computer führen.
+Es wird dringend empfohlen, das FLAG **BROWSERPOLICY \_ UNTRUSTED \_ CONTENT** zu verwenden, um die Möglichkeit zu deaktivieren, dass die Vorschau skript- oder ActiveX ausführen kann. Die **IItemPreviewerExt::SuggestBrowserPolicy-Methode** kann Informationen darüber zurückgeben, ob das in der Vorschau befindliche Element vertrauenswürdig ist oder nicht. Dadurch kann das Trident-Steuerelement der Vorschauversion Skripts ausführen und sogar Steuerelemente ActiveX. Da die Vorschauversion häufig temporäre Dateien verwendet, um die Vorschau zu generieren, kann dies zu unerwarteten Skript- und Codeausführungsausführungen in der Zone Lokaler Computer führen.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -83,7 +83,7 @@ Die Verwendung **des FLAGS BROWSERPOLICY \_ UNTRUSTED \_ CONTENT** wird dringend
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 

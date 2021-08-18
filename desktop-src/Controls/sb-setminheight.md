@@ -1,9 +1,9 @@
 ---
-title: SB_SETMINHEIGHT Meldung (kommstrg. h)
-description: Legt die Mindesthöhe für den Zeichnungs Bereich eines Status Fensters fest.
+title: SB_SETMINHEIGHT (Commctrl.h)
+description: Legt die Mindesthöhe des Zeichnungsbereichs eines Statusfensters fest.
 ms.assetid: 346fe654-f808-4191-9c3d-f9a4def08df1
 keywords:
-- Windows-Steuerelemente für SB_SETMINHEIGHT Meldung
+- SB_SETMINHEIGHT meldungssteuerelemente Windows
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 6bcad3bf0cb4d11567e82aae4ef46a95fefe3890
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 1b644067e48312b265d132f7d06d53343c4612b879c3a09b638ebd0a98a7c88a
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "103956885"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119293730"
 ---
-# <a name="sb_setminheight-message"></a>SB- \_ setMinHeight-Nachricht
+# <a name="sb_setminheight-message"></a>SB \_ SETMINHEIGHT-Nachricht
 
-Legt die Mindesthöhe für den Zeichnungs Bereich eines Status Fensters fest.
+Legt die Mindesthöhe des Zeichnungsbereichs eines Statusfensters fest.
 
 ## <a name="parameters"></a>Parameter
 
@@ -43,9 +43,9 @@ Mindesthöhe des Fensters in Pixel.
 
 Kein Rückgabewert.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die Mindesthöhe ist die Summe von *wParam* und die doppelte Breite des vertikalen Rahmens des Status Fensters in Pixel. Eine Anwendung muss die [**WM- \_ Größen**](/windows/desktop/winmsg/wm-size) Nachricht an das Statusfenster senden, um das Fenster neu zu zeichnen. Der *wParam* -Parameter und der *LPARAM* -Parameter der **WM- \_ Größen** Nachricht sollten auf 0 (null) festgelegt werden.
+Die Mindesthöhe ist die Summe *von wParam* und die doppelte Breite des vertikalen Rahmens des Statusfensters in Pixel. Eine Anwendung muss die [**WM \_ SIZE-Nachricht**](/windows/desktop/winmsg/wm-size) an das Statusfenster senden, um das Fenster neu zu zeichnet. Die *Parameter wParam* *und lParam* der **WM \_ SIZE-Meldung** sollten auf 0 (null) festgelegt werden.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -53,9 +53,9 @@ Die Mindesthöhe ist die Summe von *wParam* und die doppelte Breite des vertikal
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                        |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/>                                  |
-| Header<br/>                   | <dl> <dt>Kommstrg. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ Vista-Desktop-Apps\]<br/>                                        |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                                  |
+| Header<br/>                   | <dl> <dt>Commctrl.h</dt> </dl> |
 
 
 

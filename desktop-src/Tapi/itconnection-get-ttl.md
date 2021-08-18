@@ -1,21 +1,21 @@
 ---
-description: Die get \_ TTL-Methode ruft den Gültigkeitsbereich (Time to Live, TTL) für Übertragungen für die Adressen ab.
+description: Die \_ Get Ttl-Methode ruft den Gültigkeitsdauerbereich (Time to Live, TTL) für Übertragungen an den Adressen ab.
 ms.assetid: ea3c22d8-476e-4b4b-98c6-f1075e704f3d
-title: 'Itconnection:: get_Ttl-Methode (sdpblb. h)'
+title: ITConnection::get_Ttl-Methode (Sdpblb.h)
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 88f4810eeefc19647e6ed5601b3a6b88870f1e9c
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 0522098f9959f3595d3deae83161fece53ad95353b9e41a60e653980353b22ad
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106366001"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119003378"
 ---
-# <a name="itconnectionget_ttl-method"></a>Itconnection:: get \_ TTL-Methode
+# <a name="itconnectionget_ttl-method"></a>ITConnection::get \_ Ttl-Methode
 
-\[ Rendezvous-Steuerelemente und Schnittstellen für die IP-telefoniekonferenz sind nicht für die Verwendung in Windows Vista, Windows Server 2008 und nachfolgenden Versionen des Betriebssystems verfügbar. Die RTC-Client-API bietet eine ähnliche Funktionalität.\]
+\[Rendezvous-IP-Telefoniekonferenz-Steuerelemente und -Schnittstellen sind nicht für die Verwendung in Windows Vista, Windows Server 2008 und nachfolgenden Versionen des Betriebssystems verfügbar. Die RTC-Client-API bietet ähnliche Funktionen.\]
 
-Die **get \_ TTL** -Methode ruft den Gültigkeitsbereich ( [*Time to Live,*](t-tapgloss.md) TTL) für Übertragungen für die Adressen ab.
+Die **Get \_ Ttl-Methode** ruft den [*Gültigkeitsdauerbereich*](t-tapgloss.md) (Time to Live, TTL) für Übertragungen an den Adressen ab.
 
 ## <a name="syntax"></a>Syntax
 
@@ -32,10 +32,10 @@ HRESULT get_Ttl(
 
 <dl> <dt>
 
-*PTTL* \[ vorgenommen\]
+*pTtl* \[ out\]
 </dt> <dd>
 
-Gültigkeitsbereich.
+TTL-Bereich.
 
 </dd> </dl>
 
@@ -48,10 +48,10 @@ Diese Methode kann einen dieser Werte zurückgeben.
 | Wert                                                                                         | Bedeutung                                                         |
 |-----------------------------------------------------------------------------------------------|-----------------------------------------------------------------|
 | <dl> <dt>**S \_ OK**</dt> </dl>          | Methode war erfolgreich.<br/>                                    |
-| <dl> <dt>**E- \_ Zeiger**</dt> </dl>     | Der *PTTL* -Parameter ist kein gültiger Zeiger.<br/>         |
-| <dl> <dt>**E \_ outo-Memory**</dt> </dl> | Zum Ausführen des Vorgangs ist nicht genügend Arbeitsspeicher vorhanden.<br/> |
-| <dl> <dt>**E \_ fehlschlagen**</dt> </dl>        | Unbekannter Fehler.<br/>                                   |
-| <dl> <dt>**E \_ notimpl**</dt> </dl>     | Diese Methode ist noch nicht implementiert.<br/>                  |
+| <dl> <dt>**E \_ POINTER**</dt> </dl>     | Der *pTtl-Parameter* ist kein gültiger Zeiger.<br/>         |
+| <dl> <dt>**E \_ OUTOFMEMORY**</dt> </dl> | Es ist nicht genügend Arbeitsspeicher zum Ausführen des Vorgangs vorhanden.<br/> |
+| <dl> <dt>**E \_ FAIL**</dt> </dl>        | Unbekannter Fehler.<br/>                                   |
+| <dl> <dt>**E \_ NOTIMPL**</dt> </dl>     | Diese Methode ist noch nicht implementiert.<br/>                  |
 
 
 
@@ -63,18 +63,18 @@ Diese Methode kann einen dieser Werte zurückgeben.
 
 | Anforderung | Wert |
 |-------------------------|---------------------------------------------------------------------------------------|
-| TAPI-Version<br/> | Erfordert TAPI 3,0 oder höher<br/>                                                 |
-| Header<br/>       | <dl> <dt>Sdpblb. h</dt> </dl>   |
-| Bibliothek<br/>      | <dl> <dt>UUID. lib</dt> </dl>   |
+| TAPI-Version<br/> | Erfordert TAPI 3.0 oder höher<br/>                                                 |
+| Header<br/>       | <dl> <dt>Sdpblb.h</dt> </dl>   |
+| Bibliothek<br/>      | <dl> <dt>Uuid.lib</dt> </dl>   |
 | DLL<br/>          | <dl> <dt>Sdpblb.dll</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Itconnection**](itconnection.md)
+[**ITConnection**](itconnection.md)
 </dt> </dl>
 
  

@@ -1,10 +1,10 @@
 ---
-title: associatedname-Attribut
-description: Der associatedname-Attributtyp gibt einen Eintrag in der Organisations-dit an, der einer DNS-Domäne zugeordnet ist.
+title: associatedName-Attribut
+description: Der attributtyp associatedName gibt einen Eintrag in der Organisations-DIT an, der einer DNS-Domäne zugeordnet ist.
 ms.assetid: c9df20d0-8ab4-463c-ac03-93af648bfbb1
 ms.tgt_platform: multiple
 keywords:
-- associatedname-Attribut AD-Schema
+- associatedName-Attribut AD-Schema
 topic_type:
 - apiref
 api_name:
@@ -13,26 +13,26 @@ api_type:
 - Schema
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: a59ea112947f89e928cf118f849ba0ec6f5d8230
-ms.sourcegitcommit: b77ace27b0432e7cd3863191b11926be032fbe2f
+ms.openlocfilehash: 13596e8a8ba36247e44cae423255a6fa36bfa6c81cebbdf07071b45f2016c236
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "104519551"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119443130"
 ---
-# <a name="associatedname-attribute"></a>associatedname-Attribut
+# <a name="associatedname-attribute"></a>associatedName-Attribut
 
-Der associatedname-Attributtyp gibt einen Eintrag in der Organisations-dit an, der einer DNS-Domäne zugeordnet ist.
+Der attributtyp associatedName gibt einen Eintrag in der Organisations-DIT an, der einer DNS-Domäne zugeordnet ist.
 
 
 
 | Eingabe | Wert |
 |-------------------|-----------------------------------------|
-| CN                | associatedname                          |
-| LDAP-Display-Name | associatedname                          |
+| CN                | associatedName                          |
+| Ldap-Anzeigename | associatedName                          |
 | Size              | \-                                      |
-| Berechtigung aktualisieren  | \-                                      |
-| Aktualisierungshäufigkeit  | \-                                      |
+| Aktualisieren von Berechtigungen  | \-                                      |
+| Updatehäufigkeit  | \-                                      |
 | Attribute-Id      | 0.9.2342.19200300.100.1.38              |
 | System-ID-GUID    | f7fbfc45-85ab-42a4-a435-780e62f7858b    |
 | Syntax            | [**Object(DS-DN)**](s-object-ds-dn.md) |
@@ -41,13 +41,13 @@ Der associatedname-Attributtyp gibt einen Eintrag in der Organisations-dit an, d
 
 ## <a name="implementations"></a>Implementierungen
 
--   [**Windows Server 2003**](#windows-server-2003)
+-   [**Windows Server 2003**](#windows-server-2003)
 -   [**Windows Server 2003 R2**](#windows-server-2003-r2)
 -   [**Windows Server 2008**](#windows-server-2008)
 -   [**Windows Server 2008 R2**](#windows-server-2008-r2)
 -   [**Windows Server 2012**](#windows-server-2012)
 
-## <a name="windows-server-2003"></a>Windows Server 2003
+## <a name="windows-server-2003"></a>Windows Server 2003
 
 
 
@@ -55,11 +55,11 @@ Der associatedname-Attributtyp gibt einen Eintrag in der Organisations-dit an, d
 |------------------------|--------------|
 | Link-ID                | \-           |
 | MAPI-Id                | \-           |
-| System-Only            | False        |
-| Ist-einwertig       | False        |
-| Ist indiziert             | False        |
-| Im globalen Katalog      | False        |
-| NT-Security-Descriptor | o:Bag: schlecht: S: |
+| System-Only            | Falsch        |
+| Ist einwertig       | Falsch        |
+| Ist indiziert             | Falsch        |
+| Im globalen Katalog      | Falsch        |
+| NT-Security-Descriptor | O:BAG:BAD:S: |
 | Range-Lower            | \-           |
 | Range-Upper            | \-           |
 | Search-Flags           | 0x00000000   |
@@ -76,11 +76,11 @@ Der associatedname-Attributtyp gibt einen Eintrag in der Organisations-dit an, d
 |------------------------|--------------|
 | Link-ID                | \-           |
 | MAPI-Id                | \-           |
-| System-Only            | False        |
-| Ist-einwertig       | False        |
-| Ist indiziert             | False        |
-| Im globalen Katalog      | False        |
-| NT-Security-Descriptor | o:Bag: schlecht: S: |
+| System-Only            | Falsch        |
+| Ist einwertig       | Falsch        |
+| Ist indiziert             | Falsch        |
+| Im globalen Katalog      | Falsch        |
+| NT-Security-Descriptor | O:BAG:BAD:S: |
 | Range-Lower            | \-           |
 | Range-Upper            | \-           |
 | Search-Flags           | 0x00000000   |
@@ -97,11 +97,11 @@ Der associatedname-Attributtyp gibt einen Eintrag in der Organisations-dit an, d
 |------------------------|--------------|
 | Link-ID                | \-           |
 | MAPI-Id                | \-           |
-| System-Only            | False        |
-| Ist-einwertig       | False        |
-| Ist indiziert             | False        |
-| Im globalen Katalog      | False        |
-| NT-Security-Descriptor | o:Bag: schlecht: S: |
+| System-Only            | Falsch        |
+| Ist einwertig       | Falsch        |
+| Ist indiziert             | Falsch        |
+| Im globalen Katalog      | Falsch        |
+| NT-Security-Descriptor | O:BAG:BAD:S: |
 | Range-Lower            | \-           |
 | Range-Upper            | \-           |
 | Search-Flags           | 0x00000000   |
@@ -118,11 +118,11 @@ Der associatedname-Attributtyp gibt einen Eintrag in der Organisations-dit an, d
 |------------------------|--------------|
 | Link-ID                | \-           |
 | MAPI-Id                | \-           |
-| System-Only            | False        |
-| Ist-einwertig       | False        |
-| Ist indiziert             | False        |
-| Im globalen Katalog      | False        |
-| NT-Security-Descriptor | o:Bag: schlecht: S: |
+| System-Only            | Falsch        |
+| Ist einwertig       | Falsch        |
+| Ist indiziert             | Falsch        |
+| Im globalen Katalog      | Falsch        |
+| NT-Security-Descriptor | O:BAG:BAD:S: |
 | Range-Lower            | \-           |
 | Range-Upper            | \-           |
 | Search-Flags           | 0x00000000   |
@@ -139,11 +139,11 @@ Der associatedname-Attributtyp gibt einen Eintrag in der Organisations-dit an, d
 |------------------------|--------------|
 | Link-ID                | \-           |
 | MAPI-Id                | \-           |
-| System-Only            | False        |
-| Ist-einwertig       | False        |
-| Ist indiziert             | False        |
-| Im globalen Katalog      | False        |
-| NT-Security-Descriptor | o:Bag: schlecht: S: |
+| System-Only            | Falsch        |
+| Is-Single-Valued       | Falsch        |
+| Ist indiziert             | Falsch        |
+| Im globalen Katalog      | Falsch        |
+| NT-Security-Descriptor | O:BAG:BAD:S: |
 | Range-Lower            | \-           |
 | Range-Upper            | \-           |
 | Search-Flags           | 0x00000000   |

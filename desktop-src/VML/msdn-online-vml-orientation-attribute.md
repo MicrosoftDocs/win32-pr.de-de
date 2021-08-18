@@ -1,47 +1,47 @@
 ---
-title: VML-Ausrichtung-Attribut
-description: VML-Ausrichtung-Attribut
+title: VML-Ausrichtungsattribut
+description: VML-Ausrichtungsattribut
 ms.assetid: 62298908-6e88-470d-bca2-0cfc1a38c2eb
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: fa19d8826638ef44ed99f9560e0db5dcb7ae455e
-ms.sourcegitcommit: 592c9bbd22ba69802dc353bcb5eb30699f9e9403
+ms.openlocfilehash: 1fdbe13a21963972b4501ddc8224f23df89c7ccb5e850b8c1e0aa1087cb6c5f1
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "106342156"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118999120"
 ---
-# <a name="vml-orientation-attribute"></a>VML-Ausrichtung-Attribut
+# <a name="vml-orientation-attribute"></a>VML-Ausrichtungsattribut
 
-In diesem Thema wird VML beschrieben, eine Funktion, die ab Windows Internet Explorer 9 veraltet ist. Webseiten und Anwendungen, die auf VML basieren, sollten zu SVG oder anderen allgemein unterstützten Standards migriert werden.
+In diesem Thema wird VML beschrieben, ein Feature, das ab Windows Internet Explorer 9 als veraltet gilt. Webseiten und Anwendungen, die auf VML basieren, sollten zu SVG oder anderen allgemein unterstützten Standards migriert werden.
 
 > [!Note]  
-> Ab Dezember 2011 wurde dieses Thema archiviert. Daher wird er nicht mehr aktiv verwaltet. Weitere Informationen finden Sie unter [archivierte Inhalte](/previous-versions/windows/internet-explorer/ie-developer/). Informationen, Empfehlungen und Anleitungen zur aktuellen Version von Windows Internet Explorer finden Sie im [Internet Explorer Developer Center](https://msdn.microsoft.com/ie/).
+> Seit Dezember 2011 wurde dieses Thema archiviert. Daher wird sie nicht mehr aktiv verwaltet. Weitere Informationen finden Sie unter [Archivierter Inhalt.](/previous-versions/windows/internet-explorer/ie-developer/) Informationen, Empfehlungen und Anleitungen zur aktuellen Version von Windows Internet Explorer finden Sie unter [Internet Explorer Developer Center.](https://msdn.microsoft.com/ie/)
 
- 
+ 
 
 Gibt den Vektor an, um den eine Form gedreht werden kann. Lese-/Schreibzugriff. **VgVector3D**.
 
 **Gilt für**
 
-[Schläuche](msdn-online-vml-extrusion-element.md)
+[Extrusion](msdn-online-vml-extrusion-element.md)
 
 **Tagsyntax**
 
-<o: *Element* Ausrichtung = " *Ausdruck* " >
+<o: *element* orientation=" *ausdruck* ">
 
-**Skript Syntax**
+**Skriptsyntax**
 
-*Element* . Orientation = "*Ausdruck*"
+*element* .orientation="*expression*"
 
-*Ausdruck* = *Element*. Orientation
+*expression* = *.orientation-Element*
 
 **Anmerkungen**
 
-Verwenden Sie das [orientationangle](msdn-online-vml-orientationangle-attribute.md) -Attribut, um die Drehung um diesen Vektor anzugeben. Der Standardwert ist 100, 0, 0.
+Verwenden Sie das [OrientationAngle-Attribut,](msdn-online-vml-orientationangle-attribute.md) um die Menge der Drehung um diesen Vektor anzugeben. Der Standardwert ist 100,0,0.
 
 *Microsoft Office Extensions-Attribut*
 
- 
+ 
 
- 
+ 

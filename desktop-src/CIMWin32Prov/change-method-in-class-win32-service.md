@@ -1,8 +1,8 @@
 ---
-description: Ändert einen Win32- \_ Dienst.
+description: Ändert einen \_ Win32-Dienst.
 ms.assetid: b32753c5-8fcf-44ee-a95f-e4f6076e0f28
 ms.tgt_platform: multiple
-title: Change-Methode der Win32_Service-Klasse (mbnapi. h)
+title: Change-Methode der Win32_Service-Klasse (Mbnapi.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -14,18 +14,18 @@ api_type:
 - COM
 api_location:
 - CIMWin32.dll
-ms.openlocfilehash: 321b27239114fc86861c0360d507db6c8c520a9c
-ms.sourcegitcommit: c7add10d695482e1ceb72d62b8a4ebd84ea050f7
+ms.openlocfilehash: ca513a31eded5202639da13b8e9f2e817c9df336b227ba93d903e44068b98898
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104523923"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119440190"
 ---
-# <a name="change-method-of-the-win32_service-class-mbnapih"></a>Change-Methode der Win32_Service-Klasse (mbnapi. h)
+# <a name="change-method-of-the-win32_service-class-mbnapih"></a>Change-Methode der Win32_Service-Klasse (Mbnapi.h)
 
-Die **Change** [WMI class](/windows/desktop/WmiSdk/retrieving-a-class) -Methode ändert einen [**Win32- \_ Dienst**](win32-service.md).
+Die **Change** [WMI-Klassenmethode](/windows/desktop/WmiSdk/retrieving-a-class) ändert einen [**Win32-Dienst. \_**](win32-service.md)
 
-In diesem Thema wird die MOF-Syntax (Managed Object Format) verwendet. Weitere Informationen zum Verwenden dieser Methode finden Sie unter [Aufrufen einer Methode](/windows/desktop/WmiSdk/calling-a-method).
+In diesem Thema wird die MOF-Syntax (Managed Object Format) verwendet. Weitere Informationen zur Verwendung dieser Methode finden Sie unter [Aufrufen einer Methode.](/windows/desktop/WmiSdk/calling-a-method)
 
 ## <a name="syntax"></a>Syntax
 
@@ -52,42 +52,42 @@ uint32 Change(
 
 <dl> <dt>
 
-*Display Name* \[ in\]
+*DisplayName* \[ In\]
 </dt> <dd>
 
-Der Anzeigename des Diensts Die maximale Länge der Zeichenfolge beträgt 256 Zeichen. Der Name wird im Dienststeuerungs-Manager nach Groß-/Kleinschreibung beibehalten. Bei *Display Name* -vergleichen wird immer die Groß-/Kleinschreibung beachtet.
+Der Anzeigename des Diensts Die maximale Länge der Zeichenfolge beträgt 256 Zeichen. Der Name wird im Dienststeuerungs-Manager beibehalten. *Bei DisplayName-Vergleichen* wird die Groß-/Kleinschreibung immer nicht beachtet.
 
-Einschränkungen: akzeptiert denselben Wert wie die **Name** -Eigenschaft.
+Einschränkungen: Akzeptiert den gleichen Wert wie die **Name-Eigenschaft.**
 
-Beispiel: "ATDISK".
+Beispiel: "Atdisk".
 
 </dd> <dt>
 
-*Pfadname* \[ in\]
+*PathName* \[ In\]
 </dt> <dd>
 
-Der voll qualifizierte Pfad zur ausführbaren Datei, die den Dienst implementiert, z. b \\ . "SystemRoot \\ system32 \\ Drivers \\afd.sys".
+Der vollqualifizierte Pfad zur ausführbaren Datei, die den Dienst implementiert, z. B. \\ "SystemRoot \\ System32-Treiber \\ \\afd.sys".
 
 </dd> <dt>
 
-*ServiceType* \[ in\]
+*ServiceType* \[ In\]
 </dt> <dd>
 
-Der Typ der Dienste, die für Prozesse bereitgestellt werden, die Sie anrufen.
+Der Typ der Dienste, die für Prozesse bereitgestellt werden, die sie aufrufen.
 
 <dt>
 
 1 (0x1)
 </dt> <dd>
 
-Kernel Treiber
+Kerneltreiber
 
 </dd> <dt>
 
 2 (0x2)
 </dt> <dd>
 
-Datei System Treiber
+Dateisystemtreiber
 
 </dd> <dt>
 
@@ -101,7 +101,7 @@ Adapter
 8 (0x8)
 </dt> <dd>
 
-Erkennungs Treiber
+Erkennungstreiber
 
 </dd> <dt>
 
@@ -126,10 +126,10 @@ Interaktiver Prozess
 
 </dd> </dl> </dd> <dt>
 
-*ErrorControl* \[ in\]
+*ErrorControl* \[ In\]
 </dt> <dd>
 
-Der Schweregrad des Fehlers, wenn dieser Dienst während des Starts nicht gestartet werden kann. Der Wert gibt die vom Start Programm ausgeführte Aktion an, wenn ein Fehler auftritt. Alle Fehler werden vom System protokolliert.
+Schweregrad des Fehlers, wenn dieser Dienst während des Starts nicht gestartet werden kann. Der Wert gibt die Aktion an, die vom Startprogramm ausgeführt wird, wenn ein Fehler auftritt. Alle Fehler werden vom System protokolliert.
 
 <dt>
 
@@ -177,38 +177,38 @@ Das System versucht, mit einer fehlerfreien Konfiguration zu neu starten.
 
 </dd> </dl> </dd> <dt>
 
-*StartMode* \[ in\]
+*StartMode* \[ In\]
 </dt> <dd>
 
-Der Start Modus des Windows-Basis Dienstanbieter. Weitere Informationen finden Sie im Abschnitt "Hinweise".
+Startmodus des Windows Basisdiensts. Weitere Informationen finden Sie im Abschnitt "Hinweise".
 
 <dt>
 
 Start
 </dt> <dd>
 
-Der Gerätetreiber wurde vom Betriebssystem Lader gestartet. Dieses Wert ist nur für Treiberdienste gültig.
+Vom Betriebssystemladeprogramm gestarteter Gerätetreiber. Dieses Wert ist nur für Treiberdienste gültig.
 
 </dd> <dt>
 
 System
 </dt> <dd>
 
-Der Gerätetreiber wurde durch den Initialisierungs Prozess des Betriebssystems gestartet. Dieses Wert ist nur für Treiberdienste gültig.
+Der Vom Initialisierungsprozess des Betriebssystems gestartete Gerätetreiber. Dieses Wert ist nur für Treiberdienste gültig.
 
 </dd> <dt>
 
 Automatisch
 </dt> <dd>
 
-Der Dienst, der vom Dienststeuerungs-Manager beim Systemstart automatisch gestartet wird.
+Der Dienst wird während des Systemstarts automatisch vom Dienststeuerungs-Manager gestartet.
 
 </dd> <dt>
 
 Manuell
 </dt> <dd>
 
-Der Dienst, der vom Dienststeuerungs-Manager gestartet werden soll, wenn ein Prozess die [**StartService**](startservice-method-in-class-win32-service.md) -Methode aufruft.
+Dienst, der vom Dienststeuerungs-Manager gestartet werden soll, wenn ein Prozess die [**StartService-Methode**](startservice-method-in-class-win32-service.md) aufruft.
 
 </dd> <dt>
 
@@ -219,62 +219,62 @@ Dienst, der nicht mehr gestartet werden kann.
 
 </dd> </dl> </dd> <dt>
 
-*DesktopInteract* \[ in\]
+*DesktopInteract* \[ In\]
 </dt> <dd>
 
 **True** gibt an, dass der Dienst ein Fenster auf dem Desktop erstellen oder mit diesem kommunizieren kann.
 
 </dd> <dt>
 
-*StartName* \[ in\]
+*StartName* \[ In\]
 </dt> <dd>
 
-Der Kontoname, unter dem der Dienst ausgeführt wird. Abhängig vom Diensttyp kann der Kontoname die Form "Domänen Name Benutzername" oder "" aufweisen \\ . \\ User. Der Dienst Prozess wird bei der Ausführung mithilfe einer dieser beiden Formulare protokolliert. , Wenn das Konto zur integrierten Domäne gehört. \\ Der Benutzername kann angegeben werden. Wenn **null** angegeben wird, wird der Dienst als LocalSystem-Konto angemeldet. Bei Kernel-oder System Treibern enthält *StartName* den Treiber Objektnamen ( \\ Dateisystem- \\ rdr oder \\ Treiber- \\ XNS), die vom Eingabe-und Ausgabesystem zum Laden des Gerätetreibers verwendet werden. Wenn **null** angegeben wird, wird der Treiber mit einem Standard Objektnamen ausgeführt, der vom e/a-System auf Basis des Dienst namens erstellt wird, z. b. "dwdom \\ Admin".
+Kontoname, unter dem der Dienst ausgeführt wird. Je nach Diensttyp kann der Kontoname in form von DomainName \\ Username oder lauten. \\ Nutzername. Der Dienstprozess wird in einer dieser beiden Formen protokolliert, wenn er ausgeführt wird. Wenn das Konto zur integrierten Domäne gehört, . \\ Der Benutzername kann angegeben werden. Wenn **NULL** angegeben wird, wird der Dienst als LocalSystem-Konto angemeldet. Für Kernel- oder Treiber auf Systemebene enthält *StartName* den Namen des Treiberobjekts (d. \\ h. FileSystem \\ Rdr oder \\ Driver \\ Xns), den das E/A-System zum Laden des Gerätetreibers verwendet. Wenn **NULL** angegeben wird, wird der Treiber mit einem Standardobjektnamen ausgeführt, der vom E/A-System basierend auf dem Dienstnamen erstellt wird, z. B. "DWDOM \\ Admin".
 
-Sie können auch das UPN-Format (User Principal Name, Benutzer Prinzipal Name) verwenden, um den **StartName** anzugeben, z *Username@DomainName* . b..
+Sie können auch das UPN-Format (User Principal Name) verwenden, um den **StartName** anzugeben, z. *Username@DomainName* B. .
 
 </dd> <dt>
 
-*Startpassword* \[ in\]
+*StartPassword* \[ In\]
 </dt> <dd>
 
-Das Kennwort für den Kontonamen, der durch den *StartName* -Parameter angegeben wird. Geben Sie **null** an, wenn Sie das Kennwort nicht ändern. Geben Sie eine leere Zeichenfolge an, wenn der Dienst kein Kennwort besitzt.
+Kennwort für den vom *StartName-Parameter* angegebenen Kontonamen. Geben Sie **NULL** an, wenn Sie das Kennwort nicht ändern. Geben Sie eine leere Zeichenfolge an, wenn der Dienst kein Kennwort besitzt.
 
 > [!Note]  
-> Wenn ein Dienst von einem lokalen System in ein Netzwerk oder von einem Netzwerk auf ein lokales System geändert wird, muss *startpassword* eine leere Zeichenfolge ("") und nicht **null** sein.
+> Beim Ändern eines Diensts von einem lokalen System in ein Netzwerk oder von einem Netzwerk in ein lokales System muss *StartPassword* eine leere Zeichenfolge ("") und nicht **NULL** sein.
 
  
 
 </dd> <dt>
 
-*LoadOrderGroup* \[ in\]
+*LoadOrderGroup* \[ In\]
 </dt> <dd>
 
-Der Gruppenname, dem er zugeordnet ist. Lade Auftrags Gruppen sind in der Systemregistrierung enthalten und bestimmen die Reihenfolge, in der Dienste in das Betriebssystem geladen werden. Wenn der Zeiger **null** ist oder auf eine leere Zeichenfolge zeigt, gehört der Dienst nicht zu einer Gruppe. Weitere Informationen finden Sie im Abschnitt "Hinweise".
+Gruppenname, dem er zugeordnet ist. Ladereihenfolgengruppen sind in der Systemregistrierung enthalten und bestimmen die Reihenfolge, in der Dienste in das Betriebssystem geladen werden. Wenn der Zeiger **NULL** ist oder auf eine leere Zeichenfolge zeigt, gehört der Dienst nicht zu einer Gruppe. Weitere Informationen finden Sie im Abschnitt "Hinweise".
 
-Abhängigkeiten zwischen Gruppen sollten im *loadordergroupdependen-* Parameter aufgeführt werden. Dienste in der Liste der Auslastungs Reihen folgen Gruppen werden zuerst gestartet, gefolgt von Diensten in Gruppen, die sich nicht in der Liste der Auslastungs Reihen folgen Gruppen befinden, gefolgt von Diensten, die nicht zu einer Gruppe gehören. Die Systemregistrierung enthält eine Liste der Lade Auftrags Gruppen unter:
+Abhängigkeiten zwischen Gruppen sollten im *LoadOrderGroupDependencies-Parameter* aufgeführt werden. Dienste in der Liste der Ladereihenfolgegruppen werden zuerst gestartet, gefolgt von Diensten in Gruppen, die nicht in der Liste der Lastenreihenfolgegruppen enthalten sind, gefolgt von Diensten, die keiner Gruppe angehören. Die Systemregistrierung verfügt über eine Liste der Lastreihenfolgegruppen unter:
 
-**HKEY \_ Lokales \_ Computer** \\ **System** \\ **CurrentControlSet** \\ **Control** \\ **servicegrouporder**
+**HKEY \_ LOCAL \_ MACHINE** \\ **System** \\ **CurrentControlSet** \\ **Control** \\ **ServiceGroupOrder**
 
 </dd> <dt>
 
-*Loadordergroupabhängigkeiten* \[ in\]
+*LoadOrderGroupDependencies* \[ In\]
 </dt> <dd>
 
-Liste der Lade Gruppen, die vor dem Start dieses Dienstanbieter gestartet werden müssen. Das Array ist doppelt **null**-terminiert. Wenn der Zeiger **null** ist, oder wenn er auf eine leere Zeichenfolge zeigt, hat der Dienst keine Abhängigkeiten. Gruppennamen müssen dem **SC- \_ Gruppen \_ Bezeichner** (definiert in der Datei "winsvc. h") vorangestellt werden, damit Sie von Dienstnamen unterschieden werden, weil Dienste und Dienstgruppen denselben Namespace verwenden. Die Abhängigkeit von einer Gruppe bedeutet, dass dieser Dienst ausgeführt werden kann, wenn mindestens ein Mitglied der Gruppe ausgeführt wird, nachdem versucht wurde, alle Mitglieder der Gruppe zu starten.
+Liste der Lastreihenfolgegruppen, die gestartet werden müssen, bevor dieser Dienst gestartet wird. Das Array ist doppelt **NULL**-terminiert. Wenn der Zeiger **NULL** ist oder auf eine leere Zeichenfolge zeigt, weist der Dienst keine Abhängigkeiten auf. Gruppennamen muss das **Zeichen SC GROUP \_ \_ IDENTIFIER** (definiert in der Datei Winsvc.h) vorangestellt sein, um sie von Dienstnamen zu unterscheiden, da Dienste und Dienstgruppen denselben Namespace verwenden. Abhängigkeit von einer Gruppe bedeutet, dass dieser Dienst ausgeführt werden kann, wenn mindestens ein Mitglied der Gruppe ausgeführt wird, nachdem versucht wurde, alle Mitglieder der Gruppe zu starten.
 
 </dd> <dt>
 
-*Service Abhängigkeiten* \[ in\]
+*ServiceDependencies* \[ In\]
 </dt> <dd>
 
-Liste mit den Namen der Dienste, die vor dem Start dieses Diensts gestartet werden müssen. Das Array ist doppelt **null**-terminiert. Wenn der Zeiger **null** ist, oder wenn er auf eine leere Zeichenfolge zeigt, hat der Dienst keine Abhängigkeiten. Die Abhängigkeit von einem Dienst gibt an, dass dieser Dienst nur ausgeführt werden kann, wenn der Dienst, von dem er abhängt, ausgeführt wird.
+Liste, die die Namen der Dienste enthält, die gestartet werden müssen, bevor dieser Dienst gestartet wird. Das Array ist doppelt **NULL**-terminiert. Wenn der Zeiger **NULL** ist oder auf eine leere Zeichenfolge zeigt, weist der Dienst keine Abhängigkeiten auf. Die Abhängigkeit von einem Dienst gibt an, dass dieser Dienst nur ausgeführt werden kann, wenn der Dienst, von dem er abhängt, ausgeführt wird.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt einen der in der folgenden Liste aufgeführten Werte oder einen anderen Wert zurück, um einen Fehler anzugeben. Weitere Fehlercodes finden Sie unter [**WMI-Fehler Konstanten**](/windows/desktop/WmiSdk/wmi-error-constants) oder [**WbemErrorEnum**](/windows/desktop/api/wbemdisp/ne-wbemdisp-wbemerrorenum). Allgemeine **HRESULT** -Werte finden Sie unter [System Fehler Codes](/windows/desktop/Debug/system-error-codes).
+Gibt einen der in der folgenden Liste aufgeführten Werte oder einen anderen Wert zurück, um einen Fehler anzugeben. Weitere Fehlercodes finden Sie unter [**WMI-Fehlerkonstanten**](/windows/desktop/WmiSdk/wmi-error-constants) oder [**WbemErrorEnum**](/windows/desktop/api/wbemdisp/ne-wbemdisp-wbemerrorenum). Allgemeine **HRESULT-Werte** finden Sie unter [Systemfehlercodes](/windows/desktop/Debug/system-error-codes).
 
 <dl> <dt>
 
@@ -301,11 +301,11 @@ Die Anforderung wird nicht unterstützt.
 
 2
 
-Der Benutzer verfügte nicht über die erforderlichen Zugriffsrechte.
+Der Benutzer hatte nicht den erforderlichen Zugriff.
 
 </dd> <dt>
 
-**Abhängige Dienste werden ausgeführt**
+**Abhängige Dienste, die ausgeführt werden**
 </dt> <dd>
 
 3
@@ -314,7 +314,7 @@ Der Dienst kann nicht beendet werden, da andere ausgeführte Dienste davon abhä
 
 </dd> <dt>
 
-**Ungültige Dienst Kontrolle.**
+**Ungültige Dienststeuerung**
 </dt> <dd>
 
 4
@@ -323,12 +323,12 @@ Der angeforderte Steuerungscode ist nicht gültig, oder es ist für den Dienst n
 
 </dd> <dt>
 
-**Der Dienst kann keine Steuerung akzeptieren.**
+**Der Dienst kann die Steuerung nicht akzeptieren**
 </dt> <dd>
 
 5
 
-Der angeforderte Steuerungs Code kann nicht an den Dienst gesendet werden, weil der Status des Diensts ([**Win32- \_ baseservice**](win32-baseservice.md).**State** -Eigenschaft) ist gleich 0, 1 oder 2.
+Der angeforderte Steuerungscode kann nicht an den Dienst gesendet werden, da der Zustand des Diensts ([**Win32 \_ BaseService ) ist.**](win32-baseservice.md)**State-Eigenschaft)** ist gleich 0, 1 oder 2.
 
 </dd> <dt>
 
@@ -341,7 +341,7 @@ Der Dienst wurde nicht gestartet.
 
 </dd> <dt>
 
-**Service Request-Timeout**
+**Timeout für Dienstanforderungen**
 </dt> <dd>
 
 7
@@ -350,12 +350,12 @@ Der Dienst hat auf die Startanforderung nicht rechtzeitig reagiert.
 
 </dd> <dt>
 
-**Unbekannter Fehler.**
+**Unbekannter Fehler**
 </dt> <dd>
 
 8
 
-Unbekannter Fehler beim Starten des Dienstanbieter.
+Unbekannter Fehler beim Starten des Diensts.
 
 </dd> <dt>
 
@@ -364,11 +364,11 @@ Unbekannter Fehler beim Starten des Dienstanbieter.
 
 9
 
-Der Verzeichnispfad zur ausführbaren Dienst Datei wurde nicht gefunden.
+Der Verzeichnispfad zur ausführbaren Dienstdatei wurde nicht gefunden.
 
 </dd> <dt>
 
-**Dienst wird bereits ausgeführt.**
+**Dienst wird bereits ausgeführt**
 </dt> <dd>
 
 10
@@ -377,7 +377,7 @@ Der Dienst wird schon ausgeführt.
 
 </dd> <dt>
 
-**Dienst Datenbank gesperrt**
+**Dienstdatenbank gesperrt**
 </dt> <dd>
 
 11
@@ -386,16 +386,16 @@ Die Datenbank zum Hinzufügen eines neuen Diensts ist gesperrt.
 
 </dd> <dt>
 
-**Dienst Abhängigkeit gelöscht**
+**Dienstabhängigkeit gelöscht**
 </dt> <dd>
 
 12
 
-Eine Abhängigkeit, von der dieser Dienst abhängt, wurde aus dem System entfernt.
+Eine Abhängigkeit, von der dieser Dienst abhängig ist, wurde aus dem System entfernt.
 
 </dd> <dt>
 
-**Dienst Abhängigkeitsfehler**
+**Dienstabhängigkeitsfehler**
 </dt> <dd>
 
 13
@@ -413,7 +413,7 @@ Der Dienst wurde vom System deaktiviert.
 
 </dd> <dt>
 
-**Fehler bei der Dienst Anmeldung**
+**Dienstanmeldung fehlgeschlagen**
 </dt> <dd>
 
 15
@@ -422,7 +422,7 @@ Der Dienst hat nicht die richtige Authentifizierung, um im System ausgeführt zu
 
 </dd> <dt>
 
-**Der Dienst wurde zum Löschen markiert.**
+**Dienst zum Löschen markiert**
 </dt> <dd>
 
 16
@@ -431,21 +431,21 @@ Dieser Dienst wird aus dem System entfernt.
 
 </dd> <dt>
 
-**Dienst ohne Thread**
+**Dienst kein Thread**
 </dt> <dd>
 
 17
 
-Der Dienst hat keinen Ausführungs Thread.
+Der Dienst verfügt über keinen Ausführungsthread.
 
 </dd> <dt>
 
-**Status zirkuläre Abhängigkeit**
+**Statuskreisabhängigkeit**
 </dt> <dd>
 
 18
 
-Der Dienst weist zirkuläre Abhängigkeiten auf, wenn er gestartet wird.
+Der Dienst verfügt beim Starten über zirkuläre Abhängigkeiten.
 
 </dd> <dt>
 
@@ -454,38 +454,38 @@ Der Dienst weist zirkuläre Abhängigkeiten auf, wenn er gestartet wird.
 
 19
 
-Ein Dienst wird unter dem gleichen Namen ausgeführt.
+Ein Dienst wird unter demselben Namen ausgeführt.
 
 </dd> <dt>
 
-**Ungültiger Name**
+**Status Ungültiger Name**
 </dt> <dd>
 
 20
 
-Der Dienst Name enthält ungültige Zeichen.
+Der Dienstname enthält ungültige Zeichen.
 
 </dd> <dt>
 
-**Ungültiger Parameter.**
+**Status Ungültiger Parameter**
 </dt> <dd>
 
 21
 
-An den Dienst wurden ungültige Parameter übermittelt.
+Ungültige Parameter wurden an den Dienst übergeben.
 
 </dd> <dt>
 
-**Ungültiges Dienst Konto.**
+**Status Ungültiges Dienstkonto**
 </dt> <dd>
 
 22
 
-Das Konto, unter dem dieser Dienst ausgeführt wird, ist entweder ungültig oder verfügt nicht über die Berechtigungen zum Ausführen des Dienstanbieter.
+Das Konto, unter dem dieser Dienst ausgeführt wird, ist entweder ungültig oder verfügt nicht über die Berechtigungen zum Ausführen des Diensts.
 
 </dd> <dt>
 
-**Status Dienst vorhanden**
+**Statusdienst vorhanden**
 </dt> <dd>
 
 23
@@ -494,7 +494,7 @@ Der Dienst ist in der Datenbank der im System verfügbaren Dienste vorhanden.
 
 </dd> <dt>
 
-**Der Dienst wurde bereits angehalten.**
+**Dienst wurde bereits angehalten**
 </dt> <dd>
 
 24
@@ -510,42 +510,42 @@ Der Dienst ist im System derzeitig angehalten.
 
 </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Wenn ein Computer gestartet wird, werden alle Autostart-Dienste ebenfalls gestartet. Gelegentlich kann es vorkommen, dass einer dieser Dienste nicht zusammen mit dem Computer gestartet wird. Wenn ein Dienst beim Systemstart fehlschlägt, führt der Computer auf der Grundlage des Werts des Dienst Fehler-Steuerungs Codes Aktionen aus.
+Wenn ein Computer gestartet wird, werden auch alle Autostartdienste gestartet. Gelegentlich kann einer dieser Dienste nicht zusammen mit dem Computer gestartet werden. Wenn ein Dienst während des Systemstarts ausfällt, führt der Computer aktionen basierend auf dem Wert des Dienstfehlersteuerungscodes aus.
 
-die meisten Dienste werden mithilfe des normalen fehlersteuerungs Codes installiert. Einige Ausnahmen, die mit dem Fehlercode ignorieren installiert werden, umfassen Folgendes:
+Die meisten Dienste werden mit dem Code für die normale Fehlersteuerung installiert. Zu den Ausnahmen, die mit dem Fehlercode Ignorieren installiert werden, gehören:
 
 -   Dateireplikationsdienst
 -   Smartcard
 -   Sekundäre Anmeldung
 -   WMI
 
-Für die Dienste, die mit dem Fehlercode ignorieren installiert werden, erhält der Benutzer keine Benachrichtigung, dass der Dienst fehlgeschlagen ist. Wenn Sie die Benachrichtigung auf dem Bildschirm bevorzugen, dass ein Dienst nicht gestartet werden konnte, können Sie den Fehlercode mithilfe von WMI ändern. Fehler Steuerungs Codes gelten nur für den Computer Start. Es werden keine Fehlercodes verwendet, wenn Sie einen Dienst nach dem Ausführen des Computers abbrechen und neu starten.
+Für die Dienste, die mit dem Fehlercode Ignorieren installiert wurden, wird dem Benutzer keine Benachrichtigung angezeigt, dass der Dienst fehlgeschlagen ist. Wenn Sie die Benachrichtigung auf dem Bildschirm bevorzugen, dass ein Dienst nicht gestartet werden konnte, können Sie den Fehlersteuerungscode mithilfe von WMI ändern. Fehlersteuerungscodes gelten nur für den Computerstart. Fehlersteuerungscodes werden nicht verwendet, wenn Sie einen Dienst beenden und dann versuchen, einen Dienst neu zu starten, nachdem der Computer ausgeführt wird.
 
-Gelegentlich müssen Sie möglicherweise das Konto ändern, unter dem ein bestimmter Dienst ausgeführt wird. Beispielsweise können Sie einen Dienst unter einem Administrator Konto ausführen. Da dadurch ein Sicherheitsrisiko entstehen kann, können Sie den Dienst zu einem Konto mit weniger Berechtigungen wechseln. Möglicherweise verfügen Sie auch über Dienste, die unter einem Konto ausgeführt werden, das gelöscht werden soll, oder Sie möchten sicherstellen, dass bestimmte Dienste auf allen Servern unter bestimmten Konten ausgeführt werden. Sie können die **Änderungs** Methode der Win32- [**\_ Dienst**](win32-service.md) Klasse verwenden, um Dienste so zu konfigurieren, dass Sie unter einem angegebenen Benutzerkonto ausgeführt werden. Wenn Sie ein Konto auswählen, beachten Sie Folgendes:
+Gelegentlich müssen Sie möglicherweise das Konto ändern, unter dem ein angegebener Dienst ausgeführt wird. Beispielsweise können Sie einen Dienst unter einem Administratorkonto ausführen. Da dies zu einem Sicherheitsrisiko führen kann, können Sie den Dienst auf ein Konto mit weniger Berechtigungen umschalten. Alternativ können Dienste unter einem Konto ausgeführt werden, das gelöscht werden soll, oder Sie möchten sicherstellen, dass bestimmte Dienste auf allen Servern unter bestimmten Konten ausgeführt werden. Sie können die **Change-Methode** der [**Win32-Dienstklasse \_**](win32-service.md) verwenden, um Dienste so zu konfigurieren, dass sie unter einem angegebenen Benutzerkonto ausgeführt werden. Beachten Sie bei der Auswahl eines Kontos Folgendes:
 
--   Das Konto, das als Dienst Konto verwendet wird, muss über die Berechtigung verfügen, sich als Dienst anzumelden. Dieses Recht kann mithilfe von Gruppenrichtlinie erteilt werden.
--   Das Konto, das als Dienst Konto verwendet wird, sollte nicht Mitglied einer lokalen Gruppe, einer Domäne oder einer Organisations Administratoren Gruppe sein.
--   Jede Instanz eines Dienstanbieter sollte unter einem eindeutigen Benutzerkonto ausgeführt werden. Dies bietet zusätzliche Sicherheit und ermöglicht die Überwachung einzelner Dienst Instanzen.
--   Wenn der Dienst interaktiv ist, muss der Dienst unter dem Konto "LocalSystem" ausgeführt werden.
+-   Das als Dienstkonto verwendete Konto muss über das Recht verfügen, sich als Dienst anmelden zu können. Dieses Recht kann mithilfe von Gruppenrichtlinie.
+-   Das konto, das als Dienstkonto verwendet wird, darf kein Mitglied einer lokalen, Domänen- oder Unternehmensadministratorgruppe sein.
+-   Jede Instanz eines Diensts sollte unter einem eindeutigen Benutzerkonto ausgeführt werden. Dies bietet zusätzliche Sicherheit und ermöglicht die Überwachung einzelner Dienstinstanzen.
+-   Wenn der Dienst interaktiv ist, muss der Dienst unter dem LocalSystem-Konto ausgeführt werden.
 
-    "LocalSystem" ist erforderlich, da jeweils nur eine Fenster Station (WinSta0) sichtbar und interaktiv sein kann. Wenn ein Dienst unter einem anderen Konto als "LocalSystem" ausgeführt wird, wird er auf der Standard Station des Dienst-0x03e7 $-Fensters ausgeführt, bei dem es sich \\ um ein unsichtbares Fenster handelt. Dienste, die in dieser Fenster Station ausgeführt werden, können keine Eingabe-oder Anzeige Ausgabe empfangen.
+    LocalSystem ist erforderlich, da jeweils nur eine Fensterstation (WinSta0) sichtbar und interaktiv sein kann. Wenn ein Dienst unter einem anderen Konto als LocalSystem ausgeführt wird, wird er in der Standardfensterstation Service-0x03e7$ ausgeführt. Dies \\ ist ein unsichtbares Fenster. Dienste, die in dieser Fensterstation ausgeführt werden, können keine Eingabe- oder Anzeigeausgabe empfangen.
 
-Wenn Sie ein Konto einem Dienst zuweisen, benötigt der SCM das richtige Kennwort für dieses Konto, bevor die Zuweisung erfolgt. Wenn Sie ein falsches Kennwort angeben, lehnt der SCM das Konto ab. Wenn Sie ein Dienst Konto mit dem Konto "LocalSystem", "LocalService" oder "Network Service" konfigurieren, müssen Sie kein Konto Kennwort angeben, da diese Konten keine Kenn Wörter aufweisen.
+Wenn Sie einem Dienst ein Konto zuweisen, benötigt der SCM das richtige Kennwort für dieses Konto, bevor er die Zuweisung vornimmt. Wenn Sie ein falsches Kennwort eingeben, lehnt der SCM das Konto ab. Wenn Sie ein Dienstkonto mit dem Konto LocalSystem, LocalService oder NetworkService konfigurieren, müssen Sie kein Kontokennwort angeben, da diese Konten keine Kennwörter besitzen.
 
-Der SCM speichert das Konto Kennwort in der Dienst Datenbank. Nachdem das Kennwort zugewiesen wurde, stellt der SCM jedoch nicht sicher, dass das Kennwort, das in der Dienst Datenbank gespeichert ist, und das Kennwort, das dem Benutzerkonto in zugewiesen ist, weiterhin mit der Active Directory. Folglich könnte eine ähnliche Situation wie die folgende auftreten:
+Der SCM speichert das Kontokennwort in der Dienstdatenbank. Nachdem das Kennwort zugewiesen wurde, stellt der SCM jedoch nicht sicher, dass das in der Dienstdatenbank gespeicherte Kennwort und das dem Benutzerkonto in Active Directory zugewiesene Kennwort weiterhin übereinstimmen. Folglich kann eine Situation ähnlich der folgenden auftreten:
 
--   Sie konfigurieren einen Dienst, der unter einem bestimmten Benutzerkonto ausgeführt werden soll.
--   Der Dienst wird mit dem aktuellen Konto Kennwort unter diesem Konto gestartet.
+-   Sie konfigurieren einen Dienst für die Ausführung unter einem bestimmten Benutzerkonto.
+-   Der Dienst wird unter diesem Konto mithilfe des aktuellen Kontokennworts gestartet.
 -   Sie ändern das Kennwort für das Benutzerkonto.
--   Der Dienst wird weiterhin ausgeführt. Wenn der Dienst jedoch beendet wird, können Sie ihn nicht neu starten, da der SCM weiterhin das alte, ungültige Kennwort verwendet. Wenn Sie das Kennwort in Active Directory ändern, wird das in der Dienst Datenbank gespeicherte Kennwort nicht geändert.
+-   Der Dienst wird weiterhin ausgeführt. Wenn der Dienst jedoch beendet wird, können Sie ihn nicht neu starten, da der SCM weiterhin das alte, ungültige Kennwort verwendet. Durch das Ändern des Kennworts in Active Directory wird das in der Dienstdatenbank gespeicherte Kennwort nicht geändert.
 
-Wenn Sie Dienste unter regulären Benutzerkonten ausführen, müssen Sie diese Dienst Kennwörter jedes Mal aktualisieren, wenn das Kennwort des Benutzerkontos geändert wird. Dies kann besonders zeitaufwändig sein, wenn Sie nicht sicher sind, welche Dienste unter diesem Konto ausgeführt werden oder welche Computer über Dienste verfügen, die unter diesem Konto ausgeführt werden. Glücklicherweise können Sie WMI verwenden, um die Dienst Konten auf allen Computern zu überprüfen und ggf. das Kennwort des Dienst Kontos zu ändern.
+Wenn Sie Dienste unter regulären Benutzerkonten ausführen, müssen Sie diese Dienstkennwörter bei jeder Änderung des Benutzerkontokennworts aktualisieren. Dies kann besonders zeitaufwändig sein, wenn Sie nicht sicher sind, welche Dienste unter diesem Konto ausgeführt werden oder auf welchen Computern Dienste unter diesem Konto ausgeführt werden. Glücklicherweise können Sie WMI verwenden, um die Dienstkonten auf allen Ihren Computern zu überprüfen und ggf. das Kennwort für das Dienstkonto zu ändern.
 
-Der [**Win32 \_ LoadOrderGroup**](win32-loadordergroup.md) -Parameter stellt eine Gruppe von System Diensten dar, die Ausführungs Abhängigkeiten definieren. Die Dienste müssen in der von der Gruppe "Lade Reihenfolge" angegebenen Reihenfolge initiiert werden, da die Dienste voneinander abhängig sind. Diese abhängigen Dienste erfordern, dass die Vorgänger Dienste ordnungsgemäß funktionieren.
+Der [**Win32 \_ LoadOrderGroup-Parameter**](win32-loadordergroup.md) stellt eine Gruppe von Systemdiensten dar, die Ausführungsabhängigkeiten definieren. Die Dienste müssen in der von der Load Order Group angegebenen Reihenfolge initiiert werden, da die Dienste voneinander abhängig sind. Diese abhängigen Dienste erfordern, dass die Vorgängerdienste vorhanden sind, damit sie ordnungsgemäß funktionieren.
 
-Um einen Dienst von einem Netzwerkdienst in ein lokales System zu ändern, müssen die Parameter " *StartName* " und " *startpassword* " die folgenden Werte aufweisen:
+Um einen Dienst von einem Netzwerkdienst in ein lokales System zu ändern, sollten die Parameter *StartName* und *StartPassword* die folgenden Werte aufweisen:
 
 
 ```C++
@@ -555,7 +555,7 @@ StartPassword = "" // - empty string, not NULL
 
 
 
-Um einen Dienst von einem lokalen Systemdienst in ein Netzwerk zu ändern, müssen die Parameter " *StartName* " und " *startpassword* " die folgenden Werte aufweisen:
+Um einen Dienst von einem lokalen Systemdienst in ein Netzwerk zu ändern, müssen die Parameter *StartName* und *StartPassword* die folgenden Werte aufweisen:
 
 
 ```C++
@@ -567,7 +567,7 @@ StartPassword = "" // - empty string, not NULL
 
 ## <a name="examples"></a>Beispiele
 
-Das folgende VBScript ändert das Dienst Konto für Dienste von der Ausführung unter einem angegebenen Benutzerkonto in "LocalSystem".
+Mit dem folgenden VBScript-Code wird das Dienstkonto für Dienste von unter einem angegebenen Benutzerkonto in LocalSystem geändert.
 
 
 ```VB
@@ -581,7 +581,7 @@ Next
 
 
 
-Das folgende VBScript ändert das Dienst Konto Kennwort für alle Skripts, die unter "nettsvc" ausgeführt werden
+Der folgende VBScript-Code ändert das Dienstkontokennwort für alle Skripts, die unter Netsvc ausgeführt werden.
 
 
 ```VB
@@ -603,24 +603,24 @@ Next
 |-------------------------------------|-----------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows Vista<br/>                                                                |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2008<br/>                                                          |
-| Namespace<br/>                | Root \\ CIMV2<br/>                                                                  |
-| Header<br/>                   | <dl> <dt>Mbnapi. h</dt> </dl>     |
-| MOF<br/>                      | <dl> <dt>Cimwin32. MOF</dt> </dl> |
+| Namespace<br/>                | \\Stamm-CIMV2<br/>                                                                  |
+| Header<br/>                   | <dl> <dt>Mbnapi.h</dt> </dl>     |
+| MOF<br/>                      | <dl> <dt>CIMWin32.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>CIMWin32.dll</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen:
 
 <dl> <dt>
 
 [Betriebssystemklassen](/previous-versions//aa392727(v=vs.85))
 </dt> <dt>
 
-[**Win32- \_ Dienst**](win32-service.md)
+[**\_Win32-Dienst**](win32-service.md)
 </dt> <dt>
 
-[WMI-Tasks: Dienste](/windows/desktop/WmiSdk/wmi-tasks--services)
+[WMI-Aufgaben: Dienste](/windows/desktop/WmiSdk/wmi-tasks--services)
 </dt> </dl>
 
  

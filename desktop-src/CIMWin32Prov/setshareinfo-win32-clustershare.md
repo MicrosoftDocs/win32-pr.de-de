@@ -2,7 +2,7 @@
 description: Legt die Parameter der freigegebenen Ressource fest.
 ms.assetid: 592d0fa6-c865-4f70-89c3-b58204a8c5a6
 ms.tgt_platform: multiple
-title: Setshareingefo-Methode der Win32_ClusterShare-Klasse
+title: SetShareInfo-Methode der Win32_ClusterShare-Klasse
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -14,14 +14,14 @@ api_type:
 - COM
 api_location:
 - CIMWin32.dll
-ms.openlocfilehash: bda6fe36d1168045ea9f8d331ff334920ed1dd19
-ms.sourcegitcommit: c7add10d695482e1ceb72d62b8a4ebd84ea050f7
+ms.openlocfilehash: 07245e97e091f607d142de57c00109d3671bd81b5f34b9062681229090ff6b50
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106346037"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119439400"
 ---
-# <a name="setshareinfo-method-of-the-win32_clustershare-class"></a>Setshareingefo-Methode der Win32 \_ clustershare-Klasse
+# <a name="setshareinfo-method-of-the-win32_clustershare-class"></a>SetShareInfo-Methode der Win32 \_ ClusterShare-Klasse
 
 Legt die Parameter der freigegebenen Ressource fest.
 
@@ -45,21 +45,21 @@ uint32 SetShareInfo(
 *MaximumAllowed* \[ in, optional\]
 </dt> <dd>
 
-Limit für die maximale Anzahl von Benutzern, die diese Ressource gleichzeitig verwenden dürfen.
+Begrenzen Sie die maximale Anzahl von Benutzern, die diese Ressource gleichzeitig verwenden dürfen.
 
 </dd> <dt>
 
 *Beschreibung* \[ in, optional\]
 </dt> <dd>
 
-Beschreibt die freigegebene Ressource.
+Beschreibt die Ressource, die freigegeben wird.
 
 </dd> <dt>
 
 *Zugriff* \[ in, optional\]
 </dt> <dd>
 
-Sicherheits Beschreibung für Berechtigungen auf Benutzerebene. Eine Sicherheits Beschreibung enthält Informationen zu den Berechtigungen, den Besitzern und den Zugriffs Funktionen der Ressource. Weitere Informationen finden Sie unter [**Win32 \_ securityDescriptor**](/previous-versions/windows/desktop/secrcw32prov/win32-securitydescriptor).
+Sicherheitsbeschreibung für Berechtigungen auf Benutzerebene. Eine Sicherheitsbeschreibung enthält Informationen über die Berechtigungs-, Besitzer- und Zugriffsfunktionen der Ressource. Weitere Informationen finden Sie unter [**Win32 \_ SecurityDescriptor**](/previous-versions/windows/desktop/secrcw32prov/win32-securitydescriptor).
 
 </dd> </dl>
 
@@ -71,17 +71,17 @@ Sicherheits Beschreibung für Berechtigungen auf Benutzerebene. Eine Sicherheits
 |-------------------------------------|-----------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 7<br/>                                                                    |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2008 R2<br/>                                                       |
-| Namespace<br/>                | Root \\ CIMV2<br/>                                                                  |
-| MOF<br/>                      | <dl> <dt>Cimwin32. MOF</dt> </dl> |
+| Namespace<br/>                | \\Stamm-CIMV2<br/>                                                                  |
+| MOF<br/>                      | <dl> <dt>Cimwin32.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>CIMWin32.dll</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen:
 
 <dl> <dt>
 
-[**Win32- \_ clustershare**](win32-clustershare.md)
+[**Win32 \_ ClusterShare**](win32-clustershare.md)
 </dt> </dl>
 
  

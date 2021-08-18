@@ -65,7 +65,7 @@ Der Stream, aus dem der Decoder erstellt werden soll.
 
 Typ: **const \* GUID**
 
-Die Hersteller-GUID für den Decoder .
+Die Hersteller-GUID für den Decoder.
 
 </dd> <dt>
 
@@ -74,7 +74,7 @@ Die Hersteller-GUID für den Decoder .
 
 Typ: **[ **WICDecodeOptions**](/windows/desktop/api/Wincodec/ne-wincodec-wicdecodeoptions)**
 
-Die [**WICDecodeOptions, die**](/windows/desktop/api/Wincodec/ne-wincodec-wicdecodeoptions) beim Erstellen des Decoders verwendet werden.
+Die [**WICDecodeOptions,**](/windows/desktop/api/Wincodec/ne-wincodec-wicdecodeoptions) die beim Erstellen des Decoders verwendet werden sollen.
 
 </dd> <dt>
 
@@ -83,7 +83,7 @@ Die [**WICDecodeOptions, die**](/windows/desktop/api/Wincodec/ne-wincodec-wicdec
 
 Typ: **[ **IWICBitmapDecoder**](/windows/desktop/api/Wincodec/nn-wincodec-iwicbitmapdecoder)\*\***
 
-Ein Zeiger, der einen Zeiger auf einen neuen [**IWICBitmapDecoder empfängt.**](/windows/desktop/api/Wincodec/nn-wincodec-iwicbitmapdecoder)
+Ein Zeiger, der einen Zeiger auf einen neuen [**IWICBitmapDecoder**](/windows/desktop/api/Wincodec/nn-wincodec-iwicbitmapdecoder)empfängt.
 
 </dd> </dl>
 
@@ -91,7 +91,7 @@ Ein Zeiger, der einen Zeiger auf einen neuen [**IWICBitmapDecoder empfängt.**](
 
 Typ: **HRESULT**
 
-Wenn diese Funktion erfolgreich ist, wird **S \_ OK zurückgegeben.** Andernfalls wird ein **HRESULT-Fehlercode** zurückgegeben.
+Wenn diese Funktion erfolgreich ausgeführt wird, wird **S \_ OK** zurückgegeben. Andernfalls wird ein **HRESULT-Fehlercode** zurückgegeben.
 
 ## <a name="remarks"></a>Bemerkungen
 

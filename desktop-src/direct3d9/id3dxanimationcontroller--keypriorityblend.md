@@ -1,7 +1,7 @@
 ---
-description: Legt Mischungs Ereignis Schlüssel für den angegebenen Animations Titel fest.
+description: Legt Blendingereignisschlüssel für die angegebene Animationsspur fest.
 ms.assetid: 2023d566-1de5-465a-ad6f-04a78ac01c33
-title: 'ID3DXAnimationController:: keypriorityblend-Methode (D3dx9anim. h)'
+title: ID3DXAnimationController::KeyPriorityBlend-Methode (D3dx9anim.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -14,16 +14,16 @@ api_type:
 api_location:
 - d3dx9.lib
 - d3dx9.dll
-ms.openlocfilehash: 31778da9b26ddd79b5f05c69c822ed62a5b5281e
-ms.sourcegitcommit: 14010c34b35fa268046c7683f021f86de08ddd0a
+ms.openlocfilehash: 33d2b4e18fc93dff3054a98442c86a4c05467898afe09fc3bc82ccbd2f0ba456
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "104354257"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119279040"
 ---
-# <a name="id3dxanimationcontrollerkeypriorityblend-method"></a>ID3DXAnimationController:: keypriorityblend-Methode
+# <a name="id3dxanimationcontrollerkeypriorityblend-method"></a>ID3DXAnimationController::KeyPriorityBlend-Methode
 
-Legt Mischungs Ereignis Schlüssel für den angegebenen Animations Titel fest.
+Legt Blendingereignisschlüssel für die angegebene Animationsspur fest.
 
 ## <a name="syntax"></a>Syntax
 
@@ -43,39 +43,39 @@ D3DXEVENTHANDLE KeyPriorityBlend(
 
 <dl> <dt>
 
-*Newblendweight* \[ in\]
+*NewBlendWeight* \[ In\]
 </dt> <dd>
 
-Typ: **[ **float**](../winprog/windows-data-types.md)**
+Typ: **[ **FLOAT**](../winprog/windows-data-types.md)**
 
-Die Zahl zwischen 0 und 1, die zum Kombinieren von Spuren verwendet wird.
+Die Zahl zwischen 0 und 1, die zum Mischen von Spuren verwendet wird.
 
 </dd> <dt>
 
-*StartTime* \[ in\]
+*StartTime* \[ In\]
 </dt> <dd>
 
-Typ: **[ **Double**](../winprog/windows-data-types.md)**
+Typ: **[ **DOUBLE**](../winprog/windows-data-types.md)**
 
-Die globale Zeit zum Starten von Blend.
+Globale Zeit zum Starten der Mischung.
 
 </dd> <dt>
 
-*Dauer* \[ in\]
+*Dauer* \[ In\]
 </dt> <dd>
 
-Typ: **[ **Double**](../winprog/windows-data-types.md)**
+Typ: **[ **DOUBLE**](../winprog/windows-data-types.md)**
 
-Die globale Zeitspanne der Mischung.
+Globale Zeitdauer der Mischung.
 
 </dd> <dt>
 
-*Übergang* \[ in\]
+*Übergang* \[ In\]
 </dt> <dd>
 
-Type: **[ **D3DXTRANSITION- \_ Typ**](./d3dxtransition-type.md)**
+Typ: **[ **D3DXTRANSITION \_ TYPE**](./d3dxtransition-type.md)**
 
-Gibt den für die Dauer der Blend verwendeten umgangstyp an. Siehe [**D3DXTRANSITION \_ Type**](./d3dxtransition-type.md).
+Gibt den Übergangstyp an, der für die Dauer der Mischung verwendet wird. Siehe [**D3DXTRANSITION \_ TYPE**](./d3dxtransition-type.md).
 
 </dd> </dl>
 
@@ -83,11 +83,11 @@ Gibt den für die Dauer der Blend verwendeten umgangstyp an. Siehe [**D3DXTRANSI
 
 Typ: **[ **D3DXEVENTHANDLE**](id3dxanimationcontroller.md)**
 
-Ereignis Handle für das Priority Blend-Ereignis. **Null** wird zurückgegeben, wenn mindestens ein Eingabeparameter ungültig ist oder kein freies Ereignis verfügbar ist.
+Ereignishandle für das Prioritätsmischungsereignis. **NULL** wird zurückgegeben, wenn mindestens einer der Eingabeparameter ungültig ist oder kein kostenloses Ereignis verfügbar ist.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Der Animations Controller wird in drei Phasen gemischt: Titel mit niedriger Priorität werden zuerst gemischt, Titel mit hoher Priorität werden als zweites gemischt angezeigt, und dann werden die Ergebnisse beider Komponenten gemischt.
+Der Animationscontroller kombiniert sich in drei Phasen: Spuren mit niedriger Priorität werden zuerst kombiniert, Spuren mit hoher Priorität werden in zweiter Linie kombiniert, und dann werden die Ergebnisse beider kombiniert.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -95,19 +95,19 @@ Der Animations Controller wird in drei Phasen gemischt: Titel mit niedriger Prio
 
 | Anforderung | Wert |
 |--------------------|----------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>D3dx9anim. h</dt> </dl> |
-| Bibliothek<br/> | <dl> <dt>D3dx9. lib</dt> </dl>   |
+| Header<br/>  | <dl> <dt>D3dx9anim.h</dt> </dl> |
+| Bibliothek<br/> | <dl> <dt>D3dx9.lib</dt> </dl>   |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
 [ID3DXAnimationController](id3dxanimationcontroller.md)
 </dt> <dt>
 
-[**Setpriorityblend**](id3dxanimationcontroller--setpriorityblend.md)
+[**SetPriorityBlend**](id3dxanimationcontroller--setpriorityblend.md)
 </dt> </dl>
 
  

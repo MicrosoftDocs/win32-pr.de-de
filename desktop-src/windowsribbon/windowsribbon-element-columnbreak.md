@@ -3,7 +3,7 @@ title: ColumnBreak-Element
 description: Stellt ein vertikales Trennzeichen (sichtbar oder ausgeblendet) in benutzerdefinierten SizeDefinition-Layoutvorlagen dar.
 ms.assetid: 5979d3e6-366b-4c47-810f-90fb8039af8d
 keywords:
-- ColumnBreak-Element Im Windows-Menüband
+- ColumnBreak-Element Windows Menüband
 topic_type:
 - apiref
 api_name:
@@ -13,18 +13,18 @@ api_type:
 ms.topic: reference
 ms.date: 05/31/2018
 api_location: ''
-ms.openlocfilehash: b5bff1682cdf55b44092a176abd6dc7e935220a7
-ms.sourcegitcommit: 099ecdda1e83618b844387405da0db0ebda93a65
+ms.openlocfilehash: beaf97a34a062b3461cf2101cb436fb1ba131d00e8656186fd434045bdef30bc
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/04/2021
-ms.locfileid: "111444841"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119393080"
 ---
 # <a name="columnbreak-element"></a>ColumnBreak-Element
 
 Stellt ein vertikales Trennzeichen (sichtbar oder ausgeblendet) in benutzerdefinierten [**SizeDefinition-Layoutvorlagen**](windowsribbon-element-sizedefinition.md) dar.
 
-## <a name="usage"></a>Verwendung
+## <a name="usage"></a>Verbrauch
 
 ``` syntax
 <ColumnBreak
@@ -45,7 +45,7 @@ Stellt ein vertikales Trennzeichen (sichtbar oder ausgeblendet) in benutzerdefin
 <thead>
 <tr class="header">
 <th>attribute</th>
-<th>Typ</th>
+<th>type</th>
 <th>Erforderlich</th>
 <th>BESCHREIBUNG</th>
 </tr>
@@ -55,7 +55,7 @@ Stellt ein vertikales Trennzeichen (sichtbar oder ausgeblendet) in benutzerdefin
 <td><strong>ShowSeparator</strong><br/></td>
 <td>Boolesch<br/></td>
 <td>Nein<br/></td>
-<td>Auf einen der folgenden Werte beschränkt:<br/> <br/>
+<td>Beschränkt auf einen der folgenden Werte:<br/> <br/>
 <dt><span></span><span></span><strong></strong> (true)<br/> </dt> <dd> Standard. <br/> </dd> <dt><span></span><span></span><strong></strong> (false)<br/> </dt> <dd></dd> </dl></td>
 </tr>
 </tbody>
@@ -79,13 +79,13 @@ Es gibt keine untergeordneten Elemente.
 
 ## <a name="remarks"></a>Hinweise
 
-Dies ist optional.
+Optional.
 
 Kann ein oder mehrere Male für jedes [**GroupSizeDefinition-Element**](windowsribbon-element-groupsizedefinition.md) auftreten.
 
 ## <a name="examples"></a>Beispiele
 
-Im folgenden Beispiel wird das grundlegende Markup für ein **ColumnBreak-Element** in einer benutzerdefinierten [**SizeDefinition-Layoutvorlage**](windowsribbon-element-sizedefinition.md) mit vier Schaltflächen veranschaulicht. **ColumnBreak** wird nur für die Vorlage `Large` angegeben.
+Im folgenden Beispiel wird das grundlegende Markup für ein **ColumnBreak-Element** in einer benutzerdefinierten [**SizeDefinition-Layoutvorlage**](windowsribbon-element-sizedefinition.md) mit vier Schaltflächen veranschaulicht. **ColumnBreak** wird nur für die `Large` Vorlage angegeben.
 
 
 ```XML
@@ -182,7 +182,7 @@ Im folgenden Beispiel wird das grundlegende Markup für ein **ColumnBreak-Elemen
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 

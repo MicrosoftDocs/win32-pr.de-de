@@ -1,7 +1,7 @@
 ---
 description: Die AddBefore-Methode fügt eine Liste vor der angegebenen Position ein.
 ms.assetid: a4c0dbec-64a0-445b-95e5-000603cc0264
-title: Cbaselist. AddBefore-Methode (wxlist. h)
+title: CBaseList.AddBefore-Methode (Wxlist.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,16 +16,16 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: 6a3c25b2dd545b3e6698404bf00f82d1086bfb81
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 2b4f85536b6a9372f164f596f96758a503096dbb0a5e5ed55adab42bc406b053
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106372415"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119016968"
 ---
-# <a name="cbaselistaddbefore-method"></a>Cbaselist. AddBefore-Methode
+# <a name="cbaselistaddbefore-method"></a>CBaseList.AddBefore-Methode
 
-Die- `AddBefore` Methode fügt eine Liste vor der angegebenen Position ein.
+Die `AddBefore` -Methode fügt eine Liste vor der angegebenen Position ein.
 
 ## <a name="syntax"></a>Syntax
 
@@ -46,24 +46,24 @@ BOOL AddBefore(
 *pos* 
 </dt> <dd>
 
-Die Position, an der die Liste eingefügt werden soll.
+Position, vor der die Liste eingefügt werden soll.
 
 </dd> <dt>
 
-*pList* 
+*Plist* 
 </dt> <dd>
 
-Ein Zeiger auf die einzufügende Liste.
+Zeiger auf die hinzuzufügende Liste.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt **true** zurück, wenn erfolgreich. Andernfalls wird **false** zurückgegeben.
+Gibt **TRUE zurück,** wenn erfolgreich. Andernfalls wird **FALSE zurückgegeben.**
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Vorhandene positionsindikatoren, einschließlich der im *POS* -Parameter angegebenen, bleiben gültig. Wenn die Methode fehlschlägt, wurden möglicherweise einige der Elemente hinzugefügt.
+Vorhandene Positionsindikatoren, einschließlich der im *pos-Parameter* angegebenen, bleiben gültig. Wenn bei der Methode ein Fehler auftritt, wurden möglicherweise einige Elemente hinzugefügt.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -71,16 +71,16 @@ Vorhandene positionsindikatoren, einschließlich der im *POS* -Parameter angegeb
 
 | Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Wxlist. h (Include Streams. h)</dt> </dl>                                                                                    |
-| Bibliothek<br/> | <dl> " <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Wxlist.h (include Streams.h)</dt> </dl>                                                                                    |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Einzelhandels-Builds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Cbaselist-Klasse**](cbaselist.md)
+[**CBaseList-Klasse**](cbaselist.md)
 </dt> </dl>
 
  

@@ -1,25 +1,25 @@
 ---
-title: Offline Kompilierung
-description: Das Effekt-Compilertool (fxc.exe) ist für die Offline Kompilierung von HLSL-Shadern konzipiert.
+title: Offline kompilieren
+description: Das Effektcompilertool (fxc.exe) ist für die Offlinekompilierung von HLSL-Shadern konzipiert.
 ms.assetid: 56806335-a0c7-4247-b40d-ba93486a88ac
 keywords:
-- FXC, Offline Kompilierung
+- fxc, offline kompilieren
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 8e7c2bf96a24cb586a5d229a395cbf6dc0cb9ee1
-ms.sourcegitcommit: 592c9bbd22ba69802dc353bcb5eb30699f9e9403
+ms.openlocfilehash: 88a15d3a71dbfb79541a75bd38cb28140d832b45e75a88a52b2d0c8988865f12
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "103729912"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119406330"
 ---
-# <a name="offline-compiling"></a>Offline Kompilierung
+# <a name="offline-compiling"></a>Offline kompilieren
 
-Das Effekt-Compilertool (fxc.exe) ist für die Offline Kompilierung von HLSL-Shadern konzipiert.
+Das Effektcompilertool (fxc.exe) ist für die Offlinekompilierung von HLSL-Shadern konzipiert.
 
 ## <a name="compiling-with-the-current-compiler"></a>Kompilieren mit dem aktuellen Compiler
 
-Die vom aktuellen Compiler unterstützten shadermodelle werden als [profile](dx-graphics-tools-fxc-syntax.md)angezeigt. In diesem Beispiel wird ein Pixelshader für das Shader-Modell 5,1-Ziel kompiliert.
+Die vom aktuellen Compiler unterstützten Shadermodelle werden unter Profile [angezeigt.](dx-graphics-tools-fxc-syntax.md) In diesem Beispiel wird ein Pixel-Shader für das Shadermodell 5.1-Ziel kompiliert.
 
 ```
 fxc /T ps_5_1 /Fo PixelShader1.fxc PixelShader1.hlsl
@@ -27,29 +27,29 @@ fxc /T ps_5_1 /Fo PixelShader1.fxc PixelShader1.hlsl
 
 In diesem Beispiel:
 
--   PS \_ 5 \_ 1 ist das Ziel Profil.
--   PixelShader1. FXC ist die Ausgabe Objektdatei, die den kompilierten Shader enthält.
--   PixelShader1. HLSL ist die Quelle.
+-   ps \_ 5 \_ 1 ist das Zielprofil.
+-   PixelShader1.fxc ist die Ausgabeobjektdatei, die den kompilierten Shader enthält.
+-   PixelShader1.hlsl ist die Quelle.
 
 ```
 fxc /Od /Zi /T ps_5_1 /Fo PixelShader1.fxc PixelShader1.hlsl
 ```
 
-Die Debugoptionen enthalten zusätzliche Optionen zum Deaktivieren von Compileroptimierungen (od) und zum Aktivieren von Debuginformationen (Zi) wie Zeilennummern und Symbolen.
+Die Debugoptionen enthalten zusätzliche Optionen, um Compileroptimierungen (Od) zu deaktivieren und Debuginformationen (Zi) wie Zeilennummern und Symbole zu aktivieren.
 
-Eine vollständige Liste der Befehlszeilenoptionen finden Sie auf der Seite [Syntax](dx-graphics-tools-fxc-syntax.md) .
+Eine vollständige Liste der Befehlszeilenoptionen finden Sie auf der [Seite Syntax.](dx-graphics-tools-fxc-syntax.md)
 
-## <a name="compiling-with-the-legacy-compiler"></a>Kompilieren mit dem Legacy Compiler
+## <a name="compiling-with-the-legacy-compiler"></a>Kompilieren mit dem Legacycompiler
 
-Ab Direct3D 10 werden einige shadermodelle nicht mehr unterstützt. Hierzu zählen Pixel-shadermodelle: PS \_ 1 \_ 1, PS \_ 1 \_ 2, PS \_ 1 \_ 3 und PS \_ 1 \_ 4, die sehr begrenzte Ressourcen unterstützen und von der Hardware abhängig sind. Der Compiler wurde mit dem Shader-Modell 2 (oder höher) neu gestaltet, das eine größere Effizienz mit der Kompilierung ermöglicht. Dies erfordert natürlich, dass Sie auf Hardware ausgeführt werden, die Shader-Modelle 2 und höher unterstützt.
+Ab Direct3D 10 werden einige Shadermodelle nicht mehr unterstützt. Dazu gehören Pixel-Shadermodelle: ps \_ 1 \_ 1, ps \_ 1 \_ 2, ps \_ 1 3 und ps \_ \_ 1 \_ 4, die sehr eingeschränkte Ressourcen unterstützen und von Hardware abhängig sind. Der Compiler wurde mit Shadermodell 2 (oder höher) umgestaltet, was eine höhere Effizienz bei der Kompilierung ermöglicht. Dies erfordert natürlich, dass Sie auf Hardware ausführen, die Shadermodelle ab 2 unterstützt.
 
-Beachten Sie außerdem, dass Sie sich die SDK-Versions Hinweise zu Ihrer Version des FXC-Compilers für das vom/GEC-Switch betroffene Verhalten ansehen sollten.
+Beachten Sie auch, dass Sie die SDK-Versionshinweise, die Ihrer Version des FXC-Compilers zugeordnet sind, für das Verhalten lesen sollten, das vom Schalter /Gec betroffen ist.
 
-## <a name="using-the-effect-compiler-tool-in-a-subprocess"></a>Verwenden des Effekts-Compiler-Tools in einem Teilprozess
+## <a name="using-the-effect-compiler-tool-in-a-subprocess"></a>Verwenden des Effektcompilertools in einem Unterprozess
 
-Wenn fxc.exe von einer Anwendung als Teilprozess erzeugt wird, muss sichergestellt werden, dass die Anwendung alle Daten in der Ausgabe oder an Fehler Pipes überprüft und liest, die an die Funktion "deateprocess" übergeben werden. Wenn die Anwendung nur darauf wartet, dass der Teilprozess abgeschlossen wird und einer der Pipes voll ist, wird der Teilprozess nie beendet.
+Wenn fxc.exe anwendung als Unterprozess erstellt wird, ist es wichtig sicherzustellen, dass die Anwendung alle Daten in Ausgabe- oder Fehlerpipes überprüft und liest, die an die CreateProcess-Funktion übergeben werden. Wenn die Anwendung nur auf den Abschluss des Unterprozesses wartet und einer der Pipes voll ist, wird der Unterprozess nie beendet.
 
-Der folgende Beispielcode veranschaulicht das warten auf einen Teilprozess und das Lesen der Ausgabe-und Fehler Pipes, die an den Teilprozess angefügt sind. Der Inhalt des `WaitHandles` Arrays entspricht Handles für den unter Prozess, der Pipe für "stdout" und der Pipe für "stderr".
+Der folgende Beispielcode veranschaulicht das Warten auf einen Unterprozess und das Lesen der Ausgabe- und Fehlerpipes, die an den Unterprozess angefügt sind. Der Inhalt des Arrays entspricht Handles für den Unterprozess, der Pipe für `WaitHandles` stdout und der Pipe für stderr.
 
 ```cpp
 HANDLE WaitHandles[] = {
@@ -83,8 +83,8 @@ while (1)
 }
 ```
 
-Weitere Informationen zum Erzeugen eines Prozesses finden Sie auf der Referenzseite für " [**kreateprocess**](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-createprocessa)".
+Weitere Informationen zum Erzeugen eines Prozesses finden Sie auf der Referenzseite für [**CreateProcess.**](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-createprocessa)
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
-* [Effekt-Compilertool](fxc.md)
+* [Effect-Compiler-Tool](fxc.md)

@@ -1,34 +1,34 @@
 ---
-description: Dieses Thema enthält Beispielcode zum Verwalten von Such-und Raten Änderungen, wenn die Medien Sitzung für die Wiedergabe verwendet wird.
+description: In diesem Thema wird Beispielcode zum Verwalten von Such- und Ratenänderungen gezeigt, wenn die Mediensitzung für die Wiedergabe verwendet wird.
 ms.assetid: 50bf4c05-99c0-4cf0-aaca-8ee717cafd12
-title: Suchen, schnelles vorwärts und umgekehrtes spielen
+title: Suchen, Vorlauf und Umgekehrtes Wiedergeben
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 68c42e4ab2bbf5bd3ac1057ce4bb0e09fceddc44
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: e49fb8731b005da12adf51880f4375c6610348ac73bd0bdc592e8478383df676
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106357429"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119034778"
 ---
-# <a name="seeking-fast-forward-and-reverse-play"></a>Suchen, schnelles vorwärts und umgekehrtes spielen
+# <a name="seeking-fast-forward-and-reverse-play"></a>Suchen, Vorlauf und Umgekehrtes Wiedergeben
 
-Dieses Thema enthält Beispielcode zum Verwalten von Such-und Raten Änderungen, wenn die [Medien Sitzung](media-session.md) für die Wiedergabe verwendet wird.
+In diesem Thema wird Beispielcode zum Verwalten von Such- und Ratenänderungen gezeigt, wenn die [Mediensitzung](media-session.md) für die Wiedergabe verwendet wird.
 
-Wenn Sie die Medien Sitzung für die Wiedergabe verwenden, kann eine Anwendung die Wiedergabe Rate wie folgt suchen und ändern:
+Bei Verwendung der Mediensitzung für die Wiedergabe kann eine Anwendung die Wiedergaberate wie folgt suchen und ändern:
 
--   Um zu suchen, nennen Sie [**imfmediasession:: Start**](/windows/desktop/api/mfidl/nf-mfidl-imfmediasession-start) , und geben Sie die Suchposition an.
--   Um die Wiedergabe Rate zu ändern, verwenden Sie die [**imfratecontrol**](/windows/desktop/api/mfidl/nn-mfidl-imfratecontrol) -Schnittstelle, wie in [Raten Steuerung](rate-control.md)beschrieben.
--   Wenn Sie beim Suchen aktualisierte Video Frames abrufen möchten, legen Sie die Wiedergabe Rate auf 0 (null) fest, bevor Sie [**imfmediasession:: Start**](/windows/desktop/api/mfidl/nf-mfidl-imfmediasession-start)aufrufen. Dieser Vorgang wird als *Bereinigungs* bezeichnet. (Siehe Vorgehens [Weise beim Ausführen von](how-to-perform-scrubbing.md)Bereinigungs arbeiten.)
+-   Rufen Sie zum Suchen [**DIE SEEKMediaSession::Start**](/windows/desktop/api/mfidl/nf-mfidl-imfmediasession-start) auf, und geben Sie die Suchposition an.
+-   Um die Wiedergaberate zu ändern, verwenden Sie die [**SCHNITTSTELLE "THICKNESSRateControl",**](/windows/desktop/api/mfidl/nn-mfidl-imfratecontrol) wie unter [Ratensteuerung](rate-control.md)beschrieben.
+-   Um aktualisierte Videoframes während der Suche abzurufen, legen Sie die Wiedergaberate auf 0 (null) fest, bevor Sie DEN AUFRUF [**VONMEDIASESSION::Start ausführen.**](/windows/desktop/api/mfidl/nf-mfidl-imfmediasession-start) Dieser Vorgang wird als *Bereinigung* bezeichnet. (Siehe [How to Perform Scrubbing](how-to-perform-scrubbing.md).)
 
-Um die beste Benutzerfunktion zu erstellen, müssen Sie jedoch die folgenden Verhaltensweisen berücksichtigen:
+Um die beste Benutzererfahrung zu erstellen, müssen Sie jedoch die folgenden Verhaltensweisen berücksichtigen:
 
--   Die Suche erfolgt asynchron, und die Medien Sitzung fügt alle Suchanforderungen in einer FIFO-Warteschlange in die Warteschlange ein. Wenn Sie mehrere Suchanforderungen übermitteln, wird die Benutzeroberfläche möglicherweise vor dem tatsächlichen Wiedergabe Status ausgeführt. Angenommen, Ihre Anwendung implementiert eine Suchleiste. Wenn der Benutzer die Suchleiste vorwärts und rückwärts zieht, kann es zu einer Verzögerung kommen, während die Forward-Suchvorgänge ausgeführt werden. Während eine Suche ausgeführt wird, sollten Sie die Suchanforderungen des Benutzers Zwischenspeichern. Wenn der aktuelle Suchvorgang abgeschlossen ist, übermitteln Sie die aktuellste Such Anforderung des Benutzers, und verwerfen Sie die anderen.
--   Einige raten Übergänge sind in einigen Transport Zuständen nicht zulässig. Beispielsweise ist der Wechsel von der vorwärts Wiedergabe zur umgekehrten Wiedergabe bei der Wiedergabe nicht zulässig. Die unterstützten Übergänge werden in [**imfratecontrol:: abtrate**](/windows/desktop/api/mfidl/nf-mfidl-imfratecontrol-setrate)beschrieben. Die Raten Änderungen sind ebenfalls asynchron.
+-   Die Suche ist asynchron, und die Mediensitzung reiht alle Suchanforderungen in eine FIFO-Warteschlange ein. Wenn Sie mehrere Suchanforderungen übermitteln, kann die Benutzeroberfläche vor dem tatsächlichen Wiedergabezustand ausgeführt werden. Angenommen, Ihre Anwendung implementiert eine Suchleiste. Wenn der Benutzer die Suchleiste vorwärts und rückwärts zieht, kann es zu einer Verzögerung kommen, während die Vorwärtssuchen ausgeführt werden. Während eine Suche ausgeführt wird, sollten Sie die Suchanforderungen des Benutzers zwischenspeichern. Wenn der aktuelle Suchvorgang abgeschlossen ist, übermitteln Sie die letzte Suchanforderung des Benutzers, und verwerfen Sie die anderen.
+-   Einige Ratenübergänge sind in einigen Transportzuständen nicht zulässig. Beispielsweise ist der Wechsel von der Vorwärtswiedergabe zur umgekehrten Wiedergabe während der Wiedergabe nicht zulässig. Die unterstützten Übergänge werden in DER BESCHREIBUNG [**VONRATECONTROL::SetRate**](/windows/desktop/api/mfidl/nf-mfidl-imfratecontrol-setrate)beschrieben. Ratenänderungen sind ebenfalls asynchron.
 
-Die folgende Hilfsklasse kann zum Verwalten von Suchanforderungen und Raten Änderungen verwendet werden. Während ein asynchroner Vorgang aussteht, speichert die Klasse alle Such-oder Raten Änderungsanforderungen zwischen. Wenn der aktuelle Vorgang abgeschlossen ist, wird die aktuelle Anforderung von der-Klasse übermittelt, sofern vorhanden. Die-Klasse verwaltet auch den Transport Status, um ungültige Raten Änderungen zu vermeiden.
+Die folgende Hilfsklasse kann verwendet werden, um Suchanforderungen zu verwalten und Änderungen zu bewerten. Während ein asynchroner Vorgang aussteht, speichert die -Klasse alle Such- oder Ratenänderungsanforderungen zwischen. Nach Abschluss des aktuellen Vorgangs sendet die -Klasse ggf. die letzte Anforderung. Die -Klasse verwaltet auch den Transportzustand, um ungültige Ratenänderungen zu vermeiden.
 
-Hier ist die Deklaration der playersuchende-Klasse.
+Hier ist die Deklaration der PlayerSeeking-Klasse.
 
 
 ```C++
@@ -169,7 +169,7 @@ private:
 
 
 
-Hier ist die Implementierung der playersuchende-Klasse.
+Hier ist die Implementierung der PlayerSeeking-Klasse.
 
 
 ```C++
@@ -1091,7 +1091,7 @@ done:
 
 <dl> <dt>
 
-[Raten Steuerung](rate-control.md)
+[Ratensteuerung](rate-control.md)
 </dt> <dt>
 
 [Audio-/Videowiedergabe](audio-video-playback.md)

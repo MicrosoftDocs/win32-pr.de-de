@@ -1,7 +1,7 @@
 ---
-description: Die pdhvbgetcounterpathelements-Funktion analysiert eine voll qualifizierte Zeichenfolge für den Leistungsindikator Pfad in die einzelnen Elemente.
+description: Die PdhVbGetCounterPathElements-Funktion analysiert eine vollqualifizierte Pfadzeichenfolge des Leistungsindikators in ihre einzelnen Elemente.
 ms.assetid: 5459c7dd-e8b6-48cd-a33f-cafdc64dd9ee
-title: Pdhvbgetcounterpathelements-Funktion
+title: PdhVbGetCounterPathElements-Funktion
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,21 +13,21 @@ api_type:
 - DllExport
 api_location:
 - Pdh.dll
-ms.openlocfilehash: 003374141b0454d730ba4b844715bd6f00b544da
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: fecd9ecac573ecc1a5afabcfc4a14bf6fd1ca5cee7b44387ea910b0cf1a5820d
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106368748"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119011328"
 ---
-# <a name="pdhvbgetcounterpathelements-function"></a>Pdhvbgetcounterpathelements-Funktion
+# <a name="pdhvbgetcounterpathelements-function"></a>PdhVbGetCounterPathElements-Funktion
 
-Die **pdhvbgetcounterpathelements** -Funktion analysiert eine voll qualifizierte Zeichenfolge für den Leistungsindikator Pfad in die einzelnen Elemente. Jede der Zeichen folgen Variablen muss dieselbe Größe aufweisen (*bufferSize*) und dimensioniert und initialisiert werden, bevor Sie in dieser Funktion verwendet wird.
+Die **PdhVbGetCounterPathElements-Funktion** analysiert eine vollqualifizierte Pfadzeichenfolge des Leistungsindikators in ihre einzelnen Elemente. Jede der Zeichenfolgenvariablen muss die gleiche Größe (*BufferSize*) aufweisen und dimensioniert und initialisiert sein, bevor sie in dieser Funktion verwendet wird.
 
 > [!IMPORTANT]
-> Die Funktion, die in diesem Thema beschrieben wird, kann in Zukunft geändert oder nicht mehr verfügbar sein. Stattdessen empfiehlt Microsoft die Verwendung der Funktionen, die unter [Funktionen von Leistungsindikatoren](performance-counters-functions.md)beschrieben werden.
+> Die funktion, die in diesem Thema beschrieben wird, kann in Zukunft geändert oder nicht mehr verfügbar sein. Stattdessen empfiehlt Microsoft die Verwendung der unter [Leistungsindikatorfunktionen beschriebenen Funktionen.](performance-counters-functions.md)
 
-Funktion pdhvbgetcounterpathelements ( \_ ByVal PathString As String, \_ ByVal MachineName As String, \_ ByVal ObjectName As String, \_ ByVal instanceName As String, \_ ByVal Parameter instance As String, \_ ByVal CounterName As String, \_ ByVal BufferSize As Long \_ )
+Funktion PdhVbGetCounterPathElements( \_ ByVal PathString as String, \_ ByVal MachineName as String, \_ ByVal ObjectName as String, \_ ByVal InstanceName as String, \_ ByVal ParentInstance as String, \_ ByVal CounterName as String, \_ ByVal BufferSize as long \_ ) so long
 
 ## <a name="parameters"></a>Parameter
 
@@ -36,65 +36,65 @@ Funktion pdhvbgetcounterpathelements ( \_ ByVal PathString As String, \_ ByVal M
 *PathString* 
 </dt> <dd>
 
-Die Zeichenfolge für den Counter-Pfad, die in die einzelnen Elemente aufgeteilt werden soll.
+Zählerpfadzeichenfolge, die in die einzelnen Elemente zerbrochen werden soll.
 
 </dd> <dt>
 
 *MachineName* 
 </dt> <dd>
 
-Zeichenfolge, die den Computernamen empfängt.
+Die Zeichenfolge, die den Computernamen empfangen soll.
 
 </dd> <dt>
 
 *ObjectName* 
 </dt> <dd>
 
-Zeichenfolge, die den Objektnamen empfängt.
+Die Zeichenfolge, die den Objektnamen empfangen soll.
 
 </dd> <dt>
 
 *InstanceName* 
 </dt> <dd>
 
-Zeichenfolge, die den Instanznamen empfängt, falls verwendet.
+Zeichenfolge zum Empfangen des Instanznamens, sofern verwendet.
 
 </dd> <dt>
 
-*Parametriinstance* 
+*ParentInstance* 
 </dt> <dd>
 
-Zeichenfolge, die die übergeordnete Instanz empfängt, sofern Sie verwendet wird.
+Zeichenfolge, die die übergeordnete Instanz empfangen soll, sofern verwendet.
 
 </dd> <dt>
 
-*CounterName* 
+*Countername* 
 </dt> <dd>
 
-Zeichenfolge, die den Namen des Zählers empfängt.
+Die Zeichenfolge, die den Indikatornamen empfangen soll.
 
 </dd> <dt>
 
 *BufferSize* 
 </dt> <dd>
 
-Maximale Größe der einzelnen Zeichen folgen Variablen, die als Parameter für diesen Funktions Aufrufsatz verwendet werden.
+Maximale Größe jeder Zeichenfolgenvariablen, die als Parameter für diesen Funktionsaufruf verwendet wird.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Wenn die Funktion erfolgreich ausgeführt wird, gibt Sie eine **Long** -Ganzzahl zurück, die dem Fehler \_ Erfolg entspricht.
+Wenn die Funktion erfolgreich ist, wird eine lange ganze **Zahl** zurückgegeben, die ERROR \_ SUCCESS entspricht.
 
-Wenn die Funktion fehlschlägt, ist der Rückgabewert ein [Systemfehler Code](/windows/desktop/Debug/system-error-codes) oder ein [PDH-Fehlercode](pdh-error-codes.md). Die folgenden Werte sind möglich.
+Wenn die Funktion fehlschlägt, ist der Rückgabewert ein [Systemfehlercode oder](/windows/desktop/Debug/system-error-codes) [ein PDH-Fehlercode.](pdh-error-codes.md) Im Folgenden finden Sie mögliche Werte.
 
 
 
 | Rückgabecode                                                                                                     | Beschreibung                                                                                    |
 |-----------------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------|
-| <dl> <dt>**Ungültiges PDH- \_ \_ Argument**</dt> </dl>           | Mindestens ein Zeichen folgen Puffer weist nicht die richtige Größe auf.<br/>                          |
-| <dl> <dt>**PDH \_ Weitere \_ Daten**</dt> </dl>                  | Mindestens eines der Counter-Pfad Elemente ist zu groß für die Rückgabe Pufferlänge.<br/> |
-| <dl> <dt>**PDH-Speicher Belegungs \_ \_ \_ Fehler**</dt> </dl> | Ein temporärer Speicherpuffer konnte nicht zugeordnet werden.<br/>                                   |
+| <dl> <dt>**\_PDH: UNGÜLTIGES \_ ARGUMENT**</dt> </dl>           | Mindestens einer der Zeichenfolgenpuffer ist nicht die richtige Größe.<br/>                          |
+| <dl> <dt>**PDH \_ MORE \_ DATA**</dt> </dl>                  | Mindestens ein Indikatorpfad-Element ist zu groß für die Länge des Rückgabepuffers.<br/> |
+| <dl> <dt>**\_ \_ PDH-SPEICHERBELEGUNGSFEHLER \_**</dt> </dl> | Ein temporärer Speicherpuffer konnte nicht zugeordnet werden.<br/>                                   |
 
 
 
@@ -106,24 +106,24 @@ Wenn die Funktion fehlschlägt, ist der Rückgabewert ein [Systemfehler Code](/w
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows XP \[ -Desktop-Apps\]<br/>                                        |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/>                               |
-| Bibliothek<br/>                  | <dl> <dt>PDH. lib</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ XP-Desktop-Apps\]<br/>                                        |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                               |
+| Bibliothek<br/>                  | <dl> <dt>Pdh.lib</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Pdh.dll</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Pdhvbkreatecounterpathlist**](pdhvbcreatecounterpathlist.md)
+[**PdhVbCreateCounterPathList**](pdhvbcreatecounterpathlist.md)
 </dt> <dt>
 
-[**Pdhvbgetcounterpathfromlist**](pdhvbgetcounterpathfromlist.md)
+[**PdhVbGetCounterPathFromList**](pdhvbgetcounterpathfromlist.md)
 </dt> <dt>
 
-[**Pdhvbgetonecounterpath**](pdhvbgetonecounterpath.md)
+[**PdhVbGetOneCounterPath**](pdhvbgetonecounterpath.md)
 </dt> </dl>
 
  

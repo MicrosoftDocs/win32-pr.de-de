@@ -1,9 +1,9 @@
 ---
-title: Idcompositionmatrixtransform-setmatrixelement-Methode (Dcomp. h)
+title: IDCompositionMatrixTransform SetMatrixElement-Methoden (Dcomp.h)
 description: Ändert oder animiert den Wert eines Elements der Matrix dieser 2D-Transformation.
 ms.assetid: ADF3D443-6764-40A5-AD5C-7C3053E247CB
 keywords:
-- Setmatrixelement-Methoden directcomposition
+- SetMatrixElement-Methoden DirectComposition
 topic_type:
 - apiref
 api_location:
@@ -12,14 +12,14 @@ api_type:
 - DllExport
 ms.date: 07/02/2019
 ms.topic: reference
-ms.openlocfilehash: d5707ad441e9a3205ed52808b6203a3172d1ab48
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: dc35caa8e19e7a3e0f9e5867d169c3380459be82419f17785902089a89e031d9
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "103739704"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119484480"
 ---
-# <a name="idcompositionmatrixtransformsetmatrixelement-methods"></a>Idcompositionmatrixtransform:: setmatrixelement-Methode
+# <a name="idcompositionmatrixtransformsetmatrixelement-methods"></a>IDCompositionMatrixTransform::SetMatrixElement-Methoden
 
 Ändert oder animiert den Wert eines Elements der Matrix dieser 2D-Transformation.
 
@@ -27,10 +27,10 @@ ms.locfileid: "103739704"
 
 
 
-| Methode                                                                                                                               | BESCHREIBUNG                                                                      |
+| Methode                                                                                                                               | Beschreibung                                                                      |
 |:-------------------------------------------------------------------------------------------------------------------------------------|:---------------------------------------------------------------------------------|
-| [**Setmatrixelement (int, int, float)**](/windows/win32/api/dcomp/nf-dcomp-idcompositionmatrixtransform-setmatrixelement(int_int_float))                                           | Ändert den Wert eines Elements der Matrix dieser 2D-Transformation.<br/>  |
-| [**Setmatrixelement (int, int, idcompositionanimation \* )**](idcompositionmatrixtransform-setmatrixelement-idcompositionanimation.md) | Animiert den Wert eines Elements der Matrix dieser 2D-Transformation.<br/> |
+| [**SetMatrixElement(int, int, float)**](/windows/win32/api/dcomp/nf-dcomp-idcompositionmatrixtransform-setmatrixelement(int_int_float))                                           | Ändert den Wert eines Elements der Matrix dieser 2D-Transformation.<br/>  |
+| [**SetMatrixElement(int, int, IDCompositionAnimation \* )**](idcompositionmatrixtransform-setmatrixelement-idcompositionanimation.md) | Animiert den Wert eines Elements der Matrix dieser 2D-Transformation.<br/> |
 
 
 
@@ -40,19 +40,19 @@ ms.locfileid: "103739704"
 
 | Anforderung | Wert |
 |-------------------------------------|--------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows 8 \[ -Desktop-Apps\]<br/>                                           |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2012 \[ -Desktop-Apps\]<br/>                                 |
-| Header<br/>                   | <dl> <dt>Dcomp. h</dt> </dl>   |
-| Bibliothek<br/>                  | <dl> <dt>Dcomp. lib</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | nur Windows 8 \[ Desktop-Apps\]<br/>                                           |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2012-Desktop-Apps\]<br/>                                 |
+| Header<br/>                   | <dl> <dt>Dcomp.h</dt> </dl>   |
+| Bibliothek<br/>                  | <dl> <dt>Dcomp.lib</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Dcomp.dll</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Idcompositionmatrixtransform**](/windows/win32/api/dcomp/nn-dcomp-idcompositionmatrixtransform)
+[**IDCompositionMatrixTransform**](/windows/win32/api/dcomp/nn-dcomp-idcompositionmatrixtransform)
 </dt> </dl>
 
 �

@@ -1,29 +1,29 @@
 ---
-description: Die folgenden Codebeispiele veranschaulichen einige grundlegende Rendezvous-Vorgänge. Ein vollständiges Codebeispiel finden Sie in den Codebeispielen für Platform Software Development Kit (SDK) unter netds/TAPI. Das Verzeichnis tapi3 enthält ein Beispiel mit dem Titel &\# 0034; Rend-&\# 0034;.
+description: Die folgenden Codebeispiele veranschaulichen einige grundlegende Rendezvous-Vorgänge. Ein vollständiges Codebeispiel finden Sie in den Codebeispielen des Platform Software Development Kit (SDK) unter NetDS/TAPI. Das Verzeichnis TAPI3 enthält ein Beispiel mit dem &\# 0034; Rend&\# 0034;.
 ms.assetid: 2212cb93-5522-49b5-a379-f34da01079d0
-title: Rendezvous-Code Beispiele
+title: Rendezvous-Codebeispiele
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 52f90ed12029308a0988aee87fe221f318ef9eb4
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 5d07dccf7f45cf9d6e8cc40d1d2014497bc329e90cd285b9bc2947791d4e0af5
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106355473"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119060388"
 ---
-# <a name="rendezvous-code-examples"></a>Rendezvous-Code Beispiele
+# <a name="rendezvous-code-examples"></a>Rendezvous-Codebeispiele
 
-\[ Rendezvous-Steuerelemente und Schnittstellen für die IP-telefoniekonferenz sind nicht für die Verwendung in Windows Vista, Windows Server 2008 und nachfolgenden Versionen des Betriebssystems verfügbar. Die RTC-Client-API bietet eine ähnliche Funktionalität.\]
+\[Steuerelemente und Schnittstellen für Rendezvous-IP-Telefoniekonferenzen sind nicht für die Verwendung in Windows Vista, Windows Server 2008 und nachfolgenden Versionen des Betriebssystems verfügbar. Die RTC-Client-API bietet ähnliche Funktionen.\]
 
-Die folgenden Codebeispiele veranschaulichen einige grundlegende Rendezvous-Vorgänge. Ein vollständiges Codebeispiel finden Sie in den Codebeispielen für Platform Software Development Kit (SDK) unter netds/TAPI. Das Verzeichnis "tapi3" enthält ein Beispiel mit dem Titel "rend".
+Die folgenden Codebeispiele veranschaulichen einige grundlegende Rendezvous-Vorgänge. Ein vollständiges Codebeispiel finden Sie in den Codebeispielen des Platform Software Development Kit (SDK) unter NetDS/TAPI. Das Verzeichnis TAPI3 enthält ein Beispiel mit dem Titel "Rend".
 
-Diese Beispiele enthalten keine Fehlerüberprüfung oder ordnungsgemäße com-Verweis Hinzufügungen und Releases.
+Diese Beispiele verfügen nicht über Fehlerüberprüfungen oder ordnungsgemäße COM-Verweis-Add-Ins und -Releases.
 
 -   [Herstellen einer Verbindung mit einem ILS-Server](connecting-to-an-ils-server.md)
--   [Auflisten der Konferenz Verzeichnisse](enumerating-conference-directories.md)
+-   [Aufzählen von Konferenzverzeichnissen](enumerating-conference-directories.md)
 -   [Erstellen einer Konferenzankündigung](creating-a-conference-announcement.md)
 -   [Ändern einer bekannten Konferenz](modifying-a-known-conference.md)
--   [Hinzufügen eines Benutzer Objekts zu einem ILS-Server](adding-a-user-object-to-an-ils-server.md)
+-   [Hinzufügen eines Benutzerobjekts zu einem ILS-Server](adding-a-user-object-to-an-ils-server.md)
 
  
 

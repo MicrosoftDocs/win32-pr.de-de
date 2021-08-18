@@ -1,11 +1,11 @@
 ---
-title: ID3DX11EffectMatrixVariable getmatrixtransform-Methode (D3dx11effect. h)
-description: Eine Gleit Komma Matrix austauschen und erhalten.
+title: ID3DX11EffectMatrixVariable GetMatrixTranspose-Methode (D3dx11effect.h)
+description: Transponieren und Abrufen einer Gleitkommamatrix.
 ms.assetid: a261128c-d1f9-4864-b562-5fe9a69c9969
 keywords:
-- Getmatrixtransform-Methode Direct3D 11
-- Getmatrixtransform-Methode Direct3D 11, ID3DX11EffectMatrixVariable-Schnittstelle
-- ID3DX11EffectMatrixVariable-Schnittstelle Direct3D 11, getmatrixtransform-Methode
+- GetMatrixTranspose-Methode Direct3D 11
+- GetMatrixTranspose-Methode Direct3D 11 , ID3DX11EffectMatrixVariable-Schnittstelle
+- ID3DX11EffectMatrixVariable-Schnittstelle Direct3D 11 , GetMatrixTranspose-Methode
 topic_type:
 - apiref
 api_name:
@@ -17,16 +17,16 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 5fa5c8eb8e424041a05461636d1eaf7b65c7cd4f
-ms.sourcegitcommit: 14010c34b35fa268046c7683f021f86de08ddd0a
+ms.openlocfilehash: c8d2f04057dac5bc432cc3c6a9a3060654d8f6d181836823aa29f0a02f82f667
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "104050886"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119046178"
 ---
-# <a name="id3dx11effectmatrixvariablegetmatrixtranspose-method"></a>ID3DX11EffectMatrixVariable:: getmatrixtransform-Methode
+# <a name="id3dx11effectmatrixvariablegetmatrixtranspose-method"></a>ID3DX11EffectMatrixVariable::GetMatrixTranspose-Methode
 
-Eine Gleit Komma Matrix austauschen und erhalten.
+Transponieren und Abrufen einer Gleitkommamatrix.
 
 ## <a name="syntax"></a>Syntax
 
@@ -43,12 +43,12 @@ HRESULT GetMatrixTranspose(
 
 <dl> <dt>
 
-*pData* 
+*Pdata* 
 </dt> <dd>
 
-Typ: **float \***
+Typ: **\* float**
 
-Ein Zeiger auf das erste Element einer übersetzten Matrix.
+Ein Zeiger auf das erste Element einer transponierten Matrix.
 
 </dd> </dl>
 
@@ -56,25 +56,25 @@ Ein Zeiger auf das erste Element einer übersetzten Matrix.
 
 Typ: **[ **HRESULT**](https://msdn.microsoft.com/library/Bb401631(v=MSDN.10).aspx)**
 
-Gibt einen der folgenden [Direct3D 11-Rückgabe Codes](d3d11-graphics-reference-returnvalues.md)zurück.
+Gibt einen der folgenden [Direct3D 11-Rückgabecodes zurück.](d3d11-graphics-reference-returnvalues.md)
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Beim Durchführen einer Matrix wird die Reihenfolge der Daten in der Reihenfolge der Zeilen Spalten in der Reihenfolge der Spalten Zeilen (oder umgekehrt) neu angeordnet.
+Durch das Transponieren einer Matrix wird die Datenreihenfolge von der Zeilenspaltenreihenfolge in die Spaltenreihenfolge (oder umgekehrt) neu angeordnet.
 
 > [!Note]  
-> Das DirectX SDK stellt keine kompilierten Binärdateien für Effekte bereit. Sie müssen die Effekte 11-Quelle verwenden, um die Effekte-Anwendung zu erstellen. Weitere Informationen zum Verwenden der Effekte 11-Quelle finden Sie [unter Unterschiede zwischen den Effekten 10 und Effekte 11](d3d11-graphics-programming-guide-effects-differences.md).
+> Das DirectX SDK stellt keine kompilierten Binärdateien für Effekte zur Verfügung. Sie müssen die Effects 11-Quelle verwenden, um ihre Effekte-Typ-Anwendung zu erstellen. Weitere Informationen zur Verwendung der Quelle Effects 11 finden Sie unter [Unterschiede zwischen Effekten 10 und Effekten 11.](d3d11-graphics-programming-guide-effects-differences.md)
 
  
 
-## <a name="requirements"></a>Requirements (Anforderungen)
+## <a name="requirements"></a>Anforderungen
 
 
 
 | Anforderung | Wert |
 |--------------------|----------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>D3dx11effect. h</dt> </dl>                                                    |
-| Bibliothek<br/> | <dl> <dt>N/v (die "Effects 11"-Bibliothek ist online als freigegebene Quelle verfügbar.)</dt> </dl> |
+| Header<br/>  | <dl> <dt>D3dx11effect.h</dt> </dl>                                                    |
+| Bibliothek<br/> | <dl> <dt>N/A (Eine Effects 11-Bibliothek ist online als freigegebene Quelle verfügbar.)</dt> </dl> |
 
 
 

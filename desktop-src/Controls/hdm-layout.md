@@ -1,9 +1,9 @@
 ---
-title: HDM_LAYOUT Meldung (kommstrg. h)
-description: Ruft Informationen ab, die zum Festlegen der Größe und Position des Header Steuer Elements innerhalb des Ziel Rechtecks des übergeordneten Fensters verwendet werden. Sie können diese Nachricht explizit senden oder das Header \_ Layout-Makro verwenden.
+title: HDM_LAYOUT (Commctrl.h)
+description: Ruft Informationen ab, die zum Festlegen der Größe und Position des Header-Steuerelements innerhalb des Zielrechtecks des übergeordneten Fensters verwendet werden. Sie können diese Nachricht explizit senden oder das Makro \_ Headerlayout verwenden.
 ms.assetid: 0763e483-f01d-4739-8c61-1c52d1aad0b4
 keywords:
-- Windows-Steuerelemente für HDM_LAYOUT Meldung
+- HDM_LAYOUT von Windows-Steuerelementen
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: a70fc46dee52f52862136dbe583db9f6d7a0e13e
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: ff4194ad5aa1847aa977bac1269a7ab88d36a571824387e07264713726135f25
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104040638"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119435930"
 ---
-# <a name="hdm_layout-message"></a>HDM- \_ layoutmeldung
+# <a name="hdm_layout-message"></a>\_HDM-LAYOUTmeldung
 
-Ruft Informationen ab, die zum Festlegen der Größe und Position des Header Steuer Elements innerhalb des Ziel Rechtecks des übergeordneten Fensters verwendet werden. Sie können diese Nachricht explizit senden oder das [**Header \_ Layout**](/windows/desktop/api/Commctrl/nf-commctrl-header_layout) -Makro verwenden.
+Ruft Informationen ab, die zum Festlegen der Größe und Position des Header-Steuerelements innerhalb des Zielrechtecks des übergeordneten Fensters verwendet werden. Sie können diese Nachricht explizit senden oder das Makro [**\_ Headerlayout**](/windows/desktop/api/Commctrl/nf-commctrl-header_layout) verwenden.
 
 ## <a name="parameters"></a>Parameter
 
@@ -35,19 +35,19 @@ Ruft Informationen ab, die zum Festlegen der Größe und Position des Header Ste
 *lParam* 
 </dt> <dd>
 
-Ein Zeiger auf eine [**hdlayout**](/windows/win32/api/commctrl/ns-commctrl-hdlayout) -Struktur. Der **PRC** -Member gibt die Koordinaten eines Rechtecks an, und das **pwpos** -Element empfängt die Größe und Position des Header Steuer Elements innerhalb des Rechtecks.
+Ein Zeiger auf eine [**HDLAYOUT-Struktur.**](/windows/win32/api/commctrl/ns-commctrl-hdlayout) Das **PRC-Element** gibt die Koordinaten eines Rechtecks an, und das **pwpos-Element** empfängt die Größe und Position für das Header-Steuerelement innerhalb des Rechtecks.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt **true** zurück, wenn erfolgreich, andernfalls **false** .
+Gibt **TRUE zurück,** wenn erfolgreich, andernfalls **FALSE.**
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Der **pwpos** -Member der *LPARAM* -Struktur erhält Größen-und Positionswerte, die für die Positionierung des Steuer Elements am oberen Rand des angegebenen Rechtecks geeignet sind. Der Height-Wert ist die Summe der Höhe der horizontalen Rahmen des Steuer Elements und die durchschnittliche Höhe der Zeichen in der Schriftart, die derzeit im Gerätekontext des Steuer Elements ausgewählt ist.
+Der **pwpos-Member** der *lParam-Struktur* empfängt Größen- und Positionswerte, die für die Positionierung des Steuerelements am oberen Ende des angegebenen Rechtecks geeignet sind. Der Höhenwert ist die Summe der Höhe der horizontalen Rahmen des Steuerelements und der durchschnittlichen Höhe der Zeichen in der Schriftart, die derzeit im Gerätekontext des Steuerelements ausgewählt ist.
 
-Um das **HDM- \_ Layout** zum Festlegen der Anfangs Größe und Position eines Header Steuer Elements zu verwenden, legen Sie den ursprünglichen Sichtbarkeits Zustand des-Steuer Elements so fest, dass es ausgeblendet ist. Nach dem Senden des **HDM- \_ Layouts** zum Abrufen der Größen-und Positionswerte verwenden Sie die [**SetWindowPos**](/windows/desktop/api/winuser/nf-winuser-setwindowpos) -Funktion, um die neue Größe, Position und den Sichtbarkeits Zustand festzulegen.
+Um **HDM \_ LAYOUT** zum Festlegen der Anfangsgröße und -position eines Header-Steuerelements zu verwenden, legen Sie den anfänglichen Sichtbarkeitszustand des Steuerelements so fest, dass es ausgeblendet wird. Verwenden Sie nach dem Senden von **HDM \_ LAYOUT** zum Abrufen der Werte für Größe und Position die [**Funktion SetWindowPos,**](/windows/desktop/api/winuser/nf-winuser-setwindowpos) um die neue Größe, Position und den Sichtbarkeitszustand zu festlegen.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -55,9 +55,9 @@ Um das **HDM- \_ Layout** zum Festlegen der Anfangs Größe und Position eines H
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                        |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/>                                  |
-| Header<br/>                   | <dl> <dt>Kommstrg. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ Vista-Desktop-Apps\]<br/>                                        |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                                  |
+| Header<br/>                   | <dl> <dt>Commctrl.h</dt> </dl> |
 
 
 

@@ -1,27 +1,27 @@
 ---
-description: Im folgenden Beispiel wird die Verwendung der Funktionen certoidtoalgid und certcompareintegerblob veranschaulicht.
+description: Im folgenden Beispiel wird die Verwendung der Funktionen CertOIDToAlgId und CertCompareIntegerBlob veranschaulicht.
 ms.assetid: 89186d98-80a9-460a-be2b-3e328675c485
-title: 'Beispiel-C-Programm: Verwenden von certoidtoalgid und certcompareintegerblob'
+title: 'C-Beispielprogramm: Verwenden von CertOIDToAlgId und CertCompareIntegerBlob'
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 8dd7239dc8872d1330cfd0dc96b00bcc201f94e8
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 72b40bfcc8758c634a17747f58687d0382fc13f503b391b27514cc50577768d9
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "103959004"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119007448"
 ---
-# <a name="example-c-program-using-certoidtoalgid-and-certcompareintegerblob"></a>Beispiel-C-Programm: Verwenden von certoidtoalgid und certcompareintegerblob
+# <a name="example-c-program-using-certoidtoalgid-and-certcompareintegerblob"></a>C-Beispielprogramm: Verwenden von CertOIDToAlgId und CertCompareIntegerBlob
 
-Im folgenden Beispiel wird die Verwendung der Funktionen [**certoidtoalgid**](/windows/desktop/api/Wincrypt/nf-wincrypt-certoidtoalgid) und [**certcompareintegerblob**](/windows/desktop/api/Wincrypt/nf-wincrypt-certcompareintegerblob) veranschaulicht.
+Im folgenden Beispiel wird die Verwendung der [**Funktionen CertOIDToAlgId**](/windows/desktop/api/Wincrypt/nf-wincrypt-certoidtoalgid) und [**CertCompareIntegerBlob**](/windows/desktop/api/Wincrypt/nf-wincrypt-certcompareintegerblob) veranschaulicht.
 
-Zuerst werden alle verfügbaren OIDs mithilfe von [**cryptenumoidinfo**](/windows/desktop/api/Wincrypt/nf-wincrypt-cryptenumoidinfo)aufgelistet. Mit dieser Funktion verwendeter Code veranschaulicht auch die Verwendung einer Rückruffunktion. Die Rückruffunktion veranschaulicht die Unterbrechungs Logik, um zwischen jeder OID-Gruppe und nach der Darstellung von Informationen über eine festgelegte Anzahl von OIDs anzuhalten.
+Zunächst werden alle verfügbaren OIDs mithilfe von [**CryptEnumOIDInfo aufzählt.**](/windows/desktop/api/Wincrypt/nf-wincrypt-cryptenumoidinfo) Code, der mit dieser Funktion verwendet wird, veranschaulicht auch die Verwendung einer Rückruffunktion. Die Rückruffunktion veranschaulicht die Unterbrechungslogik zum Anhalten zwischen jeder OID-Gruppe und nach der Präsentation von Informationen zu einer festgelegten Anzahl von OIDs.
 
-Zweitens werden drei [*objektbezeichnerzeichenfolgen*](../secgloss/o-gly.md) (OID) mithilfe von [**certoidtoalgid**](/windows/desktop/api/Wincrypt/nf-wincrypt-certoidtoalgid)in **DWORD** -Algorithmus-Bezeichnerzeichen konvertiert. Der Code zeigt auch, dass alle OID-Zeichen folgen keine zugehörigen Algorithmusbezeichner aufweisen.
+Zweitens werden drei OID-Zeichenfolgen (Object [*Identifier)*](../secgloss/o-gly.md) mithilfe von [**CertOIDToAlgId**](/windows/desktop/api/Wincrypt/nf-wincrypt-certoidtoalgid)in ganze Zahlen des DWORD-Algorithmusbezeichners konvertiert.  Der Code zeigt auch, dass alle OID-Zeichenfolgen keine zugehörigen Algorithmusbezeichner haben.
 
-Das Beispiel zeigt, wie Sie ganzzahlige BLOB vergleichen. In diesem Beispiel wird veranschaulicht, wie führende 0x00ys aus positiven Zahlen und führenden 0xffes von negativen Zahlen abgeschnitten werden.
+Schließlich veranschaulicht das Beispiel den Vergleich ganzzahliger BLOBs. Dieses Beispiel veranschaulicht das Abschneiden von führenden 0x00 von positiven Zahlen und führenden 0xFF von negativen Zahlen.
 
-Außerdem wird gezeigt, dass ganze Zahlen so verglichen werden, als wären Sie in [*Little-d-*](../secgloss/l-gly.md) Form mit den signifikantesten Ziffern auf der rechten Seite gespeichert.
+Es zeigt auch, dass ganze Zahlen verglichen werden, als ob sie in [*Little-Endian-Form*](../secgloss/l-gly.md) mit den signifikantesten Ziffern auf der rechten Seite gespeichert werden.
 
 
 ```C++

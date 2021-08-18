@@ -1,48 +1,48 @@
 ---
-title: Auflisten von Aufgaben und Anzeigen von Aufgabeninformationen
-description: Zum Anzeigen von Informationen zu einer Aufgabe, z. b. Aufgaben Name, Status oder Zeitpunkt der letzten Ausführung der Aufgabe, werden die ausgeführten Tasks oder die Tasks in einem Aufgaben Ordner aufgelistet und die gewünschten Informationen angezeigt.
+title: Aufzählen von Aufgaben und Anzeigen von Aufgabeninformationen
+description: Das Anzeigen von Informationen zu einem Task, z. B. Aufgabenname, Status oder zeitpunkt der letzten Ausführung des Tasks, erfolgt durch Aufzählen von ausgeführten Tasks oder aufgaben in einem Aufgabenordner und Anzeigen der gewünschten Informationen.
 ms.assetid: a0305089-89ff-42b7-b3f1-99a6484d2e5e
 keywords:
 - Aufzählen von Aufgaben Taskplaner
-- Taskplaner Beispiele Taskplaner, Auflisten von Aufgaben
+- Taskplaner Beispiele Taskplaner , Aufzählen von Aufgaben
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 58e4c1bbad0a1fa8892e38a001ff54e665f0c144
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: c4859122218ead4d18c1f9e83de0f55ce9373306cd2762e5608cf4d1841019b3
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "103707278"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119002448"
 ---
-# <a name="enumerating-tasks-and-displaying-task-information"></a>Auflisten von Aufgaben und Anzeigen von Aufgabeninformationen
+# <a name="enumerating-tasks-and-displaying-task-information"></a>Aufzählen von Aufgaben und Anzeigen von Aufgabeninformationen
 
-Zum Anzeigen von Informationen zu einer Aufgabe, z. b. Aufgaben Name, Status oder Zeitpunkt der letzten Ausführung der Aufgabe, werden die ausgeführten Tasks oder die Tasks in einem Aufgaben Ordner aufgelistet und die gewünschten Informationen angezeigt.
+Das Anzeigen von Informationen zu einem Task, z. B. Aufgabenname, Status oder zeitpunkt der letzten Ausführung des Tasks, erfolgt durch Aufzählen von ausgeführten Tasks oder aufgaben in einem Aufgabenordner und Anzeigen der gewünschten Informationen.
 
-## <a name="accessing-properties-of-registered-tasks"></a>Zugreifen auf Eigenschaften registrierter Tasks
+## <a name="accessing-properties-of-registered-tasks"></a>Zugreifen auf Eigenschaften von registrierten Aufgaben
 
-Um den Eigenschafts Wert einer registrierten Aufgabe anzuzeigen, müssen Sie eine Verbindung mit dem Taskplaner-Dienst herstellen und dann eine Instanz des Aufgaben Ordners mit den Tasks, über die Sie Informationen erhalten möchten, erhalten. Anschließend erhalten Sie eine Sammlung aller registrierten Tasks im Aufgaben Ordner. Anschließend durchlaufen Sie jede registrierte Aufgabe und erhalten und zeigen einen Eigenschafts Wert für jede Aufgabe an.
+Um den Eigenschaftswert einer registrierten Aufgabe anzuzeigen, müssen Sie eine Verbindung mit dem Taskplaner-Dienst herstellen und dann eine Instanz des Aufgabenordners abrufen, der die Tasks enthält, zu denen Sie Informationen benötigen. Anschließend erhalten Sie eine Sammlung aller registrierten Aufgaben im Aufgabenordner. Anschließend durchlaufen Sie jede registrierte Aufgabe und erhalten und zeigen einen Eigenschaftswert für jede Aufgabe an.
 
-## <a name="accessing-properties-of-running-tasks"></a>Zugreifen auf Eigenschaften von laufenden Tasks
+## <a name="accessing-properties-of-running-tasks"></a>Zugreifen auf Eigenschaften von ausgeführten Aufgaben
 
-Um den Eigenschafts Wert einer ausgewerenden Aufgabe anzuzeigen, müssen Sie eine Verbindung mit dem Taskplaner-Dienst herstellen und dann eine Auflistung aller ausgelaufenden Tasks (einschließlich oder ausschließen ausgeblendeter Tasks) erhalten. Anschließend durchlaufen Sie jede ausgestellte Aufgabe und erhalten und zeigen einen Eigenschafts Wert für jede Aufgabe an.
+Um den -Eigenschaftswert einer ausgeführten Aufgabe anzuzeigen, müssen Sie eine Verbindung mit dem Taskplaner-Dienst herstellen und dann eine Sammlung aller ausgeführten Aufgaben abrufen (einschließlich oder ausschließen von ausgeblendeten Aufgaben). Anschließend durchlaufen Sie die einzelnen ausgeführten Aufgaben und erhalten und zeigen einen Eigenschaftswert für jede Aufgabe an.
 
 ## <a name="example"></a>Beispiel
 
-In den folgenden Beispielen werden Aufgaben aufgelistet und der Name und der Zustand der Aufgaben angezeigt:
+In den folgenden Beispielen werden Tasks aufzählt und der Name und Status der Aufgaben angezeigt:
 
--   [Anzeigen von Aufgaben Namen und-Zuständen (Skripterstellung)](displaying-task-names-and-state--scripting-.md)
--   [Anzeigen von Aufgaben Namen und-Status (C++)](displaying-task-names-and-state--c---.md)
+-   [Anzeigen von Aufgabennamen und -zuständen (Skripterstellung)](displaying-task-names-and-state--scripting-.md)
+-   [Anzeigen von Aufgabennamen und -zuständen (C++)](displaying-task-names-and-state--c---.md)
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[Verwenden des Taskplaner](using-the-task-scheduler.md)
+[Verwenden der Taskplaner](using-the-task-scheduler.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

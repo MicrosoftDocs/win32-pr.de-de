@@ -1,25 +1,25 @@
 ---
-description: Die getsignercert-Funktion durchläuft die Zertifikate in einem Zertifikat Speicher (listet Sie auf), bis ein Zertifikat mit einem Signatur Schlüssel gefunden wird.
+description: Die GetSignerCert-Funktion durchläuft (aufzählt) die Zertifikate in einem Zertifikatspeicher, bis ein Zertifikat mit einem Signaturschlüssel gefunden wird.
 ms.assetid: a3279492-a154-418d-ab25-45ec458ad483
-title: Getsignercert
+title: GetSignerCert
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: beff3e220fc8f0c95992c4a14a3dc8b5f5d19fab
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: e7288ed92ace5cf6982402a9b449c1bb91170d617604fab061f1836756ef1ac3
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "103960909"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119006635"
 ---
-# <a name="getsignercert"></a>Getsignercert
+# <a name="getsignercert"></a>GetSignerCert
 
-Die **getsignercert** -Funktion durchläuft die Zertifikate in einem [*Zertifikat Speicher*](../secgloss/c-gly.md) (listet Sie auf), bis ein Zertifikat mit einem Signatur Schlüssel gefunden wird. Wenn ein Zertifikat gefunden wird, wird ein Zeiger auf das Zertifikat zurückgegeben. Dieser Code veranschaulicht Folgendes:
+Die **GetSignerCert-Funktion** durchläuft (aufzählt) die [](../secgloss/c-gly.md) Zertifikate in einem Zertifikatspeicher, bis ein Zertifikat mit einem Signaturschlüssel gefunden wird. Wenn ein Zertifikat gefunden wird, wird ein Zeiger auf das Zertifikat zurückgegeben. Dieser Code veranschaulicht:
 
--   Suchen eines Zertifikats mit einer Zertifikat Eigenschaft
+-   Suchen eines Zertifikats mit einer Zertifikateigenschaft.
 -   Diese Eigenschaft wird überprüft.
--   Zurückgeben eines Zeigers auf den [**CERT- \_ Kontext**](/windows/desktop/api/Wincrypt/ns-wincrypt-cert_context) , in dem das Attribut gefunden wurde.
+-   Zurückgeben eines Zeigers auf den [**CERT \_ CONTEXT,**](/windows/desktop/api/Wincrypt/ns-wincrypt-cert_context) in dem das Attribut gefunden wurde.
 
-In diesem Code wird ein Fehlerhandler mit dem Namen **mylenker Error** verwendet. Informationen zum Anzeigen der Implementierung dieses Fehler Handlers finden Sie im Thema [**mylenker Error**](myhandleerror.md) .
+In diesem Code wird ein Fehlerhandler namens **MyHandleError verwendet.** Informationen zur Implementierung für diesen Fehlerhandler finden Sie im [**Thema MyHandleError.**](myhandleerror.md)
 
 
 ```C++

@@ -1,9 +1,9 @@
 ---
-title: Text. scrollingamount
-description: Das scrollingamount-Attribut gibt die Anzahl der Pixel an, die der Text während jeder scrollbewegung bewegt, oder ruft diese ab.
+title: TEXT.scrollingAmount
+description: Das scrollingAmount-Attribut gibt die Anzahl der Pixel an, die der Text während jeder Bildlaufbewegung verschiebt, oder ruft sie ab.
 ms.assetid: 46f74531-69dd-4505-8937-5b48b6e9be7b
 keywords:
-- Text. scrollingamount-Media Player
+- TEXT.scrollingAmount Windows Media Player
 topic_type:
 - apiref
 api_name:
@@ -12,16 +12,16 @@ api_type:
 - NA
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 66de7bfc6001f10c429d05c480dc315edfe72f76
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 2a8d5b703c02c2d3049f98a934980f1dbf8b1c5beceaca4d97158ea68c13db9a
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106356500"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119466960"
 ---
-# <a name="textscrollingamount"></a>Text. scrollingamount
+# <a name="textscrollingamount"></a>TEXT.scrollingAmount
 
-Das **scrollingamount** -Attribut gibt die Anzahl der Pixel an, die der Text während jeder scrollbewegung bewegt, oder ruft diese ab.
+Das **scrollingAmount-Attribut** gibt die Anzahl der Pixel an, die der Text während jeder Bildlaufbewegung verschiebt, oder ruft sie ab.
 
 ``` syntax
         elementID.scrollingAmount
@@ -29,13 +29,13 @@ Das **scrollingamount** -Attribut gibt die Anzahl der Pixel an, die der Text wä
 
 ## <a name="possible-values"></a>Mögliche Werte
 
-Dieses Attribut ist eine positive Lese-/schreibzahl (**int**) mit einem Standardwert von 6. 
+Dieses Attribut ist eine  positive Lese-/Schreibnummer **(int)** mit dem Standardwert 6.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Für einen reibungslosen Bildlauf sollte " **scrollingamount** " klein sein. Für schnelles zeichnen mit großen Lücken sollte das **scrollingamount** größer sein. Wenn **Scroll** = "false", wird **scrollingamount** ignoriert.
+Für einen reibungslosen Bildlauf sollte **scrollingAmount** klein sein. Für schnelles Zeichnen mit großen Lücken sollte **scrollingAmount** größer sein. Beim **Scrollen** von ="false" wird **scrollingAmount** ignoriert.
 
-Im [value](text-value.md) -Attribut finden Sie ein Beispiel, das veranschaulicht, wie die Attribute des **Text** -Elements verwendet werden.
+Ein Beispiel, das veranschaulicht, wie die Attribute des **TEXT-Elements** verwendet werden, finden Sie im [Value-Attribut.](text-value.md)
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -43,18 +43,18 @@ Im [value](text-value.md) -Attribut finden Sie ein Beispiel, das veranschaulicht
 
 | Anforderung | Wert |
 |--------------------|------------------------------------------------------|
-| Version<br/> | Windows Media Player, Version 7,0 oder höher<br/> |
+| Version<br/> | Windows Media Player Version 7.0 oder höher<br/> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Text-Element**](text-element.md)
+[**TEXT-Element**](text-element.md)
 </dt> <dt>
 
-[**Text. Scroll**](text-scrolling.md)
+[**TEXT.scrolling**](text-scrolling.md)
 </dt> </dl>
 
  

@@ -1,5 +1,5 @@
 ---
-description: Die CIM- \_ aggregateredundancycomponent-Klasse beschreibt den aggregierten physischen Block in einer Speicher Redundanz Gruppe.
+description: Die CIM \_ AggregateRedundancyComponent-Klasse beschreibt den aggregierten physischen Umfang in einer Speicherredundanzgruppe.
 ms.assetid: 3407e888-e17c-4f65-a33f-056002accbf7
 ms.tgt_platform: multiple
 title: CIM_AggregateRedundancyComponent-Klasse
@@ -16,23 +16,23 @@ api_type:
 - DllExport
 api_location:
 - CIMWin32.dll
-ms.openlocfilehash: 9a5e638730578bad8d64f35b29a5152898c23fd6
-ms.sourcegitcommit: c7add10d695482e1ceb72d62b8a4ebd84ea050f7
+ms.openlocfilehash: dec68f7c5464774f6b9aa8ef91ec427857dd09cb73bf709c207f0e8bfb4d319c
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "103748713"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119322780"
 ---
-# <a name="cim_aggregateredundancycomponent-class"></a>CIM- \_ aggregateredundancycomponent-Klasse
+# <a name="cim_aggregateredundancycomponent-class"></a>CIM \_ AggregateRedundancyComponent-Klasse
 
-Die **CIM- \_ aggregateredundancycomponent** -Klasse beschreibt den aggregierten physischen Block in einer Speicher Redundanz Gruppe.
+Die **CIM \_ AggregateRedundancyComponent-Klasse** beschreibt den aggregierten physischen Umfang in einer Speicherredundanzgruppe.
 
 > [!IMPORTANT]
-> Die Klassen der DMTF-CIM (Common Information Model) sind die übergeordneten Klassen, auf denen WMI-Klassen erstellt werden. WMI unterstützt zurzeit nur die [CIM 2. x-Versions Schemas](https://dmtf.org/standards/cim/schemas).
+> Die CIM-Klassen (Distributed Management Task Force) (DMTF (Distributed Management Task Force) (Common Information Model) sind die übergeordneten Klassen, auf denen WMI-Klassen erstellt werden. WMI unterstützt derzeit nur die [CIM 2.x-Versionsschemas.](https://dmtf.org/standards/cim/schemas)
 
  
 
-Die folgende Syntax wird durch MOF-Code (Managed Object Format) vereinfacht und schließt alle geerbten Eigenschaften ein. Eigenschaften werden in alphabetischer Reihenfolge und nicht in der MOF-Reihenfolge aufgelistet.
+Die folgende Syntax wird durch MOF-Code (Managed Object Format) vereinfacht und schließt alle geerbten Eigenschaften ein. Eigenschaften werden in alphabetischer Reihenfolge und nicht in MOF-Reihenfolge aufgeführt.
 
 ## <a name="syntax"></a>Syntax
 
@@ -47,55 +47,55 @@ class CIM_AggregateRedundancyComponent : CIM_RedundancyComponent
 
 ## <a name="members"></a>Member
 
-Die **CIM- \_ aggregateredundancycomponent** -Klasse verfügt über diese Typen von Membern:
+Die **CIM \_ AggregateRedundancyComponent-Klasse** verfügt über diese Typen von Membern:
 
 -   [Eigenschaften](#properties)
 
 ### <a name="properties"></a>Eigenschaften
 
-Die **CIM- \_ aggregateredundancycomponent** -Klasse verfügt über diese Eigenschaften.
+Die **CIM \_ AggregateRedundancyComponent-Klasse** verfügt über diese Eigenschaften.
 
 <dl> <dt>
 
 **GroupComponent**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **CIM \_ storageredundancygroup**
+Datentyp: **CIM \_ StorageRedundancyGroup**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: über [**Schreiben**](/windows/desktop/WmiSdk/standard-qualifiers) ("GroupComponent")
+Qualifizierer: [**Außerkraftsetzung**](/windows/desktop/WmiSdk/standard-qualifiers) ("GroupComponent")
 </dt> </dl>
 
-Eine [**CIM \_ storageredundancygroup**](cim-storageredundancygroup.md) , die die Speicher Redundanz Gruppe enthält.
+Eine [**CIM \_ StorageRedundancyGroup,**](cim-storageredundancygroup.md) die die Speicherredundanzgruppe enthält.
 
 </dd> <dt>
 
 **PartComponent**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **CIM \_ aggregatepblock**
+Datentyp: **CIM \_ AggregatePExtent**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: über [**Schreiben**](/windows/desktop/WmiSdk/standard-qualifiers) ("PartComponent")
+Qualifizierer: [**Außerkraftsetzung**](/windows/desktop/WmiSdk/standard-qualifiers) ("PartComponent")
 </dt> </dl>
 
-Ein [**CIM- \_ aggregatepblock**](cim-aggregatepextent.md) , der den aggregierten physischen Block enthält, der Teil der Redundanz Gruppe ist.
+Ein [**CIM \_ AggregatePExtent,**](cim-aggregatepextent.md) das den aggregierten physischen Umfang enthält, der teil der Redundanzgruppe ist.
 
 </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die **CIM- \_ aggregateredundancycomponent** -Klasse wird von [**CIM \_ redundant cycomponent**](cim-redundancycomponent.md)abgeleitet.
+Die **CIM \_ AggregateRedundancyComponent-Klasse** wird von [**CIM \_ RedundancyComponent**](cim-redundancycomponent.md)abgeleitet.
 
-Diese Klasse wird von WMI nicht implementiert.
+WMI implementiert diese Klasse nicht.
 
-Diese Dokumentation wird von den von der DMTF veröffentlichten CIM-Klassen Beschreibungen abgeleitet. Microsoft hat möglicherweise Änderungen an den korrekten geringfügigen Fehlern vorgenommen, den Microsoft SDK-Dokumentations Standards entsprechen oder weitere Informationen bereitstellen.
+Diese Dokumentation wird von den CIM-Klassenbeschreibungen abgeleitet, die von dmtf veröffentlicht wurden. Möglicherweise hat Microsoft Änderungen vorgenommen, um kleinere Fehler zu korrigieren, den Dokumentationsstandards des Microsoft SDK zu entsprechen oder weitere Informationen bereitzustellen.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -105,17 +105,17 @@ Diese Dokumentation wird von den von der DMTF veröffentlichten CIM-Klassen Besc
 |-------------------------------------|-----------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows Vista<br/>                                                                |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2008<br/>                                                          |
-| Namespace<br/>                | Root \\ CIMV2<br/>                                                                  |
-| MOF<br/>                      | <dl> <dt>Cimwin32. MOF</dt> </dl> |
+| Namespace<br/>                | \\Stamm-CIMV2<br/>                                                                  |
+| MOF<br/>                      | <dl> <dt>CIMWin32.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>CIMWin32.dll</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**CIM \_ redundant cycomponent**](cim-redundancycomponent.md)
+[**CIM \_ RedundancyComponent**](cim-redundancycomponent.md)
 </dt> </dl>
 
  
