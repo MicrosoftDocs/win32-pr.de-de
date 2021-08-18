@@ -1,19 +1,19 @@
 ---
-description: 'Sfgao-Werte, die in IShellFolder:: getattributesof verwendet werden.'
+description: SFGAO-Werte, wie sie in IShellFolder::GetAttributesOf verwendet werden.
 ms.assetid: 0a63e019-a03c-43c2-b2dc-20ef7c37e0d3
-title: System. sfgaoflags
+title: System.SFGAOFlags
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: d71ced08bd2a3a916924ff876cadb160cf6fb959
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 5f494215f2302f2a33551ab73adf60d61d7176e2d4caf75215456b731b9aa57e
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106350115"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118464790"
 ---
-# <a name="systemsfgaoflags"></a>System. sfgaoflags
+# <a name="systemsfgaoflags"></a>System.SFGAOFlags
 
-[**Sfgao**](../shell/sfgao.md) -Werte, die in [**IShellFolder:: getattributesof**](/windows/win32/api/shobjidl_core/nf-shobjidl_core-ishellfolder-getattributesof)verwendet werden.
+[**SFGAO-Werte,**](../shell/sfgao.md) wie sie in [**IShellFolder::GetAttributesOf verwendet werden.**](/windows/win32/api/shobjidl_core/nf-shobjidl_core-ishellfolder-getattributesof)
 
 ## <a name="windows-10-version-1703-windows-10-version-1607-windows-10-version-1511-windows-10-version-1507-windows-81-windows-8-windows-7"></a>Windows 10, Version 1703, Windows 10, Version 1607, Windows 10, Version 1511, Windows 10, Version 1507, Windows 8.1, Windows 8, Windows 7
 
@@ -46,56 +46,56 @@ propertyDescription
       IsInnate = true
 ```
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Pkey-Werte werden in "propkey. h" definiert.
+PKEY-Werte werden in Propkey.h definiert.
 
-Bestimmte [**sfgao**](../shell/sfgao.md) -Werte, die eine langsame Berechnung oder einen fehlenden Kontext verursachen, werden hier von der Anwendung der * * * * [sfgao \_ pkeysfgaomask * * *](../shell/sfgao.md) -Maske ausgeschlossen.
+Bestimmte [**SFGAO-Werte,**](../shell/sfgao.md) die als Ursache langsamer Berechnungen oder fehlender Kontext angesehen werden, werden hier von der Anwendung der [Mask "SFGAO \_ PKEYSFGAOMASK"](../shell/sfgao.md) ausgeschlossen.
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[propertydescription](./propdesc-schema-propertydescription.md)
+[propertyDescription](./propdesc-schema-propertydescription.md)
 </dt> <dt>
 
-[SearchInfo](./propdesc-schema-searchinfo.md)
+[searchInfo](./propdesc-schema-searchinfo.md)
 </dt> <dt>
 
-[Labelinfo](./propdesc-schema-labelinfo.md)
+[labelInfo](./propdesc-schema-labelinfo.md)
 </dt> <dt>
 
-[TypeInfo](./propdesc-schema-typeinfo.md)
+[Typeinfo](./propdesc-schema-typeinfo.md)
 </dt> <dt>
 
-[Display Info](./propdesc-schema-displayinfo.md)
+[displayInfo](./propdesc-schema-displayinfo.md)
 </dt> <dt>
 
-[StringFormat](./propdesc-schema-stringformat.md)
+[Stringformat](./propdesc-schema-stringformat.md)
 </dt> <dt>
 
-[BooleanFormat](./propdesc-schema-booleanformat.md)
+[booleanFormat](./propdesc-schema-booleanformat.md)
 </dt> <dt>
 
-[NumberFormat](./propdesc-schema-numberformat.md)
+[Numberformat](./propdesc-schema-numberformat.md)
 </dt> <dt>
 
 [dateTimeFormat](./propdesc-schema-datetimeformat.md)
 </dt> <dt>
 
-[enumeratedlist](./propdesc-schema-enumeratedlist.md)
+[enumeratedList](./propdesc-schema-enumeratedlist.md)
 </dt> <dt>
 
-[DrawControl](./propdesc-schema-drawcontrol.md)
+[drawControl](./propdesc-schema-drawcontrol.md)
 </dt> <dt>
 
-[editcontrol](./propdesc-schema-editcontrol.md)
+[editControl](./propdesc-schema-editcontrol.md)
 </dt> <dt>
 
-[FilterControl](./propdesc-schema-filtercontrol.md)
+[Filtercontrol](./propdesc-schema-filtercontrol.md)
 </dt> <dt>
 
-[querycontrol](./propdesc-schema-querycontrol.md)
+[queryControl](./propdesc-schema-querycontrol.md)
 </dt> </dl>
 
  

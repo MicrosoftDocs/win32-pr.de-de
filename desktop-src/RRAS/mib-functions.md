@@ -1,6 +1,6 @@
 ---
 title: MIB-Funktionen für die Routerverwaltung
-description: Verwenden Sie die folgenden Router-Manager-Funktionen, um MIB-Variablen abzufragen und festzulegen.
+description: Verwenden Sie die folgenden Router-Manager-Funktionen zum Abfragen und Festlegen von MIB-Variablen.
 ms.assetid: c911daa4-4f3d-4944-9dc0-695a4efbcb1b
 ms.topic: article
 ms.date: 05/31/2018
@@ -13,7 +13,7 @@ ms.locfileid: "117790444"
 ---
 # <a name="router-management-mib-functions"></a>MIB-Funktionen für die Routerverwaltung
 
-Verwenden Sie die folgenden Router-Manager-Funktionen, um MIB-Variablen abzufragen und festzulegen:
+Verwenden Sie die folgenden Router-Manager-Funktionen zum Abfragen und Festlegen von MIB-Variablen:
 
 -   [**MprAdminMIBBufferFree**](/windows/desktop/api/Mprapi/nf-mprapi-mpradminmibbufferfree)
 -   [**MprAdminMIBEntryCreate**](/windows/desktop/api/Mprapi/nf-mprapi-mpradminmibentrycreate)

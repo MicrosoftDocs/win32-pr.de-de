@@ -1,56 +1,56 @@
 ---
-title: Winsock-Socketstatusbenachrichtigungen
-description: Die Socketzustandsbenachrichtigungs-APIs bieten Ihnen eine skalierbare und effiziente Möglichkeit, Benachrichtigungen zu Socketzustandsänderungen zu erhalten. Dazu gehören Benachrichtigungen zu Themen wie nicht blockierende Lesezugriffe, nicht blockierende Schreibzugriffe, Fehlerbedingungen und andere Informationen.
+title: Winsock-Socketzustandsbenachrichtigungen
+description: Die Socketzustandsbenachrichtigungs-APIs bieten Ihnen eine skalierbare und effiziente Möglichkeit, Benachrichtigungen zu Socketzustandsänderungen zu erhalten. Dies schließt Benachrichtigungen über Dinge wie nicht blockierende Lese-, nicht blockierende Schreib-, Fehlerbedingungen und andere Informationen ein.
 ms.topic: article
 ms.date: 11/18/2020
-ms.openlocfilehash: 9ad7f7afcb3dda223b4d54af293bc9a4dd019758
-ms.sourcegitcommit: f848119a8faa29b27585f4df53f6e50ee9666684
+ms.openlocfilehash: ed0bd6e37117377f91dc01cb56225b8c268cd87a0148d9ad05c2fd1a8f005f68
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/27/2021
-ms.locfileid: "110559962"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118558713"
 ---
-# <a name="winsock-socket-state-notifications"></a>Winsock-Socketstatusbenachrichtigungen
+# <a name="winsock-socket-state-notifications"></a>Winsock-Socketzustandsbenachrichtigungen
 
 ## <a name="introduction"></a>Einführung
 
-Die Socketzustandsbenachrichtigungs-APIs in der folgenden Tabelle bieten Ihnen eine skalierbare und effiziente Möglichkeit, Benachrichtigungen zu Socketzustandsänderungen zu erhalten (hinsichtlich CPU und Arbeitsspeicher effizient). Dazu gehören Benachrichtigungen zu Themen wie nicht blockierende Lesezugriffe, nicht blockierende Schreibzugriffe, Fehlerbedingungen und andere Informationen.
+Die ApIs für Socketzustandsbenachrichtigungen in der folgenden Tabelle bieten Ihnen eine skalierbare und effiziente Möglichkeit, Benachrichtigungen zu Socketzustandsänderungen zu erhalten (effizient in Bezug auf CPU und Arbeitsspeicher). Dies schließt Benachrichtigungen über Dinge wie nicht blockierende Lese-, nicht blockierende Schreib-, Fehlerbedingungen und andere Informationen ein.
 
 |API|Beschreibung|
 |-|-|
-|[**ProcessSocketNotifications-Funktion**](/windows/win32/api/winsock2/nf-winsock2-processsocketnotifications)|Ordnet einen Satz von Sockets einem Abschlussport zu und ruft alle Benachrichtigungen ab, die an diesem Port bereits ausstehen. Nach der Zuordnung empfängt der Abschlussport die angegebenen Socketzustandsbenachrichtigungen.|
-|[**SOCK_NOTIFY_REGISTRATION-Struktur**](/windows/win32/api/winsock2/ns-winsock2-sock_notify_registration)|Stellt Informationen dar, die für die **ProcessSocketNotifications-Funktion** bereitgestellt werden.|
-|[**SocketNotificationRetrieveEvents-Funktion**](/windows/win32/api/winsock2/nf-winsock2-socketnotificationretrieveevents)|Diese Inlinehilfsfunktion wird bereitgestellt, um die Ereignismaske aus einem [**OVERLAPPED_ENTRY**](/windows/win32/api/minwinbase/ns-minwinbase-overlapped_entry)abzurufen.|
+|[**ProcessSocketNotifications-Funktion**](/windows/win32/api/winsock2/nf-winsock2-processsocketnotifications)|Ordnet einem Vervollständigungsport einen Satz von Sockets zu und ruft alle Benachrichtigungen ab, die an diesem Port bereits ausstehen. Nach dem Zugeordneten empfängt der Abschlussport die angegebenen Socketzustandsbenachrichtigungen.|
+|[**SOCK_NOTIFY_REGISTRATION-Struktur**](/windows/win32/api/winsock2/ns-winsock2-sock_notify_registration)|Stellt Informationen dar, die für die **ProcessSocketNotifications-Funktion bereitgestellt** werden.|
+|[**SocketNotificationRetrifeEvents-Funktion**](/windows/win32/api/winsock2/nf-winsock2-socketnotificationretrieveevents)|Diese Inline-Hilfsfunktion wird bereitgestellt, um die Ereignismaske aus einem [**-OVERLAPPED_ENTRY.**](/windows/win32/api/minwinbase/ns-minwinbase-overlapped_entry)|
 
-Der Workflow beginnt damit, dass Sie Sockets einem E/A-Abschlussport zuordnen ([**ProcessSocketNotifications**](/windows/win32/api/winsock2/nf-winsock2-processsocketnotifications) und [**SOCK_NOTIFY_REGISTRATION**](/windows/win32/api/winsock2/ns-winsock2-sock_notify_registration)). Danach liefert der Port Informationen zu Socketzustandsänderungen mithilfe der üblichen E/A-Abschlussportabfragemethoden.
+Der Workflow beginnt damit, dass Sie Sockets einem E/A-Abschlussport [**(ProcessSocketNotifications**](/windows/win32/api/winsock2/nf-winsock2-processsocketnotifications) und [**SOCK_NOTIFY_REGISTRATION) zuordnen.**](/windows/win32/api/winsock2/ns-winsock2-sock_notify_registration) Danach stellt der Port Informationen zu Socketzustandsänderungen mithilfe der üblichen Abfragemethoden für E/A-Vervollständigungsports zur Anwendung.
 
-Diese APIs ermöglichen die einfache Erstellung plattformunabhängiger Abstraktionen. Daher werden persistente und einmalige Flags sowie flags mit Level- und Edgetrigger unterstützt. Beispielsweise sind einmalige Registrierungen mit Triggerebene das empfohlene Muster für Multithreadserver.
+Diese APIs ermöglichen die einfache Konstruktion plattformunabhängiger Abstraktionen. Daher werden persistente und einmalige Flags sowie Flags mit Level- und Edgetrigger unterstützt. Beispielsweise sind einmalige registrierungen, die auf Ebene ausgelöst werden, das empfohlene Muster für Multithreadserver.
 
 ## <a name="recommendations"></a>Empfehlungen
 
-Diese APIs bieten eine skalierbare Alternative zu [**WSAPoll**](/windows/win32/api/winsock2/nf-winsock2-wsapoll) und wählen APIs [**aus.**](/windows/win32/api/winsock2/nf-winsock2-select)
+Diese APIs stellen eine skalierbare Alternative zu [**WSAPoll**](/windows/win32/api/winsock2/nf-winsock2-wsapoll) dar und [**wählen**](/windows/win32/api/winsock2/nf-winsock2-select) APIs aus.
 
-Sie sind eine Alternative zu überlappenden [Socket-E/A-Daten,](/windows/win32/api/winsock2/nf-winsock2-wsasend#overlapped-socket-i-o) die mit E/A-Abschlussports verwendet werden, und vermeiden die Notwendigkeit dauerhafter E/A-Puffer pro Socket. [](/windows/win32/fileio/i-o-completion-ports) In einem Szenario, in dem E/A-Puffer pro Socket kein wichtiger Aspekt sind (die Anzahl der Sockets ist relativ niedrig oder wird ständig verwendet), kann überlappende Socket-E/A aufgrund einer geringeren Anzahl von Kernelübergängen sowie eines einfacheren Modells einen geringeren Mehraufwand verursachen.
+Sie sind eine Alternative zu überlappenden [Socket-E/A-Daten,](/windows/win32/api/winsock2/nf-winsock2-wsasend#overlapped-socket-i-o) die mit E/A-Abschlussports verwendet werden, und vermeiden die Notwendigkeit dauerhafter E/A-Puffer pro Socket. [](/windows/win32/fileio/i-o-completion-ports) In einem Szenario, in dem E/A-Puffer pro Socket kein wichtiger Aspekt sind (die Anzahl der Sockets ist relativ niedrig oder wird ständig verwendet), kann überlappende Socket-E/A aufgrund einer geringeren Anzahl von Kernelübergängen sowie eines einfacheren Modells weniger Aufwand verursachen.
 
-Ein Socket kann nur einem einzelnen E/A-Abschlussport zugeordnet werden. Ein Socket kann nur einmal bei einem E/A-Abschlussport registriert werden. Um vervollständigungsschlüssel zu ändern, aufheben Sie die Registrierung der Benachrichtigung, warten Sie auf die **SOCK_NOTIFY_EVENT_REMOVE-Nachricht** (siehe die Themen [**ProcessSocketNotifications**](/windows/win32/api/winsock2/nf-winsock2-processsocketnotifications) und [**SocketNotificationRetri tastenevents),**](/windows/win32/api/winsock2/nf-winsock2-socketnotificationretrieveevents) und registrieren Sie den Socket erneut.
+Ein Socket kann nur einem einzelnen E/A-Abschlussport zugeordnet werden. Ein Socket kann nur einmal bei einem E/A-Abschlussport registriert werden. Um die Vervollständigungsschlüssel zu ändern, aufheben Sie die Registrierung der Benachrichtigung, warten Sie auf die **SOCK_NOTIFY_EVENT_REMOVE-Nachricht** (siehe die Themen [**ProcessSocketNotifications**](/windows/win32/api/winsock2/nf-winsock2-processsocketnotifications) und [**SocketNotificationRetrieveEvents),**](/windows/win32/api/winsock2/nf-winsock2-socketnotificationretrieveevents) und registrieren Sie den Socket erneut.
 
 Um zu vermeiden, dass noch verwendeter Arbeitsspeicher frei wird, sollten Sie die  zugeordneten Datenstrukturen einer Registrierung erst nach dem Empfang der SOCK_NOTIFY_EVENT_REMOVE für die Registrierung frei geben. Wenn der socket-Deskriptor, der zum Registrieren für Benachrichtigungen verwendet wird, mithilfe der [closesocket-Funktion](/windows/win32/api/winsock/nf-winsock-closesocket) geschlossen wird, wird die Registrierung der Benachrichtigungen automatisch aufgehoben. Allerdings können Benachrichtigungen, die sich bereits in der Warteschlange befinden, weiterhin übermittelt werden. Eine automatische Aufhebung der Registrierung über **closesocket** generiert keine **SOCK_NOTIFY_EVENT_REMOVE** Benachrichtigung.
 
-Wenn Sie die Multithreadverarbeitung wünschen, sollten Sie einen einzelnen E/A-Vervollständigungsport mit mehreren Threads verwenden, die Benachrichtigungen verarbeiten. Dadurch kann der E/A-Abschlussport die Arbeit bei Bedarf über mehrere Threads aufskalieren. Vermeiden Sie es, mehrere E/A-Vervollständigungsports (z. B. einen pro Thread) zu verwenden, da dieser Entwurf anfällig für bottle-fülling in einem einzelnen Thread ist, während sich andere im Leerlauf befinden.
+Wenn Sie die Multithreadverarbeitung wünschen, sollten Sie einen einzelnen E/A-Vervollständigungsport mit mehreren Threads verwenden, die Benachrichtigungen verarbeiten. Dadurch kann der E/A-Abschlussport die Arbeit bei Bedarf über mehrere Threads aufskalieren. Vermeiden Sie es, mehrere E/A-Vervollständigungsports (z. B. einen pro Thread) zu verwenden, da dieser Entwurf anfällig für bottle-füllendes Arbeiten in einem einzelnen Thread ist, während sich andere im Leerlauf befinden.
 
-Wenn mehrere Threads Benachrichtigungspakete mit auf Ebene ausgelösten Benachrichtigungen **aus** der Schachtelung entfernt, sollten SOCK_NOTIFY_TRIGGER_ONESHOT bereitgestellt werden, um zu vermeiden, dass mehrere Threads Benachrichtigungen zu einer Zustandsänderung empfangen. Nachdem die Socketbenachrichtigung verarbeitet wurde, sollte die Benachrichtigung erneut registriert werden.
+Wenn mehrere Threads Benachrichtigungspakete mit auf Ebene ausgelösten **Benachrichtigungen aus** der Schachtelung entfernt haben, sollten SOCK_NOTIFY_TRIGGER_ONESHOT bereitgestellt werden, um zu vermeiden, dass mehrere Threads Benachrichtigungen zu einer Zustandsänderung empfangen. Nachdem die Socketbenachrichtigung verarbeitet wurde, sollte die Benachrichtigung erneut registriert werden.
 
-Wenn mehrere Threads Benachrichtigungspakete in einer streamorientierten Verbindung aus der Löschung nehmen, bei der einzelne Nachrichten in einem einzelnen Thread verarbeitet werden müssen, sollten Sie die Verwendung von durch die Ebene ausgelösten einmal ausgelösten Benachrichtigungen in Betracht ziehen. Dies verringert die Wahrscheinlichkeit, dass mehrere Threads Nachrichtenfragmente empfangen, die threadübergreifend neu zusammengestellt werden müssen. 
+Wenn mehrere Threads Benachrichtigungspakete in einer streamorientierten Verbindung aus der Zeichenfolge löschen, bei der einzelne Nachrichten in einem einzelnen Thread verarbeitet werden müssen, sollten Sie einmalige Benachrichtigungen verwenden, die auf Ebene ausgelöst werden. Dies verringert die Wahrscheinlichkeit, dass mehrere Threads Nachrichtenfragmente empfangen, die threadübergreifend neu zusammengesetzt werden müssen. 
 
-Wenn Sie edgeauslösende Benachrichtigungen verwenden, empfehlen wir keine einmaligen Benachrichtigungen, da der Socket nach dem Aktivieren von Registrierungen entladen werden muss. Dies ist ein komplizierteres Muster, das implementiert werden muss, und ist teurer, da es immer einen Aufruf erfordert, **der WSAEWOULDBLOCK** zurückgibt.
+Wenn Sie durch Edge ausgelöste Benachrichtigungen verwenden, werden keine einmaligen Benachrichtigungen empfohlen, da der Socket nach dem Aktivieren von Registrierungen entleert werden muss. Dies ist ein komplizierteres Muster, das implementiert werden muss, und ist teurer, da es immer einen Aufruf erfordert, der **WSAEWOULDBLOCK zurückgibt.**
 
-Wenn Sie die Verbindungsakzeptanz auf einem einzelnen Lauschendocket aufskalieren möchten, sollten Server die [AcceptEx-Funktion](/windows/win32/api/mswsock/nf-mswsock-acceptex) verwenden, anstatt Benachrichtigungen für Verbindungsanforderungen zu abonnieren. Das Akzeptieren von Verbindungen als Reaktion auf Benachrichtigungen drosselt implizit die Rate der Verbindungsakzeptanz relativ zur Verarbeitung von Anforderungen für vorhandene Verbindungen.
+Wenn Sie die Aufskalierung der Verbindungsakzeptanz für einen einzelnen lauschenden Socket wünschen, sollten Server die [AcceptEx-Funktion](/windows/win32/api/mswsock/nf-mswsock-acceptex) verwenden, anstatt Benachrichtigungen für Verbindungsanforderungen zu abonnieren. Das Akzeptieren von Verbindungen als Reaktion auf Benachrichtigungen drosselt implizit die Rate der Verbindungsakzeptanz relativ zur Verarbeitung von Anforderungen für vorhandene Verbindungen.
 
-Im Folgenden finden Sie Codebeispiele, die einige Socketzustandsbenachrichtigungsszenarien veranschaulichen. Ein Teil des Codes enthält , um Elemente für Ihre eigenen Anwendungen *zu erledigen.*
+Im Folgenden finden Sie Codebeispiele, die einige Szenarien für Socketzustandsbenachrichtigungen veranschaulichen. Ein Teil des Codes enthält *, um Elemente* für Ihre eigenen Anwendungen zu erstellen.
 
-## <a name="common-code"></a>Allgemeiner Code
+## <a name="common-code"></a>Häufig verwendeter Code
 
-Zunächst finden Sie hier eine Codeauflistung, die einige allgemeine Definitionen und Funktionen enthält, die von den folgenden Szenarien verwendet werden.
+Zunächst folgt eine Codeauflistung, die einige allgemeine Definitionen und Funktionen enthält, die von den folgenden Szenarien verwendet werden.
 
 ```cpp
 #include "pch.h"
@@ -274,7 +274,7 @@ Exit:
 
 ## <a name="simple-replacement-for-polling"></a>Einfacher Ersatz für Abrufe
 
-In diesem Szenario wird ein drop-in-Ersatz für Anwendungen mithilfe von Poll ([**WSAPoll**](/windows/win32/api/winsock2/nf-winsock2-wsapoll)) oder ähnlichen APIs veranschaulicht. Es ist singlethreaded und nutzt persistente (nicht einmalige) Registrierungen. Da die Registrierung nicht erneut registriert werden muss, wird [**GetQueuedCompletionStatusEx**](/windows/win32/fileio/getqueuedcompletionstatusex-func) verwendet, um Benachrichtigungen aus der Veröffentlichung zu nehmen.
+In diesem Szenario wird ein Drop-In-Ersatz für Anwendungen veranschaulicht, die poll ([**WSAPoll**](/windows/win32/api/winsock2/nf-winsock2-wsapoll)) oder ähnliche APIs verwenden. Es ist ein Singlethread und nutzt persistente (nicht einmalige) Registrierungen. Da die Registrierung nicht erneut registriert werden muss, werden Benachrichtigungen mit [**getQueuedCompletionStatusEx aus der QueuedCompletionStatusEx**](/windows/win32/fileio/getqueuedcompletionstatusex-func) entfernt.
 
 ```cpp
 VOID SimplePollReplacement() {
@@ -416,14 +416,14 @@ Exit:
 }
 ```
 
-## <a name="edge-triggered-udp-server"></a>Von Edge ausgelöster UDP-Server
+## <a name="edge-triggered-udp-server"></a>Durch Edge ausgelöster UDP-Server
 
-Dies ist eine einfache Abbildung der Verwendung der APIs mit Edgeauslöser.
+Dies ist eine einfache Abbildung der Verwendung der APIs mit Edgetriggern.
 
 > [!IMPORTANT]
-> Der Server muss weiterhin empfangen, bis er einen **WSAEWHOUDBLOCK** empfängt. Andernfalls kann es nicht sicher sein, dass ein stetiger Rand beobachtet wird. Daher muss der Socket des Servers auch nicht blockierend sein.
+> Der Server muss weiterhin empfangen, bis er **einen WSAEWOULDBLOCK empfängt.** Andernfalls kann nicht sichergestellt werden, dass ein steigender Rand beobachtet wird. Daher muss der Socket des Servers auch nicht blockierend sein.
 
-In diesem Beispiel wird UDP verwendet, um das Fehlen einer **HANGUP-Benachrichtigung zu** veranschaulichen. Es dauert einige Sorgen, wenn angenommen wird, dass die gängigen Hilfs zum Erstellen von UDP-Sockets bei Bedarf verwendet werden.
+In diesem Beispiel wird UDP verwendet, um das Fehlen einer **HANGUP-Benachrichtigung zu** veranschaulichen. Es erfordert einige Sorgen, wenn angenommen wird, dass die gängigen Hilfs zum Erstellen von UDP-Sockets bei Bedarf verwendet werden.
 
 ```cpp
 // This example assumes that substantially similar helpers are available for UDP sockets.
@@ -586,9 +586,9 @@ Exit:
 
 ## <a name="multi-threaded-server"></a>Multithreadserver
 
-In diesem Beispiel wird ein realistischeres Multithread-Verwendungsmuster veranschaulicht, bei dem die Funktionen für das aufskalierte Skalieren des E/A-Abschlussports verwendet werden, um die Arbeit auf mehrere Serverthreads zu verteilen. Der Server verwendet one-shot level-triggering, um zu vermeiden, dass mehrere Threads Benachrichtigungen für denselben Socket aufnehmen, und um es jedem Thread zu ermöglichen, empfangene Daten blocksynt zu leeren.
+In diesem Beispiel wird ein realistischeres Multithread-Verwendungsmuster veranschaulicht, bei dem die Funktionen für das aufskalierte Skalieren des E/A-Abschlussports verwendet werden, um die Arbeit auf mehrere Serverthreads zu verteilen. Der Server verwendet one-shot level-triggering, um zu vermeiden, dass mehrere Threads Benachrichtigungen für denselben Socket aufnehmen und es jedem Thread ermöglichen, empfangene Daten block gleichzeitig zu leeren.
 
-Außerdem werden einige allgemeine Muster veranschaulicht, die mit dem Vervollständigungsport verwendet werden. Der Vervollständigungsschlüssel wird verwendet, um einen Kontextzeiger pro Socket zu geben. Der Kontextzeiger verfügt über einen Header, der den Typ des verwendeten Sockets beschreibt, sodass mehrere Sockettypen auf einem einzelnen Vervollständigungsport verwendet werden können. Kommentare im Beispiel zeigen, dass beliebige Vervollständigungen (genau wie bei der [**GetQueuedCompletionStatusEx-Funktion)**](/windows/win32/fileio/getqueuedcompletionstatusex-func) aus der Queued-Benachrichtigung entfernt werden können, nicht nur Socketbenachrichtigungen. Die [**PostQueuedCompletionStatus-API**](/windows/win32/fileio/postqueuedcompletionstatus) wird verwendet, um Nachrichten an Threads zu senden und sie zu reaktivieren, ohne auf den Eintreffen einer Socketbenachrichtigung warten zu müssen.
+Außerdem werden einige allgemeine Muster veranschaulicht, die mit dem Vervollständigungsport verwendet werden. Der Vervollständigungsschlüssel wird verwendet, um einen Kontextzeiger pro Socket zu geben. Der Kontextzeiger verfügt über einen Header, der den Typ des verwendeten Sockets beschreibt, sodass mehrere Sockettypen an einem einzelnen Vervollständigungsport verwendet werden können. Kommentare im Beispiel heben auf, dass beliebige Vervollständigungen (genau wie bei der [**GetQueuedCompletionStatusEx-Funktion)**](/windows/win32/fileio/getqueuedcompletionstatusex-func) aus der Queued-Benachrichtigung entfernt werden können, nicht nur Socketbenachrichtigungen. Die [**PostQueuedCompletionStatus-API**](/windows/win32/fileio/postqueuedcompletionstatus) wird verwendet, um Nachrichten an Threads zu senden und sie zu reaktivieren, ohne auf den Eintreffen einer Socketbenachrichtigung warten zu müssen.
 
 Schließlich veranschaulicht das Beispiel einige der Feinheiten des ordnungsgemäßen Aufhebens und Bereinigens von Socketkontexten in einer Threadworkload. In diesem Beispiel befindet sich der Socketkontext implizit im Besitz des Threads, der die Benachrichtigung empfängt. Der Thread behält den Besitz bei, wenn die Benachrichtigung nicht registriert werden kann.
 
@@ -1000,7 +1000,7 @@ Exit:
 }
 ```
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 * [ProcessSocketNotifications](/windows/win32/api/winsock2/nf-winsock2-processsocketnotifications)
 * [SOCK_NOTIFY_REGISTRATION](/windows/win32/api/winsock2/ns-winsock2-sock_notify_registration)

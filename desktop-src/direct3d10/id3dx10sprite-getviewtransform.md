@@ -1,7 +1,7 @@
 ---
-description: Hiermit wird die Ansichts Transformation für alle Sprites angezeigt.
+description: Hier erhalten Sie die Ansichtstransformation, die für alle Sprites gilt.
 ms.assetid: eba45c08-64cc-4119-83d4-50351fe21bea
-title: 'ID3DX10Sprite:: GetViewTransform-Methode (d3dx10. h)'
+title: ID3DX10Sprite::GetViewTransform-Methode (D3DX10.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -14,16 +14,16 @@ api_type:
 api_location:
 - D3DX10.lib
 - D3DX10.dll
-ms.openlocfilehash: 699a46e48545d58058fb1f2db2955b4a4f403a53
-ms.sourcegitcommit: 14010c34b35fa268046c7683f021f86de08ddd0a
+ms.openlocfilehash: 664cded793fff7b37c7d1218d8d87d50cc0bc57ac290a4bba07bff0cdf169050
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "106355849"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117736028"
 ---
-# <a name="id3dx10spritegetviewtransform-method"></a>ID3DX10Sprite:: GetViewTransform-Methode
+# <a name="id3dx10spritegetviewtransform-method"></a>ID3DX10Sprite::GetViewTransform-Methode
 
-Hiermit wird die Ansichts Transformation für alle Sprites angezeigt.
+Hier erhalten Sie die Ansichtstransformation, die für alle Sprites gilt.
 
 ## <a name="syntax"></a>Syntax
 
@@ -40,12 +40,12 @@ HRESULT GetViewTransform(
 
 <dl> <dt>
 
-*pviewtransform* \[ vorgenommen\]
+*pViewTransform* \[ out\]
 </dt> <dd>
 
 Typ: **[ **D3DXMATRIX**](../direct3d9/d3dxmatrix.md)\***
 
-Zeiger auf eine [**D3DX10MATRIX**](d3d10-d3dxmatrix.md) , die auf die Transformation des Sprite aus dem ursprünglichen Raum festgelegt wird.
+Zeiger auf eine [**D3DX10MATRIX,**](d3d10-d3dxmatrix.md) die auf die Transformation des Sprite aus dem ursprünglichen Raum festgelegt wird.
 
 </dd> </dl>
 
@@ -53,7 +53,7 @@ Zeiger auf eine [**D3DX10MATRIX**](d3d10-d3dxmatrix.md) , die auf die Transforma
 
 Typ: **[ **HRESULT**](https://msdn.microsoft.com/library/Bb401631(v=MSDN.10).aspx)**
 
-Wenn die Methode erfolgreich ausgeführt wird, ist der Rückgabewert S \_ OK. Wenn die Methode fehlschlägt, wird der folgende Wert zurückgegeben: D3DERR \_ invalidcall.
+Wenn die Methode erfolgreich ist, ist der Rückgabewert S \_ OK. Wenn die Methode fehlschlägt, wird der folgende Wert zurückgegeben: D3DERR \_ INVALIDCALL.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -61,12 +61,12 @@ Wenn die Methode erfolgreich ausgeführt wird, ist der Rückgabewert S \_ OK. We
 
 | Anforderung | Wert |
 |--------------------|---------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>D3dx10. h</dt> </dl>   |
-| Bibliothek<br/> | <dl> <dt>D3dx10. lib</dt> </dl> |
+| Header<br/>  | <dl> <dt>D3DX10.h</dt> </dl>   |
+| Bibliothek<br/> | <dl> <dt>D3DX10.lib</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 

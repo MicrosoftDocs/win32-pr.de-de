@@ -36,7 +36,7 @@ Dieser Abschnitt enthält Informationen zu den D3DX 11-Strukturen.
 <thead>
 <tr class="header">
 <th>Thema</th>
-<th>Beschreibung</th>
+<th>BESCHREIBUNG</th>
 </tr>
 </thead>
 <tbody>

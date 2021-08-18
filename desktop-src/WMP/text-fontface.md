@@ -1,9 +1,9 @@
 ---
-title: Text. fontface
-description: Das fontface-Attribut gibt die Schriftart für das Text Steuerelement an oder ruft Sie ab.
+title: TEXT.fontFace
+description: Das fontFace-Attribut gibt die Schriftart für das Text-Steuerelement an oder ruft sie ab.
 ms.assetid: 3b39e245-139a-4361-b678-0f9e962996b7
 keywords:
-- Text. fontface-Fenster Media Player
+- TEXT.fontFace Windows Media Player
 topic_type:
 - apiref
 api_name:
@@ -12,16 +12,16 @@ api_type:
 - NA
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 183b25547e456cb90cac4d2137354679e13d8a96
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: f3b1044d01ac3ca6a8cc4f1212232bfcc630eb73831f90eb7fd5f423f5dc38d4
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106369119"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118118357"
 ---
-# <a name="textfontface"></a>Text. fontface
+# <a name="textfontface"></a>TEXT.fontFace
 
-Das **fontface** -Attribut gibt die Schriftart für das Text Steuerelement an oder ruft Sie ab.
+Das **fontFace-Attribut** gibt die Schriftart für das Text-Steuerelement an oder ruft sie ab.
 
 ``` syntax
         elementID.fontFace
@@ -29,15 +29,15 @@ Das **fontface** -Attribut gibt die Schriftart für das Text Steuerelement an od
 
 ## <a name="possible-values"></a>Mögliche Werte
 
-Dieses Attribut ist eine Lese- **/schreibzeichenfolge**.
+Dieses Attribut ist eine **Zeichenfolge** mit Lese-/Schreibzugriff.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Dieses Attribut kann der Name einer beliebigen gültigen Schriftart sein, die unter Windows verfügbar ist. Das Installieren von Schriftarten wird von Windows Media Player nicht unterstützt. Wählen Sie also eine Schriftart aus, die Sie auf dem vorgesehenen System kennen.
+Dieses Attribut kann der Name einer beliebigen gültigen Schriftart sein, die auf Windows verfügbar ist. Windows Media Player die Installation von Schriftarten nicht unterstützt, wählen Sie daher eine Schriftart aus, von der Sie wissen, dass sie sich auf dem vorgesehenen System befingt.
 
-Wenn die angegebene **fontface** nicht auf dem System des Benutzers verfügbar ist, wird das Text Steuerelement standardmäßig auf die Schriftart des Windows-Systems festgelegt.
+Wenn das angegebene **fontFace** auf dem System des Benutzers nicht verfügbar ist, wird für das Text-Steuerelement standardmäßig die Windows Systemschriftart verwendet.
 
-Im [value](text-value.md) -Attribut finden Sie ein Beispiel, das veranschaulicht, wie die Attribute des **Text** -Elements verwendet werden.
+Ein Beispiel, das veranschaulicht, wie die Attribute des **TEXT-Elements** verwendet werden, finden Sie im [Value-Attribut.](text-value.md)
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -45,18 +45,18 @@ Im [value](text-value.md) -Attribut finden Sie ein Beispiel, das veranschaulicht
 
 | Anforderung | Wert |
 |--------------------|------------------------------------------------------|
-| Version<br/> | Windows Media Player, Version 7,0 oder höher<br/> |
+| Version<br/> | Windows Media Player Version 7.0 oder höher<br/> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Text-Element**](text-element.md)
+[**TEXT-Element**](text-element.md)
 </dt> <dt>
 
-[**Text. FontSize**](text-fontsize.md)
+[**TEXT.fontSize**](text-fontsize.md)
 </dt> </dl>
 
  

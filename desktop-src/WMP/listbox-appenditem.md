@@ -1,9 +1,9 @@
 ---
-title: ListBox. appendItem
-description: Mit der appendItem-Methode wird am Ende des Listenfeld-Steuer Elements neuer Text eingefügt.
+title: LISTBOX.appendItem
+description: Die appendItem-Methode fügt neuen Text am Ende des Listenfeld-Steuerelements ein.
 ms.assetid: 899b9806-7135-4e87-bd1c-82b703a3ed20
 keywords:
-- ListBox. appendItem-Fenster Media Player
+- LISTBOX.appendItem Windows Media Player
 topic_type:
 - apiref
 api_name:
@@ -13,16 +13,16 @@ api_type:
 ms.topic: reference
 ms.date: 05/31/2018
 api_location: ''
-ms.openlocfilehash: 0ca7f1fde59f248899e2443fbeb5f8cf201e7679
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 2d94ae581a1bdd83e02e3840ee79c21d9edd965f3963c421073fba85c1fd9d67
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106370076"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118119036"
 ---
-# <a name="listboxappenditem"></a>ListBox. appendItem
+# <a name="listboxappenditem"></a>LISTBOX.appendItem
 
-Mit der **appendItem** -Methode wird am Ende des Listenfeld-Steuer Elements neuer Text eingefügt.
+Die **appendItem-Methode** fügt neuen Text am Ende des Listenfeld-Steuerelements ein.
 
 ``` syntax
         elementID.appendItem(newVal)
@@ -32,10 +32,10 @@ Mit der **appendItem** -Methode wird am Ende des Listenfeld-Steuer Elements neue
 
 <dl> <dt>
 
-<span id="newVal"></span><span id="newval"></span><span id="NEWVAL"></span>*NewVal*
+<span id="newVal"></span><span id="newval"></span><span id="NEWVAL"></span>*newVal*
 </dt> <dd>
 
-**Zeichenfolge** , die den einzufügenden Text enthält.
+**Eine Zeichenfolge,** die den zu einfügenden Text enthält.
 
 </dd> </dl>
 
@@ -53,11 +53,11 @@ Diese Methode gibt keinen Wert zurück.
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**ListBox-Element**](listbox-element.md)
+[**LISTBOX-Element**](listbox-element.md)
 </dt> </dl>
 
  

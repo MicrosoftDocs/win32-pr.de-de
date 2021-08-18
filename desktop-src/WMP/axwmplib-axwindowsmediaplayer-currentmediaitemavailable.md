@@ -1,9 +1,9 @@
 ---
-title: Currentmediaitemavailable-Ereignis des AxWindowsMediaPlayer-Objekts
-description: Das currentmediaitemavailable-Ereignis tritt auf, wenn ein grafisches Metadatenelement im aktuellen Medien Element verfügbar wird. | Currentmediaitemavailable-Ereignis des AxWindowsMediaPlayer-Objekts
+title: CurrentMediaItemAvailable-Ereignis des AxWindowsMediaPlayer-Objekts
+description: Das CurrentMediaItemAvailable-Ereignis tritt auf, wenn ein grafisches Metadatenelement im aktuellen Medienelement verfügbar wird. | CurrentMediaItemAvailable-Ereignis des AxWindowsMediaPlayer-Objekts
 ms.assetid: 7db62e6a-5f20-441a-801f-147ac386c5f8
 keywords:
-- Currentmediaitemavailable-Ereignis der AxWindowsMediaPlayer-Objekt Fenster Media Player
+- CurrentMediaItemAvailable-Ereignis des AxWindowsMediaPlayer-Objekts Windows Media Player
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - Assembly
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 547622424194e63733cec6166d813d42ebf577ee
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 6b5bbac6f27dfa7c9de1115eb3c2f5eea85096e0868ac17e0f8b11d81385f344
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106360991"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118582349"
 ---
-# <a name="currentmediaitemavailable-event-of-the-axwindowsmediaplayer-object"></a>Currentmediaitemavailable-Ereignis des AxWindowsMediaPlayer-Objekts
+# <a name="currentmediaitemavailable-event-of-the-axwindowsmediaplayer-object"></a>CurrentMediaItemAvailable-Ereignis des AxWindowsMediaPlayer-Objekts
 
-Das currentmediaitemavailable-Ereignis tritt auf, wenn ein grafisches Metadatenelement im aktuellen Medien Element verfügbar wird.
+Das CurrentMediaItemAvailable-Ereignis tritt auf, wenn ein grafisches Metadatenelement im aktuellen Medienelement verfügbar wird.
 
 ``` syntax
 [C#]
@@ -41,21 +41,21 @@ Private Sub player_CurrentMediaItemAvailable(
 
 ## <a name="event-data"></a>Ereignisdaten
 
-Der diesem Ereignis zugeordnete Handler ist vom Typ **AxWMPLib. \_ Wmpocxevents \_ currentmediaitemavailableeventhandler**. Dieser Handler empfängt ein Argument vom Typ **AxWMPLib. \_ Wmpocxevents \_ currentmediaitemavailableevent**, das die folgende Eigenschaft enthält, die sich auf dieses Ereignis bezieht.
+Der diesem Ereignis zugeordnete Handler ist vom Typ **AxWMPLib. \_ WMPOCXEvents \_ CurrentMediaItemAvailableEventHandler**. Dieser Handler empfängt ein Argument vom Typ **AxWMPLib. \_ WMPOCXEvents \_ CurrentMediaItemAvailableEvent**, das die folgende Eigenschaft im Zusammenhang mit diesem Ereignis enthält.
 
 
 
 | Eigenschaft     | BESCHREIBUNG                                                 |
 |--------------|-------------------------------------------------------------|
-| bstritemname | System. stringder Name des aktuellen Medien Elements.<br/> |
+| bstrItemName | System.StringDer Name des aktuellen Medienelements.<br/> |
 
 
 
  
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Da die Wiedergabe beginnen kann, bevor ein Medien Element vollständig heruntergeladen wird, sind alle im Medien Element enthaltenen metadatengrafiken (z. b. Albumcover Art) möglicherweise nicht verfügbar, wenn die Wiedergabe gestartet wird. Dieses Ereignis warnt Sie, wenn ein metadatengrafieelement den Download abgeschlossen hat. Sie können dann die **iwmpmedia** -Schnittstelle abrufen, indem Sie den Wert von **bstritemname** an die *iwmpmediacollection* übergeben. **getByName** -Methode, nach der Sie mithilfe von *IWMPMedia3* auf das metadatengrafieelement zugreifen können. **getItemInfoByType** und Angeben von **WM/Bild** für den Attributnamen.
+Da die Wiedergabe beginnen kann, bevor ein Medienelement vollständig heruntergeladen wird, sind metadatengrafiken, die im Medienelement enthalten sind (z. B. Album cover art), möglicherweise nicht verfügbar, wenn es mit der Wiedergabe beginnt. Dieses Ereignis warnt Sie, wenn das Herunterladen eines Metadatengrafikelements abgeschlossen ist. Sie können dann die **IWMPMedia-Schnittstelle** abrufen, indem Sie den Wert von **bstrItemName** an die *IWMPMediaCollection* übergeben. **getByName-Methode,** nach der Sie mithilfe von *IWMPMedia3* auf das Metadatengrafikelement zugreifen können. **getItemInfoByType** und Angeben von **WM/Picture** für den Attributnamen.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -63,7 +63,7 @@ Da die Wiedergabe beginnen kann, bevor ein Medien Element vollständig herunterg
 
 | Anforderung | Wert |
 |----------------------|----------------------------------------------------------------------------------------------------------------------------|
-| Version<br/>   | Windows Media Player 9-Serie oder höher<br/>                                                                          |
+| Version<br/>   | Windows Media Player Serie 9 oder höher<br/>                                                                          |
 | Namespace<br/> | **AxWMPLib**<br/>                                                                                                    |
 | Assembly<br/>  | <dl> <dt>AxInterop.WMPLib.dll (AxInterop.WMPLib.dll.dll)</dt> </dl> |
 
@@ -73,16 +73,16 @@ Da die Wiedergabe beginnen kann, bevor ein Medien Element vollständig herunterg
 
 <dl> <dt>
 
-[**AxWindowsMediaPlayer-Objekt (VB und c#)**](axwindowsmediaplayer-object--vb-and-c.md)
+[**AxWindowsMediaPlayer-Objekt (VB und C#)**](axwindowsmediaplayer-object--vb-and-c.md)
 </dt> <dt>
 
-[**Iwmpmedia-Schnittstelle (VB und c#)**](iwmpmedia--vb-and-c.md)
+[**IWMPMedia-Schnittstelle (VB und C#)**](iwmpmedia--vb-and-c.md)
 </dt> <dt>
 
-[**IWMPMedia3. getItemInfoByType (VB und c#)**](wmplibiwmpmedia3-iwmpmedia3-getiteminfobytype--vb-and-c.md)
+[**IWMPMedia3.getItemInfoByType (VB und C#)**](wmplibiwmpmedia3-iwmpmedia3-getiteminfobytype--vb-and-c.md)
 </dt> <dt>
 
-[**Iwmpmediacollection. getByName (VB und c#)**](wmplibiwmpmediacollection-iwmpmediacollection-getbyname--vb-and-c.md)
+[**IWMPMediaCollection.getByName (VB und C#)**](wmplibiwmpmediacollection-iwmpmediacollection-getbyname--vb-and-c.md)
 </dt> </dl>
 
  

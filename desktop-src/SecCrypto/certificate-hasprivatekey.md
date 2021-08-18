@@ -1,5 +1,5 @@
 ---
-description: Bestimmt, ob dem Zertifikat ein privater Schlüssel zugeordnet ist. Die -Methode bestimmt dies, indem überprüft wird, ob die \_ \_ \_ \_ PROP-ID-Eigenschaft CERT KEY PROV INFO \_ vorhanden ist.
+description: Bestimmt, ob dem Zertifikat ein privater Schlüssel zugeordnet ist. Die -Methode bestimmt dies, indem überprüft wird, ob die \_ CERT KEY \_ PROV \_ INFO PROP \_ \_ ID-Eigenschaft vorhanden ist.
 ms.assetid: 80478956-1ed7-4c25-9ae3-d7176649e6d7
 title: ICertificate2::HasPrivateKey-Methode
 ms.topic: reference
@@ -24,9 +24,9 @@ ms.locfileid: "117771535"
 ---
 # <a name="icertificate2hasprivatekey-method"></a>ICertificate2::HasPrivateKey-Methode
 
-\[CAPICOM ist eine nur 32-Bit-Komponente, die für die Verwendung in den folgenden Betriebssystemen verfügbar ist: Windows Server 2008, Windows Vista und Windows XP. Verwenden Sie stattdessen die [**X509Certificate2-Klasse**](/previous-versions/windows/embedded/hh424017(v=msdn.10)) im [**Namespace System.Security.Cryptography.X509Certificates.**](/dotnet/api/system.security.cryptography.x509certificates.publickey.-ctor?view=netcore-3.1)\]
+\[CAPICOM ist eine 32-Bit-Komponente, die für die Verwendung in den folgenden Betriebssystemen verfügbar ist: Windows Server 2008, Windows Vista und Windows XP. Verwenden Sie stattdessen die [**X509Certificate2-Klasse**](/previous-versions/windows/embedded/hh424017(v=msdn.10)) im [**Namespace System.Security.Cryptography.X509Certificates.**](/dotnet/api/system.security.cryptography.x509certificates.publickey.-ctor?view=netcore-3.1)\]
 
-Die **HasPrivateKey-Methode** bestimmt, ob dem [*Zertifikat*](../secgloss/c-gly.md) ein [*privater Schlüssel*](../secgloss/p-gly.md) zugeordnet ist. Die -Methode bestimmt dies, indem überprüft wird, ob die \_ \_ \_ \_ PROP-ID-Eigenschaft CERT KEY PROV INFO \_ vorhanden ist.
+Die **HasPrivateKey-Methode** bestimmt, ob [*dem Zertifikat*](../secgloss/c-gly.md) ein privater [*Schlüssel*](../secgloss/p-gly.md) zugeordnet ist. Die -Methode bestimmt dies, indem überprüft wird, ob die \_ CERT KEY \_ PROV \_ INFO PROP \_ \_ ID-Eigenschaft vorhanden ist.
 
 ## <a name="syntax"></a>Syntax
 

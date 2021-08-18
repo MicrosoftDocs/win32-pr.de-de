@@ -1,6 +1,6 @@
 ---
-title: IBackgroundCopyJob5 GetProperty-Methode (deliveryoptimization. h)
-description: Eine generische Methode zum erhalten von Auftrags Eigenschaften für die Übermittlungs Optimierung (Do).
+title: IBackgroundCopyJob5 GetProperty-Methode (Deliveryoptimization.h)
+description: Eine generische Methode zum Abrufen Übermittlungsoptimierung (DO)-Auftragseigenschaften.
 ms.assetid: 22BA2FAB-3F24-4801-8FB7-CB6F9E8DFBB3
 keywords:
 - GetProperty-Methode
@@ -17,16 +17,16 @@ api_type:
 ms.topic: reference
 ms.date: 05/31/2018
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: 8200bb63a131db6fcab30b77f35a89fc9c943675
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 2141afba2d2f58a08c62d609b9029c07ae07923e35f43e985f61a13a02aa68d2
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "103956557"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118542799"
 ---
-# <a name="ibackgroundcopyjob5getproperty-method"></a>IBackgroundCopyJob5:: GetProperty-Methode
+# <a name="ibackgroundcopyjob5getproperty-method"></a>IBackgroundCopyJob5::GetProperty-Methode
 
-Eine generische Methode zum erhalten von Auftrags Eigenschaften für die Übermittlungs Optimierung (Do).
+Eine generische Methode zum Abrufen Übermittlungsoptimierung (DO)-Auftragseigenschaften.
 
 ## <a name="syntax"></a>Syntax
 
@@ -44,23 +44,23 @@ HRESULT GetProperty(
 
 <dl> <dt>
 
-*PropertyId* \[ in\]
+*PropertyId* \[ In\]
 </dt> <dd>
 
-Die ID der Eigenschaft, die abgerufen wird, als [**BITS_JOB_PROPERTY_ID**](bits-job-property-id.md) Enumerationswert.
+Die ID der Eigenschaft, die als [](bits-job-property-id.md) Einsenumerwert BITS_JOB_PROPERTY_ID wird.
 
 </dd> <dt>
 
-*ppropertyvalue* \[ vorgenommen\]
+*pPropertyValue* \[ out\]
 </dt> <dd>
 
-Der Eigenschafts Wert, der als BITS_JOB_PROPERTY_VALUE Union zurückgegeben wird.
+Der eigenschaftswert, der als BITS_JOB_PROPERTY_VALUE zurückgegeben wird.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Die-Methode gibt die folgenden Rückgabewerte zurück.
+Die -Methode gibt die folgenden Rückgabewerte zurück.
 
 
 
@@ -78,24 +78,24 @@ Die-Methode gibt die folgenden Rückgabewerte zurück.
 
 | Anforderung | Wert |
 |-------------------------------------|-----------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Windows 10, Version 1709, \[ nur Desktop-Apps\]<br/>                                           |
-| Unterstützte Mindestversion (Server)<br/> | Windows Server, Version 1709, \[ nur Desktop-Apps\]<br/>                                       |
-| Header<br/>                   | <dl> <dt>Deliveryoptimization. h</dt> </dl>   |
-| IDL<br/>                      | <dl> <dt>Deliveryoptimization. idl</dt> </dl> |
-| Bibliothek<br/>                  | <dl> <dt>Dosvc. lib</dt> </dl>                |
+| Unterstützte Mindestversion (Client)<br/> | Windows 10, version 1709 desktop apps only (Nur Desktop-Apps der Version 1709) \[\]<br/>                                           |
+| Unterstützte Mindestversion (Server)<br/> | Windows Server, version 1709 desktop apps only (Nur \[ Desktop-Apps der Version 1709)\]<br/>                                       |
+| Header<br/>                   | <dl> <dt>Deliveryoptimization.h</dt> </dl>   |
+| Idl<br/>                      | <dl> <dt>DeliveryOptimization.idl</dt> </dl> |
+| Bibliothek<br/>                  | <dl> <dt>Dosvc.lib</dt> </dl>                |
 | DLL<br/>                      | <dl> <dt>Dosvc.dll</dt> </dl>                |
-| IID<br/>                      | IID_IBackgroundCopyJob5 ist als E847030C-bbba-4657-AF6D-484aa42bf1fe definiert.<br/>              |
+| IID<br/>                      | IID_IBackgroundCopyJob5 ist als E847030C-BBBA-4657-AF6D-484AA42BF1FE definiert.<br/>              |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
 [**IBackgroundCopyJob5**](ibackgroundcopyjob5.md)
 </dt> <dt>
 
-[**IBackgroundCopyJob5:: SetProperty**](ibackgroundcopyjob5-setproperty.md)
+[**IBackgroundCopyJob5::SetProperty**](ibackgroundcopyjob5-setproperty.md)
 </dt> </dl>
 
  

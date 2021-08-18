@@ -1,7 +1,7 @@
 ---
-description: Fährt den Thread für die Auflösung von Benutzernamen herunter.
+description: Fährt den Thread für die Benutzernamenauflösung herunter.
 ms.assetid: 6c4544b9-81e7-4a72-aa00-70011e5cd85a
-title: Diskquotacontrol. shutdownnameresolution-Methode (dskquota. h)
+title: DiskQuotaControl.ShutdownNameResolution-Methode (Dskquota.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,16 +13,16 @@ api_type:
 - COM
 api_location:
 - Shell32.dll
-ms.openlocfilehash: 0db952a502210e509abeb527b2006eab087434e0
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: da02f79ea8f7b582056e9c3c7c0c3f1db53fa9e08181559c99dd983924861c78
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104041682"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118459837"
 ---
-# <a name="diskquotacontrolshutdownnameresolution-method"></a>Diskquotacontrol. shutdownnameresolution-Methode
+# <a name="diskquotacontrolshutdownnameresolution-method"></a>DiskQuotaControl.ShutdownNameResolution-Methode
 
-Fährt den Thread für die Auflösung von Benutzernamen herunter.
+Fährt den Thread für die Benutzernamenauflösung herunter.
 
 ## <a name="syntax"></a>Syntax
 
@@ -41,16 +41,16 @@ Diese Methode hat keine Parameter.
 
 Diese Methode gibt keinen Wert zurück.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Der sicherheitsbezeichnerresolver übersetzt sid in Benutzernamen in einem Hintergrund Thread. Dieser Thread wird automatisch heruntergefahren, wenn das zugeordnete Kontingent Steuerungsobjekt zerstört wird. Es gibt jedoch einige Fälle, in denen der Thread nicht mehr benötigt wird, aber das Objekt noch nicht zerstört werden kann. Ein typisches Beispiel ist, wenn keine weitere Verarbeitung stattfindet, Clients jedoch weiterhin Verweise auf das Objekt enthalten. Die **shutdownnameresolution** -Methode ermöglicht es Ihnen, den Konflikt Löser-Thread zu beenden und die zugeordneten Ressourcen freizugeben, ohne das Kontingent Steuerungsobjekt zu zerstören.
+Der Sid-Namensre resolver (Sicherheits-ID) übersetzt SID in Benutzernamen in einem Hintergrundthread. Dieser Thread wird automatisch heruntergefahren, wenn das zugeordnete Kontingentsteuerungsobjekt zerstört wird. Es gibt jedoch einige Fälle, in denen der Thread nicht mehr benötigt wird, das Objekt aber noch nicht bereit ist, zerstört zu werden. Ein typisches Beispiel ist, wenn keine weitere Verarbeitung stattfindet, clients aber weiterhin Verweise auf das -Objekt enthalten. Mit **der ShutdownNameResolution-Methode** können Sie den Konfliktlöserthread beenden und die zugeordneten Ressourcen frei geben, ohne das Kontingentsteuerungsobjekt zu zerstören.
 
 > [!Note]  
-> Wenn Sie den Konflikt Löser-Thread beenden, wird die asynchrone Namensauflösung sofort beendet. Wenn später Aufrufe an Methoden wie " [**adduser**](diskquotacontrol-adduser.md) " oder " [**FINDUSER**](diskquotacontrol-finduser.md)" durchgeführt werden, kann das Kontingent Objekt den resolverthread neu erstellen.
+> Wenn Sie den Resolverthread herunterfahren, wird die asynchrone Namensauflösung sofort beendet. Wenn anschließend Aufrufe an Methoden wie [**AddUser**](diskquotacontrol-adduser.md) oder [**FindUser**](diskquotacontrol-finduser.md)vorgenommen werden, erstellt das Kontingentobjekt möglicherweise den Konfliktlöserthread neu.
 
  
 
-## <a name="requirements"></a>Requirements (Anforderungen)
+## <a name="requirements"></a>Anforderungen
 
 
 
@@ -58,8 +58,8 @@ Der sicherheitsbezeichnerresolver übersetzt sid in Benutzernamen in einem Hinte
 |-------------------------------------|---------------------------------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[nur Desktop-Apps\]<br/>                                                    |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                                                          |
-| Header<br/>                   | <dl> <dt>Dskquota. h</dt> </dl>                         |
-| DLL<br/>                      | <dl> <dt>Shell32.dll (Version 5,0 oder höher)</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Dskquota.h</dt> </dl>                         |
+| DLL<br/>                      | <dl> <dt>Shell32.dll (Version 5.0 oder höher)</dt> </dl> |
 
 
 
@@ -67,7 +67,7 @@ Der sicherheitsbezeichnerresolver übersetzt sid in Benutzernamen in einem Hinte
 
 <dl> <dt>
 
-[**Diskquotacontrol-Objekt**](diskquotacontrol-object.md)
+[**DiskQuotaControl-Objekt**](diskquotacontrol-object.md)
 </dt> </dl>
 
  

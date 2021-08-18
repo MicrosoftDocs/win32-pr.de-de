@@ -1,9 +1,9 @@
 ---
-title: WM_DDE_TERMINATE Meldung (DDE. h)
-description: Eine dynamischer Datenaustausch (DDE)-Anwendung (Client oder Server) sendet eine WM-DDE-Beendigungs \_ \_ Nachricht, um eine Konversation zu beenden. Um diese Nachricht zu veröffentlichen, wenden Sie die PostMessage-Funktion mit den folgenden Parametern an.
+title: WM_DDE_TERMINATE (Dde.h)
+description: Eine dynamische Daten Exchange (DDE)-Anwendung (Client oder Server) sendet eine WM \_ DDE TERMINATE-Nachricht, um eine Konversation zu \_ beenden. Um diese Nachricht zu veröffentlichen, rufen Sie die PostMessage-Funktion mit den folgenden Parametern auf.
 ms.assetid: 4fc162c0-ccc2-44e3-9c07-d49d7426af8b
 keywords:
-- WM_DDE_TERMINATE Nachrichten Datenaustausch
+- WM_DDE_TERMINATE der Exchange
 topic_type:
 - apiref
 api_name:
@@ -14,18 +14,18 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 105b4a7daab87b1311a58a7b5e5805bbd81e73ce
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: a98d9b4bf2120cb6daa08b6088a8dd39f8a17b8e28c37a3917936a9c49230487
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104103414"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117736267"
 ---
-# <a name="wm_dde_terminate-message"></a>WM- \_ DDE- \_ Nachricht beenden
+# <a name="wm_dde_terminate-message"></a>WM \_ DDE \_ TERMINATE-Nachricht
 
-Eine dynamischer Datenaustausch (DDE)-Anwendung (Client oder Server) sendet eine **WM-DDE-Beendigungs \_ \_** Nachricht, um eine Konversation zu beenden.
+Eine dynamische Daten Exchange (DDE)-Anwendung (Client oder Server) sendet eine **WM \_ DDE \_ TERMINATE-Nachricht,** um eine Konversation zu beenden.
 
-Um diese Nachricht zu veröffentlichen, wenden Sie die [**PostMessage**](/windows/desktop/api/winuser/nf-winuser-postmessagea) -Funktion mit den folgenden Parametern an.
+Um diese Nachricht zu veröffentlichen, rufen Sie die [**PostMessage-Funktion**](/windows/desktop/api/winuser/nf-winuser-postmessagea) mit den folgenden Parametern auf.
 
 
 ```C++
@@ -41,7 +41,7 @@ Um diese Nachricht zu veröffentlichen, wenden Sie die [**PostMessage**](/window
 *wParam* 
 </dt> <dd>
 
-Ein Handle für das Client-oder Server Fenster, das die Meldung bereitstellen soll.
+Ein Handle für das Client- oder Serverfenster, in dem die Nachricht angezeigt wird.
 
 </dd> <dt>
 
@@ -52,15 +52,15 @@ Dieser Parameter wird nicht verwendet.
 
 </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-### <a name="posting"></a>Veröffentlichen
+### <a name="posting"></a>Entsendung
 
-Beim Warten auf die Bestätigung der Beendigung sollte die Posting-Anwendung keine weiteren Nachrichten an die empfangende Anwendung senden. Wenn die sendende Anwendung Nachrichten (mit Ausnahme von **WM \_ DDE \_ Beenden**) von der empfangenden Anwendung empfängt, sollten alle Atome oder gemeinsam genutzten Speicher Objekte, die den Nachrichten angehören, gelöscht werden, mit Ausnahme der globalen Speicher Objekte, die mit [**WM \_ DDE \_ Poke**](wm-dde-poke.md) -oder [**WM \_ DDE- \_ Daten**](wm-dde-data.md) Nachrichten verknüpft sind, für die das **frelease** -Element
+Während auf die Bestätigung der Beendigung gewartet wird, sollte die Veröffentlichungsanwendung keine anderen Nachrichten an die empfangende Anwendung senden. Wenn die sendende Anwendung Nachrichten (mit Ausnahme von **WM \_ DDE \_ TERMINATE)** von der empfangenden Anwendung empfängt, sollte sie alle Atome oder freigegebenen Speicherobjekte löschen, die den Nachrichten zugeordnet sind, mit Ausnahme von globalen Speicherobjekten, die [**WM \_ DDE \_ POKE-**](wm-dde-poke.md) oder [**WM \_ DDE \_ DATA-Nachrichten**](wm-dde-data.md) zugeordnet sind, die nicht über den **fRelease-Membersatz** verfügen.
 
 ### <a name="receiving"></a>Empfangen
 
-Die Client-oder Serveranwendung sollte Antworten, indem Sie eine Abbruch Meldung vom Typ " **WM \_ DDE \_** " veröffentlicht.
+Die Client- oder Serveranwendung sollte antworten, indem sie eine **WM \_ DDE \_ TERMINATE-Nachricht** sendet.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -70,15 +70,15 @@ Die Client-oder Serveranwendung sollte Antworten, indem Sie eine Abbruch Meldung
 |-------------------------------------|------------------------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[nur Desktop-Apps\]<br/>                                           |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                                                 |
-| Header<br/>                   | <dl> <dt>DDE. h (Include Windows. h)</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Dde.h (include Windows.h)</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-**Verweis**
+**Referenz**
 </dt> <dt>
 
 [**PostMessage**](/windows/desktop/api/winuser/nf-winuser-postmessagea)
@@ -87,16 +87,16 @@ Die Client-oder Serveranwendung sollte Antworten, indem Sie eine Abbruch Meldung
 [**SendMessage**](/windows/desktop/api/winuser/nf-winuser-sendmessage)
 </dt> <dt>
 
-[**WM- \_ DDE- \_ Daten**](wm-dde-data.md)
+[**WM \_ DDE \_ DATA**](wm-dde-data.md)
 </dt> <dt>
 
-[**WM \_ DDE \_ Poke**](wm-dde-poke.md)
+[**WM \_ DDE \_ POKE**](wm-dde-poke.md)
 </dt> <dt>
 
-**Licher**
+**Konzeptionellen**
 </dt> <dt>
 
-[Informationen zu dynamischer Datenaustausch](about-dynamic-data-exchange.md)
+[Informationen dynamische Daten Exchange](about-dynamic-data-exchange.md)
 </dt> </dl>
 
  

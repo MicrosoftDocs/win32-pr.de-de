@@ -1,11 +1,11 @@
 ---
-title: Iwmpplaylistcollection-Methode entfernen
-description: Mit der Remove-Methode wird eine Wiedergabeliste aus der Bibliothek entfernt. | Iwmpplaylistcollection-Methode entfernen
+title: IWMPPlaylistCollection remove-Methode
+description: Die remove-Methode entfernt eine Wiedergabeliste aus der Bibliothek. | IWMPPlaylistCollection remove-Methode
 ms.assetid: 40c8ee1d-13fa-40d9-9532-4dc8383c4eb3
 keywords:
-- Methode "Windows Media Player entfernen"
-- Remove-Methode, Windows Media Player, iwmpplaylistcollection-Schnittstelle
-- Iwmpplaylistcollection-Schnittstelle, Windows Media Player, Methode entfernen
+- remove-Methode Windows Media Player
+- remove-Methode Windows Media Player , IWMPPlaylistCollection-Schnittstelle
+- IWMPPlaylistCollection-Schnittstelle Windows Media Player , remove-Methode
 topic_type:
 - apiref
 api_name:
@@ -16,16 +16,16 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: c99fbaa2f60c769599bd6173b8e38f4d99e9f42d
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: b342251bb1885b40d8cd225612ad68b1b54c6ca74cc29a9a934b1fa603837e9f
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106352177"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117745715"
 ---
-# <a name="iwmpplaylistcollectionremove-method"></a>Iwmpplaylistcollection:: Remove-Methode
+# <a name="iwmpplaylistcollectionremove-method"></a>IWMPPlaylistCollection::remove-Methode
 
-Mit der **Remove** -Methode wird eine Wiedergabeliste aus der Bibliothek entfernt.
+Die **remove-Methode** entfernt eine Wiedergabeliste aus der Bibliothek.
 
 ## <a name="syntax"></a>Syntax
 
@@ -53,10 +53,10 @@ Implements IWMPPlaylistCollection.remove
 
 <dl> <dt>
 
-*pitem* \[ in\]
+*pItem* \[ In\]
 </dt> <dd>
 
-Eine **WMPLib. iwmpwiedergabe** -Schnittstelle für die Wiedergabeliste, die von dieser Methode entfernt wird.
+Eine **WMPLib.IWMPPlaylist-Schnittstelle** für die Wiedergabeliste, die diese Methode entfernt.
 
 </dd> </dl>
 
@@ -64,9 +64,9 @@ Eine **WMPLib. iwmpwiedergabe** -Schnittstelle für die Wiedergabeliste, die von
 
 Diese Methode gibt keinen Wert zurück.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Vor dem Aufrufen dieser Methode müssen Sie über Vollzugriff auf die Bibliothek verfügen. Weitere Informationen finden Sie unter [Bibliotheks Zugriff](library-access.md).
+Vor dem Aufrufen dieser Methode benötigen Sie Vollzugriff auf die Bibliothek. Weitere Informationen finden Sie unter [Bibliothekszugriff.](library-access.md)
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -74,20 +74,20 @@ Vor dem Aufrufen dieser Methode müssen Sie über Vollzugriff auf die Bibliothek
 
 | Anforderung | Wert |
 |----------------------|------------------------------------------------------------------------------------------------------------------------|
-| Version<br/>   | Windows Media Player 9 oder höher.<br/>                                                                     |
+| Version<br/>   | Windows Media Player serie 9 oder höher.<br/>                                                                     |
 | Namespace<br/> | **WMPLib**<br/>                                                                                                  |
 | Assembly<br/>  | <dl> <dt>Interop.WMPLib.dll (Interop.WMPLib.dll.dll)</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Iwmpwiedergabe-Schnittstelle (VB und c#)**](iwmpplaylist--vb-and-c.md)
+[**IWMPPlaylist-Schnittstelle (VB und C#)**](iwmpplaylist--vb-and-c.md)
 </dt> <dt>
 
-[**Iwmpplaylistcollection-Schnittstelle (VB und c#)**](iwmpplaylistcollection--vb-and-c.md)
+[**IWMPPlaylistCollection-Schnittstelle (VB und C#)**](iwmpplaylistcollection--vb-and-c.md)
 </dt> </dl>
 
  

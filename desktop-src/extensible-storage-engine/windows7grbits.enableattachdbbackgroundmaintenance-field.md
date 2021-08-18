@@ -1,6 +1,6 @@
 ---
-description: 'Weitere Informationen finden Sie hier: Windows7Grbits. enableattachdbbackgroundmaintenance-Feld'
-title: Windows7Grbits. enableattachdbbackgroundmaintenance-Feld (Microsoft. ISAM. ESENT. Interop. Windows7)
+description: 'Weitere Informationen finden Sie unter: Feld "Windows7Grbits.EnableAttachDbBackgroundMaintenance"'
+title: Feld "Windows7Grbits.EnableAttachDbBackgroundMaintenance" (Microsoft.Isam.Esent.Interop.Windows7)
 TOCTitle: EnableAttachDbBackgroundMaintenance field
 ms:assetid: F:Microsoft.Isam.Esent.Interop.Windows7.Windows7Grbits.EnableAttachDbBackgroundMaintenance
 ms:mtpsurl: https://msdn.microsoft.com/library/microsoft.isam.esent.interop.windows7.windows7grbits.enableattachdbbackgroundmaintenance(v=EXCHG.10)
@@ -24,19 +24,19 @@ api_type:
 api_location:
 - Microsoft.Isam.Esent.Interop.dll
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: 4ed2741994f8030df705b642a56b95a2275639d3
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 9e453844ed929f90d0d2b0fa4691adb5f392a4937eeec5fe8ad4f9f451ab6b2d
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "103863307"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117889573"
 ---
-# <a name="windows7grbitsenableattachdbbackgroundmaintenance-field"></a>Windows7Grbits. enableattachdbbackgroundmaintenance-Feld
+# <a name="windows7grbitsenableattachdbbackgroundmaintenance-field"></a>Windows7Grbits.EnableAttachDbBackgroundMaintenance-Feld
 
-Das Datenbankmodul initiiert die automatische Wartung der Hintergrund Datenbank nach der Daten Bank Anlage.
+Die Datenbank-Engine initiiert die automatische Wartung der Hintergrunddatenbank nach dem Anhängen der Datenbank.
 
-**Namespace:**  [Microsoft. ISAM. ESENT. Interop. Windows7](./microsoft.isam.esent.interop.windows7-namespace.md)  
-**Assembly:**  Microsoft. ISAM. ESENT. Interop (in Microsoft.Isam.Esent.Interop.dll)
+**Namespace:**  [Microsoft.Isam.Esent.Interop.Windows7](./microsoft.isam.esent.interop.windows7-namespace.md)  
+**Assembly:**  Microsoft.Isam.Esent.Interop (in Microsoft.Isam.Esent.Interop.dll)
 
 ## <a name="syntax"></a>Syntax
 
@@ -53,12 +53,12 @@ value = Windows7Grbits.EnableAttachDbBackgroundMaintenance
 public const AttachDatabaseGrbit EnableAttachDbBackgroundMaintenance
 ```
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
-#### <a name="reference"></a>Referenz
+#### <a name="reference"></a>Verweis
 
 [Windows7Grbits-Klasse](./windows7grbits-class.md)
 
 [Windows7Grbits-Member](./windows7grbits-members.md)
 
-[Microsoft. ISAM. ESENT. Interop. Windows7-Namespace](./microsoft.isam.esent.interop.windows7-namespace.md)
+[Microsoft.Isam.Esent.Interop.Windows7-Namespace](./microsoft.isam.esent.interop.windows7-namespace.md)

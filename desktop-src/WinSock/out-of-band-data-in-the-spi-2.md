@@ -1,19 +1,19 @@
 ---
-description: Die Dienstanbieter, die die OOB-Abstraktion (Out-of-Band-Daten) für die Sockets im Stream-Stil unterstützen, müssen der Semantik in diesem Abschnitt entsprechen.
+description: Die Dienstanbieter, die die Out-of-Band-Datenabstraktion (OOB) für die Sockets im Streamformat unterstützen, müssen der Semantik in diesem Abschnitt entsprechen.
 ms.assetid: 83ed881f-8474-445e-8fb5-9635138a63dd
 title: Out-of-Band-Daten in der SPI
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: ab9808fa301073bcbb06be23a9487c2a1fa4f14d
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 858e2845e9fbe198dc7af7a70edfad8a4ac429f8f1abe84289b87a779f6e478b
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104041723"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117741050"
 ---
 # <a name="out-of-band-data-in-the-spi"></a>Out-of-Band-Daten in der SPI
 
-Die Dienstanbieter, die die OOB-Abstraktion (Out-of-Band-Daten) für die Sockets im Stream-Stil unterstützen, müssen der Semantik in diesem Abschnitt entsprechen. Wir beschreiben die OOB-Datenverarbeitung auf Protokoll unabhängige Weise. Eine Erläuterung der OOB-Daten, die mithilfe von dringenden Daten in TCP/IP-Dienstanbietern implementiert werden, finden Sie in den [Winsock-Anlagen](winsock-annexes.md) . Im folgenden gilt die Verwendung von [**wsprecv**](/previous-versions/windows/hardware/network/ff566309(v=vs.85)) auch für [**wsprecvfrom**](/previous-versions/windows/desktop/legacy/ms742287(v=vs.85)).
+Die Dienstanbieter, die die Out-of-Band-Datenabstraktion (OOB) für die Sockets im Streamformat unterstützen, müssen der Semantik in diesem Abschnitt entsprechen. Die OOB-Datenverarbeitung wird protokollunabhängig beschrieben. Eine Erläuterung der OOB-Daten, die mit dringenden Daten in TCP/IP-Dienstanbietern implementiert wurden, finden Sie unter [Winsock-Dienstanbieter.](winsock-annexes.md) Im Folgenden gilt die Verwendung von [**WSPRecv**](/previous-versions/windows/hardware/network/ff566309(v=vs.85)) auch für [**WSPRecvFrom.**](/previous-versions/windows/desktop/legacy/ms742287(v=vs.85))
 
  
 

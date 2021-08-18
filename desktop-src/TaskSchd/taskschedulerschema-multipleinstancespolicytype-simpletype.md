@@ -1,9 +1,9 @@
 ---
-title: MultipleInstancesPolicyType Simple Type
-description: Definiert die Instanzrichtlinienkonst constants für das MultipleInstancesPolicy (settingsType)-Element.
+title: multipleInstancesPolicyType Simple Type
+description: Definiert die Instanzrichtlinienkonstanten für das Element MultipleInstancesPolicy (settingsType).
 ms.assetid: 6e3f83b0-b71e-49c9-9c27-5a37f996746b
 keywords:
-- MultipleInstancesPolicyType simple type Taskplaner
+- simple type multipleInstancesPolicyType Taskplaner
 topic_type:
 - apiref
 api_name:
@@ -20,9 +20,9 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 08/11/2021
 ms.locfileid: "117758509"
 ---
-# <a name="multipleinstancespolicytype-simple-type"></a>MultipleInstancesPolicyType Simple Type
+# <a name="multipleinstancespolicytype-simple-type"></a>multipleInstancesPolicyType Simple Type
 
-Definiert die Instanzrichtlinienkonst constants für das [**MultipleInstancesPolicy (settingsType)-Element.**](taskschedulerschema-multipleinstancespolicy-settingstype-element.md)
+Definiert die Instanzrichtlinienkonstanten für das [**Element MultipleInstancesPolicy (settingsType).**](taskschedulerschema-multipleinstancespolicy-settingstype-element.md)
 
 ``` syntax
 <xs:simpleType name="multipleInstancesPolicyType">
@@ -47,16 +47,16 @@ Definiert die Instanzrichtlinienkonst constants für das [**MultipleInstancesPol
 
 ## <a name="enumeration-values"></a>Enumerationswerte
 
-Der **einfache MultipleInstancesPolicyType-Typ** definiert die folgenden Werte.
+Der einfache **MultipleInstancesPolicyType-Typ** definiert die folgenden Werte.
 
 
 
-| Wert        | BESCHREIBUNG                                                                                     |
+| Wert        | Beschreibung                                                                                     |
 |--------------|-------------------------------------------------------------------------------------------------|
 | Parallel     | Startet eine neue Instanz, während eine vorhandene Instanz ausgeführt wird.<br/>                           |
-| Warteschlange        | Startet eine neue Instanz der Aufgabe, nachdem alle anderen Instanzen der Aufgabe abgeschlossen sind.<br/>      |
-| IgnoreNew    | Standard. Startet keine neue Instanz, wenn eine vorhandene Instanz der Aufgabe ausgeführt wird.<br/> |
-| StopExisting | Beendet eine vorhandene Instanz der Aufgabe, bevor sie eine neue Instanz startet.<br/>                |
+| Warteschlange        | Startet eine neue Instanz des Tasks, nachdem alle anderen Instanzen des Tasks abgeschlossen sind.<br/>      |
+| IgnoreNew    | Standard. Startet keine neue Instanz, wenn eine vorhandene Instanz des Tasks ausgeführt wird.<br/> |
+| StopExisting | Beendet eine vorhandene Instanz des Tasks, bevor die neue Instanz gestartet wird.<br/>                |
 
 
 
@@ -66,7 +66,7 @@ Der **einfache MultipleInstancesPolicyType-Typ** definiert die folgenden Werte.
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ Vista-Desktop-Apps\]<br/>       |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur Vista-Desktop-Apps\]<br/>       |
 | Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/> |
 
 

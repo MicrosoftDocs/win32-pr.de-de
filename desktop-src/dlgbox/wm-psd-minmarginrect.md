@@ -1,9 +1,9 @@
 ---
-title: WM_PSD_MINMARGINRECT Nachricht (Commdlg.h)
-description: Benachrichtigt eine PagePaintHook-Hookprozedur über die Koordinaten des Randrechtecks auf der Beispielseite. Ein Dialogfeld "Seiteneinrichtung" sendet diese Meldung, wenn der Inhalt der Beispielseite gezeichnet werden soll.
+title: WM_PSD_MINMARGINRECT (Commdlg.h)
+description: Benachrichtigt eine PagePaintHook-Hookprozedur über die Koordinaten des Randrechtecks auf der Beispielseite. In einem Dialogfeld Seiteneinrichtung wird diese Meldung gesendet, wenn der Inhalt der Beispielseite geschachtelt werden soll.
 ms.assetid: 14977b52-7a6f-4c55-956a-716398a71613
 keywords:
-- Dialogfelder für WM_PSD_MINMARGINRECT Meldung
+- WM_PSD_MINMARGINRECT-Dialogfelder
 topic_type:
 - apiref
 api_name:
@@ -23,7 +23,7 @@ ms.locfileid: "118503315"
 ---
 # <a name="wm_psd_minmarginrect-message"></a>WM \_ PSD \_ MINMARGINRECT-Nachricht
 
-Benachrichtigt eine [*PagePaintHook-Hookprozedur*](/windows/win32/api/commdlg/nc-commdlg-lppagepainthook) über die Koordinaten des Randrechtecks auf der Beispielseite. Ein Dialogfeld **"Seiteneinrichtung"** sendet diese Meldung, wenn der Inhalt der Beispielseite gezeichnet werden soll.
+Benachrichtigt eine [*PagePaintHook-Hookprozedur*](/windows/win32/api/commdlg/nc-commdlg-lppagepainthook) über die Koordinaten des Randrechtecks auf der Beispielseite. In **einem Dialogfeld Seiteneinrichtung** wird diese Meldung gesendet, wenn der Inhalt der Beispielseite geschachtelt werden soll.
 
 
 ```C++
@@ -47,19 +47,19 @@ Ein Handle für den Gerätekontext für die Beispielseite.
 *lParam* 
 </dt> <dd>
 
-Ein Zeiger auf eine [**RECT-Struktur,**](/previous-versions//dd162897(v=vs.85)) die die Koordinaten des minimalen Randrechtecks in Pixel enthält.
+Ein Zeiger auf eine [**RECT-Struktur,**](/previous-versions//dd162897(v=vs.85)) die die Koordinaten des Minimalrandrechtecks in Pixel enthält.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Wenn die Hookprozedur **TRUE** zurückgibt, sendet das Dialogfeld keine Nachrichten mehr und zeichnet erst dann auf der Beispielseite, wenn das System die Beispielseite das nächste Mal neu zeichnen muss.
+Wenn die Hookprozedur **TRUE** zurückgibt, sendet das Dialogfeld keine Nachrichten mehr und wird erst dann auf der Beispielseite gezeichnet, wenn das System die Beispielseite das nächste Mal neu zeichnen muss.
 
-Wenn die Hookprozedur **FALSE** zurückgibt, sendet das Dialogfeld die verbleibenden Nachrichten der Zeichnungssequenz.
+Wenn die Hookprozedur **FALSE zurückgibt,** sendet das Dialogfeld die verbleibenden Meldungen der Zeichnungssequenz.
 
 ## <a name="remarks"></a>Hinweise
 
-Das Dialogfeld **Seiteneinrichtung** enthält ein Bild einer Beispielseite, die zeigt, wie sich die Auswahl des Benutzers auf die Darstellung der gedruckten Ausgabe auswirkt. Wenn Sie die [**PageSetupDlg-Funktion**](/previous-versions/windows/desktop/legacy/ms646937(v=vs.85)) aufrufen, können Sie eine [*PagePaintHook-Hookprozedur*](/windows/win32/api/commdlg/nc-commdlg-lppagepainthook) bereitstellen, um die Darstellung der Beispielseite anzupassen. Wenn das Dialogfeld den Inhalt der Beispielseite zeichnen soll, sendet das Dialogfeld eine Sequenz von Nachrichten an die Hookprozedur.
+Das **Dialogfeld Seiteneinrichtung** enthält ein Bild einer Beispielseite, die zeigt, wie sich die Auswahl des Benutzers auf die Darstellung der gedruckten Ausgabe auswirken kann. Wenn Sie die [**PageSetupDlg-Funktion**](/previous-versions/windows/desktop/legacy/ms646937(v=vs.85)) aufrufen, können Sie eine [*PagePaintHook-Hookprozedur*](/windows/win32/api/commdlg/nc-commdlg-lppagepainthook) bereitstellen, um die Darstellung der Beispielseite anzupassen. Wenn das Dialogfeld den Inhalt der Beispielseite zeichnen möchte, sendet das Dialogfeld eine Sequenz von Nachrichten an die Hookprozedur.
 
 ## <a name="requirements"></a>Anforderungen
 

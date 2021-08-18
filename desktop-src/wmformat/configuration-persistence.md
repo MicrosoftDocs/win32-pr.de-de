@@ -22,9 +22,9 @@ ms.locfileid: "118434357"
 ---
 # <a name="configuration-persistence"></a>Konfigurationspersistenz
 
-Keine der in dieser Dokumentation beschriebenen Eigenschaften mit aktivierten Schreibzugriffen wird vom Windows Media SDK gespeichert. Jede Anwendung, die das SDK verwendet, muss bei Bedarf eigene Persistenzverfahren bereitstellen und die entsprechende set-Methode für jede Instanz des SDK aufrufen. Auf diese Weise wirken sich Konfigurationsänderungen, die von einer Anwendung vorgenommen werden, nicht auf eine andere Anwendung aus. Das Ändern der Pufferzeit in einem Player wirkt sich beispielsweise nicht auf einen anderen Player aus.
+Keine der in dieser Dokumentation beschriebenen schreibfähigen Eigenschaften wird vom Windows Media SDK gespeichert. Jede Anwendung, die das SDK verwendet, muss bei Bedarf eigene Persistenzprozesuren bereitstellen und die entsprechende set-Methode für jede Instanz des SDK aufrufen. Auf diese Weise wirken sich Konfigurationsänderungen, die von einer Anwendung vorgenommen werden, nicht auf eine andere Anwendung aus. Beispielsweise wirkt sich das Ändern der Pufferzeit in einem Spieler nicht auf einen anderen Spieler aus.
 
-Die einzige Ausnahme von dieser Regel sind die Anmeldeinformationen. Wenn die Anwendung in der Rückgabe des **AcquireCredentials-Aufrufs** angibt, dass die Benutzer-ID und das Kennwort beibehalten werden müssen, speichert das SDK diese Informationen.
+Eine Ausnahme von dieser Regel sind die Anmeldeinformationen. Wenn die Anwendung in ihrer Rückgabe vom **AcquireCredentials-Aufruf** angibt, dass die Benutzer-ID- und Kennwortinformationen beibehalten werden müssen, speichert das SDK diese Informationen.
 
 ## <a name="related-topics"></a>Zugehörige Themen
 

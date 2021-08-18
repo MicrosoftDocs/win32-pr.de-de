@@ -1,6 +1,6 @@
 ---
-title: Point-to-Point-Protokoll über Ethernetverbindungen
-description: Windows Server 2003, Windows XP und höhere Betriebssysteme bieten Unterstützung für Point-to-Point-Protokoll über Ethernet (PPPoE). Legen Sie für eine PPPoE-Verbindung die folgenden Werte in der RASENTRY-Struktur fest.
+title: Point-to-Point-Protokoll über Ethernet-Verbindungen
+description: Windows Server 2003, Windows XP und höher bieten Unterstützung für Point-to-Point-Protokoll Over Ethernet (PPPoE). Legen Sie für eine PPPoE-Verbindung die folgenden Werte in der RASENTRY-Struktur fest.
 ms.assetid: abdbf22c-abeb-4363-bfa6-e0002d1637f4
 ms.topic: article
 ms.date: 05/31/2018
@@ -11,9 +11,9 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 08/11/2021
 ms.locfileid: "117789810"
 ---
-# <a name="point-to-point-protocol-over-ethernet-connections"></a>Point-to-Point-Protokoll über Ethernetverbindungen
+# <a name="point-to-point-protocol-over-ethernet-connections"></a>Point-to-Point-Protokoll über Ethernet-Verbindungen
 
-Windows Server 2003, Windows XP und höhere Betriebssysteme bieten Unterstützung für Point-to-Point-Protokoll über Ethernet (PPPoE). Legen Sie für eine PPPoE-Verbindung die folgenden Werte in der [**RASENTRY-Struktur**](/previous-versions/windows/desktop/legacy/aa377274(v=vs.85)) fest.
+Windows Server 2003, Windows XP und höher bieten Unterstützung für Point-to-Point-Protokoll Over Ethernet (PPPoE). Legen Sie für eine PPPoE-Verbindung die folgenden Werte in der [**RASENTRY-Struktur**](/previous-versions/windows/desktop/legacy/aa377274(v=vs.85)) fest.
 
 
 
@@ -27,9 +27,9 @@ Windows Server 2003, Windows XP und höhere Betriebssysteme bieten Unterstützun
 
  
 
-Verwenden Sie die [**RasSetEntryProperties-Funktion,**](/windows/desktop/api/Ras/nf-ras-rassetentrypropertiesa) um diese Werte festzulegen.
+Verwenden Sie [**die RasSetEntryProperties-Funktion,**](/windows/desktop/api/Ras/nf-ras-rassetentrypropertiesa) um diese Werte festlegen.
 
-Sie können auch [**RasEntryDlg**](/windows/desktop/api/Rasdlg/nf-rasdlg-rasentrydlga) und das FLAG RASEDFLAG \_ NewBroadbandEntry für [**RASENTRYDLG**](/windows/desktop/api/Rasdlg/nf-rasdlg-rasentrydlga) verwenden, um einen Assistenten zum Erstellen eines PPPoE-Phonebookeintrags anzuzeigen.
+Sie können auch [**RasEntryDlg**](/windows/desktop/api/Rasdlg/nf-rasdlg-rasentrydlga) und das RASEDFLAG \_ NewBroadbandEntry-Flag für [**RASENTRYDLG**](/windows/desktop/api/Rasdlg/nf-rasdlg-rasentrydlga) verwenden, um einen Assistenten zum Erstellen eines PPPoE-Telefonbucheintrags anzuzeigen.
 
  
 

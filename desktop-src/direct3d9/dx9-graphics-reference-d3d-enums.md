@@ -1,5 +1,5 @@
 ---
-description: In diesem Abschnitt werden die Direct3D-Enumerationstypen beschrieben.
+description: In diesem Abschnitt werden die aufzählten Direct3D-Typen beschrieben.
 ms.assetid: ae64eb17-63a8-44c5-8d41-e021c49f338a
 title: Direct3D-Enumerationen
 ms.topic: article
@@ -13,7 +13,7 @@ ms.locfileid: "118523421"
 ---
 # <a name="direct3d-enumerations"></a>Direct3D-Enumerationen
 
-In diesem Abschnitt werden die Direct3D-Enumerationstypen beschrieben.
+In diesem Abschnitt werden die aufzählten Direct3D-Typen beschrieben.
 
 -   [**D3DBACKBUFFER-TYP \_**](./d3dbackbuffer-type.md)
 -   [**D3DBASISTYPE**](./d3dbasistype.md)
@@ -60,7 +60,7 @@ In diesem Abschnitt werden die Direct3D-Enumerationstypen beschrieben.
 -   [**D3DQUERYTYPE**](./d3dquerytype.md)
 -   [**D3DRENDERSTATETYPE**](./d3drenderstatetype.md)
 -   [**D3DRESOURCETYPE**](./d3dresourcetype.md)
--   [**\_D3DSAMPLER-TEXTURTYP \_**](./d3dsampler-texture-type.md)
+-   [**D3DSAMPLER-TEXTURTYP \_ \_**](./d3dsampler-texture-type.md)
 -   [**D3DSAMPLERSTATETYPE**](./d3dsamplerstatetype.md)
 -   
 
@@ -84,7 +84,7 @@ In diesem Abschnitt werden die Direct3D-Enumerationstypen beschrieben.
 -   [**D3DTRANSFORMSTATETYPE**](./d3dtransformstatetype.md)
 -   [**D3DVERTEXBLENDFLAGS**](./d3dvertexblendflags.md)
 -   [**D3DXFERR-Rückgabewerte**](./d3dxferr-return-values.md)
--   [**D3DMUUFFERTYPE**](./d3dzbuffertype.md)
+-   [**D3D ENUMERATIONUFFERTYPE**](./d3dzbuffertype.md)
 
 ## <a name="related-topics"></a>Zugehörige Themen
 

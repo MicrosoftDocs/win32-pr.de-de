@@ -1,9 +1,9 @@
 ---
-title: 'Texture1D:: Texture1D samplebias-Methoden'
-description: Prüft eine Texture1D, nachdem der Bias-Wert auf die MipMap-Ebene angewendet wurde.
+title: Texture1D::Texture1D SampleBias-Methoden
+description: Samples a Texture1D, after applying the bias value to the mipmap level.
 ms.assetid: 1F70D58D-1286-480E-A60E-324FDABBC4A0
 keywords:
-- Samplebias-Methoden HLSL
+- SampleBias-Methoden – HLSL
 topic_type:
 - apiref
 api_type:
@@ -12,16 +12,16 @@ ms.topic: reference
 ms.date: 05/31/2018
 api_name: ''
 api_location: ''
-ms.openlocfilehash: cfa084d99decf53ec5f382ba6ab4bad495bdbdb8
-ms.sourcegitcommit: 476861130ea63675206d1f06e517059705b930ed
+ms.openlocfilehash: 354673607c08e76eeef9411b42a9ad03f9f2bec84df9bcd4fea9b31c03aa55ed
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/06/2019
-ms.locfileid: "104976233"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118505665"
 ---
-# <a name="texture1dsamplebias-methods"></a>Texture1D:: samplebias-Methoden
+# <a name="texture1dsamplebias-methods"></a>Texture1D::SampleBias-Methoden
 
-Prüft eine [**Texture1D**](sm5-object-texture1d.md), nachdem der Bias-Wert auf die MipMap-Ebene angewendet wurde.
+Samples a [**Texture1D**](sm5-object-texture1d.md), after applying the bias value to the mipmap level.
 
 ### <a name="overload-list"></a>Überladeliste
 
@@ -29,15 +29,15 @@ Prüft eine [**Texture1D**](sm5-object-texture1d.md), nachdem der Bias-Wert auf 
 
 | Methode                                                                                           | BESCHREIBUNG                                                                                                                                                                                  |
 |:-------------------------------------------------------------------------------------------------|:---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| [**Sample Bias (S, float, float, int)**](dx-graphics-hlsl-to-samplebias.md)                          | Gibt eine Textur aus, nachdem der Bias-Wert auf die MipMap-Ebene angewendet wurde.<br/>                                                                                                             |
-| [**Sample Bias (S, float, float, int, float)**](t1d-samplebias-s-float-float-int-float-.md)           | Gibt eine Textur aus, nachdem der Wert "Bias" auf die MipMap-Ebene angewendet wurde, mit einem optionalen Wert, mit dem Sample Level-of-Detail-Werte (LOD) an eine Klammer übergeben werden.<br/>                                     |
-| [**Sample Bias (S, float, float, int, float, uint)**](t1d-samplebias-s-float-float-int-float-uint-.md) | Gibt eine Textur aus, nachdem der Wert "Bias" auf die MipMap-Ebene angewendet wurde, mit einem optionalen Wert, mit dem Sample Level-of-Detail-Werte (LOD) an eine Klammer übergeben werden. Gibt den Status des Vorgangs zurück.<br/> |
+| [**SampleBias(S,float,float,int)**](dx-graphics-hlsl-to-samplebias.md)                          | Samples a texture, after applying the bias value to the mipmap level.<br/>                                                                                                             |
+| [**SampleBias(S,float,float,int,float)**](t1d-samplebias-s-float-float-int-float-.md)           | Samples a texture, after applying the bias value to the mipmap level, with an optional value to clamp sample level-of-detail (LOD) values to .<br/>                                     |
+| [**SampleBias(S,float,float,int,float,uint)**](t1d-samplebias-s-float-float-int-float-uint-.md) | Samples a texture, after applying the bias value to the mipmap level, with an optional value to clamp sample level-of-detail (LOD) values to . Gibt den Status des Vorgangs zurück.<br/> |
 
 
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Siehe [Texture-Object](dx-graphics-hlsl-to-type.md).
+Weitere Informationen finden [Sie unter Texture-Object](dx-graphics-hlsl-to-type.md).
 
 ## <a name="see-also"></a>Weitere Informationen
 

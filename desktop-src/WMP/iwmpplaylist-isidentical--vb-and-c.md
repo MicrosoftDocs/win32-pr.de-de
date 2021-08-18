@@ -1,9 +1,9 @@
 ---
-title: Iwmpwiedergabe. isidentical (VB und C)
-description: Mit der isidentical-Eigenschaft (der get \_ isidentical-Methode in C \) wird ein Wert abgerufen, der angibt, ob die angegebene Wiedergabeliste mit der aktuellen Wiedergabeliste identisch ist.
+title: IWMPPlaylist.isIdentical (VB und C )
+description: Die isIdentical-Eigenschaft (die get isIdentical-Methode in C\ ) ruft einen Wert ab, der angibt, ob die angegebene Wiedergabeliste mit der \_ aktuellen Wiedergabeliste identisch ist.
 ms.assetid: 0e5520ee-3d41-4e36-98f4-7bc2ec45fcb8
 keywords:
-- Iwmpwiedergabe. isidentical (VB und C) Windows Media Player
+- IWMPPlaylist.isIdentical (VB und C ) Windows Media Player
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - Assembly
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: bee30441e8f0275bba06f71a01095c39da8eae9f
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: eca62b1667250b049cf47e797d59bdddea0444c6ea8803ca0fc8daf526289eb6
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106364446"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118119009"
 ---
-# <a name="iwmpplaylistisidentical-vb-and-c"></a>Iwmpwiedergabe. isidentical (VB und c#)
+# <a name="iwmpplaylistisidentical-vb-and-c"></a>IWMPPlaylist.isIdentical (VB und C#)
 
-Mit der **isidentical** -Eigenschaft (der **get \_ isidentical** -Methode in c#) wird ein Wert abgerufen, der angibt, ob die angegebene Wiedergabeliste mit der aktuellen Wiedergabeliste identisch ist.
+Die **isIdentical-Eigenschaft** **(die get \_ isIdentical-Methode** in C#) ruft einen Wert ab, der angibt, ob die angegebene Wiedergabeliste mit der aktuellen Wiedergabeliste identisch ist.
 
 
 ```
@@ -47,17 +47,17 @@ System.Boolean get_isIdentical (
 
 ## <a name="parameters"></a>Parameter
 
-*piwmpwiedergabe Liste*
+*pIWMPPlaylist*
 
-Eine **WMPLib. iwmpwiedergabe** -Schnittstelle für die Wiedergabeliste, die diese Methode mit der aktuellen Wiedergabeliste vergleicht.
+Eine **WMPLib.IWMPPlaylist-Schnittstelle** für die Wiedergabeliste, die diese Methode mit der aktuellen Wiedergabeliste vergleicht.
 
 ## <a name="property-value"></a>Eigenschaftswert
 
-Ein **System. boolescher** Wert, der angibt, ob die verglichenen Wiedergabelisten identisch sind.
+Ein **System.Boolean-Wert,** der angibt, ob die verglichenen Wiedergabelisten identisch sind.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-**Iwmpwiedergabe. isidentical** ist eine Eigenschaft in Visual Basic, die einen-Parameter annimmt, während in c# als **iwmpwiedergabe. get \_ isidentical** -Methode bezeichnet wird.
+**IWMPPlaylist.isIdentical** ist eine Eigenschaft in Visual Basic, die einen Parameter akzeptiert, während sie in C# als **IWMPPlaylist.get \_ isIdentical-Methode** bezeichnet wird.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -65,17 +65,17 @@ Ein **System. boolescher** Wert, der angibt, ob die verglichenen Wiedergabeliste
 
 | Anforderung | Wert |
 |----------------------|------------------------------------------------------------------------------------------------------------------------|
-| Version<br/>   | Windows Media Player 9-Serie oder höher<br/>                                                                      |
+| Version<br/>   | Windows Media Player 9er Serie oder höher<br/>                                                                      |
 | Namespace<br/> | **WMPLib**<br/>                                                                                                  |
 | Assembly<br/>  | <dl> <dt>Interop.WMPLib.dll (Interop.WMPLib.dll.dll)</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Iwmpwiedergabe-Schnittstelle (VB und c#)**](iwmpplaylist--vb-and-c.md)
+[**IWMPPlaylist-Schnittstelle (VB und C#)**](iwmpplaylist--vb-and-c.md)
 </dt> </dl>
 
  

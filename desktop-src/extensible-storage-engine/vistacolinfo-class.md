@@ -1,6 +1,6 @@
 ---
-description: 'Weitere Informationen finden Sie unter: vistacolinfo-Klasse'
-title: Vistacolinfo-Klasse (Microsoft. ISAM. ESENT. Interop. Vista)
+description: Weitere Informationen zur VistaColInfo-Klasse
+title: VistaColInfo-Klasse (Microsoft.Isam.Esent.Interop.Vista)
 TOCTitle: VistaColInfo class
 ms:assetid: T:Microsoft.Isam.Esent.Interop.Vista.VistaColInfo
 ms:mtpsurl: https://msdn.microsoft.com/library/microsoft.isam.esent.interop.vista.vistacolinfo(v=EXCHG.10)
@@ -24,24 +24,24 @@ api_type:
 api_location:
 - Microsoft.Isam.Esent.Interop.dll
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: 5319a763c657988cb6cd58d0fc7aca7e89a65a11
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 4d2603b792d2003fb2a69e866c9752b975ca7b916e062e9e6aa1a45b2a24690c
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "103867128"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117889862"
 ---
-# <a name="vistacolinfo-class"></a>Vistacolinfo-Klasse
+# <a name="vistacolinfo-class"></a>VistaColInfo-Klasse
 
-Spalten Informationsebenen, die der Vista-Version von ESENT hinzugefügt wurden.
+Spalteninformationsebenen, die der Vista-Version von ESENT hinzugefügt wurden.
 
 ## <a name="inheritance-hierarchy"></a>Vererbungshierarchie
 
 [System.Object](/dotnet/api/system.object)  
-  Microsoft. ISAM. ESENT. Interop. Vista. vistacolinfo  
+  Microsoft.Isam.Esent.Interop.Vista.VistaColInfo  
 
-**Namespace:**  [Microsoft. ISAM. ESENT. Interop. Vista](./microsoft.isam.esent.interop.vista-namespace.md)  
-**Assembly:**  Microsoft. ISAM. ESENT. Interop (in Microsoft.Isam.Esent.Interop.dll)
+**Namespace:**  [Microsoft.Isam.Esent.Interop.Vista](./microsoft.isam.esent.interop.vista-namespace.md)  
+**Assembly:**  Microsoft.Isam.Esent.Interop (in Microsoft.Isam.Esent.Interop.dll)
 
 ## <a name="syntax"></a>Syntax
 
@@ -60,8 +60,8 @@ public static class VistaColInfo
 
 Alle öffentlichen statischen Elemente dieses Typs (Shared in Microsoft Visual Basic) sind threadsicher. Bei Instanzmembern ist die Threadsicherheit nicht gewährleistet.
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
-#### <a name="reference"></a>Referenz
+#### <a name="reference"></a>Verweis
 
-[Microsoft. ISAM. ESENT. Interop. Vista-Namespace](./microsoft.isam.esent.interop.vista-namespace.md)
+[Microsoft.Isam.Esent.Interop.Vista-Namespace](./microsoft.isam.esent.interop.vista-namespace.md)

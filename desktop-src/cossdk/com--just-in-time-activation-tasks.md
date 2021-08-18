@@ -1,29 +1,29 @@
 ---
-description: Com+-Just-in-Time-Aktivierungs Tasks
+description: COM+-Just-In-Time-Aktivierungsaufgaben
 ms.assetid: 8b211ad2-92b6-487c-b323-1fe19f774cc3
-title: Com+-Just-in-Time-Aktivierungs Tasks
+title: COM+-Just-In-Time-Aktivierungsaufgaben
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 19683a397915f20ae9ba88a317d7ea8658a68be4
-ms.sourcegitcommit: c7add10d695482e1ceb72d62b8a4ebd84ea050f7
+ms.openlocfilehash: 3e3441d17db0bf8053caab3f342e04bc3d06164bb2750a7d9039ff27d2ceeb86
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106341125"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118549385"
 ---
-# <a name="com-just-in-time-activation-tasks"></a>Com+-Just-in-Time-Aktivierungs Tasks
+# <a name="com-just-in-time-activation-tasks"></a>COM+-Just-In-Time-Aktivierungsaufgaben
 
-Die folgenden Themen enthalten Schritt-für-Schritt-Anleitungen für die Verwendung der Just-in-time (JIT)-Aktivierung in com+.
+Die folgenden Themen enthalten schritt-für-Schritt-Anweisungen für die Verwendung der Just-in-Time-Aktivierung (JIT) in COM+.
 
 
 
-| Thema                                                                                                       | BESCHREIBUNG                                                                                                                               |
+| Thema                                                                                                       | Beschreibung                                                                                                                               |
 |-------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------|
-| [Aktivieren der JIT-Aktivierung für eine Komponente](enabling-jit-activation-for-a-component.md)<br/>           | Bietet eine schrittweise Anleitung zum Aktivieren des com+-JIT-Aktivierungs dienstanweises für Ihre COM+-Komponenten.<br/>                     |
-| [Festlegen des done-Bits](setting-the-done-bit.md)<br/>                                                 | Enthält Informationen zum Festlegen des done-Bits für Ihre JIT-aktivierten Komponenten.<br/>                                             |
-| [Aktivieren von "automatisch abgeschlossen" für eine Methode](enabling-auto-done-for-a-method.md)<br/>                           | Bietet eine schrittweise Anleitung zum Aktivieren der Funktion für automatisches Ausführen der COM+-Komponenten Methoden.<br/>                          |
-| [Erzwingen der Aktivierung im Kontext des Aufrufers](enforcing-activation-in-the-caller-s-context.md)<br/> | Bietet eine Schritt-für-Schritt-Anleitung zum Erzwingen der Aktivierung eines Objekts im Kontext des Aufrufers anstelle eines eigenen Kontexts.<br/> |
-| [Erzwingen der Aktivierung im Standardkontext](enforcing-activation-in-the-default-context.md)<br/>   | Bietet eine Schritt-für-Schritt-Anleitung zum Erzwingen der Aktivierung eines Objekts im Kontext des Aufrufers anstelle eines eigenen Kontexts.<br/> |
+| [Aktivieren der JIT-Aktivierung für eine Komponente](enabling-jit-activation-for-a-component.md)<br/>           | Enthält eine Schritt-für-Schritt-Anleitung zum Aktivieren des COM+-JIT-Aktivierungsdiensts für Ihre COM+-Komponenten.<br/>                     |
+| [Festlegen des done-Bit](setting-the-done-bit.md)<br/>                                                 | Enthält Informationen zum Festlegen des fertigen Bit für Ihre JIT-aktivierten Komponenten.<br/>                                             |
+| [Aktivieren der automatischen Vorgehensweise für eine Methode](enabling-auto-done-for-a-method.md)<br/>                           | Enthält eine schritt-für-Schritt-Anleitung zum Aktivieren der automatischen Funktion für Ihre COM+-Komponentenmethoden.<br/>                          |
+| [Erzwingen der Aktivierung im Kontext des Aufrufers](enforcing-activation-in-the-caller-s-context.md)<br/> | Stellt eine schritt-für-Schritt-Prozedur zum Erzwingen der Aktivierung eines Objekts im Kontext des Aufrufers statt im eigenen Kontext zur Auswahl.<br/> |
+| [Erzwingen der Aktivierung im Standardkontext](enforcing-activation-in-the-default-context.md)<br/>   | Stellt eine schritt-für-Schritt-Prozedur zum Erzwingen der Aktivierung eines Objekts im Kontext des Aufrufers statt im eigenen Kontext zur Auswahl.<br/> |
 
 
 
@@ -33,7 +33,7 @@ Die folgenden Themen enthalten Schritt-für-Schritt-Anleitungen für die Verwend
 
 <dl> <dt>
 
-[Konzepte für die Just-in-Time-Aktivierung in com+](com--just-in-time-activation-concepts.md)
+[Konzepte der COM+-Just-In-Time-Aktivierung](com--just-in-time-activation-concepts.md)
 </dt> </dl>
 
  

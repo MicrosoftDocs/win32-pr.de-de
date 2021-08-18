@@ -1,9 +1,9 @@
 ---
-title: 'Rwstructuredbuffer:: Operator-Funktion'
-description: 'Gibt eine Ressourcen Variable zurück. | Rwstructuredbuffer:: Operator-Funktion'
+title: RWStructuredBuffer::Operator-Funktion
+description: Gibt eine Ressourcenvariable zurück. | RWStructuredBuffer::Operator-Funktion
 ms.assetid: e821b60e-38db-463f-b0c6-47f2a4c9ccee
 keywords:
-- Operator Function HLSL
+- Operatorfunktion HLSL
 topic_type:
 - apiref
 api_name:
@@ -13,16 +13,16 @@ api_type:
 ms.topic: reference
 ms.date: 05/31/2018
 api_location: ''
-ms.openlocfilehash: e915d7862f7994d3b438bf3255ee836ede4b3d7d
-ms.sourcegitcommit: 92e74c99f8f4d097676959d0c317f533c2400a80
+ms.openlocfilehash: ad2e8085a52a920f7fe87a2820398877167a137c14c4ebe39bacd71ae2ba0324
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/09/2021
-ms.locfileid: "104530632"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118509319"
 ---
-# <a name="rwstructuredbufferoperator--function"></a>Rwstructuredbuffer:: Operator-Funktion
+# <a name="rwstructuredbufferoperator--function"></a>RWStructuredBuffer::Operator-Funktion
 
-Gibt eine Ressourcen Variable zurück.
+Gibt eine Ressourcenvariable zurück.
 
 ## <a name="syntax"></a>Syntax
 
@@ -36,7 +36,7 @@ R Operator[](
 
 <dl> <dt>
 
-*POS* \[ in\]
+*pos* \[ In\]
 </dt> <dd>
 
 Typ: **uint**
@@ -49,17 +49,17 @@ Die Indexposition.
 
 Typ: **R**
 
-Eine Ressourcen Variable.
+Eine Ressourcenvariable.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
 Eine strukturierte Ressource kann basierend auf den Komponentennamen der Strukturen weiter indiziert werden.
 
-Diese Funktion wird für die folgenden Typen von Shadern unterstützt:
+Diese Funktion wird für die folgenden Shadertypen unterstützt:
 
 
 
-| Scheitelpunkt | Hülle | Domain | Geometrie | Pixel | Compute |
+| Scheitelpunkt | Rumpf | Domain | Geometrie | Pixel | Compute |
 |--------|------|--------|----------|-------|---------|
 |        |      |        |          | x     | x       |
 
@@ -71,10 +71,10 @@ Diese Funktion wird für die folgenden Typen von Shadern unterstützt:
 
 <dl> <dt>
 
-[Rwstructuredbuffer](sm5-object-rwstructuredbuffer.md)
+[RWStructuredBuffer](sm5-object-rwstructuredbuffer.md)
 </dt> <dt>
 
-[Shader-Modell 5](d3d11-graphics-reference-sm5.md)
+[Shadermodell 5](d3d11-graphics-reference-sm5.md)
 </dt> </dl>
 
  

@@ -1,9 +1,9 @@
 ---
-title: Slider. Wert
-description: Das value-Attribut gibt die aktuelle Position des Schiebereglers an oder ruft diese ab. | Slider. Wert
+title: SLIDER.value
+description: Das Value-Attribut gibt die aktuelle Position des Schiebereglers an oder ruft sie ab. | SLIDER.value
 ms.assetid: 2cd2f8b2-d3f1-4897-98b0-af551d6693e6
 keywords:
-- Schieberegler. Wert-Fenster Media Player
+- SLIDER.value Windows Media Player
 topic_type:
 - apiref
 api_name:
@@ -12,16 +12,16 @@ api_type:
 - NA
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: e87aeff5c97808efb812f530236227b07f463855
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 30f9ae7c0dc45f3a14cad2aa5b7332b037302b6658043233bbd98b1d99a12e10
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106369516"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118118628"
 ---
-# <a name="slidervalue"></a>Slider. Wert
+# <a name="slidervalue"></a>SLIDER.value
 
-Das **value** -Attribut gibt die aktuelle Position des Schiebereglers an oder ruft diese ab.
+Das **Value-Attribut** gibt die aktuelle Position des Schiebereglers an oder ruft sie ab.
 
 ``` syntax
         elementID.value
@@ -29,13 +29,13 @@ Das **value** -Attribut gibt die aktuelle Position des Schiebereglers an oder ru
 
 ## <a name="possible-values"></a>Mögliche Werte
 
-Dieses Attribut ist eine Lese-/schreibnummer (**float**) mit einem Standardwert von **Min**. 
+Dieses Attribut ist eine  Lese-/Schreibnummer **(float)** mit dem Standardwert **min.**
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Der **Wert** muss immer größer als oder gleich **Min** und kleiner oder gleich dem **maximalen** Wert sein. Wenn Sie einen Wert außerhalb dieses Bereichs angeben, werden der **Wert** und die Position des Schiebereglers nicht geändert.
+Der **Wert** sollte immer größer oder gleich **min** und kleiner als oder gleich **max** sein. Wenn Sie einen Wert außerhalb dieses Bereichs angeben, werden **der Wert** und die Position des Schiebereglers nicht geändert.
 
-Weitere Informationen finden Sie unter **customslider**. [positionImage](customslider-positionimage.md) -Attribut für ein Beispiel, das veranschaulicht, wie die Attribute des **Slider** -Elements verwendet werden.
+Weitere Informationen finden Sie unter **DEM UNTERENLIDER.** [das attribut positionImage](customslider-positionimage.md) für ein Beispiel, das veranschaulicht, wie die Attribute des **SLIDER-Elements** verwendet werden.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -43,18 +43,18 @@ Weitere Informationen finden Sie unter **customslider**. [positionImage](customs
 
 | Anforderung | Wert |
 |--------------------|------------------------------------------------------|
-| Version<br/> | Windows Media Player, Version 7,0 oder höher<br/> |
+| Version<br/> | Windows Media Player Version 7.0 oder höher<br/> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Slider-Element**](slider-element.md)
+[**SLIDER-Element**](slider-element.md)
 </dt> <dt>
 
-[**Schieberegler. min.**](slider-min.md)
+[**SLIDER.min**](slider-min.md)
 </dt> </dl>
 
  

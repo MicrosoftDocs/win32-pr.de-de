@@ -149,7 +149,7 @@ Beachten Sie, dass die [**Name-Eigenschaft**](--namespace.md) einer **\_ \_ Name
 
 
 
-## <a name="see-also"></a>Weitere Informationen:
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 

@@ -1,6 +1,6 @@
 ---
-description: Legt einen Wert fest, der steuert, wie die Benutzersicherheits-ID (SID) in Benutzernamen aufgelöst wird, oder ruft diesen ab.
-title: DiskQuotaControl.UserNameResolution-Eigenschaft
+description: Legt einen Wert fest, der steuert, wie Benutzersicherheits-ID (SID) in Benutzernamen aufgelöst wird, oder ruft diesen ab.
+title: DiskQuotaControl.UserNameResolution (Eigenschaft)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -20,9 +20,9 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 08/11/2021
 ms.locfileid: "118224613"
 ---
-# <a name="diskquotacontrolusernameresolution-property"></a>DiskQuotaControl.UserNameResolution-Eigenschaft
+# <a name="diskquotacontrolusernameresolution-property"></a>DiskQuotaControl.UserNameResolution (Eigenschaft)
 
-Legt einen Wert fest, der steuert, wie die Benutzersicherheits-ID (SID) in Benutzernamen aufgelöst wird, oder ruft diesen ab.
+Legt einen Wert fest, der steuert, wie Benutzersicherheits-ID (SID) in Benutzernamen aufgelöst wird, oder ruft diesen ab.
 
 Dies ist eine Eigenschaft mit Lese- und Schreibzugriff.
 
@@ -45,8 +45,8 @@ Diese Eigenschaft kann auf einen der folgenden Werte festgelegt werden.
 | Auflösungstyp | Wert | BESCHREIBUNG                                                                                                                                              |
 |-----------------|-------|----------------------------------------------------------------------------------------------------------------------------------------------------------|
 | dqResolveNone   | 0     | Lösen Sie keine Benutzernameninformationen auf.                                                                                                                    |
-| dqResolveSync   | 1     | Warten Sie, während Die Namensinformationen aufgelöst werden.                                                                                                                   |
-| dqResolveAsync  | 2     | Warten Sie nicht, während Sie Namensinformationen auflösen. Das [**OnUserNameChanged-Ereignis**](diskquotacontrol-onusernamechanged.md) wird ausgelöst, wenn der Name aufgelöst wird. |
+| dqResolveSync   | 1     | Warten Sie, während Sie Namensinformationen auflösen.                                                                                                                   |
+| dqResolveAsync  | 2     | Warten Sie nicht, während Sie Namensinformationen auflösen. Das [**OnUserNameChanged-Ereignis**](diskquotacontrol-onusernamechanged.md) wird beim Auflösen des Namens aus. |
 
 
 
@@ -54,7 +54,7 @@ Diese Eigenschaft kann auf einen der folgenden Werte festgelegt werden.
 
 ## <a name="remarks"></a>Hinweise
 
-Diese Eigenschaft wirkt sich auf die Enumeration von [**DIDiskQuotaUser-Objekten**](didiskquotauser-object.md) und die [**AddUser-**](diskquotacontrol-adduser.md) und [**FindUser-Methoden**](diskquotacontrol-finduser.md) aus.
+Diese Eigenschaft wirkt sich auf die Enumeration von [**DIDiskQuotaUser-Objekten**](didiskquotauser-object.md) sowie auf die [**Methoden AddUser und**](diskquotacontrol-adduser.md) [**FindUser**](diskquotacontrol-finduser.md) aus.
 
 ## <a name="requirements"></a>Anforderungen
 

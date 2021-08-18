@@ -19,7 +19,7 @@ Die StylusInput-APIs sind für:
 
 -   Bieten Sie Echtzeitzugriff auf den Tablettstift-Datenstrom.
 -   Halten Sie den Ui-Thread (Benutzeroberflächenthread) davon ab, das dynamische Ink-Rendering zu blockieren, indem Sie die Paketdaten im UI-Thread in die Warteschlange einordnen und die Ink-Sammlung als Singlethread erstellen.
--   Erhöhen Sie die Leistung, und senken Sie die allgemeine Threadauslastung gegenüber dem Verwenden des [**InkCollector-Objekts,**](inkcollector-class.md) [**des InkOverlay-Objekts,**](inkoverlay-class.md) des [InkPicture-Steuerelements](inkpicture-control-reference.md) oder des [InkEdit-Steuerelements](inkedit-control-reference.md) zum Erfassen von Ink.
+-   Erhöhen Sie die Leistung, und senken Sie die allgemeine Threadverwendung mithilfe des [**InkCollector-Objekts,**](inkcollector-class.md) [**des InkOverlay-Objekts,**](inkoverlay-class.md) des [InkPicture-Steuerelements](inkpicture-control-reference.md) oder des [InkEdit-Steuerelements,](inkedit-control-reference.md) um Dies zu erfassen.
 
 Die StylusInput-APIs sind nicht für die Arbeit mit dem [**InkCollector-Objekt,**](inkcollector-class.md) [**dem InkOverlay-Objekt,**](inkoverlay-class.md) dem [InkPicture-Steuerelement](inkpicture-control-reference.md) oder dem [InkEdit-Steuerelement](inkedit-control-reference.md) konzipiert.
 

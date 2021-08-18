@@ -1,7 +1,7 @@
 ---
-description: 'Für Windows 7 unterstützt tragbare Windows-Geräte die folgenden Attribute für die Methoden eines Geräte Dienstanbieter. Diese Attribute werden von der iportabledeviceservicecapabili:: getmethodattributes-Methode zurückgegeben.'
+description: Für Windows 7 unterstützt Windows Portable Devices die folgenden Attribute für Methoden eines Gerätediensts. Diese Attribute werden von der IPortableDeviceServiceCapabilities::GetMethodAttributes-Methode zurückgegeben.
 ms.assetid: b920e037-7737-4a18-b4f1-5c59e0a857dd
-title: Methoden Attribute (portabledevice. h)
+title: Methodenattribute (PortableDevice.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,26 +13,26 @@ api_type:
 - HeaderDef
 api_location:
 - PortableDevice.h
-ms.openlocfilehash: fe638bcd0d87af7b16bfb4f202f21cea97908fcd
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: ac41b4e9c7273c953a9689ce8c3d9f44d32925aded5b36291c45895b872fa9fb
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106370044"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118026337"
 ---
 # <a name="method-attributes"></a>Methodenattribut
 
-Für Windows 7 unterstützt tragbare Windows-Geräte die folgenden Attribute für die Methoden eines Geräte Dienstanbieter. Diese Attribute werden von der [**iportabledeviceservicecapabili:: getmethodattributes**](/windows/desktop/api/PortableDeviceAPI/nf-portabledeviceapi-iportabledeviceservicecapabilities-getmethodattributes) -Methode zurückgegeben.
+Für Windows 7 unterstützt Windows Portable Devices die folgenden Attribute für Methoden eines Gerätediensts. Diese Attribute werden von der [**IPortableDeviceServiceCapabilities::GetMethodAttributes-Methode**](/windows/desktop/api/PortableDeviceAPI/nf-portabledeviceapi-iportabledeviceservicecapabilities-getmethodattributes) zurückgegeben.
 
 
 
 
-| Attribut                                      | VarType         | BESCHREIBUNG                                                                                                               |
+| attribute                                      | VarType         | Beschreibung                                                                                                               |
 |------------------------------------------------|-----------------|---------------------------------------------------------------------------------------------------------------------------|
-| **Zugriff auf WPD- \_ Methoden \_ Attribut \_**             | **VT \_ CLSID**   | Der erforderliche Methoden Zugriff.                                                                                               |
-| **mit dem WPD- \_ Methoden \_ Attribut \_ verknüpfte \_ Format** | **VT \_ CLSID**   | Das Format, das der Methode zugeordnet ist, oder **GUID \_ null** , wenn kein zugeordnetes Format vorhanden ist.                                |
-| **\_ \_ Attribut \_ Name der WPD-Methode**               | **VT \_ LPWSTR**  | Eine Zeichenfolge, die den Skript freundlichen Namen der Methode angibt. Gültige Zeichen sind alphanumerisch \[ a-Za-z0-9 \] und ' \_ '. |
-| **\_ \_ Attribut \_ Parameter für WPD-Methoden**         | **VT \_ unbekannt** | Eine [**iportabledevicekeycollection**](iportabledevicekeycollection.md) -Schnittstelle, die die Methoden Parameter enthält.    |
+| **\_ \_ WPD-METHODENATTRIBUTZUGRIFF \_**             | **VT \_ CLSID**   | Der erforderliche Methodenzugriff.                                                                                               |
+| **ZUGEORDNETES FORMAT \_ DES WPD-METHODENATTRIBUTS \_ \_ \_** | **VT \_ CLSID**   | Das format, das der -Methode zugeordnet ist, oder **GUID \_ NULL,** wenn kein zugeordnetes Format verfügbar ist.                                |
+| **\_ \_ WPD-METHODENATTRIBUTNAME \_**               | **VT \_ LPWSTR**  | Eine Zeichenfolge, die den skriptfreundlichen Namen der Methode angibt. Gültige Zeichen sind alphanumerische \[ a-zA-Z0-9 \] und ' \_ '. |
+| **\_ \_ WPD-METHODENATTRIBUTPARAMETER \_**         | **VT \_ UNKNOWN** | Eine [**IPortableDeviceKeyCollection-Schnittstelle,**](iportabledevicekeycollection.md) die die Methodenparameter enthält.    |
 
 
 
@@ -44,11 +44,11 @@ Für Windows 7 unterstützt tragbare Windows-Geräte die folgenden Attribute fü
 
 | Anforderung | Wert |
 |-------------------|---------------------------------------------------------------------------------------------|
-| Header<br/> | <dl> <dt>Portabledevice. h</dt> </dl> |
+| Header<br/> | <dl> <dt>PortableDevice.h</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 

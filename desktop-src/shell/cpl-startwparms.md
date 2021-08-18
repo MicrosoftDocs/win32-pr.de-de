@@ -1,6 +1,6 @@
 ---
-description: Wird gesendet, um das CPlApplet zu benachrichtigen, dass der Benutzer das Symbol ausgewählt hat, das einem bestimmten Dialogfeld zugeordnet ist. CPlApplet sollte das entsprechende Dialogfeld anzeigen und alle benutzerdefinierten Tasks ausführen.
-title: CPL_STARTWPARMS Meldung (cpl. h)
+description: Wird gesendet, um CPlApplet zu benachrichtigen, dass der Benutzer das symbol ausgewählt hat, das einem bestimmten Dialogfeld zugeordnet ist. CPlApplet sollte das entsprechende Dialogfeld anzeigen und alle vom Benutzer angegebenen Aufgaben ausführen.
+title: CPL_STARTWPARMS (Cpl.h)
 ms.topic: reference
 ms.date: 05/31/2018
 ms.assetid: 04ac5117-39c9-4d3f-b32d-8f8d2b515be1
@@ -13,52 +13,52 @@ api_location:
 topic_type:
 - APIRef
 - kbSyntax
-ms.openlocfilehash: 790779c1c45acbc211fe36e28b2e55d5ae2e60da
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: f836f868b81daa49e87eb4efc804442bed25690ce126852891327d0eb042aaec
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "103958771"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118460609"
 ---
-# <a name="cpl_startwparms-message"></a>CPL- \_ startwparser-Meldung
+# <a name="cpl_startwparms-message"></a>CPL \_ STARTWPARMS-Nachricht
 
-Wird gesendet, um das [**CPlApplet**](/windows/win32/api/cpl/nc-cpl-applet_proc) zu benachrichtigen, dass der Benutzer das Symbol ausgewählt hat, das einem bestimmten Dialogfeld zugeordnet ist. **CPlApplet** sollte das entsprechende Dialogfeld anzeigen und alle benutzerdefinierten Tasks ausführen.
+Wird gesendet, um [**CPlApplet zu benachrichtigen,**](/windows/win32/api/cpl/nc-cpl-applet_proc) dass der Benutzer das symbol ausgewählt hat, das einem bestimmten Dialogfeld zugeordnet ist. **CPlApplet sollte** das entsprechende Dialogfeld anzeigen und alle vom Benutzer angegebenen Aufgaben ausführen.
 
 ## <a name="parameters"></a>Parameter
 
 <dl> <dt>
 
-*uappnum* 
+*uAppNum* 
 </dt> <dd>
 
-Die Dialogfeld Nummer. Diese Zahl muss zwischen null und einem Wert liegen, der als Antwort auf die [**cpl- \_ GetCount**](cpl-getcount.md) -Nachricht (CPL \_ GetCount – 1) zurückgegeben wird.
+Die Nummer des Dialogfelds. Diese Zahl muss im Bereich 0 bis 1 kleiner als der Wert liegen, der als Antwort auf die [**CPL \_ GETCOUNT-Nachricht**](cpl-getcount.md) (CPL \_ GETCOUNT – 1) zurückgegeben wird.
 
 </dd> <dt>
 
-*lpszextra* 
+*lpszExtra* 
 </dt> <dd>
 
-Eine Zeichenfolge mit zusätzlichen Ausführungs Anweisungen.
+Eine Zeichenfolge mit zusätzlichen Anweisungen für die Ausführung.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt **true** zurück, wenn die Meldung behandelt wurde, andernfalls **false** .
+Gibt **TRUE zurück,** wenn die Nachricht behandelt wurde, andernfalls **FALSE.**
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-**Cpl \_ Startwparamems** ähnelt [**cpl \_ dblclk**](cpl-dblclk.md) , ermöglicht Ihnen jedoch, eine Zeichenfolge an [**CPlApplet**](/windows/win32/api/cpl/nc-cpl-applet_proc) anstatt an **int** zu übergeben. Sie können diese Zeichenfolge als flexible Möglichkeit zum Bereitstellen von detaillierten Ausführungs Anweisungen verwenden.
+**CPL \_ STARTWPARMS** ähnelt [**CPL \_ DBLCLK,**](cpl-dblclk.md) ermöglicht ihnen jedoch, eine Zeichenfolge an [**CPlApplet**](/windows/win32/api/cpl/nc-cpl-applet_proc) statt an **int zu übergeben.** Sie können diese Zeichenfolge als flexible Möglichkeit verwenden, um detaillierte Anweisungen für die Ausführung zur Verfügung zu stellen.
 
-## <a name="requirements"></a>Requirements (Anforderungen)
+## <a name="requirements"></a>Anforderungen
 
 
 
 | Anforderung | Wert |
 |-------------------------------------|----------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional, Windows XP \[ Desktop-Apps\]<br/>           |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/>                             |
-| Header<br/>                   | <dl> <dt>CPL. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional nur Windows \[ XP-Desktop-Apps\]<br/>           |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                             |
+| Header<br/>                   | <dl> <dt>Cpl.h</dt> </dl> |
 
 
 

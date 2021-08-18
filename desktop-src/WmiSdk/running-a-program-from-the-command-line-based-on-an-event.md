@@ -1,8 +1,8 @@
 ---
-description: Die commandlineeventconsumer-Klasse führt ein angegebenes ausführbares Programm von einer Befehlszeile aus, wenn ein bestimmtes Ereignis auftritt. Diese Klasse ist ein Standard Ereignisconsumer, den WMI bereitstellt.
+description: Die CommandLineEventConsumer-Klasse führt ein angegebenes ausführbares Programm über eine Befehlszeile aus, wenn ein angegebenes Ereignis auftritt. Diese Klasse ist ein Standardereignis-Consumer, den WMI bietet.
 ms.assetid: b912a4a1-7b1c-43a9-b098-fcfd62a2c2db
 ms.tgt_platform: multiple
-title: Ausführen eines Programms von der Befehlszeile auf der Grundlage eines Ereignisses
+title: Ausführen eines Programms über die Befehlszeile basierend auf einem Ereignis
 ms.topic: article
 ms.date: 05/31/2018
 topic_type:
@@ -10,53 +10,53 @@ topic_type:
 api_name: ''
 api_type: ''
 api_location: ''
-ms.openlocfilehash: de7f4fb5e679a6b5767635c70e2ffb5eda3ba800
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 9c499713b3c6496759d94229e291138b0cb07de9e9f35d116eb19b4a7aeb3829
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106347069"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118553968"
 ---
-# <a name="running-a-program-from-the-command-line-based-on-an-event"></a>Ausführen eines Programms von der Befehlszeile auf der Grundlage eines Ereignisses
+# <a name="running-a-program-from-the-command-line-based-on-an-event"></a>Ausführen eines Programms über die Befehlszeile basierend auf einem Ereignis
 
-Die [**commandlineeventconsumer**](commandlineeventconsumer.md) -Klasse führt ein angegebenes ausführbares Programm von einer Befehlszeile aus, wenn ein bestimmtes Ereignis auftritt. Diese Klasse ist ein Standard Ereignisconsumer, den WMI bereitstellt.
+Die [**CommandLineEventConsumer-Klasse**](commandlineeventconsumer.md) führt ein angegebenes ausführbares Programm über eine Befehlszeile aus, wenn ein angegebenes Ereignis auftritt. Diese Klasse ist ein Standardereignis-Consumer, den WMI bietet.
 
-Wenn Sie [**commandlineeventconsumer**](commandlineeventconsumer.md)verwenden, sollten Sie die ausführbare Datei sichern, die Sie starten möchten. Wenn sich die ausführbare Datei nicht an einem sicheren Speicherort befindet oder nicht mit einer starken Zugriffs Steuerungs Liste (ACL) geschützt ist, kann ein Benutzer ohne Zugriffsberechtigungen die ausführbare Datei durch eine andere ausführbare Datei ersetzen. Sie können die [**Win32 \_ logicalfilesecuritysetting**](/previous-versions/windows/desktop/secrcw32prov/win32-logicalfilesecuritysetting) -oder [**Win32 \_ logicalsharesecuritysetting**](/previous-versions/windows/desktop/secrcw32prov/win32-logicalsharesecuritysetting) -Klassen verwenden, um die Sicherheit einer Datei oder Freigabe Programm gesteuert zu ändern. Weitere Informationen finden Sie unter [Erstellen einer Sicherheits Beschreibung für ein neues Objekt in C++](/windows/desktop/SecAuthZ/creating-a-security-descriptor-for-a-new-object-in-c--).
+Wenn Sie [**CommandLineEventConsumer verwenden,**](commandlineeventconsumer.md)sollten Sie die ausführbare Datei sichern, die Sie starten möchten. Wenn sich die ausführbare Datei nicht an einem sicheren Speicherort befindet oder nicht mit einer starken Zugriffssteuerungsliste (ACL) geschützt ist, kann ein Benutzer ohne Zugriffsberechtigungen Ihre ausführbare Datei durch eine andere ausführbare Datei ersetzen. Sie können die [**Win32 \_ LogicalFileSecuritySetting-**](/previous-versions/windows/desktop/secrcw32prov/win32-logicalfilesecuritysetting) oder [**Win32 \_ LogicalShareSecuritySetting-Klassen**](/previous-versions/windows/desktop/secrcw32prov/win32-logicalsharesecuritysetting) verwenden, um die Sicherheit einer Datei oder Freigabe programmgesteuert zu ändern. Weitere Informationen finden Sie unter Creating a Security Descriptor for a New Object in C++ (Erstellen eines [Sicherheitsdeskriptors für ein neues Objekt in C++).](/windows/desktop/SecAuthZ/creating-a-security-descriptor-for-a-new-object-in-c--)
 
-Die grundlegende Vorgehensweise für die Verwendung von Standardconsumern ist immer identisch und befindet sich in [Überwachung und Reaktion auf Ereignisse mit Standard](monitoring-and-responding-to-events-with-standard-consumers.md)Consumern. Das folgende Verfahren fügt der grundlegenden Prozedur, ist spezifisch für die [**commandlineeventconsumer**](commandlineeventconsumer.md) -Klasse, und beschreibt, wie ein Ereignisconsumer erstellt wird, der ein Programm ausführt.
+Das grundlegende Verfahren zur Verwendung von Standardverbrauchern ist immer identisch und befindet sich unter Überwachung und Reaktion auf Ereignisse [mit Standardverbrauchern.](monitoring-and-responding-to-events-with-standard-consumers.md) Die folgende Prozedur fügt der grundlegenden Prozedur hinzu, ist spezifisch für die [**CommandLineEventConsumer-Klasse**](commandlineeventconsumer.md) und beschreibt, wie ein Ereignisconsumer erstellt wird, der ein Programm ausgeführt.
 
 > [!Caution]
 >
-> Die [**commandlineeventconsumer**](commandlineeventconsumer.md) -Klasse verfügt über besondere Sicherheitseinschränkungen. Dieser Standardconsumer muss von einem lokalen Mitglied der Gruppe "Administratoren" auf dem lokalen Computer konfiguriert werden. Wenn Sie ein Domänen Konto zum Erstellen des Abonnements verwenden, muss das LocalSystem-Konto über die erforderlichen Berechtigungen für die Domäne verfügen, um sicherzustellen, dass der Ersteller Mitglied der lokalen Administratoren Gruppe ist.
+> Die [**CommandLineEventConsumer-Klasse**](commandlineeventconsumer.md) verfügt über besondere Sicherheitseinschränkungen. Dieser Standardverbraucher muss von einem lokalen Mitglied der Gruppe Administratoren auf dem lokalen Computer konfiguriert werden. Wenn Sie ein Domänenkonto zum Erstellen des Abonnements verwenden, muss das LocalSystem-Konto über die erforderlichen Berechtigungen für die Domäne verfügen, um sicherzustellen, dass der Ersteller Mitglied der lokalen Administratorgruppe ist.
 >
-> [**Commandlineeventconsumer**](commandlineeventconsumer.md) kann nicht verwendet werden, um einen Prozess zu starten, der interaktiv ausgeführt wird.
+> [**CommandLineEventConsumer kann**](commandlineeventconsumer.md) nicht verwendet werden, um einen Prozess zu starten, der interaktiv ausgeführt wird.
 
  
 
-Im folgenden Verfahren wird beschrieben, wie Sie einen Ereignisconsumer erstellen, der einen Prozess über eine Befehlszeile ausführt.
+Im folgenden Verfahren wird beschrieben, wie sie einen Ereignisverbraucher erstellen, der einen Prozess über eine Befehlszeile aus führt.
 
-**So erstellen Sie einen Ereignisconsumer, der einen Prozess über eine Befehlszeile ausführt**
+**So erstellen Sie einen Ereignisverbraucher, der einen Prozess über eine Befehlszeile aus führt**
 
-1.  Erstellen Sie in der MOF-Datei (Managed Object Format) eine Instanz von [**commandlineeventconsumer**](commandlineeventconsumer.md) , um die Ereignisse zu empfangen, die Sie in der Abfrage anfordern. Weitere Informationen finden Sie unter [Entwerfen von Managed Object Format-Klassen (MOF)](designing-managed-object-format--mof--classes.md).
-2.  Erstellen Sie eine Instanz von [**\_ \_ EventFilter**](--eventfilter.md) , und benennen Sie Sie mit einem Namen.
-3.  Erstellen Sie eine Abfrage, um den Ereignistyp anzugeben. Weitere Informationen finden Sie unter [Abfragen mit WQL](querying-with-wql.md).
-4.  Erstellen Sie eine Instanz von [**\_ \_ filtertoconsumerbinding**](--filtertoconsumerbinding.md) , um den Filter der Instanz von [**commandlineeventconsumer**](commandlineeventconsumer.md)zuzuordnen.
-5.  Kompilieren Sie die MOF-Datei mit [**Mofcomp.exe**](mofcomp.md).
+1.  Erstellen Sie Managed Object Format (MOF)-Datei eine Instanz von [**CommandLineEventConsumer,**](commandlineeventconsumer.md) um die Ereignisse zu empfangen, die Sie in der Abfrage anfordern. Weitere Informationen finden Sie unter [Entwerfen Managed Object Format -Klassen (MOF).](designing-managed-object-format--mof--classes.md)
+2.  Erstellen Sie eine Instanz von [**\_ \_ EventFilter,**](--eventfilter.md) und geben Sie ihr einen Namen.
+3.  Erstellen Sie eine Abfrage, um den Ereignistyp anzugeben. Weitere Informationen finden Sie unter [Abfragen mit WQL.](querying-with-wql.md)
+4.  Erstellen Sie eine Instanz von [**\_ \_ FilterToConsumerBinding,**](--filtertoconsumerbinding.md) um den Filter der Instanz von [**CommandLineEventConsumer zu zuordnen.**](commandlineeventconsumer.md)
+5.  Kompilieren Sie Ihre MOF-Datei mit [**Mofcomp.exe**](mofcomp.md).
 
 ## <a name="example"></a>Beispiel
 
-Im folgenden Codebeispiel wird eine neue Klasse mit dem Namen "mycmdlineconsumer" erstellt, um Ereignisse zu generieren, wenn eine Instanz der neuen Klasse am Ende einer MOF-Klasse erstellt wird. Das Beispiel ist ein MOF-Code, aber Sie können die Instanzen Programm gesteuert mithilfe der [Skript-API für WMI](scripting-api-for-wmi.md) oder der [com-API für WMI](com-api-for-wmi.md)erstellen.
+Im folgenden Codebeispiel wird eine neue Klasse namens "MyCmdLineConsumer" erstellt, um Ereignisse zu generieren, wenn eine Instanz der neuen Klasse am Ende einer MOF erstellt wird. Das Beispiel befindet sich im MOF-Code, aber Sie können die Instanzen programmgesteuert erstellen, indem Sie die [Skript-API](scripting-api-for-wmi.md) für WMI oder die [COM-API für WMI verwenden.](com-api-for-wmi.md)
 
-Im folgenden Verfahren wird beschrieben, wie eine neue Klasse mit dem Namen mycmdlineconsumer erstellt wird.
+Im folgenden Verfahren wird beschrieben, wie Sie eine neue Klasse namens MyCmdLineConsumer erstellen.
 
-**So erstellen Sie eine neue Klasse mit dem Namen mycmdlineconsumer**
+**So erstellen Sie eine neue Klasse namens MyCmdLineConsumer**
 
-1.  Erstellen Sie die Datei c: \\ CmdLine \_test.bat mit einem Befehl, der ein sichtbares Programm ausführt, z. b. "calc.exe".
-2.  Kopieren Sie die MOF-Datei in eine Textdatei, und speichern Sie Sie mit der Erweiterung MOF.
-3.  Kompilieren Sie in einem Befehlsfenster die MOF-Datei mit dem folgenden Befehl: " **Datei Name Dateiname. MOF**".
+1.  Erstellen Sie die c: cmdlinetest.bat datei mit einem Befehl, der ein sichtbares Programm wie \\ \_ "calc.exe" ausricht.
+2.  Kopieren Sie die MOF-Datei in eine Textdatei, und speichern Sie sie mit der Erweiterung .mof.
+3.  Kompilieren Befehlsfenster MOF-Datei in einer Datei mit dem folgenden Befehl: **Mofcomp-Dateiname.mof**.
 
 > [!Note]  
-> Das in der cmdline- \_test.bat angegebene Programm sollte ausgeführt werden.
+> Das in cmdline angegebene Programmtest.bat \_ ausgeführt werden.
 
  
 
@@ -119,7 +119,7 @@ instance of MyCmdLineConsumer
 
 <dl> <dt>
 
-[Überwachen von und reagieren auf Ereignisse mit Standard Consumern](monitoring-and-responding-to-events-with-standard-consumers.md)
+[Überwachen und Reagieren auf Ereignisse mit Standardverbrauchern](monitoring-and-responding-to-events-with-standard-consumers.md)
 </dt> </dl>
 
  

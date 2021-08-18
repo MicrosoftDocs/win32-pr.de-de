@@ -1,6 +1,6 @@
 ---
 title: D3DX11_IMAGE_FILE_FORMAT -Enumeration (D3DX11tex.h)
-description: 'Hinweis: Die Hilfsprogrammbibliothek D3DX (D3DX 9, D3DX 10 und D3DX 11) ist für Windows 8 veraltet und wird für Windows Store-Apps nicht unterstützt. Bilddateiformate, die von den Funktionen D3DX11Createxxx und D3DX11Savexxx unterstützt werden.'
+description: Hinweis Die Hilfsprogrammbibliothek D3DX (D3DX 9, D3DX 10 und D3DX 11) ist für Windows 8 veraltet und wird für Windows Store-Apps nicht unterstützt. Bilddateiformate, die von den Funktionen D3DX11Createxxx und D3DX11Savexxx unterstützt werden.
 ms.assetid: 89fa9ab8-3be0-4dc5-a533-94edb01df36a
 keywords:
 - D3DX11_IMAGE_FILE_FORMAT-Enumeration Direct3D 11
@@ -77,7 +77,7 @@ Portable Network Graphics -Dateiformat (PNG). Ein nicht proprietäres Bitmapform
 <span id="D3DX11_IFF_DDS"></span><span id="d3dx11_iff_dds"></span>**D3DX11 \_ IFF \_ DDS**
 </dt> <dd>
 
-DDS-Dateiformat (DirectDraw Surface). Speichert Texturen, Volumentexturen und kubische Umgebungszuordnungen mit oder ohne Mipmapebenen und mit oder ohne Pixelkomprimierung. Die Dateierweiterung für dieses Format ist .dds.
+DirectDraw surface(DDS)-Dateiformat. Speichert Texturen, Volumentexturen und kubische Umgebungszuordnungen mit oder ohne Mipmapebenen und mit oder ohne Pixelkomprimierung. Die Dateierweiterung für dieses Format ist .dds.
 
 </dd> <dt>
 
@@ -98,7 +98,7 @@ Graphics Interchange Format (GIF). Die Dateierweiterung für dieses Format ist .
 <span id="D3DX11_IFF_WMP"></span><span id="d3dx11_iff_wmp"></span>**D3DX11 \_ IFF \_ WMP**
 </dt> <dd>
 
-Windows Medienfotoformat (WMP). Dieses Format wird auch als HD-Foto und JPEG XR bezeichnet. Die Dateierweiterungen für dieses Format sind HDP, JXR und WDP.
+Windows Medienfotoformat (WMP). Dieses Format wird auch als HD Photo und JPEG XR bezeichnet. Die Dateierweiterungen für dieses Format sind HDP, JXR und WDP.
 
 Damit **D3DX11 \_ IFF \_ WMP** ordnungsgemäß funktioniert, müssen Sie COM initialisieren. Rufen Sie [**daher CoInitialize oder**](/windows/desktop/api/objbase/nf-objbase-coinitialize) [**CoInitializeEx**](/windows/desktop/api/combaseapi/nf-combaseapi-coinitializeex) in Ihrer Anwendung auf, bevor Sie D3DX aufrufen.
 
@@ -113,7 +113,7 @@ Erzwingt, dass diese Enumeration auf eine Größe von 32 Bits kompiliert wird. O
 
 ## <a name="remarks"></a>Hinweise
 
-Unter [Bitmaptypen (GDI+)](../gdiplus/-gdiplus-types-of-bitmaps-about.md) finden Sie weitere Informationen zu einigen dieser Formate.
+Weitere Informationen zu einigen dieser Formate finden Sie unter Bitmaptypen [(GDI+).](../gdiplus/-gdiplus-types-of-bitmaps-about.md)
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -125,7 +125,7 @@ Unter [Bitmaptypen (GDI+)](../gdiplus/-gdiplus-types-of-bitmaps-about.md) finden
 
 
 
-## <a name="see-also"></a>Weitere Informationen:
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 

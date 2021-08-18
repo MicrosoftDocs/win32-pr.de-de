@@ -1,84 +1,84 @@
 ---
-description: Bei den Zertifikat Diensten handelt es sich um eine Grundlage für die Public Key-Infrastruktur (PKI), die das Mittel zum schützen und Authentifizieren von Informationen bietet.
+description: Zertifikatdienste sind eine Grundlage für die Public Key-Infrastruktur (PKI), die die Mittel zum Schützen und Authentifizieren von Informationen bietet.
 ms.assetid: c18f46ca-e805-4b33-8014-79dc34c18531
 title: Zertifikate und öffentliche Schlüssel
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 07e01993673fe16c8401368ffaa7e8815c450dd5
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: d8d5f1996549184b8c56388bdb3ae8395eee077bca31b03e074f4dda8568805b
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "103863339"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117770620"
 ---
 # <a name="certificates-and-public-keys"></a>Zertifikate und öffentliche Schlüssel
 
-Bei den Zertifikat Diensten handelt es sich um eine Grundlage für die Public Key-Infrastruktur (PKI), die das Mittel zum schützen und Authentifizieren von Informationen bietet. Die Beziehung zwischen einem Zertifikat Inhaber, der Identität des Zertifikat Inhabers und dem [*öffentlichen Schlüssel*](../secgloss/p-gly.md) des Zertifikat Inhabers ist ein wichtiger Bestandteil der PKI. Diese Infrastruktur besteht aus den folgenden Teilen:
+Zertifikatdienste sind eine Grundlage für die Public Key-Infrastruktur (PKI), die die Mittel zum Schützen und Authentifizieren von Informationen bietet. Die Beziehung zwischen einem Zertifikatinhaber, der Identität des Zertifikatinhabers und dem öffentlichen Schlüssel des Zertifikatinhabers ist ein wichtiger Teil der PKI. [](../secgloss/p-gly.md) Diese Infrastruktur besteht aus den folgenden Teilen:
 
 -   [Das Paar aus öffentlichem und privatem Schlüssel](#the-publicprivate-key-pair)
--   [Die Zertifikat Anforderung](#the-certificate-request)
+-   [Die Zertifikatanforderung](#the-certificate-request)
 -   [Die Zertifizierungsstelle](#the-certification-authority)
 -   [Das Zertifikat](#the-certificate-request)
--   [Die Zertifikat Sperr Liste.](#the-certificate-revocation-list)
--   [Der öffentliche Schlüssel, der für die Verschlüsselung verwendet wird](#your-public-key-used-for-encryption)
--   [Der öffentliche Schlüssel, der für die Signatur Überprüfung verwendet wird.](#your-public-key-used-for-signature-verification)
--   [Rolle "Microsoft-Zertifikat Dienste"](#microsoft-certificate-services-role)
+-   [Die Zertifikatsperrliste](#the-certificate-revocation-list)
+-   [Ihr öffentlicher Schlüssel, der für die Verschlüsselung verwendet wird](#your-public-key-used-for-encryption)
+-   [Ihr öffentlicher Schlüssel, der für die Signaturüberprüfung verwendet wird](#your-public-key-used-for-signature-verification)
+-   [Rolle "Microsoft-Zertifikatdienste"](#microsoft-certificate-services-role)
 
 ## <a name="the-publicprivate-key-pair"></a>Das Paar aus öffentlichem und privatem Schlüssel
 
-PKI erfordert die Verwendung von [*öffentlichen/privaten Schlüsselpaaren*](../secgloss/p-gly.md). Die Mathematik aus öffentlichen/privaten Schlüsselpaaren geht über den Rahmen dieser Dokumentation hinaus, aber es ist wichtig, die funktionale Beziehung zwischen einem öffentlichen und einem privaten Schlüssel zu beachten. PKI- [*Kryptografiealgorithmen*](../secgloss/c-gly.md) verwenden den [*öffentlichen Schlüssel*](../secgloss/p-gly.md) des Empfängers einer verschlüsselten Nachricht, um Daten zu verschlüsseln, und den zugehörigen [*privaten Schlüssel*](../secgloss/p-gly.md) und nur den zugehörigen privaten Schlüssel, um die verschlüsselte Nachricht zu entschlüsseln.
+PKI erfordert die Verwendung von [*Paaren aus öffentlichem und privatem Schlüssel.*](../secgloss/p-gly.md) Die Mathematik von Paaren aus öffentlichem und privatem Schlüssel geht über den Rahmen dieser Dokumentation hinaus, aber es ist wichtig, die funktionale Beziehung zwischen einem öffentlichen und einem privaten Schlüssel zu beachten. Kryptografische PKI-Algorithmen verwenden den öffentlichen Schlüssel des [*Empfängers*](../secgloss/c-gly.md) einer [](../secgloss/p-gly.md) verschlüsselten Nachricht zum Verschlüsseln von Daten sowie den zugehörigen privaten Schlüssel und nur den zugehörigen privaten Schlüssel, um die verschlüsselte Nachricht zu entschlüsseln. [](../secgloss/p-gly.md)
 
-Analog dazu wird eine [*digitale Signatur*](../secgloss/d-gly.md) des Inhalts, die in größerem Umfang ausführlicher beschrieben wird, mit dem privaten Schlüssel des Signatur Gebers erstellt. Der entsprechende öffentliche Schlüssel, der allen Benutzern zur Verfügung steht, wird verwendet, um diese Signatur zu überprüfen. Die Geheimnisse des privaten Schlüssels müssen beibehalten werden, da das Framework entfernt wird, nachdem der private Schlüssel kompromittiert wurde.
+Ebenso wird eine [*digitale Signatur des*](../secgloss/d-gly.md) Inhalts, die weiter unten ausführlicher beschrieben wird, mit dem privaten Schlüssel des Signaturers erstellt. Der entsprechende öffentliche Schlüssel, der für alle verfügbar ist, wird verwendet, um diese Signatur zu überprüfen. Die Geheimnisse des privaten Schlüssels müssen beibehalten werden, da das Framework nach der Kompromittung des privaten Schlüssels getrennt wird.
 
-Wenn Sie genügend Zeit und Ressourcen haben, kann ein paar aus öffentlichem und privatem Schlüssel kompromittiert werden, d. h., der private Schlüssel kann ermittelt werden. Desto schwieriger ist es, Brute-Force zu verwenden, um den privaten Schlüssel zu ermitteln. In der Praxis können ausreichend starke Schlüssel verwendet werden, damit der private Schlüssel nicht rechtzeitig ermittelt werden kann, sodass die Public Key-Infrastruktur zu einem funktionierenden Sicherheitsmechanismus wird.
+Wenn genügend Zeit und Ressourcen vorhanden sind, kann ein Paar aus öffentlichem und privatem Schlüssel kompromittiert werden, d.&a; der private Schlüssel kann gefunden werden. Je länger der Schlüssel, desto schwieriger ist es, Brute-Force-Angriffe zum Aufschlüsseln des privaten Schlüssels zu verwenden. In der Praxis können ausreichend starke Schlüssel verwendet werden, um die rechtzeitige Bestimmung des privaten Schlüssels nicht möglich zu machen, wodurch die Public Key-Infrastruktur zu einem funktionierenden Sicherheitsmechanismus wird.
 
-Ein privater Schlüssel kann im geschützten Format auf einem Datenträger gespeichert werden. in diesem Fall kann er nur mit diesem Computer verwendet werden, es sei denn, er wird physisch auf einen anderen Computer verschoben. Eine Alternative besteht darin, einen Schlüssel auf einer Smartcard zu verwenden, der auf einem anderen Computer verwendet werden kann, sofern er über einen Smartcardleser und unterstützende Software verfügt.
+Ein privater Schlüssel kann im geschützten Format auf einem Datenträger gespeichert werden. In diesem Fall kann er nur mit diesem computer verwendet werden, es sei denn, er wird physisch auf einen anderen Computer verschoben. Eine Alternative ist ein Schlüssel auf einer Smartcard, der auf einem anderen Computer verwendet werden kann, vorausgesetzt, er verfügt über einen Smartcardleser und unterstützende Software.
 
-Der öffentliche Schlüssel, jedoch nicht der private Schlüssel des Subjekts eines digitalen Zertifikats, ist als Teil der [*Zertifikat Anforderung*](../secgloss/c-gly.md)enthalten. (Aus diesem Grund muss ein öffentliches/privates Schlüsselpaar vorhanden sein, bevor die Zertifikat Anforderung angefordert wird.) Der öffentliche Schlüssel wird Teil des ausgestellten Zertifikats.
+Der öffentliche Schlüssel, aber nicht der private Schlüssel des Betreffs eines digitalen Zertifikats ist in der [*Zertifikatanforderung enthalten.*](../secgloss/c-gly.md) (Daher muss ein Paar aus öffentlichem und privatem Schlüssel vorhanden sein, bevor die Zertifikatanforderung gestellt wird.) Dieser öffentliche Schlüssel wird Teil des ausgestellten Zertifikats.
 
-## <a name="the-certificate-request"></a>Die Zertifikat Anforderung
+## <a name="the-certificate-request"></a>Die Zertifikatanforderung
 
-Bevor ein Zertifikat ausgestellt wird, muss eine [*Zertifikat Anforderung*](../secgloss/c-gly.md) generiert werden. Diese Anforderung gilt für eine Entität, z. b. für einen Endbenutzer, einen Computer oder eine Anwendung. Gehen Sie zur Diskussion davon aus, dass die Entität selbst ist. Details Ihrer Identität sind in der Zertifikat Anforderung enthalten. Nachdem die Anforderung generiert wurde, wird Sie an eine Zertifizierungsstelle ( [*Certification Authority*](../secgloss/c-gly.md) , ca) übermittelt. Die Zertifizierungsstelle verwendet dann Ihre Identitätsinformationen, um zu bestimmen, ob die Anforderung die Kriterien der Zertifizierungsstelle zum Ausstellen eines Zertifikats erfüllt. Wenn die Zertifizierungsstelle die Anforderung genehmigt, gibt Sie ein Zertifikat als die in der Anforderung benannte Entität aus.
+Bevor ein Zertifikat ausgestellt wird, muss [*eine Zertifikatanforderung*](../secgloss/c-gly.md) generiert werden. Diese Anforderung gilt für eine Entität, z. B. einen Endbenutzer, einen Computer oder eine Anwendung. Gehen Sie zur Diskussion davon aus, dass die Entität sie selbst ist. Details zu Ihrer Identität sind in der Zertifikatanforderung enthalten. Nachdem die Anforderung generiert wurde, wird sie an eine [*Zertifizierungsstelle*](../secgloss/c-gly.md) übermittelt. Die Zertifizierungsstelle verwendet dann Ihre Identitätsinformationen, um zu bestimmen, ob die Anforderung die Kriterien der Zertifizierungsstelle für die Ausstellung eines Zertifikats erfüllt. Wenn die Zertifizierungsstelle die Anforderung genehmigt, stellt sie Ihnen als Entität in der Anforderung ein Zertifikat aus.
 
 ## <a name="the-certification-authority"></a>Die Zertifizierungsstelle
 
-Vor der Ausgabe Ihres Zertifikats überprüft die Zertifizierungsstelle Ihre Identität. Wenn das Zertifikat ausgestellt wird, wird Ihre Identität an das Zertifikat gebunden, das Ihren öffentlichen Schlüssel enthält. Ihr Zertifikat enthält auch die digitale Signatur der Zertifizierungsstelle (die von jedem Benutzer, der Ihr Zertifikat empfängt, überprüft werden kann).
+Vor der Ausstellung Ihres Zertifikats überprüft die Zertifizierungsstelle Ihre Identität. Wenn das Zertifikat ausgestellt wird, ist Ihre Identität an das Zertifikat gebunden, das Ihren öffentlichen Schlüssel enthält. Ihr Zertifikat enthält auch die digitale Signatur der Zertifizierungsstelle (die von jedem Benutzer überprüft werden kann, der Ihr Zertifikat erhält).
 
-Da Ihr Zertifikat die Identität der ausstellenden Zertifizierungsstelle enthält, kann eine interessierte Partei, die dieser Zertifizierungsstelle vertraut, diese Vertrauensstellung auf Ihr Zertifikat ausweiten. Die Ausstellung eines Zertifikats stellt keine Vertrauensstellung her, sondern überträgt die Vertrauensstellung. Wenn der zertifikatconsumer der ausstellenden Zertifizierungsstelle nicht vertraut, wird das Zertifikat nicht (oder zumindest nicht) als vertrauenswürdig eingestuft.
+Da Ihr Zertifikat die Identität der ausstellenden Zertifizierungsstelle enthält, kann eine betroffene Partei, die dieser Zertifizierungsstelle vertraut, diese Vertrauensstellung auf Ihr Zertifikat ausdehnen. Die Ausstellung eines Zertifikats stellt keine Vertrauensstellung her, sondern überträgt die Vertrauensstellung. Wenn der Zertifikatverbraucher der ausstellenden Zertifizierungsstelle nicht vertraut, vertraut er Ihrem Zertifikat nicht (oder zumindest nicht).
 
-Eine Kette signierter Zertifikate ermöglicht auch das Übertragen von Vertrauens Stellungen an andere Zertifizierungsstellen. Dadurch können Parteien, die unterschiedliche Zertifizierungsstellen verwenden, weiterhin Zertifikate Vertrauen (vorausgesetzt, es gibt eine gemeinsame Zertifizierungsstelle in der Kette, d. h. eine Zertifizierungsstelle, die von beiden Parteien als vertrauenswürdig eingestuft wird).
+Eine Kette signierter Zertifikate ermöglicht auch die Übertragung von Vertrauensstellungen an andere Zertifizierungsstelle. Dadurch können Parteien, die verschiedene Zertifizierungsstellen verwenden, weiterhin Zertifikate vertrauen (vorausgesetzt, es gibt eine gemeinsame Zertifizierungsstelle in der Kette, d. h. eine Zertifizierungsstelle, die von beiden Seiten als vertrauenswürdig eingestuft wird).
 
 ## <a name="the-certificate"></a>Das Zertifikat
 
-Zusätzlich zu Ihrem öffentlichen Schlüssel und der Identität der ausstellenden Zertifizierungsstelle enthält das ausgegebene Zertifikat Informationen zu den Zwecken Ihres Schlüssels und Zertifikats. Außerdem enthält Sie den Pfad zur Liste der gesperrten Zertifikate der Zertifizierungsstelle und gibt die Gültigkeitsdauer des Zertifikats an (Anfangs-und Enddatum).
+Zusätzlich zu Ihrem öffentlichen Schlüssel und der Identität der ausstellenden Zertifizierungsstelle enthält das ausgestellte Zertifikat Informationen zu den Zwecken Ihres Schlüssels und Zertifikats. Darüber hinaus enthält sie den Pfad zur Liste der gesperrten Zertifikate der Zertifizierungsstelle und gibt die Gültigkeitsdauer des Zertifikats (Anfangs- und Enddatum) an.
 
-Wenn der zertifikatconsumer der ausstellenden Zertifizierungsstelle das Zertifikat vertraut, muss der zertifikatconsumer feststellen, ob das Zertifikat noch gültig ist, indem es die Anfangs-und Enddatum des Zertifikats mit der aktuellen Uhrzeit vergleicht und sicherstellt, dass Ihr Zertifikat nicht in der Liste der von der Zertifizierungsstelle gesperrten Zertifikate enthalten ist.
+Vorausgesetzt, der Zertifikatverbraucher vertraut der ausstellenden Zertifizierungsstelle für Ihr Zertifikat, muss der Zertifikatverbraucher ermitteln, ob das Zertifikat noch gültig ist, indem er das Anfangs- und Enddatum des Zertifikats mit der aktuellen Uhrzeit vergleicht und überprüft, ob ihr Zertifikat nicht in der Liste der gesperrten Zertifikate der Zertifizierungsstelle enthalten ist.
 
-## <a name="the-certificate-revocation-list"></a>Die Zertifikat Sperr Liste.
+## <a name="the-certificate-revocation-list"></a>Die Zertifikatsperrliste
 
-Vorausgesetzt, dass das Zertifikat in einem gültigen Zeitraum verwendet wird und der zertifikatconsumer der ausstellenden Zertifizierungsstelle vertraut, gibt es noch ein Element, das der Zertifikat Consumer vor der Verwendung des Zertifikats überprüfen muss: die [*Zertifikat Sperr Liste*](../secgloss/c-gly.md) (CRL). Der zertifikatconsumer überprüft die CRL der Zertifizierungsstelle (der Pfad, der als Erweiterung in Ihrem Zertifikat enthalten ist), um sicherzustellen, dass Ihr Zertifikat nicht in der Liste der gesperrten Zertifikate enthalten ist. CRLs sind vorhanden, da ein Zertifikat nicht abgelaufen ist, aber nicht mehr als vertrauenswürdig eingestuft werden kann. Von der Zertifizierungsstelle wird in regelmäßigen Abständen eine aktualisierte CRL veröffentlicht. Zertifikatconsumer sind für den Vergleich von Zertifikaten mit der aktuellen CRL zuständig, bevor Sie das vertrauenswürdige Zertifikat berücksichtigen.
+Wenn das Zertifikat in einem gültigen Zeitraum verwendet wird und der Zertifikatverbraucher der ausstellenden Zertifizierungsstelle vertraut, muss der Zertifikatverbraucher vor der Verwendung des Zertifikats noch eins überprüfen: die Zertifikatsperrliste (Certificate [*Revocation List,*](../secgloss/c-gly.md) CRL). Der Zertifikatverbraucher überprüft die Zertifikatsperrliste der Zertifizierungsstelle (der Pfad, der als Erweiterung in Ihrem Zertifikat enthalten ist), um sicherzustellen, dass Ihr Zertifikat nicht in der Liste der gesperrten Zertifikate enthalten ist. CrLs sind vorhanden, da ein Zertifikat manchmal nicht abgelaufen ist, aber nicht mehr als vertrauenswürdig eingestuft werden kann. Die Zertifizierungsstelle veröffentlicht in regelmäßigen Abständen eine aktualisierte Zertifikatsperrliste. Zertifikatverbraucher sind für den Vergleich von Zertifikaten mit der aktuellen Zertifikatsperrliste verantwortlich, bevor das Zertifikat als vertrauenswürdig eingestuft wird.
 
-## <a name="your-public-key-used-for-encryption"></a>Der öffentliche Schlüssel, der für die Verschlüsselung verwendet wird
+## <a name="your-public-key-used-for-encryption"></a>Ihr öffentlicher Schlüssel, der für die Verschlüsselung verwendet wird
 
-Wenn ein Absender eine Nachricht verschlüsseln möchte, bevor Sie Sie an Sie senden, ruft der Absender zuerst das Zertifikat ab. Nachdem der Absender festgestellt hat, dass die Zertifizierungsstelle vertrauenswürdig ist und das Zertifikat gültig und nicht widerrufen ist, verwendet der Absender ihren öffentlichen Schlüssel (Rückruf ist Teil des Zertifikats) mit Kryptografiealgorithmen, um die [*Klartext*](../secgloss/p-gly.md) -Nachricht in [*Chiffre Text*](../secgloss/c-gly.md)zu verschlüsseln. Wenn Sie den Chiffre Text erhalten, verwenden Sie den privaten Schlüssel, um den Chiffre Text zu entschlüsseln.
+Wenn ein Absender eine Nachricht verschlüsseln möchte, bevor sie an Sie gesendet wird, ruft der Absender zuerst Ihr Zertifikat ab. Nachdem der Absender festgestellt hat, dass die Zertifizierungsstelle vertrauenswürdig ist und Ihr Zertifikat gültig und nicht widerrufen wurde, verwendet [](../secgloss/p-gly.md) der Absender Ihren öffentlichen Schlüssel (recall it is part of the certificate) mit kryptografischen Algorithmen, um die Klartextnachricht in Chiffretext zu [*verschlüsseln.*](../secgloss/c-gly.md) Wenn Sie den Chiffretext erhalten, verwenden Sie Ihren privaten Schlüssel, um den Chiffretext zu entschlüsseln.
 
-Wenn eine dritte Partei die Chiffre Text-e-Mail-Nachricht abfängt, kann Sie nicht ohne Zugriff auf Ihren [*privaten Schlüssel*](../secgloss/p-gly.md)entschlüsselt werden.
+Wenn ein Drittanbieter die Verschlüsselungstext-E-Mail abfingt, kann der Drittanbieter sie ohne Zugriff auf Ihren privaten [*Schlüssel nicht entschlüsseln.*](../secgloss/p-gly.md)
 
-Beachten Sie, dass der größte Teil der hier aufgeführten Aktivitäten von Software, nicht direkt vom Benutzer verarbeitet wird.
+Beachten Sie, dass der Großteil der hier aufgeführten Aktivitäten von Software und nicht direkt vom Benutzer verarbeitet wird.
 
-## <a name="your-public-key-used-for-signature-verification"></a>Der öffentliche Schlüssel, der für die Signatur Überprüfung verwendet wird.
+## <a name="your-public-key-used-for-signature-verification"></a>Ihr öffentlicher Schlüssel, der für die Signaturüberprüfung verwendet wird
 
-Eine [*digitale Signatur*](../secgloss/d-gly.md) wird als Bestätigung verwendet, dass eine Nachricht nicht geändert wurde, und als Bestätigung der Identität des Absenders der Nachricht. Diese digitale Signatur ist abhängig von Ihrem privaten Schlüssel und dem Nachrichten Inhalt. Mithilfe der Nachricht als Eingabe und Ihres privaten Schlüssels erstellen Kryptografiealgorithmen die digitale Signatur. Der Inhalt der Nachricht wird vom Signatur Prozess nicht geändert. Ein Empfänger kann Ihren öffentlichen Schlüssel (nach dem Überprüfen der Gültigkeit des Zertifikats, der ausstellenden Zertifizierungsstelle und des Sperr Status) verwenden, um zu bestimmen, ob die Signatur dem Nachrichten Inhalt entspricht, und um festzustellen, ob die Nachricht von Ihnen gesendet wurde.
+Eine [*digitale Signatur wird*](../secgloss/d-gly.md) als Bestätigung verwendet, dass eine Nachricht nicht geändert wurde, und als Bestätigung der Identität des Absenders der Nachricht. Diese digitale Signatur hängt von Ihrem privaten Schlüssel und dem Nachrichteninhalt ab. Mithilfe der Nachricht als Eingabe und Ihres privaten Schlüssels erstellen kryptografische Algorithmen die digitale Signatur. Der Inhalt der Nachricht wird durch den Signaturprozess nicht geändert. Ein Empfänger kann Ihren öffentlichen Schlüssel verwenden (nachdem er die Gültigkeit Ihres Zertifikats, die ausstellende Zertifizierungsstelle und den Sperrstatus überprüft hat), um zu bestimmen, ob die Signatur dem Nachrichteninhalt entspricht, und um zu bestimmen, ob die Nachricht von Ihnen gesendet wurde.
 
-Wenn die beabsichtigte Nachricht von einem Drittanbieter abgefangen, geändert (sogar etwas) und die ursprüngliche Signatur an den Empfänger weitergeleitet wird, kann der Empfänger nach der Untersuchung der Nachricht und der Signatur ermitteln, ob die Nachricht Fehler verdächtig ist. Wenn eine dritte Person eine Nachricht erstellt und Sie mit einer gefälschten, digitalen Signatur unter dem von Ihnen stammenden Zeichen sendet, kann der Empfänger den öffentlichen Schlüssel verwenden, um zu bestimmen, ob die Nachricht und die Signatur einander nicht entsprechen.
+Wenn ein Drittanbieter die beabsichtigte Nachricht abfing, sie ändert (auch geringfügig), und die ursprüngliche Signatur an den Empfänger weiterspart, kann der Empfänger bei der Untersuchung der Nachricht und Signatur feststellen, dass die Nachricht verdächtig ist. Wenn ein Drittanbieter eine Nachricht erstellt und mit einer digitalen Signatur unter der Guise sendet, die er von Ihnen stammt, kann der Empfänger mitHilfe Ihres öffentlichen Schlüssels feststellen, dass die Nachricht und die Signatur nicht übereinstimmen.
 
-[](../secgloss/n-gly.md) Die Nichtabstreitbarkeit wird auch von digitalen Signaturen unterstützt. Wenn der Absender einer signierten Nachricht das Senden der Nachricht ablehnt, kann der Empfänger die Signatur verwenden, um diesen Anspruch zu widerlegen.
+[*Nichtabruf wird*](../secgloss/n-gly.md) auch von digitalen Signaturen unterstützt. Wenn der Absender einer signierten Nachricht das Senden der Nachricht verweigert, kann der Empfänger die Signatur verwenden, um diesen Anspruch zu widerlegen.
 
-Beachten Sie, dass der größte Teil der hier aufgeführten Aktivitäten auch von Software behandelt wird, nicht direkt vom Benutzer.
+Beachten Sie, dass der Großteil der hier aufgeführten Aktivitäten auch von Software und nicht direkt vom Benutzer verarbeitet wird.
 
-## <a name="microsoft-certificate-services-role"></a>Rolle "Microsoft-Zertifikat Dienste"
+## <a name="microsoft-certificate-services-role"></a>Rolle "Microsoft-Zertifikatdienste"
 
-Die Microsoft-Zertifikat Dienste haben die Rolle, Zertifikate auszugeben oder Anforderungen für Zertifikate zu verweigern, die von Richtlinien Modulen gesteuert werden, die für die Sicherstellung der Identität der Zertifikatanforderer zuständig sind. Zertifikat Dienste bieten außerdem die Möglichkeit, ein Zertifikat zu widerrufen und die CRL zu veröffentlichen. Zertifikat Dienste können auch zentral (z. b. an einen Verzeichnisdienst) ausgestellte Zertifikate verteilen. Die Möglichkeit, Zertifikate zusammen mit der Veröffentlichung von CRLs auszugeben, zu verteilen, zu widerrufen und zu verwalten, stellt die erforderlichen Funktionen für die Public Key-Infrastruktur bereit.
+Microsoft-Zertifikatdienste haben die Rolle, Zertifikate auszugeben oder Zertifikatanforderungen zu verweigern, wie von Richtlinienmodulen, die für die Sicherstellung der Identität des Zertifikat anfordernden Benutzers verantwortlich sind. Zertifikatdienste bieten auch die Möglichkeit, ein Zertifikat zu widerrufen und die Zertifikatsperrliste zu veröffentlichen. Zertifikatdienste können auch ausgestellte Zertifikate zentral verteilen (z. B. an einen Verzeichnisdienst). Die Möglichkeit, Zertifikate zusammen mit der Veröffentlichung von Zertifikatsperrlisten aus- und zu verteilen, zu widerrufen und zu verwalten, bietet die erforderlichen Funktionen für die Public Key-Infrastruktur.
 
  
 

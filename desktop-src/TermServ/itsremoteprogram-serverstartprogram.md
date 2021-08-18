@@ -1,16 +1,16 @@
 ---
-title: Itsremoteprogram serverstartprogram-Methode
-description: Gibt ein RemoteApp-Programm an, das in der Remote Sitzung gestartet werden soll.
+title: ITSRemoteProgram-ServerStartProgram-Methode
+description: Gibt ein RemoteApp-Programm an, das in der Remotesitzung gestartet werden soll.
 ms.assetid: 5fb251bf-4832-4e35-b372-23418c280350
 ms.tgt_platform: multiple
 keywords:
-- Serverstartprogram-Methode Remotedesktopdienste
-- Serverstartprogram-Methode Remotedesktopdienste, itsremoteprogram-Schnittstelle
-- Itsremoteprogram-Schnittstelle Remotedesktopdienste, serverstartprogram-Methode
-- Serverstartprogram-Methode Remotedesktopdienste, ITSRemoteProgram2-Schnittstelle
-- ITSRemoteProgram2 Interface Remotedesktopdienste, serverstartprogram-Methode
-- Serverstartprogram-Methode Remotedesktopdienste, ITSRemoteProgram3-Schnittstelle
-- ITSRemoteProgram3 Interface Remotedesktopdienste, serverstartprogram-Methode
+- ServerStartProgram-Remotedesktopdienste
+- ServerStartProgram-Methode Remotedesktopdienste , ITSRemoteProgram-Schnittstelle
+- ITSRemoteProgram-Schnittstelle Remotedesktopdienste , ServerStartProgram-Methode
+- ServerStartProgram-Remotedesktopdienste , ITSRemoteProgram2-Schnittstelle
+- ITSRemoteProgram2-Schnittstelle Remotedesktopdienste , ServerStartProgram-Methode
+- ServerStartProgram-Methode Remotedesktopdienste , ITSRemoteProgram3-Schnittstelle
+- ITSRemoteProgram3-Schnittstelle Remotedesktopdienste , ServerStartProgram-Methode
 topic_type:
 - apiref
 api_name:
@@ -23,16 +23,16 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 1f18917eeb2eb3c60c1a35683b20f7e4604eddde
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: c789a9963086128e93546415247cfb3db69afe59c67a445b851ee5cf3687d16c
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104518044"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117756856"
 ---
-# <a name="itsremoteprogramserverstartprogram-method"></a>Itsremoteprogram:: serverstartprogram-Methode
+# <a name="itsremoteprogramserverstartprogram-method"></a>ITSRemoteProgram::ServerStartProgram-Methode
 
-Gibt ein RemoteApp-Programm an, das in der Remote Sitzung gestartet werden soll. Diese Funktion muss für eine verbundene Sitzung aufgerufen werden (nachdem die Benachrichtigung über die Sitzungs Verbindung auf dem Client empfangen wurde). Eine beliebige Anzahl von RemoteApp-Programmen kann in einer Sitzung gestartet werden. Bei einer RemoteApp-Sitzung tritt ein Timeout auf, wenn innerhalb der Sitzung innerhalb des Timeout Limits kein RemoteApp-Programm gestartet wird. Dies ist zwei Minuten für Windows Server 2008.
+Gibt ein RemoteApp-Programm an, das in der Remotesitzung gestartet werden soll. Diese Funktion muss in einer verbundenen Sitzung aufgerufen werden (nachdem die sitzungs verbundene Benachrichtigung auf dem Client empfangen wurde). Eine beliebige Anzahl von RemoteApp-Programmen kann in einer Sitzung gestartet werden. Bei einer RemoteApp-Sitzung kommt es zu einem Time out, wenn in der Sitzung kein RemoteApp-Programm innerhalb des Time outlimits gestartet wird, das zwei Minuten für Windows Server 2008 beträgt.
 
 ## <a name="syntax"></a>Syntax
 
@@ -54,51 +54,51 @@ HRESULT ServerStartProgram(
 
 <dl> <dt>
 
-*bstrexecutablepath* \[ in\]
+*bstrExecutablePath* \[ In\]
 </dt> <dd>
 
-Der Pfad der ausführbaren Datei des RemoteApp-Programms auf dem Server.
+Der Pfad der ausführbaren RemoteApp-Programmdatei auf dem Server.
 
 </dd> <dt>
 
-*bstraufilepath* \[ in\]
+*bstrFilePath* \[ In\]
 </dt> <dd>
 
-Der Pfad einer Datei, die über eine Datei Zuordnung auf dem Server geöffnet werden soll, z. b. "C: \\ \\ Documents \\ \\MyReport.docx". Wenn Sie *bstraufilepath* angeben, sollten Sie den *bstrexecutablepath* -Parameter nicht angeben und umgekehrt. Sie sollten nur einen der Parameter angeben.
+Der Pfad einer Datei, die über eine Dateiassoz auf dem Server geöffnet werden soll, z. B. "C: \\ \\ Dokumente \\ \\MyReport.docx". Wenn Sie *bstrFilePath angeben,* sollten Sie nicht den *Parameter bstrExecutablePath* und umgekehrt angeben. Sie sollten nur einen der Parameter angeben.
 
 </dd> <dt>
 
-*bstrauworkingdirectory* \[ in\]
+*bstrWorkingDirectory* \[ In\]
 </dt> <dd>
 
 Das Arbeitsverzeichnis auf dem Server für das RemoteApp-Programm.
 
 </dd> <dt>
 
-*vbexpandeinvvarinworkingdirector yonserver* \[ in\]
+*vbExpandEnvVarInWorkingDirectoryOnServer* \[ In\]
 </dt> <dd>
 
-Gibt an, ob der Server Umgebungsvariablen im Pfad des Arbeitsverzeichnisses erweitern soll. Legen Sie diesen Parameter auf **Variant \_ true** fest, wenn der Arbeitsverzeichnis Pfad Umgebungsvariablen enthält, oder **Variant \_ false** , wenn der Arbeitsverzeichnis Pfad keine Umgebungsvariablen enthält.
+Gibt an, ob der Server Umgebungsvariablen im Arbeitsverzeichnispfad erweitern soll. Legen Sie diesen Parameter auf **VARIANT \_ TRUE fest,** wenn der Arbeitsverzeichnispfad Umgebungsvariablen enthält, oder **VARIANT \_ FALSE,** wenn der Arbeitsverzeichnispfad keine Umgebungsvariablen enthält.
 
 </dd> <dt>
 
-*bstrauarguments* \[ in\]
+*bstrArguments* \[ In\]
 </dt> <dd>
 
-Die Befehlszeilenargumente für das RemoteApp-Programm, die in *bstrexecutablepath* angegeben sind. Legen Sie diese Einstellung auf **null** fest, wenn *bstrexecutablepath* nicht angegeben ist.
+Die Befehlszeilenargumente für das RemoteApp-Programm, die in *bstrExecutablePath angegeben sind.* Legen Sie dies **auf NULL** fest, *wenn bstrExecutablePath* nicht angegeben ist.
 
 </dd> <dt>
 
-*vbexpandeinvvarinargumentsonserver* \[ in\]
+*vbExpandEnvVarInArgumentsOnServer* \[ In\]
 </dt> <dd>
 
-Gibt an, ob der Server Umgebungsvariablen in den Befehlszeilen Argumenten erweitern soll. Legen Sie diesen Parameter auf **Variant \_ true** fest, wenn die Argumente Umgebungsvariablen enthalten, oder **Variant \_ false** , wenn die Argumente keine Umgebungsvariablen enthalten.
+Gibt an, ob der Server Umgebungsvariablen in den Befehlszeilenargumenten erweitern soll. Legen Sie diesen Parameter auf **VARIANT \_ TRUE fest,** wenn die Argumente Umgebungsvariablen enthalten, oder **VARIANT \_ FALSE,** wenn die Argumente keine Umgebungsvariablen enthalten.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt bei Erfolg **S \_ OK** zurück.
+Gibt **S \_ OK zurück,** wenn erfolgreich.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -110,11 +110,11 @@ Gibt bei Erfolg **S \_ OK** zurück.
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2008<br/>                                                         |
 | Typbibliothek<br/>             | <dl> <dt>MsTscAx.dll</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>MsTscAx.dll</dt> </dl> |
-| IID<br/>                      | IID \_ itsremoteprogram ist als FDD029F9-467A-4c49-8529-64B521DBD1B4 definiert.<br/>    |
+| IID<br/>                      | IID \_ ITSRemoteProgram ist als FDD029F9-467A-4c49-8529-64B521DBD1B4 definiert.<br/>    |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
@@ -124,7 +124,7 @@ Gibt bei Erfolg **S \_ OK** zurück.
 [**ITSRemoteProgram3**](itsremoteprogram3.md)
 </dt> <dt>
 
-[**Itsremoteprogram**](itsremoteprogram.md)
+[**ITSRemoteProgram**](itsremoteprogram.md)
 </dt> </dl>
 
  

@@ -1,7 +1,7 @@
 ---
 description: Der Objekttyp.
 ms.assetid: ab405984-2ebc-4514-9400-bdb13676eda5
-title: D3DXPARAMETER_CLASS -Enumeration (D3dx9shader.h)
+title: D3DXPARAMETER_CLASS-Enumeration (D3dx9shader.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -45,7 +45,7 @@ typedef enum D3DXPARAMETER_CLASS {
 
 <dl> <dt>
 
-<span id="D3DXPC_SCALAR"></span><span id="d3dxpc_scalar"></span>**D3DXPC-SKALAR \_**
+<span id="D3DXPC_SCALAR"></span><span id="d3dxpc_scalar"></span>**D3DXPC \_ SCALAR**
 </dt> <dd>
 
 Die Konstante ist ein Skalar.
@@ -59,17 +59,17 @@ Die Konstante ist ein Vektor.
 
 </dd> <dt>
 
-<span id="D3DXPC_MATRIX_ROWS"></span><span id="d3dxpc_matrix_rows"></span>**D3DXPC-MATRIXZEILEN \_ \_**
+<span id="D3DXPC_MATRIX_ROWS"></span><span id="d3dxpc_matrix_rows"></span>**\_D3DXPC-MATRIXZEILEN \_**
 </dt> <dd>
 
-Constant ist eine Zeilenmatrizenmatrix.
+Konstante ist eine Zeilenmatrizenmatrix.
 
 </dd> <dt>
 
-<span id="D3DXPC_MATRIX_COLUMNS"></span><span id="d3dxpc_matrix_columns"></span>**D3DXPC-MATRIXSPALTEN \_ \_**
+<span id="D3DXPC_MATRIX_COLUMNS"></span><span id="d3dxpc_matrix_columns"></span>**\_D3DXPC-MATRIXSPALTEN \_**
 </dt> <dd>
 
-Constant ist eine Spaltenmatrizenmatrix.
+Konstante ist eine Spaltenhauptmatrix.
 
 </dd> <dt>
 
@@ -83,14 +83,14 @@ Die Konstante ist entweder eine Textur, ein Shader oder eine Zeichenfolge.
 <span id="D3DXPC_STRUCT"></span><span id="d3dxpc_struct"></span>**D3DXPC-STRUKTUR \_**
 </dt> <dd>
 
-Die Konstante ist eine -Struktur.
+Konstante ist eine -Struktur.
 
 </dd> <dt>
 
 <span id="D3DXPC_FORCE_DWORD"></span><span id="d3dxpc_force_dword"></span>**D3DXPC \_ FORCE \_ DWORD**
 </dt> <dd>
 
-Erzwingt, dass diese Enumeration auf eine Größe von 32 Bits kompiliert wird. Ohne diesen Wert würden einige Compiler zulassen, dass diese Enumeration in eine andere Größe als 32 Bits kompiliert wird. Dieser Wert wird nicht verwendet.
+Erzwingt, dass diese Enumeration in eine Größe von 32 Bits kompiliert wird. Ohne diesen Wert würden einige Compiler zulassen, dass diese Enumeration in eine andere Größe als 32 Bits kompiliert wird. Dieser Wert wird nicht verwendet.
 
 </dd> </dl>
 

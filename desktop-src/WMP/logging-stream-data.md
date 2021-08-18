@@ -3,16 +3,16 @@ title: Protokollieren von Streamdaten
 description: Protokollieren von Streamdaten
 ms.assetid: c902a755-afdd-4dea-bc3e-036555fdff10
 keywords:
-- Windows Media Metadatei-Wiedergabelisten, Protokollieren von Streamdaten
-- Wiedergabelisten, Protokollieren von Streamdaten
-- Metadatei-Wiedergabelisten, Protokollieren von Streamdaten
-- Windows Media Metadatei-Wiedergabelisten, Datenstrom Protokollierung
-- Wiedergabelisten, Datenstrom Protokollierung
-- Metadatei-Wiedergabelisten, Datenstrom Protokollierung
+- Windows Wiedergabelisten von Medienmetadateien, Protokollieren von Streamdaten
+- Wiedergabelisten,Protokollieren von Streamdaten
+- Metafile-Wiedergabelisten, Protokollieren von Streamdaten
+- Windows Wiedergabelisten von Medienmetadateien, Streamdatenprotokollierung
+- Wiedergabelisten,Streamdatenprotokollierung
+- Metafile-Wiedergabelisten, Streamdatenprotokollierung
 - Protokollieren von Streamdaten
-- Datenstrom Protokollierung
-- Windows Media Player, Protokollieren von Streamdaten
-- Windows Media Player, Datenstrom Protokollierung
+- Streamdatenprotokollierung
+- Windows Media Player,Protokollierung von Streamdaten
+- Windows Media Player,Streamdatenprotokollierung
 ms.topic: article
 ms.date: 05/31/2018
 topic_type:
@@ -20,20 +20,20 @@ topic_type:
 api_name: ''
 api_type: ''
 api_location: ''
-ms.openlocfilehash: f234851cabf071ed2308fb5c96df2b53b60b9d45
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: c0a2ae6fe4b647e8a5c19fc6f30562973b3280f37cd3af3a1b9d9093771959de
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "104100814"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118118864"
 ---
 # <a name="logging-stream-data"></a>Protokollieren von Streamdaten
 
-Protokollierte Informationen können abgerufen und verwendet werden, um das Viewer-Verhalten zu ermitteln, z. b. wie oft ein Stream angezeigt wird, oder ob ein bestimmter Benutzer einen Stream und die Dauer der Qualität angezeigt hat.
+Protokollierte Informationen können erfasst und verwendet werden, um das Viewerverhalten zu bestimmen, z. B. wie oft ein Stream angezeigt wird oder ob ein bestimmter Benutzer einen Stream und wie lange in welcher Qualität angezeigt wird.
 
-Protokollierungs Informationen werden automatisch an den Server gesendet, von dem aus die Wiedergabeliste stammt. Sie können Protokollierungs Informationen auch an zusätzliche Server senden, einschließlich Webservern, die ausschließlich für die Protokollierung verwendet werden. Verwenden Sie hierzu das **LogURL** -Element, und geben Sie eine gültige URL für das **href** -Attribut an. Sie können **LogURL** -Elemente als untergeordnete Elemente des Elements **ASX** und als untergeordnete Elemente einzelner **Einstiegs** Elemente einschließen. Wenn die Wiedergabeliste erstmalig geöffnet wird, werden Protokollierungs Informationen an den Ursprungsserver und an jede URL gesendet **, die unter den unter** geordneten **LogURL** -Elementen des-Elements angegeben ist. Wenn dann jeder Eintrag erreicht wird, werden für diesen Eintrag spezifische Protokollierungs Informationen an jede URL gesendet, die unter den untergeordneten **LogURL** -Daten des **Entry** -Elements angegeben ist.
+Protokollierungsinformationen werden automatisch an den Server gesendet, von dem die Wiedergabeliste stammt. Sie können Protokollierungsinformationen auch an zusätzliche Server senden, einschließlich Webserver, die Sie ausschließlich für die Protokollierung verwenden. Verwenden Sie hierzu das **LOGURL-Element,** und geben Sie eine gültige URL für das **HREF-Attribut** an. Sie können **LOGURL-Elemente** als untere Elemente des **ASX-Elements** und als untere Elemente einzelner **ENTRY-Elemente** enthalten. Wenn die Wiedergabeliste zum ersten Mal geöffnet wird, werden Protokollierungsinformationen an den Ursprungsserver und an jede URL gesendet, die in **logurl** children des **ASX-Elements angegeben** ist. Wenn dann jeder Eintrag erreicht wird, werden spezifische Protokollierungsinformationen für diesen Eintrag an jede URL gesendet, die in den unter **LOGURL** -Elemente des ENTRY-Elements angegebenen unteren **Elemente angegeben** ist.
 
-Das Windows Media-Format-SDK unterstützt das **LogURL** -Element über die **iwmsreadernetworkconfig** -Schnittstelle und die folgenden Methoden:
+Das Windows Media Format SDK unterstützt das **LOGURL-Element** über die **IWMSReaderNetworkConfig-Schnittstelle** und die folgenden Methoden:
 
 
 ```XML
@@ -46,11 +46,11 @@ HRESULT ResetLoggingUrlList();
 
 
 
-Zusätzlich zu den Informationen, die automatisch protokolliert werden, kann eine Metadatei-Wiedergabeliste benutzerdefinierte Informationen mithilfe des **param** -Elements protokollieren. Wenn Sie das **param** -Element auf diese Weise verwenden möchten, legen Sie das **Name** -Attribut auf "Log:" gefolgt von einem Protokoll Feldnamen und einem optionalen XML-Namespace fest, der vom Feldnamen durch einen anderen Doppelpunkt (":") getrennt ist. Alles nach dem zweiten Doppelpunkt wird als Namespace behandelt, sodass der Feldname keinen Doppelpunkt enthalten sollte.
+Zusätzlich zu den informationen, die automatisch protokolliert werden, kann eine Metadateiwiedergabeliste benutzerdefinierte Informationen mithilfe des **PARAM-Elements** protokollieren. Um das **PARAM-Element** auf diese Weise zu verwenden, legen Sie das **NAME-Attribut** auf "log:" fest, gefolgt von einem Protokollfeldnamen und einem optionalen XML-Namespace, der durch einen anderen Doppelpunkt (":") vom Feldnamen getrennt ist. Alles nach dem zweiten Doppelpunkt wird als Namespace behandelt, sodass der Feldname keinen Doppelpunkt enthalten sollte.
 
-Das im **Name** -Attribut angegebene Protokollfeld wird auf den Wert des **value** -Attributs festgelegt. Wenn das Protokoll nicht bereits ein Feld mit dem angegebenen Namen enthält, wird es hinzugefügt.
+Das im NAME-Attribut **angegebene Protokollfeld** wird auf den Wert des **VALUE-Attributs** festgelegt. Wenn das Protokoll noch kein Feld mit dem angegebenen Namen enthält, wird es hinzugefügt.
 
-**Beispiel Code**
+**Beispielcode**
 
 
 ```XML
@@ -82,12 +82,12 @@ Das im **Name** -Attribut angegebene Protokollfeld wird auf den Wert des **value
 [**Metafile-Wiedergabelisten**](metafile-playlists.md)
 </dt> <dt>
 
-[**Verweis auf Windows Media-Metadateielemente**](windows-media-metafile-elements-reference.md)
+[**Windows Referenz zu Medienmetadateielementen**](windows-media-metafile-elements-reference.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

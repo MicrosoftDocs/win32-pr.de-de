@@ -1,53 +1,53 @@
 ---
-title: Item-Element
-description: Item-Element
+title: ITEM-Element
+description: ITEM-Element
 ms.assetid: e9791009-67d0-46f3-a69a-2520eaea21cd
 keywords:
-- Windows Media Player Skins, Item-Element
-- Skins, Item-Element
-- Item-Element
-- Verweis für Skins, Item-Element
-- Elemente, Element
+- Windows Media Player skins,ITEM-Element
+- skins,ITEM-Element
+- ITEM-Element
+- Referenz für Skins, ITEM-Element
+- elements,ITEM
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 91e9e692685dc41d17284611181d49de50bf4e32
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: 4e9f03d7ae7946e65c7535e504bb27d6de6fe46f9a96220f3285768e76360055
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "103947579"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118119319"
 ---
-# <a name="item-element"></a>Item-Element
+# <a name="item-element"></a>ITEM-Element
 
-Das **Item** -Element stellt ein Element in einem Listenfeld oder Popup Steuerelementen dar. **Element** Elemente sind immer untergeordnete Elemente von **ListBox** -oder **Popup** Elementen.
+Das **ITEM-Element** stellt ein Element in einem Listenfeld oder einem Popupsteuerelement dar. **ITEM-Elemente** sind immer unteren Elementen **von LISTBOX-** oder **POPUP-Elementen.**
 
-Das **Item** -Element unterstützt die folgenden Attribute.
+Das **ITEM-Element** unterstützt die folgenden Attribute.
 
 
 
-| Attribut               | BESCHREIBUNG                                                                  |
+| attribute               | Beschreibung                                                                  |
 |-------------------------|------------------------------------------------------------------------------|
-| [value](item-value.md) | Gibt den Text an, der für ein Listenfeld oder ein Popup Element angezeigt wird, oder ruft diesen ab. |
+| [value](item-value.md) | Gibt den Text an, der für ein Listenfeld oder Popupelement angezeigt wird, oder ruft diesen ab. |
 
 
 
- 
+ 
 
 > [!Note]  
-> Für dieses Element ist Windows Media Player für Windows XP oder höher erforderlich.
+> Dieses Element erfordert Windows Media Player für Windows XP oder höher.
 
- 
+ 
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[**Referenz zur Skin-Programmierung**](skin-programming-reference.md)
+[**Referenz zur Skinprogrammierung**](skin-programming-reference.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

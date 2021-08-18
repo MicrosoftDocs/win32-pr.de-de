@@ -1,9 +1,9 @@
 ---
-title: Dlgtemplateex-Struktur
-description: Eine erweiterte Dialogfeld Vorlage beginnt mit einem dlgtemplateex-Header, der das Dialogfeld beschreibt und die Anzahl der Steuerelemente im Dialogfeld angibt.
+title: DLGTEMPLATEEX-Struktur
+description: Eine vorlage für erweiterte Dialogfelder beginnt mit einem DLGTEMPLATEEX-Header, der das Dialogfeld beschreibt und die Anzahl der Steuerelemente im Dialogfeld angibt.
 ms.assetid: 9f016cc6-56e2-45d3-8773-1b405fc10d29
 keywords:
-- Dialog Felder der dlgtemplateex-Struktur
+- DLGTEMPLATEEX-Strukturdialogfelder
 topic_type:
 - apiref
 api_name:
@@ -13,18 +13,18 @@ api_type:
 ms.topic: reference
 ms.date: 05/31/2018
 api_location: ''
-ms.openlocfilehash: 1c3db7127e23e3133e11fe9c1600d37695e3b1ae
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: ab23b93a72edb2da6784797dd47bdfb4a839e2e9ce662adfc6ffbe09e468ac17
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104518353"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118503451"
 ---
-# <a name="dlgtemplateex-structure"></a>Dlgtemplateex-Struktur
+# <a name="dlgtemplateex-structure"></a>DLGTEMPLATEEX-Struktur
 
-Eine erweiterte Dialogfeld Vorlage beginnt mit einem **dlgtemplateex** -Header, der das Dialogfeld beschreibt und die Anzahl der Steuerelemente im Dialogfeld angibt. Für jedes Steuerelement in einem Dialogfeld verfügt eine erweiterte Dialogfeld Vorlage über einen Datenblock, der das [**dlgitemtemplateex**](dlgitemtemplateex.md) -Format verwendet, um das Steuerelement zu beschreiben.
+Eine vorlage für erweiterte Dialogfelder beginnt mit einem **DLGTEMPLATEEX-Header,** der das Dialogfeld beschreibt und die Anzahl der Steuerelemente im Dialogfeld angibt. Für jedes Steuerelement in einem Dialogfeld verfügt eine vorlage für erweiterte Dialogfelder über einen Datenblock, der das [**DLGITEMTEMPLATEEX-Format**](dlgitemtemplateex.md) verwendet, um das Steuerelement zu beschreiben.
 
-Die **dlgtemplateex** -Struktur ist in keiner Standard Header Datei definiert. Die Struktur Definition wird hier bereitgestellt, um das Format einer erweiterten Vorlage für ein Dialogfeld zu erläutern.
+Die **DLGTEMPLATEEX-Struktur** ist in keiner Standardheaderdatei definiert. Die Strukturdefinition wird hier bereitgestellt, um das Format einer erweiterten Vorlage für ein Dialogfeld zu erläutern.
 
 ## <a name="syntax"></a>Syntax
 
@@ -58,36 +58,36 @@ typedef struct {
 
 <dl> <dt>
 
-**dlgver**
+**dlgVer**
 </dt> <dd>
 
-Typ: **Word**
+Typ: **WORD**
 
 </dd> <dd>
 
-Die Versionsnummer der erweiterten Dialogfeld Vorlage. Dieser Member muss auf 1 festgelegt werden.
+Die Versionsnummer der Vorlage für erweiterte Dialogfelder. Dieser Member muss auf 1 festgelegt werden.
 
 </dd> <dt>
 
 **Signatur**
 </dt> <dd>
 
-Typ: **Word**
+Typ: **WORD**
 
 </dd> <dd>
 
-Gibt an, ob eine Vorlage eine erweiterte Dialogfeld Vorlage ist. Wenn die **Signatur** "0xFFFF" ist, handelt es sich um eine erweiterte Dialogfeld Vorlage. In diesem Fall gibt das **dlgver** -Mitglied die Versionsnummer der Vorlage an. Wenn **Signature** ein anderer Wert als 0xFFFF ist, handelt es sich hierbei um eine Standard Dialogfeld Vorlage, die die [**DLGTEMPLATE**](/windows/desktop/api/Winuser/ns-winuser-dlgtemplate) -Struktur und die [**DLGITEMTEMPLATE**](/windows/desktop/api/Winuser/ns-winuser-dlgitemtemplate) -Struktur verwendet.
+Gibt an, ob eine Vorlage eine vorlage für erweiterte Dialogfelder ist. Wenn **die Signatur** 0xFFFF ist, handelt es sich um eine erweiterte Dialogfeldvorlage. In diesem Fall gibt der **dlgVer-Member** die Versionsnummer der Vorlage an. Wenn **signatur** ein anderer Wert als 0xFFFF ist, handelt es sich hierbei um eine Standarddialogfeldvorlage, die die [**DLGTEMPLATE-**](/windows/desktop/api/Winuser/ns-winuser-dlgtemplate) und [**DLGITEMTEMPLATE-Strukturen**](/windows/desktop/api/Winuser/ns-winuser-dlgitemtemplate) verwendet.
 
 </dd> <dt>
 
-**HelpID**
+**helpID**
 </dt> <dd>
 
 Typ: **DWORD**
 
 </dd> <dd>
 
-Der Hilfe Kontext Bezeichner für das Dialogfeld Fenster. Wenn das System eine [**WM- \_ Hilfe**](../shell/wm-help.md) Nachricht sendet, übergibt es diesen Wert an den **wcontextid** -Member der [**helpinfo**](/windows/win32/api/winuser/ns-winuser-helpinfo) -Struktur.
+Der Hilfekontextbezeichner für das Dialogfeldfenster. Wenn das System eine [**WM \_ HELP-Nachricht**](../shell/wm-help.md) sendet, übergibt es diesen Wert im **wContextId-Member** der [**HELPINFO-Struktur.**](/windows/win32/api/winuser/ns-winuser-helpinfo)
 
 </dd> <dt>
 
@@ -98,7 +98,7 @@ Typ: **DWORD**
 
 </dd> <dd>
 
-Die erweiterten Windows-Stile. Dieser Member wird nicht zum Erstellen von Dialogfeldern verwendet, aber Anwendungen, die Dialogfeld Vorlagen verwenden, können ihn verwenden, um andere Fenstertypen zu erstellen. Eine Liste der Werte finden Sie unter [**Erweiterte Fenster Stile**](/windows/desktop/winmsg/extended-window-styles).
+Die erweiterten Fensterstile. Dieser Member wird beim Erstellen von Dialogfeldern nicht verwendet, aber Anwendungen, die Dialogfeldvorlagen verwenden, können ihn verwenden, um andere Arten von Fenstern zu erstellen. Eine Liste der Werte finden Sie unter [**Erweiterte Fensterstile.**](/windows/desktop/winmsg/extended-window-styles)
 
 </dd> <dt>
 
@@ -109,18 +109,18 @@ Typ: **DWORD**
 
 </dd> <dd>
 
-Der Stil des Dialog Felds. Dieser Member kann eine Kombination aus [Fenster Stil Werten](/windows/desktop/winmsg/window-styles) und [Dialogfeld-Stil Werten](dialog-box-styles.md)sein.
+Der Stil des Dialogfelds. Dieser Member kann eine Kombination aus [Fensterformatwerten](/windows/desktop/winmsg/window-styles) und [Dialogfeldformatwerten sein.](dialog-box-styles.md)
 
-Wenn **Style** den Formatvorlagen Stil **DS \_ setFont** oder **DS \_ shellfont** enthält, enthält der **dlgtemplateex** -Header der erweiterten Dialogfeld Vorlage vier zusätzliche Member ( **pointsize**, **Weight**, **kursiv** und Font **),** die die Schriftart beschreiben, die für den Text im Client Bereich und die Steuerelemente des Dialog Felds verwendet werden soll. Wenn möglich, erstellt das System eine Schriftart entsprechend den Werten, die in diesen Membern angegeben sind. Anschließend sendet das System eine [**WM- \_ setFont**](/windows/desktop/winmsg/wm-setfont) -Nachricht an das Dialogfeld und an jedes Steuerelement, um ein Handle für die Schriftart bereitzustellen.
+Wenn **style** den **DS \_ SETFONT-** oder **DS \_ SHELLFONT-Dialogfeldstil** enthält, enthält der **DLGTEMPLATEEX-Header** der erweiterten Dialogfeldvorlage vier zusätzliche Member ( **pointsize**, **weight**, **italic** und **typeface**), die die Schriftart beschreiben, die für den Text im Clientbereich und Steuerelemente des Dialogfelds verwendet werden soll. Wenn möglich, erstellt das System eine Schriftart gemäß den in diesen Membern angegebenen Werten. Anschließend sendet das System eine [**WM \_ SETFONT-Nachricht**](/windows/desktop/winmsg/wm-setfont) an das Dialogfeld und an jedes Steuerelement, um ein Handle für die Schriftart bereitzustellen.
 
-Weitere Informationen finden Sie unter [Dialog Feld Schriftarten](about-dialog-boxes.md).
+Weitere Informationen finden Sie unter [Dialogfeldschriftarten](about-dialog-boxes.md).
 
 </dd> <dt>
 
-**cdlgitems**
+**cDlgItems**
 </dt> <dd>
 
-Typ: **Word**
+Typ: **WORD**
 
 </dd> <dd>
 
@@ -131,158 +131,158 @@ Die Anzahl der Steuerelemente im Dialogfeld.
 **x**
 </dt> <dd>
 
-Typ: **Short**
+Typ: **short**
 
 </dd> <dd>
 
-Die x-Koordinate der oberen linken Ecke des Dialog Felds in Dialogfeld Einheiten.
+Die x-Koordinate in Dialogfeldeinheiten der linken oberen Ecke des Dialogfelds.
 
 </dd> <dt>
 
 **y**
 </dt> <dd>
 
-Typ: **Short**
+Typ: **short**
 
 </dd> <dd>
 
-Die y-Koordinate der oberen linken Ecke des Dialog Felds in Dialogfeld Einheiten.
+Die y-Koordinate in Dialogfeldeinheiten der oberen linken Ecke des Dialogfelds.
 
 </dd> <dt>
 
-**verschoben**
+**Cx**
 </dt> <dd>
 
-Typ: **Short**
+Typ: **short**
 
 </dd> <dd>
 
-Die Breite des Dialog Felds in Dialogfeld Einheiten.
+Die Breite des Dialogfelds in Dialogfeldeinheiten.
 
 </dd> <dt>
 
-**CY**
+**Cy**
 </dt> <dd>
 
-Typ: **Short**
+Typ: **short**
 
 </dd> <dd>
 
-Die Höhe des Dialog Felds in Dialogfeld Einheiten.
+Die Höhe des Dialogfelds in Dialogfeldeinheiten.
 
 </dd> <dt>
 
-**stehen**
+**Menü**
 </dt> <dd>
 
-Typ: **SZ \_ oder \_ Ord**
+Typ: **sz \_ Oder \_ Ord**
 
 </dd> <dd>
 
-Ein Array variabler Länge mit 16-Bit-Elementen, das eine Menü Ressource für das Dialogfeld angibt. Wenn das erste Element dieses Arrays 0x0000 ist, enthält das Dialogfeld kein Menü, und das Array enthält keine anderen Elemente. Wenn das erste Element 0xFFFF ist, verfügt das Array über ein zusätzliches Element, das den Ordinalwert einer Menü Ressource in einer ausführbaren Datei angibt. Wenn das erste Element einen anderen Wert aufweist, behandelt das System das Array als eine NULL-terminierte Unicode-Zeichenfolge, die den Namen einer Menü Ressource in einer ausführbaren Datei angibt.
+Ein Array variabler Länge mit 16-Bit-Elementen, das eine Menüressource für das Dialogfeld identifiziert. Wenn das erste Element dieses Arrays 0x0000 ist, enthält das Dialogfeld kein Menü und das Array keine anderen Elemente. Wenn das erste Element 0xFFFF ist, verfügt das Array über ein zusätzliches Element, das den Ordnungswert einer Menüressource in einer ausführbaren Datei angibt. Wenn das erste Element einen anderen Wert hat, behandelt das System das Array als auf NULL endende Unicode-Zeichenfolge, die den Namen einer Menüressource in einer ausführbaren Datei angibt.
 
 </dd> <dt>
 
 **windowClass**
 </dt> <dd>
 
-Typ: **SZ \_ oder \_ Ord**
+Typ: **sz \_ Oder \_ Ord**
 
 </dd> <dd>
 
-Ein Array variabler Länge mit 16-Bit-Elementen, das die Fenster Klasse des Dialog Felds angibt. Wenn das erste Element des Arrays 0x0000 ist, verwendet das System die vordefinierte Dialogfeld Klasse für das Dialogfeld, und das Array enthält keine anderen Elemente. Wenn das erste Element 0xFFFF ist, verfügt das Array über ein zusätzliches Element, das den Ordinalwert einer vordefinierten System Fenster Klasse angibt. Wenn das erste Element einen anderen Wert aufweist, behandelt das System das Array als eine NULL-terminierte Unicode-Zeichenfolge, die den Namen einer registrierten Fenster Klasse angibt.
+Ein Array variabler Länge mit 16-Bit-Elementen, das die Fensterklasse des Dialogfelds identifiziert. Wenn das erste Element des Arrays 0x0000 ist, verwendet das System die vordefinierte Dialogfeldklasse für das Dialogfeld, und das Array verfügt über keine anderen Elemente. Wenn das erste Element 0xFFFF ist, verfügt das Array über ein zusätzliches Element, das den Ordnungswert einer vordefinierten Systemfensterklasse angibt. Wenn das erste Element einen anderen Wert hat, behandelt das System das Array als auf NULL endende Unicode-Zeichenfolge, die den Namen einer registrierten Fensterklasse angibt.
 
 </dd> <dt>
 
 **title**
 </dt> <dd>
 
-Typ: **WCHAR \[ titlelen \]**
+Typ: **WCHAR \[ titleLen \]**
 
 </dd> <dd>
 
-Der Titel des Dialogfelds. Wenn das erste Element dieses Arrays 0x0000 ist, enthält das Dialogfeld keinen Titel, und das Array enthält keine anderen Elemente.
+Der Titel des Dialogfelds. Wenn das erste Element dieses Arrays 0x0000 ist, hat das Dialogfeld keinen Titel und das Array keine anderen Elemente.
 
 </dd> <dt>
 
 **pointsize**
 </dt> <dd>
 
-Typ: **Word**
+Typ: **WORD**
 
 </dd> <dd>
 
-Die Punktgröße der Schriftart, die für den Text im Dialogfeld und dessen Steuerelemente verwendet werden soll.
+Die Punktgröße der Schriftart, die für den Text im Dialogfeld und die zugehörigen Steuerelemente verwendet werden soll.
 
-Dieser Member ist nur vorhanden, wenn der **stilmember** **DS \_ setFont** oder **DS \_ shellfont** angibt.
+Dieser Member ist nur vorhanden, wenn der **Stilmember** **DS \_ SETFONT** oder **DS \_ SHELLFONT** angibt.
 
 </dd> <dt>
 
 **weight**
 </dt> <dd>
 
-Typ: **Word**
+Typ: **WORD**
 
 </dd> <dd>
 
-Die Gewichtung der Schriftart. Beachten Sie, dass die Werte, die für den **lfWeight** -Member der [**LOGFONT**](/windows/win32/api/wingdi/ns-wingdi-logfonta) -Struktur aufgeführt sind, zwar alle Werte sein können **\_**
+Die Gewichtung der Schriftart. Beachten Sie, dass zwar jeder der werte, die für den **lfWeight-Member** der [**LOGFONT-Struktur**](/windows/win32/api/wingdi/ns-wingdi-logfonta) aufgelistet sind, aber jeder verwendete Wert automatisch in **FW \_ NORMAL** geändert wird.
 
-Dieser Member ist nur vorhanden, wenn der **stilmember** **DS \_ setFont** oder **DS \_ shellfont** angibt.
+Dieser Member ist nur vorhanden, wenn der **Stilmember** **DS \_ SETFONT** oder **DS \_ SHELLFONT** angibt.
 
 </dd> <dt>
 
 **Kursiv**
 </dt> <dd>
 
-Type: **Byte**
+Typ: **BYTE**
 
 </dd> <dd>
 
-Gibt an, ob die Schriftart kursiv formatiert ist. Wenn dieser Wert **true** ist, wird die Schriftart kursiv formatiert.
+Gibt an, ob die Schriftart italisch ist. Wenn dieser Wert **TRUE** ist, ist die Schriftart italisch.
 
-Dieser Member ist nur vorhanden, wenn der **stilmember** **DS \_ setFont** oder **DS \_ shellfont** angibt.
+Dieser Member ist nur vorhanden, wenn der **Stilmember** **DS \_ SETFONT** oder **DS \_ SHELLFONT** angibt.
 
 </dd> <dt>
 
-**charset**
+**Charset**
 </dt> <dd>
 
-Type: **Byte**
+Typ: **BYTE**
 
 </dd> <dd>
 
-Der zu verwendende Zeichensatz. Weitere Informationen finden Sie unter dem **lfCharSet** -Member von [**LOGFONT**](/windows/win32/api/wingdi/ns-wingdi-logfonta).
+Der zu verwendende Zeichensatz. Weitere Informationen finden Sie unter dem **lfcharset-Member** von [**LOGFONT.**](/windows/win32/api/wingdi/ns-wingdi-logfonta)
 
-Dieser Member ist nur vorhanden, wenn der **stilmember** **DS \_ setFont** oder **DS \_ shellfont** angibt.
+Dieser Member ist nur vorhanden, wenn der **Stilmember** **DS \_ SETFONT** oder **DS \_ SHELLFONT** angibt.
 
 </dd> <dt>
 
-**Gotik**
+**Schrift**
 </dt> <dd>
 
-Typ: **WCHAR \[ stringlen \]**
+Typ: **WCHAR \[ stringLen \]**
 
 </dd> <dd>
 
 Der Name der Schriftart für die Schriftart.
 
-Dieser Member ist nur vorhanden, wenn der **stilmember** **DS \_ setFont** oder **DS \_ shellfont** angibt.
+Dieser Member ist nur vorhanden, wenn der **Stilmember** **DS \_ SETFONT** oder **DS \_ SHELLFONT** angibt.
 
 </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Sie können eine erweiterte Dialogfeld Vorlage anstelle einer Standard Dialogfeld Vorlage [**in den Funktionen**](/windows/desktop/api/Winuser/nf-winuser-createdialogindirectparama)"" von "", "", " [**Dialogbox**](/windows/desktop/api/Winuser/nf-winuser-dialogboxindirectparama)", "-param", "Funktionen [**Dialogbox**](/windows/desktop/api/Winuser/nf-winuser-createdialogindirecta)" und " [**dialogboxindirekte**](/windows/desktop/api/Winuser/nf-winuser-dialogboxindirecta) " verwenden.
+In den Funktionen [**CreateDialogIndirectParam,**](/windows/desktop/api/Winuser/nf-winuser-createdialogindirectparama) [**DialogBoxIndirectParam,**](/windows/desktop/api/Winuser/nf-winuser-dialogboxindirectparama) [**CreateDialogIndirect**](/windows/desktop/api/Winuser/nf-winuser-createdialogindirecta)und [**DialogBoxIndirect**](/windows/desktop/api/Winuser/nf-winuser-dialogboxindirecta) können Sie anstelle einer Standarddialogfeldvorlage eine Vorlage für erweiterte Dialogfelder verwenden.
 
-Im Anschluss an den **dlgtemplateex** -Header in einer erweiterten Dialogfeld Vorlage handelt es sich um eine oder mehrere [**dlgitemtemplateex**](dlgitemtemplateex.md) -Strukturen, die die Steuerelemente des Dialog Felds beschreiben. Der **cdlgitems** -Member der **dlgitemtemplateex** -Struktur gibt die Anzahl der **dlgitemtemplateex** -Strukturen an, die in der Vorlage befolgt werden.
+Dem **DLGTEMPLATEEX-Header** in einer vorlage für erweiterte Dialogfelder folgt mindestens eine [**DLGITEMTEMPLATEEX-Struktur,**](dlgitemtemplateex.md) die die Steuerelemente des Dialogfelds beschreibt. Der **cDlgItems-Member** der **DLGITEMTEMPLATEEX-Struktur** gibt die Anzahl der **DLGITEMTEMPLATEEX-Strukturen** an, die in der Vorlage folgen.
 
-Jede [**dlgitemtemplateex**](dlgitemtemplateex.md) -Struktur in der Vorlage muss an einer **DWORD** -Grenze ausgerichtet sein. Wenn der **stilmember** den **DS- \_ setFont** - **oder DS- \_ shellfont** -Stil angibt, beginnt die erste **dlgitemtemplateex** -Struktur an der ersten **DWORD** -Grenze hinter der **Schriftart** Zeichenfolge. Wenn diese Stile nicht angegeben werden, beginnt die erste Struktur an der ersten **DWORD** -Grenze hinter der **Titel** Zeichenfolge.
+Jede [**DLGITEMTEMPLATEEX-Struktur**](dlgitemtemplateex.md) in der Vorlage muss an einer **DWORD-Grenze** ausgerichtet sein. Wenn der **Stilmember** den **DS \_ SETFONT-** oder **DS \_ SHELLFONT-Stil** angibt, beginnt die erste **DLGITEMTEMPLATEEX-Struktur** an der ersten **DWORD-Grenze** nach der **Schriftartzeichenfolge.** Wenn diese Stile nicht angegeben werden, beginnt die erste Struktur an der ersten **DWORD-Grenze** nach der **Titelzeichenfolge.**
 
-Die Arrays " **Menu**", " **WindowClass**", " **Title**" und " **Schriftart** " müssen an **Wort** Grenzen ausgerichtet werden.
+Die **Arrays "menu",** **"windowClass",** **"title"** und **"typeface"** müssen an **WORD-Grenzen** ausgerichtet sein.
 
-Wenn Sie Zeichen folgen in den Feldern " **Menü**", " **WindowClass**", " **Title**" und " **Schriftart** " angeben, müssen Sie Unicode-Zeichen folgen verwenden. Verwenden Sie die [**Multibyte-**](/windows/desktop/api/stringapiset/nf-stringapiset-multibytetowidechar) Funktion, um diese Unicode-Zeichen folgen aus ANSI-Zeichen folgen zu generieren.
+Wenn Sie Zeichenfolgen im **Menü**, **fensterKlasse,** **Titel** und **Schriftartarrays** angeben, müssen Sie Unicode-Zeichenfolgen verwenden. Verwenden Sie die [**MultiByteToWideChar-Funktion,**](/windows/desktop/api/stringapiset/nf-stringapiset-multibytetowidechar) um diese Unicode-Zeichenfolgen aus ANSI-Zeichenfolgen zu generieren.
 
-Die Member **x**, **y**, **CX** und **CY** geben Werte in Dialogfeld Einheiten an. Sie können diese Werte mithilfe der [**mapdialogrect**](/windows/desktop/api/Winuser/nf-winuser-mapdialogrect) -Funktion in Bildschirm Einheiten (Pixel) konvertieren.
+Die Elemente **x,** **y,** **cx** und **cy** geben Werte in Dialogfeldeinheiten an. Sie können diese Werte mithilfe der [**MapDialogRect-Funktion**](/windows/desktop/api/Winuser/nf-winuser-mapdialogrect) in Bildschirmeinheiten (Pixel) konvertieren.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -295,47 +295,47 @@ Die Member **x**, **y**, **CX** und **CY** geben Werte in Dialogfeld Einheiten a
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-**Verweis**
+**Referenz**
 </dt> <dt>
 
-[**"Kreatedialogindirect"**](/windows/desktop/api/Winuser/nf-winuser-createdialogindirecta)
+[**CreateDialogIndirect**](/windows/desktop/api/Winuser/nf-winuser-createdialogindirecta)
 </dt> <dt>
 
-[**"Kreatedialogindirectparam"**](/windows/desktop/api/Winuser/nf-winuser-createdialogindirectparama)
+[**CreateDialogIndirectParam**](/windows/desktop/api/Winuser/nf-winuser-createdialogindirectparama)
 </dt> <dt>
 
-[**Dialogboxindirekte**](/windows/desktop/api/Winuser/nf-winuser-dialogboxindirecta)
+[**DialogBoxIndirect**](/windows/desktop/api/Winuser/nf-winuser-dialogboxindirecta)
 </dt> <dt>
 
-[**Dialogboxderedereparam**](/windows/desktop/api/Winuser/nf-winuser-dialogboxindirectparama)
+[**DialogBoxIndirectParam**](/windows/desktop/api/Winuser/nf-winuser-dialogboxindirectparama)
 </dt> <dt>
 
-[**Dlgitemtemplateex**](dlgitemtemplateex.md)
+[**DLGITEMTEMPLATEEX**](dlgitemtemplateex.md)
 </dt> <dt>
 
-[**Mapdialogrect**](/windows/desktop/api/Winuser/nf-winuser-mapdialogrect)
+[**MapDialogRect**](/windows/desktop/api/Winuser/nf-winuser-mapdialogrect)
 </dt> <dt>
 
-[**WM- \_ setFont**](/windows/desktop/winmsg/wm-setfont)
+[**WM \_ SETFONT**](/windows/desktop/winmsg/wm-setfont)
 </dt> <dt>
 
-**Licher**
+**Konzeptionellen**
 </dt> <dt>
 
-[Dialog Felder](dialog-boxes.md)
+[Dialogfelder](dialog-boxes.md)
 </dt> <dt>
 
 **Andere Ressourcen**
 </dt> <dt>
 
-[**"LogFont"**](/windows/win32/api/wingdi/ns-wingdi-logfonta)
+[**Logfont**](/windows/win32/api/wingdi/ns-wingdi-logfonta)
 </dt> <dt>
 
-[**MultiByteToWideChar muss**](/windows/desktop/api/stringapiset/nf-stringapiset-multibytetowidechar)
+[**MultiByteToWideChar**](/windows/desktop/api/stringapiset/nf-stringapiset-multibytetowidechar)
 </dt> </dl>
 
  

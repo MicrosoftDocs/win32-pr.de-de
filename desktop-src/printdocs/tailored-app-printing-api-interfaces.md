@@ -1,19 +1,19 @@
 ---
-description: Die folgenden Schnittstellen werden von einer App verwendet, um das Paket zum Drucken von Dokumenten zu verwalten.
+description: Die folgenden Schnittstellen werden von einer App zum Verwalten des Druckdokumentpakets verwendet.
 ms.assetid: 576B4527-A753-4A73-899B-896DCB8B8945
-title: API-Schnittstellen für Dokument Pakete drucken
+title: Drucken von Dokumentpaket-API-Schnittstellen
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: adc495be5c58598d00250568ff852cf4f897e0b5
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: cc37fa31cbda1be6927cbb24bf4b5707d10d9f2d74ed152ef630a2ad6ed588c0
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106351491"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118470122"
 ---
-# <a name="print-document-package-api-interfaces"></a>API-Schnittstellen für Dokument Pakete drucken
+# <a name="print-document-package-api-interfaces"></a>Drucken von Dokumentpaket-API-Schnittstellen
 
-Die folgenden Schnittstellen werden von einer App verwendet, um das Paket zum Drucken von Dokumenten zu verwalten.
+Die folgenden Schnittstellen werden von einer App zum Verwalten des Druckdokumentpakets verwendet.
 
 ## <a name="in-this-section"></a>In diesem Abschnitt
 
@@ -21,9 +21,9 @@ Die folgenden Schnittstellen werden von einer App verwendet, um das Paket zum Dr
 
 | Thema                                                                                       | BESCHREIBUNG                                                                                                                                                                                                                 |
 |---------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| [**Iprintdocumentpackagestatus-Ereignis**](/windows/desktop/api/Documenttarget/nn-documenttarget-iprintdocumentpackagestatusevent)<br/>     | Stellt den Status des Druckauftrags dar.<br/>                                                                                                                                                                        |
-| [**Iprintdocumentpackagetarget**](/windows/win32/api/documenttarget/nn-documenttarget-iprintdocumentpackagetarget)<br/>               | Ermöglicht es Benutzern, die unterstützten Paket Zieltypen aufzulisten und eine mit der angegebenen Typ-ID zu erstellen. **Iprintdocumentpackagetarget** unterstützt auch das Nachverfolgen des Paket Druck Fortschritts und das Abbrechen.<br/> |
-| [**Iprintdocumentpackagetargetfactory**](/windows/desktop/api/documenttarget/nn-documenttarget-iprintdocumentpackagetargetfactory)<br/> | Wird mit [iprintdocumentpackagetarget](/windows/win32/api/documenttarget/nn-documenttarget-iprintdocumentpackagetarget) zum Starten eines Druckauftrags verwendet.<br/>                                                                                                               |
+| [**IPrintDocumentPackageStatusEvent**](/windows/desktop/api/Documenttarget/nn-documenttarget-iprintdocumentpackagestatusevent)<br/>     | Stellt den Fortschritt des Druckauftrags dar.<br/>                                                                                                                                                                        |
+| [**IPrintDocumentPackageTarget**](/windows/win32/api/documenttarget/nn-documenttarget-iprintdocumentpackagetarget)<br/>               | Ermöglicht Benutzern das Aufzählen der unterstützten Paketzieltypen und das Erstellen eines Pakets mit einer bestimmten Typ-ID. **IPrintDocumentPackageTarget unterstützt** auch die Nachverfolgung des Paketdruckfortschritts und des Abbruchs.<br/> |
+| [**IPrintDocumentPackageTargetFactory**](/windows/desktop/api/documenttarget/nn-documenttarget-iprintdocumentpackagetargetfactory)<br/> | Wird mit [IPrintDocumentPackageTarget zum Starten](/windows/win32/api/documenttarget/nn-documenttarget-iprintdocumentpackagetarget) eines Druckauftrags verwendet.<br/>                                                                                                               |
 
 
 

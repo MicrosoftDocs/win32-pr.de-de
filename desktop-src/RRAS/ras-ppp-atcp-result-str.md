@@ -1,9 +1,9 @@
 ---
-title: RAS_PPP_ATCP_RESULT Struktur (rassapi. h)
-description: Die RAS- \_ PPP- \_ ATCP- \_ Ergebnis Struktur wird verwendet, um das Ergebnis einer AppleTalk-Protokoll Projektions Operation für einen Port zu melden.
+title: RAS_PPP_ATCP_RESULT-Struktur (Rassapi.h)
+description: Die \_ RASCP \_ ATCP \_ RESULT-Struktur wird verwendet, um das Ergebnis eines AppleTalk-Protokollprojektionsvorgangs für einen Port zu melden.
 ms.assetid: ac9df618-f79c-4066-a37e-f92e64e951dd
 keywords:
-- RAS_PPP_ATCP_RESULT Struktur-RAS
+- RAS_PPP_ATCP_RESULT Struktur von RAS
 topic_type:
 - apiref
 api_name:
@@ -14,18 +14,18 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 66f3f950af9d5bdde8feef085457a895212ad04b
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: faa3122026613ba5012f950a98a615dbb8c9ef34133a2a24249fca545eaa2060
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "103956574"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117789634"
 ---
-# <a name="ras_ppp_atcp_result-structure"></a>RAS- \_ PPP- \_ ATCP- \_ Ergebnis Struktur
+# <a name="ras_ppp_atcp_result-structure"></a>RASCP \_ \_ ATCP \_ RESULT-Struktur
 
-\[Die **RAS- \_ PPP- \_ ATCP- \_ Ergebnis** Struktur wird ab Windows Vista nicht unterstützt.\]
+\[Die **\_ RASCP \_ ATCP \_ RESULT-Struktur** wird ab Windows Vista nicht unterstützt.\]
 
-Die **RAS- \_ PPP- \_ ATCP- \_ Ergebnis** Struktur wird verwendet, um das Ergebnis einer AppleTalk-Protokoll Projektions Operation für einen Port zu melden.
+Die **\_ RASCP \_ ATCP \_ RESULT-Struktur** wird verwendet, um das Ergebnis eines AppleTalk-Protokollprojektionsvorgangs für einen Port zu melden.
 
 ## <a name="syntax"></a>Syntax
 
@@ -46,14 +46,14 @@ typedef struct _RAS_PPP_ATCP_RESULT {
 **dwError**
 </dt> <dd>
 
-Gibt einen Wert an, der die Ergebnisse der AppleTalk-Projektions Operation angibt. Der Wert kein \_ Fehler gibt einen Erfolg an. in diesem Fall ist der Member **wszaddress** gültig. Wenn der Projektions Vorgang nicht erfolgreich ist, ist **dwError** ein Fehlercode von "Winerror. h" oder "raserror. h".
+Gibt einen Wert an, der die Ergebnisse des AppleTalk-Projektionsvorgangs angibt. Der Wert NO \_ ERROR gibt den Erfolg an. In diesem Fall ist der **wszAddress-Member** gültig. Wenn der Projektionsvorgang nicht erfolgreich ist, ist **dwError** ein Fehlercode aus Winerror.h oder Raserror.h.
 
 </dd> <dt>
 
-**wszaddress**
+**wszAddress**
 </dt> <dd>
 
-Gibt eine NULL-terminierte Unicode-Zeichenfolge an, die die dem Remote Client zugewiesene IP-Adresse angibt.
+Gibt eine auf NULL endende Unicode-Zeichenfolge an, die die dem Remoteclient zugewiesene IP-Adresse angibt.
 
 </dd> </dl>
 
@@ -66,22 +66,22 @@ Gibt eine NULL-terminierte Unicode-Zeichenfolge an, die die dem Remote Client zu
 | Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[nur Desktop-Apps\]<br/>                           |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                                 |
 | Ende des Supports (Client)<br/>    | Windows XP<br/>                                                                |
-| Ende des Supports (Server)<br/>    | Windows Server 2003<br/>                                                       |
-| Header<br/>                   | <dl> <dt>Rassapi. h</dt> </dl> |
+| Ende des Supports (Server)<br/>    | Windows Server 2003<br/>                                                       |
+| Header<br/>                   | <dl> <dt>Rassapi.h</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[Remote Zugriffs Dienst (RAS) (Übersicht)](about-remote-access-service.md)
+[Remotezugriffsdienst (RAS) – Übersicht](about-remote-access-service.md)
 </dt> <dt>
 
-[RAS-Server-Verwaltungsstrukturen](ras-server-administration-structures.md)
+[RAS-Serververwaltungsstrukturen](ras-server-administration-structures.md)
 </dt> <dt>
 
-[**Ergebnis der RAS- \_ PPP- \_ Projektion \_**](ras-ppp-projection-result-str.md)
+[**\_ \_ RAS-PROJEKTIONSERGEBNIS \_**](ras-ppp-projection-result-str.md)
 </dt> </dl>
 
  

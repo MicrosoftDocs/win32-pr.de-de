@@ -1,9 +1,9 @@
 ---
-title: ListBox. BackgroundColor
-description: Das BackgroundColor-Attribut gibt die Hintergrundfarbe im Listenfeld-Steuerelement an oder ruft diese ab.
+title: LISTBOX.backgroundColor
+description: Das backgroundColor-Attribut gibt die Hintergrundfarbe im Listenfeld-Steuerelement an oder ruft sie ab.
 ms.assetid: 1ffa51cc-6d28-4b83-8127-eb2a67d98c79
 keywords:
-- ListBox. BackgroundColor-Fenster Media Player
+- LISTBOX.backgroundColor-Windows Media Player
 topic_type:
 - apiref
 api_name:
@@ -12,16 +12,16 @@ api_type:
 - NA
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 961a431f91d0ed16ce34593f6bef66a13981d850
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 37c170ee249e325aa9893515da94683703426327f0a556283125116e8c8d1522
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106369686"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118118945"
 ---
-# <a name="listboxbackgroundcolor"></a>ListBox. BackgroundColor
+# <a name="listboxbackgroundcolor"></a>LISTBOX.backgroundColor
 
-Das **BackgroundColor** -Attribut gibt die Hintergrundfarbe im Listenfeld-Steuerelement an oder ruft diese ab.
+Das **backgroundColor-Attribut** gibt die Hintergrundfarbe im Listenfeld-Steuerelement an oder ruft sie ab.
 
 ``` syntax
         elementID.backgroundColor
@@ -29,7 +29,7 @@ Das **BackgroundColor** -Attribut gibt die Hintergrundfarbe im Listenfeld-Steuer
 
 ## <a name="possible-values"></a>Mögliche Werte
 
-Dieses Attribut ist eine Lese- **/schreibzeichenfolge** , die einen beliebigen Microsoft Internet Explorer-Farbwert oder den Wert "None" enthält. Der Standardwert ist gleich der Windows-Hintergrundfarbe.
+Dieses Attribut ist eine  Lese-/Schreibzeichenfolge, die einen beliebigen Microsoft Internet Explorer-Farbwert oder den Wert "none" enthält. Der Standardwert entspricht der Windows Hintergrundfarbe.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -41,17 +41,17 @@ Dieses Attribut ist eine Lese- **/schreibzeichenfolge** , die einen beliebigen M
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Farb Verweis**](color-reference.md)
+[**Farbreferenz**](color-reference.md)
 </dt> <dt>
 
-[**ListBox-Element**](listbox-element.md)
+[**LISTBOX-Element**](listbox-element.md)
 </dt> <dt>
 
-[**ListBox. ForegroundColor**](listbox-foregroundcolor.md)
+[**LISTBOX.foregroundColor**](listbox-foregroundcolor.md)
 </dt> </dl>
 
  

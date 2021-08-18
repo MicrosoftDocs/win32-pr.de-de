@@ -13,15 +13,15 @@ ms.locfileid: "118550614"
 ---
 # <a name="translating-to-visual-basic"></a>Übersetzen in Visual Basic
 
-Sie können ihrem Projekt ein COM-Objekt Visual Basic entweder als Verweis oder als Komponente hinzufügen. Sobald das Objekt ihrem Projekt hinzugefügt wurde, kann Ihre Anwendung auf ihre Klassen und Schnittstellen zugreifen. Anschließend können Sie den Visual Basic Object Browser verwenden, um die Typbibliotheksinformationen des Objekts in der Visual Basic anzeigen.
+Sie können ihrem Projekt ein COM-Objekt Visual Basic entweder als Verweis oder als Komponente hinzufügen. Sobald das Objekt ihrem Projekt hinzugefügt wurde, kann Ihre Anwendung auf ihre Klassen und Schnittstellen zugreifen. Anschließend können Sie den Visual Basic Objektbrowser verwenden, um die Typbibliotheksinformationen des Objekts in der Visual Basic anzeigen.
 
-In der Regel werden Einem Projekt Steuerelemente als Komponenten und Nicht-Steuerelemente als Verweise hinzugefügt. Wenn ein COM-Objekt als Komponente hinzugefügt wird, wird es in der Toolbox Visual Basic angezeigt. Neue Instanzen dieses Objekts werden erstellt, indem das Objektsymbol aus der Toolbox auf ein Visual Basic oder einen anderen Containertyp gezogen wird. Neue Instanzen von COM-Objekten, die als Verweise hinzugefügt werden, werden mit dem **schlüsselwort new** erstellt.
+In der Regel werden Einem Projekt Steuerelemente als Komponenten und Nicht-Steuerelemente als Verweise hinzugefügt. Wenn ein COM-Objekt als Komponente hinzugefügt wird, wird es in der Toolbox Visual Basic angezeigt. Neue Instanzen dieses Objekts werden erstellt, indem das Objektsymbol aus der Toolbox auf Visual Basic formular oder einen anderen Containertyp gezogen wird. Neue Instanzen von COM-Objekten, die als Verweise hinzugefügt werden, werden mit dem **schlüsselwort new** erstellt.
 
 Der Unterschied zwischen der Verwendung einer Klasse als Verweis und einer Komponente ist dezent, aber wichtig. Wenn Sie ein -Objekt als Verweis hinzufügen, können Sie nur die vom Steuerelement zur Verfügung stellt, oder die "rohe" Typbibliothek verwenden.
 
 Wenn Sie ein Steuerelement als Komponente hinzufügen, führt Visual Basic die Extendereigenschaften und -methoden des Formulars, in das das Steuerelement eingebettet ist, mit der Typbibliothek des Steuerelements zusammen und stellt somit eine umschlossene, erweiterte Version der Typbibliothek zur Verfügung. Mit dieser Version der Typbibliothek können Sie Extendereigenschaften wie Top und Left verwenden, als ob sie Teil des Steuerelements und nicht des Containers des Steuerelements sind.
 
-Visual Basic unterstützt derzeit nicht mehrere Typbibliotheken, die in eine einzelne .dll sind. Wenn Sie auf eine DLL mit mehreren Typbibliotheken laufen, sollten Sie eigenständige Kopien der Typbibliotheken aus der Quelle erhalten, die das -Objekt bereitgestellt hat, um das -Objekt mit Visual Basic.
+Visual Basic unterstützt derzeit nicht mehrere Typbibliotheken, die in eine einzelne .dll sind. Wenn Sie auf eine DLL mit mehreren Typbibliotheken laufen, sollten Sie eigenständige Kopien der Typbibliotheken aus der Quelle erhalten, die das Objekt bereitgestellt hat, um das -Objekt mit der Visual Basic.
 
 Weitere Informationen finden Sie in den folgenden Themen:
 

@@ -1,9 +1,9 @@
 ---
-title: WM_CONTEXTMENU (Winuser.h)
-description: Benachrichtigt ein Fenster, dass der Benutzer im Fenster mit der rechten Maustaste (rechtsklickt) geklickt hat.
+title: WM_CONTEXTMENU-Nachricht (Winuser.h)
+description: Benachrichtigt ein Fenster, dass der Benutzer im Fenster mit der rechten Maustaste (mit der rechten Maustaste geklickt) geklickt hat.
 ms.assetid: e607a61a-0f9b-4d11-b8c0-b01a2e7fb35b
 keywords:
-- WM_CONTEXTMENU von Nachrichtenmenüs und anderen Ressourcen
+- WM_CONTEXTMENU Meldung Menüs und andere Ressourcen
 topic_type:
 - apiref
 api_name:
@@ -23,7 +23,7 @@ ms.locfileid: "118472505"
 ---
 # <a name="wm_contextmenu-message"></a>WM \_ CONTEXTMENU-Nachricht
 
-Benachrichtigt ein Fenster, dass ein Kontextmenü angezeigt werden soll.  Möglicherweise hat der Benutzer im Fenster mit der rechten Maustaste (mit der rechten Maustaste) geklickt, UMSCHALT+F10 gedrückt oder die Anwendungstaste (Kontextmenütaste) gedrückt, die auf einigen Tastaturen verfügbar ist.
+Benachrichtigt ein Fenster darüber, dass der Benutzer ein Kontextmenü anzeigen möchte.  Der Benutzer hat möglicherweise mit der rechten Maustaste (mit der rechten Maustaste) im Fenster geklickt, UMSCHALT+F10 gedrückt oder die Anwendungstaste (Kontextmenütaste) gedrückt, die auf einigen Tastaturen verfügbar ist.
 
 
 ```C++
@@ -39,16 +39,16 @@ Benachrichtigt ein Fenster, dass ein Kontextmenü angezeigt werden soll.  Mögli
 *wParam* 
 </dt> <dd>
 
-Ein Handle für das Fenster, in dem der Benutzer mit der rechten Maustaste auf die Maus geklickt hat. Dies kann ein untergeordnetes Fenster des Fensters sein, das die Nachricht empfängt. Weitere Informationen zum Verarbeiten dieser Nachricht finden Sie im Abschnitt "Hinweise".
+Ein Handle für das Fenster, in dem der Benutzer mit der rechten Maustaste mit der Maus geklickt hat. Dies kann ein untergeordnetes Fenster des Fensters sein, das die Nachricht empfängt. Weitere Informationen zum Verarbeiten dieser Nachricht finden Sie im Abschnitt "Hinweise".
 
 </dd> <dt>
 
 *lParam* 
 </dt> <dd>
 
-Das Wort in niedriger Reihenfolge gibt die horizontale Position des Cursors in Bildschirmkoordinaten zum Zeitpunkt des Mausklicks an.
+Das Wort mit niedriger Reihenfolge gibt die horizontale Position des Cursors in Bildschirmkoordinaten zum Zeitpunkt des Mausklicks an.
 
-Das obere Wort gibt die vertikale Position des Cursors in Bildschirmkoordinaten zum Zeitpunkt des Mausklicks an.
+Das Wort in hoher Reihenfolge gibt die vertikale Position des Cursors in Bildschirmkoordinaten zum Zeitpunkt des Mausklicks an.
 
 </dd> </dl>
 
@@ -58,7 +58,7 @@ Kein Rückgabewert.
 
 ## <a name="remarks"></a>Hinweise
 
-Ein Fenster kann diese Meldung verarbeiten, indem ein Kontextmenü mithilfe der [**Funktionen TrackPopupMenu**](/windows/desktop/api/Winuser/nf-winuser-trackpopupmenu) oder [**TrackPopupMenuEx angezeigt**](/windows/desktop/api/Winuser/nf-winuser-trackpopupmenuex) wird. Verwenden Sie den folgenden Code, um die horizontalen und vertikalen Positionen zu erhalten.
+Ein Fenster kann diese Meldung verarbeiten, indem ein Kontextmenü mit den Funktionen [**TrackPopupMenu**](/windows/desktop/api/Winuser/nf-winuser-trackpopupmenu) oder [**TrackPopupMenuEx**](/windows/desktop/api/Winuser/nf-winuser-trackpopupmenuex) angezeigt wird. Verwenden Sie den folgenden Code, um die horizontale und vertikale Position abzurufen.
 
 
 ```
@@ -68,11 +68,11 @@ yPos = GET_Y_LPARAM(lParam);
 
 
 
-Wenn in einem Fenster kein Kontextmenü angezeigt wird, sollte diese Meldung an die [**DefWindowProc-Funktion übergeben**](/windows/desktop/api/winuser/nf-winuser-defwindowproca) werden. Wenn ein Fenster ein untergeordnetes Fenster ist, **sendet DefWindowProc** die Nachricht an das übergeordnete Fenster. **Andernfalls zeigt DefWindowProc** ein Standardverknüpfungsmenü an, wenn sich die angegebene Position in der Beschriftung des Fensters befindet.
+Wenn in einem Fenster kein Kontextmenü angezeigt wird, sollte diese Meldung an die [**DefWindowProc-Funktion**](/windows/desktop/api/winuser/nf-winuser-defwindowproca) übergeben werden. Wenn es sich bei einem Fenster um ein untergeordnetes Fenster handelt, sendet **DefWindowProc** die Nachricht an das übergeordnete Fenster. Andernfalls zeigt **DefWindowProc** ein Standardverknüpfungsmenü an, wenn sich die angegebene Position in der Beschriftung des Fensters befindet.
 
-[**DefWindowProc**](/windows/desktop/api/winuser/nf-winuser-defwindowproca) generiert die **WM \_ CONTEXTMENU-Nachricht,** wenn die [**WM \_ RBUTTONUP-**](/windows/desktop/inputdev/wm-rbuttonup) oder [**WM \_ NCRBUTTONUP-Nachricht**](/windows/desktop/inputdev/wm-ncrbuttonup) verarbeitet wird oder wenn der Benutzer UMSCHALT+F10 ein gibt. Die **WM \_ CONTEXTMENU-Meldung** wird auch generiert, wenn der Benutzer den [**\_ VK-APPS-Schlüssel**](/windows/desktop/inputdev/virtual-key-codes) drückt und frei gibt.
+[**DefWindowProc**](/windows/desktop/api/winuser/nf-winuser-defwindowproca) generiert die **WM \_ CONTEXTMENU-Nachricht,** wenn die [**\_ WM-Nachricht RBUTTONUP**](/windows/desktop/inputdev/wm-rbuttonup) oder [**WM \_ NCRBUTTONUP**](/windows/desktop/inputdev/wm-ncrbuttonup) verarbeitet wird oder wenn der Benutzer UMSCHALT+F10 eingibt. Die **WM \_ CONTEXTMENU-Nachricht** wird auch generiert, wenn der Benutzer die [**\_ VK-APP-Taste**](/windows/desktop/inputdev/virtual-key-codes) drückt und freigibt.
 
-Wenn das Kontextmenü beispielsweise über die Tastatur generiert wird, wenn der Benutzer UMSCHALT+F10 eint, sind die x- und y-Koordinaten -1, und die Anwendung sollte das Kontextmenü an der Position der aktuellen Auswahl statt an (xPos, yPos) anzeigen.
+Wenn das Kontextmenü beispielsweise über die Tastatur generiert wird, wenn der Benutzer UMSCHALT+F10 eingibt, sind die x- und y-Koordinaten -1, und die Anwendung sollte das Kontextmenü an der Position der aktuellen Auswahl anstelle von (xPos, yPos) anzeigen.
 
 ## <a name="requirements"></a>Anforderungen
 

@@ -1,9 +1,9 @@
 ---
-title: SeekSlider
-description: Dies ist ein vordefinierter Schieberegler mit den folgenden Standardwerten. | SeekSlider
+title: SEEKSLIDER
+description: Dies ist ein vordefinierter SLIDER mit den folgenden Standardwerten. | SEEKSLIDER
 ms.assetid: 9fdb0f70-e5ce-4dbc-aeba-44fa0e2c9b3c
 keywords:
-- SeekSlider-Fenster Media Player
+- SEEKSLIDER Windows Media Player
 topic_type:
 - apiref
 api_name:
@@ -13,16 +13,16 @@ api_type:
 ms.topic: reference
 ms.date: 05/31/2018
 api_location: ''
-ms.openlocfilehash: 59808fa7c41acfcc28b715362b8724c7f113faee
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: a294eede05ec2b2f0f84e925aa299c9bcb2388ee2151385e48f2c68e6b4c1328
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106370598"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118833339"
 ---
-# <a name="seekslider"></a>SeekSlider
+# <a name="seekslider"></a>SEEKSLIDER
 
-Dies ist ein vordefinierter **Schieberegler** mit den folgenden Standardwerten.
+Dies ist ein vordefinierter **SLIDER** mit den folgenden Standardwerten.
 
 ``` syntax
 toolTip="Seek"
@@ -34,9 +34,9 @@ onDragEnd="jscript:player.controls.currentPosition=value;"
 useForegroundProgress="true"
 ```
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Dadurch wird ein **Schieberegler** -Steuerelement erstellt, das die Mediendatei an einer beliebigen Position sucht. Die Quick Infos sind lokalisiert. Alle Eigenschaften dieses **Schiebereglers** können überschrieben werden, indem Sie explizit angegeben werden.
+Dadurch wird ein **SLIDER-Steuerelement** erstellt, das die Mediendatei an eine beliebige Position sucht. Die QuickInfos sind lokalisiert. Alle Eigenschaften dieses **SLIDER können** überschrieben werden, indem sie explizit angegeben werden.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -44,15 +44,15 @@ Dadurch wird ein **Schieberegler** -Steuerelement erstellt, das die Mediendatei 
 
 | Anforderung | Wert |
 |--------------------|----------------------------------------------|
-| Version<br/> | Windows Media Player 7,0 oder höher<br/> |
+| Version<br/> | Windows Media Player 7.0 oder höher<br/> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Slider-Element**](slider-element.md)
+[**SLIDER-Element**](slider-element.md)
 </dt> </dl>
 
  

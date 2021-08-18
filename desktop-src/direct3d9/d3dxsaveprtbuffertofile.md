@@ -1,5 +1,5 @@
 ---
-description: Speichert einen vorausberechnen PRT-Puffer (Radiance Transfer) auf dem Datenträger.
+description: Speichert einen prt-Puffer (Precomputed Radiance Transfer) auf dem Datenträger.
 ms.assetid: 1fca69bd-6729-45af-981f-b7480c741bc2
 title: D3DXSavePRTBufferToFile-Funktion (D3DX9Mesh.h)
 ms.topic: reference
@@ -23,7 +23,7 @@ ms.locfileid: "118524530"
 ---
 # <a name="d3dxsaveprtbuffertofile-function"></a>D3DXSavePRTBufferToFile-Funktion
 
-Speichert einen vorausberechnen PRT-Puffer (Radiance Transfer) auf dem Datenträger.
+Speichert einen prt-Puffer (Precomputed Radiance Transfer) auf dem Datenträger.
 
 ## <a name="syntax"></a>Syntax
 
@@ -52,11 +52,11 @@ Adresse eines Zeigers auf das [**Eingabeobjekt ID3DXPRTBuffer.**](id3dxprtbuffer
 
 Typ: **[HRESULT](../com/structure-of-com-error-codes.md)**
 
-Wenn die Methode erfolgreich ist, lautet der Rückgabewert **D3D \_ OK**. Wenn die Methode fehlschlägt, kann der Rückgabewert **D3DERR \_ INVALIDCALL** sein.
+Wenn die Methode erfolgreich ist, ist der Rückgabewert **D3D \_ OK.** Wenn die Methode fehlschlägt, kann der Rückgabewert **D3DERR \_ INVALIDCALL sein.**
 
 ## <a name="remarks"></a>Hinweise
 
-Die Compilereinstellung bestimmt auch die Funktionsversion. Wenn Unicode definiert ist, wird der Funktionsaufruf in [D3DXSavePRTBufferToFileW]()aufgelöst. Andernfalls wird der Funktionsaufruf in **D3DXSavePRTBufferToFileA** aufgelöst.
+Die Compilereinstellung bestimmt auch die Funktionsversion. Wenn Unicode definiert ist, wird der Funktionsaufruf in [D3DXSavePRTBufferToFileW auflösen.]() Andernfalls wird der Funktionsaufruf in **D3DXSavePRTBufferToFileA auflösen.**
 
 Das PRT-Dateiformat ist eine Binärdatei in Form eines Headers und dann eines Datenblocks.
 
@@ -72,9 +72,9 @@ struct PRTHeader
 };
 ```
 
-Für den Fall, dass *bIsTex* ungleich 0 (null) ist, sollten *NumSamples* gleich `TexWidth * TexHeight` sein.
+Wenn *bIsTex* nicht 0 (null) ist, sollte *NumSamples* gleich `TexWidth * TexHeight` sein.
 
-Der Datenblock, der auf den Header folgt, ist `NumSamples * NumCoeffs * NumChannels * sizeof(float)` Bytes.
+Der Datenblock, der dem Header folgt, ist `NumSamples * NumCoeffs * NumChannels * sizeof(float)` bytes.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -85,4 +85,4 @@ Der Datenblock, der auf den Header folgt, ist `NumSamples * NumCoeffs * NumChann
 
 ## <a name="see-also"></a>Weitere Informationen
 
-[Vorausberechnen von Übertragungsfunktionen für Die Radiance](dx9-graphics-reference-d3dx-functions-prt.md)
+[Vorausberechnungsfunktionen für die Übertragung von Radiance](dx9-graphics-reference-d3dx-functions-prt.md)

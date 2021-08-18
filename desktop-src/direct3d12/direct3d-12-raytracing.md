@@ -1,26 +1,26 @@
 ---
 title: Direct3D 12-Raytracing
-description: Dieser Artikel enthält eine Auflistung der Dokumentation, die für Direct3D Raytracing verfügbar ist.
+description: Dieser Artikel enthält eine Liste der Dokumentation, die für Direct3D-Raytracing verfügbar ist.
 ms.assetid: ''
 ms.localizationpriority: low
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 45d7896153f37a776faeddd00d78fbe0c1f3a120
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: 2b36f4473c5bbac08246b4b61fc853c50d3699b64e92dbe74428f312c843d8ce
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "106339007"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118529760"
 ---
 # <a name="direct3d-12-raytracing"></a>Direct3D 12-Raytracing
 
-Dieser Artikel enthält eine Auflistung der Dokumentation, die für Direct3D Raytracing verfügbar ist.
+Dieser Artikel enthält eine Liste der Dokumentation, die für Direct3D-Raytracing verfügbar ist.
 
-## <a name="c-raytracing-reference"></a>C++ Raytracing-Referenz
+## <a name="c-raytracing-reference"></a>C++-Raytracingreferenz
 
-Dieser Abschnitt verknüpft mit den C++-APIs, die zum Implementieren von Direct3D 12 Raytracing verwendet werden.
+Dieser Abschnitt enthält Links zu den C++-APIs, die zum Implementieren von Direct3D 12-Raytracing verwendet werden.
 
-### <a name="c-raytracing-interfaces"></a>C++ Raytracing-Schnittstellen
+### <a name="c-raytracing-interfaces"></a>C++-Raytracingschnittstellen
 
 * [ID3D12Device5](/windows/desktop/api/d3d12/nn-d3d12-id3d12device5)
 * [ID3D12GraphicsCommandList4](/windows/desktop/api/d3d12/nn-d3d12-id3d12graphicscommandlist4)
@@ -28,7 +28,7 @@ Dieser Abschnitt verknüpft mit den C++-APIs, die zum Implementieren von Direct3
 * [ID3D12StateObjectProperties](/windows/desktop/api/d3d12/nn-d3d12-id3d12stateobjectproperties)
 
 
-### <a name="c-raytracing-structures"></a>C++-Raytracing-Strukturen
+### <a name="c-raytracing-structures"></a>C++-Raytracingstrukturen
 
 
 * [D3D12_BUILD_RAYTRACING_ACCELERATION_STRUCTURE_DESC](/windows/desktop/api/d3d12/ns-d3d12-d3d12_build_raytracing_acceleration_structure_desc)
@@ -68,7 +68,7 @@ Dieser Abschnitt verknüpft mit den C++-APIs, die zum Implementieren von Direct3
 * [D3D12_SUBOBJECT_TO_EXPORTS_ASSOCIATION](/windows/desktop/api/d3d12/ns-d3d12-d3d12_subobject_to_exports_association)
  
 
-### <a name="c-raytracing-enumerations"></a>C++-Raytracing-Enumerationen
+### <a name="c-raytracing-enumerations"></a>C++-Raytracingenumeration
 
 * [D3D12_DRIVER_MATCHING_IDENTIFIER_STATUS](/windows/desktop/api/d3d12/ne-d3d12-d3d12_driver_matching_identifier_status)
 * [D3D12_ELEMENTS_LAYOUT](/windows/desktop/api/d3d12/ne-d3d12-d3d12_elements_layout)
@@ -84,15 +84,15 @@ Dieser Abschnitt verknüpft mit den C++-APIs, die zum Implementieren von Direct3
 * [D3D12_RAYTRACING_INSTANCE_FLAGS](/windows/desktop/api/d3d12/ne-d3d12-d3d12_raytracing_instance_flags)
 * [D3D12_RAYTRACING_TIER](/windows/desktop/api/d3d12/ne-d3d12-d3d12_raytracing_tier)
 
-## <a name="hlsl-raytracing-reference"></a>HLSL-Raytracing-Referenz
+## <a name="hlsl-raytracing-reference"></a>HLSL-Raytracingreferenz
 
-Informationen zu den HLSL-Konstrukten, die zur Implementierung von Direct3D 12 Raytracing verwendet werden, finden Sie unter [Direct3D 12 Raytracing HLSL Reference](direct3d-12-raytracing-hlsl-reference.md).
+Informationen zu den HLSL-Konstrukten, die zum Implementieren von Direct3D 12-Raytracing verwendet werden, finden Sie in der [DIRECT3D 12 Raytracing HLSL-Referenz.](direct3d-12-raytracing-hlsl-reference.md)
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[Kern Referenz](direct3d-12-core-reference.md)
+[Kernreferenz](direct3d-12-core-reference.md)
 </dt> <dt>
 
 [Referenz für Direct3D 12](direct3d-12-reference.md)

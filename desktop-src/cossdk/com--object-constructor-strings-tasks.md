@@ -1,26 +1,26 @@
 ---
-description: Com+-objektkonstruktorzeichenfolgen-Aufgaben
+description: Com+-Objektkonstruktor-Zeichenfolgenaufgaben
 ms.assetid: b8518f3f-dfaa-4a7d-9b1b-978a62cba4b5
-title: Com+-objektkonstruktorzeichenfolgen-Aufgaben
+title: Com+-Objektkonstruktor-Zeichenfolgenaufgaben
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 42b4df839aae5e0cdeaafde6ea3f439ca7d22cd7
-ms.sourcegitcommit: c7add10d695482e1ceb72d62b8a4ebd84ea050f7
+ms.openlocfilehash: 077479a78f78f07af554696188ebaeeab95d5e6ad9e719bea06bf5fb5ade87eb
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104126350"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118548786"
 ---
-# <a name="com-object-constructor-strings-tasks"></a>Com+-objektkonstruktorzeichenfolgen-Aufgaben
+# <a name="com-object-constructor-strings-tasks"></a>Com+-Objektkonstruktor-Zeichenfolgenaufgaben
 
-Die folgenden Themen enthalten Schritt-für-Schritt-Anleitungen für die Verwendung von com+-objektkonstruktorzeichenfolgen.
+Die folgenden Themen enthalten schritt-für-Schritt-Anweisungen für die Verwendung von COM+-Objektkonstruktorzeichenfolgen.
 
 
 
-| Thema                                                                                                                                     | BESCHREIBUNG                                                                                                                    |
+| Thema                                                                                                                                     | Beschreibung                                                                                                                    |
 |-------------------------------------------------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------|
-| [Angeben einer Objektkonstruktorzeichenfolge für eine Komponente](specifying-an-object-constructor-string-for-a-component.md)<br/>         | Beschreibt, wie eine com+-Objektkonstruktorzeichenfolge angegeben wird.<br/>                                                          |
-| [Verwenden einer Objektkonstruktorzeichenfolge zum Erstellen einer Komponente](using-an-object-constructor-string-to-construct-a-component.md)<br/> | Beschreibt, wie eine com+-Objektkonstruktorzeichenfolge beim Instanziieren einer Komponente Programm gesteuert abgerufen und verwendet wird.<br/> |
+| [Angeben einer Objektkonstruktorzeichenfolge für eine Komponente](specifying-an-object-constructor-string-for-a-component.md)<br/>         | Beschreibt, wie eine COM+-Objektkonstruktorzeichenfolge angegeben wird.<br/>                                                          |
+| [Verwenden einer Objektkonstruktorzeichenfolge zum Erstellen einer Komponente](using-an-object-constructor-string-to-construct-a-component.md)<br/> | Beschreibt, wie eine COM+-Objektkonstruktorzeichenfolge beim Instanziieren einer Komponente programmgesteuert abgerufen und verwendet wird.<br/> |
 
 
 
@@ -30,7 +30,7 @@ Die folgenden Themen enthalten Schritt-für-Schritt-Anleitungen für die Verwend
 
 <dl> <dt>
 
-[Konzepte der com+-objektkonstruktorzeichenfolgen](com--object-constructor-strings-concepts.md)
+[Konzepte von COM+-Objektkonstruktorzeichenfolgen](com--object-constructor-strings-concepts.md)
 </dt> </dl>
 
  

@@ -1,11 +1,11 @@
 ---
-title: ID3DX12PipelineParserCallbacks dscb-Methode (D3DX12. h)
-description: Ruft den Domänen-shadersubobject-Rückruf eines Objekts auf, das diese Schnittstelle implementiert.
+title: ID3DX12PipelineParserCallbacks DSCb-Methode (D3DX12.h)
+description: Ruft den Domänen-Shader-Unterobjektrückruf eines Objekts auf, das diese Schnittstelle implementiert.
 ms.assetid: F4877211-4122-4418-9323-3F68B0BB3363
 keywords:
-- Dscb-Methode
-- Dscb-Methode, ID3DX12PipelineParserCallbacks-Schnittstelle
-- ID3DX12PipelineParserCallbacks-Schnittstelle, dscb-Methode
+- DSCb-Methode
+- DSCb-Methode, ID3DX12PipelineParserCallbacks-Schnittstelle
+- ID3DX12PipelineParserCallbacks-Schnittstelle, DSCb-Methode
 topic_type:
 - apiref
 api_name:
@@ -17,16 +17,16 @@ api_type:
 ms.localizationpriority: low
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 4cf5f68ca6e6e4891fa391a142d45a1496a42ede
-ms.sourcegitcommit: 14010c34b35fa268046c7683f021f86de08ddd0a
+ms.openlocfilehash: 63c4cee98bf617fb02cb5c543050f51c56a733d56964e2139e5b7357c7a88034
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "106355819"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118528988"
 ---
-# <a name="id3dx12pipelineparsercallbacksdscb-method"></a>ID3DX12PipelineParserCallbacks::D SCB-Methode
+# <a name="id3dx12pipelineparsercallbacksdscb-method"></a>ID3DX12PipelineParserCallbacks::D SCb-Methode
 
-Ruft den Domänen-shadersubobject-Rückruf eines Objekts auf, das diese Schnittstelle implementiert.
+Ruft den Domänen-Shader-Unterobjektrückruf eines Objekts auf, das diese Schnittstelle implementiert.
 
 ## <a name="syntax"></a>Syntax
 
@@ -43,12 +43,12 @@ void DSCb(
 
 <dl> <dt>
 
-*DS* \[ atur\]
+*DS* \[ Ref\]
 </dt> <dd>
 
-Typ: **Konstanten [**D3D12 \_ Shader- \_ Bytecode**](/windows/desktop/api/d3d12/ns-d3d12-d3d12_shader_bytecode)**
+Typ: **const [**D3D12 \_ SHADER \_ BYTECODE**](/windows/desktop/api/d3d12/ns-d3d12-d3d12_shader_bytecode)**
 
-Details des Domänen-Shader-unter Objekts, das aus einem Pipeline Status-Stream analysiert wurde.
+Details des Domänen-Shader-Unterobjekts, das aus einem Pipelinezustandsstream analysiert wird.
 
 </dd> </dl>
 
@@ -62,13 +62,13 @@ Gibt nichts zurück.
 
 | Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>D3DX12. h</dt> </dl>  |
-| Bibliothek<br/> | <dl> <dt>D3D12. lib</dt> </dl> |
+| Header<br/>  | <dl> <dt>D3DX12.h</dt> </dl>  |
+| Bibliothek<br/> | <dl> <dt>D3D12.lib</dt> </dl> |
 | DLL<br/>     | <dl> <dt>D3D12.dll</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
@@ -78,7 +78,7 @@ Gibt nichts zurück.
 [**ID3DX12PipelineParserCallbacks**](id3dx12pipelineparsercallbacks.md)
 </dt> <dt>
 
-[**D3D12- \_ Shader- \_ Bytecode**](/windows/desktop/api/d3d12/ns-d3d12-d3d12_shader_bytecode)
+[**\_D3D12-SHADER-BYTECODE \_**](/windows/desktop/api/d3d12/ns-d3d12-d3d12_shader_bytecode)
 </dt> </dl>
 
  

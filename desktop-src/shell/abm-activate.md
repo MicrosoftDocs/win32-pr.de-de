@@ -1,19 +1,19 @@
 ---
-description: Benachrichtigt das System, dass eine appbar aktiviert wurde. Eine appbar sollte diese Meldung als Antwort auf die WM- \_ Aktivierungs Nachricht anrufen.
+description: Benachrichtigt das System, dass eine App-Leiste aktiviert wurde. Eine App-Leiste sollte diese Nachricht als Antwort auf die WM \_ ACTIVATE-Nachricht aufrufen.
 ms.assetid: 16011302-7c2d-4c34-9953-51cceb96e4b3
-title: ABM_ACTIVATE Meldung (shellapi. h)
+title: ABM_ACTIVATE (Shellapi.h)
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 94a44bcc33efcd3d1a9af5e7e2abca33893e9fe9
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
-ms.translationtype: HT
+ms.openlocfilehash: 224f04a88a1e69a1a67fc08c6018d33af2bcdbc6f34ff9fbd00d1dd76f82ce5c
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104128481"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118461133"
 ---
-# <a name="abm_activate-message"></a>ABM- \_ Aktivierungs Nachricht
+# <a name="abm_activate-message"></a>ABM \_ ACTIVATE-Nachricht
 
-Benachrichtigt das System, dass eine appbar aktiviert wurde. Eine appbar sollte diese Meldung als Antwort auf die [**WM- \_ Aktivierungs**](/windows/desktop/inputdev/wm-activate) Nachricht anrufen.
+Benachrichtigt das System, dass eine App-Leiste aktiviert wurde. Eine App-Leiste sollte diese Nachricht als Antwort auf die [**WM \_ ACTIVATE-Nachricht**](/windows/desktop/inputdev/wm-activate) aufrufen.
 
 
 ```C++
@@ -32,27 +32,27 @@ SHAppBarMessage(ABM_ACTIVATE, pabd);
 *pabd* 
 </dt> <dd>
 
-Ein Zeiger auf eine [**appbardata**](/windows/desktop/api/Shellapi/ns-shellapi-appbardata) -Struktur, die die zu aktivierende appbar identifiziert. Beim Senden dieser Nachricht müssen Sie die **CBSIZE** -und **HWND** -Elemente angeben. alle anderen Member werden ignoriert.
+Ein Zeiger auf eine [**APPBARDATA-Struktur,**](/windows/desktop/api/Shellapi/ns-shellapi-appbardata) die die zu aktivierende App-Leiste identifiziert. Sie müssen beim Senden **dieser Nachricht die Member cbSize** und **hWnd** angeben. alle anderen Member werden ignoriert.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt immer **true** zurück.
+Gibt immer **TRUE zurück.**
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Diese Meldung wird ignoriert, wenn der **HWND** -Member der Struktur, auf die von der *pabd* verwiesen wird, eine appbar zum automatischen Ausblenden identifiziert. Das System legt automatisch die z-Reihenfolge für automatische Ausblenden von appbars fest.
+Diese Meldung wird ignoriert, wenn der **hWnd-Member** der Struktur, auf die *pabd* zeigt, eine App-Leiste für die automatische Eindung identifiziert. Das System legt automatisch die Z-Reihenfolge für App-Leisten für die automatischeHide fest.
 
-## <a name="requirements"></a>Requirements (Anforderungen)
+## <a name="requirements"></a>Anforderungen
 
 
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows XP \[ -Desktop-Apps\]<br/>                                           |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ XP-Desktop-Apps\]<br/>                                           |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                                  |
-| Header<br/>                   | <dl> <dt>Shellapi. h</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Shellapi.h</dt> </dl> |
 
 
 

@@ -1,9 +1,9 @@
 ---
-title: Player.ccollectionCollection
-description: Die ccollectionCollection-Eigenschaft ruft das CcollectionCollection-Objekt ab.
+title: Player.ccollection
+description: Die ccollection-Eigenschaft ruft das Ccollection-Objekt ab.
 ms.assetid: ca346033-eb0d-4568-b1a2-875b6cd71c6e
 keywords:
-- Player.ccollection Windows Media Player
+- Player.ccollection-Windows Media Player
 topic_type:
 - apiref
 api_name:
@@ -21,13 +21,13 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 08/11/2021
 ms.locfileid: "117747647"
 ---
-# <a name="playercdromcollection"></a>Player.ccollectionCollection
+# <a name="playercdromcollection"></a>Player.ccollection
 
-Die ccollectionCollection-Eigenschaft ruft das **CcollectionCollection-Objekt** ab.
+Die ccollection-Eigenschaft ruft das **Ccollection-Objekt** ab.
 
 ## <a name="syntax"></a>Syntax
 
-*Player* . **ccollectionCollection**
+*Player* . **ccollection**
 
 ## <a name="possible-values"></a>Mögliche Werte
 
@@ -35,7 +35,7 @@ Diese Eigenschaft ist ein schreibgeschütztes **Ccollection-Objekt.**
 
 ## <a name="remarks"></a>Hinweise
 
-Um den Wert dieser Eigenschaft abzurufen, ist Lesezugriff auf die Bibliothek erforderlich. Weitere Informationen finden Sie unter [Bibliothekszugriff.](library-access.md)
+Zum Abrufen des Werts dieser Eigenschaft ist Lesezugriff auf die Bibliothek erforderlich. Weitere Informationen finden Sie unter [Bibliothekszugriff.](library-access.md)
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -52,7 +52,7 @@ Um den Wert dieser Eigenschaft abzurufen, ist Lesezugriff auf die Bibliothek erf
 
 <dl> <dt>
 
-[**CcollectionCollection-Objekt**](cdromcollection-object.md)
+[**Ccollection-Objekt**](cdromcollection-object.md)
 </dt> <dt>
 
 [**Player-Objekt**](player-object.md)

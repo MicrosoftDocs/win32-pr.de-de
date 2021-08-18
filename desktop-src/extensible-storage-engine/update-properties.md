@@ -1,5 +1,5 @@
 ---
-description: 'Weitere Informationen: Aktualisieren von Eigenschaften'
+description: Weitere Informationen finden Sie unter Aktualisieren von Eigenschaften.
 title: Aktualisieren von Eigenschaften
 TOCTitle: Update properties
 ms:assetid: Properties.T:Microsoft.Isam.Esent.Interop.Update
@@ -7,19 +7,19 @@ ms:mtpsurl: https://msdn.microsoft.com/library/microsoft.isam.esent.interop.upda
 ms:contentKeyID: 55104203
 ms.date: 07/30/2014
 ms.topic: article
-ms.openlocfilehash: cb5550674a6e35dffa9d2f201beb180b2f3fca97
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: f2eaf9146eeab77b6e749ffb5d9e73637281f46b3700dcf1392187bc1c319952
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104556576"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117890152"
 ---
 # <a name="update-properties"></a>Aktualisieren von Eigenschaften
 
-Geschützte Member einschließen  
-Geerbte Member einschließen  
+Einschließen geschützter Member  
+Einschließen geerbter Member  
 
-Der [Updatetyp macht die folgenden](./update-class.md) Member verfügbar.
+Der [Update-Typ](./update-class.md) macht die folgenden Member verfügbar.
 
 ## <a name="properties"></a>Eigenschaften
 
@@ -28,14 +28,14 @@ Der [Updatetyp macht die folgenden](./update-class.md) Member verfügbar.
 <tr class="header">
 <th> </th>
 <th>Name</th>
-<th>BESCHREIBUNG</th>
+<th>Beschreibung</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
 <td><img src="../images/dn292128.protproperty(exchg.10).gif" title="Geschützte Eigenschaft" alt="Protected property" /></td>
-<td><a href="dn350578(v=exchg.10).md">Hasresource</a></td>
-<td>Ruft einen Wert ab, der angibt, ob die zugrunde liegende Ressource zurzeit zugeordnet ist. (Geerbt von <a href="dn319890(v=exchg.10).md">esentresource</a>.)</td>
+<td><a href="dn350578(v=exchg.10).md">HasResource</a></td>
+<td>Ruft einen Wert ab, der angibt, ob die zugrunde liegende Ressource derzeit zugeordnet ist. (Geerbt von <a href="dn319890(v=exchg.10).md">EsentResource</a>.)</td>
 </tr>
 </tbody>
 </table>
@@ -43,10 +43,10 @@ Der [Updatetyp macht die folgenden](./update-class.md) Member verfügbar.
 
 Oben
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
-#### <a name="reference"></a>Referenz
+#### <a name="reference"></a>Verweis
 
 [Update-Klasse](./update-class.md)
 
-[Microsoft. ISAM. ESENT. Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)
+[Microsoft.Isam.Esent.Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)

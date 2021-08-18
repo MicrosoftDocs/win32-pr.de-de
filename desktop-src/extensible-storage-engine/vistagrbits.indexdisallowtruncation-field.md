@@ -1,6 +1,6 @@
 ---
-description: 'Weitere Informationen finden Sie hier: vistagrbits. indexdisallowtrunationfield'
-title: Vistagrbits. indexdisallowtrunationfield (Microsoft. ISAM. ESENT. Interop. Vista)
+description: 'Weitere Informationen finden Sie unter: VistaGrbits.IndexDisallowTruncation-Feld'
+title: VistaGrbits.IndexDisallowTruncation-Feld (Microsoft.Isam.Esent.Interop.Vista)
 TOCTitle: IndexDisallowTruncation field
 ms:assetid: F:Microsoft.Isam.Esent.Interop.Vista.VistaGrbits.IndexDisallowTruncation
 ms:mtpsurl: https://msdn.microsoft.com/library/microsoft.isam.esent.interop.vista.vistagrbits.indexdisallowtruncation(v=EXCHG.10)
@@ -24,19 +24,19 @@ api_type:
 api_location:
 - Microsoft.Isam.Esent.Interop.dll
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: d359acea8de5b72bc7137feefbc1d1281c07ed57
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 130a109e8e368aabd6113acd683473dd9324c1cb8a0fa6d7af09c05e2a6301b1
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "104050613"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117889852"
 ---
-# <a name="vistagrbitsindexdisallowtruncation-field"></a>Vistagrbits. indexdisallowtrunationfield
+# <a name="vistagrbitsindexdisallowtruncation-field"></a>VistaGrbits.IndexDisallowTruncation-Feld
 
-Die Angabe dieses Flags führt dazu, dass ein Update des Indexes, das zu einem abgeschnittene Schlüssel führt, mit [keytruncated](./jet-err-enumeration.md)fehlschlägt. Andernfalls werden Schlüssel automatisch abgeschnitten.
+Die Angabe dieses Flags führt dazu, dass alle Aktualisierungen des Indexes, die zu einem abgeschnittenen Schlüssel führen würden, mit [KeyTruncated fehlschlagen.](./jet-err-enumeration.md) Andernfalls werden Schlüssel automatisch abgeschnitten.
 
-**Namespace:**  [Microsoft. ISAM. ESENT. Interop. Vista](./microsoft.isam.esent.interop.vista-namespace.md)  
-**Assembly:**  Microsoft. ISAM. ESENT. Interop (in Microsoft.Isam.Esent.Interop.dll)
+**Namespace:**  [Microsoft.Isam.Esent.Interop.Vista](./microsoft.isam.esent.interop.vista-namespace.md)  
+**Assembly:**  Microsoft.Isam.Esent.Interop (in Microsoft.Isam.Esent.Interop.dll)
 
 ## <a name="syntax"></a>Syntax
 
@@ -53,12 +53,12 @@ value = VistaGrbits.IndexDisallowTruncation
 public const CreateIndexGrbit IndexDisallowTruncation
 ```
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
-#### <a name="reference"></a>Referenz
+#### <a name="reference"></a>Verweis
 
-[Vistagrbits-Klasse](./vistagrbits-class.md)
+[VistaGrbits-Klasse](./vistagrbits-class.md)
 
-[Vistagrbits-Member](./vistagrbits-members.md)
+[VistaGrbits-Member](./vistagrbits-members.md)
 
-[Microsoft. ISAM. ESENT. Interop. Vista-Namespace](./microsoft.isam.esent.interop.vista-namespace.md)
+[Microsoft.Isam.Esent.Interop.Vista-Namespace](./microsoft.isam.esent.interop.vista-namespace.md)

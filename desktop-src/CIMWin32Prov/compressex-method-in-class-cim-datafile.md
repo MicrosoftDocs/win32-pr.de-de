@@ -1,8 +1,8 @@
 ---
-description: 'CompressEx-Methode der CIM_DataFile-Klasse: Verwendet die NTFS-Komprimierung, um die logische Datei (oder das Verzeichnis) zu komprimieren, die im Objektpfad angegeben ist. Diese Methode wird von CIM \_ LogicalFile geerbt.'
+description: CompressEx-Methode der CIM_DataFile - Verwendet die NTFS-Komprimierung, um die logische Datei (oder das Verzeichnis) zu komprimieren, die im Objektpfad angegeben ist. Diese Methode wird von CIM \_ LogicalFile geerbt.
 ms.assetid: 553b6a90-d16c-4abb-9015-66fe8e1606f6
 ms.tgt_platform: multiple
-title: CompressEx-Methode der CIM_DataFile-Klasse
+title: CompressEx-Methode der CIM_DataFile Klasse
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -14,23 +14,23 @@ api_type:
 - COM
 api_location:
 - CIMWin32.dll
-ms.openlocfilehash: ccc155c04c6c25f38050bd37827eb0c2e2e0e73e
-ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
+ms.openlocfilehash: ad63096e34283ae6ea763690045072b5d2e5579ce1f459bcc7c7bc92d671e0db
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2021
-ms.locfileid: "108089788"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118420158"
 ---
 # <a name="compressex-method-of-the-cim_datafile-class"></a>CompressEx-Methode der CIM \_ DataFile-Klasse
 
-Die **CompressEx-Methode** verwendet die NTFS-Komprimierung, um die logische Datei (oder das Verzeichnis) zu komprimieren, die im Objektpfad angegeben ist. Diese Methode wird von [**CIM \_ LogicalFile**](cim-logicalfile.md)geerbt. Diese Methode ist eine erweiterte Version der [**Compress-Methode**](compress-method-in-class-cim-datafile.md) und wird von [CIM \_ LogicalFile](/windows/desktop/WmiSdk/calling-a-method)geerbt.
+Die **CompressEx-Methode** verwendet die NTFS-Komprimierung, um die logische Datei (oder das Verzeichnis) zu komprimieren, die im Objektpfad angegeben ist. Diese Methode wird von [**CIM \_ LogicalFile geerbt.**](cim-logicalfile.md) Diese Methode ist eine erweiterte Version der [**Compress-Methode**](compress-method-in-class-cim-datafile.md) und wird von [CIM \_ LogicalFile geerbt.](/windows/desktop/WmiSdk/calling-a-method)
 
 > [!IMPORTANT]
-> Die CIM-Klassen (Distributed Management Task Force) (DMTF (Distributed Management Task Force) (Common Information Model) sind die übergeordneten Klassen, auf denen WMI-Klassen erstellt werden. WMI unterstützt derzeit nur die [CIM 2.x-Versionsschemas.](https://dmtf.org/standards/cim/schemas)
+> Die CIM-Klassen (Distributed Management Task Force) (DMTF) (Common Information Model) sind die übergeordneten Klassen, auf denen WMI-Klassen erstellt werden. WMI unterstützt derzeit nur die [CIM 2.x-Versionsschemas.](https://dmtf.org/standards/cim/schemas)
 
  
 
-In diesem Thema wird die MOF-Syntax (Managed Object Format) verwendet. Weitere Informationen zur Verwendung dieser Methode finden Sie unter [Aufrufen einer Methode.](/windows/desktop/WmiSdk/calling-a-method)
+In diesem Thema wird Managed Object Format (MOF)-Syntax verwendet. Weitere Informationen zur Verwendung dieser Methode finden Sie unter [Aufrufen einer Methode.](/windows/desktop/WmiSdk/calling-a-method)
 
 ## <a name="syntax"></a>Syntax
 
@@ -52,16 +52,16 @@ uint32 CompressEx(
 *StopFileName* \[ out\]
 </dt> <dd>
 
-Zeichenfolge, die den Namen der Datei (oder des Verzeichnisses) darstellt, in der die Methode fehlgeschlagen ist. Dieser Parameter ist NULL, wenn die Methode erfolgreich ist.
+Eine Zeichenfolge, die den Namen der Datei (oder des Verzeichnisses) darstellt, in der bzw. dem die Methode fehlgeschlagen ist. Dieser Parameter ist NULL, wenn die Methode erfolgreich ist.
 
 </dd> <dt>
 
 *StartFileName* \[ In\]
 </dt> <dd>
 
-Zeichenfolge, die die untergeordnete Datei (oder das Verzeichnis) darstellt, die als Ausgangspunkt für diese Methode verwendet werden soll. In der Regel ist der *StartFileName-Parameter* der *StopFileName-Parameter,* der die Datei oder das Verzeichnis angibt, in der bzw. dem beim vorherigen Methodenaufruf ein Fehler aufgetreten ist. Wenn dieser Parameter NULL ist, wird der Vorgang für die Datei oder das Verzeichnis ausgeführt, die bzw. das im **ExecMethod-Aufruf** angegeben ist.
+Eine Zeichenfolge, die die untergeordnete Datei (oder das Verzeichnis) darstellt, die als Ausgangspunkt für diese Methode verwendet werden soll. In der Regel ist der *StartFileName-Parameter* der *StopFileName-Parameter,* der die Datei oder das Verzeichnis angibt, in der bzw. dem beim vorherigen Methodenaufruf ein Fehler aufgetreten ist. Wenn dieser Parameter NULL ist, wird der Vorgang für die Im **ExecMethod-Aufruf** angegebene Datei oder das Verzeichnis ausgeführt.
 
-Wenn *StartFileName* verwendet wird, muss *Recursive* auch auf TRUE festgelegt werden.
+Wenn *StartFileName* verwendet wird, *muss Recursive* auch auf TRUE festgelegt werden.
 
 </dd> <dt>
 
@@ -88,7 +88,7 @@ Erfolg.
 **2**
 </dt> <dd>
 
-Der Zugriff wurde verweigert.
+Zugriff verweigert:
 
 </dd> <dt>
 
@@ -123,7 +123,7 @@ Dateisystem, nicht NTFS.
 **12**
 </dt> <dd>
 
-Plattform, nicht Windows.
+Plattform nicht Windows.
 
 </dd> <dt>
 
@@ -169,7 +169,7 @@ Ungültiger Parameter.
 
 </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
 Die **CompressEx-Methode** in [**CIM \_ DataFile**](cim-datafile.md) wird von WMI implementiert.
 
@@ -179,7 +179,7 @@ Diese Dokumentation wird von den CIM-Klassenbeschreibungen abgeleitet, die von D
 
 
 
-| Anforderungen | Wert |
+| Anforderung | Wert |
 |-------------------------------------|-----------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows Vista<br/>                                                                |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2008<br/>                                                          |
@@ -202,7 +202,7 @@ Diese Dokumentation wird von den CIM-Klassenbeschreibungen abgeleitet, die von D
 [WMI-Aufgaben: Dateien und Ordner](/windows/desktop/WmiSdk/wmi-tasks--files-and-folders)
 </dt> <dt>
 
-[**Datei- und Verzeichniszugriffsrechtekonstanten**](/windows/desktop/WmiSdk/file-and-directory-access-rights-constants)
+[**Konstanten für Datei- und Verzeichniszugriffsrechte**](/windows/desktop/WmiSdk/file-and-directory-access-rights-constants)
 </dt> </dl>
 
  

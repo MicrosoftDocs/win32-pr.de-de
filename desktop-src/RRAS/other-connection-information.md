@@ -16,12 +16,12 @@ ms.locfileid: "117789931"
 Die Member der [**RASDIALPARAMS-Struktur**](/previous-versions/windows/desktop/legacy/aa377238(v=vs.85)) können auch die folgenden Verbindungsinformationen angeben.
 
 -   Eine Telefonnummer, um die Nummer im Telefonbucheintrag zu überschreiben.
--   Eine [](callback-connections.md) Rückruftelefonnummer, die der Remoteserver zurückrufen kann, um die Verbindung herzustellen.
+-   Eine [Rückruftelefonnummer,](callback-connections.md) die der Remoteserver zum Herstellen der Verbindung zurückrufen kann.
 -   Der Name der Remotenetzwerkdomäne, in der die Authentifizierung erfolgen soll.
 
 Für die Rückrufnummer und die Domäne können die [**RASDIALPARAMS-Mitglieder**](/previous-versions/windows/desktop/legacy/aa377238(v=vs.85)) entweder angeben, dass RAS die Informationen im Telefonbucheintrag verwenden soll, oder sie können Informationen bereitstellen, die die Telefonbuchdaten überschreiben.
 
-Ein RAS-Client kann den *lpRasDialExtensions-Parameter* der [**RasDial-Funktion**](/windows/desktop/api/Ras/nf-ras-rasdiala) verwenden, um zu steuern, ob RAS ein Telefonnummernpräfix oder suffix verwendet, das in einem Telefonbucheintrag angegeben ist.
+Ein RAS-Client kann den *lpRasDialExtensions-Parameter* der [**RasDial-Funktion**](/windows/desktop/api/Ras/nf-ras-rasdiala) verwenden, um zu steuern, ob RAS ein Präfix oder Suffix einer Telefonnummer verwendet, die in einem Telefonbucheintrag angegeben ist.
 
  
 

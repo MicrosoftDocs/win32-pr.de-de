@@ -1,19 +1,19 @@
 ---
-description: Der Installer legt die borderside-Eigenschaft auf die Breite der Fensterrahmen in Pixel fest.
+description: Das Installationsprogramm legt die BorderSide-Eigenschaft auf die Breite der Fensterrahmen in Pixel fest.
 ms.assetid: 2f2f93d1-dd83-4075-a436-7ae4105af9fe
-title: Borderside-Eigenschaft
+title: BorderSide-Eigenschaft
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 93d45e3fe4d49ddf93742647b83f02a172c790e6
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 919b62296019255dfc74252b50a1532029a19080d89a8d5007ab75ff2838b5c7
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106367041"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118380764"
 ---
-# <a name="borderside-property"></a>Borderside-Eigenschaft
+# <a name="borderside-property"></a>BorderSide-Eigenschaft
 
-Der Installer legt die **borderside** -Eigenschaft auf die Breite der Fensterrahmen in Pixel fest.
+Das Installationsprogramm legt die **BorderSide-Eigenschaft** auf die Breite der Fensterrahmen in Pixel fest.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -21,7 +21,7 @@ Der Installer legt die **borderside** -Eigenschaft auf die Breite der Fensterrah
 
 | Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Version<br/> | Windows Installer 5,0 unter Windows Server 2012, Windows 8, Windows Server 2008 R2 oder Windows 7. Windows Installer 4,0 oder Windows Installer 4,5 unter Windows Server 2008 oder Windows Vista. Windows Installer unter Windows Server 2003 oder Windows XP. Informationen zu den minimalen Windows-Service Pack, die für eine Windows Installer Version erforderlich sind, finden Sie in den [Windows Installer Run-Time Anforderungen](windows-installer-portal.md) .<br/> |
+| Version<br/> | Windows Installer 5.0 auf Windows Server 2012, Windows 8, Windows Server 2008 R2 oder Windows 7. Windows Installer 4.0 oder Windows Installer 4.5 auf Windows Server 2008 oder Windows Vista. Windows Installationsprogramm auf Windows Server 2003 oder Windows XP. Informationen zum [Windows Service](windows-installer-portal.md) Pack, das für eine Windows Installer-Version erforderlich ist, finden Sie unter Windows Installer Run-Time Anforderungen.<br/> |
 
 
 

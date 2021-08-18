@@ -1,8 +1,8 @@
 ---
-title: Idodownload-Schnittstelle
-description: Wird verwendet, um einen Download zu starten und zu verwalten.
+title: IDODownload-Schnittstelle
+description: Wird zum Starten und Verwalten eines Downloads verwendet.
 keywords:
-- Idodownload-Schnittstelle
+- IDODownload-Schnittstelle
 topic_type:
 - apiref
 api_name:
@@ -14,35 +14,35 @@ api_type:
 ms.localizationpriority: low
 ms.topic: reference
 ms.date: 07/03/2019
-ms.openlocfilehash: ec2f74ce7daae6f612297d21e15e6993fcd78382
-ms.sourcegitcommit: 592c9bbd22ba69802dc353bcb5eb30699f9e9403
+ms.openlocfilehash: 356d6ae2e01f91eae94d9d2ff01a39dd49708eb73a7287d8c176b4231654a74a
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "104315261"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118543817"
 ---
-# <a name="idodownload-interface"></a>Idodownload-Schnittstelle
+# <a name="idodownload-interface"></a>IDODownload-Schnittstelle
 
-Die **idodownload** -Schnittstelle wird verwendet, um einen Download zu starten und zu verwalten.
+Die **IDODownload-Schnittstelle** wird verwendet, um einen Download zu starten und zu verwalten.
 
 ## <a name="methods"></a>Methoden
 
-Die **idodownload** -Schnittstelle verfügt über diese Methoden.
+Die **IDODownload-Schnittstelle** verfügt über diese Methoden.
 
 | Methode | BESCHREIBUNG |
 | ---- |:---- |
-| [Idodownload:: Abort](./nf-do-idomanager-createdownload.md) | Bricht den Download ab. |
-| [Idodownload:: Finalize](./nf-do-idodownload-finalize.md) | Schließt den Download ab. |
-| [Idodownload:: GetProperty](./nf-do-idodownload-getproperty.md) | Ruft einen Zeiger auf eine **Variante** ab, die eine bestimmte Download Eigenschaft enthält. |
-| [Idodownload:: GetStatus](./nf-do-idodownload-getstatus.md) | Ruft einen Zeiger auf eine **DO_DOWNLOAD_STATUS** -Struktur ab, die den aktuellen Status des Downloads widerspiegelt. |
-| [Idodownload::P ause](./nf-do-idodownload-pause.md) | Hält den Download an. |
-| [Idodownload:: SetProperty](./nf-do-idodownload-setproperty.md) | Legt eine Download Eigenschaft fest. |
-| [Idodownload:: Start](./nf-do-idodownload-start.md) | Startet einen Download oder nimmt diesen wieder auf. |
+| [IDODownload::Abort](./nf-do-idomanager-createdownload.md) | Bricht den Download ab. |
+| [IDODownload::Finalize](./nf-do-idodownload-finalize.md) | Finalisiert den Download. |
+| [IDODownload::GetProperty](./nf-do-idodownload-getproperty.md) | Ruft einen Zeiger auf eine **VARIANT-Datei** ab, die eine bestimmte Downloadeigenschaft enthält. |
+| [IDODownload::GetStatus](./nf-do-idodownload-getstatus.md) | Ruft einen Zeiger auf eine **DO_DOWNLOAD_STATUS** Struktur ab, die den aktuellen Status des Downloads widerspiegelt. |
+| [IDODownload::P ause](./nf-do-idodownload-pause.md) | Hält den Download an. |
+| [IDODownload::SetProperty](./nf-do-idodownload-setproperty.md) | Legt eine Downloadeigenschaft fest. |
+| [IDODownload::Start](./nf-do-idodownload-start.md) | Startet oder setzt einen Download fort. |
 
 ## <a name="requirements"></a>Anforderungen
 
 | &nbsp; | &nbsp; |
 | ---- |:---- |
-| **Unterstützte Mindestversion (Client)** | Nur Windows 10, Version 1809, \[ Win32-Anwendungen\] |
-| **Unterstützte Mindestversion (Server)** | Nur Windows Server, Version 1809, \[ Win32-Anwendungen\] |
-| **Header** | Do. h |
+| **Unterstützte Mindestversion (Client)** | \[Windows 10, Version 1809 Nur Win32-Anwendungen\] |
+| **Unterstützte Mindestversion (Server)** | Windows Server, nur Win32-Anwendungen der Version 1809 \[\] |
+| **Header** | Do.h |

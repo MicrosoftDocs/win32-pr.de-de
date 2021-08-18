@@ -1,5 +1,5 @@
 ---
-title: AddComputerGroupNames-Methode der Win32_TSGatewayConnectionAuthorizationPolicy Klasse
+title: AddComputerGroupNames-Methode der Win32_TSGatewayConnectionAuthorizationPolicy-Klasse
 description: Fügt der ComputerGroupNames-Eigenschaft die angegebenen Computergruppennamen hinzu.
 ms.assetid: f0c440d6-0cc2-48b4-b656-65f12e652151
 ms.tgt_platform: multiple
@@ -60,7 +60,7 @@ Wenn mehrere Computergruppennamen im *Parameter ComputerGroupNames* enthalten si
 
 Sie müssen Mitglied der Gruppe Administratoren sein, um diese Methode aufrufen zu können.
 
-Managed Object Format -Dateien (MOF) enthalten die Definitionen für Windows WMI-Klassen (Management Instrumentation). MOF-Dateien werden nicht als Teil des Microsoft Windows Software Development Kit (SDK) installiert. Sie werden auf dem Server installiert, wenn Sie die zugeordnete Rolle mithilfe der Server-Manager. Weitere Informationen zu MOF-Dateien finden Sie unter [Managed Object Format (MOF).](/windows/desktop/WmiSdk/managed-object-format--mof-)
+Managed Object Format (MOF) enthalten die Definitionen für WMI-Klassen (Windows Management Instrumentation). MOF-Dateien werden nicht als Teil des Microsoft Windows Software Development Kit (SDK) installiert. Sie werden auf dem Server installiert, wenn Sie die zugeordnete Rolle mithilfe der Server-Manager. Weitere Informationen zu MOF-Dateien finden Sie unter [Managed Object Format (MOF).](/windows/desktop/WmiSdk/managed-object-format--mof-)
 
 ## <a name="requirements"></a>Anforderungen
 

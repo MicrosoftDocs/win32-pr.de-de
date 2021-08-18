@@ -1,6 +1,6 @@
 ---
 title: D3DX_SRGB_to_FLOAT_inexact-Funktion
-description: Konvertiert einen sRGB-Wert in float. | D3DX_SRGB_to_FLOAT_inexact-Funktion
+description: Konvertiert einen SRGB-Wert in FLOAT. | D3DX_SRGB_to_FLOAT_inexact-Funktion
 ms.assetid: 6eadda6d-ff99-4a8e-9e30-ae455732438e
 keywords:
 - D3DX_SRGB_to_FLOAT_inexact-Funktion HLSL
@@ -14,16 +14,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 44804ad73ab49ce4f62274c870d8487501c44361
-ms.sourcegitcommit: 14010c34b35fa268046c7683f021f86de08ddd0a
+ms.openlocfilehash: f9dd841e022da85d609c203f57288af62a6c99ecc9f56079982308a095285f39
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "104982209"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118515691"
 ---
-# <a name="d3dx_srgb_to_float_inexact-function"></a>D3DX \_ sRGB \_ in \_ \_ ungenau-Funktion
+# <a name="d3dx_srgb_to_float_inexact-function"></a>D3DX SRGB to FLOAT inexact function (D3DX \_ SRGB \_ zu FLOAT \_ \_ inexact-Funktion)
 
-Konvertiert einen sRGB-Wert in float.
+Konvertiert einen SRGB-Wert in FLOAT.
 
 ## <a name="syntax"></a>Syntax
 
@@ -37,28 +37,28 @@ FLOAT D3DX_SRGB_to_FLOAT_inexact(
 
 <dl> <dt>
 
-*ster* 
+*Val* 
 </dt> <dd>
 
-Der zu konvertierende sRGB-Wert.
+Der zu konvertierende SRGB-Wert.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Der konvertierte sRGB-Wert.
+Der konvertierte SRGB-Wert.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Diese Funktion hat keine hohe Genauigkeit, um die genaue Antwort zu erhalten. Die Alternative Funktion [**D3DX \_ sRGB \_ to \_ float**](d3dx-srgb-to-float.md) verwendet eine Nachschlage Tabelle, um eine exakte sRGB-Konvertierung zu verwenden.
+Diese Funktion hat nicht genügend Genauigkeit, um die genaue Antwort zu geben. Die alternative [**Funktion D3DX \_ SRGB zu \_ \_ FLOAT**](d3dx-srgb-to-float.md) verwendet eine Nachschlagetabelle, um eine exakte SRGB- in float-Konvertierung zu geben.
 
-## <a name="requirements"></a>Requirements (Anforderungen)
+## <a name="requirements"></a>Anforderungen
 
 
 
 | Anforderung | Wert |
 |-------------------|--------------------------------------------------------------------------------------------------------|
-| Header<br/> | <dl> <dt>D3DX \_ dxgiformatconvert. INL</dt> </dl> |
+| Header<br/> | <dl> <dt>D3DX \_ DXGIFormatConvert.inl</dt> </dl> |
 
 
 
@@ -69,7 +69,7 @@ Diese Funktion hat keine hohe Genauigkeit, um die genaue Antwort zu erhalten. Di
 [Funktionen](format-conversion-functions.md)
 </dt> <dt>
 
-[Entpacken und Verpacken des DXGI- \_ Formats für In-Place Bildbearbeitung](dx-graphics-hlsl-unpacking-packing-dxgi-format.md)
+[Entpacken und Packen des \_ DXGI-FORMATS für In-Place Bildbearbeitung](dx-graphics-hlsl-unpacking-packing-dxgi-format.md)
 </dt> </dl>
 
  

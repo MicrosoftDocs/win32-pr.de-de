@@ -14,12 +14,12 @@ api_type:
 api_location:
 - d3dx9.lib
 - d3dx9.dll
-ms.openlocfilehash: 95c6d054900f3f4c4710e22c54759161800137c2
-ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
+ms.openlocfilehash: afdf80cf1557f8b08709536ef49b08206873f5758c4b02a12008b27b4413a116
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2021
-ms.locfileid: "108107668"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117731798"
 ---
 # <a name="d3dxfillcubetexturetx-function"></a>D3DXFillCubeTextureTX-Funktion
 
@@ -55,7 +55,7 @@ Zeiger auf ein [**IDirect3DCubeTexture9-Objekt,**](/windows/win32/api/d3d9helper
 
 Typ: **[ **LPD3DXTEXTURESHADER**](id3dxtextureshader.md)**
 
-Zeiger auf ein [**ID3DXTextureShader-Texturshader-Objekt.**](id3dxtextureshader.md)
+Zeiger auf ein [**ID3DXTextureShader-Texturshaderobjekt.**](id3dxtextureshader.md)
 
 </dd> </dl>
 
@@ -65,7 +65,7 @@ Typ: **[ **HRESULT**](https://msdn.microsoft.com/library/Bb401631(v=MSDN.10).asp
 
 Wenn die Funktion erfolgreich ausgeführt wird, lautet der Rückgabewert D3D \_ OK. Wenn die Funktion fehlschlägt, kann der Rückgabewert einer der folgenden Werte sein: D3DERR \_ NOTAVAILABLE, D3DERR \_ INVALIDCALL.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
 Das Texturziel muss eine HLSL-Funktion sein, die die folgende Semantik enthält:
 
@@ -79,7 +79,7 @@ Die Eingabeparameter können in beliebiger Reihenfolge sein. Ein Beispiel finden
 
 
 
-| Anforderungen | Wert |
+| Anforderung | Wert |
 |--------------------|---------------------------------------------------------------------------------------|
 | Header<br/>  | <dl> <dt>D3dx9tex.h</dt> </dl> |
 | Bibliothek<br/> | <dl> <dt>D3dx9.lib</dt> </dl>  |

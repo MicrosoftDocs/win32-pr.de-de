@@ -1,6 +1,6 @@
 ---
 title: Zusammenfassung der Deskriptorheap-Konfigurierbarkeit
-description: In der folgenden Tabelle sind Informationen zur Unterstützung von shader- und nicht shader-sichtbaren Heaps zusammengefasst.
+description: In der folgenden Tabelle sind Informationen zur Unterstützung sichtbarer Shader- und Nicht-Shader-Heaps zusammengefasst.
 ms.assetid: DF266915-6224-4FFB-BE3E-34A44F7318DD
 ms.localizationpriority: high
 ms.topic: article
@@ -14,16 +14,16 @@ ms.locfileid: "118530552"
 ---
 # <a name="descriptor-heap-configurability-summary"></a>Zusammenfassung der Deskriptorheap-Konfigurierbarkeit
 
-In der folgenden Tabelle sind Informationen zur Unterstützung von shader- und nicht shader-sichtbaren Heaps zusammengefasst.
+In der folgenden Tabelle sind Informationen zur Unterstützung sichtbarer Shader- und Nicht-Shader-Heaps zusammengefasst.
 
 
 
-|                               | Shader Visible Descriptor Heap                                                 | Nicht shader sichtbarer Deskriptor-Heap                                                                                                                                                                                                                                                                                                                                  |
+|                               | Sichtbarer Shaderdeskriptorheap                                                 | Sichtbarer Deskriptorheap ohne Shader                                                                                                                                                                                                                                                                                                                                  |
 |-------------------------------|--------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | **Unterstützte Heaptypen**          | CBV \_ SRV \_ UAV, Sampler                                                         | Alle                                                                                                                                                                                                                                                                                                                                                                 |
 | **Unterstützte CPU-Seiteneigenschaften** | NICHT \_ VERFÜGBAR, WRITE \_ COMBINE                                                 | \_ZURÜCKSCHREIBEN                                                                                                                                                                                                                                                                                                                                                         |
-| **Verwaltung von Residencys nach App**   | Ja, app responsible                                                           | Nicht zutreffend (nicht gpu-sichtbar).                                                                                                                                                                                                                                                                                                                                   |
-| **Unterstützung für Deskriptorbearbeitung**       | Nur Ziel kopieren, über Befehlslistenaktualisierung und/oder CPU-Kopie, wenn CPU sichtbar ist. | Nur CPU-Lese- und -Schreibzugriff. Kein direkter GPU-Zugriff. Kann zum sofortigen Kopieren von CPUs (als Quelle und Ziel) verwendet werden. Kann als Updatequelle für eine Befehlsliste verwendet werden. Dadurch werden die Deskriptoren während des Befehlslisten-Datensatzes in den Befehlslistenspeicher kopiert. Bei der Ausführung wird die gespeicherte Kopie in das Ziel kopiert, bei dem es sich um einen shader sichtbaren Heap geben muss. |
+| **Residency Management By App**   | Ja, app responsible                                                           | Nicht zutreffend (nicht GPU sichtbar).                                                                                                                                                                                                                                                                                                                                   |
+| **Deskriptorbearbeitungsunterstützung**       | Nur Ziel kopieren, über Aktualisierung der Befehlsliste und/oder CPU-Kopie, wenn DIE CPU sichtbar ist. | Nur CPU-Lese- und -Schreibzugriff. Kein direkter GPU-Zugriff. Kann für das sofortige Kopieren der CPU (als Quelle und Ziel) verwendet werden. Kann als Updatequelle für eine Befehlsliste verwendet werden. Dadurch werden die Deskriptoren während des Befehlslistendatensatzes in den Befehlslistenspeicher kopiert. Bei der Ausführung wird die gespeicherte Kopie in das Ziel kopiert, das ein sichtbarer Shaderheap sein muss. |
 
 
 

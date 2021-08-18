@@ -1,9 +1,9 @@
 ---
-title: Wiedergabeliste. itemselectedbackgroundfoclelostcolor
-description: Das itemselectedbackgroundfocuslostcolor-Attribut gibt einen Wert an, der die Textfarbe eines ausgewählten Elements in der Wiedergabeliste angibt, oder ruft diesen ab.
+title: PLAYLIST.itemSelectedBackgroundFocusLostColor
+description: Das itemSelectedBackgroundFocusLostColor-Attribut gibt einen Wert an, der die Textfarbe eines ausgewählten Elements in der Wiedergabeliste angibt oder abruft.
 ms.assetid: 65be17ab-1e1e-4aea-ad8f-f21dd8bfc14c
 keywords:
-- Wiedergabeliste. itemselectedbackgroundfocslostcolor Windows Media Player
+- PLAYLIST.itemSelectedBackgroundFocusLostColor Windows Media Player
 topic_type:
 - apiref
 api_name:
@@ -12,16 +12,16 @@ api_type:
 - NA
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 49c130119d1aad503c0c236ac9c28a61746645ac
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 1f3a812958b4d2923190390e565a44a05bc18f22731e687bef527605cafbc25b
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106373974"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118834364"
 ---
-# <a name="playlistitemselectedbackgroundfocuslostcolor"></a>Wiedergabeliste. itemselectedbackgroundfoclelostcolor
+# <a name="playlistitemselectedbackgroundfocuslostcolor"></a>PLAYLIST.itemSelectedBackgroundFocusLostColor
 
-Das **itemselectedbackgroundfocuslostcolor** -Attribut gibt einen Wert an, der die Textfarbe eines ausgewählten Elements in der Wiedergabeliste angibt, oder ruft diesen ab.
+Das **itemSelectedBackgroundFocusLostColor-Attribut** gibt einen Wert an, der die Textfarbe eines ausgewählten Elements in der Wiedergabeliste angibt oder abruft.
 
 ``` syntax
         elementID.itemSelectedBackgroundFocusLostColor
@@ -29,7 +29,7 @@ Das **itemselectedbackgroundfocuslostcolor** -Attribut gibt einen Wert an, der d
 
 ## <a name="possible-values"></a>Mögliche Werte
 
-Dieses Attribut ist eine Lese- **/schreibzeichenfolge** , die eine Farbe darstellt. Der Standardwert ist die Vordergrundfarbe der Windows-Schaltfläche.
+Dieses Attribut ist eine Lese-/Schreibzeichenfolge, **die** eine Farbe darstellt. Der Standardwert ist die Windows der Schaltflächengesichtfarbe.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -41,14 +41,14 @@ Dieses Attribut ist eine Lese- **/schreibzeichenfolge** , die eine Farbe darstel
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Farb Verweis**](color-reference.md)
+[**Farbreferenz**](color-reference.md)
 </dt> <dt>
 
-[**Wiedergabelisten Element**](playlist-element.md)
+[**PLAYLIST-Element**](playlist-element.md)
 </dt> </dl>
 
  

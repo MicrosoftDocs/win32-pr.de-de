@@ -34,7 +34,7 @@ Ausführliche Anweisungen zum Konfigurieren bestimmter SICHERHEITSeinstellungen 
 
 **So konvertieren Sie eine sichere SOAP-Anwendung in eine unsichere SOAP-Anwendung**
 
-1.  Öffnen Sie das Internetinformationsdienste-Verwaltungstool (IIS).
+1.  Öffnen Sie das IiS-Verwaltungstool (Internetinformationsdienste).
 2.  Suchen Sie das virtuelle Verzeichnis für die Anwendung, und öffnen Sie das Dialogfeld **Eigenschaften.**
 3.  Aktivieren Sie auf der Registerkarte **Dokumente** die **Option Standardinhalt aktivieren.**
 4.  Klicken Sie auf der Registerkarte **Verzeichnissicherheit** unter **Anonymer Zugriff und Authentifizierungssteuerung** auf **Bearbeiten.**

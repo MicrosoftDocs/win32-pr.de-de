@@ -1,11 +1,11 @@
 ---
-title: Iwmdrmdeviceapp generatemeterchallenge-Methode (wmdrmdeviceapp. h)
-description: Mit der generatemeterchallenge-Methode werden Messungs Daten von einem Gerät angefordert.
+title: IWMDRMDeviceApp GenerateMeterChallenge-Methode (WMDRMDeviceApp.h)
+description: Die GenerateMeterChallenge-Methode erfasst Messdaten von einem Gerät.
 ms.assetid: 2457cab7-bd45-49a7-ba69-74ae022207ce
 keywords:
-- Generatemeterchallenge-Methode, Windows Media Device Manager
-- Generatemeterchallenge-Methode Windows Media Device Manager, iwmdrmdeviceapp-Schnittstelle
-- Iwmdrmdeviceapp-Schnittstelle Windows Media Device Manager, generatemeterchallenge-Methode
+- GenerateMeterChallenge-Methode windows Media Geräte-Manager
+- GenerateMeterChallenge-Methode windows Media Geräte-Manager , IWMDRMDeviceApp-Schnittstelle
+- IWMDRMDeviceApp-Schnittstelle windows Media Geräte-Manager , GenerateMeterChallenge-Methode
 topic_type:
 - apiref
 api_name:
@@ -17,16 +17,16 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 06a71f04a5837f09575a2f4bccf4b17e34e30d63
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: e91ac5049740d360ae0c5f53959b3d952188bfa2a569c58a9e7cf86ae0c22577
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106354161"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118584549"
 ---
-# <a name="iwmdrmdeviceappgeneratemeterchallenge-method"></a>Iwmdrmdeviceapp:: generatemeterchallenge-Methode
+# <a name="iwmdrmdeviceappgeneratemeterchallenge-method"></a>IWMDRMDeviceApp::GenerateMeterChallenge-Methode
 
-Mit der **generatemeterchallenge** -Methode werden Messungs Daten von einem Gerät angefordert.
+Die **GenerateMeterChallenge-Methode** erfasst Messdaten von einem Gerät.
 
 ## <a name="syntax"></a>Syntax
 
@@ -46,67 +46,67 @@ HRESULT GenerateMeterChallenge(
 
 <dl> <dt>
 
-*pdevice* \[ in\]
+*pDevice* \[ In\]
 </dt> <dd>
 
-Zeiger auf eine [**iwmdmdevice**](/windows/desktop/api/mswmdm/nn-mswmdm-iwmdmdevice) -Schnittstelle. Wenn die Anwendung in **null** übergeht, werden Messungs Informationen, die auf dem Computer gespeichert sind, anstelle von Messungs Informationen eines verbundenen Geräts verwendet.
+Zeiger auf eine [**IWMDMDevice-Schnittstelle.**](/windows/desktop/api/mswmdm/nn-mswmdm-iwmdmdevice) Wenn die Anwendung **NULL** übergibt, werden auf dem Computer gespeicherte Messungsinformationen anstelle von Messungsinformationen von einem verbundenen Gerät verwendet.
 
 </dd> <dt>
 
-*bstrinmetercert* \[ in\]
+*bstrMeterCert* \[ In\]
 </dt> <dd>
 
-Das Messungs Zertifikat der Anwendung als **BSTR**. Dies ist ein von Microsoft empfangenes signiertes Zertifikat.
+Das Messungszertifikat der Anwendung als **BSTR.** Dies ist ein signiertes Zertifikat, das von Microsoft empfangen wurde.
 
 </dd> <dt>
 
-*pbstrinmeterurl* \[ vorgenommen\]
+*pbstrMeterURL* \[ out\]
 </dt> <dd>
 
-Die URL, an die Messungs Daten gesendet werden sollen. Diese wird von Windows Media Device Manager zugeordnet und muss vom Aufrufer mit **SysFreeString** freigegeben werden.
+Die URL, an die Messungsdaten gesendet werden sollen. Dies wird von Windows Media Geräte-Manager zugeordnet und muss vom Aufrufer mit **sysFreeString** kostenlos sein.
 
 </dd> <dt>
 
-*pbstrinmeterdaten* \[ vorgenommen\]
+*pbstrMeterData* \[ out\]
 </dt> <dd>
 
-Messungs Daten, die an den Messungs Dienst gesendet werden sollen. Diese wird von Windows Media Device Manager zugeordnet und muss vom Aufrufer mit **SysFreeString** freigegeben werden.
+Messungsdaten, die an den Messungsdienst gesendet werden sollen. Dies wird von Windows Media Geräte-Manager zugeordnet und muss vom Aufrufer mit **sysFreeString** kostenlos sein.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Die-Methode gibt ein **HRESULT** zurück. Mögliches Werte (aber nicht die Einzigen) sind die in der folgenden Tabelle.
+Die Methode gibt ein **HRESULT** zurück. Mögliches Werte (aber nicht die Einzigen) sind die in der folgenden Tabelle.
 
 
 
 | Rückgabecode                                                                                                      | Beschreibung                                                                   |
 |------------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------|
 | <dl> <dt>**S \_ OK**</dt> </dl>                             | Die Methode wurde erfolgreich ausgeführt.<br/>                                              |
-| <dl> <dt>**DRM \_ E \_ invalidArg**</dt> </dl>                | Mindestens ein Argument ist ungültig.<br/>                               |
-| <dl> <dt>**DRM \_ E \_ invalidxmltag**</dt> </dl>             | XML ist nicht ordnungsgemäß formatiert.<br/>                                          |
-| <dl> <dt>**DRM \_ E \_ noxmlclosetag**</dt> </dl>             | XML ist nicht ordnungsgemäß formatiert.<br/>                                          |
-| <dl> <dt>**DRM \_ E \_ noxmlopentag**</dt> </dl>              | XML ist nicht ordnungsgemäß formatiert.<br/>                                          |
-| <dl> <dt>**DRM \_ E \_ xmlnotfound**</dt> </dl>               | Fehler beim Suchen eines erforderlichen XML-Tags.<br/>                                 |
-| <dl> <dt>**Fehler des Geräts**</dt> </dl>            | Eine beliebige Anzahl von Gerätefehlern.<br/>                                  |
-| <dl> <dt>**Fehler vom DRM-Client**</dt> </dl>        | Eine beliebige Anzahl interner DRM-Client Fehler.<br/>                     |
-| <dl> <dt>**NS \_ E \_ Gerät \_ nicht \_ WMDRM- \_ Gerät**</dt> </dl> | Das angegebene Gerät ist kein Windows Media DRM-kompatibles Gerät.<br/> |
+| <dl> <dt>**DRM \_ E \_ INVALIDARG**</dt> </dl>                | Mindestens ein Argument ist ungültig.<br/>                               |
+| <dl> <dt>**DRM \_ E \_ INVALIDXMLTAG**</dt> </dl>             | XML ist nicht ordnungsgemäß formatiert.<br/>                                          |
+| <dl> <dt>**DRM \_ E \_ NOXMLCLOSETAG**</dt> </dl>             | XML ist nicht ordnungsgemäß formatiert.<br/>                                          |
+| <dl> <dt>**DRM \_ E \_ NOXMLOPENTAG**</dt> </dl>              | XML ist nicht ordnungsgemäß formatiert.<br/>                                          |
+| <dl> <dt>**DRM \_ E \_ XMLNOTFOUND**</dt> </dl>               | Fehler beim Suchen eines erforderlichen XML-Tags.<br/>                                 |
+| <dl> <dt>**Fehler vom Gerät**</dt> </dl>            | Eine beliebige Anzahl von Gerätefehlern.<br/>                                  |
+| <dl> <dt>**Fehler vom DRM-Client**</dt> </dl>        | Eine beliebige Anzahl interner DRM-Clientfehler.<br/>                     |
+| <dl> <dt>**NS \_ E \_ DEVICE \_ NOT \_ WMDRM \_ DEVICE**</dt> </dl> | Das angegebene Gerät ist kein Windows Medien-DRM-kompatibles Gerät.<br/> |
 
 
 
  
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Vor dem Aufrufen dieser Methode sollte die Anwendung [**iwmdrmdeviceapp:: querydevicestatus**](iwmdrmdeviceapp-querydevicestatus.md) oder [**IWMDRMDeviceApp2:: QueryDeviceStatus2**](iwmdrmdeviceapp2-querydevicestatus2.md) aufrufen, um zu überprüfen, ob alle DRM-Komponenten des Geräts auf dem neuesten Stand sind. Diese Methode kann nur auf einem Gerät aufgerufen werden, das Windows Media DRM 10 für tragbare Geräte unterstützt.
+Vor dem Aufrufen dieser Methode sollte die Anwendung [**IWMDRMDeviceApp::QueryDeviceStatus**](iwmdrmdeviceapp-querydevicestatus.md) oder [**IWMDRMDeviceApp2::QueryDeviceStatus2**](iwmdrmdeviceapp2-querydevicestatus2.md) aufrufen, um sicherzustellen, dass alle DRM-Komponenten des Geräts auf dem neuesten Stand sind. Diese Methode kann nur auf einem Gerät aufgerufen werden, das Windows Media DRM 10 für portable Geräte unterstützt.
 
-Die abgerufenen Daten *pbstrinmeterdata* sollten an die durch *pbstraumeterurl* angegebene URL gesendet werden. Stellen Sie sicher, dass die abgerufenen Daten URL-codiert werden, damit Sie während der Übertragung nicht geändert werden.
+Die abgerufenen Daten *pbstrMeterData* sollten an die url gesendet werden, die von *pbstrMeterURL* angegeben wird. Achten Sie darauf, die abgerufenen Daten url-encode zu codieren, damit sie während der Übertragung nicht geändert werden.
 
-Weitere Informationen finden Sie [unter behandeln geschützter Inhalte in der Anwendung](handling-protected-content-in-the-application.md) .
+Weitere Informationen finden Sie [unter Behandeln von geschützten Inhalten in der Anwendung.](handling-protected-content-in-the-application.md)
 
 ## <a name="examples"></a>Beispiele
 
-Im folgenden C++-Codebeispiel wird ein **wmdrmdeviceapp** -Objekt erstellt, und es wird überprüft, ob das Gerät ein Windows Media DRM 10-Gerät ist, dass seine Uhr genau ist, und dann die Messungs Daten anfordert.
+Im folgenden C++-Codebeispiel wird ein **WMDRMDeviceApp-Objekt** erstellt, überprüft, ob es sich bei dem Gerät um ein Windows Media DRM 10-Gerät handelt, ob seine Uhr genau ist, und fordert dann die Messungsdaten an.
 
 
 ```C++
@@ -153,8 +153,8 @@ if (hr == S_OK)
 
 | Anforderung | Wert |
 |--------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Wmdrmdeviceapp. h (erfordert auch wmdrmdeviceapp \_ i. c, erstellt von wmdrmdeviceapp. idl)</dt> </dl> |
-| Bibliothek<br/> | <dl> <dt>Mssachlp. lib</dt> </dl>                                                                        |
+| Header<br/>  | <dl> <dt>WMDRMDeviceApp.h (erfordert auch Wmdrmdeviceapp \_ i.c, erstellt aus WMDRMDeviceApp.idl)</dt> </dl> |
+| Bibliothek<br/> | <dl> <dt>Mssachlp.lib</dt> </dl>                                                                        |
 
 
 
@@ -162,13 +162,13 @@ if (hr == S_OK)
 
 <dl> <dt>
 
-[**Behandeln geschützter Inhalte in der Anwendung**](handling-protected-content-in-the-application.md)
+[**Behandeln von geschützten Inhalten in der Anwendung**](handling-protected-content-in-the-application.md)
 </dt> <dt>
 
-[**Iwmdmdevice-Schnittstelle**](/windows/desktop/api/mswmdm/nn-mswmdm-iwmdmdevice)
+[**IWMDMDevice-Schnittstelle**](/windows/desktop/api/mswmdm/nn-mswmdm-iwmdmdevice)
 </dt> <dt>
 
-[**Iwmdrmdeviceapp-Schnittstelle**](iwmdrmdeviceapp.md)
+[**IWMDRMDeviceApp-Schnittstelle**](iwmdrmdeviceapp.md)
 </dt> </dl>
 
  

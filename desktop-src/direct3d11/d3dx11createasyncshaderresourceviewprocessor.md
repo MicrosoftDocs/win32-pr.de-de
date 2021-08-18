@@ -1,6 +1,6 @@
 ---
 title: D3DX11CreateAsyncShaderResourceViewProcessor-Funktion (D3DX11async.h)
-description: Hinweis Die Hilfsprogrammbibliothek D3DX (D3DX 9, D3DX 10 und D3DX 11) ist für Windows 8 veraltet und wird für Windows Store-Apps nicht unterstützt.
+description: Hinweis Die Hilfsprogrammbibliothek D3DX (D3DX 9, D3DX 10 und D3DX 11) ist für Windows 8 veraltet und wird für Windows Store Apps nicht unterstützt.
 ms.assetid: bd9349af-f433-47f9-b443-3049c32fc286
 keywords:
 - D3DX11CreateAsyncShaderResourceViewProcessor-Funktion Direct3D 11
@@ -25,7 +25,7 @@ ms.locfileid: "118536569"
 # <a name="d3dx11createasyncshaderresourceviewprocessor-function"></a>D3DX11CreateAsyncShaderResourceViewProcessor-Funktion
 
 > [!Note]  
-> Die Hilfsprogrammbibliothek D3DX (D3DX 9, D3DX 10 und D3DX 11) ist für Windows 8 veraltet und wird für Windows Store-Apps nicht unterstützt. Siehe Hinweise.
+> Die Hilfsprogrammbibliothek D3DX (D3DX 9, D3DX 10 und D3DX 11) ist für Windows 8 veraltet und wird für Windows Store Apps nicht unterstützt. Siehe Hinweise.
 
  
 
@@ -100,7 +100,7 @@ Für Win32-Desktop-Apps können Sie die [Concurrency Runtime](/previous-versions
 
 
 
-## <a name="see-also"></a>Weitere Informationen:
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 

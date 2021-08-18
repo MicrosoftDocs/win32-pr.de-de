@@ -13,27 +13,27 @@ ms.locfileid: "118475342"
 ---
 # <a name="speak-method"></a>Speak-Methode
 
-\[Der Microsoft-Agent ist ab Windows 7 veraltet und in nachfolgenden Versionen von Windows möglicherweise nicht mehr verfügbar.\]
+\[Microsoft Agent ist ab Version Windows 7 veraltet und in nachfolgenden Versionen von Windows.\]
 
 <dl> <dt>
 
 <span id="Description"></span><span id="description"></span><span id="DESCRIPTION"></span>**Beschreibung**
 </dt> <dd>
 
-Spricht den angegebenen Text oder die angegebene Sounddatei für das angegebene Zeichen aus.
+Spricht den angegebenen Text oder die angegebene Sounddatei für das angegebene Zeichen.
 
 </dd> <dt>
 
 <span id="Syntax"></span><span id="syntax"></span><span id="SYNTAX"></span>**Syntax**
 </dt> <dd>
 
-*agent***. Zeichen ("**_CharacterID_*_"). Text_ *  \[  \] sprechen, \[ *URL*\]
+*agent***. Zeichen ("**_CharacterID_*_"). Speak_ *  \[ *Text* \] , \[ *URL*\]
 
 
 
 | Teil   | BESCHREIBUNG                                                                                                                                                                                                                                                  |
 |--------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| *Text* | Optional. Eine Zeichenfolge, die angibt, was das Zeichen sagt.                                                                                                                                                                                                   |
+| *Text* | Optional. Eine Zeichenfolge, die angibt, was das Zeichen angibt.                                                                                                                                                                                                   |
 | *Url*  | Optional. Ein Zeichenfolgenausdruck, der den Speicherort einer Audiodatei angibt (. WAV oder . LWV-Format). Der Speicherort kann als Datei (einschließlich UNC-Pfadspezifikation) oder URL (wenn Zeichenanimationsdaten auch über das HTTP-Protokoll abgerufen werden) angegeben werden. |
 
 
@@ -44,19 +44,19 @@ Spricht den angegebenen Text oder die angegebene Sounddatei für das angegebene 
 
 ## <a name="remarks"></a>Hinweise
 
-Obwohl die *Parameter Text* und *URL* optional sind, muss einer von ihnen angegeben werden. Um diese Methode mit einem Zeichen zu verwenden, das so konfiguriert ist, dass es nur in seinem Wortsprechblasen oder mithilfe einer TTS-Engine (Text-to-Speech) spricht, geben Sie einfach den *Text-Parameter* an. Schließen Sie ein Leerzeichen zwischen Wörtern ein, um entsprechende Wortumbrüche im Wortsprechblasen zu definieren, auch für Sprachen, die normalerweise keine Leerzeichen enthalten.
+Obwohl die *Parameter Text* und *URL* optional sind, muss einer davon angegeben werden. Um diese Methode mit einem Zeichen zu verwenden, das so konfiguriert ist, dass es nur in der Wortsprechblase oder mithilfe einer Text-to-Speech-Engine (TTS) spricht, geben Sie einfach den *Text-Parameter* an. Schließen Sie ein Leerzeichen zwischen Wörtern ein, um geeignete Wortumbrüche im Wortsprechblasen zu definieren, auch für Sprachen, die normalerweise keine Leerzeichen enthalten.
 
-Sie können auch vertikale Balkenzeichen \| () in den *Text-Parameter* einschließen, um alternative Zeichenfolgen festzulegen, sodass der Server bei jeder Verarbeitung der Methode nach dem Zufallsprinzip eine andere Zeichenfolge aus wählt.
+Sie können auch vertikale Balkenzeichen ( ) in den Text-Parameter integrieren, um alternative Zeichenfolgen zu bestimmen, sodass der Server bei jeder Prozessprozessierung der Methode nach dem Zufallsprinzip eine andere \| Zeichenfolge auswählt. 
 
-Die Zeichenunterstützung der TTS-Ausgabe wird definiert, wenn das Zeichen mit dem Microsoft-Agent-Zeichen-Editor kompiliert wird. Um eine TTS-Ausgabe zu generieren, muss bereits eine kompatible TTS-Engine installiert sein, bevor diese Methode aufgerufen wird. Weitere Informationen finden Sie unter [Zugreifen auf Speech-Dienste.](accessing-speech-services.md)
+Die Zeichenunterstützung der TTS-Ausgabe wird definiert, wenn das Zeichen mit dem Microsoft Agent-Zeichen-Editor kompiliert wird. Um eine TTS-Ausgabe zu generieren, muss vor dem Aufrufen dieser Methode bereits eine kompatible TTS-Engine installiert sein. Weitere Informationen finden Sie unter [Zugreifen auf Speech-Dienste.](accessing-speech-services.md)
 
-Bei Verwendung der aufgezeichneten Sounddatei (. WAV oder . Nur LWV-Format) ausgabe für das Zeichen, geben Sie den Speicherort der Datei im *Url-Parameter* an. Diese Dateispezifikation kann einen lokalen (absoluten oder relativen) oder UNC-Pfad (Universal Naming Convention) enthalten. Der Dateiname darf keine Zeichen enthalten, die nicht in der US-Codepage 1252 enthalten sind. Wenn Sie jedoch das HTTP-Protokoll verwenden, um auf die Zeichenanimationsdaten zuzugreifen, verwenden [**Sie**](get-method.md) die Get-Methode, um die Animation zu laden, bevor Sie die **Speak-Methode** aufrufen. Informationen zu creative finden Sie unter [Using the Microsoft Linguistic Information Sound Editing Tool (Verwenden des Microsoft Linguistic Information Sound Editing Tools).](using-the-microsoft-linguistic-information-sound-editing-tool.md) LWV-Dateien.
+Wenn Sie die aufgezeichnete Sounddatei verwenden (. WAV oder . Nur LWV-Format) ausgabe für das Zeichen, geben Sie den Speicherort der Datei im *Url-Parameter* an. Diese Dateispezifikation kann einen lokalen (absoluten oder relativen) oder UNC-Pfad (Universal Naming Convention) enthalten. Der Dateiname darf keine Zeichen enthalten, die nicht in der US-Codepage 1252 enthalten sind. Wenn Sie jedoch das HTTP-Protokoll für den Zugriff [](get-method.md) auf die Zeichenanimationsdaten verwenden, verwenden Sie die Get-Methode, um die Animation zu laden, bevor Sie die **Speak-Methode** aufrufen. Informationen zu creative finden Sie unter Using the Microsoft Linguistic Information Sound Editing Tool (Verwenden des [Microsoft Linguistic Information Sound Editing Tools).](using-the-microsoft-linguistic-information-sound-editing-tool.md) LWV-Dateien.
 
-Bei Verwendung der aufgezeichneten Audiodateiausgabe können Sie weiterhin den *Text-Parameter* verwenden, um die Wörter anzugeben, die im Wortsprechblasen des Zeichens angezeigt werden. Wenn Sie jedoch eine linguistisch erweiterte Sounddatei angeben (. LWV) für den *Url-Parameter* und geben keinen Text für die Wortsprechblase an. Der *Text-Parameter* verwendet den in der Datei gespeicherten Text.
+Wenn Sie die aufgezeichnete Audiodateiausgabe verwenden, können Sie weiterhin den *Text-Parameter* verwenden, um die Wörter anzugeben, die in der Wortsprechblase des Zeichens angezeigt werden. Wenn Sie jedoch eine linguistisch erweiterte Sounddatei angeben (. LWV) für  den Url-Parameter, und geben Sie keinen Text für das Wort Balloon an. Der *Text-Parameter* verwendet den in der Datei gespeicherten Text.
 
-Sie können auch Parameter der Sprachausgabe mit speziellen Tags variieren, die Sie in den *Text-Parameter* einschließen. Weitere Informationen finden Sie unter [Microsoft Agent Speech Output Tags](microsoft-agent-speech-output-tags.md).
+Sie können die Parameter der Sprachausgabe auch mit speziellen Tags variieren, die Sie im *Text-Parameter* enthalten. Weitere Informationen finden Sie unter [Microsoft Agent Speech Output Tags](microsoft-agent-speech-output-tags.md).
 
-Wenn Sie einen Objektverweis deklarieren und auf diese Methode festlegen, wird ein [**Request-Objekt**](/windows/desktop/lwef/the-request-object) zurückgegeben. Sie können dies verwenden, um andere Teile des Codes mit der gesprochenen Ausgabe des Zeichens zu synchronisieren, wie im folgenden Beispiel zu sehen:
+Wenn Sie einen Objektverweis deklarieren und auf diese Methode festlegen, wird ein [**Request-Objekt**](/windows/desktop/lwef/the-request-object) zurückgegeben. Sie können dies verwenden, um andere Teile Des Codes mit der gesprochenen Ausgabe des Zeichens zu synchronisieren, wie im folgenden Beispiel gezeigt:
 
 
 ```
@@ -78,11 +78,11 @@ Wenn Sie einen Objektverweis deklarieren und auf diese Methode festlegen, wird e
 
 
 
-Sie können auch ein [**Request-Objekt**](/windows/desktop/lwef/the-request-object) verwenden, um bestimmte Fehlerbedingungen zu überprüfen. Wenn Sie beispielsweise die **Speak-Methode** verwenden, um zu sprechen, und keine kompatible TTS-Engine installiert ist, legt der Server die [**Status-Eigenschaft**](status-property.md) des **Request-Objekts** auf "failed" mit der [**Description-Eigenschaft**](description-property.md) auf "Class not registered" oder "Unknown or object returned error" fest. Verwenden Sie die [**TTSModeID-Eigenschaft,**](ttsmodeid-property.md) um zu ermitteln, ob eine TTS-Engine installiert ist.
+Sie können auch ein [**Request-Objekt verwenden,**](/windows/desktop/lwef/the-request-object) um nach bestimmten Fehlerbedingungen zu überprüfen. Wenn Sie z. B. die **Speak-Methode** verwenden, um zu sprechen, und  keine kompatible TTS-Engine installiert ist, legt der Server die [**Status-Eigenschaft**](status-property.md) des Request-Objekts auf "failed" fest, und die [**Description-Eigenschaft**](description-property.md) ist auf "Klasse nicht registriert" oder "Unbekannt oder Objekt hat Fehler zurückgegeben". Verwenden Sie die TTSModeID-Eigenschaft, um zu ermitteln, ob eine [**TTS-Engine installiert**](ttsmodeid-property.md) ist.
 
-Wenn Sie mit dem Zeichen versuchen, eine Sounddatei zu sprechen, und wenn die Datei nicht geladen wurde oder ein Problem mit dem Audiogerät vorliegt, legt der Server auch die [**Status-Eigenschaft**](status-property.md) des [**Request-Objekts**](/windows/desktop/lwef/the-request-object) auf "failed" mit einer entsprechenden Fehlercodenummer fest.
+Wenn Sie versuchen, eine Sounddatei zu sprechen, und wenn die Datei nicht geladen wurde oder ein Problem mit [](/windows/desktop/lwef/the-request-object) dem Audiogerät besteht, legt der Server auch die [**Status-Eigenschaft**](status-property.md) des Anforderungsobjekts mit einer entsprechenden Fehlercodenummer auf "failed" fest.
 
-Sie können auch Lesezeichen-Sprachtags in Ihren Sprachtext einschließen, um Ihren Code zu synchronisieren:
+Sie können auch Lesezeichen-Sprachtags in Ihren Speak-Text einfügen, um Ihren Code zu synchronisieren:
 
 
 ```
@@ -100,21 +100,21 @@ Sie können auch Lesezeichen-Sprachtags in Ihren Sprachtext einschließen, um Ih
 
 
 
-Weitere Informationen zum Lesezeichen-Sprachtag finden Sie unter [Speech-Ausgabetags.](mrk-tag.md)
+Weitere Informationen zum Lesezeichen-Sprachtag finden Sie unter [Sprachausgabetags.](mrk-tag.md)
 
-Die **Speak-Methode** verwendet die letzte wiedergegebene Aktion, um zu bestimmen, welche Sprechanimation wiedergegeben werden soll. Wenn Sie z. B. dem Befehl **Speak** einen **"GestureRight"** wiedergeben vorangestellt haben, gibt der Server **GestureRight** und dann die **GestureRight-Sprechanimation** wieder. [](play-method.md) Wenn die letzte wiedergegebene Animation über keine Sprechanimation verfügt, gibt der -Agent die Animation wieder, die dem **Sprechzustand** des Zeichens zugewiesen ist.
+Die **Speak-Methode** bestimmt mit der zuletzt abgespielten Aktion, welche Sprechanimation abgespielt werden soll. Wenn Sie dem **Speak-Befehl** z. [](play-method.md) B. die Wiedergabe **"GestureRight"** vorangegangen sind, gibt der Server **GestureRight** und dann die **GestureRight-Sprachanimation** wieder. Wenn die zuletzt gezeigte Animation keine Sprechanimation auf hat, gibt der -Agent die Animation wieder, die dem Sprechzustand des **Zeichens zugewiesen** ist.
 
-Wenn Sie **Speak** aufrufen und der Audiokanal ausgelastet ist, wird die Audioausgabe des Zeichens nicht gehört, aber der Text wird in der Wortsprechblase angezeigt.
+Wenn Sie **Speak aufrufen** und der Audiokanal ausgelastet ist, wird die Audioausgabe des Zeichens nicht gehört, aber der Text wird im Wortsprechblasen angezeigt.
 
-Der automatische Wörterumbruch des Agents im Wortsprechblasen unterbricht Wörter mitHilfe von Leerzeichen (z. B. Leerzeichen oder Tabulatorzeichen). Wenn dies jedoch nicht der Lage ist, kann ein Wort an den Sprechblasen angepasst werden. Fügen Sie in Sprachen wie Japanisch, Chinesisch und Thailändisch, in denen Leerzeichen nicht zum Unterbrechen von Wörtern verwendet werden, ein Unicode-Leerzeichen mit einer Breite von null (0x200B) zwischen Zeichen ein, um logische Wortumbrüche zu definieren.
+Der automatische Wortumbruch des Agents im Wort balloon unterbricht Wörter mithilfe von Leerzeichen (z. B. Leerzeichen oder Tabulator). Wenn dies jedoch nicht möglich ist, wird möglicherweise ein Wort an den Sprechblasen gepasst. Fügen Sie in Sprachen wie Japanisch, Chinesisch und Thailändisch, in denen Leerzeichen nicht zum Aufbrechen von Wörtern verwendet werden, ein Unicode-Leerzeichen mit einer Breite von null (0x200B) zwischen Zeichen ein, um logische Wortumbrüche zu definieren.
 
 > [!Note]  
-> Die [**Enabled-Eigenschaft**](enabled-property.md) des Sprechblasens muss auch **True** sein, damit Text angezeigt werden kann.
+> Die Enabled-Eigenschaft [**des**](enabled-property.md) Wortsprechblasens muss auch **True sein,** damit Text angezeigt wird.
 
  
 
 > [!Note]  
-> Legen Sie die Sprach-ID des Zeichens fest (indem Sie die **LanguageID** des Zeichens festlegen, bevor Sie die **Speak-Methode** verwenden, um eine entsprechende Textanzeige innerhalb der Wortsprechblase sicherzustellen.
+> Legen Sie die Sprach-ID des Zeichens fest (indem Sie die **LanguageID** des Zeichens festlegen, bevor Sie die **Speak-Methode** verwenden, um eine entsprechende Textanzeige im Wortsprechblasen zu gewährleisten.
 
  
 
