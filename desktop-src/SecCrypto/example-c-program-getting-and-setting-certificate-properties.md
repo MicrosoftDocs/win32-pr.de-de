@@ -1,27 +1,27 @@
 ---
-description: Dient zum Abrufen und Festlegen von Zertifikat Eigenschaften und zum Veranschaulichen der folgenden Tasks und kryptoapi-Funktionen.
+description: Ruft Zertifikateigenschaften ab und legt sie fest und veranschaulicht die folgenden Aufgaben und CryptoAPI-Funktionen.
 ms.assetid: 4cc20a59-d8e9-4c9b-9438-21bccbbe4a64
-title: 'Beispiel-C-Programm: erhalten und Festlegen von Zertifikat Eigenschaften'
+title: 'Beispiel C-Programm: Abrufen und Festlegen von Zertifikateigenschaften'
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 99ac3d865eb90f57f1c687dbf58e89a2725066aa
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 7f4197d4ba716f780fec419aaf9588807d379ac85ccbfdb95535936539129dbb
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "104050474"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119007668"
 ---
-# <a name="example-c-program-getting-and-setting-certificate-properties"></a>Beispiel-C-Programm: erhalten und Festlegen von Zertifikat Eigenschaften
+# <a name="example-c-program-getting-and-setting-certificate-properties"></a>Beispiel C-Programm: Abrufen und Festlegen von Zertifikateigenschaften
 
-Im folgenden Beispiel werden Zertifikat Eigenschaften abgerufen und festgelegt, und die folgenden Aufgaben und [*kryptoapi*](../secgloss/c-gly.md) -Funktionen werden veranschaulicht.
+Das folgende Beispiel ruft Zertifikateigenschaften ab und legt sie fest und veranschaulicht die folgenden Aufgaben und [*CryptoAPI-Funktionen.*](../secgloss/c-gly.md)
 
--   Öffnen eines System Stores mithilfe von " [**certopdsystemstore**](/windows/desktop/api/Wincrypt/nf-wincrypt-certopensystemstorea)".
--   Verwenden Sie [**certenrecertifikatesinstore**](/windows/desktop/api/Wincrypt/nf-wincrypt-certenumcertificatesinstore) , um alle Zertifikate im geöffneten Speicher aufzulisten.
--   Abrufen und Drucken des Antragsteller namens aus dem Zertifikat mithilfe von " [**certgetnamestring**](/windows/desktop/api/Wincrypt/nf-wincrypt-certgetnamestringa)".
--   Festlegen der Eigenschaft " [*Erweiterte Schlüssel Verwendung*](../secgloss/e-gly.md) " für Zertifikate mithilfe der [**certaddenhancedkeyus ageidentifier**](/windows/desktop/api/Wincrypt/nf-wincrypt-certaddenhancedkeyusageidentifier) -Funktion.
--   Festlegen der Eigenschaft "Anzeige Name" für das Zertifikat mithilfe von " [**certsetcertifikatecontextproperty**](/windows/desktop/api/Wincrypt/nf-wincrypt-certsetcertificatecontextproperty)".
--   Abrufen der Eigenschaften eines Zertifikats mithilfe von " [**certgetcertifikatecontextproperty**](/windows/desktop/api/Wincrypt/nf-wincrypt-certgetcertificatecontextproperty)"
--   Schließen eines Zertifikat Speicher mithilfe von " [**certclosestore**](/windows/desktop/api/Wincrypt/nf-wincrypt-certclosestore) " mit dem "CERT \_ Close \_ Store \_ Check Flag"- \_ Flag.
+-   Öffnen eines Systemspeichers [**mithilfe von CertOpenSystemStore**](/windows/desktop/api/Wincrypt/nf-wincrypt-certopensystemstorea).
+-   Verwenden [**sie CertEnumCertificatesInStore,**](/windows/desktop/api/Wincrypt/nf-wincrypt-certenumcertificatesinstore) um alle Zertifikate im geöffneten Speicher aufzulisten.
+-   Abrufen und Drucken des Betreffnamens aus dem Zertifikat [**mithilfe von CertGetNameString**](/windows/desktop/api/Wincrypt/nf-wincrypt-certgetnamestringa).
+-   Festlegen der [*Eigenschaft für die erweiterte Schlüsselverwendung*](../secgloss/e-gly.md) für Zertifikate mithilfe der [**CertAddEnhancedKeyUsageIdentifier-Funktion.**](/windows/desktop/api/Wincrypt/nf-wincrypt-certaddenhancedkeyusageidentifier)
+-   Festlegen der Anzeigenameneigenschaft für das Zertifikat [**mithilfe von CertSetCertificateContextProperty**](/windows/desktop/api/Wincrypt/nf-wincrypt-certsetcertificatecontextproperty).
+-   Abrufen der Eigenschaften eines Zertifikats mithilfe von [**CertGetCertificateContextProperty**](/windows/desktop/api/Wincrypt/nf-wincrypt-certgetcertificatecontextproperty).
+-   Schließen eines Zertifikatspeichers [**mithilfe von CertCloseStore mit**](/windows/desktop/api/Wincrypt/nf-wincrypt-certclosestore) dem Flag CERT \_ CLOSE STORE CHECK \_ \_ \_ FLAG.
 
 
 ```C++

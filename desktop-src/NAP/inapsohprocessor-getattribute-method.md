@@ -1,11 +1,11 @@
 ---
-title: Inapsohprocessor GetAttribute-Methode (napprotocol. h)
-description: Ruft den Attributtyp und-Wert ab, wenn der Attribut Speicherort angegeben ist.
+title: INapSoHProcessor GetAttribute-Methode (NapProtocol.h)
+description: Ruft den Attributtyp und -wert ab, wenn die Attributposition angegeben ist.
 ms.assetid: 0d7bc655-428b-4a31-b03f-445e80a6d194
 keywords:
 - GetAttribute-Methode NAP
-- GetAttribute-Methode NAP, inapsohprocessor-Schnittstelle
-- Inapsohprocessor-Schnittstelle NAP, GetAttribute-Methode
+- GetAttribute-Methode NAP, INapSoHProcessor-Schnittstelle
+- INapSoHProcessor-Schnittstelle NAP, GetAttribute-Methode
 topic_type:
 - apiref
 api_name:
@@ -16,21 +16,21 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 9ed2d7d9cbafa5a44e0f6c24f4c42959c456722a
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 1ba1b86ca1eab51fdca382a758a9a65650af2249eb0d605c24274c84d1f95669
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "106340765"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118939567"
 ---
-# <a name="inapsohprocessorgetattribute-method"></a>Inapsohprocessor:: GetAttribute-Methode
+# <a name="inapsohprocessorgetattribute-method"></a>INapSoHProcessor::GetAttribute-Methode
 
 > [!Note]  
-> Die Netzwerk Zugriffsschutz-Plattform ist ab Windows 10 nicht verfügbar.
+> Die Netzwerkzugriffsschutz-Plattform ist ab Windows 10 nicht verfügbar.
 
  
 
-Die **inapsohprocessor:: GetAttribute** -Methode ruft den Attributtyp und-Wert ab, wenn der Speicherort des Attributs angegeben ist.
+Die **INapSoHProcessor::GetAttribute-Methode** ruft den Attributtyp und -wert ab, wenn der Attributspeicherort angegeben ist.
 
 ## <a name="syntax"></a>Syntax
 
@@ -49,38 +49,38 @@ HRESULT GetAttribute(
 
 <dl> <dt>
 
-*attributelokation* \[ in\]
+*attributeLocation* \[ In\]
 </dt> <dd>
 
-Der Speicherort (Index) des Attributs, dessen Typ und Wert abgerufen werden sollen. Der Wert von *attributelokation* wird von einem vorherigen [**inapsohprocessor:: findnextattribute**](inapsohprocessor-findnextattribute-method.md)-Rückruf zurückgegeben.
+Der Speicherort (Index) des Attributs, dessen Typ und Wert abgerufen werden sollen. Der Wert von *attributeLocation* wird von einem vorherigen Aufruf von [**INapSoHProcessor::FindNextAttribute**](inapsohprocessor-findnextattribute-method.md)zurückgegeben.
 
 </dd> <dt>
 
-*Typ* \[ vorgenommen\]
+*Type (Typ)* \[ out\]
 </dt> <dd>
 
-Ein Zeiger auf eine [**sohattributetype**](sohattributetype-enum.md) -Struktur, die den Typ des Attributs im *Wert* angibt.
+Ein Zeiger auf eine [**SoHAttributeType-Struktur,**](sohattributetype-enum.md) die den Typ des Attributs im *Wert* angibt.
 
 </dd> <dt>
 
-*Wert* \[ vorgenommen\]
+*wert* \[ out\]
 </dt> <dd>
 
-Ein Zeiger auf einen Zeiger auf eine [**sohattributevalue**](sohattributevalue-union.md) -Struktur, die den Wert des Attributs gemäß der Definition durch den *Typ* enthält.
+Ein Zeiger auf einen Zeiger auf eine [**SoHAttributeValue-Struktur,**](sohattributevalue-union.md) die den Durch *den Typ* definierten Wert des Attributs enthält.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Es können auch andere com-spezifische Fehlercodes zurückgegeben werden.
+Andere COM-spezifische Fehlercodes können ebenfalls zurückgegeben werden.
 
 
 
 | Rückgabecode                                                                                     | Beschreibung                                                        |
 |-------------------------------------------------------------------------------------------------|--------------------------------------------------------------------|
 | <dl> <dt>**S \_ OK**</dt> </dl>           | Vorgang erfolgreich.<br/>                                    |
-| <dl> <dt>**E \_ Access verweigert**</dt> </dl> | Berechtigungs Fehler, Zugriff verweigert.<br/>                       |
-| <dl> <dt>**E \_ Outo-Memory**</dt> </dl>  | System Ressourcen Limit, der Vorgang konnte nicht durchgeführt werden.<br/> |
+| <dl> <dt>**E \_ ACCESSDENIED**</dt> </dl> | Berechtigungsfehler, Zugriff verweigert.<br/>                       |
+| <dl> <dt>**E \_ OUTOFMEMORY**</dt> </dl>  | Systemressourcenlimit, konnte den Vorgang nicht ausführen.<br/> |
 
 
 
@@ -92,10 +92,10 @@ Es können auch andere com-spezifische Fehlercodes zurückgegeben werden.
 
 | Anforderung | Wert |
 |-------------------------------------|--------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                             |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/>                                       |
-| Header<br/>                   | <dl> <dt>Napprotocol. h</dt> </dl>   |
-| IDL<br/>                      | <dl> <dt>Napprotocol. idl</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur Vista-Desktop-Apps\]<br/>                                             |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/>                                       |
+| Header<br/>                   | <dl> <dt>NapProtocol.h</dt> </dl>   |
+| Idl<br/>                      | <dl> <dt>NapProtocol.idl</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Qutil.dll</dt> </dl>       |
 
 
@@ -104,7 +104,7 @@ Es können auch andere com-spezifische Fehlercodes zurückgegeben werden.
 
 <dl> <dt>
 
-[**Inapsohprocessor**](inapsohprocessor.md)
+[**INapSoHProcessor**](inapsohprocessor.md)
 </dt> </dl>
 
  

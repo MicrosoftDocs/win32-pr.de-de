@@ -84,7 +84,7 @@ Andere COM-spezifische Fehlercodes können ebenfalls zurückgegeben werden.
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 

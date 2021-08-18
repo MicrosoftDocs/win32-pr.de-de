@@ -1,6 +1,6 @@
 ---
 title: MDM_DeviceStatus_Battery01-Klasse
-description: Die MDM \_ DeviceStatus \_ Battery01-Klasse wird vom Unternehmen verwendet, um den Zustand der Akkukonformität von Geräten mit ihren Unternehmensrichtlinien abzufragen.
+description: Die MDM DeviceStatus Battery01-Klasse wird vom Unternehmen verwendet, um den Status der Akkukonformität von Geräten mit \_ \_ ihren Unternehmensrichtlinien abfragt.
 ms.assetid: f4e92e2a-e267-467a-9905-2539dcaf8d8c
 keywords:
 - MDM_DeviceStatus_Battery01-Klasse
@@ -28,7 +28,7 @@ ms.locfileid: "119216400"
 
 \[Einige Informationen beziehen sich auf Vorabversionen, die vor der kommerziellen Freigabe grundlegend geändert werden können. Microsoft übernimmt keine Garantie, weder ausdrücklich noch stillschweigend, für die hier bereitgestellten Informationen.\]
 
-Die **MDM \_ DeviceStatus \_ Battery01-Klasse** wird vom Unternehmen verwendet, um den Zustand der Akkukonformität von Geräten mit ihren Unternehmensrichtlinien abzufragen.
+Die **MDM \_ DeviceStatus \_ Battery01-Klasse** wird vom Unternehmen verwendet, um den Status der Akkukonformität von Geräten mit ihren Unternehmensrichtlinien abfragt.
 
 Die folgende Syntax enthält vereinfachten MOF-Code und schließt alle geerbten Eigenschaften ein.
 
@@ -48,7 +48,7 @@ class MDM_DeviceStatus_Battery01
 
 ## <a name="members"></a>Member
 
-Die **MDM \_ DeviceStatus \_ Battery01-Klasse** verfügt über folgende Typen von Membern:
+Die **MDM \_ DeviceStatus \_ Battery01-Klasse** verfügt über die folgenden Membertypen:
 
 -   [Eigenschaften](#properties)
 
@@ -83,13 +83,13 @@ Zugriffstyp: Lesen/Schreiben
 **InstanceID**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **string**
+Datentyp: **Zeichenfolge**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [ **key**](/windows/desktop/WmiSdk/key-qualifier)
+Qualifizierer: [ **Schlüssel**](/windows/desktop/WmiSdk/key-qualifier)
 </dt> </dl>
 
 Knoten für die Akkuabfrage.
@@ -99,16 +99,16 @@ Knoten für die Akkuabfrage.
 **Parentid**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **string**
+Datentyp: **Zeichenfolge**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [ **key**](/windows/desktop/WmiSdk/key-qualifier)
+Qualifizierer: [ **Schlüssel**](/windows/desktop/WmiSdk/key-qualifier)
 </dt> </dl>
 
-Beschreibt den vollständigen Pfad zum übergeordneten Knoten. Für diese Klasse lautet die Zeichenfolge "./Vendor/MSFT/DeviceStatus".
+Beschreibt den vollständigen Pfad zum übergeordneten Knoten. Für diese Klasse ist die Zeichenfolge "./Vendor/MSFT/DeviceStatus".
 
 </dd> <dt>
 

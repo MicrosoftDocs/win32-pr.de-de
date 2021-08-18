@@ -1,81 +1,81 @@
 ---
 title: Erneute ALE-Autorisierung
-description: Der Netzwerk Datenverkehr auf der Ebene (Application Layer Enforcement, ALE) der Windows-Filter Plattform (WFP) wird nach ALE Flows gefiltert.
+description: Der Netzwerkdatenverkehr auf den ALE-Ebenen (Application Layer Enforcement) der Windows Filtering Platform (WFP) wird nach ALE-Datenflüssen gefiltert.
 ms.assetid: 3cc7f78e-3f9d-4a91-8ea0-9b64c299068a
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: ed05c4c0767d449ec128250f852c365455bd0dc7
-ms.sourcegitcommit: ebd3ce6908ff865f1ef66f2fc96769be0aad82e1
+ms.openlocfilehash: 850cd7f789c1fb1222a0d6820e84a42cf41763dac4e57b96667e7feda364374c
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/19/2020
-ms.locfileid: "103727009"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119582690"
 ---
 # <a name="ale-reauthorization"></a>Erneute ALE-Autorisierung
 
-Der Netzwerk Datenverkehr auf der Ebene (Application Layer Enforcement, ALE) der Windows-Filter Plattform (WFP) wird nach [ALE Flows](ale-stateful-filtering.md)gefiltert. Sobald ein ALE Datenfluss zulässig ist, wird der gesamte Datenverkehr zugelassen, der Teil des ALE-Flows ist. Die erneute Autorisierung ist eine Anforderung zur Validierung der Berechtigungen des ALE-Datenflusses, in der Regel aufgrund einer Änderung der Netzwerk Richtlinie.
+Der Netzwerkdatenverkehr auf den ALE-Ebenen (Application Layer Enforcement) der Windows Filtering Platform (WFP) wird nach [ALE-Datenflüssen gefiltert.](ale-stateful-filtering.md) Sobald ein ALE-Flow zugelassen wurde, wird der sämtliche Datenverkehr zugelassen, der Teil des ALE-Flusses ist. Die erneute Authentifizierung ist eine Anforderung zum Überprüfen der Berechtigungen des ALE-Flusses, in der Regel aufgrund einer Änderung der Netzwerkrichtlinie.
 
-Bei Alen Flows wird eine Richtung, ein-und ausgehenden Datenverkehr basierend auf der Richtung des ersten Pakets zugewiesen, das die Erstellung und Autorisierung des Flows ausgelöst hat. Eingehende Datenflüsse werden auf der Ebene der Ebene der Ebene der Ebene der Ebene der Ebene der Ebene der Ebene der Ebene " [**\_ \_ \_ \_ \_ \_ v {4 \| 6}**](management-filtering-layer-identifiers-.md) " auf der Ebene der Ausgehende ALE-Datenflüsse werden auf der Ebene der Ebene der Ebene "f" der **Ebene "f \_ \_ \_ \_ \_ {4 \| 6}** " erstellt und autorisiert. Die Richtung des ALE-Flows schränkt die Richtung von Paketen, die zum Flow gehören, nicht ein. ALE Flows enthalten sowohl eingehende als auch ausgehende Pakete, unabhängig von der Richtung des ALE-Flows.
+ALE-Datenflüssen wird basierend auf der Richtung des ersten Pakets, das die Erstellung und Autorisierung des Flows ausgelöst hat, eine Eingehende oder ausgehende Richtung zugewiesen. Eingehende ALE-Flows werden auf der [**Ebene FWPM \_ LAYER \_ ALE \_ AUTH \_ RECV ACCEPT \_ \_ V{4 \| 6}**](management-filtering-layer-identifiers-.md) erstellt und autorisiert. Ausgehende ALE-Flows werden auf der **Ebene FWPM \_ LAYER \_ ALE \_ AUTH CONNECT \_ \_ V{4 \| 6}** erstellt und autorisiert. Die Richtung des ALE-Flusses schränkt die Richtung der Pakete, die zum Flow gehören, nicht ein. ALE-Flows enthalten sowohl ein- als auch ausgehende Pakete, unabhängig von der Richtung des ALE-Flows selbst.
 
-Die erneute Autorisierung eines ALE-Flows wird durch Folgendes ausgelöst:
+Die erneute Authentifizierung eines ALE-Flusses wird ausgelöst durch:
 
--   Eine Richtlinien Änderung auf der Ebene, an der der ALE Flow ursprünglich autorisiert oder erstellt wurde.
--   Eine Ankunfts Schnittstelle unterscheidet sich von der Schnittstelle, an der der ALE Flow ursprünglich autorisiert oder erstellt wurde.
+-   Eine Richtlinienänderung auf der Ebene, auf der der ALE-Flow ursprünglich autorisiert oder erstellt wurde.
+-   Eine Schnittstelle für die Ankunft, die sich von der Schnittstelle abt, in der der ALE-Flow ursprünglich autorisiert oder erstellt wurde.
 -   Eine ausstehende Verbindung.
 
-Die erneute Autorisierung unterscheidet sich von der anfänglichen Autorisierung durch das vorhanden sein des Flag " [**\_ \_ \_ \_ Reauthorization**](filtering-condition-flags-.md) " der Sdn-Bedingung.
+Die erneute Autorisierung unterscheidet sich von der anfänglichen Autorisierung durch das Vorhandensein des [**Flags FWP \_ CONDITION FLAG IS \_ \_ \_ REAUTHORIZE.**](filtering-condition-flags-.md)
 
-Eine erneute Autorisierung kann nur auf der Ebene der Authentifizierungs Stufen der Ebene der Authentifizierungs Stufe " [**\_ \_ \_ \_ \_ \_ v {4 \| 6}**](management-filtering-layer-identifiers-.md) " und der Ebene "f" der **Ebene " \_ \_ \_ \_ \_ v {4 \| 6}** " durchgeführt werden.
+Die erneute Authentifizierung kann nur auf den [**Ebenen FWPM \_ LAYER \_ ALE \_ AUTH \_ RECV ACCEPT \_ \_ V{4 \| 6}**](management-filtering-layer-identifiers-.md) und **FWPM \_ LAYER \_ ALE \_ AUTH CONNECT \_ \_ V{4 \| 6}** ausgeführt werden.
 
-### <a name="policy-change-reauthorization"></a>Neuautorisierung von Richtlinien ändern
+### <a name="policy-change-reauthorization"></a>Erneute Authentifizierung von Richtlinienänderung
 
-Eine Richtlinien Änderung wird als hinzufügen oder Entfernen von Filtern auf der Ebene "ALE" implementiert. Sobald eine Richtlinien Änderung erkannt wird, wird das erste Paket, das einen auf der betroffenen Ebene erstellten ALE-Datenfluss durchsucht, für die erneute Autorisierung der Ebene angegeben. Aus diesem Grund ist es für eine erneute Autorisierung durchaus möglich, dass ein Ausgeh Endes Paket auf der Ebene der Ebene [**\_ \_ \_ auth \_ recv \_ Accept \_ v {4 \| 6}**](management-filtering-layer-identifiers-.md) auf der Ebene der Ebene der vollständigen Ebene klassifiziert wird und dass ein eingehender Paket auf der Ebene der Ebene der Ebene der Ebene der Ebene der Ebene " **f \_ \_ \_ \_ \_ {4 \| 6}** " der Ebene
+Eine Richtlinienänderung wird als Hinzufügen oder Entfernen von Filtern auf einer ALE-Ebene implementiert. Sobald eine Richtlinienänderung erkannt wird, wird das erste Paket, das einen ALE-Fluss durchläuft, der auf der betroffenen Ebene erstellt wurde, für die erneute Authentifizierung in der Ebene angegeben. Daher ist es für die erneute Authentifizierung möglich, dass ein ausgehendes Paket auf der [**Ebene FWPM \_ LAYER \_ ALE \_ AUTH \_ RECV ACCEPT \_ \_ V{4 \| 6}**](management-filtering-layer-identifiers-.md) klassifiziert wird und dass ein eingehendes Paket auf der **Ebene FWPM \_ LAYER \_ ALE \_ AUTH CONNECT \_ \_ V{4 \| 6}** klassifiziert ist.
 
-Ein Grund für diese Klassifizierung mit gemischter Richtung ist, dass es möglicherweise keinen weiteren Netzwerk Datenverkehr aus der ursprünglichen Richtung gibt (z. b. eingehender Paket für eingehenden Datenfluss). Ein Beispiel hierfür ist ein unidirektionales UDP-Streaming nach einem anfänglichen bidirektionalen Hand Shake. In diesem Fall ist es wünschenswert, das Streaming so bald wie möglich zu beenden.
+Ein Grund für diese Klassifizierung in gemischter Richtung ist, dass möglicherweise kein weiterer Netzwerkdatenverkehr aus der ursprünglichen Richtung (z. B. eingehendes Paket für eingehenden ALE-Fluss) vorhanden ist. Ein Beispiel hierfür ist das one-way UDP streaming after an initial two-way handshake (UDP-Streaming in einer richtungsbasierten Richtung nach einem ersten zweigefässlichen Handshake). In diesem Fall ist es wünschenswerter, das Streaming so schnell wie möglich zu beenden.
 
-### <a name="arrival-interface-reauthorization"></a>Erneute Autorisierung der Ankunfts Schnittstelle
+### <a name="arrival-interface-reauthorization"></a>Arrival Interface Reauthorization
 
-Die erneute Autorisierung der Ankunfts Schnittstelle ist ab Windows Server 2008 und Windows Vista mit Service Pack 1 (SP1) verfügbar.
+Die erneute Authentifizierung der Arrival-Schnittstelle ist ab Windows Server 2008 und Windows Vista mit Service Pack 1 (SP1) verfügbar.
 
-Pakete, die dem gleichen ALE Datenfluss angehören, können von mehreren Schnittstellen eintreffen. Das erste Paket, das über eine Schnittstelle übertragen wird, die sich von der ursprünglichen Schnittstelle des ALE-Flows unterscheidet, wird erneut autorisiert
+Pakete, die zum gleichen ALE-Fluss gehören, können von mehreren Schnittstellen empfangen werden. Das erste Paket, das über eine andere Schnittstelle als die ursprüngliche Schnittstelle des ALE-Flusses einfing, wird erneut autorisiert.
 
-Bei einem starken Host Modell, bei dem es sich um das Standard Sicherheitsmodell für den TCP/IP-Stapel handelt, werden bei einer Verbindung an einer Netzwerkschnittstelle nur Pakete akzeptiert, die in derselben Schnittstelle enthalten sind. Daher wird die erneute Autorisierung der Ankunfts Schnittstelle auf einem starken Host Computer nicht verwendet.
+In einem starken Hostmodell, bei dem es sich um das Standardsicherheitsmodell für den TCP/IP-Stapel handelt, akzeptiert eine Verbindung auf einer Netzwerkschnittstelle nur Pakete, die auf derselben Schnittstelle einfingen. Daher wird die erneute Authentifizierung der Ankunftsschnittstelle nicht auf einem starken Hostcomputer verwendet.
 
-Bei einem schwachen Host Modell ermöglicht eine Verbindung mit einer Netzwerkschnittstelle das eingehen von Paketen an einer beliebigen anderen Netzwerkschnittstelle. Die erneute Autorisierung der Ankunfts Schnittstelle wird auf einem schwachen Host Computer verwendet, um Schnittstellen spezifische Richtlinien zu implementieren. Weitere Informationen finden Sie unter ["The Cable Guy: strong and Weak Host Models".](/previous-versions/technet-magazine/cc137807(v=msdn.10))
+In einem schwachen Hostmodell ermöglicht eine Verbindung auf einer Netzwerkschnittstelle, dass Pakete auf jeder anderen Netzwerkschnittstelle einfingen. Die Neuautorisierung der Ankunftsschnittstelle wird auf einem schwachen Hostcomputer verwendet, um schnittstellenspezifische Richtlinien zu implementieren. Weitere Informationen finden Sie unter ["The Cable Guy: Strong and Weak Host Models".](/previous-versions/technet-magazine/cc137807(v=msdn.10))
 
-Bei der erneuten Autorisierung sind möglicherweise einige [klassifizierbare Felder](filtering-conditions.md) unbekannt. Wenn z. b. ein ausgehendes Paket auf der fwpm-Schicht der Ebene-Authentifizierung für die [**\_ Ebene " \_ \_ \_ \_ Accept \_ v {4 \| 6}**](management-filtering-layer-identifiers-.md) " erneut autorisiert wird, sind alle Felder in Bezug auf die Ankunfts Schnittstelle unbekannt. In diesem Fall werden die Werte der unbekannten Felder als [**FWP \_ empty**](/windows/desktop/api/Fwptypes/ne-fwptypes-fwp_data_type)angegeben.
+Einige [überprüfbare Felder](filtering-conditions.md) sind während der erneuten Authentifizierung möglicherweise unbekannt. Wenn beispielsweise ein ausgehendes Paket auf der [**Ebene FWPM \_ LAYER \_ ALE \_ AUTH \_ RECV ACCEPT \_ \_ V{4 \| 6}**](management-filtering-layer-identifiers-.md) erneut autorisiert wird, sind alle Felder für die Eingangsschnittstelle unbekannt. In diesem Fall werden die Werte der unbekannten Felder als [**FWP \_ EMPTY angegeben.**](/windows/desktop/api/Fwptypes/ne-fwptypes-fwp_data_type)
 
-Felder vom Typ " [**f" \_ leer**](/windows/desktop/api/Fwptypes/ne-fwptypes-fwp_data_type) können mit der [**Übereinstimmung mit der \_ Übereinstimmung \_**](/windows/desktop/api/Fwptypes/ne-fwptypes-fwp_match_type)von "f. Aus diesem Grund kann eine Richtlinie festgelegt werden, um reautorisierungen zu blockieren und einen ALE-Datenfluss zu beenden, wenn Anforderungen zur erneuten Autorisierung für den ALE-Flow eintreffen.
+Felder vom Typ [**FWP \_ EMPTY**](/windows/desktop/api/Fwptypes/ne-fwptypes-fwp_data_type) können mit [**FWP \_ MATCH EQUAL \_ übereinstimmen.**](/windows/desktop/api/Fwptypes/ne-fwptypes-fwp_match_type) Daher kann eine Richtlinie so festgelegt werden, dass erneute Authentifizierungen blockiert und ein ALE-Flow beim Eintreffen von Anforderungen zur erneuten Authentifizierung für den ALE-Flow geschlossen wird.
 
-## <a name="pending-connection-reauthorization"></a>Erneute Autorisierung der Verbindung steht aus
+## <a name="pending-connection-reauthorization"></a>Ausstehende erneute Verbindungsautorisierung
 
-Ein Legenden-Treiber kann einen klassifizier Vorgang auf ALE Ebenen verschieben und ihn zu einem späteren Zeitpunkt vervollständigen, wenn die Filter Entscheidung sicher getroffen werden kann. Die Funktionen zum Verschieben/vervollständigen von ALE werden über die kernelmodusfunktionen [FwpsPendOperation0](/windows-hardware/drivers/ddi/fwpsk/nf-fwpsk-fwpspendoperation0) und [FwpsCompleteOperation0](/windows-hardware/drivers/ddi/fwpsk/nf-fwpsk-fwpscompleteoperation0)unterstützt.
+Ein Callouttreiber kann einen Klassifizierungsvorgang auf ALE-Ebenen verschieben und zu einem späteren Zeitpunkt abschließen, wenn die Filterungsentscheidung sicher getroffen werden kann. Die ALE-Funktion zum Verschieben/Abschließen wird über die Kernelmodusfunktionen [FwpsPendOperation0](/windows-hardware/drivers/ddi/fwpsk/nf-fwpsk-fwpspendoperation0) und [FwpsCompleteOperation0 unterstützt.](/windows-hardware/drivers/ddi/fwpsk/nf-fwpsk-fwpscompleteoperation0)
 
-Die erneute Autorisierung wird unmittelbar nach dem Aufruf von FwpsCompleteOperation0 ausgelöst und ermöglicht es dem Legenden Treiber, den Flow zuzulassen oder zu blockieren.
+Die erneute Authentifizierung wird unmittelbar nach dem FwpsCompleteOperation0-Aufruf ausgelöst, und der Callouttreiber kann den Flow zulassen oder blockieren.
 
-Nur eine anfängliche Autorisierung kann verschoben werden. Ein FwpsPendOperation0-Aufrufe schlägt fehl, wenn das FWP-Bedingungs Kennzeichen [**\_ \_ \_ \_ reautorisierungsflag ist**](filtering-condition-flags-.md) festgelegt ist.
+Nur eine anfängliche Autorisierung kann zurückgestellt werden. Ein Aufruf von FwpsPendOperation0 kann nicht durchgeführt werden, wenn [**das Flag FWP \_ CONDITION FLAG IS \_ \_ \_ REAUTHORIZE**](filtering-condition-flags-.md) festgelegt ist.
 
-Weitere Informationen finden Sie in der Dokumentation zum [Windows-Treiberkit](/windows-hardware/drivers/ddi/_netvista/) .
+Weitere Informationen finden Sie in der Dokumentation [Windows Driver Kit.](/windows-hardware/drivers/ddi/_netvista/)
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[Durchsetzung der Anwendungsschicht (ALE)](application-layer-enforcement--ale-.md)
+[Erzwingung der Anwendungsschicht (Application Layer Enforcement, ALE)](application-layer-enforcement--ale-.md)
 </dt> <dt>
 
-[ALE Ebenen](ale-layers.md)
+[ALE-Ebenen](ale-layers.md)
 </dt> <dt>
 
-[Status behaftete ALE Filterung](ale-stateful-filtering.md)
+[Zustands behaftete ALE-Filterung](ale-stateful-filtering.md)
 </dt> <dt>
 
-[ALE Multicast-/Broadcast Datenverkehr](ale-multicast-broadcast-traffic.md)
+[ALE-Multicast-/Broadcastdatenverkehr](ale-multicast-broadcast-traffic.md)
 </dt> <dt>
 
-[Anpassung des ALE-Flows](ale-flow-customization.md)
+[ALE Flow Anpassung](ale-flow-customization.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 

@@ -1,9 +1,9 @@
 ---
-title: nicht signiertes Attribut
-description: Das Ganzzahl ohne Vorzeichen-Schlüsselwort gibt an, dass das signifikanteste Bit einer ganzzahligen Variablen ein Daten Bit anstelle eines signierten Bits darstellt.
+title: Attribut ohne Vorzeichen
+description: Das Schlüsselwort unsigned gibt an, dass das wichtigste Bit einer ganzzahligen Variablen ein Datenbit anstelle eines Vorzeichenbits darstellt.
 ms.assetid: bfcc6bec-895e-45e1-b162-b79651662aa6
 keywords:
-- Ganzzahl ohne Vorzeichen-Attribut, Mittel l
+- MIDL-Attribut ohne Vorzeichen
 topic_type:
 - apiref
 api_name:
@@ -12,16 +12,16 @@ api_type:
 - NA
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 329d638f1b5be97e5b441aa4e84825fe59a4a3f0
-ms.sourcegitcommit: 57758ecb246c84d65e6e0e4bd5570d9176fa39cd
+ms.openlocfilehash: 383a8fc0379ca81abb9ad0a88edab8750661bdfa429e32e7e91d193aa0fd2938
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "106339248"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119146173"
 ---
-# <a name="unsigned-attribute"></a>nicht signiertes Attribut
+# <a name="unsigned-attribute"></a>Attribut ohne Vorzeichen
 
-Das **Ganzzahl ohne Vorzeichen** -Schlüsselwort gibt an, dass das signifikanteste Bit einer ganzzahligen Variablen ein Daten Bit anstelle eines signierten Bits darstellt.
+Das Schlüsselwort **unsigned** gibt an, dass das wichtigste Bit einer ganzzahligen Variablen ein Datenbit anstelle eines Vorzeichenbits darstellt.
 
 ``` syntax
 [[ unsigned ]] type-qualifier [[ int ]]identifier-name;
@@ -34,60 +34,60 @@ Das **Ganzzahl ohne Vorzeichen** -Schlüsselwort gibt an, dass das signifikantes
 *type-qualifier* 
 </dt> <dd>
 
-Kann " [**char**](char-idl.md)", " [**WCHAR \_ t**](wchar-t.md)", " [**Long**](long.md)", " [**int**](int.md)", " [**Short**](short.md)" und [**klein**](small.md)sein.
+Kann ein beliebiges vom [**Typ char**](char-idl.md), [**wchar \_ t**](wchar-t.md), [**long**](long.md), [**int**](int.md), [**short**](short.md)und [**small**](small.md)sein.
 
 </dd> <dt>
 
 *Bezeichnername* 
 </dt> <dd>
 
-Gibt einen gültigen Mittell-Bezeichner an. Gültige Mittell-Bezeichner bestehen aus bis zu 31 alphanumerischen Zeichen und/oder unterstrichen und müssen mit einem Buchstaben oder einem Unterstrich beginnen.
+Gibt einen gültigen MIDL-Bezeichner an. Gültige MIDL-Bezeichner bestehen aus bis zu 31 alphanumerischen Zeichen und/oder Unterstrichen und müssen mit einem Alphabet- oder Unterstrich beginnen.
 
 </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Dieses Schlüsselwort ist optional und kann mit jedem der Zeichen-und ganzzahligen Typen [**char**](char-idl.md), [**WCHAR \_ t**](wchar-t.md), [**Long**](long.md), [**Short**](short.md)und [**Small**](small.md)verwendet werden. Sie können optional das Schlüsselwort [**int**](int.md) nach den typqualifizierern **Long**, **Short** und **Small** einschließen.
+Dieses Schlüsselwort ist optional und kann mit jedem der Zeichen- und Ganzzahltypen [**char**](char-idl.md), [**wchar \_ t**](wchar-t.md), [**long**](long.md), [**short**](short.md)und [**small**](small.md)verwendet werden. Sie können optional das Schlüsselwort [**int**](int.md) nach den Typqualifizierern **long,** **short** und **small** einfügen.
 
-Wenn Sie den Compilerschalter [**/char**](-char.md)verwenden, können Zeichen-und ganzzahlige Typen, die in der IDL-Datei ohne explizite Vorzeichen vorkommen, mit dem Schlüsselwort [**Signed**](signed.md) oder **Ganzzahl ohne Vorzeichen** in der generierten Header Datei angezeigt werden. Um Verwirrung zu vermeiden, geben Sie das Vorzeichen der ganzzahligen und Zeichen Typen an.
+Wenn Sie den MIDL-Compilerschalter [**/char**](-char.md)verwenden, können Zeichen- und Ganzzahltypen, die in der IDL-Datei ohne explizite Vorzeichenschlüsselwörter angezeigt werden, mit dem Schlüsselwort [**signed**](signed.md) oder **unsigned** in der generierten Headerdatei angezeigt werden. Um Verwirrung zu vermeiden, geben Sie das Vorzeichen der Ganzzahl- und Zeichentypen an.
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[Mittel l-Basis Typen](midl-base-types.md)
+[MIDL-Basistypen](midl-base-types.md)
 </dt> <dt>
 
 [**Char**](char-idl.md)
 </dt> <dt>
 
-[**/Char**](-char.md)
+[**/char**](-char.md)
 </dt> <dt>
 
-[Schnittstellen Definitionsdatei (IDL)](interface-definition-idl-file.md)
+[IDL-Datei (Interface Definition)](interface-definition-idl-file.md)
 </dt> <dt>
 
 [**INT**](int.md)
 </dt> <dt>
 
-[**lange**](long.md)
+[**long**](long.md)
 </dt> <dt>
 
 [**short**](short.md)
 </dt> <dt>
 
-[**ebenes**](signed.md)
+[**Unterzeichnet**](signed.md)
 </dt> <dt>
 
-[**zuletzt**](small.md)
+[**klein**](small.md)
 </dt> <dt>
 
-[**WCHAR \_ t**](wchar-t.md)
+[**wchar \_ t**](wchar-t.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

@@ -1,20 +1,20 @@
 ---
-title: Testen, ob auf einem Domänen Controller ausgeführt wird
-description: Der folgende Code verwendet die verifyversioninfo-Funktion, um zu bestimmen, ob der Aufrufprozess auf einem Windows 2000-Server-Domänen Controller ausgeführt wird.
+title: Testen, ob auf einem Domänencontroller ausgeführt wird
+description: Im folgenden Code wird die VerifyVersionInfo-Funktion verwendet, um zu bestimmen, ob der aufrufende Prozess auf einem Windows 2000 Server-Domänencontroller ausgeführt wird.
 ms.assetid: 1cef6478-5503-467c-9b82-830d17018b19
 ms.tgt_platform: multiple
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: c8aeb73af18be9f0c787c2ee30b150689d760aec
-ms.sourcegitcommit: 803f3ccd65bdefe36bd851b9c6e7280be9489016
+ms.openlocfilehash: bb49577994716598bb730fcc7e86a9cce76a2835e8cfa1558b7d608b9cbc5ea2
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "104101411"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119024588"
 ---
-# <a name="testing-whether-running-on-a-domain-controller"></a>Testen, ob auf einem Domänen Controller ausgeführt wird
+# <a name="testing-whether-running-on-a-domain-controller"></a>Testen, ob auf einem Domänencontroller ausgeführt wird
 
-Der folgende Code verwendet die [**verifyversioninfo**](/windows/desktop/api/winbase/nf-winbase-verifyversioninfoa) -Funktion, um zu bestimmen, ob der Aufrufprozess auf einem Windows 2000-Server-Domänen Controller ausgeführt wird. Das Dienst Installationsprogramm kann diesen Test verwenden, bevor ein Dienst unter dem Konto "LocalSystem" installiert wird. Wenn der Test anzeigt, dass Sie auf einem Domänen Controller ausgeführt werden, installieren Sie entweder den Dienst, der unter einem Benutzerkonto ausgeführt wird, oder ein Dialogfeld, in dem die Gefahren bei der Ausführung von als LocalSystem auf einem Domänen Controller angezeigt werden (der Dienst würde dann uneingeschränkten Zugriff auf Active Directory Domain Services haben, einen überaus leistungsfähigen Sicherheitskontext, der das potenzielle Netzwerk beschädigen kann).
+Im folgenden Code wird die [**VerifyVersionInfo-Funktion**](/windows/desktop/api/winbase/nf-winbase-verifyversioninfoa) verwendet, um zu bestimmen, ob der aufrufende Prozess auf einem Windows 2000 Server-Domänencontroller ausgeführt wird. Ihr Dienstinstallationsprogramm könnte diesen Test vor der Installation eines Diensts unter dem LocalSystem-Konto verwenden. Wenn der Test angibt, dass Sie auf einem Domänencontroller ausgeführt werden, installieren Sie entweder den Dienst für die Ausführung unter einem Benutzerkonto oder zeigen eine Dialogfeldwarnung an, dass die Ausführung als LocalSystem auf einem Domänencontroller nicht möglich ist (d. h., der Dienst hätte dann uneingeschränkten Zugriff auf Active Directory Domain Services, einen äußerst leistungsstarken Sicherheitskontext, der das gesamte Netzwerk beschädigen kann).
 
 
 ```C++
@@ -45,6 +45,6 @@ BOOL Is_Win2000_DomainController ()
 
 
 
- 
+ 
 
- 
+ 

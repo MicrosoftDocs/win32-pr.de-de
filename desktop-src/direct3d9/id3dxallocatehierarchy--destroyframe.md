@@ -1,7 +1,7 @@
 ---
-description: Fordert die Aufhebung der Zuordnung eines Frame Objekts an.
+description: Fordert die Freigabe eines Frameobjekts an.
 ms.assetid: b2793744-1bba-4a2b-938c-44ed316358fd
-title: ID3DXAllocateHierarchy::D estroyframe-Methode (D3dx9anim. h)
+title: ID3DXAllocateHierarchy::D estframe-Methode (D3dx9anim.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -14,16 +14,16 @@ api_type:
 api_location:
 - d3dx9.lib
 - d3dx9.dll
-ms.openlocfilehash: 4a394501b9967d3f7cb6d3f6b2f30db168438278
-ms.sourcegitcommit: 14010c34b35fa268046c7683f021f86de08ddd0a
+ms.openlocfilehash: 3f9e827a2bc53c5b87478cceadec5f56e5d41c4ecfd76a0dddf1bac0ee964128
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "104394242"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118987970"
 ---
-# <a name="id3dxallocatehierarchydestroyframe-method"></a>ID3DXAllocateHierarchy::D estroyframe-Methode
+# <a name="id3dxallocatehierarchydestroyframe-method"></a>ID3DXAllocateHierarchy::D estframe-Methode
 
-Fordert die Aufhebung der Zuordnung eines Frame Objekts an.
+Fordert die Freigabe eines Frameobjekts an.
 
 ## <a name="syntax"></a>Syntax
 
@@ -40,12 +40,12 @@ HRESULT DestroyFrame(
 
 <dl> <dt>
 
-*pFrame$ Free* \[ in\]
+*pFrameToFree* \[ In\]
 </dt> <dd>
 
 Typ: **[ **LPD3DXFRAME**](d3dxframe.md)**
 
-Zeiger auf den Frame, dessen Zuordnung aufgehoben werden soll.
+Zeiger auf den Frame, für den die Lokalisierung wieder möglich ist.
 
 </dd> </dl>
 
@@ -53,7 +53,7 @@ Zeiger auf den Frame, dessen Zuordnung aufgehoben werden soll.
 
 Typ: **[ **HRESULT**](https://msdn.microsoft.com/library/Bb401631(v=MSDN.10).aspx)**
 
-Die Rückgabewerte dieser Methode werden von einem Anwendungsprogrammierer implementiert. Wenn kein Fehler auftritt, programmieren Sie im Allgemeinen die-Methode, um D3D OK zurückzugeben \_ . Andernfalls programmieren Sie die Methode, um eine entsprechende Fehlermeldung von D3DERR oder D3DXERR zurückzugeben, da dies dazu führt, dass [**D3DXLoadMeshHierarchyFromX**](d3dxloadmeshhierarchyfromx.md) ebenfalls fehlschlägt, und gibt den Fehler zurück.
+Die Rückgabewerte dieser Methode werden von einem Anwendungsprogrammierer implementiert. Wenn kein Fehler auftritt, programmieren Sie im Allgemeinen die -Methode so, dass D3D \_ OK zurückgegeben wird. Programmieren Sie andernfalls die -Methode so, dass eine entsprechende Fehlermeldung von D3DERR oder D3DXERR zurückgegeben wird, da dadurch auch [**D3DXLoadMeshHierarchyFromX**](d3dxloadmeshhierarchyfromx.md) fehlschlägt und der Fehler zurückgegeben wird.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -61,12 +61,12 @@ Die Rückgabewerte dieser Methode werden von einem Anwendungsprogrammierer imple
 
 | Anforderung | Wert |
 |--------------------|----------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>D3dx9anim. h</dt> </dl> |
-| Bibliothek<br/> | <dl> <dt>D3dx9. lib</dt> </dl>   |
+| Header<br/>  | <dl> <dt>D3dx9anim.h</dt> </dl> |
+| Bibliothek<br/> | <dl> <dt>D3dx9.lib</dt> </dl>   |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 

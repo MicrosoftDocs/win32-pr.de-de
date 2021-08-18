@@ -1,9 +1,9 @@
 ---
-title: CD3DX12_BLEND_DESC-Struktur (D3dx12. h)
-description: Eine hilfsstruktur, um die einfache Initialisierung einer D3D12 \_ Blend- \_ DESC-Struktur zu ermöglichen.
+title: CD3DX12_BLEND_DESC-Struktur (D3dx12.h)
+description: Eine Hilfsstruktur, um eine einfache Initialisierung einer D3D12 \_ BLEND \_ DESC-Struktur zu ermöglichen.
 ms.assetid: D37BB62E-904B-4953-9119-21F3B37570C0
 keywords:
-- CD3DX12_BLEND_DESC Struktur
+- CD3DX12_BLEND_DESC-Struktur
 topic_type:
 - apiref
 api_name:
@@ -15,16 +15,16 @@ api_type:
 ms.localizationpriority: low
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: ddb88ce003f74251c3ce34a2ca47ae2fb55f892d
-ms.sourcegitcommit: 14010c34b35fa268046c7683f021f86de08ddd0a
+ms.openlocfilehash: 40acdedbe428d808a576b68645a3e662dc71389b4d6dd0c19424278f28deb93a
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "106363961"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118989950"
 ---
-# <a name="cd3dx12_blend_desc-structure"></a>CD3DX12 \_ Blend- \_ Entsc-Struktur
+# <a name="cd3dx12_blend_desc-structure"></a>CD3DX12 \_ BLEND \_ DESC-Struktur
 
-Eine hilfsstruktur, um die einfache Initialisierung einer [**D3D12 \_ Blend- \_ DESC**](/windows/desktop/api/d3d12/ns-d3d12-d3d12_blend_desc) -Struktur zu ermöglichen.
+Eine Hilfsstruktur, um eine einfache Initialisierung einer [**D3D12 \_ BLEND \_ DESC-Struktur**](/windows/desktop/api/d3d12/ns-d3d12-d3d12_blend_desc) zu ermöglichen.
 
 ## <a name="syntax"></a>Syntax
 
@@ -45,41 +45,41 @@ struct CD3DX12_BLEND_DESC  : public D3D12_BLEND_DESC{
 
 <dl> <dt>
 
-**CD3DX12 \_ Blend-Debug \_ ()**
+**CD3DX12 \_ BLEND \_ DESC()**
 </dt> <dd>
 
-Erstellt eine neue, nicht initialisierte Instanz eines CD3DX12 Blend- \_ \_ Absc.
+Erstellt eine neue, nicht initialisierte Instanz eines CD3DX12 \_ BLEND \_ DESC.
 
 </dd> <dt>
 
-**explizites CD3DX12 \_ Blend- \_ decod (konstant D3D12 \_ Blend- \_& o)**
+**explicit CD3DX12 \_ BLEND \_ DESC(const D3D12 \_ BLEND \_ DESC& o)**
 </dt> <dd>
 
-Erstellt eine neue Instanz eines CD3DX12 \_ Blend- \_ Inhalts, das mit dem Inhalt einer anderen [**D3D12 \_ \_ Blend**](/windows/desktop/api/d3d12/ns-d3d12-d3d12_blend_desc) -Debug-Struktur initialisiert wird.
+Erstellt eine neue Instanz eines CD3DX12 \_ BLEND \_ DESC, initialisiert mit dem Inhalt einer anderen [**D3D12 \_ BLEND \_ DESC-Struktur.**](/windows/desktop/api/d3d12/ns-d3d12-d3d12_blend_desc)
 
 </dd> <dt>
 
-**explizites CD3DX12 Blend-Debug \_ \_ (CD3DX12- \_ Standard)**
+**Explicit CD3DX12 \_ BLEND \_ DESC (CD3DX12 \_ DEFAULT)**
 </dt> <dd>
 
-Erstellt eine neue Instanz eines CD3DX12 \_ Blend- \_ DESC, das mit Standardparametern initialisiert wird.
+Erstellt eine neue Instanz eines CD3DX12 \_ BLEND \_ DESC, initialisiert mit Standardparametern.
 
 
 
 | State                                   | Standardwert                    |
 |-----------------------------------------|----------------------------------|
-| Alpha atocoverageenable                   | **FALSE**                        |
-| Independentblendenable                  | **FALSE**                        |
-| RenderTarget \[ 0 \] . Blendbar           | **FALSE**                        |
-| RenderTarget \[ 0 \] . Logicopenable         | **FALSE**                        |
-| RenderTarget \[ 0 \] . Srcblend              | D3D12 \_ Blend \_ 1                |
-| RenderTarget \[ 0 \] . Destblend             | D3D12 \_ Blend \_ null               |
-| RenderTarget \[ 0 \] . Blendop               | D3D12 \_ Blend- \_ op- \_ Add            |
-| RenderTarget \[ 0 \] . Srcblendalpha         | D3D12 \_ Blend \_ 1                |
-| RenderTarget \[ 0 \] . Destblendalpha        | D3D12 \_ Blend \_ null               |
-| RenderTarget \[ 0 \] . Blendopalpha          | D3D12 \_ Blend- \_ op- \_ Add            |
-| RenderTarget \[ 0 \] . Logicop               | D3D12 \_ Logic \_ op \_ NoOp           |
-| RenderTarget \[ 0 \] . Rendertargetschreitemask | D3D12 \_ Color \_ Write \_ \_ all aktivieren |
+| AlphaToCoverageEnable                   | **FALSE**                        |
+| IndependentBlendEnable                  | **FALSE**                        |
+| RenderTarget \[ 0 \] . BlendEnable           | **FALSE**                        |
+| RenderTarget \[ 0 \] . LogicOpEnable         | **FALSE**                        |
+| RenderTarget \[ 0 \] . SrcBlend              | D3D12 \_ BLEND \_ ONE                |
+| RenderTarget \[ 0 \] . DestBlend             | D3D12 \_ BLEND \_ ZERO               |
+| RenderTarget \[ 0 \] . BlendOp               | D3D12 \_ BLEND \_ OP \_ ADD            |
+| RenderTarget \[ 0 \] . SrcBlendAlpha         | D3D12 \_ BLEND \_ ONE                |
+| RenderTarget \[ 0 \] . DestBlendAlpha        | D3D12 \_ BLEND \_ ZERO               |
+| RenderTarget \[ 0 \] . BlendOpAlpha          | D3D12 \_ BLEND \_ OP \_ ADD            |
+| RenderTarget \[ 0 \] . LogicOp               | D3D12 \_ LOGIC \_ OP \_ NOOP           |
+| RenderTarget \[ 0 \] . RenderTargetWriteMask | D3D12 \_ COLOR \_ WRITE \_ ENABLE \_ ALL |
 
 
 
@@ -87,17 +87,17 @@ Erstellt eine neue Instanz eines CD3DX12 \_ Blend- \_ DESC, das mit Standardpara
 
 </dd> <dt>
 
-**~ CD3DX12 \_ Blend-Debug \_ ()**
+**~CD3DX12 \_ BLEND \_ DESC()**
 </dt> <dd>
 
-Zerstört eine Instanz eines CD3DX12 \_ Blend- \_ Entsc.
+Zerstört eine Instanz eines CD3DX12 \_ BLEND \_ DESC.
 
 </dd> <dt>
 
-**Operator Konstanten D3D12 \_ Blend- \_& () Konstanten**
+**operator const D3D12 \_ BLEND \_ DESC&() const**
 </dt> <dd>
 
-Definiert den & Operator "Pass-by-Reference" für den übergeordneten Strukturtyp.
+Definiert den & Pass-by-Reference-Operator für den übergeordneten Strukturtyp.
 
 </dd> </dl>
 
@@ -107,7 +107,7 @@ Definiert den & Operator "Pass-by-Reference" für den übergeordneten Strukturty
 
 | Anforderung | Wert |
 |-------------------|-------------------------------------------------------------------------------------|
-| Header<br/> | <dl> <dt>D3dx12. h</dt> </dl> |
+| Header<br/> | <dl> <dt>D3dx12.h</dt> </dl> |
 
 
 
@@ -115,7 +115,7 @@ Definiert den & Operator "Pass-by-Reference" für den übergeordneten Strukturty
 
 <dl> <dt>
 
-[**D3D12 \_ Blend- \_ Entsc**](/windows/desktop/api/d3d12/ns-d3d12-d3d12_blend_desc)
+[**D3D12 \_ BLEND \_ DESC**](/windows/desktop/api/d3d12/ns-d3d12-d3d12_blend_desc)
 </dt> <dt>
 
 [Strukturen des Hilfsprogramms für D3D12](helper-structures-for-d3d12.md)

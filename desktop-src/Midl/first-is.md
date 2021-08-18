@@ -1,9 +1,9 @@
 ---
 title: first_is-Attribut
-description: Das Attribut \ First \_ is \ gibt den Index des ersten Array Elements an, das übertragen werden soll.
+description: Das Attribut \first \_ is\ gibt den Index des ersten zu übertragenden Arrayelements an.
 ms.assetid: 1de7821c-19e7-4b2c-98fc-2fae3563831c
 keywords:
-- First_is Attribut-Mittel l
+- first_is MIDL-Attribut
 topic_type:
 - apiref
 api_name:
@@ -12,16 +12,16 @@ api_type:
 - NA
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: e1d8d1be33299354e77ef92d885bb3b092cccfb6
-ms.sourcegitcommit: ebd3ce6908ff865f1ef66f2fc96769be0aad82e1
+ms.openlocfilehash: 5d08be3ce14074c126a35272ede1b670121634f75d0b3d6cfb0db34e4f305760
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/19/2020
-ms.locfileid: "103858253"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119067280"
 ---
-# <a name="first_is-attribute"></a>erstes \_ Attribut
+# <a name="first_is-attribute"></a>first \_ is attribute
 
-Das \[ **erste \_ is** - \] Attribut gibt den Index des ersten Array Elements an, das übertragen werden soll.
+Das \[ **erste \_ is-Attribut** \] gibt den Index des ersten zu übertragenden Arrayelements an.
 
 ``` syntax
 first_is(limited-expression-list)
@@ -31,38 +31,38 @@ first_is(limited-expression-list)
 
 <dl> <dt>
 
-*begrenzte Ausdrucks Liste* 
+*limited-expression-list* 
 </dt> <dd>
 
-Gibt einen oder mehrere C-sprach Ausdrücke an. Jeder Ausdruck ergibt eine ganze Zahl, die den Array Index des ersten zu übertragenden Array Elements darstellt. Der mittlerer l-Compiler unterstützt bedingte Ausdrücke, logische Ausdrücke, relationale Ausdrücke und arithmetische Ausdrücke. "Mittel l" lässt keine Funktionsaufrufe in Ausdrücken zu und lässt keine Inkrement-und Dekrementoperatoren zu. Trennen Sie mehrere Ausdrücke durch Kommas.
+Gibt einen oder mehrere C-Sprachausdrücke an. Jeder Ausdruck wird zu einer ganzen Zahl ausgewertet, die den Arrayindex des ersten zu übertragenden Arrayelements darstellt. Der MIDL-Compiler unterstützt bedingte Ausdrücke, logische Ausdrücke, relationale Ausdrücke und arithmetische Ausdrücke. MIDL lässt keine Funktionsaufrufe in Ausdrücken zu und lässt keine Inkrement- und Dekrementoperatoren zu. Trennen Sie mehrere Ausdrücke durch Kommas.
 
 </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Wenn das **\[ erste \_ Attribut \] ist** , das nicht vorhanden ist, oder wenn der angegebene Index eine negative Zahl ist, ist Array Element NULL das erste übertragene Element.
+Wenn das **\[ erste Attribut \_ nicht \]** vorhanden ist oder der angegebene Index eine negative Zahl ist, ist das Arrayelement 0 das erste übertragene Element.
 
-Das **\[ erste \_ ist \]** -Attribut kann auch helfen, die Werte der Array Indizes zu ermitteln, die dem **\[** [**letzten \_ is**](last-is.md) - **\]** oder length-Attribut entsprechen, **\[** [**\_**](length-is.md) **\]** Wenn diese Attribute nicht angegeben werden. Die Beziehung zwischen diesen Array Indizes lautet wie folgt:
+Das **\[ erste \_ \] is-Attribut** kann auch dabei helfen, die Werte der Arrayindizes zu bestimmen, die dem attribut last is oder length is entspricht, wenn diese Attribute nicht **\[** [**\_**](last-is.md) **\]** angegeben **\[** [**\_**](length-is.md) **\]** sind. Die Beziehung zwischen diesen Arrayindizes ist:
 
 ``` syntax
 length = last - first + 1
 ```
 
-Die folgende Beziehung muss ebenfalls enthalten:
+Die folgende Beziehung muss auch Folgendes besitzen:
 
 ``` syntax
 0 <= first_is <= max_is
 ```
 
-Die folgende Beziehung muss enthalten sein, wenn **\[** Max **\] <= 0** [**\_ ist**](max-is.md) :
+Die folgende Beziehung muss halten, **\[** [**wenn max \_ <**](max-is.md) **\] = 0 ist:**
 
 ``` syntax
 first_is == 0
 ```
 
-Das **\[ erste \_ is \]** -Attribut kann nicht gleichzeitig mit dem **\[** [**String**](string.md) -Attribut verwendet werden **\]** .
+Das **\[ erste \_ \] is-Attribut** kann nicht gleichzeitig mit dem Zeichenfolgenattribut **\[** [**verwendet**](string.md) **\]** werden.
 
-Die Verwendung eines konstanten Ausdrucks mit dem **\[ ersten \_ is \]** -Attribut ist eine ungeeignete Verwendung des-Attributs. Dies ist zulässig, aber ineffizient und führt zu einem langsameren Marshallingcode.
+Die Verwendung eines konstanten Ausdrucks **\[ mit dem ersten \_ is-Attribut \]** ist eine ungeeignete Verwendung des Attributs. Dies ist legal, aber ineffizient und führt zu einem langsameren Marshalling von Code.
 
 ## <a name="examples"></a>Beispiele
 
@@ -76,30 +76,30 @@ HRESULT Proc1(
 
 <dl> <dt>
 
-[Feld \_ Attribute](/windows/desktop/Rpc/field-attributes)
+[\_Feldattribute](/windows/desktop/Rpc/field-attributes)
 </dt> <dt>
 
-[Schnittstellen Definitionsdatei (IDL)](interface-definition-idl-file.md)
+[IDL-Datei (Interface Definition)](interface-definition-idl-file.md)
 </dt> <dt>
 
-[**Letzter \_ ist**](last-is.md)
+[**last \_ is**](last-is.md)
 </dt> <dt>
 
-[**Länge \_ ist**](length-is.md)
+[**length \_ ist**](length-is.md)
 </dt> <dt>
 
-[**Max \_ ist**](max-is.md)
+[**max \_ is**](max-is.md)
 </dt> <dt>
 
-[**Min \_ ist**](min-is.md)
+[**min \_ is**](min-is.md)
 </dt> <dt>
 
-[**Größe \_ :**](size-is.md)
+[**size \_ ist**](size-is.md)
 </dt> <dt>
 
-[**Zeichenfolge**](string.md)
+[**Schnur**](string.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 

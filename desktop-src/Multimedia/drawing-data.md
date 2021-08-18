@@ -3,25 +3,25 @@ title: Zeichnen von Daten
 description: Zeichnen von Daten
 ms.assetid: cc4f383d-54d4-4027-ad6a-da19bb07c17f
 keywords:
-- Videokomprimierungs-Manager (VCM), zeichnen
-- VCM (Videokomprimierungs-Manager), zeichnen
-- Icdraw-Funktion
-- Icdrawstart-Makro
-- Icdrawstopemakro
-- Icdrawflush-Makro
-- Icdrawend-Makro
+- Videokomprimierungs-Manager (VCM), Zeichnen
+- VCM (Videokomprimierungs-Manager),Zeichnen
+- ICDraw-Funktion
+- ICDrawStart-Makro
+- ICDrawStop-Makro
+- ICDrawFlush-Makro
+- ICDrawEnd-Makro
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 62f598ef47bbbf6b8f53c7fb2639c9ddff1390ab
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: 6dcbb9f0c9c39da17c4f60af3dfb9c3a7e0179ebf4c8ed6e5bcac4cdc6f24828
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "104036717"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119496710"
 ---
 # <a name="drawing-data"></a>Zeichnen von Daten
 
-Im folgenden Beispiel werden die [**icdraw**](/windows/desktop/api/Vfw/nf-vfw-icdraw) -Funktion und die Makros [**icdrawstart**](/windows/desktop/api/Vfw/nf-vfw-icdrawstart), [**icdrawoff**](/windows/desktop/api/Vfw/nf-vfw-icdrawstop), [**icdrawflush**](/windows/desktop/api/Vfw/nf-vfw-icdrawflush)und [**icdrawend**](/windows/desktop/api/Vfw/nf-vfw-icdrawend) verwendet, um Daten auf dem Bildschirm zu zeichnen.
+Im folgenden Beispiel werden die [**ICDraw-Funktion**](/windows/desktop/api/Vfw/nf-vfw-icdraw) und die [**IcDrawStart-,**](/windows/desktop/api/Vfw/nf-vfw-icdrawstart) [**ICDrawStop-,**](/windows/desktop/api/Vfw/nf-vfw-icdrawstop) [**ICDrawFlush-**](/windows/desktop/api/Vfw/nf-vfw-icdrawflush)und [**ICDrawEnd-Makros**](/windows/desktop/api/Vfw/nf-vfw-icdrawend) verwendet, um Daten auf dem Bildschirm zu zeichnen.
 
 
 ```C++
@@ -55,9 +55,9 @@ ICDrawEnd(hIC);    // ends decompression
 
 
 
- 
+ 
 
- 
+ 
 
 
 

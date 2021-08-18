@@ -1,5 +1,5 @@
 ---
-description: Berechnet das Produkt von zwei pherischen Funktionen (f und g). Beide Funktionen haben die Reihenfolge N = 3.
+description: Berechnet das Produkt von zwei sphärischen Funktionen (f und g). Beide Funktionen haben die Reihenfolge N = 3.
 ms.assetid: 2845f90f-c8a0-4ca9-b2f6-7491a2b4763b
 title: D3DXSHMultiply3-Funktion (D3DX10Math.h)
 ms.topic: reference
@@ -23,7 +23,7 @@ ms.locfileid: "118990810"
 ---
 # <a name="d3dxshmultiply3-function"></a>D3DXSHMultiply3-Funktion
 
-Berechnet das Produkt zweier pherischer Funktionen (*f* und *g*). Beide Funktionen haben die Reihenfolge N = 3.
+Berechnet das Produkt von zwei sphärischen Funktionen (*f* und *g*). Beide Funktionen haben die Reihenfolge N = 3.
 
 ## <a name="syntax"></a>Syntax
 
@@ -47,7 +47,7 @@ FLOAT* D3DXSHMultiply3(
 
 Typ: **[ **FLOAT**](../winprog/windows-data-types.md)\***
 
-Zeiger auf die SH-Ausgabekoeffizienten – die *Basisfunktion Y* lm wird bei l): + *m* + l gespeichert. Die Reihenfolge *N* bestimmt die Länge des Arrays, wobei immer *N 2 Koeffizienten* sein sollten.
+Zeiger auf die AUSGABE-SH-Koeffizienten: Die Basisfunktion *Y* lm wird bei l² + *m* + l gespeichert. Die Reihenfolge *N* bestimmt die Länge des Arrays, wobei immer *N ²-Koeffizienten* vorhanden sein sollten.
 
 </dd> <dt>
 
@@ -65,7 +65,7 @@ Eingabe-SH-Koeffizienten für die erste Funktion.
 
 Typ: **const [**FLOAT**](../winprog/windows-data-types.md) \***
 
-Zweiter Satz von EINGABE-SH-Koeffizienten.
+Zweiter Satz von SH-Eingabekoeffizienten.
 
 </dd> </dl>
 
@@ -77,7 +77,7 @@ Zeiger auf SH-Ausgabekoeffizienten.
 
 ## <a name="remarks"></a>Hinweise
 
-Das Produkt zweier SH-Funktionen der Reihenfolge N = 3 generiert eine SH-Funktion der Reihenfolge 2 × *N* - 1 = 5, aber die Ergebnisse werden abgeschnitten. Dies bedeutet, dass das Produkt *(f* × *g* g × f ) umständlich ist, aber nicht  =   ( *f* × (  *g* × *h* ) ≠ ( *f* × *g* ) × h ) zugeordnet *wird.*
+Das Produkt von zwei SH-Funktionen der Reihenfolge N = 3 generiert eine SH-Funktion der Reihenfolge 2 × *N* - 1 = 5, aber die Ergebnisse werden abgeschnitten. Dies bedeutet, dass das Produkt ( *f* × *g*  =  *g* × *f* ) kommutiert, aber nicht ( *f* × ( *g* × *h* ) ≠ ( *f* × *g* ) × *h* ) zugeordnet wird.
 
 Diese Funktion verwendet die folgende Gleichung:
 
@@ -88,7 +88,7 @@ pOut[i] = int(y_i(s) * f(s) * g(s))
 
 
 
-Wobei y \_ i(s) die ITH-SH-Basisfunktion ist und wobei f(s) und g(s) die folgende SH-Funktion verwenden:
+wobei y \_ i(s) die ith SH-Basisfunktion ist und wobei f(s) und g(s) die folgende SH-Funktion verwenden:
 
 
 ```
@@ -108,7 +108,7 @@ sum_i(y_i(s)*c_i)
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 

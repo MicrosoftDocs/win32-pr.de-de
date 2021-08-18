@@ -1,6 +1,6 @@
 ---
-title: D3DX11_SAVE_TEXTURE_FLAG -Enumeration (D3DX11tex.h)
-description: Hinweis Die Hilfsprogrammbibliothek D3DX (D3DX 9, D3DX 10 und D3DX 11) ist für Windows 8 veraltet und wird für Windows Store-Apps nicht unterstützt. Optionen zum Speichern von Texturen.
+title: D3DX11_SAVE_TEXTURE_FLAG-Enumeration (D3DX11tex.h)
+description: Hinweis Die Hilfsprogrammbibliothek D3DX (D3DX 9, D3DX 10 und D3DX 11) ist für Windows 8 veraltet und wird für Windows Store Apps nicht unterstützt. Optionen zum Speichern von Texturen.
 ms.assetid: 9fee11c3-628f-4535-8e93-510fc77e1a3e
 keywords:
 - D3DX11_SAVE_TEXTURE_FLAG-Enumeration Direct3D 11
@@ -24,7 +24,7 @@ ms.locfileid: "118989910"
 # <a name="d3dx11_save_texture_flag-enumeration"></a>D3DX11 \_ SAVE \_ TEXTURE \_ FLAG-Enumeration
 
 > [!Note]  
-> Die Hilfsprogrammbibliothek D3DX (D3DX 9, D3DX 10 und D3DX 11) ist für Windows 8 veraltet und wird für Windows Store-Apps nicht unterstützt.
+> Die Hilfsprogrammbibliothek D3DX (D3DX 9, D3DX 10 und D3DX 11) ist für Windows 8 veraltet und wird für Windows Store Apps nicht unterstützt.
 
  
 
@@ -62,7 +62,7 @@ Optimieren Sie nicht.
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 

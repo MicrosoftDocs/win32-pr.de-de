@@ -25,9 +25,9 @@ VT \_ I4
 
 ## <a name="remarks"></a>Hinweise
 
-Sie können diesen Wert vom Encoder abrufen, nachdem der Inhalt verarbeitet wurde. Dieser Wert kann auch für den Decoder für die Steuerung des dynamischen Bereichs festgelegt werden. Er hat jedoch nur dann Auswirkungen, wenn die [MFPKEY \_ W CSVC \_ DRCMODE-Eigenschaft](mfpkey-wmadec-drcmodeproperty.md) festgelegt ist.
+Sie können diesen Wert vom Encoder erhalten, nachdem der Inhalt verarbeitet wurde. Dieser Wert kann auch für den Decoder für die dynamische Bereichssteuerung festgelegt werden, hat jedoch nur dann Auswirkungen, wenn die [ \_ MFPKEY WFPC \_ DRCMODE-Eigenschaft](mfpkey-wmadec-drcmodeproperty.md) festgelegt ist.
 
-Weitere Informationen zum Dynamischen Bereichssteuerelement finden Sie im Webartikel [Windows Media Audio Professional Codec Features](/previous-versions/ms867218(v=msdn.10)).
+Weitere Informationen zur Dynamischen Bereichssteuerung finden Sie im Webartikel [Windows Media Audio Professional Codec Features](/previous-versions/ms867218(v=msdn.10)).
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -35,17 +35,17 @@ Weitere Informationen zum Dynamischen Bereichssteuerelement finden Sie im Webart
 
 | Anforderung | Wert |
 |-------------------------------------|-----------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur XP-Desktop-Apps\]<br/>                                             |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ XP-Desktop-Apps\]<br/>                                             |
 | Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                                    |
 | Header<br/>                   | <dl> <dt>Wmcodecdsp.h</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 
-[Media Foundation-Eigenschaften](media-foundation-properties.md)
+[Media Foundation Eigenschaften](media-foundation-properties.md)
 </dt> </dl>
 
  

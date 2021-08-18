@@ -1,23 +1,23 @@
 ---
-description: Die ichaincontext-Schnittstelle stellt die folgenden Methoden zur Verfügung.
+description: Die IChainContext-Schnittstelle macht die folgenden Methoden verfügbar.
 ms.assetid: C1E2DE25-7364-4258-9FFD-D45C8441144C
-title: Ichaincontext-Methoden
+title: IChainContext-Methoden
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: d26b454ee76ffeb18fea9c698e51b9635c260ea5
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: aaaa7aaf7ee3cf9008266061cf82ed7f3a0769a6405055255887d2d89e35dcef
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "104042602"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119005478"
 ---
-# <a name="ichaincontext-methods"></a>Ichaincontext-Methoden
+# <a name="ichaincontext-methods"></a>IChainContext-Methoden
 
-Die [**ichaincontext**](ichaincontext.md) -Schnittstelle stellt die folgenden Methoden zur Verfügung.
+Die [**IChainContext-Schnittstelle**](ichaincontext.md) macht die folgenden Methoden verfügbar.
 
 ## <a name="in-this-section"></a>In diesem Abschnitt
 
--   [**Freecontext-Methode**](ichaincontext-freecontext.md)
+-   [**FreeContext-Methode**](ichaincontext-freecontext.md)
 
  
 

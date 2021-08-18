@@ -13,12 +13,12 @@ api_type:
 - HeaderDef
 api_location:
 - D3DX10Math.h
-ms.openlocfilehash: 727744445e952fa0135feff944c768aaba1aba36
-ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
+ms.openlocfilehash: 69847ff648d11f13c87066f765fe92de7e92d831fd137a87bf1b61ebeafeed85
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2021
-ms.locfileid: "108103008"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118990570"
 ---
 # <a name="d3dxvec3unprojectarray-function-d3dx10mathh"></a>D3DXVec3UnprojectArray-Funktion (D3DX10Math.h)
 
@@ -88,7 +88,7 @@ Schreitet zwischen Vektoren im Eingabedatenstrom.
 
 Typ: **const [**D3D10 \_ VIEWPORT**](/windows/desktop/api/D3D10/ns-d3d10-d3d10_viewport) \***
 
-Zeiger auf einen [**D3D10 \_ VIEWPORT,**](/windows/desktop/api/D3D10/ns-d3d10-d3d10_viewport)der den Viewport darstellt.
+Zeiger auf einen [**D3D10 \_ VIEWPORT**](/windows/desktop/api/D3D10/ns-d3d10-d3d10_viewport), der den Viewport darstellt.
 
 </dd> <dt>
 
@@ -134,7 +134,7 @@ Typ: **[ **D3DXVECTOR3**](../direct3d9/d3dxvector3.md)\***
 
 Zeiger auf eine D3DXVECTOR3-Struktur, bei der es sich um das Array handelt, das vom Bildschirmbereich in den Objektbereich projiziert wird.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
 Der Rückgabewert für diese Funktion ist der gleiche Wert, der im pOut-Parameter zurückgegeben wird. Auf diese Weise kann die [**D3DXVec3Unproject-Funktion**](d3d10-d3dxvec3unproject.md) als Parameter für eine andere Funktion verwendet werden.
 
@@ -142,13 +142,13 @@ Der Rückgabewert für diese Funktion ist der gleiche Wert, der im pOut-Paramete
 
 
 
-| Anforderungen | Wert |
+| Anforderung | Wert |
 |-------------------|-----------------------------------------------------------------------------------------|
 | Header<br/> | <dl> <dt>D3DX10Math.h</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 

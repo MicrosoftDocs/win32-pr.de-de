@@ -1,7 +1,7 @@
 ---
-description: Mit der Put \_ WindowState-Methode wird der Fenster Zustand festgelegt.
+description: Die \_ put WindowState-Methode legt den Fensterzustand fest.
 ms.assetid: 0d22fa84-17bc-4228-b86e-d31857156802
-title: CBaseControlWindow.put_WindowState-Methode (ctlutil. h)
+title: CBaseControlWindow.put_WindowState-Methode (Ctlutil.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,16 +16,16 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: 1944e9bd39816cd1f022296b69fdac60d0779f1a
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 4769aff01c251017734fd7152fa703cd51064db11fb91851fd0b8fed76fc3d96
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106358141"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119635700"
 ---
-# <a name="cbasecontrolwindowput_windowstate-method"></a>Cbasecontrolwindow. Put \_ WindowState-Methode
+# <a name="cbasecontrolwindowput_windowstate-method"></a>CBaseControlWindow.put \_ WindowState-Methode
 
-Die- `put_WindowState` Methode legt den Fenster Zustand fest.
+Die `put_WindowState` -Methode legt den Fensterzustand fest.
 
 ## <a name="syntax"></a>Syntax
 
@@ -42,20 +42,20 @@ HRESULT put_WindowState(
 
 <dl> <dt>
 
-*WindowState* 
+*Windowstate* 
 </dt> <dd>
 
-Neuer Fenster Zustand.
+Neuer Fensterzustand.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt einen **HRESULT** -Wert zurück.
+Gibt einen **HRESULT-Wert** zurück.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Diese Member-Funktion nimmt dieselben Parameter wie die Microsoft Win32 **ShowWindow** -Funktion (z. b. WS \_ shownormal, WS \_ showminnoaktivierungs und WS \_ showmaximized).
+Diese Memberfunktion verwendet die gleichen Parameter wie die Microsoft Win32 **ShowWindow-Funktion** (z. B. WS \_ SHOWNORMAL, WS \_ SHOWMINNOACTIVATE und WS \_ SHOWMAXIMIZED).
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -63,16 +63,16 @@ Diese Member-Funktion nimmt dieselben Parameter wie die Microsoft Win32 **ShowWi
 
 | Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Ctlutil. h (Include Streams. h)</dt> </dl>                                                                                   |
-| Bibliothek<br/> | <dl> " <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Ctlutil.h (include Streams.h)</dt> </dl>                                                                                   |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Verkaufsbuilds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Cbasecontrolwindow-Klasse**](cbasecontrolwindow.md)
+[**CBaseControlWindow-Klasse**](cbasecontrolwindow.md)
 </dt> </dl>
 
  

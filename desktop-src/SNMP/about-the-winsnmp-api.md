@@ -13,18 +13,18 @@ ms.locfileid: "119009838"
 ---
 # <a name="about-the-winsnmp-api"></a>Informationen zur WinSNMP-API
 
-\[SNMP ist für die Verwendung in den Betriebssystemen verfügbar, die im Abschnitt Anforderungen angegeben sind. Es kann in nachfolgenden Versionen geändert oder entfernt werden. Verwenden Sie stattdessen [Windows Remoteverwaltung](/windows/desktop/WinRM/portal), bei dem es sich um die Microsoft-Implementierung von WS-Man handelt.\]
+\[SNMP ist für die Verwendung in den im Abschnitt Anforderungen angegebenen Betriebssystemen verfügbar. Es kann in nachfolgenden Versionen geändert oder entfernt werden. Verwenden Sie stattdessen [Windows Remoteverwaltung,](/windows/desktop/WinRM/portal)bei der es sich um die Microsoft-Implementierung von WS-Man handelt.\]
 
 Die WinSNMP-API ist eine Schnittstelle für die Entwicklung von SNMP-fähigen Netzwerkverwaltungsanwendungen.
 
 Die WinSNMP-API bietet die folgenden Features:
 
--   SNMP-aktivierende Technologie für Netzwerkverwaltungsanwendungen
--   Unterstützung für SNMP Version 1 (SNMPv1) und SNMP Version 2C (SNMPv2C)
+-   SNMP-aktivierungsbasierte Technologie für Netzwerkverwaltungsanwendungen
+-   Unterstützung von SNMP Version 1 (SNMPv1) und SNMP Version 2C (SNMPv2C)
 
-Neben SNMP-Manager-Vorgängen unterstützt die WinSNMP-API-Version 2.0 auch SNMP-Agent-Vorgänge.
+Neben SNMP-Managervorgängen unterstützt die WinSNMP-API-Version 2.0 auch SNMP-Agent-Vorgänge.
 
-Die WinSNMP-API unterstützt 32-Bit-Anwendungen und wird in Singlethread- und Multithreadumgebungen ausgeführt. Unterstützung für die WinSNMP-API ist für Anwendungen verfügbar, die in der Windows 2000-Betriebsumgebung oder höher ausgeführt werden.
+Die WinSNMP-API unterstützt 32-Bit-Anwendungen und wird in Singlethread- und Multithreadumgebungen ausgeführt. Unterstützung für die WinSNMP-API ist für Anwendungen verfügbar, die in der Windows 2000-Betriebssystemumgebung oder höher ausgeführt werden.
 
  
 

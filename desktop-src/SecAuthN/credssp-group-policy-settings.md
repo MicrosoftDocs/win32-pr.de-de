@@ -1,40 +1,40 @@
 ---
-description: Zum Delegieren von Anmelde Informationen für die Credential Security Support Provider Protocol (aufzurufende Anmelde Informationen) müssen Sie angeben, an welche Server delegiert werden kann.
+description: Damit das Credential Security Support Provider-Protokoll (CredSSP) Anmeldeinformationen delegieren kann, müssen Sie angeben, an welche Server delegiert werden kann.
 ms.assetid: 15ed9a62-2eee-4f29-92c5-ccf2754cdf13
-title: Einstellungen für den Gruppenrichtlinie ""
+title: CredSSP-Gruppenrichtlinie Einstellungen
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 4a159b7a162df3eda692462a3d3972159e61797e
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: a8efaaab1b49efba89c9fa5788f60df372991f388c474d531eff8f59205af441
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106362302"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119008698"
 ---
-# <a name="credssp-group-policy-settings"></a>Einstellungen für den Gruppenrichtlinie ""
+# <a name="credssp-group-policy-settings"></a>CredSSP-Gruppenrichtlinie Einstellungen
 
-Zum Delegieren von Anmelde Informationen für die [Credential Security Support Provider Protocol (](credential-security-support-provider.md) aufzurufende Anmelde Informationen) müssen Sie angeben, an welche Server delegiert werden kann. Um diese Server anzugeben, ändern Sie die Einstellungen im MMC-Snap-in (Microsoft Management Console) des Gruppenrichtlinie-Editors (gpe). Die gpe-Einstellungen, die die Delegierung steuern, sind unter **Computer Konfiguration \| Administrative Vorlagen \| \| Delegierung von System Anmelde** Informationen
+Damit [das Credential Security Support Provider-Protokoll (CredSSP)](credential-security-support-provider.md) Anmeldeinformationen delegieren kann, müssen Sie angeben, an welche Server delegiert werden kann. Um diese Server anzugeben, ändern Sie die Einstellungen im MMC-Snap-In (Gruppenrichtlinie Editor) Microsoft Management Console (GPE). Die GPE-Einstellungen, die die Delegierung steuern, befinden sich unter **Computerkonfiguration \| Administrative Vorlagen \| \| Delegierung von Systemanmeldeinformationen.**
 
 > [!Caution]  
-> Dies ist keine eingeschränkte Delegierung. "Kredssp" übergibt die vollständigen Anmelde Informationen des Benutzers ohne Einschränkung an den Server.
+> Dies ist keine eingeschränkte Delegierung. CredSSP übergibt die vollständigen Anmeldeinformationen des Benutzers ohne Einschränkung an den Server.
 
  
 
-Die Delegierung der folgenden Anmelde Informationstypen wird von Gruppenrichtlinien Einstellungen gesteuert.
+Gruppenrichtlinieneinstellungen steuern die Delegierung der folgenden Arten von Anmeldeinformationen.
 
 
 
-| Typ der Anmelde Informationen                                                                                                                                 | BESCHREIBUNG                                                                                   |
+| Anmeldeinformationstyp                                                                                                                                 | BESCHREIBUNG                                                                                   |
 |--------------------------------------------------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------|
-| <span id="Default_credentials"></span><span id="default_credentials"></span><span id="DEFAULT_CREDENTIALS"></span>Standard Anmelde Informationen<br/> | Die Anmelde Informationen, die bei der ersten Anmeldung des Benutzers bei Windows abgerufen werden.<br/>                   |
-| <span id="Fresh_credentials"></span><span id="fresh_credentials"></span><span id="FRESH_CREDENTIALS"></span>Neue Anmelde Informationen<br/>         | Die Anmelde Informationen, nach denen der Benutzer beim Ausführen einer Anwendung gefragt wird.<br/>       |
-| <span id="Saved_credentials"></span><span id="saved_credentials"></span><span id="SAVED_CREDENTIALS"></span>Gespeicherte Anmelde Informationen<br/>         | Die Anmelde Informationen, die mit [Credential Manager](credential-manager.md)gespeichert werden.<br/> |
+| <span id="Default_credentials"></span><span id="default_credentials"></span><span id="DEFAULT_CREDENTIALS"></span>Standardanmeldeinformationen<br/> | Die Anmeldeinformationen, die beim ersten Anmelden des Benutzers bei Windows abgerufen wurden.<br/>                   |
+| <span id="Fresh_credentials"></span><span id="fresh_credentials"></span><span id="FRESH_CREDENTIALS"></span>Neue Anmeldeinformationen<br/>         | Die Anmeldeinformationen, zu denen der Benutzer beim Ausführen einer Anwendung aufgefordert wird.<br/>       |
+| <span id="Saved_credentials"></span><span id="saved_credentials"></span><span id="SAVED_CREDENTIALS"></span>Gespeicherte Anmeldeinformationen<br/>         | Die Anmeldeinformationen, die mit [Anmeldeinformationsverwaltung](credential-manager.md)gespeichert werden.<br/> |
 
 
 
  
 
-Fügen Sie den [*Dienst Prinzipal Namen*](/windows/desktop/SecGloss/s-gly) (SPN) dieses Servers der Liste der Server für diese Gruppenrichtlinien Einstellung hinzu, um einen Server in die Kategorie aufzunehmen, die einer bestimmten Gruppenrichtlinien Einstellung zugeordnet ist. Der SPN kann ein einzelnes Platzhalter Zeichen enthalten.
+Um einen Server in die Kategorie aufzunehmen, die einer bestimmten Gruppenrichtlinieneinstellung zugeordnet ist, fügen Sie den [*Dienstprinzipalnamen (Service Principal Name,*](/windows/desktop/SecGloss/s-gly) SPN) dieses Servers der Liste der Server für diese Gruppenrichtlinieneinstellung hinzu. Der SPN kann ein einzelnes Platzhalterzeichen enthalten.
 
  
 

@@ -86,7 +86,7 @@ Wenn die Methode erfolgreich ist, ist der Rückgabewert D3D \_ OK. Wenn bei der 
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 

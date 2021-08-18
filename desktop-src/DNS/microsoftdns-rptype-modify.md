@@ -1,11 +1,11 @@
 ---
 title: Modify-Methode der MicrosoftDNS_RPType-Klasse
-description: Die Modify-Methode aktualisiert einen Ressourcen Daten Satz für Verantwortliche Personen (RP).
+description: Mit der Modify-Methode wird ein Ressourcendatensatz für eine verantwortliche Person (Responsible Person, RP) aktualisiert.
 ms.assetid: a779b905-922c-42ff-b3d9-318b3a848230
 keywords:
-- DNS-Methode ändern
-- Modify-Methode (DNS), MicrosoftDNS_RPType-Klasse
-- DNS-MicrosoftDNS_RPType Klasse, Methode ändern
+- Ändern der DNS-Methode
+- Modify method DNS , MicrosoftDNS_RPType class
+- MicrosoftDNS_RPType-Klasse DNS, Modify-Methode
 topic_type:
 - apiref
 api_name:
@@ -16,16 +16,16 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 10ec575424e6e26c79f8d6a27e62732cad6ddc57
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 5d237879b883e21c3c6289542e4eae7b9703be64931af788f042b6cdbec2ca49
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "103858991"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119587490"
 ---
-# <a name="modify-method-of-the-microsoftdns_rptype-class"></a>Modify-Methode der MicrosoftDNS- \_ rptype-Klasse
+# <a name="modify-method-of-the-microsoftdns_rptype-class"></a>Modify-Methode der MicrosoftDNS \_ RPType-Klasse
 
-Die **Modify** -Methode aktualisiert einen Ressourcen Daten Satz für Verantwortliche Personen (RP).
+Mit der **Modify-Methode** wird ein Ressourcendatensatz für eine verantwortliche Person (Responsible Person, RP) aktualisiert.
 
 ## <a name="syntax"></a>Syntax
 
@@ -45,28 +45,28 @@ void Modify(
 
 <dl> <dt>
 
-Gültigkeitsdauer  \[ in, optional\]
+*Gültigkeitsdauer* \[ in, optional\]
 </dt> <dd>
 
-Zeit (in Sekunden), die der RR von einem DNS-Resolver zwischengespeichert werden kann.
+Zeit in Sekunden, in der die RR von einem DNS-Resolver zwischengespeichert werden kann.
 
 </dd> <dt>
 
-*Rpmailbox* \[ in, optional\]
+*RPMailbox* \[ in, optional\]
 </dt> <dd>
 
-Vollständiger vollständiger vollständiger Name des Postfachs.
+FQDN, der das Postfach für die verantwortliche Person angibt.
 
 </dd> <dt>
 
-*TxtDomainName* \[ in, optional\]
+*TXTDomainName* \[ in, optional\]
 </dt> <dd>
 
-Der voll qualifizierte Daten Satz, für den txt-Ressourcen Einträge vorhanden sind.
+FQDN, für den TXT-Ressourceneinträge vorhanden sind.
 
 </dd> <dt>
 
-*RR* \[ Out, Ref\]
+*RR* \[ out, ref\]
 </dt> <dd>
 
 Verweis auf das geänderte Objekt.
@@ -77,9 +77,9 @@ Verweis auf das geänderte Objekt.
 
 Diese Methode gibt keinen Wert zurück.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Alle Parameter, die nicht angegeben sind, bleiben im geänderten Datensatz unverändert.
+Alle nicht angegebenen Parameter bleiben im geänderten Datensatz unverändert.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -89,22 +89,22 @@ Alle Parameter, die nicht angegeben sind, bleiben im geänderten Datensatz unver
 |-------------------------------------|----------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Nicht unterstützt<br/>                                                              |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                                   |
-| Namespace<br/>                | \\MicrosoftDNS-Stamm<br/>                                                          |
-| MOF<br/>                      | <dl> <dt>Dnsprov. MOF</dt> </dl> |
+| Namespace<br/>                | \\Stamm-MicrosoftDNS<br/>                                                          |
+| MOF<br/>                      | <dl> <dt>Dnsprov.mof</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**MicrosoftDNS- \_ rptype**](microsoftdns-rptype.md)
+[**MicrosoftDNS \_ RPType**](microsoftdns-rptype.md)
 </dt> <dt>
 
-[**Methode "kreateinstancefrompropertydata" der MicrosoftDNS- \_ rptype-Klasse**](microsoftdns-rptype-createinstancefrompropertydata.md)
+[**CreateInstanceFromPropertyData-Methode der MicrosoftDNS \_ RPType-Klasse**](microsoftdns-rptype-createinstancefrompropertydata.md)
 </dt> <dt>
 
-[**MicrosoftDNS \_ resourcerecord**](microsoftdns-resourcerecord.md)
+[**\_MicrosoftDNS-RessourceRecord**](microsoftdns-resourcerecord.md)
 </dt> </dl>
 
  

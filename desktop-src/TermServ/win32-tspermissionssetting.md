@@ -1,11 +1,11 @@
 ---
 title: Win32_TSPermissionsSetting-Klasse
-description: Enthält eine Methode zum Hinzufügen neuer Konten zum Terminal und eine Methode zum Wiederherstellen der Standard Berechtigungen für ein Terminal.
+description: Enthält eine Methode zum Hinzufügen neuer Konten zum Terminal und eine Methode zum Wiederherstellen der Standardberechtigungen für ein Terminal.
 ms.assetid: ebc6e96a-668e-44aa-b589-c3e476fb3029
 ms.tgt_platform: multiple
 keywords:
-- Win32_TSPermissionsSetting-Klasse Remotedesktopdienste
-- Win32_TSPermissionsSetting Klasse Remotedesktopdienste, beschrieben
+- Win32_TSPermissionsSetting-Remotedesktopdienste
+- Win32_TSPermissionsSetting klasse Remotedesktopdienste , beschrieben
 topic_type:
 - apiref
 api_name:
@@ -25,18 +25,18 @@ api_type:
 - DllExport
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 877b8373667bf01010ceb63c0ec35e46db48f702
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 62a853a2630224b108b9003764dd9529f99234774297fb39b3bfe6342c6ecfb4
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "106343473"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119137673"
 ---
-# <a name="win32_tspermissionssetting-class"></a>Win32 \_ tspermissionssetting-Klasse
+# <a name="win32_tspermissionssetting-class"></a>Win32 \_ TSPermissionsSetting-Klasse
 
-Die **Win32 \_ tspermissionssetting** -WMI-Klasse enthält eine Methode zum Hinzufügen neuer Konten zum Terminal und eine Methode zum Wiederherstellen der Standard Berechtigungen für ein Terminal.
+Die WMI-Klasse **Win32 \_ TSPermissionsSetting** enthält eine Methode zum Hinzufügen neuer Konten zum Terminal und eine Methode zum Wiederherstellen der Standardberechtigungen für ein Terminal.
 
-Die folgende Syntax wird aus dem MOF-Code vereinfacht und umfasst alle definierten und geerbten Eigenschaften in alphabetischer Reihenfolge. Referenzinformationen zu-Methoden finden Sie in der Tabelle mit den Methoden weiter unten in diesem Thema.
+Die folgende Syntax wird von MOF-Code vereinfacht und enthält alle definierten und geerbten Eigenschaften in alphabetischer Reihenfolge. Referenzinformationen zu Methoden finden Sie in der Tabelle der Methoden weiter unten in diesem Thema.
 
 ## <a name="syntax"></a>Syntax
 
@@ -58,21 +58,21 @@ class Win32_TSPermissionsSetting : Win32_TerminalSetting
 
 ## <a name="members"></a>Member
 
-Die **Win32 \_ tspermissionssetting** -Klasse verfügt über diese Typen von Membern:
+Die **Win32 \_ TSPermissionsSetting-Klasse** verfügt über die folgenden Membertypen:
 
 -   [Methoden](#methods)
 -   [Eigenschaften](#properties)
 
 ### <a name="methods"></a>Methoden
 
-Die **Win32 \_ tspermissionssetting** -Klasse verfügt über diese Methoden.
+Die **Win32 \_ TSPermissionsSetting-Klasse** verfügt über diese Methoden.
 
 
 
-| Methode                                                                | BESCHREIBUNG                                                                                                                    |
+| Methode                                                                | Beschreibung                                                                                                                    |
 |:----------------------------------------------------------------------|:-------------------------------------------------------------------------------------------------------------------------------|
-| [**Addaccount**](win32-tspermissionssetting-addaccount.md)           | Fügt dem Terminal ein Konto mit dem Berechtigungs Satz hinzu, der im Wert des *permissionvoreinstellung* -Parameters angegeben ist.<br/> |
-| [**Restoredefaults**](win32-tspermissionssetting-restoredefaults.md) | Stellt die standardmäßigen Berechtigungs Satz Werte für das Terminal wieder her.<br/>                                                        |
+| [**AddAccount**](win32-tspermissionssetting-addaccount.md)           | Fügt dem Terminal ein Konto mit dem Berechtigungssatz hinzu, der im Wert des *PermissionPreSet-Parameters angegeben* ist.<br/> |
+| [**RestoreDefaults**](win32-tspermissionssetting-restoredefaults.md) | Stellt die Standardwerte für den Berechtigungssatz für das Terminal wieder auf.<br/>                                                        |
 
 
 
@@ -80,45 +80,45 @@ Die **Win32 \_ tspermissionssetting** -Klasse verfügt über diese Methoden.
 
 ### <a name="properties"></a>Eigenschaften
 
-Die **Win32 \_ tspermissionssetting** -Klasse verfügt über diese Eigenschaften.
+Die **Win32 \_ TSPermissionsSetting-Klasse** verfügt über diese Eigenschaften.
 
 <dl> <dt>
 
 **Caption**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**maxlen**](/windows/desktop/WmiSdk/standard-qualifiers) (64)
+Qualifizierer: [**MaxLen**](/windows/desktop/WmiSdk/standard-qualifiers) (64)
 </dt> </dl>
 
-Kurze Beschreibung (einzeilige Zeichenfolge) des-Objekts.
+Kurze Beschreibung (einzeilenbasierte Zeichenfolge) des Objekts.
 
-Diese Eigenschaft wird von [**CIM \_ ManagedSystemElement**](cim-managedsystemelement.md)geerbt.
+Diese Eigenschaft wird von [**CIM \_ ManagedSystemElement geerbt.**](cim-managedsystemelement.md)
 
 </dd> <dt>
 
-**Denyadminpermissionforanpassung**
+**DenyAdminPermissionForCustomization**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt32**
+Datentyp: **uint32**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Gibt an, ob der lokale Administrator die Berechtigung zum Anpassen hat.
+Gibt an, ob der lokale Administrator über die Berechtigung zum Anpassen verfügt.
 
 </dd> <dt>
 
 **Beschreibung**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
@@ -126,32 +126,32 @@ Zugriffstyp: Schreibgeschützt
 
 Eine Beschreibung des Objekts.
 
-Diese Eigenschaft wird von [**CIM \_ ManagedSystemElement**](cim-managedsystemelement.md)geerbt.
+Diese Eigenschaft wird von [**CIM \_ ManagedSystemElement geerbt.**](cim-managedsystemelement.md)
 
 </dd> <dt>
 
 **InstallDate**
 </dt> <dd> <dl> <dt>
 
-**Datentyp: DateTime**
+Datentyp: **datetime**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**mappingstrings**](/windows/desktop/WmiSdk/standard-qualifiers) ("MIF". DMTF \| ComponentID \| 001,5 ")
+Qualifizierer: [**Mappingstrings**](/windows/desktop/WmiSdk/standard-qualifiers) ("MIF. DMTF \| ComponentID \| 001.5")
 </dt> </dl>
 
-Das Datum, an dem das Objekt installiert wurde. Ein fehlender Wert weist nicht darauf hin, dass das Objekt nicht installiert ist.
+Das Datum, an dem das Objekt installiert wurde. Ein fehlender Wert gibt nicht an, dass das Objekt nicht installiert ist.
 
-Diese Eigenschaft wird von [**CIM \_ ManagedSystemElement**](cim-managedsystemelement.md)geerbt.
+Diese Eigenschaft wird von [**CIM \_ ManagedSystemElement geerbt.**](cim-managedsystemelement.md)
 
 </dd> <dt>
 
 **Name**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
@@ -159,20 +159,20 @@ Zugriffstyp: Schreibgeschützt
 
 Der Name des Objekts.
 
-Diese Eigenschaft wird von [**CIM \_ ManagedSystemElement**](cim-managedsystemelement.md)geerbt.
+Diese Eigenschaft wird von [**CIM \_ ManagedSystemElement geerbt.**](cim-managedsystemelement.md)
 
 </dd> <dt>
 
-**Policysourcedenyadminpermissionforanpassung**
+**PolicySourceDenyAdminPermissionForCustomization**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt32**
+Datentyp: **uint32**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Gibt an, ob die **minverschlüsseltionlevel** -Eigenschaft vom Server, von der Gruppenrichtlinie oder standardmäßig konfiguriert wird.
+Gibt an, **ob die MinEncryptionLevel-Eigenschaft** vom Server, der Gruppenrichtlinie oder standardmäßig konfiguriert wird.
 
 <dt>
 
@@ -195,18 +195,18 @@ Gruppenrichtlinie
 **Status**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**maxlen**](/windows/desktop/WmiSdk/standard-qualifiers) (10)
+Qualifizierer: [**MaxLen**](/windows/desktop/WmiSdk/standard-qualifiers) (10)
 </dt> </dl>
 
-Aktueller Status des Objekts. Es können verschiedene Betriebs-und nicht betriebliche Statuswerte definiert werden. Betriebsstatus umfassen: "OK", "heruntergestuft" und "pred Fail" (ein Element, z. b. ein Smart-aktiviertes Festplattenlaufwerk, funktioniert möglicherweise ordnungsgemäß, aber in naher Zukunft einen Fehler vorherzusagen). Nicht betriebsbereite Status umfassen: "Error", "Starting", "Stop" und "Service". Der letztgenannte "Dienst" kann während der Spiegelung eines Datenträgers, dem erneuten Laden einer Benutzer Berechtigungs Liste oder anderer administrativer Aufgaben angewendet werden. Nicht alle diese Arbeiten sind online, aber das verwaltete Element ist weder "OK" noch in einem der anderen Zustände.
+Aktueller Status des Objekts. Es können verschiedene betriebsbereite und nicht betriebsbereite Status definiert werden. Folgende Betriebsstatus sind möglich: "OK", "Heruntergestuft" und "Fehler vor dem Ausfall" (ein Element, z. B. eine SMART-fähige Festplatte, funktioniert möglicherweise ordnungsgemäß, aber es wird in naher Zukunft ein Fehler vorhergesagt). Nicht operative Status sind: "Error", "Starting", "Stopping" und "Service". Letzteres, "Dienst", kann während der Spiegelung eines Datenträgers, beim erneuten Laden einer Benutzerberechtigungsliste oder bei anderen administrativen Aufgaben angewendet werden. Nicht alle diese Arbeiten sind online, aber das verwaltete Element ist weder "OK" noch in einem der anderen Zustände.
 
-Diese Eigenschaft wird von [**CIM \_ ManagedSystemElement**](cim-managedsystemelement.md)geerbt.
+Diese Eigenschaft wird von [**CIM \_ ManagedSystemElement geerbt.**](cim-managedsystemelement.md)
 
 <dt>
 
@@ -268,23 +268,23 @@ Diese Eigenschaft wird von [**CIM \_ ManagedSystemElement**](cim-managedsystemel
 
 </dd> <dt>
 
-**Stringsecuritydescriptor**
+**StringSecurityDescriptor**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
 </dt> </dl>
 
-Dem Terminal zugeordneter Sicherheits Deskriptor im Format des binären Byte Arrays.
+Sicherheitsdeskriptor, der dem Terminal im binären Bytearrayformat zugeordnet ist.
 
 </dd> <dt>
 
-**Terminal Name**
+**TerminalName**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
@@ -292,13 +292,13 @@ Zugriffstyp: Schreibgeschützt
 
 Der Name des Terminals.
 
-Diese Eigenschaft wird von [**Win32 \_ TerminalSetting**](win32-terminalsetting.md)geerbt.
+Diese Eigenschaft wird von [**Win32 \_ TerminalSetting geerbt.**](win32-terminalsetting.md)
 
 </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Zum Herstellen einer Verbindung mit dem \\ root \\ CIMV2 \\ TerminalServices-Namespace muss die Authentifizierungs Ebene den Datenschutz für das Paket enthalten. Bei C/C++-aufrufen handelt es sich hierbei um eine Authentifizierungs Ebene der **RPC- \_ c- \_ authn- \_ Ebene \_ Pkt \_ Privacy**. Bei Visual Basic-und Skript aufrufen handelt es sich hierbei um eine Authentifizierungs Ebene von **wbemauthenticationlevelpzprivacy** oder "PKTPRIVACY" mit einem Wert von 6. Im folgenden Visual Basic Scripting Edition (VBScript)-Beispiel wird gezeigt, wie eine Verbindung mit einem Remote Computer mit Paket Datenschutz hergestellt wird.
+Um eine Verbindung mit dem \\ \\ CIMV2 TerminalServices-Stammnamespace herzustellen, muss \\ die Authentifizierungsebene den Paketschutz enthalten. Bei C/C++-Aufrufen ist dies eine Authentifizierungsebene von **RPC \_ C \_ AUTHN \_ LEVEL \_ PKT \_ PRIVACY**. Für Visual Basic- und Skriptaufrufe ist dies eine Authentifizierungsebene von **WbemAuthenticationLevelPktPrivacy** oder "pktPrivacy" mit dem Wert 6. Das folgende Visual Basic Scripting Edition (VBScript) zeigt, wie Sie eine Verbindung mit einem Remotecomputer mit Paketschutz herstellen.
 
 
 ```VB
@@ -309,7 +309,7 @@ Set objServices = GetObject( _
 
 
 
-Managed Object Format-Dateien (MOF) enthalten die Definitionen für Windows-Verwaltungsinstrumentation (WMI)-Klassen. MOF-Dateien werden nicht als Teil des Microsoft Windows Software Development Kit (SDK) installiert. Sie werden auf dem Server installiert, wenn Sie die zugehörige Rolle mithilfe der Server-Manager hinzufügen. Weitere Informationen zu MOF-Dateien finden Sie unter [Managed Object Format (MOF)](/windows/desktop/WmiSdk/managed-object-format--mof-).
+Managed Object Format -Dateien (MOF) enthalten die Definitionen für Windows WMI-Klassen (Management Instrumentation). MOF-Dateien werden nicht als Teil des Microsoft Windows Software Development Kit (SDK) installiert. Sie werden auf dem Server installiert, wenn Sie die zugeordnete Rolle mithilfe der Server-Manager. Weitere Informationen zu MOF-Dateien finden Sie unter [Managed Object Format (MOF).](/windows/desktop/WmiSdk/managed-object-format--mof-)
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -319,13 +319,13 @@ Managed Object Format-Dateien (MOF) enthalten die Definitionen für Windows-Verw
 |-------------------------------------|-----------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows Vista<br/>                                                                |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2008<br/>                                                          |
-| Namespace<br/>                | Root \\ CIMv2 \\ TerminalServices<br/>                                                |
-| MOF<br/>                      | <dl> <dt>Tscsgwmi. MOF</dt> </dl> |
+| Namespace<br/>                | \\ \\ CiMv2-Stammterminaldienste<br/>                                                |
+| MOF<br/>                      | <dl> <dt>TSCfgWmi.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>TSCfgWmi.dll</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 

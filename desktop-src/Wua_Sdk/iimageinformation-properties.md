@@ -1,27 +1,27 @@
 ---
-description: Die iimageinformation-Schnittstelle definiert die folgenden Eigenschaften.
+description: Die IImageInformation-Schnittstelle definiert die folgenden Eigenschaften.
 ms.assetid: 618e3b07-b9ba-444e-a6bd-0e3d7cb78d97
-title: Iimageinformation-Eigenschaften
+title: IImageInformation-Eigenschaften
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 67bc11ddae302f32c4a18d36997d35389252777e
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: e042229257ad21d34e97a9618d401610d669fd67ea174f97962161651c0eda6f
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106360063"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118991380"
 ---
-# <a name="iimageinformation-properties"></a>Iimageinformation-Eigenschaften
+# <a name="iimageinformation-properties"></a>IImageInformation-Eigenschaften
 
-Die [**iimageinformation**](/windows/desktop/api/Wuapi/nn-wuapi-iimageinformation) -Schnittstelle definiert die folgenden Eigenschaften.
+Die [**IImageInformation-Schnittstelle**](/windows/desktop/api/Wuapi/nn-wuapi-iimageinformation) definiert die folgenden Eigenschaften.
 
 
 
-| Eigenschaft                                     | BESCHREIBUNG                              |
+| Eigenschaft                                     | Beschreibung                              |
 |----------------------------------------------|------------------------------------------|
-| [**AltText**](/windows/desktop/api/Wuapi/nf-wuapi-iimageinformation-get_alttext) | Ruft den alternativen Text für das Bild ab.   |
+| [**ALTTEXT**](/windows/desktop/api/Wuapi/nf-wuapi-iimageinformation-get_alttext) | Ruft den alternativen Text für das Bild ab.   |
 | [**Höhe**](/windows/desktop/api/Wuapi/nf-wuapi-iimageinformation-get_height)   | Ruft die Höhe des Bilds in Pixel ab. |
-| [**`Source`**](/windows/desktop/api/Wuapi/nf-wuapi-iimageinformation-get_source)   | Ruft den Quell Speicherort des Bilds ab.   |
+| [**Quelle**](/windows/desktop/api/Wuapi/nf-wuapi-iimageinformation-get_source)   | Ruft den Quellspeicherort des Bilds ab.   |
 | [**Breite**](/windows/desktop/api/Wuapi/nf-wuapi-iimageinformation-get_width)     | Ruft die Breite des Bilds in Pixel ab.  |
 
 

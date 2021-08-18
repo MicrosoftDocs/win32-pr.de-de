@@ -1,50 +1,50 @@
 ---
-description: Im folgenden Beispiel wird eine Nachricht mit dem privaten Schlüssel eines Absenders signiert und die signierte Nachricht mithilfe des öffentlichen Schlüssels eines Empfängers verschlüsselt.
+description: Im folgenden Beispiel wird eine Nachricht mit dem privaten Schlüssel eines Absenders signiert und die signierte Nachricht mit dem öffentlichen Schlüssel eines Empfängers verschlüsselt.
 ms.assetid: f2863e4a-d22a-4ff0-91d8-052eeaade14e
-title: 'Beispiel-C-Programm: senden und Empfangen einer signierten und verschlüsselten Nachricht'
+title: 'C-Beispielprogramm: Senden und Empfangen einer signierten und verschlüsselten Nachricht'
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: c7c2ce7c5ba04d6fb57afbb0c15e32c115dcbd5b
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: ac7bdfdfd664d278fe72d81743e7116eb64a11099ef37b43200d55378472c383
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "103866979"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119007538"
 ---
-# <a name="example-c-program-sending-and-receiving-a-signed-and-encrypted-message"></a>Beispiel-C-Programm: senden und Empfangen einer signierten und verschlüsselten Nachricht
+# <a name="example-c-program-sending-and-receiving-a-signed-and-encrypted-message"></a>C-Beispielprogramm: Senden und Empfangen einer signierten und verschlüsselten Nachricht
 
-Im folgenden Beispiel wird eine Nachricht mit dem [*privaten Schlüssel*](../secgloss/p-gly.md) eines Absenders signiert und die signierte Nachricht mithilfe des [*öffentlichen Schlüssels*](../secgloss/p-gly.md)eines Empfängers verschlüsselt. Im Beispiel wird dann die Nachricht mit dem privaten Schlüssel des Empfängers entschlüsselt und die Signatur mit dem öffentlichen Schlüssel des Absenders überprüft. Das Zertifikat des Absenders, das den erforderlichen öffentlichen Schlüssel enthält, ist in der verschlüsselten Nachricht enthalten. In diesem Beispiel wird auch die signierte und verschlüsselte Nachricht in eine Datei geschrieben. Weitere Informationen finden Sie unter [Beispiel C-Programm: Empfangen einer signierten und verschlüsselten Nachricht](example-c-program-receiving-a-signed-and-encrypted-message.md).
+Im folgenden Beispiel wird eine Nachricht mit dem [*privaten Schlüssel*](../secgloss/p-gly.md) eines Absenders signiert und die signierte Nachricht mit dem [*öffentlichen Schlüssel*](../secgloss/p-gly.md)eines Empfängers verschlüsselt. Im Beispiel wird dann die Nachricht mithilfe des privaten Schlüssels des Empfängers entschlüsselt und die Signatur mithilfe des öffentlichen Schlüssels des Absenders überprüft. Das Zertifikat des Absenders, das den erforderlichen öffentlichen Schlüssel enthält, ist in der verschlüsselten Nachricht enthalten. In diesem Beispiel wird auch die signierte und verschlüsselte Nachricht in eine Datei geschrieben. Weitere Informationen finden Sie unter [C-Beispielprogramm: Empfangen einer signierten und verschlüsselten Nachricht.](example-c-program-receiving-a-signed-and-encrypted-message.md)
 
-Zum Signieren der Nachricht müssen der private Schlüssel des Signatur Gebers und das Zertifikat des Signatur Gebers verfügbar sein. Zum Verschlüsseln der signierten Nachricht muss das Zertifikat eines Empfängers, einschließlich des öffentlichen Schlüssels des Empfängers, verfügbar sein.
+Zum Signieren der Nachricht müssen der private Schlüssel des Signierers und das Zertifikat des Signierers verfügbar sein. Zum Verschlüsseln der signierten Nachricht muss das Zertifikat eines Empfängers einschließlich des öffentlichen Schlüssels des Empfängers verfügbar sein.
 
-Der private Schlüssel des Empfängers muss verfügbar sein, damit die Nachricht entschlüsselt werden kann. Nachdem die Nachricht entschlüsselt wurde, wird die Signatur mithilfe des öffentlichen Schlüssels aus dem Zertifikat überprüft, das in der verschlüsselten Nachricht enthalten ist.
+Zum Entschlüsseln der Nachricht muss der private Schlüssel des Empfängers verfügbar sein. Nachdem die Nachricht entschlüsselt wurde, wird die Signatur mithilfe des öffentlichen Schlüssels aus dem Zertifikat überprüft, das in der verschlüsselten Nachricht enthalten ist.
 
 > [!Note]  
-> Nicht alle Zertifikate in einem [*Zertifikat Speicher*](../secgloss/c-gly.md) ermöglichen den Zugriff auf den [*privaten Schlüssel*](../secgloss/p-gly.md) , der diesem Zertifikat zugeordnet ist. Wenn die Nachricht signiert und verschlüsselt ist, muss ein Zertifikat verwendet werden, das zum Signatur Geber mit Zugriff auf den privaten Schlüssel dieses Signatur Gebers gehört. Außerdem muss der Empfänger der Nachricht Zugriff auf den privaten Schlüssel haben, der dem öffentlichen Schlüssel zugeordnet ist, der zum Verschlüsseln der Nachricht verwendet wird.
+> Nicht alle Zertifikate in einem [*Zertifikatspeicher*](../secgloss/c-gly.md) bieten Zugriff auf den [*privaten Schlüssel,*](../secgloss/p-gly.md) der diesem Zertifikat zugeordnet ist. Wenn die Nachricht signiert und verschlüsselt wird, muss ein Zertifikat verwendet werden, das zum Signaturgeber mit Zugriff auf den privaten Schlüssel dieses Signaturgebers gehört. Darüber hinaus muss der Empfänger der Nachricht Zugriff auf den privaten Schlüssel haben, der dem öffentlichen Schlüssel zugeordnet ist, der zum Verschlüsseln der Nachricht verwendet wird.
 
  
 
 In diesem Beispiel werden die folgenden Aufgaben veranschaulicht:
 
--   Systemzertifikat Speicher werden geöffnet und geschlossen.
--   Suchen von Zertifikaten für einen Nachrichten Absender und Nachrichtenempfänger im geöffneten Zertifikat Speicher.
--   Suchen und Drucken des Antragsteller namens aus Zertifikaten
--   Initialisieren von Datenstrukturen, die zum Signieren, verschlüsseln, entschlüsseln und Überprüfen einer Nachricht erforderlich sind.
--   Aufrufen einer CryptoAPI-Funktion, um die erforderliche Größe eines Puffers zu ermitteln, den Puffer der erforderlichen Größe zuzuweisen und die CryptoAPI-Funktion erneut aufzurufende, um den Puffer zu füllen. Weitere Informationen finden Sie unter [Abrufen von Daten mit unbekannter Länge](retrieving-data-of-unknown-length.md).
--   Anzeigen einiger der verschlüsselten Inhalte eines Puffers. Die enthaltene lokale Funktion " **showbytes**" zeigt Zeichen im Puffer mit Werten zwischen "0" und "z" an. Alle anderen Zeichen werden als "-" angezeigt.
+-   Öffnen und Schließen von Systemzertifikatspeichern.
+-   Suchen von Zertifikaten für einen Nachrichtensender und Nachrichtenempfänger in den geöffneten Zertifikatspeichern.
+-   Suchen und Drucken des Antragstellernamens aus Zertifikaten.
+-   Initialisieren von Datenstrukturen, die zum Signieren, Verschlüsseln, Entschlüsseln und Überprüfen einer Nachricht erforderlich sind.
+-   Aufrufen einer CryptoAPI-Funktion zum Ermitteln der erforderlichen Größe eines Puffers, Zuordnen des Puffers der erforderlichen Größe und erneutes Aufrufen der CryptoAPI-Funktion zum Füllen des Puffers. Weitere Informationen finden Sie unter [Abrufen von Daten unbekannter Länge.](retrieving-data-of-unknown-length.md)
+-   Anzeigen einiger verschlüsselter Inhalte eines Puffers. Die enthaltene lokale Funktion **ShowBytes** zeigt Zeichen im Puffer mit Werten zwischen "0" und "z" an. Alle anderen Zeichen werden als Zeichen "-" angezeigt.
 
 In diesem Beispiel werden die folgenden CryptoAPI-Funktionen verwendet:
 
--   [**CertOpenStore übergebene**](/windows/desktop/api/Wincrypt/nf-wincrypt-certopenstore)
--   [**Certfindcertifi. Store**](/windows/desktop/api/Wincrypt/nf-wincrypt-certfindcertificateinstore)
--   [**Certgetnamestring**](/windows/desktop/api/Wincrypt/nf-wincrypt-certgetnamestringa)
+-   [**CertOpenStore**](/windows/desktop/api/Wincrypt/nf-wincrypt-certopenstore)
+-   [**CertFindCertificateInStore**](/windows/desktop/api/Wincrypt/nf-wincrypt-certfindcertificateinstore)
+-   [**CertGetNameString**](/windows/desktop/api/Wincrypt/nf-wincrypt-certgetnamestringa)
 -   [**CryptAcquireCertificatePrivateKey**](/windows/desktop/api/Wincrypt/nf-wincrypt-cryptacquirecertificateprivatekey)
--   [**Cryptsignandverschlüsseltmessage**](/windows/desktop/api/Wincrypt/nf-wincrypt-cryptsignandencryptmessage)
--   [**Cryptdecryptandveriatymessagesignature**](/windows/desktop/api/Wincrypt/nf-wincrypt-cryptdecryptandverifymessagesignature)
--   [**Certfreecertififeecontext**](/windows/desktop/api/Wincrypt/nf-wincrypt-certfreecertificatecontext)
--   [**Certclosestore**](/windows/desktop/api/Wincrypt/nf-wincrypt-certclosestore)
+-   [**CryptSignAndEncryptMessage**](/windows/desktop/api/Wincrypt/nf-wincrypt-cryptsignandencryptmessage)
+-   [**CryptDecryptAndVerifyMessageSignature**](/windows/desktop/api/Wincrypt/nf-wincrypt-cryptdecryptandverifymessagesignature)
+-   [**CertFreeCertificateContext**](/windows/desktop/api/Wincrypt/nf-wincrypt-certfreecertificatecontext)
+-   [**CertCloseStore**](/windows/desktop/api/Wincrypt/nf-wincrypt-certclosestore)
 
-In diesem Beispiel werden separate Funktionen verwendet, um den Signatur-/Verschlüsselungsprozess und den Entschlüsselungs-/Signatur Überprüfungsprozess anzuzeigen. Außerdem wird [**mylenker Error**](myhandleerror.md) verwendet, um das Programm im Falle eines Fehlers ordnungsgemäß zu beenden. Der Code **myhanderror** ist im Beispiel enthalten und kann auch zusammen mit anderen Hilfsfunktionen unter [universell Funktionen](general-purpose-functions.md)gefunden werden.
+In diesem Beispiel werden separate Funktionen verwendet, um den Signierungs-/Verschlüsselungsprozess und den Entschlüsselungs-/Signaturüberprüfungsprozess anzuzeigen. Außerdem wird [**MyHandleError**](myhandleerror.md) verwendet, um das Programm bei einem Fehler ordnungsgemäß zu beenden. Der Code **MyHandleError** ist im Beispiel enthalten und kann auch zusammen mit anderen Hilfsfunktionen unter [Universell Functions](general-purpose-functions.md)gefunden werden.
 
 
 ```C++

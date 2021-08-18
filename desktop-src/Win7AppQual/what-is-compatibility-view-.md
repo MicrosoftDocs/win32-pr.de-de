@@ -13,21 +13,21 @@ ms.locfileid: "118994530"
 ---
 # <a name="what-is-compatibility-view"></a>Was ist Kompatibilitätsansicht?
 
-*Kompatibilitätsansicht* ist ein Feature von Windows Internet Explorer 8, mit dem der Browser eine Webseite nahezu genauso rendern kann wie Windows Internet Explorer 7.
+*Kompatibilitätsansicht* ist ein Feature von Windows Internet Explorer 8, das es dem Browser ermöglicht, eine Webseite nahezu identisch mit der Art und Weise zu rendern, wie Windows Internet Explorer 7 sie rendern würde.
 
-In Internet Explorer 8 ändert Kompatibilitätsansicht, wie der Browser Code interpretiert, der in CSS, HTML und der Dokumentobjektmodell (DOM) geschrieben ist, um zu versuchen, Internet Explorer 7 zu entsprechen. Eine Website, die ein Benutzer in Internet Explorer 8 Kompatibilitätsansicht anzeigt, ist fast identisch mit einer Website, die der Benutzer in Internet Explorer 7 anzeigt. Kompatibilitätsansicht ändert jedoch nicht, wie der Browser den gesamten Code interpretiert. Beispielsweise können die Änderungen in Internet Explorer 8 für die Verarbeitung ActiveX, des Parsers, AJAX, JavaScript, des Netzwerks und der Sicherheit weiterhin Kompatibilitätsprobleme verursachen. Kompatibilitätsansicht ändert dieses Verhalten nicht.
+In Internet Explorer 8 ändert Kompatibilitätsansicht, wie der Browser code interpretiert, der in CSS, HTML und dem Dokumentobjektmodell (DOM) geschrieben ist, um zu versuchen, mit Internet Explorer 7 zu übereinstimmen. Eine Website, die ein Benutzer in Internet Explorer 8 Kompatibilitätsansicht, ist fast identisch mit einer Website, die der Benutzer in Internet Explorer 7. Die Kompatibilitätsansicht ändert jedoch nicht, wie der Browser den ganzen Code interpretiert. Beispielsweise können die Änderungen in Internet Explorer 8 für die Art und Weise, wie der Browser ActiveX behandelt, weiterhin Kompatibilitätsprobleme verursachen. Kompatibilitätsansicht ändert diese Verhaltensweisen nicht.
 
-In einer Unternehmensumgebung besteht in einigen Bereichen ein geringeres Risiko von Kompatibilitätsproblemen. Websites der Intranetzone verwenden die Kompatibilitätsansicht beispielsweise standardmäßig. Clientwebanwendungen, die mithilfe des Webbrowsersteuerelements oder der WebOC (Internet Explorer Rendering-Engine) gerendert werden, weisen ebenfalls ein geringes Risiko für Kompatibilitätsprobleme auf, da Internet Explorer 8 standardmäßig einen Kompatibilitätsmodus für webOC verwendet. Die Standardkonfigurationseinstellungen für Kompatibilitätsansicht stellen jedoch möglicherweise keine vollständige Kompatibilität sicher. Um festzustellen, ob eine Website oder Webanwendung mit Internet Explorer 8 kompatibel ist, sollten Sie die Website oder Webanwendung testen.
+In einer Unternehmensumgebung besteht in einigen Bereichen ein geringeres Risiko von Kompatibilitätsproblemen. Websites der Intranetzone verwenden die Kompatibilitätsansicht beispielsweise standardmäßig. Clientwebanwendungen, die mit dem Webbrowser-Steuerelement oder der WebOC (Internet Explorer-Rendering-Engine) gerendert werden, haben ebenfalls ein geringes Risiko für Kompatibilitätsprobleme, da Internet Explorer 8 standardmäßig einen Kompatibilitätsmodus für das WebOC verwendet. Die Standardkonfigurationseinstellungen für die Kompatibilitätsansicht stellen jedoch möglicherweise nicht die vollständige Kompatibilität sicher. Um festzustellen, ob eine Website oder Webanwendung mit Internet Explorer 8 kompatibel ist, sollten Sie die Website oder Webanwendung testen.
 
-Weitere Informationen zu den Unterschieden zwischen Internet Explorer 8 Kompatibilitätsansicht und Internet Explorer 7 finden Sie im [Blog Site Compatibility and Internet Explorer 8 (Standortkompatibilität und Internet Explorer 8).](/archive/blogs/ie/site-compatibility-and-ie8) Eine Liste der zu überprüfende Informationen zum Upgrade auf Internet Explorer 8 finden Sie im [Internet Explorer 8 Readiness Toolkit.](https://www.microsoft.com/windows/internet-explorer/readiness/developers.aspx)
+Weitere Informationen zu den Unterschieden zwischen Internet Explorer 8 Kompatibilitätsansicht und Internet Explorer 7 finden Sie im Blog site compatibility and Internet Explorer 8 (Standortkompatibilität und [Internet Explorer 8).](/archive/blogs/ie/site-compatibility-and-ie8) Eine Liste der Zu überprüfenden Punkte beim Upgrade auf Internet Explorer 8 finden Sie im Internet Explorer [8 Readiness Toolkit](https://www.microsoft.com/windows/internet-explorer/readiness/developers.aspx).
 
-Weitere Informationen zu Kompatibilitätsansicht finden Sie im [Internet Explorer-Teamblog.](/archive/blogs/ie/)
+Weitere Informationen zu Kompatibilitätsansicht finden Sie im Internet Explorer [TeamBlog](/archive/blogs/ie/).
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[Beheben von Kompatibilitätsproblemen in Webanwendungen mithilfe von Kompatibilitätsansicht](remediating-web-applications-and-add-ons.md)
+[Beheben von Kompatibilitätsproblemen in Webanwendungen mit Kompatibilitätsansicht](remediating-web-applications-and-add-ons.md)
 </dt> </dl>
 
  

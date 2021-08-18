@@ -1,7 +1,7 @@
 ---
-description: Beschreibt, wie sie eine osdx-Datei (OpenSearch Description) erstellen, um externe Datenspeicher mit dem Windows-Client über das OpenSearch verbinden.
+description: Beschreibt, wie eine OpenSearch Description-Datei (.osdx) erstellt wird, um externe Datenspeicher über das OpenSearch-Protokoll mit dem Windows-Client zu verbinden.
 ms.assetid: 62cd88cd-e6ff-4e46-887d-e62f7018c065
-title: Erstellen einer OpenSearch-Beschreibungsdatei in Windows Verbundsuche
+title: Erstellen einer OpenSearch Beschreibungsdatei in Windows Federated Search
 ms.topic: article
 ms.date: 05/31/2018
 ms.openlocfilehash: 3f58b29a860c7d53583b7fd17ddd942bb21b08d649ea7e54d5b2278be2f8d4c2
@@ -11,22 +11,22 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 08/11/2021
 ms.locfileid: "119456862"
 ---
-# <a name="creating-an-opensearch-description-file-in-windows-federated-search"></a>Erstellen einer OpenSearch-Beschreibungsdatei in Windows Verbundsuche
+# <a name="creating-an-opensearch-description-file-in-windows-federated-search"></a>Erstellen einer OpenSearch Beschreibungsdatei in Windows Federated Search
 
-Beschreibt, wie sie eine osdx-Datei (OpenSearch Description) erstellen, um externe Datenspeicher über das Windows-Protokoll [mit dem](https://github.com/dewitt/opensearch) OpenSearch verbinden. Mit der Verbundsuche können Benutzer einen Remotedatenspeicher durchsuchen und die Ergebnisse im Windows anzeigen.
+Beschreibt, wie sie eine OpenSearch Description-Datei (.osdx) erstellen, um externe Datenspeicher über das OpenSearch-Protokoll mit dem [Windows-Client](https://github.com/dewitt/opensearch) zu verbinden. Mit der Verbundsuche können Benutzer einen Remotedatenspeicher durchsuchen und die Ergebnisse innerhalb Windows Explorers anzeigen.
 
 Dieses Thema enthält folgende Abschnitte:
 
 -   [OpenSearch Beschreibungsdatei](#opensearch-description-file)
-    -   [Erforderliche untergeordnete Mininum-Elemente](#mininum-required-child-elements)
--   [Standardelemente in Windows Verbundsuche](#standard-elements-in-windows-federated-search)
+    -   [Erforderliche untergeordnete Mininumelemente](#mininum-required-child-elements)
+-   [Standardelemente in Windows Federated Search](#standard-elements-in-windows-federated-search)
     -   [Shortname](#shortname)
     -   [Beschreibung](#description)
     -   [URL-Vorlage für RSS/Atom-Ergebnisse](#url-template-for-rssatom-results)
     -   [URL-Vorlage für Webergebnisse](#url-template-for-web-results)
     -   [URL-Vorlagenparameter](#url-template-parameters)
-    -   [Auspagete Ergebnisse](#paged-results)
-    -   [Paging mit dem Elementindex](#paging-using-the-item-index)
+    -   [Ausgelagerungsergebnis](#paged-results)
+    -   [Paging mithilfe des Elementindexes](#paging-using-the-item-index)
     -   [Paging mithilfe des Seitenindexes](#paging-using-the-page-index)
     -   [Seitengröße](#page-size)
 -   [Erweiterte Elemente in Windows Verbundsuche](#extended-elements-in-windows-federated-search)
@@ -39,16 +39,16 @@ Dieses Thema enthält folgende Abschnitte:
 
 ## <a name="opensearch-description-file"></a>OpenSearch Beschreibungsdatei
 
-Eine OpenSearch Description-Datei (OSDX) für Windows Verbundsuche muss die folgenden Regeln einhalten:
+Eine OpenSearch Description-Datei (.osdx) für Windows Verbundsuche muss die folgenden Regeln einhalten:
 
--   Ein gültiges OpenSearch Description-Dokument, wie [](https://github.com/dewitt/opensearch) in der OpenSearch 1.1-Spezifikation definiert.
+-   Ein gültiges OpenSearch Beschreibungsdokument, wie in der [OpenSearch](https://github.com/dewitt/opensearch) 1.1-Spezifikation definiert.
 -   Geben Sie eine URL-Vorlage mit einem RSS- oder Atom-Formattyp an.
--   Verwenden Sie die Dateierweiterung .osdx, oder werden Sie beim Herunterladen aus dem Web mit der Dateierweiterung .osdx verknüpft. Beispielsweise ist ein Server nicht erforderlich, um OSDX zu verwenden. Ein Server kann die Datei mit einer beliebigen Dateinamenerweiterung zurückgeben, z. B. .xml, und so behandelt werden, als wäre es eine OSDX-Datei, wenn der richtige MIME-Typ für OpenSearch Description-Dokumente (OSDX-Dateien) verwendet wird.
+-   Verwenden Sie die Dateinamenerweiterung OSDX, oder lassen Sie sich beim Herunterladen aus dem Web der Erweiterung OSDX zuordnen. Beispielsweise ist ein Server nicht erforderlich, um OSDX zu verwenden. Ein Server kann die Datei mit einer beliebigen Dateinamenerweiterung zurückgeben, z. B. .xml, und so behandelt werden, als wäre es eine OSDX-Datei, wenn er den richtigen MIME-Typ für OpenSearch Description-Dokumente (OSDX-Dateien) verwendet.
 -   Geben Sie einen **ShortName-Elementwert** an (empfohlen).
 
-### <a name="mininum-required-child-elements"></a>Erforderliche untergeordnete Mininum-Elemente
+### <a name="mininum-required-child-elements"></a>Erforderliche untergeordnete Mininumelemente
 
-Die folgende OSDX-Beispieldatei besteht aus **ShortName** und -Elementen, die `Url` die mindestens erforderlichen untergeordneten Elemente sind.
+Die folgende OSDX-Beispieldatei besteht aus **ShortName** und `Url` -Elementen, die die mindestens erforderlichen untergeordneten Elemente sind.
 
 
 ```
@@ -62,13 +62,13 @@ Die folgende OSDX-Beispieldatei besteht aus **ShortName** und -Elementen, die `U
 
 
 
-## <a name="standard-elements-in-windows-federated-search"></a>Standardelemente in Windows Verbundsuche
+## <a name="standard-elements-in-windows-federated-search"></a>Standardelemente in Windows Federated Search
 
 Zusätzlich zu den untergeordneten Mindestelementen unterstützt die Verbundsuche die folgenden Standardelemente.
 
 ### <a name="shortname"></a>Shortname
 
-Windows verwendet den **ShortName-Elementwert,** um die Datei .searchconnector-ms (Search Connector) zu benennen, die erstellt wird, wenn der Benutzer die OSDX-Datei öffnet. Windows wird sichergestellt, dass der generierte Dateiname nur Zeichen verwendet, die in Windows zulässig sind. Wenn kein **ShortName-Wert** angegeben wird, versucht die Datei .searchconnector-ms stattdessen, den Dateinamen der OSDX-Datei zu verwenden.
+Windows verwendet den **ShortName-Elementwert,** um die SEARCHCONNECTOR-MS-Datei (Suchconnector) zu benennen, die erstellt wird, wenn der Benutzer die OSDX-Datei öffnet. Windows stellt sicher, dass der generierte Dateiname nur Zeichen verwendet, die in Windows Dateinamen zulässig sind. Wenn kein **ShortName-Wert** angegeben wird, versucht die Searchconnector-ms-Datei stattdessen, den Dateinamen der OSDX-Datei zu verwenden.
 
 Der folgende Code veranschaulicht die Verwendung des **ShortName-Elements** in einer OSDX-Datei.
 
@@ -82,9 +82,9 @@ Der folgende Code veranschaulicht die Verwendung des **ShortName-Elements** in e
 
 
 
-### <a name="description"></a>BESCHREIBUNG
+### <a name="description"></a>Beschreibung
 
-Windows verwendet den  Description-Elementwert, um die Dateibeschreibung zu füllen, die im Detailbereich des Windows-Explorers angezeigt wird, wenn ein Benutzer eine SEARCHCONNECTOR-MS-Datei auswählt.
+Windows verwendet den **Wert** des Description-Elements, um die im Detailbereich Windows Explorer angezeigte Dateibeschreibung aufzufüllen, wenn ein Benutzer eine SEARCHCONNECTOR-MS-Datei auswählt.
 
 
 ```
@@ -98,10 +98,10 @@ Windows verwendet den  Description-Elementwert, um die Dateibeschreibung zu fül
 
 ### <a name="url-template-for-rssatom-results"></a>URL-Vorlage für RSS/Atom-Ergebnisse
 
-Die OSDX-Datei muss ein **URL-Formatelement** und ein Vorlagenattribut (eine URL-Vorlage) enthalten, die Ergebnisse entweder im RSS- oder Atom-Format zurückgibt.  Das Formatattribut muss für RSS-formatierte Ergebnisse oder für Atom-formatierte Ergebnisse auf festgelegt werden, wie `application/rss+xml` im folgenden Code `application/atom+xml` gezeigt.
+Die OSDX-Datei muss ein **URL-Formatelement** und ein **Vorlagenattribut** (eine URL-Vorlage) enthalten, die Ergebnisse entweder im RSS- oder Atom-Format zurückgibt. Das Formatattribut muss für ergebnisse im `application/rss+xml` RSS-Format oder für Atom-formatierte Ergebnisse auf festgelegt `application/atom+xml` werden, wie im folgenden Code gezeigt.
 
 > [!Note]  
-> Das **URL-Formatelement** **und das Vorlagenattribut** werden häufig als URL-Vorlage bezeichnet.
+> Das **URL-Formatelement** und **das Vorlagenattribut** werden häufig als URL-Vorlage bezeichnet.
 
  
 
@@ -118,7 +118,7 @@ Die OSDX-Datei muss ein **URL-Formatelement** und ein Vorlagenattribut (eine URL
 
 ### <a name="url-template-for-web-results"></a>URL-Vorlage für Webergebnisse
 
-Wenn eine Version der Suchergebnisse in einem Webbrowser angezeigt werden kann, sollten Sie ein **Url format=-Element** und ein Vorlagenattribut angeben, wie im folgenden `text/html` Code gezeigt. 
+Wenn eine Version der Suchergebnisse in einem Webbrowser angezeigt werden kann, sollten Sie ein **Url format=-Element** und ein `text/html` **Vorlagenattribut** angeben, wie im folgenden Code gezeigt.
 
 
 ```
@@ -130,44 +130,44 @@ Wenn eine Version der Suchergebnisse in einem Webbrowser angezeigt werden kann, 
 
 
 
-Wenn Sie ein **Url format="text/html"-Element** und ein Vorlagenattribut angeben, wird in der Befehlsleiste des Windows-Explorers eine Schaltfläche angezeigt, wie im folgenden Screenshot gezeigt, mit der der Benutzer einen Webbrowser öffnen kann, um die Suchergebnisse anzuzeigen, wenn der Benutzer eine Abfrage ausführt. 
+Wenn Sie ein **Url-Format="text/html"-Element** und ein **Vorlagenattribut** angeben, wird in der Windows Explorer-Befehlsleiste eine Schaltfläche angezeigt, wie im folgenden Screenshot gezeigt, die es dem Benutzer ermöglicht, einen Webbrowser zum Anzeigen der Suchergebnisse zu öffnen, wenn der Benutzer eine Abfrage ausführt.
 
-![Screenshot der Rolloverschaltfläche für die Websuche.](images/websearchroll-overcommandbarbutton.png)
+![Screenshot: Rollupschaltfläche für die Websuche](images/websearchroll-overcommandbarbutton.png)
 
-Das Rollover der Abfrage zurück zur Webbenutzeroberfläche des Datenspeichers ist in einigen Szenarien wichtig. Beispielsweise kann ein Benutzer mehr als 100 Ergebnisse anzeigen (die Standardanzahl von Elementen, die der OpenSearch an fordert). Falls ja, kann der Benutzer auch Suchfunktionen verwenden, die nur auf der Website des Datenspeichers verfügbar sind, z. B. erneutes Abfragen mit einer anderen Sortierreihenfolge oder Pivotieren und Filtern der Abfrage mit verknüpften Metadaten.
+Das Rollback der Abfrage zurück auf die Webbenutzeroberfläche des Datenspeichers ist in einigen Szenarien wichtig. Beispielsweise kann ein Benutzer mehr als 100 Ergebnisse anzeigen (die Standardanzahl von Elementen, die vom OpenSearch Anbieter angefordert werden). In diesem Falle kann der Benutzer auch Suchfunktionen verwenden, die nur auf der Website des Datenspeichers verfügbar sind, z. B. das erneute Abfragen mit einer anderen Sortierreihenfolge oder das Pivotieren und Filtern der Abfrage mit verwandten Metadaten.
 
-### <a name="url-template-parameters&quot;></a>URL-Vorlagenparameter
+### <a name="url-template-parameters"></a>URL-Vorlagenparameter
 
-Der OpenSearch-Anbieter führt immer die folgenden Aktionen aus:
+Der OpenSearch Anbieter führt immer die folgenden Aktionen aus:
 
 1.  Verwendet die URL-Vorlage, um die Anforderung an den Webdienst zu senden.
-2.  Versucht, die in der URL-Vorlage gefundenen Token zu ersetzen, bevor die Anforderung wie folgt an den Webdienst sendet:
-    -   Ersetzt die Standardtoken OpenSearch, die in der folgenden Tabelle aufgeführt sind.
+2.  Versucht wie folgt, die in der URL-Vorlage gefundenen Token zu ersetzen, bevor die Anforderung an den Webdienst gesendet wird:
+    -   Ersetzt die in der folgenden Tabelle aufgeführten Standardtoken OpenSearch Token.
     -   Entfernt alle Token, die in der folgenden Tabelle nicht aufgeführt sind.
 
 
 
 | Unterstütztes Token  | Verwendung durch OpenSearch Anbieter                                                                                                                 |
 |------------------|-------------------------------------------------------------------------------------------------------------------------------------------------|
-| {searchTerms}    | Ersetzt durch die Suchbegriffe, die der Benutzer in das Sucheingabefeld Windows Explorer ein gibt.<br/>                                         |
-| {startIndex}     | Wird beim Abrufen von Ergebnissen in &quot;Seiten&quot; verwendet.<br/> Wird durch den Index für das erste Ergebniselement ersetzt, das zurückkommen soll.<br/>                        |
-| {startPage}      | Wird beim Abrufen von Ergebnissen in &quot;Seiten&quot; verwendet.<br/> Ersetzt durch die Seitennummer des Sets von Suchergebnissen, die zurückgeben werden.<br/>               |
-| {count}          | Wird beim Abrufen von Ergebnissen in &quot;Seiten&quot; verwendet.<br/> Ersetzt durch die Anzahl von Suchergebnissen pro Seite, die Windows Explorer-Anforderungen enthält.<br/> |
-| {language}       | Wird durch eine Zeichenfolge ersetzt, die die Sprache der gesendeten Abfrage angibt.<br/>                                                          |
-| {inputEncoding}  | Ersetzt durch eine Zeichenfolge (z. B. &quot;UTF-16"), die die Zeichencodierung der gesendeten Abfrage angibt.<br/>                                |
-| {outputEncoding} | Ersetzt durch eine Zeichenfolge (z. B. "UTF-16"), die die gewünschte Zeichencodierung für die Antwort vom Webdienst angibt.<br/>       |
+| {searchTerms}    | Ersetzt durch die Suchbegriffe, die der Benutzer im Sucheingabefeld Windows Explorer eingibt.<br/>                                         |
+| {startIndex}     | Wird verwendet, wenn Ergebnisse in "Pages" angezeigt werden.<br/> Ersetzt durch den Index für das erste zurückzugebende Ergebniselement.<br/>                        |
+| {startPage}      | Wird verwendet, wenn Ergebnisse in "Pages" angezeigt werden.<br/> Ersetzt durch die Seitennummer der zurückzugebende Gruppe von Suchergebnissen.<br/>               |
+| {count}          | Wird verwendet, wenn Ergebnisse in "Pages" angezeigt werden.<br/> Ersetzt durch die Anzahl von Suchergebnissen pro Seite, die Windows Explorer-Anforderungen.<br/> |
+| {language}       | Ersetzt durch eine Zeichenfolge, die die Sprache der gesendeten Abfrage angibt.<br/>                                                          |
+| {inputEncoding}  | Ersetzt durch eine Zeichenfolge (z.B. "UTF-16"), die die Zeichencodierung der gesendeten Abfrage angibt.<br/>                                |
+| {outputEncoding} | Ersetzt durch eine Zeichenfolge (z.B. "UTF-16"), die die gewünschte Zeichencodierung für die Antwort vom Webdienst angibt.<br/>       |
 
 
 
  
 
-### <a name="paged-results"></a>Auspagete Ergebnisse
+### <a name="paged-results"></a>Ausgelagerungsergebnis
 
-Möglicherweise möchten Sie die Anzahl der pro Anforderung zurückgegebenen Ergebnisse begrenzen. Sie können eine "Seite" der Ergebnisse gleichzeitig zurückgeben oder den OpenSearch-Anbieter dazu berechten, zusätzliche Seiten der Ergebnisse entweder nach Elementnummer oder Seitennummer zu erhalten. Wenn Sie beispielsweise 20 Ergebnisse pro Seite senden, beginnt die erste Seite, die Sie senden, bei Elementindex 1 und bei Seite 1. Die zweite Seite, die Sie senden, beginnt bei Elementindex 21 und bei Seite 2. Sie können definieren, wie der OpenSearch-Anbieter Elemente anfordern soll, indem Sie entweder das - oder das `{startItem}` `{startPage}` -Token in der URL-Vorlage verwenden.
+Möglicherweise möchten Sie die Anzahl der pro Anforderung zurückgegebenen Ergebnisse begrenzen. Sie können eine "Seite" von Ergebnissen gleichzeitig zurückgeben oder den OpenSearch Anbieter zusätzliche Ergebnisseiten entweder nach Elementnummer oder Seitenzahl abrufen lassen. Wenn Sie beispielsweise 20 Ergebnisse pro Seite senden, beginnt die erste Seite, die Sie senden, am Elementindex 1 und an Seite 1. Die zweite Seite, die Sie senden, beginnt am Elementindex 21 und an Seite 2. Sie können definieren, wie der OpenSearch-Anbieter Elemente anfordern soll, indem Sie entweder das `{startItem}` -Token oder das `{startPage}` -Token in der URL-Vorlage verwenden.
 
-### <a name="paging-using-the-item-index"></a>Paging mit dem Elementindex
+### <a name="paging-using-the-item-index"></a>Paging mithilfe des Elementindexes
 
-Ein Elementindex identifiziert das erste Ergebniselement auf einer Ergebnisseite. Wenn Clients Anforderungen mithilfe eines Elementindexes senden möchten, können Sie das Token in Ihrem Url-Elementvorlagenattribut verwenden, wie `{startIndex}` im folgenden Code gezeigt.  
+Ein Elementindex identifiziert das erste Ergebniselement auf einer Seite mit Ergebnissen. Wenn Clients Anforderungen mit einem Elementindex senden sollen, können Sie das `{startIndex}` Token in Ihrem Url-Elementvorlagenattribut verwenden, wie im folgenden Code gezeigt.  
 
 
 ```
@@ -177,7 +177,7 @@ Ein Elementindex identifiziert das erste Ergebniselement auf einer Ergebnisseite
 
 
 
-Der [OpenSearch](https://github.com/dewitt/opensearch) ersetzt dann das Token in der URL durch einen Startindexwert. Die erste Anforderung beginnt mit dem ersten Element, wie im folgenden Beispiel veranschaulicht:
+Der [OpenSearch-Anbieter](https://github.com/dewitt/opensearch) ersetzt dann das Token in der URL durch einen Startindexwert. Die erste Anforderung beginnt mit dem ersten Element, wie im folgenden Beispiel veranschaulicht:
 
 
 ```
@@ -186,16 +186,16 @@ https://example.com/rss.php?query=frogs&start=1
 
 
 
-Der OpenSearch kann zusätzliche Elemente erhalten, indem er den `{startIndex}` Parameterwert ändert und eine neue Anforderung ausgibt. Der Anbieter wiederholt diesen Prozess, bis er genügend Ergebnisse erhält, um seinen Grenzwert zu erfüllen, oder das Ende der Ergebnisse erreicht. Der OpenSearch-Anbieter untersucht die Anzahl der Elemente, die vom Webdienst auf der ersten Seite der Ergebnisse zurückgegeben werden, und legt die erwartete Seitengröße auf diese Anzahl fest. Sie verwendet diese Zahl, um den Wert `{startIndex}` für nachfolgende Anforderungen zu erhöhen. Wenn der Webdienst beispielsweise 20 Ergebnisse in der ersten Anforderung zurückgibt, legt der Anbieter die erwartete Seitengröße auf 20 fest. Bei der nächsten Anforderung ersetzt der Anbieter durch den Wert `{startIndex}` 21, um die nächsten 20 Elemente zu erhalten.
+Der OpenSearch-Anbieter kann zusätzliche Elemente abrufen, indem er den Parameterwert ändert `{startIndex}` und eine neue Anforderung ausgibt. Der Anbieter wiederholt diesen Prozess, bis er genügend Ergebnisse erhält, um seinen Grenzwert zu erfüllen, oder das Ende der Ergebnisse erreicht. Der OpenSearch Anbieter untersucht die Anzahl der Elemente, die vom Webdienst auf der ersten Seite der Ergebnisse zurückgegeben werden, und legt die erwartete Seitengröße auf diese Zahl fest. Diese Zahl wird verwendet, um den Wert für nachfolgende Anforderungen zu `{startIndex}` erhöhen. Wenn der Webdienst beispielsweise 20 Ergebnisse in der ersten Anforderung zurückgibt, legt der Anbieter die erwartete Seitengröße auf 20 fest. Bei der nächsten Anforderung ersetzt der Anbieter `{startIndex}` durch den Wert 21, um die nächsten 20 Elemente abzurufen.
 
 > [!Note]  
-> Wenn eine Seite mit Ergebnissen, die vom Webdienst zurückgegeben wird, weniger Elemente als die erwartete Seitengröße enthält, geht der OpenSearch-Anbieter davon aus, dass er die letzte Ergebnisseite empfangen hat und keine Anforderungen mehr stellt.
+> Wenn eine vom Webdienst zurückgegebene Seite mit Ergebnissen weniger Elemente als die erwartete Seitengröße enthält, geht der OpenSearch Anbieter davon aus, dass er die letzte Ergebnisseite empfangen hat und keine Anforderungen mehr stellt.
 
  
 
 ### <a name="paging-using-the-page-index"></a>Paging mithilfe des Seitenindexes
 
-Ein Seitenindex identifiziert die angegebene Ergebnisseite. Wenn Sie möchten, dass Clients Anforderungen mithilfe einer Seitenzahl senden, können Sie das Token im Vorlagenattribut des URL-Formatelements verwenden, um dies anzugeben, wie im folgenden `{startPage}` Beispiel veranschaulicht:  
+Ein Seitenindex identifiziert die angegebene Ergebnisseite. Wenn Clients Anforderungen mithilfe einer Seitennummer senden sollen, können Sie das `{startPage}` Token im **Vorlagenattribut** des **URL-Formatelements** verwenden, um dies anzugeben, wie im folgenden Beispiel gezeigt:
 
 
 ```
@@ -205,7 +205,7 @@ Ein Seitenindex identifiziert die angegebene Ergebnisseite. Wenn Sie möchten, d
 
 
 
-Der OpenSearch-Anbieter ersetzt dann das Token in der URL durch einen Seitennummernparameter. Die erste Anforderung beginnt mit der ersten Seite, wie im folgenden Beispiel gezeigt:
+Der OpenSearch-Anbieter ersetzt dann das Token in der URL durch einen Seitenzahlparameter. Die erste Anforderung beginnt mit der ersten Seite, wie im folgenden Beispiel gezeigt:
 
 
 ```
@@ -215,7 +215,7 @@ https://example.com/rss.php?query=frogs&page=1
 
 
 > [!Note]  
-> Wenn eine vom Webdienst zurückgegebene Seite mit Ergebnissen weniger Elemente als die erwartete Seitengröße enthält, geht der OpenSearch Anbieter davon aus, dass er die letzte Ergebnisseite empfangen hat und keine Anforderungen mehr stellt.
+> Wenn eine Vom Webdienst zurückgegebene Seite mit Ergebnissen weniger Elemente als die erwartete Seitengröße enthält, geht der OpenSearch Anbieter davon aus, dass er die letzte Seite mit Ergebnissen empfangen hat und keine Anforderungen mehr stellt.
 
  
 
@@ -242,7 +242,7 @@ https://example.com/rss.php?query=frogs&start=1&cnt=50
 
 Standardmäßig stellt der OpenSearch-Anbieter Anforderungen mit einer Seitengröße von 50. Wenn Sie eine andere Seitengröße wünschen, geben Sie kein Token an, und platzieren Sie `{count}` stattdessen die gewünschte Zahl direkt im **Url-Vorlagenelement.**
 
-Der OpenSearch-Anbieter bestimmt die Seitengröße basierend auf der Anzahl der Ergebnisse, die bei der ersten Anforderung zurückgegeben werden. Wenn die erste Seite der empfangenen Ergebnisse weniger Elemente enthält als die angeforderte Anzahl, setzt der Anbieter die Seitengröße für alle nachfolgenden Seitenanforderungen zurück. Wenn nachfolgende Seitenanforderungen weniger Elemente als angefordert zurückgeben, geht der OpenSearch Anbieter davon aus, dass er das Ende der Ergebnisse erreicht hat.
+Der OpenSearch-Anbieter bestimmt die Seitengröße basierend auf der Anzahl der Ergebnisse, die bei der ersten Anforderung zurückgegeben werden. Wenn die erste Seite der empfangenen Ergebnisse weniger Elemente enthält als die angeforderte Anzahl, setzt der Anbieter die Seitengröße für alle nachfolgenden Seitenanforderungen zurück. Wenn nachfolgende Seitenanforderungen weniger Elemente als angefordert zurückgeben, geht der OpenSearch-Anbieter davon aus, dass er das Ende der Ergebnisse erreicht hat.
 
 ## <a name="extended-elements-in-windows-federated-search"></a>Erweiterte Elemente in Windows Verbundsuche
 
@@ -276,7 +276,7 @@ Im vorherigen Beispiel wird das Namespacepräfix `ms-ose` im **OpenSearchDescrip
 
 ### <a name="property-mapping"></a>Eigenschaftszuordnung
 
-Wenn Ergebnisse vom Webdienst als RSS- oder Atom-Feed zurückgegeben werden, muss der OpenSearch Anbieter die Elementmetadaten in den Feeds Eigenschaften zuordnen, die die Windows Shell verwenden kann. Der folgende Screenshot veranschaulicht, wie der OpenSearch-Anbieter einige der RSS-Standardelemente zuschaut.
+Wenn Ergebnisse vom Webdienst als RSS- oder Atom-Feed zurückgegeben werden, muss der OpenSearch Anbieter die Elementmetadaten in den Feeds Eigenschaften zuordnen, die die Windows Shell verwenden kann. Der folgende Screenshot veranschaulicht, wie der OpenSearch-Anbieter einige der STANDARDMÄßIGEN RSS-Elemente zu ordnet.
 
 ![Screenshot der integrierten Eigenschaftenzuordnungen "rss-to-windows-shell"](images/built-inrsstowindowsshellpropertymappings.png)
 
@@ -292,7 +292,7 @@ Die Standardzuordnungen von RSS-XML-Elementen zu Windows Shell-Systemeigenschaft
 | Titel                         | System.ItemName                         |
 | Autor                        | System.Author                           |
 | Pubdate                       | System.DateModified                     |
-| BESCHREIBUNG                   | System.AutoSummary                      |
+| Beschreibung                   | System.AutoSummary                      |
 | Kategorie                      | System.Keywords                         |
 | enclosure/@type               | System.MIMEType                         |
 | enclosure/@length             | System.Size                             |
@@ -311,7 +311,7 @@ Die Standardzuordnungen von RSS-XML-Elementen zu Windows Shell-Systemeigenschaft
  
 
 > [!Note]  
-> Zusätzlich zu den Standardzuordnungen von RSS- oder Atom-Standardelementen können Sie andere Windows Shell-Systemeigenschaften zuordnen, indem Sie zusätzliche XML-Elemente in den Windows Namespace für jede der Eigenschaften einschließen. Sie können auch Elemente aus anderen vorhandenen XML-Namespaces wie MediaRSS, iTunes usw. zuordnen, indem Sie der OSDX-Datei eine benutzerdefinierte Eigenschaftenzuordnung hinzufügen.
+> Zusätzlich zu den Standardzuordnungen von RSS- oder Atom-Standardelementen können Sie weitere Windows Shell-Systemeigenschaften zuordnen, indem Sie zusätzliche XML-Elemente in den Windows Namespace für jede der Eigenschaften einschließen. Sie können auch Elemente aus anderen vorhandenen XML-Namespaces wie MediaRSS, iTunes usw. zuordnen, indem Sie der OSDX-Datei eine benutzerdefinierte Eigenschaftenzuordnung hinzufügen.
 
  
 
@@ -394,17 +394,17 @@ Windows stellt ein Kontextmenü mit dem Namen **Dateispeicherort** öffnen für 
 
 
 
-Wenn diese Eigenschaft nicht explizit im XML-Code des Elements festgelegt ist, legt der OpenSearch Anbieter sie auf den übergeordneten Ordner der URL des Elements fest. Im obigen Beispiel verwendet der OpenSearch-Anbieter den Linkwert und legt den [System.ItemFolderPathDisplay](../properties/props-system-itemfolderpathdisplay.md) Windows Shell-Eigenschaftswert auf `"https://example.com/"` fest.
+Wenn diese Eigenschaft nicht explizit im XML-Code des Elements festgelegt ist, legt der OpenSearch Anbieter sie auf den übergeordneten Ordner der URL des Elements fest. Im obigen Beispiel würde der OpenSearch-Anbieter den Linkwert verwenden und [system.ItemFolderPathDisplay](../properties/props-system-itemfolderpathdisplay.md) Windows Shell-Eigenschaftswert auf `"https://example.com/"` festlegen.
 
 ### <a name="customize-windows-explorer-views-with-property-description-lists"></a>Anpassen Windows Explorer-Ansichten mit Eigenschaftenbeschreibungslisten
 
-Einige Windows Explorer-Ansichtslayouts werden durch Eigenschaftenbeschreibungslisten oder Proplists definiert. Eine Proplist ist eine durch Semikolons getrennte Liste von Eigenschaften, z. B. `"prop:System.ItemName; System.Author"` , die verwendet wird, um zu steuern, wie Ihre Ergebnisse in Windows Explorer angezeigt werden.
+Einige Windows Explorer-Ansichtslayouts werden durch Eigenschaftenbeschreibungslisten oder Proplists definiert. Eine Proplist ist eine durch Semikolons getrennte Liste von Eigenschaften, z. B. `"prop:System.ItemName; System.Author"` , die verwendet wird, um zu steuern, wie Die Ergebnisse im Windows-Explorer angezeigt werden.
 
 Die Benutzeroberflächenbereiche von Windows Explorer, die mithilfe von Proplists angepasst werden können, werden im folgenden Screenshot veranschaulicht:
 
 ![Screenshot der Ui-Bereiche des Windows-Explorers, die mithilfe von Proplists angepasst werden können](images/areasofwindowsexplorerthatyoucancontrolwithproplists.png)
 
-Jedem Bereich von Windows Explorer ist ein Satz von Proplists zugeordnet, die selbst als Eigenschaften angegeben werden. Sie können benutzerdefinierte Proplists für einzelne Elemente in Ihren Resultsets oder für alle Elemente in einem Satz von Ergebnissen angeben.
+Jedem Bereich Windows Explorers ist ein Satz von Proplists zugeordnet, die selbst als Eigenschaften angegeben werden. Sie können benutzerdefinierte Proplists für einzelne Elemente in Ihren Resultsets oder für alle Elemente in einem Satz von Ergebnissen angeben.
 
 
 
@@ -450,7 +450,7 @@ Jedem Bereich von Windows Explorer ist ein Satz von Proplists zugeordnet, die se
 
 Die Liste der Eigenschaften, die in den Proplists **System.PropList.ContentViewModeForSearch** und **System.PropList.ContentViewModeForBrowse** angegeben sind, bestimmt, was im Inhaltsansichtsmodus angezeigt wird. Weitere Informationen zu Eigenschaftenlisten finden Sie unter [PropList](/windows/win32/api/propsys/nf-propsys-ipropertysystem-getpropertydescriptionlistfromstring).
 
-Die Eigenschaften werden entsprechend den Zahlen im folgenden Layoutmuster festgelegt:
+Die Eigenschaften werden entsprechend den Zahlen im folgenden Layoutmuster angegeben:
 
 ![Screenshot: Standardlayoutmuster in der Inhaltsansicht](images/propertiesnumberslayoutpattern.png)
 
@@ -475,7 +475,7 @@ Dann wird die folgende Anzeige angezeigt:
 
 ### <a name="property-list-flags"></a>Eigenschaftenlistenflags
 
-Nur eines der flags, die in der Proplists-Dokumentation definiert sind, gilt für die Anzeige von Elementen in Layouts im Inhaltsansichtsmodus: ` "~"` . In den vorherigen Beispielen bezeichnet Windows Explorer einige der Eigenschaften, z. B. `Tags: animals; zoo; lion` . Dies ist das Standardverhalten, wenn Sie eine Eigenschaft in der Liste angeben. Beispielsweise verfügt die Proplist über `"System.Author"` , die als angezeigt `"Authors: value"` wird. Wenn Sie die Eigenschaftenbezeichnung ausblenden möchten, platzieren Sie vor `"~"` dem Eigenschaftennamen eine . Wenn die Proplist z. B. auf hat, wird die Eigenschaft nur als Wert `"~System.Size"` ohne die Bezeichnung angezeigt.
+Nur eines der flags, die in der Proplists-Dokumentation definiert sind, gilt für die Anzeige von Elementen in Layouts im Inhaltsansichtsmodus: ` "~"` . In den vorherigen Beispielen beschriften die Windows Explorer-Ansicht einige der Eigenschaften, z. `Tags: animals; zoo; lion` B. . Dies ist das Standardverhalten, wenn Sie eine Eigenschaft in der Liste angeben. Beispielsweise verfügt die Proplist über `"System.Author"` , die als angezeigt `"Authors: value"` wird. Wenn Sie die Eigenschaftenbezeichnung ausblenden möchten, platzieren Sie vor `"~"` dem Eigenschaftennamen eine . Wenn die Proplist z. B. auf hat, wird die Eigenschaft nur als Wert `"~System.Size"` ohne die Bezeichnung angezeigt.
 
 ## <a name="previews"></a>Vorschau
 
@@ -495,23 +495,23 @@ Im folgenden Flussdiagramm wird diese Logik veranschaulicht.
 
 ![Flussdiagramm, das zeigt, wie der Windows-Explorer die URL auswählt, die für Vorschauversionen verwendet werden soll](images/howwindowsexploreridentifieswhichurltouseforpreviews.png)
 
-Es ist möglich, für die Vorschauversion eine andere URL als für das Element selbst zu verwenden. Wenn Sie also unterschiedliche URLs für die Link-URL und das Gehäuse oder angeben, verwendet Windows Explorer die Link-URL für Vorschauen des Elements, verwendet jedoch die andere URL für die Erkennung, das Öffnen, Herunterladen `media:content URL` usw.
+Es ist möglich, für die Vorschauversion eine andere URL als für das Element selbst zu verwenden. Wenn Sie also unterschiedliche URLs für die Link-URL und das Gehäuse oder angeben, verwendet der Windows-Explorer die Link-URL für eine Vorschau des Elements, verwendet jedoch die andere URL für die Erkennung, das Öffnen, Herunterladen `media:content URL` usw.
 
 Wie Windows Explorer bestimmt, welche URL verwendet werden soll:
 
-1.  Wenn Sie eine Zuordnung zu [System.ItemFolderPathDisplay](../properties/props-system-itemfolderpathdisplay.md)bereitstellen, verwendet Windows Explorer diese URL.
+1.  Wenn Sie [system.ItemFolderPathDisplay](../properties/props-system-itemfolderpathdisplay.md)eine Zuordnung bereitstellen, verwendet Windows Explorer diese URL.
 2.  Wenn Sie keine Zuordnung bereitstellen, ermittelt Windows Explorer, ob die Link- und Gehäuse-URLs unterschiedlich sind. Wenn ja, verwendet Windows Explorer die Link-URL.
 3.  Wenn die URLs identisch sind oder es nur eine Link-URL gibt, analysiert Windows Explorer den Link, um den übergeordneten Container zu finden, indem der Dateiname aus der vollständigen URL entfernt wird.
     > [!Note]  
-    > Wenn Sie erkennen, dass die URL-Analyse zu in dead-Links für Ihren Dienst führen würde, sollten Sie eine explizite Zuordnung für die Eigenschaft bereitstellen.
+    > Wenn Sie erkennen, dass die URL-Analyse zu in dead-Links für Ihren Dienst führen würde, sollten Sie eine explizite Zuordnung für die Eigenschaft angeben.
 
      
 
 ## <a name="open-file-location-menu-item"></a>Menüelement "Dateispeicherort öffnen"
 
-Wenn ein mit der rechten Maustaste auf ein Element klickt, wird der **Menübefehl Dateispeicherort** öffnen angezeigt. Dieser Befehl führt den Benutzer zum Container für oder zum Speicherort dieses Elements. Wenn Sie in einer SharePoint beispielsweise diese Option für eine Datei in einer Dokumentbibliothek auswählen, wird das Stammverzeichnis der Dokumentbibliothek im Webbrowser geöffnet.
+Wenn ein mit der rechten Maustaste auf ein Element klickt, wird der **Menübefehl Dateispeicherort** öffnen angezeigt. Dieser Befehl führt den Benutzer zum Container für oder zum Speicherort dieses Elements. Wenn Sie beispielsweise in SharePoint eine Datei in einer Dokumentbibliothek auswählen, wird das Stammverzeichnis der Dokumentbibliothek im Webbrowser geöffnet.
 
-Wenn ein Benutzer auf Dateispeicherort **öffnen klickt,** Windows Explorer versucht, einen übergeordneten Container mithilfe der im folgenden Flussdiagramm gezeigten Logik zu finden:
+Wenn ein Benutzer auf Dateispeicherort öffnen **klickt,** Windows Explorer versucht, einen übergeordneten Container mithilfe der im folgenden Flussdiagramm gezeigten Logik zu finden:
 
 ![Flussdiagramm, das zeigt, wie der Windows-Explorer einen übergeordneten Container identifiziert](images/howwindowsexploreridentifiesaparentcontainer.png)
 
@@ -526,16 +526,16 @@ Weitere Informationen zum Implementieren eines Suchverbunds in Remotedatenspeich
 [Verbundsuche in Windows 10](-search-federated-search-overview.md)
 </dt> <dt>
 
-[Erste Schritte mit Der Verbundsuche in Windows](getting-started-with-federated-search-in-windows.md)
+[Erste Schritte mit der Verbundsuche in Windows](getting-started-with-federated-search-in-windows.md)
 </dt> <dt>
 
 [Verbinden Ihres Webdiensts in Windows Verbundsuche](-search-federated-search-web-service.md)
 </dt> <dt>
 
-[Aktivieren Ihrer Store in Windows Verbundsuche](-search-federated-search-data-store.md)
+[Aktivieren ihrer Daten Store in Windows Verbundsuche](-search-federated-search-data-store.md)
 </dt> <dt>
 
-[Bewährte Methoden bei der Windows Verbundsuche](-search-fedsearch-best.md)
+[Die folgenden bewährten Methoden in Windows Verbundsuche](-search-fedsearch-best.md)
 </dt> <dt>
 
 [Bereitstellen von Suchconnectors in Windows Verbundsuche](-search-federated-search-deploying.md)

@@ -1,35 +1,35 @@
 ---
-description: Im folgenden Beispiel wird die Prozedur implementiert, die im Verfahren zum Signieren von Daten beschrieben wird.
+description: Im folgenden Beispiel wird das unter Procedure for Signing Data beschriebene Verfahren implementiert.
 ms.assetid: beaf3d67-de2b-4b30-812f-1659386a1bfc
-title: 'Beispiel-C-Programm: Signieren einer Nachricht und Überprüfen einer Nachrichten Signatur'
+title: 'Beispiel C-Programm: Signieren einer Nachricht und Überprüfen einer Nachrichtensignatur'
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 9022b165f586fb293b4de12ec7a8e9f00680b691
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 363b5accb301bc4a3bf46d5f9e6d1fa00fe4f2e52b2e130a543f38ce271b254e
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "104216910"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119007458"
 ---
-# <a name="example-c-program-signing-a-message-and-verifying-a-message-signature"></a>Beispiel-C-Programm: Signieren einer Nachricht und Überprüfen einer Nachrichten Signatur
+# <a name="example-c-program-signing-a-message-and-verifying-a-message-signature"></a>Beispiel C-Programm: Signieren einer Nachricht und Überprüfen einer Nachrichtensignatur
 
-Im folgenden Beispiel wird die Prozedur implementiert, die im [Verfahren zum Signieren von Daten](procedure-for-signing-data.md)beschrieben wird. Allgemeine Informationen finden Sie unter [vereinfachte Nachrichten](simplified-messages.md). Details zu den Funktionen und Strukturen finden Sie in den [grundlegenden Kryptografiefunktionen](cryptography-functions.md), den [vereinfachten Nachrichten Funktionen](cryptography-functions.md)und den [CryptoAPI-Strukturen](cryptography-structures.md).
+Im folgenden Beispiel wird das unter Procedure [for Signing Data beschriebene Verfahren implementiert.](procedure-for-signing-data.md) Allgemeine Informationen finden Sie unter [Vereinfachte Meldungen.](simplified-messages.md) Details zu den Funktionen und Strukturen finden Sie unter [Basiskryptografiefunktionen](cryptography-functions.md), [Vereinfachte Nachrichtenfunktionen](cryptography-functions.md)und [CryptoAPI-Strukturen.](cryptography-structures.md)
 
-Dieses Beispiel enthält auch Code zum Überprüfen der erstellten Nachrichten Signatur. Dieser Code befindet sich normalerweise in einem separaten Programm, ist aber aus Gründen der Vollständigkeit und Klarheit hier enthalten.
+Dieses Beispiel enthält auch Code zum Überprüfen der erstellten Nachrichtensignatur. Dieser Code befindet sich normalerweise in einem separaten Programm, ist aber aus Gründen der Vollständigkeit und Übersichtlichkeit hier enthalten.
 
-In diesem Beispiel werden die folgenden CryptoAPI-Funktionen veranschaulicht:
+Dieses Beispiel veranschaulicht die folgenden CryptoAPI-Funktionen:
 
--   [**CertOpenStore übergebene**](/windows/desktop/api/Wincrypt/nf-wincrypt-certopenstore)
--   [**Cryptsignmessage**](/windows/desktop/api/Wincrypt/nf-wincrypt-cryptsignmessage)
--   [**Cryptveriatymessagesignature**](/windows/desktop/api/Wincrypt/nf-wincrypt-cryptverifymessagesignature)
--   [**Certfreecertififeecontext**](/windows/desktop/api/Wincrypt/nf-wincrypt-certfreecertificatecontext)
--   [**Certclosestore**](/windows/desktop/api/Wincrypt/nf-wincrypt-certclosestore)
+-   [**CertOpenStore**](/windows/desktop/api/Wincrypt/nf-wincrypt-certopenstore)
+-   [**CryptSignMessage**](/windows/desktop/api/Wincrypt/nf-wincrypt-cryptsignmessage)
+-   [**CryptVerifyMessageSignature**](/windows/desktop/api/Wincrypt/nf-wincrypt-cryptverifymessagesignature)
+-   [**CertFreeCertificateContext**](/windows/desktop/api/Wincrypt/nf-wincrypt-certfreecertificatecontext)
+-   [**CertCloseStore**](/windows/desktop/api/Wincrypt/nf-wincrypt-certclosestore)
 
-Das Signieren der Nachricht kann nur mit Zugriff auf ein Zertifikat erfolgen, das über einen verfügbaren [*privaten Schlüssel*](../secgloss/p-gly.md)verfügt. Die Überprüfung der Nachricht kann nur mit Zugriff auf den öffentlichen Schlüssel erfolgen, der sich auf den privaten Schlüssel bezieht, der zum Signieren des Zertifikats verwendet wird. Der Benutzer kann die **\# define** -Anweisung von einem der persönlichen Zertifikate des Benutzers in den Antragsteller Namen ändern.
+Das Signieren der Nachricht kann nur mit Zugriff auf ein Zertifikat erfolgen, das über einen verfügbaren [*privaten Schlüssel verfügt.*](../secgloss/p-gly.md) Die Überprüfung der Nachricht kann nur mit Zugriff auf den öffentlichen Schlüssel im Zusammenhang mit dem privaten Schlüssel erfolgen, der zum Signieren des Zertifikats verwendet wird. Der Benutzer kann die **\# define-Anweisung** aus einem der persönlichen Zertifikate des Benutzers in den Namen des Betreffs ändern.
 
-Außerdem wird in diesem Beispiel die Initialisierung der Crypt \_ Sign \_ Message \_ para-und \_ crypt Verify \_ Message para-Strukturen veranschaulicht, die \_ für Aufrufe von [**cryptsignmessage**](/windows/desktop/api/Wincrypt/nf-wincrypt-cryptsignmessage) und [**cryptverifymessagesignature**](/windows/desktop/api/Wincrypt/nf-wincrypt-cryptverifymessagesignature)benötigt werden.
+Dieses Beispiel veranschaulicht auch die Initialisierung der CRYPT SIGN MESSAGE PARA- und CRYPT VERIFY MESSAGE PARA-Strukturen, die für Aufrufe von \_ \_ \_ \_ \_ \_ [**CryptSignMessage**](/windows/desktop/api/Wincrypt/nf-wincrypt-cryptsignmessage) und [**CryptVerifyMessageSignature erforderlich sind.**](/windows/desktop/api/Wincrypt/nf-wincrypt-cryptverifymessagesignature)
 
-In diesem Beispiel wird auch die Funktion " [**myhanderror**](myhandleerror.md)" verwendet. Der Code für diese Funktion ist im Beispielprogramm enthalten und kann auch in [universell Funktionen](general-purpose-functions.md)angezeigt werden.
+In diesem Beispiel wird auch die [**Funktion MyHandleError verwendet.**](myhandleerror.md) Code für diese Funktion ist im Beispielprogramm enthalten und kann auch in den Universell [verwendet werden.](general-purpose-functions.md)
 
 
 ```C++

@@ -1,7 +1,7 @@
 ---
-description: Führt die Software in einem Array von Vertices aus.
+description: Führen Sie software skinning auf einem Array von Scheitelungen aus.
 ms.assetid: 6c1a713f-4ae7-4ee2-afa6-079dd8354fe7
-title: ID3DX10SkinInfo::D osoftwareskinning-Methode (d3dx10. h)
+title: ID3DX10SkinInfo::D oSoftwareSkinning-Methode (D3DX10.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -14,16 +14,16 @@ api_type:
 api_location:
 - D3DX10.lib
 - D3DX10.dll
-ms.openlocfilehash: 54dfe909e36be0273e0679a824ff0674b0e3b38c
-ms.sourcegitcommit: 14010c34b35fa268046c7683f021f86de08ddd0a
+ms.openlocfilehash: 20f68f51d6886d53d74cd31691e52c362c60d2bf9be2beb0656564cb20fcb80a
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "106363142"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119729810"
 ---
-# <a name="id3dx10skininfodosoftwareskinning-method"></a>ID3DX10SkinInfo::D osoftwareskinning-Methode
+# <a name="id3dx10skininfodosoftwareskinning-method"></a>ID3DX10SkinInfo::D oSoftwareSkinning-Methode
 
-Führt die Software in einem Array von Vertices aus.
+Führen Sie software skinning auf einem Array von Scheitelungen aus.
 
 ## <a name="syntax"></a>Syntax
 
@@ -49,93 +49,93 @@ HRESULT DoSoftwareSkinning(
 
 <dl> <dt>
 
-*StartVertex* \[ in\]
+*StartVertex* \[ In\]
 </dt> <dd>
 
-Typ: **[ **uint**](../winprog/windows-data-types.md)**
+Typ: **[ **UINT**](../winprog/windows-data-types.md)**
 
-Ein 0-basierter Index in psrcvertices.
+Ein 0-basierter Index in pSrcVertices.
 
 </dd> <dt>
 
-*VertexCount* \[ in\]
+*VertexCount* \[ In\]
 </dt> <dd>
 
-Typ: **[ **uint**](../winprog/windows-data-types.md)**
+Typ: **[ **UINT**](../winprog/windows-data-types.md)**
 
-Anzahl der zu transformierenden Scheitel Punkte.
+Anzahl der zu transformierenden Scheitelzeichen.
 
 </dd> <dt>
 
-*psrcvertices* \[ in\]
+*pSrcVertices* \[ In\]
 </dt> <dd>
 
-Typ: **void \***
+Typ: **\* void**
 
-Zeiger auf ein Array von Vertices, die transformiert werden sollen.
+Zeiger auf ein Array von scheitelpunkts, die transformiert werden soll.
 
 </dd> <dt>
 
-*Srcstride* \[ in\]
+*SrcStride* \[ In\]
 </dt> <dd>
 
-Typ: **[ **uint**](../winprog/windows-data-types.md)**
+Typ: **[ **UINT**](../winprog/windows-data-types.md)**
 
-Die Größe eines Scheitel Punkts in psrcvertices (in Byte).
+Die Größe eines Scheitelpunkts in pSrcVertices in Bytes.
 
 </dd> <dt>
 
-*pdestvertices* \[ in, out\]
+*pDestVertices* \[ in, out\]
 </dt> <dd>
 
-Typ: **void \***
+Typ: **\* void**
 
-Zeiger auf ein Array von Vertices, das mit den transformierten Scheitel Punkten gefüllt wird.
+Zeiger auf ein Array von Scheitelpunkt, das mit den transformierten Scheitelpunkt gefüllt wird.
 
 </dd> <dt>
 
-*Deststride* \[ in\]
+*DestStride* \[ In\]
 </dt> <dd>
 
-Typ: **[ **uint**](../winprog/windows-data-types.md)**
+Typ: **[ **UINT**](../winprog/windows-data-types.md)**
 
-Die Größe eines Scheitel Punkts in pdestvertices (in Byte).
+Die Größe eines Scheitelpunkts in pDestVertices in Bytes.
 
 </dd> <dt>
 
-*pbonematrices* \[ in\]
+*pBoneMatrices* \[ In\]
 </dt> <dd>
 
 Typ: **[ **D3DXMATRIX**](../direct3d9/d3dxmatrix.md)\***
 
-Ein Array von Matrizen, das verwendet wird, um die jedem Knochen zugeordneten Punkte zu transformieren, sodass die dem "Bone i" zugeordneten Scheitel Punkte \[ \] von pbonematrices i transformiert werden \[ \] . Dieses Array wird nur verwendet, um die Matrizen zu transformieren, wenn der isnormal-Wert in pchanneldescs auf **false** festgelegt ist, andernfalls wird pinversetransposebonematrices verwendet.
+Ein Array von Matrizen, die verwendet werden, um die punkte zu transformieren, die den einzelnen Gittern zugeordnet sind, damit die Scheitelpunkte, die dem I-Scheitelpunkt zugeordnet sind, von \[ \] pBoneMatrices \[ i transformiert \] werden. Dieses Array wird nur verwendet, um die Matrizen zu transformieren, wenn der IsNormal-Wert in pChannelDescs auf **FALSE** festgelegt ist. Andernfalls wird pInverseTransposeBoneMatrices verwendet.
 
 </dd> <dt>
 
-*pinverabversieinbonematrices* \[ in\]
+*pInverseTransposeBoneMatrices* \[ In\]
 </dt> <dd>
 
 Typ: **[ **D3DXMATRIX**](../direct3d9/d3dxmatrix.md)\***
 
-Wenn dieser Wert **null** ist, wird er auf pbonematrices festgelegt. Dieses Array von Matrizen wird nur verwendet, um die Scheitel Punkte zu transformieren, wenn der isnormal-Wert in pchanneldescs auf **true** festgelegt ist, andernfalls wird pbonematrices verwendet.
+Wenn dieser Wert **NULL ist,** wird er auf pBoneMatrices festgelegt. Dieses Array von Matrizen wird nur verwendet, um die Scheitelungen zu transformieren, wenn der IsNormal-Wert in pChannelDescs auf **TRUE** festgelegt ist. Andernfalls wird pBoneMatrices verwendet.
 
 </dd> <dt>
 
-*pchanneldescs* \[ in\]
+*pChannelDescs* \[ In\]
 </dt> <dd>
 
-Type: **[ **d3dx10 \_ Skinning \_ Channel**](d3dx10-skinning-channel.md)\***
+Typ: **[ **D3DX10 \_ SKINNING \_ CHANNEL**](d3dx10-skinning-channel.md)\***
 
-Zeiger auf eine d3dx10 \_ SKINNING \_ Channel-Struktur, die den Member der Vertex-decl bestimmt, auf der das softwareskinning ausgeführt wird.
+Zeiger auf eine D3DX10 SKINNING CHANNEL-Struktur, die den Member der Scheitelpunkt-Decl bestimmt, auf der die Softwares \_ \_ skinning erfolgt.
 
 </dd> <dt>
 
-*Numchannels* \[ in\]
+*NumChannels* \[ In\]
 </dt> <dd>
 
-Typ: **[ **uint**](../winprog/windows-data-types.md)**
+Typ: **[ **UINT**](../winprog/windows-data-types.md)**
 
-Die Anzahl der d3dx10 \_ Skinning \_ Channel-Strukturen in pchanneldescs.
+Die Anzahl der D3DX10 \_ SKINNING \_ CHANNEL-Strukturen in pChannelDescs.
 
 </dd> </dl>
 
@@ -143,11 +143,11 @@ Die Anzahl der d3dx10 \_ Skinning \_ Channel-Strukturen in pchanneldescs.
 
 Typ: **[ **HRESULT**](https://msdn.microsoft.com/library/Bb401631(v=MSDN.10).aspx)**
 
-Wenn die Methode erfolgreich ausgeführt wird, ist der Rückgabewert S \_ OK. Wenn die Methode fehlschlägt, kann der Rückgabewert lauten: E \_ invalidArg.
+Wenn die Methode erfolgreich ist, ist der Rückgabewert S \_ OK. Wenn bei der Methode ein Fehler auftritt, kann der Rückgabewert sein: E \_ INVALIDARG.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Im folgenden finden Sie ein Beispiel für die Verwendung der softwareskinning:
+Hier ist ein Beispiel für die Verwendung von Software-Skinning:
 
 
 ```
@@ -203,12 +203,12 @@ pSkinInfo->DoSoftwareSkinning(0, numVertices,
 
 | Anforderung | Wert |
 |--------------------|---------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>D3dx10. h</dt> </dl>   |
-| Bibliothek<br/> | <dl> <dt>D3dx10. lib</dt> </dl> |
+| Header<br/>  | <dl> <dt>D3DX10.h</dt> </dl>   |
+| Bibliothek<br/> | <dl> <dt>D3DX10.lib</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 

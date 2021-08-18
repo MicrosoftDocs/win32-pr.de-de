@@ -1,24 +1,24 @@
 ---
-description: Verschlüsselt eine Nachricht, um den Datenschutz mithilfe von Digest bereitzustellen.
+description: Verschlüsselt eine Nachricht, um Datenschutz mithilfe von Digest bereitzustellen.
 ms.assetid: 0045e931-929b-40c4-a524-5664d2fc5170
-title: Verschlüsseltmessage (Digest)-Funktion (SSPI. h)
+title: EncryptMessage(Digest)-Funktion (Sspi.h)
 ms.topic: reference
 ms.date: 07/25/2019
-ms.openlocfilehash: 13bcaa5b91f165321d03e229416741b90a978dc6
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: af16238ca58449c286edd9eabb88d7bc9a3f7fa781fac360863fdd52f7296833
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106342818"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119008428"
 ---
-# <a name="encryptmessage-digest-function"></a>Verschlüsseltmessage (Digest)-Funktion
+# <a name="encryptmessage-digest-function"></a>EncryptMessage-Funktion (Digest)
 
-Die Funktion " **verschlüsseltmessage" (Digest)** verschlüsselt eine Nachricht, um [*Datenschutz*](../secgloss/p-gly.md)bereitzustellen. Mit **verschlüsseltmessage (Digest)** kann die Anwendung zwischen [*Kryptografiealgorithmen*](../secgloss/c-gly.md) auswählen, die vom ausgewählten Mechanismus unterstützt werden. Die Funktion " **verschlüsseltmessage (Digest)** " verwendet den [*Sicherheitskontext*](../secgloss/s-gly.md) , auf den vom Kontext Handle verwiesen wird. Einige Pakete enthalten keine Nachrichten, die verschlüsselt oder entschlüsselt werden müssen, sondern stellen einen Integritäts [*Hash*](../secgloss/h-gly.md) bereit, der überprüft werden kann.
+Die **Funktion EncryptMessage (Digest)** verschlüsselt eine Nachricht, um [*Datenschutz*](../secgloss/p-gly.md)bereitzustellen. **EncryptMessage (Digest)** ermöglicht der Anwendung die Auswahl zwischen [*kryptografischen Algorithmen,*](../secgloss/c-gly.md) die vom ausgewählten Mechanismus unterstützt werden. Die **EncryptMessage (Digest)-Funktion** verwendet den [*Sicherheitskontext,*](../secgloss/s-gly.md) auf den das Kontexthandle verweist. Einige Pakete verfügen nicht über Nachrichten, die verschlüsselt oder entschlüsselt werden müssen, sondern stellen einen [*Integritätshash*](../secgloss/h-gly.md) bereit, der überprüft werden kann.
 
 Diese Funktion ist nur als SASL-Mechanismus verfügbar.
 
 > [!Note]  
-> **Verschlüsseltmessage (Digest)** und [**DecryptMessage (Digest)**](decryptmessage--digest.md) können gleichzeitig von zwei verschiedenen Threads in einem SSPI-Kontext (Single [*Security Support Provider Interface*](../secgloss/s-gly.md) ) aufgerufen werden, wenn ein Thread verschlüsselt und der andere entschlüsselt wird. Wenn mehrere Threads verschlüsselt werden oder mehr als ein Thread entschlüsselt wird, sollte jeder Thread einen eindeutigen Kontext erhalten.
+> **EncryptMessage (Digest)** und [**DecryptMessage (Digest)**](decryptmessage--digest.md) können gleichzeitig von zwei verschiedenen Threads in einem SSPI-Kontext [*(Security Support Provider Interface)*](../secgloss/s-gly.md) aufgerufen werden, wenn ein Thread verschlüsselt und der andere entschlüsselt wird. Wenn mehr als ein Thread verschlüsselt wird oder mehrere Threads entschlüsselt werden, sollte jeder Thread einen eindeutigen Kontext erhalten.
 
  
 
@@ -40,49 +40,49 @@ SECURITY_STATUS SEC_ENTRY EncryptMessage(
 
 <dl> <dt>
 
-*phcontext* \[ in\]
+*phContext* \[ In\]
 </dt> <dd>
 
-Ein Handle für den [*Sicherheitskontext*](../secgloss/s-gly.md) , der zum Verschlüsseln der Nachricht verwendet werden soll.
+Ein Handle für den [*Sicherheitskontext,*](../secgloss/s-gly.md) der zum Verschlüsseln der Nachricht verwendet werden soll.
 
 </dd> <dt>
 
-vollständig verfügbar  \[ in\]
+*fQOP* \[ In\]
 </dt> <dd>
 
-Paket spezifische Flags, die die Qualität des Schutzes angeben. Ein [*Sicherheitspaket*](../secgloss/s-gly.md) kann diesen Parameter verwenden, um die Auswahl von [*Kryptografiealgorithmen*](../secgloss/c-gly.md)zu aktivieren.
+Paketspezifische Flags, die die Qualität des Schutzes angeben. Ein [*Sicherheitspaket*](../secgloss/s-gly.md) kann diesen Parameter verwenden, um die Auswahl [*kryptografischer Algorithmen*](../secgloss/c-gly.md)zu aktivieren.
 
-Wenn Sie den Digest-SSP verwenden, muss dieser Parameter auf 0 (null) festgelegt werden.
+Bei Verwendung des Digest-SSP muss dieser Parameter auf 0 (null) festgelegt werden.
 
 </dd> <dt>
 
 *pMessage* \[ in, out\]
 </dt> <dd>
 
-Ein Zeiger auf eine [**secbufferdebug**](/windows/win32/api/sspi/ns-sspi-secbufferdesc) -Struktur. Bei der Eingabe verweist die Struktur auf eine oder mehrere [**secbuffer**](/windows/win32/api/sspi/ns-sspi-secbuffer) -Strukturen, die den Typ secbuffer-Daten aufweisen können \_ . Dieser Puffer enthält die zu verschlüsselnde Nachricht. Die Nachricht wird direkt verschlüsselt und überschreibt den ursprünglichen Inhalt der Struktur.
+Ein Zeiger auf eine [**SecBufferDesc-Struktur.**](/windows/win32/api/sspi/ns-sspi-secbufferdesc) Bei der Eingabe verweist die -Struktur auf eine oder mehrere [**SecBuffer-Strukturen,**](/windows/win32/api/sspi/ns-sspi-secbuffer) die vom Typ SECBUFFER DATA sein \_ können. Dieser Puffer enthält die zu verschlüsselnde Nachricht. Die Nachricht wird an Ort und Stelle verschlüsselt und überschreibt den ursprünglichen Inhalt der -Struktur.
 
-Die Funktion verarbeitet keine Puffer mit dem schreibgeschützten secbuffer- \_ Attribut.
+Die Funktion verarbeitet keine Puffer mit dem SECBUFFER \_ READONLY-Attribut.
 
-Die Länge der [**secbuffer**](/windows/win32/api/sspi/ns-sspi-secbuffer) -Struktur, die die Nachricht enthält, darf nicht größer als **cbmaximummess** sein, das von der [**QueryContextAttributes (Digest)**](querycontextattributes--digest.md) (secpkg \_ attr \_ Stream \_ sizes)-Funktion abgerufen wird.
+Die Länge der [**SecBuffer-Struktur,**](/windows/win32/api/sspi/ns-sspi-secbuffer) die die Nachricht enthält, darf nicht größer als **cbMaximumMessage** sein, die von der [**Funktion QueryContextAttributes (Digest)**](querycontextattributes--digest.md) (SECPKG \_ ATTR STREAM SIZES) abgerufen \_ \_ wird.
 
-Bei der Verwendung des Digest-SSP muss ein zweiter Puffer vom Typ "secbuffer \_ Padding" oder "sec"-Puffer Daten vorhanden sein, \_ um die \_ [*Signatur*](../secgloss/d-gly.md#_security_digital_signature_gly) Informationen zu speichern. Um die Größe des Ausgabepuffers abzurufen, nennen Sie die [**QueryContextAttributes-Funktion (Digest)**](querycontextattributes--digest.md) , und geben Sie die Größe der secpkg- \_ attr an \_ . Die-Funktion gibt eine [**secpkgcontext \_ sizes**](/windows/win32/api/sspi/ns-sspi-secpkgcontext_sizes) -Struktur zurück. Die Größe des Ausgabepuffers ist die Summe der Werte in den **memmaxsignature** -und **cbblocksize** -Membern.
+Bei Verwendung des Digest-SSP muss ein zweiter Puffer vom Typ SECBUFFER \_ PADDING oder SEC \_ BUFFER DATA \_ vorhanden sein, um [*Signaturinformationen*](../secgloss/d-gly.md#_security_digital_signature_gly) zu speichern. Rufen Sie zum Abrufen der Größe des Ausgabepuffers die [**Funktion QueryContextAttributes (Digest)**](querycontextattributes--digest.md) auf, und geben Sie SECPKG \_ ATTR \_ SIZES an. Die Funktion gibt eine [**SecPkgContext \_ Sizes-Struktur**](/windows/win32/api/sspi/ns-sspi-secpkgcontext_sizes) zurück. Die Größe des Ausgabepuffers ist die Summe der Werte in den **Membern cbMaxSignature** und **cbBlockSize.**
 
-Anwendungen, die nicht SSL verwenden, müssen einen [**secbuffer**](/windows/win32/api/sspi/ns-sspi-secbuffer) des Typs secbuffer-Auffüll Zeichen bereitstellen \_ .
+Anwendungen, die SSL nicht verwenden, müssen einen [**SecBuffer**](/windows/win32/api/sspi/ns-sspi-secbuffer) vom Typ SECBUFFER \_ PADDING bereitstellen.
 
 </dd> <dt>
 
-*Messageseqno* \[ in\]
+*MessageSeqNo* \[ In\]
 </dt> <dd>
 
-Die Sequenznummer, die der Nachricht von der Transport Anwendung zugewiesen wurde. Wenn die Transport Anwendung keine Sequenznummern beibehält, muss dieser Parameter NULL sein.
+Die Sequenznummer, die die Transportanwendung der Nachricht zugewiesen hat. Wenn die Transportanwendung keine Sequenznummern verwaltet, muss dieser Parameter 0 (null) sein.
 
-Wenn Sie den Digest-SSP verwenden, muss dieser Parameter auf 0 (null) festgelegt werden. Der Digest-SSP verwaltet die Sequenz Nummerierung intern.
+Bei Verwendung des Digest-SSP muss dieser Parameter auf 0 (null) festgelegt werden. Der Digest-SSP verwaltet die Sequenznummerierung intern.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Wenn die Funktion erfolgreich ausgeführt wird, gibt die Funktion sec \_ E \_ OK zurück.
+Wenn die Funktion erfolgreich ist, gibt die Funktion SEC \_ E \_ OK zurück.
 
 Wenn die Funktion fehlschlägt, wird einer der folgenden Fehlercodes zurückgegeben.
 
@@ -90,25 +90,25 @@ Wenn die Funktion fehlschlägt, wird einer der folgenden Fehlercodes zurückgege
 
 | Rückgabecode                                                                                                    | Beschreibung                                                                                                                                                                                                                                   |
 |----------------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| <dl> <dt>**Sekunde \_ E \_ Puffer \_ zu \_ klein**</dt> </dl>      | Der Ausgabepuffer ist zu klein. Weitere Informationen finden Sie in den Hinweisen.<br/>                                                                                                                                                                 |
-| <dl> <dt>**Sek. \_ E \_ Kontext \_ abgelaufen**</dt> </dl>        | Die Anwendung verweist auf einen Kontext, der bereits geschlossen wurde. Diese Fehlermeldung sollte von einer ordnungsgemäß geschriebenen Anwendung nicht empfangen werden.<br/>                                                                                               |
-| <dl> <dt>**s \_ E \_ \_ Kryptografiesystem \_ ungültig**</dt> </dl> | Die für den [*Sicherheitskontext*](../secgloss/s-gly.md) ausgewählte [*Chiffre*](../secgloss/c-gly.md) wird nicht unterstützt.<br/>                                                                                                         |
-| <dl> <dt>**SEK \_ b \_ nicht genügend Arbeits \_ Speicher**</dt> </dl>    | Es ist nicht genügend Arbeitsspeicher verfügbar, um die angeforderte Aktion abzuschließen.<br/>                                                                                                                                                             |
-| <dl> <dt>**s \_ E \_ ungültiges \_ handle**</dt> </dl>         | Im Parameter " *phcontext* " wurde ein ungültiges Kontext Handle angegeben.<br/>                                                                                                                                                     |
-| <dl> <dt>**s \_ E \_ ungültiges \_ Token**</dt> </dl>          | Es wurde kein \_ Datentypen Puffer für den secbuffer gefunden.<br/>                                                                                                                                                                                          |
-| <dl> <dt>**Sek. \_ E- \_ QoP \_ nicht \_ unterstützt**</dt> </dl>     | Die Vertraulichkeit und [*Integrität*](../secgloss/i-gly.md) werden vom [*Sicherheitskontext*](../secgloss/s-gly.md)nicht unterstützt.<br/> |
+| <dl> <dt>**SEC \_ E \_ BUFFER \_ TOO \_ SMALL**</dt> </dl>      | Der Ausgabepuffer ist zu klein. Weitere Informationen finden Sie in den Hinweisen.<br/>                                                                                                                                                                 |
+| <dl> <dt>**SEC \_ E \_ CONTEXT \_ EXPIRED**</dt> </dl>        | Die Anwendung verweist auf einen Kontext, der bereits geschlossen wurde. Eine ordnungsgemäß geschriebene Anwendung sollte diesen Fehler nicht erhalten.<br/>                                                                                               |
+| <dl> <dt>**SEC \_ E \_ CRYPTO \_ SYSTEM \_ INVALID**</dt> </dl> | Das für den [*Sicherheitskontext*](../secgloss/s-gly.md) ausgewählte [*Verschlüsselungsverfahren*](../secgloss/c-gly.md) wird nicht unterstützt.<br/>                                                                                                         |
+| <dl> <dt>**SEC \_ E \_ INSUFFICIENT \_ MEMORY**</dt> </dl>    | Es ist nicht genügend Arbeitsspeicher verfügbar, um die angeforderte Aktion abzuschließen.<br/>                                                                                                                                                             |
+| <dl> <dt>**SEC \_ E \_ INVALID \_ HANDLE**</dt> </dl>         | Ein ungültiges Kontexthandle wurde im *phContext-Parameter* angegeben.<br/>                                                                                                                                                     |
+| <dl> <dt>**SEC \_ E \_ INVALID \_ TOKEN**</dt> </dl>          | Es wurde kein \_ SECBUFFER-DATENTYPpuffer gefunden.<br/>                                                                                                                                                                                          |
+| <dl> <dt>**SEC \_ E \_ QOP NICHT \_ \_ UNTERSTÜTZT**</dt> </dl>     | Weder Vertraulichkeit noch [*Integrität*](../secgloss/i-gly.md) werden vom [*Sicherheitskontext*](../secgloss/s-gly.md)unterstützt.<br/> |
 
 
 
  
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die Funktion **verschlüsseltmessage (Digest)** verschlüsselt eine Nachricht auf der Grundlage der Nachricht und des [*Sitzungsschlüssels*](../secgloss/s-gly.md) aus einem [*Sicherheitskontext*](../secgloss/s-gly.md).
+Die **EncryptMessage (Digest)-Funktion** verschlüsselt eine Nachricht basierend auf der Nachricht und dem [*Sitzungsschlüssel*](../secgloss/s-gly.md) aus einem [*Sicherheitskontext.*](../secgloss/s-gly.md)
 
-Wenn die Transport Anwendung den [*Sicherheitskontext*](../secgloss/s-gly.md) zur Unterstützung der Sequenz Erkennung erstellt hat und der Aufrufer eine Sequenznummer bereitstellt, enthält die-Funktion diese Informationen mit der verschlüsselten Nachricht. Das einschließen dieser Informationen schützt vor Wiedergabe, Einfügung und Unterdrückung von Nachrichten. Das [*Sicherheitspaket*](../secgloss/s-gly.md) enthält die Sequenznummer, die von der Transport Anwendung zurückgegeben wurde.
+Wenn die Transportanwendung den [*Sicherheitskontext*](../secgloss/s-gly.md) zur Unterstützung der Sequenzerkennung erstellt hat und der Aufrufer eine Sequenznummer bereitstellt, enthält die Funktion diese Informationen mit der verschlüsselten Nachricht. Das Einschließen dieser Informationen schützt vor Wiedergabe, Einfügung und Unterdrückung von Nachrichten. Das [*Sicherheitspaket*](../secgloss/s-gly.md) enthält die Sequenznummer, die von der Transportanwendung übergeben wird.
 
-Wenn Sie den Digest-SSP verwenden, rufen Sie die Größe des Ausgabepuffers ab, indem Sie die Funktion [**QueryContextAttributes (Digest)**](querycontextattributes--digest.md) aufrufen und die Größe der secpkg- \_ attr angeben \_ . Die-Funktion gibt eine [**secpkgcontext \_ sizes**](/windows/win32/api/sspi/ns-sspi-secpkgcontext_sizes) -Struktur zurück. Die Größe des Ausgabepuffers ist die Summe der Werte in den **memmaxsignature** -und **cbblocksize** -Membern.
+Wenn Sie den Digest-SSP verwenden, rufen Sie die Größe des Ausgabepuffers ab, indem Sie die [**QueryContextAttributes (Digest)-Funktion**](querycontextattributes--digest.md) aufrufen und SECPKG \_ ATTR \_ SIZES angeben. Die Funktion gibt eine [**SecPkgContext \_ Sizes-Struktur**](/windows/win32/api/sspi/ns-sspi-secpkgcontext_sizes) zurück. Die Größe des Ausgabepuffers ist die Summe der Werte in den **Membern cbMaxSignature** und **cbBlockSize.**
 
 > [!Note]  
 > Diese Puffer müssen in der angezeigten Reihenfolge angegeben werden.
@@ -117,20 +117,20 @@ Wenn Sie den Digest-SSP verwenden, rufen Sie die Größe des Ausgabepuffers ab, 
 
 
 
-| Puffertyp                           | BESCHREIBUNG                                                                                                                    |
+| Puffertyp                           | Beschreibung                                                                                                                    |
 |---------------------------------------|--------------------------------------------------------------------------------------------------------------------------------|
-| secbuffer \_ - \_ Streamheader<br/>  | Wird intern verwendet. Es ist keine Initialisierung erforderlich.<br/>                                                                        |
-| secbuffer- \_ Daten<br/>            | Enthält die zu verschlüsselnde [*Klartext*](../secgloss/s-gly.md) -Nachricht.<br/> |
-| secbuffer- \_ streamnachspann \_<br/> | Wird intern verwendet. Es ist keine Initialisierung erforderlich.<br/>                                                                        |
-| secbuffer ist \_ leer.<br/>           | Wird intern verwendet. Es ist keine Initialisierung erforderlich. Die Größe kann NULL sein.<br/>                                                      |
+| \_SECBUFFER-STREAMHEADER \_<br/>  | Wird intern verwendet. Keine Initialisierung erforderlich.<br/>                                                                        |
+| SECBUFFER \_ DATA<br/>            | Enthält die zu verschlüsselnde [*Klartextnachricht.*](../secgloss/s-gly.md)<br/> |
+| SECBUFFER \_ STREAM \_ TRAILER<br/> | Wird intern verwendet. Keine Initialisierung erforderlich.<br/>                                                                        |
+| SECBUFFER \_ EMPTY<br/>           | Wird intern verwendet. Keine Initialisierung erforderlich. Die Größe kann 0 (null) sein.<br/>                                                      |
 
 
 
  
 
-Um eine optimale Leistung zu erzielen, sollten die *pMessage* -Strukturen aus einem zusammenhängenden Speicher zugeordnet werden.
+Um eine optimale Leistung zu erzielen, sollten die *pMessage-Strukturen* aus zusammenhängendem Speicher zugeordnet werden.
 
-**Windows XP:** Diese Funktion wurde auch als " **versiesagemessage**" bezeichnet. Anwendungen sollten jetzt nur " **verschlüsseltmessage (Digest)** " verwenden.
+**Windows XP:** Diese Funktion wurde auch als **SealMessage** bezeichnet. Anwendungen sollten jetzt nur **EncryptMessage (Digest)** verwenden.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -138,22 +138,22 @@ Um eine optimale Leistung zu erzielen, sollten die *pMessage* -Strukturen aus ei
 
 | Anforderung | Wert |
 |-------------------------------------|--------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows XP \[ -Desktop-Apps\]<br/>                                                            |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/>                                                   |
-| Header<br/>                   | <dl> <dt>SSPI. h (Include Security. h)</dt> </dl> |
-| Bibliothek<br/>                  | <dl> <dt>Secur32. lib</dt> </dl>                 |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur XP-Desktop-Apps\]<br/>                                                            |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                                                   |
+| Header<br/>                   | <dl> <dt>Sspi.h (include Security.h)</dt> </dl> |
+| Bibliothek<br/>                  | <dl> <dt>Secur32.lib</dt> </dl>                 |
 | DLL<br/>                      | <dl> <dt>Secur32.dll</dt> </dl>                 |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
 [SSPI-Funktionen](authentication-functions.md#sspi-functions)
 </dt> <dt>
 
-[**Akzeptsecuritycontext (Digest)**](acceptsecuritycontext--digest.md)
+[**AcceptSecurityContext (Digest)**](acceptsecuritycontext--digest.md)
 </dt> <dt>
 
 [**DecryptMessage (Digest)**](decryptmessage--digest.md)
@@ -165,10 +165,10 @@ Um eine optimale Leistung zu erzielen, sollten die *pMessage* -Strukturen aus ei
 [**QueryContextAttributes (Digest)**](querycontextattributes--digest.md)
 </dt> <dt>
 
-[**Secbuffer**](/windows/win32/api/sspi/ns-sspi-secbuffer)
+[**SecBuffer**](/windows/win32/api/sspi/ns-sspi-secbuffer)
 </dt> <dt>
 
-[**Secbufferdebug**](/windows/win32/api/sspi/ns-sspi-secbufferdesc)
+[**SecBufferDesc**](/windows/win32/api/sspi/ns-sspi-secbufferdesc)
 </dt> </dl>
 
  

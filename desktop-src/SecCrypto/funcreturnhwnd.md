@@ -1,7 +1,7 @@
 ---
-description: Wird von einem Kryptografiedienstanbieter (kryptografischen Service Provider, CSP) verwendet, um das Fenster Handle abzurufen, das der CSP als übergeordnetes Element oder Besitzer einer beliebigen angezeigten Benutzeroberfläche verwenden soll.
+description: Wird von einem Kryptografiedienstanbieter (Cryptographic Service Provider, CSP) verwendet, um das Fensterhand handle zu erhalten, das der CSP als übergeordnetes Element oder Besitzer einer beliebigen angezeigten Benutzeroberfläche verwenden soll.
 ms.assetid: 56f189e7-073b-4b42-b6ab-0147853fe6d5
-title: CRYPT_RETURN_HWND Funktionszeiger (cspdk. h)
+title: CRYPT_RETURN_HWND Funktionszeiger (Cspdk.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,16 +13,16 @@ api_type:
 - UserDefined
 api_location:
 - Cspdk.h
-ms.openlocfilehash: 32fadef6c231aa2ca63305a3da9d2142d0abe9c2
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 387e1e9140dac8081acf851eb7125a612506783adbeefe1174137ff7f74fae9d
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106352305"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119006748"
 ---
-# <a name="crypt_return_hwnd-function-pointer"></a>Crypt \_ Return- \_ HWND-Funktionszeiger
+# <a name="crypt_return_hwnd-function-pointer"></a>CRYPT \_ RETURN \_ HWND-Funktionszeiger
 
-Die Funktion " **funkreturnhwnd** Callback" wird von einem [*Kryptografiedienstanbieter (kryptografischen Service Provider*](../secgloss/c-gly.md) , CSP) verwendet, um das Fenster Handle abzurufen, das der CSP als übergeordnetes Element oder als Besitzer einer beliebigen angezeigten Benutzeroberfläche verwenden soll.
+Die **FuncReturnhWnd-Rückruffunktion** wird von einem Kryptografiedienstanbieter (Cryptographic [*Service Provider,*](../secgloss/c-gly.md) CSP) verwendet, um das Fensterhand handle zu erhalten, das der CSP als übergeordnetes Element oder Besitzer einer angezeigten Benutzeroberfläche verwenden soll.
 
 ## <a name="syntax"></a>Syntax
 
@@ -39,10 +39,10 @@ typedef void ( WINAPI *CRYPT_RETURN_HWND)(
 
 <dl> <dt>
 
-*phwnd* \[ in, out\]
+*phWnd* \[ in, out\]
 </dt> <dd>
 
-Die Adresse einer **HWND** -Variablen, die das übergeordnete Fenster Handle empfängt.
+Die Adresse einer **HWND-Variablen,** die das übergeordnete Fensterhand handle empfängt.
 
 </dd> </dl>
 
@@ -56,20 +56,20 @@ Dieser Funktionszeiger gibt keinen Wert zurück.
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows XP \[ -Desktop-Apps\]<br/>                                        |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/>                               |
-| Header<br/>                   | <dl> <dt>Cspdk. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ XP-Desktop-Apps\]<br/>                                        |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                               |
+| Header<br/>                   | <dl> <dt>Cspdk.h</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Cpacquirecontext**](https://www.bing.com/search?q=**CPAcquireContext**)
+[**CPAcquireContext**](https://www.bing.com/search?q=**CPAcquireContext**)
 </dt> <dt>
 
-[**Vtableprovstruc**](vtableprovstruc.md)
+[**VTableProvStruc**](vtableprovstruc.md)
 </dt> </dl>
 
  

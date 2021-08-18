@@ -1,7 +1,7 @@
 ---
-description: Ruft ein Handle für einen Kryptografiedienstanbieter (CSP) und eine Schlüssel Spezifikation für einen Zertifikat Kontext ab.
+description: Ruft ein Handle für einen Kryptografiedienstanbieter (Cryptographic Service Provider, CSP) und eine Schlüsselspezifikation für einen Zertifikatkontext ab.
 ms.assetid: ff72231f-e10f-49d2-b0e0-0008923803cc
-title: Getcryptprovfromcert-Funktion
+title: GetCryptProvFromCert-Funktion
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,24 +13,24 @@ api_type:
 - DllExport
 api_location:
 - Mssign32.dll
-ms.openlocfilehash: bcd396c45333dee42bae4cb8bdfdd52792f1bdd6
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: c885c439014a26bafba3be8614981c67d200e9f87cd4e3c4f03e8cbcc1b77e38
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "104350128"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119006658"
 ---
-# <a name="getcryptprovfromcert-function"></a>Getcryptprovfromcert-Funktion
+# <a name="getcryptprovfromcert-function"></a>GetCryptProvFromCert-Funktion
 
 > [!IMPORTANT]
 > Diese API ist veraltet. Microsoft kann diese API in zukünftigen Versionen entfernen.
 
  
 
-Die **getcryptprovfromcert** -Funktion Ruft ein Handle für einen [*Kryptografiedienstanbieter*](../secgloss/c-gly.md) (CSP) und eine Schlüssel Spezifikation für einen [*Zertifikat*](../secgloss/c-gly.md) Kontext ab. Verwenden Sie diese Funktion, um Zugriff auf den [*privaten Schlüssel*](../secgloss/p-gly.md) des Zertifikat Ausstellers zu erhalten.
+Die **GetCryptProvFromCert-Funktion** ruft ein Handle für einen [*Kryptografiedienstanbieter (Cryptographic Service Provider,*](../secgloss/c-gly.md) CSP) und eine Schlüsselspezifikation für einen [*Zertifikatkontext*](../secgloss/c-gly.md) ab. Verwenden Sie diese Funktion, um Zugriff auf den [*privaten Schlüssel*](../secgloss/p-gly.md) des Zertifikatausstellers zu erhalten.
 
 > [!Note]  
-> Diese Funktion verfügt über keine zugeordnete Header Datei oder Import Bibliothek. Um diese Funktion aufzurufen, müssen Sie eine benutzerdefinierte Header Datei erstellen und die [**LoadLibrary**](/windows/win32/api/libloaderapi/nf-libloaderapi-loadlibrarya) -Funktion und die [**GetProcAddress**](/windows/win32/api/libloaderapi/nf-libloaderapi-getprocaddress) -Funktion verwenden, um dynamisch mit Mssign32.dll zu verknüpfen.
+> Dieser Funktion ist keine Headerdatei oder Importbibliothek zugeordnet. Um diese Funktion aufzurufen, müssen Sie eine benutzerdefinierte Headerdatei erstellen und die [**Funktionen LoadLibrary**](/windows/win32/api/libloaderapi/nf-libloaderapi-loadlibrarya) und [**GetProcAddress**](/windows/win32/api/libloaderapi/nf-libloaderapi-getprocaddress) verwenden, um dynamisch eine Verknüpfung mit Mssign32.dll herzustellen.
 
  
 
@@ -56,73 +56,73 @@ BOOL WINAPI GetCryptProvFromCert(
 
 <dl> <dt>
 
-*HWND* \[ in\]
+*hwnd* \[ In\]
 </dt> <dd>
 
-Das Handle des Fensters, das als Besitzer beliebiger Dialogfelder verwendet werden soll, die angezeigt werden. Dieser Member wird derzeit nicht verwendet und wird ignoriert. Es ist sicher, **null** für diesen Parameter zu übergeben.
+Das Handle des Fensters, das als Besitzer aller angezeigten Dialogfelder verwendet werden soll. Dieser Member wird derzeit nicht verwendet und ignoriert. Es ist sicher, **NULL** für diesen Parameter zu übergeben.
 
 </dd> <dt>
 
-*pcert* \[ in\]
+*pCert* \[ In\]
 </dt> <dd>
 
-Ein Zeiger auf eine [**CERT- \_ Kontext**](/windows/desktop/api/Wincrypt/ns-wincrypt-cert_context) Struktur für das Zertifikat.
+Ein Zeiger auf eine [**CERT \_ CONTEXT-Struktur**](/windows/desktop/api/Wincrypt/ns-wincrypt-cert_context) für das Zertifikat.
 
 </dd> <dt>
 
-*phcryptprov* \[ vorgenommen\]
+*phCryptProv* \[ out\]
 </dt> <dd>
 
-Ein Zeiger auf eine [**hcryptprov**](hcryptprov.md) -Struktur, die ein Handle für den CSP ist.
+Ein Zeiger auf eine [**HCRYPTPROV-Struktur,**](hcryptprov.md) die ein Handle für den CSP ist.
 
 </dd> <dt>
 
-*pdwkeyspec* \[ vorgenommen\]
+*pdwKeySpec* \[ out\]
 </dt> <dd>
 
-Die Spezifikation des abzurufenden privaten Schlüssels. Mögliche Werte sind **bei \_ keyexchange** oder **bei \_ Signatur**.
+Die Spezifikation des abzurufende privaten Schlüssels. Mögliche Werte sind **AT \_ KEYEXCHANGE** oder **AT \_ SIGNATURE.**
 
 </dd> <dt>
 
-*pfdidcryptacquire* \[ in\]
+*pfDidCryptAcquire* \[ In\]
 </dt> <dd>
 
-Ein-Wert, der angibt, ob die Funktion das Anbieter handle basierend auf dem Zertifikat abgerufen hat.
+Ein -Wert, der angibt, ob die Funktion das Anbieterhandle basierend auf dem Zertifikat bezogen hat.
 
 </dd> <dt>
 
-*ppwsztmpcontainer* \[ Out, optional\]
+*ppwszTmpContainer* \[ out, optional\]
 </dt> <dd>
 
-Die Adresse eines Zeigers auf eine NULL-terminierte Zeichenfolge für den temporären Schlüssel Container Namen. Mit der **getcryptprovfromcert** -Funktion wird der temporäre Container bereitstellt und initialisiert. Beim Aufrufen von **getcryptprovfromcert** sollte die Adresse auf einen **null** -Wert zeigen.
+Die Adresse eines Zeigers auf eine auf NULL endende Zeichenfolge für den Namen des temporären Schlüsselcontainers. Die **GetCryptProvFromCert-Funktion** stellt den temporären Container bereit und initialisiert sie. Beim Aufrufen **von GetCryptProvFromCert** sollte die Adresse auf einen **NULL-Wert** verweisen.
 
 </dd> <dt>
 
-*ppwszprovidername* \[ Out, optional\]
+*ppwszProviderName* \[ out, optional\]
 </dt> <dd>
 
-Die Adresse eines Zeigers auf eine NULL-terminierte Zeichenfolge für den Anbieter Namen. Die **getcryptprovfromcert** -Funktion gibt den Anbieter Namen zurück. Beim Aufrufen von **getcryptprovfromcert** sollte die Adresse auf einen **null** -Wert zeigen.
+Die Adresse eines Zeigers auf eine auf NULL endende Zeichenfolge für den Anbieternamen. Die **GetCryptProvFromCert-Funktion** gibt den Anbieternamen zurück. Beim Aufrufen **von GetCryptProvFromCert** sollte die Adresse auf einen **NULL-Wert** verweisen.
 
 </dd> <dt>
 
-*pdwprovidertype* \[ vorgenommen\]
+*pdwProviderType* \[ out\]
 </dt> <dd>
 
-Gibt den CSP-Typ an. Dies kann NULL oder einer der [kryptografieanbiettypen](cryptographic-provider-types.md)sein. Wenn dieser Member 0 (null) ist, ist der Schlüssel Container einer der CNG-Schlüsselspeicher Anbieter.
+Gibt den CSP-Typ an. Dies kann 0 (null) oder einer der [Kryptografieanbietertypen sein.](cryptographic-provider-types.md) Wenn dieser Member 0 (null) ist, ist der Schlüsselcontainer einer der CNG-Schlüsselspeicheranbieter.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Bei Erfolg gibt diese Funktion " **true**" zurück. Die **getcryptprovfromcert** -Funktion gibt **false** zurück, wenn Sie fehlschlägt.
+Bei Erfolg gibt diese Funktion **TRUE** zurück. Die **GetCryptProvFromCert-Funktion** gibt **FALSE** zurück, wenn sie fehlschlägt.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Das [Makecert](makecert.md) -Tool ruft **getcryptprovfromcert** auf, wenn Sie es mithilfe der Befehlszeilenoption **-is** aufrufen.
+Das [MakeCert-Tool](makecert.md) ruft **GetCryptProvFromCert** auf, wenn Sie es mithilfe der Befehlszeilenoption **-is** aufrufen.
 
-Wenn der Parameter " *pfdidcryptacquire* " auf " **true**" festgelegt ist, legt die Funktion die Parameter " *phcryptprov*", " *pdwkeyspec*" und " *pdwprovidertype* " auf die Anbieter Werte fest.
+Wenn der *pfDidCryptAcquire-Parameter* auf **TRUE** festgelegt ist, legt die Funktion die Parameter *phCryptProv,* *pdwKeySpec* und *pdwProviderType* auf die Anbieterwerte fest.
 
-Wenn Sie die Verwendung des CSP abgeschlossen haben, können Sie es durch Aufrufen der [**freecryptprovfromcert**](freecryptprovfromcert.md) -Funktion freigeben.
+Wenn Sie den CSP nicht mehr verwenden, können Sie ihn freigeben, indem Sie die [**FreeCryptProvFromCert-Funktion**](freecryptprovfromcert.md) aufrufen.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -130,8 +130,8 @@ Wenn Sie die Verwendung des CSP abgeschlossen haben, können Sie es durch Aufruf
 
 | Anforderung | Wert |
 |-------------------------------------|-----------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows XP \[ -Desktop-Apps\]<br/>                                             |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/>                                    |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur XP-Desktop-Apps\]<br/>                                             |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                                    |
 | DLL<br/>                      | <dl> <dt>Mssign32.dll</dt> </dl> |
 
 

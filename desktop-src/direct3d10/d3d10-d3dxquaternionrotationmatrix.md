@@ -14,12 +14,12 @@ api_type:
 api_location:
 - D3DX10.lib
 - D3DX10.dll
-ms.openlocfilehash: cb923c135d436b36fe032d344366fdee687d27a0
-ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
+ms.openlocfilehash: a27a75261c177fc39bca75af667f244ddef25e9a7f541a1bbdc5da6b4574f427
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2021
-ms.locfileid: "108103148"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118991030"
 ---
 # <a name="d3dxquaternionrotationmatrix-function-d3dx10mathh"></a>D3DXQuaternionRotationMatrix-Funktion (D3DX10Math.h)
 
@@ -46,7 +46,7 @@ D3DXQUATERNION* D3DXQuaternionRotationMatrix(
 
 Typ: **[ **D3DXQUATERNION**](../direct3d9/d3dxquaternion.md)\***
 
-Zeiger auf [**D3DXQUATERNION,**](d3d10-d3dxquaternion.md) das das Ergebnis des Vorgangs ist.
+Zeiger auf das [**D3DXQUATERNION-Steuerelement,**](d3d10-d3dxquaternion.md) das das Ergebnis des Vorgangs ist.
 
 </dd> <dt>
 
@@ -65,17 +65,17 @@ Typ: **[ **D3DXQUATERNION**](../direct3d9/d3dxquaternion.md)\***
 
 Zeiger auf die D3DXQUATERNION-Struktur, die aus einer Rotationsmatrix erstellt wurde.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
 Der Rückgabewert für diese Funktion ist der gleiche Wert, der im pOut-Parameter zurückgegeben wird. Auf diese Weise kann die D3DXQuaternionRotationMatrix-Funktion als Parameter für eine andere Funktion verwendet werden.
 
-Verwenden Sie [**D3DXQuaternionNormalize**](d3d10-d3dxquaternionnormalize.md) für alle Quaternioneingaben, die nicht bereits normalisiert sind.
+Verwenden [**Sie D3DXQuaternionNormalize**](d3d10-d3dxquaternionnormalize.md) für alle Quaternioneingaben, die noch nicht normalisiert sind.
 
 ## <a name="requirements"></a>Anforderungen
 
 
 
-| Anforderungen | Wert |
+| Anforderung | Wert |
 |--------------------|-----------------------------------------------------------------------------------------|
 | Header<br/>  | <dl> <dt>D3DX10Math.h</dt> </dl> |
 | Bibliothek<br/> | <dl> <dt>D3DX10.lib</dt> </dl>   |

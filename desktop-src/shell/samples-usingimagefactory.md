@@ -1,5 +1,5 @@
 ---
-description: Veranschaulicht die Verwendung der IShellItemImageFactory-Schnittstelle, um das bestmögliche Image für ein Element zu erhalten.
+description: Veranschaulicht, wie die IShellItemImageFactory-Schnittstelle verwendet wird, um das bestmögliche Image für ein Element zu erhalten.
 title: Verwenden von Image Factory (Beispiel)
 ms.topic: article
 ms.date: 05/31/2018
@@ -18,7 +18,7 @@ ms.locfileid: "118968759"
 ---
 # <a name="using-image-factory-sample"></a>Verwenden von Image Factory (Beispiel)
 
-Veranschaulicht die Verwendung der [**IShellItemImageFactory-Schnittstelle,**](/windows/desktop/api/shobjidl_core/nn-shobjidl_core-ishellitemimagefactory) um das bestmögliche Image für ein Element zu erhalten.
+Veranschaulicht, wie die [**IShellItemImageFactory-Schnittstelle verwendet**](/windows/desktop/api/shobjidl_core/nn-shobjidl_core-ishellitemimagefactory) wird, um das bestmögliche Image für ein Element zu erhalten.
 
 Dieses Thema enthält folgende Abschnitte:
 
@@ -31,7 +31,7 @@ Dieses Thema enthält folgende Abschnitte:
 
 
 
-| Product (Produkt)                                | Mindestversion des Produkts |
+| Product (Produkt)                                | Mindestproduktversion |
 |----------------------------------------|-------------------------|
 | Windows                                | Windows Vista           |
 | Windows Software Development Kit (SDK) | 6.1                     |

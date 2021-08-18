@@ -13,7 +13,7 @@ ms.locfileid: "118989310"
 ---
 # <a name="clearing-depth-buffers-direct3d-9"></a>Löschen von Tiefenpuffern (Direct3D 9)
 
-Viele C++-Anwendungen löschen den Tiefenpuffer, bevor sie jeden neuen Frame rendern. Sie können den Tiefenpuffer explizit über Direct3D löschen, indem Sie [**IDirect3DDevice9::Clear**](/windows/win32/api/d3d9helper/nf-d3d9helper-idirect3ddevice9-clear) aufrufen und D3DCLEAR \_ ZBUFFER für den Flags-Parameter angeben. Mit **der IDirect3DDevice9::Clear-Methode** können Sie einen beliebigen Tiefenwert im Z-Parameter angeben.
+Viele C++-Anwendungen löschen den Tiefenpuffer, bevor sie jeden neuen Frame rendern. Sie können den Tiefenpuffer explizit über Direct3D löschen, indem Sie [**IDirect3DDevice9::Clear**](/windows/win32/api/d3d9helper/nf-d3d9helper-idirect3ddevice9-clear) aufrufen und D3DCLEAR ZBUFFER für den \_ Flags-Parameter angeben. Mit **der IDirect3DDevice9::Clear-Methode** können Sie einen beliebigen Tiefenwert im Z-Parameter angeben.
 
 ## <a name="related-topics"></a>Zugehörige Themen
 

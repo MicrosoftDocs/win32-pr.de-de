@@ -1,11 +1,11 @@
 ---
-title: Inapenforcementclientconnection getisolationinfo-Methode (natzforcementclient. h)
-description: Wird verwendet, um die Isolations Informationen des Clients zu erhalten.
+title: INapEnforcementClientConnection GetIsolationInfo-Methode (NapEnforcementClient.h)
+description: Wird verwendet, um die Isolationsinformationen des Clients abzurufen.
 ms.assetid: 33040554-dcbe-4563-b047-fc7e28bac55c
 keywords:
-- Getisolationinfo-Methode NAP
-- Getisolationinfo-Methode NAP, inapenforcementclientconnection-Schnittstelle
-- Inapenforcementclientconnection-Schnittstelle NAP, getisolationinfo-Methode
+- Nap-Methode "GetIsolationInfo"
+- GetIsolationInfo-Methode NAP, INapEnforcementClientConnection-Schnittstelle
+- INapEnforcementClientConnection-Schnittstelle NAP , GetIsolationInfo-Methode
 topic_type:
 - apiref
 api_name:
@@ -16,21 +16,21 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 890f7268801fda77a9794ed21c4d36e78a52dd5c
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 81f9fffc3f31b22e791b8f5dcff67bfc4b75c998f35158f99d5c558004a51f5f
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "103957210"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118939958"
 ---
-# <a name="inapenforcementclientconnectiongetisolationinfo-method"></a>Inapenforcementclientconnection:: getisolationinfo-Methode
+# <a name="inapenforcementclientconnectiongetisolationinfo-method"></a>INapEnforcementClientConnection::GetIsolationInfo-Methode
 
 > [!Note]  
-> Die Netzwerk Zugriffsschutz-Plattform ist ab Windows 10 nicht verfügbar.
+> Die Netzwerkzugriffsschutz-Plattform ist ab Windows 10 nicht verfügbar.
 
  
 
-Die **inapenforcementclientconnection:: getisolationinfo** -Methode wird verwendet, um die Isolations Informationen des Clients zu erhalten.
+Die **INapEnforcementClientConnection::GetIsolationInfo-Methode** wird verwendet, um die Isolationsinformationen des Clients abzurufen.
 
 ## <a name="syntax"></a>Syntax
 
@@ -47,32 +47,32 @@ HRESULT GetIsolationInfo(
 
 <dl> <dt>
 
-*IsolationInfo* \[ vorgenommen\]
+*isolationInfo* \[ out\]
 </dt> <dd>
 
-Ein Zeiger auf einen Zeiger auf eine [**IsolationInfo**](/windows/win32/api/naptypes/ns-naptypes-isolationinfo) -Struktur, die den konnektivitätszustand des Clients enthält.
+Ein Zeiger auf einen Zeiger auf eine [**IsolationInfo-Struktur,**](/windows/win32/api/naptypes/ns-naptypes-isolationinfo) die den Konnektivitätsstatus des Clients enthält.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Es können auch andere com-spezifische Fehlercodes zurückgegeben werden.
+Andere COM-spezifische Fehlercodes können ebenfalls zurückgegeben werden.
 
 
 
 | Rückgabecode                                                                                     | Beschreibung                                                        |
 |-------------------------------------------------------------------------------------------------|--------------------------------------------------------------------|
 | <dl> <dt>**S \_ OK**</dt> </dl>           | Vorgang erfolgreich.<br/>                                    |
-| <dl> <dt>**E \_ Access verweigert**</dt> </dl> | Berechtigungs Fehler, Zugriff verweigert.<br/>                       |
-| <dl> <dt>**E \_ Outo-Memory**</dt> </dl>  | System Ressourcen Limit, der Vorgang konnte nicht durchgeführt werden.<br/> |
+| <dl> <dt>**E \_ ACCESSDENIED**</dt> </dl> | Berechtigungsfehler, Zugriff verweigert.<br/>                       |
+| <dl> <dt>**E \_ OUTOFMEMORY**</dt> </dl>  | Systemressourcenlimit, konnte den Vorgang nicht ausführen.<br/> |
 
 
 
  
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Diese Informationen werden von NAPAgent nach der Verarbeitung von [**sohresponse**](/windows/win32/api/naptypes/ns-naptypes-soh) festgelegt und dürfen nicht vom-Enforcer festgelegt werden.
+Diese Informationen werden vom NapAgent nach der Verarbeitung einer [**SoHResponse**](/windows/win32/api/naptypes/ns-naptypes-soh) festgelegt und dürfen nicht vom Erzwingenden festgelegt werden.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -80,10 +80,10 @@ Diese Informationen werden von NAPAgent nach der Verarbeitung von [**sohresponse
 
 | Anforderung | Wert |
 |-------------------------------------|-----------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                                      |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/>                                                |
-| Header<br/>                   | <dl> <dt>Napforcementclient. h</dt> </dl>   |
-| IDL<br/>                      | <dl> <dt>Napforcementclient. idl</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur Vista-Desktop-Apps\]<br/>                                                      |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/>                                                |
+| Header<br/>                   | <dl> <dt>NapEnforcementClient.h</dt> </dl>   |
+| Idl<br/>                      | <dl> <dt>NapEnforcementClient.idl</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Qagent.dll</dt> </dl>               |
 
 
@@ -92,7 +92,7 @@ Diese Informationen werden von NAPAgent nach der Verarbeitung von [**sohresponse
 
 <dl> <dt>
 
-[**Inapenforcementclientconnection**](inapenforcementclientconnection.md)
+[**INapEnforcementClientConnection**](inapenforcementclientconnection.md)
 </dt> </dl>
 
  

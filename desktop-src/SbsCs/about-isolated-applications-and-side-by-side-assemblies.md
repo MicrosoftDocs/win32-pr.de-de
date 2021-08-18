@@ -1,27 +1,27 @@
 ---
-description: Isolierte Anwendungen und parallele Assemblys stellen eine Lösung bereit, die dll-Versions Verwaltungs Konflikte verringert. Sie ermöglichen es Anwendungen, Assemblys sicher freizugeben. Weitere Informationen finden Sie unter Freigegebene Assemblys.
+description: Isolierte Anwendungen und side-by-side-Assemblys bieten eine Lösung, die Konflikte bei der DLL-Versionierung reduziert. Sie ermöglichen Anwendungen das sichere Freigeben von Assemblys. Weitere Informationen finden Sie unter Freigegebene Assemblys.
 ms.assetid: 0fb0d9c2-9f6d-4fcd-a6c6-9ba8fe9f5fb5
-title: Informationen zu isolierten Anwendungen und parallelen Assemblys
+title: Informationen zu isolierten Anwendungen und nebenseitigen Assemblys
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 0c9099ca2e41d61c84e2952661b33ca008651f8a
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 08ab72689173d4e8942d10dfc62259091574634227c3f4d252b0d87853ec9be7
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104131609"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119142663"
 ---
-# <a name="about-isolated-applications-and-side-by-side-assemblies"></a>Informationen zu isolierten Anwendungen und parallelen Assemblys
+# <a name="about-isolated-applications-and-side-by-side-assemblies"></a>Informationen zu isolierten Anwendungen und nebenseitigen Assemblys
 
-[Isolierte Anwendungen](isolated-applications.md) und [parallele](about-side-by-side-assemblies-.md) Assemblys stellen eine Lösung bereit, die [*dll-Versions Verwaltungs Konflikte*](d-sbscs-gly.md)verringert. Sie ermöglichen es Anwendungen, Assemblys sicher freizugeben. Weitere Informationen finden Sie unter frei [gegebene](/windows/desktop/Msi/shared-assemblies)Assemblys.
+[Isolierte Anwendungen](isolated-applications.md) und [side-by-side-Assemblys](about-side-by-side-assemblies-.md) bieten eine Lösung, die Konflikte bei [*der DLL-Versionierung reduziert.*](d-sbscs-gly.md) Sie ermöglichen Anwendungen das sichere Freigeben von Assemblys. Weitere Informationen finden Sie unter [Freigegebene Assemblys.](/windows/desktop/Msi/shared-assemblies)
 
-Eine Assembly ist eine grundlegende Einheit für das benennen, binden, Versionieren, bereitstellen oder Konfigurieren eines Blocks von Programmiercode. Anwendungen mit allgemeiner Funktionalität können freigegebene Blöcke von Programmiercode ausführen, die als Module oder Codeassemblys bezeichnet werden. Diese Codeassemblys können in DLLs oder COM-Assemblys abgelegt werden. Die Infrastruktur für die sichere Freigabe von Assemblys wird als parallele assemblyfreigabe bezeichnet.
+Eine Assembly ist eine grundlegende Einheit für das Benennen, Binden, Versionieren, Bereitstellen oder Konfigurieren eines Blocks von Programmiercode. Anwendungen mit gemeinsamer Funktionalität können freigegebene Codeblöcke ausführen, die als Module oder Codeassemblys bezeichnet werden. Diese Codeassemblys können in DLLs oder COM-Assemblys platziert werden. Die Infrastruktur für die sichere Freigabe von Assemblys wird als gemeinsame Assemblyfreigabe bezeichnet.
 
-Parallele Assemblys sind Codeassemblys [, die von](about-side-by-side-assemblies-.md) [Manifests](manifests.md) beschrieben und erstellt werden, sodass mehrere Versionen gleichzeitig ausgeführt werden können, ohne dass Konflikte miteinander in Konflikt stehen. Wenn Entwickler Manifeste verfassen und Anwendungen schreiben, [](side-by-side-assembly-sharing.md)um die parallele assemblyfreigabe zu verwenden, können mehrere Assemblyversionen auf dem System ausgeführt werden, und jede Anwendung kann angeben, welche Assemblyversion Sie verwenden soll.
+[Bei gleichzeitigen Assemblys](about-side-by-side-assemblies-.md) handelt es sich um Codeassemblys, die von Manifesten beschrieben und so verfasst werden, dass mehrere Versionen gleichzeitig ausgeführt werden können, ohne dass ein Konflikt miteinander in Konflikt stehen muss. [](manifests.md) Wenn Entwickler Manifeste erstellen und Anwendungen schreiben, um die gleichzeitige Assemblyfreigabe zu [verwenden,](side-by-side-assembly-sharing.md)können mehrere Assemblyversionen auf dem System ausgeführt werden, und jede Anwendung kann angeben, welche Assemblyversion sie verwenden soll.
 
-Eine typische parallele [*Assembly*](s-sbscs-gly.md) ist eine einzelne DLL mit einem einzelnen Manifest. Parallele Assemblys speichern die Informationen über die Bindung und die COM-Aktivierung, die normalerweise in der Registrierung gespeichert sind, in Manifesten. In einigen Fällen können die in Manifeste angegebenen Versionen der Assembly auf globaler oder Anwendungs Basis von assemblyverlegern, Anwendungsentwicklern oder Administratoren geändert werden. Weitere Informationen finden Sie unter [Standardkonfiguration](default-configuration.md), [Verleger Konfiguration](publisher-configuration.md)und [Konfiguration pro Anwendung](per-application-configuration.md).
+Eine typische [*nebenseitige Assembly ist*](s-sbscs-gly.md) eine einzelne DLL mit einem einzelnen Manifest. Bei assemblyseitigen Assemblys werden die Informationen zur Bindung und COM-Aktivierung, die üblicherweise in der Registrierung gespeichert werden, in Manifesten gespeichert. In einigen Fällen können die in Manifesten angegebenen Versionen der Assembly auf globaler oder anwendungsspezifischer Basis von Assemblyherausgebern, Anwendungsentwicklern oder Administratoren geändert werden. Weitere Informationen finden Sie unter [Standardkonfiguration,](default-configuration.md) [Herausgeberkonfiguration](publisher-configuration.md)und [anwendungsspezifische Konfiguration.](per-application-configuration.md)
 
-Entwickler können die parallelen Assemblys verwenden, die von Microsoft oder anderen parallelen assemblyverlegern in Ihren Anwendungen bereitgestellt werden. Entwickler können z. b. die Funktionalität der aktualisierten allgemeinen Steuerelemente, wie z. b. Design, nutzen, indem Sie Ihre Anwendungen so entwerfen, dass Sie die parallele Assembly verwenden, die Comctl32.dll 6,0 enthält. Eine Liste der parallelen Assemblys und Manifeste, die mit Windows XP ausgeliefert werden, finden Sie [unter Unterstützte](supported-microsoft-side-by-side-assemblies.md)parallele Assemblys von Microsoft. Entwickler können auch Ihre eigenen parallelen Assemblys erstellen. Weitere Informationen finden Sie unter [Richtlinien zum Erstellen](guidelines-for-creating-side-by-side-assemblies.md)paralleler Assemblys.
+Entwickler können die von Microsoft oder anderen Herausgebern von nebeneinander bereitgestellten Assemblys in ihren Anwendungen verwenden. Entwickler können z. B. die Funktionalität der aktualisierten allgemeinen Steuerelemente nutzen, z. B. das Design, indem sie ihre Anwendungen so entwerfen, dass sie die seiteseitige Assembly verwenden, die Comctl32.dll 6.0 enthält. Eine Liste der nebeneinander verfügbaren Assemblys und Manifeste, die mit Windows XP enthalten sind, finden Sie unter [Unterstützte microsoft-nebenseitige Assemblys.](supported-microsoft-side-by-side-assemblies.md) Entwickler können auch eigene, nebeneinander seitige Assemblys erstellen. Weitere Informationen finden Sie unter [Guidelines for Creating Side-by-side Assemblies](guidelines-for-creating-side-by-side-assemblies.md).
 
  
 

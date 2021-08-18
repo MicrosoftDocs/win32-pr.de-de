@@ -1,32 +1,32 @@
 ---
-description: Im folgenden Beispiel wird das Erstellen eines kryptografischen Sitzungsschlüssels aus dem Hash eines Kennworts sowie die Verwendung der Funktion CryptDeriveKey und zugehöriger Funktionen veranschaulicht.
+description: Im folgenden Beispiel wird das Erstellen eines kryptografischen Sitzungsschlüssels aus dem Hash eines Kennworts sowie die Verwendung der CryptDeriveKey-Funktion und verwandter Funktionen veranschaulicht.
 ms.assetid: f4748725-2a47-487c-b18c-7b27112d1090
-title: 'Beispiel-C-Programm: Ableiten eines Sitzungsschlüssels von einem Kennwort'
+title: 'C-Beispielprogramm: Ableiten eines Sitzungsschlüssels aus einem Kennwort'
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: e46884fa40a3a5682ca21229048004314bf03609
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 3b33b43e69b9db2f77e04bad2f8941e6fc0c1bf4e30e5f1d0ff7a5e3bac5ce06
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "104218000"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119007838"
 ---
-# <a name="example-c-program-deriving-a-session-key-from-a-password"></a>Beispiel-C-Programm: Ableiten eines Sitzungsschlüssels von einem Kennwort
+# <a name="example-c-program-deriving-a-session-key-from-a-password"></a>C-Beispielprogramm: Ableiten eines Sitzungsschlüssels aus einem Kennwort
 
-Im folgenden Beispiel wird das Erstellen eines [*kryptografischen Sitzungsschlüssels*](../secgloss/s-gly.md) aus dem [*Hash*](../secgloss/h-gly.md) eines Kennworts sowie die Verwendung der Funktion [**CryptDeriveKey**](/windows/desktop/api/Wincrypt/nf-wincrypt-cryptderivekey) und zugehöriger Funktionen veranschaulicht.
+Im folgenden Beispiel wird das Erstellen eines [*kryptografischen Sitzungsschlüssels*](../secgloss/s-gly.md) aus dem [*Hash*](../secgloss/h-gly.md) eines Kennworts sowie die Verwendung der [**CryptDeriveKey-Funktion**](/windows/desktop/api/Wincrypt/nf-wincrypt-cryptderivekey) und verwandter Funktionen veranschaulicht.
 
-In diesem Beispiel werden die folgenden Aufgaben und kryptoapi-Funktionen veranschaulicht:
+In diesem Beispiel werden die folgenden Aufgaben und CryptoAPI-Funktionen veranschaulicht:
 
--   Der Aufruf von [**CryptAcquireContext**](/windows/desktop/api/Wincrypt/nf-wincrypt-cryptacquirecontexta) zum Abrufen eines Handles für den Standard-CSP und den Standard [*Schlüssel Container*](../secgloss/k-gly.md).
--   Verwenden von [**cryptkreatehash**](/windows/desktop/api/Wincrypt/nf-wincrypt-cryptcreatehash) zum Erstellen eines leeren Hash Objekts.
--   Hashwert für den Text eines Kennworts mithilfe von [**CryptHashData**](/windows/desktop/api/Wincrypt/nf-wincrypt-crypthashdata).
--   Ableiten eines Sitzungsschlüssels aus dem Hashwert des Kennworts mithilfe von [**CryptDeriveKey**](/windows/desktop/api/Wincrypt/nf-wincrypt-cryptderivekey).
+-   Aufrufen von [**CryptAcquireContext**](/windows/desktop/api/Wincrypt/nf-wincrypt-cryptacquirecontexta) zum Abrufen eines Handles für den Standard-CSP und den [*Standardschlüsselcontainer*](../secgloss/k-gly.md).
+-   Verwenden von [**CryptCreateHash**](/windows/desktop/api/Wincrypt/nf-wincrypt-cryptcreatehash) zum Erstellen eines leeren Hashobjekts.
+-   Hashing des Kennworttexts mithilfe von [**CryptHashData**](/windows/desktop/api/Wincrypt/nf-wincrypt-crypthashdata).
+-   Ableiten eines Sitzungsschlüssels aus dem Hashkennwort mithilfe von [**CryptDeriveKey**](/windows/desktop/api/Wincrypt/nf-wincrypt-cryptderivekey).
 -   Zerstören des Hashs und des Kennworts.
--   Verwenden von [**cryptreleasecontext**](/windows/desktop/api/Wincrypt/nf-wincrypt-cryptreleasecontext) zum Freigeben des CSP.
+-   Verwenden von [**CryptReleaseContext**](/windows/desktop/api/Wincrypt/nf-wincrypt-cryptreleasecontext) zum Freigeben des CSP.
 
-In diesem Beispiel wird die Funktion " [**myhanderror**](myhandleerror.md)" verwendet. Der Code für diese Funktion ist im Beispiel enthalten.
+In diesem Beispiel wird die Funktion [**MyHandleError verwendet.**](myhandleerror.md) Code für diese Funktion ist im Beispiel enthalten.
 
-Der Code für dieses und andere Hilfsfunktionen ist auch unter [universell Funktionen](general-purpose-functions.md)aufgeführt.
+Code für diese und andere Hilfsfunktionen ist auch unter [Universell Functions](general-purpose-functions.md)aufgeführt.
 
 
 ```C++

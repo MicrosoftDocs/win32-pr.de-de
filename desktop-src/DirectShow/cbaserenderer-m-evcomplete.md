@@ -1,7 +1,7 @@
 ---
-description: Das Ereignis, das signalisiert wird, wenn ein Zustandsübergang beendet ist.
+description: Ereignis, das signalisiert wird, wenn ein Zustandsübergang abgeschlossen ist.
 ms.assetid: 96d236a3-dfba-49a6-95a9-812f7b6a5b68
-title: 'Cbaserenderer:: m_evComplete Member (renbase. h)'
+title: CBaseRenderer::m_evComplete-Mitglied (Renbase.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,16 +16,16 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: d9a341398e9ad91a02fcc59d18dfc2038ceda2e2
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 56bfd25042f026e8feb05ca9a0178f55cd05cea00bf1d3d0ae6a4111a56ec29f
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106360434"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119635110"
 ---
-# <a name="cbaserendererm_evcomplete-member"></a>Cbaserenderer:: m \_ evcomplete-Member
+# <a name="cbaserendererm_evcomplete-member"></a>CBaseRenderer::m \_ evComplete-Mitglied
 
-Das Ereignis, das signalisiert wird, wenn ein Zustandsübergang beendet ist.
+Ereignis, das signalisiert wird, wenn ein Zustandsübergang abgeschlossen ist.
 
 ## <a name="syntax"></a>Syntax
 
@@ -42,16 +42,16 @@ CAMEvent m_evComplete;
 
 | Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Renbase. h (Include Streams. h)</dt> </dl>                                                                                   |
-| Bibliothek<br/> | <dl> " <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Renbase.h (include Streams.h)</dt> </dl>                                                                                   |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Einzelhandels-Builds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Cbaserderderer-Klasse**](cbaserenderer.md)
+[**CBaseRenderer-Klasse**](cbaserenderer.md)
 </dt> </dl>
 
  

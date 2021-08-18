@@ -1,11 +1,11 @@
 ---
 title: UPN-Suffixes-Attribut
-description: Die Liste der Benutzer Prinzipal Namen-Suffixe für eine Domäne.
+description: Die Liste der Benutzerprinzipalnamensuffixe für eine Domäne.
 ms.assetid: ad861d2d-b643-468c-a346-36ad6a828359
 ms.tgt_platform: multiple
 keywords:
-- AD-Schema für UPN-Suffixes-Attribut
-- upnSuffixes-Attribut AD-Schema
+- UPN-Suffixes AD-Attributschema
+- uPNSuffixes-Attribut AD-Schema
 topic_type:
 - apiref
 api_name:
@@ -14,28 +14,28 @@ api_type:
 - Schema
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: e4aa5fb9398478e4b91fb8f36b8cf96a244935fd
-ms.sourcegitcommit: b77ace27b0432e7cd3863191b11926be032fbe2f
+ms.openlocfilehash: 8ff893bdd3fa5ec5b9a42c02dfe6d3bd994e7d8fc9e680d3162c49f07c1c5ec8
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "103859743"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119021978"
 ---
 # <a name="upn-suffixes-attribute"></a>UPN-Suffixes-Attribut
 
-Die Liste der Benutzer Prinzipal Namen-Suffixe für eine Domäne.
+Die Liste der Benutzerprinzipalnamensuffixe für eine Domäne.
 
 
 
 | Eingabe | Wert |
 |-------------------|---------------------------------------------|
 | CN                | UPN-Suffixes                                |
-| LDAP-Display-Name | upnsuffixe                                 |
+| Ldap-Anzeigename | uPNSuffixes                                 |
 | Size              | \-                                          |
-| Berechtigung aktualisieren  | Domänenadministrator                        |
-| Aktualisierungshäufigkeit  | \-                                          |
+| Aktualisieren von Berechtigungen  | Domänenadministrator                        |
+| Updatehäufigkeit  | \-                                          |
 | Attribute-Id      | 1.2.840.113556.1.4.890                      |
-| System-ID-GUID    | 032160bf -9824-11d1-aec0-0000e80367c1        |
+| System-ID-GUID    | 032160bf-9824-11d1-aec0-0000f80367c1        |
 | Syntax            | [**String(Unicode)**](s-string-unicode.md) |
 
 
@@ -43,7 +43,7 @@ Die Liste der Benutzer Prinzipal Namen-Suffixe für eine Domäne.
 ## <a name="implementations"></a>Implementierungen
 
 -   [**Windows 2000 Server**](#windows-2000-server)
--   [**Windows Server 2003**](#windows-server-2003)
+-   [**Windows Server 2003**](#windows-server-2003)
 -   [**Adam**](#adam)
 -   [**Windows Server 2003 R2**](#windows-server-2003-r2)
 -   [**Windows Server 2008**](#windows-server-2008)
@@ -58,11 +58,11 @@ Die Liste der Benutzer Prinzipal Namen-Suffixe für eine Domäne.
 |------------------------|------------------------------------------------------------------------------------------------------------------------------|
 | Link-ID                | \-                                                                                                                           |
 | MAPI-Id                | \-                                                                                                                           |
-| System-Only            | False                                                                                                                        |
-| Ist-einwertig       | False                                                                                                                        |
-| Ist indiziert             | False                                                                                                                        |
-| Im globalen Katalog      | False                                                                                                                        |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                                                                                 |
+| System-Only            | Falsch                                                                                                                        |
+| Ist einwertig       | Falsch                                                                                                                        |
+| Ist indiziert             | Falsch                                                                                                                        |
+| Im globalen Katalog      | Falsch                                                                                                                        |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                                                                                 |
 | Range-Lower            | \-                                                                                                                           |
 | Range-Upper            | \-                                                                                                                           |
 | Search-Flags           | 0x00000000                                                                                                                   |
@@ -71,7 +71,7 @@ Die Liste der Benutzer Prinzipal Namen-Suffixe für eine Domäne.
 
 
 
-## <a name="windows-server-2003"></a>Windows Server 2003
+## <a name="windows-server-2003"></a>Windows Server 2003
 
 
 
@@ -79,11 +79,11 @@ Die Liste der Benutzer Prinzipal Namen-Suffixe für eine Domäne.
 |------------------------|------------------------------------------------------------------------------------------------------------------------------|
 | Link-ID                | \-                                                                                                                           |
 | MAPI-Id                | \-                                                                                                                           |
-| System-Only            | False                                                                                                                        |
-| Ist-einwertig       | False                                                                                                                        |
-| Ist indiziert             | False                                                                                                                        |
-| Im globalen Katalog      | False                                                                                                                        |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                                                                                 |
+| System-Only            | Falsch                                                                                                                        |
+| Ist einwertig       | Falsch                                                                                                                        |
+| Ist indiziert             | Falsch                                                                                                                        |
+| Im globalen Katalog      | Falsch                                                                                                                        |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                                                                                 |
 | Range-Lower            | \-                                                                                                                           |
 | Range-Upper            | \-                                                                                                                           |
 | Search-Flags           | 0x00000000                                                                                                                   |
@@ -100,11 +100,11 @@ Die Liste der Benutzer Prinzipal Namen-Suffixe für eine Domäne.
 |------------------------|------------------------------------------------------------------------------------------------------------------------------|
 | Link-ID                | \-                                                                                                                           |
 | MAPI-Id                | \-                                                                                                                           |
-| System-Only            | False                                                                                                                        |
-| Ist-einwertig       | False                                                                                                                        |
-| Ist indiziert             | False                                                                                                                        |
-| Im globalen Katalog      | False                                                                                                                        |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                                                                                 |
+| System-Only            | Falsch                                                                                                                        |
+| Ist einwertig       | Falsch                                                                                                                        |
+| Ist indiziert             | Falsch                                                                                                                        |
+| Im globalen Katalog      | Falsch                                                                                                                        |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                                                                                 |
 | Range-Lower            | \-                                                                                                                           |
 | Range-Upper            | \-                                                                                                                           |
 | Search-Flags           | 0x00000000                                                                                                                   |
@@ -121,11 +121,11 @@ Die Liste der Benutzer Prinzipal Namen-Suffixe für eine Domäne.
 |------------------------|------------------------------------------------------------------------------------------------------------------------------|
 | Link-ID                | \-                                                                                                                           |
 | MAPI-Id                | \-                                                                                                                           |
-| System-Only            | False                                                                                                                        |
-| Ist-einwertig       | False                                                                                                                        |
-| Ist indiziert             | False                                                                                                                        |
-| Im globalen Katalog      | False                                                                                                                        |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                                                                                 |
+| System-Only            | Falsch                                                                                                                        |
+| Ist einwertig       | Falsch                                                                                                                        |
+| Ist indiziert             | Falsch                                                                                                                        |
+| Im globalen Katalog      | Falsch                                                                                                                        |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                                                                                 |
 | Range-Lower            | \-                                                                                                                           |
 | Range-Upper            | \-                                                                                                                           |
 | Search-Flags           | 0x00000000                                                                                                                   |
@@ -142,11 +142,11 @@ Die Liste der Benutzer Prinzipal Namen-Suffixe für eine Domäne.
 |------------------------|------------------------------------------------------------------------------------------------------------------------------|
 | Link-ID                | \-                                                                                                                           |
 | MAPI-Id                | \-                                                                                                                           |
-| System-Only            | False                                                                                                                        |
-| Ist-einwertig       | False                                                                                                                        |
-| Ist indiziert             | False                                                                                                                        |
-| Im globalen Katalog      | False                                                                                                                        |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                                                                                 |
+| System-Only            | Falsch                                                                                                                        |
+| Ist einwertig       | Falsch                                                                                                                        |
+| Ist indiziert             | Falsch                                                                                                                        |
+| Im globalen Katalog      | Falsch                                                                                                                        |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                                                                                 |
 | Range-Lower            | \-                                                                                                                           |
 | Range-Upper            | \-                                                                                                                           |
 | Search-Flags           | 0x00000000                                                                                                                   |
@@ -163,11 +163,11 @@ Die Liste der Benutzer Prinzipal Namen-Suffixe für eine Domäne.
 |------------------------|------------------------------------------------------------------------------------------------------------------------------|
 | Link-ID                | \-                                                                                                                           |
 | MAPI-Id                | \-                                                                                                                           |
-| System-Only            | False                                                                                                                        |
-| Ist-einwertig       | False                                                                                                                        |
-| Ist indiziert             | False                                                                                                                        |
-| Im globalen Katalog      | False                                                                                                                        |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                                                                                 |
+| System-Only            | Falsch                                                                                                                        |
+| Ist einwertig       | Falsch                                                                                                                        |
+| Ist indiziert             | Falsch                                                                                                                        |
+| Im globalen Katalog      | Falsch                                                                                                                        |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                                                                                 |
 | Range-Lower            | \-                                                                                                                           |
 | Range-Upper            | \-                                                                                                                           |
 | Search-Flags           | 0x00000000                                                                                                                   |
@@ -184,11 +184,11 @@ Die Liste der Benutzer Prinzipal Namen-Suffixe für eine Domäne.
 |------------------------|------------------------------------------------------------------------------------------------------------------------------|
 | Link-ID                | \-                                                                                                                           |
 | MAPI-Id                | \-                                                                                                                           |
-| System-Only            | False                                                                                                                        |
-| Ist-einwertig       | False                                                                                                                        |
-| Ist indiziert             | False                                                                                                                        |
-| Im globalen Katalog      | False                                                                                                                        |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                                                                                 |
+| System-Only            | Falsch                                                                                                                        |
+| Ist einwertig       | Falsch                                                                                                                        |
+| Ist indiziert             | Falsch                                                                                                                        |
+| Im globalen Katalog      | Falsch                                                                                                                        |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                                                                                 |
 | Range-Lower            | \-                                                                                                                           |
 | Range-Upper            | \-                                                                                                                           |
 | Search-Flags           | 0x00000000                                                                                                                   |

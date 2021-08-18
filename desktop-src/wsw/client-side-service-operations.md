@@ -1,34 +1,34 @@
 ---
-title: Client seitige Dienst Vorgänge
+title: Clientseitige Dienstvorgänge
 ms.assetid: 9d6e2441-91de-4108-b1c4-282fbca5fe7c
-description: Weitere Informationen zu Client seitigen Dienst Vorgängen
+description: Weitere Informationen finden Sie unter Clientseitige Dienstvorgänge.
 keywords:
-- Client seitige Service Operations-Webdienste für Windows
-- Wwsapi
+- Clientseitige Dienstvorgänge Webdienste für Windows
+- WWSAPI
 - WWS
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: e4cd00bfbd832db12a722363bf5b1af8f7298345
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: e73ccbb0c742d0be09570b0959c9c1a663d7f4d0f054cc88070d842ac6d954ff
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "104216950"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119657300"
 ---
-# <a name="client-side-service-operations"></a>Client seitige Dienst Vorgänge
+# <a name="client-side-service-operations"></a>Clientseitige Dienstvorgänge
 
-Im folgenden finden Sie das Layout eines Client seitigen Dienst Vorgangs:
+Im Folgenden finden Sie das Layout eines clientseitigen Dienstvorgang:
 
--   [WS \_ Dienst \_ Proxy Dienst](ws-service-proxy.md) \* Proxy: der [Dienst Proxy](service-proxy.md) für den-Befehl.
--   [WS \_ Heap](ws-heap.md) \* Heap: ein erforderlicher Heap, der für die Text Serialisierung und Deserialisierung der [WS- \_ Nachricht](ws-message.md)verwendet wird.
--   Dienst Vorgangs Parameter: Parameter für den Dienst Vorgang.
--   [**Callteigenschaften und ihre Anzahl**](/windows/desktop/api/WebServices/ns-webservices-ws_call_property): ein Array von Aufrufeigenschaften.
--   Anzahl von [**aufrufseigenschaften**](/windows/desktop/api/WebServices/ns-webservices-ws_call_property) : die Anzahl der aufrufseigenschaften.
--   [**WS \_ \_**](/windows/desktop/api/WebServices/ns-webservices-ws_async_context) Asynchroner Kontext AsyncContext: asynchroner Kontext für die asynchrone Ausführung des Aufrufes.
--   [WS \_ Fehler](ws-error.md) Fehler: Rich Error-Objekt.
+-   [WS \_ SERVICE \_ PROXY](ws-service-proxy.md) \* serviceProxy: Der [Dienstproxy](service-proxy.md) für den Aufruf.
+-   [WS \_ ](ws-heap.md) \* HEAP-Heap: Ein erforderlicher Heap, der für die Serialisierung und Deserialisierung von [WS \_ MESSAGE verwendet wird.](ws-message.md)
+-   Dienstbetriebsparameter: Parameter für den Dienstvorgang.
+-   [**Aufrufeigenschaften und ihre Anzahl:**](/windows/desktop/api/WebServices/ns-webservices-ws_call_property)Ein Array von Aufrufeigenschaften.
+-   [**Anzahl**](/windows/desktop/api/WebServices/ns-webservices-ws_call_property) der Aufrufeigenschaften: Die Anzahl der Aufrufeigenschaften.
+-   [**WS \_ ASYNC \_ CONTEXT**](/windows/desktop/api/WebServices/ns-webservices-ws_async_context) asyncContext: asynchroner Kontext zum asynchronen Ausführen des Aufrufs.
+-   [WS \_ FEHLERfehler:](ws-error.md) Umfangreiches Fehlerobjekt.
 
 
-### <a name="signature-for-client-side-service-operations"></a>Signatur für Client seitige Dienst Vorgänge
+### <a name="signature-for-client-side-service-operations"></a>Signatur für clientseitige Dienstvorgänge
 
 ``` syntax
 typedef HRESULT(CALLBACK *ICalculator_Add)(WS_SERVICE_PROXY* serviceProxy, 
@@ -40,15 +40,15 @@ typedef HRESULT(CALLBACK *ICalculator_Add)(WS_SERVICE_PROXY* serviceProxy,
                                            WS_ERROR* error);
 ```
 
-### <a name="memory-considerations-for-client-side-service-operations"></a>Überlegungen zum Arbeitsspeicher für Client seitige Dienst Vorgänge
+### <a name="memory-considerations-for-client-side-service-operations"></a>Überlegungen zum Arbeitsspeicher für clientseitige Dienstvorgänge
 
-Der Aufrufen des Dienst Vorgangs nimmt einen [WS- \_ Heap](ws-heap.md) \* als Parameter an. Dies ist ein erforderlicher Parameter, der für die Serialisierung/Deserialisierung von Nachrichten Texten zu Parametern verwendet wird.
+Beim Aufruf des Dienstvorgang wird ein [ \_ WS-HEAP](ws-heap.md) \* als Parameter verwendet. Dies ist ein erforderlicher Parameter, der für die Serialisierung/Deserialisierung von Nachrichtentexten in Parameter verwendet wird.
 
-Die Anwendung muss [**wsresethap**](/windows/desktop/api/WebServices/nf-webservices-wsresetheap) abrufen, unabhängig davon, ob der Befehl erfolgreich ausgeführt wurde. Wenn der-Befehl erfolgreich ausgeführt wurde und über ausgehende Parameter verfügt, sollte die Anwendung **wsresethap** sofort nach dem Abschluss mit den ausgehenden Parametern abrufen.
+Die Anwendung muss [**WsResetHeap aufrufen,**](/windows/desktop/api/WebServices/nf-webservices-wsresetheap) unabhängig davon, ob der Aufruf erfolgreich war. Wenn der Aufruf erfolgreich war und über ausgehende Parameter verfügt, sollte die Anwendung **WsResetHeap** sofort aufrufen, nachdem er mit den ausgehenden Parametern abgeschlossen wurde.
 
-Die Anwendung sollte Arbeitsspeicher für in-und out-Parameter mit [**wsalloc**](/windows/desktop/api/WebServices/nf-webservices-wsalloc)zuweisen. Der Dienst Proxy muss Sie möglicherweise neu zuordnen, damit die bereitgestellten Zeiger überschrieben werden. Der Versuch, diesen Speicher freizugeben, führt zu einem Absturz der Anwendung.
+Die Anwendung sollte mit WsAlloc Arbeitsspeicher für in- und [**out-Parameter zuweisen.**](/windows/desktop/api/WebServices/nf-webservices-wsalloc) Der Dienstproxy muss sie möglicherweise neu zufinden, damit bereitgestellte Zeiger überschrieben werden. Ein Versuch, solchen Arbeitsspeicher frei zu geben, verursacht einen Absturz der Anwendung.
 
-### <a name="client-side-service-operation-and-ws_heap"></a>Client seitiger Dienst Vorgang und WS- \_ Heap
+### <a name="client-side-service-operation-and-ws_heap"></a>Clientseitiger Dienstvorgang und \_ WS-HEAP
 
 ``` syntax
 HRESULT hr = IProcessOrder_ProcessOrder(serviceProxy, heap, orderNumber, &orderReceipt, NULL, 0, NULL, error);
@@ -67,16 +67,16 @@ if(FAILED(hr))
     goto error;
 ```
 
-### <a name="error-parameter"></a>Error-Parameter
+### <a name="error-parameter"></a>Fehlerparameter
 
-Die Anwendung sollte immer den Error-Parameter an übergeben:
+Die Anwendung sollte den Fehlerparameter immer an Folgenden übergeben:
 
--   Wenn während des Vorgangs des Dienst Vorgangs ein Fehler auftritt, erhalten Sie umfassende Fehlerinformationen.
--   Das Fault-Objekt wird zurückgegeben, wenn der Dienst einen Fehler zurückgegeben hat. Der Fehler ist im Error-Objekt enthalten. In diesem Fall ist der vom Dienst Vorgang zurückgegebene **HRESULT** -Wert **WS \_ E \_ EndPoint \_ Fault \_** (siehe [Rückgabewerte für Windows-Webdienste](windows-web-services-return-values.md)).
+-   Rufen Sie umfassende Fehlerinformationen ab, wenn während des Dienstvorgangaufrufs ein Fehler auftritt.
+-   Get the fault object if the service returned a fault. (Das Fehlerobjekt wird zurückgegeben, wenn der Dienst einen Fehler zurückgegeben hat.) Der Fehler ist im Fehlerobjekt enthalten. In diesem Fall ist der vom Dienstvorgang zurückgegebene **HRESULT-Wert** **WS E ENDPOINT FAULT \_ \_ \_ \_ RECEIVED** (siehe Windows [Webdienste-Rückgabewerte).](windows-web-services-return-values.md)
 
-### <a name="call-properties-for-client-side-service-operations"></a>Ruft Eigenschaften für Client seitige Dienst Vorgänge auf.
+### <a name="call-properties-for-client-side-service-operations"></a>Aufrufeigenschaften für clientseitige Dienstvorgänge
 
-Mit den Eigenschaften "Aufrufe" kann eine Anwendung benutzerdefinierte Einstellungen für einen bestimmten-Befehl angeben. Derzeit ist nur eine "Callcenter"-Eigenschaft mit dem Dienstmodell, der [**WS- \_ aufrufsaufrufskennung \_ \_ \_**](/windows/desktop/api/WebServices/ne-webservices-ws_call_property_id), verfügbar.
+Aufrufeigenschaften ermöglichen es einer Anwendung, benutzerdefinierte Einstellungen für einen bestimmten Aufruf anzugeben. Derzeit ist nur eine Aufrufeigenschaft mit dem Dienstmodell [**verfügbar: WS \_ CALL PROPERTY CALL \_ \_ \_ ID**](/windows/desktop/api/WebServices/ne-webservices-ws_call_property_id).
 
 ``` syntax
 WS_CALL_PROPERTY callProperties[1] = {0};
@@ -100,39 +100,39 @@ if(FAILED(hr))
 hr = WsAbandonCall(serviceProxy, 5, error);
 ```
 
-### <a name="abandoning-a-call"></a>Abbrechen eines Aufrufes
+### <a name="abandoning-a-call"></a>Verabbruch eines Anrufs
 
-Häufig ist es wünschenswert, die Ergebnisse eines Aufrufes zu verwerfen, damit das Steuerelement wieder an die Anwendung zurückgibt, sodass der tatsächliche Rückruf Vorgang von der Infrastruktur verarbeitet wird. Der Dienst Proxy stellt diese Funktion über [**wsabandoncallbereit**](/windows/desktop/api/WebServices/nf-webservices-wsabandoncall).
+Häufig ist es wünschenswert, die Ergebnisse eines Aufrufs aufzugeben, um das Steuerelement an die Anwendung zurückzugeben, damit die tatsächliche Aufrufvervollständigung von der Infrastruktur verarbeitet wird. Der Dienstproxy stellt diese Möglichkeit über [**WsAbproxynCall zur Verfügung.**](/windows/desktop/api/WebServices/nf-webservices-wsabandoncall)
 
-Beachten Sie, dass das Steuerelement für den Aufrufer möglicherweise nicht sofort zurückgegeben wird. die einzige Garantie, die die Dienst Proxy Laufzeit erteilt, besteht darin, dass es nicht auf den Abschluss eines e/a-gebundenen Vorgangs wartet, bevor er die Steuerung an den Aufrufer zurückgibt
+Beachten Sie, dass das Steuerelement an den Aufrufer möglicherweise nicht sofort zurück gegeben wird. Die einzige Garantie, die die Dienstproxylaufzeit bietet, ist, dass sie nicht auf den Abschluss eines E/A-gebundenen Vorgangs warten würde, bevor sie die Kontrolle an den Aufrufer zurückgibt.
 
-Aufrufe für einen Client seitigen Dienst Vorgang können mithilfe eines Aufrufs von [**wsabandoncallcenter**](/windows/desktop/api/WebServices/nf-webservices-wsabandoncall)abgebrochen werden. Er nimmt einen Dienst Proxy und eine-ID an. Eine Anrufe-ID wird als Teil einer aufrufseigenschaft für einen Dienst Vorgang angegeben.
+Aufrufe für einen clientseitigen Dienstvorgang können durch einen Aufruf von [**WsAbcall abgebrochen werden.**](/windows/desktop/api/WebServices/nf-webservices-wsabandoncall) Es werden ein Dienstproxy und eine Anruf-ID verwendet. Eine Aufruf-ID wird als Teil einer Aufrufeigenschaften für einen Dienstvorgang angegeben.
 
-Wenn die Aufruf-ID 0 ist, wird der Dienst Proxy alle ausstehenden Aufrufe dieser Instanz verwerfen.
+Wenn die Aufruf-ID 0 ist, verläss der Dienstproxy alle ausstehenden Aufrufe in dieser Instanz.
 
-### <a name="call-timeouts"></a>Timeouts aufrufen
+### <a name="call-timeouts"></a>Timeouts für Aufrufe
 
-Standardmäßig hat ein Dienst Proxy für jeden-Befehl ein Timeout von 30 Sekunden. Das Timeout für einen-Befehl kann von der [**WS \_ - \_ Proxy \_ Eigenschaft \_ Timeout**](/windows/desktop/api/WebServices/ne-webservices-ws_proxy_property_id) -Dienst Proxy Eigenschaft beim Erstellen eines Dienst Proxys über [**wscreateserviceproxy**](/windows/desktop/api/WebServices/nf-webservices-wscreateserviceproxy)geändert werden.
+Standardmäßig ist für einen Dienstproxy für jeden Aufruf ein Timeout von 30 Sekunden festgelegt. Das Timeout für einen Aufruf kann durch die [**WS \_ PROXY PROPERTY \_ CALL \_ \_ TIMEOUT-Dienstproxyeigenschaft**](/windows/desktop/api/WebServices/ne-webservices-ws_proxy_property_id) geändert werden, wenn ein Dienstproxy über [**WsCreateServiceProxy erstellt wird.**](/windows/desktop/api/WebServices/nf-webservices-wscreateserviceproxy)
 
-Nachdem ein Timeout erreicht wurde, wird der-Rückruf abgebrochen.
+Nach Erreichen eines Timeouts wird der Aufruf abgebrochen.
 
 ### <a name="return-values"></a>Rückgabewerte
 
-Alle **HRESULT** -Erfolgs Werte müssen als Erfolg behandelt werden, und alle Fehler Werte müssen als Fehler behandelt werden. Im folgenden finden Sie einige der **HRESULT** -Werte, die eine Anwendung erwarten kann:
+Alle **erfolgreichen HRESULT-Werte** müssen als erfolgreich behandelt werden, und alle Fehlerwerte müssen als Fehler behandelt werden. Im Folgenden finden Sie einige **der HRESULT-Werte,** die eine Anwendung erwarten kann:
 
--   **WS \_ S \_ Async**: der-Vorgang wird asynchron abgeschlossen.
--   NoError: der Rückruf wurde erfolgreich abgeschlossen.
--   **WS \_ E- \_ Vorgang \_ abgebrochen**: der-Rückruf wurde abgebrochen. Das Error-Objekt enthält den Grund für den Abbruch.
--   **WS \_ E \_ ungültiger \_ Vorgang**: der Dienst Proxy befindet sich nicht in einem geeigneten Zustand zum Ausführen eines Aufrufens. Überprüfen Sie den Status des Dienst Proxys, um den Status des Dienst Proxys zu ermitteln.
+-   **WS \_ S \_ ASYNC:** Der Aufruf wird asynchron abgeschlossen.
+-   NOERROR: Der Aufruf wurde erfolgreich abgeschlossen.
+-   **WS \_ E \_ OPERATION \_ ABANDONED**: Der Aufruf wurde abgebrochen. Das Fehlerobjekt enthält den Grund für den Abbruch.
+-   **WS \_ E \_ \_ UNGÜLTIGER VORGANG:** Der Dienstproxy befindet sich nicht in einem geeigneten Zustand, um einen Aufruf zu führen. Überprüfen Sie den Dienstproxystatus, um den Status des Dienstproxys zu finden.
 
-Eine komplette Liste der Rückgabewerte finden Sie unter [Rückgabewerte für Windows-Webdienste](windows-web-services-return-values.md).
+Eine vollständige Liste der Rückgabewerte finden Sie unter Windows [Webdienste-Rückgabewerte.](windows-web-services-return-values.md)
 
 ### <a name="code-examples"></a>Codebeispiele
 
-Codebeispiele finden Sie unter:
+Codebeispiele finden Sie in den folgenden Themen:
 
--   [Callabandon-Beispiel](callabandonexample.md)
--   [**Wsabandoncall**](/windows/desktop/api/WebServices/nf-webservices-wsabandoncall)
+-   [CallAbillenExample](callabandonexample.md)
+-   [**WsAbcall**](/windows/desktop/api/WebServices/nf-webservices-wsabandoncall)
 
  
 

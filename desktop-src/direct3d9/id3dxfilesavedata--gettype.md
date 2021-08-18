@@ -66,7 +66,7 @@ Wenn die Methode erfolgreich ist, ist der Rückgabewert S \_ OK. Wenn bei der Me
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 

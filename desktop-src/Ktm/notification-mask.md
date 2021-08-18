@@ -1,36 +1,36 @@
 ---
-description: Listet die verschiedenen Benachrichtigungs Typen auf, die von einer Eintragung empfangen werden können.
+description: Listet die verschiedenen Arten von Benachrichtigungen auf, die von einer Eintragung empfangen werden können.
 ms.assetid: 65db8ba5-193c-439b-8e8c-6cb4a9bd4efd
-title: NOTIFICATION_MASK (ktmtypes. h)
+title: NOTIFICATION_MASK (KtmTypes.h)
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: f3650c10f619cf45db34d9172476261838897a5f
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: c17391d2b406b3f7a3ee9a3a868bc1b6734050c787fdbb432785e5be0b917468
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106360674"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119146543"
 ---
-# <a name="notification_mask"></a>Benachrichtigungs \_ Maske
+# <a name="notification_mask"></a>\_BENACHRICHTIGUNGSMASKE
 
-Listet die verschiedenen Benachrichtigungs Typen auf, die von einer Eintragung empfangen werden können.
+Listet die verschiedenen Arten von Benachrichtigungen auf, die von einer Eintragung empfangen werden können.
 
 <dl> <dt>
 
-<span id="TRANSACTION_NOTIFY_MASK"></span><span id="transaction_notify_mask"></span>**\_Benachrichtigungs \_ Maske für Transaktion**
+<span id="TRANSACTION_NOTIFY_MASK"></span><span id="transaction_notify_mask"></span>**TRANSACTION \_ NOTIFY \_ MASK**
 </dt> <dd> <dl> <dt>
 
-0x3fffffff
+0x3FFFFFFF
 </dt> <dt>
 
 
 
-Eine Maske, die alle gültigen Bits für eine Transaktions Benachrichtigung angibt.
+Eine Maske, die alle gültigen Bits für eine Transaktionsbenachrichtigung angibt.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="TRANSACTION_NOTIFY_PREPREPARE"></span><span id="transaction_notify_preprepare"></span>**\_ \_ vorab Vorbereitung der Transaktions Benachrichtigung**
+<span id="TRANSACTION_NOTIFY_PREPREPARE"></span><span id="transaction_notify_preprepare"></span>**\_ \_ TRANSAKTIONSBENACHRICHTIGUNGSVORBEREITUNG**
 </dt> <dd> <dl> <dt>
 
 0x00000001
@@ -38,12 +38,12 @@ Eine Maske, die alle gültigen Bits für eine Transaktions Benachrichtigung angi
 
 
 
-Diese Benachrichtigung wird aufgerufen, nachdem ein Client [**CommitTransaction**](/windows/desktop/api/Ktmw32/nf-ktmw32-committransaction) aufgerufen hat und entweder kein Ressourcen-Manager (RM) ein Einphasencommit unterstützt oder ein übergeordneter Transaktions-Manager (TM) [**preprepareeintragung**](/windows/desktop/api/KtmW32/nf-ktmw32-preprepareenlistment)aufruft. Diese Benachrichtigung wird vom RMS empfangen, was darauf hinweist, dass alle Aufgaben abgeschlossen werden können, die dazu führen können, dass sich andere RMS in eine Transaktion eintragen müssen, z. b. das Leeren des Caches. Nach Abschluss dieser Vorgänge muss der RM [**prepreparecomplete**](/windows/desktop/api/Ktmw32/nf-ktmw32-prepreparecomplete)aufruft. Um diese Benachrichtigung zu erhalten, muss der RM auch **Transaktionen \_ Benachrichtigen \_ vorbereiten** und Commit für die **Transaktions \_ Benachrichtigung \_** unterstützen.
+Diese Benachrichtigung wird aufgerufen, nachdem ein Client [**CommitTransaction**](/windows/desktop/api/Ktmw32/nf-ktmw32-committransaction) aufgerufen hat und entweder kein Ressourcen-Manager (RM) einphasenbasierte Commits unterstützt oder ein übergeordneter Transaktions-Manager (TM) [**PrePrepareEnlistment aufruft.**](/windows/desktop/api/KtmW32/nf-ktmw32-preprepareenlistment) Diese Benachrichtigung wird von den RMs empfangen, die angeben, dass sie alle Arbeiten abschließen sollten, die dazu führen können, dass andere RMs sich in eine Transaktion einträgt, z. B. das Leeren des Caches. Nach Abschluss dieser Vorgänge muss der RM [**PrePrepareComplete aufrufen.**](/windows/desktop/api/Ktmw32/nf-ktmw32-prepreparecomplete) Um diese Benachrichtigung zu erhalten, muss DER RM auch **TRANSACTION \_ NOTIFY PREPARE \_ und** **TRANSACTION NOTIFY COMMIT \_ \_ unterstützen.**
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="TRANSACTION_NOTIFY_PREPARE"></span><span id="transaction_notify_prepare"></span>**Vorbereiten der Transaktions \_ Benachrichtigung \_**
+<span id="TRANSACTION_NOTIFY_PREPARE"></span><span id="transaction_notify_prepare"></span>**VORBEREITUNG DER \_ \_ TRANSAKTIONSBENACHRICHTIGUNG**
 </dt> <dd> <dl> <dt>
 
 0x00000002
@@ -51,12 +51,12 @@ Diese Benachrichtigung wird aufgerufen, nachdem ein Client [**CommitTransaction*
 
 
 
-Diese Benachrichtigung wird aufgerufen, nachdem die Verarbeitung der **\_ \_ vorab Vorbereitung der Transaktions Benachrichtigung** abgeschlossen ist. Es signalisiert dem RM, dass alle dieser Eintragung zugeordneten Aufgaben abgeschlossen werden, damit sichergestellt werden kann, dass ein Commit-Vorgang erfolgreich ausgeführt werden kann und ein Abbruch Vorgang erfolgreich ausgeführt werden kann. Der Großteil der Arbeit für eine Transaktion erfolgt in der Regel während der Vorbereitungsphase. Bei Durable RMS müssen Sie Ihren Zustand vor dem Aufrufen der [**preparecomplete**](/windows/desktop/api/Ktmw32/nf-ktmw32-preparecomplete) -Funktion protokollieren. Dies ist die letzte Chance für den RM, dass ein Rollback für die Transaktion ausgeführt wird.
+Diese Benachrichtigung wird aufgerufen, nachdem **die VERARBEITUNG VON TRANSACTION NOTIFY \_ \_ PREPREPARE** abgeschlossen ist. Er signalisiert dem RM, die gesamte Arbeit, die dieser Eintragung zugeordnet ist, zu abschließen, damit sichergestellt werden kann, dass ein Commitvorgang erfolgreich ist und ein Abbruchvorgang ebenfalls erfolgreich ist. In der Regel erfolgt der Großteil der Arbeit für eine Transaktion während der Vorbereitungsphase. Bei dauerhaften RMs müssen sie ihren Status protokollieren, bevor sie die [**PrepareComplete-Funktion**](/windows/desktop/api/Ktmw32/nf-ktmw32-preparecomplete) aufrufen. Dies ist die letzte Chance, dass der RM ein Rollback der Transaktion an fordert.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="TRANSACTION_NOTIFY_COMMIT"></span><span id="transaction_notify_commit"></span>**Commit für Transaktions \_ Benachrichtigung \_**
+<span id="TRANSACTION_NOTIFY_COMMIT"></span><span id="transaction_notify_commit"></span>**TRANSACTION \_ NOTIFY \_ COMMIT**
 </dt> <dd> <dl> <dt>
 
 0x00000004
@@ -64,12 +64,12 @@ Diese Benachrichtigung wird aufgerufen, nachdem die Verarbeitung der **\_ \_ vor
 
 
 
-Diese Benachrichtigung signalisiert dem RM, alle dieser Eintragung zugeordneten Aufgaben abzuschließen. In der Regel gibt der RM alle Sperren frei und gibt alle Informationen frei, die für das Rollback der Transaktion erforderlich sind. Der RM muss reagieren, indem er die [**commitcomplete**](/windows/desktop/api/Ktmw32/nf-ktmw32-commitcomplete) -Funktion aufgerufen, wenn er diese Vorgänge abgeschlossen hat.
+Diese Benachrichtigung signalisiert dem RM, alle mit dieser Eintragung verbundenen Arbeiten zu abschließen. In der Regel gibt der RM alle Sperren frei und gibt alle Informationen frei, die zum Rollback der Transaktion erforderlich sind. Der RM muss reagieren, indem er die [**CommitComplete-Funktion aufruft,**](/windows/desktop/api/Ktmw32/nf-ktmw32-commitcomplete) wenn er diese Vorgänge abgeschlossen hat.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="TRANSACTION_NOTIFY_ROLLBACK"></span><span id="transaction_notify_rollback"></span>**\_Rollback für Transaktions Benachrichtigung \_**
+<span id="TRANSACTION_NOTIFY_ROLLBACK"></span><span id="transaction_notify_rollback"></span>**ROLLBACK \_ DER \_ TRANSAKTIONSBENACHRICHTIGUNG**
 </dt> <dd> <dl> <dt>
 
 0x00000008
@@ -77,12 +77,12 @@ Diese Benachrichtigung signalisiert dem RM, alle dieser Eintragung zugeordneten 
 
 
 
-Diese Benachrichtigung signalisiert dem RM, dass sämtliche Aufgaben rückgängig gemacht werden, die der Transaktion zugeordnet ist.
+Diese Benachrichtigung signalisiert dem RM, alle der Transaktion zugeordneten Arbeit rückgängig zu machen.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="TRANSACTION_NOTIFY_PREPREPARE_COMPLETE"></span><span id="transaction_notify_preprepare_complete"></span>**\_vorab Vorbereitung der Transaktions Benachrichtigung \_ \_ abgeschlossen**
+<span id="TRANSACTION_NOTIFY_PREPREPARE_COMPLETE"></span><span id="transaction_notify_preprepare_complete"></span>**\_ \_ TRANSAKTIONSBENACHRICHTIGUNGSVORBEREITUNG \_ ABGESCHLOSSEN**
 </dt> <dd> <dl> <dt>
 
 0x00000010
@@ -90,12 +90,12 @@ Diese Benachrichtigung signalisiert dem RM, dass sämtliche Aufgaben rückgängi
 
 
 
-Diese Benachrichtigung signalisiert dem übergeordneten TM, dass ein vorvorbereitungs Vorgang erfolgreich abgeschlossen wurde.
+Diese Benachrichtigung signalisiert dem übergeordneten TM, dass ein Vorbereitungsvorgang erfolgreich abgeschlossen wurde.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="TRANSACTION_NOTIFY_PREPARE_COMPLETE"></span><span id="transaction_notify_prepare_complete"></span>**Vorbereitung der Transaktions \_ Benachrichtigung \_ \_ abgeschlossen**
+<span id="TRANSACTION_NOTIFY_PREPARE_COMPLETE"></span><span id="transaction_notify_prepare_complete"></span>**TRANSACTION \_ NOTIFY \_ PREPARE \_ COMPLETE**
 </dt> <dd> <dl> <dt>
 
 0x00000020
@@ -103,12 +103,12 @@ Diese Benachrichtigung signalisiert dem übergeordneten TM, dass ein vorvorberei
 
 
 
-Diese Benachrichtigung signalisiert dem übergeordneten TM, dass ein Vorbereitungs Vorgang erfolgreich abgeschlossen wurde.
+Diese Benachrichtigung signalisiert dem übergeordneten TM, dass ein Vorbereitungsvorgang erfolgreich abgeschlossen wurde.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="TRANSACTION_NOTIFY_COMMIT_COMPLETE"></span><span id="transaction_notify_commit_complete"></span>**Commit für Transaktions \_ Benachrichtigung \_ \_ abgeschlossen**
+<span id="TRANSACTION_NOTIFY_COMMIT_COMPLETE"></span><span id="transaction_notify_commit_complete"></span>**TRANSACTION \_ NOTIFY \_ COMMIT \_ COMPLETE**
 </dt> <dd> <dl> <dt>
 
 0x00000040
@@ -116,12 +116,12 @@ Diese Benachrichtigung signalisiert dem übergeordneten TM, dass ein Vorbereitun
 
 
 
-Diese Benachrichtigung signalisiert dem übergeordneten TM, dass ein Commit-Vorgang erfolgreich abgeschlossen wurde.
+Diese Benachrichtigung signalisiert dem übergeordneten TM, dass ein Commitvorgang erfolgreich abgeschlossen wurde.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="TRANSACTION_NOTIFY_ROLLBACK_COMPLETE"></span><span id="transaction_notify_rollback_complete"></span>**\_Rollback für Transaktions Benachrichtigung \_ \_ abgeschlossen**
+<span id="TRANSACTION_NOTIFY_ROLLBACK_COMPLETE"></span><span id="transaction_notify_rollback_complete"></span>**ROLLBACK \_ FÜR \_ TRANSAKTIONSBENACHRICHTIGUNG \_ ABGESCHLOSSEN**
 </dt> <dd> <dl> <dt>
 
 0x00000080
@@ -129,12 +129,12 @@ Diese Benachrichtigung signalisiert dem übergeordneten TM, dass ein Commit-Vorg
 
 
 
-Diese Benachrichtigung signalisiert dem übergeordneten TM, dass ein Rollback-Vorgang erfolgreich abgeschlossen wurde.
+Diese Benachrichtigung signalisiert dem übergeordneten TM, dass ein Rollbackvorgang erfolgreich abgeschlossen wurde.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="TRANSACTION_NOTIFY_RECOVER"></span><span id="transaction_notify_recover"></span>**\_ \_ Wiederherstellung von Transaktions Benachrichtigungen**
+<span id="TRANSACTION_NOTIFY_RECOVER"></span><span id="transaction_notify_recover"></span>**TRANSACTION \_ NOTIFY \_ RECOVER**
 </dt> <dd> <dl> <dt>
 
 0x00000100
@@ -142,12 +142,12 @@ Diese Benachrichtigung signalisiert dem übergeordneten TM, dass ein Rollback-Vo
 
 
 
-Diese Benachrichtigung signalisiert RMS, dass Sie Ihren Zustand wiederherstellen sollten, da ein Transaktions Ergebnis erneut zugestellt werden muss. Dies ist beispielsweise der Fall, wenn eine RM wieder hergestellt wird und Transaktionen unsicher sind. Diese Benachrichtigung wird übermittelt, sobald der Status "unsicher" aufgelöst wurde.
+Diese Benachrichtigung signalisiert RMs, dass sie ihren Zustand wiederherstellen sollten, da ein Transaktionsergebnis erneut zugestellt werden muss. Beispielsweise, wenn ein RM wiederhergestellt wird und Transaktionen im Zweifelsfall bestehen. Diese Benachrichtigung wird übermittelt, sobald der zustandsverglichene Zustand aufgelöst wurde.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="TRANSACTION_NOTIFY_SINGLE_PHASE_COMMIT"></span><span id="transaction_notify_single_phase_commit"></span>**\_ \_ Einzelphasen- \_ \_ Commit für Transaktion Benachrichtigen**
+<span id="TRANSACTION_NOTIFY_SINGLE_PHASE_COMMIT"></span><span id="transaction_notify_single_phase_commit"></span>**TRANSACTION \_ NOTIFY \_ SINGLE \_ PHASE \_ COMMIT**
 </dt> <dd> <dl> <dt>
 
 0x00000200
@@ -155,12 +155,12 @@ Diese Benachrichtigung signalisiert RMS, dass Sie Ihren Zustand wiederherstellen
 
 
 
-Diese Benachrichtigung signalisiert dem RM, den Vorgang abzuschließen und einen Commit für die Transaktion auszuführen, ohne ein Zweiphasencommit-Protokoll zu verwenden. Wenn der RM einen zweiphasigen Vorgang verwenden möchte, muss er durch Aufrufen der [**singlephasereject**](/windows/desktop/api/Ktmw32/nf-ktmw32-singlephasereject) -Funktion Antworten.
+Diese Benachrichtigung signalisiert dem RM, die Transaktion ohne Zweiphasen-Commitprotokoll abzuschließen und zu commiten. Wenn der RM einen zweistufigen Vorgang verwenden möchte, muss er durch Aufrufen der [**SinglePhaseReject-Funktion**](/windows/desktop/api/Ktmw32/nf-ktmw32-singlephasereject) antworten.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="TRANSACTION_NOTIFY_DELEGATE_COMMIT"></span><span id="transaction_notify_delegate_commit"></span>**\_ \_ Delegierter Commit für Transaktions Benachrichtigung \_**
+<span id="TRANSACTION_NOTIFY_DELEGATE_COMMIT"></span><span id="transaction_notify_delegate_commit"></span>**TRANSACTION \_ NOTIFY \_ DELEGATE \_ COMMIT**
 </dt> <dd> <dl> <dt>
 
 0x00000400
@@ -168,12 +168,12 @@ Diese Benachrichtigung signalisiert dem RM, den Vorgang abzuschließen und einen
 
 
 
-KTM signalisiert dem übergeordneten TM, einen Commitvorgang auszuführen.
+KTM signalisiert dem übergeordneten TM, einen Commitvorgang durchzuführen.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="TRANSACTION_NOTIFY_RECOVER_QUERY"></span><span id="transaction_notify_recover_query"></span>**Wiederherstellungs Abfrage zur Transaktions \_ Benachrichtigung \_ \_**
+<span id="TRANSACTION_NOTIFY_RECOVER_QUERY"></span><span id="transaction_notify_recover_query"></span>**TRANSACTION \_ NOTIFY \_ RECOVER \_ QUERY**
 </dt> <dd> <dl> <dt>
 
 0x00000800
@@ -181,12 +181,12 @@ KTM signalisiert dem übergeordneten TM, einen Commitvorgang auszuführen.
 
 
 
-KTM signalisiert dem übergeordneten TM, den Status einer unsicheren Transaktion abzufragen.
+KTM signalisiert dem übergeordneten TM, den Status einer im Zweifelsfall transaktion zu fragen.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="TRANSACTION_NOTIFY_ENLIST_PREPREPARE"></span><span id="transaction_notify_enlist_preprepare"></span>**\_ \_ vorvorbereiten der Enlist für Transaktionen Benachrichtigen \_**
+<span id="TRANSACTION_NOTIFY_ENLIST_PREPREPARE"></span><span id="transaction_notify_enlist_preprepare"></span>**\_VORBEREITEN DER EINTRAGUNG DER \_ \_ TRANSAKTIONSBENACHRICHTIGUNG**
 </dt> <dd> <dl> <dt>
 
 0x00001000
@@ -194,12 +194,12 @@ KTM signalisiert dem übergeordneten TM, den Status einer unsicheren Transaktion
 
 
 
-Diese Benachrichtigung signalisiert dem übergeordneten TM, dass Benachrichtigungen vor dem Vorbereiten der angegebenen Eintragung zugestellt werden müssen.
+Diese Benachrichtigung signalisiert dem übergeordneten TM, dass vorab vorbereitete Benachrichtigungen bei der angegebenen Eintragung übermittelt werden müssen.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="TRANSACTION_NOTIFY_LAST_RECOVER"></span><span id="transaction_notify_last_recover"></span>**\_ \_ Letzte \_ Wiederherstellung der Transaktions Benachrichtigung**
+<span id="TRANSACTION_NOTIFY_LAST_RECOVER"></span><span id="transaction_notify_last_recover"></span>**LETZTE \_ WIEDERHERSTELLUNG DER \_ \_ TRANSAKTIONSBENACHRICHTIGUNG**
 </dt> <dd> <dl> <dt>
 
 0x00002000
@@ -207,12 +207,12 @@ Diese Benachrichtigung signalisiert dem übergeordneten TM, dass Benachrichtigun
 
 
 
-Diese Benachrichtigung zeigt an, dass der Wiederherstellungs Vorgang für diesen RM beendet wurde.
+Diese Benachrichtigung gibt an, dass der Wiederherstellungsvorgang für diesen RM abgeschlossen ist.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="TRANSACTION_NOTIFY_INDOUBT"></span><span id="transaction_notify_indoubt"></span>**\_inzweifel hafte Transaktions Benachrichtigung \_**
+<span id="TRANSACTION_NOTIFY_INDOUBT"></span><span id="transaction_notify_indoubt"></span>**TRANSACTION \_ NOTIFY \_ INDOUBT**
 </dt> <dd> <dl> <dt>
 
 0x00004000
@@ -220,12 +220,12 @@ Diese Benachrichtigung zeigt an, dass der Wiederherstellungs Vorgang für diesen
 
 
 
-Die angegebene Transaktion befindet sich in einem zweifelhaften Zustand. Der RM empfängt diese Benachrichtigung während Wiederherstellungs Vorgängen, wenn eine Transaktion vorbereitet wurde, aber es ist kein übergeordneter Transaktions-Manager (TM) verfügbar. Wenn eine Transaktion z. b. einen Remote-TM umfasst und dieser Knoten nicht verfügbar ist, der Knoten nicht verfügbar ist oder der lokale [Distributed Transaction Coordinator](/previous-versions/windows/desktop/ms684146(v=vs.85)) Dienst nicht verfügbar ist, ist der Transaktionsstatus unsicher.
+Die angegebene Transaktion befindet sich in einem nicht sicheren Zustand. Der RM empfängt diese Benachrichtigung während Wiederherstellungsvorgängen, wenn eine Transaktion vorbereitet wurde, aber kein übergeordneter Transaktions-Manager (TM) verfügbar ist. Wenn eine Transaktion beispielsweise einen Remote-TM umfasst und dieser Knoten nicht verfügbar ist, sein Knoten nicht verfügbar ist oder der lokale [Distributed Transaction Coordinator-Dienst](/previous-versions/windows/desktop/ms684146(v=vs.85)) nicht verfügbar ist, ist der Transaktionsstatus unsicher.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="TRANSACTION_NOTIFY_TM_ONLINE"></span><span id="transaction_notify_tm_online"></span>**\_ \_ TM Online Transaktion \_ Benachrichtigen**
+<span id="TRANSACTION_NOTIFY_TM_ONLINE"></span><span id="transaction_notify_tm_online"></span>**TRANSACTION \_ NOTIFY \_ TM \_ ONLINE**
 </dt> <dd> <dl> <dt>
 
 0x02000000
@@ -238,7 +238,7 @@ Der TM ist online und akzeptiert Anforderungen.
 
 </dt> </dl> </dd> <dt>
 
-<span id="TRANSACTION_NOTIFY_REQUEST_OUTCOME"></span><span id="transaction_notify_request_outcome"></span>**Ergebnis der Transaktions \_ Benachrichtigungs \_ Anforderung \_**
+<span id="TRANSACTION_NOTIFY_REQUEST_OUTCOME"></span><span id="transaction_notify_request_outcome"></span>**\_ \_ TRANSAKTIONSBENACHRICHTIGUNGSANFORDERUNGSERGEBNIS \_**
 </dt> <dd> <dl> <dt>
 
 0x20000000
@@ -246,12 +246,12 @@ Der TM ist online und akzeptiert Anforderungen.
 
 
 
-Signalisiert RMS, dass Ergebnisinformationen verfügbar sind und eine Anforderung für diese Informationen erfolgen soll.
+Signalisiert RMs, dass Ergebnisinformationen verfügbar sind und dass eine Anforderung für diese Informationen gestellt werden soll.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="TRANSACTION_NOTIFY_COMMIT_FINALIZE"></span><span id="transaction_notify_commit_finalize"></span>**\_Commit für transaktionsbenachrichtigungs \_ \_ Abschluss**
+<span id="TRANSACTION_NOTIFY_COMMIT_FINALIZE"></span><span id="transaction_notify_commit_finalize"></span>**TRANSACTION \_ NOTIFY \_ COMMIT \_ FINALIZE**
 </dt> <dd> <dl> <dt>
 
 0x40000000
@@ -272,39 +272,39 @@ Reserviert.
 |-------------------------------------|-----------------------------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows Vista<br/>                                                                                  |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2008<br/>                                                                            |
-| Header<br/>                   | <dl> <dt>Ktmtypes. h (Include Windows. h)</dt> </dl> |
+| Header<br/>                   | <dl> <dt>KtmTypes.h (include Windows.h)</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
 [Distributed Transaction Coordinator](/previous-versions/windows/desktop/ms684146(v=vs.85))
 </dt> <dt>
 
-[Kerneltransaktions-Manager-Konstanten](kernel-transaction-manager-constants.md)
+[KernelTransaktions-Manager-Konstanten](kernel-transaction-manager-constants.md)
 </dt> <dt>
 
-[**"Kreateeintragung"**](/windows/desktop/api/KtmW32/nf-ktmw32-createenlistment)
+[**CreateEnlistment**](/windows/desktop/api/KtmW32/nf-ktmw32-createenlistment)
 </dt> <dt>
 
-[**Commitcomplete**](/windows/desktop/api/Ktmw32/nf-ktmw32-commitcomplete)
+[**CommitComplete**](/windows/desktop/api/Ktmw32/nf-ktmw32-commitcomplete)
 </dt> <dt>
 
-[**Getnotificationresourcemanager**](/windows/desktop/api/KtmW32/nf-ktmw32-getnotificationresourcemanager)
+[**GetNotificationResourceManager**](/windows/desktop/api/KtmW32/nf-ktmw32-getnotificationresourcemanager)
 </dt> <dt>
 
-[**Getnotificationresourcemanagerasync**](/windows/desktop/api/KtmW32/nf-ktmw32-getnotificationresourcemanagerasync)
+[**GetNotificationResourceManagerAsync**](/windows/desktop/api/KtmW32/nf-ktmw32-getnotificationresourcemanagerasync)
 </dt> <dt>
 
-[**Preparecomplete**](/windows/desktop/api/Ktmw32/nf-ktmw32-preparecomplete)
+[**PrepareComplete**](/windows/desktop/api/Ktmw32/nf-ktmw32-preparecomplete)
 </dt> <dt>
 
-[**Singlephasereject**](/windows/desktop/api/Ktmw32/nf-ktmw32-singlephasereject)
+[**SinglePhaseReject**](/windows/desktop/api/Ktmw32/nf-ktmw32-singlephasereject)
 </dt> <dt>
 
-[**Transaktions \_ Benachrichtigung**](/windows/desktop/api/KtmTypes/ns-ktmtypes-transaction_notification)
+[**\_TRANSAKTIONSBENACHRICHTIGUNG**](/windows/desktop/api/KtmTypes/ns-ktmtypes-transaction_notification)
 </dt> </dl>
 
  

@@ -226,7 +226,7 @@
               href: pausing-and-resuming-playback.md
             - name: Einschränken des Wiedergabebereichs
               href: limiting-the-playback-scope.md
-            - name: Aufzeichnung mit MCIWnd-Steuerelementen
+            - name: Aufzeichnen mit MCIWnd-Steuerelementen
               href: recording-with-mciwnd-controls.md
             - name: Anpassen des Aufzeichnungsprozesses
               href: customizing-the-recording-process.md
@@ -254,7 +254,7 @@
             - name: Informationen zum Audiokomprimierungs-Manager
               href: about-the-audio-compression-manager.md
               items:
-                - name: Mapping Waveform-Audio Devices
+                - name: Zuordnen Waveform-Audio Geräten
                   href: mapping-waveform-audio-devices.md
                 - name: Funktionsweise des Audiokomprimierungs-Managers
                   href: how-the-audio-compression-manager-works.md
@@ -271,7 +271,7 @@
                   href: producing-a-dialog-box-for-selecting-a-filter.md
                 - name: Erstellen eines Dialogfelds zum Auswählen eines bestimmten Formattyps
                   href: producing-a-dialog-box-for-selecting-a-specific-type-of-format.md
-                - name: Erstellen eines Dialogfelds zum Auswählen eingeschränkter Formate
+                - name: Erstellen eines Dialogfelds zum Auswählen von eingeschränkten Formaten
                   href: producing-a-dialog-box-for-selecting-restricted-formats.md
                 - name: Erstellen eines Dialogfelds zum Auswählen eines Formats zum Speichern
                   href: producing-a-dialog-box-for-selecting-a-format-for-saving.md
@@ -279,15 +279,15 @@
                   href: producing-a-dialog-box-for-selecting-a-format-for-recording.md
                 - name: Konvertieren von Daten aus einem Format in ein anderes
                   href: converting-data-from-one-format-to-another.md
-                - name: Mehrstufige Formatkonvertierung
+                - name: Formatkonvertierung mit mehreren Schritten
                   href: multistep-format-conversion.md
                 - name: Suchen eines bestimmten Formats
                   href: finding-a-specific-format.md
                 - name: Suchen eines bestimmten Treibers
                   href: finding-a-specific-driver.md
-                - name: Hinzufügen von Treibern in einer Anwendung
+                - name: Hinzufügen von Treibern innerhalb einer Anwendung
                   href: adding-drivers-within-an-application.md
-                - name: Generieren eines Nichtstandardformats
+                - name: Generieren eines nicht standardmäßigen Formats
                   href: generating-a-nonstandard-format.md
             - name: Referenz zum Audiokomprimierungs-Manager
               href: audio-compression-manager-reference.md
@@ -309,7 +309,7 @@
                 - name: Steuerelementtypen
                   href: control-types.md
                   items:
-                    - name: Audio Mixer Benutzerdefinierte Steuerelemente
+                    - name: Benutzerdefinierte Audio-Mixer-Steuerelemente
                       href: audio-mixer-custom-controls.md
                     - name: Fader
                       href: faders.md
@@ -327,35 +327,35 @@
                       href: time-controls.md
                 - name: Mixer Geräteabfragen
                   href: mixer-device-queries.md
-                - name: Öffnen und Schließen Mixer Geräten
+                - name: Öffnen und Schließen von Mixer Geräten
                   href: opening-and-closing-mixer-devices.md
-                - name: Fensterrückrufdienste
+                - name: Rückrufdienste für Fenster
                   href: window-callback-services.md
-                - name: Audiozeilen- und Steuerungsabfragen
+                - name: Audiozeilen- und Steuerelementabfragen
                   href: audio-line-and-control-queries.md
                 - name: Audiomixer in Windows Vista
                   href: audio-mixers-in-windows-vista.md
-            - name: Audio Mixer Referenz
+            - name: Audio Mixer Reference (Referenz zu Audio Mixer)
               href: audio-mixer-reference.md
               items:
-                - name: Audio Mixer Funktionen
+                - name: Audio Mixer Functions
                   href: audio-mixer-functions.md
                 - name: Audio Mixer Strukturen
                   href: audio-mixer-structures.md
-                - name: Audio Mixer Messages
+                - name: Audio Mixer Nachrichten
                   href: audio-mixer-messages.md
-        - name: Instrument Digital Interface (KEYBOARD)
+        - name: Music Instrument Digital Interface (INSTRUMENTS)
           href: musical-instrument-digital-interface--midi.md
           items:
-            - name: Informationen zuVERT
+            - name: Informationen zu PARTS
               href: about-midi.md
               items:
-                - name: The MAPPer (The MAPPer)
+                - name: DER MAPPER
                   href: the-midi-mapper.md
                   items:
-                    - name: Mapper und Windows
+                    - name: MAPPer und Windows
                       href: the-midi-mapper-and-windows.md
-                    - name: Die MAPPer-Architektur von MAPPER
+                    - name: DIE MAPPER-Architektur
                       href: the-midi-mapper-architecture.md
                     - name: Die Kanalzuordnung
                       href: the-channel-map.md
@@ -363,9 +363,9 @@
                       href: patch-maps.md
                     - name: Der Volumeskalar
                       href: the-volume-scalar.md
-                    - name: Schlüssel Karten
+                    - name: Key Karten
                       href: key-maps.md
-                    - name: Zusammenfassung der Karten und DES-Nachrichten
+                    - name: Zusammenfassung der Karten und MELDUNGEN
                       href: summary-of-maps-and-midi-messages.md
                 - name: Media Control Interface (MCI)
                   href: media-control-interface--mci.md
@@ -376,39 +376,39 @@
                       href: stream-buffer-format.md
                     - name: Zeitsteuerungsinformationen
                       href: timing-information.md
-                    - name: EVENTS-Ereignistypen
+                    - name: EREIGNISTYPEN
                       href: midi-event-types.md
-                    - name: KEYBOARD Streams
+                    - name: STREAMS
                       href: midi-streams.md
-                - name: KEYBOARD-Dienste
+                - name: PARTS-Dienste
                   href: midi-services.md
                   items:
-                    - name: Abfragen vonENDE-Geräten
+                    - name: Abfragen von ABFRAGEGERÄTEN
                       href: querying-midi-devices.md
                     - name: Öffnen und Schließen von Gerätetreibern
                       href: opening-and-closing-device-drivers.md
-                    - name: Zuordnen und Vorbereiten vonBAU-Datenblöcken
+                    - name: Zuordnen und Vorbereiten von DATENQUELLEN-Datenblöcken
                       href: allocating-and-preparing-midi-data-blocks.md
-                    - name: Verwalten vonTE-Datenblöcken
+                    - name: Verwalten von BLOCKS-Datenblöcken
                       href: managing-midi-data-blocks.md
                     - name: Anfordern von Zeitformaten
                       href: requesting-time-formats.md
-                    - name: Behandeln von Fehlern mit DABEI-Funktionen
+                    - name: Behandeln von Fehlern mit DEN FUNKTIONEN
                       href: handling-errors-with-midi-functions.md
-                - name: Wiedergeben von WIEDERGABEDATEIEN
+                - name: Wiedergeben von PROTOKOLLDATEIEN
                   href: playing-midi-files.md
                   items:
-                    - name: DATEITYP-Ausgabedatentypen
+                    - name: OUTPUT-Datentypen
                       href: midi-output-data-types.md
-                    - name: Abfragen vonENDE-Ausgabegeräten
+                    - name: Abfragen von OUTPUT-Ausgabegeräten
                       href: querying-midi-output-devices.md
-                    - name: Öffnen von DANN-Ausgabegeräten
+                    - name: Öffnen von AUSGABEGERÄTEN
                       href: opening-midi-output-devices.md
-                    - name: Senden von SIGNAL-Nachrichten mit Streampuffern
+                    - name: Senden von MELDUNGEN mit Streampuffern
                       href: sending-midi-messages-with-stream-buffers.md
-                    - name: Senden einzelner SIGNAL-Nachrichten
+                    - name: Senden einzelner SENDENACHRICHTEN
                       href: sending-individual-midi-messages.md
-                    - name: Senden System-Exclusive Nachrichten
+                    - name: Senden von System-Exclusive Nachrichten
                       href: sending-system-exclusive-messages.md
                     - name: Verwenden eines Fensters oder Threads zum Verwalten der gepufferten Wiedergabe
                       href: using-a-window-or-thread-to-manage-buffered-playback.md
@@ -416,24 +416,24 @@
                       href: using-a-callback-function-to-manage-buffered-playback.md
                     - name: Verwenden eines Ereignisrückrufs zum Verwalten der gepufferten Wiedergabe
                       href: using-an-callback-to-manage-buffered-playback.md
-                    - name: Zurücksetzen der DANN-Ausgabe
+                    - name: Zurücksetzen der OUTPUT-Ausgabe
                       href: resetting-midi-output.md
                     - name: Ändern des internen SYNTHESIZER-Volumes
                       href: changing-internal-midi-synthesizer-volume.md
-                    - name: Vorabladen von Patches mit internen SYNTHESIZE-Synthesizern
+                    - name: Vorabladen von Patches mit internen SYNTHESIZER-Synthesizern
                       href: preloading-patches-with-internal-midi-synthesizers.md
-                - name: Aufzeichnen von TONS-Audio
+                - name: Recording RECORDING Audio (Aufzeichnen von AUDIO)
                   href: recording-midi-audio.md
                   items:
-                    - name: EINGABE-Datentypen
+                    - name: INPUT-Datentypen
                       href: midi-input-data-types.md
-                    - name: Abfragen von EINGABE-Eingabegeräten
+                    - name: Abfragen von EINGABEGERÄTEN
                       href: querying-midi-input-devices.md
                     - name: Öffnen von EINGABEGERÄTEN
                       href: opening-midi-input-devices.md
-                    - name: Verwalten der TONS-Aufzeichnung
+                    - name: Verwalten der RECORDING-Aufzeichnung
                       href: managing-midi-recording.md
-                    - name: Verwalten von DABEI
+                    - name: Verwalten von THRU
                       href: managing-midi-thru.md
                     - name: Empfangen Time-Stamped-NACHRICHTEN
                       href: receiving-time-stamped-midi-messages.md
@@ -1099,7 +1099,7 @@
               href: manufacturer-identifiers.md
             - name: Microsoft Corporation Produktbezeichner
               href: microsoft-corporation-product-identifiers.md
-            - name: Microsoft Windows Sound-Systemtreiber
+            - name: Microsoft Windows SoundSystemtreiber
               href: microsoft-windows-sound-system-drivers.md
             - name: Produktbezeichner
               href: product-identifiers.md
@@ -1122,11 +1122,11 @@
                       href: installation.md
                     - name: Rückruffunktionen
                       href: callback-functions.md
-                    - name: Installierbare Laufwerksdatei Module-Definition
+                    - name: Installable Drive Module-Definition File
                       href: installable-drive-module-definition-file.md
                 - name: Installierbare Treiberfunktionen und -meldungen
                   href: installable-driver-functions-and-messages.md
-            - name: Verwenden von installierbaren Treibern
+            - name: Verwenden installierbarer Treiber
               href: using-installable-drivers.md
               items:
                 - name: Erstellen einer DriverProc-Funktion
@@ -1232,7 +1232,7 @@
               href: /windows/desktop/api/Msacm/nf-msacm-acmfiltertagdetails
             - name: acmFilterTagEnum
               href: /windows/desktop/api/Msacm/nf-msacm-acmfiltertagenum
-            - name: ACMFILTERTAGEUMCB
+            - name: ACMFILTERTAGENUMCB
               href: /windows/desktop/api/Msacm/nc-msacm-acmfiltertagenumcb
             - name: acmFormatChoose
               href: /windows/desktop/api/Msacm/nf-msacm-acmformatchoose
@@ -1250,7 +1250,7 @@
               href: /windows/desktop/api/Msacm/nf-msacm-acmformattagdetails
             - name: acmFormatTagEnum
               href: /windows/desktop/api/Msacm/nf-msacm-acmformattagenum
-            - name: ACMFORMATTAGEUMCB
+            - name: ACMFORMATTAGENUMCB
               href: /windows/desktop/api/Msacm/nc-msacm-acmformattagenumcb
             - name: acmGetVersion
               href: /windows/desktop/api/Msacm/nf-msacm-acmgetversion
@@ -1486,23 +1486,23 @@
               href: /windows/desktop/api/Vfw/nf-vfw-icsetstatusproc
             - name: IOProc
               href: /previous-versions//dd757098(v=vs.85)
-            - name: beiconfigChanged
+            - name: '"configChanged"'
               href: /windows/desktop/api/joystickapi/nf-joystickapi-joyconfigchanged
-            - name: –getDevCaps
+            - name: zugetDevCaps
               href: /previous-versions//dd757105(v=vs.85)
-            - name: –getNumDevs
+            - name: vsGetNumDevs
               href: /previous-versions//dd757106(v=vs.85)
-            - name: beigetPos
+            - name: zugetPos
               href: /previous-versions//dd757107(v=vs.85)
-            - name: beigetPosEx
+            - name: zugetPosEx
               href: /previous-versions//dd757108(v=vs.85)
-            - name: –getThreshold
+            - name: '"getThreshold"'
               href: /previous-versions//dd757109(v=vs.85)
-            - name: '-ReleaseCapture'
+            - name: zureleaseCapture
               href: /previous-versions//dd757113(v=vs.85)
-            - name: beisetCapture
+            - name: '"setCapture"'
               href: /previous-versions//dd757114(v=vs.85)
-            - name: beisetThreshold
+            - name: setThreshold
               href: /previous-versions//dd757115(v=vs.85)
             - name: LPTIMECALLBACK
               href: /previous-versions//ff728861(v=vs.85)
@@ -1528,87 +1528,87 @@
               href: /windows/desktop/api/Vfw/nf-vfw-mciwndcreatea
             - name: MCIWndRegisterClass
               href: /windows/desktop/api/Vfw/nf-vfw-mciwndregisterclass
-            - name: connectconnect
+            - name: ohne Verbindung
               href: /previous-versions//dd798446(v=vs.85)
-            - name: partsDisconnect
+            - name: müssen Sie sich mit "disconnect" verbinden.
               href: /previous-versions//dd798447(v=vs.85)
-            - name: partsInAddBuffer
+            - name: bluInAddBuffer
               href: /previous-versions//dd798450(v=vs.85)
-            - name: partsInClose
+            - name: keyboardInClose
               href: /previous-versions//dd798452(v=vs.85)
-            - name: partsInGetDevCaps
+            - name: mussinGetDevCaps
               href: /previous-versions//dd798453(v=vs.85)
-            - name: partsInGetErrorText
+            - name: keyboardInGetErrorText
               href: /previous-versions//dd798454(v=vs.85)
-            - name: partsInGetID
+            - name: mussinGetID sein.
               href: /previous-versions//dd798455(v=vs.85)
-            - name: partsInGetNumDevs
+            - name: beiinGetNumDevs
               href: /previous-versions//dd798456(v=vs.85)
-            - name: whatInMessage
+            - name: mussinMessage
               href: /previous-versions//dd798457(v=vs.85)
-            - name: partsInOpen
+            - name: bei unsInOpen
               href: /previous-versions//dd798458(v=vs.85)
-            - name: partsInPrepareHeader
+            - name: keyboardInPrepareHeader
               href: /previous-versions//dd798459(v=vs.85)
-            - name: PartsInProc
+            - name: KeyboardInProc
               href: /previous-versions//dd798460(v=vs.85)
-            - name: partsInReset
+            - name: keyboardInReset
               href: /previous-versions//dd798461(v=vs.85)
-            - name: partsInStart
+            - name: durchstartenInStart
               href: /previous-versions//dd798462(v=vs.85)
-            - name: partsInStop
+            - name: keyboardInStop
               href: /previous-versions//dd798463(v=vs.85)
-            - name: partsInUnprepareHeader
+            - name: keyboardInUnprepareHeader
               href: /previous-versions//dd798464(v=vs.85)
-            - name: partsOutCacheDrumPatches
+            - name: ohneCacheDrumPatches
               href: /previous-versions//dd798465(v=vs.85)
-            - name: cacheOutCachePatches
+            - name: ohneCachePatches
               href: /previous-versions//dd798466(v=vs.85)
-            - name: partsOutClose
+            - name: dateiOutClose
               href: /previous-versions//dd798468(v=vs.85)
-            - name: partsOutGetDevCaps
+            - name: ohneGetDevCaps
               href: /previous-versions//dd798469(v=vs.85)
-            - name: partsOutGetErrorText
+            - name: textOutGetErrorText
               href: /previous-versions//dd798470(v=vs.85)
-            - name: sideOutGetID
+            - name: ohneGetID
               href: /previous-versions//dd798471(v=vs.85)
-            - name: partsOutGetNumDevs
+            - name: ohneGetNumDevs
               href: /previous-versions//dd798472(v=vs.85)
-            - name: partsOutGetVolume
+            - name: ohneGetVolume
               href: /previous-versions//dd798473(v=vs.85)
-            - name: partsOutLongMsg
+            - name: ohneLongMsg
               href: /previous-versions//dd798474(v=vs.85)
-            - name: stromausfallOutMessage
+            - name: ohne Nachricht
               href: /previous-versions//dd798475(v=vs.85)
-            - name: partsOutOpen
+            - name: ohne Sperre
               href: /previous-versions//dd798476(v=vs.85)
-            - name: partsOutPrepareHeader
+            - name: keyboardOutPrepareHeader
               href: /previous-versions//dd798477(v=vs.85)
-            - name: WeichOutProc
+            - name: OutProc
               href: /previous-versions//dd798478(v=vs.85)
-            - name: partsOutReset
+            - name: ohne Rücksendung
               href: /previous-versions//dd798479(v=vs.85)
-            - name: partsOutSetVolume
+            - name: ohneSetVolume
               href: /previous-versions//dd798480(v=vs.85)
-            - name: partsOutShortMsg
+            - name: ohne ShortMsg
               href: /previous-versions//dd798481(v=vs.85)
-            - name: partsOutUnprepareHeader
+            - name: keyboardOutUnprepareHeader
               href: /previous-versions//dd798482(v=vs.85)
-            - name: partsStreamClose
+            - name: fileStreamClose
               href: /previous-versions//dd798485(v=vs.85)
-            - name: streamStreamOpen
+            - name: beistreamOpen
               href: /previous-versions//dd798486(v=vs.85)
-            - name: partsStreamOut
+            - name: durchstreamStreamOut
               href: /previous-versions//dd798487(v=vs.85)
             - name: streamStreamPause
               href: /previous-versions//dd798488(v=vs.85)
-            - name: partsStreamPosition
+            - name: streamStreamPosition
               href: /previous-versions//dd798489(v=vs.85)
-            - name: streamStreamProperty
+            - name: beistreamProperty
               href: /previous-versions//dd798490(v=vs.85)
-            - name: streamStreamRestart
+            - name: durchstreamStreamRestart
               href: /previous-versions//dd798491(v=vs.85)
-            - name: partsStreamStop
+            - name: streamStreamStop
               href: /previous-versions//dd798492(v=vs.85)
             - name: mixerClose
               href: /previous-versions//dd757292(v=vs.85)
@@ -1626,7 +1626,7 @@
               href: /previous-versions//dd757304(v=vs.85)
             - name: mixerMessage
               href: /previous-versions//dd757307(v=vs.85)
-            - name: mixerÖffnen
+            - name: mixerOpen
               href: /previous-versions//dd757308(v=vs.85)
             - name: mixerSetControlDetails
               href: /previous-versions//dd757309(v=vs.85)
@@ -1672,7 +1672,7 @@
               href: /previous-versions//dd757342(v=vs.85)
             - name: mmTaskBlock
               href: /windows/desktop/api/Mmddk/nf-mmddk-mmtaskblock
-            - name: mmTaskCreate
+            - name: mmTaskErate
               href: /windows/desktop/api/Mmddk/nf-mmddk-mmtaskcreate
             - name: mmTaskSignal
               href: /windows/desktop/api/Mmddk/nf-mmddk-mmtasksignal
@@ -1977,19 +1977,19 @@
               href: mci-wave-open-parms.md
             - name: MCI_WAVE_SET_PARMS
               href: mci-wave-set-parms.md
-            - name: VENTEVENT
+            - name: WÄHREND DES EREIGNISEREIGNISSES
               href: /previous-versions//dd798448(v=vs.85)
-            - name: KEYBOARDHDR
+            - name: PARTSHDR
               href: /previous-versions//dd798449(v=vs.85)
-            - name: KEYBOARDINCAPS
+            - name: WEICHEINCAPS
               href: /previous-versions//dd798451(v=vs.85)
-            - name: KEYBOARDOUTCAPS
+            - name: KAPSELNOUTCAPS
               href: /previous-versions//dd798467(v=vs.85)
-            - name: KEYBOARDPROPTEMPO
+            - name: TIESPROPTEMPO
               href: /previous-versions//dd798483(v=vs.85)
-            - name: KEYBOARDPROPTIMEDIV
+            - name: DIVPROPTIMEDIV
               href: /previous-versions//dd798484(v=vs.85)
-            - name: STRMBUFFVER
+            - name: PARTSSTRMBUFFVER
               href: /previous-versions//dd798493(v=vs.85)
             - name: MIXERCAPS
               href: /windows/desktop/api/mmeapi/ns-mmeapi-mixercapsa
@@ -2050,13 +2050,13 @@
               href: /windows/desktop/api/Vfw/nf-vfw-avistreamiskeyframe
             - name: AVIStreamLengthTime
               href: /windows/desktop/api/Vfw/nf-vfw-avistreamlengthtime
-            - name: AVIStreamStreamStreamrestKeyFrame
+            - name: AVIStreamStreamRestKeyFrame
               href: /windows/desktop/api/Vfw/nf-vfw-avistreamnearestkeyframe
-            - name: AVIStreamStreamStreamRestKeyFrameTime
+            - name: AVIStreamStreamRestKeyFrameTime
               href: /windows/desktop/api/Vfw/nf-vfw-avistreamnearestkeyframetime
-            - name: AVIStreamStreamStreamrestSample
+            - name: AVIStreamStreamRestSample
               href: /windows/desktop/api/Vfw/nf-vfw-avistreamnearestsample
-            - name: AVIStreamStreamStreamRestSampleTime
+            - name: AVIStreamStreamRestSampleTime
               href: /windows/desktop/api/Vfw/nf-vfw-avistreamnearestsampletime
             - name: AVIStreamNextKeyFrame
               href: /windows/desktop/api/Vfw/nf-vfw-avistreamnextkeyframe
@@ -2883,7 +2883,7 @@
                   href: /windows/desktop/api/Vfw/nf-vfw-iavieditstream-copy
                 - name: 'IAVIEditStream::Cut'
                   href: /windows/desktop/api/Vfw/nf-vfw-iavieditstream-cut
-                - name: 'IAVIEditStream::P Aste'
+                - name: 'IAVIEditStream::P aste'
                   href: /windows/desktop/api/Vfw/nf-vfw-iavieditstream-paste
                 - name: 'IAVIEditStream::SetInfo'
                   href: /windows/desktop/api/Vfw/nf-vfw-iavieditstream-setinfo
@@ -3140,7 +3140,7 @@
               href: keyarray.md
             - name: PATCHARRAY
               href: patcharray.md
-        - name: Multimediakonst constants (Multimediakonst constants
+        - name: Multimediakonstanten
           href: multimedia-constants.md
           items:
             - name: MCI-Gerätetypen

@@ -1,7 +1,7 @@
 ---
-description: Die featurerequeststate-Eigenschaft ist eine Lese-/Schreibeigenschaft des Session-Objekts.
+description: Die FeatureRequestState-Eigenschaft ist eine Lese-/Schreibeigenschaft des Session-Objekts.
 ms.assetid: ba19603b-ac81-4a8b-81ca-ad5f28974599
-title: Session. featurerequeststate (Eigenschaft)
+title: Session.FeatureRequestState(Eigenschaft)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,16 +13,16 @@ api_type:
 - COM
 api_location:
 - Msi.dll
-ms.openlocfilehash: 1531157ab094d817d34650f8eae2ac6dc23c681c
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: c1198f96dde27ec4056ad099f1bb4a3eed591fdd3d390c843cec42af82d4140e
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106368518"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119629220"
 ---
-# <a name="sessionfeaturerequeststate-property"></a>Session. featurerequeststate (Eigenschaft)
+# <a name="sessionfeaturerequeststate-property"></a>Session.FeatureRequestState(Eigenschaft)
 
-Die **featurerequeststate** -Eigenschaft ist eine Lese-/Schreibeigenschaft des [**Session**](session-object.md) -Objekts. Sie kann verwendet werden, um den aktuellen Aktionszustand eines Features zu erhalten oder eine Änderung der Aktion einer Funktion und ihrer untergeordneten Funktionen anzufordern. Die [Funktion muss](feature-table.md) in der Featuretabelle benannt werden. Wenn eine Änderung des Aktions Zustands eines Features angefordert wird, kann auch der Aktions Status aller Komponenten des geänderten Features geändert werden. Der Aktions Status von Komponenten, die von mehreren Features gemeinsam verwendet werden, wird je nach dem Status der neuen Funktions Aktion entsprechend geändert (siehe Hinweise). Die **featurerequeststate** -Eigenschaft kann auch verwendet werden, um alle Features gleichzeitig zu konfigurieren, indem das Schlüsselwort all anstelle eines bestimmten Featurenamens angegeben wird.
+Die **FeatureRequestState-Eigenschaft** ist eine Lese-/Schreibeigenschaft des [**Session-Objekts.**](session-object.md) Sie kann verwendet werden, um den aktuellen Aktionsstatus eines Features zu erhalten oder eine Änderung der Aktion eines Features und seiner Unterfeatures an fordern. Das Feature muss in der Tabelle [Feature benannt](feature-table.md) werden. Wenn eine Änderung des Aktionsstatus eines Features angefordert wird, kann auch der Aktionsstatus aller Komponenten des geänderten Features geändert werden. Der Aktionsstatus von Komponenten, die von mehr als einem Feature gemeinsam genutzt werden, wird entsprechend dem neuen Featureaktionsstatus geändert (siehe Hinweise). Die **FeatureRequestState-Eigenschaft** kann auch verwendet werden, um alle Features gleichzeitig zu konfigurieren, indem das Schlüsselwort ALL anstelle eines bestimmten Featurenamens angegeben wird.
 
 Dies ist eine Eigenschaft mit Lese- und Schreibzugriff.
 
@@ -38,30 +38,30 @@ Session.FeatureRequestState = propVal
 
 ## <a name="property-value"></a>Eigenschaftswert
 
-Erforderliche Zeichenfolge, die den Namen des zu konfigurierenden Features angibt. Um alle Funktionen auf einen gewünschten Anforderungs Status festzulegen, verwenden Sie die reservierte Groß-/Kleinschreibung nicht.
+Erforderliche Zeichenfolge, die den Namen des zu konfigurierenden Features angibt. Um alle Features auf einen gewünschten Anforderungszustand zu setzen, verwenden Sie das reservierte Wort, bei dem die Groß-/Kleinschreibung nicht beachtet wird: ALL.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die [**setinstalllevel**](session-setinstalllevel.md) -Methode muss vor dem Aufruf von **featurerequeststate** aufgerufen werden.
+Die [**SetInstallLevel-Methode**](session-setinstalllevel.md) muss aufgerufen werden, bevor **FeatureRequestState aufgerufen wird.**
 
-Wenn der aktuelle Status der Funktion angefordert wird, gibt die **featurerequeststate** -Eigenschaft einen der folgenden Werte zurück.
+Wenn der aktuelle Zustand des Features angefordert wird, gibt die **FeatureRequestState-Eigenschaft** einen der folgenden Werte zurück.
 
 
 
-| Name des Auswahl Zustands         | Bedeutung                                                               |
+| Name des Auswahlzustands         | Bedeutung                                                               |
 |------------------------------|-----------------------------------------------------------------------|
-| msiinstallstateunknown =-1  | Für das Feature wird keine Aktion ausgeführt. Dies entspricht NULL.       |
-| msiinstallstateangekündigten = 1 | Das Feature muss angekündigt werden.                                          |
-| msiinstallstatemissing = 2    | Das Feature muss entfernt werden.                                             |
-| msiinstallstatuelocal = 3     | Das Feature muss als "Run-local" installiert werden.                              |
-| msiinstallstaatource = 4    | Das Feature muss als "Run-From-Source" installiert werden.                        |
-| msiinstallstatedefault = 5   | Das Feature muss mit dem aktuellen Aktionszustand der Funktion neu installiert werden. |
+| msiInstallStateUnknown = -1  | Für das Feature wird keine Aktion ergriffen. Dies entspricht NULL.       |
+| msiInstallStateAdvertised =1 | Das Feature soll angekündigt werden.                                          |
+| msiInstallStateAbsent = 2    | Das Feature muss entfernt werden.                                             |
+| msiInstallStateLocal = 3     | Das Feature muss als "run-local" installiert werden.                              |
+| msiInstallStateSource = 4    | Das Feature muss als "Run-from-Source" installiert werden.                        |
+| msiInstallStateDefault = 5   | Das Feature muss mit dem aktuellen Aktionsstatus des Features neu installiert werden. |
 
 
 
  
 
-Der folgende Code ruft beispielsweise den aktuellen Status von "myfeature" aus einer benutzerdefinierten VBScript-Aktion ab.
+Der folgende Befehl erhält beispielsweise den aktuellen Status von "MyFeature" aus einer benutzerdefinierten VBScript-Aktion.
 
 
 ```VB
@@ -71,22 +71,22 @@ iRequestState = Session.FeatureRequestState("MyFeature")
 
 
 
-Wenn der Status der Funktion konfiguriert wird, sollte die Eigenschaft **featurerequeststate** auf einen der folgenden Werte festgelegt werden.
+Wenn der Zustand des Features konfiguriert wird, sollte die **FeatureRequestState-Eigenschaft** auf einen der folgenden Werte festgelegt werden.
 
 
 
-| Name des Auswahl Zustands          | Bedeutung                                 |
+| Name des Auswahlzustands          | Bedeutung                                 |
 |-------------------------------|-----------------------------------------|
-| msiinstallstateangekündigten = 1 | Ankündigen Sie das Feature.                  |
-| msiinstallstatemissing = 2     | Entfernen Sie die Funktion.                     |
-| msiinstallstatuelocal = 3      | Installieren Sie die Funktion als "Run-local".       |
-| msiinstallstaatource = 4     | Installieren Sie die Funktion als "aus Quelle ausführen". |
+| msiInstallStateAdvertised = 1 | Geben Sie das Feature an.                  |
+| msiInstallStateAbsent = 2     | Entfernen Sie das Feature.                     |
+| msiInstallStateLocal = 3      | Installieren Sie das Feature als run-local.       |
+| msiInstallStateSource = 4     | Installieren Sie das Feature als "Run-from-Source". |
 
 
 
  
 
-Beispielsweise werden die folgenden Anforderungen aus einer benutzerdefinierten VBScript-Aktion, die "myfeature" für die lokale Installation auf dem Computer installiert ist, installiert.
+Die folgenden Anforderungen werden beispielsweise von einer benutzerdefinierten VBScript-Aktion ausgeführt, die "MyFeature" installiert, um lokal auf dem Computer ausgeführt zu werden.
 
 
 ```VB
@@ -95,11 +95,11 @@ Session.FeatureRequestState("MyFeature")=3
 
 
 
-Wenn **featurerequeststate** aufgerufen wird, versucht das Installationsprogramm, den Aktionszustand für jede Komponente, die an die angegebene Funktion gebunden ist, möglichst am besten in den angegebenen Zustand zu setzen. Es gibt jedoch häufige Situationen, in denen die Anforderung nicht vollständig berücksichtigt werden kann. Wenn z. b. eine Funktion mit zwei Komponenten verknüpft ist, die Komponente a und Komponente b durch die [FeatureComponents](featurecomponents-table.md) -Tabelle und Komponente a das **msidbcomponentattributeslocalonly** -Attribut und Komponente b das **msidbcomponentattributessourceonly** -Attribut. Wenn **featurerequeststate** in diesem Fall mit dem angeforderten Zustand msiinstallstatelocal oder msiinstallstaatource aufgerufen wird, kann die Anforderung für beide Komponenten nicht berücksichtigt werden. In diesem Fall können beide Komponenten eingeschaltet werden, wobei Komponente a auf msiinstallstatelocal und Komponente B auf msiinstallstaatource festgelegt ist.
+Wenn **FeatureRequestState** aufgerufen wird, versucht das Installationsprogramm, den Aktionszustand jeder Komponente, die an das angegebene Feature gebunden ist, so gut wie möglich auf den angegebenen Zustand festzulegen. Es gibt jedoch häufig Situationen, in denen die Anforderung nicht vollständig umgesetzt werden kann. Wenn ein Feature beispielsweise über die [Tabelle FeatureComponents](featurecomponents-table.md) an zwei Komponenten gebunden ist: Komponente A und Komponente B, und Komponente A verfügt über das **Attribut msidbComponentAttributesLocalOnly** und Komponente B über das **Attribut msidbComponentAttributesSourceOnly.** Wenn in diesem Fall **FeatureRequestState** mit dem angeforderten Status msiInstallStateLocal oder msiInstallStateSource aufgerufen wird, kann die Anforderung für beide Komponenten nicht unterstützt werden. In diesem Fall können beide Komponenten aktiviert werden, wenn Komponente A auf msiInstallStateLocal und Komponente B auf msiInstallStateSource festgelegt ist.
 
-Wenn mehr als eine Funktion mit einer einzelnen Komponente verknüpft ist, wird der endgültige Aktions Status der Komponente wie folgt bestimmt: Wenn mindestens ein Feature aufruft, dass die Komponente lokal installiert werden soll, wird msiinstallstatelocal installiert. Wenn mindestens ein Feature aufruft, damit die Komponente vom Quell Medium aus ausgeführt wird, wird msiinstallstaatource installiert. Wenn mindestens ein Feature zum Entfernen der Komponente aufruft, lautet der Aktionszustand msiinstallstatemissing. Weitere Informationen zur Auswahl von Features für die Installation finden Sie [in der](feature-table.md) Featuretabelle.
+Wenn mehrere Features mit einer einzelnen Komponente verknüpft sind, wird der endgültige Aktionsstatus dieser Komponente wie folgt bestimmt: Wenn mindestens ein Feature die lokale Installation der Komponente aufruft, wird msiInstallStateLocal installiert. Wenn mindestens ein Feature die Ausführung der Komponente über das Quellmedium aufruft, wird msiInstallStateSource installiert. Wenn mindestens ein Feature die Entfernung der Komponente erfordert, ist der Aktionsstatus msiInstallStateAbsent. Weitere Informationen dazu, wie Features für die Installation ausgewählt werden, finden Sie in der [Tabelle Feature.](feature-table.md)
 
-Wenn die Eigenschaft fehlschlägt, können Sie erweiterte Fehlerinformationen mithilfe der [**lasterrorrecord**](installer-lasterrorrecord.md) -Methode abrufen.
+Wenn die Eigenschaft fehlschlägt, können Sie erweiterte Fehlerinformationen mithilfe der [**LastErrorRecord-Methode**](installer-lasterrorrecord.md) abrufen.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -107,17 +107,17 @@ Wenn die Eigenschaft fehlschlägt, können Sie erweiterte Fehlerinformationen mi
 
 | Anforderung | Wert |
 |--------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Version<br/> | Windows Installer 5,0 unter Windows Server 2012, Windows 8, Windows Server 2008 R2 oder Windows 7. Windows Installer 4,0 oder Windows Installer 4,5 unter Windows Server 2008 oder Windows Vista. Windows Installer unter Windows Server 2003 oder Windows XP<br/> |
+| Version<br/> | Windows Installer 5.0 auf Windows Server 2012, Windows 8, Windows Server 2008 R2 oder Windows 7. Windows Installer 4.0 oder Windows Installer 4.5 auf Windows Server 2008 oder Windows Vista. Windows Installationsprogramm auf Windows Server 2003 oder Windows XP<br/> |
 | DLL<br/>     | <dl> <dt>Msi.dll</dt> </dl>                                                                                                                                                                      |
-| IID<br/>     | IID \_ ISession ist definiert als 000c109e-0000-0000-C000-000000000046<br/>                                                                                                                                                                             |
+| IID<br/>     | IID ISession ist als \_ 000C109E-0000-0000-C000-000000000046 definiert.<br/>                                                                                                                                                                             |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Sitzung**](session-object.md)
+[**Sitzungskonsistenz**](session-object.md)
 </dt> <dt>
 
 [Feature](feature-table.md)

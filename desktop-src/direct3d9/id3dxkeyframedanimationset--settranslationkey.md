@@ -1,7 +1,7 @@
 ---
-description: Legen Sie Übersetzungs Informationen für einen bestimmten Keyframe im Animations Satz fest.
+description: Legen Sie Übersetzungsinformationen für einen bestimmten Keyframe im Animationssatz fest.
 ms.assetid: 4a926c0f-6d57-48d4-bb3b-60766fc78e40
-title: 'ID3DXKeyframedAnimationSet:: settranslationkey-Methode (D3dx9anim. h)'
+title: ID3DXKeyframedAnimationSet::SetTranslationKey-Methode (D3dx9anim.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -14,16 +14,16 @@ api_type:
 api_location:
 - d3dx9.lib
 - d3dx9.dll
-ms.openlocfilehash: 5bdfb8fb02a2b06dc797317d35cc14e75bd6f221
-ms.sourcegitcommit: 14010c34b35fa268046c7683f021f86de08ddd0a
+ms.openlocfilehash: 4f699a1988c53fc52b4ce413e4c0a655b7d943ddabc0c8e5fcb25ad627e32667
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "106353398"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118987340"
 ---
-# <a name="id3dxkeyframedanimationsetsettranslationkey-method"></a>ID3DXKeyframedAnimationSet:: settranslationkey-Methode
+# <a name="id3dxkeyframedanimationsetsettranslationkey-method"></a>ID3DXKeyframedAnimationSet::SetTranslationKey-Methode
 
-Legen Sie Übersetzungs Informationen für einen bestimmten Keyframe im Animations Satz fest.
+Legen Sie Übersetzungsinformationen für einen bestimmten Keyframe im Animationssatz fest.
 
 ## <a name="syntax"></a>Syntax
 
@@ -42,30 +42,30 @@ HRESULT SetTranslationKey(
 
 <dl> <dt>
 
-*Animation* \[ in\]
+*Animation* \[ In\]
 </dt> <dd>
 
-Typ: **[ **uint**](../winprog/windows-data-types.md)**
+Typ: **[ **UINT**](../winprog/windows-data-types.md)**
 
-Animations Index.
+Animationsindex.
 
 </dd> <dt>
 
-*Schlüssel* \[ in\]
+*Schlüssel* \[ In\]
 </dt> <dd>
 
-Typ: **[ **uint**](../winprog/windows-data-types.md)**
+Typ: **[ **UINT**](../winprog/windows-data-types.md)**
 
-Keyframe.
+KeyFrame.
 
 </dd> <dt>
 
-*ptranslationkey* \[ in\]
+*pTranslationKey* \[ In\]
 </dt> <dd>
 
 Typ: **[ **LPD3DXKEY \_ VECTOR3**](d3dxkey-vector3.md)**
 
-Zeiger auf die Übersetzungs Daten. Siehe [**D3DXKEY \_ VECTOR3**](d3dxkey-vector3.md).
+Zeiger auf die Übersetzungsdaten. Siehe [**D3DXKEY \_ VECTOR3.**](d3dxkey-vector3.md)
 
 </dd> </dl>
 
@@ -73,7 +73,7 @@ Zeiger auf die Übersetzungs Daten. Siehe [**D3DXKEY \_ VECTOR3**](d3dxkey-vecto
 
 Typ: **[ **HRESULT**](https://msdn.microsoft.com/library/Bb401631(v=MSDN.10).aspx)**
 
-Wenn die Methode erfolgreich ausgeführt wird, ist der Rückgabewert S \_ OK. Wenn die Methode fehlschlägt, wird der folgende Wert zurückgegeben: D3DERR \_ invalidcall.
+Wenn die Methode erfolgreich ist, lautet der Rückgabewert S \_ OK. Wenn die Methode fehlschlägt, wird der folgende Wert zurückgegeben: D3DERR \_ INVALIDCALL.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -81,12 +81,12 @@ Wenn die Methode erfolgreich ausgeführt wird, ist der Rückgabewert S \_ OK. We
 
 | Anforderung | Wert |
 |--------------------|----------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>D3dx9anim. h</dt> </dl> |
-| Bibliothek<br/> | <dl> <dt>D3dx9. lib</dt> </dl>   |
+| Header<br/>  | <dl> <dt>D3dx9anim.h</dt> </dl> |
+| Bibliothek<br/> | <dl> <dt>D3dx9.lib</dt> </dl>   |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 

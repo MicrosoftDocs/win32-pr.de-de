@@ -1,31 +1,31 @@
 ---
-description: Dieser Abschnitt enthält Referenzinformationen für die API-Elemente zum Arbeiten mit DirectX. x-Dateien zur Unterstützung von Legacy Anwendungen.
+description: Dieser Abschnitt enthält Referenzinformationen zu den API-Elementen für die Arbeit mit DirectX-X-Dateien zur Unterstützung von Legacyanwendungen.
 ms.assetid: 4381960a-a4e7-418f-89b9-7565cc48149a
-title: X-Datei Verweis (Legacy)
+title: X-Dateireferenz (Legacy)
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 987c1b8691659ee7c6a0cfbef0e4805632b450c3
-ms.sourcegitcommit: a47bd86f517de76374e4fff33cfeb613eb259a7e
+ms.openlocfilehash: 7bfef0e88ed464025552d76f501ef51f007567c98b6a00b7e14e581741c497bd
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/06/2021
-ms.locfileid: "104392697"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118988150"
 ---
-# <a name="x-file-reference-legacy"></a>X-Datei Verweis (Legacy)
+# <a name="x-file-reference-legacy"></a>X-Dateireferenz (Legacy)
 
-Dieser Abschnitt enthält Referenzinformationen für die API-Elemente zum Arbeiten mit DirectX. x-Dateien zur Unterstützung von Legacy Anwendungen.
+Dieser Abschnitt enthält Referenzinformationen zu den API-Elementen für die Arbeit mit DirectX-X-Dateien zur Unterstützung von Legacyanwendungen.
 
--   [X-Datei Schnittstellen](dx9-graphics-reference-x-file-interfaces.md)
+-   [X-Dateischnittstellen](dx9-graphics-reference-x-file-interfaces.md)
 -   [X-Dateifunktionen](dx9-graphics-reference-x-file-functions.md)
 -   [X-Dateistrukturen](dx9-graphics-reference-x-file-structures.md)
--   [Dxfile-Konstanten](dxfile.md)
+-   [DXFILE-Konstanten](dxfile.md)
 -   [**Rückgabewerte**](dx9-graphics-reference-x-file-return-values.md)
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[Referenz für Direct3D 9](dx9-graphics-reference.md)
+[Referenz zu Direct3D 9](dx9-graphics-reference.md)
 </dt> </dl>
 
  

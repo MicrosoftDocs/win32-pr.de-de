@@ -1,7 +1,7 @@
 ---
-description: Sucht nach einem untergeordneten Tag innerhalb des angegebenen übergeordneten Elements und gibt die TagID des ersten untergeordneten Elements zurück.
+description: Sucht innerhalb des angegebenen übergeordneten Elements nach einem untergeordneten TAG und gibt die TAGID des ersten untergeordneten Elements zurück.
 ms.assetid: 67538c7e-6360-40fa-b50f-dcbc7a6a147d
-title: Sdbgetfirstchild-Funktion
+title: SdbGetFirstChild-Funktion
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,16 +13,16 @@ api_type:
 - DllExport
 api_location:
 - Apphelp.dll
-ms.openlocfilehash: abc06ae0e4b5d842a968d0f3fbeb7a15702660b9
-ms.sourcegitcommit: c7add10d695482e1ceb72d62b8a4ebd84ea050f7
+ms.openlocfilehash: 58e63b3c1c8b3e56c9610ec795c1706fe58990e4611c36886ee4a3061d0816fa
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104522803"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119075974"
 ---
-# <a name="sdbgetfirstchild-function"></a>Sdbgetfirstchild-Funktion
+# <a name="sdbgetfirstchild-function"></a>SdbGetFirstChild-Funktion
 
-Sucht nach einem untergeordneten Tag innerhalb des angegebenen übergeordneten Elements und gibt die **TagID** des ersten untergeordneten Elements zurück.
+Sucht innerhalb des angegebenen übergeordneten Elements nach einem untergeordneten TAG und gibt die **TAGID** des ersten untergeordneten Elements zurück.
 
 ## <a name="syntax"></a>Syntax
 
@@ -40,23 +40,23 @@ TAGID WINAPI SdbGetFirstChild(
 
 <dl> <dt>
 
-*PDB* \[ in\]
+*pdb* \[ In\]
 </dt> <dd>
 
-Ein Handle für die Shimdatenbank.
+Ein Handle für die Shim-Datenbank.
 
 </dd> <dt>
 
-*tiparent* \[ in\]
+*tiParent* \[ In\]
 </dt> <dd>
 
-Die **TagID** des Such Starts. Dieser Parameter kann eine **TagID \_** -Stamm-oder **\_ Tagtyp \_ Liste** sein.
+Die **TAGID** des Suchstarts. Dieser Parameter kann **TAGID \_ ROOT** oder **TAG TYPE \_ \_ LIST** sein.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Die **TagID** des ersten untergeordneten Elements oder **TagID \_ null** ist kein untergeordnetes Element wurde gefunden.
+Die **TAGID** des ersten untergeordneten Oder **TAGID \_ NULL** ist kein untergeordnetes Element wurde gefunden.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -64,23 +64,23 @@ Die **TagID** des ersten untergeordneten Elements oder **TagID \_ null** ist kei
 
 | Anforderung | Wert |
 |-------------------------------------|----------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows XP \[ -Desktop-Apps\]<br/>                                            |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/>                                   |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur XP-Desktop-Apps\]<br/>                                            |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                                   |
 | DLL<br/>                      | <dl> <dt>Apphelp.dll</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Sdbfindfirsttag**](sdbfindfirsttag.md)
+[**SdbFindFirstTag**](sdbfindfirsttag.md)
 </dt> <dt>
 
-[**Sdbfindnexttag**](sdbfindnexttag.md)
+[**SdbFindNextTag**](sdbfindnexttag.md)
 </dt> <dt>
 
-[**Sdbgetnextchild**](sdbgetnextchild.md)
+[**SdbGetNextChild**](sdbgetnextchild.md)
 </dt> </dl>
 
  

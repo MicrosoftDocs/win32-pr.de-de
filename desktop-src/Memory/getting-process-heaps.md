@@ -1,25 +1,25 @@
 ---
-description: Dieses Beispiel veranschaulicht die Verwendung der GetProcessHeaps-Funktion zum Abrufen von Handles für den Standardprozess Heap und alle privaten Heaps, die für den aktuellen Prozess aktiv sind.
+description: Dieses Beispiel veranschaulicht die Verwendung der GetProcessHeaps-Funktion zum Abrufen von Handles für den Standardprozessheap und alle privaten Heaps, die für den aktuellen Prozess aktiv sind.
 ms.assetid: 00f69593-f03b-4f30-aeec-db3fda0ac356
-title: Prozess Heaps werden erhalten.
+title: Abrufen von Prozesshaps
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: caffc8dcc69b02ab671b379dbb5e133e65f8d448
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 52b055bd558d12506d5a900c369365cb497e3817dbfa1fd53dd6506f6a919eab
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "103959668"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119067840"
 ---
-# <a name="getting-process-heaps"></a>Prozess Heaps werden erhalten.
+# <a name="getting-process-heaps"></a>Abrufen von Prozesshaps
 
-Dieses Beispiel veranschaulicht die Verwendung der [**GetProcessHeaps**](/windows/desktop/api/HeapApi/nf-heapapi-getprocessheaps) -Funktion zum Abrufen von Handles für den Standardprozess Heap und alle privaten Heaps, die für den aktuellen Prozess aktiv sind.
+Dieses Beispiel veranschaulicht die Verwendung der [**GetProcessHeaps-Funktion**](/windows/desktop/api/HeapApi/nf-heapapi-getprocessheaps) zum Abrufen von Handles für den Standardprozessheap und alle privaten Heaps, die für den aktuellen Prozess aktiv sind.
 
-Im Beispiel wird [**GetProcessHeaps**](/windows/desktop/api/HeapApi/nf-heapapi-getprocessheaps) zweimal aufgerufen, zuerst, um die Größe des benötigten Puffers zu berechnen, und erneut, um Handles in den Puffer abzurufen. Der Puffer wird mithilfe des von [**GetProcessHeap**](/windows/desktop/api/HeapApi/nf-heapapi-getprocessheap)zurückgegebenen Handles aus dem Standardprozess Heap zugeordnet. Im Beispiel wird die Startadresse der einzelnen Heap in der Konsole ausgegeben. Anschließend wird die [**HeapFree**](/windows/desktop/api/HeapApi/nf-heapapi-heapfree) -Funktion verwendet, um den für den Puffer zugeordneten Arbeitsspeicher freizugeben.
+Im Beispiel wird [**GetProcessHeaps**](/windows/desktop/api/HeapApi/nf-heapapi-getprocessheaps) zweimal aufgerufen, um zuerst die Größe des Puffers zu berechnen, der zum Abrufen von Handles im Puffer benötigt wird. Der Puffer wird mithilfe des von [**GetProcessHeap**](/windows/desktop/api/HeapApi/nf-heapapi-getprocessheap)zurückgegebenen Handles aus dem Standardprozessheap zugeordnet. Im Beispiel wird die Startadresse jedes Heaps in der Konsole ausgegeben. Anschließend wird die [**HeapFree-Funktion**](/windows/desktop/api/HeapApi/nf-heapapi-heapfree) verwendet, um den für den Puffer zugeordneten Arbeitsspeicher frei zu geben.
 
-Die Anzahl von Heaps in einem Prozess kann variieren. Ein Prozess verfügt immer über mindestens einen Heap – den Standardprozess Heap –, und er kann über eine oder mehrere private Heaps verfügen, die von der Anwendung oder durch DLLs erstellt werden, die in den Adressraum des Prozesses geladen werden.
+Die Anzahl der Heaps in einem Prozess kann variieren. Ein Prozess verfügt immer über mindestens einen Heap – den Standardprozesshap – und kann einen oder mehrere private Heaps haben, die von der Anwendung oder von DLLs erstellt werden, die in den Adressraum des Prozesses geladen werden.
 
-Beachten Sie, dass eine Anwendung Heap Funktionen nur auf Ihrem Standardprozess Heap oder auf privaten Heaps, die die Anwendung erstellt hat, aufruft. das Aufrufen von Heap Funktionen für einen privaten Heap einer anderen Komponente kann zu undefiniertem Verhalten führen.
+Beachten Sie, dass eine Anwendung Heapfunktionen nur auf dem Standardprozesshap oder auf privaten Heaps aufrufen sollte, die von der Anwendung erstellt wurden. Das Aufrufen von Heapfunktionen auf einem privaten Heap, der sich im Besitz einer anderen Komponente befindet, kann zu nicht definiertem Verhalten führen.
 
 
 ```C++

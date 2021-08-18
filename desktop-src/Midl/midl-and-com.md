@@ -22,7 +22,7 @@ Alle COM-Objekte implementieren eine oder mehrere Schnittstellen. Wenn Sie ein b
 -   [Für eine COM-Schnittstelle generierte Dateien](files-generated-for-a-com-interface.md)
 -   [Marshallen von OLE-Datentypen](marshaling-ole-data-types.md)
 
-Weitere Informationen zum Definieren von COM-Schnittstellen mit MIDL finden Sie unter [Definieren von COM-Schnittstellen.](../com/defining-com-interfaces.md) Weitere Informationen zum Erstellen von generierten Dateien für verschiedene Plattformen finden Sie unter [Targeting Stubs for Specific 32-bit or 64-bit Platforms (Zielplattformen für bestimmte 32-Bit- oder 64-Bit-Plattformen).](targeting-stubs-for-specific-32-bit-or-64-bit-platforms.md)
+Weitere Informationen zum Definieren von COM-Schnittstellen mit MIDL finden Sie unter [Definieren von COM-Schnittstellen.](../com/defining-com-interfaces.md) Weitere Informationen zum Erstellen von generierten Dateien für verschiedene Plattformen finden Sie unter Zielstubs für bestimmte [32-Bit- oder 64-Bit-Plattformen.](targeting-stubs-for-specific-32-bit-or-64-bit-platforms.md)
 
  
 

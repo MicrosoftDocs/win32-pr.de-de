@@ -1,27 +1,27 @@
 ---
-title: Server lose Bindung und RootDSE
-description: Wenn möglich, sollten Sie einen Servernamen nicht hart codieren.
+title: Serverlose Bindung und RootDSE
+description: Programmieren Sie einen Servernamen nach Möglichkeit nicht hart.
 ms.assetid: 24cfd8ce-18e6-42f1-8bc5-2c6dee82d133
 ms.tgt_platform: multiple
 keywords:
-- Server lose Bindung und RootDSE-AD
-- Server lose Bindungs Anzeige
-- RootDSE-AD
-- Active Directory, verwenden, Bindung, Server lose Bindung
+- Serverlose Bindung und RootDSE AD
+- Serverloses Bindungs-AD
+- RootDSE AD
+- Active Directory, Using, Binding, Serverless Binding
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 492a1ed115c4b0d9160305eb54b08c24db86abb8
-ms.sourcegitcommit: 803f3ccd65bdefe36bd851b9c6e7280be9489016
+ms.openlocfilehash: 2d3c88386ae95efdebd031199e135ff4c5d610e402b9cba522256df5eef097e1
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "104472484"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119024928"
 ---
-# <a name="serverless-binding-and-rootdse"></a>Server lose Bindung und RootDSE
+# <a name="serverless-binding-and-rootdse"></a>Serverlose Bindung und RootDSE
 
-Wenn möglich, sollten Sie einen Servernamen nicht hart codieren. Außerdem sollte die Bindung unter den meisten Umständen nicht unnötig an einen einzelnen Server gebunden werden. Active Directory Domain Services unterstützen die Server lose Bindung, was bedeutet, dass Active Directory an die Standard Domäne gebunden werden kann, ohne den Namen eines Domänen Controllers anzugeben. Für normale Anwendungen ist dies in der Regel die Domäne des angemeldeten Benutzers. Bei Dienst Anwendungen ist dies entweder die Domäne des Dienst Anmelde Kontos oder die des Clients, dessen Identität der Dienst annimmt.
+Programmieren Sie einen Servernamen nach Möglichkeit nicht hart. Darüber hinaus sollte die Bindung in den meisten Fällen nicht unnötigerweise an einen einzelnen Server gebunden werden. Active Directory Domain Services unterstützen die serverlose Bindung. Dies bedeutet, dass Active Directory in der Standarddomäne gebunden werden kann, ohne den Namen eines Domänencontrollers anzugeben. Bei normalen Anwendungen ist dies in der Regel die Domäne des angemeldeten Benutzers. Bei Dienstanwendungen ist dies entweder die Domäne des Dienstanmeldungskontos oder die Domäne des Clients, für den der Dienst die Identität angenommen hat.
 
-In LDAP 3,0 ist RootDSE als Stammverzeichnis der Verzeichnis Datenstruktur auf einem Verzeichnisserver definiert. RootDSE ist nicht Teil eines Namespace. Der Zweck von RootDSE besteht darin, Daten zum Verzeichnisserver bereitzustellen. Im folgenden finden Sie die Bindungs Zeichenfolge, die verwendet wird, um eine Bindung an RootDSE herzustellen.
+In LDAP 3.0 wird rootDSE als Stamm der Verzeichnisdatenstruktur auf einem Verzeichnisserver definiert. RootDSE ist nicht Teil eines Namespaces. Der Zweck des rootDSE besteht darin, Daten über den Verzeichnisserver bereitzustellen. Es folgt die Bindungszeichenfolge, die zum Binden an rootDSE verwendet wird.
 
 
 ```C++
@@ -30,7 +30,7 @@ LDAP://<servername>/rootDSE
 
 
 
-Der <servername> ist der DNS-Name eines Servers. Der <servername> ist optional, wie im folgenden Format dargestellt.
+<servername>ist der DNS-Name eines Servers. ist <servername> optional, wie im folgenden Format gezeigt.
 
 
 ```C++
@@ -39,16 +39,16 @@ LDAP://rootDSE
 
 
 
-In diesem Fall wird ein Standard Domänen Controller aus der Domäne verwendet, in der der Sicherheitskontext des aufrufenden Threads verwendet wird. Wenn innerhalb des Standorts nicht auf einen Domänen Controller zugegriffen werden kann, wird der erste Domänen Controller verwendet, der gefunden wird.
+In diesem Fall wird ein Standarddomänencontroller aus der Domäne verwendet, in der sich der Sicherheitskontext des aufrufenden Threads befindet. Wenn innerhalb des Standorts nicht auf einen Domänencontroller zugegriffen werden kann, wird der erste gefundene Domänencontroller verwendet.
 
-RootDSE ist ein bekannter und zuverlässiger Speicherort auf jedem Verzeichnisserver, um Distinguished Names der Domäne, des Schemas und der Konfigurations Container sowie anderer Daten zum Server und zum Inhalt der Verzeichnis Datenstruktur zu erhalten. Diese Eigenschaften ändern sich nur selten auf einem bestimmten Server. Eine Anwendung kann diese Eigenschaften beim Start Lesen und in der gesamten Sitzung verwenden.
+RootDSE ist ein bekannter und zuverlässiger Speicherort auf jedem Verzeichnisserver, um Distinguished Names der Domänen-, Schema- und Konfigurationscontainer sowie andere Daten über den Server und den Inhalt der Verzeichnisdatenstruktur abzurufen. Diese Eigenschaften ändern sich auf einem bestimmten Server nur selten. Eine Anwendung kann diese Eigenschaften beim Start lesen und während der gesamten Sitzung verwenden.
 
-Zusammenfassend sollte eine Anwendung eine Server lose Bindung verwenden, um Sie an das Verzeichnis in der aktuellen Domäne zu binden, mithilfe von RootDSE den Distinguished Name für einen Namespace zu erhalten und den Distinguished Name für die Bindung an Objekte im Namespace zu verwenden.
+Zusammengefasst: Eine Anwendung sollte eine serverlose Bindung verwenden, um eine Bindung an das Verzeichnis in der aktuellen Domäne zu erstellen, rootDSE verwenden, um den Distinguished Name für einen Namespace abzurufen, und diesen Distinguished Name zum Binden an Objekte im Namespace verwenden.
 
-Weitere Informationen zu Attributen, die von RootDSE unterstützt werden, finden Sie in der Active Directory-Schema Dokumentation unter [rootDSE](/windows/desktop/ADSchema/rootdse) .
+Weitere Informationen zu attributen, die von rootDSE unterstützt werden, finden Sie unter [RootDSE](/windows/desktop/ADSchema/rootdse) in der Dokumentation zum Active Directory-Schema.
 
-Weitere Informationen und ein Codebeispiel, in dem gezeigt wird, wie Sie die Server lose Bindung und RootDSE verwenden, finden Sie unter [Beispielcode zum Ermitteln des Distinguished Name der Domäne](example-code-for-getting-the-distinguished-name-of-the-domain.md).
+Weitere Informationen und ein Codebeispiel, das die Verwendung von serverloser Bindung und rootDSE veranschaulicht, finden Sie unter [Beispielcode zum Abrufen des Distinguished Name der Domäne.](example-code-for-getting-the-distinguished-name-of-the-domain.md)
 
- 
+ 
 
- 
+ 

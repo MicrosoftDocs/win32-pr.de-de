@@ -1,5 +1,5 @@
 ---
-description: 'Weitere Informationen finden Sie hier: JET_PFNREALLOC-Delegaten'
+description: 'Weitere Informationen finden Sie unter: JET_PFNREALLOC Delegaten'
 title: JET_PFNREALLOC Delegat
 TOCTitle: JET_PFNREALLOC delegate
 ms:assetid: T:Microsoft.Isam.Esent.Interop.JET_PFNREALLOC
@@ -28,21 +28,21 @@ api_type:
 api_location:
 - Microsoft.Isam.Esent.Interop.dll
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: 7aab9fef2d7a449c877f88d2ed77aa19cbb2409d
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 445cd4084ff187fba0b94e210d587b04660c0fb4dfe9e882e0c5696bfd5392df
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "103960865"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119730420"
 ---
 # <a name="jet_pfnrealloc-delegate"></a>JET_PFNREALLOC Delegat
 
-Rückruf, der von jetenreeratecolrens verwendet wird, um Speicher für die Ausgabepuffer zuzuweisen.
+Rückruf, der von JetEnumerateColumns verwendet wird, um Arbeitsspeicher für seine Ausgabepuffer zu reservieren.
 
 Diese API ist nicht CLS-kompatibel. 
 
-**Namespace:**  [Microsoft. ISAM. ESENT. Interop](./microsoft.isam.esent.interop-namespace.md)  
-**Assembly:**  Microsoft. ISAM. ESENT. Interop (in Microsoft.Isam.Esent.Interop.dll)
+**Namespace:**  [Microsoft.Isam.Esent.Interop](./microsoft.isam.esent.interop-namespace.md)  
+**Assembly:**  Microsoft.Isam.Esent.Interop (in Microsoft.Isam.Esent.Interop.dll)
 
 ## <a name="syntax"></a>Syntax
 
@@ -70,31 +70,31 @@ public delegate IntPtr JET_PFNREALLOC(
 #### <a name="parameters"></a>Parameter
 
   - context  
-    Typ: [System. IntPtr](/dotnet/api/system.intptr)  
+    Typ: [System.IntPtr](/dotnet/api/system.intptr)  
     
-    Der für jetenreeratecolumschlag angegebene Kontext.
+    Für JetEnumerateColumns angegebener Kontext.
 
 <!-- end list -->
 
   - Arbeitsspeicher  
-    Typ: [System. IntPtr](/dotnet/api/system.intptr)  
+    Typ: [System.IntPtr](/dotnet/api/system.intptr)  
     
-    Wenn ungleich 0 (null), ein Zeiger auf einen Speicherblock, der zuvor von diesem Rückruf zugeordnet wurde.
+    Wenn nicht 0 (null) ist, ein Zeiger auf einen Speicherblock, der zuvor von diesem Rückruf zugeordnet wurde.
 
 <!-- end list -->
 
   - requestedSize  
-    Typ: [System. UInt32](/dotnet/api/system.uint32)  
+    Typ: [System.UInt32](/dotnet/api/system.uint32)  
     
-    Die neue Größe des Speicherblocks (in Bytes). Wenn dieser Wert 0 ist und ein Speicherblock angegeben wird, wird dieser Speicherblock freigegeben.
+    Die neue Größe des Speicherblocks (in Bytes). Wenn dieser Wert 0 ist und ein Speicherblock angegeben wird, wird dieser Speicherblock frei.
 
 #### <a name="return-value"></a>Rückgabewert
 
-Typ: [System. IntPtr](/dotnet/api/system.intptr)  
-Ein Zeiger auf den neu belegten Arbeitsspeicher. Wenn kein Arbeitsspeicher zugeordnet werden konnte, sollte [0](/dotnet/api/system.intptr.zero) zurückgegeben werden.  
+Typ: [System.IntPtr](/dotnet/api/system.intptr)  
+Ein Zeiger auf neu zugewiesenen Arbeitsspeicher. Wenn kein Arbeitsspeicher zugeordnet werden konnte, sollte [0](/dotnet/api/system.intptr.zero) zurückgegeben werden.  
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
-#### <a name="reference"></a>Referenz
+#### <a name="reference"></a>Verweis
 
-[Microsoft. ISAM. ESENT. Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)
+[Microsoft.Isam.Esent.Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)

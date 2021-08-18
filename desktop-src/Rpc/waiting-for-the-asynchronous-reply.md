@@ -1,40 +1,40 @@
 ---
 title: Warten auf die asynchrone Antwort
-description: Welche Aktionen der Client durchführt, während er darauf wartet, dass eine Antwort vom Server benachrichtigt wird, hängt vom ausgewählten Benachrichtigungs Mechanismus ab.
+description: Was der Client während der Benachrichtigung über eine Antwort vom Server tut, hängt vom ausgewählten Benachrichtigungsmechanismus ab.
 ms.assetid: b1d4ea54-26bc-49f9-8cc1-a74fd4ffced3
 keywords:
-- Remote Prozedur Aufruf RPC, Tasks, warten auf asynchrone Antworten
+- REMOTE PROCEDURE Call RPC , Tasks, Warten auf asynchrone Antworten
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 0890b3024a05bb704f7b5a803c4b1e517c65ee21
-ms.sourcegitcommit: 592c9bbd22ba69802dc353bcb5eb30699f9e9403
+ms.openlocfilehash: ff50357402d96c32444f077d07558c01ed93d0367514e947643a28bf3041f204
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "104315885"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119010478"
 ---
 # <a name="waiting-for-the-asynchronous-reply"></a>Warten auf die asynchrone Antwort
 
-Welche Aktionen der Client durchführt, während er darauf wartet, dass eine Antwort vom Server benachrichtigt wird, hängt vom ausgewählten Benachrichtigungs Mechanismus ab.
+Was der Client während der Benachrichtigung über eine Antwort vom Server tut, hängt vom ausgewählten Benachrichtigungsmechanismus ab.
 
-Wenn der Client ein Ereignis für die Benachrichtigung verwendet, wird in der Regel die [**WaitForSingleObject**](/windows/desktop/api/synchapi/nf-synchapi-waitforsingleobject) -Funktion oder die [**WaitForSingleObjectEx**](/windows/desktop/api/synchapi/nf-synchapi-waitforsingleobjectex) -Funktion aufgerufen. Der Client wechselt in einen blockierten Zustand, wenn er eine dieser Funktionen aufruft. Dies ist effizient, da der Client keine CPU-Lauf Zyklen beansprucht, während er blockiert ist.
+Wenn der Client ein Ereignis für die Benachrichtigung verwendet, wird in der Regel die [**WaitForSingleObject-Funktion**](/windows/desktop/api/synchapi/nf-synchapi-waitforsingleobject) oder die [**WaitForSingleObjectEx-Funktion**](/windows/desktop/api/synchapi/nf-synchapi-waitforsingleobjectex) aufrufen. Der Client geht in einen blockierten Zustand über, wenn er eine dieser Funktionen aufruft. Dies ist effizient, da der Client keine CPU-Ausführungszyklen verbraucht, während er blockiert ist.
 
-Wenn Abruf verwendet wird, um auf seine Ergebnisse zu warten, wechselt das Client Programm in eine Schleife, die die Funktion [**rpcasyncgetcallstatus**](/windows/desktop/api/Rpcasync/nf-rpcasync-rpcasyncgetcallstatus)wiederholt aufruft. Dies ist eine effiziente Methode, um zu warten, ob das Client Programm in der Abruf Schleife eine andere Verarbeitung durchführt. Beispielsweise kann die Daten in kleinen Blöcken für einen nachfolgenden asynchronen Remote Prozedur Aufrufvorgang vorbereitet werden. Nachdem jeder Block abgeschlossen ist, kann der Client den ausstehenden asynchronen Remote Prozedur Aufrufs Abfragen, um zu prüfen, ob er abgeschlossen ist.
+Wenn das Clientprogramm abruft, um auf seine Ergebnisse zu warten, gibt es eine Schleife ein, die wiederholt die [**Funktion RpcAsyncGetCallStatus aufruft.**](/windows/desktop/api/Rpcasync/nf-rpcasync-rpcasyncgetcallstatus) Dies ist eine effiziente Methode, um zu warten, ob Ihr Clientprogramm andere Verarbeitungen in der Abrufschleife vor sich hat. Beispielsweise können Daten in kleinen Blocken für einen nachfolgenden asynchronen Remoteprozeduraufruf vorbereitet werden. Nachdem jeder Block abgeschlossen ist, kann Der Client den ausstehenden asynchronen Remoteprozeduraufruf abrufen, um zu sehen, ob er abgeschlossen ist.
 
-Das Client Programm kann einen asynchronen Prozedur Aufruf (APC) bereitstellen, bei dem es sich um eine Rückruffunktion handelt, die von der RPC-Lauf Zeit Bibliothek beim Abschluss des asynchronen Remote Prozedur Aufrufs aufgerufen wird. Ihr Client Programm muss den Wartezustand "Warnung" aufweisen. Dies bedeutet in der Regel, dass der Client eine Windows-API-Funktion aufruft, um sich in einen blockierten Zustand zu versetzen. Weitere Informationen finden Sie unter [asynchrone Prozedur Aufrufe](/windows/desktop/Sync/asynchronous-procedure-calls).
+Ihr Clientprogramm kann einen asynchronen Prozeduraufruf (APC) bereitstellen. Dabei handelt es sich um eine Rückruffunktion, die von der RPC-Laufzeitbibliothek aufgerufen wird, wenn der asynchrone Remoteprozeduraufruf abgeschlossen ist. Ihr Clientprogramm muss sich in einem warnbaren Wartezustand befingen. Dies bedeutet in der Regel, dass der Client eine Windows-API-Funktion aufruft, um sich selbst in einen blockierten Zustand zu bringen. Weitere Informationen finden Sie unter [Asynchrone Prozeduraufrufe.](/windows/desktop/Sync/asynchronous-procedure-calls)
 
 > [!Note]  
-> Die Benachrichtigung über den Abschluss wird von einer asynchronen RPC-Routine nicht zurückgegeben, wenn während eines asynchronen Aufrufs eine RPC-Ausnahme ausgelöst wird.
+> Die Benachrichtigung über den Abschluss wird nicht von einer asynchronen RPC-Routine zurückgegeben, wenn während eines asynchronen Aufrufs eine RPC-Ausnahme ausgelöst wird.
 
- 
+ 
 
-Wenn Ihr Client Programm einen e/a-Abschlussport verwendet, um Abschluss Benachrichtigungen zu empfangen, muss er die [**GetQueuedCompletionStatus**](/windows/desktop/api/ioapiset/nf-ioapiset-getqueuedcompletionstatus) -Funktion aufrufen. Wenn dies der Fall ist, kann es entweder unbegrenzt auf eine Antwort warten oder die andere Verarbeitung fortsetzen. Wenn beim Warten auf eine Antwort andere Verarbeitungsvorgänge durchführt, muss der Abschlussport mit der **GetQueuedCompletionStatus** -Funktion abgefragt werden. In diesem Fall muss die *dwMilliseconds* in der Regel auf NULL festgelegt werden. Dies bewirkt, dass **GetQueuedCompletionStatus** sofort zurückgegeben wird, auch wenn der asynchrone-Befehl nicht abgeschlossen wurde.
+Wenn Ihr Clientprogramm einen E/A-Abschlussport zum Empfangen von Abschlussbenachrichtigungen verwendet, muss es die [**GetQueuedCompletionStatus-Funktion**](/windows/desktop/api/ioapiset/nf-ioapiset-getqueuedcompletionstatus) aufrufen. Wenn dies der Prozess ist, kann er entweder unbegrenzt auf eine Antwort warten oder andere Verarbeitungen fortsetzen. Wenn eine andere Verarbeitung erfolgt, während auf eine Antwort gewartet wird, muss der Abschlussport mit der **GetQueuedCompletionStatus-Funktion abruft** werden. In diesem Fall muss *dwMilliseconds* in der Regel auf 0 (null) festgelegt werden. Dies **bewirkt, dass GetQueuedCompletionStatus** sofort zurückkommt, auch wenn der asynchrone Aufruf nicht abgeschlossen wurde.
 
-Client Programme können auch eine Vervollständigungs Benachrichtigung über die Fenster Nachrichten Warteschlangen empfangen. In diesem Fall wird die Abschluss Nachricht einfach wie jede beliebige Windows-Nachricht verarbeitet.
+Clientprogramme können auch Abschlussbenachrichtigungen über ihre Fensternachrichtenwarteschlangen empfangen. In diesem Fall verarbeiten sie einfach die Abschlussmeldung wie jede andere Windows Nachricht.
 
-In einer Multithreadanwendung kann ein asynchroner-Rückruf nur vom Client abgebrochen werden, nachdem der Thread, der den-Befehl ausgelöst hat, erfolgreich vom-Befehl zurückgegeben wurde. Dadurch wird sichergestellt, dass der-Vorgang nicht asynchron von einem anderen Thread abgebrochen wird, nachdem er einen synchronen-Befehl nicht Als Standardübung sollte ein asynchroner Rückruf, der synchron fehlschlägt, nicht asynchron abgebrochen werden. Die Client Anwendung muss dieses Verhalten beobachten, wenn Aufrufe für verschiedene Threads ausgegeben und abgebrochen werden können. Nachdem der-Befehl abgebrochen wurde, muss der Client Code außerdem auf die Abschluss Benachrichtigung warten und den-Vorgang abschließen. Die Funktion [**rpcasynccancelcallruft**](/windows/desktop/api/Rpcasync/nf-rpcasync-rpcasynccancelcall) einfach die Abschluss Benachrichtigung auf. Es ist kein Ersatz für den Abschluss des Aufrufes.
+In einer Multithreadanwendung kann ein asynchroner Aufruf vom Client nur abgebrochen werden, nachdem der Thread, von dem der Aufruf stammt, erfolgreich vom Aufruf zurückgegeben wurde. Dadurch wird sichergestellt, dass der Aufruf nicht asynchron von einem anderen Thread abgebrochen wird, nachdem ein synchroner Aufruf fehlgeschlagen ist. Standardmäßig sollte ein asynchroner Aufruf, der synchron fehlschlägt, nicht asynchron abgebrochen werden. Die Clientanwendung muss dieses Verhalten beobachten, wenn Aufrufe in verschiedenen Threads ausgegeben und abgebrochen werden können. Außerdem muss der Clientcode nach dem Abbrechen des Aufrufs auf die Abschlussbenachrichtigung warten und den Aufruf abschließen. Die [**RpcAsyncCancelCall-Funktion**](/windows/desktop/api/Rpcasync/nf-rpcasync-rpcasynccancelcall) überlastet einfach die Abschlussbenachrichtigung. es ist kein Ersatz für die Durchführung des Aufrufs.
 
-Das folgende Code Fragment veranschaulicht, wie ein-Client Programm ein Ereignis verwenden kann, um auf eine asynchrone Antwort zu warten.
+Das folgende Codefragment veranschaulicht, wie ein Clientprogramm ein Ereignis verwenden kann, um auf eine asynchrone Antwort zu warten.
 
 
 ```C++
@@ -48,7 +48,7 @@ if (WaitForSingleObject(Async.u.hEvent, INFINITE) == WAIT_FAILED)
 
 
 
-Client Programme, die eine APC zum Empfangen von Benachrichtigungen über eine asynchrone Antwort verwenden, versetzen sich in der Regel in einen blockierten Zustand. Dies wird im folgenden Code Fragment veranschaulicht.
+Clientprogramme, die einen APC zum Empfangen von Benachrichtigungen über eine asynchrone Antwort verwenden, setzen sich in der Regel selbst in einen blockierten Zustand. Dies wird im folgenden Codefragment veranschaulicht.
 
 
 ```C++
@@ -60,9 +60,9 @@ if (SleepEx(INFINITE, TRUE) != WAIT_IO_COMPLETION)
 
 
 
-In diesem Fall wechselt das Client Programm in den Standbymodus und beansprucht keine CPU-Zyklen, bis die RPC-Lauf Zeit Bibliothek das APC aufruft (nicht angezeigt).
+In diesem Fall geht das Clientprogramm in den Ruhezustand und verbraucht keine CPU-Zyklen, bis die RPC-Laufzeitbibliothek den APC aufruft (nicht gezeigt).
 
-Das nächste Beispiel zeigt einen Client, der einen e/a-Abschlussport verwendet, um auf eine asynchrone Antwort zu warten.
+Im nächsten Beispiel wird ein Client veranschaulicht, der einen E/A-Abschlussport verwendet, um auf eine asynchrone Antwort zu warten.
 
 
 ```C++
@@ -81,10 +81,10 @@ if (!GetQueuedCompletionStatus(
 
 
 
-Im vorherigen Beispiel wartet der [**GetQueuedCompletionStatus**](/windows/desktop/api/ioapiset/nf-ioapiset-getqueuedcompletionstatus) -Aufrufe unbegrenzt, bis der asynchrone Remote Prozedur Aufrufvorgang abgeschlossen ist.
+Im vorherigen Beispiel wartet der Aufruf von [**GetQueuedCompletionStatus**](/windows/desktop/api/ioapiset/nf-ioapiset-getqueuedcompletionstatus) unbegrenzt, bis der asynchrone Remoteprozeduraufruf abgeschlossen ist.
 
-Beim Schreiben von Multithreadanwendungen kommt es zu einem möglichen Problem. Wenn ein Thread einen Remote Prozedur Aufruf aufruft und dann beendet wird, bevor er benachrichtigt wird, dass der Sendevorgang abgeschlossen ist, kann der Remote Prozedur Aufruf fehlschlagen, und der Client-Stub kann die Verbindung mit dem Server schließen. Daher sollten Threads, die eine Remote Prozedur aufzurufen, nicht beendet werden, bevor der-Rückruf abgeschlossen oder abgebrochen wird, wenn das Verhalten nicht erwünscht ist.
+Ein potenzieller Fehler tritt beim Schreiben von Multithreadanwendungen auf. Wenn ein Thread einen Remoteprozeduraufruf aufruft und dann beendet wird, bevor er eine Benachrichtigung empfängt, dass der Sendevorgang abgeschlossen wurde, kann der Remoteprozeduraufruf fehlschlagen, und der Clientstub kann die Verbindung mit dem Server schließen. Daher sollten Threads, die eine Remoteprozedur aufrufen, nicht beendet werden, bevor der Aufruf abgeschlossen oder abgebrochen wird, wenn das Verhalten unerwünscht ist.
 
- 
+ 
 
- 
+ 

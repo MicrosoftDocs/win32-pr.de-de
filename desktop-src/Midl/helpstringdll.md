@@ -1,9 +1,9 @@
 ---
-title: Helpstringdll-Attribut
-description: Mit dem Attribut \ Helpstringdll \ wird der Name der DLL festgelegt, die zum Durchführen einer Suche nach Dokument Zeichenfolgen verwendet werden soll.
+title: helpstringdll-Attribut
+description: Das \helpstringdll\-Attribut legt den Namen der DLL fest, die zum Ausführen einer Dokumentzeichenfolgensuche verwendet werden soll.
 ms.assetid: 1b9b962c-c355-4428-b5ea-dc7fd48b50a9
 keywords:
-- Helpstringdll-Attribut-Mittel l
+- helpstringdll-Attribut MIDL
 topic_type:
 - apiref
 api_name:
@@ -12,16 +12,16 @@ api_type:
 - NA
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: dace4fb9ddc3908ce637cd2d8521a1ab4671d620
-ms.sourcegitcommit: ebd3ce6908ff865f1ef66f2fc96769be0aad82e1
+ms.openlocfilehash: f773ed18e72f184305275ce238ddf0576c81447181a0b7fb420c30341935f5e4
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/19/2020
-ms.locfileid: "103948640"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119067250"
 ---
-# <a name="helpstringdll-attribute"></a>Helpstringdll-Attribut
+# <a name="helpstringdll-attribute"></a>helpstringdll-Attribut
 
-Mit dem **\[ Helpstringdll \]** -Attribut wird der Name der DLL festgelegt, die zum Ausführen einer Dokument Zeichenfolgen-Suche verwendet werden soll.
+Das **\[ \] helpstringdll-Attribut** legt den Namen der DLL fest, die zum Ausführen einer Dokumentzeichenfolgensuche verwendet werden soll.
 
 ``` syntax
 [
@@ -38,56 +38,56 @@ library library-name
 
 <dl> <dt>
 
-*Hilfe-Text Zeichenfolge* 
+*help-text-string* 
 </dt> <dd>
 
-Eine NULL terminierte Zeichenfolge, die den voll qualifizierten Dateinamen einer DLL angibt.
+Eine auf null endende Zeichenfolge, die den vollqualifizierten Dateinamen einer DLL angibt.
 
 </dd> <dt>
 
-*optional-Attribut-List* 
+*optional-attribute-list* 
 </dt> <dd>
 
-Andere Attribute, die auf die Library-Anweisung als Ganzes angewendet werden.
+Andere Attribute, die für die bibliotheks-Anweisung als Ganzes gelten.
 
 </dd> <dt>
 
 *Bibliotheksname* 
 </dt> <dd>
 
-Der Bezeichner, der von Softwarekomponenten verwendet wird, um diese [**Bibliothek**](library.md)zu kennzeichnen.
+Der Bezeichner, den Softwarekomponenten verwenden, um diese [**Bibliothek**](library.md)zu kennzeichnen.
 
 </dd> <dt>
 
-*Library-Definition-Anweisungen* 
+*library-definition-statements* 
 </dt> <dd>
 
-Eine oder mehrere Mittell-Anweisungen, die die-Schnittstelle der [**Bibliothek**](library.md)definieren.
+Eine oder mehrere MIDL-Anweisung, die die Schnittstelle der [**Bibliothek**](library.md)definiert.
 
 </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Verwenden Sie das **\[ Helpstringdll \]** -Attribut einer Library-Anweisung, um als Zeichenfolge den voll qualifizierten Dateinamen einer Dynamic Link Library anzugeben. Dies ermöglicht es einem Benutzer, eine Beschreibung der DLL mit dem Objekt-Viewer anzuzeigen.
+Verwenden Sie das **\[ \] helpstringdll-Attribut** für eine Bibliotheks-Anweisung, um als Zeichenfolge den vollqualifizierten Dateinamen einer Dynamic Link Library anzugeben. Dadurch kann ein Benutzer eine Beschreibung der DLL mit dem Objekt-Viewer anzeigen.
 
-Verwenden Sie die **GetDocumentation2** -Funktionen in den Schnittstellen **ITypeLib2** und **ITypeInfo2** , um die Hilfe Zeichenfolge abzurufen.
+Verwenden Sie die **GetDocumentation2-Funktionen** in den **Schnittstellen ITypeLib2** und **ITypeInfo2,** um die Hilfezeichenfolge abzurufen.
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
 [**Bibliothek**](library.md)
 </dt> <dt>
 
-[Syntax der ODL-Datei](/previous-versions/windows/desktop/automat/odl-file-syntax)
+[ODL-Dateisyntax](/previous-versions/windows/desktop/automat/odl-file-syntax)
 </dt> <dt>
 
-[Beispiel für eine ODL-Datei](/previous-versions/windows/desktop/automat/odl-file-example)
+[BEISPIEL FÜR ODL-Datei](/previous-versions/windows/desktop/automat/odl-file-example)
 </dt> <dt>
 
-[Erstellen einer Typbibliothek mit "Mittel l"](generating-a-type-library-with-midl-2.md)
+[Generieren einer Typbibliothek mit MIDL](generating-a-type-library-with-midl-2.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 

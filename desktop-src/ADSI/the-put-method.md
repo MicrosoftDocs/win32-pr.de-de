@@ -1,24 +1,24 @@
 ---
-title: Put-Methode
-description: Speichert den Wert für eine Eigenschaft für ein Active Directory Objekt nach Namen im Eigenschaften Cache.
+title: Die Put-Methode
+description: Speichert den Wert für eine Eigenschaft für ein Active Directory-Objekt anhand des Namens im Eigenschaftencache.
 ms.assetid: 8534ceba-5fcb-441f-9e76-3060319478af
 ms.tgt_platform: multiple
 keywords:
-- ADSI platzieren, Informationen zu
-- ADSI ADSI, Beispielcode Visual Basic mit der Put-Methode
-- Eigenschaften-ADSI, Speichern eines Werts für eine Eigenschaft im Eigenschaften Cache
+- Put ADSI , About
+- ADSI ADSI, Beispielcode Visual Basic mithilfe der Put-Methode
+- ADSI-Eigenschaften, Speichern eines Werts für eine Eigenschaft im Eigenschaftencache
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: a64a5cba8056f8eac0125fc5b32fd66bdf988dae
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: b8be79892c62d788f711163ec1fad7c555f6e6f0a897f805341a588a4b6d3619
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "103855239"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119023208"
 ---
-# <a name="the-put-method"></a>Put-Methode
+# <a name="the-put-method"></a>Die Put-Methode
 
-Die [**IADs::P UT**](/windows/desktop/api/Iads/nf-iads-iads-put) -Methode speichert den Wert für eine Eigenschaft für ein Active Directory Objekt nach Namen im Eigenschaften Cache. Verwenden Sie [**IADs::P utex**](/windows/desktop/api/Iads/nf-iads-iads-putex) , um mehrwertige Eigenschaften im Eigenschafts Cache zu speichern, oder um eine Eigenschaft aus einem Objekt zu entfernen. Diese Werte werden erst im zugrunde liegenden Verzeichnisdienst persistent gespeichert, wenn [**IADs:: abtinfo**](/windows/desktop/api/Iads/nf-iads-iads-setinfo) aufgerufen wird.
+Die [**IADs::P ut-Methode**](/windows/desktop/api/Iads/nf-iads-iads-put) speichert den Wert für eine Eigenschaft für ein Active Directory-Objekt anhand des Namens im Eigenschaftencache. Verwenden Sie [**IADs::P utEx,**](/windows/desktop/api/Iads/nf-iads-iads-putex) um mehrwertige Eigenschaften im Eigenschaftencache zu speichern oder um eine Eigenschaft aus einem Objekt zu entfernen. Diese Werte werden erst im zugrunde liegenden Verzeichnisdienst beibehalten, wenn [**IADs::SetInfo**](/windows/desktop/api/Iads/nf-iads-iads-setinfo) aufgerufen wird.
 
 
 ```VB
@@ -53,7 +53,7 @@ End Sub
 
 
 
-Im folgenden Codebeispiel wird gezeigt, wie [**IADs verwendet wird::P UT**](/windows/desktop/api/Iads/nf-iads-iads-put) mit einem einzelnen Wert:
+Im folgenden Codebeispiel wird veranschaulicht, wie [**IADs::P ut**](/windows/desktop/api/Iads/nf-iads-iads-put) mit einem einzelnen Wert verwendet wird:
 
 
 ```VB
@@ -82,7 +82,7 @@ CleanUp:
 
 
 
-Im folgenden Codebeispiel wird gezeigt, wie [**IADs verwendet wird::P UT**](/windows/desktop/api/Iads/nf-iads-iads-put) mit mehreren Werten:
+Im folgenden Codebeispiel wird die Verwendung von [**IADs::P ut**](/windows/desktop/api/Iads/nf-iads-iads-put) mit mehreren Werten veranschaulicht:
 
 
 ```VB
@@ -115,7 +115,7 @@ CleanUp:
 
 
 
-Im folgenden Codebeispiel wird gezeigt, wie [**IADs verwendet wird::P UT**](/windows/desktop/api/Iads/nf-iads-iads-put) mit mehreren und einzelnen Werten:
+Im folgenden Codebeispiel wird die Verwendung von [**IADs::P ut**](/windows/desktop/api/Iads/nf-iads-iads-put) mit mehreren und einzelnen Werten veranschaulicht:
 
 
 ```C++
@@ -173,9 +173,9 @@ int main(int argc, char* argv[], LPWSTR pszADsPath)
 
 
 
- 
+ 
 
- 
+ 
 
 
 

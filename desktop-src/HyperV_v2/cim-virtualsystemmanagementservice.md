@@ -13,14 +13,14 @@ api_type:
 - DllExport
 api_location:
 - vmms.exe
-ms.openlocfilehash: 9db9e85e158f546a3a8780f1211ecd7a7dfc3c42
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 903b751b405c103313c0f83c38687e08ee7bb36a33ae803bd175b6ad91c559cb
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106360493"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119068620"
 ---
-# <a name="cim_virtualsystemmanagementservice-class"></a>CIM \_ virtualsystemmanagementservice-Klasse
+# <a name="cim_virtualsystemmanagementservice-class"></a>CIM \_ VirtualSystemManagementService-Klasse
 
 Stellt einen Dienst dar, der virtuelle Systeme verwaltet.
 
@@ -35,24 +35,24 @@ class CIM_VirtualSystemManagementService : CIM_Service
 
 ## <a name="members"></a>Member
 
-Die **CIM \_ virtualsystemmanagementservice** -Klasse verfügt über diese Typen von Membern:
+Die **CIM \_ VirtualSystemManagementService-Klasse** verfügt über folgende Typen von Membern:
 
 -   [Methoden](#methods)
 
 ### <a name="methods"></a>Methoden
 
-Die **CIM \_ virtualsystemmanagementservice** -Klasse verfügt über diese Methoden.
+Die **CIM \_ VirtualSystemManagementService-Klasse** verfügt über diese Methoden.
 
 
 
-| Methode                                                                                      | BESCHREIBUNG                                                                           |
+| Methode                                                                                      | Beschreibung                                                                           |
 |:--------------------------------------------------------------------------------------------|:--------------------------------------------------------------------------------------|
-| [**Adresssourcesettings**](cim-virtualsystemmanagementservice-addresourcesettings.md)       | Fügt der Konfiguration eines virtuellen Systems Ressourcen hinzu.<br/>                          |
-| [**Definesystem**](cim-virtualsystemmanagementservice-definesystem.md)                     | Definiert ein virtuelles System.<br/>                                                  |
-| [**Destroysystem**](cim-virtualsystemmanagementservice-destroysystem.md)                   | Löscht ein virtuelles System.<br/>                                                  |
-| [**Modifyresourcesettings**](cim-virtualsystemmanagementservice-modifyresourcesettings.md) | Ändert die Einstellungen der virtuellen Ressource für eine virtuelle Systemkonfiguration.<br/> |
-| [**Modifysystemsettings**](cim-virtualsystemmanagementservice-modifysystemsettings.md)     | Ändert die Einstellungen des virtuellen Systems.<br/>                                          |
-| [**Removeresourcesettings**](cim-virtualsystemmanagementservice-removeresourcesettings.md) | Entfernt die Einstellungen virtueller Ressourcen aus einer Konfiguration des virtuellen Systems.<br/>     |
+| [**AddResourceSettings**](cim-virtualsystemmanagementservice-addresourcesettings.md)       | Fügt einer Konfiguration des virtuellen Systems Ressourcen hinzu.<br/>                          |
+| [**DefineSystem**](cim-virtualsystemmanagementservice-definesystem.md)                     | Definiert ein virtuelles System.<br/>                                                  |
+| [**DestroySystem**](cim-virtualsystemmanagementservice-destroysystem.md)                   | Löscht ein virtuelles System.<br/>                                                  |
+| [**ModifyResourceSettings**](cim-virtualsystemmanagementservice-modifyresourcesettings.md) | Ändert die Einstellungen für virtuelle Ressourcen für eine Konfiguration des virtuellen Systems.<br/> |
+| [**ModifySystemSettings**](cim-virtualsystemmanagementservice-modifysystemsettings.md)     | Ändert einstellungen des virtuellen Systems.<br/>                                          |
+| [**RemoveResourceSettings**](cim-virtualsystemmanagementservice-removeresourcesettings.md) | Entfernt Einstellungen für virtuelle Ressourcen aus einer Konfiguration des virtuellen Systems.<br/>     |
 
 
 
@@ -66,17 +66,17 @@ Die **CIM \_ virtualsystemmanagementservice** -Klasse verfügt über diese Metho
 |-------------------------------------|---------------------------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 8<br/>                                                                                    |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2012<br/>                                                                          |
-| Namespace<br/>                | \\Stammvirtualisierung \\ v2<br/>                                                                     |
-| MOF<br/>                      | <dl> <dt>Windowsvirtualization. v2. MOF</dt> </dl> |
+| Namespace<br/>                | \\Root-Virtualisierung \\ v2<br/>                                                                     |
+| MOF<br/>                      | <dl> <dt>WindowsVirtualization.V2.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Vmms.exe</dt> </dl>                     |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**CIM- \_ Dienst**](cim-service.md)
+[**\_CIM-Dienst**](cim-service.md)
 </dt> </dl>
 
  

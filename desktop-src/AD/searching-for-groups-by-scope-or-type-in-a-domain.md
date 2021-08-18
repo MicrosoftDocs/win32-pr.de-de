@@ -1,32 +1,32 @@
 ---
-title: Suchen nach Gruppen nach Gültigkeitsbereich oder Typ in einer Domäne
-description: In Windows 2000-Domänen gibt es eine einzelne Klasse namens "Group" für alle Gruppen Bereiche (lokale Domäne, Global, universell) und Typen (Sicherheit, Verteilung).
+title: Suchen nach Gruppen nach Bereich oder Typ in einer Domäne
+description: In Windows 2000 Domänen gibt es eine einzelne Klasse namens group für alle Gruppenbereiche (Domäne lokal, Global, Universell) und Typen (Sicherheit, Verteilung).
 ms.assetid: e32629d9-aa62-4953-aa49-43af726b7deb
 ms.tgt_platform: multiple
 keywords:
-- Suchen nach Gruppen nach Gültigkeitsbereich oder Typ in einer Domäne AD
+- Suchen nach Gruppen nach Bereich oder Typ in einem Domänen-AD
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 2ee9aae5e2c7be7b9cba590f9bc80f0517bca918
-ms.sourcegitcommit: 803f3ccd65bdefe36bd851b9c6e7280be9489016
+ms.openlocfilehash: 84d424ce21912aa1e7fa7104099fc8359a5a1c80beeae1fc143aa0bd4aea71d0
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "103724425"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119024948"
 ---
-# <a name="searching-for-groups-by-scope-or-type-in-a-domain"></a>Suchen nach Gruppen nach Gültigkeitsbereich oder Typ in einer Domäne
+# <a name="searching-for-groups-by-scope-or-type-in-a-domain"></a>Suchen nach Gruppen nach Bereich oder Typ in einer Domäne
 
-In Windows 2000-Domänen gibt es eine einzelne Klasse namens " [**Group**](/windows/desktop/ADSchema/c-group) " für alle Gruppen Bereiche (lokale Domäne, Global, universell) und Typen (Sicherheit, Verteilung). Das [**GroupType**](/windows/desktop/ADSchema/a-grouptype) -Attribut des Group-Objekts gibt den Gruppentyp und den Gültigkeitsbereich an.
+In Windows 2000 Domänen gibt es eine einzelne Klasse namens [**group**](/windows/desktop/ADSchema/c-group) für alle Gruppenbereiche (Domäne lokal, Global, Universell) und Typen (Sicherheit, Verteilung). Das [**groupType-Attribut**](/windows/desktop/ADSchema/a-grouptype) des Gruppenobjekts gibt den Gruppentyp und den Bereich an.
 
-Wenn Sie den Typ oder den Bereich für die Suche nach Gruppen in Windows 2000-Domänen verwenden möchten, verwenden Sie einen Filter mit einer abgleichsregel für das [**GroupType**](/windows/desktop/ADSchema/a-grouptype) -Attribut. Weitere Informationen zu abgleichsregeln finden Sie unter [Such Filter Syntax](/windows/desktop/ADSI/search-filter-syntax).
+Verwenden Sie zum Suchen nach Gruppen in Windows 2000 Domänen einen Filter, der eine Abgleichsregel für das [**groupType-Attribut**](/windows/desktop/ADSchema/a-grouptype) enthält. Weitere Informationen zu Abgleichsregeln finden Sie unter [Suchfiltersyntax.](/windows/desktop/ADSI/search-filter-syntax)
 
-Weitere Informationen und ein Codebeispiel, das zeigt, wie Sie Gruppen in einer Domäne suchen, finden Sie unter [Beispielcode für die Suche nach Gruppen in einer Domäne](example-code-for-performing-a-query-in-a-domain.md).
+Weitere Informationen und ein Codebeispiel, das zeigt, wie Nach Gruppen in einer Domäne gesucht wird, finden Sie unter [Beispielcode für die Suche nach Gruppen in einer Domäne.](example-code-for-performing-a-query-in-a-domain.md)
 
-## <a name="example-ldap-query-strings"></a>LDAP-Beispiel Abfrage Zeichenfolgen
+## <a name="example-ldap-query-strings"></a>Beispiel für LDAP-Abfragezeichenfolgen
 
-Die folgenden Beispiele für Abfrage Zeichenfolgen veranschaulichen, wie eine LDAP-Abfrage Zeichenfolge zum Suchen oder Filtern spezifischer Gruppen Typen erstellt wird.
+Die folgenden Beispiele für Abfragezeichenfolgen zeigen, wie Sie eine LDAP-Abfragezeichenfolge erstellen, die zum Suchen oder Filtern bestimmter Gruppentypen verwendet wird.
 
-Mit der folgenden Abfrage Zeichenfolge wird nach Sicherheitsgruppen gesucht. In diesem Beispiel wird "-2147483648" als Dezimaltrennzeichen für das **AD \_ Group \_ Type \_ Security \_ aktivierte** Flag verwendet.
+Die folgende Abfragezeichenfolge sucht nach Sicherheitsgruppen. In diesem Beispiel wird "-2147483648" als Dezimaläquivalent des **ADS GROUP TYPE SECURITY \_ \_ \_ \_ ENABLED-Flags verwendet.**
 
 
 ```C++
@@ -35,7 +35,7 @@ Mit der folgenden Abfrage Zeichenfolge wird nach Sicherheitsgruppen gesucht. In 
 
 
 
-Mit der folgenden Abfrage Zeichenfolge wird nach universellen Verteiler Gruppen gesucht. Das heißt, dass Gruppen, die den **ADS- \_ \_ Gruppentyp \_ Universal \_ Group** -Flag enthalten und nicht das Flag **AD \_ Group \_ Type \_ Security \_ aktiviertes** Flag enthalten. In diesem Beispiel wird "8" als Dezimaltrennzeichen der " **ADS \_ Group \_ Type \_ Universal \_ Group** " und "-2147483648" als Dezimaltrennzeichen für das Flag " **AD \_ Group \_ Type \_ Security \_ aktivierte** " verwendet.
+Die folgende Abfragezeichenfolge sucht nach universellen Verteilergruppen. Das heißt, Gruppen, die das **ADS GROUP TYPE UNIVERSAL \_ \_ \_ \_ GROUP-Flag** und nicht das **ADS GROUP TYPE SECURITY \_ \_ \_ \_ ENABLED-Flag** enthalten. In diesem Beispiel wird "8" als dezimales Äquivalent von **ADS GROUP TYPE UNIVERSAL \_ \_ \_ \_ GROUP** und "-2147483648" als Dezimaläquivalent des ADS GROUP TYPE SECURITY ENABLED-Flags **\_ \_ \_ \_ verwendet.**
 
 
 ```C++
@@ -44,6 +44,6 @@ Mit der folgenden Abfrage Zeichenfolge wird nach universellen Verteiler Gruppen 
 
 
 
- 
+ 
 
- 
+ 

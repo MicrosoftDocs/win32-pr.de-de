@@ -1,25 +1,25 @@
 ---
-description: Durch die Installation neuer Funktionen im Arbeitsspeicher kann die Leistung verbessert werden. Kryptoapi-Funktionen suchen den Arbeitsspeicher nach der Funktionalität, bevor Sie die Registrierung nach der dll durchsuchen. Die dll muss geladen werden, bevor die-Funktionalität installiert wird.
+description: Die Installation neuer Funktionen im Arbeitsspeicher kann die Leistung verbessern. CryptoAPI-Funktionen durchsuchen den Arbeitsspeicher nach der Funktionalität, bevor sie die Registrierung nach der DLL durchsuchen. Die DLL muss vor der Installation der Funktionalität geladen werden.
 ms.assetid: f6e5fc6a-a186-4648-af63-0555307f53d8
 title: Installieren der neuen Funktionalität
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: e7147a1a70ffe57f4948d7db94aab0184d29e5dc
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: a3c71167f8226ad78f449b3f529e2e22bdb060bc0c5d984671cf4c5a30cc6f66
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106350106"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119005298"
 ---
 # <a name="installing-the-new-functionality"></a>Installieren der neuen Funktionalität
 
-Durch die Installation neuer Funktionen im Arbeitsspeicher kann die Leistung verbessert werden. [*Kryptoapi*](../secgloss/c-gly.md) -Funktionen suchen den Arbeitsspeicher nach der Funktionalität, bevor Sie die Registrierung nach der dll durchsuchen. Die dll muss geladen werden, bevor die-Funktionalität installiert wird.
+Die Installation neuer Funktionen im Arbeitsspeicher kann die Leistung verbessern. [*CryptoAPI-Funktionen*](../secgloss/c-gly.md) durchsuchen den Arbeitsspeicher nach der Funktionalität, bevor sie die Registrierung nach der DLL durchsuchen. Die DLL muss vor der Installation der Funktionalität geladen werden.
 
-[**Cryptinstalloidfunctionaddress**](/windows/desktop/api/Wincrypt/nf-wincrypt-cryptinstalloidfunctionaddress) installiert die Adresse der neuen Funktionalität. Er sollte in der **DllMain** -Funktion der dll platziert werden.
+[**CryptInstallOIDFunctionAddress**](/windows/desktop/api/Wincrypt/nf-wincrypt-cryptinstalloidfunctionaddress) installiert die Adresse der neuen Funktionalität. Sie sollte in der **DllMain-Funktion** der DLL platziert werden.
 
-Wenn *HMODULE* an [**cryptinstalloidfunctionaddress**](/windows/desktop/api/Wincrypt/nf-wincrypt-cryptinstalloidfunctionaddress)übermittelt wird, wird die dll nach der Installation nicht entladen, bis die Crypt32.dll entladen wurde.
+Wenn *hModule* an [**CryptInstallOIDFunctionAddress**](/windows/desktop/api/Wincrypt/nf-wincrypt-cryptinstalloidfunctionaddress)übergeben wird, wird die DLL nach der Installation erst entladen, wenn Crypt32.dll entladen wird.
 
-Im folgenden Beispiel wird die [**cryptinstalloidfunctionaddress**](/windows/desktop/api/Wincrypt/nf-wincrypt-cryptinstalloidfunctionaddress) -Funktion aufgerufen.
+Im folgenden Beispiel wird die [**CryptInstallOIDFunctionAddress-Funktion**](/windows/desktop/api/Wincrypt/nf-wincrypt-cryptinstalloidfunctionaddress) aufruft.
 
 
 ```C++

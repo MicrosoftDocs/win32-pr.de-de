@@ -17,12 +17,12 @@ Mit dem Microsoft XPS Document Writer (MXDW) können Benutzer XPS-Dokumentdateie
 
 ## <a name="jobinterleaving"></a>JobInterleaving
 
-Die JobInterleaving-Einstellung steuert die Reihenfolge der zwischengespeicherten Inhalte für die XPS-Dokumente. Informationen zur Auftragsverfleierung finden Sie im [XML Paper Specification](https://www.ecma-international.org/activities/XML%20Paper%20Specification/XPS%20Standard%20WD%201.6.pdf). MXDW unterstützt die folgenden beiden Optionen für diese Einstellung:
+Die JobInterleaving-Einstellung steuert die Reihenfolge der zwischengespeicherten Inhalte für die XPS-Dokumente. Informationen zur Überlappung von Aufgaben finden Sie im [XML Paper Specification](https://www.ecma-international.org/activities/XML%20Paper%20Specification/XPS%20Standard%20WD%201.6.pdf). MXDW unterstützt die folgenden beiden Optionen für diese Einstellung:
 
 -   **Off:** Diese Option deaktiviert die Überlappung, sodass alle Daten für jedes Inhaltselement im Dokument zusammenhängend sind, wodurch die Effizienz des zufälligen Zugriffs verbessert wird. Diese Option ist am besten zum Anzeigen eines XPS-Dokuments.
 -   **Ein:** Diese Option ermöglicht die Überlappung, sodass die Daten für jedes Inhaltselement aufgebrochen und neu angeordnet werden, um eine effizientere sequenzielle Verarbeitung zu ermöglichen. Diese Option ist am besten für Webdownloads und -drucke.
 
-Das folgende Beispiel ist ein Beispiel für die PrintCapabilities-XML, die die JobInterleaving-Einstellung enthält.
+Das folgende Beispiel ist ein Beispiel für printCapabilities XML, das die JobInterleaving-Einstellung enthält.
 
 
 ```XML
@@ -68,11 +68,11 @@ xmlns:ns0000=http://schemas.microsoft.com/windows/2006/06/printing/printschemake
 JobImageType steuert das Ausgabeformat eingebetteter Bitmapformate. MXDW unterstützt die folgenden vier Optionen für diese Einstellung:
 
 -   **JPEGHigh:** Diese Option gibt das JPEG-Bild mit einem hohen Komprimierungsgrad an. Diese Option erzeugt die kleinste Dateigröße, aber die niedrigste Bildqualität.
--   **JPEGMed:** Diese Option gibt das JPEG-Bild mit einer mittleren Komprimierungsebene an. Diese Option bietet die beste Balance zwischen Dateigröße und Imagequalität.
+-   **JPEGMed:** Diese Option gibt das JPEG-Bild mit einer mittleren Komprimierungsebene an. Diese Option bietet das beste Gleichgewicht zwischen Dateigröße und Imagequalität.
 -   **JPEGLow:** Diese Option gibt das JPEG-Bild mit geringer Komprimierung an. Diese Option führt zu einer geringsten Verringerung der Dateigröße und hoher Qualität.
 -   **PNG:** Diese Option gibt das PNG-Bildformat mit verlustfreier Komprimierung an. Diese Option erzeugt die größte Dateigröße und die höchste Imagequalität.
 
-Die PrintCapabilities-XML der JobImageType-Einstellung wird unten angezeigt:
+Die PrintCapabilities-XML-Datei der JobImageType-Einstellung wird unten angezeigt:
 
 
 ```XML

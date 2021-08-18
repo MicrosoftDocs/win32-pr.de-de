@@ -1,7 +1,7 @@
 ---
-description: Erstellt ein Mesh aus einem Steuerelement patchmesh.
+description: Erstellt ein Gitternetz aus einem Steuerpatchgitter.
 ms.assetid: 50e4f7aa-a6b8-4a2b-9813-a9448f408d06
-title: D3DXCreatePatchMesh-Funktion (D3DX9Mesh. h)
+title: D3DXCreatePatchMesh-Funktion (D3DX9Mesh.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -14,16 +14,16 @@ api_type:
 api_location:
 - d3dx9.lib
 - d3dx9.dll
-ms.openlocfilehash: 375052e240973f56af32825f74caccf6f9411d75
-ms.sourcegitcommit: 14010c34b35fa268046c7683f021f86de08ddd0a
+ms.openlocfilehash: aa4e1292f4b5c42515351d89dc7fc039f1f6f29201da72a78e07f447818e0f91
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "104355857"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118988640"
 ---
 # <a name="d3dxcreatepatchmesh-function"></a>D3DXCreatePatchMesh-Funktion
 
-Erstellt ein Mesh aus einem Steuerelement patchmesh.
+Erstellt ein Gitternetz aus einem Steuerpatchgitter.
 
 ## <a name="syntax"></a>Syntax
 
@@ -46,16 +46,16 @@ HRESULT D3DXCreatePatchMesh(
 
 <dl> <dt>
 
-*pinfo* \[ in\]
+*pInfo* \[ In\]
 </dt> <dd>
 
-Typ: **Konstanten [**D3DXPATCHINFO**](d3dxpatchinfo.md) \***
+Typ: **const [**D3DXPATCHINFO**](d3dxpatchinfo.md) \***
 
 Struktur der Patchinformationen. Weitere Informationen finden Sie unter [**D3DXPATCHINFO**](d3dxpatchinfo.md).
 
 </dd> <dt>
 
-*dwnumpatches* \[ in\]
+*dwNumPatches* \[ In\]
 </dt> <dd>
 
 Typ: **[ **DWORD**](../winprog/windows-data-types.md)**
@@ -64,48 +64,48 @@ Anzahl der Patches.
 
 </dd> <dt>
 
-*dwnumvertices* \[ in\]
+*dwNumVertices* \[ In\]
 </dt> <dd>
 
 Typ: **[ **DWORD**](../winprog/windows-data-types.md)**
 
-Anzahl der Steuerungs Scheitel Punkte im Patch.
+Anzahl der Kontrollvertices im Patch.
 
 </dd> <dt>
 
-*dwOptions* \[ in\]
+*dwOptions* \[ In\]
 </dt> <dd>
 
 Typ: **[ **DWORD**](../winprog/windows-data-types.md)**
 
-Nicht verwendet. Reserviert für die spätere Verwendung.
+Nicht verwendet. Für die spätere Verwendung reserviert.
 
 </dd> <dt>
 
-*pdecl* \[ in\]
+*pDecl* \[ In\]
 </dt> <dd>
 
-Typ: **Konstanten [**D3DVERTEXELEMENT9**](d3dvertexelement9.md) \***
+Typ: **const [**D3DVERTEXELEMENT9**](d3dvertexelement9.md) \***
 
-Array von [**D3DVERTEXELEMENT9**](d3dvertexelement9.md) -Elementen, das das Scheitelpunkt Format für das zurückgegebene Mesh beschreibt.
+Array von [**D3DVERTEXELEMENT9-Elementen,**](d3dvertexelement9.md) das das Scheitelpunktformat für das zurückgegebene Netz beschreibt.
 
 </dd> <dt>
 
-*pD3DDevice* \[ in\]
+*pD3DDevice* \[ In\]
 </dt> <dd>
 
 Typ: **[ **LPDIRECT3DDEVICE9**](/windows/win32/api/d3d9helper/nn-d3d9helper-idirect3ddevice9)**
 
-Zeiger auf das Gerät, das das patchmesh erstellt. Siehe [**IDirect3DDevice9**](/windows/win32/api/d3d9helper/nn-d3d9helper-idirect3ddevice9).
+Zeigen Sie auf das Gerät, das das Patchgittergerät erstellt. Siehe [**IDirect3DDevice9**](/windows/win32/api/d3d9helper/nn-d3d9helper-idirect3ddevice9).
 
 </dd> <dt>
 
-*ppatchmesh* \[ vorgenommen\]
+*pPatchMesh* \[ out\]
 </dt> <dd>
 
 Typ: **[ **LPD3DXPATCHMESH**](id3dxpatchmesh.md)\***
 
-Zeiger auf das [**ID3DXPatchMesh**](id3dxpatchmesh.md) -Objekt, das erstellt wird.
+Zeiger auf das [**erstellte ID3DXPatchMesh-Objekt.**](id3dxpatchmesh.md)
 
 </dd> </dl>
 
@@ -113,11 +113,11 @@ Zeiger auf das [**ID3DXPatchMesh**](id3dxpatchmesh.md) -Objekt, das erstellt wir
 
 Typ: **[ **HRESULT**](https://msdn.microsoft.com/library/Bb401631(v=MSDN.10).aspx)**
 
-Wenn die Funktion erfolgreich ausgeführt wird, ist der Rückgabewert D3D \_ OK. Wenn die Funktion fehlschlägt, kann der Rückgabewert einer der folgenden sein: D3DERR \_ invalidcall, E \_ oudefmemory.
+Wenn die Funktion erfolgreich ist, ist der Rückgabewert D3D \_ OK. Wenn die Funktion fehlschlägt, kann der Rückgabewert einer der folgenden sein: D3DERR \_ INVALIDCALL, E \_ OUTOFMEMORY.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Diese Methode nimmt ein eingaberpatchmesh an und konvertiert es in ein Mosaik Gitter. Patchnetze verwenden 16-Bit-Index Puffer. Daher sind Indizes zu [**LockIndexBuffer**](id3dxpatchmesh--lockindexbuffer.md) 16 Bits.
+Diese Methode verwendet ein Eingabepatchgitter und konvertiert es in ein mosaikiertes Gitter. Patchgitternetze verwenden 16-Bit-Indexpuffer. Daher sind Indizes für [**LockIndexBuffer**](id3dxpatchmesh--lockindexbuffer.md) 16 Bits.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -125,12 +125,12 @@ Diese Methode nimmt ein eingaberpatchmesh an und konvertiert es in ein Mosaik Gi
 
 | Anforderung | Wert |
 |--------------------|----------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>D3DX9Mesh. h</dt> </dl> |
-| Bibliothek<br/> | <dl> <dt>D3dx9. lib</dt> </dl>   |
+| Header<br/>  | <dl> <dt>D3DX9Mesh.h</dt> </dl> |
+| Bibliothek<br/> | <dl> <dt>D3dx9.lib</dt> </dl>   |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 

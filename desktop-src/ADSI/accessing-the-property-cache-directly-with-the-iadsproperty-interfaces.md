@@ -1,37 +1,37 @@
 ---
-title: Zugreifen auf den Eigenschaften Cache mit iadsproperty-Schnittstellen
-description: Die iadsproperty-Schnittstellen bestehen aus IADsPropertyList, iadspropertyentry und iadspropertyvalue.
+title: Zugreifen auf den Eigenschaftencache mit IADsEigenschaftenschnittstellen
+description: Die IADsProperty-Schnittstellen bestehen aus IADsPropertyList, IADsPropertyEntry und IADsPropertyValue.
 ms.assetid: ff15eb50-01ab-4b45-bcfd-1df01172f274
 ms.tgt_platform: multiple
 keywords:
-- Direktes Zugreifen auf den Eigenschaften Cache mit iadsproperty-Schnittstellen ADSI
-- Eigenschafts Cache-ADSI
-- Eigenschaften Cache-ADSI, verwenden von iadsproperty-Schnittstellen für den Zugriff auf den Eigenschaften Cache
+- Direkter Zugriff auf den Eigenschaftencache mit den IADsProperty Interfaces ADSI
+- Eigenschaftencache ADSI
+- Eigenschaftencache ADSI mithilfe von IADsProperty-Schnittstellen für den Zugriff auf den Eigenschaftencache
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: b48cd8675f4c439e3d3597e2d4fa59dac57e0896
-ms.sourcegitcommit: 460af18ea55f4b12d47d5b8d4b883896e21adf00
+ms.openlocfilehash: 9a68cd77a10d6631b52e48ed19650dd5cd18dff0ee59ba2332db73b7fce1a8bb
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/04/2019
-ms.locfileid: "103948345"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119024118"
 ---
-# <a name="accessing-property-cache-with-iadsproperty-interfaces"></a>Zugreifen auf den Eigenschaften Cache mit iadsproperty-Schnittstellen
+# <a name="accessing-property-cache-with-iadsproperty-interfaces"></a>Zugreifen auf den Eigenschaftencache mit IADsEigenschaftenschnittstellen
 
-Die [**iadsproperty**](/windows/desktop/api/Iads/nn-iads-iadsproperty) -Schnittstellen bestehen aus [**IADsPropertyList**](/windows/desktop/api/Iads/nn-iads-iadspropertylist), [**iadspropertyentry**](/windows/desktop/api/Iads/nn-iads-iadspropertyentry)und [**iadspropertyvalue**](/windows/desktop/api/Iads/nn-iads-iadspropertyvalue). Diese Schnittstellen stellen Methoden bereit, um direkt auf die Eigenschaften eines Objekt Caches zuzugreifen und diese zu bearbeiten. Eine Eigenschaft wird als Eigenschaften Eintrag bezeichnet und entspricht einem im Schema definierten Attribut. Ein Eigenschaften Eintrag kann einen oder mehrere Eigenschaftswerte aufweisen. Ein Satz von Eigenschaften Einträgen wird als Eigenschaften Liste organisiert.
+Die [**IADsProperty-Schnittstellen**](/windows/desktop/api/Iads/nn-iads-iadsproperty) bestehen aus [**IADsPropertyList,**](/windows/desktop/api/Iads/nn-iads-iadspropertylist) [**IADsPropertyEntry**](/windows/desktop/api/Iads/nn-iads-iadspropertyentry)und [**IADsPropertyValue.**](/windows/desktop/api/Iads/nn-iads-iadspropertyvalue) Diese Schnittstellen stellen Methoden bereit, um direkt auf die Eigenschaften eines Objektcaches zu zugreifen und sie zu bearbeiten. Eine Eigenschaft wird als Eigenschafteneintrag bezeichnet und entspricht einem im Schema definierten Attribut. Ein Eigenschafteneintrag kann einen oder mehrere Eigenschaftswerte enthalten. Ein Satz von Eigenschafteneinträgen ist als Eigenschaftenliste organisiert.
 
-Die [**IADsPropertyList**](/windows/desktop/api/Iads/nn-iads-iadspropertylist) -Schnittstelle verwaltet die Eigenschafts Liste eines ADSI-Objekts. Die [**iadspropertyentry**](/windows/desktop/api/Iads/nn-iads-iadspropertyentry) -Schnittstelle führt diesen Vorgang für einen Eigenschafts Eintrag aus. Ebenso stellt die [**iadspropertyvalue**](/windows/desktop/api/Iads/nn-iads-iadspropertyvalue) -Schnittstelle einen oder mehrere Eigenschaftswerte dar. Sie bieten einen Mechanismus, mit dem Benutzer folgende Aktionen ausführen können:
+Die [**IADsPropertyList-Schnittstelle**](/windows/desktop/api/Iads/nn-iads-iadspropertylist) verwaltet die Eigenschaftenliste eines ADSI-Objekts. Die [**IADsPropertyEntry-Schnittstelle führt**](/windows/desktop/api/Iads/nn-iads-iadspropertyentry) diesen Vorgang für einen Eigenschafteneintrag aus. Auf ähnliche Weise stellt die [**IADsPropertyValue-Schnittstelle**](/windows/desktop/api/Iads/nn-iads-iadspropertyvalue) einen oder mehrere Eigenschaftswerte dar. Zusammen bieten sie benutzern einen Mechanismus für:
 
--   Arbeiten Sie direkt mit dem Eigenschaften Cache.
--   Arbeiten Sie mit Verzeichnissen, die keine Schemas enthalten, wie z. b. einen LDAP-Server der Version 2.
+-   Arbeiten Sie direkt mit dem Eigenschaftencache.
+-   Arbeiten Sie mit Verzeichnissen, die keine Schemas enthalten, z. B. einen LDAP-Server der Version 2.
 
-Die [**iadsproperty**](/windows/desktop/api/Iads/nn-iads-iadsproperty) \* -Schnittstellen arbeiten ausschließlich im Eigenschaften Cache und versuchen nicht, mit dem Server zusammenzuarbeiten, um die Daten im permanenten Speicher abzurufen oder zu ändern. Diese Schnittstellen werden daher nur zum Überprüfen und Bearbeiten von Eigenschaften im Client Cache verwendet. Vor der Verwendung dieser Schnittstellen müssen Sie die [**IADs:: GetInfo**](/windows/desktop/api/Iads/nf-iads-iads-getinfo) -Methode oder die [**IADs:: GetInfoEx**](/windows/desktop/api/Iads/nf-iads-iads-getinfoex) -Methode explizit aufrufen, um die Objekteigenschaften in den Cache zu laden, wenn der Cache nicht initialisiert wurde. Nachdem Sie die Methoden dieser Schnittstellen aufgerufen haben, müssen Sie [**IADs:: abtinfo**](/windows/desktop/api/Iads/nf-iads-iads-setinfo) aufrufen, um die Änderungen im zugrunde liegenden Verzeichnis Speicher beizubehalten.
+Die [**IADsProperty-Schnittstellen**](/windows/desktop/api/Iads/nn-iads-iadsproperty) arbeiten ausschließlich mit dem Eigenschaftencache und versuchen nicht, mit dem Server zusammenzuarbeiten, um die Daten im persistenten Speicher abzurufen oder \* zu ändern. Daher werden diese Schnittstellen nur verwendet, um Eigenschaften im Clientcache zu untersuchen und zu bearbeiten. Bevor Sie diese Schnittstellen verwenden, müssen Sie die [**IADs::GetInfo-Methode**](/windows/desktop/api/Iads/nf-iads-iads-getinfo) oder die [**IADs::GetInfoEx-Methode**](/windows/desktop/api/Iads/nf-iads-iads-getinfoex) explizit aufrufen, um die Objekteigenschaften in den Cache zu laden, wenn der Cache nicht initialisiert wurde. Nach dem Aufrufen der Methoden dieser Schnittstellen müssen Sie [**IADs::SetInfo**](/windows/desktop/api/Iads/nf-iads-iads-setinfo) aufrufen, um die Änderungen im zugrunde liegenden Verzeichnisspeicher persistent zu speichern.
 
-Weitere Informationen und ein Codebeispiel, mit dem diese Schnittstellen implementiert werden können, finden Sie unter [Beispielcode für die Verwendung von iadsproperty-Schnittstellen für den Zugriff auf den Eigenschaften Cache](example-code-for-using-iadsproperty-interfaces-to-access-the-property-cache.md).
+Weitere Informationen und ein Codebeispiel, das zum Implementieren dieser Schnittstellen verwendet werden kann, finden Sie unter Beispielcode für die Verwendung [von IADsProperty-Schnittstellen](example-code-for-using-iadsproperty-interfaces-to-access-the-property-cache.md)für den Zugriff auf den Eigenschaftencache.
 
- 
+ 
 
- 
+ 
 
 
 

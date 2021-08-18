@@ -1,5 +1,5 @@
 ---
-description: Die folgende Datei definiert einen einfachen Cube mit vier roten und zwei grünen Seiten. In dieser Datei werden optionale Informationen verwendet, um informationen zum Datenobjekt hinzuzufügen, das durch die Mesh-Vorlage definiert wird.
+description: Die folgende Datei definiert einen einfachen Cube mit vier roten seiten und zwei grünen Seiten. In dieser Datei werden optionale Informationen verwendet, um dem von der Mesh-Vorlage definierten Datenobjekt Informationen hinzuzufügen.
 ms.assetid: 310981bf-3536-43dd-ad7c-40ab6c8ef6c4
 title: Definieren eines einfachen Cubes (Direct3D 9)
 ms.topic: article
@@ -13,7 +13,7 @@ ms.locfileid: "118988300"
 ---
 # <a name="defining-a-simple-cube-direct3d-9"></a>Definieren eines einfachen Cubes (Direct3D 9)
 
-Die folgende Datei definiert einen einfachen Cube mit vier roten und zwei grünen Seiten. In dieser Datei werden optionale Informationen verwendet, um informationen zum Datenobjekt hinzuzufügen, das durch die [**Mesh-Vorlage definiert**](mesh.md) wird.
+Die folgende Datei definiert einen einfachen Cube mit vier roten seiten und zwei grünen Seiten. In dieser Datei werden optionale Informationen verwendet, um dem von der [**Mesh-Vorlage**](mesh.md) definierten Datenobjekt Informationen hinzuzufügen.
 
 
 ```

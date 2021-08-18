@@ -1,7 +1,7 @@
 ---
-description: Suchen Sie nach dem Index, der angibt, wo sich ein bestimmter Scheitelpunkt in der Liste der beeinflussten Scheitel Punkte eines bestimmten Knotens befindet.
+description: Suchen Sie den Index, der angibt, wo sich ein angegebener Scheitelpunkt in der Liste der beeinflussten Scheitelpunkte eines bestimmten Gitters befindet.
 ms.assetid: vs|directx_sdk|~\id3dx10skininfo_findboneinfluenceindex.htm
-title: 'ID3DX10SkinInfo:: findboneinfludenceindex-Methode (d3dx10. h)'
+title: ID3DX10SkinInfo::FindBoneInfluenceIndex-Methode (D3DX10.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -14,16 +14,16 @@ api_type:
 api_location:
 - D3DX10.lib
 - D3DX10.dll
-ms.openlocfilehash: 1468fed3c0cf999e7635ba0f5ae53cee72fe70c6
-ms.sourcegitcommit: 14010c34b35fa268046c7683f021f86de08ddd0a
+ms.openlocfilehash: 85b68240a52ddf442d834a9acec919ea9c607f2dcbc43d2046a3d070aa9ddf84
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "104219607"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119634500"
 ---
-# <a name="id3dx10skininfofindboneinfluenceindex-method"></a>ID3DX10SkinInfo:: findboneinfludenceindex-Methode
+# <a name="id3dx10skininfofindboneinfluenceindex-method"></a>ID3DX10SkinInfo::FindBoneInfluenceIndex-Methode
 
-Suchen Sie nach dem Index, der angibt, wo sich ein bestimmter Scheitelpunkt in der Liste der beeinflussten Scheitel Punkte eines bestimmten Knotens befindet.
+Suchen Sie den Index, der angibt, wo sich ein angegebener Scheitelpunkt in der Liste der beeinflussten Scheitelpunkte eines bestimmten Gitters befindet.
 
 ## <a name="syntax"></a>Syntax
 
@@ -42,30 +42,30 @@ HRESULT FindBoneInfluenceIndex(
 
 <dl> <dt>
 
-*Boneingedex* \[ in\]
+*Index* \[ In\]
 </dt> <dd>
 
-Typ: **[ **uint**](../winprog/windows-data-types.md)**
+Typ: **[ **UINT**](../winprog/windows-data-types.md)**
 
-Ein Index, der einen vorhandenen Knochen Wert angibt. Muss zwischen 0 und dem von [**ID3DX10SkinInfo:: getnumbones**](id3dx10skininfo-getnumbones.md)zurückgegebenen Wert liegen.
+Ein Index, der einen vorhandenen Zeichner angibt. Muss zwischen 0 und dem von [**ID3DX10SkinInfo::GetNumBones zurückgegebenen Wert liegen.**](id3dx10skininfo-getnumbones.md)
 
 </dd> <dt>
 
-*Vertexindex* \[ in\]
+*VertexIndex* \[ In\]
 </dt> <dd>
 
-Typ: **[ **uint**](../winprog/windows-data-types.md)**
+Typ: **[ **UINT**](../winprog/windows-data-types.md)**
 
-Der Index des Scheitel Punkts im Scheitelpunkt Puffer.
+Der Index des Scheitelpunkts im Scheitelpunktpuffer.
 
 </dd> <dt>
 
-*pinfluendceindex* \[ in\]
+*pInfluenceIndex* \[ In\]
 </dt> <dd>
 
-Typ: **[ **uint**](../winprog/windows-data-types.md)\***
+Typ: **[ **UINT**](../winprog/windows-data-types.md)\***
 
-Der Index des Scheitel Punkts in der Liste der von ihm beeinflussten Vertices in der Liste.
+Der Index des Scheitelpunkts in der Liste der beeinflussten Scheitelpunkte.
 
 </dd> </dl>
 
@@ -73,7 +73,7 @@ Der Index des Scheitel Punkts in der Liste der von ihm beeinflussten Vertices in
 
 Typ: **[ **HRESULT**](https://msdn.microsoft.com/library/Bb401631(v=MSDN.10).aspx)**
 
-Wenn die Methode erfolgreich ausgeführt wird, ist der Rückgabewert S \_ OK. Wenn die Methode fehlschlägt, kann der Rückgabewert lauten: E \_ invalidArg.
+Wenn die Methode erfolgreich ist, ist der Rückgabewert S \_ OK. Wenn bei der Methode ein Fehler auftritt, kann der Rückgabewert sein: E \_ INVALIDARG.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -81,12 +81,12 @@ Wenn die Methode erfolgreich ausgeführt wird, ist der Rückgabewert S \_ OK. We
 
 | Anforderung | Wert |
 |--------------------|---------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>D3dx10. h</dt> </dl>   |
-| Bibliothek<br/> | <dl> <dt>D3dx10. lib</dt> </dl> |
+| Header<br/>  | <dl> <dt>D3DX10.h</dt> </dl>   |
+| Bibliothek<br/> | <dl> <dt>D3DX10.lib</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 

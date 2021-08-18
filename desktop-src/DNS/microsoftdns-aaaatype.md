@@ -1,10 +1,10 @@
 ---
 title: MicrosoftDNS_AAAAType-Klasse
-description: Die Unterklasse von MicrosoftDNS \_ resourcerecord, die einen IPv6-Adresseintrag (AAAA) darstellt. Der AAAA-Datensatz hat häufig den Wert \ 0034; Quad-a Record \ 0034;.
+description: Unterklasse von MicrosoftDNS \_ ResourceRecord, die einen AAAA-Eintrag (IPv6 Address) darstellt. Der AAAA-Eintrag wird häufig als \0034;quad-a record \ 0034; ausgesprochen.
 ms.assetid: e16a7a69-18df-43dc-add9-700a702724ce
 keywords:
-- DNS-MicrosoftDNS_AAAAType Klasse
-- DNS-MicrosoftDNS_AAAAType Klasse, beschrieben
+- MicrosoftDNS_AAAAType DNS-Klasse
+- MicrosoftDNS_AAAAType DNS-Klasse , beschrieben
 topic_type:
 - apiref
 api_name:
@@ -18,18 +18,18 @@ api_type:
 - Schema
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 0131177c342730c08868946c29356554cbfb9cab
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 90628ba4ceedffe9628aca0b96b624377ae7a8ab2351cfe6ae6b43ba8a381235
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "106339969"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119587570"
 ---
-# <a name="microsoftdns_aaaatype-class"></a>MicrosoftDNS \_ aaaatype-Klasse
+# <a name="microsoftdns_aaaatype-class"></a>MicrosoftDNS \_ AAAAType-Klasse
 
-Die Unterklasse von [**MicrosoftDNS \_ resourcerecord**](microsoftdns-resourcerecord.md) , die einen IPv6-Adresseintrag (AAAA) darstellt. Der AAAA-Datensatz ist im Allgemeinen als "Quad-a-Datensatz" bezeichnet.
+Unterklasse von [**MicrosoftDNS \_ ResourceRecord,**](microsoftdns-resourcerecord.md) die einen AAAA-Eintrag (IPv6 Address) darstellt. Der AAAA-Eintrag wird häufig als "Quad-a-Record" ausgesprochen.
 
-Die folgende Syntax wird durch den MOF-Code vereinfacht.
+Die folgende Syntax wird durch einen MOF-Code vereinfacht.
 
 ## <a name="syntax"></a>Syntax
 
@@ -42,21 +42,21 @@ class MicrosoftDNS_AAAAType : MicrosoftDNS_ResourceRecord
 
 ## <a name="members"></a>Member
 
-Die **MicrosoftDNS \_ aaaatype** -Klasse verfügt über diese Typen von Membern:
+Die **MicrosoftDNS \_ AAAAType-Klasse** verfügt über die folgenden Membertypen:
 
 -   [Methoden](#methods)
 -   [Eigenschaften](#properties)
 
 ### <a name="methods"></a>Methoden
 
-Die **MicrosoftDNS \_ aaaatype** -Klasse verfügt über diese Methoden.
+Die **MicrosoftDNS \_ AAAAType-Klasse** verfügt über diese Methoden.
 
 
 
-| Methode                             | BESCHREIBUNG                                                                                                                                                                                                                                                                                                                                  |
+| Methode                             | Beschreibung                                                                                                                                                                                                                                                                                                                                  |
 |:-----------------------------------|:---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| **"Kreateinzustancefrompropertydata"** | Instanziiert einen "AAAA"-Typ von RR auf der Grundlage der Daten in den Eingabe Parametern der Methode: dem DNS-Server Namen des Datensatzes, dem Container Namen, dem Besitzer/Hostnamen, der Klasse (Standard = in), dem Gültigkeitsdauer Wert und der IPv6-Adresse. Es wird ein Verweis auf das neue-Objekt als Output-Parameter zurückgegeben. <br/> Qualifizierer: implementiert, statisch<br/> |
-| **Modify**                         | Aktualisiert die TTL-und IPv6-Adresse auf die Werte, die als Eingabeparameter dieser Methode angegeben werden. Wenn kein neuer Wert für einen Parameter angegeben wird, wird der aktuelle Wert für den Parameter nicht geändert. Die-Methode gibt einen Verweis auf das geänderte-Objekt als Output-Parameter zurück. <br/> Qualifizierer: Implementiert<br/>      |
+| **CreateInstanceFromPropertyData** | Instanziiert einen "AAAA"-Typ von RR basierend auf den Daten in den Eingabeparametern der Methode: DNS-Servername des Eintrags, Containername, Besitzer-/Hostname, Klasse (Standard = IN), Wert für Live-Datenübertragung und IPv6-Adresse. Sie gibt einen Verweis auf das neue Objekt als Ausgabeparameter zurück. <br/> Qualifizierer: Implementiert, statisch<br/> |
+| **Änderung**                         | Aktualisiert die TTL- und IPv6-Adresse auf die Werte, die als Eingabeparameter dieser Methode angegeben sind. Wenn kein neuer Wert für einen Parameter angegeben wird, wird der aktuelle Wert für den Parameter nicht geändert. Die -Methode gibt einen Verweis auf das geänderte Objekt als Ausgabeparameter zurück. <br/> Qualifizierer: Implementiert<br/>      |
 
 
 
@@ -64,14 +64,14 @@ Die **MicrosoftDNS \_ aaaatype** -Klasse verfügt über diese Methoden.
 
 ### <a name="properties"></a>Eigenschaften
 
-Die **MicrosoftDNS \_ aaaatype** -Klasse verfügt über diese Eigenschaften.
+Die **MicrosoftDNS \_ AAAAType-Klasse** verfügt über diese Eigenschaften.
 
 <dl> <dt>
 
 **IPv6Address**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
@@ -90,21 +90,21 @@ IPv6-Adresse für den Host.
 | Unterstützte Mindestversion (Client)<br/> | Nicht unterstützt<br/>                                                              |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                                   |
 | Namespace<br/>                | \\MicrosoftDNS-Stamm<br/>                                                          |
-| MOF<br/>                      | <dl> <dt>Dnsprov. MOF</dt> </dl> |
+| MOF<br/>                      | <dl> <dt>Dnsprov.mof</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Methode "kreateinzustancefrompropertydata" der Klasse "MicrosoftDNS \_ aaaatype"**](microsoftdns-aaaatype-createinstancefrompropertydata.md)
+[**CreateInstanceFromPropertyData-Methode der MicrosoftDNS \_ AAAAType-Klasse**](microsoftdns-aaaatype-createinstancefrompropertydata.md)
 </dt> <dt>
 
-[**Modify-Methode der MicrosoftDNS \_ aaaatype-Klasse**](microsoftdns-aaaatype-modify.md)
+[**Modify-Methode der MicrosoftDNS \_ AAAAType-Klasse**](microsoftdns-aaaatype-modify.md)
 </dt> <dt>
 
-[**MicrosoftDNS \_ resourcerecord**](microsoftdns-resourcerecord.md)
+[**MicrosoftDNS \_ ResourceRecord**](microsoftdns-resourcerecord.md)
 </dt> </dl>
 
  

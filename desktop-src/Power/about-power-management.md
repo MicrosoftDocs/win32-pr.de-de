@@ -1,33 +1,33 @@
 ---
-description: Das Windows-Betriebssystem bietet eine umfassende und systemweite Reihe von Energie Verwaltungsfunktionen. Dadurch können Systeme die Akku Lebensdauer erweitern und Energie sparen, Heat und Rauschen reduzieren und die Zuverlässigkeit von Daten sicherstellen.
+description: Das Windows-Betriebssystem bietet eine umfassende und systemweite Reihe von Energieverwaltungsfeatures. Auf diese Weise können Systeme die Akkulaufzeit verlängern und Energie sparen, Wärme und Rauschen reduzieren und die Datenzuverlässigkeit sicherstellen.
 ms.assetid: 01ce4d21-1a0c-44a8-91ef-5e300e7c6c9a
-title: Informationen zur Energie Verwaltung
+title: Informationen zur Energieverwaltung
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 14605d07521ac963194bbac4d4baecd961973ee3
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: f390e40ee495e5448fdceebb336d58c2a92f3dd92da2d7a90f4842eb8858edb6
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "103756577"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119143733"
 ---
-# <a name="about-power-management"></a>Informationen zur Energie Verwaltung
+# <a name="about-power-management"></a>Informationen zur Energieverwaltung
 
-Das Windows-Betriebssystem bietet eine umfassende und systemweite Reihe von Energie Verwaltungsfunktionen. Dadurch können Systeme die Akku Lebensdauer erweitern und Energie sparen, Heat und Rauschen reduzieren und die Zuverlässigkeit von Daten sicherstellen.
+Das Windows-Betriebssystem bietet eine umfassende und systemweite Reihe von Energieverwaltungsfeatures. Auf diese Weise können Systeme die Akkulaufzeit verlängern und Energie sparen, Wärme und Rauschen reduzieren und die Datenzuverlässigkeit sicherstellen.
 
-Die Energie Verwaltungsfunktionen und-Nachrichten rufen den System Energiestatus ab, Benachrichtigen Anwendungen von Energie Verwaltungs Ereignissen und informieren das System über die Energieanforderungen der einzelnen Anwendungen. Diese Übersicht enthält die folgenden Themen:
+Die Energieverwaltungsfunktionen und -meldungen rufen den Energiestatus des Systems ab, benachrichtigen Anwendungen über Energieverwaltungsereignisse und benachrichtigen das System über die Energieanforderungen jeder Anwendung. Diese Übersicht enthält die folgenden Themen:
 
--   [Windows-Energie Verwaltung](windows-power-management.md)
--   [System Energie Status](system-power-status.md)
--   [System Energiestatus](system-power-states.md)
--   [Ereignisse der System Energie Verwaltung](system-power-management-events.md)
--   [WM- \_ powerbroadcast-Meldungen](wm-powerbroadcast-messages.md)
--   [System Energiespar Kriterien](system-sleep-criteria.md)
--   [System Aktivierungs Ereignisse](system-wake-up-events.md)
--   [Akku Informationen](battery-information.md)
--   [Backlight-Steuerungs Schnittstelle](backlight-control-interface.md)
--   [Energie Schemas](power-schemes.md)
--   [Geräte Energie Verwaltung](device-power-management.md)
+-   [Windows Energieverwaltung](windows-power-management.md)
+-   [Systemleistungsstatus](system-power-status.md)
+-   [Systemleistungszustände](system-power-states.md)
+-   [Energieverwaltungsereignisse des Systems](system-power-management-events.md)
+-   [WM \_ POWERBROADCAST-Nachrichten](wm-powerbroadcast-messages.md)
+-   [Kriterien für den Systemmodus](system-sleep-criteria.md)
+-   [Systemreaktivingsereignisse](system-wake-up-events.md)
+-   [Akkuinformationen](battery-information.md)
+-   [Backlight-Steuerelementschnittstelle](backlight-control-interface.md)
+-   [Energieschemas](power-schemes.md)
+-   [Geräte-Energieverwaltung](device-power-management.md)
 
 ## <a name="related-topics"></a>Zugehörige Themen
 

@@ -1,7 +1,7 @@
 ---
-description: Ruft den Antragsteller Namen aus dem Signaturzertifikat ab.
+description: Ruft den Namen des Betreffs aus dem Signaturzertifikat ab.
 ms.assetid: e50b1e12-ec89-4d58-aa57-dc24aa2409ef
-title: 'Iscrdenr:: getsigningcertifitorename-Methode'
+title: ISCrdEnr::getSigningCertificateName-Methode
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -14,18 +14,18 @@ api_type:
 - COM
 api_location:
 - Scrdenrl.dll
-ms.openlocfilehash: 8d9a8a84067e82a18e5066721f3e7f39d075c339
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 29933856eb644e638e9e58c8da0b0e3d6234e4f0175925c8a1fb5b48b126e3ee
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "104393693"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119622400"
 ---
-# <a name="iscrdenrgetsigningcertificatename-method"></a>Iscrdenr:: getsigningcertifitorename-Methode
+# <a name="iscrdenrgetsigningcertificatename-method"></a>ISCrdEnr::getSigningCertificateName-Methode
 
-Die **getsigningcertifikatename** -Methode ruft den Antragsteller Namen aus dem Signaturzertifikat ab.
+Die **getSigningCertificateName-Methode** ruft den Namen des Betreffs aus dem Signaturzertifikat ab.
 
-Diese Methode kann auch verwendet werden, um das Zertifikat in einem Dialogfeld anzuzeigen. Diese Methode ruft die [*CryptoAPI*](../secgloss/c-gly.md) -Funktion [**certgetnamestring**](/windows/desktop/api/Wincrypt/nf-wincrypt-certgetnamestringa)auf.
+Diese Methode kann auch verwendet werden, um das Zertifikat in einem Dialogfeld anzuzeigen. Diese Methode ruft die [*CryptoAPI-Funktion*](../secgloss/c-gly.md) [**CertGetNameString auf.**](/windows/desktop/api/Wincrypt/nf-wincrypt-certgetnamestringa)
 
 ## <a name="syntax"></a>Syntax
 
@@ -54,17 +54,17 @@ SCrdEnr.getSigningCertificateName( _
 
 <dl> <dt>
 
-*dwFlags* \[ in\]
+*dwFlags* \[ In\]
 </dt> <dd>
 
-Ein-Wert, der bestimmt, ob das Zertifikat in einem Dialogfeld angezeigt wird. Wenn dieser Wert "SCard \_ ENROLL \_ No \_ Display \_ CERT (als 0x01 definiert)" lautet, wird das Signaturzertifikat nicht angezeigt. alle anderen Werte führen dazu, dass das Signaturzertifikat im Dialogfeld " **Zertifikat** " angezeigt wird.
+Ein -Wert, der bestimmt, ob das Zertifikat in einem Dialogfeld angezeigt wird. Wenn dieser Wert SCARD \_ ENROLL \_ NO DISPLAY \_ CERT (definiert als \_ 0x01) ist,  wird das Signaturzertifikat nicht angezeigt. Alle anderen Werte führen dazu, dass das Signaturzertifikat im Dialogfeld Zertifikat angezeigt wird.
 
 </dd> <dt>
 
-*pbstrausigningcertname* \[ vorgenommen\]
+*pbstrSigningCertName* \[ out\]
 </dt> <dd>
 
-Ein Zeiger auf eine Zeichenfolge, die den Namen des Signatur Zertifikats zurückgibt. Das Signaturzertifikat wird verwendet, um die [*Zertifikat Anforderung*](../secgloss/c-gly.md)zu signieren.
+Ein Zeiger auf eine Zeichenfolge, die den Namen des Signaturzertifikats zurückgibt. Das Signaturzertifikat wird verwendet, um die [*Zertifikatanforderung zu signieren.*](../secgloss/c-gly.md)
 
 </dd> </dl>
 
@@ -72,17 +72,17 @@ Ein Zeiger auf eine Zeichenfolge, die den Namen des Signatur Zertifikats zurück
 
 ### <a name="c"></a>C++
 
-Wenn die Methode erfolgreich ausgeführt wird, gibt die Methode S \_ OK zurück.
+Wenn die Methode erfolgreich ist, gibt die Methode S \_ OK zurück.
 
-Wenn die Methode fehlschlägt, wird ein **HRESULT** -Wert zurückgegeben, der den Fehler angibt. Eine Liste der allgemeinen Fehlercodes finden Sie unter [Allgemeine HRESULT-Werte](common-hresult-values.md).
+Wenn bei der Methode ein Fehler auftritt, wird ein **HRESULT-Wert** zurückgegeben, der den Fehler angibt. Eine Liste der allgemeinen Fehlercodes finden Sie unter [Allgemeine HRESULT-Werte](common-hresult-values.md).
 
 ### <a name="vb"></a>VB
 
-Eine Zeichenfolge, die den Namen des Signatur Zertifikats darstellt. Das Signaturzertifikat wird verwendet, um die [*Zertifikat Anforderung*](../secgloss/c-gly.md)zu signieren.
+Eine Zeichenfolge, die den Namen des Signaturzertifikats darstellt. Das Signaturzertifikat wird verwendet, um die [*Zertifikatanforderung zu signieren.*](../secgloss/c-gly.md)
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die **getsigningcertifikatename** -Methode gibt den Antragsteller Namen des Zertifikats, das Sie (oder ein anderer Administrator) ausgewählt haben, in einem vorherigen erfolgreichen [**iscrdenr:: selectsigningcertificate**](iscrdenr-selectsigningcertificate.md) -oder [**iscrdenr:: setsigningcertificate**](iscrdenr-setsigningcertificate.md)-Vorgang zurück. Diese Methode ruft die [**certgetnamestring**](/windows/desktop/api/Wincrypt/nf-wincrypt-certgetnamestringa) -Funktion auf, um den Antragsteller Namen entsprechend der für den "CERT \_ Name \_ Simple \_ Display Type" \_ -Wert des *dwType* -Parameters von **certgetnamestring** beschriebenen Sequenz abzurufen.
+Die **getSigningCertificateName-Methode** gibt den Betreffnamen des Zertifikats zurück, das Sie (oder ein anderer Administrator) in einem vorherigen erfolgreichen Aufruf von [**ISCrdEnr::selectSigningCertificate**](iscrdenr-selectsigningcertificate.md) oder [**ISCrdEnr::setSigningCertificate ausgewählt haben.**](iscrdenr-setsigningcertificate.md) Diese Methode ruft die [**CertGetNameString-Funktion**](/windows/desktop/api/Wincrypt/nf-wincrypt-certgetnamestringa) auf, um den Betreffnamen gemäß der Sequenz abzurufen, die für den CERT NAME SIMPLE DISPLAY TYPE-Wert des dwType-Parameters von \_ \_ \_ \_ **CertGetNameString** *beschrieben* ist.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -91,20 +91,20 @@ Die **getsigningcertifikatename** -Methode gibt den Antragsteller Namen des Zert
 | Anforderung | Wert |
 |-------------------------------------|-----------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Nicht unterstützt<br/>                                                               |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/>                                    |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                                    |
 | DLL<br/>                      | <dl> <dt>Scrdenrl.dll</dt> </dl> |
-| IID<br/>                      | IID \_ iscrdenr ist definiert als 753988a1-1357-436d-9cf5-f089bdd67d64<br/>             |
+| IID<br/>                      | IID \_ ISCrdEnr ist als 753988a1-1357-436d-9cf5-f089bdd67d64 definiert.<br/>             |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Iscrdenr**](iscrdenr.md)
+[**ISCrdEnr**](iscrdenr.md)
 </dt> <dt>
 
-[**Iscrdenr:: selectsigningcertificate**](iscrdenr-selectsigningcertificate.md)
+[**ISCrdEnr::selectSigningCertificate**](iscrdenr-selectsigningcertificate.md)
 </dt> </dl>
 
  

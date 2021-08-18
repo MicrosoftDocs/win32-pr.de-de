@@ -1,27 +1,27 @@
 ---
-description: Die iscarddatabase-Schnittstelle stellt die folgenden Methoden zur Verfügung.
+description: Die ISCardDatabase-Schnittstelle macht die folgenden Methoden verfügbar.
 ms.assetid: CE2BF60E-CBD3-445E-8F09-63BA6C39D538
-title: Iscarddatabase-Methoden
+title: ISCardDatabase-Methoden
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: f8634592871d8be9f7a6e488b2c094c159e547b1
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 61ad8034855ea5242ad7ab1d7d5ad20287529a4a644a048aaad449502e8c7c6d
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "103751680"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119008068"
 ---
-# <a name="iscarddatabase-methods"></a>Iscarddatabase-Methoden
+# <a name="iscarddatabase-methods"></a>ISCardDatabase-Methoden
 
-Die [**iscarddatabase**](iscarddatabase.md) -Schnittstelle stellt die folgenden Methoden zur Verfügung.
+Die [**ISCardDatabase-Schnittstelle**](iscarddatabase.md) macht die folgenden Methoden verfügbar.
 
 ## <a name="in-this-section"></a>In diesem Abschnitt
 
--   [**Getprovidercardid-Methode**](iscarddatabase-getprovidercardid.md)
--   [**Listcardinterfaces-Methode**](iscarddatabase-listcardinterfaces.md)
--   [**Listcards-Methode**](iscarddatabase-listcards.md)
--   [**Listreadergroups-Methode**](iscarddatabase-listreadergroups.md)
--   [**Listreaders-Methode**](iscarddatabase-listreaders.md)
+-   [**GetProviderCardId-Methode**](iscarddatabase-getprovidercardid.md)
+-   [**ListCardInterfaces-Methode**](iscarddatabase-listcardinterfaces.md)
+-   [**ListCards-Methode**](iscarddatabase-listcards.md)
+-   [**ListReaderGroups-Methode**](iscarddatabase-listreadergroups.md)
+-   [**ListReaders-Methode**](iscarddatabase-listreaders.md)
 
  
 

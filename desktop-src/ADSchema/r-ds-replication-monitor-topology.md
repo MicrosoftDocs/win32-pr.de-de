@@ -1,10 +1,10 @@
 ---
-title: DS-Replikation-Monitor-Topologie erweitert rechts
-description: Zugriffsrecht für erweiterte Steuerelemente, das das Lesen von Replikations Überwachungsdaten ermöglicht, wie Replikations Status und Objekt Metadaten.
+title: DS-Replication-Monitor-Topology extended right
+description: Erweitertes Steuerelementzugriffsrecht, das das Lesen von Replikationsüberwachungsdaten ermöglicht, z. B. Replikationsstatus und Objektmetadaten.
 ms.assetid: 9270d4c1-123f-4809-9038-3d2c7ebad782
 ms.tgt_platform: multiple
 keywords:
-- Active Directory-Schema der DS-Replikation-Monitor-Topologie
+- DS-Replication-Monitor-Topology extended right AD Schema
 topic_type:
 - apiref
 api_name:
@@ -13,43 +13,43 @@ api_type:
 - Schema
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 8c793a814fa3c09d6877b9c155e613f0a41f303c
-ms.sourcegitcommit: b77ace27b0432e7cd3863191b11926be032fbe2f
+ms.openlocfilehash: 8765c4df108235cc2a18f5df34093849e33af88943d62a0ac18b447ba74bf8aa
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "103957673"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119021708"
 ---
-# <a name="ds-replication-monitor-topology-extended-right"></a>DS-Replikation-Monitor-Topologie erweitert rechts
+# <a name="ds-replication-monitor-topology-extended-right"></a>DS-Replication-Monitor-Topology extended right
 
-Zugriffsrecht für erweiterte Steuerelemente, das das Lesen von Replikations Überwachungsdaten ermöglicht, wie Replikations Status und Objekt Metadaten.
+Erweitertes Steuerelementzugriffsrecht, das das Lesen von Replikationsüberwachungsdaten ermöglicht, z. B. Replikationsstatus und Objektmetadaten.
 
 
 
 | Eingabe | Wert |
 |--------------|--------------------------------------|
-| CN           | DS-Replikation-Monitor-Topologie      |
-| Anzeigename | Überwachen Active Directory Replikation |
+| CN           | DS-Replication-Monitor-Topology      |
+| Anzeigename | Überwachen der Active Directory-Replikation |
 | Rights-GUID  | f98340fb-7c5b-4cdb-a00b-2ebdfa115a96 |
 
 
 
 ## <a name="implementations"></a>Implementierungen
 
--   [**Windows Server 2003**](#windows-server-2003)
+-   [**Windows Server 2003**](#windows-server-2003)
 -   [**Windows Server 2003 R2**](#windows-server-2003-r2)
 -   [**Windows Server 2008**](#windows-server-2008)
 -   [**Windows Server 2008 R2**](#windows-server-2008-r2)
 -   [**Windows Server 2012**](#windows-server-2012)
 
-## <a name="windows-server-2003"></a>Windows Server 2003
+## <a name="windows-server-2003"></a>Windows Server 2003
 
 
 
 | Eingabe | Wert |
 |-------------------------|----------------------------------------------------------------------------------------------------------------------------------|
-| Applies-To              | [**Domäne: DNS**](c-domaindns.md)<br/> [**Configuration**](c-configuration.md)<br/> [**DMD**](c-dmd.md)<br/> |
-| Lokalisierung-Display-ID | 67                                                                                                                               |
+| Applies-To              | [**Domänen-DNS**](c-domaindns.md)<br/> [**Konfiguration**](c-configuration.md)<br/> [**Dmd**](c-dmd.md)<br/> |
+| Lokalisierungsanzeige-ID | 67                                                                                                                               |
 
 
 
@@ -59,8 +59,8 @@ Zugriffsrecht für erweiterte Steuerelemente, das das Lesen von Replikations Üb
 
 | Eingabe | Wert |
 |-------------------------|----------------------------------------------------------------------------------------------------------------------------------|
-| Applies-To              | [**Domäne: DNS**](c-domaindns.md)<br/> [**Configuration**](c-configuration.md)<br/> [**DMD**](c-dmd.md)<br/> |
-| Lokalisierung-Display-ID | 67                                                                                                                               |
+| Applies-To              | [**Domänen-DNS**](c-domaindns.md)<br/> [**Konfiguration**](c-configuration.md)<br/> [**Dmd**](c-dmd.md)<br/> |
+| Lokalisierungsanzeige-ID | 67                                                                                                                               |
 
 
 
@@ -70,8 +70,8 @@ Zugriffsrecht für erweiterte Steuerelemente, das das Lesen von Replikations Üb
 
 | Eingabe | Wert |
 |-------------------------|----------------------------------------------------------------------------------------------------------------------------------|
-| Applies-To              | [**Domäne: DNS**](c-domaindns.md)<br/> [**Configuration**](c-configuration.md)<br/> [**DMD**](c-dmd.md)<br/> |
-| Lokalisierung-Display-ID | 67                                                                                                                               |
+| Applies-To              | [**Domänen-DNS**](c-domaindns.md)<br/> [**Konfiguration**](c-configuration.md)<br/> [**Dmd**](c-dmd.md)<br/> |
+| Lokalisierungsanzeige-ID | 67                                                                                                                               |
 
 
 
@@ -81,8 +81,8 @@ Zugriffsrecht für erweiterte Steuerelemente, das das Lesen von Replikations Üb
 
 | Eingabe | Wert |
 |-------------------------|----------------------------------------------------------------------------------------------------------------------------------|
-| Applies-To              | [**Domäne: DNS**](c-domaindns.md)<br/> [**Configuration**](c-configuration.md)<br/> [**DMD**](c-dmd.md)<br/> |
-| Lokalisierung-Display-ID | 67                                                                                                                               |
+| Applies-To              | [**Domänen-DNS**](c-domaindns.md)<br/> [**Konfiguration**](c-configuration.md)<br/> [**Dmd**](c-dmd.md)<br/> |
+| Lokalisierungsanzeige-ID | 67                                                                                                                               |
 
 
 
@@ -92,8 +92,8 @@ Zugriffsrecht für erweiterte Steuerelemente, das das Lesen von Replikations Üb
 
 | Eingabe | Wert |
 |-------------------------|----------------------------------------------------------------------------------------------------------------------------------|
-| Applies-To              | [**Domäne: DNS**](c-domaindns.md)<br/> [**Configuration**](c-configuration.md)<br/> [**DMD**](c-dmd.md)<br/> |
-| Lokalisierung-Display-ID | 67                                                                                                                               |
+| Applies-To              | [**Domänen-DNS**](c-domaindns.md)<br/> [**Konfiguration**](c-configuration.md)<br/> [**Dmd**](c-dmd.md)<br/> |
+| Lokalisierungsanzeige-ID | 67                                                                                                                               |
 
 
 

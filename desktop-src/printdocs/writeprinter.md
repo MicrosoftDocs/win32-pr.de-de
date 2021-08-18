@@ -102,7 +102,7 @@ Die Sequenz für einen Druckauftrag lautet wie folgt:
 
 Wenn ein Dokument auf hoher Ebene (z. B. eine Adobe PDF- oder Microsoft Word-Datei) oder andere Druckerdaten (z. B. PCL, PS oder HPGL) direkt an einen Drucker gesendet werden, haben die im Dokument definierten Druckeinstellungen Vorrang vor Windows-Druckeinstellungen. Dokumentiert die Ausgabe, wenn der Wert des *pDatatype-Members* der [**DOC INFO \_ \_ 1-Struktur,**](doc-info-1.md) der im *pDocInfo-Parameter* des [**StartDocPrinter-Aufrufs**](startdocprinter.md) übergeben wurde, "RAW" ist, die DevMODE-Druckauftragseinstellungen in der sprache, die von der Hardware verstanden wird, vollständig beschreiben muss. [](/windows/win32/api/wingdi/ns-wingdi-devmodea)
 
-In Versionen von Windows vor Windows XP kann eine Seite in einer Spooldatei, die ungefähr 350 MB überschreitet, nicht gedruckt werden und keine Fehlermeldung senden. Dies kann beispielsweise beim Drucken großer EMF-Dateien auftreten. Das Seitengrößenlimit in Versionen von Windows vor Windows XP hängt von vielen Faktoren ab, z. B. der Menge des verfügbaren virtuellen Arbeitsspeichers, der durch aufrufende Prozesse zugewiesenen Arbeitsspeichermenge und der Fragmentierung im Prozesshap. In Windows XP und neueren Versionen von Windows müssen EMF-Dateien mindestens 2 GB groß sein. Wenn **WritePrinter** zum Schreiben von Nicht-EMF-Daten verwendet wird, z. B. druckerbereite PDL, wird die Größe der Datei nur durch den verfügbaren Speicherplatz beschränkt.
+In Versionen von Windows vor Windows XP kann eine Seite in einer Spooldatei, die ungefähr 350 MB überschreitet, nicht gedruckt werden und keine Fehlermeldung senden. Dies kann beispielsweise beim Drucken großer EMF-Dateien auftreten. Die Seitengrößenbeschränkung in Versionen von Windows vor Windows XP hängt von vielen Faktoren ab, einschließlich der Menge des verfügbaren virtuellen Arbeitsspeichers, der Durch aufrufenden Prozesse zugewiesenen Arbeitsspeichermenge und der Fragmentierung im Prozesshap. In Windows XP und neueren Versionen von Windows müssen EMF-Dateien mindestens 2 GB groß sein. Wenn **WritePrinter** zum Schreiben von Nicht-EMF-Daten verwendet wird, z. B. druckerbereite PDL, wird die Größe der Datei nur durch den verfügbaren Speicherplatz beschränkt.
 
 ## <a name="examples"></a>Beispiele
 
@@ -122,7 +122,7 @@ Ein Beispielprogramm, das diese Funktion verwendet, finden Sie unter How To: Pri
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 
