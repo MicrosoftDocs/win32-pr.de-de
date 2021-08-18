@@ -1,57 +1,57 @@
 ---
-description: Die VBScript-Datei WiLstPrd.vbs wird in den Windows SDK Komponenten für Windows Installer Entwickler bereitgestellt. Das Beispielskript stellt eine Verbindung mit einem Installerobjekt her und listet registrierte Produkte und Produktinformationen auf.
+description: Die VBScript-WiLstPrd.vbs wird in den sdk-Komponenten Windows für Windows Installer-Entwickler bereitgestellt. Das Beispielskript stellt eine Verbindung mit einem Installer-Objekt und listet registrierte Produkte und Produktinformationen auf.
 ms.assetid: 13615dc2-ebc7-4536-9dd8-9bb1dbf3cfaf
 title: Auflisten von Produkten, Eigenschaften, Features und Komponenten
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: e20d2f563efad42108f763b909e7a1118e255dcb
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: aa090deef877757277b64cef02ecf42df61405fdc9238935bfffba756434f316
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106347189"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119013148"
 ---
 # <a name="list-products-properties-features-and-components"></a>Auflisten von Produkten, Eigenschaften, Features und Komponenten
 
-Die VBScript-Datei WiLstPrd.vbs wird in den [Windows SDK Komponenten für Windows Installer Entwickler](platform-sdk-components-for-windows-installer-developers.md)bereitgestellt. Das Beispielskript stellt eine Verbindung mit einem [**Installerobjekt**](installer-object.md) her und listet registrierte Produkte und Produktinformationen auf.
+Die VBScript-WiLstPrd.vbs wird in den Windows [SDK-Komponenten für Windows Installer-Entwickler bereitgestellt.](platform-sdk-components-for-windows-installer-developers.md) Das Beispielskript stellt eine Verbindung mit einem [**Installer-Objekt**](installer-object.md) und listet registrierte Produkte und Produktinformationen auf.
 
-In diesem Beispiel wird die Verwendung von veranschaulicht:
+Dieses Beispiel veranschaulicht die Verwendung von:
 
 -   [**ProductInfo-Eigenschaft**](installer-productinfo.md)
--   [**Productstate-Eigenschaft (Installer-Objekt)**](installer-productstate-property.md)
+-   [**ProductState-Eigenschaft (Installer-Objekt)**](installer-productstate-property.md)
 -   [**Products-Eigenschaft**](installer-products.md)
--   [**Features-Eigenschaft**](installer-features.md)
--   [**Featureparent (Eigenschaft)**](installer-featureparent.md)
--   [**Featurestate (Eigenschaft)**](installer-featurestate.md)
--   [**Komponenten Eigenschaft**](installer-components.md)
--   [**Componentclients (Eigenschaft)**](installer-componentclients.md)
--   [**Componentpath (Eigenschaft)**](installer-componentpath.md)
--   [**Lasterrorrecord-Methode**](installer-lasterrorrecord.md)
--   [**REGISTRYVALUE-Methode**](installer-registryvalue.md) des [ **Installer-Objekts**](installer-object.md)
+-   [**Features (Eigenschaft)**](installer-features.md)
+-   [**FeatureParent-Eigenschaft**](installer-featureparent.md)
+-   [**FeatureState-Eigenschaft**](installer-featurestate.md)
+-   [**Components-Eigenschaft**](installer-components.md)
+-   [**ComponentClients(Eigenschaft)**](installer-componentclients.md)
+-   [**ComponentPath-Eigenschaft**](installer-componentpath.md)
+-   [**LastErrorRecord-Methode**](installer-lasterrorrecord.md)
+-   [**RegistryValue-Methode**](installer-registryvalue.md) des [ **Installer-Objekts**](installer-object.md)
 
-Sie benötigen die CScript.exe oder WScript.exe Version von Windows Script Host, um dieses Beispiel zu verwenden. Wenn Sie CScript.exe verwenden möchten, um dieses Beispiel auszuführen, geben Sie mithilfe der folgenden Syntax eine Befehlszeile an der Eingabeaufforderung ein. Hilfe wird angezeigt, wenn das erste Argument/? oder, wenn zu wenige Argumente angegeben werden. Um die Ausgabe in eine Datei umzuleiten, beenden Sie die Befehlszeile mit VSB > \[ Pfad zur Datei \] . Das Beispiel gibt den Wert 0 für Erfolg zurück, 1, wenn Hilfe aufgerufen wird, und 2, wenn das Skript fehlschlägt.
+Sie benötigen die CScript.exe oder WScript.exe von Windows Script Host, um dieses Beispiel verwenden zu können. Um dieses CScript.exe ausführen zu können, geben Sie an der Eingabeaufforderung eine Befehlszeile mit der folgenden Syntax ein. Hilfe wird angezeigt, wenn das erste Argument /? ist. oder , wenn zu wenige Argumente angegeben werden. Um die Ausgabe an eine Datei umzuleiten, beenden Sie die Befehlszeile mit VBS > \[ Pfad zur Datei \] . Das Beispiel gibt den Wert 0 für den Erfolg zurück, 1, wenn Hilfe aufgerufen wird, und 2, wenn das Skript fehlschlägt.
 
-**cscript-WiLstPrd.vbs Optionen für den \[ Produktnamen \] \[\]**
+**cscript WiLstPrd.vbs \[ \] \[ Produktname-Optionen\]**
 
-Geben Sie den Produktnamen für die Groß-/Kleinschreibung oder die Produkt-ID-GUID des installierten oder angekündigten Produkts an. Wenn kein Produkt oder keine Optionen angegeben werden, listet das Installationsprogramm alle Produkte auf, die auf dem System installiert oder angekündigt wurden.
+Geben Sie den Produktnamen ohne Unterscheidung nach Groß-/Kleinschreibung oder die Produkt-ID-GUID des installierten oder angekündigten Produkts an. Wenn keine Produkte oder Optionen angegeben sind, listet das Installationsprogramm alle auf dem System installierten oder angekündigten Produkte auf.
 
-Beachten Sie, dass es sich bei diesen Optionen nicht um Switches handelt, sodass Sie keinen Schrägstrich (/) in der Befehlszeile voranstellen sollten. Die folgenden Optionen können durch Verkettung der Buchstaben kombiniert werden. Beispiel: "PC" zum Auflisten der Eigenschaften und der installierten Komponenten der Produkte.
+Beachten Sie, dass es sich bei diesen Optionen nicht um Schalter handelt. Daher sollten Sie ihnen keinen Schrägstrich (/) in der Befehlszeile voran stellen. Die folgenden Optionen können kombiniert werden, indem die Buchstaben verkettet werden. Beispiel: "pc", um sowohl die Eigenschaften der Produkte als auch die installierten Komponenten auflisten zu können.
 
 
 
-| Option               | BESCHREIBUNG                                                                                                                           |
+| Option               | Beschreibung                                                                                                                           |
 |----------------------|---------------------------------------------------------------------------------------------------------------------------------------|
-| keine Optionen angegeben. | Listet die Eigenschaften der Produkte auf.                                                                                                        |
-| p                    | Listet die Eigenschaften der Produkte auf.                                                                                                        |
-| f                    | Auflisten der Features der Produkte, der übergeordneten Funktionen und der Installations Zustände                                                                 |
+| keine Optionen angegeben | Listen Sie die Eigenschaften der Produkte auf.                                                                                                        |
+| p                    | Listen Sie die Eigenschaften der Produkte auf.                                                                                                        |
+| f                    | Auflisten der Produktfeatures, Deren Elemente und Installationszustände                                                                 |
 | c                    | Listet die installierten Komponenten der Produkte auf.                                                                                              |
-| d                    | Listen Sie den Wert unter " **HKLM \\ Software \\ Microsoft \\ Windows \\ CurrentVersion \\ SharedDLLs** " für die Schlüsseldateien der Komponente "Products" auf. |
+| d                    | Listen Sie den Wert **unter HKLM \\ Software Microsoft \\ Windows \\ \\ CurrentVersion \\ SharedDlls** für die Schlüsseldateien der Produktkomponente auf. |
 
 
 
  
 
-Weitere Informationen finden Sie unter [Windows Installer Skript Beispiele](windows-installer-scripting-examples.md) für weitere Skript Beispiele. Beispiel Hilfsprogramme, die keinen Windows Script Host erfordern, finden Sie unter [Windows Installer-Entwicklungs Tools](windows-installer-development-tools.md).
+Weitere Informationen finden Sie unter [Windows Installer Scripting Examples](windows-installer-scripting-examples.md) für zusätzliche Skriptbeispiele. Beispielprogramme, für die kein Skripthost Windows ist, finden Sie unter [Windows Installer Development Tools](windows-installer-development-tools.md).
 
  
 

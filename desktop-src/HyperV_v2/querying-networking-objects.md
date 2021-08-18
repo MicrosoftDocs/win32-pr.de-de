@@ -1,25 +1,25 @@
 ---
-description: Im folgenden c#-Beispiel werden Informationen zu physischen und virtuellen Netzwerken für den angegebenen Switch abgerufen und angezeigt.
+description: Im folgenden C#-Beispiel werden physische und virtuelle Netzwerkinformationen für den angegebenen Switch abgerufen und angezeigt.
 ms.assetid: 679168E2-C79F-4A7A-8C04-A309315CA670
-title: Abfragen von Netzwerk Objekten
+title: Abfragen von Netzwerkobjekten
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: df2bbf4fb86269ec07bb4015b00beda491ef3dcb
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 2eb962ee61532d4c5d5cf25f92dd3b94ddb96986228c2fa479da8cf50113ca8c
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106368064"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119014448"
 ---
-# <a name="querying-networking-objects"></a>Abfragen von Netzwerk Objekten
+# <a name="querying-networking-objects"></a>Abfragen von Netzwerkobjekten
 
-Im folgenden c#-Beispiel werden Informationen zu physischen und virtuellen Netzwerken für den angegebenen Switch abgerufen und angezeigt. Dieser Code stammt aus dem [Beispiel für Hyper-V-Netzwerke](https://github.com/microsoft/Windows-classic-samples/tree/master/Samples/Hyper-V/Networking).
+Im folgenden C#-Beispiel werden physische und virtuelle Netzwerkinformationen für den angegebenen Switch abgerufen und angezeigt. Dieser Code ist aus dem [Hyper-V-Netzwerkbeispiel entnommen.](https://github.com/microsoft/Windows-classic-samples/tree/master/Samples/Hyper-V/Networking)
 
-Die Befehlszeilen Syntax zum Ausführen dieses Beispiels lautet wie folgt:
+Die Befehlszeilensyntax zum Ausführen dieses Beispiels ist:
 
-**NetworkingSamples.exe "enumerateswitch** *SwitchName* "
+**NetworkingSamples.exe EnumerateSwitch** *SwitchName*
 
-Dabei ist *SwitchName* der Name des Schalters, für den die Informationen angezeigt werden sollen. Der SwitchName ist in der Eigenschaft " [**MSVM \_ virtualethernetzwitch. Elementname**](msvm-virtualethernetswitch.md) " enthalten.
+Dabei *ist SwitchName* der Name des Schalters, für den die Informationen angezeigt werden. Der Switchname ist in der [**Eigenschaft Msvm \_ VirtualEthernetSwitch.ElementName**](msvm-virtualethernetswitch.md) enthalten.
 
 
 ```CSharp

@@ -1,5 +1,5 @@
 ---
-description: 'Weitere Informationen zu: Windows8Param.HungIOActions-Feld'
+description: 'Weitere Informationen finden Sie unter: Feld "Windows8Param.HungIOActions".'
 title: Windows8Param.HungIOActions-Feld (Microsoft.Isam.Esent.Interop.Windows8)
 TOCTitle: HungIOActions field
 ms:assetid: F:Microsoft.Isam.Esent.Interop.Windows8.Windows8Param.HungIOActions
@@ -33,7 +33,7 @@ ms.locfileid: "117889207"
 ---
 # <a name="windows8paramhungioactions-field"></a>Windows8Param.HungIOActions-Feld
 
-Eine Reihe von Aktionen, die für IOs ausgeführt werden sollen, die hängen zu sein scheinen.
+Eine Reihe von Aktionen, die für E/A-Geräte durchgeführt werden sollen, die nicht mehr reagiert haben.
 
 **Namespace:**  [Microsoft.Isam.Esent.Interop.Windows8](./microsoft.isam.esent.interop.windows8-namespace.md)  
 **Assembly:**  Microsoft.Isam.Esent.Interop (in Microsoft.Isam.Esent.Interop.dll)

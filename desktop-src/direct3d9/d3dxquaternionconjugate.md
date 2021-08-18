@@ -1,7 +1,7 @@
 ---
-description: Gibt die konjugierte einer Quaternion zurück.
+description: Gibt die Konjugierung einer Quaternion zurück.
 ms.assetid: f690fdd8-7805-4fc1-9064-4f249d5f7c4f
-title: D3DXQuaternionConjugate-Funktion (D3dx9math. h)
+title: D3DXQuaternionConjugate-Funktion (D3dx9math.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -14,16 +14,16 @@ api_type:
 api_location:
 - d3dx9.lib
 - d3dx9.dll
-ms.openlocfilehash: bbf288724dbdede9d98ec4ee21afd1bb57dd7a49
-ms.sourcegitcommit: 14010c34b35fa268046c7683f021f86de08ddd0a
+ms.openlocfilehash: cb4828d6e6dec80e8721b4e5bddd4728da7a72dc0c6ea9a9c315800e0b17fa00
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "104219600"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118988460"
 ---
 # <a name="d3dxquaternionconjugate-function"></a>D3DXQuaternionConjugate-Funktion
 
-Gibt die konjugierte einer Quaternion zurück.
+Gibt die Konjugierung einer Quaternion zurück.
 
 ## <a name="syntax"></a>Syntax
 
@@ -41,21 +41,21 @@ D3DXQUATERNION* D3DXQuaternionConjugate(
 
 <dl> <dt>
 
-*Pout* \[ in, out\]
+*pOut* \[ in, out\]
 </dt> <dd>
 
 Typ: **[ **D3DXQUATERNION**](d3dxquaternion.md)\***
 
-Ein Zeiger auf die [**D3DXQUATERNION**](d3dxquaternion.md) -Struktur, die das Ergebnis des Vorgangs ist.
+Zeiger auf die [**D3DXQUATERNION-Struktur,**](d3dxquaternion.md) die das Ergebnis des Vorgangs ist.
 
 </dd> <dt>
 
-*PQ* \[ in\]
+*pQ* \[ In\]
 </dt> <dd>
 
-Typ: **Konstanten [**D3DXQUATERNION**](d3dxquaternion.md) \***
+Typ: **const [**D3DXQUATERNION**](d3dxquaternion.md) \***
 
-Ein Zeiger auf die Quell- [**D3DXQUATERNION**](d3dxquaternion.md) -Struktur.
+Zeiger auf die [**D3DXQUATERNION-Quellstruktur.**](d3dxquaternion.md)
 
 </dd> </dl>
 
@@ -63,15 +63,15 @@ Ein Zeiger auf die Quell- [**D3DXQUATERNION**](d3dxquaternion.md) -Struktur.
 
 Typ: **[ **D3DXQUATERNION**](d3dxquaternion.md)\***
 
-Zeiger auf eine [**D3DXQUATERNION**](d3dxquaternion.md) -Struktur, die die konjugierte der Quaternion ist.
+Zeiger auf eine [**D3DXQUATERNION-Struktur,**](d3dxquaternion.md) die die Konjugierung der Quaternion ist.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Wenn eine Quaternion (x, y, z, w) angegeben wird, gibt die **D3DXQuaternionConjugate** -Funktion die Quaternion (-x,-y,-z, w) zurück.
+Bei einer Quaternion (x, y, z, w) gibt die **D3DXQuaternionConjugate-Funktion** die Quaternion (-x, -y, -z, w) zurück.
 
-Der Rückgabewert für diese Funktion ist derselbe Wert, der im *Pout* -Parameter zurückgegeben wird. Auf diese Weise kann die **D3DXQuaternionConjugate** -Funktion als Parameter für eine andere Funktion verwendet werden.
+Der Rückgabewert für diese Funktion ist der gleiche Wert, der im *pOut-Parameter* zurückgegeben wird. Auf diese Weise kann die **D3DXQuaternionConjugate-Funktion** als Parameter für eine andere Funktion verwendet werden.
 
-Verwenden Sie [**D3DXQuaternionNormalize**](d3dxquaternionnormalize.md) für eine beliebige Quaternion-Eingabe, die nicht bereits normalisiert ist.
+Verwenden Sie [**D3DXQuaternionNormalize**](d3dxquaternionnormalize.md) für alle Quaternioneingaben, die noch nicht normalisiert sind.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -79,12 +79,12 @@ Verwenden Sie [**D3DXQuaternionNormalize**](d3dxquaternionnormalize.md) für ein
 
 | Anforderung | Wert |
 |--------------------|----------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>D3dx9math. h</dt> </dl> |
-| Bibliothek<br/> | <dl> <dt>D3dx9. lib</dt> </dl>   |
+| Header<br/>  | <dl> <dt>D3dx9math.h</dt> </dl> |
+| Bibliothek<br/> | <dl> <dt>D3dx9.lib</dt> </dl>   |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 

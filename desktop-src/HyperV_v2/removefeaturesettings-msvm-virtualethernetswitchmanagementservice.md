@@ -1,7 +1,7 @@
 ---
-description: Entfernt die Funktionseinstellungen von einem Ethernet-Switchport.
+description: Entfernt Featureeinstellungen von einem Ethernet-Switchport.
 ms.assetid: 3d45259e-34e4-417b-a895-4926b0eaaf59
-title: Removefeaturesettings-Methode der Msvm_VirtualEthernetSwitchManagementService-Klasse
+title: RemoveFeatureSettings-Methode der Msvm_VirtualEthernetSwitchManagementService-Klasse
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,16 +13,16 @@ api_type:
 - COM
 api_location:
 - vmms.exe
-ms.openlocfilehash: 919e2b69e2a0ef215a522c601088cb7aa2976a35
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 39c78295ad3c2aaa91a0a92c71062ea83bb68a58eb646a5bce4db024de15e7a4
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106358597"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119014428"
 ---
-# <a name="removefeaturesettings-method-of-the-msvm_virtualethernetswitchmanagementservice-class"></a>Removefeaturesettings-Methode der MSVM \_ virtualethernettwitchmanagementservice-Klasse
+# <a name="removefeaturesettings-method-of-the-msvm_virtualethernetswitchmanagementservice-class"></a>RemoveFeatureSettings-Methode der Msvm \_ VirtualEthernetSwitchManagementService-Klasse
 
-Entfernt die Funktionseinstellungen von einem Ethernet-Switchport.
+Entfernt Featureeinstellungen von einem Ethernet-Switchport.
 
 ## <a name="syntax"></a>Syntax
 
@@ -40,17 +40,17 @@ uint32 RemoveFeatureSettings(
 
 <dl> <dt>
 
-*Featuresettings* \[ in\]
+*FeatureSettings* \[ In\]
 </dt> <dd>
 
-Ein Array von Verweisen auf Instanzen der [**MSVM \_ featuresettingdata**](msvm-featuresettingdata.md) -Klasse, die die zu entfernenden Funktionseinstellungen darstellen.
+Ein Array von Verweisen auf Instanzen der [**Msvm \_ FeatureSettingData-Klasse,**](msvm-featuresettingdata.md) die die zu entfernenden Featureeinstellungen darstellen.
 
 </dd> <dt>
 
-*Auftrag* \[ vorgenommen\]
+*Auftrag* \[ out\]
 </dt> <dd>
 
-Wenn der Vorgang asynchron ausgeführt wird, gibt diese Methode 4096 zurück, und dieser Parameter enthält einen Verweis auf ein Objekt, das von [**CIM \_ concretejob**](/previous-versions//cc136808(v=vs.85))abgeleitet wird.
+Wenn der Vorgang asynchron ausgeführt wird, gibt diese Methode 4096 zurück, und dieser Parameter enthält einen Verweis auf ein objekt, das von [**CIM \_ ConcreteJob**](/previous-versions//cc136808(v=vs.85))abgeleitet wurde.
 
 </dd> </dl>
 
@@ -66,7 +66,7 @@ Diese Methode gibt einen der folgenden Werte zurück.
 **Nicht unterstützt** (1)
 </dt> <dt>
 
-Fehler **(2** )
+**Fehler** (2)
 </dt> <dt>
 
 **Timeout** (3)
@@ -75,19 +75,19 @@ Fehler **(2** )
 **Ungültiger Parameter** (4)
 </dt> <dt>
 
-**Ungültiger Status** (5)
+**Ungültiger Zustand** (5)
 </dt> <dt>
 
-**DMTF reserviert** (..)
+**DMTF Reserved** (..)
 </dt> <dt>
 
-Über **prüfte Methoden Parameter-Auftrag gestartet** (4096)
+**Überprüfte Methodenparameter – Auftragsstart** (4096)
 </dt> <dt>
 
-**Reservierte Methode** (4097.32767)
+**Reservierte Methode** (4097..32767)
 </dt> <dt>
 
-**Hersteller spezifisch** (32768.65535)
+**Herstellerspezifisch** (32768..65535)
 </dt> </dl>
 
 ## <a name="requirements"></a>Anforderungen
@@ -96,25 +96,25 @@ Fehler **(2** )
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows 8 \[ -Desktop-Apps\]<br/>                                                              |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2012 \[ -Desktop-Apps\]<br/>                                                    |
-| Namespace<br/>                | \\Stammvirtualisierung \\ v2<br/>                                                                     |
-| MOF<br/>                      | <dl> <dt>Windowsvirtualization. v2. MOF</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | \[Windows 8 Nur Desktop-Apps\]<br/>                                                              |
+| Unterstützte Mindestversion (Server)<br/> | \[Windows Server 2012 Nur Desktop-Apps\]<br/>                                                    |
+| Namespace<br/>                | Root \\ Virtualization \\ V2<br/>                                                                     |
+| MOF<br/>                      | <dl> <dt>WindowsVirtualization.V2.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Vmms.exe</dt> </dl>                     |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Addfeaturesettings**](addfeaturesettings-msvm-virtualethernetswitchmanagementservice.md)
+[**AddFeatureSettings**](addfeaturesettings-msvm-virtualethernetswitchmanagementservice.md)
 </dt> <dt>
 
-[**Modifyfeaturesettings**](modifyfeaturesettings-msvm-virtualethernetswitchmanagementservice.md)
+[**ModifyFeatureSettings**](modifyfeaturesettings-msvm-virtualethernetswitchmanagementservice.md)
 </dt> <dt>
 
-[**MSVM \_ virtualethernetzwitchmanagementservice**](msvm-virtualethernetswitchmanagementservice.md)
+[**Msvm \_ VirtualEthernetSwitchManagementService**](msvm-virtualethernetswitchmanagementservice.md)
 </dt> </dl>
 
  

@@ -1,7 +1,7 @@
 ---
-description: Führt Tangens-Frame Berechnungen in einem Mesh aus. Tangens, Binormale und optional normale Vektoren werden generiert. Singularitäten werden nach Bedarf durch Gruppierung von Rändern und Aufteilen von Scheitel Punkten behandelt.
+description: Führt Tangensframeberechnungen für ein Gitternetz aus. Tangens-, binormale und optional normale Vektoren werden generiert. Singularitäten werden nach Bedarf durch Gruppieren von Kanten und Teilen von Scheitelpunkt behandelt.
 ms.assetid: 15cc46bc-6db6-4e1d-a95e-cd60d2666600
-title: D3DXComputeTangentFrameEx-Funktion (D3DX9Mesh. h)
+title: D3DXComputeTangentFrameEx-Funktion (D3DX9Mesh.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -14,16 +14,16 @@ api_type:
 api_location:
 - d3dx9.lib
 - d3dx9.dll
-ms.openlocfilehash: 58c7e8a1f1f7247d6a3ecc92d5771d68c9c3e5a9
-ms.sourcegitcommit: 14010c34b35fa268046c7683f021f86de08ddd0a
+ms.openlocfilehash: 7d091b7ca243e4833cd6aa36a409fca32069e52a267ec3f588b338777ed34338
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "106365294"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118988670"
 ---
 # <a name="d3dxcomputetangentframeex-function"></a>D3DXComputeTangentFrameEx-Funktion
 
-Führt Tangens-Frame Berechnungen in einem Mesh aus. Tangens, Binormale und optional normale Vektoren werden generiert. Singularitäten werden nach Bedarf durch Gruppierung von Rändern und Aufteilen von Scheitel Punkten behandelt.
+Führt Tangensframeberechnungen für ein Gitternetz aus. Tangens-, binormale und optional normale Vektoren werden generiert. Singularitäten werden nach Bedarf durch Gruppieren von Kanten und Teilen von Scheitelpunkt behandelt.
 
 ## <a name="syntax"></a>Syntax
 
@@ -55,164 +55,164 @@ HRESULT D3DXComputeTangentFrameEx(
 
 <dl> <dt>
 
-*pmesh* \[ in\]
+*pMesh* \[ In\]
 </dt> <dd>
 
 Typ: **[ **ID3DXMesh**](id3dxmesh.md)\***
 
-Zeiger auf ein [**ID3DXMesh**](id3dxmesh.md) Mesh-Eingabe Objekt.
+Zeiger auf ein [**Eingabe-ID3DXMesh-Gittermodellobjekt.**](id3dxmesh.md)
 
 </dd> <dt>
 
-*dwtextureinsemantic* \[ in\]
+*dwTextureInSemantic* \[ In\]
 </dt> <dd>
 
 Typ: **[ **DWORD**](../winprog/windows-data-types.md)**
 
-Gibt die Eingabe Semantik der Textur Koordinate an. Wenn D3DX \_ Default ist, geht die Funktion davon aus, dass keine Texturkoordinaten vorhanden sind, und die Funktion schlägt fehl, es sei denn, die normale Vektor Berechnung wird angegeben.
+Gibt die Semantik der Texturkoordinateneingabe an. Bei D3DX DEFAULT geht die Funktion davon aus, dass keine Texturkoordinaten enthalten sind, und die Funktion kann nur dann fehlschlagen, wenn \_ eine normale Vektorberechnung angegeben ist.
 
 </dd> <dt>
 
-*dwtextureinindex* \[ in\]
+*dwTextureInIndex* \[ In\]
 </dt> <dd>
 
 Typ: **[ **DWORD**](../winprog/windows-data-types.md)**
 
-Wenn ein Mesh über mehrere Texturkoordinaten verfügt, gibt die Textur Koordinate an, die für die Tangens-Frame-Berechnungen verwendet werden soll. Wenn der Wert NULL ist, verfügt das Mesh nur über eine einzelne Textur Koordinate.
+Wenn ein Gitternetz über mehrere Texturkoordinaten verfügt, gibt die Texturkoordinate an, die für die Tangensframeberechnungen verwendet werden soll. Wenn 0 (null) ist, hat das Gitternetz nur eine einzelne Texturkoordinate.
 
 </dd> <dt>
 
-*dwupartialoutsemantic* \[ in\]
+*dwUPartialOutSemantic* \[ In\]
 </dt> <dd>
 
 Typ: **[ **DWORD**](../winprog/windows-data-types.md)**
 
-Gibt die Ausgabe Semantik für den Typ an, üblicherweise D3DDECLUSAGE \_ Tangens, der beschreibt, wo die partielle Ableitung in Bezug auf die U-Textur Koordinate gespeichert wird. Wenn D3DX den \_ Standardwert hat, wird diese partielle Ableitung nicht gespeichert.
+Gibt die Ausgabesemantik für den Typ an, in der Regel D3DDECLUSAGE TANGENT, der beschreibt, wo die partielle Ableitung in Bezug auf die U-Texturkoordinate \_ gespeichert wird. Bei D3DX \_ DEFAULT wird diese partielle Ableitung nicht gespeichert.
 
 </dd> <dt>
 
-*dwupartialoutindex* \[ in\]
+*dwUPartialOutIndex* \[ In\]
 </dt> <dd>
 
 Typ: **[ **DWORD**](../winprog/windows-data-types.md)**
 
-Gibt den semantischen Index an, bei dem die partielle Ableitung in Bezug auf die U-Textur Koordinate gespeichert werden soll.
+Gibt den semantischen Index an, an dem die partielle Ableitung in Bezug auf die U-Texturkoordinate gespeichert werden soll.
 
 </dd> <dt>
 
-*dwvpartialoutsemantic* \[ in\]
+*dwVPartialOutSemantic* \[ In\]
 </dt> <dd>
 
 Typ: **[ **DWORD**](../winprog/windows-data-types.md)**
 
-Gibt den [**D3DDECLUSAGE**](./d3ddeclusage.md) -Typ an, in der Regel D3DDECLUSAGE \_ Binormal, der beschreibt, wo die partielle Ableitung in Bezug auf die V-Textur Koordinate gespeichert wird. Wenn D3DX den \_ Standardwert hat, wird diese partielle Ableitung nicht gespeichert.
+Gibt den [**D3DDECLUSAGE-Typ**](./d3ddeclusage.md) an, in der Regel D3DDECLUSAGE BINORMAL, der beschreibt, wo die partielle Ableitung in Bezug auf die V-Texturkoordinate \_ gespeichert wird. Bei D3DX \_ DEFAULT wird diese partielle Ableitung nicht gespeichert.
 
 </dd> <dt>
 
-*dwvpartialoutindex* \[ in\]
+*dwVPartialOutIndex* \[ In\]
 </dt> <dd>
 
 Typ: **[ **DWORD**](../winprog/windows-data-types.md)**
 
-Gibt den semantischen Index an, bei dem die partielle Ableitung in Bezug auf die V-Textur Koordinate gespeichert werden soll.
+Gibt den semantischen Index an, an dem die partielle Ableitung in Bezug auf die V-Texturkoordinate gespeichert werden soll.
 
 </dd> <dt>
 
-*dwnormaloutsemantic* \[ in\]
+*dwNormalOutSemantic* \[ In\]
 </dt> <dd>
 
 Typ: **[ **DWORD**](../winprog/windows-data-types.md)**
 
-Gibt die normale Semantik der Ausgabe an (normalerweise D3DDECLUSAGE normal), die \_ beschreibt, wo der normale Vektor bei jedem Scheitelpunkt gespeichert wird. Wenn D3DX den \_ Standardwert hat, wird dieser normale Vektor nicht gespeichert.
+Gibt die normale Ausgabesemantik an, in der Regel D3DDECLUSAGE NORMAL, die beschreibt, wo der normale Vektor an jedem Scheitelpunkt \_ gespeichert wird. Bei D3DX \_ DEFAULT wird dieser normale Vektor nicht gespeichert.
 
 </dd> <dt>
 
-*dwnormaloutindex* \[ in\]
+*dwNormalOutIndex* \[ In\]
 </dt> <dd>
 
 Typ: **[ **DWORD**](../winprog/windows-data-types.md)**
 
-Gibt den semantischen Index an, bei dem der normale Vektor in jedem Scheitelpunkt gespeichert werden soll.
+Gibt den semantischen Index an, an dem der normale Vektor an jedem Scheitelpunkt gespeichert werden soll.
 
 </dd> <dt>
 
-*dwOptions* \[ in\]
+*dwOptions* \[ In\]
 </dt> <dd>
 
 Typ: **[ **DWORD**](../winprog/windows-data-types.md)**
 
-Eine Kombination aus einem oder mehreren [**D3DXTANGENT**](./d3dxtangent.md) -Flags, die Optionen für die Tangens Frame Berechnung angeben. Wenn der Wert **null** ist, werden die folgenden Optionen angegeben:
+Kombination von mindestens einem [**D3DXTANGENT-Flag,**](./d3dxtangent.md) das Tangensframe-Berechnungsoptionen an angeben. Bei **NULL** werden die folgenden Optionen angegeben:
 
 
 
-| BESCHREIBUNG                                                                                              | [**D3DXTANGENT**](./d3dxtangent.md) Flagwert                               |
+| Beschreibung                                                                                              | [**D3DXTANGENT**](./d3dxtangent.md) Flagwert                               |
 |----------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------|
-| Gewichtung der normalen Vektor Länge um den Winkel im Bogenmaße, der von den beiden Kanten, die den Scheitelpunkt hinterlassen, untergeordneter Länge liegt. | &! (D3DXTANGENT \_ Gewichtung \_ nach \_ Bereich \| D3DXTANGENT \_ Gewichtung \_ gleich)                |
-| Berechnen Sie orthogonale kartesische Koordinaten von Texturkoordinaten (u, v). Siehe Hinweise.                   | &! (D3DXTANGENT \_ Orthogonalize \_ from \_ U \| D3DXTANGENT \_ orthogonalize \_ from \_ V) |
-| Texturen sind weder in der u-noch in der v-Richtung umschließt                                                     | &! (D3DXTANGENT \_ Wrapper \_ -UV)                                                      |
-| Partielle Ableitungen in Bezug auf Texturkoordinaten werden normalisiert.                                  | &! (D3DXTANGENT \_ \_ \_ partitionale nicht normalisieren                                     |
-| Vertices werden um jedes Dreieck in der Richtung gegen den Uhrzeigersinn angeordnet.                               | &! (D3DXTANGENT \_ Wind- \_ CW)                                                      |
-| Verwenden Sie die pro-Vertex-normal Vektoren, die bereits im Eingabe Mesh vorhanden sind.                                         | &! (D3DXTANGENT \_ \_normale berechnen)                                            |
+| Gewichten Sie die normale Vektorlänge nach dem Winkel im Bogenmaß, der von den beiden Kanten, die den Scheitelpunkt verlassen, unterstützt wird. | & ! ( D3DXTANGENT \_ GEWICHTUNG \_ \_ NACH BEREICH \| D3DXTANGENT \_ \_ GEWICHTUNG GLEICH )                |
+| Berechnen Sie orthogonale kartesische Koordinaten aus Texturkoordinaten (u, v). Siehe Hinweise.                   | & ! ( D3DXTANGENT \_ ORTHOGONALIZE \_ FROM \_ U \| D3DXTANGENT \_ ORTHOGONALIZE \_ FROM V \_ ) |
+| Texturen sind weder in u- noch in v-Richtungen umschlossen.                                                     | & ! ( D3DXTANGENT \_ WRAP \_ UV )                                                      |
+| Partielle Ableitungen in Bezug auf Texturkoordinaten werden normalisiert.                                  | & ! ( D3DXTANGENT \_ DONT \_ NORMALIZE \_ PARTIALS )                                     |
+| Scheitelpunkts werden gegen den Uhrzeigersinn um jedes Dreieck herum geordnet.                               | & ! ( D3DXTANGENT \_ WIND \_ CW )                                                      |
+| Verwenden Sie normale Vektoren pro Scheitelpunkt, die bereits im Eingabegitternetz vorhanden sind.                                         | & ! ( D3DXTANGENT \_ CALCULATE \_ NORMALS )                                            |
 
 
 
  
 
-Wenn D3DXTANGENT \_ Generate \_ on \_ Place nicht festgelegt ist, wird das eingabemesh geklont. Das ursprüngliche Mesh muss daher über ausreichend Speicherplatz verfügen, um den berechneten normalen Vektor und teilweise abgeleitete Daten zu speichern.
+Wenn D3DXTANGENT \_ GENERATE IN PLACE nicht festgelegt \_ \_ ist, wird das Eingabegitternetz geklont. Das ursprüngliche Gitternetz muss daher über ausreichend Speicherplatz verfügen, um den berechneten normaler Vektor und partielle abgeleitete Daten zu speichern.
 
 </dd> <dt>
 
-*PDW-ency* \[ in\]
+*pdwAdjacency* \[ In\]
 </dt> <dd>
 
-Typ: Konstante **[**DWORD**](../winprog/windows-data-types.md) \***
+Typ: **const [**DWORD**](../winprog/windows-data-types.md) \***
 
-Zeiger auf ein Array von drei DWORDs pro Gesicht, das die drei Nachbarn für jedes Gesicht im Mesh angibt. Die Anzahl der Bytes in diesem Array muss mindestens 3 \* [**getnumgesichter**](id3dxbasemesh--getnumfaces.md) \* sizeof (DWORD) betragen.
+Zeiger auf ein Array von drei DWORDs pro Gesicht, die die drei Nachbarn für jedes Gesicht im Gitternetz angeben. Die Anzahl der Bytes in diesem Array muss mindestens 3 \* [**GetNumFaces**](id3dxbasemesh--getnumfaces.md) \* sizeof(DWORD) betragen.
 
 </dd> <dt>
 
-*' f '* \[ in\]
+*fPartialEdgeThreshold* \[ In\]
 </dt> <dd>
 
-Typ: **[ **float**](../winprog/windows-data-types.md)**
+Typ: **[ **FLOAT**](../winprog/windows-data-types.md)**
 
-Gibt den maximalen Kosinus des Winkels an, bei dem zwei partielle Ableitungen als nicht kompatibel eingestuft werden. Wenn das Punktprodukt der Richtung der beiden partiellen Ableitungen in angrenzenden Dreiecken kleiner oder gleich diesem Schwellenwert ist, werden die Scheitel Punkte, die von diesen Dreiecken gemeinsam genutzt werden, aufgeteilt.
+Gibt den maximalen Kosinus des Winkels an, bei dem zwei partielle Ableitungen als inkompatibel angesehen werden. Wenn das Punktprodukt der Richtung der beiden partiellen Ableitungen in angrenzenden Dreiecken kleiner oder gleich diesem Schwellenwert ist, werden die Scheitelpunkte, die von diesen Dreiecken gemeinsam genutzt werden, aufgeteilt.
 
 </dd> <dt>
 
-*' f ' (' f '* \[ ) in\]
+*fSingularPointThreshold* \[ In\]
 </dt> <dd>
 
-Typ: **[ **float**](../winprog/windows-data-types.md)**
+Typ: **[ **FLOAT**](../winprog/windows-data-types.md)**
 
-Gibt die maximale Größe einer partiellen Ableitung an, bei der ein Scheitelpunkt als Singular eingestuft wird. Da mehrere Dreiecke an einem Punkt mit nahe gelegenen Tangenten Frames, aber vollständig abgebrochen werden (z. b. am oberen Rand einer Kugel), wird die Größe der partiellen Ableitung verringert. Wenn die Größe kleiner oder gleich diesem Schwellenwert ist, wird der Scheitelpunkt für jedes Dreieck aufgeteilt, das es enthält.
+Gibt die maximale Größe einer partiellen Ableitung an, bei der ein Scheitelpunkt als singular betrachtet wird. Da mehrere Dreiecke an einem Punkt mit tangensischen Rahmen in der Nähe liegen, sich jedoch vollständig gegenseitig abbrechen (z. B. am Oberen einer Kugel), nimmt die Größe der partiellen Ableitung ab. Wenn die Größe kleiner oder gleich diesem Schwellenwert ist, wird der Scheitelpunkt für jedes Dreieck aufgeteilt, das ihn enthält.
 
 </dd> <dt>
 
-" *Wert* \[ " in\]
+*fNormalEdgeThreshold* \[ In\]
 </dt> <dd>
 
-Typ: **[ **float**](../winprog/windows-data-types.md)**
+Typ: **[ **FLOAT**](../winprog/windows-data-types.md)**
 
-Ähnlich wie bei fpartialedgethreshold gibt den maximalen Kosinus des Winkels zwischen zwei normalen an, bei denen es sich um einen Schwellenwert handelt, über den die von Dreiecken gemeinsam genutzten Scheitel Punkte aufgeteilt werden. Wenn das Punktprodukt der beiden normale kleiner als der Schwellenwert ist, werden die freigegebenen Scheitel Punkte aufgeteilt und bilden einen festen Rand zwischen benachbarten Dreiecken. Wenn das Punktprodukt den Schwellenwert überschreitet, werden die normalen der benachbarten Dreiecke interpoliert.
+Ähnlich wie fPartialEdgeThreshold gibt den maximalen Kosinus des Winkels zwischen zwei Normals an, bei dem es sich um einen Schwellenwert handelt, über den scheiteltische Punkte, die von Dreiecken gemeinsam genutzt werden, aufgeteilt werden. Wenn das Punktprodukt der beiden Normalwerte kleiner als der Schwellenwert ist, werden die freigegebenen Scheitelpunkte aufgeteilt und bilden eine harte Kante zwischen benachbarten Dreiecken. Wenn das Punktprodukt größer als der Schwellenwert ist, werden benachbarte Dreiecke normal interpoliert.
 
 </dd> <dt>
 
-*ppmeshout* \[ vorgenommen\]
+*ppMeshOut* \[ out\]
 </dt> <dd>
 
 Typ: **[ **ID3DXMesh**](id3dxmesh.md)\*\***
 
-Adresse eines Zeigers auf ein Output [**ID3DXMesh**](id3dxmesh.md) Mesh-Objekt, das die berechneten Tangens-, Binormale-und normal Vektordaten empfängt.
+Adresse eines Zeigers auf ein [**Ausgabe-ID3DXMesh-Gittermodellobjekt,**](id3dxmesh.md) das die berechneten Tangens-, binormalen und normalen Vektordaten empfängt.
 
 </dd> <dt>
 
-*ppvertexmapping* \[ vorgenommen\]
+*ppVertexMapping* \[ out\]
 </dt> <dd>
 
 Typ: **[ **ID3DXBuffer**](id3dxbuffer.md)\*\***
 
-Adresse eines Zeigers auf ein [**ID3DXBuffer**](id3dxbuffer.md) -Ausgabepuffer Objekt, das eine Zuordnung von neuen Scheitel Punkten empfängt, die von dieser Methode in den ursprünglichen Scheitel Punkten berechnet werden. Der Puffer ist ein Array von DWords, wobei die Array Größe als Anzahl von Vertices in ppmeshout definiert ist.
+Adresse eines Zeigers auf ein [**Ausgabe-ID3DXBuffer-Pufferobjekt,**](id3dxbuffer.md) das eine Zuordnung neuer Scheitelpunkts empfängt, die von dieser Methode zu den ursprünglichen Scheitelpunkts berechnet werden. Der Puffer ist ein Array von DWORDs, bei dem die Arraygröße als Anzahl von Scheitelzeichen in ppMeshOut definiert ist.
 
 </dd> </dl>
 
@@ -220,15 +220,15 @@ Adresse eines Zeigers auf ein [**ID3DXBuffer**](id3dxbuffer.md) -Ausgabepuffer O
 
 Typ: **[ **HRESULT**](https://msdn.microsoft.com/library/Bb401631(v=MSDN.10).aspx)**
 
-Wenn die Funktion erfolgreich ausgeführt wird, ist der Rückgabewert S \_ OK. Wenn die Funktion fehlschlägt, kann der Rückgabewert einer der folgenden sein: D3DERR \_ invalidcall, D3DXERR \_ InvalidData, E \_ oudefmemory.
+Wenn die Funktion erfolgreich ist, ist der Rückgabewert S \_ OK. Wenn die Funktion fehlschlägt, kann der Rückgabewert einer der folgenden sein: D3DERR \_ INVALIDCALL, D3DXERR \_ INVALIDDATA, E \_ OUTOFMEMORY.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Eine vereinfachte Version dieser Funktion ist als [**D3DXComputeTangentFrame**](d3dxcomputetangentframe.md)verfügbar.
+Eine vereinfachte Version dieser Funktion ist als [**D3DXComputeTangentFrame verfügbar.**](d3dxcomputetangentframe.md)
 
-Der berechnete normale Vektor bei jedem Scheitelpunkt wird immer normalisiert, sodass er über eine Einheitslänge verfügt.
+Der berechnete Normalvektor an jedem Scheitelpunkt wird immer normalisiert, um eine Einheitenlänge zu haben.
 
-Die stabilste Lösung für die Berechnung von orthogonalen kartesischen Koordinaten ist das Festlegen von Flags D3DXTANGENT \_ orthogonalize \_ von \_ Ihnen und D3DXTANGENT \_ orthogonalize \_ von \_ v, sodass orthogonale Koordinaten sowohl aus den Texturkoordinaten Sie als auch mit v berechnet werden. Wenn in diesem Fall jedoch entweder "u" oder "v" gleich NULL ist, berechnet die Funktion orthogonale Koordinaten mithilfe von D3DXTANGENT \_ orthogonalize \_ von \_ v bzw \_ . D3DXTANGENT orthogonalize \_ von \_ u bzw..
+Die stabilste Lösung für die Berechnung von orthogonalen kartesischen Koordinaten besteht im Festlegen der Flags D3DXTANGENT \_ ORTHOGONALIZE FROM you und \_ \_ D3DXTANGENT \_ ORTHOGONALIZE FROM V, sodass \_ \_ orthogonale Koordinaten aus beiden Texturkoordinaten von Ihnen und v berechnet werden. In diesem Fall berechnet die Funktion jedoch mithilfe von D3DXTANGENT ORTHOGONALIZE FROM V bzw. \_ \_ \_ D3DXTANGENT ORTHOGONALIZE FROM U or D3DXTANGENT \_ ORTHOGONALIZE FROM U orthogonalale \_ Koordinaten, wenn u oder v 0 (null) \_ ist.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -236,16 +236,16 @@ Die stabilste Lösung für die Berechnung von orthogonalen kartesischen Koordina
 
 | Anforderung | Wert |
 |--------------------|----------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>D3DX9Mesh. h</dt> </dl> |
-| Bibliothek<br/> | <dl> <dt>D3dx9. lib</dt> </dl>   |
+| Header<br/>  | <dl> <dt>D3DX9Mesh.h</dt> </dl> |
+| Bibliothek<br/> | <dl> <dt>D3dx9.lib</dt> </dl>   |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[Mesh-Funktionen](dx9-graphics-reference-d3dx-functions-mesh.md)
+[Meshfunktionen](dx9-graphics-reference-d3dx-functions-mesh.md)
 </dt> <dt>
 
 [**D3DXComputeTangentFrame**](d3dxcomputetangentframe.md)

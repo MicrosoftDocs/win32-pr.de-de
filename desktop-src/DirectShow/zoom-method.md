@@ -1,24 +1,24 @@
 ---
-description: Mit der Zoom-Methode wird die Videoanzeige ein-oder ausgehend vergrößert, wobei eine bestimmte Gruppe von Bildschirm Koordinaten zentriert ist.
+description: Die Zoom-Methode zoomt die Videoanzeige ein- oder heraus, zentriert auf einem bestimmten Satz von Bildschirmkoordinaten.
 ms.assetid: 050f1264-8fbe-4322-970c-184275d5b219
-title: Zoom-Methode
+title: Zoommethode
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 2625e6c4facf006a0d904e49068853720e20c29e
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: eb0c260e5a5404b65f4e0d0595a87ee78103c5acccedd32abf50fc5706c6b42f
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "104485638"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119632699"
 ---
-# <a name="zoom-method"></a>Zoom-Methode
+# <a name="zoom-method"></a>Zoommethode
 
 > [!Note]  
 > Diese Komponente ist für die Verwendung in den Betriebssystemen Microsoft Windows 2000, Windows XP und Windows Server 2003 verfügbar. Es kann in nachfolgenden Versionen geändert oder entfernt werden.
 
  
 
-Mit der- `Zoom` Methode wird die Videoanzeige ein-oder ausgehend vergrößert, wobei eine bestimmte Gruppe von Bildschirm Koordinaten zentriert ist.
+Die `Zoom` -Methode zoomt die Videoanzeige ein- oder heraus, zentriert auf einem bestimmten Satz von Bildschirmkoordinaten.
 
 ``` syntax
 MSWebDVD.Zoom(iXPos, iYPos, iZoomRatio)
@@ -28,24 +28,24 @@ MSWebDVD.Zoom(iXPos, iYPos, iZoomRatio)
 
 <dl> <dt>
 
-<span id="iXPos"></span><span id="ixpos"></span><span id="IXPOS"></span>*IXPOS*
+<span id="iXPos"></span><span id="ixpos"></span><span id="IXPOS"></span>*iXPos*
 </dt> <dd>
 
 Gibt die x-Koordinate in der Mitte des rechteckigen Zoombereichs als ganze Zahl an.
 
 </dd> <dt>
 
-<span id="iYPos"></span><span id="iypos"></span><span id="IYPOS"></span>*iypos*
+<span id="iYPos"></span><span id="iypos"></span><span id="IYPOS"></span>*iYPos*
 </dt> <dd>
 
 Gibt die y-Koordinate in der Mitte des Rechtecks an, das als ganze Zahl vergrößert werden soll.
 
 </dd> <dt>
 
-<span id="iZoomRatio"></span><span id="izoomratio"></span><span id="IZOOMRATIO"></span>*izoomratio*
+<span id="iZoomRatio"></span><span id="izoomratio"></span><span id="IZOOMRATIO"></span>*iZoomRatio*
 </dt> <dd>
 
-Gibt den Vergrößerungsfaktor an, der auf den aktuellen Zoomwert als ganze Zahl angewendet wird. Der maximale Gesamtwert hängt davon ab, was vom Hardware Overlay unterstützt werden kann. Dies ist normalerweise ein Faktor von 32 bis 64 der ursprünglichen Größe.
+Gibt den Vergrößerungsfaktor an, der auf den aktuellen Zoomwert als ganze Zahl angewendet wird. Der maximale Gesamtwert hängt davon ab, was die Hardwareüberlagerung unterstützen kann. Dies ist in der Regel ein Faktor von dem 32- bis 64-fachen der ursprünglichen Größe.
 
 </dd> </dl>
 
@@ -53,11 +53,11 @@ Gibt den Vergrößerungsfaktor an, der auf den aktuellen Zoomwert als ganze Zahl
 
 Kein Rückgabewert.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Das neue Zoomverhältnis bleibt in Kraft, bis es in der ursprünglichen Größe wieder hergestellt oder erneut geändert wird. Mit anderen Worten: zwei Aufrufe dieser Methode, die ein *izoomratio* von zwei angeben, führen zu einem Zoomverhältnis, das viermal größer als die ursprüngliche Videogröße ist. Wenn der Benutzer versucht, die von der Hardware unterstützten Hardware zu vergrößern, ist diese Methode zwar erfolgreich, aber es wird keine Aktion ausgeführt.
+Das neue Zoomverhältnis bleibt wirksam, bis es auf die ursprüngliche Größe wiederhergestellt oder erneut geändert wird. Anders ausgedrückt: Zwei Aufrufe dieser Methode, die ein *iZoomRatio* von zwei angeben, führen zu einem Zoomverhältnis, das viermal größer als die ursprüngliche Videogröße ist. Wenn der Benutzer versucht, zu vergrößern, was die Hardware unterstützen kann, ist diese Methode zwar erfolgreich, führt aber nichts aus.
 
-Die [**setclipvideorect**](setclipvideorect-method.md) -Methode ist eine weitere Möglichkeit zum vergrößern. der einzige Unterschied zwischen den beiden Methoden ist die Art und Weise, in der das Zoom Rechteck angegeben wird.
+Die [**SetClipVideoRect-Methode**](setclipvideorect-method.md) ist eine weitere Möglichkeit zum Vergrößern. Der einzige Unterschied zwischen den beiden Methoden besteht darin, wie das Zoomrechteck angegeben wird.
 
  
 

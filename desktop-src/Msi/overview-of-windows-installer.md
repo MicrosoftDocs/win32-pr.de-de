@@ -1,21 +1,21 @@
 ---
-description: Durch die Windows Installer werden die Gesamtbetriebskosten (TCO) für Ihre Kunden reduziert, indem Sie Ihnen ermöglichen, ihre Produkte und Anwendungen effizient zu installieren und zu konfigurieren.
+description: Der Windows Installer reduziert die Gesamtbetriebskosten (TCO) für Ihre Kunden, indem er es ihnen ermöglicht, Ihre Produkte und Anwendungen effizient zu installieren und zu konfigurieren.
 ms.assetid: 28d2c205-795e-4ed0-8c16-925ad8f638d2
 title: Übersicht über Windows Installer
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: c4f692bb98b885673473b76fbcc95d90b8bd46d0
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: d5c5caae4f939983d0d246f3b3bd82ee55f20344481a01c50316aa66926b2553
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "103760153"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119145523"
 ---
 # <a name="overview-of-windows-installer"></a>Übersicht über Windows Installer
 
-Durch die Windows Installer werden die Gesamtbetriebskosten (TCO) für Ihre Kunden reduziert, indem Sie Ihnen ermöglichen, ihre Produkte und Anwendungen effizient zu installieren und zu konfigurieren. Das Installationsprogramm kann Ihrem Produkt auch neue Funktionen zur Verfügung stellen, ohne diese zu installieren, Produkte bei Bedarf zu installieren und benutzerdefinierte Anpassungen hinzuzufügen.
+Der Windows Installer reduziert die Gesamtbetriebskosten (TCO) für Ihre Kunden, indem er es ihnen ermöglicht, Ihre Produkte und Anwendungen effizient zu installieren und zu konfigurieren. Das Installationsprogramm kann Ihrem Produkt auch neue Funktionen bereitstellen, um Features ohne Installation ankündigungen, Produkte bei Bedarf zu installieren und Benutzeranpassungen hinzuzufügen.
 
-In den folgenden Abschnitten wird eine allgemeine Übersicht über das Installationsprogramm bereitgestellt:
+Die folgenden Abschnitte bieten eine übersicht über das Installationsprogramm:
 
 -   [Installationspaket](installation-package.md)
 -   [Komponenten und Features](components-and-features.md)

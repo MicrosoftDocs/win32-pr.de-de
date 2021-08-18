@@ -1,46 +1,46 @@
 ---
-description: Windows Installer Upgradepakete können erstellt werden, damit größere Upgrades nicht installiert werden, wenn ein Benutzer bereits eine neuere Version installiert hat.
+description: Windows Installationsupgradepakete können so erstellt werden, dass größere Upgrades nicht installiert werden, wenn ein Benutzer bereits eine neuere Version installiert hat.
 ms.assetid: f46e82bd-70b3-46a2-8246-a1eadfdc589d
-title: Verhindern, dass ein altes Paket über eine neuere Version installiert wird
+title: Verhindern der Installation eines alten Pakets über eine neuere Version
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 320ab062c4ffbc740d85c59ece3d3baaa63f4209
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 0e992cc1e32d2b25e5af587c00ca4f8ee28e4b09fd3100cb12b382ae90f8c1d3
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106357513"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119145383"
 ---
-# <a name="preventing-an-old-package-from-installing-over-a-newer-version"></a>Verhindern, dass ein altes Paket über eine neuere Version installiert wird
+# <a name="preventing-an-old-package-from-installing-over-a-newer-version"></a>Verhindern der Installation eines alten Pakets über eine neuere Version
 
-Windows Installer Upgradepakete können erstellt werden, damit größere Upgrades nicht installiert werden, wenn ein Benutzer bereits eine neuere Version installiert hat. Mit dem in diesem Thema beschriebenen Verfahren können nur Herabstufungen verhindert werden, die möglicherweise durch Ausführen eines größeren upgradepakets verursacht werden. Dieses Verfahren basiert auf der [Aktion "FindRelatedProducts](findrelatedproducts-action.md)", die nur während einer erstmaligen Installation ausgeführt wird und nicht im Wartungsmodus (Neuinstallation) ausgeführt wird. Da kleinere Upgrades mithilfe der erneuten Installation durchgeführt werden, kann mit diesem Verfahren nicht bestimmt werden, ob ein geringfügiges Upgradepaket versucht, ein Downgrade für eine Anwendung durchzuführen. Weitere Informationen finden Sie unter [Vorbereiten einer Anwendung für zukünftige größere Upgrades](preparing-an-application-for-future-major-upgrades.md).
+Windows Installationsupgradepakete können so erstellt werden, dass größere Upgrades nicht installiert werden, wenn ein Benutzer bereits eine neuere Version installiert hat. Das Verfahren in diesem Thema kann nur Downgrades verhindern, die durch die Ausführung eines größeren Upgradepakets verursacht werden können. Dieses Verfahren basiert auf der [FindRelatedProducts-Aktion,](findrelatedproducts-action.md)die nur während einer erstmaligen Installation und nicht im Wartungsmodus (Neuinstallation) ausgeführt wird. Da kleinere Upgrades mithilfe der Neuinstallation durchgeführt werden, kann dieses Verfahren nicht verwendet werden, um zu bestimmen, ob ein kleineres Upgradepaket versucht, eine Anwendung herabzustufen. Weitere Informationen finden Sie unter [Vorbereiten einer Anwendung für zukünftige größere Upgrades.](preparing-an-application-for-future-major-upgrades.md)
 
 **So verhindern Sie, dass ein altes Paket über eine neuere Version installiert wird**
 
-1.  Geben Sie die [**UpgradeCode**](upgradecode.md) -Eigenschaft für die Gruppe verwandter Produkte ein, die möglicherweise berechtigt sind, dieses Upgrade in der UpgradeCode-Spalte der [upgradetabelle](upgrade-table.md)zu erhalten.
-2.  Geben Sie das Bitflag **msidbupgradeattributesonlydetect** in der Spalte Attribute der [upgradetabelle](upgrade-table.md)ein.
-3.  Geben Sie die Version des Upgrades, das von diesem Paket bereitgestellt wird, in die Spalte versionmin der [upgradetabelle](upgrade-table.md)ein. Lassen Sie die Spalte versionmax leer.
-4.  Geben Sie den Namen der Eigenschaft ein, die von der [FindRelatedProducts-Aktion](findrelatedproducts-action.md) in der Action Property-Spalte der [upgradetabelle](upgrade-table.md)festgelegt werden soll.
-5.  Fügen Sie der Eigenschaften [Tabelle](property-table.md)die [**securecustomproperties**](securecustomproperties.md) -Eigenschaft und die-Eigenschaft in der Spalte "Aktions Eigenschaft" der [upgradetabelle](upgrade-table.md) hinzu.
-6.  Fügen Sie nach der Aktion FindRelatedProducts in der [Tabelle InstallExecuteSequence](installexecutesequence-table.md)einen [benutzerdefinierten Aktionstyp 19](custom-action-type-19.md) hinzu. Fügen Sie für diese Aktion einen Datensatz in die [Tabelle "CustomAction](customaction-table.md) " ein, und geben Sie den Text ein, der in der Ziel Spalte angezeigt werden soll. Die benutzerdefinierte Aktion vom Typ 19 ist in das Installationsprogramm integriert, sodass kein Code geschrieben werden kann.
-7.  Geben Sie den Namen der Action Property in die Spalte Bedingung des Datensatzes in der [InstallExecuteSequence-Tabelle](installexecutesequence-table.md) ein, die den [benutzerdefinierten Aktionstyp 19](custom-action-type-19.md)enthält. Dadurch wird die benutzerdefinierte Aktion nur ausgeführt, wenn die [upgradetabelle](upgrade-table.md) erkennt, dass eine neuere Version bereits installiert ist.
+1.  Geben Sie die [**UpgradeCode-Eigenschaft**](upgradecode.md) für die Gruppe verwandter Produkte ein, die möglicherweise berechtigt sind, dieses Upgrade zu erhalten, in die Spalte UpgradeCode der [Upgradetabelle](upgrade-table.md).
+2.  Geben Sie das Bitflag **msidbUpgradeAttributesOnlyDetect** in der Spalte Attribute der [Upgradetabelle](upgrade-table.md)ein.
+3.  Geben Sie die Von diesem Paket bereitgestellte Upgradeversion in die Spalte VersionMin der [Upgradetabelle](upgrade-table.md)ein. Lassen Sie die Spalte VersionMax leer.
+4.  Geben Sie den Namen der Eigenschaft ein, die von der [FindRelatedProducts-Aktion](findrelatedproducts-action.md) in der Spalte ActionProperty der [Upgradetabelle](upgrade-table.md)festgelegt werden soll.
+5.  Fügen Sie die [**SecureCustomProperties-Eigenschaft**](securecustomproperties.md) und die Eigenschaft namens in der ActionProperty -Spalte der [Upgradetabelle](upgrade-table.md) der [Eigenschaftentabelle](property-table.md)hinzu.
+6.  Fügen Sie nach der Aktion FindRelatedProducts in der [Tabelle InstallExecuteSequence](installexecutesequence-table.md)einen [benutzerdefinierten Aktionstyp 19](custom-action-type-19.md) hinzu. Fügen Sie einen Datensatz in die [Tabelle CustomAction](customaction-table.md) für diese Aktion ein, und geben Sie den Text ein, der in der Spalte Target angezeigt werden soll. Die benutzerdefinierte Aktion vom Typ 19 ist in das Installationsprogramm integriert, sodass kein Code geschrieben werden muss.
+7.  Geben Sie den Namen der ActionProperty in die Spalte Bedingung des Datensatzes in der [Tabelle InstallExecuteSequence](installexecutesequence-table.md) ein, die den [benutzerdefinierten Aktionstyp 19](custom-action-type-19.md)enthält. Dadurch wird die benutzerdefinierte Aktion nur ausgeführt, wenn die [Upgradetabelle](upgrade-table.md) erkennt, dass bereits eine neuere Version installiert ist.
 
-    Beispielsweise kann ein Windows Installer Paket, das eine Gruppe verwandter Produkte auf Version 3,0 aktualisiert, in den Tabellen [Upgrade](upgrade-table.md), [CustomAction](customaction-table.md), [InstallExecuteSequence](installexecutesequence-table.md)und [Property](property-table.md) die folgenden Datensätze enthalten. Alle zugehörigen Produkte in der Gruppe verfügen über denselben UpgradeCode, aber das Installationsprogramm installiert dieses Upgradepaket nicht, wenn eine Version, die höher als 3,0 ist, bereits auf dem Computer installiert ist. In diesem Fall zeigt das Installationsprogramm eine Fehlermeldung an, und die Installation schlägt fehl. Das Upgradepaket der Version 3,0 wird über die Versionen 1,0 und 2,0 installiert.
+    Beispielsweise kann ein Windows Installer-Paket, das eine Gruppe verwandter Produkte auf Version 3.0 aktualisiert, die folgenden Datensätze in den Tabellen [Upgrade,](upgrade-table.md) [CustomAction,](customaction-table.md) [InstallExecuteSequence](installexecutesequence-table.md)und [Property](property-table.md) enthalten. Alle zugehörigen Produkte in der Gruppe verfügen über den gleichen UpgradeCode, aber das Installationsprogramm installiert dieses Upgradepaket nicht, wenn eine höhere Version als 3.0 bereits auf dem Computer installiert ist. In diesem Fall zeigt der Installer eine Fehlermeldung an, und die Installation schlägt fehl. Das Upgradepaket für Version 3.0 wird über die Versionen 1.0 und 2.0 installiert.
 
     [Upgradetabelle](upgrade-table.md)
 
     
 
-    | UpgradeCode auch                            | Versionmin | Versionmax | Sprache | Attribute                                | Entfernen | Aktions Eigenschaft  |
+    | Upgradecode                            | VersionMin | VersionMax | Sprache | Attribute                                | Entfernen | ActionProperty  |
     |----------------------------------------|------------|------------|----------|-------------------------------------------|--------|-----------------|
-    | {E7BE6D45-49ff-4701-A17E-BDCC98CE180D} | 3.0        |            |          | msidbupgraabattributesonlydetect          |        | Newproductfound |
-    | {E7BE6D45-49ff-4701-A17E-BDCC98CE180D} | 1.0        | 3.0        |          | msidbupgraabattributesversionmininclusive |        | Upgrade gefunden    |
+    | {E7BE6D45-49FF-4701-A17E-BDCC98CE180D} | 3.0        |            |          | msidbUpgradeAttributesOnlyDetect          |        | NEWPRODUCTFOUND |
+    | {E7BE6D45-49FF-4701-A17E-BDCC98CE180D} | 1.0        | 3.0        |          | msidbUpgradeAttributesVersionMinInclusive |        | UPGRADEFOUND    |
 
     
 
      
 
-    [Tabelle "CustomAction"](customaction-table.md)
+    [CustomAction-Tabelle](customaction-table.md)
 
     
 
@@ -59,19 +59,19 @@ Windows Installer Upgradepakete können erstellt werden, damit größere Upgrade
     | Aktion              | Bedingung       | Sequenz |
     |---------------------|-----------------|----------|
     | FindRelatedProducts |                 | 200      |
-    | KA1                 | Newproductfound | 201      |
+    | KA1                 | NEWPRODUCTFOUND | 201      |
 
     
 
      
 
-    [Eigenschaften Tabelle](property-table.md)
+    [Eigenschaftentabelle](property-table.md)
 
     
 
     | Eigenschaft                                                 | Wert                        |
     |----------------------------------------------------------|------------------------------|
-    | [**Securecustomproperties**](securecustomproperties.md) | Newproductfound; Upgrade gefunden |
+    | [**SecureCustomProperties**](securecustomproperties.md) | NEWPRODUCTFOUND; UPGRADEFOUND |
 
     
 

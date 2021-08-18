@@ -1,6 +1,6 @@
 ---
 title: Zeichnen grundlegender Formen
-description: In diesem Artikel wird das Zeichnen grundlegender Formen in VML beschrieben, einem Feature, das seit Windows Internet Explorer 9 veraltet ist.
+description: In diesem Artikel wird das Zeichnen grundlegender Formen in VML beschrieben, einem Feature, das ab Version 9 Windows Internet Explorer ist.
 ms.assetid: 05443e1f-c098-441c-a5bc-274cc37ef074
 keywords:
 - Web-Workshop,Zeichnen von Formen
@@ -9,10 +9,10 @@ keywords:
 - VML (Vector Markup Language), Zeichnen von Formen
 - Vektorgrafiken,Zeichnen von Formen
 - Zeichnen von Formen
-- VML-Formen,Zeichnen
+- VML-Formen, Zeichnen
 - Vector Markup Language (VML),XML
 - VML (Vector Markup Language),XML
-- Vektorgrafiken,XML
+- Vektorgrafik, XML
 - Vector Markup Language (VML),CSS2
 - VML (Vector Markup Language),CSS2
 - Vektorgrafiken,CSS2
@@ -22,16 +22,16 @@ keywords:
 - VML-Elemente, Zeichnen von Formen
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 00701e8ac77bd5bda7156c04ca25427d131646bf
-ms.sourcegitcommit: 5d4e99f4c8f42f5f543e52cb9beb9fb13ec56c5f
+ms.openlocfilehash: 0b4a8b7985371d9cffc6e7359cef1a17c69c403c7802de458b68d9df8c36e3ee
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2021
-ms.locfileid: "112407733"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119136923"
 ---
 # <a name="drawing-basic-shapes"></a>Zeichnen grundlegender Formen
 
-In diesem Thema wird VML beschrieben, ein Feature, das ab Windows Internet Explorer 9 veraltet ist. Webseiten und Anwendungen, die auf VML basieren, sollten zu SVG oder anderen weit verbreiteten Standards migriert werden.
+In diesem Thema wird VML beschrieben, ein Feature, das ab Version 9 Windows Internet Explorer ist. Webseiten und Anwendungen, die auf VML basieren, sollten zu SVG oder anderen weit verbreiteten Standards migriert werden.
 
 > [!Note]  
 > Seit Dezember 2011 wurde dieses Thema archiviert. Daher wird sie nicht mehr aktiv verwaltet. Weitere Informationen finden Sie unter [Archivierter Inhalt.](/previous-versions/windows/internet-explorer/ie-developer/) Informationen, Empfehlungen und Anleitungen zur aktuellen Version von Windows Internet Explorer finden Sie im [Internet Explorer Developer Center.](https://msdn.microsoft.com/ie/)
@@ -40,7 +40,7 @@ In diesem Thema wird VML beschrieben, ein Feature, das ab Windows Internet Explo
 
 In diesem Thema wird veranschaulicht, wie einfach es ist, eine Form mithilfe von VML zu zeichnen.
 
-Um ein rotes Oval auf einer Webseite zu erstellen, wie in der folgenden Abbildung dargestellt, können Sie das Oval mithilfe eines Grafischen Bearbeitungstools zeichnen, die Zeichnung als Bitmap speichern und die Bitmap dann auf Ihrer Webseite einfügen:
+Um ein rotes Oval auf einer Webseite zu erstellen, wie in der folgenden Abbildung dargestellt, können Sie das Oval mithilfe eines Grafischen Bearbeitungstools zeichnen, Ihre Zeichnung als Bitmap speichern und die Bitmap dann auf Ihrer Webseite einfügen:
 
 ![oval1.gif (627 Bytes)](images/oval1.gif)
 

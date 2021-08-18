@@ -1,7 +1,7 @@
 ---
 description: Erfahren Sie mehr über die IAMFilterData-Schnittstelle, die Filterinformationen in gepackte Binärdaten konvertiert. Diese Schnittstelle ist veraltet.
 ms.assetid: d9800850-b0ee-44f7-bcb4-f2bac8d17693
-title: IAMFilterData-Schnittstelle (Fil \_ data.h)
+title: IAMFilterData-Schnittstelle (File \_ data.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,12 +13,12 @@ api_type:
 - COM
 api_location:
 - fil_data.h
-ms.openlocfilehash: 1e43e0f16ddfdee596f0dc6bd736ed86fc6fa37d
-ms.sourcegitcommit: 6fc8a7419bd01787cf6a1c52c355a4a2d1aec471
+ms.openlocfilehash: 9174549c93a76f94ccb7f039343a8eab5e75ece252871d11d60221df03aabe87
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/10/2021
-ms.locfileid: "111989435"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119823600"
 ---
 # <a name="iamfilterdata-interface"></a>IAMFilterData-Schnittstelle
 
@@ -27,7 +27,7 @@ ms.locfileid: "111989435"
 
  
 
-Die `IAMFilterData` -Schnittstelle konvertiert Filterinformationen in gepackte Binärdaten, die in der Registrierung gespeichert werden können. Das Filterzuordnungsobjekt macht diese Schnittstelle verfügbar.
+Die `IAMFilterData` Schnittstelle konvertiert Filterinformationen in gepackte Binärdaten, die in der Registrierung gespeichert werden können. Das Filterzuordnungsobjekt macht diese Schnittstelle verfügbar.
 
 ## <a name="members"></a>Member
 
@@ -53,11 +53,11 @@ Die **IAMFilterData-Schnittstelle** verfügt über diese Methoden.
 ## <a name="remarks"></a>Hinweise
 
 > [!Note]  
-> Der Header Fil \_ data.h befindet sich im Verzeichnis [Mapper Sample](mapper-sample.md) im Windows SDK.
+> Der Header Fil \_ data.h befindet sich im [Verzeichnis Mapper Sample](mapper-sample.md) im Windows SDK.
 
  
 
-## <a name="requirements"></a>Requirements (Anforderungen)
+## <a name="requirements"></a>Anforderungen
 
 
 
@@ -67,7 +67,7 @@ Die **IAMFilterData-Schnittstelle** verfügt über diese Methoden.
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 

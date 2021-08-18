@@ -4,18 +4,18 @@ ms.assetid: e5136e15-3ae1-4e0a-ae97-fcf16203b21d
 title: Verwalten von asynchronen Vorgängen
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: d220c5633f9ee044dbf9cdb6a63b563747620afd
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 537a52a41e73bae7035789176bb65b125c105f691bf654ed3c0ded4e6a73f70d
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "103960103"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118999449"
 ---
 # <a name="managing-asynchronous-operations"></a>Verwalten von asynchronen Vorgängen
 
-\[Ab Windows 8 und Windows Server 2012 wird der [Dienst für virtuelle](virtual-disk-service-portal.md) Datenträger von der Windows- [Speicherverwaltungs-API](/previous-versions/windows/desktop/stormgmt/windows-storage-management-api-portal)abgelöst.\]
+\[Ab Windows 8 und Windows Server 2012 wird der [Dienst](virtual-disk-service-portal.md) für virtuelle Datenträger durch den virtuellen [Datenträgerdienst Windows Storage Verwaltungs-API.](/previous-versions/windows/desktop/stormgmt/windows-storage-management-api-portal)\]
 
-Das folgende Codebeispiel veranschaulicht die Funktionsweise eines Aufrufers mit einem Async-Objekt. Hier Ruft die **synchronouscreatelun-** Funktion mit den angegebenen Parametern die asynchrone [**ivdssubsystem:: samatelun-**](/windows/desktop/api/Vds/nf-vds-ivdssubsystem-createlun) Methode auf. Die-Funktion wartet auf das Async-Objekt, um den asynchronen Vorgang der Methode " **samatelun** " abzuschließen. Wenn die [**ivdsasync:: Wait**](/windows/desktop/api/Vds/nf-vds-ivdsasync-wait) -Methode zurückgibt, ruft **synchronouscreatelun** die [**ivdslun**](/windows/desktop/api/Vds/nn-vds-ivdslun) -Schnittstelle für die neu erstellte LUN ab und gibt Sie als out-Argument zurück.
+Im folgenden Codebeispiel wird veranschaulicht, wie ein Aufrufer mit einem asynchronen Objekt arbeitet. Hier ruft die **SynchronousCreateLun-Funktion** die asynchrone [**IVdsSubSystem::CreateLun-Methode**](/windows/desktop/api/Vds/nf-vds-ivdssubsystem-createlun) unter Verwendung der angegebenen Parameter auf. Die Funktion wartet auf das asynchrone Objekt, bis der **asynchrone CreateLun-Methodenaufruf** abgeschlossen ist. Wenn die [**IVdsAsync::Wait-Methode**](/windows/desktop/api/Vds/nf-vds-ivdsasync-wait) zurückgegeben wird, ruft **SynchronousCreateLun** die [**IVdsLun-Schnittstelle**](/windows/desktop/api/Vds/nn-vds-ivdslun) für die neu erstellte LUN ab und gibt sie als out-Argument zurück.
 
 
 ```C++
@@ -104,13 +104,13 @@ HRESULT SynchronousCreateLun(
 [Hilfsobjekte](helper-objects.md)
 </dt> <dt>
 
-[**Ivdssubsystem:: unatelun**](/windows/desktop/api/Vds/nf-vds-ivdssubsystem-createlun)
+[**IVdsSubSystem::CreateLun**](/windows/desktop/api/Vds/nf-vds-ivdssubsystem-createlun)
 </dt> <dt>
 
-[**Ivdsasync:: Wait**](/windows/desktop/api/Vds/nf-vds-ivdsasync-wait)
+[**IVdsAsync::Wait**](/windows/desktop/api/Vds/nf-vds-ivdsasync-wait)
 </dt> <dt>
 
-[**Ivdslun**](/windows/desktop/api/Vds/nn-vds-ivdslun)
+[**IVdsLun**](/windows/desktop/api/Vds/nn-vds-ivdslun)
 </dt> </dl>
 
  

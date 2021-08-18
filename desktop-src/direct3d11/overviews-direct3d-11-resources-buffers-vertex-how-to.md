@@ -1,31 +1,31 @@
 ---
-title: Erstellen eines Scheitelpunkt Puffers
-description: In diesem Thema wird gezeigt, wie ein statischer Vertex-Puffer, d. h. ein Vertex-Puffer, der nicht geändert wird, initialisiert wird.
+title: Erstellen eines Scheitelpunktpuffers
+description: In diesem Thema wird gezeigt, wie sie einen statischen Scheitelpunktpuffer initialisieren, d. h. einen Scheitelpunktpuffer, der sich nicht ändert.
 ms.assetid: 584a39d1-7629-429a-b451-64b1432cb48f
 keywords:
-- Vertex-Puffer, erstellen
+- Vertexpuffer, erstellen
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 55e0b3d9d8f731b01e7c919105c21c8d150f864a
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: 2f919646dfd4e8f714b925606f342db586ff2b8f09690c58698b7dab2635159e
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "104310436"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119496900"
 ---
-# <a name="how-to-create-a-vertex-buffer"></a>Vorgehensweise: Erstellen eines Scheitelpunkt Puffers
+# <a name="how-to-create-a-vertex-buffer"></a>Vorgehensweise: Erstellen eines Scheitelpunktpuffers
 
-[Vertex-Puffer](overviews-direct3d-11-resources-buffers-intro.md) enthalten pro Scheitelpunkt Daten. In diesem Thema wird gezeigt, wie ein statischer [Vertex-Puffer](overviews-direct3d-11-resources-buffers-intro.md), d. h. ein Vertex-Puffer, der nicht geändert wird, initialisiert wird. Hilfe zur Initialisierung eines nicht statischen Puffers finden Sie im Abschnitt " [Hinweise](#remarks) ".
+[Scheitelpunktpuffer](overviews-direct3d-11-resources-buffers-intro.md) enthalten Daten pro Scheitelpunkt. In diesem Thema wird gezeigt, wie Sie einen statischen [Scheitelpunktpuffer](overviews-direct3d-11-resources-buffers-intro.md)initialisieren, d. h. einen Scheitelpunktpuffer, der sich nicht ändert. Hilfe beim Initialisieren eines nicht statischen Puffers finden Sie im Abschnitt ["Hinweise".](#remarks)
 
-**So initialisieren Sie einen statischen Scheitelpunkt Puffer**
+**So initialisieren Sie einen statischen Scheitelpunktpuffer**
 
-1.  Definieren Sie eine-Struktur, die einen Scheitelpunkt beschreibt. Wenn Ihre Scheitelpunkt Daten z. b. Positionsdaten und Farbdaten enthalten, würde die Struktur einen Vektor aufweisen, der die Position und eine andere beschreibt, die die Farbe beschreibt.
-2.  Weisen Sie Arbeitsspeicher (mithilfe von malloc oder New) für die Struktur zu, die Sie in Schritt 1 definiert haben. Füllen Sie diesen Puffer mit den tatsächlichen Scheitelpunkt Daten, die ihre Geometrie beschreiben.
-3.  Erstellen Sie eine Puffer Beschreibung, indem Sie eine [**D3D11- \_ Puffer- \_**](/windows/desktop/api/D3D11/ns-d3d11-d3d11_buffer_desc) Debug-Struktur ausfüllen. Übergeben Sie das D3D11 \_ Bind \_ -Vertex \_ -pufferflag an den **bindflags** -Member, und übergeben Sie die Größe der Struktur von Schritt 1 an den **bytewidth** -Member.
-4.  Erstellen Sie eine Beschreibung der untergeordneten Quelldaten, indem Sie eine [**D3D11 \_ subresource- \_ Daten**](/windows/desktop/api/D3D11/ns-d3d11-d3d11_subresource_data) Struktur ausfüllen. Der **psysmem** -Member der [**D3D11 \_ subresource- \_ Daten**](/windows/desktop/api/D3D11/ns-d3d11-d3d11_subresource_data) Struktur sollte direkt auf die in Schritt 2 erstellten Ressourcen Daten verweisen.
-5.  Aufrufen von [**ID3D11Device:: up Buffer**](/windows/desktop/api/D3D11/nf-d3d11-id3d11device-createbuffer) beim Übergeben der [**D3D11- \_ Puffer- \_**](/windows/desktop/api/D3D11/ns-d3d11-d3d11_buffer_desc) Debug-Struktur, der [**D3D11 \_ subresource- \_ Daten**](/windows/desktop/api/D3D11/ns-d3d11-d3d11_subresource_data) Struktur und der Adresse eines Zeigers auf die [**ID3D11Buffer**](/windows/desktop/api/D3D11/nn-d3d11-id3d11buffer) -Schnittstelle, die initialisiert werden soll.
+1.  Definieren Sie eine -Struktur, die einen Scheitelpunkt beschreibt. Wenn Ihre Scheitelpunktdaten beispielsweise Positionsdaten und Farbdaten enthalten, verfügt Ihre Struktur über einen Vektor, der die Position beschreibt, und einen anderen, der die Farbe beschreibt.
+2.  Belegen Sie Arbeitsspeicher (mit malloc oder new) für die Struktur, die Sie in Schritt 1 definiert haben. Füllen Sie diesen Puffer mit den tatsächlichen Scheitelpunktdaten, die Ihre Geometrie beschreiben.
+3.  Erstellen Sie eine Pufferbeschreibung, indem Sie eine [**D3D11 \_ BUFFER \_ DESC-Struktur**](/windows/desktop/api/D3D11/ns-d3d11-d3d11_buffer_desc) ausfüllen. Übergeben Sie das BIND VERTEX BUFFER-Flag D3D11 \_ \_ an den \_ **BindFlags-Member,** und übergeben Sie die Größe der Struktur aus Schritt 1 an den **ByteWidth-Member.**
+4.  Erstellen Sie eine Beschreibung der Unterressourcendaten, indem Sie eine [**D3D11 \_ SUBRESOURCE \_ DATA-Struktur**](/windows/desktop/api/D3D11/ns-d3d11-d3d11_subresource_data) ausfüllen. Das **pSysMem-Element** der [**D3D11 \_ SUBRESOURCE \_ DATA-Struktur**](/windows/desktop/api/D3D11/ns-d3d11-d3d11_subresource_data) sollte direkt auf die in Schritt 2 erstellten Ressourcendaten verweisen.
+5.  Rufen Sie [**ID3D11Device::CreateBuffer**](/windows/desktop/api/D3D11/nf-d3d11-id3d11device-createbuffer) auf, während Sie die [**D3D11 \_ BUFFER \_ DESC-Struktur,**](/windows/desktop/api/D3D11/ns-d3d11-d3d11_buffer_desc) die [**D3D11 \_ SUBRESOURCE \_ DATA-Struktur**](/windows/desktop/api/D3D11/ns-d3d11-d3d11_subresource_data) und die Adresse eines Zeigers auf die zu initialisierende [**ID3D11Buffer-Schnittstelle**](/windows/desktop/api/D3D11/nn-d3d11-id3d11buffer) übergeben.
 
-Im folgenden Codebeispiel wird veranschaulicht, wie ein Scheitelpunkt Puffer erstellt wird. In diesem Beispiel wird davon ausgegangen, dass **g \_ pd3dDevice** ein gültiges [**ID3D11Device**](/windows/desktop/api/D3D11/nn-d3d11-id3d11device) -Objekt ist.
+Im folgenden Codebeispiel wird veranschaulicht, wie ein Scheitelpunktpuffer erstellt wird. In diesem Beispiel wird davon ausgegangen, dass **g \_ pd3dDevice** ein gültiges [**ID3D11Device-Objekt**](/windows/desktop/api/D3D11/nn-d3d11-id3d11device) ist.
 
 
 ```
@@ -71,17 +71,17 @@ hr = g_pd3dDevice->CreateBuffer( &bufferDesc, &InitData, &g_pVertexBuffer );
 
 
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Hier finden Sie einige Möglichkeiten zum Initialisieren eines Scheitelpunkt Puffers, der sich im Laufe der Zeit ändert.
+Im Folgenden finden Sie einige Möglichkeiten zum Initialisieren eines Scheitelpunktpuffers, der sich im Laufe der Zeit ändert.
 
-1.  Erstellen Sie einen 2. Puffer [**mit D3D11 \_ Usage \_ Staging**](/windows/desktop/api/D3D11/ne-d3d11-d3d11_usage). füllen Sie den zweiten Puffer mit [**Verknüpfung id3d11devicecontext aus:: Map**](/windows/desktop/api/D3D11/nf-d3d11-id3d11devicecontext-map), [**Verknüpfung id3d11devicecontext aus:: unmap**](/windows/desktop/api/D3D11/nf-d3d11-id3d11devicecontext-unmap); verwenden Sie [**Verknüpfung id3d11devicecontext aus:: copyresource**](/windows/desktop/api/D3D11/nf-d3d11-id3d11devicecontext-copyresource) , um aus dem stagingpuffer in den Standard Puffer zu kopieren.
-2.  Verwenden Sie [**Verknüpfung id3d11devicecontext aus:: updatesubresource**](/windows/desktop/api/D3D11/nf-d3d11-id3d11devicecontext-updatesubresource) zum Kopieren von Daten aus dem Arbeitsspeicher.
-3.  Erstellen Sie einen Puffer [**mit \_ \_ dynamischem "D3D11 Usage**](/windows/desktop/api/D3D11/ne-d3d11-d3d11_usage)", und füllen Sie ihn mit " [**Verknüpfung id3d11devicecontext aus:: Map**](/windows/desktop/api/D3D11/nf-d3d11-id3d11devicecontext-map)", " [**Verknüpfung id3d11devicecontext aus:: unmap**](/windows/desktop/api/D3D11/nf-d3d11-id3d11devicecontext-unmap) " (mit den verwerfen-und noüberschreibungsflags).
+1.  Erstellen Sie einen zweiten Puffer mit [**D3D11 \_ USAGE \_ STAGING.**](/windows/desktop/api/D3D11/ne-d3d11-d3d11_usage)Füllen Sie den zweiten Puffer mit [**ID3D11DeviceContext::Map**](/windows/desktop/api/D3D11/nf-d3d11-id3d11devicecontext-map), [**ID3D11DeviceContext::Unmap**](/windows/desktop/api/D3D11/nf-d3d11-id3d11devicecontext-unmap)aus. Verwenden Sie [**ID3D11DeviceContext::CopyResource,**](/windows/desktop/api/D3D11/nf-d3d11-id3d11devicecontext-copyresource) um aus dem Stagingpuffer in den Standardpuffer zu kopieren.
+2.  Verwenden Sie [**ID3D11DeviceContext::UpdateSubresource,**](/windows/desktop/api/D3D11/nf-d3d11-id3d11devicecontext-updatesubresource) um Daten aus dem Arbeitsspeicher zu kopieren.
+3.  Erstellen Sie einen Puffer mit [**D3D11 \_ USAGE \_ DYNAMIC**](/windows/desktop/api/D3D11/ne-d3d11-d3d11_usage), und füllen Sie ihn mit [**ID3D11DeviceContext::Map**](/windows/desktop/api/D3D11/nf-d3d11-id3d11devicecontext-map), [**ID3D11DeviceContext::Unmap**](/windows/desktop/api/D3D11/nf-d3d11-id3d11devicecontext-unmap) aus (mit den Flags Discard und NoOverwrite entsprechend).
 
-\#1 und \# 2 sind nützlich für Inhalt, der sich weniger als einmal pro Frame ändert. Im Allgemeinen werden GPU-Lesevorgänge schnell und CPU-Updates langsamer.
+\#1 und \# 2 sind nützlich für Inhalte, die sich weniger als einmal pro Frame ändern. Im Allgemeinen sind GPU-Lesefunktionen schnell, und CPU-Updates sind langsamer.
 
-\#3 ist nützlich für Inhalte, die sich mehrmals pro Frame ändern. Im Allgemeinen werden GPU-Lesevorgänge langsamer, CPU-Aktualisierungen werden jedoch schneller ausgeführt.
+\#3 ist nützlich für Inhalte, die sich mehr als einmal pro Frame ändern. Im Allgemeinen sind GPU-Lesefunktionen langsamer, CPU-Updates sind jedoch schneller.
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
@@ -90,12 +90,12 @@ Hier finden Sie einige Möglichkeiten zum Initialisieren eines Scheitelpunkt Puf
 [Puffer](overviews-direct3d-11-resources-buffers.md)
 </dt> <dt>
 
-[Verwendung von Direct3D 11](how-to-use-direct3d-11.md)
+[Verwenden von Direct3D 11](how-to-use-direct3d-11.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

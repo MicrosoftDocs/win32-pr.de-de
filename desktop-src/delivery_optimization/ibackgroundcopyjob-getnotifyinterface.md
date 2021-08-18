@@ -1,11 +1,11 @@
 ---
-title: Ibackgroundcopyjob getnotifyinterface-Methode (deliveryoptimization. h)
-description: Ruft den Schnittstellen Zeiger auf die Implementierung der ibackgroundcopycallback-Schnittstelle ab.
+title: IBackgroundCopyJob GetNotifyInterface-Methode (Deliveryoptimization.h)
+description: Ruft den Schnittstellenzeiger auf Ihre Implementierung der IBackgroundCopyCallback-Schnittstelle ab.
 ms.assetid: 1AA50C03-AC84-4AA9-8EC3-3FBA865C70C0
 keywords:
-- Getnotifyinterface-Methode
-- Getnotifyinterface-Methode, ibackgroundcopyjob-Schnittstelle
-- Ibackgroundcopyjob-Schnittstelle, getnotifyinterface-Methode
+- GetNotifyInterface-Methode
+- GetNotifyInterface-Methode, IBackgroundCopyJob-Schnittstelle
+- IBackgroundCopyJob-Schnittstelle, GetNotifyInterface-Methode
 topic_type:
 - apiref
 api_name:
@@ -17,16 +17,16 @@ api_type:
 ms.topic: reference
 ms.date: 05/31/2018
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: 6586a90de5783ceb24e5a7677f699a9cf6dfa60c
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: ef8eab6c101cadde2b715c48fe3dae2443e72e93f623b397036e2467bcbf0b5b
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "106346340"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119755380"
 ---
-# <a name="ibackgroundcopyjobgetnotifyinterface-method"></a>Ibackgroundcopyjob:: getnotifyinterface-Methode
+# <a name="ibackgroundcopyjobgetnotifyinterface-method"></a>IBackgroundCopyJob::GetNotifyInterface-Methode
 
-Ruft den Schnittstellen Zeiger auf die Implementierung der [**ibackgroundcopycallback**](ibackgroundcopycallback.md) -Schnittstelle ab.
+Ruft den Schnittstellenzeiger auf Ihre Implementierung der [**IBackgroundCopyCallback-Schnittstelle**](ibackgroundcopycallback.md) ab.
 
 ## <a name="syntax"></a>Syntax
 
@@ -43,22 +43,22 @@ HRESULT GetNotifyInterface(
 
 <dl> <dt>
 
-*ppnotifyinterface* \[ vorgenommen\]
+*ppNotifyInterface* \[ out\]
 </dt> <dd>
 
-Ein Schnittstellen Zeiger auf Ihre Implementierung der [**ibackgroundcopycallback**](ibackgroundcopycallback.md) -Schnittstelle. Wenn Sie dies erledigt haben, Release *ppnotifyinterface*.
+Schnittstellenzeiger auf Ihre Implementierung der [**IBackgroundCopyCallback-Schnittstelle.**](ibackgroundcopycallback.md) Wenn Sie fertig sind, geben *Sie ppNotifyInterface frei.*
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Diese Methode gibt sowohl die folgenden **HRESULT** -Werte als auch andere zurück.
+Diese Methode gibt die folgenden **HRESULT-Werte** sowie andere zurück.
 
 
 
 | Rückgabecode                                                                              | Beschreibung                                                           |
 |------------------------------------------------------------------------------------------|-----------------------------------------------------------------------|
-| <dl> <dt>S_OK * * * *</dt> </dl> | Der Benachrichtigungs Schnittstellen Zeiger wurde erfolgreich abgerufen.<br/> |
+| <dl> <dt>S_OK S_OK</dt> </dl> | Der Benachrichtigungsschnittstellenzeiger wurde erfolgreich abgerufen.<br/> |
 
 
 
@@ -70,30 +70,30 @@ Diese Methode gibt sowohl die folgenden **HRESULT** -Werte als auch andere zurü
 
 | Anforderung | Wert |
 |-------------------------------------|-----------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Windows 10, Version 1709, \[ nur Desktop-Apps\]<br/>                                           |
-| Unterstützte Mindestversion (Server)<br/> | Windows Server, Version 1709, \[ nur Desktop-Apps\]<br/>                                       |
-| Header<br/>                   | <dl> <dt>Deliveryoptimization. h</dt> </dl>   |
-| IDL<br/>                      | <dl> <dt>Deliveryoptimization. idl</dt> </dl> |
-| Bibliothek<br/>                  | <dl> <dt>Dosvc. lib</dt> </dl>                |
+| Unterstützte Mindestversion (Client)<br/> | Windows 10 Desktop-Apps, Version 1709 \[\]<br/>                                           |
+| Unterstützte Mindestversion (Server)<br/> | Windows Server, version 1709 desktop apps only (Nur \[ Desktop-Apps der Version 1709)\]<br/>                                       |
+| Header<br/>                   | <dl> <dt>Deliveryoptimization.h</dt> </dl>   |
+| Idl<br/>                      | <dl> <dt>DeliveryOptimization.idl</dt> </dl> |
+| Bibliothek<br/>                  | <dl> <dt>Dosvc.lib</dt> </dl>                |
 | DLL<br/>                      | <dl> <dt>Dosvc.dll</dt> </dl>                |
-| IID<br/>                      | IID_IBackgroundCopyJob ist als 37668d37-507E-4160-9316-26306d150b12 definiert.<br/>               |
+| IID<br/>                      | IID_IBackgroundCopyJob ist als 37668D37-507E-4160-9316-26306D150B12 definiert.<br/>               |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
 [**IBackgroundCopyJob**](ibackgroundcopyjob-.md)
 </dt> <dt>
 
-[**Ibackgroundcopycallback**](ibackgroundcopycallback.md)
+[**IBackgroundCopyCallback**](ibackgroundcopycallback.md)
 </dt> <dt>
 
-[**Ibackgroundcopyjob:: getnotifyflags**](ibackgroundcopyjob-getnotifyflags.md)
+[**IBackgroundCopyJob::GetNotifyFlags**](ibackgroundcopyjob-getnotifyflags.md)
 </dt> <dt>
 
-[**Ibackgroundcopyjob:: setnotifyinterface**](ibackgroundcopyjob-setnotifyinterface.md)
+[**IBackgroundCopyJob::SetNotifyInterface**](ibackgroundcopyjob-setnotifyinterface.md)
 </dt> </dl>
 
  

@@ -3,39 +3,39 @@ title: Herunterladen von Medieninhalten
 description: Herunterladen von Medieninhalten
 ms.assetid: 0a057e13-6e0c-4a8f-9cab-051183e6b222
 keywords:
-- Windows Media Player Online Stores, Herunterladen von Medieninhalten
-- Online Stores, Herunterladen von Medieninhalten
-- Typ 1 Online Stores, Herunterladen von Medieninhalten
-- Windows Media Player Online Stores, Herunterladen von Medieninhalten
-- Online Stores, Herunterladen von Medieninhalten
-- Typ 1 Online Stores, Herunterladen von Medieninhalten
-- Medieninhalt, herunterladen
+- Windows Media Player von Onlineshops,Herunterladen von Medieninhalten
+- Onlineshops,Herunterladen von Medieninhalten
+- Geben Sie 1 Onlineshops ein, und laden Sie Medieninhalte herunter.
+- Windows Media Player online stores,media content downloading (Herunterladen von Medieninhalten)
+- Onlineshops,Herunterladen von Medieninhalten
+- 'Typ 1: Onlineshops,Herunterladen von Medieninhalten'
+- Medieninhalt,Herunterladen
 - Herunterladen von Medieninhalten
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 00efe44f2bac25a9eeda86f6adcc78b34beea7cd
-ms.sourcegitcommit: b04e152a7f51618fc174ffa872654623fe088db2
+ms.openlocfilehash: 6a314dc4b59966fd779660a2c1ab26fc2b37d413e4add068f936a6109acd423a
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/21/2020
-ms.locfileid: "104390044"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118997030"
 ---
 # <a name="downloading-media-content"></a>Herunterladen von Medieninhalten
 
-Windows Media Player verarbeitet Musikdateien für den Online Shop. Ein Download kann initiiert werden, wenn auf der Ermittlungs Seite " [extern. Download](external-download.md) " aufgerufen wird oder wenn der Benutzer im Player eine Gruppe von Spuren herunterlädt. In beiden Fällen ruft Windows Media Player [iwmpcontentpartner::D ownload](/previous-versions/windows/desktop/api/contentpartner/nf-contentpartner-iwmpcontentpartner-download)auf und übergibt eine Inhalts Container Liste, die den Satz der herunter zuladenden Abrufe beschreibt, und ein Cookie, das die Download Transaktion darstellt. Das Content Partner-Plug-in muss dann [iwmpcontentpartnercallback::D ownloadtrack](/previous-versions/windows/desktop/api/contentpartner/nf-contentpartner-iwmpcontentpartnercallback-downloadtrack) für jede Spur im Satz einmal aufruft. Wenn das Plug-in **downloadtrack** aufruft, übergibt es ein **HRESULT** in den *hrdownload* -Parameter. Wenn das Plug-in einen Erfolgs Code in *hrdownload* übergibt, lädt Windows Media Player die Nachverfolgung herunter. Wenn das Plug-in einen Fehlercode in *hrdownload* übergibt, wird der Titel nicht vom Player heruntergeladen. Für jeden **Download Download** muss das Plug-in das Transaktions Cookie und die ID des fraglichen Titels bereitstellen. Bei nachverfolgen, die tatsächlich heruntergeladen werden, muss das Plug-in auch die URL des Titels bereitstellen.
+Windows Media Player verarbeitet Downloads von Musikdatei für den Onlineshop. Ein Download kann initiiert werden, wenn die Ermittlungsseite [External.download](external-download.md) aufruft oder der Benutzer im Player auswählt, um eine Reihe von Spuren herunterzuladen. In beiden Fällen ruft Windows Media Player [IWMPContentPartner::D ownload](/previous-versions/windows/desktop/api/contentpartner/nf-contentpartner-iwmpcontentpartner-download)auf und überspringt eine Inhaltscontainerliste, die den Satz der herunterzuladenden Spuren beschreibt, und ein Cookie, das die Downloadtransaktion darstellt. Das Inhaltspartner-Plug-In muss dann für jede Spur im Satz [einmal IWMPContentPartnerCallback::D ownloadTrack](/previous-versions/windows/desktop/api/contentpartner/nf-contentpartner-iwmpcontentpartnercallback-downloadtrack) aufrufen. Wenn das Plug-In **DownloadTrack aufruft,** übergibt es **ein HRESULT** im *parameter hrDownload.* Wenn das Plug-In in *hrDownload* einen Erfolgscode übergibt, Windows Media Player die Spur herunter. Wenn das Plug-In in *hrDownload* einen Fehlercode übergibt, wird die Spur vom Player nicht heruntergeladen. Für jeden **Downloadaufruf muss** das Plug-In das Transaktionscookie und die ID der jeweiligen Spur liefern. Für Spuren, die tatsächlich heruntergeladen werden, muss das Plug-In auch die URL der Spur angeben.
 
-Nachdem eine Datei heruntergeladen wurde, wird die Bibliothek von Windows Media Player automatisch aktualisiert, um die neu erworbene Musik widerzuspiegeln. Der Player stellt dem Plug-in über den Downloadvorgang Statusinformationen zur Verfügung, indem [iwmpcontentpartner::D ownloadtrackcomplete](/previous-versions/windows/desktop/api/contentpartner/nf-contentpartner-iwmpcontentpartner-downloadtrackcomplete)aufgerufen wird. Bei dieser Methode stellt der Player ein **HRESULT** bereit, um den Erfolg oder Misserfolg des Downloads, die Spur-ID und die Zeichenfolge der benutzerdefinierten Parameter anzugeben, die der Online Shop beim Aufrufen von **downloadtrack** bereitgestellt hat.
+Nachdem eine Datei heruntergeladen wurde, Windows Media Player die Bibliothek automatisch entsprechend der neu erworbenen Musik aktualisiert. Der Player stellt dem Plug-In Statusinformationen zum Downloadvorgang bereit, indem [er IWMPContentPartner::D ownloadTrackComplete aufruft.](/previous-versions/windows/desktop/api/contentpartner/nf-contentpartner-iwmpcontentpartner-downloadtrackcomplete) Bei dieser Methode stellt der Player ein **HRESULT** bereit, um den Erfolg oder Fehler des Downloads, die Track-ID und die benutzerdefinierte Parameterzeichenfolge anzugeben, die der Onlineshop beim Aufrufen von **DownloadTrack bereitgestellt hat.**
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[**Programmier Handbuch für den Typ 1 Online Stores**](programming-guide-for-type-1-online-stores.md)
+[**Programmierhandbuch für Onlineshops vom Typ 1**](programming-guide-for-type-1-online-stores.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

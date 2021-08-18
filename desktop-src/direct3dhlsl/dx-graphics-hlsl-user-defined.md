@@ -9,12 +9,12 @@ topic_type:
 api_name: ''
 api_type: ''
 api_location: ''
-ms.openlocfilehash: 2107e3eb2b2dc2362776a1a9ecd50830519c6627
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: ee73cd5afcda15bcc821d7fea5b648924829d483a33b9c67c140eed0b100e861
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "104388105"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119789310"
 ---
 # <a name="user-defined-type"></a>Benutzerdefinierter Typ
 
@@ -24,7 +24,7 @@ Verwenden Sie die folgende Syntax, um einen benutzerdefinierten Typ zu deklarier
 
 |                                           |
 |-------------------------------------------|
-| typedef konstanter **\[ \] Typname \[ \] Index**; |
+| typedef **\[ const \] Type Name \[ Index \]**; |
 
 
 
@@ -34,22 +34,22 @@ Verwenden Sie die folgende Syntax, um einen benutzerdefinierten Typ zu deklarier
 
 
 
-| Element                                                                                         | BESCHREIBUNG                                                                            |
+| Element                                                                                         | Beschreibung                                                                            |
 |----------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------|
-| <span id="_const_"></span><span id="_CONST_"></span>**\[const\]**<br/>                 | Optional. Dieses Schlüsselwort kennzeichnet den Typ explizit als Konstante.<br/>             |
-| <span id="Type"></span><span id="type"></span><span id="TYPE"></span>**Sorte**<br/>     | Identifiziert den Datentyp. muss einer der systeminternen HLSL-Datentypen sein.<br/>     |
-| <span id="Name"></span><span id="name"></span><span id="NAME"></span>**Benennen**<br/>     | Eine ASCII-Zeichenfolge, die den Variablennamen eindeutig identifiziert.<br/>                 |
-| <span id="Index"></span><span id="index"></span><span id="INDEX"></span>**Sin**<br/> | Optionale Array Größe. Muss eine ganze Zahl ohne Vorzeichen zwischen 1 und 4 sein.<br/> |
+| <span id="_const_"></span><span id="_CONST_"></span>**\[Const\]**<br/>                 | Optional. Dieses Schlüsselwort markiert den Typ explizit als Konstante.<br/>             |
+| <span id="Type"></span><span id="type"></span><span id="TYPE"></span>**Typ**<br/>     | Identifiziert den Datentyp. muss einer der systeminternen HLSL-Datentypen sein.<br/>     |
+| <span id="Name"></span><span id="name"></span><span id="NAME"></span>**Namen**<br/>     | Eine ASCII-Zeichenfolge, die den Variablennamen eindeutig identifiziert.<br/>                 |
+| <span id="Index"></span><span id="index"></span><span id="INDEX"></span>**Index**<br/> | Optionale Arraygröße. Muss eine ganze Zahl ohne Vorzeichen zwischen 1 und 4 (einschließlich) sein.<br/> |
 
 
 
  
 
-Neben den integrierten systeminternen Datentypen unterstützt HLSL benutzerdefinierte oder benutzerdefinierte Typen, die dieser Syntax folgen:
+Zusätzlich zu den integrierten systeminternen Datentypen unterstützt HLSL benutzerdefinierte oder benutzerdefinierte Typen, die dieser Syntax folgen:
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Bei benutzerdefinierten Typen wird die Groß-/Kleinschreibung nicht beachtet. Die folgenden Typen werden aus Gründen der Unterstützung automatisch in einem Superglobalen Gültigkeitsbereich definiert.
+Bei benutzerdefinierten Typen wird die Groß-/Kleinschreibung nicht beachtet. Der Einfachheit halber werden die folgenden Typen automatisch im globalen Bereich definiert.
 
 
 ```
@@ -70,9 +70,9 @@ typedef matrix <double, #, #> double#x#;
 
 
 
-Das Nummern Zeichen ( \# ) stellt eine ganzzahlige Ziffer zwischen 1 und 4 dar.
+Das Nummernzeichen ( \# ) stellt eine ganzzahlige Ziffer zwischen 1 und 4 dar.
 
-Aus Kompatibilitätsgründen mit DirectX 8-Effekten werden die folgenden Typen automatisch im superglobalen Bereich definiert:
+Aus Gründen der Kompatibilität mit DirectX 8-Effekten werden die folgenden Typen automatisch im globalen Bereich definiert:
 
 
 ```

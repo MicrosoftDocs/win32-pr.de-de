@@ -13,7 +13,7 @@ ms.locfileid: "119216550"
 ---
 # <a name="renderexclusiveeventdriven"></a>RenderExclusiveEventDriven
 
-Diese Beispielanwendung verwendet die Core Audio-APIs, um Audiodaten auf einem vom Benutzer angegebenen Ausgabegerät zu rendern. In diesem Beispiel wird die ereignisgesteuerte Pufferung für einen Renderingclient im exklusiven Modus veranschaulicht. Für einen Stream im exklusiven Modus teilt sich der Client den Endpunktpuffer mit dem Audiogerät.
+Diese Beispielanwendung verwendet die Core Audio-APIs, um Audiodaten auf einem vom Benutzer angegebenen Ausgabegerät zu rendern. In diesem Beispiel wird die ereignisgesteuerte Pufferung für einen Renderingclient im exklusiven Modus veranschaulicht. Bei einem Stream im exklusiven Modus teilt der Client den Endpunktpuffer mit dem Audiogerät.
 
 Dieses Thema enthält folgende Abschnitte:
 
@@ -24,11 +24,11 @@ Dieses Thema enthält folgende Abschnitte:
 -   [Ausführen des Beispiels](#running-the-sample)
 -   [Zugehörige Themen](#related-topics)
 
-## <a name="description"></a>BESCHREIBUNG
+## <a name="description"></a>Beschreibung
 
 In diesem Beispiel werden die folgenden Features veranschaulicht.
 
--   [MMDevice-API](mmdevice-api.md) für multimediale Geräteenumeration und -auswahl.
+-   [MMDevice-API](mmdevice-api.md) für die Enumeration und Auswahl von Multimedia-Geräten.
 -   WASAPI für Datenstromverwaltungsvorgänge.
 
 ## <a name="requirements"></a>Anforderungen
@@ -60,49 +60,49 @@ Dieses Beispiel ist an den folgenden Speicherorten verfügbar.
 
 ## <a name="building-the-sample"></a>Erstellen des Beispiels
 
-Führen Sie die folgenden Schritte aus, um das RenderExclusiveEventDriven-Beispiel zu erstellen:
+Führen Sie zum Erstellen des RenderExclusiveEventDriven-Beispiels die folgenden Schritte aus:
 
-1.  Öffnen Sie die CMD-Shell für das Windows SDK, und wechseln Sie in das Beispielverzeichnis RenderExclusiveEventDriven.
-2.  Führen Sie den Befehl `start WASAPIRenderExclusiveEventDriven.sln` im Verzeichnis RenderExclusiveEventDriven aus, um das Projekt WASAPIRenderExclusiveEventDriven im fenster Visual Studio zu öffnen.
-3.  Wählen Sie im Fenster die Konfiguration **Debug-** oder **Releaselösung** aus, wählen Sie in der Menüleiste das Menü **Erstellen** und dann die Option **Erstellen** aus. Wenn Sie Visual Studio nicht über die CMD-Shell für das SDK öffnen, haben Visual Studio keinen Zugriff auf die SDK-Buildumgebung. In diesem Fall wird das Beispiel nur erstellt, wenn Sie die Umgebungsvariable MSSdk explizit festlegen, die in der Projektdatei WASAPIRenderExclusiveEventDriven.vcproj verwendet wird.
+1.  Öffnen Sie die CMD-Shell für das Windows SDK, und wechseln Sie zum Beispielverzeichnis RenderExclusiveEventDriven.
+2.  Führen Sie den Befehl `start WASAPIRenderExclusiveEventDriven.sln` im Verzeichnis RenderExclusiveEventDriven aus, um das Projekt WASAPIRenderExclusiveEventDriven im Visual Studio öffnen.
+3.  Wählen Sie im Fenster die  Projektmappenkonfiguration **Debuggen** oder Release aus, wählen Sie in der Menüleiste das Menü **Erstellen** und dann die **Option Erstellen** aus. Wenn Sie die Visual Studio cmd-Shell für das SDK nicht öffnen, hat Visual Studio keinen Zugriff auf die SDK-Buildumgebung. In diesem Fall wird das Beispiel nur erstellt, wenn Sie die Umgebungsvariable MSSdk explizit festlegen, die in der Projektdatei WASAPIRenderExclusiveEventDriven.vcproj verwendet wird.
 
 ## <a name="running-the-sample"></a>Ausführen des Beispiels
 
-Wenn Sie die Demoanwendung erfolgreich erstellen, wird eine ausführbare Datei WASAPIRenderExclusiveEventDriven.exe generiert. Geben Sie zum Ausführen `WASAPIRenderExclusiveEventDriven` ein Befehlsfenster gefolgt von erforderlichen oder optionalen Argumenten ein. Das folgende Beispiel zeigt, wie das Beispiel ausgeführt wird, indem die Wiedergabedauer auf dem Standardmäßigen Multimediagerät angegeben wird.
+Wenn Sie die Demoanwendung erfolgreich erstellen, wird eine ausführbare Datei WASAPIRenderExclusiveEventDriven.exe generiert. Geben Sie zum Ausführen ein `WASAPIRenderExclusiveEventDriven` Befehlsfenster gefolgt von erforderlichen oder optionalen Argumenten ein. Das folgende Beispiel zeigt, wie sie das Beispiel ausführen, indem Sie die Wiedergabedauer auf dem Multimedia-Standardgerät angeben.
 
 `WASAPIRenderExclusiveEventDriven.exe -d 20 -multimedia`
 
 In der folgenden Tabelle sind die Argumente aufgeführt.
 
-| Argument        | BESCHREIBUNG                                                |
+| Argument        | Beschreibung                                                |
 |-----------------|------------------------------------------------------------|
 | -?              | Zeigt Hilfe an.                                                |
 | -H              | Zeigt Hilfe an.                                                |
-| -f              | Sinusfrequenz in Hz.                                 |
+| -f              | Sinus-Wellenfrequenz in Hz.                                 |
 | -l              | Audiorenderinglatenz in Millisekunden.                      |
-| -d              | Sinus-Wellendauer in Sekunden.                             |
+| -d              | Dauer der Sinus-Welle in Sekunden.                             |
 | -M              | Deaktiviert die Verwendung von MMCSS.                                 |
 | -console        | Verwenden Sie das Standardkonsolengerät.                            |
 | -communications | Verwenden Sie das Standardkommunikationsgerät.                      |
-| -multimedia     | Verwenden Sie das Standardmäßige Multimediagerät.                         |
+| -multimedia     | Verwenden Sie das Multimedia-Standardgerät.                         |
 | -endpoint       | Verwenden Sie den Endpunktbezeichner, der im Switchwert angegeben ist. |
 
 
 
  
 
-Wenn die Anwendung ohne Argumente ausgeführt wird, listet sie die verfügbaren Geräte auf und fordert den Benutzer auf, ein Gerät für die Renderingsitzung auszuwählen. Nachdem der Benutzer ein Gerät angegeben hat, rendert die Anwendung eine Sinusbewegung bei 440 Hz für 10 Sekunden. Diese Werte können durch Angeben der Schalterwerte -f und -d geändert werden.
+Wenn die Anwendung ohne Argumente ausgeführt wird, werden die verfügbaren Geräte aufzählt und der Benutzer aufgefordert, ein Gerät für die Renderingsitzung auszuwählen. Nachdem der Benutzer ein Gerät angegeben hat, rendert die Anwendung 10 Sekunden lang eine Sinus-Welle mit 440 Hz. Diese Werte können durch Angabe der Schalterwerte -f und -d geändert werden.
 
-Das RenderExclusiveEventDriven-Beispiel veranschaulicht die ereignisgesteuerte Pufferung. Das Beispiel zeigt Folgendes:
+Das RenderExclusiveEventDriven-Beispiel veranschaulicht die ereignisgesteuerte Pufferung. Das Beispiel zeigt, wie Sie:
 
 -   Instanziieren Sie einen Audioclient, konfigurieren Sie ihn für die Ausführung im exklusiven Modus, und aktivieren Sie die ereignisgesteuerte Pufferung, indem Sie das **AUDCLNT \_ STREAMFLAGS \_ EVENTCALLBACK-Flag** im Aufruf von [**IAudioClient::Initialize**](/windows/desktop/api/Audioclient/nf-audioclient-iaudioclient-initialize)festlegen.
 -   Ordnen Sie den Client den Beispielen zu, die gerendert werden können, indem Sie ein Ereignishandle für das System bereitstellen, indem Sie die [**IAudioClient::SetEventHandle-Methode**](/windows/desktop/api/Audioclient/nf-audioclient-iaudioclient-seteventhandle) aufrufen.
 -   Erstellen Sie einen Renderthread, um Beispiele aus der Audio-Engine zu verarbeiten.
 -   Richten Sie die Puffer ordnungsgemäß an einer 128-Byte-Grenze aus, bevor Sie sie an das Gerät senden. Dies erfolgt durch Anpassen der Periodizität der Engine.
--   Überprüfen Sie das Mischungsformat des Geräteendpunkts, um zu bestimmen, ob die Stichproben gerendert werden können. Wenn das Gerät das Mischungsformat nicht unterstützt, werden die Daten in PCM konvertiert.
--   Behandeln von Datenstromwechseln.
+-   Überprüfen Sie das Mischungsformat des Geräteendpunkts, um zu bestimmen, ob die Beispiele gerendert werden können. Wenn das Gerät das Mischungsformat nicht unterstützt, werden die Daten in PCM konvertiert.
+-   Verarbeiten des Datenstromwechsels.
 
-Nachdem die Renderingsitzung gestartet und der Stream gestartet wurde, signalisiert die Audio-Engine dem bereitgestellten Ereignishandle, dass der Client benachrichtigt wird, wenn ein Puffer für die Verarbeitung durch den Client bereit ist. Die Audiodaten können auch in einer zeitgebergesteuerten Schleife verarbeitet werden. Dieser Modus wird im [RenderExclusiveTimerDriven-Beispiel](renderexclusivetimerdriven.md) veranschaulicht.
+Nachdem die Renderingsitzung gestartet und der Stream gestartet wurde, signalisiert die Audio-Engine dem angegebenen Ereignishand handle, den Client jedes Mal zu benachrichtigen, wenn ein Puffer für die Verarbeitung durch den Client bereit ist. Die Audiodaten können auch in einer zeitgesteuerten Schleife verarbeitet werden. Dieser Modus wird im [RenderExclusiveTimerDriven-Beispiel](renderexclusivetimerdriven.md) demonstriert.
 
 Weitere Informationen zum Rendern eines Streams finden Sie unter [Rendern eines Streams.](rendering-a-stream.md)
 

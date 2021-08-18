@@ -1,51 +1,51 @@
 ---
-title: Erstellen von Web-Based Präsentationen
-description: Erstellen von Web-Based Präsentationen
+title: Erstellen von Web-Based Presentations
+description: Erstellen von Web-Based Presentations
 ms.assetid: 60d8be10-ebed-4a4f-b17f-700475b51b34
 keywords:
 - Windows Media Player, webbasierte Präsentationen
-- Windows Media Player-Objektmodell, webbasierte Präsentationen
+- Windows Media Player Objektmodell, webbasierte Präsentationen
 - Objektmodell, webbasierte Präsentationen
 - Windows Media Player Mobile, webbasierte Präsentationen
 - Windows Media Player ActiveX-Steuerelement, webbasierte Präsentationen
-- Windows Media Player Mobile ActiveX-Steuerelement, webbasierte Präsentationen
+- Windows Media Player Mobiles ActiveX-Steuerelement, webbasierte Präsentationen
 - ActiveX-Steuerelement, webbasierte Präsentationen
-- Webbasierte Präsentationen, erstellen
-- Erstellen von webbasierten Präsentationen, Informationen zu
+- Webbasierte Präsentationen, Erstellen
+- Erstellen webbasierter Präsentationen, Informationen
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 117ee00164b50d319699f6e1d1806c4d8bf374af
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: 80dcc653f3119b302fff077ddbbcc364a39b06c06cf216e439d81d5b659a834e
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "104311412"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118997440"
 ---
-# <a name="creating-web-based-presentations"></a>Erstellen von Web-Based Präsentationen
+# <a name="creating-web-based-presentations"></a>Erstellen von Web-Based Presentations
 
-Mit dem Windows Media Player-Steuerelement können Sie auf einfache Weise webbasierte Bildschirmpräsentationen erstellen, die Audioinhalte und Videos mit HTML kombinieren. Durch das Hinzufügen von URL-typskripts zu den Mediendateien können Sie angeben, dass angegebene Webseiten zu bestimmten Zeitpunkten während der digitalen Medienwiedergabe in einem angegebenen Webbrowser Rahmen angezeigt werden.
+Mit dem Windows Media Player-Steuerelement können Sie ganz einfach webbasierte Präsentationspräsentationen erstellen, die Audio und Video mit HTML kombinieren. Indem Sie Ihren Mediendateien Skriptbefehle vom Typ URL hinzufügen, können Sie bewirken, dass angegebene Webseiten während der Wiedergabe digitaler Medien zu bestimmten Zeiten in einem angegebenen Webbrowserframe angezeigt werden.
 
-Windows Media Player bietet auch umfangreiche Medien Streaming, um die effiziente Übermittlung von HTML-Daten über ein Netzwerk innerhalb eines einzelnen Windows Media-Streams oder einer Datei zu ermöglichen. Der Player und der Server verarbeiten die nahtlose, zeitnahe Bereitstellung von Audiodaten, Videos und HTML im Browser. Ebenso wie bei Webpräsentationen, bei denen kein Rich-Media-Streaming verwendet wird, wird die Darstellung von eingebetteten Skript Befehlen in einem angegebenen Browser Rahmen zu bestimmten Zeitpunkten geramt.
+Windows Media Player bietet auch Rich Media Streaming, um eine effiziente Übermittlung von HTML-Daten über ein Netzwerk innerhalb eines einzelnen Windows Medienstreams oder einer Datei zu ermöglichen. Player und Server verarbeiten die reibungslose, rechtzeitige Übermittlung von Audio, Video und HTML an den Browser. Wie bei Webpräsentationen, die kein Rich-Media-Streaming verwenden, rendern eingebettete Skriptbefehle die Präsentation zu bestimmten Zeiten in einem angegebenen Browserframe.
 
-Ein typisches Layout für webbasierte Präsentationen verwendet zwei Frames. Ein Frame enthält eine Webseite, die das Windows Media Player-Steuerelement einbettet und den Video Teil einer Präsentation anzeigt. Der andere Frame zeigt Webseiten an, die sich zu verschiedenen Zeitpunkten ändern, wenn das Video abgespielt wird.
+Ein typisches Layout für webbasierte Präsentationen verwendet zwei Frames. Ein Frame enthält eine Webseite, die das Windows Media Player-Steuerelement einbettet und den Videoteil einer Präsentation anzeigt. Der andere Frame zeigt Webseiten an, die sich zu verschiedenen Zeiten ändern, während das Video wiedergegeben wird.
 
-Wenn das digitale Medium, das Ihre Webseiten begleitet, nur Audiodaten enthält, können Sie den Frame mit dem Windows Media Player-Steuerelement ausblenden, indem Sie dessen Breite auf 0 (null) festlegen. Auf diese Weise kann das Audiogerät im Hintergrund ununterbrochen abgespielt werden, während Ihre Webseiten im vollständigen Browserfenster angezeigt werden.
+Wenn die digitalen Medien, die Ihre Webseiten begleitet, nur Audiodaten enthalten, können Sie den Frame, der das Windows Media Player Steuerelement enthält, ausblenden, indem Sie seine Breite auf 0 festlegen. Auf diese Weise kann die Audiodatei ununterbrochen im Hintergrund wiedergegeben werden, während Ihre Webseiten im vollständigen Browserfenster angezeigt werden.
 
-In den folgenden Abschnitten werden allgemeine Techniken zum Aktivieren von webbasierten Präsentationen beschrieben:
+In den folgenden Abschnitten werden gängige Verfahren zum Aktivieren webbasierter Präsentationen beschrieben:
 
 -   [URL-Flipping](url-flipping.md)
--   [Rich-Media-Streaming](rich-media-streaming.md)
+-   [Rich Media Streaming](rich-media-streaming.md)
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[**Player-Steuerelement Handbuch**](player-control-guide.md)
+[**Leitfaden zum Playersteuerelement**](player-control-guide.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

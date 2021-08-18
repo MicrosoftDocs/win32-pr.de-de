@@ -1,9 +1,9 @@
 ---
-title: Slider. TransparencyColor
-description: Das TransparencyColor-Attribut gibt die transparente Farbe des Schieberegler-Steuerelement Hintergrunds und der Vordergrund Bilder an oder ruft diese ab.
+title: SLIDER.transparencyColor
+description: Das transparencyColor-Attribut gibt die transparente Farbe des Hintergrund- und Vordergrundbilds des Schiebereglersteuerfelds an oder ruft sie ab.
 ms.assetid: 857e3e48-bff2-4396-9f8c-c3d80b37c1d1
 keywords:
-- Slider. TransparencyColor-Fenster Media Player
+- SLIDER.transparencyColor Windows Media Player
 topic_type:
 - apiref
 api_name:
@@ -12,16 +12,16 @@ api_type:
 - NA
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 0cda638e03b62ff81e6c9470239c71c441c755c2
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 43e853a788c92fbbf3f5b9135918b3be53e21ad76f7b50270e46ba2f92ff6191
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106370031"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118118648"
 ---
-# <a name="slidertransparencycolor"></a>Slider. TransparencyColor
+# <a name="slidertransparencycolor"></a>SLIDER.transparencyColor
 
-Das **TransparencyColor** -Attribut gibt die transparente Farbe des Schieberegler-Steuerelement Hintergrunds und der Vordergrund Bilder an oder ruft diese ab.
+Das **transparencyColor-Attribut** gibt die transparente Farbe des Hintergrund- und Vordergrundbilds des Schiebereglersteuerfelds an oder ruft sie ab.
 
 ``` syntax
         elementID.transparencyColor
@@ -29,13 +29,13 @@ Das **TransparencyColor** -Attribut gibt die transparente Farbe des Schieberegle
 
 ## <a name="possible-values"></a>Mögliche Werte
 
-Dieses Attribut ist eine Lese- **/schreibzeichenfolge** mit einem beliebigen Microsoft Internet Explorer-Farbwert. Er besitzt keinen Standardwert.
+Dieses Attribut ist eine  Zeichenfolge mit Lese-/Schreibzugriff, die einen beliebigen Microsoft Internet Explorer-Farbwert enthält. Er besitzt keinen Standardwert.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Jeder Teil des Bilds, der die **transparente Farbe** enthält, ermöglicht es, den Hintergrund anzuzeigen.
+Jeder Teil des Bilds, der **die transparencyColor enthält,** lässt zu, dass der Hintergrund durch angezeigt wird.
 
-Da es sich bei den JPGs um Verlust Verluste handelt und daher unerwartete Farbänderungen unterliegen, werden Sie nicht empfohlen, wenn **transparendcolor** verwendet wird.
+Da JPGs verlustbeendet sind und daher unerwarteten Farbwechseln unterliegen, werden sie nicht empfohlen, wenn **transparencyColor** verwendet wird.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -43,18 +43,18 @@ Da es sich bei den JPGs um Verlust Verluste handelt und daher unerwartete Farbä
 
 | Anforderung | Wert |
 |--------------------|------------------------------------------------------|
-| Version<br/> | Windows Media Player, Version 7,0 oder höher<br/> |
+| Version<br/> | Windows Media Player Version 7.0 oder höher<br/> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Slider-Element**](slider-element.md)
+[**SLIDER-Element**](slider-element.md)
 </dt> <dt>
 
-[**Farb Verweis**](color-reference.md)
+[**Farbreferenz**](color-reference.md)
 </dt> </dl>
 
  

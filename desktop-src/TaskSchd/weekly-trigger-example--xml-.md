@@ -1,6 +1,6 @@
 ---
-title: Beispiel für einen wöchentlichen Beispiel (XML)
-description: Der XML-Code in diesem Beispiel definiert einen Task, der den Editor wöchentlich startet.
+title: Beispiel für wöchentlichen Trigger (XML)
+description: Der XML-Code in diesem Beispiel definiert eine Aufgabe, Editor zwei wochenweise gestartet wird.
 ms.assetid: 1911e8b1-2583-440c-a6ed-d71080b60987
 ms.topic: article
 ms.date: 05/31/2018
@@ -9,22 +9,22 @@ topic_type:
 api_name: ''
 api_type: ''
 api_location: ''
-ms.openlocfilehash: bf8c2683311aecc427e9570a0452c746375eca01
-ms.sourcegitcommit: 40dd8501397fc79a643deb528c6c57ac2e9726ce
+ms.openlocfilehash: 7c038c21db137ce9180d76cecf4c2885274f7cdd72720b12b919f9a39e98e575
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "104389731"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119001809"
 ---
-# <a name="weekly-trigger-example-xml"></a>Beispiel für einen wöchentlichen Beispiel (XML)
+# <a name="weekly-trigger-example-xml"></a>Beispiel für wöchentlichen Trigger (XML)
 
-Der XML-Code in diesem Beispiel definiert einen Task, der den Editor wöchentlich startet.
+Der XML-Code in diesem Beispiel definiert eine Aufgabe, Editor zwei wochenweise gestartet wird.
 
-Zum Registrieren einer Aufgabe, die in XML definiert ist, können Sie entweder die [**ITaskFolder:: RegisterTask**](/windows/desktop/api/taskschd/nf-taskschd-itaskfolder-registertask) -Funktion ([**taskfolder. RegisterTask**](taskfolder-registertask.md) für die Skripterstellung) oder das Befehlszeilen Tool Schtasks.exe verwenden. Wenn Sie das Schtasks.exe Tool (das sich im Verzeichnis "C: \\ Windows System32" befindet \\ ) verwenden, können Sie den folgenden Befehl verwenden, um den Task zu registrieren: **Schtasks/CREATE/XML** *<path to the XML file containing the task definition>* **/TN** *<task name>* .
+Zum Registrieren einer Aufgabe, die in XML definiert ist, können Sie entweder die [**ITaskFolder::RegisterTask-Funktion**](/windows/desktop/api/taskschd/nf-taskschd-itaskfolder-registertask) ([**TaskFolder.RegisterTask**](taskfolder-registertask.md) für Skripterstellung) oder das Schtasks.exe-Befehlszeilentool verwenden. Wenn Sie das Schtasks.exe-Tool (im Verzeichnis C: Windows System32) verwenden, können Sie den folgenden Befehl verwenden, um die Aufgabe zu \\ \\ registrieren: **schtasks /create /XML** *<path to the XML file containing the task definition>* **/tn** *<task name>* .
 
-## <a name="to-define-a-task-to-start-notepad-every-other-week-on-monday-at-800-am"></a>So definieren Sie einen Task zum Starten von Notepad alle anderen Wochen am Montag um 8:00 Uhr
+## <a name="to-define-a-task-to-start-notepad-every-other-week-on-monday-at-800-am"></a>So definieren Sie eine Aufgabe, die Editor zwei Wochen am Montag um 8:00 Uhr gestartet wird
 
-Im folgenden XML-Beispiel wird gezeigt, wie eine Aufgabe mit einer einzelnen Ausführungs Aktion (Starten von Editor), einem einzelnen Kalender-Triggern, gestartet wird (startet die Aufgabe alle anderen Wochen am Montag um 8:00 Uhr) und verschiedene andere Task Einstellungen, die beeinflussen, wie die Aufgabe von Taskplaner behandelt wird.
+Das folgende XML-Beispiel zeigt, wie Sie eine Aufgabe mit einer einzelnen Ausführungsaktion (ab Editor), einem einzelnen Kalendertrigger (startet die Aufgabe alle zwei Wochen am Montag um 8:00 Uhr) und mehreren anderen Aufgabeneinstellungen definieren, die beeinflussen, wie die Aufgabe von Taskplaner.
 
 
 ```XML
@@ -72,25 +72,25 @@ This sample schedules a task to start on a bi-weekly basis.
 
 
 
-## <a name="taskscheduler-schema-elements"></a>TaskScheduler-Schema Elemente
+## <a name="taskscheduler-schema-elements"></a>TaskScheduler-Schemaelemente
 
-Im folgenden finden Sie einige wichtige Elemente, die Sie beachten sollten, wenn Sie dieses Beispiel verwenden.
+Im Folgenden finden Sie einige wichtige Elemente, die Sie bei der Verwendung dieses Beispiels beachten sollten.
 
 -   [**RegistrationInfo**](taskschedulerschema-registrationinfo-tasktype-element.md)
 
-    Enthält Registrierungsinformationen über den Task.
+    Enthält Registrierungsinformationen zum Task.
 
--   [**Trigger**](taskschedulerschema-triggers-tasktype-element.md)
+-   [**Auslöser**](taskschedulerschema-triggers-tasktype-element.md)
 
-    Definiert den-Typ, der den Task startet.
+    Definiert den Trigger, der die Aufgabe startet.
 
--   [**Calendarausgelöst**](taskschedulerschema-calendartrigger-triggergroup-element.md)
+-   [**CalendarTrigger**](taskschedulerschema-calendartrigger-triggergroup-element.md)
 
-    Definiert den wöchentlichen Kalender-Auslösers. In diesem Fall werden nur vier untergeordnete Elemente verwendet: die Start-und endgrenzen, die angeben, wann der Auslöse Zeitpunkt aktiviert und deaktiviert wird, den wöchentlichen Zeitplan und die Wochentage, an denen der Task ausgeführt wird. Das [**StartBoundary**](taskschedulerschema-startboundary-triggerbasetype-element.md) -Element ist ein erforderliches Element für Kalender Trigger.
+    Definiert den wöchentlichen Kalendertrigger. In diesem Fall werden nur vier untergeordnete Elemente verwendet: die Start- und Endgrenzen, die angeben, wann der Trigger aktiviert und deaktiviert wird, den wöchentlichen Zeitplan und die Wochentage, an denen die Aufgabe ausgeführt wird. Das [**StartBoundary-Element**](taskschedulerschema-startboundary-triggerbasetype-element.md) ist ein erforderliches Element für Kalendertrigger.
 
--   [**Schedulebyweek**](taskschedulerschema-schedulebyweek-calendartriggertype-element.md)
+-   [**ScheduleByWeek**](taskschedulerschema-schedulebyweek-calendartriggertype-element.md)
 
-    Definiert den wöchentlichen Zeitplan. In diesem Fall wird das Intervall so festgelegt, dass die Aufgabe an einem Montag alle anderen Wochen durchgeführt wird.
+    Definiert den wöchentlichen Zeitplan. In diesem Fall wird das Intervall so festgelegt, dass die Aufgabe alle zwei Wochen an einem Montag ausgeführt wird.
 
 -   [**Prinzipal**](taskschedulerschema-principal-principaltype-element.md)
 
@@ -98,22 +98,22 @@ Im folgenden finden Sie einige wichtige Elemente, die Sie beachten sollten, wenn
 
 -   [**Einstellungen**](taskschedulerschema-settings-tasktype-element.md)
 
-    Definiert die Aufgaben Einstellungen, die Taskplaner verwendet, um die Aufgabe auszuführen.
+    Definiert die Aufgabeneinstellungen, die Taskplaner zum Ausführen der Aufgabe verwendet.
 
 -   [**Aktionen**](taskschedulerschema-actions-tasktype-element.md)
 
-    Definiert die Aktionen, die vom Task ausgeführt werden (in diesem Fall wird Notepad ausgeführt).
+    Definiert die Aktionen, die der Task ausführt (in diesem Fall die Ausführung Editor).
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[Verwenden des Taskplaner](using-the-task-scheduler.md)
+[Verwenden der Taskplaner](using-the-task-scheduler.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

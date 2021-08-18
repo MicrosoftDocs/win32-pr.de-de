@@ -1,12 +1,12 @@
 ---
-title: Imsrdpclienttransportsettings gatewayuserselectedkredssource-Eigenschaft
-description: Legt die benutzerdefinierte Remotedesktop Gateway-Anmelde Informationsquelle (RD-Gateway) fest oder ruft Sie ab.
+title: IMsRdpClientTransportSettings GatewayUserSelectedCredsSource-Eigenschaft
+description: Legt die vom Benutzer angegebene Remotedesktop Gateway-Anmeldeinformationsquelle (RD-Gateway) fest oder ruft sie ab.
 ms.assetid: 0c12ddf6-52c2-40a2-af2b-effd4e8bbdb6
 ms.tgt_platform: multiple
 keywords:
-- Gatewayuserselectedkredssource-Eigenschaft Remotedesktopdienste
-- Gatewayuserselectedkredssource-Eigenschaft Remotedesktopdienste, imsrdpclienttransportsettings-Schnittstelle
-- Imsrdpclienttransportsettings-Schnittstelle Remotedesktopdienste, gatewayuserselectedkredssource-Eigenschaft
+- GatewayUserSelectedCredsSource-Eigenschaft Remotedesktopdienste
+- GatewayUserSelectedCredsSource-Eigenschaft Remotedesktopdienste , IMsRdpClientTransportSettings-Schnittstelle
+- IMsRdpClientTransportSettings-Schnittstelle Remotedesktopdienste , GatewayUserSelectedCredsSource-Eigenschaft
 topic_type:
 - apiref
 api_name:
@@ -19,16 +19,16 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 1556088e62221df7ff91b4b0069bb1ec938ebf23
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 7632609f34d0133f37af4e8df16ebd574b3ef84e248c2bb3d2b1a84313957b43
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104517489"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119001010"
 ---
-# <a name="imsrdpclienttransportsettingsgatewayuserselectedcredssource-property"></a>Imsrdpclienttransportsettings:: gatewayuserselectedkredssource-Eigenschaft
+# <a name="imsrdpclienttransportsettingsgatewayuserselectedcredssource-property"></a>IMsRdpClientTransportSettings::GatewayUserSelectedCredsSource-Eigenschaft
 
-Legt die benutzerdefinierte Remotedesktop Gateway-Anmelde Informationsquelle (RD-Gateway) fest oder ruft Sie ab.
+Legt die vom Benutzer angegebene Remotedesktop Gateway-Anmeldeinformationsquelle (RD-Gateway) fest oder ruft sie ab.
 
 Dies ist eine Eigenschaft mit Lese- und Schreibzugriff.
 
@@ -49,40 +49,40 @@ HRESULT get_GatewayUserSelectedCredsSource(
 
 ## <a name="property-value"></a>Eigenschaftswert
 
-Eine **ulong** -Variable, die die RD-Gateway Authentifizierungsmethode angibt. Dieser Parameter kann einen der folgenden Werte annehmen.
+Eine **ULONG-Variable,** die die RD-Gateway-Authentifizierungsmethode angibt. Dieser Parameter kann einen der folgenden Werte annehmen.
 
 <dt>
 
 <span id="TSC_PROXY_CREDS_MODE_USERPASS"></span><span id="tsc_proxy_creds_mode_userpass"></span>
 
-<span id="TSC_PROXY_CREDS_MODE_USERPASS"></span><span id="tsc_proxy_creds_mode_userpass"></span>**TSC \_ Proxys des Proxys im Proxy \_ \_ Modus \_** (0 (0x0))
+<span id="TSC_PROXY_CREDS_MODE_USERPASS"></span><span id="tsc_proxy_creds_mode_userpass"></span>**TSC \_ PROXY \_ CREDS \_ MODE \_ USERPASS** (0 (0x0))
 
 
 </dt> <dd>
 
-Verwenden Sie ein Kennwort (NTLM) als Authentifizierungsmethode für RD-Gateway.
+Verwenden Sie ein Kennwort (NTLM) als Authentifizierungsmethode für das RD-Gateway.
 
 </dd> <dt>
 
 <span id="TSC_PROXY_CREDS_MODE_SMARTCARD"></span><span id="tsc_proxy_creds_mode_smartcard"></span>
 
-<span id="TSC_PROXY_CREDS_MODE_SMARTCARD"></span><span id="tsc_proxy_creds_mode_smartcard"></span>**TSC \_ Proxy-Anmelde \_ \_ Modus- \_ Smartcard** (1 (0x1))
+<span id="TSC_PROXY_CREDS_MODE_SMARTCARD"></span><span id="tsc_proxy_creds_mode_smartcard"></span>**TSC \_ PROXY \_ CREDS \_ MODE \_ SMARTCARD** (1 (0x1))
 
 
 </dt> <dd>
 
-Verwenden Sie eine Smartcard als Authentifizierungsmethode für RD-Gateway.
+Verwenden Sie eine Smartcard als Authentifizierungsmethode für das RD-Gateway.
 
 </dd> <dt>
 
 <span id="TSC_PROXY_CREDS_MODE_ANY"></span><span id="tsc_proxy_creds_mode_any"></span>
 
-<span id="TSC_PROXY_CREDS_MODE_ANY"></span><span id="tsc_proxy_creds_mode_any"></span>**TSC \_ Proxys im Proxy \_ \_ Modus \_ any** (4 (0x4))
+<span id="TSC_PROXY_CREDS_MODE_ANY"></span><span id="tsc_proxy_creds_mode_any"></span>**TSC \_ PROXY \_ CREDS \_ MODE \_ ANY** (4 (0x4))
 
 
 </dt> <dd>
 
-Verwenden Sie für RD-Gateway eine beliebige Authentifizierungsmethode.
+Verwenden Sie eine beliebige Authentifizierungsmethode für das RD-Gateway.
 
 </dd> </dl>
 
@@ -100,15 +100,15 @@ Gibt bei Erfolg **S \_ OK** zurück.
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2008<br/>                                                                   |
 | Typbibliothek<br/>             | <dl> <dt>MsTscAx.dll</dt> </dl>           |
 | DLL<br/>                      | <dl> <dt>MsTscAx.dll</dt> </dl>           |
-| IID<br/>                      | IID \_ imsrdpclienttransportsettings ist definiert als 720298c0-A099-46f 5-9F 82-96921bae4701<br/> |
+| IID<br/>                      | IID \_ IMsRdpClientTransportSettings ist als 720298C0-A099-46f5-9F82-96921BAE4701 definiert.<br/> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Imsrdpclienttransportsettings**](imsrdpclienttransportsettings.md)
+[**IMsRdpClientTransportSettings**](imsrdpclienttransportsettings.md)
 </dt> </dl>
 
  

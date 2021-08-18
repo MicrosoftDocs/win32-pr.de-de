@@ -1,55 +1,55 @@
 ---
 title: Auswählen von untergeordneten Objekten
-description: Clients wenden die Methode IAccessible accSelect an, um die Auswahl oder den Tastaturfokus unter den untergeordneten Elementen eines Objekts zu ändern. Die mit dem-Befehl angegebenen selflag-Konstanten definieren den auszuführenden Vorgang.
+description: Clients rufen die IAccessible accSelect-Methode auf, um die Auswahl oder den Tastaturfokus unter den in einem -Objekt vorhandenen -Objekten zu ändern. Die mit dem Aufruf angegebenen SELFLAG-Konstanten definieren den durchzuführenden Vorgang.
 ms.assetid: 5e7ad1e9-b1b2-4e76-93e8-b58251930621
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 2ba7d6f898f7da7beb047d3e781ad46cf383b3dc
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: 9bc15ab48a42be44c62c8c7bc2b9151158875509a2e43010c5da70830b2f2973
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "104309496"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119133683"
 ---
 # <a name="selecting-child-objects"></a>Auswählen von untergeordneten Objekten
 
-Clients wird die [**IAccessible:: accSelect**](/windows/desktop/api/Oleacc/nf-oleacc-iaccessible-accselect) -Methode aufgerufen, um die Auswahl oder den Tastaturfokus unter den untergeordneten Elementen eines Objekts zu ändern. Die mit dem-Befehl angegebenen [selflag-Konstanten](selflag.md) definieren den auszuführenden Vorgang.
+Clients rufen die [**IAccessible::accSelect-Methode**](/windows/desktop/api/Oleacc/nf-oleacc-iaccessible-accselect) auf, um die Auswahl oder den Tastaturfokus zwischen den in einem -Objekt vorhandenen unteren Objekten zu ändern. Die [mit dem Aufruf angegebenen SELFLAG-Konstanten](selflag.md) definieren den durchzuführenden Vorgang.
 
-Wenn [**IAccessible:: accSelect**](/windows/desktop/api/Oleacc/nf-oleacc-iaccessible-accselect) mit dem [**selflag-Flag \_ TakeFocus**](selflag.md) für ein untergeordnetes Objekt mit einem **HWND** aufgerufen wird, wird das Flag nur wirksam, wenn das übergeordnete Objekt den Fokus besitzt.
+Wenn [**IAccessible::accSelect**](/windows/desktop/api/Oleacc/nf-oleacc-iaccessible-accselect) mit dem [**SELFLAG \_ TAKEFOCUS-Flag**](selflag.md) für ein untergeordnetes Objekt aufgerufen wird, das über ein **HWND** verfügt, wird das Flag nur wirksam, wenn das übergeordnete Element des Objekts den Fokus besitzt.
 
-## <a name="performing-complex-selection-operations"></a>Ausführen komplexer Auswahl Vorgänge
+## <a name="performing-complex-selection-operations"></a>Ausführen komplexer Auswahlvorgänge
 
-Im folgenden wird beschrieben, welche selflag-Werte beim Aufrufen von [**IAccessible:: accSelect**](/windows/desktop/api/Oleacc/nf-oleacc-iaccessible-accselect) angegeben werden, um komplexe Auswahl Vorgänge auszuführen.
+Im Folgenden wird beschrieben, welche SELFLAG-Werte beim Aufrufen von [**IAccessible::accSelect**](/windows/desktop/api/Oleacc/nf-oleacc-iaccessible-accselect) angegeben werden müssen, um komplexe Auswahlvorgänge durchzuführen.
 
 **So simulieren Sie einen Klick**
 
--   [**Selflag \_ "TakeFocus**](selflag.md) \| [ **selflag \_ TakeSelection** "](selflag.md)
+-   [**SELFLAG \_ TAKEFOCUS**](selflag.md) \| [ **SELFLAG \_ TAKESELECTION**](selflag.md)
 
-**So wählen Sie ein Ziel Element durch Simulieren von Strg + Klick aus**
+**So wählen Sie ein Zielelement aus, indem Sie STRG+Klick simulieren**
 
--   [**Selflag \_ Start Fokus**](selflag.md) \| [ **selflag \_ AddSelection**](selflag.md)
+-   [**SELFLAG \_ TAKEFOCUS**](selflag.md) \| [ **SELFLAG \_ ADDSELECTION**](selflag.md)
 
-**So brechen Sie die Auswahl eines Ziel Elements durch Simulieren von Strg + Klick ab**
+**So brechen Sie die Auswahl eines Zielelements ab, indem Sie STRG+Klick simulieren**
 
--   [**Selflag \_ Start Fokus**](selflag.md) \| [ **selflag \_ RemoveSelection**](selflag.md)
+-   [**SELFLAG \_ TAKEFOCUS**](selflag.md) \| [ **SELFLAG \_ REMOVESELECTION**](selflag.md)
 
-**So simulieren Sie Umschalt + Klick**
+**So simulieren Sie UMSCHALT+Klick**
 
--   [**Selflag \_ "TakeFocus**](selflag.md) \| [ **selflag \_ ExtendSelection** "](selflag.md)
+-   [**SELFLAG \_ TAKEFOCUS**](selflag.md) \| [ **SELFLAG \_ EXTENDSELECTION**](selflag.md)
 
 **So wählen Sie einen Bereich von Objekten aus und legen den Fokus auf das letzte Objekt**
 
-1.  Geben Sie [**selflag \_ TakeFocus**](selflag.md) für das Start Objekt an, um den Auswahl Anker festzulegen.
-2.  Nennen [**Sie IAccessible:: accSelect**](/windows/desktop/api/Oleacc/nf-oleacc-iaccessible-accselect) erneut, und geben Sie [**selflag \_ ExtendSelection**](selflag.md) \| [**selflag \_ TakeFocus**](selflag.md) für das letzte Objekt an.
+1.  Geben [**Sie SELFLAG \_ TAKEFOCUS für**](selflag.md) das Startobjekt an, um den Auswahlanker festzulegen.
+2.  Rufen [**Sie IAccessible::accSelect erneut**](/windows/desktop/api/Oleacc/nf-oleacc-iaccessible-accselect) auf, und geben Sie [**SELFLAG \_ EXTENDSELECTION**](selflag.md) \| [**SELFLAG \_ TAKEFOCUS**](selflag.md) für das letzte Objekt an.
 
 **So deaktivieren Sie alle Objekte**
 
-1.  Geben Sie [**selflag \_ TakeSelection**](selflag.md) für ein beliebiges Objekt an. Mit diesem Flag werden alle ausgewählten Objekte außer der gerade ausgewählten Objekte deaktiviert.
-2.  Nennen [**Sie IAccessible:: accSelect**](/windows/desktop/api/Oleacc/nf-oleacc-iaccessible-accselect) erneut, und geben Sie [**selflag \_ RemoveSelection**](selflag.md) für das restliche Objekt an.
+1.  Geben [**Sie SELFLAG \_ TAKESELECTION für**](selflag.md) ein beliebiges Objekt an. Dieses Flag deaktiviert alle ausgewählten Objekte außer dem soeben ausgewählten.
+2.  Rufen [**Sie IAccessible::accSelect erneut**](/windows/desktop/api/Oleacc/nf-oleacc-iaccessible-accselect) auf, und geben Sie [**SELFLAG \_ REMOVESELECTION**](selflag.md) für das verbleibende Objekt an.
 
- 
+ 
 
- 
+ 
 
 
 

@@ -1,5 +1,5 @@
 ---
-description: 'D3DXSHRotate-Funktion (D3DX10.h): Rotiert den SH-Vektor (Spherical Vector) um die angegebene Matrix.'
+description: 'D3DXSHRotate-Funktion (D3DX10.h): Rotiert den SH-Vektor (Pherical Rotation) um die gegebene Matrix.'
 ms.assetid: 22ed379a-ce08-46df-9cc1-8d5fde87c179
 title: D3DXSHRotate-Funktion (D3DX10.h)
 ms.topic: reference
@@ -14,16 +14,16 @@ api_type:
 api_location:
 - D3DX10.lib
 - D3DX10.dll
-ms.openlocfilehash: 2f2af3fe59c57ba32bc03bb59233bec72722bbb5
-ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
+ms.openlocfilehash: 0ff63f6ad2fbbb75baaa32c4754a4cee3437ba34fe6dbd3b0412464deaf8fd71
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2021
-ms.locfileid: "108108538"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118990780"
 ---
 # <a name="d3dxshrotate-function-d3dx10h"></a>D3DXSHRotate-Funktion (D3DX10.h)
 
-Rotiert den SH-Vektor (Spherical Vector) um die angegebene Matrix.
+Dreht den SH-Vektor (PhericalIcal Rotation) um die gegebene Matrix.
 
 ## <a name="syntax"></a>Syntax
 
@@ -48,7 +48,7 @@ FLOAT* D3DXSHRotate(
 
 Typ: **[ **FLOAT**](../winprog/windows-data-types.md)\***
 
-Zeiger auf SH-Ausgabekoeffizienten (Spherical Veralten). Die Auswertung generiert Order²-Koeffizienten. Dieser Zeiger sollte keinen Alias mit pIn verwenden. Siehe Hinweise.
+Zeiger auf SH-Ausgabekoeffizienten (Spherical- oder Pherical-Rumpf). Die Auswertung generiert Order Koeffizienten. Dieser Zeiger sollte keinen Alias mit pIn verwenden. Siehe Hinweise.
 
 </dd> <dt>
 
@@ -57,7 +57,7 @@ Zeiger auf SH-Ausgabekoeffizienten (Spherical Veralten). Die Auswertung generier
 
 Typ: **[ **UINT**](../winprog/windows-data-types.md)**
 
-Reihenfolge der SH-Auswertung. Muss im Bereich von D3DXSH \_ MINORDER bis D3DXSH \_ MAXORDER (einschließlich) liegen. Die Auswertung generiert Order²-Koeffizienten. Der Grad der Auswertung ist "Order - 1".
+Reihenfolge der SH-Auswertung. Muss im Bereich von D3DXSH \_ MINORDER bis D3DXSH \_ MAXORDER (einschließlich) liegen. Die Auswertung generiert Order Koeffizienten. Der Grad der Auswertung ist Order - 1.
 
 </dd> <dt>
 
@@ -66,7 +66,7 @@ Reihenfolge der SH-Auswertung. Muss im Bereich von D3DXSH \_ MINORDER bis D3DXSH
 
 Typ: **const [**D3DXMATRIX**](../direct3d9/d3dxmatrix.md) \***
 
-Zeiger auf die Rotationsmatrix. Die Rotationsuntermatrix muss orthogonal sein, mit einer Determinante der Einheit.
+Zeiger auf die Rotationsmatrix. Die Rotationsuntermatrix muss orthogonal sein, mit einer Einheitsdetermination.
 
 </dd> <dt>
 
@@ -85,7 +85,7 @@ Typ: **[ **FLOAT**](../winprog/windows-data-types.md)\***
 
 Zeiger auf SH-Ausgabekoeffizienten.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
 Jeder Koeffizient der Basisfunktion "Ylm" wird an der Speicherposition "l): + m + l" gespeichert, wobei:
 
@@ -96,7 +96,7 @@ Jeder Koeffizient der Basisfunktion "Ylm" wird an der Speicherposition "l): + m 
 
 
 
-| Anforderungen | Wert |
+| Anforderung | Wert |
 |--------------------|---------------------------------------------------------------------------------------|
 | Header<br/>  | <dl> <dt>D3DX10.h</dt> </dl>   |
 | Bibliothek<br/> | <dl> <dt>D3DX10.lib</dt> </dl> |

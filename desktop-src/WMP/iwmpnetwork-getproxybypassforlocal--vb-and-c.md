@@ -1,11 +1,11 @@
 ---
-title: Iwmpnetwork getproxybypassforlocal-Methode
-description: Die getproxybypassforlocal-Methode gibt einen Wert zurück, der angibt, ob der Proxy Server umgangen wird, wenn sich der Ursprungsserver in einem lokalen Netzwerk befindet.
+title: IWMPNetwork getProxyBypassForLocal-Methode
+description: Die getProxyBypassForLocal-Methode gibt einen Wert zurück, der angibt, ob der Proxyserver umgangen wird, wenn sich der Ursprungsserver in einem lokalen Netzwerk befindet.
 ms.assetid: 150a05f3-6979-4a88-a617-472f07d38807
 keywords:
-- getproxybypassforlocal-Methode, Windows Media Player
-- getproxybypassforlocal-Methode, Windows Media Player, iwmpnetwork-Schnittstelle
-- Iwmpnetwork Interface, Windows Media Player, getproxybypassforlocal-Methode
+- getProxyBypassForLocal-Methode Windows Media Player
+- getProxyBypassForLocal-Methode Windows Media Player , IWMPNetwork-Schnittstelle
+- IWMPNetwork-Schnittstelle Windows Media Player , getProxyBypassForLocal-Methode
 topic_type:
 - apiref
 api_name:
@@ -16,16 +16,16 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 0b87b1f00432ec91dd4379a9fa5e31664437afe0
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 50d23307ab8872fb49b2b4797d54b78a71a04adba350287fa23cb8e5ab90541c
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106372035"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118996480"
 ---
-# <a name="iwmpnetworkgetproxybypassforlocal-method"></a>Iwmpnetwork:: getproxybypassforlocal-Methode
+# <a name="iwmpnetworkgetproxybypassforlocal-method"></a>IWMPNetwork::getProxyBypassForLocal-Methode
 
-Die **getproxybypassforlocal** -Methode gibt einen Wert zurück, der angibt, ob der Proxy Server umgangen wird, wenn sich der Ursprungsserver in einem lokalen Netzwerk befindet.
+Die **getProxyBypassForLocal-Methode** gibt einen Wert zurück, der angibt, ob der Proxyserver umgangen wird, wenn sich der Ursprungsserver in einem lokalen Netzwerk befindet.
 
 ## <a name="syntax"></a>Syntax
 
@@ -53,24 +53,24 @@ Implements IWMPNetwork.getProxyBypassForLocal
 
 <dl> <dt>
 
-*bstrauprotocol* 
+*bstrProtocol* 
 </dt> <dd>
 
-Ein **System. String** -Wert, der der Protokoll Name ist.
+Eine **System.String,die** der Protokollname ist.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Ein **System. Boolean** -Wert, der angibt, ob der Proxy Server umgangen wird. Der Wert ist nur dann von Bedeutung, wenn **iwmpnetwork. getproxysettings** den Wert 2 zurückgibt (manuelle Einstellungen verwenden).
+Ein **System.Boolean-Wert,** der angibt, ob der Proxyserver umgangen wird. Der Wert ist nur sinnvoll, wenn **IWMPNetwork.getProxySettings** den Wert 2 zurückgibt (manuelle Einstellungen verwenden).
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Diese Methode schlägt fehl, es sei denn, die aufrufenden Anwendung wird auf dem lokalen Computer oder Intranet ausgeführt.
+Diese Methode schlägt fehl, es sei denn, die aufrufende Anwendung wird auf dem lokalen Computer oder Intranet ausgeführt.
 
 ## <a name="examples"></a>Beispiele
 
-Im folgenden Codebeispiel wird **getproxybypassforlocal** verwendet, um anzuzeigen, ob Windows Media Player so festgelegt ist, dass der Proxy Server für lokale Adressen umgangen wird. Das **AxWMPLib. AxWindowsMediaPlayer** -Objekt wird durch die Variable mit dem Namen "Player" dargestellt.
+Im folgenden Codebeispiel wird **getProxyBypassForLocal** verwendet, um anzuzeigen, ob Windows Media Player so festgelegt ist, dass der Proxyserver für lokale Adressen umgangen wird. Das **AxWMPLib.AxWindowsMediaPlayer-Objekt** wird durch die Variable player dargestellt.
 
 
 ```VB
@@ -137,23 +137,23 @@ proxyBypassText.Lines = proxyInfo;
 
 | Anforderung | Wert |
 |----------------------|-----------------------------------------------------------------------------------------------|
-| Version<br/>   | Windows Media Player 9-Serie oder höher<br/>                                             |
+| Version<br/>   | Windows Media Player 9er Serie oder höher<br/>                                             |
 | Namespace<br/> | **WMPLib**<br/>                                                                         |
 | Assembly<br/>  | <dl> <dt>Interop.WMPLib.dll</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Iwmpnetwork-Schnittstelle (VB und c#)**](iwmpnetwork--vb-and-c.md)
+[**IWMPNetwork-Schnittstelle (VB und C#)**](iwmpnetwork--vb-and-c.md)
 </dt> <dt>
 
-[**Iwmpnetwork. getproxysettings (VB und c#)**](wmplibiwmpnetwork-iwmpnetwork-getproxysettings--vb-and-c.md)
+[**IWMPNetwork.getProxySettings (VB und C#)**](wmplibiwmpnetwork-iwmpnetwork-getproxysettings--vb-and-c.md)
 </dt> <dt>
 
-[**Iwmpnetwork. setproxybypassforlocal (VB und c#)**](wmplibiwmpnetwork-iwmpnetwork-setproxybypassforlocal--vb-and-c.md)
+[**IWMPNetwork.setProxyBypassForLocal (VB und C#)**](wmplibiwmpnetwork-iwmpnetwork-setproxybypassforlocal--vb-and-c.md)
 </dt> </dl>
 
  

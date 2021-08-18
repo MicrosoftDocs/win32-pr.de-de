@@ -1,7 +1,7 @@
 ---
-description: Die waitdispatchingmessages-Funktion wartet darauf, dass ein Objekt signalisiert wird, während Fenster Meldungen verteilt werden.
+description: Die WaitDispatchingMessages-Funktion wartet, bis ein Objekt signalisiert wird, während Fenstermeldungen gesendet werden.
 ms.assetid: d15f6736-d141-47a3-b767-fbf774982fb4
-title: Waitdispatchingmessages-Funktion (wxutil. h)
+title: WaitDispatchingMessages-Funktion (Wxutil.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,16 +16,16 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: 9e509a081243f28293dc2d8abf8311f69eaf9a44
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 26442633d1a4d5187b5e53ae53e0a898f759f91dc3719f09715b570108b701f1
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106351269"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119071904"
 ---
-# <a name="waitdispatchingmessages-function"></a>Waitdispatchingmessages-Funktion
+# <a name="waitdispatchingmessages-function"></a>WaitDispatchingMessages-Funktion
 
-Die- `WaitDispatchingMessages` Funktion wartet auf die Signalisierung eines Objekts während der Verteilung von Fenster Meldungen.
+Die `WaitDispatchingMessages` Funktion wartet, bis ein Objekt signalisiert wird, während Fenstermeldungen gesendet werden.
 
 ## <a name="syntax"></a>Syntax
 
@@ -46,35 +46,35 @@ DWORD WINAPI WaitDispatchingMessages(
 
 <dl> <dt>
 
-*hobject* 
+*hObject* 
 </dt> <dd>
 
 Handle des Objekts, auf das gewartet werden soll.
 
 </dd> <dt>
 
-*dwwait* 
+*dwWait* 
 </dt> <dd>
 
-Timeout Intervall in Millisekunden.
+Time out interval ,in milliseconds. (Time out interval in milliseconds(Time out-Intervall in Millisekunden))
 
 </dd> <dt>
 
-*HWND* 
+*Hwnd* 
 </dt> <dd>
 
 Optionales Handle für ein Fenster.
 
 </dd> <dt>
 
-*Umschlag* 
+*uMsg* 
 </dt> <dd>
 
-Optionale Fenster Meldung, die eine zu Verteil dende Nachricht angibt.
+Optionale Fenstermeldung mit Angabe einer zu sendenden Nachricht.
 
 </dd> <dt>
 
-*hevent* 
+*hEvent* 
 </dt> <dd>
 
 Optionales Handle für ein Ereignis, auf das gewartet werden soll.
@@ -83,11 +83,11 @@ Optionales Handle für ein Ereignis, auf das gewartet werden soll.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt den Wert aus der **WaitForMultipleObjects** -Funktion zurück.
+Gibt den Wert der **WaitForMultipleObjects-Funktion** zurück.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Wenn ein Objekt ein Fenster besitzt, sollte es beim Warten Fenster Meldungen verteilen. Diese Funktion ermöglicht es dem-Objekt, während der Verteilung von Nachrichten auf ein Ereignis, ein Semaphor oder ein anderes gegenseitiges Ausschluss Objekt zu warten.
+Wenn ein Objekt ein Fenster besitzt, sollte es Während des Wartens Fenstermeldungen senden. Diese Funktion ermöglicht es dem Objekt, beim Senden von Nachrichten auf ein Ereignis, ein Semaphor oder ein anderes Objekt für gegenseitigen Ausschluss zu warten.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -95,16 +95,16 @@ Wenn ein Objekt ein Fenster besitzt, sollte es beim Warten Fenster Meldungen ver
 
 | Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Wxutil. h (Include Streams. h)</dt> </dl>                                                                                    |
-| Bibliothek<br/> | <dl> " <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Wxutil.h (include Streams.h)</dt> </dl>                                                                                    |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Einzelhandels-Builds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[Diverse Hilfsfunktionen](miscellaneous-helper-functions.md)
+[Verschiedene Hilfsfunktionen](miscellaneous-helper-functions.md)
 </dt> </dl>
 
  

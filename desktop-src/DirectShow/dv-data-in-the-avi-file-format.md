@@ -1,48 +1,48 @@
 ---
-description: DV-Daten im AVI-Datei Format
+description: DV-Daten im AVI-Dateiformat
 ms.assetid: ae1ec184-afc3-4ec1-9b92-f53656293446
-title: DV-Daten im AVI-Datei Format
+title: DV-Daten im AVI-Dateiformat
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 65f1393bfe4bbee4d080d90755f33cfa7f4a7fa4
-ms.sourcegitcommit: a47bd86f517de76374e4fff33cfeb613eb259a7e
+ms.openlocfilehash: 0c048cb42fa3ba49457c115944075c064b9cfd4c31263519e9d5af3e5f0a268a
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/06/2021
-ms.locfileid: "104482390"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119749110"
 ---
-# <a name="dv-data-in-the-avi-file-format"></a>DV-Daten im AVI-Datei Format
+# <a name="dv-data-in-the-avi-file-format"></a>DV-Daten im AVI-Dateiformat
 
-Microsoft hat das Format für die Speicherung digitaler Videodaten (DV) in AVI-Dateien angegeben. Mit dieser Spezifikation wird sichergestellt, dass die in diesem Format erstellten AVI-Dateien mit zukünftigen Versionen der Architektur von DirectShow Digital Video für das windowsplatform kompatibel sind.
+Microsoft hat das Format für die Speicherung digitaler Videodaten (DV) in AVI-Dateien angegeben. Durch Die Einhaltung dieser Spezifikation wird sichergestellt, dass die in diesem Format erstellten AVI-Dateien mit zukünftigen Versionen der digitalen Videoarchitektur directShow für windowsplatform kompatibel sind.
 
-In diesem Artikel wird das Format von AVI-Dateien beschrieben, die DV-Daten enthalten. Bestimmte fourccs (vier Zeichen Codes) für verschachtelte DV-Datenströme und DV-Kompressor/Dekompressor-streamhandler sind definiert. Die Stream-Format Struktur für DV-Daten ist definiert. Spezifikationen für zwei Methoden zum Speichern von DV-Daten im AVI-Dateiformat werden angegeben.
+In diesem Artikel wird das Format von AVI-Dateien beschrieben, die DV-Daten enthalten. Spezifische FOURCCs (vierstellige Codes) für überlappende DV-Datenströme und DV-Entsprechungs-/Dekomprimierungsstreamhandler werden definiert. Die Streamformatstruktur für DV-Daten wird definiert. Es werden Spezifikationen für zwei Methoden zum Speichern von DV-Daten im AVI-Dateiformat angegeben.
 
-Es wird davon ausgegangen, dass der Reader mit dem DV-Datenformat vertraut ist. (Dieses Format wird in der *Spezifikation von Digital VCRs*, das auch als blaues Buch bezeichnet wird, definiert.)
+Es wird davon ausgegangen, dass der Reader mit dem DV-Datenformat vertraut ist. (Dieses Format wird in der *Spezifikation von consumer-use Digital VCRs* definiert, die auch als Blue Book bezeichnet wird.)
 
-Es gibt zwei Arten von DV-AVI-Dateien: AVI-Dateien, die einen DV-Datenstrom enthalten, so genannte *Type-1-* Dateien. und AVI-Dateien, die das DV-Video als ' vids '-Stream und DV-Audiodaten als ' auds '-Datenströme ( *Type-2-* Dateien) enthalten.
+Es gibt zwei Arten von DV AVI-Dateien: AVI-Dateien, die einen DV-Datenstrom enthalten, die als *Type-1-Dateien* bezeichnet werden; und AVI-Dateien, die DV-Videos als "vids"-Datenstrom und DV-Audiodatenströme als "auds"-Datenströme enthalten, die als *Typ-2-Dateien* bezeichnet werden.
 
 **AVI-Dateien mit einem DV-Datenstrom (Typ-1)**
 
-Verschachtelte DV-Daten können im nativen Format als einzelner Stream innerhalb einer AVI-Riff Datei gespeichert werden. Dies hat den Vorteil, dass die minimale Menge an Datenspeicher für DV verwendet werden muss. Der Hauptnachteil besteht darin, dass dieses Dateiformat nicht mit dem Video für Windows abwärts kompatibel ist, da es weder ein Video-"vids" noch einen Audiodatei-"auds"-Stream enthält. Unterstützung für den überlappenden DV-Stream über die [DV-Muxer](dv-muxer-filter.md) -und [DV-Splitter](dv-splitter-filter.md) Filter, die mit DirectShow bereitgestellt werden.
+Verschachtelte DV-Daten können in ihrem nativen Format als einzelner Datenstrom in einer AVI DATEIFORMAT-Datei gespeichert werden. Dies hat den Vorteil, dass die Mindestmenge an Datenspeicherung für DV verwendet wird. Der Hauptnachteil besteht darin, dass dieses Dateiformat nicht abwärtskompatibel mit Video für Windows ist, da es weder einen Videostream "vids" noch einen Audiostream "auds" enthält. Unterstützung für den überlappenden DV-Stream wird über die [Filter DV Muxer](dv-muxer-filter.md) und [DV Splitter](dv-splitter-filter.md) bereitgestellt, die mit DirectShow bereitgestellt werden.
 
-DV-Daten können in einem einzelnen Stream innerhalb einer AVI-Riff Datei gespeichert werden, indem die iavs (verschachtelter Audiodaten-und Videostream) FourCC (vier-Zeichen-Code) im **fcctype** -Member und eine der "DVSD", "dvhd ' oder ' dvsl ' fourccs im **fccHandler** -Member des Stream-Header Blocks ' ' Die Frames pro Sekunde des Videodaten Stroms müssen in den Elementen " **dwrate** " und " **dwscale** " und der Gesamtzahl der Video Blöcke im "MOVI"-Segment im **dwLength** -Element angegeben werden.
+DV-Daten können in einem einzelnen Datenstrom innerhalb einer AVI DOSSIER-Datei gespeichert werden, indem im **fccType-Member** die FOURCC-Datei "iavs" (überlappender Audio- und Videodatenstrom) und entweder der "dvsd", "dvhd" oder "dvsl" FOURCCs im **fccHandler-Member** des Header-Chunks "strh" angegeben werden. Die Frames pro Sekunde des Videodatenstroms müssen in den **DwRate-** und **dwScale-Membern** und der Gesamtanzahl von Videoblöcken im Block "mlappen" im **dwLength-Element** angegeben werden.
 
-Der "DVSD"-streamhandler "FourCC" gibt an, dass die DV-Daten wie in Teil 2 der *Spezifikation von "Consumer-use Digital VCRs*" definiert sind. Das Video hat das Format 525 Zeilen bei 29,97 Hz (525-60) oder 625 Zeilen bei 25,00 Hz (625-50).
+Der DVSD-Streamhandler FOURCC gibt an, dass die DV-Daten in Teil 2 der *Spezifikation der Consumer-use Digital VCRs* definiert sind. Das Video hat das Format 525 Zeilen bei 29,97 Hz (525-60) oder 625 Zeilen bei 25,00 Hz (625-50).
 
-Der ' dvhd '-streamhandler FourCC gibt an, dass die DV-Daten wie in Teil 3 der *Spezifikation für den verwendeten Consumer-use Digital VCRs* definiert sind. Das Video hat das Format 1125 Zeilen bei 30,00 Hz (1125-60) oder 1250 Zeilen bei 25,00 Hz (1250-50).
+Der "dvhd"-Streamhandler FOURCC gibt an, dass die DV-Daten gemäß Teil 3 der *Spezifikation der consumer-use Digital VCRs* definiert sind. Das Video hat das Format 1125 Zeilen bei 30,00 Hz (1125-60) oder 1250 Zeilen bei 25,00 Hz (1250-50).
 
-Der "dvsl"-streamhandler "FourCC" gibt an, dass die DV-Daten wie in Teil 6 der *Spezifikation von "Consumer-use Digital VCRs*" definiert sind. Das Video hat das Format High-Compression SD (SDL).
+Der "dvsl"-Streamhandler FOURCC gibt an, dass die DV-Daten wie in Teil 6 der *Spezifikation der consumer-use Digital VCRs* definiert sind. Das Video hat das Format von SD mit hoher Komprimierung (HIGH-Compression SD, SDL).
 
 > [!Note]  
-> Der Rest dieses Artikels enthält Definitionen für "DVSD"-Streams.
+> Der Rest dieses Artikels enthält Definitionen für "dvsd"-Streams.
 
  
 
-Auf den Datenstrom-Header Block muss ein [**dvinfo**](/windows/desktop/api/strmif/ns-strmif-dvinfo) -streamformatblock folgen.
+Auf den Datenstromheader-Block [](/windows/desktop/api/strmif/ns-strmif-dvinfo) muss ein DVINFO-Datenstromformatabschnitt folgen.
 
-Die tatsächlichen DV-Daten werden als ' \# \# DC '-Blöcke im Block ' MOVI ' gespeichert (der \# \# im-Format stellt den Datenstrom Bezeichner dar). Jeder Block enthält einen Datenrahmen, entweder 10 oder 12 DV-DIF-Sequenzen für 525-60 bzw. 625-50 Systeme. Das DIF-Sequenz Format DV SD ("DVSD") wird in Teil 2 der *Spezifikation für die Verwendung digitaler VCRs* definiert.
+Die tatsächlichen DV-Daten werden als \# \# DC-Blöcke im Block "mung" gespeichert \# \# (das im Format stellt den Datenstrombezeichner dar). Jeder Block enthält einen Datenrahmen, entweder 10 oder 12 DV DIF-Sequenzen für 525-60- bzw. 625-50-Systeme. Das DV SD-DIF-Sequenzformat ('dvsd') ist in Teil 2 der *Spezifikation der Consumer-use Digital VCRs* definiert.
 
-Das folgende Beispiel zeigt das AIFF-Riff Formular für eine AVI-Datei mit einem DV-Datenstrom, der mit abgeschlossenen Header Blöcken erweitert wurde.
+Das folgende Beispiel zeigt das Formular AIFF DATEIFORMAT für eine AVI-Datei mit einem DV-Datenstrom, erweitert mit abgeschlossenen Headerblöcken.
 
 
 ```C++
@@ -90,24 +90,24 @@ Das folgende Beispiel zeigt das AIFF-Riff Formular für eine AVI-Datei mit einem
 
 
 
-**AVI-Dateien mit DV-Video-und DV-Audiostreams (Type-2)**
+**AVI-Dateien mit DV-Video- und DV-Audio-Streams (Typ-2)**
 
-Verschachtelte DV-Daten können in einen Videostream und einen bis vier Audiodatenströme innerhalb einer AVI-Riff Datei aufgeteilt werden. Dies hat den Vorteil, dass Sie mit Video für Windows abwärts kompatibel sind, da es einen standardmäßigen Video-"vids"-Stream und mindestens einen Standardaudiostream "auds" enthält. der Hauptnachteil besteht darin, dass das Dateiformat erfordert, dass die Audiodaten redundant als Audiostreams gespeichert werden. Der "Video"-Stream ist tatsächlich der Native, überlappende DV-Datenstrom. Als Standard-"vids"-Stream mit dem Handlertyp "DVSD" wird jedoch der [DV-Video Decoder](dv-video-decoder-filter.md) verwendet. Dieses Format erfordert außerdem die Verwendung des [DV-Splitter](dv-splitter-filter.md) Filters, um die erfassten Dateien zu teilen, bevor Sie als AVI-Dateien geschrieben werden.
+Verschachtelte DV-Daten können in einen Videostream und ein bis vier Audiostreams innerhalb einer AVI-PROTOKOLLDATEI aufgeteilt werden. Dies hat den Vorteil, dass es abwärtskompatibel mit Video für Windows ist, da es einen Standardmäßig-Videostream "vids" und mindestens einen Standardaudiostream "auds" enthält. Der Hauptnachteil besteht darin, dass dieses Dateiformat erfordert, dass die Audiodaten redundant als Audiostreams gespeichert werden. Der Videodatenstrom ist eigentlich der native überlappende DV-Datenstrom. Als Standardstream vom Typ "vids" mit dem Handlertyp "dvsd" wird jedoch der [DV-Videodecoder](dv-video-decoder-filter.md) verwendet. Dieses Format erfordert auch die Verwendung des [DV-Splitterfilters,](dv-splitter-filter.md) um "erfasste" Dateien aufzuteilen, bevor sie als AVI-Dateien geschrieben werden.
 
-DV-Daten können als Videostream mit einer separaten Anzahl von Audiostreams in einer AVI-Riff Datei gespeichert werden. Der Videostream wird mit einem Standard-videostreamheader angegeben (der Wert des **fcctype** -Members ist ' vids '). Der **fccHandler** -Member ist als "DVSD", "dvhd" oder "dvsl" angegeben. Die Frames pro Sekunde des Videodaten Stroms müssen in den Elementen " **dwrate** " und " **dwscale** " und der Gesamtzahl der Video Blöcke im "MOVI"-Segment im **dwLength** -Element angegeben werden.
+DV-Daten können als Videodatenstrom mit einer separaten Anzahl von Audiostreams in einer AVI DATEIFORMAT-Datei gespeichert werden. Der Videostream wird mit einem Standard-Videostreamheader angegeben (der **fccType-Memberwert** ist "vids"). Der **fccHandler-Member** wird als "dvsd", "dvhd" oder "dvsl" angegeben. Die Frames pro Sekunde des Videodatenstroms müssen in den **DwRate-** und **dwScale-Membern** und der Gesamtanzahl von Videoblöcken im Block "mlappen" im **dwLength-Element** angegeben werden.
 
-In dieser AVI-Datei mit DV-Video als ' vids '-Stream und DV-Audiodaten als ' auds '-Datenströme Form von DV ist das Format Block für den Videostream eine standardmäßige [**BITMAPINFOHEADER**](/windows/win32/api/wingdi/ns-wingdi-bitmapinfoheader) -Struktur. Der Block für den Datenstrom Format kann optional so erweitert werden, dass er den [**dvinfo**](/windows/desktop/api/strmif/ns-strmif-dvinfo) -Block einschließt, indem die Segmentgröße des Datenstroms von 40 Byte (Größe der **BITMAPINFOHEADER** -Struktur) auf 72 bytes (Größe der BITMAPINFOHEADER-Plus **dvinfo** -Strukturen) und unmittelbar nach der **BITMAPINFOHEADER** -Datenstruktur mit einer **dvinfo** 
+In dieser AVI-Datei mit DV-Video als "vids"-Stream und DV-Audio als DV-Datenstromform "auds" ist der Block für das Videostreamformat eine standardmäßige [**BITMAPINFOHEADER-Struktur.**](/windows/win32/api/wingdi/ns-wingdi-bitmapinfoheader) Der Datenstromformat-Block kann optional um den [**DVINFO-Block**](/windows/desktop/api/strmif/ns-strmif-dvinfo) erweitert werden, indem die Größe des Datenstromformatblöckes von 40 Byte (Größe der **BITMAPINFOHEADER-Struktur)** auf 72 Bytes (Größe von **BITMAPINFOHEADER** plus **DVINFO-Strukturen)** erhöht und direkt auf die **BITMAPINFOHEADER-Datenstruktur** mit einer **DVINFO-Datenstruktur** folgt.
 
-Der Audiostream (s) wird mit einem standardaudiostreamheader angegeben (der Wert des **fcctype** -Members ist ' auds '). Der **fccHandler** -Member wird nicht für Audiostreams verwendet.
+Die Audiodatenströme werden mit einem Standard-Audiostreamheader angegeben (der **fccType-Memberwert** ist "auds"). Der **fccHandler-Member** wird nicht für Audiostreams verwendet.
 
-Die DV-Videodaten werden als ' \# \# DC '-Blöcke gespeichert, wie in der vorherigen Beschreibung einer AVI-Datei mit einem DV-Daten definiert, und die Audiodaten werden als ' \# \# WB '-Blöcke im Block ' MOVI ' gespeichert.
+Die DV-Videodaten werden als \# \# "dc"-Blöcke gespeichert, wie in der vorherigen Beschreibung einer AVI-Datei mit einer DV-Daten definiert, und die Audiodaten werden als \# \# wb-Blöcke im Block "m untereinander" gespeichert.
 
 > [!Note]  
-> Die *Angabe von "Consumer-use Digital VCRs* " ist möglicherweise in einigen Sprachen und Ländern nicht verfügbar.
+> Die *Spezifikation von consumer-use Digital VCRs* ist in einigen Sprachen und Ländern möglicherweise nicht verfügbar.
 
  
 
-Im folgenden Beispiel wird das AIFF-Riff Formular für eine AVI-Datei gezeigt, die das DV-Video als "vids"-Stream und DV-Audiodaten mit abgeschlossenen Header Blöcken erweitert hat (einschließlich Optionaler [**dvinfo**](/windows/desktop/api/strmif/ns-strmif-dvinfo) -Daten, die auf die BitmapInfo im unter Abschnitt " [**strinmapinfo**](/windows/win32/api/wingdi/ns-wingdi-bitmapinfo) " für den "vids"-Datenstrom folgen).
+Das folgende Beispiel zeigt das AIFF-FORMULAR FÜR EINE AVI-Datei mit DV-Video als "vids"-Stream und DV-Audio als "auds"-Datenströme, die mit abgeschlossenen Headerblöcken erweitert wurden (einschließlich optionaler [**DVINFO-Daten**](/windows/desktop/api/strmif/ns-strmif-dvinfo) nach [**der BITMAPINFO**](/windows/win32/api/wingdi/ns-wingdi-bitmapinfo) im Unterabschnitt "strf" für den Datenstrom "vids").
 
 
 ```C++
@@ -194,7 +194,7 @@ Im folgenden Beispiel wird das AIFF-Riff Formular für eine AVI-Datei gezeigt, d
 
 <dl> <dt>
 
-[AVI-Datei Format](avi-file-format.md)
+[AVI-Dateiformat](avi-file-format.md)
 </dt> </dl>
 
  

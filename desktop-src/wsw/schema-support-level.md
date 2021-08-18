@@ -1,222 +1,222 @@
 ---
-title: Ebene der Schema Unterstützung
-description: In diesem Abschnitt werden die Details zur Ebene der Schema Unterstützung behandelt.
+title: Schemaunterstützungsebene
+description: In diesem Abschnitt werden die Details zur Ebene der Schemaunterstützung behandelt.
 ms.assetid: ca18306e-6d67-406d-9c42-4be159a0b81f
 keywords:
-- Schema Unterstützungs Ebene-Webdienste für Windows
-- Wwsapi
+- Webdienste auf Schemaunterstützungsebene für Windows
+- WWSAPI
 - WWS
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 5aa50eef8835f643abb668b439160ea733bf5160
-ms.sourcegitcommit: 5b98bf8c68922f8f03c14f793fbe17504900559c
+ms.openlocfilehash: 4d6cae112e074d50b90425c1d8952f3b6c06463378d73767346742193b406d2b
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/12/2021
-ms.locfileid: "104554501"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119026282"
 ---
-# <a name="schema-support-level"></a>Ebene der Schema Unterstützung
+# <a name="schema-support-level"></a>Schemaunterstützungsebene
 
-In diesem Abschnitt werden die Details zur Ebene der Schema Unterstützung behandelt.
+In diesem Abschnitt werden die Details zur Ebene der Schemaunterstützung behandelt.
 
 
-Das Schema unterstützt direkt Folgendes:
+Das Schema unterstützt Folgendes direkt:
 
 -   Sequenzen von Elementen.
 -   Ableitung von Elementtypen.
--   Einfache Auswahl von Elementen (solche, die einer markierten Union zugeordnet sind).
--   Grundlegende Typen, die durch das XSD/.net-Binärformat definiert sind, einschließlich Bereiche (min/max).
--   Einfache Unterstützung für ein beliebiges Element (keine Einschränkungen für den Elementtyp).
+-   Einfache Auswahlmöglichkeiten von Elementen (elemente, die einer markierten Union zugeordnet sind).
+-   Grundlegende Typen, die durch das XSD-/.NET-Binärformat definiert werden, einschließlich Bereichen (min/max).
+-   Einfache Unterstützung für jedes Element (keine Einschränkungen für den Elementtyp).
 -   Optionale Elemente und Attribute mit Standardwerten.
 -   Wiederholen von Elementen mit Bereichen (min/max).
 -   Nillable-Elemente.
 
-Das Schema unterstützt Folgendes nicht direkt (was das "Fallback"-Verhalten impliziert):
+Das Schema unterstützt Folgendes nicht direkt (was das Fallbackverhalten impliziert):
 
--   Benutzerdefinierte Basis Typen.
--   Kompliziertere Auswahlmöglichkeiten.
--   Unbekannte Attribute werden abgelehnt.
--   Roundtrip für unbekannte Attribute.
+-   Benutzerdefinierte Basistypen.
+-   Kompliziertere Optionen.
+-   Ablehnen unbekannter Attribute.
+-   Roundtrips für unbekannte Attribute.
 -   Kompliziertere Unterstützung für jedes Element.
--   Das All-Konstrukt.
+-   Das all-Konstrukt.
 -   Key/keyref.
 
-Im folgenden finden Sie eine ausführliche Aufschlüsselung der Unterstützung unterschiedlicher Schema Komponenten. Sie wird mit einem Datenvertrag in WCF verglichen, weil die Funktions Ähnlichkeit besteht. Der Unterschied wird beschrieben.
+Im Folgenden finden Sie eine ausführliche Aufschlüsselung der Unterstützung verschiedener Schemakomponenten. Es wird mit dem Datenvertrag in WCF verglichen, da die Funktionalität ähnlich ist. Der Unterschied wird beschrieben.
 
-Im Allgemeinen gilt für Fall Back Verhalten:
+Im Allgemeinen gilt für Fallbackverhalten:
 
--   Attribute werden auf die WS- \_ Zeichenfolge unterstützt.
--   der Inhalt des Elements wird auf den WS-XML-Puffer unterstützt \_ \_ .
--   complexType wird auf eine Struktur unterstützt, die ein Feld mit dem WS- \_ XML- \_ Puffer enthält.
--   Einfache Typen werden auf die WS- \_ Zeichenfolge unterstützt.
+-   -Attribute werden auf WS \_ STRING zurückverlegt.
+-   -Elementinhalt wird auf WS \_ XML BUFFER zurückverlegt. \_
+-   complexType wird auf eine Struktur mit einem Feld von WS \_ XML BUFFER zurückverlegt. \_
+-   Einfache Typen werden auf WS \_ STRING zurückverlegt.
 
-wsutil generiert Warnungen für Schema Komponenten, die derzeit nicht vollständig unterstützt werden. Die Anwendung muss möglicherweise eine zusätzliche Überprüfung durchführen, damit diese Komponenten benötigt werden. Die Überstunden "wsutil" kann verbessert werden, um einige der Funktionen zu verarbeiten, die derzeit in der Laufzeit unterstützt werden, z. b. Standardwert wsutil kann auch zusammen mit der Serialisierung verbessert werden, um andere Features wie Abstract zu unterstützen. Die Anzahl der nicht unterstützten Schema Komponenten kann im Laufe der Zeit reduziert werden.
+wsutil generiert Warnungen für Schemakomponenten, die derzeit nicht vollständig unterstützt werden. Die Anwendung muss möglicherweise eine zusätzliche Überprüfung für diese Komponenten durchführen. Overtime wsutil kann verbessert werden, um einige der Features zu verarbeiten, die derzeit zur Laufzeit unterstützt werden, z. B. die Unterstützung von Standardwerten. wsutil kann auch zusammen mit der Serialisierung verbessert werden, um andere Features wie abstract zu unterstützen. Die Anzahl der nicht unterstützten Schemakomponenten kann im Laufe der Zeit reduziert werden.
 
-## <a name="the-overall-schema-document"></a>Das Gesamt Schema Dokument
+## <a name="the-overall-schema-document"></a>Das allgemeine Schemadokument
 
-Eine globale Definition, die sich möglicherweise auf eingebettete Definitionen im Schema auswirkt. Dabei handelt es sich um globale Attribute, die auf alle Definitionen im Schema anwendbar sind.
+Globale Definition, die sich auf eingebettete Definitionen im Schema auswirken kann. Dies sind globale Attribute, die auf alle Definitionen im Schema anwendbar sind.
 
-<xs: Schema> Attribute
+<xs:schema> Attribute
 
--   attributefromdefault wird ignoriert.
--   blockDefault wird ignoriert.
--   Element Form Default wird ignoriert. Dies unterscheidet sich von DataContract, da nicht qualifizierte Elemente in der Laufzeit unterstützt werden.
--   finalDefault wird ignoriert. Es gibt keine Unterstützung für die C-Sprache für das Konzept von "Final".
--   ID wurde ignoriert.
--   targetNamespace wird unterstützt und dem Dienst Namespace zugeordnet.
--   die Version wurde ignoriert.
+-   attributeFromDefault Ignored.
+-   blockDefault Ignored.
+-   elementFormDefault Ignored. Dies unterscheidet sich von dataContract, da nicht qualifizierte Elemente zur Laufzeit unterstützt werden.
+-   finalDefault Ignored. Es gibt keine C-Sprachunterstützung für das Konzept von final.
+-   id Ignoriert.
+-   targetNamespace Wird unterstützt und dem Dienstnamespace zugeordnet.
+-   Version ignoriert.
 
-<xs: Schema> Inhalt
+<xs:schema> Inhalte
 
--   Unterstützte einschließen; wsutil erfordert, dass alle erforderlichen Definitionen während der Kompilierungszeit als Eingabedateien verfügbar sind.
--   neu definieren wird ignoriert. Dies wird von wsutil nicht unterstützt.
--   Import wird unterstützt. wsutil erfordert, dass alle erforderlichen Definitionen während der Kompilierungszeit als Eingabedateien verfügbar sind.
--   simpleType unterstützt: siehe Abschnitt "einfacher Typ" weiter unten.
--   ComplexType unterstützt-siehe Abschnitt ' complexType '
--   die Gruppe wird ignoriert.
--   attributeGroup wird ignoriert.
--   unterstütztes Element; wird globalen Element Definitionen zugeordnet.
--   unterstützte Attribute wird globalen Attribut Definitionen zugeordnet.
--   Notation ignoriert
+-   include Unterstützt; wsutil erfordert, dass während der Kompilierung alle erforderlichen Definitionen als Eingabedateien verfügbar sind.
+-   neu definieren Ignoriert. wsutil unterstützt dies nicht.
+-   Import unterstützt; wsutil erfordert, dass während der Kompilierung alle erforderlichen Definitionen als Eingabedateien verfügbar sind.
+-   simpleType Unterstützt: Siehe abschnitt "simple type" weiter unten.
+-   complexType unterstützt – siehe Abschnitt "complexType".
+-   gruppe Ignoriert.
+-   attributeGroup Ignoriert.
+-   Unterstütztes Element; wird globalen Elementdefinitionen zugeordnet.
+-   unterstütztes Attribut; wird globalen Attributdefinitionen zugeordnet.
+-   notation Ignored
 
 ## <a name="complex-type"></a>Komplexer Typ
 
-Ein komplexer Typ, der durch <xs: complexType-> dargestellt wird, kann eine Einschränkung des einfachen Typs oder komplexen Typs, der Erweiterung von einfachem Typ, Arrays oder Strukturen sein. Beachten Sie, dass in der Erweiterung von einfachen Typen keine Vererbung und keine xsi: Type-Unterstützung vorhanden ist.
+Komplexer Typ, der durch <xs:complexType> dargestellt wird, kann eine Einschränkung des einfachen Typs oder komplexen Typs, der Erweiterung eines einfachen Typs, von Arrays oder einer Struktur sein. Es wurde festgestellt, dass in Erweiterungen einfacher Typen keine Vererbung und keine xsi:type-Unterstützung vorhanden ist.
 
-<xs: complexType-> Attribute
+<xs:complexType> Attribute
 
--   Abstract generieren Sie eine Warnung zu einer nicht unterstützten Funktion, ohne Änderungen an der Codegenerierung.
--   Block Generieren von Warnungen zu nicht unterstützter Funktion, keine Änderung der Codegenerierung.
--   abschließende Generierung von Warnungen zu nicht unterstützter Funktion, keine Änderung der Codegenerierung.
--   ID wurde ignoriert.
--   gemischt generiert eine Warnung über nicht unterstützte Funktion, Fall Back auf die Struktur mit dem WS- \_ XML- \_ Puffer, wenn true.
--   der Name wird unterstützt und dem Strukturtyp Namen zugeordnet.
+-   abstract Generiert eine Warnung zu nicht unterstützten Features, keine Änderung an der Codegenerierung.
+-   block Generiert eine Warnung zu nicht unterstützten Features, keine Änderung an der Codegenerierung.
+-   final Warnung zu nicht unterstützter Funktion generieren, keine Änderung an der Codegenerierung.
+-   id Ignoriert.
+-   Mixed Warnung zu nicht unterstützter Funktion generieren, Fallback zur Struktur mit WS \_ XML \_ BUFFER bei TRUE.
+-   name Unterstützt und strukturtypname zugeordnet.
 
-<xs: complexType> Inhalt
+inhalt <xs:complexType>
 
-Dies ist eine Typdefinition für die-Struktur. die complexContent-Einschränkung wird nicht unterstützt.
+Dies ist die Typdefinition für structure. die ComplexContent-Einschränkung wird nicht unterstützt.
 
--   complexContent unterstützt komplexe Inhalts Erweiterungen. Wird der Struktur Vererbung zugeordnet.
--   Gruppieren Sie derzeit ein Fall Back auf die Struktur mit dem WS- \_ XML- \_ Puffer Feld. Kann gemäß dem untergeordneten Partikel unterstützt werden.
--   Auswahl wird als Union unterstützt. Dies wird im Datenvertrag nicht unterstützt.
--   Sequence supported-Zuordnungen zu Feldern einer Struktur
--   das Attribut wird mit einer Ausnahme von "verboten" unterstützt. Fall Back auf die Struktur mit dem WS- \_ XML- \_ Puffer, wenn ' unzulässig ' ist.
--   attributeGroup unterstützt-Zuordnungs Sequenz von Attributen
--   anyAttribute wird ignoriert.
--   Attributegroupref unterstützt: entspricht der Sequenz von Attributen.
--   Groupref führt zurzeit ein Fall Back auf die Struktur mit dem WS \_ XML- \_ Puffer Feld aus Kann entsprechend der darunter liegenden Gruppe unterstützt werden.
--   Alle unterstützten, dem XML-Puffer Zuordnungen \_
--   (leer) unterstützte Zuordnung zu leerer Struktur Beschreibung ohne generierte Struktur.
+-   complexContent Unterstützt komplexe Inhaltserweiterungen. Karten, um die Vererbung zu strukturen.
+-   group Derzeit fallback to structure with WS XML BUFFER field (Derzeit Fallback zur Struktur mit dem \_ WS-XML-PUFFERfeld). \_ Kann entsprechend dem darunter liegenden Partikel unterstützt werden.
+-   Die Auswahl wird als Union unterstützt. Dies wird im Datenvertrag nicht unterstützt.
+-   Sequence Supported – Zuordnung zu Feldern einer Struktur
+-   -Attribut, das mit einer Ausnahme von "prohibited" unterstützt wird. fallback to structure with WS \_ XML \_ BUFFER if 'prohibited'.
+-   attributeGroup unterstützt – Zuordnung zur Sequenz von Attributen
+-   anyAttribute Ignored
+-   AttributeGroupRef unterstützt : Wird der Sequenz von Attributen zugeordnet.
+-   GroupRef: Derzeit wird ein Fallback auf die Struktur mit dem WS \_ XML \_ BUFFER-Feld verwendet. Kann entsprechend der darunter liegenden Gruppe unterstützt werden.
+-   Unterstützt, XML BUFFER zugeordnet \_
+-   (blank) Unterstützte Zuordnung zu einer leeren Strukturbeschreibung ohne generierte Struktur.
 
 <xs:sequence> in einem komplexen Typ: Inhalt
 
-die Sequenz von minvorkommen = 1 und maxvorkommen = 1 wird von wsutil nur vollständig unterstützt. Andernfalls wird der komplexe Typ zurzeit auf den WS-XML-Puffer unterstützt \_ \_ . Sie kann als Array von Strukturen unterstützt werden.
+wsutil unterstützt nur die Sequenz von minOccurs = 1 und maxOccurs = 1 vollständig. andernfalls wird der komplexe Typ derzeit auf WS \_ XML BUFFER zurückverlegt. \_ Sie kann als Array von -Strukturen unterstützt werden.
 
--   unterstütztes Element; jede Instanz wird einem Feld in der Struktur zugeordnet.
--   Gruppen Fallback; der complexType ist ein Fall Back auf den WS- \_ XML- \_ Puffer.
--   Alle Fallbacks; der complexType ist ein Fall Back auf den WS- \_ XML- \_ Puffer.
--   Auswahl wird unterstützt. Ordnen Sie dem Union-Feld zu.
--   Sequenz Fall Back; der complexType ist ein Fall Back auf den WS- \_ XML- \_ Puffer.
--   Alle unterstützten; dem XML- \_ Puffer zugeordnet.
--   (leer) unterstützt; ComplexType kann eine leere Struktur sein, wenn keine Attribute vorhanden sind.
+-   Unterstütztes Element; jede Instanz wird einem Feld in der -Struktur zugeordnet.
+-   Gruppenfallback; complexType ist ein Fallback auf WS \_ XML \_ BUFFER.
+-   Alle Fallbacks; complexType ist ein Fallback auf WS \_ XML \_ BUFFER.
+-   Unterstützte Auswahl; Dem Union-Feld zuordnen.
+-   Sequenzfallback; complexType ist ein Fallback auf WS \_ XML \_ BUFFER.
+-   unterstützt; zugeordnet zu XML \_ BUFFER.
+-   (leer) unterstützt; complexType kann eine leere Struktur sein, wenn keine Attribute vorhanden sind.
 
 ## <a name="elements"></a>Elemente
 
-<xs: Element>kann in drei Kontexten vorkommen.
+<xs:element->kann in drei Kontexten auftreten.
 
--   Er kann in einem <xs: Sequence-> auftreten, der ein Feld einer regulären Struktur beschreibt. In diesem Fall muss das maxvorkommen-Attribut 1 sein. Das-Feld ist optional, wenn minvorkommen den Wert 0 hat.
--   Er kann in einem <xs: Sequence-> auftreten, der ein Feld eines Arrays beschreibt. In diesem Fall muss das maxvorkommen-Attribut größer als 1 oder unbegrenzt sein.
--   Sie kann in einem <xs: Schema-> als eine globale Element Beschreibung auftreten.
+-   Er kann innerhalb eines <xs:sequence-> auftreten, das ein Feld einer regulären Struktur beschreibt. In diesem Fall muss das maxOccurs-Attribut 1 sein. Das Feld ist optional, wenn minOccurs 0 ist.
+-   Er kann innerhalb eines <xs:sequence-> auftreten, der ein Feld eines Arrays beschreibt. In diesem Fall muss das maxOccurs-Attribut größer als 1 oder "ungebunden" sein.
+-   Er kann innerhalb eines <xs:schema-> als globale Elementbeschreibung auftreten.
 
-<xs: Element> in einer <xs: Sequence> oder <xs: Choice-> als Feld in einer Struktur
+<xs:element> innerhalb eines <xs:sequence-> oder <xs:choice-> als Feld in einer Struktur
 
--   Verweis wird unterstützt. aufgelöst, um auf das globale Element zu verweisen.
--   Name unterstützt, wird dem Feldnamen zugeordnet.
--   der Typ wird unterstützt, der Feldtyp zugeordnet. Weitere Informationen finden Sie unter "Typzuordnung". Wenn nicht angegeben (und das Element keinen anonymen Typ enthält), wird xs: anyType angenommen.
--   Block Generieren von Warnungen zu nicht unterstützter Funktion, keine Änderung der Codegenerierung.
--   standardmäßige Generierung von Warnungen zu nicht unterstützter Funktion, keine Änderung der Codegenerierung.
--   korrigiert: Warnung zu nicht unterstütztem Feature generieren, keine Änderung der Codegenerierung.
--   das Formular wird ignoriert. Unsere Serialisierungsebene unterstützt sowohl qualifizierte als auch nicht qualifizierte Formulare.
--   ID wurde ignoriert.
--   maxvorkommen ist einem einzelnen Datenfeld zugeordnet, wenn 1 entspricht. Sie wird einem Array Feld (sich wiederholendes Element) zugeordnet, wenn maxvorkommen größer als 1 ist.
--   minvorkommen wenn 0, werden die Feld Optionen auf Feld optional festgelegt \_ , wenn nillable nicht festgelegt ist.
--   nillable: das Feld ist nillable. Ausführlichere Informationen finden Sie unter [Serialisierung](serialization.md) .
+-   ref unterstützt; aufgelöst, um auf das globale Element zu verweisen.
+-   name Unterstützt, wird dem Feldnamen zugeordnet.
+-   Der Typ Wird unterstützt, wird dem Feldtyp zugeordnet. Weitere Informationen finden Sie unter "Typzuordnung". Wenn keine Angabe erfolgt (und das Element keinen anonymen Typ enthält), wird xs:anyType angenommen.
+-   block Generiert eine Warnung zu nicht unterstützten Features, keine Änderung an der Codegenerierung.
+-   Standard: Warnung zu nicht unterstützten Funktionen generieren, keine Änderung an der Codegenerierung.
+-   Behoben: Warnung zu nicht unterstütztem Feature generieren, keine Änderung an der Codegenerierung.
+-   Formular Ignoriert. Unsere Serialisierungsebene unterstützt sowohl qualifizierte als auch nicht qualifizierte Formulare.
+-   id Ignoriert.
+-   maxOccurs wird einem einzelnen Datenfeld zugeordnet, wenn gleich 1 ist. sie wird einem Arrayfeld (sich wiederholendes Element) zugeordnet, wenn maxOccurs größer als 1 ist.
+-   minOccurs wenn 0, werden die Feldoptionen auf FIELD \_ OPTIONAL festgelegt, wenn nillable nicht festgelegt ist.
+-   nillable Das Feld ist nillable. Weitere Informationen finden Sie unter [Serialisierung.](serialization.md)
 
-<xs: Element> als globales Element: Attribute
+<xs:element> als globales Element: Attribute
 
-die Attribute minvorkommen und maxvorkommen sind als globale Element Beschreibung ungültig. Die Anwendung kann die generierte Element Beschreibung in der Serialisierungsebene oder auf Kanal Ebenen direkt verwenden.
+Die Attribute minOccurs und maxOccurs sind als globale Elementbeschreibung ungültig. Die Anwendung kann die generierte Elementbeschreibung direkt in der Serialisierungsschicht oder in Kanalebenen verwenden.
 
--   Abstract generieren Sie eine Warnung zu einer nicht unterstützten Funktion, ohne Änderungen an der Codegenerierung.
--   Block Generieren von Warnungen zu nicht unterstützter Funktion, keine Änderung der Codegenerierung.
--   standardmäßige Generierung von Warnungen zu nicht unterstützter Funktion, keine Änderung der Codegenerierung.
--   abschließende Generierung von Warnungen zu nicht unterstützter Funktion, keine Änderung der Codegenerierung.
--   korrigiert: Warnung zu nicht unterstütztem Feature generieren, keine Änderung der Codegenerierung.
--   ID wurde ignoriert.
--   Name unterstützt: Ordnen Sie den Namen der globalen Element Beschreibung zu und ist die Basis für den anonymen Typ, wenn angegeben.
--   nillable ignoriert: die Anwendung muss mit dem richtigen Flag aufgerufen werden.
--   substitutionGroup Fall Back auf Struktur mit WS- \_ XML- \_ Puffer, sofern festgelegt. "substitutionGroup" wird von wsutil nicht unterstützt.
--   der Typ wird unterstützt und dem Typ des Elements zugeordnet.
+-   abstract Generiert eine Warnung zu nicht unterstützten Features, keine Änderung an der Codegenerierung.
+-   block Generiert eine Warnung zu nicht unterstützten Features, keine Änderung an der Codegenerierung.
+-   Standard: Warnung zu nicht unterstützten Funktionen generieren, keine Änderung an der Codegenerierung.
+-   final Warnung zu nicht unterstützter Funktion generieren, keine Änderung an der Codegenerierung.
+-   Behoben: Warnung zu nicht unterstütztem Feature generieren, keine Änderung an der Codegenerierung.
+-   id Ignoriert.
+-   name Supported: Ordnen Sie dem Namen der beschreibung des globalen Elements zu, und ist die Basis für den anonymen Typ, wenn angegeben.
+-   nillable Ignored-application muss mit dem rechten Flag aufrufen.
+-   ersatzGroup fallback to structure with WS XML BUFFER (Fallback zur Struktur mit WS \_ XML \_ BUFFER, falls festgelegt). wsutil unterstützt substitutionGroup nicht.
+-   Geben Sie Unterstützt ein, und ordnen Sie dem Typ des Elements zu.
 
-<xs: Element> als globales Element: Content
+<xs:element> als globales Element: contents
 
--   simpleType wird unterstützt. wird der Typdefinition zugeordnet.
--   complexType wird unterstützt. wird einem komplexen Typ zugeordnet.
--   eindeutige Generierung von Warnungen zu nicht unterstützter Funktion, keine Änderung der Codegenerierung. "wsutil" unterstützt keine Element Einschränkungen.
--   Schlüssel generiert Warnung zu nicht unterstützter Funktion, keine Änderung der Codegenerierung. "wsutil" unterstützt keine Element Einschränkungen.
--   keyref generiert eine Warnung über eine nicht unterstützte Funktion, keine Änderung der Codegenerierung. "wsutil" unterstützt keine Element Einschränkungen.
--   Blitz Unterstützt ein Element ohne Typangabe wird als xs: anyType behandelt.
+-   simpleType unterstützt; wird der Typdefinition zugeordnet.
+-   complexType unterstützt; wird einem komplexen Typ zugeordnet.
+-   unique Warnung zu nicht unterstützter Funktion generieren, keine Änderung an der Codegenerierung. wsutil unterstützt keine Elementeinschränkungen.
+-   Schlüssel Generiert eine Warnung zu nicht unterstützten Funktionen, keine Änderung an der Codegenerierung. wsutil unterstützt keine Elementeinschränkungen.
+-   keyref Generiert eine Warnung zu nicht unterstützten Features, keine Änderung an der Codegenerierung. wsutil unterstützt keine Elementeinschränkungen.
+-   (leer) Unterstützt; -Element ohne Typspezifikation wird als xs:anyType behandelt.
 
 ## <a name="simple-types"></a>Einfache Typen
 
-<xs: simpleType-> Attribute
+<xs:simpleType> Attribute
 
--   Abschließende Generierung von Warnungen zu nicht unterstützter Funktion, keine Änderung der Codegenerierung.
+-   Letzte Warnung generieren zu nicht unterstützten Features, keine Änderung an der Codegenerierung.
 -   ID ignoriert
--   Name unterstützt, wird dem Typnamen zugeordnet.
+-   Name Unterstützt, wird dem Typnamen zugeordnet.
 
-<xs: simpleType-> Inhalt
+<xs:simpleType> Inhalte
 
--   Unterstützte Einschränkung, wird dem Enumerationstyp oder dem Bereich zugeordnet. Weitere Informationen finden Sie im Abschnitt "xs: simpleType-Einschränkungen".
--   Liste generiert Warnung zu nicht unterstützter Funktion, Fall Back auf XML- \_ Puffer.
--   Union generiert Warnung über nicht unterstützte Funktion, Fall Back auf XML- \_ Puffer.
+-   Einschränkung unterstützt, wird dem Enumerationstyp oder -bereich zugeordnet. Weitere Informationen finden Sie im Abschnitt "xs:simpleType restrictions" (xs:simpleType-Einschränkungen).
+-   Liste Warnung zu nicht unterstützter Funktion generieren, Fallback auf XML \_ BUFFER.
+-   Union Generate warning about unsupported feature, fallback to XML \_ BUFFER.
 
-## <a name="simple-type-restriction"></a>Einschränkung für einfache Typen
+## <a name="simple-type-restriction"></a>Einschränkung des einfachen Typs
 
-Bestimmte Facetten sind in ganzzahligen Typen und Zeichen folgen Typen zulässig, um Unterstützung für Bereiche und Enumerationen zuzulassen.
+Bestimmte Facets sind in ganzzahligen Typen und Zeichenfolgentypen zulässig, um Bereichs- und Enumerationsunterstützung zu ermöglichen.
 
-enumerationsunterstützung
+Enumerationsunterstützung
 
-<xs: Enumeration> einfache Typeinschränkung für den Basistyp der Zeichenfolge als Enumerationstyp behandelt. In diesem Fall muss das Basis Attribut vom Typ "String" sein. In Aufzählungs Fällen werden alle anderen Facetten ignoriert.
+<xs:enumeration> einfache Typeinschränkung für den Basistyp der Zeichenfolge wird als Enumerationstyp behandelt. In diesem Fall MUSS das Base-Attribut zeichenfolgentyp sein. Im Enumerationsfall werden alle anderen Facets ignoriert.
 
-Bereich bei einfacher Typunterstützung
+Bereich für Unterstützung für einfache Typen
 
-Einige Facetten sind Unterstützung für einfache Typen Unterstützung für den Typ. Die folgenden Einschränkungen gelten für ganzzahlige Typen und float/double-Typen. Einfache Typen mit anderen Facetten werden auf den WS- \_ Zeichen Folgentyp unterstützt.
+Einige Facets werden in einfachen Typen unterstützt, die einen effektiven Bereich unterstützen, der für den Typ zulässig ist. Es folgen Einschränkungen für ganzzahlige Typen und float/double-Typen. Einfache Typen mit anderen Facets werden auf den WS STRING-Typ zurückverlegt. \_
 
 -   minExclusive unterstützt
--   unterstützt minInclusive
+-   minInclusive unterstützt
 -   maxExclusive unterstützt
--   unterstützt maxInclusive
--   totalDigits generiert eine Warnung zur nicht unterstützten Funktion, ohne Änderungen an der Codegenerierung.
--   "fractionDigits" generiert eine Warnung zu einer nicht unterstützten Funktion, ohne Änderungen an der Codegenerierung.
--   Länge generiert Warnung zu nicht unterstützter Funktion, keine Änderung der Codegenerierung.
--   MinLength generiert eine Warnung zu einer nicht unterstützten Funktion, ohne Änderungen an der Codegenerierung.
--   MaxLength generiert eine Warnung zur nicht unterstützten Funktion, ohne Änderungen an der Codegenerierung.
--   die Enumeration generiert eine Warnung zu einer nicht unterstützten Funktion, ohne Änderungen an der Codegenerierung.
--   Leerraum generiert Warnung zur nicht unterstützten Funktion, ohne Änderungen an der Codegenerierung.
--   Muster generieren Warnung zu nicht unterstützter Funktion, keine Änderung der Codegenerierung.
--   Blitz Unterstützt.
+-   maxInclusive unterstützt
+-   totalDigits Generiert eine Warnung zu nicht unterstützten Features, keine Änderung an der Codegenerierung.
+-   fractionDigits Generiert eine Warnung zu nicht unterstützten Features, keine Änderung an der Codegenerierung.
+-   length Generiert eine Warnung zu nicht unterstützten Features, keine Änderung an der Codegenerierung.
+-   minLength Generiert eine Warnung zu nicht unterstützten Features, keine Änderung an der Codegenerierung.
+-   maxLength Generiert eine Warnung zu nicht unterstützten Features, keine Änderung an der Codegenerierung.
+-   enumeration Generiert eine Warnung zu nicht unterstützten Features, keine Änderung an der Codegenerierung.
+-   Leerraum Warnung zu nicht unterstütztem Feature generieren, keine Änderung an der Codegenerierung.
+-   Muster Generiert eine Warnung zu nicht unterstützten Features, keine Änderung an der Codegenerierung.
+-   (leer) Unterstützt.
 
-MinLength und MaxLength in der Zeichenfolge werden zurzeit nicht unterstützt, ist aber ein wünschenswert, der unterstützt wird.
+minLength und maxLength für Zeichenfolgen werden derzeit nicht unterstützt, sind aber ein wünschenswertes Feature zur Unterstützung.
 
 ## <a name="inheritance"></a>Vererbung
 
-Wsutil unterstützt die Vererbung komplexer Typen, d. h., eine Struktur kann von einer anderen Struktur erben, ähnlich der Schnittstellen Vererbung in C++. Dies erfolgt über <xs: complexcontentextension>. <xs: simplecontentextension> wird unterstützt, aber als einfache Struktur mit dem Basistyp als erstes Feld anstelle der Typvererbung generiert.
+Wsutil unterstützt die Vererbung komplexer Typen, d. h., eine Struktur kann von einer anderen Struktur erben, ähnlich der Schnittstellenvererbung in C++. Dies erfolgt über <xs:complexContentExtension>. <xs:simpleContentExtension-> wird unterstützt, wird jedoch als einfache Struktur mit Basistyp als erstes Feld anstelle von Typvererbung generiert.
 
 ## <a name="typeprimitive-mapping"></a>Zuordnung von Typen zu primitivem Typen
 
-Bezeichner müssen bei der Übersetzung von NCNames in XML normalisiert werden. Zeichen folgen sind nillable. Zeiger Typen sind nillable. ganzzahlige Typen und float/double sind nillable, und DefaultValue ist auf 0 festgelegt.
+Bezeichner müssen normalisiert werden, wenn sie aus NCNames in XML übersetzt werden. Zeichenfolgen sind nillable; Zeigertypen sind nillable; ganzzahlige Typen und float/double sind nillable, und defaultValue ist auf 0 festgelegt.
 
-![Tabelle, die die Zuordnung zwischen XSD-Typen und sapplidatentypen anzeigt.](images/schematypemap.png)
+![Tabelle mit der Zuordnung zwischen XSD-Typen und Sapphire-Datentypen.](images/schematypemap.png)
 
  
 

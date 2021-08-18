@@ -1,9 +1,9 @@
 ---
-title: 'Texture2D:: gathercmp (S, float, float, int)-Funktion'
-description: 'Für vier textexwerte, die in einem bilinearen Filter Vorgang verwendet werden, wird der Vergleich mit einem Vergleichswert zurückgegeben. | Texture2D:: gathercmp (S, float, float, int)-Funktion'
+title: Texture2D::GatherCmp(S,float,float,int)-Funktion
+description: Für vier Texelwerte, die in einem bilinealen Filtervorgang verwendet werden, gibt ihren Vergleich mit einem Vergleichswert zurück. | Texture2D::GatherCmp(S,float,float,int)-Funktion
 ms.assetid: 1084bcb3-2834-400a-98ff-4e3182f63f20
 keywords:
-- Gathercmp-Funktion HLSL
+- GatherCmp-Funktion HLSL
 topic_type:
 - apiref
 api_name:
@@ -13,16 +13,16 @@ api_type:
 ms.topic: reference
 ms.date: 05/31/2018
 api_location: ''
-ms.openlocfilehash: d6005d8a95d3ec5ed5cddd9c4fbe6a42f36b7f55
-ms.sourcegitcommit: 92e74c99f8f4d097676959d0c317f533c2400a80
+ms.openlocfilehash: ce62ebefdd23b914abbe38b84fe2e04db2200abdfb31a778e7cf8799eb8677b2
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/09/2021
-ms.locfileid: "104981385"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119788330"
 ---
-# <a name="texture2dgathercmpsfloatfloatint-function"></a>Texture2D:: gathercmp (S, float, float, int)-Funktion
+# <a name="texture2dgathercmpsfloatfloatint-function"></a>Texture2D::GatherCmp(S,float,float,int)-Funktion
 
-Für vier textexwerte, die in einem bilinearen Filter Vorgang verwendet werden, wird der Vergleich mit einem Vergleichswert zurückgegeben.
+Für vier Texelwerte, die in einem bilinealen Filtervorgang verwendet werden, gibt ihren Vergleich mit einem Vergleichswert zurück.
 
 ## <a name="syntax"></a>Syntax
 
@@ -42,36 +42,36 @@ float4 GatherCmp(
 *s* \[ in\]
 </dt> <dd>
 
-Typ: **samplercomparisonstate**
+Typ: **SamplerComparisonState**
 
-Der null basierte samplerindex.
+Der nullbasierte Samplerindex.
 
 </dd> <dt>
 
-*Speicherort* \[ in\]
+*location* \[ In\]
 </dt> <dd>
 
 Typ: **float2**
 
-Die Beispiel Koordinaten (u, v).
+Die Beispielkoordinaten (u,v).
 
 </dd> <dt>
 
-*\_ Wert vergleichen* \[ in\]
+*Vergleichen \_ des Werts* \[ in\]
 </dt> <dd>
 
 Typ: **float**
 
-Ein Wert, der jeweils mit jedem Stichproben Wert verglichen werden soll.
+Ein -Wert, der jeweils mit jedem stichprobenentnahmen Wert verglichen werden soll.
 
 </dd> <dt>
 
-*Offset* \[ in\]
+*offset* \[ In\]
 </dt> <dd>
 
 Typ: **int2**
 
-Ein Offset, der vor der Stichprobenentnahme auf die Textur Koordinate angewendet wird.
+Ein Offset, der vor der Stichprobenentnahme auf die Texturkoordinate angewendet wird.
 
 </dd> </dl>
 
@@ -79,17 +79,17 @@ Ein Offset, der vor der Stichprobenentnahme auf die Textur Koordinate angewendet
 
 Typ: **float4**
 
-Ein vier komponentenwert, wobei jede Komponente das Ergebnis eines Vergleichs pro Komponente ist.
+Ein Wert mit vier Komponenten, bei dem jede Komponente das Ergebnis eines Komponentenvergleichs ist.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die Textur Beispiele können für bilineare Interpolationen verwendet werden.
+Die Texturbeispiele können für die bilineare Interpolation verwendet werden.
 
-Diese Funktion wird für die folgenden Typen von Shadern unterstützt:
+Diese Funktion wird für die folgenden Shadertypen unterstützt:
 
 
 
-| Scheitelpunkt | Hülle | Domain | Geometrie | Pixel | Compute |
+| Scheitelpunkt | Rumpf | Domain | Geometrie | Pixel | Compute |
 |--------|------|--------|----------|-------|---------|
 | x      | x    | x      | x        | x     | x       |
 
@@ -101,10 +101,10 @@ Diese Funktion wird für die folgenden Typen von Shadern unterstützt:
 
 <dl> <dt>
 
-[Gathercmp-Methoden](texture2d-gathercmp.md)
+[GatherCmp-Methoden](texture2d-gathercmp.md)
 </dt> <dt>
 
-[Shader-Modell 5](d3d11-graphics-reference-sm5.md)
+[Shadermodell 5](d3d11-graphics-reference-sm5.md)
 </dt> </dl>
 
  

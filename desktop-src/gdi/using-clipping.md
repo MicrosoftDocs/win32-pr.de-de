@@ -1,19 +1,19 @@
 ---
-description: Dieser Abschnitt enthält Beispielcode, in dem gezeigt wird, wie ein Clip Pfad generiert wird, der aus einer Zeichenfolge besteht. Im Beispiel wird eine logische Schriftart erstellt und verwendet, um eine Zeichenfolge innerhalb eines Clip Pfades zu zeichnen, und dann wird der Pfad durch das Zeichnen von horizontalen und vertikalen Linien aufgefüllt.
+description: Dieser Abschnitt enthält Beispielcode, der zeigt, wie ein Clippfad generiert wird, der aus einer Zeichenfolge besteht. Im Beispiel wird eine logische Schriftart erstellt und verwendet, um eine Zeichenfolge innerhalb eines Clippfads zu zeichnen. Anschließend wird der Pfad durch Zeichnen horizontaler und vertikaler Linien auffüllt.
 ms.assetid: c71727aa-f4a3-409e-b50f-709eb4dbdaab
 title: Verwenden von Clipping
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 87a81181c09197fd98b5c84fd6f641ba84445000
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 7f54e4dee790d2891ebf36fb90ff9996b624d3c4d8d053fecae8397a38e043bc
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "104995062"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119037488"
 ---
 # <a name="using-clipping"></a>Verwenden von Clipping
 
-Dieser Abschnitt enthält Beispielcode, in dem gezeigt wird, wie ein Clip Pfad generiert wird, der aus einer Zeichenfolge besteht. Im Beispiel wird eine logische Schriftart erstellt und verwendet, um eine Zeichenfolge innerhalb eines Clip Pfades zu zeichnen, und dann wird der Pfad durch das Zeichnen von horizontalen und vertikalen Linien aufgefüllt.
+Dieser Abschnitt enthält Beispielcode, der zeigt, wie ein Clippfad generiert wird, der aus einer Zeichenfolge besteht. Im Beispiel wird eine logische Schriftart erstellt und verwendet, um eine Zeichenfolge innerhalb eines Clippfads zu zeichnen. Anschließend wird der Pfad durch Zeichnen horizontaler und vertikaler Linien auffüllt.
 
 
 ```C++
@@ -100,7 +100,7 @@ BOOL DoClipPath(LPLOGFONT lplf, LPSTR lpsz)
 
 
 
-Ein Beispiel, das veranschaulicht, wie eine Anwendung einen rechteckigen Clippingbereich erstellt, finden Sie unter [Regionen](regions.md).
+Ein Beispiel, das veranschaulicht, wie eine Anwendung einen rechteckigen Ausschneidebereich erstellt, finden Sie unter [Regionen](regions.md).
 
  
 

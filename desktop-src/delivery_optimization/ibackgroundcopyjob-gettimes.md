@@ -1,11 +1,11 @@
 ---
-title: Ibackgroundcopyjob gettimes-Methode (deliveryoptimization. h)
-description: Ruft auftragsbezogene Zeitstempel ab, z. b. den Zeitpunkt, zu dem der Auftrag erstellt oder zuletzt geändert wurde.
+title: IBackgroundCopyJob GetTimes-Methode (Deliveryoptimization.h)
+description: Ruft auftragsbezogene Zeitstempel ab, z. B. den Zeitpunkt, zu dem der Auftrag erstellt oder zuletzt geändert wurde.
 ms.assetid: 9002FB8D-08CB-4878-980F-15FE0DC952A6
 keywords:
-- Gettimes-Methode
-- Gettimes-Methode, ibackgroundcopyjob-Schnittstelle
-- Ibackgroundcopyjob-Schnittstelle, gettimes-Methode
+- GetTimes-Methode
+- GetTimes-Methode, IBackgroundCopyJob-Schnittstelle
+- IBackgroundCopyJob-Schnittstelle, GetTimes-Methode
 topic_type:
 - apiref
 api_name:
@@ -17,16 +17,16 @@ api_type:
 ms.topic: reference
 ms.date: 05/31/2018
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: 04e779b59e0976e77b287bc575f3b08f8d39340a
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 3179342630fe932dd55efc4e75e15cd06a879d6cdc93005981cc7e0ebca7e05c
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104477031"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119755210"
 ---
-# <a name="ibackgroundcopyjobgettimes-method"></a>Ibackgroundcopyjob:: gettimes-Methode
+# <a name="ibackgroundcopyjobgettimes-method"></a>IBackgroundCopyJob::GetTimes-Methode
 
-Ruft auftragsbezogene Zeitstempel ab, z. b. den Zeitpunkt, zu dem der Auftrag erstellt oder zuletzt geändert wurde.
+Ruft auftragsbezogene Zeitstempel ab, z. B. den Zeitpunkt, zu dem der Auftrag erstellt oder zuletzt geändert wurde.
 
 ## <a name="syntax"></a>Syntax
 
@@ -43,22 +43,22 @@ HRESULT GetTimes(
 
 <dl> <dt>
 
-*ptimes* \[ vorgenommen\]
+*pTimes* \[ out\]
 </dt> <dd>
 
-Enthält auftragsbezogene Zeitstempel. Informationen zu verfügbaren Zeitstempeln finden Sie in der [**BG_JOB_TIMES**](bg-job-times.md) -Struktur.
+Enthält auftragsbezogene Zeitstempel. Informationen zu verfügbaren Zeitstempeln finden Sie in der [**BG_JOB_TIMES-Struktur.**](bg-job-times.md)
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Diese Methode gibt sowohl die folgenden **HRESULT** -Werte als auch andere zurück.
+Diese Methode gibt die folgenden **HRESULT-Werte** sowie andere zurück.
 
 
 
 | Rückgabecode                                                                              | Beschreibung                                         |
 |------------------------------------------------------------------------------------------|-----------------------------------------------------|
-| <dl> <dt>S_OK * * * *</dt> </dl> | Die Zeitstempel konnten erfolgreich abgerufen werden.<br/> |
+| <dl> <dt>S_OK</dt> </dl> | Zeitstempel wurden erfolgreich abgerufen.<br/> |
 
 
 
@@ -70,17 +70,17 @@ Diese Methode gibt sowohl die folgenden **HRESULT** -Werte als auch andere zurü
 
 | Anforderung | Wert |
 |-------------------------------------|-----------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Windows 10, Version 1709, \[ nur Desktop-Apps\]<br/>                                           |
-| Unterstützte Mindestversion (Server)<br/> | Windows Server, Version 1709, \[ nur Desktop-Apps\]<br/>                                       |
-| Header<br/>                   | <dl> <dt>Deliveryoptimization. h</dt> </dl>   |
-| IDL<br/>                      | <dl> <dt>Deliveryoptimization. idl</dt> </dl> |
-| Bibliothek<br/>                  | <dl> <dt>Dosvc. lib</dt> </dl>                |
+| Unterstützte Mindestversion (Client)<br/> | Windows 10, nur Desktop-Apps der Version 1709 \[\]<br/>                                           |
+| Unterstützte Mindestversion (Server)<br/> | Windows Server, nur Desktop-Apps der Version 1709 \[\]<br/>                                       |
+| Header<br/>                   | <dl> <dt>Deliveryoptimization.h</dt> </dl>   |
+| Idl<br/>                      | <dl> <dt>DeliveryOptimization.idl</dt> </dl> |
+| Bibliothek<br/>                  | <dl> <dt>Dosvc.lib</dt> </dl>                |
 | DLL<br/>                      | <dl> <dt>Dosvc.dll</dt> </dl>                |
-| IID<br/>                      | IID_IBackgroundCopyJob ist als 37668d37-507E-4160-9316-26306d150b12 definiert.<br/>               |
+| IID<br/>                      | IID_IBackgroundCopyJob ist als 37668D37-507E-4160-9316-26306D150B12 definiert.<br/>               |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 

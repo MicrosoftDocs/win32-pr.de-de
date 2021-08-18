@@ -1,5 +1,5 @@
 ---
-description: Konvertiert eine DEVMODE-Struktur in ein Druck Ticket.
+description: Konvertiert eine DEVMODE-Struktur in ein Druckticket.
 ms.assetid: c03371f8-a978-4fb7-82cc-f76a65f3904c
 title: ConvertDevModeToPrintTicketThunk2-Funktion
 ms.topic: reference
@@ -13,18 +13,18 @@ api_type:
 - DllExport
 api_location:
 - prntvpt.dll
-ms.openlocfilehash: f13d597a11a4d6cfd1ad6f5d70b3a386560f5106
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: d5aea99e54a43eb35f76c719da885f8d7ae0352d47ecff62b7df38de30410025
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106358872"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119950390"
 ---
 # <a name="convertdevmodetoprintticketthunk2-function"></a>ConvertDevModeToPrintTicketThunk2-Funktion
 
-\[Diese Funktion wird nicht unterstützt und wird in zukünftigen Versionen von Windows möglicherweise deaktiviert oder gelöscht. [**Ptconvertdevmodetoprintticket**](/windows/desktop/api/prntvpt/nf-prntvpt-ptconvertdevmodetoprintticket) bietet gleichwertige Funktionen und sollte stattdessen verwendet werden.\]
+\[Diese Funktion wird nicht unterstützt und kann in zukünftigen Versionen von Windows deaktiviert oder gelöscht werden. [**PTConvertDevModeToPrintTicket**](/windows/desktop/api/prntvpt/nf-prntvpt-ptconvertdevmodetoprintticket) bietet entsprechende Funktionen und sollte stattdessen verwendet werden.\]
 
-Konvertiert eine [**DEVMODE**](/windows/win32/api/wingdi/ns-wingdi-devmodea) -Struktur in ein Druck Ticket.
+Konvertiert eine [**DEVMODE-Struktur**](/windows/win32/api/wingdi/ns-wingdi-devmodea) in ein Druckticket.
 
 ## <a name="syntax"></a>Syntax
 
@@ -46,51 +46,51 @@ HRESULT ConvertDevModeToPrintTicketThunk2(
 
 <dl> <dt>
 
-*hprovider* \[ in\]
+*hProvider* \[ In\]
 </dt> <dd>
 
-Ein Handle für einen geöffneten Druck ticketanbieter. Dieses Handle wird von der [**bindptproviderthunk**](bindptproviderthunk.md) -Funktion zurückgegeben.
+Ein Handle für einen offenen Druckticketanbieter. Dieses Handle wird von der [**BindPTProviderThunk-Funktion**](bindptproviderthunk.md) zurückgegeben.
 
 </dd> <dt>
 
-*pdevmode* \[ in\]
+*pDevmode* \[ In\]
 </dt> <dd>
 
-Ein Zeiger auf den zu konvertierenden [**DEVMODE**](/windows/win32/api/wingdi/ns-wingdi-devmodea) -Typ.
+Ein Zeiger auf den zu konvertierende [**DEVMODE.**](/windows/win32/api/wingdi/ns-wingdi-devmodea)
 
 </dd> <dt>
 
-*CBSIZE* \[ in\]
+*cbSize* \[ In\]
 </dt> <dd>
 
-Die Größe (in Bytes) des [**DEVMODE-Ausdrucks**](/windows/win32/api/wingdi/ns-wingdi-devmodea) , der im *pdevmode-Modus* übergeben wird.
+Die Größe des in *pDevmode* übergebenen [**DEVMODE**](/windows/win32/api/wingdi/ns-wingdi-devmodea) in Bytes.
 
 </dd> <dt>
 
-*Bereich* \[ in\]
+*Bereich* \[ In\]
 </dt> <dd>
 
-Ein-Wert, der den Bereich von *ppprintticket* angibt. Dieser Wert kann eine einzelne Seite, ein gesamtes Dokument oder alle Dokumente im Druckauftrag angeben. Der Wert dieses Parameters muss ein Member der [**eprintticketscope**](/windows/desktop/api/prntvpt/ne-prntvpt-eprintticketscope) -Enumeration sein, die als **DWORD** umgewandelt wird.
+Ein -Wert, der den Bereich von *ppPrintTicket* angibt. Dieser Wert kann eine einzelne Seite, ein gesamtes Dokument oder alle Dokumente im Druckauftrag angeben. Der Wert dieses Parameters muss ein Member der [**EPrintTicketScope-Enumeration**](/windows/desktop/api/prntvpt/ne-prntvpt-eprintticketscope) sein, der in **ein DWORD-Element** umformt wird.
 
 </dd> <dt>
 
-*ppprintticket* \[ vorgenommen\]
+*ppPrintTicket* \[ out\]
 </dt> <dd>
 
-Die Adresse des Puffers, der ein Druck Ticket enthält, das den im *pdevmode* weiter gegebenen [**DEVMODE**](/windows/win32/api/wingdi/ns-wingdi-devmodea) -Wert darstellt. Diese Funktion Ruft die [**CoTaskMemAlloc**](/windows/desktop/api/combaseapi/nf-combaseapi-cotaskmemalloc) -Funktion auf, um diesen Puffer zuzuordnen. Wenn der Puffer nicht mehr benötigt wird, muss der Aufrufer ihn durch Aufrufen von [**CoTaskMemFree**](/windows/desktop/api/combaseapi/nf-combaseapi-cotaskmemfree)freigeben.
+Die Adresse des Puffers, der ein Druckticket enthält, das den in *pDevmode* übergebenen [**DEVMODE**](/windows/win32/api/wingdi/ns-wingdi-devmodea) darstellt. Diese Funktion ruft [**CoTaskMemAlloc**](/windows/desktop/api/combaseapi/nf-combaseapi-cotaskmemalloc) auf, um diesen Puffer zuzuordnen. Wenn der Puffer nicht mehr benötigt wird, muss der Aufrufer ihn durch Aufrufen von [**CoTaskMemFree**](/windows/desktop/api/combaseapi/nf-combaseapi-cotaskmemfree)freigeben.
 
 </dd> <dt>
 
-*pcbprintticketlength* \[ vorgenommen\]
+*printTicketLength* \[ out\]
 </dt> <dd>
 
-Die Größe (in Bytes) des in *ppprintticket* zurückgegebenen Druck Tickets.
+Die Größe des in *ppPrintTicket* zurückgegebenen Drucktickets in Bytes.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Wenn die Methode erfolgreich ausgeführt wird, gibt Sie **S \_ OK** zurück; andernfalls wird ein **HRESULT** -Fehlercode zurückgegeben. Weitere Informationen zu COM-Fehlercodes finden Sie unter [Fehlerbehandlung](../com/error-handling-in-com.md).
+Wenn die Methode erfolgreich ausgeführt wird, wird **S \_ OK** zurückgegeben. Andernfalls wird ein **HRESULT-Fehlercode** zurückgegeben. Weitere Informationen zu COM-Fehlercodes finden Sie unter [Fehlerbehandlung.](../com/error-handling-in-com.md)
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -98,20 +98,20 @@ Wenn die Methode erfolgreich ausgeführt wird, gibt Sie **S \_ OK** zurück; and
 
 | Anforderung | Wert |
 |-------------------------------------|----------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows XP \[ -Desktop-Apps\]<br/>                                            |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/>                                   |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur XP-Desktop-Apps\]<br/>                                            |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                                   |
 | DLL<br/>                      | <dl> <dt>Prntvpt.dll</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[Druck Schema](./printschema.md)
+[Druckschema](./printschema.md)
 </dt> <dt>
 
-[**Ptconvertdevmodetoprintticket**](/windows/desktop/api/prntvpt/nf-prntvpt-ptconvertdevmodetoprintticket)
+[**PTConvertDevModeToPrintTicket**](/windows/desktop/api/prntvpt/nf-prntvpt-ptconvertdevmodetoprintticket)
 </dt> <dt>
 
 [Drucken](printdocs-printing.md)

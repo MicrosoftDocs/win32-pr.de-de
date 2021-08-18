@@ -1,39 +1,39 @@
 ---
-title: Ausführen des Beispielprojekts
-description: Ausführen des Beispielprojekts
+title: Ausführen des Beispiel-Project
+description: Ausführen des Beispiel-Project
 ms.assetid: d0c32a75-4d30-408b-8da8-3917f6fd6ea4
 keywords:
-- Windows Media Player Online Stores, Ausführen von Beispielprojekten
-- Online Stores, Ausführen von Beispielprojekten
-- Typ 2 Online Stores, Ausführen von Beispielprojekten
-- Windows Media Player Online Stores, Beispiel Projekte
-- Online Stores, Beispiel Projekte
-- Typ 2 Online Stores, Beispiel Projekte
+- Windows Media Player Onlineshops, Ausführen von Beispielprojekten
+- Onlineshops, Ausführen von Beispielprojekten
+- Geben Sie 2 Onlineshops ein, und führen Sie Beispielprojekte aus.
+- Windows Media Player Onlineshops, Beispielprojekte
+- Onlineshops, Beispielprojekte
+- Geben Sie 2 Onlineshops ein, Beispielprojekte.
 - Ausführen von Beispielprojekten
-- Beispiele, Typ 2 Online Stores
+- Beispiele, Geben Sie 2 Onlineshops ein.
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 4a8f42829add3ffbe5cc026f7dc2451513701fd2
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: 1c98fda14fd14e9808671826db0e0125f5390728a2f9bb17dbb9fb6a4a4287c3
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "104388507"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118995510"
 ---
-# <a name="running-the-sample-project"></a>Ausführen des Beispielprojekts
+# <a name="running-the-sample-project"></a>Ausführen des Beispiel-Project
 
-Die com-Beispiel Komponente veranschaulicht die Funktionen, die von den-Methoden von **iwmpabonptionservices** bereitgestellt werden, indem ein Dialogfeld angezeigt wird, wenn Windows Media Player eine der-Methoden aufruft. Um dies zu sehen, müssen Sie der Bibliothek, die ein **contentdistributor** -Attribut enthält, das mit dem Dienst übereinstimmt, zunächst einige Inhalte hinzufügen. Siehe [Hinzufügen des contentdistributor-Attributs](adding-the-contentdistributor-attribute.md). Verwenden Sie dann Windows Media Player 10 oder höher, um Ihren Online Store zu öffnen, Ihre Premium-Inhalte wiederzugeben und Ihre Premium-Inhalte auf ein Gerät zu kopieren. Windows Media Player instanziiert die com-Beispiel Komponente und ruft ggf. Methoden auf.
+Die COM-Beispielkomponente veranschaulicht die Funktionalität, die von den Methoden von **IWMPSubscriptionServices** bereitgestellt wird, indem ein Dialogfeld angezeigt wird, wenn Windows Media Player eine der Methoden aufruft. Um dies zu sehen, müssen Sie der Bibliothek zunächst Inhalte hinzufügen, die ein **ContentDistributor-Attribut** enthalten, das ihrem Dienst entspricht. Siehe [Hinzufügen des ContentDistributor-Attributs.](adding-the-contentdistributor-attribute.md) Verwenden Sie dann Windows Media Player 10 oder höher, um Ihren Onlineshop zu öffnen, Ihre Premium-Inhalte wiederzuspielen und Ihre Premium-Inhalte auf ein Gerät zu kopieren. Windows Media Player instanziiert ggf. die COM-Beispielkomponente und ruft Methoden auf.
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[**Entwickeln des Plug-Ins für einen Typ 2-Online Store**](building-the-plug-in-for-a-type-2-online-store.md)
+[**Erstellen des Plug-Ins für einen Typ 2 Online Store**](building-the-plug-in-for-a-type-2-online-store.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

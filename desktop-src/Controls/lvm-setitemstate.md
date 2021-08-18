@@ -3,7 +3,7 @@ title: LVM_SETITEMSTATE (Commctrl.h)
 description: Ändert den Zustand eines Elements in einem Listenansicht-Steuerelement. Sie können diese Nachricht explizit oder mithilfe des ListView \_ SetItemState-Makros senden.
 ms.assetid: aecd14dd-cfd0-4c7c-bddc-f65022de68c9
 keywords:
-- LVM_SETITEMSTATE meldungssteuerelemente Windows
+- LVM_SETITEMSTATE von Windows-Steuerelementen
 topic_type:
 - apiref
 api_name:

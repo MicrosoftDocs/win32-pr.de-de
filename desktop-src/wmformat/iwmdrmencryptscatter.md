@@ -1,10 +1,10 @@
 ---
-title: Iwmdrmencryptscatter-Schnittstelle
-description: Die iwmdrmencryptscatter-Schnittstelle entkratzt und verschlüsselt Daten.
+title: IWMDRMEncryptScatter-Schnittstelle
+description: Die IWMDRMEncryptScatter-Schnittstelle entschlüsselt und verschlüsselt Daten.
 ms.assetid: 9cc377bc-ada0-437e-8745-e344e32aff39
 keywords:
-- Iwmdrmencryptscatter-Schnittstelle Windows Media-Format
-- Iwmdrmencryptscatter Interface Windows Media-Format, beschrieben
+- IWMDRMEncryptScatter interface windows Media Format
+- IWMDRMEncryptScatter interface windows Media Format , beschrieben
 topic_type:
 - apiref
 api_name:
@@ -14,39 +14,39 @@ api_type:
 ms.topic: reference
 ms.date: 05/31/2018
 api_location: ''
-ms.openlocfilehash: d04cb781c850bfec1496dbb28ca5e06f8eabab6a
-ms.sourcegitcommit: 592c9bbd22ba69802dc353bcb5eb30699f9e9403
+ms.openlocfilehash: 1d78491e134d8ccaa03e18d0032f4aa4f0adc20f12593424c1baf9763104015d
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "106337455"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119027728"
 ---
-# <a name="iwmdrmencryptscatter-interface"></a>Iwmdrmencryptscatter-Schnittstelle
+# <a name="iwmdrmencryptscatter-interface"></a>IWMDRMEncryptScatter-Schnittstelle
 
-Die **iwmdrmencryptscatter** -Schnittstelle entkratzt und verschlüsselt Daten.
+Die **IWMDRMEncryptScatter-Schnittstelle** entschlüsselt und verschlüsselt Daten.
 
 ## <a name="members"></a>Member
 
-Die **iwmdrmencryptscatter** -Schnittstelle erbt von der [**IUnknown**](/windows/desktop/api/unknwn/nn-unknwn-iunknown) -Schnittstelle. **Iwmdrmencryptscatter** verfügt auch über die folgenden Typen von Membern:
+Die **IWMDRMEncryptScatter-Schnittstelle** erbt von der [**IUnknown-Schnittstelle.**](/windows/desktop/api/unknwn/nn-unknwn-iunknown) **IWMDRMEncryptScatter** verfügt auch über diese Typen von Membern:
 
 -   [Methoden](#methods)
 
 ### <a name="methods"></a>Methoden
 
-Die **iwmdrmencryptscatter** -Schnittstelle verfügt über diese Methoden.
+Die **IWMDRMEncryptScatter-Schnittstelle** verfügt über diese Methoden.
 
 
 
-| Methode                                                                | BESCHREIBUNG                                                            |
+| Methode                                                                | Beschreibung                                                            |
 |:----------------------------------------------------------------------|:-----------------------------------------------------------------------|
-| [**Verschlüsselungs Punkt**](iwmdrmencryptscatter-encryptscatter.md)         | Daten werden entkratzt und verschlüsselt.<br/>                              |
-| [**Initencryptscatter**](iwmdrmencryptscatter-initencryptscatter.md) | Initialisiert die **iwmdrmencryptscatter** -Schnittstelle zur Verwendung.<br/> |
+| [**EncryptScatter**](iwmdrmencryptscatter-encryptscatter.md)         | Entschlüsselt und verschlüsselt Daten.<br/>                              |
+| [**InitEncryptScatter**](iwmdrmencryptscatter-initencryptscatter.md) | Initialisiert die **IWMDRMEncryptScatter-Schnittstelle** zur Verwendung.<br/> |
 
 
 
  
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 

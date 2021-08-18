@@ -1,7 +1,7 @@
 ---
 description: Ändert den Status des Auftrags.
 ms.assetid: 3B11CE45-63E4-43D1-AAF6-02F83C9CBB85
-title: 'Msvm_CopyFileToGuestJob:: requestStateChange-Methode'
+title: Msvm_CopyFileToGuestJob::RequestStateChange-Methode
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,14 +13,14 @@ api_type:
 - COM
 api_location:
 - vmms.exe
-ms.openlocfilehash: adf5d866989f3b3518cf53b52e073239e023e3c7
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 09fdc3a1ee7d0f8942e1e02c5d18f20c42f74db2e65ae065132f164b199ee861
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106349947"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119014338"
 ---
-# <a name="msvm_copyfiletoguestjobrequeststatechange-method"></a>MSVM \_ copyfiletoguestjob:: requestStateChange-Methode
+# <a name="msvm_copyfiletoguestjobrequeststatechange-method"></a>Msvm \_ CopyFileToGuestJob::RequestStateChange-Methode
 
 Ändert den Status des Auftrags.
 
@@ -40,7 +40,7 @@ uint32 RequestStateChange(
 
 <dl> <dt>
 
-*Requestedstate* \[ in\]
+*RequestedState* \[ In\]
 </dt> <dd>
 
 Der neue Zustand. Dies sind die möglichen Werte:
@@ -54,29 +54,29 @@ Der neue Zustand. Dies sind die möglichen Werte:
 
 </dt> <dd>
 
-Ändert den Zustand in "wird ausgeführt".
+Ändert den Status in "Wird ausgeführt".
 
 </dd> <dt>
 
 <span id="Suspend"></span><span id="suspend"></span><span id="SUSPEND"></span>
 
-<span id="Suspend"></span><span id="suspend"></span><span id="SUSPEND"></span>**Aussetzen** (3)
+<span id="Suspend"></span><span id="suspend"></span><span id="SUSPEND"></span>**Suspend** (3)
 
 
 </dt> <dd>
 
-Beendet den Auftrag vorübergehend. Anschließend kann der Client den Auftrag mit "Start" neu starten. Der Client kann möglicherweise den Zustand "Dienst" eingeben, während er angehalten wird (Dies ist Auftrags spezifisch).
+Beendet den Auftrag vorübergehend. Anschließend kann der Client den Auftrag mit "Start" neu starten. Der Client kann möglicherweise den Status "Dienst" eingeben, während er angehalten wird (dies ist auftragsspezifisch).
 
 </dd> <dt>
 
 <span id="Terminate"></span><span id="terminate"></span><span id="TERMINATE"></span>
 
-<span id="Terminate"></span><span id="terminate"></span><span id="TERMINATE"></span>**Beenden** (4)
+<span id="Terminate"></span><span id="terminate"></span><span id="TERMINATE"></span>**Terminate** (4)
 
 
 </dt> <dd>
 
-Beendet den Auftrag ordnungsgemäß, speichert Daten, behält den Zustand bei und schließt alle zugrunde liegenden Prozesse ordnungsgemäß herunter.
+Beendet den Auftrag sauber, wobei Daten gespeichert, der Zustand beibehalten und alle zugrunde liegenden Prozesse in einer geordneten Weise heruntergefahren werden.
 
 </dd> <dt>
 
@@ -87,7 +87,7 @@ Beendet den Auftrag ordnungsgemäß, speichert Daten, behält den Zustand bei un
 
 </dt> <dd>
 
-Beendet den Auftrag sofort, ohne dass es erforderlich ist, Daten zu speichern oder den Zustand beizubehalten.
+Beendet den Auftrag sofort, ohne dass Daten gespeichert oder der Zustand beibehalten werden muss.
 
 </dd> <dt>
 
@@ -98,28 +98,28 @@ Beendet den Auftrag sofort, ohne dass es erforderlich ist, Daten zu speichern od
 
 </dt> <dd>
 
-Versetzt den Auftrag in einen herstellerspezifischen Dienst Zustand. Der Client kann den Auftrag möglicherweise neu starten.
+Versetzt den Auftrag in einen anbieterspezifischen Dienststatus. Der Client kann den Auftrag möglicherweise neu starten.
 
 </dd> <dt>
 
 <span id="DMTF_Reserved"></span><span id="dmtf_reserved"></span><span id="DMTF_RESERVED"></span>
 
-<span id="DMTF_Reserved"></span><span id="dmtf_reserved"></span><span id="DMTF_RESERVED"></span>**DMTF reserviert** (7.. 32767)
+<span id="DMTF_Reserved"></span><span id="dmtf_reserved"></span><span id="DMTF_RESERVED"></span>**DMTF Reserved** (7..32767)
 
 
 </dt> <dd></dd> <dt>
 
 <span id="Vendor_Reserved"></span><span id="vendor_reserved"></span><span id="VENDOR_RESERVED"></span>
 
-<span id="Vendor_Reserved"></span><span id="vendor_reserved"></span><span id="VENDOR_RESERVED"></span>**Anbieter reserviert** (32768.65535)
+<span id="Vendor_Reserved"></span><span id="vendor_reserved"></span><span id="VENDOR_RESERVED"></span>**Reservierter Anbieter** (32768..65535)
 
 
 </dt> <dd></dd> </dl> </dd> <dt>
 
-*Timeoutperiod* \[ in\]
+*TimeoutPeriod* \[ In\]
 </dt> <dd>
 
-Ein Timeout Zeitraum, der die maximale Zeitspanne angibt, die der Client für den Übergang in den neuen Zustand erwartet. Das Intervall Format muss zum Angeben des Timeout Zeitraums verwendet werden. Der Wert 0 oder **null** zeigt an, dass der Client keine Zeitanforderungen für den Übergang hat. Wenn diese Eigenschaft nicht 0 oder **null** enthält und die Implementierung diesen Parameter nicht unterstützt, muss der Rückgabecode 4098 (**use of Timeout Parameter not supported**) zurückgegeben werden.
+Ein Timeoutzeitraum, der die maximale Zeitspanne angibt, die der Client für den Übergang in den neuen Zustand erwartet. Das Intervallformat muss verwendet werden, um den Timeoutzeitraum anzugeben. Der Wert 0 oder **NULL gibt an,** dass der Client keine Zeitanforderungen für den Übergang hat. Wenn diese Eigenschaft nicht 0 oder **NULL** enthält und die Implementierung diesen Parameter nicht unterstützt, muss der Rückgabecode 4098 (**Use Of Timeout Parameter Not Supported**) zurückgegeben werden.
 
 </dd> </dl>
 
@@ -129,18 +129,18 @@ Diese Methode gibt einen der folgenden Werte zurück.
 
 
 
-| Rückgabecode/-wert                                                                                                                                                               | BESCHREIBUNG                                                                        |
+| Rückgabecode/-wert                                                                                                                                                               | Beschreibung                                                                        |
 |---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------|
 | <dl> <dt>**Abgeschlossen ohne Fehler**</dt> <dt>0</dt> </dl>                   | Erfolg.<br/>                                                                |
-| <dl> <dt>**Verwendung des timeout-Parameters wird nicht unterstützt**</dt> <dt>4098</dt> </dl> |                                                                                    |
-| <dl> <dt></dt> Fehler <dt>32768</dt> </dl>                                |                                                                                    |
-| <dl> <dt>**Zugriff verweigert**</dt> <dt>32769</dt> </dl>                         | Zugriff verweigert.<br/>                                                          |
+| <dl> <dt>**Verwendung des Timeoutparameters wird nicht unterstützt**</dt> <dt>4098</dt> </dl> |                                                                                    |
+| <dl> <dt>**Fehler**</dt> <dt>32768</dt> </dl>                                |                                                                                    |
+| <dl> <dt>**Zugriff verweigert**</dt> <dt>32769</dt> </dl>                         | Zugriff verweigert:<br/>                                                          |
 | <dl> <dt>**Nicht unterstützt**</dt> <dt>32770</dt> </dl>                         |                                                                                    |
-| <dl> <dt>**Status ist unbekannt**</dt> <dt>32771</dt> </dl>                     |                                                                                    |
+| <dl> <dt>**Der Status ist unbekannt**</dt> <dt>32771.</dt> </dl>                     |                                                                                    |
 | <dl> <dt>**Timeout**</dt> <dt>32772</dt> </dl>                               |                                                                                    |
 | <dl> <dt>**Ungültiger Parameter**</dt> <dt>32773</dt> </dl>                     |                                                                                    |
 | <dl> <dt>**System wird verwendet**</dt> <dt>32774</dt> </dl>                      |                                                                                    |
-| <dl> <dt>**Ungültiger Status für diesen Vorgang**</dt> <dt>32775</dt> </dl>      | Der im *requestedstate* -Parameter angegebene Wert wird nicht unterstützt.<br/> |
+| <dl> <dt>**Ungültiger Zustand für diesen Vorgang**</dt> <dt>32775</dt> </dl>      | Der im *RequestedState-Parameter angegebene* Wert wird nicht unterstützt.<br/> |
 | <dl> <dt>**Falscher Datentyp**</dt> <dt>32776</dt> </dl>                   |                                                                                    |
 | <dl> <dt>**System ist nicht verfügbar**</dt> <dt>32777</dt> </dl>               |                                                                                    |
 | <dl> <dt>**Nicht genügend Arbeitsspeicher**</dt> <dt>32778</dt> </dl>                         |                                                                                    |
@@ -155,19 +155,19 @@ Diese Methode gibt einen der folgenden Werte zurück.
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | \[Nur Desktop-Apps Windows 8.1\]<br/>                                                            |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2012 R2 \[ -Desktop-Apps\]<br/>                                                 |
-| Namespace<br/>                | \\\\\\Stammvirtualisierung \\ v2<br/>                                                                 |
-| MOF<br/>                      | <dl> <dt>Windowsvirtualization. v2. MOF</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | \[Windows 8.1 Nur Desktop-Apps\]<br/>                                                            |
+| Unterstützte Mindestversion (Server)<br/> | Windows Server 2012 Nur \[ R2-Desktop-Apps\]<br/>                                                 |
+| Namespace<br/>                | \\\\Root \\ Virtualization \\ V2<br/>                                                                 |
+| MOF<br/>                      | <dl> <dt>WindowsVirtualization.V2.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Vmms.exe</dt> </dl>                     |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**MSVM \_ copyfilein guestjob**](msvm-copyfiletoguestjob.md)
+[**Msvm \_ CopyFileToGuestJob**](msvm-copyfiletoguestjob.md)
 </dt> </dl>
 
  

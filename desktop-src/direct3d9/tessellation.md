@@ -4,24 +4,24 @@ ms.assetid: ae39b0e1-d2ae-449e-89db-0a2b24171531
 title: Mosaik (Direct3D 9)
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 82378caac1218158ffc1834c9a9b56fb8cbd250e
-ms.sourcegitcommit: a47bd86f517de76374e4fff33cfeb613eb259a7e
+ms.openlocfilehash: 9aedc6b435c2993e213e8a4445682725ddb4d460c146afbe420da996e3dbb887
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/06/2021
-ms.locfileid: "103746936"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119984830"
 ---
 # <a name="tessellation-direct3d-9"></a>Mosaik (Direct3D 9)
 
-## <a name="tessellator-unit"></a>Mosaik Einheit
+## <a name="tessellator-unit"></a>Tessellator-Einheit
 
-Die Mosaik Einheit wurde erweitert. Sie können es jetzt für Folgendes verwenden:
+Die Mosaikeinheit wurde verbessert. Sie können es jetzt für:
 
--   Führen Sie ein adaptives Mosaik aller höherwertigen primitiven aus.
--   Suchen Sie nach Vertex-Verschiebungs Werten aus einer Verschiebungs Zuordnung, und übergeben Sie Sie an einen Scheitelpunkt-Shader.
--   Unterstützen von Rechteck-Patch-Mosaik. Dies wird durch eine Scheitelpunkt Deklaration mithilfe von D3DDECLMETHOD \_ partialu oder D3DDECLMETHOD \_ partialv angegeben. Wenn eine Scheitelpunkt Deklaration, die diese Methoden enthält, zum Zeichnen eines Dreiecks Patches verwendet wird, schlägt [**IDirect3DDevice9::D rawtripatch**](/windows/desktop/api) fehl. Weitere Informationen zu Vertex-Deklarationen finden Sie unter [**D3DVERTEXELEMENT9**](d3dvertexelement9.md).
+-   Führen Sie ein adaptives Mosaik aller Primitive höherer Ordnung durch.
+-   Suchen Sie werte für vertexbezogene Verschiebungen aus einer Verschiebungszuordnung, und übergeben Sie sie an einen Vertex-Shader.
+-   Unterstützung für Rechteck-Patch-Mosaik. Dies wird durch eine Scheitelpunktdeklaration mit D3DDECLMETHOD \_ PARTIALU oder D3DDECLMETHOD \_ PARTIALV angegeben. Wenn eine Scheitelpunktdeklaration, die diese Methoden enthält, zum Zeichnen eines Dreieckspatches verwendet wird, schlägt [**IDirect3DDevice9::D rawTriPatch**](/windows/desktop/api) fehl. Weitere Informationen zu Scheitelpunktdeklarationen finden Sie unter [**D3DVERTEXELEMENT9.**](d3dvertexelement9.md)
 
-In DirectX 8. x war die Bezeichnung Order tatsächlich der Grad. In Direct3D 9 wird der Grad jetzt durch [**D3DDEGREETYPE**](./d3ddegreetype.md)angegeben.
+In DirectX 8.x war das, was als ORDER bezeichnet wurde, tatsächlich der Grad. In Direct3D 9 wird der Grad jetzt durch [**D3DDEGREETYPE**](./d3ddegreetype.md)angegeben.
 
 
 ```
@@ -38,7 +38,7 @@ In DirectX 8. x war die Bezeichnung Order tatsächlich der Grad. In Direct3D 9 w
 
 
 
-Die Änderung des Grad Typs hat sich auf zwei andere Strukturen ausgewirkt.
+Die Änderung des Gradtyps wirkte sich auf zwei andere Strukturen aus.
 
 
 ```
@@ -69,29 +69,29 @@ typedef struct _D3DRECTPATCH_INFO
 
 
 
-Treiber müssen Kompilierungsfehler beheben, die durch diese Änderung entstehen, wenn Sie mit den neuen Headern kompiliert werden. Es müssen keine Funktionen geändert werden.
+Treiber müssen Kompilierungsfehler beheben, die sich aus dieser Änderung ergeben, wenn sie mit den neuen Headern kompilieren. Die Funktionalität muss nicht geändert werden.
 
 ## <a name="adaptive-tessellation"></a>Adaptive Mosaik
 
-Das Adaptive Mosaik kann auf hochwertige primitive, einschließlich N-Patches, Rechteck Patches und Dreiecks Patches, angewendet werden. Diese Funktion wird durch die D3DRS \_ enableadaptivetess-Funktion aktiviert, und es wird ein Patch basierend auf dem tiefen Wert des Steuerelement Scheitel Punkts im Augenbereich angepasst.
+Adaptive Mosaike können auf primitive Typen hoher Ordnung angewendet werden, einschließlich N-Patches, Rechteckpatches und Dreieckspatches. Dieses Feature wird von D3DRS \_ ENABLEADAPTIVETESSELLATION aktiviert und setzt einen Patch auf Der Grundlage des Tiefenwerts des Steuerpunkts im Augenbereich adaptiver Mosaik.
 
-Die z-Koordinaten (Zi) der Steuerungs Scheitel Punkte (VI), die in den Augenblick (zieye) transformiert werden, indem Sie ein Punktprodukt mit einem 4-Vektor ausführen, werden als tiefen Werte verwendet. Der 4D-Vektor (MDM) wird von der Anwendung mit vier gerenderzuständen (D3DRS \_ adaptivetess \_ X, D3DRS \_ adaptivetess \_ Y, D3DRS \_ adaptivetess \_ Z und D3DRS \_ adaptivetess \_ W) angegeben. Dieser 4-Vektor kann die dritte Spalte der verketteten Welt-und Ansichts Matrizen sein. Sie kann auch verwendet werden, um eine Skalierung auf zieye anzuwenden.
+Die Z-Koordinaten (Zi) von Steuervertices (Vi), die durch Ausführen eines Punktprodukts mit einem 4-Vektor in den Augenbereich (Zieye) transformiert werden, werden als Tiefenwerte verwendet. Der 4D-Vektor (Mdm) wird von der Anwendung mit vier Renderzuständen (D3DRS \_ ADAPTIVETESS \_ X, D3DRS \_ ADAPTIVETESS \_ Y, D3DRS \_ ADAPTIVETESS \_ Z und D3DRS \_ ADAPTIVETESS \_ W) angegeben. Dieser 4-Vektor kann die dritte Spalte der verketteten Welt und der Ansichtsmatrizen sein. Sie kann auch verwendet werden, um eine Skala auf Zieye anzuwenden.
 
-Es wird angenommen, dass es sich bei der Funktion zum Berechnen eines Mosaik Ebenen-TI aus zieye um (maxtmeellationlevel/zieye) handelt, was bedeutet, dass maxtess Board ationlevel die Mosaik Ebene bei Z = 1 im Augenbereich ist. Maxtmeellationlevel ist gleich einem Wert, der von [**IDirect3DDevice9:: setnpatchmode**](/windows/win32/api/d3d9helper/nf-d3d9helper-idirect3ddevice9-setnpatchmode) für N-Patches festgelegt wird, und bei RT-Patches gleich pnumsegs. Die Mosaik Ebene wird dann an die Werte gebunden, die durch die beiden zusätzlichen Rendering-Zustände definiert werden D3DRS \_ mintmeellationlevel und D3DRS \_ maxtmeellationlevel, die die minimalen und maximalen Mosaik Ebenen definieren, an die gebunden werden soll. Der Wert der TI-Datei für jeden Scheitelpunkt an einem Rand eines Patches wird als Mittelwert verwendet, um eine Mosaik Ebene für diesen Edge zu erhalten. Der Algorithmus für die Berechnung von ti für Rechtecke, Dreiecks Patches und N-Patches unterscheidet sich darin, welche Steuerungs Scheitel Punkte zum Berechnen der Mosaik Ebene verwendet werden.
+Die Funktion zum Berechnen der Mosaikebene Ti von Zieye wird als (MaxTessellationLevel/Zieye) angenommen. Dies bedeutet, dass MaxTessellationLevel die Mosaikebene bei Z = 1 im Augenbereich ist. MaxTessellationLevel ist gleich einem Wert, der von [**IDirect3DDevice9::SetNPatchMode**](/windows/win32/api/d3d9helper/nf-d3d9helper-idirect3ddevice9-setnpatchmode) für N-Patches und bei RT-Patches gleich pNumSegs festgelegt wird. Die Mosaikebene wird dann an Werte gebunden, die durch die beiden zusätzlichen Renderzustände D3DRS \_ MINTESSELLATIONLEVEL und D3DRS \_ MAXTESSELLATIONLEVEL definiert werden, die die minimalen und maximalen Mosaikebenen definieren, an die gebunden werden soll. Die Tis für jeden Scheitelpunkt entlang einer Kante eines Patches werden gemittelt, um eine Mosaikebene für diesen Rand zu erhalten. Der Algorithmus zum Berechnen von Ti für Rechteckpatches, Dreieckspatches und N-Patches unterscheidet sich darin, welche Steuervertices zum Berechnen der Mosaikebene verwendet werden.
 
-Bei den rechtepatches mit einer B-Spline-Basis werden die vier äußersten Steuerungs Scheitel Punkte verwendet. Mit der D3DORDER-kubischen Reihenfolge werden z. b. Scheitel Punkte \_ (1, 1) und (1, Width-2) mit pnumabgs \[ 0 \] , Vertices (1, Width-2) und (Height-2, Height-2) werden mit pnumabgs \[ 1 \] , Vertices (Height-2, Width-2) und (1, Width-2) mit pnumabgs \[ 2 verwendet \] , und Vertices (2, 1) und (1, 1) werden mit pnumabgs \[ 3 verwendet \] .
+Für rechteckige Patches mit B-Spline-Basis werden die vier äußersten Steuervertices verwendet. Beispiel: mit D3DORDER \_ CUBIC-Reihenfolge: Scheitelpunkte (1,1) und (1,Breite-2) werden mit pNumSegs \[ 0 \] verwendet, Vertices (1, Width-2) und (height-2, height-2) werden mit pNumSeg verwendet. Die \[ Vertices 1 \] , Vertices (height-2, width-2) und (1,width-2) werden mit pNumSegs \[ 2 \] verwendet, und Scheitelpunkte (2,1) und (1,1) werden mit pNumSegs \[ 3 \] verwendet.
 
-Bei den Dreiecks Patches werden die eckpatchvertices verwendet. Mit der D3DORDER- \_ kubischen Reihenfolge: Vertices (0) und (9) werden mit pnumabgs \[ 0 verwendet \] , Vertices (9) und (6) werden mit pnumabgs 1 und Scheitel Punkten \[ \] (6) und (0) mit pnumsek \[ . 3 verwendet \] .
+Für die Dreieckspatches werden die Eckpatchvertices verwendet. Bei D3DORDER \_ CUBIC-Reihenfolge: Scheitelpunkte (0) und (9) werden mit pNumSegs \[ 0 \] verwendet, Scheitelpunkte (9) und (6) werden mit pNumSegs \[ 1 \] und Scheitelpunkte (6) und (0) mit pNumSegs \[ 3 \] verwendet.
 
-Bei N-Patches werden die Dreiecks Scheitel Punkte verwendet.
+Für N-Patches werden die Dreiecksvertices verwendet.
 
-Die ecksteuerungs Scheitel Punkte für die Rechteck-und Dreiecks Patches mit der Bezier-Basis werden verwendet.
+Für die Rechteck- und Dreieckspatches mit einer Bézierbasis werden die Ecksteuerpunkte verwendet.
 
-Pro-Vertex-Mosaik Raten Steuerung. Eine Anwendung kann optional einen einzelnen positiven Gleit Komma Wert pro Scheitelpunkt angeben, der zum Steuern der Geschwindigkeit des Mosaik Werts verwendet werden kann. Dies wird mithilfe \_ von D3DDECLUSAGE Tess Factor bereitgestellt, für den der Verwendungs Index den Wert 0 und der Eingabetyp D3DDECLTYPE FLOAT1 lauten muss \_ . Dies wird mit der pro-Vertex-Mosaik Ebene multipliziert.
+Steuerung der Mosaikrate pro Scheitelpunkt. Eine Anwendung kann optional einen einzelnen positiven Gleitkommawert pro Scheitelpunkt bereitstellen, der zum Steuern der Mosaikrate verwendet werden kann. Dies wird mithilfe des D3DDECLUSAGE \_ TESSFACTOR bereitgestellt, für den der Nutzungsindex 0 und der Eingabetyp D3DDECLTYPE FLOAT1 sein \_ muss. Dies wird mit der Mosaikebene pro Scheitelpunkt multipliziert.
 
 ### <a name="math"></a>Mathematik
 
-Die Mosaik Ebene (TE) für eine Edge e, die durch zwei Steuerelement Vertices (VE1, Ve2) dargestellt wird, wird wie unten dargestellt berechnet:
+Die Mosaikebene (Te) für einen Rand e, dargestellt durch zwei Steuervertices (Ve1, Ve2), wird wie unten dargestellt berechnet:
 
 
 ```
@@ -107,11 +107,11 @@ if Te < D3DRS_MINTESSELLATIONLEVEL, then Te = D3DRS_MINTESSELLATIONLEVEL
 
 
 
-Wenn D3DRS \_ enableadaptivetess auf **true** festgelegt ist, werden Dreiecks primitive (Dreiecks Listen, Lüfter, Striche) als N-Patches gezeichnet, [**IDirect3DDevice9:: setnpatchmode**](/windows/win32/api/d3d9helper/nf-d3d9helper-idirect3ddevice9-setnpatchmode) hat einen Wert kleiner als 1,0.
+Wenn D3DRS \_ ENABLEADAPTIVETESSELLATION **AUF TRUE** festgelegt ist, werden Dreiecksprimitive (Dreieckslisten, Lüfter, Strips) als N-Patches gezeichnet. [**IDirect3DDevice9::SetNPatchMode**](/windows/win32/api/d3d9helper/nf-d3d9helper-idirect3ddevice9-setnpatchmode) hat einen festgelegten Wert kleiner als 1,0.
 
 ### <a name="api-changes"></a>API-Änderungen
 
-Neue Rendering-Zustände:
+Neue Renderzustände:
 
 
 ```
@@ -144,7 +144,7 @@ D3DRS_ENABLEADAPTIVETESSELLATION = FALSE
 
 
 
-Neue Hardware Obergrenzen:
+Neue Hardwareobergrenzen:
 
 
 ```
@@ -158,7 +158,7 @@ D3DDEVCAPS2_ADAPTIVETESSNPATCH  // Can adaptively tessellate N-patches
 
 <dl> <dt>
 
-[Scheitelpunkt Pipeline](vertex-pipeline.md)
+[Vertexpipeline](vertex-pipeline.md)
 </dt> </dl>
 
  

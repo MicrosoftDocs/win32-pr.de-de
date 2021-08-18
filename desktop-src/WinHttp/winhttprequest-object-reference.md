@@ -1,7 +1,7 @@
 ---
-description: Das folgende Thema enthält eine Referenz Dokumentation für die Verwendung von WinHTTP.
+description: Das folgende Thema enthält die Referenzdokumentation für die Verwendung von WinHTTP.
 ms.assetid: 991c3c30-8eb5-4927-bc46-cabc36db020c
-title: WinHttpRequest-Objekt Verweis
+title: WinHttpRequest-Objektverweis
 ms.topic: article
 ms.date: 07/22/2020
 topic_type:
@@ -9,16 +9,16 @@ topic_type:
 api_name: ''
 api_type: ''
 api_location: ''
-ms.openlocfilehash: e0f54cb2e71edd30cf97389a0221bca0e2ef8051
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 9c47d85d3dfa2b15b31971a6b6d123259fa1db10c441cc7e7d1b4ab8f3eb1ed3
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106353076"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119132953"
 ---
-# <a name="winhttprequest-object-reference"></a>WinHttpRequest-Objekt Verweis
+# <a name="winhttprequest-object-reference"></a>WinHttpRequest-Objektverweis
 
-Das folgende Thema enthält eine Referenz Dokumentation für die Verwendung von WinHTTP über das **WinHttpRequest** com-Objekt.
+Das folgende Thema enthält die Referenzdokumentation für die Verwendung von WinHTTP über das **COM-Objekt WinHttpRequest.**
 
 ## <a name="objects"></a>Objekte
 
@@ -27,13 +27,13 @@ Das folgende Thema enthält eine Referenz Dokumentation für die Verwendung von 
 [**WinHttpRequest**](winhttprequest.md)
 </dt> <dd>
 
-Das WinHTTP-com-Objekt für die Verwendung mit Skriptsprachen.
+Das WinHTTP COM-Objekt zur Verwendung mit Skriptsprachen.
 
 </dd> </dl>
 
- Weitere Informationen finden Sie unter Informationen [zu WinHTTP](about-winhttp.md).
+ Weitere Informationen finden Sie unter [Informationen zu WinHTTP.](about-winhttp.md)
 
-Einen Vergleich der Schnittstellen C++ (WinHTTP) und WinHttpRequest finden Sie unter [Auswählen einer WinHTTP-Schnittstelle](choosing-a-winhttp-interface.md) . Außerdem wird beschrieben, wie die in WinHTTP enthaltenen Verwaltungs Tools verwendet werden.
+Einen Vergleich der Schnittstellen C++ (WinHTTP) und WinHttpRequest finden Sie unter Auswählen einer [WinHTTP-Schnittstelle.](choosing-a-winhttp-interface.md) Außerdem wird beschrieben, wie sie die in WinHTTP enthaltenen Verwaltungstools verwenden.
 
  
 

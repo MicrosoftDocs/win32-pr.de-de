@@ -1,7 +1,7 @@
 ---
-description: Importiert Verweis Punkt Metadaten des virtuellen Systems.
+description: Importiert Verweispunktmetadaten des virtuellen Systems.
 ms.assetid: 8e32fded-cd84-4586-83c4-c23200d4698e
-title: Importreferencepointmetadata-Methode der Msvm_VirtualSystemReferencePointService-Klasse
+title: ImportReferencePointMetadata-Methode der Msvm_VirtualSystemReferencePointService Klasse
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,16 +13,16 @@ api_type:
 - COM
 api_location:
 - vmms.exe
-ms.openlocfilehash: c66a374247d324f5df192114d0b66adc3a17c5b0
-ms.sourcegitcommit: c16214e53680dc71d1c07111b51f72b82a4512d8
+ms.openlocfilehash: 2757464e8b101819dc46a778df142e4e8ed37d93b774a87a037a7d272812f883
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/03/2021
-ms.locfileid: "103961202"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119147933"
 ---
-# <a name="importreferencepointmetadata-method-of-the-msvm_virtualsystemreferencepointservice-class"></a>Importreferencepointmetadata-Methode der MSVM \_ virtualsystemreferencepointservice-Klasse
+# <a name="importreferencepointmetadata-method-of-the-msvm_virtualsystemreferencepointservice-class"></a>ImportReferencePointMetadata-Methode der Msvm \_ VirtualSystemReferencePointService-Klasse
 
-Importiert Verweis Punkt Metadaten des virtuellen Systems.
+Importiert Verweispunktmetadaten des virtuellen Systems.
 
 ## <a name="syntax"></a>Syntax
 
@@ -42,28 +42,28 @@ uint32 ImportReferencePointMetadata(
 
 <dl> <dt>
 
-*Affectedsystem* \[ in\]
+*AffectedSystem* \[ In\]
 </dt> <dd>
 
-Ein Verweis auf ein [**MSVM- \_ Computersystem**](msvm-computersystem.md) , das das betroffene System beschreibt.
+Ein Verweis auf ein [**Msvm-Computersystem, \_**](msvm-computersystem.md) das das betroffene System beschreibt.
 
 </dd> <dt>
 
-*Configfilepath* \[ in\]
+*ConfigFilePath* \[ In\]
 </dt> <dd>
 
-Der voll qualifizierte Pfad der Konfigurationsdatei, aus der die Verweis Punkt Metadaten importiert werden.
+Der vollqualifizierte Pfad der Konfigurationsdatei, aus der die Verweispunktmetadaten importiert werden.
 
 </dd> <dt>
 
-*Runtimestatefilepath* \[ in\]
+*RuntimeStateFilePath* \[ In\]
 </dt> <dd>
 
-Der voll qualifizierte Pfad der Lauf Zeit Zustands Datei, von der die Verweis Punkt Metadaten importiert werden.
+Der vollqualifizierte Pfad der Laufzeitzustandsdatei, aus der die Verweispunktmetadaten importiert werden.
 
 </dd> <dt>
 
-*Auftrag* \[ vorgenommen\]
+*Auftrag* \[ out\]
 </dt> <dd>
 
 Ein optionaler Parameter zum Überwachen des Fortschritts des Vorgangs, der verwendet wird, wenn die Methode nicht synchron ausgeführt werden konnte. Wenn der Vorgang asynchron ausgeführt wird, ist der Rückgabewert 4096.
@@ -79,10 +79,10 @@ Gibt entweder 0 (kein Fehler) oder eine der folgenden Fehlermeldungen zurück:
 **Abgeschlossen ohne Fehler** (0)
 </dt> <dt>
 
-Über **prüfte Methoden Parameter-Auftrag gestartet** (4096)
+**Überprüfte Methodenparameter – Auftrag gestartet** (4096)
 </dt> <dt>
 
-Fehler **(32768** )
+**Fehler** (32768)
 </dt> <dt>
 
 **Zugriff verweigert** (32769)
@@ -91,28 +91,28 @@ Fehler **(32768** )
 **Nicht unterstützt** (32770)
 </dt> <dt>
 
-Der **Status ist "Unknown** " (32771).
+**Status ist unbekannt** (32771)
 </dt> <dt>
 
 **Timeout** (32772)
 </dt> <dt>
 
-**Ungültiger Parameter** (32773)
+**Ungültiger** Parameter (32773)
 </dt> <dt>
 
 **System wird verwendet** (32774)
 </dt> <dt>
 
-**Ungültiger Status für diesen Vorgang** (32775).
+**Ungültiger Zustand für diesen Vorgang** (32775)
 </dt> <dt>
 
-**Falscher Datentyp** (32776).
+**Falscher Datentyp** (32776)
 </dt> <dt>
 
-Das **System ist nicht verfügbar** (32777).
+**System ist nicht verfügbar** (32777)
 </dt> <dt>
 
-**Nicht** genügend Arbeitsspeicher (32778)
+**Nicht genügend Arbeitsspeicher** (32778)
 </dt> </dl>
 
 ## <a name="requirements"></a>Anforderungen
@@ -121,19 +121,19 @@ Das **System ist nicht verfügbar** (32777).
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Windows 10, Version 1703, \[ nur Desktop-Apps\]<br/>                                               |
+| Unterstützte Mindestversion (Client)<br/> | Windows 10 Desktop-Apps, Version 1703 \[\]<br/>                                               |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2016<br/>                                                                          |
 | Namespace<br/>                | \\Stammvirtualisierung \\ v2<br/>                                                                     |
-| MOF<br/>                      | <dl> <dt>Windowsvirtualization. v2. MOF</dt> </dl> |
+| MOF<br/>                      | <dl> <dt>WindowsVirtualization.V2.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Vmms.exe</dt> </dl>                     |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**MSVM \_ virtualsystemreferencepointservice**](msvm-virtualsystemreferencepointservice.md)
+[**Msvm \_ VirtualSystemReferencePointService**](msvm-virtualsystemreferencepointservice.md)
 </dt> </dl>
 
  

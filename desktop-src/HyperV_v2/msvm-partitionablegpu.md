@@ -1,5 +1,5 @@
 ---
-description: Stellt eine Partitionier Bare GPU dar. Jede GPU kann in eine Reihe von GPU-Partitionen aufgeteilt werden, die einem virtuellen Computer als vgpu zugewiesen werden können.
+description: Stellt eine partitionierbare GPU dar. Jede GPU kann in mehrere GPU-Partitionen aufgeteilt werden, die einem virtuellen Computer als vGPU zugewiesen werden können.
 ms.assetid: a32dfc03-6967-4fa3-ae32-bf074137740b
 title: Msvm_PartitionableGpu-Klasse
 ms.topic: reference
@@ -35,16 +35,16 @@ api_type:
 - DllExport
 api_location:
 - vmms.exe
-ms.openlocfilehash: 7f82904608a8e2ee4dfa13942066d57d35d511f7
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 15ce369a0186ae6309f90a5b37a77a35cce90ae6997e3c8cbc7e968a0a0d0de0
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "103868495"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119148293"
 ---
-# <a name="msvm_partitionablegpu-class"></a>MSVM \_ partitionablegpu-Klasse
+# <a name="msvm_partitionablegpu-class"></a>Msvm \_ PartitionableGpu-Klasse
 
-Stellt eine Partitionier Bare GPU dar. Jede GPU kann in eine Reihe von GPU-Partitionen aufgeteilt werden, die einem virtuellen Computer als vgpu zugewiesen werden können.
+Stellt eine partitionierbare GPU dar. Jede GPU kann in mehrere GPU-Partitionen aufgeteilt werden, die einem virtuellen Computer als vGPU zugewiesen werden können.
 
 Die folgende Syntax wurde aus MOF-Code (Managed Object Format, verwaltetes Objektformat) vereinfacht und enthält alle geerbten Eigenschaften.
 
@@ -81,299 +81,299 @@ class Msvm_PartitionableGpu : CIM_ComputerSystem
 
 ## <a name="members"></a>Member
 
-Die **MSVM \_ partitionablegpu** -Klasse verfügt über diese Typen von Membern:
+Die **Msvm \_ PartitionableGpu-Klasse** verfügt über folgende Typen von Membern:
 
 -   [Eigenschaften](#properties)
 
 ### <a name="properties"></a>Eigenschaften
 
-Die **MSVM \_ partitionablegpu** -Klasse verfügt über diese Eigenschaften.
+Die **Msvm \_ PartitionableGpu-Klasse** verfügt über diese Eigenschaften.
 
 <dl> <dt>
 
-**Availablecompute**
+**AvailableCompute**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt64**
+Datentyp: **uint64**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Die verfügbare Menge an computeengines, die in der GPU-Partition angezeigt werden.
+Die verfügbare Anzahl von Compute-Engines, die in der GPU-Partition angezeigt werden.
 
 </dd> <dt>
 
-**Availabledecode**
+**AvailableDecode**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt64**
+Datentyp: **uint64**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Die verfügbare Anzahl von decodieren-Engines, die in der GPU-Partition angezeigt werden.
+Die verfügbare Menge an Decodierungs-Engines, die in der GPU-Partition angezeigt werden.
 
 </dd> <dt>
 
-**Availablecodieren**
+**AvailableEncode**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt64**
+Datentyp: **uint64**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Die verfügbare Anzahl der codierungsmodule, die in der GPU-Partition angezeigt werden.
+Die verfügbare Menge an Codierungs-Engines, die in der GPU-Partition angezeigt werden.
 
 </dd> <dt>
 
-**Availablevram**
+**AvailableVRAM**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt64**
+Datentyp: **uint64**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Die verfügbare VRAM-Größe, die in der GPU-Partition angezeigt wird.
+Die verfügbare Menge an VRAM, die in der GPU-Partition angezeigt wird.
 
 </dd> <dt>
 
-**Maxpartitioncompute**
+**MaxPartitionCompute**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt64**
+Datentyp: **uint64**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Die maximale Menge an computeengines, die in der GPU-Partition angezeigt werden.
+Die maximale Anzahl von Compute-Engines, die in der GPU-Partition angezeigt werden.
 
 </dd> <dt>
 
-**Maxpartitiondecode**
+**MaxPartitionDecode**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt64**
+Datentyp: **uint64**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Die maximale Anzahl von decodieren-Engines, die in der GPU-Partition angezeigt werden.
+Die maximale Anzahl von Decodierungs-Engines, die in der GPU-Partition angezeigt werden.
 
 </dd> <dt>
 
-**Maxpartitioncocode**
+**MaxPartitionEncode**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt64**
+Datentyp: **uint64**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Die maximale Anzahl der codierungsmodule, die in der GPU-Partition angezeigt werden.
+Die maximale Menge an Codierungs-Engines, die in der GPU-Partition angezeigt werden.
 
 </dd> <dt>
 
-**Maxpartitionvram**
+**MaxPartitionVRAM**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt64**
+Datentyp: **uint64**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Die maximale VRAM-Größe, die in der GPU-Partition angezeigt wird.
+Die maximale Menge an VRAM, die in der GPU-Partition angezeigt wird.
 
 </dd> <dt>
 
-**Minpartitioncompute**
+**MinPartitionCompute**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt64**
+Datentyp: **uint64**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Die minimale Menge an computeengines, die in der GPU-Partition angezeigt werden.
+Die Mindestmenge von Compute-Engines, die in der GPU-Partition angezeigt werden.
 
 </dd> <dt>
 
-**Minpartitiondecode**
+**MinPartitionDecode**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt64**
+Datentyp: **uint64**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Die minimale Anzahl von decodieren-Engines, die in der GPU-Partition angezeigt werden.
+Die Mindestmenge an Decodierungs-Engines, die in der GPU-Partition angezeigt werden.
 
 </dd> <dt>
 
-**Minpartitioncocode**
+**MinPartitionEncode**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt64**
+Datentyp: **uint64**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Der minimale Betrag der Codierungs-Engines, der in der GPU-Partition angezeigt wird.
+Die Minumummenge der Codierungs-Engines, die in der GPU-Partition angezeigt werden.
 
 </dd> <dt>
 
-**Minpartitionvram**
+**MinPartitionVRAM**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt64**
+Datentyp: **uint64**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Die minimale VRAM-Größe, die in der GPU-Partition angezeigt wird.
+Die Mindestmenge von VRAM, die in der GPU-Partition angezeigt wird.
 
 </dd> <dt>
 
-**Optimalpartitioncompute**
+**OptimalPartitionCompute**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt64**
+Datentyp: **uint64**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Die optimale Menge an computeengines, die in der GPU-Partition angezeigt werden.
+Die optimale Anzahl von Compute-Engines, die in der GPU-Partition angezeigt werden.
 
 </dd> <dt>
 
-**Optimalpartitiondecode**
+**OptimalPartitionDecode**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt64**
+Datentyp: **uint64**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Die optimale Menge an Decodieren von Modulen, die in der GPU-Partition angezeigt werden.
+Die optimale Menge an Decodierungs-Engines, die in der GPU-Partition angezeigt werden.
 
 </dd> <dt>
 
-**Optimalpartitioncocode**
+**OptimalPartitionEncode**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt64**
+Datentyp: **uint64**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Die optimale Menge der codierungsmodule, die in der GPU-Partition angezeigt werden.
+Die optimale Menge an Codierungs-Engines, die in der GPU-Partition angezeigt werden.
 
 </dd> <dt>
 
-**Optimalpartitionvram**
+**OptimalPartitionVRAM**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt64**
+Datentyp: **uint64**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Die optimale VRAM-Größe, die in der GPU-Partition angezeigt wird.
+Die optimale Menge an VRAM, die in der GPU-Partition angezeigt wird.
 
 </dd> <dt>
 
 **PartitionCount**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt16**
+Datentyp: **uint16**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
 </dt> </dl>
 
-Die Menge der GPU-Partitionen, in die die physische GPU aufgeteilt ist.
+Die Menge der GPU-Partitionen, in die die physische GPU aufgeteilt wird.
 
 </dd> <dt>
 
-**Totalcompute**
+**TotalCompute**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt64**
+Datentyp: **uint64**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Die Gesamtmenge der computemodule, die in der GPU-Partition angezeigt werden.
+Die Gesamtmenge der Compute-Engines, die in der GPU-Partition angezeigt werden.
 
 </dd> <dt>
 
-**Totaldecode**
+**TotalDecode**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt64**
+Datentyp: **uint64**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Die Gesamtmenge der decodierungsmodule, die in der GPU-Partition angezeigt werden.
+Die Gesamtmenge der Decodierungs-Engines, die in der GPU-Partition angezeigt werden.
 
 </dd> <dt>
 
-**Totalcodieren**
+**TotalEncode**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt64**
+Datentyp: **uint64**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Die Gesamtmenge der codierungsmodule, die in der GPU-Partition angezeigt werden.
+Die Gesamtmenge der Codierungs-Engines, die in der GPU-Partition angezeigt werden.
 
 </dd> <dt>
 
-**Totalvram**
+**TotalVRAM**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt64**
+Datentyp: **uint64**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Die Gesamtmenge des VRAM, der in der GPU-Partition angezeigt wird.
+Die Gesamtmenge von VRAM, die in der GPU-Partition angezeigt wird.
 
 </dd> <dt>
 
-**Validpartitioncounts**
+**ValidPartitionCounts**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt16** Array
+Datentyp: **uint16-Array**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
 </dt> </dl>
 
-Ein Array gültiger GPU-Partitions Optionen, in die die physische GPU aufgeteilt werden kann.
+Ein Array gültiger GPU-Partitionsoptionen, in die die physische GPU aufgeteilt werden kann.
 
 </dd> </dl>
 
@@ -383,19 +383,19 @@ Ein Array gültiger GPU-Partitions Optionen, in die die physische GPU aufgeteilt
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Windows 10, Version 1703, \[ nur Desktop-Apps\]<br/>                                               |
+| Unterstützte Mindestversion (Client)<br/> | Windows 10 Desktop-Apps, Version 1703 \[\]<br/>                                               |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2016<br/>                                                                          |
 | Namespace<br/>                | \\Stammvirtualisierung \\ v2<br/>                                                                     |
-| MOF<br/>                      | <dl> <dt>Windowsvirtualization. v2. MOF</dt> </dl> |
+| MOF<br/>                      | <dl> <dt>WindowsVirtualization.V2.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Vmms.exe</dt> </dl>                     |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**CIM- \_ Computersystem**](cim-computersystem.md)
+[**\_CIM-ComputerSystem**](cim-computersystem.md)
 </dt> </dl>
 
  

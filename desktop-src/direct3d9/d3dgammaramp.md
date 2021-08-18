@@ -1,7 +1,7 @@
 ---
-description: Enthält rote, grüne und blaue Daten.
+description: Enthält Daten zu roten, grünen und blauen Rampen.
 ms.assetid: c596f47a-6c09-4b97-ab2f-b1da3d851aa4
-title: D3DGAMMARAMP-Struktur (D3D9Types. h)
+title: D3DGAMMARAMP-Struktur (D3D9Types.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,16 +13,16 @@ api_type:
 - HeaderDef
 api_location:
 - D3D9Types.h
-ms.openlocfilehash: 496885b8267d339c7617ec24b884fa193f8d9945
-ms.sourcegitcommit: 14010c34b35fa268046c7683f021f86de08ddd0a
+ms.openlocfilehash: fbd3acc35b7fd4998f5ba536c1fe4a28cf2a17153bf24aacde1f9f39bbbcd09e
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "106370440"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119751000"
 ---
 # <a name="d3dgammaramp-structure"></a>D3DGAMMARAMP-Struktur
 
-Enthält rote, grüne und blaue Daten.
+Enthält Daten zu roten, grünen und blauen Rampen.
 
 ## <a name="syntax"></a>Syntax
 
@@ -41,36 +41,36 @@ typedef struct D3DGAMMARAMP {
 
 <dl> <dt>
 
-**Red**
+**Rot**
 </dt> <dd>
 
-Typ: **[ **Word**](../winprog/windows-data-types.md)**
+Typ: **[ **WORD**](../winprog/windows-data-types.md)**
 
 </dd> <dd>
 
-Ein Array von 256 Word-Elementen, das die rote Gamma-Rampe beschreibt.
+Array mit 256 WORD-Elementen, das die rote Gamma-Rampe beschreibt.
 
 </dd> <dt>
 
-**Grünbuchs**
+**Grün**
 </dt> <dd>
 
-Typ: **[ **Word**](../winprog/windows-data-types.md)**
+Typ: **[ **WORD**](../winprog/windows-data-types.md)**
 
 </dd> <dd>
 
-Ein Array von 256 Word-Elementen, das die grüne Gamma-Rampe beschreibt.
+Array mit 256 WORD-Elementen, das die grüne Gammaverlauf beschreibt.
 
 </dd> <dt>
 
-**blauen**
+**Blau**
 </dt> <dd>
 
-Typ: **[ **Word**](../winprog/windows-data-types.md)**
+Typ: **[ **WORD**](../winprog/windows-data-types.md)**
 
 </dd> <dd>
 
-Ein Array von 256 Word-Elementen, das die blaue Gamma-Rampe beschreibt.
+Array mit 256 WORD-Elementen, das die blaue Gamma-Rampe beschreibt.
 
 </dd> </dl>
 
@@ -80,21 +80,21 @@ Ein Array von 256 Word-Elementen, das die blaue Gamma-Rampe beschreibt.
 
 | Anforderung | Wert |
 |-------------------|----------------------------------------------------------------------------------------|
-| Header<br/> | <dl> <dt>D3D9Types. h</dt> </dl> |
+| Header<br/> | <dl> <dt>D3D9Types.h</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
 [Direct3D-Strukturen](dx9-graphics-reference-d3d-structures.md)
 </dt> <dt>
 
-[**Getgammaramp**](/windows/win32/api/d3d9helper/nf-d3d9helper-idirect3ddevice9-getgammaramp)
+[**GetGammaRamp**](/windows/win32/api/d3d9helper/nf-d3d9helper-idirect3ddevice9-getgammaramp)
 </dt> <dt>
 
-[**Setgammaramp**](/windows/win32/api/d3d9helper/nf-d3d9helper-idirect3ddevice9-setgammaramp)
+[**SetGammaRamp**](/windows/win32/api/d3d9helper/nf-d3d9helper-idirect3ddevice9-setgammaramp)
 </dt> </dl>
 
  

@@ -28,7 +28,7 @@ Der [EsentInvalidLogDirectoryException-Typ](./esentinvalidlogdirectoryexception-
 <tr class="header">
 <th> </th>
 <th>Name</th>
-<th>BESCHREIBUNG</th>
+<th>Beschreibung</th>
 </tr>
 </thead>
 <tbody>

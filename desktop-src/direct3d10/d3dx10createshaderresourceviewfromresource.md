@@ -1,7 +1,7 @@
 ---
-description: Erstellen Sie eine Shader-Ressourcen Ansicht aus einer Ressource.
+description: Erstellen Sie eine Shader-Ressourcenansicht aus einer Ressource.
 ms.assetid: 207cda5f-5b7e-420a-988f-135cd2a04eb0
-title: D3DX10CreateShaderResourceViewFromResource-Funktion (D3DX10Tex. h)
+title: D3DX10CreateShaderResourceViewFromResource-Funktion (D3DX10Tex.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -14,16 +14,16 @@ api_type:
 api_location:
 - D3DX10.lib
 - D3DX10.dll
-ms.openlocfilehash: 12de92153b6f812b4f014f53e918e7a97000eda6
-ms.sourcegitcommit: 14010c34b35fa268046c7683f021f86de08ddd0a
+ms.openlocfilehash: f948e31c1218b095bda98c68a92abbb01d381d62c4acfed027be8b81701367e2
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "106363984"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119634620"
 ---
 # <a name="d3dx10createshaderresourceviewfromresource-function"></a>D3DX10CreateShaderResourceViewFromResource-Funktion
 
-Erstellen Sie eine Shader-Ressourcen Ansicht aus einer Ressource.
+Erstellen Sie eine Shader-Ressourcenansicht aus einer Ressource.
 
 ## <a name="syntax"></a>Syntax
 
@@ -46,66 +46,66 @@ HRESULT D3DX10CreateShaderResourceViewFromResource(
 
 <dl> <dt>
 
-*pdevice* \[ in\]
+*pDevice* \[ In\]
 </dt> <dd>
 
 Typ: **[ **ID3D10Device**](/windows/desktop/api/D3D10/nn-d3d10-id3d10device)\***
 
-Ein Zeiger auf das Gerät (siehe [**ID3D10Device Interface**](/windows/desktop/api/D3D10/nn-d3d10-id3d10device)), von dem die Ressource verwendet wird.
+Ein Zeiger auf das Gerät (siehe [**ID3D10Device-Schnittstelle),**](/windows/desktop/api/D3D10/nn-d3d10-id3d10device)das die Ressource verwendet.
 
 </dd> <dt>
 
-*hsrcmodule* \[ in\]
+*hSrcModule* \[ In\]
 </dt> <dd>
 
 Typ: **[ **HMODULE**](../winprog/windows-data-types.md)**
 
-Handle für das Ressourcen Modul, das die Shader-Ressourcen Ansicht enthält. HMODULE kann mit der [GetModuleHandle-Funktion](/windows/desktop/api/libloaderapi/nf-libloaderapi-getmodulehandlea)abgerufen werden.
+Behandeln Sie das Ressourcenmodul, das die Ansicht shader-resource enthält. HMODULE kann mit der [GetModuleHandle-Funktion](/windows/desktop/api/libloaderapi/nf-libloaderapi-getmodulehandlea)abgerufen werden.
 
 </dd> <dt>
 
-*psrkresource* \[ in\]
+*pSrcResource* \[ In\]
 </dt> <dd>
 
 Typ: **[ **LPCTSTR**](../winprog/windows-data-types.md)**
 
-Name der Shader-Ressourcen Ansicht in hsrcmodule. Wenn die Compilereinstellungen Unicode erfordern, wird der Datentyp LPCTSTR in LPCWSTR aufgelöst. Andernfalls wird der Datentyp in LPCSTR aufgelöst.
+Name der Shaderressourcenansicht in hSrcModule. Wenn die Compilereinstellungen Unicode erfordern, wird der Datentyp LPCTSTR in LPCWSTR aufgelöst. Andernfalls wird der Datentyp in LPCSTR aufgelöst.
 
 </dd> <dt>
 
-*ploadinfo* \[ in\]
+*pLoadInfo* \[ In\]
 </dt> <dd>
 
-Type: **[ **d3dx10 \_ Image \_ Load \_ Info**](d3dx10-image-load-info.md)\***
+Typ: **[ **D3DX10 \_ IMAGE \_ LOAD \_ INFO**](d3dx10-image-load-info.md)\***
 
-Dies ist optional. Gibt die Merkmale einer Textur an (siehe [**d3dx10 \_ Image \_ Load \_ Info**](d3dx10-image-load-info.md)), wenn der Datenprozessor erstellt wird. Legen Sie diese Einstellung auf **null** fest, um die Merkmale einer Textur beim Laden der Textur zu lesen.
+Optional. Identifiziert die Merkmale einer Textur (siehe [**D3DX10 \_ IMAGE \_ LOAD \_ INFO),**](d3dx10-image-load-info.md)wenn der Datenprozessor erstellt wird. Legen Sie diese Eigenschaft auf **NULL** fest, um die Merkmale einer Textur zu lesen, wenn die Textur geladen wird.
 
 </dd> <dt>
 
-*ppump* \[ in\]
+*pPump* \[ In\]
 </dt> <dd>
 
 Typ: **[ **ID3DX10ThreadPump**](id3dx10threadpump.md)\***
 
-Ein Zeiger auf eine Thread-Pump Schnittstelle (siehe [**ID3DX10ThreadPump Interface**](id3dx10threadpump.md)). Wenn **null** angegeben wird, verhält sich diese Funktion synchron und wird erst nach Abschluss des Vorgangs zurückgegeben.
+Ein Zeiger auf eine Threadpumpschnittstelle (siehe [**ID3DX10ThreadPump-Schnittstelle).**](id3dx10threadpump.md) Wenn **NULL** angegeben wird, verhält sich diese Funktion synchron und wird erst zurückgegeben, wenn sie abgeschlossen ist.
 
 </dd> <dt>
 
-*ppshaderresourceview* \[ vorgenommen\]
+*ppShaderResourceView* \[ out\]
 </dt> <dd>
 
 Typ: **[ **ID3D10ShaderResourceView**](/windows/desktop/api/d3d10/nn-d3d10-id3d10shaderresourceview)\*\***
 
-Adresse eines Zeigers auf die Shader-Ressourcen Ansicht (siehe [**ID3D10ShaderResourceView Interface**](/windows/desktop/api/d3d10/nn-d3d10-id3d10shaderresourceview)).
+Adresse eines Zeigers auf die Shader-Ressourcenansicht (siehe [**ID3D10ShaderResourceView-Schnittstelle).**](/windows/desktop/api/d3d10/nn-d3d10-id3d10shaderresourceview)
 
 </dd> <dt>
 
-*phresult* \[ vorgenommen\]
+*pHResult* \[ out\]
 </dt> <dd>
 
 Typ: **[ **HRESULT**](https://msdn.microsoft.com/library/Bb401631(v=MSDN.10).aspx)\***
 
-Ein Zeiger auf den Rückgabewert. Kann **null** sein. Wenn *ppump* nicht **null** ist, muss *phresult* eine gültige Speicheradresse sein, bis die asynchrone Ausführung abgeschlossen ist.
+Ein Zeiger auf den Rückgabewert. Kann **NULL** sein. Wenn *pPump* nicht **NULL** ist, muss *pHResult* ein gültiger Speicherort sein, bis die asynchrone Ausführung abgeschlossen ist.
 
 </dd> </dl>
 
@@ -113,7 +113,7 @@ Ein Zeiger auf den Rückgabewert. Kann **null** sein. Wenn *ppump* nicht **null*
 
 Typ: **[ **HRESULT**](https://msdn.microsoft.com/library/Bb401631(v=MSDN.10).aspx)**
 
-Der Rückgabewert ist einer der Werte, die in [Direct3D 10-Rückgabe Codes](d3d10-graphics-reference-returnvalues.md)aufgelistet sind.
+Der Rückgabewert ist einer der In [Direct3D 10-Rückgabecodes aufgeführten](d3d10-graphics-reference-returnvalues.md)Werte.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -121,19 +121,19 @@ Der Rückgabewert ist einer der Werte, die in [Direct3D 10-Rückgabe Codes](d3d1
 
 | Anforderung | Wert |
 |--------------------|----------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>D3DX10Tex. h</dt> </dl> |
-| Bibliothek<br/> | <dl> <dt>D3dx10. lib</dt> </dl>  |
+| Header<br/>  | <dl> <dt>D3DX10Tex.h</dt> </dl> |
+| Bibliothek<br/> | <dl> <dt>D3DX10.lib</dt> </dl>  |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[Textur Funktionen in D3DX 10](d3d10-graphics-reference-d3dx10-functions-texturing.md)
+[Texturfunktionen in D3DX 10](d3d10-graphics-reference-d3dx10-functions-texturing.md)
 </dt> <dt>
 
-[Universell Funktionen](d3d10-graphics-reference-d3dx10-functions-general-purpose.md)
+[Universell Functions](d3d10-graphics-reference-d3dx10-functions-general-purpose.md)
 </dt> </dl>
 
  

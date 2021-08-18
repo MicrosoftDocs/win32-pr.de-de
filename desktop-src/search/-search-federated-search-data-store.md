@@ -52,13 +52,13 @@ Weitere Informationen zum Erstellen einer URL finden Sie unter "URL-Vorlagenpara
 
 ### <a name="supported-query-syntax"></a>Unterstützte Abfragesyntax
 
-In Windows 7 wird keine spezifische Abfragesyntax erwartet. Der OpenSearch Anbieter akzeptiert alle Begriffe, die der Benutzer im Eingabefeld in Windows Explorer eingibt, und codiert sie in die URL. Dies entspricht der URL-Vorlage, die in "URL-Vorlagenparameter" unter [Erstellen einer OpenSearch Beschreibungsdatei in Windows Verbundsuche](-search-federated-search-osdx-file.md)beschrieben wird.
+In Windows 7 wird keine spezifische Abfragesyntax erwartet. Der OpenSearch Anbieter akzeptiert alle Begriffe, die der Benutzer im Eingabefeld in Windows Explorer eingibt, und codiert sie in die URL. Dies entspricht der URL-Vorlage, die in "URL Template Parameters" unter [Creating an OpenSearch Description File in Windows Federated Search (Erstellen einer OpenSearch Beschreibungsdatei in Windows Verbundsuche)](-search-federated-search-osdx-file.md)beschrieben wird.
 
 Benutzer erwarten, dass separate Begriffe implizit als ANDed behandelt werden. Beispielsweise sollte eine Abfrage für "Microsoft Windows" nur Ergebnisse zurückgeben, die sowohl "Windows" als auch "Microsoft" enthalten.
 
 ### <a name="supported-authentication-protocols"></a>Unterstützte Authentifizierungsprotokolle
 
-Windows Die Verbundsuche unterstützt Windows-basierte Authentifizierung und kann Webdiensten über die folgenden Protokolle Anmeldeinformationen bereitstellen:
+Windows Die Verbundsuche unterstützt Windows-basierte Authentifizierung und kann Anmeldeinformationen für Webdienste über die folgenden Protokolle bereitstellen:
 
 -   NTLM.
 -   Kerberos.
@@ -67,7 +67,7 @@ Windows Die Verbundsuche unterstützt Windows-basierte Authentifizierung und kan
 
 ## <a name="sending-queries-and-returning-search-results-in-rss-or-atom"></a>Senden von Abfragen und Zurückgeben von Suchergebnissen in RSS oder Atom
 
-Der [OpenSearch-Anbieter](https://github.com/dewitt/opensearch) ist dafür verantwortlich, die XML-Elementwerte Windows Shell-Systemeigenschaften zuzuordnen, die von Windows Anwendungen verwendet werden können. Sie sind jedoch nicht auf die Standardzuordnungen von RSS- oder Atom-Standardelementen beschränkt und können benutzerdefinierte XML-Elemente in den Windows Namespace für jede der Eigenschaften einschließen. Sie können z. B. eigene benutzerdefinierte XML-Elemente innerhalb des **Elementelements** hinzufügen, um zusätzliche Metadaten für Windows bereitzustellen. Sie können auch Elemente aus anderen XML-Namespaces zuordnen, z. B. iTunes.
+Der [OpenSearch-Anbieter](https://github.com/dewitt/opensearch) ist für die Zuordnung der XML-Elementwerte zu Windows Shell-Systemeigenschaften verantwortlich, die von Windows Anwendungen verwendet werden können. Sie sind jedoch nicht auf die Standardzuordnungen von RSS- oder Atom-Standardelementen beschränkt und können benutzerdefinierte XML-Elemente in den Windows Namespace für jede der Eigenschaften einschließen. Sie können z. B. eigene benutzerdefinierte XML-Elemente innerhalb des **Elementelements** hinzufügen, um zusätzliche Metadaten für Windows bereitzustellen. Sie können auch Elemente aus anderen XML-Namespaces zuordnen, z. B. iTunes.
 
 ### <a name="example-of-an-rss-feed-output"></a>Beispiel für eine RSS-Feedausgabe
 
@@ -142,7 +142,7 @@ Ausführlichere Informationen zur Eigenschaftenzuordnung finden Sie unter "Erwei
 
 ## <a name="understanding-how-windows-maps-items-to-file-types"></a>Grundlegendes zum Windows-Karten von Elementen in Dateitypen
 
-Die Suche auf der Benutzeroberfläche des Windows-Explorers ermöglicht Benutzern, Ergebnisse als Dateien zu behandeln, wenn ein RSS-Element auf eine remote gespeicherte Datei verweist. Der Benutzer kann Elemente per Drag & Drop auf den Desktop ziehen, und die Windows-Explorer-Benutzeroberfläche zeigt das richtige Symbol an und stellt das entsprechende Kontextmenü bereit. Wenn das RSS-Element nicht auf eine remote gespeicherte Datei verweist, wird die Datei als Link behandelt, und Benutzer können Aktionen dafür ausführen, z. B. das Erstellen einer Verknüpfung oder das Öffnen im Browser.
+Die Suche auf der Benutzeroberfläche des Windows-Explorers ermöglicht Benutzern, Ergebnisse als Dateien zu behandeln, wenn ein RSS-Element auf eine Remotedatei verweist. Der Benutzer kann Elemente per Drag & Drop auf den Desktop ziehen, und die Windows Explorer-Benutzeroberfläche zeigt das richtige Symbol an und stellt das entsprechende Kontextmenü bereit. Wenn das RSS-Element nicht auf eine remote gespeicherte Datei verweist, wird die Datei als Link behandelt, und Benutzer können Aktionen dafür ausführen, z. B. das Erstellen einer Verknüpfung oder das Öffnen im Browser.
 
 Das folgende Flussdiagramm zeigt, wie Windows den Dateityp eines Elements bestimmt.
 
@@ -153,13 +153,13 @@ Der [OpenSearch](https://github.com/dewitt/opensearch) Anbieter führt die folge
 -   Bestimmen Sie, ob das Element als Datei oder Weblink behandelt werden soll.
 -   Identifizieren Sie die richtige zu verwendende Dateinamenerweiterung.
 
-Wenn das Element beispielsweise über eine Link-URL verfügt, die einen Dateisystempfad verwendet (z. B. `file:///\\server\share\etc\item.ext` ), behandelt der [OpenSearch-Anbieter](https://github.com/dewitt/opensearch) den Link als Datei und bestimmt den Typ anhand der im Pfad verwendeten Dateinamenerweiterung (.ext in diesem Beispiel).
+Wenn das Element beispielsweise über eine Link-URL verfügt, die einen Dateisystempfad verwendet (z. `file:///\\server\share\etc\item.ext` [B.](https://github.com/dewitt/opensearch) ), behandelt der OpenSearch-Anbieter den Link als Datei und bestimmt den Typ anhand der im Pfad verwendeten Dateinamenerweiterung (.ext in diesem Beispiel).
 
 Wenn das Element das STANDARDMÄßIGE RSS-Gehäuse oder **mediaRSS media:content-Element** verwendet, geht der [OpenSearch-Anbieter](https://github.com/dewitt/opensearch) davon aus, dass es sich bei dem Element um eine Datei handelt, und identifiziert die Dateinamenerweiterung wie folgt:
 
 -   Wenn die [Eigenschaft System.FileExtension](../properties/props-system-fileextension.md) Windows Shell für das Element zugeordnet wurde, verwendet der Anbieter diese Dateinamenerweiterung.
--   Wenn die [System.FileExtension](../properties/props-system-fileextension.md) Windows Shell-Eigenschaft nicht zugeordnet wurde, verwendet der Anbieter das im Gehäuse- oder Inhaltselement angegebene **Type-Attribut.** Dieses Element sollte eine `MIMEType` Zeichenfolge enthalten, `"image/jpeg"` z. B. . Wenn dem `MIMEType` eine Dateierweiterung zugeordnet ist, die auf dem Clientcomputer registriert ist, wird das Element als Datei dieses Typs betrachtet. Wenn der `MIMEType` keiner auf dem Clientcomputer registrierten Dateinamenerweiterung zugeordnet ist, wird das Element als Weblinktyp behandelt. Der [OpenSearch](https://github.com/dewitt/opensearch) Anbieter versucht nicht, das **URL-Attribut** zu analysieren, um die Dateinamenerweiterung zu finden.
--   Wenn dem `MIMEType` eine auf dem Clientcomputer registrierte Dateinamenerweiterung zugeordnet ist, bestimmt der Anbieter, ob die Dateinamenerweiterung ein bekannter Webdateityp ist (.htm, .html, ASP, ASPX, PHP, SWF, STM). Wenn ja, wird der Dateityp als Weblinktyp betrachtet. andernfalls wird sie als Dateityp betrachtet. Wenn z. B. `MIMEType "text/html"` der .htm Dateinamenerweiterung zugeordnet ist, wird dieses Element als Weblink und nicht als .htm Dateityp betrachtet.
+-   Wenn die [Eigenschaft System.FileExtension](../properties/props-system-fileextension.md) Windows Shell nicht zugeordnet wurde, verwendet der Anbieter das im Gehäuse- oder Inhaltselement angegebene **Type-Attribut.** Dieses Element sollte eine `MIMEType` Zeichenfolge enthalten, `"image/jpeg"` z. B. . Wenn dem `MIMEType` eine Dateierweiterung zugeordnet ist, die auf dem Clientcomputer registriert ist, wird das Element als Datei dieses Typs betrachtet. Wenn der `MIMEType` keiner auf dem Clientcomputer registrierten Dateinamenerweiterung zugeordnet ist, wird das Element als Weblinktyp behandelt. Der [OpenSearch](https://github.com/dewitt/opensearch) Anbieter versucht nicht, das **URL-Attribut** zu analysieren, um nach der Dateinamenerweiterung zu suchen.
+-   Wenn dem `MIMEType` eine Dateierweiterung zugeordnet ist, die auf dem Clientcomputer registriert ist, bestimmt der Anbieter, ob die Dateinamenerweiterung ein bekannter Webdateityp ist (.htm, .html, ASP, ASPX, PHP, SWF, STM). Wenn ja, wird der Dateityp als Weblinktyp betrachtet. andernfalls wird sie als Dateityp betrachtet. Wenn z. B. `MIMEType "text/html"` der .htm Dateinamenerweiterung zugeordnet ist, wird dieses Element als Weblink und nicht als .htm Dateityp betrachtet.
 
 ## <a name="avoiding-potential-barriers-to-enabling-a-data-store"></a>Vermeiden potenzieller Barrieren für die Aktivierung eines Daten-Store
 
@@ -182,7 +182,7 @@ Es gibt jedoch Alternativen, die Barrieren für die Aktivierung eines Datenspeic
 1.  Schreiben Sie einen Middle-Man-Webdienst, der eine Windows 7-Abfrage akzeptieren kann.
 2.  Verbinden zu Ihrer Datenquelle, und rufen Sie die Abfrageergebnisse ab.
 3.  Formatieren Sie die Ergebnisse im RSS- oder Atom-Format neu.
-4.  Gibt die Ergebnisse an den Windows 7-Client zurück.
+4.  Gibt die Ergebnisse an den client Windows 7 zurück.
 5.  Beachten Sie, dass Sie für Unternehmensdatendienste und viele Internetdatendienste möglicherweise die Benutzeranmeldeinformationen im Auftrag des Webdiensts übergeben müssen, um die Ergebniskürzung basierend auf den Berechtigungen des Benutzers durchzuführen.
 
 **So verwenden Sie eine vorhandene Suchmaschine, wenn Sie keinen öffentlichen Datenspeicher aktivieren können:**
@@ -214,7 +214,7 @@ Es gibt jedoch Alternativen, die Barrieren für die Aktivierung eines Datenspeic
 2.  Verwenden Sie die [IOpenSearchSource-Schnittstellen-API](/windows/win32/api/shobjidl_core/nn-shobjidl_core-iopensearchsource) im Windows SDK, um eine entsprechend konfigurierte Searchconnector-ms-Datei zu erstellen, über die Windows Explorer Ihre Implementierung mit den Abfrageparametern aufrufen kann. Ihre Implementierung kann dann Ergebnisse zurückgeben, die im RSS- oder Atom-Format formatiert sind. Dadurch kann Ihre Implementierung eine benutzerdefinierte Authentifizierungsbenutzeroberfläche bereitstellen und mithilfe der proprietären API eine Verbindung mit der Datenquelle herstellen.
 
 > [!Note]  
-> Beim Öffnen einer OSDX-Datei wird eine SEARCHCONNECTOR-MS-Datei (Suchconnector) im Verzeichnis %userprofile%/searches erstellt und ein Link zu ihr im Verzeichnis %userprofile%/links platziert.
+> Beim Öffnen einer OSDX-Datei wird eine Searchconnector-ms-Datei (Suchconnector) im Verzeichnis %userprofile%/searches erstellt und ein Link zu ihr im Verzeichnis %userprofile%/links platziert.
 
  
 
@@ -235,10 +235,10 @@ Weitere Informationen zum Implementieren eines Suchverbunds in Remotedatenspeich
 [Verbinden Ihres Webdiensts in Windows Verbundsuche](-search-federated-search-web-service.md)
 </dt> <dt>
 
-[Erstellen einer OpenSearch-Beschreibungsdatei in Windows Verbundsuche](-search-federated-search-osdx-file.md)
+[Erstellen einer OpenSearch Beschreibungsdatei in Windows Verbundsuche](-search-federated-search-osdx-file.md)
 </dt> <dt>
 
-[Bewährte Methoden bei der Windows Verbundsuche](-search-fedsearch-best.md)
+[Bewährte Methoden für die Windows Verbundsuche](-search-fedsearch-best.md)
 </dt> <dt>
 
 [Bereitstellen von Suchconnectors in Windows Verbundsuche](-search-federated-search-deploying.md)

@@ -14,16 +14,16 @@ api_type:
 api_location:
 - D3DX10.lib
 - D3DX10.dll
-ms.openlocfilehash: d1d96cfe8124b47a9b6ce546379af1313a02ea26
-ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
+ms.openlocfilehash: 340ea7ed85e05795dbc3949a29c5384871dfe840aa25ed4f9b2f07e1d4264de1
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2021
-ms.locfileid: "108108038"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119852230"
 ---
 # <a name="id3dxmatrixstackgettop-method-d3dx10h"></a>ID3DXMATRIXStack::GetTop-Methode (D3DX10.h)
 
-Ruft die aktuelle Matrix oben im Stapel ab.
+Ruft die aktuelle Matrix am oberen Rand des Stapels ab.
 
 ## <a name="syntax"></a>Syntax
 
@@ -44,17 +44,17 @@ Typ: **[ **D3DXMATRIX**](../direct3d9/d3dxmatrix.md)\***
 
 Diese Methode gibt einen Zeiger auf eine D3DXMATRIX-Struktur zurück, die die aktuelle Matrix darstellt.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
 Der von dieser Methode zurückgegebene D3DXMATRIX-Zeiger ist nach nachfolgenden Stapelvorgängen nicht garantiert gültig.
 
-Beachten Sie, dass diese Methode die aktuelle Matrix nicht vom anfang des Stapels entfernt. stattdessen wird nur die aktuelle Matrix zurückgegeben.
+Beachten Sie, dass diese Methode die aktuelle Matrix nicht vom Anfang des Stapels entfernt. stattdessen wird nur die aktuelle Matrix zurückgegeben.
 
 ## <a name="requirements"></a>Anforderungen
 
 
 
-| Anforderungen | Wert |
+| Anforderung | Wert |
 |--------------------|---------------------------------------------------------------------------------------|
 | Header<br/>  | <dl> <dt>D3DX10.h</dt> </dl>   |
 | Bibliothek<br/> | <dl> <dt>D3DX10.lib</dt> </dl> |

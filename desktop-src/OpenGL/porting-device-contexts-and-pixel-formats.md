@@ -1,52 +1,52 @@
 ---
-title: Portieren von Geräte Kontexten und Pixel Formaten
-description: Portieren von Geräte Kontexten und Pixel Formaten
+title: Portieren von Gerätekontexten und Pixelformaten
+description: Portieren von Gerätekontexten und Pixelformaten
 ms.assetid: b60cac27-1e2e-4da5-81c4-69446b92f820
 keywords:
-- Portieren auf OpenGL, Pixel
-- OpenGL-portieren, Pixel
+- Portieren zu OpenGL, Pixel
+- OpenGL-Portierung, Pixel
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: d793c139c6d7a0a0fc85b2e2c36f30176ce9ab6e
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: b292fb3f27eb2ed888a4db94198944f41a8571114b38c5c90b994cdd1cb6367f
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "106338977"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119144083"
 ---
-# <a name="porting-device-contexts-and-pixel-formats"></a>Portieren von Geräte Kontexten und Pixel Formaten
+# <a name="porting-device-contexts-and-pixel-formats"></a>Portieren von Gerätekontexten und Pixelformaten
 
-Jedes Fenster in der Microsoft-Implementierung von OpenGL für Windows verfügt über ein eigenes Aktuelles Pixel Format. Ein Pixel Format wird durch eine [**pixelformatdescriptor**](/windows/win32/api/wingdi/ns-wingdi-pixelformatdescriptor) -Datenstruktur definiert. Da jedes Fenster über ein eigenes Pixel Format verfügt, erhalten Sie einen Gerätekontext, legen Sie das Pixel Format des Geräte Kontexts fest, und erstellen Sie dann einen OpenGL-renderingkontext für den Gerätekontext. Der renderingkontext verwendet automatisch das Pixel Format des Geräte Kontexts.
+Jedes Fenster in der Microsoft-Implementierung von OpenGL für Windows hat ein eigenes aktuelles Pixelformat. Ein Pixelformat wird durch eine [**PIXELFORMATDESCRIPTOR-Datenstruktur**](/windows/win32/api/wingdi/ns-wingdi-pixelformatdescriptor) definiert. Da jedes Fenster ein eigenes Pixelformat aufweist, erhalten Sie einen Gerätekontext, legen das Pixelformat des Gerätekontexts fest und erstellen dann einen OpenGL-Renderingkontext für den Gerätekontext. Der Renderingkontext verwendet automatisch das Pixelformat seines Gerätekontexts.
 
-Das X-Fenster System verwendet auch eine Datenstruktur, **xvisualinfo**, um die Eigenschaften der Pixel in einem Fenster anzugeben. **Xvisualinfo** -Strukturen enthalten eine **visuelle** Datenstruktur, die beschreibt, wie Farb Ressourcen in einem bestimmten Bildschirm verwendet werden.
+Das X-Fenstersystem verwendet auch die Datenstruktur **XVisualInfo,** um die Eigenschaften von Pixeln in einem Fenster anzugeben. **XVisualInfo-Strukturen** enthalten eine **visuelle** Datenstruktur, die beschreibt, wie Farbressourcen auf einem bestimmten Bildschirm verwendet werden.
 
-Im X-Fenster System wird **xvisualinfo** zum Erstellen eines Fensters verwendet, indem das Fenster auf das gewünschte Pixel Format festgelegt wird. Die zurückgegebene-Struktur wird verwendet, um das Fenster und einen renderingkontext zu erstellen. In Windows erstellen Sie zunächst ein Fenster und erhalten ein Handle für einen Gerätekontext (HDC) des Fensters. Der HDC wird dann verwendet, um das Pixel Format für das Fenster festzulegen. Der renderingkontext verwendet das Pixel Format des Fensters.
+Im X-Fenstersystem wird **XVisualInfo** verwendet, um ein Fenster zu erstellen, indem das Fenster auf das gewünschte Pixelformat festgelegt wird. Die zurückgegebene -Struktur wird verwendet, um das Fenster und einen Renderingkontext zu erstellen. In Windows erstellen Sie zunächst ein Fenster und erhalten ein Handle für einen Gerätekontext (HDC) des Fensters. Der HDC wird dann verwendet, um das Pixelformat für das Fenster festzulegen. Der Renderingkontext verwendet das Pixelformat des Fensters.
 
-In der folgenden Tabelle werden die X-Fenster System-und glx-visuellen Funktionen mit ihren entsprechenden Windows-Pixel Formatfunktionen verglichen.
+In der folgenden Tabelle werden die visuellen Funktionen X Window System und GLX mit ihren entsprechenden Windows Pixelformatfunktionen verglichen.
 
 
 
-| X Fenster/glx-Funktion                                                                                     | Windows-Pixel Format-Funktion                                                                                                      |
+| Visuelle X-Fenster-/GLX-Funktion                                                                                     | Windows Pixelformatfunktion                                                                                                      |
 |------------------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------|
-| Xvisualinfo \* **glxchoosevisual**(Display *\* dpy*, int *Screen*, int *\* atzst*)                               | int [**Choice Pixel Format**](/windows/desktop/api/wingdi/nf-wingdi-choosepixelformat)(HDC *hdc*, pixelformatdescriptor *\* ppfd*)                                      |
-| int **glxgetconfig**(Display *\* dpy*, xvisualinfo *\* VIS*, int *\* atzst*, int *\* Wert*)                      | int [**describepixelformat**](/windows/desktop/api/wingdi/nf-wingdi-describepixelformat)(HDC *hdc*, int *ipixelformat*, uint *nbytes*, lppixelformatdescriptor *ppfd*) |
-| Xvisualinfo \* **xgetvisualinfo**(Display *\* dpy*, Long *vinfo \_ Mask*, xvisualinfo *\* vinfo \_ Templ*, int *\* nitems*) | int [**GetPixelFormat**](/windows/desktop/api/wingdi/nf-wingdi-getpixelformat)(HDC *hdc*)                                                                           |
-| Die von **glxchoosevisual** zurückgegebene *Visualisierung* wird verwendet, wenn ein Fenster erstellt wird.                                   | Bool [**SetPixelFormat**](/windows/desktop/api/wingdi/nf-wingdi-setpixelformat)(HDC *hdc*, int *ipixelformat*, pixelformatdescriptor *\* ppfd*)                        |
+| XVisualInfo \* **glXChooseVisual**( Display *\* dpy*,int *screen*,int *\* attribList*)                               | int [**ChoosePixelFormat**](/windows/desktop/api/wingdi/nf-wingdi-choosepixelformat)( HDC *hdc*,PIXELFORMATDESCRIPTOR *\* ppfd*)                                      |
+| int **glXGetConfig**( anzeigen *\* dpy*,XVisualInfo *\* vis*,int *\* attribList*,int *\* value*)                      | int [**DescribePixelFormat**](/windows/desktop/api/wingdi/nf-wingdi-describepixelformat)( HDC *hdc*,int *iPixelFormat*,UINT *nBytes*,LPPIXELFORMATDESCRIPTOR *ppfd*) |
+| XVisualInfo \* **XGetVisualInfo**( Display *\* dpy*,long *vinfo \_ mask*,XVisualInfo *\* vinfo \_ templ*,int *\* nitems*) | int [**GetPixelFormat**](/windows/desktop/api/wingdi/nf-wingdi-getpixelformat)( HDC *hdc*)                                                                           |
+| Das von **glxChooseVisual** zurückgegebene *Visual* wird verwendet, wenn ein Fenster erstellt wird.                                   | BOOL [**SetPixelFormat**](/windows/desktop/api/wingdi/nf-wingdi-setpixelformat)( HDC *hdc*,int *iPixelFormat*,PIXELFORMATDESCRIPTOR *\* ppfd*)                        |
 
 
 
- 
+ 
 
-In den folgenden Abschnitten finden Sie Beispiele für Pixel Format-Code Fragmente für ein X-Fenster System Programm und denselben Code, nachdem er zu Windows portiert wurde.
+Die folgenden Abschnitte enthalten Beispiele für Codefragmente im Pixelformat für ein X-Fenstersystemprogramm und den gleichen Code, nachdem er zu Windows portiert wurde.
 
--   [Code Beispiel für das glx-Pixel Format](glx-pixel-format-code-sample.md)
--   [Code Beispiel für Windows-Pixel Format](win32-pixel-format-code-sample.md)
+-   [GLX-Pixelformatcodebeispiel](glx-pixel-format-code-sample.md)
+-   [Windows Pixelformatcodebeispiel](win32-pixel-format-code-sample.md)
 
-Weitere Informationen zu Pixel Formaten finden Sie unter [Pixel Formate](pixel-formats.md).
+Weitere Informationen zu Pixelformaten finden Sie unter [Pixelformate.](pixel-formats.md)
 
- 
+ 
 
- 
+ 
 
 
 

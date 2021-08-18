@@ -13,7 +13,7 @@ ms.locfileid: "119467150"
 ---
 # <a name="converting-a-bmp-image-to-a-png-image"></a>Konvertieren eines BMP-Bilds in ein PNG-Bild
 
-Um ein Image in einer Datenträgerdatei zu speichern, rufen Sie die [Save-Methode](/windows/win32/api/gdiplusheaders/nf-gdiplusheaders-image-save(inistream_inconstclsid_inconstencoderparameters)) der [**Image-Klasse**](/windows/win32/api/gdiplusheaders/nl-gdiplusheaders-image) auf. Die folgende Konsolenanwendung lädt ein BMP-Bild aus einer Datenträgerdatei, konvertiert das Bild in das PNG-Format und speichert das konvertierte Bild in einer neuen Datenträgerdatei. Die main-Funktion basiert auf der Hilfsfunktion GetEncoderClsid, die unter [Abrufen des Klassenbezeichners für einen Encoder](-gdiplus-retrieving-the-class-identifier-for-an-encoder-use.md)gezeigt wird.
+Um ein Image in einer Datenträgerdatei zu speichern, rufen Sie die [Save-Methode](/windows/win32/api/gdiplusheaders/nf-gdiplusheaders-image-save(inistream_inconstclsid_inconstencoderparameters)) der [**Image-Klasse**](/windows/win32/api/gdiplusheaders/nl-gdiplusheaders-image) auf. Die folgende Konsolenanwendung lädt ein BMP-Bild aus einer Datenträgerdatei, konvertiert das Bild in das PNG-Format und speichert das konvertierte Bild in einer neuen Datenträgerdatei. Die main-Funktion basiert auf der Hilfsfunktion GetEncoderClsid, die unter Abrufen des Klassenbezeichners für einen [Encoder gezeigt wird.](-gdiplus-retrieving-the-class-identifier-for-an-encoder-use.md)
 
 
 ```

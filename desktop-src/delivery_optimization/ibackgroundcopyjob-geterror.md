@@ -1,11 +1,11 @@
 ---
-title: Ibackgroundcopyjob GetError-Methode (deliveryoptimization. h)
-description: Ruft die Fehler Schnittstelle ab, nachdem ein Fehler aufgetreten ist.
+title: IBackgroundCopyJob GetError-Methode (Deliveryoptimization.h)
+description: Ruft die Fehlerschnittstelle ab, nachdem ein Fehler aufgetreten ist.
 ms.assetid: 66891557-C118-4C66-AEFC-D8FD70976B9A
 keywords:
 - GetError-Methode
-- GetError-Methode, ibackgroundcopyjob-Schnittstelle
-- Ibackgroundcopyjob-Schnittstelle, GetError-Methode
+- GetError-Methode, IBackgroundCopyJob-Schnittstelle
+- IBackgroundCopyJob-Schnittstelle, GetError-Methode
 topic_type:
 - apiref
 api_name:
@@ -17,18 +17,18 @@ api_type:
 ms.topic: reference
 ms.date: 05/31/2018
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: 1f2da994da83a786b89adb5ae63104dbaa6e2ef9
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 016f11023d50d7ea1fa9024e270a7ebce0597e07d5c33a915facae47773759c7
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104391912"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119755510"
 ---
-# <a name="ibackgroundcopyjobgeterror-method"></a>Ibackgroundcopyjob:: GetError-Methode
+# <a name="ibackgroundcopyjobgeterror-method"></a>IBackgroundCopyJob::GetError-Methode
 
-Ruft die Fehler Schnittstelle ab, nachdem ein Fehler aufgetreten ist.
+Ruft die Fehlerschnittstelle ab, nachdem ein Fehler aufgetreten ist.
 
-Die Übermittlungs Optimierung (Do) generiert ein Fehler Objekt, wenn der Status des Auftrags BG_JOB_STATE_ERROR oder BG_JOB_STATE_TRANSIENT_ERROR ist. Der Dienst erstellt kein Fehler Objekt, wenn ein-Rückruf für eine **ibackgroundcopyxxxx** -Schnittstellen Methode fehlschlägt. Das Error-Objekt ist verfügbar, bis die Daten übertragen werden (der Status des Auftrags ändert sich in BG_JOB_STATE_TRANSFERRING), oder bis die Anwendung beendet wird.
+Übermittlungsoptimierung (DO) generiert ein Fehlerobjekt, wenn der Status des Auftrags BG_JOB_STATE_ERROR oder BG_JOB_STATE_TRANSIENT_ERROR. Der Dienst erstellt kein Fehlerobjekt, wenn ein Aufruf einer **IBackgroundCopyXXXX-Schnittstellenmethode** fehlschlägt. Das Fehlerobjekt ist verfügbar, bis do mit der Übertragung von Daten beginnt (der Status des Auftrags ändert sich in BG_JOB_STATE_TRANSFERRING), oder bis Ihre Anwendung beendet wird.
 
 ## <a name="syntax"></a>Syntax
 
@@ -45,40 +45,40 @@ HRESULT GetError(
 
 <dl> <dt>
 
-*pperror* \[ vorgenommen\]
+*ppError* \[ out\]
 </dt> <dd>
 
-Fehler Schnittstelle, die den Fehlercode, eine Beschreibung des Fehlers und den Kontext bereitstellt, in dem der Fehler aufgetreten ist. Dieser Parameter identifiziert außerdem die Datei, die zum Zeitpunkt des Auftretens des Fehlers übertragen wird. Release *pperror* , wenn dies erledigt ist.
+Fehlerschnittstelle, die den Fehlercode, eine Beschreibung des Fehlers und den Kontext enthält, in dem der Fehler aufgetreten ist. Dieser Parameter identifiziert auch die Datei, die zum Zeitpunkt des Fehlers übertragen wird. Geben Sie *ppError frei,* wenn Sie fertig sind.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Diese Methode gibt sowohl die folgenden **HRESULT** -Werte als auch andere zurück.
+Diese Methode gibt die folgenden **HRESULT-Werte** sowie andere zurück.
 
 
 
 | Rückgabecode                                                                                                           | Beschreibung                                                                                                                                                                                               |
 |-----------------------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| <dl> <dt>S_OK * * * *</dt> </dl>                              | Das Fehler Objekt wurde erfolgreich generiert.<br/>                                                                                                                                                       |
-| <dl> <dt>**DO_E_ERROR_INFORMATION_UNAVAILABLE**</dt> </dl> | Die Fehler Schnittstelle ist nur verfügbar, wenn ein Fehler auftritt (BG_JOB_STATE_ERROR oder BG_JOB_STATE_TRANSIENT_ERROR) und bevor mit dem Übertragen von Daten begonnen wird (BG_JOB_STATE_TRANSFERRING).<br/> |
+| <dl> <dt>S_OK S_OK</dt> </dl>                              | Das Fehlerobjekt wurde erfolgreich generiert.<br/>                                                                                                                                                       |
+| <dl> <dt>**DO_E_ERROR_INFORMATION_UNAVAILABLE**</dt> </dl> | Die Fehlerschnittstelle ist nur verfügbar, nachdem ein Fehler aufgetreten ist (BG_JOB_STATE_ERROR oder BG_JOB_STATE_TRANSIENT_ERROR) und bevor do mit der Übertragung von Daten beginnt (BG_JOB_STATE_TRANSFERRING).<br/> |
 
 
 
  
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Der Auftrag wird bei schwerwiegenden Fehlern in einen Fehlerzustand versetzt. Verwenden Sie eine der folgenden Optionen, um zu bestimmen, ob der Auftrag fehlerhaft ist:
+Der Auftrag wird bei schwerwiegenden Fehlern in einen Fehlerzustand gesetzt. Verwenden Sie eine der folgenden Optionen, um zu ermitteln, ob der Auftrag einen Fehler auft:
 
--   Rufen Sie die [**ibackgroundcopyjob:: GetState**](ibackgroundcopyjob-getstate.md) -Methode auf, um den Status des Auftrags abzurufen. Der Auftrag ist fehlerhaft, wenn der Status BG_JOB_STATE_ERROR ist.
--   Um Benachrichtigungen zu erhalten, wenn ein Fehler auftritt, implementieren Sie die [**ibackgroundcopycallback**](ibackgroundcopycallback.md) -Schnittstelle (insbesondere die [**joberror**](https://www.bing.com/search?q=**JobError**) -Methode). Rufen Sie dann die [**ibackgroundcopyjob:: setnotifyinterface**](ibackgroundcopyjob-setnotifyinterface.md) -Methode auf, um den Rückruf zu registrieren, und die [**ibackgroundcopyjob:: setnotifyflags**](ibackgroundcopyjob-setnotifyflags.md) -Methode, um das BG_NOTIFY_JOB_ERROR-Flag festzulegen.
+-   Um den Status des Auftrags zu erhalten, rufen Sie die [**IBackgroundCopyJob::GetState-Methode**](ibackgroundcopyjob-getstate.md) auf. Der Auftrag ist nicht fehlerfrei, wenn der Status BG_JOB_STATE_ERROR.
+-   Um eine Benachrichtigung zu erhalten, wenn ein Fehler auftritt, implementieren Sie die [**IBackgroundCopyCallback-Schnittstelle**](ibackgroundcopycallback.md) (insbesondere die [**JobError-Methode).**](https://www.bing.com/search?q=**JobError**) Rufen Sie dann die [**IBackgroundCopyJob::SetNotifyInterface-Methode**](ibackgroundcopyjob-setnotifyinterface.md) auf, um den Rückruf zu registrieren, und die [**IBackgroundCopyJob::SetNotifyFlags-Methode,**](ibackgroundcopyjob-setnotifyflags.md) um das BG_NOTIFY_JOB_ERROR festlegen.
 
-Die [**ibackgroundcopyerror**](ibackgroundcopyerror.md) -Schnittstelle enthält Informationen, die Sie verwenden, um die Ursache des Fehlers zu ermitteln, und, wenn der Übertragungsprozess fortgesetzt werden kann. Nachdem Sie die Ursache des Fehlers bestimmt haben, führen Sie eine der folgenden Optionen aus:
+Die [**IBackgroundCopyError-Schnittstelle**](ibackgroundcopyerror.md) enthält Informationen, mit denen Sie die Ursache des Fehlers bestimmen und ob der Übertragungsprozess fortgesetzt werden kann. Nachdem Sie die Ursache des Fehlers ermittelt haben, führen Sie eine der folgenden Optionen aus:
 
--   Um den Auftrag abzubrechen, rufen Sie die [**ibackgroundcopyjob:: Cancel**](ibackgroundcopyjob-cancel.md) -Methode auf.
--   Um die Dateien zu speichern, die vor dem Auftreten des Fehlers erfolgreich übertragen wurden, müssen Sie die [**ibackgroundcopyjob:: Complete**](ibackgroundcopyjob-complete.md) -Methode abrufen.
--   Beheben Sie das Problem, und führen Sie dann die [**ibackgroundcopyjob:: Resume**](ibackgroundcopyjob-resume.md) -Methode aus, um die Verarbeitung des Auftrags abzuschließen.
+-   Rufen Sie zum Abbrechen des Auftrags die [**IBackgroundCopyJob::Cancel-Methode**](ibackgroundcopyjob-cancel.md) auf.
+-   Um die Dateien zu speichern, die vor dem Fehler erfolgreich übertragen wurden, rufen Sie die [**IBackgroundCopyJob::Complete-Methode**](ibackgroundcopyjob-complete.md) auf.
+-   Beheben Sie das Problem, und rufen Sie dann die [**IBackgroundCopyJob::Resume-Methode**](ibackgroundcopyjob-resume.md) auf, um die Verarbeitung des Auftrags fertig zu stellen.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -86,30 +86,30 @@ Die [**ibackgroundcopyerror**](ibackgroundcopyerror.md) -Schnittstelle enthält 
 
 | Anforderung | Wert |
 |-------------------------------------|-----------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Windows 10, Version 1709, \[ nur Desktop-Apps\]<br/>                                           |
-| Unterstützte Mindestversion (Server)<br/> | Windows Server, Version 1709, \[ nur Desktop-Apps\]<br/>                                       |
-| Header<br/>                   | <dl> <dt>Deliveryoptimization. h</dt> </dl>   |
-| IDL<br/>                      | <dl> <dt>Deliveryoptimization. idl</dt> </dl> |
-| Bibliothek<br/>                  | <dl> <dt>Dosvc. lib</dt> </dl>                |
+| Unterstützte Mindestversion (Client)<br/> | Windows 10, version 1709 desktop apps only (Nur Desktop-Apps der Version 1709) \[\]<br/>                                           |
+| Unterstützte Mindestversion (Server)<br/> | Windows Server, version 1709 desktop apps only (Nur \[ Desktop-Apps der Version 1709)\]<br/>                                       |
+| Header<br/>                   | <dl> <dt>Deliveryoptimization.h</dt> </dl>   |
+| Idl<br/>                      | <dl> <dt>DeliveryOptimization.idl</dt> </dl> |
+| Bibliothek<br/>                  | <dl> <dt>Dosvc.lib</dt> </dl>                |
 | DLL<br/>                      | <dl> <dt>Dosvc.dll</dt> </dl>                |
-| IID<br/>                      | IID_IBackgroundCopyJob ist als 37668d37-507E-4160-9316-26306d150b12 definiert.<br/>               |
+| IID<br/>                      | IID_IBackgroundCopyJob ist als 37668D37-507E-4160-9316-26306D150B12 definiert.<br/>               |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
 [**IBackgroundCopyJob**](ibackgroundcopyjob-.md)
 </dt> <dt>
 
-[**Ibackgroundcopycallback:: joberror**](ibackgroundcopycallback-joberror-method.md)
+[**IBackgroundCopyCallback::JobError**](ibackgroundcopycallback-joberror-method.md)
 </dt> <dt>
 
-[**Ibackgroundcopyerror**](ibackgroundcopyerror.md)
+[**IBackgroundCopyError**](ibackgroundcopyerror.md)
 </dt> <dt>
 
-[**Ibackgroundcopyjob:: GetState**](ibackgroundcopyjob-getstate.md)
+[**IBackgroundCopyJob::GetState**](ibackgroundcopyjob-getstate.md)
 </dt> </dl>
 
  

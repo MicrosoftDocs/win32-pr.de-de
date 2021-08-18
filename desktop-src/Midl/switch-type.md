@@ -1,9 +1,9 @@
 ---
 title: switch_type-Attribut
-description: Das Attribut \ Switch \_ Type \ gibt den Typ der Variablen an, die als Union-diskriminant verwendet wird. Der Switchtyp kann ein Integer-, Zeichen-, boolescher oder Enumerationstyp sein.
+description: Das Attribut \switch type\ gibt den Typ der Variablen an, die als union \_ discriminant verwendet wird. Der Switchtyp kann eine ganze Zahl, ein Zeichen, ein boolescher Wert oder ein Enumerationstyp sein.
 ms.assetid: e4c6d33b-d4db-42b7-9d18-fd14bf1fb530
 keywords:
-- Switch_type Attribut-Mittel l
+- switch_type MIDL-Attribut
 topic_type:
 - apiref
 api_name:
@@ -12,16 +12,16 @@ api_type:
 - NA
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 14184c5838d9f671f75536714d73c3f6ebf00a0a
-ms.sourcegitcommit: 57758ecb246c84d65e6e0e4bd5570d9176fa39cd
+ms.openlocfilehash: 8695a17c60f9785d7782d77db839499306a9577755e8a6838540f5a0fc2cea48
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "103857455"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119146233"
 ---
-# <a name="switch_type-attribute"></a>Switch \_ Type-Attribut
+# <a name="switch_type-attribute"></a>switch \_ type-Attribut
 
-Das **\[ \_ SwitchType \]** -Attribut identifiziert den Typ der Variablen, die als uniondiskriminant verwendet wird. Der Switchtyp kann ein Integer-, Zeichen-, boolescher oder Enumerationstyp sein.
+Das **\[ \_ \] Switchtypattribut** identifiziert den Typ der Variablen, die als Union diskriminant verwendet wird. Der Switchtyp kann eine ganze Zahl, ein Zeichen, ein boolescher Wert oder ein Enumerationstyp sein.
 
 ``` syntax
 switch_type(switch-type-specifier)
@@ -31,18 +31,18 @@ switch_type(switch-type-specifier)
 
 <dl> <dt>
 
-*Switch-Type-Spezifizierer* 
+*switch-type-specifier* 
 </dt> <dd>
 
-Gibt einen [**int**](int.md)-, [**char**](char-idl.md)-, [**Boolean**](boolean.md)-oder [**Enumeration**](enum.md) -Typ oder einen Bezeichner eines solchen Typs an.
+Gibt einen [**int-,**](int.md) [**char-,**](char-idl.md) [**boolean-**](boolean.md)oder [**enum-Typ**](enum.md) oder einen Bezeichner eines solchen Typs an.
 
 </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Während das **\[ \_ SwitchType \]** -Attribut den Variablentyp identifiziert, gibt der **\[** [**Switch \_ is**](switch-is.md) - **\]** Attribut den Namen des Parameters an, der die Union-Diskriminante ist. Das **\[ Switch \_ Type \]** -Attribut gilt für Parameter oder Member von Strukturen oder Unions.
+Während das **\[ \_ \] Switchtypattribut** den Variablentyp identifiziert, gibt der Switch is-Attribut den Namen des Parameters an, der die **\[** [**\_**](switch-is.md) **\]** Union diskriminant ist. Das **\[ \_ \] Switchtypattribut** gilt für Parameter oder Member von Strukturen oder Unions.
 
-Die Union und ihre Diskriminante müssen auf derselben logischen Ebene angegeben werden. Wenn die Union ein Parameter ist, muss der Union-diskriminant ein anderer Parameter sein. Wenn die Union ein Feld einer Struktur ist, muss die Diskriminante ein weiteres Feld der Struktur auf derselben Ebene wie das Union-Feld sein.
+Die Union und ihre Diskriminanz müssen auf der gleichen logischen Ebene angegeben werden. Wenn die Union ein Parameter ist, muss die Union diskriminant ein anderer Parameter sein. Wenn die Union ein Feld einer -Struktur ist, muss der Diskriminant ein anderes Feld der -Struktur auf der gleichen Ebene wie das Union-Feld sein.
 
 ## <a name="examples"></a>Beispiele
 
@@ -68,36 +68,36 @@ typedef struct _WINNER_TYPE
 
 <dl> <dt>
 
-[**Booleschen**](boolean.md)
+[**Boolean**](boolean.md)
 </dt> <dt>
 
 [**Char**](char-idl.md)
 </dt> <dt>
 
-[Gekapselt Unions](encapsulated-unions.md)
+[Gekapselte Unions](encapsulated-unions.md)
 </dt> <dt>
 
-[**Enumeration**](enum.md)
+[**Enum**](enum.md)
 </dt> <dt>
 
-[Schnittstellen Definitionsdatei (IDL)](interface-definition-idl-file.md)
+[IDL-Datei (Interface Definition)](interface-definition-idl-file.md)
 </dt> <dt>
 
 [**INT**](int.md)
 </dt> <dt>
 
-[Nicht gekapselt Unions](nonencapsulated-unions.md)
+[Nicht kapselte Unions](nonencapsulated-unions.md)
 </dt> <dt>
 
-[**Switch \_ ist**](switch-is.md)
+[**switch \_ ist**](switch-is.md)
 </dt> <dt>
 
 [**Union**](union.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

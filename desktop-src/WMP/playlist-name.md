@@ -1,9 +1,9 @@
 ---
 title: Playlist.name
-description: Die Name-Eigenschaft gibt den Namen der Wiedergabeliste an oder ruft ihn ab.
+description: Die Name-Eigenschaft gibt den Namen der Wiedergabeliste an oder ruft sie ab.
 ms.assetid: f951954a-c280-44e9-96e1-ae18738bc95a
 keywords:
-- Playlist.Name Windows Media Player
+- Playlist.name Windows Media Player
 topic_type:
 - apiref
 api_name:
@@ -14,28 +14,28 @@ api_type:
 - DllExport
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 8f3e9a6d34a7b1afb355712a325b1c0f8100c78e
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 422547e59ad820b9ffef176d1cd09721eab8a14b768906a8540813f56e663b5d
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106351302"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118118736"
 ---
 # <a name="playlistname"></a>Playlist.name
 
-Die- `name` Eigenschaft gibt den Namen der Wiedergabeliste an oder ruft ihn ab.
+Die `name` -Eigenschaft gibt den Namen der Wiedergabeliste an oder ruft sie ab.
 
 ## <a name="syntax"></a>Syntax
 
-*Player*. *currentwiedergabe*. **Name**
+*Player*. *currentPlaylist*. **Name**
 
 ## <a name="possible-values"></a>Mögliche Werte
 
-Diese Eigenschaft ist eine Lese- **/schreibzeichenfolge**.
+Diese Eigenschaft ist eine Zeichenfolge mit **Lese-/Schreibzugriff.**
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Zum Abrufen des Werts dieser Eigenschaft ist Lesezugriff auf die Bibliothek erforderlich. Zum Angeben des Werts ist Vollzugriff erforderlich. Weitere Informationen finden Sie unter [Bibliotheks Zugriff](library-access.md).
+Zum Abrufen des Werts dieser Eigenschaft ist Lesezugriff auf die Bibliothek erforderlich. Zum Angeben des Werts ist Vollzugriff erforderlich. Weitere Informationen finden Sie unter [Bibliothekszugriff.](library-access.md)
 
 **Windows Media Player 10 Mobile:** Diese Eigenschaft ist schreibgeschützt.
 
@@ -45,22 +45,22 @@ Zum Abrufen des Werts dieser Eigenschaft ist Lesezugriff auf die Bibliothek erfo
 
 | Anforderung | Wert |
 |--------------------|------------------------------------------------------------------------------------|
-| Version<br/> | Windows Media Player Version 7,0 oder höher.<br/>                              |
+| Version<br/> | Windows Media Player Version 7.0 oder höher.<br/>                              |
 | DLL<br/>     | <dl> <dt>Wmp.dll</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Wiedergabelisten Objekt**](playlist-object.md)
+[**Wiedergabelistenobjekt**](playlist-object.md)
 </dt> <dt>
 
-[**Settings. mediaaccessrights**](settings-mediaaccessrights.md)
+[**Einstellungen.mediaAccessRights**](settings-mediaaccessrights.md)
 </dt> <dt>
 
-[**Settings. requestmediaaccessrights**](settings-requestmediaaccessrights.md)
+[**Einstellungen.requestMediaAccessRights**](settings-requestmediaaccessrights.md)
 </dt> </dl>
 
  

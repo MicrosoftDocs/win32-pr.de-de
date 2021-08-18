@@ -1,9 +1,9 @@
 ---
-title: CD3DX12_HEAP_PROPERTIES-Struktur (D3dx12. h)
-description: Eine hilfsstruktur, um die einfache Initialisierung einer D3D12- \_ Heap \_ Eigenschaften Struktur zu ermöglichen.
+title: CD3DX12_HEAP_PROPERTIES-Struktur (D3dx12.h)
+description: Eine Hilfsstruktur, um die einfache Initialisierung einer D3D12 \_ HEAP \_ PROPERTIES-Struktur zu ermöglichen.
 ms.assetid: AC759F25-D643-412D-AA83-3A2C040BE64B
 keywords:
-- CD3DX12_HEAP_PROPERTIES Struktur
+- CD3DX12_HEAP_PROPERTIES-Struktur
 topic_type:
 - apiref
 api_name:
@@ -15,16 +15,16 @@ api_type:
 ms.localizationpriority: low
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 90cc5f5cee6bf70aad064396589aad8a483f2c50
-ms.sourcegitcommit: 14010c34b35fa268046c7683f021f86de08ddd0a
+ms.openlocfilehash: 36a4d2241568d98957ecd809f33f27c343bb0e73d0d246284e5635f22a594108
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "106354351"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119752320"
 ---
-# <a name="cd3dx12_heap_properties-structure"></a>Struktur der CD3DX12- \_ Heap \_ Eigenschaften
+# <a name="cd3dx12_heap_properties-structure"></a>CD3DX12 \_ HEAP \_ PROPERTIES-Struktur
 
-Eine hilfsstruktur, um die einfache Initialisierung einer [**D3D12- \_ Heap \_ Eigenschaften**](/windows/desktop/api/d3d12/ns-d3d12-d3d12_heap_properties) Struktur zu ermöglichen.
+Eine Hilfsstruktur, um die einfache Initialisierung einer [**D3D12 \_ HEAP \_ PROPERTIES-Struktur**](/windows/desktop/api/d3d12/ns-d3d12-d3d12_heap_properties) zu ermöglichen.
 
 ## <a name="syntax"></a>Syntax
 
@@ -47,66 +47,66 @@ struct CD3DX12_HEAP_PROPERTIES  : public D3D12_HEAP_PROPERTIES{
 
 <dl> <dt>
 
-**CD3DX12 \_ Heap- \_ Eigenschaften ()**
+**CD3DX12 \_ HEAP \_ PROPERTIES()**
 </dt> <dd>
 
-Erstellt eine neue, nicht initialisierte Instanz von CD3DX12 \_ Heap \_ Eigenschaften.
+Erstellt eine neue, nicht initialisierte Instanz einer CD3DX12 \_ HEAP \_ PROPERTIES.
 
 </dd> <dt>
 
-**explizite CD3DX12 \_ Heap \_ Eigenschaften (Konstanten D3D12 \_ Heap \_ Eigenschaften &o)**
+**Explicit CD3DX12 \_ HEAP \_ PROPERTIES(const D3D12 \_ HEAP PROPERTIES &\_ o)**
 </dt> <dd>
 
-Erstellt eine neue Instanz einer CD3DX12- \_ Heap Eigenschaft \_ , die mit dem Inhalt einer anderen [**D3D12 \_ Heap \_ Properties**](/windows/desktop/api/d3d12/ns-d3d12-d3d12_heap_properties) -Struktur initialisiert wird.
+Erstellt eine neue Instanz eines CD3DX12 \_ HEAP \_ PROPERTIES, initialisiert mit dem Inhalt einer anderen [**D3D12 \_ HEAP \_ PROPERTIES-Struktur.**](/windows/desktop/api/d3d12/ns-d3d12-d3d12_heap_properties)
 
 </dd> <dt>
 
-**CD3DX12 \_ Heap- \_ Eigenschaften (D3D12 \_ CPU \_ Page \_ Property cpupageproperty, D3D12 \_ Memory \_ Pool memorypoolpreference, uint anationnodemask = 1, uint nodemask = 1)**
+**CD3DX12 \_ HEAP \_ PROPERTIES(D3D12 \_ CPU PAGE PROPERTY \_ \_ cpuPageProperty, D3D12 \_ MEMORY POOL \_ memoryPoolPreference, UINT creationNodeMask = 1, UINT nodeMask = 1)**
 </dt> <dd>
 
-Erstellt eine neue Instanz der CD3DX12- \_ Heap \_ Eigenschaften und initialisiert die folgenden Parameter:
+Erstellt eine neue Instanz von CD3DX12 \_ HEAP \_ PROPERTIES und initialisiert die folgenden Parameter:
 
-[**D3D12 \_ CPU \_ - \_ Seiteneigenschaft**](/windows/desktop/api/d3d12/ne-d3d12-d3d12_cpu_page_property) cpupageproperty
+[**D3D12 \_ CPU \_ PAGE \_ PROPERTY**](/windows/desktop/api/d3d12/ne-d3d12-d3d12_cpu_page_property) cpuPageProperty
 
-[**D3D12 \_ \_**](/windows/desktop/api/d3d12/ne-d3d12-d3d12_memory_pool) Memorypoolpreference für Speicher Pool
+[**D3D12 \_ MEMORY \_ POOL**](/windows/desktop/api/d3d12/ne-d3d12-d3d12_memory_pool) memoryPoolPreference
 
-Opt Uint-kreationnodemask = 1
+(opt) UINT-ErstellungNodeMask = 1
 
-Opt Uint nodemask = 1
+(opt) UINT nodeMask = 1
 
 </dd> <dt>
 
-**explizite CD3DX12 \_ Heap- \_ Eigenschaften (D3D12 \_ Heap \_ Type type, uint kreationnodemask = 1, uint nodemask = 1)**
+**Explicit CD3DX12 \_ HEAP \_ PROPERTIES(D3D12 \_ HEAP TYPE \_ type, UINT creationNodeMask = 1, UINT nodeMask = 1)**
 </dt> <dd>
 
-Erstellt eine neue Instanz der CD3DX12- \_ Heap \_ Eigenschaften und initialisiert die folgenden Parameter:
+Erstellt eine neue Instanz von CD3DX12 \_ HEAP \_ PROPERTIES und initialisiert die folgenden Parameter:
 
-[**D3D12 \_ Typ des Heap \_ Typs**](/windows/desktop/api/d3d12/ne-d3d12-d3d12_heap_type)
+[**D3D12 \_ \_HEAPTYPTYP**](/windows/desktop/api/d3d12/ne-d3d12-d3d12_heap_type)
 
-Opt Uint-kreationnodemask = 1
+(opt) UINT-ErstellungNodeMask = 1
 
-Opt Uint nodemask = 1
+(opt) UINT nodeMask = 1
 
 </dd> <dt>
 
-**Operator Konstanten D3D12 \_ Heap \_ Eigenschaften& () Konstanten**
+**operator const D3D12 \_ HEAP \_ PROPERTIES&() const**
 </dt> <dd>
 
-Definiert den & Operator "Pass-by-Reference" für den übergeordneten Strukturtyp.
+Definiert den & Pass-by-Reference-Operator für den übergeordneten Strukturtyp.
 
 </dd> <dt>
 
-**Inline Operator = = (Konstanten D3D12 \_ Heap \_ Eigenschaften& l, Konstanten D3D12 \_ Heap \_ Eigenschaften& r)**
+**inline operator==( const D3D12 \_ HEAP \_ PROPERTIES& l, const D3D12 \_ HEAP PROPERTIES& r \_ )**
 </dt> <dd>
 
-Testet basierend auf der Gleichheit aller Element Felder auf Gleichheit zwischen den angegebenen D3D12 \_ Heap- \_ Eigenschaften Instanzen.
+Testet auf Gleichheit zwischen den angegebenen D3D12 \_ HEAP \_ PROPERTIES-Instanzen basierend auf der Gleichheit aller Elementfelder.
 
 </dd> <dt>
 
-**Inline Operator! = (Konstanten D3D12 \_ Heap \_ Eigenschaften& l, Konstanten D3D12 \_ Heap \_ Eigenschaften& r)**
+**inline operator!=( const D3D12 \_ HEAP \_ PROPERTIES& l, const D3D12 \_ HEAP PROPERTIES& r \_ )**
 </dt> <dd>
 
-Prüft auf Ungleichheit zwischen den angegebenen D3D12 \_ Heap- \_ Eigenschaften Instanzen. Wird durch die Umkehrung des **Operators = =** implementiert.
+Testet auf Ungleichheit zwischen den angegebenen D3D12 \_ HEAP \_ PROPERTIES-Instanzen. Wird implementiert, indem die Umkehrung des **operators==-Werts** angenommen wird.
 
 </dd> </dl>
 
@@ -116,15 +116,15 @@ Prüft auf Ungleichheit zwischen den angegebenen D3D12 \_ Heap- \_ Eigenschaften
 
 | Anforderung | Wert |
 |-------------------|-------------------------------------------------------------------------------------|
-| Header<br/> | <dl> <dt>D3dx12. h</dt> </dl> |
+| Header<br/> | <dl> <dt>D3dx12.h</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**D3D12- \_ Heap \_ Eigenschaften**](/windows/desktop/api/d3d12/ns-d3d12-d3d12_heap_properties)
+[**\_D3D12-HEAPEIGENSCHAFTEN \_**](/windows/desktop/api/d3d12/ns-d3d12-d3d12_heap_properties)
 </dt> <dt>
 
 [Strukturen des Hilfsprogramms für D3D12](helper-structures-for-d3d12.md)

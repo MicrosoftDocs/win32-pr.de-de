@@ -1,5 +1,5 @@
 ---
-description: 'D3DXSHScale-Funktion (D3DX10.h): Skaliert einen pherischen Vektor (SH) anders ausgedrückt: pOut \[ i \] = pA i \[ \] \* Scale.'
+description: 'D3DXSHScale-Funktion (D3DX10.h): Skaliert einen Sphärischen Vektor (SH). mit anderen Worten: pOut \[ i \] = pA i \[ \] \* Scale.'
 ms.assetid: e323d238-f635-4780-982d-8798ba178f31
 title: D3DXSHScale-Funktion (D3DX10.h)
 ms.topic: reference
@@ -14,16 +14,16 @@ api_type:
 api_location:
 - D3DX10.lib
 - D3DX10.dll
-ms.openlocfilehash: 0fab96575e5542eaaed725a88f9ba52c3289a4ad
-ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
+ms.openlocfilehash: 46018d83a473202066ac22c9e4bda88a096154ffd6fc79b13c604d8937d1140c
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2021
-ms.locfileid: "108108498"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118990750"
 ---
 # <a name="d3dxshscale-function-d3dx10h"></a>D3DXSHScale-Funktion (D3DX10.h)
 
-Skaliert einen Sh-Vektor (PhericalIcal). anders ausgedrückt: pOut \[ i \] = pA i \[ \] \* Scale.
+Skaliert einen Sphärischen Vektor (SH). mit anderen Worten: pOut \[ i \] = pA i \[ \] \* Scale.
 
 ## <a name="syntax"></a>Syntax
 
@@ -48,7 +48,7 @@ FLOAT* D3DXSHScale(
 
 Typ: **[ **FLOAT**](../winprog/windows-data-types.md)\***
 
-Zeiger auf SH-Ausgabekoeffizienten (Spherical- und Pherical-Rumpf). Die Auswertung generiert Order Koeffizienten. Siehe Hinweise.
+Zeiger auf SH-Ausgabekoeffizienten (Spherical Veralten). Die Auswertung generiert Order²-Koeffizienten. Siehe Hinweise.
 
 </dd> <dt>
 
@@ -57,7 +57,7 @@ Zeiger auf SH-Ausgabekoeffizienten (Spherical- und Pherical-Rumpf). Die Auswertu
 
 Typ: **[ **UINT**](../winprog/windows-data-types.md)**
 
-Reihenfolge der SH-Auswertung. Muss im Bereich von D3DXSH \_ MINORDER bis D3DXSH \_ MAXORDER (einschließlich) liegen. Die Auswertung generiert Order Koeffizienten. Der Grad der Auswertung ist Order - 1.
+Reihenfolge der SH-Auswertung. Muss im Bereich von D3DXSH \_ MINORDER bis D3DXSH \_ MAXORDER (einschließlich) liegen. Die Auswertung generiert Order²-Koeffizienten. Der Grad der Auswertung ist "Order - 1".
 
 </dd> <dt>
 
@@ -66,7 +66,7 @@ Reihenfolge der SH-Auswertung. Muss im Bereich von D3DXSH \_ MINORDER bis D3DXSH
 
 Typ: **const [**FLOAT**](../winprog/windows-data-types.md) \***
 
-Zeiger auf den zu skalierenden SH-Vektor.
+Zeiger auf den sh-Vektor, der skaliert werden soll.
 
 </dd> <dt>
 
@@ -85,7 +85,7 @@ Typ: **[ **FLOAT**](../winprog/windows-data-types.md)\***
 
 Zeiger auf SH-Ausgabekoeffizienten.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
 Jeder Koeffizient der Basisfunktion "Ylm" wird an der Speicherposition ljs + m + l gespeichert, wobei Folgendes gilt:
 
@@ -96,7 +96,7 @@ Jeder Koeffizient der Basisfunktion "Ylm" wird an der Speicherposition ljs + m +
 
 
 
-| Anforderungen | Wert |
+| Anforderung | Wert |
 |--------------------|---------------------------------------------------------------------------------------|
 | Header<br/>  | <dl> <dt>D3DX10.h</dt> </dl>   |
 | Bibliothek<br/> | <dl> <dt>D3DX10.lib</dt> </dl> |

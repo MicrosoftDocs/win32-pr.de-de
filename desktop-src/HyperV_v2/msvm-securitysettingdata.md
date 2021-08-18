@@ -19,14 +19,14 @@ api_type:
 - DllExport
 api_location:
 - vmms.exe
-ms.openlocfilehash: b7125e06ad4ce33e70a8cf84b24933e7390e7a74
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 22bc30db51b103f50eaa4deed7ca6f479c5f94600fbb15ef2a6f4bb36595d159
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106347396"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119148144"
 ---
-# <a name="msvm_securitysettingdata-class"></a>MSVM \_ securitysettingdata-Klasse
+# <a name="msvm_securitysettingdata-class"></a>Msvm \_ SecuritySettingData-Klasse
 
 Stellt den konfigurierten Zustand der Sicherheitseinstellungen für einen virtuellen Computer dar.
 
@@ -49,109 +49,109 @@ class Msvm_SecuritySettingData : CIM_SettingData
 
 ## <a name="members"></a>Member
 
-Die **MSVM \_ securitysettingdata** -Klasse verfügt über diese Typen von Membern:
+Die **Msvm \_ SecuritySettingData-Klasse** verfügt über die folgenden Membertypen:
 
 -   [Eigenschaften](#properties)
 
 ### <a name="properties"></a>Eigenschaften
 
-Die **MSVM \_ securitysettingdata** -Klasse verfügt über diese Eigenschaften.
+Die **Msvm \_ SecuritySettingData-Klasse** verfügt über diese Eigenschaften.
 
 <dl> <dt>
 
-**Dataschutzanforderung**
+**DataProtectionRequested**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **boolescher** Wert
+Datentyp: **boolescher Wert**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [ **erforderlich**](/windows/desktop/WmiSdk/standard-qualifiers)
+Qualifizierer: [ **Erforderlich**](/windows/desktop/WmiSdk/standard-qualifiers)
 </dt> </dl>
 
-" **true** ", um den Schutz von Daten für eine VM anzufordern. andernfalls **false**. Der Standardwert ist **false.**
+**TRUE zum** Anfordern des Datenschutzes für einen virtuellen Computer; andernfalls **FALSE.** Der Standardwert ist **false.**
 
 </dd> <dt>
 
-**Verschlüsselungsstateandvmmigrationtraffic**
+**EncryptStateAndVmMigrationTraffic**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **boolescher** Wert
+Datentyp: **boolescher Wert**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [ **erforderlich**](/windows/desktop/WmiSdk/standard-qualifiers)
+Qualifizierer: [ **Erforderlich**](/windows/desktop/WmiSdk/standard-qualifiers)
 </dt> </dl>
 
-**true** , wenn der Zustands-und Migrations Datenverkehr einer verschlüsselten VM verschlüsselt werden soll. andernfalls **false**. Der Standardwert für eine neu erstellte VM ist **false**.
+**TRUE,** damit der Zustands- und Migrationsdatenverkehr eines virtuellen Computers verschlüsselt ist; andernfalls **FALSE.** Der Standardwert für einen neu erstellten virtuellen Computer ist **false.**
 
 </dd> <dt>
 
-**Ksdenabled**
+**KsdEnabled**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **boolescher** Wert
+Datentyp: **boolescher Wert**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [ **erforderlich**](/windows/desktop/WmiSdk/standard-qualifiers)
+Qualifizierer: [ **Erforderlich**](/windows/desktop/WmiSdk/standard-qualifiers)
 </dt> </dl>
 
-" **true** ", um ein Schlüsselspeicher Gerät (KSD) für diesen virtuellen Computer zu aktivieren. andernfalls **false**. Eine neu erstellte VM verfügt über eine deaktivierte KSD.
+**TRUE,** um ein Schlüsselspeichergerät (Key Storage Device, KSD) für diesen virtuellen Computer zu aktivieren; andernfalls **FALSE.** Ein neu erstellter virtueller Computer verfügt über eine deaktivierte KSD.
 
 </dd> <dt>
 
-**Shieldingrequessiert**
+**ShieldingRequested**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **boolescher** Wert
+Datentyp: **boolescher Wert**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [ **erforderlich**](/windows/desktop/WmiSdk/standard-qualifiers)
+Qualifizierer: [ **Erforderlich**](/windows/desktop/WmiSdk/standard-qualifiers)
 </dt> </dl>
 
-" **true** ", um den Schutz für eine VM anzufordern. andernfalls **false**. Ein neu erstellter virtueller Computer verfügt über einen anfänglichen Schutz angeforderten Status **false**.
+**"true"** zum Anfordern der Abschirmung für einen virtuellen Computer; andernfalls **FALSE.** Ein neu erstellter virtueller Computer hat den anfänglichen angeforderten Schutzstatus **false.**
 
 </dd> <dt>
 
-**Tpmenabled**
+**TpmEnabled**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **boolescher** Wert
+Datentyp: **boolescher Wert**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [ **erforderlich**](/windows/desktop/WmiSdk/standard-qualifiers)
+Qualifizierer: [ **Erforderlich**](/windows/desktop/WmiSdk/standard-qualifiers)
 </dt> </dl>
 
-" **true** ", um ein vertrauenswürdiges Plattform-nodule (TPM) für diesen virtuellen Computer zu aktivieren. andernfalls **false**. Ein neu erstellter virtueller Computer verfügt über ein TPM deaktivieren.
+**TRUE,** um ein Trusted Platform Nodule (TPM) für diesen virtuellen Computer zu aktivieren; andernfalls **FALSE.** Ein neu erstellter virtueller Computer verfügt über ein deaktiviertes TPM.
 
 </dd> <dt>
 
-**Virtualizationbasedsecurityoptout**
+**VirtualizationBasedSecurityOptOut**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **boolescher** Wert
+Datentyp: **boolescher Wert**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [ **erforderlich**](/windows/desktop/WmiSdk/standard-qualifiers)
+Qualifizierer: [ **Erforderlich**](/windows/desktop/WmiSdk/standard-qualifiers)
 </dt> </dl>
 
-" **true** ", wenn keine VM-virtualisierungsbasierte Sicherheit angeboten werden soll. andernfalls **false**. Die Standardeinstellung für einen neu erstellten VM-Abmelde Status ist **false**.
+**"true",** wenn keine virtualisierungsbasierte Sicherheit für virtuelle Computer angeboten wird; andernfalls **FALSE.** Die Standardeinstellung für den Abmeldestatus eines neu erstellten virtuellen Computers ist **false.**
 
 </dd> </dl>
 
@@ -161,19 +161,19 @@ Qualifizierer: [ **erforderlich**](/windows/desktop/WmiSdk/standard-qualifiers)
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Windows 10, Version 1703, \[ nur Desktop-Apps\]<br/>                                               |
+| Unterstützte Mindestversion (Client)<br/> | Windows 10 Desktop-Apps, Version 1703 \[\]<br/>                                               |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2016<br/>                                                                          |
 | Namespace<br/>                | \\Stammvirtualisierung \\ v2<br/>                                                                     |
-| MOF<br/>                      | <dl> <dt>Windowsvirtualization. v2. MOF</dt> </dl> |
+| MOF<br/>                      | <dl> <dt>WindowsVirtualization.V2.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Vmms.exe</dt> </dl>                     |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**CIM- \_ SettingData**](cim-settingdata.md)
+[**CIM \_ SettingData**](cim-settingdata.md)
 </dt> </dl>
 
  

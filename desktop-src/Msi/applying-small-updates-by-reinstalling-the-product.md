@@ -1,37 +1,37 @@
 ---
-description: Ein kleines Update kann auf eine Anwendung angewendet werden, indem die Anwendung vollständig oder teilweise von der Befehlszeile oder von einem Programm neu installiert wird.
+description: Ein kleines Update kann auf eine Anwendung angewendet werden, indem die Anwendung vollständig oder teilweise über die Befehlszeile oder über ein Programm neu installiert wird.
 ms.assetid: 6f8b68da-7748-436d-bc95-96e39cf42143
-title: Anwenden von kleinen Updates durch Neuinstallation des Produkts
+title: Anwenden kleiner Updates durch Neuinstallation des Produkts
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: a27b97ff0274baac5a4ec30df244394a609ed525
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 6cb128ec3b62b3f81e8a1f9762bda715fa21e010fa4c16d16c8ca377aa4c5ce1
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "103959532"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119145853"
 ---
-# <a name="applying-small-updates-by-reinstalling-the-product"></a>Anwenden von kleinen Updates durch Neuinstallation des Produkts
+# <a name="applying-small-updates-by-reinstalling-the-product"></a>Anwenden kleiner Updates durch Neuinstallation des Produkts
 
-Ein kleines Update kann auf eine Anwendung angewendet werden, indem die Anwendung vollständig oder teilweise von der Befehlszeile oder von einem Programm neu installiert wird.
+Ein kleines Update kann auf eine Anwendung angewendet werden, indem die Anwendung vollständig oder teilweise über die Befehlszeile oder über ein Programm neu installiert wird.
 
-**So verteilen Sie das kleine Update über die Befehlszeile an die aktuellen Benutzer (Hierbei handelt es sich um eine komplette Neuinstallation)**
+**So können Sie das kleine Update über die Befehlszeile an aktuelle Benutzer (dies ist eine vollständige Neuinstallation) weiterleiten**
 
-1.  Verwenden Sie in der Befehlszeile einen der folgenden Befehle: **msiexec/fvomus \[** _path to aktualisierte MSI-Datei_ *_\]_* oder **msiexec/I \[** _path to aktualisierte. msi file_ *_\] REINSTALL = ALL REINSTALLMODE = vomus_*.
-2.  Die aktualisierte MSI-Datei wird auf dem Computer des Benutzers zwischengespeichert. Beachten Sie, dass der Benutzer das Produkt nicht mithilfe der Option "Software" erneut installieren kann, da sich die aktualisierte MSI-Datei noch nicht auf dem Computer des Benutzers befindet.
+1.  Verwenden Sie in der Befehlszeile entweder **msiexec \[ /fvomus** _path to updated .msi file_ oder *_\]_* **msiexec /I \[** path to updated .msi _file_ *_\] REINSTALL=ALL REINSTALLMODE=vomus_*.
+2.  Die aktualisierte .msi Datei wird auf dem Computer des Benutzers zwischengespeichert. Beachten Sie, dass es dem Benutzer nicht möglich ist, das Produkt mithilfe von Software zu installieren, da sich die aktualisierte .msi Datei noch nicht auf dem Computer des Benutzers befindet.
 
-**So verteilen Sie ein kleines Update von einem Programm an die aktuellen Benutzer (Dies ist eine komplette Neuinstallation)**
+**So über ein Programm ein kleines Update an aktuelle Benutzer (dies ist eine vollständige Neuinstallation)**
 
-1.  Geben Sie in einem Programm [**msireinstallproduct**](/windows/desktop/api/Msi/nf-msi-msireinstallproducta) ein, und geben Sie REINSTALLMODE \_ Package, REINSTALLMODE \_ fileolderversion, REINSTALLMODE \_ MachineData, REINSTALLMODE \_ UserData und REINSTALLMODE \_ Shortcut an.
-2.  Die aktualisierte MSI-Datei wird auf dem Computer des Benutzers zwischengespeichert.
+1.  Rufen Sie in einem Programm [**MsiReinstallProduct**](/windows/desktop/api/Msi/nf-msi-msireinstallproducta) auf, und geben Sie REINSTALLMODE \_ PACKAGE, REINSTALLMODE \_ FILEOLDERVERSION, REINSTALLMODE \_ MACHINEDATA, REINSTALLMODE \_ USERDATA und REINSTALLMODE \_ SHORTCUT an.
+2.  Die aktualisierte .msi Datei wird auf dem Computer des Benutzers zwischengespeichert.
 
-Mit der folgenden Methode wird eine Neuinstallation der Features oder Komponenten gestartet, die vom kleinen Update betroffen sind.
+Die folgende Methode startet eine Neuinstallation nur der Features oder Komponenten, die von dem kleinen Update betroffen sind.
 
-**So übertragen Sie ein kleines Update an die aktuellen Benutzer (Hierbei handelt es sich um eine partielle Neuinstallation)**
+**So übertragen Sie ein kleines Update an aktuelle Benutzer (dies ist eine teilreinstallation)**
 
-1.  Abrufen einer Liste der Namen von Features und Komponenten, die von dem kleinen Update betroffen sind.
-2.  Geben Sie an der Eingabeaufforderung Folgendes ein: **msiexec/I \[** _path to aktualisierte. msi file_ *_\] REINSTALL = \[_*_Feature List \]_ **REINSTALLMODE = vomus**.
-3.  Die aktualisierte MSI-Datei wird auf dem Computer des Benutzers zwischengespeichert.
+1.  Rufen Sie eine Liste der Namen der Features und Komponenten ab, die von dem kleinen Update betroffen sind.
+2.  Verwenden Sie an der Eingabeaufforderung **msiexec /I \[** _path to updated .msi file_ *_\] REINSTALL= \[_* Feature _list \]_ **REINSTALLMODE=vomus**.
+3.  Die aktualisierte .msi Datei wird auf dem Computer des Benutzers zwischengespeichert.
 
  
 

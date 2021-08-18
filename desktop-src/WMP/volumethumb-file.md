@@ -1,47 +1,47 @@
 ---
-title: Volumethumschlag Datei
-description: Volumethumschlag Datei
+title: VolumeThumb-Datei
+description: VolumeThumb-Datei
 ms.assetid: de6abfed-a811-44c4-8db2-f3b55ea38756
 keywords:
-- Windows Media Player Mobile Skins, Art Dateien
-- Skins, Art Dateien
-- Dateien für Skins, Art
-- kunstdateien für Skins, volumethumschlag Dateien
-- Windows Media Player Mobile Skins, volumethumschlag Dateien
-- Skins, volumethumschlag Dateien
-- Volumethumschlag Dateien in Skins
-- Thumb-, volumethumschlag-Dateien
+- Windows Media Player Mobile Skins,Art-Dateien
+- Skins,Art-Dateien
+- Dateien für Skins,Art
+- Artdateien für Skins,VolumeThumb-Dateien
+- Windows Media Player Mobile Skins, VolumeThumb-Dateien
+- Skins, VolumeThumb-Dateien
+- VolumeThumb-Dateien in Skins
+- Thumb-, VolumeThumb-Dateien
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: c9b7ba87723025c91b3bdfb5af5fd233197dedb8
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: e9d06f10c5c35b0381faf28df3e8f311dfb3496845482c522f124db6bd69c0e0
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "103709558"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119615185"
 ---
-# <a name="volumethumb-file"></a>Volumethumschlag Datei
+# <a name="volumethumb-file"></a>VolumeThumb-Datei
 
-Die volumethumschlag Datei definiert das Bild, das die Wiedergabe Volumeebene für eine volumetrackleiste angibt. Sie können eine Datei verwenden und für die Verwendung durch seekthumb und volumethumschlag definieren. Im Gegensatz zu den anderen kunstdateien werden die Thumb-Dateien im trackbars-Abschnitt der Skin-Definitionsdatei definiert.
+Die VolumeThumb-Datei definiert das Bild, das die Wiedergabevolumenebene für eine Volume-Trackleiste angibt. Sie können eine Datei verwenden und für die Verwendung durch SeekThumb und VolumeThumb definieren. Im Gegensatz zu den anderen Artdateien werden die Thumb-Dateien im Abschnitt Trackbars der Skindefinitionsdatei definiert.
 
-Das folgende Bild ist eine typische volumethbeb-Datei.
+Die folgende Abbildung zeigt eine typische VolumeThumb-Datei.
 
-![volumethumschlag Datei](images/cesdkvol.png)
+![volumethumb-Datei](images/cesdkvol.png)
 
-Diese beiden Schaltflächen Dateien sehen identisch aus, unterscheiden sich jedoch geringfügig. Das linke Bild ist die normale Ansicht, die dem Benutzer angezeigt wird, und das rechte Bild ist das gedrückte Bild, das dem Benutzer angezeigt wird, wenn Sie auf die Schaltfläche tippen.
+Diese beiden Schaltflächendateien sehen gleich aus, unterscheiden sich jedoch geringfügig. Das linke Bild ist die normale Ansicht, die dem Benutzer angezeigt wird, und das rechte Bild ist das bild mit Push, das dem Benutzer angezeigt wird, wenn er auf die Schaltfläche tippt.
 
-Möglicherweise möchten Sie bestimmte Bereiche der Thumb-Bilder transparent machen. Auf diese Weise können Sie Thumb-Bilder in anderen Formen als rechteckig erstellen. Alle Bereiche eines Ziehpunkt Bilds, die Sie mit der Farbe ausfüllen, die durch den RGB-Wert 255, 0, 255 angegeben wird, werden in der Skin als transparent angezeigt.
+Möglicherweise möchten Sie bestimmte Bereiche der Thumb-Bilder transparent machen. Auf diese Weise können Sie Thumb-Bilder in anderen Formen als rechteckigen Erstellen. Jeder Bereich eines Daumenbilds, das Sie mit der durch den RGB-Wert 255, 0, 255 angegebenen Farbe füllen, wird in Ihrer Skin transparent angezeigt.
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[**Kunstdateien**](art-files-mobile.md)
+[**Art-Dateien**](art-files-mobile.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

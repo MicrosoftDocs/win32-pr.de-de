@@ -1,7 +1,7 @@
 ---
-description: Die setstretchmode-Methode legt den streckungs Modus fest. Der streckungs Modus bestimmt, wie eine Videoquelle gerendert wird, wenn deren Größe nicht den Ausgabe Dimensionen entspricht.
+description: Die SetStretchMode-Methode legt den Stretchmodus fest. Der Streckungsmodus bestimmt, wie eine Videoquelle gerendert wird, wenn ihre Größe nicht mit den Ausgabedimensionen übereinstimmen soll.
 ms.assetid: 4f720975-5035-4539-895f-3eb3c3b31719
-title: 'Iamtimelinesrc:: setstretchmode-Methode (qedit. h)'
+title: IAMTimelineSrc::SetStretchMode-Methode (Qedit.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -14,21 +14,21 @@ api_type:
 api_location:
 - strmiids.lib
 - strmiids.dll
-ms.openlocfilehash: 2fae71362f6e09d2eae6c2cdf574a2fbda43930b
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: c12d14edf665bb3257b627a194923c267ee9e8bd25027e40a7a975a15c10025f
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106366896"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119148543"
 ---
-# <a name="iamtimelinesrcsetstretchmode-method"></a>Iamtimelinesrc:: setstretchmode-Methode
+# <a name="iamtimelinesrcsetstretchmode-method"></a>IAMTimelineSrc::SetStretchMode-Methode
 
 > [!Note]  
-> \[Veraltet. Diese API kann aus zukünftigen Versionen von Windows entfernt werden.\]
+> \[Veraltet. Diese API wird möglicherweise aus zukünftigen Releases von Windows.\]
 
  
 
-Die- `SetStretchMode` Methode legt den streckungs Modus fest. Der streckungs Modus bestimmt, wie eine Videoquelle gerendert wird, wenn deren Größe nicht den Ausgabe Dimensionen entspricht.
+Die `SetStretchMode` -Methode legt den Stretchmodus fest. Der Streckungsmodus bestimmt, wie eine Videoquelle gerendert wird, wenn ihre Größe nicht mit den Ausgabedimensionen übereinstimmen soll.
 
 ## <a name="syntax"></a>Syntax
 
@@ -45,10 +45,10 @@ HRESULT SetStretchMode(
 
 <dl> <dt>
 
-*nstretchmode* 
+*nStretchMode* 
 </dt> <dd>
 
-Flag, das den aktuellen streckungs Modus angibt. Eine Liste möglicher Werte finden Sie unter [**Resize Flags**](resize-flags.md).
+Flag, das den aktuellen Stretchmodus angibt. Eine Liste der möglichen Werte finden Sie unter [**Größenvergrößerungen für Flags.**](resize-flags.md)
 
 </dd> </dl>
 
@@ -56,15 +56,15 @@ Flag, das den aktuellen streckungs Modus angibt. Eine Liste möglicher Werte fin
 
 Gibt S \_ OK zurück.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
 > [!Note]  
-> Die Header Datei "qedit. h" ist nicht mit Direct3D-Headern nach Version 7 kompatibel.
+> Die Headerdatei Qedit.h ist nicht mit Direct3D-Headern nach Version 7 kompatibel.
 
  
 
 > [!Note]  
-> Zum Abrufen von "qedit. h" Laden Sie das [Microsoft Windows SDK Update für Windows Vista und .NET Framework 3,0](https://msdn.microsoft.com/windowsvista/bb980924.aspx)herunter. "Qedit. h" ist im Microsoft Windows SDK für Windows 7 und .NET Framework 3,5 Service Pack 1 nicht verfügbar.
+> Um Qedit.h zu erhalten, laden Sie das Microsoft Windows SDK-Update für Windows Vista und [.NET Framework 3.0 herunter.](https://msdn.microsoft.com/windowsvista/bb980924.aspx) Qedit.h ist im Microsoft Windows SDK für Windows 7 und .NET Framework 3.5 Service Pack 1 nicht verfügbar.
 
  
 
@@ -74,19 +74,19 @@ Gibt S \_ OK zurück.
 
 | Anforderung | Wert |
 |--------------------|-----------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>"Qedit. h"</dt> </dl>      |
-| Bibliothek<br/> | <dl> <dt>"" "" ". Lib"</dt> </dl> |
+| Header<br/>  | <dl> <dt>Qedit.h</dt> </dl>      |
+| Bibliothek<br/> | <dl> <dt>Strmiids.lib</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Iamtimelinesrc-Schnittstelle**](iamtimelinesrc.md)
+[**IAMTimelineSrc-Schnittstelle**](iamtimelinesrc.md)
 </dt> <dt>
 
-[Fehler-und Erfolgs Codes](error-and-success-codes.md)
+[Fehler- und Erfolgscodes](error-and-success-codes.md)
 </dt> </dl>
 
  

@@ -18,7 +18,7 @@ Um einen Anmeldeinformations-Manager zu erstellen, müssen Sie eine DLL erstelle
 -   [**NPLogonNotify**](/windows/desktop/api/Npapi/nf-npapi-nplogonnotify)
 -   [**NPPasswordChangeNotify**](/windows/desktop/api/Npapi/nf-npapi-nppasswordchangenotify)
 
-Um Benachrichtigungen für die Funktionen [**NPLogonNotify**](/windows/desktop/api/Npapi/nf-npapi-nplogonnotify) und [**NPPasswordChangeNotify**](/windows/desktop/api/Npapi/nf-npapi-nppasswordchangenotify) für die Smartcardanmeldung wiederherzustellen, erstellen Sie einen Registrierungseintrag namens **SmartCardLogonNotify** als **DWORD,** und legen Sie ihn auf 1 fest:
+Um Benachrichtigungen für die [**Funktionen NPLogonNotify**](/windows/desktop/api/Npapi/nf-npapi-nplogonnotify) und [**NPPasswordChangeNotify**](/windows/desktop/api/Npapi/nf-npapi-nppasswordchangenotify) für die Smartcardanmeldung wiederherzustellen, erstellen Sie einen Registrierungseintrag namens **SmartCardLogonNotify** als **DWORD,** und legen Sie ihn auf 1 fest:
 
 ```
 HKEY_LOCAL_MACHINE
@@ -33,7 +33,7 @@ HKEY_LOCAL_MACHINE
 
 **Windows Server 2003 und Windows XP:** Der **Registrierungseintrag SmartCardLogonNotify** ist nicht erforderlich.
 
-Darüber hinaus sollten Anmeldeinformations-Manager auch die [**NPGetCaps-Funktion**](/windows/desktop/api/Npapi/nf-npapi-npgetcaps) für WNNC START unterstützen \_ (die Unterstützung anderer Indizes ist für Anmeldeinformations-Manager nicht erforderlich). Dadurch wird MPR mitgeteilt, wann ein Anmeldeinformations-Manager gestartet wird. Durch Aufrufen von **NPGetCaps** mit dem auf WNNC START festgelegten *nIndex-Parameter* \_ erhält der MPR die Wartezeit, bevor die Anmeldeinformationsverwaltungs-Einstiegspunktfunktionen des Anbieters aufgerufen werden. Wenn die MPR über diese Informationen verfügt, kann sie sie an den Anmeldeinformations-Manager weiterleiten, um das Time out festzulegen.
+Darüber hinaus sollten Anmeldeinformations-Manager auch die [**NPGetCaps-Funktion**](/windows/desktop/api/Npapi/nf-npapi-npgetcaps) für WNNC START unterstützen (die Unterstützung anderer Indizes ist für \_ Anmeldeinformations-Manager nicht erforderlich). Dadurch wird MPR informiert, wann ein Anmeldeinformations-Manager gestartet wird. Durch Aufrufen **von NPGetCaps,** bei dem der *nIndex-Parameter* auf WNNC START festgelegt ist, erhält das MPR die Wartezeit, bevor die Einstiegspunktfunktionen für die Verwaltung von Anmeldeinformationen des Anbieters \_ aufrufen. Wenn der MPR über diese Informationen verfügt, kann er diese an den Anmeldeinformations-Manager weitersend und das Time out festlegen.
 
  
 

@@ -1,7 +1,7 @@
 ---
-description: Zeiger auf den Arbeitsspeicher Puffer, der die Mediendaten enthält.
+description: Zeiger auf den Speicherpuffer, der die Mediendaten enthält.
 ms.assetid: 0f37e406-2af9-44ba-b760-f3d90c9a6d66
-title: 'Cmediasample:: m_pBuffer Member (amfilter. h)'
+title: CMediaSample::m_pBuffer -Member (Amfilter.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,16 +16,16 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: 05bd8f606f73aca80efcebe4432fc04e4842676a
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 1a96ef1a34aaef0df180c7d271885b60c5d984839e7f8f8df9f5c265cff5cbdf
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106364807"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119634420"
 ---
-# <a name="cmediasamplem_pbuffer-member"></a>Cmediasample:: m- \_ pbuffer-Element
+# <a name="cmediasamplem_pbuffer-member"></a>CMediaSample::m \_ pBuffer-Member
 
-Zeiger auf den Arbeitsspeicher Puffer, der die Mediendaten enthält.
+Zeiger auf den Speicherpuffer, der die Mediendaten enthält.
 
 ## <a name="syntax"></a>Syntax
 
@@ -42,16 +42,16 @@ LPBYTE m_pBuffer;
 
 | Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Amfilter. h (Include Streams. h)</dt> </dl>                                                                                  |
-| Bibliothek<br/> | <dl> " <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Amfilter.h (include Streams.h)</dt> </dl>                                                                                  |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Einzelhandels-Builds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Cmediasample-Klasse**](cmediasample.md)
+[**CMediaSample-Klasse**](cmediasample.md)
 </dt> </dl>
 
  

@@ -1,5 +1,5 @@
 ---
-description: Eine abstrakte Klasse für Unterklassen, die die Fähigkeiten eines zugeordneten verwalteten Elements beschreibt, und das Potenzial der Fähigkeiten.
+description: Eine abstrakte Klasse für Unterklassen, die die Fähigkeiten eines zugeordneten verwalteten Elements und das Potenzial der Fähigkeiten beschreibt.
 ms.assetid: f0ffddf5-99d4-49be-ac0a-c2cfd4a92d96
 title: CIM_Capabilities-Klasse
 ms.topic: reference
@@ -15,16 +15,16 @@ api_type:
 - DllExport
 api_location:
 - vmms.exe
-ms.openlocfilehash: e08fcef34c8c2e932851fb428fd32533eee4877e
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 7fc640950b7e943f0e549f41ec216b2832ec9de3b91938ef1aadea1893ac2faa
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106349925"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119561910"
 ---
-# <a name="cim_capabilities-class"></a>CIM-Funktions \_ Klasse
+# <a name="cim_capabilities-class"></a>CIM \_ Capabilities-Klasse
 
-Eine abstrakte Klasse für Unterklassen, die die Fähigkeiten eines zugeordneten verwalteten Elements beschreibt, und das Potenzial der Fähigkeiten.
+Eine abstrakte Klasse für Unterklassen, die die Fähigkeiten eines zugeordneten verwalteten Elements und das Potenzial der Fähigkeiten beschreibt.
 
 ## <a name="syntax"></a>Syntax
 
@@ -39,57 +39,57 @@ class CIM_Capabilities : CIM_ManagedElement
 
 ## <a name="members"></a>Member
 
-Die **CIM \_** -Funktionsklasse verfügt über diese Typen von Membern:
+Die **CIM \_ Capabilities-Klasse** verfügt über diese Typen von Membern:
 
 -   [Eigenschaften](#properties)
 
 ### <a name="properties"></a>Eigenschaften
 
-Die **CIM \_** -Funktionsklasse verfügt über diese Eigenschaften.
+Die **CIM \_ Capabilities-Klasse** verfügt über diese Eigenschaften.
 
 <dl> <dt>
 
 **ElementName**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**erforderlich**](/windows/desktop/WmiSdk/standard-qualifiers), [**außer Kraft**](/windows/desktop/WmiSdk/standard-qualifiers) Setzung ("Elementname")
+Qualifizierer: [**Erforderlich,**](/windows/desktop/WmiSdk/standard-qualifiers) [**Außerkraftsetzung**](/windows/desktop/WmiSdk/standard-qualifiers) ("ElementName")
 </dt> </dl>
 
-Der benutzerfreundliche Name für diese Klasseninstanz. Außerdem kann der benutzerfreundliche Name als Index Eigenschaft für eine Abfrage verwendet werden. Dieser Wert muss innerhalb des Namespace nicht eindeutig sein.
+Der benutzerfreundliche Name für diese Klasseninstanz. Darüber hinaus kann der benutzerfreundliche Name als Indexeigenschaft für eine Abfrage verwendet werden. Dieser Wert muss innerhalb seines Namespace nicht eindeutig sein.
 
 </dd> <dt>
 
 **InstanceID**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**Key**](/windows/desktop/WmiSdk/key-qualifier), [**override**](/windows/desktop/WmiSdk/standard-qualifiers) ("InstanceId")
+Qualifizierer: [**Schlüssel**](/windows/desktop/WmiSdk/key-qualifier), [**Außerkraftsetzung**](/windows/desktop/WmiSdk/standard-qualifiers) ("InstanceID")
 </dt> </dl>
 
-Eindeutig und verdeckt identifiziert eine Instanz dieser Klasse innerhalb des Gültigkeits Bereichs des enthaltenden Namespace.
+Identifiziert eine Instanz dieser Klasse innerhalb des Bereichs des enthaltenden Namespaces eindeutig und nicht transparent.
 
 > [!IMPORTANT]
 >
-> Um die Eindeutigkeit innerhalb des Namespaces sicherzustellen, sollte der Wert der **InstanceId-** Eigenschaft im folgenden Muster erstellt werden: *OrgId*:*localId*
+> Um die Eindeutigkeit innerhalb des Namespace sicherzustellen, sollte der Wert der **InstanceID-Eigenschaft** im folgenden Muster erstellt werden: *OrgID*:*LocalID*
 >
-> *OrgId* muss einen urheberrechtlich geschützten oder anderweitig eindeutigen Namen enthalten, der der Geschäfts Entität gehört, die die **InstanceId** definiert, oder eine registrierte ID ist, die von einer anerkannten globalen Autorität zugewiesen wird. Dieses Muster ähnelt der Struktur von Schema Klassennamen. Um die Eindeutigkeit sicherzustellen, muss der erste Doppelpunkt in **InstanceId** zwischen der *OrgId* und der *Lok-* ID liegen. Daher darf die *OrgId* keinen Doppelpunkt (': ') enthalten.
+> *OrgID* muss einen urheberrechtlich geschützten, markengeschützten oder anderweitig eindeutigen Namen enthalten, der sich im Besitz der Geschäftsentität befindet, die die **Instanz-ID** definiert, oder es muss sich um eine registrierte ID handeln, die von einer anerkannten globalen Autorität zugewiesen wird. Dieses Muster ähnelt der Struktur von Schemaklassennamen. Darüber hinaus muss der erste Doppelpunkt in **InstanceID** zwischen *orgID* und *LocalID* stehen, um eindeutig zu sein. Daher darf die *OrgID* keinen Doppelpunkt (":") enthalten.
 >
-> *LocalId* wird von der Geschäfts Entität ausgewählt und sollte nicht erneut verwendet werden, um verschiedene zugrunde liegende reale Elemente zu identifizieren.
+> *LocalID* wird von der Geschäftsentität ausgewählt und sollte nicht erneut verwendet werden, um verschiedene zugrunde liegende reale Elemente zu identifizieren.
 >
-> Wenn das obige Muster nicht verwendet wird, muss die definierende Entität sicherstellen, dass der resultierende **InstanceId** -Wert nicht für **InstanceId** -Eigenschaften wieder verwendet wird, die von diesem Anbieter oder von anderen Anbietern für diesen Namespace erstellt werden.
+> Wenn das obige Muster nicht verwendet wird, muss die definierende Entität sicherstellen, dass der resultierende **InstanceID-Wert** nicht für alle **InstanceID-Eigenschaften** wiederverwendet wird, die von diesem Anbieter oder anderen Anbietern für diesen Namespace erstellt werden.
 >
-> Für von DMTF (verteilte Management Task Force) definierte Instanzen muss das Muster verwendet werden, wenn die *OrgId* auf CIM festgelegt ist.
+> Für definierte DMTF-Instanzen (Distributed Management Task Force) muss das Muster mit der *OrgID* verwendet werden, die auf CIM festgelegt ist.
 
  
 
@@ -103,17 +103,17 @@ Eindeutig und verdeckt identifiziert eine Instanz dieser Klasse innerhalb des G�
 |-------------------------------------|---------------------------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 8<br/>                                                                                    |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2012<br/>                                                                          |
-| Namespace<br/>                | \\Stammvirtualisierung \\ v2<br/>                                                                     |
-| MOF<br/>                      | <dl> <dt>Windowsvirtualization. v2. MOF</dt> </dl> |
+| Namespace<br/>                | \\Root-Virtualisierung \\ v2<br/>                                                                     |
+| MOF<br/>                      | <dl> <dt>WindowsVirtualization.V2.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Vmms.exe</dt> </dl>                     |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**CIM- \_ managedelta**](cim-managedelement.md)
+[**CIM \_ ManagedElement**](cim-managedelement.md)
 </dt> </dl>
 
  

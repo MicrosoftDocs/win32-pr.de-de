@@ -1,5 +1,5 @@
 ---
-description: 'Weitere Informationen zu: EsentInvalidPlaceholderColumnException-Klasse'
+description: 'Weitere Informationen finden Sie unter: EsentInvalidPlaceholderColumnException-Klasse'
 title: EsentInvalidPlaceholderColumnException-Klasse
 TOCTitle: EsentInvalidPlaceholderColumnException class
 ms:assetid: T:Microsoft.Isam.Esent.Interop.EsentInvalidPlaceholderColumnException

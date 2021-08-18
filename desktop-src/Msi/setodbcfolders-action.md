@@ -1,41 +1,41 @@
 ---
-description: Die Aktion setodbcfolders überprüft vorhandene ODBC-Treiber auf dem System und legt das Zielverzeichnis jedes neuen Treibers auf den Speicherort eines vorhandenen Treibers fest.
+description: Die SetODBCFolders-Aktion überprüft vorhandene ODBC-Treiber auf dem System und legt das Zielverzeichnis jedes neuen Treibers auf den Speicherort eines vorhandenen Treibers fest.
 ms.assetid: d1739b37-d89b-400e-a4ac-b417e0fb9918
-title: "\"Stodbcfolders\"-Aktion"
+title: SetODBCFolders-Aktion
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 7477b229d127e976ddb37096c5f3a21605ba8d05
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: ceaefc2e9722b82ab0753c46b9e1e85a0ab3628a83b9f3abe66cf183c543fbe5
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106343233"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119628640"
 ---
-# <a name="setodbcfolders-action"></a>"Stodbcfolders"-Aktion
+# <a name="setodbcfolders-action"></a>SetODBCFolders-Aktion
 
-Die Aktion setodbcfolders überprüft vorhandene ODBC-Treiber auf dem System und legt das Zielverzeichnis jedes neuen Treibers auf den Speicherort eines vorhandenen Treibers fest.
+Die SetODBCFolders-Aktion überprüft vorhandene ODBC-Treiber auf dem System und legt das Zielverzeichnis jedes neuen Treibers auf den Speicherort eines vorhandenen Treibers fest.
 
-## <a name="sequence-restrictions"></a>Sequenz Einschränkungen
+## <a name="sequence-restrictions"></a>Sequenzeinschränkungen
 
-Die "stodbcfolders"-Aktion muss nach der " [costfinalize](costfinalize-action.md) "-Aktion und vor der [InstallValidate-Aktion](installvalidate-action.md)erfolgen.
+Die SetODBCFolders-Aktion muss nach der [CostFinalize-Aktion](costfinalize-action.md) und vor der [InstallValidate-Aktion](installvalidate-action.md)erfolgen.
 
-## <a name="actiondata-messages"></a>Aktions Daten Meldungen
+## <a name="actiondata-messages"></a>ActionData-Nachrichten
 
 
 
-| Feld | Beschreibung der Aktions Daten                                                          |
+| Feld | Beschreibung der Aktionsdaten                                                          |
 |-------|-------------------------------------------------------------------------------------|
-| \[1\] | Treiber Beschreibung. Der Schlüssel des ODBC-Treibers.                                            |
-| \[2\] | Ursprünglicher Ordner Speicherort des neuen Treibers.                                         |
-| \[3\] | Neuer Speicherort des Ordners für den neuen Treiber. Dies ist der Speicherort eines vorhandenen Treibers. |
+| \[1\] | Beschreibung des Treibers. Der ODBC-Treiberschlüssel.                                            |
+| \[2\] | Der ursprüngliche Ordnerspeicherort des neuen Treibers.                                         |
+| \[3\] | Neuer Ordnerspeicherort für den neuen Treiber. Dies ist der Speicherort eines vorhandenen Treibers. |
 
 
 
  
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Durch diese Aktion wird ein neuer Treiber in demselben Verzeichnis wie der vorhandene Treiber platziert, der ersetzt wird. Die setodbcfolders-Aktion verwendet die [Verzeichnis Tabelle](directory-table.md) , um die Speicherorte vorhandener Treiber festzulegen, die ersetzt werden sollen.
+Durch diese Aktion wird ein neuer Treiber in dasselbe Verzeichnis platziert wie der vorhandene Treiber, der ersetzt wird. Die Aktion SetODBCFolders verwendet die [Verzeichnistabelle,](directory-table.md) um die Speicherorte vorhandener Treiber festzulegen, die ersetzt werden sollen.
 
  
 

@@ -1,7 +1,7 @@
 ---
-description: Die Methode zum Deaktivieren zerstört das Dialogfenster. Diese Methode implementiert die IPropertyPage::D eaktivierungs-Methode.
+description: Die Deactivate-Methode zerstört das Dialogfeldfenster. Diese Methode implementiert die IPropertyPage::D eactivate-Methode.
 ms.assetid: f2d2f15f-15f6-4902-bafc-f58a684ff193
-title: Cbasepropertypage. deaktiviert-Methode (cprop. h)
+title: CBasePropertyPage.Deactivate-Methode (Cprop.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,16 +16,16 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: 63a843502fc735cc41ff3656e83ef3d6cb839a19
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 5acb906a28087464f349aff3fdcdf367d7e3bceaa5a29cfa1cad4143b80e10c0
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106369116"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119526770"
 ---
-# <a name="cbasepropertypagedeactivate-method"></a>Cbasepropertypage. deaktivieren-Methode
+# <a name="cbasepropertypagedeactivate-method"></a>CBasePropertyPage.Deactivate-Methode
 
-Mit der- `Deactivate` Methode wird das Dialogfeld zerstört. Diese Methode implementiert die **IPropertyPage::D eaktivierungs** -Methode.
+Die `Deactivate` -Methode zerstört das Dialogfeldfenster. Diese Methode implementiert die **IPropertyPage::D eactivate-Methode.**
 
 ## <a name="syntax"></a>Syntax
 
@@ -42,14 +42,14 @@ Diese Methode hat keine Parameter.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt einen **HRESULT** -Wert zurück. Die folgenden Werte sind möglich.
+Gibt einen **HRESULT-Wert** zurück. Die folgenden Werte sind möglich.
 
 
 
 | Rückgabecode                                                                                  | Beschreibung                    |
 |----------------------------------------------------------------------------------------------|--------------------------------|
 | <dl> <dt>**S \_ OK**</dt> </dl>         | Erfolg.<br/>            |
-| <dl> <dt>**E \_ unerwartet**</dt> </dl> | Unerwarteter Fehler.<br/> |
+| <dl> <dt>**E \_ UNEXPECTED**</dt> </dl> | Unerwarteter Fehler.<br/> |
 
 
 
@@ -61,19 +61,19 @@ Gibt einen **HRESULT** -Wert zurück. Die folgenden Werte sind möglich.
 
 | Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Cprop. h (Include Streams. h)</dt> </dl>                                                                                     |
-| Bibliothek<br/> | <dl> " <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Cprop.h (include Streams.h)</dt> </dl>                                                                                     |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Verkaufsbuilds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Cbasepropertypage-Klasse**](cbasepropertypage.md)
+[**CBasePropertyPage-Klasse**](cbasepropertypage.md)
 </dt> <dt>
 
-[**Cbasepropertypage:: ondeaktivieren**](cbasepropertypage-ondeactivate.md)
+[**CBasePropertyPage::OnDeactivate**](cbasepropertypage-ondeactivate.md)
 </dt> </dl>
 
  

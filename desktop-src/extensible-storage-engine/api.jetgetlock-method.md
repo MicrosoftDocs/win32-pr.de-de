@@ -1,6 +1,6 @@
 ---
-description: Weitere Informationen finden Sie in der API. jetgetlock-Methode.
-title: API. jetgetlock-Methode
+description: Weitere Informationen finden Sie unter Api.JetGetLock-Methode.
+title: Api.JetGetLock-Methode
 TOCTitle: 'JetGetLock method '
 ms:assetid: M:Microsoft.Isam.Esent.Interop.Api.JetGetLock(Microsoft.Isam.Esent.Interop.JET_SESID,Microsoft.Isam.Esent.Interop.JET_TABLEID,Microsoft.Isam.Esent.Interop.GetLockGrbit)
 ms:mtpsurl: https://msdn.microsoft.com/library/microsoft.isam.esent.interop.api.jetgetlock(v=EXCHG.10)
@@ -24,19 +24,19 @@ api_type:
 api_location:
 - Microsoft.Isam.Esent.Interop.dll
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: b8480b6ac2eab84a0299e0bb3d480908e4f646fa
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 692d78c274d497c64deff20fc61f2cc6a32e868b6f591e4dd6a32437d007b1b0
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "103862235"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119623560"
 ---
-# <a name="apijetgetlock-method"></a>API. jetgetlock-Methode
+# <a name="apijetgetlock-method"></a>Api.JetGetLock-Methode
 
-Reservieren Sie explizit die Möglichkeit, eine Zeile zu aktualisieren, eine Sperre zu schreiben oder explizit zu verhindern, dass eine Zeile von einer anderen Sitzung aktualisiert wird, und lesen Sie sperren. Normalerweise werden Zeilen Schreib Sperren implizit durch das Aktualisieren von Zeilen abgerufen. Lese Sperren sind in der Regel aufgrund von Daten Satz Versionsverwaltung nicht erforderlich. In einigen Fällen möchte eine Transaktion jedoch möglicherweise eine Zeile explizit sperren, um die Serialisierung zu erzwingen, oder um sicherzustellen, dass ein nachfolgender Vorgang erfolgreich ausgeführt wird.
+Reservieren Sie explizit die Möglichkeit, eine Zeile zu aktualisieren, eine Schreibsperre zu schreiben oder explizit zu verhindern, dass eine Zeile von einer anderen Sitzung aktualisiert wird. Lesen Sie die Sperre. Normalerweise werden Zeilenschreibsperren implizit als Ergebnis der Aktualisierung von Zeilen eingerichtet. Lesesperren sind aufgrund der Datensatzversionsierung in der Regel nicht erforderlich. In einigen Fällen möchte eine Transaktion jedoch möglicherweise explizit eine Zeile sperren, um die Serialisierung zu erzwingen oder sicherzustellen, dass ein nachfolgender Vorgang erfolgreich ist.
 
-**Namespace:**  [Microsoft. ISAM. ESENT. Interop](./microsoft.isam.esent.interop-namespace.md)  
-**Assembly:**  Microsoft. ISAM. ESENT. Interop (in Microsoft.Isam.Esent.Interop.dll)
+**Namespace:**  [Microsoft.Isam.Esent.Interop](./microsoft.isam.esent.interop-namespace.md)  
+**Assembly:**  Microsoft.Isam.Esent.Interop (in Microsoft.Isam.Esent.Interop.dll)
 
 ## <a name="syntax"></a>Syntax
 
@@ -63,31 +63,31 @@ public static void JetGetLock(
 
 #### <a name="parameters"></a>Parameter
 
-  - -sid  
-    Typ: [Microsoft.ISAM.ESENT.Interop.JET_SESID](./jet-sesid-structure.md)  
+  - sesid  
+    Typ: [Microsoft.Isam.Esent.Interop.JET_SESID](./jet-sesid-structure.md)  
     
     Die zu verwendende Sitzung.
 
 <!-- end list -->
 
-  - TableID  
-    Typ: [Microsoft.ISAM.ESENT.Interop.JET_TABLEID](./jet-tableid-structure.md)  
+  - tableid  
+    Typ: [Microsoft.Isam.Esent.Interop.JET_TABLEID](./jet-tableid-structure.md)  
     
-    Der zu verwendende Cursor. Eine Sperre für den aktuellen Datensatz wird abgerufen.
+    Der zu verwendende Cursor. Für den aktuellen Datensatz wird eine Sperre eingerichtet.
 
 <!-- end list -->
 
   - grbit  
-    Typ: [Microsoft. ISAM. ESENT. Interop. getlockgrbit](./getlockgrbit-enumeration.md)  
+    Typ: [Microsoft.Isam.Esent.Interop.GetLockGrbit](./getlockgrbit-enumeration.md)  
     
-    Sperr Optionen verwenden Sie diese Option, um den Typ der abzurufenden Sperre anzugeben.
+    Sperrenoptionen: Verwenden Sie diese Option, um anzugeben, welche Art von Sperre sie erhalten soll.
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
-#### <a name="reference"></a>Referenz
+#### <a name="reference"></a>Verweis
 
 [API-Klasse](./api-class.md)
 
-[API-Mitglieder](./api-members.md)
+[API-Member](./api-members.md)
 
-[Microsoft. ISAM. ESENT. Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)
+[Microsoft.Isam.Esent.Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)

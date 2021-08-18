@@ -1,24 +1,24 @@
 ---
-description: Die dvddirectory-Eigenschaft legt das aktuelle Verzeichnis des aktuellen DVD-Volumes fest oder ruft es ab.
+description: Die DVDDirectory-Eigenschaft legt das aktuelle Verzeichnis des aktuellen DVD-Volumes fest oder ruft es ab.
 ms.assetid: 0dbfdf28-cda5-41b2-82ce-114d9b940d91
-title: Dvddirectory (Eigenschaft)
+title: DVDDirectory-Eigenschaft
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 36515c931fb8669db814886dfff12a4bf85bde28
-ms.sourcegitcommit: a47bd86f517de76374e4fff33cfeb613eb259a7e
+ms.openlocfilehash: 2431d9255aa743698baeb9c4b8427ffa9bf5220a60182ac08c246e11f20bcec8
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/06/2021
-ms.locfileid: "103860280"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119749100"
 ---
-# <a name="dvddirectory-property"></a>Dvddirectory (Eigenschaft)
+# <a name="dvddirectory-property"></a>DVDDirectory-Eigenschaft
 
 > [!Note]  
 > Diese Komponente ist für die Verwendung in den Betriebssystemen Microsoft Windows 2000, Windows XP und Windows Server 2003 verfügbar. Es kann in nachfolgenden Versionen geändert oder entfernt werden.
 
  
 
-Die- `DVDDirectory` Eigenschaft legt das aktuelle Verzeichnis des aktuellen DVD-Volumes fest oder ruft es ab.
+Die `DVDDirectory` -Eigenschaft legt das aktuelle Verzeichnis des aktuellen DVD-Volumes fest oder ruft es ab.
 
 ``` syntax
 [ sDirPath = ] MSWebDVD.DVDDirectory
@@ -26,11 +26,11 @@ Die- `DVDDirectory` Eigenschaft legt das aktuelle Verzeichnis des aktuellen DVD-
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt einen Zeichen folgen Wert zurück, der den Pfad zum DVD-Stammverzeichnis angibt.
+Gibt einen Zeichenfolgenwert zurück, der den Pfad zum DVD-Stammverzeichnis angibt.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Diese Eigenschaft ist Lese-/Schreibzugriff und hat keinen Standardwert. Verwenden Sie diese Methode, um den Stammpfad festzulegen, wenn mehr als ein DVD-Laufwerk auf einem System vorhanden ist. Wenn nur ein Laufwerk auf dem System vorhanden ist und der Laufwerk Buchstabe höher als "C" ist, findet das mswebdvd-Objekt es automatisch. Für eine Standard DVD-Video-CD sollte der Stammpfad das TS- \_ Video Verzeichnis enthalten:
+Diese Eigenschaft ist Lese-/Schreibzugriff ohne Standardwert. Verwenden Sie diese Methode zum Festlegen des Stammpfads, wenn auf einem System mehrere DVD-Laufwerke enthalten sind. Wenn auf dem System nur ein Laufwerk installiert ist und sein Laufwerkbuchstaben höher als "C" ist, wird es vom MSWebDVD-Objekt automatisch gefunden. Bei einem standarden DVD-Video sollte der Stammpfad das Verzeichnis ts \_ video enthalten:
 
 
 ```VB
@@ -39,7 +39,7 @@ MSWebDVD.DVDDirectory = "e:\\video_ts"
 
 
 
-Einige DVD-Volumes können Ihr Video in einem Verzeichnis mit dem Namen "Video \_ TS" enthalten. Die allgemeine Idee ist, dass ein zusätzliches "DVD-Volume" (der Satz von. IFO. VOB und. BUP-Dateien, die normalerweise im Verzeichnis "Video TS" gespeichert werden, \_ können in einem Unterverzeichnis auf der Festplatte abgelegt werden. Wenn Sie den Stamm so ändern, dass er auf dieses Verzeichnis verweist, wird mswebdvd auf diesem separaten DVD-Volume ausgeführt. Ein neuer Satz von Menüs, Titeln usw. ist unabhängig von den Titeln im Video TS-Stamm verfügbar, auf \_ die nicht mehr zugegriffen werden kann. Solche Verzeichnisse werden als "verborgene Verzeichnisse" bezeichnet. Im folgenden Beispiel wird gezeigt, wie ein ausgeblendetes Verzeichnis als Stamm festgelegt wird, wobei "Hidden" ein Platzhalter für den Namen ist, den die Autoren der CD dem Verzeichnis gegeben haben.
+Einige DVD-Volumes enthalten ihr Video möglicherweise in einem Verzeichnis, das einen anderen Namen als "video \_ ts" hat. Die allgemeine Idee ist, dass ein zusätzliches "DVD-Volume" (der Satz von ) ist. Ifo. VOB und . BUP-Dateien, die normalerweise im Verzeichnis VIDEO TS gespeichert werden, können in einem Unterverzeichnis auf \_ dem Datenträger abgelegt werden. Durch Ändern des Stammverzeichnisses, um auf dieses Verzeichnis zu verweisen, wird MSWebDVD auf diesem separaten DVD-Volume betrieben. Unabhängig von den Titeln im VIDEO TS-Stamm ist eine neue Gruppe von Menüs, Titeln und so weiter verfügbar, auf die \_ nicht mehr zugegriffen werden kann. Solche Verzeichnisse werden als "ausgeblendete Verzeichnisse" bezeichnet. Das folgende Beispiel zeigt, wie Sie ein ausgeblendetes Verzeichnis als Stammverzeichnis festlegen, wobei "hidden" ein Platzhalter für den Namen ist, den die Datenträgerautoren dem Verzeichnis gegeben haben.
 
 
 ```VB

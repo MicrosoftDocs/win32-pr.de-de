@@ -1,71 +1,71 @@
 ---
-title: Glossar für Windows-Animationen
-description: Dieses Glossar enthält Begriffe und acronyme, die für Entwickler interessant sind, die den Windows-Animations-Manager verwenden.
+title: Windows Animationsglossar
+description: Dieses Glossar enthält Begriffe und Akronyme, die für Entwickler von Interesse sind, die den Windows Animation Manager verwenden.
 ROBOTS: NOINDEX, NOFOLLOW
 ms.assetid: 66e9cfb4-b9ae-4c21-9b1f-532c7d750903
 keywords:
-- Animation Windows Animation Windows Animation, Glossar
+- Windows Animation Windows Animation , Glossar
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 36b7f276b0f20efc35057a9ee7c006c3cf170ac3
-ms.sourcegitcommit: fdd00b445ee88366e9cdd1eed0cb3e42e2a73eca
+ms.openlocfilehash: 9bb477edcaa49aa8baff1bc628ca5d94c13dacc0e552137275ff1e92d8e4cfae
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/10/2019
-ms.locfileid: "104516557"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119137393"
 ---
-# <a name="windows-animation-glossary"></a>Glossar für Windows-Animationen
+# <a name="windows-animation-glossary"></a>Windows Animationsglossar
 
-Dieses Glossar enthält Begriffe und acronyme, die für Entwickler interessant sind, die den Windows-Animations-Manager verwenden.
+Dieses Glossar enthält Begriffe und Akronyme, die für Entwickler von Interesse sind, die den Windows Animation Manager verwenden.
 
 <dl> <dt>
 
 <span id="uianimation.term.animation"></span><span id="UIANIMATION.TERM.ANIMATION"></span>**Animation** 
 </dt> <dd>
 
-Eine Sequenz von synthetischen, aufeinander folgenden Bildern, die eine Illusion der Bewegung erzeugt, wenn Sie wiedergegeben wird.
+Eine Sequenz synthetischer, aufeinander folgenden Stillbilder, die eine Bewegung erzeugen, wenn sie wiedergeben wird.
 
 </dd> <dt>
 
 <span id="uianimation.term.animation_manager"></span><span id="UIANIMATION.TERM.ANIMATION_MANAGER"></span>**Animations-Manager** 
 </dt> <dd>
 
-Eine Kernkomponente der Windows-Animation und die zentrale programmgesteuerte Schnittstelle zum Verwalten (erstellen, planen und Steuern) von Animationen.
+Eine Kernkomponente von Windows Animation und der zentralen programmgesteuerten Schnittstelle zum Verwalten (Erstellen, Planen und Steuern) von Animationen.
 
 </dd> <dt>
 
-<span id="uianimation.term.animation_timer"></span><span id="UIANIMATION.TERM.ANIMATION_TIMER"></span>**Animations Zeit Geber**
+<span id="uianimation.term.animation_timer"></span><span id="UIANIMATION.TERM.ANIMATION_TIMER"></span>**Animationszeitr**
 </dt> <dd>
 
-Eine Komponente, die Zeit Steuerungs Dienste bereitstellt, die in Verbindung mit dem Animations-Manager verwendet werden können. Dadurch wird die Framerate basierend auf der Anwendungs-und System Auslastung oder im Modus für niedrige Energie dynamisch gedrosselt. Siehe auch: Drosselung.
+Eine Komponente zum Bereitstellen von Zeitsteuerungsdiensten, die in Verbindung mit dem Animations-Manager verwendet werden können. Sie drosselt die Bildfrequenz dynamisch basierend auf der Anwendungs- und Systemauslastung oder im Modus mit geringer Leistung. Siehe auch: Drosselung.
 
 </dd> <dt>
 
-<span id="uianimation.term.animation_variable"></span><span id="UIANIMATION.TERM.ANIMATION_VARIABLE"></span>**Animations Variable** 
+<span id="uianimation.term.animation_variable"></span><span id="UIANIMATION.TERM.ANIMATION_VARIABLE"></span>**Animationsvariable** 
 </dt> <dd>
 
-Ein Wert, der animiert werden kann. Animations Variablen können verwendet werden, um Position, Größe, Drehung, Transparenz und andere Qualitäten von sichtbaren Objekten darzustellen.
+Ein Wert, der animiert werden kann. Animationsvariablen können verwendet werden, um die Position, Größe, Drehung, Transparenz und andere Qualitäten sichtbarer Objekte zu darstellen.
 
 </dd> <dt>
 
-<span id="uianimation.term.cancellation"></span><span id="UIANIMATION.TERM.CANCELLATION"></span>**Streichung**
+<span id="uianimation.term.cancellation"></span><span id="UIANIMATION.TERM.CANCELLATION"></span>**Stornierung**
 </dt> <dd>
 
-Der Prozess, bei dem ein Storyboard aus dem Zeitplan entfernt wird, bevor die Wiedergabe gestartet wird.
+Der Prozess, bei dem ein Storyboard aus dem Zeitplan entfernt wird, bevor es mit der Wiedergabe begonnen hat.
 
 </dd> <dt>
 
-<span id="uianimation.term.compression"></span><span id="UIANIMATION.TERM.COMPRESSION"></span>**komprimi**
+<span id="uianimation.term.compression"></span><span id="UIANIMATION.TERM.COMPRESSION"></span>**Komprimierung**
 </dt> <dd>
 
-Eine Aktualisierung der Zeit eines Storyboards. Das System erhöht die Rate, mit der das Storyboard fortschreitet, indem er Eingabe Zeitwerte übergibt, die schneller als die Systemuhr steigen.
+Eine Verfingung der Zeitempfinden eines Storyboards. Das System erhöht die Geschwindigkeit, mit der das Storyboard fortschreitet, indem Eingabezeitwerte übergeben werden, die schneller als die Systemuhr steigen.
 
 </dd> <dt>
 
-<span id="uianimation.term.conclusion"></span><span id="UIANIMATION.TERM.CONCLUSION"></span>**Abschluss**
+<span id="uianimation.term.conclusion"></span><span id="UIANIMATION.TERM.CONCLUSION"></span>**Schlussfolgerung**
 </dt> <dd>
 
-Der Prozess, bei dem ein Storyboard zum Beenden beliebiger Schleifen umgeleitet wird. Wenn die Schleife begonnen hat, wird die aktuelle Iterations Operation fertiggestellt, und der Rest des Storyboards wird wiedergegeben. Andernfalls wird der Schleifen Teil des Storyboards vollständig übersprungen.
+Der Prozess, bei dem ein Storyboard an das Beenden unbestimmter Schleifen weiterverteilt wird. Wenn die Schleife begonnen hat, wird die aktuelle Iteration abgeschlossen, und der Rest des Storyboards wird dann wieder verwendet. Andernfalls wird der Schleifenteil des Storyboards vollständig übersprungen.
 
 </dd> <dt>
 
@@ -79,90 +79,90 @@ Ein einzelnes Bild in einem Film oder einer Animation.
 <span id="uianimation.term.frame_rate"></span><span id="UIANIMATION.TERM.FRAME_RATE"></span>**Framerate** 
 </dt> <dd>
 
-Die Anzahl der pro Sekunde angezeigten Frames. Höhere Frameraten führen in der Regel zu einer glatteren Bewegung des Bilds.
+Die Anzahl der pro Sekunde angezeigten Frames. Höhere Bildraten erzeugen im Allgemeinen eine reibungslosere Bewegung im Bild.
 
 </dd> <dt>
 
-<span id="uianimation.term.interpolator"></span><span id="UIANIMATION.TERM.INTERPOLATOR"></span>**interpolators**
+<span id="uianimation.term.interpolator"></span><span id="UIANIMATION.TERM.INTERPOLATOR"></span>**Interpolator**
 </dt> <dd>
 
-Das Programmier Objekt, das die mathematische interpolung des Werts und der Geschwindigkeit einer Variablen für einen Übergang durchführt.
+Das Programmierobjekt, das die mathematische Interpolation des Werts und der Geschwindigkeit einer Variablen für einen Übergang übernimmt.
 
 </dd> <dt>
 
 <span id="uianimation.term.keyframe"></span><span id="UIANIMATION.TERM.KEYFRAME"></span>**Keyframe**
 </dt> <dd>
 
-Ein Zeitpunkt innerhalb eines Storyboards, der relativ zum Anfang des Storyboards, relativ zu einem anderen Keyframe oder zum Endzeit eines Übergangs angegeben werden kann. er kann verwendet werden, um die Start-und Endzeit anderer Übergänge oder eines Zyklen innerhalb des Storyboards anzugeben.
+Ein Zeitpunkt innerhalb eines Storyboards, der relativ zum Anfang des Storyboards, relativ zu einem anderen Keyframe oder zur Endzeit eines Übergangs angegeben werden kann, und zum Angeben der Start- und Endzeit anderer Übergänge oder eines Zyklus innerhalb des Storyboards verwendet werden kann.
 
 </dd> <dt>
 
-<span id="uianimation.term.loop"></span><span id="UIANIMATION.TERM.LOOP"></span>**ESE**
+<span id="uianimation.term.loop"></span><span id="UIANIMATION.TERM.LOOP"></span>**Schleife**
 </dt> <dd>
 
-Ein Abschnitt eines Storyboards zwischen zwei Keyframes, die wiederholt abgespielt werden. Eine-Schleife kann eine begrenzte Anzahl von Zeiten oder unbegrenzt wiedergeben.
+Ein Abschnitt eines Storyboards zwischen zwei Keyframes, der wiederholt abgespielt wird. Eine Schleife kann eine begrenzte Anzahl von Malen oder unbegrenzt spielen.
 
 </dd> <dt>
 
-<span id="uianimation.term.priority_comparison"></span><span id="UIANIMATION.TERM.PRIORITY_COMPARISON"></span>**Prioritäts Vergleich** 
+<span id="uianimation.term.priority_comparison"></span><span id="UIANIMATION.TERM.PRIORITY_COMPARISON"></span>**Prioritätsvergleich** 
 </dt> <dd>
 
-Client definierter Code, der zwei Storyboards vergleicht, eine bereits geplante und die andere, die geplant werden soll, um deren relative Priorität zu bestimmen. Ein geplantes Storyboard kann gekürzt, komprimiert, abgebrochen oder abgeschlossen werden, um die Planung des Storyboards mit höherer Priorität zu aktivieren.
+Clientdefinierter Code, der zwei Storyboards vergleicht, von denen eines bereits geplant ist, und das andere, das geplant werden soll, um deren relative Priorität zu bestimmen. Ein geplantes Storyboard kann gekürzt, komprimiert, abgebrochen oder abgeschlossen werden, um die Planung des Storyboards mit höherer Priorität zu ermöglichen.
 
 </dd> <dt>
 
 <span id="uianimation.term.storyboard"></span><span id="UIANIMATION.TERM.STORYBOARD"></span>**Storyboard** 
 </dt> <dd>
 
-Eine Gruppe von Animations Übergängen, die relativ zueinander synchronisiert werden.
+Eine Gruppe von Animationsübergängen, die relativ zueinander synchronisiert werden.
 
 </dd> <dt>
 
 <span id="uianimation.term.tag"></span><span id="UIANIMATION.TERM.TAG"></span>**Tag** 
 </dt> <dd>
 
-Ein paar aus einer ganzzahligen ID und einem COM-Objekt, das von einer Anwendung verwendet wird, um Animations Variablen und Storyboards innerhalb des Gültigkeits Bereichs eines bestimmten Animations-Managers zu identifizieren.
+Ein Paar, das aus einer ganzzahligen ID und einem COM-Objekt besteht, das von einer Anwendung verwendet wird, um Animationsvariablen und Storyboards innerhalb des Bereichs eines bestimmten Animations-Managers zu identifizieren.
 
 </dd> <dt>
 
 <span id="uianimation.term.throttling"></span><span id="UIANIMATION.TERM.THROTTLING"></span>**Drosselung** 
 </dt> <dd>
 
-Dynamisches Anpassen der Framerate einer Animation an bestimmte Anforderungen. Durch die Drosselung wird sichergestellt, dass Animationen mit einer konsistenten Framerate gerendert werden, während gleichzeitig die Verwendung von Systemressourcen für das Rendern mit einer Rate minimiert wird
+Dynamisches Anpassen der Bildfrequenz einer Animation, um bestimmte Anforderungen zu erfüllen. Durch die Drosselung wird sichergestellt, dass Animationen mit einer konsistenten Bildfrequenz gerendert werden, während gleichzeitig die Verwendung von Systemressourcen für das Rendering mit einer Rate minimiert wird, die über das hinaus geht, was erforderlich oder nützlich ist.
 
 </dd> <dt>
 
-<span id="uianimation.term.tick"></span><span id="UIANIMATION.TERM.TICK"></span>**Tick** 
+<span id="uianimation.term.tick"></span><span id="UIANIMATION.TERM.TICK"></span>**tick** 
 </dt> <dd>
 
-Ein Timer-Ereignis, das in der Regel das Rendering eines einzelnen Frames auslöst.
+Ein Timerereignis, das in der Regel das Rendern eines einzelnen Frames auslöst.
 
 </dd> <dt>
 
 <span id="uianimation.term.transition"></span><span id="UIANIMATION.TERM.TRANSITION"></span>**Übergang** 
 </dt> <dd>
 
-Ein Konstrukt, das Progressive Updates für eine Animations Variable über einen Zeitraum definiert.
+Ein Konstrukt, das progressive Aktualisierungen für eine Animationsvariable über einen bestimmten Zeitraum definiert.
 
 </dd> <dt>
 
-<span id="uianimation.term.trimming"></span><span id="UIANIMATION.TERM.TRIMMING"></span>**Kürzung**
+<span id="uianimation.term.trimming"></span><span id="UIANIMATION.TERM.TRIMMING"></span>**Trimmen**
 </dt> <dd>
 
-Vorab Entfernung eines Storyboards für eine Animations Variable mit einem Storyboard mit höherer Priorität. Wenn das Kürzen eines Storyboards auf eine oder mehrere Variablen bewirkt, dass das Storyboard vorzeitig beendet wird, gilt es als abgeschnitten. Siehe auch: abschneiden.
+Das Steuerelement einer Animationsvariablen mit einem Storyboard mit höherer Priorität wird vorab aus dem Steuerelement des Storyboards. Wenn das Kürzen eines Storyboards für eine oder mehrere Variablen dazu führt, dass das Storyboard vorzeitig beendet wird, gilt es als abgeschnitten. Siehe auch: Abschneiden.
 
 </dd> <dt>
 
-<span id="uianimation.term.truncation"></span><span id="UIANIMATION.TERM.TRUNCATION"></span>**Kürzung**
+<span id="uianimation.term.truncation"></span><span id="UIANIMATION.TERM.TRUNCATION"></span>**Abschneiden**
 </dt> <dd>
 
-Das vorzeitige Beenden eines Storyboards durch die vorab Entfernung der Kontrolle über eine oder mehrere der Variablen, die mit einem oder mehreren Storyboards mit höherer Priorität animiert werden. Siehe auch: kürzen.
+Vorzeitiges Beenden eines Storyboards, indem die Steuerung einer oder mehrere der Variablen, die es animiert, mit einem oder mehr Storyboards mit höherer Priorität vorzeitig beendet wird. Siehe auch: Kürzen.
 
 </dd> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

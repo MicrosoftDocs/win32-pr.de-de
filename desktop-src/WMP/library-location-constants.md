@@ -1,119 +1,119 @@
 ---
-title: Bibliotheks Speicherort Konstanten
-description: Bibliotheks Speicherort Konstanten
+title: Speicherortkonstanten der Bibliothek
+description: Speicherortkonstanten der Bibliothek
 ms.assetid: 88ff9b91-6b21-4f7d-ae13-e8456a3e0f75
 keywords:
-- Windows Media Player Online Stores, Bibliotheks Speicherort Konstanten
-- Online Stores, Bibliotheks Speicherort Konstanten
-- Typ 1 Online Stores, Bibliotheks Speicherort Konstanten
-- Windows Media Player Online Stores, Standorte
-- Online Stores, Standorte
-- Typ 1 Online Stores, Standorte
-- Windows Media Player Library, Location-Konstanten
-- Bibliothek, Location-Konstanten
+- Windows Media Player Onlineshops, Speicherortkonstanten der Bibliothek
+- Onlineshops, Speicherortkonstanten der Bibliothek
+- Typ 1 Onlineshops, Speicherortkonstanten der Bibliothek
+- Windows Media Player Onlineshops, Standorte
+- Onlineshops, Standorte
+- Geben Sie 1 Onlineshops, Standorte ein.
+- Windows Media Player Bibliothek, Speicherortkonstanten
+- Bibliothek, Speicherortkonstanten
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 38cbb297831acce9724988309880390cdcbe1894
-ms.sourcegitcommit: ad672d3a10192c5ccac619ad2524407109266e93
+ms.openlocfilehash: 45a677f405ff36030647618a83bd0b8b952dae254a756cebc48e4c3210e5fcde
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/25/2020
-ms.locfileid: "104390053"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119135363"
 ---
-# <a name="library-location-constants"></a>Bibliotheks Speicherort Konstanten
+# <a name="library-location-constants"></a>Speicherortkonstanten der Bibliothek
 
 > [!Note]  
-> In diesem Abschnitt werden die-Funktionen beschrieben, die für die Verwendung durch Online Stores Die Verwendung dieser Funktion außerhalb des Kontexts eines Online Stores wird nicht unterstützt.
+> In diesem Abschnitt werden funktionen beschrieben, die für die Verwendung durch Onlineshops entwickelt wurden. Die Verwendung dieser Funktionalität außerhalb des Kontexts eines Onlineshops wird nicht unterstützt.
 
- 
+ 
 
-Die Bibliotheks Speicherort Konstanten sind globale Zeichen folgen Variablen, die in "Contentpartner. h" definiert sind. Sie werden von bestimmten Methoden der [iwmpcontentpartner](/previous-versions/windows/desktop/api/contentpartner/nn-contentpartner-iwmpcontentpartner) -und [iwmpcontentpartnercallback](/previous-versions/windows/desktop/api/contentpartner/nn-contentpartner-iwmpcontentpartnercallback) -Schnittstellen und von bestimmten Methoden des [externen](external-object-for-type-1-online-stores.md) Objekts verwendet. Diese Konstanten werden verwendet, um die folgenden Typen anzugeben.
+Die Speicherortkonstanten der Bibliothek sind globale Zeichenfolgenvariablen, die in contentpartner.h definiert sind. Sie werden von bestimmten Methoden der [Schnittstellen IWMPContentPartner](/previous-versions/windows/desktop/api/contentpartner/nn-contentpartner-iwmpcontentpartner) und [IWMPContentPartnerCallback](/previous-versions/windows/desktop/api/contentpartner/nn-contentpartner-iwmpcontentpartnercallback) sowie von bestimmten Methoden des [externen](external-object-for-type-1-online-stores.md) Objekts verwendet. Diese Konstanten werden verwendet, um die folgenden Typen anzugeben.
 
--   Bibliotheks Location Type: Dies ist der Typ der Bibliotheks Ansicht, die von Windows Media Player angezeigt wird. Der Player zeigt z. b. möglicherweise eine Ansicht eines bestimmten Albums (g \_ szcpalbumid) oder die Ansicht aller Genres (g \_ szallcpgenreids) an.
--   Ausgewählter Elementtyp: Dies ist der Typ des Elements, das in der Bibliotheks Ansicht ausgewählt wurde. Beispielsweise kann der Benutzer ein bestimmtes Album (g \_ szcpalbumid) in der Ansicht aller Alben auswählen.
--   Listentyp: Dies ist der Typ der Liste, die vom Plug-in für den Inhalts Partner angefordert wird. Beispielsweise kann das Plug-in von Windows Media Player aufgefordert werden, eine Liste von Elementen bereitzustellen, die einer bestimmten Wiedergabeliste zugeordnet sind (g \_ szcplistid).
--   List Item Type: der Typ des einzelnen Listen Elements, das vom Inhalts Partner-Plug-in angefordert wird. Beispielsweise kann das Plug-in von Windows Media Player aufgefordert werden, die Liste der Spuren (g \_ szcptrackid) in einer bestimmten Wiedergabeliste anzugeben.
+-   Bibliotheksspeicherorttyp: Dies ist der Typ der Bibliotheksansicht, die von Windows Media Player angezeigt wird. Beispielsweise zeigt der Player möglicherweise eine Ansicht eines bestimmten Albums (g \_ szCPKategorieID) oder die Ansicht aller Genre (g \_ szAllCPGenreIDs) an.
+-   Ausgewählter Elementtyp: Dies ist der Typ des in der Bibliotheksansicht ausgewählten Elements. Beispielsweise kann der Benutzer ein bestimmtes Album (g \_ szCPLädtID) in der Ansicht aller Alben auswählen.
+-   Listentyp: Dies ist der Typ der Liste, die vom Inhaltspartner-Plug-In angefordert wird. Beispielsweise kann Windows Media Player das Plug-In bitten, eine Liste von Elementen zu liefern, die einer bestimmten Wiedergabeliste zugeordnet sind (g \_ szCPListID).
+-   Listenelementtyp: Der Typ des einzelnen Listenelements, das vom Inhaltspartner-Plug-In angefordert wird. Beispielsweise kann Windows Media Player das Plug-In bitten, die Liste der Spuren (g \_ szCPTrackID) in einer bestimmten Wiedergabeliste zu liefern.
 
-In der folgenden Tabelle werden der Name und der Wert der einzelnen Konstanten und eine kurze Beschreibung des Speicher Orts oder-Typs der Bibliothek angezeigt. In C-oder C++-Code, der mit der Header Datei Contentpartner. h kompiliert wird, können Sie entweder den Namen oder den Wert einer Konstanten verwenden. Die Verwendung des Namens ist vorzuziehen, da der Compiler falsche Schreibweise erkennt. In Skripts (z. b. beim Aufrufen der Methoden des [externen](external-object-for-type-1-online-stores.md) Objekts) ist es nicht möglich, den Namen einer Konstanten zu verwenden. Sie müssen den-Wert verwenden.
+Die folgende Tabelle enthält den Namen und wert jeder Konstante sowie eine kurze Beschreibung des Speicherorts oder Typs der Bibliothek. In C- oder C++-Code, der mit der Headerdatei contentpartner.h kompiliert wird, können Sie entweder den Namen oder den Wert einer Konstante verwenden. Die Verwendung des Namens ist vorzuziehen, da der Compiler Rechtschreibfehler erkennt. Im Skript (z. B. beim Aufrufen der Methoden des [externen](external-object-for-type-1-online-stores.md) Objekts) können Sie den Namen einer Konstante nicht verwenden. Sie müssen den Wert verwenden.
 
 
 
 | Name                              | Wert                        | Speicherort oder Typ                                                                                                                                                   |
 |-----------------------------------|------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| g \_ szunknownlocation              | Unknownlocation              | Ein Satz von Spuren, der weder ein Album noch eine Wiedergabeliste ist. Windows Media Player verwendet diese Konstante auch im seltenen Fall, dass ein gültiger Speicherort nicht ermittelt werden kann. |
-| g \_ szrootlocation                 | Rootlocation                 | Der oberste Knoten im Strukturansicht-Steuerelement der Bibliothek                                                                                                                      |
-| g \_ szflyoutmenu                   | Flyoutmenu                   | Das Flyout-Menü des aktuellen Online Stores                                                                                                                             |
-| g \_ szonlinestore                  | OnlineStore                  | Alle Online Stores                                                                                                                                                  |
-| g \_ szcplistid                     | Cplistid                     | Eine einzelne Liste                                                                                                                                                 |
-| g \_ szallcplistids                 | Allcplistids                 | Alle Listen                                                                                                                                                          |
-| g \_ szcptrackid                    | Cptrackid                    | Eine einzelne Spur                                                                                                                                                |
-| g \_ szallcptrackids                | Allcptrackids                | Alle Spuren                                                                                                                                                         |
-| g \_ szcpartistid                   | Cpartistid                   | Ein einzelner Künstler                                                                                                                                               |
-| g \_ szallcpartistids               | Allcpartistids               | Alle Künstler                                                                                                                                                        |
-| g \_ szcpalbumid                    | Cpalbumid                    | Ein einzelnes Album                                                                                                                                                |
-| g \_ szallcpalbumids                | Allcpalbumids                | Alle Alben                                                                                                                                                         |
-| g \_ szcpgenreid                    | Cpgenreid                    | Ein einzelnes Genre                                                                                                                                                |
-| g \_ szallcpgenreids                | Allcpgenreids                | Alle Genres                                                                                                                                                         |
-| g \_ szcpalbumsubgenreid            | Cpalbumsubgenreid            | Ein einzelnes Subgenre                                                                                                                                             |
-| g \_ szallcpalbumsubgenreids        | Allcpalbumsubgenreids        | Alle Subgenres                                                                                                                                                      |
-| g \_ szreleasedateyear              | Releasedateyear              | Ein einzelnes Jahr, in dem Katalog Inhalte freigegeben wurden                                                                                                               |
-| g \_ szallreleasedateyears          | Allreleasedateyears          | Alle Jahre, zu denen Katalog Inhalte freigegeben wurden                                                                                                                        |
-| g \_ szcpradioid                    | Cpradioid                    | Ein einzelner Options Strom                                                                                                                                         |
-| g \_ szallcpradioids                | Allcpradioids                | Alle Funk Datenströme                                                                                                                                                  |
-| g \_ szauthor                       | Autor                       | Ein einzelner Autor                                                                                                                                               |
-| g \_ szallauthors                   | Allauthors                   | Alle Autoren                                                                                                                                                        |
-| g \_ szwmparametrialrating             | Wmpartalbewertung             | Eine einzelne Eltern Bewertung                                                                                                                                      |
-| g \_ szallwmparameentalratings         | Allwmparametrialratings         | Alle Eltern Bewertungen                                                                                                                                               |
-| g \_ szusereffectiveratingstars     | Usereffectiveratingstars     | Eine individuelle Benutzer Bewertung, gemessen als Anzahl von Sternen                                                                                                           |
-| g \_ szallusereffectiveratingstarss | Allusereffectiveratingstarss | Alle Benutzerbewertungen                                                                                                                                                   |
+| g \_ szUnknownLocation              | UnknownLocation              | Eine Reihe von Spuren, die weder ein Album noch eine Wiedergabeliste sind. Windows Media Player verwendet diese Konstante auch im seltenen Fall, dass sie keinen gültigen Speicherort bestimmen kann. |
+| g \_ szRootLocation                 | RootLocation                 | Der oberste Knoten im Bibliotheksstrukturansicht-Steuerelement                                                                                                                      |
+| g \_ szFlyoutMenu                   | FlyoutMenu                   | Flyoutmenü des aktuellen Onlineshops                                                                                                                             |
+| g \_ szOnlineStore                  | OnlineStore                  | Alle Onlineshops                                                                                                                                                  |
+| g \_ szCPListID                     | CPListID                     | Eine einzelne Liste                                                                                                                                                 |
+| g \_ szAllCPListIDs                 | AllCPListIDs                 | Alle Listen                                                                                                                                                          |
+| g \_ szCPTrackID                    | CPTrackID                    | Eine einzelne Spur                                                                                                                                                |
+| g \_ szAllCPTrackIDs                | AllCPTrackIDs                | Alle Spuren                                                                                                                                                         |
+| g \_ szCPArtistID                   | CPArtistID                   | Ein einzelner Interpret                                                                                                                                               |
+| g \_ szAllCPArtistIDs               | AllCPArtistIDs               | Alle Interpreten                                                                                                                                                        |
+| g \_ szCPIedID                    | CPIedID                    | Ein einzelnes Album                                                                                                                                                |
+| g \_ szAllCPObjektiDs                | AllCPBeständeIDs                | Alle Alben                                                                                                                                                         |
+| g \_ szCPGenreID                    | CPGenreID                    | Ein einzelnes Genre                                                                                                                                                |
+| g \_ szAllCPGenreIDs                | AllCPGenreIDs                | Alle"-1600                                                                                                                                                         |
+| g \_ szCPIedSubGenreID            | CPIedSubGenreID            | Ein einzelner Untergenerre                                                                                                                                             |
+| g \_ szAllCPKategorieSubGenreIDs        | AllCPKategorieSubGenreIDs        | Alle Untergenres                                                                                                                                                      |
+| g \_ szReleaseDateYear              | ReleaseDateYear              | Ein einzelnes Jahr, in dem Kataloginhalte veröffentlicht wurden                                                                                                               |
+| g \_ szAllReleaseDateYears          | AllReleaseDateYears          | Alle Jahre, in denen Kataloginhalte veröffentlicht wurden                                                                                                                        |
+| g \_ szCPRadioID                    | CPRadioID                    | Ein einzelner Radiostream                                                                                                                                         |
+| g \_ szAllCPRadioIDs                | AllCPRadioIDs                | Alle Radiostreams                                                                                                                                                  |
+| g \_ szAuthor                       | Autor                       | Ein einzelner Autor                                                                                                                                               |
+| g \_ szAllAuthors                   | AllAuthors                   | Alle Autoren                                                                                                                                                        |
+| g \_ szWMParentalRating             | WMParentalRating             | Eine individuelle Elternbewertung                                                                                                                                      |
+| g \_ szAllWMParentalRatings         | AllWMParentalRatings         | Alle Bewertungen von Eltern                                                                                                                                               |
+| g \_ szUserEffectiveRatingStars     | UserEffectiveRatingStars     | Eine individuelle Benutzerbewertung, gemessen als Anzahl von Sternen                                                                                                           |
+| g \_ szAllUserEffectiveRatingStarss | AllUserEffectiveRatingStarss | Alle Benutzerbewertungen                                                                                                                                                   |
 
 
 
- 
+ 
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[**Extern. AddIn-Korb**](external-addtobasket.md)
+[**External.addToBasket**](external-addtobasket.md)
 </dt> <dt>
 
-[**Extern. kaufen**](external-buy.md)
+[**External.buy**](external-buy.md)
 </dt> <dt>
 
-[**Extern. changeView**](external-changeview.md)
+[**External.changeView**](external-changeview.md)
 </dt> <dt>
 
-[**Extern. changeviewonlinelist**](external-changeviewonlinelist.md)
+[**External.changeViewOnlineList**](external-changeviewonlinelist.md)
 </dt> <dt>
 
-[**Extern. Download**](external-download.md)
+[**External.download**](external-download.md)
 </dt> <dt>
 
-[**Extern. librarylocationtype**](external-librarylocationtype.md)
+[**External.libraryLocationType**](external-librarylocationtype.md)
 </dt> <dt>
 
-[**Extern. Play**](external-play.md)
+[**External.play**](external-play.md)
 </dt> <dt>
 
-[**Iwmpcontentpartner:: GetCommands**](/previous-versions/windows/desktop/api/contentpartner/nf-contentpartner-iwmpcontentpartner-getcommands)
+[**IWMPContentPartner::GetCommands**](/previous-versions/windows/desktop/api/contentpartner/nf-contentpartner-iwmpcontentpartner-getcommands)
 </dt> <dt>
 
-[**Iwmpcontentpartner:: getlistcontents**](/previous-versions/windows/desktop/api/contentpartner/nf-contentpartner-iwmpcontentpartner-getlistcontents)
+[**IWMPContentPartner::GetListContents**](/previous-versions/windows/desktop/api/contentpartner/nf-contentpartner-iwmpcontentpartner-getlistcontents)
 </dt> <dt>
 
-[**Iwmpcontentpartner:: GetTemplate**](/previous-versions/windows/desktop/api/contentpartner/nf-contentpartner-iwmpcontentpartner-gettemplate)
+[**IWMPContentPartner::GetTemplate**](/previous-versions/windows/desktop/api/contentpartner/nf-contentpartner-iwmpcontentpartner-gettemplate)
 </dt> <dt>
 
-[**Iwmpcontentpartner:: InvokeCommand**](/previous-versions/windows/desktop/api/contentpartner/nf-contentpartner-iwmpcontentpartner-invokecommand)
+[**IWMPContentPartner::InvokeCommand**](/previous-versions/windows/desktop/api/contentpartner/nf-contentpartner-iwmpcontentpartner-invokecommand)
 </dt> <dt>
 
-[**Iwmpcontentpartnercallback:: changeView**](/previous-versions/windows/desktop/api/contentpartner/nf-contentpartner-iwmpcontentpartnercallback-changeview)
+[**IWMPContentPartnerCallback::ChangeView**](/previous-versions/windows/desktop/api/contentpartner/nf-contentpartner-iwmpcontentpartnercallback-changeview)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

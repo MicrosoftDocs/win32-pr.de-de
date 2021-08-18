@@ -1,21 +1,21 @@
 ---
-title: Verwenden von WMI-Windows PowerShell-Cmdlets zum Verwalten des BITS Compact-Servers
-description: Windows PowerShell bietet einen einfachen Mechanismus zum Herstellen einer Verbindung mit Windows-Verwaltungsinstrumentation (WMI) auf einem Remote Computer und zum Verwalten des Background Intelligent Transfer Service (Bits) Compact-Servers.
+title: Verwenden von WMI Windows PowerShell Cmdlets zum Verwalten des BITS Compact-Servers
+description: Windows PowerShell bietet einen einfachen Mechanismus, um eine Verbindung mit Windows Management Instrumentation (WMI) auf einem Remotecomputer herzustellen und den Background Intelligent Transfer Service (BITS) Compact Server zu verwalten.
 ms.assetid: fe174d2f-4ca0-431e-b1b8-1893ec54147a
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 6c3c942672c147ec5daa0caa2a370e487be80809
-ms.sourcegitcommit: 592c9bbd22ba69802dc353bcb5eb30699f9e9403
+ms.openlocfilehash: 3e82401e80b5e49b7d2b964ec910d15d70aea7ce9c782a0173bef97aa8b3a5c9
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "103948910"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119021078"
 ---
-# <a name="using-wmi-windows-powershell-cmdlets-to-manage-the-bits-compact-server"></a>Verwenden von WMI-Windows PowerShell-Cmdlets zum Verwalten des BITS Compact-Servers
+# <a name="using-wmi-windows-powershell-cmdlets-to-manage-the-bits-compact-server"></a>Verwenden von WMI Windows PowerShell Cmdlets zum Verwalten des BITS Compact-Servers
 
-Windows PowerShell bietet einen einfachen Mechanismus zum Herstellen einer Verbindung mit Windows-Verwaltungsinstrumentation (WMI) auf einem Remote Computer und zum Verwalten des Background Intelligent Transfer Service (Bits) Compact-Servers. Der BITS Compact-Server ist eine optionale Serverkomponente, die separat installiert werden muss. Informationen zum Installieren des Compact-Servers finden Sie in der Dokumentation zu [BITS Compact Server](bits-compact-server.md) .
+Windows PowerShell bietet einen einfachen Mechanismus, um eine Verbindung mit Windows Management Instrumentation (WMI) auf einem Remotecomputer herzustellen und den Background Intelligent Transfer Service (BITS) Compact Server zu verwalten. Der BITS Compact Server ist eine optionale Serverkomponente, die separat installiert werden muss. Informationen zum Installieren des Compact-Servers finden Sie in der Dokumentation zu [BITS Compact Server.](bits-compact-server.md)
 
-1.  Stellen Sie eine Verbindung zum Bits-Anbieter her.
+1.  Verbinden an den BITS-Anbieter.
 
     ```PowerShell
     $cred = Get-Credential
@@ -25,14 +25,14 @@ Windows PowerShell bietet einen einfachen Mechanismus zum Herstellen einer Verbi
 
     
 
-    Das [Get-Credential-](/previous-versions//dd315327(v=technet.10)) Cmdlet fordert die Anmelde Informationen des Benutzers auf, um eine Verbindung mit dem Remote Computer herzustellen, und weist die Anmelde Informationen dem $cred-Objekt zu.
+    Das Cmdlet [Get-Credential](/previous-versions//dd315327(v=technet.10)) fordert die Anmeldeinformationen des Benutzers an, eine Verbindung mit dem Remotecomputer herzustellen, und weist die Anmeldeinformationen dem $cred-Objekt zu.
 
-    Die vom [Get-WMIObject-](/previous-versions//dd315295(v=technet.10)) Cmdlet zurückgegebenen Objekte werden der $BCS Variablen zugewiesen. Im vorherigen Beispiel ruft das [Get-WMIObject-](/previous-versions//dd315295(v=technet.10)) Cmdlet die [BITSCompactServerUrlGroup](/previous-versions/windows/desktop/bitsprov/bitslightweightserverurlgroup) -Klasse im Microsoft Bits- \\ Stamm \\ Namespace von Server1 ab. Statische Methoden, die von der [BITSCompactServerUrlGroup](/previous-versions/windows/desktop/bitsprov/bitslightweightserverurlgroup) -Klasse verfügbar gemacht werden, können für das $BCS Objekt aufgerufen werden. Weitere Informationen zur Bits-Remote Verwaltung finden Sie unter [Bits-Anbieter](/previous-versions/windows/desktop/bitsprov/bits-provider) -und Bits- [Anbieter Klassen]( /previous-versions//dd904507(v=vs.85)).
+    Die vom [Cmdlet Get-WmiObject](/previous-versions//dd315295(v=technet.10)) zurückgegebenen Objekte werden der $bcs Variablen zugewiesen. Im vorherigen Beispiel ruft das [Cmdlet Get-WmiObject](/previous-versions//dd315295(v=technet.10)) die [BITSCompactServerUrlGroup-Klasse](/previous-versions/windows/desktop/bitsprov/bitslightweightserverurlgroup) im \\ Microsoft \\ BITS-Stammnamespace Server1 ab. Statische Methoden, die von der [BITSCompactServerUrlGroup-Klasse](/previous-versions/windows/desktop/bitsprov/bitslightweightserverurlgroup) verfügbar gemacht werden, können für das $bcs-Objekt aufgerufen werden. Weitere Informationen zur BITS-Remoteverwaltung finden Sie unter [BITS-Anbieter](/previous-versions/windows/desktop/bitsprov/bits-provider) und [BITS-Anbieterklassen.]( /previous-versions//dd904507(v=vs.85))
 
     > [!Note]  
-    > Das Zeichen mit einem Doppel Akzent ( \` ) wird verwendet, um einen Zeilenumbruch anzugeben.
+    > Das Akzentzeichen \` () wird verwendet, um einen Zeilenbruch anzugeben.
 
-     
+     
 
 2.  Erstellen Sie eine URL-Gruppe auf dem Server.
 
@@ -43,9 +43,9 @@ Windows PowerShell bietet einen einfachen Mechanismus zum Herstellen einer Verbi
 
     
 
-    Die https://Server1:80/testurlgroup URL-Präfix Zeichenfolge "" wird der $URLGroup Variablen zugewiesen. Die $URLGroup Variable wird an die Methode " [kreateurlgroup](/previous-versions/windows/desktop/bitsprov/createurlgroup-bitslightweightserverurlgroup) " übergeben, die die URL-Gruppe auf Server1 erstellt.
+    Die https://Server1:80/testurlgroup URL-Präfixzeichenfolge "" wird der variablen $URLGroup zugewiesen. Die $URLGroup Variable wird an die [CreateUrlGroup-Methode](/previous-versions/windows/desktop/bitsprov/createurlgroup-bitslightweightserverurlgroup) übergeben, die die URL-Gruppe auf Server1 erstellt.
 
-    Sie können eine andere URL-Gruppe angeben. Die URL-Gruppe muss einer gültigen URL-Präfix Zeichenfolge entsprechen. Weitere Informationen zu URL-Präfixen finden Sie unter [URLPrefix](../http/urlprefix-strings.md)-Zeichen folgen.
+    Sie können eine andere URL-Gruppe angeben. Die URL-Gruppe muss einer gültigen URL-Präfixzeichenfolge entsprechen. Weitere Informationen zu URL-Präfixen finden Sie unter [UrlPrefix-Zeichenfolgen.](../http/urlprefix-strings.md)
 
 3.  Hosten Sie eine Datei in der URL-Gruppe.
 
@@ -56,7 +56,7 @@ Windows PowerShell bietet einen einfachen Mechanismus zum Herstellen einer Verbi
 
     
 
-    Die BITSCompactServerUrlGroup-Instanz, die vom [Get-WMIObject](/previous-versions//dd315295(v=technet.10)) -Cmdlet zurückgegeben wird, wird der $bcsObj-Variablen zugewiesen. Die Methode " [kreateurl](/previous-versions/windows/desktop/bitsprov/createurl-bitslightweightserverurlgroup) " wird für die $bcsObj mit dem URL-Suffix "url.txt", dem Quellpfad "c: \\ \\ Temp \\ \\1.txt" für die Datei und einer leeren Sicherheits beschreibungerzeichenfolge als Parameter aufgerufen. Das Suffix "url.txt" wird dem URL-Gruppen Präfix hinzugefügt. Clients können die Datei von folgender Adresse herunterladen: https://Server1:80/testurlgroup/url.txt .
+    Die vom [Cmdlet Get-WmiObject](/previous-versions//dd315295(v=technet.10)) zurückgegebene BITSCompactServerUrlGroup-Instanz wird der $bcsObj Variablen zugewiesen. Die [CreateUrl-Methode](/previous-versions/windows/desktop/bitsprov/createurl-bitslightweightserverurlgroup) wird für die $bcsObj mit dem URL-Suffix "url.txt", dem Quellpfad "c: \\ \\ temp \\ \\1.txt" für die Datei und einer leeren Sicherheitsbeschreibungszeichenfolge als Parameter aufgerufen. Das Suffix "url.txt" wird dem URL-Gruppenpräfix hinzugefügt. Clients können die Datei von der folgenden Adresse herunterladen: https://Server1:80/testurlgroup/url.txt .
 
 4.  Bereinigen Sie die URL und die URL-Gruppe.
 
@@ -66,7 +66,7 @@ Windows PowerShell bietet einen einfachen Mechanismus zum Herstellen einer Verbi
 
     
 
-    Die " **System. Object DELETE** "-Methode löscht das $bcsObj Objekt.
+    Die **methode system.object Delete** löscht das $bcsObj Objekt.
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
@@ -75,10 +75,10 @@ Windows PowerShell bietet einen einfachen Mechanismus zum Herstellen einer Verbi
 [BITS Compact Server](./bits-compact-server.md)
 </dt> <dt>
 
-[Bits-Anbieter](/previous-versions/windows/desktop/bitsprov/bits-provider)
+[BITS-Anbieter](/previous-versions/windows/desktop/bitsprov/bits-provider)
 </dt> <dt>
 
-[Bits-Anbieter Klassen]( /previous-versions//dd904507(v=vs.85))
+[BITS-Anbieterklassen]( /previous-versions//dd904507(v=vs.85))
 </dt> <dt>
 
 [Get-Credential](/previous-versions//dd315327(v=technet.10))
@@ -87,6 +87,6 @@ Windows PowerShell bietet einen einfachen Mechanismus zum Herstellen einer Verbi
 [Get-WmiObject](/previous-versions//dd315295(v=technet.10))
 </dt> </dl>
 
- 
+ 
 
- 
+ 

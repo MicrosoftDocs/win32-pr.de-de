@@ -1,9 +1,9 @@
 ---
-title: MCM_GETTODAY Meldung (kommstrg. h)
-description: Ruft die Datumsinformationen für das Datum ab, das als \ 0034; heute \ 0034; angegeben ist. für ein Monatskalender-Steuerelement. Sie können diese Nachricht explizit oder mit dem monthcal \_ gettoday-Makro senden.
+title: MCM_GETTODAY (Commctrl.h)
+description: Ruft die Datumsinformationen für das als \ 0034;today \ 0034 angegebene Datum ab. für ein Monatskalender-Steuerelement. Sie können diese Nachricht explizit oder mithilfe des MonthCal \_ GetToday-Makros senden.
 ms.assetid: a79feb57-6aa3-4c96-95f3-7018b6b8327f
 keywords:
-- Windows-Steuerelemente für MCM_GETTODAY Meldung
+- MCM_GETTODAY meldungssteuerelemente Windows
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 21538af3c573b3d972b7f16bfe024e0d36211644
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 6925ff24a2d3e042a4f2c752d87642f74345116fc5cc7f94e00e811d453be4fe
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "103956539"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119019028"
 ---
-# <a name="mcm_gettoday-message"></a>MCM \_ gettoday-Meldung
+# <a name="mcm_gettoday-message"></a>MCM \_ GETTODAY-Nachricht
 
-Ruft die Datumsinformationen für das als "heute" angegebene Datum für ein Monatskalender-Steuerelement ab. Sie können diese Nachricht explizit oder mit dem [**monthcal \_ gettoday**](/windows/desktop/api/Commctrl/nf-commctrl-monthcal_gettoday) -Makro senden.
+Ruft die Datumsinformationen für das Datum ab, das als "today" für ein Monatskalender-Steuerelement angegeben ist. Sie können diese Nachricht explizit oder mithilfe des [**MonthCal \_ GetToday-Makros**](/windows/desktop/api/Commctrl/nf-commctrl-monthcal_gettoday) senden.
 
 ## <a name="parameters"></a>Parameter
 
@@ -35,13 +35,13 @@ Ruft die Datumsinformationen für das als "heute" angegebene Datum für ein Mona
 *lParam* 
 </dt> <dd>
 
-Zeiger auf eine [**SYSTEMTIME**](/windows/desktop/api/minwinbase/ns-minwinbase-systemtime) -Struktur, die die Datumsinformationen empfängt. Dieser Parameter muss eine gültige Adresse sein und darf nicht **null** sein.
+Zeiger auf eine [**SYSTEMTIME-Struktur,**](/windows/desktop/api/minwinbase/ns-minwinbase-systemtime) die die Datumsinformationen erhält. Dieser Parameter muss eine gültige Adresse sein und darf nicht **NULL sein.**
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt bei Erfolg einen Wert ungleich 0 (null) zurück, andernfalls NULL.
+Gibt bei Erfolg einen Wert ungleich 0 (null) oder andernfalls 0 (null) zurück.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -49,17 +49,17 @@ Gibt bei Erfolg einen Wert ungleich 0 (null) zurück, andernfalls NULL.
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                        |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/>                                  |
-| Header<br/>                   | <dl> <dt>Kommstrg. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ Vista-Desktop-Apps\]<br/>                                        |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                                  |
+| Header<br/>                   | <dl> <dt>Commctrl.h</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[Uhrzeiten im Monatskalender-Steuerelement](month-calendar-controls.md)
+[Zeiten im Monatskalender-Steuerelement](month-calendar-controls.md)
 </dt> </dl>
 
  

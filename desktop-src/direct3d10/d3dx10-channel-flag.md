@@ -1,7 +1,7 @@
 ---
-description: Diese Flags werden von Funktionen verwendet, die auf einem oder mehreren Kanälen in einer Textur arbeiten.
+description: Diese Flags werden von Funktionen verwendet, die auf einem oder mehrere Kanäle in einer Textur arbeiten.
 ms.assetid: 54ecb39a-a36e-43bb-bb51-78b7375716d8
-title: D3DX10_CHANNEL_FLAG-Enumeration (D3DX10Tex. h)
+title: D3DX10_CHANNEL_FLAG -Enumeration (D3DX10Tex.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,16 +13,16 @@ api_type:
 - HeaderDef
 api_location:
 - D3DX10Tex.h
-ms.openlocfilehash: f21958ab964a70116a551c0cb8dadbce6db88f7d
-ms.sourcegitcommit: 14010c34b35fa268046c7683f021f86de08ddd0a
+ms.openlocfilehash: 4b29cbb958b2aa8af02000fc62d4d3a848c2efba585bd927674c9ceca9d65d9e
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "104355636"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119634960"
 ---
-# <a name="d3dx10_channel_flag-enumeration"></a>D3dx10 \_ - \_ kanalflag-Enumeration
+# <a name="d3dx10_channel_flag-enumeration"></a>D3DX10 \_ CHANNEL \_ FLAG-Enumeration
 
-Diese Flags werden von Funktionen verwendet, die auf einem oder mehreren Kanälen in einer Textur arbeiten.
+Diese Flags werden von Funktionen verwendet, die auf einem oder mehrere Kanäle in einer Textur arbeiten.
 
 ## <a name="syntax"></a>Syntax
 
@@ -43,38 +43,38 @@ typedef enum D3DX10_CHANNEL_FLAG {
 
 <dl> <dt>
 
-<span id="D3DX10_CHANNEL_RED"></span><span id="d3dx10_channel_red"></span>**D3dx10 \_ Kanal \_ rot**
+<span id="D3DX10_CHANNEL_RED"></span><span id="d3dx10_channel_red"></span>**D3DX10 \_ CHANNEL \_ RED**
 </dt> <dd>
 
 Gibt an, dass der rote Kanal verwendet werden soll.
 
 </dd> <dt>
 
-<span id="D3DX10_CHANNEL_BLUE"></span><span id="d3dx10_channel_blue"></span>**D3dx10 \_ Kanal \_ blau**
+<span id="D3DX10_CHANNEL_BLUE"></span><span id="d3dx10_channel_blue"></span>**D3DX10 \_ CHANNEL \_ BLUE**
 </dt> <dd>
 
 Gibt an, dass der blaue Kanal verwendet werden soll.
 
 </dd> <dt>
 
-<span id="D3DX10_CHANNEL_GREEN"></span><span id="d3dx10_channel_green"></span>**D3dx10 \_ Kanal \_ grün**
+<span id="D3DX10_CHANNEL_GREEN"></span><span id="d3dx10_channel_green"></span>**D3DX10 \_ CHANNEL \_ GREEN**
 </dt> <dd>
 
 Gibt an, dass der grüne Kanal verwendet werden soll.
 
 </dd> <dt>
 
-<span id="D3DX10_CHANNEL_ALPHA"></span><span id="d3dx10_channel_alpha"></span>**D3dx10 \_ Channel \_ Alpha**
+<span id="D3DX10_CHANNEL_ALPHA"></span><span id="d3dx10_channel_alpha"></span>**D3DX10 \_ CHANNEL \_ ALPHA**
 </dt> <dd>
 
 Gibt an, dass der Alphakanal verwendet werden soll.
 
 </dd> <dt>
 
-<span id="D3DX10_CHANNEL_LUMINANCE"></span><span id="d3dx10_channel_luminance"></span>**D3dx10 \_ Kanal- \_ Leuchtkraft**
+<span id="D3DX10_CHANNEL_LUMINANCE"></span><span id="d3dx10_channel_luminance"></span>**\_D3DX10-KANAL-LUDOMINANZ \_**
 </dt> <dd>
 
-Gibt an, dass die leuchtenden der roten, grünen und blauen Kanäle verwendet werden sollen.
+Gibt die Luminaces der roten, grünen und blauen Kanäle an, die verwendet werden sollen.
 
 </dd> </dl>
 
@@ -84,11 +84,11 @@ Gibt an, dass die leuchtenden der roten, grünen und blauen Kanäle verwendet we
 
 | Anforderung | Wert |
 |-------------------|----------------------------------------------------------------------------------------|
-| Header<br/> | <dl> <dt>D3DX10Tex. h</dt> </dl> |
+| Header<br/> | <dl> <dt>D3DX10Tex.h</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 

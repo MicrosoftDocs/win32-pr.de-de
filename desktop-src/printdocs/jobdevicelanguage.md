@@ -4,12 +4,12 @@ ms.assetid: 3894d9fa-2bf7-447a-bac3-e72a0fdb7187
 title: JobDeviceLanguage
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 3b7bf56018a2b395ec5aa182336a89d8872057e7
-ms.sourcegitcommit: 5d4e99f4c8f42f5f543e52cb9beb9fb13ec56c5f
+ms.openlocfilehash: 5e71d45f013b90c733f4e7116c65de451b0735c894cb166a1d3a84497457a1c3
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2021
-ms.locfileid: "112408994"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119034148"
 ---
 # <a name="jobdevicelanguage"></a>JobDeviceLanguage
 
@@ -19,7 +19,7 @@ Beschreibt die Gerätesprachen, die zum Senden von Daten vom Treiber an ein phys
 
 -   [Elementinformationen](#element-information)
 -   [Strukturell](#structural-content)
--   [xml-Inhalt (Extensible Markup Language)](#extensible-markup-language-xml-content)
+-   [Extensible Markup Language -Inhalt (XML)](#extensible-markup-language-xml-content)
 
 ## <a name="element-information"></a>Elementinformationen
 
@@ -27,7 +27,7 @@ Beschreibt die Gerätesprachen, die zum Senden von Daten vom Treiber an ein phys
 
 | Name | Wert |
 |----------------------------|--------------------|
-| Elementtyp <br/>   | Funktion<br/> |
+| Elementtyp <br/>   | Komponente<br/> |
 | Bereichspräfix <br/> | Auftrag<br/>     |
 | Hinweise <br/>          | Keine<br/>    |
 
@@ -70,7 +70,7 @@ In der folgenden Tabelle werden die Merkmale der in der XML-Struktur definierten
 
 | Name                                 | Datentyp         | Einheit                  | Unterstützte Werte                                                                                                                                                                      | Zusammenfassung                                                                      |
 |--------------------------------------|-------------------|-----------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------|
-| \_Optionname\_<br/>            | Zeichenfolge<br/> | Buchstaben<br/> | Gültiger vollqualifizierte Name, wie von [Namespaces in XML](https://www.w3.org/TR/1999/REC-xml-names-19990114/)definiert. Wenn kein Namespace angegeben ist, wird der Standardnamespace angenommen.<br/> | Der Name der Option.<br/>                                           |
+| \_Optionname\_<br/>            | Zeichenfolge<br/> | Buchstaben<br/> | Gültiger vollqualifizierte Name, wie von [Namespaces in XML](https://www.w3.org/TR/1999/REC-xml-names-19990114/)definiert. Wenn kein Namespace angegeben wird, wird der Standardnamespace angenommen.<br/> | Der Name der Option.<br/>                                           |
 | \_IdentityOptionValue\_<br/>   | Zeichenfolge<br/> | –<br/>        | TRUE, FALSE<br/>                                                                                                                                                               | Definiert eine Option, die diese Funktion deaktiviert, wenn sie ausgewählt wird.<br/> |
 | \_LanguageLevelValue\_<br/>    | Zeichenfolge<br/> | –<br/>        | Keine.<br/>                                                                                                                                                                      | Gibt die Sprachebene an (z. B. PS Level 2).<br/>           |
 | \_LanguageEncodingValue\_<br/> | Zeichenfolge<br/> | –<br/>        | Keine.<br/>                                                                                                                                                                      | Gibt die Sprachcodierung an (z. B. ISOLatin1).<br/>         |
@@ -80,7 +80,7 @@ In der folgenden Tabelle werden die Merkmale der in der XML-Struktur definierten
 
  
 
-## <a name="extensible-markup-language-xml-content"></a>xml-Inhalt (Extensible Markup Language)
+## <a name="extensible-markup-language-xml-content"></a>Extensible Markup Language -Inhalt (XML)
 
 Die Schlüsselwörter für das öffentliche Druckschema werden im https://schemas.microsoft.com/windows/2003/08/printing/printschemakeywords -Namespace definiert. Der Inhalt des öffentlichen Extensible Markup Language (XML) für dieses Schlüsselwort ist unten definiert:
 

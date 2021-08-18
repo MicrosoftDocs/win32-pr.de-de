@@ -1,6 +1,6 @@
 ---
-description: 'Erfahren Sie mehr über: esentslvfleioexception-Konstruktor'
-title: Esentslvfleioexception-Konstruktor
+description: 'Weitere Informationen finden Sie unter: EsentSLVFileIOException-Konstruktor'
+title: EsentSLVFileIOException-Konstruktor
 TOCTitle: 'EsentSLVFileIOException constructor '
 ms:assetid: M:Microsoft.Isam.Esent.Interop.EsentSLVFileIOException.#ctor
 ms:mtpsurl: https://msdn.microsoft.com/library/microsoft.isam.esent.interop.esentslvfileioexception.esentslvfileioexception(v=EXCHG.10)
@@ -24,17 +24,17 @@ api_type:
 api_location:
 - Microsoft.Isam.Esent.Interop.dll
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: a2251ba7c545abd2bcda6cbd449f035f1918e64e
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 3cab88a0cbd2ce04dc4d513cfcbf66faeab3fc38273dee11048654cc4f323b64
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106340171"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118981290"
 ---
-# <a name="esentslvfileioexception-constructor"></a>Esentslvfleioexception-Konstruktor
+# <a name="esentslvfileioexception-constructor"></a>EsentSLVFileIOException-Konstruktor
 
-**Namespace:**  [Microsoft. ISAM. ESENT. Interop](./microsoft.isam.esent.interop-namespace.md)  
-**Assembly:**  Microsoft. ISAM. ESENT. Interop (in Microsoft.Isam.Esent.Interop.dll)
+**Namespace:**  [Microsoft.Isam.Esent.Interop](./microsoft.isam.esent.interop-namespace.md)  
+**Assembly:**  Microsoft.Isam.Esent.Interop (in Microsoft.Isam.Esent.Interop.dll)
 
 ## <a name="syntax"></a>Syntax
 
@@ -50,12 +50,12 @@ Dim instance As New EsentSLVFileIOException()
 public EsentSLVFileIOException()
 ```
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
-#### <a name="reference"></a>Referenz
+#### <a name="reference"></a>Verweis
 
-[Esentslvfleioexception-Klasse](./esentslvfileioexception-class.md)
+[EsentSLVFileIOException-Klasse](./esentslvfileioexception-class.md)
 
-[Esentslvfleioexception-Member](./esentslvfileioexception-members.md)
+[EsentSLVFileIOException-Member](./esentslvfileioexception-members.md)
 
-[Microsoft. ISAM. ESENT. Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)
+[Microsoft.Isam.Esent.Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)

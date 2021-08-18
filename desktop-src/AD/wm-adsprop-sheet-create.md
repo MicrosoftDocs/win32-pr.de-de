@@ -1,6 +1,6 @@
 ---
 title: WM_ADSPROP_SHEET_CREATE Meldung
-description: Wird an das Benachrichtigungs Objekt gesendet, um ein sekundäres Eigenschaften Blatt in einem Active Directory MMC-Snap-in zu erstellen.
+description: Wird an das Benachrichtigungsobjekt gesendet, um ein sekundäres Eigenschaftenblatt in einem Active Directory-MMC-Snap-In zu erstellen.
 ms.assetid: 3efa25f2-cd39-44f8-952e-203f1519ce2c
 ms.tgt_platform: multiple
 keywords:
@@ -13,19 +13,19 @@ api_type:
 - NA
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: b540ffd87d4350a323577ff5fa317e94f9271f2d
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: e0ec88eaed682fd16fecb717b851b902d5ba52ce08d5360aa78b881a4b8cb4f3
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104517837"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119024198"
 ---
-# <a name="wm_adsprop_sheet_create-message"></a>Meldung zum Erstellen eines "WM \_ adsprop"- \_ Blatts \_
+# <a name="wm_adsprop_sheet_create-message"></a>WM \_ ADSPROP \_ SHEET \_ CREATE-Nachricht
 
-Die Meldung " **WM \_ adsprop \_ Sheet \_ Create** " wird an das Benachrichtigungs Objekt gesendet, um ein sekundäres Eigenschaften Blatt in einem Active Directory MMC-Snap-in zu erstellen.
+Die **WM \_ ADSPROP SHEET \_ \_ CREATE-Nachricht** wird an das Benachrichtigungsobjekt gesendet, um ein sekundäres Eigenschaftenblatt in einem Active Directory-MMC-Snap-In zu erstellen.
 
 > [!Note]  
-> Dieser Nachrichtenwert ist nicht in einer veröffentlichten Header Datei definiert. Wenn Sie diesen Nachrichtenwert verwenden möchten, müssen Sie ihn im exakten Format definieren.
+> Dieser Meldungswert ist in einer veröffentlichten Headerdatei nicht definiert. Um diesen Meldungswert zu verwenden, müssen Sie ihn selbst im genauen angezeigten Format definieren.
 
  
 
@@ -44,24 +44,24 @@ LRESULT SendMessage( (HWND)   hwnd,
 
 <dl> <dt>
 
-*HWND* 
+*Hwnd* 
 </dt> <dd>
 
-Das Handle des Benachrichtigungs Objekts. Rufen Sie zum Abrufen dieses Handles [**adspropkreatenotifyobj**](/windows/desktop/api/Adsprop/nf-adsprop-adspropcreatenotifyobj)auf.
+Das Handle des Benachrichtigungsobjekts. Rufen Sie [**ADsPropCreateNotifyObj**](/windows/desktop/api/Adsprop/nf-adsprop-adspropcreatenotifyobj)auf, um dieses Handle abzurufen.
 
 </dd> <dt>
 
 *wParam* 
 </dt> <dd>
 
-Enthält einen Zeiger auf eine [**DSA \_ sec- \_ Seiten \_ Informations**](dsa-sec-page-info.md) Struktur, die die zu Erstell führende sekundäre Seite definiert. Es kann nur ein sekundäres Eigenschaften Blatt mit der Meldung " **WM \_ adsprop \_ Sheet \_ Create** " erstellt werden, sodass die [**dsobjectnames**](/windows/desktop/api/Dsclient/ns-dsclient-dsobjectnames) -Struktur nur eine [**dsobject**](/windows/desktop/api/Dsclient/ns-dsclient-dsobject) -Struktur enthalten kann.
+Enthält einen Zeiger auf eine [**DSA \_ SEC PAGE \_ \_ INFO-Struktur,**](dsa-sec-page-info.md) die die zu erstellende sekundäre Seite definiert. Mit der **WM \_ ADSPROP \_ SHEET \_ CREATE-Meldung** kann nur ein sekundäres Eigenschaftenblatt erstellt werden, sodass die [**DSOBJECTNAMES-Struktur**](/windows/desktop/api/Dsclient/ns-dsclient-dsobjectnames) nur eine [**DSOBJECT-Struktur**](/windows/desktop/api/Dsclient/ns-dsclient-dsobject) enthalten kann.
 
 </dd> <dt>
 
 *lParam* 
 </dt> <dd>
 
-Nicht verwendet. Muss **null** sein.
+Wird nicht verwendet. Muss **NULL** sein.
 
 </dd> </dl>
 
@@ -69,9 +69,9 @@ Nicht verwendet. Muss **null** sein.
 
 Der Rückgabewert für diese Nachricht ist immer 0 (null).
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Der Aufrufer muss die [**DSA \_ sec- \_ Seiten \_ Informations**](dsa-sec-page-info.md) Struktur, die Titel Zeichenfolge und alle [**dsobject**](/windows/desktop/api/Dsclient/ns-dsclient-dsobject) -Zeichen folgen mit einem einzigen Aufruf der [**LocalAlloc**](/windows/desktop/api/winbase/nf-winbase-localalloc) -Funktion zuordnen. Die Meldung " **WM \_ adsprop \_ Sheet \_ Create** " ist eine asynchrone Nachricht und wird daher vor der Erstellung des sekundären Blatts zurückgegeben. Aus diesem Grund muss der Arbeitsspeicher beibehalten werden, nachdem die Nachricht zurückgegeben wurde. Der Empfänger gibt diesen Arbeitsspeicher mit einem einzigen-Befehl der [**LocalFree**](/windows/desktop/api/winbase/nf-winbase-localfree) -Funktion frei, nachdem das sekundäre Blatt erstellt wurde.
+Der Aufrufer muss die [**DSA \_ SEC PAGE \_ \_ INFO-Struktur,**](dsa-sec-page-info.md) die Titelzeichenfolge und alle [**DSOBJECT-Zeichenfolgen**](/windows/desktop/api/Dsclient/ns-dsclient-dsobject) mithilfe eines einzelnen Aufrufs der [**LocalAlloc-Funktion**](/windows/desktop/api/winbase/nf-winbase-localalloc) zuordnen. Die **WM \_ ADSPROP SHEET \_ \_ CREATE-Nachricht** ist eine asynchrone Nachricht, daher wird sie zurückgegeben, bevor das sekundäre Blatt erstellt wird. Aus diesem Grund muss der Arbeitsspeicher intakt bleiben, nachdem die Nachricht zurückgegeben wurde. Der Empfänger gibt diesen Arbeitsspeicher mit einem einzigen Aufruf der [**LocalFree-Funktion**](/windows/desktop/api/winbase/nf-winbase-localfree) frei, nachdem das sekundäre Blatt erstellt wurde.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -84,26 +84,26 @@ Der Aufrufer muss die [**DSA \_ sec- \_ Seiten \_ Informations**](dsa-sec-page-i
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**cfstr \_ DS- \_ Klammern**](cfstr-ds-parenthwnd.md)
+[**CFSTR \_ DS \_ PARENTHWND**](cfstr-ds-parenthwnd.md)
 </dt> <dt>
 
-[**\_ \_ Seite \_ Informationen zu DSA sec**](dsa-sec-page-info.md)
+[**DSA \_ SEC \_ PAGE \_ INFO**](dsa-sec-page-info.md)
 </dt> <dt>
 
-[**Dsobjectnames**](/windows/desktop/api/Dsclient/ns-dsclient-dsobjectnames)
+[**DSOBJECTNAMES**](/windows/desktop/api/Dsclient/ns-dsclient-dsobjectnames)
 </dt> <dt>
 
-[**Dsobject**](/windows/desktop/api/Dsclient/ns-dsclient-dsobject)
+[**DSOBJECT**](/windows/desktop/api/Dsclient/ns-dsclient-dsobject)
 </dt> <dt>
 
-[**Localzuweisung**](/windows/desktop/api/winbase/nf-winbase-localalloc)
+[**LocalAlloc**](/windows/desktop/api/winbase/nf-winbase-localalloc)
 </dt> <dt>
 
-[**Von LocalFree**](/windows/desktop/api/winbase/nf-winbase-localfree)
+[**LocalFree**](/windows/desktop/api/winbase/nf-winbase-localfree)
 </dt> </dl>
 
  

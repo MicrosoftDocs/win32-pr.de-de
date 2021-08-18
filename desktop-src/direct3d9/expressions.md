@@ -4,12 +4,12 @@ ms.assetid: 642aa188-5dd7-49fc-b6cc-845f8fc22530
 title: Ausdrücke (Direct3D 9)
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 3aa574069094853eb506f7a1b38cdb6cd4379d3b
-ms.sourcegitcommit: a47bd86f517de76374e4fff33cfeb613eb259a7e
+ms.openlocfilehash: daeffeb09a2c2f496f73d492581cb2b51ac2e518e176bbbc848889bef5716b25
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/06/2021
-ms.locfileid: "106342541"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119985700"
 ---
 # <a name="expressions-direct3d-9"></a>Ausdrücke (Direct3D 9)
 
@@ -17,7 +17,7 @@ Ausdrücke sind mathematische oder logische Anweisungen, die auf der rechten Sei
 
 ## <a name="expressions"></a>Ausdrücke
 
-1.  Variablen Verweis
+1.  Variablenverweis
     ```
     ( variable ) or<variable >
     ```
@@ -57,9 +57,9 @@ Ausdrücke sind mathematische oder logische Anweisungen, die auf der rechten Sei
 
     
 
-    Die skalare müssen literalskalare Werte sein.
+    Die Skalarwerte müssen literale Skalarwerte sein.
 
-    Die Anzahl der Initialisierer muss mit der Variablen (State) auf der linken Seite des Gleichheitszeichens kompatibel sein.
+    Die Anzahl der Initialisierer muss mit der Variablen (Status) auf der linken Seite des Gleichheitszeichens kompatibel sein.
 
 6.  OR-Ausdruck
 
@@ -69,9 +69,9 @@ Ausdrücke sind mathematische oder logische Anweisungen, die auf der rechten Sei
 
     
 
-    Die Token müssen mit der Variablen (State) auf der linken Seite des Gleichheitszeichens kompatibel sein.
+    Die Token müssen mit der Variablen (Status) auf der linken Seite des Gleichheitszeichens kompatibel sein.
 
-    Beim Token wird die Groß-/Kleinschreibung nicht beachtet.
+    Bei den Token wird die Groß-/Kleinschreibung nicht beachtet.
 
 7.  NULL
 
@@ -81,7 +81,7 @@ Ausdrücke sind mathematische oder logische Anweisungen, die auf der rechten Sei
 
     
 
-    NULL kann nur einem Shader, einem Sampler oder einem Textur Objekt zugewiesen werden.
+    NULL kann nur einem Shader, Sampler oder Texturobjekt zugewiesen werden.
 
 8.  Assemblyblock
 
@@ -91,11 +91,11 @@ Ausdrücke sind mathematische oder logische Anweisungen, die auf der rechten Sei
 
     
 
-    PS-assemblyblöcke müssen dem Pixelshader-Zustand zugewiesen werden.
+    PS-Assemblyblöcke müssen dem PIXELSHADER-Zustand zugewiesen werden.
 
-    VS-assemblyblöcke müssen dem Vertexshader-Zustand zugewiesen werden.
+    VS-Assemblyblöcke müssen dem VERTEXSHADER-Zustand zugewiesen werden.
 
-9.  Sampler-Zustands Block
+9.  Sampler-Zustandsblock
 
     ```
     sampler_state { [ state = expression ; [ state = ... ] ] }
@@ -103,11 +103,11 @@ Ausdrücke sind mathematische oder logische Anweisungen, die auf der rechten Sei
 
     
 
-    Samplerstatusblöcke sind Sequenzen von nicht indizierten samplingstatus-oder Textur Zuweisungen.
+    Samplerzustandsblöcke sind Sequenzen von nicht indizierten Samplerphasenzustands- oder Texturzuweisungen.
 
-    Samplerstatusblöcke müssen dem samplereffekts-Zustand zugewiesen werden.
+    Samplerzustandsblöcke müssen dem SAMPLER-Effektzustand zugewiesen werden.
 
-10. Zustands Block des Effekt Zustands
+10. Zustandsblock "Effekt"
 
     ```
     stateblock_state { [ state [ [index] ] = expression; 
@@ -116,11 +116,11 @@ Ausdrücke sind mathematische oder logische Anweisungen, die auf der rechten Sei
 
     
 
-    Zustands Blöcke sind Sequenzen des allgemeinen Zustands. Zustands Blöcke können eingebettet werden, aber keine Zirkel Verweise enthalten.
+    Zustandsblöcke sind Sequenzen des allgemeinen Zustands. Zustandsblöcke können geschachtelt werden, dürfen jedoch keine Zirkelverweise enthalten.
 
-    Zustands Blöcke müssen dem Status des stateblock-Effekts zugewiesen werden.
+    Zustandsblöcke müssen dem StateBLOCK-Effektzustand zugewiesen werden.
 
-11. HLSL-Kompilierung
+11. HLSL Compile
 
     ```
     compile target entrypoint ( [ arguments ] )
@@ -128,15 +128,15 @@ Ausdrücke sind mathematische oder logische Anweisungen, die auf der rechten Sei
 
     
 
-    Der Vertex-Shader im Vergleich zu \_ m \_ n-Ziel gibt die \_ Vertexshader-Version von D3DVS Version (m, n) an. Das Pixel-Shader PS \_ m \_ n-Ziel gibt die Pixel- \_ Shader-Version von D3DPS Version (m, n) an.
+    Der Vertex-Shader im Vergleich zum Ziel m n gibt die Version des \_ \_ Vertex-Shaders D3DVS \_ VERSION(m, n) an. Der Pixel-Shader ps m n target gibt die Version des \_ \_ D3DPS-Pixelshader \_ (m, n) an.
 
-    Die sprach Kompilierungs Ausdrücke auf hoher Ebene des Vertex-Shaders können nur dem Vertexshader-Effekt Zustand zugewiesen werden. Der Pixel-Shader auf hoher Ebene kompilierte sprach Kompilierungs Ausdrücke können nur dem Pixelshader-Effekt Zustand zugewiesen werden.
+    Vertexshader-Kompilierungsausdrücke auf hoher Ebene können nur dem VERTEXSHADER-Effektzustand zugewiesen werden. Ausdrücke für die Sprachkompilierung auf hoher Ebene des Pixelshaders können nur dem Pixelshader-Effektzustand zugewiesen werden.
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[Effekt Format](dx9-graphics-reference-effects-file-format.md)
+[Effektformat](dx9-graphics-reference-effects-file-format.md)
 </dt> </dl>
 
  

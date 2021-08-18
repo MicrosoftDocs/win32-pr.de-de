@@ -1,60 +1,60 @@
 ---
-title: Installation von einer CD während der Online Installation
-description: Installation von einer CD während der Online Installation
+title: Installieren von einer CD während der Online-Installation
+description: Installieren von einer CD während der Online-Installation
 ms.assetid: 4cf34f0e-caa0-42d1-b99a-51bbb7f0a7df
 keywords:
-- Windows Media Player Online Stores, Installation von CD, während Online
-- Onlinespeicher, Installation von CD, während Online
-- Geben Sie 1 Online Stores ein, während Online von CD installiert wird.
-- Typ 2 Online Stores, Installation von CD, während Online
-- Windows Media Player Online Stores, Online Installationen von CD
-- Online-Stores, Online Installationen von CD
-- Typ 1 Online Stores, Online Installationen von CD
-- Typ 2 Online Stores, Online Installationen von CD
-- Windows Media Player Online Stores, CD-Installationen im Online Modus
-- Online Stores, CD-Installationen im Online Modus
-- Geben Sie 1 Online Stores, CD-Installationen Online ein.
-- Geben Sie 2 Online Stores, CD-Installationen Online ein.
-- Online-Store von CD in Online Installation installieren
-- CD-Installationen von Online Stores im Online Modus
-- Online Installationen von Online Stores
+- Windows Media Player,Installation von CD während der Online-Installation
+- Onlineshops,Installation von CD während der Online-Installation
+- Geben Sie 1 Onlineshops ein, die von CD installiert werden, während sie online sind.
+- Geben Sie 2 Onlineshops ein, und installieren Sie sie über cd, während sie online sind.
+- Windows Media Player online stores,online installs from CD (Online-Installationen von CD)
+- Onlineshops,Online-Installationen von CD
+- Typ 1 Onlineshops,Online-Installationen von CD
+- 'Typ 2: Onlineshops,Online-Installationen von CD'
+- Windows Media Player Onlinespeicher,CD wird installiert
+- Onlineshops,CD-Installationen, während sie online sind
+- Geben Sie 1 Onlineshops ein, CD wird während der Online-Installation installiert.
+- 'Typ 2: Onlineshops, CD-Installationen während der Online'
+- Installieren von Onlineshops über CD während der Online-Installation
+- CD-Installationen von Onlineshops im Onlinespeicher
+- Online-Installationen von Onlineshops
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: dd57015e64dece444b1a91afebe3144bee117caa
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: 13589d7ba6dea0693acaacb5e0d1f551b4a4f178c4ccb50a1bd8ebb513dda3de
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "106338393"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118996510"
 ---
-# <a name="installing-from-a-cd-while-online"></a>Installation von einer CD während der Online Installation
+# <a name="installing-from-a-cd-while-online"></a>Installieren von einer CD während der Online-Installation
 
-Benutzer können Windows Media Player von einer CD installieren, während Sie mit dem Internet verbunden sind. In diesem Fall findet das Windows Media Player-Setup das vom *serviceInfo* -Befehlszeilenparameter angegebene serviceInfo-Dokument. Wenn das **Schlüssel** Attribut mit dem *defaultservice* -Befehlszeilenparameter übereinstimmt, prüft Setup das install-Element, um den Setup Vorgang anzupassen. Wenn Sie die Attributwerte verwenden, werden Ihre Endbenutzer-Lizenzbedingungen (EULA) und ihre Datenschutzbestimmungen angezeigt. Außerdem wird die CAB-Datei auf dem Computer des Benutzers abgerufen und installiert. Beispielsweise können Sie diese Funktion verwenden, um die neueste Version eines COM-Objekts zu installieren, das für den Online Shop erforderlich ist.
+Benutzer können die Windows Media Player über eine CD installieren, während sie mit dem Internet verbunden sind. In diesem Fall sucht Windows Media Player Setup das ServiceInfo-Dokument, das durch den *ServiceInfo-Befehlszeilenparameter* angegeben wird. Wenn das **Key-Attribut** dem *DefaultService-Befehlszeilenparameter* entspricht, überprüft setup das Install-Element, um den Setupprozess anzupassen. Mithilfe der Attributwerte zeigt Setup Ihren Endbenutzer-Lizenzvertrag (EULA) und Ihre Datenschutzerklärung an und ruft ihre .cab-Datei auf dem Computer des Benutzers ab und installiert sie. Sie können dieses Feature beispielsweise verwenden, um die neueste Version eines COM-Objekts zu installieren, das für Ihren Onlineshop erforderlich ist.
 
-Nachdem es installiert wurde, legt Windows Media Player den anfänglichen Online Store mithilfe des Schlüssel namensfest, den Sie für den *defaultservice* -Befehlszeilenparameter angegeben haben.
+Nach der Installation legt Windows Media Player den ursprünglichen Onlineshop mithilfe des Schlüsselnamens fest, den Sie für den *DefaultService-Befehlszeilenparameter* angegeben haben.
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[**Informationen, die von Typ 1 und Typ 2 Online Stores gemeinsam sind**](information-common-to-type-1-and-type-2-online-stores.md)
+[**Allgemeine Informationen zu Onlineshops vom Typ 1 und 2**](information-common-to-type-1-and-type-2-online-stores.md)
 </dt> <dt>
 
 [**Install-Element**](install-element.md)
 </dt> <dt>
 
-[**Servicinfo-Dokument**](serviceinfo-document.md)
+[**ServiceInfo-Dokument**](serviceinfo-document.md)
 </dt> <dt>
 
-[**Festlegen des ersten Online Stores**](setting-the-initial-online-store.md)
+[**Festlegen des anfänglichen Online-Store**](setting-the-initial-online-store.md)
 </dt> <dt>
 
-[**Einrichten von Befehlszeilen Parametern für Online Stores**](setup-command-line-parameters-for-online-stores.md)
+[**Einrichten von Befehlszeilenparametern für Onlineshops**](setup-command-line-parameters-for-online-stores.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

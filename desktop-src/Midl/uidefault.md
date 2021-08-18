@@ -1,9 +1,9 @@
 ---
 title: uidefault-Attribut
-description: Das Attribut \ Uidefault \ gibt an, dass das Typinformationsmember der Standard Member für die Anzeige in der Benutzeroberfläche ist.
+description: Das Attribut \uidefault\ gibt an, dass das Typinformationsmitglied das Standardmitglied für die Anzeige auf der Benutzeroberfläche ist.
 ms.assetid: e789be38-a509-437d-89c9-ebbc830e5ae2
 keywords:
-- Uidefault-Attribut-Mittel l
+- uidefault attribute MIDL
 topic_type:
 - apiref
 api_name:
@@ -12,16 +12,16 @@ api_type:
 - NA
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: bcef39f36abad7c7cb5562b2d892761bd1bb7b5b
-ms.sourcegitcommit: ebd3ce6908ff865f1ef66f2fc96769be0aad82e1
+ms.openlocfilehash: 891d37611eb931a8857157434419e5221e808710290f2e209f50c743bcb5b7ea
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/19/2020
-ms.locfileid: "104390171"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119013478"
 ---
 # <a name="uidefault-attribute"></a>uidefault-Attribut
 
-Das **\[ Uidefault \]** -Attribut gibt an, dass der Typinformationsmember der Standard Member für die Anzeige in der Benutzeroberfläche ist.
+Das **\[ uidefault-Attribut \]** gibt an, dass der Typinformations-Member das Standardmitglied für die Anzeige auf der Benutzeroberfläche ist.
 
 ``` syntax
 [method-attribute-list, uidefault]return-type method-name(method-parameter-list)
@@ -31,17 +31,17 @@ Das **\[ Uidefault \]** -Attribut gibt an, dass der Typinformationsmember der St
 
 <dl> <dt>
 
-*Method-Attribute-List* 
+*method-attribute-list* 
 </dt> <dd>
 
-Andere Attribute, die auf die-Methode angewendet werden.
+Andere Attribute, die für die Methode gelten.
 
 </dd> <dt>
 
-*Rückgabetyp* 
+*return-type* 
 </dt> <dd>
 
-Der Typ der Daten, die von der Methode zurückgegeben werden, wenn Sie die Ausführung beendet.
+Der Typ der Daten, die die Methode nach Abschluss der Ausführung zurücksendet.
 
 </dd> <dt>
 
@@ -52,20 +52,20 @@ Der Name der Methode.
 
 </dd> <dt>
 
-*method-Parameter-List* 
+*method-parameter-list* 
 </dt> <dd>
 
-NULL oder mehr Parameter für die Methode.
+Null oder mehr Parameter für die Methode.
 
 </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Wenn Sie das **\[ Uidefault \]** -Attribut auf einen Member einer Schnittstelle oder eine dispinterface anwenden, wird Visual Basic zur Entwurfszeit aufgefordert, das Ereignis oder die Eigenschaft automatisch für den Benutzer anzuzeigen. Dies bedeutet Folgendes: Wenn der Benutzer auf ein Objekt doppelklickt, springt Visual Basic zum Ereignis in der standardmäßigen Quell Schnittstelle, das über das **\[ Uidefault \]** -Attribut verfügt. Wenn der Benutzer ein Objekt auswählt, zeigt der Eigenschaften Browser Visual Basic die Eigenschaft in der standardmäßigen Quell Schnittstelle an, die über dieses Attribut verfügt. Wenn kein Ereignis oder keine Eigenschaft über das **\[ Uidefault \]** -Attribut verfügt, zeigt Visual Basic das erste Ereignis oder die Eigenschaft an, das in der Standardschnittstelle aufgeführt ist.
+Das Anwenden **\[ des \] uidefault-Attributs** auf einen Member einer Schnittstelle oder einer Disp-Schnittstelle weist Visual Basic zur Entwurfszeit an, dem Benutzer dieses Ereignis oder diese Eigenschaft automatisch anzuzeigen. Dies bedeutet, dass beim Doppelklicken des Benutzers auf ein Objekt Visual Basic ereignis in der Standard-Quellschnittstelle mit dem **\[ uidefault-Attribut \] springt.** Wenn der Benutzer ein Objekt auswählt, Visual Basic Eigenschaftenbrowser von Visual Basic die Eigenschaft in der Standardquellenschnittstelle mit diesem Attribut angezeigt. Wenn kein Ereignis oder keine Eigenschaft über das **\[ \] uidefault-Attribut** verfügt, Visual Basic das erste Ereignis oder die erste Eigenschaft in der Standardschnittstelle angezeigt.
 
-### <a name="typeflag-representation"></a>TYPEFLAG-Darstellung
+### <a name="typeflag-representation"></a>Typflagdarstellung
 
-Das vorhanden sein von funcflag \_ fuidefault oder varflag \_ fuidefault
+Das Vorhandensein von FUNCFLAG \_ FUIDEFAULT oder VARFLAG \_ FUIDEFAULT
 
 ## <a name="examples"></a>Beispiele
 
@@ -108,15 +108,15 @@ coclass Form
 
 <dl> <dt>
 
-[Erstellen einer Typbibliothek mit "Mittel l"](generating-a-type-library-with-midl-2.md)
+[Generieren einer Typbibliothek mit MIDL](generating-a-type-library-with-midl-2.md)
 </dt> <dt>
 
-[Beispiel für eine ODL-Datei](/previous-versions/windows/desktop/automat/odl-file-example)
+[ODL-Dateibeispiel](/previous-versions/windows/desktop/automat/odl-file-example)
 </dt> <dt>
 
-[Syntax der ODL-Datei](/previous-versions/windows/desktop/automat/odl-file-syntax)
+[ODL-Dateisyntax](/previous-versions/windows/desktop/automat/odl-file-syntax)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
