@@ -1,29 +1,29 @@
 ---
-title: Progressive Offenlegungskontrollen
-description: Mit einem Progressive Disclosure-Steuerelement können Benutzer zusätzliche Informationen ein- oder ausblenden, einschließlich Daten, Optionen oder Befehlen.
+title: Steuerung der progressiven Offenlegung
+description: Mit einer progressiven Offenlegungssteuerung können Benutzer zusätzliche Informationen wie Daten, Optionen oder Befehle ein- oder ausblenden.
 ms.assetid: 0ca00c49-f897-49a6-926a-cc65f3155c6c
 ms.topic: article
 ms.date: 10/20/2020
-ms.openlocfilehash: a40f4c2fadd75cbcb6711dec2c1361ce2f970088
-ms.sourcegitcommit: 8ebcf6cd36f67f8bcf78e76ae8923d65b8995c8a
+ms.openlocfilehash: 1d561ea6e4f937c6e162f9eaa1f452e73d7de20c9f94c41785641062c21cd1a5
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/05/2021
-ms.locfileid: "111524544"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117676167"
 ---
-# <a name="progressive-disclosure-controls"></a>Progressive Offenlegungskontrollen
+# <a name="progressive-disclosure-controls"></a>Steuerung der progressiven Offenlegung
 
 > [!NOTE]
-> Dieses Entwurfshandbuch wurde für Windows 7 erstellt und für neuere Versionen von Windows nicht aktualisiert. Ein Teil der Anleitungen gilt weiterhin im Prinzip, aber die Darstellung und die Beispiele spiegeln nicht unsere aktuelle [Entwurfsanleitung wider.](/windows/uwp/design/)
+> Dieser Entwurfsleitfaden wurde für Windows 7 erstellt und für neuere Versionen von Windows nicht aktualisiert. Ein Großteil der Anleitungen gilt weiterhin im Prinzip, aber die Präsentation und die Beispiele spiegeln nicht unsere [aktuellen Entwurfsleitfäden](/windows/uwp/design/)wider.
 
-Mit einem Progressive Disclosure-Steuerelement können Benutzer zusätzliche Informationen ein- oder ausblenden, einschließlich Daten, Optionen oder Befehlen. Die progressive Offenlegung fördert die Einfachheit, indem sie sich auf das Wesentliche konzentriert und bei Bedarf zusätzliche Details preis gibt.
+Mit einer progressiven Offenlegungssteuerung können Benutzer zusätzliche Informationen wie Daten, Optionen oder Befehle ein- oder ausblenden. Die progressive Offenlegung fördert die Einfachheit, indem sie sich auf das Wesentliche konzentriert, aber bei Bedarf zusätzliche Details preisgibt.
 
-![Screenshot der progressiven Offenlegungssteuerelemente](images/progressive-disclosure-controls-image1.png)
+![Screenshot der Kontrollen zur progressiven Offenlegung](images/progressive-disclosure-controls-image1.png)
 
 Beispiele für progressive Offenlegungskontrollen.
 
 > [!Note]  
-> Richtlinien im Zusammenhang [mit Layout,](vis-layout.md) [Menüs](cmd-menus.md)und Symbolleisten werden in separaten Artikeln dargestellt. [](cmd-toolbars.md)
+> Richtlinien im Zusammenhang mit [Layout,](vis-layout.md) [Menüs](cmd-menus.md)und [Symbolleisten](cmd-toolbars.md) werden in separaten Artikeln dargestellt.
 
  
 
@@ -31,86 +31,86 @@ Beispiele für progressive Offenlegungskontrollen.
 
 Orientieren Sie sich an folgenden Fragen:
 
--   **Müssen Benutzer die Informationen in einigen, aber nicht in allen Szenarien oder in einigen, aber nicht immer sehen?** Wenn ja, vereinfacht die Anzeige der Informationen mithilfe der progressiven Offenlegung die Baselineerfahrung, ermöglicht benutzern jedoch den einfachen Zugriff auf die Informationen.
+-   **Müssen Benutzer die Informationen in einigen, aber nicht in allen Szenarien oder in einigen, aber nicht immer sehen?** Wenn ja, vereinfacht das Anzeigen der Informationen mithilfe der progressiven Offenlegung die Basiserfahrung, ermöglicht benutzern jedoch den einfachen Zugriff auf die Informationen.
 
     ![Screenshot: Anzeige des Security Center-Status](images/progressive-disclosure-controls-image2.png)
 
-    In diesem Beispiel zeigt Security Center den wichtigen Sicherheitsstatus an, verwendet aber die progressive Offenlegung, um Details bei Bedarf anzuzeigen.
+    In diesem Beispiel zeigt Security Center den wichtigen Sicherheitsstatus ständig an, verwendet jedoch die progressive Offenlegung, um Details bei Bedarf anzuzeigen.
 
--   **Wenn die Informationen standardmäßig angezeigt werden, werden Benutzer diese wahrscheinlich ausblenden?** Gibt es Szenarien, in denen Benutzer mehr Speicherplatz benötigen? Sind Benutzer ausreichend motiviert, die Benutzeroberfläche anzupassen? Falls nicht, zeigen Sie die Informationen ohne progressive Offenlegung an.
+-   **Wenn die Informationen standardmäßig angezeigt werden, entscheiden sich Benutzer wahrscheinlich jemals dafür, sie auszublenden?** Gibt es Szenarien, in denen Benutzer mehr Speicherplatz benötigen? Sind Benutzer ausreichend motiviert, die Benutzeroberfläche anzupassen? Wenn nicht, zeigen Sie die Informationen an, ohne die progressive Offenlegung zu verwenden.
 
     **Falsch:**
 
-    ![Screenshot der standardmäßig angezeigten Datenauswahl ](images/progressive-disclosure-controls-image3.png)
+    ![Screenshot der standardmäßig angezeigten Datenoptionen ](images/progressive-disclosure-controls-image3.png)
 
-    In diesem Beispiel sind Benutzer nicht dazu bewegt, die Informationen auszublenden.
+    In diesem Beispiel sind Benutzer nicht dazu aufgefordert, die Informationen auszublenden.
 
--   **Sind die zusätzlichen Informationen erweitert, erheblich, komplex oder stehen im Zusammenhang mit einem unabhängigen Subtask?** Falls ja, sollten Sie die Informationen [](ctrl-command-buttons.md) in einem [](ctrl-command-links.md) separaten Fenster mithilfe von Befehlsschaltflächen oder Links anzeigen, anstatt ein progressives Offenlegungssteuersystem zu verwenden. (Zusätzliche Informationen werden erweitert, wenn sie für fortgeschrittene Benutzer vorgesehen sind. Es ist komplex, wenn andere Informationen schwer zu lesen oder zu verlegen sind.)
+-   **Sind die zusätzlichen Informationen erweitert, umfangreich, komplex oder beziehen sie sich auf eine unabhängige Teilaufgabe?** Falls ja, sollten Sie erwägen, die Informationen in einem separaten Fenster mit [Befehlsschaltflächen](ctrl-command-buttons.md) oder [Links](ctrl-command-links.md) anzuzeigen, anstatt ein progressives Offenlegungssteuerelement zu verwenden. (Zusätzliche Informationen werden erweitert, wenn sie für fortgeschrittene Benutzer vorgesehen sind. Es ist komplex, wenn andere Informationen schwer zu lesen oder zu layouten sind.)
 
     ![Screenshot: Möchten Sie diese Datei ausführen? ](images/progressive-disclosure-controls-image4.png)
 
-    In diesem Beispiel sind Informationen zum Namen und Herausgeber der Software in erster Linie für fortgeschrittene Benutzer sinnvoll, sodass Links zu separaten Fenstern verwendet werden.
+    In diesem Beispiel sind Informationen zum Namen und Herausgeber der Software in erster Linie für fortgeschrittene Benutzer von Bedeutung, sodass Links zu separaten Fenstern verwendet werden.
 
--   **Handelt es sich bei den zusätzlichen Informationen um ein Satz- oder Satzfragment, das beschreibt, was ein Element macht oder wie es verwendet werden kann?** Falls ja, sollten Sie eine [QuickInfo oder infotip](ctrl-tooltips-and-infotips.md) verwenden.
--   **Sind die zusätzlichen Informationen mit der aktuellen Aufgabe verknüpft, aber unabhängig von den aktuell angezeigten Informationen?** Wenn dies der Meinung ist, [sollten Sie stattdessen Registerkarten](ctrl-tabs.md) verwenden. Reduzierbare Listen sind jedoch häufig Registerkarten vorzuziehen, da sie flexibler und skalierbarer sind.
--   **Werden die zusätzlichen Informationen im Wesentlichen als Datenfilter angezeigt oder verborgen?** Wenn dies der Fall ist, [](ctrl-check-boxes.md) sollten Sie [stattdessen eine Dropdownliste oder](/windows/desktop/uxguide/ctrl-drop) Kontrollkästchen verwenden, um den Filter auf die gesamte Liste anzuwenden.
+-   **Handelt es sich bei den zusätzlichen Informationen um einen Satz oder ein Satzfragment, das beschreibt, was ein Element tut oder wie es verwendet werden kann?** Falls ja, sollten Sie eine [QuickInfo](ctrl-tooltips-and-infotips.md) oder infotip verwenden.
+-   **Beziehen sich die zusätzlichen Informationen auf die aktuelle Aufgabe, aber unabhängig von den aktuell angezeigten Informationen?** In diesem Falle sollten Sie stattdessen [Registerkarten](ctrl-tabs.md) verwenden. Reduzierbare Listen sind jedoch häufig Registerkarten vorzuziehen, da sie flexibler und skalierbarer sind.
+-   **Werden die zusätzlichen Informationen im Wesentlichen als Datenfilter angezeigt oder ausgeblendet?** Wenn dies der Fall ist, sollten Sie stattdessen eine [Dropdownliste](/windows/desktop/uxguide/ctrl-drop) oder [Kontrollkästchen](ctrl-check-boxes.md) verwenden, um den Filter auf die gesamte Liste anzuwenden.
 
 ## <a name="design-concepts"></a>Entwurfskonzepte
 
-Die ziele der progressiven Offenlegung sind:
+Die Ziele der progressiven Offenlegung sind:
 
 -   **Vereinfachen Sie eine Benutzeroberfläche,** indem Sie sich auf das Wesentliche konzentrieren, aber bei Bedarf zusätzliche Details anzeigen.
--   **Vereinfachen Sie die Darstellung einer Benutzeroberfläche,** indem Sie die Übersichtlichkeit reduzieren.
+-   **Vereinfachen Sie die Darstellung einer Benutzeroberfläche,** indem Sie die Wahrnehmung von Unübersichtlichkeit reduzieren.
 
-Beide Ziele können mithilfe von progressiven Offenlegungssteuerelementen erreicht werden, bei denen Benutzer klicken, um weitere Details zu sehen. Sie können jedoch das zweite Ziel erreichen, die Darstellung zu vereinfachen, ohne explizite Steuerungen für die progressive Offenlegung zu verwenden, indem Sie:
+Beide Ziele können mithilfe von Steuerungen zur progressiven Offenlegung erreicht werden, bei denen Benutzer auf klicken, um weitere Details anzuzeigen. Sie können jedoch das zweite Ziel erreichen, die Darstellung zu vereinfachen, ohne explizite Kontrollen zur progressiven Offenlegung zu verwenden:
 
--   **Kontextbezogene Details werden nur im Kontext angezeigt.** Beispielsweise können Sie kontextbezogene Befehle oder Symbolleisten automatisch anzeigen, wenn sie für das ausgewählte Objekt oder den ausgewählten Modus relevant sind.
--   **Verringern der Gewichtung von Benutzeroberflächen für sekundäre Benutzeroberflächen** ["Affordances" sind](glossary.md) visuelle Eigenschaften, die vorschlagen, wie Objekte verwendet werden. Der Trend besteht in der Benutzeroberfläche, mit der Benutzer interagieren können, aber dass alle diese Benutzeroberflächen zum "Klicken auf mich!" gezeichnet werden. führt zu viel visueller Übersichtlichkeit. Für die sekundäre Benutzeroberfläche ist es oft besser, kleine Verfingungen zu verwenden und die vollständigen Auswirkungen auf den Mauszeiger zu erzielen.
+-   **Nur kontextbezogene Details werden im Kontext angezeigt.** Beispielsweise können Sie kontextbezogene Befehle oder Symbolleisten automatisch anzeigen, wenn sie für das ausgewählte Objekt oder den ausgewählten Modus relevant sind.
+-   **Reduzieren der Gewichtung von Kosten für die sekundäre Benutzeroberfläche.** [Angebote](glossary.md) sind visuelle Eigenschaften, die vorschlagen, wie Objekte verwendet werden. Der Trend besteht darin, dass die Benutzeroberfläche vorhanden ist, mit der Benutzer interagieren können, aber dass alle diese Benutzeroberflächen so gezeichnet werden, dass "Click me!" führt zu zu viel visueller Überladen. Für die sekundäre Benutzeroberfläche ist es häufig besser, dezente Mittel zu verwenden und die vollständigen Auswirkungen auf das Mauszeigerover zu erzielen.
 
-    ![Screenshot der Sternsymbole, die zum Bewerten von Fotos verwendet werden ](images/progressive-disclosure-controls-image5.png)
+    ![Screenshot von Sternsymbolen, die zum Bewerten von Fotos verwendet werden ](images/progressive-disclosure-controls-image5.png)
 
-    In diesem Beispiel ist das Feld Bewertung interaktiv, wird jedoch erst angezeigt, wenn der Mauszeiger darauf zeigt.
+    In diesem Beispiel ist das Feld Bewertung interaktiv, wird jedoch erst angezeigt, wenn mit der Maus darauf zeigen.
 
--   **Die Folgeschritte werden erst angezeigt, nachdem die Voraussetzungen erfüllt sind.** Dieser Ansatz wird am besten für vertraute Aufgaben verwendet, bei denen Benutzer die ersten Schritte sicher ausführen können.
+-   **Es werden erst Nachverfolgungsschritte angezeigt, nachdem die Voraussetzungen erfüllt sind.** Dieser Ansatz eignet sich am besten für vertraute Aufgaben, bei denen Benutzer die ersten Schritte sicher ausführen können.
 
-    ![Screenshot der Textfelder für Benutzername und Kennwort ](images/progressive-disclosure-controls-image6.png)
+    ![Screenshot der Textfelder "Benutzername" und "Kennwort" ](images/progressive-disclosure-controls-image6.png)
 
     In diesem Beispiel werden auf der Seite Benutzername und Kennwort zunächst nur die Felder Benutzername und optionales Kennwort angezeigt. Die Bestätigungs- und Hinweisfelder werden angezeigt, nachdem der Benutzer ein Kennwort eingegeben hat.
 
-Die progressive Offenlegung ist zwar eine hervorragende Möglichkeit zur Vereinfachung von Beschriftungen, aber sie birgt die folgenden Risiken:
+Die progressive Offenlegung ist zwar eine hervorragende Möglichkeit zum Vereinfachen von UIs, birgt aber diese Risiken:
 
--   **Fehlende Aufholbarkeit.** Benutzer gehen möglicherweise davon aus, dass sie nicht vorhanden sind, wenn sie etwas nicht sehen können. Benutzer können nicht darauf klicken oder darauf klicken, wenn sie nicht sehen, was sie suchen. Es besteht immer die Möglichkeit, dass Benutzer nicht auf Weitere Optionen klicken.
--   **Fehlende Stabilität.** Die progressive Offenlegung sollte erwartet oder zumindest natürlich sein. Wenn Steuerelemente unerwartet angezeigt und nicht mehr angezeigt werden, kann sich die resultierende Benutzeroberfläche instabil verhalten.
+-   **Fehlende Auffindbarkeit.** Benutzer gehen möglicherweise davon aus, dass etwas nicht vorhanden ist, wenn es nicht angezeigt wird. Benutzer können nicht mit dem Mauszeiger darauf zeigen oder darauf klicken, wenn sie nicht sehen, was sie suchen. Es besteht immer die Möglichkeit, dass Benutzer möglicherweise nicht auf Weitere Optionen klicken.
+-   **Fehlende Stabilität.** Eine progressive Offenlegung sollte erwartet werden oder sich zumindest natürlich anfühlen. Wenn Steuerelemente unerwartet angezeigt werden und nicht mehr angezeigt werden, kann sich die resultierende Benutzeroberfläche instabil anfühlen.
 
-### <a name="progressive-disclosure-controls"></a>Progressive Offenlegungskontrollen
+### <a name="progressive-disclosure-controls"></a>Steuerung der progressiven Offenlegung
 
-Progressive Offenlegungssteuerelemente werden in der Regel ohne direkte Bezeichnungen angezeigt, die ihr Verhalten beschreiben, sodass Benutzer die folgenden Schritte allein anhand der visuellen Darstellung des Steuerelements tun können müssen:
+Steuerelemente für die progressive Offenlegung werden in der Regel ohne direkte Bezeichnungen angezeigt, die ihr Verhalten beschreiben, sodass Benutzer in der Lage sein müssen, die folgenden Schritte basierend auf der visuellen Darstellung des Steuerelements allein durchzuführen:
 
 -   Erkennen Sie, dass das Steuerelement eine progressive Offenlegung ermöglicht.
--   Bestimmen Sie, ob der aktuelle Zustand erweitert oder reduziert ist.
--   Bestimmen Sie, ob zusätzliche Informationen, Optionen oder Befehle erforderlich sind, um die Aufgabe auszuführen.
--   Bestimmen Sie bei Wunsch, wie der ursprüngliche Zustand wiederhergestellt werden soll.
+-   Bestimmen Sie, ob der aktuelle Zustand erweitert oder reduziert wird.
+-   Bestimmen Sie, ob zusätzliche Informationen, Optionen oder Befehle zum Ausführen der Aufgabe erforderlich sind.
+-   Bestimmen Sie bei Bedarf, wie der ursprüngliche Zustand wiederhergestellt werden soll.
 
-Benutzer können die oben genannten Informationen zwar durch Testversion und Fehler bestimmen, aber Sie sollten versuchen, solche Experimente unnötig zu machen.
+Benutzer können die oben genannten Angaben zwar anhand von Testversion und Fehler bestimmen, sie sollten jedoch versuchen, solche Experimente unnötig zu machen.
 
-Progressive Offenlegungssteuerelemente weisen relativ [schwache](glossary.md)Vorgabe auf, was bedeutet, dass ihre visuellen Eigenschaften vorschlagen, wie sie verwendet werden, obwohl sie schwach sind. In der folgenden Tabelle wird die Darstellung der gängigen Steuerelemente für die progressive Offenlegung verglichen:
+Steuerelemente für die progressive Offenlegung verfügen über relativ schwache [Angebote,](glossary.md)was bedeutet, dass ihre visuellen Eigenschaften darauf hindeuten, wie sie verwendet werden, auch wenn sie schwach sind. In der folgenden Tabelle wird die Darstellung der allgemeinen Steuerungen zur progressiven Offenlegung verglichen:
 
 
 
-| Control | Zweck  | Darstellung | Glyphen gibt an |
+| Control | Zweck  | Darstellung | Glyphe gibt an |
 |----------------------------------------------------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------|--------------------------------|
-| **Chevrons**<br/> ![Screenshot der Chevrons links/rechts und nach oben/unten ](images/progressive-disclosure-controls-image7.png)<br/>                 | **Alle anzeigen:** Blendet die verbleibenden Elemente in vollständig oder teilweise ausgeblendeten Inhalten ein oder aus. Elemente werden entweder direkt (mit einem einzelnen Chevron) oder in einem Popupmenü (mit einem doppeln Chevron) angezeigt.<br/> | Chevrons zeigen in die Richtung, in der die Aktion auftritt.<br/>                                                        | Zukünftiger Status<br/>        |
-| **Pfeile**<br/> ![Screenshot der Pfeile nach links/rechts und nach oben/unten ](images/progressive-disclosure-controls-image8.png)<br/>                     | **Optionen anzeigen:** Ein Popupbefehlsmenü anzeigen.<br/>                                                                                                                                                    | Pfeile zeigen in die Richtung, in der die Aktion erfolgt.<br/>                                                          | Zukünftiger Status<br/>        |
-| **Plus- und Minussteuerelemente**<br/> ![Screenshot von zwei kleinen Plus- und Minusschaltflächen ](images/progressive-disclosure-controls-image9.png)<br/> | **Erweitern von Containern:** Erweitern oder reduzieren Sie Containerinhalte an Ort und Stelle, wenn Sie durch eine Hierarchie navigieren.<br/>                                                                                        | Plus- und Minuszeichen zeigen nicht, aber die Aktion erfolgt immer rechts.<br/>                                    | Zukünftiger Status<br/>        |
-| **Drehen von Dreiecken**<br/> ![Screenshot von zwei kleinen Dreiecken ](images/progressive-disclosure-controls-image10.png)<br/>                  | **Details anzeigen:** Anzeigen oder Ausblenden zusätzlicher Informationen für ein einzelnes Element. Sie werden auch zum Erweitern von Containern verwendet.<br/>                                                                  | Drehende Dreiecke ähneln drehbaren Hebeln, sodass sie in die Richtung zeigen, in der die Aktion aufgetreten ist.<br/> | Vorhandener Zustand<br/>       |
+| **Chevrons**<br/> ![Screenshot der Chevrons von links/rechts und nach oben/unten ](images/progressive-disclosure-controls-image7.png)<br/>                 | **Alle anzeigen:** Blendet die verbleibenden Elemente in vollständig oder teilweise ausgeblendeten Inhalten ein oder aus. Elemente werden entweder an Ort und Stelle (mit einem einzelnen Chevron) oder in einem Popupmenü (mit einem doppelten Chevron) angezeigt.<br/> | Chevrons zeigen in die Richtung, in der die Aktion ausgeführt wird.<br/>                                                        | Zukünftiger Status<br/>        |
+| **Pfeile**<br/> ![Screenshot der Pfeile nach links/rechts und nach oben/unten ](images/progressive-disclosure-controls-image8.png)<br/>                     | **Optionen anzeigen:** Zeigt ein Popupbefehlsmenü an.<br/>                                                                                                                                                    | Pfeile zeigen in die Richtung, in der die Aktion ausgeführt wird.<br/>                                                          | Zukünftiger Status<br/>        |
+| **Plus- und Minussteuerelemente**<br/> ![Screenshot von zwei kleinen Plus- und Minusschaltflächen ](images/progressive-disclosure-controls-image9.png)<br/> | **Erweitern Von Containern:** Erweitern oder reduzieren Sie Containerinhalte an Ort und Stelle, wenn Sie durch eine Hierarchie navigieren.<br/>                                                                                        | Plus- und Minussymbole zeigen nicht, aber die Aktion erfolgt immer rechts.<br/>                                    | Zukünftiger Status<br/>        |
+| **Drehen von Dreiecken**<br/> ![Screenshot von zwei kleinen Dreiecken ](images/progressive-disclosure-controls-image10.png)<br/>                  | **Details anzeigen:** Ein- oder Ausblenden zusätzlicher Informationen für ein einzelnes Element. Sie werden auch zum Erweitern von Containern verwendet.<br/>                                                                  | Das Drehen von Dreiecken ähnelt dem Drehen von Hebeln, sodass sie in die Richtung zeigen, in der die Aktion aufgetreten ist.<br/> | Vorhandener Zustand<br/>       |
 
 
 
  
 
-**Wenn Sie nur eine Sache tun...**
+**Wenn Sie nur eine Sache durchführen...**
 
-Benutzer sollten in der Lage sein, das Verhalten einer progressiven Offenlegungssteuerung ordnungsgemäß vorherzusagen, indem sie nur eine Überprüfung durchführen. Um dies zu erreichen, wählen Sie die entsprechenden Verwendungsmuster aus, und wenden Sie deren Darstellung, Position und Verhalten konsistent an.
+Benutzer sollten in der Lage sein, das Verhalten einer progressiven Offenlegungssteuerung allein durch Überprüfung richtig vorherzusagen. Um dies zu erreichen, wählen Sie die entsprechenden Verwendungsmuster aus, und wenden Sie deren Darstellung, Position und Verhalten konsistent an.
 
 ## <a name="usage-patterns"></a>Verwendungsmuster
 
@@ -126,9 +126,9 @@ Chevrons werden auf folgende Weise verwendet:
 
 |      Verwendung                                                                                                                                                          |    Beispiel                                                                                                                                                                                                                                                                                                             |
 |----------------------------------------------------------------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| **In-place UI**<br/> das zugeordnete -Objekt erhält den Eingabefokus, und das einzelne Chevron wird mit der Raumleiste aktiviert.<br/>                       | ![Screenshot der Anzeige des Security Center-Status ](images/progressive-disclosure-controls-image11.png)<br/> In diesen Beispielen werden die einzelnen Chevrons rechts neben dem zugeordneten Steuerelement positioniert.<br/>                                                                            |
+| **In-place UI**<br/> das zugeordnete -Objekt erhält den Eingabefokus, und das einzelne Chevron wird mit der Raumleiste aktiviert.<br/>                       | ![Screenshot der Anzeige des Security Center-Status ](images/progressive-disclosure-controls-image11.png)<br/> In diesen Beispielen werden die direkt einzelnen Chevrons rechts neben ihrem zugeordneten Steuerelement positioniert.<br/>                                                                            |
 | **Befehlsschaltflächen mit externen Bezeichnungen**<br/> Die Befehlsschaltfläche erhält den Eingabefokus, und das einzelne Chevron wird mit der Leerzeichenleiste aktiviert.<br/> | ![Screenshot des Chevrons mit der Bezeichnung "Weitere Optionen" ](images/progressive-disclosure-controls-image12.png)<br/> In diesem Beispiel wird die einzelne Chevronschaltfläche beschriftet und links neben der Bezeichnung positioniert. Bei diesem Muster wäre die Schaltfläche ohne ihre Bezeichnung schwer zu verstehen.<br/> |
-| **Befehlsschaltflächen mit internen Bezeichnungen**<br/> Die Befehlsschaltfläche erhält den Eingabefokus und wird mit der Leerzeichenleiste aktiviert.<br/>                    | ![Screenshot der Befehlsschaltflächen "mehr" und "weniger" ](images/progressive-disclosure-controls-image13.png)<br/> In diesen Beispielen ist für reguläre Befehlsschaltflächen das doppelte Chevron positioniert, um ihre Bedeutung zu vorschlagen.<br/>                                                                          |
+| **Befehlsschaltflächen mit internen Bezeichnungen**<br/> Die Befehlsschaltfläche erhält den Eingabefokus und wird mit der Leerzeichenleiste aktiviert.<br/>                    | ![Screenshot der Befehlsschaltflächen "mehr" und "weniger" ](images/progressive-disclosure-controls-image13.png)<br/> In diesen Beispielen ist für reguläre Befehlsschaltflächen das doppelte Chevron positioniert, um ihre Bedeutung zu empfehlen.<br/>                                                                          |
 
 
 
@@ -146,7 +146,7 @@ Pfeile werden auf folgende Weise verwendet:
 
 |    Verwendung                                                                                   |    Beispiel                                                                                                                                                                                                                                   |
 |---------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| **Separate Schaltflächen**<br/> Der Pfeil befindet sich in einem separaten Schaltflächen-Steuerelement.<br/> | ![Screenshot der Pfeile rechts von Steuerelementen ](images/progressive-disclosure-controls-image14.png)<br/> In diesen Beispielen weisen separate Pfeilschaltflächen, die rechts positioniert sind, auf ein Befehlsmenü hin.<br/>               |
+| **Separate Schaltflächen**<br/> Der Pfeil befindet sich in einem separaten Schaltflächen-Steuerelement.<br/> | ![Screenshot der Pfeile rechts von Steuerelementen ](images/progressive-disclosure-controls-image14.png)<br/> In diesen Beispielen geben separate Pfeilschaltflächen rechts ein Befehlsmenü an.<br/>               |
 | **Befehlsschaltflächen**<br/> Der Pfeil ist Teil einer Befehlsschaltfläche.<br/>      | ![Screenshot der Bezeichnung und des Pfeils auf der Befehlsschaltfläche ](images/progressive-disclosure-controls-image15.png)<br/> In diesen Beispielen sind die Pfeile für Menüschaltflächen und geteilte Schaltflächen rechts neben dem Text positioniert.<br/> |
 
 
@@ -165,7 +165,7 @@ Plus- und Minussteuerelemente werden auf folgende Weise verwendet:
 
 |       Verwendung                                                                                         |       Beispiel                                                                                                                                                                                                                               |
 |------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| **Reduzierbare Strukturen**<br/> eine Hierarchie mit mehreren Ebenen, um Containerinhalte anzuzeigen.<br/> | ![Screenshot, der eine Windows-Explorer Ordnerstruktur mit ausgewählter Option "Verhalten" zeigt.](images/progressive-disclosure-controls-image16.png)<br/> In diesem Beispiel werden die Plus- und Minussteuerelemente links vom zugeordneten Container positioniert.<br/>       |
+| **Reduzierbare Strukturen**<br/> eine Hierarchie mit mehreren Ebenen, um Containerinhalte anzuzeigen.<br/> | ![Screenshot: Ordnerstruktur Windows Explorer mit ausgewählter Option "Verhalten"](images/progressive-disclosure-controls-image16.png)<br/> In diesem Beispiel werden die Plus- und Minussteuerelemente links vom zugeordneten Container positioniert.<br/>       |
 | **Reduzierbare Listen**<br/> eine Hierarchie mit zwei Ebenen, um Containerinhalte anzuzeigen.<br/>   | ![Screenshot der liste erweitert, um zwei Ebenen anzuzeigen ](images/progressive-disclosure-controls-image17.png)<br/> In diesem Beispiel werden die Plus- und Minussteuerelemente links vom zugeordneten Listenheader positioniert.<br/> |
 
 
@@ -184,8 +184,8 @@ Rotierende Dreiecke werden auf folgende Weise verwendet:
 
 |     Verwendung                                                                                                       |    Beispiel                                                                                                                                                                                                                             |
 |------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| **Reduzierbare Strukturen**<br/> eine Hierarchie mit mehreren Ebenen, um Containerinhalte anzuzeigen.<br/>             | ![Screenshot der Ordnerstruktur im Windows-Explorer ](images/progressive-disclosure-controls-image18.png)<br/> In diesem Beispiel werden die drehenden Dreiecke links vom zugeordneten Container positioniert.<br/>       |
-| **Reduzierbare Listen**<br/> eine Hierarchie mit zwei Ebenen, um zusätzliche Informationen an Ort und Stelle zu zeigen.<br/> | ![Screenshot der Liste mit zusätzlichen Daten ](images/progressive-disclosure-controls-image19.png)<br/> In diesem Beispiel werden die drehenden Dreiecke links von ihren zugeordneten Listenelementen positioniert.<br/> |
+| **Reduzierbare Strukturen**<br/> eine Hierarchie mit mehreren Ebenen, um Containerinhalte anzuzeigen.<br/>             | ![Screenshot der Ordnerstruktur im Windows-Explorer ](images/progressive-disclosure-controls-image18.png)<br/> In diesem Beispiel werden die rotierenden Dreiecke links vom zugeordneten Container positioniert.<br/>       |
+| **Reduzierbare Listen**<br/> eine Hierarchie mit zwei Ebenen, um zusätzliche Informationen an Ort und Stelle zu zeigen.<br/> | ![Screenshot der Liste mit zusätzlichen Daten ](images/progressive-disclosure-controls-image19.png)<br/> In diesem Beispiel werden die rotierenden Dreiecke links von ihren zugeordneten Listenelementen positioniert.<br/> |
 
 
 
@@ -275,11 +275,11 @@ Vorschaupfeile sind am besten für Situationen reserviert, in denen ein Standard
 
     ![Screenshot des Doppel-Chevron-Steuerelements mit mehr Optionen ](images/progressive-disclosure-controls-image30.png)
 
-    Im falschen Beispiel wird ein doppeltes Chevron für die schrittweise Veröffentlichung verwendet.
+    Im falschen Beispiel wird ein doppeltes Chevron für die place progressive Offenlegung verwendet.
 
     **Richtig:**
 
-    ![Screenshot der Doppel-Chevron-Befehlsschaltfläche "Mehr" ](images/progressive-disclosure-controls-image31.png)
+    ![Screenshot der Doppelt-Chevron-Befehlsschaltfläche "Mehr" ](images/progressive-disclosure-controls-image31.png)
 
     In diesem Beispiel wird ein doppeltes Chevron für die ortsinterne progressive Offenlegung verwendet, da es sich um eine Befehlsschaltfläche mit einer internen Bezeichnung handelt.
 
@@ -293,7 +293,7 @@ Vorschaupfeile sind am besten für Situationen reserviert, in denen ein Standard
 
     **Falsch:**
 
-    ![Screenshot von Vollbildhintergrund für Steuerelemente ](images/progressive-disclosure-controls-image33.png)
+    ![Screenshot von voll weißem Hintergrund für Steuerelemente ](images/progressive-disclosure-controls-image33.png)
 
     In diesem Beispiel gibt es keine klare visuelle Beziehung zwischen dem in-place-Chevron und der zugehörigen Benutzeroberfläche, sodass es im Raum unverankert zu sein scheint.
 
@@ -323,7 +323,7 @@ Vorschaupfeile sind am besten für Situationen reserviert, in denen ein Standard
 
 ![Screenshot der empfohlenen Größen- und Abstandsgröße ](images/progressive-disclosure-controls-image37.png)
 
-Empfohlene Größen- und Abstandsangaben für progressive Offenlegungssteuerungen.
+Empfohlene Größen- und Abstandsangaben für progressive Offenlegungskontrollen.
 
 ## <a name="labels"></a>Bezeichnungen
 
@@ -348,18 +348,18 @@ Empfohlene Größen- und Abstandsangaben für progressive Offenlegungssteuerunge
 
 Beim Verweis auf progressive Offenlegungssteuerelemente:
 
--   Wenn das Steuerelement über eine feste Bezeichnung verfügt, verweisen Sie nur über seine Bezeichnung auf das Steuerelement. versuchen Sie nicht, das Steuerelement zu beschreiben. Verwenden Sie den genauen Bezeichnungstext, einschließlich der Groß-/Weißzeichen, aber schließen Sie den Unterstrich der Zugriffsschlüssel nicht ein.
+-   Wenn das Steuerelement über eine feste Bezeichnung verfügt, verweisen Sie nur über seine Bezeichnung auf das Steuerelement. versuchen Sie nicht, das Steuerelement zu beschreiben. Verwenden Sie den genauen Bezeichnungstext, einschließlich der Groß-/Weißzeichen, aber schließen Sie den Unterstrich des Zugriffsschlüssels nicht ein.
 -   Wenn das Steuerelement keine Bezeichnung hat oder nicht fixiert ist, verweisen Sie auf das Steuerelement nach seinem Typ: Chevron, Pfeil, Dreieck oder Plus-/Minusschaltfläche. Beschreiben Sie bei Bedarf auch die Position des Steuerelements. Wenn das Steuerelement dynamisch angezeigt [](glossary.md) wird, z. B. das Seitenbereich-Steuerelement, starten Sie den Verweis, indem Sie beschreiben, wie das Steuerelement angezeigt wird.
 
     **Beispiel:** Um die Dateien in einem Ordner anzuzeigen, verschieben Sie den Zeiger auf den Anfang des Ordnernamens, und klicken Sie dann auf das Dreieck neben dem Ordner.
 
 -   Verweisen Sie nicht auf das Steuerelement als Schaltfläche, es sei denn, sie stehen im Gegensatz zu anderen progressiven Offenlegungssteuerelementen, bei denen es sich nicht um Schaltflächen handelt.
--   Verwenden Sie click, um die Benutzerinteraktion zu beschreiben. Verwenden Sie aus Gründen der Übersichtlichkeit klick... , um zu erweitern oder zu reduzieren.
+-   Um die Benutzerinteraktion zu beschreiben, klicken Sie auf . Verwenden Sie aus Gründen der Übersichtlichkeit klick... , um zu erweitern oder zu reduzieren.
 -   Formatieren Sie die Bezeichnung nach Möglichkeit mit fett formatiertem Text. Andernfalls setzen Sie die Bezeichnung nur dann in Anführungszeichen, wenn dies erforderlich ist, um Verwirrung zu vermeiden.
 
 Beispiele:
 
 -   (Für ein Chevron) Klicken Sie auf Details , um die Dateigröße **zu bestimmen.**
 -   (Für einen Pfeil) Klicken Sie auf den Pfeil neben dem Feld Suchen, um alle **Optionen** zu sehen.
--   (Für Plus/Minus) Klicken Sie zum Anzeigen des Bilds auf **Bilder**.
+-   (Für Plus/Minus) Klicken Sie auf **Bilder**, um Ihr Bild anzuzeigen.
 

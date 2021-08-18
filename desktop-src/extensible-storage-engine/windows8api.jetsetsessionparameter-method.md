@@ -1,6 +1,6 @@
 ---
-description: 'Weitere Informationen finden Sie hier: Windows8Api. jetabzessionparameter-Methode'
-title: Windows8Api. jetsezessionparameter-Methode (Microsoft. ISAM. ESENT. Interop. Windows8)
+description: 'Weitere Informationen zu: Windows8Api.JetSetSessionParameter-Methode'
+title: Windows8Api.JetSetSessionParameter-Methode (Microsoft.Isam.Esent.Interop.Windows8)
 TOCTitle: 'JetSetSessionParameter method '
 ms:assetid: M:Microsoft.Isam.Esent.Interop.Windows8.Windows8Api.JetSetSessionParameter(Microsoft.Isam.Esent.Interop.JET_SESID,Microsoft.Isam.Esent.Interop.Windows8.JET_sesparam,System.Byte[],System.Int32)
 ms:mtpsurl: https://msdn.microsoft.com/library/microsoft.isam.esent.interop.windows8.windows8api.jetsetsessionparameter(v=EXCHG.10)
@@ -24,19 +24,19 @@ api_type:
 api_location:
 - Microsoft.Isam.Esent.Interop.dll
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: b73331c765e1f8026b39c28dde5268417601663c
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: b995fe5b749640ced2164cdbed72a421510f3bf23cb02e30acb18b47b262efa1
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "103863299"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117889379"
 ---
-# <a name="windows8apijetsetsessionparameter-method"></a>Windows8Api. jetabzessionparameter-Methode
+# <a name="windows8apijetsetsessionparameter-method"></a>Windows8Api.JetSetSessionParameter-Methode
 
-Legt einen Parameter für den bereitgestellten Sitzungszustand fest, der für die Lebensdauer dieser Sitzung oder bis zur zurück Setzung verwendet wird.
+Legt einen Parameter für den angegebenen Sitzungszustand fest, der für die Lebensdauer dieser Sitzung oder bis zum Zurücksetzen verwendet wird.
 
-**Namespace:**  [Microsoft. ISAM. ESENT. Interop. Windows8](./microsoft.isam.esent.interop.windows8-namespace.md)  
-**Assembly:**  Microsoft. ISAM. ESENT. Interop (in Microsoft.Isam.Esent.Interop.dll)
+**Namespace:**  [Microsoft.Isam.Esent.Interop.Windows8](./microsoft.isam.esent.interop.windows8-namespace.md)  
+**Assembly:**  Microsoft.Isam.Esent.Interop (in Microsoft.Isam.Esent.Interop.dll)
 
 ## <a name="syntax"></a>Syntax
 
@@ -67,38 +67,38 @@ public static void JetSetSessionParameter(
 
 #### <a name="parameters"></a>Parameter
 
-  - -sid  
-    Typ: [Microsoft.ISAM.ESENT.Interop.JET_SESID](./jet-sesid-structure.md)  
+  - sesid  
+    Typ: [Microsoft.Isam.Esent.Interop.JET_SESID](./jet-sesid-structure.md)  
     
     Die Sitzung, für die der Parameter festgelegt werden soll.
 
 <!-- end list -->
 
-  - sesparamid  
-    Typ: [Microsoft.ISAM.ESENT.Interop.Windows8.JET_sesparam](./jet-sesparam-enumeration.md)  
+  - sesparbor  
+    Typ: [Microsoft.Isam.Esent.Interop.Windows8.JET_sesparam](./jet-sesparam-enumeration.md)  
     
-    Die ID des festzulegenden Sitzungs Parameters.
+    Die ID des festzulegende Sitzungsparameters.
 
 <!-- end list -->
 
-  - Daten  
-    Sorte \[\]  
+  - data  
+    Typ: \[\]  
     
-    Die in diesem Sitzungs Parameter festzulegenden Daten.
+    In diesem Sitzungsparameter festzulegende Daten.
 
 <!-- end list -->
 
   - dataSize  
-    Typ: [System. Int32](/dotnet/api/system.int32)  
+    Typ: [System.Int32](/dotnet/api/system.int32)  
     
     Größe der bereitgestellten Daten.
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
-#### <a name="reference"></a>Referenz
+#### <a name="reference"></a>Verweis
 
 [Windows8Api-Klasse](./windows8api-class.md)
 
 [Windows8Api-Member](./windows8api-members.md)
 
-[Microsoft. ISAM. ESENT. Interop. Windows8-Namespace](./microsoft.isam.esent.interop.windows8-namespace.md)
+[Microsoft.Isam.Esent.Interop.Windows8-Namespace](./microsoft.isam.esent.interop.windows8-namespace.md)

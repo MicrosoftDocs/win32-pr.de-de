@@ -1,32 +1,32 @@
 ---
-title: Iwsmanresourcelocator-Eigenschaften
-description: Die iwsmanresourcelocator-Schnittstelle macht die folgenden Eigenschaften verfügbar.
+title: IWSManResourceLocator-Eigenschaften
+description: Die IWSManResourceLocator-Schnittstelle macht die folgenden Eigenschaften verfügbar.
 ms.assetid: 011995CB-E664-49D1-B8F2-9359579FB096
 ms.tgt_platform: multiple
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: e92de79834808e5502d4fb10610ed1aba4fd131e
-ms.sourcegitcommit: 57758ecb246c84d65e6e0e4bd5570d9176fa39cd
+ms.openlocfilehash: 85856437abcc051266fb630186ceb17ec8555a3b03b3730b4bac006158bda5c7
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "106342092"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117743337"
 ---
-# <a name="iwsmanresourcelocator-properties"></a>Iwsmanresourcelocator-Eigenschaften
+# <a name="iwsmanresourcelocator-properties"></a>IWSManResourceLocator-Eigenschaften
 
-Die [**iwsmanresourcelocator**](/windows/desktop/api/WSManDisp/nn-wsmandisp-iwsmanresourcelocator) -Schnittstelle macht die folgenden Eigenschaften verfügbar.
+Die [**IWSManResourceLocator-Schnittstelle**](/windows/desktop/api/WSManDisp/nn-wsmandisp-iwsmanresourcelocator) macht die folgenden Eigenschaften verfügbar.
 
 ## <a name="in-this-section"></a>In diesem Abschnitt
 
 -   [**Error-Eigenschaft**](/windows/desktop/api/WSManDisp/nf-wsmandisp-iwsmanresourcelocator-get_error)
--   [**Fragmentdialekt (Eigenschaft)**](/windows/desktop/api/WSManDisp/nf-wsmandisp-iwsmanresourcelocator-get_fragmentdialect)
--   [**Fragmentpath (Eigenschaft)**](/windows/desktop/api/WSManDisp/nf-wsmandisp-iwsmanresourcelocator-get_fragmentpath)
--   [**Mustverständlicherweise Options (Eigenschaft)**](/windows/desktop/api/WSManDisp/nf-wsmandisp-iwsmanresourcelocator-get_mustunderstandoptions)
--   [**ResourceUri (Eigenschaft)**](/windows/desktop/api/WSManDisp/nf-wsmandisp-iwsmanresourcelocator-get_resourceuri)
+-   [**FragmentDialect-Eigenschaft**](/windows/desktop/api/WSManDisp/nf-wsmandisp-iwsmanresourcelocator-get_fragmentdialect)
+-   [**FragmentPath-Eigenschaft**](/windows/desktop/api/WSManDisp/nf-wsmandisp-iwsmanresourcelocator-get_fragmentpath)
+-   [**MustUnderstandOptions-Eigenschaft**](/windows/desktop/api/WSManDisp/nf-wsmandisp-iwsmanresourcelocator-get_mustunderstandoptions)
+-   [**ResourceURI-Eigenschaft**](/windows/desktop/api/WSManDisp/nf-wsmandisp-iwsmanresourcelocator-get_resourceuri)
 
- 
+ 
 
- 
+ 
 
 
 

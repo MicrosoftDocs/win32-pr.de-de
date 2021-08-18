@@ -1,6 +1,6 @@
 ---
-title: Registrierungseintrag "Berechtigungen"
-description: Registrierungseintrag "Berechtigungen"
+title: Registrierungseintrag für Berechtigungen
+description: Registrierungseintrag für Berechtigungen
 ms.assetid: 01d55d2d-fe29-4006-a34b-9fbc730f9cbc
 keywords:
 - Windows Media Player,Dateierweiterungen
@@ -20,11 +20,11 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 08/11/2021
 ms.locfileid: "117747737"
 ---
-# <a name="permissions-registry-entry"></a>Registrierungseintrag "Berechtigungen"
+# <a name="permissions-registry-entry"></a>Registrierungseintrag für Berechtigungen
 
 Wenn Windows Media Player eine benutzerdefinierte Dateinamenerweiterung findet, sucht sie nach einem Registrierungsunterschlüssel, der der Erweiterung entspricht. Der Unterschlüssel wird unter [Dateinamenerweiterungsregistrierung Einstellungen.](file-name-extension-registry-settings.md) Einer der Registrierungseinträge, die unter dem Unterschlüssel der Erweiterung angezeigt werden können, ist der **Eintrag Berechtigungen.**
 
-Der **Eintrag Berechtigungen** gibt die Aktionen an, Windows Media Player für Dateien mit der benutzerdefinierten Erweiterung ausführen dürfen. Der **Eintrag** Berechtigungen hat das folgende Formular.
+Der **Eintrag** Berechtigungen gibt die Aktionen an, Windows Media Player für Dateien mit der benutzerdefinierten Erweiterung ausführen dürfen. Der **Eintrag** Berechtigungen hat das folgende Formular.
 
 
 
@@ -40,7 +40,7 @@ Der Wert des **Berechtigungseintrags** ist ein bitweises **OR** eines oder mehre
 
 
 
-| Flag (Dezimalwert) | BESCHREIBUNG                                                                                                                                                                                                                                                                   |
+| Flag (Dezimalwert) | Beschreibung                                                                                                                                                                                                                                                                   |
 |----------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | 1                    | Berechtigung für die Wiedergabe. Dateien mit der registrierten Dateinamenerweiterung können abgespielt werden.                                                                                                                                                                                       |
 | 2                    | Berechtigung zum Löschen von Ordnern. Dateien mit der registrierten Dateinamenerweiterung werden in die Wiedergabeliste aufgenommen, die erstellt wird, wenn der Benutzer einen Ordner mit den Dateien zieht und auf der Benutzeroberfläche des Players abstürzt.                                                      |
@@ -53,15 +53,15 @@ Der Wert des **Berechtigungseintrags** ist ein bitweises **OR** eines oder mehre
 
  
 
-Wenn der Benutzer versucht, eine Mediendatei mit einer benutzerdefinierten Dateierweiterung wieder zu verwenden, sucht Windows Media Player nach einem Registrierungsunterschlüssel, der der Erweiterung entspricht. Wenn keine Übereinstimmung gefunden wird, zeigt der Player dem Benutzer ein Warndialogfeld an, in dem der Benutzer aufgefordert wird, die Berechtigung zum Wieder geben der Datei zu erteilen. Wenn Sie digitale Mediendateien mit benutzerdefinierten Dateierweiterungen erstellen, können Sie verhindern, dass diese Warnung auf dem Computer des Benutzers angezeigt wird, indem Sie die Dateierweiterung registrieren und einen **Berechtigungseintrag** angeben.
+Wenn der Benutzer versucht, eine Mediendatei mit einer benutzerdefinierten Dateierweiterung wieder zu verwenden, sucht Windows Media Player nach einem Registrierungsunterschlüssel, der der Erweiterung entspricht. Wenn keine Übereinstimmung gefunden wird, zeigt der Player dem Benutzer ein Warndialogfeld an, in dem der Benutzer aufgefordert wird, die Berechtigung zum Wieder geben der Datei zu erteilen. Wenn Sie digitale Mediendateien mit benutzerdefinierten Dateinamenerweiterungen erstellen, können Sie verhindern, dass diese Warnung auf dem Computer des Benutzers angezeigt wird, indem Sie die Dateierweiterung registrieren und einen **Berechtigungseintrag** angeben.
 
-Der **Berechtigungseintrag** (mit Ausnahme des Flagwerts 128) wird von Windows Media Player 9-Serie und höher unterstützt. Der Flagwert 128 wird von Windows Media Player 10 und höher unterstützt.
+Der **Eintrag Berechtigungen** (mit Ausnahme des Flagwerts 128) wird von Windows Media Player Serie 9 und höher unterstützt. Der Flagwert 128 wird von Windows Media Player 10 und höher unterstützt.
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[**Dateinamenerweiterungsregistrierungs-Einstellungen**](file-name-extension-registry-settings.md)
+[**Registrierung der Dateinamenerweiterung Einstellungen**](file-name-extension-registry-settings.md)
 </dt> </dl>
 
  

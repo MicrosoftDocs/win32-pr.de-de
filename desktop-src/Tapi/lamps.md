@@ -1,23 +1,23 @@
 ---
-description: Die Lampen auf einem Telefongerät können in einer Vielzahl verschiedener beleuchtungsmodi beleuchtet werden.
+description: Die Beleuchtung auf einem Telefongerät kann in einer Vielzahl verschiedener Beleuchtungsmodi entfacht werden.
 ms.assetid: d8e8ef57-9faa-4122-b99a-3956362cd9d8
-title: Aufleuchten
+title: Lamps
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: e01005c282b7a86b4b8c8ee27348ba4cf8d43db9
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 150e499dbd66ca772d35855c4cdb086bbb1ecc12617f55bcd33dccf8435e8771
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "104050310"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117762284"
 ---
-# <a name="lamps"></a>Aufleuchten
+# <a name="lamps"></a>Lamps
 
-Die Lampen auf einem Telefongerät können in einer Vielzahl verschiedener beleuchtungsmodi beleuchtet werden. Im Gegensatz zu klingeln Mustern sind Lamp-Modi in Telefon Sätzen verschiedener Lieferanten eher einheitlich. Eine gemeinsame Gruppe von LAMP-Modi wird von der-API definiert. Eine von der Lamp-Schaltflächen-ID identifizierte Lamp kann in einem bestimmten Lamp-Modus beleuchtet werden. Eine Lamp kann auch für den aktuellen Lamp-Modus abgefragt werden.
+Die Beleuchtung auf einem Telefongerät kann in einer Vielzahl verschiedener Beleuchtungsmodi entfacht werden. Im Gegensatz zu Ringmustern sind die Lampemodi für Telefongruppen verschiedener Anbieter einheitlicher. Ein allgemeiner Satz von Lampemodi wird von der API definiert. Eine Lampe, die durch ihren Lampe-Schaltflächenbezeichner identifiziert wird, kann in einem bestimmten Lampemodus angelichtet werden. Eine Lampe kann auch nach ihrem aktuellen Lampemodus abgefragt werden.
 
-Die für die-Leuchten verwendeten TAPI-Funktionen sind [**phonesetlamp**](/windows/desktop/api/Tapi/nf-tapi-phonesetlamp), das eine LAMP auf einem angegebenen geöffneten Telefongerät in einem bestimmten Lamp-Beleuchtungs Modus und [**phonegetlamp**](/windows/desktop/api/Tapi/nf-tapi-phonegetlamp), das den aktuellen Lamp-Modus der angegebenen Lamp zurückgibt, beleuchtet.
+Die TAPI-Funktionen, die für die Beleuchtung verwendet werden, sind [**phoneSetLamp**](/windows/desktop/api/Tapi/nf-tapi-phonesetlamp), die eine Lampe auf einem angegebenen geöffneten Telefongerät in einem bestimmten Lampe-Beleuchtungsmodus ausleuchten, und [**phoneGetLamp**](/windows/desktop/api/Tapi/nf-tapi-phonegetlamp), das den aktuellen Lampemodus der angegebenen Lampe zurückgibt.
 
-Wenn eine Lamp-Anlage eines Mobiltelefons geändert wird, wird eine [**Telefon \_ Zustands**](phone-state.md) Meldung an die Anwendung gesendet, um die Anwendung über die Statusänderung zu benachrichtigen. Die Parameter für diese Nachricht geben Aufschluss über die Änderung.
+Wenn eine Lampe eines Telefongeräts geändert wird, wird eine [**PHONE \_ STATE-Nachricht**](phone-state.md) an die Anwendung gesendet, um die Anwendung über die Zustandsänderung zu benachrichtigen. Parameter für diese Meldung geben einen Hinweis auf die Änderung.
 
  
 

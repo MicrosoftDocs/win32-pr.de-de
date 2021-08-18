@@ -1,7 +1,7 @@
 ---
-description: Testet das boundingorientedbox-Objekt auf eine Überschneidung mit einem anderen Objekt.
+description: Testet BoundingOrientedBox auf Schnittmenge mit einem anderen Objekt.
 ms.assetid: a79b9c1c-58fe-4c7d-b11e-7d2c22534bf6
-title: Boundingorientedbox. intersekten-Methoden
+title: BoundingOrientedBox.Intersects-Methoden
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -11,30 +11,30 @@ api_name: ''
 api_type:
 - NA
 api_location: ''
-ms.openlocfilehash: 0e2441b9f9a41d533c31c35729cf0a33c583f85f
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 2667bd939f5ea659921fbcb946cfce18d3fb913d4b1faab9e4b466e23504aba5
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "103754129"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118278387"
 ---
-# <a name="boundingorientedboxintersects-methods"></a>Boundingorientedbox. intersekten-Methoden
+# <a name="boundingorientedboxintersects-methods"></a>BoundingOrientedBox.Intersects-Methoden
 
-Testet das [**boundingorientedbox**](/windows/win32/api/directxcollision/ns-directxcollision-boundingorientedbox) -Objekt auf eine Überschneidung mit einem anderen Objekt.
+Testet [**BoundingOrientedBox auf**](/windows/win32/api/directxcollision/ns-directxcollision-boundingorientedbox) Schnittmenge mit einem anderen Objekt.
 
 ### <a name="overload-list"></a>Überladeliste
 
 
 
-| Methode                                                                                                   | BESCHREIBUNG                                                                                                                                 |
+| Methode                                                                                                   | Beschreibung                                                                                                                                 |
 |:---------------------------------------------------------------------------------------------------------|:--------------------------------------------------------------------------------------------------------------------------------------------|
-| [**Boundingorientedbox:: intersekten (xmvector)**](/windows/win32/api/directxcollision/nf-directxcollision-boundingorientedbox-intersects(fxmvector))                   | Testet die [**boundingorientedbox**](/windows/win32/api/directxcollision/ns-directxcollision-boundingorientedbox) auf Schnittmenge mit einer Ebene.<br/>                                      |
-| [**Boundingorientedbox:: intersekten (const BoundingBox-&)**](/windows/win32/api/directxcollision/nf-directxcollision-boundingorientedbox-intersects(constboundingbox_))         | Testet die [**boundingorientedbox**](/windows/win32/api/directxcollision/ns-directxcollision-boundingorientedbox) auf Schnittmenge mit einer [**BoundingBox**](/windows/desktop/api/DirectXCollision/ns-directxcollision-boundingbox).<br/>         |
-| [**Boundingorientedbox:: intersekten (const boundingsphere&)**](/previous-versions/windows/desktop/legacy/hh855930(v=vs.85))      | Testet die [**boundingorientedbox**](/windows/win32/api/directxcollision/ns-directxcollision-boundingorientedbox) auf Schnittmenge mit einer [**boundingsphere**](/windows/win32/api/directxcollision/ns-directxcollision-boundingsphere).<br/>   |
-| [**Boundingorientedbox:: intersekten (const boundingfrustum-&)**](/windows/win32/api/directxcollision/nf-directxcollision-boundingorientedbox-intersects(constboundingfrustum_))     | Testet die [**boundingorientedbox**](/windows/win32/api/directxcollision/ns-directxcollision-boundingorientedbox) auf Schnittmenge mit einem [**boundingfrustum**](/windows/win32/api/directxcollision/ns-directxcollision-boundingfrustum).<br/> |
-| [**Boundingorientedbox:: intersekten (xmvector, xmvector, float&)**](/windows/win32/api/directxcollision/nf-directxcollision-boundingorientedbox-intersects(fxmvector_fxmvector_float_))   | Testet die [**boundingorientedbox**](/windows/win32/api/directxcollision/ns-directxcollision-boundingorientedbox) auf Schnittmenge mit einem Strahl.<br/>                                        |
-| [**Boundingorientedbox:: intersekten (xmvector, xmvector, xmvector)**](/windows/win32/api/directxcollision/nf-directxcollision-boundingorientedbox-intersects(fxmvector_fxmvector_fxmvector)) | Testet die [**boundingorientedbox**](/windows/win32/api/directxcollision/ns-directxcollision-boundingorientedbox) auf Schnittmenge mit einem Dreieck.<br/>                                   |
-| [**Boundingorientedbox:: intersekten (Konstante boundingorientedbox-&)**](/windows/win32/api/directxcollision/nf-directxcollision-boundingorientedbox-intersects(constboundingorientedbox_)) | Testet die [**boundingorientedbox**](/windows/win32/api/directxcollision/ns-directxcollision-boundingorientedbox) auf Schnittmenge mit einer **boundingorientedbox**.<br/>                    |
+| [**BoundingOrientedBox::Intersects (XMVECTOR)**](/windows/win32/api/directxcollision/nf-directxcollision-boundingorientedbox-intersects(fxmvector))                   | Testet [**BoundingOrientedBox auf**](/windows/win32/api/directxcollision/ns-directxcollision-boundingorientedbox) Schnittmenge mit einer Ebene.<br/>                                      |
+| [**BoundingOrientedBox::Intersects (const BoundingBox&)**](/windows/win32/api/directxcollision/nf-directxcollision-boundingorientedbox-intersects(constboundingbox_))         | Testet [**BoundingOrientedBox**](/windows/win32/api/directxcollision/ns-directxcollision-boundingorientedbox) auf Schnittmenge mit [**einer BoundingBox.**](/windows/desktop/api/DirectXCollision/ns-directxcollision-boundingbox)<br/>         |
+| [**BoundingOrientedBox::Intersects (const BoundingSphere&)**](/previous-versions/windows/desktop/legacy/hh855930(v=vs.85))      | Testet [**BoundingOrientedBox auf**](/windows/win32/api/directxcollision/ns-directxcollision-boundingorientedbox) Schnittmenge mit [**einer BoundingSphere.**](/windows/win32/api/directxcollision/ns-directxcollision-boundingsphere)<br/>   |
+| [**BoundingOrientedBox::Intersects (const BoundingFrustum&)**](/windows/win32/api/directxcollision/nf-directxcollision-boundingorientedbox-intersects(constboundingfrustum_))     | Testet [**BoundingOrientedBox**](/windows/win32/api/directxcollision/ns-directxcollision-boundingorientedbox) auf Schnittmenge mit [**einem BoundingFrustum.**](/windows/win32/api/directxcollision/ns-directxcollision-boundingfrustum)<br/> |
+| [**BoundingOrientedBox::Intersects (XMVECTOR,XMVECTOR,float&)**](/windows/win32/api/directxcollision/nf-directxcollision-boundingorientedbox-intersects(fxmvector_fxmvector_float_))   | Testet [**BoundingOrientedBox auf**](/windows/win32/api/directxcollision/ns-directxcollision-boundingorientedbox) Schnittmenge mit einem Strahl.<br/>                                        |
+| [**BoundingOrientedBox::Intersects (XMVECTOR,XMVECTOR,XMVECTOR)**](/windows/win32/api/directxcollision/nf-directxcollision-boundingorientedbox-intersects(fxmvector_fxmvector_fxmvector)) | Testet [**BoundingOrientedBox auf**](/windows/win32/api/directxcollision/ns-directxcollision-boundingorientedbox) Schnittmenge mit einem Dreieck.<br/>                                   |
+| [**BoundingOrientedBox::Intersects (const BoundingOrientedBox&)**](/windows/win32/api/directxcollision/nf-directxcollision-boundingorientedbox-intersects(constboundingorientedbox_)) | Testet [**BoundingOrientedBox auf Schnittmenge**](/windows/win32/api/directxcollision/ns-directxcollision-boundingorientedbox) mit **einer BoundingOrientedBox.**<br/>                    |
 
 
 
@@ -45,10 +45,10 @@ Testet das [**boundingorientedbox**](/windows/win32/api/directxcollision/ns-dire
 [Methoden](boundingorientedbox-methods.md)
 </dt> <dt>
 
-**Verweis**
+**Referenz**
 </dt> <dt>
 
-[**Boundingorientedbox**](/windows/win32/api/directxcollision/ns-directxcollision-boundingorientedbox)
+[**BoundingOrientedBox**](/windows/win32/api/directxcollision/ns-directxcollision-boundingorientedbox)
 </dt> </dl>
 
  

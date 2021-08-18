@@ -1,59 +1,59 @@
 ---
-description: Enthält eine Übersicht über die Einführung der Indizierungs Priorisierung und der rowsetereignisse für Windows 7.
+description: Beschreibt die Einführung der Indizierungspriorisierung und von Rowsetereignissen für Windows 7.
 ms.assetid: 6cdfb7d3-f849-432c-960f-912e5024c583
-title: Indizieren von Priorisierungs-und rowsetereignissen in Windows 7
+title: Indizieren von Priorisierungs- und Rowsetereignissen in Windows 7
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: e6610500a3c2fcd359f346e5239507fb15ad896d
-ms.sourcegitcommit: 3bdf30edb314e0fcd17dc4ddbc70e4ec7d3596e6
+ms.openlocfilehash: 92491300127c60ebdf2a265583fca77e77a09907b7f42b471f6d3d047a7f6aa4
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/10/2021
-ms.locfileid: "106366357"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117680501"
 ---
-# <a name="indexing-prioritization-and-rowset-events-in-windows-7"></a>Indizieren von Priorisierungs-und rowsetereignissen in Windows 7
+# <a name="indexing-prioritization-and-rowset-events-in-windows-7"></a>Indizieren von Priorisierungs- und Rowsetereignissen in Windows 7
 
-In diesem Thema wird die Einführung der Indizierungs Priorisierung und der rowsetereignisse für Windows 7 beschrieben.
+In diesem Thema wird die Einführung von Indizierungspriorisierung und Rowsetereignissen für Windows 7 beschrieben.
 
 Dieses Thema ist wie folgt organisiert:
 
--   [Indizieren von Priorisierung und rowsetereignissen](#indexing-prioritization-and-rowset-events)
-    -   [Irowsetpriorization-Beispiele](#irowsetpriorization-examples)
-    -   [Irowsetpriorisierungsereignisse](#indexing-prioritization-and-rowset-events-in-windows-7)
+-   [Indizieren von Priorisierungs- und Rowsetereignissen](#indexing-prioritization-and-rowset-events)
+    -   [IRowsetPriorization-Beispiele](#irowsetpriorization-examples)
+    -   [IRowsetPrioritization-Ereignisse](#indexing-prioritization-and-rowset-events-in-windows-7)
 -   [Weitere Ressourcen](#additional-resources)
 -   [Zugehörige Themen](#related-topics)
 
-## <a name="indexing-prioritization-and-rowset-events"></a>Indizieren von Priorisierung und rowsetereignissen
+## <a name="indexing-prioritization-and-rowset-events"></a>Indizieren von Priorisierungs- und Rowsetereignissen
 
-In Windows 7? und höher gibt es einen Prioritäts Stapel, in dem der Kontext einer bestimmten Abfrage den Client anfordern kann, dass die in dieser Abfrage verwendeten Bereiche priorisiert werden, die mit den normalen Elementen priorisiert sind.
+In Windows 7? und höher gibt es einen Prioritätsstapel, in dem der Kontext einer bestimmten Abfrage vom Client angefordert werden kann, dass die in dieser Abfrage verwendeten Bereiche über denen der normalen Elemente priorisiert werden.
 
-Dieser Priorisierungs Stapel hat die folgenden Eigenschaften:
+Dieser Priorisierungsstapel weist die folgenden Merkmale auf:
 
--   Elemente im Stapel können die Priorität "Vordergrund", "hoch" oder "niedrig" aufweisen:
-    -   **Vordergrund**: Backoff-Logik wird übersprungen, und die Indizierung verläuft so schnell, wie der Computer zulässt.
-    -   **Hoch**: Priorisierung wurde mit Backoff angefordert.
-    -   **Niedrig**: Es wurde eine Priorisierung angefordert, nicht auf Kosten anderer Bereiche im Stapel, sondern oberhalb der Indizierung ohne Priorität.
--   Jede Anforderung für hohe oder Vordergrund Priorität bestößt die anfordernde Abfrage automatisch am Anfang des Stapels.
--   Nur das Element oben im Stapel kann eine Vordergrund Priorität haben.
--   Eine Abfrage mit Vordergrund Priorität, die bei Priorität nach unten gesetzt wird, empfängt ein Ereignis, das die Vordergrund Priorität verliert und mit einem Backoff zu einer hohen Priorität geworden ist.
+-   Elemente im Stapel können vordergrund, hoch oder mit niedriger Priorität sein:
+    -   **Vordergrund:** Die Backofflogik wird übersprungen, und die Indizierung wird so schnell fortgesetzt, wie der Computer dies zulässt.
+    -   **Hoch:** Die Priorisierung wurde mit Backoff angefordert.
+    -   **Niedrig:** Die Priorisierung wurde angefordert, nicht auf Kosten anderer Bereiche im Stapel, sondern oberhalb der nicht priorisierten Indizierung.
+-   Jede Anforderung für hohe oder Vordergrundpriorität führt dazu, dass die anfordernde Abfrage automatisch am Anfang des Stapels angezeigt wird.
+-   Nur das Element oben im Stapel kann eine Vordergrundpriorität haben.
+-   Eine Abfrage mit Vordergrundpriorität, die in prioritätsbegrenzt ist, empfängt ein Ereignis, das sie darüber informiert, dass sie die Vordergrundpriorität verloren hat und mit Backoff zu einer hohen Priorität geworden ist.
 
-Der Prioritäts Stapel legt eine Gesamt Priorität von Elementen fest, die im Indexer wie folgt verarbeitet werden:
+Der Prioritätsstapel legt die Gesamtpriorität von Elementen fest, die im Indexer wie folgt verarbeitet werden:
 
--   Benachrichtigungen mit hoher Priorität verfügen über keinen Backoff und werden in der Regel nur für eine kleine Anzahl von Elementen gesendet. Windows-Explorer verwendet diese Priorität z. b. bei kleinen Kopier-Engine-Vorgängen.
--   Der Prioritäts Stapel ist der obere Rand des Stapels, verfügt über einen Backoff und ist die zuletzt angeforderte Prioritäts Abfrage.
+-   Benachrichtigungen mit hoher Priorität haben kein Backoff und werden in der Regel nur für eine kleine Anzahl von Elementen gesendet. Beispielsweise verwendet Windows Explorer diese Priorität für kleine Kopiermodulvorgänge.
+-   Prioritätsstapel befindet sich am Anfang des Stapels, verfügt über ein Backoff und ist die letzte angeforderte Prioritätsabfrage.
 -   Zweite Abfrage im Stapel.
 -   Dritte Abfrage im Stapel.
 -   Vierte Abfrage im Stapel usw.
--   Elemente mit normaler Priorität.
+-   Normale Prioritätselemente.
 -   Gelöschte Elemente.
     > [!Note]  
-    > Elemente in jeder Gruppe werden intern durch die ältere Semantik pro Element priorisiert.
+    > Elemente innerhalb jeder Gruppe werden intern über die ältere Semantik pro Element priorisiert.
 
      
 
-### <a name="irowsetpriorization-examples"></a>Irowsetpriorization-Beispiele
+### <a name="irowsetpriorization-examples"></a>IRowsetPriorization-Beispiele
 
-Die primäre API für Priorisierungs arbeiten ist über die folgende Schnittstelle verfügbar, die durch Abfragen des zurückgegebenen Rowsets aufgerufen werden kann:
+Die primäre API für priorisierte Aufgaben ist über die folgende Schnittstelle verfügbar, die durch Abfragen des zurückgegebenen Rowsets aufgerufen werden kann:
 
 
 ```
@@ -90,15 +90,15 @@ interface IRowsetPrioritization : IUnknown
 
 
 
-Die rowsetpriorisierung funktioniert wie folgt:
+Die Rowsetpriorisierung funktioniert wie folgt:
 
-1.  [**Irowsetpriorisierung**](/windows/desktop/api/Searchapi/nn-searchapi-irowsetprioritization) wird mit der [IUnknown:: QueryInterface-Methode](/windows/win32/api/unknwn/nf-unknwn-iunknown-queryinterface(q)) für ein Indexer-Rowset abgerufen. **DBPROP \_ Enablerowsetevents** muss mit der OLE DB [ICommandProperties:: SetProperties](/previous-versions/windows/desktop/ms711497(v=vs.85)) -Methode auf " **true** " festgelegt werden, bevor die Abfrage ausgeführt wird, um die rowsetpriorisierung zu verwenden.
-2.  [**Irowsetprioritisierung:: setscopepriority**](/windows/desktop/api/Searchapi/nf-searchapi-irowsetprioritization-setscopepriority) legt die Priorisierung für die Bereiche fest, die der Abfrage angehören, und das Intervall, das das Bereichs Statistik Ereignis ausgelöst wird, wenn ausstehende Dokumente innerhalb der Abfrage Bereiche indiziert werden müssen. Dieses Ereignis wird ausgelöst, wenn die Prioritätsstufe auf Default festgelegt ist.
-3.  [**Irowsetprioritisierung:: getscopestatistics**](/windows/desktop/api/Searchapi/nf-searchapi-irowsetprioritization-getscopestatistics) kann verwendet werden, um die Anzahl der indizierten Elemente im Bereich, die Anzahl der ausstehenden Dokumente, die dem Bereich hinzugefügt werden sollen, und die Anzahl der Dokumente, die in diesem Bereich neu indiziert werden müssen, zu erhalten.
+1.  [**IRowsetPrioritization**](/windows/desktop/api/Searchapi/nn-searchapi-irowsetprioritization) wird mit [der IUnknown::QueryInterface-Methode](/windows/win32/api/unknwn/nf-unknwn-iunknown-queryinterface(q)) für ein Indexerrowset erworben. **DBPROP \_ ENABLEROWSETEVENTS** muss mit der OLE DB [ICommandProperties::SetProperties-Methode](/previous-versions/windows/desktop/ms711497(v=vs.85)) vor dem Ausführen der Abfrage auf **TRUE** festgelegt werden, damit die Rowsetpriorisierung verwendet werden kann.
+2.  [**IRowsetPrioritization::SetScopePriority**](/windows/desktop/api/Searchapi/nf-searchapi-irowsetprioritization-setscopepriority) legt die Priorisierung für die Bereiche fest, die zur Abfrage gehören, und das Intervall, in dem das Bereichsstatistikereignis ausgelöst wird, wenn ausstehende Dokumente innerhalb der Abfragebereiche indiziert werden sollen. Dieses Ereignis wird ausgelöst, wenn die Prioritätsstufe auf den Standardwert festgelegt ist.
+3.  [**IRowsetPrioritization::GetScopeStatistics**](/windows/desktop/api/Searchapi/nf-searchapi-irowsetprioritization-getscopestatistics) kann verwendet werden, um die Anzahl der indizierten Elemente im Bereich, die Anzahl der ausstehenden Dokumente, die dem Bereich hinzugefügt werden sollen, und die Anzahl der Dokumente abzurufen, die innerhalb dieses Bereichs neu indiziert werden müssen.
 
-### <a name="irowsetprioritization-events"></a>Irowsetpriorisierungsereignisse
+### <a name="irowsetprioritization-events"></a>IRowsetPrioritization-Ereignisse
 
-Es gibt drei rowsetereignisse in [**irowsetevents:: onrowsetevent**](/windows/desktop/api/Searchapi/nf-searchapi-irowsetevents-onrowsetevent) in der [**RowSetEvent- \_ Typenumeration**](/windows/win32/api/searchapi/ne-searchapi-rowsetevent_type) :
+Es gibt drei Rowsetereignisse in [**IRowsetEvents::OnRowsetEvent**](/windows/desktop/api/Searchapi/nf-searchapi-irowsetevents-onrowsetevent) in der [**ROWSETEVENT \_ TYPE-Enumeration:**](/windows/win32/api/searchapi/ne-searchapi-rowsetevent_type)
 
 
 ```
@@ -114,40 +114,40 @@ Es gibt drei rowsetereignisse in [**irowsetevents:: onrowsetevent**](/windows/de
 
 
 
-Die rowsetereignisse lauten wie folgt:
+Die Rowsetereignisse sind wie folgt:
 
--   Das Ereignis **RowSetEvent \_ Type \_ dataabgelaufgibt** an, dass Daten, die das Rowset unterstützen, abgelaufen sind und dass ein neues Rowset angefordert werden sollte.
--   Das Ereignis " **\_ \_ foregroundlost" des rowsettyps** gibt an, dass ein Element mit der Vordergrund Priorität im Priorisierungs Stapel herabgestuft wurde, da sich eine andere Person vor dieser Abfrage selbst priorisiert hat.
--   Das Ereignis **RowSetEvent \_ Type \_ scopestatistics** bietet Ihnen die gleichen Informationen, die über den [**irowsetprioritisierung:: getscopestatistics**](/windows/desktop/api/Searchapi/nf-searchapi-irowsetprioritization-getscopestatistics) -Methodenaufrufe verfügbar sind, aber über einen Push-Mechaniker wie folgt:
-    -   Das Ereignis tritt auf, wenn die Priorisierungs-API verwendet wurde, um eine nicht standardmäßige Priorisierungs Ebene und eine Statistik Ereignis Häufigkeit ungleich NULL anzufordern.
-    -   Das Ereignis tritt nur auf, wenn Statistiken tatsächlich geändert werden und das in [**irowsetpriorisierung**](/windows/desktop/api/Searchapi/nn-searchapi-irowsetprioritization) angegebene Intervall abgelaufen ist (das Intervall garantiert nicht die Häufigkeit des Ereignisses).
-    -   Dieses Ereignis stellt sicher, dass der Status "Sprung 0" (null Elemente, die noch nicht hinzugefügt werden müssen, 0 verbleibende modifizierungwerte) nicht ausgelöst wird, vorausgesetzt, dass ein Ereignis ungleich NULL ausgelöst wurde.
-    -   Der Indexer kann Elemente verarbeiten, ohne dieses Ereignis zu senden, wenn die Warteschlange vor der Statistik Ereignis Häufigkeit entfernt wird.
+-   Das **ROWSETEVENT \_ TYPE \_ DATAEXPIRED-Ereignis** gibt an, dass die Daten, die das Rowset sichern, abgelaufen sind und dass ein neues Rowset angefordert werden soll.
+-   Das **ROWSET \_ TYPE \_ FOREGROUNDLOST-Ereignis** gibt an, dass ein Element mit Vordergrundpriorität im Priorisierungsstapel herabgestuft wurde, da sich eine andere Person vor dieser Abfrage priorisiert hat.
+-   Das **ROWSETEVENT \_ TYPE \_ SCOPESTATISTICS-Ereignis** bietet Ihnen die gleichen Informationen, die über den Aufruf der [**IRowsetPrioritization::GetScopeStatistics-Methode**](/windows/desktop/api/Searchapi/nf-searchapi-irowsetprioritization-getscopestatistics) verfügbar sind, aber über einen Push-Schieber wie folgt:
+    -   Das Ereignis tritt auf, wenn die Priorisierungs-API verwendet wurde, um eine nicht standardmäßige Priorisierungsebene und eine Statistikereignishäufigkeit ungleich Null anzufordern.
+    -   Das Ereignis tritt nur auf, wenn sich statistiken tatsächlich ändern und das in der [**IRowsetPrioritization**](/windows/desktop/api/Searchapi/nn-searchapi-irowsetprioritization) angegebene Intervall verstrichen ist (das Intervall garantiert nicht die Häufigkeit des Ereignisses).
+    -   Für dieses Ereignis wird garantiert der Zustand "Null springen" ausgelöst (null elemente, die hinzugefügt werden müssen, 0 (null) ändert sich, sofern ein Ereignis ungleich 0 (null) ausgelöst wurde.
+    -   Der Indexer kann Elemente verarbeiten, ohne dieses Ereignis zu senden, wenn die Warteschlange vor der Häufigkeit des Statistikereignisses geleert wird.
 
 ## <a name="additional-resources"></a>Weitere Ressourcen
 
 Sehen Sie sich die folgenden Ressourcen im Zusammenhang mit Priorisierung und Rowsets an:
 
 -   Schnittstellen:
-    -   [**IRow-tevents**](/windows/desktop/api/Searchapi/nn-searchapi-irowsetevents)
-    -   [**Irowsetpriorisierung**](/windows/desktop/api/Searchapi/nn-searchapi-irowsetprioritization)
+    -   [**IRowsetEvents**](/windows/desktop/api/Searchapi/nn-searchapi-irowsetevents)
+    -   [**IRowsetPrioritization**](/windows/desktop/api/Searchapi/nn-searchapi-irowsetprioritization)
 -   Aufzählungen:
-    -   [**Priorisieren von \_ Flags**](/windows/win32/api/searchapi/ne-searchapi-tagprioritize_flags)
-    -   [**Prioritäts \_ Stufe**](/windows/win32/api/searchapi/ne-searchapi-priority_level)
-    -   [**rowevent- \_ Ausdruck ItemState**](/windows/win32/api/searchapi/ne-searchapi-rowsetevent_itemstate)
-    -   [**rowsertevent- \_ Typ**](/windows/win32/api/searchapi/ne-searchapi-rowsetevent_type)
+    -   [**PRIORISIEREN \_ VON FLAGS**](/windows/win32/api/searchapi/ne-searchapi-tagprioritize_flags)
+    -   [**\_PRIORITÄTSSTUFE**](/windows/win32/api/searchapi/ne-searchapi-priority_level)
+    -   [**ROWSETEVENT \_ ITEMSTATE**](/windows/win32/api/searchapi/ne-searchapi-rowsetevent_itemstate)
+    -   [**\_ROWSETEVENT-TYP**](/windows/win32/api/searchapi/ne-searchapi-rowsetevent_type)
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[Windows 7-Suche](./-search-3x-wds-overview.md)
+[Windows 7 Suche](./-search-3x-wds-overview.md)
 </dt> <dt>
 
-[Neu bei der Windows 7-Suche](new-for-windows-7-search.md)
+[Neu für Windows 7-Suche](new-for-windows-7-search.md)
 </dt> <dt>
 
-[Windows Shell-Bibliotheken in Windows 7](-search-win7-development-scenarios.md)
+[Windows Shellbibliotheken in Windows 7](-search-win7-development-scenarios.md)
 </dt> </dl>
 
  

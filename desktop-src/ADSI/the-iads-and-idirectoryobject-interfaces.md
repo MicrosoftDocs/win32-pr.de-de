@@ -1,31 +1,31 @@
 ---
-title: IADs und IDirectoryObject-Schnittstellen
-description: ADSI-Clients verwalten und bearbeiten Verzeichnisdienst Objekte mithilfe einer der beiden com-Schnittstellen IADs oder IDirectoryObject.
+title: Die IADs und IDirectoryObject-Schnittstellen
+description: ADSI-Clients verwalten und bearbeiten Verzeichnisdienstobjekte mithilfe einer von zwei COM-Schnittstellen-IADs oder IDirectoryObject.
 ms.assetid: f9c486b0-3dfb-4abf-afbf-08749e04315f
 ms.tgt_platform: multiple
 keywords:
-- IADs ADSI, Informationen zu
-- IDirectoryObject ADSI, Informationen zu
-- ADSI ADSI, using, IADs und IDirectoryObject-Schnittstellen
+- IADs ADSI , Informationen
+- IDirectoryObject ADSI , Informationen
+- ADSI ADSI ,using-, IADs- und IDirectoryObject-Schnittstellen
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 32dfef47fe1c66e4303725deecec14fe93d1fd92
-ms.sourcegitcommit: b0ebdefc3dcd5c04bede94091833aa1015a2f95c
+ms.openlocfilehash: 6dccfa643c0076224abece6f449f20caf5a4de5d378c03d37cf0e2248ed5a50b
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/21/2020
-ms.locfileid: "103858476"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117838380"
 ---
-# <a name="the-iads-and-idirectoryobject-interfaces"></a>IADs und IDirectoryObject-Schnittstellen
+# <a name="the-iads-and-idirectoryobject-interfaces"></a>Die IADs und IDirectoryObject-Schnittstellen
 
-ADSI-Clients verwalten und bearbeiten Verzeichnisdienst Objekte mithilfe einer von zwei COM-Schnittstellen: [**IADs**](/windows/desktop/api/Iads/nn-iads-iads) oder [**IDirectoryObject**](/windows/desktop/api/Iads/nn-iads-idirectoryobject). **IADs** ist eine [**IDispatch**](/windows/win32/api/oaidl/nn-oaidl-idispatch) -Schnittstelle, die von spät gebundenen Clients verwendet werden soll, wie z. b. in Microsoft Visual Basic, Java und verschiedenen Skriptsprachen. **IDirectoryObject** ist eine Vtable-Schnittstelle, die über früh gebundene Clients (z. b. in C und C++ geschriebene) direkten Zugriff auf Objekte bereitstellt.
+ADSI-Clients verwalten und bearbeiten Verzeichnisdienstobjekte mithilfe einer von zwei COM-Schnittstellen: [**IADs**](/windows/desktop/api/Iads/nn-iads-iads) oder [**IDirectoryObject.**](/windows/desktop/api/Iads/nn-iads-idirectoryobject) **IADs** sind eine [**IDispatch-Schnittstelle,**](/windows/win32/api/oaidl/nn-oaidl-idispatch) die für die Verwendung durch spät gebundene Clients vorgesehen ist, z. B. clients, die in Microsoft Visual Basic, Java und verschiedenen Skriptsprachen geschrieben wurden. **IDirectoryObject** ist eine vtable-Schnittstelle, die direkten Zugriff auf Objekte durch früh gebundene Clients ermöglicht, z. B. solche, die in C und C++ geschrieben sind.
 
-Jedes ADSI-Objekt muss sowohl [**IADs**](/windows/desktop/api/Iads/nn-iads-iads) als auch [**IDirectoryObject**](/windows/desktop/api/Iads/nn-iads-idirectoryobject)implementieren. In Sprachen wie z. b. C oder C++ geschriebene ADSI-Clients, die direkt auf vtables zugreifen können, können beide Schnittstellen verwenden, aber nicht beides in derselben Anwendung. In Visual Basic oder Java geschriebene ADSI-Clients sind auf die Verwendung von **IADs** beschränkt.
+Jedes ADSI-Objekt muss sowohl [**IADs**](/windows/desktop/api/Iads/nn-iads-iads) als auch [**IDirectoryObject**](/windows/desktop/api/Iads/nn-iads-idirectoryobject)implementieren. ADSI-Clients, die in Sprachen wie C oder C++ geschrieben sind und direkt auf VTables zugreifen können, können beide Schnittstellen verwenden, jedoch nicht beide in derselben Anwendung. ADSI-Clients, die in Visual Basic oder Java geschrieben wurden, sind auf die Verwendung von **IADs** beschränkt.
 
-Mithilfe der [**IADs**](/windows/desktop/api/Iads/nn-iads-iads) -Schnittstelle können spät gebundene Clients die inhärenten Funktionen für die Unterbrechung des ADSI-Objektmodells nutzen. Zu diesen Features gehört der Eigenschafts Cache, der es Clients ermöglicht, Eigenschaften zu lesen und zu schreiben, ohne die Übertragung für jeden-Befehl durchlaufen zu müssen. Außerdem erhalten Client Anwendungen die Verwendung leistungsfähiger UI-und ActiveX-Steuerelement Bibliotheken und einen einfacheren Programmierstil. In der Rückgabe müssen spät gebundene Clients den **Variant** -Datentyp verwenden, der die Verwendung der umfassenderen systemeigenen Datentypen von ADSI ausschließt.
+Mit der [**IADs-Schnittstelle**](/windows/desktop/api/Iads/nn-iads-iads) können spät gebundene Clients die inhärenten Housekeeping-Features des ADSI-Objektmodells nutzen. Zu diesen Features gehört der Eigenschaftencache, mit dem Clients Eigenschaften lesen und schreiben können, ohne für jeden Aufruf über die Leitung zu gehen. Darüber hinaus profitieren Clientanwendungen von leistungsstarken Benutzeroberflächen- und ActiveX-Steuerelementbibliotheken und einem einfacheren Programmierstil. Im Gegenzug müssen spät gebundene Clients den **VARIANT-Datentyp** verwenden, was die Verwendung der umfangreicheren nativen Datentypen ausschließt, die von ADSI bereitgestellt werden.
 
-Mithilfe der [**IDirectoryObject**](/windows/desktop/api/Iads/nn-iads-idirectoryobject) -Schnittstelle können früh gebundene Clients die Vorteile der systemeigenen Verzeichnisdienst Datentypen nutzen, wenn ein geringfügiger Leistungsvorteil durch die Verwendung des Eigenschafts Caches verursacht wird. In der Rückgabe bietet die **IDirectoryObject** -Schnittstelle direkten Netzwerk Zugriff auf Objekteigenschaften über eine einzelne Anforderung anstelle von einzelnen **Get** -und **Put** -aufrufen.
+Die [**IDirectoryObject-Schnittstelle**](/windows/desktop/api/Iads/nn-iads-idirectoryobject) ermöglicht es früh gebundenen Clients, die nativen Verzeichnisdienstdatentypen vollständig zu nutzen, um einen geringfügigen Leistungsvorteil durch die Verwendung des Eigenschaftencaches zu erzielen. Im Gegenzug ermöglicht die **IDirectoryObject-Schnittstelle** direkten Direktenzugriff auf Objekteigenschaften über eine einzelne Anforderung und nicht über einzelne **Get-** und Put-Aufrufe. 
 
- 
+ 
 
- 
+ 

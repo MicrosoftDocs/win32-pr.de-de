@@ -1,6 +1,6 @@
 ---
-description: 'Weitere Informationen finden Sie hier: UInt16ColumnValue. getvaluefrombytes-Methode'
-title: UInt16ColumnValue. getvaluefrombytes-Methode
+description: 'Weitere Informationen finden Sie unter: UInt16ColumnValue.GetValueFromBytes-Methode'
+title: UInt16ColumnValue.GetValueFromBytes-Methode
 TOCTitle: 'GetValueFromBytes method '
 ms:assetid: M:Microsoft.Isam.Esent.Interop.UInt16ColumnValue.GetValueFromBytes(System.Byte[],System.Int32,System.Int32,System.Int32)
 ms:mtpsurl: https://msdn.microsoft.com/library/microsoft.isam.esent.interop.uint16columnvalue.getvaluefrombytes(v=EXCHG.10)
@@ -24,19 +24,19 @@ api_type:
 api_location:
 - Microsoft.Isam.Esent.Interop.dll
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: 5df0a21587dfa30c01d04879db0c5370b8371287
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 51a07c2674d2053f67887ccaa3881ec25ac308dfefa079a9cdec5ab12f8768c3
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106363348"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117701756"
 ---
-# <a name="uint16columnvaluegetvaluefrombytes-method"></a>UInt16ColumnValue. getvaluefrombytes-Methode
+# <a name="uint16columnvaluegetvaluefrombytes-method"></a>UInt16ColumnValue.GetValueFromBytes-Methode
 
-Wenn Sie Daten aus ESENT abrufen, decodieren Sie die Daten, und legen Sie den Wert im ColumnValue-Objekt fest.
+Decodieren Sie die Daten mit den aus ESENT abgerufenen Daten, und legen Sie den Wert im ColumnValue-Objekt fest.
 
-**Namespace:**  [Microsoft. ISAM. ESENT. Interop](./microsoft.isam.esent.interop-namespace.md)  
-**Assembly:**  Microsoft. ISAM. ESENT. Interop (in Microsoft.Isam.Esent.Interop.dll)
+**Namespace:**  [Microsoft.Isam.Esent.Interop](./microsoft.isam.esent.interop-namespace.md)  
+**Assembly:**  Microsoft.Isam.Esent.Interop (in Microsoft.Isam.Esent.Interop.dll)
 
 ## <a name="syntax"></a>Syntax
 
@@ -70,37 +70,37 @@ protected override void GetValueFromBytes(
 #### <a name="parameters"></a>Parameter
 
   - value  
-    Sorte \[\]  
+    Typ: \[\]  
     
     Ein Bytearray.
 
 <!-- end list -->
 
   - startIndex  
-    Typ: [System. Int32](/dotnet/api/system.int32)  
+    Typ: [System.Int32](/dotnet/api/system.int32)  
     
     Die Anfangsposition innerhalb der Bytes.
 
 <!-- end list -->
 
   - count  
-    Typ: [System. Int32](/dotnet/api/system.int32)  
+    Typ: [System.Int32](/dotnet/api/system.int32)  
     
     Die Anzahl der zu decodierenden Bytes.
 
 <!-- end list -->
 
-  - irre  
-    Typ: [System. Int32](/dotnet/api/system.int32)  
+  - Err  
+    Typ: [System.Int32](/dotnet/api/system.int32)  
     
     Der von ESENT zurückgegebene Fehler.
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
-#### <a name="reference"></a>Referenz
+#### <a name="reference"></a>Verweis
 
 [UInt16ColumnValue-Klasse](./uint16columnvalue-class.md)
 
 [UInt16ColumnValue-Member](./uint16columnvalue-members.md)
 
-[Microsoft. ISAM. ESENT. Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)
+[Microsoft.Isam.Esent.Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)

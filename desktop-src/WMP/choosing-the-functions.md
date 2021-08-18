@@ -3,35 +3,35 @@ title: Auswählen der Funktionen
 description: Auswählen der Funktionen
 ms.assetid: ded3c578-5087-4e4f-bf21-2149cf72719d
 keywords:
-- Windows Media Player Mobile Skins, Funktionen für Audiodaten
-- Skins, Funktionen für Audiodaten
-- Erstellen von Skins, Funktionen für Audiodaten
+- Windows Media Player Mobile Skins, Funktionen für Audio
+- Skins, Funktionen für Audio
+- Erstellen von Skins, Funktionen für Audio
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: a139dc21a7d10847a7920955988ec2b02fced0f3
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: 222a7a6b26b225b0c40e461833f731c477c84338c458f88074fd747c33a1e70e
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "104388662"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118119832"
 ---
 # <a name="choosing-the-functions"></a>Auswählen der Funktionen
 
-Der Zweck dieser Skin besteht darin, grundlegende Funktionen für die Wiedergabe von Audiodaten bereitzustellen. Die folgenden Funktionen werden verwendet:
+Der Zweck dieser Skin besteht darin, grundlegende Funktionen für die Wiedergabe von Audio bereitzustellen. Die folgenden Funktionen werden verwendet:
 
 
 
-| Funktion                     | BESCHREIBUNG                                                                                                                                                                                                                                                                                                                                                                                                                          |
+| Funktion                     | Beschreibung                                                                                                                                                                                                                                                                                                                                                                                                                          |
 |------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| PLAYPAUSE oder playpausestoppt\* | Das Starten des Medien Elements ist von höchster Wichtigkeit. Wenn Sie ein Skin für Windows Media Player 10 Mobile oder höher erstellen, sollten Sie playpaust-Stopps verwenden. Wenn Sie mit einer früheren Version von Windows Media Player Mobile arbeiten, müssen Sie PLAYPAUSE verwenden. Beide Funktionen geben Ihnen die zusätzlichen Funktionen, die angehalten werden, aber nur playpausestoppt ermöglicht es Ihnen, eine Liveübertragung zu beenden, wenn keine Pause-Funktionalität verfügbar ist. |
-| Stop                         | Sie möchten "Ende" hinzufügen, um die Wiedergabe des Elements zu unterbinden. Wenn Sie ein Skin für Windows Media Player 10 Mobile oder höher erstellen, bietet die Funktion "playpausstoppt" diese Funktionalität bereits.                                                                                                                                                                                                                                          |
-| Nächste                         | Wenn Sie über eine Wiedergabeliste verfügen, sollten Sie in der Lage sein, das nächste Element auszuwählen. Dies ist für die grundlegende Navigation digitaler Medien erforderlich.                                                                                                                                                                                                                                                                                                       |
-| Prev (Vorheriger)                         | Obwohl Sie neben dem Anfang die Wiedergabeliste durchlaufen könnten, können Sie mit dem Hinzufügen von Prev ganz einfach rückwärts und vorwärts navigieren, wenn Sie in der Wiedergabeliste navigieren.                                                                                                                                                                                                                                   |
-| Volumeup oder volumedown\*     | Sie sollten dem Benutzer die Möglichkeit geben, das Volume zu aktivieren oder zu deaktivieren.                                                                                                                                                                                                                                                                                                                                                    |
+| PlayPause oder PlayPauseStop\* | Das Starten des Medienelements ist von größter Bedeutung. Wenn Sie eine Skin für Windows Media Player 10 Mobile oder höher erstellen, sollten Sie PlayPauseStop verwenden. Wenn Sie mit einer früheren Version von Windows Media Player Mobile arbeiten, müssen Sie PlayPause verwenden. Beide Funktionen bieten Ihnen die zusätzliche Funktionalität zum Anhalten, aber nur PlayPauseStop ermöglicht es Ihnen, eine Liveübertragung zu beenden, wenn die Pausenfunktion nicht verfügbar ist. |
+| Beenden                         | Sie möchten Beenden hinzufügen, um die Wiedergabe des Elements zu beenden. Wenn Sie eine Skin für Windows Media Player 10 Mobile oder höher erstellen, stellt die PlayPauseStop-Funktion diese Funktion bereits bereit.                                                                                                                                                                                                                                          |
+| Nächste                         | Wenn Sie über eine Wiedergabeliste verfügen, sollten Sie das nächste Element auswählen können. Sie benötigen dies für die grundlegende Navigation digitaler Medien.                                                                                                                                                                                                                                                                                                       |
+| Prev (Vorheriger)                         | Während Sie Weiter verwenden können, um die Wiedergabeliste zu durchlaufen, bis Sie an den Anfang kommen, erleichtert das Hinzufügen von Prev dem Benutzer, sowohl rückwärts als auch vorwärts zu navigieren, wenn er in der Wiedergabeliste navigiert.                                                                                                                                                                                                                                   |
+| VolumeUp oder VolumeDown\*     | Sie möchten dem Benutzer die Möglichkeit geben, das Volume hoch- oder herunterzuschalten.                                                                                                                                                                                                                                                                                                                                                    |
 
 
 
- 
+ 
 
 \*Verfügbar für Windows Media Player 10 Mobile oder höher.
 
@@ -42,9 +42,9 @@ Der Zweck dieser Skin besteht darin, grundlegende Funktionen für die Wiedergabe
 [**Skin Guide**](skin-guide.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

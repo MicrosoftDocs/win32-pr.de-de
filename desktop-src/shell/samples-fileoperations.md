@@ -1,5 +1,5 @@
 ---
-description: Veranschaulicht, wie Dateisystem Objekte kopiert, verschoben, gelöscht und umbenannt werden.
+description: Veranschaulicht das Kopieren, Verschieben, Löschen und Umbenennen von Dateisystemobjekten.
 title: Beispiel für Dateivorgänge
 ms.topic: article
 ms.date: 05/31/2018
@@ -9,29 +9,29 @@ api_type: ''
 api_location: ''
 topic_type:
 - kbArticle
-ms.openlocfilehash: 4ef70e6da6e59b0fcff0ba488a26d5e2cf43509a
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 0aea9f50522c71dc36f2a9fa457de66a3cdc05a37d06c590f9fe9cdbe3042b76
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "104529336"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117677580"
 ---
 # <a name="file-operations-sample"></a>Beispiel für Dateivorgänge
 
-Veranschaulicht, wie Dateisystem Objekte kopiert, verschoben, gelöscht und umbenannt werden.
+Veranschaulicht das Kopieren, Verschieben, Löschen und Umbenennen von Dateisystemobjekten.
 
 Dieses Thema enthält folgende Abschnitte:
 
--   [Anforderungen](#requirements)
+-   [Requirements](#requirements)
 -   [Herunterladen des Beispiels](#downloading-the-sample)
--   [Beispiel zum Aufbau](#building-the-sample)
+-   [Erstellen des Beispiels](#building-the-sample)
 -   [Ausführen des Beispiels](#running-the-sample)
 
-## <a name="requirements"></a>Requirements (Anforderungen)
+## <a name="requirements"></a>Anforderungen
 
 
 
-| Produkt                                | Minimale Produkt Version |
+| Product (Produkt)                                | Mindestproduktversion |
 |----------------------------------------|-------------------------|
 | Windows                                | Windows Vista           |
 | Windows Software Development Kit (SDK) | 6.1                     |
@@ -40,21 +40,21 @@ Dieses Thema enthält folgende Abschnitte:
 
  
 
-Weitere Anforderungen finden Sie in der im Beispiel enthaltenen Infodatei.
+Weitere Anforderungen finden Sie in der im Beispiel enthaltenen Readme-Datei.
 
 ## <a name="downloading-the-sample"></a>Herunterladen des Beispiels
 
 | Standort      | Pfad-URL                                                                                             |
 |---------------|------------------------------------------------------------------------------------------------------|
-| GitHub  | [Fileoperations-Beispiel](https://github.com/microsoft/Windows-classic-samples/tree/master/Samples/Win7Samples/winui/shell/appplatform/fileoperations) |
+| GitHub  | [FileOperations-Beispiel](https://github.com/microsoft/Windows-classic-samples/tree/master/Samples/Win7Samples/winui/shell/appplatform/fileoperations) |
 
 ## <a name="building-the-sample"></a>Erstellen des Beispiels
 
-Anweisungen zum Erstellen des Beispiels finden Sie in der im Beispiel enthaltenen Infodatei.
+Anweisungen zum Erstellen des Beispiels finden Sie in der im Beispiel enthaltenen Readme-Datei.
 
 ## <a name="running-the-sample"></a>Ausführen des Beispiels
 
-Anweisungen zum Erstellen des Beispiels finden Sie in der im Beispiel enthaltenen Infodatei.
+Anweisungen zum Erstellen des Beispiels finden Sie in der im Beispiel enthaltenen Readme-Datei.
 
  
 

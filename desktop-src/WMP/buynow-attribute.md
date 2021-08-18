@@ -1,9 +1,9 @@
 ---
-title: Buynow-Attribut
-description: Das buynow-Attribut ist ein param-Wert für die Verwendung bei kommerziellen Interaktionen.
+title: BuyNow-Attribut
+description: Das BuyNow-Attribut ist ein PARAM-Wert für die Verwendung in kommerziellen Interaktionen.
 ms.assetid: 06b96992-a532-4c72-bb4f-6cdd6209f137
 keywords:
-- Buynow-Attribut (Windows Media Player)
+- BuyNow-Attribut Windows Media Player
 topic_type:
 - apiref
 api_name:
@@ -12,16 +12,16 @@ api_type:
 - NA
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 77d27354c633f22c13875f429eadbf8e131a8656
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: b75d507a68a11a294c0f7f51d25cf8f9b422ad61615582b3d7fecc714787c710
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106371616"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118119852"
 ---
-# <a name="buynow-attribute"></a>Buynow-Attribut
+# <a name="buynow-attribute"></a>BuyNow-Attribut
 
-Das **buynow** -Attribut ist ein **param** -Wert für die Verwendung bei kommerziellen Interaktionen.
+Das **BuyNow-Attribut** ist ein **PARAM-Wert** für die Verwendung in kommerziellen Interaktionen.
 
 ## <a name="applies-to"></a>Gilt für
 
@@ -30,11 +30,11 @@ Das **buynow** -Attribut ist ein **param** -Wert für die Verwendung bei kommerz
 -   [CD-Spuren](cd-track-attributes.md)
 -   [DVDs](dvd-attributes.md)
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Dieses Attribut wird nur in der Bibliotheks Datenbank (oder im Cache) gespeichert.
+Dieses Attribut wird nur in der Bibliotheksdatenbank (oder im Cache) gespeichert.
 
-Um zu ermitteln, ob Sie den Wert dieses Attributs ändern können, verwenden Sie die [Media. isread onlyitem](media-isreadonlyitem.md) -Methode.
+Verwenden Sie die [Media.isReadOnlyItem-Methode,](media-isreadonlyitem.md) um zu bestimmen, ob Sie den Wert dieses Attributs ändern können.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -42,15 +42,15 @@ Um zu ermitteln, ob Sie den Wert dieses Attributs ändern können, verwenden Sie
 
 | Anforderung | Wert |
 |--------------------|---------------------------------------------------|
-| Version<br/> | Windows Media Player 9-Serie oder höher<br/> |
+| Version<br/> | Windows Media Player 9er Serie oder höher<br/> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Attribut Verweis**](attribute-reference.md)
+[**Attributverweis**](attribute-reference.md)
 </dt> </dl>
 
  

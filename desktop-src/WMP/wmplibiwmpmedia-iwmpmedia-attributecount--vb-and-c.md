@@ -1,10 +1,10 @@
 ---
-title: IWMPMedia attributeCount-Eigenschaft
+title: IWMPMedia-AttributeCount-Eigenschaft
 description: Die attributeCount-Eigenschaft ruft die Anzahl der Attribute ab, die für das Medienelement abgefragt und/oder festgelegt werden können.
 ms.assetid: 527298ff-365d-41b0-90dd-e236d6adf6fa
 keywords:
-- attributeCount-Windows Media Player
-- attributeCount-Windows Media Player , IWMPMedia-Schnittstelle
+- attributeCount-Eigenschaft Windows Media Player
+- attributeCount-Eigenschaft Windows Media Player , IWMPMedia-Schnittstelle
 - IWMPMedia-Schnittstelle Windows Media Player , attributeCount-Eigenschaft
 topic_type:
 - apiref
@@ -49,17 +49,17 @@ Public ReadOnly Property attributeCount As System.Int32
 
 ## <a name="property-value"></a>Eigenschaftswert
 
-Ein **System.Int32,** das die Anzahl ist.
+Eine **System.Int32-Datei,** die der Anzahl entspricht.
 
 ## <a name="remarks"></a>Hinweise
 
-Bevor Sie diese Eigenschaft verwenden können, müssen Sie über Lesezugriff auf die Bibliothek verfügen. Weitere Informationen finden Sie unter [Bibliothekszugriff.](library-access.md)
+Bevor Sie diese Eigenschaft verwenden können, benötigen Sie Lesezugriff auf die Bibliothek. Weitere Informationen finden Sie unter [Bibliothekszugriff.](library-access.md)
 
-Informationen zu den Attributen, die von Windows Media Player unterstützt werden, finden Sie in der [Attributreferenz.](attribute-reference.md)
+Informationen zu den attributen, die von Windows Media Player unterstützt werden, finden Sie unter [Attributverweis.](attribute-reference.md)
 
 ## <a name="examples"></a>Beispiele
 
-Im folgenden Beispiel wird **attributeCount verwendet,** um die Anzahl der attributes zu bestimmen, die im aktuellen Medienelement verfügbar sind. Der Code verwendet diesen Wert, um eine Liste von Attributnamen und -werten in einem Textfeld anzuzeigen. Das **AxWMPLib.AxWindowsMediaPlayer-Objekt** wird durch die Variable player dargestellt.
+Im folgenden Beispiel wird **attributeCount** verwendet, um die Anzahl der attribute zu bestimmen, die im aktuellen Medienelement verfügbar sind. Der Code verwendet diesen Wert, um eine Liste von Attributnamen und -werten in einem Textfeld anzuzeigen. Das **AxWMPLib.AxWindowsMediaPlayer-Objekt** wird durch die Variable player dargestellt.
 
 
 ```CSharp

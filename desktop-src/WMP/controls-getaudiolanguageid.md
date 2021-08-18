@@ -1,11 +1,11 @@
 ---
-title: Controls. getaudiolanguageid-Methode
-description: Die getaudiolanguageid-Methode ruft den Gebiets Schema Bezeichner (Locale Identifier, LCID) für einen angegebenen audiosprachindex ab.
+title: Controls.getAudioLanguageID-Methode
+description: Die getAudioLanguageID-Methode ruft den Locale Identifier (LCID) für einen angegebenen Audiosprachindex ab.
 ms.assetid: 8134a7ce-bdc7-46b2-b10e-2bf1215b0de1
 keywords:
-- getaudiolanguageid-Methode, Windows Media Player
-- getaudiolanguageid-Methode, Windows Media Player, Controls-Klasse
-- Steuerelemente-Klasse, Windows Media Player, getaudiolanguageid-Methode
+- getAudioLanguageID-Windows Media Player
+- getAudioLanguageID-Methode Windows Media Player , Controls-Klasse
+- Steuert die Windows Media Player , getAudioLanguageID-Methode
 topic_type:
 - apiref
 api_name:
@@ -16,16 +16,16 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 9ab27e95edfc74fa7a9f57d2010bf86299c55dd4
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 2352162d810ca75aeeee6db1c3d59c297b85414be46a365909c4ed56af179f8b
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106352912"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118119339"
 ---
-# <a name="controlsgetaudiolanguageid-method"></a>Controls. getaudiolanguageid-Methode
+# <a name="controlsgetaudiolanguageid-method"></a>Controls.getAudioLanguageID-Methode
 
-Die **getaudiolanguageid** -Methode ruft den Gebiets Schema Bezeichner (Locale Identifier, LCID) für einen angegebenen audiosprachindex ab.
+Die **getAudioLanguageID-Methode** ruft den Locale Identifier (LCID) für einen angegebenen Audiosprachindex ab.
 
 ## <a name="syntax"></a>Syntax
 
@@ -42,22 +42,22 @@ retVal = Controls.getAudioLanguageID(
 
 <dl> <dt>
 
-*Index* \[ in\]
+*Index* \[ In\]
 </dt> <dd>
 
-**Zahl** (**Long**), die den audiosprachindex angibt.
+**Number** (**long**) gibt den Audiosprachindex an.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Diese Methode gibt eine **Zahl** (**Long**) zurück.
+Diese Methode gibt eine **Zahl** **(long) zurück.**
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Eine LCID identifiziert eindeutig einen bestimmten Sprach Dialekt, der als Gebiets Schema bezeichnet wird.
+Eine LCID identifiziert eindeutig einen bestimmten Sprachdialekt, der als "Locale" bezeichnet wird.
 
-Bei Windows Media-basierten Inhalten unterstützen Eigenschaften und Methoden im Zusammenhang mit der Sprachauswahl nur eine einzelne Ausgabe.
+Für Windows Medienbasierte Inhalte unterstützen Eigenschaften und Methoden im Zusammenhang mit der Sprachauswahl nur eine einzelne Ausgabe.
 
 **Windows Media Player 10 Mobile:** Diese Eigenschaft gibt immer die sprachneutrale LCID (0) zurück.
 
@@ -67,31 +67,31 @@ Bei Windows Media-basierten Inhalten unterstützen Eigenschaften und Methoden im
 
 | Anforderung | Wert |
 |--------------------|------------------------------------------------------------------------------------|
-| Version<br/> | Windows Media Player 9 oder höher.<br/>                                 |
+| Version<br/> | Windows Media Player 9-Serie oder höher.<br/>                                 |
 | DLL<br/>     | <dl> <dt>Wmp.dll</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
 [**Controls-Objekt**](controls-object.md)
 </dt> <dt>
 
-[**Controls. audiolanguagecount**](controls-audiolanguagecount.md)
+[**Controls.audioLanguageCount**](controls-audiolanguagecount.md)
 </dt> <dt>
 
-[**Controls. currentaudiolanguage**](controls-currentaudiolanguage.md)
+[**Controls.currentAudioLanguage**](controls-currentaudiolanguage.md)
 </dt> <dt>
 
-[**Controls. currentaudiolanguageindex**](controls-currentaudiolanguageindex.md)
+[**Controls.currentAudioLanguageIndex**](controls-currentaudiolanguageindex.md)
 </dt> <dt>
 
-[**Controls. getaudiolanguagedescription**](controls-getaudiolanguagedescription.md)
+[**Controls.getAudioLanguageDescription**](controls-getaudiolanguagedescription.md)
 </dt> <dt>
 
-[**Controls. getlanguagename**](controls-getlanguagename.md)
+[**Controls.getLanguageName**](controls-getlanguagename.md)
 </dt> </dl>
 
  

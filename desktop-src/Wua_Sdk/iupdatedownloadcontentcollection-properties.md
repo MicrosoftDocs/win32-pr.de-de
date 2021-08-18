@@ -17,7 +17,7 @@ Die **IUpdateDownloadContentCollection-Schnittstelle** definiert die folgenden E
 
 
 
-| Eigenschaft                                                       | BESCHREIBUNG                                                                                                                             |
+| Eigenschaft                                                       | Beschreibung                                                                                                                             |
 |----------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------|
 | [**\_NewEnum**](/windows/desktop/api/Wuapi/nf-wuapi-iupdatedownloadcontentcollection-get__newenum) | Ruft eine [**IEnumVARIANT-Schnittstelle**](/windows/win32/api/oaidl/nn-oaidl-ienumvariant) ab, die zum Aufzählen der Auflistung verwendet wird.                    |
 | [**Anzahl**](/windows/desktop/api/Wuapi/nf-wuapi-iupdatedownloadcontentcollection-get_count)        | Ruft die Anzahl der Elemente in der Auflistung ab.                                                                                          |

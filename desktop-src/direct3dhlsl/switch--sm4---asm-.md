@@ -1,6 +1,6 @@
 ---
 title: switch (sm4 - asm)
-description: Überträgt die Steuerung abhängig vom Wert eines Selektors an einen anderen Anweisungsblock innerhalb des Switchtexts.
+description: Überträgt die Steuerung abhängig vom Wert eines Selektors an einen anderen Anweisungsblock innerhalb des Switch-Textkörpers.
 ms.assetid: ECAEECFD-B955-4356-B5C9-1D6A04C71D8F
 ms.topic: reference
 ms.date: 05/31/2018
@@ -13,7 +13,7 @@ ms.locfileid: "117724351"
 ---
 # <a name="switch-sm4---asm"></a>switch (sm4 - asm)
 
-Überträgt die Steuerung abhängig vom Wert eines Selektors an einen anderen Anweisungsblock innerhalb des Switchtexts.
+Überträgt die Steuerung abhängig vom Wert eines Selektors an einen anderen Anweisungsblock innerhalb des Switch-Textkörpers.
 
 
 
@@ -26,7 +26,7 @@ ms.locfileid: "117724351"
 
 
 
-| Element                                                            | BESCHREIBUNG                                              |
+| Element                                                            | Beschreibung                                              |
 |-----------------------------------------------------------------|----------------------------------------------------------|
 | <span id="src0"></span><span id="SRC0"></span>*src0*<br/> | \[in \] Der Selektor für die switch-Anweisung.<br/> |
 
@@ -36,13 +36,13 @@ ms.locfileid: "117724351"
 
 ## <a name="remarks"></a>Hinweise
 
-Ein **switch** / [endswitch-Konstrukt](endswitch--sm4---asm-.md) verhält sich genau wie ein **Switchkonstrukt** in der Programmiersprache C, mit der folgenden Ausnahme: Für D3D11-Fall können [](case--sm4---asm-.md) / [Standardanweisungen,](default--sm4---asm-.md) die ohne Unterbrechung auf den nächsten **Fallstandard** fallen, keinen Code /  enthalten. [](break--sm4---asm-.md) Es ist zulässig, dass mehrere **Case-Anweisungen,** einschließlich **standard**, sequenziell angezeigt werden und denselben Codeblock gemeinsam nutzen.
+Ein Switch / [endswitch-Konstrukt](endswitch--sm4---asm-.md)  verhält sich genau wie ein Switchkonstrukt in der Programmiersprache C, mit der folgenden Ausnahme: Für D3D11-Fall-Standard-Anweisungen, die auf den Standardwert des nächsten Falls ohne Unterbrechung fallen, kann kein Code [](case--sm4---asm-.md) / [](default--sm4---asm-.md)  /  enthalten sein. [](break--sm4---asm-.md) Es ist zulässig,  dass mehrere Case-Anweisungen, einschließlich standard **,** sequenziell angezeigt werden und denselben Codeblock gemeinsam nutzen.
 
-Die Bedingung muss eine 32-Bit-Registerkomponente oder eine sofortige Menge sein. Der Gleichheitsvergleich ist bitweise (ganze Zahl).
+Die Bedingung muss eine 32-Bit-Registerkomponente oder eine unmittelbare Menge sein. Der Gleichheitsvergleich ist bitweise (ganze Zahl).
 
-Wie bei jeder Shaderanweisung in D3D11 kann hardware das **Switchkonstrukt** direkt implementieren oder nicht.
+Wie bei jeder Shader-Anweisung in D3D11 kann hardware das Switchkonstrukt **direkt** implementieren.
 
-**Switch-Anweisungen** können geschachtelt werden. Jeder **Switchblock** zählt unabhängig von der Anzahl der **Case-Anweisungen** als 1 Ebene im Hinblick auf die Schachtelungstiefe der Flusssteuerung von 64 pro Unterroutine und Main. Der HLSL-Compiler generiert keine Unterroutinen, die diesen Grenzwert überschreiten. Das Verhalten von Ablaufsteuerungsanweisungen über 64 Ebenen pro Unterroutine ist nicht definiert.
+**Switch-Anweisungen** können geschachtelt werden. Jeder **Switchblock** zählt als 1 Ebene für die Schachtelungstiefe der Flusssteuerung von 64 pro Unterroutine und Hauptebene, unabhängig von der Anzahl der **Case-Anweisungen.** Der HLSL-Compiler generiert keine Unterroutinen, die diesen Grenzwert überschreiten. Das Verhalten von Ablaufsteuerungsanweisungen über 64 Ebenen hinaus pro Unterroutine ist nicht definiert.
 
 Im folgenden Beispiel wird die Verwendung dieser Anweisung veranschaulicht.
 
@@ -77,7 +77,7 @@ Diese Anweisung gilt für die folgenden Shaderstufen:
 
  
 
-## <a name="minimum-shader-model"></a>Shader-Mindestmodell
+## <a name="minimum-shader-model"></a>Minimales Shadermodell
 
 Diese Funktion wird in den folgenden Shadermodellen unterstützt.
 
@@ -85,12 +85,12 @@ Diese Funktion wird in den folgenden Shadermodellen unterstützt.
 
 | Shadermodell                                              | Unterstützt |
 |-----------------------------------------------------------|-----------|
-| [Shadermodell 5](d3d11-graphics-reference-sm5.md)        | ja       |
-| [Shadermodell 4.1](dx-graphics-hlsl-sm4.md)              | ja       |
-| [Shadermodell 4](dx-graphics-hlsl-sm4.md)                | ja       |
-| [Shadermodell 3 (DirectX HLSL)](dx-graphics-hlsl-sm3.md) | nein        |
-| [Shadermodell 2 (DirectX HLSL)](dx-graphics-hlsl-sm2.md) | nein        |
-| [Shadermodell 1 (DirectX HLSL)](dx-graphics-hlsl-sm1.md) | nein        |
+| [Shadermodell 5](d3d11-graphics-reference-sm5.md)        | Ja       |
+| [Shadermodell 4.1](dx-graphics-hlsl-sm4.md)              | Ja       |
+| [Shadermodell 4](dx-graphics-hlsl-sm4.md)                | Ja       |
+| [Shadermodell 3 (DirectX HLSL)](dx-graphics-hlsl-sm3.md) | Nein        |
+| [Shadermodell 2 (DirectX HLSL)](dx-graphics-hlsl-sm2.md) | Nein        |
+| [Shadermodell 1 (DirectX HLSL)](dx-graphics-hlsl-sm1.md) | Nein        |
 
 
 
@@ -100,7 +100,7 @@ Diese Funktion wird in den folgenden Shadermodellen unterstützt.
 
 <dl> <dt>
 
-[Shadermodell 4-Assembly (DirectX HLSL)](dx-graphics-hlsl-sm4-asm.md)
+[Shader Model 4-Assembly (DirectX HLSL)](dx-graphics-hlsl-sm4-asm.md)
 </dt> </dl>
 
  

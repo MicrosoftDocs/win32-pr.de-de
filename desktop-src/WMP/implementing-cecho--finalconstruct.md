@@ -3,10 +3,10 @@ title: Implementieren von CEcho FinalConstruct
 description: Implementieren von CEcho FinalConstruct
 ms.assetid: 149e99c5-9f57-4447-b520-39a6dd39fc86
 keywords:
-- Windows Media Player Plug-Ins,Echo-Beispieleigenschaftsseiten
+- Windows Media Player-Plug-Ins,Echo-Beispieleigenschaftsseiten
 - Plug-Ins, Echo-Beispieleigenschaftsseiten
 - Plug-Ins für die digitale Signalverarbeitung, Echo-Beispiel-Eigenschaftenseiten
-- DSP-Plug-Ins, Echo-Beispieleigenschaftsseiten
+- DSP-Plug-Ins, Echo-Beispiel-Eigenschaftenseiten
 - Echo DSP-Plug-In-Beispiel, Eigenschaftenseiten
 - Echo DSP-Plug-In-Beispiel, CEcho FinalConstruct-Methode
 ms.topic: article

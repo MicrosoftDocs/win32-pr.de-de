@@ -1,9 +1,9 @@
 ---
-title: Text. FontSize
-description: Das FontSize-Attribut gibt den Schrift Grad für das Text Steuerelement an oder ruft ihn ab.
+title: TEXT.fontSize
+description: Das fontSize-Attribut gibt den Schriftgrad für das Text-Steuerelement an oder ruft den Schriftgrad ab.
 ms.assetid: 066b7c8c-d029-464b-b2f3-7eb070046d99
 keywords:
-- Text. FontSize-Fenster Media Player
+- TEXT.fontSize Windows Media Player
 topic_type:
 - apiref
 api_name:
@@ -12,16 +12,16 @@ api_type:
 - NA
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 47abd2b14b43c77d160faab20608c524c3c257c0
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: c717ea717daedce069e84d82f76edabc285b7f43fbf0a3b8759ef129fbbfdc47
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106371097"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118118314"
 ---
-# <a name="textfontsize"></a>Text. FontSize
+# <a name="textfontsize"></a>TEXT.fontSize
 
-Das **FontSize** -Attribut gibt den Schrift Grad für das Text Steuerelement an oder ruft ihn ab.
+Das **fontSize-Attribut** gibt den Schriftgrad für das Text-Steuerelement an oder ruft den Schriftgrad ab.
 
 ``` syntax
         elementID.fontSize
@@ -29,9 +29,9 @@ Das **FontSize** -Attribut gibt den Schrift Grad für das Text Steuerelement an 
 
 ## <a name="possible-values"></a>Mögliche Werte
 
-Dieses Attribut ist eine Lese-/schreibzahl (**Long**), die den Schrift Grad in Punkten angibt.  Der Standardwert ist 10.
+Dieses Attribut ist eine Lese-/Schreibnummer (**long**), die den Schriftgrad in Punkten an gibt.  Der Standardwert ist 10.
 
-Im [value](text-value.md) -Attribut finden Sie ein Beispiel, das veranschaulicht, wie die Attribute des **Text** -Elements verwendet werden.
+Ein [Beispiel, das](text-value.md) veranschaulicht, wie die Attribute des TEXT-Elements verwendet werden, finden Sie im **Value-Attribut.**
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -39,18 +39,18 @@ Im [value](text-value.md) -Attribut finden Sie ein Beispiel, das veranschaulicht
 
 | Anforderung | Wert |
 |--------------------|------------------------------------------------------|
-| Version<br/> | Windows Media Player, Version 7,0 oder höher<br/> |
+| Version<br/> | Windows Media Player Version 7.0 oder höher<br/> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Text-Element**](text-element.md)
+[**TEXT-Element**](text-element.md)
 </dt> <dt>
 
-[**Text. fontface**](text-fontface.md)
+[**TEXT.fontFace**](text-fontface.md)
 </dt> </dl>
 
  

@@ -1,7 +1,7 @@
 ---
-description: Simuliert einen Klick auf die Schaltfläche der angegebenen Geräte Schaltfläche.
+description: Simuliert einen Schaltflächenklick auf die angegebene Geräteschaltfläche.
 ms.assetid: 1153BF91-F1F6-4E0A-8100-7625A3C73BB3
-title: ClickButton-Methode der Msvm_SyntheticMouse-Klasse
+title: ClickButton-Methode der Msvm_SyntheticMouse Klasse
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,16 +13,16 @@ api_type:
 - COM
 api_location:
 - vmms.exe
-ms.openlocfilehash: 2f5ea8e1f5984bd7e4b77222d6cbd8a05d1ed40b
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: f2812bd898d674b9d17aba51db6d93e43c53a049800214c1373e41a45dfc1d02
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106368810"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118150127"
 ---
-# <a name="clickbutton-method-of-the-msvm_syntheticmouse-class"></a>ClickButton-Methode der MSVM- \_ syntheticmouse-Klasse
+# <a name="clickbutton-method-of-the-msvm_syntheticmouse-class"></a>ClickButton-Methode der Msvm \_ SyntheticMouse-Klasse
 
-Simuliert einen Klick auf die Schaltfläche der angegebenen Geräte Schaltfläche.
+Simuliert einen Schaltflächenklick auf die angegebene Geräteschaltfläche.
 
 ## <a name="syntax"></a>Syntax
 
@@ -39,10 +39,10 @@ uint32 ClickButton(
 
 <dl> <dt>
 
-*ButtonIndex* \[ in\]
+*buttonIndex* \[ In\]
 </dt> <dd>
 
-Typ: **UInt32**
+Typ: **uint32**
 
 Der 1-basierte Index der Schaltfläche.
 
@@ -50,19 +50,19 @@ Der 1-basierte Index der Schaltfläche.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Typ: **UInt32**
+Typ: **uint32**
 
-Der Rückgabewert 0 (null) gibt den Erfolg an. Ein Wert ungleich NULL gibt an, dass der Zustand der Schaltfläche nicht geändert werden konnte.
+Der Rückgabewert 0 (null) gibt den Erfolg an. Ein Wert ungleich 0 (null) gibt an, dass der Schaltflächenzustand nicht geändert werden kann.
 
 <dl> <dt>
 
 **Abgeschlossen ohne Fehler** (0)
 </dt> <dt>
 
-Über **prüfte Methoden Parameter-Auftrag gestartet** (4096)
+**Überprüfte Methodenparameter – Auftrag gestartet** (4096)
 </dt> <dt>
 
-Fehler **(32768** )
+**Fehler** (32768)
 </dt> <dt>
 
 **Zugriff verweigert** (32769)
@@ -71,37 +71,37 @@ Fehler **(32768** )
 **Nicht unterstützt** (32770)
 </dt> <dt>
 
-Der **Status ist "Unknown** " (32771).
+**Status ist unbekannt** (32771)
 </dt> <dt>
 
 **Timeout** (32772)
 </dt> <dt>
 
-**Ungültiger Parameter** (32773)
+**Ungültiger** Parameter (32773)
 </dt> <dt>
 
-Das **System wird verwendet** (32774).
+**System wird verwendet** (32774)
 </dt> <dt>
 
-**Ungültiger Status für diesen Vorgang** (32775).
+**Ungültiger Zustand für diesen Vorgang** (32775)
 </dt> <dt>
 
-**Falscher Datentyp** (32776).
+**Falscher Datentyp** (32776)
 </dt> <dt>
 
-Das **System ist nicht verfügbar** (32777).
+**System ist nicht verfügbar** (32777)
 </dt> <dt>
 
-**Nicht** genügend Arbeitsspeicher (32778)
+**Nicht genügend Arbeitsspeicher** (32778)
 </dt> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Der Zugriff auf die [**MSVM \_ syntheticmouse**](msvm-syntheticmouse.md) -Klasse kann durch die UAC-Filterung eingeschränkt werden. Weitere Informationen finden Sie unter [Benutzerkontensteuerung und WMI](/windows/desktop/WmiSdk/user-account-control-and-wmi).
+Der Zugriff auf die [**Msvm \_ SyntheticMouse-Klasse**](msvm-syntheticmouse.md) kann durch UAC-Filterung eingeschränkt werden. Weitere Informationen finden Sie unter [Benutzerkontensteuerung und WMI.](/windows/desktop/WmiSdk/user-account-control-and-wmi)
 
 ## <a name="examples"></a>Beispiele
 
-Im folgenden c#-Beispiel wird ein Klick auf eine Schaltfläche simuliert. Die Dienstprogramme, auf die verwiesen wird, finden Sie unter [Allgemeine Hilfsprogramme für die Virtualisierungsbeispiele (v2)](common-utilities-for-the-virtualization-samples-v2.md).
+Im folgenden C#-Beispiel wird ein Klick auf eine Schaltfläche simuliert. Die referenzierten Hilfsprogramme finden Sie unter [Allgemeine Hilfsprogramme für die Virtualisierungsbeispiele (V2).](common-utilities-for-the-virtualization-samples-v2.md)
 
 
 ```CSharp
@@ -260,7 +260,7 @@ namespace HyperVSamples
 
 
 
-Im folgenden Visual Basic Scripting Edition (VBScript)-Beispiel wird ein Klick auf eine Schaltfläche simuliert.
+Im folgenden beispiel Visual Basic Scripting Edition (VBScript) wird ein Schaltflächenklick simuliert.
 
 
 ```VB
@@ -448,19 +448,19 @@ End Function
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows 8 \[ -Desktop-Apps\]<br/>                                                              |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2012 \[ -Desktop-Apps\]<br/>                                                    |
-| Namespace<br/>                | \\Stammvirtualisierung \\ v2<br/>                                                                     |
-| MOF<br/>                      | <dl> <dt>Windowsvirtualization. v2. MOF</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | \[Windows 8 Nur Desktop-Apps\]<br/>                                                              |
+| Unterstützte Mindestversion (Server)<br/> | \[Windows Server 2012 Nur Desktop-Apps\]<br/>                                                    |
+| Namespace<br/>                | Root \\ Virtualization \\ V2<br/>                                                                     |
+| MOF<br/>                      | <dl> <dt>WindowsVirtualization.V2.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Vmms.exe</dt> </dl>                     |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**MSVM \_ syntheticmouse**](msvm-syntheticmouse.md)
+[**Msvm \_ SyntheticMouse**](msvm-syntheticmouse.md)
 </dt> </dl>
 
  

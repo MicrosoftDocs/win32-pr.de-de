@@ -3,27 +3,27 @@ title: CLOSEBUTTON
 description: CLOSEBUTTON
 ms.assetid: 39e2de27-c5aa-4a8f-8545-8b7e5cab730f
 keywords:
-- Windows Media Player Skins, Button-Element
-- Skins, Button-Element
-- Verweis für Skins, Button-Element
-- Button-Element
-- Elemente, Schaltfläche
-- Windows Media Player Skins, schließen von Schaltflächen
-- Skins, Schaltflächen Schließen
-- Schließen von Schaltflächen
-- Verweis für Skins, Schaltflächen Schließen
+- Windows Media Player,BUTTON-Element
+- skins,BUTTON-Element
+- Referenz für Skins, BUTTON-Element
+- BUTTON-Element
+- elements,BUTTON
+- Windows Media Player,Schaltflächen schließen
+- Skins,Schaltflächen schließen
+- Schaltflächen zum Schließen
+- Referenz für Skins,Schaltflächen schließen
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 4a7b3d6df8984d966e84a68cadaf38d1cc8ab369
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: 0f8123305c92bfe7f5fccc69b9fd8a92429a67fb933189bd3b0285834cccd2a5
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "106340437"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118119788"
 ---
 # <a name="closebutton"></a>CLOSEBUTTON
 
-Dies ist eine vordefinierte **Schaltfläche** mit den folgenden Standardwerten.
+Dies ist eine vordefinierte **SCHALTFLÄCHE** mit den folgenden Standardwerten.
 
 
 ```C++
@@ -34,20 +34,20 @@ upToolTip="Close"
 
 
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Dadurch wird ein **Schalt** Flächen-Steuerelement erstellt, das den Player schließt. Die Quick Infos sind lokalisiert. Alle Eigenschaften dieser **Schaltfläche** können überschrieben werden, indem Sie explizit angegeben werden.
+Dadurch wird ein **BUTTON-Steuerelement** erstellt, das den Player schließt. Die QuickInfos sind lokalisiert. Alle Eigenschaften dieser **SCHALTFLÄCHE können** überschrieben werden, indem sie explizit angegeben werden.
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[**Button-Element**](button-element.md)
+[**BUTTON-Element**](button-element.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

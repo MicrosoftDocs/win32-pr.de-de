@@ -1,6 +1,6 @@
 ---
 title: EDITBOX.editStyle
-description: Das editStyle-Attribut gibt den Stil des Bearbeitungsfeld-Steuerelements an oder ruft diese ab.
+description: Das editStyle-Attribut gibt das Format des Bearbeitungsfeld-Steuerelements an oder ruft es ab.
 ms.assetid: 1b3052c4-3087-4d41-af03-d7758680cc3b
 keywords:
 - EDITBOX.editStyle Windows Media Player
@@ -21,7 +21,7 @@ ms.locfileid: "117749461"
 ---
 # <a name="editboxeditstyle"></a>EDITBOX.editStyle
 
-Das **editStyle-Attribut** gibt den Stil des Bearbeitungsfeld-Steuerelements an oder ruft diese ab.
+Das **editStyle-Attribut** gibt das Format des Bearbeitungsfeld-Steuerelements an oder ruft es ab.
 
 ``` syntax
         elementID.editStyle
@@ -33,7 +33,7 @@ Dieses Attribut ist eine  Zeichenfolge mit Lese-/Schreibzugriff, die einen der f
 
 
 
-| Wert     | BESCHREIBUNG                                                                     |
+| Wert     | Beschreibung                                                                     |
 |-----------|---------------------------------------------------------------------------------|
 | normal    | Standard. Zeigt normalen Text in einer einzelnen Zeile an.                                 |
 | password  | Zeigt Sternchen ( \* ) statt Text an. Kann nur zur Entwurfszeit angegeben werden. |

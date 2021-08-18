@@ -1,9 +1,9 @@
 ---
-title: 'Rwbyteaddressbuffer:: interlockedand-Funktion'
-description: Stellt den Wert atomarisch dar.
+title: RWByteAddressBuffer::InterlockedAnd-Funktion
+description: Gibt den Wert atomisch an.
 ms.assetid: c4024be0-3884-4af9-8075-76774c7c6178
 keywords:
-- Interlockedand-Funktion HLSL
+- InterlockedAnd-Funktion HLSL
 topic_type:
 - apiref
 api_name:
@@ -13,24 +13,24 @@ api_type:
 ms.topic: reference
 ms.date: 05/31/2018
 api_location: ''
-ms.openlocfilehash: a389da886b193815c7d4b2c1fe0a86db1f068fc7
-ms.sourcegitcommit: 592c9bbd22ba69802dc353bcb5eb30699f9e9403
+ms.openlocfilehash: 8117729543d13b8c5578fd38a829cc0dba2a4d2d77885d32de006f4afad59f24
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "104390498"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117725165"
 ---
-# <a name="interlockedand-function"></a>Interlockedand-Funktion
+# <a name="interlockedand-function"></a>InterlockedAnd-Funktion
 
-Stellt den Wert atomarisch dar.
+Gibt den Wert atomisch an.
 
 ## <a name="syntax"></a>Syntax
 
 ``` syntax
 void InterlockedAnd(
-  in  UINT dest,
-  in  UINT value,
-  out UINT original_value
+  in  UINT dest,
+  in  UINT value,
+  out UINT original_value
 );
 ```
 
@@ -38,28 +38,28 @@ void InterlockedAnd(
 
 <dl> <dt>
 
-*dest* \[ in\]
+*dest* \[ In\]
 </dt> <dd>
 
-Typ: **[ **uint**](/windows/desktop/WinProg/windows-data-types)**
+Typ: **[ **UINT**](/windows/desktop/WinProg/windows-data-types)**
 
 Die Zieladresse.
 
 </dd> <dt>
 
-*Wert* \[ in\]
+*wert* \[ In\]
 </dt> <dd>
 
-Typ: **[ **uint**](/windows/desktop/WinProg/windows-data-types)**
+Typ: **[ **UINT**](/windows/desktop/WinProg/windows-data-types)**
 
 Der Eingabewert.
 
 </dd> <dt>
 
-*ursprünglicher \_ Wert* ausgehend \[\]
+*Ursprünglicher \_ Wert* \[ out\]
 </dt> <dd>
 
-Typ: **[ **uint**](/windows/desktop/WinProg/windows-data-types)**
+Typ: **[ **UINT**](/windows/desktop/WinProg/windows-data-types)**
 
 Der ursprüngliche Wert.
 
@@ -69,32 +69,32 @@ Der ursprüngliche Wert.
 
 Diese Funktion gibt keinen Wert zurück.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Dieser Vorgang kann nur für typisierte int-oder uint-Ressourcen und Shared Memory-Variablen ausgeführt werden. Es gibt drei Verwendungsmöglichkeiten für diese Funktion. Der erste ist, wenn R ein Variablentyp für den gemeinsamen Speicher ist. In diesem Fall führt die Funktion eine atomarische und einen Wert für das Shared Memory-Register aus, auf das von dest verwiesen wird. Das zweite Szenario ist, wenn R ein Ressourcen Variablentyp ist. In diesem Szenario führt die Funktion eine atomarische und von einem Wert für den Ressourcen Speicherort aus, auf den von dest verwiesen wird. Das dritte Szenario ist, dass R ein lokaler Variablentyp ist. In diesem Szenario wird die-Funktion auf einen und den Wert von dest und Value reduziert, der in dest gespeichert ist. Die überladene Funktion verfügt über eine zusätzliche Ausgabevariable, die auf den ursprünglichen Wert von dest festgelegt wird. Dieser überladene Vorgang ist nur verfügbar, wenn R lesbar und beschreibbar ist.
+Dieser Vorgang kann nur für int- oder uint-typisierte Ressourcen und Freigegebene Speichervariablen ausgeführt werden. Es gibt drei mögliche Verwendungsmöglichkeiten für diese Funktion. Die erste ist, wenn R ein Variablentyp für gemeinsam genutzten Arbeitsspeicher ist. In diesem Fall führt die Funktion einen atomaren und einen Wert für das Shared Memory-Register aus, auf das vom Dest verwiesen wird. Das zweite Szenario ist, wenn R ein Ressourcenvariablentyp ist. In diesem Szenario führt die Funktion einen atomaren und einen Wert für den Ressourcenspeicherort aus, auf den vom Dest verwiesen wird. Schließlich ist das dritte Szenario, wenn R ein lokaler Variablentyp ist. In diesem Szenario wird die Funktion auf einen und den Wert von dest und value reduziert, die in dest gespeichert sind. Die überladene Funktion verfügt über eine zusätzliche Ausgabevariable, die auf den ursprünglichen Wert dest festgelegt wird. Dieser überladene Vorgang ist nur verfügbar, wenn R lesbar und beschreibbar ist.
 
-Diese Funktion wird in den folgenden Typen von Shadern unterstützt:
+Diese Funktion wird in den folgenden Shadertypen unterstützt:
 
 
 
-| VS  | Jh  | DS  | GS  | PS  | CS  |
+| VS  | Hs  | DS  | GS  | PS  | CS  |
 |-----|-----|-----|-----|-----|-----|
 | x   | x   |  x  | x   | x   | x   |
 
 
 
- 
+ 
 
 ## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[Rwbyteaddressbuffer](sm5-object-rwbyteaddressbuffer.md)
+[RWByteAddressBuffer](sm5-object-rwbyteaddressbuffer.md)
 </dt> <dt>
 
-[Shader-Modell 5](d3d11-graphics-reference-sm5.md)
+[Shadermodell 5](d3d11-graphics-reference-sm5.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 

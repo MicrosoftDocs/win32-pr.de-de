@@ -1,12 +1,12 @@
 ---
-title: Getprotocolname-Methode der Win32_TSGatewayServerSettings-Klasse
-description: Gibt den Protokollnamen für den angegebenen Protokoll Index zurück.
+title: GetProtocolName-Methode der Win32_TSGatewayServerSettings Klasse
+description: Gibt den Protokollnamen für den angegebenen Protokollindex zurück.
 ms.assetid: 6778cede-cc61-4e5d-9a29-ba88197fa8c6
 ms.tgt_platform: multiple
 keywords:
-- Getprotocolname-Methode Remotedesktopdienste
-- Getprotocolname-Methode Remotedesktopdienste, Win32_TSGatewayServerSettings-Klasse
-- Win32_TSGatewayServerSettings-Klasse Remotedesktopdienste, getprotocolname-Methode
+- GetProtocolName-Remotedesktopdienste
+- GetProtocolName-Methode Remotedesktopdienste , Win32_TSGatewayServerSettings-Klasse
+- Win32_TSGatewayServerSettings klasse Remotedesktopdienste , GetProtocolName-Methode
 topic_type:
 - apiref
 api_name:
@@ -17,16 +17,16 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 81064581b209f047ac492faee6d442b082d038cf
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 86b70ee57d8940dc65b1f7b74151a3dd6889286a26e7bbf4357bea4aae8c5259
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104104331"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117757822"
 ---
-# <a name="getprotocolname-method-of-the-win32_tsgatewayserversettings-class"></a>Getprotocolname-Methode der Win32- \_ Klasse "tgatewayserversettings"
+# <a name="getprotocolname-method-of-the-win32_tsgatewayserversettings-class"></a>GetProtocolName-Methode der Win32 \_ TSGatewayServerSettings-Klasse
 
-Gibt den Protokollnamen für den angegebenen Protokoll Index zurück.
+Gibt den Protokollnamen für den angegebenen Protokollindex zurück.
 
 ## <a name="syntax"></a>Syntax
 
@@ -44,14 +44,14 @@ uint32 GetProtocolName(
 
 <dl> <dt>
 
-*Protokolid* \[ in\]
+*ProtocolId* \[ In\]
 </dt> <dd>
 
-Der Index des Protokoll Bezeichners. Der Wert muss zwischen 0 (null) und dem Wert der **maxprotokolls** -Eigenschaft liegen.
+Index des Protokollbezeichners. Der Wert muss zwischen 0 (null) und dem Wert der **MaxProtocols-Eigenschaft** liegen.
 
 </dd> <dt>
 
-*ProtocolName* \[ vorgenommen\]
+*ProtocolName* \[ out\]
 </dt> <dd>
 
 Gibt den Namen des angegebenen Protokolls zurück.
@@ -60,15 +60,15 @@ Gibt den Namen des angegebenen Protokolls zurück.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Wenn die Methode erfolgreich ist, gibt Sie 0 (null) zurück. Wenn die Methode nicht erfolgreich ist, wird ein Wert ungleich 0 (null) zurückgegeben. Eine Liste der Fehlercodes finden Sie unter [Remotedesktopdienste Fehlercodes des WMI-Anbieters](terminal-services-wmi-provider-error-codes.md).
+Wenn die Methode erfolgreich ist, gibt sie 0 (null) zurück. Wenn die Methode nicht erfolgreich ist, wird ein Wert ungleich 0 (null) zurückgegeben. Eine Liste der Fehlercodes finden Sie unter Remotedesktopdienste [WMI-Anbieterfehlercodes](terminal-services-wmi-provider-error-codes.md).
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
 Ein Protokoll wird unterstützt.
 
-Sie müssen Mitglied der Gruppe "Administratoren" sein, um diese Methode aufzurufen.
+Sie müssen Mitglied der Gruppe Administratoren sein, um diese Methode aufrufen zu können.
 
-Managed Object Format-Dateien (MOF) enthalten die Definitionen für Windows-Verwaltungsinstrumentation (WMI)-Klassen. MOF-Dateien werden nicht als Teil des Microsoft Windows Software Development Kit (SDK) installiert. Sie werden auf dem Server installiert, wenn Sie die zugehörige Rolle mithilfe der Server-Manager hinzufügen. Weitere Informationen zu MOF-Dateien finden Sie unter [Managed Object Format (MOF)](/windows/desktop/WmiSdk/managed-object-format--mof-).
+Managed Object Format -Dateien (MOF) enthalten die Definitionen für Windows WMI-Klassen (Management Instrumentation). MOF-Dateien werden nicht als Teil des Microsoft Windows Software Development Kit (SDK) installiert. Sie werden auf dem Server installiert, wenn Sie die zugeordnete Rolle mithilfe der Server-Manager. Weitere Informationen zu MOF-Dateien finden Sie unter [Managed Object Format (MOF).](/windows/desktop/WmiSdk/managed-object-format--mof-)
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -78,17 +78,17 @@ Managed Object Format-Dateien (MOF) enthalten die Definitionen für Windows-Verw
 |-------------------------------------|------------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Nicht unterstützt<br/>                                                                |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2008<br/>                                                           |
-| Namespace<br/>                | Root \\ CIMv2 \\ TerminalServices<br/>                                                 |
-| MOF<br/>                      | <dl> <dt>"T-Gateway. mof"</dt> </dl> |
+| Namespace<br/>                | \\ \\ CiMv2-Stammterminaldienste<br/>                                                 |
+| MOF<br/>                      | <dl> <dt>TSGateway.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>AagWmi.dll</dt> </dl>    |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Win32-Datei- \_ gatewayserversettings**](win32-tsgatewayserversettings.md)
+[**Win32 \_ TSGatewayServerSettings**](win32-tsgatewayserversettings.md)
 </dt> </dl>
 
  

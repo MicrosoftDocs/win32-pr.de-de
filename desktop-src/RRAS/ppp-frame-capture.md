@@ -1,6 +1,6 @@
 ---
 title: Schreiben eines Treibers zum Erfassen von FRAMES
-description: In diesem Dokument wird erläutert, wie Sie einen Treiber entwickeln, der FRAMES in Windows Vista erfassen kann, bevor sie im Sendepfad komprimiert/verschlüsselt oder im Empfangspfad dekomprimiert/entschlüsselt werden.
+description: In diesem Dokument wird erläutert, wie Sie einen Treiber entwickeln, der FRAMES in Windows Vista erfassen kann, bevor sie im Sendepfad komprimiert/verschlüsselt werden oder nachdem sie im Empfangspfad dekomprimiert/entschlüsselt wurden.
 ms.assetid: 1b3fe1b8-2b11-4aed-98e1-464b8c0821ec
 ms.topic: article
 ms.date: 05/31/2018
@@ -13,7 +13,7 @@ ms.locfileid: "117789688"
 ---
 # <a name="writing-a-driver-to-capture-ppp-frames"></a>Schreiben eines Treibers zum Erfassen von FRAMES
 
-Wenn Point-to-Point-Protokoll Frames (FTP) über einen PPTP-Tunnel (Point-to-Point Tunneling Protocol) mit aktivierter Verschlüsselung oder über einen L2TP-Tunnel (Layer 2 Tunneling Protocol) gesendet werden, der IPSec für die Verschlüsselung verwendet, kann das typische FRAME CAPTURE-Hilfsprogramm nur FRAMES erfassen, die über ein verschlüsseltes Protokollidentitätsfeld verfügen. In diesem Dokument wird erläutert, wie Sie einen Treiber entwickeln, der FRAMES in Windows Vista erfassen kann, bevor sie im Sendepfad komprimiert/verschlüsselt oder im Empfangspfad dekomprimiert/entschlüsselt werden.
+Wenn Point-to-Point-Protokoll Frames (FTP) über einen PPTP-Tunnel (Point-to-Point Tunneling Protocol) mit aktivierter Verschlüsselung oder über einen L2TP-Tunnel (Layer 2 Tunneling Protocol) gesendet werden, der IPSec für die Verschlüsselung verwendet, kann das typische FRAME CAPTURE-Hilfsprogramm nur FRAMES erfassen, die über ein verschlüsseltes Protokollidentitätsfeld verfügen. In diesem Dokument wird erläutert, wie Sie einen Treiber entwickeln, der FRAMES in Windows Vista erfassen kann, bevor sie im Sendepfad komprimiert/verschlüsselt werden oder nachdem sie im Empfangspfad dekomprimiert/entschlüsselt wurden.
 
 1.  Schreiben sie einen NDIS-Protokolltreiber. Weitere Informationen finden Sie unter [NDIS 6.0-Protokolltreiber](https://msdn.microsoft.com/library/ms795570.aspx) oder [NDIS-Protokolltreiber (NDIS 5.1).](https://msdn.microsoft.com/library/ms801145.aspx)
 2.  Installieren Sie den Treiber mit der Hardwareidentität "ms \_ netmon". Ausführliche Anweisungen zum Installieren des Treibers mit einer bestimmten Hardwareidentität finden Sie [im Abschnitt INF-Modelle.](https://msdn.microsoft.com/library/ms794357.aspx)

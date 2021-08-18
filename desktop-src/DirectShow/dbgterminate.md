@@ -1,7 +1,7 @@
 ---
-description: Die dbgend-Funktion bereinigt die Debug-Bibliothek. Wird in Einzelhandels Builds ignoriert.
+description: Die DbgTerminate-Funktion bereinigt die Debugbibliothek. Wird in Einzelhandelsbuilds ignoriert.
 ms.assetid: a0e23c57-b4b5-4bcf-8c63-0dee40cc71a7
-title: Dbgend-Funktion (wxdebug. h)
+title: DbgTerminate-Funktion (Wxdebug.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,16 +16,16 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: d29e5fde86b9573261e39a0dbe2e9d87018ff23c
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 6846f6899730a8b9d128d1bc0a6069fd8a67a5f4f9d8a5a3d618bebad67b0468
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106358018"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117821566"
 ---
-# <a name="dbgterminate-function"></a>Dbgend-Funktion
+# <a name="dbgterminate-function"></a>DbgTerminate-Funktion
 
-Die **dbgend** -Funktion bereinigt die Debug-Bibliothek. Wird in Einzelhandels Builds ignoriert.
+Die **DbgTerminate-Funktion** bereinigt die Debugbibliothek. Wird in Einzelhandelsbuilds ignoriert.
 
 ## <a name="syntax"></a>Syntax
 
@@ -44,9 +44,9 @@ Diese Funktion besitzt keine Parameter.
 
 Diese Funktion gibt keinen Wert zurück.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Wenn Sie die [**dbginitialise**](dbginitialise.md) -Funktion aufzurufen, wird diese Funktion aufgerufen.
+Rufen Sie diese Funktion auf, wenn Sie die [**DbgInitialise-Funktion**](dbginitialise.md) aufrufen.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -54,16 +54,16 @@ Wenn Sie die [**dbginitialise**](dbginitialise.md) -Funktion aufzurufen, wird di
 
 | Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Wxdebug. h (Include Streams. h)</dt> </dl>                                                                                   |
-| Bibliothek<br/> | <dl> " <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Wxdebug.h (include Streams.h)</dt> </dl>                                                                                   |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Verkaufsbuilds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[Debug-Ausgabefunktionen](debug-output-functions.md)
+[Debuggen von Ausgabefunktionen](debug-output-functions.md)
 </dt> </dl>
 
  

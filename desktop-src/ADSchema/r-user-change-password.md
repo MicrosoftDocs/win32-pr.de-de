@@ -1,10 +1,10 @@
 ---
-title: Benutzer-ändern-Kennwort erweitert rechts
+title: Erweitertes Benutzeränderungskennwort
 description: Ermöglicht das Ändern des Kennworts für das Benutzerkonto.
 ms.assetid: 15d2c52f-f626-4c6e-995d-19bbbbb38b6b
 ms.tgt_platform: multiple
 keywords:
-- Benutzer-ändern-Kennwort erweitert AD Schema
+- AD-Schema für erweiterte rechte Benutzeränderungskennwörter
 topic_type:
 - apiref
 api_name:
@@ -13,14 +13,14 @@ api_type:
 - Schema
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 173f023e941655c609d94f8f75d48d4546a3c2ad
-ms.sourcegitcommit: b77ace27b0432e7cd3863191b11926be032fbe2f
+ms.openlocfilehash: 6538eaf3f702f07fc5b8c569b44be38a28c2892b4f0b8104b999e1aaaea0a484
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "103957308"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117835757"
 ---
-# <a name="user-change-password-extended-right"></a>Benutzer-ändern-Kennwort erweitert rechts
+# <a name="user-change-password-extended-right"></a>Erweitertes Benutzeränderungskennwort
 
 Ermöglicht das Ändern des Kennworts für das Benutzerkonto.
 
@@ -28,16 +28,16 @@ Ermöglicht das Ändern des Kennworts für das Benutzerkonto.
 
 | Eingabe | Wert |
 |--------------|--------------------------------------|
-| CN           | Benutzer-ändern-Kennwort                 |
+| CN           | Benutzeränderungskennwort                 |
 | Anzeigename | Ändern des Kennworts                      |
-| Rights-GUID  | ab721a53-1e2f-11d0-9819-00aa0040529b |
+| Rechte-GUID  | ab721a53-1e2f-11d0-9819-00aa0040529b |
 
 
 
 ## <a name="implementations"></a>Implementierungen
 
 -   [**Windows 2000 Server**](#windows-2000-server)
--   [**Windows Server 2003**](#windows-server-2003)
+-   [**Windows Server 2003**](#windows-server-2003)
 -   [**Adam**](#adam)
 -   [**Windows Server 2003 R2**](#windows-server-2003-r2)
 -   [**Windows Server 2008**](#windows-server-2008)
@@ -51,18 +51,18 @@ Ermöglicht das Ändern des Kennworts für das Benutzerkonto.
 | Eingabe | Wert |
 |-------------------------|-----------------------------------------------------------------------------|
 | Applies-To              | [**Benutzer**](c-user.md)<br/> [**Computer**](c-computer.md)<br/> |
-| Lokalisierung-Display-ID | 2                                                                           |
+| Lokalisierungsanzeige-ID | 2                                                                           |
 
 
 
-## <a name="windows-server-2003"></a>Windows Server 2003
+## <a name="windows-server-2003"></a>Windows Server 2003
 
 
 
 | Eingabe | Wert |
 |-------------------------|---------------------------------------------------------------------------------------------------------------------------------|
 | Applies-To              | [**Benutzer**](c-user.md)<br/> [**Computer**](c-computer.md)<br/> [**inetOrgPerson**](c-inetorgperson.md)<br/> |
-| Lokalisierung-Display-ID | 2                                                                                                                               |
+| Lokalisierungsanzeige-ID | 2                                                                                                                               |
 
 
 
@@ -73,7 +73,7 @@ Ermöglicht das Ändern des Kennworts für das Benutzerkonto.
 | Eingabe | Wert |
 |-------------------------|-----|
 | Applies-To              | \-  |
-| Lokalisierung-Display-ID | 2   |
+| Lokalisierungsanzeige-ID | 2   |
 
 
 
@@ -84,7 +84,7 @@ Ermöglicht das Ändern des Kennworts für das Benutzerkonto.
 | Eingabe | Wert |
 |-------------------------|---------------------------------------------------------------------------------------------------------------------------------|
 | Applies-To              | [**Benutzer**](c-user.md)<br/> [**Computer**](c-computer.md)<br/> [**inetOrgPerson**](c-inetorgperson.md)<br/> |
-| Lokalisierung-Display-ID | 2                                                                                                                               |
+| Lokalisierungsanzeige-ID | 2                                                                                                                               |
 
 
 
@@ -95,7 +95,7 @@ Ermöglicht das Ändern des Kennworts für das Benutzerkonto.
 | Eingabe | Wert |
 |-------------------------|---------------------------------------------------------------------------------------------------------------------------------|
 | Applies-To              | [**Benutzer**](c-user.md)<br/> [**Computer**](c-computer.md)<br/> [**inetOrgPerson**](c-inetorgperson.md)<br/> |
-| Lokalisierung-Display-ID | 2                                                                                                                               |
+| Lokalisierungsanzeige-ID | 2                                                                                                                               |
 
 
 
@@ -105,8 +105,8 @@ Ermöglicht das Ändern des Kennworts für das Benutzerkonto.
 
 | Eingabe | Wert |
 |-------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Applies-To              | [**Benutzer**](c-user.md)<br/> [**Computer**](c-computer.md)<br/> [**ms-DS-Managed-Service-Konto**](c-msds-managedserviceaccount.md)<br/> [**inetOrgPerson**](c-inetorgperson.md)<br/> |
-| Lokalisierung-Display-ID | 2                                                                                                                                                                                                                |
+| Applies-To              | [**Benutzer**](c-user.md)<br/> [**Computer**](c-computer.md)<br/> [**ms-DS-Managed-Service-Account**](c-msds-managedserviceaccount.md)<br/> [**inetOrgPerson**](c-inetorgperson.md)<br/> |
+| Lokalisierungsanzeige-ID | 2                                                                                                                                                                                                                |
 
 
 
@@ -116,8 +116,8 @@ Ermöglicht das Ändern des Kennworts für das Benutzerkonto.
 
 | Eingabe | Wert |
 |-------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Applies-To              | [**Benutzer**](c-user.md)<br/> [**Computer**](c-computer.md)<br/> [**ms-DS-Managed-Service-Konto**](c-msds-managedserviceaccount.md)<br/> [**inetOrgPerson**](c-inetorgperson.md)<br/> |
-| Lokalisierung-Display-ID | 2                                                                                                                                                                                                                |
+| Applies-To              | [**Benutzer**](c-user.md)<br/> [**Computer**](c-computer.md)<br/> [**ms-DS-Managed-Service-Account**](c-msds-managedserviceaccount.md)<br/> [**inetOrgPerson**](c-inetorgperson.md)<br/> |
+| Lokalisierungsanzeige-ID | 2                                                                                                                                                                                                                |
 
 
 

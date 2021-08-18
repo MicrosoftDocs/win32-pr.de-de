@@ -7,12 +7,12 @@ keywords:
 - Angeben von Vergleichswerten in AD
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: edba238961cdc18b088b6b5bd5b06ff4be383add
-ms.sourcegitcommit: cb87082135319cbdc5df541e3071eebb83a58972
+ms.openlocfilehash: b5babc7d9781895c9671594214e4e036a85ef951cdb4b97ba34d708d160dd8fc
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/04/2021
-ms.locfileid: "111386750"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118188121"
 ---
 # <a name="how-to-specify-comparison-values"></a>Angeben von Vergleichswerten
 
@@ -36,7 +36,7 @@ Im folgenden Beispiel wird nach Objekten gesucht, für die **showInAdvancedViewO
 
 
 
-Im folgenden Beispiel wird nach Objekten gesucht, für die **showInAdvancedViewOnly** auf FALSE festgelegt **ist:**
+Im folgenden Beispiel wird nach Objekten gesucht, für die **showInAdvancedViewOnly** auf **FALSE festgelegt ist:**
 
 
 ```C++
@@ -61,7 +61,7 @@ Der in einem Filter angegebene Wert muss eine dezimale ganze Zahl sein. Hexadezi
 
 " <attribute name> " ist der **lDAPDisplayName des** Attributs und "<value>" ist der Wert, der für den Vergleich verwendet werden soll.
 
-Das folgende Codebeispiel zeigt einen Filter, der nach Objekten sucht, die über einen **groupType-Wert** verfügen, der dem **ADS GROUP TYPE UNIVERSAL \_ \_ \_ \_ GROUP** (8)-Flag und dem **ADS GROUP TYPE SECURITY \_ \_ \_ \_ ENABLED** (0x80000000)-Flag entspricht. Die beiden flags kombinierten 0x80000008, die in decimal konvertiert werden, ist 2147483656.
+Das folgende Codebeispiel zeigt einen Filter, der nach Objekten sucht, die über einen **groupType-Wert** verfügen, der dem **ADS GROUP TYPE UNIVERSAL \_ \_ \_ \_ GROUP** (8)-Flag und dem **ADS GROUP TYPE SECURITY \_ \_ \_ \_ ENABLED** (0x80000000)-Flag entspricht. Die beiden kombinierten Flags 0x80000008, die in decimal konvertiert werden, 2147483656.
 
 
 ```C++
@@ -70,7 +70,7 @@ Das folgende Codebeispiel zeigt einen Filter, der nach Objekten sucht, die über
 
 
 
-Die LDAP-Abgleichsregeloperatoren können auch verwendet werden, um bitweise Vergleiche durchzuführen. Weitere Informationen zu Abgleichsregeln finden Sie unter [Suchfiltersyntax](/windows/desktop/ADSI/search-filter-syntax). Das folgende Codebeispiel zeigt einen Filter, der nach Objekten sucht, deren **groupType** mit dem Bitsatz **ADS GROUP TYPE SECURITY \_ \_ \_ \_ ENABLED** (0x80000000 = 2147483648) festgelegt ist.
+Die LDAP-Abgleichsregeloperatoren können auch verwendet werden, um bitweise Vergleiche durchzuführen. Weitere Informationen zu Abgleichsregeln finden Sie unter [Suchfiltersyntax](/windows/desktop/ADSI/search-filter-syntax). Das folgende Codebeispiel zeigt einen Filter, der nach Objekten sucht, für die **ein groupType-Objekt** mit dem **Bit ADS GROUP TYPE SECURITY \_ \_ \_ \_ ENABLED** (0x80000000 = 2147483648) festgelegt ist.
 
 
 ```C++
@@ -151,7 +151,7 @@ Das folgende Codebeispiel zeigt einen Filter, der angibt, dass **creationTime** 
 
 
 
-Die folgenden Funktionen erstellen einen Filter für eine genaue Übereinstimmung (=) für ein großes Ganzzahlattribut und überprüfen das Attribut im Schema und dessen Syntax:
+Die folgenden Funktionen erstellen einen filter für eine genaue Übereinstimmung (=) für ein großes Ganzzahlattribut und überprüfen das Attribut im Schema und dessen Syntax:
 
 
 ```C++
@@ -279,7 +279,7 @@ HRESULT CreateExactMatchFilterLargeInteger( LPOLESTR szAttribute,
 <span id="PrintableString"></span><span id="printablestring"></span><span id="PRINTABLESTRING"></span>PrintableString
 </dt> <dd>
 
-Attribute mit diesen Syntaxen sollten bestimmten Zeichensätzen entsprechen. Weitere Informationen finden Sie unter [Syntaxes for Attributes in Active Directory Domain Services.](syntaxes-for-attributes-in-active-directory-domain-services.md)
+Attribute mit diesen Syntaxen sollten bestimmten Zeichensätzen entsprechen. Weitere Informationen finden Sie unter [Syntaxes for Attributes in Active Directory Domain Services](syntaxes-for-attributes-in-active-directory-domain-services.md).
 
 Derzeit werden Active Directory Domain Services Zeichensätze nicht erzwungen.
 
@@ -303,7 +303,7 @@ YYYYMMDDHHMMSS.0Z
 
 Wenn die lokale Zeitzone nicht GMT ist, verwenden Sie einen differenziellen Wert, um Ihre lokale Zeitzone anzugeben, und wenden Sie das differenzielle auf GMT an. Die differenzielle Basiert auf: GMT=Local+differential.
 
-Verwenden Sie Folgendes, um ein differenzielles -Paar anzugeben:
+Verwenden Sie zum Angeben eines differenziellen Werts Folgendes:
 
 
 ```C++
@@ -321,7 +321,7 @@ Das folgende Beispiel zeigt einen Filter, der eine **whenCreated-Zeit** angibt, 
 
 
 
-Das folgende Beispiel zeigt einen Filter, der eine **whenCreated-Zeit** angibt, die auf 23.03.2019 20:52:58 Uhr Normalzeit (differenziell + 12 Stunden) festgelegt ist:
+Das folgende Beispiel zeigt einen Filter, der eine **whenCreated-Zeit** angibt, die auf 23.03.2019 20:52:58 Uhr Normalzeit (differenziell : +12 Stunden) festgelegt ist:
 
 
 ```C++
@@ -460,7 +460,7 @@ Das folgende Beispiel zeigt einen Filter, der eine **myTimeAttrib-Zeit** angibt,
 
 
 
-Das folgende Beispiel zeigt einen Filter, der eine **myTimeAttrib-Zeit** ohne Angabe von Sekunden auf 23.03.99 20:52:58 Uhr angibt:
+Das folgende Beispiel zeigt einen Filter, der eine **myTimeAttrib-Zeit** angibt, die ohne Angabe von Sekunden auf 23.03.99 20:52:58 Uhr festgelegt ist:
 
 
 ```C++
@@ -505,7 +505,7 @@ Das folgende Beispiel zeigt einen Filter, der **governsID für** die Volumeklass
 
 
 
-Zwei entsprechende Filter, die das **systemMustContain-Attribut** mit **uNCName** angeben, das über eine OID von 1.2.840.113556.1.4.137 verfügt:
+Zwei gleichwertige Filter, die das **systemMustContain-Attribut** mit **uNCName** angeben, das über eine OID von 1.2.840.113556.1.4.137 verfügt:
 
 
 ```C++

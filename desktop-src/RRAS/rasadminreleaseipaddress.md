@@ -1,9 +1,9 @@
 ---
-title: Rasadminreleaseipaddress-Rückruffunktion
-description: Die rasadminreleaseipaddress-Funktion ist eine Anwendungs definierte Funktion, die von einer Drittanbieter-RAS-Server-Verwaltungs-dll exportiert wird.
+title: Rückruffunktion "RasAdminReleaseIpAddress"
+description: Die RasAdminReleaseIpAddress-Funktion ist eine anwendungsdefinierte Funktion, die von einer RAS-Serververwaltungs-DLL eines Drittanbieters exportiert wird.
 ms.assetid: 86fd9173-f158-4de5-8166-483a652a52cc
 keywords:
-- Rasadminreleaseipaddress-Rückruffunktion (RAS)
+- RasAdminReleaseIpAddress-Rückruffunktion RAS
 topic_type:
 - apiref
 api_name:
@@ -13,27 +13,27 @@ api_type:
 ms.topic: reference
 ms.date: 05/31/2018
 api_location: ''
-ms.openlocfilehash: d58c162ebc6d340b9bd913407bc00aac87e208e4
-ms.sourcegitcommit: 592c9bbd22ba69802dc353bcb5eb30699f9e9403
+ms.openlocfilehash: 102c9af7a8e38ccbbb4a7e67b2734588857ddca93da862be211fd1223133f80d
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "103729816"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117788862"
 ---
-# <a name="rasadminreleaseipaddress-callback-function"></a>Rasadminreleaseipaddress-Rückruffunktion
+# <a name="rasadminreleaseipaddress-callback-function"></a>Rückruffunktion "RasAdminReleaseIpAddress"
 
-\[Die **rasadminreleaseipaddress** -Funktion ist für die Verwendung in Windows NT 4,0 verfügbar und in nachfolgenden Versionen nicht verfügbar. Verwenden Sie stattdessen [**mpradminreleaseipaddress**](/windows/desktop/api/Mprapi/nf-mprapi-mpradminreleaseipaddress).\]
+\[Die **RasAdminReleaseIpAddress-Funktion** ist für die Verwendung in Windows NT 4.0 verfügbar und in nachfolgenden Versionen nicht verfügbar. Verwenden Sie stattdessen [**MprAdminReleaseIpAddress**](/windows/desktop/api/Mprapi/nf-mprapi-mpradminreleaseipaddress).\]
 
-Die **rasadminreleaseipaddress** -Funktion ist eine Anwendungs definierte Funktion, die von einer Drittanbieter-RAS-Server-Verwaltungs-dll exportiert wird. RAS ruft diese Funktion auf, um die dll zu benachrichtigen, dass der Remote Client getrennt wurde und dass die IP-Adresse freigegeben werden sollte.
+Die **RasAdminReleaseIpAddress-Funktion** ist eine anwendungsdefinierte Funktion, die von einer RAS-Serververwaltungs-DLL eines Drittanbieters exportiert wird. RAS ruft diese Funktion auf, um die DLL zu benachrichtigen, dass der Remoteclient getrennt wurde und dass die IP-Adresse freigegeben werden soll.
 
 ## <a name="syntax"></a>Syntax
 
 
 ```C++
 void CALLBACK RasAdminReleaseIpAddress(
-  _In_ WCHAR  *lpszUserName,
-  _In_ WCHAR  *lpszPortName,
-  _In_ IPADDR *pipAddress
+  _In_ WCHAR  *lpszUserName,
+  _In_ WCHAR  *lpszPortName,
+  _In_ IPADDR *pipAddress
 );
 ```
 
@@ -43,72 +43,72 @@ void CALLBACK RasAdminReleaseIpAddress(
 
 <dl> <dt>
 
-*lpszusername* \[ in\]
+*lpszUserName* \[ In\]
 </dt> <dd>
 
-Gibt den Zeiger auf eine NULL-terminierte Unicode-Zeichenfolge an, die den Namen eines Remote Benutzers angibt, für den zuvor mithilfe der [**rasadmingetipaddressforuser**](rasadmingetipaddressforuser.md) -Funktion eine IP-Adresse abgerufen wurde.
+Gibt den Zeiger auf eine auf NULL endende Unicode-Zeichenfolge an, die den Namen eines Remotebenutzers angibt, für den zuvor mithilfe der [**RasAdminGetIpAddressForUser-Funktion**](rasadmingetipaddressforuser.md) eine IP-Adresse abgerufen wurde.
 
 </dd> <dt>
 
-*lpszportname* \[ in\]
+*lpszPortName* \[ In\]
 </dt> <dd>
 
-Ein Zeiger auf eine mit NULL endenden Unicode-Zeichenfolge, die den Namen des Ports angibt, auf dem der von *lpszusername* angegebene Benutzer verbunden ist.
+Zeiger auf eine auf NULL endende Unicode-Zeichenfolge, die den Namen des Ports angibt, an dem der von *lpszUserName* angegebene Benutzer verbunden ist.
 
 </dd> <dt>
 
-*pipaddress* \[ in\]
+*pipAddress* \[ In\]
 </dt> <dd>
 
-Zeiger auf eine **ipaddr** -Variable, die die IP-Adresse angibt, die für diesen Benutzer in einem vorherigen Aufruf von [**rasadmingetipaddressforuser**](rasadmingetipaddressforuser.md)zurückgegeben wurde.
+Zeiger auf eine **IPADDR-Variable,** die die IP-Adresse angibt, die für diesen Benutzer in einem vorherigen Aufruf von [**RasAdminGetIpAddressForUser**](rasadmingetipaddressforuser.md)zurückgegeben wurde.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Es sind keine erweiterten Fehlerinformationen für diese Funktion vorhanden. " [**GetLastError**](/windows/win32/api/errhandlingapi/nf-errhandlingapi-getlasterror)" nicht aufrufen.
+Für diese Funktion sind keine erweiterten Fehlerinformationen vorhanden. Rufen [**Sie getLastError**](/windows/win32/api/errhandlingapi/nf-errhandlingapi-getlasterror)nicht auf.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Der RAS-Server ruft **die rasadminreleaseipaddress** -Funktion nur auf, wenn die Anwendung während des vorherigen Aufrufs von [**rasadmingetipaddressforuser**](rasadmingetipaddressforuser.md) für den Benutzer, der durch den *lpszusername* -Parameter angegeben wurde, **true** im *bnotifyrelease* -Parameter zurückgegeben hat.
+Der RAS-Server ruft die **RasAdminReleaseIpAddress-Funktion** nur auf, wenn die Anwendung **true** im *bNotifyRelease-Parameter* während des vorherigen Aufrufs von [**RasAdminGetIpAddressForUser**](rasadmingetipaddressforuser.md) für den vom *lpszUserName-Parameter angegebenen* Benutzer zurückgegeben hat.
 
-Das Setup Programm für eine Drittanbieter-RAS-Verwaltungs-dll muss die dll bei RAS registrieren, indem unter dem folgenden Schlüssel in der Registrierung Informationen bereitgestellt werden:
+Das Setupprogramm für eine RAS-Verwaltungs-DLL eines Drittanbieters muss die DLL bei RAS registrieren, indem Informationen unter dem folgenden Schlüssel in der Registrierung zur Verfügung gestellt werden:
 
 ```
 HKEY_LOCAL_MACHINE
-   SOFTWARE
-      Microsoft
-         RAS
-            AdminDll
+   SOFTWARE
+      Microsoft
+         RAS
+            AdminDll
 ```
 
-Um die dll zu registrieren, legen Sie die folgenden Werte unter diesem Schlüssel fest.
+Legen Sie zum Registrieren der DLL die folgenden Werte unter diesem Schlüssel fest.
 
 
 
 | Wertname    | Wertdaten                                                                    |
 |---------------|-------------------------------------------------------------------------------|
-| *DisplayName* | Eine **reg \_ SZ** -Zeichenfolge, die den benutzerfreundlichen anzeigen amen der dll enthält. |
-| *Dll*     | Eine **reg- \_ SZ** -Zeichenfolge, die den vollständigen Pfad der dll enthält.                  |
+| *DisplayName* | Eine **REG \_ SZ-Zeichenfolge,** die den benutzerfreundlichen Anzeigenamen der DLL enthält. |
+| *DLLPath*     | Eine **REG \_ SZ-Zeichenfolge,** die den vollständigen Pfad der DLL enthält.                  |
 
 
 
- 
+ 
 
-Beispielsweise könnte der Registrierungs Eintrag für eine RAS-Verwaltungs-dll von einem fiktiven Unternehmen mit dem Namen ProElectron, Inc. wie folgt lauten:
+Der Registrierungseintrag für eine RAS-Verwaltungs-DLL eines fiktiven Unternehmens mit dem Namen ProElecron, Inc. kann beispielsweise wie im Folgenden beschrieben sein:
 
 ```
 HKEY_LOCAL_MACHINE
-   SOFTWARE
-      Microsoft
-         RAS
-            AdminDll
+   SOFTWARE
+      Microsoft
+         RAS
+            AdminDll
 ```
 
-*Display Name*: **reg \_ SZ** : ProElectron RAS admin dll *DllPath*: **reg \_ SZ** : C: \\ NT \\ system32 \\ntwkadm.dll
+*DisplayName*: **REG \_ SZ** : ProElecron RAS Admin DLL *DLLPath*: **REG \_ SZ** : C: \\ nt \\ system32 \\ntwkadm.dll
 
-Das Setup Programm für eine RAS-Verwaltungs-dll sollte auch Funktionen zum Entfernen/Deinstallieren bereitstellen. Wenn ein Benutzer die dll entfernt, sollte das Setup Programm die Registrierungseinträge der dll löschen.
+Das Setupprogramm für eine RAS-Verwaltungs-DLL sollte auch Funktionen zum Entfernen/Deinstallieren bereitstellen. Wenn ein Benutzer die DLL entfernt, sollte das Setupprogramm die Registrierungseinträge der DLL löschen.
 
- 
+ 
 
- 
+ 

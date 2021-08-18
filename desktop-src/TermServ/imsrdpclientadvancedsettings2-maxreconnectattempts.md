@@ -1,24 +1,24 @@
 ---
-title: IMsRdpClientAdvancedSettings2 maxreconnectattempts (Eigenschaft)
+title: IMsRdpClientAdvancedSettings2 MaxReconnectAttempts (Eigenschaft)
 description: Gibt an, wie oft versucht werden soll, während der automatischen erneuten Verbindung erneut eine Verbindung herzustellen.
 ms.assetid: 24bfd3b6-d2de-4e46-8b5f-a4702c18a93c
 ms.tgt_platform: multiple
 keywords:
-- Maxreconnectattempts-Eigenschaft Remotedesktopdienste
-- Maxreconnectattempts-Eigenschaft Remotedesktopdienste, IMsRdpClientAdvancedSettings2-Schnittstelle
-- IMsRdpClientAdvancedSettings2 Interface Remotedesktopdienste, maxreconnectattempts-Eigenschaft
-- Maxreconnectattempts-Eigenschaft Remotedesktopdienste, IMsRdpClientAdvancedSettings3-Schnittstelle
-- IMsRdpClientAdvancedSettings3 Interface Remotedesktopdienste, maxreconnectattempts-Eigenschaft
-- Maxreconnectattempts-Eigenschaft Remotedesktopdienste, IMsRdpClientAdvancedSettings4-Schnittstelle
-- IMsRdpClientAdvancedSettings4 Interface Remotedesktopdienste, maxreconnectattempts-Eigenschaft
-- Maxreconnectattempts-Eigenschaft Remotedesktopdienste, IMsRdpClientAdvancedSettings5-Schnittstelle
-- IMsRdpClientAdvancedSettings5 Interface Remotedesktopdienste, maxreconnectattempts-Eigenschaft
-- Maxreconnectattempts-Eigenschaft Remotedesktopdienste, IMsRdpClientAdvancedSettings6-Schnittstelle
-- IMsRdpClientAdvancedSettings6 Interface Remotedesktopdienste, maxreconnectattempts-Eigenschaft
-- Maxreconnectattempts-Eigenschaft Remotedesktopdienste, IMsRdpClientAdvancedSettings7-Schnittstelle
-- IMsRdpClientAdvancedSettings7 Interface Remotedesktopdienste, maxreconnectattempts-Eigenschaft
-- Maxreconnectattempts-Eigenschaft Remotedesktopdienste, IMsRdpClientAdvancedSettings8-Schnittstelle
-- IMsRdpClientAdvancedSettings8 Interface Remotedesktopdienste, maxreconnectattempts-Eigenschaft
+- MaxReconnectAttempts-Remotedesktopdienste
+- MaxReconnectAttempts-Eigenschaft Remotedesktopdienste , IMsRdpClientAdvancedSettings2-Schnittstelle
+- IMsRdpClientAdvancedSettings2-Schnittstelle Remotedesktopdienste , MaxReconnectAttempts-Eigenschaft
+- MaxReconnectAttempts-Eigenschaft Remotedesktopdienste , IMsRdpClientAdvancedSettings3-Schnittstelle
+- IMsRdpClientAdvancedSettings3-Schnittstelle Remotedesktopdienste , MaxReconnectAttempts-Eigenschaft
+- MaxReconnectAttempts-Eigenschaft Remotedesktopdienste , IMsRdpClientAdvancedSettings4-Schnittstelle
+- IMsRdpClientAdvancedSettings4-Schnittstelle Remotedesktopdienste , MaxReconnectAttempts-Eigenschaft
+- MaxReconnectAttempts-Eigenschaft Remotedesktopdienste , IMsRdpClientAdvancedSettings5-Schnittstelle
+- IMsRdpClientAdvancedSettings5-Schnittstelle Remotedesktopdienste , MaxReconnectAttempts-Eigenschaft
+- MaxReconnectAttempts-Eigenschaft Remotedesktopdienste , IMsRdpClientAdvancedSettings6-Schnittstelle
+- IMsRdpClientAdvancedSettings6-Schnittstelle Remotedesktopdienste , MaxReconnectAttempts-Eigenschaft
+- MaxReconnectAttempts-Eigenschaft Remotedesktopdienste , IMsRdpClientAdvancedSettings7-Schnittstelle
+- IMsRdpClientAdvancedSettings7-Schnittstelle Remotedesktopdienste , MaxReconnectAttempts-Eigenschaft
+- MaxReconnectAttempts-Eigenschaft Remotedesktopdienste , IMsRdpClientAdvancedSettings8-Schnittstelle
+- IMsRdpClientAdvancedSettings8-Schnittstelle Remotedesktopdienste , MaxReconnectAttempts-Eigenschaft
 topic_type:
 - apiref
 api_name:
@@ -49,14 +49,14 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 322796a2d6ca6a13476dad58af8c385b8bdfa1fb
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 2e3ff5875e55de54ddf454dd8d3e283fd77be42ae1c54474fc4acdaaef8a55ae
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "106337941"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117757356"
 ---
-# <a name="imsrdpclientadvancedsettings2maxreconnectattempts-property"></a>IMsRdpClientAdvancedSettings2:: maxreconnectattempts-Eigenschaft
+# <a name="imsrdpclientadvancedsettings2maxreconnectattempts-property"></a>IMsRdpClientAdvancedSettings2::MaxReconnectAttempts (Eigenschaft)
 
 Gibt an, wie oft versucht werden soll, während der automatischen erneuten Verbindung erneut eine Verbindung herzustellen.
 
@@ -79,13 +79,13 @@ HRESULT get_MaxReconnectAttempts(
 
 ## <a name="property-value"></a>Eigenschaftswert
 
-Die neue Anzahl der Wiederholungen. Gültige Werte sind 0 bis einschließlich 200.
+Die neue Anzahl von Erneuten. Die gültigen Werte sind 0 bis einschließlich 200.
 
 ## <a name="error-codes"></a>Fehlercodes
 
-Gibt **\_ OK** zurück, wenn erfolgreich.
+Geben Sie **S \_ OK zurück,** wenn erfolgreich.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
 Diese Eigenschaft kann nicht festgelegt werden, wenn das Steuerelement verbunden ist.
 
@@ -105,7 +105,7 @@ Weitere Informationen zu Remotedesktop-Webverbindung finden Sie unter [Anforderu
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 

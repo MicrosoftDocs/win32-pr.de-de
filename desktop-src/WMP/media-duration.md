@@ -1,9 +1,9 @@
 ---
-title: Media. Duration
-description: Die Duration-Eigenschaft ruft die Dauer des aktuellen Medien Elements in Sekunden ab.
+title: Media.duration
+description: Die duration-Eigenschaft ruft die Dauer des aktuellen Medienelements in Sekunden ab.
 ms.assetid: d7d36858-812d-471b-84ce-fe2ab96b86b3
 keywords:
-- Media. Duration Windows Media Player
+- Media.duration Windows Media Player
 topic_type:
 - apiref
 api_name:
@@ -14,38 +14,38 @@ api_type:
 - DllExport
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 71586f6aa37401d56a9e9537bfbea6c5af23f318
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: e89eab1ffbb8c9f3d48c3f61eb6d831af66b4931ed1d858658eed3fc21d08183
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106368690"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118118800"
 ---
-# <a name="mediaduration"></a>Media. Duration
+# <a name="mediaduration"></a>Media.duration
 
-Die **Duration** -Eigenschaft ruft die Dauer des aktuellen Medien Elements in Sekunden ab.
+Die **duration-Eigenschaft** ruft die Dauer des aktuellen Medienelements in Sekunden ab.
 
 ## <a name="syntax"></a>Syntax
 
-*Player*. *currentMedia*. **Dauer**
+*Player*. *currentMedia*. **duration**
 
 ## <a name="possible-values"></a>Mögliche Werte
 
-Diese Eigenschaft ist eine schreibgeschützte **Zahl** ( **Double**).
+Diese Eigenschaft ist eine schreibgeschützte **Zahl** ( **double**).
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-, Wenn diese Eigenschaft mit einem anderen als dem in *Player* angegebenen Medien Element verwendet wird. **currentMedia** kann keinen gültigen Wert enthalten.
+Wenn diese Eigenschaft mit einem anderen Medienelement als dem in *Player* angegebenen verwendet wird. **currentMedia**, es darf keinen gültigen Wert enthalten.
 
-Zum Abrufen der Dauer für Dateien, die sich nicht in der Bibliothek des Benutzers befinden, müssen Sie auf das Öffnen der Datei durch Windows Media Player warten. Das heißt, dass der aktuelle openstate-Wert "mediaopen" entsprechen muss. Sie können dies überprüfen, indem Sie den *Player* verarbeiten. **OpenStateChange** -Ereignis oder durch regelmäßiges Überprüfen des Werts von *Player*. **openstate**.
+Um die Dauer für Dateien abzurufen, die sich nicht in der Bibliothek des Benutzers befinden, müssen Sie warten, bis Windows Media Player die Datei öffnet. Das bedeutet, dass der aktuelle OpenState gleich MediaOpen sein muss. Sie können dies überprüfen, indem Sie den *Player* behandeln. **OpenStateChange-Ereignis** oder durch regelmäßiges Überprüfen des Werts von *Player*. **openState**.
 
-Bei Wiedergabelisten kann die Dauer der einzelnen Medienelemente abgerufen werden, wenn das einzelne Medien Element geöffnet wird, anstatt beim Öffnen der Wiedergabeliste.
+Bei Wiedergabelisten kann die Dauer jedes Medienelements abgerufen werden, wenn das einzelne Medienelement geöffnet wird, und nicht die , wenn die Wiedergabeliste geöffnet wird.
 
-Zum Abrufen des Werts dieser Eigenschaft ist Lesezugriff auf die Bibliothek erforderlich. Weitere Informationen finden Sie unter [Bibliotheks Zugriff](library-access.md).
+Um den Wert dieser Eigenschaft abzurufen, ist Lesezugriff auf die Bibliothek erforderlich. Weitere Informationen finden Sie unter [Bibliothekszugriff.](library-access.md)
 
-Im folgenden JScript-Beispiel werden *Medien* verwendet. **Dauer** , mit der die verbleibende Zeit im aktuellen Medien Element angezeigt wird. Ein HTML div-Element namens remtime zeigt die Informationen an. Ein HTML-Timer aktualisiert den Text im div-Element jede Sekunde.
+Im folgenden JScript Beispiel wird *Media verwendet.* **dauer,** um die verbleibende Zeit im aktuellen Medienelement anzuzeigen. Ein HTML-DIV-Element mit dem Namen RemTime zeigt die Informationen an. Ein HTML-Timer aktualisiert den Text im DIV-Element jede Sekunde.
 
-Mit dem folgenden JScript-Code wird der Timer gestartet:
+Mit dem folgenden JScript Code wird der Timer gestartet:
 
 
 ```JScript
@@ -55,7 +55,7 @@ idTmr = window.setInterval("update()",1000);
 
 
 
-Mit dem folgenden JScript-Code wird der Timer beendet:
+Mit dem folgenden JScript Code wird der Timer beendet:
 
 
 ```JScript
@@ -64,9 +64,9 @@ window.clearInterval(idTmr);
 
 
 
-Verwenden Sie den *Player*. **PlayStateChange** -Ereignis mit einer **Switch** -Anweisung, um zu bestimmen, wann der Timer gestartet und angehalten werden soll.
+Verwenden Sie den *Player*. **PlayStateChange-Ereignis** mit einer **switch-Anweisung,** um zu bestimmen, wann der Timer gestartet und beendet werden soll.
 
-Der folgende JScript-Code wird jedes Mal ausgeführt, wenn der Timer die Update-Funktion aufruft:
+Der folgende JScript Code wird jedes Mal ausgeführt, wenn der Timer die Updatefunktion aufruft:
 
 
 ```JScript
@@ -89,28 +89,28 @@ RemTime.innerHTML += Math.floor(Player.currentMedia.duration - TimeNow);
 
 | Anforderung | Wert |
 |--------------------|------------------------------------------------------------------------------------|
-| Version<br/> | Windows Media Player Version 7,0 oder höher.<br/>                              |
+| Version<br/> | Windows Media Player Version 7.0 oder höher.<br/>                              |
 | DLL<br/>     | <dl> <dt>Wmp.dll</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
 [**Medienobjekt**](media-object.md)
 </dt> <dt>
 
-[**Player. currentMedia**](player-currentmedia.md)
+[**Player.currentMedia**](player-currentmedia.md)
 </dt> <dt>
 
-[**Player. PlayStateChange-Ereignis**](player-player-playstatechange.md)
+[**Player.PlayStateChange-Ereignis**](player-player-playstatechange.md)
 </dt> <dt>
 
-[**Settings. mediaaccessrights**](settings-mediaaccessrights.md)
+[**Einstellungen.mediaAccessRights**](settings-mediaaccessrights.md)
 </dt> <dt>
 
-[**Settings. requestmediaaccessrights**](settings-requestmediaaccessrights.md)
+[**Einstellungen.requestMediaAccessRights**](settings-requestmediaaccessrights.md)
 </dt> </dl>
 
  

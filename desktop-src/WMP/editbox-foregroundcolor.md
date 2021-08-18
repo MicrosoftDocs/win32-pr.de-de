@@ -1,9 +1,9 @@
 ---
-title: EditBox. ForegroundColor
-description: Das ForegroundColor-Attribut gibt die Textfarbe im Bearbeitungsfeld-Steuerelement an oder ruft diese ab.
+title: EDITBOX.foregroundColor
+description: Das foregroundColor-Attribut gibt die Textfarbe im Bearbeitungsfeld-Steuerelement an oder ruft sie ab.
 ms.assetid: 22de7e70-0ea8-45bb-abf1-21b6ab6a61fa
 keywords:
-- Fenster "EditBox. ForegroundColor" Media Player
+- EDITBOX.foregroundColor-Windows Media Player
 topic_type:
 - apiref
 api_name:
@@ -12,16 +12,16 @@ api_type:
 - NA
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: c0ea1535a2a107814b817399c5d4a166ce54f9de
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 220a8540999d786c7305c224553f9c79153988a700d9697626242faef33d73ff
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106366902"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117749333"
 ---
-# <a name="editboxforegroundcolor"></a>EditBox. ForegroundColor
+# <a name="editboxforegroundcolor"></a>EDITBOX.foregroundColor
 
-Das **ForegroundColor** -Attribut gibt die Textfarbe im Bearbeitungsfeld-Steuerelement an oder ruft diese ab.
+Das **foregroundColor-Attribut** gibt die Textfarbe im Bearbeitungsfeld-Steuerelement an oder ruft sie ab.
 
 ``` syntax
         elementID.foregroundColor
@@ -29,7 +29,7 @@ Das **ForegroundColor** -Attribut gibt die Textfarbe im Bearbeitungsfeld-Steuere
 
 ## <a name="possible-values"></a>Mögliche Werte
 
-Dieses Attribut ist eine Lese- **/schreibzeichenfolge** mit einem beliebigen Microsoft Internet Explorer-Farbwert. Der Standardwert ist gleich der Windows-Textfarbe.
+Dieses Attribut ist eine  Lese-/Schreibzeichenfolge, die einen beliebigen Microsoft Internet Explorer-Farbwert enthält. Sie hat einen Standardwert, der der text-Windows entspricht.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -41,17 +41,17 @@ Dieses Attribut ist eine Lese- **/schreibzeichenfolge** mit einem beliebigen Mic
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Farb Verweis**](color-reference.md)
+[**Farbreferenz**](color-reference.md)
 </dt> <dt>
 
-[**EditBox-Element**](editbox-element.md)
+[**EDITBOX-Element**](editbox-element.md)
 </dt> <dt>
 
-[**EditBox. BackgroundColor**](editbox-backgroundcolor.md)
+[**EDITBOX.backgroundColor**](editbox-backgroundcolor.md)
 </dt> </dl>
 
  

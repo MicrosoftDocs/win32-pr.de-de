@@ -1,5 +1,5 @@
 ---
-description: In dieser Übersicht über die Windows Barrierefreiheitsfeatures, die Sie in Ihr Benutzeroberflächenframework integrieren können, erfahren Sie mehr über das Entwickeln von barrierefreien Benutzeroberflächenframeworks für Windows Benutzer.
+description: Erfahren Sie in dieser Übersicht über die Windows- und Barrierefreiheitsfeatures, die Sie in Ihr Benutzeroberflächenframework integrieren können, mehr über das Entwickeln von barrierefreien Benutzeroberflächenframeworks für Windows.
 title: Entwickeln von barrierefreien Benutzeroberflächenframeworks für Windows
 ms.topic: article
 ms.date: 04/18/2019
@@ -12,7 +12,7 @@ ms.locfileid: "117737769"
 ---
 # <a name="developing-accessible-ui-frameworks-for-windows"></a>Entwickeln von barrierefreien Benutzeroberflächenframeworks für Windows
 
-Um von so vielen Personen wie möglich verwendet werden zu können, sollten benutzeroberflächenframeworks, die für die Windows-Plattform erstellt wurden, Barrierefreiheitsfeatures unterstützen, die es Personen mit Behinderungen, persönlichen Einstellungen oder bestimmten Arbeitsstilen erleichtern, ihre Windows-Geräte erfolgreich zu verwenden.
+Um von so vielen Personen wie möglich verwendet werden zu können, sollten benutzeroberflächenframeworks, die für die Windows-Plattform erstellt wurden, Barrierefreiheitsfeatures unterstützen, die es Personen mit Behinderungen, persönlichen Vorlieben oder bestimmten Arbeitsstilen erleichtern, ihre Windows-Geräte erfolgreich zu verwenden.
 
 In dieser Übersicht wird beschrieben, wie Sie ein Benutzeroberflächenframework erstellen, das Features wie programmgesteuerten Zugriff und Automatisierung, Tastaturnavigation und -befehle, Farb- und Designoptionen und Personalisierung über Benutzereinstellungen unterstützt.
 
@@ -26,5 +26,5 @@ In dieser Übersicht wird beschrieben, wie Sie ein Benutzeroberflächenframework
 
 Beispiele
 
-- [Benutzeroberflächenautomatisierung WPF-Frameworkimplementierungsbeispiel](https://github.com/Microsoft/WPF-Samples/tree/master/Accessibility)
+- [Benutzeroberflächenautomatisierung WPF Framework-Implementierungsbeispiel](https://github.com/Microsoft/WPF-Samples/tree/master/Accessibility)
 - [Beispiel für UI-Kontrast und -Einstellungen](https://github.com/microsoftarchive/msdn-code-gallery-microsoft/tree/411c271e537727d737a53fa2cbe99eaecac00cc0/Official%20Windows%20Platform%20Sample/Windows%208%20app%20samples/%5BC%2B%2B%5D-Windows%208%20app%20samples/C%2B%2B/Windows%208%20app%20samples/UI%20contrast%20and%20settings%20sample%20(Windows%208))

@@ -1,44 +1,44 @@
 ---
-title: VML-Aufzählungs Attribut
-description: VML-Aufzählungs Attribut
+title: VML-Aufzählungsattribut
+description: VML-Aufzählungsattribut
 ms.assetid: 17c24b97-191b-4170-8a2d-9284f500e728
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 4edcf1194a234284a70f928adad198ca77f597a9
-ms.sourcegitcommit: 592c9bbd22ba69802dc353bcb5eb30699f9e9403
+ms.openlocfilehash: 7f35fda917931567dcd2dc4cf823ed74e3b449e05fba6046f1390e3d6454fd45
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "104390539"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117755019"
 ---
-# <a name="vml-bullet-attribute"></a>VML-Aufzählungs Attribut
+# <a name="vml-bullet-attribute"></a>VML-Aufzählungsattribut
 
-In diesem Thema wird VML beschrieben, eine Funktion, die ab Windows Internet Explorer 9 veraltet ist. Webseiten und Anwendungen, die auf VML basieren, sollten zu SVG oder anderen allgemein unterstützten Standards migriert werden.
+In diesem Thema wird VML beschrieben, ein Feature, das ab Windows Internet Explorer 9 als veraltet gilt. Webseiten und Anwendungen, die auf VML basieren, sollten zu SVG oder anderen allgemein unterstützten Standards migriert werden.
 
 > [!Note]  
-> Ab Dezember 2011 wurde dieses Thema archiviert. Daher wird er nicht mehr aktiv verwaltet. Weitere Informationen finden Sie unter [archivierte Inhalte](/previous-versions/windows/internet-explorer/ie-developer/). Informationen, Empfehlungen und Anleitungen zur aktuellen Version von Windows Internet Explorer finden Sie im [Internet Explorer Developer Center](https://msdn.microsoft.com/ie/).
+> Seit Dezember 2011 wurde dieses Thema archiviert. Daher wird sie nicht mehr aktiv verwaltet. Weitere Informationen finden Sie unter [Archivierter Inhalt.](/previous-versions/windows/internet-explorer/ie-developer/) Informationen, Empfehlungen und Anleitungen zur aktuellen Version von Windows Internet Explorer finden Sie unter [Internet Explorer Developer Center.](https://msdn.microsoft.com/ie/)
 
- 
+ 
 
-Bestimmt, ob eine Form eine grafische Kugel ist. **VGZ"** lesen/schreiben".
+Bestimmt, ob eine Form ein grafischer Aufzählungszeichen ist. Lese-/Schreibzugriff **auf VgTriState**.
 
 **Gilt für**
 
-[Form](shape-element--vml.md)
+[Formen](shape-element--vml.md)
 
 **Tagsyntax**
 
-<v: *Element* o:Bullet = " *Ausdruck* " >
+<v: *element* o:bullet=" *ausdruck* ">
 
 **Anmerkungen**
 
-Der Standardwert ist **False**. **True** gibt an, dass die Form eine grafische Kugel ist.
+Der Standardwert ist **False**. **True** gibt an, dass die Form ein grafischer Aufzählungszeichen ist.
 
 *Microsoft Office Extensions-Attribut*
 
 **Beispiel**
 
-Die Form ist ein Aufzählungs Zeichen.
+Die Form ist ein Aufzählungszeichen.
 
 
 ```HTML
@@ -49,6 +49,6 @@ Die Form ist ein Aufzählungs Zeichen.
 
 
 
- 
+ 
 
- 
+ 

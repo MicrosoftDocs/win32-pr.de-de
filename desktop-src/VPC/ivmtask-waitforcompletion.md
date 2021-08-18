@@ -1,10 +1,10 @@
 ---
 title: IVMTask WaitForCompletion-Methode (VPCCOMInterfaces.h)
-description: Wartet, bis die Aufgabe abgeschlossen ist oder bis das angegebene Time out-Intervall verstrichen ist.
+description: Wartet, bis der Task abgeschlossen ist oder das angegebene Time out-Intervall verstreicht.
 ms.assetid: 28718c54-4411-4c69-89de-35ea6a8d074c
 keywords:
 - WaitForCompletion-Methode Virtueller PC
-- WaitForCompletion-Methode Virtual PC , IVMTask-Schnittstelle
+- WaitForCompletion-Methode Virtueller PC, IVMTask-Schnittstelle
 - IVMTask-Schnittstelle Virtueller PC, WaitForCompletion-Methode
 topic_type:
 - apiref
@@ -25,9 +25,9 @@ ms.locfileid: "117752701"
 ---
 # <a name="ivmtaskwaitforcompletion-method"></a>IVMTask::WaitForCompletion-Methode
 
-\[Windows Der virtuelle PC ist ab Windows 8 nicht mehr für die Verwendung verfügbar. Verwenden Sie stattdessen den [Hyper-V-WMI-Anbieter (V2).](/windows/desktop/HyperV_v2/windows-virtualization-portal)\]
+\[Windows Der virtuelle PC ist ab diesem Zeitraum nicht mehr Windows 8. Verwenden Sie stattdessen den [Hyper-V-WMI-Anbieter (V2).](/windows/desktop/HyperV_v2/windows-virtualization-portal)\]
 
-Wartet, bis die Aufgabe abgeschlossen ist oder bis das angegebene Time out-Intervall verstrichen ist.
+Wartet, bis der Task abgeschlossen ist oder das angegebene Time out-Intervall verstreicht.
 
 ## <a name="syntax"></a>Syntax
 
@@ -47,7 +47,7 @@ HRESULT WaitForCompletion(
 *Timeout* \[ In\]
 </dt> <dd>
 
-Die Zeit in Millisekunden, die diese Methode auf den Taskabschluss wartet, bevor die Steuerung an den Aufrufer zurückgegeben wird. Der Wert -1 gibt an, dass die Methode wartet, bis die Aufgabe ohne Timeout abgeschlossen ist. Andere gültige Timeoutwerte liegen zwischen 0 und 4.000.000 Millisekunden.
+Die Zeit in Millisekunden, die diese Methode auf den Abschluss der Aufgabe wartet, bevor sie die Steuerung an den Aufrufer zurücksendet. Der Wert -1 gibt an, dass die Methode wartet, bis die Aufgabe abgeschlossen ist, ohne dass ein Time out erfolgt. Andere gültige Timeoutwerte liegen zwischen 0 und 4.000.000 Millisekunden.
 
 </dd> </dl>
 
@@ -57,7 +57,7 @@ Diese Methode kann einen dieser Werte zurückgeben.
 
 
 
-| Rückgabecode/-wert                                                                                                                                                 | BESCHREIBUNG                                      |
+| Rückgabecode/-wert                                                                                                                                                 | Beschreibung                                      |
 |-------------------------------------------------------------------------------------------------------------------------------------------------------------------|--------------------------------------------------|
 | <dl> <dt>**S \_ OK**</dt> <dt>0</dt> </dl>                       | Der Vorgang wurde durchgeführt.<br/>         |
 | <dl> <dt>**E \_ INVALIDARG-0x80000003**</dt> <dt></dt> </dl>      | Der *Timeoutparameter* ist ungültig.<br/> |
@@ -69,7 +69,7 @@ Diese Methode kann einen dieser Werte zurückgeben.
 
 ## <a name="remarks"></a>Hinweise
 
-Die **WaitForCompletion-Methode** versetzt den aktuellen Ausführungsthread in den Ruhezustand, bis er zurückgegeben wird. Die Angabe einer unendlichen Wartezeit (Timeout = -1) wird nicht empfohlen, es sei denn, es ist absolut wichtig, dass die Aufgabe unter keinen Umständen abgeschlossen wird.
+Die **WaitForCompletion-Methode versetzt** den aktuellen Ausführungsthread in den Ruhezustand, bis er zurückgegeben wird. Die Angabe einer unendlichen Wartezeit (Timeout = -1) wird nicht empfohlen, es sei denn, es ist absolut wichtig, dass die Aufgabe unter allen Umständen abgeschlossen wird.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -77,7 +77,7 @@ Die **WaitForCompletion-Methode** versetzt den aktuellen Ausführungsthread in d
 
 | Anforderung | Wert |
 |-------------------------------------|-----------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | nur Windows 7 \[ Desktop-Apps\]<br/>                                                    |
+| Unterstützte Mindestversion (Client)<br/> | Windows 7 \[ Desktop-Apps\]<br/>                                                    |
 | Unterstützte Mindestversion (Server)<br/> | Nicht unterstützt<br/>                                                                     |
 | Ende des Supports (Client)<br/>    | Windows 7<br/>                                                                          |
 | Product (Produkt)<br/>                  | Windows Virtual PC<br/>                                                                 |

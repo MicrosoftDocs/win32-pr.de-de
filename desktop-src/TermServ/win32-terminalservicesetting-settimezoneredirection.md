@@ -78,11 +78,11 @@ Gibt bei Erfolg 0 zurück. andernfalls wird ein WMI-Fehlercode zurückgegeben. E
 
 ## <a name="remarks"></a>Hinweise
 
-Standardmäßig entspricht die Zeitzone für die Remotedesktopdienste Sitzung der Zeitzone für den Remotedesktop-Sitzungshost -Server (RD-Sitzungshost). Clientcomputer können Zeitzoneninformationen nicht umleiten.
+Standardmäßig entspricht die Zeitzone für die Remotedesktopdienste Sitzung der Zeitzone für den Remotedesktop-Sitzungshost server (RD-Sitzungshost). Clientcomputer können Zeitzoneninformationen nicht umleiten.
 
 Wenn die Zeitzonenumleitung deaktiviert ist, erben neue Sitzungen die Serverzeitzone. Wenn eine Sitzung erneut verbunden wird, behält die Sitzung die Zeitzone bei, die sie vor dem Trennen der Verbindung hatte.
 
-Managed Object Format -Dateien (MOF) enthalten die Definitionen für Windows Management Instrumentation (WMI)-Klassen. MOF-Dateien werden nicht als Teil des Microsoft Windows Software Development Kit (SDK) installiert. Sie werden auf dem Server installiert, wenn Sie die zugeordnete Rolle mithilfe des Server-Manager hinzufügen. Weitere Informationen zu MOF-Dateien finden Sie unter [Managed Object Format (MOF).](/windows/desktop/WmiSdk/managed-object-format--mof-)
+Managed Object Format -Dateien (MOF) enthalten die Definitionen für WMI-Klassen (Windows Management Instrumentation). MOF-Dateien werden nicht als Teil des Microsoft Windows Software Development Kit (SDK) installiert. Sie werden auf dem Server installiert, wenn Sie die zugeordnete Rolle mithilfe der Server-Manager hinzufügen. Weitere Informationen zu MOF-Dateien finden Sie unter [Managed Object Format (MOF).](/windows/desktop/WmiSdk/managed-object-format--mof-)
 
 ## <a name="requirements"></a>Anforderungen
 

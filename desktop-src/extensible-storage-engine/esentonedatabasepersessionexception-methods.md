@@ -16,8 +16,8 @@ ms.locfileid: "118493989"
 ---
 # <a name="esentonedatabasepersessionexception-methods"></a>EsentOneDatabasePerSessionException-Methoden 
 
-Einschließen geschützter Member  
-Einschließen geerbter Member  
+Geschützte Member enthalten  
+Geerbte Member enthalten  
 
 Der [EsentOneDatabasePerSessionException-Typ](./esentonedatabasepersessionexception-class.md) macht die folgenden Member verfügbar.
 
@@ -28,7 +28,7 @@ Der [EsentOneDatabasePerSessionException-Typ](./esentonedatabasepersessionexcept
 <tr class="header">
 <th> </th>
 <th>Name</th>
-<th>Beschreibung</th>
+<th>BESCHREIBUNG</th>
 </tr>
 </thead>
 <tbody>
@@ -45,7 +45,7 @@ Der [EsentOneDatabasePerSessionException-Typ](./esentonedatabasepersessionexcept
 <tr class="odd">
 <td><img src="../images/dn292146.pubmethod(exchg.10).gif" title="Öffentliche Methode" alt="Public method" /></td>
 <td><a href="/dotnet/api/system.exception.getbaseexception#System_Exception_GetBaseException">Getbaseexception</a></td>
-<td>(Geerbt von <a href="/dotnet/api/system.exception">der Ausnahme</a>.)</td>
+<td>(Geerbt von <a href="/dotnet/api/system.exception">Ausnahme</a>.)</td>
 </tr>
 <tr class="even">
 <td><img src="../images/dn292146.pubmethod(exchg.10).gif" title="Öffentliche Methode" alt="Public method" /></td>
@@ -60,7 +60,7 @@ Der [EsentOneDatabasePerSessionException-Typ](./esentonedatabasepersessionexcept
 <tr class="even">
 <td><img src="../images/dn292146.pubmethod(exchg.10).gif" title="Öffentliche Methode" alt="Public method" /></td>
 <td><a href="/dotnet/api/system.exception.gettype#System_Exception_GetType">Gettype</a></td>
-<td>(Geerbt von <a href="/dotnet/api/system.exception">der Ausnahme</a>.)</td>
+<td>(Geerbt von <a href="/dotnet/api/system.exception">Ausnahme</a>.)</td>
 </tr>
 <tr class="odd">
 <td><img src="../images/dn292116.protmethod(exchg.10).gif" title="Geschützte Methode" alt="Protected method" /></td>
@@ -70,7 +70,7 @@ Der [EsentOneDatabasePerSessionException-Typ](./esentonedatabasepersessionexcept
 <tr class="even">
 <td><img src="../images/dn292146.pubmethod(exchg.10).gif" title="Öffentliche Methode" alt="Public method" /></td>
 <td><a href="/dotnet/api/system.exception.tostring#System_Exception_ToString">ToString</a></td>
-<td>(Geerbt von <a href="/dotnet/api/system.exception">der Ausnahme</a>.)</td>
+<td>(Geerbt von <a href="/dotnet/api/system.exception">Ausnahme</a>.)</td>
 </tr>
 </tbody>
 </table>

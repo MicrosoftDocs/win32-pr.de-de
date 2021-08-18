@@ -1,6 +1,6 @@
 ---
-title: RAS_PPP_IPCP_RESULT Struktur (rassapi. h)
-description: Die RAS \_ \_ -PPP-IPCP \_ -Ergebnis Struktur wird verwendet, um das Ergebnis einer PPP-IP (Internet Protocol)-Projektions Operation für einen Port zu melden.
+title: RAS_PPP_IPCP_RESULT -Struktur (Rassapi.h)
+description: Die RAS HK IPCP RESULT-Struktur wird verwendet, um das Ergebnis eines IP-Projektionsvorgang \_ \_ \_ (INTERNET Protocol, INTERNET PROTOCOL) für einen Port zu melden.
 ms.assetid: edbdc8f2-ba56-4d34-8908-f7eccc2ebf61
 keywords:
 - RAS_PPP_IPCP_RESULT Struktur-RAS
@@ -14,18 +14,18 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: eedcd7c7390e01849371eee2cbb24ffa2593900d
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: fa0425289b7ffd686f0d908f9789a2c24606978f37e05dfada5b937b8ce05b21
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104517879"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117789614"
 ---
-# <a name="ras_ppp_ipcp_result-structure"></a>RAS- \_ PPP- \_ IPCP- \_ Ergebnis Struktur
+# <a name="ras_ppp_ipcp_result-structure"></a>\_RAS-HK \_ IPCP \_ RESULT-Struktur
 
-\[Die **RAS- \_ PPP- \_ IPCP- \_ Ergebnis** Struktur wird ab Windows Vista nicht unterstützt.\]
+\[Die **\_ RAS-IPCP-IPCP \_ \_ RESULT-Struktur** wird ab Windows Vista nicht unterstützt.\]
 
-Die **RAS- \_ PPP- \_ IPCP- \_ Ergebnis** Struktur wird verwendet, um das Ergebnis einer PPP-IP (Internet Protocol)-Projektions Operation für einen Port zu melden.
+Die **RAS \_ HK \_ IPCP \_ RESULT-Struktur** wird verwendet, um das Ergebnis eines IP-Projektionsvorgang (INTERNET Protocol, INTERNET PROTOCOL) für einen Port zu melden.
 
 ## <a name="syntax"></a>Syntax
 
@@ -46,14 +46,14 @@ typedef struct _RAS_PPP_IPCP_RESULT {
 **dwError**
 </dt> <dd>
 
-Gibt die Ergebnisse des IP-Projektions Vorgangs an. Der Wert kein \_ Fehler gibt einen Erfolg an. in diesem Fall ist der Member **wszaddress** gültig. Wenn der Projektions Vorgang nicht erfolgreich war, ist **dwError** ein Fehlercode aus "Winerror. h" oder "raserror. h".
+Gibt die Ergebnisse des IP-Projektionsvorgang an. Der Wert NO ERROR gibt den Erfolg an. In diesem Fall \_ ist das **wszAddress-Member** gültig. Wenn der Projektionsvorgang nicht erfolgreich war, **ist dwError** ein Fehlercode von Winerror.h oder Raserror.h.
 
 </dd> <dt>
 
-**wszaddress**
+**wszAddress**
 </dt> <dd>
 
-Eine NULL-terminierte Unicode-Zeichenfolge, die die dem Remote Client zugewiesene IP-Adresse angibt. Diese Zeichenfolge hat die Form *a ***.** _b_* _._ *_c_*_._ * _d_.
+Eine auf NULL terminierte Unicode-Zeichenfolge, die die IP-Adresse angibt, die dem Remoteclient zugewiesen ist. Diese Zeichenfolge hat das Formular *a***.** _b_* _._ *_c_*_._ * _d_.
 
 </dd> </dl>
 
@@ -66,28 +66,28 @@ Eine NULL-terminierte Unicode-Zeichenfolge, die die dem Remote Client zugewiesen
 | Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[nur Desktop-Apps\]<br/>                           |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                                 |
 | Ende des Supports (Client)<br/>    | Windows XP<br/>                                                                |
-| Ende des Supports (Server)<br/>    | Windows Server 2003<br/>                                                       |
-| Header<br/>                   | <dl> <dt>Rassapi. h</dt> </dl> |
+| Ende des Supports (Server)<br/>    | Windows Server 2003<br/>                                                       |
+| Header<br/>                   | <dl> <dt>Rassapi.h</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[Remote Zugriffs Dienst (RAS) (Übersicht)](about-remote-access-service.md)
+[Ras-Dienst (RAS): Übersicht](about-remote-access-service.md)
 </dt> <dt>
 
-[RAS-Server-Verwaltungsstrukturen](ras-server-administration-structures.md)
+[RAS-Serververwaltungsstrukturen](ras-server-administration-structures.md)
 </dt> <dt>
 
-[**RAS- \_ Port \_ 1**](ras-port-1-str.md)
+[**\_RAS-PORT \_ 1**](ras-port-1-str.md)
 </dt> <dt>
 
-[**Ergebnis der RAS- \_ PPP- \_ Projektion \_**](ras-ppp-projection-result-str.md)
+[**\_ \_ RAS-PROJEKTIONSERGEBNIS \_**](ras-ppp-projection-result-str.md)
 </dt> <dt>
 
-[**Rasadminportgetinfo**](rasadminportgetinfo.md)
+[**RasAdminPortGetInfo**](rasadminportgetinfo.md)
 </dt> </dl>
 
  

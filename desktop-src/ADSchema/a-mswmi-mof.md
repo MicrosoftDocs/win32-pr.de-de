@@ -1,11 +1,11 @@
 ---
-title: MS-WMI-MOF-Attribut
-description: Enthält eine MOF-Definition für ein WMI-Objekt.
+title: ms-WMI-Mof-Attribut
+description: Enthält eine MOF-Definition eines WMI-Objekts.
 ms.assetid: 0408b857-4b72-40dc-9d95-d7faecce8119
 ms.tgt_platform: multiple
 keywords:
-- AD-Schema für MS-WMI-MOF-Attribut
-- AD-Schema für mswap-MOF-Attribut
+- MS-WMI-Mof-Attribut-AD-Schema
+- AD-Schema des msWMI-Mof-Attributs
 topic_type:
 - apiref
 api_name:
@@ -14,41 +14,41 @@ api_type:
 - Schema
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 8971a96f007460dc1905c35da1cbfb78865dc9ec
-ms.sourcegitcommit: b77ace27b0432e7cd3863191b11926be032fbe2f
+ms.openlocfilehash: bb9f4a053ee1e3ee7af88dfec8964348a3835a997201965ecc7c02bd0fda5768
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "103859806"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117837320"
 ---
-# <a name="ms-wmi-mof-attribute"></a>MS-WMI-MOF-Attribut
+# <a name="ms-wmi-mof-attribute"></a>ms-WMI-Mof-Attribut
 
-Enthält eine MOF-Definition für ein WMI-Objekt.
+Enthält eine MOF-Definition eines WMI-Objekts.
 
 
 
 | Eingabe | Wert |
 |-------------------|---------------------------------------------|
-| CN                | MS-WMI-MOF                                  |
-| LDAP-Display-Name | mswap-MOF                                   |
+| CN                | ms-WMI-Mof                                  |
+| Ldap-Anzeigename | msWMI-mof                                   |
 | Size              | \-                                          |
-| Berechtigung aktualisieren  | Gruppenrichtlinie-Administrator                  |
-| Aktualisierungshäufigkeit  | \-                                          |
+| Aktualisieren von Berechtigungen  | Gruppenrichtlinie Administrator                  |
+| Updatehäufigkeit  | \-                                          |
 | Attribute-Id      | 1.2.840.113556.1.4.1638                     |
-| System-ID-GUID    | 6736809l-2064-443e-A145-81262b1l1366        |
+| System-ID-GUID    | 6736809f-2064-443e-a145-81262b1f1366        |
 | Syntax            | [**String(Unicode)**](s-string-unicode.md) |
 
 
 
 ## <a name="implementations"></a>Implementierungen
 
--   [**Windows Server 2003**](#windows-server-2003)
+-   [**Windows Server 2003**](#windows-server-2003)
 -   [**Windows Server 2003 R2**](#windows-server-2003-r2)
 -   [**Windows Server 2008**](#windows-server-2008)
 -   [**Windows Server 2008 R2**](#windows-server-2008-r2)
 -   [**Windows Server 2012**](#windows-server-2012)
 
-## <a name="windows-server-2003"></a>Windows Server 2003
+## <a name="windows-server-2003"></a>Windows Server 2003
 
 
 
@@ -56,11 +56,11 @@ Enthält eine MOF-Definition für ein WMI-Objekt.
 |------------------------|--------------|
 | Link-ID                | \-           |
 | MAPI-Id                | \-           |
-| System-Only            | False        |
-| Ist-einwertig       | Richtig         |
-| Ist indiziert             | False        |
-| Im globalen Katalog      | False        |
-| NT-Security-Descriptor | o:Bag: schlecht: S: |
+| System-Only            | Falsch        |
+| Ist einwertig       | Richtig         |
+| Ist indiziert             | Falsch        |
+| Im globalen Katalog      | Falsch        |
+| NT-Security-Descriptor | O:BAG:BAD:S: |
 | Range-Lower            | \-           |
 | Range-Upper            | \-           |
 | Search-Flags           | 0x00000000   |
@@ -77,11 +77,11 @@ Enthält eine MOF-Definition für ein WMI-Objekt.
 |------------------------|--------------|
 | Link-ID                | \-           |
 | MAPI-Id                | \-           |
-| System-Only            | False        |
-| Ist-einwertig       | Richtig         |
-| Ist indiziert             | False        |
-| Im globalen Katalog      | False        |
-| NT-Security-Descriptor | o:Bag: schlecht: S: |
+| System-Only            | Falsch        |
+| Ist einwertig       | Richtig         |
+| Ist indiziert             | Falsch        |
+| Im globalen Katalog      | Falsch        |
+| NT-Security-Descriptor | O:BAG:BAD:S: |
 | Range-Lower            | \-           |
 | Range-Upper            | \-           |
 | Search-Flags           | 0x00000000   |
@@ -98,11 +98,11 @@ Enthält eine MOF-Definition für ein WMI-Objekt.
 |------------------------|--------------|
 | Link-ID                | \-           |
 | MAPI-Id                | \-           |
-| System-Only            | False        |
-| Ist-einwertig       | Richtig         |
-| Ist indiziert             | False        |
-| Im globalen Katalog      | False        |
-| NT-Security-Descriptor | o:Bag: schlecht: S: |
+| System-Only            | Falsch        |
+| Ist einwertig       | Richtig         |
+| Ist indiziert             | Falsch        |
+| Im globalen Katalog      | Falsch        |
+| NT-Security-Descriptor | O:BAG:BAD:S: |
 | Range-Lower            | \-           |
 | Range-Upper            | \-           |
 | Search-Flags           | 0x00000000   |
@@ -119,11 +119,11 @@ Enthält eine MOF-Definition für ein WMI-Objekt.
 |------------------------|--------------|
 | Link-ID                | \-           |
 | MAPI-Id                | \-           |
-| System-Only            | False        |
-| Ist-einwertig       | Richtig         |
-| Ist indiziert             | False        |
-| Im globalen Katalog      | False        |
-| NT-Security-Descriptor | o:Bag: schlecht: S: |
+| System-Only            | Falsch        |
+| Ist einwertig       | Richtig         |
+| Ist indiziert             | Falsch        |
+| Im globalen Katalog      | Falsch        |
+| NT-Security-Descriptor | O:BAG:BAD:S: |
 | Range-Lower            | \-           |
 | Range-Upper            | \-           |
 | Search-Flags           | 0x00000000   |
@@ -140,11 +140,11 @@ Enthält eine MOF-Definition für ein WMI-Objekt.
 |------------------------|--------------|
 | Link-ID                | \-           |
 | MAPI-Id                | \-           |
-| System-Only            | False        |
-| Ist-einwertig       | Richtig         |
-| Ist indiziert             | False        |
-| Im globalen Katalog      | False        |
-| NT-Security-Descriptor | o:Bag: schlecht: S: |
+| System-Only            | Falsch        |
+| Ist einwertig       | Richtig         |
+| Ist indiziert             | Falsch        |
+| Im globalen Katalog      | Falsch        |
+| NT-Security-Descriptor | O:BAG:BAD:S: |
 | Range-Lower            | \-           |
 | Range-Upper            | \-           |
 | Search-Flags           | 0x00000000   |

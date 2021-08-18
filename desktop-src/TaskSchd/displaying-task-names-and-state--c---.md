@@ -1,42 +1,42 @@
 ---
-title: Anzeigen von Aufgaben Namen und-Zuständen (C++)
-description: In diesen beiden C++-Beispielen wird veranschaulicht, wie Aufgaben aufgezählt werden. In einem Beispiel wird gezeigt, wie Informationen zu Aufgaben in einem Aufgaben Ordner angezeigt werden. in den anderen Beispielen wird gezeigt, wie Informationen für alle ausgelaufenden Aufgaben angezeigt werden.
+title: Anzeigen von Aufgabennamen und -zuzuständen (C++)
+description: In diesen beiden C++-Beispielen wird gezeigt, wie Tasks aufzählt werden. Ein Beispiel zeigt, wie Informationen für Aufgaben in einem Aufgabenordner angezeigt werden, und die anderen Beispiele zeigen, wie Informationen für alle ausgeführten Aufgaben angezeigt werden.
 ms.assetid: 32037133-d3f3-4186-b035-ab01d37ed58d
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: b6189960ef5b6e4ad78e75f156a482481f347b4b
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: b80ec17b71ae45c951a27ca582855936d73457401d878b0f21f69bcbaa71ca23
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "103714285"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117760185"
 ---
-# <a name="displaying-task-names-and-states-c"></a>Anzeigen von Aufgaben Namen und-Zuständen (C++)
+# <a name="displaying-task-names-and-states-c"></a>Anzeigen von Aufgabennamen und -zuzuständen (C++)
 
-In diesen beiden C++-Beispielen wird veranschaulicht, wie Aufgaben aufgezählt werden. In einem Beispiel wird gezeigt, wie Informationen zu Aufgaben in einem Aufgaben Ordner angezeigt werden. in den anderen Beispielen wird gezeigt, wie Informationen für alle ausgelaufenden Aufgaben angezeigt werden.
+In diesen beiden C++-Beispielen wird gezeigt, wie Tasks aufzählt werden. Ein Beispiel zeigt, wie Informationen für Aufgaben in einem Aufgabenordner angezeigt werden, und die anderen Beispiele zeigen, wie Informationen für alle ausgeführten Aufgaben angezeigt werden.
 
-Im folgenden Verfahren wird beschrieben, wie Aufgaben Namen und Status für alle Aufgaben in einem Aufgaben Ordner angezeigt werden.
+Im folgenden Verfahren wird beschrieben, wie Aufgabennamen und -status für alle Aufgaben in einem Aufgabenordner angezeigt werden.
 
-**So zeigen Sie Aufgaben Namen und den Status für alle Aufgaben in einem Aufgaben Ordner an**
+**So zeigen Sie Aufgabennamen und -status für alle Aufgaben in einem Aufgabenordner an**
 
-1.  Initialisieren Sie com, und legen Sie allgemeine com-Sicherheit fest.
-2.  Erstellen Sie das [**ITaskService**](/windows/desktop/api/taskschd/nn-taskschd-itaskservice) -Objekt.
+1.  Initialisieren Sie COM, und legen Sie allgemeine COM-Sicherheit fest.
+2.  Erstellen Sie das [**ITaskService-Objekt.**](/windows/desktop/api/taskschd/nn-taskschd-itaskservice)
 
-    Mit diesem Objekt können Sie eine Verbindung mit dem Taskplaner-Dienst herstellen und auf einen bestimmten Aufgaben Ordner zugreifen.
+    Mit diesem Objekt können Sie eine Verbindung mit dem Taskplaner herstellen und auf einen bestimmten Aufgabenordner zugreifen.
 
-3.  Sie erhalten einen Aufgaben Ordner, der die Aufgaben enthält, über die Sie Informationen erhalten möchten.
+3.  Get a task folder that holds the tasks you want information about.
 
-    Verwenden Sie die [**ITaskService:: GetFolder**](/windows/desktop/api/taskschd/nf-taskschd-itaskservice-getfolder) -Methode, um den Ordner zu erhalten.
+    Verwenden Sie [**die ITaskService::GetFolder-Methode,**](/windows/desktop/api/taskschd/nf-taskschd-itaskservice-getfolder) um den Ordner zu erhalten.
 
-4.  Die Auflistung von Tasks aus dem Ordner erhalten.
+4.  Sie können die Auflistung der Aufgaben aus dem Ordner erhalten.
 
-    Verwenden Sie die [**ITaskFolder:: GetTasks**](/windows/desktop/api/taskschd/nf-taskschd-itaskfolder-gettasks) -Methode, um die Sammlung von Aufgaben ([**iregisteredtaskcollection**](/windows/desktop/api/taskschd/nn-taskschd-iregisteredtaskcollection)) zu erhalten.
+    Verwenden Sie [**die ITaskFolder::GetTasks-Methode,**](/windows/desktop/api/taskschd/nf-taskschd-itaskfolder-gettasks) um die Auflistung von Aufgaben ([**IRegisteredTaskCollection ) zu erhalten.**](/windows/desktop/api/taskschd/nn-taskschd-iregisteredtaskcollection)
 
-5.  Holen Sie sich die Anzahl der Aufgaben in der Auflistung, und durchlaufen Sie die einzelnen Aufgaben in der Sammlung.
+5.  Sie können die Anzahl der Aufgaben in der Auflistung erhalten und die einzelnen Aufgaben in der Auflistung aufzählen.
 
-    Verwenden Sie die [**Item-Eigenschaft von iregisteredtaskcollection**](/windows/desktop/api/taskschd/nf-taskschd-iregisteredtaskcollection-get_item) , um eine [**IRegisteredTask**](/windows/desktop/api/taskschd/nn-taskschd-iregisteredtask) -Instanz zu erhalten. Jede Instanz enthält eine Aufgabe in der Auflistung. Anschließend können Sie die Informationen (Eigenschaftswerte) für jede registrierte Aufgabe anzeigen.
+    Verwenden Sie [**die Item-Eigenschaft von IRegisteredTaskCollection,**](/windows/desktop/api/taskschd/nf-taskschd-iregisteredtaskcollection-get_item) um eine [**IRegisteredTask-Instanz**](/windows/desktop/api/taskschd/nn-taskschd-iregisteredtask) zu erhalten. Jede Instanz enthält eine Aufgabe in der Auflistung. Anschließend können Sie die Informationen (Eigenschaftswerte) der einzelnen registrierten Aufgaben anzeigen.
 
-Im folgenden Beispiel wird gezeigt, wie der Name und der Zustand aller Aufgaben im Stamm Aufgaben Ordner angezeigt werden.
+Das folgende C++-Beispiel zeigt, wie Der Name und Status aller Aufgaben im Stammaufgabenordner angezeigt werden.
 
 
 ```C++
@@ -197,21 +197,21 @@ int __cdecl wmain()
 
 
 
-Im folgenden Verfahren wird beschrieben, wie Aufgaben Namen und Status für alle ausgelaufenden Tasks angezeigt werden.
+Im folgenden Verfahren wird beschrieben, wie Aufgabennamen und -status für alle ausgeführten Aufgaben angezeigt werden.
 
-**So zeigen Sie Aufgaben Namen und den Status für alle ausgelaufenden Tasks an**
+**So zeigen Sie Aufgabennamen und -status für alle ausgeführten Aufgaben an**
 
-1.  Initialisieren Sie com, und legen Sie allgemeine com-Sicherheit fest.
-2.  Erstellen Sie das [**ITaskService**](/windows/desktop/api/taskschd/nn-taskschd-itaskservice) -Objekt.
+1.  Initialisieren Sie COM, und legen Sie allgemeine COM-Sicherheit fest.
+2.  Erstellen Sie das [**ITaskService-Objekt.**](/windows/desktop/api/taskschd/nn-taskschd-itaskservice)
 
-    Mit diesem Objekt können Sie eine Verbindung mit dem Taskplaner-Dienst herstellen und auf einen bestimmten Aufgaben Ordner zugreifen.
+    Mit diesem Objekt können Sie eine Verbindung mit dem Taskplaner herstellen und auf einen bestimmten Aufgabenordner zugreifen.
 
-3.  Verwenden Sie die [**ITaskService:: getrunningtasks**](/windows/desktop/api/taskschd/nf-taskschd-itaskservice-getrunningtasks) -Methode, um eine Sammlung aller ausgelaufenden Tasks ("[**ununningtaskcollection**](/windows/desktop/api/taskschd/nn-taskschd-irunningtaskcollection)") zu erhalten. Sie können angeben, um Instanzen der laufenden Aufgabe zu erhalten, indem Sie ausgeblendete Tasks einschließen oder ausschließen.
-4.  Holen Sie sich die Anzahl der Aufgaben in der Auflistung, und durchlaufen Sie die einzelnen Aufgaben in der Sammlung.
+3.  Verwenden Sie [**die ITaskService::GetRunningTasks-Methode,**](/windows/desktop/api/taskschd/nf-taskschd-itaskservice-getrunningtasks) um eine Auflistung aller ausgeführten Aufgaben [**(IRunningTaskCollection) zu erhalten.**](/windows/desktop/api/taskschd/nn-taskschd-irunningtaskcollection) Sie können angeben, dass Instanzen der ausgeführten Aufgabe entweder ausgeblendete Aufgaben ein- oder ausschließen.
+4.  Sie können die Anzahl der Aufgaben in der Auflistung erhalten und die einzelnen Aufgaben in der Auflistung aufzählen.
 
-    Verwenden Sie die [**Item-Eigenschaft von "ununningtaskcollection**](/windows/desktop/api/taskschd/nf-taskschd-irunningtaskcollection-get_item) ", um eine [**ununningtask**](/windows/desktop/api/taskschd/nn-taskschd-iregisteredtask) -Instanz zu erhalten. Jede Instanz enthält eine Aufgabe in der Auflistung. Anschließend können Sie die Informationen (Eigenschaftswerte) für jede registrierte Aufgabe anzeigen.
+    Verwenden Sie [**die Item-Eigenschaft von IRunningTaskCollection,**](/windows/desktop/api/taskschd/nf-taskschd-irunningtaskcollection-get_item) um eine [**IRunningTask-Instanz**](/windows/desktop/api/taskschd/nn-taskschd-iregisteredtask) zu erhalten. Jede Instanz enthält eine Aufgabe in der Auflistung. Anschließend können Sie die Informationen (Eigenschaftswerte) der einzelnen registrierten Aufgaben anzeigen.
 
-Im folgenden Beispiel wird gezeigt, wie der Name und der Zustand aller ausgelaufenden Tasks, einschließlich ausgeblendeter Tasks, angezeigt werden.
+Das folgende C++-Beispiel zeigt, wie Der Name und Status aller ausgeführten Aufgaben, einschließlich ausgeblendeter Aufgaben, angezeigt werden.
 
 
 ```C++
@@ -364,9 +364,9 @@ int __cdecl wmain()
 [Verwenden des Taskplaner](using-the-task-scheduler.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

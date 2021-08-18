@@ -1,9 +1,9 @@
 ---
 title: IWMCodecPrivateData (Wmcodecdsp.h)
-description: Die aktuelle Dokumentation zu Windows Mediencodecs und digitalen Signalprozessoren finden Sie unter Windows Medienaudio- und Videocodec und DSP-APIs. | IWMCodecPrivateData (Wmcodecdsp.h)
+description: Die aktuelle Dokumentation zu Windows Mediencodecs und digitalen Signalprozessoren finden Sie unter Windows Media Audio and Video Codec and DSP APIs (Medienaudio- und Videocodec und DSP-APIs). | IWMCodecPrivateData (Wmcodecdsp.h)
 ms.assetid: a2c7e727-52ce-495e-b538-5e1bd2ad4ce4
 keywords:
-- IWMCodecPrivateData windows Media Format
+- IWMCodecPrivateData-Fenstermedienformat
 topic_type:
 - apiref
 api_name:
@@ -23,7 +23,7 @@ ms.locfileid: "118198239"
 ---
 # <a name="iwmcodecprivatedata"></a>IWMCodecPrivateData
 
-Die aktuelle Dokumentation zu Windows Mediencodecs und digitalen Signalprozessoren finden Sie unter [Windows Medienaudio- und Videocodec und DSP-APIs.](/previous-versions//dd464626(v=vs.85))
+Die aktuelle Dokumentation zu Windows Mediencodecs und digitalen Signalprozessoren finden Sie unter Windows Media Audio and Video Codec and DSP APIs (Medienaudio- und Videocodec und [DSP-APIs).](/previous-versions//dd464626(v=vs.85))
 
 ## <a name="requirements"></a>Anforderungen
 

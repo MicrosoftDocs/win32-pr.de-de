@@ -1,5 +1,5 @@
 ---
-description: Von XMUBYTEN2 verfügbar gemachte Konstruktoren.
+description: Konstruktoren, die von XMUBYTEN2 verfügbar gemacht werden.
 ms.assetid: aa72906c-1338-49cf-909c-4d3a00aa3de2
 title: XMUBYTEN2-Konstruktoren
 ms.topic: reference
@@ -11,21 +11,21 @@ api_name: ''
 api_type:
 - NA
 api_location: ''
-ms.openlocfilehash: 3a09a4bacad02b5353b36b3979e6fd45a3b3d9e0
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: a848f152735dc0c31c547048b03b1b1b9c8be0ad3a634ff0d3cab20c363880af
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106368184"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118499622"
 ---
 # <a name="xmubyten2-constructors"></a>XMUBYTEN2-Konstruktoren
 
-Von verfügbar gemachte Konstruktoren `XMUBYTEN2` .
+Konstruktoren, die von verfügbar gemacht `XMUBYTEN2` werden.
 
-Erstellt Instanzen der [**XMUBYTEN2**](/windows/desktop/api/DirectXPackedVector/ns-directxpackedvector-xmubyten2) -Struktur.
+Erstellt Instanzen der [**XMUBYTEN2-Struktur.**](/windows/desktop/api/DirectXPackedVector/ns-directxpackedvector-xmubyten2)
 
 > [!Note]  
-> Die hier aufgeführten Konstruktoren sind nur in C++ verfügbar.
+> Die hier aufgeführten Konstruktoren sind nur mit C++ verfügbar.
 
  
 
@@ -50,43 +50,43 @@ Erstellt Instanzen der [**XMUBYTEN2**](/windows/desktop/api/DirectXPackedVector/
 <td style="text-align: left;">Standardkonstruktor für <code>XMUBYTEN2</code><br/> Standardkonstruktor für <a href="/windows/desktop/api/DirectXPackedVector/ns-directxpackedvector-xmubyten2"><strong>XMUBYTEN2</strong></a>.<br/>
 <blockquote>
 [!Note]<br />
-Dieser Konstruktor ist nur in C++ verfügbar.
+Dieser Konstruktor ist nur mit C++ verfügbar.
 </blockquote>
 <br/></td>
 </tr>
 <tr class="even">
-<td style="text-align: left;"><a href="/windows/desktop/api/directxpackedvector/nf-directxpackedvector-xmubyten2-xmubyten2(float_float)"><strong>XMUBYTEN2 (float, float)</strong></a></td>
-<td style="text-align: left;">Initialisiert eine neue Instanz von <code>XMUBYTEN2</code> aus zwei <code>float</code> Argumenten.<br/> Dieser Konstruktor initialisiert eine neue Instanz von <a href="/windows/desktop/api/DirectXPackedVector/ns-directxpackedvector-xmubyten2"><strong>XMUBYTEN2</strong></a> von zwei <code>float</code> Argumenten.<br/>
+<td style="text-align: left;"><a href="/windows/desktop/api/directxpackedvector/nf-directxpackedvector-xmubyten2-xmubyten2(float_float)"><strong>XMUBYTEN2 (float,float)</strong></a></td>
+<td style="text-align: left;">Initialisiert eine neue Instanz von <code>XMUBYTEN2</code> aus zwei <code>float</code> Argumenten.<br/> Dieser Konstruktor initialisiert eine neue Instanz von <a href="/windows/desktop/api/DirectXPackedVector/ns-directxpackedvector-xmubyten2"><strong>XMUBYTEN2 aus</strong></a> zwei <code>float</code> Argumenten.<br/>
 <blockquote>
 [!Note]<br />
-Dieser Konstruktor ist nur in C++ verfügbar.
+Dieser Konstruktor ist nur mit C++ verfügbar.
 </blockquote>
 <br/></td>
 </tr>
 <tr class="odd">
-<td style="text-align: left;"><a href="/windows/desktop/api/directxpackedvector/nf-directxpackedvector-xmubyten2-xmubyten2(constfloat)"><strong>XMUBYTEN2 (konstant float *)</strong></a></td>
-<td style="text-align: left;">Initialisiert eine neue Instanz von <code>XMUBYTEN2</code> aus einem Array Argument mit zwei Elementen <code>float</code> .<br/> Dieser Konstruktor initialisiert eine neue Instanz von <a href="/windows/desktop/api/DirectXPackedVector/ns-directxpackedvector-xmubyten2"><strong>XMUBYTEN2</strong></a> aus einem Array Argument mit zwei Elementen <code>float</code> .<br/>
+<td style="text-align: left;"><a href="/windows/desktop/api/directxpackedvector/nf-directxpackedvector-xmubyten2-xmubyten2(constfloat)"><strong>XMUBYTEN2 (const float*)</strong></a></td>
+<td style="text-align: left;">Initialisiert eine neue Instanz von <code>XMUBYTEN2</code> aus einem Arrayargument mit <code>float</code> zwei Element.<br/> Dieser Konstruktor initialisiert eine neue Instanz von <a href="/windows/desktop/api/DirectXPackedVector/ns-directxpackedvector-xmubyten2"><strong>XMUBYTEN2 aus</strong></a> einem aus einem Zwei-Element-Arrayargument. <code>float</code><br/>
 <blockquote>
 [!Note]<br />
-Dieser Konstruktor ist nur in C++ verfügbar.
+Dieser Konstruktor ist nur mit C++ verfügbar.
 </blockquote>
 <br/></td>
 </tr>
 <tr class="even">
-<td style="text-align: left;"><a href="/windows/desktop/api/directxpackedvector/nf-directxpackedvector-xmubyten2-xmubyten2(constuint8_t)"><strong>XMUBYTEN2 (konstant uint8_t *)</strong></a></td>
-<td style="text-align: left;">Initialisiert eine neue Instanz von <code>XMUBYTEN2</code> aus einem Array Argument mit zwei Elementen <code>uint8_t</code> .<br/> Dieser Konstruktor initialisiert eine neue Instanz von <a href="/windows/desktop/api/DirectXPackedVector/ns-directxpackedvector-xmubyten2"><strong>XMUBYTEN2</strong></a> aus einem Array Argument mit zwei Elementen <code>uint8_t</code> .<br/>
+<td style="text-align: left;"><a href="/windows/desktop/api/directxpackedvector/nf-directxpackedvector-xmubyten2-xmubyten2(constuint8_t)"><strong>XMUBYTEN2 (const uint8_t*)</strong></a></td>
+<td style="text-align: left;">Initialisiert eine neue Instanz von <code>XMUBYTEN2</code> aus einem Arrayargument mit <code>uint8_t</code> zwei Element.<br/> Dieser Konstruktor initialisiert eine neue Instanz von <a href="/windows/desktop/api/DirectXPackedVector/ns-directxpackedvector-xmubyten2"><strong>XMUBYTEN2 aus</strong></a> einem Arrayargument mit <code>uint8_t</code> zwei Element.<br/>
 <blockquote>
 [!Note]<br />
-Dieser Konstruktor ist nur in C++ verfügbar.
+Dieser Konstruktor ist nur mit C++ verfügbar.
 </blockquote>
 <br/></td>
 </tr>
 <tr class="odd">
-<td style="text-align: left;"><a href="/windows/desktop/api/directxpackedvector/nf-directxpackedvector-xmubyten2-xmubyten2(uint8_t_uint8_t)"><strong>XMUBYTEN2 (uint8_t uint8_t)</strong></a></td>
-<td style="text-align: left;">Initialisiert eine neue Instanz von <code>XMUBYTEN2</code> aus zwei <code>uint8_t</code> Argumenten.<br/> Dieser Konstruktor initialisiert eine neue Instanz von <a href="/windows/desktop/api/DirectXPackedVector/ns-directxpackedvector-xmubyten2"><strong>XMUBYTEN2</strong></a> von zwei <code>uint8_t</code> Argumenten.<br/>
+<td style="text-align: left;"><a href="/windows/desktop/api/directxpackedvector/nf-directxpackedvector-xmubyten2-xmubyten2(uint8_t_uint8_t)"><strong>XMUBYTEN2 (uint8_t,uint8_t)</strong></a></td>
+<td style="text-align: left;">Initialisiert eine neue Instanz von <code>XMUBYTEN2</code> aus zwei <code>uint8_t</code> Argumenten.<br/> Dieser Konstruktor initialisiert eine neue Instanz von <a href="/windows/desktop/api/DirectXPackedVector/ns-directxpackedvector-xmubyten2"><strong>XMUBYTEN2 aus</strong></a> zwei <code>uint8_t</code> Argumenten.<br/>
 <blockquote>
 [!Note]<br />
-Dieser Konstruktor ist nur in C++ verfügbar.
+Dieser Konstruktor ist nur mit C++ verfügbar.
 </blockquote>
 <br/></td>
 </tr>
@@ -95,14 +95,14 @@ Dieser Konstruktor ist nur in C++ verfügbar.
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
 [XMUBYTEN2-Erweiterungen](ovw-xmubyten2-extensions.md)
 </dt> <dt>
 
-**Verweis**
+**Referenz**
 </dt> <dt>
 
 [**XMUBYTEN2**](/windows/desktop/api/DirectXPackedVector/ns-directxpackedvector-xmubyten2)

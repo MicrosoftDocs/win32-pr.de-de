@@ -1,9 +1,9 @@
 ---
 title: WM_DWMNCRENDERINGCHANGED (Winuser.h)
-description: Wird gesendet, wenn die Richtlinie zum Rendern von Nicht-Clientbereich geändert wurde.
+description: Wird gesendet, wenn sich die Richtlinie zum Rendern von Nicht-Clientbereich geändert hat.
 ms.assetid: 31beb127-ebec-49a8-8b65-de00941cbd67
 keywords:
-- WM_DWMNCRENDERINGCHANGED-Desktopfenster-Manager
+- WM_DWMNCRENDERINGCHANGED der Desktopfenster-Manager
 topic_type:
 - apiref
 api_name:
@@ -23,7 +23,7 @@ ms.locfileid: "118502653"
 ---
 # <a name="wm_dwmncrenderingchanged-message"></a>WM \_ DWMNCRENDERINGCHANGED-Nachricht
 
-Wird gesendet, wenn die Richtlinie zum Rendern von Nicht-Clientbereich geändert wurde.
+Wird gesendet, wenn sich die Richtlinie zum Rendern von Nicht-Clientbereich geändert hat.
 
 ## <a name="parameters"></a>Parameter
 

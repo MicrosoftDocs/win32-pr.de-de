@@ -5,22 +5,22 @@ ms.assetid: 8c10cefb-d0d0-4214-8712-d171a76de95d
 keywords:
 - Windows Media Player Mobile Skins, Text
 - Skins, Text
-- Verweis für Skins, Text
-- Text in Skins, Info
+- Referenz für Skins, Text
+- Text in Skins,About
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: c801d93698bc7a17eea34df71514dd88b485f0d9
-ms.sourcegitcommit: 8fa6614b715bddf14648cce36d2df22e5232801a
+ms.openlocfilehash: 55027415222516e72df61afab01a14cceb503528467bf329264014c94bf31ed7
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/10/2020
-ms.locfileid: "103858614"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118118098"
 ---
 # <a name="text-windows-media-player-sdk"></a>Text (Windows Media Player SDK)
 
-Möglicherweise möchten Sie ein oder mehrere Textanzeige Felder in der Skin verwenden. Jedes verwendete Textanzeige Feld muss in der Skin-Definitionsdatei definiert werden. Wenn Sie in diesem Abschnitt kein Textfeld für die Anzeige definieren, kann es von der Skin nicht verwendet werden.
+Sie können ein oder mehrere Textanzeigefelder in Ihrer Skin verwenden. Jedes Textanzeigefeld, das Sie verwenden, muss in der Skindefinitionsdatei definiert werden. Wenn Sie in diesem Abschnitt kein Textanzeigefeld definieren, kann Ihr Skin es nicht verwenden.
 
-Der Text Abschnitt der Skin-Definitionsdatei beginnt mit der folgenden Zeile:
+Der Abschnitt Text der Skindefinitionsdatei beginnt mit dieser Zeile:
 
 
 ```C++
@@ -30,7 +30,7 @@ Der Text Abschnitt der Skin-Definitionsdatei beginnt mit der folgenden Zeile:
 
 
 
-Sie müssen dann mindestens eine Zeile hinzufügen, die Informationen zu jedem der Textanzeige Felder in der Skin enthält.
+Anschließend müssen Sie eine oder mehrere Zeilen hinzufügen, die Informationen zu den einzelnen Textanzeigefeldern in Ihrer Skin enthalten.
 
 
 ```C++
@@ -40,7 +40,7 @@ Sie müssen dann mindestens eine Zeile hinzufügen, die Informationen zu jedem d
 
 
 
-Sie können die folgende Vorlage für den Text Abschnitt der Skin-Definitionsdatei verwenden:
+Sie können die folgende Vorlage für den Abschnitt Text Ihrer Skindefinitionsdatei verwenden:
 
 
 ```C++
@@ -51,15 +51,15 @@ Sie können die folgende Vorlage für den Text Abschnitt der Skin-Definitionsdat
 
 
 
-Sie müssen die in der vorangehenden Vorlage gezeigte Reihenfolge für Textanzeige Feldinformationen für jede Zeile im Textabschnitt verwenden. Jeder Teil der Zeile ist erforderlich. In den folgenden Abschnitten werden die einzelnen Elemente ausführlich beschrieben.
+Sie müssen die in der vorherigen Vorlage gezeigte Reihenfolge für Textanzeigefeldinformationen für jede Zeile im Abschnitt Text verwenden. Jeder Teil der Zeile ist erforderlich. In den folgenden Abschnitten wird jedes Element ausführlich beschrieben.
 
 1.  [Texttyp](text-type.md)
-2.  [Text Speicherort](text-location.md)
-3.  [Text Ausrichtung](text-alignment.md)
-4.  [Text Schriftart](text-font.md)
+2.  [Textposition](text-location.md)
+3.  [Textausrichtung](text-alignment.md)
+4.  [Textschriftart](text-font.md)
 5.  [Textfarbe](text-color.md)
 
-Ein Beispiel für Textcode finden Sie unter [Sample Text section](sample-text-section.md).
+Ein Beispiel für Textcode finden Sie im [Abschnitt Beispieltext](sample-text-section.md).
 
 ## <a name="related-topics"></a>Zugehörige Themen
 

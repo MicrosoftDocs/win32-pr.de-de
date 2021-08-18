@@ -1,9 +1,9 @@
 ---
-title: Guidtype Simple Type (Ereignis Schema)
-description: Definiert einen Globally Unique Identifier Typ im Registrierungs Format. | Guidtype Simple Type (Ereignis Schema)
+title: Einfacher GUIDType-Typ (Ereignisschema)
+description: Definiert einen global eindeutigen Bezeichnertyp im Registrierungsformat. | Einfacher GUIDType-Typ (Ereignisschema)
 ms.assetid: dbc305ef-6f07-4a70-9013-b89ccec889ea
 keywords:
-- Guidtype Simple Type EventLog
+- GUIDType simple type EventLog
 topic_type:
 - apiref
 api_name:
@@ -13,16 +13,16 @@ api_type:
 ms.topic: reference
 ms.date: 05/31/2018
 api_location: ''
-ms.openlocfilehash: 07635bc43ff07d65eee5f32786818ca7dad8dd64
-ms.sourcegitcommit: 92e74c99f8f4d097676959d0c317f533c2400a80
+ms.openlocfilehash: a2fb7c0cd759b8b58b0db801819ed365f5b25fdb5abdcf886430e8bb2582cbde
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/09/2021
-ms.locfileid: "104352769"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117750622"
 ---
-# <a name="guidtype-simple-type-event-schema"></a>Guidtype Simple Type (Ereignis Schema)
+# <a name="guidtype-simple-type-event-schema"></a>Einfacher GUIDType-Typ (Ereignisschema)
 
-Definiert einen Globally Unique Identifier Typ im Registrierungs Format.
+Definiert einen global eindeutigen Bezeichnertyp im Registrierungsformat.
 
 ``` syntax
 <xs:simpleType name="GUIDType">
@@ -38,11 +38,11 @@ Definiert einen Globally Unique Identifier Typ im Registrierungs Format.
 
 ## <a name="patterns"></a>Muster
 
-Der einfache **guidtype** -Typ ist eine Zeichenfolge, die durch das folgende Muster eingeschränkt ist:
+Der einfache **GUIDType-Typ** ist eine Zeichenfolge, die durch das folgende Muster eingeschränkt ist:
 
 -   `\{[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}\}`
 
-    Der Wert muss ein Globally Unique Identifier Typ im Registrierungs Format sein. Beispiel: {5b2fc63a-8af4-44cb-960c-aefdced908d6}. Verwenden Sie GUIDGen.exe oder UUIDGen.exe, um eine GUID zu erstellen.
+    Der Wert muss ein global eindeutiger Bezeichnertyp im Registrierungsformat sein. Beispiel: {5b2fc63a-8af4-44cb-960c-aefdced908d6}. Verwenden Sie GUIDGen.exe oder UUIDGen.exe, um eine GUID zu erstellen.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -50,8 +50,8 @@ Der einfache **guidtype** -Typ ist eine Zeichenfolge, die durch das folgende Mus
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>       |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/> |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur Vista-Desktop-Apps\]<br/>       |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/> |
 
 
 

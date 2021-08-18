@@ -1,6 +1,6 @@
 ---
-description: 'Erfahren Sie mehr über: esentsystempthinuseexception-Konstruktor'
-title: Esentsystempthinuseexception-Konstruktor
+description: 'Weitere Informationen zu: EsentSystemPathInUseException-Konstruktor'
+title: EsentSystemPathInUseException-Konstruktor
 TOCTitle: 'EsentSystemPathInUseException constructor '
 ms:assetid: M:Microsoft.Isam.Esent.Interop.EsentSystemPathInUseException.#ctor
 ms:mtpsurl: https://msdn.microsoft.com/library/microsoft.isam.esent.interop.esentsystempathinuseexception.esentsystempathinuseexception(v=EXCHG.10)
@@ -24,19 +24,19 @@ api_type:
 api_location:
 - Microsoft.Isam.Esent.Interop.dll
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: 132609b9c1c4fd60e2db1eb183e96bc743fafb9b
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 25231930bb95a9fd4a179de3d751c26495f753bcb3123b936b1749510e345765
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "104042451"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118488990"
 ---
-# <a name="esentsystempathinuseexception-constructor"></a>Esentsystempthinuseexception-Konstruktor
+# <a name="esentsystempathinuseexception-constructor"></a>EsentSystemPathInUseException-Konstruktor
 
-Initialisiert eine neue Instanz der esentsystempthinuseexception-Klasse.
+Initialisiert eine neue Instanz der EsentSystemPathInUseException-Klasse.
 
-**Namespace:**  [Microsoft. ISAM. ESENT. Interop](./microsoft.isam.esent.interop-namespace.md)  
-**Assembly:**  Microsoft. ISAM. ESENT. Interop (in Microsoft.Isam.Esent.Interop.dll)
+**Namespace:**  [Microsoft.Isam.Esent.Interop](./microsoft.isam.esent.interop-namespace.md)  
+**Assembly:**  Microsoft.Isam.Esent.Interop (in Microsoft.Isam.Esent.Interop.dll)
 
 ## <a name="syntax"></a>Syntax
 
@@ -52,12 +52,12 @@ Dim instance As New EsentSystemPathInUseException()
 public EsentSystemPathInUseException()
 ```
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
-#### <a name="reference"></a>Referenz
+#### <a name="reference"></a>Verweis
 
-[Esentsystempthinuseexception-Klasse](./esentsystempathinuseexception-class.md)
+[EsentSystemPathInUseException-Klasse](./esentsystempathinuseexception-class.md)
 
-[Esentsystempthinuseexception-Member](./esentsystempathinuseexception-members.md)
+[EsentSystemPathInUseException-Member](./esentsystempathinuseexception-members.md)
 
-[Microsoft. ISAM. ESENT. Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)
+[Microsoft.Isam.Esent.Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)

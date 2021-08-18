@@ -1,7 +1,7 @@
 ---
-description: Speichert Informationen zu Linktypen und wird von der iitempreviewerext-Schnittstelle verwendet.
+description: Speichert Informationen zu Linktypen und wird von der IItemPreviewerExt-Schnittstelle verwendet.
 ms.assetid: c1d525ea-ee80-49fb-9447-20465b8f8654
-title: Linkinfo-Struktur
+title: LINKINFO-Struktur
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -12,18 +12,18 @@ api_name:
 api_type:
 - NA
 api_location: ''
-ms.openlocfilehash: de74f7aefb61f12bf85a457e4478aa76f2156410
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 97c106a5a819ac1068501c77555f3eae238c935e2262894c6c250dfc6782188f
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104214461"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117863943"
 ---
-# <a name="linkinfo-structure"></a>Linkinfo-Struktur
+# <a name="linkinfo-structure"></a>LINKINFO-Struktur
 
-\[**Linkinfo** und [**iitempreviewerext**](-search-iitempreviewerext.md) werden nur unter Windows XP und Windows Server 2003 unterstützt und sollten nicht mehr verwendet werden.\]
+\[**LINKINFO** und [**IItemPreviewerExt**](-search-iitempreviewerext.md) werden nur auf Windows XP und Windows Server 2003 unterstützt und sollten nicht mehr verwendet werden.\]
 
-Speichert Informationen zu Linktypen und wird von der [**iitempreviewerext**](-search-iitempreviewerext.md) -Schnittstelle verwendet.
+Speichert Informationen zu Linktypen und wird von der [**IItemPreviewerExt-Schnittstelle**](-search-iitempreviewerext.md) verwendet.
 
 ## <a name="syntax"></a>Syntax
 
@@ -50,84 +50,84 @@ typedef struct _LINKINFO {
 **type**
 </dt> <dd>
 
-Typ: **[ **linktype**](-search-linktype.md)**
+Typ: **[ **LINKTYPE**](-search-linktype.md)**
 
 </dd> <dd>
 
-Der Linktyp, der beim Crawlen oder indizieren angegeben wird, angegeben durch eine [**linktype**](-search-linktype.md) -Konstante.
+Der Typ des Links, der beim Durchforsten oder Indizieren angegeben wird, der durch eine [**LINKTYPE-Konstante**](-search-linktype.md) angegeben wird.
 
 </dd> <dt>
 
-**bstrincontenttype**
+**bstrContentType**
 </dt> <dd>
 
 Typ: **BSTR**
 
 </dd> <dd>
 
-Ein **BSTR** -Wert, der den Inhaltstyp angibt.
+Ein **BSTR-Wert,** der den Inhaltstyp angibt.
 
 </dd> <dt>
 
-**bstrencoding**
+**bstrEncoding**
 </dt> <dd>
 
 Typ: **BSTR**
 
 </dd> <dd>
 
-Ein encodingStyle-Attribut, das in der Web Services Description Language (WSDL)-Datei angegeben ist.
+Ein encodingStyle-Attribut, das in der WSDL-Datei (Web Services Description Language) angegeben ist.
 
 </dd> <dt>
 
-**bstraufileext**
+**bstrFileExt**
 </dt> <dd>
 
 Typ: **BSTR**
 
 </dd> <dd>
 
-Ein **BSTR** -Wert, der die Dateinamenerweiterung angibt.
+Ein **BSTR-Wert,** der die Dateinamenerweiterung angibt.
 
 </dd> <dt>
 
-**VARDATA**
+**varData**
 </dt> <dd>
 
-Typ: **Variant**
+Typ: **VARIANT**
 
 </dd> <dd>
 
-Eine Variante, die den Variablen Wert angibt.
+Eine Variante, die den Variablenwert angibt.
 
 </dd> <dt>
 
-**dwrelatedparts**
+**dwRelatedParts**
 </dt> <dd>
 
 Typ: **DWORD**
 
 </dd> <dd>
 
-Ein **DWORD** , das die zugehörigen Teile angibt.
+Ein **DWORD,** das die verknüpften Teile angibt.
 
 </dd> <dt>
 
-**bstrinrelatedcid**
+**bstrRelatedCid**
 </dt> <dd>
 
 Typ: **BSTR**
 
 </dd> <dd>
 
-Ein **BSTR** -Wert, der eine CID-Eigenschaft angibt, eine nicht aufgefüllte, dezimale Zeichenfolge mit Vorzeichen.
+Ein **BSTR-Wert,** der eine Cid-Eigenschaft angibt, eine nicht aufgefüllte Dezimalzeichenfolge mit Vorzeichen.
 
 </dd> <dt>
 
-**lcodepage**
+**lCodePage**
 </dt> <dd>
 
-Type: **Long**
+Typ: **Long**
 
 </dd> <dd>
 
@@ -135,9 +135,9 @@ Die Codepage, die zum Codieren der Zeichenfolge verwendet werden soll.
 
 </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Zum Anzeigen einer Vorschau von Anlagen mit einem Protokollhandler eines Drittanbieters auf Computern, auf denen Windows XP oder Windows Server 2003 ausgeführt wird, kann es erforderlich sein, die **linkinfo** -Struktur und die folgenden APIs zu verwenden: die Methoden [**iitempreviewerext:: getlinkedcontent**](-search-iitempreviewerext-getlinkedcontent.md) und [**iitempreviewerext:: getrelatedpart**](-search-iitempreviewerext-getrelatedpart.md) und die [**linktype**](-search-linktype.md) -Enumeration
+Zum Anzeigen einer Vorschau von Anlagen mit einem Protokollhandler eines Drittanbieters auf Computern, auf denen Windows XP oder Windows Server 2003 ausgeführt wird, ist es möglicherweise erforderlich, die **LINKINFO-Struktur** und die folgenden APIs zu verwenden: die [**Methoden IItemPreviewerExt::GetLinkedContent**](-search-iitempreviewerext-getlinkedcontent.md) und [**IItemPreviewerExt::GetRelatedPart**](-search-iitempreviewerext-getrelatedpart.md) sowie die [**LINKTYPE-Enumeration.**](-search-linktype.md)
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -145,9 +145,9 @@ Zum Anzeigen einer Vorschau von Anlagen mit einem Protokollhandler eines Drittan
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows XP mit SP2 \[ Desktop-Apps\]<br/> |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/> |
-| Verteilbare Komponente<br/>          | Windows-Desktop Suche (WDS) 3,0<br/>          |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur XP mit \[ SP2-Desktop-Apps\]<br/> |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/> |
+| Verteilbare Komponente<br/>          | Windows Desktopsuche (WDS) 3.0<br/>          |
 
 
 

@@ -1,6 +1,6 @@
 ---
-title: Texture2DArray::GatherCmpBlue(S,float,float,int2,int2,int2,int2,uint) function
-description: Für vier Texelwerte, die in einem bilinealen Filtervorgang verwendet werden, gibt einen Vergleich ihrer blauen Komponente mit einem Vergleichswert zusammen mit dem Kachelzuordnungsstatus zurück. | Texture2DArray::GatherCmpBlue(S,float,float,int2,int2,int2,int2,uint) function
+title: Texture2DArray::GatherCmpBlue(S,float,float,int2,int2,int2,int2,int2,uint)-Funktion
+description: Für vier Texelwerte, die in einem bilinearen Filtervorgang verwendet werden, gibt einen Vergleich ihrer blauen Komponente mit einem Vergleichswert zusammen mit dem Kachelzuordnungsstatus zurück. | Texture2DArray::GatherCmpBlue(S,float,float,int2,int2,int2,int2,int2,uint)-Funktion
 ms.assetid: C47FD97F-2848-44F7-91E0-2120D08D89C7
 keywords:
 - GatherCmpBlue-Funktion HLSL
@@ -20,9 +20,9 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 08/11/2021
 ms.locfileid: "117723828"
 ---
-# <a name="texture2darraygathercmpbluesfloatfloatint2int2int2int2uint-function"></a>Texture2DArray::GatherCmpBlue(S,float,float,int2,int2,int2,int2,uint) function
+# <a name="texture2darraygathercmpbluesfloatfloatint2int2int2int2uint-function"></a>Texture2DArray::GatherCmpBlue(S,float,float,int2,int2,int2,int2,int2,uint)-Funktion
 
-Für vier Texelwerte, die in einem bilinealen Filtervorgang verwendet werden, gibt einen Vergleich ihrer blauen Komponente mit einem Vergleichswert zusammen mit dem Kachelzuordnungsstatus zurück.
+Für vier Texelwerte, die in einem bilinearen Filtervorgang verwendet werden, gibt einen Vergleich ihrer blauen Komponente mit einem Vergleichswert zusammen mit dem Kachelzuordnungsstatus zurück.
 
 ## <a name="syntax"></a>Syntax
 
@@ -69,7 +69,7 @@ Die Beispielkoordinaten (u,v).
 
 Typ: **float**
 
-Ein -Wert, der jeweils mit jedem stichprobenentnahmen Wert verglichen werden soll.
+Ein -Wert, der mit jedem Stichprobenwert verglichen werden soll.
 
 </dd> <dt>
 
@@ -114,7 +114,7 @@ Die vierte Offsetkomponente, die vor der Stichprobenentnahme auf die Texturkoord
 
 Typ: **uint**
 
-Der Status des Vorgangs. Sie können nicht direkt auf den Status zugreifen. Übergeben Sie stattdessen den Status an die [**systeminterne CheckAccessFullyMapped-Funktion.**](checkaccessfullymapped.md) **CheckAccessFullyMapped** gibt **TRUE zurück,** wenn alle Werte aus dem entsprechenden **Beispiel-,** **Gather-** oder **Load-Vorgang** auf zugeordnete Kacheln in einer [gekachelten Ressource zugegriffen haben.](/windows/desktop/direct3d11/direct3d-11-2-features) Wenn Werte aus einer nicht zugeordneten Kachel übernommen wurden, gibt **CheckAccessFullyMapped** **FALSE zurück.**
+Der Status des Vorgangs. Sie können nicht direkt auf den Status zugreifen. Übergeben Sie stattdessen den Status an die systeminterne [**CheckAccessFullyMapped-Funktion.**](checkaccessfullymapped.md) **CheckAccessFullyMapped** gibt **TRUE** zurück, wenn alle Werte aus dem entsprechenden **Beispiel-,** **Gather-** oder **Load-Vorgang** auf zugeordnete Kacheln in einer [gekachelten Ressource](/windows/desktop/direct3d11/direct3d-11-2-features)zugegriffen haben. Wenn Werte aus einer nicht zugeordneten Kachel stammen, gibt **CheckAccessFullyMapped** **FALSE** zurück.
 
 </dd> </dl>
 

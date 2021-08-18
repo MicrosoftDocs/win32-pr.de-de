@@ -16,8 +16,8 @@ ms.locfileid: "118492972"
 ---
 # <a name="esentoutofdbtimevaluesexception-properties"></a>EsentOutOfDbtimeValuesException-Eigenschaften
 
-Einschließen geschützter Member  
-Einschließen geerbter Member  
+Geschützte Member enthalten  
+Geerbte Member enthalten  
 
 Der [EsentOutOfDbtimeValuesException-Typ](./esentoutofdbtimevaluesexception-class.md) macht die folgenden Member verfügbar.
 
@@ -28,14 +28,14 @@ Der [EsentOutOfDbtimeValuesException-Typ](./esentoutofdbtimevaluesexception-clas
 <tr class="header">
 <th> </th>
 <th>Name</th>
-<th>Beschreibung</th>
+<th>BESCHREIBUNG</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
 <td><img src="../images/dn292128.pubproperty(exchg.10).gif" title="Öffentliche Eigenschaft" alt="Public property" /></td>
 <td><a href="/dotnet/api/system.exception.data#System_Exception_Data">Daten</a></td>
-<td>(Geerbt von <a href="/dotnet/api/system.exception">der Ausnahme</a>.)</td>
+<td>(Geerbt von <a href="/dotnet/api/system.exception">Ausnahme</a>.)</td>
 </tr>
 <tr class="even">
 <td><img src="../images/dn292128.pubproperty(exchg.10).gif" title="Öffentliche Eigenschaft" alt="Public property" /></td>
@@ -45,37 +45,37 @@ Der [EsentOutOfDbtimeValuesException-Typ](./esentoutofdbtimevaluesexception-clas
 <tr class="odd">
 <td><img src="../images/dn292128.pubproperty(exchg.10).gif" title="Öffentliche Eigenschaft" alt="Public property" /></td>
 <td><a href="/dotnet/api/system.exception.helplink#System_Exception_HelpLink">HelpLink</a></td>
-<td>(Geerbt von <a href="/dotnet/api/system.exception">der Ausnahme</a>.)</td>
+<td>(Geerbt von <a href="/dotnet/api/system.exception">Ausnahme</a>.)</td>
 </tr>
 <tr class="even">
 <td><img src="../images/dn292128.protproperty(exchg.10).gif" title="Geschützte Eigenschaft" alt="Protected property" /></td>
 <td><a href="/dotnet/api/system.exception.hresult#System_Exception_HResult">Hresult</a></td>
-<td>(Geerbt von <a href="/dotnet/api/system.exception">der Ausnahme</a>.)</td>
+<td>(Geerbt von <a href="/dotnet/api/system.exception">Ausnahme</a>.)</td>
 </tr>
 <tr class="odd">
 <td><img src="../images/dn292128.pubproperty(exchg.10).gif" title="Öffentliche Eigenschaft" alt="Public property" /></td>
 <td><a href="/dotnet/api/system.exception.innerexception#System_Exception_InnerException">InnerException</a></td>
-<td>(Geerbt von <a href="/dotnet/api/system.exception">der Ausnahme</a>.)</td>
+<td>(Geerbt von <a href="/dotnet/api/system.exception">Ausnahme</a>.)</td>
 </tr>
 <tr class="even">
 <td><img src="../images/dn292128.pubproperty(exchg.10).gif" title="Öffentliche Eigenschaft" alt="Public property" /></td>
 <td><a href="/dotnet/api/system.exception.message#System_Exception_Message">Meldung</a></td>
-<td>(Geerbt von <a href="/dotnet/api/system.exception">der Ausnahme</a>.)</td>
+<td>(Geerbt von <a href="/dotnet/api/system.exception">Ausnahme</a>.)</td>
 </tr>
 <tr class="odd">
 <td><img src="../images/dn292128.pubproperty(exchg.10).gif" title="Öffentliche Eigenschaft" alt="Public property" /></td>
 <td><a href="/dotnet/api/system.exception.source#System_Exception_Source">Quelle</a></td>
-<td>(Geerbt von <a href="/dotnet/api/system.exception">der Ausnahme</a>.)</td>
+<td>(Geerbt von <a href="/dotnet/api/system.exception">Ausnahme</a>.)</td>
 </tr>
 <tr class="even">
 <td><img src="../images/dn292128.pubproperty(exchg.10).gif" title="Öffentliche Eigenschaft" alt="Public property" /></td>
 <td><a href="/dotnet/api/system.exception.stacktrace#System_Exception_StackTrace">StackTrace</a></td>
-<td>(Geerbt von <a href="/dotnet/api/system.exception">der Ausnahme</a>.)</td>
+<td>(Geerbt von <a href="/dotnet/api/system.exception">Ausnahme</a>.)</td>
 </tr>
 <tr class="odd">
 <td><img src="../images/dn292128.pubproperty(exchg.10).gif" title="Öffentliche Eigenschaft" alt="Public property" /></td>
 <td><a href="/dotnet/api/system.exception.targetsite#System_Exception_TargetSite">TargetSite</a></td>
-<td>(Geerbt von <a href="/dotnet/api/system.exception">der Ausnahme</a>.)</td>
+<td>(Geerbt von <a href="/dotnet/api/system.exception">Ausnahme</a>.)</td>
 </tr>
 </tbody>
 </table>

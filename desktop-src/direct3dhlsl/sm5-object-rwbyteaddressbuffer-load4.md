@@ -1,9 +1,9 @@
 ---
-title: 'Rwbyteaddressbuffer:: Load4 (uint)-Funktion'
-description: 'Ruft vier Werte ab. | Rwbyteaddressbuffer:: Load4 (uint)-Funktion'
+title: RWByteAddressBuffer::Load4(uint)-Funktion
+description: Ruft vier Werte ab. | RWByteAddressBuffer::Load4(uint)-Funktion
 ms.assetid: b46cd119-75be-4c2d-82f9-5dcabd7e4400
 keywords:
-- Load4-Funktion (HLSL)
+- Load4-Funktion HLSL
 topic_type:
 - apiref
 api_name:
@@ -13,14 +13,14 @@ api_type:
 ms.topic: reference
 ms.date: 05/31/2018
 api_location: ''
-ms.openlocfilehash: bb2bdc5adf3b3d95c68871a14c9382891a59ad52
-ms.sourcegitcommit: 92e74c99f8f4d097676959d0c317f533c2400a80
+ms.openlocfilehash: 7545c27ccd5f82b3fed1f36a1cc2b0f9d92a9d901f5614ba3b6bec4068cb8abb
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/09/2021
-ms.locfileid: "104982048"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117724970"
 ---
-# <a name="rwbyteaddressbufferload4uint-function"></a>Rwbyteaddressbuffer:: Load4 (uint)-Funktion
+# <a name="rwbyteaddressbufferload4uint-function"></a>RWByteAddressBuffer::Load4(uint)-Funktion
 
 Ruft vier Werte ab.
 
@@ -36,12 +36,12 @@ uint4 Load4(
 
 <dl> <dt>
 
-*Adresse* \[ in\]
+*address* \[ In\]
 </dt> <dd>
 
 Typ: **uint**
 
-Die Eingabe Adresse in Byte, bei der es sich um ein Vielfaches von 4 handeln muss.
+Die Eingabeadresse in Bytes, die ein Vielfaches von 4 sein muss.
 
 </dd> </dl>
 
@@ -51,13 +51,13 @@ Typ: **uint4**
 
 Vier Werte.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Diese Funktion wird für die folgenden Typen von Shadern unterstützt:
+Diese Funktion wird für die folgenden Shadertypen unterstützt:
 
 
 
-| Scheitelpunkt | Hülle | Domain | Geometrie | Pixel | Compute |
+| Scheitelpunkt | Rumpf | Domain | Geometrie | Pixel | Compute |
 |--------|------|--------|----------|-------|---------|
 |        |      |        |          | x     | x       |
 
@@ -72,7 +72,7 @@ Diese Funktion wird für die folgenden Typen von Shadern unterstützt:
 [Load4-Methoden](rwbyteaddressbuffer-load4.md)
 </dt> <dt>
 
-[Shader-Modell 5](d3d11-graphics-reference-sm5.md)
+[Shadermodell 5](d3d11-graphics-reference-sm5.md)
 </dt> </dl>
 
  

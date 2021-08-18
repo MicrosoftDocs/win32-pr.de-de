@@ -16,12 +16,12 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 93a873ef59ea9d099a7a739e5238c722f4b908fd
-ms.sourcegitcommit: cb87082135319cbdc5df541e3071eebb83a58972
+ms.openlocfilehash: 2a5de913ccf98ee8369430425e423813168c083cbde737b5831917a5ee594e1a
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/04/2021
-ms.locfileid: "111387078"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117759020"
 ---
 # <a name="taskfoldercreatefolder-method"></a>TaskFolder.CreateFolder-Methode
 
@@ -46,7 +46,7 @@ ppFolder = .CreateFolder( _
 *folderName* \[ In\]
 </dt> <dd>
 
-Der Name, der zum Identifizieren des Ordners verwendet wird. Wenn "FolderName \\ SubFolder1 \\ SubFolder2" angegeben ist, wird die gesamte Ordnerstruktur erstellt, wenn die Ordner nicht vorhanden sind. Dieser Parameter kann ein relativer Pfad zur aktuellen [**TaskFolder-Instanz**](taskfolder.md) sein. Der Stammtaskordner wird mit einem umgekehrten Schrägstrich \\ () angegeben. Ein Beispiel für einen Taskordnerpfad im Stammtaskordner ist \\ MyTaskFolder. Das Zeichen "." kann nicht zum Angeben des aktuellen Aufgabenordners und des "."-Zeichens verwendet werden. -Zeichen können nicht verwendet werden, um den übergeordneten Aufgabenordner im Pfad anzugeben.
+Der Name, der zum Identifizieren des Ordners verwendet wird. Wenn "FolderName \\ SubFolder1 \\ SubFolder2" angegeben ist, wird die gesamte Ordnerstruktur erstellt, wenn die Ordner nicht vorhanden sind. Dieser Parameter kann ein relativer Pfad zur aktuellen [**TaskFolder-Instanz**](taskfolder.md) sein. Der Stammtaskordner wird mit einem umgekehrten Schrägstrich \\ () angegeben. Ein Beispiel für einen Taskordnerpfad im Stammtaskordner ist \\ MyTaskFolder. Das Zeichen "." kann nicht zum Angeben des aktuellen Aufgabenordners und des .-Zeichens verwendet werden. -Zeichen können nicht verwendet werden, um den übergeordneten Aufgabenordner im Pfad anzugeben.
 
 </dd> <dt>
 
@@ -61,20 +61,20 @@ Der Sicherheitsdeskriptor, der dem Ordner zugeordnet ist.
 
 Ein [**TaskFolder-Objekt,**](taskfolder.md) das den neuen Unterordner darstellt.
 
-## <a name="requirements"></a>Requirements (Anforderungen)
+## <a name="requirements"></a>Anforderungen
 
 
 
 | Anforderung | Wert |
 |-------------------------------------|-----------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows \[ Vista-Desktop-Apps\]<br/>                                          |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server \[ 2008-Desktop-Apps\]<br/>                                    |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur Vista-Desktop-Apps\]<br/>                                          |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/>                                    |
 | Typbibliothek<br/>             | <dl> <dt>Taskschd.tlb</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Taskschd.dll</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 

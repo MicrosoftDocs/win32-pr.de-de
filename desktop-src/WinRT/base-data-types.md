@@ -1,5 +1,5 @@
 ---
-description: In dieser Tabelle sind die Basisdatentypen aufgeführt, die von der Windows Runtime unterstützt werden, und gibt den entsprechenden Typ in \# C, Visual Basic und C++ an.
+description: In dieser Tabelle werden die Basisdatentypen aufgelistet, die von der Windows Runtime unterstützt werden, und der entsprechende Typ in \# C, Visual Basic und C++ angegeben.
 ms.assetid: B5735851-EC07-48C1-92B4-CA9F768096F6
 title: Windows Laufzeitbasisdatentypen
 ms.topic: article
@@ -13,7 +13,7 @@ ms.locfileid: "117741654"
 ---
 # <a name="windows-runtime-base-data-types"></a>Windows Laufzeitbasisdatentypen
 
-In dieser Tabelle sind die Basisdatentypen aufgeführt, die von der Windows Runtime unterstützt werden, und gibt den entsprechenden Typ in \# C, Visual Basic und C++ an.
+In dieser Tabelle werden die Basisdatentypen aufgelistet, die von der Windows Runtime unterstützt werden, und der entsprechende Typ in \# C, Visual Basic und C++ angegeben.
 
 
 

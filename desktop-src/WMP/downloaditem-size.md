@@ -1,9 +1,9 @@
 ---
-title: Download Item. Size
-description: In diesem Abschnitt werden die Funktionen beschrieben, die für die Verwendung durch Online Stores entwickelt wurden. Die Verwendung dieser Funktion außerhalb des Kontexts eines Online Stores wird nicht unterstützt. Die Size-Eigenschaft ruft die Größe des Downloads ab.
+title: DownloadItem.size
+description: Hinweis In diesem Abschnitt werden Funktionen beschrieben, die für die Verwendung durch Onlineshops entwickelt wurden. Die Verwendung dieser Funktionalität außerhalb des Kontexts eines Onlineshops wird nicht unterstützt. Die size-Eigenschaft ruft die Größe des Downloads ab.
 ms.assetid: e0fd9cb5-155a-4159-94b8-1bf05b4d1062
 keywords:
-- Download Item. Size-Windows-Media Player
+- DownloadItem.size Windows Media Player
 topic_type:
 - apiref
 api_name:
@@ -14,21 +14,21 @@ api_type:
 - DllExport
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: e0ebb1ce15d34ad04095f1ef1ed84ad2df008c7e
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 046c48cc324b8d388d9f730dc3ed4d6739632d169d02d11c77201fe1da3e98c9
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106365465"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117749721"
 ---
-# <a name="downloaditemsize"></a>Download Item. Size
+# <a name="downloaditemsize"></a>DownloadItem.size
 
 > [!Note]  
-> In diesem Abschnitt werden die-Funktionen beschrieben, die für die Verwendung durch Online Stores Die Verwendung dieser Funktion außerhalb des Kontexts eines Online Stores wird nicht unterstützt.
+> In diesem Abschnitt werden funktionen beschrieben, die für die Verwendung durch Onlineshops entwickelt wurden. Die Verwendung dieser Funktionalität außerhalb des Kontexts eines Onlineshops wird nicht unterstützt.
 
  
 
-Die **size** -Eigenschaft ruft die Größe des Downloads ab.
+Die **size-Eigenschaft** ruft die Größe des Downloads ab.
 
 ## <a name="syntax"></a>Syntax
 
@@ -43,7 +43,7 @@ DownloadManager.getDownloadCollection(
 
 ## <a name="possible-values"></a>Mögliche Werte
 
-Diese Eigenschaft ist eine schreibgeschützte **Zahl** (**Long**).
+Diese Eigenschaft ist eine schreibgeschützte **Zahl** (**long**).
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -51,19 +51,19 @@ Diese Eigenschaft ist eine schreibgeschützte **Zahl** (**Long**).
 
 | Anforderung | Wert |
 |--------------------|------------------------------------------------------------------------------------|
-| Version<br/> | Windows Media Player 9-Serie oder höher<br/>                                  |
+| Version<br/> | Windows Media Player 9er Serie oder höher<br/>                                  |
 | DLL<br/>     | <dl> <dt>Wmp.dll</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Download Item-Objekt**](downloaditem-object.md)
+[**DownloadItem-Objekt**](downloaditem-object.md)
 </dt> <dt>
 
-[**Download Item. Progress**](downloaditem-progress.md)
+[**DownloadItem.progress**](downloaditem-progress.md)
 </dt> </dl>
 
  

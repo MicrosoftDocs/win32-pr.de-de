@@ -1,11 +1,11 @@
 ---
-title: Modify-Methode der MicrosoftDNS_AType-Klasse
-description: Die Modify-Methode aktualisiert die Gültigkeitsdauer und die IP-Adresse eines Ressourcen Datensatzes für die Host Adresse (a).
+title: Modify-Methode der MicrosoftDNS_AType Klasse
+description: Mit der Modify-Methode werden die Tl und die IP-Adresse eines Ressourcendatensatzes der Hostadresse (A) aktualisiert.
 ms.assetid: fe01549d-7135-499d-a5a5-cd31ea106f53
 keywords:
-- DNS-Methode ändern
-- Modify-Methode (DNS), MicrosoftDNS_AType-Klasse
-- DNS-MicrosoftDNS_AType Klasse, Methode ändern
+- Ändern der DNS-Methode
+- Modify method DNS , MicrosoftDNS_AType class
+- MicrosoftDNS_AType DNS-Klasse, Modify-Methode
 topic_type:
 - apiref
 api_name:
@@ -16,16 +16,16 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 2ffda093ed843cfd655711100321c9876120519c
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: b5d9f4740aeec92726796943e53b4d2143a6378341b061aaa7d3f3f6bf6dc7d6
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104040619"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118163481"
 ---
-# <a name="modify-method-of-the-microsoftdns_atype-class"></a>Modify-Methode der MicrosoftDNS- \_ atyp-Klasse
+# <a name="modify-method-of-the-microsoftdns_atype-class"></a>Modify-Methode der MicrosoftDNS \_ AType-Klasse
 
-Die **Modify** -Methode aktualisiert die Gültigkeitsdauer und die IP-Adresse eines Ressourcen Datensatzes für die Host Adresse (a).
+Mit **der Modify-Methode** werden die Tl und die IP-Adresse eines Ressourcendatensatzes der Hostadresse (A) aktualisiert.
 
 ## <a name="syntax"></a>Syntax
 
@@ -44,21 +44,21 @@ void Modify(
 
 <dl> <dt>
 
-Gültigkeitsdauer  \[ in, optional\]
+*TTL* \[ in, optional\]
 </dt> <dd>
 
-Zeit (in Sekunden), die der RR von einem DNS-Resolver zwischengespeichert werden kann.
+Zeit in Sekunden, die die RR von einem DNS-Resolver zwischengespeichert werden kann.
 
 </dd> <dt>
 
 *IPAddress* \[ in, optional\]
 </dt> <dd>
 
-Zeichenfolge, die die IP-Adresse des Hosts darstellt.
+Eine Zeichenfolge, die die IP-Adresse des Hosts darstellt.
 
 </dd> <dt>
 
-*RR* \[ Out, Ref\]
+*RR* \[ out, ref\]
 </dt> <dd>
 
 Verweis auf das geänderte Objekt.
@@ -69,9 +69,9 @@ Verweis auf das geänderte Objekt.
 
 Diese Methode gibt keinen Wert zurück.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Alle Parameter, die nicht angegeben sind, bleiben im geänderten Datensatz unverändert.
+Nicht angegebene Parameter bleiben im geänderten Datensatz unverändert.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -82,18 +82,18 @@ Alle Parameter, die nicht angegeben sind, bleiben im geänderten Datensatz unver
 | Unterstützte Mindestversion (Client)<br/> | Nicht unterstützt<br/>                                                              |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                                   |
 | Namespace<br/>                | \\MicrosoftDNS-Stamm<br/>                                                          |
-| MOF<br/>                      | <dl> <dt>Dnsprov. MOF</dt> </dl> |
+| MOF<br/>                      | <dl> <dt>Dnsprov.mof</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**MicrosoftDNS \_ resourcerecord**](microsoftdns-resourcerecord.md)
+[**MicrosoftDNS \_ ResourceRecord**](microsoftdns-resourcerecord.md)
 </dt> <dt>
 
-[**Methode "kreateinzustancefrompropertydata" der Klasse "MicrosoftDNS \_ aType"**](microsoftdns-atype-createinstancefrompropertydata.md)
+[**CreateInstanceFromPropertyData-Methode der MicrosoftDNS \_ AType-Klasse**](microsoftdns-atype-createinstancefrompropertydata.md)
 </dt> </dl>
 
  

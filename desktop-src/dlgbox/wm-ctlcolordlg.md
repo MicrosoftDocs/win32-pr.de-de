@@ -1,9 +1,9 @@
 ---
-title: WM_CTLCOLORDLG Meldung (Winuser.h)
-description: Wird an ein Dialogfeld gesendet, bevor das System das Dialogfeld zeichnet. Durch Reagieren auf diese Meldung kann das Dialogfeld mithilfe des angegebenen Anzeigegerätekontexthandle seine Text- und Hintergrundfarben festlegen.
+title: WM_CTLCOLORDLG (Winuser.h)
+description: Wird an ein Dialogfeld gesendet, bevor das Dialogfeld vom System ge zeichnet wird. Wenn auf diese Meldung reagiert wird, kann das Dialogfeld seine Text- und Hintergrundfarben mithilfe des angegebenen Anzeigegerätekontexthandpunkts festlegen.
 ms.assetid: 5b90ab3f-b751-486f-a0fa-33f791c31a26
 keywords:
-- Dialogfelder für WM_CTLCOLORDLG Meldung
+- WM_CTLCOLORDLG-Dialogfelder
 topic_type:
 - apiref
 api_name:
@@ -21,9 +21,9 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 08/11/2021
 ms.locfileid: "118503413"
 ---
-# <a name="wm_ctlcolordlg-message"></a>WM \_ CTLCOLORDLG-Nachricht
+# <a name="wm_ctlcolordlg-message"></a>\_WM-CTLCOLORDLG-Meldung
 
-Wird an ein Dialogfeld gesendet, bevor das System das Dialogfeld zeichnet. Durch Reagieren auf diese Meldung kann das Dialogfeld mithilfe des angegebenen Anzeigegerätekontexthandle seine Text- und Hintergrundfarben festlegen.
+Wird an ein Dialogfeld gesendet, bevor das Dialogfeld vom System ge zeichnet wird. Wenn auf diese Meldung reagiert wird, kann das Dialogfeld seine Text- und Hintergrundfarben mithilfe des angegebenen Anzeigegerätekontexthandpunkts festlegen.
 
 
 ```C++
@@ -60,11 +60,11 @@ Standardmäßig wählt die [**DefWindowProc-Funktion**](/windows/desktop/api/win
 
 Das System zerstört den zurückgegebenen Pinsel nicht automatisch. Es liegt in der Verantwortung der Anwendung, den Pinsel zu zerstören, wenn er nicht mehr benötigt wird.
 
-Die **WM \_ CTLCOLORDLG-Nachricht** wird nie zwischen Threads gesendet. Er wird nur innerhalb eines Threads gesendet.
+Die **WM \_ CTLCOLORDLG-Nachricht** wird nie zwischen Threads gesendet. Es wird nur innerhalb eines Threads gesendet.
 
 Beachten Sie, dass die **WM \_ CTLCOLORDLG-Nachricht** an das Dialogfeld selbst gesendet wird. Alle anderen **WM \_ \* CTLCOLOR-Nachrichten** werden an den Besitzer des Steuerelements gesendet.
 
-Wenn eine Dialogfeldprozedur diese Meldung verarbeitet, sollte sie den gewünschten Rückgabewert in einen **INT \_ PTR-Wert** konvertieren und den Wert direkt zurückgeben. Wenn die Dialogfeldprozedur **FALSE** zurückgibt, wird die Standardmäßige Nachrichtenverarbeitung ausgeführt. Der von der [**SetWindowLong-Funktion**](/windows/desktop/api/winuser/nf-winuser-setwindowlonga) festgelegte **\_ DWL-MSGRESULT-Wert** wird ignoriert.
+Wenn eine Dialogfeldprozedur diese Meldung verarbeitet, sollte sie den gewünschten Rückgabewert **in eine INT \_ PTR-Datei** umkehren und den Wert direkt zurückgeben. Wenn die Dialogfeldprozedur **FALSE zurückgibt,** wird die Standardnachrichtenbehandlung ausgeführt. Der von der [**SetWindowLong-Funktion festgelegte**](/windows/desktop/api/winuser/nf-winuser-setwindowlonga) **\_ MSGRESULT-DWL-Wert** wird ignoriert.
 
 ## <a name="requirements"></a>Anforderungen
 

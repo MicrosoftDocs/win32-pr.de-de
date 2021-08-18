@@ -1,23 +1,23 @@
 ---
-title: Beispiel Code für den Bereich mit idirector ysearch
-description: Im folgenden Codebeispiel wird der Bereich verwendet, um die Mitglieder einer Gruppe mithilfe der IDirectorySearch-Schnittstelle abzurufen.
+title: Beispielcode für Ranging mit IDirectorySearch
+description: Im folgenden Codebeispiel wird ranging verwendet, um die Mitglieder einer Gruppe mithilfe der IDirectorySearch-Schnittstelle abzurufen.
 ms.assetid: 13aba22f-c649-4dda-804f-01ba493cd6d7
 ms.tgt_platform: multiple
 keywords:
-- Beispiel Code für den Bereich mit idirector ysearch ADSI
-- Bereichs Abruf ADSI, Beispielcode, using idirector ysearch
+- Beispielcode für Ranging mit IDirectorySearch ADSI
+- Bereichsabruf ADSI , Beispielcode, Verwenden von IDirectorySearch
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 94a5744c4952db3a8026db6c27cc0ecd2c4543de
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: 0c1c2f5cda530268fdc046c807a69ed8cec7ac2807fc4eb3225701209d4f261d
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "103947347"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117840000"
 ---
-# <a name="example-code-for-ranging-with-idirectorysearch"></a>Beispiel Code für den Bereich mit idirector ysearch
+# <a name="example-code-for-ranging-with-idirectorysearch"></a>Beispielcode für Ranging mit IDirectorySearch
 
-Im folgenden Codebeispiel wird der Bereich verwendet, um die Mitglieder einer Gruppe mithilfe der [**IDirectorySearch**](/windows/desktop/api/Iads/nn-iads-idirectorysearch) -Schnittstelle abzurufen.
+Im folgenden Codebeispiel wird ranging verwendet, um die Mitglieder einer Gruppe mithilfe der [**IDirectorySearch-Schnittstelle**](/windows/desktop/api/Iads/nn-iads-idirectorysearch) abzurufen.
 
 
 ```C++
@@ -214,9 +214,9 @@ HRESULT EnumGroupWithIDirectorySearch(LPCWSTR pwszGroupDN,
 
 
 
- 
+ 
 
- 
+ 
 
 
 

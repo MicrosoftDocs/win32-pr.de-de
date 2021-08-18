@@ -6,7 +6,7 @@ keywords:
 - Windows Media Player Mobile Skins, Schreiben von Code
 - Skins,Schreiben von Code
 - Erstellen von Skins, Schreiben von Code
-- Schreiben von Code für Skins, Windows Media Player Mobile
+- Schreiben von Code für Skins,Windows Media Player Mobile
 - Schreiben von Code für Skins, Informationen
 ms.topic: article
 ms.date: 05/31/2018
@@ -19,19 +19,19 @@ ms.locfileid: "117745516"
 ---
 # <a name="writing-the-code"></a>Schreiben des Codes
 
-Sie verfügen nun über alle benötigten Grafikdateien. Sie müssen jetzt lediglich einige einfache Befehle in die Skindefinitionsdatei schreiben.
+Sie verfügen nun über alle benötigten Artdateien. Sie müssen jetzt nur noch einige einfache Befehle in die Skindefinitionsdatei schreiben.
 
-Die folgenden Abschnitte führen Sie durch den Prozess des Schreibens des Codes.
+In den folgenden Abschnitten wird das Schreiben des Codes erläutert.
 
--   [Anfangslinien](initial-lines.md)
--   [Abschnitt "Beschreibung"](description-section.md)
+-   [Anfangszeilen](initial-lines.md)
+-   [Beschreibungsabschnitt](description-section.md)
 -   [Abschnitt "Bitmaps"](bitmaps-section.md)
 -   [Abschnitt "Schaltflächen"](buttons-section.md)
 -   [Textabschnitt](text-section.md)
--   [Marquee-Abschnitt](marquee-section.md)
+-   [Abschnitt "Marquee"](marquee-section.md)
 -   [Abschnitt "Trackbars"](trackbars-section.md)
 
-Weitere Informationen zu den Besonderheiten von Skindefinitionsdateien finden Sie in der [Skinreferenz.](skin-reference.md)
+Weitere Informationen zu den Besonderheiten von Skindefinitionsdateien finden Sie in der [Skinreferenz](skin-reference.md).
 
 ## <a name="related-topics"></a>Zugehörige Themen
 

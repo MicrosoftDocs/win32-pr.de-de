@@ -1,29 +1,29 @@
 ---
-title: Voraussetzungen für das Installieren einer Schema Erweiterung
-description: Um das Schema zu ändern, stellen Sie sicher, dass Sie über die folgenden Rechte verfügen und über die folgenden Informationen verfügen. Sie müssen über ausreichende Rechte verfügen, um das Schema zu ändern.
+title: Voraussetzungen für die Installation einer Schemaerweiterung
+description: Um das Schema zu ändern, stellen Sie sicher, dass Sie über die folgenden Rechte verfügen und die folgenden Informationen kennen. Sie müssen über ausreichende Rechte zum Ändern des Schemas verfügen.
 ms.assetid: f7795eac-2b95-4b6c-a2f5-8728316059ab
 ms.tgt_platform: multiple
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 275f468df54b9ced3dcca0648e4cc3602ab71422
-ms.sourcegitcommit: 3e70ae762629e244028b437420ed50b5850db4e3
+ms.openlocfilehash: 78af50626d452c8e26cbf1e7d33addfcea4f854cd2b40b0860bb98c783044748
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/20/2020
-ms.locfileid: "104314374"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118185302"
 ---
-# <a name="prerequisites-for-installing-a-schema-extension"></a>Voraussetzungen für das Installieren einer Schema Erweiterung
+# <a name="prerequisites-for-installing-a-schema-extension"></a>Voraussetzungen für die Installation einer Schemaerweiterung
 
-Um das Schema zu ändern, stellen Sie sicher, dass Sie über die folgenden Rechte verfügen und die folgenden Informationen beachten:
+Um das Schema zu ändern, stellen Sie sicher, dass Sie über die folgenden Rechte verfügen und die folgenden Informationen kennen:
 
--   Sie müssen über ausreichende Rechte verfügen, um das Schema zu ändern. Das Schema enthält alle Daten Definitionen für Active Directory Domain Services für das gesamte Unternehmen. Um das Schema zu aktualisieren, muss ein Benutzer Mitglied der Gruppe "Schema Administratoren" sein, oder es muss die Berechtigung zum Aktualisieren des Schemas delegiert worden sein.
--   Schema Änderungen können nur am Schema Master vorgenommen werden. Weitere Informationen finden Sie unter [Erkennen des Schema Masters](detecting-the-schema-master.md).
--   Der Schema Master muss beschreibbar sein. Das heißt, die Sicherheits intersperre in der Registrierung muss entfernt werden. Weitere Informationen finden Sie unter [Aktivieren von Schema Änderungen am Schema Master](enabling-schema-changes-at-the-schema-master.md).
--   Weitere Informationen zum Überprüfen, ob der Schema Master geändert werden kann, und zum Ändern der Einstellungen finden Sie unter "XADM: nicht zum Aktualisieren des Schemas auf dem Schema Besitzer" in der Hilfe-und Support Knowledge Base unter [https://support.microsoft.com/kb/261231](https://support.microsoft.com/kb/261231) .
+-   Sie müssen über ausreichende Rechte zum Ändern des Schemas verfügen. Das Schema enthält alle Datendefinitionen für Active Directory Domain Services für das gesamte Unternehmen. Zum Aktualisieren des Schemas muss ein Benutzer Mitglied der Gruppe Schemaadministratoren sein oder die Rechte zum Aktualisieren des Schemas delegiert worden sein.
+-   Schemaänderungen können nur am Schemamaster vorgenommen werden. Weitere Informationen finden Sie unter [Erkennen des Schemamasters.](detecting-the-schema-master.md)
+-   Der Schemamaster muss beschreibbar sein. Das heißt, der Sicherheitsinlock in der Registrierung muss entfernt werden. Weitere Informationen finden Sie unter [Aktivieren von Schemaänderungen im Schemamaster.](enabling-schema-changes-at-the-schema-master.md)
+-   Weitere Informationen zum Überprüfen, ob der Schemamaster geändert werden kann, und zum Ändern der Einstellungen finden Sie unter "XADM: Das Schema für den Schemabesitzer kann nicht aktualisiert werden" im Hilfe- und Knowledge Base unter [https://support.microsoft.com/kb/261231](https://support.microsoft.com/kb/261231) .
 
- 
+ 
 
- 
+ 
 
 
 

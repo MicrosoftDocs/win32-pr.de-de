@@ -1,6 +1,6 @@
 ---
-description: 'Weitere Informationen finden Sie unter: vistaparam Class'
-title: Vistaparam-Klasse (Microsoft. ISAM. ESENT. Interop. Vista)
+description: Weitere Informationen finden Sie unter VistaParam-Klasse.
+title: VistaParam-Klasse (Microsoft.Isam.Esent.Interop.Vista)
 TOCTitle: VistaParam class
 ms:assetid: T:Microsoft.Isam.Esent.Interop.Vista.VistaParam
 ms:mtpsurl: https://msdn.microsoft.com/library/microsoft.isam.esent.interop.vista.vistaparam(v=EXCHG.10)
@@ -24,24 +24,24 @@ api_type:
 api_location:
 - Microsoft.Isam.Esent.Interop.dll
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: 0c3190c10e8bc4a85c3a811edbe43feaf1c36153
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 4ff804536cfd28088319b9f3b98f1758155503ac8332786f60dd58f10450a074
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "103958657"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117889632"
 ---
-# <a name="vistaparam-class"></a>Vistaparam-Klasse
+# <a name="vistaparam-class"></a>VistaParam-Klasse
 
-System Parameter, die der Vista-Version von ESENT hinzugefügt wurden.
+Systemparameter, die der Vista-Version von ESENT hinzugefügt wurden.
 
 ## <a name="inheritance-hierarchy"></a>Vererbungshierarchie
 
 [System.Object](/dotnet/api/system.object)  
-  Microsoft. ISAM. ESENT. Interop. Vista. vistaparam  
+  Microsoft.Isam.Esent.Interop.Vista.VistaParam  
 
-**Namespace:**  [Microsoft. ISAM. ESENT. Interop. Vista](./microsoft.isam.esent.interop.vista-namespace.md)  
-**Assembly:**  Microsoft. ISAM. ESENT. Interop (in Microsoft.Isam.Esent.Interop.dll)
+**Namespace:**  [Microsoft.Isam.Esent.Interop.Vista](./microsoft.isam.esent.interop.vista-namespace.md)  
+**Assembly:**  Microsoft.Isam.Esent.Interop (in Microsoft.Isam.Esent.Interop.dll)
 
 ## <a name="syntax"></a>Syntax
 
@@ -60,10 +60,10 @@ public static class VistaParam
 
 Alle öffentlichen statischen Elemente dieses Typs (Shared in Microsoft Visual Basic) sind threadsicher. Bei Instanzmembern ist die Threadsicherheit nicht gewährleistet.
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
-#### <a name="reference"></a>Referenz
+#### <a name="reference"></a>Verweis
 
-[Vistaparam-Member](./vistaparam-members.md)
+[VistaParam-Member](./vistaparam-members.md)
 
-[Microsoft. ISAM. ESENT. Interop. Vista-Namespace](./microsoft.isam.esent.interop.vista-namespace.md)
+[Microsoft.Isam.Esent.Interop.Vista-Namespace](./microsoft.isam.esent.interop.vista-namespace.md)

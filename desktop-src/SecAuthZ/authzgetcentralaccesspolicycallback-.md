@@ -1,7 +1,7 @@
 ---
-description: Die authzgetcentralaccesspolicycallback-Funktion ist eine Anwendungs definierte Funktion, die die zentrale Zugriffs Richtlinie abruft. Authzgetcentralaccesspolicycallback ist ein Platzhalter für den Namen der Anwendungs definierten Funktion.
+description: Die AutohzGetCentralAccessPolicyCallback-Funktion ist eine anwendungsdefinierte Funktion, die die zentrale Zugriffsrichtlinie abruft. AuthzGetCentralAccessPolicyCallback ist ein Platzhalter für den anwendungsdefinierte Funktionsnamen.
 ms.assetid: 1D5831EF-ACA8-4EE9-A7C1-E1A3CB74CEC0
-title: Authzgetcentralaccesspolicycallback-Rückruffunktion
+title: AutohzGetCentralAccessPolicyCallback-Rückruffunktion
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -12,16 +12,16 @@ api_name:
 api_type:
 - UserDefined
 api_location: ''
-ms.openlocfilehash: b96832fa647fde920a70ac3d6608c8ebb0048892
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 5e8fd0afbd901d48386859e9b5d3557a173cfe6a23d749dc776992a4aedebed1
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106353225"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117783744"
 ---
-# <a name="authzgetcentralaccesspolicycallback-callback-function"></a>Authzgetcentralaccesspolicycallback-Rückruffunktion
+# <a name="authzgetcentralaccesspolicycallback-callback-function"></a>AutohzGetCentralAccessPolicyCallback-Rückruffunktion
 
-Die *authzgetcentralaccesspolicycallback* -Funktion ist eine Anwendungs definierte Funktion, die die zentrale Zugriffs Richtlinie abruft. *Authzgetcentralaccesspolicycallback* ist ein Platzhalter für den Namen der Anwendungs definierten Funktion.
+Die *AutohzGetCentralAccessPolicyCallback-Funktion* ist eine anwendungsdefinierte Funktion, die die zentrale Zugriffsrichtlinie abruft. *AuthzGetCentralAccessPolicyCallback* ist ein Platzhalter für den anwendungsdefinierte Funktionsnamen.
 
 ## <a name="syntax"></a>Syntax
 
@@ -42,46 +42,46 @@ BOOL CALLBACK AuthzGetCentralAccessPolicyCallback (
 
 <dl> <dt>
 
-" *hauthzclientcontext* \[ " in\]
+*hAuthzClientContext* \[ In\]
 </dt> <dd>
 
-Handle für den Client Kontext.
+Handle für den Clientkontext.
 
 </dd> <dt>
 
-*capid* \[ in\]
+*capid* \[ In\]
 </dt> <dd>
 
-Die ID der abzurufenden zentralen Zugriffs Richtlinie.
+ID der abzurufende zentralen Zugriffsrichtlinie.
 
 </dd> <dt>
 
- Argumente \[ in, optional\]
+*pArgs* \[ in, optional\]
 </dt> <dd>
 
-Optionale Argumente, die über den **optionalarguments** -Member der [**Authz- \_ Zugriffs \_ Anforderungs**](/windows/desktop/api/Authz/ns-authz-authz_access_request) Struktur an die [**authzaccesscheck**](/windows/desktop/api/Authz/nf-authz-authzaccesscheck) -Funktion übermittelt wurden.
+Optionale Argumente, die über den **OptionalArguments-Member** der AUTHZ ACCESS REQUEST-Struktur an die [**\_ AutohzAccessCheck-Funktion \_**](/windows/desktop/api/Authz/ns-authz-authz_access_request) übergeben wurden. [](/windows/desktop/api/Authz/nf-authz-authzaccesscheck)
 
 </dd> <dt>
 
-*pcentralaccesspolicyanwendbar* \[ vorgenommen\]
+*pCentralAccessPolicyApplicable* \[ out\]
 </dt> <dd>
 
-Ein Zeiger auf einen booleschen Wert, den der Ressourcen-Manager verwendet, um anzugeben, ob während der Zugriffs Auswertung eine zentrale Zugriffs Richtlinie verwendet werden soll.
+Zeiger auf einen booleschen Wert, den der Ressourcen-Manager verwendet, um anzugeben, ob während der Zugriffsauswertung eine zentrale Zugriffsrichtlinie verwendet werden soll.
 
 </dd> <dt>
 
-*ppcentralaccesspolicy* \[ vorgenommen\]
+*ppCentralAccessPolicy* \[ out\]
 </dt> <dd>
 
-Ein Zeiger auf die zentrale Zugriffs Richtlinie (Cap), die zum Auswerten des Zugriffs verwendet werden soll. Wenn dieser Wert **null** ist, wird die Standardgrenze angewendet.
+Zeiger auf die zentrale Zugriffsrichtlinie (Central Access Policy, CAP), die zum Auswerten des Zugriffs verwendet werden soll. Wenn dieser Wert **NULL** ist, wird die Standard-CAP angewendet.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Wenn die Funktion erfolgreich ausgeführt wird, gibt die Funktion **true** zurück.
+Wenn die Funktion erfolgreich ist, gibt die Funktion **TRUE** zurück.
 
-Wenn die Funktion die Auswertung nicht ausführen kann, wird **false** zurückgegeben. Verwenden Sie [**SetLastError**](/windows/desktop/api/errhandlingapi/nf-errhandlingapi-setlasterror) , um einen Fehler an die Access Check-Funktion zurückzugeben.
+Wenn die Funktion die Auswertung nicht durchführen kann, gibt sie **FALSE** zurück. Verwenden Sie [**SetLastError,**](/windows/desktop/api/errhandlingapi/nf-errhandlingapi-setlasterror) um einen Fehler an die Zugriffsüberprüfungsfunktion zurückzugeben.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -89,23 +89,23 @@ Wenn die Funktion die Auswertung nicht ausführen kann, wird **false** zurückge
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows 8 \[ -Desktop-Apps\]<br/>                             |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2012 \[ -Desktop-Apps\]<br/>                   |
-| Verteilbare Komponente<br/>          | Windows Server 2003-Verwaltungs Tools Pack unter Windows XP<br/> |
+| Unterstützte Mindestversion (Client)<br/> | \[Windows 8 Nur Desktop-Apps\]<br/>                             |
+| Unterstützte Mindestversion (Server)<br/> | \[Windows Server 2012 Nur Desktop-Apps\]<br/>                   |
+| Verteilbare Komponente<br/>          | Windows Server 2003 Administration Tools Pack auf Windows XP<br/> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Authz- \_ Zugriffs \_ Anforderung**](/windows/desktop/api/Authz/ns-authz-authz_access_request)
+[**\_AUTHZ-ZUGRIFFSANFORDERUNG \_**](/windows/desktop/api/Authz/ns-authz-authz_access_request)
 </dt> <dt>
 
-[**Authz- \_ Init- \_ Informationen**](/windows/desktop/api/Authz/ns-authz-authz_init_info)
+[**INIT-INFORMATIONEN ZU AUTHZ \_ \_**](/windows/desktop/api/Authz/ns-authz-authz_init_info)
 </dt> <dt>
 
-[**Authzaccesscheck**](/windows/desktop/api/Authz/nf-authz-authzaccesscheck)
+[**AuthzAccessCheck**](/windows/desktop/api/Authz/nf-authz-authzaccesscheck)
 </dt> </dl>
 
  

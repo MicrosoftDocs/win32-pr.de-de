@@ -1,11 +1,11 @@
 ---
-title: Controls. Previous-Methode
+title: Controls.previous-Methode
 description: Die vorherige Methode legt das aktuelle Element auf das vorherige Element in der Wiedergabeliste fest.
 ms.assetid: 09f83306-5e82-4384-ad28-38e406a401d8
 keywords:
-- vorherige Methode, Windows Media Player
-- vorherige Methode, Windows Media Player, Steuerelement Klasse
-- Steuerelement-Klasse, Windows Media Player, vorherige Methode
+- vorherige Methode Windows Media Player
+- previous-Methode Windows Media Player , Controls-Klasse
+- Controls-Klasse Windows Media Player , vorherige Methode
 topic_type:
 - apiref
 api_name:
@@ -16,14 +16,14 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 8b8fcfacd93412f467e6ef1def5afa6305a6bc0c
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: f67dbc80fb731f32eefb36f2a0f66c852da3da69dbc6b7ae56c03ebafb06e07e
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106372147"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118119329"
 ---
-# <a name="controlsprevious-method"></a>Controls. Previous-Methode
+# <a name="controlsprevious-method"></a>Controls.previous-Methode
 
 Die **vorherige** Methode legt das aktuelle Element auf das vorherige Element in der Wiedergabeliste fest.
 
@@ -44,13 +44,13 @@ Diese Methode hat keine Parameter.
 
 Diese Methode gibt keinen Wert zurück.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Wenn sich die Wiedergabeliste auf dem ersten Eintrag befindet, wenn **Previous** aufgerufen wird, wird der letzte Eintrag in der Wiedergabeliste zum aktuellen Eintrag.
+Wenn sich die Wiedergabeliste beim Aufrufen des **vorherigen** Eintrags im ersten Eintrag befindet, wird der letzte Eintrag in der Wiedergabeliste zum aktuellen Eintrag.
 
 ## <a name="examples"></a>Beispiele
 
-Im folgenden Beispiel wird ein HTML-Schaltflächen Element erstellt, das **zurück verwendet, um zum** vorherigen Element in der aktuellen Wiedergabeliste zu wechseln. Das **Player** -Objekt wurde mit ID = "Player" erstellt.
+Im folgenden Beispiel wird ein HTML BUTTON-Element erstellt, das **mithilfe** von previous zum vorherigen Element in der aktuellen Wiedergabeliste wechselt. Das **Player-Objekt** wurde mit der ID = "Player" erstellt.
 
 
 ```JScript
@@ -74,22 +74,22 @@ Im folgenden Beispiel wird ein HTML-Schaltflächen Element erstellt, das **zurü
 
 | Anforderung | Wert |
 |--------------------|------------------------------------------------------------------------------------|
-| Version<br/> | Windows Media Player Version 7,0 oder höher.<br/>                              |
+| Version<br/> | Windows Media Player Version 7.0 oder höher.<br/>                              |
 | DLL<br/>     | <dl> <dt>Wmp.dll</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
 [**Controls-Objekt**](controls-object.md)
 </dt> <dt>
 
-[**Steuerelemente. Next**](controls-next.md)
+[**Controls.next**](controls-next.md)
 </dt> <dt>
 
-[**Controls. Pause**](controls-stop.md)
+[**Controls.stop**](controls-stop.md)
 </dt> </dl>
 
  

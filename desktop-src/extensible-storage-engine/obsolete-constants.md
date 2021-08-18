@@ -1,5 +1,5 @@
 ---
-description: 'Weitere Informationen: veraltete Konstanten'
+description: Weitere Informationen finden Sie unter Veraltete Konstanten.
 title: Veraltete Konstanten
 TOCTitle: Obsolete Constants
 ms:assetid: 792aee52-0db3-4d6c-aba5-91fce2e3f481
@@ -15,12 +15,12 @@ api_type:
 - COM
 api_location: ''
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: db0e172895a1c8d6850d7a8c93ff39473bb2db45
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 3f7757fb35f97ca83e7697ec06abcd86564f5b6838b0f23b68c6270f33fe150d
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "103756936"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117703308"
 ---
 # <a name="obsolete-constants"></a>Veraltete Konstanten
 
@@ -29,7 +29,7 @@ _**Gilt für:** Windows | Windows Server_
 
 ## <a name="obsolete-constants"></a>Veraltete Konstanten
 
-Diese Konstanten sind veraltet und sollten nicht in Ihrer Anwendung verwendet werden. Sie werden in ESENT definiert. H für ältere Anwendungen.
+Diese Konstanten sind veraltet und sollten nicht in Ihrer Anwendung verwendet werden. Sie werden in ESENT definiert. H für Legacyanwendungen.
 
 JET_DbInfoLangid
 
@@ -85,7 +85,7 @@ JET_bitTableClass15
 </tr>
 <tr class="odd">
 <td><p><strong>Header</strong></p></td>
-<td><p>In "ESENT. h" deklariert.</p></td>
+<td><p>Wird in Esent.h deklariert.</p></td>
 </tr>
 </tbody>
 </table>

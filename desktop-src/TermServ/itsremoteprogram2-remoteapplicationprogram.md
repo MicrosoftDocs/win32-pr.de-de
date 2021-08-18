@@ -1,10 +1,10 @@
 ---
 title: ITSRemoteProgram2-Eigenschaft "RemoteApplicationProgram"
-description: Der Pfad und der Dateiname des RemoteApp-Programms.
+description: Der Pfad und Dateiname des RemoteApp-Programms.
 ms.assetid: 1e8fc9a5-6622-40e2-b434-a26ce20bd9aa
 ms.tgt_platform: multiple
 keywords:
-- RemoteApplicationProgram-Eigenschaft Remotedesktopdienste
+- RemoteApplicationProgram-Remotedesktopdienste
 - RemoteApplicationProgram-Eigenschaft Remotedesktopdienste , ITSRemoteProgram2-Schnittstelle
 - ITSRemoteProgram2-Schnittstelle Remotedesktopdienste , RemoteApplicationProgram-Eigenschaft
 - RemoteApplicationProgram-Eigenschaft Remotedesktopdienste , ITSRemoteProgram3-Schnittstelle
@@ -31,7 +31,7 @@ ms.locfileid: "117756684"
 ---
 # <a name="itsremoteprogram2remoteapplicationprogram-property"></a>ITSRemoteProgram2::RemoteApplicationProgram-Eigenschaft
 
-Der Pfad und der Dateiname des RemoteApp-Programms.
+Der Pfad und Dateiname des RemoteApp-Programms.
 
 Diese Eigenschaft ist lesegeschützt.
 
@@ -48,7 +48,7 @@ HRESULT put_RemoteApplicationProgram(
 
 ## <a name="property-value"></a>Eigenschaftswert
 
-Der Pfad und der Dateiname des RemoteApp-Programms.
+Der Pfad und Dateiname des RemoteApp-Programms.
 
 ## <a name="requirements"></a>Anforderungen
 
