@@ -1,7 +1,7 @@
 ---
-description: Legt den Wert der angegebenen untergeordneten Eigenschaften im <Properties> -Element eines Scan Profils.
+description: Legt den Wert der angegebenen untergeordneten Eigenschaften in fest. <Properties> -Element eines Scanprofils.
 ms.assetid: 3cf7b723-4004-49e5-b3bd-49a84432ede3
-title: 'Iscanprofile:: SetProperty-Methode (Scanprofile. h)'
+title: IScanProfile::SetProperty-Methode (Scanprofile.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,16 +13,16 @@ api_type:
 - COM
 api_location:
 - Scanprofile.h
-ms.openlocfilehash: f8f21891ae0cc5fa8e64fafd4acb9e61334a7279
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: ba4c7aff5139f1230179299d80065f1b933a6cf2d01d4ca03c045ccbe142c3cd
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "103752856"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118441426"
 ---
-# <a name="iscanprofilesetproperty-method"></a>Iscanprofile:: SetProperty-Methode
+# <a name="iscanprofilesetproperty-method"></a>IScanProfile::SetProperty-Methode
 
-Legt den Wert der angegebenen untergeordneten Eigenschaften im- `<Properties>` Element eines Scan Profils fest.
+Legt den Wert der angegebenen untergeordneten Eigenschaften im `<Properties>` -Element eines Scanprofils fest.
 
 ## <a name="syntax"></a>Syntax
 
@@ -41,28 +41,28 @@ HRESULT SetProperty(
 
 <dl> <dt>
 
-*NUM* \[ in\]
+*num* \[ In\]
 </dt> <dd>
 
-Typ: **ulong**
+Typ: **ULONG**
 
-Die Anzahl der Einträge in den Arrays, auf die von *PID* und *pvar* verwiesen wird.
+Die Anzahl der Einträge in den Arrays, auf die *pid* und *pvar* verweisen.
 
 </dd> <dt>
 
-*PID* \[ in\]
+*Pid* \[ In\]
 </dt> <dd>
 
-Geben Sie Folgendes ein: **PROPID \** _
+Typ: **PROPID \***
 
-Ein Zeiger auf ein Array von Identifikationsnummern der festzulegenden Eigenschaften. Jeder Wert im Array ist eine [WIA-Eigenschafts Konstante](-wia-wia-property-constants.md).
+Ein Zeiger auf ein Array von Identifikationsnummern der festzulegenden Eigenschaften. Jeder Wert im Array ist eine [WIA-Eigenschaftskonstante.](-wia-wia-property-constants.md)
 
 </dd> <dt>
 
-_pvar * \[ in\]
+*pvar* \[ In\]
 </dt> <dd>
 
-Typ: **[PROPVARIANT](/windows/win32/api/propidlbase/ns-propidlbase-propvariant) \** _
+Typ: **[PROPVARIANT](/windows/win32/api/propidlbase/ns-propidlbase-propvariant)\***
 
 Ein Zeiger auf ein Array von Werten, die den Eigenschaften zugewiesen werden sollen.
 
@@ -70,17 +70,17 @@ Ein Zeiger auf ein Array von Werten, die den Eigenschaften zugewiesen werden sol
 
 ## <a name="return-value"></a>Rückgabewert
 
-Type: _ *HRESULT**
+Typ: **HRESULT**
 
-Wenn diese Methode erfolgreich ausgeführt wird, gibt Sie **S \_ OK** zurück. Andernfalls wird ein **HRESULT** -Fehlercode zurückgegeben.
+Wenn diese Methode erfolgreich ist, wird **S \_ OK** zurückgegeben. Andernfalls wird ein **HRESULT-Fehlercode** zurückgegeben.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Jeder Wert im Array, auf den die *PID* zeigt, ist eine der [WIA-Eigenschafts Konstanten](-wia-wia-property-constants.md). Sie können dieses Identifikationssystem erweitern. Siehe [Definieren von benutzerdefinierten Eigenschaften](-wia-defining-custom-properties.md).
+Jeder Wert im Array, auf den *pid* zeigt, ist eine der [WIA-Eigenschaftskonstanten.](-wia-wia-property-constants.md) Sie können dieses Identifikationssystem erweitern. Weitere Informationen finden Sie unter [Definieren von benutzerdefinierten Eigenschaften.](-wia-defining-custom-properties.md)
 
-Änderungen an einem Profil werden erst auf dem Datenträger gespeichert, wenn die Anwendung die [**iscanprofile:: Save**](-wia-iscanprofile-save.md) -Methode aufruft.
+Änderungen an einem Profil werden erst auf dem Datenträger gespeichert, wenn die Anwendung die [**IScanProfile::Save-Methode aufruft.**](-wia-iscanprofile-save.md)
 
-Wenn zwei Anwendungen Überprüfungs Profil Objekte aus derselben XML-Datei erstellen und jede Anwendung Änderungen in das zugehörige Objekt schreibt, werden nur die Änderungen, die von der Anwendung vorgenommen werden, die [**iscanprofile:: Save**](-wia-iscanprofile-save.md) Last aufruft, auf dem Datenträger gespeichert.
+Wenn zwei Anwendungen Scanprofilobjekte aus derselben XML-Datei erstellen und jede Anwendung Änderungen in ihr -Objekt schreibt, werden nur die Änderungen, die von der Anwendung vorgenommen werden, die [**IScanProfile::Save last aufruft,**](-wia-iscanprofile-save.md) auf dem Datenträger gespeichert.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -88,27 +88,27 @@ Wenn zwei Anwendungen Überprüfungs Profil Objekte aus derselben XML-Datei erst
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                              |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/>                                        |
-| Header<br/>                   | <dl> <dt>Scanprofile. h</dt> </dl>    |
-| IDL<br/>                      | <dl> <dt>Scanprofiles. idl</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur Vista-Desktop-Apps\]<br/>                                              |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/>                                        |
+| Header<br/>                   | <dl> <dt>Scanprofile.h</dt> </dl>    |
+| Idl<br/>                      | <dl> <dt>Scanprofiles.idl</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen:
 
 <dl> <dt>
 
-[**Iscanprofile**](-wia-iscanprofile.md)
+[**IScanProfile**](-wia-iscanprofile.md)
 </dt> <dt>
 
-**Licher**
+**Konzeptionellen**
 </dt> <dt>
 
-[Profil Schema überprüfen](-wia-scan-profile-schema.md)
+[Scanprofilschema](-wia-scan-profile-schema.md)
 </dt> <dt>
 
-[WIA-Eigenschafts Konstanten](-wia-wia-property-constants.md)
+[WIA-Eigenschaftenkonstanten](-wia-wia-property-constants.md)
 </dt> <dt>
 
 [Definieren von benutzerdefinierten Eigenschaften](-wia-defining-custom-properties.md)

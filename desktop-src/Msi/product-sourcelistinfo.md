@@ -69,7 +69,7 @@ Nicht alle Eigenschaften, die abgerufen werden können, können festgelegt werde
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 

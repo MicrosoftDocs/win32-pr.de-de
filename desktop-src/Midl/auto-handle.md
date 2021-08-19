@@ -1,9 +1,9 @@
 ---
 title: auto_handle-Attribut
-description: Das Attribut \ Auto \_ handle \ ACF weist den Stub an, automatisch die Bindung für eine Funktion zu erstellen, die keinen expliziten Bindungs handle-Parameter hat. Beachten Sie, dass dieses Attribut veraltet ist und nicht mehr unterstützt wird.
+description: Das \_ ACF-Attribut \auto handle\ weist den Stub an, automatisch die Bindung für eine Funktion einzurichten, die keinen expliziten Bindungshandleparameter besitzt. Hinweis Dieses Attribut ist veraltet und wird nicht mehr unterstützt.
 ms.assetid: a402b933-f69b-4dfe-b0c5-b034d65d4a84
 keywords:
-- auto_handle Attribut-Mittel l
+- auto_handle-Attribut MIDL
 topic_type:
 - apiref
 api_name:
@@ -12,21 +12,21 @@ api_type:
 - NA
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 01e9a4c91fac8553867536f4f5a8c3094e0f0ff9
-ms.sourcegitcommit: 57758ecb246c84d65e6e0e4bd5570d9176fa39cd
+ms.openlocfilehash: 1e1f42a2fb643a2ce643437aad73b13c6e55d3462e92f9ce52ba208c6dc5cb68
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "104471909"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117807883"
 ---
-# <a name="auto_handle-attribute"></a>Attribut für automatisches \_ handle
+# <a name="auto_handle-attribute"></a>\_Attribut für automatisches Handle
 
-Das ACF-Attribut für **\[ automatische \_ Handles \]** weist den Stub an, automatisch die Bindung für eine Funktion einzurichten, die über keinen expliziten Bindungs handle-Parameter verfügt.
+Das ACF-Attribut für das **\[ automatische \_ Handle \]** weist den Stub an, die Bindung für eine Funktion ohne expliziten Bindungshandleparameter automatisch einzurichten.
 
 > [!Note]  
-> Dieses Attribut ist veraltet und wird nicht mehr unterstützt. Die Verwendung des [**/robust**](-robust.md) -Schalters wird empfohlen.
+> Dieses Attribut ist veraltet und wird nicht mehr unterstützt. Die Verwendung des Schalters [**/robust**](-robust.md) wird empfohlen.
 
- 
+ 
 
 ``` syntax
 [ 
@@ -42,41 +42,41 @@ interface interface-name
 
 <dl> <dt>
 
-*Interface-Attribute-List* 
+*interface-attribute-list* 
 </dt> <dd>
 
-Gibt 0 (null) oder mehr Attribute an, die auf die gesamte Schnittstelle angewendet werden, z. b. [**Code**](code.md) oder [**NoCode**](nocode.md). Trennen Sie Schnittstellen Attribute durch Kommas.
+Gibt null oder mehr Attribute an, die für die Schnittstelle als Ganzes gelten, z. B. [**Code**](code.md) oder [**Nocode.**](nocode.md) Trennen Sie Schnittstellenattribute durch Kommas.
 
 </dd> <dt>
 
-*Schnittstellen Name* 
+*Schnittstellenname* 
 </dt> <dd>
 
 Gibt den Namen der Schnittstelle an.
 
 </dd> <dt>
 
-*Schnittstellen Definition* 
+*Schnittstellendefinition* 
 </dt> <dd>
 
-Gibt IDL-Anweisungen an, die die Definition der-Schnittstelle bilden.
+Gibt IDL-Anweisungen an, die die Definition der Schnittstelle bilden.
 
 </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Das Attribut für **\[ Automatisches \_ handle \]** wird im Schnittstellen Header der ACF angezeigt. Sie wird auch im Schnittstellen Header der IDL-Datei angezeigt, wenn Sie den Mittelwert Compiler Switch [**/App \_ config**](-app-config.md)angeben.
+Das Attribut für das **\[ automatische \_ Handle \]** wird im Schnittstellenheader des ACF angezeigt. Sie wird auch im Schnittstellenheader der IDL-Datei angezeigt, wenn Sie den MIDL-Compilerschalter [**/app \_ config**](-app-config.md)angeben.
 
-Wenn der Client eine Funktion aufruft, die die automatische Bindung verwendet, und keine Bindung an einen Server vorhanden ist, richtet der Stub automatisch die Bindung ein. Die Bindung wird für nachfolgende Aufrufe anderer Funktionen in der-Schnittstelle wieder verwendet, die die automatische Bindung verwenden. Das Client Anwendungsprogramm muss keine Verarbeitung in Bezug auf das Bindungs handle deklarieren oder ausführen.
+Wenn der Client eine Funktion aufruft, die die automatische Bindung verwendet und keine Bindung an einen Server vorhanden ist, richtet der Stub die Bindung automatisch ein. Die Bindung wird für nachfolgende Aufrufe anderer Funktionen in der -Schnittstelle wiederverwendet, die die automatische Bindung verwenden. Das Clientanwendungsprogramm muss keine Verarbeitung im Zusammenhang mit dem Bindungshandle deklarieren oder ausführen.
 
-Wenn die ACF nicht vorhanden ist oder das [**\[ implizite \_ handle \]**](implicit-handle.md) -Attribut nicht enthält, verwendet der Mittell-Compiler das **\[ automatische \_ handle \]** und gibt eine Informations Meldung aus. Der mittlerer l-Compiler verwendet bei Bedarf auch das **\[ automatische \_ handle \]**, um die anfängliche Bindung für ein [**\[ Kontext \_ handle \]**](context-handle.md)herzustellen.
+Wenn der ACF nicht vorhanden ist oder das [**\[ implizite \_ \] Handleattribut**](implicit-handle.md) nicht enthält, verwendet der MIDL-Compiler **\[ das automatische \_ Handle \]** und gibt eine Informationsmeldung aus. Der MIDL-Compiler verwendet bei Bedarf auch das **\[ automatische \_ Handle, \]** um die anfängliche Bindung für ein [**\[ \_ Kontexthandle \]**](context-handle.md)einzurichten.
 
-Das Attribut für **\[ Automatisches \_ handle \]** kann nur auftreten, wenn das [**\[ implizite \_ handle \]**](implicit-handle.md) oder das [**\[ explizite \_ handle \]**](explicit-handle.md) nicht auftritt. Das Attribut für **\[ Automatisches \_ handle \]** kann höchstens einmal im ACF-oder IDL-Schnittstellen Header auftreten.
+Das **\[ Attribut für das automatische \_ \] Handle** kann nur auftreten, wenn das [**\[ implizite \_ Handle \]**](implicit-handle.md) oder das [**\[ explizite \_ \] Handleattribut**](explicit-handle.md) nicht auftritt. Das Attribut für das **\[ automatische \_ Handle \]** kann höchstens einmal im ACF- oder IDL-Schnittstellenheader auftreten.
 
 > [!Note]  
-> Wenn Sie Daten über Pipes verarbeiten, können Sie keine automatische Bindung verwenden (entweder mit dem Attribut "Automatisches **\[ \_ handle \]** " oder standardmäßig).
+> Sie können die automatische Bindung nicht verwenden (entweder mit dem Attribut für das **\[ automatische \_ Handle \]** oder standardmäßig), wenn Sie Daten über Pipes verarbeiten.
 
- 
+ 
 
 ## <a name="examples"></a>Beispiele
 
@@ -102,30 +102,30 @@ interface MyInterface
 
 <dl> <dt>
 
-[Anwendungs Konfigurationsdatei (ACF)](application-configuration-file-acf-.md)
+[Anwendungskonfigurationsdatei (Application Configuration File, ACF)](application-configuration-file-acf-.md)
 </dt> <dt>
 
-[**/APP- \_ Konfiguration**](-app-config.md)
+[**\_/app-Konfiguration**](-app-config.md)
 </dt> <dt>
 
-[**Ordnung**](code.md)
+[**Code**](code.md)
 </dt> <dt>
 
-[**explizites \_ handle**](explicit-handle.md)
+[**Explizites \_ Handle**](explicit-handle.md)
 </dt> <dt>
 
-[**Kontext \_ handle**](context-handle.md)
+[**\_Kontexthandle**](context-handle.md)
 </dt> <dt>
 
-[**implizites \_ handle**](implicit-handle.md)
+[**Implizites \_ Handle**](implicit-handle.md)
 </dt> <dt>
 
-[**NoCode**](nocode.md)
+[**nocode**](nocode.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

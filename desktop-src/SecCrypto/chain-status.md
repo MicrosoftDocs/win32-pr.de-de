@@ -1,6 +1,6 @@
 ---
 description: Ruft den Gültigkeitsstatus der Kette oder eines bestimmten Zertifikats in der Kette ab.
-title: IChain2::Status (Eigenschaft)
+title: IChain2::Status-Eigenschaft
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -21,11 +21,11 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 08/11/2021
 ms.locfileid: "117769550"
 ---
-# <a name="ichain2status-property"></a>IChain2::Status (Eigenschaft)
+# <a name="ichain2status-property"></a>IChain2::Status-Eigenschaft
 
-\[CAPICOM ist eine 32-Bit-Komponente, die für die Verwendung in den folgenden Betriebssystemen verfügbar ist: Windows Server 2008, Windows Vista und Windows XP. Verwenden Sie stattdessen die [**X509Chain-Klasse**](/dotnet/api/system.security.cryptography.x509certificates.x509chain?view=netcore-3.1) im [**Namespace System.Security.Cryptography.X509Certificates.**](/dotnet/api/system.security.cryptography.x509certificates.publickey.-ctor?view=netcore-3.1)\]
+\[CAPICOM ist eine nur 32-Bit-Komponente, die für die Verwendung in den folgenden Betriebssystemen verfügbar ist: Windows Server 2008, Windows Vista und Windows XP. Verwenden Sie stattdessen die [**X509Chain-Klasse**](/dotnet/api/system.security.cryptography.x509certificates.x509chain?view=netcore-3.1) im [**Namespace System.Security.Cryptography.X509Certificates.**](/dotnet/api/system.security.cryptography.x509certificates.publickey.-ctor?view=netcore-3.1)\]
 
-Die **Status-Eigenschaft** ruft den Gültigkeitsstatus der Kette oder eines bestimmten Zertifikats in der Kette ab.
+Die **Status -Eigenschaft** ruft den Gültigkeitsstatus der Kette oder eines bestimmten Zertifikats in der Kette ab.
 
 ## <a name="syntax"></a>Syntax
 
@@ -40,7 +40,7 @@ Chain.Status( _
 
 ## <a name="property-value"></a>Eigenschaftswert
 
-Ein **LONG-Wert,** der den Gültigkeitsstatusindikator der Kette oder des angegebenen Zertifikats darstellt. In der folgenden Tabelle sind die möglichen Werte aufgeführt. Diese Eigenschaft enthält 0 (null), wenn die Kette oder das angegebene Zertifikat gültig ist. Andernfalls enthält diese Eigenschaft eine Kombination aus mindestens einem der folgenden Werte.
+Ein **LONG-Wert,** der den Gültigkeitsstatusindikator der Kette oder des angegebenen Zertifikats darstellt. In der folgenden Tabelle sind die möglichen Werte aufgeführt. Diese Eigenschaft enthält 0 (null), wenn die Kette oder das angegebene Zertifikat gültig ist. Andernfalls enthält diese Eigenschaft eine Kombination aus einem oder mehreren der folgenden Werte.
 
 <dt>
 
@@ -57,7 +57,7 @@ Dieses Zertifikat oder eines der Zertifikate in der Zertifikatkette ist nicht ze
 
 <span id="CAPICOM_TRUST_IS_NOT_TIME_NESTED"></span><span id="capicom_trust_is_not_time_nested"></span>
 
-<span id="CAPICOM_TRUST_IS_NOT_TIME_NESTED"></span><span id="capicom_trust_is_not_time_nested"></span>**CAPICOM \_ TRUST \_ IS \_ NOT \_ TIME \_ NESTED** (&H00000002)
+<span id="CAPICOM_TRUST_IS_NOT_TIME_NESTED"></span><span id="capicom_trust_is_not_time_nested"></span>**CAPICOM \_ TRUST \_ IS NOT TIME \_ \_ \_ NESTED** (&H000000002)
 
 
 </dt> <dd>
@@ -68,18 +68,18 @@ Zertifikate in der Kette sind nicht ordnungsgemäß geschachtelt.
 
 <span id="CAPICOM_TRUST_IS_REVOKED"></span><span id="capicom_trust_is_revoked"></span>
 
-<span id="CAPICOM_TRUST_IS_REVOKED"></span><span id="capicom_trust_is_revoked"></span>**CAPICOM \_ TRUST \_ IS \_ REVOKED** (&H00000004)
+<span id="CAPICOM_TRUST_IS_REVOKED"></span><span id="capicom_trust_is_revoked"></span>**CAPICOM \_ TRUST \_ IS \_ REVOKED** (&H000000004)
 
 
 </dt> <dd>
 
-Die Vertrauensstellung für dieses Zertifikat oder eines der Zertifikate in der Zertifikatkette wurde widerrufen.
+Die Vertrauensstellung für dieses Zertifikat oder eines der Zertifikate in der Zertifikatkette wurde aufgehoben.
 
 </dd> <dt>
 
 <span id="CAPICOM_TRUST_IS_NOT_SIGNATURE_VALID"></span><span id="capicom_trust_is_not_signature_valid"></span>
 
-<span id="CAPICOM_TRUST_IS_NOT_SIGNATURE_VALID"></span><span id="capicom_trust_is_not_signature_valid"></span>**CAPICOM \_ TRUST \_ IS \_ NOT \_ SIGNATURE \_ VALID** (&H00000008)
+<span id="CAPICOM_TRUST_IS_NOT_SIGNATURE_VALID"></span><span id="capicom_trust_is_not_signature_valid"></span>**CAPICOM \_ TRUST \_ IST NICHT SIGNATUR \_ \_ \_ GÜLTIG** (&H00000008)
 
 
 </dt> <dd>
@@ -90,7 +90,7 @@ Das Zertifikat oder eines der Zertifikate in der Zertifikatkette verfügt nicht 
 
 <span id="CAPICOM_TRUST_IS_NOT_VALID_FOR_USAGE"></span><span id="capicom_trust_is_not_valid_for_usage"></span>
 
-<span id="CAPICOM_TRUST_IS_NOT_VALID_FOR_USAGE"></span><span id="capicom_trust_is_not_valid_for_usage"></span>**CAPICOM \_ TRUST IS NOT VALID FOR USAGE (&\_ \_ \_ \_ \_** H00000010) (VERTRAUENSSTELLUNG IST FÜR DIE VERWENDUNG UNGÜLTIG (&H00000010)
+<span id="CAPICOM_TRUST_IS_NOT_VALID_FOR_USAGE"></span><span id="capicom_trust_is_not_valid_for_usage"></span>**CAPICOM \_ TRUST \_ IST FÜR DIE \_ \_ \_ \_ VERWENDUNG UNGÜLTIG** (&H00000010)
 
 
 </dt> <dd>
@@ -112,7 +112,7 @@ Das Zertifikat oder die Zertifikatkette basiert auf einem nicht vertrauenswürdi
 
 <span id="CAPICOM_TRUST_REVOCATION_STATUS_UNKNOWN"></span><span id="capicom_trust_revocation_status_unknown"></span>
 
-<span id="CAPICOM_TRUST_REVOCATION_STATUS_UNKNOWN"></span><span id="capicom_trust_revocation_status_unknown"></span>**CAPICOM \_ \_ \_ VERTRAUENSSPERRSTATUS \_ UNBEKANNT** (&H00000040)
+<span id="CAPICOM_TRUST_REVOCATION_STATUS_UNKNOWN"></span><span id="capicom_trust_revocation_status_unknown"></span>**CAPICOM \_ TRUST \_ REVOCATION \_ STATUS \_ UNKNOWN** (&H00000040)
 
 
 </dt> <dd>
@@ -123,18 +123,18 @@ Der Sperrstatus des Zertifikats oder eines der Zertifikate in der Zertifikatkett
 
 <span id="CAPICOM_TRUST_IS_CYCLIC"></span><span id="capicom_trust_is_cyclic"></span>
 
-<span id="CAPICOM_TRUST_IS_CYCLIC"></span><span id="capicom_trust_is_cyclic"></span>**CAPICOM \_ TRUST \_ IS \_ CYCLIC** (&H00000080)
+<span id="CAPICOM_TRUST_IS_CYCLIC"></span><span id="capicom_trust_is_cyclic"></span>**CAPICOM \_ TRUST \_ IS \_ CYCLIC** (&H000000080)
 
 
 </dt> <dd>
 
-Eines der Zertifikate in der Kette wurde von einer Zertifizierungsstelle [*ausgestellt,*](../secgloss/c-gly.md) die das ursprüngliche Zertifikat zertifiziert hat.
+Eines der Zertifikate in der Kette wurde von einer [*Zertifizierungsstelle*](../secgloss/c-gly.md) ausgestellt, die das ursprüngliche Zertifikat zertifiziert hatte.
 
 </dd> <dt>
 
 <span id="CAPICOM_TRUST_INVALID_EXTENSION"></span><span id="capicom_trust_invalid_extension"></span>
 
-<span id="CAPICOM_TRUST_INVALID_EXTENSION"></span><span id="capicom_trust_invalid_extension"></span>**CAPICOM \_ UNGÜLTIGE \_ \_ ERWEITERUNG** VERTRAUEN (&H00000100)
+<span id="CAPICOM_TRUST_INVALID_EXTENSION"></span><span id="capicom_trust_invalid_extension"></span>**CAPICOM \_ \_UNGÜLTIGE \_ ERWEITERUNG VERTRAUEN** (&H00000100)
 
 
 </dt> <dd>
@@ -150,18 +150,18 @@ Eines der Zertifikate verfügt über eine ungültige Erweiterung.
 
 </dt> <dd>
 
-Das Zertifikat oder eines der Zertifikate in der Zertifikatkette verfügt über eine Richtlinieneinschränkungserweiterung, und eines der ausgestellten Zertifikate verfügt über eine nicht erteilte Richtlinienzuordnungserweiterung oder keine erforderliche Erweiterung für Ausstellungsrichtlinien.
+Das Zertifikat oder eines der Zertifikate in der Zertifikatkette verfügt über eine Richtlinieneinschränkungserweiterung, und eines der ausgestellten Zertifikate verfügt über eine unzulässige Richtlinienzuordnungserweiterung oder verfügt nicht über eine erforderliche Erweiterung für Ausstellungsrichtlinien.
 
 </dd> <dt>
 
 <span id="CAPICOM_TRUST_INVALID_BASIC_CONSTRAINTS"></span><span id="capicom_trust_invalid_basic_constraints"></span>
 
-<span id="CAPICOM_TRUST_INVALID_BASIC_CONSTRAINTS"></span><span id="capicom_trust_invalid_basic_constraints"></span>**CAPICOM \_ TRUST \_ INVALID \_ BASIC \_ CONSTRAINTS** (&H00000400)
+<span id="CAPICOM_TRUST_INVALID_BASIC_CONSTRAINTS"></span><span id="capicom_trust_invalid_basic_constraints"></span>**CAPICOM \_ \_UNGÜLTIGE \_ \_ BASIC-EINSCHRÄNKUNGEN** VERTRAUEN (&H00000400)
 
 
 </dt> <dd>
 
-Das Zertifikat oder eines der Zertifikate in der Zertifikatkette verfügt über eine Erweiterung mit grundlegenden Einschränkungen, und entweder kann das Zertifikat nicht zum Aushängen anderer Zertifikate verwendet werden, oder die Länge des Kettenpfads wurde überschritten.
+Das Zertifikat oder eines der Zertifikate in der Zertifikatkette verfügt über eine grundlegende Einschränkungserweiterung, und entweder kann das Zertifikat nicht zum Ausstellen anderer Zertifikate verwendet werden, oder die Länge des Kettenpfads wurde überschritten.
 
 </dd> <dt>
 
@@ -178,22 +178,22 @@ Das Zertifikat oder eines der Zertifikate in der Zertifikatkette verfügt über 
 
 <span id="CAPICOM_TRUST_HAS_NOT_SUPPORTED_NAME_CONSTRAINT"></span><span id="capicom_trust_has_not_supported_name_constraint"></span>
 
-<span id="CAPICOM_TRUST_HAS_NOT_SUPPORTED_NAME_CONSTRAINT"></span><span id="capicom_trust_has_not_supported_name_constraint"></span>**CAPICOM \_ TRUST \_ HAS \_ NOT \_ SUPPORTED \_ NAME \_ CONSTRAINT** (&H00001000)
+<span id="CAPICOM_TRUST_HAS_NOT_SUPPORTED_NAME_CONSTRAINT"></span><span id="capicom_trust_has_not_supported_name_constraint"></span>**CAPICOM \_ VERTRAUENSSTELLUNG \_ HAT \_ KEINE \_ \_ \_ NAMENSEINSCHRÄNKUNG UNTERSTÜTZT** (&H00001000)
 
 
 </dt> <dd>
 
-Das Zertifikat oder eines der Zertifikate in der Zertifikatkette verfügt über eine Namenseinschränkungserweiterung, die nicht unterstützte Felder enthält. Die minimalen und maximalen Felder werden nicht unterstützt. Daher muss der Mindestwert immer 0 (null) und der Höchstwert immer fehlen. Nur DER UPN wird für einen anderen Namen unterstützt. Die folgenden alternativen Namensoptionen werden nicht unterstützt:
+Das Zertifikat oder eines der Zertifikate in der Zertifikatkette verfügt über eine Namenseinschränkungserweiterung, die nicht unterstützte Felder enthält. Die Felder "Minimum" und "Maximum" werden nicht unterstützt. Daher muss minimum immer 0 (null) und maximum immer fehlen. Für einen anderen Namen wird nur UPN unterstützt. Die folgenden alternativen Namensauswahlen werden nicht unterstützt:
 
 -   X400-Adresse
--   EDI-Parteiname
+-   EDI-Partyname
 -   Registrierte ID
 
 </dd> <dt>
 
 <span id="CAPICOM_TRUST_HAS_NOT_DEFINED_NAME_CONSTRAINT"></span><span id="capicom_trust_has_not_defined_name_constraint"></span>
 
-<span id="CAPICOM_TRUST_HAS_NOT_DEFINED_NAME_CONSTRAINT"></span><span id="capicom_trust_has_not_defined_name_constraint"></span>**CAPICOM \_ TRUST \_ HAS \_ NOT \_ DEFINED \_ NAME \_ CONSTRAINT** (&H00002000)
+<span id="CAPICOM_TRUST_HAS_NOT_DEFINED_NAME_CONSTRAINT"></span><span id="capicom_trust_has_not_defined_name_constraint"></span>**CAPICOM \_ TRUST \_ HAT \_ KEINE \_ \_ \_ NAMENSEINSCHRÄNKUNG DEFINIERT** (&H00002000)
 
 
 </dt> <dd>
@@ -204,18 +204,18 @@ Das Zertifikat oder eines der Zertifikate in der Zertifikatkette verfügt über 
 
 <span id="CAPICOM_TRUST_HAS_NOT_PERMITTED_NAME_CONSTRAINT"></span><span id="capicom_trust_has_not_permitted_name_constraint"></span>
 
-<span id="CAPICOM_TRUST_HAS_NOT_PERMITTED_NAME_CONSTRAINT"></span><span id="capicom_trust_has_not_permitted_name_constraint"></span>**CAPICOM \_ TRUST \_ HAS \_ NOT \_ PERMITTED \_ NAME \_ CONSTRAINT** (&H00004000)
+<span id="CAPICOM_TRUST_HAS_NOT_PERMITTED_NAME_CONSTRAINT"></span><span id="capicom_trust_has_not_permitted_name_constraint"></span>**CAPICOM \_ VERTRAUENSSTELLUNG \_ HAT \_ KEINE \_ \_ \_ NAMENSEINSCHRÄNKUNG** (&H00004000)
 
 
 </dt> <dd>
 
-Das Zertifikat oder eines der Zertifikate in der Zertifikatkette verfügt über eine Namenseinschränkungserweiterung, und es gibt keine Einschränkung für den zulässigen Namen für eine der Namensoptionen im Endzertifikat.
+Das Zertifikat oder eines der Zertifikate in der Zertifikatkette verfügt über eine Namenseinschränkungserweiterung, und es gibt keine zulässige Namenseinschränkung für eine der Namensoptionen im Endzertifikat.
 
 </dd> <dt>
 
 <span id="CAPICOM_TRUST_HAS_EXCLUDED_NAME_CONSTRAINT"></span><span id="capicom_trust_has_excluded_name_constraint"></span>
 
-<span id="CAPICOM_TRUST_HAS_EXCLUDED_NAME_CONSTRAINT"></span><span id="capicom_trust_has_excluded_name_constraint"></span>**CAPICOM \_ TRUST \_ HAS \_ EXCLUDED \_ NAME \_ CONSTRAINT** (&H00008000)
+<span id="CAPICOM_TRUST_HAS_EXCLUDED_NAME_CONSTRAINT"></span><span id="capicom_trust_has_excluded_name_constraint"></span>**CAPICOM \_ VERTRAUENSSTELLUNG \_ HAT \_ \_ \_ NAMENSEINSCHRÄNKUNG AUSGESCHLOSSEN** (&H00008000)
 
 
 </dt> <dd>
@@ -226,18 +226,18 @@ Das Zertifikat oder eines der Zertifikate in der Zertifikatkette verfügt über 
 
 <span id="CAPICOM_TRUST_IS_OFFLINE_REVOCATION"></span><span id="capicom_trust_is_offline_revocation"></span>
 
-<span id="CAPICOM_TRUST_IS_OFFLINE_REVOCATION"></span><span id="capicom_trust_is_offline_revocation"></span>**CAPICOM \_ VERTRAUENSSTELLUNG \_ \_ IST \_ OFFLINESPERRUNG** (&H01000000)
+<span id="CAPICOM_TRUST_IS_OFFLINE_REVOCATION"></span><span id="capicom_trust_is_offline_revocation"></span>**CAPICOM \_ VERTRAUENSSTELLUNG \_ IST \_ \_ OFFLINESPERRUNG** (&H01000000)
 
 
 </dt> <dd>
 
-Der Sperrstatus des Zertifikats oder eines der Zertifikate in der Zertifikatkette ist offline oder veraltet.
+Der Sperrstatus des Zertifikats oder eines der Zertifikate in der Zertifikatkette ist entweder offline oder veraltet.
 
 </dd> <dt>
 
 <span id="CAPICOM_TRUST_NO_ISSUANCE_CHAIN_POLICY"></span><span id="capicom_trust_no_issuance_chain_policy"></span>
 
-<span id="CAPICOM_TRUST_NO_ISSUANCE_CHAIN_POLICY"></span><span id="capicom_trust_no_issuance_chain_policy"></span>**CAPICOM \_ TRUST \_ NO \_ ISSUANCE \_ CHAIN \_ POLICY** (&H02000000)
+<span id="CAPICOM_TRUST_NO_ISSUANCE_CHAIN_POLICY"></span><span id="capicom_trust_no_issuance_chain_policy"></span>**CAPICOM \_ \_TRUST NO ISSUANCE CHAIN \_ \_ \_ POLICY** (&H020000000)
 
 
 </dt> <dd>
@@ -264,24 +264,24 @@ Die Zertifikatkette ist nicht konkurriert.
 
 </dt> <dd>
 
-Eine CTL, die zum Erstellen dieser Kette verwendet wurde, war nicht zeit gültig.
+Eine zum Erstellen dieser Kette verwendete CTL war nicht zeit gültig.
 
 </dd> <dt>
 
 <span id="CAPICOM_TRUST_CTL_IS_NOT_SIGNATURE_VALID"></span><span id="capicom_trust_ctl_is_not_signature_valid"></span>
 
-<span id="CAPICOM_TRUST_CTL_IS_NOT_SIGNATURE_VALID"></span><span id="capicom_trust_ctl_is_not_signature_valid"></span>**CAPICOM \_ TRUST CTL IS NOT SIGNATURE VALID (TRUST \_ CTL \_ IS NOT \_ SIGNATURE \_ \_ VALID,** &H00040000)
+<span id="CAPICOM_TRUST_CTL_IS_NOT_SIGNATURE_VALID"></span><span id="capicom_trust_ctl_is_not_signature_valid"></span>**CAPICOM \_ \_VERTRAUENS-CTL \_ IST NICHT \_ SIGNATUR \_ \_ GÜLTIG** (&H00040000)
 
 
 </dt> <dd>
 
-Eine CTL, die zum Erstellen dieser Kette verwendet wurde, hat keine gültige Signatur.
+Eine zum Erstellen dieser Kette verwendete CTL verfügte nicht über eine gültige Signatur.
 
 </dd> <dt>
 
 <span id="CAPICOM_TRUST_CTL_IS_NOT_VALID_FOR_USAGE"></span><span id="capicom_trust_ctl_is_not_valid_for_usage"></span>
 
-<span id="CAPICOM_TRUST_CTL_IS_NOT_VALID_FOR_USAGE"></span><span id="capicom_trust_ctl_is_not_valid_for_usage"></span>**CAPICOM \_ TRUST CTL IS NOT VALID FOR USAGE (TRUST CTL IS \_ \_ NOT VALID FOR \_ \_ \_ \_ USAGE** , &H00080000)
+<span id="CAPICOM_TRUST_CTL_IS_NOT_VALID_FOR_USAGE"></span><span id="capicom_trust_ctl_is_not_valid_for_usage"></span>**CAPICOM \_ \_VERTRAUENS-CTL \_ IST FÜR \_ DIE \_ \_ \_ VERWENDUNG UNGÜLTIG** (&H00080000)
 
 
 </dt> <dd>

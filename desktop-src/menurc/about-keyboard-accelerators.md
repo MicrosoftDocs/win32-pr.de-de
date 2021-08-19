@@ -1,15 +1,15 @@
 ---
-title: Informationen zu Tastenkombinationen
+title: Informationen zu Tastaturbeschleunigungen
 description: In diesem Thema werden Tastenkombinationen erläutert.
 ms.assetid: cbf7619d-289d-40c9-9a06-6ce47026d43f
 keywords:
-- Windows Benutzeroberfläche,Benutzereingabe
-- Windows Benutzeroberfläche,Tastenkombinationen
-- Benutzereingabe,Tastenkombinationen
-- Erfassen von Benutzereingaben, Tastenkombinationen
+- Windows Benutzeroberfläche, Benutzereingabe
+- Windows Benutzeroberfläche, Tastenkombinationen
+- Benutzereingabe, Zugriffstasten
+- Erfassen von Benutzereingaben, Tastaturbeschleunigungen
 - Tastenkombinationen
 - Beschleuniger
-- WM_COMMAND-Nachricht
+- WM_COMMAND Meldung
 - WM_SYS COMMAND-Meldung
 - Zugriffstastentabellen
 ms.topic: article
@@ -21,71 +21,71 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 08/11/2021
 ms.locfileid: "117870731"
 ---
-# <a name="about-keyboard-accelerators"></a>Informationen zu Tastenkombinationen
+# <a name="about-keyboard-accelerators"></a>Informationen zu Tastaturbeschleunigungen
 
-Zugriffstasten sind eng mit Menüs verknüpft– beide ermöglichen dem Benutzer den Zugriff auf den Befehlssatz einer Anwendung. In der Regel verlassen sich Benutzer auf die Menüs einer Anwendung, um den Befehlssatz zu erlernen, und wechseln dann zur Verwendung von Zugriffstasten, wenn sie mit der Anwendung vertrauter werden. Zugriffstasten ermöglichen einen schnelleren, direkteren Zugriff auf Befehle als Menüs. Eine Anwendung sollte mindestens Zugriffstasten für die häufiger verwendeten Befehle bereitstellen. Obwohl Zugriffstasten in der Regel Befehle generieren, die als Menüelemente vorhanden sind, können sie auch Befehle generieren, die keine entsprechenden Menüelemente haben.
+Zugriffstasten sind eng mit Menüs verknüpft– beide bieten dem Benutzer Zugriff auf den Befehlssatz einer Anwendung. In der Regel verlassen sich Benutzer auf die Menüs einer Anwendung, um den Befehlssatz zu erlernen, und wechseln dann zur Verwendung von Zugriffstasten, sobald sie mit der Anwendung vertrauter werden. Zugriffstasten bieten schnelleren und direkteren Zugriff auf Befehle als Menüs. Eine Anwendung sollte mindestens Zugriffstasten für die häufiger verwendeten Befehle bereitstellen. Obwohl Zugriffstasten in der Regel Befehle generieren, die als Menüelemente vorhanden sind, können sie auch Befehle generieren, die keine entsprechenden Menüelemente aufweisen.
 
 In diesem Abschnitt werden die folgenden Themen behandelt.
 
 -   [Zugriffstastentabellen](#accelerator-tables)
--   [Erstellung von Acceleratortabellen](#accelerator-table-creation)
+-   [Accelerator-Table-Erstellung](#accelerator-table-creation)
 -   [Tastenkombinationszuweisungen](#accelerator-keystroke-assignments)
 -   [Zugriffstasten und Menüs](#accelerators-and-menus)
--   [Benutzeroberflächenzustand](#ui-state)
+-   [Benutzeroberflächenstatus](#ui-state)
 
 ## <a name="accelerator-tables"></a>Zugriffstastentabellen
 
-Eine Zugriffstastentabelle besteht aus einem Array von [**ACCEL-Strukturen,**](/windows/win32/api/winuser/ns-winuser-accel) die jeweils einen einzelnen Accelerator definieren. Jede **ACCEL-Struktur** enthält die folgenden Informationen:
+Eine Zugriffstastentabelle besteht aus einem Array von [**ACCEL-Strukturen,**](/windows/win32/api/winuser/ns-winuser-accel) die jeweils eine einzelne Zugriffstaste definieren. Jede **ACCEL-Struktur** enthält die folgenden Informationen:
 
--   Die Tastenkombination des Accelerators.
+-   Tastenkombination des Accelerators.
 -   Der Bezeichner der Zugriffstaste.
--   Verschiedene Flags. Dies schließt einen ein, der angibt, ob das System visuelles Feedback bereitstellen soll, indem bei Verwendung der Zugriffstaste das entsprechende Menüelement hervorgehoben wird( falls dies der Fall ist).
+-   Verschiedene Flags. Dies schließt ein Element ein, das angibt, ob das System visuelles Feedback bereitstellen soll, indem ggf. das entsprechende Menüelement hervorgehoben wird, wenn die Zugriffstaste verwendet wird.
 
-Um Zugriffstasteneingaben für einen angegebenen Thread zu verarbeiten, muss der Entwickler die [**TranslateAccelerator-Funktion**](/windows/desktop/api/Winuser/nf-winuser-translateacceleratora) in der Meldungsschleife aufrufen, die der Nachrichtenwarteschlange des Threads zugeordnet ist. Die **TranslateAccelerator-Funktion** überwacht Tastatureingaben in die Nachrichtenwarteschlange und überprüft, ob Tastenkombinationen mit einem Eintrag in der Zugriffstastentabelle übereinstimmen. Wenn **TranslateAccelerator** eine Übereinstimmung findet, übersetzt er die Tastatureingabe (d. h. die [**WM \_ KEYUP-**](/windows/desktop/inputdev/wm-keyup) und [**WM \_ KEYDOWN-Meldungen)**](/windows/desktop/inputdev/wm-keydown) in eine [**WM \_ COMMAND-**](wm-command.md) oder [**WM \_ SYSCOMMAND-Nachricht**](wm-syscommand.md) und sendet die Nachricht dann an die Fensterprozedur des angegebenen Fensters. Die folgende Abbildung zeigt, wie Zugriffstasten verarbeitet werden.
+Um Tastenkombinationen für einen angegebenen Thread zu verarbeiten, muss der Entwickler die [**TranslateAccelerator-Funktion**](/windows/desktop/api/Winuser/nf-winuser-translateacceleratora) in der Nachrichtenschleife aufrufen, die der Nachrichtenwarteschlange des Threads zugeordnet ist. Die **TranslateAccelerator-Funktion** überwacht die Tastatureingabe in die Nachrichtenwarteschlange und sucht nach Tastenkombinationen, die mit einem Eintrag in der Zugriffstastentabelle übereinstimmen. Wenn **TranslateAccelerator** eine Übereinstimmung findet, übersetzt er die Tastatureingabe (d.h. die [**WM \_ KEYUP-**](/windows/desktop/inputdev/wm-keyup) und [**WM \_ KEYDOWN-Nachrichten)**](/windows/desktop/inputdev/wm-keydown) in eine [**WM \_ COMMAND-**](wm-command.md) oder [**WM \_ SYSCOMMAND-Nachricht**](wm-syscommand.md) und sendet die Nachricht dann an die Fensterprozedur des angegebenen Fensters. Die folgende Abbildung zeigt, wie Zugriffstasten verarbeitet werden.
 
-![Verarbeitungsmodell für die Tastaturbeschleunigung](images/cskac-01.png)
+![Tastaturbeschleunigungsverarbeitungsmodell](images/cskac-01.png)
 
-Die [**WM \_ COMMAND-Meldung**](wm-command.md) enthält den Bezeichner der Zugriffstaste, die dazu führte, dass [**TranslateAccelerator**](/windows/desktop/api/Winuser/nf-winuser-translateacceleratora) die Nachricht generiert hat. Die Fensterprozedur untersucht den Bezeichner, um die Quelle der Nachricht zu bestimmen, und verarbeitet die Nachricht dann entsprechend.
+Die [**WM \_ COMMAND-Nachricht**](wm-command.md) enthält den Bezeichner des Accelerators, der bewirkt hat, dass [**TranslateAccelerator**](/windows/desktop/api/Winuser/nf-winuser-translateacceleratora) die Nachricht generiert hat. Die Fensterprozedur untersucht den Bezeichner, um die Quelle der Nachricht zu bestimmen, und verarbeitet die Nachricht dann entsprechend.
 
-Zugriffstastentabellen sind auf zwei verschiedenen Ebenen vorhanden. Das System verwaltet eine einzelne systemweite Zugriffstastentabelle, die für alle Anwendungen gilt. Eine Anwendung kann die Systembeschleunigungstabelle nicht ändern. Eine Beschreibung der Zugriffstasten, die von der Systembeschleunigungstabelle bereitgestellt werden, finden Sie unter [Tastenkombinationszuweisungen](#accelerator-keystroke-assignments).
+Zugriffstastentabellen sind auf zwei verschiedenen Ebenen vorhanden. Das System verwaltet eine einzelne, systemweite Zugriffstastentabelle, die für alle Anwendungen gilt. Eine Anwendung kann die Systembeschleunigertabelle nicht ändern. Eine Beschreibung der von der Systembeschleunigungstabelle bereitgestellten Zugriffstasten finden Sie unter [Tastenkombinationszuweisungen](#accelerator-keystroke-assignments)für die Zugriffstaste.
 
-Das System verwaltet auch Zugriffstastentabellen für jede Anwendung. Eine Anwendung kann eine beliebige Anzahl von Zugriffstastentabellen für die Verwendung mit eigenen Fenstern definieren. Jede Tabelle wird durch ein eindeutiges 32-Bit-Handle (**HACCEL**) identifiziert. Für einen angegebenen Thread kann jedoch immer nur eine Zugriffstastentabelle gleichzeitig aktiv sein. Das Handle für die Zugriffstastentabelle, die an die [**TranslateAccelerator-Funktion**](/windows/desktop/api/Winuser/nf-winuser-translateacceleratora) übergeben wird, bestimmt, welche Zugriffstastentabelle für einen Thread aktiv ist. Die Aktive Zugriffstastentabelle kann jederzeit geändert werden, indem ein anderes Handle für die Zugriffstastentabelle an **TranslateAccelerator übergeben wird.**
+Das System verwaltet auch Zugriffstastentabellen für jede Anwendung. Eine Anwendung kann eine beliebige Anzahl von Zugriffstastentabellen für die Verwendung mit eigenen Fenstern definieren. Ein eindeutiges 32-Bit-Handle **(ABSEL)** identifiziert jede Tabelle. Für einen angegebenen Thread kann jedoch jeweils nur eine Zugriffstastentabelle aktiv sein. Das Handle für die Zugriffstastentabelle, das an die [**TranslateAccelerator-Funktion**](/windows/desktop/api/Winuser/nf-winuser-translateacceleratora) übergeben wird, bestimmt, welche Zugriffstastentabelle für einen Thread aktiv ist. Die aktive Zugriffstastentabelle kann jederzeit geändert werden, indem ein anderes Handle für die Zugriffstastentabelle an **TranslateAccelerator** übergeben wird.
 
-## <a name="accelerator-table-creation"></a>Accelerator-Table Erstellung
+## <a name="accelerator-table-creation"></a>Accelerator-Table-Erstellung
 
-Zum Erstellen einer Zugriffstastentabelle für eine Anwendung sind mehrere Schritte erforderlich. Zunächst wird ein Ressourcencompiler verwendet, um Accelerator-Table-Ressourcen zu erstellen und der ausführbaren Datei der Anwendung hinzuzufügen. Zur Laufzeit wird die [**LoadAccelerators-Funktion**](/windows/desktop/api/Winuser/nf-winuser-loadacceleratorsa) verwendet, um die Zugriffstastentabelle in den Arbeitsspeicher zu laden und das Handle für die Zugriffstastentabelle abzurufen. Dieses Handle wird an die [**TranslateAccelerator-Funktion übergeben,**](/windows/desktop/api/Winuser/nf-winuser-translateacceleratora) um die Zugriffstastentabelle zu aktivieren.
+Es sind mehrere Schritte erforderlich, um eine Zugriffstastentabelle für eine Anwendung zu erstellen. Zunächst wird ein Ressourcencompiler verwendet, um Acceleratortabellenressourcen zu erstellen und sie der ausführbaren Datei der Anwendung hinzuzufügen. Zur Laufzeit wird die [**LoadAccelerators-Funktion**](/windows/desktop/api/Winuser/nf-winuser-loadacceleratorsa) verwendet, um die Zugriffstastentabelle in den Arbeitsspeicher zu laden und das Handle für die Zugriffstastentabelle abzurufen. Dieses Handle wird an die [**TranslateAccelerator-Funktion**](/windows/desktop/api/Winuser/nf-winuser-translateacceleratora) übergeben, um die Zugriffstastentabelle zu aktivieren.
 
-Eine Zugriffstastentabelle kann auch zur Laufzeit für eine Anwendung erstellt werden, indem ein Array von [**ACCEL-Strukturen**](/windows/win32/api/winuser/ns-winuser-accel) an die [**CreateAcceleratorTable-Funktion übergeben**](/windows/desktop/api/Winuser/nf-winuser-createacceleratortablea) wird. Diese Methode unterstützt benutzerdefinierte Zugriffstasten in der Anwendung. Wie die [**LoadAccelerators-Funktion**](/windows/desktop/api/Winuser/nf-winuser-loadacceleratorsa) gibt **CreateAcceleratorTable** ein Accelerator-Table-Handle zurück, das an [**TranslateAccelerator**](/windows/desktop/api/Winuser/nf-winuser-translateacceleratora) übergeben werden kann, um die Zugriffstastentabelle zu aktivieren.
+Eine Zugriffstastentabelle kann auch zur Laufzeit für eine Anwendung erstellt werden, indem ein Array von [**ACCEL-Strukturen**](/windows/win32/api/winuser/ns-winuser-accel) an die [**CreateAcceleratorTable-Funktion**](/windows/desktop/api/Winuser/nf-winuser-createacceleratortablea) übergeben wird. Diese Methode unterstützt benutzerdefinierte Zugriffstasten in der Anwendung. Wie die [**LoadAccelerators-Funktion**](/windows/desktop/api/Winuser/nf-winuser-loadacceleratorsa) gibt **CreateAcceleratorTable** ein Accelerator-Tabellenhandle zurück, das an [**TranslateAccelerator**](/windows/desktop/api/Winuser/nf-winuser-translateacceleratora) übergeben werden kann, um die Zugriffstastentabelle zu aktivieren.
 
-Das System zerstört automatisch Zugriffstastentabellen, die von [**LoadAccelerators**](/windows/desktop/api/Winuser/nf-winuser-loadacceleratorsa) geladen oder von [**CreateAcceleratorTable erstellt wurden.**](/windows/desktop/api/Winuser/nf-winuser-createacceleratortablea) Eine Anwendung kann jedoch Ressourcen während der Ausführung frei geben, indem accelerator-Tabellen zerstört werden, die nicht mehr benötigt werden, indem die [**DestroyAcceleratorTable-Funktion aufruft.**](/windows/desktop/api/Winuser/nf-winuser-destroyacceleratortable)
+Das System zerstört automatisch Zugriffstastentabellen, die von [**LoadAccelerators**](/windows/desktop/api/Winuser/nf-winuser-loadacceleratorsa) geladen oder von [**CreateAcceleratorTable**](/windows/desktop/api/Winuser/nf-winuser-createacceleratortablea)erstellt wurden. Eine Anwendung kann jedoch Ressourcen freigeben, während sie ausgeführt wird, indem sie Zugriffstastentabellen zerstört, die nicht mehr benötigt werden, indem die [**DestroyAcceleratorTable-Funktion**](/windows/desktop/api/Winuser/nf-winuser-destroyacceleratortable) aufgerufen wird.
 
-Eine vorhandene Zugriffstastentabelle kann kopiert und geändert werden. Die vorhandene Zugriffstastentabelle wird mithilfe der [**CopyAcceleratorTable-Funktion**](/windows/desktop/api/Winuser/nf-winuser-copyacceleratortablea) kopiert. Nachdem die Kopie geändert wurde, wird ein Handle für die neue Zugriffstastentabelle abgerufen, indem [**CreateAcceleratorTable aufgerufen wird.**](/windows/desktop/api/Winuser/nf-winuser-createacceleratortablea) Schließlich wird das Handle an [**TranslateAccelerator**](/windows/desktop/api/Winuser/nf-winuser-translateacceleratora) übergeben, um die neue Tabelle zu aktivieren.
+Eine vorhandene Zugriffstastentabelle kann kopiert und geändert werden. Die vorhandene Zugriffstastentabelle wird mithilfe der [**CopyAcceleratorTable-Funktion**](/windows/desktop/api/Winuser/nf-winuser-copyacceleratortablea) kopiert. Nachdem die Kopie geändert wurde, wird ein Handle für die neue Zugriffstastentabelle abgerufen, indem [**CreateAcceleratorTable**](/windows/desktop/api/Winuser/nf-winuser-createacceleratortablea)aufgerufen wird. Schließlich wird das Handle an [**TranslateAccelerator**](/windows/desktop/api/Winuser/nf-winuser-translateacceleratora) übergeben, um die neue Tabelle zu aktivieren.
 
 ## <a name="accelerator-keystroke-assignments"></a>Tastenkombinationszuweisungen
 
-Ein ASCII-Zeichencode oder ein Virtueller Schlüsselcode kann verwendet werden, um die Zugriffstaste zu definieren. Bei einem ASCII-Zeichencode wird die Schreibung der Zugriffstaste beachtet. Daher definiert die Verwendung des ASCII-Zeichens "C" den Beschleuniger als ALT+C anstelle von ALT+C. Die Verwendung von Zugriffstasten, bei der die Schreibung der Schreibung beachtet wird, kann jedoch verwirrend sein. Beispielsweise wird der ALT+C-Beschleuniger generiert, wenn die CAPS LOCK-Taste heruntergefahren ist oder die UMSCHALTTASTE gedrückt ist, aber nicht, wenn beide nicht mehr gedrückt sind.
+Ein ASCII-Zeichencode oder ein Code mit virtuellem Schlüssel kann verwendet werden, um die Zugriffstaste zu definieren. Bei einem ASCII-Zeichencode wird die Groß-/Kleinschreibung der Zugriffstaste beachtet. Daher definiert die Verwendung des ASCII-Zeichens "C" die Zugriffstaste als ALT+C anstelle von ALT+C. Allerdings kann die Verwendung von Beschleunigern, bei der die Groß-/Kleinschreibung beachtet wird, verwirrend sein. Beispielsweise wird die ALT+C-Zugriffstaste generiert, wenn der CAPS LOCK-Schlüssel ausgeschaltet ist oder wenn die UMSCHALTTASTE ausgeschaltet ist, aber nicht, wenn beide nicht mehr aktiviert sind.
 
-In der Regel müssen Beschleuniger nicht die Kleinschreibung beachtet werden, sodass die meisten Anwendungen Codes mit virtuellen Schlüsseln für Zugriffstasten anstelle von ASCII-Zeichencodes verwenden.
+In der Regel muss bei Zugriffstasten die Groß-/Kleinschreibung nicht beachtet werden. Daher verwenden die meisten Anwendungen Codes mit virtuellen Schlüsseln für Zugriffstasten anstelle von ASCII-Zeichencodes.
 
-Vermeiden Sie Zugriffstasten, die mit den mnemonischen Menüs einer Anwendung in Konflikt stehen, da der Accelerator das mnemonische Überschreiben überschreibt, was den Benutzer verwirren kann. Weitere Informationen zu mnemonischen Menüs finden Sie unter [Menüs](menus.md).
+Vermeiden Sie Zugriffstasten, die mit dem Menümmonik einer Anwendung in Konflikt stehen, da die Zugriffstaste das mnemonic überschreibt, was den Benutzer verwirren kann. Weitere Informationen zu mnemonics-Menüs finden Sie unter [Menüs](menus.md).
 
-Wenn eine Anwendung einen Accelerator definiert, der auch in der SystemBeschleunigungstabelle definiert ist, überschreibt der anwendungsdefinierte Accelerator den Systembeschleuniger, jedoch nur innerhalb des Kontexts der Anwendung. Vermeiden Sie diese Vorgehensweise jedoch, da sie verhindert, dass der Systembeschleuniger seine Standardrolle auf der Benutzeroberfläche ausführen kann. Die systemweiten Zugriffstasten werden in der folgenden Liste beschrieben:
+Wenn eine Anwendung einen Accelerator definiert, der auch in der Systembeschleunigungstabelle definiert ist, überschreibt der anwendungsdefinierte Accelerator den Systembeschleunigungsbeschleuniger, jedoch nur innerhalb des Kontexts der Anwendung. Vermeiden Sie diese Vorgehensweise jedoch, da sie verhindert, dass die Systembeschleunigung ihre Standardrolle auf der Benutzeroberfläche ausführt. Die systemweiten Zugriffstasten werden in der folgenden Liste beschrieben:
 
 
 
-| Accelerator                 | BESCHREIBUNG                                                                                                      |
+| Accelerator                 | Beschreibung                                                                                                      |
 |------------------|-------------------------------------------------------------------------------------------------------|
 | ALT+ESC          | Wechselt zur nächsten Anwendung.                                                                     |
 | ALT+F4           | Schließt eine Anwendung oder ein Fenster.                                                                    |
-| ALT+BINDESTRICH       | Öffnet das **Menü Fenster** für ein Dokumentfenster.                                                      |
+| ALT+BINDESTRICH       | Öffnet das Menü **Fenster** für ein Dokumentfenster.                                                      |
 | ALT+DRUCKBILDSCHIRM | Kopiert ein Bild im aktiven Fenster in die Zwischenablage.                                              |
-| ALT+LEERTASTE     | Öffnet das **Menü** Fenster für das Hauptfenster der Anwendung.                                          |
+| ALT+LEERTASTE     | Öffnet das Menü **Fenster** für das Hauptfenster der Anwendung.                                          |
 | ALT+TAB          | Wechselt zur nächsten Anwendung.                                                                     |
 | STRG+ESC         | Wechselt zum **Startmenü.**                                                                       |
-| STRG+F4          | Schließt die aktive Gruppe oder das Aktive Dokumentfenster.                                                           |
+| STRG+F4          | Schließt das aktive Gruppen- oder Dokumentfenster.                                                           |
 | F1               | Startet die Hilfedatei der Anwendung, sofern vorhanden.                                                    |
 | DRUCKBILDSCHIRM     | Kopiert ein Bild auf dem Bildschirm in die Zwischenablage.                                                     |
-| UMSCHALT+ALT+TAB    | Wechselt zur vorherigen Anwendung. Der Benutzer muss ALT+UMSCHALT gedrückt halten, während er die TAB-TASTE drückt. |
+| UMSCHALT+ALT+TAB    | Wechselt zur vorherigen Anwendung. Der Benutzer muss alt+UMSCHALT drücken und gedrückt halten, während er die TAB-TASTE drückt. |
 
 
 

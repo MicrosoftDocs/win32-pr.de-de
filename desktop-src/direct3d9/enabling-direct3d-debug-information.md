@@ -26,7 +26,7 @@ Sie können die Hauptdebuggingobjekte aktivieren, sodass ein gespiegeltes Objekt
 
 
 
-Um Debuginformationen zu aktivieren, muss die \# Definition vor der Datei D3D9.h erstellt werden (jedes Programm, das DXUT verwendet, aktiviert automatisch D3D DEBUG \_ \_ INFO, wenn das Programm für das Debuggen kompiliert wird). Wenn Sie ein SDK-Beispiel ausführen, sehen Sie dies in DXStdAfx.h (was sich auf alle C++-Beispiele auswirkt). Sie müssen auch die Direct3D-Debuglaufzeit ausführen (die bei Bedarf über die Systemsteuerung aktiviert werden kann).
+Um Debuginformationen zu aktivieren, muss die \# Definition vor der Datei D3D9.h erstellt werden (jedes Programm, das DXUT verwendet, aktiviert automatisch D3D DEBUG \_ \_ INFO, wenn das Programm für das Debuggen kompiliert wird). Wenn Sie ein SDK-Beispiel ausführen, sehen Sie dies in DXStdAfx.h (was sich auf alle C++-Beispiele auswirkt). Sie müssen auch die Debug-Direct3D-Runtime ausführen (die bei Bedarf über die Systemsteuerung aktiviert werden kann).
 
 Hier ist ein Beispiel mit dem [BasicHLSL-Beispiel](https://msdn.microsoft.com/library/Ee416223(v=VS.85).aspx).
 

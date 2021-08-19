@@ -39,7 +39,7 @@ Diese Eigenschaft kann die folgenden Werte aufweisen.
 
 
 
-| Wert          | BESCHREIBUNG            |
+| Wert          | Beschreibung            |
 |----------------|------------------------|
 | VARIANT \_ FALSE | Deaktivieren Sie die Vorverarbeitung. |
 | VARIANT \_ TRUE  | Aktivieren Sie die Vorverarbeitung.  |
@@ -64,7 +64,7 @@ Der DSP verwendet diese Eigenschaft nur, wenn die Mikrofonarrayverarbeitung akti
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 

@@ -1,27 +1,27 @@
 ---
-title: Das TESTFLAG
-description: Das TESTFLAG
+title: Das Testflag
+description: Das Testflag
 ms.assetid: d103a96e-8d55-413d-ac84-15c3d8dccfbe
 keywords:
 - MCI_TEST-Flag
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 2a36cddaa186a9be260cf87b7a323a6e05ed9fc4
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: 837b7812a904ed39fa0350d703b1525bbffa6f981b4736d25927840395932f32
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "104311424"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117801475"
 ---
-# <a name="the-test-flag"></a>Das TESTFLAG
+# <a name="the-test-flag"></a>Das Testflag
 
-Mit dem Flag "Test" (MCI- \_ Test) wird das Gerät abgefragt, um zu bestimmen, ob der Befehl ausgeführt werden kann. Das Gerät gibt einen Fehler zurück, wenn der Befehl nicht ausgeführt werden kann. Wenn der Befehl behandelt werden kann, wird kein Fehler zurückgegeben. Wenn Sie dieses Flag angeben, gibt MCI die Steuerung an die Anwendung zurück, ohne den Befehl auszuführen.
+Das Flag "test" (MCI TEST) fragt das Gerät ab, um zu \_ ermitteln, ob es den Befehl ausführen kann. Das Gerät gibt einen Fehler zurück, wenn es den Befehl nicht ausführen kann. Es wird kein Fehler zurückgegeben, wenn der Befehl verarbeitet werden kann. Wenn Sie dieses Flag angeben, gibt MCI die Steuerung an die Anwendung zurück, ohne den Befehl auszuführen.
 
-Dieses Flag wird von Digital-Video-und VCR-Geräten für alle Befehle mit Ausnahme von [**Open**](open.md) ([**MCI \_ Open**](mci-open.md)) und [**Close**](close.md) ([**MCI \_ Close**](mci-close.md)) unterstützt.
+Dieses Flag wird von digital-video- und VCR-Geräten für alle Befehle unterstützt, mit Ausnahme von [**öffnen**](open.md) ([**MCI \_ OPEN**](mci-open.md)) und [**schließen**](close.md) ([**MCI \_ CLOSE**](mci-close.md)).
 
- 
+ 
 
- 
+ 
 
 
 

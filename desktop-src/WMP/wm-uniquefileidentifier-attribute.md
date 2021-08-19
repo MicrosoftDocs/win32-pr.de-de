@@ -12,33 +12,33 @@ api_type:
 - NA
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 3d0a4297f299f6e7df64088066b3137d844a0c78
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: cf29b5f4a0c2bf6e2642ce13f190a4734a2fb4ff395481b1ba93bc5feeb6db89
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106361561"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117930816"
 ---
 # <a name="wmuniquefileidentifier-attribute"></a>WM/UniqueFileIdentifier-Attribut
 
-Das **WM/UniqueFileIdentifier-** Attribut ist eine Zeichenfolge, die das Element eindeutig identifiziert.
+Das **WM/UniqueFileIdentifier-Attribut** ist eine Zeichenfolge, die das Element eindeutig identifiziert.
 
 ## <a name="applies-to"></a>Gilt für
 
 -   [Audioelemente](audio-item-attributes.md)
 -   [CD-Wiedergabelisten](cd-playlist-attributes.md)
 -   [CD-Spuren](cd-track-attributes.md)
--   [Häufig verwendete Windows Media-Dateiattribute](commonly-used-windows-media-file-attributes.md)
+-   [Häufig verwendete Windows Mediendateiattribute](commonly-used-windows-media-file-attributes.md)
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Dieses Attribut ist sowohl in der Bibliothek (oder im Cache) als auch in der digitalen Mediendatei gespeichert.
+Dieses Attribut wird sowohl in der Bibliothek (oder im Cache) als auch in der digitalen Mediendatei gespeichert.
 
 **UniqueFileIdentifier** ist ein Alias für dieses Attribut.
 
-Die SDK-Konstante für das Windows Media-Format für dieses Attribut ist g \_ wszwmuniquefileidentifier.
+Die Windows Media Format SDK-Konstante für dieses Attribut lautet g \_ wszWMUniqueFileIdentifier.
 
-Um zu ermitteln, ob Sie den Wert dieses Attributs ändern können, verwenden Sie die [Media. isread onlyitem](media-isreadonlyitem.md) -Methode.
+Verwenden Sie die [Media.isReadOnlyItem-Methode,](media-isreadonlyitem.md) um zu bestimmen, ob Sie den Wert dieses Attributs ändern können.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -46,7 +46,7 @@ Um zu ermitteln, ob Sie den Wert dieses Attributs ändern können, verwenden Sie
 
 | Anforderung | Wert |
 |--------------------|---------------------------------------------------|
-| Version<br/> | Windows Media Player 9-Serie oder höher<br/> |
+| Version<br/> | Windows Media Player 9er Serie oder höher<br/> |
 
 
 
@@ -54,7 +54,7 @@ Um zu ermitteln, ob Sie den Wert dieses Attributs ändern können, verwenden Sie
 
 <dl> <dt>
 
-[**Attribut Verweis**](attribute-reference.md)
+[**Attributverweis**](attribute-reference.md)
 </dt> </dl>
 
  

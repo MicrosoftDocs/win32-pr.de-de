@@ -1,9 +1,9 @@
 ---
-title: WM_CHANGECBCHAIN Meldung (Winuser. h)
-description: Wird an das erste Fenster in der Zwischenablage-Viewer-Kette gesendet, wenn ein Fenster aus der Kette entfernt wird. Ein Fenster empfängt diese Meldung über seine WindowProc-Funktion.
+title: WM_CHANGECBCHAIN (Winuser.h)
+description: Wird an das erste Fenster in der Zwischenablage-Viewerkette gesendet, wenn ein Fenster aus der Kette entfernt wird. Ein Fenster empfängt diese Nachricht über seine WindowProc-Funktion.
 ms.assetid: 7be87342-87fa-4cd2-b066-0b36b7ef52f5
 keywords:
-- WM_CHANGECBCHAIN Nachrichten Datenaustausch
+- WM_CHANGECBCHAIN der Exchange
 topic_type:
 - apiref
 api_name:
@@ -14,18 +14,18 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 4ab91640320e3659d0e9fb130f5c773ccbb7c4e8
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 25dac74784a214f77f8b2912e2fd643624ae767027121e2262d81989d54d3831
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104104090"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117736314"
 ---
-# <a name="wm_changecbchain-message"></a>WM \_ CHANGECBCHAIN-Meldung
+# <a name="wm_changecbchain-message"></a>WM \_ CHANGECBCHAIN-Nachricht
 
-Wird an das erste Fenster in der Zwischenablage-Viewer-Kette gesendet, wenn ein Fenster aus der Kette entfernt wird.
+Wird an das erste Fenster in der Zwischenablage-Viewerkette gesendet, wenn ein Fenster aus der Kette entfernt wird.
 
-Ein Fenster empfängt diese Meldung über seine [**WindowProc**](/previous-versions/windows/desktop/legacy/ms633573(v=vs.85)) -Funktion.
+Ein Fenster empfängt diese Nachricht über seine [**WindowProc-Funktion.**](/previous-versions/windows/desktop/legacy/ms633573(v=vs.85))
 
 
 ```C++
@@ -41,26 +41,26 @@ Ein Fenster empfängt diese Meldung über seine [**WindowProc**](/previous-versi
 *wParam* 
 </dt> <dd>
 
-Ein Handle für das Fenster, das aus der Zwischenablage-Viewer-Kette entfernt wird.
+Ein Handle für das Fenster, das aus der Viewer-Kette der Zwischenablage entfernt wird.
 
 </dd> <dt>
 
 *lParam* 
 </dt> <dd>
 
-Ein Handle für das nächste Fenster in der Kette nach dem Fenster, das entfernt wird. Dieser Parameter ist **null** , wenn das Fenster, das entfernt wird, das letzte Fenster in der Kette ist.
+Ein Handle für das nächste Fenster in der Kette, das auf das entfernte Fenster folgt. Dieser Parameter ist **NULL,** wenn das zu entfernende Fenster das letzte Fenster in der Kette ist.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Wenn eine Anwendung diese Nachricht verarbeitet, sollte Sie 0 (null) zurückgeben.
+Wenn eine Anwendung diese Nachricht verarbeitet, sollte sie 0 (null) zurückgeben.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Jedes Fenster der Zwischenablage Anzeige speichert das Handle für das nächste Fenster in der Zwischenablage-Viewer-Kette. Anfänglich ist dieses Handle der Rückgabewert der Funktion [**setclipboardviewer**](/windows/desktop/api/Winuser/nf-winuser-setclipboardviewer) .
+Jedes Zwischenablage-Viewerfenster speichert das Handle im nächsten Fenster in der Zwischenablage-Viewer-Kette. Anfangs ist dieses Handle der Rückgabewert der [**SetClipboardViewer-Funktion.**](/windows/desktop/api/Winuser/nf-winuser-setclipboardviewer)
 
-Wenn ein Fenster der Zwischenablage Anzeige die **WM- \_ CHANGECBCHAIN** -Nachricht empfängt, sollte die [**SendMessage**](/windows/desktop/api/winuser/nf-winuser-sendmessage) -Funktion aufgerufen werden, um die Nachricht an das nächste Fenster in der Kette zu übergeben, es sei denn, das Fenster wird im nächsten Fenster entfernt. In diesem Fall sollte der Zwischenablage-Viewer das durch den *LPARAM* -Parameter angegebene Handle als das nächste Fenster in der Kette speichern.
+Wenn ein Zwischenablageanzeigefenster die **WM \_ CHANGECBCHAIN-Nachricht** empfängt, sollte es die [**SendMessage-Funktion**](/windows/desktop/api/winuser/nf-winuser-sendmessage) aufrufen, um die Nachricht an das nächste Fenster in der Kette zu übergeben, es sei denn, das nächste Fenster ist das Fenster, das entfernt wird. In diesem Fall sollte der Zwischenablage-Viewer das vom *lParam-Parameter* angegebene Handle als nächstes Fenster in der Kette speichern.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -70,24 +70,24 @@ Wenn ein Fenster der Zwischenablage Anzeige die **WM- \_ CHANGECBCHAIN** -Nachri
 |-------------------------------------|----------------------------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[nur Desktop-Apps\]<br/>                                               |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                                                     |
-| Header<br/>                   | <dl> <dt>Winuser. h (Windows. h einschließen)</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Winuser.h (include Windows.h)</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-**Verweis**
+**Referenz**
 </dt> <dt>
 
 [**SendMessage**](/windows/desktop/api/winuser/nf-winuser-sendmessage)
 </dt> <dt>
 
-[**Setclipboardviewer**](/windows/desktop/api/Winuser/nf-winuser-setclipboardviewer)
+[**SetClipboardViewer**](/windows/desktop/api/Winuser/nf-winuser-setclipboardviewer)
 </dt> <dt>
 
-**Licher**
+**Konzeptionellen**
 </dt> <dt>
 
 [Zwischenablage](clipboard.md)

@@ -13,7 +13,7 @@ ms.locfileid: "117863713"
 ---
 # <a name="contains-predicate"></a>CONTAINS-Prädikat
 
-Das CONTAINS-Prädikat ist Teil der WHERE-Klausel und unterstützt die Suche nach Wörtern und Ausdrücken in Textspalten. Das CONTAINS-Prädikat verfügt über Features zum Abgleichen von Wörtern, zum Abgleichen von Freiformformen von Wörtern, zum Suchen mit Platzhalterzeichen und zum Suchen mithilfe von Näherung. Sie können auch Gewichtungen in einem CONTAINS-Prädikat anwenden, um die Wichtigkeit der Spalten zu festlegen, in denen der Suchbegriff gefunden wird. Das CONTAINS-Prädikat eignet sich besser für genaue [](-search-sql-freetext.md) Übereinstimmungen, im Gegensatz zum FREETEXT-Prädikat, das besser für die Suche nach Dokumenten geeignet ist, die Kombinationen der suchwörter enthalten, die in der gesamten Spalte verteilt sind. Bei Suchvorgängen wird nicht zwischen Groß- und Kleinschreibung unterschieden.
+Das CONTAINS-Prädikat ist Teil der WHERE-Klausel und unterstützt die Suche nach Wörtern und Ausdrücken in Textspalten. Das CONTAINS-Prädikat verfügt über Funktionen zum Abgleichen von Wörtern, zum Abgleichen von Flexionsformen von Wörtern, zum Suchen mit Platzhalterzeichen und zum Suchen mithilfe von Näherung. Sie können auch Gewichtungen in einem CONTAINS-Prädikat anwenden, um die Wichtigkeit der Spalten festzulegen, in denen der Suchbegriff gefunden wird. Das CONTAINS-Prädikat eignet sich besser für genaue Übereinstimmungen im Gegensatz zum [FREETEXT-Prädikat,](-search-sql-freetext.md) das besser zum Suchen von Dokumenten geeignet ist, die Kombinationen der in der Spalte verteilten Suchbegriffe enthalten. Bei Suchvorgängen wird nicht zwischen Groß- und Kleinschreibung unterschieden.
 
 Im Folgenden finden Sie die grundlegende Syntax des CONTAINS-Prädikats:
 
@@ -21,27 +21,27 @@ Im Folgenden finden Sie die grundlegende Syntax des CONTAINS-Prädikats:
 ...CONTAINS(["<fulltext_column>",]'<contains_condition>'[,<LCID>])...
 ```
 
-Der \_ Volltextspaltenverweis ist optional. Damit können Sie die Suche auf eine einzelne Spalte oder eine Spaltengruppe beschränken, für die das CONTAINS-Prädikat getestet wird. Wenn die Volltextspalte als "ALL" oder "" angegeben wird, werden alle \* indizierten Texteigenschaften durchsucht. Obwohl die Spalte keine Texteigenschaft sein muss, sind die Ergebnisse möglicherweise bedeutungslos, wenn es sich bei der Spalte um einen anderen Datentyp handelt. Der Spaltenname kann entweder ein regulärer oder ein durch Trennzeichen getrennter [Bezeichner](-search-sql-identifiers.md)sein, und Sie müssen ihn durch ein Komma von der Bedingung trennen. Wenn keine Volltextspalte angegeben wird, wird die Spalte System.Search.Contents verwendet, bei der es sich um den Text des Dokuments handelt.
+Der \_ Volltextspaltenverweis ist optional. Damit können Sie die Suche auf eine einzelne Spalte oder eine Spaltengruppe beschränken, für die das CONTAINS-Prädikat getestet wird. Wenn die Volltextspalte als "ALL" oder "" angegeben \* wird, werden alle indizierten Texteigenschaften durchsucht. Obwohl die Spalte keine Texteigenschaft sein muss, sind die Ergebnisse möglicherweise bedeutungslos, wenn die Spalte ein anderer Datentyp ist. Der Spaltenname kann entweder ein regulärer oder ein durch Trennzeichen getrennter [Bezeichner](-search-sql-identifiers.md)sein, und Sie müssen ihn durch ein Komma von der Bedingung trennen. Wenn keine Volltextspalte angegeben wird, wird die Spalte System.Search.Contents verwendet, die den Text des Dokuments darstellt.
 
-Der LCID-Teil des Prädikats gibt das Such locale an. Dadurch wird die Suchmaschine angewiesen, für die Suchabfrage die entsprechenden Wörterschalter- und Inflectionsformen zu verwenden. Um das Locale anzugeben, geben Sie die Windows standard language code identifier (LCID) an. 1033 ist beispielsweise die LCID für USA Englisch. Platzieren Sie die LCID als letztes Element in den Klammern der CONTAINS-Klausel. Wichtige Informationen zu Suchen und Sprachen finden Sie unter [Verwenden von lokalisierten Suchvorgängen.](-search-sql-usinglocsearches.md)
-
-> [!NOTE]  
-> Das Standardsuch-Locale ist das Standard-System-Locale.
-
-Der Bedingungsteil "contains" muss in einfache Anführungszeichen für einzelne Wörter oder doppelte Anführungszeichen für Ausdrücke eingeschlossen werden und besteht aus mindestens einem Inhaltssuchbegriff, der mithilfe der logischen Operatoren AND oder OR kombiniert \_ wird.   Sie können den optionalen unären Operator **NOT** nach einem **AND-Operator** verwenden, um den logischen Wert eines Inhaltssuchbegriffs zu negieren.
+Der LCID-Teil des Prädikats gibt das Suchschema an. Dadurch wird die Suchmaschine angewiesen, die entsprechende Wörterpause und die entsprechenden Flexionsformen für die Suchabfrage zu verwenden. Um das Gebietsschema anzugeben, geben Sie den Windows LCID (Standard Language Code Identifier) an. Beispielsweise ist 1033 die LCID für USA-Englisch. Platzieren Sie die LCID als letztes Element in den Klammern der CONTAINS-Klausel. Wichtige Informationen zu Suchen und Sprachen finden Sie unter [Verwenden von lokalisierten Suchvorgängen.](-search-sql-usinglocsearches.md)
 
 > [!NOTE]  
-> Der **NOT-Operator** kann nur nach **AND auftreten.** Sie können den **NOT-Operator nicht** verwenden, wenn nur eine Übereinstimmungsbedingung oder nach dem **OR-Operator vor** liegt.
+> Das Standardsuchschema ist das Standardschema des Systems.
 
-Sie können Inhaltssuchbegriffe mithilfe von Klammern gruppiert und schachteln. In der folgenden Tabelle wird die Rangfolge der logischen Operatoren beschrieben.
+Der \_ Contains-Bedingungsteil muss in einfache Anführungszeichen für einzelne Wörter oder doppelte Anführungszeichen für Ausdrücke eingeschlossen werden und besteht aus einem oder mehreren Inhaltssuchbegriffen, die mit den logischen Operatoren **AND** oder **OR** kombiniert werden. Sie können den optionalen unären Operator **NOT** nach einem **AND-Operator** verwenden, um den logischen Wert eines Inhaltssuchbegriffs zu negieren.
+
+> [!NOTE]  
+> Der **NOT-Operator** kann nur nach **AND** auftreten. Sie können den **NOT-Operator** nicht verwenden, wenn nur eine Übereinstimmungsbedingung vorhanden ist, oder nach dem **OR-Operator.**
+
+Sie können Klammern verwenden, um Suchbegriffe für Inhalte zu gruppieren und zu schachteln. In der folgenden Tabelle wird die Rangfolge für die logischen Operatoren beschrieben.
 
 | Reihenfolge (Rangfolge) | Logischer Operator |
 |--------------------|------------------|
-| First (höchste)    | **NOT**          |
+| Erste (höchste)    | **NOT**          |
 | Second             | **AND**          |
 | Dritte (niedrigste)     | **OR**           |
 
-Logische Operatoren desselben Typs sind assoziativ, und es gibt keine angegebene Berechnungsfolge. Beispielsweise können (A **UND** B) **UND** (C **UND** D) ohne Änderung des logischen Ergebnisses berechnet werden (B **UND** **C)** UND (A **UND** D).
+Logische Operatoren desselben Typs sind assoziativ, und es gibt keine angegebene Berechnungsreihenfolge. Beispielsweise können (A **UND** B) **AND** (C **UND** D) (B **UND** C) **UND** (A **UND** D) ohne Änderung des logischen Ergebnisses berechnet werden.
 
 In der folgenden Tabelle werden die Typen von Inhaltssuchbegriffen beschrieben.
 
@@ -54,7 +54,7 @@ In der folgenden Tabelle werden die Typen von Inhaltssuchbegriffen beschrieben.
 </colgroup>
 <thead>
 <tr class="header">
-<th>type</th>
+<th>Typ</th>
 <th>BESCHREIBUNG</th>
 <th>Beispiele</th>
 </tr>
@@ -102,7 +102,7 @@ Or, to use a double quote mark:
 </tr>
 <tr class="odd">
 <td>Platzhalter</td>
-<td>Wörter oder Ausdrücke mit dem Sternchen (*), das am Ende hinzugefügt wird. Weitere Informationen finden Sie unter <a href="-search-sql-wildcards.md">Verwenden von Platzhaltern im CONTAINS-Prädikat</a>.</td>
+<td>Wörter oder Ausdrücke mit dem Sternchen (*) werden am Ende hinzugefügt. Weitere Informationen finden Sie unter <a href="-search-sql-wildcards.md">Verwenden von Platzhaltern im CONTAINS-Prädikat</a>.</td>
 <td><div class="code">
 <span data-codelanguage=""></span>
 <table>
@@ -124,7 +124,7 @@ Matches &quot;computer&quot;, &quot;computers&quot;,
 </tr>
 <tr class="even">
 <td>Volltextspalte</td>
-<td>Ein Eigenschaftenspaltenname, mit dem die verbleibende Abfrage übereinstimmen soll.</td>
+<td>Ein Eigenschaftenspaltenname, mit dem die verbleibende Abfrage übereinstimmt.</td>
 <td><div class="code">
 <span data-codelanguage=""></span>
 <table>
@@ -141,8 +141,8 @@ Matches &quot;computer&quot;, &quot;computers&quot;,
 </div></td>
 </tr>
 <tr class="odd">
-<td>Boolean</td>
-<td>Wörter, Ausdrücke und Platzhalterzeichenfolgen werden mithilfe der booleschen Operatoren <strong>AND</strong>, <strong>OR</strong>oder <strong>NOT kombiniert.</strong> Schließen Sie die booleschen Begriffe in doppelte Anführungszeichen ein.</td>
+<td>Boolesch</td>
+<td>Wörter, Ausdrücke und Platzhalterzeichenfolgen, kombiniert mit den booleschen Operatoren <strong>AND,</strong> <strong>OR</strong>oder <strong>NOT.</strong> Schließen Sie die booleschen Begriffe in doppelte Anführungszeichen ein.</td>
 <td><div class="code">
 <span data-codelanguage=""></span>
 <table>
@@ -171,7 +171,7 @@ Matches &quot;computer&quot;, &quot;computers&quot;,
 </tr>
 <tr class="even">
 <td>Near</td>
-<td>Wörter, Ausdrücke oder Platzhalter, die durch die Funktion NEAR getrennt sind. Weitere Informationen finden Sie unter <a href="-search-sql-near.md">NEAR Term</a>.</td>
+<td>Wörter, Ausdrücke oder Platzhalter, die durch die Near-Funktion getrennt sind. Weitere Informationen finden Sie unter <a href="-search-sql-near.md">NEAR Term</a>.</td>
 <td><div class="code">
 <span data-codelanguage=""></span>
 <table>
@@ -190,7 +190,7 @@ Matches &quot;computer&quot;, &quot;computers&quot;,
 </tr>
 <tr class="odd">
 <td>FormsOf</td>
-<td>Entspricht einem Wort und den inflectional-Versionen dieses Worts. Weitere Informationen finden Sie unter <a href="-search-sql-formsof.md">FORMSOF-Begriff</a>.</td>
+<td>Entspricht einem Wort und den Flexionsversionen dieses Worts. Weitere Informationen finden Sie unter <a href="-search-sql-formsof.md">FORMSOF-Begriff</a>.</td>
 <td><div class="code">
 <span data-codelanguage=""></span>
 <table>
@@ -213,7 +213,7 @@ Matches &quot;happy&quot;, &quot;happier&quot;,
 </tr>
 <tr class="even">
 <td>IsAbout</td>
-<td>Kombiniert übereinstimmende Ergebnisse über mehrere Wort-, Ausdrucks- oder Platzhaltersuchbegriffe. Jeder Suchbegriff kann optional gewichtet werden. Optional können Sie die Rangberechnungsmethode angeben, die die Gewichtungen und die Anzahl der Elemente kombiniert, denen das Dokument entspricht. Weitere Informationen finden Sie unter <a href="-search-sql-isabout.md">ISABOUT-Begriff</a>.</td>
+<td>Kombiniert übereinstimmende Ergebnisse über mehrere Wort-, Ausdrucks- oder Platzhaltersuchbegriffe. Jeder Suchbegriff kann optional gewichtet werden. Sie können optional die Rangfolgeberechnungsmethode angeben, die die Gewichtungen und die Anzahl der Elemente kombiniert, mit denen das Dokument übereinstimmt. Weitere Informationen finden Sie unter <a href="-search-sql-isabout.md">ISABOUT-Begriff.</a></td>
 <td><div class="code">
 <span data-codelanguage=""></span>
 <table>
@@ -253,6 +253,6 @@ Dieser Abschnitt schließt folgende Themen ein:
 
 ### <a name="conceptual"></a>Konzept
 
-[Volltext-Prädikate](-search-sql-fulltextpredicates.md)
+[Volltextprädikate](-search-sql-fulltextpredicates.md)
 
-[Nicht-Volltext-Prädikate](-search-sql-nonfulltextpredicates.md)
+[Nicht-Volltextprädikate](-search-sql-nonfulltextpredicates.md)

@@ -48,7 +48,7 @@ NAPAPI VOID WINAPI FreeFixupInfo(
 *fixupInfo* \[ In\]
 </dt> <dd>
 
-Ein Zeiger auf die frei zu gebende [**FixupInfo-Datenstruktur.**](/windows/win32/api/naptypes/ns-naptypes-fixupinfo)
+Ein Zeiger auf die frei zu verwendende [**FixupInfo-Datenstruktur.**](/windows/win32/api/naptypes/ns-naptypes-fixupinfo)
 
 </dd> </dl>
 

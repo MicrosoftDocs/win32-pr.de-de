@@ -1,7 +1,7 @@
 ---
-description: Gibt den HDCPHigh-Bandwidth Digital Content Protection(HDCP)-Schutz an.
+description: Gibt den HDCP-Schutz High-Bandwidth Digital Content Protection (HDCP) an.
 ms.assetid: 3C4B6E66-D68B-4BE9-A821-8F91EF28B70B
-title: MFPROTECTION_HDCP -Attribut (Mfidl.h)
+title: MFPROTECTION_HDCP-Attribut (Mfidl.h)
 ms.topic: reference
 ms.date: 05/31/2018
 ms.openlocfilehash: 0ed0f0412165f1376a298486894654b2282143113e05d99d3b167cbe8fcc8163
@@ -13,7 +13,7 @@ ms.locfileid: "117872474"
 ---
 # <a name="mfprotection_hdcp-attribute"></a>MFPROTECTION \_ HDCP-Attribut
 
-Gibt den HDCPHigh-Bandwidth Digital Content Protection(HDCP)-Schutz an.
+Gibt den HDCP-Schutz High-Bandwidth Digital Content Protection (HDCP) an.
 
 ## <a name="data-type"></a>Datentyp
 
@@ -31,11 +31,11 @@ Gibt den HDCPHigh-Bandwidth Digital Content Protection(HDCP)-Schutz an.
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 
-[Alphabetische Liste Media Foundation Attribute](alphabetical-list-of-media-foundation-attributes.md)
+[Alphabetische Liste der Media Foundation Attribute](alphabetical-list-of-media-foundation-attributes.md)
 </dt> </dl>
 
  

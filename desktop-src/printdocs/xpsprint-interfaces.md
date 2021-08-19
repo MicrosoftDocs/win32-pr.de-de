@@ -13,7 +13,7 @@ ms.locfileid: "117867513"
 ---
 # <a name="xps-print-api-interfaces"></a>XPS-Druck-API-Schnittstellen
 
-\[Die in diesem Abschnitt beschriebenen Schnittstellen sind veraltet. Clientanwendungen sollten stattdessen die [Print Document Package-API](./tailored-app-printing-api.md) verwenden.\]
+\[Die in diesem Abschnitt beschriebenen Schnittstellen sind veraltet. Clientanwendungen sollten stattdessen die [Druckdokumentpaket-API](./tailored-app-printing-api.md) verwenden.\]
 
 \[IXpsPrintJob wird nicht unterstützt und kann in Zukunft geändert oder nicht mehr verfügbar sein. \]
 
@@ -25,8 +25,8 @@ ms.locfileid: "117867513"
 
 | Schnittstelle                                                   | BESCHREIBUNG                                                                               |
 |-------------------------------------------------------------|-------------------------------------------------------------------------------------------|
-| [**IXpsPrintJob**](/windows/desktop/api/XpsPrint/nn-xpsprint-ixpsprintjob)<br/>             | Ermöglicht den Zugriff auf einen Druckauftrag, der gerade ausgeführt wird.<br/>                  |
-| [**IXpsPrintJobStream**](/windows/desktop/api/XpsPrint/nn-xpsprint-ixpsprintjobstream)<br/> | Eine Streamschnittstelle nur für Schreibzugriff, in die eine Anwendung Druckauftragsdaten schreibt.<br/> |
+| [**IXpsPrintJob**](/windows/desktop/api/XpsPrint/nn-xpsprint-ixpsprintjob)<br/>             | Ermöglicht den Zugriff auf einen Druckauftrag, der gerade in Bearbeitung ist.<br/>                  |
+| [**IXpsPrintJobStream**](/windows/desktop/api/XpsPrint/nn-xpsprint-ixpsprintjobstream)<br/> | Eine datenübertragungsbasierte Schnittstelle, in die eine Anwendung Druckauftragsdaten schreibt.<br/> |
 
 
 

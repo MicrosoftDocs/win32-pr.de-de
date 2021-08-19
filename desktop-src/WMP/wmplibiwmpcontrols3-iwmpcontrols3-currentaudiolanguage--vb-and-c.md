@@ -1,11 +1,11 @@
 ---
-title: IWMPControls3 currentaudiolanguage (Eigenschaft)
-description: Die currentaudiolanguage-Eigenschaft ruft den Gebiets Schema Bezeichner (LCID) der Audiosprache für die Wiedergabe ab oder legt ihn fest.
+title: IWMPControls3 currentAudioLanguage-Eigenschaft
+description: Die currentAudioLanguage-Eigenschaft ruft den Gebietsschemabezeichner (LCID) der Audiosprache für die Wiedergabe ab oder legt diese fest.
 ms.assetid: 4adf26c7-077a-483e-8a76-accf871eca4c
 keywords:
-- currentaudiolanguage-Eigenschaft, Windows Media Player
-- currentaudiolanguage-Eigenschaft, Windows Media Player, IWMPControls3-Schnittstelle
-- IWMPControls3 Interface Windows Media Player, currentaudiolanguage-Eigenschaft
+- currentAudioLanguage-Eigenschaft Windows Media Player
+- currentAudioLanguage-Eigenschaft Windows Media Player , IWMPControls3-Schnittstelle
+- IWMPControls3-Schnittstelle Windows Media Player , currentAudioLanguage-Eigenschaft
 topic_type:
 - apiref
 api_name:
@@ -16,16 +16,16 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 7c4621b5eace56cb883a6c8b14c3b1f082b12d3a
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 1e1a4f668cec560528270d52a2abe4777ce32d3ceb38ce21345342ef87866c38
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106367794"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118115877"
 ---
-# <a name="iwmpcontrols3currentaudiolanguage-property"></a>IWMPControls3:: currentaudiolanguage (Eigenschaft)
+# <a name="iwmpcontrols3currentaudiolanguage-property"></a>IWMPControls3::currentAudioLanguage-Eigenschaft
 
-Die **currentaudiolanguage** -Eigenschaft ruft den Gebiets Schema Bezeichner (LCID) der Audiosprache für die Wiedergabe ab oder legt ihn fest.
+Die **currentAudioLanguage-Eigenschaft** ruft den Gebietsschemabezeichner (LCID) der Audiosprache für die Wiedergabe ab oder legt diese fest.
 
 ## <a name="syntax"></a>Syntax
 
@@ -46,15 +46,15 @@ Public Property currentAudioLanguage As System.Int32
 
 ## <a name="property-value"></a>Eigenschaftswert
 
-Ein **System. Int32** -Wert, der die LCID der Audiosprache ist.
+Eine **System.Int32-Datei,** die die LCID der Audiosprache ist.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Eine LCID identifiziert eindeutig einen bestimmten Sprach Dialekt, der als Gebiets Schema bezeichnet wird.
+Eine LCID identifiziert eindeutig einen bestimmten Sprachdialekt, der als Gebietsschema bezeichnet wird.
 
-Bei Windows Media-basierten Inhalten unterstützen Eigenschaften und Methoden im Zusammenhang mit der Sprachauswahl nur eine einzige Ausgabe.
+Für Windows medienbasierten Inhalt unterstützen Eigenschaften und Methoden im Zusammenhang mit der Sprachauswahl nur eine einzelne Ausgabe.
 
-Beim Arbeiten mit DVD-Inhalten bewirkt die Angabe einer LCID, dass die erste verfügbare Audiospur mit der angegebenen Sprach-ID ausgewählt wird.
+Wenn Sie mit DVD-Inhalten arbeiten, führt die Angabe einer LCID dazu, dass die erste verfügbare Audiospur mit der angegebenen Sprach-ID ausgewählt wird.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -62,7 +62,7 @@ Beim Arbeiten mit DVD-Inhalten bewirkt die Angabe einer LCID, dass die erste ver
 
 | Anforderung | Wert |
 |----------------------|------------------------------------------------------------------------------------------------------------------------|
-| Version<br/>   | Windows Media Player 9-Serie oder höher<br/>                                                                      |
+| Version<br/>   | Windows Media Player 9er Serie oder höher<br/>                                                                      |
 | Namespace<br/> | **WMPLib**<br/>                                                                                                  |
 | Assembly<br/>  | <dl> <dt>Interop.WMPLib.dll (Interop.WMPLib.dll.dll)</dt> </dl> |
 
@@ -72,22 +72,22 @@ Beim Arbeiten mit DVD-Inhalten bewirkt die Angabe einer LCID, dass die erste ver
 
 <dl> <dt>
 
-[**IWMPControls3-Schnittstelle (VB und c#)**](iwmpcontrols3--vb-and-c.md)
+[**IWMPControls3-Schnittstelle (VB und C#)**](iwmpcontrols3--vb-and-c.md)
 </dt> <dt>
 
-[**IWMPControls3. audiolanguagecount (VB und c#)**](wmplibiwmpcontrols3-iwmpcontrols3-audiolanguagecount--vb-and-c.md)
+[**IWMPControls3.audioLanguageCount (VB und C#)**](wmplibiwmpcontrols3-iwmpcontrols3-audiolanguagecount--vb-and-c.md)
 </dt> <dt>
 
-[**IWMPControls3. currentaudiolanguageindex (VB und c#)**](wmplibiwmpcontrols3-iwmpcontrols3-currentaudiolanguageindex--vb-and-c.md)
+[**IWMPControls3.currentAudioLanguageIndex (VB und C#)**](wmplibiwmpcontrols3-iwmpcontrols3-currentaudiolanguageindex--vb-and-c.md)
 </dt> <dt>
 
-[**IWMPControls3. getaudiolanguagedescription (VB und c#)**](wmplibiwmpcontrols3-iwmpcontrols3-getaudiolanguagedescription--vb-and-c.md)
+[**IWMPControls3.getAudioLanguageDescription (VB und C#)**](wmplibiwmpcontrols3-iwmpcontrols3-getaudiolanguagedescription--vb-and-c.md)
 </dt> <dt>
 
-[**IWMPControls3. getaudiolanguageid (VB und c#)**](wmplibiwmpcontrols3-iwmpcontrols3-getaudiolanguageid--vb-and-c.md)
+[**IWMPControls3.getAudioLanguageID (VB und C#)**](wmplibiwmpcontrols3-iwmpcontrols3-getaudiolanguageid--vb-and-c.md)
 </dt> <dt>
 
-[**IWMPControls3. getlanguagename (VB und c#)**](wmplibiwmpcontrols3-iwmpcontrols3-getlanguagename--vb-and-c.md)
+[**IWMPControls3.getLanguageName (VB und C#)**](wmplibiwmpcontrols3-iwmpcontrols3-getlanguagename--vb-and-c.md)
 </dt> </dl>
 
  

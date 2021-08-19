@@ -3,44 +3,44 @@ title: Listen
 description: Listen
 ms.assetid: 89fb4457-307a-4693-94d4-57f57c422d1e
 keywords:
-- Audiomischungen, Steuerelemente
-- Audiomixer, Listen
-- Mischungen, Steuerelemente
+- Audiomixer, Steuerelemente
+- Audiomixer,Listen
+- Mixer, Steuerelemente
 - Mixer, Listen
 - List-Steuerelemente
-- MIXERCONTROLDETAILS_BOOLEAN Struktur
-- MIXERCONTROLDETAILS_LISTTEXT Struktur
-- Steuerelement für die einfache Auswahl
+- MIXERCONTROLDETAILS_BOOLEAN-Struktur
+- MIXERCONTROLDETAILS_LISTTEXT-Struktur
+- Steuerelement mit einmaliger Auswahl
 - Mehrfachauswahl-Steuerelement
 - Mixer-Steuerelement
 - Multiplexer (MUX)
 - MUX (Multiplexer)
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 3d475816d7090ee241a1508cc054b12742c4ab27
-ms.sourcegitcommit: ebd3ce6908ff865f1ef66f2fc96769be0aad82e1
+ms.openlocfilehash: 76f15e1c89e564ddd3b6c263b91242a3e4dc0382fd36f86554ec6bd0556191ef
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/19/2020
-ms.locfileid: "104314780"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118139395"
 ---
 # <a name="lists"></a>Listen
 
-Die Listen-Steuerelemente stellen die einzelnen SELECT-und Multiple-Select-Zustände für komplexe audiozeilen bereit. Diese Steuerelemente verwenden die [**\_ boolesche "mixercontroldetails**](/previous-versions//dd757295(v=vs.85)) "-Struktur zum Abrufen und Festlegen von Steuerelement Eigenschaften. Die " [**mixercontroldetails"- \_ listtext**](/previous-versions//dd757296(v=vs.85)) -Struktur wird auch verwendet, um alle Textbeschreibungen eines Steuer Elements mit mehreren Elementen abzurufen. In der folgenden Tabelle werden die Typen von Listen Steuerelementen beschrieben.
+Die Listensteuerelemente bieten Einen-Auswahl- oder Mehrfachauswahlzustände für komplexe Audiolinien. Diese Steuerelemente verwenden die [**\_ BOOLEAN-Struktur MIXERCONTROLDETAILS**](/previous-versions//dd757295(v=vs.85)) zum Abrufen und Festlegen von Steuerelementeigenschaften. Die [**MIXERCONTROLDETAILS \_ LISTTEXT-Struktur**](/previous-versions//dd757296(v=vs.85)) wird auch verwendet, um alle Textbeschreibungen eines Steuerelements mit mehreren Element abzurufen. In der folgenden Tabelle werden die Typen von Listensteuerelementen beschrieben.
 
 
 
-| Control           | BESCHREIBUNG                                                                                                                                                                                                                                                                      |
+| Control           | Beschreibung                                                                                                                                                                                                                                                                      |
 |-------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Einfache Auswahl     | Schränkt die Auswahl des Steuer Elements auf ein Element gleichzeitig ein. Anders als das Multiplexer-Steuerelement kann dieses Steuerelement verwendet werden, um mehr als audioquellzeilen zu steuern. Beispielsweise können Sie mit diesem Steuerelement einen Tiefpass Filter aus einer Liste von Filtern auswählen, die von einem Mischungs Gerät unterstützt werden. |
-| Multiplexer (MUX) | Schränkt die Zeilenauswahl auf jeweils eine Quellzeile ein.                                                                                                                                                                                                                       |
-| Mehrfachauswahl   | Ermöglicht es dem Benutzer, mehrere Elemente gleichzeitig aus einer Liste auszuwählen. Anders als das Mixer-Steuerelement kann das Mehrfachauswahl-Steuerelement verwendet werden, um mehr als audioquellzeilen zu steuern.                                                                                                  |
-| Mixer             | Ermöglicht dem Benutzer das gleichzeitige Auswählen von Quellzeilen aus einer Liste.                                                                                                                                                                                                               |
+| Einzelauswahl     | Schränkt die Steuerelementauswahl auf ein Element gleichzeitig ein. Im Gegensatz zum Multiplexer-Steuerelement kann dieses Steuerelement verwendet werden, um mehr als Audioquellenlinien zu steuern. Sie können dieses Steuerelement beispielsweise verwenden, um einen Low-Pass-Filter aus einer Liste von Filtern auszuwählen, die von einem Mixergerät unterstützt werden. |
+| Multiplexer (MUX) | Schränkt die Zeilenauswahl auf eine Quellzeile gleichzeitig ein.                                                                                                                                                                                                                       |
+| Mehrfachauswahl   | Ermöglicht dem Benutzer, mehrere Elemente gleichzeitig aus einer Liste auszuwählen. Im Gegensatz zum Mixer-Steuerelement kann das Mehrfachauswahl-Steuerelement verwendet werden, um mehr als Audioquellenlinien zu steuern.                                                                                                  |
+| Mixer             | Ermöglicht dem Benutzer, Quellzeilen gleichzeitig aus einer Liste auszuwählen.                                                                                                                                                                                                               |
 
 
 
- 
+ 
 
- 
+ 
 
- 
+ 

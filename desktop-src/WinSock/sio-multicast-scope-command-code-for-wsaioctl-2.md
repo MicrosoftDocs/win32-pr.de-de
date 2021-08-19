@@ -1,21 +1,21 @@
 ---
-description: Wenn Multicasting verwendet wird, ist es in der Regel erforderlich, den Bereich anzugeben, in dem der Multicast auftreten soll.
+description: Wenn Multicasting verwendet wird, ist es in der Regel erforderlich, den Bereich anzugeben, in dem der Multicast erfolgen soll.
 ms.assetid: 744b43a8-dd89-4e63-ae3c-5bee72864df7
-title: SIO_MULTICAST_SCOPE Befehls Code für WSAIoctl
+title: SIO_MULTICAST_SCOPE Befehlscode für WSAIoctl
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 209a43e461907dcded8e59c6ffee9b1376989d6e
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: c38269167aa2ed142440b0e1105600d26c59514f72d749595ce44ecdf3a0998f
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104042009"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117927369"
 ---
-# <a name="sio_multicast_scope-command-code-for-wsaioctl"></a>SIO- \_ Multicast- \_ Bereichs Befehls Code für WSAIoctl
+# <a name="sio_multicast_scope-command-code-for-wsaioctl"></a>SIO \_ MULTICAST \_ SCOPE-Befehlscode für WSAIoctl
 
-Wenn Multicasting verwendet wird, ist es in der Regel erforderlich, den *Bereich* anzugeben, in dem der Multicast auftreten soll. Der Bereich wird als die Anzahl der zu deckenden Routing Netzwerksegmente definiert. Ein Bereich von 0 (null) gibt an, dass die Multicast Übertragung nicht bei der Übertragung platziert würde, sondern über Sockets innerhalb des lokalen Hosts verteilt werden könnte. Ein Bereichs Wert von 1 (Standardwert) gibt an, dass die Übertragung in das Netzwerk übertragen wird, ohne Router zu überschreiten. Höhere Bereichs Werte bestimmen die Anzahl von Routern, die möglicherweise überschritten werden. Beachten Sie, dass dies dem Time-to-Live (TTL)-Parameter in IP-Multicasting entspricht.
+Wenn Multicasting verwendet wird, ist es in der Regel erforderlich, den *Bereich* anzugeben, in dem der Multicast erfolgen soll. Der Bereich ist definiert als die Anzahl der Routingnetzwerksegmente, die abgedeckt werden sollen. Ein Bereich von 0 (null) gibt an, dass die Multicastübertragung nicht über das Kabel platziert, sondern über Sockets innerhalb des lokalen Hosts verteilt werden könnte. Der Bereichswert 1 (Standard) gibt an, dass die Übertragung an der Verbindung platziert wird, aber keine Router überschreitet. Höhere Bereichswerte bestimmen die Anzahl der Router, die überschritten werden können. Beachten Sie, dass dies dem TTL-Parameter (Time-to-Live) beim IP-Multicasting entspricht.
 
-Die Funktion " [**wsajoinleaf**](/windows/desktop/api/Winsock2/nf-winsock2-wsajoinleaf) " wird verwendet, um einen Blattknoten mit der Multipoint-Sitzung zu verknüpfen. Im folgenden finden Sie eine Erläuterung zur Verwendung dieser Funktion.
+Die [**Funktion WSAJoinLeaf**](/windows/desktop/api/Winsock2/nf-winsock2-wsajoinleaf) wird verwendet, um einen Blattknoten mit der Multipointsitzung zu verbinden. Im Folgenden wird erläutert, wie diese Funktion verwendet wird.
 
  
 

@@ -1,13 +1,13 @@
 ---
-title: STANDARDMÄßIGE SCHLÜSSELZUWEISUNGEN
-description: STANDARDMÄßIGE SCHLÜSSELZUWEISUNGEN
+title: Standard-TASTENZUORDNUNGEN
+description: Standard-TASTENZUORDNUNGEN
 ms.assetid: 9d3c5fe0-42bc-4101-9f5a-595e925ee7a5
 keywords:
-- Erstellen von DATEIEN, Standardschlüsselzuweisungen
-- STANDARDMÄßIGE ZUWEISUNGEN VON SCHLÜSSELN
-- Music Instrument Digital Interface (TASTE), Standardschlüsselzuweisungen
-- INSTRUMENTS (Music Instrument Digital Interface), Standardschlüsselzuweisungen
-- ASSOCIATION Manufacturers Association (MMA)
+- Erstellen von FORMAT-Dateien,Standardschlüsselzuweisungen
+- Standardmäßige TASTENzuweisungen für DIE STANDARD-Schlüsselzuweisungen
+- Instrument Digital Interface (KEYBOARD), Standardschlüsselzuweisungen
+- TASTE (Instrument Digital Interface), Standardschlüsselzuweisungen
+- ASSOCIATION für HERSTELLERN (MMA)
 - MMA (ASSOCIATION DER HERSTELLER)
 - Allgemeine SPEZIFIKATION FÜR DEN MODUS
 ms.topic: article
@@ -19,11 +19,11 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 08/11/2021
 ms.locfileid: "117801504"
 ---
-# <a name="standard-midi-key-assignments"></a>STANDARDMÄßIGE SCHLÜSSELZUWEISUNGEN
+# <a name="standard-midi-key-assignments"></a>Standard-TASTENZUORDNUNGEN
 
-Die STANDARDMÄßIGEN SCHLÜSSELzuweisungen für Instrumente basieren auf der MMA General CSV Mode-Spezifikation. Die folgende Abbildung zeigt die Standardschlüsselzuweisungen für DIE DATEIEN, die für Windows erstellt wurden.
+Die STANDARDMÄßIGEN TASTENzuweisungen für Musikinstrumenten basieren auf der MMA-Spezifikation für den allgemeinen FORMAT-Modus. In der folgenden Abbildung werden die Standardschlüsselzuweisungen für die für die Windows.
 
-![Bild der Schlüsselzuweisung](images/pian-a01.gif)
+![Abbildung der Schlüsselzuweisung](images/pian-a01.gif)
 
  
 

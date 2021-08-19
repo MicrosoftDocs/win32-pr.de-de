@@ -42,7 +42,7 @@ Die Werte sind identisch mit den Standardattributen im HTML-Format. Mögliche We
 
 
 
-| Wert   | BESCHREIBUNG                                                                 |
+| Wert   | Beschreibung                                                                 |
 |---------|-----------------------------------------------------------------------------|
 | normal  | Normal. Standard.                                                            |
 | fett    | Fettdruck                                                                       |

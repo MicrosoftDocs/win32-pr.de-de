@@ -1,9 +1,9 @@
 ---
-title: 'Baseeaptypeparameters komplexer Typ: Benutzereigenschaften'
-description: Ist ein Basiselement des Methoden spezifischen Elements, das im abgeleiteten Element des baseeapuserpropertiesv1-Schemas angezeigt wird.
+title: Komplexer BaseEapTypeParameters-Typ– Benutzereigenschaften
+description: Ein Basiselement des methodenspezifischen Elements, das im abgeleiteten Element des Baseeapuserpropertiesv1-Schemas angezeigt wird.
 ms.assetid: ef67eec4-ecb2-4e1c-8d48-859ca7a4607b
 keywords:
-- Baseeaptypeparameters komplexer Typ EAPHost
+- Komplexer BaseEapTypeParameters-Typ EAPHost
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ ms.topic: reference
 ms.date: 05/31/2018
 api_location: ''
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: 076e409a75202f0dd727ced0481dd3d66212eaa5
-ms.sourcegitcommit: 168d11879cb9fd89d26f826482725c0a626be00f
+ms.openlocfilehash: 1425e25ac0d426903239ff39e2a36b6dd59bd9753ff95ad533cfd38cf9468bc6
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/16/2021
-ms.locfileid: "104132429"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118086748"
 ---
-# <a name="baseeaptypeparameters-complex-type---user-properties"></a>Baseeaptypeparameters komplexer Typ: Benutzereigenschaften
+# <a name="baseeaptypeparameters-complex-type---user-properties"></a>Komplexer BaseEapTypeParameters-Typ– Benutzereigenschaften
 
-Der komplexe Typ **baseeaptypeparameters** ist ein Basiselement des Methoden spezifischen Elements, das im abgeleiteten Element des [baseeapuserpropertiesv1-Schemas](baseeapuserpropertiesv1schema-schema.md)angezeigt wird.
+Der **komplexe BaseEapTypeParameters-Typ** ist ein Basiselement des methodenspezifischen Elements, das im abgeleiteten Element des [Baseeapuserpropertiesv1-Schemas angezeigt wird.](baseeapuserpropertiesv1schema-schema.md)
 
 ``` syntax
 <xs:complexType name="BaseEapTypeParameters"
@@ -31,9 +31,9 @@ Der komplexe Typ **baseeaptypeparameters** ist ein Basiselement des Methoden spe
  />
 ```
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-**Baseeaptypeparameters** ist ein abstraktes Element. Ein abgeleitetes Element von **baseeaptypeparameters** muss in Instanzdokumenten verwendet werden.
+**BaseEapTypeParameters ist** ein abstraktes Element. Ein von **BaseEapTypeParameters abgeleitetes** Element muss in Instanzdokumenten verwendet werden.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -41,16 +41,16 @@ Der komplexe Typ **baseeaptypeparameters** ist ein Basiselement des Methoden spe
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>       |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/> |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ Vista-Desktop-Apps\]<br/>       |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[EAPHost und Legacy Schema](eaphost-schemas.md)
+[EAPHost und Legacyschema](eaphost-schemas.md)
 </dt> <dt>
 
 [baseeapuserpropertiesv1-Schema](baseeapuserpropertiesv1schema-schema.md)

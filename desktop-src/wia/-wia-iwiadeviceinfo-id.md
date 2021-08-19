@@ -1,7 +1,7 @@
 ---
-description: Ruft die ID des Hardware Geräts für die Windows-Abbild Beschaffung (WIA) ab. Schreibgeschützt.
+description: Ruft die ID des WIA-Hardwaregeräts (Windows Image Acquisition) ab. Schreibgeschützt.
 ms.assetid: b3719c04-42d0-44d2-834b-ac11989c56da
-title: DeviceInfo.ID-Eigenschaft
+title: DeviceInfo.Id-Eigenschaft
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,16 +13,16 @@ api_type:
 - COM
 api_location:
 - Wiascr.dll
-ms.openlocfilehash: 42505feaab673f8d48e71b96caac5c81b756e614
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 95c124e623e0c832b7e2e8a737f56b97582ae2b7fcc7df842a154acf7be975eb
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106360094"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118441318"
 ---
-# <a name="deviceinfoid-property"></a>DeviceInfo.ID-Eigenschaft
+# <a name="deviceinfoid-property"></a>DeviceInfo.Id-Eigenschaft
 
-Ruft die ID des Hardware Geräts für die Windows-Abbild Beschaffung (WIA) ab. Schreibgeschützt.
+Ruft die ID des WIA-Hardwaregeräts (Windows Image Acquisition) ab. Schreibgeschützt.
 
 Diese Eigenschaft ist schreibgeschützt.
 
@@ -37,7 +37,7 @@ propVal = DeviceInfo.Id
 
 ## <a name="property-value"></a>Eigenschaftswert
 
-Eine Zeichenfolge, die die ID empfängt.
+Zeichenfolge, die die ID empfängt.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -45,9 +45,9 @@ Eine Zeichenfolge, die die ID empfängt.
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional, Windows XP \[ Desktop-Apps\]<br/>                                        |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/>                                                          |
-| DLL<br/>                      | <dl> <dt>Wiascr.dll (Version 4,90 oder höher)</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional, nur Windows \[ XP-Desktop-Apps\]<br/>                                        |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                                                          |
+| DLL<br/>                      | <dl> <dt>Wiascr.dll (Version 4.90 oder höher)</dt> </dl> |
 
 
 

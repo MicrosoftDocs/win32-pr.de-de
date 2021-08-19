@@ -1,6 +1,6 @@
 ---
-description: Weitere Informationen finden Sie in der columnvalueof-Struktur <T> . Valueasobject (Eigenschaft)
-title: Columnvalueobstruct (T). Valueasobject (Eigenschaft)
+description: 'Erfahren Sie mehr über: ColumnValueOfStruct <T> . ValueAsObject-Eigenschaft'
+title: ColumnValueOfStruct(T). ValueAsObject-Eigenschaft
 TOCTitle: 'ValueAsObject property '
 ms:assetid: P:Microsoft.Isam.Esent.Interop.ColumnValueOfStruct`1.ValueAsObject
 ms:mtpsurl: https://msdn.microsoft.com/library/Dn334226(v=EXCHG.10)
@@ -25,19 +25,19 @@ api_type:
 api_location:
 - Microsoft.Isam.Esent.Interop.dll
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: 06ba2eb74f57354955d4254ca8fa08fd9557a1fb
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 0eb50c5e753d0dda4cd0df6f305f4bb951ebb69adaf0f88b4a4cd107ed5baf4a
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106349711"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118083494"
 ---
-# <a name="columnvalueofstructtvalueasobject-property"></a>Columnvalueof-Struktur \<T\> . Valueasobject (Eigenschaft)
+# <a name="columnvalueofstructtvalueasobject-property"></a>ColumnValueOfStruct \<T\> . ValueAsObject-Eigenschaft
 
-Ruft den letzten Satz oder abgerufenen Wert der Spalte ab. Der Wert wird als generisches-Objekt zurückgegeben.
+Ruft den letzten festgelegten oder abgerufenen Wert der Spalte ab. Der Wert wird als generisches Objekt zurückgegeben.
 
-**Namespace:**  [Microsoft. ISAM. ESENT. Interop](./microsoft.isam.esent.interop-namespace.md)  
-**Assembly:**  Microsoft. ISAM. ESENT. Interop (in Microsoft.Isam.Esent.Interop.dll)
+**Namespace:**  [Microsoft.Isam.Esent.Interop](./microsoft.isam.esent.interop-namespace.md)  
+**Assembly:**  Microsoft.Isam.Esent.Interop (in Microsoft.Isam.Esent.Interop.dll)
 
 ## <a name="syntax"></a>Syntax
 
@@ -58,14 +58,14 @@ public override Object ValueAsObject { get; }
 
 #### <a name="property-value"></a>Eigenschaftswert
 
-Type: [System. Object](/dotnet/api/system.object)  
+Typ: [System.Object](/dotnet/api/system.object)  
 
 ## <a name="see-also"></a>Siehe auch
 
-#### <a name="reference"></a>Referenz
+#### <a name="reference"></a>Verweis
 
-[Columnvalueosstruct- \<T\> Klasse](./columnvalueofstruct-t-class.md)
+[ColumnValueOfStruct-Klasse \<T\>](./columnvalueofstruct-t-class.md)
 
-[Columnvalueofstruct \<T\> -Member](./columnvalueofstruct-t-members.md)
+[ColumnValueOfStruct-Elemente \<T\>](./columnvalueofstruct-t-members.md)
 
-[Microsoft. ISAM. ESENT. Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)
+[Microsoft.Isam.Esent.Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)

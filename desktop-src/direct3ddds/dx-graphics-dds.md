@@ -1,28 +1,28 @@
 ---
 title: DDS
-description: Das DirectDraw-Oberflächen Dateiformat (. DDS) wurde mit DirectX 7 eingeführt, um unkomprimierte und komprimierte Texturen (DXTn) zu speichern. Das Dateiformat unterstützt Mipmaps, Cubemaps und volumezuordnungen.
+description: Das DirectDraw Surface-Dateiformat (.dds) wurde mit DirectX 7 eingeführt, um unkomprimierte und komprimierte Texturen (DXTn) zu speichern. Das Dateiformat unterstützt Mipmaps, Cubezuordnungen und Volumezuordnungen.
 ms.assetid: b0f3a1af-e816-4d64-93d9-51e510423869
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 40d6baed76a5a8e2c6c80b17dcb9e08eb2f6afcb
-ms.sourcegitcommit: 592c9bbd22ba69802dc353bcb5eb30699f9e9403
+ms.openlocfilehash: b81d76948a17cd90b535c702a71506b5e2410340c9eeef098bdb558ebf406a7c
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "104390865"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117910098"
 ---
 # <a name="dds"></a>DDS
 
-Das DirectDraw-Oberflächen Dateiformat (. DDS) wurde mit DirectX 7 eingeführt, um unkomprimierte und komprimierte Texturen (DXTn) zu speichern. Das Dateiformat unterstützt Mipmaps, Cubemaps und volumezuordnungen. Das DDS-Dateiformat wird von [directxtex](https://github.com/Microsoft/DirectXTex), [directxtk](https://github.com/Microsoft/DirectXTK), Legacy D3DX und anderen DirectX-Tools unterstützt. Ab Direct3D 10 unterstützen DDS-Dateien Textur Arrays.
+Das DirectDraw Surface-Dateiformat (.dds) wurde mit DirectX 7 eingeführt, um unkomprimierte und komprimierte Texturen (DXTn) zu speichern. Das Dateiformat unterstützt Mipmaps, Cubezuordnungen und Volumezuordnungen. Das DDS-Dateiformat wird von [DirectXTex,](https://github.com/Microsoft/DirectXTex) [DirectXTK,](https://github.com/Microsoft/DirectXTK)Legacy-D3DX und anderen DirectX-Tools unterstützt. Ab Direct3D 10 unterstützen DDS-Dateien Texturarrays.
 
 > [!Note]  
-> Die Hilfsprogrammbibliothek D3DX (D3DX 9, D3DX 10 und [D3DX 11](/windows/desktop/direct3d11/d3d11-graphics-reference-d3dx11)) ist für Windows 8 veraltet und wird für Windows Store-Apps nicht unterstützt. Es wird empfohlen, [directxtex](https://github.com/Microsoft/DirectXTex), [directxtk](https://github.com/Microsoft/DirectXTK)oder beides zu verwenden.
+> Die Hilfsprogrammbibliothek D3DX (D3DX 9, D3DX 10 und [D3DX 11)](/windows/desktop/direct3d11/d3d11-graphics-reference-d3dx11)ist für Windows 8 veraltet und wird für Windows Store Apps nicht unterstützt. Es wird empfohlen, [DirectXTex,](https://github.com/Microsoft/DirectXTex) [DirectXTK](https://github.com/Microsoft/DirectXTK)oder beides zu verwenden.
 
- 
+ 
 
--   [Programmier Handbuch für DDS](dx-graphics-dds-pguide.md)
--   [Verweis für DDS](dx-graphics-dds-reference.md)
+-   [Programmierhandbuch für DDS](dx-graphics-dds-pguide.md)
+-   [Referenz für DDS](dx-graphics-dds-reference.md)
 
- 
+ 
 
- 
+ 

@@ -1,9 +1,9 @@
 ---
-title: LCID-Attribut
-description: Das Attribut \ LCID \ gibt einen Gebiets Schema Bezeichner an und ermöglicht Gebiets Schema spezifische Unterstützung für den-Compiler.
+title: lcid-Attribut
+description: Das \lcid\-Attribut gibt einen Gebietsschemabezeichner an und aktiviert gebietsschemaspezifische MIDL-Compilerunterstützung.
 ms.assetid: 40457a1a-251c-41cd-bfa6-9d506601ff5e
 keywords:
-- LCID-Attribut-Mittel l
+- LCID-Attribut MIDL
 topic_type:
 - apiref
 api_name:
@@ -12,16 +12,16 @@ api_type:
 - NA
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 5fa22b231c63583c6d16e6a50f3e9987c5b61128
-ms.sourcegitcommit: ebd3ce6908ff865f1ef66f2fc96769be0aad82e1
+ms.openlocfilehash: e87d1b6105d7e6ae561d7409cbf256b67f965c61e235ffc5782594cb5623497c
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/19/2020
-ms.locfileid: "103725096"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117806796"
 ---
-# <a name="lcid-attribute"></a>LCID-Attribut
+# <a name="lcid-attribute"></a>lcid-Attribut
 
-Das **\[ LCID \]** -Attribut gibt einen Gebiets Schema Bezeichner an und ermöglicht Gebiets Schema spezifische Unterstützung für den Mittelwert Compiler.
+Das **\[ \] lcid-Attribut** gibt einen Gebietsschemabezeichner an und ermöglicht gebietsschemaspezifische MIDL-Compilerunterstützung.
 
 ``` syntax
 [
@@ -41,24 +41,24 @@ function-name([parameter-attribute-list, lcid] long  parameter-name,. . .);
 
 <dl> <dt>
 
-*UUID-Nummer* 
+*uuid-number* 
 </dt> <dd>
 
-Gibt eine universell eindeutige Identifikationsnummer für die [**Bibliothek**](library.md)an.
+Gibt eine universell eindeutige ID für die [**Bibliothek**](library.md)an.
 
 </dd> <dt>
 
-*LocaleID* 
+*Localeid* 
 </dt> <dd>
 
-Gibt den 32-Bit-Gebiets Schema Bezeichner an, der in der Unterstützung von Windows- In der Regel wird der Gebiets Schema Bezeichner in hexadezimal angegeben.
+Gibt den 32-Bit-Gebietsschemabezeichner an, der in Windows National Language Support verwendet wird. In der Regel wird der Gebietsschemabezeichner hexadezimal angegeben.
 
 </dd> <dt>
 
-*optional-Attribut-List* 
+*optional-attribute-list* 
 </dt> <dd>
 
-NULL oder mehr Attribute, die auf die [**Bibliothek**](library.md)angewendet werden sollen.
+Null oder mehr Attribute, die auf die [**Bibliothek**](library.md)angewendet werden sollen.
 
 </dd> <dt>
 
@@ -69,51 +69,51 @@ Der Name, mit dem Softwarekomponenten auf die [**Bibliothek**](library.md)verwei
 
 </dd> <dt>
 
-*Library-Definition-Anweisungen* 
+*library-definition-statements* 
 </dt> <dd>
 
-Eine oder mehrere-Mittell-Anweisungen, die den Inhalt der [**Bibliothek**](library.md)definieren.
+Eine oder mehrere MIDL-Anweisungen, die den Inhalt der [**Bibliothek**](library.md)definieren.
 
 </dd> <dt>
 
-*function-name* 
+*Funktionsname* 
 </dt> <dd>
 
 Gibt den Namen der Funktion in der IDL-Datei an.
 
 </dd> <dt>
 
-*Parameter-Attribute-List* 
+*parameter-attribute-list* 
 </dt> <dd>
 
-NULL oder mehr mittlere Attribute, die auf den Funktionsparameter angewendet werden.
+Null oder mehr MIDL-Attribute, die auf den Funktionsparameter angewendet werden.
 
 </dd> <dt>
 
-*Parameter Name* 
+*Parametername* 
 </dt> <dd>
 
 Gibt den Namen des Parameters in der IDL-Datei an.
 
 </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die **\[ LCID \]** -Syntax verfügt über zwei verschiedene Formen: die Auswirkung des Attributs hängt davon ab, welche Syntax Sie verwenden – entweder der Syntax der [**Bibliotheks**](library.md) Anweisung oder der Parameter Syntax.
+Die **\[ \] lcid-Syntax** hat zwei verschiedene Formen: Die Auswirkung des Attributs hängt davon ab, welche Syntax Sie verwenden – entweder die Syntax der [**Bibliotheks-Anweisung**](library.md) oder die Parametersyntax.
 
-Wenn das LCID-Attribut, wie im ersten Beispiel gezeigt, zusammen mit einem LocaleID-Argument auf die [**Library**](library.md) -Anweisung angewendet wird, identifiziert das **\[ LCID \]** -Attribut das Gebiets Schema für eine Typbibliothek oder für ein Funktions Argument und ermöglicht die Verwendung internationaler Zeichen innerhalb des Bibliotheks Blocks.
+Bei Anwendung [](library.md) auf die Bibliotheksanweisung zusammen mit einem localeID-Argument, wie im ersten Beispiel gezeigt, identifiziert das **\[ \] lcid-Attribut** das Gebietsschema für eine Typbibliothek oder für ein Funktionsargument und ermöglicht die Verwendung von internationalen Zeichen innerhalb des Bibliotheksblocks.
 
-Mit der Version 3.01.75 des mittlerer l-Compilers wird der von diesem Attribut bereitgestellte Gebiets Schema Bezeichner nicht nur die resultierende Typbibliothek, sondern das Verhalten des Compilers geändert. Innerhalb einer [**Library**](library.md) -Anweisung akzeptiert die Mittel Stelle ab dem Zeitpunkt, an dem das **\[ LCID \]** -Attribut verwendet wird, die nach dem angegebenen Gebiets Schema lokalisierte Eingabe. Insbesondere ist eine vollständige Unterstützung für asiatische Sprachen wie Japanisch, Chinesisch und Koreanisch (vollständige DBCS-Unterstützung) verfügbar. Die von der Lokalisierung unterstützten Funktionen sind: Kommentare, Zeichen folgen, helpstrings und Bezeichner.
+Ab Version 3.01.75 des MIDL-Compilers ist der von diesem Attribut bereitgestellte Gebietsschemabezeichner nicht nur mit der resultierenden Typbibliothek versehen, sondern ändert auch das Verhalten des Compilers. In [](library.md) einer Bibliotheksanweisung akzeptiert MIDL ab dem Punkt, an dem das **\[ \] lcid-Attribut** verwendet wird, eingaben, die gemäß dem angegebenen Gebietsschema lokalisiert sind. Insbesondere steht vollständige Unterstützung für asienische Sprachen wie Japanisch, Chinesisch und Koreanisch (vollständige DBCS-Unterstützung) zur Verfügung. Von der Lokalisierung unterstützte Features sind: Kommentare, Zeichenfolgen, HelpStrings und Bezeichner.
 
-Verwenden Sie den [**/LCID**](-lcid.md) -Compilerschalter, um diese Lokalisierungsunterstützung für die gesamte Eingabedatei, einschließlich Dateiname und Verzeichnispfad, anstelle des Bibliotheks Blocks verfügbar zu lassen.
+Verwenden Sie den Compilerschalter [**/lcid,**](-lcid.md) damit diese Lokalisierungsunterstützung für die gesamte Eingabedatei verfügbar ist, einschließlich Dateiname und Verzeichnispfad, anstatt nur innerhalb des Bibliotheksblocks.
 
-Wenn das **\[ LCID \]** -Attribut auf einen Parameter angewendet wird, können Sie einen Gebiets Schema Bezeichner an eine Funktion übergeben, wie im zweiten Beispiel dargestellt. Für **\[ LCID \]** -Parameter gelten die folgenden Einschränkungen:
+Bei Anwendung auf einen Parameter können Sie mit dem **\[ \] lcid-Attribut** einen Gebietsschemabezeichner an eine Funktion übergeben, wie im zweiten Beispiel gezeigt. Die folgenden Einschränkungen gelten für **\[ \] lcid-Parameter:**
 
--   Eine Funktion kann höchstens einen **\[ LCID \]** -Parameter aufweisen.
--   Der Datentyp des-Parameters muss [**lang**](long.md)sein.
--   Die Richtung des-Parameters darf **\[** nur [**in**](in.md) sein **\]** .
--   Der **\[ LCID \]** -Parameter muss mit Ausnahme eines **\[** [**retval**](retval.md) -Parameters allen anderen Parametern folgen **\]** .
--   Sie können das **\[ LCID \]** -Attribut nicht auf einen [**dispinterface**](dispinterface.md) -oder einen [**Co-Klasse**](coclass.md) -Parameter anwenden.
+-   Eine Funktion kann höchstens einen **\[ lcid-Parameter \]** aufweisen.
+-   Der Datentyp des Parameters muss [**long**](long.md)sein.
+-   Die Richtung des Parameters darf nur **\[** [**in**](in.md) **\]** sein.
+-   Der **\[ \] lcid-Parameter** muss allen anderen Parametern folgen, mit Ausnahme eines **\[** [**Retval-Parameters.**](retval.md) **\]**
+-   Sie können das **\[ \] lcid-Attribut** nicht auf einen [**dispinterface-**](dispinterface.md) oder [**coclass-Parameter**](coclass.md) anwenden.
 
 ## <a name="examples"></a>Beispiele
 
@@ -143,27 +143,27 @@ interface IMyFace : IDispatch
 [**coclass**](coclass.md)
 </dt> <dt>
 
-[**dispinterface**](dispinterface.md)
+[**Dispatchschnittstelle**](dispinterface.md)
 </dt> <dt>
 
-[Erstellen einer Typbibliothek mit "Mittel l"](generating-a-type-library-with-midl-2.md)
+[Generieren einer Typbibliothek mit MIDL](generating-a-type-library-with-midl-2.md)
 </dt> <dt>
 
-[**/LCID**](-lcid.md)
+[**/lcid**](-lcid.md)
 </dt> <dt>
 
 [**Bibliothek**](library.md)
 </dt> <dt>
 
-[Syntax der ODL-Datei](/previous-versions/windows/desktop/automat/odl-file-syntax)
+[ODL-Dateisyntax](/previous-versions/windows/desktop/automat/odl-file-syntax)
 </dt> <dt>
 
-[Beispiel für eine ODL-Datei](/previous-versions/windows/desktop/automat/odl-file-example)
+[BEISPIEL FÜR ODL-Datei](/previous-versions/windows/desktop/automat/odl-file-example)
 </dt> <dt>
 
-[**retval**](retval.md)
+[**Retval**](retval.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 

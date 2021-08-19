@@ -1,10 +1,10 @@
 ---
-title: MSDRM_STATUS-Enumeration (wmdrmsdk. h)
-description: Der \_ Enumerationstyp "msdrm-Status" definiert Status Bedingungen für das DRM-Subsystem.
+title: MSDRM_STATUS-Enumeration (Wmdrmsdk.h)
+description: Der MSDRM \_ STATUS-Enumerationstyp definiert Statusbedingungen für das DRM-Subsystem.
 ms.assetid: b26600ea-2603-4fca-9408-2d5c88091dcc
 keywords:
-- MSDRM_STATUS-Enumeration Windows Media-Format
-- Enumeration Windows Media-Format
+- MSDRM_STATUS enumeration windows Media Format
+- Enumerationsfenster Medienformat
 topic_type:
 - apiref
 api_name:
@@ -15,16 +15,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: bf2a73de9e33216e22a01966be8f2ed6a3185fdf
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 0c4c1f9b37f237b1ae2399849ef3100e3d6fdbc12c7ee3bc1d169420e38bb85a
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106368374"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117654574"
 ---
-# <a name="msdrm_status-enumeration"></a>Msdrm- \_ statusenumeration
+# <a name="msdrm_status-enumeration"></a>MSDRM \_ STATUS-Enumeration
 
-Der Enumerationstyp " **msdrm- \_ Status** " definiert Status Bedingungen für das DRM-Subsystem.
+Der **MSDRM \_ STATUS-Enumerationstyp** definiert Statusbedingungen für das DRM-Subsystem.
 
 ## <a name="syntax"></a>Syntax
 
@@ -52,87 +52,87 @@ typedef enum MSDRM_STATUS {
 
 <dl> <dt>
 
-<span id="DRM_ERROR"></span><span id="drm_error"></span>**DRM- \_ Fehler**
+<span id="DRM_ERROR"></span><span id="drm_error"></span>**\_DRM-FEHLER**
 </dt> <dd>
 
 Gibt an, dass ein Fehler aufgetreten ist.
 
 </dd> <dt>
 
-<span id="DRM_INFORMATION"></span><span id="drm_information"></span>**DRM- \_ Informationen**
+<span id="DRM_INFORMATION"></span><span id="drm_information"></span>**\_DRM-INFORMATIONEN**
 </dt> <dd>
 
 Gibt an, dass zusätzliche Statusinformationen vorhanden sind.
 
 </dd> <dt>
 
-<span id="DRM_BACKUPRESTORE_BEGIN"></span><span id="drm_backuprestore_begin"></span>**DRM- \_ backuprestore- \_ Anfang**
+<span id="DRM_BACKUPRESTORE_BEGIN"></span><span id="drm_backuprestore_begin"></span>**DRM \_ BACKUPRESTORE \_ BEGIN**
 </dt> <dd>
 
-Gibt an, dass eine Lizenz Sicherung oder ein Wiederherstellungs Vorgang begonnen hat.
+Gibt an, dass eine Lizenzsicherung oder ein Wiederherstellungsvorgang begonnen wurde.
 
 </dd> <dt>
 
-<span id="DRM_BACKUPRESTORE_END"></span><span id="drm_backuprestore_end"></span>**DRM- \_ backuprestore- \_ Ende**
+<span id="DRM_BACKUPRESTORE_END"></span><span id="drm_backuprestore_end"></span>**DRM \_ BACKUPRESTORE \_ END**
 </dt> <dd>
 
-Gibt an, dass eine Lizenz Sicherung oder ein Wiederherstellungs Vorgang beendet wurde.
+Gibt an, dass ein Lizenzsicherungs- oder Wiederherstellungsvorgang beendet wurde.
 
 </dd> <dt>
 
-<span id="DRM_BACKUPRESTORE_CONNECTING"></span><span id="drm_backuprestore_connecting"></span>**DRM- \_ backuprestore-Verbindung wird hergestellt \_**
+<span id="DRM_BACKUPRESTORE_CONNECTING"></span><span id="drm_backuprestore_connecting"></span>**DRM \_ BACKUPRESTORE \_ CONNECTING**
 </dt> <dd>
 
-Gibt an, dass eine Lizenz Sicherung oder ein Wiederherstellungs Vorgang ausgeführt wird und dass der Client Computer eine Verbindung mit dem Sicherungs Server herstellt.
+Gibt an, dass eine Lizenzsicherung oder -wiederherstellung ausgeführt wird und dass der Clientcomputer eine Verbindung mit dem Sicherungsserver herstellt.
 
 </dd> <dt>
 
-<span id="DRM_BACKUPRESTORE_DISCONNECTING"></span><span id="drm_backuprestore_disconnecting"></span>**DRM- \_ backuprestore wird \_ getrennt**
+<span id="DRM_BACKUPRESTORE_DISCONNECTING"></span><span id="drm_backuprestore_disconnecting"></span>**DRM \_ BACKUPRESTORE \_ DISCONNECTING**
 </dt> <dd>
 
-Gibt an, dass eine Lizenz Sicherung oder ein Wiederherstellungs Vorgang ausgeführt wird und dass der Client Computer die Verbindung mit dem Sicherungs Server trennt.
+Gibt an, dass eine Lizenzsicherung oder ein Wiederherstellungsvorgang ausgeführt wird und dass der Clientcomputer die Verbindung mit dem Sicherungsserver trennt.
 
 </dd> <dt>
 
-<span id="DRM_ERROR_WITHURL"></span><span id="drm_error_withurl"></span>**DRM- \_ Fehler \_ withurl**
+<span id="DRM_ERROR_WITHURL"></span><span id="drm_error_withurl"></span>**\_DRM-FEHLER \_ WITHURL**
 </dt> <dd>
 
-Gibt an, dass der DRM-Vorgang eine ungültige URL gefunden hat.
+Gibt an, dass beim DRM-Vorgang eine ungültige URL aufgetreten ist.
 
 </dd> <dt>
 
-<span id="DRM_RESTRICTED_LICENSE"></span><span id="drm_restricted_license"></span>**eingeschränkte DRM- \_ \_ Lizenz**
+<span id="DRM_RESTRICTED_LICENSE"></span><span id="drm_restricted_license"></span>**\_EINGESCHRÄNKTE \_ DRM-LIZENZ**
 </dt> <dd>
 
-Gibt an, dass der DRM-Vorgang nicht fortgesetzt werden kann, da auf dem Client Computer keine Lizenz vorhanden ist, die das erforderliche Recht
+Gibt an, dass der DRM-Vorgang nicht fortgesetzt werden kann, da auf dem Clientcomputer keine Lizenz vorhanden ist, die das erforderliche Recht gewährt.
 
 </dd> <dt>
 
-<span id="DRM_NEEDS_INDIVIDUALIZATION"></span><span id="drm_needs_individualization"></span>**DRM \_ erfordert \_ Individualisierung**
+<span id="DRM_NEEDS_INDIVIDUALIZATION"></span><span id="drm_needs_individualization"></span>**DRM \_ ERFORDERT \_ INDIVIDUALISIERUNG**
 </dt> <dd>
 
-Gibt an, dass der DRM-Vorgang nicht fortgesetzt werden kann, da das DRM-Subsystem individuell sein muss.
+Gibt an, dass der DRM-Vorgang nicht fortgesetzt werden kann, da das DRM-Subsystem individualisiert werden muss.
 
 </dd> <dt>
 
-<span id="DRM_PLAY_OPL_NOTIFICATION"></span><span id="drm_play_opl_notification"></span>**DRM- \_ Wiedergabe- \_ OPL- \_ Benachrichtigung**
+<span id="DRM_PLAY_OPL_NOTIFICATION"></span><span id="drm_play_opl_notification"></span>**DRM \_ PLAY \_ OPL \_ NOTIFICATION**
 </dt> <dd>
 
-Gibt an, dass ein Wiedergabe Vorgang nicht abgeschlossen werden kann, da eine Anforderung der Ausgabe Schutz Ebene nicht erfüllt wurde.
+Gibt an, dass ein Wiedergabevorgang nicht abgeschlossen werden kann, da eine Anforderung der Ausgabeschutzebene nicht erfüllt wurde.
 
 </dd> <dt>
 
-<span id="DRM_COPY_OPL_NOTIFICATION"></span><span id="drm_copy_opl_notification"></span>**DRM- \_ Kopier- \_ OPL- \_ Benachrichtigung**
+<span id="DRM_COPY_OPL_NOTIFICATION"></span><span id="drm_copy_opl_notification"></span>**\_ \_ DRM-KOPIERVORGANGL-BENACHRICHTIGUNG \_**
 </dt> <dd>
 
-Gibt an, dass ein Kopiervorgang nicht abgeschlossen werden kann, da eine Anforderung der Ausgabe Schutz Ebene nicht erfüllt wurde.
+Gibt an, dass ein Kopiervorgang nicht abgeschlossen werden kann, da eine Anforderung der Ausgabeschutzebene nicht erfüllt wurde.
 
 </dd> <dt>
 
-<span id="DRM_REFRESHCRL_COMPLETE"></span><span id="drm_refreshcrl_complete"></span>**\_vollständige DRM-CRL \_**
+<span id="DRM_REFRESHCRL_COMPLETE"></span><span id="drm_refreshcrl_complete"></span>**DRM \_ REFRESHCRL \_ COMPLETE**
 </dt> <dd>
 
-Gibt an, dass ein [**callmdrmsecurity::P erformsecurityupdate**](iwmdrmsecurity-performsecurityupdate.md) -Befehl die Aktualisierung einer Sperr Liste abgeschlossen hat.
+Gibt an, dass ein Aufruf von [**IWMDRMSecurity::P erformSecurityUpdate**](iwmdrmsecurity-performsecurityupdate.md) das Aktualisieren einer Sperrliste abgeschlossen hat.
 
 </dd> </dl>
 
@@ -146,7 +146,7 @@ Keine.
 
 | Anforderung | Wert |
 |-------------------|---------------------------------------------------------------------------------------|
-| Header<br/> | <dl> <dt>Wmdrmsdk. h</dt> </dl> |
+| Header<br/> | <dl> <dt>Wmdrmsdk.h</dt> </dl> |
 
 
 

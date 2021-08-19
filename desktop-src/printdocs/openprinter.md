@@ -50,18 +50,18 @@ BOOL OpenPrinter(
 *pPrinterName* \[ In\]
 </dt> <dd>
 
-Ein Zeiger auf eine auf NULL beendete Zeichenfolge, die den Namen des Druckers oder Druckerservers, des Druckerobjekts, des XcvMonitor oder des XcvPort angibt.
+Ein Zeiger auf eine nullbeendigte Zeichenfolge, die den Namen des Druckers oder Druckerservers, des Druckerobjekts, des XcvMonitor oder des XcvPort angibt.
 
 Verwenden Sie für ein Druckerobjekt: PrinterName, Job xxxx. Verwenden Sie für einen XcvMonitor ServerName, XcvMonitor MonitorName. Verwenden Sie für einen XcvPort ServerName, XcvPort PortName.
 
-Wenn **DER WERT NULL** ist, wird der lokale Druckerserver angegeben.
+Wenn **DER WERT** NULL ist, wird der lokale Druckerserver angegeben.
 
 </dd> <dt>
 
 *phPrinter* \[ out\]
 </dt> <dd>
 
-Ein Zeiger auf eine Variable, die ein Handle (nicht threadsicher) auf das geöffnete Drucker- oder Druckerserverobjekt empfängt.
+Ein Zeiger auf eine Variable, die ein Handle (nicht threadsicher) zum geöffneten Drucker- oder Druckerserverobjekt empfängt.
 
 Der *phPrinter-Parameter* kann ein Xcv-Handle für die Verwendung mit der XcvData-Funktion zurückgeben. Weitere Informationen zu XcvData finden Sie im DDK.
 
@@ -94,25 +94,25 @@ Rufen Sie diese Methode nicht in [**DllMain auf.**](/windows/desktop/Dlls/dllmai
 
  
 
-Das Handle, auf das *phPrinter zeigt,* ist nicht threadsicher. Wenn Aufrufer sie gleichzeitig auf mehreren Threads verwenden müssen, müssen sie mithilfe der Synchronisierungsfunktionen benutzerdefinierten Synchronisierungszugriff auf das [Druckerhandler bereitstellen.](/windows/desktop/Sync/synchronization-functions) Um das Schreiben von benutzerdefiniertem Code zu vermeiden, kann die Anwendung bei Bedarf ein Druckerhandpunkt für jeden Thread öffnen.
+Das Handle, auf das *phPrinter zeigt,* ist nicht threadsicher. Wenn Aufrufer sie gleichzeitig auf mehreren Threads verwenden müssen, müssen sie mithilfe der Synchronisierungsfunktionen benutzerdefinierten Synchronisierungszugriff auf das [Druckerhandler bereitstellen.](/windows/desktop/Sync/synchronization-functions) Um zu vermeiden, dass benutzerdefinierter Code geschrieben wird, kann die Anwendung bei Bedarf ein Druckerhand handle für jeden Thread öffnen.
 
 Mit *dem Parameter pDefault* können Sie den Datentyp und die Gerätemoduswerte angeben, die zum Drucken von Dokumenten verwendet werden, die von der [**StartDocPrinter-Funktion übermittelt**](startdocprinter.md) werden. Sie können diese Werte jedoch mithilfe der [**SetJob-Funktion**](setjob.md) überschreiben, nachdem ein Dokument gestartet wurde.
 
 Die [**DEVMODE-Einstellungen,**](/windows/win32/api/wingdi/ns-wingdi-devmodea) die in der [**PRINTER \_ DEFAULTS-Struktur**](printer-defaults.md) des *pDefault-Parameters* definiert sind, werden nicht verwendet, wenn der Wert des *pDatatype-Members* der [**DOC INFO \_ \_ 1-Struktur,**](doc-info-1.md) der im *pDocInfo-Parameter* des [**StartDocPrinter-Aufrufs**](startdocprinter.md) übergeben wurde, "RAW" ist. Wenn ein Dokument auf hoher Ebene (z. B. eine Adobe PDF- oder Microsoft Word-Datei) oder andere Druckerdaten (z. B. PCL, PS oder HPGL) direkt an einen Drucker gesendet werden, bei dem *pDatatype* auf "RAW" festgelegt ist, muss das Dokument die DevMODE-Druckauftragseinstellungen in der sprache, die von der Hardware verstanden wird, vollständig beschreiben. 
 
-Sie können die **OpenPrinter-Funktion** aufrufen, um ein Handle für einen Druckerserver zu öffnen oder um die Zugriffsrechte zu bestimmen, die ein Client für einen Druckerserver hat. Geben Sie dazu den Namen des Druckerservers im *Parameter pPrinterName* an, legen Sie die Member **pDatatype** und **pDevMode** der [**PRINTER \_ DEFAULTS-Struktur**](printer-defaults.md) auf **NULL** fest, und legen Sie das **DesiredAccess-Element** so fest, dass ein Serverzugriffsmaskenwert wie SERVER ALL ACCESS angegeben \_ \_ wird. Wenn Sie mit dem Handle fertig sind, übergeben Sie es an die [**ClosePrinter-Funktion,**](closeprinter.md) um es zu schließen.
+Sie können die **OpenPrinter-Funktion** aufrufen, um ein Handle für einen Druckerserver zu öffnen oder um die Zugriffsrechte zu bestimmen, die ein Client für einen Druckerserver hat. Geben Sie dazu den Namen des Druckerservers im *Parameter pPrinterName* an, legen Sie die Member **pDatatype** und **pDevMode** der [**PRINTER \_ DEFAULTS-Struktur**](printer-defaults.md) auf **NULL** fest, und legen Sie den **DesiredAccess-Member** so fest, dass ein Serverzugriffsmaskenwert wie SERVER ALL ACCESS angegeben \_ \_ wird. Wenn Sie mit dem Handle fertig sind, übergeben Sie es an die [**ClosePrinter-Funktion,**](closeprinter.md) um es zu schließen.
 
 Verwenden Sie **das DesiredAccess-Mitglied** der [**PRINTER \_ DEFAULTS-Struktur,**](printer-defaults.md) um die Zugriffsrechte anzugeben, die Sie für den Drucker benötigen. Die Zugriffsrechte können wie folgt sein. (Wenn *pDefault* **NULL ist,** sind die Zugriffsrechte PRINTER. \_ ACCESS \_ USE.)
 
 
 
-| Desired Access-Wert                        | Bedeutung                                                                                                                                                                                      |
+| Gewünschter Zugriffswert                        | Bedeutung                                                                                                                                                                                      |
 |---------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | \_ \_ DRUCKERZUGRIFFSVERWALTUNG                 | So führen Sie administrative Aufgaben aus, z. B. die von [**SetPrinter bereitgestellten.**](setprinter.md)                                                                                                 |
 | \_ \_ DRUCKERZUGRIFFSNUTZUNG                        | So führen Sie grundlegende Druckvorgänge aus.                                                                                                                                                        |
-| DRUCKERZUGRIFF \_ \_ AUF ALLE                        | So führen Sie alle administrativen Aufgaben und grundlegenden Druckvorgänge mit Ausnahme von SYNCHRONIZE aus (siehe [Standardzugriffsrechte](/windows/desktop/SecAuthZ/standard-access-rights)).                                     |
-| DRUCKERZUGRIFF \_ \_ VERWALTEN \_ EINGESCHRÄNKT            | Zum Ausführen administrativer Aufgaben, z. B. der von [**SetPrinter**](setprinter.md) und [**SetPrinterData bereitgestellten.**](setprinterdata.md) Dieser Wert ist ab dem Windows 8.1. |
-| Generische Sicherheitswerte, z. B. WRITE \_ DAC | So lassen Sie bestimmte Zugriffsberechtigungen für die Steuerung zu. Weitere Informationen [finden Sie unter Standardzugriffsrechte](/windows/desktop/SecAuthZ/standard-access-rights).                                                                                      |
+| DRUCKERZUGRIFF \_ \_ AUF ALLE                        | So führen Sie alle administrativen Aufgaben und grundlegenden Druckvorgänge mit Ausnahme von SYNCHRONIZE aus (siehe [Standardzugriffsrechte](/windows/desktop/SecAuthZ/standard-access-rights).                                     |
+| DRUCKERZUGRIFF \_ \_ VERWALTEN \_ EINGESCHRÄNKT            | So führen Sie administrative Aufgaben aus, z. B. die von [**SetPrinter**](setprinter.md) und [**SetPrinterData bereitgestellten.**](setprinterdata.md) Dieser Wert ist ab dem Windows 8.1. |
+| Generische Sicherheitswerte, z. B. WRITE \_ DAC | So lassen Sie bestimmte Zugriffsberechtigungen für die Steuerung zu. Weitere Informationen [finden Sie unter Standardzugriffsrechte.](/windows/desktop/SecAuthZ/standard-access-rights)                                                                                      |
 
 
 
@@ -139,7 +139,7 @@ Ein Beispielprogramm, das diese Funktion verwendet, finden Sie unter How To: Pri
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 

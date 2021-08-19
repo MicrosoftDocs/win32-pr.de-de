@@ -1,7 +1,7 @@
 ---
-description: Tritt auf, bevor der iinkanalyzer auf Stroke-Daten zugreift.
+description: Tritt ein, bevor IInkAnalyzer auf Strichdaten zugreift.
 ms.assetid: fed46476-4531-4516-9375-d7b654efb3be
-title: '_IAnalysisEvents:: updatestrokescache-Ereignis (iacom. h)'
+title: _IAnalysisEvents::UpdateStrokesCache-Ereignis (IACom.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,16 +13,16 @@ api_type:
 - COM
 api_location:
 - IACom.dll
-ms.openlocfilehash: 5d16011d8c5fe571d228b632fecb7a973bafcbf5
-ms.sourcegitcommit: de72a1294df274b0a71dc0fdc42d757e5f6df0f3
+ms.openlocfilehash: 9a5854c8061a12dc558a2ca20ebd893880f899b2113065abd9b8122c53812aa0
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/05/2021
-ms.locfileid: "106363045"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118047372"
 ---
-# <a name="_ianalysiseventsupdatestrokescache-event"></a>\_Ianalysil Vents:: updatestrokescache-Ereignis
+# <a name="_ianalysiseventsupdatestrokescache-event"></a>\_IAnalysisEvents::UpdateStrokesCache-Ereignis
 
-Tritt auf, bevor der [**iinkanalyzer**](iinkanalyzer.md) auf Stroke-Daten zugreift.
+Tritt ein, bevor [**IInkAnalyzer**](iinkanalyzer.md) auf Strichdaten zugreift.
 
 ## <a name="syntax"></a>Syntax
 
@@ -40,14 +40,14 @@ HRESULT UpdateStrokesCache(
 
 <dl> <dt>
 
-*ulstrokeidscount* \[ in\]
+*ulStrokeIdsCount* \[ In\]
 </dt> <dd>
 
-Die Anzahl der Stroke-IDs in *plstrokeids*.
+Die Anzahl der Strichbezeichner in *plStrokeIds*.
 
 </dd> <dt>
 
-*plstrokeids* \[ in\]
+*plStrokeIds* \[ In\]
 </dt> <dd>
 
 Die Bezeichner der Striche, deren Paketdaten gelöscht wurden.
@@ -56,15 +56,15 @@ Die Bezeichner der Striche, deren Paketdaten gelöscht wurden.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Eine Beschreibung der Rückgabewerte finden Sie unter [Klassen und Schnittstellen-Ink-Analyse](classes-and-interfaces---ink-analysis.md).
+Eine Beschreibung der Rückgabewerte finden Sie unter Klassen und Schnittstellen – [Ink-Analyse.](classes-and-interfaces---ink-analysis.md)
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Der [**iinkanalyzer**](iinkanalyzer.md) löst dieses Ereignis während der Handschrift Analyse aus, wenn er auf einen oder mehrere Striche zugreift, für die die Paketdaten gelöscht wurden. Verwenden Sie die [**Methode iinkanalyzer:: UpdateStrokesData**](iinkanalyzer-updatestrokesdata.md) , um die Daten des Stroke-Pakets zu aktualisieren.
+Der [**IInkAnalyzer**](iinkanalyzer.md) löst dieses Ereignis während der Freihandanalyse aus, wenn er auf einen oder mehrere Striche zugreift, für die die Paketdaten gelöscht wurden. Um die Strichpaketdaten zu aktualisieren, verwenden Sie die [**IInkAnalyzer::UpdateStrokesData-Methode.**](iinkanalyzer-updatestrokesdata.md)
 
-Der [**iinkanalyzer**](iinkanalyzer.md) gibt dieses Ereignis nicht aus, wenn er auf einen teilweise gefüllten frei Hand Blattknoten zugreift, wenn die Position des Knotens nicht durch **iinkanalyzer** festgelegt wurde.
+Der [**IInkAnalyzer**](iinkanalyzer.md) gibt dieses Ereignis nicht aus, wenn auf einen teilweise aufgefüllten Freihandblattknoten zugegriffen wird, wenn die Position des Knotens nicht vom **IInkAnalyzer** festgelegt wurde.
 
-Weitere Informationen zum Synchronisieren von Anwendungsdaten mit [**iinkanalyzer**](iinkanalyzer.md)finden Sie unter [Daten Proxy mit Ink-Analyse](data-proxy-with-ink-analysis.md).
+Weitere Informationen zum Synchronisieren Ihrer Anwendungsdaten mit [**IInkAnalyzer**](iinkanalyzer.md)finden Sie unter [Datenproxy mit Freihandanalyse.](data-proxy-with-ink-analysis.md)
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -72,9 +72,9 @@ Weitere Informationen zum Synchronisieren von Anwendungsdaten mit [**iinkanalyze
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows XP Tablet PC Edition \[ Desktop-Apps\]<br/>                                                 |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur Desktop-Apps der XP Tablet PC Edition \[\]<br/>                                                 |
 | Unterstützte Mindestversion (Server)<br/> | Nicht unterstützt<br/>                                                                                     |
-| Header<br/>                   | <dl> <dt>Iacom. h (erfordert auch iacom \_ i. c)</dt> </dl> |
+| Header<br/>                   | <dl> <dt>IACom.h (erfordert auch IACom \_ i.c)</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>IACom.dll</dt> </dl>                          |
 
 
@@ -83,31 +83,31 @@ Weitere Informationen zum Synchronisieren von Anwendungsdaten mit [**iinkanalyze
 
 <dl> <dt>
 
-[**\_Ianalysil Vents**](-ianalysisevents.md)
+[**\_IAnalysisEvents**](-ianalysisevents.md)
 </dt> <dt>
 
-[**\_Ianalysisproxyevents**](-ianalysisproxyevents.md)
+[**\_IAnalysisProxyEvents**](-ianalysisproxyevents.md)
 </dt> <dt>
 
-[**Iinkanalyzer**](iinkanalyzer.md)
+[**IInkAnalyzer**](iinkanalyzer.md)
 </dt> <dt>
 
-[**Iinkanalyzer:: analysierungsmethode**](iinkanalyzer-analyze.md)
+[**IInkAnalyzer::Analyze-Methode**](iinkanalyzer-analyze.md)
 </dt> <dt>
 
-[**Iinkanalyzer:: BackgroundAnalyze-Methode**](iinkanalyzer-backgroundanalyze.md)
+[**IInkAnalyzer::BackgroundAnalyze-Methode**](iinkanalyzer-backgroundanalyze.md)
 </dt> <dt>
 
-[**Iinkanalyzer:: UpdateStrokesData-Methode**](iinkanalyzer-updatestrokesdata.md)
+[**IInkAnalyzer::UpdateStrokesData-Methode**](iinkanalyzer-updatestrokesdata.md)
 </dt> <dt>
 
-[**Icontextnode:: kreatepartiallypopulatedsubnode**](icontextnode-createpartiallypopulatedsubnode.md)
+[**IContextNode::CreatePartiallyPopulatedSubNode**](icontextnode-createpartiallypopulatedsubnode.md)
 </dt> <dt>
 
-[**Icontextnode:: getpartiallyaufgefüllt**](icontextnode-getpartiallypopulated.md)
+[**IContextNode::GetPartiallyPopulated**](icontextnode-getpartiallypopulated.md)
 </dt> <dt>
 
-[Ink-Analyse Referenz](ink-analysis-reference.md)
+[Referenz zur Ink-Analyse](ink-analysis-reference.md)
 </dt> </dl>
 
  

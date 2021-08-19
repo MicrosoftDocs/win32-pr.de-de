@@ -68,13 +68,13 @@ Diese Methode wird aufgerufen, wenn Medien (ein ISO-Image oder ein Datenträger 
 | Unterstützte Mindestversion (Client)<br/> | Windows 7 \[ Desktop-Apps\]<br/>                                                    |
 | Unterstützte Mindestversion (Server)<br/> | Nicht unterstützt<br/>                                                                     |
 | Ende des Supports (Client)<br/>    | Windows 7<br/>                                                                          |
-| Product (Produkt)<br/>                  | Windows Virtual PC<br/>                                                                 |
+| Produkt<br/>                  | Windows Virtual PC<br/>                                                                 |
 | Header<br/>                   | <dl> <dt>VPCCOMInterfaces.h</dt> </dl> |
 | IID<br/>                      | DIID \_ IVMDVDDriveEvents ist als c2a7d8e9-e76c-4eb8-94f7-71a5122d249b definiert.<br/>         |
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 

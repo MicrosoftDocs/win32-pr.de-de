@@ -1,5 +1,5 @@
 ---
-description: Das folgende Beispiel veranschaulicht die Verwendung von Objektnamen durch Erstellen und Öffnen eines benannten Mutex.
+description: Im folgenden Beispiel wird die Verwendung von Objektnamen veranschaulicht, indem ein benannter Mutex erstellt und geöffnet wird.
 ms.assetid: 06199f83-8fe0-42b9-9db1-58fe1443db4e
 title: Verwenden von benannten Objekten
 ms.topic: article
@@ -13,11 +13,11 @@ ms.locfileid: "117765129"
 ---
 # <a name="using-named-objects"></a>Verwenden von benannten Objekten
 
-Das folgende Beispiel veranschaulicht die Verwendung von [Objektnamen durch](object-names.md) Erstellen und Öffnen eines benannten Mutex.
+Im folgenden Beispiel wird die Verwendung von [Objektnamen](object-names.md) veranschaulicht, indem ein benannter Mutex erstellt und geöffnet wird.
 
 ## <a name="first-process"></a>Erster Prozess
 
-Der erste Prozess verwendet die [**CreateMutex-Funktion,**](/windows/win32/api/synchapi/nf-synchapi-createmutexa) um das Mutex-Objekt zu erstellen. Beachten Sie, dass diese Funktion auch dann erfolgreich ist, wenn ein Objekt mit demselben Namen vorhanden ist.
+Der erste Prozess verwendet die [**CreateMutex-Funktion,**](/windows/win32/api/synchapi/nf-synchapi-createmutexa) um das Mutex-Objekt zu erstellen. Beachten Sie, dass diese Funktion auch dann erfolgreich ist, wenn ein Objekt mit dem gleichen Namen vorhanden ist.
 
 
 ```C++
@@ -56,7 +56,7 @@ int main(void)
 
 ## <a name="second-process"></a>Zweiter Prozess
 
-Der zweite Prozess verwendet die [**OpenMutex-Funktion,**](/windows/win32/api/synchapi/nf-synchapi-openmutexw) um ein Handle für den vorhandenen Mutex zu öffnen. Diese Funktion schlägt fehl, wenn kein Mutex-Objekt mit dem angegebenen Namen vorhanden ist. Der Zugriffsparameter fordert Vollzugriff auf das Mutex-Objekt an, was erforderlich ist, damit das Handle in einer der Wartefunktionen verwendet werden kann.
+Der zweite Prozess verwendet die [**OpenMutex-Funktion,**](/windows/win32/api/synchapi/nf-synchapi-openmutexw) um ein Handle für den vorhandenen Mutex zu öffnen. Diese Funktion schlägt fehl, wenn kein Mutexobjekt mit dem angegebenen Namen vorhanden ist. Der Access-Parameter fordert vollzugriff auf das Mutex-Objekt an. Dies ist erforderlich, damit das Handle in einer der Wartefunktionen verwendet werden kann.
 
 
 ```C++

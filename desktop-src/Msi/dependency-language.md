@@ -40,7 +40,7 @@ propVal = Dependency.Language
 
 ## <a name="c"></a>C++
 
-Siehe [**get Language Function \_ (Dependency Object)**](/windows/win32/api/mergemod/nf-mergemod-imsmdependency-get_language).
+Weitere Informationen [**finden Sie unter get Language Function \_ (Dependency Object).**](/windows/win32/api/mergemod/nf-mergemod-imsmdependency-get_language)
 
 ## <a name="requirements"></a>Anforderungen
 

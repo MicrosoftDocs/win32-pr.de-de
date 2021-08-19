@@ -1,92 +1,92 @@
 ---
-title: Erstellen einer Anwendungsverzeichnis Partition
-description: Eine Anwendungsverzeichnis Partition wird durch ein domainDNS-Objekt mit dem instanceType-Attribut Wert ' DS \_ instanceType ' \_ ist eine NC- \_ \_ Kopfzeile, kombiniert mit dem DS \_ instanceType \_ NC \_ ist \_ beschreibbar.
+title: Erstellen einer Anwendungsverzeichnispartition
+description: Eine Anwendungsverzeichnispartition wird durch ein domainDNS-Objekt mit dem instanceType-Attributwert DS \_ INSTANCETYPE \_ IS NC HEAD in Kombination mit \_ \_ DS \_ INSTANCETYPE NC IS \_ \_ \_ WRITEABLE dargestellt.
 ms.assetid: 5e90f316-9d67-484d-98b8-0632dd3c2c43
 ms.tgt_platform: multiple
 keywords:
-- Erstellen einer Anwendungsverzeichnis-Partitions Anzeige
-- Anwendungsverzeichnis Partitionen AD, erstellen
+- Erstellen einer Anwendungsverzeichnispartition AD
+- Anwendungsverzeichnispartitionen AD , Erstellen
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 9a17471696825179b6e49230b5168abbaf88b8e2
-ms.sourcegitcommit: 803f3ccd65bdefe36bd851b9c6e7280be9489016
+ms.openlocfilehash: c340bac215be62867dcddcda97326c33fc70c458ee242965258cc1ee24cf25f3
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "104472621"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118020539"
 ---
-# <a name="creating-an-application-directory-partition"></a>Erstellen einer Anwendungsverzeichnis Partition
+# <a name="creating-an-application-directory-partition"></a>Erstellen einer Anwendungsverzeichnispartition
 
-Eine Anwendungsverzeichnis Partition wird durch ein [**domainDns**](/windows/desktop/ADSchema/c-domaindns) -Objekt mit dem [**instanceType**](/windows/desktop/ADSchema/a-instancetype) -Attribut Wert ' **DS \_ instanceType ' \_ ist eine NC- \_ \_ Kopfzeile** , kombiniert mit dem **DS \_ instanceType \_ NC \_ ist \_ beschreibbar**. Dieses **domainDns** -Objekt stellt den Stamm der Anwendungsverzeichnis Partition (NC-Head) dar und ähnelt einer regulären Domänen Partition, z. b. "DC = DynamicData, DC = fabrikam, DC = com", die dem DNS-Namen "DynamicData.fabrikam.com" entspricht. Eine Anwendungsverzeichnis Partition kann daher überall dort instanziiert werden, wo eine Domänen Partition instanziiert werden kann. Einer Anwendungsverzeichnis Partition ist kein NetBIOS-Name zugeordnet.
+Eine Anwendungsverzeichnispartition wird durch ein [**domainDNS-Objekt**](/windows/desktop/ADSchema/c-domaindns) mit dem [**instanceType-Attributwert**](/windows/desktop/ADSchema/a-instancetype) **DS \_ INSTANCETYPE \_ IS NC \_ \_ HEAD** in Kombination mit **DS \_ INSTANCETYPE NC IS \_ \_ \_ WRITEABLE** dargestellt. Dieses **domainDNS-Objekt** stellt den Stamm der Anwendungsverzeichnispartition (NC-Kopf) dar und ist ähnlich wie eine reguläre Domänenpartition benannt, z.B. "DC=dynamicdata,DC=fabrikam,DC=com", was dem DNS-Namen "dynamicdata.fabrikam.com" entspricht. Eine Anwendungsverzeichnispartition kann daher überall instanziiert werden, wo eine Domänenpartition instanziiert werden kann. Einer Anwendungsverzeichnispartition ist kein NetBIOS-Name zugeordnet.
 
-Es ist möglich, Anwendungsverzeichnis Partitionen zu schachteln, d. h., eine Anwendungsverzeichnis Partition kann über untergeordnete Anwendungsverzeichnis Partitionen verfügen. Suchvorgänge mit einem Teilstruktur Bereich, der auf einer Anwendungsverzeichnis Partition basiert, generieren Fortsetzungs Verweise auf die untergeordneten Anwendungsverzeichnis Partitionen.
+Es ist möglich, Anwendungsverzeichnispartitionen zu schachteln, d. h. eine Anwendungsverzeichnispartition kann untergeordnete Anwendungsverzeichnispartitionen aufweisen. Suchvorgänge mit Unterstrukturbereich, die auf einem Hauptteil der Anwendungsverzeichnispartition basieren, generieren Fortsetzungsverweise auf die untergeordneten Anwendungsverzeichnispartitionen.
 
-Ein Anwendungsverzeichnis-Partitions Replikat kann nur auf einem Domänen Controller erstellt werden, der unter Windows Server 2003 und höher ausgeführt wird, und nur, wenn die Domain-Naming FSMO-Rolle von einem Domänen Controller mit Windows Server 2003 und höher belegt wird. In einer gemischten Gesamtstruktur mit Windows Server 2003-Domänen Controllern und untergeordneten Domänen Controllern (Windows 2000-Domänen Controller oder primäre Windows NT 4,0-Domänen Controller) tritt beim Versuch, ein Anwendungsverzeichnis-Partitions Replikat auf einem untergeordneten Domänen Controller zu erstellen, ein Fehler auf.
+Ein Anwendungsverzeichnispartitionsreplikat kann nur auf einem Domänencontroller erstellt werden, der auf Windows Server 2003 und höher ausgeführt wird, und nur, wenn die fsmo-Rolle Domain-Naming von einem Windows Server 2003- und höher-Domänencontroller gehalten wird. In einer gemischten Gesamtstruktur mit Windows Server 2003-Domänencontrollern und Domänencontrollern auf der unteren Ebene (Windows 2000-Domänencontrollern oder Windows primären NT 4.0-Domänencontrollern) schlägt der Versuch fehl, ein Anwendungsverzeichnispartitionsreplikat auf einem Domänencontroller auf der unteren Ebene zu erstellen.
 
-Eine Anwendungsverzeichnis Partition verfügt auch über ein entsprechendes [**CrossRef**](/windows/desktop/ADSchema/c-crossref) -Objekt im Partitions Container der Konfigurations Partition. Vor dem Erstellen des [**domainDns**](/windows/desktop/ADSchema/c-domaindns) -Objekts kann das **CrossRef** -Objekt manuell erstellt werden. Das vorab erstellte **CrossRef** -Objekt muss über die in der folgenden Tabelle angezeigten Attributwerte verfügen, oder die Partitions Erstellung schlägt fehl. Wenn das **CrossRef** -Objekt nicht vorhanden ist, wird es vom Active Directory Server beim Erstellen der Anwendungsverzeichnis Partition erstellt.
+Eine Anwendungsverzeichnispartition verfügt auch über ein entsprechendes [**crossRef-Objekt**](/windows/desktop/ADSchema/c-crossref) im Container Partitionen der Konfigurationspartition. **CrossRef** kann vor dem Erstellen des [**domainDNS-Objekts**](/windows/desktop/ADSchema/c-domaindns) manuell erstellt werden. Das vorab erstellte **crossRef-Objekt** muss über die in der folgenden Tabelle aufgeführten Attributwerte verfügen. Andernfalls tritt bei der Partitionserstellung ein Fehler auf. Wenn das **crossRef-Objekt** nicht vorhanden ist, erstellt der Active Directory-Server eines, wenn die Anwendungsverzeichnispartition erstellt wird.
 
-| Attribut                          | BESCHREIBUNG                                                                                                                               |
+| attribute                          | Beschreibung                                                                                                                               |
 |------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------|
-| [**dnsRoot**](/windows/desktop/ADSchema/a-dnsroot) | Enthält den DNS-Pfad des Domänen Controllers, auf dem die Anwendungsverzeichnis Partition erstellt wird.                               |
-| [**Aktiviert**](/windows/desktop/ADSchema/a-enabled) | Enthält **false**.                                                                                                                       |
-| [**NCName**](/windows/desktop/ADSchema/a-ncname)   | Enthält den Distinguished Name der Partition. Im obigen Beispiel würde dieses Attribut "DC = DynamicData, DC = MyDomain, DC = com" enthalten. |
+| [**dnsRoot**](/windows/desktop/ADSchema/a-dnsroot) | Enthält den DNS-Pfad des Domänencontrollers, auf dem die Anwendungsverzeichnispartition erstellt wird.                               |
+| [**Aktiviert**](/windows/desktop/ADSchema/a-enabled) | Enthält **FALSE.**                                                                                                                       |
+| [**Ncname**](/windows/desktop/ADSchema/a-ncname)   | Enthält den Distinguished Name der Partition. Im obigen Beispiel würde dieses Attribut "DC=dynamicdata,DC=mydomain,DC=com" enthalten. |
 
 
 
- 
+ 
 
-**Führen Sie die folgenden Schritte aus, um eine neue Anwendungsverzeichnis Partition mit dem ersten Replikat zu erstellen.**
+**Führen Sie die folgenden Schritte aus, um eine neue Anwendungsverzeichnispartition mit dem ersten Replikat zu erstellen.**
 
-1.  Binden Sie an den Namespace für die neue Partition, und geben Sie dabei den Domänen Controller an, der die Anwendungsverzeichnis Partition im ADsPath hostet. Um z. b. eine Partition mit dem ADsPath "DC = DynamicData, DC = MyDomain, DC = com" zu erstellen, lautet der ADsPath der Bindung "LDAP:// <domain controller> "/DC = MyDomain, DC = com ", wobei" &lt; Domänen Controller &gt; "der DNS-Name des Domänen Controllers ist, der die Partition hostet.
+1.  Binden Sie an den Namespace für die neue Partition, und geben Sie dabei den Domänencontroller an, der die Anwendungsverzeichnispartition im ADsPath hosten soll. Um beispielsweise eine Partition mit einem ADsPath von "DC=dynamicdata,DC=mydomain,DC=com" zu erstellen, lautet die Bindung ADsPath "LDAP:// <domain controller> /DC=mydomain,DC=com", wobei &lt; "Domänencontroller" &gt; der DNS-Name des Domänencontrollers ist, der die Partition hosten soll.
 
-    Der Bindungs Vorgang muss die Optionen "schnell" und "Delegierung" angeben. Die Option fast ermöglicht die erfolgreiche Bindung, auch wenn der Namespace nicht vorhanden ist. Die Delegierungs Option ist erforderlich, damit der Domänen Controller den Inhaber der Domain-Naming FSMO-Rolle mit denselben Anmelde Informationen kontaktieren kann.
+    Der Bindungsvorgang muss die Optionen für schnelles Und Delegierungsvorgangs angeben. Mit der Option "Schnell" kann die Bindung auch dann erfolgreich ausgeführt werden, wenn der Namespace nicht vorhanden ist. Die Delegierungsoption ist erforderlich, damit der Domänencontroller sich mit den gleichen Anmeldeinformationen an den Domain-Naming FSMO-Rolleninhaber wenden kann.
 
-    Die System Version des Domänen Controllers muss das Betriebssystem Windows Server 2003 und höher aufweisen.
+    Die Systemversion des Domänencontrollers muss Windows Server 2003-Betriebssystem und höher sein.
 
-2.  Erstellen Sie ein [**domainDns**](/windows/desktop/ADSchema/c-domaindns) -Objekt mit einem entsprechenden Namen für die Partition, z. b. "DC = DynamicData", um den namens Kontext Kopf für die neue Partition darzustellen. Das **domainDns** -Objekt muss ein [**instanceType**](/windows/desktop/ADSchema/a-instancetype) -Attribut mit dem Wert 5 aufweisen (der **DS- \_ instanceType \_ ist \_ NC \_ Head** \| **DS \_ instanceType \_ NC \_ ist \_ beschreibbar**). Das **instanceType** -Attribut kann nur zum Zeitpunkt der Erstellung festgelegt werden, da es sich um ein System eigenes Attribut handelt.
+2.  Erstellen Sie ein [**domainDNS-Objekt**](/windows/desktop/ADSchema/c-domaindns) mit einem entsprechenden Namen für die Partition, z. B. "DC=dynamicdata", um den Namenkontextkopf für die neue Partition darzustellen. Das **domainDNS-Objekt** muss über ein [**instanceType-Attribut**](/windows/desktop/ADSchema/a-instancetype) mit dem Wert 5 verfügen (**DS \_ INSTANCETYPE \_ IS NC \_ \_ HEAD** \| **DS \_ INSTANCETYPE NC IS \_ \_ \_ WRITEABLE**). Das **instanceType-Attribut** kann nur zur Erstellungszeit festgelegt werden, da es sich um ein systemspezifisches Attribut handelt.
 
-Wenn das [**domainDns**](/windows/desktop/ADSchema/c-domaindns) -Objekt erstellt wird, führt der Active Directory Server die folgenden Schritte aus:
+Wenn das [**DomainDNS-Objekt**](/windows/desktop/ADSchema/c-domaindns) erstellt wird, führt der Active Directory-Server die folgenden Schritte aus:
 
-1.  Sucht im Partitions Container nach einem [**CrossRef**](/windows/desktop/ADSchema/c-crossref) -Objekt, das über einen [**NCName**](/windows/desktop/ADSchema/a-ncname) -Attribut Wert verfügt, der mit dem Distinguished Name der Partition übereinstimmt, und ändert, wenn eine Übereinstimmung gefunden wird, das **CrossRef** -Objekt so, dass es die Anwendungsverzeichnis Partition darstellt. Wenn ein entsprechendes **CrossRef** -Objekt nicht gefunden wird, erstellt der Active Directory Server ein neues **CrossRef** -Objekt, das die Anwendungsverzeichnis Partition darstellt.
+1.  Sucht im Container Partitions nach einem [**crossRef-Objekt,**](/windows/desktop/ADSchema/c-crossref) das über einen [**nCName-Attributwert**](/windows/desktop/ADSchema/a-ncname) verfügt, der dem Distinguished Name der Partition entspricht, und ändert, wenn eine Übereinstimmung gefunden wird, das **crossRef-Objekt,** um die Anwendungsverzeichnispartition darzustellen. Wenn kein übereinstimmendes **crossRef-Objekt** gefunden wird, erstellt der Active Directory-Server ein neues **crossRef-Objekt,** das die Anwendungsverzeichnispartition darstellt.
 
-    In der folgenden Tabelle sind wichtige Attribute des [**CrossRef**](/windows/desktop/ADSchema/c-crossref) -Objekts aufgeführt.
+    In der folgenden Tabelle sind wichtige Attribute des [**crossRef-Objekts**](/windows/desktop/ADSchema/c-crossref) aufgeführt.
 
-    | Attribut                                                              | BESCHREIBUNG                                                                                                                                        |
+    | attribute                                                              | Beschreibung                                                                                                                                        |
     |------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------|
-    | [**NCName**](/windows/desktop/ADSchema/a-ncname)                                       | Enthält den Distinguished Name der Partition.                                                                                                  |
+    | [**Ncname**](/windows/desktop/ADSchema/a-ncname)                                       | Enthält den Distinguished Name der Partition.                                                                                                  |
     | [**dnsRoot**](/windows/desktop/ADSchema/a-dnsroot)                                     | Enthält den DNS-Namen der Partition.                                                                                                            |
-    | [**MSDS-NC-Replikat-Standorte**](/windows/desktop/ADSchema/a-msds-nc-replica-locations) | Diesem Attribut wird der Distinguished Name des [**NTDSDSA**](/windows/desktop/ADSchema/c-ntdsdsa) -Objekts des Domänen Controllers für das erste Replikat hinzugefügt. |
+    | [**msDS-NC-Replica-Locations**](/windows/desktop/ADSchema/a-msds-nc-replica-locations) | Der Distinguished Name des [**nTDSDSA-Objekts**](/windows/desktop/ADSchema/c-ntdsdsa) des Domänencontrollers für das erste Replikat wird diesem Attribut hinzugefügt. |
 
     
 
-     
+     
 
-2.  Initiieren Sie eine Synchronisierung der Konfigurations Partition, und warten Sie auf den Abschluss. Dadurch kann die Client Anwendung Konfigurationsparameter für die neu erstellte Anwendungsverzeichnis Partition ändern, während Sie an denselben Domänen Controller gebunden ist, der zum Erstellen der Anwendungsverzeichnis Partition verwendet wird.
-3.  Erstellen Sie das [**domainDns**](/windows/desktop/ADSchema/c-domaindns) -Objekt mit dem **DS \_ instanceType \_ is \_ NC \_ Head** , und der **DS \_ instanceType \_ NC \_ ist \_ beschreibbare** Flags, die für die [**instanceType**](/windows/desktop/ADSchema/a-instancetype) -Eigenschaft festgelegt sind. Die **instanceType** -Eigenschaft kann auch andere private Flags enthalten.
-4.  Füllen Sie das Attribut [**ms-DS-has-Master-NCS**](/windows/desktop/ADSchema/a-msds-hasmasterncs) des [**NTDSDSA**](/windows/desktop/ADSchema/c-ntdsdsa) -Objekts für den Zieldomänen Controller mit dem Distinguished Name der neu erstellten Anwendungsverzeichnis Partition auf.
+2.  Initiieren Sie eine Synchronisierung der Konfigurationspartition, und warten Sie auf den Abschluss. Dadurch kann die Clientanwendung Konfigurationsparameter für die neu erstellte Anwendungsverzeichnispartition ändern, während sie an den gleichen Domänencontroller gebunden ist, der zum Erstellen der Anwendungsverzeichnispartition verwendet wird.
+3.  Erstellen Sie das [**domainDNS-Objekt**](/windows/desktop/ADSchema/c-domaindns) mit den **Flags DS \_ INSTANCETYPE \_ IS NC \_ \_ HEAD** und **DS \_ INSTANCETYPE NC IS \_ \_ \_ WRITEABLE,** die für die [**instanceType-Eigenschaft**](/windows/desktop/ADSchema/a-instancetype) festgelegt sind. Die **instanceType-Eigenschaft** kann auch andere private Flags enthalten.
+4.  Füllen Sie das [**Attribut ms-DS-Has-Master-NCs**](/windows/desktop/ADSchema/a-msds-hasmasterncs) des [**nTDSDSA-Objekts**](/windows/desktop/ADSchema/c-ntdsdsa) für den Zieldomänencontroller mit dem Distinguished Name der neu erstellten Anwendungsverzeichnispartition auf.
 
-Wenn die Anwendungsverzeichnis Partition erstellt wird oder wenn ein neues Replikat der Anwendungsverzeichnis Partition hinzugefügt und vollständig synchronisiert wird, registriert der Active Directory Server das Replikat ordnungsgemäß bei Netlogon und DNS. Weitere Informationen und eine Liste der registrierten SRV-Einträge finden Sie untersuchen [eines Anwendungsverzeichnis-Partitions Host Servers](locating-an-application-directory-partition-host-server.md).
+Wenn die Anwendungsverzeichnispartition erstellt oder ein neues Replikat der Anwendungsverzeichnispartition hinzugefügt und vollständig synchronisiert wird, registriert der Active Directory-Server das Replikat ordnungsgemäß bei NetLogon und DNS. Weitere Informationen und eine Liste der registrierten SRV-Einträge finden Sie unter [Suchen eines Anwendungsverzeichnispartitionshostservers.](locating-an-application-directory-partition-host-server.md)
 
-Weitere Informationen zum Erstellen einer Anwendungsverzeichnis Partition finden Sie unter [Beispiel Code zum Erstellen einer Anwendungsverzeichnis Partition](example-code-for-creating-an-application-directory-partition.md).
+Weitere Informationen zum Erstellen einer Anwendungsverzeichnispartition finden Sie unter [Beispielcode zum Erstellen einer Anwendungsverzeichnispartition.](example-code-for-creating-an-application-directory-partition.md)
 
-## <a name="locating-the-partitions-container"></a>Suchen des Partitions Containers
+## <a name="locating-the-partitions-container"></a>Suchen des Partitionscontainers
 
-Der Distinguished Name des Partitions Containers kann auf zwei Arten gefunden werden. Der erste Vorgang ist komplizierter, aber es wird immer ein genaues Ergebnis bereitgestellt:
+Der Distinguished Name des Partitionscontainers kann auf zwei Arten gefunden werden. Die erste ist komplizierter auszuführen, liefert aber immer ein genaues Ergebnis:
 
-1.  Binden an RootDSE und Abrufen des **configurationNamingContext** -Attributs.
-2.  Verwenden Sie das **configurationNamingContext** -Attribut, um eine Bindung an den Konfigurations Container herzustellen.
-3.  Suchen Sie im Konfigurations Container nach einem Objekt, das den Typ [**CrossRef Container**](/windows/desktop/ADSchema/c-crossrefcontainer) hat.
-4.  Rufen Sie den Wert des Attributs " **unterbrechname** " des [**crossrefcontainer**](/windows/desktop/ADSchema/c-crossrefcontainer) -Objekts ab. Dabei handelt es sich um den Distinguished Name des Partitions Containers.
+1.  Binden Sie an RootDSE, und rufen Sie das **configurationNamingContext-Attribut** ab.
+2.  Verwenden Sie das **configurationNamingContext-Attribut,** um eine Bindung an den Konfigurationscontainer vorzunehmen.
+3.  Suchen Sie im Konfigurationscontainer nach einem Objekt vom Typ [**crossRefContainer.**](/windows/desktop/ADSchema/c-crossrefcontainer)
+4.  Rufen Sie den **DistinguishedName-Attributwert** des [**crossRefContainer-Objekts**](/windows/desktop/ADSchema/c-crossrefcontainer) ab. Dies ist der Distinguished Name des Partitionscontainers.
 
-Weitere Informationen und ein Codebeispiel, in dem diese Methode zum Suchen des Partitions Containers gezeigt wird, finden Sie in der **getpartitionsdnsearch** -Funktion im [Beispielcode zum Suchen des Partitions Containers](example-code-for-locating-the-partitions-container.md).
+Weitere Informationen und ein Codebeispiel, das diese Methode zum Suchen des Partitionscontainers zeigt, finden Sie in der **GetPartitionsDNSearch-Funktion** im [Beispielcode zum Suchen des Partitionscontainers.](example-code-for-locating-the-partitions-container.md)
 
-Die zweite Methode ist einfacher zu implementieren, aber Sie basiert auf dem Partitions Container, der einen bestimmten relativen Distinguished Name aufweist. Es ist derzeit nicht möglich, den Namen des Partitions Containers zu ändern. wenn diese Funktion jedoch in Zukunft hinzugefügt wird, funktioniert das nachfolgende Verfahren nicht ordnungsgemäß, wenn der Partitions Container umbenannt wurde.
+Die zweite Methode ist einfacher zu implementieren, basiert jedoch darauf, dass der Partitions-Container über einen bestimmten relativen Distinguished Name verfügt. Es ist derzeit nicht möglich, den Namen des Partitionscontainers zu ändern. Wenn diese Funktion jedoch in Zukunft hinzugefügt wird, funktioniert das folgende Verfahren nicht ordnungsgemäß, wenn der Partitions-Container umbenannt wurde.
 
-1.  Binden an RootDSE und Abrufen des **configurationNamingContext** -Attributs.
-2.  Kombinieren Sie die Zeichenfolge "CN = Partitions", gefolgt vom **configurationNamingContext** -Attribut, um den Distinguished Name des Partitions Containers zu bilden. Der Distinguished Name hat das Format "CN = Partitions <configuration DN> ".
+1.  Binden Sie an RootDSE, und rufen Sie das **configurationNamingContext-Attribut** ab.
+2.  Kombinieren Sie die Zeichenfolge "CN=Partitions", gefolgt vom **configurationNamingContext-Attribut,** um den Distinguished Name des Partitions-Containers zu bilden. Der Distinguished Name hat die Form "CN=Partitions,". <configuration DN>
 
-Weitere Informationen und ein Codebeispiel, in dem diese Methode für die Suche nach dem Partitions Container veranschaulicht wird, finden Sie in der **getpartitionsdnmanual** -Funktion im [Beispielcode zum Suchen des Partitions Containers](example-code-for-locating-the-partitions-container.md).
+Weitere Informationen und ein Codebeispiel, das diese Methode zum Suchen des Partitionscontainers zeigt, finden Sie in der **GetPartitionsDNManual-Funktion** im [Beispielcode zum Suchen des Partitionscontainers.](example-code-for-locating-the-partitions-container.md)
 
- 
+ 
 
- 
+ 

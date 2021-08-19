@@ -1,9 +1,9 @@
 ---
-title: Ddccisetvcpfeature-Funktion
-description: Legt den Wert eines VCP-Codes (Virtual Control Panel) für einen Monitor fest.
+title: DDCCISetVCPFeature-Funktion
+description: Legt den Wert eines VCP-Codes (Virtual Systemsteuerung) für einen Monitor fest.
 ms.assetid: 1069588b-5f8a-49da-b857-6f0a0c737a11
 keywords:
-- Monitor Konfiguration für ddccisetvcpfeature-Funktion
+- DDCCISetVCPFeature-Funktion Monitorkonfiguration
 topic_type:
 - apiref
 api_name:
@@ -14,21 +14,21 @@ api_type:
 - DllExport
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: a72da2b2540c73e023a753a3fdb28507f8cbb40d
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: ecbfb6172ffd61dd7882895c0db15baddf28986493b202e2fd873135cee41d76
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104103602"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117806148"
 ---
-# <a name="ddccisetvcpfeature-function"></a>Ddccisetvcpfeature-Funktion
+# <a name="ddccisetvcpfeature-function"></a>DDCCISetVCPFeature-Funktion
 
 > [!IMPORTANT]
-> Diese Funktion wird von der Monitor Konfigurations-API verwendet, um auf die Funktionalität des Anzeige Treibers zuzugreifen. Anwendungen sollten diese Funktion nicht aufzurufen.
+> Diese Funktion wird von der Überwachungskonfigurations-API verwendet, um auf funktionen im Anzeigetreiber zuzugreifen. Anwendungen sollten diese Funktion nicht aufrufen.
 
  
 
-Legt den Wert eines VCP-Codes (Virtual Control Panel) für einen Monitor fest.
+Legt den Wert eines VCP-Codes (Virtual Systemsteuerung) für einen Monitor fest.
 
 ## <a name="syntax"></a>Syntax
 
@@ -47,21 +47,21 @@ NTSTATUS WINAPI DDCCISetVCPFeature(
 
 <dl> <dt>
 
-*Hmonitor* \[ in\]
+*hMonitor* \[ In\]
 </dt> <dd>
 
 Ein Handle für einen physischen Monitor.
 
 </dd> <dt>
 
-*dwvcpcode* \[ in\]
+*dwVCPCode* \[ In\]
 </dt> <dd>
 
 Der festzulegende VCP-Code.
 
 </dd> <dt>
 
-*dwnewvalue* \[ in\]
+*dwNewValue* \[ In\]
 </dt> <dd>
 
 Der Wert des VCP-Codes.
@@ -70,13 +70,13 @@ Der Wert des VCP-Codes.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Wenn die Methode erfolgreich ausgeführt wird, wird der **Status \_ erfolgreich** zurückgegeben. Andernfalls wird ein **NTSTATUS** -Fehlercode zurückgegeben.
+Wenn die Methode erfolgreich ist, wird **STATUS \_ SUCCESS** zurückgegeben. Andernfalls wird ein **NTSTATUS-Fehlercode** zurückgegeben.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Anwendungen sollten [**setvcpfeature**](/windows/desktop/api/LowLevelMonitorConfigurationAPI/nf-lowlevelmonitorconfigurationapi-setvcpfeature) aufrufen, anstatt diese Funktion aufzurufen.
+Anwendungen sollten [**SetVCPFeature**](/windows/desktop/api/LowLevelMonitorConfigurationAPI/nf-lowlevelmonitorconfigurationapi-setvcpfeature) aufrufen, anstatt diese Funktion aufzurufen.
 
-Diese Funktion verfügt über keine zugeordnete Import Bibliothek. Um diese Funktion aufzurufen, müssen Sie die [**LoadLibrary**](/windows/desktop/api/libloaderapi/nf-libloaderapi-loadlibrarya) -Funktion und die [**GetProcAddress**](/windows/desktop/api/libloaderapi/nf-libloaderapi-getprocaddress) -Funktion verwenden, um dynamisch mit Gdi32.dll zu verknüpfen.
+Dieser Funktion ist keine Importbibliothek zugeordnet. Um diese Funktion aufzurufen, müssen Sie die [**Funktionen LoadLibrary**](/windows/desktop/api/libloaderapi/nf-libloaderapi-loadlibrarya) und [**GetProcAddress**](/windows/desktop/api/libloaderapi/nf-libloaderapi-getprocaddress) verwenden, um dynamisch mit Gdi32.dll zu verknüpfen.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -84,8 +84,8 @@ Diese Funktion verfügt über keine zugeordnete Import Bibliothek. Um diese Funk
 
 | Anforderung | Wert |
 |-------------------------------------|--------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                       |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/>                                 |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur Vista-Desktop-Apps\]<br/>                                       |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/>                                 |
 | DLL<br/>                      | <dl> <dt>Gdi32.dll</dt> </dl> |
 
 

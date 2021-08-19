@@ -43,11 +43,11 @@ DWORD WINAPI CreatePropertyDatabase(
 *hProtocol* \[ In\]
 </dt> <dd>
 
-Handle des Protokolls, das der Datenbank zugeordnet ist. Wenn Netzwerkmonitor die [Register-Funktion](register-parser.md) aufruft, übergibt Netzwerkmonitor das Protokollhandle an die Parser-DLL.
+Handle des Protokolls, das der Datenbank zugeordnet ist. Wenn Netzwerkmonitor die [Register-Funktion aufruft,](register-parser.md) übergibt Netzwerkmonitor Protokollhand handle an die Parser-DLL.
 
 </dd> <dt>
 
-*nProperties* \[ In\]
+*nEigenschaften* \[ In\]
 </dt> <dd>
 
 Anzahl der in der Datenbank gespeicherten Eigenschaften. Legen Sie diesen Parameter auf die Anzahl der Eigenschaften fest, die das Protokoll unterstützt.
@@ -56,7 +56,7 @@ Anzahl der in der Datenbank gespeicherten Eigenschaften. Legen Sie diesen Parame
 
 ## <a name="return-value"></a>Rückgabewert
 
-Wenn die Funktion erfolgreich ist, lautet der Rückgabewert NMERR \_ SUCCESS.
+Wenn die Funktion erfolgreich ist, ist der Rückgabewert NMERR \_ SUCCESS.
 
 Wenn die Funktion nicht erfolgreich ist, ist der Rückgabewert ein Fehlercode.
 
@@ -64,9 +64,9 @@ Wenn die Funktion nicht erfolgreich ist, ist der Rückgabewert ein Fehlercode.
 
 | Rückgabecode                                                                                             | Beschreibung                                                                    |
 |---------------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------|
-| <dl> <dt>**\_INTERNER \_ NMERR-FEHLER**</dt> </dl>   | Ein interner Fehler ist aufgetreten.<br/>                                     |
-| <dl> <dt>**NMERR \_ INVALID \_ HPCOL**</dt> </dl> | Das Handle für das in *hProtocol* angegebene Protokoll ist ungültig.<br/>     |
-| <dl> <dt>**NMERR \_ NICHT \_ GENÜGEND \_ ARBEITSSPEICHER**</dt> </dl>   | Netzwerkmonitor verfügt nicht über genügend Arbeitsspeicher, um die Datenbank zu erstellen.<br/> |
+| <dl> <dt>**INTERNER \_ NMERR-FEHLER \_**</dt> </dl>   | Ein interner Fehler ist aufgetreten.<br/>                                     |
+| <dl> <dt>**NMERR \_ INVALID \_ HPTOMCOL**</dt> </dl> | Das Handle für das in *hProtocol* angegebene Protokoll ist ungültig.<br/>     |
+| <dl> <dt>**NMERR \_ NICHT \_ GENÜGEND \_ ARBEITSSPEICHER**</dt> </dl>   | Netzwerkmonitor nicht über genügend Arbeitsspeicher zum Erstellen der Datenbank verfügt.<br/> |
 
 
 
@@ -74,9 +74,9 @@ Wenn die Funktion nicht erfolgreich ist, ist der Rückgabewert ein Fehlercode.
 
 ## <a name="remarks"></a>Hinweise
 
-Die **CreatePropertyDatabase-Funktion** sollte nur beim Implementieren der [Register-Funktion](register-parser.md) aufgerufen werden. Der Parser verwendet **CreatePropertyDatabase,** um eine Eigenschaftendatenbank zu erstellen, die die Eigenschaften eines Protokolls beschreibt. Netzwerkmonitor verwendet die Datenbank, um die Informationen innerhalb des Protokolls zu interpretieren.
+Die **CreatePropertyDatabase-Funktion** sollte nur aufgerufen werden, wenn die [Register-Funktion implementieren](register-parser.md) wird. Der Parser verwendet **CreatePropertyDatabase,** um eine Eigenschaftendatenbank zu erstellen, die die Eigenschaften eines Protokolls beschreibt. Netzwerkmonitor verwendet die Datenbank, um die Informationen innerhalb des Protokolls zu interpretieren.
 
-Die **CreatePropertyDatabase-Funktion** ordnet die Strukturen zu, die Netzwerkmonitor zum Verwalten einer Eigenschaftendatenbank benötigt.
+Die **CreatePropertyDatabase-Funktion** ordnet die Strukturen zu, Netzwerkmonitor eine Eigenschaftendatenbank verwalten müssen.
 
 ## <a name="requirements"></a>Anforderungen
 

@@ -20,7 +20,7 @@ ms.locfileid: "117801190"
 ---
 # <a name="using-installable-drivers"></a>Verwenden installierbarer Treiber
 
-Sie verwenden installierbare Treiber, um Anwendungen oder DLLs einen Standardzugriff auf ein Gerät oder eine Reihe nützlicher Routinen zu ermöglichen. In den folgenden Abschnitten wird gezeigt, wie Sie einen installierbaren Treiber mithilfe einer [DriverProc-Funktion](/windows/win32/api/mmiscapi/nc-mmiscapi-driverproc) erstellen und wie Sie einen installierbaren Treiber öffnen und ihn an die Durchführung nützlicher Aufgaben übergeben.
+Sie verwenden installierbare Treiber, um Anwendungen oder DLLs einen Standardzugriff auf ein Gerät oder eine Reihe nützlicher Routinen zu ermöglichen. In den folgenden Abschnitten wird gezeigt, wie Sie einen installierbaren Treiber mithilfe einer [DriverProc-Funktion](/windows/win32/api/mmiscapi/nc-mmiscapi-driverproc) erstellen und einen installierbaren Treiber öffnen und ihn an die Durchführung nützlicher Aufgaben weiterverarbeiten.
 
  
 

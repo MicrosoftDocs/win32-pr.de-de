@@ -1,23 +1,23 @@
 ---
-description: Der Eigenschafts Proxy für die Richtlinie System. GPS. Speed Photo Metadata.
+description: Der Eigenschaftenproxy für die System.GPS.Speed-Richtlinie für Fotometadaten.
 ms.assetid: ef89dca4-9ac7-49fd-b3e2-ef3804faf046
-title: System. GPS. Speed-Proxy
+title: System.GPS.Speed-Proxy
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: b220e6de58e068ba1a9c21a3550dde78e84da3a4
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 601fe2b14d4f3cf8d771780a282c6dd4ec9ea87b33e922f5caa0172fcd710346
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106368791"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118032864"
 ---
-# <a name="systemgpsspeed-proxy"></a>System. GPS. Speed-Proxy
+# <a name="systemgpsspeed-proxy"></a>System.GPS.Speed-Proxy
 
-Der Eigenschafts Proxy für die Richtlinie System. GPS. Speed Photo Metadata.
+Der Eigenschaftenproxy für die System.GPS.Speed-Richtlinie für Fotometadaten.
 
-### <a name="description"></a>BESCHREIBUNG
+### <a name="description"></a>Beschreibung
 
-Der Eigenschafts Proxy gibt ein rationelles paar a durch das [PROPVARIANT](/windows/win32/api/propidlbase/ns-propidlbase-propvariant) -Element "uhval" zurück.
+Der Eigenschaftenproxy gibt ein rationales Paar a über den [PROPVARIANT-Member](/windows/win32/api/propidlbase/ns-propidlbase-propvariant) "valval" zurück.
 
 ### <a name="containers"></a>Container
 
@@ -27,23 +27,23 @@ JPEG, TIFF
 
 Ja
 
-### <a name="output-propvariant-type"></a>Ausgabe-PROPVARIANT-Typ
+### <a name="output-propvariant-type"></a>PROPVARIANT-Ausgabetyp
 
 VT \_ UI8
 
-### <a name="denominator"></a>Vorzuschlagen
+### <a name="denominator"></a>Nenner
 
-Highpart des uhval.
+HighPart des "valVal".
 
 ### <a name="numerator"></a>Zähler
 
-LowPart des uhval.
+LowPart von "valVal".
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[System. GPS. Speed](../properties/props-system-gps-speed.md)
+[System.GPS.Speed](../properties/props-system-gps-speed.md)
 </dt> </dl>
 
  

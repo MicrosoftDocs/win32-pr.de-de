@@ -1,5 +1,5 @@
 ---
-description: Der Codierungsprozess ist das Gegenteil des Decodierungsprozesses, der unter Decodieren einer \_ CERT-INFO-Struktur beschrieben wird.
+description: Der Codierungsprozess ist das Gegenteil des Decodierungsprozesses, der unter Decodieren einer CERT \_ INFO-Struktur beschrieben wird.
 ms.assetid: 5d3311e5-a2fb-46f7-aa76-f232b39b34fd
 title: Codieren einer CERT_INFO Struktur
 ms.topic: article
@@ -38,7 +38,7 @@ Um einige Informationen zur Zertifikaterweiterung zu initialisieren und zu codie
 4.  Rufen [**Sie CryptEncodeObject erneut**](/windows/desktop/api/Wincrypt/nf-wincrypt-cryptencodeobject) auf, und übergeben Sie dabei die gleichen Informationen, mit der Ausnahme, dass jetzt die Adresse des zugeordneten Arbeitsspeichers übergeben wird.
 5.  Erstellen Sie ein Array von [**CERT \_ EXTENSION-Strukturen.**](/windows/desktop/api/Wincrypt/ns-wincrypt-cert_extension)
 6.  Initialisieren Sie eine der [**CERT \_ EXTENSION-Strukturen,**](/windows/desktop/api/Wincrypt/ns-wincrypt-cert_extension) sodass **pszObjId** die richtige Zeichenfolge für die in **Value** enthaltenen Daten ist und dass **Value** das verschlüsselte DatenBLOB enthält, das beim Aufruf von [**CryptEncodeObject**](/windows/desktop/api/Wincrypt/nf-wincrypt-cryptencodeobject)ausgegeben wurde.
-7.  Initialisieren Sie **den rgExtension-Member** der [**CERT \_ INFO-Struktur,**](/windows/desktop/api/Wincrypt/ns-wincrypt-cert_info) um auf das Array von [**CERT \_ EXTENSION-Strukturen zu**](/windows/desktop/api/Wincrypt/ns-wincrypt-cert_extension) verweisen.
+7.  Initialisieren Sie **das rgExtension-Member** der [**CERT \_ INFO-Struktur,**](/windows/desktop/api/Wincrypt/ns-wincrypt-cert_info) um auf das Array von [**CERT \_ EXTENSION-Strukturen zu**](/windows/desktop/api/Wincrypt/ns-wincrypt-cert_extension) verweisen.
 
 ![Hinzufügen codierter Erweiterungsinformationen zu einer \- Zertifikatinformationsstruktur](images/xtenflow.png)
 

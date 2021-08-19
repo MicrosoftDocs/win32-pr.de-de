@@ -1,9 +1,9 @@
 ---
-title: MCI_VCR_SETAUDIO_PARMS-Struktur (Vcr.h)
-description: Die MCI \_ VCR \_ SETAUDIO \_ PARMS-Struktur enthält Parameter für den MCI \_ SETAUDIO-Befehl für Video-Cassette-Aufzeichnungen.
+title: MCI_VCR_SETAUDIO_PARMS -Struktur (Vcr.h)
+description: Die MCI VCR SETAUDIO PARMS-Struktur enthält Parameter für den \_ \_ \_ MCI \_ SETAUDIO-Befehl für Video cassette-Aufzeichnungen.
 ms.assetid: 328d8e63-7ddd-4c9b-85d6-2e56fd802dbc
 keywords:
-- MCI_VCR_SETAUDIO_PARMS Struktur Windows Multimedia
+- MCI_VCR_SETAUDIO_PARMS-Struktur Windows Multimedia
 topic_type:
 - apiref
 api_name:
@@ -23,7 +23,7 @@ ms.locfileid: "117802958"
 ---
 # <a name="mci_vcr_setaudio_parms-structure"></a>MCI \_ VCR \_ SETAUDIO \_ PARMS-Struktur
 
-Die **MCI \_ VCR \_ SETAUDIO \_ PARMS-Struktur** enthält Parameter für den [**MCI \_ SETAUDIO-Befehl**](mci-setaudio.md) für Video-Cassette-Aufzeichnungen.
+Die **MCI \_ VCR \_ SETAUDIO \_ PARMS-Struktur** enthält Parameter für den [**MCI \_ SETAUDIO-Befehl**](mci-setaudio.md) für Video cassette-Aufzeichnungen.
 
 ## <a name="syntax"></a>Syntax
 
@@ -46,7 +46,7 @@ typedef struct tagMCI_VCR_SETAUDIO_PARMS {
 **dwCallback**
 </dt> <dd>
 
-Das Wort mit niedriger Reihenfolge gibt ein Fensterhandle an, das für das MCI \_ NOTIFY-Flag verwendet wird.
+Das Wort in niedriger Reihenfolge gibt ein Fensterhand handle an, das für das MCI \_ NOTIFY-Flag verwendet wird.
 
 </dd> <dt>
 
@@ -67,7 +67,7 @@ Typ der Eingabe oder überwachten Eingabe.
 **dwNumber**
 </dt> <dd>
 
-Zu verwendende Audioeingabe (vom im **dwTo-Member** angegebenen Typ).
+Audioeingabe (des im **dwTo-Member** angegebenen Typs), die verwendet werden soll.
 
 </dd> </dl>
 
@@ -87,7 +87,7 @@ Legen Sie beim Zuweisen von Daten zu den Membern dieser Struktur die entsprechen
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 

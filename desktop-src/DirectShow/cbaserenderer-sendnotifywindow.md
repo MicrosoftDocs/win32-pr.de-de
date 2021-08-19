@@ -1,7 +1,7 @@
 ---
-description: Die sendnotifywindow-Methode benachrichtigt den upstreamfilter über das Videofenster handle.
+description: Die SendNotifyWindow-Methode benachrichtigt den Upstreamfilter des Videofensterhandle.
 ms.assetid: f46390b1-d03a-4520-8c1d-b3f870d3bb0b
-title: Cbaserenderer. sendnotifywindow-Methode (renbase. h)
+title: CBaseRenderer.SendNotifyWindow-Methode (Renbase.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,16 +16,16 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: 727ab16604df5b908085208e1d127e5dffad92fc
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 2b4956ad2b20040b0d22903d2ffaa2c7b460af9250fe057d106db545173d53a9
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106369625"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118157497"
 ---
-# <a name="cbaserenderersendnotifywindow-method"></a>Cbaserenderer. sendnotifywindow-Methode
+# <a name="cbaserenderersendnotifywindow-method"></a>CBaseRenderer.SendNotifyWindow-Methode
 
-Die- `SendNotifyWindow` Methode benachrichtigt den upstreamfilter über das Videofenster handle.
+Die `SendNotifyWindow` -Methode benachrichtigt den Upstreamfilter des Videofensterhandle.
 
 ## <a name="syntax"></a>Syntax
 
@@ -43,17 +43,17 @@ void SendNotifyWindow(
 
 <dl> <dt>
 
-*ppin* 
+*pPin* 
 </dt> <dd>
 
-Ein Zeiger auf die [**IPin**](/windows/desktop/api/Strmif/nn-strmif-ipin) -Schnittstelle der Ausgabepin des Upstream-Filters.
+Zeiger auf die [**IPin-Schnittstelle**](/windows/desktop/api/Strmif/nn-strmif-ipin) des Ausgabepins des Upstreamfilters.
 
 </dd> <dt>
 
-*HWND* 
+*Hwnd* 
 </dt> <dd>
 
-Handle für das Videofenster oder **null**.
+Handle für das Videofenster oder **NULL.**
 
 </dd> </dl>
 
@@ -61,11 +61,11 @@ Handle für das Videofenster oder **null**.
 
 Diese Methode gibt keinen Wert zurück.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Wenn die Ausgabe-PIN des Upstream-Filters die [**imediaeventsink**](/windows/desktop/api/Strmif/nn-strmif-imediaeventsink) -Schnittstelle unterstützt, sendet diese Methode den Ereignis Code des [**EC- \_ Benachrichtigungs \_ Fensters**](ec-notify-window.md) zusammen mit dem Fenster handle.
+Wenn der Ausgabepin des Upstreamfilters die [**IMediaEventSink-Schnittstelle**](/windows/desktop/api/Strmif/nn-strmif-imediaeventsink) unterstützt, sendet diese Methode ihm den [**EC NOTIFY \_ \_ WINDOW-Ereigniscode**](ec-notify-window.md) zusammen mit dem Fensterhandle.
 
-Videorenderer können Ihre [**cbaserdenderer:: completeconnect**](cbaserenderer-completeconnect.md) -Methoden überschreiben, um diese Methode aufzurufen. Es stellt einen Mechanismus bereit, mit dem der upstreamfilter des Fenster Handles informiert werden kann. Wenn Sie dies tun, überschreiben Sie auch die [**cbaserdenderer:: breakconnect**](cbaserenderer-breakconnect.md) -Methode, und wenden Sie `SendNotifyWindow` mit einem **null** -Handle an.
+Videorenderer können ihre [**CBaseRenderer::CompleteConnect-Methoden**](cbaserenderer-completeconnect.md) überschreiben, um diese Methode aufzurufen. Sie bietet einen Mechanismus zum Informieren des Upstreamfilters des Fensterhandle. Wenn Sie dies tun, überschreiben Sie auch die [**CBaseRenderer::BreakConnect-Methode,**](cbaserenderer-breakconnect.md) und rufen Sie `SendNotifyWindow` mit einem **NULL-Handle** auf.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -73,8 +73,8 @@ Videorenderer können Ihre [**cbaserdenderer:: completeconnect**](cbaserenderer-
 
 | Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Renbase. h (Include Streams. h)</dt> </dl>                                                                                   |
-| Bibliothek<br/> | <dl> " <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Renbase.h (include Streams.h)</dt> </dl>                                                                                   |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Verkaufsbuilds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
@@ -82,7 +82,7 @@ Videorenderer können Ihre [**cbaserdenderer:: completeconnect**](cbaserenderer-
 
 <dl> <dt>
 
-[**Cbaserderderer-Klasse**](cbaserenderer.md)
+[**CBaseRenderer-Klasse**](cbaserenderer.md)
 </dt> </dl>
 
  

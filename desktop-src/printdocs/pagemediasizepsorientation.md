@@ -15,7 +15,7 @@ ms.locfileid: "117868185"
 
 Dieses Thema ist nicht aktuell. Die aktuellsten Informationen finden Sie unter Print Schema Specification (Spezifikation des [Druckschemas).](https://download.microsoft.com/download/D/E/C/DECA6E6B-3E81-48E7-B7EF-6D92A547D03C/print-schema-spec-2-0.zip)
 
-Gibt die Ausrichtung relativ zur Ausrichtungsrichtung des Feeds an (Referenz PostScript Spezifikation des [Formatformats der Druckerbeschreibungsdatei).](https://www.adobe.com/products/postscript/pdfs/PLRM.pdf)
+Gibt die Ausrichtung relativ zur Ausrichtungsrichtung des Feeds an (Referenz PostScript Spezifikation des [Formatformats der Druckerbeschreibung).](https://www.adobe.com/products/postscript/pdfs/PLRM.pdf)
 
 -   [Elementinformationen](#element-information)
 -   [Strukturieren von Inhalt](#structure-content)

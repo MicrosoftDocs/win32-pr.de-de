@@ -33,7 +33,7 @@ Die CryptoAPI-Systemarchitektur besteht aus fünf hauptfunktionalen Bereichen:
 
 ## <a name="certificate-store-functions"></a>Certificate Store Functions
 
--   Funktionen, die zum Verwalten von Sammlungen digitaler Zertifikate verwendet werden. Weitere Informationen finden Sie unter [Digitale Zertifikate](digital-certificates.md) und Zertifikat [Store Functions.](cryptography-functions.md)
+-   Funktionen, die zum Verwalten von Sammlungen digitaler Zertifikate verwendet werden. Weitere Informationen finden Sie unter [Digital Certificates](digital-certificates.md) and Certificate [Store Functions](cryptography-functions.md).
 
 ## <a name="simplified-message-functions"></a>Vereinfachte Nachrichtenfunktionen
 

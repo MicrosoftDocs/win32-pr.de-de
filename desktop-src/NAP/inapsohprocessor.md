@@ -43,7 +43,7 @@ Die **INapSoHProcessor-Schnittstelle** verfügt über diese Methoden.
 
 
 
-| Methode                                                                                           | BESCHREIBUNG                                                                           |
+| Methode                                                                                           | Beschreibung                                                                           |
 |:-------------------------------------------------------------------------------------------------|:--------------------------------------------------------------------------------------|
 | [**INapSoHProcessor::FindNextAttribute**](inapsohprocessor-findnextattribute-method.md)         | Sucht den Speicherortindex des nächsten SoH-Paketattributs.<br/>                 |
 | [**INapSoHProcessor::GetAttribute**](inapsohprocessor-getattribute-method.md)                   | Ruft den Attributtyp und -wert ab.<br/>                                    |
@@ -68,7 +68,7 @@ Die **INapSoHProcessor-Schnittstelle** verfügt über diese Methoden.
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 

@@ -39,7 +39,7 @@ Sie können diesen Wert erhalten, nachdem Sie die Beispiele übergeben haben.
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 

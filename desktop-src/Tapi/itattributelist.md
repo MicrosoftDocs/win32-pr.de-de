@@ -1,5 +1,5 @@
 ---
-description: Die ITAttributeList-Schnittstelle stellt Methoden zum Abrufen und Festlegen von nicht interpretierten Attributen bereit.
+description: Die ITAttributeList-Schnittstelle stellt Methoden zum Abrufen und Festlegen von nicht interpretierten Attributen zur Verfügung.
 ms.assetid: 12806c2e-615c-4d78-a4bb-5cc35ea21175
 title: ITAttributeList-Schnittstelle (Sdpblb.h)
 ms.topic: reference
@@ -13,9 +13,9 @@ ms.locfileid: "117762426"
 ---
 # <a name="itattributelist-interface"></a>ITAttributeList-Schnittstelle
 
-\[Rendezvous IP-Telefoniekonferenz-Steuerelemente und -Schnittstellen sind nicht für die Verwendung in Windows Vista, Windows Server 2008 und nachfolgenden Versionen des Betriebssystems verfügbar. Die RTC-Client-API bietet ähnliche Funktionen.\]
+\[Rendezvous-IP-Telefoniekonferenz-Steuerelemente und -Schnittstellen sind nicht für die Verwendung in Windows Vista, Windows Server 2008 und nachfolgenden Versionen des Betriebssystems verfügbar. Die RTC-Client-API bietet ähnliche Funktionen.\]
 
-Die **ITAttributeList-Schnittstelle** stellt Methoden zum Abrufen und Festlegen von nicht interpretierten Attributen bereit. In Bezug auf die Position der Attributzeichenfolgen in einem SDP-Paket (Session Descriptor Protocol, siehe RFC 2327) gehen die Methoden davon aus, dass alle Attributzeichenfolgen direkt vor der Angabe der Medienattribute und nach allen allgemeinen Attributen vorhanden sind. Die **ITAttributeList-Schnittstelle** wird durch Aufrufen von **QueryInterface** für [**ITDirectoryObject erstellt.**](/windows/desktop/api/Rend/nn-rend-itdirectoryobject)
+Die **ITAttributeList-Schnittstelle** stellt Methoden zum Abrufen und Festlegen von nicht interpretierten Attributen zur Verfügung. In Bezug auf die Position der Attributzeichenfolgen in einem Session Descriptor Protocol-Paket (SDP, siehe RFC 2327) gehen die Methoden davon aus, dass alle Attributzeichenfolgen unmittelbar vor dem Angeben der Medienattribute und nach allen allgemeinen Attributen vorhanden sind. Die **ITAttributeList-Schnittstelle** wird durch Aufrufen von **QueryInterface** für [**ITDirectoryObject**](/windows/desktop/api/Rend/nn-rend-itdirectoryobject)erstellt.
 
 ## <a name="members"></a>Member
 
@@ -29,14 +29,14 @@ Die **ITAttributeList-Schnittstelle** verfügt über diese Methoden.
 
 
 
-| Methode                                                          | BESCHREIBUNG                                             |
+| Methode                                                          | Beschreibung                                             |
 |:----------------------------------------------------------------|:--------------------------------------------------------|
 | [**Hinzufügen**](itattributelist-add.md)                              | Fügt das Attribut am angegebenen Index hinzu.<br/>   |
 | [**Löschen**](itattributelist-delete.md)                        | Löscht das Attribut am angegebenen Index.<br/> |
 | [**get \_ AttributeList**](itattributelist-get-attributelist.md) | Ruft die Liste der Attribute ab.<br/>                 |
 | [**get \_ Count**](itattributelist-get-count.md)                 | Ruft die Anzahl der Attribute ab.<br/>               |
-| [**Element \_ "get"**](itattributelist-get-item.md)                   | Ruft das vom Index angegebene Attribut ab.<br/>   |
-| [**put \_ AttributeList**](itattributelist-put-attributelist.md) | Legt die Liste der Attribute fest.<br/>                 |
+| [**get \_ Item**](itattributelist-get-item.md)                   | Ruft das vom Index angegebene Attribut ab.<br/>   |
+| [**\_put AttributeList**](itattributelist-put-attributelist.md) | Legt die Liste der Attribute fest.<br/>                 |
 
 
 

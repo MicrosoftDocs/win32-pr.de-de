@@ -56,7 +56,7 @@ Ein Zeiger auf ein Array neu zugeordneter [**Connections-Strukturen.**](connecti
 *connectionsCount* \[ In\]
 </dt> <dd>
 
-Die Anzahl der Strukturen, die Verbindungen *zuteilen.*
+Die Anzahl der Strukturen, die Verbindungen zuteilen *werden.*
 
 </dd> </dl>
 
@@ -97,7 +97,7 @@ Alle NAP-Funktionen zum Freien von Arbeitsspeicher geben auch alle eingebetteten
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 

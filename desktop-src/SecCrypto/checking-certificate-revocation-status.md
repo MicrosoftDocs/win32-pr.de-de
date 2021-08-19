@@ -1,5 +1,5 @@
 ---
-description: CAPICOM aktiviert standardmäßig keine Überprüfung der Zertifikatsperrung.
+description: CAPICOM aktiviert standardmäßig keine Zertifikatsperrüberprüfung.
 ms.assetid: c6e2724c-1802-4bc4-a0e4-3cb85427a445
 title: Überprüfen des Zertifikatsperrstatus
 ms.topic: article
@@ -13,9 +13,9 @@ ms.locfileid: "117769539"
 ---
 # <a name="checking-certificate-revocation-status"></a>Überprüfen des Zertifikatsperrstatus
 
-\[CAPICOM ist eine 32-Bit-Komponente, die für die Verwendung in den folgenden Betriebssystemen verfügbar ist: Windows Server 2008, Windows Vista und Windows XP. Verwenden Sie stattdessen die .NET Framework, um Sicherheitsfeatures zu implementieren. Weitere Informationen finden Sie unter [Alternativen zur Verwendung von CAPICOM](alternatives-to-using-capicom.md).\]
+\[CAPICOM ist eine nur 32-Bit-Komponente, die für die Verwendung in den folgenden Betriebssystemen verfügbar ist: Windows Server 2008, Windows Vista und Windows XP. Verwenden Sie stattdessen die .NET Framework, um Sicherheitsfeatures zu implementieren. Weitere Informationen finden Sie unter [Alternativen zur Verwendung von CAPICOM.](alternatives-to-using-capicom.md)\]
 
-CAPICOM aktiviert standardmäßig keine Überprüfung der Zertifikatsperrung. Die Zertifikatsperrüberprüfung kann jedoch programmgesteuert für ein bestimmtes Zertifikat über die **IsValid.CheckFlag-Eigenschaft** eines Certificate-Objekts aktiviert werden. Nachdem der entsprechende Wert von **CheckFlag** festgelegt wurde, erzwingt der Zugriff auf die **IsValid.Result-Eigenschaft** des Zertifikatobjekts oder das Erstellen des Überprüfungspfads des Zertifikats mithilfe der Build-Methode eines Chain-Objekts die Sperrüberprüfung.
+CAPICOM aktiviert standardmäßig keine Zertifikatsperrüberprüfung. Die Zertifikatsperrüberprüfung kann jedoch programmgesteuert für ein bestimmtes Zertifikat über die **IsValid.CheckFlag-Eigenschaft** eines Certificate-Objekts aktiviert werden. Nachdem der entsprechende Wert von **CheckFlag** festgelegt wurde, erzwingt der Zugriff auf die **IsValid.Result-Eigenschaft** des Certificate-Objekts oder das Erstellen des Überprüfungspfads des Zertifikats mithilfe der Build-Methode eines Chain-Objekts die Sperrüberprüfung.
 
 Im folgenden Beispiel wurde das Zertifikat als gültiges CAPICOM-Zertifikat instanziiert.
 
@@ -52,9 +52,9 @@ End If
 
 
 
-Das vorangehende Gilt für ein einzelnes Zertifikat, unabhängig davon, wie es erhalten wurde. Die Durchführung der Sperrüberprüfung für die Zertifikate in einem [**SignedData-Objekt**](signeddata.md) ist nicht anders, da die Verify-Methode des **SignedData-Objekts** für diesen Zweck nicht verwendet werden kann, da die Aktivierung von CAPICOM VERIFY SIGNATURE AND CERTIFICATE keine Überprüfung der Zertifikatsperrliste [](signeddata-verify.md) \_ \_ \_ \_ verursacht.
+Das obige gilt für ein einzelnes Zertifikat, unabhängig davon, wie es abgerufen wurde. Das Durchführen einer Sperrüberprüfung für die Zertifikate in einem [**SignedData-Objekt**](signeddata.md) unterscheidet sich nicht, da die [**Verify-Methode**](signeddata-verify.md) des **SignedData-Objekts** für diesen Zweck nicht verwendet werden kann, da die Aktivierung von CAPICOM \_ VERIFY SIGNATURE AND CERTIFICATE keine \_ \_ \_ Zertifikatsperrlistenüberprüfung verursacht.
 
-Stattdessen muss **das CheckFlag** für das Zertifikat jedes Signers festgelegt werden. Betrachten Sie das folgende Beispiel, in dem sData als gültiges CAPICOM [**SignedData-Objekt instanziiert**](signeddata.md) wurde.
+Stattdessen muss das **CheckFlag** für das Zertifikat jedes Signierers festgelegt werden. Betrachten Sie das folgende Beispiel, in dem sData als gültiges CAPICOM [**SignedData-Objekt**](signeddata.md) instanziiert wurde.
 
 
 ```VB

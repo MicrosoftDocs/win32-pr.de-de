@@ -48,7 +48,7 @@ Die **INapComponentConfig2-Schnittstelle** verfügt über diese Methoden.
 
 
 
-| Methode                                                                                                | BESCHREIBUNG                                                                                                                                                                |
+| Methode                                                                                                | Beschreibung                                                                                                                                                                |
 |:------------------------------------------------------------------------------------------------------|:---------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | [**INapComponentConfig2::InvokeUIForMachine**](inapcomponentconfig2-invokeuiformachine.md)           | Wird bei Bedarf von SHVs implementiert, um die Remotekonfiguration direkt auf dem angegebenen Computer zu verwalten.<br/>                                                                 |
 | [**INapComponentConfig2::InvokeUIFromConfigBlob**](inapcomponentconfig2-invokeuifromconfigblob.md)   | Wird von SHVs nach Bedarf implementiert, um die Konfiguration des Remotecomputers in den Arbeitsspeicher zu laden und eine Benutzeroberfläche anzuzeigen, die die Bearbeitung der Konfigurationsdaten ermöglicht.<br/> |

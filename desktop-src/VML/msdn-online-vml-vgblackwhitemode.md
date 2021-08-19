@@ -13,14 +13,14 @@ ms.locfileid: "117754303"
 ---
 # <a name="vml-vgblackwhitemode"></a>VML VgBlackWhiteMode
 
-In diesem Thema wird VML beschrieben, ein Feature, das ab Version 9 Windows Internet Explorer ist. Webseiten und Anwendungen, die auf VML basieren, sollten zu SVG oder anderen weit verbreiteten Standards migriert werden.
+In diesem Thema wird VML beschrieben, ein Feature, das ab Windows Internet Explorer 9 als veraltet gilt. Webseiten und Anwendungen, die auf VML basieren, sollten zu SVG oder anderen allgemein unterstützten Standards migriert werden.
 
 > [!Note]  
-> Seit Dezember 2011 wurde dieses Thema archiviert. Daher wird sie nicht mehr aktiv verwaltet. Weitere Informationen finden Sie unter [Archivierter Inhalt.](/previous-versions/windows/internet-explorer/ie-developer/) Informationen, Empfehlungen und Anleitungen zur aktuellen Version von Windows Internet Explorer finden Sie im [Internet Explorer Developer Center.](https://msdn.microsoft.com/ie/)
+> Seit Dezember 2011 wurde dieses Thema archiviert. Daher wird sie nicht mehr aktiv verwaltet. Weitere Informationen finden Sie unter [Archivierter Inhalt.](/previous-versions/windows/internet-explorer/ie-developer/) Informationen, Empfehlungen und Anleitungen zur aktuellen Version von Windows Internet Explorer finden Sie unter [Internet Explorer Developer Center.](https://msdn.microsoft.com/ie/)
 
  
 
-Renderingmodus für Schwarz/Weiß. Mögliche Werte:
+Renderingmodus für Schwarz und Weiß. Mögliche Werte:
 
 -   **Farbe**
 -   **Automatisch**
@@ -32,7 +32,7 @@ Renderingmodus für Schwarz/Weiß. Mögliche Werte:
 -   **HighContrast**
 -   **Schwarz**
 -   **White**
--   **Undrawn**
+-   **Nicht gezeichnet**
 
  
 

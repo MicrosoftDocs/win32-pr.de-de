@@ -170,7 +170,7 @@ Für VCR-Geräte zeigt *lpRecord* auf eine [**MCI \_ VCR \_ RECORD \_ PARMS-Stru
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 

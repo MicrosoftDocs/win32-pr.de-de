@@ -17,7 +17,7 @@ Gibt an, ob der Encoder eine durchschnittlich steuerbare VBR-Codierung verwendet
 
 ## <a name="constant-for-ipropertybag"></a>Konstante für IPropertyBag
 
-Nur mit [**IPropertyStore**](/windows/win32/api/propsys/nn-propsys-ipropertystore)verfügbar.
+Nur mit [**IPropertyStore verfügbar.**](/windows/win32/api/propsys/nn-propsys-ipropertystore)
 
 ## <a name="data-type"></a>Datentyp
 
@@ -29,7 +29,7 @@ Nur mit [**IPropertyStore**](/windows/win32/api/propsys/nn-propsys-ipropertystor
 
 ## <a name="remarks"></a>Hinweise
 
-Wenn diese Eigenschaft und die [**MFPKEY \_ VBRENABLED-Eigenschaft**](mfpkey-vbrenabledproperty.md) beide auf **VARIANT \_ TRUE** festgelegt sind, verwendet der Encoder durchschnittlich steuerbare VBR-Codierung. In diesem Fall konfiguriert sich der Encoder gemäß den Werten von [**MFPKEY \_ DYN \_ VBR \_ BAVG**](mfpkey-dyn-vbr-bavgproperty.md) und [**MFPKEY \_ DYN \_ VBR \_ VBR VBG**](mfpkey-dyn-vbr-ravgproperty.md).
+Wenn diese Eigenschaft und die [**MFPKEY \_ VBRENABLED-Eigenschaft**](mfpkey-vbrenabledproperty.md) beide auf **VARIANT \_ TRUE** festgelegt sind, verwendet der Encoder die durchschnittlich steuerbare VBR-Codierung. In diesem Fall konfiguriert sich der Encoder gemäß den Werten von [**MFPKEY \_ DYN \_ VBR \_ BAVG**](mfpkey-dyn-vbr-bavgproperty.md) und [**MFPKEY \_ DYN \_ VBR \_ RAVG.**](mfpkey-dyn-vbr-ravgproperty.md)
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -37,17 +37,17 @@ Wenn diese Eigenschaft und die [**MFPKEY \_ VBRENABLED-Eigenschaft**](mfpkey-vbr
 
 | Anforderung | Wert |
 |-------------------------------------|-----------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur Vista-Desktop-Apps\]<br/>                                          |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ Vista-Desktop-Apps\]<br/>                                          |
 | Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/>                                    |
 | Header<br/>                   | <dl> <dt>Wmcodecdsp.h</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 
-[Media Foundation-Eigenschaften](media-foundation-properties.md)
+[Media Foundation Eigenschaften](media-foundation-properties.md)
 </dt> </dl>
 
  

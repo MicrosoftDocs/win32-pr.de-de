@@ -1,9 +1,9 @@
 ---
 title: LOCALHEADER-Struktur
-description: Enthält die x- und y-Koordinaten eines Hotspots, die dem cursor zugeordnet sind, der durch eine RESDIR-Struktur identifiziert wird. Die hier bereitgestellte Strukturdefinition dient nur zur Erklärung. sie ist in keiner Standardheaderdatei vorhanden.
+description: Enthält die x- und y-Koordinaten eines Hotspots, der dem cursor zugeordnet ist, der durch eine RESDIR-Struktur identifiziert wird. Die hier bereitgestellte Strukturdefinition ist nur zur Erklärung vorgesehen. sie ist in einer Standardheaderdatei nicht vorhanden.
 ms.assetid: 8cf74040-8b8f-447e-a881-1bcf05b151e2
 keywords:
-- LOCALHEADER-StrukturMenüs und andere Ressourcen
+- LOCALHEADER-Strukturmenüs und andere Ressourcen
 topic_type:
 - apiref
 api_name:
@@ -22,7 +22,7 @@ ms.locfileid: "117870318"
 ---
 # <a name="localheader-structure"></a>LOCALHEADER-Struktur
 
-Enthält die x- und y-Koordinaten eines Hotspots, die dem cursor zugeordnet sind, der durch eine [**RESDIR-Struktur**](resdir.md) identifiziert wird. Die hier bereitgestellte Strukturdefinition dient nur zur Erklärung. sie ist in keiner Standardheaderdatei vorhanden.
+Enthält die x- und y-Koordinaten eines Hotspots, der dem cursor zugeordnet ist, der durch eine [**RESDIR-Struktur identifiziert**](resdir.md) wird. Die hier bereitgestellte Strukturdefinition ist nur zur Erklärung vorgesehen. sie ist in einer Standardheaderdatei nicht vorhanden.
 
 ## <a name="syntax"></a>Syntax
 
@@ -64,7 +64,7 @@ Die y-Koordinate des Cursor-Hotspots in Pixel.
 
 ## <a name="remarks"></a>Hinweise
 
-Die **LOCALHEADER-Struktur** ist die erste In die [RT \_ CURSOR-Ressource](/windows/desktop/menurc/resource-types) geschriebene Daten, wenn eine [**RESDIR-Struktur**](resdir.md) Informationen zu einem Cursor enthält.
+Die **LOCALHEADER-Struktur** ist die erste Daten, die in die [RT \_ CURSOR-Ressource](/windows/desktop/menurc/resource-types) geschrieben werden, wenn eine [**RESDIR-Struktur**](resdir.md) Informationen zu einem Cursor enthält.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -77,7 +77,7 @@ Die **LOCALHEADER-Struktur** ist die erste In die [RT \_ CURSOR-Ressource](/wind
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 

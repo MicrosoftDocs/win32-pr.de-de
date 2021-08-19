@@ -1,40 +1,40 @@
 ---
-description: Wird vom audiorenderer ausgelöst, wenn sich das Symbol für die Audiositzung ändert.
+description: Wird vom Audiorenderer ausgelöst, wenn sich das Audiositzungssymbol ändert.
 ms.assetid: 72aae901-e5fe-481d-babb-459038abd629
-title: Meaudiosessionieschanged-Ereignis (mfobjects. h)
+title: MEAudioSessionIconChanged-Ereignis (Mfobjects.h)
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: ba7a12a4e82585c270206d595d32ba82c4e9e594
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 9ce466cf88b93c9cf806a2a6b70f76b084e8aa0b2c8fb2910a7391337a13b2f0
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106350493"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118062459"
 ---
-# <a name="meaudiosessioniconchanged-event"></a>Meaudiosessionieschanged-Ereignis
+# <a name="meaudiosessioniconchanged-event"></a>MEAudioSessionIconChanged-Ereignis
 
-Wird vom audiorenderer ausgelöst, wenn sich das Symbol für die Audiositzung ändert.
+Wird vom Audiorenderer ausgelöst, wenn sich das Audiositzungssymbol ändert.
 
-Die Medien Sitzung leitet dieses Ereignis an die Anwendung weiter.
+Die Mediensitzung leitet dieses Ereignis an die Anwendung weiter.
 
 ## <a name="event-values"></a>Ereigniswerte
 
-Mögliche Werte, die von [**imfmediaevent:: GetValue**](/windows/desktop/api/mfobjects/nf-mfobjects-imfmediaevent-getvalue) abgerufen werden, sind folgende.
+Mögliche Werte, die von [**DERMEDIAEVENT::GetValue**](/windows/desktop/api/mfobjects/nf-mfobjects-imfmediaevent-getvalue) abgerufen werden, sind:
 
 
 
-| VARTYPE                | BESCHREIBUNG                                                                               |
+| VARTYPE                | Beschreibung                                                                               |
 |------------------------|-------------------------------------------------------------------------------------------|
-| VT \_ leer<br/>   | Keine Ereignisdaten.<br/> <br/>                                                     |
-| VT \_ unbekannt<br/> | Ein Zeiger auf die [**imfaudiopolicy**](/windows/desktop/api/mfidl/nn-mfidl-imfaudiopolicy) -Schnittstelle.<br/> <br/> |
+| VT \_ EMPTY<br/>   | Keine Ereignisdaten.<br/> <br/>                                                     |
+| VT \_ UNKNOWN<br/> | Zeiger auf die [**INTERFACESAudioPolicy-Schnittstelle.**](/windows/desktop/api/mfidl/nn-mfidl-imfaudiopolicy)<br/> <br/> |
 
 
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Dieses Ereignis wird von der streamsenke des audiorenderer gesendet. Das-Ereignis wird ausgelöst, wenn der audiorenderer ein [**iaudiosessionevents:: oniconpathchanged**](/windows/win32/api/audiopolicy/nf-audiopolicy-iaudiosessionevents-oniconpathchanged) -Ereignis von der Audiositzung empfängt.
+Dieses Ereignis wird von der Streamsenke des Audiorenderers gesendet. Das Ereignis wird ausgelöst, wenn der Audiorenderer ein [**IAudioSessionEvents::OnIconPathChanged-Ereignis**](/windows/win32/api/audiopolicy/nf-audiopolicy-iaudiosessionevents-oniconpathchanged) aus der Audiositzung empfängt.
 
-Um das neue Symbol abzurufen, nennen Sie [**imfaudiopolicy:: geticopath**](/windows/desktop/api/mfidl/nf-mfidl-imfaudiopolicy-geticonpath).
+Rufen Sie ZUM Abrufen des neuen Symbols [**DEN AUFRUF VONAUDIOPOLICY::GetIconPath auf.**](/windows/desktop/api/mfidl/nf-mfidl-imfaudiopolicy-geticonpath)
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -42,9 +42,9 @@ Um das neue Symbol abzurufen, nennen Sie [**imfaudiopolicy:: geticopath**](/wind
 
 | Anforderung | Wert |
 |-------------------------------------|----------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                                           |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/>                                                     |
-| Header<br/>                   | <dl> <dt>Mfobjects. h (Include mfdl. h)</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur Vista-Desktop-Apps\]<br/>                                                           |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/>                                                     |
+| Header<br/>                   | <dl> <dt>Mfobjects.h (include Mfidl.h)</dt> </dl> |
 
 
 
@@ -52,13 +52,13 @@ Um das neue Symbol abzurufen, nennen Sie [**imfaudiopolicy:: geticopath**](/wind
 
 <dl> <dt>
 
-[**Imbaudiopolicy:: getirepath**](/windows/desktop/api/mfidl/nf-mfidl-imfaudiopolicy-geticonpath)
+[**ORCHESTRAAudioPolicy::GetIconPath**](/windows/desktop/api/mfidl/nf-mfidl-imfaudiopolicy-geticonpath)
 </dt> <dt>
 
-[Ereignisse Media Foundation](media-foundation-events.md)
+[Media Foundation-Ereignisse](media-foundation-events.md)
 </dt> <dt>
 
-[Streamingaudiorenderer](streaming-audio-renderer.md)
+[StreamingAudiorenderer](streaming-audio-renderer.md)
 </dt> </dl>
 
  

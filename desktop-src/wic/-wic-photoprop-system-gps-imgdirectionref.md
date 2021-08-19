@@ -1,23 +1,23 @@
 ---
-description: Die fotometadatenrichtlinie für die System. GPS. imgdirectionref-Eigenschaft.
+description: Die Fotometadatenrichtlinie für die System.GPS.ImgDirectionRef-Eigenschaft.
 ms.assetid: 74ae0989-6d53-4d72-abe9-84f40c0c884a
-title: System. GPS. imgdirectionref-Foto-metadatenrichtlinie
+title: System.GPS.ImgDirectionRef-Fotometadatenrichtlinie
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 80276ca8d1981935004dbec49fef588fcde330ca
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: e735f91133d4ec473537f063e30d2d48f801a99f8f6bc80fa228b98a9bd95437
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "104218031"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117667897"
 ---
-# <a name="systemgpsimgdirectionref-photo-metadata-policy"></a>System. GPS. imgdirectionref-Foto-metadatenrichtlinie
+# <a name="systemgpsimgdirectionref-photo-metadata-policy"></a>System.GPS.ImgDirectionRef-Fotometadatenrichtlinie
 
-Die fotometadatenrichtlinie für die [System. GPS. imgdirectionref](../properties/props-system-gps-imgdirectionref.md) -Eigenschaft.
+Die Fotometadatenrichtlinie für die [System.GPS.ImgDirectionRef-Eigenschaft.](../properties/props-system-gps-imgdirectionref.md)
 
-### <a name="pkey"></a>Pkey
+### <a name="pkey"></a>PKEY
 
-pkey \_ GPS. Imgdirectionref
+PKEY \_ GPS. ImgDirectionRef
 
 ### <a name="containers"></a>Container
 
@@ -27,54 +27,54 @@ JPEG, TIFF
 
 Nein
 
-### <a name="output-propvariant-type"></a>Ausgabe-PROPVARIANT-Typ
+### <a name="output-propvariant-type"></a>PROPVARIANT-Ausgabetyp
 
 VT \_ LPWSTR
 
 ### <a name="input-type"></a>Eingabetyp
 
-VT \_ LPWSTR wird bevorzugt, aber VT \_ LPSTR wird ebenfalls akzeptiert.
+VT \_ LPWSTR wird bevorzugt, aber auch VT \_ LPSTR wird akzeptiert.
 
-### <a name="conflict-resolution-policy"></a>Richtlinie zur Konfliktlösung
+### <a name="conflict-resolution-policy"></a>Konfliktlösungsrichtlinie
 
-Werte aus unterschiedlichen Schemas sind abgestimmt.
+Werte aus unterschiedlichen Schemas werden abgestimmt.
 
 ### <a name="jpeg-policies"></a>JPEG-Richtlinien
 
-### <a name="read-paths"></a>Pfade lesen
+### <a name="read-paths"></a>Lesepfade
 
 
 
-| Auftrag | Pfad                         | Datenträger Format |
+| Auftrag | Pfad                         | Datenträgerformat |
 |-------|------------------------------|-------------|
-| 1     | /App1/IFD/GPS/{ushort = 16}    | ascii       |
-| 2     | /XMP/EXIF: gpsimgdirectionref | Unicode     |
+| 1     | /app1/ifd/gps/{ushort=16}    | ascii       |
+| 2     | /xmp/exif:GPSImgDirectionRef | Unicode     |
 
 
 
  
 
-### <a name="write-paths"></a>Schreib Pfade
+### <a name="write-paths"></a>Schreibpfade
 
 
 
-| Auftrag | Pfad                         | Datenträger Format |
+| Auftrag | Pfad                         | Datenträgerformat |
 |-------|------------------------------|-------------|
-| 1     | /App1/IFD/GPS/{ushort = 16}    | ascii       |
-| 2     | /XMP/EXIF: gpsimgdirectionref | Unicode     |
+| 1     | /app1/ifd/gps/{ushort=16}    | ascii       |
+| 2     | /xmp/exif:GPSImgDirectionRef | Unicode     |
 
 
 
  
 
-### <a name="remove-paths"></a>Pfade entfernen
+### <a name="remove-paths"></a>Entfernen von Pfaden
 
 
 
 | Auftrag | Pfad                         |
 |-------|------------------------------|
-| 1     | /App1/IFD/GPS/{ushort = 16}    |
-| 2     | /XMP/EXIF: gpsimgdirectionref |
+| 1     | /app1/ifd/gps/{ushort=16}    |
+| 2     | /xmp/exif:gpsimgdirectionref |
 
 
 
@@ -82,52 +82,52 @@ Werte aus unterschiedlichen Schemas sind abgestimmt.
 
 ### <a name="tiff-policies"></a>TIFF-Richtlinien
 
-### <a name="read-paths"></a>Pfade lesen
+### <a name="read-paths"></a>Lesepfade
 
 
 
-| Auftrag | Pfad                             | Datenträger Format |
+| Auftrag | Pfad                             | Datenträgerformat |
 |-------|----------------------------------|-------------|
-| 1     | /IFD/GPS/{ushort = 16}             | ascii       |
-| 2     | /IFD/XMP/EXIF: gpsimgdirectionref | Unicode     |
+| 1     | /ifd/gps/{ushort=16}             | ascii       |
+| 2     | /ifd/xmp/exif:GPSImgDirectionRef | Unicode     |
 
 
 
  
 
-### <a name="write-paths"></a>Schreib Pfade
+### <a name="write-paths"></a>Schreibpfade
 
 
 
-| Auftrag | Pfad                             | Datenträger Format |
+| Auftrag | Pfad                             | Datenträgerformat |
 |-------|----------------------------------|-------------|
-| 1     | /IFD/GPS/{ushort = 16}             | ascii       |
-| 2     | /IFD/XMP/EXIF: gpsimgdirectionref | Unicode     |
+| 1     | /ifd/gps/{ushort=16}             | ascii       |
+| 2     | /ifd/xmp/exif:GPSImgDirectionRef | Unicode     |
 
 
 
  
 
-### <a name="remove-paths"></a>Pfade entfernen
+### <a name="remove-paths"></a>Entfernen von Pfaden
 
 
 
 | Auftrag | Pfad                             |
 |-------|----------------------------------|
-| 1     | /IFD/GPS/{ushort = 16}             |
-| 2     | /IFD/XMP/EXIF: gpsimgdirectionref |
+| 1     | /ifd/gps/{ushort=16}             |
+| 2     | /ifd/xmp/exif:gpsimgdirectionref |
 
 
 
  
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[System. GPS. imgdirectionref](../properties/props-system-gps-imgdirectionref.md)
+[System.GPS.ImgDirectionRef](../properties/props-system-gps-imgdirectionref.md)
 </dt> </dl>
 
  

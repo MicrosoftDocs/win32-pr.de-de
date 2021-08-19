@@ -1,7 +1,7 @@
 ---
 description: Erfahren Sie mehr über das Überprüfen von Netzwerkverfolgungen für den HTTP-Metadatenaustausch. Verwenden Sie eine Netzwerkpaketanalyse, die Unformatiertpakete anzeigt.
 ms.assetid: b3b6c4d1-5fa3-41fb-ae1d-067638e385b0
-title: Überprüfen von Netzwerkverfolgungen auf HTTP-Metadaten Exchange
+title: Überprüfen von Netzwerkverfolgungen für HTTP-Metadaten Exchange
 ms.topic: article
 ms.date: 05/31/2018
 ms.openlocfilehash: 076ead8f6ac0cf78699029189f0d34daaf0e17db3dec33d1a41bedfd0167eb2c
@@ -11,7 +11,7 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 08/11/2021
 ms.locfileid: "118311599"
 ---
-# <a name="inspecting-network-traces-for-http-metadata-exchange"></a>Überprüfen von Netzwerkverfolgungen auf HTTP-Metadaten Exchange
+# <a name="inspecting-network-traces-for-http-metadata-exchange"></a>Überprüfen von Netzwerkverfolgungen für HTTP-Metadaten Exchange
 
 Jede Netzwerkpaketanalyse, die Unformatiertpakete anzeigen kann, kann verwendet werden, um HTTP-Metadatenaustauschanforderungen zu überprüfen. Microsoft-Netzwerkmonitor 3 (Netmon) wird empfohlen. Weitere Informationen zu Netmon finden Sie unter [Herunterladen von Netmon- und DPWS-Beispielfiltern.](downloading-netmon-and-sample-dpws-filters.md)
 

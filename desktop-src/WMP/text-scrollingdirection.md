@@ -33,7 +33,7 @@ Dieses Attribut ist eine **Zeichenfolge** mit Lese-/Schreibzugriff.
 
 
 
-| Wert | BESCHREIBUNG                         |
+| Wert | Beschreibung                         |
 |-------|-------------------------------------|
 | Links  | Standard. Scrollen Sie von rechts nach links. |
 | Right | Scrollen Sie von links nach rechts.          |
@@ -58,7 +58,7 @@ Ein Beispiel, das veranschaulicht, wie die Attribute des **TEXT-Elements** verwe
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 

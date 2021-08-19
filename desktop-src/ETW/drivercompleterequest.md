@@ -1,7 +1,7 @@
 ---
-description: Diese Klasse ist die Ereignistyp Klasse für Ereignisse, die vom Treiber erfüllt werden. Die folgende Syntax wird durch den MOF-Code vereinfacht.
+description: Diese Klasse ist die Ereignistypklasse für Ereignisse zum Abschließen von Treiberanforderungen. Die folgende Syntax wird durch einen MOF-Code vereinfacht.
 ms.assetid: c9c9be05-c1c6-4d77-a47a-44a61ebfcdc7
-title: Drivercompleterequest-Klasse
+title: DriverCompleteRequest-Klasse
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -15,18 +15,18 @@ api_name:
 api_type:
 - NA
 api_location: ''
-ms.openlocfilehash: 57cf49d0e37dc870c0eb46c31ef39e0d81689811
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 2ef20d7bf097c35e03e94ee9bb80e7fd74ad93d3f28830c66b155b3cacf400b4
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104977152"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118151631"
 ---
-# <a name="drivercompleterequest-class"></a>Drivercompleterequest-Klasse
+# <a name="drivercompleterequest-class"></a>DriverCompleteRequest-Klasse
 
-Diese Klasse ist die Ereignistyp Klasse für Ereignisse, die vom Treiber erfüllt werden.
+Diese Klasse ist die Ereignistypklasse für Ereignisse zum Abschließen von Treiberanforderungen.
 
-Die folgende Syntax wird durch den MOF-Code vereinfacht.
+Die folgende Syntax wird durch einen MOF-Code vereinfacht.
 
 ## <a name="syntax"></a>Syntax
 
@@ -42,80 +42,80 @@ class DriverCompleteRequest : DiskIo
 
 ## <a name="members"></a>Member
 
-Die Klasse " **drivercompleterequest** " verfügt über diese Typen von Membern:
+Die **DriverCompleteRequest-Klasse** verfügt über diese Typen von Membern:
 
 -   [Eigenschaften](#properties)
 
 ### <a name="properties"></a>Eigenschaften
 
-Die Klasse " **drivercompleterequest** " verfügt über diese Eigenschaften.
+Die **DriverCompleteRequest-Klasse** verfügt über diese Eigenschaften.
 
 <dl> <dt>
 
-**IRP**
+**Irp**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt32**
+Datentyp: **uint32**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: wmidataid (2), Zeiger
+Qualifizierer: WmiDataId(2), Zeiger
 </dt> </dl>
 
-E/a-Anforderungspaket.
+E/A-Anforderungspaket.
 
 </dd> <dt>
 
-**Routineaddr**
+**RoutineAddr**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt32**
+Datentyp: **uint32**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: wmidataid (1), Zeiger
+Qualifizierer: WmiDataId(1), Zeiger
 </dt> </dl>
 
-Adresse der aufgerufenen Treiber Funktion.
+Adresse der aufgerufenen Treiberfunktion.
 
 </dd> <dt>
 
-**Uniqmatchid**
+**UniqMatchId**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt32**
+Datentyp: **uint32**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: wmidataid (3)
+Qualifizierer: WmiDataId(3)
 </dt> </dl>
 
-Ein Bezeichner, der die Anforderung eindeutig identifiziert. Verwenden Sie diesen Bezeichner, um mit den anderen Treiber Ereignissen, z. b. dem [**drivercompleterequestreturn**](drivercompleterequestreturn.md) -Ereignis, zu korrelieren.
+Bezeichner, der die Anforderung eindeutig identifiziert. Verwenden Sie diesen Bezeichner, um mit den anderen Treiberereignissen zu korrelieren, z. B. dem [**DriverCompleteRequestReturn-Ereignis.**](drivercompleterequestreturn.md)
 
 </dd> </dl>
 
-## <a name="requirements"></a>Requirements (Anforderungen)
+## <a name="requirements"></a>Anforderungen
 
 
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>       |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/> |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur Vista-Desktop-Apps\]<br/>       |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/> |
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 
-[**Sowie**](diskio.md)
+[**DiskIo**](diskio.md)
 </dt> </dl>
 
  

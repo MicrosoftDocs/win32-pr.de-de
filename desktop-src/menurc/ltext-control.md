@@ -1,9 +1,9 @@
 ---
 title: LTEXT-Steuerelement
-description: Definiert ein linksbündig ausgerichtetes Textsteuerfeld.
+description: Definiert ein linksbündig ausgerichtetes Textsteuerelement.
 ms.assetid: ef6d7d06-3614-4b54-8a23-684d7ef65115
 keywords:
-- LTEXT-Steuerelementmenüs und andere Ressourcen
+- Menüs und andere Ressourcen des LTEXT-Steuerelements
 topic_type:
 - apiref
 api_name:
@@ -21,7 +21,7 @@ ms.locfileid: "117870274"
 ---
 # <a name="ltext-control"></a>LTEXT-Steuerelement
 
-Definiert ein linksbündig ausgerichtetes Textsteuerfeld. Das Steuerelement ist ein einfaches Rechteck, das den angegebenen Text linksbündig im Rechteck darstellt. Der Text wird formatiert, bevor er angezeigt wird. Wörter, die sich über das Ende einer Zeile erstrecken würden, werden automatisch bis zum Anfang der nächsten Zeile umschlossen. Wörter, die länger als die Breite des Steuerelements sind, werden abgeschnitten.
+Definiert ein linksbündig ausgerichtetes Textsteuerelement. Das Steuerelement ist ein einfaches Rechteck, das den angegebenen Text linksbündig im Rechteck anzeigt. Der Text wird formatiert, bevor er angezeigt wird. Wörter, die sich über das Ende einer Zeile erstrecken würden, werden automatisch bis zum Anfang der nächsten Zeile umschlossen. Wörter, die länger als die Breite des Steuerelements sind, werden abgeschnitten.
 
 Die **LTEXT-Anweisung,** die nur in einer [**DIALOGEX-Anweisung**](dialogex-resource.md) verwendet werden kann, definiert den Text, bezeichner, Dimensionen und Attribute des Steuerelements.
 
@@ -34,23 +34,23 @@ LTEXT text, id, x, y, width, height [, style [, extended-style]]
 <span id="style"></span><span id="STYLE"></span>*Stil*
 </dt> <dd>
 
-Steuerelementstile. Dieser Wert kann eine beliebige Kombination des **BS \_ RADIOBUTTON-Stils** und der folgenden Stile sein: **SS \_ LEFT,** **WS \_ TABSTOP** und **WS \_ GROUP**.
+Steuerelementstile. Dieser Wert kann eine beliebige Kombination des **BS \_ RADIOBUTTON-Stils** und der folgenden Stile sein: **SS \_ LEFT,** **WS \_ TABSTOP** und **WS \_ GROUP.**
 
-Wenn Sie keinen Stil angeben, ist der Standardstil `SS_LEFT | WS_GROUP` .
+Wenn Sie keinen Stil angeben, lautet der Standardstil `SS_LEFT | WS_GROUP` .
 
 </dd> </dl>
 
-Weitere Informationen zur allgemeinen Syntax einer Steuerelement-Anweisung finden Sie unter [Allgemeine Steuerelementparameter](common-control-parameters.md).
+Weitere Informationen zur allgemeinen Syntax einer Control-Anweisung finden Sie unter [Allgemeine Steuerungsparameter.](common-control-parameters.md)
 
 ## <a name="examples"></a>Beispiele
 
-In diesem Beispiel wird ein linksbündig ausgerichtetes Textsteuerfeld mit der Bezeichnung Dateiname definiert:
+In diesem Beispiel wird ein linksbündig ausgerichtetes Textsteuerelement mit der Bezeichnung Dateiname definiert:
 
 ``` syntax
 LTEXT "Filename", 101, 10, 10, 100, 100
 ```
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 

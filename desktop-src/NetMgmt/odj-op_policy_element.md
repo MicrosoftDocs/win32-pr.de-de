@@ -5,16 +5,16 @@ ms.assetid: 69f6e0e7-3f47-4fee-8a4c-df94093dcffa
 ms.topic: reference
 ms.date: 10/12/2020
 ms.reviewer: jsimmons
-ms.openlocfilehash: df6fc6852a5efd0a6a2e01a805878ed51bc7c263
-ms.sourcegitcommit: db89157e3be911fdce2e543e99faa31fb2403bc8
+ms.openlocfilehash: 74e81f09f4d45d42f5e9df585b88051ac1e96e8cd33e4c15807701e61825b43b
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "104316905"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117983384"
 ---
-# <a name="op_policy_element-structure"></a>OP_POLICY_ELEMENT Struktur
+# <a name="op_policy_element-structure"></a>OP_POLICY_ELEMENT-Struktur
 
-Definiert einen Registrierungsschlüssel und einen Wertnamen,-Typ und-Wert, die unter diesem Schlüssel konfiguriert werden sollen.
+Definiert einen Registrierungsschlüssel und einen Wertnamen, -typ und -wert, der unter diesem Schlüssel konfiguriert werden soll.
 
 ## <a name="syntax"></a>Syntax
 
@@ -31,26 +31,26 @@ typedef struct _OP_POLICY_ELEMENT
 
 ## <a name="members"></a>Member
 
-### <a name="pkeypath"></a>pkeypath
+### <a name="pkeypath"></a>pKeyPath
 
 Enthält den Pfad des Registrierungsschlüssels.
 
-### <a name="pvaluename"></a>pvaluename
+### <a name="pvaluename"></a>pValueName
 
-Enthält den Namen des Registrierungs Werts.
+Enthält den Namen des Registrierungswerts.
 
-### <a name="ulvaluetype"></a>ulvaluetype
+### <a name="ulvaluetype"></a>ulValueType
 
-Enthält einen der Werte aus [Registrierungs Werttypen](../sysinfo/registry-value-types.md).
+Enthält einen der Werte aus [Registrierungswerttypen.](../sysinfo/registry-value-types.md)
 
-### <a name="cbvaluedata"></a>cbvaluedata
+### <a name="cbvaluedata"></a>cbValueData
 
-Enthält die Größe von pvaluedata in Bytes.
+Enthält die Größe von pValueData in Bytes.
 
-### <a name="ulvaluetype"></a>ulvaluetype
+### <a name="ulvaluetype"></a>ulValueType
 
-Enthält den Wert des Registrierungs Werts.
+Enthält den Wert des Registrierungswerts.
 
 ## <a name="see-also"></a>Siehe auch
 
-[**IDL-Definitionen im Offline-Domänen Beitritt**](odj-idl.md)
+[**IDL-Definitionen für Den Offlinedomänen join**](odj-idl.md)

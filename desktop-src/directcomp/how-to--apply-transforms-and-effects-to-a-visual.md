@@ -1,36 +1,36 @@
 ---
 title: Anwenden von Effekten
-description: In diesem Thema wird veranschaulicht, wie Sie mit Microsoft directcomposition Effekte und 3D-Transformationen auf eine Visualisierung anwenden.
+description: In diesem Thema wird veranschaulicht, wie Sie Microsoft DirectComposition verwenden, um Effekte und 3D-Transformationen auf ein Visual anzuwenden.
 ms.assetid: FE5A0BE9-B84C-4DE1-85D8-375897237F96
 keywords:
-- Anwenden von directcomposition-Effekten
-- Directcomposition-Effekte, Vorgehensweise
-- Directcomposition 3D-Transformationen
-- Directcomposition 3D-Transformationen
-- Directcomposition-Deckkraft
+- Anwenden von DirectComposition-Effekten
+- DirectComposition-Effekte, Anwendung
+- DirectComposition-3D-Transformationen
+- DirectComposition-3D-Transformationen
+- DirectComposition-Deckkraft
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 728496309f62aaa0027ca3751a6681384fb83c95
-ms.sourcegitcommit: 73417d55867c804274a55abe5ca71bcba7006119
+ms.openlocfilehash: f85a3a06fa0650e43f8f1a1be299021cafd233cc59937359dc78bc7b6d25bbb7
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/20/2020
-ms.locfileid: "104391186"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118088814"
 ---
 # <a name="how-to-apply-effects"></a>Anwenden von Effekten
 
 > [!NOTE]
-> Für apps unter Windows 10 wird die Verwendung von Windows. UI. Composition-APIs anstelle von directcomposition empfohlen. Weitere Informationen finden Sie unter [modernisieren ihrer Desktop-App mithilfe der visuellen Ebene](/windows/uwp/composition/visual-layer-in-desktop-apps).
+> Für Apps auf Windows 10 empfehlen wir die Verwendung von Windows.UI.Composition-APIs anstelle von DirectComposition. Weitere Informationen finden Sie unter [Modernisieren Ihrer Desktop-App mithilfe der visuellen Ebene.](/windows/uwp/composition/visual-layer-in-desktop-apps)
 
-In diesem Thema wird veranschaulicht, wie Sie mit Microsoft directcomposition Effekte und 3D-Transformationen auf eine Visualisierung anwenden. Das Beispiel in diesem Thema ändert die Deckkraft eines visuellen Elements und dreht es um eine vertikale Achse in der Mitte des visuellen Elements. Weitere Informationen zu anderen Effekten, die von directcomposition unterstützt werden, finden Sie unter [Effekte](effects.md).
+In diesem Thema wird veranschaulicht, wie Sie Microsoft DirectComposition verwenden, um Effekte und 3D-Transformationen auf ein Visual anzuwenden. Im Beispiel in diesem Thema wird die Deckkraft eines Visuals geändert und um eine vertikale Achse gedreht, die sich in der Mitte des Visuals befindet. Weitere Informationen zu anderen Effekten, die von DirectComposition unterstützt werden, finden Sie unter [Effekte](effects.md).
 
-## <a name="what-you-need-to-know"></a>Was Sie wissen müssen
+## <a name="what-you-need-to-know"></a>Wichtige Informationen
 
 ### <a name="technologies"></a>Technologien
 
 -   [DirectComposition](directcomposition-portal.md)
 -   [Direct3D 11-Grafik](/windows/desktop/direct3d11/atoc-dx-graphics-direct3d-11)
--   [DirectX-Grafik Infrastruktur (DXGI)](/windows/desktop/direct3ddxgi/dx-graphics-dxgi)
+-   [DirectX Graphic Infrastructure (DXGI)](/windows/desktop/direct3ddxgi/dx-graphics-dxgi)
 
 ### <a name="prerequisites"></a>Voraussetzungen
 
@@ -40,16 +40,16 @@ In diesem Thema wird veranschaulicht, wie Sie mit Microsoft directcomposition Ef
 
 ## <a name="instructions"></a>Anweisungen
 
-### <a name="step-1-initialize-directcomposition-objects"></a>Schritt 1: Initialisieren von directcomposition-Objekten
+### <a name="step-1-initialize-directcomposition-objects"></a>Schritt 1: Initialisieren von DirectComposition-Objekten
 
-1.  Erstellen Sie das Geräte Objekt und das Kompositions Zielobjekt.
-2.  Erstellen Sie ein visuelles Element, legen Sie seinen Inhalt fest, und fügen Sie es der visuellen Struktur hinzu.
+1.  Erstellen Sie das Geräteobjekt und das Kompositionszielobjekt.
+2.  Erstellen Sie ein Visual, legen Sie dessen Inhalt fest, und fügen Sie es der visuellen Struktur hinzu.
 
-Weitere Informationen finden Sie unter [Initialisieren von directcomposition](initialize-directcomposition.md).
+Weitere Informationen finden Sie unter [Initialisieren von DirectComposition.](initialize-directcomposition.md)
 
-### <a name="step-2-create-a-3d-rotate-transform-object-an-effect-group-object-and-an-animation-object"></a>Schritt 2: Erstellen eines 3D-Transformations Objekts zum drehen, eines Effekt Gruppen Objekts und eines Animations Objekts
+### <a name="step-2-create-a-3d-rotate-transform-object-an-effect-group-object-and-an-animation-object"></a>Schritt 2: Erstellen eines 3D-Transformationsobjekts, eines Effektgruppenobjekts und eines Animationsobjekts
 
-Verwenden Sie die [**idcompositiondevice:: CreateRotateTransform3D**](/windows/win32/api/dcomp/nf-dcomp-idcompositiondevice-createrotatetransform3d) -Methode, um ein 3D-Objekt zum Drehen von Transformationen zu erstellen, und die Methode " [**kreateeffectgroup**](/windows/win32/api/dcomp/nf-dcomp-idcompositiondevice-createeffectgroup) ", um ein Effekt Gruppen Objekt zu erstellen. In diesem Beispiel wird auch die Methode " [**kreateanimation**](/windows/win32/api/dcomp/nf-dcomp-idcompositiondevice-createanimation) " zum Erstellen eines Animations Objekts zum Animieren der 3D-Transformation zum drehen verwendet. Weitere Informationen zum Anwenden von Animationen finden Sie unter [Anwenden von Animationen](how-to--animate-a-visual.md).
+Verwenden Sie die [**IDCompositionDevice::CreateRotateTransform3D-Methode,**](/windows/win32/api/dcomp/nf-dcomp-idcompositiondevice-createrotatetransform3d) um ein 3D-Rotationstransformationsobjekt zu erstellen, und die [**CreateEffectGroup-Methode,**](/windows/win32/api/dcomp/nf-dcomp-idcompositiondevice-createeffectgroup) um ein Effektgruppenobjekt zu erstellen. In diesem Beispiel wird auch die [**CreateAnimation-Methode**](/windows/win32/api/dcomp/nf-dcomp-idcompositiondevice-createanimation) verwendet, um ein Animationsobjekt zum Animieren der 3D-Drehtransformation zu erstellen. Weitere Informationen zum Anwenden von Animationen finden Sie unter [Anwenden von Animationen.](how-to--animate-a-visual.md)
 
 
 ```C++
@@ -80,11 +80,11 @@ Verwenden Sie die [**idcompositiondevice:: CreateRotateTransform3D**](/windows/w
 
 
 
-### <a name="step-3-define-the-animation-function"></a>Schritt 3: Definieren der Animations Funktion
+### <a name="step-3-define-the-animation-function"></a>Schritt 3: Definieren der Animationsfunktion
 
-Verwenden Sie die Methoden des [**idcompositionanimation**](/windows/desktop/api/DcompAnimation/nn-dcompanimation-idcompositionanimation) -Objekts, um die Animations Funktion zu definieren.
+Verwenden Sie die Methoden des [**IDCompositionAnimation-Objekts,**](/windows/desktop/api/DcompAnimation/nn-dcompanimation-idcompositionanimation) um die Animationsfunktion zu definieren.
 
-Im folgenden Beispiel wird eine einfache Animations Funktion definiert. Wenn die Animations Funktion auf eine Objekt Eigenschaft angewendet wird, ändert Sie den Eigenschafts Wert inkrementell von 0 in den Wert des *degrees* -Arguments im Verlauf einer Sekunde.
+Im folgenden Beispiel wird eine einfache Animationsfunktion definiert. Bei Anwendung auf eine Objekteigenschaft ändert die Animationsfunktion den Eigenschaftswert im Laufe einer Sekunde inkrementell von 0 in den Wert des *Degrees-Arguments.*
 
 
 ```C++
@@ -97,13 +97,13 @@ Im folgenden Beispiel wird eine einfache Animations Funktion definiert. Wenn die
 
 
 
-### <a name="step-4-set-the-properties-of-the-3d-rotate-transform"></a>Schritt 4: Festlegen der Eigenschaften der 3D-Transformation zum Drehen
+### <a name="step-4-set-the-properties-of-the-3d-rotate-transform"></a>Schritt 4: Festlegen der Eigenschaften der 3D-Rotationstransformation
 
-1.  Wenden Sie die Animations Funktion auf die Angle-Eigenschaft der 3D-Drehungs Transformation an, indem Sie die [**IDCompositionRotateTransform3D:: settangle**](/windows/win32/api/dcomp/nf-dcomp-idcompositionrotatetransform-setangle(idcompositionanimation)) -Methode aufrufen.
-2.  Legen Sie die Drehungs Achse für die 3D-Transformation zum Drehen durch Aufrufen der Methoden [**IDCompositionRotateTransform3D:: setaxisx**](/windows/win32/api/dcomp/nf-dcomp-idcompositionrotatetransform3d-setaxisx(float)), [**setaxisy**](/windows/desktop/api/Dcomp/nf-dcomp-setaxisy)und [**setaxisz**](/windows/desktop/api/Dcomp/nf-dcomp-setaxisz) fest.
-3.  Legen Sie den Mittelpunkt der Drehung für die 3D-Transformation zum Drehen durch Aufrufen der Methoden [**IDCompositionRotateTransform3D:: setcenterx**](/previous-versions/windows/desktop/legacy/hh448982(v=vs.85)) und [**setcentery**](/previous-versions/windows/desktop/legacy/hh448988(v=vs.85)) fest.
+1.  Wenden Sie die Animationsfunktion auf die Angle-Eigenschaft der 3D-Drehtransformation an, indem Sie die [**IDCompositionRotateTransform3D::SetAngle-Methode**](/windows/win32/api/dcomp/nf-dcomp-idcompositionrotatetransform-setangle(idcompositionanimation)) aufrufen.
+2.  Legen Sie die Drehachse für die 3D-Drehtransformation fest, indem Sie die [**Methoden IDCompositionRotateTransform3D::SetAxisX,**](/windows/win32/api/dcomp/nf-dcomp-idcompositionrotatetransform3d-setaxisx(float)) [**SetAxisY**](/windows/desktop/api/Dcomp/nf-dcomp-setaxisy)und [**SetAxisZ**](/windows/desktop/api/Dcomp/nf-dcomp-setaxisz) aufrufen.
+3.  Legen Sie den Mittelpunkt der Drehung für die 3D-Drehtransformation fest, indem Sie die [**Methoden IDCompositionRotateTransform3D::SetCenterX**](/previous-versions/windows/desktop/legacy/hh448982(v=vs.85)) und [**SetCenterY**](/previous-versions/windows/desktop/legacy/hh448988(v=vs.85)) aufrufen.
 
-Im folgenden Beispiel wird eine 3D-Transformation zum drehen für das Drehen eines visuellen Elements um eine vertikale Achse in der Mitte des visuellen Elements eingerichtet. Bei den *m \_ bitmapwidth* -und *m- \_ bitmapheight* -Parametern handelt es sich um die Breite und Höhe der Bitmap in Pixel.
+Im folgenden Beispiel wird eine 3D-Drehtransformation zum Drehen eines Visuals um eine vertikale Achse in der Mitte des Visuals eingerichtet. Die *Parameter m \_ bitmapWidth* und *m \_ bitmapHeight* sind die Breite und Höhe der Bitmap in Pixel.
 
 
 ```C++
@@ -126,10 +126,10 @@ Im folgenden Beispiel wird eine 3D-Transformation zum drehen für das Drehen ein
 
 
 
-### <a name="step-5-set-the-properties-of-the-effect-group-object"></a>Schritt 5: Festlegen der Eigenschaften des Effekts-Gruppen Objekts
+### <a name="step-5-set-the-properties-of-the-effect-group-object"></a>Schritt 5: Festlegen der Eigenschaften des Effektgruppenobjekts
 
-1.  Wenden Sie das 3D-Transformations Objekt Drehung auf die Transform3D-Eigenschaft des Effekts-Gruppen Objekts an, indem Sie die [**idcompositioneffectgroup:: SetTransform3D**](/windows/win32/api/dcomp/nf-dcomp-idcompositioneffectgroup-settransform3d) -Methode aufrufen.
-2.  Legen Sie die Opacity-Eigenschaft des Effekts-Gruppen Objekts durch Aufrufen von [**idcompositioneffectgroup:: setopacity**](/windows/win32/api/dcomp/nf-dcomp-idcompositioneffectgroup-setopacity(float))fest.
+1.  Wenden Sie das Transformationsobjekt für die 3D-Drehung auf die Transform3D-Eigenschaft des Effektgruppenobjekts an, indem Sie die [**IDCompositionEffectGroup::SetTransform3D-Methode**](/windows/win32/api/dcomp/nf-dcomp-idcompositioneffectgroup-settransform3d) aufrufen.
+2.  Legen Sie die Opacity-Eigenschaft des Effektgruppenobjekts fest, indem Sie [**IDCompositionEffectGroup::SetOpacity aufrufen.**](/windows/win32/api/dcomp/nf-dcomp-idcompositioneffectgroup-setopacity(float))
 
 
 ```C++
@@ -152,9 +152,9 @@ Im folgenden Beispiel wird eine 3D-Transformation zum drehen für das Drehen ein
 
 
 
-### <a name="step-6-apply-the-effect-group-object-to-the-effect-property-of-the-visual"></a>Schritt 6: Anwenden des Effekts-Gruppen Objekts auf die Effect-Eigenschaft des visuellen Elements
+### <a name="step-6-apply-the-effect-group-object-to-the-effect-property-of-the-visual"></a>Schritt 6: Anwenden des Effektgruppenobjekts auf die Effect-Eigenschaft des Visuals
 
-Rufen Sie die [**idcompositionvisual:: SetEffect**](/windows/win32/api/dcomp/nf-dcomp-idcompositionvisual-seteffect) -Methode auf, um das Effekt Gruppen Objekt auf das visuelle Element anzuwenden.
+Rufen Sie die [**IDCompositionVisual::SetEffect-Methode**](/windows/win32/api/dcomp/nf-dcomp-idcompositionvisual-seteffect) auf, um das Effektgruppenobjekt auf das Visual anzuwenden.
 
 
 ```C++
@@ -167,9 +167,9 @@ Rufen Sie die [**idcompositionvisual:: SetEffect**](/windows/win32/api/dcomp/nf-
 
 
 
-### <a name="step-7-commit-the-composition"></a>Schritt 7: Commit der Komposition ausführen
+### <a name="step-7-commit-the-composition"></a>Schritt 7: Commit der Komposition
 
-Rufen Sie die [**idcompositiondevice:: Commit**](/windows/win32/api/dcomp/nf-dcomp-idcompositiondevice-commit) -Methode auf, um den Batch von Befehlen für die Verarbeitung in directcomposition zu committen. Die resultierende Komposition wird im Zielfenster angezeigt.
+Rufen Sie die [**IDCompositionDevice::Commit-Methode auf,**](/windows/win32/api/dcomp/nf-dcomp-idcompositiondevice-commit) um den Batch von Befehlen zur Verarbeitung an DirectComposition zu commiten. Die resultierende Komposition wird im Zielfenster angezeigt.
 
 
 ```C++
@@ -182,9 +182,9 @@ Rufen Sie die [**idcompositiondevice:: Commit**](/windows/win32/api/dcomp/nf-dco
 
 
 
-### <a name="step-8-free-the-directcomposition-objects"></a>Schritt 8: Freigeben der directcomposition-Objekte
+### <a name="step-8-free-the-directcomposition-objects"></a>Schritt 8: Freisetzung der DirectComposition-Objekte
 
-Stellen Sie sicher, dass Sie das Animations Objekt, das 3D-Transformations Objekt drehen und das Effekt Gruppen Objekt freigeben, wenn Sie es nicht mehr benötigen. Im folgenden Beispiel wird das Anwendungs definierte [**saferelease**](/windows/desktop/medfound/saferelease) -Makro aufgerufen, um die-Objekte freizugeben.
+Achten Sie darauf, das Animationsobjekt, das 3D-Transformationsobjekt und das Effektgruppenobjekt frei zu geben, wenn Sie sie nicht mehr benötigen. Das folgende Beispiel ruft das anwendungsdefinierte [**SafeRelease-Makro**](/windows/desktop/medfound/saferelease) auf, um die Objekte frei zu geben.
 
 
 ```C++
@@ -196,7 +196,7 @@ Stellen Sie sicher, dass Sie das Animations Objekt, das 3D-Transformations Objek
 
 
 
-Denken Sie auch daran, das Geräte Objekt, das Kompositions Zielobjekt und das visuelle Element freizugeben, bevor die Anwendung beendet wird. Weitere Informationen finden Sie unter [Initialisieren von directcomposition](initialize-directcomposition.md).
+Denken Sie auch daran, das Geräteobjekt, das Kompositionszielobjekt und das Visual frei zu geben, bevor Ihre Anwendung beendet wird. Weitere Informationen finden Sie unter [Initialisieren von DirectComposition.](initialize-directcomposition.md)
 
 ## <a name="complete-example"></a>Vollständiges Beispiel
 
@@ -1028,6 +1028,6 @@ HRESULT DemoApp::MyCreateGDIRenderedDCompSurface(HBITMAP hBitmap,
 [Effekte](effects.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 

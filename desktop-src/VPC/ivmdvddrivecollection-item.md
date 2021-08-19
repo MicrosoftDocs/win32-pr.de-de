@@ -72,13 +72,13 @@ Das [**IVMDVDDrive-Objekt.**](ivmdvddrive.md)
 | Unterstützte Mindestversion (Client)<br/> | Windows 7 \[ Desktop-Apps\]<br/>                                                    |
 | Unterstützte Mindestversion (Server)<br/> | Nicht unterstützt<br/>                                                                     |
 | Ende des Supports (Client)<br/>    | Windows 7<br/>                                                                          |
-| Product (Produkt)<br/>                  | Windows Virtual PC<br/>                                                                 |
+| Produkt<br/>                  | Windows Virtual PC<br/>                                                                 |
 | Header<br/>                   | <dl> <dt>VPCCOMInterfaces.h</dt> </dl> |
 | IID<br/>                      | IID \_ IVMDVDDriveCollection ist als bc86e297-e55f-4742-9614-ad11d3131f68 definiert.<br/>      |
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 

@@ -36,11 +36,11 @@ Direct2D sucht nach Möglichkeiten, die Anzahl von Zwischentexturen zu reduziere
 
 Vor Windows 10 verwendete Direct2D immer Zwischentexturen, wenn mehrere Pixelshader innerhalb desselben Effektdiagramms verwendet wurden. Die meisten integrierten Effekte, die einfach Farbwerte anpassen (z. B. Helligkeit oder Sättigung), verwenden hierfür Pixelshader.
 
-In Windows 10 kann Direct2D jetzt in solchen Fällen die Verwendung von Zwischentexturen vermeiden. Hierzu werden benachbarte Pixel-Shader intern verknüpft. Beispiel:
+In Windows 10 kann Direct2D in solchen Fällen die Verwendung von Zwischentexturen vermeiden. Hierzu werden benachbarte Pixel-Shader intern verknüpft. Beispiel:
 
 ![Windows 10-Effektdiagramm mit mehreren Pixel-Shadern und ohne Zwischentexturen](images/precision-and-clipping-3.png)
 
-Beachten Sie, dass nicht alle benachbarten Pixel-Shader in einem Diagramm miteinander verknüpft werden können und daher nur bestimmte Diagramme unterschiedliche Ausgaben auf Windows 10 erzeugen. Ausführliche Informationen finden Sie unter [Effekt-Shaderverknüpfung.](effect-shader-linking.md) Die wichtigsten Einschränkungen sind:
+Beachten Sie, dass nicht alle benachbarten Pixel-Shader in einem Diagramm miteinander verknüpft werden können, sodass nur bestimmte Diagramme unterschiedliche Ausgaben auf Windows 10 erzeugen. Ausführliche Informationen finden Sie unter [Effekt-Shaderverknüpfung.](effect-shader-linking.md) Die wichtigsten Einschränkungen sind:
 
 -   Ein Effekt wird nicht mit Effekten verknüpft, die seine Ausgabe nutzen, wenn der erste Effekt als Eingabe mit mehreren Effekten verbunden ist.
 -   Ein Effekt wird nicht mit einem Effekt verknüpft, der als Eingabe festgelegt ist, wenn der erste Effekt seine Eingabe an einer anderen logischen Position als seine Ausgabe abtampt. Beispielsweise kann ein Color Matrix-Effekt mit seiner Eingabe verknüpft werden, aber ein Convolution-Effekt ist dies nicht.

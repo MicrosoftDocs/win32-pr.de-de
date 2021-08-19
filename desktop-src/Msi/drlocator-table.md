@@ -37,40 +37,40 @@ Die DrLocator-Tabelle enthält die folgenden Spalten.
 <span id="Signature_"></span><span id="signature_"></span><span id="SIGNATURE_"></span>Signatur\_
 </dt> <dd>
 
-Die Spalte Signatur \_ ist ein externer Schlüssel für die erste Spalte der [Signaturtabelle](signature-table.md). Dieses Feld kann eine eindeutige Dateisignatur darstellen, die in der Signaturtabelle aufgeführt ist. Wenn der Wert in dieser Spalte in der Signature-Tabelle nicht vorhanden ist, wird davon ausgegangen, dass die Suche nach einem Verzeichnis erfolgt, auf das von der DrLocator-Tabelle verwiesen wird.
+Die \_ Signaturspalte ist ein externer Schlüssel für die erste Spalte der [Signaturtabelle.](signature-table.md) Dieses Feld kann eine eindeutige Dateisignatur darstellen, die in der Signaturtabelle aufgeführt ist. Wenn der Wert in dieser Spalte in der Signaturtabelle nicht vorhanden ist, wird angenommen, dass die Suche nach einem Verzeichnis ist, auf das die DrLocator-Tabelle verweist.
 
 </dd> <dt>
 
 <span id="Parent"></span><span id="parent"></span><span id="PARENT"></span>Elternteil
 </dt> <dd>
 
-Diese Spalte ist die Signatur des übergeordneten Verzeichnisses der Datei oder des Verzeichnisses in der \_ Spalte Signatur. Wenn dieses Feld NULL ist und die Spalte Pfad nicht auf einen vollständigen Pfad erweitert wird, werden alle Festplattenlaufwerke des Systems des Benutzers mithilfe des Pfads durchsucht.
+Diese Spalte ist die Signatur des übergeordneten Verzeichnisses der Datei oder des Verzeichnisses in der Spalte \_ Signatur. Wenn dieses Feld NULL ist und die Spalte Pfad nicht auf einen vollständigen Pfad erweitert wird, werden alle Festplattenlaufwerke des Systems des Benutzers mithilfe des Pfads durchsucht.
 
-Dieses Feld ist ein Schlüssel in einer der folgenden Tabellen: [RegLocator,](reglocator-table.md) [IniLocator,](inilocator-table.md) [CompLocator](complocator-table.md)oder DrLocator.
+Dieses Feld ist ein Schlüssel in einer der folgenden Tabellen: [regLocator,](reglocator-table.md) [IniLocator,](inilocator-table.md) [CompLocator](complocator-table.md)oder DrLocator.
 
 </dd> <dt>
 
 <span id="Path"></span><span id="path"></span><span id="PATH"></span>Pfad
 </dt> <dd>
 
-Die Spalte Path enthält den Pfad auf dem System des Benutzers. Dies ist entweder ein vollständiger Pfad oder ein relativer Unterpfad unterhalb des Verzeichnisses, das in der Spalte Parent angegeben ist. Sehen Sie sich die Einschränkungen für den [AnyPath-Datentyp](anypath.md) an.
+Die Spalte Path enthält den Pfad auf dem System des Benutzers. Dies ist entweder ein vollständiger Pfad oder ein relativer Unterpfad unterhalb des Verzeichnisses, das in der Übergeordneten Spalte angegeben ist. Sehen Sie sich die Einschränkungen für den [AnyPath-Datentyp](anypath.md) an.
 
 </dd> <dt>
 
 <span id="Depth"></span><span id="depth"></span><span id="DEPTH"></span>Tiefe
 </dt> <dd>
 
-Die Tiefe unter dem Pfad, den das Installationsprogramm nach der Datei oder dem Verzeichnis sucht, die bzw. das in der Spalte Signatur angegeben \_ ist. Der im Feld Tiefe verwendete Wert basiert auf 0 (null). Wenn das Feld Pfad z. B. c:/Programme/bin ist, muss die Spalte Tiefe auf 0 oder höher festgelegt werden, um eine Datei zu erkennen, die sich im Ordnerbehälter befindet. Wenn das Feld Tiefe leer ist, wird davon ausgegangen, dass die Tiefe 0 (null) ist.
+Die Tiefe unterhalb des Pfads, den das Installationsprogramm nach der Datei oder dem Verzeichnis sucht, die in der Spalte Signatur angegeben \_ ist. Der im Feld Depth verwendete Wert basiert auf 0 (null). Wenn das Feld Pfad z. B. c:/Programme/bin ist, muss die Spalte Tiefe auf 0 oder höher festgelegt werden, um eine Datei zu erkennen, die sich im Ordner bin befindet. Wenn das Feld Tiefe leer ist, wird davon ausgegangen, dass die Tiefe 0 (null) ist.
 
 </dd> </dl>
 
 ## <a name="remarks"></a>Hinweise
 
-Diese Tabelle wird mit der [AppSearch-Tabelle](appsearch-table.md)verwendet.
+Diese Tabelle wird mit der [AppSearch-Tabelle verwendet.](appsearch-table.md)
 
-Die Spalten dieser Tabelle sind im Allgemeinen nicht lokalisiert. Wenn ein Autor entscheidet, nach Produkten in mehreren Sprachen zu suchen, muss für jede Sprache ein separater Eintrag in der Tabelle enthalten sein.
+Die Spalten dieser Tabelle werden im Allgemeinen nicht lokalisiert. Wenn ein Autor beschließt, in mehreren Sprachen nach Produkten zu suchen, muss in der Tabelle für jede Sprache ein separater Eintrag enthalten sein.
 
-Weitere Informationen finden Sie unter [Suchen nach vorhandenen Anwendungen, Dateien, Registrierungseinträgen oder .ini Dateieinträgen.](searching-for-existing-applications-files-registry-entries-or--ini-file-entries.md)
+Weitere [Informationen finden Sie unter Suchen nach vorhandenen Anwendungen, Dateien, Registrierungseinträgen oder .ini Dateieinträgen.](searching-for-existing-applications-files-registry-entries-or--ini-file-entries.md)
 
 ## <a name="validation"></a>Überprüfen
 

@@ -1,41 +1,41 @@
 ---
-title: System Ressourcen der Ebene 2
-description: System Ressourcen der Ebene 2
+title: Systemressourcen der Ebene 2
+description: Systemressourcen der Ebene 2
 ms.assetid: 39e3b210-64b6-47fb-b7b0-e51c256f5878
 keywords:
-- Multimedia-PC (MPC), Ebene 2
-- MPC (multimediakpc), Ebene 2
-- Multimedia PC Marketing-Rat, Ebene 2
-- MPC Ebene 2, Systemressourcen
-- MPC Ebene 2, minimale Konfiguration
+- Multimedia PC (MPC),Level 2
+- MPC (Multimedia PC),Level 2
+- Multimedia PC Marketing Council,Level 2
+- MPC Level 2, Systemressourcen
+- MPC Level 2, Mindestkonfiguration
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: a543514aa89f6f9a6e1756de800ed8e387114538
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: 65a39f4c72bb79669187645e82fe11effd420ad70f86cc32abb2e6065dc47ffd
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "104471157"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118139696"
 ---
-# <a name="level-2-system-resources"></a>System Ressourcen der Ebene 2
+# <a name="level-2-system-resources"></a>Systemressourcen der Ebene 2
 
-Die Mindestkonfiguration für einen PC, der die Spezifikation der Ebene 2 erfüllt, umfasst die folgenden Elemente:
+Die Mindestkonfiguration für einen PC, um die Level 2-Spezifikation zu erfüllen, umfasst folgende Elemente:
 
--   Ein 25 MHz 486SX-Mikroprozessor mit 4 MB RAM
+-   Ein 486SX-Mikroprozessor mit 25 MHz und 4 MB RAM
 -   Ein 3,5-Zoll-Diskettenlaufwerk mit hoher Dichte
--   Ein Festplattenlaufwerk mit mindestens 160 MB Speicherplatz
--   Eine 101-Tasten Tastatur mit einem Standard-DIN-Connector oder eine, die identische Funktionalität bietet, mithilfe von Tastenkombinationen
--   Eine Maus mit zwei Schaltflächen mit einem seriellen oder Busverbinder
--   Ein Port vom Datentyp "MIDI" (Digital Instrumentation Digital Interface), der "MIDI Out", "MIDI in" und "MIDI" umfasst und Unterbrechung der Eingabe-und FIFO-Übertragung umfasst
--   Ein Analog oder digitaler Joystick Port (Spiel) im IBM-Stil
--   Ein Farbmonitor mit einer Bildschirmauflösung von 640 x 480 Pixel mit 65.536 Farben
--   System Software, die Binärkompatibilität mit Windows 3,0 oder Windows 3,1 bietet
+-   Eine Festplatte mit mindestens 160 MB Speicherplatz
+-   Eine 101-Tasten-Tastatur mit einem standardmäßigen DIN-Connector oder eine Tastatur, die mithilfe von Tastenkombinationen identische Funktionen bietet
+-   Eine Zwei-Schaltfläche-Maus mit einem seriellen oder Busconnector
+-   Ein PORTS für die digitale Schnittstelle des Instrumentierens (Instruments Instrument Digital Interface), der DIE Ports "OUT", "SIGNATURE In" und "SIGNATURE Thru" enthält und die Unterbrechungsunterstützung für Eingaben und FIFO-Übertragungen bietet.
+-   Ein analoger oder digitaler Port im IBM-Stil (Spiel)
+-   Ein Farbmonitor mit einer Anzeigeauflösung von 640 x 480 Pixeln mit 65.536 Farben
+-   Systemsoftware, die Binärkompatibilität mit Windows 3.0 oder Windows 3.1 bietet
 
-Außerdem beträgt das empfohlene Leistungsziel für die Grafikkarte (VGA +) 1,2 Millionen Pixel pro Sekunde mit 40% oder weniger der CPU-Bandbreite. Die geräteunabhängigen Bitmaps (Disb), die zum Messen dieses Leistungs Ziels verwendet werden, haben eine Farbtiefe von 1, 4 und 8 Bits und können Codierungen der Lauf Zeit Länge verwenden oder nicht codiert werden. Eine zweite Methode zum Messen der Video Leistung ist die Bereitstellung von 256-Color-, 320-und 240 Pixel Digital-Video-Bildern bei 15 Frames pro Sekunde.
+Darüber hinaus ist das empfohlene Leistungsziel für die Grafikkarte (VGA+) 1,2 Millionen Pixel pro Sekunde mit 40 Prozent oder weniger CPU-Bandbreite. Die geräteunabhängigen Bitmaps (DEVICE-Independent Bitmaps, DIBs), die zum Messen dieses Leistungsziels verwendet werden, haben Farbtiefen von 1, 4 und 8 Bits und können die Codierung der Ausführungslänge verwenden oder nicht codiert werden. Eine zweite Methode zum Messen der Videoleistung ist die Bereitstellung von Bildern mit 256 Farben und 320 mal 240 Pixeln für digitale Videos mit 15 Bildern pro Sekunde.
 
- 
+ 
 
- 
+ 
 
 
 

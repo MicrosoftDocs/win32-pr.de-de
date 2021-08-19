@@ -1,6 +1,6 @@
 ---
-title: Bft-Konstanten (ntdsbcli. h)
-description: Die bft-Konstanten werden als Bitflags verwendet, um unterschiedliche Dateitypen in einer Active Directory Domain Services Sicherung zu identifizieren.
+title: BFT-Konstanten (Ntdsbcli.h)
+description: Die BFT-Konstanten werden als Bitflags verwendet, um verschiedene Dateitypen in einer Active Directory Domain Services identifizieren.
 ms.assetid: 3658a657-d9e3-4fbf-9120-4b0205b81a36
 ms.tgt_platform: multiple
 topic_type:
@@ -21,20 +21,20 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 9607b5e61e5689d8895b39a11aa7e813fc7fcbe6
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 3b5e9275e01b8c33d308b55b2638d4eaf186b8f5265834acc27acd2f146f0d09
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "103949722"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118024049"
 ---
-# <a name="bft-constants"></a>Bft-Konstanten
+# <a name="bft-constants"></a>BFT-Konstanten
 
-Die bft-Konstanten werden als Bitflags verwendet, um unterschiedliche Dateitypen in einer Active Directory Domain Services Sicherung zu identifizieren.
+Die BFT-Konstanten werden als Bitflags verwendet, um verschiedene Dateitypen in einer Active Directory Domain Services identifizieren.
 
 <dl> <dt>
 
-<span id="BFT_LOG_DIRECTORY"></span><span id="bft_log_directory"></span>**bft- \_ Protokoll \_ Verzeichnis**
+<span id="BFT_LOG_DIRECTORY"></span><span id="bft_log_directory"></span>**\_BFT-PROTOKOLLVERZEICHNIS \_**
 </dt> <dd> <dl> <dt>
 
 0x20
@@ -42,12 +42,12 @@ Die bft-Konstanten werden als Bitflags verwendet, um unterschiedliche Dateitypen
 
 
 
-Die Datei gehört zum Protokoll Verzeichnis.
+Die Datei gehört zum Protokollverzeichnis.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="BFT_DATABASE_DIRECTORY"></span><span id="bft_database_directory"></span>**bft- \_ Daten Bank \_ Verzeichnis**
+<span id="BFT_DATABASE_DIRECTORY"></span><span id="bft_database_directory"></span>**\_BFT-DATENBANKVERZEICHNIS \_**
 </dt> <dd> <dl> <dt>
 
 0x40
@@ -60,7 +60,7 @@ Die Datei gehört zum Datenbankverzeichnis.
 
 </dt> </dl> </dd> <dt>
 
-<span id="BFT_DIRECTORY"></span><span id="bft_directory"></span>**bft- \_ Verzeichnis**
+<span id="BFT_DIRECTORY"></span><span id="bft_directory"></span>**\_BFT-VERZEICHNIS**
 </dt> <dd> <dl> <dt>
 
 0x80
@@ -73,7 +73,7 @@ Der angegebene Pfad ist ein Verzeichnis und kein Dateiname.
 
 </dt> </dl> </dd> <dt>
 
-<span id="BFT_LOG"></span><span id="bft_log"></span>**bft- \_ Protokoll**
+<span id="BFT_LOG"></span><span id="bft_log"></span>**\_BFT-PROTOKOLL**
 </dt> <dd> <dl> <dt>
 
 0x21
@@ -81,12 +81,12 @@ Der angegebene Pfad ist ein Verzeichnis und kein Dateiname.
 
 
 
-Gibt eine Protokolldatei an, die zum Protokoll Verzeichnis gehört.
+Gibt eine Protokolldatei an, die zum Protokollverzeichnis gehört.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="BFT_LOG_DIR"></span><span id="bft_log_dir"></span>**bft- \_ Protokoll Verzeichnis \_**
+<span id="BFT_LOG_DIR"></span><span id="bft_log_dir"></span>**BFT \_ LOG \_ DIR**
 </dt> <dd> <dl> <dt>
 
 0x22
@@ -94,12 +94,12 @@ Gibt eine Protokolldatei an, die zum Protokoll Verzeichnis gehört.
 
 
 
-Die Datei ist der Pfad des Protokoll Verzeichnisses.
+Die Datei ist der Pfad des Protokollverzeichnisses.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="BFT_CHECKPOINT_DIR"></span><span id="bft_checkpoint_dir"></span>**bft-Prüf Punkt Verzeichnis \_ \_**
+<span id="BFT_CHECKPOINT_DIR"></span><span id="bft_checkpoint_dir"></span>**BFT \_ CHECKPOINT \_ DIR**
 </dt> <dd> <dl> <dt>
 
 0x23
@@ -107,12 +107,12 @@ Die Datei ist der Pfad des Protokoll Verzeichnisses.
 
 
 
-Die Datei ist der Pfad des Checkpoint-Verzeichnisses.
+Die Datei ist der Pfad des Prüfpunktverzeichnisses.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="BFT_NTDS_DATABASE"></span><span id="bft_ntds_database"></span>**bft- \_ NTDS- \_ Datenbank**
+<span id="BFT_NTDS_DATABASE"></span><span id="bft_ntds_database"></span>**BFT \_ \_ NTDS-DATENBANK**
 </dt> <dd> <dl> <dt>
 
 0x44
@@ -120,12 +120,12 @@ Die Datei ist der Pfad des Checkpoint-Verzeichnisses.
 
 
 
-Bei der Datei handelt es sich um eine Verzeichnisdienst-Datenbank, die im Datenbankverzeichnis gehört.
+Die Datei ist eine Verzeichnisdienstdatenbank, die zum Datenbankverzeichnis gehört.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="BFT_PATCH_FILE"></span><span id="bft_patch_file"></span>**bft \_ - \_ Patchdatei**
+<span id="BFT_PATCH_FILE"></span><span id="bft_patch_file"></span>**\_BFT-PATCHDATEI \_**
 </dt> <dd> <dl> <dt>
 
 0x25
@@ -133,15 +133,15 @@ Bei der Datei handelt es sich um eine Verzeichnisdienst-Datenbank, die im Datenb
 
 
 
-Bei der Datei handelt es sich um eine Patchdatei, die zum Protokoll Verzeichnis gehört.
+Die Datei ist eine Patchdatei, die zum Protokollverzeichnis gehört.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="BFT_UNKNOWN"></span><span id="bft_unknown"></span>**bft \_ unbekannt**
+<span id="BFT_UNKNOWN"></span><span id="bft_unknown"></span>**BFT \_ UNKNOWN**
 </dt> <dd> <dl> <dt>
 
-0x0f
+0x0F
 </dt> <dt>
 
 
@@ -159,7 +159,7 @@ Die Datei kann nicht erkannt werden. Die Datei stimmt nicht mit den bekannten Da
 |-------------------------------------|---------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows Vista<br/>                                                              |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2008<br/>                                                        |
-| Header<br/>                   | <dl> <dt>Ntdsbcli. h</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Ntdsbcli.h</dt> </dl> |
 
 
 

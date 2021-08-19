@@ -1,9 +1,9 @@
 ---
-title: Resources (localizationtype)-Element
-description: Definiert eine Gruppe von Zeichen folgen Tabellen, die die lokalisierten Zeichen folgen enthalten, auf die im Manifest verwiesen wird.
+title: resources (LocalizationType)-Element
+description: Definiert eine Gruppe von Zeichenfolgentabellen, die die lokalisierten Zeichenfolgen enthalten, auf die Sie im Manifest verweisen.
 ms.assetid: b984894a-0ae8-49be-af93-3acdcce53ee9
 keywords:
-- Ressourcen Element-Ereignisprotokoll
+- resources-Element EventLog
 topic_type:
 - apiref
 api_name:
@@ -13,16 +13,16 @@ api_type:
 ms.topic: reference
 ms.date: 05/31/2018
 api_location: ''
-ms.openlocfilehash: 55bdfe504da08c754c18b790e282eba6787c3ee3
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 3075b2b1741079f80c34e5acf9783b13b74b6973c1d16f2cd323890bcea5d0d5
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "106341580"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118120577"
 ---
-# <a name="resources-localizationtype-element"></a>Resources (localizationtype)-Element
+# <a name="resources-localizationtype-element"></a>resources (LocalizationType)-Element
 
-Definiert eine Gruppe von Zeichen folgen Tabellen, die die lokalisierten Zeichen folgen enthalten, auf die im Manifest verwiesen wird.
+Definiert eine Gruppe von Zeichenfolgentabellen, die die lokalisierten Zeichenfolgen enthalten, auf die Sie im Manifest verweisen.
 
 ``` syntax
 <xs:element name="resources">
@@ -49,15 +49,15 @@ Definiert eine Gruppe von Zeichen folgen Tabellen, die die lokalisierten Zeichen
 </xs:element>
 ```
 
-Das **Resources** -Element wird durch den komplexen Typ [**localizationtype**](eventmanifestschema-localizationtype-complextype.md) definiert.
+Das **resources-Element** wird durch den komplexen [**LocalizationType-Typ**](eventmanifestschema-localizationtype-complextype.md) definiert.
 
 ## <a name="child-elements"></a>Untergeordnete Elemente
 
 
 
-| Element                                                                  | type                                                                       | BESCHREIBUNG                                                                             |
+| Element                                                                  | type                                                                       | Beschreibung                                                                             |
 |--------------------------------------------------------------------------|----------------------------------------------------------------------------|-----------------------------------------------------------------------------------------|
-| [**STRINGTABLE**](eventmanifestschema-stringtable-resources-element.md) | [**Stringtabletype**](eventmanifestschema-stringtabletype-complextype.md) | Definiert eine Liste lokalisierter Zeichen folgen, auf die Sie im Manifest verweisen können.<br/> |
+| [**Stringtable**](eventmanifestschema-stringtable-resources-element.md) | [**StringTableType**](eventmanifestschema-stringtabletype-complextype.md) | Definiert eine Liste lokalisierter Zeichenfolgen, auf die Sie in Ihrem Manifest verweisen können.<br/> |
 
 
 
@@ -65,9 +65,9 @@ Das **Resources** -Element wird durch den komplexen Typ [**localizationtype**](e
 
 
 
-| Name    | type   | BESCHREIBUNG                                                                                                                                            |
+| Name    | type   | Beschreibung                                                                                                                                            |
 |---------|--------|--------------------------------------------------------------------------------------------------------------------------------------------------------|
-| culture | Zeichenfolge | Ein Sprachen Name, der die Kultur der lokalisierten Zeichen folgen in der Zeichen folgen Tabelle angibt. Beispiel: "en-US" für Englisch (USA).<br/> |
+| Kultur | Zeichenfolge | Ein Sprachname, der die Kultur der lokalisierten Zeichenfolgen in der Zeichenfolgentabelle identifiziert. Beispiel: "en-US" für Englisch (USA).<br/> |
 
 
 
@@ -77,19 +77,19 @@ Das **Resources** -Element wird durch den komplexen Typ [**localizationtype**](e
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>       |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/> |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur Vista-Desktop-Apps\]<br/>       |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
 **Übergeordnetes Element**
 </dt> <dt>
 
-[**Lokalisierung (instrumentationmanifest)**](eventmanifestschema-localization-instrumentationmanifest-element.md)
+[**Lokalisierung (instrumentationManifest)**](eventmanifestschema-localization-instrumentationmanifest-element.md)
 </dt> </dl>
 
  

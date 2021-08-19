@@ -1,9 +1,9 @@
 ---
-title: Connections-Struktur (napforcementclient. h)
-description: Enthält Informationen über die Liste der Verbindungen, die von einem-Enforcer verwaltet werden.
+title: Verbindungsstruktur (NapEnforcementClient.h)
+description: Enthält Informationen über die Liste der Verbindungen, die von einem Erzwingenden verwaltet werden.
 ms.assetid: 79466099-b567-4268-b9bf-d5e57f4d4900
 keywords:
-- Verbindungs Struktur-NAP
+- Verbindungsstruktur NAP
 topic_type:
 - apiref
 api_name:
@@ -14,21 +14,21 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 5e79add74830dfa8ca77fa24a5d3233542a7e553
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: f91e2dc404ff50c7edc3ba80a3c772ac6be762c1fe49575d8503a783e83bbef6
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "103957233"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117800147"
 ---
-# <a name="connections-structure"></a>Verbindungs Struktur
+# <a name="connections-structure"></a>Verbindungsstruktur
 
 > [!Note]  
-> Die Netzwerk Zugriffsschutz-Plattform ist ab Windows 10 nicht verfügbar.
+> Die Netzwerkzugriffsschutz-Plattform ist ab Windows 10 nicht verfügbar.
 
  
 
-Die **Connections** -Struktur enthält Informationen über die Liste der Verbindungen, die von einem-Enforcer verwaltet werden.
+Die **Connections-Struktur** enthält Informationen zur Liste der Verbindungen, die von einem Enforcer verwaltet werden.
 
 ## <a name="syntax"></a>Syntax
 
@@ -49,14 +49,14 @@ typedef struct tagConnections {
 **count**
 </dt> <dd>
 
-Die Anzahl der aktiven Verbindungen, die zurzeit von einem-Enforcer innerhalb des Bereichs 0 (null) bis [**maxconnectionzähltperenforcer**](nap-type-constants.md)verwaltet werden.
+Die Anzahl aktiver Verbindungen, die derzeit von einem Erzwinger im Bereich von 0 (null) bis [**maxConnectionCountPerEnforcer**](nap-type-constants.md)verwaltet werden.
 
 </dd> <dt>
 
 **connections**
 </dt> <dd>
 
-Ein com-Zeiger auf eine Liste von [**inapenforcementclientconnection**](inapenforcementclientconnection.md) -Schnittstellen, die Clientverbindungen darstellen.
+Ein COM-Zeiger auf eine Liste von [**INapEnforcementClientConnection-Schnittstellen,**](inapenforcementclientconnection.md) die Clientverbindungen darstellen.
 
 </dd> </dl>
 
@@ -66,10 +66,10 @@ Ein com-Zeiger auf eine Liste von [**inapenforcementclientconnection**](inapenfo
 
 | Anforderung | Wert |
 |-------------------------------------|-----------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                                      |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/>                                                |
-| Header<br/>                   | <dl> <dt>Napforcementclient. h</dt> </dl>   |
-| IDL<br/>                      | <dl> <dt>Napforcementclient. idl</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur Vista-Desktop-Apps\]<br/>                                                      |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/>                                                |
+| Header<br/>                   | <dl> <dt>NapEnforcementClient.h</dt> </dl>   |
+| Idl<br/>                      | <dl> <dt>NapEnforcementClient.idl</dt> </dl> |
 
 
 
@@ -83,7 +83,7 @@ Ein com-Zeiger auf eine Liste von [**inapenforcementclientconnection**](inapenfo
 [NAP-Strukturen](nap-structures.md)
 </dt> <dt>
 
-[**Inapenforcementclientconnection**](inapenforcementclientconnection.md)
+[**INapEnforcementClientConnection**](inapenforcementclientconnection.md)
 </dt> </dl>
 
  

@@ -1,7 +1,7 @@
 ---
-description: Eine benutzerdefinierte Rückruffunktion, die es dem Aufrufer der Funktion cryptuidlgselectcertificate ermöglicht, die Anzeige von Zertifikaten zu verarbeiten, die der Benutzer zum anzeigen auswählt.
+description: Eine benutzerdefinierte Rückruffunktion, die es dem Aufrufer der CryptUIDlgSelectCertificate-Funktion ermöglicht, die Anzeige von Zertifikaten zu verarbeiten, die der Benutzer zur Anzeige auswählt.
 ms.assetid: fdb9e9e0-02f1-42e0-9a11-204d916a1a88
-title: Pfnccertdisplayproc-Rückruffunktion
+title: PFNCCERTDISPLAYPROC-Rückruffunktion
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -12,16 +12,16 @@ api_name:
 api_type:
 - UserDefined
 api_location: ''
-ms.openlocfilehash: 7371e983b339ff8bfa9edb1b7fb795ab64596a98
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: a0d78569990874c87082d57045cf8075043c6edccc96b507d2d8dc72a58fb379
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "104042319"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117978976"
 ---
-# <a name="pfnccertdisplayproc-callback-function"></a>Pfnccertdisplayproc-Rückruffunktion
+# <a name="pfnccertdisplayproc-callback-function"></a>PFNCCERTDISPLAYPROC-Rückruffunktion
 
-Die **pfnccertdisplayproc** -Funktion ist eine benutzerdefinierte Rückruffunktion, die es dem Aufrufer der Funktion [**cryptuidlgselectcertificate**](cryptuidlgselectcertificate.md) ermöglicht, die Anzeige von Zertifikaten zu verarbeiten, die der Benutzer zum anzeigen auswählt.
+Die **PFNCCERTDISPLAYPROC-Funktion** ist eine benutzerdefinierte Rückruffunktion, mit der der Aufrufer der [**CryptUIDlgSelectCertificate-Funktion**](cryptuidlgselectcertificate.md) die Anzeige von Zertifikaten verarbeiten kann, die der Benutzer zur Anzeige auswählt.
 
 ## <a name="syntax"></a>Syntax
 
@@ -40,21 +40,21 @@ BOOL WINAPI * PFNCCERTDISPLAYPROC(
 
 <dl> <dt>
 
-*pcertcontext* \[ in\]
+*pCertContext* \[ In\]
 </dt> <dd>
 
-Ein Zeiger auf eine [**CERT- \_ Kontext**](/windows/desktop/api/Wincrypt/ns-wincrypt-cert_context) Struktur, die das anzuzeigende Zertifikat darstellt.
+Ein Zeiger auf eine [**CERT \_ CONTEXT-Struktur,**](/windows/desktop/api/Wincrypt/ns-wincrypt-cert_context) die das anzuzeigende Zertifikat darstellt.
 
 </dd> <dt>
 
-*hwndselcertdlg* \[ in\]
+*hWndSelCertDlg* \[ In\]
 </dt> <dd>
 
-Ein Handle für das Dialogfeld, in dem das Zertifikat zum Anzeigen ausgewählt wurde.
+Ein Handle für das Dialogfeld, aus dem das Zertifikat für die Anzeige ausgewählt wurde.
 
 </dd> <dt>
 
-*pvcallbackdata* \[ in\]
+*pvCallbackData* \[ In\]
 </dt> <dd>
 
 Zusätzliche Daten, die von der Rückruffunktion verwendet werden.
@@ -63,7 +63,7 @@ Zusätzliche Daten, die von der Rückruffunktion verwendet werden.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Diese Funktion gibt **true** zurück, um anzugeben, dass Sie die Anzeige des Zertifikats behandelt und dass das Dialogfeld das Zertifikat nicht anzeigen soll. Wenn diese Funktion **false** zurückgibt, wird das Zertifikat im Dialogfeld angezeigt.
+Diese Funktion gibt **TRUE zurück,** um anzugeben, dass sie die Anzeige des Zertifikats verarbeitet und dass das Dialogfeld das Zertifikat nicht anzeigen soll. Wenn diese Funktion **FALSE zurückgibt,** zeigt das Dialogfeld das Zertifikat an.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -71,8 +71,8 @@ Diese Funktion gibt **true** zurück, um anzugeben, dass Sie die Anzeige des Zer
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows XP \[ -Desktop-Apps\]<br/>          |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/> |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ XP-Desktop-Apps\]<br/>          |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/> |
 
 
 

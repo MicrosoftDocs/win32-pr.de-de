@@ -1,7 +1,7 @@
 ---
-description: Gibt die &\# 0034;leaky bucket&0034; Parameter für einen Stream in einer \# ASF-Mediensenke an.
+description: Gibt den &\# 0034;leaky bucket&0034; Parameter für einen Stream in einer \# ASF-Mediensenke an.
 ms.assetid: b01e59b6-0a7f-4125-867c-532385a27c15
-title: MFPKEY_ASFSTREAMSINK_CORRECTED_LEAKYBUCKET -Eigenschaft (Mfidl.h)
+title: MFPKEY_ASFSTREAMSINK_CORRECTED_LEAKYBUCKET (Mfidl.h)
 ms.topic: reference
 ms.date: 05/31/2018
 ms.openlocfilehash: 0bcb41de92f160e3d73c7d15721dae3015efc0ad1bc1a982d1a22c542d311b60
@@ -39,7 +39,7 @@ Der Wert dieser Eigenschaft ist ein Array von drei **DWORD-Werten** in der folge
 
 -   Bitrate in Bits pro Sekunde.
 -   Puffergröße in Bytes.
--   Anfängliche Puffer-Vollheit in Bytes.
+-   Anfängliche Puffer-Vollheit in Byte.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -53,7 +53,7 @@ Der Wert dieser Eigenschaft ist ein Array von drei **DWORD-Werten** in der folge
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 

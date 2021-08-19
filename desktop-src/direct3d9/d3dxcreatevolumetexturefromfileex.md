@@ -14,12 +14,12 @@ api_type:
 api_location:
 - d3dx9.lib
 - d3dx9.dll
-ms.openlocfilehash: 11be9da24be7fc9a03bab8e761e55a601715bd75
-ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
+ms.openlocfilehash: 47d46f2472bf9c055814ed575584a087dc5922dc104fcbb3a49b2a2b2a93a958
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2021
-ms.locfileid: "108102748"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117731889"
 ---
 # <a name="d3dxcreatevolumetexturefromfileex-function"></a>D3DXCreateVolumeTextureFromFileEx-Funktion
 
@@ -68,7 +68,7 @@ Zeiger auf eine [**IDirect3DDevice9-Schnittstelle,**](/windows/win32/api/d3d9hel
 
 Typ: **[ **LPCTSTR**](../winprog/windows-data-types.md)**
 
-Zeiger auf eine Zeichenfolge, die den Dateinamen angibt. Wenn die Compilereinstellungen Unicode erfordern, wird der Datentyp LPCTSTR in LPCWSTR aufgelöst. Andernfalls wird der Zeichenfolgendatentyp in LPCSTR aufgelöst. Siehe Hinweise.
+Zeiger auf eine Zeichenfolge, die den Dateinamen angibt. Wenn die Compilereinstellungen Unicode erfordern, wird der Datentyp LPCTSTR in LPCWSTR auflösen. Andernfalls wird der Zeichenfolgendatentyp in LPCSTR auflösen. Siehe Hinweise.
 
 </dd> <dt>
 
@@ -77,7 +77,7 @@ Zeiger auf eine Zeichenfolge, die den Dateinamen angibt. Wenn die Compilereinste
 
 Typ: **[ **UINT**](../winprog/windows-data-types.md)**
 
-Breite in Pixel. Wenn dieser Wert 0 (null) oder D3DX \_ DEFAULT ist, werden die Dimensionen aus der Datei übernommen. Die maximale Dimension, die ein Treiber unterstützt (für Breite, Höhe und Tiefe), finden Sie unter MaxVolumeExtent in [**D3DCAPS9.**](/windows/desktop/api/D3D9Caps/ns-d3d9caps-d3dcaps9)
+Breite in Pixel. Wenn dieser Wert 0 (null) oder D3DX \_ DEFAULT ist, werden die Dimensionen aus der Datei übernommen. Die maximale Dimension, die ein Treiber unterstützt (für Breite, Höhe und Tiefe), finden Sie in MaxVolumeExtent in [**D3DCAPS9.**](/windows/desktop/api/D3D9Caps/ns-d3d9caps-d3dcaps9)
 
 </dd> <dt>
 
@@ -122,7 +122,7 @@ Typ: **[ **DWORD**](../winprog/windows-data-types.md)**
 
 Typ: **[D3DFORMAT](d3dformat.md)**
 
-Member des [D3DFORMAT-Enumerationstyps,](d3dformat.md) der das angeforderte Pixelformat für die Textur beschreibt. Die zurückgegebene Textur hat möglicherweise ein anderes Format als das von *Format* angegebene Format. Anwendungen sollten das Format der zurückgegebenen Textur überprüfen. Wenn [D3DFMT \_ UNKNOWN](other-d3dx-constants.md)ist, wird das Format aus der Datei übernommen. Wenn D3DFMT \_ FROM \_ FILE verwendet wird, wird das Format genau wie in der Datei verwendet, und der Aufruf schlägt fehl, wenn dies gegen die Gerätefunktionen verstößt.
+Member des [aufzählten D3DFORMAT-Typs,](d3dformat.md) der das angeforderte Pixelformat für die Textur beschreibt. Die zurückgegebene Textur hat möglicherweise ein anderes Format als das von *Format angegebene* Format. Anwendungen sollten das Format der zurückgegebenen Textur überprüfen. Wenn [D3DFMT \_ UNKNOWN](other-d3dx-constants.md)ist, wird das Format aus der Datei übernommen. Wenn D3DFMT FROM FILE, wird das Format genau wie in der Datei verwendet, und der Aufruf ist nicht möglich, wenn dies die \_ \_ Gerätefunktionen verletzt.
 
 </dd> <dt>
 
@@ -131,16 +131,16 @@ Member des [D3DFORMAT-Enumerationstyps,](d3dformat.md) der das angeforderte Pixe
 
 Typ: **[ **D3DPOOL**](./d3dpool.md)**
 
-Member des [**D3DPOOL-Enumerationstyps,**](./d3dpool.md) der die Speicherklasse beschreibt, in die die Textur platziert werden soll.
+Member des [**aufzählten D3DPOOL-Typs,**](./d3dpool.md) der die Speicherklasse beschreibt, in der die Textur platziert werden soll.
 
 </dd> <dt>
 
-*Filterung* \[ In\]
+*Filter* \[ In\]
 </dt> <dd>
 
 Typ: **[ **DWORD**](../winprog/windows-data-types.md)**
 
-Eine Kombination aus einem oder mehreren [ \_ D3DX-FILTERN,](d3dx-filter.md) die steuern, wie das Bild gefiltert wird. Die Angabe von D3DX \_ DEFAULT für diesen Parameter entspricht der Angabe von D3DX FILTER TRIANGLE \_ \_ \| D3DX \_ FILTER \_ DITHER.
+Eine Kombination aus mindestens einem [D3DX-FILTER, \_ ](d3dx-filter.md) der steuert, wie das Bild gefiltert wird. Die Angabe von D3DX DEFAULT für diesen Parameter entspricht der Angabe von \_ D3DX \_ FILTER \_ TRIANGLE \| D3DX \_ FILTER \_ DITHER.
 
 </dd> <dt>
 
@@ -149,7 +149,7 @@ Eine Kombination aus einem oder mehreren [ \_ D3DX-FILTERN,](d3dx-filter.md) die
 
 Typ: **[ **DWORD**](../winprog/windows-data-types.md)**
 
-Eine Kombination aus einem oder mehreren [ \_ D3DX-FILTERN,](d3dx-filter.md) die steuern, wie das Bild gefiltert wird. Die Angabe von D3DX \_ DEFAULT für diesen Parameter entspricht der Angabe von D3DX FILTER \_ \_ BOX. Verwenden Sie außerdem die Bits 27 bis 31, um die Anzahl der Mip-Ebenen anzugeben, die übersprungen werden sollen (von oben in der Mipmapkette), wenn eine DDS-Textur in den Arbeitsspeicher geladen wird. Dadurch können Sie bis zu 32 Ebenen überspringen.
+Eine Kombination aus mindestens einem [D3DX-FILTER, \_ ](d3dx-filter.md) der steuert, wie das Bild gefiltert wird. Die Angabe von D3DX DEFAULT für diesen Parameter entspricht der Angabe von \_ D3DX \_ FILTER \_ BOX. Verwenden Sie außerdem die Bits 27-31, um die Anzahl der MIP-Ebenen anzugeben, die übersprungen werden sollen (vom oberen Ende der Mipmap-Kette), wenn eine DDS-Textur in den Arbeitsspeicher geladen wird. Dadurch können Sie bis zu 32 Ebenen überspringen.
 
 </dd> <dt>
 
@@ -158,7 +158,7 @@ Eine Kombination aus einem oder mehreren [ \_ D3DX-FILTERN,](d3dx-filter.md) die
 
 Typ: **[ **D3DCOLOR**](d3dcolor.md)**
 
-[**D3DCOLOR-Wert,**](d3dcolor.md) der durch transparentes Schwarz ersetzt werden soll, oder 0, um den Farbschlüssel zu deaktivieren. Dies ist immer eine 32-Bit-ARGB-Farbe, unabhängig vom Quellbildformat. Alpha ist wichtig und sollte in der Regel für nicht transparente Farbschlüssel auf FF festgelegt werden. Daher wäre der Wert für nicht transparentes Schwarz gleich 0xFF000000.
+[**D3DCOLOR-Wert,**](d3dcolor.md) der durch transparentes Schwarz ersetzt werden soll, oder 0, um den Colorkey zu deaktivieren. Dies ist immer eine 32-Bit-ARGB-Farbe, unabhängig vom Quellbildformat. Alpha ist wichtig und sollte für nicht transparente Farbtasten in der Regel auf FF festgelegt werden. Daher wäre der Wert für opakes Schwarz gleich 0xFF000000.
 
 </dd> <dt>
 
@@ -167,7 +167,7 @@ Typ: **[ **D3DCOLOR**](d3dcolor.md)**
 
 Typ: **[ **D3DXIMAGE \_ INFO**](d3dximage-info.md)\***
 
-Zeiger auf eine [**D3DXIMAGE \_ INFO-Struktur,**](d3dximage-info.md) die mit einer Beschreibung der Daten in der Quellimagedatei ausgefüllt werden soll, oder **NULL**.
+Zeiger auf eine [**D3DXIMAGE \_ INFO-Struktur,**](d3dximage-info.md) die mit einer Beschreibung der Daten in der Quellbilddatei aufgefüllt werden soll, oder **NULL.**
 
 </dd> <dt>
 
@@ -193,11 +193,11 @@ Adresse eines Zeigers auf eine [**IDirect3DVolumeTexture9-Schnittstelle,**](/win
 
 Typ: **[ **HRESULT**](https://msdn.microsoft.com/library/Bb401631(v=MSDN.10).aspx)**
 
-Wenn die Funktion erfolgreich ausgeführt wird, lautet der Rückgabewert D3D \_ OK. Wenn die Funktion fehlschlägt, kann der Rückgabewert einer der folgenden Werte sein: D3DERR \_ NOTAVAILABLE, D3DERR \_ OUTOFVIDEOMEMORY, D3DERR \_ INVALIDCALL, D3DXERR \_ INVALIDDATA, E \_ OUTOFMEMORY.
+Wenn die Funktion erfolgreich ist, ist der Rückgabewert D3D \_ OK. Wenn die Funktion fehlschlägt, kann der Rückgabewert einen der folgenden Werte haben: D3DERR \_ NOTAVAILABLE, D3DERR \_ OUTOFVIDEOMEMORY, D3DERR \_ INVALIDCALL, D3DXERR \_ INVALIDDATA, E \_ OUTOFMEMORY.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die Compilereinstellung bestimmt auch die Funktionsversion. Wenn Unicode definiert ist, wird der Funktionsaufruf in D3DXCreateVolumeTextureFromFileExW aufgelöst. Andernfalls wird der Funktionsaufruf in D3DXCreateVolumeTextureFromFileExA aufgelöst, da ANSI-Zeichenfolgen verwendet werden.
+Die Compilereinstellung bestimmt auch die Funktionsversion. Wenn Unicode definiert ist, wird der Funktionsaufruf in D3DXCreateVolumeTextureFromFileExWauflösbar. Andernfalls wird der Funktionsaufruf in D3DXCreateVolumeTextureFromFileExA auflösen, da ANSI-Zeichenfolgen verwendet werden.
 
 Diese Funktion unterstützt die folgenden Dateiformate: .bmp, .dds, .dib, .hdr, .jpg, .pfm, .png, .ppm und .tga. Siehe [**D3DXIMAGE \_ FILEFORMAT**](./d3dximage-fileformat.md).
 
@@ -209,7 +209,7 @@ Wenn Sie Mipmapebenen beim Laden einer DDS-Datei überspringen, verwenden Sie da
 
 
 
-| Anforderungen | Wert |
+| Anforderung | Wert |
 |--------------------|---------------------------------------------------------------------------------------|
 | Header<br/>  | <dl> <dt>D3dx9tex.h</dt> </dl> |
 | Bibliothek<br/> | <dl> <dt>D3dx9.lib</dt> </dl>  |

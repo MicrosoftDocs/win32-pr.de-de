@@ -14,12 +14,12 @@ api_type:
 api_location:
 - d3dx9.lib
 - d3dx9.dll
-ms.openlocfilehash: 39fdf4123781b84d87ec1c9d790eb5ffae058892
-ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
+ms.openlocfilehash: 03eb722e68b58ec48a3bf607ab72d67004ad30a0c765b19c1b84ae29577c773b
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2021
-ms.locfileid: "108115828"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118299952"
 ---
 # <a name="d3dxcomputeboundingbox-function-d3dx9meshh"></a>D3DXComputeBoundingBox-Funktion (D3DX9Mesh.h)
 
@@ -58,7 +58,7 @@ Zeiger auf die erste Position.
 
 Typ: **[ **DWORD**](../winprog/windows-data-types.md)**
 
-Anzahl der Scheitelpunkte.
+Anzahl der Scheitelzeichen.
 
 </dd> <dt>
 
@@ -67,7 +67,7 @@ Anzahl der Scheitelpunkte.
 
 Typ: **[ **DWORD**](../winprog/windows-data-types.md)**
 
-Anzahl oder Anzahl der Bytes zwischen Scheitelpunkten.
+Anzahl oder Anzahl von Bytes zwischen Scheitelzeichen.
 
 </dd> <dt>
 
@@ -76,7 +76,7 @@ Anzahl oder Anzahl der Bytes zwischen Scheitelpunkten.
 
 Typ: **[ **D3DXVECTOR3**](d3dxvector3.md)\***
 
-Zeiger auf eine [**D3DXVECTOR3-Struktur,**](d3dxvector3.md) die die zurückgegebene linke untere Ecke des umgebenden Felds beschreibt. Siehe Hinweise.
+Zeiger auf eine [**D3DXVECTOR3-Struktur,**](d3dxvector3.md) die die zurückgegebene linke untere Ecke des Begrenzungsfelds beschreibt. Siehe Hinweise.
 
 </dd> <dt>
 
@@ -85,7 +85,7 @@ Zeiger auf eine [**D3DXVECTOR3-Struktur,**](d3dxvector3.md) die die zurückgegeb
 
 Typ: **[ **D3DXVECTOR3**](d3dxvector3.md)\***
 
-Zeiger auf eine [**D3DXVECTOR3-Struktur,**](d3dxvector3.md) die die zurückgegebene rechte obere Ecke des umgebenden Felds beschreibt. Siehe Hinweise.
+Zeiger auf eine [**D3DXVECTOR3-Struktur,**](d3dxvector3.md) die die zurückgegebene rechte obere Ecke des Begrenzungsfelds beschreibt. Siehe Hinweise.
 
 </dd> </dl>
 
@@ -101,14 +101,14 @@ Wenn die Funktion erfolgreich ist, ist der Rückgabewert D3D \_ OK. Wenn die Fun
 
 
 
-| Anforderungen | Wert |
+| Anforderung | Wert |
 |--------------------|----------------------------------------------------------------------------------------|
 | Header<br/>  | <dl> <dt>D3DX9Mesh.h</dt> </dl> |
 | Bibliothek<br/> | <dl> <dt>D3dx9.lib</dt> </dl>   |
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 

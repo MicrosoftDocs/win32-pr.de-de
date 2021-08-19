@@ -1,32 +1,32 @@
 ---
-title: Was ist das Text Dienst-Framework?
-description: Das Text Dienst Framework (TSF) ist ein Geräte unabhängiges, sprach neutrales und erweiterbares System für Texteingabe-und Sprachtechnologien.
+title: Was ist Textdienstframework
+description: Textdienstframework (TSF) ist ein geräteunabhängiges, sprachneutrales und erweiterbares System für Texteingaben und Sprachtechnologien.
 ms.assetid: fb01bd01-e42f-4470-97bc-6841f31749ac
 keywords:
-- Text Dienste-Framework (TSF), Informationen zu
-- TSF (Text Dienst-Framework), Informationen zu
-- Text Dienste, Info
-- TSF-aktivierte Anwendungen, Informationen zu
+- Textdienstframework (TSF),about
+- TSF (Textdienstframework),about
+- Textdienste,Informationen
+- TSF-fähige Anwendungen,Informationen
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 1ba2df5aff00c01318f1da6209b26c1d87861f2a
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: 3de5107696a196349fd807f753d87dc92b2b9172aa4fdcdce6bb47a6f8db8893
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "104309416"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117949756"
 ---
-# <a name="what-is-text-services-framework"></a>Was ist das Text Services-Framework?
+# <a name="what-is-text-services-framework"></a>Was ist Textdienstframework?
 
-Das Text Dienst Framework (TSF) ist ein Geräte unabhängiges, sprach neutrales und erweiterbares System für Texteingabe-und Sprachtechnologien.
+Textdienstframework (TSF) ist ein geräteunabhängiges, sprachneutrales und erweiterbares System für Texteingaben und Sprachtechnologien.
 
-TSF-aktivierte Anwendungen können Texteingaben von einem beliebigen Text Dienst empfangen, der TSF unterstützt, ohne dass Details der Text Quelle beachtet werden müssen.
+TSF-fähige Anwendungen können Texteingaben von jedem Textdienst empfangen, der TSF unterstützt, ohne details zur Textquelle kennen zu müssen.
 
-Text Dienste stellen Text für Anwendungen auf eine Weise bereit, die keine detaillierten Kenntnisse der Anwendungen erfordert, die den Text entwickeln oder empfangen. Beispielsweise kann ein Text Dienst Texteingaben von Spracheingabe-oder Handschrift Eingabegeräten bereitstellen.
+Textdienste stellen Text für Anwendungen so zur Verfügung, dass keine detaillierten Kenntnisse der Anwendungen erforderlich sind, die den Text erzeugen oder empfangen. Ein Textdienst kann beispielsweise Texteingaben von Spracheingaben oder Handschrifteingabegeräten bereitstellen.
 
- 
+ 
 
- 
+ 
 
 
 

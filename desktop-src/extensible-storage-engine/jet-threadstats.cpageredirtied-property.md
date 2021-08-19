@@ -1,6 +1,6 @@
 ---
-description: 'Weitere Informationen finden Sie hier: JET_THREADSTATS. cPageRedirtied-Eigenschaft'
-title: JET_THREADSTATS. cPageRedirtied-Eigenschaft (Microsoft. ISAM. ESENT. Interop. Vista)
+description: 'Weitere Informationen zu: JET_THREADSTATS.cPageRedirtied-Eigenschaft'
+title: JET_THREADSTATS.cPageRedirtied-Eigenschaft (Microsoft.Isam.Esent.Interop.Vista)
 TOCTitle: 'cPageRedirtied property '
 ms:assetid: P:Microsoft.Isam.Esent.Interop.Vista.JET_THREADSTATS.cPageRedirtied
 ms:mtpsurl: https://msdn.microsoft.com/library/microsoft.isam.esent.interop.vista.jet_threadstats.cpageredirtied(v=EXCHG.10)
@@ -26,19 +26,19 @@ api_type:
 api_location:
 - Microsoft.Isam.Esent.Interop.dll
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: d0ed97a93958ba52231439dc6c2125db982296ad
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 23f17641957ebc51216768e45cd2c4dac6565dc5b43eec3b782719fe9bb49d26
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106363663"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118073065"
 ---
-# <a name="jet_threadstatscpageredirtied-property"></a>JET_THREADSTATS. cPageRedirtied-Eigenschaft
+# <a name="jet_threadstatscpageredirtied-property"></a>JET_THREADSTATS.cPageRedirtied-Eigenschaft
 
-Ruft die Gesamtanzahl der Datenbankseiten mit ungeschriebenen Änderungen ab, die von der Datenbank-Engine im aktuellen Thread geändert wurden.
+Ruft die Gesamtzahl der Datenbankseiten mit nicht geschriebenen Änderungen ab, die von der Datenbank-Engine im aktuellen Thread geändert wurden.
 
-**Namespace:**  [Microsoft. ISAM. ESENT. Interop. Vista](./microsoft.isam.esent.interop.vista-namespace.md)  
-**Assembly:**  Microsoft. ISAM. ESENT. Interop (in Microsoft.Isam.Esent.Interop.dll)
+**Namespace:**  [Microsoft.Isam.Esent.Interop.Vista](./microsoft.isam.esent.interop.vista-namespace.md)  
+**Assembly:**  Microsoft.Isam.Esent.Interop (in Microsoft.Isam.Esent.Interop.dll)
 
 ## <a name="syntax"></a>Syntax
 
@@ -60,14 +60,14 @@ public int cPageRedirtied { get; internal set; }
 
 #### <a name="property-value"></a>Eigenschaftswert
 
-Typ: [System. Int32](/dotnet/api/system.int32)  
+Typ: [System.Int32](/dotnet/api/system.int32)  
 
 ## <a name="see-also"></a>Siehe auch
 
-#### <a name="reference"></a>Referenz
+#### <a name="reference"></a>Verweis
 
 [JET_THREADSTATS Struktur](./jet-threadstats-structure2.md)
 
-[Mitglieder JET_THREADSTATS](./jet-threadstats-members.md)
+[JET_THREADSTATS-Member](./jet-threadstats-members.md)
 
-[Microsoft. ISAM. ESENT. Interop. Vista-Namespace](./microsoft.isam.esent.interop.vista-namespace.md)
+[Microsoft.Isam.Esent.Interop.Vista-Namespace](./microsoft.isam.esent.interop.vista-namespace.md)
