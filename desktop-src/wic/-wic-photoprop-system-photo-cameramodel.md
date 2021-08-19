@@ -1,23 +1,23 @@
 ---
-description: Die fotometadatenrichtlinie für die System. Photo. CameraModel-Eigenschaft.
+description: Die Richtlinie für Fotometadaten für die System.Photo.CameraModel-Eigenschaft.
 ms.assetid: ff85e6ee-dc75-45bc-a406-2290b012c22d
-title: System. Photo. CameraModel Photo Metadata-Richtlinie
+title: System.Photo.CameraModel-Richtlinie für Fotometadaten
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: c2cf9cbb2906f15d02e8d72219862c607d0f515a
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 0e205d4d886d050e45b958f2ba0f06c6411584c4a96a717378f243e5d1dd4fae
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "103868004"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119882050"
 ---
-# <a name="systemphotocameramodel-photo-metadata-policy"></a>System. Photo. CameraModel Photo Metadata-Richtlinie
+# <a name="systemphotocameramodel-photo-metadata-policy"></a>System.Photo.CameraModel-Richtlinie für Fotometadaten
 
-Die fotometadatenrichtlinie für die [System. Photo. CameraModel](../properties/props-system-photo-cameramodel.md) -Eigenschaft.
+Die Richtlinie für Fotometadaten für die [System.Photo.CameraModel-Eigenschaft.](../properties/props-system-photo-cameramodel.md)
 
-### <a name="pkey"></a>Pkey
+### <a name="pkey"></a>PKEY
 
-Pkey- \_ Foto \_ CameraModel
+PKEY \_ Photo \_ CameraModel
 
 ### <a name="containers"></a>Container
 
@@ -27,7 +27,7 @@ JPEG, TIFF
 
 Nein
 
-### <a name="output-propvariant-type"></a>Ausgabe-PROPVARIANT-Typ
+### <a name="output-propvariant-type"></a>PROPVARIANT-Ausgabetyp
 
 VT \_ LPWSTR
 
@@ -35,49 +35,49 @@ VT \_ LPWSTR
 
 Eine Zeichenfolge.
 
-### <a name="conflict-resolution-policy"></a>Richtlinie zur Konfliktlösung
+### <a name="conflict-resolution-policy"></a>Konfliktlösungsrichtlinie
 
-Werte aus unterschiedlichen Schemas sind abgestimmt.
+Werte aus verschiedenen Schemas werden abgestimmt.
 
 ### <a name="jpeg-policy"></a>JPEG-Richtlinie
 
-### <a name="read-paths"></a>Pfade lesen
+### <a name="read-paths"></a>Lesepfade
 
 
 
-| Auftrag | Pfad                   | Datenträger Format |
+| Auftrag | Pfad                   | Datenträgerformat |
 |-------|------------------------|-------------|
-| 1     | /App1/IFD/{ushort = 272} | ascii       |
-| 2     | /XMP/TIFF: Modell        | Unicode     |
-| 3     | /XMP/TIFF: Modell        | Unicode     |
+| 1     | /app1/ifd/{ushort=272} | ascii       |
+| 2     | /xmp/tiff:Model        | Unicode     |
+| 3     | /xmp/tiff:model        | Unicode     |
 
 
 
  
 
-### <a name="write-paths"></a>Schreib Pfade
+### <a name="write-paths"></a>Schreibpfade
 
 
 
-| Auftrag | Pfad                   | Datenträger Format |
+| Auftrag | Pfad                   | Datenträgerformat |
 |-------|------------------------|-------------|
-| 1     | /App1/IFD/{ushort = 272} | ascii       |
-| 2     | /XMP/TIFF: Modell        | Unicode     |
-| 3     | /XMP/TIFF: Modell        | Unicode     |
+| 1     | /app1/ifd/{ushort=272} | ascii       |
+| 2     | /xmp/tiff:Model        | Unicode     |
+| 3     | /xmp/tiff:model        | Unicode     |
 
 
 
  
 
-### <a name="remove-paths"></a>Pfade entfernen
+### <a name="remove-paths"></a>Entfernen von Pfaden
 
 
 
 | Auftrag | Pfad                   |
 |-------|------------------------|
-| 1     | /App1/IFD/{ushort = 272} |
-| 2     | /XMP/TIFF: Modell        |
-| 3     | /XMP/TIFF: Modell        |
+| 1     | /app1/ifd/{ushort=272} |
+| 2     | /xmp/tiff:Model        |
+| 3     | /xmp/tiff:model        |
 
 
 
@@ -85,55 +85,55 @@ Werte aus unterschiedlichen Schemas sind abgestimmt.
 
 ### <a name="tiff-policy"></a>TIFF-Richtlinie
 
-### <a name="read-paths"></a>Pfade lesen
+### <a name="read-paths"></a>Lesepfade
 
 
 
-| Auftrag | Pfad                | Datenträger Format |
+| Auftrag | Pfad                | Datenträgerformat |
 |-------|---------------------|-------------|
-| 1     | /IFD/{ushort = 272}   | ascii       |
-| 2     | /IFD/XMP/TIFF: Modell | Unicode     |
-| 3     | /IFD/XMP/TIFF: Modell | Unicode     |
+| 1     | /ifd/{ushort=272}   | ascii       |
+| 2     | /ifd/xmp/tiff:Model | Unicode     |
+| 3     | /ifd/xmp/tiff:model | Unicode     |
 
 
 
  
 
-### <a name="write-paths"></a>Schreib Pfade
+### <a name="write-paths"></a>Schreibpfade
 
 
 
-| Auftrag | Pfad                | Datenträger Format |
+| Auftrag | Pfad                | Datenträgerformat |
 |-------|---------------------|-------------|
-| 1     | /IFD/{ushort = 272}   | ascii       |
-| 2     | /IFD/XMP/TIFF: Modell | Unicode     |
-| 3     | /IFD/XMP/TIFF: Modell | Unicode     |
+| 1     | /ifd/{ushort=272}   | ascii       |
+| 2     | /ifd/xmp/tiff:Model | Unicode     |
+| 3     | /ifd/xmp/tiff:model | Unicode     |
 
 
 
  
 
-### <a name="remove-paths"></a>Pfade entfernen
+### <a name="remove-paths"></a>Entfernen von Pfaden
 
 
 
 | Auftrag | Pfad                |
 |-------|---------------------|
-| 1     | /IFD/{ushort = 272}   |
-| 2     | /IFD/XMP/TIFF: Modell |
-| 3     | /IFD/XMP/TIFF: Modell |
+| 1     | /ifd/{ushort=272}   |
+| 2     | /ifd/xmp/tiff:Model |
+| 3     | /ifd/xmp/tiff:model |
 
 
 
  
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[System. Photo. CameraModel](../properties/props-system-photo-cameramodel.md)
+[System.Photo.CameraModel](../properties/props-system-photo-cameramodel.md)
 </dt> </dl>
 
  

@@ -1,21 +1,21 @@
 ---
-title: Einfaches Zeichnungs Beispiel
-description: Bei dieser Beispielanwendung handelt es sich um ein sehr einfaches Zeichenprogramm, das die Verwendung von Maus Eingaben, Tastatureingaben und Zugriffstasten Tabellen veranschaulicht.
+title: Einfaches Zeichnungsbeispiel
+description: Diese Beispielanwendung ist ein sehr einfaches Zeichnungsprogramm, das zeigt, wie Mauseingaben, Tastatureingaben und Zugriffstastentabellen verwendet werden.
 ms.assetid: 4E4CCBF3-4FDD-4487-B1F5-A5D0C383226F
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 1d12b60fcde56ada3f58d5cd584fe7e865f4b99a
-ms.sourcegitcommit: 8eac40ea4d87a85e036ed5bbffec7b7a3dab39ec
+ms.openlocfilehash: 5fea34ae27fb1be599400e869f7f1f92086bb0c67cd6d5d5cfe75d04109d798c
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/04/2019
-ms.locfileid: "104556476"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119896920"
 ---
-# <a name="simple-drawing-sample"></a>Einfaches Zeichnungs Beispiel
+# <a name="simple-drawing-sample"></a>Einfaches Zeichnungsbeispiel
 
-Bei dieser Beispielanwendung handelt es sich um ein sehr einfaches Zeichenprogramm, das die Verwendung von Maus Eingaben, Tastatureingaben und Zugriffstasten Tabellen veranschaulicht.
+Diese Beispielanwendung ist ein sehr einfaches Zeichnungsprogramm, das zeigt, wie Mauseingaben, Tastatureingaben und Zugriffstastentabellen verwendet werden.
 
-![Screenshot des Zeichnungs Programms](images/input03.png)
+![Screenshot des Zeichnungsprogramms](images/input03.png)
 
 ## <a name="downloading-the-sample"></a>Herunterladen des Beispiels
 
@@ -23,6 +23,6 @@ Dieses Beispiel ist [hier](https://github.com/microsoft/Windows-classic-samples/
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
-* [Erlernen Sie das Program mieren für Windows: Beispiel Code](learn-to-program-for-windows--sample-code.md)
+* [Informationen zum Programmieren für Windows: Beispielcode](learn-to-program-for-windows--sample-code.md)
 * [Modul 4. Benutzereingabe](module-4--user-input.md)
-* [Benutzereingabe: erweitertes Beispiel](user-input--extended-example.md)
+* [Benutzereingabe: Erweitertes Beispiel](user-input--extended-example.md)

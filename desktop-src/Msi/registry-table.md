@@ -1,32 +1,32 @@
 ---
-description: Die Registrierungs Tabelle enthält die Registrierungsinformationen, die von der Anwendung in der Systemregistrierung festgelegt werden müssen.
+description: Die Registrierungstabelle enthält die Registrierungsinformationen, die die Anwendung in der Systemregistrierung festlegen muss.
 ms.assetid: 809ffd02-cf97-42d8-aed9-c13a14dcd8b4
-title: Registrierungs Tabelle
+title: Registrierungstabelle
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: b16cb2084716ea8cb9830056808e9c6be7da667f
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: e6b76fbc52357cdba68dfdcdda37e6edb3032086bf101788db0cdc69c0281264
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "103959656"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120128990"
 ---
-# <a name="registry-table"></a>Registrierungs Tabelle
+# <a name="registry-table"></a>Registrierungstabelle
 
-Die Registrierungs Tabelle enthält die Registrierungsinformationen, die von der Anwendung in der Systemregistrierung festgelegt werden müssen.
+Die Registrierungstabelle enthält die Registrierungsinformationen, die die Anwendung in der Systemregistrierung festlegen muss.
 
-Die Registrierungs Tabelle weist die folgenden Spalten auf.
+Die Tabelle Registry enthält die folgenden Spalten.
 
 
 
-| Spalte      | Typ                         | Schlüssel | Nullwerte zulässig |
+| Spalte      | Typ                         | Key | Nullwerte zulässig |
 |-------------|------------------------------|-----|----------|
-| Registrierung    | [Bezeichner](identifier.md) | J   | N        |
+| Registrierung    | [Identifier](identifier.md) | J   | N        |
 | Root        | [Integer](integer.md)       | N   | N        |
-| Schlüssel         | [Regfad](regpath.md)       | N   | N        |
-| Name        | [Großformatige](formatted.md)   | N   | J        |
-| Wert       | [Großformatige](formatted.md)   | N   | J        |
-| Komponente\_ | [Bezeichner](identifier.md) | N   | N        |
+| Key         | [RegPath](regpath.md)       | N   | N        |
+| Name        | [Formatiert](formatted.md)   | N   | J        |
+| Wert       | [Formatiert](formatted.md)   | N   | J        |
+| Komponente\_ | [Identifier](identifier.md) | N   | N        |
 
 
 
@@ -36,112 +36,112 @@ Die Registrierungs Tabelle weist die folgenden Spalten auf.
 
 <dl> <dt>
 
-<span id="Registry"></span><span id="registry"></span><span id="REGISTRY"></span>Registrierungs
+<span id="Registry"></span><span id="registry"></span><span id="REGISTRY"></span>Registrierung
 </dt> <dd>
 
-Der Primärschlüssel, der zum Identifizieren eines Registrierungsdaten Satzes verwendet wird.
+Primärschlüssel, der zum Identifizieren eines Registrierungsdatensatzes verwendet wird.
 
 </dd> <dt>
 
-<span id="Root"></span><span id="root"></span><span id="ROOT"></span>Fasst
+<span id="Root"></span><span id="root"></span><span id="ROOT"></span>wurzel
 </dt> <dd>
 
-Der vordefinierte Stamm Schlüssel für den Registrierungs Wert. Geben Sie in diesem Feld den Wert-1 ein, um den Stamm Schlüssel vom Installationstyp abhängig zu machen. Geben Sie einen der anderen Werte in der folgenden Tabelle ein, um zu erzwingen, dass der Registrierungs Wert unter einem bestimmten Stamm Schlüssel geschrieben wird.
+Der vordefinierte Stammschlüssel für den Registrierungswert. Geben Sie in dieses Feld den Wert -1 ein, um den Stammschlüssel vom Installationstyp abhängig zu machen. Geben Sie einen der anderen Werte in der folgenden Tabelle ein, um zu erzwingen, dass der Registrierungswert unter einem bestimmten Stammschlüssel geschrieben wird.
 
 
 
-| Konstante                          | Hexadezimal | Decimal | Stamm Schlüssel                                                                                                                                                                                                                                                                                                                                     |
+| Konstante                          | Hexadezimal | Decimal | Stammschlüssel                                                                                                                                                                                                                                                                                                                                     |
 |-----------------------------------|-------------|---------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| (none)                            | \- 0x001    | -1      | Wenn es sich um eine benutzerspezifische Installation handelt, wird der Registrierungs Wert unter **HKEY \_ Current \_ User** geschrieben. Wenn es sich um eine Computer spezifische Installation handelt, wird der Registrierungs Wert unter **HKEY \_ local \_ Machine** geschrieben. Beachten Sie, dass eine Computer spezifische Installation durch Festlegen der [**ALLUSERS**](allusers.md) -Eigenschaft auf 1 angegeben wird.<br/>                |
-| **msidbregistryrootclassesroot**  | 0x000       | 0       | **HKEY \_ Klassen \_** Stamm: das Installationsprogramm schreibt oder entfernt den Wert aus der **HKCU- \\ Software \\ Klassen** Hive während der Installation im [Installations Kontext](installation-context.md)pro Benutzer.<br/> Der Installer schreibt oder entfernt den Wert aus der **HKLM- \\ Software \\ Klassen** Struktur während der Installation pro Computer.<br/> |
-| **msidbregistryrootcurrentuser**  | 0x001       | 1       | **Aktueller HKEY- \_ \_ Benutzer**                                                                                                                                                                                                                                                                                                                      |
-| **msidbregistryrootlocalmachine** | 0x002       | 2       | **lokaler HKEY- \_ \_ Computer**                                                                                                                                                                                                                                                                                                                     |
-| **msidbregistryrootusers**        | 0x003       | 3       | **HKEY- \_ Benutzer**                                                                                                                                                                                                                                                                                                                              |
+| (none)                            | \- 0x001    | –1      | Wenn es sich um eine benutzerspezifische Installation handelt, wird der Registrierungswert unter **HKEY \_ CURRENT \_ USER** geschrieben. Wenn es sich um eine Computerinstallation handelt, wird der Registrierungswert unter **HKEY \_ LOCAL \_ MACHINE** geschrieben. Beachten Sie, dass eine Installation pro Computer durch Festlegen der [**ALLUSERS-Eigenschaft**](allusers.md) auf 1 angegeben wird.<br/>                |
+| **msidbRegistryRootClassesRoot**  | 0x000       | 0       | **HKEY \_ CLASSES \_ ROOT** Das Installationsprogramm schreibt oder entfernt den Wert während der Installation im [Installationskontext](installation-context.md)pro Benutzer aus der **HKCU-Softwareklassenstruktur. \\ \\**<br/> Das Installationsprogramm schreibt oder entfernt den Wert während der Computerinstallationen aus der **\\ HKLM-Softwareklassenstruktur. \\**<br/> |
+| **msidbRegistryRootCurrentUser**  | 0x001       | 1       | **AKTUELLER \_ \_ HKEY-BENUTZER**                                                                                                                                                                                                                                                                                                                      |
+| **msidbRegistryRootLocalMachine** | 0x002       | 2       | **HKEY \_ LOCAL \_ MACHINE**                                                                                                                                                                                                                                                                                                                     |
+| **msidbRegistryRootUsers**        | 0x003       | 3       | **\_HKEY-BENUTZER**                                                                                                                                                                                                                                                                                                                              |
 
 
 
  
 
-Beachten Sie, dass in der **HKCU** -Hive geschriebene Registrierungseinträge auf eine Komponente verweisen, in der das registrykeypath-Bit in der Spalte Attribute der [Komponenten Tabelle](component-table.md)festgelegt ist. Dadurch wird sichergestellt, dass das Installationsprogramm die erforderlichen Registrierungseinträge schreibt, wenn sich mehrere Benutzer auf demselben Computer befinden.
+Beachten Sie, dass es empfohlen wird, in die **HKCU-Struktur** geschriebene Registrierungseinträge auf eine Komponente zu verweisen, für die das RegistryKeyPath-Bit in der Spalte Attribute der [Tabelle Component](component-table.md)festgelegt ist. Dadurch wird sichergestellt, dass das Installationsprogramm die erforderlichen Registrierungseinträge schreibt, wenn sich mehrere Benutzer auf demselben Computer befinden.
 
 </dd> <dt>
 
-<span id="Key"></span><span id="key"></span><span id="KEY"></span>Wichtigen
+<span id="Key"></span><span id="key"></span><span id="KEY"></span>Schlüssel
 </dt> <dd>
 
-Der lokalisierbare Schlüssel für den Registrierungs Wert.
+Der lokalisierbare Schlüssel für den Registrierungswert.
 
 </dd> <dt>
 
-<span id="Name"></span><span id="name"></span><span id="NAME"></span>Benennen
+<span id="Name"></span><span id="name"></span><span id="NAME"></span>Namen
 </dt> <dd>
 
-Diese Spalte enthält den Namen des Registrierungs Werts (lokalisierbar). Wenn dieser Wert NULL ist, werden die in die Spalte Wert eingegebenen Daten in den Standard Registrierungsschlüssel geschrieben.
+Diese Spalte enthält den Registrierungswertnamen (lokalisierbar). Wenn dies NULL ist, werden die in die Spalte Wert eingegebenen Daten in den Standardregistrierungsschlüssel geschrieben.
 
-Wenn die Value-Spalte NULL ist, haben die Zeichen folgen, die in der folgenden Tabelle in der Spalte "Name" angezeigt werden, eine besondere Bedeutung.
+Wenn die Value-Spalte NULL ist, haben die in der folgenden Tabelle in der Spalte Name angezeigten Zeichenfolgen eine besondere Bedeutung.
 
 
 
 | String | Bedeutung                                                                                                                                                                                          |
 |--------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| \+     | Der Schlüssel muss bei der Installation der Komponente erstellt werden, falls er nicht vorhanden ist.                                                                                                                            |
-| \-     | Wenn die Komponente deinstalliert wird, muss der Schlüssel ggf. mit allen zugehörigen Werten und unter Schlüsseln gelöscht werden.                                                                                     |
-| \*     | Der Schlüssel muss bei der Installation der Komponente erstellt werden, falls er nicht vorhanden ist. Außerdem muss der Schlüssel bei der Deinstallation der Komponente ggf. mit allen zugehörigen Werten und unter Schlüsseln gelöscht werden. |
+| \+     | Der Schlüssel muss erstellt werden, wenn er nicht vorhanden ist, wenn die Komponente installiert wird.                                                                                                                            |
+| \-     | Der Schlüssel muss bei der Deinstallation der Komponente ggf. mit allen werten und Unterschlüsseln gelöscht werden.                                                                                     |
+| \*     | Der Schlüssel muss erstellt werden, wenn er nicht vorhanden ist, wenn die Komponente installiert wird. Darüber hinaus muss der Schlüssel bei der Deinstallation der Komponente mit allen Werten und Unterschlüsseln gelöscht werden, sofern vorhanden. |
 
 
 
  
 
-Beachten Sie, dass die [Tabelle removeregistry](removeregistry-table.md) verwendet werden muss, wenn ein installierter Registrierungsschlüssel mit seinen Werten und unter Schlüsseln gelöscht werden soll, wenn die Komponente installiert ist.
+Beachten Sie, dass die [RemoveRegistry-Tabelle](removeregistry-table.md) verwendet werden muss, wenn ein installierter Registrierungsschlüssel mit ihren Werten und Unterschlüsseln gelöscht werden soll, wenn die Komponente installiert wird.
 
 </dd> <dt>
 
 <span id="Value"></span><span id="value"></span><span id="VALUE"></span>Wert
 </dt> <dd>
 
-Diese Spalte ist der lokalisierbare Registrierungs Wert. Das Feld ist [formatiert](formatted.md). Wenn der Wert einem der folgenden Präfixe (d. h. Wert) angefügt wird, \# % wird der Wert wie in der Tabelle beschrieben interpretiert. Beachten Sie, dass jedes Präfix mit einem Nummern Zeichen ( \# ) beginnt. Wenn der Wert mit zwei oder mehr aufeinander folgenden Nummern Zeichen ( \# ) beginnt, wird der erste \# ignoriert, und der Wert wird als Zeichenfolge interpretiert und gespeichert.
+Diese Spalte ist der lokalisierbare Registrierungswert. Das Feld ist [formatiert.](formatted.md) Wenn der Wert an eines der folgenden Präfixe (d. h. \# % *value)* angefügt ist, wird der Wert wie in der Tabelle beschrieben interpretiert. Beachten Sie, dass jedes Präfix mit einem Nummernzeichen beginnt ( \# ). Wenn der Wert mit zwei oder mehr aufeinander folgenden Nummernzeichen () beginnt, \# wird der erste ignoriert, und der Wert \# wird als Zeichenfolge interpretiert und gespeichert.
 
 
 
 | Präfix | Bedeutung                                                                        |
 |--------|--------------------------------------------------------------------------------|
-| \#Stuben    | Der Wert wird interpretiert und als Hexadezimalwert (reg \_ Binary) gespeichert.      |
-| \#%    | Der Wert wird interpretiert und als erweiterbare Zeichenfolge (reg \_ Expand \_ SZ) gespeichert. |
-| \#     | Der Wert wird interpretiert und als ganze Zahl gespeichert (reg \_ DWORD).                |
+| \#x    | Der Wert wird als Hexadezimalwert (REG BINARY) interpretiert und \_ gespeichert.      |
+| \#%    | Der Wert wird als erweiterbare Zeichenfolge interpretiert und gespeichert (REG \_ EXPAND \_ SZ). |
+| \#     | Der Wert wird als ganze Zahl (REG DWORD) interpretiert und \_ gespeichert.                |
 
 
 
  
 
--   Wenn der Wert die Sequenz Tilde enthält \[ ~ \] , wird der Wert als eine durch Null getrennte Liste von Zeichen folgen (reg \_ \_ MultiSZ) interpretiert. Um z. b. eine Liste anzugeben, die die drei Zeichen folgen a, b und c enthält, verwenden Sie "a \[ ~ \] b \[ ~ \] c".
--   Die Sequenz \[ ~ \] innerhalb des Werts trennt die einzelnen Zeichen folgen und wird als NULL-Zeichen interpretiert und gespeichert.
--   Wenn eine \[ ~ \] der Zeichen folgen Liste vorangestellt ist, werden die Zeichen folgen an alle vorhandenen Registrierungs Wert Zeichenfolgen angehängt. Wenn bereits eine Anfüge Zeichenfolge im Registrierungs Wert vorhanden ist, wird das ursprüngliche Vorkommen der Zeichenfolge entfernt.
--   Wenn ein \[ ~ \] auf das Ende der Zeichen folgen Liste folgt, werden die Zeichen folgen allen vorhandenen Registrierungs Wert Zeichenfolgen vorangestellt. Wenn bereits eine ausstehende Zeichenfolge im Registrierungs Wert vorhanden ist, wird das ursprüngliche Vorkommen der Zeichenfolge entfernt.
--   Wenn ein \[ ~ \] sowohl am Anfang als auch am Ende oder weder am Anfang noch am Ende der Zeichen folgen Liste vorhanden ist, müssen die Zeichen folgen vorhandene Registrierungs Wert Zeichenfolgen ersetzen.
--   Andernfalls wird der Wert interpretiert und als Zeichenfolge (reg \_ SZ) gespeichert.
+-   Wenn der Wert die Sequenzkachel \[ ~ \] enthält, wird der Wert als durch NULL getrennte Liste von Zeichenfolgen (REG \_ MULTI \_ SZ) interpretiert. Um beispielsweise eine Liste mit den drei Zeichenfolgen a, b und c anzugeben, verwenden Sie "a \[ ~ \] b \[ ~ \] c".
+-   Die Sequenz \[ ~ \] innerhalb des Werts trennt die einzelnen Zeichenfolgen und wird als NULL-Zeichen interpretiert und gespeichert.
+-   Wenn ein \[ ~ \] der Zeichenfolgenliste vorangestellt ist, müssen die Zeichenfolgen an alle vorhandenen Registrierungswertzeichenfolgen angefügt werden. Wenn bereits eine Anfügezeichenfolge im Registrierungswert vorhanden ist, wird das ursprüngliche Vorkommen der Zeichenfolge entfernt.
+-   Wenn ein \[ ~ \] auf das Ende der Zeichenfolgenliste folgt, müssen die Zeichenfolgen allen vorhandenen Registrierungswertzeichenfolgen voranzugeht werden. Wenn bereits eine vorausstehende Zeichenfolge im Registrierungswert auftritt, wird das ursprüngliche Vorkommen der Zeichenfolge entfernt.
+-   Wenn sich sowohl am Anfang als auch am Ende oder weder am Anfang noch am Ende der Zeichenfolgenliste befindet, ersetzen die Zeichenfolgen alle vorhandenen \[ ~ \] Registrierungswertzeichenfolgen.
+-   Andernfalls wird der Wert interpretiert und als Zeichenfolge (REG \_ SZ) gespeichert.
 
 </dd> <dt>
 
-<span id="Component_"></span><span id="component_"></span><span id="COMPONENT_"></span>Zulieferern\_
+<span id="Component_"></span><span id="component_"></span><span id="COMPONENT_"></span>Komponente\_
 </dt> <dd>
 
-Externer Schlüssel in die erste Spalte der [Komponenten Tabelle](component-table.md) , die auf die Komponente verweist, mit der die Installation des Registrierungs Werts gesteuert wird.
+Externer Schlüssel in der ersten Spalte der [Tabelle Komponente,](component-table.md) die auf die Komponente verweisen, die die Installation des Registrierungswerts steuert.
 
 </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die Aktionen " [schreiteregistryvalues](writeregistryvalues-action.md) " und " [removeregistryvalues](removeregistryvalues-action.md) " in [*Sequenz Tabellen*](s-gly.md) verarbeiten die Informationen in dieser Tabelle. Weitere Informationen zum Verwenden von *Sequenz Tabellen* finden Sie unter [Verwenden einer Sequenz Tabelle](using-a-sequence-table.md).
+Die [WriteRegistryValues-](writeregistryvalues-action.md) [und RemoveRegistryValues-Aktionen](removeregistryvalues-action.md) in [*Sequenztabellen*](s-gly.md) verarbeiten die Informationen in dieser Tabelle. Informationen zur Verwendung von *Sequenztabellen finden* Sie unter [Verwenden einer Sequenztabelle.](using-a-sequence-table.md)
 
-Die Registrierungsinformationen werden in die Systemregistrierung geschrieben, wenn die entsprechende Komponente für die lokale Installation ausgewählt oder von der Quelle aus ausgeführt wurde.
+Die Registrierungsinformationen werden in die Systemregistrierung geschrieben, wenn die entsprechende Komponente ausgewählt wurde, um lokal installiert oder aus der Quelle ausgeführt zu werden.
 
-Beachten Sie, dass das Installationsprogramm einen Registrierungsschlüssel entfernt, nachdem der letzte Wert oder Unterschlüssel unter dem Schlüssel entfernt wurde. Um zu verhindern, dass ein leerer Registrierungsschlüssel beim Deinstallieren von entfernt wird, schreiben Sie einen Dummy-Wert unter dem Schlüssel, den Sie aufbewahren müssen, und geben Sie in der Spalte Name den Wert + ein. Wenn \* in der Spalte Name ist, wird der Schlüssel mit allen zugehörigen Werten und unter Schlüsseln gelöscht, wenn die Komponente entfernt wird.
+Beachten Sie, dass das Installationsprogramm einen Registrierungsschlüssel entfernt, nachdem der letzte Wert oder Unterschlüssel unter dem Schlüssel entfernt wurde. Um zu verhindern, dass ein leerer Registrierungsschlüssel bei der Deinstallation entfernt wird, schreiben Sie einen Dummywert unter dem Schlüssel, den Sie behalten müssen, und geben Sie + in die Spalte Name ein. Wenn sich in der Spalte Name befindet, wird der Schlüssel mit allen Werten und \* Unterschlüsseln gelöscht, wenn die Komponente entfernt wird.
 
-Eine benutzerdefinierte Aktion kann verwendet werden, um der Registrierungs Tabelle während einer Installation, einer Neuinstallation oder einer Reparatur Transaktion Zeilen hinzuzufügen. Diese Zeilen bleiben in der Registrierungs Tabelle nicht erhalten, und die Informationen sind nur während der aktuellen Transaktion verfügbar. Die benutzerdefinierte Aktion muss daher bei jeder Installation, deinstalstallation oder Reparatur Transaktion ausgeführt werden, die die Informationen in diesen zusätzlichen Zeilen benötigt. Die benutzerdefinierte Aktion muss vor den Aktionen [removeregistryvalues](removeregistryvalues-action.md) und [schreiteregistryvalues](writeregistryvalues-action.md) in der Aktions Sequenz erfolgen.
+Eine benutzerdefinierte Aktion kann verwendet werden, um der Registrierungstabelle während einer Installation, Deinstallation oder Reparaturtransaktion Zeilen hinzuzufügen. Diese Zeilen werden in der Registrierungstabelle nicht beibehalten, und die Informationen sind nur während der aktuellen Transaktion verfügbar. Die benutzerdefinierte Aktion muss daher in jeder Installations-, Deinstallations- oder Reparaturtransaktion ausgeführt werden, die die Informationen in diesen zusätzlichen Zeilen erfordert. Die benutzerdefinierte Aktion muss vor den [Aktionen RemoveRegistryValues](removeregistryvalues-action.md) und [WriteRegistryValues](writeregistryvalues-action.md) in der Aktionssequenz ausgeführt werden.
 
-Informationen zum Sichern eines Registrierungsschlüssels finden Sie in der Tabelle " [msilockpermissionsex](msilockpermissionsex-table.md) " und in der [Tabelle "lockberechtigungs](lockpermissions-table.md)Tabelle".
+Informationen zum Schützen eines Registrierungsschlüssels finden Sie in der [MsiLockPermissionsEx-Tabelle](msilockpermissionsex-table.md) und [der LockPermissions-Tabelle.](lockpermissions-table.md)
 
-## <a name="validation"></a>Überprüfen
+## <a name="validation"></a>Überprüfung
 
 <dl>
 

@@ -1,40 +1,40 @@
 ---
-title: Erstellen von Up-Down Steuerelementen
-description: Sie erstellen auf-ab-Steuerelemente, indem Sie die CreateWindowEx-Funktion aufrufen und die Wert-UpDown- \_ Klasse für den Windows-Klassen Parameter lpClassName übergeben.
+title: Erstellen von Up-Down-Steuerelementen
+description: Sie erstellen Updownsteuerelemente, indem Sie die CreateWindowEx-Funktion aufrufen und den Wert UPDOWN \_ CLASS für den Windows Klassenparameter lpClassName übergeben.
 ms.assetid: 9B7A5F8B-4EE5-413B-A60C-800758DD1120
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 427361d7748270ad9c689867aa8100e95afbd6b0
-ms.sourcegitcommit: 5f33645661bf8c825a7a2e73950b1f4ea0f1cd82
+ms.openlocfilehash: 0089941cd147f0c94dc86f2283fe2c8fa10ba5e141d4a8ef99d689a991668ce7
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/21/2020
-ms.locfileid: "104102455"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120062960"
 ---
-# <a name="how-to-create-up-down-controls"></a>Erstellen von Up-Down Steuerelementen
+# <a name="how-to-create-up-down-controls"></a>Erstellen von Up-Down-Steuerelementen
 
-Sie erstellen auf-ab-Steuerelemente, indem Sie die [**CreateWindowEx**](/windows/desktop/api/winuser/nf-winuser-createwindowexa) -Funktion aufrufen und die Wert- [**UpDown- \_ Klasse**](common-control-window-classes.md) für den Windows-Klassen Parameter *lpClassName* übergeben.
+Sie erstellen Updownsteuerelemente, indem Sie die [**CreateWindowEx-Funktion**](/windows/desktop/api/winuser/nf-winuser-createwindowexa) aufrufen und den Wert [**UPDOWN \_ CLASS**](common-control-window-classes.md) für den Windows Klassenparameter *lpClassName* übergeben.
 
-**Hinweis**    Die [**Funktion**](/windows/desktop/api/Commctrl/nf-commctrl-createupdowncontrol) "Funktion" ist veraltet. Verwenden Sie stattdessen die- `CreateWindowEx` Funktion.
+**Hinweis**   Die [**CreateUpDownControl-Funktion**](/windows/desktop/api/Commctrl/nf-commctrl-createupdowncontrol) ist veraltet. Verwenden Sie `CreateWindowEx` stattdessen die -Funktion.
 
-Das in diesem Thema vorgestellte Codebeispiel verwendet ein auf-ab-Steuerelement, um eine Statusanzeige zu steuern.
+Das in diesem Thema vorgestellte Codebeispiel verwendet ein Auf-Ab-Steuerelement, um eine Statusanzeige zu steuern.
 
-## <a name="what-you-need-to-know"></a>Was Sie wissen müssen
+## <a name="what-you-need-to-know"></a>Wichtige Informationen
 
 ### <a name="technologies"></a>Technologien
 
--   [Windows-Steuerelemente](window-controls.md)
+-   [Windows Steuerelemente](window-controls.md)
 
 ### <a name="prerequisites"></a>Voraussetzungen
 
 -   C/C++
--   Programmieren der Windows-Benutzeroberfläche
+-   Windows Benutzeroberfläche-Programmierung
 
 ## <a name="instructions"></a>Anweisungen
 
 ### <a name="step-1-add-references-to-the-common-controls"></a>Schritt 1: Hinzufügen von Verweisen auf die allgemeinen Steuerelemente
 
-Neben dem Hinzufügen einer Präprozessordirektive, um die Header Datei für allgemeine Steuerelemente einzuschließen, müssen Sie den Linker auch so konfigurieren, dass er auf die neueste Version der allgemeinen Steuerelement Bibliothek
+Neben dem Hinzufügen einer Präprozessordirektive zum Einschließen der Headerdatei für allgemeine Steuerelemente müssen Sie auch den Linker so konfigurieren, dass er auf die neueste Version der Allgemeinen Steuerelementbibliothek verweist.
 
 
 ```C++
@@ -54,7 +54,7 @@ Neben dem Hinzufügen einer Präprozessordirektive, um die Header Datei für all
 
 ### <a name="step-2-forward-declarations"></a>Schritt 2: Weiterleiten von Deklarationen
 
-Deklarieren Sie Handles für das auf-ab-Steuerelement und für seine gleich geordneten Steuerelemente, und leiten Sie die Funktionen, die die Steuerelemente initialisieren und erstellen, auf Weiter.
+Deklarieren Sie Handles für das Up-Down-Steuerelement und die zugehörigen nebengeordneten Steuerelemente, und verweisen Sie vorwärts auf die Funktionen, die die Steuerelemente initialisieren und erstellen.
 
 
 ```C++
@@ -82,7 +82,7 @@ HWND CreateProgBar(HWND);
 
 
 
-Deklarieren Sie einen vorwärts Verweis auf den Fenster Prozessor für das übergeordnete Dialogfeld des auf-ab-Steuer Elements.
+Deklarieren Sie einen Vorwärtsverweis auf den Fensterprozessor für das übergeordnete Dialogfeld des up-down-Steuerelements.
 
 
 ```C++
@@ -91,9 +91,9 @@ INT_PTR CALLBACK UpDownDialogProc(HWND, UINT, WPARAM, LPARAM);
 
 
 
-### <a name="step-3-initialize-the-initcommoncontrolsex-structures-dwsize-member"></a>Schritt 3: Initialisieren Sie den **dwSize** -Member der InitCommonControlsEx-Struktur.
+### <a name="step-3-initialize-the-initcommoncontrolsex-structures-dwsize-member"></a>Schritt 3: Initialisieren des **dwSize-Elements** der INITCOMMONCONTROLSEX-Struktur
 
-Die [**InitCommonControlsEx**](/windows/win32/api/commctrl/ns-commctrl-initcommoncontrolsex) -Struktur enthält die Informationen, die verwendet werden, um allgemeine Steuerelement Klassen aus der dll zu laden. Diese Struktur wird mit der **InitCommonControlsEx** -Funktion verwendet, die die Größe der Struktur erfordert, um Ihre Arbeit zu erledigen.
+Die [**INITCOMMONCONTROLSEX-Struktur**](/windows/win32/api/commctrl/ns-commctrl-initcommoncontrolsex) enthält die Informationen, die zum Laden allgemeiner Steuerelementklassen aus der DLL verwendet werden. Diese Struktur wird mit der **InitCommonControlsEx-Funktion** verwendet, die die Größe der Struktur erfordert, um ihre Aufgabe zu erledigen.
 
 
 ```C++
@@ -103,13 +103,13 @@ icex.dwSize = sizeof(INITCOMMONCONTROLSEX);
 
 
 > [!Note]  
-> Sie müssen den **dwSize** -Member nur einmal initialisieren, aber Sie müssen die **InitCommonControlsEx** -Funktion jedes Mal, wenn Sie ein gemeinsames Steuerelement erstellen, aufgerufen werden.
+> Sie müssen den **dwSize-Member** nur einmal initialisieren, aber Sie müssen die **InitCommonControlsEx-Funktion** jedes Mal aufrufen, wenn Sie ein allgemeines Steuerelement erstellen.
 
- 
+ 
 
-### <a name="step-4-create-a-parent-dialog-box-to-host-the-up-down-control"></a>Schritt 4: Erstellen eines übergeordneten Dialog Felds zum Hosten des Up-Down-Steuer Elements
+### <a name="step-4-create-a-parent-dialog-box-to-host-the-up-down-control"></a>Schritt 4: Erstellen eines übergeordneten Dialogfelds zum Hosten des Up-Down-Steuerelements
 
-Sie können dies als Nachrichten Handler im Hauptfenster Prozessor (*WndProc*) implementieren.
+Sie können dies als Meldungshandler im Hauptfensterprozessor (*WndProc*) implementieren.
 
 
 ```C++
@@ -136,9 +136,9 @@ case WM_COMMAND:
 
 
 
-### <a name="step-5-implement-a-window-processor-for-the-up-down-controls-parent-window"></a>Schritt 5: Implementieren eines Fenster Prozessors für das übergeordnete Fenster des Up-Down Steuer Elements
+### <a name="step-5-implement-a-window-processor-for-the-up-down-controls-parent-window"></a>Schritt 5: Implementieren eines Fensterprozessors für das übergeordnete Fenster des Up-Down-Steuerelements
 
-Wenn das übergeordnete Dialogfeld erstellt wird, wird es mit seinen untergeordneten Fenstern initialisiert – die Steuerelemente, die es übergeordnete Elemente hat. Wenn der Benutzer auf einen der Pfeile auf einen der auf dem Bild-ab-Steuerelement klickt, benachrichtigt das Betriebssystem den Dialog über das Ereignis, indem er eine WM-Benachrichtigungs Meldung sendet, die den Benachrichtigungs Code der **udn- \_ Delta** Torys enthält, der wiederum Informationen zum neuen Wert des Buddy-Fensters enthält. **\_** Der " **WM \_ Notify** Message"-Handler aktualisiert die Statusanzeige mit diesen neuen Informationen.
+Wenn das übergeordnete Dialogfeld erstellt wird, wird es mit seinen untergeordneten Fenstern initialisiert– den Steuerelementen, die es übergeordneten Steuerelementen. Wenn der Benutzer auf einen der Pfeile des Nach-unten-Steuerelements klickt, benachrichtigt das Betriebssystem das Dialogfeld über das Ereignis, indem es eine **WM \_ NOTIFY-Nachricht** sendet, die den Benachrichtigungscode **UDN \_ DELTAPOS** enthält, der wiederum Informationen über den neuen Wert des Fensters enthält. Der **WM NOTIFY-Meldungshandler \_** aktualisiert die Statusanzeige mit diesen neuen Informationen.
 
 
 ```C++
@@ -195,9 +195,9 @@ INT_PTR CALLBACK UpDownDialogProc(HWND hDlg, UINT message, WPARAM wParam, LPARAM
 
 
 
-### <a name="step-6-create-the-buddy-window"></a>Schritt 6: Erstellen des Buddy-Fensters
+### <a name="step-6-create-the-buddy-window"></a>Schritt 6: Erstellen des Fensters "Fenster"
 
-Das Buddy-Fenster des auf-ab-Steuer Elements ist ein Bearbeitungs Steuerelement, und Bearbeitungs Steuerelemente gehören zur Klasse der allgemeinen Standard Steuerelemente. Um ein Bearbeitungs Steuerelement zu verwenden, müssen Sie die **InitCommonControlsEx** -Funktion mit dem Initialisierungs Kennzeichen der **ICC- \_ Standard \_ Klassen** aufzurufen.
+Das Fenster des Up-Down-Steuerelements ist ein Bearbeitungssteuerelement, und Bearbeitungssteuerelemente gehören zur Klasse der allgemeinen Standardsteuerelemente. Um ein Bearbeitungssteuerelement zu verwenden, rufen Sie die **InitCommonControlsEx-Funktion** mit dem INITIALISIERUNGsflag **FÜR \_ \_ STANDARDKLASSEN** auf.
 
 
 ```C++
@@ -226,9 +226,9 @@ HWND CreateUpDnBuddy(HWND hwndParent)
 
 
 
-### <a name="step-7-create-the-up-down-control"></a>Schritt 7: Erstellen des Up-Down-Steuer Elements
+### <a name="step-7-create-the-up-down-control"></a>Schritt 7: Erstellen des Up-Down-Steuerelements
 
-Die auf-ab-Steuerelemente gehören zur auf-ab-Klasse. Um ein auf-ab-Steuerelement zu verwenden, müssen Sie die **InitCommonControlsEx** -Funktion mit dem Initialisierungs Flag für die **\_ UpDown- \_ Klasse** der-Klasse Damit das Steuerelement nach oben gezählt werden kann, wenn der Benutzer auf den Pfeil nach oben klickt, müssen Sie den Bereich und die Richtung des auf-ab-Steuer Elements festlegen. Hierzu senden Sie das Steuerelement eine **UDM- \_** Nachricht, die Werte für obere und untere Grenzen enthält.
+Auf-Ab-Steuerelemente gehören zur Up-Down-Klasse. Um ein Auf-Ab-Steuerelement zu verwenden, rufen Sie die **InitCommonControlsEx-Funktion** mit dem INITIALISIERUNGsflag **DER \_ UPDOWN \_ CLASS** auf. Damit das Steuerelement nach oben gezählt wird, wenn der Benutzer auf den Nach-oben-Pfeil des Steuerelements klickt, müssen Sie den Bereich und die Richtung des Steuerelements nach oben festlegen. Hierzu senden Sie dem Steuerelement eine **UDM \_ SETRANGE-Nachricht,** die Werte für obere und untere Grenzen enthält.
 
 
 ```C++
@@ -258,9 +258,9 @@ HWND CreateUpDnCtl(HWND hwndParent)
 
 
 
-## <a name="up-down-control-sample-code"></a>Beispiel Code für die Up-Down Steuerung
+## <a name="up-down-control-sample-code"></a>Beispielcode für Up-Down-Steuerelement
 
-Dies ist die komplette Implementierung des UpDown-Code Beispiels. Sie können damit experimentieren, indem Sie ein leeres Win32-Projekt erstellen, diesen Code kopieren und in eine leere C++-Datei einfügen und dann eine eigene Header Datei, eine RC-Datei, eine Resource. h-Datei und eine Symbol Datei ( \* . ico) hinzufügen.
+Dies ist die vollständige Implementierung des UpDown-Codebeispiels. Sie können damit experimentieren, indem Sie ein leeres Win32-Projekt erstellen, diesen Code kopieren und in eine leere C++-Datei einfügen und dann Ihre eigene Headerdatei, RC-Datei, resource.h-Datei und eine Symboldatei \* (ICO) hinzufügen.
 
 
 ```C++
@@ -587,12 +587,12 @@ HWND CreateProgBar(HWND hwndParent)
 
 <dl> <dt>
 
-[Verwenden von Up-Down Steuerelementen](using-up-down-controls.md)
+[Verwenden von Up-Down-Steuerelementen](using-up-down-controls.md)
 </dt> <dt>
 
-[Demo zu allgemeinen Windows-Steuerelementen (cppwindowscommoncontrols)](https://github.com/microsoftarchive/msdn-code-gallery-microsoft/tree/master/OneCodeTeam/Windows%20common%20controls%20demo%20(CppWindowsCommonControls)/%5BC++%5D-Windows%20common%20controls%20demo%20(CppWindowsCommonControls)/C++/CppWindowsCommonControls)
+[Demo zu Windows allgemeinen Steuerelementen (CppWindowsCommonControls)](https://github.com/microsoftarchive/msdn-code-gallery-microsoft/tree/master/OneCodeTeam/Windows%20common%20controls%20demo%20(CppWindowsCommonControls)/%5BC++%5D-Windows%20common%20controls%20demo%20(CppWindowsCommonControls)/C++/CppWindowsCommonControls)
 </dt> </dl>
 
- 
+ 
 
- 
+ 

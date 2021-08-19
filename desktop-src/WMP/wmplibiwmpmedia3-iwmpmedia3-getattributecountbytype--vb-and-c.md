@@ -3,7 +3,7 @@ title: IWMPMedia3 getAttributeCountByType-Methode
 description: Die getAttributeCountByType-Methode gibt die Anzahl der Attribute zurück, die dem angegebenen Attributtyp zugeordnet sind.
 ms.assetid: d692635f-f9f1-4d8e-a9c5-9d7fa84f41bd
 keywords:
-- getAttributeCountByType-Methode Windows Media Player
+- getAttributeCountByType-Windows Media Player
 - getAttributeCountByType-Methode Windows Media Player , IWMPMedia3-Schnittstelle
 - IWMPMedia3-Schnittstelle Windows Media Player , getAttributeCountByType-Methode
 topic_type:
@@ -58,26 +58,26 @@ Implements IWMPMedia3.getAttributeCountByType
 *bstrType* \[ In\]
 </dt> <dd>
 
-Eine **System.String,die** der Attributtyp ist.
+Eine **System.String,die** den Attributtyp ist.
 
 </dd> <dt>
 
 *bstrLanguage* \[ In\]
 </dt> <dd>
 
-Eine **System.String-Datei,** die die Sprache ist. Wenn der Wert auf NULL oder eine Zeichenfolge der Länge 0 ("") festgelegt ist, wird die aktuelle Gebietsschemazeichenfolge verwendet. Andernfalls muss der Wert eine gültige RFC 1766-Sprachzeichenfolge wie "en-us" sein.
+Eine **System.String-,** die die Sprache ist. Wenn der Wert auf NULL oder eine Zeichenfolge der Länge 0 (null) festgelegt ist (""), wird die aktuelle Locale String verwendet. Andernfalls muss der Wert eine gültige RFC 1766-Sprachzeichenfolge wie "en-us" sein.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Eine **System.Int32-Datei,** bei der es sich um die Anzahl der Attribute handelt, die dem Typ zugeordnet sind.
+Ein **System.Int32,** das die Anzahl der Attribute ist, die dem Typ zugeordnet sind.
 
 ## <a name="remarks"></a>Hinweise
 
-Diese Methode wird verwendet, um die Anzahl der Attribute zu ermitteln, die einem bestimmten Attributnamen für ein bestimmtes Medienelement entsprechen. Indexnummern können dann an die **getItemInfoByType-Methode** übergeben werden. Dies ist z. B. nützlich, wenn ein Medienelement unter mehreren Medienobjekten kategorisiert wurde.
+Diese Methode wird verwendet, um die Anzahl von Attributen zu finden, die einem bestimmten Attributnamen für ein bestimmtes Medienelement entspricht. Indexnummern können dann an die **getItemInfoByType-Methode übergeben** werden. Dies ist z. B. nützlich, wenn ein Medienelement unter mehreren Genren kategorisiert wurde.
 
-Vor dem Aufrufen dieser Methode benötigen Sie Lesezugriff auf die Bibliothek. Weitere Informationen finden Sie unter [Bibliothekszugriff.](library-access.md)
+Bevor Sie diese Methode aufrufen, müssen Sie über Lesezugriff auf die Bibliothek verfügen. Weitere Informationen finden Sie unter [Bibliothekszugriff.](library-access.md)
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -85,7 +85,7 @@ Vor dem Aufrufen dieser Methode benötigen Sie Lesezugriff auf die Bibliothek. W
 
 | Anforderung | Wert |
 |----------------------|------------------------------------------------------------------------------------------------------------------------|
-| Version<br/>   | Windows Media Player Serie 9 oder höher<br/>                                                                      |
+| Version<br/>   | Windows Media Player 9er Serie oder höher<br/>                                                                      |
 | Namespace<br/> | **WMPLib**<br/>                                                                                                  |
 | Assembly<br/>  | <dl> <dt>Interop.WMPLib.dll (Interop.WMPLib.dll.dll)</dt> </dl> |
 

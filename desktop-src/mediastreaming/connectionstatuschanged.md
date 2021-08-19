@@ -1,9 +1,9 @@
 ---
-title: Connectionstatuschangi-Ereignis
-description: Tritt auf, wenn sich der Netzwerk Verbindungsstatus des Geräts ändert.
+title: ConnectionStatusChanged-Ereignis
+description: Tritt ein, wenn sich der Netzwerkverbindungsstatus des Geräts ändert.
 ms.assetid: d1f04fa5-895e-4e86-9643-e880388dcded
 keywords:
-- Connectionstatuschge-Ereignis Medien-Streaming-API
+- ConnectionStatusChanged-Ereignis- Medienstreaming-API
 topic_type:
 - apiref
 api_name:
@@ -12,16 +12,16 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: a8034cf49298b6523667f2434324a5be9da3b639
-ms.sourcegitcommit: ebd3ce6908ff865f1ef66f2fc96769be0aad82e1
+ms.openlocfilehash: 2ccc19c71b56977a77ac5ec05448ea72eaff79d9e96b42f4f297d7046079f571
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/19/2020
-ms.locfileid: "103726761"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120060430"
 ---
-# <a name="connectionstatuschanged-event"></a>Connectionstatuschangi-Ereignis
+# <a name="connectionstatuschanged-event"></a>ConnectionStatusChanged-Ereignis
 
-Tritt auf, wenn sich der Netzwerk Verbindungsstatus des Geräts ändert.
+Tritt ein, wenn sich der Netzwerkverbindungsstatus des Geräts ändert.
 
 ## <a name="syntax"></a>Syntax
 
@@ -34,16 +34,16 @@ void ConnectionStatusChanged();
 
 ## <a name="parameters"></a>Parameter
 
-Dieses Ereignis weist keine Parameter auf.
+Dieses Ereignis verfügt über keine Parameter.
 
 ## <a name="return-value"></a>Rückgabewert
 
 Dieses Ereignis gibt keinen Wert zurück.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Um Benachrichtigungen von diesem Ereignis zu behandeln, registrieren Sie eine [**connectionstatushandler-Ereignishandlerfunktion**](/previous-versions/windows/desktop/legacy/hh828836(v=vs.85)) mithilfe der [**Add \_ connectionstatuschangi-Methode**](ibasicdevice-add-connectionstatuschanged.md) . Um die Registrierung des Ereignis Handlers aufzuheben, verwenden Sie die Methode [**Remove \_ connectionstatuschangi.**](ibasicdevice-remove-connectionstatuschanged.md)
+Um Benachrichtigungen von diesem Ereignis zu verarbeiten, registrieren Sie eine [**ConnectionStatusHandler-Ereignishandlerfunktion**](/previous-versions/windows/desktop/legacy/hh828836(v=vs.85)) mithilfe der [**add \_ ConnectionStatusChanged-Methode.**](ibasicdevice-add-connectionstatuschanged.md) Verwenden Sie zum Aufheben der Registrierung des Ereignishandlers [**die \_ Remove ConnectionStatusChanged-Methode.**](ibasicdevice-remove-connectionstatuschanged.md)
 
- 
+ 
 
- 
+ 

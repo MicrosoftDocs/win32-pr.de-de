@@ -1,22 +1,22 @@
 ---
-description: Die folgende "winternl. h"-Definition ist die statische Speicheradresse der aktiven Terminal Dienste-Konsolen Sitzungs-ID. Diese aktive Konsolen Sitzungs-ID ist nicht in Versionen des Microsoft Windows-Betriebssystems vor Windows XP definiert.
+description: Die folgende Definition von "Skinl.h" ist die statische Speicheradresse der sitzungs-ID der aktiven Terminaldienstekonsole. Diese aktive Konsolensitzungs-ID ist in Versionen des Microsoft Windows Betriebssystems vor Windows XP nicht definiert.
 ms.assetid: f3022ab8-60ea-490b-a87d-cc1afc99d26f
-title: Die ID der aktiven Konsolen Sitzung wird erhalten.
+title: Abrufen der Sitzungs-ID der aktiven Konsole
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 936db3f8038348864fc90fc55eeb4287a67c45d6
-ms.sourcegitcommit: c7add10d695482e1ceb72d62b8a4ebd84ea050f7
+ms.openlocfilehash: 46f7b23669240f0cd109a48f454ee6f6329f6839221a1677e81b75712430cb42
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "103860996"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120002300"
 ---
-# <a name="getting-the-active-console-session-id"></a>Die ID der aktiven Konsolen Sitzung wird erhalten.
+# <a name="getting-the-active-console-session-id"></a>Abrufen der Sitzungs-ID der aktiven Konsole
 
-Die folgende "winternl. h"-Definition ist die statische Speicheradresse der aktiven Terminal Dienste-Konsolen Sitzungs-ID. Diese aktive Konsolen Sitzungs-ID ist nicht in Versionen des Microsoft Windows-Betriebssystems vor Windows XP definiert.
+Die folgende Definition von "Skinl.h" ist die statische Speicheradresse der sitzungs-ID der aktiven Terminaldienstekonsole. Diese aktive Konsolensitzungs-ID ist in Versionen des Microsoft Windows Betriebssystems vor Windows XP nicht definiert.
 
 > [!Note]  
-> Diese Definition kann sich in zukünftigen Versionen von Windows ändern. Um sicherzustellen, dass Ihre Anwendung in Zukunft weiterhin ordnungsgemäß ausgeführt wird, muss die Anwendung [**WFS getactiveconsolesessionid**](/windows/win32/api/winbase/nf-winbase-wtsgetactiveconsolesessionid)aufrufen.
+> Diese Definition kann sich in zukünftigen Releases von Windows ändern. Um sicherzustellen, dass Ihre Anwendung in Zukunft weiterhin ordnungsgemäß ausgeführt wird, muss Ihre Anwendung [**WTSGetActiveConsoleSessionId**](/windows/win32/api/winbase/nf-winbase-wtsgetactiveconsolesessionid)aufrufen.
 
  
 

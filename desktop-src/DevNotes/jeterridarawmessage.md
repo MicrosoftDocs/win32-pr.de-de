@@ -1,7 +1,7 @@
 ---
-description: Ruft eine unformatierte Meldungs Zeichenfolge ab, wenn ein Fehlercode Bezeichner (IDA) bereitgestellt wird.
+description: Ruft eine unformatierte Meldungszeichenfolge ab, wenn ein Fehlercodebezeichner (Error Code Identifier, IDA) bereitgestellt wird.
 ms.assetid: 3869e0c0-b3ec-4409-b071-04fd793ebf93
-title: Jeterridarawmessage-Funktion
+title: JetErrIDARawMessage-Funktion
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,16 +13,16 @@ api_type:
 - DllExport
 api_location:
 - Msjter40.dll
-ms.openlocfilehash: 8a904a99577a6fa0fd6955f4c78906b470ea96b3
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 39bd07b3ac75bed85ff26dd7f014420ebaca8be16d6f0195d40e9161c0905496
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106369239"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118955759"
 ---
-# <a name="jeterridarawmessage-function"></a>Jeterridarawmessage-Funktion
+# <a name="jeterridarawmessage-function"></a>JetErrIDARawMessage-Funktion
 
-Ruft eine unformatierte Meldungs Zeichenfolge ab, wenn ein Fehlercode Bezeichner (IDA) bereitgestellt wird.
+Ruft eine unformatierte Meldungszeichenfolge ab, wenn ein Fehlercodebezeichner (Error Code Identifier, IDA) bereitgestellt wird.
 
 ## <a name="syntax"></a>Syntax
 
@@ -44,7 +44,7 @@ JET_ERR JetErrIDARawMessage(
 
 <dl> <dt>
 
-*I* 
+*Ida* 
 </dt> <dd>
 
 Eine Zahl, die einem bestimmten Fehlercode zugeordnet ist und dem Benutzer angezeigt wird.
@@ -58,41 +58,41 @@ Ein Zeiger auf die Fehlermeldung.
 
 </dd> <dt>
 
-*cbmessage* 
+*cbMessage* 
 </dt> <dd>
 
-Gibt die Anzahl der Bytes in der Fehlermeldung an.
+Die Anzahl der Bytes in der Fehlermeldung.
 
 </dd> <dt>
 
-*pcbactual* 
+*actual* 
 </dt> <dd>
 
 Ein Zeiger auf die tatsächliche Anzahl der gelesenen Bytes.
 
 </dd> <dt>
 
-*pcontextid* 
+*pContextId* 
 </dt> <dd>
 
-Ein Zeiger auf den Kontext Bezeichner, der der Hilfedatei zugeordnet ist.
+Ein Zeiger auf den Kontextbezeichner, der der Hilfedatei zugeordnet ist.
 
 </dd> <dt>
 
-*pwszhelp/Datei* 
+*pwszHelp/file* 
 </dt> <dd>
 
-Ein Zeiger auf einen Zeiger auf die Datei, in der der Fehler erläutert wird.
+Ein Zeiger auf einen Zeiger auf die Datei, die den Fehler erklärt.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Wenn die Funktion erfolgreich ausgeführt wird, gibt Sie **Jet \_ errsuccess** zurück; andernfalls wird eine nicht formatierte Meldung zurückgegeben, die die Ursache für den Fehler angibt.
+Wenn die Funktion erfolgreich ausgeführt wird, wird **JET \_ errSuccess** zurückgegeben. Andernfalls wird eine unformatierte Meldung zurückgegeben, die den spezifischen Grund für den Fehler angibt.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Dieser Funktion ist keine Import Bibliothek oder Header Datei zugeordnet. Sie müssen ihn mithilfe der [**LoadLibrary**](/windows/win32/api/libloaderapi/nf-libloaderapi-loadlibrarya) -Funktion und der [**GetProcAddress**](/windows/win32/api/libloaderapi/nf-libloaderapi-getprocaddress) -Funktion aufrufen.
+Dieser Funktion ist keine Importbibliothek oder Headerdatei zugeordnet. Sie müssen sie mithilfe der [**Funktionen LoadLibrary**](/windows/win32/api/libloaderapi/nf-libloaderapi-loadlibrarya) und [**GetProcAddress**](/windows/win32/api/libloaderapi/nf-libloaderapi-getprocaddress) aufrufen.
 
 ## <a name="requirements"></a>Anforderungen
 

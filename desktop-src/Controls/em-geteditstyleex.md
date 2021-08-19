@@ -3,7 +3,7 @@ title: EM_GETEDITSTYLEEX (Richedit.h)
 description: Ruft die aktuellen erweiterten Bearbeitungsstilflags ab.
 ms.assetid: 3E81F7BB-404D-4465-982A-3CF6FD9359DA
 keywords:
-- EM_GETEDITSTYLEEX meldungssteuerelemente Windows
+- EM_GETEDITSTYLEEX der Windows Steuerelemente
 topic_type:
 - apiref
 api_name:
@@ -83,7 +83,7 @@ Gibt die erweiterten Bearbeitungsstilflags zurück, die einen oder mehrere der f
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 

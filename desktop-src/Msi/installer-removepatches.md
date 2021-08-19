@@ -1,7 +1,7 @@
 ---
-description: Mit der removepatches-Methode werden ein oder mehrere Patches zu Produkten entfernt, die zum Empfangen des Patches berechtigt sind. Die removepatches-Methode ruft msiremovepatches auf.
+description: Die RemovePatches-Methode entfernt ein oder mehrere Patches für Produkte, die zum Empfangen des Patches berechtigt sind. Die RemovePatches-Methode ruft MsiRemovePatches auf.
 ms.assetid: 09c6ad3a-9f5e-4f9a-82c8-be7e411efd60
-title: Installer. removepatches-Methode
+title: Installer.RemovePatches-Methode
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,16 +13,16 @@ api_type:
 - COM
 api_location:
 - Msi.dll
-ms.openlocfilehash: 2130ae2958f03eb16b5145e5eb61e42f869ad775
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: bfa316b4ff01f6e5667b3fb2c5fce2333c4b4aaf34dc5a1dbb37feb61d1a9ce4
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106355926"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119894030"
 ---
-# <a name="installerremovepatches-method"></a>Installer. removepatches-Methode
+# <a name="installerremovepatches-method"></a>Installer.RemovePatches-Methode
 
-Mit der **removepatches** -Methode werden ein oder mehrere Patches zu Produkten entfernt, die zum Empfangen des Patches berechtigt sind. Die **removepatches** -Methode ruft [**msiremovepatches**](/windows/desktop/api/Msi/nf-msi-msiremovepatchesa)auf.
+Die **RemovePatches-Methode** entfernt ein oder mehrere Patches für Produkte, die zum Empfangen des Patches berechtigt sind. Die **RemovePatches-Methode** ruft [**MsiRemovePatches auf.**](/windows/desktop/api/Msi/nf-msi-msiremovepatchesa)
 
 ## <a name="syntax"></a>Syntax
 
@@ -42,7 +42,7 @@ Installer.RemovePatches(
 
 <dl> <dt>
 
-*Patchliste* 
+*PatchList* 
 </dt> <dd>
 
 Eine Zeichenfolge, die eine durch Semikolons getrennte Liste der zu entfernenden Patches enthält. Jeder Patch kann entweder durch den vollständigen Pfad zum Patchpaket oder durch die Patch-GUID dargestellt werden. Dieser Parameter ist erforderlich.
@@ -52,21 +52,21 @@ Eine Zeichenfolge, die eine durch Semikolons getrennte Liste der zu entfernenden
 *ProductCode* 
 </dt> <dd>
 
-Eine Zeichenfolge mit der GUID des Produkts, von dem die Patches entfernt werden sollen. Dieser Parameter ist erforderlich.
+Eine Zeichenfolge mit der GUID des Produkts, aus dem die Patches entfernt werden sollen. Dieser Parameter ist erforderlich.
 
 </dd> <dt>
 
-*Uninstalltype* 
+*UninstallType* 
 </dt> <dd>
 
-Ein ganzzahliger Wert, der den Typ der Patchentfernung angibt. Dieser Parameter muss " **msiinstalltypesinglabstance**" lauten.
+Ein ganzzahliger Wert, der den Typ der Patchentfernung angibt. Dieser Parameter muss **msiInstallTypeSingleInstance sein.**
 
 </dd> <dt>
 
 *Eigenschaftsliste* 
 </dt> <dd>
 
-Eine Zeichenfolge, die die einzuschließ-Wert Paare der Eigenschaft = Wert angibt. Dieser Parameter ist optional.
+Eine Zeichenfolge, die die property=Value-Paare angibt, die enthalten sein müssen. Dieser Parameter ist optional.
 
 </dd> </dl>
 
@@ -74,9 +74,9 @@ Eine Zeichenfolge, die die einzuschließ-Wert Paare der Eigenschaft = Wert angib
 
 Diese Methode gibt keinen Wert zurück.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Unter [Deinstallieren von Patches](uninstalling-patches.md) finden Sie ein Beispiel, das veranschaulicht, wie eine Anwendung einen Patch von allen Produkten entfernen kann, die für den Benutzer verfügbar sind.
+Unter [Deinstallieren von Patches finden](uninstalling-patches.md) Sie ein Beispiel, das veranschaulicht, wie eine Anwendung einen Patch von allen Produkten entfernen kann, die für den Benutzer verfügbar sind.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -84,9 +84,9 @@ Unter [Deinstallieren von Patches](uninstalling-patches.md) finden Sie ein Beisp
 
 | Anforderung | Wert |
 |--------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Version<br/> | Windows Installer 5,0 unter Windows Server 2012, Windows 8, Windows Server 2008 R2 oder Windows 7. Windows Installer 4,0 oder Windows Installer 4,5 unter Windows Server 2008 oder Windows Vista. Windows Installer 3,0 oder höher unter Windows Server 2003 oder Windows XP.<br/> |
+| Version<br/> | Windows Installer 5.0 auf Windows Server 2012, Windows 8, Windows Server 2008 R2 oder Windows 7. Windows Installer 4.0 oder Windows Installer 4.5 auf Windows Server 2008 oder Windows Vista. Windows Installer 3.0 oder höher auf Windows Server 2003 oder Windows XP.<br/> |
 | DLL<br/>     | <dl> <dt>Msi.dll</dt> </dl>                                                                                                                                                                                    |
-| IID<br/>     | IID \_ iinstaller ist definiert als 000c1090-0000-0000-C000-000000000046<br/>                                                                                                                                                                                         |
+| IID<br/>     | IID \_ IInstaller ist als 000C1090-0000-0000-C000-00000000046 definiert.<br/>                                                                                                                                                                                         |
 
 
 
@@ -97,13 +97,13 @@ Unter [Deinstallieren von Patches](uninstalling-patches.md) finden Sie ein Beisp
 [**ProductCode**](productcode.md)
 </dt> <dt>
 
-[**Msiremovepatches**](/windows/desktop/api/Msi/nf-msi-msiremovepatchesa)
+[**MsiRemovePatches**](/windows/desktop/api/Msi/nf-msi-msiremovepatchesa)
 </dt> <dt>
 
-[Patches werden deinstalliert.](uninstalling-patches.md)
+[Deinstallieren von Patches](uninstalling-patches.md)
 </dt> <dt>
 
-[Wird in Windows Installer 2,0 und früher nicht unterstützt.](not-supported-in-windows-installer-version-2-0.md)
+[Nicht unterstützt in Windows Installer 2.0 und früher](not-supported-in-windows-installer-version-2-0.md)
 </dt> </dl>
 
  

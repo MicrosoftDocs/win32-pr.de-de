@@ -1,19 +1,19 @@
 ---
-description: Bluetooth-Klasse der Positionierung von Geräte Diensten.
+description: Bluetooth Klasse der Gerätedienstpositionierung.
 ms.assetid: 4183501e-d5a8-4b78-a419-98b7fa8e4fd6
-title: System. Devices. aep. Bluetooth. COD. Services. Positionierung
+title: System.Devices.Aep. Bluetooth. Cod.Services.Positioning
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: eea1a06322077b814ed1376943a0cb56496140e1
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 662a814e62ec2038a02e10a073303be79433fc8e383b3811cb0403dbd474f3f3
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106368838"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119885910"
 ---
-# <a name="systemdevicesaepbluetoothcodservicespositioning"></a>System. Devices. aep. Bluetooth. COD. Services. Positionierung
+# <a name="systemdevicesaepbluetoothcodservicespositioning"></a>System.Devices.Aep. Bluetooth. Cod.Services.Positioning
 
-Bluetooth-Klasse der Positionierung von Geräte Diensten.
+Bluetooth Klasse der Gerätedienstpositionierung.
 
 ## <a name="windows-10-version-1703-windows-10-version-1607-windows-10-version-1511"></a>Windows 10, Version 1703, Windows 10, Version 1607, Windows 10, Version 1511
 
@@ -31,54 +31,54 @@ propertyDescription
       IsInnate = true
 ```
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Pkey-Werte werden in "propkey. h" definiert.
+PKEY-Werte werden in Propkey.h definiert.
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[propertydescription](./propdesc-schema-propertydescription.md)
+[propertyDescription](./propdesc-schema-propertydescription.md)
 </dt> <dt>
 
-[SearchInfo](./propdesc-schema-searchinfo.md)
+[searchInfo](./propdesc-schema-searchinfo.md)
 </dt> <dt>
 
-[Labelinfo](./propdesc-schema-labelinfo.md)
+[labelInfo](./propdesc-schema-labelinfo.md)
 </dt> <dt>
 
-[TypeInfo](./propdesc-schema-typeinfo.md)
+[Typeinfo](./propdesc-schema-typeinfo.md)
 </dt> <dt>
 
-[Display Info](./propdesc-schema-displayinfo.md)
+[displayInfo](./propdesc-schema-displayinfo.md)
 </dt> <dt>
 
-[StringFormat](./propdesc-schema-stringformat.md)
+[Stringformat](./propdesc-schema-stringformat.md)
 </dt> <dt>
 
-[BooleanFormat](./propdesc-schema-booleanformat.md)
+[booleanFormat](./propdesc-schema-booleanformat.md)
 </dt> <dt>
 
-[NumberFormat](./propdesc-schema-numberformat.md)
+[Numberformat](./propdesc-schema-numberformat.md)
 </dt> <dt>
 
 [dateTimeFormat](./propdesc-schema-datetimeformat.md)
 </dt> <dt>
 
-[enumeratedlist](./propdesc-schema-enumeratedlist.md)
+[enumeratedList](./propdesc-schema-enumeratedlist.md)
 </dt> <dt>
 
-[DrawControl](./propdesc-schema-drawcontrol.md)
+[drawControl](./propdesc-schema-drawcontrol.md)
 </dt> <dt>
 
-[editcontrol](./propdesc-schema-editcontrol.md)
+[editControl](./propdesc-schema-editcontrol.md)
 </dt> <dt>
 
-[FilterControl](./propdesc-schema-filtercontrol.md)
+[Filtercontrol](./propdesc-schema-filtercontrol.md)
 </dt> <dt>
 
-[querycontrol](./propdesc-schema-querycontrol.md)
+[queryControl](./propdesc-schema-querycontrol.md)
 </dt> </dl>
 
  

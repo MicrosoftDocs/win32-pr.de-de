@@ -7,13 +7,13 @@
         - name: Virtueller Adressraum
           href: virtual-address-space.md
           items:
-            - name: Virtueller Adressraum und physischer Speicher
+            - name: Virtueller Adressraum und physische Storage
               href: virtual-address-space-and-physical-storage.md
             - name: Arbeitssatz
               href: working-set.md
-            - name: Seiten Status
+            - name: Seitenstatus
               href: page-state.md
-            - name: Bereich von zugewiesener Arbeitsspeicher
+            - name: Bereich des zugeordneten Arbeitsspeichers
               href: scope-of-allocated-memory.md
             - name: Datenausführungsverhinderung
               href: data-execution-prevention.md
@@ -21,86 +21,86 @@
               href: memory-protection.md
             - name: Grenzwerte für den Arbeitsspeicher für Versionen von Windows und Windows Server
               href: memory-limits-for-windows-releases.md
-        - name: Speicher Pools
+        - name: Speicherpools
           href: memory-pools.md
-        - name: Informationen zur Speicherleistung
+        - name: Arbeitsspeicherleistungsinformationen
           href: memory-performance-information.md
         - name: Funktionen des virtuellen Arbeitsspeichers
           href: virtual-memory-functions.md
           items:
-            - name: Zuordnen des virtuellen Speichers
+            - name: Zuordnen von virtuellem Arbeitsspeicher
               href: allocating-virtual-memory.md
-            - name: Freigeben von virtuellem Speicher
+            - name: Freier virtueller Arbeitsspeicher
               href: freeing-virtual-memory.md
-            - name: Arbeiten mit Seiten
+            - name: Arbeiten mit Pages
               href: working-with-pages.md
-        - name: Heap Funktionen
+        - name: Heapfunktionen
           href: heap-functions.md
           items:
-            - name: Heap mit niedriger Fragmentierung
+            - name: Heap mit geringer Fragmentierung
               href: low-fragmentation-heap.md
-        - name: Datei Zuordnung
+        - name: Dateizuordnung
           href: file-mapping.md
           items:
-            - name: Erstellen eines Datei Mapping-Objekts
+            - name: Erstellen eines Dateizuordnungsobjekts
               href: creating-a-file-mapping-object.md
             - name: Erstellen einer Dateiansicht
               href: creating-a-file-view.md
             - name: Freigeben von Dateien und Arbeitsspeicher
               href: sharing-files-and-memory.md
-            - name: Lesen und schreiben aus einer Dateiansicht
+            - name: Lesen und Schreiben aus einer Dateiansicht
               href: reading-and-writing-from-a-file-view.md
-            - name: Schließen eines Datei Mapping-Objekts
+            - name: Schließen eines Dateizuordnungsobjekts
               href: closing-a-file-mapping-object.md
-            - name: Sicherheit und Zugriffsrechte für die Datei Zuordnung
+            - name: Sicherheit und Zugriffsrechte für die Dateizuordnung
               href: file-mapping-security-and-access-rights.md
-        - name: Unterstützung großer Arbeitsspeicher
+        - name: Unterstützung für großen Arbeitsspeicher
           href: large-memory-support.md
           items:
-            - name: '4-Gigabyte-Optimierung: bcdedit und Boot.ini'
+            - name: '4-Gigabyte-Optimierung: BCDEdit und Boot.ini'
               href: 4-gigabyte-tuning.md
             - name: Physical Address Extension
               href: physical-address-extension.md
-            - name: Address windowingextensions
+            - name: Adressfenstererweiterungen
               href: address-windowing-extensions.md
-            - name: Large-Page Unterstützung
+            - name: Large-Page Support
               href: large-page-support.md
         - name: Globale und lokale Funktionen
           href: global-and-local-functions.md
-        - name: Standard-C-Bibliotheksfunktionen
+        - name: C-Standardbibliotheksfunktionen
           href: standard-c-library-functions.md
-        - name: Vergleichen von Speicher Belegungs Methoden
+        - name: Vergleichen von Speicherzuordnungsmethoden
           href: comparing-memory-allocation-methods.md
     - name: Verwenden der Speicherverwaltungsfunktionen
       href: using-the-memory-management-functions.md
       items:
-        - name: Reservieren und Commit des Arbeitsspeichers
+        - name: Reservieren und Committen von Arbeitsspeicher
           href: reserving-and-committing-memory.md
-        - name: Erstellen von Wächter Seiten
+        - name: Erstellen von Schutzseiten
           href: creating-guard-pages.md
-        - name: Auflisten eines Heaps
+        - name: Aufzählen eines Heaps
           href: enumerating-a-heap.md
-        - name: Prozess Heaps werden erhalten.
+        - name: Abrufen von Prozesshaps
           href: getting-process-heaps.md
-        - name: Verwenden der Datei Zuordnung
+        - name: Verwenden der Dateizuordnung
           href: using-file-mapping.md
           items:
-            - name: Erstellen einer Ansicht in einer Datei
+            - name: Erstellen einer Ansicht innerhalb einer Datei
               href: creating-a-view-within-a-file.md
-            - name: Erstellen von benanntem Shared Memory
+            - name: Erstellen von benanntem freigegebenen Speicher
               href: creating-named-shared-memory.md
-            - name: Erstellen einer Datei Zuordnung mithilfe von großen Seiten
+            - name: Erstellen einer Dateizuordnung mit großen Seiten
               href: creating-a-file-mapping-using-large-pages.md
-            - name: Abrufen eines Datei namens aus einem Datei Handle
+            - name: Abrufen eines Dateinamens aus einem Dateihand handle
               href: obtaining-a-file-name-from-a-file-handle.md
         - name: AWE-Beispiel
           href: awe-example.md
-        - name: Belegen von Speicher aus einem NUMA-Knoten
+        - name: Zuordnen von Arbeitsspeicher aus einem NUMA-Knoten
           href: allocating-memory-from-a-numa-node.md
     - name: Referenz zur Speicherverwaltung
       href: memory-management-reference.md
       items:
-        - name: Arbeitsspeicherverwaltungs-Enumerationen
+        - name: Speicherverwaltungsenumeration
           href: memory-management-enumerations.md
           items:
             - name: HEAP_INFORMATION_CLASS
@@ -110,35 +110,35 @@
         - name: Speicherverwaltungsfunktionen
           href: memory-management-functions.md
           items:
-            - name: Addsecurememorycachecallback
+            - name: AddSecureMemoryCacheCallback
               href: /windows/desktop/api/WinBase/nf-winbase-addsecurememorycachecallback
-            - name: '"Zuordnung"'
+            - name: AllocateUserPhysicalPages
               href: /windows/desktop/api/memoryapi/nf-memoryapi-allocateuserphysicalpages
-            - name: Zuordnung von "Zuweisung"
+            - name: AllocateUserPhysicalPagesNuma
               href: /windows/desktop/api/memoryapi/nf-memoryapi-allocateuserphysicalpagesnuma
-            - name: Badmemorycallbackroutine
+            - name: BadMemoryCallbackRoutine
               href: /previous-versions/windows/desktop/legacy/hh691011(v=vs.85)
             - name: CopyMemory
               href: /previous-versions/windows/desktop/legacy/aa366535(v=vs.85)
-            - name: '"Kreateenclave"'
+            - name: CreateEnclave
               href: /windows/desktop/api/enclaveapi/nf-enclaveapi-createenclave
-            - name: '"Kreatefilemappinga"'
+            - name: CreateFileMappingA
               href: /windows/win32/api/winbase/nf-winbase-createfilemappinga
-            - name: '"Kreatefilemappingw"'
+            - name: CreateFileMappingW
               href: /windows/win32/api/memoryapi/nf-memoryapi-createfilemappingw
             - name: CreateFileMapping2
               href: /windows/win32/api/memoryapi/nf-memoryapi-createfilemapping2
             - name: CreateFileMappingFromApp
               href: /windows/desktop/api/MemoryApi/nf-memoryapi-createfilemappingfromapp
-            - name: '"Kreatefilemappingnuma"'
+            - name: CreateFileMappingNuma
               href: /windows/desktop/api/WinBase/nf-winbase-createfilemappingnumaa
-            - name: '"Kreatememoryresourcenotifi"'
+            - name: CreateMemoryResourceNotification
               href: /windows/desktop/api/memoryapi/nf-memoryapi-creatememoryresourcenotification
-            - name: Verwerfen von virtualmemory
+            - name: DiscardVirtualMemory
               href: /windows/desktop/api/memoryapi/nf-memoryapi-discardvirtualmemory
             - name: FillMemory
               href: /previous-versions/windows/desktop/legacy/aa366561(v=vs.85)
-            - name: Flushviewoffile
+            - name: FlushViewOfFile
               href: /windows/desktop/api/memoryapi/nf-memoryapi-flushviewoffile
             - name: FreeUserPhysicalPages
               href: /windows/desktop/api/memoryapi/nf-memoryapi-freeuserphysicalpages
@@ -146,47 +146,47 @@
               href: /windows/desktop/api/memoryapi/nf-memoryapi-getlargepageminimum
             - name: GetMappedFileName
               href: /windows/desktop/api/psapi/nf-psapi-getmappedfilenamea
-            - name: Getmemoryerrorhandling-Funktionen
+            - name: GetMemoryErrorHandlingCapabilities
               href: /windows/desktop/api/memoryapi/nf-memoryapi-getmemoryerrorhandlingcapabilities
-            - name: Getphysicallyinstalledsystemmemory
+            - name: GetPhysicallyInstalledSystemMemory
               href: /windows/desktop/api/sysinfoapi/nf-sysinfoapi-getphysicallyinstalledsystemmemory
-            - name: Getprocessdeppolicy
+            - name: GetProcessDEPPolicy
               href: /windows/desktop/api/WinBase/nf-winbase-getprocessdeppolicy
             - name: GetProcessHeap
               href: /windows/desktop/api/HeapApi/nf-heapapi-getprocessheap
             - name: GetProcessHeaps
               href: /windows/desktop/api/HeapApi/nf-heapapi-getprocessheaps
-            - name: Getsystemdeppolicy
+            - name: GetSystemDEPPolicy
               href: /windows/desktop/api/WinBase/nf-winbase-getsystemdeppolicy
-            - name: Getsystemflecachesize
+            - name: GetSystemFileCacheSize
               href: /windows/desktop/api/memoryapi/nf-memoryapi-getsystemfilecachesize
-            - name: Getschreitewatch
+            - name: GetWriteWatch
               href: /windows/desktop/api/memoryapi/nf-memoryapi-getwritewatch
-            - name: GlobalAlloc
+            - name: Globalalloc
               href: /windows/desktop/api/WinBase/nf-winbase-globalalloc
-            - name: Globalverwerfen
+            - name: GlobalDiscard
               href: /windows/desktop/api/WinBase/nf-winbase-globaldiscard
-            - name: Globalflags
+            - name: GlobalFlags
               href: /windows/desktop/api/WinBase/nf-winbase-globalflags
             - name: GlobalFree
               href: /windows/desktop/api/WinBase/nf-winbase-globalfree
-            - name: Globalhandle
+            - name: GlobalHandle
               href: /windows/desktop/api/WinBase/nf-winbase-globalhandle
             - name: GlobalLock
               href: /windows/desktop/api/WinBase/nf-winbase-globallock
             - name: GlobalMemoryStatus
               href: /windows/desktop/api/WinBase/nf-winbase-globalmemorystatus
-            - name: GlobalMemoryStatus usex
+            - name: GlobalMemoryStatusEx
               href: /windows/desktop/api/sysinfoapi/nf-sysinfoapi-globalmemorystatusex
-            - name: Globalrezuweisung
+            - name: GlobalReAlloc
               href: /windows/desktop/api/WinBase/nf-winbase-globalrealloc
-            - name: Globalsize
+            - name: GlobalSize
               href: /windows/desktop/api/WinBase/nf-winbase-globalsize
             - name: GlobalUnlock
               href: /windows/desktop/api/WinBase/nf-winbase-globalunlock
-            - name: Heapzuweisung
+            - name: HeapAlloc
               href: /windows/desktop/api/HeapApi/nf-heapapi-heapalloc
-            - name: Heapcompact
+            - name: HeapCompact
               href: /windows/desktop/api/HeapApi/nf-heapapi-heapcompact
             - name: '  HeapCreate'
               href: /windows/desktop/api/HeapApi/nf-heapapi-heapcreate
@@ -194,55 +194,55 @@
               href: /windows/desktop/api/HeapApi/nf-heapapi-heapdestroy
             - name: HeapFree
               href: /windows/desktop/api/HeapApi/nf-heapapi-heapfree
-            - name: Heaplock
+            - name: HeapLock
               href: /windows/desktop/api/HeapApi/nf-heapapi-heaplock
-            - name: Heapqueryinformation
+            - name: HeapQueryInformation
               href: /windows/desktop/api/HeapApi/nf-heapapi-heapqueryinformation
-            - name: Heaprezuweisung
+            - name: HeapReAlloc
               href: /windows/desktop/api/HeapApi/nf-heapapi-heaprealloc
             - name: HeapSetInformation
               href: /windows/desktop/api/HeapApi/nf-heapapi-heapsetinformation
-            - name: HEAPSIZE
+            - name: HeapSize
               href: /windows/desktop/api/HeapApi/nf-heapapi-heapsize
-            - name: Heapunlock
+            - name: HeapUnlock
               href: /windows/desktop/api/HeapApi/nf-heapapi-heapunlock
-            - name: Heapvalidate
+            - name: HeapValidate
               href: /windows/desktop/api/HeapApi/nf-heapapi-heapvalidate
-            - name: Heapwalk
+            - name: HeapWalk
               href: /windows/desktop/api/HeapApi/nf-heapapi-heapwalk
-            - name: Initializeenclave
+            - name: InitializeEnclave
               href: /windows/desktop/api/enclaveapi/nf-enclaveapi-initializeenclave
-            - name: Isbadcodeptr
+            - name: IsBadCodePtr
               href: /windows/desktop/api/WinBase/nf-winbase-isbadcodeptr
-            - name: Isbadumptr
+            - name: IsBadReadPtr
               href: /windows/desktop/api/WinBase/nf-winbase-isbadreadptr
-            - name: Isbadstringptr
+            - name: IsBadStringPtr
               href: /windows/desktop/api/WinBase/nf-winbase-isbadstringptra
-            - name: Isbadschreiteptr
+            - name: IsBadWritePtr
               href: /windows/desktop/api/WinBase/nf-winbase-isbadwriteptr
-            - name: Isenvetypesupportiert
+            - name: IsEnclaveTypeSupported
               href: /windows/desktop/api/enclaveapi/nf-enclaveapi-isenclavetypesupported
-            - name: Loadenclavedata
+            - name: LoadEnclaveData
               href: /windows/desktop/api/enclaveapi/nf-enclaveapi-loadenclavedata
-            - name: Localzuweisung
+            - name: LocalAlloc
               href: /windows/desktop/api/WinBase/nf-winbase-localalloc
-            - name: Localdiscard
+            - name: LocalDiscard
               href: /windows/desktop/api/minwinbase/nf-minwinbase-localdiscard
-            - name: Localflags
+            - name: LocalFlags
               href: /windows/desktop/api/WinBase/nf-winbase-localflags
-            - name: Von LocalFree
+            - name: LocalFree
               href: /windows/desktop/api/WinBase/nf-winbase-localfree
-            - name: Localhandle
+            - name: LocalHandle
               href: /windows/desktop/api/WinBase/nf-winbase-localhandle
-            - name: Loczuweisung
+            - name: LocalLock
               href: /windows/desktop/api/WinBase/nf-winbase-locallock
-            - name: Localrezuweisung
+            - name: LocalReAlloc
               href: /windows/desktop/api/WinBase/nf-winbase-localrealloc
-            - name: Localsize
+            - name: LocalSize
               href: /windows/desktop/api/WinBase/nf-winbase-localsize
-            - name: Localunlock
+            - name: LocalUnlock
               href: /windows/desktop/api/WinBase/nf-winbase-localunlock
-            - name: ''' MapViewOfFile '''
+            - name: MapViewOfFile
               href: /windows/desktop/api/memoryapi/nf-memoryapi-mapviewoffile
             - name: MapViewOfFile2
               href: /windows/desktop/api/memoryapi/nf-memoryapi-mapviewoffile2
@@ -250,9 +250,9 @@
               href: /windows/desktop/api/MemoryApi/nf-memoryapi-mapviewoffile3
             - name: MapViewOfFile3FromApp
               href: /windows/desktop/api/MemoryApi/nf-memoryapi-mapviewoffile3fromapp
-            - name: Fehler bei MapViewOfFileEx
+            - name: MapViewOfFileEx
               href: /windows/desktop/api/memoryapi/nf-memoryapi-mapviewoffileex
-            - name: Mapviewoffileexnuma
+            - name: MapViewOfFileExNuma
               href: /windows/desktop/api/WinBase/nf-winbase-mapviewoffileexnuma
             - name: MapViewOfFileFromApp
               href: /windows/desktop/api/MemoryApi/nf-memoryapi-mapviewoffilefromapp
@@ -260,83 +260,83 @@
               href: /windows/desktop/api/memoryapi/nf-memoryapi-mapviewoffilenuma2
             - name: MapUserPhysicalPages
               href: /windows/desktop/api/memoryapi/nf-memoryapi-mapuserphysicalpages
-            - name: Mapuserphysicalpagesscatcher
+            - name: MapUserPhysicalPagesScatter
               href: /windows/desktop/api/WinBase/nf-winbase-mapuserphysicalpagesscatter
-            - name: Arbeitsspeicher
+            - name: MoveMemory
               href: /previous-versions/windows/desktop/legacy/aa366788(v=vs.85)
-            - name: Fehler bei OpenFileMapping
+            - name: OpenFileMapping
               href: /windows/desktop/api/WinBase/nf-winbase-openfilemappinga
             - name: OpenFileMappingFromApp
               href: /windows/desktop/api/MemoryApi/nf-memoryapi-openfilemappingfromapp
-            - name: Offervirtualmemory
+            - name: OfferVirtualMemory
               href: /windows/desktop/api/memoryapi/nf-memoryapi-offervirtualmemory
-            - name: Prefetchvirtualmemory
+            - name: PrefetchVirtualMemory
               href: /windows/desktop/api/memoryapi/nf-memoryapi-prefetchvirtualmemory
-            - name: QueryMemoryResourceNotification ermittelt
+            - name: QueryMemoryResourceNotification
               href: /windows/desktop/api/memoryapi/nf-memoryapi-querymemoryresourcenotification
-            - name: Queryvirtualmemoryinformation
+            - name: QueryVirtualMemoryInformation
               href: /windows/desktop/api/MemoryApi/nf-memoryapi-queryvirtualmemoryinformation
-            - name: '"Read processmemory"'
+            - name: ReadProcessMemory
               href: /windows/desktop/api/MemoryApi/nf-memoryapi-readprocessmemory
-            - name: Reclaimvirtualmemory
+            - name: ReclaimVirtualMemory
               href: /windows/desktop/api/memoryapi/nf-memoryapi-reclaimvirtualmemory
-            - name: Registerbadmemorynotification
+            - name: RegisterBadMemoryNotification
               href: /windows/desktop/api/memoryapi/nf-memoryapi-registerbadmemorynotification
-            - name: Removesecurememorycachecallback
+            - name: RemoveSecureMemoryCacheCallback
               href: /windows/desktop/api/WinBase/nf-winbase-removesecurememorycachecallback
-            - name: Resetschreitewatch
+            - name: ResetWriteWatch
               href: /windows/desktop/api/memoryapi/nf-memoryapi-resetwritewatch
-            - name: Securememorycachecallback
+            - name: SecureMemoryCacheCallback
               href: /windows/desktop/api/WinNT/nc-winnt-psecure_memory_cache_callback
-            - name: Securezeromemory
+            - name: SecureZeroMemory
               href: /previous-versions/windows/desktop/legacy/aa366877(v=vs.85)
-            - name: Setprocessdeppolicy
+            - name: SetProcessDEPPolicy
               href: /windows/desktop/api/WinBase/nf-winbase-setprocessdeppolicy
-            - name: Setprocessvalidcalltargets
+            - name: SetProcessValidCallTargets
               href: /windows/desktop/api/memoryapi/nf-memoryapi-setprocessvalidcalltargets
-            - name: Setsystemsplecachesize
+            - name: SetSystemFileCacheSize
               href: /windows/desktop/api/memoryapi/nf-memoryapi-setsystemfilecachesize
-            - name: Fehler bei UnmapViewOfFile
+            - name: UnmapViewOfFile
               href: /windows/desktop/api/memoryapi/nf-memoryapi-unmapviewoffile
             - name: UnmapViewOfFile2
               href: /windows/desktop/api/memoryapi/nf-memoryapi-unmapviewoffile2
-            - name: Unmapviewoffileex
+            - name: UnmapViewOfFileEx
               href: /windows/desktop/api/memoryapi/nf-memoryapi-unmapviewoffileex
-            - name: Unregisterbadmemorynotification
+            - name: UnregisterBadMemoryNotification
               href: /windows/desktop/api/memoryapi/nf-memoryapi-unregisterbadmemorynotification
-            - name: VirtualAlloc
+            - name: Virtualalloc
               href: /windows/desktop/api/memoryapi/nf-memoryapi-virtualalloc
             - name: VirtualAlloc2
               href: /windows/desktop/api/MemoryApi/nf-memoryapi-virtualalloc2
             - name: VirtualAlloc2FromApp
               href: /windows/desktop/api/MemoryApi/nf-memoryapi-virtualallocfromapp
-            - name: Virtualzuweisung
+            - name: VirtualAllocEx
               href: /windows/desktop/api/memoryapi/nf-memoryapi-virtualallocex
-            - name: Virtualzuweisung-exnuma
+            - name: VirtualAllocExNuma
               href: /windows/desktop/api/memoryapi/nf-memoryapi-virtualallocexnuma
-            - name: Virtualzuzuweisung
+            - name: VirtualAllocFromApp
               href: /windows/desktop/api/MemoryApi/nf-memoryapi-virtualallocfromapp
-            - name: VirtualFree
+            - name: Virtualfree
               href: /windows/desktop/api/memoryapi/nf-memoryapi-virtualfree
             - name: VirtualFreeEx
               href: /windows/desktop/api/memoryapi/nf-memoryapi-virtualfreeex
-            - name: Virtuzuweisung
+            - name: VirtualLock
               href: /windows/desktop/api/memoryapi/nf-memoryapi-virtuallock
             - name: VirtualProtect
               href: /windows/desktop/api/memoryapi/nf-memoryapi-virtualprotect
-            - name: Virtualprotectex
+            - name: VirtualProtectEx
               href: /windows/desktop/api/memoryapi/nf-memoryapi-virtualprotectex
             - name: VirtualProtectFromApp
               href: /windows/desktop/api/MemoryApi/nf-memoryapi-virtualprotectfromapp
-            - name: VirtualQuery
+            - name: Virtualquery
               href: /windows/desktop/api/memoryapi/nf-memoryapi-virtualquery
-            - name: Virtualqueryex
+            - name: VirtualQueryEx
               href: /windows/desktop/api/memoryapi/nf-memoryapi-virtualqueryex
-            - name: Virtualunlock
+            - name: VirtualUnlock
               href: /windows/desktop/api/memoryapi/nf-memoryapi-virtualunlock
-            - name: '"Write processmemory"'
+            - name: WriteProcessMemory
               href: /windows/desktop/api/MemoryApi/nf-memoryapi-writeprocessmemory
-            - name: Zeromemorisch
+            - name: ZeroMemory
               href: /previous-versions/windows/desktop/legacy/aa366920(v=vs.85)
             - name: AtlThunk_AllocateData
               href: /windows/desktop/api/atlthunk/nf-atlthunk-atlthunk_allocatedata
@@ -348,7 +348,7 @@
               href: /windows/desktop/api/atlthunk/nf-atlthunk-atlthunk_freedata
         - name: Registrierungsschlüssel für die Speicherverwaltung
           href: memory-management-registry-keys.md
-        - name: Speicher Verwaltungsstrukturen
+        - name: Speicherverwaltungsstrukturen
           href: memory-management-structures.md
           items:
             - name: CFG_CALL_TARGET_INFO
@@ -361,9 +361,9 @@
               href: /windows/desktop/api/winnt/ns-winnt-mem_extended_parameter
             - name: MEMORY_BASIC_INFORMATION
               href: /windows/win32/api/winnt/ns-winnt-memory_basic_information
-            - name: MEMORYSTATUS
+            - name: Memorystatus
               href: /windows/win32/api/WinBase/ns-winbase-memorystatus
-            - name: MEMORYSTATUS usex
+            - name: MEMORYSTATUSEX
               href: /windows/win32/api/sysinfoapi/ns-sysinfoapi-memorystatusex
             - name: PROCESS_HEAP_ENTRY
               href: /windows/win32/api/minwinbase/ns-minwinbase-process_heap_entry
@@ -373,9 +373,9 @@
               href: /windows/desktop/api/memoryapi/ns-memoryapi-win32_memory_region_information
             - name: AtlThunkData_t
               href: /previous-versions/windows/desktop/legacy/mt805050(v=vs.85)
-        - name: Speicherschutz Konstanten
+        - name: Memory Protection-Konstanten
           href: memory-protection-constants.md
-        - name: Ablauf Verfolgungs Ereignisse für die Speicherverwaltung
+        - name: Ablaufverfolgungsereignisse für die Speicherverwaltung
           href: memory-management-tracing-events.md
           items:
             - name: ETW_HEAP_EVENT_ALLOC
@@ -390,41 +390,41 @@
     - name: Referenz zur vertrauenswürdigen Ausführung
       href: trusted-execution-reference.md
       items:
-        - name: Vertrauenswürdige Ausführungs Enumerationen
+        - name: Vertrauenswürdige Ausführungsenumeration
           href: trusted-execution-enumerations.md
           items:
             - name: ENCLAVE_SEALING_IDENTITY_POLICY
               href: /windows/desktop/api/ntenclv/ne-ntenclv-enclave_sealing_identity_policy
-        - name: Vertrauenswürdige Ausführungs Funktionen
+        - name: Vertrauenswürdige Ausführungsfunktionen
           href: trusted-execution-functions.md
           items:
-            - name: Callenclave
+            - name: CallEnclave
               href: /windows/desktop/api/Enclaveapi/nf-enclaveapi-callenclave
-            - name: '"Kreateenclave"'
+            - name: CreateEnclave
               href: /windows/desktop/api/enclaveapi/nf-enclaveapi-createenclave
-            - name: Deleteenclave
+            - name: DeleteEnclave
               href: /windows/desktop/api/Enclaveapi/nf-enclaveapi-deleteenclave
-            - name: Envegetattestationreport
+            - name: EnclaveGetAttestationReport
               href: /windows/desktop/api/winenclaveapi/nf-winenclaveapi-enclavegetattestationreport
-            - name: Envegetenclaveinformation
+            - name: EnclaveGetEnclaveInformation
               href: /windows/desktop/api/winenclaveapi/nf-winenclaveapi-enclavegetenclaveinformation
-            - name: Envesealdata
+            - name: EnclaveSealData
               href: /windows/desktop/api/winenclaveapi/nf-winenclaveapi-enclavesealdata
-            - name: Enveunversiegedaten
+            - name: EnclaveUnsealData
               href: /windows/desktop/api/winenclaveapi/nf-winenclaveapi-enclaveunsealdata
-            - name: Enveverifyattestationreport
+            - name: EnclaveVerifyAttestationReport
               href: /windows/desktop/api/winenclaveapi/nf-winenclaveapi-enclaveverifyattestationreport
-            - name: Initializeenclave
+            - name: InitializeEnclave
               href: /windows/desktop/api/enclaveapi/nf-enclaveapi-initializeenclave
-            - name: Isenvetypesupportiert
+            - name: IsEnclaveTypeSupported
               href: /windows/desktop/api/enclaveapi/nf-enclaveapi-isenclavetypesupported
-            - name: Loadenclavedata
+            - name: LoadEnclaveData
               href: /windows/desktop/api/enclaveapi/nf-enclaveapi-loadenclavedata
-            - name: Loadenclaveimage
+            - name: LoadEnclaveImage
               href: /windows/desktop/api/Enclaveapi/nf-enclaveapi-loadenclaveimagew
-            - name: Terminateenclave
+            - name: TerminateEnclave
               href: /windows/desktop/api/Enclaveapi/nf-enclaveapi-terminateenclave
-        - name: Vertrauenswürdige Ausführungs Strukturen
+        - name: Vertrauenswürdige Ausführungsstrukturen
           href: trusted-execution-structures.md
           items:
             - name: ENCLAVE_CREATE_INFO_SGX

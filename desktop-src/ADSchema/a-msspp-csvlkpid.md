@@ -1,11 +1,11 @@
 ---
-title: MS-spp-csvlk-PID-Attribut
-description: ID des csvlk-Product-Key, der zum Erstellen des Aktivierungs Objekts verwendet wird.
+title: ms-SPP-CSVLK-Pid-Attribut
+description: ID des CSVLK-Product Key, der zum Erstellen des Aktivierungsobjekts verwendet wird
 ms.assetid: 67aa6952-0ce8-40a3-948e-ac7198e04c60
 ms.tgt_platform: multiple
 keywords:
-- MS-spp-csvlk-PID-Attribut AD-Schema
-- msspp-csvlkpid-Attribut AD-Schema
+- MS-SPP-CSVLK-Pid-Attribut AD-Schema
+- AD-Schema des msSPP-CSVLKPid-Attributs
 topic_type:
 - apiref
 api_name:
@@ -14,28 +14,28 @@ api_type:
 - Schema
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: ebd5c65ccec2368d26a84c2cbecdf95f034f7d29
-ms.sourcegitcommit: b77ace27b0432e7cd3863191b11926be032fbe2f
+ms.openlocfilehash: 6ab710762973d4fa344c96c941ab0d0689a67fe76448047b779c2677b8093bd0
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "103744624"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119022598"
 ---
-# <a name="ms-spp-csvlk-pid-attribute"></a>MS-spp-csvlk-PID-Attribut
+# <a name="ms-spp-csvlk-pid-attribute"></a>ms-SPP-CSVLK-Pid-Attribut
 
-ID des csvlk-Product-Key, der zum Erstellen des Aktivierungs Objekts verwendet wird.
+ID des CSVLK-Product Key, der zum Erstellen des Aktivierungsobjekts verwendet wird
 
 
 
 | Eingabe | Wert |
 |-------------------|---------------------------------------------|
-| CN                | MS-spp-csvlk-PID                            |
-| LDAP-Display-Name | msspp-csvlkpid                              |
+| CN                | ms-SPP-CSVLK-Pid                            |
+| Ldap-Anzeigename | msSPP-CSVLKPid                              |
 | Size              | \-                                          |
-| Berechtigung aktualisieren  | \-                                          |
-| Aktualisierungshäufigkeit  | \-                                          |
+| Aktualisieren von Berechtigungen  | \-                                          |
+| Updatehäufigkeit  | \-                                          |
 | Attribute-Id      | 1.2.840.113556.1.4.2105                     |
-| System-ID-GUID    | b47f510d-6b50-47e1-b556-772c79e4ffc4        |
+| System-Id-Guid    | b47f510d-6b50-47e1-b556-772c79e4ffc4        |
 | Syntax            | [**String(Unicode)**](s-string-unicode.md) |
 
 
@@ -52,16 +52,16 @@ ID des csvlk-Product-Key, der zum Erstellen des Aktivierungs Objekts verwendet w
 |------------------------|-------------------------------------------------------------------------|
 | Link-ID                | \-                                                                      |
 | MAPI-Id                | \-                                                                      |
-| System-Only            | False                                                                   |
-| Ist-einwertig       | Richtig                                                                    |
-| Ist indiziert             | False                                                                   |
-| Im globalen Katalog      | False                                                                   |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                            |
+| System-Only            | Falsch                                                                   |
+| Is-Single-Valued       | Richtig                                                                    |
+| Ist indiziert             | Falsch                                                                   |
+| Im globalen Katalog      | Falsch                                                                   |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                            |
 | Range-Lower            | \-                                                                      |
 | Range-Upper            | \-                                                                      |
 | Search-Flags           | 0x00000000                                                              |
 | System-Flags           | 0x00000010                                                              |
-| In verwendete Klassen        | [**MS-spp-Activation-Object**](c-msspp-activationobject.md)<br/> |
+| In verwendete Klassen        | [**ms-SPP-Activation-Object**](c-msspp-activationobject.md)<br/> |
 
 
 

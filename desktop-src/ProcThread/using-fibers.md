@@ -4,18 +4,18 @@ ms.assetid: b09c00ae-a498-499b-ba2b-735028e9fd8f
 title: Verwenden von Fibers
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 4c25c8d9d258853990bd200a01c77be85c1fdfaf
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 6ce5d33cfbe7e54d297366290587d14c282a2e8f2d008a92eba4427cfdd7a139
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "103865047"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120101910"
 ---
 # <a name="using-fibers"></a>Verwenden von Fibers
 
-Die Funktion " [**kreatefiber**](/windows/desktop/api/WinBase/nf-winbase-createfiber) " erstellt eine neue Fiber für einen Thread. Der Erstellungs Thread muss die Startadresse des Codes angeben, der von der neuen Fiber ausgeführt werden soll. In der Regel handelt es sich bei der Startadresse um den Namen einer vom Benutzer bereitgestellten Funktion. Mehrere Fibers können dieselbe Funktion ausführen.
+Die [**CreateFiber-Funktion**](/windows/desktop/api/WinBase/nf-winbase-createfiber) erstellt eine neue Fiber für einen Thread. Der erstellende Thread muss die Startadresse des Codes angeben, der von der neuen Fiber ausgeführt werden soll. In der Regel ist die Startadresse der Name einer vom Benutzer bereitgestellten Funktion. Mehrere Fibers können dieselbe Funktion ausführen.
 
-Im folgenden Beispiel wird veranschaulicht, wie Fibers erstellt, geplant und gelöscht werden. Die Fibers führen die lokal definierten Funktionen "leserfiberfunc" und "Write-fiberfunc" aus. In diesem Beispiel wird ein Fiber basierter Datei Kopiervorgang implementiert. Wenn Sie das Beispiel ausführen, müssen Sie die Quell-und Zieldateien angeben. Beachten Sie, dass es viele weitere Möglichkeiten zum programmgesteuerten Kopieren der Datei gibt. Dieses Beispiel besteht hauptsächlich darin, die Verwendung der Fiber Funktionen zu veranschaulichen.
+Im folgenden Beispiel wird veranschaulicht, wie Fibers erstellt, geplant und gelöscht werden. Die Fibers führen die lokal definierten Funktionen ReadFiberFunc und WriteFiberFunc aus. In diesem Beispiel wird ein fiberbasierter Dateikopiervorgang implementiert. Beim Ausführen des Beispiels müssen Sie die Quell- und Zieldateien angeben. Beachten Sie, dass es viele andere Möglichkeiten gibt, Dateien programmgesteuert zu kopieren. Dieses Beispiel dient in erster Linie zur Veranschaulichung der Verwendung der Fiberfunktionen.
 
 
 ```C++
@@ -373,19 +373,19 @@ DisplayFiberInfo(
 
 
 
-In diesem Beispiel wird eine Fiber Datenstruktur verwendet, mit der das Verhalten und der Zustand der Fiber bestimmt werden. Eine Datenstruktur ist für jede Fiber vorhanden. der Zeiger auf die Datenstruktur wird mithilfe des-Parameters der [*fiberproc*](/windows/win32/api/winbase/nc-winbase-pfiber_start_routine) -Funktion zur Fiber-Erstellungszeit an die Fiber übergeben.
+In diesem Beispiel wird eine Fiberdatenstruktur verwendet, die verwendet wird, um das Verhalten und den Zustand der Fiber zu bestimmen. Für jede Fiber ist eine Datenstruktur vorhanden. Der Zeiger auf die Datenstruktur wird zur Fibererstellungszeit mithilfe des Parameters der [*FiberProc-Funktion an die Fiber übergeben.*](/windows/win32/api/winbase/nc-winbase-pfiber_start_routine)
 
-Der aufrufende Thread ruft die [**convertthreadtofiber**](/windows/desktop/api/WinBase/nf-winbase-convertthreadtofiber) -Funktion auf, mit der Fibers von dem Aufrufer geplant werden kann. Dadurch kann die Fiber auch durch eine andere Fiber geplant werden. Als Nächstes erstellt der Thread zwei zusätzliche Fibers, eine, die Lesevorgänge für eine angegebene Datei ausführt, und eine andere, die Schreibvorgänge für eine angegebene Datei ausführt.
+Der aufrufende Thread ruft die [**ConvertThreadToFiber-Funktion**](/windows/desktop/api/WinBase/nf-winbase-convertthreadtofiber) auf, mit der Fibers vom Aufrufer geplant werden können. Dadurch kann die Fiber auch von einer anderen Fiber geplant werden. Als Nächstes erstellt der Thread zwei zusätzliche Fibers, eine, die Lesevorgänge für eine angegebene Datei ausführt, und eine andere, die die Schreibvorgänge für eine angegebene Datei ausführt.
 
-Die primäre Fiber Ruft die [**switchdefiber**](/windows/desktop/api/WinBase/nf-winbase-switchtofiber) -Funktion auf, um die gelesene Fiber zu planen. Nach einem erfolgreichen Lesevorgang plant die Lese Fiber die Schreib Fiber. Nach einem erfolgreichen Schreibvorgang in die Schreib Fiber plant die Schreib Fiber die gelesene Fiber. Wenn der Lese-/Schreib-Cycle abgeschlossen ist, wird die primäre Fiber geplant, was zur Anzeige des Lese-/Schreibstatus führt. Wenn während der Lese-oder Schreibvorgänge ein Fehler auftritt, wird die primäre Fiber geplant und zeigt den Status des Vorgangs an.
+Die primäre Fiber ruft die [**SwitchToFiber-Funktion**](/windows/desktop/api/WinBase/nf-winbase-switchtofiber) auf, um die Lese fiber zu planen. Nach einem erfolgreichen Lesezugriff wird die Schreib fiber von der Lese-Fiber geplant. Nach einem erfolgreichen Schreibzugriff auf die Schreib-Fiber wird die Lese fiber von der Schreib fiber geplant. Wenn der Lese-/Schreibzyklus abgeschlossen ist, wird die primäre Fiber geplant, was zur Anzeige des Lese-/Schreibstatus führt. Wenn während der Lese- oder Schreibvorgänge ein Fehler auftritt, wird die primäre Fiber geplant, und im Beispiel wird der Status des Vorgangs angezeigt.
 
-Vor der Beendigung des Prozesses gibt der Prozess die Fibers mithilfe der [**deletefiber**](/windows/desktop/api/WinBase/nf-winbase-deletefiber) -Funktion frei, schließt die Datei Handles und gibt den zugewiesenen Speicher frei.
+Vor der Prozessbeendigung gibt der Prozess die Fibers mithilfe der [**DeleteFiber-Funktion**](/windows/desktop/api/WinBase/nf-winbase-deletefiber) frei, schließt die Dateihandles und gibt den zugeordneten Arbeitsspeicher frei.
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[STAP](fibers.md)
+[Fasern](fibers.md)
 </dt> </dl>
 
  

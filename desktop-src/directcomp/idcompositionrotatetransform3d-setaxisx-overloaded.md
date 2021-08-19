@@ -1,9 +1,9 @@
 ---
-title: IDCompositionRotateTransform3D setaxisx-Methoden (Dcomp. h)
-description: Ändert oder animiert den Wert der AxisX-Eigenschaft einer 3D-Drehungs Transformation. Die AxisX-Eigenschaft gibt die x-Koordinate für den Achsen Vektor der Drehung an. Der Standardwert ist 0 (null).
+title: IDCompositionRotateTransform3D SetAxisX-Methoden (Dcomp.h)
+description: Ändert oder animiert den Wert der AxisX-Eigenschaft einer 3D-Drehungstransformation. Die AxisX-Eigenschaft gibt die X-Koordinate für den Achsenvektor der Drehung an. Der Standardwert ist 0 (null).
 ms.assetid: 6ADBB027-8F80-4DF3-9199-DDB6570DF81B
 keywords:
-- Setaxisx-Methoden directcomposition
+- SetAxisX-Methoden DirectComposition
 topic_type:
 - apiref
 api_location:
@@ -12,16 +12,16 @@ api_type:
 - DllExport
 ms.date: 07/02/2019
 ms.topic: reference
-ms.openlocfilehash: 9e484de6d799440eb54881b68d11b676ddf4d38b
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 6a44998b2b48af4eeb9116fe4fad398d72cebbe83e0d20bb2a0abaa784cb0e0e
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "106342645"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119891940"
 ---
-# <a name="idcompositionrotatetransform3dsetaxisx-methods"></a>IDCompositionRotateTransform3D:: setaxisx-Methoden
+# <a name="idcompositionrotatetransform3dsetaxisx-methods"></a>IDCompositionRotateTransform3D::SetAxisX-Methoden
 
-Ändert oder animiert den Wert der AxisX-Eigenschaft einer 3D-Drehungs Transformation. Die AxisX-Eigenschaft gibt die x-Koordinate für den Achsen Vektor der Drehung an. Der Standardwert ist 0 (null).
+Ändert oder animiert den Wert der AxisX-Eigenschaft einer 3D-Drehungstransformation. Die AxisX-Eigenschaft gibt die X-Koordinate für den Achsenvektor der Drehung an. Der Standardwert ist 0 (null).
 
 ### <a name="overload-list"></a>Überladeliste
 
@@ -29,8 +29,8 @@ ms.locfileid: "106342645"
 
 | Methode                                                                                                       | BESCHREIBUNG                                          |
 |:-------------------------------------------------------------------------------------------------------------|:-----------------------------------------------------|
-| [**Setaxisx (float)**](/windows/win32/api/dcomp/nf-dcomp-idcompositionrotatetransform3d-setaxisx(float))                                     | Ändert den Wert der AxisX-Eigenschaft.<br/>  |
-| [**Setaxisx (idcompositionanimation \* )**](/windows/win32/api/dcomp/nf-dcomp-idcompositionrotatetransform3d-setaxisx(idcompositionanimation)) | Animiert den Wert der AxisX-Eigenschaft.<br/> |
+| [**SetAxisX(float)**](/windows/win32/api/dcomp/nf-dcomp-idcompositionrotatetransform3d-setaxisx(float))                                     | Ändert den Wert der AxisX-Eigenschaft.<br/>  |
+| [**SetAxisX(IDCompositionAnimation \* )**](/windows/win32/api/dcomp/nf-dcomp-idcompositionrotatetransform3d-setaxisx(idcompositionanimation)) | Animiert den Wert der AxisX-Eigenschaft.<br/> |
 
 
 
@@ -40,10 +40,10 @@ ms.locfileid: "106342645"
 
 | Anforderung | Wert |
 |-------------------------------------|--------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows 8 \[ -Desktop-Apps\]<br/>                                           |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2012 \[ -Desktop-Apps\]<br/>                                 |
-| Header<br/>                   | <dl> <dt>Dcomp. h</dt> </dl>   |
-| Bibliothek<br/>                  | <dl> <dt>Dcomp. lib</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | nur Windows 8 \[ Desktop-Apps\]<br/>                                           |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2012-Desktop-Apps\]<br/>                                 |
+| Header<br/>                   | <dl> <dt>Dcomp.h</dt> </dl>   |
+| Bibliothek<br/>                  | <dl> <dt>Dcomp.lib</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Dcomp.dll</dt> </dl> |
 
 

@@ -1,32 +1,32 @@
 ---
-description: Geräte Rollen für DirectShow-Anwendungen
+description: Geräterollen für DirectShow-Anwendungen
 ms.assetid: 54f42bda-b4a0-465c-9ce6-9102d2908776
-title: Geräte Rollen für DirectShow-Anwendungen
+title: Geräterollen für DirectShow-Anwendungen
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: df8b43ddd56870b65fc9ec1e3bb600e8e6b79528
-ms.sourcegitcommit: c7add10d695482e1ceb72d62b8a4ebd84ea050f7
+ms.openlocfilehash: 56e22a86e5537f11b6b4153753841a2682b5ac77a043a3fa74538714a2540377
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104482758"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118957359"
 ---
-# <a name="device-roles-for-directshow-applications"></a>Geräte Rollen für DirectShow-Anwendungen
+# <a name="device-roles-for-directshow-applications"></a>Geräterollen für DirectShow-Anwendungen
 
 > [!Note]  
-> Die [mmdevice-API](mmdevice-api.md) unterstützt Geräte Rollen. Die Benutzeroberfläche in Windows Vista implementiert jedoch keine Unterstützung für dieses Feature. Die Unterstützung von Benutzeroberflächen für Geräte Rollen kann in einer zukünftigen Version von Windows implementiert werden. Weitere Informationen finden Sie unter [Geräte Rollen in Windows Vista](device-roles-in-windows-vista.md).
+> Die [MMDevice-API unterstützt](mmdevice-api.md) Geräterollen. Die Benutzeroberfläche in Windows Vista implementiert jedoch keine Unterstützung für dieses Feature. Die Benutzeroberflächenunterstützung für Geräterollen wird möglicherweise in einer zukünftigen Version von Windows. Weitere Informationen finden Sie unter [Geräterollen in Windows Vista](device-roles-in-windows-vista.md).
 
  
 
-Die DirectShow-API bietet keine Möglichkeit für eine Anwendung, das [audioendpunktgerät](audio-endpoint-devices.md) auszuwählen, das einer bestimmten [Geräte Rolle](device-roles.md)zugewiesen ist. In Windows Vista können die Kerndatei-APIs jedoch in Verbindung mit einer DirectShow-Anwendung verwendet werden, um die Geräteauswahl basierend auf der Geräte Rolle zu aktivieren. Mit der Hilfe der kernaudioapis kann die Anwendung folgende Aktionen ausführen:
+Die DirectShow-API bietet einer Anwendung keine [](audio-endpoint-devices.md) Möglichkeit, das Audioendpunktgerät auszuwählen, das einer bestimmten [Geräterolle zugewiesen ist.](device-roles.md) In Windows Vista können die Kernaudio-APIs jedoch in Verbindung mit einer DirectShow-Anwendung verwendet werden, um die Geräteauswahl basierend auf der Geräterolle zu aktivieren. Mithilfe der Kernaudio-APIs kann die Anwendung:
 
--   Identifizieren Sie das audioendpunktgerät, das der Benutzer einer bestimmten Geräte Rolle zugewiesen hat.
--   Erstellen eines DirectShow-audiorenderingfilters mit einer [**ibasefilter**](/windows/desktop/api/strmif/nn-strmif-ibasefilter) -Schnittstelle, die das audioendpunktgerät kapselt.
+-   Identifizieren Sie das Audioendpunktgerät, das der Benutzer einer bestimmten Geräterolle zugewiesen hat.
+-   Erstellen Sie einen DirectShow-Audiorenderingfilter mit einer [**IBaseFilter-Schnittstelle,**](/windows/desktop/api/strmif/nn-strmif-ibasefilter) die das Audioendpunktgerät kapselt.
 -   Erstellen Sie ein DirectShow-Diagramm, das den Filter enthält.
 
-Weitere Informationen zu DirectShow und [**ibasefilter**](/windows/desktop/api/strmif/nn-strmif-ibasefilter)finden Sie in der Windows SDK-Dokumentation.
+Weitere Informationen zu DirectShow und [**IBaseFilter finden**](/windows/desktop/api/strmif/nn-strmif-ibasefilter)Sie in der Windows SDK-Dokumentation.
 
-Im folgenden Codebeispiel wird gezeigt, wie ein DirectShow-audiorenderingfilter erstellt wird, der das renderingendpunktgerät kapselt, das einer bestimmten Geräte Rolle zugewiesen ist:
+Das folgende Codebeispiel zeigt, wie Sie einen DirectShow-Audiorenderingfilter erstellen, der das Renderingendpunktgerät kapselt, das einer bestimmten Geräterolle zugewiesen ist:
 
 
 ```C++
@@ -96,15 +96,15 @@ Exit:
 
 
 
-Im vorangehenden Codebeispiel nimmt die Funktion "-Funktion" eine Geräte Rolle (econsole, emultimedia oder eCommunications) als Eingabeparameter an. Der zweite Parameter ist ein Zeiger, über den die-Funktion die Adresse einer [**ibasefilter**](/windows/desktop/api/strmif/nn-strmif-ibasefilter) -Schnittstellen Instanz schreibt. Außerdem wird in diesem Beispiel gezeigt, wie die Methode " [**immdevice:: Aktivierungs**](/windows/desktop/api/Mmdeviceapi/nf-mmdeviceapi-immdevice-activate) " verwendet wird, um den Audiostream in der Instanz von " **ibasefilter** " einer prozessübergreifenden Audiositzung mit einer anwendungsspezifischen Sitzungs-GUID zuzuweisen (angegeben durch die **guidaudiosessionid** -Konstante). Der dritte Parameter im **Aktivierungs** Befehl verweist auf eine-Struktur, die die Sitzungs-GUID und das prozessübergreifende Flag enthält. Wenn der Benutzer mehrere Instanzen der Anwendung ausführt, verwenden die Audiodatenströme aus allen Instanzen die gleiche Sitzungs-GUID und gehören somit zur gleichen Sitzung.
+Im vorherigen Codebeispiel akzeptiert die CreateAudioRenderer-Funktion eine Geräterolle (eConsole, eMultimedia oder eCommunications) als Eingabeparameter. Der zweite Parameter ist ein Zeiger, über den die Funktion die Adresse einer [**IBaseFilter-Schnittstelleninstanz**](/windows/desktop/api/strmif/nn-strmif-ibasefilter) schreibt. Darüber hinaus zeigt das Beispiel, wie sie die [**IMMDevice::Activate-Methode**](/windows/desktop/api/Mmdeviceapi/nf-mmdeviceapi-immdevice-activate) verwendet, um den Audiostream in der **IBaseFilter-Instanz** einer prozessübergreifenden Audiositzung mit einer anwendungsspezifischen Sitzungs-GUID (angegeben durch die **guidAudioSessionId-Konstante)** zu zuweisen. Der dritte Parameter im **Activate-Aufruf** verweist auf eine -Struktur, die die Sitzungs-GUID und das prozessübergreifende Flag enthält. Wenn der Benutzer mehrere Instanzen der Anwendung ausgeführt, verwenden die Audiostreams von allen Instanzen dieselbe Sitzungs-GUID und gehören somit zur gleichen Sitzung.
 
-Alternativ kann der Aufrufer **null** als dritten Parameter im [**Aktivierungs**](/windows/desktop/api/Mmdeviceapi/nf-mmdeviceapi-immdevice-activate) Aufruf angeben, um den Stream der Standard Sitzung als prozessspezifische Sitzung mit dem GUID-Wert der Sitzungs-GUID \_ null zuzuweisen. Weitere Informationen finden Sie unter **immdevice:: Aktivieren**.
+Alternativ kann der Aufrufer  NULL als dritten Parameter im [**Activate-Aufruf**](/windows/desktop/api/Mmdeviceapi/nf-mmdeviceapi-immdevice-activate) angeben, um den Stream der Standardsitzung als prozessspezifische Sitzung mit dem Sitzungs-GUID-Wert GUID \_ NULL zu zuweisen. Weitere Informationen finden Sie unter **IMMDevice::Activate**.
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[Interoperabilität mit Legacy-audioapis](interoperability-with-legacy-audio-apis.md)
+[Interoperabilität mit Legacyaudio-APIs](interoperability-with-legacy-audio-apis.md)
 </dt> </dl>
 
  

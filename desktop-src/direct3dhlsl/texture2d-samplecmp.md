@@ -1,9 +1,9 @@
 ---
-title: 'Texture2D:: Texture2D samplecmp-Methoden'
-description: Abtastungen eines Texture2D mit einem Vergleichswert, um Beispiele abzulehnen.
+title: Texture2D::Texture2D SampleCmp-Methoden
+description: Stichproben einer Texture2D mithilfe eines Vergleichswerts zum Ablehnen von Stichproben.
 ms.assetid: 57CAF0F4-740A-440D-B1CC-05CFE748ECC0
 keywords:
-- Samplecmp-Methoden HLSL
+- SampleCmp-Methoden HLSL
 topic_type:
 - apiref
 api_type:
@@ -12,16 +12,16 @@ ms.topic: reference
 ms.date: 05/31/2018
 api_name: ''
 api_location: ''
-ms.openlocfilehash: 242c3654dde83187647b61be8e6e4e5de0d88eec
-ms.sourcegitcommit: 476861130ea63675206d1f06e517059705b930ed
+ms.openlocfilehash: a0d4844a08f7bcab2d6dd1eb5687d3b7dc3b0d50e003e2fffc1cf5159f54ca80
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/06/2019
-ms.locfileid: "104038213"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120023050"
 ---
-# <a name="texture2dsamplecmp-methods"></a>Texture2D:: samplecmp-Methoden
+# <a name="texture2dsamplecmp-methods"></a>Texture2D::SampleCmp-Methoden
 
-Abtastungen eines [**Texture2D**](sm5-object-texture2d.md)mit einem Vergleichswert, um Beispiele abzulehnen.
+Stichproben einer [**Texture2D**](sm5-object-texture2d.md)mithilfe eines Vergleichswerts zum Ablehnen von Stichproben.
 
 ### <a name="overload-list"></a>Überladeliste
 
@@ -29,17 +29,17 @@ Abtastungen eines [**Texture2D**](sm5-object-texture2d.md)mit einem Vergleichswe
 
 | Methode                                                                                     | BESCHREIBUNG                                                                                                                                                                           |
 |:-------------------------------------------------------------------------------------------|:--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| [**Samplecmp (S, float, float, int)**](dx-graphics-hlsl-to-samplecmp.md)                      | Abtastungen einer Textur mithilfe eines Vergleichs Werts zum ablehnen von Beispielen.<br/>                                                                                                             |
-| [**Samplecmp (S, float, float, int, float)**](samplecmp-s-float-float-int-float-.md)           | Verwendet einen Vergleichswert zum ablehnen von Beispielen, wobei ein optionaler Wert zum Einspannen von Samplingrate-Werten (LOD) an verwendet wird.<br/>                                     |
-| [**Samplecmp (S, float, float, int, float, uint)**](samplecmp-s-float-float-int-float-uint-.md) | Verwendet einen Vergleichswert zum ablehnen von Beispielen, wobei ein optionaler Wert zum Einspannen von Samplingrate-Werten (LOD) an verwendet wird. Gibt den Status des Vorgangs zurück.<br/> |
+| [**SampleCmp(S,float,float,int)**](dx-graphics-hlsl-to-samplecmp.md)                      | Stichproben einer Textur mithilfe eines Vergleichswerts zum Ablehnen von Stichproben.<br/>                                                                                                             |
+| [**SampleCmp(S,float,float,int,float)**](samplecmp-s-float-float-int-float-.md)           | Stichproben einer Textur, wobei ein Vergleichswert verwendet wird, um Stichproben abzulehnen, mit einem optionalen Wert zum Klammern von LOD-Werten (Sample Level of Detail).<br/>                                     |
+| [**SampleCmp(S,float,float,int,float,uint)**](samplecmp-s-float-float-int-float-uint-.md) | Stichproben einer Textur, wobei ein Vergleichswert verwendet wird, um Stichproben abzulehnen, mit einem optionalen Wert zum Klammern von LOD-Werten (Sample Level of Detail). Gibt den Status des Vorgangs zurück.<br/> |
 
 
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Siehe [Texture-Object](dx-graphics-hlsl-to-type.md).
+Weitere Informationen finden Sie unter [Texture-Object](dx-graphics-hlsl-to-type.md).
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 

@@ -4,9 +4,9 @@ description: Verwenden Sie diese zusätzlichen Ressourcen, um die neuesten zusä
 ms.assetid: 74933db2-3800-4d49-8720-7e677f208e49
 keywords:
 - Windows Medienformat-SDK, zusätzliche Informationen
-- Digital Rights Management (DRM), zusätzliche Informationen
+- Verwaltung digitaler Rechte (Digital Rights Management, DRM), zusätzliche Informationen
 - DRM (Digital Rights Management), zusätzliche Informationen
-- Windows Medienformat-SDK, Ressourcen
+- Windows Medienformat-SDK,Ressourcen
 - Digital Rights Management (DRM), Ressourcen
 - DRM (Digital Rights Management), Ressourcen
 ms.topic: article
@@ -20,12 +20,12 @@ ms.locfileid: "117848129"
 ---
 # <a name="for-more-information-windows-media-format-sdk"></a>Weitere Informationen (Windows Media Format SDK)
 
--   Die neuesten Informationen zu bekannten Problemen mit dem Windows Media Format SDK finden Sie in den Versionshinweisen, die auf der [MSDN Library-Website](/documentation/?url=%2flibrary%2fdnwmt%2fhtml%2fwmfsdk11_b2_release_notes_rzxb.asp%3fframe%3dtrue)veröffentlicht werden.
--   Features, Artikel und Antworten auf häufig gestellte Fragen zu Streamingmedien im Allgemeinen und den Windows Media SDKs im Besonderen finden Sie im Windows Media Developer Center auf der [Microsoft-Website](https://msdn.microsoft.com/windowsmedia/default.aspx).
--   Weitere Informationen zum Abrufen einer Lizenz für das Windows Media Format SDK finden Sie auf der Seite Windows Medienlizenzierung auf der [Microsoft-Website](https://msdn.microsoft.com/library/ms867178.aspx).
--   Weitere Informationen zu Newsgroups finden Sie auf der Seite Windows Mediennachrichtengruppen und E-Mail-Aliase auf der [Microsoft-Website](https://windows.microsoft.com/windows/products/windows-media).
--   Um detaillierte, low-level-Beschreibungen der Datenobjekte zu erhalten, aus denen ASF-Dateien besteht, laden Sie die ASF-Spezifikation von der [Microsoft-Website](https://download.microsoft.com/download/7/9/0/790fecaa-f64a-4a5e-a430-0bccdab3f1b4/ASF_Specification.doc)herunter.
--   Features, Artikel, bewährte Methoden und Antworten auf häufig gestellte Fragen zu Digital Rights Management (DRM) und Windows Media Rights Manager finden Sie auf der Microsoft-Website auf der Seite [Digitale Rights Management](/documentation/?url=%2flibrary%2fdnwmt%2fhtml%2fdigitalrightsmanagement.asp) in den technischen Artikeln.
+-   Die neuesten Informationen zu bekannten Problemen mit dem Windows Media Format SDK finden Sie in den Versionshinweisen auf der [MSDN Library-Website.](/documentation/?url=%2flibrary%2fdnwmt%2fhtml%2fwmfsdk11_b2_release_notes_rzxb.asp%3fframe%3dtrue)
+-   Features, Artikel und Antworten auf häufig gestellte Fragen zu Streamingmedien im Allgemeinen und zu den Windows Media SDKs im Besonderen finden Sie im Windows Media Developer Center auf der [Microsoft-Website](https://msdn.microsoft.com/windowsmedia/default.aspx).
+-   Weitere Informationen zum Erwerb einer Lizenz für das Windows Media Format SDK finden Sie auf der Seite Windows Media Licensing auf der [Microsoft-Website](https://msdn.microsoft.com/library/ms867178.aspx).
+-   Weitere Informationen zu Newsgroups finden Sie auf Windows Microsoft-Website auf der Seite [](https://windows.microsoft.com/windows/products/windows-media)Windows Media Newsgroups and E-mail Aliases (Mediennachrichtengruppen und E-Mail-Aliase).
+-   Laden Sie die ASF-Spezifikation von der Microsoft-Website herunter, um detaillierte Beschreibungen der Datenobjekte zu erhalten, aus denen [ASF-Dateien erstellt werden.](https://download.microsoft.com/download/7/9/0/790fecaa-f64a-4a5e-a430-0bccdab3f1b4/ASF_Specification.doc)
+-   Features, Artikel, bewährte Methoden und Antworten auf häufig gestellte Fragen zu Digital Rights Management (DRM) und Windows Media Rights Manager finden Sie auf der Microsoft-Website in den technischen Artikeln auf der [Seite "Digital Rights Management".](/documentation/?url=%2flibrary%2fdnwmt%2fhtml%2fdigitalrightsmanagement.asp)
 
 ## <a name="related-topics"></a>Zugehörige Themen
 

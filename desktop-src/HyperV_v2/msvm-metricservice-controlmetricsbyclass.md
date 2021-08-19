@@ -1,7 +1,7 @@
 ---
 description: Steuert Metriken nach Klasse.
 ms.assetid: f848fdec-561b-4be0-b1e9-a59e15196d1d
-title: Controlmetricsbyclass-Methode der Msvm_MetricService-Klasse
+title: ControlMetricsByClass-Methode der Msvm_MetricService Klasse
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,14 +13,14 @@ api_type:
 - COM
 api_location:
 - vmms.exe
-ms.openlocfilehash: 4149da6327edf774afda20e64f34ae0958f7c3df
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: d522a2c66cf8b7127520fc3ec66b809c4e825cb759de116b3a3e820eb0ae676c
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106351546"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120046530"
 ---
-# <a name="controlmetricsbyclass-method-of-the-msvm_metricservice-class"></a>Controlmetricsbyclass-Methode der MSVM \_ metricservice-Klasse
+# <a name="controlmetricsbyclass-method-of-the-msvm_metricservice-class"></a>ControlMetricsByClass-Methode der Msvm \_ MetricService-Klasse
 
 Steuert Metriken nach Klasse.
 
@@ -41,24 +41,24 @@ uint32 ControlMetricsByClass(
 
 <dl> <dt>
 
-*Betreff* \[ in\]
+*Betreff* \[ In\]
 </dt> <dd>
 
 Identifiziert die CIM-Klasse, für die Metriken gesteuert werden.
 
 </dd> <dt>
 
-*Definition* \[ in\]
+*Definition* \[ In\]
 </dt> <dd>
 
-Gibt eine [**CIM- \_ basemetricdefinition**](cim-basemetricdefinition.md) an, für die Metriken gesteuert werden.
+Identifiziert eine [**CIM \_ BaseMetricDefinition,**](cim-basemetricdefinition.md) für die Metriken gesteuert werden.
 
 </dd> <dt>
 
-*Metriccollectionaktivierte* \[ in\]
+*MetricCollectionEnabled* \[ In\]
 </dt> <dd>
 
-Gibt den für die Metriken auszuführenden gewünschten Vorgang an.
+Gibt den gewünschten Vorgang an, der für die Metriken durchgeführt werden soll.
 
 <dt>
 
@@ -85,14 +85,14 @@ Gibt den für die Metriken auszuführenden gewünschten Vorgang an.
 
 <span id="DMTF_Reserved"></span><span id="dmtf_reserved"></span><span id="DMTF_RESERVED"></span>
 
-**DMTF reserviert** (..)
+**DMTF Reserved** (..)
 
 
 </dt> <dd></dd> <dt>
 
 <span id="Vendor_Reserved"></span><span id="vendor_reserved"></span><span id="VENDOR_RESERVED"></span>
 
-**Anbieter reserviert** (32768.65535)
+**Anbieter reserviert** (32768..65535)
 
 
 </dt> <dd></dd> </dl> </dd> </dl>
@@ -109,13 +109,13 @@ Diese Methode gibt einen der folgenden Werte zurück:
 **Nicht unterstützt** (1)
 </dt> <dt>
 
-Fehler **(2** )
+**Fehler** (2)
 </dt> <dt>
 
 **Reservierte Methode** (..)
 </dt> <dt>
 
-**Hersteller spezifisch** (32768.65535)
+**Herstellerspezifisch** (32768..65535)
 </dt> </dl>
 
 ## <a name="requirements"></a>Anforderungen
@@ -127,7 +127,7 @@ Fehler **(2** )
 | Unterstützte Mindestversion (Client)<br/> | Windows 8.1<br/>                                                                                  |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2012 R2<br/>                                                                       |
 | Namespace<br/>                | \\Stammvirtualisierung \\ v2<br/>                                                                     |
-| MOF<br/>                      | <dl> <dt>Windowsvirtualization. v2. MOF</dt> </dl> |
+| MOF<br/>                      | <dl> <dt>WindowsVirtualization.V2.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Vmms.exe</dt> </dl>                     |
 
 
@@ -136,7 +136,7 @@ Fehler **(2** )
 
 <dl> <dt>
 
-[**MSVM \_ metricservice**](msvm-metricservice.md)
+[**Msvm \_ MetricService**](msvm-metricservice.md)
 </dt> </dl>
 
  

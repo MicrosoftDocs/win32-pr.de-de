@@ -13,65 +13,65 @@ api_type:
 ms.topic: reference
 ms.date: 05/31/2018
 api_location: ''
-ms.openlocfilehash: f1aefa9171ed634934ea5e1306973fe3b22abdfa
-ms.sourcegitcommit: 5724b38883e518ac565e1b266defa85ad0941bb2
+ms.openlocfilehash: aab6e5c0a500a9f34cbd4e418a35e96687650f3df863e1fe77576c66ade718e4
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/14/2021
-ms.locfileid: "104981000"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120023400"
 ---
 # <a name="texture2darray"></a>Texture2DArray
 
-Texture2DArray Type ([wie er in Shader Model 4 vorhanden](dx-graphics-hlsl-to-type.md)ist) plus Ressourcenvariablen. Dieses Textur Objekt unterstützt zusätzlich zu den Methoden in Shader Model 4 die folgenden Methoden.
+Texture2DArray-Typ ([wie in Shadermodell 4 vorhanden)](dx-graphics-hlsl-to-type.md)plus Ressourcenvariablen. Dieses Texturobjekt unterstützt zusätzlich zu den Methoden in Shader Model 4 die folgenden Methoden.
 
 
 
 | Methode                                                                      | BESCHREIBUNG                                                                                                                                         |
 |-----------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------|
-| [**Informieren**](texture2darray-gather.md)                                      | Gibt die vier texelwerte zurück, die in einem bilinearen Filter Vorgang verwendet werden.                                                                |
-| [**Gatherred**](texture2darray-gatherred.md)                                | Gibt die roten Komponenten der vier texelwerte zurück, die in einem bilinearen Filter Vorgang verwendet werden.                                          |
-| [**Gathergrün**](texture2darray-gathergreen.md)                            | Gibt die grünen Komponenten der vier texelwerte zurück, die in einem bilinearen Filter Vorgang verwendet werden.                                        |
-| [**Gatherblue**](texture2darray-gatherblue.md)                              | Gibt die blauen Komponenten der vier texelwerte zurück, die in einem bilinearen Filter Vorgang verwendet werden.                                         |
-| [**Gatheralpha**](texture2darray-gatheralpha.md)                            | Gibt die Alpha Komponenten der vier texelwerte zurück, die in einem bilinearen Filter Vorgang verwendet werden.                                        |
-| [**Gathercmp**](texture2darray-gathercmp.md)                                | Für vier textexwerte, die in einem bilinearen Filter Vorgang verwendet werden, wird der Vergleich mit einem Vergleichswert zurückgegeben.                      |
-| [**Gathercmpred**](texture2darray-gathercmpred.md)                          | Für vier textexwerte, die in einem bilinearen Filter Vorgang verwendet werden, wird ein Vergleich der roten Komponente mit einem Vergleichswert zurückgegeben.   |
-| [**Gathercmpgreen**](texture2darray-gathercmpgreen.md)                      | Für vier textexwerte, die in einem bilinearen Filterungs Vorgang verwendet werden, wird ein Vergleich der grünen Komponente mit einem Vergleichswert zurückgegeben. |
-| [**Gathercmpblue**](texture2darray-gathercmpblue.md)                        | Für vier textexwerte, die in einem bilinearen Filter Vorgang verwendet werden, wird ein Vergleich der blauen Komponente mit einem Vergleichswert zurückgegeben.  |
-| [**Gathercmpalpha**](texture2darray-gathercmpalpha.md)                      | Für vier textexwerte, die in einem bilinearen Filter Vorgang verwendet werden, wird ein Vergleich der Alpha Komponente mit einem Vergleichswert zurückgegeben. |
-| [**GetDimensions**](sm5-object-texture2darray-getdimensions.md)             | Ruft die Ressourcen Dimensionen ab.                                                                                                                       |
-| [**Laden**](texture2darray-load.md)                                          | Liest Textur Daten.                                                                                                                                 |
-| [**MIPS. KOM\[\]\[\]**](sm5-object-texture2darray-mipsoperatorindex.md) | Ruft eine schreibgeschützte Ressourcen Variable ab.                                                                                                                 |
-| [**KOM\[\]**](sm5-object-texture2darray-operatorindex.md)              | Ruft eine schreibgeschützte Ressourcen Variable ab.                                                                                                                 |
-| [**Beispiel**](texture2darray-sample.md)                                      | Stichproben eine Textur.                                                                                                                                  |
-| [**Samplebias**](texture2darray-samplebias.md)                              | Gibt eine Textur aus, nachdem der Bias-Wert auf die MipMap-Ebene angewendet wurde.                                                                               |
-| [**Samplecmp**](texture2darray-samplecmp.md)                                | Abtastungen einer Textur mithilfe eines Vergleichs Werts zum ablehnen von Beispielen.                                                                                      |
-| [**Samplecmplevelzero**](texture2darray-samplecmplevelzero.md)              | Stichproben eine Textur (nur MipMap-Ebene 0) unter Verwendung eines Vergleichs Werts zum ablehnen von Beispielen.                                                                |
-| [**Samplegrad**](texture2darray-samplegrad.md)                              | Verwendet einen Farbverlauf, um die Art und Weise zu beeinflussen, in der der Beispiel Speicherort berechnet wird                                                          |
-| [**Samplelevel**](texture2darray-samplelevel.md)                            | Prüft eine Textur auf der angegebenen MipMap-Ebene.                                                                                                    |
+| [**versammeln**](texture2darray-gather.md)                                      | Gibt die vier Texelwerte zurück, die in einem bilinearen Filtervorgang verwendet werden.                                                                |
+| [**GatherRed**](texture2darray-gatherred.md)                                | Gibt die roten Komponenten der vier Texelwerte zurück, die in einem bilinearen Filtervorgang verwendet werden.                                          |
+| [**GatherGreen**](texture2darray-gathergreen.md)                            | Gibt die grünen Komponenten der vier Texelwerte zurück, die in einem bilinearen Filtervorgang verwendet werden.                                        |
+| [**GatherBlue**](texture2darray-gatherblue.md)                              | Gibt die blauen Komponenten der vier Texelwerte zurück, die in einem bilinearen Filtervorgang verwendet werden.                                         |
+| [**GatherAlpha**](texture2darray-gatheralpha.md)                            | Gibt die Alphakomponenten der vier Texelwerte zurück, die in einem bilinearen Filtervorgang verwendet werden.                                        |
+| [**GatherCmp**](texture2darray-gathercmp.md)                                | Für vier Texelwerte, die in einem bilinearen Filtervorgang verwendet werden, gibt den Vergleich mit einem Vergleichswert zurück.                      |
+| [**GatherCmpRed**](texture2darray-gathercmpred.md)                          | Für vier Texelwerte, die in einem bilinearen Filtervorgang verwendet werden, gibt einen Vergleich ihrer roten Komponente mit einem Vergleichswert zurück.   |
+| [**GatherCmpGreen**](texture2darray-gathercmpgreen.md)                      | Für vier Texelwerte, die in einem bilinearen Filtervorgang verwendet werden, gibt einen Vergleich ihrer grünen Komponente mit einem Vergleichswert zurück. |
+| [**GatherCmpBlue**](texture2darray-gathercmpblue.md)                        | Für vier Texelwerte, die in einem bilinearen Filtervorgang verwendet werden, gibt einen Vergleich ihrer blauen Komponente mit einem Vergleichswert zurück.  |
+| [**GatherCmpAlpha**](texture2darray-gathercmpalpha.md)                      | Gibt für vier Texelwerte, die in einem bilinearen Filtervorgang verwendet werden, einen Vergleich ihrer Alphakomponente mit einem Vergleichswert zurück. |
+| [**GetDimensions**](sm5-object-texture2darray-getdimensions.md)             | Ruft die Ressourcendimensionen ab.                                                                                                                       |
+| [**Laden**](texture2darray-load.md)                                          | Liest Texturdaten.                                                                                                                                 |
+| [**Mips. Operator\[\]\[\]**](sm5-object-texture2darray-mipsoperatorindex.md) | Ruft eine schreibgeschützte Ressourcenvariable ab.                                                                                                                 |
+| [**Operator\[\]**](sm5-object-texture2darray-operatorindex.md)              | Ruft eine schreibgeschützte Ressourcenvariable ab.                                                                                                                 |
+| [**Beispiel**](texture2darray-sample.md)                                      | Probieren Sie eine Textur aus.                                                                                                                                  |
+| [**SampleBias**](texture2darray-samplebias.md)                              | Stichproben einer Textur, nachdem der Biaswert auf die Mipmapebene angewendet wurde.                                                                               |
+| [**SampleCmp**](texture2darray-samplecmp.md)                                | Stichproben einer Textur mithilfe eines Vergleichswerts zum Ablehnen von Stichproben.                                                                                      |
+| [**SampleCmpLevelZero**](texture2darray-samplecmplevelzero.md)              | Probieren Sie eine Textur (nur Mipmapebene 0) mithilfe eines Vergleichswerts aus, um Stichproben abzulehnen.                                                                |
+| [**SampleGrad**](texture2darray-samplegrad.md)                              | Probieren Sie eine Textur mithilfe eines Farbverlaufs aus, um die Art und Weise zu beeinflussen, wie die Stichprobenposition berechnet wird.                                                          |
+| [**SampleLevel**](texture2darray-samplelevel.md)                            | Probieren Sie eine Textur auf der angegebenen Mipmapebene aus.                                                                                                    |
 
 
 
  
 
-## <a name="minimum-shader-model"></a>Minimaler Shader-Modell
+## <a name="minimum-shader-model"></a>Shader-Mindestmodell
 
-Dieses Objekt wird in den folgenden shadermodellen unterstützt.
+Dieses Objekt wird in den folgenden Shadermodellen unterstützt.
 
 
 
 | Shadermodell                                                                | Unterstützt |
 |-----------------------------------------------------------------------------|-----------|
-| [Shader Model 5](d3d11-graphics-reference-sm5.md) und höhere shadermodelle | ja       |
+| [Shadermodell 5](d3d11-graphics-reference-sm5.md) und höhere Shadermodelle | Ja       |
 
 
 
  
 
-Dieses Objekt wird für die folgenden Typen von Shadern unterstützt:
+Dieses Objekt wird für die folgenden Shadertypen unterstützt:
 
 
 
-| Scheitelpunkt | Hülle | Domain | Geometrie | Pixel | Compute |
+| Scheitelpunkt | Rumpf | Domain | Geometrie | Pixel | Compute |
 |--------|------|--------|----------|-------|---------|
 | x      | x    | x      | x        | x     | x       |
 
@@ -79,11 +79,11 @@ Dieses Objekt wird für die folgenden Typen von Shadern unterstützt:
 
  
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 
-[Shader Model 5-Objekte](d3d11-graphics-reference-sm5-objects.md)
+[Shadermodell 5-Objekte](d3d11-graphics-reference-sm5-objects.md)
 </dt> </dl>
 
  

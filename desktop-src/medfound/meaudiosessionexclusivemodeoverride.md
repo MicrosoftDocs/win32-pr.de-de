@@ -1,40 +1,40 @@
 ---
-description: Wird vom audiorenderer ausgelöst, wenn die Audiositzung durch eine Verbindung im exklusiven Modus vorzeitig entfernt wird. Der audiorenderer ist nun ungültig.
+description: Wird vom Audiorenderer ausgelöst, wenn die Audiositzung durch eine Verbindung im exklusiven Modus vorzeitig beendet wird. Der Audiorenderer ist jetzt ungültig.
 ms.assetid: f89acfe4-14a7-4051-a816-e5e0ba8db80a
-title: Meaudiosessionexclusivemodeoverride-Ereignis (mfobjects. h)
+title: MEAudioSessionExclusiveModeOverride-Ereignis (Mfobjects.h)
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 3732be3fec73e3e948f6093187f32dd46839bea9
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: c6344a5d073e9dc29777e6cb181c77bcae79da8602b830ade86646459e4d0bea
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104214841"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120114220"
 ---
-# <a name="meaudiosessionexclusivemodeoverride-event"></a>Meaudiosessionexclusivemodeoverride-Ereignis
+# <a name="meaudiosessionexclusivemodeoverride-event"></a>MEAudioSessionExclusiveModeOverride-Ereignis
 
-Wird vom audiorenderer ausgelöst, wenn die Audiositzung durch eine Verbindung im exklusiven Modus vorzeitig entfernt wird. Der audiorenderer ist nun ungültig.
+Wird vom Audiorenderer ausgelöst, wenn die Audiositzung durch eine Verbindung im exklusiven Modus vorzeitig beendet wird. Der Audiorenderer ist jetzt ungültig.
 
-Die Medien Sitzung leitet dieses Ereignis an die Anwendung weiter.
+Die Mediensitzung leitet dieses Ereignis an die Anwendung weiter.
 
 ## <a name="event-values"></a>Ereigniswerte
 
-Mögliche Werte, die von [**imfmediaevent:: GetValue**](/windows/desktop/api/mfobjects/nf-mfobjects-imfmediaevent-getvalue) abgerufen werden, sind folgende.
+Mögliche Werte, die von [**DERMEDIAEVENT::GetValue**](/windows/desktop/api/mfobjects/nf-mfobjects-imfmediaevent-getvalue) abgerufen werden, sind:
 
 
 
 | VARTYPE                | BESCHREIBUNG                                                                               |
 |------------------------|-------------------------------------------------------------------------------------------|
-| VT \_ leer<br/>   | Keine Ereignisdaten.<br/> <br/>                                                     |
-| VT \_ unbekannt<br/> | Ein Zeiger auf die [**imfaudiopolicy**](/windows/desktop/api/mfidl/nn-mfidl-imfaudiopolicy) -Schnittstelle.<br/> <br/> |
+| VT \_ EMPTY<br/>   | Keine Ereignisdaten.<br/> <br/>                                                     |
+| VT \_ UNKNOWN<br/> | Zeiger auf die [**INTERFACESAudioPolicy-Schnittstelle.**](/windows/desktop/api/mfidl/nn-mfidl-imfaudiopolicy)<br/> <br/> |
 
 
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Dieses Ereignis wird von der streamsenke des audiorenderer gesendet. Das-Ereignis wird ausgelöst, wenn der audiorenderer ein [**iaudiosessionevents:: onsessiongetrennte**](/windows/win32/api/audiopolicy/nf-audiopolicy-iaudiosessionevents-onsessiondisconnected) -Ereignis aus der Audiositzung empfängt, bei dem der Trennungsgrund gleich disconnectionsonexclusivemodeoverride ist.
+Dieses Ereignis wird von der Streamsenke des Audiorenderers gesendet. Das Ereignis wird ausgelöst, wenn der Audiorenderer ein [**IAudioSessionEvents::OnSessionDisconnected-Ereignis**](/windows/win32/api/audiopolicy/nf-audiopolicy-iaudiosessionevents-onsessiondisconnected) aus der Audiositzung empfängt, wobei der Grund für die Trennung gleich DisconnectReasonExclusiveModeOverride ist.
 
-Der [**imfaudiopolicy**](/windows/desktop/api/mfidl/nn-mfidl-imfaudiopolicy) -Zeiger ist, wenn er festgelegt ist, nicht nützlich, da der Audiodatenstrom nicht mehr gültig ist.
+Der [**CURSORAUDIOPOLICY-Zeiger**](/windows/desktop/api/mfidl/nn-mfidl-imfaudiopolicy) ist, falls festgelegt, nicht nützlich, da der Audiostream nicht mehr gültig ist.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -42,9 +42,9 @@ Der [**imfaudiopolicy**](/windows/desktop/api/mfidl/nn-mfidl-imfaudiopolicy) -Ze
 
 | Anforderung | Wert |
 |-------------------------------------|----------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                                           |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/>                                                     |
-| Header<br/>                   | <dl> <dt>Mfobjects. h (Include mfdl. h)</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur Vista-Desktop-Apps\]<br/>                                                           |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/>                                                     |
+| Header<br/>                   | <dl> <dt>Mfobjects.h (include Mfidl.h)</dt> </dl> |
 
 
 
@@ -52,10 +52,10 @@ Der [**imfaudiopolicy**](/windows/desktop/api/mfidl/nn-mfidl-imfaudiopolicy) -Ze
 
 <dl> <dt>
 
-[Ereignisse Media Foundation](media-foundation-events.md)
+[Media Foundation-Ereignisse](media-foundation-events.md)
 </dt> <dt>
 
-[Streamingaudiorenderer](streaming-audio-renderer.md)
+[StreamingAudiorenderer](streaming-audio-renderer.md)
 </dt> </dl>
 
  

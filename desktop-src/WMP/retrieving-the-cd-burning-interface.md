@@ -3,34 +3,34 @@ title: Abrufen der Schnittstelle zum Brennen von CDs
 description: Abrufen der Schnittstelle zum Brennen von CDs
 ms.assetid: d52f7b27-a327-4656-8dc2-0b075264d295
 keywords:
-- Windows Media Player, CD-brennen
-- Windows Media Player-Objektmodell, CD-brennen
-- Objektmodell, CD-brennen
-- Windows Media Player ActiveX-Steuerelement, CD-brennen
-- ActiveX-Steuerelement, CD-brennen
-- Windows Media Player Mobile ActiveX-Steuerelement, CD-brennen
-- Windows Media Player Mobile, CD-brennen
-- CD-brennen, Abrufen der iwmpcdromcollection-Schnittstelle
-- Brennen von CDs, Abrufen der iwmpcdromcollection-Schnittstelle
-- Iwmpcdromcollection-Schnittstelle
+- Windows Media Player,CD-1
+- Windows Media Player-Objektmodell,CD-Endung
+- Objektmodell, CD-1
+- Windows Media Player ActiveX,CD-Sicherung
+- ActiveX-Steuerelement,CD-Endung
+- Windows Media Player Mobile ActiveX-Steuerelement, CD-Steuerung
+- Windows Media Player Mobil, CD-1
+- CD-Auflistung,Abrufen der IWMPCcollection-Schnittstelle
+- '- CDs,Abrufen der IWMPCcollection-Schnittstelle'
+- IWMPCcollection-Schnittstelle
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: b63763f9dd99bbaf88ae099edb53ba072cd1a25e
-ms.sourcegitcommit: ad672d3a10192c5ccac619ad2524407109266e93
+ms.openlocfilehash: 84013d5df4244fc30c9cb52e3447d15f60e559befe1223f0964934dd8ca1e1cf
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/25/2020
-ms.locfileid: "104038671"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120123200"
 ---
 # <a name="retrieving-the-cd-burning-interface"></a>Abrufen der Schnittstelle zum Brennen von CDs
 
-Um die CD-Laufwerke auf dem Computer des Benutzers aufzulisten, verwenden Sie die **iwmpcdromcollection** -Schnittstelle. Sie rufen einen Zeiger auf diese Schnittstelle ab, indem Sie [iwmpcore:: get \_ cdromcollection](/previous-versions/windows/desktop/api/wmp/nf-wmp-iwmpcore-get_cdromcollection)aufrufen.
+Um die CD-Laufwerke auf dem Computer des Benutzers aufzählen zu können, verwenden Sie **die IWMPCcollection-Schnittstelle.** Sie rufen einen Zeiger auf diese Schnittstelle ab, indem Sie [IWMPCore::get \_ ccollection aufrufen.](/previous-versions/windows/desktop/api/wmp/nf-wmp-iwmpcore-get_cdromcollection)
 
-Mithilfe der **get \_ count** -und **Item** -Methoden können Sie die Auflistung durchlaufen, um einen [iwmpcdrom](/previous-versions/windows/desktop/api/wmp/nn-wmp-iwmpcdrom) -Schnittstellen Zeiger für jedes CD-Laufwerk auf dem Computer des Benutzers abzurufen.
+Mithilfe der **Methoden "get \_ count"** und **"item"** können Sie die Sammlung iterieren, um einen [IWMPC interface-Zeiger](/previous-versions/windows/desktop/api/wmp/nn-wmp-iwmpcdrom) für jedes CD-Laufwerk auf dem Computer des Benutzers abzurufen.
 
-Die **iwmpcdrom** -Schnittstelle stellt ein einzelnes CD-Laufwerk dar. Bevor Sie mit dem Brennen einer CD beginnen, müssen Sie zuerst **QueryInterface** über einen **iwmpcdrom** -Zeiger aufrufen, um einen Zeiger auf die [iwmpcdromburn](/previous-versions/windows/desktop/api/wmp/nn-wmp-iwmpcdromburn) -Schnittstelle abzurufen.
+Die **IWMPC cri-Schnittstelle** stellt ein einzelnes CD-Laufwerk dar. Bevor Sie mit dem Erstellen einer CD beginnen, müssen Sie **zunächst QueryInterface** über einen **IWMPCführungszeiger** aufrufen, um einen Zeiger auf die [IWMPCleitschnittstelle](/previous-versions/windows/desktop/api/wmp/nn-wmp-iwmpcdromburn) abzurufen.
 
-Im folgenden Codebeispiel wird veranschaulicht, wie Sie eine Schnittstelle zum Brennen einer CD auf einem bestimmten Laufwerk abrufen:
+Im folgenden Codebeispiel wird veranschaulicht, wie eine Schnittstelle abgerufen wird, um eine CD auf einem bestimmten Laufwerk zu installieren:
 
 
 ```C++
@@ -73,27 +73,27 @@ HRESULT CMainDlg::GetCdromBurnInterface (long lIndex)
 
 <dl> <dt>
 
-[**Brennen einer CD**](burning-a-cd.md)
+[**Erstellen einer CD**](burning-a-cd.md)
 </dt> <dt>
 
-[**Der Verbrennungsprozess wird gestartet.**](starting-the-burn-process.md)
+[**Starten des Burn-Prozesses**](starting-the-burn-process.md)
 </dt> <dt>
 
 [**Löschen einer erneut beschreibbaren CD**](erasing-a-rewritable-cd.md)
 </dt> <dt>
 
-[**Abrufen des Laufwerks und des Festplatten Status**](retrieving-the-drive-and-disc-status.md)
+[**Abrufen des Laufwerk- und Datenträgerstatus**](retrieving-the-drive-and-disc-status.md)
 </dt> <dt>
 
-[**Abrufen des Verbrauchs Status**](retrieving-the-burn-status.md)
+[**Abrufen des Burn-Status**](retrieving-the-burn-status.md)
 </dt> <dt>
 
-[**Iwmpcdromcollection-Schnittstelle**](/previous-versions/windows/desktop/api/wmp/nn-wmp-iwmpcdromcollection)
+[**IWMPCcollection-Schnittstelle**](/previous-versions/windows/desktop/api/wmp/nn-wmp-iwmpcdromcollection)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

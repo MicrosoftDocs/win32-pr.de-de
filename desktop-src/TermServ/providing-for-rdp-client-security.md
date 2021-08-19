@@ -1,44 +1,44 @@
 ---
-title: Bereitstellen der RDP-Client Sicherheit
-description: Einige Eigenschaften des Remotedesktop ActiveX-Steuerelement Objekts sind auf bestimmte Internet Explorer-URL-Sicherheitszonen beschränkt.
+title: Bereitstellen von RDP-Clientsicherheit
+description: Einige Eigenschaften des Remotedesktop ActiveX-Steuerelementobjekts sind auf bestimmte URL Internet Explorer-Sicherheitszonen beschränkt.
 ms.assetid: fd20ec03-a5e4-4c3e-9bf5-5fa841e869c3
 ms.tgt_platform: multiple
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 15bbb143abd3ec09a7f1aeff67a7b6dfa224b56b
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: bfdcfbc2b26363ff7f13ed15b3486249aab804cd1bde418f60d71db918f25567
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "103710187"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117940614"
 ---
-# <a name="providing-for-rdp-client-security"></a>Bereitstellen der RDP-Client Sicherheit
+# <a name="providing-for-rdp-client-security"></a>Bereitstellen von RDP-Clientsicherheit
 
-Um es Clients zu ermöglichen, sich selbst vor potenziell nicht vertrauenswürdigen Servern zu schützen, werden einige Eigenschaften des Remotedesktop ActiveX-Steuerelement Objekts auf bestimmte Internet Explorer-URL-Sicherheitszonen beschränkt. Dies bedeutet Folgendes: Wenn ein Benutzer, der das Internet durchsucht, auf die Seite zugreift und sich die Seite in einer höheren URL-Sicherheitszone als der Computer befindet, mit dem Sie das Web durchsuchen, sind diese Eigenschaften deaktiviert. Auf diese eingeschränkten Eigenschaften wird mithilfe der [**imstscsecuredsettings**](imstscsecuredsettings-interface.md) -Schnittstelle und der [**imsrdpclientsecuredsettings**](imsrdpclientsecuredsettings-interface.md) -Schnittstelle zugegriffen, und Sie sind in den folgenden Sicherheitszonen für Internet Explorer-URLs verfügbar:
+Damit clients sich vor potenziell nicht vertrauenswürdigen Servern schützen können, sind einige Eigenschaften des Remotedesktop ActiveX-Steuerelementobjekts auf bestimmte url Internet Explorer Sicherheitszonen beschränkt. Dies bedeutet, dass diese Eigenschaften deaktiviert sind, wenn ein Benutzer, der im Web auf die Seite zufingt und sich in einer höheren URL-Sicherheitszone befindet als der Computer, mit dem er im Web browset, sich befindet. Der Zugriff auf diese eingeschränkten Eigenschaften erfolgt über die [**IMsTscSecuredSettings-Schnittstelle**](imstscsecuredsettings-interface.md) und die [**IMsRdpClientSecuredSettings-Schnittstelle**](imsrdpclientsecuredsettings-interface.md) und ist in den folgenden URL Internet Explorer Sicherheitszonen verfügbar:
 
--   Arbeitsplatz
+-   Mein Computer
 -   Lokales Intranet
 -   Vertrauenswürdige Sites
 
-Sie sind in diesen Zonen deaktiviert:
+Sie sind in den folgenden Zonen deaktiviert:
 
 -   Internet
 -   Eingeschränkte Websites
 
-Wenn Sie diese eingeschränkten Eigenschaften in der Remotedesktopdienste-Webanwendung aufrufen, sollten Sie [**imstscax:: get \_ securedsettings**](imstscax-securedsettings.md) und [**imstscax:: get \_ securedsettingsenabled**](imstscax-securedsettingsenabled.md) aufrufen, um auf die Eigenschaften der gesicherten Einstellungen zuzugreifen.
+Wenn Sie diese eingeschränkten Eigenschaften in Ihrer Remotedesktopdienste-Webanwendung aufrufen, sollten Sie [**IMsTscAx::get \_ SecuredSettings**](imstscax-securedsettings.md) und [**IMsTscAx::get \_ SecuredSettingsEnabled**](imstscax-securedsettingsenabled.md) aufrufen, um auf die Eigenschaften von Secured Einstellungen zu zugreifen.
 
-Die eingeschränkten Eigenschaften, auf die die **imstscsecuredsettings** -Schnittstelle zugreift, lauten wie folgt:
+Die eingeschränkten Eigenschaften, auf die die **IMsTscSecuredSettings-Schnittstelle** zuweist, sind die folgenden:
 
 -   [**StartProgram**](imstscsecuredsettings-startprogram.md). Diese Eigenschaft gibt das Programm an, das bei der Verbindung gestartet wird.
--   [**WorkDir**](imstscsecuredsettings-workdir.md). Diese Eigenschaft gibt das Arbeitsverzeichnis des Programms an, das in [**StartProgram**](imstscsecuredsettings-startprogram.md)angegeben ist.
--   [**Vollbild**](imstscsecuredsettings-fullscreen.md). Diese Eigenschaft gibt an, ob sich der Zustand des Steuer Elements bei der Verbindung im Vollbildmodus oder im Fenstermodus befindet. Wenn der Wert dieser Eigenschaft **true** ist, wird die Verbindung im Vollbildmodus geöffnet. Obwohl die Verwendung der **Fullscreen** -Eigenschaft auf die zuvor aufgeführten Internet Explorer-URL-Sicherheitszonen beschränkt ist, kann ein Benutzer nach der Verbindungs Herstellung jederzeit in den Vollbildmodus wechseln, indem er die [Tasten](terminal-services-shortcut-keys.md) Kombination für den Vollbildmodus (Strg + Alt + untbuggung) drückt.
+-   [**WorkDir**](imstscsecuredsettings-workdir.md). Diese Eigenschaft gibt das Arbeitsverzeichnis des in [**StartProgram angegebenen Programms an.**](imstscsecuredsettings-startprogram.md)
+-   [**FullScreen**](imstscsecuredsettings-fullscreen.md). Diese Eigenschaft gibt an, ob sich der Zustand des Steuerelements bei der Verbindung im Vollbild- oder Fenstermodus befindet. Wenn der Wert dieser Eigenschaft **TRUE** ist, wird die Verbindung im Vollbildmodus geöffnet. Obwohl die Verwendung der **FullScreen-Eigenschaft** auf die oben aufgeführten Internet Explorer-URL-Sicherheitszonen beschränkt ist, kann ein Benutzer nach [](terminal-services-shortcut-keys.md) der Verbindung immer in den Vollbildmodus wechseln, indem er die Tastenkombination für den Vollbildmodus (STRG+ALT+BREAK) drückt.
 
-Die Eigenschaften, auf die die **imsrdpclientsecuredsettings** -Schnittstelle zugreift, lauten wie folgt:
+Die **IMsRdpClientSecuredSettings-Schnittstelle** hat folgende Eigenschaften:
 
--   [**Audioredirectionmode**](imsrdpclientsecuredsettings-autoredirectionmode.md). Diese Eigenschaft gibt an, ob Sounds umgeleitet oder Sounds auf dem Remotedesktop-Sitzungshost-Server (RD-Sitzungshost) abgespielt werden.
--   [**Keyboardhuokmode**](imsrdpclientsecuredsettings-keyboardhookmode.md). Diese Eigenschaft gibt an, wie und wann Windows-Tastenkombinationen angewendet werden sollen. Beispiel: Alt + Tab.
+-   [**AudioRedirectionMode**](imsrdpclientsecuredsettings-autoredirectionmode.md). Diese Eigenschaft gibt an, ob Sounds umgeleitet oder auf dem Remotedesktop-Sitzungshost -Server (RD-Sitzungshost) wiedergibt.
+-   [**KeyboardHookMode**](imsrdpclientsecuredsettings-keyboardhookmode.md). Diese Eigenschaft gibt an, wie und wann sie Windows Tastenkombinationen anwenden soll. Beispiel: ALT+TAB.
 
-Mit dem folgenden Skript wird Microsoft Notepad.exe bei der Verbindung gestartet. Führen Sie dieses Skript aus, bevor Sie die [**imstscax:: Connect**](imstscax-connect.md) -Methode aufrufen.
+Mit dem folgenden Skript wird microsoft Notepad.exe bei der Verbindung gestartet. Führen Sie dieses Skript aus, bevor Sie [**die IMsTscAx::Verbinden**](imstscax-connect.md) aufrufen.
 
 ``` syntax
 if MsRdpClient.SecuredSettingsEnabled then
@@ -48,9 +48,9 @@ else
 end if
 ```
 
- 
+ 
 
- 
+ 
 
 
 

@@ -16,12 +16,12 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: f17ae78b668f6cc35e454c5e4e83d38727077ef7
-ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
+ms.openlocfilehash: 71d7ca547556c151107c35c9ece1f4ee0d0ca6a80feb6db0cebb06878ddbca01
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2021
-ms.locfileid: "108085758"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120131220"
 ---
 # <a name="cimageallocatorcimageallocator-constructor"></a>CImageAllocator.CImageAllocator-Konstruktor
 
@@ -61,7 +61,7 @@ Zeiger auf eine Zeichenfolge, die den Debugnamen der Zuweisung enthält. Weitere
 *Phr* 
 </dt> <dd>
 
-Zeiger auf einen **HRESULT-Wert.** Legen Sie den Wert auf S \_ OK fest, bevor Sie das -Objekt erstellen. Wenn der Konstruktor fehlschlägt, wird der Wert auf einen Fehlercode festgelegt.
+Zeiger auf einen **HRESULT-Wert.** Legen Sie den Wert auf S \_ OK fest, bevor Sie das Objekt erstellen. Wenn der Konstruktor fehlschlägt, wird der Wert auf einen Fehlercode festgelegt.
 
 </dd> </dl>
 
@@ -69,14 +69,14 @@ Zeiger auf einen **HRESULT-Wert.** Legen Sie den Wert auf S \_ OK fest, bevor Si
 
 
 
-| Anforderungen | Wert |
+| Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Winutil.h (einschließlich Streams.h)</dt> </dl>                                                                                   |
-| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Einzelhandels-Builds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Winutil.h (include Streams.h)</dt> </dl>                                                                                   |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Verkaufsbuilds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 

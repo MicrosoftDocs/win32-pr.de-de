@@ -1,11 +1,11 @@
 ---
-title: Ibackgroundcopyerror GetFile-Methode (deliveryoptimization. h)
-description: Ruft einen Schnittstellen Zeiger auf das File-Objekt ab, das dem Fehler zugeordnet ist.
+title: IBackgroundCopyError GetFile-Methode (Deliveryoptimization.h)
+description: Ruft einen Schnittstellenzeiger auf das Dateiobjekt ab, das dem Fehler zugeordnet ist.
 ms.assetid: 7E1DB3EE-0690-4D0E-BA98-70F5FBDCF12F
 keywords:
 - GetFile-Methode
-- GetFile-Methode, ibackgroundcopyerror-Schnittstelle
-- Ibackgroundcopyerror-Schnittstelle, GetFile-Methode
+- GetFile-Methode, IBackgroundCopyError-Schnittstelle
+- IBackgroundCopyError-Schnittstelle, GetFile-Methode
 topic_type:
 - apiref
 api_name:
@@ -17,16 +17,16 @@ api_type:
 ms.topic: reference
 ms.date: 05/31/2018
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: b84396797378c77a6f774b4c63a3966b0d601b7f
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: fbed5497bcebb3518c7f6a56646976cc01fbfebc501af4a08e861139311f4bc1
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "106337735"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120096710"
 ---
-# <a name="ibackgroundcopyerrorgetfile-method"></a>Ibackgroundcopyerror:: GetFile-Methode
+# <a name="ibackgroundcopyerrorgetfile-method"></a>IBackgroundCopyError::GetFile-Methode
 
-Ruft einen Schnittstellen Zeiger auf das File-Objekt ab, das dem Fehler zugeordnet ist.
+Ruft einen Schnittstellenzeiger auf das Dateiobjekt ab, das dem Fehler zugeordnet ist.
 
 ## <a name="syntax"></a>Syntax
 
@@ -43,23 +43,23 @@ HRESULT GetFile(
 
 <dl> <dt>
 
-*ppfile* \[ vorgenommen\]
+*ppFile* \[ out\]
 </dt> <dd>
 
-Ein [**ibackgroundcopyfile**](ibackgroundcopyfile.md) -Schnittstellen Zeiger, dessen Methoden Sie verwenden, um die dem Fehler zugeordneten lokalen und Remote Dateinamen zu bestimmen. Der *ppfile* -Parameter wird auf **null** festgelegt, wenn der Fehler nicht der lokalen Datei oder Remote Datei zugeordnet ist. Wenn Sie den Vorgang abgeschlossen haben, geben Sie *ppfile* frei
+Ein [**IBackgroundCopyFile-Schnittstellenzeiger,**](ibackgroundcopyfile.md) dessen Methoden Sie verwenden, um die lokalen und Remotedateinamen zu bestimmen, die dem Fehler zugeordnet sind. Der *ppFile-Parameter* wird auf **NULL festgelegt,** wenn der Fehler nicht der lokalen Datei oder Remotedatei zugeordnet ist. Wenn Sie fertig sind, geben Sie *ppFile frei.*
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Diese Methode gibt die folgenden **HRESULT** -Werte zurück.
+Diese Methode gibt die folgenden **HRESULT-Werte** zurück.
 
 
 
 | Rückgabecode                                                                                                | Beschreibung                                                                                                    |
 |------------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------|
-| <dl> <dt>S_OK * * * *</dt> </dl>                   | Ein Schnittstellen Zeiger auf das Datei Objekt wurde erfolgreich abgerufen.<br/>                                     |
-| <dl> <dt>**DO_E_FILE_NOT_AVAILABLE**</dt> </dl> | Der Fehler ist keiner lokalen oder Remote Datei zugeordnet. Der *ppfile* -Parameter ist auf **null** festgelegt.<br/> |
+| <dl> <dt>S_OK S_OK</dt> </dl>                   | Ein Schnittstellenzeiger auf das Dateiobjekt wurde erfolgreich abgerufen.<br/>                                     |
+| <dl> <dt>**DO_E_FILE_NOT_AVAILABLE**</dt> </dl> | Der Fehler ist nicht mit einer lokalen Datei oder Remotedatei verknüpft. Der *ppFile-Parameter* ist auf **NULL festgelegt.**<br/> |
 
 
 
@@ -71,13 +71,13 @@ Diese Methode gibt die folgenden **HRESULT** -Werte zurück.
 
 | Anforderung | Wert |
 |-------------------------------------|-----------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Windows 10, Version 1709, \[ nur Desktop-Apps\]<br/>                                           |
-| Unterstützte Mindestversion (Server)<br/> | Windows Server, Version 1709, \[ nur Desktop-Apps\]<br/>                                       |
-| Header<br/>                   | <dl> <dt>Deliveryoptimization. h</dt> </dl>   |
-| IDL<br/>                      | <dl> <dt>Deliveryoptimization. idl</dt> </dl> |
-| Bibliothek<br/>                  | <dl> <dt>Dosvc. lib</dt> </dl>                |
+| Unterstützte Mindestversion (Client)<br/> | Windows 10, version 1709 desktop apps only (Nur Desktop-Apps der Version 1709) \[\]<br/>                                           |
+| Unterstützte Mindestversion (Server)<br/> | Windows Server, version 1709 desktop apps only (Nur \[ Desktop-Apps der Version 1709)\]<br/>                                       |
+| Header<br/>                   | <dl> <dt>Deliveryoptimization.h</dt> </dl>   |
+| Idl<br/>                      | <dl> <dt>DeliveryOptimization.idl</dt> </dl> |
+| Bibliothek<br/>                  | <dl> <dt>Dosvc.lib</dt> </dl>                |
 | DLL<br/>                      | <dl> <dt>Dosvc.dll</dt> </dl>                |
-| IID<br/>                      | IID_IBackgroundCopyError ist als 19c613a0-fcb8-4f 28-81ae-897c3d078-Datei definiert.<br/>             |
+| IID<br/>                      | IID_IBackgroundCopyError ist als 19C613A0-FCB8-4F28-81AE-897C3D078F81 definiert.<br/>             |
 
 
 
@@ -85,10 +85,10 @@ Diese Methode gibt die folgenden **HRESULT** -Werte zurück.
 
 <dl> <dt>
 
-[**Ibackgroundcopyerror**](ibackgroundcopyerror.md)
+[**IBackgroundCopyError**](ibackgroundcopyerror.md)
 </dt> <dt>
 
-[**Ibackgroundcopyerror:: getError**](ibackgroundcopyerror-geterror-method.md)
+[**IBackgroundCopyError::GetError**](ibackgroundcopyerror-geterror-method.md)
 </dt> </dl>
 
  

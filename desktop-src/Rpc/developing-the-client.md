@@ -1,36 +1,36 @@
 ---
 title: Entwickeln des Clients
-description: Die Entwicklung eines RPC-Client Programms ähnelt der Entwicklung des-Server Programms. Weitere Informationen zum Entwickeln eines RPC-Server Programms finden Sie unter Entwickeln des Servers.
+description: Die Entwicklung eines RPC-Clientprogramms ähnelt der Entwicklung des Serverprogramms. Informationen zum Entwickeln eines RPC-Serverprogramms finden Sie unter Entwickeln des Servers.
 ms.assetid: 92276326-d478-479e-8fa4-02a2fce58eb6
 keywords:
-- Remote Prozedur Aufruf RPC, Tasks, entwickeln des Clients
+- REMOTE PROCEDURE Call RPC , Tasks, Entwickeln des Clients
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 10ceddedc4ccfd1d068e3452b64ed8c6b54a621d
-ms.sourcegitcommit: 592c9bbd22ba69802dc353bcb5eb30699f9e9403
+ms.openlocfilehash: fccc719d724ecdcc5631c5f72c5190870f864e06affd45bcce3e7f2da79fb709
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "103949021"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120021895"
 ---
 # <a name="developing-the-client"></a>Entwickeln des Clients
 
-Die Entwicklung eines RPC-Client Programms ähnelt der Entwicklung des-Server Programms. Weitere Informationen zum Entwickeln eines RPC-Server Programms finden Sie unter [entwickeln des Servers](developing-the-server.md).
+Die Entwicklung eines RPC-Clientprogramms ähnelt der Entwicklung des Serverprogramms. Informationen zum Entwickeln eines RPC-Serverprogramms finden Sie unter [Developing the Server](developing-the-server.md).
 
-Wie bei der Serverentwicklung muss das Client Programm die Header Datei enthalten, die der-Mittell-Compiler aus der IDL-Datei generiert. Der mittlerer l-Compiler generiert außerdem eine C-Quelldatei, die den Clientstub enthält. Diese C-Quelldatei muss kompiliert und mit dem Client Programm verknüpft werden. (Zusätzlich generiert der-compilercompiler eine C-Quelldatei, die den Serverstub enthält, aber dies ist für diese Erörterung nicht relevant.)
+Wie bei der Serverentwicklung muss Ihr Clientprogramm die Headerdatei enthalten, die der MIDL-Compiler aus Ihrer IDL-Datei generiert. Der MIDL-Compiler generiert auch eine C-Quelldatei, die den Clientstub enthält. Sie müssen diese C-Quelldatei kompilieren und mit Ihrem Clientprogramm verknüpfen. (Darüber hinaus generiert der MIDL-Compiler eine C-Quelldatei, die den Serverstub enthält, aber dies ist für diese Diskussion nicht relevant.)
 
-Zusätzlich zum Kompilieren und Verknüpfen des clientstubs mit den Programmdateien müssen Sie die Import Bibliothek (und alle anderen Bibliotheken, die Ihr Client Programm benötigt) mit Ihrem Client Programm verknüpfen. Der Prozess der Erstellung eines RPC-Client Programms ist im folgenden Diagramm dargestellt.
+Zusätzlich zum Kompilieren und Verknüpfen des Clientstubs mit Ihren Programmdateien müssen Sie die Importbibliothek (und alle anderen Bibliotheken, die Ihr Clientprogramm benötigt) mit Ihrem Clientprogramm verknüpfen. Der Prozess zum Erstellen eines RPC-Clientprogramms wird im folgenden Diagramm veranschaulicht.
 
-![Prozess der Erstellung eines Client Programms für eine verteilte Anwendung](images/clntdev.png)
+![Prozess zum Erstellen eines Clientprogramms für eine verteilte Anwendung](images/clntdev.png)
 
-Das Beispiel in der obigen Abbildung zeigt die Erstellung eines RPC-Client Programms namens MyClnt.exe. Der erste Schritt besteht darin, die-Schnittstelle in der Datei "MyApp. idl" zu definieren. Der Mittelwert Compiler verwendet MyApp. idl, um die Datei MyApp \_ c. c zu generieren, die den Clientstub enthält. Außerdem wird die Datei "MyApp. h" generiert, die das Client Programm enthalten muss. Das Client Programm muss auch die Dateien "RPC. h" und "Rpcndr. h" einschließen.
+Das Beispiel in der vorherigen Abbildung veranschaulicht die Erstellung eines RPC-Clientprogramms namens MyClnt.exe. Der erste Schritt besteht im Definieren der Schnittstelle in der Datei MyApp.idl. Der MIDL-Compiler verwendet MyApp.idl, um die Datei MyApp \_ c.c zu generieren, die den Clientstub enthält. Außerdem wird die Datei MyApp.h generiert, die das Clientprogramm enthalten muss. Das Clientprogramm muss auch die Dateien RPC.h und RPCNDR.h enthalten.
 
-Das Client Programm selbst wird in der Datei "myclnt. c" erstellt. In einem echten Projekt besteht das Client Programm in der Regel aus mehreren C-Quelldateien. Alle müssen kompiliert und miteinander verknüpft werden. In diesem Beispiel wird jedoch nur eine Datei aus Gründen der Einfachheit verwendet.
+Das Clientprogramm selbst wird in der Datei MyClnt.c erstellt. In einem echten Projekt würde das Clientprogramm in der Regel aus mehreren C-Quelldateien bestehen. Alle müssen kompiliert und miteinander verknüpft werden. In diesem Beispiel wird der Einfachheit halber jedoch nur eine Datei verwendet.
 
-Die Dateien myclnt. c und MyApp \_ c. c werden zusammen mit der RPC-Lauf Zeit Bibliothek und allen anderen Bibliotheken, die das Client Programm benötigt, kompiliert und verknüpft. Das Ergebnis ist ein ausführbares Client Programm mit dem Namen MyClnt.exe.
+Die Dateien MyClnt.c und MyApp c.c werden kompiliert und zusammen mit der RPC-Laufzeitbibliothek und allen anderen Bibliotheken verknüpft, die das \_ Clientprogramm benötigt. Das Ergebnis ist ein ausführbares Clientprogramm namens MyClnt.exe.
 
-Wenn Sie die IDL-Datei nicht im OSF-Kompatibilitätsmodus ([**/OSF**](/windows/desktop/Midl/-osf)) kompilieren, muss das Client Programm eine Funktion zum Zuordnen von Arbeitsspeicher und eine Funktion für die Aufhebung der Zuordnung bereitstellen. Für Windows 2000 und höhere Versionen ist [**/Oicf**](/windows/desktop/Midl/-oi)der empfohlene Modus. Weitere Informationen finden Sie unter [zuweisen und](how-memory-is-allocated-and-deallocated.md)Aufheben der Zuordnung von Arbeitsspeicher sowie [Zeiger und Speicher Belegung](pointers-and-memory-allocation.md).
+Wenn Sie Ihre IDL-Datei nicht im OSF-Kompatibilitätsmodus [**(/osf)**](/windows/desktop/Midl/-osf)kompilieren, muss Ihr Clientprogramm eine Funktion zum Zuordnen von Arbeitsspeicher und eine Funktion zum Zuordnen bereitstellen. Für Windows 2000 und höher wird der [**Modus /Oicf empfohlen.**](/windows/desktop/Midl/-oi) Weitere Informationen finden Sie unter [How Memory Is Allocated and Deallocated](how-memory-is-allocated-and-deallocated.md), and [Pointers and Memory Allocation](pointers-and-memory-allocation.md).
 
- 
+ 
 
- 
+ 

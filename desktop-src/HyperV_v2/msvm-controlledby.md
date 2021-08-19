@@ -24,16 +24,16 @@ api_type:
 - DllExport
 api_location:
 - vmms.exe
-ms.openlocfilehash: 7986ffb842f7a1a104a0a8d846c1b6ee47a21523
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: b08cf97c54363009e839ea78fe139c6c8a1bdd81cac07182d019d3d00857dee4
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106373276"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120130600"
 ---
-# <a name="msvm_controlledby-class"></a>MSVM \_ controlledby-Klasse
+# <a name="msvm_controlledby-class"></a>Msvm \_ ControlledBy-Klasse
 
-Ordnet dem Speichercontroller, der das Gerät besitzt, ein Speichergerät zu. Diese Zuordnung wird sowohl für IDE als auch für Disketten Controller verwendet.
+Ordnet dem Speichercontroller, der das Gerät besitzt, ein Speichergerät zu. Diese Zuordnung wird sowohl mit IDE- als auch mit Diskettencontrollern verwendet.
 
 Die folgende Syntax wird Managed Object Format (MOF)-Code vereinfacht und enthält alle geerbten Eigenschaften.
 
@@ -59,69 +59,69 @@ class Msvm_ControlledBy : CIM_ControlledBy
 
 ## <a name="members"></a>Member
 
-Die **MSVM \_ controlledby** -Klasse verfügt über diese Typen von Membern:
+Die **Msvm \_ ControlledBy-Klasse** verfügt über die folgenden Membertypen:
 
 -   [Eigenschaften](#properties)
 
 ### <a name="properties"></a>Eigenschaften
 
-Die **MSVM \_ controlledby** -Klasse verfügt über diese Eigenschaften.
+Die **Msvm \_ ControlledBy-Klasse** verfügt über diese Eigenschaften.
 
 <dl> <dt>
 
 **AccessMode**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt16**
+Datentyp: **uint16**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Der Zugriff auf das Gerät über den Vorgänger Controller. Diese Eigenschaft wird von [**CIM \_ controlledby**](/windows/desktop/CIMWin32Prov/cim-controlledby)geerbt und ist immer auf 2 festgelegt (Lese-/Schreibzugriff).
+Der Zugriff auf das Gerät über den yedent-Controller. Diese Eigenschaft wird von [**CIM \_ ControlledBy geerbt**](/windows/desktop/CIMWin32Prov/cim-controlledby)und immer auf 2 (Lesen/Schreiben) festgelegt.
 
 </dd> <dt>
 
-**Accesspriority**
+**AccessPriority**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt16**
+Datentyp: **uint16**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Die Priorität, die für den Zugriff auf das Gerät über diesen Controller eingeräumt wird. Der Pfad mit der höchsten Priorität hat den niedrigsten Wert. Diese Eigenschaft wird von [**CIM \_ controlledby**](/windows/desktop/CIMWin32Prov/cim-controlledby)geerbt und ist immer auf 0 festgelegt.
+Die Priorität, die den Zugriffen des Geräts über diesen Controller erteilt wird. Der Pfad mit der höchsten Priorität hat den niedrigsten Wert. Diese Eigenschaft wird von [**CIM \_ ControlledBy geerbt**](/windows/desktop/CIMWin32Prov/cim-controlledby)und immer auf 0 festgelegt.
 
 </dd> <dt>
 
-**Accessstate**
+**AccessState**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt16**
+Datentyp: **uint16**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Gibt an, ob der Controller aktiv auf das Gerät zugreift oder darauf zugreift. Diese Eigenschaft wird von [**CIM \_ controlledby**](/windows/desktop/CIMWin32Prov/cim-controlledby)geerbt und ist immer auf 1 (aktiv) festgelegt.
+Gibt an, ob der Controller aktiv befehlet oder auf das Gerät zutritt. Diese Eigenschaft wird von [**CIM \_ ControlledBy geerbt**](/windows/desktop/CIMWin32Prov/cim-controlledby)und immer auf 1 (Aktiv) festgelegt.
 
 </dd> <dt>
 
-**Vorgänger**
+**Vorläufer**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **[ **CIM- \_ Controller**](/windows/desktop/CIMWin32Prov/cim-controller)**
+Datentyp: **[ **\_ CIM-Controller**](/windows/desktop/CIMWin32Prov/cim-controller)**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Ein Verweis auf den Controller. Diese Eigenschaft wird von [**CIM \_ controlledby**](/windows/desktop/CIMWin32Prov/cim-controlledby)geerbt.
+Ein Verweis auf den Controller. Diese Eigenschaft wird von [**CIM \_ ControlledBy geerbt.**](/windows/desktop/CIMWin32Prov/cim-controlledby)
 
 </dd> <dt>
 
-**Dependent**
+**Abhängigen**
 </dt> <dd> <dl> <dt>
 
 Datentyp: **[ **CIM \_ LogicalDevice**](/windows/desktop/CIMWin32Prov/cim-logicaldevice)**
@@ -130,91 +130,91 @@ Datentyp: **[ **CIM \_ LogicalDevice**](/windows/desktop/CIMWin32Prov/cim-logica
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Ein Verweis auf das kontrollierte Gerät. Diese Eigenschaft wird von [**CIM \_ controlledby**](/windows/desktop/CIMWin32Prov/cim-controlledby)geerbt.
+Ein Verweis auf das gesteuerte Gerät. Diese Eigenschaft wird von [**CIM \_ ControlledBy geerbt.**](/windows/desktop/CIMWin32Prov/cim-controlledby)
 
 </dd> <dt>
 
-**Devicengegen ber**
+**DeviceNumber**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Die Adresse des zugeordneten Geräts im Zusammenhang mit dem Vorgänger Controller. Diese Eigenschaft wird von [**CIM \_ controlledby**](/windows/desktop/CIMWin32Prov/cim-controlledby)geerbt.
+Die Adresse des zugeordneten Geräts im Kontext des Vordenkcontrollers. Diese Eigenschaft wird von [**CIM \_ ControlledBy geerbt.**](/windows/desktop/CIMWin32Prov/cim-controlledby)
 
 </dd> <dt>
 
-**Aushandateddatawidth**
+**NegotiatedDataWidth**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt32**
+Datentyp: **uint32**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Diese Eigenschaft wird von CIM-Geräte [**\_ Bindung**](/windows/desktop/CIMWin32Prov/cim-deviceconnection)geerbt und immer auf 0 festgelegt.
+Diese Eigenschaft wird von [**CIM \_ DeviceConnection geerbt**](/windows/desktop/CIMWin32Prov/cim-deviceconnection)und immer auf 0 festgelegt.
 
 </dd> <dt>
 
-**Aushandatedspeed**
+**NegotiatedSpeed**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt64**
+Datentyp: **uint64**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Diese Eigenschaft wird von CIM-Geräte [**\_ Bindung**](/windows/desktop/CIMWin32Prov/cim-deviceconnection)geerbt und immer auf 0 festgelegt.
+Diese Eigenschaft wird von [**CIM \_ DeviceConnection geerbt**](/windows/desktop/CIMWin32Prov/cim-deviceconnection)und immer auf 0 festgelegt.
 
 </dd> <dt>
 
-**Anzahlersätze**
+**NumberOfHardResets**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt32**
+Datentyp: **uint32**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Diese Eigenschaft wird von [**CIM \_ controlledby**](/windows/desktop/CIMWin32Prov/cim-controlledby)geerbt, aber nicht verwendet.
+Diese Eigenschaft wird von [**CIM \_ ControlledBy geerbt,**](/windows/desktop/CIMWin32Prov/cim-controlledby)aber nicht verwendet.
 
 </dd> <dt>
 
-**Anzahlermengen**
+**NumberOfSoftResets**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt32**
+Datentyp: **uint32**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Diese Eigenschaft wird von [**CIM \_ controlledby**](/windows/desktop/CIMWin32Prov/cim-controlledby)geerbt, aber nicht verwendet.
+Diese Eigenschaft wird von [**CIM \_ ControlledBy geerbt,**](/windows/desktop/CIMWin32Prov/cim-controlledby)aber nicht verwendet.
 
 </dd> <dt>
 
-**Timeofdevicereset**
+**TimeOfDeviceReset**
 </dt> <dd> <dl> <dt>
 
-**Datentyp: DateTime**
+Datentyp: **datetime**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Diese Eigenschaft wird von [**CIM \_ controlledby**](/windows/desktop/CIMWin32Prov/cim-controlledby)geerbt, aber nicht verwendet.
+Diese Eigenschaft wird von [**CIM \_ ControlledBy geerbt,**](/windows/desktop/CIMWin32Prov/cim-controlledby)aber nicht verwendet.
 
 </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Der Zugriff auf die **MSVM \_ controlledby** -Klasse kann durch die UAC-Filterung eingeschränkt werden. Weitere Informationen finden Sie unter [Benutzerkontensteuerung und WMI](/windows/desktop/WmiSdk/user-account-control-and-wmi).
+Der Zugriff auf die **Msvm \_ ControlledBy-Klasse** kann durch UAC-Filterung eingeschränkt werden. Weitere Informationen finden Sie unter [Benutzerkontensteuerung und WMI.](/windows/desktop/WmiSdk/user-account-control-and-wmi)
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -222,10 +222,10 @@ Der Zugriff auf die **MSVM \_ controlledby** -Klasse kann durch die UAC-Filterun
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows 8 \[ -Desktop-Apps\]<br/>                                                              |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2012 \[ -Desktop-Apps\]<br/>                                                    |
-| Namespace<br/>                | \\Stammvirtualisierung \\ v2<br/>                                                                     |
-| MOF<br/>                      | <dl> <dt>Windowsvirtualization. v2. MOF</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | \[Windows 8 Nur Desktop-Apps\]<br/>                                                              |
+| Unterstützte Mindestversion (Server)<br/> | \[Windows Server 2012 Nur Desktop-Apps\]<br/>                                                    |
+| Namespace<br/>                | Root \\ Virtualization \\ V2<br/>                                                                     |
+| MOF<br/>                      | <dl> <dt>WindowsVirtualization.V2.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Vmms.exe</dt> </dl>                     |
 
 
@@ -234,13 +234,13 @@ Der Zugriff auf die **MSVM \_ controlledby** -Klasse kann durch die UAC-Filterun
 
 <dl> <dt>
 
-[**CIM- \_ controlledby**](cim-controlledby.md)
+[**CIM \_ ControlledBy**](cim-controlledby.md)
 </dt> <dt>
 
-[**CIM- \_ controlledby**](/windows/desktop/CIMWin32Prov/cim-controlledby)
+[**CIM \_ ControlledBy**](/windows/desktop/CIMWin32Prov/cim-controlledby)
 </dt> <dt>
 
-[Speicher Klassen](storage-classes.md)
+[Storage Klassen](storage-classes.md)
 </dt> </dl>
 
  

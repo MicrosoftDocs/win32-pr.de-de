@@ -1,24 +1,24 @@
 ---
-description: Beachten Sie, dass diese API veraltet ist. Diese sollten von neuen Anwendungen nicht verwendet werden. Der Stream \_ time-Datentyp wird verwendet, um Verweis Zeiten in Microsoft DirectShow Multimedia Streaming auszudrücken. Die Einheiten sind 100 Nanosekunden.
+description: Hinweis Diese API ist veraltet. Neue Anwendungen sollten sie nicht verwenden. Der STREAM \_ TIME-Datentyp wird verwendet, um Verweiszeiten im Microsoft DirectShow-Multimediastreaming auszudrücken. Einheiten sind 100 Nanosekunden.
 ms.assetid: eff79c58-09d8-4665-9138-752ffaf02e26
-title: STREAM_TIME (mmstream. h)
+title: STREAM_TIME (Mmstream.h)
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 4603aafeb8901eaa0465ab43030c78b76e1ac5a7
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: a2bf8ee48db3e9be921063513f129227be0774fb4d17cf028fedb655ef0fe76f
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106370682"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118951759"
 ---
-# <a name="stream_time"></a>\_streamzeit
+# <a name="stream_time"></a>\_STREAMZEIT
 
 > [!Note]  
-> Diese API ist veraltet. Diese sollten von neuen Anwendungen nicht verwendet werden.
+> Diese API ist veraltet. Neue Anwendungen sollten sie nicht verwenden.
 
  
 
-Der Stream \_ time-Datentyp wird verwendet, um Verweis Zeiten in Microsoft DirectShow Multimedia Streaming auszudrücken. Die Einheiten sind 100 Nanosekunden.
+Der STREAM \_ TIME-Datentyp wird verwendet, um Verweiszeiten im Microsoft DirectShow-Multimediastreaming auszudrücken. Einheiten sind 100 Nanosekunden.
 
 
 ```C++
@@ -27,9 +27,9 @@ typedef LONGLONG STREAM_TIME;
 
 
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Dieser Datentyp entspricht dem Datentyp der DirectShow- [**Verweis \_ Zeit**](reference-time.md) .
+Dieser Datentyp entspricht dem DirectShow [**REFERENCE \_ TIME-Datentyp.**](reference-time.md)
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -37,7 +37,7 @@ Dieser Datentyp entspricht dem Datentyp der DirectShow- [**Verweis \_ Zeit**](re
 
 | Anforderung | Wert |
 |-------------------|---------------------------------------------------------------------------------------|
-| Header<br/> | <dl> <dt>Mmstream. h</dt> </dl> |
+| Header<br/> | <dl> <dt>Mmstream.h</dt> </dl> |
 
 
 
@@ -45,7 +45,7 @@ Dieser Datentyp entspricht dem Datentyp der DirectShow- [**Verweis \_ Zeit**](re
 
 <dl> <dt>
 
-[Multimedia-streamingdatentypen](multimedia-streaming-data-types.md)
+[Multimedia-Streamingdatentypen](multimedia-streaming-data-types.md)
 </dt> </dl>
 
  

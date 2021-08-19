@@ -4,16 +4,16 @@ ms.assetid: 778cc069-fc2d-4ace-b3bd-6d3f97486079
 title: System.SoftwareUsed
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 4249cb50068ce5daf8c189bd171005c1e3796421
-ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
+ms.openlocfilehash: 687fd4d7b7cd884aa05a6578bd4b8d3a13e9fbe55cc36554b1704e017752f7f4
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2021
-ms.locfileid: "108089968"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119938130"
 ---
 # <a name="systemsoftwareused"></a>System.SoftwareUsed
 
-## <a name="windows-10-version-1703-windows-10-version-1607-windows-10-version-1511-windows-10-version-1507-windows-81-windows-8-windows-7-windows-vista"></a>Windows 10, version 1703, Windows 10, version 1607, Windows 10, version 1511, Windows 10, version 1507, Windows 8.1, Windows 8, Windows 7, Windows Vista
+## <a name="windows-10-version-1703-windows-10-version-1607-windows-10-version-1511-windows-10-version-1507-windows-81-windows-8-windows-7-windows-vista"></a>Windows 10, Version 1703, Windows 10, Version 1607, Windows 10, Version 1511, Windows 10, Version 1507, Windows 8.1, Windows 8, Windows 7, Windows Vista
 
 ```
 propertyDescription
@@ -28,7 +28,7 @@ propertyDescription
       type = String
 ```
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
 PKEY-Werte werden in Propkey.h definiert.
 

@@ -1,9 +1,9 @@
 ---
-title: TBN_CUSTHELP Benachrichtigungs Code (kommctrl. h)
-description: Benachrichtigt das übergeordnete Fenster einer Symbolleiste, dass der Benutzer die Schaltfläche "Hilfe" im Dialogfeld "Symbolleiste anpassen" ausgewählt hat. Dieser Benachrichtigungs Code wird in Form einer WM-Benachrichtigungs \_ Meldung gesendet.
+title: TBN_CUSTHELP Benachrichtigungscode (Commctrl.h)
+description: Benachrichtigt das übergeordnete Fenster einer Symbolleiste, dass der Benutzer im Dialogfeld Symbolleiste anpassen die Schaltfläche Hilfe ausgewählt hat. Dieser Benachrichtigungscode wird in Form einer WM \_ NOTIFY-Nachricht gesendet.
 ms.assetid: e889764b-abbd-42a6-8c13-ace6ee052039
 keywords:
-- Windows-Steuerelemente für TBN_CUSTHELP Benachrichtigungs
+- TBN_CUSTHELP Benachrichtigungscode Windows Controls
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 89754deaef2ec4ceb020bd1572c5a419315299e0
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: af0be314d72359bbaac78a7652b4234b4429b897d6d4d31d3ed26d44abce39fb
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "103858754"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120105040"
 ---
-# <a name="tbn_custhelp-notification-code"></a>TBN- \_ custhelp-Benachrichtigungs Code
+# <a name="tbn_custhelp-notification-code"></a>TBN \_ CUSTHELP-Benachrichtigungscode
 
-Benachrichtigt das übergeordnete Fenster einer Symbolleiste, dass der Benutzer die Schaltfläche "Hilfe" im Dialogfeld "Symbolleiste anpassen" ausgewählt hat. Dieser Benachrichtigungs Code wird in Form einer WM- [**\_ Benachrichtigungs**](wm-notify.md) Meldung gesendet.
+Benachrichtigt das übergeordnete Fenster einer Symbolleiste, dass der Benutzer im Dialogfeld Symbolleiste anpassen die Schaltfläche Hilfe ausgewählt hat. Dieser Benachrichtigungscode wird in Form einer [**WM \_ NOTIFY-Nachricht**](wm-notify.md) gesendet.
 
 
 ```C++
@@ -41,7 +41,7 @@ TBN_CUSTHELP
 *lParam* 
 </dt> <dd>
 
-Zeiger auf eine [**NMHDR**](/windows/desktop/api/richedit/ns-richedit-nmhdr) -Struktur, die Informationen über den Benachrichtigungs Code enthält.
+Zeiger auf eine [**NMHDR-Struktur,**](/windows/desktop/api/richedit/ns-richedit-nmhdr) die Informationen zum Benachrichtigungscode enthält.
 
 </dd> </dl>
 
@@ -55,9 +55,9 @@ Kein Rückgabewert.
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                        |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/>                                  |
-| Header<br/>                   | <dl> <dt>Kommstrg. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur Vista-Desktop-Apps\]<br/>                                        |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                                  |
+| Header<br/>                   | <dl> <dt>Commctrl.h</dt> </dl> |
 
 
 

@@ -1,11 +1,11 @@
 ---
-title: Iwmpplaylistcollection importwiedergabe-Methode
-description: Die importwiedergabe-Methode fügt der Bibliothek eine statische Wiedergabeliste hinzu. | Iwmpplaylistcollection importwiedergabe-Methode
+title: IWMPPlaylistCollection importPlaylist-Methode
+description: Die importPlaylist-Methode fügt der Bibliothek eine statische Wiedergabeliste hinzu. | IWMPPlaylistCollection importPlaylist-Methode
 ms.assetid: 7a64e618-920d-419d-8769-612ab5dff49b
 keywords:
-- importwiedergabe-Methode, Windows-Media Player
-- importwiedergabe-Methode, Windows Media Player, iwmpplaylistcollection-Schnittstelle
-- Iwmpplaylistcollection-Schnittstelle Windows Media Player, importwiedergabe Methode
+- importPlaylist-Methode Windows Media Player
+- importPlaylist-Methode Windows Media Player , IWMPPlaylistCollection-Schnittstelle
+- IWMPPlaylistCollection-Schnittstelle Windows Media Player , importPlaylist-Methode
 topic_type:
 - apiref
 api_name:
@@ -16,16 +16,16 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: ad3ca727155d6ae859123d427812d93ebaa0b05c
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 3ee4c231a045b39454908753dc197c95e26d85c711968f07ab27dbd859c29c6f
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106350779"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120122530"
 ---
-# <a name="iwmpplaylistcollectionimportplaylist-method"></a>Iwmpplaylistcollection:: importwiedergabe-Methode
+# <a name="iwmpplaylistcollectionimportplaylist-method"></a>IWMPPlaylistCollection::importPlaylist-Methode
 
-Die **importwiedergabe** -Methode fügt der Bibliothek eine statische Wiedergabeliste hinzu.
+Die **importPlaylist-Methode** fügt der Bibliothek eine statische Wiedergabeliste hinzu.
 
 ## <a name="syntax"></a>Syntax
 
@@ -53,24 +53,24 @@ Implements IWMPPlaylistCollection.importPlaylist
 
 <dl> <dt>
 
-*pitem* \[ in\]
+*pItem* \[ In\]
 </dt> <dd>
 
-Eine **WMPLib. iwmpwiedergabe** -Schnittstelle für die Wiedergabeliste, die von dieser Methode hinzugefügt wird.
+Eine **WMPLib.IWMPPlaylist-Schnittstelle** für die Wiedergabeliste, die von dieser Methode hinzugefügt wird.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Eine **WMPLib. iwmpwiedergabe** -Schnittstelle für die hinzugefügte Wiedergabeliste.
+Eine **WMPLib.IWMPPlaylist-Schnittstelle** für die hinzugefügte Wiedergabeliste.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Wiedergabelisten, die keine Medienelemente enthalten, können der Bibliothek nicht mithilfe dieser Methode hinzugefügt werden. Verwenden Sie die **newwiedergabe** -Methode, um eine leere Wiedergabeliste in der Bibliothek zu erstellen. Anschließend können Sie die resultierende Wiedergabeliste mit den Medien Elementen füllen, indem Sie **iwmpwiedergabe. appendItem** oder **iwmpwiedergabe. InsertItem** verwenden.
+Wiedergabelisten, die keine Medienelemente enthalten, können der Bibliothek mit dieser Methode nicht hinzugefügt werden. Verwenden Sie die **newPlaylist-Methode,** um eine leere Wiedergabeliste in der Bibliothek zu erstellen. Anschließend können Sie die resultierende Wiedergabeliste mit Medienelementen füllen, indem **Sie IWMPPlaylist.appendItem** oder **IWMPPlaylist.insertItem** verwenden.
 
-Wenn Sie diese Methode an eine automatische Wiedergabeliste übergeben, wird die Abfrage einmal ausgeführt, und das Ergebnis wird der Bibliothek als statische Wiedergabeliste hinzugefügt. Wenn Sie der Bibliothek eine automatische Wiedergabeliste hinzufügen und das automatische Verhalten beibehalten möchten, verwenden Sie **iwmpmediacollection. Add**. Weitere Informationen finden Sie unter [statische und automatische Wiedergabelisten](static-and-auto-playlists.md).
+Wenn Sie diese Methode an eine automatische Wiedergabeliste übergeben, wird die Abfrage einmal ausgeführt, und das Ergebnis wird der Bibliothek als statische Wiedergabeliste hinzugefügt. Verwenden Sie **IWMPMediaCollection.add,** um der Bibliothek eine automatische Wiedergabeliste hinzuzufügen und ihr automatisches Verhalten beizubehalten. Weitere Informationen finden Sie unter [Statische und automatische Wiedergabelisten.](static-and-auto-playlists.md)
 
-Vor dem Aufrufen dieser Methode müssen Sie über Lesezugriff auf die Bibliothek verfügen. Weitere Informationen finden Sie unter [Bibliotheks Zugriff](library-access.md).
+Vor dem Aufrufen dieser Methode benötigen Sie Lesezugriff auf die Bibliothek. Weitere Informationen finden Sie unter [Bibliothekszugriff.](library-access.md)
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -78,7 +78,7 @@ Vor dem Aufrufen dieser Methode müssen Sie über Lesezugriff auf die Bibliothek
 
 | Anforderung | Wert |
 |----------------------|------------------------------------------------------------------------------------------------------------------------|
-| Version<br/>   | Windows Media Player 9 oder höher.<br/>                                                                     |
+| Version<br/>   | Windows Media Player serie 9 oder höher.<br/>                                                                     |
 | Namespace<br/> | **WMPLib**<br/>                                                                                                  |
 | Assembly<br/>  | <dl> <dt>Interop.WMPLib.dll (Interop.WMPLib.dll.dll)</dt> </dl> |
 
@@ -88,22 +88,22 @@ Vor dem Aufrufen dieser Methode müssen Sie über Lesezugriff auf die Bibliothek
 
 <dl> <dt>
 
-[**Iwmpmediacollection. Add (VB und c#)**](wmplibiwmpmediacollection-iwmpmediacollection-add--vb-and-c.md)
+[**IWMPMediaCollection.add (VB und C#)**](wmplibiwmpmediacollection-iwmpmediacollection-add--vb-and-c.md)
 </dt> <dt>
 
-[**Iwmpwiedergabe-Schnittstelle (VB und c#)**](iwmpplaylist--vb-and-c.md)
+[**IWMPPlaylist-Schnittstelle (VB und C#)**](iwmpplaylist--vb-and-c.md)
 </dt> <dt>
 
-[**Iwmpwiedergabe. appendItem (VB und c#)**](wmplibiwmpplaylist-iwmpplaylist-appenditem--vb-and-c.md)
+[**IWMPPlaylist.appendItem (VB und C#)**](wmplibiwmpplaylist-iwmpplaylist-appenditem--vb-and-c.md)
 </dt> <dt>
 
-[**Iwmpwiedergabe. InsertItem (VB und c#)**](wmplibiwmpplaylist-iwmpplaylist-insertitem--vb-and-c.md)
+[**IWMPPlaylist.insertItem (VB und C#)**](wmplibiwmpplaylist-iwmpplaylist-insertitem--vb-and-c.md)
 </dt> <dt>
 
-[**Iwmpplaylistcollection-Schnittstelle (VB und c#)**](iwmpplaylistcollection--vb-and-c.md)
+[**IWMPPlaylistCollection-Schnittstelle (VB und C#)**](iwmpplaylistcollection--vb-and-c.md)
 </dt> <dt>
 
-[**Iwmpplaylistcollection. newwiedergabe (VB und c#)**](wmplibiwmpplaylistcollection-iwmpplaylistcollection-newplaylist--vb-and-c.md)
+[**IWMPPlaylistCollection.newPlaylist (VB und C#)**](wmplibiwmpplaylistcollection-iwmpplaylistcollection-newplaylist--vb-and-c.md)
 </dt> </dl>
 
  

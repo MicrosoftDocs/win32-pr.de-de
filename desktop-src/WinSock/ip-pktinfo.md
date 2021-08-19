@@ -1,21 +1,21 @@
 ---
-description: Ermöglicht es einer Anwendung, die Rückgabe von Paketinformationen durch die wsarecvmsg-Funktion auf einem IPv4-Socket zu aktivieren oder zu deaktivieren.
+description: Ermöglicht einer Anwendung das Aktivieren oder Deaktivieren der Rückgabe von Paketinformationen durch die WSARecvMsg-Funktion auf einem IPv4-Socket.
 ms.assetid: C6246899-0220-4F88-B43B-CED1B1FF7DC3
-title: IP_PKTINFO Socket-Option (Ws2ipdef. h)
+title: IP_PKTINFO Socketoption (Ws2ipdef.h)
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: a2134b31ead9efeb032b4ed72fcaedcd4cc9f67f
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 56ba653b4ece11086706493b920e1ed650b66eecdd6e788a5edfe259cf9eb9f0
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104343489"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120097790"
 ---
-# <a name="ip_pktinfo-socket-option"></a>IP \_ pktinfo-Socketoption
+# <a name="ip_pktinfo-socket-option"></a>\_IP-PKTINFO-Socketoption
 
-Die IP \_ pktinfo-Socketoption ermöglicht es einer Anwendung, die Rückgabe von Paketinformationen durch die [**LPFN_WSARECVMSG (wsarecvmsg)**](/windows/win32/api/mswsock/nc-mswsock-lpfn_wsarecvmsg) -Funktion auf einem IPv4-Socket zu aktivieren oder zu deaktivieren.
+Mit der \_ IP-PKTINFO-Socketoption kann eine Anwendung die Rückgabe von Paketinformationen durch die [**LPFN_WSARECVMSG -Funktion (WSARecvMsg)**](/windows/win32/api/mswsock/nc-mswsock-lpfn_wsarecvmsg) auf einem IPv4-Socket aktivieren oder deaktivieren.
 
-Um den Status dieser Socketoption abzufragen, müssen Sie die [**getsockopt**](/windows/desktop/api/winsock/nf-winsock-getsockopt) -Funktion aufrufen. Um diese Option festzulegen, müssen Sie die Funktion [**setsockopt**](/windows/desktop/api/winsock/nf-winsock-setsockopt) mit den folgenden Parametern aufrufen.
+Um den Status dieser Socketoption abzufragen, rufen Sie die [**getsockopt-Funktion auf.**](/windows/desktop/api/winsock/nf-winsock-getsockopt) Um diese Option festzulegen, rufen Sie die [**setsockopt-Funktion**](/windows/desktop/api/winsock/nf-winsock-setsockopt) mit den folgenden Parametern auf.
 
 ## <a name="socket-option-value"></a>Wert der Socketoption
 
@@ -60,73 +60,73 @@ Ein Deskriptor, der den Socket identifiziert.
 
 </dd> <dt>
 
-*Ebene* \[ in\]
+*-Ebene* \[ In\]
 </dt> <dd>
 
-Die Ebene, auf der die Option definiert ist. Verwenden Sie **ipproto \_ IP** für diesen Vorgang.
+Die Ebene, auf der die Option definiert ist. Verwenden Sie **IPPROTO \_ IP** für diesen Vorgang.
 
 </dd> <dt>
 
-*optname* \[ in\]
+*optname* \[ In\]
 </dt> <dd>
 
-Die Socketoption, für die der Wert festgelegt oder festgelegt werden soll. Verwenden Sie \_ für diesen Vorgang IP pktinfo.
+Die Socketoption, für die der Wert abzurufen oder festzulegen ist. Verwenden Sie \_ IP PKTINFO für diesen Vorgang.
 
 </dd> <dt>
 
-*optval* \[ vorgenommen\]
+*optval* \[ out\]
 </dt> <dd>
 
-Ein Zeiger auf den Puffer, der den Wert für die festzulegende Option enthält. Dieser Parameter sollte auf einen Puffer zeigen, der größer oder gleich der Größe eines **DWORD** -Werts ist.
+Ein Zeiger auf den Puffer, der den Wert für die festzulegende Option enthält. Dieser Parameter sollte auf einen Puffer zeigen, der gleich oder größer als die Größe eines **DWORD-Werts** ist.
 
-Dieser Wert wird als boolescher Wert behandelt, wobei 0 verwendet wird, um **false** (deaktiviert) und einen Wert ungleich 0 (null) anzugeben, um **true** (aktiviert) anzugeben.
+Dieser Wert wird als boolescher Wert behandelt, wobei 0 zur Angabe von **FALSE** (deaktiviert) und ein Wert ungleich 0 (null) verwendet wird, um **TRUE** (aktiviert) anzugeben.
 
 </dd> <dt>
 
 *optlen* \[ in, out\]
 </dt> <dd>
 
-Ein Zeiger auf die Größe des *optval* -Puffers in Bytes. Diese Größe muss größer oder gleich der Größe eines **DWORD** -Werts sein.
+Ein Zeiger auf die Größe des *optval-Puffers* in Bytes. Diese Größe muss gleich oder größer als die Größe eines **DWORD-Werts** sein.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Wenn der Vorgang erfolgreich abgeschlossen wird, gibt die Funktion [**getsockopt**](/windows/desktop/api/winsock/nf-winsock-getsockopt) oder [**setsockopt**](/windows/desktop/api/winsock/nf-winsock-setsockopt) NULL zurück.
+Wenn der Vorgang erfolgreich abgeschlossen wurde, gibt die [**getsockopt-**](/windows/desktop/api/winsock/nf-winsock-getsockopt) oder [**setsockopt-Funktion**](/windows/desktop/api/winsock/nf-winsock-setsockopt) 0 (null) zurück.
 
-Wenn der Vorgang fehlschlägt, wird der Wert Socket \_ Error zurückgegeben, und es kann ein spezifischer Fehlercode durch Aufrufen von [**WSAGetLastError**](/windows/desktop/api/winsock/nf-winsock-wsagetlasterror)abgerufen werden.
+Wenn der Vorgang fehlschlägt, wird der Wert SOCKET \_ ERROR zurückgegeben, und ein bestimmter Fehlercode kann durch Aufrufen von [**WSAGetLastError**](/windows/desktop/api/winsock/nf-winsock-wsagetlasterror)abgerufen werden.
 
 
 
 | Fehlercode                                                                                                                                              | Bedeutung                                                                                                                                                                                                                                                    |
 |---------------------------------------------------------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| <dl> <dt>**[WSANOTINITIALISED](windows-sockets-error-codes-2.md)**</dt> </dl> | Ein erfolgreicher [**WSAStartup**](/windows/desktop/api/winsock/nf-winsock-wsastartup) -Befehl muss vor der Verwendung dieser Funktion ausgeführt werden.<br/>                                                                                                                                                     |
-| <dl> <dt>**[WSAENETDOWN](windows-sockets-error-codes-2.md)**</dt> </dl>             | Das Netzwerk Subsystem ist fehlgeschlagen.<br/>                                                                                                                                                                                                               |
-| <dl> <dt>**[WSAEFAULT](windows-sockets-error-codes-2.md)**</dt> </dl>                 | Einer der *optval* -oder *optlen* -Parameter verweist auf den Arbeitsspeicher, der sich nicht in einem gültigen Teil des Benutzer Adressraums befindet. Dieser Fehler wird auch zurückgegeben, wenn der Wert, auf den der *optlen* -Parameter verweist, kleiner ist als die Größe eines **DWORD** -Werts.<br/> |
-| <dl> <dt>**[Wsaeingabe Progress](windows-sockets-error-codes-2.md)**</dt> </dl>       | Ein blockierender Windows Sockets 1,1-Rückruf wird gerade ausgeführt, oder der Dienstanbieter verarbeitet weiterhin eine Rückruffunktion.<br/>                                                                                                                            |
-| <dl> <dt>**[Wsaabval](windows-sockets-error-codes-2.md)**</dt> </dl>                 | Ein ungültiges Argument wurde angegeben. Dieser Fehler wird zurückgegeben, wenn der *Level* -Parameter unbekannt oder ungültig ist. Unter Windows Vista und höher wird dieser Fehler auch zurückgegeben, wenn sich der Socket in einem Übergangszustand befunden hat.<br/>                                     |
-| <dl> <dt>**[Wsaumoproumopt](windows-sockets-error-codes-2.md)**</dt> </dl>       | Die Option ist unbekannt oder wird von der angegebener Protokollfamilie nicht unterstützt. Dieser Fehler wird zurückgegeben, wenn der *Typparameter für den socketdeskriptor* , der in den *s* -Parameter übergeben wurde, kein **Sock- \_ dgram** oder **Sock- \_ RAW** ist <br/>                          |
-| <dl> <dt>**[Wsaumotsock](windows-sockets-error-codes-2.md)**</dt> </dl>             | Der Deskriptor ist kein Socket.<br/>                                                                                                                                                                                                                 |
+| <dl> <dt>**[WSANOTINITIALISED](windows-sockets-error-codes-2.md)**</dt> </dl> | Vor der Verwendung dieser Funktion muss ein erfolgreicher [**WSAStartup-Aufruf**](/windows/desktop/api/winsock/nf-winsock-wsastartup) erfolgen.<br/>                                                                                                                                                     |
+| <dl> <dt>**[WSAENETDOWN](windows-sockets-error-codes-2.md)**</dt> </dl>             | Fehler beim Netzwerksubsystem.<br/>                                                                                                                                                                                                               |
+| <dl> <dt>**[WSAEFAULT](windows-sockets-error-codes-2.md)**</dt> </dl>                 | Einer der *optval-* oder *optlen-Parameter* verweist auf den Arbeitsspeicher, der sich nicht in einem gültigen Teil des Benutzeradressraums befindet. Dieser Fehler wird auch zurückgegeben, wenn der Wert, auf den der *optlen-Parameter* zeigt, kleiner als die Größe eines **DWORD-Werts** ist.<br/> |
+| <dl> <dt>**[WSAEINPROGRESS](windows-sockets-error-codes-2.md)**</dt> </dl>       | Ein blockierende Windows Sockets 1.1-Aufruf wird ausgeführt, oder der Dienstanbieter verarbeitet weiterhin eine Rückruffunktion.<br/>                                                                                                                            |
+| <dl> <dt>**[WSAEINVAL](windows-sockets-error-codes-2.md)**</dt> </dl>                 | Ein ungültiges Argument wurde angegeben. Dieser Fehler wird zurückgegeben, wenn der *Levelparameter* unbekannt oder ungültig ist. Bei Windows Vista und höher wird dieser Fehler auch zurückgegeben, wenn sich der Socket in einem Übergangszustand befand.<br/>                                     |
+| <dl> <dt>**[WSAENOPROTOOPT](windows-sockets-error-codes-2.md)**</dt> </dl>       | Die Option ist unbekannt oder wird von der angegebenen Protokollfamilie nicht unterstützt. Dieser Fehler wird zurückgegeben, wenn der *Typparameter* für den im *s-Parameter* übergebenen Socketdeskriptor nicht **SOCK \_ DGRAM** oder **SOCK \_ RAW** war. <br/>                          |
+| <dl> <dt>**[WSAENOTSOCK](windows-sockets-error-codes-2.md)**</dt> </dl>             | Der Deskriptor ist kein Socket.<br/>                                                                                                                                                                                                                 |
 
 
 
  
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die [**getsockopt**](/windows/desktop/api/winsock/nf-winsock-getsockopt) -Funktion, die mit der IP \_ pktinfo-Socketoption aufgerufen wird, ermöglicht einer Anwendung, festzustellen, ob Paketinformationen von der [**LPFN_WSARECVMSG (wsarecvmsg)**](/windows/win32/api/mswsock/nc-mswsock-lpfn_wsarecvmsg)-Funktion für einen IPv4-Socket zurückgegeben werden.
+Die [**getsockopt-Funktion,**](/windows/desktop/api/winsock/nf-winsock-getsockopt) die mit der IP-PKTINFO-Socketoption aufgerufen \_ wird, ermöglicht es einer Anwendung zu bestimmen, ob Paketinformationen von der [**WSARecvMsg-Funktion (LPFN_WSARECVMSG)**](/windows/win32/api/mswsock/nc-mswsock-lpfn_wsarecvmsg)für einen IPv4-Socket zurückgegeben werden sollen.
 
-Die [**setsockopt**](/windows/desktop/api/winsock/nf-winsock-setsockopt) -Funktion, die mit der IP \_ pktinfo-Socketoption aufgerufen wird, ermöglicht es einer Anwendung, die Rückgabe von Paketinformationen durch die [**LPFN_WSARECVMSG (wsarecvmsg)**](/windows/win32/api/mswsock/nc-mswsock-lpfn_wsarecvmsg) -Funktion zu aktivieren oder zu deaktivieren. Die \_ Option IP pktinfo für einen Socket ist standardmäßig deaktiviert (auf **false** festgelegt).
+Die mit der IP-PKTINFO-Socketoption aufgerufene [**setsockopt-Funktion**](/windows/desktop/api/winsock/nf-winsock-setsockopt) \_ ermöglicht einer Anwendung, die Rückgabe von Paketinformationen durch die [**LPFN_WSARECVMSG -Funktion (WSARecvMsg)**](/windows/win32/api/mswsock/nc-mswsock-lpfn_wsarecvmsg) zu aktivieren oder zu deaktivieren. Die \_ IP-PKTINFO-Option für einen Socket ist standardmäßig deaktiviert (auf **FALSE** festgelegt).
 
-Wenn diese Socketoption auf einem IPv4-Socket vom Typ **Sock \_ dgram** oder **Sock \_ RAW** aktiviert ist, gibt die Funktion [**LPFN_WSARECVMSG (wsarecvmsg)**](/windows/win32/api/mswsock/nc-mswsock-lpfn_wsarecvmsg) Paketinformationen in der [**wsamsg**](/windows/desktop/api/Ws2def/ns-ws2def-wsamsg) -Struktur zurück, auf die durch den *lpmsg* -Parameter verwiesen wird. Eines der Steuerungsdaten Objekte in der zurückgegebenen **wsamsg** -Struktur enthält eine [**in \_ pktinfo**](/windows/desktop/api/Ws2ipdef/ns-ws2ipdef-in_pktinfo) -Struktur, die zum Speichern von Informationen zu empfangenen Paket Adressen verwendet wird.
+Wenn diese Socketoption für einen IPv4-Socket vom Typ **SOCK \_ DGRAM** oder **SOCK \_ RAW** aktiviert ist, gibt die [**funktion LPFN_WSARECVMSG (WSARecvMsg)**](/windows/win32/api/mswsock/nc-mswsock-lpfn_wsarecvmsg) Paketinformationen in der [**WSAMSG-Struktur**](/windows/desktop/api/Ws2def/ns-ws2def-wsamsg) zurück, auf die der *lpMsg-Parameter* zeigt. Eines der Steuerelementdatenobjekte in der zurückgegebenen **WSAMSG-Struktur** enthält eine [**in \_ pktinfo-Struktur,**](/windows/desktop/api/Ws2ipdef/ns-ws2ipdef-in_pktinfo) die zum Speichern empfangener Paketadresseninformationen verwendet wird.
 
-Für Datagramme, die von der [**LPFN_WSARECVMSG (wsarecvmsg)**](/windows/win32/api/mswsock/nc-mswsock-lpfn_wsarecvmsg) -Funktion über IPv4 empfangen werden, enthält das **Steuer** Element Mitglied der [**wsamsg**](/windows/desktop/api/Ws2def/ns-ws2def-wsamsg) -Struktur eine [**WSABUF**](/windows/desktop/api/ws2def/ns-ws2def-wsabuf) -Struktur, die eine **wsacmsghdr** -Struktur enthält. Der Member der **CMSG- \_ Ebene** dieser **wsacmsghdr** -Struktur würde **ipproto \_ IP** enthalten, der **CMSG- \_ Typmember** dieser Struktur würde **IP \_ pktinfo** enthalten, und der **CMSG- \_ Datenmember** enthält eine [**in \_ pktinfo**](/windows/desktop/api/Ws2ipdef/ns-ws2ipdef-in_pktinfo) -Struktur, die zum Speichern der empfangenen IPv4-Paket Adressinformationen verwendet wird. Die IPv4-Adresse in der **in \_ pktinfo** -Struktur ist die IPv4-Adresse, von der das Paket empfangen wurde.
+Für Datagramme, die von der [**LPFN_WSARECVMSG-Funktion (WSARecvMsg)**](/windows/win32/api/mswsock/nc-mswsock-lpfn_wsarecvmsg) über IPv4 empfangen werden, enthält der **Control-Member** der empfangenen [**WSAMSG-Struktur**](/windows/desktop/api/Ws2def/ns-ws2def-wsamsg) eine [**WSABUF-Struktur,**](/windows/desktop/api/ws2def/ns-ws2def-wsabuf) die eine **WSACMSGHDR-Struktur** enthält. Der **\_ cmsg-Ebenenmember** dieser **WSACMSGHDR-Struktur** würde **IPPROTO \_ IP** enthalten, der **cmsg-Typmember \_** dieser Struktur würde **IP \_ PKTINFO** enthalten, und der **cmsg-Datenmember \_** würde eine [**in der \_ pktinfo-Struktur**](/windows/desktop/api/Ws2ipdef/ns-ws2ipdef-in_pktinfo) enthalten, die zum Speichern empfangener IPv4-Paketadresseninformationen verwendet wird. Die IPv4-Adresse in der **\_ pktinfo-Struktur** ist die IPv4-Adresse, von der das Paket empfangen wurde.
 
-Wenn eine Anwendung für einen Datagramm-Socket mit zwei Stapeln die [**LPFN_WSARECVMSG (wsarecvmsg)**](/windows/win32/api/mswsock/nc-mswsock-lpfn_wsarecvmsg) -Funktion benötigt, um Paketinformationen in einer [**wsamsg**](/windows/desktop/api/Ws2def/ns-ws2def-wsamsg) -Struktur für über IPv4 Empfangene Datagramme zurückzugeben, muss die IP \_ pktinfo-Socketoption für den Socket auf true festgelegt werden. Wenn nur die [IPv6- \_ pktinfo](ipv6-pktinfo.md) -Option im Socket auf true festgelegt ist, werden Paketinformationen für über IPv6 Empfangene Datagramme bereitgestellt, jedoch nicht für Datagramme, die über IPv4 empfangen werden.
+Wenn eine Anwendung für einen Dual-Stack-Datagrammsocket die [**LPFN_WSARECVMSG -Funktion (WSARecvMsg)**](/windows/win32/api/mswsock/nc-mswsock-lpfn_wsarecvmsg) benötigt, um Paketinformationen in einer [**WSAMSG-Struktur**](/windows/desktop/api/Ws2def/ns-ws2def-wsamsg) für über IPv4 empfangene Datagramme zurückzugeben, \_ muss die IP-PKTINFO-Socketoption für den Socket auf TRUE festgelegt werden. Wenn nur die [ \_ IPV6 PKTINFO-Option](ipv6-pktinfo.md) für den Socket auf TRUE festgelegt ist, werden Paketinformationen für Datagramme bereitgestellt, die über IPv6 empfangen werden, aber möglicherweise nicht für Datagramme, die über IPv4 empfangen werden.
 
-Wenn eine Anwendung versucht, die IP- \_ pktinfo-Socketoption auf einem Dual-Stack-Datagramm-Socket festzulegen, und IPv4 auf dem System deaktiviert ist, schlägt die Funktion " [**setsockopt**](/windows/desktop/api/winsock/nf-winsock-setsockopt) " fehl, und " [**WSAGetLastError**](/windows/desktop/api/winsock/nf-winsock-wsagetlasterror) " wird mit dem Fehler " [WSAEINVAL](windows-sockets-error-codes-2.md)" zurückgegeben. Dieser Fehler wird auch durch die Funktion " **setsockopt** " aufgrund anderer Fehler zurückgegeben. Wenn eine Anwendung versucht, eine \_ Socketoption auf ipproto-IP-Ebene in einem Dual-Stack-Socket festzulegen, und Sie mit [WSAEINVAL](windows-sockets-error-codes-2.md)fehlschlägt, sollte die Anwendung ermitteln, ob IPv4 auf dem lokalen Computer deaktiviert ist. Eine Methode, die verwendet werden kann, um zu ermitteln, ob IPv4 aktiviert oder deaktiviert ist, besteht darin, die [**Socketfunktion**](/windows/desktop/api/Winsock2/nf-winsock2-socket) mit dem auf AF inet festgelegten *AF* -Parameter aufzurufen, \_ um einen IPv4-Socket zu erstellen. Wenn die **Socketfunktion** ausfällt und **WSAGetLastError** einen Fehler von [WSAEAFNOSUPPORT](windows-sockets-error-codes-2.md)zurückgibt, bedeutet dies, dass IPv4 nicht aktiviert ist. In diesem Fall kann ein **setsockopt** -Funktionsfehler auftreten, wenn versucht wird, die IP \_ pktinfo-Socketoption festzulegen, kann die Anwendung ignoriert werden. Andernfalls sollte bei dem Versuch, die \_ Socketoption IP pktinfo festzulegen, ein unerwarteter Fehler behandelt werden.
+Wenn eine Anwendung versucht, die \_ IP-PKTINFO-Socketoption für einen Dual-Stack-Datagrammsocket festzulegen, und IPv4 auf dem System deaktiviert ist, schlägt die [**Setsockopt-Funktion**](/windows/desktop/api/winsock/nf-winsock-setsockopt) fehl, und [**WSAGetLastError**](/windows/desktop/api/winsock/nf-winsock-wsagetlasterror) gibt den Fehler [WSAEINVAL](windows-sockets-error-codes-2.md)zurück. Dieser Fehler wird auch von der **setsockopt-Funktion** als Ergebnis anderer Fehler zurückgegeben. Wenn eine Anwendung versucht, eine \_ IPPROTO-Socketoption auf IP-Ebene für einen Socket mit zwei Stapeln festzulegen, und ein Fehler mit [WSAEINVAL](windows-sockets-error-codes-2.md)auftritt, sollte die Anwendung bestimmen, ob IPv4 auf dem lokalen Computer deaktiviert ist. Eine Methode, mit der ermittelt werden kann, ob IPv4 aktiviert oder deaktiviert ist, ist das Aufrufen der [**Socketfunktion**](/windows/desktop/api/Winsock2/nf-winsock2-socket) mit *dem* af-Parameter, der auf AF INET festgelegt \_ ist, um zu versuchen, einen IPv4-Socket zu erstellen. Wenn die **Socketfunktion** fehlschlägt und **WSAGetLastError** den Fehler [WSAEAFNOSUPPORT](windows-sockets-error-codes-2.md)zurückgibt, bedeutet dies, dass IPv4 nicht aktiviert ist. In diesem Fall kann ein **Setsockopt-Funktionsfehler** beim Festlegen der IP-PKTINFO-Socketoption \_ von der Anwendung ignoriert werden. Andernfalls sollte ein Fehler beim Festlegen der \_ IP-PKTINFO-Socketoption als unerwarteter Fehler behandelt werden.
 
-Beachten Sie, dass die Header Datei " *Ws2ipdef. h* " automatisch in " *Ws2tcpip. h*" enthalten ist und niemals direkt verwendet werden sollte.
+Beachten Sie, dass die *Headerdatei Ws2ipdef.h* automatisch in *"Ws2tcpip.h"* enthalten ist und niemals direkt verwendet werden sollte.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -134,9 +134,9 @@ Beachten Sie, dass die Header Datei " *Ws2ipdef. h* " automatisch in " *Ws2tcpip
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows XP \[ -Desktop-Apps\]<br/>                                                                |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/>                                                       |
-| Header<br/>                   | <dl> <dt>Ws2ipdef. h (Include Ws2tcpip. h)</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur XP-Desktop-Apps\]<br/>                                                                |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                                                       |
+| Header<br/>                   | <dl> <dt>Ws2ipdef.h (einschließlich Ws2tcpip.h)</dt> </dl> |
 
 
 
@@ -153,22 +153,22 @@ Beachten Sie, dass die Header Datei " *Ws2ipdef. h* " automatisch in " *Ws2tcpip
 [**in \_ pktinfo**](/windows/desktop/api/Ws2ipdef/ns-ws2ipdef-in_pktinfo)
 </dt> <dt>
 
-[**Ipproto \_ IP-Socketoptionen**](ipproto-ip-socket-options.md)
+[**\_IPPROTO-IP-Socketoptionen**](ipproto-ip-socket-options.md)
 </dt> <dt>
 
-[IPv6- \_ pktinfo](ipv6-pktinfo.md)
+[IPV6 \_ PKTINFO](ipv6-pktinfo.md)
 </dt> <dt>
 
 [**setsockopt**](/windows/desktop/api/winsock/nf-winsock-setsockopt)
 </dt> <dt>
 
-[**Glühbirne**](/windows/desktop/api/Winsock2/nf-winsock2-socket)
+[**Socket**](/windows/desktop/api/Winsock2/nf-winsock2-socket)
 </dt> <dt>
 
-[**Wsamsg**](/windows/desktop/api/Ws2def/ns-ws2def-wsamsg)
+[**WSAMSG**](/windows/desktop/api/Ws2def/ns-ws2def-wsamsg)
 </dt> <dt>
 
-[**LPFN_WSARECVMSG (wsarecvmsg)**](/windows/win32/api/mswsock/nc-mswsock-lpfn_wsarecvmsg)
+[**LPFN_WSARECVMSG (WSARecvMsg)**](/windows/win32/api/mswsock/nc-mswsock-lpfn_wsarecvmsg)
 </dt> </dl>
 
  

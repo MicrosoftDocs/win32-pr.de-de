@@ -12,17 +12,17 @@ api_name:
 api_type:
 - COM
 api_location: ''
-ms.openlocfilehash: a3e13a51564b39ba2e954da38a5453e63c4036d2
-ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
+ms.openlocfilehash: e5b1d5ea00367ee29ec8f3165cd9115a00776fc7ccd2156bf83ab199fd6e3c25
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2021
-ms.locfileid: "108084468"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120051430"
 ---
 # <a name="irenderenginedosmartrecompression-method"></a>IRenderEngine::D oSmartRecompression-Methode
 
 > [!Note]  
-> \[Veraltet. Diese API kann aus zukünftigen Versionen von Windows entfernt werden.\]
+> \[Veraltet. Diese API kann aus zukünftigen Releases von Windows entfernt werden.\]
 
  
 
@@ -45,15 +45,15 @@ Diese Methode hat keine Parameter.
 
 Wenn diese Methode erfolgreich ist, wird **S \_ OK** zurückgegeben. Andernfalls wird ein **HRESULT-Fehlercode** zurückgegeben.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
 > [!Note]  
-> Die Headerdatei Qedit.h ist mit Direct3D-Headern nach Version 7 nicht kompatibel.
+> Die Headerdatei Qedit.h ist nicht mit Direct3D-Headern kompatibel, die höher als Version 7 sind.
 
  
 
 > [!Note]  
-> Laden Sie zum Abrufen von Qedit.h das [Microsoft Windows SDK Update für Windows Vista und .NET Framework 3.0](https://msdn.microsoft.com/windowsvista/bb980924.aspx)herunter. Qedit.h ist im Microsoft Windows SDK für Windows 7 und .NET Framework 3.5 Service Pack 1 nicht verfügbar.
+> Laden Sie zum Abrufen von Qedit.h das [Microsoft Windows SDK-Update für Windows Vista und .NET Framework 3.0](https://msdn.microsoft.com/windowsvista/bb980924.aspx)herunter. Qedit.h ist im Microsoft Windows SDK für Windows 7 und .NET Framework 3.5 Service Pack 1 nicht verfügbar.
 
  
 

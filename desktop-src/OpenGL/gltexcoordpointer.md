@@ -1,9 +1,9 @@
 ---
-title: gltexcoordpointer-Funktion (GL. h)
-description: Die gltexcoordpointer-Funktion definiert ein Array von Texturkoordinaten.
+title: glTexCoordPointer-Funktion (Gl.h)
+description: Die glTexCoordPointer-Funktion definiert ein Array von Texturkoordinaten.
 ms.assetid: c3640a1b-ccc7-4f1a-94a5-a164f7377dbc
 keywords:
-- gltexcoordpointer-Funktion OpenGL
+- glTexCoordPointer-Funktion OpenGL
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - DllExport
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: febc9c79bdbc4a1ed1c14380af47f36309f12662
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 0892f06b3fd5027939710be9ac74a2ae18c0dc0d712572d094b9a54fd6bb5b3e
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "106345939"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119888250"
 ---
-# <a name="gltexcoordpointer-function"></a>gltexcoordpointer-Funktion
+# <a name="gltexcoordpointer-function"></a>glTexCoordPointer-Funktion
 
-Die **gltexcoordpointer** -Funktion definiert ein Array von Texturkoordinaten.
+Die **glTexCoordPointer-Funktion** definiert ein Array von Texturkoordinaten.
 
 ## <a name="syntax"></a>Syntax
 
@@ -46,21 +46,21 @@ void WINAPI glTexCoordPointer(
 *size* 
 </dt> <dd>
 
-Die Anzahl der Koordinaten pro Array Element. Der Wert von *size* muss 1, 2, 3 oder 4 sein.
+Die Anzahl der Koordinaten pro Arrayelement. Der Wert der *Größe* muss 1, 2, 3 oder 4 sein.
 
 </dd> <dt>
 
 *type* 
 </dt> <dd>
 
-Der Datentyp der einzelnen Texturkoordinaten im Array mit den folgenden symbolischen Konstanten: **GL \_ Short**, **GL \_ int**, **GL \_ float** und **GL \_ Double**.
+Der Datentyp jeder Texturkoordinate im Array unter Verwendung der folgenden symbolischen Konstanten: **GL \_ SHORT,** **GL \_ INT,** **GL \_ FLOAT** und **GL \_ DOUBLE**.
 
 </dd> <dt>
 
 *Schritt* 
 </dt> <dd>
 
-Der Byte Offset zwischen aufeinander folgenden Array Elementen. Wenn *Stride* 0 (null) ist, werden die Array Elemente im Array eng verpackt.
+Der Byteoffset zwischen aufeinander folgenden Arrayelementen. Wenn *stride* 0 (null) ist, sind die Arrayelemente eng im Array gepackt.
 
 </dd> <dt>
 
@@ -77,43 +77,43 @@ Diese Funktion gibt keinen Wert zurück.
 
 ## <a name="error-codes"></a>Fehlercodes
 
-Die folgenden Fehlercodes können von der Funktion " [**glgeterror**](glgeterror.md) " abgerufen werden.
+Die folgenden Fehlercodes können von der [**glGetError-Funktion**](glgeterror.md) abgerufen werden.
 
 
 
 | Name                                                                                              | Bedeutung                                      |
 |---------------------------------------------------------------------------------------------------|----------------------------------------------|
-| <dl> <dt>**GL \_ ungültige Aufzählung. \_**</dt> </dl>  | der *Typ* war kein akzeptierter Wert.<br/> |
-| <dl> <dt>**\_Ungültiger GL- \_ Wert**</dt> </dl> | die *Größe* lag nicht bei 1, 2, 3 oder 4.<br/>     |
-| <dl> <dt>**\_Ungültiger GL- \_ Wert**</dt> </dl> | *Stride* war negativ.<br/>            |
+| <dl> <dt>**GL \_ INVALID \_ ENUM**</dt> </dl>  | *type* war kein akzeptierter Wert.<br/> |
+| <dl> <dt>**GL \_ UNGÜLTIGER \_ WERT**</dt> </dl> | *Die Größe* war nicht 1, 2, 3 oder 4.<br/>     |
+| <dl> <dt>**GL \_ UNGÜLTIGER \_ WERT**</dt> </dl> | *stride* war negativ.<br/>            |
 
 
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die **gltexcoordpointer** -Funktion gibt den Speicherort und die Daten eines Arrays von Texturkoordinaten an, die beim Rendern verwendet werden sollen. Der *size* -Parameter gibt die Anzahl der Koordinaten an, die für jedes Element des Arrays verwendet werden. Der *Typparameter* gibt den Datentyp der einzelnen Texturkoordinaten an. Der *Stride* -Parameter bestimmt den Byte Offset von einem Array Element zum nächsten und ermöglicht das Packen von Vertices und Attributen in einem einzelnen Array oder Speicher in separaten Arrays. In einigen Implementierungen können das Speichern der Scheitel Punkte und Attribute in einem einzelnen Array effizienter als die Verwendung von separaten Arrays sein. Weitere Informationen finden Sie unter [**glinterleavedarrays**](glinterleavedarrays.md). Wenn ein Texturkoordinaten Array angegeben wird, werden Größe, Typ, Stride und Zeiger als Client seitiger Zustand gespeichert.
+Die **glTexCoordPointer-Funktion** gibt die Position und die Daten eines Arrays von Texturkoordinaten an, die beim Rendern verwendet werden sollen. Der *size-Parameter* gibt die Anzahl der Koordinaten an, die für jedes Element des Arrays verwendet werden. Der *Typparameter* gibt den Datentyp jeder Texturkoordinate an. Der *stride-Parameter* bestimmt den Byteoffset von einem Arrayelement zum nächsten und ermöglicht das Packen von Scheitelpunkten und Attributen in einem einzelnen Array oder Speicher in separaten Arrays. In einigen Implementierungen kann das Speichern der Scheitelpunkte und Attribute in einem einzelnen Array effizienter sein als die Verwendung separater Arrays. Weitere Informationen finden Sie unter [**glInterleavedArrays.**](glinterleavedarrays.md) Wenn ein Texturkoordinatenarray angegeben wird, werden Größe, Typ, Schritt und Zeiger clientseitig gespeichert.
 
-Ein Texturkoordinaten Array wird aktiviert, wenn Sie die **GL- \_ Textur \_ Koord- \_ Array** Konstante mit [**glenableclientstate**](glenableclientstate.md)angeben. Wenn diese Option aktiviert ist, verwenden [**gldrawarrays**](gldrawarrays.md), [**gldrawelements**](gldrawelements.md)und [**glarrayelement**](glarrayelement.md) das Array der Textur Koordinate. Das Array der Textur Koordinate ist standardmäßig deaktiviert.
+Ein Texturkoordinatenarray wird aktiviert, wenn Sie die **GL \_ TEXTURE \_ COORD \_ ARRAY-Konstante** mit [**glEnableClientState**](glenableclientstate.md)angeben. Wenn diese Option aktiviert ist, verwenden [**glDrawArrays,**](gldrawarrays.md) [**glDrawElements**](gldrawelements.md)und [**glArrayElement**](glarrayelement.md) das Texturkoordinatenarray. Standardmäßig ist das Texturkoordinatenarray deaktiviert.
 
-Sie können **gltexcoordpointer** nicht in Anzeigelisten einschließen.
+Sie können **glTexCoordPointer** nicht in Anzeigelisten einschließen.
 
-Wenn Sie ein Texturkoordinaten Array mithilfe von **gltexcoordpointer** angeben, werden die Werte aller Texturkoordinaten Array-Parameter der Funktion in einem Client seitigen Zustand gespeichert, und statische Array Elemente können zwischengespeichert werden. Da die Texturkoordinaten Array-Parameter den Client seitigen Zustand aufweisen, werden ihre Werte von [**glpushatpub**](glpushattrib.md) und [**glpopatpub**](glpopattrib.md)nicht gespeichert oder wieder hergestellt.
+Wenn Sie mit **glTexCoordPointer** ein Texturkoordinatenarray angeben, werden die Werte aller Texturkoordinatenarrayparameter der Funktion in einem clientseitigen Zustand gespeichert, und statische Arrayelemente können zwischengespeichert werden. Da die Parameter des Texturkoordinatenarrays clientseitig sind, werden ihre Werte nicht von [**glPushAttrib**](glpushattrib.md) und [**glPopAttrib**](glpopattrib.md)gespeichert oder wiederhergestellt.
 
-Obwohl beim Aufrufen von **gltexcoordpointer** innerhalb der [**glBegin**](glbegin.md) -und [**glEnd**](glend.md) -Paare kein Fehler generiert wird, sind die Ergebnisse nicht definiert.
+Obwohl beim Aufrufen von **glTexCoordPointer** in [**glBegin-**](glbegin.md) und [**glEnd-Paaren**](glend.md) kein Fehler generiert wird, sind die Ergebnisse nicht definiert.
 
-Mit den folgenden Funktionen werden Informationen im Zusammenhang mit **gltexcoordpointer** abgerufen:
+Die folgenden Funktionen rufen Informationen im Zusammenhang mit **glTexCoordPointer** ab:
 
-[**glisenabled**](glisenabled.md) mit Argument **GL \_ Textur \_ Koord- \_ Array**
+[**glIsEnabled**](glisenabled.md) mit argument **GL \_ TEXTURE \_ COORD \_ ARRAY**
 
-[**glget**](glgetbooleanv--glgetdoublev--glgetfloatv--glgetintegerv.md) mit Argument **GL \_ Textur \_ Koord- \_ array \_ Größe**
+[**glGet**](glgetbooleanv--glgetdoublev--glgetfloatv--glgetintegerv.md) mit argument **GL \_ TEXTURE \_ COORD ARRAY \_ \_ SIZE**
 
-**glget** mit dem Argument **GL \_ Texture \_ Koord \_ array \_ Stride**
+**glGet** mit argument **GL \_ TEXTURE \_ COORD ARRAY \_ \_ STRIDE**
 
-**glget** mit Argument **GL \_ Textur \_ Koord- \_ array \_ Anzahl**
+**glGet** mit argument **GL \_ TEXTURE \_ COORD ARRAY \_ \_ COUNT**
 
-**glget** mit dem Argument **GL \_ Texture Koord- \_ Arraytyp \_ \_**
+**glGet** mit argument **GL \_ TEXTURE \_ COORD ARRAY \_ \_ TYPE**
 
-[**glgetpointerv**](glgetpointerv.md) mit Argument **GL \_ Textur \_ Koord- \_ array \_ Zeiger**
+[**glGetPointerv**](glgetpointerv.md) mit argument **GL \_ TEXTURE \_ COORD ARRAY \_ \_ POINTER**
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -123,8 +123,8 @@ Mit den folgenden Funktionen werden Informationen im Zusammenhang mit **gltexcoo
 |-------------------------------------|-----------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[nur Desktop-Apps\]<br/>                              |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                                    |
-| Header<br/>                   | <dl> <dt>GL. h</dt> </dl>         |
-| Bibliothek<br/>                  | <dl> <dt>Opengl32. lib</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Gl.h</dt> </dl>         |
+| Bibliothek<br/>                  | <dl> <dt>Opengl32.lib</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Opengl32.dll</dt> </dl> |
 
 
@@ -133,49 +133,49 @@ Mit den folgenden Funktionen werden Informationen im Zusammenhang mit **gltexcoo
 
 <dl> <dt>
 
-[**glarrayelement**](glarrayelement.md)
+[**glArrayElement**](glarrayelement.md)
 </dt> <dt>
 
-[**glcolorpointer**](glcolorpointer.md)
+[**glColorPointer**](glcolorpointer.md)
 </dt> <dt>
 
-[**gldrawarrays**](gldrawarrays.md)
+[**glDrawArrays**](gldrawarrays.md)
 </dt> <dt>
 
 [**glDrawElements**](gldrawelements.md)
 </dt> <dt>
 
-[**gledgeflagpointer**](gledgeflagpointer.md)
+[**glEdgeFlagPointer**](gledgeflagpointer.md)
 </dt> <dt>
 
 [**glEnable**](glenable.md)
 </dt> <dt>
 
-[**glgetpointerv**](glgetpointerv.md)
+[**glGetPointerv**](glgetpointerv.md)
 </dt> <dt>
 
-[**glgetstring**](glgetstring.md)
+[**glGetString**](glgetstring.md)
 </dt> <dt>
 
-[**glindexpointer**](glindexpointer.md)
+[**glIndexPointer**](glindexpointer.md)
 </dt> <dt>
 
-[**glisenabled**](glisenabled.md)
+[**glIsEnabled**](glisenabled.md)
 </dt> <dt>
 
-[**glnormalpointer**](glnormalpointer.md)
+[**glNormalPointer**](glnormalpointer.md)
 </dt> <dt>
 
-[**glpopclientattrb**](glpopclientattrib.md)
+[**glPopClientAttrib**](glpopclientattrib.md)
 </dt> <dt>
 
-[**glpushclientatpub**](glpushclientattrib.md)
+[**glPushClientAttrib**](glpushclientattrib.md)
 </dt> <dt>
 
-[**gltexcoord**](gltexcoord-functions.md)
+[**glTexCoord**](gltexcoord-functions.md)
 </dt> <dt>
 
-[**glvertexpointer**](glvertexpointer.md)
+[**glVertexPointer**](glvertexpointer.md)
 </dt> </dl>
 
  

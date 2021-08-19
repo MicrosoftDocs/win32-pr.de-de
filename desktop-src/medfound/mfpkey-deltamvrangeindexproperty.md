@@ -1,23 +1,23 @@
 ---
-description: Gibt die Methode an, die zum Codieren der Bewegungsvektor Informationen verwendet wird.
+description: Gibt die Methode an, die zum Codieren der Bewegungsvektorinformationen verwendet wird.
 ms.assetid: 22ffdb77-9266-42e5-be41-fc7457141bba
-title: MFPKEY_DELTAMVRANGEINDEX-Eigenschaft (wmcodecdsp. h)
+title: MFPKEY_DELTAMVRANGEINDEX-Eigenschaft (Wmcodecdsp.h)
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: c72d923659e64c9a0dcab40811e31d7752924700
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: b7a21ac1a0bdaf859c93bca800d72f5e9ed155919bb07a24f5287b2436e57f94
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104528676"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120113340"
 ---
-# <a name="mfpkey_deltamvrangeindex-property"></a>Mfpkey- \_ Eigenschaft "Delta-vrangeindex"
+# <a name="mfpkey_deltamvrangeindex-property"></a>MFPKEY \_ DELTAMVRANGEINDEX-Eigenschaft
 
-Gibt die Methode an, die zum Codieren der Bewegungsvektor Informationen verwendet wird.
+Gibt die Methode an, die zum Codieren der Bewegungsvektorinformationen verwendet wird.
 
 ## <a name="constant-for-ipropertybag"></a>Konstante für IPropertyBag
 
-g \_ wszwmvcdelta tamvrangeindex
+g \_ wszWMVCDeltaMVRangeIndex
 
 ## <a name="data-type"></a>Datentyp
 
@@ -27,9 +27,9 @@ VT \_ I4
 
 0
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Wenn diese Eigenschaft festgelegt ist, vergrößert der Encoder den Delta Bewegungsvektor Bereich in Feldern. Bewegungsvektor Informationen sind nur für Zeilen Sprung Felder gültig.
+Wenn diese Eigenschaft festgelegt ist, erhöht der Encoder den Deltabewegungsvektorbereich in Feldern. Bewegungsvektorinformationen sind nur für Felder mit Zeilensprung gültig.
 
 Diese Eigenschaft kann auf einen der folgenden Werte festgelegt werden:
 
@@ -37,10 +37,10 @@ Diese Eigenschaft kann auf einen der folgenden Werte festgelegt werden:
 
 | Wert | BESCHREIBUNG                                                                          |
 |-------|--------------------------------------------------------------------------------------|
-| 0     | Verwenden Sie den vorhandenen Delta Bewegungsvektor Bereich.                                          |
-| 1     | Verdoppelt den Delta Bewegungsvektor Bereich in horizontaler Richtung.                    |
-| 2     | Verdoppelt den Delta Bewegungsvektor Bereich in vertikaler Richtung.                      |
-| 3     | Verdoppeln Sie den Vektor Bereich der Delta Bewegung sowohl in horizontaler als auch in vertikaler Richtung. |
+| 0     | Verwenden Sie den vorhandenen Deltabewegungsvektorbereich.                                          |
+| 1     | Doppelklicken Sie den Deltabewegungsvektorbereich in horizontaler Richtung.                    |
+| 2     | Doppelklicken Sie den Deltabewegungsvektorbereich in vertikaler Richtung.                      |
+| 3     | Doppelklicken Sie den Deltabewegungsvektorbereich in horizontaler und vertikaler Richtung. |
 
 
 
@@ -52,9 +52,9 @@ Diese Eigenschaft kann auf einen der folgenden Werte festgelegt werden:
 
 | Anforderung | Wert |
 |-------------------------------------|-----------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows XP \[ -Desktop-Apps\]<br/>                                             |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/>                                    |
-| Header<br/>                   | <dl> <dt>Wmcodecdsp. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur XP-Desktop-Apps\]<br/>                                             |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                                    |
+| Header<br/>                   | <dl> <dt>Wmcodecdsp.h</dt> </dl> |
 
 
 
@@ -62,7 +62,7 @@ Diese Eigenschaft kann auf einen der folgenden Werte festgelegt werden:
 
 <dl> <dt>
 
-[Eigenschaften von Media Foundation](media-foundation-properties.md)
+[Media Foundation-Eigenschaften](media-foundation-properties.md)
 </dt> </dl>
 
  

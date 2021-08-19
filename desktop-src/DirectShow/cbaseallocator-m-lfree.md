@@ -1,7 +1,7 @@
 ---
-description: Zeiger auf eine Liste der verfügbaren (freien) Medien Beispiele.
+description: Zeiger auf eine Liste der verfügbaren (kostenlosen) Medienbeispiele.
 ms.assetid: 7736cf0a-48cf-4f33-8d03-c34a3d7cbddc
-title: 'Cbasezucator:: m_lFree Member (amfilter. h)'
+title: CBaseAllocator::m_lFree-Member (Amfilter.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,16 +16,16 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: c695f88165b3ecda55b498dfcc06b0d52860fd0f
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 77d60a51903c2c7bde0d1a3f08f3448eceb8fb69cbec3fbf04de568d7e54ec1d
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106372647"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120131450"
 ---
-# <a name="cbaseallocatorm_lfree-member"></a>Cbasezucator:: m \_ lfree-Member
+# <a name="cbaseallocatorm_lfree-member"></a>CBaseAllocator::m \_ lFree-Member
 
-Zeiger auf eine Liste der verfügbaren (freien) Medien Beispiele.
+Zeiger auf eine Liste der verfügbaren (kostenlosen) Medienbeispiele.
 
 ## <a name="syntax"></a>Syntax
 
@@ -42,8 +42,8 @@ CSampleList m_lFree;
 
 | Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Amfilter. h (Include Streams. h)</dt> </dl>                                                                                  |
-| Bibliothek<br/> | <dl> " <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Amfilter.h (include Streams.h)</dt> </dl>                                                                                  |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Verkaufsbuilds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
@@ -51,7 +51,7 @@ CSampleList m_lFree;
 
 <dl> <dt>
 
-[**Cbasezucator-Klasse**](cbaseallocator.md)
+[**CBaseAllocator-Klasse**](cbaseallocator.md)
 </dt> </dl>
 
  

@@ -1,9 +1,9 @@
 ---
-title: TBM_GETTICPOS (Commctrl.h)
+title: TBM_GETTICPOS-Nachricht (Commctrl.h)
 description: Ruft die aktuelle physische Position eines Teilstrichs in einer Trackleiste ab.
 ms.assetid: a4b0ec32-ef4e-4607-ade1-5e2be02bebe4
 keywords:
-- TBM_GETTICPOS meldungssteuerelemente Windows
+- TBM_GETTICPOS Windows-Steuerelemente für Nachrichten
 topic_type:
 - apiref
 api_name:
@@ -32,7 +32,7 @@ Ruft die aktuelle physische Position eines Teilstrichs in einer Trackleiste ab.
 *wParam* 
 </dt> <dd>
 
-Nullbasierter Index, der ein Teilstrich identifiziert. Die Positionen der ersten und letzten Teilstriche sind nicht direkt über diese Nachricht verfügbar.
+Nullbasierter Index, der ein Teilstrich identifiziert. Die Positionen der ersten und letzten Teilstriche sind über diese Meldung nicht direkt verfügbar.
 
 </dd> <dt>
 
@@ -45,13 +45,13 @@ Muss Null sein.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt den Abstand in Clientkoordinaten vom linken oder oberen Bereich des Clientbereichs der Trackleiste bis zum angegebenen Teilstrich zurück. Der Rückgabewert ist die x-Koordinate des Teilstrichs für eine horizontale Trackleiste oder die y-Koordinate für eine vertikale Trackbar. Wenn *wParam* kein gültiger Index ist, ist der Rückgabewert -1.
+Gibt den Abstand in Clientkoordinaten vom linken oder oberen Rand des Clientbereichs der Trackleiste bis zum angegebenen Teilstrich zurück. Der Rückgabewert ist die x-Koordinate des Teilstrichs für eine horizontale Trackleiste oder die y-Koordinate für eine vertikale Trackleiste. Wenn *wParam* kein gültiger Index ist, ist der Rückgabewert -1.
 
 ## <a name="remarks"></a>Hinweise
 
-Da die ersten und letzten Teilstriche durch diese Meldung nicht verfügbar sind, werden gültige Indizes von ihrer Teilstrichposition auf der Trackleiste versetzt. Wenn der Unterschied [**zwischen TBM \_ GETRANGEMIN**](tbm-getrangemin.md) und [**TBM \_ GETRANGEMAX**](tbm-getrangemax.md) kleiner als zwei ist, gibt es keinen gültigen Index, und diese Meldung wird fehlschlagen.
+Da die erste und letzte Teilstriche nicht über diese Meldung verfügbar sind, werden gültige Indizes von ihrer Teilstrichposition auf der Trackleiste versetzt. Wenn der Unterschied zwischen [**TBM \_ GETRANGEMIN**](tbm-getrangemin.md) und [**TBM \_ GETRANGEMAX**](tbm-getrangemax.md) kleiner als zwei ist, gibt es keinen gültigen Index, und diese Meldung schlägt fehl.
 
-Im Folgenden wird die Beziehung zwischen den Ticks auf einer Trackbar, den durch diese Nachricht verfügbaren Ticks und ihren nullbasierten Indizes veranschaulicht.
+Im Folgenden wird die Beziehung zwischen den Ticks auf einer Trackbar, den über diese Nachricht verfügbaren Ticks und ihren nullbasierten Indizes veranschaulicht.
 
 ``` syntax
 0 1 2 3 4 5 6 7 8 9    // Tick positions seen on the trackbar.
@@ -65,7 +65,7 @@ Im Folgenden wird die Beziehung zwischen den Ticks auf einer Trackbar, den durch
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ Vista-Desktop-Apps\]<br/>                                        |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur Vista-Desktop-Apps\]<br/>                                        |
 | Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                                  |
 | Header<br/>                   | <dl> <dt>Commctrl.h</dt> </dl> |
 

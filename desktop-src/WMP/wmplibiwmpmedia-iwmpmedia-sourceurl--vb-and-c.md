@@ -1,11 +1,11 @@
 ---
-title: Iwmpmedia SourceURL (Eigenschaft)
-description: Die SourceUrl-Eigenschaft ruft die URL des Medien Elements ab.
+title: IWMPMedia sourceURL-Eigenschaft
+description: Die sourceURL-Eigenschaft ruft die URL des Medienelements ab.
 ms.assetid: adaef82c-eeed-4cce-859b-c54b9c8fa085
 keywords:
-- SourceURL-Eigenschaften Fenster Media Player
-- SourceURL-Eigenschaft, Windows Media Player, iwmpmedia-Schnittstelle
-- Iwmpmedia Interface, Windows Media Player, SourceURL (Eigenschaft)
+- sourceURL-Eigenschaft Windows Media Player
+- sourceURL-Eigenschaft Windows Media Player , IWMPMedia-Schnittstelle
+- IWMPMedia-Schnittstelle Windows Media Player , sourceURL-Eigenschaft
 topic_type:
 - apiref
 api_name:
@@ -17,16 +17,16 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: d9ad2cdb2c0a67f65f7b0cf722d1b613307806d7
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: f5427dadcbc2b9dccc4156ff1c9b25e641298a3c7cd069900fa932b6e0803c64
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106372409"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120122600"
 ---
-# <a name="iwmpmediasourceurl-property"></a>Iwmpmedia:: SourceURL (Eigenschaft)
+# <a name="iwmpmediasourceurl-property"></a>IWMPMedia::sourceURL-Eigenschaft
 
-Die **SourceUrl** -Eigenschaft ruft die URL des Medien Elements ab.
+Die **sourceURL-Eigenschaft** ruft die URL des Medienelements ab.
 
 Diese Eigenschaft ist schreibgeschützt.
 
@@ -49,11 +49,11 @@ Public ReadOnly Property sourceURL As System.String
 
 ## <a name="property-value"></a>Eigenschaftswert
 
-Ein **System. String** -Wert, der die Quell-URL ist.
+Eine **System.String,die** die Quell-URL ist.
 
 ## <a name="examples"></a>Beispiele
 
-Im folgenden Beispiel wird **SourceUrl** verwendet, um die URL des ersten Medien Elements in der Wiedergabeliste "alle Musik" abzurufen. die URL des Medien Elements wird dann der Eigenschaft "Player Object URL" zugewiesen. Das **AxWMPLib. AxWindowsMediaPlayer** -Objekt wird durch die Variable mit dem Namen "Player" dargestellt.
+Im folgenden Beispiel wird **sourceURL** verwendet, um die URL des ersten Medienelements in der Wiedergabeliste "Alle Musik" abzurufen. Die URL des Medienelements wird dann der URL-Eigenschaft des Playerobjekts zugewiesen. Das **AxWMPLib.AxWindowsMediaPlayer-Objekt** wird durch die Variable player dargestellt.
 
 
 ```CSharp
@@ -96,7 +96,7 @@ player.Ctlcontrols.play()
 
 | Anforderung | Wert |
 |----------------------|------------------------------------------------------------------------------------------------------------------------|
-| Version<br/>   | Windows Media Player 9-Serie oder höher<br/>                                                                      |
+| Version<br/>   | Windows Media Player 9er Serie oder höher<br/>                                                                      |
 | Namespace<br/> | **WMPLib**<br/>                                                                                                  |
 | Assembly<br/>  | <dl> <dt>Interop.WMPLib.dll (Interop.WMPLib.dll.dll)</dt> </dl> |
 
@@ -106,7 +106,7 @@ player.Ctlcontrols.play()
 
 <dl> <dt>
 
-[**Iwmpmedia-Schnittstelle (VB und c#)**](iwmpmedia--vb-and-c.md)
+[**IWMPMedia-Schnittstelle (VB und C#)**](iwmpmedia--vb-and-c.md)
 </dt> </dl>
 
  

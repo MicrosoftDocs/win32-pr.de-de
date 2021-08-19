@@ -1,9 +1,9 @@
 ---
-title: TBM_GETLINESIZE (Commctrl.h)
-description: Ruft die Anzahl der logischen Positionen ab, die der Schieberegler der Trackleiste als Reaktion auf Tastatureingaben über die Pfeiltasten bewegt, z. B. die Tasten oder . Die logischen Positionen sind die ganzzahligen Inkremente im Bereich der minimalen bis maximalen Schiebereglerpositionen der Trackleiste.
+title: TBM_GETLINESIZE Meldung (Commctrl.h)
+description: Ruft die Anzahl der logischen Positionen ab, die der Schieberegler der Trackleiste als Reaktion auf Tastatureingaben aus den Pfeiltasten bewegt, z. B. die Tasten oder . Die logischen Positionen sind die ganzzahligen Inkremente im Bereich der Trackleiste von minimalen bis maximalen Schiebereglerpositionen.
 ms.assetid: b596060a-5bac-4b31-82f3-ee4744a9779c
 keywords:
-- TBM_GETLINESIZE message Windows Controls
+- TBM_GETLINESIZE Windows-Steuerelementen
 topic_type:
 - apiref
 api_name:
@@ -23,7 +23,7 @@ ms.locfileid: "120046560"
 ---
 # <a name="tbm_getlinesize-message"></a>TBM \_ GETLINESIZE-Nachricht
 
-Ruft die Anzahl der logischen Positionen ab, die der Schieberegler der Trackleiste als Reaktion auf Tastatureingaben über die Pfeiltasten bewegt, z. B. die Tasten oder . Die logischen Positionen sind die ganzzahligen Inkremente im Bereich der minimalen bis maximalen Schiebereglerpositionen der Trackleiste.
+Ruft die Anzahl der logischen Positionen ab, die der Schieberegler der Trackleiste als Reaktion auf Tastatureingaben aus den Pfeiltasten bewegt, z. B. die Tasten oder . Die logischen Positionen sind die ganzzahligen Inkremente im Bereich der Trackleiste von minimalen bis maximalen Schiebereglerpositionen.
 
 ## <a name="parameters"></a>Parameter
 
@@ -43,7 +43,7 @@ Gibt einen 32-Bit-Wert zurück, der die Zeilengröße für die Trackleiste angib
 
 Die Standardeinstellung für die Zeilengröße ist 1.
 
-Die Trackleiste sendet auch eine [**WM \_ HSCROLL-**](wm-hscroll.md) oder [**WM \_ VSCROLL-Nachricht**](wm-vscroll.md) mit den TB \_ LINEUP- und TB LINEDOWN-Benachrichtigungscodes an das übergeordnete Fenster, wenn der Benutzer die \_ Pfeiltasten drückt.
+Die Trackleiste sendet auch eine [**WM \_ HSCROLL-**](wm-hscroll.md) oder [**WM \_ VSCROLL-Nachricht**](wm-vscroll.md) mit den TB \_ LINEUP- und TB \_ LINEDOWN-Benachrichtigungscodes an das übergeordnete Fenster, wenn der Benutzer die Pfeiltasten drückt.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -51,7 +51,7 @@ Die Trackleiste sendet auch eine [**WM \_ HSCROLL-**](wm-hscroll.md) oder [**WM 
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ Vista-Desktop-Apps\]<br/>                                        |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur Vista-Desktop-Apps\]<br/>                                        |
 | Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                                  |
 | Header<br/>                   | <dl> <dt>Commctrl.h</dt> </dl> |
 

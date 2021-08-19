@@ -1,8 +1,8 @@
 ---
-description: Die statische Methode settcpwindowsize WMI-Klasse wird verwendet, um die maximale Größe des TCP-Empfangs Fensters festzulegen, die vom System bereitgestellt wird.
+description: Die statische Methode der SetTcpWindowSize WMI-Klasse wird verwendet, um die maximale TCP-Empfangsfenstergröße festzulegen, die vom System angeboten wird.
 ms.assetid: c108fd9c-6de4-4f3e-9691-b0b5c1a3dc5f
 ms.tgt_platform: multiple
-title: Settcpwindowsize-Methode der Win32_NetworkAdapterConfiguration-Klasse
+title: SetTcpWindowSize-Methode der Win32_NetworkAdapterConfiguration-Klasse
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -14,18 +14,18 @@ api_type:
 - COM
 api_location:
 - CIMWin32.dll
-ms.openlocfilehash: d4a77acdc81c06d1f78da8bbc0160bd0d21bcfd8
-ms.sourcegitcommit: c7add10d695482e1ceb72d62b8a4ebd84ea050f7
+ms.openlocfilehash: 9bad1974233dade51f9c49d8508d3ad65f3dfc3f3a1bbb27a55bf4ea0828cc09
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104126853"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119020428"
 ---
-# <a name="settcpwindowsize-method-of-the-win32_networkadapterconfiguration-class"></a>Settcpwindowsize-Methode der Win32 \_ networkadapterconfiguration-Klasse
+# <a name="settcpwindowsize-method-of-the-win32_networkadapterconfiguration-class"></a>SetTcpWindowSize-Methode der Win32 \_ NetworkAdapterConfiguration-Klasse
 
-Die statische Methode **settcpwindowsize** [WMI-Klasse](/windows/desktop/WmiSdk/retrieving-a-class) wird verwendet, um die maximale Größe des TCP-Empfangs Fensters festzulegen, die vom System bereitgestellt wird.
+Die statische **Methode der SetTcpWindowSize** [WMI-Klasse](/windows/desktop/WmiSdk/retrieving-a-class) wird verwendet, um die maximale TCP-Empfangsfenstergröße festzulegen, die vom System angeboten wird.
 
-In diesem Thema wird die MOF-Syntax (Managed Object Format) verwendet. Weitere Informationen zum Verwenden dieser Methode finden Sie unter [Aufrufen einer Methode](/windows/desktop/WmiSdk/calling-a-method).
+In diesem Thema wird die MOF-Syntax (Managed Object Format) verwendet. Weitere Informationen zur Verwendung dieser Methode finden Sie unter [Aufrufen einer Methode.](/windows/desktop/WmiSdk/calling-a-method)
 
 ## <a name="syntax"></a>Syntax
 
@@ -42,16 +42,16 @@ uint32 SetTcpWindowSize(
 
 <dl> <dt>
 
-*TcpWindowSize* \[ in\]
+*TcpWindowSize* \[ In\]
 </dt> <dd>
 
-Maximale TCP-Empfangs Fenstergröße, die vom System bereitgestellt wird. Der gültige Wertebereich in Bytes ist 0-65535.
+Maximale TCP-Empfangsfenstergröße, die vom System angeboten wird. Der gültige Wertebereich in Bytes ist 0 bis 65535.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt für einen erfolgreichen Abschluss einen Wert von 0 (null) zurück, wenn kein Neustart erforderlich ist, 1 (eins) für einen erfolgreichen Abschluss, wenn ein Neustart erforderlich ist, und eine andere Zahl, wenn ein Fehler vorliegt. Weitere Informationen zu Fehlercodes finden Sie unter [**WMI-Fehler Konstanten**](/windows/desktop/WmiSdk/wmi-error-constants) oder [**WbemErrorEnum**](/windows/desktop/api/wbemdisp/ne-wbemdisp-wbemerrorenum). Allgemeine **HRESULT** -Werte finden Sie unter [System Fehler Codes](/windows/desktop/Debug/system-error-codes).
+Gibt den Wert 0 (null) für einen erfolgreichen Abschluss zurück, wenn kein Neustart erforderlich ist, 1 (eins) für einen erfolgreichen Abschluss, wenn ein Neustart erforderlich ist, und eine andere Zahl, wenn ein Fehler auftritt. Weitere Informationen zu Fehlercodes finden Sie unter [**WMI-Fehlerkonstanten**](/windows/desktop/WmiSdk/wmi-error-constants) oder [**WbemErrorEnum.**](/windows/desktop/api/wbemdisp/ne-wbemdisp-wbemerrorenum) Allgemeine **HRESULT-Werte** finden Sie unter [Systemfehlercodes.](/windows/desktop/Debug/system-error-codes)
 
 <dl> <dt>
 
@@ -73,7 +73,7 @@ Erfolgreicher Abschluss, Neustart erforderlich.
 
 </dd> <dt>
 
-**Methode wird auf dieser Plattform nicht unterstützt.**
+**Die Methode wird auf dieser Plattform nicht unterstützt.**
 </dt> <dd>
 
 64
@@ -82,7 +82,7 @@ Die Methode wird auf dieser Plattform nicht unterstützt.
 
 </dd> <dt>
 
-**Unbekannter Fehler.**
+**Unbekannter Fehler**
 </dt> <dd>
 
 65
@@ -91,7 +91,7 @@ Unbekannter Fehler.
 
 </dd> <dt>
 
-**Ungültige Subnetzmaske.**
+**Ungültige Subnetzmaske**
 </dt> <dd>
 
 66
@@ -100,12 +100,12 @@ Ungültige Subnetzmaske.
 
 </dd> <dt>
 
-**Fehler beim Verarbeiten einer Instanz, die zurückgegeben wurde.**
+**Fehler beim Verarbeiten einer zurückgegebenen Instanz**
 </dt> <dd>
 
 67
 
-Fehler beim Verarbeiten einer Instanz, die zurückgegeben wurde.
+Fehler beim Verarbeiten einer zurückgegebenen Instanz.
 
 </dd> <dt>
 
@@ -118,12 +118,12 @@ Ungültiger Eingabeparameter.
 
 </dd> <dt>
 
-**Es wurden mehr als 5 Gateways angegeben.**
+**Mehr als 5 Gateways angegeben**
 </dt> <dd>
 
 69
 
-Es wurden mehr als fünf Gateways angegeben.
+Mehr als fünf Gateways angegeben.
 
 </dd> <dt>
 
@@ -145,7 +145,7 @@ Ungültige Gateway-IP-Adresse.
 
 </dd> <dt>
 
-**Fehler beim Zugriff auf die Registrierung für die angeforderten Informationen.**
+**Fehler beim Zugriff auf die Registrierung für die angeforderten Informationen**
 </dt> <dd>
 
 72
@@ -154,12 +154,12 @@ Fehler beim Zugriff auf die Registrierung für die angeforderten Informationen.
 
 </dd> <dt>
 
-**Ungültiger Domänen Name**
+**Ungültiger Domänenname**
 </dt> <dd>
 
 73
 
-Ungültiger Domänen Name.
+Ungültiger Domänenname.
 
 </dd> <dt>
 
@@ -172,12 +172,12 @@ Ungültiger Hostname.
 
 </dd> <dt>
 
-**Kein primärer/sekundärer WINS-Server definiert.**
+**Kein primärer/sekundärer WINS-Server definiert**
 </dt> <dd>
 
 75
 
-Es wurde kein primärer oder sekundärer WINS-Server
+Es wurde kein primärer oder sekundärer WINS-Server definiert.
 
 </dd> <dt>
 
@@ -190,7 +190,7 @@ Ungültige Datei.
 
 </dd> <dt>
 
-**Ungültiger Systempfad.**
+**Ungültiger Systempfad**
 </dt> <dd>
 
 77
@@ -217,102 +217,102 @@ Ungültiger Sicherheitsparameter.
 
 </dd> <dt>
 
-**Der TCP/IP-Dienst kann nicht konfiguriert werden.**
+**TCP/IP-Dienst kann nicht konfiguriert werden**
 </dt> <dd>
 
 80
 
-Der TCP/IP-Dienst kann nicht konfiguriert werden.
+Tcp/IP-Dienst kann nicht konfiguriert werden.
 
 </dd> <dt>
 
-**DHCP-Dienst kann nicht konfiguriert werden.**
+**DHCP-Dienst kann nicht konfiguriert werden**
 </dt> <dd>
 
 81
 
-Der DHCP-Dienst kann nicht konfiguriert werden.
+Dhcp-Dienst kann nicht konfiguriert werden.
 
 </dd> <dt>
 
-**DHCP-Lease kann nicht erneuert werden.**
+**DHCP-Lease kann nicht erneuert werden**
 </dt> <dd>
 
 82
 
-Die DHCP-Lease kann nicht erneuert werden.
+DHCP-Lease kann nicht erneuert werden.
 
 </dd> <dt>
 
-**DHCP-Lease kann nicht freigegeben werden**
+**DHCP-Lease kann nicht veröffentlicht werden**
 </dt> <dd>
 
 83
 
-DHCP-Lease kann nicht freigegeben werden.
+DHCP-Lease kann nicht veröffentlicht werden.
 
 </dd> <dt>
 
-**IP ist auf dem Adapter nicht aktiviert.**
+**IP auf Adapter nicht aktiviert**
 </dt> <dd>
 
 84
 
-Die IP ist auf dem Adapter nicht aktiviert.
+DIE IP-Adresse ist auf dem Adapter nicht aktiviert.
 
 </dd> <dt>
 
-**IPX ist auf dem Adapter nicht aktiviert.**
+**IPX auf Adapter nicht aktiviert**
 </dt> <dd>
 
 85
 
-IPX ist auf dem Adapter nicht aktiviert.
+IPX für Adapter nicht aktiviert.
 
 </dd> <dt>
 
-**Fehler bei Frame/Netzwerk Nummer.**
+**Frame-/Netzwerknummern-Begrenzungsfehler**
 </dt> <dd>
 
 86
 
-Fehler bei Frame-oder Netzwerk Nummern Begrenzungen.
+Frame- oder Netzwerknummern-Begrenzungsfehler.
 
 </dd> <dt>
 
-**Ungültiger Frame-Typ**
+**Ungültiger Frametyp**
 </dt> <dd>
 
 87
 
-Ungültiger Rahmentyp.
+Ungültiger Frametyp.
 
 </dd> <dt>
 
-**Ungültige Netzwerk Nummer**
+**Ungültige Netzwerknummer**
 </dt> <dd>
 
 88
 
-Ungültige Netzwerk Nummer.
+Ungültige Netzwerknummer.
 
 </dd> <dt>
 
-**Doppelte Netzwerk Nummer**
+**Doppelte Netzwerknummer**
 </dt> <dd>
 
 89
 
-Doppelte Netzwerk Nummer.
+Doppelte Netzwerknummer.
 
 </dd> <dt>
 
-**Parameter außerhalb des gültigen Bereichs**
+**Parameter außerhalb der Grenzen**
 </dt> <dd>
 
 90
 
-Der Parameter liegt außerhalb des gültigen Bereichs.
+Parameter außerhalb der Grenzen.
 
 </dd> <dt>
 
@@ -321,11 +321,11 @@ Der Parameter liegt außerhalb des gültigen Bereichs.
 
 91
 
-Zugriff verweigert.
+Zugriff verweigert:
 
 </dd> <dt>
 
-**Nicht genügend Arbeitsspeicher**
+**Nicht genügend Arbeitsspeicher.**
 </dt> <dd>
 
 92
@@ -334,7 +334,7 @@ Nicht genügend Arbeitsspeicher.
 
 </dd> <dt>
 
-**Ist bereits vorhanden.**
+**Bereits vorhanden**
 </dt> <dd>
 
 93
@@ -343,16 +343,16 @@ Ist bereits vorhanden.
 
 </dd> <dt>
 
-**Der Pfad, die Datei oder das Objekt wurde nicht gefunden.**
+**Pfad, Datei oder Objekt nicht gefunden**
 </dt> <dd>
 
 94
 
-Der Pfad, die Datei oder das Objekt wurde nicht gefunden.
+Pfad, Datei oder Objekt nicht gefunden.
 
 </dd> <dt>
 
-**Der Dienst kann nicht benachrichtigt werden.**
+**Dienst kann nicht benachrichtigt werden**
 </dt> <dd>
 
 95
@@ -361,7 +361,7 @@ Der Dienst kann nicht benachrichtigt werden.
 
 </dd> <dt>
 
-**DNS-Dienst kann nicht benachrichtigt werden.**
+**DNS-Dienst kann nicht benachrichtigt werden**
 </dt> <dd>
 
 96
@@ -375,7 +375,7 @@ Der DNS-Dienst kann nicht benachrichtigt werden.
 
 97
 
-Schnittstelle nicht konfigurierbar.
+Die Schnittstelle kann nicht konfiguriert werden.
 
 </dd> <dt>
 
@@ -384,16 +384,16 @@ Schnittstelle nicht konfigurierbar.
 
 98
 
-Nicht alle DHCP-Leases konnten freigegeben oder erneuert werden.
+Nicht alle DHCP-Leases können freigegeben oder erneuert werden.
 
 </dd> <dt>
 
-**DHCP ist auf dem Adapter nicht aktiviert.**
+**DHCP für Adapter nicht aktiviert**
 </dt> <dd>
 
 100
 
-DHCP ist auf dem Adapter nicht aktiviert.
+DHCP für Adapter nicht aktiviert.
 
 </dd> <dt>
 
@@ -404,18 +404,18 @@ DHCP ist auf dem Adapter nicht aktiviert.
 
 </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Das Empfangsfenster gibt die Anzahl der Bytes an, die von einem Absender übertragen werden können, ohne eine Bestätigung zu erhalten. Im allgemeinen verbessern größere Empfangs Fenster die Leistung bei Netzwerken mit hoher Verzögerung und hoher Bandbreite. Aus Effizienzgründen sollte das Empfangs Fenster ein gleich Vielfaches der maximalen TCP-Segment Größe (MSS) sein.
+Das Empfangsfenster gibt die Anzahl der Bytes an, die von einem Absender übertragen werden können, ohne eine Bestätigung zu erhalten. Im Allgemeinen verbessern größere Empfangsfenster die Leistung gegenüber Netzwerken mit hoher Verzögerung und hoher Bandbreite. Aus Effizienzgründen sollte das Empfangsfenster ein gerades Vielfaches der maximalen TCP-Segmentgröße (MSS) sein.
 
 > [!Note]  
-> Windows Vista: Diese Methode greift `"CurrentControlSet\\Services\\Tcpip\\Parameters|TcpWindowSize"` auf den Registrierungs Eintrag zu, der nicht in der aktuellen Implementierung des Betriebssystems verwendet wird.
+> Windows Vista: Diese Methode greift auf den `"CurrentControlSet\\Services\\Tcpip\\Parameters|TcpWindowSize"` Registrierungseintrag zu, der in der aktuellen Implementierung des Betriebssystems nicht verwendet wird.
 
  
 
 ## <a name="examples"></a>Beispiele
 
-Im Beispiel [Ändern der TCP-Fenstergröße für alle Netzwerkadapter](https://Gallery.TechNet.Microsoft.Com/74cf7be0-0044-4a88-85a3-9bc98490897b) VBScript wird die TCP-Fenstergröße für alle Netzwerkadapter auf einem Computer festgelegt.
+Im VbScript-Beispiel [Ändern der TCP-Fenstergröße für alle Netzwerkadapter](https://Gallery.TechNet.Microsoft.Com/74cf7be0-0044-4a88-85a3-9bc98490897b) wird die TCP-Fenstergröße für alle Netzwerkadapter auf einem Computer festgelegt.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -427,8 +427,8 @@ Im Beispiel [Ändern der TCP-Fenstergröße für alle Netzwerkadapter](https://G
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2008<br/>                                                          |
 | Ende des Supports (Client)<br/>    | Windows 7<br/>                                                                    |
 | Ende des Supports (Server)<br/>    | Windows Server 2008<br/>                                                          |
-| Namespace<br/>                | Root \\ CIMV2<br/>                                                                  |
-| MOF<br/>                      | <dl> <dt>Cimwin32. MOF</dt> </dl> |
+| Namespace<br/>                | \\Stamm-CIMV2<br/>                                                                  |
+| MOF<br/>                      | <dl> <dt>CIMWin32.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>CIMWin32.dll</dt> </dl> |
 
 
@@ -437,19 +437,19 @@ Im Beispiel [Ändern der TCP-Fenstergröße für alle Netzwerkadapter](https://G
 
 <dl> <dt>
 
-[Computer System-Hardware Klassen](computer-system-hardware-classes.md)
+[Computersystemhardwareklassen](computer-system-hardware-classes.md)
 </dt> <dt>
 
-[**Win32 \_ networkadapterconfiguration**](win32-networkadapterconfiguration.md)
+[**Win32 \_ NetworkAdapterConfiguration**](win32-networkadapterconfiguration.md)
 </dt> <dt>
 
-[WMI-Tasks: Netzwerk](/windows/desktop/WmiSdk/wmi-tasks--networking)
+[WMI-Aufgaben: Netzwerk](/windows/desktop/WmiSdk/wmi-tasks--networking)
 </dt> <dt>
 
-[WMI-Tasks: Konten und Domänen](/windows/desktop/WmiSdk/wmi-tasks--accounts-and-domains)
+[WMI-Aufgaben: Konten und Domänen](/windows/desktop/WmiSdk/wmi-tasks--accounts-and-domains)
 </dt> <dt>
 
-[IPv6-und IPv4-Unterstützung in WMI](/windows/desktop/WmiSdk/ipv6-and-ipv4-support-in-wmi)
+[IPv6- und IPv4-Unterstützung in WMI](/windows/desktop/WmiSdk/ipv6-and-ipv4-support-in-wmi)
 </dt> </dl>
 
  

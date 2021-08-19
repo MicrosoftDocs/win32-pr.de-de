@@ -14,16 +14,16 @@ api_type:
 api_location:
 - D3dx9.lib
 - D3dx9.dll
-ms.openlocfilehash: d7f145dc45f053e208f7890c8afdac6422ecde13
-ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
+ms.openlocfilehash: 6fb5850c17aab9b16a304e29075be925aa1e7d1086570021f201f48561c92788
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2021
-ms.locfileid: "108097508"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119893680"
 ---
 # <a name="id3dxbaseeffectsetmatrixtransposearray-method"></a>ID3DXBaseEffect::SetMatrixTransposeArray-Methode
 
-Legt ein Array von transponierten Matrizen fest.
+Legt ein Array transponierte Matrizen fest.
 
 ## <a name="syntax"></a>Syntax
 
@@ -47,7 +47,7 @@ HRESULT SetMatrixTransposeArray(
 
 Typ: **[D3DXHANDLE](dx9-graphics-reference-effects-constants.md)**
 
-Eindeutiger Bezeichner. Siehe [Handles (Direct3D 9)](handles.md).
+Eindeutiger Bezeichner. Siehe [Handles (Direct3D 9).](handles.md)
 
 </dd> <dt>
 
@@ -56,7 +56,7 @@ Eindeutiger Bezeichner. Siehe [Handles (Direct3D 9)](handles.md).
 
 Typ: **const [**D3DXMATRIX**](d3dxmatrix.md) \***
 
-Array von transponierten Matrizen. Siehe [**D3DXMATRIX**](d3dxmatrix.md).
+Array transponierte Matrizen. Siehe [**D3DXMATRIX**](d3dxmatrix.md).
 
 </dd> <dt>
 
@@ -73,11 +73,11 @@ Anzahl der Matrizen im Array.
 
 Typ: **[ **HRESULT**](https://msdn.microsoft.com/library/Bb401631(v=MSDN.10).aspx)**
 
-Wenn die Methode erfolgreich ist, lautet der Rückgabewert D3D \_ OK. Wenn die Methode fehlschlägt, kann der Rückgabewert D3DERR \_ INVALIDCALL sein.
+Wenn die Methode erfolgreich ist, ist der Rückgabewert D3D \_ OK. Wenn bei der Methode ein Fehler auftritt, kann der Rückgabewert D3DERR \_ INVALIDCALL sein.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Eine transponierte Matrix enthält Spaltenhauptdaten. Das heißt, jeder Vektor ist in einer Spalte enthalten.
+Eine transponierte Matrix enthält Spalten-Hauptdaten. Das heißt, jeder Vektor ist in einer Spalte enthalten.
 
 Wenn die Zielmatrizen kleiner als die Quellmatrizen sind, werden die zusätzlichen Komponenten der Quellmatrizen ignoriert.
 
@@ -85,14 +85,14 @@ Wenn die Zielmatrizen kleiner als die Quellmatrizen sind, werden die zusätzlich
 
 
 
-| Anforderungen | Wert |
+| Anforderung | Wert |
 |--------------------|------------------------------------------------------------------------------------------|
 | Header<br/>  | <dl> <dt>D3DX9Shader.h</dt> </dl> |
 | Bibliothek<br/> | <dl> <dt>D3dx9.lib</dt> </dl>     |
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 

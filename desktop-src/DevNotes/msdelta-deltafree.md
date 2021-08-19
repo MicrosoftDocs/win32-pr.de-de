@@ -15,16 +15,16 @@ api_type:
 - DllExport
 api_location:
 - msdelta.dll
-ms.openlocfilehash: 15885cfa3e879ed6a1e85b2f9553af92d436ca71
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 606b8d91d20c74f7dd56ff4e09986abec3eef547989990a38bd8b4e3a27382c2
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106370119"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120079730"
 ---
 # <a name="deltafree-function"></a>DeltaFree-Funktion
 
-Gibt den angegebenen Speicherblock frei. Sie müssen diese Funktion nach erfolgreichen Aufrufen von " [anatedeltab](msdelta-createdeltab.md) " und " [applydeltab](msdelta-applydeltab.md) " aufrufen, um den von Msdelta zugewiesenen Speicherpuffer freizugeben.
+Gibt den angegebenen Speicherblock frei. Sie müssen diese Funktion nach erfolgreichen Aufrufen von [CreateDeltaB](msdelta-createdeltab.md) und [ApplyDeltaB](msdelta-applydeltab.md) aufrufen, um den von MSDelta zugeordneten Speicherpuffer frei zu geben.
 
 ## <a name="syntax"></a>Syntax
 
@@ -36,26 +36,26 @@ BOOL  WINAPI  DeltaFree(
 
 ## <a name="parameters"></a>Parameter
 
-*lpmemory*
+*lpMemory*
 
-in Der Speicherblock, der freigegeben werden soll.
+[in] Speicherblock, der frei werden soll.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Diese Funktion gibt **true** zurück, wenn Sie erfolgreich ist. Andernfalls wird **false** zurückgegeben. Wenn die Funktion " **false**" zurückgibt, können Sie " [GetLastError](/windows/win32/api/errhandlingapi/nf-errhandlingapi-getlasterror) " aufrufen, um den entsprechenden Win32-Systemfehler Code zu erhalten.
+Diese Funktion gibt **TRUE zurück,** wenn sie erfolgreich ist. andernfalls wird **FALSE zurückgegeben.** Wenn die Funktion **FALSE zurückgibt,** können Sie [GetLastError](/windows/win32/api/errhandlingapi/nf-errhandlingapi-getlasterror) aufrufen, um den entsprechenden Win32-Systemfehlercode zu erhalten.
 
-## <a name="requirements"></a>Anforderungen
+## <a name="requirements"></a>Requirements (Anforderungen)
 
 | Anforderung | Wert |
 |----------------|---------------------------------------------------------------------------------------|
-| Header | Msdelta. h |
+| Header | msdelta.h |
 | DLL | msdelta.dll |
-| Unicode | Nicht verfügbar |
+| Unicode | Nicht zutreffend |
 
 ## <a name="see-also"></a>Siehe auch
 
-[Msdelta](msdelta.md)
+[MSDelta](msdelta.md)
 
-["Kreatedeltab"](msdelta-createdeltab.md)
+[CreateDeltaB](msdelta-createdeltab.md)
 
-[ApplyDelta Tab](msdelta-applydeltab.md)
+[ApplyDeltaB](msdelta-applydeltab.md)

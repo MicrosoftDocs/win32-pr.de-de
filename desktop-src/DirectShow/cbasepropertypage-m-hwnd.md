@@ -1,7 +1,7 @@
 ---
-description: Die m- \_ HWND-Member-Variable enthält ein Handle für das Dialogfeld Fenster. Diese Element Variable wird initialisiert, nachdem das-Objekt das Dialogfenster erstellt hat, wenn die Funktion "kreatedialogparam" zurückgibt.
+description: Die m \_ hwnd-Membervariable enthält ein Handle für das Dialogfeld. Diese Membervariable wird initialisiert, nachdem das -Objekt das Dialogfeld erstellt hat, wenn die CreateDialogParam-Funktion zurückgegeben wird.
 ms.assetid: f985c06f-a1f9-458b-b9f3-cabe9f583313
-title: 'Cbasepropertypage:: m_hWnd Member (cprop. h)'
+title: CBasePropertyPage::m_hwnd-Member (Cprop.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,16 +16,16 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: 94a249d9b8f887750360ceb83f876f315d4fd43f
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: b241f41662ab2b7aa981015e662605f1a19f017ad610ddee347e3dcdeb00c232
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106369680"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120052590"
 ---
-# <a name="cbasepropertypagem_hwnd-member"></a>Cbasepropertypage:: m- \_ HWND-Member
+# <a name="cbasepropertypagem_hwnd-member"></a>CBasePropertyPage::m \_ hwnd-Member
 
-Die `m_hwnd` Member-Variable enthält ein Handle für das Dialogfeld Fenster. Diese Element Variable wird initialisiert, nachdem das-Objekt das Dialogfenster erstellt hat, wenn die Funktion " **kreatedialogparam** " zurückgibt.
+Die `m_hwnd` Membervariable enthält ein Handle für das Dialogfeld. Diese Membervariable wird initialisiert, nachdem das -Objekt das Dialogfeld erstellt hat, wenn die **CreateDialogParam-Funktion** zurückgegeben wird.
 
 ## <a name="syntax"></a>Syntax
 
@@ -42,8 +42,8 @@ HWND m_hwnd;
 
 | Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Cprop. h (Include Streams. h)</dt> </dl>                                                                                     |
-| Bibliothek<br/> | <dl> " <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Cprop.h (include Streams.h)</dt> </dl>                                                                                     |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Einzelhandels-Builds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
@@ -51,7 +51,7 @@ HWND m_hwnd;
 
 <dl> <dt>
 
-[**Cbasepropertypage-Klasse**](cbasepropertypage.md)
+[**CBasePropertyPage-Klasse**](cbasepropertypage.md)
 </dt> </dl>
 
  

@@ -1,27 +1,27 @@
 ---
-title: Erstellen von Four-Character Codes
-description: Erstellen von Four-Character Codes
+title: Generieren von Four-Character Codes
+description: Generieren von Four-Character Codes
 ms.assetid: dfb771f1-9273-4f60-a3af-3a62a3794e59
 keywords:
-- Multimedia-Datei-e/a, vier Zeichen Codes
-- Datei-e/a, vier Zeichen Codes
-- Eingabe und Ausgabe (e/a), vier Zeichen Codes
-- E/a (Eingabe und Ausgabe), vier Zeichen Codes
-- vier Zeichen Codes
-- mmiostringto FourCC-Funktion
-- mmiofourcc-Makro
+- Multimediadatei-E/A, vierstellige Codes
+- Datei-E/A, Vier-Zeichen-Codes
+- Eingabe und Ausgabe (E/A), vierstellige Codes
+- E/A (Eingabe und Ausgabe), Vier-Zeichen-Codes
+- Vierstellige Codes
+- mmioStringToFOURCC-Funktion
+- mmioFOURCC-Makro
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 5c83540b49d83ee325479542e5a2917ac61ce19b
-ms.sourcegitcommit: ebd3ce6908ff865f1ef66f2fc96769be0aad82e1
+ms.openlocfilehash: 96dd724876a3c4b6ac37424b49411edac5929c61d1fcf6c8c18275b1d6ae9dd0
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/19/2020
-ms.locfileid: "103725121"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119785310"
 ---
-# <a name="generating-four-character-codes"></a>Erstellen von Four-Character Codes
+# <a name="generating-four-character-codes"></a>Generieren von Four-Character Codes
 
-Sie können das [**mmiofourcc**](/windows/win32/api/vfw/nf-vfw-mmiofourcc) -Makro oder die [**mmiostringesfourcc**](/windows/win32/api/mmiscapi/nf-mmiscapi-mmiostringtofourcc) -Funktion verwenden, um vier Zeichen Codes zu generieren. Im folgenden Beispiel wird **mmiofourcc** verwendet, um einen vierstelligen Code für "Wave" zu generieren.
+Sie können das [**MmioFOURCC-Makro**](/windows/win32/api/vfw/nf-vfw-mmiofourcc) oder die [**mmioStringToFOURCC-Funktion**](/windows/win32/api/mmiscapi/nf-mmiscapi-mmiostringtofourcc) verwenden, um Vier-Zeichen-Codes zu generieren. Im folgenden Beispiel wird **mmioFOURCC** verwendet, um einen vierstelligen Code für "WAVE" zu generieren.
 
 
 ```C++
@@ -35,7 +35,7 @@ fourccID = mmioFOURCC('W', 'A', 'V', 'E');
 
 
 
-Im folgenden Beispiel wird [**mmiostringdefourcc**](/windows/win32/api/mmiscapi/nf-mmiscapi-mmiostringtofourcc) verwendet, um einen vierstelligen Code für "Wave" zu generieren.
+Im folgenden Beispiel wird [**mmioStringToFOURCC**](/windows/win32/api/mmiscapi/nf-mmiscapi-mmiostringtofourcc) verwendet, um einen vierstelligen Code für "WAVE" zu generieren.
 
 
 ```C++
@@ -48,8 +48,8 @@ fourccID = mmioStringToFOURCC("WAVE", 0);
 
 
 
-Mit dem zweiten Parameter in [**mmiostringumfourcc**](/windows/win32/api/mmiscapi/nf-mmiscapi-mmiostringtofourcc) werden Flags zum umrechnen der Zeichenfolge in einen aus vier Zeichen bestehende Code angegeben. Wenn Sie das MMIO- \_ toupperflag angeben, konvertiert **mmiostringumfourcc** alle alphabetischen Zeichen in der Zeichenfolge in Großbuchstaben. Dies ist hilfreich, wenn Sie einen aus vier Zeichen bestehende Code angeben müssen, um eine benutzerdefinierte e/a-Prozedur zu identifizieren, da vier Zeichen Codes, die Datei Erweiterungs Namen identifizieren, Großbuchstaben sein müssen.
+Der zweite Parameter in [**mmioStringToFOURCC**](/windows/win32/api/mmiscapi/nf-mmiscapi-mmiostringtofourcc) gibt Flags zum Konvertieren der Zeichenfolge in einen vierstelligen Code an. Wenn Sie das MMIO \_ TOUPPER-Flag angeben, konvertiert **mmioStringToFOURCC** alle alphabetischen Zeichen in der Zeichenfolge in Großbuchstaben. Dies ist nützlich, wenn Sie einen vierstelligen Code angeben müssen, um eine benutzerdefinierte E/A-Prozedur zu identifizieren, da vierstellige Codes, die Dateierweiterungsnamen identifizieren, groß geschrieben werden müssen.
 
- 
+ 
 
- 
+ 

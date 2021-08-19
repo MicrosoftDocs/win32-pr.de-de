@@ -1,7 +1,7 @@
 ---
-description: Die cautousingoutputpin-Klasse erhält Zugriff auf ein cdynamicoutputpin-Objekt und gibt Sie frei.
+description: Die CAutoUsingOutputPin-Klasse erhält und gibt den Zugriff auf ein CDynamicOutputPin-Objekt frei.
 ms.assetid: 4ded5d18-4b14-4574-ad1f-73b886a51fac
-title: Cautousingoutputpin-Klasse (amfilter. h)
+title: CAutoUsingOutputPin-Klasse (Amfilter.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,33 +16,33 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: b664267ce2ff0dbbeeba8bc74708c9c67e185ae4
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 141c65507a0d983a2b4531b93617ed741e7403b8b2a5ead9c196f78dcf61acdf
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106371716"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118955379"
 ---
-# <a name="cautousingoutputpin-class"></a>Cautousingoutputpin-Klasse
+# <a name="cautousingoutputpin-class"></a>CAutoUsingOutputPin-Klasse
 
-Die **cautousingoutputpin** -Klasse erhält Zugriff auf ein [**cdynamicoutputpin**](cdynamicoutputpin.md) -Objekt und gibt Sie frei.
+Die **CAutoUsingOutputPin-Klasse** erhält und gibt den Zugriff auf ein [**CDynamicOutputPin-Objekt**](cdynamicoutputpin.md) frei.
 
-**Cautousingoutputpin** verfügt über folgende Typen von Membern:
+**CAutoUsingOutputPin** verfügt über die folgenden Membertypen:
 
 
 
-| Öffentliche Methoden                                                           | BESCHREIBUNG                                              |
+| Öffentliche Methoden                                                           | Beschreibung                                              |
 |--------------------------------------------------------------------------|----------------------------------------------------------|
-| [**Cautousingoutputpin**](cautousingoutputpin-cautousingoutputpin.md)   | Konstruktormethode. Erhält Zugriff auf die angegebene PIN. |
-| [**~ Cautousingoutputpin**](cautousingoutputpin--cautousingoutputpin.md) | Dekonstruktormethode. Erhält Zugriff auf die angegebene PIN.  |
+| [**CAutoUsingOutputPin**](cautousingoutputpin-cautousingoutputpin.md)   | Konstruktormethode. Erhält Zugriff auf den angegebenen Pin. |
+| [**~CAutoUsingOutputPin**](cautousingoutputpin--cautousingoutputpin.md) | Destruktormethode. Erhält Zugriff auf den angegebenen Pin.  |
 
 
 
  
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Wenn bestimmte Methoden für [**cdynamicoutputpin**](cdynamicoutputpin.md)aufgerufen werden, muss der Aufrufer Zugriff auf die PIN erhalten und diesen Zugriff freigeben. Der Aufrufer verwendet die [**cdynamicoutputpin:: startusingoutputpin**](cdynamicoutputpin-startusingoutputpin.md) -Methode, um Zugriff zu erhalten. Zum Freigeben des Zugriffs wird die [**cdynamicoutputpin:: stopusingoutputpin**](cdynamicoutputpin-stopusingoutputpin.md) -Methode aufgerufen. Bei der **cautousingoutputpin** -Klasse handelt es sich um eine Hilfsklasse, die diese Aufgaben in den Konstruktor-und dekonstruktormethoden verarbeitet. Im folgenden Codebeispiel wird gezeigt, wie diese Klasse verwendet wird:
+Wenn bestimmte Methoden für [**CDynamicOutputPin**](cdynamicoutputpin.md)aufgerufen werden, muss der Aufrufer Zugriff auf den Pin erhalten und diesen Zugriff dann wieder frei geben. Um Zugriff zu erhalten, verwendet der Aufrufer die [**CDynamicOutputPin::StartUsingOutputPin-Methode.**](cdynamicoutputpin-startusingoutputpin.md) Um den Zugriff frei zu geben, ruft er die [**CDynamicOutputPin::StopUsingOutputPin-Methode**](cdynamicoutputpin-stopusingoutputpin.md) auf. Die **CAutoUsingOutputPin-Klasse** ist eine Hilfsklasse, die diese Aufgaben in ihren Konstruktor- und Destruktormethoden behandelt. Im folgenden Codebeispiel wird die Verwendung dieser Klasse veranschaulicht:
 
 
 ```
@@ -77,8 +77,8 @@ HRESULT hr = S_OK;  // Important! Initialize to S_OK.
 
 | Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Amfilter. h (Include Streams. h)</dt> </dl>                                                                                  |
-| Bibliothek<br/> | <dl> " <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Amfilter.h (include Streams.h)</dt> </dl>                                                                                  |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Einzelhandels-Builds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
@@ -86,7 +86,7 @@ HRESULT hr = S_OK;  // Important! Initialize to S_OK.
 
 <dl> <dt>
 
-[Basisklassen Referenz](base-class-reference.md)
+[Basisklassenreferenz](base-class-reference.md)
 </dt> </dl>
 
  

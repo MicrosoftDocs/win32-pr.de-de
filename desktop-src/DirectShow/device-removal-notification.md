@@ -13,9 +13,9 @@ ms.locfileid: "120052020"
 ---
 # <a name="device-removal-notification"></a>Benachrichtigung zum Entfernen von Geräten
 
-If the user removes a Plug and Play device that the graph was using, the filter graph manager posts an [**EC\_DEVICE\_LOST**](ec-device-lost.md) event. Wenn das Gerät wieder verfügbar ist, veröffentlicht der Filtergraph-Manager ein weiteres **EC \_ DEVICE \_ LOST-Ereignis.** Der vorherige Zustand des Erfassungsfilters ist jedoch nicht mehr gültig. Die Anwendung muss das Diagramm neu erstellen, um das Gerät zu verwenden.
+If the user removes a Plug and Play device that the graph was using, the filter graph manager posts an [**EC\_DEVICE\_LOST**](ec-device-lost.md) event. Wenn das Gerät wieder verfügbar ist, sendet der Filtergraph-Manager ein weiteres **EC \_ DEVICE \_ LOST-Ereignis.** Der vorherige Zustand des Erfassungsfilters ist jedoch nicht mehr gültig. Die Anwendung muss das Diagramm neu erstellen, um das Gerät zu verwenden.
 
-DirectShow sendet kein Ereignis, wenn ein neues Gerät angeschlossen ist. Um zu erfahren, wann ein neues Gerät verfügbar ist, kann die Anwendung WM \_ DEVICECHANGE-Fenstermeldungen überwachen. Weitere Informationen finden Sie unter "Geräteverwaltung" in der Platform SDK-Dokumentation.
+DirectShow sendet kein Ereignis, wenn ein neues Gerät angeschlossen ist. Um zu erfahren, wann ein neues Gerät verfügbar ist, kann die Anwendung WM \_ DEVICECHANGE-Fenstermeldungen überwachen. Weitere Informationen finden Sie unter "Geräteverwaltung" in der Dokumentation zum Plattform-SDK.
 
 ## <a name="related-topics"></a>Zugehörige Themen
 

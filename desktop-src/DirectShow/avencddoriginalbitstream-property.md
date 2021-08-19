@@ -11,7 +11,7 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 08/11/2021
 ms.locfileid: "120000020"
 ---
-# <a name="avencddoriginalbitstream-property"></a>AVEncDDOriginalBitstream(Eigenschaft)
+# <a name="avencddoriginalbitstream-property"></a>AVEncDDOriginalBitstream-Eigenschaft
 
 Gibt das ursprüngliche Bitstreamflag in einem Dolby Digital-Audiostream an. Diese Eigenschaft gilt für Dolby Digital-Audioencoder.
 
@@ -39,7 +39,7 @@ Dies ist eine Eigenschaft mit Lese- und Schreibzugriff.
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 

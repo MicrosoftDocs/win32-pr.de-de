@@ -1,27 +1,27 @@
 ---
 title: Rahmen-Effekt
-description: Verwenden Sie den Rahmen Effekt, um ein Bild von den Rändern zu erweitern.
+description: Verwenden Sie den Rahmeneffekt, um ein Bild von den Rändern zu erweitern.
 ms.assetid: D3D569F5-9496-4633-93E2-26665FFC3B37
 keywords:
-- Rahmen Effekt
+- Border-Effekt
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 49fb43ae8b3e9c4eb449a8231f8b4ffcacf7658b
-ms.sourcegitcommit: ee06501cc29132927ade9813e0888aaa4decc487
+ms.openlocfilehash: 5ce125a96730ee59f63b18cfd1a08abd2432af6f3fdc6b5f06cfc2e9272a7a3c
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/28/2021
-ms.locfileid: "104530413"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119928996"
 ---
 # <a name="border-effect"></a>Rahmen-Effekt
 
-Verwenden Sie den Rahmen Effekt, um ein Bild von den Rändern zu erweitern. Mit diesem Effekt können Sie die Pixel von den Rändern des Bilds wiederholen, die Pixel vom umgekehrten Ende des Bilds umschließen oder die Pixel über den bitmaprahmen hinweg spiegeln, um den Bitmapbereich zu erweitern.
+Verwenden Sie den Rahmeneffekt, um ein Bild von den Rändern zu erweitern. Mit diesem Effekt können Sie die Pixel von den Rändern des Bilds wiederholen, die Pixel vom gegenüberliegenden Ende des Bilds umschließen oder die Pixel über den Bitmap-Rahmen spiegeln, um den Bitmapbereich zu erweitern.
 
 Die CLSID für diesen Effekt ist CLSID \_ D2D1Border.
 
-## <a name="example-images"></a>Beispiel Bilder
+## <a name="example-images"></a>Beispielbilder
 
-In den Beispielen wird die Ausgabe des Rahmen Effekts mithilfe der einzelnen Modi veranschaulicht. Die Ausgabegröße ist unendlich, aber diese Beispiel Bilder werden auf die doppelte Größe zugeschnitten.
+Die Beispiele hier zeigen die Ausgabe des Rahmeneffekts mit jedem Modus. Die Ausgabegröße ist unendlich, aber diese Beispielbilder werden auf das Doppelte der Größe zugeschnitten.
 
 ### <a name="mirror"></a>Spiegel
 
@@ -30,8 +30,8 @@ In den Beispielen wird die Ausgabe des Rahmen Effekts mithilfe der einzelnen Mod
 | Vorher                                                    |
 |-----------------------------------------------------------|
 | ![Screenshot, der das Bild vor dem Effekt zeigt.](images/border-before.jpg) |
-| Nach                                                     |
-| ![Screenshot, der das Bild nach der Transformation anzeigt.](images/10-border.png)   |
+| Danach                                                     |
+| ![Screenshot, der das Bild nach der Transformation zeigt.](images/10-border.png)   |
 
 
 
@@ -43,9 +43,9 @@ In den Beispielen wird die Ausgabe des Rahmen Effekts mithilfe der einzelnen Mod
 
 | Vorher                                                        |
 |---------------------------------------------------------------|
-| ![Screenshot, der das Bild vor dem Effekt einer Klammer anzeigt.](images/border-before.jpg)     |
-| Nach                                                         |
-| ![Screenshot, der das Bild nach der Transformation für eine Klammer anzeigt.](images/10-border-clamp.png) |
+| ![Screenshot, der das Bild vor dem Effekt für eine Klammer zeigt.](images/border-before.jpg)     |
+| Danach                                                         |
+| ![Screenshot, der das Bild nach der Transformation für eine Klammer zeigt.](images/10-border-clamp.png) |
 
 
 
@@ -57,9 +57,9 @@ In den Beispielen wird die Ausgabe des Rahmen Effekts mithilfe der einzelnen Mod
 
 | Vorher                                                       |
 |--------------------------------------------------------------|
-| ![Screenshot, der das Bild vor dem Effekt für einen Umbruch anzeigt.](images/border-before.jpg)    |
-| Nach                                                        |
-| ![Screenshot, der das Bild nach der Transformation für einen Umbruch anzeigt.](images/10-border-wrap.png) |
+| ![Screenshot, der das Bild vor dem Effekt für einen Wrap zeigt.](images/border-before.jpg)    |
+| Danach                                                        |
+| ![Screenshot, der das Bild nach der Transformation für einen Wrap zeigt.](images/10-border-wrap.png) |
 
 
 
@@ -81,36 +81,36 @@ m_d2dContext->EndDraw();
 
 
 
-## <a name="effect-properties"></a>Effekt Eigenschaften
+## <a name="effect-properties"></a>Effect-Eigenschaften
 
 
 
-| Anzeige Name und indexenumeration                                  | BESCHREIBUNG                                                                                                                                                                                                                                                            |
+| Anzeigename und Indexenumeration                                  | BESCHREIBUNG                                                                                                                                                                                                                                                            |
 |---------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Edgemodus X<br/> D2D1 \_ Border \_ Prop \_ Edge \_ Mode \_ X<br/> | Der edgemodus in der X-Richtung für den Effekt. Sie können diese Einstellung auf Klammer, Umbruch oder Spiegelung festlegen. Weitere Informationen finden Sie unter [Edge-Modi](#edge-modes) .<br/> Der Typ ist D2D1 \_ Border \_ Edge \_ Mode.<br/> Der Standardwert ist D2D1 \_ Border \_ Edge \_ Mode \_ Clamp.<br/> |
-| Edgemodus Y<br/> D2D1 \_ Border \_ Prop \_ Edge \_ Mode \_ Y<br/> | Der edgemodus in der Y-Richtung für den Effekt. Sie können diese Einstellung auf Klammer, Umbruch oder Spiegelung festlegen. Weitere Informationen finden Sie unter [Edge-Modi](#edge-modes) .<br/> Der Typ ist D2D1 \_ Border \_ Edge \_ Mode.<br/> Der Standardwert ist D2D1 \_ Border \_ Edge \_ Mode \_ Clamp.<br/> |
+| Edgemodus X<br/> D2D1 \_ BORDER \_ PROP \_ EDGE \_ MODE \_ X<br/> | Der Edgemodus in X-Richtung für den Effekt. Sie können dies auf "Klammern", "Umschließen" oder "Spiegel" festlegen. Weitere Informationen finden Sie unter [Edgemodi.](#edge-modes)<br/> Der Typ ist "D2D1 \_ BORDER \_ EDGE \_ MODE".<br/> Der Standardwert ist D2D1 \_ BORDER \_ EDGE MODE \_ \_ CLAMP.<br/> |
+| Edgemodus Y<br/> D2D1 \_ BORDER \_ PROP \_ EDGE \_ MODE \_ Y<br/> | Der Edgemodus in Y-Richtung für den Effekt. Sie können dies auf "Klammern", "Umschließen" oder "Spiegel" festlegen. Weitere Informationen finden Sie unter [Edgemodi.](#edge-modes)<br/> Der Typ ist "D2D1 \_ BORDER \_ EDGE \_ MODE".<br/> Der Standardwert ist D2D1 \_ BORDER \_ EDGE MODE \_ \_ CLAMP.<br/> |
 
 
 
  
 
-## <a name="edge-modes"></a>Edge-Modi
+## <a name="edge-modes"></a>Edgemodi
 
 
 
-| Anzeige Name und indexenumeration                            | BESCHREIBUNG                                          |
+| Anzeigename und Indexenumeration                            | BESCHREIBUNG                                          |
 |---------------------------------------------------------------|------------------------------------------------------|
-| Clamp<br/> D2D1 \_ Border \_ Edge \_ Mode- \_ Klammer<br/>   | Wiederholt die Pixel von den Rändern des Bilds.      |
-| Umschließen<br/> D2D1 \_ Border \_ Edge- \_ Modus \_ umschließen<br/>     | Verwendet Pixel vom gegenüberliegenden Endrand des Bilds. |
-| Spiegel<br/> D2D1 \_ - \_ \_ randmodusspiegelung \_<br/> | Gibt Pixel über den Rand des Bilds wieder.         |
+| Clamp<br/> D2D1 \_ BORDER \_ EDGE \_ MODE \_ CLAMP<br/>   | Wiederholt die Pixel von den Rändern des Bilds.      |
+| Umschließen<br/> D2D1 \_ BORDER \_ EDGE \_ MODE \_ WRAP<br/>     | Verwendet Pixel vom gegenüberliegenden Endrand des Bilds. |
+| Spiegel<br/> D2D1 \_ BORDER \_ EDGE \_ MODE \_ MIRROR<br/> | Spiegelt Pixel über den Rand des Bilds wider.         |
 
 
 
  
 
-## <a name="output-bitmap"></a>Ausgabe Bitmap
+## <a name="output-bitmap"></a>Ausgabebitmap
 
-Die Größe der Ausgabe Bitmap ist für alle Eingaben unbegrenzt, außer bei einem Eingabebild mit der Größe 0 (null). Wenn die Höhe oder die Breite eines Eingabe Bilds 0 beträgt, ist die Ausgabegröße 0.
+Die Ausgabebitmapgröße ist für alle Eingaben unendlich, mit Ausnahme eines Eingabebilds mit einer Größe von 0. Wenn die Höhe oder Breite eines Eingabebilds 0 beträgt, beträgt die Ausgabegröße 0.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -118,10 +118,10 @@ Die Größe der Ausgabe Bitmap ist für alle Eingaben unbegrenzt, außer bei ein
 
 | Anforderung | Wert |
 |--------------------------|------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client) | Windows 8 und Platt Form Update für Windows 7 \[ -Desktop-Apps für \| Windows Store-Apps\] |
-| Unterstützte Mindestversion (Server) | Windows 8 und Platt Form Update für Windows 7 \[ -Desktop-Apps für \| Windows Store-Apps\] |
-| Header                   | d2d1effects. h                                                                      |
-| Bibliothek                  | d2d1. lib, dxguid. lib                                                               |
+| Unterstützte Mindestversion (Client) | Windows 8 und Plattformupdate für Windows 7 \[ Desktop-Apps \| Windows Store Apps\] |
+| Unterstützte Mindestversion (Server) | Windows 8 und Plattformupdate für Windows 7 \[ Desktop-Apps \| Windows Store Apps\] |
+| Header                   | d2d1effects.h                                                                      |
+| Bibliothek                  | d2d1.lib, dxguid.lib                                                               |
 
 
 

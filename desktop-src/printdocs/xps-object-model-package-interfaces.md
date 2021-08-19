@@ -1,27 +1,27 @@
 ---
-description: Die Paket Schnittstellen stellen die oberste Ebene des XPS-OMS dar, die einer XPS-Dokument Datei entspricht.
+description: Die Paketschnittstellen stellen die oberste Ebene der XPS OM dar, die einer XPS-Dokumentdatei entspricht.
 ms.assetid: 9e269b18-e5b1-4801-b8e7-473750443c6d
-title: XPS-OM-Paket Schnittstellen
+title: XPS OM-Paketschnittstellen
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: e1465f5d6782e29f9c37f899b59790302e21ebf1
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: d6732531e3874046bbd174c363db24e304da95b9596b810014abb52a795e720c
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "103863916"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119886140"
 ---
-# <a name="xps-om-package-interfaces"></a>XPS-OM-Paket Schnittstellen
+# <a name="xps-om-package-interfaces"></a>XPS OM-Paketschnittstellen
 
-Die Paket Schnittstellen stellen die oberste Ebene des XPS-OMS dar, die einer XPS-Dokument Datei entspricht. Diese Schnittstellen enthalten Methoden, die ein XPS-om in ein XPS-Dokument oder einen XPS-Stream Serialisieren und ein XPS-Paket deserialisieren, um ein XPS-OM zu erstellen, das einem Programm den Zugriff auf den Inhalt eines Dokuments ermöglicht.
+Die Paketschnittstellen stellen die oberste Ebene der XPS OM dar, die einer XPS-Dokumentdatei entspricht. Diese Schnittstellen enthalten Methoden, die eine XPS OM in ein XPS-Dokument oder einen XPS-Stream serialisieren und ein XPS-Paket deserialisieren, um eine XPS OM zu erstellen, die einem Programm den Zugriff auf den Inhalt eines Dokuments ermöglicht.
 
 
 
-| Schnittstellen Name                                                  | Logische untergeordnete Schnittstellen                                                                                                            | BESCHREIBUNG                                                                                    |
+| Schnittstellenname                                                  | Logische untergeordnete Schnittstellen                                                                                                            | BESCHREIBUNG                                                                                    |
 |-----------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------|
-| [**Ixpsompackage**](/windows/desktop/api/xpsobjectmodel/nn-xpsobjectmodel-ixpsompackage)<br/>               | [**Ixpsomdocumentsequence**](/windows/desktop/api/xpsobjectmodel/nn-xpsobjectmodel-ixpsomdocumentsequence)<br/> [**Ixpsomcoreproperties**](/windows/desktop/api/xpsobjectmodel/nn-xpsobjectmodel-ixpsomcoreproperties)<br/> | Das gesamte XPS-OM, das dem Paket entspricht, das das XPS-Dokument enthält.<br/> |
-| [**Ixpsompackagewriter**](/windows/desktop/api/xpsobjectmodel/nn-xpsobjectmodel-ixpsompackagewriter)<br/>   | Keine<br/>                                                                                                                     | Aktiviert die inkrementelle Serialisierung von Dokument Seiten zu einem Paket.<br/>                   |
-| [**Ixpsomcoreproperties**](/windows/desktop/api/xpsobjectmodel/nn-xpsobjectmodel-ixpsomcoreproperties)<br/> | Keine<br/>                                                                                                                     | Greift auf die Dokument Metadaten zu. <br/>                                                    |
+| [**IXpsOMPackage**](/windows/desktop/api/xpsobjectmodel/nn-xpsobjectmodel-ixpsompackage)<br/>               | [**IXpsOMDocumentSequence**](/windows/desktop/api/xpsobjectmodel/nn-xpsobjectmodel-ixpsomdocumentsequence)<br/> [**IXpsOMCoreProperties**](/windows/desktop/api/xpsobjectmodel/nn-xpsobjectmodel-ixpsomcoreproperties)<br/> | Die vollständige XPS OM, die dem Paket entspricht, das das XPS-Dokument enthält.<br/> |
+| [**IXpsOMPackageWriter**](/windows/desktop/api/xpsobjectmodel/nn-xpsobjectmodel-ixpsompackagewriter)<br/>   | Keine<br/>                                                                                                                     | Aktiviert die inkrementelle Serialisierung von Dokumentseiten in ein Paket.<br/>                   |
+| [**IXpsOMCoreProperties**](/windows/desktop/api/xpsobjectmodel/nn-xpsobjectmodel-ixpsomcoreproperties)<br/> | Keine<br/>                                                                                                                     | Greift auf die Dokumentmetadaten zu. <br/>                                                    |
 
 
 
@@ -29,16 +29,16 @@ Die Paket Schnittstellen stellen die oberste Ebene des XPS-OMS dar, die einer XP
 
 ## <a name="code-examples"></a>Codebeispiele
 
-Die folgenden Codebeispiele veranschaulichen, wie einige der Paket Schnittstellen von einem Programm verwendet werden. Sofern nicht anders angegeben, sind alle kursiv formatierten Elemente Parameternamen.
+Die folgenden Codebeispiele veranschaulichen, wie einige der Paketschnittstellen von einem Programm verwendet werden. Sofern nicht anders angegeben, sind alle iterierten Elemente Parameternamen.
 
--   [Lesen eines XPS-Dokuments in ein XPS-OM](#read-an-xps-document-into-an-xps-om)
--   [Schreiben eines XPS-Maps in eine XPS-Dokument Datei](#write-an-xps-om-to-an-xps-document-file)
--   [Zugreifen auf die Dokument Sequenz des XPS-OMS](#access-the-document-sequence-of-the-xps-om)
--   [Zugreifen auf die coreproperties des Dokuments](#access-the-documents-coreproperties)
+-   [Lesen eines XPS-Dokuments in eine XPS OM](#read-an-xps-document-into-an-xps-om)
+-   [Schreiben einer XPS OM in eine XPS-Dokumentdatei](#write-an-xps-om-to-an-xps-document-file)
+-   [Zugreifen auf die Dokumentsequenz der XPS OM](#access-the-document-sequence-of-the-xps-om)
+-   [Zugreifen auf die CoreProperties des Dokuments](#access-the-documents-coreproperties)
 
-### <a name="read-an-xps-document-into-an-xps-om"></a>Lesen eines XPS-Dokuments in ein XPS-OM
+### <a name="read-an-xps-document-into-an-xps-om"></a>Lesen eines XPS-Dokuments in eine XPS OM
 
-In einem vorhandenen XPS-Dokument, dessen Dateiname in *xpsdocumentfilename* gespeichert ist, wird in diesem Codebeispiel ein XPS-OM erstellt, auf das von *xpspackage* verwiesen wird.
+Aus einem vorhandenen XPS-Dokument, dessen Dateiname in *xpsDocumentFilename* gespeichert ist, erstellt dieses Codebeispiel eine XPS OM, auf die *xpsPackage* verweist.
 
 
 ```C++
@@ -57,9 +57,9 @@ In einem vorhandenen XPS-Dokument, dessen Dateiname in *xpsdocumentfilename* ges
 
 
 
-### <a name="write-an-xps-om-to-an-xps-document-file"></a>Schreiben eines XPS-Maps in eine XPS-Dokument Datei
+### <a name="write-an-xps-om-to-an-xps-document-file"></a>Schreiben einer XPS OM in eine XPS-Dokumentdatei
 
-Im folgenden Codebeispiel wird das XPS-OM geschrieben, auf das von *xpspackage* verwiesen wird. Im Beispiel wird ein XPS-Dokument in der Datei erstellt, deren Name in *filename* gespeichert ist.
+Im folgenden Codebeispiel wird die XPS OM geschrieben, auf die *xpsPackage* verweist. Im Beispiel wird ein XPS-Dokument in der Datei erstellt, deren Name in *fileName* gespeichert ist.
 
 
 ```C++
@@ -74,9 +74,9 @@ Im folgenden Codebeispiel wird das XPS-OM geschrieben, auf das von *xpspackage* 
 
 
 
-### <a name="access-the-document-sequence-of-the-xps-om"></a>Zugreifen auf die Dokument Sequenz des XPS-OMS
+### <a name="access-the-document-sequence-of-the-xps-om"></a>Zugreifen auf die Dokumentsequenz der XPS OM
 
-Im folgenden Codebeispiel wird ein Zeiger auf die [**ixpsomdocumentsequence**](/windows/desktop/api/xpsobjectmodel/nn-xpsobjectmodel-ixpsomdocumentsequence) -Schnittstelle abgerufen, die die Dokument Sequenz des durch *xpspackage* dargestellten XPS-OMS enthält.
+Das folgende Codebeispiel ruft einen Zeiger auf die [**IXpsOMDocumentSequence-Schnittstelle**](/windows/desktop/api/xpsobjectmodel/nn-xpsobjectmodel-ixpsomdocumentsequence) ab, die die Dokumentsequenz der XPS OM enthält, die durch *xpsPackage* dargestellt wird.
 
 
 ```C++
@@ -94,9 +94,9 @@ Im folgenden Codebeispiel wird ein Zeiger auf die [**ixpsomdocumentsequence**](/
 
 
 
-### <a name="access-the-documents-coreproperties"></a>Zugreifen auf die coreproperties des Dokuments
+### <a name="access-the-documents-coreproperties"></a>Zugreifen auf die CoreProperties des Dokuments
 
-Im folgenden Codebeispiel wird ein Zeiger auf die [**ixpsomcoreproperties**](/windows/desktop/api/xpsobjectmodel/nn-xpsobjectmodel-ixpsomcoreproperties) -Schnittstelle abgerufen, sodass das Programm auf den Inhalt des coreproperties-Teils zugreifen kann. Im Beispiel wird davon ausgegangen, dass das Dokument in ein XPS-OM gelesen wurde, das durch *xpspackage* dargestellt wird.
+Das folgende Codebeispiel ruft einen Zeiger auf die [**IXpsOMCoreProperties-Schnittstelle**](/windows/desktop/api/xpsobjectmodel/nn-xpsobjectmodel-ixpsomcoreproperties) ab, sodass das Programm auf den Inhalt des CoreProperties-Teils zugreifen kann. In diesem Beispiel wird davon ausgegangen, dass das Dokument in eine XPS OM gelesen wurde, die durch *xpsPackage* dargestellt wird.
 
 
 ```C++
@@ -123,22 +123,22 @@ Im folgenden Codebeispiel wird ein Zeiger auf die [**ixpsomcoreproperties**](/wi
 
 <dl> <dt>
 
-[Verwenden der ixpsompackagewriter-Schnittstelle](using-the-ixpsompackagewriter-interface.md)
+[Verwenden der IXpsOMPackageWriter-Schnittstelle](using-the-ixpsompackagewriter-interface.md)
 </dt> <dt>
 
-[Navigieren im XPS-OM](navigate-the-xps-om.md)
+[Navigieren im XPS OM](navigate-the-xps-om.md)
 </dt> <dt>
 
-[**Ixpsomdocumentsequence-Schnittstelle**](/windows/desktop/api/xpsobjectmodel/nn-xpsobjectmodel-ixpsomdocumentsequence)
+[**IXpsOMDocumentSequence-Schnittstelle**](/windows/desktop/api/xpsobjectmodel/nn-xpsobjectmodel-ixpsomdocumentsequence)
 </dt> <dt>
 
-[**Ixpsompackage-Schnittstelle**](/windows/desktop/api/xpsobjectmodel/nn-xpsobjectmodel-ixpsompackage)
+[**IXpsOMPackage-Schnittstelle**](/windows/desktop/api/xpsobjectmodel/nn-xpsobjectmodel-ixpsompackage)
 </dt> <dt>
 
-[**Ixpsompackagewriter-Schnittstelle**](/windows/desktop/api/xpsobjectmodel/nn-xpsobjectmodel-ixpsompackagewriter)
+[**IXpsOMPackageWriter-Schnittstelle**](/windows/desktop/api/xpsobjectmodel/nn-xpsobjectmodel-ixpsompackagewriter)
 </dt> <dt>
 
-[**Ixpsomcoreproperties-Schnittstelle**](/windows/desktop/api/xpsobjectmodel/nn-xpsobjectmodel-ixpsomcoreproperties)
+[**IXpsOMCoreProperties-Schnittstelle**](/windows/desktop/api/xpsobjectmodel/nn-xpsobjectmodel-ixpsomcoreproperties)
 </dt> </dl>
 
  

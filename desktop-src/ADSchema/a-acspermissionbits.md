@@ -1,11 +1,11 @@
 ---
-title: ACS-Berechtigung-Bits-Attribut
-description: Ermöglicht die Verwendung von Multicast Flüssen für einen bestimmten Benutzer.
+title: ACS-Permission-Bits-Attribut
+description: Ermöglicht die Multicastfluss-Origination für einen bestimmten Benutzer.
 ms.assetid: c7e7866d-b906-4a64-bd51-4e9cc7b8fb86
 ms.tgt_platform: multiple
 keywords:
-- AD-Schema des ACS-Berechtigungs Bits-Attributs
-- acspermissionbits-Attribut, AD-Schema
+- AD-Schema des ACS-Permission-Bits-Attributs
+- AD-Schema des aCSPermissionBits-Attributs
 topic_type:
 - apiref
 api_name:
@@ -14,28 +14,28 @@ api_type:
 - Schema
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 1a27370178dd46fd50df44b1226686db5a70a846
-ms.sourcegitcommit: b77ace27b0432e7cd3863191b11926be032fbe2f
+ms.openlocfilehash: 332d27bb6a3be07f79a5a1c0bbefc4b5e8a6f94b88cba512f0c928995dc752a0
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "104107324"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119929760"
 ---
-# <a name="acs-permission-bits-attribute"></a>ACS-Berechtigung-Bits-Attribut
+# <a name="acs-permission-bits-attribute"></a>ACS-Permission-Bits-Attribut
 
-Ermöglicht die Verwendung von Multicast Flüssen für einen bestimmten Benutzer.
+Ermöglicht die Multicastfluss-Origination für einen bestimmten Benutzer.
 
 
 
 | Eingabe | Wert |
 |-------------------|--------------------------------------|
-| CN                | ACS-Berechtigung (Bits)                  |
-| LDAP-Display-Name | acspermissionbits                    |
+| CN                | ACS-Permission-Bits                  |
+| Ldap-Anzeigename | aCSPermissionBits                    |
 | Size              | 8 Bytes                              |
-| Berechtigung aktualisieren  | \-                                   |
-| Aktualisierungshäufigkeit  | \-                                   |
+| Aktualisieren von Berechtigungen  | \-                                   |
+| Updatehäufigkeit  | \-                                   |
 | Attribute-Id      | 1.2.840.113556.1.4.765               |
-| System-ID-GUID    | 7b561282-5301-11d1-a9c5-0000b80367c1 |
+| System-Id-Guid    | 7f561282-5301-11d1-a9c5-0000f80367c1 |
 | Syntax            | [**Intervall**](s-interval.md)       |
 
 
@@ -43,7 +43,7 @@ Ermöglicht die Verwendung von Multicast Flüssen für einen bestimmten Benutzer
 ## <a name="implementations"></a>Implementierungen
 
 -   [**Windows 2000 Server**](#windows-2000-server)
--   [**Windows Server 2003**](#windows-server-2003)
+-   [**Windows Server 2003**](#windows-server-2003)
 -   [**Windows Server 2003 R2**](#windows-server-2003-r2)
 -   [**Windows Server 2008**](#windows-server-2008)
 -   [**Windows Server 2008 R2**](#windows-server-2008-r2)
@@ -57,20 +57,20 @@ Ermöglicht die Verwendung von Multicast Flüssen für einen bestimmten Benutzer
 |------------------------|----------------------------------------------|
 | Link-ID                | \-                                           |
 | MAPI-Id                | \-                                           |
-| System-Only            | False                                        |
-| Ist-einwertig       | Richtig                                         |
-| Ist indiziert             | False                                        |
-| Im globalen Katalog      | False                                        |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                 |
+| System-Only            | Falsch                                        |
+| Is-Single-Valued       | Richtig                                         |
+| Ist indiziert             | Falsch                                        |
+| Im globalen Katalog      | Falsch                                        |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                 |
 | Range-Lower            | \-                                           |
 | Range-Upper            | \-                                           |
 | Search-Flags           | 0x00000000                                   |
 | System-Flags           | 0x00000010                                   |
-| In verwendete Klassen        | [**ACS-Richtlinie**](c-acspolicy.md)<br/> |
+| In verwendete Klassen        | [**ACS-Policy**](c-acspolicy.md)<br/> |
 
 
 
-## <a name="windows-server-2003"></a>Windows Server 2003
+## <a name="windows-server-2003"></a>Windows Server 2003
 
 
 
@@ -78,16 +78,16 @@ Ermöglicht die Verwendung von Multicast Flüssen für einen bestimmten Benutzer
 |------------------------|----------------------------------------------|
 | Link-ID                | \-                                           |
 | MAPI-Id                | \-                                           |
-| System-Only            | False                                        |
-| Ist-einwertig       | Richtig                                         |
-| Ist indiziert             | False                                        |
-| Im globalen Katalog      | False                                        |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                 |
+| System-Only            | Falsch                                        |
+| Is-Single-Valued       | Richtig                                         |
+| Ist indiziert             | Falsch                                        |
+| Im globalen Katalog      | Falsch                                        |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                 |
 | Range-Lower            | \-                                           |
 | Range-Upper            | \-                                           |
 | Search-Flags           | 0x00000000                                   |
 | System-Flags           | 0x00000010                                   |
-| In verwendete Klassen        | [**ACS-Richtlinie**](c-acspolicy.md)<br/> |
+| In verwendete Klassen        | [**ACS-Policy**](c-acspolicy.md)<br/> |
 
 
 
@@ -99,16 +99,16 @@ Ermöglicht die Verwendung von Multicast Flüssen für einen bestimmten Benutzer
 |------------------------|----------------------------------------------|
 | Link-ID                | \-                                           |
 | MAPI-Id                | \-                                           |
-| System-Only            | False                                        |
-| Ist-einwertig       | Richtig                                         |
-| Ist indiziert             | False                                        |
-| Im globalen Katalog      | False                                        |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                 |
+| System-Only            | Falsch                                        |
+| Is-Single-Valued       | Richtig                                         |
+| Ist indiziert             | Falsch                                        |
+| Im globalen Katalog      | Falsch                                        |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                 |
 | Range-Lower            | \-                                           |
 | Range-Upper            | \-                                           |
 | Search-Flags           | 0x00000000                                   |
 | System-Flags           | 0x00000010                                   |
-| In verwendete Klassen        | [**ACS-Richtlinie**](c-acspolicy.md)<br/> |
+| In verwendete Klassen        | [**ACS-Policy**](c-acspolicy.md)<br/> |
 
 
 
@@ -120,16 +120,16 @@ Ermöglicht die Verwendung von Multicast Flüssen für einen bestimmten Benutzer
 |------------------------|----------------------------------------------|
 | Link-ID                | \-                                           |
 | MAPI-Id                | \-                                           |
-| System-Only            | False                                        |
-| Ist-einwertig       | Richtig                                         |
-| Ist indiziert             | False                                        |
-| Im globalen Katalog      | False                                        |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                 |
+| System-Only            | Falsch                                        |
+| Ist einwertig       | Richtig                                         |
+| Ist indiziert             | Falsch                                        |
+| Im globalen Katalog      | Falsch                                        |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                 |
 | Range-Lower            | \-                                           |
 | Range-Upper            | \-                                           |
 | Search-Flags           | 0x00000000                                   |
 | System-Flags           | 0x00000010                                   |
-| In verwendete Klassen        | [**ACS-Richtlinie**](c-acspolicy.md)<br/> |
+| In verwendete Klassen        | [**ACS-Policy**](c-acspolicy.md)<br/> |
 
 
 
@@ -141,16 +141,16 @@ Ermöglicht die Verwendung von Multicast Flüssen für einen bestimmten Benutzer
 |------------------------|----------------------------------------------|
 | Link-ID                | \-                                           |
 | MAPI-Id                | \-                                           |
-| System-Only            | False                                        |
-| Ist-einwertig       | Richtig                                         |
-| Ist indiziert             | False                                        |
-| Im globalen Katalog      | False                                        |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                 |
+| System-Only            | Falsch                                        |
+| Ist einwertig       | Richtig                                         |
+| Ist indiziert             | Falsch                                        |
+| Im globalen Katalog      | Falsch                                        |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                 |
 | Range-Lower            | \-                                           |
 | Range-Upper            | \-                                           |
 | Search-Flags           | 0x00000000                                   |
 | System-Flags           | 0x00000010                                   |
-| In verwendete Klassen        | [**ACS-Richtlinie**](c-acspolicy.md)<br/> |
+| In verwendete Klassen        | [**ACS-Policy**](c-acspolicy.md)<br/> |
 
 
 
@@ -162,16 +162,16 @@ Ermöglicht die Verwendung von Multicast Flüssen für einen bestimmten Benutzer
 |------------------------|----------------------------------------------|
 | Link-ID                | \-                                           |
 | MAPI-Id                | \-                                           |
-| System-Only            | False                                        |
-| Ist-einwertig       | Richtig                                         |
-| Ist indiziert             | False                                        |
-| Im globalen Katalog      | False                                        |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                 |
+| System-Only            | Falsch                                        |
+| Ist einwertig       | Richtig                                         |
+| Ist indiziert             | Falsch                                        |
+| Im globalen Katalog      | Falsch                                        |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                 |
 | Range-Lower            | \-                                           |
 | Range-Upper            | \-                                           |
 | Search-Flags           | 0x00000000                                   |
 | System-Flags           | 0x00000010                                   |
-| In verwendete Klassen        | [**ACS-Richtlinie**](c-acspolicy.md)<br/> |
+| In verwendete Klassen        | [**ACS-Policy**](c-acspolicy.md)<br/> |
 
 
 

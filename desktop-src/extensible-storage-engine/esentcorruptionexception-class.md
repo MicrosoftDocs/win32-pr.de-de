@@ -1,5 +1,5 @@
 ---
-description: 'Weitere Informationen finden Sie unter: esentverdertionexception-Klasse'
+description: 'Weitere Informationen finden Sie unter: EsentCorruptionException-Klasse'
 title: EsentCorruptionException-Klasse
 TOCTitle: EsentCorruptionException class
 ms:assetid: T:Microsoft.Isam.Esent.Interop.EsentCorruptionException
@@ -24,29 +24,29 @@ api_type:
 api_location:
 - Microsoft.Isam.Esent.Interop.dll
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: a6914c2bf133a1050e3e3800e5c113c6cac1a11f
-ms.sourcegitcommit: 3bdf30edb314e0fcd17dc4ddbc70e4ec7d3596e6
+ms.openlocfilehash: f0ac3d1884f41602490af23e3d63a388cd4d28e56fe92d80055ad8aaf462e0ee
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/10/2021
-ms.locfileid: "104218939"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120020900"
 ---
 # <a name="esentcorruptionexception-class"></a>EsentCorruptionException-Klasse
 
-Basisklasse für Beschädigungen von Ausnahmen.
+Basisklasse für Corruption-Ausnahmen.
 
 ## <a name="inheritance-hierarchy"></a>Vererbungshierarchie
 
 [System.Object](/dotnet/api/system.object)  
   [System.Exception](/dotnet/api/system.exception)  
-    [Microsoft. ISAM. ESENT. esentexception](./esentexception-class.md)  
-      [Microsoft. ISAM. ESENT. Interop. esenterrorexception](./esenterrorexception-class.md)  
-        [Microsoft. ISAM. ESENT. Interop. esentdataexception](./esentdataexception-class.md)  
-          Microsoft. ISAM. ESENT. Interop. esentverdertionexception  
+    [Microsoft.Isam.Esent.EsentException](./esentexception-class.md)  
+      [Microsoft.Isam.Esent.Interop.EsentErrorException](./esenterrorexception-class.md)  
+        [Microsoft.Isam.Esent.Interop.EsentDataException](./esentdataexception-class.md)  
+          Microsoft.Isam.Esent.Interop.EsentCorruptionException  
             
 
-**Namespace:**  [Microsoft. ISAM. ESENT. Interop](./microsoft.isam.esent.interop-namespace.md)  
-**Assembly:**  Microsoft. ISAM. ESENT. Interop (in Microsoft.Isam.Esent.Interop.dll)
+**Namespace:**  [Microsoft.Isam.Esent.Interop](./microsoft.isam.esent.interop-namespace.md)  
+**Assembly:**  Microsoft.Isam.Esent.Interop (in Microsoft.Isam.Esent.Interop.dll)
 
 ## <a name="syntax"></a>Syntax
 
@@ -70,55 +70,55 @@ Alle öffentlichen statischen Elemente dieses Typs (Shared in Microsoft Visual�
 
 ## <a name="see-also"></a>Siehe auch
 
-#### <a name="reference"></a>Referenz
+#### <a name="reference"></a>Verweis
 
-[Esentverdertionexception-Member](./esentcorruptionexception-members.md)
+[EsentCorruptionException-Member](./esentcorruptionexception-members.md)
 
-[Microsoft. ISAM. ESENT. Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)
+[Microsoft.Isam.Esent.Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)
 
 ## <a name="derived-types"></a>Abgeleitete Typen
 
 [System.Object](/dotnet/api/system.object)  
   [System.Exception](/dotnet/api/system.exception)  
-    [Microsoft. ISAM. ESENT. esentexception](./esentexception-class.md)  
-      [Microsoft. ISAM. ESENT. Interop. esenterrorexception](./esenterrorexception-class.md)  
-        [Microsoft. ISAM. ESENT. Interop. esentdataexception](./esentdataexception-class.md)  
-          Microsoft. ISAM. ESENT. Interop. esentverdertionexception  
-            [Microsoft. ISAM. ESENT. Interop. esentbademptypageexception](./esentbademptypageexception-class.md)  
-            [Microsoft. ISAM. ESENT. Interop. esentbadpagelinkexception](./esentbadpagelinkexception-class.md)  
-            [Microsoft. ISAM. ESENT. Interop. esentbadparentpagelinkexception](./esentbadparentpagelinkexception-class.md)  
-            [Microsoft. ISAM. ESENT. Interop. esentcatalogverdertedexception](./esentcatalogcorruptedexception-class.md)  
-            [Microsoft. ISAM. ESENT. Interop. esentcheckpointbeschädigen TException](./esentcheckpointcorruptexception-class.md)  
-            [Microsoft. ISAM. ESENT. Interop. esentcommittedlogfilebeschädigen TException](./esentcommittedlogfilecorruptexception-class.md)  
-            [Microsoft. ISAM. ESENT. Interop. esentcommittedlogfilesmissingexception](./esentcommittedlogfilesmissingexception-class.md)  
-            [Microsoft. ISAM. ESENT. Interop. esentdatabasebufferdependenciescorruptedexception](./esentdatabasebufferdependenciescorruptedexception-class.md)  
-            [Microsoft. ISAM. ESENT. Interop. esentdatabasecorruptedexception](./esentdatabasecorruptedexception-class.md)  
-            [Microsoft. ISAM. ESENT. Interop. esentdbtimeverdertedexception](./esentdbtimecorruptedexception-class.md)  
-            [Microsoft. ISAM. ESENT. Interop. EsentDecompressionFailedException](./esentdecompressionfailedexception-class.md)  
-            [Microsoft. ISAM. ESENT. Interop. esentderivedcolumnkorruptionexception](./esentderivedcolumncorruptionexception-class.md)  
-            [Microsoft. ISAM. ESENT. Interop. esentdiskleseverificationfailureexception](./esentdiskreadverificationfailureexception-class.md)  
-            [Microsoft. ISAM. ESENT. Interop. esentfileiobeyonentofexception](./esentfileiobeyondeofexception-class.md)  
-            [Microsoft. ISAM. ESENT. Interop. esentfilesystemkorruptionexception](./esentfilesystemcorruptionexception-class.md)  
-            [Microsoft. ISAM. ESENT. Interop. esentindexbuildverdertedexception](./esentindexbuildcorruptedexception-class.md)  
-            [Microsoft. ISAM. ESENT. Interop. esentinvalidlogsequenceexception](./esentinvalidlogsequenceexception-class.md)  
-            [Microsoft. ISAM. ESENT. Interop. esentlogkorruptduringhardrecoveryexception](./esentlogcorruptduringhardrecoveryexception-class.md)  
-            [Microsoft. ISAM. ESENT. Interop. esentlogkorruptduringhardrestoreexception](./esentlogcorruptduringhardrestoreexception-class.md)  
-            [Microsoft. ISAM. ESENT. Interop. esentlogkorruptedexception](./esentlogcorruptedexception-class.md)  
-            [Microsoft. ISAM. ESENT. Interop. esentlogfilebeschädigen TException](./esentlogfilecorruptexception-class.md)  
-            [Microsoft. ISAM. ESENT. Interop. esentlogreadverifyfailureexception](./esentlogreadverifyfailureexception-class.md)  
-            [Microsoft. ISAM. ESENT. Interop. esentlogtornschreiteduringhardrecoveryexception](./esentlogtornwriteduringhardrecoveryexception-class.md)  
-            [Microsoft. ISAM. ESENT. Interop. esentlogtornschreiteduringhardrestoreexception](./esentlogtornwriteduringhardrestoreexception-class.md)  
-            [Microsoft. ISAM. ESENT. Interop. esentlvverdertedexception](./esentlvcorruptedexception-class.md)  
-            [Microsoft. ISAM. ESENT. Interop. esentmissinglogfileexception](./esentmissinglogfileexception-class.md)  
-            [Microsoft. ISAM. ESENT. Interop. esentmissingpreviouslogfileexception](./esentmissingpreviouslogfileexception-class.md)  
-            [Microsoft. ISAM. ESENT. Interop. esentpagenotinitializedexception](./esentpagenotinitializedexception-class.md)  
-            [Microsoft. ISAM. ESENT. Interop. esentprimaryindexverdertedexception](./esentprimaryindexcorruptedexception-class.md)  
-            [Microsoft. ISAM. ESENT. Interop. esentlelostflushverifyfailureexception](./esentreadlostflushverifyfailureexception-class.md)  
-            [Microsoft. ISAM. ESENT. Interop. esentlupgnoverifyfailureexception](./esentreadpgnoverifyfailureexception-class.md)  
-            [Microsoft. ISAM. ESENT. Interop. esentleserverifyfailureexception](./esentreadverifyfailureexception-class.md)  
-            [Microsoft. ISAM. ESENT. Interop. esentrecordformatsubversionfailedexception](./esentrecordformatconversionfailedexception-class.md)  
-            [Microsoft. ISAM. ESENT. Interop. esentherstellyverifyfailureexception](./esentrecoveryverifyfailureexception-class.md)  
-            [Microsoft. ISAM. ESENT. Interop. esentredoabruptendedexception](./esentredoabruptendedexception-class.md)  
-            [Microsoft. ISAM. ESENT. Interop. esentsecondaryindexverdertedexception](./esentsecondaryindexcorruptedexception-class.md)  
-            [Microsoft. ISAM. ESENT. Interop. esentspavailextverdertedexception](./esentspavailextcorruptedexception-class.md)  
-            [Microsoft. ISAM. ESENT. Interop. esentspownextverdertedexception](./esentspownextcorruptedexception-class.md)
+    [Microsoft.Isam.Esent.EsentException](./esentexception-class.md)  
+      [Microsoft.Isam.Esent.Interop.EsentErrorException](./esenterrorexception-class.md)  
+        [Microsoft.Isam.Esent.Interop.EsentDataException](./esentdataexception-class.md)  
+          Microsoft.Isam.Esent.Interop.EsentCorruptionException  
+            [Microsoft.Isam.Esent.Interop.EsentBadEmptyPageException](./esentbademptypageexception-class.md)  
+            [Microsoft.Isam.Esent.Interop.EsentBadPageLinkException](./esentbadpagelinkexception-class.md)  
+            [Microsoft.Isam.Esent.Interop.EsentBadParentPageLinkException](./esentbadparentpagelinkexception-class.md)  
+            [Microsoft.Isam.Esent.Interop.EsentCatalogCorruptedException](./esentcatalogcorruptedexception-class.md)  
+            [Microsoft.Isam.Esent.Interop.EsentCheckpointCorruptException](./esentcheckpointcorruptexception-class.md)  
+            [Microsoft.Isam.Esent.Interop.EsentCommittedLogFileCorruptException](./esentcommittedlogfilecorruptexception-class.md)  
+            [Microsoft.Isam.Esent.Interop.EsentCommittedLogFilesMissingException](./esentcommittedlogfilesmissingexception-class.md)  
+            [Microsoft.Isam.Esent.Interop.EsentDatabaseBufferDependenciesCorruptedException](./esentdatabasebufferdependenciescorruptedexception-class.md)  
+            [Microsoft.Isam.Esent.Interop.EsentDatabaseCorruptedException](./esentdatabasecorruptedexception-class.md)  
+            [Microsoft.Isam.Esent.Interop.EsentDbTimeCorruptedException](./esentdbtimecorruptedexception-class.md)  
+            [Microsoft.Isam.Esent.Interop.EsentDecompressionFailedException](./esentdecompressionfailedexception-class.md)  
+            [Microsoft.Isam.Esent.Interop.EsentDerivedColumnCorruptionException](./esentderivedcolumncorruptionexception-class.md)  
+            [Microsoft.Isam.Esent.Interop.EsentDiskReadVerificationFailureException](./esentdiskreadverificationfailureexception-class.md)  
+            [Microsoft.Isam.Esent.Interop.EsentFileIOBeyondEOFException](./esentfileiobeyondeofexception-class.md)  
+            [Microsoft.Isam.Esent.Interop.EsentFileSystemCorruptionException](./esentfilesystemcorruptionexception-class.md)  
+            [Microsoft.Isam.Esent.Interop.EsentIndexBuildCorruptedException](./esentindexbuildcorruptedexception-class.md)  
+            [Microsoft.Isam.Esent.Interop.EsentInvalidLogSequenceException](./esentinvalidlogsequenceexception-class.md)  
+            [Microsoft.Isam.Esent.Interop.EsentLogCorruptDuringHardRecoveryException](./esentlogcorruptduringhardrecoveryexception-class.md)  
+            [Microsoft.Isam.Esent.Interop.EsentLogCorruptDuringHardRestoreException](./esentlogcorruptduringhardrestoreexception-class.md)  
+            [Microsoft.Isam.Esent.Interop.EsentLogCorruptedException](./esentlogcorruptedexception-class.md)  
+            [Microsoft.Isam.Esent.Interop.EsentLogFileCorruptException](./esentlogfilecorruptexception-class.md)  
+            [Microsoft.Isam.Esent.Interop.EsentLogReadVerifyFailureException](./esentlogreadverifyfailureexception-class.md)  
+            [Microsoft.Isam.Esent.Interop.EsentLogTornWriteDuringHardRecoveryException](./esentlogtornwriteduringhardrecoveryexception-class.md)  
+            [Microsoft.Isam.Esent.Interop.EsentLogTornWriteDuringHardRestoreException](./esentlogtornwriteduringhardrestoreexception-class.md)  
+            [Microsoft.Isam.Esent.Interop.EsentLVCorruptedException](./esentlvcorruptedexception-class.md)  
+            [Microsoft.Isam.Esent.Interop.EsentMissingLogFileException](./esentmissinglogfileexception-class.md)  
+            [Microsoft.Isam.Esent.Interop.EsentMissingPreviousLogFileException](./esentmissingpreviouslogfileexception-class.md)  
+            [Microsoft.Isam.Esent.Interop.EsentPageNotInitializedException](./esentpagenotinitializedexception-class.md)  
+            [Microsoft.Isam.Esent.Interop.EsentPrimaryIndexCorruptedException](./esentprimaryindexcorruptedexception-class.md)  
+            [Microsoft.Isam.Esent.Interop.EsentReadLostFlushVerifyFailureException](./esentreadlostflushverifyfailureexception-class.md)  
+            [Microsoft.Isam.Esent.Interop.EsentReadPgnoVerifyFailureException](./esentreadpgnoverifyfailureexception-class.md)  
+            [Microsoft.Isam.Esent.Interop.EsentReadVerifyFailureException](./esentreadverifyfailureexception-class.md)  
+            [Microsoft.Isam.Esent.Interop.EsentRecordFormatConversionFailedException](./esentrecordformatconversionfailedexception-class.md)  
+            [Microsoft.Isam.Esent.Interop.EsentRecoveryVerifyFailureException](./esentrecoveryverifyfailureexception-class.md)  
+            [Microsoft.Isam.Esent.Interop.EsentRedoAbruptEndedException](./esentredoabruptendedexception-class.md)  
+            [Microsoft.Isam.Esent.Interop.EsentSecondaryIndexCorruptedException](./esentsecondaryindexcorruptedexception-class.md)  
+            [Microsoft.Isam.Esent.Interop.EsentSPAvailExtCorruptedException](./esentspavailextcorruptedexception-class.md)  
+            [Microsoft.Isam.Esent.Interop.EsentSPOwnExtCorruptedException](./esentspownextcorruptedexception-class.md)

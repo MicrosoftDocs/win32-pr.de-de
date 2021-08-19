@@ -1,6 +1,6 @@
 ---
 title: MDM_PassportForWork_PINComplexity03-Klasse
-description: Die MDM \_ passportforwork \_ PINComplexity03-Klasse definiert die PIN-Komplexität für die Anmelde Informationen für Windows Hello for Business.
+description: Die MDM \_ PassportForWork \_ PINComplexity03-Klasse definiert die PIN-Komplexität für die Anmeldeinformationen für Windows Hello for Business.
 ms.assetid: 83dcf859-03da-4508-b809-bafd24dc8bd4
 keywords:
 - MDM_PassportForWork_PINComplexity03-Klasse
@@ -17,18 +17,18 @@ api_type:
 - DllExport
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 1a9d01cd152935a1daa0a9b0721ea27129e21934
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 360e7bf11de79b1f81135e4fa92572bde84050176e726e37c00374fed53791a0
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "103949685"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120084920"
 ---
-# <a name="mdm_passportforwork_pincomplexity03-class"></a>MDM \_ passportforwork \_ PINComplexity03-Klasse
+# <a name="mdm_passportforwork_pincomplexity03-class"></a>MDM \_ PassportForWork \_ PINComplexity03-Klasse
 
 \[Einige Informationen beziehen sich auf Vorabversionen, die vor der kommerziellen Freigabe grundlegend geändert werden können. Microsoft übernimmt keine Garantie, weder ausdrücklich noch stillschweigend, für die hier bereitgestellten Informationen.\]
 
-Die **MDM \_ passportforwork \_ PINComplexity03** -Klasse definiert die PIN-Komplexität für die Anmelde Informationen für Windows Hello for Business.
+Die **MDM \_ PassportForWork \_ PINComplexity03-Klasse** definiert die PIN-Komplexität für die Anmeldeinformationen für Windows Hello for Business.
 
 Die folgende Syntax enthält vereinfachten MOF-Code und schließt alle geerbten Eigenschaften ein.
 
@@ -53,17 +53,17 @@ class MDM_PassportForWork_PINComplexity03
 
 ## <a name="members"></a>Member
 
-Die **MDM \_ passportforwork \_ PINComplexity03** -Klasse verfügt über diese Typen von Membern:
+Die **MDM \_ PassportForWork \_ PINComplexity03-Klasse** verfügt über diese Typen von Membern:
 
 -   [Eigenschaften](#properties)
 
 ### <a name="properties"></a>Eigenschaften
 
-Die **MDM \_ passportforwork \_ PINComplexity03** -Klasse verfügt über diese Eigenschaften.
+Die **MDM \_ PassportForWork \_ PINComplexity03-Klasse** verfügt über diese Eigenschaften.
 
 <dl> <dt>
 
-[Treffern](/windows/client-management/mdm/passportforwork-csp#tenantid-policies-pincomplexity-digits)
+[Ziffern](/windows/client-management/mdm/passportforwork-csp#tenantid-policies-pincomplexity-digits)
 </dt> <dd> <dl> <dt>
 
 Datentyp: **sint32**
@@ -99,20 +99,20 @@ Zugriffstyp: Lesen/Schreiben
 **InstanceID**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [ **Schlüssel**](/windows/desktop/WmiSdk/key-qualifier)
+Qualifizierer: [ **key**](/windows/desktop/WmiSdk/key-qualifier)
 </dt> </dl>
 
-Stamm Knoten für PIN-Richtlinien.
+Stammknoten für PIN-Richtlinien.
 
 </dd> <dt>
 
-[Lowercaseletters](/windows/client-management/mdm/passportforwork-csp#tenantid-policies-pincomplexity-lowercaseletters)
+[KleinbuchstabenLetters](/windows/client-management/mdm/passportforwork-csp#tenantid-policies-pincomplexity-lowercaseletters)
 </dt> <dd> <dl> <dt>
 
 Datentyp: **sint32**
@@ -123,7 +123,7 @@ Zugriffstyp: Lesen/Schreiben
 
 </dd> <dt>
 
-[Maximumpinlength](/windows/client-management/mdm/passportforwork-csp#tenantid-policies-pincomplexity-maximumpinlength)
+[MaximumPINLength](/windows/client-management/mdm/passportforwork-csp#tenantid-policies-pincomplexity-maximumpinlength)
 </dt> <dd> <dl> <dt>
 
 Datentyp: **sint32**
@@ -134,7 +134,7 @@ Zugriffstyp: Lesen/Schreiben
 
 </dd> <dt>
 
-[Minimumpinlength](/windows/client-management/mdm/passportforwork-csp#tenantid-policies-pincomplexity-minimumpinlength)
+[MinimumPINLength](/windows/client-management/mdm/passportforwork-csp#tenantid-policies-pincomplexity-minimumpinlength)
 </dt> <dd> <dl> <dt>
 
 Datentyp: **sint32**
@@ -145,23 +145,23 @@ Zugriffstyp: Lesen/Schreiben
 
 </dd> <dt>
 
-**ParentID**
+**Parentid**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [ **Schlüssel**](/windows/desktop/WmiSdk/key-qualifier)
+Qualifizierer: [ **key**](/windows/desktop/WmiSdk/key-qualifier)
 </dt> </dl>
 
-Beschreibt den vollständigen Pfad zum übergeordneten Knoten. Für diese Klasse ist die Zeichenfolge "./Vendor/MSFT/PassPortForWork/*tenantid*/Policies".
+Beschreibt den vollständigen Pfad zum übergeordneten Knoten. Für diese Klasse lautet die Zeichenfolge "./Vendor/MSFT/PassPortForWork/*TenantID*/Policies".
 
 </dd> <dt>
 
-[Specialcharacter](/windows/client-management/mdm/passportforwork-csp#tenantid-policies-pincomplexity-specialcharacters)
+[SpecialCharacters](/windows/client-management/mdm/passportforwork-csp#tenantid-policies-pincomplexity-specialcharacters)
 </dt> <dd> <dl> <dt>
 
 Datentyp: **sint32**
@@ -172,7 +172,7 @@ Zugriffstyp: Lesen/Schreiben
 
 </dd> <dt>
 
-[Uppercaseletters](/windows/client-management/mdm/passportforwork-csp#tenantid-policies-pincomplexity-uppercaseletters)
+[GroßbuchstabenLetters](/windows/client-management/mdm/passportforwork-csp#tenantid-policies-pincomplexity-uppercaseletters)
 </dt> <dd> <dl> <dt>
 
 Datentyp: **sint32**
@@ -183,16 +183,16 @@ Zugriffstyp: Lesen/Schreiben
 
 </dd> </dl>
 
-## <a name="requirements"></a>Anforderungen
+## <a name="requirements"></a>Requirements (Anforderungen)
 
 
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows 10 \[ -Desktop-Apps\]<br/>                                                    |
+| Unterstützte Mindestversion (Client)<br/> | \[Windows 10 Nur Desktop-Apps\]<br/>                                                    |
 | Unterstützte Mindestversion (Server)<br/> | Nicht unterstützt<br/>                                                                      |
-| Namespace<br/>                | Root \\ CIMV2 \\ MDM- \\ dmmap<br/>                                                             |
-| MOF<br/>                      | <dl> <dt>Dmwmibridgeprov. MOF</dt> </dl> |
+| Namespace<br/>                | Root \\ cimv2 \\ mdm \\ dmmap<br/>                                                             |
+| MOF<br/>                      | <dl> <dt>DMWmiBridgeProv.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>DMWmiBridgeProv.dll</dt> </dl> |
 
 
@@ -201,7 +201,7 @@ Zugriffstyp: Lesen/Schreiben
 
 <dl> <dt>
 
-[Verwenden von PowerShell-Skripts mit dem WMI-Bridge Anbieter](/windows/client-management/mdm/using-powershell-scripting-with-the-wmi-bridge-provider)
+[Verwenden von PowerShell-Skripts mit dem WMI-Bridge-Anbieter](/windows/client-management/mdm/using-powershell-scripting-with-the-wmi-bridge-provider)
 </dt> </dl>
 
  

@@ -1,9 +1,9 @@
 ---
 title: SourceURL-Attribut
-description: Das SourceUrl-Attribut ist die Adresse des Elements.
+description: Das SourceURL-Attribut ist die Adresse des Elements.
 ms.assetid: fcd47515-2b42-491d-98f1-48000056089e
 keywords:
-- Media Player des SourceUrl-Attributs
+- SourceURL-Windows Media Player
 topic_type:
 - apiref
 api_name:
@@ -12,31 +12,31 @@ api_type:
 - NA
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: e56dd294c733d00721d549185759a6a6759b2938
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: adba0a1ad16995f322fb31214477e368853351c39912d87469aededf0b09e42d
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106365749"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120123050"
 ---
 # <a name="sourceurl-attribute"></a>SourceURL-Attribut
 
-Das **SourceUrl** -Attribut ist die Adresse des Elements.
+Das **SourceURL-Attribut** ist die Adresse des Elements.
 
 ## <a name="applies-to"></a>Gilt für
 
 -   [Audioelemente](audio-item-attributes.md)
 -   [Andere Elemente](other-item-attributes.md)
--   [Foto Elemente](photo-item-attributes.md)
+-   [Fotoelemente](photo-item-attributes.md)
 -   [Wiedergabelisten](playlist-attributes-ref.md)
--   [Options Felder](radio-item-attributes.md)
--   [Video Elemente](video-item-attributes.md)
+-   [Optionselemente](radio-item-attributes.md)
+-   [Videoelemente](video-item-attributes.md)
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Dieses Attribut ist nur in der-Bibliothek gespeichert.
+Dieses Attribut wird nur in der Bibliothek gespeichert.
 
-Um zu ermitteln, ob Sie den Wert dieses Attributs ändern können, verwenden Sie die [Media. isread onlyitem](media-isreadonlyitem.md) -Methode.
+Um zu bestimmen, ob Sie den Wert dieses Attributs ändern können, verwenden Sie die [Media.isReadOnlyItem-Methode.](media-isreadonlyitem.md)
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -44,7 +44,7 @@ Um zu ermitteln, ob Sie den Wert dieses Attributs ändern können, verwenden Sie
 
 | Anforderung | Wert |
 |--------------------|---------------------------------------------------|
-| Version<br/> | Windows Media Player 9-Serie oder höher<br/> |
+| Version<br/> | Windows Media Player 9er Serie oder höher<br/> |
 
 
 
@@ -52,7 +52,7 @@ Um zu ermitteln, ob Sie den Wert dieses Attributs ändern können, verwenden Sie
 
 <dl> <dt>
 
-[**Attribut Verweis**](attribute-reference.md)
+[**Attributreferenz**](attribute-reference.md)
 </dt> </dl>
 
  

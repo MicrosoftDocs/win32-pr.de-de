@@ -1,123 +1,123 @@
 ---
-title: Iremotedesktopclientevents-Methoden
-description: Die iremotedesktopclientevents-Schnittstelle stellt die folgenden Methoden zur Verfügung.
+title: IRemoteDesktopClientEvents-Methoden
+description: Die IRemoteDesktopClientEvents-Schnittstelle macht die folgenden Methoden verfügbar.
 ms.assetid: D8035924-736D-495D-BF78-950DAEB69774
 ms.tgt_platform: multiple
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: fe59ebb3eb2fb077b53074024100c4f0861cf197
-ms.sourcegitcommit: 592c9bbd22ba69802dc353bcb5eb30699f9e9403
+ms.openlocfilehash: 85a3c5df2f8a083e8fe41da53035f4de43b58e5ef1e7948dee8e93f617e17bdf
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "104315500"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120125000"
 ---
-# <a name="iremotedesktopclientevents-methods"></a>Iremotedesktopclientevents-Methoden
+# <a name="iremotedesktopclientevents-methods"></a>IRemoteDesktopClientEvents-Methoden
 
-Die [**iremotedesktopclientevents**](iremotedesktopclientevents.md) -Schnittstelle stellt die folgenden Methoden zur Verfügung.
+Die [**IRemoteDesktopClientEvents-Schnittstelle**](iremotedesktopclientevents.md) macht die folgenden Methoden verfügbar.
 
 ## <a name="in-this-section"></a>In diesem Abschnitt
 
 <dl> <dt>
 
-[**Onconnecting-Methode**](iremotedesktopclientevents-onconnecting.md)
+[**OnConnecting-Methode**](iremotedesktopclientevents-onconnecting.md)
 </dt> <dd>
 
-Wird aufgerufen, wenn das Client Steuerelement versucht, eine Verbindung mit einer Remote Sitzung herzustellen.
+Wird aufgerufen, wenn das Clientsteuerelement versucht, eine Verbindung mit einer Remotesitzung herzustellen.
 
 </dd> <dt>
 
-[**Onconnected-Methode**](iremotedesktopclientevents-onconnected.md)
+[**OnConnected-Methode**](iremotedesktopclientevents-onconnected.md)
 </dt> <dd>
 
-Wird aufgerufen, wenn das Client Steuerelement eine Verbindung mit einer Remote Sitzung hergestellt hat.
+Wird aufgerufen, wenn das Clientsteuerelement eine Verbindung mit einer Remotesitzung hergestellt hat.
 
 </dd> <dt>
 
-[**Onloginabgeschlossene-Methode**](iremotedesktopclientevents-onlogincompleted.md)
+[**OnLoginCompleted-Methode**](iremotedesktopclientevents-onlogincompleted.md)
 </dt> <dd>
 
-Wird aufgerufen, wenn sich das Client Steuerelement erfolgreich bei einer Remote Sitzung angemeldet hat.
+Wird aufgerufen, wenn das Clientsteuerelement erfolgreich bei einer Remotesitzung angemeldet wurde.
 
 </dd> <dt>
 
-[**Ongetrennte-Methode**](iremotedesktopclientevents-ondisconnected.md)
+[**OnDisconnected-Methode**](iremotedesktopclientevents-ondisconnected.md)
 </dt> <dd>
 
-Wird aufgerufen, wenn das Client Steuerelement von einer Remote Sitzung getrennt wurde.
+Wird aufgerufen, wenn das Clientsteuerelement von einer Remotesitzung getrennt wurde.
 
 </dd> <dt>
 
-[**Onstatuschge-Methode**](iremotedesktopclientevents-onstatuschanged.md)
+[**OnStatusChanged-Methode**](iremotedesktopclientevents-onstatuschanged.md)
 </dt> <dd>
 
-Wird aufgerufen, wenn das Client Steuerelement seinen Status aktualisiert hat.
+Wird aufgerufen, wenn das Clientsteuerelement seinen Status aktualisiert hat.
 
 </dd> <dt>
 
-[**Onautoreconnecting-Methode**](iremotedesktopclientevents-onautoreconnecting.md)
+[**OnAutoReconnecting-Methode**](iremotedesktopclientevents-onautoreconnecting.md)
 </dt> <dd>
 
-Wird aufgerufen, wenn das Client Steuerelement versucht, eine Verbindung mit einer Remote Sitzung automatisch wiederherzustellen.
+Wird aufgerufen, wenn das Clientsteuerelement versucht, automatisch eine Verbindung mit einer Remotesitzung wiederherzustellen.
 
 </dd> <dt>
 
-[**Onautoreconnected-Methode**](iremotedesktopclientevents-onautoreconnected.md)
+[**OnAutoReconnected-Methode**](iremotedesktopclientevents-onautoreconnected.md)
 </dt> <dd>
 
-Wird aufgerufen, wenn das Client Steuerelement automatisch eine Verbindung mit einer Remote Sitzung hergestellt hat.
+Wird aufgerufen, wenn das Clientsteuerelement automatisch wieder eine Verbindung mit einer Remotesitzung hergestellt hat.
 
 </dd> <dt>
 
-[**Ondialogdisplay-Methode**](iremotedesktopclientevents-ondialogdisplaying.md)
+[**OnDialogDisplaying-Methode**](iremotedesktopclientevents-ondialogdisplaying.md)
 </dt> <dd>
 
-Wird aufgerufen, bevor das-Steuerelement ein Dialogfeld anzeigt.
+Wird aufgerufen, bevor das Steuerelement ein Dialogfeld anzeigt.
 
 </dd> <dt>
 
-[**Ondialogverwerfen-Methode**](iremotedesktopclientevents-ondialogdismissed.md)
+[**OnDialogDismissed-Methode**](iremotedesktopclientevents-ondialogdismissed.md)
 </dt> <dd>
 
-Wird aufgerufen, nachdem ein vom Client Steuerelement angezeigtes Dialogfeld verworfen wurde.
+Wird aufgerufen, nachdem ein vom Clientsteuerelement angezeigtes Dialogfeld verworfen wurde.
 
 </dd> <dt>
 
-[**Onnetworkstatuschge-Methode**](iremotedesktopclientevents-onnetworkstatuschanged.md)
+[**OnNetworkStatusChanged-Methode**](iremotedesktopclientevents-onnetworkstatuschanged.md)
 </dt> <dd>
 
 Wird aufgerufen, wenn sich der Netzwerkstatus geändert hat.
 
 </dd> <dt>
 
-[**Onadminmessagereceived-Methode**](iremotedesktopclientevents-onadminmessagereceived.md)
+[**OnAdminMessageReceived-Methode**](iremotedesktopclientevents-onadminmessagereceived.md)
 </dt> <dd>
 
-Wird aufgerufen, wenn das Client Steuerelement eine administrative Nachricht empfängt.
+Wird aufgerufen, wenn das Clientsteuerelement eine Administrative Nachricht empfängt.
 
 </dd> <dt>
 
-[**Onkeycombinationpressed-Methode**](iremotedesktopclientevents-onkeycombinationpressed.md)
+[**OnKeyCombinationPressed-Methode**](iremotedesktopclientevents-onkeycombinationpressed.md)
 </dt> <dd>
 
-Wird aufgerufen, wenn in der Remote Sitzung Sondertasten Kombinationen gedrückt werden.
+Wird aufgerufen, wenn in der Remotesitzung spezielle Tastenkombinationen gedrückt werden.
 
 </dd> <dt>
 
-[**Onremotedesktopsizechanged-Methode**](iremotedesktopclientevents-onremotedesktopsizechanged.md)
+[**OnRemoteDesktopSizeChanged-Methode**](iremotedesktopclientevents-onremotedesktopsizechanged.md)
 </dt> <dd>
 
-Wird aufgerufen, wenn sich die Remote Desktop Größe geändert hat.
+Wird aufgerufen, wenn sich die Größe des Remotedesktops geändert hat.
 
 </dd> <dt>
 
-[**Ontouchpointercursor-Methode**](iremotedesktopclientevents-ontouchpointercursormoved.md)
+[**OnTouchPointerCursorMoved-Methode**](iremotedesktopclientevents-ontouchpointercursormoved.md)
 </dt> <dd>
 
-Wird aufgerufen, wenn der Fingerabdruck Cursor verschoben wurde und die [**EventsEnabled**](/windows/win32/api/rdpappcontainerclient/nf-rdpappcontainerclient-iremotedesktopclienttouchpointer-get_eventsenabled) -Eigenschaft auf true festgelegt ist.
+Wird aufgerufen, wenn der Touchzeigercursor verschoben wurde und die [**EventsEnabled-Eigenschaft**](/windows/win32/api/rdpappcontainerclient/nf-rdpappcontainerclient-iremotedesktopclienttouchpointer-get_eventsenabled) auf TRUE festgelegt ist.
 
 </dd> </dl>
 
- 
+ 
 
- 
+ 

@@ -1,7 +1,7 @@
 ---
-description: Die getmediatypeer Version-Methode ruft eine Versionsnummer für den Satz bevorzugter Medientypen ab.
+description: Die GetMediaTypeVersion-Methode ruft eine Versionsnummer für den Satz bevorzugter Medientypen ab.
 ms.assetid: bd7b8070-eac5-458c-ada0-7fb0d789dd54
-title: Cbasepin. getmediatypeer Version-Methode (amfilter. h)
+title: CBasePin.GetMediaTypeVersion-Methode (Amfilter.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,16 +16,16 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: fe01d33d7a7c1cb65bc0e2391af63e3519d9cce3
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 1f1b50b16a099c8698bbf5bef270173334f1c3ac2c3d2d67ff87778cffddf2ff
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106371565"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118955189"
 ---
-# <a name="cbasepingetmediatypeversion-method"></a>Cbasepin. getmediatypeer Version-Methode
+# <a name="cbasepingetmediatypeversion-method"></a>CBasePin.GetMediaTypeVersion-Methode
 
-Die- `GetMediaTypeVersion` Methode ruft eine Versionsnummer für den Satz bevorzugter Medientypen ab.
+Die `GetMediaTypeVersion` -Methode ruft eine Versionsnummer für den Satz bevorzugter Medientypen ab.
 
 ## <a name="syntax"></a>Syntax
 
@@ -42,13 +42,13 @@ Diese Methode hat keine Parameter.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt die [**cbasepin:: m \_ typeversion**](cbasepin-m-typeversion.md) -Member-Variable zurück.
+Gibt die [**CBasePin::m \_ TypeVersion-Membervariable**](cbasepin-m-typeversion.md) zurück.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Der **cbasepin** -Konstruktor initialisiert die Versionsnummer auf 1. In der Basisklasse ändert sich diese Zahl nie. Wenn die PIN die Liste der bevorzugten Medientypen dynamisch ändert, sollte Sie die Versionsnummer erhöhen, wenn die Liste geändert wird. Um die Versionsnummer zu erhöhen, müssen Sie die [**cbasepin:: incrementtypeversion**](cbasepin-incrementtypeversion.md) -Methode aufzurufen.
+Der **CBasePin-Konstruktor** initialisiert die Versionsnummer mit 1. In der Basisklasse ändert sich diese Zahl nie. Wenn der Pin die Liste der bevorzugten Medientypen dynamisch ändert, sollte die Versionsnummer bei jeder Änderung der Liste erhöht werden. Um die Versionsnummer zu erhöhen, rufen Sie die [**CBasePin::IncrementTypeVersion-Methode**](cbasepin-incrementtypeversion.md) auf.
 
-Der Medientyp Enumerator, der von der [**cenummediatypes**](cenummediatypes.md) -Klasse implementiert wird, verwendet die Versionsnummer, um sich selbst mit der PIN zu synchronisieren.
+Der Medientyp-Enumerator, der von der [**CEnumMediaTypes-Klasse**](cenummediatypes.md) implementiert wird, verwendet die Versionsnummer, um sich selbst mit dem Pin zu synchronisieren.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -56,8 +56,8 @@ Der Medientyp Enumerator, der von der [**cenummediatypes**](cenummediatypes.md) 
 
 | Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Amfilter. h (Include Streams. h)</dt> </dl>                                                                                  |
-| Bibliothek<br/> | <dl> " <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Amfilter.h (include Streams.h)</dt> </dl>                                                                                  |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Einzelhandels-Builds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
@@ -65,7 +65,7 @@ Der Medientyp Enumerator, der von der [**cenummediatypes**](cenummediatypes.md) 
 
 <dl> <dt>
 
-[**Cbasepin-Klasse**](cbasepin.md)
+[**CBasePin-Klasse**](cbasepin.md)
 </dt> </dl>
 
  

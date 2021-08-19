@@ -1,23 +1,23 @@
 ---
-description: Warum akzeptiert ein Decoder nicht das von mir festgelegte Eingabeformat?
+description: Warum akzeptiert ein Decoder das von mir festgelegte Eingabeformat nicht?
 ms.assetid: 19aa5677-bc3f-41d7-ad64-7c75021d907b
-title: Warum akzeptiert ein Decoder nicht das von mir festgelegte Eingabeformat?
+title: Warum akzeptiert ein Decoder das von mir festgelegte Eingabeformat nicht?
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 32ae4506fb6ed940bf0b4fffcf82ab78562872d7
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: c7299045e41c7ec6e4c4796ed77e22c4b59af1f2c63dfc8817de8a551021f29b
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106349136"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119887040"
 ---
-# <a name="why-does-a-decoder-not-accept-the-input-format-that-i-set"></a>Warum akzeptiert ein Decoder nicht das von mir festgelegte Eingabeformat?
+# <a name="why-does-a-decoder-not-accept-the-input-format-that-i-set"></a>Warum akzeptiert ein Decoder das von mir festgelegte Eingabeformat nicht?
 
-Es gibt zahlreiche Gründe, warum ein Decoder ein Format ablehnen könnte. Am häufigsten werden fehlende oder falsche erweiterte Formatierungsdaten angezeigt. Bei den erweiterten Formatierungsdaten handelt es sich um Codec-spezifische Informationen, die an die Struktur angehängt werden, die den Medientyp beschreibt.
+Es gibt viele Gründe, warum ein Decoder ein Format ablehnen kann. Die häufigste sind fehlende oder falsche Daten im erweiterten Format. Die Daten im erweiterten Format sind codecspezifische Informationen, die an die Struktur angefügt werden, die den Medientyp beschreibt.
 
-Wenn Sie einen Ausgabetyp mit einem encoderobjekt auflisten, verweist der **pbformat** -Member der [**DMO- \_ \_ Medientyp**](/previous-versions/windows/desktop/api/mediaobj/ns-mediaobj-dmo_media_type) Struktur auf eine **WaveFormatEx** -Struktur. An diese Struktur werden erweiterte Formatierungsdaten angehängt, und die Größe dieser Daten wird im **WaveFormatEx. cbSize** -Element gespeichert. Unabhängig vom Container, der zum Speichern der komprimierten Daten verwendet wird, müssen Sie die **WaveFormatEx** -Struktur persistent speichern und im Eingabetyp für den Decoder verwenden. Ohne die erweiterten Formatierungsdaten kann der Decoder den Inhalt nicht dekomprimieren.
+Wenn Sie einen Ausgabetyp mithilfe eines Encoderobjekts aufzählen, wird der **pbFormat-Member** der [**DMO MEDIA \_ \_ TYPE-Struktur**](/previous-versions/windows/desktop/api/mediaobj/ns-mediaobj-dmo_media_type) auf eine **WAVEFORMATEX-Struktur** verweisen. An diese Struktur sind erweiterte Formatdaten angefügt, und die Größe dieser Daten wird im **WAVEFORMATEX.cbSize-Member** gespeichert. Unabhängig vom Container, der zum Speichern der komprimierten Daten verwendet wird, müssen Sie die **WAVEFORMATEX-Struktur** beibehalten und im Eingabetyp für den Decoder verwenden. Ohne die Daten im erweiterten Format kann der Decoder den Inhalt nicht dekomprimieren.
 
-Bei Videoformaten müssen Sie die erweiterten Formatierungsdaten manuell abrufen und an die **videoinfoheader** -Struktur anfügen. Weitere Informationen finden Sie unter [Verwenden von privaten Videocodec-Daten](usingvideocodecprivatedata.md).
+Bei Videoformaten müssen Sie die Daten im erweiterten Format manuell abrufen und an die **VIDEOINFOHEADER-Struktur** anfügen. Weitere Informationen finden Sie unter [Verwenden von privaten Videocodec-Daten.](usingvideocodecprivatedata.md)
 
 ## <a name="related-topics"></a>Zugehörige Themen
 

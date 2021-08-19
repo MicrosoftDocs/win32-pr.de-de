@@ -1,23 +1,23 @@
 ---
-description: Obwohl DbgHelp.dll in allen Versionen von Windows enthalten ist, sollten Aufrufer die Verwendung einer der neueren Versionen dieser DLL in Erwägung gezogen werden, die im Paket Debuggingtools für Windows enthalten ist. Ausführliche Informationen zur Verteilung von dbghelp finden Sie unter dbghelp-Versionen.
+description: Obwohl DbgHelp.dll mit allen Versionen von Windows ausgeliefert wird, sollten Aufrufer erwägen, eine der neueren Versionen dieser DLL zu verwenden, wie im Paket Debugtools für Windows zu finden. Ausführliche Informationen zur Verteilung von DbgHelp finden Sie unter DbgHelp-Versionen.
 ms.assetid: 4e615e75-5ab8-4155-a3d3-b96313b37e9b
 title: Aufrufen der DbgHelp-Bibliothek
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 70cc06f6a0e28f163d80490647ee8f33754c249b
-ms.sourcegitcommit: c7add10d695482e1ceb72d62b8a4ebd84ea050f7
+ms.openlocfilehash: c4d6a111da8b0874a0c66fa08840e1ea4edeabf539afab2e9decf0eb19372db3
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104482750"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118957159"
 ---
 # <a name="calling-the-dbghelp-library"></a>Aufrufen der DbgHelp-Bibliothek
 
-Obwohl DbgHelp.dll in allen Versionen von Windows enthalten ist, sollten Aufrufer die Verwendung einer der neueren Versionen dieser DLL in Erwägung gezogen werden, die im Paket [Debuggingtools für Windows](https://www.microsoft.com/?ref=go) enthalten ist. Ausführliche Informationen zur Verteilung von dbghelp finden Sie unter [dbghelp-Versionen](dbghelp-versions.md).
+Obwohl DbgHelp.dll mit allen Versionen von Windows ausgeliefert wird, sollten Aufrufer erwägen, eine der neueren Versionen dieser DLL zu verwenden, wie im [Paket Debugtools für Windows](https://www.microsoft.com/?ref=go) zu finden. Ausführliche Informationen zur Verteilung von DbgHelp finden Sie unter [DbgHelp-Versionen.](dbghelp-versions.md)
 
-Bei Verwendung von dbghelp besteht die beste Strategie darin, eine Kopie der Bibliothek aus dem Paket " [Debugtools für Windows](https://www.microsoft.com/?ref=go) " im Anwendungsverzeichnis zu installieren, das logisch neben der Software basiert, die Sie aufruft. Wenn Symbol Server und Quell Server ebenfalls benötigt werden, müssen sowohl SymSrv.dll als auch SrcSrv.dll in demselben Verzeichnis wie DbgHelp.dll installiert werden, da dbghelp diese DLLs nur aufruft, wenn Sie dasselbe Verzeichnis gemeinsam verwenden. (Beachten Sie, dass dbghelp diese beiden DLLs nicht vom Standard Suchpfad aufruft.) Dadurch wird die Verwendung von nicht übereinstimmenden DLLs verhindert. Ebenso wird die Gesamtsicherheit verbessert.
+Bei Verwendung von DbgHelp besteht die beste Strategie darin, eine Kopie der Bibliothek aus dem [Paket Debugtools für Windows](https://www.microsoft.com/?ref=go) im Anwendungsverzeichnis zu installieren, das logisch neben der Software liegt, die sie aufruft. Wenn auch Symbolserver und Quellserver benötigt werden, müssen sowohl SymSrv.dll als auch SrcSrv.dll im selben Verzeichnis wie DbgHelp.dll installiert werden, da DbgHelp diese DLLs nur aufruft, wenn sie dasselbe Verzeichnis verwenden. (Beachten Sie, dass DbgHelp diese beiden DLLs nicht aus dem Standardsuchpfad aufruft.) Dadurch wird verhindert, dass nicht übereinstimmende DLLs verwendet werden. Ebenso verbessert es auch die Sicherheit insgesamt.
 
-Der folgende Code wird aus der dbghelp-Quelle extrahiert. Es zeigt, wie dbghelp nur Versionen von SymSrv.dll und SrcSrv.dll aus demselben Verzeichnis lädt, in dem DbgHelp.dll sich befindet.
+Der folgende Code wird aus der DbgHelp-Quelle extrahiert. Es wird gezeigt, wie DbgHelp nur Versionen von SymSrv.dll und SrcSrv.dll aus demselben Verzeichnis lädt, in dem sich DbgHelp.dll befinden.
 
 
 ```C++
@@ -89,15 +89,15 @@ LoadDLL(
 
 
 
-Nachdem Sie diese beiden DLLs geladen haben, ruft dbghelp [**GetProcAddress**](/windows/desktop/api/libloaderapi/nf-libloaderapi-getprocaddress) auf, um die benötigten Funktionen zu erhalten.
+Nach dem Laden dieser beiden DLLs ruft DbgHelp [**GetProcAddress**](/windows/desktop/api/libloaderapi/nf-libloaderapi-getprocaddress) auf, um die benötigten Funktionen von ihnen abzurufen.
 
-Normalerweise wird durch Code, der DbgHelp.dll aufruft, sichergestellt, dass die richtige Version geladen wird, indem DbgHelp.dll in demselben Verzeichnis wie die Anwendung installiert wird, die den aktuellen Prozess initiiert hat. Wenn sich der aufrufende Code in einer DLL befindet und keinen Zugriff auf den Speicherort des anfänglichen Prozesses hat, müssen DbgHelp.dll zusammen mit der aufrufenden dll installiert werden, und der Code, der der loaddll von dbghelp ähnelt, sollte verwendet werden.
+Normalerweise stellt Code, der DbgHelp.dll aufruft, sicher, dass die richtige Version geladen wird, indem DbgHelp.dll im gleichen Verzeichnis wie die Anwendung installiert wird, die den aktuellen Prozess initiiert hat. Wenn sich der aufrufende Code in einer DLL befindet und keinen Zugriff auf den Speicherort des ursprünglichen Prozesses hat oder diesen nicht kann, muss DbgHelp.dll zusammen mit der aufrufenden DLL installiert werden, und es sollte Code ähnlich wie LoadDLL von DbgHelp verwendet werden.
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[Dbghelp-Versionen](dbghelp-versions.md)
+[DbgHelp-Versionen](dbghelp-versions.md)
 </dt> <dt>
 
 [**LoadLibrary**](/windows/desktop/api/libloaderapi/nf-libloaderapi-loadlibrarya)
@@ -106,7 +106,7 @@ Normalerweise wird durch Code, der DbgHelp.dll aufruft, sichergestellt, dass die
 [**GetProcAddress**](/windows/desktop/api/libloaderapi/nf-libloaderapi-getprocaddress)
 </dt> <dt>
 
-[**Fehler bei GetModuleFileName**](/windows/desktop/api/libloaderapi/nf-libloaderapi-getmodulefilenamea)
+[**GetModuleFileName**](/windows/desktop/api/libloaderapi/nf-libloaderapi-getmodulefilenamea)
 </dt> </dl>
 
  

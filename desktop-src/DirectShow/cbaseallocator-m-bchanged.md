@@ -1,7 +1,7 @@
 ---
-description: Flag zum angeben, ob sich die Puffer Anforderungen geändert haben.
+description: Flag, das angibt, ob sich die Pufferanforderungen geändert haben.
 ms.assetid: 34d946f9-125c-40fb-b09e-82457add07d6
-title: 'Cbasezucator:: m_bChanged Member (amfilter. h)'
+title: CBaseAllocator::m_bChanged-Member (Amfilter.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,16 +16,16 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: 86c700f3c0ee820206613bcf3147652b1826b57a
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 7edb5ed770628d7dfd982017e720ef0136bace74dd7e311121925f6c8657d2fe
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106365595"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120131500"
 ---
-# <a name="cbaseallocatorm_bchanged-member"></a>Cbasezucator:: m- \_ bchanged-Member
+# <a name="cbaseallocatorm_bchanged-member"></a>CBaseAllocator::m \_ bChanged-Member
 
-Flag zum angeben, ob sich die Puffer Anforderungen geändert haben. Die [**cbasezucator:: SetProperties**](cbaseallocator-setproperties.md) -Methode legt den Wert auf **true** fest. In einer abgeleiteten Klasse sollte die rein virtuelle Methode [**cbasezucator:: zuordc**](cbaseallocator-alloc.md) den Wert auf **false** zurücksetzen. Nachdem Puffer zugeordnet wurden, müssen Sie Sie nicht erneut zuordnen, während *m \_ bchanged* den Wert **false** hat.
+Flag, das angibt, ob sich die Pufferanforderungen geändert haben. Die [**CBaseAllocator::SetProperties-Methode**](cbaseallocator-setproperties.md) legt den Wert auf **TRUE** fest. In einer abgeleiteten Klasse sollte die reine virtuelle Methode [**CBaseAllocator::Alloc**](cbaseallocator-alloc.md) den Wert wieder auf **FALSE** festlegen. Sobald Puffer zugeordnet wurden, müssen sie nicht erneut zugeordnet werden, während *m \_ bChanged* **AUF FALSE** festgelegt ist.
 
 ## <a name="syntax"></a>Syntax
 
@@ -42,8 +42,8 @@ BOOL m_bChanged;
 
 | Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Amfilter. h (Include Streams. h)</dt> </dl>                                                                                  |
-| Bibliothek<br/> | <dl> " <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Amfilter.h (include Streams.h)</dt> </dl>                                                                                  |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Verkaufsbuilds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
@@ -51,7 +51,7 @@ BOOL m_bChanged;
 
 <dl> <dt>
 
-[**Cbasezucator-Klasse**](cbaseallocator.md)
+[**CBaseAllocator-Klasse**](cbaseallocator.md)
 </dt> </dl>
 
  

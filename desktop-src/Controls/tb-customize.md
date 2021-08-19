@@ -1,9 +1,9 @@
 ---
-title: TB_CUSTOMIZE Meldung (kommstrg. h)
+title: TB_CUSTOMIZE (Commctrl.h)
 description: Zeigt das Dialogfeld Symbolleiste anpassen an.
 ms.assetid: 45249467-d585-4ffd-8bbe-e39739059c40
 keywords:
-- Windows-Steuerelemente für TB_CUSTOMIZE Meldung
+- TB_CUSTOMIZE von Windows-Steuerelementen
 topic_type:
 - apiref
 api_name:
@@ -14,14 +14,14 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: dada0ef195e898b7a46487a2d775e46d6af854ed
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 765c4fe1cba535903ff1e60804ee6d4ec5743f5d3726212f9aca16742a40913b
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "106345532"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118957929"
 ---
-# <a name="tb_customize-message"></a>TB anpassbare \_ Nachricht
+# <a name="tb_customize-message"></a>TB \_ CUSTOMIZE-Nachricht
 
 Zeigt das Dialogfeld **Symbolleiste anpassen** an.
 
@@ -47,10 +47,10 @@ Muss Null sein.
 
 Kein Rückgabewert.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
 > [!Note]  
-> Die Symbolleiste muss die [TBN \_ queryinsert](tbn-queryinsert.md) -und [TBN \_ querydelete](tbn-querydelete.md) -Benachrichtigungen verarbeiten, damit das Dialogfeld **Symbolleiste anpassen** angezeigt wird. Wenn die Symbolleiste diese Benachrichtigungen nicht verarbeitet, hat die **\_ Anpassung von TB** keine Auswirkungen.
+> Die Symbolleiste muss die [Benachrichtigungen TBN \_ QUERYINSERT](tbn-queryinsert.md) und [TBN \_ QUERYDELETE](tbn-querydelete.md) verarbeiten, damit **das** Dialogfeld Symbolleiste anpassen angezeigt wird. Wenn die Symbolleiste diese Benachrichtigungen nicht verarbeitet, **hat TB \_ CUSTOMIZE** keine Auswirkungen.
 
  
 
@@ -60,9 +60,9 @@ Kein Rückgabewert.
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                        |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/>                                  |
-| Header<br/>                   | <dl> <dt>Kommstrg. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ Vista-Desktop-Apps\]<br/>                                        |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                                  |
+| Header<br/>                   | <dl> <dt>Commctrl.h</dt> </dl> |
 
 
 

@@ -1,29 +1,29 @@
 ---
-description: In diesem Thema wird beschrieben, wie die Video Erfassungsgeräte im Benutzersystem aufgelistet werden und wie eine Instanz eines Geräts erstellt wird.
+description: In diesem Thema wird beschrieben, wie sie die Videoaufzeichnungsgeräte auf dem Benutzersystem aufzählen und eine Instanz eines Geräts erstellen.
 ms.assetid: b1267478-329b-4e46-a2ed-1ec11d2e2e6d
-title: Auflisten von Video Erfassungs Geräten
+title: Aufzählen von Videoaufnahmegeräten
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 57ccdbcf9df284cdccda09939d2d8a27174a2299
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 476c4b41e6f8913414200c7a811ba9625f2c4bc9cfea66875ec5f15b788bdc05
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104393270"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120061620"
 ---
-# <a name="enumerating-video-capture-devices"></a>Auflisten von Video Erfassungs Geräten
+# <a name="enumerating-video-capture-devices"></a>Aufzählen von Videoaufnahmegeräten
 
-In diesem Thema wird beschrieben, wie die Video Erfassungsgeräte im System des Benutzers aufgelistet werden und wie eine Instanz eines Geräts erstellt wird.
+In diesem Thema wird beschrieben, wie die Videoaufzeichnungsgeräte auf dem System des Benutzers aufzählt und wie eine Instanz eines Geräts erstellt wird.
 
-Gehen Sie folgendermaßen vor, um die Video Erfassungsgeräte auf dem System aufzulisten:
+Gehen Sie wie folgt vor, um die Videoaufzeichnungsgeräte auf dem System aufzuzählen:
 
-1.  Rufen Sie [**mfkreateattributs**](/windows/desktop/api/mfapi/nf-mfapi-mfcreateattributes) auf, um einen Attribut Speicher zu erstellen. Diese Funktion empfängt einen [**imfattributes**](/windows/desktop/api/mfobjects/nn-mfobjects-imfattributes) -Zeiger.
-2.  Aufrufen Sie [**imfattributes:: SetGuid**](/windows/desktop/api/mfobjects/nf-mfobjects-imfattributes-setguid) , um das Attribut [ \_ \_ \_ \_ Quelltyp des MF-devsource-Attributs](mf-devsource-attribute-source-type.md) festzulegen. Legen Sie den Attribut Wert auf das **MF \_ devsource- \_ Attribut \_ \_ Quelltyp \_ VidCap \_ GUID** fest.
-3.  [**Mfenumschlag mvicesources**](/windows/desktop/api/mfidl/nf-mfidl-mfenumdevicesources)aufruft. Diese Funktion empfängt ein Array von [**imfaktivate**](/windows/desktop/api/mfobjects/nn-mfobjects-imfactivate) -Zeigern und der Array Größe. Jeder Zeiger stellt ein bestimmtes Video Erfassungsgerät dar.
+1.  Rufen Sie [**MFCreateAttributes**](/windows/desktop/api/mfapi/nf-mfapi-mfcreateattributes) auf, um einen Attributspeicher zu erstellen. Diese Funktion empfängt einen [**POINTERAttributes-Zeiger.**](/windows/desktop/api/mfobjects/nn-mfobjects-imfattributes)
+2.  Rufen Sie [**DIE ATTRIBUTEAttributes::SetGUID**](/windows/desktop/api/mfobjects/nf-mfobjects-imfattributes-setguid) auf, um das [ATTRIBUT MF \_ DEVSOURCE ATTRIBUTE SOURCE \_ \_ \_ TYPE](mf-devsource-attribute-source-type.md) festzulegen. Legen Sie den Attributwert auf **MF \_ DEVSOURCE \_ ATTRIBUTE SOURCE \_ TYPE \_ \_ VIDCAP \_ GUID fest.**
+3.  Rufen Sie [**MFEnumDeviceSources auf.**](/windows/desktop/api/mfidl/nf-mfidl-mfenumdevicesources) Diese Funktion empfängt ein Array von [**POINTERActivate-Zeigern**](/windows/desktop/api/mfobjects/nn-mfobjects-imfactivate) und die Arraygröße. Jeder Zeiger stellt ein eigenes Videoaufnahmegerät dar.
 
-So erstellen Sie eine Instanz eines Aufzeichnungs Geräts:
+So erstellen Sie eine Instanz eines Erfassungsgeräts:
 
--   Aufrufen von [**imfaktivate:: activateobject**](/windows/desktop/api/mfobjects/nf-mfobjects-imfactivate-activateobject) zum Abrufen eines Zeigers auf die [**imfmediasource**](/windows/desktop/api/mfidl/nn-mfidl-imfmediasource) -Schnittstelle.
+-   Rufen Sie [**DIE AKTIONACTIVATE::ActivateObject**](/windows/desktop/api/mfobjects/nf-mfobjects-imfactivate-activateobject) auf, um einen Zeiger auf die [**INTERFACESMediaSource-Schnittstelle**](/windows/desktop/api/mfidl/nn-mfidl-imfmediasource) abzurufen.
 
 Diese Schritte sind im folgenden Code dargestellt:
 
@@ -93,7 +93,7 @@ done:
 
 
 
-Nachdem Sie die Medienquelle erstellt haben, geben Sie die Schnittstellen Zeiger frei, und geben Sie den Speicher für das Array frei:
+Geben Sie nach dem Erstellen der Medienquelle die Schnittstellenzeiger frei, und geben Sie den Arbeitsspeicher für das Array frei:
 
 
 ```C++
@@ -112,7 +112,7 @@ Nachdem Sie die Medienquelle erstellt haben, geben Sie die Schnittstellen Zeiger
 
 <dl> <dt>
 
-[Video Erfassung](video-capture.md)
+[Videoaufnahme](video-capture.md)
 </dt> </dl>
 
  

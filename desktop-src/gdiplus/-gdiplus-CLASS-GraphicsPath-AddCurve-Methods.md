@@ -1,42 +1,42 @@
 ---
-description: In diesem Thema werden die AddCurve-Methoden der GraphicsPath-Klasse aufgelistet. Eine umfassende Liste der Methoden für die GraphicsPath-Klasse finden Sie unter GraphicsPath.
+description: In diesem Thema werden die AddCurve-Methoden der GraphicsPath-Klasse aufgeführt. Eine vollständige Liste der Methoden für die GraphicsPath-Klasse finden Sie unter GraphicsPath.
 ms.assetid: 81f43f7e-a383-44f7-a3bd-2969d541b616
-title: GraphicsPath. AddCurve-Methode (gdipluspath. h)
+title: GraphicsPath.AddCurve-Methoden (Gdipluspath.h)
 ms.date: 07/02/2019
 ms.topic: reference
-ms.openlocfilehash: 76ef04d0bd1efce00f767e675a64f8ba2ceb8908
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 730bdeb05882d628a5fdb26a16085bb20bdb238bf02cb9f9a8c932d935a37338
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "104982868"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119848740"
 ---
-# <a name="graphicspathaddcurve-methods"></a>GraphicsPath. AddCurve-Methoden
+# <a name="graphicspathaddcurve-methods"></a>GraphicsPath.AddCurve-Methoden
 
-In diesem Thema werden die AddCurve-Methoden der [**GraphicsPath**](/windows/win32/api/gdipluspath/nl-gdipluspath-graphicspath) -Klasse aufgelistet. Eine umfassende Liste der Methoden für die **GraphicsPath** -Klasse finden Sie unter [**GraphicsPath**](/windows/win32/api/gdipluspath/nl-gdipluspath-graphicspath).
+In diesem Thema werden die AddCurve-Methoden der [**GraphicsPath-Klasse**](/windows/win32/api/gdipluspath/nl-gdipluspath-graphicspath) aufgeführt. Eine vollständige Liste der Methoden für die **GraphicsPath-Klasse** finden Sie unter [**GraphicsPath**](/windows/win32/api/gdipluspath/nl-gdipluspath-graphicspath).
 
 ### <a name="overload-list"></a>Überladeliste
 
 
 
-| Methode                                                                                                                                              | BESCHREIBUNG                                                                                                                                                                                                             |
+| Methode                                                                                                                                              | Beschreibung                                                                                                                                                                                                             |
 |:----------------------------------------------------------------------------------------------------------------------------------------------------|:------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| [**AddCurve (Punkt \* , int)**](/windows/win32/api/gdipluspath/nf-gdipluspath-graphicspath-addcurve(inconstpoint_inint))                                                       | Die [**GraphicsPath:: AddCurve**](/windows/win32/api/gdipluspath/nf-gdipluspath-graphicspath-addcurve(inconstpoint_inint)) -Methode fügt der aktuellen Abbildung dieses Pfades einen kardinalspline hinzu.<br/>                                         |
-| [**AddCurve (PointF \* , int)**](/previous-versions//ms535611(v=vs.85))                                                     | Die [**GraphicsPath:: AddCurve**](/previous-versions//ms535611(v=vs.85)) -Methode fügt der aktuellen Abbildung dieses Pfades einen kardinalspline hinzu.<br/>                                        |
-| [**AddCurve (Point \* , int, Real)**](/windows/win32/api/gdipluspath/nf-gdipluspath-graphicspath-addcurve(inconstpoint_inint_inreal))                                     | Die [**GraphicsPath:: AddCurve**](/windows/win32/api/gdipluspath/nf-gdipluspath-graphicspath-addcurve(inconstpoint_inint_inreal)) -Methode fügt der aktuellen Abbildung dieses Pfades einen kardinalspline hinzu.<br/>                            |
-| [**AddCurve (PointF \* , int, Real)**](/windows/win32/api/gdipluspath/nf-gdipluspath-graphicspath-addcurve(inconstpointf_inint_inreal))                                   | Die [**GraphicsPath:: AddCurve**](/windows/win32/api/gdipluspath/nf-gdipluspath-graphicspath-addcurve(inconstpointf_inint_inreal)) -Methode fügt der aktuellen Abbildung dieses Pfades einen kardinalspline hinzu.<br/>                           |
-| [**AddCurve (Point \* , int, int, int, Real)**](/windows/win32/api/gdipluspath/nf-gdipluspath-graphicspath-addcurve(inconstpoint_inint_inint_inint_inreal))  | Die [**GraphicsPath:: AddCurve**](/windows/win32/api/gdipluspath/nf-gdipluspath-graphicspath-addcurve(inconstpoint_inint_inint_inint_inreal)) -Methode fügt der aktuellen Abbildung dieses Pfades einen kardinalspline hinzu.<br/> |
-| [**AddCurve (PointF \* , int, int, int, Real)**](/windows/win32/api/gdipluspath/nf-gdipluspath-graphicspath-addcurve(inconstpointf_inint_inint_inint_inreal)) | Die [**GraphicsPath:: AddCurve**](/windows/win32/api/gdipluspath/nf-gdipluspath-graphicspath-addcurve(inconstpointf_inint_inint_inint_inreal)) -Methode fügt der aktuellen Abbildung dieses Pfades einen kardinalspline hinzu.<br/> |
+| [**AddCurve(Point \* ,INT)**](/windows/win32/api/gdipluspath/nf-gdipluspath-graphicspath-addcurve(inconstpoint_inint))                                                       | Die [**GraphicsPath::AddCurve-Methode**](/windows/win32/api/gdipluspath/nf-gdipluspath-graphicspath-addcurve(inconstpoint_inint)) fügt der aktuellen Abbildung dieses Pfads eine Kardinalspline hinzu.<br/>                                         |
+| [**AddCurve(PointF \* , INT)**](/previous-versions//ms535611(v=vs.85))                                                     | Die [**GraphicsPath::AddCurve-Methode**](/previous-versions//ms535611(v=vs.85)) fügt der aktuellen Abbildung dieses Pfads eine Kardinalspline hinzu.<br/>                                        |
+| [**AddCurve(Point \* ,INT,REAL)**](/windows/win32/api/gdipluspath/nf-gdipluspath-graphicspath-addcurve(inconstpoint_inint_inreal))                                     | Die [**GraphicsPath::AddCurve-Methode**](/windows/win32/api/gdipluspath/nf-gdipluspath-graphicspath-addcurve(inconstpoint_inint_inreal)) fügt der aktuellen Abbildung dieses Pfads eine Kardinalspline hinzu.<br/>                            |
+| [**AddCurve(PointF \* , INT, REAL)**](/windows/win32/api/gdipluspath/nf-gdipluspath-graphicspath-addcurve(inconstpointf_inint_inreal))                                   | Die [**GraphicsPath::AddCurve-Methode**](/windows/win32/api/gdipluspath/nf-gdipluspath-graphicspath-addcurve(inconstpointf_inint_inreal)) fügt der aktuellen Abbildung dieses Pfads eine Kardinalspline hinzu.<br/>                           |
+| [**AddCurve(Point \* ,INT,INT,INT,REAL)**](/windows/win32/api/gdipluspath/nf-gdipluspath-graphicspath-addcurve(inconstpoint_inint_inint_inint_inreal))  | Die [**GraphicsPath::AddCurve-Methode**](/windows/win32/api/gdipluspath/nf-gdipluspath-graphicspath-addcurve(inconstpoint_inint_inint_inint_inreal)) fügt der aktuellen Abbildung dieses Pfads eine Kardinalspline hinzu.<br/> |
+| [**AddCurve(PointF \* , INT, INT, INT, REAL)**](/windows/win32/api/gdipluspath/nf-gdipluspath-graphicspath-addcurve(inconstpointf_inint_inint_inint_inreal)) | Die [**GraphicsPath::AddCurve-Methode**](/windows/win32/api/gdipluspath/nf-gdipluspath-graphicspath-addcurve(inconstpointf_inint_inint_inint_inreal)) fügt der aktuellen Abbildung dieses Pfads eine Kardinalspline hinzu.<br/> |
 
 
 
-## <a name="requirements"></a>Requirements (Anforderungen)
+## <a name="requirements"></a>Anforderungen
 
 
 
 | Anforderung | Wert |
 |-------------------|------------------------------------------------------------------------------------------|
-| Header<br/> | <dl> <dt>Gdipluspath. h</dt> </dl> |
+| Header<br/> | <dl> <dt>Gdipluspath.h</dt> </dl> |
 
 
 

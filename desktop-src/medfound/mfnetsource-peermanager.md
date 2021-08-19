@@ -1,33 +1,33 @@
 ---
-description: Gibt einen anzeigen Amen für die Identifizierung des Clients an.
+description: Gibt einen Anzeigenamen für die Identifizierung des Clients an.
 ms.assetid: 04DEFC2A-6870-4C22-B55D-5514C87C1908
-title: MFNETSOURCE_PEERMANAGER-Eigenschaft (mspdl. h)
+title: MFNETSOURCE_PEERMANAGER-Eigenschaft (Mfidl.h)
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 9f91f4b244d82a990fb1afd46ffe5eb3799b3c6a
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 9933059fa151ced5aa11bb91185c74ca5eb6507f264c622a65e2f112e0b52369
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "104042642"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119940230"
 ---
-# <a name="mfnetsource_peermanager-property"></a>MF NetSource- \_ Eigenschaft "Peer Manager"
+# <a name="mfnetsource_peermanager-property"></a>MFNETSOURCE \_ PEERMANAGER-Eigenschaft
 
-Gibt einen anzeigen Amen für die Identifizierung des Clients an.
+Gibt einen Anzeigenamen für die Identifizierung des Clients an.
 
 
 
 Datentyp
 
-PROPVARIANT-Typ (VT)
+PROPVARIANT-Typ (vt)
 
 PROPVARIANT-Member
 
-Breit Zeichen-Zeichenfolge (**WCHAR** \* )
+Breitzeichenfolge (**WCHAR** \* )
 
 VT \_ LPWSTR
 
-**pwszval**
+**pwszVal**
 
 
 
@@ -37,9 +37,9 @@ VT \_ LPWSTR
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows 8 \[ -Desktop-Apps\]<br/>                                         |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2012 \[ -Desktop-Apps\]<br/>                               |
-| Header<br/>                   | <dl> <dt>Mspdl. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | \[Windows 8 Nur Desktop-Apps\]<br/>                                         |
+| Unterstützte Mindestversion (Server)<br/> | \[Windows Server 2012 Nur Desktop-Apps\]<br/>                               |
+| Header<br/>                   | <dl> <dt>Mfidl.h</dt> </dl> |
 
 
 
@@ -47,7 +47,7 @@ VT \_ LPWSTR
 
 <dl> <dt>
 
-[Eigenschaften von Media Foundation](media-foundation-properties.md)
+[Media Foundation-Eigenschaften](media-foundation-properties.md)
 </dt> <dt>
 
 [Netzwerk in Media Foundation](networking-in-media-foundation.md)

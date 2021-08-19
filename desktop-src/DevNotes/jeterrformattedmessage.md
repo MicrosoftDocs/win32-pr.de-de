@@ -1,7 +1,7 @@
 ---
-description: Ruft einen Fehlercode Bezeichner (IDA) ab und erstellt die endgültige Anzeige Zeichenfolge, wenn ein Jet-Fehler und erweiterte Fehlerinformationen bereitgestellt werden.
+description: Ruft einen Fehlercodebezeichner (Error Code Identifier, IDA) ab und erstellt die endgültige Anzeigezeichenfolge, wenn ein Jet-Fehler und erweiterte Fehlerinformationen bereitgestellt werden.
 ms.assetid: 961da4fb-cb70-4f3d-a4a4-1774be7a05f4
-title: Jeterrformattedmessage-Funktion
+title: JetErrFormattedMessage-Funktion
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,16 +13,16 @@ api_type:
 - DllExport
 api_location:
 - Msjter40.dll
-ms.openlocfilehash: 75cdf93b4c35a8c7b3dd77fca42c205d898f6e97
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 8b0fa6eb0ac4bc29e5657d3e58d9be1c27188a0faf7c7d68281ceca239dea8e5
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106369381"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118955779"
 ---
-# <a name="jeterrformattedmessage-function"></a>Jeterrformattedmessage-Funktion
+# <a name="jeterrformattedmessage-function"></a>JetErrFormattedMessage-Funktion
 
-Ruft einen Fehlercode Bezeichner (IDA) ab und erstellt die endgültige Anzeige Zeichenfolge, wenn ein Jet-Fehler und erweiterte Fehlerinformationen bereitgestellt werden.
+Ruft einen Fehlercodebezeichner (Error Code Identifier, IDA) ab und erstellt die endgültige Anzeigezeichenfolge, wenn ein Jet-Fehler und erweiterte Fehlerinformationen bereitgestellt werden.
 
 ## <a name="syntax"></a>Syntax
 
@@ -46,21 +46,21 @@ JET_ERR JetErrFormattedMessage(
 
 <dl> <dt>
 
-*irre* 
+*Err* 
 </dt> <dd>
 
-Die Jet-Fehlernummer, die verwendet wird, um die anzeigbare Fehlermeldung zu suchen und zu formatieren.
+Die Jet-Fehlernummer, die zum Suchen und Formatieren der angezeigten Fehlermeldung verwendet wird.
 
 </dd> <dt>
 
-*pextendederrorinfo* 
+*pExtendedErrorInfo* 
 </dt> <dd>
 
-Alle Jet-Fehlerinformationen, einschließlich Datenbankname, Tabellenname und geringfügige Fehlerinformationen.
+Alle Jet-Fehlerinformationen, einschließlich des Datenbanknamens, des Tabellennamens und aller kleineren Fehlerinformationen.
 
 </dd> <dt>
 
-*pida* 
+*Pida* 
 </dt> <dd>
 
 Ein Zeiger auf die IDA, die dem spezifischen Fehlercode zugeordnet ist.
@@ -74,41 +74,41 @@ Ein Zeiger auf die Fehlermeldung.
 
 </dd> <dt>
 
-*cbmessage* 
+*cbMessage* 
 </dt> <dd>
 
-Gibt die Anzahl der Bytes in der Fehlermeldung an.
+Die Anzahl der Bytes in der Fehlermeldung.
 
 </dd> <dt>
 
-*pcbactual* 
+*–actual* 
 </dt> <dd>
 
-Ein Zeiger auf die tatsächliche Anzahl der gelesenen Bytes.
+Ein Zeiger auf die tatsächliche Anzahl gelesener Bytes.
 
 </dd> <dt>
 
-*pcontextid* 
+*pContextId* 
 </dt> <dd>
 
-Ein Zeiger auf den Kontext Bezeichner, der der Hilfedatei zugeordnet ist.
+Ein Zeiger auf den Kontextbezeichner, der der Hilfedatei zugeordnet ist.
 
 </dd> <dt>
 
-*pwszhelp/Datei* 
+*pwszHelp/file* 
 </dt> <dd>
 
-Ein Zeiger auf einen Zeiger auf die Datei, in der der Fehler erläutert wird.
+Ein Zeiger auf einen Zeiger auf die Datei, die den Fehler erklärt.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Wenn die Funktion erfolgreich ausgeführt wird, gibt Sie **Jet \_ errsuccess** zurück; andernfalls wird eine formatierte Fehlermeldung zurückgegeben, die die Ursache für den Fehler angibt.
+Wenn die Funktion erfolgreich ist, gibt sie **JET \_ errSuccess** zurück. Andernfalls wird eine formatierte Fehlermeldung zurückgegeben, die den spezifischen Grund für den Fehler angibt.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Dieser Funktion ist keine Import Bibliothek oder Header Datei zugeordnet. Sie müssen ihn mithilfe der [**LoadLibrary**](/windows/win32/api/libloaderapi/nf-libloaderapi-loadlibrarya) -Funktion und der [**GetProcAddress**](/windows/win32/api/libloaderapi/nf-libloaderapi-getprocaddress) -Funktion aufrufen.
+Dieser Funktion ist keine Importbibliothek oder Headerdatei zugeordnet. Sie müssen sie mithilfe der [**Funktionen LoadLibrary**](/windows/win32/api/libloaderapi/nf-libloaderapi-loadlibrarya) und [**GetProcAddress**](/windows/win32/api/libloaderapi/nf-libloaderapi-getprocaddress) aufrufen.
 
 ## <a name="requirements"></a>Anforderungen
 

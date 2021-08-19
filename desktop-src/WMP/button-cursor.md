@@ -1,9 +1,9 @@
 ---
-title: Button. Cursor
-description: Das Cursor Attribut gibt den Cursor an oder ruft ihn ab, der angezeigt wird, wenn der Mauszeiger über die Schaltfläche bewegt wird.
+title: BUTTON.cursor
+description: Das Cursorattribut gibt den Cursor an, der angezeigt wird, wenn der Mauszeiger auf button zeigt, oder ruft diesen ab.
 ms.assetid: 19bdbb23-00e2-45cf-b67d-9ada036b9c3b
 keywords:
-- Button. Cursor-Fenster Media Player
+- BUTTON.cursor Windows Media Player
 topic_type:
 - apiref
 api_name:
@@ -12,16 +12,16 @@ api_type:
 - NA
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: a2641491a5a73498da2c43fd74d4187b5594e177
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: aa98c91080bc6d108e8ab62f0de99758c4eb6ba4229a83f8ded8b22bb2ec9695
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106356428"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120123790"
 ---
-# <a name="buttoncursor"></a>Button. Cursor
+# <a name="buttoncursor"></a>BUTTON.cursor
 
-Das **Cursor** Attribut gibt den Cursor an oder ruft ihn ab, der angezeigt wird, wenn der Mauszeiger über die **Schaltfläche** bewegt wird.
+Das  Cursorattribut gibt den Cursor an, der angezeigt wird, wenn der Mauszeiger auf button zeigt, oder ruft **diesen ab.**
 
 ``` syntax
         elementID.cursor
@@ -29,32 +29,32 @@ Das **Cursor** Attribut gibt den Cursor an oder ruft ihn ab, der angezeigt wird,
 
 ## <a name="possible-values"></a>Mögliche Werte
 
-Dieses Attribut ist eine Lese- **/schreibzeichenfolge**.
+Dieses Attribut ist eine Zeichenfolge mit **Lese-/Schreibzugriff.**
 
 
 
 | Wert            | Beschreibung                                                                                |
 |------------------|--------------------------------------------------------------------------------------------|
-| System           | Standard. Platt Form abhängiger Cursor (in der Regel ein Pfeil).                                     |
-| linken             | Linken.                                                                                      |
-| help             | Pfeil mit Fragezeichen, das angibt, dass Hilfe verfügbar ist.                                     |
-| SizeAll          | Vierstufige Pfeil, der nach Norden, Süden, Osten und Westen zeigt.                                  |
-| sizenesw         | Ein Pfeil mit zwei Spitzen, der auf Nordost und Südwest zeigt.                                     |
-| SizeNS           | Ein Pfeil mit zwei Spitzen, der nach Norden und Süden zeigt.                                             |
-| sizenwse         | Ein Pfeil mit zwei Spitzen, der auf Nordwest und Südost zeigt.                                     |
-| SizeWE           | Ein Pfeil mit zwei Spitzen, der nach Westen und Osten zeigt.                                               |
-| oben          | Vertikaler Pfeil nach oben.                                                            |
-| \*. ani oder \* . cur | Alle. ani-oder. cur-Dateien (müssen sich in demselben Verzeichnis wie die WMS-Datei oder in der WMZ-Datei befinden) |
+| System           | Standard. Plattformabhängiger Cursor (in der Regel ein Pfeil).                                     |
+| Hand             | Hand.                                                                                      |
+| Hilfe             | Pfeil mit Fragezeichen, das angibt, dass Hilfe verfügbar ist.                                     |
+| sizeall          | Vier zeigende Pfeile, die nach Norden, Süden, Osten und Westen zeigen.                                  |
+| sizenesw         | Doppelspitzenpfeil, der auf Nordosten und Nordosten zeigt.                                     |
+| Größen           | Doppelter Pfeil, der nach Norden und Süden zeigt.                                             |
+| sizenwse         | Doppelter Pfeil, der nach Nordosten und Südosten zeigt.                                     |
+| sizewe           | Doppelter Pfeil, der nach Westen und Osten zeigt.                                               |
+| Uparrow          | Vertikaler Pfeil, der nach oben zeigt.                                                            |
+| \*.ani oder \* .cur | Jede ANI- oder CUR-Datei (muss sich im gleichen Verzeichnis wie die WMS-Datei oder in der WMZ-Datei befinden) |
 
 
 
  
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Wenn das System den angegebenen Cursor Wert nicht erkennt, verbleibt der Cursor Wert am zuvor festgelegten Wert.
+Wenn das System den angegebenen Cursorwert nicht erkennt, bleibt der Cursorwert beim zuvor festgelegten Wert.
 
-Cursor-Dateinamen Pfade werden ignoriert, sodass sich die Cursor Datei im Standardverzeichnis befinden muss.
+Cursordateinamenpfade werden ignoriert, sodass sich die Cursordatei im Standardverzeichnis befinden muss.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -62,7 +62,7 @@ Cursor-Dateinamen Pfade werden ignoriert, sodass sich die Cursor Datei im Standa
 
 | Anforderung | Wert |
 |--------------------|------------------------------------------------------|
-| Version<br/> | Windows Media Player, Version 7,0 oder höher<br/> |
+| Version<br/> | Windows Media Player Version 7.0 oder höher<br/> |
 
 
 
@@ -70,7 +70,7 @@ Cursor-Dateinamen Pfade werden ignoriert, sodass sich die Cursor Datei im Standa
 
 <dl> <dt>
 
-[**Button-Element**](button-element.md)
+[**BUTTON-Element**](button-element.md)
 </dt> </dl>
 
  
