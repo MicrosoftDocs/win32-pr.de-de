@@ -1,11 +1,11 @@
 ---
-title: Attribut für vorherige festgelegte Zeit
-description: Die vorherige für einen geheimen Schlüssel festgelegte Zeit.
+title: Prior-Set-Time-Attribut
+description: Die vorherige Zeit, die für ein Geheimnis festgelegt wurde.
 ms.assetid: 052dbfe3-8326-48a2-8d5f-2889d8e34848
 ms.tgt_platform: multiple
 keywords:
-- AD-Schema für das vorherige festgelegte Zeit Attribut
-- AD-Schema für priorsettime-Attribut
+- AD-Schema des Prior-Set-Time-Attributs
+- priorSetTime-Attribut AD-Schema
 topic_type:
 - apiref
 api_name:
@@ -14,26 +14,26 @@ api_type:
 - Schema
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: d2c33521b1a29907b13181b715f0d46a8d12999b
-ms.sourcegitcommit: b77ace27b0432e7cd3863191b11926be032fbe2f
+ms.openlocfilehash: 5836335ef814e7b3dbda1931fa8ee7544b8da0570a7581c7b63a40d9db94626f
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "103957321"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119022268"
 ---
-# <a name="prior-set-time-attribute"></a>Attribut für vorherige festgelegte Zeit
+# <a name="prior-set-time-attribute"></a>Prior-Set-Time-Attribut
 
-Die vorherige für einen geheimen Schlüssel festgelegte Zeit.
+Die vorherige Zeit, die für ein Geheimnis festgelegt wurde.
 
 
 
 | Eingabe | Wert |
 |-------------------|--------------------------------------|
-| CN                | Vorherige festgelegte Zeit                       |
-| LDAP-Display-Name | priorsettime                         |
+| CN                | Prior-Set-Time                       |
+| Ldap-Anzeigename | priorSetTime                         |
 | Size              | 8 Bytes                              |
-| Berechtigung aktualisieren  | \-                                   |
-| Aktualisierungshäufigkeit  | \-                                   |
+| Aktualisieren von Berechtigungen  | \-                                   |
+| Updatehäufigkeit  | \-                                   |
 | Attribute-Id      | 1.2.840.113556.1.4.99                |
 | System-ID-GUID    | bf967a01-0de6-11d0-a285-00aa003049e2 |
 | Syntax            | [**Intervall**](s-interval.md)       |
@@ -43,7 +43,7 @@ Die vorherige für einen geheimen Schlüssel festgelegte Zeit.
 ## <a name="implementations"></a>Implementierungen
 
 -   [**Windows 2000 Server**](#windows-2000-server)
--   [**Windows Server 2003**](#windows-server-2003)
+-   [**Windows Server 2003**](#windows-server-2003)
 -   [**Windows Server 2003 R2**](#windows-server-2003-r2)
 -   [**Windows Server 2008**](#windows-server-2008)
 -   [**Windows Server 2008 R2**](#windows-server-2008-r2)
@@ -57,20 +57,20 @@ Die vorherige für einen geheimen Schlüssel festgelegte Zeit.
 |------------------------|---------------------------------------|
 | Link-ID                | \-                                    |
 | MAPI-Id                | \-                                    |
-| System-Only            | False                                 |
-| Ist-einwertig       | Richtig                                  |
-| Ist indiziert             | False                                 |
-| Im globalen Katalog      | False                                 |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                          |
+| System-Only            | Falsch                                 |
+| Ist einwertig       | Richtig                                  |
+| Ist indiziert             | Falsch                                 |
+| Im globalen Katalog      | Falsch                                 |
+| NT-Security-Descriptor | O:BAG:BAD:S:                          |
 | Range-Lower            | \-                                    |
 | Range-Upper            | \-                                    |
 | Search-Flags           | 0x00000000                            |
 | System-Flags           | 0x00000010                            |
-| In verwendete Klassen        | [**Geheimen**](c-secret.md)<br/> |
+| In verwendete Klassen        | [**`Secret`**](c-secret.md)<br/> |
 
 
 
-## <a name="windows-server-2003"></a>Windows Server 2003
+## <a name="windows-server-2003"></a>Windows Server 2003
 
 
 
@@ -78,16 +78,16 @@ Die vorherige für einen geheimen Schlüssel festgelegte Zeit.
 |------------------------|---------------------------------------|
 | Link-ID                | \-                                    |
 | MAPI-Id                | \-                                    |
-| System-Only            | False                                 |
-| Ist-einwertig       | Richtig                                  |
-| Ist indiziert             | False                                 |
-| Im globalen Katalog      | False                                 |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                          |
+| System-Only            | Falsch                                 |
+| Ist einwertig       | Richtig                                  |
+| Ist indiziert             | Falsch                                 |
+| Im globalen Katalog      | Falsch                                 |
+| NT-Security-Descriptor | O:BAG:BAD:S:                          |
 | Range-Lower            | \-                                    |
 | Range-Upper            | \-                                    |
 | Search-Flags           | 0x00000000                            |
 | System-Flags           | 0x00000010                            |
-| In verwendete Klassen        | [**Geheimen**](c-secret.md)<br/> |
+| In verwendete Klassen        | [**`Secret`**](c-secret.md)<br/> |
 
 
 
@@ -99,16 +99,16 @@ Die vorherige für einen geheimen Schlüssel festgelegte Zeit.
 |------------------------|---------------------------------------|
 | Link-ID                | \-                                    |
 | MAPI-Id                | \-                                    |
-| System-Only            | False                                 |
-| Ist-einwertig       | Richtig                                  |
-| Ist indiziert             | False                                 |
-| Im globalen Katalog      | False                                 |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                          |
+| System-Only            | Falsch                                 |
+| Ist einwertig       | Richtig                                  |
+| Ist indiziert             | Falsch                                 |
+| Im globalen Katalog      | Falsch                                 |
+| NT-Security-Descriptor | O:BAG:BAD:S:                          |
 | Range-Lower            | \-                                    |
 | Range-Upper            | \-                                    |
 | Search-Flags           | 0x00000000                            |
 | System-Flags           | 0x00000010                            |
-| In verwendete Klassen        | [**Geheimen**](c-secret.md)<br/> |
+| In verwendete Klassen        | [**`Secret`**](c-secret.md)<br/> |
 
 
 
@@ -120,16 +120,16 @@ Die vorherige für einen geheimen Schlüssel festgelegte Zeit.
 |------------------------|---------------------------------------|
 | Link-ID                | \-                                    |
 | MAPI-Id                | \-                                    |
-| System-Only            | False                                 |
-| Ist-einwertig       | Richtig                                  |
-| Ist indiziert             | False                                 |
-| Im globalen Katalog      | False                                 |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                          |
+| System-Only            | Falsch                                 |
+| Ist einwertig       | Richtig                                  |
+| Ist indiziert             | Falsch                                 |
+| Im globalen Katalog      | Falsch                                 |
+| NT-Security-Descriptor | O:BAG:BAD:S:                          |
 | Range-Lower            | \-                                    |
 | Range-Upper            | \-                                    |
 | Search-Flags           | 0x00000000                            |
 | System-Flags           | 0x00000010                            |
-| In verwendete Klassen        | [**Geheimen**](c-secret.md)<br/> |
+| In verwendete Klassen        | [**`Secret`**](c-secret.md)<br/> |
 
 
 
@@ -141,16 +141,16 @@ Die vorherige für einen geheimen Schlüssel festgelegte Zeit.
 |------------------------|---------------------------------------|
 | Link-ID                | \-                                    |
 | MAPI-Id                | \-                                    |
-| System-Only            | False                                 |
-| Ist-einwertig       | Richtig                                  |
-| Ist indiziert             | False                                 |
-| Im globalen Katalog      | False                                 |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                          |
+| System-Only            | Falsch                                 |
+| Ist einwertig       | Richtig                                  |
+| Ist indiziert             | Falsch                                 |
+| Im globalen Katalog      | Falsch                                 |
+| NT-Security-Descriptor | O:BAG:BAD:S:                          |
 | Range-Lower            | \-                                    |
 | Range-Upper            | \-                                    |
 | Search-Flags           | 0x00000000                            |
 | System-Flags           | 0x00000010                            |
-| In verwendete Klassen        | [**Geheimen**](c-secret.md)<br/> |
+| In verwendete Klassen        | [**`Secret`**](c-secret.md)<br/> |
 
 
 
@@ -162,16 +162,16 @@ Die vorherige für einen geheimen Schlüssel festgelegte Zeit.
 |------------------------|---------------------------------------|
 | Link-ID                | \-                                    |
 | MAPI-Id                | \-                                    |
-| System-Only            | False                                 |
-| Ist-einwertig       | Richtig                                  |
-| Ist indiziert             | False                                 |
-| Im globalen Katalog      | False                                 |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                          |
+| System-Only            | Falsch                                 |
+| Ist einwertig       | Richtig                                  |
+| Ist indiziert             | Falsch                                 |
+| Im globalen Katalog      | Falsch                                 |
+| NT-Security-Descriptor | O:BAG:BAD:S:                          |
 | Range-Lower            | \-                                    |
 | Range-Upper            | \-                                    |
 | Search-Flags           | 0x00000000                            |
 | System-Flags           | 0x00000010                            |
-| In verwendete Klassen        | [**Geheimen**](c-secret.md)<br/> |
+| In verwendete Klassen        | [**`Secret`**](c-secret.md)<br/> |
 
 
 

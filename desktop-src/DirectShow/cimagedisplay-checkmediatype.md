@@ -1,7 +1,7 @@
 ---
-description: Die checkmediatype-Methode bestimmt, ob ein vorgeschlagene Medientyp mit dem Anzeige Format kompatibel ist.
+description: Die CheckMediaType-Methode bestimmt, ob ein vorgeschlagener Medientyp mit dem Anzeigeformat kompatibel ist.
 ms.assetid: 567663cf-c79f-4549-9fa9-b16da957d2b1
-title: Cimagedisplay. checkmediatype-Methode (winutil. h)
+title: CImageDisplay.CheckMediaType-Methode (Winutil.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,16 +16,16 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: a8ebcdbe6bbfe6538a2ea166be0816f31954c7d2
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 6bad6a7242ba110ad3916d08070eef40a8fa1d5d658ea366732e14a1cd107d04
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106366906"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120087390"
 ---
-# <a name="cimagedisplaycheckmediatype-method"></a>Cimagedisplay. checkmediatype-Methode
+# <a name="cimagedisplaycheckmediatype-method"></a>CImageDisplay.CheckMediaType-Methode
 
-Die- `CheckMediaType` Methode bestimmt, ob ein vorgeschlagene Medientyp mit dem Anzeige Format kompatibel ist.
+Die `CheckMediaType` -Methode bestimmt, ob ein vorgeschlagener Medientyp mit dem Anzeigeformat kompatibel ist.
 
 ## <a name="syntax"></a>Syntax
 
@@ -42,23 +42,23 @@ HRESULT CheckMediaType(
 
 <dl> <dt>
 
-*pmtin* 
+*pmtIn* 
 </dt> <dd>
 
-Zeiger auf ein [**cmediatype**](cmediatype.md) -Objekt, das den Medientyp enthält.
+Zeiger auf ein [**CMediaType-Objekt,**](cmediatype.md) das den Medientyp enthält.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt einen **HRESULT** -Wert zurück. Die folgenden Werte sind möglich.
+Gibt einen **HRESULT-Wert** zurück. Die folgenden Werte sind möglich.
 
 
 
 | Rückgabecode                                                                                  | Beschreibung                              |
 |----------------------------------------------------------------------------------------------|------------------------------------------|
-| <dl> <dt>**E \_ fehlschlagen**</dt> </dl>       | Ungültiger Medientyp.<br/>           |
-| <dl> <dt>**E \_ invalidArg**</dt> </dl> | Ungültiger Medientyp.<br/>           |
+| <dl> <dt>**E \_ FAIL**</dt> </dl>       | Ungültiger Medientyp.<br/>           |
+| <dl> <dt>**E \_ INVALIDARG**</dt> </dl> | Ungültiger Medientyp.<br/>           |
 | <dl> <dt>**S \_ OK**</dt> </dl>         | Der Medientyp ist kompatibel.<br/> |
 
 
@@ -71,8 +71,8 @@ Gibt einen **HRESULT** -Wert zurück. Die folgenden Werte sind möglich.
 
 | Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Winutil. h (Include Streams. h)</dt> </dl>                                                                                   |
-| Bibliothek<br/> | <dl> " <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Winutil.h (include Streams.h)</dt> </dl>                                                                                   |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Einzelhandels-Builds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
@@ -80,7 +80,7 @@ Gibt einen **HRESULT** -Wert zurück. Die folgenden Werte sind möglich.
 
 <dl> <dt>
 
-[**Cimagedisplay-Klasse**](cimagedisplay.md)
+[**CImageDisplay-Klasse**](cimagedisplay.md)
 </dt> </dl>
 
  

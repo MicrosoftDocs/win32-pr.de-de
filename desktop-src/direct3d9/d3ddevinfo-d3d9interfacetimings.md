@@ -1,7 +1,7 @@
 ---
-description: Der Prozentsatz der Zeit, die Daten im Treiber verarbeitet. Mithilfe dieser Statistiken können Fälle identifiziert werden, in denen der Treiber auf andere Ressourcen wartet.
+description: Prozent der Zeit, die Daten im Treiber verarbeitet. Mithilfe dieser Statistiken können Fälle identifiziert werden, in denen der Treiber auf andere Ressourcen wartet.
 ms.assetid: 2c613349-61eb-44aa-aa7b-3161dd1fc95e
-title: D3DDEVINFO_D3D9INTERFACETIMINGS-Struktur (D3D9Types. h)
+title: D3DDEVINFO_D3D9INTERFACETIMINGS -Struktur (D3D9Types.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,16 +13,16 @@ api_type:
 - HeaderDef
 api_location:
 - D3D9Types.h
-ms.openlocfilehash: dfd6303f3682e29090db41fa83b38fc67f99121e
-ms.sourcegitcommit: 14010c34b35fa268046c7683f021f86de08ddd0a
+ms.openlocfilehash: d7261096ed373620b8438ccce2d353ccf21f1c236028e8c829951fc64ee3725a
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "106354357"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118989030"
 ---
 # <a name="d3ddevinfo_d3d9interfacetimings-structure"></a>D3DDEVINFO \_ D3D9INTERFACETIMINGS-Struktur
 
-Der Prozentsatz der Zeit, die Daten im Treiber verarbeitet. Mithilfe dieser Statistiken können Fälle identifiziert werden, in denen der Treiber auf andere Ressourcen wartet.
+Prozent der Zeit, die Daten im Treiber verarbeitet. Mithilfe dieser Statistiken können Fälle identifiziert werden, in denen der Treiber auf andere Ressourcen wartet.
 
 ## <a name="syntax"></a>Syntax
 
@@ -43,68 +43,68 @@ typedef struct D3DDEVINFO_D3D9INTERFACETIMINGS {
 
 <dl> <dt>
 
-**Waitingforgputougenapplicationresourcetimeprozent**
+**WaitingForGPUToUseApplicationResourceTimePercent**
 </dt> <dd>
 
-Typ: **[ **float**](../winprog/windows-data-types.md)**
+Typ: **[ **FLOAT**](../winprog/windows-data-types.md)**
 
 </dd> <dd>
 
-Der Prozentsatz der Zeit, die der Treiber auf die Beendigung der GPU mithilfe einer gesperrten Ressource gewartet hat (und [D3DLOCK \_ donotwait](d3dlock.md) nicht angegeben wurde).
+Prozentsatz der Zeit, die der Treiber auf den Abschluss der GPU mithilfe einer gesperrten Ressource gewartet hat [(D3DLOCK \_ DONOTWAIT](d3dlock.md) wurde nicht angegeben).
 
 </dd> <dt>
 
-**Waitingforgputoakzeptmorecommandstimeprozent**
+**WaitingForGPUToAcceptMoreCommandsTimePercent**
 </dt> <dd>
 
-Typ: **[ **float**](../winprog/windows-data-types.md)**
+Typ: **[ **FLOAT**](../winprog/windows-data-types.md)**
 
 </dd> <dd>
 
-Der Prozentsatz der Zeit, die der Treiber auf die Verarbeitung einiger Befehle durch die GPU gewartet hat, bevor der Treiber mehr senden konnte. Dies gibt an, dass der Treiber nicht mehr genügend Platz zum Senden von Befehlen an die GPU hat.
+Prozentsatz der Zeit, die der Treiber auf den Abschluss der GPU-Verarbeitung einiger Befehle gewartet hat, bevor der Treiber mehr senden konnte. Dies weist darauf hin, dass dem Treiber der Platz zum Senden von Befehlen an die GPU nicht mehr zur Verfügung steht.
 
 </dd> <dt>
 
-**Waitingforgputostaywithinlatencytimeprozent**
+**WaitingForGPUToStayWithinLatencyTimePercent**
 </dt> <dd>
 
-Typ: **[ **float**](../winprog/windows-data-types.md)**
+Typ: **[ **FLOAT**](../winprog/windows-data-types.md)**
 
 </dd> <dd>
 
-Der Prozentsatz der Zeit, die der Treiber gewartet hat, bis die GPU-Latenz auf weniger als drei renderingframes reduziert wurde.
+Prozentsatz der Zeit, die der Treiber auf eine Reduzierung der GPU-Latenz auf weniger als drei Renderingframes gewartet hat.
 
-Wenn eine Anwendung GPU-begrenzt ist, muss der Treiber die CPU so lange einstellen, bis die GPU innerhalb von drei Frames erreicht wird. Dadurch wird verhindert, dass eine Anwendung eine große Anzahl von renderingaufrufen in die Warteschlange eingereiht, was die Wartezeit zwischen dem Zeitpunkt, zu dem der Benutzer neue Daten eingibt, und dem Zeitpunkt, zu dem der Benutzer die Ergebnisse dieser Eingabe sieht Im Allgemeinen kann der Treiber überprüfen, wie oft der [**vorhandene**](/windows/win32/api/d3d9helper/nf-d3d9helper-idirect3ddevice9-present) aufgerufen wird, um zu verhindern, dass mehr als drei Frames der Rendering-Arbeit in die Warteschlange eingereiht werden.
+Wenn eine Anwendung gpu-eingeschränkt ist, muss der Treiber die CPU so lange einstellen, bis die GPU innerhalb von drei Frames ausgeführt wird. Dadurch wird verhindert, dass eine Anwendung Renderingaufrufe in sekundenschnelle in die Warteschlange einschlange, was die Latenz zwischen der Eingabe neuer Daten durch den Benutzer und dem Sehen der Ergebnisse dieser Eingabe erheblich erhöhen kann. Im Allgemeinen kann der Treiber nachverfolgen, wie oft [**Present**](/windows/win32/api/d3d9helper/nf-d3d9helper-idirect3ddevice9-present) aufgerufen wird, um zu verhindern, dass mehr als drei Frames von Renderingarbeit in die Warteschlange warteschlangen.
 
 </dd> <dt>
 
-**Waitingforgpuexclusiveresourcetimeprozent**
+**WaitingForGPUExclusiveResourceTimePercent**
 </dt> <dd>
 
-Typ: **[ **float**](../winprog/windows-data-types.md)**
+Typ: **[ **FLOAT**](../winprog/windows-data-types.md)**
 
 </dd> <dd>
 
-Der Prozentsatz der Zeit, die der Treiber auf eine Ressource gewartet hat, die nicht Pipeline (parallel betrieben) werden kann. Eine Anwendung kann aus Leistungsgründen die Verwendung einer Ressource ohne Pipelines vermeiden.
+Prozentsatz der Zeit, die der Treiber auf eine Ressource gewartet hat, für die keine Pipeline ausgeführt werden kann (die parallel betrieben wird). Eine Anwendung sollte aus Leistungsgründen die Verwendung einer Nichtpipelineressource vermeiden.
 
 </dd> <dt>
 
-**Waitingforgpuothertimeprozent**
+**WaitingForGPUOtherTimePercent**
 </dt> <dd>
 
-Typ: **[ **float**](../winprog/windows-data-types.md)**
+Typ: **[ **FLOAT**](../winprog/windows-data-types.md)**
 
 </dd> <dd>
 
-Der Prozentsatz der Zeit, die der Treiber auf die Verarbeitung anderer GPU gewartet hat.
+Prozentsatz der Wartezeit des Treibers auf andere GPU-Verarbeitung.
 
 </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Diese Metriken helfen, zu bestimmen, wann ein Treiber wartet und worauf er wartet. Hohe Prozentsätze sind nicht notwendigerweise ein Problem.
+Mit diesen Metriken können Sie erkennen, wann ein Treiber wartet und worauf er wartet. Hohe Prozentsätze sind nicht unbedingt ein Problem.
 
-Diese systemweiten Metriken können oder nicht implementiert werden. Abhängig von der jeweiligen Hardware unterstützen diese Metriken möglicherweise nicht mehrere Abfragen gleichzeitig.
+Diese system globalen Metriken können implementiert werden oder nicht. Abhängig von der spezifischen Hardware unterstützen diese Metriken möglicherweise nicht mehrere Abfragen gleichzeitig.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -112,11 +112,11 @@ Diese systemweiten Metriken können oder nicht implementiert werden. Abhängig v
 
 | Anforderung | Wert |
 |-------------------|----------------------------------------------------------------------------------------|
-| Header<br/> | <dl> <dt>D3D9Types. h</dt> </dl> |
+| Header<br/> | <dl> <dt>D3D9Types.h</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 

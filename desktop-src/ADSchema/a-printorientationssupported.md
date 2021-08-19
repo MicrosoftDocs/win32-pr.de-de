@@ -1,11 +1,11 @@
 ---
-title: Durch Print-Ausrichtungen unterstütztes Attribut
-description: Die Seiten Drehung für das Querformat.
+title: Print-Orientations-Supported-Attribut
+description: Die Seitenrotation für Querformatdruck.
 ms.assetid: a3e910f1-452e-4b85-8ede-50b7274475a0
 ms.tgt_platform: multiple
 keywords:
-- Vom Print-Ausrichtungen unterstütztes AD-Schema für Attribute
-- printorientationssupported-Attribut, AD-Schema
+- Print-Orientations-Supported attribute AD Schema
+- printOrientationsSupported attribute AD Schema
 topic_type:
 - apiref
 api_name:
@@ -14,28 +14,28 @@ api_type:
 - Schema
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 49888caa713de7dd12616dcb9932e52b15b2a454
-ms.sourcegitcommit: b77ace27b0432e7cd3863191b11926be032fbe2f
+ms.openlocfilehash: ffe346318b043f988f04d3f5f99cfd6c138ffdaa984eec2b0cf06f5cfa1c92ee
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "106343507"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119022368"
 ---
-# <a name="print-orientations-supported-attribute"></a>Durch Print-Ausrichtungen unterstütztes Attribut
+# <a name="print-orientations-supported-attribute"></a>Print-Orientations-Supported-Attribut
 
-Die Seiten Drehung für das Querformat.
+Die Seitenrotation für Querformatdruck.
 
 
 
 | Eingabe | Wert |
 |-------------------|-------------------------------------------------------------|
-| CN                | Print-Ausrichtungen-unterstützt                                |
-| LDAP-Display-Name | printorientationssupported                                  |
+| CN                | Druckausrichtungen unterstützt                                |
+| Ldap-Anzeigename | printOrientationsSupported                                  |
 | Size              | 4 Bytes. Mögliche Werte: 0, 90, 270 und 0 = keine Querformat. |
-| Berechtigung aktualisieren  | \-                                                          |
-| Aktualisierungshäufigkeit  | \-                                                          |
+| Aktualisieren von Berechtigungen  | \-                                                          |
+| Updatehäufigkeit  | \-                                                          |
 | Attribute-Id      | 1.2.840.113556.1.4.240                                      |
-| System-ID-GUID    | 281416d0-1968-11D0-a28f -00aa003049e2                        |
+| System-Id-Guid    | 281416d0-1968-11d0-a28f-00aa003049e2                        |
 | Syntax            | [**String(Unicode)**](s-string-unicode.md)                 |
 
 
@@ -43,7 +43,7 @@ Die Seiten Drehung für das Querformat.
 ## <a name="implementations"></a>Implementierungen
 
 -   [**Windows 2000 Server**](#windows-2000-server)
--   [**Windows Server 2003**](#windows-server-2003)
+-   [**Windows Server 2003**](#windows-server-2003)
 -   [**Windows Server 2003 R2**](#windows-server-2003-r2)
 -   [**Windows Server 2008**](#windows-server-2008)
 -   [**Windows Server 2008 R2**](#windows-server-2008-r2)
@@ -57,20 +57,20 @@ Die Seiten Drehung für das Querformat.
 |------------------------|------------------------------------------------|
 | Link-ID                | \-                                             |
 | MAPI-Id                | \-                                             |
-| System-Only            | False                                          |
-| Ist-einwertig       | False                                          |
-| Ist indiziert             | False                                          |
-| Im globalen Katalog      | False                                          |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                   |
+| System-Only            | Falsch                                          |
+| Is-Single-Valued       | Falsch                                          |
+| Ist indiziert             | Falsch                                          |
+| Im globalen Katalog      | Falsch                                          |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                   |
 | Range-Lower            | 1                                              |
 | Range-Upper            | 256                                            |
 | Search-Flags           | 0x00000000                                     |
 | System-Flags           | 0x00000010                                     |
-| In verwendete Klassen        | [**Druck Warteschlange**](c-printqueue.md)<br/> |
+| In verwendete Klassen        | [**Druckwarteschlange**](c-printqueue.md)<br/> |
 
 
 
-## <a name="windows-server-2003"></a>Windows Server 2003
+## <a name="windows-server-2003"></a>Windows Server 2003
 
 
 
@@ -78,16 +78,16 @@ Die Seiten Drehung für das Querformat.
 |------------------------|------------------------------------------------|
 | Link-ID                | \-                                             |
 | MAPI-Id                | \-                                             |
-| System-Only            | False                                          |
-| Ist-einwertig       | False                                          |
-| Ist indiziert             | False                                          |
-| Im globalen Katalog      | False                                          |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                   |
+| System-Only            | Falsch                                          |
+| Is-Single-Valued       | Falsch                                          |
+| Ist indiziert             | Falsch                                          |
+| Im globalen Katalog      | Falsch                                          |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                   |
 | Range-Lower            | 1                                              |
 | Range-Upper            | 256                                            |
 | Search-Flags           | 0x00000000                                     |
 | System-Flags           | 0x00000010                                     |
-| In verwendete Klassen        | [**Druck Warteschlange**](c-printqueue.md)<br/> |
+| In verwendete Klassen        | [**Druckwarteschlange**](c-printqueue.md)<br/> |
 
 
 
@@ -99,16 +99,16 @@ Die Seiten Drehung für das Querformat.
 |------------------------|------------------------------------------------|
 | Link-ID                | \-                                             |
 | MAPI-Id                | \-                                             |
-| System-Only            | False                                          |
-| Ist-einwertig       | False                                          |
-| Ist indiziert             | False                                          |
-| Im globalen Katalog      | False                                          |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                   |
+| System-Only            | Falsch                                          |
+| Is-Single-Valued       | Falsch                                          |
+| Ist indiziert             | Falsch                                          |
+| Im globalen Katalog      | Falsch                                          |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                   |
 | Range-Lower            | 1                                              |
 | Range-Upper            | 256                                            |
 | Search-Flags           | 0x00000000                                     |
 | System-Flags           | 0x00000010                                     |
-| In verwendete Klassen        | [**Druck Warteschlange**](c-printqueue.md)<br/> |
+| In verwendete Klassen        | [**Druckwarteschlange**](c-printqueue.md)<br/> |
 
 
 
@@ -120,16 +120,16 @@ Die Seiten Drehung für das Querformat.
 |------------------------|------------------------------------------------|
 | Link-ID                | \-                                             |
 | MAPI-Id                | \-                                             |
-| System-Only            | False                                          |
-| Ist-einwertig       | False                                          |
-| Ist indiziert             | False                                          |
-| Im globalen Katalog      | False                                          |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                   |
+| System-Only            | Falsch                                          |
+| Ist einwertig       | Falsch                                          |
+| Ist indiziert             | Falsch                                          |
+| Im globalen Katalog      | Falsch                                          |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                   |
 | Range-Lower            | 1                                              |
 | Range-Upper            | 256                                            |
 | Search-Flags           | 0x00000000                                     |
 | System-Flags           | 0x00000010                                     |
-| In verwendete Klassen        | [**Druck Warteschlange**](c-printqueue.md)<br/> |
+| In verwendete Klassen        | [**Druckwarteschlange**](c-printqueue.md)<br/> |
 
 
 
@@ -141,16 +141,16 @@ Die Seiten Drehung für das Querformat.
 |------------------------|------------------------------------------------|
 | Link-ID                | \-                                             |
 | MAPI-Id                | \-                                             |
-| System-Only            | False                                          |
-| Ist-einwertig       | False                                          |
-| Ist indiziert             | False                                          |
-| Im globalen Katalog      | False                                          |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                   |
+| System-Only            | Falsch                                          |
+| Ist einwertig       | Falsch                                          |
+| Ist indiziert             | Falsch                                          |
+| Im globalen Katalog      | Falsch                                          |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                   |
 | Range-Lower            | 1                                              |
 | Range-Upper            | 256                                            |
 | Search-Flags           | 0x00000000                                     |
 | System-Flags           | 0x00000010                                     |
-| In verwendete Klassen        | [**Druck Warteschlange**](c-printqueue.md)<br/> |
+| In verwendete Klassen        | [**Druckwarteschlange**](c-printqueue.md)<br/> |
 
 
 
@@ -162,16 +162,16 @@ Die Seiten Drehung für das Querformat.
 |------------------------|------------------------------------------------|
 | Link-ID                | \-                                             |
 | MAPI-Id                | \-                                             |
-| System-Only            | False                                          |
-| Ist-einwertig       | False                                          |
-| Ist indiziert             | False                                          |
-| Im globalen Katalog      | False                                          |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                   |
+| System-Only            | Falsch                                          |
+| Ist einwertig       | Falsch                                          |
+| Ist indiziert             | Falsch                                          |
+| Im globalen Katalog      | Falsch                                          |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                   |
 | Range-Lower            | 1                                              |
 | Range-Upper            | 256                                            |
 | Search-Flags           | 0x00000000                                     |
 | System-Flags           | 0x00000010                                     |
-| In verwendete Klassen        | [**Druck Warteschlange**](c-printqueue.md)<br/> |
+| In verwendete Klassen        | [**Druckwarteschlange**](c-printqueue.md)<br/> |
 
 
 

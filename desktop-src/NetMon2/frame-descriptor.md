@@ -1,5 +1,5 @@
 ---
-description: Die \_ FRAME-DESCRIPTOR-Struktur stellt beschreibende Informationen zu Unformatierungsframes zur Verfügung.
+description: Die \_ FRAME-DESCRIPTOR-Struktur bietet beschreibende Informationen zu Unformatierungsframes.
 ms.assetid: f2fc256e-8e64-49c1-b2ad-ef656762d5c7
 title: FRAME_DESCRIPTOR -Struktur (Netmon.h)
 ms.topic: reference
@@ -20,7 +20,7 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 08/11/2021
 ms.locfileid: "118938571"
 ---
-# <a name="frame_descriptor-structure"></a>FRAME \_ DESCRIPTOR-Struktur
+# <a name="frame_descriptor-structure"></a>\_FRAME-DESKRIPTORstruktur
 
 Die **\_ FRAME-DESCRIPTOR-Struktur** bietet beschreibende Informationen zu Unformatierungsframes.
 

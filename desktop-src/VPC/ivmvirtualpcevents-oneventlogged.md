@@ -1,11 +1,11 @@
 ---
-title: Ivmvirtualpcevents oneventlogger-Methode (vpccominterfaces. h)
+title: IVMVirtualPCEvents OnEventLogged-Methode (VPCCOMInterfaces.h)
 description: Empfängt eine Benachrichtigung, dass Windows Virtual PC ein Ereignis protokolliert.
 ms.assetid: 89439e8e-e9bf-409e-a129-525b9feb8fdd
 keywords:
-- Oneventlogger-Methode Virtual PC
-- Oneventlogger-Methode Virtual PC, ivmvirtualpcevents-Schnittstelle
-- Ivmvirtualpcevents Interface Virtual PC, oneventlogger-Methode
+- OnEventLogged-Methode Virtueller PC
+- OnEventLogged-Methode Virtueller PC, IVMVirtualPCEvents-Schnittstelle
+- IVMVirtualPCEvents-Schnittstelle Virtueller PC , OnEventLogged-Methode
 topic_type:
 - apiref
 api_name:
@@ -16,16 +16,16 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 196d480383f488c9c0885e95857c8d1a053d5887
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: f4994f37cd0e6f83162171fbbdacbf2247a8d472cd49b5750aa2d1b735e4b554
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104518005"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118998520"
 ---
-# <a name="ivmvirtualpceventsoneventlogged-method"></a>Ivmvirtualpcevents:: oneventlogger-Methode
+# <a name="ivmvirtualpceventsoneventlogged-method"></a>IVMVirtualPCEvents::OnEventLogged-Methode
 
-\[Windows Virtual PC ist nicht mehr für die Verwendung ab Windows 8 verfügbar. Verwenden Sie stattdessen den [Hyper-V-WMI-Anbieter (v2)](/windows/desktop/HyperV_v2/windows-virtualization-portal).\]
+\[Windows Der virtuelle PC ist ab Windows 8 nicht mehr für die Verwendung verfügbar. Verwenden Sie stattdessen den [Hyper-V-WMI-Anbieter (V2).](/windows/desktop/HyperV_v2/windows-virtualization-portal)\]
 
 Empfängt eine Benachrichtigung, dass Windows Virtual PC ein Ereignis protokolliert.
 
@@ -44,20 +44,20 @@ HRESULT OnEventLogged(
 
 <dl> <dt>
 
-*logmessageid* \[ in\]
+*logMessageID* \[ In\]
 </dt> <dd>
 
-Der Meldungs Bezeichner der Ereignisprotokoll Meldung, die protokolliert wurde.
+Der Nachrichtenbezeichner der protokollierten Ereignisprotokollmeldung.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Wenn diese Methode erfolgreich ausgeführt wird, gibt Sie **S \_ OK** zurück. Andernfalls wird ein **HRESULT** -Fehlercode zurückgegeben.
+Wenn diese Methode erfolgreich ist, wird **S \_ OK** zurückgegeben. Andernfalls wird ein **HRESULT-Fehlercode** zurückgegeben.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Diese Methode wird aufgerufen, wenn Windows Virtual PC eine Meldung im Windows-Ereignisprotokoll protokolliert. Das Client Programm muss diese Schnittstellen Methode implementieren, um Benachrichtigungen über das Ereignis vom Typ " **vmvirtualpcevent Ereignis \_ protokolliert** " zu erhalten, das von [**ivmvirtualpc**](ivmvirtualpc.md)stammt.
+Diese Methode wird aufgerufen, wenn Windows Virtual PC eine Nachricht im Windows Ereignisprotokoll protokolliert. Das Clientprogramm muss diese Schnittstellenmethode implementieren, um eine Benachrichtigung über das **Ereignis vmVirtualPCEvent \_ EventLogged** zu erhalten, das von [**IVMVirtualPC**](ivmvirtualpc.md)stammt.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -65,12 +65,12 @@ Diese Methode wird aufgerufen, wenn Windows Virtual PC eine Meldung im Windows-E
 
 | Anforderung | Wert |
 |-------------------------------------|-----------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows 7 \[ -Desktop-Apps\]<br/>                                                    |
+| Unterstützte Mindestversion (Client)<br/> | nur Windows 7 \[ Desktop-Apps\]<br/>                                                    |
 | Unterstützte Mindestversion (Server)<br/> | Nicht unterstützt<br/>                                                                     |
 | Ende des Supports (Client)<br/>    | Windows 7<br/>                                                                          |
-| Produkt<br/>                  | Windows Virtual PC<br/>                                                                 |
-| Header<br/>                   | <dl> <dt>Vpccominterfaces. h</dt> </dl> |
-| IID<br/>                      | Diid \_ ivmvirtualpcevents ist als efed1ef1-3c09-41f7-a9c2-7e29fa286c9d definiert.<br/>        |
+| Product (Produkt)<br/>                  | Windows Virtual PC<br/>                                                                 |
+| Header<br/>                   | <dl> <dt>VPCCOMInterfaces.h</dt> </dl> |
+| IID<br/>                      | DIID \_ IVMVirtualPCEvents ist als efed1ef1-3c09-41f7-a9c2-7e29fa286c9d definiert.<br/>        |
 
 
 
@@ -78,7 +78,7 @@ Diese Methode wird aufgerufen, wenn Windows Virtual PC eine Meldung im Windows-E
 
 <dl> <dt>
 
-[**Ivmvirtualpcevents**](ivmvirtualpcevents.md)
+[**IVMVirtualPCEvents**](ivmvirtualpcevents.md)
 </dt> </dl>
 
  

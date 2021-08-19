@@ -1,36 +1,36 @@
 ---
-description: Beispielcode, der das Sperren und Entsperren von Byte Bereichen mithilfe der Funktionen "lockfileex" und "unlockfileex" anzeigt.
+description: Beispielcode, der das Sperren und Entsperren von Bytebereich mithilfe der Funktionen LockFileEx und UnlockFileEx zeigt.
 ms.assetid: 9d54fe11-b1ad-4723-a42a-00bc6dc64072
-title: Sperren und Entsperren von Byte Bereichen in Dateien
+title: Sperren und Entsperren von Bytebereichen in Dateien
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 7789c56cea100d00168494fac97bdb46e036953c
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 4ccd18fc8a5e2f143cb58717f72abbc135421ee802ff93b651dad0916ed8a953
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "104348538"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118951159"
 ---
-# <a name="locking-and-unlocking-byte-ranges-in-files"></a>Sperren und Entsperren von Byte Bereichen in Dateien
+# <a name="locking-and-unlocking-byte-ranges-in-files"></a>Sperren und Entsperren von Bytebereichen in Dateien
 
-Obwohl das System es mehreren Anwendungen ermöglicht, eine Datei zu öffnen und in Sie zu schreiben, dürfen Anwendungen nicht über die Arbeit der anderen Anwendungen schreiben. Eine Anwendung kann dieses Problem verhindern, indem ein Byte Bereich in einer Datei vorübergehend gesperrt wird.
+Obwohl das System es mehr als einer Anwendung ermöglicht, eine Datei zu öffnen und in sie zu schreiben, dürfen Anwendungen die Arbeit des jeweils anderen nicht überschreiben. Eine Anwendung kann dieses Problem verhindern, indem sie einen Bytebereich in einer Datei vorübergehend sperrt.
 
-Die Funktionen [**lockfile**](/windows/desktop/api/FileAPI/nf-fileapi-lockfile) und [**lockfileex**](/windows/desktop/api/FileAPI/nf-fileapi-lockfileex) Sperren einen angegebenen Bereich von Bytes in einer Datei. Der Bereich kann sich über das aktuelle Ende der Datei erstrecken. Durch das Sperren eines Teils einer Datei erhält der Thread der Sperre exklusiven Zugriff auf den angegebenen Byte Bereich, indem das angegebene Datei Handle verwendet wird. Versuche, auf einen Byte Bereich zuzugreifen, der von einem anderen Prozess gesperrt ist, schlagen immer fehl. Wenn der Sperrprozess versucht, auf einen gesperrten Byte Bereich über ein zweites Datei Handle zuzugreifen, schlägt der Versuch fehl.
+Die [**LockFile-**](/windows/desktop/api/FileAPI/nf-fileapi-lockfile) und [**LockFileEx-Funktionen**](/windows/desktop/api/FileAPI/nf-fileapi-lockfileex) sperren einen angegebenen Bytebereich in einer Datei. Der Bereich kann über das aktuelle Ende der Datei hinausgehen. Das Sperren eines Teils einer Datei gewährt den Threads der Sperrprozesse exklusiven Zugriff auf den angegebenen Bytebereich mithilfe des angegebenen Dateihandpunkts. Versuche, auf einen Bytebereich zu zugreifen, der von einem anderen Prozess gesperrt ist, führen immer zu einem Fehler. Wenn der Sperrprozess versucht, über ein zweites Dateihandling auf einen gesperrten Bytebereich zu zugreifen, schlägt der Versuch fehl.
 
 > [!Note]  
-> Im Speicher abgebildete Dateien werden bei Byte Bereichs Sperren nicht unterstützt.
+> Speicherzuordnungsdateien werden bei Bytebereichssperren nicht unterstützt.
 
  
 
-Mit der [**lockfileex**](/windows/desktop/api/FileAPI/nf-fileapi-lockfileex) -Funktion kann eine Anwendung einen von zwei Arten von Sperren angeben. Eine *exklusive Sperre* verweigert allen anderen Prozessen sowohl Lese-als auch Schreibzugriff auf den angegebenen Byte Bereich einer Datei. Eine frei *gegebene Sperre* verweigert allen Prozessen Schreibzugriff auf den angegebenen Byte Bereich einer Datei, einschließlich des Prozesses, der zuerst den Byte Bereich sperrt. Dies kann verwendet werden, um einen schreibgeschützten Byte Bereich in einer Datei zu erstellen.
+Mit [**der LockFileEx-Funktion**](/windows/desktop/api/FileAPI/nf-fileapi-lockfileex) kann eine Anwendung einen von zwei Arten von Sperren angeben. Eine *exklusive Sperre* verweigert allen anderen Prozessen sowohl Lese- als auch Schreibzugriff auf den angegebenen Bytebereich einer Datei. Eine *freigegebene* Sperre verweigert allen Prozessen Schreibzugriff auf den angegebenen Bytebereich einer Datei, einschließlich des Prozesses, der den Bytebereich zuerst sperrt. Dies kann verwendet werden, um einen schreibgeschützten Bytebereich in einer Datei zu erstellen.
 
-Eine Anwendung entsperrt den Byte Bereich mithilfe der Funktion " [**unlockfile**](/windows/desktop/api/FileAPI/nf-fileapi-unlockfile) " oder " [**unlockfileex**](/windows/desktop/api/FileAPI/nf-fileapi-unlockfileex) " und sollte alle gesperrten Bereiche entsperren, bevor eine Datei geschlossen wird.
+Eine Anwendung entsperrt den Bytebereich mithilfe der [**Funktion UnlockFile**](/windows/desktop/api/FileAPI/nf-fileapi-unlockfile) oder [**UnlockFileEx**](/windows/desktop/api/FileAPI/nf-fileapi-unlockfileex) und sollte alle gesperrten Bereiche entsperren, bevor eine Datei geschlossen wird.
 
-Ein Beispiel für die Verwendung von [**lockfile**](/windows/desktop/api/FileAPI/nf-fileapi-lockfile)finden Sie [unter Anhängen einer Datei an eine andere Datei](appending-one-file-to-another-file.md).
+Ein Beispiel für die Verwendung von [**LockFile finden Sie**](/windows/desktop/api/FileAPI/nf-fileapi-lockfile)unter [Anfügen einer Datei an eine andere Datei.](appending-one-file-to-another-file.md)
 
-In den folgenden Beispielen wird die Verwendung von [**lockfileex**](/windows/desktop/api/FileAPI/nf-fileapi-lockfileex)veranschaulicht. Das erste Beispiel ist eine einfache Demonstration zum Erstellen einer Datei, zum Schreiben von Daten in die Datei und zum anschließenden Sperren eines Abschnitts in der Mitte.
+In den folgenden Beispielen wird die Verwendung von [**LockFileEx gezeigt.**](/windows/desktop/api/FileAPI/nf-fileapi-lockfileex) Das erste Beispiel ist eine einfache Demonstration zum Erstellen einer Datei, zum Schreiben einiger Daten und zum anschließenden Sperren eines Abschnitts in der Mitte.
 
-**Hinweis**  In diesem Beispiel werden die Daten nicht geändert, nachdem die Datei gesperrt wurde.
+**Hinweis:**  In diesem Beispiel werden die Daten nicht geändert, nachdem die Datei gesperrt wurde.
 
 
 ```C++
@@ -167,7 +167,7 @@ int main(int argc, char *argv[])
 
 
 
-Das folgende Beispiel zeigt eine erweiterte Demonstration der Byte Bereichs Sperre, wobei mehrere Threads verwendet werden und eine einfache Datenbank zufällige Vorgänge für eine einzelne Datendatei durchführt. Weitere Informationen finden Sie in den eingebetteten Code Kommentaren und im folgenden Abschnitt.
+Das folgende Beispiel ist eine erweiterte Demonstration der Bytebereichssperre mit mehreren Threads und einer einfachen Datenbank, die zufällige Vorgänge für eine einzelne Datendatei ausführen. Weitere Informationen finden Sie in den eingebetteten Codekommentaren und im Abschnitt nach dem Beispielcode.
 
 
 ```C++
@@ -1028,25 +1028,25 @@ int __cdecl wmain(int argc, LPCWSTR argv[])
 
 
 
-Bei diesem Beispiel handelt es sich um eine Windows-Konsolenanwendung, die mehrere gleichzeitige Zugriffe auf eine Datei ausführt, die alle durch bytebereichsperren mithilfe einer einfachen Datenbank koordiniert werden, bestehend aus mehreren Datensätzen mit fester Größe. Beachten Sie, dass die tatsächliche Übereinstimmung davon abhängt, wie viele Prozessorkerne auf dem Host System vorhanden sind.
+Dieses Beispiel ist eine Windows-Konsolenanwendung, die mehrere gleichzeitige Zugriffe auf eine Datei ausgeführt, alle koordinierten Bytebereichssperren mithilfe einer einfachen Datenbank, die aus mehreren Datensätzen fester Größe besteht. Beachten Sie, dass echte Parallelität davon abhängt, wie viele Prozessorkerne auf dem Hostsystem vorhanden sind.
 
-Alle Datensätze enthalten die ersten beiden Felder gemeinsam: einen Typcode und eine Sequenznummer. Der Typcode ist einer von zwei Codes: der "MSTR"-Code verweist auf den **Master Daten \_ Satz** -Typ, und der "Data"-Code bezieht sich auf einen **Daten \_ Recordtyp** . Es können nur ein **Master Daten \_ Satz** und NULL oder mehr **Daten \_ Sätze** s vorhanden sein. In diesem Beispiel werden Daten, die in den Datensätzen enthalten sind, nach dem Zufallsprinzip generiert. Das zweite Feld, die Sequenznummer, wird jedes Mal, wenn ein Datensatz geändert wird, inkrementiert.
+Alle Datensätze haben die ersten beiden Felder gemeinsam: einen Typcode und eine Sequenznummer. Der Typcode ist einer von zwei Codes: Der "Mstr"-Code bezieht sich auf den **MASTER \_ RECORD-Typ,** und der Code "Data" bezieht sich auf einen **DATA \_ RECORD-Typ.** Es kann nur einen **MASTER \_ RECORD** und null oder mehr **DATA \_ RECORD-s** geben. In diesem Beispiel werden die in den Datensätzen enthaltenen Daten nach dem Zufallsprinzip generiert. Das zweite Feld, die Sequenznummer, wird jedes Mal erhöht, wenn ein Datensatz geändert wird.
 
-Wenn die Ausführung beginnt und die Datendatei nicht bereits vorhanden ist, wird Sie von der **initnewfile** -Funktion erstellt und initialisiert. Die **initnewfile** -Funktion schreibt einen Datensatz vom Typ "Master" mit einer leeren Bitmap am Anfang. Wenn die Datei bereits vorhanden ist, wird Sie geöffnet. Es wird davon ausgegangen, dass ein gültiger Master Daten Satz am Anfang vorhanden ist.
+Wenn die Datendatei zu Beginn der Ausführung noch nicht vorhanden ist, wird sie von der **InitNewFile-Funktion erstellt und initialisiert.** Die **InitNewFile-Funktion** schreibt einen Datensatz vom Typ Master mit einer leeren Bitmap am Anfang. Wenn die Datei bereits vorhanden ist, wird sie geöffnet. Es wird davon ausgegangen, dass am Anfang ein gültiger Masterdatensatz steht.
 
-Nachdem die Datei erfolgreich erstellt oder erfolgreich geöffnet wurde, werden mehrere Arbeitsthreads gestartet, und alle von Ihnen führen eine Schleife aus, in der ein Vorgang und ein Datensatz nach dem Zufallsprinzip ausgewählt werden. Anschließend wird dieser Vorgang für diesen Datensatz versucht. Da diese Vorgänge zufällig sind, sind nicht alle erfolgreich, aber nicht unbedingt Fehler. Die entsprechenden Statusinformationen werden in der Konsole protokolliert.
+Nachdem die Datei erfolgreich erstellt oder erfolgreich geöffnet wurde, werden mehrere Arbeitsthreads gestartet, und alle führen eine Schleife aus, in der ein Vorgang und ein Datensatz nach dem Zufallsprinzip ausgewählt werden. Anschließend wird dieser Vorgang für diesen Datensatz versucht. Da diese Vorgänge zufällig sind, sind nicht alle erfolgreich, aber nicht unbedingt Fehler. Entsprechende Statusinformationen werden in der Konsole protokolliert.
 
-Folgende Vorgänge sind möglich: Erstellung eines neuen Datensatzes, Änderung eines vorhandenen Datensatzes oder Löschen eines vorhandenen Datensatzes. Der Erstellungs Vorgang prüft die Bitmap, um den ersten freien Datensatz zu suchen, und ordnet diesen Datensatz als neuen Datensatz zu. Der Änderungs Vorgang liest die Bitmap, um festzustellen, ob dieser Datensatz tatsächlich vorhanden ist, und ändert diesen Datensatz, wenn dies der Fall ist. Durch den Löschvorgang wird das Bit in der Bitmap gelöscht, das dem Datensatz entspricht, wodurch der Speicherplatz freigegeben wird, der für die spätere Zuweisung belegt ist. Außerdem werden diese Vorgänge in zwei Teile aufgeteilt: Zugriff auf den Masterdatensatz, in dem die Metadaten gespeichert sind, und auf den Daten Satz selbst.
+Folgende Vorgänge sind möglich: Erstellen eines neuen Datensatzes, Ändern eines vorhandenen Datensatzes oder Löschen eines vorhandenen Datensatzes. Der Erstellungsvorgang untersucht die Bitmap, um den ersten freien Datensatz zu finden, und ordnet diesen Datensatz als neuen Datensatz zu. Der Änderungsvorgang liest die Bitmap, um festzustellen, ob dieser Datensatz tatsächlich vorhanden ist, und ändert diesen Datensatz, falls ja. Der Löschvorgang löscht das Bit in der Bitmap, das dem Datensatz entspricht, und gibt den Speicherplatz frei, der für die zukünftige Zuordnung belegt ist. Darüber hinaus sind diese Vorgänge in zwei Teile unterteilt: Zugriff auf den MasterRecord, in dem die Metadaten gespeichert sind, und Zugriff auf den Datensatz selbst.
 
-Da Sie Daten in die Datensätze schreiben, sind die Erstellungs-und Daten Satz Änderungs Vorgänge die einzigen, die Daten Satz Zugriffe erfordern. Aus diesem Grund wird die durch den Datensatz abgedeckte Region ausschließlich vor dem durchgeführten Vorgang gesperrt. Durch die Erstellungs-und Löschvorgänge wird die Bitmap geändert, sodass Sie den Master Daten Satz exklusiv sperren müssen. Allerdings müssen Daten Satz Änderungs Vorgänge nur die Bitmap lesen und nicht in diese schreiben, um zu überprüfen, ob die Datei vorhanden ist. Für diesen Vorgang benötigt der Master Daten Satz nur eine freigegebene Byte Bereichs Sperre.
+Da sie Daten in die Datensätze schreiben, sind die Vorgänge zum Erstellen und Ändern von Datensätzen die einzigen Vorgänge, die Zugriff auf Datensätze erfordern. Aus diesem Grund wird der durch den Datensatz abgedeckte Bereich ausschließlich vor dem ausgeführten Vorgang gesperrt. Die Erstellungs- und Löschvorgänge ändern die Bitmap, sodass sie den Masterdatensatz exklusiv sperren müssen. Datensatzänderungsvorgänge müssen jedoch nur die Bitmap lesen und nicht in sie schreiben, um zu überprüfen, ob die Datei vorhanden ist. Für diesen Vorgang benötigt der Masterdatensatz nur eine gemeinsame Bytebereichssperre.
 
-Exklusive Byte Bereichs Sperren verhindern sowohl Lese-als auch Schreibzugriff von allen anderen Handles auf die Datei. Dies ist der Grund, warum Sie beim Schreiben in einen Datensatz verwendet werden. Auf der anderen Seite verhindert eine freigegebene Byte Bereichs Sperre den Schreibzugriff von allen Handles, einschließlich des Handles, das die Sperre besitzt, aber ermöglicht Lesezugriff von allen Handles.
+Exklusive Bytebereichssperren verhindern den Lese- und Schreibzugriff von allen anderen Handles auf die Datei. Aus diesem Grund werden sie beim Schreiben in einen Datensatz verwendet. Andererseits verhindert eine freigegebene Bytebereichssperre den Schreibzugriff von allen Handles, einschließlich des Handles, das die Sperre besitzt, ermöglicht jedoch den Lesezugriff von allen Handles.
 
-Um die Verwendung von Byte Bereichs Sperren mit der Datei zu veranschaulichen, werden alle e/a-Vorgänge in diesem Beispiel (außer der neuen Datei Initialisierung) über ein asynchrones Datei Handle durchgeführt. Dies ist in der **iorecord** -Funktion in den **iolock** -und **iounlock** -Fällen innerhalb der Switch-Anweisung zu sehen. Die Funktionen [**lockfileex**](/windows/desktop/api/FileAPI/nf-fileapi-lockfileex) und [**unlockfileex**](/windows/desktop/api/FileAPI/nf-fileapi-unlockfileex) werden mit dem überlappenden e/a-Modell verwendet, indem eine [**über**](/windows/desktop/api/MinWinBase/ns-minwinbase-overlapped_entry) Lapp Ende Struktur mit dem Offset für den Anfang des gesperrten Bereichs an Sie übergeben wird, und ein Ereignis, das signalisiert wird, wenn die Funktion nicht sofort zurückgegeben wird.
+Um die Verwendung von Bytebereichssperren mit der Datei zu veranschaulichen, werden alle E/A-Vorgänge in diesem Beispiel, mit Einer Anderen als der Initialisierung einer neuen Datei, über ein asynchrones Dateihand handle durchgeführt. Dies ist in der **IoRecord-Funktion** in **den Fällen IoLock** und **IoUnlock** innerhalb der switch-Anweisung zu sehen. Die [**Funktionen LockFileEx**](/windows/desktop/api/FileAPI/nf-fileapi-lockfileex) und [**UnlockFileEx**](/windows/desktop/api/FileAPI/nf-fileapi-unlockfileex) werden mit dem überlappenden E/A-Modell verwendet, indem eine [**OVERLAPPED-Struktur**](/windows/desktop/api/MinWinBase/ns-minwinbase-overlapped_entry) mit dem Offset für den Anfang des gesperrten Bereichs an sie übergeben wird, und ein Ereignis, das signalisiert wird, nachdem die Sperre für diesen Bereich gewährt wurde, es sei denn, die Funktion gibt sofort zurück.
 
-Nach dem ausgeben der asynchronen e/a-Anforderung besteht der nächste Vorgang in der **iorecord** -Funktion darin, auf den Vorgang Inline zu warten. Dies ist oft ein suboptimales Szenario, wenn eine maximale Leistung gewünscht wird, und wird hier zur Vereinfachung verwendet. In Produktionsanwendungen wird die Verwendung von e [/a-Abschlussports](i-o-completion-ports.md) oder ähnlichen Mechanismen bevorzugt, da Threads zum Ausführen anderer Verarbeitungsvorgänge freigegeben werden, während der e/a-Vorgang abgeschlossen ist.
+Nach dem Ausstellen der asynchronen E/A-Anforderung besteht der nächste Vorgang in der **IoRecord-Funktion** im Warten auf den Vorgang in der Zeile. Dies ist häufig ein suboptimales Szenario, in dem die maximale Leistung gewünscht ist und der Einfachheit halber hier verwendet wird. In Produktionsanwendungen wird die Verwendung von E/A-Vervollständigungsports oder ähnlichen Mechanismen bevorzugt, da Threads für andere Verarbeitungen frei werden, während die E/A abgeschlossen ist. [](i-o-completion-ports.md)
 
-Das Beispiel endet nach dem Ausführen von **NUM \_ FileOps** -Zufalls Vorgängen. Jeder Thread protokolliert seinen Beendigungs Status entweder als Fehlerbedingung oder als normale Beendigung. Beachten Sie, dass nicht alle Threads gleichzeitig beendet werden, abhängig von der Anzahl der Prozessorkerne, die das Host System hat, und der Geschwindigkeit des e/a-Subsystems.
+Das Beispiel endet nach dem Ausführen **zufälliger NUM \_ FILEOPS-Vorgänge.** Jeder Thread protokolliert seinen Beendigungsstatus entweder als Fehlerbedingung oder als normale Beendigung. Beachten Sie, dass nicht alle Threads gleichzeitig enden, je nachdem, wie viele Prozessorkerne das Hostsystem hat und wie schnell das E/A-Subsystem ist.
 
  
 

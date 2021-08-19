@@ -1,9 +1,9 @@
 ---
-title: TB_ADDSTRING Meldung (kommstrg. h)
-description: Fügt eine neue Zeichenfolge zum Zeichen folgen Pool der Symbolleiste hinzu.
+title: TB_ADDSTRING (Commctrl.h)
+description: Fügt dem Zeichenfolgenpool der Symbolleiste eine neue Zeichenfolge hinzu.
 ms.assetid: e22ee2cc-6443-49d3-aea6-a4ab256d4538
 keywords:
-- Windows-Steuerelemente für TB_ADDSTRING Meldung
+- TB_ADDSTRING von Windows Steuerelementen
 topic_type:
 - apiref
 api_name:
@@ -16,16 +16,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 6fba57c298a2b903a65c429ae6b4f9d55fc9ed2b
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: c0556add41addb4a58d5734ab900af4a43c2018b533723145ed4f9c8272e3890
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "106345344"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119078374"
 ---
-# <a name="tb_addstring-message"></a>TB \_ AddString-Nachricht
+# <a name="tb_addstring-message"></a>TB \_ ADDSTRING-Meldung
 
-Fügt eine neue Zeichenfolge zum Zeichen folgen Pool der Symbolleiste hinzu.
+Fügt dem Zeichenfolgenpool der Symbolleiste eine neue Zeichenfolge hinzu.
 
 ## <a name="parameters"></a>Parameter
 
@@ -34,26 +34,26 @@ Fügt eine neue Zeichenfolge zum Zeichen folgen Pool der Symbolleiste hinzu.
 *wParam* 
 </dt> <dd>
 
-Handle für die Modul Instanz mit einer ausführbaren Datei, die die Zeichen folgen Ressource enthält. Wenn *LPARAM* stattdessen auf ein Zeichen Array mit einer oder mehreren Zeichen folgen verweist, legen Sie diesen Parameter auf **null** fest.
+Handle für die Modulinstanz mit einer ausführbaren Datei, die die Zeichenfolgenressource enthält. Wenn *lParam* stattdessen auf ein Zeichenarray mit mindestens einer Zeichenfolge zeigt, legen Sie diesen Parameter auf **NULL fest.**
 
 </dd> <dt>
 
 *lParam* 
 </dt> <dd>
 
-Der Ressourcen Bezeichner für die Zeichen folgen Ressource oder ein Zeiger auf ein TCHAR-Array. Siehe Hinweise.
+Ressourcenbezeichner für die Zeichenfolgenressource oder ein Zeiger auf ein TCHAR-Array. Siehe Hinweise.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt den Index der ersten neuen Zeichenfolge zurück, wenn erfolgreich, andernfalls-1.
+Gibt bei Erfolg den Index der ersten neuen Zeichenfolge zurück, andernfalls -1.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Wenn *wParam* den Wert **null** hat, verweist *LPARAM* auf ein Zeichen Array mit einer oder mehreren null-terminierten Zeichen folgen. Die letzte Zeichenfolge im Array muss mit zwei NULL-Zeichen beendet werden.
+Wenn *wParam* **NULL ist,** *zeigt lParam* auf ein Zeichenarray mit einer oder mehr Zeichenfolgen mit NULL-Terminierung. Die letzte Zeichenfolge im Array muss mit zwei NULL-Zeichen beendet werden.
 
-Wenn *wParam* die HINSTANCE der Anwendung oder eines anderen Moduls mit einer Zeichen folgen Ressource ist, ist *LPARAM* der Ressourcen Bezeichner der Zeichenfolge. Jedes Element in der Zeichenfolge muss mit einem beliebigen Trennzeichen beginnen, und die Zeichenfolge muss mit zwei Zeichen enden Zeichen enden. Beispielsweise kann der Text für drei Schaltflächen in der Zeichen folgen Tabelle als "/New/Open/Save//" angezeigt werden. Die Meldung gibt den Index "New" im Zeichen folgen Pool der Symbolleiste zurück, und die anderen Elemente befinden sich in aufeinander folgenden Positionen.
+Wenn *wParam* die HINSTANCE der Anwendung oder eines anderen Moduls ist, das eine Zeichenfolgenressource enthält, ist *lParam* der Ressourcenbezeichner der Zeichenfolge. Jedes Element in der Zeichenfolge muss mit einem beliebigen Trennzeichen beginnen, und die Zeichenfolge muss mit zwei solchen Zeichen enden. Beispielsweise kann der Text für drei Schaltflächen in der Zeichenfolgentabelle als "/New/Open/Save/" angezeigt werden. Die Meldung gibt den Index von "New" im Zeichenfolgenpool der Symbolleiste zurück, und die anderen Elemente befinden sich an aufeinanderfolgenden Positionen.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -61,10 +61,10 @@ Wenn *wParam* die HINSTANCE der Anwendung oder eines anderen Moduls mit einer Ze
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                        |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/>                                  |
-| Header<br/>                   | <dl> <dt>Kommstrg. h</dt> </dl> |
-| Unicode- und ANSI-Name<br/>   | **TB \_ Addstringw** (Unicode) und **TB \_ addstraninga** (ANSI)<br/>                 |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ Vista-Desktop-Apps\]<br/>                                        |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                                  |
+| Header<br/>                   | <dl> <dt>Commctrl.h</dt> </dl> |
+| Unicode- und ANSI-Name<br/>   | **TB \_ ADDSTRINGW** (Unicode) und **TB \_ ADDSTRINGA** (ANSI)<br/>                 |
 
 
 

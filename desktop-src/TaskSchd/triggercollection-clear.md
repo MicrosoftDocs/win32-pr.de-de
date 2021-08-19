@@ -1,11 +1,11 @@
 ---
-title: TriggerCollection. Clear-Methode
-description: Löscht bei der Skripterstellung alle Trigger aus der Auflistung.
+title: TriggerCollection.Clear-Methode
+description: Bei der Skripterstellung werden alle Trigger aus der Auflistung entfernt.
 ms.assetid: b740a920-d931-4f7e-91f0-8992491c6538
 keywords:
-- Methoden Taskplaner löschen
-- Clear-Methode Taskplaner, TriggerCollection-Objekt
-- TriggerCollection-Objekt Taskplaner, Clear-Methode
+- Löschen der Taskplaner
+- Clear-Taskplaner , TriggerCollection-Objekt
+- TriggerCollection-Objekt Taskplaner , Clear-Methode
 topic_type:
 - apiref
 api_name:
@@ -16,16 +16,16 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 21008e042adfdda68b1389941c6cb1447ce243cc
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 01b426071871299f478ffbad537276af0bac5e44e7f03ed4b1837720b07fd76d
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104517552"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119001988"
 ---
-# <a name="triggercollectionclear-method"></a>TriggerCollection. Clear-Methode
+# <a name="triggercollectionclear-method"></a>TriggerCollection.Clear-Methode
 
-Löscht bei der Skripterstellung alle Trigger aus der Auflistung.
+Bei der Skripterstellung werden alle Trigger aus der Auflistung entfernt.
 
 ## <a name="syntax"></a>Syntax
 
@@ -50,14 +50,14 @@ Diese Methode gibt keinen Wert zurück.
 
 | Anforderung | Wert |
 |-------------------------------------|-----------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                          |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/>                                    |
-| Typbibliothek<br/>             | <dl> <dt>Taskschd. tlb</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ Vista-Desktop-Apps\]<br/>                                          |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/>                                    |
+| Typbibliothek<br/>             | <dl> <dt>Taskschd.tlb</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Taskschd.dll</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 

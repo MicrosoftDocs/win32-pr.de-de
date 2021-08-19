@@ -14,16 +14,16 @@ api_type:
 api_location:
 - d3dx9.lib
 - d3dx9.dll
-ms.openlocfilehash: d38ccbc3f688ed61779cf48a77e97dfb544c686e
-ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
+ms.openlocfilehash: a8a5a80526e013c85caf59b3a6a3d6c595a3c10a6e29687882c7789765368d06
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2021
-ms.locfileid: "108094148"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119952310"
 ---
 # <a name="d3dxplanenormalize-function-d3dx9mathh"></a>D3DXPlaneNormalize-Funktion (D3dx9math.h)
 
-Normalisiert die Ebenenkoeffizienten so, dass der Ebenennormar die Einheitslänge aufwies.
+Normalisiert die Ebenenkoeffizienten so, dass der Ebenennorm normal die Einheitslänge aufwies.
 
 ## <a name="syntax"></a>Syntax
 
@@ -65,7 +65,7 @@ Typ: **[ **D3DXPLANE**](d3dxplane.md)\***
 
 Zeiger auf eine [**D3DXPLANE-Struktur,**](d3dxplane.md) die die Normalität der Ebene darstellt.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
 Diese Funktion normalisiert eine Ebene so, dass \| a,b,c \| == 1.
 
@@ -75,14 +75,14 @@ Der Rückgabewert für diese Funktion ist der gleiche Wert, der im *pOut-Paramet
 
 
 
-| Anforderungen | Wert |
+| Anforderung | Wert |
 |--------------------|----------------------------------------------------------------------------------------|
 | Header<br/>  | <dl> <dt>D3dx9math.h</dt> </dl> |
 | Bibliothek<br/> | <dl> <dt>D3dx9.lib</dt> </dl>   |
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 

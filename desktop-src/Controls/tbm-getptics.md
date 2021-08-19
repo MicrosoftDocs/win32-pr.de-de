@@ -1,9 +1,9 @@
 ---
-title: TBM_GETPTICS Meldung (kommstrg. h)
-description: Ruft die Adresse eines Arrays ab, das die Positionen der Teil Striche für eine TrackBar enthält.
+title: TBM_GETPTICS (Commctrl.h)
+description: Ruft die Adresse eines Arrays ab, das die Positionen der Teilstriche für eine Trackleiste enthält.
 ms.assetid: d15a4b4d-2ced-40a4-9351-ed7ecc5a5751
 keywords:
-- Windows-Steuerelemente für TBM_GETPTICS Meldung
+- TBM_GETPTICS meldungssteuerelemente Windows
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 1d5d81e67156c0118310017413b8e73714246b7f
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 1f67bc6f1e5f67f262559d1c63401f1c19f8680798beae92d8847d4908f7cbe2
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "103956501"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119078074"
 ---
-# <a name="tbm_getptics-message"></a>TBM- \_ getptics-Nachricht
+# <a name="tbm_getptics-message"></a>TBM \_ GETPTICS-Nachricht
 
-Ruft die Adresse eines Arrays ab, das die Positionen der Teil Striche für eine TrackBar enthält.
+Ruft die Adresse eines Arrays ab, das die Positionen der Teilstriche für eine Trackleiste enthält.
 
 ## <a name="parameters"></a>Parameter
 
@@ -37,11 +37,11 @@ Ruft die Adresse eines Arrays ab, das die Positionen der Teil Striche für eine 
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt die Adresse eines Arrays von **DWORD** -Werten zurück. Die Elemente des Arrays geben die logischen Positionen der TrackBar-Teil Striche an, ohne die ersten und letzten Teil Striche, die von der TrackBar erstellt werden. Bei den logischen Positionen kann es sich um beliebige ganzzahlige Werte in der TrackBar-Bereich der minimalen bis maximalen Schieberegler-Positionen handeln.
+Gibt die Adresse eines Arrays von **DWORD-Werten** zurück. Die Elemente des Arrays geben die logischen Positionen der Teilstriche der Trackleiste an, ohne die ersten und letzten Teilstriche, die von der Trackleiste erstellt wurden. Die logischen Positionen können beliebige ganzzahlige Werte im Bereich von minimalen bis maximalen Schiebereglerpositionen der Trackleiste sein.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die Anzahl der Elemente im Array ist kleiner als die von der [**TBM \_ GetNumTics**](tbm-getnumtics.md) -Nachricht zurückgegebene Tick-Anzahl. Beachten Sie, dass die Werte im Array doppelte Positionen enthalten können und möglicherweise nicht in sequenzieller Reihenfolge vorliegen. Der zurückgegebene Zeiger ist gültig, bis die Teil Striche der TrackBar geändert werden.
+Die Anzahl der Elemente im Array ist zwei kleiner als die Von der [**TBM \_ GETNUMTICS-Nachricht zurückgegebene Teilstrichanzahl.**](tbm-getnumtics.md) Beachten Sie, dass die Werte im Array möglicherweise doppelte Positionen enthalten und nicht sequenziell sind. Der zurückgegebene Zeiger ist gültig, bis Sie die Teilstriche der Trackleiste ändern.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -49,9 +49,9 @@ Die Anzahl der Elemente im Array ist kleiner als die von der [**TBM \_ GetNumTic
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                        |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/>                                  |
-| Header<br/>                   | <dl> <dt>Kommstrg. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ Vista-Desktop-Apps\]<br/>                                        |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                                  |
+| Header<br/>                   | <dl> <dt>Commctrl.h</dt> </dl> |
 
 
 

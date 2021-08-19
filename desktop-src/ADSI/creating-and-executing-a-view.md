@@ -1,22 +1,22 @@
 ---
 title: Erstellen und Ausführen einer Ansicht
-description: Sie können eine Ansicht für Daten erstellen, die aus Active Directory abgerufen werden. Beachten Sie, dass nur die Sicht Definition in SQL Server und nicht im eigentlichen Resultset gespeichert wird. Daher erhalten Sie möglicherweise ein anderes Ergebnis, wenn Sie die Ansicht zu einem späteren Zeitpunkt aufrufen.
+description: Sie können eine Ansicht für Daten erstellen, die aus Active Directory abgerufen werden. Beachten Sie, dass nur die Ansichtsdefinition in SQL Server und nicht im tatsächlichen Resultset gespeichert wird. Daher erhalten Sie möglicherweise ein anderes Ergebnis, wenn Sie die Ansicht zu einem späteren Zeitpunkt aufrufen.
 ms.assetid: c2892517-11e1-489f-a2f2-5118bccd605b
 ms.tgt_platform: multiple
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: a47a0956acb8f9d0268240e677f62a2e395b4fed
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: 35c4676154ea32dd06e39498e9f943b55d8dbf39694ab9c1005e942cad85f7c3
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "104387964"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119082724"
 ---
 # <a name="creating-and-executing-a-view"></a>Erstellen und Ausführen einer Ansicht
 
-Sie können eine Ansicht für Daten erstellen, die aus Active Directory abgerufen werden. Beachten Sie, dass nur die Sicht Definition in SQL Server und nicht im eigentlichen Resultset gespeichert wird. Daher erhalten Sie möglicherweise ein anderes Ergebnis, wenn Sie die Ansicht zu einem späteren Zeitpunkt aufrufen.
+Sie können eine Ansicht für Daten erstellen, die aus Active Directory abgerufen werden. Beachten Sie, dass nur die Ansichtsdefinition in SQL Server und nicht im tatsächlichen Resultset gespeichert wird. Daher erhalten Sie möglicherweise ein anderes Ergebnis, wenn Sie die Ansicht zu einem späteren Zeitpunkt aufrufen.
 
-Im folgenden Codebeispiel wird gezeigt, wie eine Sicht erstellt wird.
+Im folgenden Codebeispiel wird das Erstellen einer Ansicht veranschaulicht.
 
 
 ```sql
@@ -28,7 +28,7 @@ SELECT * FROM OpenQuery( ADSI,
 
 
 
-Verwenden Sie den folgenden Code, um eine Ansicht aufzurufen.
+Verwenden Sie den folgenden Code, um eine Sicht aufzurufen.
 
 
 ```sql
@@ -44,9 +44,9 @@ SELECT * from viewADUsers
 [Erstellen eines heterogenen Joins zwischen SQL Server und Active Directory](creating-a-heterogeneous-join-between-sql-server-and-active-directory.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

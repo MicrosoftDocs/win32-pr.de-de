@@ -1,7 +1,7 @@
 ---
-description: Die doconfigure-Methode muss vom Monitor implementiert werden. Die mcsvc ruft diese Methode auf, um Konfigurationsinformationen für die Erfassung zu erhalten.
+description: Die DoConfigure-Methode muss vom Monitor implementiert werden. McSVC ruft diese Methode auf, um Konfigurationsinformationen für die Erfassung abzurufen.
 ms.assetid: bc2a3246-28dc-4452-a98e-a8a2447bb127
-title: Imonitor::D oconfigure-Methode (Netmon. h)
+title: IMonitor::D oConfigure-Methode (Netmon.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,16 +13,16 @@ api_type:
 - COM
 api_location:
 - Netmon.h
-ms.openlocfilehash: e9a0ba2ade1095f291d5cb325a0902e6caeac3f2
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 9776ca62cbb61b6708f00d5e1d6d85eeab245b32798683b5afde546d835633c9
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104128916"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119779190"
 ---
-# <a name="imonitordoconfigure-method"></a>Imonitor::D oconfigure-Methode
+# <a name="imonitordoconfigure-method"></a>IMonitor::D oConfigure-Methode
 
-Die **doconfigure** -Methode muss vom Monitor implementiert werden. Die mcsvc ruft diese Methode auf, um Konfigurationsinformationen für die Erfassung zu erhalten.
+Die **DoConfigure-Methode** muss vom Monitor implementiert werden. McSVC ruft diese Methode auf, um Konfigurationsinformationen für die Erfassung abzurufen.
 
 ## <a name="syntax"></a>Syntax
 
@@ -41,40 +41,40 @@ HRESULT STDMETHODCALLTYPE DoConfigure(
 
 <dl> <dt>
 
-*PName* \[ in\]
+*pName* \[ In\]
 </dt> <dd>
 
-Der Name einer Instanz des Monitors.
+Name einer Instanz des Monitors.
 
 </dd> <dt>
 
-*pconfiguration* \[ in\]
+*pConfiguration* \[ In\]
 </dt> <dd>
 
-Konfigurations Zeichenfolge, die von mcsvc bereitgestellt wird. Der Monitor muss diese Zeichenfolge für Konfigurationsdaten analysieren.
+Von MCSVC bereitgestellte Konfigurationszeichenfolge. Der Monitor muss diese Zeichenfolge für Konfigurationsdaten analysieren.
 
 </dd> <dt>
 
-*ppscriptinstance* \[ vorgenommen\]
+*ppScriptInstance* \[ out\]
 </dt> <dd>
 
-Adresse der HTML-Zeichenfolge, die zum Konfigurieren des Monitors verwendet wird. Wenn ein Standardskript für die Konfiguration verwendet wird, sollte dieser Wert auf **null** festgelegt werden.
+Adresse der HTML-Zeichenfolge, die zum Konfigurieren des Monitors verwendet wird. Wenn ein Standardskript für die Konfiguration verwendet wird, sollte dieser Wert auf **NULL** festgelegt werden.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Wenn die Methode erfolgreich ist, lautet der Rückgabewert S \_ OK (entspricht noError), und der mcsvc führt den Monitor aus.
+Wenn die Methode erfolgreich ist, lautet der Rückgabewert S \_ OK (entspricht NOERROR), und der MCSVC führt den Monitor aus.
 
-Wenn die Methode nicht erfolgreich ist, ist der Rückgabewert ein Fehlercode. Der Rückgabewert der nmerr- \_ Monitor \_ Konfiguration \_ ist fehlgeschlagen, aber wenn dieser Fehler zurückgegeben wird, kann der Monitor erst gestartet werden, wenn ein zukünftiger **doconfigure** -Rückruf erfolgreich ausgeführt wurde. Jeder andere Fehler verhindert, dass die Instanz des Monitors aktiviert wird.
+Wenn die Methode nicht erfolgreich ist, ist der Rückgabewert ein Fehlercode. Der Rückgabewert NMERR \_ MONITOR \_ CONFIG \_ FAILED ist akzeptabel. Wenn dieser Fehler zurückgegeben wird, kann der Monitor jedoch erst gestartet werden, wenn ein zukünftiger **DoConfigure-Aufruf** erfolgreich ist. Jeder andere Fehler verhindert, dass die Instanz des Monitors aktiviert wird.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die mcsvc ruft diese Methode auf, nachdem Sie eine Verbindung mit dem Netzwerk hergestellt hat und bevor die Methode " [iritc:: Configure](irtc-configure.md) " aufgerufen wird.
+McSVC ruft diese Methode auf, nachdem eine Verbindung mit dem Netzwerk hergestellt wurde und bevor die [IRTC::Configure-Methode](irtc-configure.md) aufgerufen wird.
 
-Der Monitor kann die von diesem-Befehl bereitgestellten Informationen speichern, das HTML-Skript oder die Konfigurations Zeichenfolge aktualisieren und den [Erfassungs Filter](capture-filters.md) im NPP-BLOB festlegen.
+Der Monitor kann die von diesem Aufruf bereitgestellten Informationen speichern, das HTML-Skript oder die Konfigurationszeichenfolge aktualisieren und den [Erfassungsfilter](capture-filters.md) im NPP-BLOB festlegen.
 
-Die mcsvc kann diese Methode mehrmals aufrufen, aber Sie kann nicht aufgerufen werden, während der Monitor Daten erfasst. Beachten Sie, dass jedes Mal, wenn eine [NPP](network-packet-providers.md) eine Erfassung startet, die Verbindung mit dem Netzwerk konfiguriert werden muss. Diese Einschränkung umfasst Situationen, in denen die NPP die gleiche Erfassung startet und beendet.
+McSVC ruft diese Methode möglicherweise mehrmals auf, kann aber nicht aufgerufen werden, während der Monitor Daten erfasst. Beachten Sie, dass jedes Mal, wenn ein [NPP](network-packet-providers.md) eine Erfassung startet, die Verbindung mit dem Netzwerk konfiguriert werden muss. Diese Einschränkung schließt Situationen ein, in denen das NPP die gleiche Erfassung startet und beendet.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -84,7 +84,7 @@ Die mcsvc kann diese Methode mehrmals aufrufen, aber Sie kann nicht aufgerufen w
 |-------------------------------------|-------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[nur Desktop-Apps\]<br/>                          |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                                |
-| Header<br/>                   | <dl> <dt>Netmon. h</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Netmon.h</dt> </dl> |
 
 
 

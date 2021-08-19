@@ -1,7 +1,7 @@
 ---
-description: Medien Beispiel Warteschlange.
+description: Medienbeispielwarteschlange.
 ms.assetid: 910f1c0c-2ce9-452f-a97b-aa424da9a93e
-title: 'Coutputqueue:: m_List-Member (outputq. h)'
+title: COutputQueue::m_List Member (Outputq.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,16 +16,16 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: 32840ed0ed9f976cceb1e0dc6dc8debc3f774377
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 3e261116961f23c845ec2e27c6f20748b2c50cd9c036d9bc7d42bfe24b9b4fb9
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106368429"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120087070"
 ---
-# <a name="coutputqueuem_list-member"></a>Coutputqueue:: m- \_ Listenmember
+# <a name="coutputqueuem_list-member"></a>COutputQueue::m \_ List-Member
 
-Medien Beispiel Warteschlange.
+Medienbeispielwarteschlange.
 
 ## <a name="syntax"></a>Syntax
 
@@ -36,9 +36,9 @@ CSampleList *m_List;
 
 
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Diese Member-Variable ist ein Zeiger auf ein [**cgenericlist**](cgenericlist.md) -Objekt, das [**imediasample**](/windows/desktop/api/Strmif/nn-strmif-imediasample) -Zeiger enthält. Der **csamplelist** -Typ wird wie folgt definiert:
+Diese Membervariable ist ein Zeiger auf ein [**CGenericList-Objekt,**](cgenericlist.md) das [**IMediaSample-Zeiger**](/windows/desktop/api/Strmif/nn-strmif-imediasample) enthält. Der **CSampleList-Typ** ist wie folgt definiert:
 
 ``` syntax
 typedef CGenericList<IMediaSample> CSampleList;
@@ -50,8 +50,8 @@ typedef CGenericList<IMediaSample> CSampleList;
 
 | Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Outputq. h (Include Streams. h)</dt> </dl>                                                                                   |
-| Bibliothek<br/> | <dl> " <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Outputq.h (include Streams.h)</dt> </dl>                                                                                   |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Einzelhandels-Builds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
@@ -59,7 +59,7 @@ typedef CGenericList<IMediaSample> CSampleList;
 
 <dl> <dt>
 
-[**Coutputqueue-Klasse**](coutputqueue.md)
+[**COutputQueue-Klasse**](coutputqueue.md)
 </dt> </dl>
 
  

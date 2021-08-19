@@ -4,43 +4,43 @@ description: Gerätetypen
 ms.assetid: 6556fa6a-5906-4afb-ab7d-ef41a0e22d13
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: e27ed77debb663a1d90e03512832ca83e6e276d3
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: 167eedddfc61960de35e979480c44b8f2efab5bf89738047446196b81a95a5b0
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "103712966"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119497160"
 ---
 # <a name="device-types"></a>Gerätetypen
 
-MCI erkennt einen grundlegenden Satz von *Gerätetypen*. Bei einem Gerätetyp handelt es sich um einen Satz von MCI-Treibern, die einen gemeinsamen Befehlssatz verwenden und zur Steuerung von ähnlichen Multimedia-Geräten oder Datendateien verwendet werden. Viele MCI-Befehle, wie z. b. [**Open**](open.md) ([**MCI \_ Open**](mci-open.md)), erfordern, dass Sie einen Gerätetyp angeben.
+MCI erkennt einen grundlegenden Satz von *Gerätetypen.* Ein Gerätetyp ist ein Satz von MCI-Treibern, die einen gemeinsamen Befehlssatz verwenden und zum Steuern ähnlicher Multimediageräte oder Datendateien verwendet werden. Viele MCI-Befehle, z. B. [**open**](open.md) ([**MCI \_ OPEN**](mci-open.md)), erfordern, dass Sie einen Gerätetyp angeben.
 
-In der folgenden Tabelle sind die definierten Gerätetypen aufgeführt. Die aktuelle Implementierung von MCI enthält Befehls Sätze für eine Teilmenge dieser Geräte.
+In der folgenden Tabelle sind die definierten Gerätetypen aufgeführt. Die aktuelle Implementierung von MCI enthält Befehlssätze für eine Teilmenge dieser Geräte.
 
 
 
-| Gerätetyp      | Konstante                      | BESCHREIBUNG                                      |
+| Gerätetyp      | Konstante                      | Beschreibung                                      |
 |------------------|-------------------------------|--------------------------------------------------|
-| **CDAudio**      | MCI \_ devtype \_ \_ -CD-Audiodatei       | CD-Audioplayer                                  |
-| **Hütte**          | MCI \_ devtype- \_ DAT             | Digitaler audiobandplayer                        |
-| **Digitalvideo** | digitales MCI \_ devtype- \_ \_ Video  | Digitales Video in einem Fenster (nicht GDI-basiert)        |
-| **außer**        | MCI- \_ devtype \_ other           | Nicht definiertes MCI-Gerät                             |
-| **Overlay**      | MCI \_ devtype- \_ Overlay         | Overlay-Gerät (Analog Video in einem Fenster)        |
-| **scanner**      | MCI \_ devtype- \_ Scanner         | Bildscanner                                    |
-| **sequencer**    | MCI \_ devtype \_ Sequencer       | MIDI-Sequencer                                   |
-| **VCR**          | MCI \_ devtype \_ VCR             | Video-Kassettenrecorder oder Player                |
-| **Videodisk**    | MCI \_ devtype- \_ Videodisk       | Videodisk-Player                                 |
-| **waveaudiodatei**    | MCI \_ devtype \_ Waveform \_ -Audiodatei | Audiogerät, das digitalisierte Wellenform-Dateien wieder gibt |
+| **cdaudio**      | MCI \_ DEVTYPE \_ CD \_ AUDIO       | CD-Audioplayer                                  |
+| **Dat**          | MCI \_ DEVTYPE \_ DAT             | Digital-Audio-Bandplayer                        |
+| **digitalvideo** | MCI \_ DEVTYPE \_ DIGITAL \_ VIDEO  | Digitales Video in einem Fenster (nicht GDI-basiert)        |
+| **Andere**        | MCI \_ DEVTYPE \_ OTHER           | Nicht definiertes MCI-Gerät                             |
+| **Overlay**      | MCI \_ DEVTYPE \_ OVERLAY         | Überlagerungsgerät (analoges Video in einem Fenster)        |
+| **scanner**      | MCI \_ DEVTYPE \_ SCANNER         | Bildscanner                                    |
+| **sequencer**    | MCI \_ DEVTYPE \_ SEQUENCER       | SEQUENCE-Sequencer                                   |
+| **Vcr**          | MCI \_ DEVTYPE \_ VCR             | Video cassette recorder or player                |
+| **videodisc**    | MCI \_ DEVTYPE \_ VIDEODISC       | Videodisc-Player                                 |
+| **Waveaudio**    | MCI \_ DEVTYPE \_ WAVEFORM \_ AUDIO | Audiogerät, das digitalisierte Waveformdateien abspielt |
 
 
 
- 
+ 
 
-In diesem Dokument sind die Namen der Gerätetypen fett formatiert. Gerätetyp Namen werden mit der Befehls Zeichenfolgen-Schnittstelle verwendet. Gerätetyp Konstanten werden mit der befehlsnachrichten Schnittstelle verwendet.
+In diesem Dokument sind die Namen der Gerätetypen fett formatiert. Gerätetypnamen werden mit der Befehlszeichenfolgenschnittstelle verwendet. Gerätetypkonst constants werden mit der Befehlsmeldungsschnittstelle verwendet.
 
- 
+ 
 
- 
+ 
 
 
 

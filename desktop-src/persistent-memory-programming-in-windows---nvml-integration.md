@@ -1,63 +1,63 @@
 ---
-description: Die Technologie für persistente Speicher (PM) bietet Zugriff auf bytebene auf nicht flüchtige Medien und reduziert gleichzeitig die Latenz beim Speichern oder Abrufen von Daten.
+description: Die Technologie für persistenten Speicher (Persistent Memory, PM) bietet Zugriff auf Byteebene auf nicht flüchtige Medien und reduziert gleichzeitig die Latenz beim Speichern oder Abrufen von Daten erheblich.
 ms.assetid: 68BF6074-09CB-4D6E-8BFD-FBA297391286
-title: Persistente Speicher Programmierung in Windows-nvml-Integration
+title: Persistente Speicherprogrammierung in Windows – NVML-Integration
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 2c9f033963a8fecded8943eb053781d05a78d568
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 750a05f28ca4698091f79b1004bbbb00ff69752e0ff45f2153cc4f0b7fe20a26
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "104218111"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119951050"
 ---
-# <a name="persistent-memory-programming-in-windows---nvml-integration"></a>Persistente Speicher Programmierung in Windows-nvml-Integration
+# <a name="persistent-memory-programming-in-windows---nvml-integration"></a>Persistente Speicherprogrammierung in Windows – NVML-Integration
 
-Die Technologie für persistente Speicher (PM) bietet Zugriff auf bytebene auf nicht flüchtige Medien und reduziert gleichzeitig die Latenz beim Speichern oder Abrufen von Daten. Es wird eine neue Ebene zwischen dem Arbeitsspeicher des Systems und dem herkömmlichen Speicher erstellt. Jedes Programm, das von einem persistenten Medium abhängig ist oder mit diesem skaliert werden kann, kann von pm profitieren.
+Die Technologie für persistenten Speicher (Persistent Memory, PM) bietet Zugriff auf Byteebene auf nicht flüchtige Medien und reduziert gleichzeitig die Latenz beim Speichern oder Abrufen von Daten erheblich. Es wird eine neue Ebene zwischen dem Speicher eines Systems und dem herkömmlichen Speicher erstellt. Jedes Programm, das von abhängig ist oder mit schnellen Schreibvorgängen auf ein persistentes Medium skaliert wird, kann von PM profitieren.
 
-In diesem Artikel wird erläutert, wie die nicht flüchtige Speicher Bibliothek (nvml) zur einfachen Verwendung in ein Visual Studio-Projekt integriert werden kann.
+In diesem Artikel wird erläutert, wie die NVML (Non-Volatile Memory Library) zur einfachen Verwendung in ein Visual Studio integriert werden kann.
 
 > [!Note]  
-> Persistenter Speicher wird manchmal auch als Speicher Klassen Speicher (SCM) bezeichnet.
+> Persistenter Speicher wird manchmal auch als Storage Class Memory (SCM) bezeichnet.
 
  
 
-## <a name="pm-and-nvml"></a>PM und nvml
+## <a name="pm-and-nvml"></a>PM und NVML
 
-Die erste Unterstützung für permanenten Speicher wurde in Windows Server 2016 und Windows 10 Anniversary Update (1607) eingeführt. Eine kurze Übersicht finden Sie in den folgenden beiden channel9-Videos:
+Die erste Unterstützung für persistenten Speicher wurde in Windows Server 2016 und dem Windows 10 Anniversary Update (1607) eingeführt. Eine kurze Übersicht finden Sie in diesen beiden Channel9-Videos:
 
 -   [Using Non-volatile Memory (NVDIMM-N) as Block Storage in Windows Server 2016 (Verwenden von permanentem Speicher [NVDIMM-N] als Blockspeicher in Windows Server 2016)](https://channel9.msdn.com/Events/Build/2016/P466)
 -   [Using Non-volatile Memory (NVDIMM-N) as Byte-Addressable Storage in Windows Server 2016 (Verwenden von permanentem Speicher [NVDIMM-N] als byteadressierbaren Speicher in Windows Server 2016)](https://channel9.msdn.com/Events/Build/2016/P470)
 
-Damit Entwickler die Vorteile der persistenten Speicher Angebote nutzen können, hat Microsoft auch zu den Bemühungen beigetragen, die nicht flüchtige Speicher Bibliothek (nvml) in Windows zu unterstützen. Diese Bibliothek bietet verschiedene Tools, mit denen Anwendungen persistente Speicher fähig werden. Sie enthält z. b. Code, mit dem Sie problemlos einen PM-fähigen Schlüssel-Wert-Speicher für extrem schnelle Suche und Speicher erstellen können. Weitere Informationen zu nvml, einschließlich Beispielen, finden Sie in der [NVM-Bibliothek](https://pmem.io/nvml/).
+Damit Entwickler von den Vorteilen des beständigen Speichers profitieren können, hat Microsoft auch dazu beigetragen, die NVML-Datei (Non-Volatile Memory Library, nicht flüchtige Speicherbibliothek) in die Windows. Diese Bibliothek stellt verschiedene Tools zur Verfügung, mit derenHilfe Anwendungen beständigen Arbeitsspeicher nutzen können. Sie enthält beispielsweise Code, mit dem Sie problemlos einen PM-orientierten Schlüssel-Wert-Speicher für extrem schnelle Look-Ups und Speicher erstellen können. Weitere Informationen zu NVML, einschließlich Beispielen, finden Sie unter [NVM-Bibliothek.](https://pmem.io/nvml/)
 
-## <a name="integrating-nvml-into-a-visual-studio-project"></a>Integrieren von nvml in ein Visual Studio-Projekt
+## <a name="integrating-nvml-into-a-visual-studio-project"></a>Integrieren von NVML in Visual Studio Project
 
-1. Herunterladen der nvml-Bibliotheksdateien und-Header
+1. Herunterladen von NVML-Bibliotheksdateien und -Headern
 
--   Nvml wird auf GitHub verwaltet. Sie können entweder die Quelle selbst kompilieren oder nur kompilierte Binärdateien direkt von hier herunterladen: [nvml Version 1,2-Windows Technical Preview](https://github.com/pmem/pmdk/releases/tag/1.2%2Bwtp1).
+-   NVML wird auf GitHub. Sie können die Quelle entweder selbst kompilieren oder kompilierte Binärdateien direkt hier herunterladen: [NVML Version 1.2 – Windows Technical Preview](https://github.com/pmem/pmdk/releases/tag/1.2%2Bwtp1).
 
-2. Platzieren Sie die Bibliotheksdateien und Header in einem Verzeichnis Ihrer Wahl, z. b.: "c: \\ nvml \\ lib" und "c: \\ nvml \\ Inc".
+2. Platzieren Sie die Bibliotheksdateien und Header in einem Verzeichnis Ihrer Wahl, z.B. "C: NVML lib" bzw. \\ \\ "C: \\ NVML \\ inc".
 
-3. Konfigurieren Sie das Projekt wie folgt:
+3. Konfigurieren Sie Ihr Projekt wie folgt:
 
--   Öffnen Sie das Visual Studio-Projekt, und klicken Sie in der Projektmappen-Explorer mit der rechten Maustaste auf den Namen Ihres Projekts.
--   Öffnen Sie den Einstellungsbereich des Projekts am unteren Rand des resultierenden Popup Fensters.
--   Navigieren Sie zu "Konfigurations Eigenschaften-> C/C++", und fügen Sie den Ordner, in dem Sie den Header (C: \\ nvml \\ Inc) gespeichert haben, dem Feld "Zusätzliche Includeverzeichnisse" hinzu.
--   Navigieren Sie als nächstes zu "Konfigurations Eigenschaften-> Linker", und fügen Sie den Ordner, in dem Sie die Bibliothek (C: \\ nvml \\ lib) gespeichert haben, in das Feld "zusätzliche Bibliotheks Verzeichnisse" ein.
+-   Öffnen Sie Ihr Visual Studio-Projekt, und klicken Projektmappen-Explorer mit der rechten Maustaste auf den Namen Ihres Projekts.
+-   Öffnen Sie den Einstellungsbereich des Projekts am unteren Rand des resultierenden Popupfensters.
+-   Navigieren Sie zu "Konfigurationseigenschaften -> C/C++", und fügen Sie dem Feld "Zusätzliche Includeverzeichnisse" den Ordner hinzu, in dem Sie den Header gespeichert haben (C: \\ NVML \\ inc).
+-   Navigieren Sie als Nächstes zu "Konfigurationseigenschaften -> Linker", und fügen Sie dem Feld "Zusätzliche Bibliotheksverzeichnisse" den Ordner hinzu, in dem Sie die Bibliothek gespeichert haben (C: \\ NVML \\ lib).
 
-4. Stellen Sie als nächstes sicher, dass Sie das Projekt für Windows Server 2016 oder Windows 10 Anniversary Update als Ziel festlegen:
+4. Stellen Sie als Nächstes sicher, dass Sie das Projekt als Ziel Windows Server 2016 oder Windows 10 Anniversary Update:
 
--   Navigieren Sie zu "Konfigurations Eigenschaften-> Allgemein", und legen Sie das Feld "Ziel Platt Form Version" auf "10.0.14393.0" und
--   Navigieren Sie zu "Konfigurations Eigenschaften-> C/C++", und fügen Sie \_ \_ \_ dem Feld "Preprocessor" den Wert "ntddi Version = ntddi WIN10 RS1;" hinzu.
+-   Navigieren Sie zu "Konfigurationseigenschaften -> Allgemein", und legen Sie das Feld "Zielplattformversion" auf "10.0.14393.0" fest.
+-   Navigieren Sie zu "Konfigurationseigenschaften -> C/C++", und fügen Sie \_ "NTDDI VERSION=NTDDI \_ WIN10 \_ RS1;" zum Feld "Präprozessor" hinzu.
 
-5. Schließen Sie die Header in Ihren Code ein, und verknüpfen Sie die erforderlichen Bibliotheken.
+5. Schließen Sie die Header in Ihren Code ein, und verknüpfen Sie sie mit den erforderlichen Bibliotheken.
 
--   An diesem Punkt können Sie einfach die Header Dateien, die Sie in Ihrem Code verwenden möchten, wie alle anderen Header Dateien einschließen. Verwenden Sie beispielsweise, um libpmem zu verwenden:
-    -   Fügen Sie " \# include <libpmem. h>" und
-    -   Fügen Sie "libpmem. lib" zu "Konfigurations Eigenschaften-> Linker-> Eingabe > zusätzliche Abhängigkeiten" hinzu.
+-   An diesem Punkt können Sie einfach die Headerdateien, die Sie verwenden möchten, wie alle anderen Headerdateien in Ihren Code ein schließen. So verwenden Sie z. B. libpmem:
+    -   add " \# include <libpmem.h>" und
+    -   Fügen Sie "libpmem.lib" zu "Konfigurationseigenschaften -> Linker -> Input -> Additional Dependencies" hinzu.
 
-An diesem Punkt können Sie die Funktionen der Bibliothek direkt im Code aufzurufen und Sie nutzen.
+An diesem Punkt können Sie die Funktionen der Bibliothek direkt in Ihrem Code aufrufen und diese nutzen.
 
  
 

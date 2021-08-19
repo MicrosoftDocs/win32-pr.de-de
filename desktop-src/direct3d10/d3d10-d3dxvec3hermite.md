@@ -1,5 +1,5 @@
 ---
-description: 'D3DXVec3Hermite-Funktion (D3DX10Math.h): Führt eine Hermite-Splineinterpolation mit den angegebenen 3D-Vektoren aus.'
+description: 'D3DXVec3Hermite-Funktion (D3DX10Math.h): Führt eine Hermite-Splineinterpolation mithilfe der angegebenen 3D-Vektoren aus.'
 ms.assetid: d2212299-0478-48a6-b303-60c212528058
 title: D3DXVec3Hermite-Funktion (D3DX10Math.h)
 ms.topic: reference
@@ -13,16 +13,16 @@ api_type:
 - HeaderDef
 api_location:
 - D3DX10Math.h
-ms.openlocfilehash: cbed5ceaca1e4e404c47766fa41b8b095216b277
-ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
+ms.openlocfilehash: 955843e7171aaa64e5fa7027b0e0f6049613e31c2d3c647fd705623456ac4e56
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2021
-ms.locfileid: "108108188"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118990620"
 ---
 # <a name="d3dxvec3hermite-function-d3dx10mathh"></a>D3DXVec3Hermite-Funktion (D3DX10Math.h)
 
-Führt eine Hermite-Splineinterpolation unter Verwendung der angegebenen 3D-Vektoren aus.
+Führt eine Hermite-Splineinterpolation mithilfe der angegebenen 3D-Vektoren aus.
 
 ## <a name="syntax"></a>Syntax
 
@@ -104,7 +104,7 @@ Typ: **[ **D3DXVECTOR3**](../direct3d9/d3dxvector3.md)\***
 
 Zeiger auf eine D3DXVECTOR3-Struktur, die das Ergebnis der Hermite-Splineinterpolation ist.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
 Die **D3DXVec3Hermite-Funktion** interpoliert mithilfe der Hermite-Splineinterpolation von (positionA, tangentA) in (positionB, tangentB).
 
@@ -148,7 +148,7 @@ Q(s) = (2v1 - 2v2 + t2 + t1)s) + (3v2 - 3v1 - 2t1 - t2)s× t1s + v1
 
 Dies kann neu angeordnet werden wie:
 
-Q(s) = (2s, 3s) + 1)v1 + (-2s, + 3s) v2 + (s= - 2s): + s)t1 + (s) - s2)t2
+Q(s) = (2s, 3s) + 1)v1 + (-2s, + 3s) v2 + (ss - 2s): + s)t1 + (s) - s2)t2
 
 Einsemit-Splines sind nützlich, um Animationen zu steuern, da die Kurve alle Kontrollpunkte durchläuft. Da die Position und der Tangens explizit an den Enden jedes Segments angegeben werden, ist es außerdem einfach, eine kontinuierliche C2-Kurve zu erstellen, solange Sie sicherstellen, dass Ihre Anfangsposition und der Tangens mit den Endwerten des letzten Segments übereinstimmen.
 
@@ -158,7 +158,7 @@ Der Rückgabewert für diese Funktion ist der gleiche Wert, der im pOut-Paramete
 
 
 
-| Anforderungen | Wert |
+| Anforderung | Wert |
 |-------------------|-----------------------------------------------------------------------------------------|
 | Header<br/> | <dl> <dt>D3DX10Math.h</dt> </dl> |
 

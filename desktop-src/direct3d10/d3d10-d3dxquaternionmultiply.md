@@ -14,12 +14,12 @@ api_type:
 api_location:
 - D3DX10.lib
 - D3DX10.dll
-ms.openlocfilehash: 4f84ecac1eb910f4b3c97aba6ed42691c70b5b1f
-ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
+ms.openlocfilehash: 87d1b386409047eefc3e70ce5007082dda2158122ccfe4e2d3b2bea683a25a49
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2021
-ms.locfileid: "108103158"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118991090"
 ---
 # <a name="d3dxquaternionmultiply-function-d3dx10mathh"></a>D3DXQuaternionMultiply-Funktion (D3DX10Math.h)
 
@@ -75,11 +75,11 @@ Typ: **[ **D3DXQUATERNION**](../direct3d9/d3dxquaternion.md)\***
 
 Zeiger auf eine [**D3DXQUATERNION-Struktur,**](d3d10-d3dxquaternion.md) die das Produkt von zwei Quaternionen ist.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Das Ergebnis stellt die Drehung Q1 gefolgt von der Drehung Q2 (Out = Q2 \* Q1) dar. Dies erfolgt so, dass **D3DXQuaternionMultiply** dieselbe Semantik wie [**D3DXMatrixMultiply**](d3d10-d3dxmatrixmultiply.md) beibekommen, da Einheitenquaternionen als eine andere Möglichkeit zur Darstellung von Rotationsmatrizen betrachtet werden können.
+Das Ergebnis stellt die Drehung Q1 gefolgt von der Drehung Q2 (Out = Q2 \* Q1) dar. Dies erfolgt so, dass **D3DXQuaternionMultiply** die gleiche Semantik wie [**D3DXMatrixMultiply**](d3d10-d3dxmatrixmultiply.md) beibekommen, da Einheitenquaternionen als eine andere Möglichkeit zur Darstellung von Rotationsmatrizen betrachtet werden können.
 
-Transformationen werden für die **Funktionen D3DXQuaternionMultiply** und [**D3DXMatrixMultiply**](d3d10-d3dxmatrixmultiply.md) in der gleichen Reihenfolge verkettet. Angenommen, mX und mY stellen die gleichen Drehungen wie qX und qY dar, stellen sowohl m als auch q die gleichen Drehungen dar.
+Transformationen werden für die **Funktionen D3DXQuaternionMultiply** und [**D3DXMatrixMultiply**](d3d10-d3dxmatrixmultiply.md) in derselben Reihenfolge verkettet. Angenommen, mX und mY stellen die gleichen Drehungen wie qX und qY dar, stellen sowohl m als auch q die gleichen Drehungen dar.
 
 
 ```
@@ -93,13 +93,13 @@ Die Multiplikation von Quaternionen ist nicht kommutativ.
 
 Der Rückgabewert für diese Funktion ist der gleiche Wert, der im pOut-Parameter zurückgegeben wird. Auf diese Weise kann die **D3DXQuaternionMultiply-Funktion** als Parameter für eine andere Funktion verwendet werden.
 
-Verwenden Sie [**D3DXQuaternionNormalize**](d3d10-d3dxquaternionnormalize.md) für alle Quaternioneingaben, die nicht bereits normalisiert sind.
+Verwenden [**Sie D3DXQuaternionNormalize**](d3d10-d3dxquaternionnormalize.md) für alle Quaternioneingaben, die noch nicht normalisiert sind.
 
 ## <a name="requirements"></a>Anforderungen
 
 
 
-| Anforderungen | Wert |
+| Anforderung | Wert |
 |--------------------|-----------------------------------------------------------------------------------------|
 | Header<br/>  | <dl> <dt>D3DX10Math.h</dt> </dl> |
 | Bibliothek<br/> | <dl> <dt>D3DX10.lib</dt> </dl>   |

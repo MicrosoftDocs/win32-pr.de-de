@@ -1,11 +1,11 @@
 ---
-title: Inapenforcementclientconnection setmaxsize-Methode (napforcementclient. h)
+title: INapEnforcementClientConnection SetMaxSize-Methode (NapEnforcementClient.h)
 description: Legt die maximale Größe des SoH-Pakets für diesen Client fest.
 ms.assetid: 30d3747d-bcf8-41b3-b0af-29f20d48417b
 keywords:
-- Setmaxsize-Methode NAP
-- Setmaxsize-Methode NAP, inapenforcementclientconnection-Schnittstelle
-- Inapenforcementclientconnection-Schnittstelle NAP, setmaxsize-Methode
+- SetMaxSize-Methode NAP
+- SetMaxSize-Methode NAP, INapEnforcementClientConnection-Schnittstelle
+- INapEnforcementClientConnection-Schnittstelle NAP, SetMaxSize-Methode
 topic_type:
 - apiref
 api_name:
@@ -16,21 +16,21 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 5b10d7bc1a023371683f17bb3e6e12cd578fa964
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 3c487e26b89fbc53376837e59fdcc7c298b71ebb10ffc3e2490036b536f28264
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104391776"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119781020"
 ---
-# <a name="inapenforcementclientconnectionsetmaxsize-method"></a>Inapenforcementclientconnection:: setmaxsize-Methode
+# <a name="inapenforcementclientconnectionsetmaxsize-method"></a>INapEnforcementClientConnection::SetMaxSize-Methode
 
 > [!Note]  
-> Die Netzwerk Zugriffsschutz-Plattform ist ab Windows 10 nicht verfügbar.
+> Die Netzwerkzugriffsschutz-Plattform ist ab Windows 10 nicht verfügbar.
 
  
 
-Mit der **inapenforcementclientconnection:: setmaxsize** -Methode wird die maximale Größe des SoH-Pakets für diesen Client festgelegt.
+Die **INapEnforcementClientConnection::SetMaxSize-Methode** legt die maximale Größe des SoH-Pakets für diesen Client fest.
 
 ## <a name="syntax"></a>Syntax
 
@@ -47,32 +47,32 @@ HRESULT SetMaxSize(
 
 <dl> <dt>
 
-*MaxSize* \[ in\]
+*maxSize* \[ In\]
 </dt> <dd>
 
-Eine [**protocolmaxsize**](nap-datatypes.md) -Struktur, die die maximale Größe des SoH-Pakets in Bytes angibt.
+Eine [**ProtocolMaxSize-Struktur,**](nap-datatypes.md) die die maximale Größe des SoH-Pakets in Bytes angibt.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Es können auch andere com-spezifische Fehlercodes zurückgegeben werden.
+Andere COM-spezifische Fehlercodes können ebenfalls zurückgegeben werden.
 
 
 
 | Rückgabecode                                                                                     | Beschreibung                                                        |
 |-------------------------------------------------------------------------------------------------|--------------------------------------------------------------------|
 | <dl> <dt>**S \_ OK**</dt> </dl>           | Vorgang erfolgreich.<br/>                                    |
-| <dl> <dt>**E \_ Access verweigert**</dt> </dl> | Berechtigungs Fehler, Zugriff verweigert.<br/>                       |
-| <dl> <dt>**E \_ Outo-Memory**</dt> </dl>  | System Ressourcen Limit, der Vorgang konnte nicht durchgeführt werden.<br/> |
+| <dl> <dt>**E \_ ACCESSDENIED**</dt> </dl> | Berechtigungsfehler, Zugriff verweigert.<br/>                       |
+| <dl> <dt>**E \_ OUTOFMEMORY**</dt> </dl>  | Systemressourcenlimit, konnte den Vorgang nicht ausführen.<br/> |
 
 
 
  
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Dieser Wert wird durch den Erzwingungs Client festgelegt.
+Dieser Wert wird vom Erzwingungsclient festgelegt.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -80,19 +80,19 @@ Dieser Wert wird durch den Erzwingungs Client festgelegt.
 
 | Anforderung | Wert |
 |-------------------------------------|-----------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                                      |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/>                                                |
-| Header<br/>                   | <dl> <dt>Napforcementclient. h</dt> </dl>   |
-| IDL<br/>                      | <dl> <dt>Napforcementclient. idl</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur Vista-Desktop-Apps\]<br/>                                                      |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/>                                                |
+| Header<br/>                   | <dl> <dt>NapEnforcementClient.h</dt> </dl>   |
+| Idl<br/>                      | <dl> <dt>NapEnforcementClient.idl</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Qagent.dll</dt> </dl>               |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Inapenforcementclientconnection**](inapenforcementclientconnection.md)
+[**INapEnforcementClientConnection**](inapenforcementclientconnection.md)
 </dt> </dl>
 
  

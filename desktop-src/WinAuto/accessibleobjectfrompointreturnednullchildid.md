@@ -1,21 +1,21 @@
 ---
-title: Accessibleobjectfrompointreturnetdnullchildid
-description: Accessibleobjectfrompointreturnetdnullchildid
+title: AccessibleObjectFromPointReturnedNullChildId
+description: AccessibleObjectFromPointReturnedNullChildId
 ms.assetid: 20511B76-736B-4B43-8DC3-4306DF74CF73
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 7e03c708d13bd8abfe642b99310c8b5bea176e11
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: 8fb6ebf33cdfdef7b6e32ec4b9943accc06551d5f37f625fa77cb22e01b913df
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "103714196"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118994360"
 ---
-# <a name="accessibleobjectfrompointreturnednullchildid"></a>Accessibleobjectfrompointreturnetdnullchildid
+# <a name="accessibleobjectfrompointreturnednullchildid"></a>AccessibleObjectFromPointReturnedNullChildId
 
 ## <a name="text"></a>Text
 
-Accessibleobjectfrompoint ( {0} , {1} ) hat eine NULL-childID zurückgegeben.
+AccessibleObjectFromPoint( {0} , ) hat eine UNTERGEORDNETE ID {1} (NULL) zurückgegeben.
 
 ## <a name="type"></a>type
 
@@ -23,25 +23,25 @@ Fehler
 
 ## <a name="description"></a>BESCHREIBUNG
 
-Die childID der [**IAccessible**](/windows/desktop/api/oleacc/nn-oleacc-iaccessible) -Schnittstelle des Objekts, die für die angegebenen Koordinaten abgerufen wurde, ist NULL.
+Die ChildId der [**IAccessible-Schnittstelle**](/windows/desktop/api/oleacc/nn-oleacc-iaccessible) des Objekts, die für die angegebenen Koordinaten abgerufen wird, ist NULL.
 
 ## <a name="possible-causes"></a>Mögliche Ursachen
 
-Die Benutzerinteraktion während der Überprüfung, z. b. das Verschieben des Fokus auf ein nicht-Ziel-HWND, hat den Überprüfungs Vorgang beeinträchtigt.
+Die Benutzerinteraktion während der Überprüfung, z. B. das Verschieben des Fokus auf ein Nicht-Ziel-HWND, hat den Überprüfungsprozess beeinträchtigt.
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[Navigation durch Treffer Tests und Bildschirmposition](navigation-through-hit-testing-and-screen-location.md)
+[Navigation durch Treffertests und Bildschirmposition](navigation-through-hit-testing-and-screen-location.md)
 </dt> <dt>
 
-[**Accessibleobjectfrompoint**](/windows/desktop/api/Oleacc/nf-oleacc-accessibleobjectfrompoint)
+[**AccessibleObjectFromPoint**](/windows/desktop/api/Oleacc/nf-oleacc-accessibleobjectfrompoint)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

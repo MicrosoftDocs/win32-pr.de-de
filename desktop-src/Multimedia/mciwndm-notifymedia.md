@@ -1,9 +1,9 @@
 ---
-title: MCIWNDM_NOTIFYMEDIA Meldung (VFW. h)
-description: Die mciwndm \_ notifymedia-Meldung benachrichtigt das übergeordnete Fenster einer Anwendung, dass das Medium geändert wurde.
+title: MCIWNDM_NOTIFYMEDIA (Vfw.h)
+description: Die MCIWNDM NOTIFYMEDIA-Meldung benachrichtigt das übergeordnete Fenster einer Anwendung, \_ dass sich das Medium geändert hat.
 ms.assetid: cc31502d-09a9-4580-9ff8-9c2be51c8e35
 keywords:
-- MCIWNDM_NOTIFYMEDIA-Nachricht (Multimedia)
+- MCIWNDM_NOTIFYMEDIA-Nachricht Windows Multimedia
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 7026bd984e1d79775aac52caad56c87be6e8098e
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: aa64b17fb3910e518e5b5d4318f8d988cf71f8c314f047a5f2eed1ff80cc843d
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "103741152"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119783021"
 ---
-# <a name="mciwndm_notifymedia-message"></a>Mciwndm \_ notifymedia-Meldung
+# <a name="mciwndm_notifymedia-message"></a>MCIWNDM \_ NOTIFYMEDIA-Nachricht
 
-Die **mciwndm \_ notifymedia** -Meldung benachrichtigt das übergeordnete Fenster einer Anwendung, dass das Medium geändert wurde.
+Die **MCIWNDM \_ NOTIFYMEDIA-Meldung** benachrichtigt das übergeordnete Fenster einer Anwendung, dass sich das Medium geändert hat.
 
 
 ```C++
@@ -38,23 +38,23 @@ lParam = (LPARAM) (LPSTR) lp;
 
 <dl> <dt>
 
-<span id="hwnd"></span><span id="HWND"></span>*HWND*
+<span id="hwnd"></span><span id="HWND"></span>*Hwnd*
 </dt> <dd>
 
-Handle für das mciwnd-Fenster.
+Handle für das MCIWnd-Fenster.
 
 </dd> <dt>
 
-<span id="lp"></span><span id="LP"></span>*LP*
+<span id="lp"></span><span id="LP"></span>*Lp*
 </dt> <dd>
 
-Zeiger auf eine mit NULL endenden Zeichenfolge, die den neuen Dateinamen enthält. Wenn das Medium geschlossen wird, gibt es eine NULL-Zeichenfolge an.
+Zeiger auf eine auf NULL beendete Zeichenfolge, die den neuen Dateinamen enthält. Wenn das Medium geschlossen wird, gibt es eine NULL-Zeichenfolge an.
 
 </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Sie können die Benachrichtigung über Medien Änderungen aktivieren, indem Sie den Fenster Stil mciwndf \_ notifymedia angeben.
+Sie können die Benachrichtigung über Medienänderungen aktivieren, indem Sie den MCIWNDF \_ NOTIFYMEDIA-Fensterstil angeben.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -64,7 +64,7 @@ Sie können die Benachrichtigung über Medien Änderungen aktivieren, indem Sie 
 |-------------------------------------|----------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[nur Desktop-Apps\]<br/>                       |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                             |
-| Header<br/>                   | <dl> <dt>VFW. h</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Vfw.h</dt> </dl> |
 
 
 

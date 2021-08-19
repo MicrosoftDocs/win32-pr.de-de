@@ -13,11 +13,11 @@ ms.locfileid: "118929537"
 ---
 # <a name="handles"></a>Ziehpunkte
 
-Bis zu zwei Teile in der Formatzeichenfolgenbeschreibung eines Prozedur-Adresshandles. Der erste Teil ist der Handletyp<1> feld der Beschreibung einer Prozedur, der verwendet \_ wird, um implizite Handles anzugeben. Dieser Teil ist immer vorhanden. Der zweite Teil ist eine Parameterbeschreibung eines beliebigen expliziten Handles in der Prozedur. Beides wird in den folgenden Abschnitten erläutert, zusammen mit einer Beschreibung der zusätzlichen MIDL-Compilerunterstützung der Stubdeskriptorstruktur für Bindungshandleprobleme.
+Bis zu zwei Teile in der Formatzeichenfolgenbeschreibung eines Prozedur-Adresshandles. Der erste Teil ist der Handletyp<1> der Beschreibung einer Prozedur, der verwendet \_ wird, um implizite Handles anzugeben. Dieser Teil ist immer vorhanden. Der zweite Teil ist eine Parameterbeschreibung eines beliebigen expliziten Handles in der Prozedur. Beides wird in den folgenden Abschnitten erläutert, zusammen mit einer Beschreibung der zusätzlichen MIDL-Compilerunterstützung der Stubdeskriptorstruktur für Bindungshandleprobleme.
 
 ## <a name="implicit-handles"></a>Implizite Handles
 
-Wenn eine Prozedur ein implizites Handle für die Bindung verwendet, enthält der Handletyp<1>-Feld der Beschreibung der Prozedur einen von drei gültigen Werten ungleich \_ Null. Die MIDL-Compilerunterstützung für implizite Handles finden Sie im Feld IMPLICIT \_ HANDLE \_ INFO der Stubdeskriptorstruktur:
+Wenn eine Prozedur ein implizites Handle für die Bindung verwendet, enthält der Handletyp<1>-Feld der Beschreibung der Prozedur einen von drei gültigen Werten \_ ungleich null. Die MIDL-Compilerunterstützung für implizite Handles finden Sie im Feld IMPLICIT \_ HANDLE \_ INFO der Stubdeskriptorstruktur:
 
 ``` syntax
 typedef  (__RPC_FAR * GENERIC_BINDING_ROUTINE)();
@@ -46,9 +46,9 @@ union
 
 Wenn die Prozedur ein automatisches Handle verwendet, enthält **der pAutoHandle-Member** die Adresse der stub-defined-auto-Handlevariablen.
 
-Wenn die Prozedur ein implizites primitives Handle verwendet, enthält der **pPrimitiveHandle-Member** die Adresse der Stub-Defined-Primitive-Handlevariablen.
+Wenn die Prozedur ein implizites primitives Handle verwendet, enthält **der pPrimitiveHandle-Member** die Adresse der Stub-Defined-Primitive-Handlevariablen.
 
-Wenn die Prozedur schließlich ein implizites generisches Handle verwendet, enthält der **pGenericBindingInfo-Member** die Adresse des Zeigers auf die entsprechende **GENERISCHE BINDING \_ \_ INFO-Struktur.** Die DATENstruktur **MIDL \_ STUB \_ DESC** enthält einen Zeiger auf eine Auflistung generischer **BINDING \_ \_ PAIR-Strukturen.** Der Eintrag an der Nullposition dieser  Auflistung  ist für die Bindungs- und Bindungsroutinen reserviert, die dem generischen Bindungshandliment entspricht, auf das **pGenericBindingInfo** in **IMPLICIT HANDLE INFO \_ \_ verweist.** Der Typ des impliziten Bindungshandpunkts wird in der Formatzeichenfolge angegeben.
+Wenn die Prozedur schließlich ein implizites generisches Handle verwendet, enthält der **pGenericBindingInfo-Member** die Adresse des Zeigers auf die entsprechende **GENERISCHE BINDING \_ \_ INFO-Struktur.** Die DATENstruktur **MIDL \_ STUB \_ DESC** enthält einen Zeiger auf eine Auflistung generischer **BINDING \_ \_ PAIR-Strukturen.** Der Eintrag an der Nullposition dieser  Auflistung  ist für die Bindungs- und Bindungsroutinen reserviert, die dem generischen Bindungshand handle entspricht, auf das **pGenericBindingInfo** in **IMPLICIT HANDLE INFO \_ \_ verweist.** Der Typ des impliziten Bindungshandpunkts wird in der Formatzeichenfolge angegeben.
 
 ## <a name="explicit-handles"></a>Explizite Handles
 
@@ -62,7 +62,7 @@ FC_BIND_PRIMITIVE, flag<1>, offset<2>.
 
 Das Flag<1>, ob das Handle von einem Zeiger übergeben wird.
 
-Der Offset<2> gibt den Offset vom Anfang des Stapels zum primitiven Handle an.
+Der Offset<2> den Offset vom Anfang des Stapels zum primitiven Handle.
 
 > [!Note]  
 > Eine primitive Handlebeschreibung in der Typformatzeichenfolge wird auf eine einzelne FC \_ IGNORE-Datei reduziert.
@@ -75,14 +75,14 @@ Allgemein
 FC_BIND_GENERIC, flag_and_size<1>, offset<2>, binding_routine_pair_index<1>, FC_PAD
 ```
 
-Das Flag und die Größe<1> das obere Flag nibble und die niedrigere \_ \_ Nibble-Größe. Das Flag gibt an, ob das Handle von einem Zeiger übergeben wird. Das Feld size gibt die Größe des benutzerdefinierten generischen Handletyps an. Diese Größe ist auf 1, 2 oder 4 Bytes auf 32-Bit-Systemen und 1, 2, 4 oder 8 Bytes auf 64-Bit-Systemen beschränkt.
+Das Flag und die Größe<1> hat das obere \_ \_ Flag nibble und die niedrigere Größe nibble. Das Flag gibt an, ob das Handle von einem Zeiger übergeben wird. Das Feld size gibt die Größe des benutzerdefinierten generischen Handletyps an. Diese Größe ist auf 1, 2 oder 4 Bytes auf 32-Bit-Systemen und 1, 2, 4 oder 8 Bytes auf 64-Bit-Systemen beschränkt.
 
-Der Offset<2> gibt den Offset vom Anfang des Stapels des Zeigers auf die Daten der angegebenen Größe an.
+Der Offset<2> Felds stellt den Offset vom Anfang des Stapels des Zeigers auf die Daten der angegebenen Größe zur Versatzstelle.
 
 Der Bindungsroutinenpaarindex<1>-Feld gibt den Index im \_ \_ Feld \_ aGenericBindingRoutinePairs des  Stubdeskriptors an die Bindungs- und **Bindungsroutinenfunktionszeder** für das generische Handle zurück.
 
 > [!Note]  
-> Eine generische Handlebeschreibung im Typformat ist nur die Beschreibung des verknüpften Datentyps.
+> Eine generische Handlebeschreibung im Typformat ist nur die Beschreibung des zugehörigen Datentyps.
 
  
 
@@ -103,8 +103,8 @@ Die Flags<1>, wie das Handle übergeben wird und um welchen Typ es sich handelt.
 | 20  | HANDLE \_ PARAM \_ IS \_ OUT                 |
 | 21  | HANDLE \_ PARAM \_ IS \_ RETURN              |
 | 08  | NDR \_ STRICT \_ CONTEXT \_ HANDLE           |
-| 04  | \_NDR-KONTEXTHAND \_ HANDLE NO \_ \_ SERIALIZE    |
-| 02  | NDR \_ CONTEXT \_ HANDLE \_ SERIALIZE        |
+| 04  | \_NDR-KONTEXTHAND \_ HANDLE KEINE \_ \_ SERIALISIERUNG    |
+| 02  | SERIALISIEREN DES \_ NDR-KONTEXTHANDPUNKTS \_ \_        |
 | 01  | NDR-KONTEXTHAND \_ HANDLE DARF NICHT NULL \_ \_ \_ \_ SEIN |
 
 
@@ -122,7 +122,7 @@ Für stubs, die in **–Oi2** erstellt wurden, stellt der Parameter num<1> die O
 Bei früheren Versionen des Interpreters stellt der Parameter num<1> die Parameternummer des Kontexthandpunkts \_ ab 0 (null) in seiner Prozedur zur Verfügung.
 
 > [!Note]  
-> Eine Kontexthandpunktbeschreibung in der Typformatzeichenfolge hat nicht den Offset<2> in der Beschreibung.
+> Eine Kontexthand handle description in der Typformatzeichenfolge enthält nicht den Offset<2> beschreibung.
 
  
 
@@ -152,7 +152,7 @@ number_of_params<1>
 
 Die konstante Clientpuffergröße<2> gibt die Größe des Marshallingpuffers an, der vom Compiler \_ \_ \_ vorberechnt werden konnte. Dies kann nur eine Teilgröße sein, da das ClientMustSize-Flag die Größengröße auslöst.
 
-Die konstante Serverpuffergröße<2> die Größe des Marshallingpuffers wie vom Compiler \_ \_ \_ vorausbesetzt. Dies kann nur eine Teilgröße sein, da das ServerMustSize-Flag die Größengröße auslöst.
+Die konstante Serverpuffergröße<2> gibt die Größe des Marshallingpuffers an, wie vom Compiler \_ \_ \_ vorausbesetzt. Dies kann nur eine Teilgröße sein, da das ServerMustSize-Flag die Größengröße auslöst.
 
 Die INTERPRETER \_ OPT \_ FLAGS werden in Ndrtypes.h definiert:
 

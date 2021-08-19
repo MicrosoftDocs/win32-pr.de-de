@@ -4,23 +4,23 @@ ms.assetid: 7551da3a-1da6-426a-ba9d-f715df53718f
 title: composite-Element
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: b5eff3e0c16040f837e4c8a792ebac3124d723d1
-ms.sourcegitcommit: 63753fcfb0afbbe5ec283fb8316e62c2dc950f66
+ms.openlocfilehash: dec9ce7c889829ee227ce31df25d5d17985e877ed107870170f6939aebf14fd3
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/22/2021
-ms.locfileid: "107908838"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120084310"
 ---
 # <a name="composite-element"></a>composite-Element
 
 > [!Note]  
-> \[Veraltet. Diese API wird möglicherweise aus zukünftigen Versionen von Windows entfernt.\]
+> \[Veraltet. Diese API wird möglicherweise aus zukünftigen Releases von Windows.\]
 
  
 
 Das `composite` -Element definiert eine Komposition, ein Containerobjekt für Spuren und andere geschachtelte Kompositionen.
 
-## <a name="attributes"></a>Attributes
+## <a name="attributes"></a>Attribute
 
 [**lock**](lock-attribute.md), [**mute**](mute-attribute.md), [**userdata**](userdata-attribute.md), [**userid**](userid-attribute.md), [**username**](username-attribute.md)
 
@@ -37,7 +37,7 @@ Das `composite` -Element definiert eine Komposition, ein Containerobjekt für Sp
 
  
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
 Innerhalb eines Elements wird die Priorität geschachtelter Ebenen implizit durch die Reihenfolge bestimmt, in der `composite` sie innerhalb des Elements angezeigt werden. Die erste Ebene hat Priorität 0, und nachfolgende Ebenen haben höhere Prioritätswerte.
 

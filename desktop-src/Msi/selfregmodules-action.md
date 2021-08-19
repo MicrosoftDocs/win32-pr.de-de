@@ -1,42 +1,42 @@
 ---
-description: Die SelfRegModules-Aktion verarbeitet alle in der Tabelle selfreg aufgeführten Module und registriert alle installierten Module beim System. Der Installer führt keine Selbstregistrierung von exe-Dateien durch.
+description: Die SelfRegModules-Aktion verarbeitet alle module, die in der SelfReg-Tabelle aufgeführt sind, und registriert alle installierten Module beim System. Das Installationsprogramm registriert exe-Dateien nicht selbst.
 ms.assetid: b139ae28-e479-4915-909d-2449244e9fd6
 title: SelfRegModules-Aktion
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 75895b1886fad51f36113ce6e677ba6a534ab0cd
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: fbf137dc63baa72a3d5b93370e40911af93691eaa911c4081990656c84091870
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106352584"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119630040"
 ---
 # <a name="selfregmodules-action"></a>SelfRegModules-Aktion
 
-Die SelfRegModules-Aktion verarbeitet alle in der Tabelle [selfreg](selfreg-table.md) aufgeführten Module und registriert alle installierten Module beim System. Der Installer führt keine Selbstregistrierung von exe-Dateien durch.
+Die SelfRegModules-Aktion verarbeitet alle module, die in der [SelfReg-Tabelle](selfreg-table.md) aufgeführt sind, und registriert alle installierten Module beim System. Das Installationsprogramm registriert exe-Dateien nicht selbst.
 
-## <a name="sequence-restrictions"></a>Sequenz Einschränkungen
+## <a name="sequence-restrictions"></a>Sequenzeinschränkungen
 
-Die [InstallValidate](installvalidate-action.md) -Aktion muss aufgerufen werden, bevor die SelfRegModules-Aktion aufgerufen wird. Wenn eine [InstallFiles](installfiles-action.md) -Aktion verwendet wird, muss Sie vor der SelfRegModules-Aktion in der Sequenz angezeigt werden. Da die SelfRegModules-Aktion das System ändert, sollte SelfRegModules nach der [InstallInitialize-Aktion](installinitialize-action.md)erfolgen.
+Die [InstallValidate-Aktion](installvalidate-action.md) muss aufgerufen werden, bevor die SelfRegModules-Aktion aufgerufen wird. Wenn eine [InstallFiles-Aktion](installfiles-action.md) verwendet wird, muss sie vor der SelfRegModules-Aktion in der Sequenz angezeigt werden. Da die SelfRegModules-Aktion das System ändert, sollte SelfRegModules nach der [InstallInitialize-Aktion kommen.](installinitialize-action.md)
 
-## <a name="actiondata-messages"></a>Aktions Daten Meldungen
+## <a name="actiondata-messages"></a>ActionData-Meldungen
 
 
 
-| Feld | Beschreibung der Aktions Daten                           |
+| Feld | Beschreibung der Aktionsdaten                           |
 |-------|------------------------------------------------------|
-| \[1\] | Bezeichner der registrierten Modul Datei.                |
-| \[2\] | Bezeichner des Ordners mit der registrierten Modul Datei. |
+| \[1\] | Bezeichner der registrierten Moduldatei.                |
+| \[2\] | Bezeichner des Ordners, der die registrierte Moduldatei enthält. |
 
 
 
  
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die SelfRegModules-Aktion versucht, die [DllRegisterServer](/windows/win32/api/olectl/nf-olectl-dllregisterserver) -Funktion des Moduls, das für die Registrierung geplant ist, aufzurufen. Diese Aktion wird mit erhöhten Rechten ausgeführt, wenn die Installation mit erweiterten Berechtigungen ausgeführt wird, z. b. während einer Installation pro Computer. Bei einer pro-Benutzer-Installation führt das Installationsprogramm diese Aktion mit Benutzerberechtigungen aus.
+Die SelfRegModules-Aktion versucht, die [DllRegisterServer-Funktion](/windows/win32/api/olectl/nf-olectl-dllregisterserver) des Moduls auf aufruft, das registriert werden soll. Diese Aktion wird mit erhöhten Rechten ausgeführt, wenn die Installation mit erhöhten Rechten ausgeführt wird, z. B. während einer Installation pro Computer. Während einer benutzerspezifischen Installation führt das Installationsprogramm diese Aktion mit Benutzerberechtigungen aus.
 
-Beachten Sie, dass Sie die Reihenfolge, in der der Installer selbst Registrierungs-DLLs registriert, nicht mithilfe der [selfunregmodules-Aktion](selfunregmodules-action.md)angeben können.
+Beachten Sie, dass Sie die Reihenfolge, in der das Installationsprogramm selbstregistrierungs-DLLs registriert, nicht mithilfe der [SelfUnRegModules-Aktion angeben können.](selfunregmodules-action.md)
 
 ## <a name="related-topics"></a>Zugehörige Themen
 

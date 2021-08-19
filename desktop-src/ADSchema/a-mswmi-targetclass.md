@@ -1,11 +1,11 @@
 ---
-title: MS-WMI-targetclass-Attribut
-description: Der Klassenname des zu erstellenden Richtlinien Objekts.
+title: ms-WMI-TargetClass-Attribut
+description: Klassenname des zu erstellenden Richtlinienobjekts.
 ms.assetid: 3b6dbdd2-e87f-4ae5-97a0-ccbee7221593
 ms.tgt_platform: multiple
 keywords:
-- AD-Schema des MS-WMI-targetclass-Attributs
-- AD-Schema des mswap-targetclass-Attributs
+- MS-WMI-TargetClass-Attribut AD-Schema
+- MSWMI-TargetClass-Attribut AD-Schema
 topic_type:
 - apiref
 api_name:
@@ -14,26 +14,26 @@ api_type:
 - Schema
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: b617d2c68bba314610bdf81902c0e2696d9f96ba
-ms.sourcegitcommit: b77ace27b0432e7cd3863191b11926be032fbe2f
+ms.openlocfilehash: a854ded477199728bad845baf73d49a57241a5d01de109fe732062837f4a36d6
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "106343103"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119022478"
 ---
-# <a name="ms-wmi-targetclass-attribute"></a>MS-WMI-targetclass-Attribut
+# <a name="ms-wmi-targetclass-attribute"></a>ms-WMI-TargetClass-Attribut
 
-Der Klassenname des zu erstellenden Richtlinien Objekts.
+Klassenname des zu erstellenden Richtlinienobjekts.
 
 
 
 | Eingabe | Wert |
 |-------------------|---------------------------------------------|
-| CN                | MS-WMI-targetclass                          |
-| LDAP-Display-Name | mswap-targetclass                           |
+| CN                | ms-WMI-TargetClass                          |
+| Ldap-Anzeigename | msWMI-TargetClass                           |
 | Size              | Weniger als 20 Zeichen.                |
-| Berechtigung aktualisieren  | Gruppenrichtlinie-Administrator                  |
-| Aktualisierungshäufigkeit  | \-                                          |
+| Aktualisieren von Berechtigungen  | Gruppenrichtlinie Administrator                  |
+| Updatehäufigkeit  | \-                                          |
 | Attribute-Id      | 1.2.840.113556.1.4.1645                     |
 | System-ID-GUID    | 95b6d8d6-c9e8-4661-a2bc-6a5cabc04c62        |
 | Syntax            | [**String(Unicode)**](s-string-unicode.md) |
@@ -42,13 +42,13 @@ Der Klassenname des zu erstellenden Richtlinien Objekts.
 
 ## <a name="implementations"></a>Implementierungen
 
--   [**Windows Server 2003**](#windows-server-2003)
+-   [**Windows Server 2003**](#windows-server-2003)
 -   [**Windows Server 2003 R2**](#windows-server-2003-r2)
 -   [**Windows Server 2008**](#windows-server-2008)
 -   [**Windows Server 2008 R2**](#windows-server-2008-r2)
 -   [**Windows Server 2012**](#windows-server-2012)
 
-## <a name="windows-server-2003"></a>Windows Server 2003
+## <a name="windows-server-2003"></a>Windows Server 2003
 
 
 
@@ -56,16 +56,16 @@ Der Klassenname des zu erstellenden Richtlinien Objekts.
 |------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Link-ID                | \-                                                                                                                                                                               |
 | MAPI-Id                | \-                                                                                                                                                                               |
-| System-Only            | False                                                                                                                                                                            |
-| Ist-einwertig       | Richtig                                                                                                                                                                             |
-| Ist indiziert             | False                                                                                                                                                                            |
-| Im globalen Katalog      | False                                                                                                                                                                            |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                                                                                                                                     |
+| System-Only            | Falsch                                                                                                                                                                            |
+| Ist einwertig       | Richtig                                                                                                                                                                             |
+| Ist indiziert             | Falsch                                                                                                                                                                            |
+| Im globalen Katalog      | Falsch                                                                                                                                                                            |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                                                                                                                                     |
 | Range-Lower            | \-                                                                                                                                                                               |
 | Range-Upper            | \-                                                                                                                                                                               |
 | Search-Flags           | 0x00000000                                                                                                                                                                       |
 | System-Flags           | 0x00000010                                                                                                                                                                       |
-| In verwendete Klassen        | [**MS-WMI-policytemplate**](c-mswmi-policytemplate.md)<br/> [**MS-WMI-rangeparam**](c-mswmi-rangeparam.md)<br/> [**MS-WMI-wmigpo**](c-mswmi-wmigpo.md)<br/> |
+| In verwendete Klassen        | [**ms-WMI-PolicyTemplate**](c-mswmi-policytemplate.md)<br/> [**ms-WMI-RangeParam**](c-mswmi-rangeparam.md)<br/> [**ms-WMI-WMIGPO**](c-mswmi-wmigpo.md)<br/> |
 
 
 
@@ -77,16 +77,16 @@ Der Klassenname des zu erstellenden Richtlinien Objekts.
 |------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Link-ID                | \-                                                                                                                                                                               |
 | MAPI-Id                | \-                                                                                                                                                                               |
-| System-Only            | False                                                                                                                                                                            |
-| Ist-einwertig       | Richtig                                                                                                                                                                             |
-| Ist indiziert             | False                                                                                                                                                                            |
-| Im globalen Katalog      | False                                                                                                                                                                            |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                                                                                                                                     |
+| System-Only            | Falsch                                                                                                                                                                            |
+| Ist einwertig       | Richtig                                                                                                                                                                             |
+| Ist indiziert             | Falsch                                                                                                                                                                            |
+| Im globalen Katalog      | Falsch                                                                                                                                                                            |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                                                                                                                                     |
 | Range-Lower            | \-                                                                                                                                                                               |
 | Range-Upper            | \-                                                                                                                                                                               |
 | Search-Flags           | 0x00000000                                                                                                                                                                       |
 | System-Flags           | 0x00000010                                                                                                                                                                       |
-| In verwendete Klassen        | [**MS-WMI-policytemplate**](c-mswmi-policytemplate.md)<br/> [**MS-WMI-rangeparam**](c-mswmi-rangeparam.md)<br/> [**MS-WMI-wmigpo**](c-mswmi-wmigpo.md)<br/> |
+| In verwendete Klassen        | [**ms-WMI-PolicyTemplate**](c-mswmi-policytemplate.md)<br/> [**ms-WMI-RangeParam**](c-mswmi-rangeparam.md)<br/> [**ms-WMI-WMIGPO**](c-mswmi-wmigpo.md)<br/> |
 
 
 
@@ -98,16 +98,16 @@ Der Klassenname des zu erstellenden Richtlinien Objekts.
 |------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Link-ID                | \-                                                                                                                                                                               |
 | MAPI-Id                | \-                                                                                                                                                                               |
-| System-Only            | False                                                                                                                                                                            |
-| Ist-einwertig       | Richtig                                                                                                                                                                             |
-| Ist indiziert             | False                                                                                                                                                                            |
-| Im globalen Katalog      | False                                                                                                                                                                            |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                                                                                                                                     |
+| System-Only            | Falsch                                                                                                                                                                            |
+| Ist einwertig       | Richtig                                                                                                                                                                             |
+| Ist indiziert             | Falsch                                                                                                                                                                            |
+| Im globalen Katalog      | Falsch                                                                                                                                                                            |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                                                                                                                                     |
 | Range-Lower            | \-                                                                                                                                                                               |
 | Range-Upper            | \-                                                                                                                                                                               |
 | Search-Flags           | 0x00000000                                                                                                                                                                       |
 | System-Flags           | 0x00000010                                                                                                                                                                       |
-| In verwendete Klassen        | [**MS-WMI-policytemplate**](c-mswmi-policytemplate.md)<br/> [**MS-WMI-rangeparam**](c-mswmi-rangeparam.md)<br/> [**MS-WMI-wmigpo**](c-mswmi-wmigpo.md)<br/> |
+| In verwendete Klassen        | [**ms-WMI-PolicyTemplate**](c-mswmi-policytemplate.md)<br/> [**ms-WMI-RangeParam**](c-mswmi-rangeparam.md)<br/> [**ms-WMI-WMIGPO**](c-mswmi-wmigpo.md)<br/> |
 
 
 
@@ -119,16 +119,16 @@ Der Klassenname des zu erstellenden Richtlinien Objekts.
 |------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Link-ID                | \-                                                                                                                                                                               |
 | MAPI-Id                | \-                                                                                                                                                                               |
-| System-Only            | False                                                                                                                                                                            |
-| Ist-einwertig       | Richtig                                                                                                                                                                             |
-| Ist indiziert             | False                                                                                                                                                                            |
-| Im globalen Katalog      | False                                                                                                                                                                            |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                                                                                                                                     |
+| System-Only            | Falsch                                                                                                                                                                            |
+| Ist einwertig       | Richtig                                                                                                                                                                             |
+| Ist indiziert             | Falsch                                                                                                                                                                            |
+| Im globalen Katalog      | Falsch                                                                                                                                                                            |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                                                                                                                                     |
 | Range-Lower            | \-                                                                                                                                                                               |
 | Range-Upper            | \-                                                                                                                                                                               |
 | Search-Flags           | 0x00000000                                                                                                                                                                       |
 | System-Flags           | 0x00000010                                                                                                                                                                       |
-| In verwendete Klassen        | [**MS-WMI-policytemplate**](c-mswmi-policytemplate.md)<br/> [**MS-WMI-rangeparam**](c-mswmi-rangeparam.md)<br/> [**MS-WMI-wmigpo**](c-mswmi-wmigpo.md)<br/> |
+| In verwendete Klassen        | [**ms-WMI-PolicyTemplate**](c-mswmi-policytemplate.md)<br/> [**ms-WMI-RangeParam**](c-mswmi-rangeparam.md)<br/> [**ms-WMI-WMIGPO**](c-mswmi-wmigpo.md)<br/> |
 
 
 
@@ -140,16 +140,16 @@ Der Klassenname des zu erstellenden Richtlinien Objekts.
 |------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Link-ID                | \-                                                                                                                                                                               |
 | MAPI-Id                | \-                                                                                                                                                                               |
-| System-Only            | False                                                                                                                                                                            |
-| Ist-einwertig       | Richtig                                                                                                                                                                             |
-| Ist indiziert             | False                                                                                                                                                                            |
-| Im globalen Katalog      | False                                                                                                                                                                            |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                                                                                                                                     |
+| System-Only            | Falsch                                                                                                                                                                            |
+| Ist einwertig       | Richtig                                                                                                                                                                             |
+| Ist indiziert             | Falsch                                                                                                                                                                            |
+| Im globalen Katalog      | Falsch                                                                                                                                                                            |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                                                                                                                                     |
 | Range-Lower            | \-                                                                                                                                                                               |
 | Range-Upper            | \-                                                                                                                                                                               |
 | Search-Flags           | 0x00000000                                                                                                                                                                       |
 | System-Flags           | 0x00000010                                                                                                                                                                       |
-| In verwendete Klassen        | [**MS-WMI-policytemplate**](c-mswmi-policytemplate.md)<br/> [**MS-WMI-rangeparam**](c-mswmi-rangeparam.md)<br/> [**MS-WMI-wmigpo**](c-mswmi-wmigpo.md)<br/> |
+| In verwendete Klassen        | [**ms-WMI-PolicyTemplate**](c-mswmi-policytemplate.md)<br/> [**ms-WMI-RangeParam**](c-mswmi-rangeparam.md)<br/> [**ms-WMI-WMIGPO**](c-mswmi-wmigpo.md)<br/> |
 
 
 

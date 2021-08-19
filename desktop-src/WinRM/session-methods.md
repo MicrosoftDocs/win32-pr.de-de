@@ -1,20 +1,20 @@
 ---
-title: Sitzungs Methoden
-description: Das Sitzungs Objekt macht die folgenden Methoden verfügbar.
+title: Sitzungsmethoden
+description: Das Session-Objekt macht die folgenden Methoden verfügbar.
 ms.assetid: B904E30D-5066-4C8C-BEE1-49FB9EC44AAF
 ms.tgt_platform: multiple
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 900f52434a98afcf91dac9fa3c8f42b5a52fbea5
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: db833a95514336c32469e959c868927ea5a20b462d037a49241184eaf3495bfe
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "103855491"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119642490"
 ---
-# <a name="session-methods"></a>Sitzungs Methoden
+# <a name="session-methods"></a>Sitzungsmethoden
 
-Das [**Sitzungs**](session.md) Objekt macht die folgenden Methoden verfügbar.
+Das [**Session-Objekt**](session.md) macht die folgenden Methoden verfügbar.
 
 ## <a name="in-this-section"></a>In diesem Abschnitt
 
@@ -22,13 +22,13 @@ Das [**Sitzungs**](session.md) Objekt macht die folgenden Methoden verfügbar.
 -   [**Delete-Methode**](session-delete.md)
 -   [**Enumerate-Methode**](session-enumerate.md)
 -   [**Get-Methode**](session-get.md)
--   [**Methode identifizieren**](session-identify.md)
--   [**Methode aufrufen**](session-invoke.md)
+-   [**Identify-Methode**](session-identify.md)
+-   [**Invoke-Methode**](session-invoke.md)
 -   [**Put-Methode**](session-put.md)
 
- 
+ 
 
- 
+ 
 
 
 

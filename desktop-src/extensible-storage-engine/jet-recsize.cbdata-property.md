@@ -1,6 +1,6 @@
 ---
-description: Weitere Informationen finden Sie in der JET_RECSIZE. cbData-Eigenschaft.
-title: JET_RECSIZE. cbData-Eigenschaft (Microsoft. ISAM. ESENT. Interop. Vista)
+description: Weitere Informationen finden Sie unter JET_RECSIZE.cbData-Eigenschaft.
+title: JET_RECSIZE.cbData-Eigenschaft (Microsoft.Isam.Esent.Interop.Vista)
 TOCTitle: 'cbData property '
 ms:assetid: P:Microsoft.Isam.Esent.Interop.Vista.JET_RECSIZE.cbData
 ms:mtpsurl: https://msdn.microsoft.com/library/microsoft.isam.esent.interop.vista.jet_recsize.cbdata(v=EXCHG.10)
@@ -26,19 +26,19 @@ api_type:
 api_location:
 - Microsoft.Isam.Esent.Interop.dll
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: e7765ba11c39419cafac8441c59f797702872875
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 93192408331154888b906f1a8d06a18bef61a958188aa481a7dfb5aee52006c8
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "103749832"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119616600"
 ---
-# <a name="jet_recsizecbdata-property"></a>JET_RECSIZE. cbData (Eigenschaft)
+# <a name="jet_recsizecbdata-property"></a>JET_RECSIZE.cbData-Eigenschaft
 
-Ruft das Benutzer DataSet im Datensatz ab.
+Ruft das Benutzerdatensatz im Datensatz ab.
 
-**Namespace:**  [Microsoft. ISAM. ESENT. Interop. Vista](./microsoft.isam.esent.interop.vista-namespace.md)  
-**Assembly:**  Microsoft. ISAM. ESENT. Interop (in Microsoft.Isam.Esent.Interop.dll)
+**Namespace:**  [Microsoft.Isam.Esent.Interop.Vista](./microsoft.isam.esent.interop.vista-namespace.md)  
+**Assembly:**  Microsoft.Isam.Esent.Interop (in Microsoft.Isam.Esent.Interop.dll)
 
 ## <a name="syntax"></a>Syntax
 
@@ -60,14 +60,14 @@ public long cbData { get; internal set; }
 
 #### <a name="property-value"></a>Eigenschaftswert
 
-Typ: [System. Int64](/dotnet/api/system.int64)  
+Typ: [System.Int64](/dotnet/api/system.int64)  
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
-#### <a name="reference"></a>Referenz
+#### <a name="reference"></a>Verweis
 
-[JET_RECSIZE Struktur](./jet-recsize-structure2.md)
+[JET_RECSIZE-Struktur](./jet-recsize-structure2.md)
 
-[Mitglieder JET_RECSIZE](./jet-recsize-members.md)
+[JET_RECSIZE-Member](./jet-recsize-members.md)
 
-[Microsoft. ISAM. ESENT. Interop. Vista-Namespace](./microsoft.isam.esent.interop.vista-namespace.md)
+[Microsoft.Isam.Esent.Interop.Vista-Namespace](./microsoft.isam.esent.interop.vista-namespace.md)

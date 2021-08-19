@@ -1,8 +1,8 @@
 ---
-description: Die IsArray-Eigenschaft des "Swap Property"-Objekts ist ein boolescher Wert, der verwendet werden kann, um zu bestimmen, ob diese Eigenschaft einen Arraytyp aufweist. Diese Eigenschaft ist schreibgeschützt.
+description: Die IsArray-Eigenschaft des SWbemProperty-Objekts ist ein boolescher Wert, mit dem bestimmt werden kann, ob diese Eigenschaft über einen Arraytyp verfügt. Diese Eigenschaft ist schreibgeschützt.
 ms.assetid: 24018444-d21c-49d6-8394-57304b439050
 ms.tgt_platform: multiple
-title: Taubemproperty. IsArray-Eigenschaft (wbemdisp. h)
+title: SWbemProperty.IsArray-Eigenschaft (Wbemdisp.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,18 +16,18 @@ api_type:
 - COM
 api_location:
 - Wbemdisp.dll
-ms.openlocfilehash: 2924c5d4f01f90543d50799adad4cd556c8279f4
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: fd8309f9650fc9d45932d890f678268681b58a15f099b87bd084e115dbafae58
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "103754976"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118991920"
 ---
-# <a name="swbempropertyisarray-property"></a>Taubemproperty. IsArray-Eigenschaft
+# <a name="swbempropertyisarray-property"></a>SWbemProperty.IsArray (Eigenschaft)
 
-Die **IsArray** -Eigenschaft des " [**Swap Property**](swbemproperty.md) "-Objekts ist ein boolescher Wert, der verwendet werden kann, um zu bestimmen, ob diese Eigenschaft einen Arraytyp aufweist. Diese Eigenschaft ist schreibgeschützt.
+Die **IsArray-Eigenschaft** des [**SWbemProperty-Objekts**](swbemproperty.md) ist ein boolescher Wert, mit dem bestimmt werden kann, ob diese Eigenschaft über einen Arraytyp verfügt. Diese Eigenschaft ist schreibgeschützt.
 
-Eine Erläuterung dieser Syntax finden Sie unter [Dokument Konventionen für die Skript-API](document-conventions-for-the-scripting-api.md).
+Eine Erläuterung dieser Syntax finden Sie unter [Dokumentkonventionen für die Skripterstellungs-API.](document-conventions-for-the-scripting-api.md)
 
 Diese Eigenschaft ist schreibgeschützt.
 
@@ -50,11 +50,11 @@ SWbemProperty.IsArray As Boolean
 |-------------------------------------|-----------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows Vista<br/>                                                                |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2008<br/>                                                          |
-| Header<br/>                   | <dl> <dt>Wbemdisp. h</dt> </dl>   |
-| Typbibliothek<br/>             | <dl> <dt>Wbemdisp. tlb</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Wbemdisp.h</dt> </dl>   |
+| Typbibliothek<br/>             | <dl> <dt>Wbemdisp.tlb</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Wbemdisp.dll</dt> </dl> |
-| CLSID<br/>                    | CLSID- \_ Swap-Eigenschaft<br/>                                                         |
-| IID<br/>                      | IID \_ iswbemproperty<br/>                                                          |
+| CLSID<br/>                    | CLSID \_ SWbemProperty<br/>                                                         |
+| IID<br/>                      | IID \_ ISWbemProperty<br/>                                                          |
 
 
 

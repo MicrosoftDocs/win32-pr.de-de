@@ -1,19 +1,19 @@
 ---
-description: Empfangen der Ereignis Benachrichtigung
+description: Empfangen von Ereignisbenachrichtigungen
 ms.assetid: 3200d666-d927-4198-b1f6-1636971f5f07
-title: Empfangen der Ereignis Benachrichtigung
+title: Empfangen von Ereignisbenachrichtigungen
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 23716d4089caac4ebc61188b7a32818c9e462da9
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: fde3fd7a382ed15394c66e427a59260ba71e2e2cb2ff47cbf7d453e3526d708c
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "103755648"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118951359"
 ---
-# <a name="receiving-event-notification"></a>Empfangen der Ereignis Benachrichtigung
+# <a name="receiving-event-notification"></a>Empfangen von Ereignisbenachrichtigungen
 
-Im folgenden Beispiel wird gezeigt, wie die [**notifychangeeventlog**](/windows/desktop/api/Winbase/nf-winbase-notifychangeeventlog) -Funktion verwendet wird, um Benachrichtigungen zu empfangen, wenn ein Ereignis protokolliert wird. In diesem Beispiel wird nach den Ereignissen gefiltert, die in der [Berichterstellung eines Ereignisses](reporting-an-event.md)durch das Beispiel geschrieben wurden.
+Das folgende Beispiel zeigt, wie die [**NotifyChangeEventLog-Funktion**](/windows/desktop/api/Winbase/nf-winbase-notifychangeeventlog) verwendet wird, um Benachrichtigungen zu empfangen, wenn ein Ereignis protokolliert wird. Dieses Beispiel filtert nach den Ereignissen, die im Beispiel unter [Reporting an Event (Melden eines Ereignisses)](reporting-an-event.md)geschrieben wurden.
 
 
 ```C++

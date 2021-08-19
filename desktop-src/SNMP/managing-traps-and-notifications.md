@@ -1,37 +1,37 @@
 ---
 title: Verwalten von Traps und Benachrichtigungen
-description: Die WinSNMP-Anwendung muss registriert werden, um Traps und Benachrichtigungen zu empfangen, indem die SnmpRegister-Funktion mit Snmpapi auf aufgerufen wird \_ . Die Anwendung kann die Registrierung und die Deaktivierung von Traps und Benachrichtigungen aufheben, indem Sie die-Funktion mit Snmpapi \_ Off aufrufen.
+description: Die WinSNMP-Anwendung muss sich registrieren, um Traps und Benachrichtigungen zu empfangen, indem sie die SnmpRegister-Funktion mit SNMPAPI \_ ON aufruft. Die Anwendung kann die Registrierung aufheben und Traps und Benachrichtigungen deaktivieren, indem sie die Funktion mit SNMPAPI \_ OFF aufruft.
 ms.assetid: 2bccba35-bf5c-4e5c-94e4-59980f2b9776
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 51e3a2d9fed1f7c34dd8191550d1dbc68ed984e5
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: 402a768aa28efb6f2fdc18994d749cfca2f2c412f748f853fb76fcd7fe3e41d3
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "103856632"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119009378"
 ---
 # <a name="managing-traps-and-notifications"></a>Verwalten von Traps und Benachrichtigungen
 
-Die WinSNMP-Anwendung muss registriert werden, um Traps und Benachrichtigungen zu empfangen, indem die [**SnmpRegister**](/windows/desktop/api/Winsnmp/nf-winsnmp-snmpregister) -Funktion mit Snmpapi auf aufgerufen wird \_ . Die Anwendung kann die Registrierung und die Deaktivierung von Traps und Benachrichtigungen aufheben, indem Sie die-Funktion mit Snmpapi \_ Off aufrufen.
+Die WinSNMP-Anwendung muss sich registrieren, um Traps und Benachrichtigungen zu empfangen, indem sie die [**SnmpRegister-Funktion**](/windows/desktop/api/Winsnmp/nf-winsnmp-snmpregister) mit SNMPAPI \_ ON aufruft. Die Anwendung kann die Registrierung aufheben und Traps und Benachrichtigungen deaktivieren, indem sie die Funktion mit SNMPAPI \_ OFF aufruft.
 
-Wenn die Anwendung **snmpregiester** aufruft, stehen mehrere Optionen zur Verfügung. Die Anwendung kann sich für die folgenden Traps und Benachrichtigungen registrieren oder die Registrierung aufheben:
+Wenn die Anwendung **SnmpRegister** aufruft, stehen mehrere Optionen zur Verfügung. Die Anwendung kann die Registrierung für die folgenden Traps und Benachrichtigungen aufheben:
 
--   Ein Typ von Trap oder Benachrichtigung
+-   Eine Art von Trap oder Benachrichtigung
 -   Alle Traps und Benachrichtigungen
--   Alle Quellen von Trap-und Benachrichtigungs Anforderungen
--   Traps und Benachrichtigungen von allen Verwaltungs Entitäten
+-   Alle Quellen von Trap- und Benachrichtigungsanforderungen
+-   Traps und Benachrichtigungen von allen Verwaltungsentitäten
 -   Traps und Benachrichtigungen für jeden Kontext
 
-Zum Registrieren und Empfangen eines vordefinierten Traps oder Benachrichtigungs Typs muss die Anwendung für jeden vordefinierten Typ einen Objekt Bezeichner (eine [**smioid**](/windows/desktop/api/Winsnmp/ns-winsnmp-smioid) -Struktur) definieren. Die-Struktur muss eine Muster Vergleichs Sequenz für den Typ von Trap oder Benachrichtigung enthalten. RFC 1907, "Verwaltungs Informationsbasis für Version 2 des Simple Network Management-Protokolls (SNMPv2)", definiert Trap-und Benachrichtigungs Objekt-IDs.
+Um einen vordefinierten Trap- oder Benachrichtigungstyp zu registrieren und zu empfangen, muss die Anwendung einen Objektbezeichner (eine [**smiOID-Struktur)**](/windows/desktop/api/Winsnmp/ns-winsnmp-smioid) für jeden vordefinierten Typ definieren. Die -Struktur muss eine Musterabgleichssequenz für den Typ des Traps oder der Benachrichtigung enthalten. RFC 1907, "Management Information Base for Version 2 of the Simple Network Management Protocol (SNMPv2)" definiert Trap- und Benachrichtigungsobjektbezeichner.
 
-Zum Abrufen von ausstehenden Trap Daten und Benachrichtigungen für eine WinSNMP-Sitzung muss eine WinSNMP-Anwendung die [**snmprecvmsg**](/windows/desktop/api/Winsnmp/nf-winsnmp-snmprecvmsg) -Funktion mit dem Sitzungs handle aufrufen, das von der [**snmpkreatesession**](/windows/desktop/api/Winsnmp/nf-winsnmp-snmpcreatesession) -Funktion zurückgegeben wird.
+Um ausstehende Trapdaten und Benachrichtigungen für eine WinSNMP-Sitzung abzurufen, muss eine WinSNMP-Anwendung die [**SnmpRecvMsg-Funktion**](/windows/desktop/api/Winsnmp/nf-winsnmp-snmprecvmsg) mit dem von der [**SnmpCreateSession-Funktion**](/windows/desktop/api/Winsnmp/nf-winsnmp-snmpcreatesession) zurückgegebenen Sitzungshandle aufrufen.
 
-Weitere Informationen finden Sie unter [Senden von SNMP-Nachrichten](sending-snmp-messages.md) und [empfangen von SNMP-Nachrichten](receiving-snmp-messages.md). Weitere Informationen zur Zuordnung und Aufhebung der Zuordnung von Ressourcen für Traps und Benachrichtigungen finden Sie unter [Zuordnen von WinSNMP-Speicher Objekten](allocating-winsnmp-memory-objects.md).
+Weitere Informationen finden Sie unter [Senden von SNMP-Nachrichten](sending-snmp-messages.md) und [Empfangen von SNMP-Nachrichten.](receiving-snmp-messages.md) Weitere Informationen zur Zuordnung und Freigabe von Ressourcen für Traps und Benachrichtigungen finden Sie unter [Zuordnen von WinSNMP-Speicherobjekten.](allocating-winsnmp-memory-objects.md)
 
- 
+ 
 
- 
+ 
 
 
 

@@ -1,21 +1,21 @@
 ---
-title: Erstellen einer Frame-Rückruffunktion
-description: Erstellen einer Frame-Rückruffunktion
+title: Erstellen einer Framerückruffunktion
+description: Erstellen einer Framerückruffunktion
 ms.assetid: 37002ee0-9907-4aab-93cc-50fe9cd21cff
 keywords:
-- capsetcallbackonframe-Makro
+- capSetCallbackOnFrame-Makro
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 07b2a921bfae235c50387c41865c44bb69b5c05a
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: 3ac102baf62cbfabc79a9a38eb81127a0c6ea36b6ad694139f882bbae0e1bce1
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "104309684"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119497930"
 ---
-# <a name="creating-a-frame-callback-function"></a>Erstellen einer Frame-Rückruffunktion
+# <a name="creating-a-frame-callback-function"></a>Erstellen einer Framerückruffunktion
 
-Das folgende Beispiel ist eine einfache Frame Rückruffunktion. Registrieren Sie diesen Rückruf mithilfe des [**capsetcallbackonframe**](/windows/desktop/api/Vfw/nf-vfw-capsetcallbackonframe) -Makros.
+Das folgende Beispiel ist eine einfache Framerückruffunktion. Registrieren Sie diesen Rückruf mithilfe des [**Makros capSetCallbackOnFrame.**](/windows/desktop/api/Vfw/nf-vfw-capsetcallbackonframe)
 
 
 ```
@@ -44,12 +44,12 @@ LRESULT PASCAL FrameCallbackProc(HWND hWnd, LPVIDEOHDR lpVHdr)
 
 <dl> <dt>
 
-[Verwenden der Video Erfassung](using-video-capture.md)
+[Verwenden von Video capture](using-video-capture.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

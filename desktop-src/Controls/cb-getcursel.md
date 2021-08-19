@@ -1,9 +1,9 @@
 ---
-title: CB_GETCURSEL Meldung (Winuser. h)
-description: Eine Anwendung sendet eine CB \_ getcurrsel-Nachricht, um den Index des derzeit ausgewählten Elements (sofern vorhanden) im Listenfeld eines Kombinations Felds abzurufen.
+title: CB_GETCURSEL Meldung (Winuser.h)
+description: Eine Anwendung sendet eine CB \_ GETCURSEL-Nachricht, um ggf. den Index des aktuell ausgewählten Elements im Listenfeld eines Kombinationsfelds abzurufen.
 ms.assetid: 47bf87f6-637f-48e9-849e-b2acbe5a6a7b
 keywords:
-- Windows-Steuerelemente für CB_GETCURSEL Meldung
+- CB_GETCURSEL Windows-Steuerelementen
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 0fbc9aa1785738fb061696fbad64598747168269
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: e9bc51f43fd28563be4bc3f024bf6afd35c297648aa6c6cad677aca4582c3737
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "103859357"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120089260"
 ---
-# <a name="cb_getcursel-message"></a>CB \_ getcurrsel-Meldung
+# <a name="cb_getcursel-message"></a>CB \_ GETCURSEL-Nachricht
 
-Eine Anwendung sendet eine **CB \_ getcurrsel** -Nachricht, um den Index des derzeit ausgewählten Elements (sofern vorhanden) im Listenfeld eines Kombinations Felds abzurufen.
+Eine Anwendung sendet eine **CB \_ GETCURSEL-Nachricht,** um ggf. den Index des aktuell ausgewählten Elements im Listenfeld eines Kombinationsfelds abzurufen.
 
 ## <a name="parameters"></a>Parameter
 
@@ -45,7 +45,7 @@ Nicht verwendet; muss 0 (null) sein.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Der Rückgabewert ist der null basierte Index des aktuell ausgewählten Elements. Wenn kein Element ausgewählt ist, ist es CB \_ Err.
+Der Rückgabewert ist der nullbasierte Index des aktuell ausgewählten Elements. Wenn kein Element ausgewählt ist, ist es CB \_ ERR.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -53,9 +53,9 @@ Der Rückgabewert ist der null basierte Index des aktuell ausgewählten Elements
 
 | Anforderung | Wert |
 |-------------------------------------|----------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                                           |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/>                                                     |
-| Header<br/>                   | <dl> <dt>Winuser. h (Windows. h einschließen)</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur Vista-Desktop-Apps\]<br/>                                                           |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                                                     |
+| Header<br/>                   | <dl> <dt>Winuser.h (include Windows.h)</dt> </dl> |
 
 
 
@@ -63,13 +63,13 @@ Der Rückgabewert ist der null basierte Index des aktuell ausgewählten Elements
 
 <dl> <dt>
 
-**Verweis**
+**Referenz**
 </dt> <dt>
 
-[**CB- \_ SelectString**](cb-selectstring.md)
+[**CB \_ SELECTSTRING**](cb-selectstring.md)
 </dt> <dt>
 
-[**CB \_ setcurrsel**](cb-setcursel.md)
+[**CB \_ SETCURSEL**](cb-setcursel.md)
 </dt> </dl>
 
  

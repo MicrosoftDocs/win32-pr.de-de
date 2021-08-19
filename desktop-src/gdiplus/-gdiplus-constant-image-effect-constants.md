@@ -1,31 +1,31 @@
 ---
-description: Die Effect-Klasse verfügt über mehrere untergeordnete Elemente, die verwendet werden können, um einen Farbeffekt oder eine Anpassung auf eine Bitmap anzuwenden.
+description: Die Effect-Klasse verfügt über mehrere Nachfolger, die verwendet werden können, um einen Farbeffekt anzuwenden oder eine Anpassung auf eine Bitmap vorzunehmen.
 ms.assetid: 36bf8203-aee1-4086-b23d-31f41222c86d
-title: Bildeffekt Konstanten
+title: Bildeffektkonstanten
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 8c4e12b2cd07dc95ae00aa0ecb94286def6851d4
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: fa0c964079da1bc11d03162308afddf3945bc242271b02482581448fe82d0064
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104131361"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119778740"
 ---
-# <a name="image-effect-constants"></a>Bildeffekt Konstanten
+# <a name="image-effect-constants"></a>Bildeffektkonstanten
 
-Die [**Effect**](/windows/desktop/api/gdipluseffects/nl-gdipluseffects-effect) -Klasse verfügt über mehrere untergeordnete Elemente, die verwendet werden können, um einen Farbeffekt oder eine Anpassung auf eine Bitmap anzuwenden. Jeder der Nachfolgern wird durch eine GUID identifiziert. Die folgenden Konstanten, die in "gdipluseffects. h" definiert sind, stellen GUIDs dar, die die verschiedenen Effekte identifizieren.
+Die [**Effect-Klasse**](/windows/desktop/api/gdipluseffects/nl-gdipluseffects-effect) verfügt über mehrere Nachfolger, die verwendet werden können, um einen Farbeffekt anzuwenden oder eine Anpassung auf eine Bitmap vorzunehmen. Jedes der Nachfolger wird durch eine GUID identifiziert. Die folgenden Konstanten, die in Gdipluseffects.h definiert sind, stellen GUIDs dar, die die verschiedenen Auswirkungen identifizieren.
 
--   Blureffectguid
--   Brightnesskontra steffectguid
--   Colorbalanceeffectguid
--   Colorcurrveeffectguid
--   Colorluteffectguid
--   Colormatrixeffectguid
--   Huesaturiationlightnessffectguid
--   Levelabffectguid
--   Redeyecorrectioneffectguid
--   "Sharpeneffectguid"
--   Tinteffectguid
+-   BlurEffectGuid
+-   BrightnessContrastEffectGuid
+-   ColorBalanceEffectGuid
+-   ColorCurveEffectGuid
+-   ColorLUTEffectGuid
+-   ColorMatrixEffectGuid
+-   HueSaturationLightnessEffectGuid
+-   LevelsEffectGuid
+-   RedEyeCorrectionEffectGuid
+-   SharpenEffectGuid
+-   TintEffectGuid
 
  
 

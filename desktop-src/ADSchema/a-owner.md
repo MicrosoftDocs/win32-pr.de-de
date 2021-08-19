@@ -1,11 +1,11 @@
 ---
-title: Owner-Attribut
-description: Der Distinguished Name eines Objekts, das den Besitz eines Objekts besitzt.
+title: Besitzerattribut
+description: Der Distinguished Name eines Objekts, das besitzer eines Objekts ist.
 ms.assetid: 37b0e8eb-fe33-494a-9e1f-264cf9211344
 ms.tgt_platform: multiple
 keywords:
-- AD-Schema für Besitzer Attribut
-- AD-Schema für Besitzer Attribut
+- Besitzerattribut AD-Schema
+- Besitzerattribut AD-Schema
 topic_type:
 - apiref
 api_name:
@@ -14,28 +14,28 @@ api_type:
 - Schema
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: d416158fea3fd0e3dfbda1cd60b2543d3df16248
-ms.sourcegitcommit: b77ace27b0432e7cd3863191b11926be032fbe2f
+ms.openlocfilehash: f0ead422104e6abc310db14cc2d6d1fbe7e4f2d0508e7144ba4087dd1730793e
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "104520055"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119022468"
 ---
-# <a name="owner-attribute"></a>Owner-Attribut
+# <a name="owner-attribute"></a>Besitzerattribut
 
-Der Distinguished Name eines Objekts, das den Besitz eines Objekts besitzt.
+Der Distinguished Name eines Objekts, das besitzer eines Objekts ist.
 
 
 
 | Eingabe | Wert |
 |-------------------|-----------------------------------------|
 | CN                | Besitzer                                   |
-| LDAP-Display-Name | owner                                   |
+| Ldap-Anzeigename | owner                                   |
 | Size              | \-                                      |
-| Berechtigung aktualisieren  | \-                                      |
-| Aktualisierungshäufigkeit  | \-                                      |
+| Aktualisieren von Berechtigungen  | \-                                      |
+| Updatehäufigkeit  | \-                                      |
 | Attribute-Id      | 2.5.4.32                                |
-| System-ID-GUID    | bf9679f3-0de6-11d0-a285-00aa003049e2    |
+| System-Id-Guid    | bf9679f3-0de6-11d0-a285-00aa003049e2    |
 | Syntax            | [**Object(DS-DN)**](s-object-ds-dn.md) |
 
 
@@ -43,7 +43,7 @@ Der Distinguished Name eines Objekts, das den Besitz eines Objekts besitzt.
 ## <a name="implementations"></a>Implementierungen
 
 -   [**Windows 2000 Server**](#windows-2000-server)
--   [**Windows Server 2003**](#windows-server-2003)
+-   [**Windows Server 2003**](#windows-server-2003)
 -   [**Windows Server 2003 R2**](#windows-server-2003-r2)
 -   [**Windows Server 2008**](#windows-server-2008)
 -   [**Windows Server 2008 R2**](#windows-server-2008-r2)
@@ -57,20 +57,20 @@ Der Distinguished Name eines Objekts, das den Besitz eines Objekts besitzt.
 |------------------------|-------------------------------------------------------------------------------------------|
 | Link-ID                | 44                                                                                        |
 | MAPI-Id                | \-                                                                                        |
-| System-Only            | False                                                                                     |
-| Ist-einwertig       | Richtig                                                                                      |
-| Ist indiziert             | False                                                                                     |
-| Im globalen Katalog      | False                                                                                     |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                                              |
+| System-Only            | Falsch                                                                                     |
+| Is-Single-Valued       | Richtig                                                                                      |
+| Ist indiziert             | Falsch                                                                                     |
+| Im globalen Katalog      | Falsch                                                                                     |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                                              |
 | Range-Lower            | \-                                                                                        |
 | Range-Upper            | \-                                                                                        |
 | Search-Flags           | 0x00000000                                                                                |
 | System-Flags           | 0x00000010                                                                                |
-| In verwendete Klassen        | [**Schutz**](c-device.md)<br/> [**Gruppe von Namen**](c-groupofnames.md)<br/> |
+| In verwendete Klassen        | [**Device**](c-device.md)<br/> [**Gruppen von Namen**](c-groupofnames.md)<br/> |
 
 
 
-## <a name="windows-server-2003"></a>Windows Server 2003
+## <a name="windows-server-2003"></a>Windows Server 2003
 
 
 
@@ -78,16 +78,16 @@ Der Distinguished Name eines Objekts, das den Besitz eines Objekts besitzt.
 |------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Link-ID                | 44                                                                                                                                                      |
 | MAPI-Id                | \-                                                                                                                                                      |
-| System-Only            | False                                                                                                                                                   |
-| Ist-einwertig       | Richtig                                                                                                                                                    |
-| Ist indiziert             | False                                                                                                                                                   |
-| Im globalen Katalog      | False                                                                                                                                                   |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                                                                                                            |
+| System-Only            | Falsch                                                                                                                                                   |
+| Is-Single-Valued       | Richtig                                                                                                                                                    |
+| Ist indiziert             | Falsch                                                                                                                                                   |
+| Im globalen Katalog      | Falsch                                                                                                                                                   |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                                                                                                            |
 | Range-Lower            | \-                                                                                                                                                      |
 | Range-Upper            | \-                                                                                                                                                      |
 | Search-Flags           | 0x00000000                                                                                                                                              |
 | System-Flags           | 0x00000010                                                                                                                                              |
-| In verwendete Klassen        | [**Schutz**](c-device.md)<br/> [**Gruppe von Namen**](c-groupofnames.md)<br/> [**groupof uniquumames**](c-groupofuniquenames.md)<br/> |
+| In verwendete Klassen        | [**Device**](c-device.md)<br/> [**Gruppen von Namen**](c-groupofnames.md)<br/> [**groupOfUniqueNames**](c-groupofuniquenames.md)<br/> |
 
 
 
@@ -99,16 +99,16 @@ Der Distinguished Name eines Objekts, das den Besitz eines Objekts besitzt.
 |------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Link-ID                | 44                                                                                                                                                      |
 | MAPI-Id                | \-                                                                                                                                                      |
-| System-Only            | False                                                                                                                                                   |
-| Ist-einwertig       | Richtig                                                                                                                                                    |
-| Ist indiziert             | False                                                                                                                                                   |
-| Im globalen Katalog      | False                                                                                                                                                   |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                                                                                                            |
+| System-Only            | Falsch                                                                                                                                                   |
+| Is-Single-Valued       | Richtig                                                                                                                                                    |
+| Ist indiziert             | Falsch                                                                                                                                                   |
+| Im globalen Katalog      | Falsch                                                                                                                                                   |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                                                                                                            |
 | Range-Lower            | \-                                                                                                                                                      |
 | Range-Upper            | \-                                                                                                                                                      |
 | Search-Flags           | 0x00000000                                                                                                                                              |
 | System-Flags           | 0x00000010                                                                                                                                              |
-| In verwendete Klassen        | [**Schutz**](c-device.md)<br/> [**Gruppe von Namen**](c-groupofnames.md)<br/> [**groupof uniquumames**](c-groupofuniquenames.md)<br/> |
+| In verwendete Klassen        | [**Device**](c-device.md)<br/> [**Gruppen von Namen**](c-groupofnames.md)<br/> [**groupOfUniqueNames**](c-groupofuniquenames.md)<br/> |
 
 
 
@@ -120,16 +120,16 @@ Der Distinguished Name eines Objekts, das den Besitz eines Objekts besitzt.
 |------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Link-ID                | 44                                                                                                                                                      |
 | MAPI-Id                | \-                                                                                                                                                      |
-| System-Only            | False                                                                                                                                                   |
-| Ist-einwertig       | Richtig                                                                                                                                                    |
-| Ist indiziert             | False                                                                                                                                                   |
-| Im globalen Katalog      | False                                                                                                                                                   |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                                                                                                            |
+| System-Only            | Falsch                                                                                                                                                   |
+| Is-Single-Valued       | Richtig                                                                                                                                                    |
+| Ist indiziert             | Falsch                                                                                                                                                   |
+| Im globalen Katalog      | Falsch                                                                                                                                                   |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                                                                                                            |
 | Range-Lower            | \-                                                                                                                                                      |
 | Range-Upper            | \-                                                                                                                                                      |
 | Search-Flags           | 0x00000000                                                                                                                                              |
 | System-Flags           | 0x00000010                                                                                                                                              |
-| In verwendete Klassen        | [**Schutz**](c-device.md)<br/> [**Gruppe von Namen**](c-groupofnames.md)<br/> [**groupof uniquumames**](c-groupofuniquenames.md)<br/> |
+| In verwendete Klassen        | [**Device**](c-device.md)<br/> [**Gruppen von Namen**](c-groupofnames.md)<br/> [**groupOfUniqueNames**](c-groupofuniquenames.md)<br/> |
 
 
 
@@ -141,16 +141,16 @@ Der Distinguished Name eines Objekts, das den Besitz eines Objekts besitzt.
 |------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Link-ID                | 44                                                                                                                                                      |
 | MAPI-Id                | \-                                                                                                                                                      |
-| System-Only            | False                                                                                                                                                   |
-| Ist-einwertig       | Richtig                                                                                                                                                    |
-| Ist indiziert             | False                                                                                                                                                   |
-| Im globalen Katalog      | False                                                                                                                                                   |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                                                                                                            |
+| System-Only            | Falsch                                                                                                                                                   |
+| Is-Single-Valued       | Richtig                                                                                                                                                    |
+| Ist indiziert             | Falsch                                                                                                                                                   |
+| Im globalen Katalog      | Falsch                                                                                                                                                   |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                                                                                                            |
 | Range-Lower            | \-                                                                                                                                                      |
 | Range-Upper            | \-                                                                                                                                                      |
 | Search-Flags           | 0x00000000                                                                                                                                              |
 | System-Flags           | 0x00000010                                                                                                                                              |
-| In verwendete Klassen        | [**Schutz**](c-device.md)<br/> [**Gruppe von Namen**](c-groupofnames.md)<br/> [**groupof uniquumames**](c-groupofuniquenames.md)<br/> |
+| In verwendete Klassen        | [**Device**](c-device.md)<br/> [**Gruppen von Namen**](c-groupofnames.md)<br/> [**groupOfUniqueNames**](c-groupofuniquenames.md)<br/> |
 
 
 
@@ -162,16 +162,16 @@ Der Distinguished Name eines Objekts, das den Besitz eines Objekts besitzt.
 |------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Link-ID                | 44                                                                                                                                                      |
 | MAPI-Id                | \-                                                                                                                                                      |
-| System-Only            | False                                                                                                                                                   |
-| Ist-einwertig       | Richtig                                                                                                                                                    |
-| Ist indiziert             | False                                                                                                                                                   |
-| Im globalen Katalog      | False                                                                                                                                                   |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                                                                                                            |
+| System-Only            | Falsch                                                                                                                                                   |
+| Is-Single-Valued       | Richtig                                                                                                                                                    |
+| Ist indiziert             | Falsch                                                                                                                                                   |
+| Im globalen Katalog      | Falsch                                                                                                                                                   |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                                                                                                            |
 | Range-Lower            | \-                                                                                                                                                      |
 | Range-Upper            | \-                                                                                                                                                      |
 | Search-Flags           | 0x00000000                                                                                                                                              |
 | System-Flags           | 0x00000010                                                                                                                                              |
-| In verwendete Klassen        | [**Schutz**](c-device.md)<br/> [**Gruppe von Namen**](c-groupofnames.md)<br/> [**groupof uniquumames**](c-groupofuniquenames.md)<br/> |
+| In verwendete Klassen        | [**Device**](c-device.md)<br/> [**Gruppen von Namen**](c-groupofnames.md)<br/> [**groupOfUniqueNames**](c-groupofuniquenames.md)<br/> |
 
 
 

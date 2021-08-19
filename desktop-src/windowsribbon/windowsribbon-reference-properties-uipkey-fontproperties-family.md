@@ -1,6 +1,6 @@
 ---
 title: UI_PKEY_FontProperties_Family
-description: Identifiziert die \_ Eigenschaft PKEY \_ FontProperties Family der Benutzeroberfläche. \_
+description: Identifiziert die \_ PKEY \_ FontProperties-Eigenschaft der \_ Benutzeroberfläche.
 ms.assetid: 95064588-9c14-401f-a86e-7b11e86faaf9
 ms.topic: article
 ms.date: 05/31/2018
@@ -13,7 +13,7 @@ ms.locfileid: "118438659"
 ---
 # <a name="ui_pkey_fontproperties_family"></a>UI \_ PKEY \_ FontProperties \_ Family
 
-Identifiziert die \_ Eigenschaft PKEY \_ FontProperties Family der Benutzeroberfläche. \_
+Identifiziert die \_ PKEY \_ FontProperties-Eigenschaft der \_ Benutzeroberfläche.
 
 ```
 propertyDescription
@@ -27,7 +27,7 @@ propertyDescription
 
 ## <a name="remarks"></a>Hinweise
 
-Die \_ PKEY \_ FontProperties-Familie der Benutzeroberfläche wird von einer Anwendung \_ verwendet, um den Wert des Dropdownkatalogs **font family** abzufragen.
+Die \_ PKEY \_ FontProperties-Familie der Benutzeroberfläche wird von einer Anwendung \_ verwendet, um den Wert des Dropdownkatalogs der **Schriftfamilie** abzufragen.
 
 Der Wert der \_ Ui-PKEY \_ FontProperties-Familie \_ entspricht einem [Windows GDI-Schriftartfamiliennamen,](../gdi/font-families.md) der mit der [EnumFontFamilies-Funktion](/windows/win32/api/wingdi/nf-wingdi-enumfontfamiliesa) oder [der EnumFontFamiliesEx-Funktion](/windows/win32/api/wingdi/nf-wingdi-enumfontfamiliesexa)abgerufen wurde.
 

@@ -1,5 +1,5 @@
 ---
-description: In der Tabelle ODBCDriver sind die ODBC-Treiber aufgeführt, die zur Installation gehören.
+description: In der ODBCDriver-Tabelle sind die ODBC-Treiber aufgeführt, die zur Installation gehören.
 ms.assetid: 3518b370-0652-4b54-8057-9871365d5e8c
 title: ODBCDriver-Tabelle
 ms.topic: article
@@ -13,7 +13,7 @@ ms.locfileid: "118943121"
 ---
 # <a name="odbcdriver-table"></a>ODBCDriver-Tabelle
 
-In der Tabelle ODBCDriver sind die ODBC-Treiber aufgeführt, die zur Installation gehören.
+In der ODBCDriver-Tabelle sind die ODBC-Treiber aufgeführt, die zur Installation gehören.
 
 Die ODBCDriver-Tabelle enthält die folgenden Spalten.
 
@@ -45,36 +45,36 @@ Interner Tokenname für treiber. Ein Primärschlüssel für die Tabelle
 <span id="Component_"></span><span id="component_"></span><span id="COMPONENT_"></span>Komponente\_
 </dt> <dd>
 
-Externer Schlüssel in die Tabelle Komponente.
+Externer Schlüssel in der Component-Tabelle.
 
 </dd> <dt>
 
 <span id="Description"></span><span id="description"></span><span id="DESCRIPTION"></span>Beschreibung
 </dt> <dd>
 
-Die Beschreibung, die für diesen ODBC-Treiber registriert ist. Dieser Wert kann nicht lokalisiert werden.
+Die für diesen ODBC-Treiber registrierte Beschreibung. Dieser Wert kann nicht lokalisiert werden.
 
 </dd> <dt>
 
 <span id="File_"></span><span id="file_"></span><span id="FILE_"></span>Datei\_
 </dt> <dd>
 
-Die DLL-Datei für Treiber, die in der Spalte Treiber aufgeführt sind. Die Spalte Datei \_ ist ein externer Schlüssel in der [Dateitabelle](file-table.md). Der in der Spalte Dateiname dieses Dateitabellendatensatzes eingegebene Dateiname muss das kurze Dateiformat aufweisen. Die \| SFN-LFN-Syntax kann nicht verwendet werden.
+Die DLL-Datei für Treiber, die in der Spalte Treiber aufgeführt sind. Die Spalte \_ Datei ist ein externer Schlüssel in der [Dateitabelle](file-table.md). Der in der Spalte Dateiname des Dateitabellendatensatz eingegebene Dateiname muss das kurze Dateiformat haben. Die \| SFN-LFN-Syntax kann nicht verwendet werden.
 
 </dd> <dt>
 
 <span id="File_Setup"></span><span id="file_setup"></span><span id="FILE_SETUP"></span>\_Dateieinrichtung
 </dt> <dd>
 
-Die Setup-DLL-Datei für den Treiber, wenn sie sich von Driver unterscheidet. Die Spalte Datei \_ ist ein externer Schlüssel in der [Dateitabelle](file-table.md). Der in der Spalte Dateiname dieses Dateitabellendatensatzes eingegebene Dateiname muss das kurze Dateiformat aufweisen. Die \| SFN-LFN-Syntax kann nicht verwendet werden.
+Die Setup-DLL-Datei für den Treiber, wenn sie sich von der des Treibers unterscheiden. Die Spalte \_ Datei ist ein externer Schlüssel in der [Dateitabelle](file-table.md). Der in der Spalte Dateiname des Dateitabellendatensatz eingegebene Dateiname muss das kurze Dateiformat haben. Die \| SFN-LFN-Syntax kann nicht verwendet werden.
 
 </dd> </dl>
 
 ## <a name="remarks"></a>Hinweise
 
-Die [Aktionen InstallODBC](installodbc-action.md) und [RemoveODBC](removeodbc-action.md) in [*Sequenztabellen*](s-gly.md) verarbeiten die Informationen in dieser Tabelle. Informationen zur Verwendung von *Sequenztabellen* finden Sie unter [Verwenden einer Sequenztabelle.](using-a-sequence-table.md)
+Die [Aktionen InstallODBC](installodbc-action.md) und [RemoveODBC](removeodbc-action.md) in [*Sequenztabellen*](s-gly.md) verarbeiten die Informationen in dieser Tabelle. Informationen zur Verwendung von *Sequenztabellen finden* Sie unter [Verwenden einer Sequenztabelle.](using-a-sequence-table.md)
 
-## <a name="validation"></a>Überprüfen
+## <a name="validation"></a>Überprüfung
 
 <dl>
 

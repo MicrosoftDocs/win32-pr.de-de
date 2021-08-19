@@ -1,5 +1,5 @@
 ---
-description: Eine separate Anforderung für Pixel Verlaufs interabschnitte und primitive.
+description: Anforderung von Pixelverlaufs-Schnittpunkten und Primitiven separat.
 MS-HAID: vspixengine.IPixelHistoryRequest2
 MSHAttr:
 - PreferredSiteName:MSDN
@@ -17,34 +17,34 @@ api_location:
 topic_type:
 - APIRef
 - kbSyntax
-ms.openlocfilehash: e789829d85f4cb986de694470a8cebddf3f26675
-ms.sourcegitcommit: a47bd86f517de76374e4fff33cfeb613eb259a7e
+ms.openlocfilehash: 0769e6e6774e0cbad659e02d9abfec73003ac1bf46368e78201fc1e5c234be78
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/06/2021
-ms.locfileid: "104342108"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119624020"
 ---
 # <a name="span-idvspixengineipixelhistoryrequest2spanipixelhistoryrequest2-interface"></a><span id="vspixengine.ipixelhistoryrequest2"></span>IPixelHistoryRequest2-Schnittstelle
 
-Eine separate Anforderung für Pixel Verlaufs interabschnitte und primitive.
+Anforderung von Pixelverlaufs-Schnittpunkten und Primitiven separat.
 
 ## <a name="members"></a>Member
 
-Die **IPixelHistoryRequest2** -Schnittstelle erbt von der [**IUnknown**](/windows/desktop/api/unknwn/nn-unknwn-iunknown) -Schnittstelle. **IPixelHistoryRequest2** verfügt auch über die folgenden Typen von Membern:
+Die **IPixelHistoryRequest2-Schnittstelle** erbt von der [**IUnknown-Schnittstelle.**](/windows/desktop/api/unknwn/nn-unknwn-iunknown) **IPixelHistoryRequest2** verfügt auch über diese Typen von Membern:
 
 -   [Methoden](#methods)
 
 ### <a name="span-idmethodsspanmethods"></a><span id="methods"></span>Methoden
 
-Die **IPixelHistoryRequest2** -Schnittstelle verfügt über diese Methoden.
+Die **IPixelHistoryRequest2-Schnittstelle** verfügt über diese Methoden.
 
-<table><colgroup><col style="width: 50%" /><col style="width: 50%" /></colgroup><thead><tr class="header"><th style="text-align: left;">Methode</th><th style="text-align: left;">BESCHREIBUNG</th></tr></thead><tbody><tr class="odd"><td style="text-align: left;"><a href="/windows/desktop/direct3dtools/ipixelhistoryrequest2-requestintersections-dword-point2d-dword-ipixelhistorycallback2-ptr-dword-dword"><strong>Requestinterabschnitts</strong></a></td><td style="text-align: left;"><p>Fordert eine Liste von Ereignissen an, die eine Änderung im angegebenen Pixel, Renderziel/UAV und Frame auslösen.</p></td></tr><tr class="even"><td style="text-align: left;"><a href="/windows/desktop/direct3dtools/ipixelhistoryrequest2-requestprimitives-pixelhistoryintersection-ptr-ipixelhistorycallback2-ptr-dword-dword"><strong>Requestprimitives</strong></a></td><td style="text-align: left;"><p>Fordert eine Liste von primitiven aus einer bestimmten Schnittmenge an. Weitere Informationen finden Sie unter der requestinterabschnitts-Member-Funktion.</p></td></tr></tbody></table>
+<table><colgroup><col style="width: 50%" /><col style="width: 50%" /></colgroup><thead><tr class="header"><th style="text-align: left;">Methode</th><th style="text-align: left;">Beschreibung</th></tr></thead><tbody><tr class="odd"><td style="text-align: left;"><a href="/windows/desktop/direct3dtools/ipixelhistoryrequest2-requestintersections-dword-point2d-dword-ipixelhistorycallback2-ptr-dword-dword"><strong>RequestIntersections</strong></a></td><td style="text-align: left;"><p>Fordert eine Liste von Ereignissen an, die eine Änderung im angegebenen Pixel, Renderziel/UAV und Frame verursachen.</p></td></tr><tr class="even"><td style="text-align: left;"><a href="/windows/desktop/direct3dtools/ipixelhistoryrequest2-requestprimitives-pixelhistoryintersection-ptr-ipixelhistorycallback2-ptr-dword-dword"><strong>RequestPrimitives</strong></a></td><td style="text-align: left;"><p>Fordert eine Liste von Primitiven von einer bestimmten Schnittmenge an. Weitere Informationen finden Sie in der RequestIntersections-Memberfunktion.</p></td></tr></tbody></table>
 
  
 
 ## <a name="requirements"></a>Anforderungen
 
-<table><colgroup><col style="width: 50%" /><col style="width: 50%" /></colgroup><tbody><tr class="odd"><td><p>Header</p></td><td>Vspixengine. h</td></tr></tbody></table>
+<table><colgroup><col style="width: 50%" /><col style="width: 50%" /></colgroup><tbody><tr class="odd"><td><p>Header</p></td><td>Vspixengine.h</td></tr></tbody></table>
 
  
 

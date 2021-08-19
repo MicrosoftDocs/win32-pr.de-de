@@ -1,6 +1,6 @@
 ---
 title: earlydepthstencil
-description: Erzwingt tiefen Schablonen Tests, bevor ein Shader ausgeführt wird.
+description: Erzwingt Tiefenschablonentests, bevor ein Shader ausgeführt wird.
 ms.assetid: f8a9fee7-4a8a-4a34-bf7c-56906592caac
 ms.topic: reference
 ms.date: 05/31/2018
@@ -9,16 +9,16 @@ topic_type:
 api_name: ''
 api_type: ''
 api_location: ''
-ms.openlocfilehash: a7dd8507986970f2066538cc00b53af08807910e
-ms.sourcegitcommit: fe03c5d92ca6a0d66a114b2303e99c0a19241ffb
+ms.openlocfilehash: ed108d4f8e9d8d719d36fc859d5cc01a2317db4756bfbc6b0a548b669d9ca025
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "104993183"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118986170"
 ---
 # <a name="earlydepthstencil"></a>earlydepthstencil
 
-Erzwingt tiefen Schablonen Tests, bevor ein Shader ausgeführt wird.
+Erzwingt Tiefenschablonentests, bevor ein Shader ausgeführt wird.
 
 
 ```
@@ -27,23 +27,23 @@ earlydepthstencil
 
 
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Das Testen der tiefen Schablone erfolgt in der Regel während der Pixel Verarbeitung durch einen PixelShader. Durch das Erzwingen einer frühen Tiefe der Schablone werden die Tests vor der Ausführung des Shaders durchgeführt. der Zweck besteht darin, die Leistung pro Pixel zu verbessern, indem eine nicht benötigte Pixel Verarbeitung durchgeführt/reduziert/vermieden wird.
+Tiefenschablonentests werden normalerweise während der Pixelverarbeitung durch einen Pixel-Shader durchgeführt. Das Erzwingen eines frühen Tiefenschablonentests führt dazu, dass die Tests vor der Shaderausführung durchgeführt werden. Der Zweck besteht in der Verbesserung der Leistung pro Pixel durch Culling/Reduzierung/Vermeidung unnötiger Pixelverarbeitung.
 
-Eine Anwendung kann eine frühe tiefen Schablone durch Bereitstellen des-Attributs erzwingen, oder die Hardware kann frühe tiefen Tests ausführen, wenn keine tiefen Werte geschrieben werden und keine ungeordneten Zugriffs Vorgänge in einem Shader als Optimierung ausgeführt werden.
+Eine Anwendung kann frühe Tiefenschablonentests erzwingen, indem das -Attribut bereitgestellt wird, oder die Hardware kann frühe Tiefenschablonentests ausführen, sofern keine Tiefenwerte geschrieben werden und keine ungeordneten Zugriffsvorgänge in einem Shader als Optimierung ausgeführt werden.
 
-Dieses Attribut wird in den folgenden Typen von Shadern unterstützt:
+Dieses Attribut wird in den folgenden Shadertypen unterstützt:
 
 
 
-| Scheitelpunkt | Hülle | Domain | Geometrie | Pixel | Compute |
+| Scheitelpunkt | Rumpf | Domain | Geometrie | Pixel | Compute |
 |--------|------|--------|----------|-------|---------|
 |        |      |        |          | x     |         |
 
 
 
- 
+ 
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
@@ -52,12 +52,12 @@ Dieses Attribut wird in den folgenden Typen von Shadern unterstützt:
 [Shader Model 5-Attribute](d3d11-graphics-reference-sm5-attributes.md)
 </dt> <dt>
 
-[Shader-Modell 5](d3d11-graphics-reference-sm5.md)
+[Shadermodell 5](d3d11-graphics-reference-sm5.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

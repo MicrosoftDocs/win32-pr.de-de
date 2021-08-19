@@ -1,30 +1,30 @@
 ---
-title: Nicht Automatisierungs Schnittstellen
-description: Dieses Thema enthält eine Liste der ADSI-Schnittstellen, die auf Systemen funktionieren, die keine Automatisierung verwenden.
+title: Nicht-Automatisierungsschnittstellen
+description: In diesem Thema werden die ADSI-Schnittstellen aufgeführt, die auf Systemen funktionieren, die nicht Automation verwenden.
 ms.assetid: a87154b0-415a-43de-af93-952cb829fd0c
 ms.tgt_platform: multiple
 keywords:
-- nicht Automatisierungs Schnittstellen ADSI
+- Nicht-Automatisierungsschnittstellen ADSI
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 0748cffcf0bc5974e471e46cb79074a1fcd55fa3
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: c71e1cdeadcb4dade22d6abb8f641bd0a4262aaf9665049e3237d907bcf120bc
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "103855280"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119082354"
 ---
-# <a name="non-automation-interfaces"></a>Nicht Automatisierungs Schnittstellen
+# <a name="non-automation-interfaces"></a>Nicht-Automatisierungsschnittstellen
 
-In diesem Abschnitt werden die folgenden nicht automatisierbaren ADSI-Schnittstellen beschrieben:
+In diesem Abschnitt werden die folgenden NICHT-Automation ADSI-Schnittstellen beschrieben:
 
 -   [**IDirectoryObject**](/windows/desktop/api/Iads/nn-iads-idirectoryobject)
--   [**Idirectoriyschemamgmt**](/windows/desktop/api/Iads/nn-iads-idirectoryschemamgmt)
--   [**IDirectorySearch**](/windows/desktop/api/Iads/nn-iads-idirectorysearch)
+-   [**IDirectorySchemaMgmt**](/windows/desktop/api/Iads/nn-iads-idirectoryschemamgmt)
+-   [**Idirectorysearch**](/windows/desktop/api/Iads/nn-iads-idirectorysearch)
 
- 
+ 
 
- 
+ 
 
 
 

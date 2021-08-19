@@ -1,10 +1,10 @@
 ---
-title: IADsLargeInteger-Eigenschafts Methoden (IADs. h)
-description: Die Eigenschaften Methoden der IADsLargeInteger-Schnittstelle erhalten und legen die Eigenschaften fest, die in der folgenden Tabelle beschrieben werden. Weitere Informationen finden Sie unter Interface Property Methods.
+title: IADsLargeInteger-Eigenschaftsmethoden (Iads.h)
+description: Die Eigenschaftenmethoden der IADsLargeInteger-Schnittstelle erhalten und legen die in der folgenden Tabelle beschriebenen Eigenschaften fest. Weitere Informationen finden Sie unter Schnittstelleneigenschaftsmethoden.
 ms.assetid: 73e0c7fe-e468-4f92-9c9e-721bf00dd4bb
 ms.tgt_platform: multiple
 keywords:
-- Iadslargeingeteger-Eigenschafts Methoden ADSI
+- IADsLargeInteger-Eigenschaftsmethoden ADSI
 topic_type:
 - apiref
 api_name:
@@ -21,16 +21,16 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 097e9ae7387658f983c691e56e4f90ba40dea407
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 9b46a992accea468b6f3c8a70c7fcfcbe63cf72667c4394c27df273767a387b2
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "106340001"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119023478"
 ---
-# <a name="iadslargeinteger-property-methods"></a>Iadslargeingeteger-Eigenschaften Methoden
+# <a name="iadslargeinteger-property-methods"></a>IADsLargeInteger-Eigenschaftenmethoden
 
-Die Eigenschaften Methoden der [**IADsLargeInteger**](/windows/desktop/api/Iads/nn-iads-iadslargeinteger) -Schnittstelle erhalten und legen die Eigenschaften fest, die in der folgenden Tabelle beschrieben werden. Weitere Informationen finden Sie unter [Interface Property Methods](interface-property-methods.md).
+Die Eigenschaftenmethoden der [**IADsLargeInteger-Schnittstelle**](/windows/desktop/api/Iads/nn-iads-iadslargeinteger) erhalten und legen die in der folgenden Tabelle beschriebenen Eigenschaften fest. Weitere Informationen finden Sie unter [Schnittstelleneigenschaftsmethoden.](interface-property-methods.md)
 
 ## <a name="properties"></a>Eigenschaften
 
@@ -39,14 +39,14 @@ Die Eigenschaften Methoden der [**IADsLargeInteger**](/windows/desktop/api/Iads/
 **HighPart**
 </dt> <dd> <dl>
 
-Der hohe Teil der Ganzzahl.
+Der obere Teil der ganzen Zahl.
 
 <dt>
 
 Zugriffstyp: Lesen/Schreiben
 </dt> <dt>
 
-Skript Datentyp: **Long**
+Skriptdatentyp: **LONG**
 </dt> <dt>
 
 
@@ -67,14 +67,14 @@ HRESULT put_HighPart(
 **LowPart**
 </dt> <dd> <dl>
 
-Der niedrige Teil der Ganzzahl.
+Der untere Teil der ganzen Zahl.
 
 <dt>
 
 Zugriffstyp: Lesen/Schreiben
 </dt> <dt>
 
-Skript Datentyp: **Long**
+Skriptdatentyp: **LONG**
 </dt> <dt>
 
 
@@ -94,9 +94,9 @@ HRESULT put_LowPart(
 
  
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Wenn largeint den **LargeInteger** -Typ aufweist, wird der Wert von den Werten von **highpart** und **LowPart** gemäß der folgenden Formel angegeben.
+Wenn largeInt vom **LargeInteger-Typ** ist, wird sein Wert gemäß der folgenden Formel durch die Werte **von HighPart** und **LowPart** angegeben.
 
 
 ```VB
@@ -107,7 +107,7 @@ largeInt = HighPart * 2^32 + LowPart
 
 ## <a name="examples"></a>Beispiele
 
-Im folgenden Visual Basic Codebeispiel wird eine große Ganzzahl auf 43937327281 festgelegt.
+Im folgenden Visual Basic Codebeispiel wird eine große ganze Zahl auf 43937327281.
 
 
 ```VB
@@ -126,9 +126,9 @@ LI.LowPart = 987654321
 |-------------------------------------|-----------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows Vista<br/>                                                                |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2008<br/>                                                          |
-| Header<br/>                   | <dl> <dt>IADs. h</dt> </dl>       |
+| Header<br/>                   | <dl> <dt>Iads.h</dt> </dl>       |
 | DLL<br/>                      | <dl> <dt>Activeds.dll</dt> </dl> |
-| IID<br/>                      | IID \_ IADsLargeInteger ist definiert als 9068270b-0939-11d1-8be1-00c04sd8d503<br/>     |
+| IID<br/>                      | IID \_ IADsLargeInteger ist als 9068270B-0939-11D1-8BE1-00C04FD8D503 definiert.<br/>     |
 
 
 

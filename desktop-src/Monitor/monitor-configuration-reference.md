@@ -1,40 +1,40 @@
 ---
-title: Monitor Konfigurations Referenz
-description: Monitor Konfigurations Referenz
+title: Referenz zur Monitorkonfiguration
+description: Referenz zur Monitorkonfiguration
 ms.assetid: 2539620a-ad92-433e-9547-48eafdbde679
 keywords:
-- Monitor, Referenz
-- überwachen, Programmier Referenz
+- monitor,reference
+- Monitor,Programmierreferenz
 - Referenz für Monitor
-- Monitor Konfiguration, Programmier Referenz
-- Monitor Konfiguration, Referenz
+- Überwachen der Konfiguration,Programmierreferenz
+- Monitorkonfiguration,Referenz
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 2ad595d8cc86820d96065a5b0b9807c80b28af09
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: 65ebd8ffcd546eb65c355d3e1bacf4a76944bc597a9b0cd9550d4b2d8be260fe
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "106337182"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119013418"
 ---
-# <a name="monitor-configuration-reference"></a>Monitor Konfigurations Referenz
+# <a name="monitor-configuration-reference"></a>Referenz zur Monitorkonfiguration
 
-Die folgenden Elemente bieten Unterstützung für die Überwachungskonfiguration.
+Die folgenden Elemente bieten Unterstützung für die Monitorkonfiguration.
 
 -   [Überwachen von Konfigurationsfunktionen](monitor-configuration-functions.md)
--   [Überwachen von Konfigurations Strukturen](monitor-configuration-structures.md)
--   [Konfigurations Enumerationstypen überwachen](monitor-configuration-enumeration-types.md)
+-   [Überwachen von Konfigurationsstrukturen](monitor-configuration-structures.md)
+-   [Überwachen von Konfigurationsenumerationstypen](monitor-configuration-enumeration-types.md)
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[Monitor Konfiguration](monitor-configuration.md)
+[Überwachen der Konfiguration](monitor-configuration.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

@@ -1,6 +1,6 @@
 ---
-description: 'Weitere Informationen finden Sie unter: esentindextuplesnonuniqueonlyexception-Klasse'
-title: Esentindextuplesnonuniqueonlyexception-Klasse
+description: 'Weitere Informationen finden Sie unter: EsentIndexTuplesNonUniqueOnlyException-Klasse'
+title: EsentIndexTuplesNonUniqueOnlyException-Klasse
 TOCTitle: EsentIndexTuplesNonUniqueOnlyException class
 ms:assetid: T:Microsoft.Isam.Esent.Interop.EsentIndexTuplesNonUniqueOnlyException
 ms:mtpsurl: https://msdn.microsoft.com/library/microsoft.isam.esent.interop.esentindextuplesnonuniqueonlyexception(v=EXCHG.10)
@@ -24,29 +24,29 @@ api_type:
 api_location:
 - Microsoft.Isam.Esent.Interop.dll
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: 00273bb5ae126d2397b765e22453db7d3c79bd15
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: d9d71ea99dfb3625c89b58f610a81a272d81d17390f34c4bff5eceb517d3324a
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "104050342"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119784010"
 ---
-# <a name="esentindextuplesnonuniqueonlyexception-class"></a>Esentindextuplesnonuniqueonlyexception-Klasse
+# <a name="esentindextuplesnonuniqueonlyexception-class"></a>EsentIndexTuplesNonUniqueOnlyException-Klasse
 
-Basisklasse für JET_err. Indextuplesnonuniqueonly-Ausnahmen.
+Basisklasse für JET_err. IndexTuplesNonUniqueOnly-Ausnahmen.
 
 ## <a name="inheritance-hierarchy"></a>Vererbungshierarchie
 
 [System.Object](/dotnet/api/system.object)  
   [System.Exception](/dotnet/api/system.exception)  
-    [Microsoft. ISAM. ESENT. esentexception](./esentexception-class.md)  
-      [Microsoft. ISAM. ESENT. Interop. esenterrorexception](./esenterrorexception-class.md)  
-        [Microsoft. ISAM. ESENT. Interop. esentapiexception](./esentapiexception-class.md)  
-          [Microsoft. ISAM. ESENT. Interop. esentusageexception](./esentusageexception-class.md)  
-            Microsoft. ISAM. ESENT. Interop. esentindextuplesnonuniqueonlyexception  
+    [Microsoft.Isam.Esent.EsentException](./esentexception-class.md)  
+      [Microsoft.Isam.Esent.Interop.EsentErrorException](./esenterrorexception-class.md)  
+        [Microsoft.Isam.Esent.Interop.EsentApiException](./esentapiexception-class.md)  
+          [Microsoft.Isam.Esent.Interop.EsentUsageException](./esentusageexception-class.md)  
+            Microsoft.Isam.Esent.Interop.EsentIndexTuplesNonUniqueOnlyException  
 
-**Namespace:**  [Microsoft. ISAM. ESENT. Interop](./microsoft.isam.esent.interop-namespace.md)  
-**Assembly:**  Microsoft. ISAM. ESENT. Interop (in Microsoft.Isam.Esent.Interop.dll)
+**Namespace:**  [Microsoft.Isam.Esent.Interop](./microsoft.isam.esent.interop-namespace.md)  
+**Assembly:**  Microsoft.Isam.Esent.Interop (in Microsoft.Isam.Esent.Interop.dll)
 
 ## <a name="syntax"></a>Syntax
 
@@ -70,8 +70,8 @@ Alle öffentlichen statischen Elemente dieses Typs (Shared in Microsoft Visual�
 
 ## <a name="see-also"></a>Siehe auch
 
-#### <a name="reference"></a>Referenz
+#### <a name="reference"></a>Verweis
 
-[Esentindextuplesnonuniqueonlyexception-Member](./esentindextuplesnonuniqueonlyexception-members.md)
+[EsentIndexTuplesNonUniqueOnlyException-Member](./esentindextuplesnonuniqueonlyexception-members.md)
 
-[Microsoft. ISAM. ESENT. Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)
+[Microsoft.Isam.Esent.Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)

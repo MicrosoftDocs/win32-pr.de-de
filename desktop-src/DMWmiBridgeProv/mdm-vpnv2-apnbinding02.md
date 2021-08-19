@@ -1,6 +1,6 @@
 ---
 title: MDM_VPNv2_APNBinding02-Klasse
-description: Reserviert für zukünftige Verwendung. | MDM_VPNv2_APNBinding02-Klasse
+description: Für die zukünftige Verwendung reserviert. | MDM_VPNv2_APNBinding02-Klasse
 ms.assetid: ef530e79-b9cc-4bee-8d7b-45227ed55dbe
 keywords:
 - MDM_VPNv2_APNBinding02-Klasse
@@ -17,18 +17,18 @@ api_type:
 - DllExport
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 2d4447d1403903c9633523466504817338db969f
-ms.sourcegitcommit: 92e74c99f8f4d097676959d0c317f533c2400a80
+ms.openlocfilehash: ff62d5a2280a28292289e6e6a1374615f066a66463eef9a8c0e3db58383874ee
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/09/2021
-ms.locfileid: "104352399"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120084810"
 ---
-# <a name="mdm_vpnv2_apnbinding02-class"></a>MDM \_ VPNv2 \_ APNBinding02-Klasse
+# <a name="mdm_vpnv2_apnbinding02-class"></a>MDM \_ \_ VPNv2-APNBinding02-Klasse
 
 \[Einige Informationen beziehen sich auf Vorabversionen, die vor der kommerziellen Freigabe grundlegend geändert werden können. Microsoft übernimmt keine Garantie, weder ausdrücklich noch stillschweigend, für die hier bereitgestellten Informationen.\]
 
-Für zukünftige Verwendung reserviert
+Für die zukünftige Verwendung reserviert
 
 Die folgende Syntax wurde aus MOF-Code (Managed Object Format, verwaltetes Objektformat) vereinfacht und enthält alle geerbten Eigenschaften.
 
@@ -51,17 +51,17 @@ class MDM_VPNv2_APNBinding02
 
 ## <a name="members"></a>Member
 
-Die **MDM \_ VPNv2 \_ APNBinding02** -Klasse verfügt über diese Typen von Membern:
+Die **MDM \_ VPNv2-APNBinding02-Klasse \_** verfügt über die folgenden Membertypen:
 
 -   [Eigenschaften](#properties)
 
 ### <a name="properties"></a>Eigenschaften
 
-Die **MDM \_ VPNv2 \_ APNBinding02** -Klasse verfügt über diese Eigenschaften.
+Die **MDM \_ VPNv2-APNBinding02-Klasse \_** verfügt über diese Eigenschaften.
 
 <dl> <dt>
 
-[Access spointname](/windows/client-management/mdm/vpnv2-csp#vpnv2-profilename-apnbinding-accesspointname)
+[AccessPointName](/windows/client-management/mdm/vpnv2-csp#vpnv2-profilename-apnbinding-accesspointname)
 </dt> <dd> <dl> <dt>
 
 Datentyp: **Zeichenfolge**
@@ -99,10 +99,10 @@ Für die zukünftige Verwendung reserviert.
 
 </dd> <dt>
 
-[Iscompressionaktivierte](/windows/client-management/mdm/vpnv2-csp#vpnv2-profilename-apnbinding-iscompressionenabled)
+[IsCompressionEnabled](/windows/client-management/mdm/vpnv2-csp#vpnv2-profilename-apnbinding-iscompressionenabled)
 </dt> <dd> <dl> <dt>
 
-Datentyp: **boolescher** Wert
+Datentyp: **boolescher Wert**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
@@ -110,7 +110,7 @@ Zugriffstyp: Lesen/Schreiben
 
 </dd> <dt>
 
-**ParentID**
+**Parentid**
 </dt> <dd> <dl> <dt>
 
 Datentyp: **Zeichenfolge**
@@ -137,7 +137,7 @@ Zugriffstyp: Lesen/Schreiben
 
 </dd> <dt>
 
-[ProviderID](/windows/client-management/mdm/vpnv2-csp#vpnv2-profilename-apnbinding-providerid)
+[ProviderId](/windows/client-management/mdm/vpnv2-csp#vpnv2-profilename-apnbinding-providerid)
 </dt> <dd> <dl> <dt>
 
 Datentyp: **Zeichenfolge**
@@ -165,10 +165,10 @@ Zugriffstyp: Lesen/Schreiben
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows 10 \[ -Desktop-Apps\]<br/>                                                    |
+| Unterstützte Mindestversion (Client)<br/> | \[Windows 10 Nur Desktop-Apps\]<br/>                                                    |
 | Unterstützte Mindestversion (Server)<br/> | Nicht unterstützt<br/>                                                                      |
-| Namespace<br/>                | Root \\ CIMV2 \\ MDM- \\ dmmap<br/>                                                             |
-| MOF<br/>                      | <dl> <dt>Dmwmibridgeprov. MOF</dt> </dl> |
+| Namespace<br/>                | Root \\ cimv2 \\ mdm \\ dmmap<br/>                                                             |
+| MOF<br/>                      | <dl> <dt>DMWmiBridgeProv.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>DMWmiBridgeProv.dll</dt> </dl> |
 
 
@@ -177,7 +177,7 @@ Zugriffstyp: Lesen/Schreiben
 
 <dl> <dt>
 
-[Verwenden von PowerShell-Skripts mit dem WMI-Bridge Anbieter](/windows/client-management/mdm/using-powershell-scripting-with-the-wmi-bridge-provider)
+[Verwenden von PowerShell-Skripts mit dem WMI-Bridge-Anbieter](/windows/client-management/mdm/using-powershell-scripting-with-the-wmi-bridge-provider)
 </dt> </dl>
 
  

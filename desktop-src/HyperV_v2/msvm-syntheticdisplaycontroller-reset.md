@@ -1,7 +1,7 @@
 ---
-description: 'Reset-Methode der Msvm_SyntheticDisplayController-Klasse: Fordert eine Zurücksetzung an.'
+description: 'Reset-Methode der Msvm_SyntheticDisplayController Klasse: Fordert eine Zurücksetzung an.'
 ms.assetid: 6fa327e8-0296-40f6-9ee6-6e447e31cce3
-title: Reset-Methode der Msvm_SyntheticDisplayController-Klasse
+title: Reset-Methode der Msvm_SyntheticDisplayController Klasse
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,12 +13,12 @@ api_type:
 - COM
 api_location:
 - vmms.exe
-ms.openlocfilehash: f52463aa570942e7696aa0c8fea55bbb848fcc99
-ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
+ms.openlocfilehash: 99d54850bb658ec4f3b0cd8a4904d944e6748b8ea5da562764a69bcd73022cb6
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2021
-ms.locfileid: "108109578"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118949899"
 ---
 # <a name="reset-method-of-the-msvm_syntheticdisplaycontroller-class"></a>Reset-Methode der Msvm \_ SyntheticDisplayController-Klasse
 
@@ -53,17 +53,17 @@ Diese Methode gibt einen der folgenden Werte zurück:
 
 
 
-| Anforderungen | Wert |
+| Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 8.1<br/>                                                                                  |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2012 R2<br/>                                                                       |
-| Namespace<br/>                | \\Root-Virtualisierung \\ v2<br/>                                                                     |
+| Namespace<br/>                | \\Stammvirtualisierung \\ v2<br/>                                                                     |
 | MOF<br/>                      | <dl> <dt>WindowsVirtualization.V2.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Vmms.exe</dt> </dl>                     |
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 

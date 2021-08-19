@@ -1,138 +1,138 @@
 - name: Windows Virtual PC
   href: virtual-pc-portal.md
   items:
-    - name: Windows Virtual PC-Referenz
+    - name: Windows Referenz zu virtuellen PCs
       href: virtual-pc-reference.md
       items:
         - name: Windows Virtual PC-Konstanten
           href: windows-virtual-pc-constants.md
           items:
-            - name: Spezifische HRESULT-Codes für Windows Virtual PC
+            - name: 'HRESULT-Codes, die für Windows Virtual PC spezifisch sind'
               href: hresult-codes-specific-to-windows-virtual-pc.md
-        - name: Windows Virtual PC-Enumerationen
+        - name: Windows Enumerationen virtueller PCs
           href: virtual-pc-enumerations.md
           items:
-            - name: Vmdisplayvideomode
+            - name: VMDisplayVideoMode
               href: vmdisplayvideomode.md
-            - name: Vmdrivebustype
+            - name: VMDriveBusType
               href: vmdrivebustype.md
-            - name: Vmdrivetype
+            - name: VMDriveType
               href: vmdrivetype.md
-            - name: Vmdvddriveattachmenttype
+            - name: VMDVDDriveAttachmentType
               href: vmdvddriveattachmenttype.md
-            - name: Vmdvddriveevent
+            - name: VMDVDDriveEvent
               href: vmdvddriveevent.md
-            - name: Vmendpointtype
+            - name: VMEndpointType
               href: vmendpointtype.md
-            - name: Vmfloppydiskimagetype
+            - name: VMFloppyDiskImageType
               href: vmfloppydiskimagetype.md
-            - name: Vmfloppydriveattachmenttype
+            - name: VMFloppyDriveAttachmentType
               href: vmfloppydriveattachmenttype.md
-            - name: vmfloppydriveevent
+            - name: vmFloppyDriveEvent
               href: vmfloppydriveevent.md
-            - name: Vmharddisktype
+            - name: VMHardDiskType
               href: vmharddisktype.md
-            - name: Vmlogofftype
+            - name: VMLogoffType
               href: vmlogofftype.md
-            - name: Vmmoueinbutton
+            - name: VMMouseButton
               href: vmmousebutton.md
-            - name: Vmserialporttype
+            - name: VMSerialPortType
               href: vmserialporttype.md
-            - name: Vmshutdownaction
+            - name: VMShutdownAction
               href: vmshutdownaction.md
-            - name: Vmstartupoption
+            - name: VMStartupOption
               href: vmstartupoption.md
-            - name: Vmtaskresult
+            - name: VMTaskResult
               href: vmtaskresult.md
-            - name: Vmundoaction
+            - name: VMUndoAction
               href: vmundoaction.md
-            - name: Vmusbde viceclassenum
+            - name: VMUSBDeviceClassEnum
               href: vmusbdeviceclassenum.md
-            - name: Vmvirtualmachineevents
+            - name: VMVirtualMachineEvents
               href: vmvirtualmachineevents.md
-            - name: Vmvirtualpcevent
+            - name: VMVirtualPCEvent
               href: vmvirtualpcevent.md
-            - name: Vmvmstate
+            - name: VMVMState
               href: vmvmstate.md
-        - name: Windows Virtual PC-Schnittstellen
+        - name: Windows Schnittstellen virtueller PCs
           href: virtual-pc-interfaces.md
           items:
-            - name: Ivmaccountant
+            - name: IVMAccountant
               href: ivmaccountant.md
               items:
-                - name: Ivmaccountant-Eigenschaften
+                - name: IVMAccountant-Eigenschaften
                   href: ivmaccountant-properties.md
                   items:
-                    - name: Cpunutzungseigenschaft
+                    - name: CPUUtilization-Eigenschaft
                       href: ivmaccountant-cpuutilization.md
-                    - name: Cpuutilizationhistory (Eigenschaft)
+                    - name: CPUUtilizationHistory-Eigenschaft
                       href: ivmaccountant-cpuutilizationhistory.md
-                    - name: Diskbytesread (Eigenschaft)
+                    - name: DiskBytesRead-Eigenschaft
                       href: ivmaccountant-diskbytesread.md
-                    - name: Diskbyteswritten (Eigenschaft)
+                    - name: DiskBytesWritten-Eigenschaft
                       href: ivmaccountant-diskbyteswritten.md
-                    - name: Networkbytesempfangene Eigenschaft
+                    - name: NetworkBytesReceived-Eigenschaft
                       href: ivmaccountant-networkbytesreceived.md
-                    - name: Networkbytess-Eigenschaft
+                    - name: NetworkBytesSent-Eigenschaft
                       href: ivmaccountant-networkbytessent.md
-                    - name: Uptime-Eigenschaft
+                    - name: UpTime-Eigenschaft
                       href: ivmaccountant-uptime.md
-            - name: Ivmdisplay
+            - name: IVMDisplay
               href: ivmdisplay.md
               items:
-                - name: Ivmdisplay-Methoden
+                - name: IVMDisplay-Methoden
                   href: ivmdisplay-methods.md
                   items:
                     - name: _GenerateThumbnail-Methode
                       href: ivmdisplay--generatethumbnail.md
-                    - name: Setdimensions-Methode
+                    - name: SetDimensions-Methode
                       href: ivmdisplay-setdimensions.md
-                - name: Ivmdisplay-Eigenschaften
+                - name: IVMDisplay-Eigenschaften
                   href: ivmdisplay-properties.md
                   items:
                     - name: CanResize-Eigenschaft
                       href: ivmdisplay-canresize.md
                     - name: Height-Eigenschaft
                       href: ivmdisplay-height.md
-                    - name: Miniatur Ansichts Eigenschaft
+                    - name: Thumbnail-Eigenschaft
                       href: ivmdisplay-thumbnail.md
-                    - name: Videomode (Eigenschaft)
+                    - name: VideoMode-Eigenschaft
                       href: ivmdisplay-videomode.md
                     - name: Width-Eigenschaft
                       href: ivmdisplay-width.md
-            - name: Ivmdvddrive
+            - name: IVMDVDDrive
               href: ivmdvddrive.md
               items:
-                - name: Ivmdvddrive-Methoden
+                - name: IVMDVDDrive-Methoden
                   href: ivmdvddrive-methods.md
                   items:
                     - name: AttachHostDrive-Methode
                       href: ivmdvddrive-attachhostdrive.md
-                    - name: Attachimage-Methode
+                    - name: AttachImage-Methode
                       href: ivmdvddrive-attachimage.md
-                    - name: Releasehostdrive-Methode
+                    - name: ReleaseHostDrive-Methode
                       href: ivmdvddrive-releasehostdrive.md
                     - name: ReleaseImage-Methode
                       href: ivmdvddrive-releaseimage.md
-                    - name: Setbusloationmethode
+                    - name: SetBusLocation-Methode
                       href: ivmdvddrive-setbuslocation.md
-                - name: Ivmdvddrive-Eigenschaften
+                - name: IVMDVDDrive-Eigenschaften
                   href: ivmdvddrive-properties.md
                   items:
-                    - name: Anlage (Eigenschaft)
+                    - name: Attachment-Eigenschaft
                       href: ivmdvddrive-attachment.md
-                    - name: Busnumber (Eigenschaft)
+                    - name: BusNumber-Eigenschaft
                       href: ivmdvddrive-busnumber.md
-                    - name: Devicenenber (Eigenschaft)
+                    - name: DeviceNumber-Eigenschaft
                       href: ivmdvddrive-devicenumber.md
-                    - name: Hostdriveletter (Eigenschaft)
+                    - name: HostDriveLetter-Eigenschaft
                       href: ivmdvddrive-hostdriveletter.md
-                    - name: ImageFile (Eigenschaft)
+                    - name: ImageFile-Eigenschaft
                       href: ivmdvddrive-imagefile.md
-            - name: Ivmdvddrivecollection
+            - name: IVMDVDDriveCollection
               href: ivmdvddrivecollection.md
               items:
-                - name: Ivmdvddrivecollection-Eigenschaften
+                - name: IVMDVDDriveCollection-Eigenschaften
                   href: ivmdvddrivecollection-properties.md
                   items:
                     - name: _NewEnum-Eigenschaft
@@ -141,45 +141,45 @@
                       href: ivmdvddrivecollection-count.md
                     - name: Item-Eigenschaft
                       href: ivmdvddrivecollection-item.md
-            - name: Ivmdvddriveevents
+            - name: IVMDVDDriveEvents
               href: ivmdvddriveevents.md
               items:
-                - name: Ivmdvddriveevents-Methoden
+                - name: IVMDVDDriveEvents-Methoden
                   href: ivmdvddriveevents-methods.md
                   items:
-                    - name: Onmediaeject-Methode
+                    - name: OnMediaEject-Methode
                       href: ivmdvddriveevents-onmediaeject.md
-                    - name: Onmediainsert-Methode
+                    - name: OnMediaInsert-Methode
                       href: ivmdvddriveevents-onmediainsert.md
-            - name: Ivmfloppydrive
+            - name: IVMFloppyDrive
               href: ivmfloppydrive.md
               items:
-                - name: Ivmfloppydrive-Methoden
+                - name: IVMFloppyDrive-Methoden
                   href: ivmfloppydrive-methods.md
                   items:
                     - name: AttachHostDrive-Methode
                       href: ivmfloppydrive-attachhostdrive.md
-                    - name: Attachimage-Methode
+                    - name: AttachImage-Methode
                       href: ivmfloppydrive-attachimage.md
-                    - name: Releasehostdrive-Methode
+                    - name: ReleaseHostDrive-Methode
                       href: ivmfloppydrive-releasehostdrive.md
                     - name: ReleaseImage-Methode
                       href: ivmfloppydrive-releaseimage.md
-                - name: Ivmfloppydrive-Eigenschaften
+                - name: IVMFloppyDrive-Eigenschaften
                   href: ivmfloppydrive-properties.md
                   items:
-                    - name: Anlage (Eigenschaft)
+                    - name: Attachment-Eigenschaft
                       href: ivmfloppydrive-attachment.md
-                    - name: Drivenumschlag (Eigenschaft)
+                    - name: DriveNumber-Eigenschaft
                       href: ivmfloppydrive-drivenumber.md
-                    - name: Hostdriveletter (Eigenschaft)
+                    - name: HostDriveLetter-Eigenschaft
                       href: ivmfloppydrive-hostdriveletter.md
-                    - name: ImageFile (Eigenschaft)
+                    - name: ImageFile-Eigenschaft
                       href: ivmfloppydrive-imagefile.md
-            - name: Ivmfloppydrivecollection
+            - name: IVMFloppyDriveCollection
               href: ivmfloppydrivecollection.md
               items:
-                - name: Ivmfloppydrivecollection-Eigenschaften
+                - name: IVMFloppyDriveCollection-Eigenschaften
                   href: ivmfloppydrivecollection-properties.md
                   items:
                     - name: _NewEnum-Eigenschaft
@@ -188,87 +188,87 @@
                       href: ivmfloppydrivecollection-count.md
                     - name: Item-Eigenschaft
                       href: ivmfloppydrivecollection-item.md
-            - name: Ivmfloppydriveevents
+            - name: IVMFloppyDriveEvents
               href: ivmfloppydriveevents.md
               items:
-                - name: Ivmfloppydriveevents-Methoden
+                - name: IVMFloppyDriveEvents-Methoden
                   href: ivmfloppydriveevents-methods.md
                   items:
-                    - name: Onmediaeject-Methode
+                    - name: OnMediaEject-Methode
                       href: ivmfloppydriveevents-onmediaeject.md
-                    - name: Onmediainsert-Methode
+                    - name: OnMediaInsert-Methode
                       href: ivmfloppydriveevents-onmediainsert.md
-            - name: Ivmguestos
+            - name: IVMGuestOS
               href: ivmguestos.md
               items:
-                - name: Ivmguestos-Methoden
+                - name: IVMGuestOS-Methoden
                   href: ivmguestos-methods.md
                   items:
-                    - name: Getosversioninfo-Methode
+                    - name: GetOsVersionInfo-Methode
                       href: ivmguestos-getosversioninfo.md
                     - name: GetParameter-Methode
                       href: ivmguestos-getparameter.md
-                    - name: Installintegrationcomponents-Methode
+                    - name: InstallIntegrationComponents-Methode
                       href: ivmguestos-installintegrationcomponents.md
-                    - name: Isuserloggedon-Methode
+                    - name: IsUserLoggedOn-Methode
                       href: ivmguestos-isuserloggedon.md
                     - name: Logoff-Methode
                       href: ivmguestos-logoff.md
-                    - name: Methode neu starten
+                    - name: Restart-Methode
                       href: ivmguestos-restart.md
                     - name: SetParameter-Methode
                       href: ivmguestos-setparameter.md
                     - name: Shutdown-Methode
                       href: ivmguestos-shutdown.md
-                - name: Ivmguestos-Eigenschaften
+                - name: IVMGuestOS-Eigenschaften
                   href: ivmguestos-properties.md
                   items:
-                    - name: CanShutdown (Eigenschaft)
+                    - name: CanShutdown-Eigenschaft
                       href: ivmguestos-canshutdown.md
-                    - name: Computername (Eigenschaft)
+                    - name: ComputerName-Eigenschaft
                       href: ivmguestos-computername.md
-                    - name: CSDVersion (Eigenschaft)
+                    - name: CSDVersion-Eigenschaft
                       href: ivmguestos-csdversion.md
-                    - name: Heartbeatprozent (Eigenschaft)
+                    - name: HeartbeatPercentage-Eigenschaft
                       href: ivmguestos-heartbeatpercentage.md
-                    - name: Integrationcomponentsversion (Eigenschaft)
+                    - name: IntegrationComponentsVersion-Eigenschaft
                       href: ivmguestos-integrationcomponentsversion.md
-                    - name: Isheartangeschlagen (Eigenschaft)
+                    - name: IsHeartbeating-Eigenschaft
                       href: ivmguestos-isheartbeating.md
-                    - name: Ishosttimesyncenabled (Eigenschaft)
+                    - name: IsHostTimeSyncEnabled-Eigenschaft
                       href: ivmguestos-ishosttimesyncenabled.md
-                    - name: Multipleusersessionsallowed (Eigenschaft)
+                    - name: MultipleUserSessionsAllowed-Eigenschaft
                       href: ivmguestos-multipleusersessionsallowed.md
-                    - name: Osbuildnumber (Eigenschaft)
+                    - name: OSBuildNumber-Eigenschaft
                       href: ivmguestos-osbuildnumber.md
-                    - name: Osmajorversion (Eigenschaft)
+                    - name: OSMajorVersion-Eigenschaft
                       href: ivmguestos-osmajorversion.md
-                    - name: Osminorversion (Eigenschaft)
+                    - name: OSMinorVersion-Eigenschaft
                       href: ivmguestos-osminorversion.md
-                    - name: Osname-Eigenschaft
+                    - name: OSName-Eigenschaft
                       href: ivmguestos-osname.md
-                    - name: OSPlatformID (Eigenschaft)
+                    - name: OSPlatformId-Eigenschaft
                       href: ivmguestos-osplatformid.md
-                    - name: OSVersion (Eigenschaft)
+                    - name: OSVersion-Eigenschaft
                       href: ivmguestos-osversion.md
                     - name: ProductType-Eigenschaft
                       href: ivmguestos-producttype.md
-                    - name: Screenlocked-Eigenschaft
+                    - name: ScreenLocked-Eigenschaft
                       href: ivmguestos-screenlocked.md
-                    - name: Servicepackmajor (Eigenschaft)
+                    - name: ServicePackMajor-Eigenschaft
                       href: ivmguestos-servicepackmajor.md
-                    - name: Servicepackminor-Eigenschaft
+                    - name: ServicePackMinor-Eigenschaft
                       href: ivmguestos-servicepackminor.md
-                    - name: Suitemask-Eigenschaft
+                    - name: SuiteMask-Eigenschaft
                       href: ivmguestos-suitemask.md
-                    - name: Terminalserverport (Eigenschaft)
+                    - name: TerminalServerPort-Eigenschaft
                       href: ivmguestos-terminalserverport.md
-                    - name: Terminalservicesinitialized (Eigenschaft)
+                    - name: TerminalServicesInitialized-Eigenschaft
                       href: ivmguestos-terminalservicesinitialized.md
-            - name: Ivmharddisk
+            - name: IVMHardDisk
               href: ivmharddisk.md
               items:
-                - name: Ivmharddisk-Methoden
+                - name: IVMHardDisk-Methoden
                   href: ivmharddisk-methods.md
                   items:
                     - name: Compact-Methode
@@ -277,46 +277,46 @@
                       href: ivmharddisk-convert.md
                     - name: Merge-Methode
                       href: ivmharddisk-merge.md
-                    - name: Mergeto-Methode
+                    - name: MergeTo-Methode
                       href: ivmharddisk-mergeto.md
-                - name: Ivmharddisk-Eigenschaften
+                - name: IVMHardDisk-Eigenschaften
                   href: ivmharddisk-properties.md
                   items:
                     - name: File-Eigenschaft
                       href: ivmharddisk-file.md
-                    - name: Hostfrediskspace-Eigenschaft
+                    - name: HostFreeDiskSpace-Eigenschaft
                       href: ivmharddisk-hostfreediskspace.md
                     - name: Übergeordnete Eigenschaft
                       href: ivmharddisk-parent.md
-                    - name: Sizone Guest (Eigenschaft)
+                    - name: SizeInGuest-Eigenschaft
                       href: ivmharddisk-sizeinguest.md
-                    - name: Sizeonhost (Eigenschaft)
+                    - name: SizeOnHost-Eigenschaft
                       href: ivmharddisk-sizeonhost.md
                     - name: Type-Eigenschaft
                       href: ivmharddisk-type.md
-            - name: Ivmharddiskconnection
+            - name: IVMHardDiskConnection
               href: ivmharddiskconnection.md
               items:
-                - name: Ivmharddiskconnection-Methoden
+                - name: IVMHardDiskConnection-Methoden
                   href: ivmharddiskconnection-methods.md
                   items:
-                    - name: Setbusloationmethode
+                    - name: SetBusLocation-Methode
                       href: ivmharddiskconnection-setbuslocation.md
-                - name: Ivmharddiskconnection-Eigenschaften
+                - name: IVMHardDiskConnection-Eigenschaften
                   href: ivmharddiskconnection-properties.md
                   items:
-                    - name: Busnumber (Eigenschaft)
+                    - name: BusNumber-Eigenschaft
                       href: ivmharddiskconnection-busnumber.md
-                    - name: Devicenenber (Eigenschaft)
+                    - name: DeviceNumber-Eigenschaft
                       href: ivmharddiskconnection-devicenumber.md
-                    - name: Harddisk-Eigenschaft
+                    - name: HardDisk-Eigenschaft
                       href: ivmharddiskconnection-harddisk.md
-                    - name: Undoharddisk (Eigenschaft)
+                    - name: UndoHardDisk-Eigenschaft
                       href: ivmharddiskconnection-undoharddisk.md
-            - name: Ivmharddiskconnectioncollection
+            - name: IVMHardDiskConnectionCollection
               href: ivmharddiskconnectioncollection.md
               items:
-                - name: Ivmharddiskconnectioncollection-Eigenschaften
+                - name: IVMHardDiskConnectionCollection-Eigenschaften
                   href: ivmharddiskconnectioncollection-properties.md
                   items:
                     - name: _NewEnum-Eigenschaft
@@ -325,139 +325,139 @@
                       href: ivmharddiskconnectioncollection-count.md
                     - name: Item-Eigenschaft
                       href: ivmharddiskconnectioncollection-item.md
-            - name: Ivmhostinfo
+            - name: IVMHostInfo
               href: ivmhostinfo.md
               items:
-                - name: Ivmhostinfo-Eigenschaften
+                - name: IVMHostInfo-Eigenschaften
                   href: ivmhostinfo-properties.md
                   items:
-                    - name: Dvddrives (Eigenschaft)
+                    - name: DVDDrives-Eigenschaft
                       href: ivmhostinfo-dvddrives.md
-                    - name: Floppydrives (Eigenschaft)
+                    - name: FloppyDrives-Eigenschaft
                       href: ivmhostinfo-floppydrives.md
-                    - name: Logicalprocessorcount (Eigenschaft)
+                    - name: LogicalProcessorCount-Eigenschaft
                       href: ivmhostinfo-logicalprocessorcount.md
                     - name: Memory-Eigenschaft
                       href: ivmhostinfo-memory.md
-                    - name: Memory-Eigenschaft
+                    - name: MemoryAvail-Eigenschaft
                       href: ivmhostinfo-memoryavail.md
-                    - name: Memoryavailstring (Eigenschaft)
+                    - name: MemoryAvailString-Eigenschaft
                       href: ivmhostinfo-memoryavailstring.md
-                    - name: Memorytotalstring (Eigenschaft)
+                    - name: MemoryTotalString-Eigenschaft
                       href: ivmhostinfo-memorytotalstring.md
                     - name: MMX-Eigenschaft
                       href: ivmhostinfo-mmx.md
-                    - name: NetworkAdapters (Eigenschaft)
+                    - name: NetworkAdapters-Eigenschaft
                       href: ivmhostinfo-networkadapters.md
-                    - name: Networkadressen (Eigenschaft)
+                    - name: NetworkAddresses-Eigenschaft
                       href: ivmhostinfo-networkaddresses.md
-                    - name: OperatingSystem (Eigenschaft)
+                    - name: OperatingSystem-Eigenschaft
                       href: ivmhostinfo-operatingsystem.md
-                    - name: Osmajorversion (Eigenschaft)
+                    - name: OSMajorVersion-Eigenschaft
                       href: ivmhostinfo-osmajorversion.md
-                    - name: Osminorversion (Eigenschaft)
+                    - name: OSMinorVersion-Eigenschaft
                       href: ivmhostinfo-osminorversion.md
-                    - name: Osservicepackstring (Eigenschaft)
+                    - name: OSServicePackString-Eigenschaft
                       href: ivmhostinfo-osservicepackstring.md
-                    - name: Osversionstring (Eigenschaft)
+                    - name: OSVersionString-Eigenschaft
                       href: ivmhostinfo-osversionstring.md
-                    - name: Parallelport (Eigenschaft)
+                    - name: ParallelPort-Eigenschaft
                       href: ivmhostinfo-parallelport.md
-                    - name: Physicalprocessorcount (Eigenschaft)
+                    - name: PhysicalProcessorCount-Eigenschaft
                       href: ivmhostinfo-physicalprocessorcount.md
-                    - name: Processorfeaturesstring (Eigenschaft)
+                    - name: ProcessorFeaturesString-Eigenschaft
                       href: ivmhostinfo-processorfeaturesstring.md
-                    - name: Processormanufacturerstring (Eigenschaft)
+                    - name: ProcessorManufacturerString-Eigenschaft
                       href: ivmhostinfo-processormanufacturerstring.md
-                    - name: Processorspeed (Eigenschaft)
+                    - name: ProcessorSpeed-Eigenschaft
                       href: ivmhostinfo-processorspeed.md
-                    - name: Processorspeedstring (Eigenschaft)
+                    - name: ProcessorSpeedString-Eigenschaft
                       href: ivmhostinfo-processorspeedstring.md
-                    - name: Processorversionstring (Eigenschaft)
+                    - name: ProcessorVersionString-Eigenschaft
                       href: ivmhostinfo-processorversionstring.md
-                    - name: Serialports (Eigenschaft)
+                    - name: SerialPorts-Eigenschaft
                       href: ivmhostinfo-serialports.md
                     - name: SSE-Eigenschaft
                       href: ivmhostinfo-sse.md
                     - name: SSE2-Eigenschaft
                       href: ivmhostinfo-sse2.md
-                    - name: Threednow-Eigenschaft
+                    - name: ThreeDNow-Eigenschaft
                       href: ivmhostinfo-threednow.md
-                    - name: UtcTime (Eigenschaft)
+                    - name: UTCTime-Eigenschaft
                       href: ivmhostinfo-utctime.md
-            - name: Ivmkeyboard
+            - name: IVMKeyboard
               href: ivmkeyboard.md
               items:
-                - name: Ivmkeyboard-Methoden
+                - name: IVMKeyboard-Methoden
                   href: ivmkeyboard-methods.md
                   items:
-                    - name: Igestressed-Methode
+                    - name: IsPressed-Methode
                       href: ivmkeyboard-ispressed.md
-                    - name: Pressandreleasekey-Methode
+                    - name: PressAndReleaseKey-Methode
                       href: ivmkeyboard-pressandreleasekey.md
-                    - name: Presskey-Methode
+                    - name: PressKey-Methode
                       href: ivmkeyboard-presskey.md
-                    - name: Releasekey-Methode
+                    - name: ReleaseKey-Methode
                       href: ivmkeyboard-releasekey.md
-                    - name: Tybäuerciitext-Methode
+                    - name: TypeAsciiText-Methode
                       href: ivmkeyboard-typeasciitext.md
-                    - name: Typekeysequence-Methode
+                    - name: TypeKeySequence-Methode
                       href: ivmkeyboard-typekeysequence.md
-                - name: Ivmkeyboard-Eigenschaften
+                - name: IVMKeyboard-Eigenschaften
                   href: ivmkeyboard-properties.md
                   items:
-                    - name: Hasexclusiveaccess (Eigenschaft)
+                    - name: HasExclusiveAccess-Eigenschaft
                       href: ivmkeyboard-hasexclusiveaccess.md
-            - name: Ivmmouse
+            - name: IVMMouse
               href: ivmmouse.md
               items:
-                - name: Ivmmouse-Methoden
+                - name: IVMMouse-Methoden
                   href: ivmmouse-methods.md
                   items:
-                    - name: Click-Methode
+                    - name: Klicken Sie auf Methode.
                       href: ivmmouse-click.md
-                    - name: Getbutton-Methode
+                    - name: GetButton-Methode
                       href: ivmmouse-getbutton.md
-                    - name: Setbutton-Methode
+                    - name: SetButton-Methode
                       href: ivmmouse-setbutton.md
-                - name: Ivmmouse-Eigenschaften
+                - name: IVMMouse-Eigenschaften
                   href: ivmmouse-properties.md
                   items:
-                    - name: HorizontalPosition (Eigenschaft)
+                    - name: HorizontalPosition-Eigenschaft
                       href: ivmmouse-horizontalposition.md
-                    - name: Scrollwheelposition (Eigenschaft)
+                    - name: ScrollWheelPosition-Eigenschaft
                       href: ivmmouse-scrollwheelposition.md
-                    - name: Usingabsolutekoordinaten (Eigenschaft)
+                    - name: UsingAbsoluteCoordinates-Eigenschaft
                       href: ivmmouse-usingabsolutecoordinates.md
-                    - name: VerticalPosition (Eigenschaft)
+                    - name: VerticalPosition-Eigenschaft
                       href: ivmmouse-verticalposition.md
-            - name: Ivmnetworkadapter
+            - name: IVMNetworkAdapter
               href: ivmnetworkadapter.md
               items:
-                - name: Ivmnetworkadapter-Methoden
+                - name: IVMNetworkAdapter-Methoden
                   href: ivmnetworkadapter-methods.md
                   items:
                     - name: _ID-Methode
                       href: ivmnetworkadapter--id.md
-                    - name: Attachdevirtualnetwork-Methode
+                    - name: AttachToVirtualNetwork-Methode
                       href: ivmnetworkadapter-attachtovirtualnetwork.md
-                    - name: Detachfromvirtualnetwork-Methode
+                    - name: DetachFromVirtualNetwork-Methode
                       href: ivmnetworkadapter-detachfromvirtualnetwork.md
-                - name: Ivmnetworkadapter-Eigenschaften
+                - name: IVMNetworkAdapter-Eigenschaften
                   href: ivmnetworkadapter-properties.md
                   items:
-                    - name: Ethernetaddress (Eigenschaft)
+                    - name: EthernetAddress-Eigenschaft
                       href: ivmnetworkadapter-ethernetaddress.md
-                    - name: Isethernetaddressdynamic (Eigenschaft)
+                    - name: IsEthernetAddressDynamic-Eigenschaft
                       href: ivmnetworkadapter-isethernetaddressdynamic.md
-                    - name: Virtualmachine (Eigenschaft)
+                    - name: VirtualMachine-Eigenschaft
                       href: ivmnetworkadapter-virtualmachine.md
                     - name: VirtualNetwork-Eigenschaft
                       href: ivmnetworkadapter-virtualnetwork.md
-            - name: Ivmnetworkadaptercollection
+            - name: IVMNetworkAdapterCollection
               href: ivmnetworkadaptercollection.md
               items:
-                - name: Ivmnetworkadaptercollection-Eigenschaften
+                - name: IVMNetworkAdapterCollection-Eigenschaften
                   href: ivmnetworkadaptercollection-properties.md
                   items:
                     - name: _NewEnum-Eigenschaft
@@ -466,23 +466,23 @@
                       href: ivmnetworkadaptercollection-count.md
                     - name: Item-Eigenschaft
                       href: ivmnetworkadaptercollection-item.md
-            - name: Ivmparallelport
+            - name: IVMParallelPort
               href: ivmparallelport.md
               items:
-                - name: Ivmparallelport-Methoden
+                - name: IVMParallelPort-Methoden
                   href: ivmparallelport-methods.md
                   items:
                     - name: _ID-Methode
                       href: ivmparallelport--id.md
-                - name: Ivmparallelport-Eigenschaften
+                - name: IVMParallelPort-Eigenschaften
                   href: ivmparallelport-properties.md
                   items:
                     - name: Name-Eigenschaft
                       href: ivmparallelport-name.md
-            - name: Ivmparallelportcollection
+            - name: IVMParallelPortCollection
               href: ivmparallelportcollection.md
               items:
-                - name: Ivmparallelportcollection-Eigenschaften
+                - name: IVMParallelPortCollection-Eigenschaften
                   href: ivmparallelportcollection-properties.md
                   items:
                     - name: _NewEnum-Eigenschaft
@@ -491,29 +491,29 @@
                       href: ivmparallelportcollection-count.md
                     - name: Item-Eigenschaft
                       href: ivmparallelportcollection-item.md
-            - name: Ivmserialport
+            - name: IVMSerialPort
               href: ivmserialport.md
               items:
-                - name: Ivmserialport-Methoden
+                - name: IVMSerialPort-Methoden
                   href: ivmserialport-methods.md
                   items:
                     - name: _ID-Methode
                       href: ivmserialport--id.md
                     - name: Configure-Methode
                       href: ivmserialport-configure.md
-                - name: Ivmserialport-Eigenschaften
+                - name: IVMSerialPort-Eigenschaften
                   href: ivmserialport-properties.md
                   items:
-                    - name: Connectimmediately (Eigenschaft)
+                    - name: ConnectImmediately-Eigenschaft
                       href: ivmserialport-connectimmediately.md
                     - name: Name-Eigenschaft
                       href: ivmserialport-name.md
                     - name: Type-Eigenschaft
                       href: ivmserialport-type.md
-            - name: Ivmserialportcollection
+            - name: IVMSerialPortCollection
               href: ivmserialportcollection.md
               items:
-                - name: Ivmserialportcollection-Eigenschaften
+                - name: IVMSerialPortCollection-Eigenschaften
                   href: ivmserialportcollection-properties.md
                   items:
                     - name: _NewEnum-Eigenschaft
@@ -522,24 +522,24 @@
                       href: ivmserialportcollection-count.md
                     - name: Item-Eigenschaft
                       href: ivmserialportcollection-item.md
-            - name: Ivmtask
+            - name: IVMTask
               href: ivmtask.md
               items:
-                - name: Ivmtask-Methoden
+                - name: IVMTask-Methoden
                   href: ivmtask-methods.md
                   items:
                     - name: Cancel-Methode
                       href: ivmtask-cancel.md
-                    - name: Waitforcompletion-Methode
+                    - name: WaitForCompletion-Methode
                       href: ivmtask-waitforcompletion.md
-                - name: Ivmtask-Eigenschaften
+                - name: IVMTask-Eigenschaften
                   href: ivmtask-properties.md
                   items:
                     - name: Description-Eigenschaft
                       href: ivmtask-description.md
                     - name: Error-Eigenschaft
                       href: ivmtask-error.md
-                    - name: ErrorDescription (Eigenschaft)
+                    - name: ErrorDescription-Eigenschaft
                       href: ivmtask-errordescription.md
                     - name: Eigenschaft "ID"
                       href: ivmtask-id.md
@@ -547,14 +547,14 @@
                       href: ivmtask-iscancelable.md
                     - name: IsComplete-Eigenschaft
                       href: ivmtask-iscomplete.md
-                    - name: Prozentufertige Eigenschaft
+                    - name: PercentCompleted-Eigenschaft
                       href: ivmtask-percentcompleted.md
                     - name: Result-Eigenschaft
                       href: ivmtask-result.md
-            - name: Ivmtaskcollection
+            - name: IVMTaskCollection
               href: ivmtaskcollection.md
               items:
-                - name: Ivmtaskcollection-Eigenschaften
+                - name: IVMTaskCollection-Eigenschaften
                   href: ivmtaskcollection-properties.md
                   items:
                     - name: _NewEnum-Eigenschaft
@@ -563,28 +563,28 @@
                       href: ivmtaskcollection-count.md
                     - name: Item-Eigenschaft
                       href: ivmtaskcollection-item.md
-            - name: Ivmusbdevice
+            - name: IVMUSBDevice
               href: ivmusbdevice.md
               items:
-                - name: Ivmusbdevice-Eigenschaften
+                - name: IVMUSBDevice-Eigenschaften
                   href: ivmusbdevice-properties.md
                   items:
-                    - name: Eigenschaft "AttachedTo VM"
+                    - name: AttachedToVM-Eigenschaft
                       href: ivmusbdevice-attachedtovm.md
                     - name: DeviceClass-Eigenschaft
                       href: ivmusbdevice-deviceclass.md
-                    - name: Devicestring (Eigenschaft)
+                    - name: DeviceString-Eigenschaft
                       href: ivmusbdevice-devicestring.md
-                    - name: Hubid-Eigenschaft
+                    - name: HubID-Eigenschaft
                       href: ivmusbdevice-hubid.md
-                    - name: Manufacturerstring (Eigenschaft)
+                    - name: ManufacturerString-Eigenschaft
                       href: ivmusbdevice-manufacturerstring.md
-                    - name: Port (Eigenschaft)
+                    - name: Port-Eigenschaft
                       href: ivmusbdevice-port.md
-            - name: Ivmusbde vicecollection
+            - name: IVMUSBDeviceCollection
               href: ivmusbdevicecollection.md
               items:
-                - name: Ivmusbdebug ecollection-Eigenschaften
+                - name: IVMUSBDeviceCollection-Eigenschaften
                   href: ivmusbdevicecollection-properties.md
                   items:
                     - name: _NewEnum-Eigenschaft
@@ -593,43 +593,43 @@
                       href: ivmusbdevicecollection-count.md
                     - name: Item-Eigenschaft
                       href: ivmusbdevicecollection-item.md
-            - name: Ivmvirtualmachine
+            - name: IVMVirtualMachine
               href: ivmvirtualmachine.md
               items:
-                - name: Ivmvirtualmachine-Methoden
+                - name: IVMVirtualMachine-Methoden
                   href: ivmvirtualmachine-methods.md
                   items:
-                    - name: AddDVDROMDrive-Methode
+                    - name: AddDVFÜDrive-Methode
                       href: ivmvirtualmachine-adddvdromdrive.md
                     - name: AddHardDiskConnection-Methode
                       href: ivmvirtualmachine-addharddiskconnection.md
-                    - name: Addnetworkadapter-Methode
+                    - name: AddNetworkAdapter-Methode
                       href: ivmvirtualmachine-addnetworkadapter.md
-                    - name: Attachingbdevice-Methode
+                    - name: AttachUSBDevice-Methode
                       href: ivmvirtualmachine-attachusbdevice.md
-                    - name: Detachus-Geräte Methode
+                    - name: DetachUSBDevice-Methode
                       href: ivmvirtualmachine-detachusbdevice.md
-                    - name: Verwerdsavedstate-Methode
+                    - name: DiscardSavedState-Methode
                       href: ivmvirtualmachine-discardsavedstate.md
-                    - name: Verwerfen von dodisks-Methoden
+                    - name: DiscardUndoDisks-Methode
                       href: ivmvirtualmachine-discardundodisks.md
-                    - name: Getactivationvalue-Methode
+                    - name: GetActivationValue-Methode
                       href: ivmvirtualmachine-getactivationvalue.md
-                    - name: Getconfigurationvalue-Methode
+                    - name: GetConfigurationValue-Methode
                       href: ivmvirtualmachine-getconfigurationvalue.md
-                    - name: Mergeundodisks-Methode
+                    - name: MergeUndoDisks-Methode
                       href: ivmvirtualmachine-mergeundodisks.md
                     - name: Pause-Methode
                       href: ivmvirtualmachine-pause.md
-                    - name: Removeactivationvalue-Methode
+                    - name: RemoveActivationValue-Methode
                       href: ivmvirtualmachine-removeactivationvalue.md
-                    - name: Removeconfigurationvalue-Methode
+                    - name: RemoveConfigurationValue-Methode
                       href: ivmvirtualmachine-removeconfigurationvalue.md
-                    - name: Removedvdromdrive-Methode
+                    - name: RemoveDVMOBILDrive-Methode
                       href: ivmvirtualmachine-removedvdromdrive.md
-                    - name: Removeharddiskconnection-Methode
+                    - name: RemoveHardDiskConnection-Methode
                       href: ivmvirtualmachine-removeharddiskconnection.md
-                    - name: Removenetworkadapter-Methode
+                    - name: RemoveNetworkAdapter-Methode
                       href: ivmvirtualmachine-removenetworkadapter.md
                     - name: Reset-Methode
                       href: ivmvirtualmachine-reset.md
@@ -637,58 +637,58 @@
                       href: ivmvirtualmachine-resume.md
                     - name: Save-Methode
                       href: ivmvirtualmachine-save.md
-                    - name: Methode "-Methode"
+                    - name: SetActivationValue-Methode
                       href: ivmvirtualmachine-setactivationvalue.md
-                    - name: Setconfigurationvalue-Methode
+                    - name: SetConfigurationValue-Methode
                       href: ivmvirtualmachine-setconfigurationvalue.md
-                    - name: Startcommunicationchannel-Methode
+                    - name: StartCommunicationChannel-Methode
                       href: ivmvirtualmachine-startcommunicationchannel.md
-                    - name: Startup-Methode
+                    - name: Startmethode
                       href: ivmvirtualmachine-startup.md
                     - name: Startup2-Methode
                       href: ivmvirtualmachine-startup2.md
-                    - name: Turnoff-Methode
+                    - name: TurnOff-Methode
                       href: ivmvirtualmachine-turnoff.md
-                - name: Ivmvirtualmachine-Eigenschaften
+                - name: IVMVirtualMachine-Eigenschaften
                   href: ivmvirtualmachine-properties.md
                   items:
                     - name: Accountant-Eigenschaft
                       href: ivmvirtualmachine-accountant.md
-                    - name: Attacheddrivetypes-Eigenschaft
+                    - name: AttachedDriveTypes-Eigenschaft
                       href: ivmvirtualmachine-attacheddrivetypes.md
-                    - name: Baseboardserialnumber (Eigenschaft)
+                    - name: BaseBoardSerialNumber-Eigenschaft
                       href: ivmvirtualmachine-baseboardserialnumber.md
-                    - name: Biosguid (Eigenschaft)
+                    - name: BIOSGUID-Eigenschaft
                       href: ivmvirtualmachine-biosguid.md
-                    - name: Biosserialnumber (Eigenschaft)
+                    - name: BIOSSerialNumber-Eigenschaft
                       href: ivmvirtualmachine-biosserialnumber.md
-                    - name: Chassisassettag (Eigenschaft)
+                    - name: ChassisAssetTag-Eigenschaft
                       href: ivmvirtualmachine-chassisassettag.md
-                    - name: Chassisserialnumber (Eigenschaft)
+                    - name: ChassisSerialNumber-Eigenschaft
                       href: ivmvirtualmachine-chassisserialnumber.md
                     - name: ConfigID-Eigenschaft
                       href: ivmvirtualmachine-configid.md
                     - name: Anzeigeeigenschaft
                       href: ivmvirtualmachine-display.md
-                    - name: Dvdromdrives (Eigenschaft)
+                    - name: DVDROMDrives-Eigenschaft
                       href: ivmvirtualmachine-dvdromdrives.md
                     - name: File-Eigenschaft
                       href: ivmvirtualmachine-file.md
-                    - name: Floppydrives (Eigenschaft)
+                    - name: FloppyDrives-Eigenschaft
                       href: ivmvirtualmachine-floppydrives.md
-                    - name: Guestos-Eigenschaft
+                    - name: GuestOS-Eigenschaft
                       href: ivmvirtualmachine-guestos.md
-                    - name: Harddiskconnections (Eigenschaft)
+                    - name: HardDiskConnections-Eigenschaft
                       href: ivmvirtualmachine-harddiskconnections.md
                     - name: Has3DNow-Eigenschaft
                       href: ivmvirtualmachine-has3dnow.md
-                    - name: Hasmmx-Eigenschaft
+                    - name: HasMMX-Eigenschaft
                       href: ivmvirtualmachine-hasmmx.md
-                    - name: Hassse-Eigenschaft
+                    - name: HasSSE-Eigenschaft
                       href: ivmvirtualmachine-hassse.md
                     - name: HasSSE2-Eigenschaft
                       href: ivmvirtualmachine-hassse2.md
-                    - name: Tastatur Eigenschaft
+                    - name: Tastatureigenschaft
                       href: ivmvirtualmachine-keyboard.md
                     - name: Memory-Eigenschaft
                       href: ivmvirtualmachine-memory.md
@@ -696,32 +696,32 @@
                       href: ivmvirtualmachine-mouse.md
                     - name: Name-Eigenschaft
                       href: ivmvirtualmachine-name.md
-                    - name: NetworkAdapters (Eigenschaft)
+                    - name: NetworkAdapters-Eigenschaft
                       href: ivmvirtualmachine-networkadapters.md
                     - name: Notes-Eigenschaft
                       href: ivmvirtualmachine-notes.md
-                    - name: Parallelports (Eigenschaft)
+                    - name: ParallelPorts-Eigenschaft
                       href: ivmvirtualmachine-parallelports.md
-                    - name: Processorspeed (Eigenschaft)
+                    - name: ProcessorSpeed-Eigenschaft
                       href: ivmvirtualmachine-processorspeed.md
-                    - name: Rdppipename (Eigenschaft)
+                    - name: RdpPipeName-Eigenschaft
                       href: ivmvirtualmachine-rdppipename.md
-                    - name: Savedstatefilepath (Eigenschaft)
+                    - name: SavedStateFilePath-Eigenschaft
                       href: ivmvirtualmachine-savedstatefilepath.md
-                    - name: Serialports (Eigenschaft)
+                    - name: SerialPorts-Eigenschaft
                       href: ivmvirtualmachine-serialports.md
-                    - name: Shutdownaktiononquit (Eigenschaft)
+                    - name: ShutdownActionOnQuit-Eigenschaft
                       href: ivmvirtualmachine-shutdownactiononquit.md
                     - name: State-Eigenschaft
                       href: ivmvirtualmachine-state.md
-                    - name: Nicht doable-Eigenschaft
+                    - name: Rückgängigbare Eigenschaft
                       href: ivmvirtualmachine-undoable.md
-                    - name: UndoAction (Eigenschaft)
+                    - name: UndoAction-Eigenschaft
                       href: ivmvirtualmachine-undoaction.md
-            - name: Ivmvirtualmachinecollection
+            - name: IVMVirtualMachineCollection
               href: ivmvirtualmachinecollection.md
               items:
-                - name: Ivmvirtualmachinecollection-Eigenschaften
+                - name: IVMVirtualMachineCollection-Eigenschaften
                   href: ivmvirtualmachinecollection-properties.md
                   items:
                     - name: _NewEnum-Eigenschaft
@@ -730,59 +730,59 @@
                       href: ivmvirtualmachinecollection-count.md
                     - name: Item-Eigenschaft
                       href: ivmvirtualmachinecollection-item.md
-            - name: Ivmvirtualmachineevents
+            - name: IVMVirtualMachineEvents
               href: ivmvirtualmachineevents.md
               items:
-                - name: Ivmvirtualmachineevents-Methoden
+                - name: IVMVirtualMachineEvents-Methoden
                   href: ivmvirtualmachineevents-methods.md
                   items:
-                    - name: Onadditionsavailable-Methode
+                    - name: OnAdditionsAvailable-Methode
                       href: ivmvirtualmachineevents-onadditionsavailable.md
-                    - name: Onadditionsuninstallierte-Methode
+                    - name: OnAdditionsUninstalled-Methode
                       href: ivmvirtualmachineevents-onadditionsuninstalled.md
-                    - name: Onconfigurationchanged-Methode
+                    - name: OnConfigurationChanged-Methode
                       href: ivmvirtualmachineevents-onconfigurationchanged.md
-                    - name: Ondiskoudef Space-Methode
+                    - name: OnDiskOutOfSpace-Methode
                       href: ivmvirtualmachineevents-ondiskoutofspace.md
-                    - name: Onenhancedvideomodechanged-Methode
+                    - name: OnEnhancedVideoModeChanged-Methode
                       href: ivmvirtualmachineevents-onenhancedvideomodechanged.md
-                    - name: Onguestlogoff-Methode
+                    - name: OnGuestLogoff-Methode
                       href: ivmvirtualmachineevents-onguestlogoff.md
-                    - name: Onguestshutdown-Methode
+                    - name: OnGuestShutdown-Methode
                       href: ivmvirtualmachineevents-onguestshutdown.md
-                    - name: Onheartbeatbeendete-Methode
+                    - name: OnHeartbeatStopped-Methode
                       href: ivmvirtualmachineevents-onheartbeatstopped.md
-                    - name: Onrequestshutdown-Methode
+                    - name: OnRequestShutdown-Methode
                       href: ivmvirtualmachineevents-onrequestshutdown.md
-                    - name: Onreset-Methode
+                    - name: OnReset-Methode
                       href: ivmvirtualmachineevents-onreset.md
                     - name: OnStateChange-Methode
                       href: ivmvirtualmachineevents-onstatechange.md
-                    - name: Onseriplefault-Methode
+                    - name: OnTripleFault-Methode
                       href: ivmvirtualmachineevents-ontriplefault.md
-            - name: Ivmvirtualnetwork
+            - name: IVMVirtualNetwork
               href: ivmvirtualnetwork.md
               items:
-                - name: Ivmvirtualnetwork-Methoden
+                - name: IVMVirtualNetwork-Methoden
                   href: ivmvirtualnetwork-methods.md
                   items:
                     - name: _ID-Methode
                       href: ivmvirtualnetwork--id.md
-                - name: Ivmvirtualnetwork-Eigenschaften
+                - name: IVMVirtualNetwork-Eigenschaften
                   href: ivmvirtualnetwork-properties.md
                   items:
-                    - name: Host-apter (Eigenschaft)
+                    - name: HostAdapter-Eigenschaft
                       href: ivmvirtualnetwork-hostadapter.md
-                    - name: MediaType (Eigenschaft)
+                    - name: MediaType-Eigenschaft
                       href: /previous-versions/windows/desktop/legacy/dd796707(v=vs.85)
                     - name: Name-Eigenschaft
                       href: ivmvirtualnetwork-name.md
-                    - name: NetworkAdapters (Eigenschaft)
+                    - name: NetworkAdapters-Eigenschaft
                       href: ivmvirtualnetwork-networkadapters.md
-            - name: Ivmvirtualnetworkcollection
+            - name: IVMVirtualNetworkCollection
               href: ivmvirtualnetworkcollection.md
               items:
-                - name: Ivmvirtualnetworkcollection-Eigenschaften
+                - name: IVMVirtualNetworkCollection-Eigenschaften
                   href: ivmvirtualnetworkcollection-properties.md
                   items:
                     - name: _NewEnum-Eigenschaft
@@ -791,105 +791,105 @@
                       href: ivmvirtualnetworkcollection-count.md
                     - name: Item-Eigenschaft
                       href: ivmvirtualnetworkcollection-item.md
-            - name: Ivmvirtualpc
+            - name: IVMVirtualPC
               href: ivmvirtualpc.md
               items:
-                - name: Ivmvirtualpc-Methoden
+                - name: IVMVirtualPC-Methoden
                   href: ivmvirtualpc-methods.md
                   items:
-                    - name: Methode "kreatedifferencingvirtualharddisk"
+                    - name: CreateDifferencingVirtualHardDisk-Methode
                       href: ivmvirtualpc-createdifferencingvirtualharddisk.md
-                    - name: Methode "kreatedynamicvirtualharddisk"
+                    - name: CreateDynamicVirtualHardDisk-Methode
                       href: ivmvirtualpc-createdynamicvirtualharddisk.md
-                    - name: Methode "kreatefixedvirtualharddisk"
+                    - name: CreateFixedVirtualHardDisk-Methode
                       href: ivmvirtualpc-createfixedvirtualharddisk.md
-                    - name: Methode "kreatefloppydiskimage"
+                    - name: CreateFloppyDiskImage-Methode
                       href: ivmvirtualpc-createfloppydiskimage.md
-                    - name: Methode "kreatevirtualmachine"
+                    - name: CreateVirtualMachine-Methode
                       href: ivmvirtualpc-createvirtualmachine.md
-                    - name: Deletevirtualmachine-Methode
+                    - name: DeleteVirtualMachine-Methode
                       href: ivmvirtualpc-deletevirtualmachine.md
-                    - name: Findvirtualmachine-Methode
+                    - name: FindVirtualMachine-Methode
                       href: ivmvirtualpc-findvirtualmachine.md
-                    - name: Findvirtualnetwork-Methode
+                    - name: FindVirtualNetwork-Methode
                       href: ivmvirtualpc-findvirtualnetwork.md
-                    - name: Getconfigurationvalue-Methode
+                    - name: GetConfigurationValue-Methode
                       href: ivmvirtualpc-getconfigurationvalue.md
-                    - name: Getdvdfiles-Methode
+                    - name: GetDVDFiles-Methode
                       href: ivmvirtualpc-getdvdfiles.md
-                    - name: Getfloppydiskfiles-Methode
+                    - name: GetFloppyDiskFiles-Methode
                       href: ivmvirtualpc-getfloppydiskfiles.md
-                    - name: Getfloppydiskimagetype-Methode
+                    - name: GetFloppyDiskImageType-Methode
                       href: ivmvirtualpc-getfloppydiskimagetype.md
-                    - name: Getharddisk-Methode
+                    - name: GetHardDisk-Methode
                       href: ivmvirtualpc-getharddisk.md
-                    - name: Getharddiskfiles-Methode
+                    - name: GetHardDiskFiles-Methode
                       href: ivmvirtualpc-getharddiskfiles.md
-                    - name: Getvirtualmachinefiles-Methode
+                    - name: GetVirtualMachineFiles-Methode
                       href: ivmvirtualpc-getvirtualmachinefiles.md
-                    - name: Registervirtualmachine-Methode
+                    - name: RegisterVirtualMachine-Methode
                       href: ivmvirtualpc-registervirtualmachine.md
-                    - name: Removeconfigurationvalue-Methode
+                    - name: RemoveConfigurationValue-Methode
                       href: ivmvirtualpc-removeconfigurationvalue.md
-                    - name: Setconfigurationvalue-Methode
+                    - name: SetConfigurationValue-Methode
                       href: ivmvirtualpc-setconfigurationvalue.md
-                    - name: Unregistervirtualmachine-Methode
+                    - name: UnregisterVirtualMachine-Methode
                       href: ivmvirtualpc-unregistervirtualmachine.md
-                - name: Ivmvirtualpc-Eigenschaften
+                - name: IVMVirtualPC-Eigenschaften
                   href: ivmvirtualpc-properties.md
                   items:
-                    - name: Defaultvmconfigurationpath (Eigenschaft)
+                    - name: DefaultVMConfigurationPath-Eigenschaft
                       href: ivmvirtualpc-defaultvmconfigurationpath.md
-                    - name: Hostinfo-Eigenschaft
+                    - name: HostInfo-Eigenschaft
                       href: ivmvirtualpc-hostinfo.md
-                    - name: Maximumfloppydrivespervm (Eigenschaft)
+                    - name: MaximumFloppyDrivesPerVM-Eigenschaft
                       href: ivmvirtualpc-maximumfloppydrivespervm.md
-                    - name: Maximummemorypervm (Eigenschaft)
+                    - name: MaximumMemoryPerVM-Eigenschaft
                       href: ivmvirtualpc-maximummemorypervm.md
-                    - name: Maximumnetworkadapterspervm (Eigenschaft)
+                    - name: MaximumNetworkAdaptersPerVM-Eigenschaft
                       href: ivmvirtualpc-maximumnetworkadapterspervm.md
-                    - name: Maximummaximiofdebug-Eigenschaft
+                    - name: MaximumNumberOfIDEBuses-Eigenschaft
                       href: ivmvirtualpc-maximumnumberofidebuses.md
-                    - name: Maximumparallelportspervm (Eigenschaft)
+                    - name: MaximumParallelPortsPerVM-Eigenschaft
                       href: ivmvirtualpc-maximumparallelportspervm.md
-                    - name: Maximumserialportspervm (Eigenschaft)
+                    - name: MaximumSerialPortsPerVM-Eigenschaft
                       href: ivmvirtualpc-maximumserialportspervm.md
-                    - name: Minimummemorypervm (Eigenschaft)
+                    - name: MinimumMemoryPerVM-Eigenschaft
                       href: ivmvirtualpc-minimummemorypervm.md
                     - name: Name-Eigenschaft
                       href: ivmvirtualpc-name.md
-                    - name: SearchPath (Eigenschaft)
+                    - name: SearchPaths-Eigenschaft
                       href: ivmvirtualpc-searchpaths.md
-                    - name: Vorschlag-maximummemorypervm (Eigenschaft)
+                    - name: SuggestedMaximumMemoryPerVM-Eigenschaft
                       href: ivmvirtualpc-suggestedmaximummemorypervm.md
-                    - name: Tasks (Eigenschaft)
+                    - name: Tasks-Eigenschaft
                       href: ivmvirtualpc-tasks.md
-                    - name: Unconnectednetworkadapters (Eigenschaft)
+                    - name: UnconnectedNetworkAdapters-Eigenschaft
                       href: ivmvirtualpc-unconnectednetworkadapters.md
-                    - name: Uptime-Eigenschaft
+                    - name: UpTime-Eigenschaft
                       href: ivmvirtualpc-uptime.md
-                    - name: Eigenschaft "US-Debug-ecollection"
+                    - name: USBDeviceCollection-Eigenschaft
                       href: ivmvirtualpc-usbdevicecollection.md
                     - name: Version-Eigenschaft
                       href: ivmvirtualpc-version.md
-                    - name: VirtualMachines (Eigenschaft)
+                    - name: VirtualMachines-Eigenschaft
                       href: ivmvirtualpc-virtualmachines.md
-                    - name: Virtualnetworks (Eigenschaft)
+                    - name: VirtualNetworks-Eigenschaft
                       href: ivmvirtualpc-virtualnetworks.md
-            - name: Ivmvirtualpcevents
+            - name: IVMVirtualPCEvents
               href: ivmvirtualpcevents.md
               items:
-                - name: Ivmvirtualpcevents-Methoden
+                - name: IVMVirtualPCEvents-Methoden
                   href: ivmvirtualpcevents-methods.md
                   items:
-                    - name: Oneventlogger-Methode
+                    - name: OnEventLogged-Methode
                       href: ivmvirtualpcevents-oneventlogged.md
-                    - name: Onvmstatechange-Methode
+                    - name: OnVMStateChange-Methode
                       href: ivmvirtualpcevents-onvmstatechange.md
-        - name: Windows Virtual PC-Strukturen
+        - name: Windows Virtuelle PC-Strukturen
           href: windows-virtual-pc-structures.md
           items:
-            - name: Guestosversioninfoex
+            - name: GUESTOSVERSIONINFOEX
               href: guestosversioninfoex.md
         - name: Schlüsselsequenzen
           href: key-sequences.md

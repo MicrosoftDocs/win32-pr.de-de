@@ -1,25 +1,25 @@
 ---
-description: Nachdem Sie die Erweiterungs-Snap-in-Erweiterung erstellt haben, müssen Sie diese registrieren, damit die MMC und die Sicherheitskonfigurations-Snap-Ins Sie finden und verwenden können.
+description: Nachdem Sie eine Snap-In-Erweiterung für Anlagen erstellt haben, müssen Sie sie registrieren, damit die MMC und die Sicherheitskonfigurations-Snap-Ins diese suchen und verwenden können.
 ms.assetid: 176a658c-b1fd-40c5-a2ac-c9a2b7060c55
-title: Registrieren einer Anlage-Snap-in-Erweiterung
+title: Registrieren einer Snap-In-Erweiterung für Anlagen
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 7726131325433aa920ff22c9b71a4f7184000a69
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: f7af8b586f0071a5718b420612fd552d578bf30bb083cca45a43f38198e1aee7
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106341203"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119005018"
 ---
-# <a name="registering-an-attachment-snap-in-extension"></a>Registrieren einer Anlage-Snap-in-Erweiterung
+# <a name="registering-an-attachment-snap-in-extension"></a>Registrieren einer Snap-In-Erweiterung für Anlagen
 
-Nachdem Sie die Erweiterungs-Snap-in-Erweiterung erstellt haben, müssen Sie diese registrieren, damit die MMC und die Sicherheitskonfigurations-Snap-Ins Sie finden und verwenden können.
+Nachdem Sie eine Snap-In-Erweiterung für Anlagen erstellt haben, müssen Sie sie registrieren, damit die MMC und die Sicherheitskonfigurations-Snap-Ins diese suchen und verwenden können.
 
-Das Anlagen-Snap-in muss den Namespace der Sicherheitskonfigurations-Snap-Ins erweitern, indem er einen eigenen Knoten hinzufügt, wie im folgenden Verfahren beschrieben.
+Ihr Anlagen-Snap-In muss den Namespace der Sicherheitskonfigurations-Snap-Ins erweitern, indem ein eigener Knoten hinzugefügt wird, wie im folgenden Verfahren beschrieben.
 
-**So installieren und registrieren Sie die Erweiterungs-Snap-in-Erweiterung**
+**So installieren und registrieren Sie die Snap-In-Erweiterung für Anlagen**
 
-1.  Registrieren Sie die Snap-in-Erweiterung unter dem folgenden Registrierungsschlüssel. Erstellen Sie keinen eigenständigen Schlüssel im-Snap-in. Erweiterungen für Anlagen-Snap-Ins dürfen nur Erweiterungen sein.
+1.  Registrieren Sie die Snap-In-Erweiterung unter dem folgenden Registrierungsschlüssel. Erstellen Sie keinen StandAlone-Schlüssel unter dem Snap-In. Erweiterungen für Anlagen-Snap-Ins dürfen nur Erweiterungen sein.
 
     ```
     HKEY_LOCAL_MACHINE
@@ -29,9 +29,9 @@ Das Anlagen-Snap-in muss den Namespace der Sicherheitskonfigurations-Snap-Ins er
                 SnapIns
     ```
 
-2.  Registrieren Sie die Erweiterungs-Snap-in-Erweiterung unter den folgenden unter Schlüsseln. Dies kann als Teil der **DllRegisterServer** -und **DllUnregisterServer** -Funktions Implementierungen erfolgen.
+2.  Registrieren Sie die Snap-In-Erweiterung für Anlagen unter den folgenden Unterschlüsseln. Dies kann als Teil ihrer **DllRegisterServer-** und **DllUnregisterServer-Funktionsimplementierung** erfolgen.
 
-    [Sicherheitsvorlagen](security-templates.md) -Namespace:
+    [Namespace "Sicherheitsvorlagen":](security-templates.md)
 
     ```
     HKLM
@@ -44,7 +44,7 @@ Das Anlagen-Snap-in muss den Namespace der Sicherheitskonfigurations-Snap-Ins er
                          NameSpace
     ```
 
-    [Sicherheitskonfigurations-und Analyse-](security-configuration-and-analysis.md) Namespace:
+    [Sicherheitskonfigurations- und Analysenamespace:](security-configuration-and-analysis.md)
 
     ```
     HKLM

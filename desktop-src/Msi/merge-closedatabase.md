@@ -1,7 +1,7 @@
 ---
-description: Die CloseDatabase-Methode des Merge-Objekts schließt die aktuell geöffnete Windows Installer Datenbank.
+description: Die CloseDatabase-Methode des Merge-Objekts schließt die derzeit geöffnete Windows Installer-Datenbank.
 ms.assetid: a89fe77a-0099-4c49-b484-c05ee351a66a
-title: Merge. CloseDatabase-Methode (Mergemod. h)
+title: Merge.CloseDatabase-Methode (Mergemod.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -14,16 +14,16 @@ api_type:
 - COM
 api_location:
 - Mergemod.dll
-ms.openlocfilehash: 5df72b9423ad212264736d16db0ae73ded9afef5
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 3f3b250cbaebd565f14ef7f10cd8180e497f20347d00a7e96a74298d3e5dc770
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106350748"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119013028"
 ---
-# <a name="mergeclosedatabase-method"></a>Merge. CloseDatabase-Methode
+# <a name="mergeclosedatabase-method"></a>Merge.CloseDatabase-Methode
 
-Die **CloseDatabase** -Methode des [**Merge**](merge-object.md) -Objekts schließt die aktuell geöffnete Windows Installer Datenbank.
+Die **CloseDatabase-Methode** des [**Merge-Objekts**](merge-object.md) schließt die derzeit geöffnete Windows Installer-Datenbank.
 
 ## <a name="syntax"></a>Syntax
 
@@ -40,10 +40,10 @@ Merge.CloseDatabase(
 
 <dl> <dt>
 
-*bcommit* 
+*bCommit* 
 </dt> <dd>
 
-**True** , wenn Änderungen gespeichert werden sollen, andernfalls **false** .
+**TRUE,** wenn Änderungen gespeichert werden sollen, **andernfalls FALSE.**
 
 </dd> </dl>
 
@@ -51,13 +51,13 @@ Merge.CloseDatabase(
 
 Diese Methode gibt keinen Wert zurück.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Durch das Schließen einer Datenbank werden alle Abhängigkeitsinformationen gelöscht, aber keine Fehler, die noch nicht abgerufen wurden.
+Beim Schließen einer Datenbank werden alle Abhängigkeitsinformationen gelöscht, aber es sind keine Fehler betroffen, die nicht abgerufen wurden.
 
 ### <a name="c"></a>C++
 
-Siehe [**CloseDatabase**](/windows/win32/api/mergemod/nf-mergemod-imsmmerge-closedatabase) -Funktion.
+Siehe [**CloseDatabase-Funktion.**](/windows/win32/api/mergemod/nf-mergemod-imsmmerge-closedatabase)
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -65,8 +65,8 @@ Siehe [**CloseDatabase**](/windows/win32/api/mergemod/nf-mergemod-imsmmerge-clos
 
 | Anforderung | Wert |
 |--------------------|-----------------------------------------------------------------------------------------|
-| Version<br/> | Mergemod.dll 1,0 oder höher<br/>                                                    |
-| Header<br/>  | <dl> <dt>Mergemod. h</dt> </dl>   |
+| Version<br/> | Mergemod.dll 1.0 oder höher<br/>                                                    |
+| Header<br/>  | <dl> <dt>Mergemod.h</dt> </dl>   |
 | DLL<br/>     | <dl> <dt>Mergemod.dll</dt> </dl> |
 
 

@@ -1,5 +1,5 @@
 ---
-description: Stellt Einstellungen dar, die sich speziell auf die Zuordnung des virtuellen Speichers beziehen.
+description: Stellt Einstellungen dar, die sich speziell auf die Zuordnung von virtuellem Speicher beziehen.
 ms.assetid: de6787c0-9998-4f1d-9715-f0dfa0ff70c6
 title: Msvm_StorageAllocationSettingData-Klasse
 ms.topic: reference
@@ -54,18 +54,18 @@ api_type:
 - DllExport
 api_location:
 - vmms.exe
-ms.openlocfilehash: d889c262eee9d827a02547ddbfdff2cb121cb337
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 9ba95ef5f4eb0afd20b80ab97db1ab7fc9a37b11e45638188c31459f8003cbda
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "104216761"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118950219"
 ---
-# <a name="msvm_storageallocationsettingdata-class"></a>MSVM \_ storagezugecationsettingdata-Klasse
+# <a name="msvm_storageallocationsettingdata-class"></a>Msvm \_ StorageAllocationSettingData-Klasse
 
-Stellt Einstellungen dar, die sich speziell auf die Zuordnung des virtuellen Speichers beziehen.
+Stellt Einstellungen dar, die sich speziell auf die Zuordnung von virtuellem Speicher beziehen.
 
-Die folgende Syntax wird Managed Object Format (MOF)-Code vereinfacht und enthält alle geerbten Eigenschaften.
+Die folgende Syntax ist Managed Object Format (MOF)-Code vereinfacht und enthält alle geerbten Eigenschaften.
 
 ## <a name="syntax"></a>Syntax
 
@@ -119,26 +119,26 @@ class Msvm_StorageAllocationSettingData : CIM_StorageAllocationSettingData
 
 ## <a name="members"></a>Member
 
-Die Klasse " **MSVM \_ storagezugecationsettingdata** " enthält diese Typen von Membern:
+Die **Msvm \_ StorageAllocationSettingData-Klasse** verfügt über folgende Typen von Membern:
 
 -   [Eigenschaften](#properties)
 
 ### <a name="properties"></a>Eigenschaften
 
-Die **MSVM-Klasse \_ storagezuweisung** -Klasse verfügt über diese Eigenschaften.
+Die **Msvm \_ StorageAllocationSettingData-Klasse** verfügt über diese Eigenschaften.
 
 <dl> <dt>
 
 **zugreifen**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt16**
+Datentyp: **uint16**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Gibt den Speicherzugriff an. Diese Eigenschaft wird von **CIM \_ storagezugecationsettingdata** geerbt.
+Gibt den Speicherzugriff an. Diese Eigenschaft wird von **CIM \_ StorageAllocationSettingData** geerbt.
 
 <dl> <dt>
 
@@ -148,7 +148,7 @@ Gibt den Speicherzugriff an. Diese Eigenschaft wird von **CIM \_ storagezugecati
 <span id="Readable"></span><span id="readable"></span><span id="READABLE"></span>**Lesbar** (1)
 </dt> <dt>
 
-<span id="Writeable"></span><span id="writeable"></span><span id="WRITEABLE"></span>**Beschreibbar** (2)
+<span id="Writeable"></span><span id="writeable"></span><span id="WRITEABLE"></span>**Schreibbar** (2)
 </dt> <dt>
 
 <span id="Read_Write_Supported"></span><span id="read_write_supported"></span><span id="READ_WRITE_SUPPORTED"></span>**Lese-/Schreibzugriff unterstützt** (3)
@@ -159,78 +159,78 @@ Gibt den Speicherzugriff an. Diese Eigenschaft wird von **CIM \_ storagezugecati
 **Adresse**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Die Adresse der Ressource. Diese Eigenschaft wird von [**CIM \_ resourcezucationsettingdata**](/previous-versions/windows/desktop/clushyperv/cim-resourceallocationsettingdata)geerbt.
+Die Adresse der Ressource. Diese Eigenschaft wird von [**CIM \_ ResourceAllocationSettingData**](/previous-versions/windows/desktop/clushyperv/cim-resourceallocationsettingdata)geerbt.
 
 </dd> <dt>
 
-**Addressonparent**
+**AddressOnParent**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Beschreibt die Adresse dieser Ressource im Kontext des übergeordneten Elements. Die über **geordneten** und **addressonparent** -Eigenschaften werden verwendet, um die Controller Beziehung sowie die Reihenfolge von Geräten auf einem Controller zu beschreiben. Diese Eigenschaft wird von [**CIM \_ resourcezucationsettingdata**](/previous-versions/windows/desktop/clushyperv/cim-resourceallocationsettingdata)geerbt.
+Beschreibt die Adresse dieser Ressource im Kontext des übergeordneten Elements. Die Eigenschaften **Parent** und **AddressOnParent** werden verwendet, um die Controllerbeziehung sowie die Reihenfolge der Geräte auf einem Controller zu beschreiben. Diese Eigenschaft wird von [**CIM \_ ResourceAllocationSettingData**](/previous-versions/windows/desktop/clushyperv/cim-resourceallocationsettingdata)geerbt.
 
 </dd> <dt>
 
-**Zuordnung von Einheiten**
+**AllocationUnits**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Die Zuordnungs Einheiten, die von den **Reservierungs** -und **Limit** -Eigenschaften verwendet werden. Diese Eigenschaft wird von [**CIM \_ resourcezucationsettingdata**](/previous-versions/windows/desktop/clushyperv/cim-resourceallocationsettingdata)geerbt.
+Die Zuordnungseinheiten, die von den Eigenschaften **Reservierung** und **Limit** verwendet werden. Diese Eigenschaft wird von [**CIM \_ ResourceAllocationSettingData**](/previous-versions/windows/desktop/clushyperv/cim-resourceallocationsettingdata)geerbt.
 
 </dd> <dt>
 
-**Automaticallocation**
+**AutomaticAllocation**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **boolescher** Wert
+Datentyp: **boolescher Wert**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Gibt an, ob die Ressource automatisch zugewiesen wird. Diese Eigenschaft wird von [**CIM \_ resourcezucationsettingdata**](/previous-versions/windows/desktop/clushyperv/cim-resourceallocationsettingdata)geerbt.
+Gibt an, ob die Ressource automatisch zugeordnet wird. Diese Eigenschaft wird von [**CIM \_ ResourceAllocationSettingData**](/previous-versions/windows/desktop/clushyperv/cim-resourceallocationsettingdata)geerbt.
 
 </dd> <dt>
 
-**Automaticdeallocation**
+**AutomaticDeallocation**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **boolescher** Wert
+Datentyp: **boolescher Wert**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Gibt an, ob die Zuordnung der Ressource automatisch aufgehoben wird. Diese Eigenschaft wird von [**CIM \_ resourcezucationsettingdata**](/previous-versions/windows/desktop/clushyperv/cim-resourceallocationsettingdata)geerbt.
+Gibt an, ob die Zuordnung der Ressource automatisch freigegeben wird. Diese Eigenschaft wird von [**CIM \_ ResourceAllocationSettingData**](/previous-versions/windows/desktop/clushyperv/cim-resourceallocationsettingdata)geerbt.
 
 </dd> <dt>
 
 **CachingMode**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt16**
+Datentyp: **uint16**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Gibt an, ob und wie die Zwischenspeicherung im Arbeitsspeicher für diese VHD verwendet werden soll. Die Standard Richtlinie wird im Feld **defaultvirtualharddiskcachingmode** der [**MSVM \_ virtualsystemmanagementservicesettingdata**](msvm-virtualsystemmanagementservicesettingdata.md) -Klasse festgelegt.
+Gibt an, ob und wie das Zwischenspeichern von In-Memory-Dateien für diese VHD verwendet werden soll. Die Standardrichtlinie wird im Feld **DefaultVirtualHardDiskCachingMode** der [**Msvm \_ VirtualSystemManagementServiceSettingData-Klasse**](msvm-virtualsystemmanagementservicesettingdata.md) festgelegt.
 
 > [!Note]  
 > In Windows 10 hinzugefügt.
@@ -255,14 +255,14 @@ Gibt an, ob und wie die Zwischenspeicherung im Arbeitsspeicher für diese VHD ve
 
 <span id="No_Caching"></span><span id="no_caching"></span><span id="NO_CACHING"></span>
 
-**Kein Caching** (3)
+**Keine Zwischenspeicherung** (3)
 
 
 </dt> <dd></dd> <dt>
 
 <span id="Cache_Sharable_Parents"></span><span id="cache_sharable_parents"></span><span id="CACHE_SHARABLE_PARENTS"></span>
 
-Zwischen **Speichern** von freigegebenen übergeordneten Elementen (4)
+**Cache Sharable Parents** (4)
 
 
 </dt> <dd></dd> </dl>
@@ -272,49 +272,49 @@ Zwischen **Speichern** von freigegebenen übergeordneten Elementen (4)
 **Caption**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: **maxlen** (64)
+Qualifizierer: **MaxLen** (64)
 </dt> </dl>
 
-Eine kurze Beschreibung des-Objekts. Diese Eigenschaft wird vom [**CIM- \_ managedelta**](/previous-versions/windows/desktop/iscsitarg/cim-managedelement)geerbt und ist immer auf die Standardeinstellungen Festplatte Image festgelegt.
+Eine kurze Beschreibung des -Objekts. Diese Eigenschaft wird von [**CIM \_ ManagedElement**](/previous-versions/windows/desktop/iscsitarg/cim-managedelement)geerbt und immer auf "Hard Disk Image Default Einstellungen" festgelegt.
 
 </dd> <dt>
 
 **Connection**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichen** folgen Array
+Datentyp: **Zeichenfolgenarray**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Das Gerät, mit dem diese Ressource verbunden ist. Diese Eigenschaft wird von [**CIM \_ resourcezucationsettingdata**](/previous-versions/windows/desktop/clushyperv/cim-resourceallocationsettingdata)geerbt.
+Das Gerät, mit dem diese Ressource verbunden ist. Diese Eigenschaft wird von [**CIM \_ ResourceAllocationSettingData**](/previous-versions/windows/desktop/clushyperv/cim-resourceallocationsettingdata)geerbt.
 
 </dd> <dt>
 
-**Consumersichtbarkeit**
+**ConsumerVisibility**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt16**
+Datentyp: **uint16**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Die Sichtbarkeit des Consumers für die zugeordnete Ressource. Diese Eigenschaft wird von [**CIM \_ resourcezucationsettingdata**](/previous-versions/windows/desktop/clushyperv/cim-resourceallocationsettingdata)geerbt.
+Die Sichtbarkeit des Consumers für die zugeordnete Ressource. Diese Eigenschaft wird von [**CIM \_ ResourceAllocationSettingData**](/previous-versions/windows/desktop/clushyperv/cim-resourceallocationsettingdata)geerbt.
 
 <dl> <dt>
 
 <span id="Unknown"></span><span id="unknown"></span><span id="UNKNOWN"></span>**Unbekannt** (0)
 </dt> <dt>
 
-<span id="Passed-Through"></span><span id="passed-through"></span><span id="PASSED-THROUGH"></span>Pass **-through** (2)
+<span id="Passed-Through"></span><span id="passed-through"></span><span id="PASSED-THROUGH"></span>**Übergeben** (2)
 </dt> <dt>
 
 <span id="Virtualized"></span><span id="virtualized"></span><span id="VIRTUALIZED"></span>**Virtualisiert** (3)
@@ -328,65 +328,65 @@ Die Sichtbarkeit des Consumers für die zugeordnete Ressource. Diese Eigenschaft
 **Beschreibung**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Eine Beschreibung des -Objekts. Diese Eigenschaft wird von [**CIM \_ managedelta Element**](/previous-versions/windows/desktop/iscsitarg/cim-managedelement)geerbt und ist immer auf "beschreibt die Standardeinstellungen für die Festplatten Abbild Ressourcen".
+Eine Beschreibung des -Objekts. Diese Eigenschaft wird von [**CIM \_ ManagedElement**](/previous-versions/windows/desktop/iscsitarg/cim-managedelement)geerbt und immer auf "Beschreibt die Standardeinstellungen für die Festplattenimageressourcen" festgelegt.
 
 </dd> <dt>
 
 **ElementName**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Ein Anzeige Name für das-Objekt. Diese Eigenschaft wird von [**CIM \_ SettingData**](/previous-versions//cc136911(v=vs.85))geerbt.
+Ein Anzeigename für das Objekt. Diese Eigenschaft wird von [**CIM \_ SettingData**](/previous-versions//cc136911(v=vs.85))geerbt.
 
 </dd> <dt>
 
-**Hostextentname**
+**HostExtentName**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Ein eindeutiger Bezeichner für den Host Block. Der identifizierte Host Block wird für die Speicherressourcen Zuordnung verwendet. Diese Eigenschaft wird von **CIM \_ storagezugecationsettingdata** geerbt.
+Ein eindeutiger Bezeichner für den Host-Extent. Der identifizierte Hostumfang wird für die Speicherressourcenzuordnung verwendet. Diese Eigenschaft wird von **CIM \_ StorageAllocationSettingData** geerbt.
 
 </dd> <dt>
 
-**Hostextentnameformat**
+**HostExtentNameFormat**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt16**
+Datentyp: **uint16**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Gibt das Format an, das für die **hostextentname** -Eigenschaft verwendet wird. Diese Eigenschaft wird von **CIM \_ storagezugecationsettingdata** geerbt.
+Gibt das Format an, das für die **HostExtentName-Eigenschaft** verwendet wird. Diese Eigenschaft wird von **CIM \_ StorageAllocationSettingData** geerbt.
 
 <dl> <dt>
 
 <span id="Unknown"></span><span id="unknown"></span><span id="UNKNOWN"></span>**Unbekannt** (0)
 </dt> <dt>
 
-<span id="Other"></span><span id="other"></span><span id="OTHER"></span>**Sonstige** (1)
+<span id="Other"></span><span id="other"></span><span id="OTHER"></span>**Andere** (1)
 </dt> <dt>
 
-<span id="SNVM"></span><span id="snvm"></span>**Snvm** (7)
+<span id="SNVM"></span><span id="snvm"></span>**SNVM** (7)
 </dt> <dt>
 
-<span id="NAA"></span><span id="naa"></span>**Naa** (9)
+<span id="NAA"></span><span id="naa"></span>**NAA** (9)
 </dt> <dt>
 
 <span id="EUI64"></span><span id="eui64"></span>**EUI64** (10)
@@ -395,24 +395,24 @@ Gibt das Format an, das für die **hostextentname** -Eigenschaft verwendet wird.
 <span id="T10VID"></span><span id="t10vid"></span>**T10VID** (11)
 </dt> <dt>
 
-<span id="OS_Device_Name"></span><span id="os_device_name"></span><span id="OS_DEVICE_NAME"></span>**Betriebssystem-Geräte Name** (12)
+<span id="OS_Device_Name"></span><span id="os_device_name"></span><span id="OS_DEVICE_NAME"></span>**Name des Betriebssystemgeräts** (12)
 </dt> <dt>
 
-<span id="DMTF_Reserved_"></span><span id="dmtf_reserved_"></span><span id="DMTF_RESERVED_"></span>**DMTF reserviert** (.. )
+<span id="DMTF_Reserved_"></span><span id="dmtf_reserved_"></span><span id="DMTF_RESERVED_"></span>**DMTF Reserved** (.. )
 </dt> </dl>
 
 </dd> <dt>
 
-**Hostextentnamenamespace**
+**HostExtentNameNamespace**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt16**
+Datentyp: **uint16**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Wenn der Host Block ein SCSI-Volume ist, ist die bevorzugte Quelle für SCSI-Volumenamen SCSI VPD Page 83-Antworten. Diese Eigenschaft wird von **CIM \_ storagezugecationsettingdata** geerbt.
+Wenn es sich bei dem Host-Extent um ein SCSI-Volume handelt, sind SCSI-VPD-Seiten 83-Antworten die bevorzugte Quelle für SCSI-Volumenamen. Diese Eigenschaft wird von **CIM \_ StorageAllocationSettingData geerbt.**
 
 <dl> <dt>
 
@@ -434,80 +434,80 @@ Wenn der Host Block ein SCSI-Volume ist, ist die bevorzugte Quelle für SCSI-Vol
 <span id="VPD80"></span><span id="vpd80"></span>**VPD80** (5)
 </dt> <dt>
 
-<span id="NodeWWN"></span><span id="nodewwn"></span><span id="NODEWWN"></span>**NoDebug** (6)
+<span id="NodeWWN"></span><span id="nodewwn"></span><span id="NODEWWN"></span>**NodeWWN** (6)
 </dt> <dt>
 
-<span id="SNVM"></span><span id="snvm"></span>**Snvm** (7)
+<span id="SNVM"></span><span id="snvm"></span>**SNVM** (7)
 </dt> <dt>
 
-<span id="OS_Device_Namespace"></span><span id="os_device_namespace"></span><span id="OS_DEVICE_NAMESPACE"></span>**Betriebssystem-Geräte Namespace** (8)
+<span id="OS_Device_Namespace"></span><span id="os_device_namespace"></span><span id="OS_DEVICE_NAMESPACE"></span>**Namespace des Betriebssystemgeräts** (8)
 </dt> <dt>
 
-<span id="DMTF_Reserved_"></span><span id="dmtf_reserved_"></span><span id="DMTF_RESERVED_"></span>**DMTF reserviert** (.. )
+<span id="DMTF_Reserved_"></span><span id="dmtf_reserved_"></span><span id="DMTF_RESERVED_"></span>**DMTF Reserved** (.. )
 </dt> </dl>
 
 </dd> <dt>
 
-**Hostextentstartingaddress**
+**HostExtentStartingAddress**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt64**
+Datentyp: **uint64**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Gibt die Anfangsadresse für den von der **hostextentname** -Eigenschaft identifizierten Host Speicherblock an, der für die Zuordnung des virtuellen Speicherbereichs verwendet wird. Ein **null** -Wert gibt an, dass es keine direkte Zuordnung des virtuellen Speicherbereichs zum Host Speicherblock gibt, auf den verwiesen wird. Diese Eigenschaft wird von **CIM \_ storagezugecationsettingdata** geerbt.
+Identifiziert die Startadresse im Hostspeicherausdungs-Wert, die durch die **HostExtentName-Eigenschaft** identifiziert wird, die für die Zuordnung des virtuellen Speicherausdungsausdungs verwendet wird. Ein **NULL-Wert** gibt an, dass es keine direkte Zuordnung des virtuellen Speicherwertes zum Referenzspeicher extent des Hosts gibt. Diese Eigenschaft wird von **CIM \_ StorageAllocationSettingData geerbt.**
 
 </dd> <dt>
 
-**"Hustresource"**
+**HostResource**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichen** folgen Array
+Datentyp: **Zeichenfolgenarray**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Jedem Gerät auf dem virtuellen Computer kann nur eine Host Ressource zugewiesen werden, sodass nur das erste Element dieses Arrays festgelegt werden kann. Legen Sie für Geräte, die diese Funktion unterstützen, das erste Element des **hostresource** -Arrays so fest, dass es einen Verweis auf die zugrunde liegende Host Ressource enthält, die zugewiesen werden soll. Diese Eigenschaft wird von [**CIM \_ resourcezucationsettingdata**](/previous-versions/windows/desktop/clushyperv/cim-resourceallocationsettingdata)geerbt.
+Jedem Gerät auf dem virtuellen Computer kann nur eine Hostressource zugewiesen werden, sodass nur das erste Element dieses Arrays festgelegt werden kann. Legen Sie für Geräte, die dieses Feature unterstützen, das erste Element des **HostResource-Arrays** so fest, dass es einen Verweis auf die zugrunde liegende Hostressource enthält, die zugewiesen werden soll. Diese Eigenschaft wird von [**CIM \_ ResourceAllocationSettingData geerbt.**](/previous-versions/windows/desktop/clushyperv/cim-resourceallocationsettingdata)
 
-Dies ist eine schreibgeschützte Eigenschaft. Wenn die **ResourceType** -Eigenschaft jedoch 31 (logischer Datenträger) und die **resourcesubtype** -Eigenschaft "Microsoft: Hyper-V: virtuelle Festplatte", "Microsoft: Hyper-v: Virtual CD/DVD Disk" oder "Microsoft: Hyper-v: Virtual Diskette". die Eigenschaft " **hoststresource** " kann mithilfe der [**modifyresourcesettings**](modifyresourcesettings-msvm-virtualsystemmanagementservice.md) -Methode der Klasse " [**MSVM \_ virtualsystemmanagementservice**](msvm-virtualsystemmanagementservice.md) " geändert werden.
+Dies ist eine schreibgeschützte Eigenschaft. Wenn die **ResourceType-Eigenschaft** jedoch 31 (Logischer Datenträger) und die **ResourceSubType-Eigenschaft** "Microsoft:Hyper-V:Virtual Hard Disk", "Microsoft:Hyper-V:Virtual CD/DVD Disk" oder "Microsoft:Hyper-V:Virtual Floppy Disk" ist, kann die **HostResource-Eigenschaft** mithilfe der [**ModifyResourceSettings-Methode**](modifyresourcesettings-msvm-virtualsystemmanagementservice.md) der [**Msvm \_ VirtualSystemManagementService-Klasse**](msvm-virtualsystemmanagementservice.md) geändert werden.
 
 </dd> <dt>
 
-**"Hastresourceblocksize"**
+**HostResourceBlockSize**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt64**
+Datentyp: **uint64**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Die Größe (in Bytes) der Blöcke, die auf dem Host als Ergebnis dieser Speicherressourcen Zuordnung oder Speicherressourcen Zuordnungs Anforderung zugeordnet sind. Wenn die Blockgröße variabel ist, wird die maximale Blockgröße in Bytes angegeben. Wenn die Blockgröße unbekannt ist oder ein Block Konzept nicht zutrifft, wird der Wert 1 verwendet. Diese Eigenschaft wird von **CIM \_ storagezugecationsettingdata** geerbt.
+Die Größe der Blöcke in Bytes, die auf dem Host als Ergebnis dieser Speicherressourcenzuordnungs- oder Speicherressourcenzuordnungsanforderung zugeordnet werden. Wenn die Blockgröße variabel ist, wird die maximale Blockgröße in Bytes angegeben. Wenn die Blockgröße unbekannt ist oder kein Blockkonzept gilt, wird der Wert 1 verwendet. Diese Eigenschaft wird von **CIM \_ StorageAllocationSettingData geerbt.**
 
 </dd> <dt>
 
-**Ignoreflushes**
+**IgnoreFlushes**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **boolescher** Wert
+Datentyp: **boolescher Wert**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Wenn diese Einstellung auf "true" festgelegt ist, ignoriert Hyper-V das Leeren des Rück Schreibens für diesen bestimmten virtuellen Computer. Wenn diese Einstellung auf "false" festgelegt ist, schreibt Hyper-V bei jedem leeren Vorgang weiterhin auf den Datenträger zurück. Die Standardeinstellung ist false.
+Wenn dies auf TRUE festgelegt ist, ignoriert Hyper-V das Zurückschreiben für diesen bestimmten virtuellen Computer. Wenn false festgelegt ist, schreibt Hyper-V bei jeder Leerung weiterhin zurück auf den Datenträger. Die Standardeinstellung ist false.
 
-**Windows 10:** Dieser Wert wird bis Windows 10 nicht unterstützt.
+**Windows 10:** Dieser Wert wird erst unterstützt, wenn Windows 10.
 
 </dd> <dt>
 
 **InstanceID**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
@@ -516,235 +516,235 @@ Zugriffstyp: Schreibgeschützt
 Qualifizierer: **Schlüssel**
 </dt> </dl>
 
-Identifiziert eine Instanz dieser Klasse eindeutig. Diese Eigenschaft wird von [**CIM \_ SettingData**](/previous-versions//cc136911(v=vs.85))geerbt.
+Identifiziert eine Instanz dieser Klasse eindeutig. Diese Eigenschaft wird von [**CIM \_ SettingData geerbt.**](/previous-versions//cc136911(v=vs.85))
 
 </dd> <dt>
 
-**Iopsallocationunits**
+**IOPSAllocationUnits**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Gibt die Zuordnungs Einheiten an, die von den Eigenschaften **iopslimit** und **iopsreservierung** verwendet werden. Diese Eigenschaft hat immer den Wert:
+Gibt die Zuordnungseinheiten an, die von den **Eigenschaften IOPSLimit** und **IOPSReservation verwendet** werden. Diese Eigenschaft hat immer den -Wert:
 
-"count (Normalized I/O)/Second"
+"count(normalized E/O) /second"
 
-Der Durchsatz wird in normalisierten e/a-Vorgängen pro Sekunde (IOPS) anstelle von unformatiertem IOPS gemessen. Bei der Verwendung von normalisierten IOPS werden alle e/a-Anforderungen als 1 normalisierte e/a-Vorgänge angesehen, wenn die Anforderungs Größe kleiner oder gleich einer vordefinierten Basis Größe (8 KB) ist. Anforderungen, die größer als die Basis Größe sind, werden als N e/a-Vorgänge berücksichtigt, wobei n der aufgerundete Wert der Anforderungs Größe dividiert durch die Basis Größe ist. Wenn die Basis Größe z. b. 8 KB beträgt, wird eine 16-KB-Anforderung als 2 normalisierte e/a-Vorgänge gezählt, eine 32-KB-Anforderung als vier normalisierte e/a-Vorgänge usw.
+Der Durchsatz wird in normalisierten E/A-Vorgängen pro Sekunde (IOPS) anstelle von unformatierten IOPS gemessen. Bei Verwendung normalisierter IOPS wird jede E/A-Anforderung als 1 normalisierte E/A berücksichtigt, wenn die Größe der Anforderung kleiner oder gleich einer vordefinierten Basisgröße (8 KB) ist. Anforderungen, die größer als die Basisgröße sind, werden als N-E/A-Vorgänge berücksichtigt, wobei N der aufgerundete Wert der Anforderungsgröße dividiert durch die Basisgröße ist. Wenn die Basisgröße beispielsweise 8 KB beträgt, wird eine 16-KB-Anforderung als zwei normalisierte E/A-Vorgänge gezählt, eine 32-KB-Anforderung als 4 normalisierte E/A-Vorgänge und so weiter.
 
-**Windows 8.1:** Dieser Wert wird bis Windows 8.1 und Windows Server 2012 R2 nicht unterstützt.
+**Windows 8.1:** Dieser Wert wird erst unterstützt, wenn Windows 8.1 und Windows Server 2012 R2.
 
 </dd> <dt>
 
-**Iopslimit**
+**IOPSLimit**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt64**
+Datentyp: **uint64**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**MaxValue**](/windows/desktop/WmiSdk/standard-qualifiers) (1 Milliarde)
+Qualifizierer: [**MaxValue**](/windows/desktop/WmiSdk/standard-qualifiers) (1000000000)
 </dt> </dl>
 
-Die maximale Anzahl von e/a-Vorgängen pro Sekunde (IOPS), die für diesen virtuellen Speicherbereich gewartet werden. Wenn der Wert nicht definiert oder NULL ist, gibt es keine Beschränkung für die Anzahl der IOPS, die das Gerät ausgeben kann.
+Die maximale Anzahl von E/A-Vorgängen pro Sekunde (IOPS), die für diesen virtuellen Speicher extent ausgeführt werden. Wenn der Wert nicht definiert ist oder 0 (null) ist, gibt es keine Beschränkung für die Anzahl von IOPS, die das Gerät auszahlen kann.
 
 > [!Note]  
-> Sie können den Wert dieser Eigenschaft mit der [**modifyresourcesettings**](modifyresourcesettings-msvm-virtualsystemmanagementservice.md) -Methode der [**MSVM \_ virtualsystemmanagementservice**](msvm-virtualsystemmanagementservice.md) -Klasse ändern. Diese Eigenschaft ist nur für **MSVM- \_ storageallocationsettingdata** -Instanzen von Bedeutung, die Ressourcen Zuordnungen für virtuelle Maschinen anfordern. Beim Zuordnen von Ressourcen zu einem untergeordneten Pool wird dies ignoriert.
+> Sie können die [**ModifyResourceSettings-Methode**](modifyresourcesettings-msvm-virtualsystemmanagementservice.md) der [**Msvm \_ VirtualSystemManagementService-Klasse**](msvm-virtualsystemmanagementservice.md) verwenden, um den Wert dieser Eigenschaft zu ändern. Diese Eigenschaft ist nur für **Msvm \_ StorageAllocationSettingData-Instanzen** sinnvoll, die Ressourcenzuordnungen für virtuelle Computer anfordern. Sie wird beim Zuweisen von Ressourcen zu einem untergeordneten Pool ignoriert.
 
  
 
-**Windows 8.1:** Dieser Wert wird bis Windows 8.1 und Windows Server 2012 R2 nicht unterstützt.
+**Windows 8.1:** Dieser Wert wird erst unterstützt, wenn Windows 8.1 und Windows Server 2012 R2.
 
 </dd> <dt>
 
-**Iopsreservierung**
+**IOPSReservation**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt64**
+Datentyp: **uint64**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**MaxValue**](/windows/desktop/WmiSdk/standard-qualifiers) (1 Milliarde)
+Qualifizierer: [**MaxValue**](/windows/desktop/WmiSdk/standard-qualifiers) (1000000000)
 </dt> </dl>
 
-Die Mindestanzahl von e/a-Vorgängen pro Sekunde (IOPS), die für diesen virtuellen Speicherbereich gewartet werden.
+Die Mindestanzahl von E/A-Vorgängen pro Sekunde (IOPS), die für diesen virtuellen Speicher extent ausgeführt werden.
 
-Wenn sowohl **iopslimit** als auch **iopsreservierung** definiert sind, muss der Wert von **iopslimit** größer oder gleich dem Wert von **iopsreservierung** sein.
+Wenn sowohl **IOPSLimit** als auch **IOPSReservation** definiert sind, muss der Wert von **IOPSLimit** größer oder gleich dem Wert von **IOPSReservation sein.**
 
 > [!Note]  
-> Sie können den Wert dieser Eigenschaft mit der [**modifyresourcesettings**](modifyresourcesettings-msvm-virtualsystemmanagementservice.md) -Methode der [**MSVM \_ virtualsystemmanagementservice**](msvm-virtualsystemmanagementservice.md) -Klasse ändern. Diese Eigenschaft ist nur für **MSVM- \_ storageallocationsettingdata** -Instanzen von Bedeutung, die Ressourcen Zuordnungen für virtuelle Maschinen anfordern. Beim Zuordnen von Ressourcen zu einem untergeordneten Pool wird dies ignoriert.
+> Sie können die [**ModifyResourceSettings-Methode**](modifyresourcesettings-msvm-virtualsystemmanagementservice.md) der [**Msvm \_ VirtualSystemManagementService-Klasse**](msvm-virtualsystemmanagementservice.md) verwenden, um den Wert dieser Eigenschaft zu ändern. Diese Eigenschaft ist nur für **Msvm \_ StorageAllocationSettingData-Instanzen** sinnvoll, die Ressourcenzuordnungen für virtuelle Computer anfordern. Sie wird beim Zuweisen von Ressourcen zu einem untergeordneten Pool ignoriert.
 
  
 
-**Windows 8.1:** Dieser Wert wird bis Windows 8.1 und Windows Server 2012 R2 nicht unterstützt.
+**Windows 8.1:** Dieser Wert wird erst unterstützt, wenn Windows 8.1 und Windows Server 2012 R2.
 
 </dd> <dt>
 
 **Begrenzung**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt64**
+Datentyp: **uint64**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Die maximale Anzahl von Blöcken, die für diese Speicherressourcen Zuweisung auf dem Host erteilt werden. Die Blockgröße wird durch die Eigenschaft " **hustresourceblocksize** " angegeben. Normalerweise würde der Wert dieser Eigenschaft eine maximale Größe für den zugewiesenen hostblock widerspiegeln, der der Größe des dem Consumer dargestellten virtuellen Speicherbereichs entspricht. Ein Wert, der kleiner als ist, würde auf eine Situation hindeuten, in der ein dünn aufgefüllter virtueller Speicherblock erwartet wird, wobei die Füllrate durch den Wert der Eigenschaft Limit beschränkt wird. Diese Eigenschaft wird von [**CIM \_ resourcezucationsettingdata**](/previous-versions/windows/desktop/clushyperv/cim-resourceallocationsettingdata)geerbt.
+Die maximale Anzahl von Blöcken, die für diese Speicherressourcenzuordnung auf dem Host gewährt werden. Die Blockgröße wird von der **HostResourceBlockSize-Eigenschaft** angegeben. In der Regel gibt der Wert dieser Eigenschaft eine maximale Größe für den zugeordneten Host extent an, die der Größe des virtuellen Speichers entspricht, der dem Consumer präsentiert wird. Ein kleinerer Wert als , der auf eine Situation hindeuten würde, in der ein wenig aufgefüllter virtueller Speicher erwartet wird, in dem die Füllrate durch den Wert der Limit-Eigenschaft beschränkt ist. Diese Eigenschaft wird von [**CIM \_ ResourceAllocationSettingData geerbt.**](/previous-versions/windows/desktop/clushyperv/cim-resourceallocationsettingdata)
 
 </dd> <dt>
 
-**Mappingbehavior**
+**MappingBehavior**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt16**
+Datentyp: **uint16**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Gibt an, wie diese Ressource den zugrunde liegenden Ressourcen zugeordnet wird. Diese Eigenschaft wird von [**CIM \_ resourcezucationsettingdata**](/previous-versions/windows/desktop/clushyperv/cim-resourceallocationsettingdata)geerbt.
+Gibt an, wie diese Ressource zugrunde liegenden Ressourcen zu ordnet. Diese Eigenschaft wird von [**CIM \_ ResourceAllocationSettingData geerbt.**](/previous-versions/windows/desktop/clushyperv/cim-resourceallocationsettingdata)
 
 </dd> <dt>
 
-**Otherhostextentnameformat**
+**OtherHostExtentNameFormat**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Eine Zeichenfolge, die das Format der **hostextentname** -Eigenschaft beschreibt, wenn die **hostextentnameformat** -Eigenschaft 1 (Sonstiges) ist. Diese Eigenschaft wird von **CIM \_ storagezugecationsettingdata** geerbt.
+Eine Zeichenfolge, die das Format der **HostExtentName-Eigenschaft** beschreibt, wenn die **HostExtentNameFormat-Eigenschaft** 1 (Other) ist. Diese Eigenschaft wird von **CIM \_ StorageAllocationSettingData** geerbt.
 
 </dd> <dt>
 
-**Otherhostextentnamenamespace**
+**OtherHostExtentNameNamespace**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Eine Zeichenfolge, die den Namespace der **hostextentname** -Eigenschaft beschreibt, wenn die **hostextentnamenamespace** -Eigenschaft 1 (Sonstiges) enthält. Diese Eigenschaft wird von **CIM \_ storagezugecationsettingdata** geerbt.
+Eine Zeichenfolge, die den Namespace der **HostExtentName-Eigenschaft** beschreibt, wenn die **HostExtentNameNamespace-Eigenschaft** 1 (Other) enthält. Diese Eigenschaft wird von **CIM \_ StorageAllocationSettingData** geerbt.
 
 </dd> <dt>
 
-**Otherresourcetype**
+**OtherResourceType**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Eine Zeichenfolge, die den Ressourcentyp beschreibt, wenn ein klar definierter Wert nicht verfügbar ist und [**ResourceType**](msvm-processorsettingdata.md) den Wert 1 (sonstige) aufweist. Diese Eigenschaft wird von [**CIM \_ resourcezucationsettingdata**](/previous-versions/windows/desktop/clushyperv/cim-resourceallocationsettingdata)geerbt.
+Eine Zeichenfolge, die den Ressourcentyp beschreibt, wenn kein klar definierter Wert verfügbar ist und [**ResourceType**](msvm-processorsettingdata.md) den Wert 1(Other) hat. Diese Eigenschaft wird von [**CIM \_ ResourceAllocationSettingData**](/previous-versions/windows/desktop/clushyperv/cim-resourceallocationsettingdata)geerbt.
 
 </dd> <dt>
 
 **Parent**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Das übergeordnete Element der Ressource. Diese Eigenschaft wird von [**CIM \_ resourcezucationsettingdata**](/previous-versions/windows/desktop/clushyperv/cim-resourceallocationsettingdata)geerbt.
+Das übergeordnete Element der Ressource. Diese Eigenschaft wird von [**CIM \_ ResourceAllocationSettingData**](/previous-versions/windows/desktop/clushyperv/cim-resourceallocationsettingdata)geerbt.
 
 </dd> <dt>
 
-**Persistentreservationssupported**
+**PersistentReservationsSupported**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **boolescher** Wert
+Datentyp: **boolescher Wert**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Gibt an, ob die virtuelle Festplatte permanente SCSI-3-Reservierungen unterstützt.
+Gibt an, ob die virtuelle Festplatte persistente SCSI-3-Reservierungen unterstützt.
 
-**Windows 8.1:** Dieser Wert wird bis Windows 8.1 und Windows Server 2012 R2 nicht unterstützt.
+**Windows 8.1:** Dieser Wert wird erst Windows 8.1 und Windows Server 2012 R2 unterstützt.
 
 </dd> <dt>
 
-**Poolid**
+**PoolID**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Der Bezeichner des Ressourcenpools, von dem diese Ressource zugewiesen wurde. Diese Eigenschaft wird von [**CIM \_ resourcezucationsettingdata**](/previous-versions/windows/desktop/clushyperv/cim-resourceallocationsettingdata)geerbt.
+Der Bezeichner des Ressourcenpools, aus dem diese Ressource zugeordnet wurde. Diese Eigenschaft wird von [**CIM \_ ResourceAllocationSettingData**](/previous-versions/windows/desktop/clushyperv/cim-resourceallocationsettingdata)geerbt.
 
 </dd> <dt>
 
 **Reservierung**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt64**
+Datentyp: **uint64**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: **außer Kraft** Setzung ("Reservierung"), **modelcorrespondence** ("CIM \_ storagezucationsettingdata. hostresourceblocksize")
+Qualifizierer: **Außerkraftsetzung** ("Reservierung"), **ModelCorrespondence** ("CIM \_ StorageAllocationSettingData.HostResourceBlockSize")
 </dt> </dl>
 
-Die Anzahl der Blöcke, die für diese Speicherressourcen Zuordnung auf dem Host garantiert verfügbar sind. Die Blockgröße wird durch die Eigenschaft " **hustresourceblocksize** " angegeben. Diese Eigenschaft wird von **CIM \_ storagezugecationsettingdata** geerbt.
+Die Anzahl der Blöcke, die garantiert für diese Speicherressourcenzuordnung auf dem Host verfügbar sind. Die Blockgröße wird von der **HostResourceBlockSize-Eigenschaft** angegeben. Diese Eigenschaft wird von **CIM \_ StorageAllocationSettingData** geerbt.
 
 </dd> <dt>
 
 **ResourceSubType**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Eine Zeichenfolge, die einen Implementierungs spezifischen Untertyp für diese Ressource beschreibt. Dies kann z. b. verwendet werden, um unterschiedliche Modelle desselben Ressourcentyps zu unterscheiden. Diese Eigenschaft wird von [**CIM \_ resourcezucationsettingdata**](/previous-versions/windows/desktop/clushyperv/cim-resourceallocationsettingdata)geerbt.
+Eine Zeichenfolge, die einen implementierungsspezifischen Untertyp für diese Ressource beschreibt. Dies kann beispielsweise verwendet werden, um verschiedene Modelle desselben Ressourcentyps zu unterscheiden. Diese Eigenschaft wird von [**CIM \_ ResourceAllocationSettingData**](/previous-versions/windows/desktop/clushyperv/cim-resourceallocationsettingdata)geerbt.
 
 </dd> <dt>
 
 **ResourceType**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt16**
+Datentyp: **uint16**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Der Typ der Ressource, die diese Zuordnungs Einstellung darstellt. Diese Eigenschaft wird von [**CIM \_ resourcezucationsettingdata**](/previous-versions/windows/desktop/clushyperv/cim-resourceallocationsettingdata)geerbt.
+Der Typ der Ressource, die von dieser Zuordnungseinstellung dargestellt wird. Diese Eigenschaft wird von [**CIM \_ ResourceAllocationSettingData**](/previous-versions/windows/desktop/clushyperv/cim-resourceallocationsettingdata)geerbt.
 
 <dl> <dt>
 
-<span id="Other"></span><span id="other"></span><span id="OTHER"></span>**Sonstige** (1)
+<span id="Other"></span><span id="other"></span><span id="OTHER"></span>**Andere** (1)
 </dt> <dt>
 
-<span id="Computer_System"></span><span id="computer_system"></span><span id="COMPUTER_SYSTEM"></span>**Computer System** (2)
+<span id="Computer_System"></span><span id="computer_system"></span><span id="COMPUTER_SYSTEM"></span>**Computersystem** (2)
 </dt> <dt>
 
 <span id="Processor"></span><span id="processor"></span><span id="PROCESSOR"></span>**Prozessor** (3)
 </dt> <dt>
 
-<span id="Memory"></span><span id="memory"></span><span id="MEMORY"></span>Arbeits **Speicher** (4)
+<span id="Memory"></span><span id="memory"></span><span id="MEMORY"></span>**Arbeitsspeicher** (4)
 </dt> <dt>
 
 <span id="IDE_Controller"></span><span id="ide_controller"></span><span id="IDE_CONTROLLER"></span>**IDE-Controller** (5)
@@ -753,7 +753,7 @@ Der Typ der Ressource, die diese Zuordnungs Einstellung darstellt. Diese Eigensc
 <span id="Parallel_SCSI_HBA"></span><span id="parallel_scsi_hba"></span><span id="PARALLEL_SCSI_HBA"></span>**Paralleler SCSI-HBA** (6)
 </dt> <dt>
 
-<span id="FC_HBA"></span><span id="fc_hba"></span>**FC-HBA** (7)
+<span id="FC_HBA"></span><span id="fc_hba"></span>**FC HBA** (7)
 </dt> <dt>
 
 <span id="iSCSI_HBA"></span><span id="iscsi_hba"></span><span id="ISCSI_HBA"></span>**iSCSI-HBA** (8)
@@ -765,13 +765,13 @@ Der Typ der Ressource, die diese Zuordnungs Einstellung darstellt. Diese Eigensc
 <span id="Ethernet_Adapter"></span><span id="ethernet_adapter"></span><span id="ETHERNET_ADAPTER"></span>**Ethernet-Adapter** (10)
 </dt> <dt>
 
-<span id="Other_Network_Adapter"></span><span id="other_network_adapter"></span><span id="OTHER_NETWORK_ADAPTER"></span>**Anderer Netzwerk Adapter** (11)
+<span id="Other_Network_Adapter"></span><span id="other_network_adapter"></span><span id="OTHER_NETWORK_ADAPTER"></span>**Anderer Netzwerkadapter** (11)
 </dt> <dt>
 
-<span id="I_O_Slot"></span><span id="i_o_slot"></span><span id="I_O_SLOT"></span>E **/a-Slot** (12)
+<span id="I_O_Slot"></span><span id="i_o_slot"></span><span id="I_O_SLOT"></span>**E/A-Slot** (12)
 </dt> <dt>
 
-<span id="I_O_Device"></span><span id="i_o_device"></span><span id="I_O_DEVICE"></span>E **/a-Gerät** (13)
+<span id="I_O_Device"></span><span id="i_o_device"></span><span id="I_O_DEVICE"></span>**E/A-Gerät** (13)
 </dt> <dt>
 
 <span id="Diskette_Drive"></span><span id="diskette_drive"></span><span id="DISKETTE_DRIVE"></span>**Diskettenlaufwerk** (14)
@@ -783,22 +783,22 @@ Der Typ der Ressource, die diese Zuordnungs Einstellung darstellt. Diese Eigensc
 <span id="DVD_drive"></span><span id="dvd_drive"></span><span id="DVD_DRIVE"></span>**DVD-Laufwerk** (16)
 </dt> <dt>
 
-<span id="Disk_Drive"></span><span id="disk_drive"></span><span id="DISK_DRIVE"></span>**Laufwerk (17** )
+<span id="Disk_Drive"></span><span id="disk_drive"></span><span id="DISK_DRIVE"></span>**Laufwerk** (17)
 </dt> <dt>
 
 <span id="Tape_Drive"></span><span id="tape_drive"></span><span id="TAPE_DRIVE"></span>**Bandlaufwerk** (18)
 </dt> <dt>
 
-<span id="Storage_Extent"></span><span id="storage_extent"></span><span id="STORAGE_EXTENT"></span>**Speicher** Block (19)
+<span id="Storage_Extent"></span><span id="storage_extent"></span><span id="STORAGE_EXTENT"></span>**Storage Extent** (19)
 </dt> <dt>
 
-<span id="Other_Storage_Device"></span><span id="other_storage_device"></span><span id="OTHER_STORAGE_DEVICE"></span>**Anderes Speichergerät** (20)
+<span id="Other_Storage_Device"></span><span id="other_storage_device"></span><span id="OTHER_STORAGE_DEVICE"></span>**Other Storage Device** (20)
 </dt> <dt>
 
-<span id="Serial_port"></span><span id="serial_port"></span><span id="SERIAL_PORT"></span>**Seriellen Anschluss** (21)
+<span id="Serial_port"></span><span id="serial_port"></span><span id="SERIAL_PORT"></span>**Serieller Anschluss** (21)
 </dt> <dt>
 
-<span id="Parallel_port"></span><span id="parallel_port"></span><span id="PARALLEL_PORT"></span>**Paralleler Anschluss** (22)
+<span id="Parallel_port"></span><span id="parallel_port"></span><span id="PARALLEL_PORT"></span>**Paralleler Port** (22)
 </dt> <dt>
 
 <span id="USB_controller"></span><span id="usb_controller"></span><span id="USB_CONTROLLER"></span>**USB-Controller** (23)
@@ -807,37 +807,37 @@ Der Typ der Ressource, die diese Zuordnungs Einstellung darstellt. Diese Eigensc
 <span id="Graphics_controller"></span><span id="graphics_controller"></span><span id="GRAPHICS_CONTROLLER"></span>**Grafikcontroller** (24)
 </dt> <dt>
 
-<span id="IEEE_1394_controller"></span><span id="ieee_1394_controller"></span><span id="IEEE_1394_CONTROLLER"></span>**IEEE 1394-Controller** (25)
+<span id="IEEE_1394_controller"></span><span id="ieee_1394_controller"></span><span id="IEEE_1394_CONTROLLER"></span>**IEEE 1394 Controller** (25)
 </dt> <dt>
 
-<span id="Partitionable_Unit"></span><span id="partitionable_unit"></span><span id="PARTITIONABLE_UNIT"></span>**Partitionier Bare Einheit** (26)
+<span id="Partitionable_Unit"></span><span id="partitionable_unit"></span><span id="PARTITIONABLE_UNIT"></span>**Partitionierbare Einheit** (26)
 </dt> <dt>
 
-<span id="Base_Partitionable_Unit"></span><span id="base_partitionable_unit"></span><span id="BASE_PARTITIONABLE_UNIT"></span>**Partitionier bare Basiseinheit** (27)
+<span id="Base_Partitionable_Unit"></span><span id="base_partitionable_unit"></span><span id="BASE_PARTITIONABLE_UNIT"></span>**Partitionierbare Basiseinheit** (27)
 </dt> <dt>
 
-<span id="Power_Supply"></span><span id="power_supply"></span><span id="POWER_SUPPLY"></span>**Netzteil** (28)
+<span id="Power_Supply"></span><span id="power_supply"></span><span id="POWER_SUPPLY"></span>**Stromversorgung** (28)
 </dt> <dt>
 
-<span id="Cooling_Device"></span><span id="cooling_device"></span><span id="COOLING_DEVICE"></span>**Kühl Gerät** (29)
+<span id="Cooling_Device"></span><span id="cooling_device"></span><span id="COOLING_DEVICE"></span>**Kühlgerät** (29)
 </dt> <dt>
 
 <span id="Ethernet_Switch_Port"></span><span id="ethernet_switch_port"></span><span id="ETHERNET_SWITCH_PORT"></span>**Ethernet-Switchport** (30)
 </dt> <dt>
 
-<span id="Logical_Disk"></span><span id="logical_disk"></span><span id="LOGICAL_DISK"></span>**Logischer** Datenträger (31)
+<span id="Logical_Disk"></span><span id="logical_disk"></span><span id="LOGICAL_DISK"></span>**Logischer Datenträger** (31)
 </dt> <dt>
 
-<span id="Storage_Volume"></span><span id="storage_volume"></span><span id="STORAGE_VOLUME"></span>**Speicher Volume** (32)
+<span id="Storage_Volume"></span><span id="storage_volume"></span><span id="STORAGE_VOLUME"></span>**Storage Volume** (32)
 </dt> <dt>
 
-<span id="Ethernet_connection"></span><span id="ethernet_connection"></span><span id="ETHERNET_CONNECTION"></span>**Ethernet-Verbindung** (33)
+<span id="Ethernet_connection"></span><span id="ethernet_connection"></span><span id="ETHERNET_CONNECTION"></span>**Ethernetverbindung** (33)
 </dt> <dt>
 
 <span id="DMTF_reserved"></span><span id="dmtf_reserved"></span><span id="DMTF_RESERVED"></span>**DMTF reserviert** (30 32767)
 </dt> <dt>
 
-<span id="Vendor_Reserved"></span><span id="vendor_reserved"></span><span id="VENDOR_RESERVED"></span>**Anbieter reserviert** (32768 65535)
+<span id="Vendor_Reserved"></span><span id="vendor_reserved"></span><span id="VENDOR_RESERVED"></span>**Reservierter Anbieter** (32768 65535)
 </dt> </dl>
 
 </dd> <dt>
@@ -845,13 +845,13 @@ Der Typ der Ressource, die diese Zuordnungs Einstellung darstellt. Diese Eigensc
 **SnapshotId**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Eine GUID, die angibt, welche Momentaufnahme in der VHD-Satz Datei angefügt werden soll.
+Eine GUID, die darstellt, welche Momentaufnahme in der VHD-Set-Datei angefügt werden soll.
 
 > [!Note]  
 > In Windows 10 hinzugefügt.
@@ -860,16 +860,16 @@ Eine GUID, die angibt, welche Momentaufnahme in der VHD-Satz Datei angefügt wer
 
 </dd> <dt>
 
-**Storageqospolicyid**
+**StorageQoSPolicyID**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Gibt den eindeutigen Bezeichner der Speicher-QoS-Richtlinie an, die auf diesen virtuellen Speicherbereich angewendet werden soll.
+Gibt den eindeutigen Bezeichner der Storage QoS-Richtlinie an, die auf diesen virtuellen Speicherumfang angewendet werden soll.
 
 > [!Note]  
 > In Windows 10 hinzugefügt.
@@ -881,33 +881,33 @@ Gibt den eindeutigen Bezeichner der Speicher-QoS-Richtlinie an, die auf diesen v
 **VirtualQuantity**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt64**
+Datentyp: **uint64**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Die Anzahl der Blöcke, die dem Consumer angezeigt werden. Die Blockgröße wird von der **virtualresourceblocksize** -Eigenschaft angegeben. Diese Eigenschaft wird von [**CIM \_ resourcezucationsettingdata**](/previous-versions/windows/desktop/clushyperv/cim-resourceallocationsettingdata)geerbt.
+Die Anzahl der Blöcke, die dem Consumer angezeigt werden. Die Blockgröße wird von der **VirtualResourceBlockSize-Eigenschaft** angegeben. Diese Eigenschaft wird von [**CIM \_ ResourceAllocationSettingData**](/previous-versions/windows/desktop/clushyperv/cim-resourceallocationsettingdata)geerbt.
 
 </dd> <dt>
 
-**Virtualquantityunits**
+**VirtualQuantityUnits**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Gibt die Einheiten an, die von der **virtualmenge** -Eigenschaft verwendet werden. Diese Eigenschaft wird von **CIM \_ storagezugecationsettingdata** geerbt.
+Gibt die von der **VirtualQuantity-Eigenschaft verwendeten Einheiten** an. Diese Eigenschaft wird von **CIM \_ StorageAllocationSettingData geerbt.**
 
 
 
 | Wert                                                                                                | Bedeutung                                                                                    |
 |------------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------|
-| <dl> <dt>"count (Block fester Größe)"</dt> </dl> | Die festgelegte Blockgröße ist in der **virtualresourceblocksize** -Eigenschaft enthalten.<br/> |
-| <dl> <dt>Hobby</dt> </dl>                    | Die **virtualmenge** -Eigenschaft wird in Bytes gemessen.<br/>                          |
+| <dl> <dt>"count(Block mit fester Größe)"</dt> </dl> | Die feste Blockgröße ist in der **VirtualResourceBlockSize-Eigenschaft** enthalten.<br/> |
+| <dl> <dt>"byte"</dt> </dl>                    | Die **VirtualQuantity-Eigenschaft** wird in Bytes gemessen.<br/>                          |
 
 
 
@@ -915,50 +915,50 @@ Gibt die Einheiten an, die von der **virtualmenge** -Eigenschaft verwendet werde
 
 </dd> <dt>
 
-**Virtualresourceblocksize**
+**VirtualResourceBlockSize**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt64**
+Datentyp: **uint64**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Die Größe (in Bytes) der Blöcke, die dem Consumer als Ergebnis dieser Speicherressourcen Zuordnung oder Speicherressourcen Zuordnungs Anforderung angezeigt werden. Wenn die Blockgröße variabel ist, wird die maximale Blockgröße in Bytes angegeben. Wenn die Blockgröße unbekannt ist oder ein Block Konzept nicht zutrifft, wird der Wert 1 verwendet. Diese Eigenschaft wird von **CIM \_ storagezugecationsettingdata** geerbt.
+Die Größe der Blöcke in Bytes, die dem Consumer als Ergebnis dieser Speicherressourcenzuordnungs- oder Speicherressourcenzuordnungsanforderung angezeigt werden. Wenn die Blockgröße variabel ist, wird die maximale Blockgröße in Bytes angegeben. Wenn die Blockgröße unbekannt ist oder kein Blockkonzept gilt, wird der Wert 1 verwendet. Diese Eigenschaft wird von **CIM \_ StorageAllocationSettingData geerbt.**
 
 </dd> <dt>
 
 **Weight**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt32**
+Datentyp: **uint32**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**override**](/windows/desktop/WmiSdk/standard-qualifiers) ("Weight"), [**MinValue**](/windows/desktop/WmiSdk/standard-qualifiers) (1), [**MaxValue**](/windows/desktop/WmiSdk/standard-qualifiers) (10000)
+Qualifizierer: [**Außerkraftsetzung**](/windows/desktop/WmiSdk/standard-qualifiers) ("Gewichtung"), [**MinValue**](/windows/desktop/WmiSdk/standard-qualifiers) (1), [**MaxValue**](/windows/desktop/WmiSdk/standard-qualifiers) (10000)
 </dt> </dl>
 
-Gibt eine relative Priorität für diese Zuordnung in Bezug auf andere Zuordnungen aus demselben Ressourcenpool an. Diese Eigenschaft hat keine Maßeinheit und ist nur im Vergleich zu anderen Zuordnungs-vying für dieselben Host Ressourcen relevant. Diese Eigenschaft wird von [**CIM \_ resourcezucationsettingdata**](/previous-versions/windows/desktop/clushyperv/cim-resourceallocationsettingdata)geerbt.
+Gibt eine relative Priorität für diese Zuordnung in Bezug auf andere Zuordnungen aus demselben Ressourcenpool an. Diese Eigenschaft verfügt über keine Maßeinheit und ist nur relevant im Vergleich zu anderen Zuordnungen, die für die gleichen Hostressourcen vying. Diese Eigenschaft wird von [**CIM \_ ResourceAllocationSettingData geerbt.**](/previous-versions/windows/desktop/clushyperv/cim-resourceallocationsettingdata)
 
 Bereich: 1 10000
 
 </dd> <dt>
 
-**Write-hardeningmethod**
+**WriteHardeningMethod**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt16**
+Datentyp: **uint16**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Gibt an, welche Schreib Härtungs Methode von der Festplatte unterstützt wird.
+Gibt an, welche Schreibhärtemethode vom Datenträger unterstützt wird.
 
 > [!Note]  
-> Diese Eigenschaft wurde in Windows 10, Version 1703, hinzugefügt.
+> Diese Eigenschaft wurde in Windows 10 Version 1703 hinzugefügt.
 
  
 
@@ -973,21 +973,21 @@ Gibt an, welche Schreib Härtungs Methode von der Festplatte unterstützt wird.
 
 <span id="WriteCacheEnabled"></span><span id="writecacheenabled"></span><span id="WRITECACHEENABLED"></span>
 
-**Schreibzugriff aktiviert** (1)
+**WriteCacheEnabled** (1)
 
 
 </dt> <dd></dd> <dt>
 
 <span id="WriteCacheandFUAEnabled"></span><span id="writecacheandfuaenabled"></span><span id="WRITECACHEANDFUAENABLED"></span>
 
-**Schreibaktivierte Schreib-andfuaaktivierte** (2)
+**WriteCacheandFUAEnabled** (2)
 
 
 </dt> <dd></dd> <dt>
 
 <span id="WriteCacheDisabled"></span><span id="writecachedisabled"></span><span id="WRITECACHEDISABLED"></span>
 
-**Schreibwaredeaktiviert** (3)
+**WriteCacheDisabled** (3)
 
 
 </dt> <dd></dd> </dl>
@@ -1000,10 +1000,10 @@ Gibt an, welche Schreib Härtungs Methode von der Festplatte unterstützt wird.
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows 8 \[ -Desktop-Apps\]<br/>                                                              |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2012 \[ -Desktop-Apps\]<br/>                                                    |
-| Namespace<br/>                | \\Stammvirtualisierung \\ v2<br/>                                                                     |
-| MOF<br/>                      | <dl> <dt>Windowsvirtualization. v2. MOF</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | \[Windows 8 Nur Desktop-Apps\]<br/>                                                              |
+| Unterstützte Mindestversion (Server)<br/> | \[Windows Server 2012 Nur Desktop-Apps\]<br/>                                                    |
+| Namespace<br/>                | Root \\ Virtualization \\ V2<br/>                                                                     |
+| MOF<br/>                      | <dl> <dt>WindowsVirtualization.V2.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Vmms.exe</dt> </dl>                     |
 
 

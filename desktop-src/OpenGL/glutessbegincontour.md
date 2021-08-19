@@ -1,6 +1,6 @@
 ---
 title: gluTessBeginContour-Funktion (Glu.h)
-description: Die Funktionen gluTessBeginContour und gluTessEndContour begrenzen eine Konturbeschreibung. | gluTessBeginContour-Funktion (Glu.h)
+description: Die Funktionen gluTessBeginContour und gluTessEndContour begrenzen eine Beschreibung der Kontur. | gluTessBeginContour-Funktion (Glu.h)
 ms.assetid: 4008ce9c-86e7-4b24-9bda-5915f469596a
 keywords:
 - gluTessBeginContour-Funktion OpenGL
@@ -23,7 +23,7 @@ ms.locfileid: "118937471"
 ---
 # <a name="glutessbegincontour-function"></a>gluTessBeginContour-Funktion
 
-Die **Funktionen gluTessBeginContour** und [**gluTessEndContour**](glutessendcontour.md) begrenzen eine Konturbeschreibung.
+Die Funktionen **gluTessBeginContour** und [**gluTessEndContour**](glutessendcontour.md) begrenzen eine Beschreibung der Kontur.
 
 ## <a name="syntax"></a>Syntax
 
@@ -53,7 +53,7 @@ Diese Funktion gibt keinen Wert zurück.
 
 ## <a name="remarks"></a>Hinweise
 
-Die **Funktionen gluTessBeginContour** und [**gluTessEndPolygon**](glutessendpolygon.md) begrenzen die Definition einer Polygonkontur. In **jedem gluTessBeginContour-gluTessEndPolygon-Paar** können null oder mehr Aufrufe von /  [**gluTessVertex verwendet werden.**](glutessvertex.md) Die Scheitelpunkte geben eine geschlossene Kontur an (der letzte Scheitelpunkt jeder Kontur wird automatisch mit der ersten kontur verknüpft). Sie können **gluTessBeginContour nur zwischen** [**gluTessBeginPolygon**](glutessbeginpolygon.md) und **gluTessEndPolygon aufrufen.**
+Die Funktionen **gluTessBeginContour** und [**gluTessEndPolygon**](glutessendpolygon.md) begrenzen die Definition einer Polygonkontur. Innerhalb jedes **gluTessBeginContour** / **gluTessEndPolygon-Paars** kann es null oder mehr Aufrufe von [**gluTessVertex**](glutessvertex.md)geben. Die Scheitelpunkte geben eine geschlossene Kontur an (der letzte Scheitelpunkt jeder Kontur wird automatisch mit dem ersten verknüpft). Sie können **gluTessBeginContour** nur zwischen [**gluTessBeginPolygon**](glutessbeginpolygon.md) und **gluTessEndPolygon** aufrufen.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -69,7 +69,7 @@ Die **Funktionen gluTessBeginContour** und [**gluTessEndPolygon**](glutessendpol
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 

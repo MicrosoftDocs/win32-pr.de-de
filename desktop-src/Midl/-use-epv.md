@@ -1,9 +1,9 @@
 ---
 title: /use_epv Schalter
-description: Der/verwenden Sie " \_ EPV-Switch leitet den Mittelwert Compiler zum Generieren von Server-Stub-Code, der die Server Anwendungs Routine über einen Einstiegspunkt Vektor (EPV) aufruft, anstelle eines statischen Aufrufs. Die Verwendung dieses Attributs wird nicht empfohlen.
+description: Der Schalter /use epv leitet den MIDL-Compiler an, Serverstubcode zu generieren, der die Serveranwendungsroutine über einen Einstiegspunktvektor (epv) anstatt durch einen statischen \_ Aufruf aufruft. Die Verwendung dieses Attributs wird nicht empfohlen.
 ms.assetid: 2853d836-ded3-412a-916b-1143968123a2
 keywords:
-- /use_epv-Schalter-Mittel l
+- /use_epv MIDL-Switch
 topic_type:
 - apiref
 api_name:
@@ -12,49 +12,49 @@ api_type:
 - NA
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: ec73b5cb9833c15a77c96a784e1ded88d266f9a6
-ms.sourcegitcommit: ebd3ce6908ff865f1ef66f2fc96769be0aad82e1
+ms.openlocfilehash: 614abaf4c124aa0a6e1ca5f7da347ab4a9a2264e174c91734e6a75b188500a3c
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/19/2020
-ms.locfileid: "106341926"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119014058"
 ---
-# <a name="use_epv-switch"></a>/Verwenden Sie " \_ EPV-Switch
+# <a name="use_epv-switch"></a>/use \_ epv-Schalter
 
-Der **/verwenden Sie " \_ EPV** -Switch leitet den Mittelwert Compiler zum Generieren von Server-Stub-Code, der die Server Anwendungs Routine über einen Einstiegspunkt Vektor (EPV) aufruft, anstelle eines statischen Aufrufs. Die Verwendung dieses Attributs wird nicht empfohlen.
+Der **Schalter /use \_ epv** leitet den MIDL-Compiler an, Serverstubcode zu generieren, der die Serveranwendungsroutine über einen Einstiegspunktvektor (epv) anstatt durch einen statischen Aufruf aufruft. Die Verwendung dieses Attributs wird nicht empfohlen.
 
 ``` syntax
 midl /use_epv
 ```
 
-## <a name="switch-options"></a>Optionen wechseln
+## <a name="switch-options"></a>Switch-Optionen
 
-Dieser Switch hat keine Parameter.
+Dieser Schalter verfügt über keine Parameter.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Anwendungen erfordern in der Regel eine statische Verknüpfung mit der Server Anwendungs Routine. Der mittlerer l-Compiler generiert einen solchen-Aufrufwert standardmäßig. Wenn eine Anwendung jedoch erfordert, dass der Serverstub die Server Anwendungs Routine mithilfe von EPV aufruft, muss der **/verwenden Sie " \_ EPV** -Switch angegeben werden. Wenn der **/verwenden Sie " \_ EPV** -Schalter angegeben wird, generiert der-compilercompiler einen EPV-Standardwert. Dieser Standard-EPV wird dann verwendet, wenn die Anwendung keinen anderen EPV über den [**RpcServerRegisterIf**](/windows/desktop/api/rpcdce/nf-rpcdce-rpcserverregisterif) -Befehl registriert.
+In der Regel erfordern Anwendungen eine statische Verknüpfung mit der Serveranwendungsroutine. Der MIDL-Compiler generiert standardmäßig einen solchen Aufruf. Wenn eine Anwendung jedoch erfordert, dass der Serverstub die Serveranwendungsroutine mithilfe von epv aufruft, muss der **Schalter /use \_ epv** angegeben werden. Wenn der **Schalter /use \_ epv** angegeben wird, generiert der MIDL-Compiler eine Standard-epv. Diese epv-Standardeinstellung wird dann verwendet, wenn die Anwendung keine weitere epv über den [**RpcServerRegisterIf-Aufruf**](/windows/desktop/api/rpcdce/nf-rpcdce-rpcserverregisterif) registriert.
 
 ## <a name="examples"></a>Beispiele
 
-**Mittel l/verwenden Sie " \_ EPV** *filename * * *. idl**
+**midl /use \_ epv** *filename**.idl**
 
 ## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 
-[Allgemeine Syntax der Mittell-Befehlszeile](general-midl-command-line-syntax.md)
+[Allgemeine MIDL-Befehlszeilensyntax](general-midl-command-line-syntax.md)
 </dt> <dt>
 
-[Schnittstellen Definitionsdatei (IDL)](interface-definition-idl-file.md)
+[IDL-Datei (Interface Definition)](interface-definition-idl-file.md)
 </dt> <dt>
 
-[**/No \_ Standard- \_ EPV**](-no-default-epv.md)
+[**/no \_ default \_ epv**](-no-default-epv.md)
 </dt> <dt>
 
 [**RpcServerRegisterIf**](/windows/desktop/api/rpcdce/nf-rpcdce-rpcserverregisterif)
 </dt> </dl>
 
- 
+ 
 
- 
+ 

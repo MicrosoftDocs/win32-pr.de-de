@@ -1,61 +1,61 @@
 ---
-description: In diesem Thema wird erläutert, wie neue Dateitypen erstellt werden und wie Sie Ihre APP mit dem Dateityp und anderen klar definierten Dateitypen verknüpfen.
+description: In diesem Thema wird erläutert, wie Sie neue Dateitypen erstellen und Ihre App Ihrem Dateityp und anderen klar definierten Dateitypen zuordnen.
 ms.assetid: 055648cd-46ce-4e61-80b2-bcf1d1823e20
 title: Dateitypen
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: d697c42626c6e1ab3e0b5cc0b88bd065523d53a1
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 541e6068237b504ea8c9faf06e2083986ed5bb48a7c16dabb82e5096569d9f17
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104979744"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119094205"
 ---
 # <a name="file-types"></a>Dateitypen
 
-In diesem Thema wird erläutert, wie neue Dateitypen erstellt werden und wie Sie Ihre APP mit dem Dateityp und anderen klar definierten Dateitypen verknüpfen. Dateien mit einer gemeinsamen Dateinamenerweiterung (doc, HTML usw.) weisen denselben *Typ* auf. Wenn Sie z. b. einen neuen Text-Editor erstellen, können Sie den vorhandenen txt-Dateityp verwenden. In anderen Fällen müssen Sie möglicherweise einen neuen Dateityp erstellen.
+In diesem Thema wird erläutert, wie Sie neue Dateitypen erstellen und Ihre App Ihrem Dateityp und anderen klar definierten Dateitypen zuordnen. Dateien mit einer gemeinsamen Dateinamenerweiterung (.doc, .html usw.) haben denselben *Typ.* Wenn Sie z. B. einen neuen Text-Editor erstellen, können Sie den vorhandenen .txt Dateityp verwenden. In anderen Fällen müssen Sie möglicherweise einen neuen Dateityp erstellen.
 
 Dieses Thema ist wie folgt organisiert:
 
 -   [Öffentliche und private Dateitypen](#public-and-private-file-types)
 -   [Registrieren eines Dateityps](#registering-a-file-type)
-    -   [Festlegen optionaler Unterschlüssel und Dateityp Erweiterungs Attribute](#setting-optional-subkeys-and-file-type-extension-attributes)
-    -   [Löschen von Registrierungsinformationen während der deinstalstallation](#deleting-registry-information-during-uninstallation)
--   [Dateitypen, die offene Metadaten unterstützen](#file-types-that-support-open-metadata)
+    -   [Festlegen optionaler Unterschlüssel und Dateierweiterungsattribute](#setting-optional-subkeys-and-file-type-extension-attributes)
+    -   [Löschen von Registrierungsinformationen während der Deinstallation](#deleting-registry-information-during-uninstallation)
+-   [Dateitypen, die geöffnete Metadaten unterstützen](#file-types-that-support-open-metadata)
 -   [Zugehörige Themen](#related-topics)
 
 Weitere Informationen finden Sie in den folgenden Themen:
 
--   [Vorgehensweise beim Auswählen einer Dateityp Erweiterung](how-to-choose-a-file-type-extension.md)
--   [Definieren von Dateityp Attributen](./how-to-define-file-type-attributes.md)
--   [Einschließen einer Anwendung im Dialog Feld "Öffnen mit"](how-to-include-an-application-on-the-open-with-dialog-box.md)
--   [Ausschließen einer Anwendung aus dem Dialog Feld "Öffnen mit" für nicht zugeordnete Dateitypen](how-to-exclude-an-application-from-the-open-with-dialog-box-for-unassociated-file-types.md)
+-   [Auswählen einer Dateierweiterung](how-to-choose-a-file-type-extension.md)
+-   [Definieren von Dateitypattributen](./how-to-define-file-type-attributes.md)
+-   [Einschließen einer Anwendung in das Dialogfeld "Öffnen mit"](how-to-include-an-application-on-the-open-with-dialog-box.md)
+-   [Ausschließen einer Anwendung aus dem dialogfeld "Öffnen mit" für nicht zugeordnete Dateitypen](how-to-exclude-an-application-from-the-open-with-dialog-box-for-unassociated-file-types.md)
 
 ## <a name="public-and-private-file-types"></a>Öffentliche und private Dateitypen
 
-Öffentliche Dateitypen werden auch als beliebte oder strittige Typen bezeichnet, da konkurrierende Anwendungen diesen Dateitypen zugeordnet werden können. Zu den Merkmalen der öffentlichen Dateitypen gehören:
+Öffentliche Dateitypen werden auch als beliebte oder umständliche Typen bezeichnet, da konkurrierende Anwendungen diesen Dateitypen möglicherweise zugeordnet werden möchten. Zu den Merkmalen öffentlicher Dateitypen gehören:
 
--   Sie werden in der Regel in Standard Textteilen definiert und/oder werden von ihren definierenden Organisationen als Austauschformate herauf gestuft.
+-   Sie werden in der Regel durch Standardkörper definiert und/oder von ihren definierenden Organisationen als Austauschformate heraufgestuft.
 -   Sie werden häufig für verschiedene Zwecke zwischen Computern und Benutzern ausgetauscht.
 -   Sie müssen auf vielen verschiedenen Plattformen unterstützt werden.
 -   Anwendungen von mehreren Anbietern werden diese wahrscheinlich verarbeiten.
 
-Einige Beispiele für Dateitypen, die als öffentlich angesehen werden, sind die Bild Dateitypen PNG, GIF, JPG und BMP sowie die Audiotypen. wav,. MP3 und. au.
+Einige Beispiele für Dateitypen, die als öffentlich betrachtet werden, sind die Bilddateitypen .png, .gif, .jpg und .bmp sowie die Audiotypen WAV, .mp3 und AU.
 
-Im Gegensatz zu öffentlichen Dateitypen verfügen private oder proprietäre Dateitypen in der Regel über ein Format, das nur von einer Anwendung oder einem Anbieter implementiert und verstanden wird. Folglich sind private Dateitypen in der Regel nicht anfällig für Konflikte zwischen Anwendungen. Einige Dateitypen können als private Dateitypen gestartet werden, werden jedoch später zu öffentlichen Dateitypen.
+Im Gegensatz zu öffentlichen Dateitypen weisen private oder proprietäre Dateitypen in der Regel ein Format auf, das nur von einer Anwendung oder einem Anbieter implementiert und verstanden wird. Daher sind private Dateitypen in der Regel nicht anfällig für Konflikte zwischen Anwendungen. Einige Dateitypen können als private Dateitypen beginnen, aber später zu öffentlichen Dateitypen werden.
 
 > [!Note]  
-> Windows unterscheidet nicht zwischen öffentlichen und privaten Dateitypen. Der Unterschied ist nur wichtig, um Entscheidungen über die Wahl der Dateityp Registrierung zu treffen.
+> Windows unterscheidet nicht zwischen öffentlichen und privaten Dateitypen. Die Unterscheidung ist nur relevant, wenn Sie Entscheidungen zur Wahl der Dateitypregistrierung treffen.
 
  
 
 ## <a name="registering-a-file-type"></a>Registrieren eines Dateityps
 
-Um den Dateityp einer vorhandenen Anwendung zuzuordnen, suchen Sie die Anwendungs ProgID in der Registrierung. Um den Dateityp einer neuen Anwendung zuzuordnen, definieren Sie eine ProgID für Ihre Anwendung. Weitere Informationen zum Definieren einer neuen ProgID [finden Sie](fa-progids.md)Unterprogramm gesteuerte Bezeichner.
+Um den Dateityp einer vorhandenen Anwendung zuzuordnen, suchen Sie die ProgID der Anwendung in der Registrierung. Um den Dateityp einer neuen Anwendung zuzuordnen, definieren Sie eine ProgID für Ihre Anwendung. Informationen zum Definieren einer neuen ProgID finden Sie unter [Programmgesteuerte Bezeichner.](fa-progids.md)
 
-Die Unterschlüssel der Dateinamenerweiterung weisen die folgende allgemeine Form auf: *Erweiterung* = *ProgID*. Die Unterschlüssel der Dateinamenerweiterung werden in der Stamm Struktur der **HKEY- \_ Klassen \_** gespeichert.
+Unterschlüssel für Dateinamenerweiterungen weisen die folgende allgemeine Form auf: = *Erweiterung ProgID*. Unterschlüssel der Dateinamenerweiterung werden in der **\_ \_ Stammstruktur HKEY CLASSES** gespeichert.
 
-Beim Erstellen von Dateityp unter Schlüsseln in der Registrierung ist es wichtig, den führenden Zeitraum (.) einzubeziehen. Wenn Sie z. b. möchten, dass ein Dateityp mit der kurzen Erweiterung. MYP und der Long-Erweiterung. MYP-File mit einer Anwendung namens myprogram geöffnet wird, verwenden Sie die folgende Syntax:
+Es ist wichtig, den führenden Punkt (.) beim Erstellen von Dateitypunterschlüsseln in die Registrierung einzubeziehen. Wenn Sie beispielsweise einen Dateityp mit der kurzen Erweiterung .myp und der langen Erweiterung .myp-file mit einer Anwendung namens MyProgram öffnen möchten, verwenden Sie die folgende Syntax:
 
 ```
 HKEY_CLASSES_ROOT
@@ -67,29 +67,29 @@ HKEY_CLASSES_ROOT
       (Default) = MyProgram Application
 ```
 
-Wie im vorherigen Beispiel gezeigt, sollten Sie, wenn Sie auch eine kurze Dateinamenerweiterung (. MYP) registrieren, einen Unterschlüssel für die Long-Erweiterung (MYP-Datei) erstellen. Weitere Informationen finden Sie unter [Dateityp Handler](fa-file-extensions.md).
+Wie im vorherigen Beispiel gezeigt, sollten Sie auch einen Unterschlüssel für die lange Erweiterung (.myp-file) erstellen, wenn Sie auch eine kurze Dateinamenerweiterung (.myp) registrieren. Weitere Informationen finden Sie unter [Dateityphandler.](fa-file-extensions.md)
 
-### <a name="setting-optional-subkeys-and-file-type-extension-attributes"></a>Festlegen optionaler Unterschlüssel und Dateityp Erweiterungs Attribute
+### <a name="setting-optional-subkeys-and-file-type-extension-attributes"></a>Festlegen optionaler Unterschlüssel und Dateierweiterungsattribute
 
-Dateityp-Erweiterungs Einträge in der Registrierung verfügen über mehrere optionale Unterschlüssel und Attribute.
+Dateityperweiterungseinträge in der Registrierung verfügen über mehrere optionale Unterschlüssel und Attribute.
 
-Die von Dateizuordnungen verwendeten Dateityp-Erweiterungs Einträge werden in der folgenden Tabelle beschrieben. Alle Werte sind vom Typ " **reg \_ SZ** ".
+Die Von Dateizuordnungen verwendeten Dateityperweiterungseinträge werden in der folgenden Tabelle beschrieben. Alle Werte haben den **REG \_ SZ-Typ.**
 
 
 
-| Registrierungseintrag  | Action                                                                                                                                                                                                                                                                                                                             |
+| Registrierungseintrag  | Aktion                                                                                                                                                                                                                                                                                                                             |
 |-----------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Standard         | Legen Sie den Standardwert des Erweiterungs unter Schlüssels auf die ProgID fest, mit der er verknüpft ist.                                                                                                                                                                                                                                                 |
-| Inhaltstyp    | Legen Sie den Wert Inhaltstyp auf den MIME-Inhaltstyp des Dateityps fest.                                                                                                                                                                                                                                                                   |
-| OpenWithList    | Darf nicht verwendet werden. Dieser Unterschlüssel enthält mindestens einen Anwendungs Unterschlüssel für Anwendungen, die im Dialogfeld **Öffnen mit** für den Dateityp angezeigt werden, und ist nur für exe-Anwendungen auf Betriebssystemen vor Windows XP vorgesehen. Verwenden Sie stattdessen OpenWithProgIds.                                                            |
-| OpenWithProgIds | Dieser Unterschlüssel enthält eine Liste alternativer ProgIDs für diesen Dateityp. Die Programme für diese ProgIDs werden im Menü **Öffnen mit** angezeigt und sind als Standard-Windows Store-Apps für den Dateityp verfügbar. Wenn eine Anwendung diesen Dateityp durch Ändern des Standardwerts übernimmt, sollte dieser Liste auch ein Eintrag hinzugefügt werden. |
-| Wahrnehmungstyp   | Legen Sie den Wert von "wahrnehmvedtype" auf den "wahrnehmvedtype" fest, zu dem die Datei gehört, falls vorhanden. Diese Zeichenfolge wird von Windows-Versionen vor Windows Vista nicht verwendet. Weitere Informationen finden Sie unter [wahrgenommene Typen und Anwendungs Registrierung](fa-perceivedtypes.md).                                                                           |
+| Standard         | Legen Sie den Standardwert des Erweiterungsunterschlüssels auf die ProgID fest, mit der er verknüpft ist.                                                                                                                                                                                                                                                 |
+| Inhaltstyp    | Legen Sie den Wert für Inhaltstyp auf den MIME-Inhaltstyp des Dateityps fest.                                                                                                                                                                                                                                                                   |
+| OpenWithList    | Darf nicht verwendet werden. Dieser Unterschlüssel enthält einen oder mehrere Anwendungsunterschlüssel für Anwendungen, die im Dialogfeldeintrag **Öffnen mit** für den Dateityp angezeigt werden und nur für .exe Anwendungen unter Betriebssystemen vor Windows XP vorgesehen sind. Verwenden Sie stattdessen OpenWithProgIds.                                                            |
+| OpenWithProgIds | Dieser Unterschlüssel enthält eine Liste alternativer ProgIDs für diesen Dateityp. Die Programme für diese ProgIDs werden im **menü Öffnen mit** angezeigt und sind standardmäßig Windows Store Apps für den Dateityp verfügbar. Wenn eine Anwendung diesen Dateityp übernimmt, indem sie den Standardwert ändert, sollte sie dieser Liste auch einen Eintrag hinzufügen. |
+| PerceivedType   | Legen Sie den Wert für PerceivedType auf den PerceivedType fest, zu dem die Datei gehört( falls vorhanden). Diese Zeichenfolge wird von Windows Versionen vor Windows Vista nicht verwendet. Weitere Informationen finden Sie unter [Wahrgenommene Typen und Anwendungsregistrierung.](fa-perceivedtypes.md)                                                                           |
 
 
 
  
 
-Die allgemeine Form des unter Schlüssels für die Dateinamenerweiterung lautet wie folgt. Alle Eintrags Typen haben den Typ " **reg \_ SZ** ".
+Die allgemeine Form eines Unterschlüssels für die Dateinamenerweiterung lautet wie folgt. Alle Eintragstypen haben den **REG \_ SZ-Typ.**
 
 ```
 HKEY_CLASSES_ROOT
@@ -104,13 +104,13 @@ HKEY_CLASSES_ROOT
          shellnew
 ```
 
-Wichtige Überlegungen zu Dateitypen:
+Wichtige Überlegungen zu Dateitypen sind:
 
--   Die Stamm Unterstruktur der **HKEY- \_ Klassen \_** ist eine Ansicht, die durch Zusammenführen von **aktuellen HKEY- \_ \_ Benutzer** \\ **Software** \\ **Klassen** und **HKEY- \_ \_** \\ **Software** \\ **Klassen** für lokale Computer
--   Im Allgemeinen ist der Stamm der **HKEY- \_ Klassen \_** das Lesen aus, aber nicht das Schreiben in. Weitere Informationen finden Sie im Stamm Artikel [HKEY \_ Classes \_ ](../sysinfo/hkey-classes-root-key.md) .
--   Um einen Dateityp Global auf einem bestimmten Computer zu registrieren, erstellen Sie einen Eintrag für den Dateityp im Unterschlüssel **HKEY \_ local \_ Machine** \\  \\ **Classes Software Classes** .
--   Wenn Sie eine Dateityp Registrierung nur für den aktuellen Benutzer sichtbar machen möchten, erstellen Sie im Unterschlüssel **HKEY \_ Current \_ User** \\ **Software** \\ **Classes** einen Eintrag für den Dateityp.
--   Eine Anwendung kann eine eigene Implementierung eines Verbs bereitstellen, wie z. b. "Open" oder "Play", wie im folgenden Registrierungs Beispiel dargestellt.
+-   Die **Stammstruktur HKEY \_ CLASSES \_** ist eine Sicht, die durch Zusammenführen von **HKEY CURRENT \_ \_ USER** \\ **Software** \\ **Classes** und **HKEY LOCAL \_ \_ MACHINE** \\ **Software** \\ **Classes** gebildet wird.
+-   Im Allgemeinen soll **HKEY \_ CLASSES \_ ROOT** aus gelesen, aber nicht in geschrieben werden. Weitere Informationen finden Sie im Artikel [HKEY \_ CLASSES \_ ROOT.](../sysinfo/hkey-classes-root-key.md)
+-   Um einen Dateityp global auf einem bestimmten Computer zu registrieren, erstellen Sie im Unterschlüssel **HKEY \_ LOCAL \_ MACHINE** Software Classes einen Eintrag für den \\  \\  Dateityp.
+-   Um eine Dateitypregistrierung nur für den aktuellen Benutzer sichtbar zu machen, erstellen Sie im Unterschlüssel **HKEY \_ CURRENT \_ USER** Software Classes einen Eintrag für den \\  \\  Dateityp.
+-   Eine Anwendung kann eine eigene Implementierung eines Verbs bereitstellen, z. B. "open" oder "play", wie im folgenden Registrierungsbeispiel gezeigt.
 
     ```
     HKEY_CLASSES_ROOT
@@ -120,23 +120,23 @@ Wichtige Überlegungen zu Dateitypen:
                 verb
     ```
 
-    Zu den unter Schlüsseln des Verb-unter Schlüssels gehören die Befehlszeile und die Drop Target-Methode: **Command** und **DropTarget**.
+    Unterschlüssel des Verbunterschlüssels enthalten die Befehlszeile und die Drop-Zielmethode: **command** und **DropTarget**.
 
--   Wenn Sie eine Datei Zuordnung erstellen oder ändern, ist es wichtig, das System zu benachrichtigen, dass Sie eine Änderung vorgenommen haben. Rufen Sie hierzu " [**shchangenotify**](/windows/desktop/api/shlobj_core/nf-shlobj_core-shchangenotify) " auf, und geben Sie das **shcne-Ereignis " \_ assocchanged** " an. Wenn Sie **shchangenotify** nicht aufrufen, wird die Änderung möglicherweise erst erkannt, nachdem das System neu gestartet wurde.
--   Zum Abrufen von Registrierungsinformationen bezüglich einer Datei Zuordnung verwenden Sie die [**iqueryassociations**](/windows/win32/api/shlwapi/nn-shlwapi-iqueryassociations) -Schnittstelle. Ein Szenario, in dem diese Vorgehensweise veranschaulicht wird, finden Sie unter [Beispielszenario für Datei](fa-sample-scenarios.md)Zuordnung.
+-   Wenn Sie eine Dateizuordnung erstellen oder ändern, ist es wichtig, das System zu benachrichtigen, dass Sie eine Änderung vorgenommen haben. Rufen Sie dazu [**SHChangeNotify**](/windows/desktop/api/shlobj_core/nf-shlobj_core-shchangenotify) auf, und geben Sie das **SHCNE \_ ASSOCCHANGED-Ereignis** an. Wenn Sie **SHChangeNotify** nicht aufrufen, wird die Änderung möglicherweise erst nach dem Neustart des Systems erkannt.
+-   Verwenden Sie die [**IQueryAssociations-Schnittstelle,**](/windows/win32/api/shlwapi/nn-shlwapi-iqueryassociations) um Registrierungsinformationen zu einer Dateizuordnung abzurufen. Ein Szenario, das dieses Verfahren veranschaulicht, finden Sie unter Beispielszenario für [die Dateizuordnung.](fa-sample-scenarios.md)
 
 > [!Note]  
-> Die Registrierungs Unterschlüssel **App-Pfade** und **Anwendungen** werden verwendet, um das Verhalten des Systems im Auftrag von Anwendungen zu registrieren und zu steuern. Ausführlichere Informationen zu dieser Funktion finden Sie unter [Anwendungs Registrierung](app-registration.md).
+> Sowohl die Unterschlüssel **App-Pfade** als auch **Anwendungsregistrierung** werden verwendet, um das Verhalten des Systems im Auftrag von Anwendungen zu registrieren und zu steuern. Ausführlichere Informationen zu dieser Funktion finden Sie unter [Anwendungsregistrierung.](app-registration.md)
 
  
 
-### <a name="deleting-registry-information-during-uninstallation"></a>Löschen von Registrierungsinformationen während der deinstalstallation
+### <a name="deleting-registry-information-during-uninstallation"></a>Löschen von Registrierungsinformationen während der Deinstallation
 
-Beim Deinstallieren einer Anwendung sollten die ProgIDs und die meisten anderen Registrierungsinformationen, die dieser Anwendung zugeordnet sind, im Rahmen der deinstallieren gelöscht werden. Anwendungen, die den Besitz eines Dateityps übernommen haben (indem Sie den Standardwert der **HKEY- \_ Klassen " \_ root**. Extension" des Dateityps \\  für die ProgID der Anwendung festlegen), sollten diesen Wert beim Deinstallieren nicht entfernen. Wenn die Daten für den Standardwert nicht vorhanden sind, wird vermieden, dass Sie feststellen, ob eine andere Anwendung den Besitz des Dateityps übernommen hat, und den Standardwert überschrieben haben, nachdem die ursprüngliche Anwendung installiert wurde. Windows respektiert den Standardwert nur dann, wenn die ProgID gefunden wurde, die eine registrierte ProgID enthält. Wenn die Registrierung der ProgID aufgehoben wird, wird Sie ignoriert.
+Beim Deinstallieren einer Anwendung sollten die ProgIDs und die meisten anderen Registrierungsinformationen, die dieser Anwendung zugeordnet sind, im Rahmen der Deinstallation gelöscht werden. Anwendungen, die den Besitz eines Dateityps übernommen haben (durch Festlegen des Standardwerts des **Unterschlüssels HKEY \_ CLASSES \_ ROOT**.extension des Dateityps \\  auf die ProgID der Anwendung), sollten bei der Deinstallation jedoch nicht versuchen, diesen Wert zu entfernen. Wenn Sie die Daten für den Standardwert belassen, müssen Sie nicht feststellen, ob eine andere Anwendung den Besitz des Dateityps übernommen und den Standardwert nach der Installation der ursprünglichen Anwendung überschrieben hat. Windows wird der Standardwert nur dann beachtet, wenn die ProgID eine registrierte ProgID gefunden hat. Wenn die Registrierung der ProgID aufgehoben wird, wird sie ignoriert.
 
-Beachten Sie, dass weitere Besitz Informationen für den Dateityp in der **aktuellen HKEY- \_ \_ Benutzer** Unterstruktur gespeichert werden und nur dann verwendet werden, wenn die Anwendung, auf die verwiesen wird, registriert ist. Daher müssen diese Daten beim Deinstallieren einer Anwendung nicht entfernt werden.
+Beachten Sie, dass andere Dateitypbesitzinformationen in der **HKEY \_ CURRENT \_ USER-Unterstruktur** gespeichert werden und nur verwendet werden, wenn die Anwendung registriert ist, auf die sie verweist. Daher müssen diese Daten beim Deinstallieren einer Anwendung nicht entfernt werden.
 
-Im folgenden Beispiel wird der Status der Registrierung angezeigt, bevor eine Anwendung deinstalliert wird:
+Das folgende Beispiel zeigt den Status der Registrierung, bevor eine Anwendung deinstalliert wird:
 
 ```
 HKEY_CLASSES_ROOT
@@ -149,7 +149,7 @@ HKEY_CLASSES_ROOT
                (Default) = yourapp.exe %1
 ```
 
-Im folgenden wird der Zustand der gleichen Registrierungseinträge nach der Installation der Anwendung angezeigt.
+Im Folgenden wird der Status derselben Registrierungseinträge nach der Deinstallation der Anwendung angezeigt.
 
 ```
 HKEY_CLASSES_ROOT
@@ -158,19 +158,19 @@ HKEY_CLASSES_ROOT
    YourProgID subkey removed
 ```
 
-## <a name="file-types-that-support-open-metadata"></a>Dateitypen, die offene Metadaten unterstützen
+## <a name="file-types-that-support-open-metadata"></a>Dateitypen, die geöffnete Metadaten unterstützen
 
 In Windows 7 und höher unterstützen die folgenden Dateitypen geöffnete Metadaten.
 
 
 
-| Dateityp                                                               | Dateinamen Erweiterungen                                          |
+| Dateityp                                                               | Dateinamenerweiterungen                                          |
 |-------------------------------------------------------------------------|---------------------------------------------------------------|
-| Office 2007-Dokumente                                                   | . docx,. xlsx,. pptx                                           |
-| Office 97-2003-Dokumente                                                | . doc,. xls,. ppt                                              |
-| Gespeicherte Suche                                                            | . Search-MS                                                    |
-| Windows Media-basierte Formate (Advanced Streaming Format (ASF)-Container) | WMV,. WMA                                                    |
-| MP4 (Eigenschaften Handler)                                                  | . MP4,. m4a,. m4v,. MP4V,. m4p,. M4B,. 3GP,. 3GPP,. 3gp2,. mov |
+| Office 2007-Dokumente                                                   | .docx, .xlsx, .pptx                                           |
+| dokumente Office 97-2003                                                | .doc, .xls, .ppt                                              |
+| Gespeicherte Suche                                                            | .search-ms                                                    |
+| Windows Medienbasierte Formate (ASF-Container (Advanced Streaming Format) | .wmv, .wma                                                    |
+| MP4 (Eigenschaftenhandler)                                                  | .mp4, .m4a, .m4v, .mp4v, .m4p, .m4b, .3gp, .3gpp, .3gp2, .mov |
 
 
 
@@ -180,19 +180,19 @@ In Windows 7 und höher unterstützen die folgenden Dateitypen geöffnete Metada
 
 <dl> <dt>
 
-[Anwendungs Registrierung](app-registration.md)
+[Anwendungsregistrierung](app-registration.md)
 </dt> <dt>
 
 [Funktionsweise von Dateizuordnungen](fa-how-work.md)
 </dt> <dt>
 
-[Inhaltsansicht nach Dateityp oder-Art](prophand-content-view.md)
+[Inhaltsansicht nach Dateityp oder Art](prophand-content-view.md)
 </dt> <dt>
 
-[Dateityp Überprüfung](file-type-verifier.md)
+[Dateitypüberprüfung](file-type-verifier.md)
 </dt> <dt>
 
-[Dateityp Handler](fa-file-extensions.md)
+[Dateityphandler](fa-file-extensions.md)
 </dt> <dt>
 
 [Programmgesteuerte Bezeichner](fa-progids.md)
@@ -201,7 +201,7 @@ In Windows 7 und höher unterstützen die folgenden Dateitypen geöffnete Metada
 [Wahrgenommene Typen](fa-perceivedtypes.md)
 </dt> <dt>
 
-[Zuordnungs Arrays](fa-associationarray.md)
+[Zuordnungsarrays](fa-associationarray.md)
 </dt> </dl>
 
  

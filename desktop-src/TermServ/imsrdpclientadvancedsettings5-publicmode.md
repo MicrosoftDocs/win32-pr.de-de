@@ -1,18 +1,18 @@
 ---
-title: IMsRdpClientAdvancedSettings5 publicmode (Eigenschaft)
-description: Legt die Konfiguration für den öffentlichen Modus fest oder ruft Sie ab. Der öffentliche Modus verhindert, dass der Client Benutzerdaten auf dem lokalen System zwischenspeichert.
+title: IMsRdpClientAdvancedSettings5 PublicMode (Eigenschaft)
+description: Legt die Konfiguration für den öffentlichen Modus fest oder ruft sie ab. Der öffentliche Modus verhindert, dass der Client Benutzerdaten im lokalen System zwischenspeichert.
 ms.assetid: dff6121a-b69c-411f-832b-29f9609f4230
 ms.tgt_platform: multiple
 keywords:
-- Publicmode-Eigenschaft Remotedesktopdienste
-- Publicmode-Eigenschaft Remotedesktopdienste, IMsRdpClientAdvancedSettings5-Schnittstelle
-- IMsRdpClientAdvancedSettings5 Interface Remotedesktopdienste, publicmode (Eigenschaft)
-- Publicmode-Eigenschaft Remotedesktopdienste, IMsRdpClientAdvancedSettings6-Schnittstelle
-- IMsRdpClientAdvancedSettings6 Interface Remotedesktopdienste, publicmode (Eigenschaft)
-- Publicmode-Eigenschaft Remotedesktopdienste, IMsRdpClientAdvancedSettings7-Schnittstelle
-- IMsRdpClientAdvancedSettings7 Interface Remotedesktopdienste, publicmode (Eigenschaft)
-- Publicmode-Eigenschaft Remotedesktopdienste, IMsRdpClientAdvancedSettings8-Schnittstelle
-- IMsRdpClientAdvancedSettings8 Interface Remotedesktopdienste, publicmode (Eigenschaft)
+- Eigenschafteneigenschaft "PublicMode Remotedesktopdienste
+- PublicMode-Remotedesktopdienste , IMsRdpClientAdvancedSettings5-Schnittstelle
+- IMsRdpClientAdvancedSettings5-Schnittstelle Remotedesktopdienste , PublicMode-Eigenschaft
+- PublicMode-Remotedesktopdienste , IMsRdpClientAdvancedSettings6-Schnittstelle
+- IMsRdpClientAdvancedSettings6-Schnittstelle Remotedesktopdienste , PublicMode-Eigenschaft
+- PublicMode-Remotedesktopdienste , IMsRdpClientAdvancedSettings7-Schnittstelle
+- IMsRdpClientAdvancedSettings7-Schnittstelle Remotedesktopdienste , PublicMode-Eigenschaft
+- PublicMode-Eigenschaft Remotedesktopdienste , IMsRdpClientAdvancedSettings8-Schnittstelle
+- IMsRdpClientAdvancedSettings8-Schnittstelle Remotedesktopdienste , PublicMode-Eigenschaft
 topic_type:
 - apiref
 api_name:
@@ -34,16 +34,16 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 9173b7685e77984a28d65129c79c9d1a09cf1458
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 8f5577c01d50b9f7e82a7430d51631c90db7f83e32c0fd20273c524eecdecb26
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "106337917"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119001348"
 ---
-# <a name="imsrdpclientadvancedsettings5publicmode-property"></a>IMsRdpClientAdvancedSettings5::P ublicmode-Eigenschaft
+# <a name="imsrdpclientadvancedsettings5publicmode-property"></a>IMsRdpClientAdvancedSettings5::P ublicMode-Eigenschaft
 
-Legt die Konfiguration für den öffentlichen Modus fest oder ruft Sie ab. Der öffentliche Modus verhindert, dass der Client Benutzerdaten auf dem lokalen System zwischenspeichert.
+Legt die Konfiguration für den öffentlichen Modus fest oder ruft sie ab. Der öffentliche Modus verhindert, dass der Client Benutzerdaten im lokalen System zwischenspeichert.
 
 Dies ist eine Eigenschaft mit Lese- und Schreibzugriff.
 
@@ -64,7 +64,7 @@ HRESULT get_PublicMode(
 
 ## <a name="property-value"></a>Eigenschaftswert
 
-Legt die Einstellung für den öffentlichen Modus auf **Variant \_ true** oder **Variant \_ false** fest. Wenn der Wert auf **Variant \_ true** festgelegt ist, wird die Einstellung öffentlicher Modus aktiviert.
+Legt die Einstellung für den öffentlichen Modus auf **VARIANT \_ TRUE oder** VARIANT FALSE **\_ fest.** Bei Festlegung auf **VARIANT \_ TRUE** ist die Einstellung für den öffentlichen Modus aktiviert.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -80,7 +80,7 @@ Legt die Einstellung für den öffentlichen Modus auf **Variant \_ true** oder *
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 

@@ -1,5 +1,5 @@
 ---
-title: D2D_PS_ENTRY-Funktion (D2d1effecthelpers. h)
+title: D2D_PS_ENTRY -Funktion (D2d1effecthelpers.h)
 description: Ein Makro, das einen Pixel-Shader-Einstiegspunkt mit dem angegebenen Funktionsnamen definiert.
 ms.assetid: 4C87369A-EF51-46BA-9CA4-386630A7F866
 keywords:
@@ -14,14 +14,14 @@ api_type:
 - DllExport
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 7525416eed7700709d02d2ec17823cd57a8c12ba
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 26369ef5be8c9dea81bf95e60c09ca0041d4275114c8892b85b6b5525f45504b
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106355880"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120087784"
 ---
-# <a name="d2d_ps_entry-function"></a>D2D \_ PS- \_ Einstiegs Funktion
+# <a name="d2d_ps_entry-function"></a>D2D \_ PS \_ ENTRY-Funktion
 
 Ein Makro, das einen Pixel-Shader-Einstiegspunkt mit dem angegebenen Funktionsnamen definiert.
 
@@ -37,10 +37,10 @@ void WINAPI D2D_PS_ENTRY(
 
 <dl> <dt>
 
-*Entryname* \[ in\]
+*Entryname* \[ In\]
 </dt> <dd>
 
-Der Name des Einstiegs Punkts für den Pixelshader.
+Der Name des Pixelschatteneinstiegspunkts.
 
 </dd> </dl>
 
@@ -48,9 +48,9 @@ Der Name des Einstiegs Punkts für den Pixelshader.
 
 Diese Funktion gibt keinen Wert zurück.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Verwenden Sie dieses Makro anstelle der normalen Angabe der Eingabe punkteingabe Signatur: alle Parameter sind implizit und werden während der Kompilierung von Direct2D hinzugefügt, abhängig vom Typ der Kompilierungs Ziele (Full Shader oder Export Function).
+Verwenden Sie dieses Makro, anstatt die Eingabesignatur des Einstiegspunkts auf normale Weise anzugeben: Alle Parameter werden implizit und von Direct2D während der Kompilierung hinzugefügt, je nach Kompilierungszieltyp (vollständiger Shader oder Exportfunktion).
 
 ``` syntax
 #define D2D_INPUT_COUNT 1 
@@ -67,11 +67,11 @@ D2D_PS_ENTRY(LinkingCompatiblePixelShader)
 } 
 ```
 
-Beachten Sie in diesem kurzen Beispiel, dass keine Funktionsparameter deklariert werden, dass die Anzahl der Eingaben und der Typ der einzelnen Eingaben vor der Einstiegs Funktion deklariert wird. die Eingabe wird durch Aufrufen von [D2DGetInput](d2dgetinput.md)abgerufen, und die Präprozessordirektiven müssen vor dem einschließen der Hilfsdatei definiert werden.
+Beachten Sie in diesem kurzen Beispiel, dass keine Funktionsparameter deklariert werden, dass die Anzahl der Eingaben und der Typ jeder Eingabe vor der Eingabefunktion deklariert, die Eingabe durch Aufrufen von [D2DGetInput](d2dgetinput.md)abgerufen wird und dass präprozessordirektiven definiert werden müssen, bevor die Hilfsdatei eingeschlossen wird.
 
-Ein Verknüpfungs kompatibler Shader muss sowohl einen regulären Einzelpass-Pixel-Shader als auch eine Export-Shader-Funktion bereitstellen. Mit dem D2D \_ PS- \_ Eintrags Makro können alle diese aus demselben Code generiert werden, wenn Sie in Verbindung mit dem Shader-Kompilierungs Skript verwendet werden.
+Ein mit Verknüpfungen kompatibler Shader muss sowohl einen regulären Einzelpasspixel-Shader als auch eine Export-Shaderfunktion bereitstellen. Das D2D PS ENTRY-Makro ermöglicht es, jede dieser Makros aus demselben Code zu erstellen, wenn sie in Verbindung mit dem \_ \_ Shaderkompilierungsskript verwendet wird.
 
-Beim Kompilieren eines vollständigen Shaders werden die Makros in den folgenden Code erweitert, der über eine D2D Effects-kompatible Eingabe Signatur verfügt.
+Beim Kompilieren eines vollständigen Shaders werden die Makros in den folgenden Code erweitert, der über eine D2D Effects-kompatible Eingabesignatur verfügt.
 
 ``` syntax
 Texture2D<float4> InputTexture0; 
@@ -91,7 +91,7 @@ float4 LinkingCompatiblePixelShader(
 } 
 ```
 
-Wenn eine Export Funktions Version desselben Codes kompiliert wird, wird der folgende Code generiert:
+Beim Kompilieren einer Exportfunktionsversion desselben Codes wird der folgende Code generiert:
 
 ``` syntax
 // Shader function version 
@@ -105,7 +105,7 @@ export float4 LinkingCompatiblePixelShader_Function(
 } 
 ```
 
-Beachten Sie, dass die Textur Eingabe, die normalerweise durch Sampling eines Texture2D abgerufen wird, durch eine Funktions Eingabe input0 ersetzt wurde.
+Beachten Sie, dass die Textureingabe, die normalerweise durch Sampling eines Texture2D abgerufen wird, durch eine Funktionseingabe input0 ersetzt wurde.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -113,7 +113,7 @@ Beachten Sie, dass die Textur Eingabe, die normalerweise durch Sampling eines Te
 
 | Anforderung | Wert |
 |-------------------|----------------------------------------------------------------------------------------------------|
-| Header<br/> | <dl> <dt>D2d1effecthelpers. hlsli</dt> </dl> |
+| Header<br/> | <dl> <dt>D2d1effecthelpers.hlsli</dt> </dl> |
 | DLL<br/>    | <dl> <dt>D2d1.dll</dt> </dl>                |
 
 
@@ -125,7 +125,7 @@ Beachten Sie, dass die Textur Eingabe, die normalerweise durch Sampling eines Te
 [Effektshader-Verknüpfung](effect-shader-linking.md)
 </dt> <dt>
 
-[HLSL-Hilfsprogramme](hlsl-helpers.md)
+[HLSL-Hilfsatoren](hlsl-helpers.md)
 </dt> </dl>
 
  

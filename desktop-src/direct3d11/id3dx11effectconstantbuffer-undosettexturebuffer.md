@@ -1,11 +1,11 @@
 ---
-title: ID3DX11EffectConstantBuffer undosettexturebuffer-Methode (D3dx11effect. h)
-description: Stellt einen zuvor festgelegten Textur Puffer wieder her.
+title: ID3DX11EffectConstantBuffer UndoSetTextureBuffer-Methode (D3dx11effect.h)
+description: Setzt einen zuvor festgelegten Texturpuffer zurück.
 ms.assetid: 982e7899-9569-4611-9fe0-b78624acba2c
 keywords:
-- Undosettexturebuffer-Methode Direct3D 11
-- Undosettexturebuffer-Methode Direct3D 11, ID3DX11EffectConstantBuffer-Schnittstelle
-- ID3DX11EffectConstantBuffer-Schnittstelle Direct3D 11, undosettexturebuffer-Methode
+- UndoSetTextureBuffer-Methode Direct3D 11
+- UndoSetTextureBuffer-Methode Direct3D 11 , ID3DX11EffectConstantBuffer-Schnittstelle
+- ID3DX11EffectConstantBuffer-Schnittstelle Direct3D 11 , UndoSetTextureBuffer-Methode
 topic_type:
 - apiref
 api_name:
@@ -17,16 +17,16 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 2d5e1e1b2be167466da5a4d92999646bb7c8f225
-ms.sourcegitcommit: 14010c34b35fa268046c7683f021f86de08ddd0a
+ms.openlocfilehash: b9ebe2849346eb85b934c93b1d79b6ab0c43744ff60f5cf056d05edf63d1ce0d
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "104355257"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118989850"
 ---
-# <a name="id3dx11effectconstantbufferundosettexturebuffer-method"></a>ID3DX11EffectConstantBuffer:: undosettexturebuffer-Methode
+# <a name="id3dx11effectconstantbufferundosettexturebuffer-method"></a>ID3DX11EffectConstantBuffer::UndoSetTextureBuffer-Methode
 
-Stellt einen zuvor festgelegten Textur Puffer wieder her.
+Setzt einen zuvor festgelegten Texturpuffer zurück.
 
 ## <a name="syntax"></a>Syntax
 
@@ -45,27 +45,27 @@ Diese Methode hat keine Parameter.
 
 Typ: **[ **HRESULT**](https://msdn.microsoft.com/library/Bb401631(v=MSDN.10).aspx)**
 
-Gibt einen der folgenden [Direct3D 11-Rückgabe Codes](d3d11-graphics-reference-returnvalues.md)zurück.
+Gibt einen der folgenden [Direct3D 11-Rückgabecodes zurück.](d3d11-graphics-reference-returnvalues.md)
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
 > [!Note]  
-> Das DirectX SDK stellt keine kompilierten Binärdateien für Effekte bereit. Sie müssen die Effekte 11-Quelle verwenden, um die Effekte-Anwendung zu erstellen. Weitere Informationen zum Verwenden der Effekte 11-Quelle finden Sie [unter Unterschiede zwischen den Effekten 10 und Effekte 11](d3d11-graphics-programming-guide-effects-differences.md).
+> Das DirectX SDK stellt keine kompilierten Binärdateien für Effekte zur Verfügung. Sie müssen die Effects 11-Quelle verwenden, um ihre Effekte-Typ-Anwendung zu erstellen. Weitere Informationen zur Verwendung der Quelle Effects 11 finden Sie unter [Unterschiede zwischen Effekten 10 und Effekten 11.](d3d11-graphics-programming-guide-effects-differences.md)
 
  
 
-## <a name="requirements"></a>Requirements (Anforderungen)
+## <a name="requirements"></a>Anforderungen
 
 
 
 | Anforderung | Wert |
 |--------------------|----------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>D3dx11effect. h</dt> </dl>                                                    |
-| Bibliothek<br/> | <dl> <dt>N/v (die "Effects 11"-Bibliothek ist online als freigegebene Quelle verfügbar.)</dt> </dl> |
+| Header<br/>  | <dl> <dt>D3dx11effect.h</dt> </dl>                                                    |
+| Bibliothek<br/> | <dl> <dt>N/A (Eine Effects 11-Bibliothek ist online als freigegebene Quelle verfügbar.)</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 

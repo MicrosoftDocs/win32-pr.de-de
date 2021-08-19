@@ -1,9 +1,9 @@
 ---
-title: D3DX11_EFFECT_DESC-Struktur (D3dx11effect. h)
+title: D3DX11_EFFECT_DESC -Struktur (D3dx11effect.h)
 description: Beschreibt einen Effekt.
 ms.assetid: 2efde608-26e0-4234-92d8-dc3ef2a29d89
 keywords:
-- D3DX11_EFFECT_DESC Struktur Direct3D 11
+- D3DX11_EFFECT_DESC-Struktur Direct3D 11
 topic_type:
 - apiref
 api_name:
@@ -14,14 +14,14 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 4d43b37d13a8b3f076cc3c5967dac9a95ed18a5a
-ms.sourcegitcommit: 14010c34b35fa268046c7683f021f86de08ddd0a
+ms.openlocfilehash: d3f2c3a205a4849aed755bee01302da813cccf77bbf8255036f287d488b76591
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "104982588"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118989990"
 ---
-# <a name="d3dx11_effect_desc-structure"></a>Bibliothek d3dx11 \_ Effect- \_ Struktur Struktur
+# <a name="d3dx11_effect_desc-structure"></a>D3DX11 \_ EFFECT \_ DESC-Struktur
 
 Beschreibt einen Effekt.
 
@@ -44,80 +44,80 @@ typedef struct _D3DX11_EFFECT_DESC {
 
 <dl> <dt>
 
-**Constantbuffers**
+**ConstantBuffers**
 </dt> <dd>
 
-Typ: **[ **uint**](/windows/desktop/WinProg/windows-data-types)**
+Typ: **[ **UINT**](/windows/desktop/WinProg/windows-data-types)**
 
 </dd> <dd>
 
-Die Anzahl der Konstanten Puffer in diesem Effekt.
+Anzahl konstanter Puffer in diesem Effekt.
 
 </dd> <dt>
 
 **GlobalVariables**
 </dt> <dd>
 
-Typ: **[ **uint**](/windows/desktop/WinProg/windows-data-types)**
+Typ: **[ **UINT**](/windows/desktop/WinProg/windows-data-types)**
 
 </dd> <dd>
 
-Die Anzahl der globalen Variablen in diesem Effekt.
+Anzahl der globalen Variablen in diesem Effekt.
 
 </dd> <dt>
 
-**Interfakevariables**
+**InterfaceVariables**
 </dt> <dd>
 
-Typ: **[ **uint**](/windows/desktop/WinProg/windows-data-types)**
+Typ: **[ **UINT**](/windows/desktop/WinProg/windows-data-types)**
 
 </dd> <dd>
 
-Die Anzahl der globalen Schnittstellen in diesem Effekt.
+Anzahl der globalen Schnittstellen in diesem Effekt.
 
 </dd> <dt>
 
-**O**
+**Techniken**
 </dt> <dd>
 
-Typ: **[ **uint**](/windows/desktop/WinProg/windows-data-types)**
+Typ: **[ **UINT**](/windows/desktop/WinProg/windows-data-types)**
 
 </dd> <dd>
 
-Die Anzahl der in diesem Effekt beschriebenen Techniken.
+Anzahl von Techniken in diesem Effekt.
 
 </dd> <dt>
 
 **Gruppen**
 </dt> <dd>
 
-Typ: **[ **uint**](/windows/desktop/WinProg/windows-data-types)**
+Typ: **[ **UINT**](/windows/desktop/WinProg/windows-data-types)**
 
 </dd> <dd>
 
-Die Anzahl der Gruppen in diesem Effekt.
+Anzahl von Gruppen in diesem Effekt.
 
 </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-"Bibliothek d3dx11 Effect Debug" \_ \_ wird mit " [**ID3DX11Effect:: getdebug**](id3dx11effect-getdesc.md)" verwendet.
+D3DX11 \_ EFFECT \_ DESC wird mit [**ID3DX11Effect::GetDesc verwendet.**](id3dx11effect-getdesc.md)
 
-## <a name="requirements"></a>Requirements (Anforderungen)
+## <a name="requirements"></a>Anforderungen
 
 
 
 | Anforderung | Wert |
 |-------------------|-------------------------------------------------------------------------------------------|
-| Header<br/> | <dl> <dt>D3dx11effect. h</dt> </dl> |
+| Header<br/> | <dl> <dt>D3dx11effect.h</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 
-[Effekte 11-Strukturen](d3d11-graphics-reference-effects11-structures.md)
+[Effects 11 Structures](d3d11-graphics-reference-effects11-structures.md)
 </dt> </dl>
 
  

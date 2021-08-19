@@ -1,5 +1,5 @@
 ---
-description: Wird in der getsummaryinformation-Methode und der GetDefinitionFileSummaryInformation-Methode in der MSVM \_ virtualsystemmanagementservice-Klasse verwendet, um schnell allgemeine Informationen zu einem virtuellen Computer oder einer Momentaufnahme abzurufen.
+description: Wird in den Methoden GetSummaryInformation und GetDefinitionFileSummaryInformation in der Msvm VirtualSystemManagementService-Klasse verwendet, um schnell allgemeine Informationen zu einem virtuellen Computer oder einer Momentaufnahme \_ abzurufen.
 ms.assetid: 8D188BB2-4A56-4738-94DD-64D9F9B90B73
 title: Msvm_SummaryInformation-Klasse
 ms.topic: reference
@@ -55,16 +55,16 @@ api_type:
 - DllExport
 api_location:
 - vmms.exe
-ms.openlocfilehash: 817d025551ae10002b008a181edd8a7dfd2ec68c
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 4af759cf621f5afbaef90924351ad24a232889b1d81048f0e1372630c74f98f3
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106348436"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118950089"
 ---
-# <a name="msvm_summaryinformation-class"></a>MSVM \_ SummaryInformation-Klasse
+# <a name="msvm_summaryinformation-class"></a>Msvm \_ SummaryInformation-Klasse
 
-Wird in der [**getsummaryinformation**](getsummaryinformation-msvm-virtualsystemmanagementservice.md) -Methode und der [**GetDefinitionFileSummaryInformation**](getdefinitionfilesummaryinformation-msvm-virtualsystemmanagementservice.md) -Methode in der [**MSVM \_ virtualsystemmanagementservice**](msvm-virtualsystemmanagementservice.md) -Klasse verwendet, um schnell allgemeine Informationen zu einem virtuellen Computer oder einer Momentaufnahme abzurufen.
+Wird in den [**Methoden GetSummaryInformation**](getsummaryinformation-msvm-virtualsystemmanagementservice.md) und [**GetDefinitionFileSummaryInformation**](getdefinitionfilesummaryinformation-msvm-virtualsystemmanagementservice.md) in der [**Msvm \_ VirtualSystemManagementService-Klasse**](msvm-virtualsystemmanagementservice.md) verwendet, um schnell allgemeine Informationen zu einem virtuellen Computer oder einer Momentaufnahme abzurufen.
 
 Die folgende Syntax wird Managed Object Format (MOF)-Code vereinfacht.
 
@@ -121,17 +121,17 @@ class Msvm_SummaryInformation : Msvm_SummaryInformationBase
 
 ## <a name="members"></a>Member
 
-Die **MSVM \_ SummaryInformation** -Klasse verfügt über diese Typen von Membern:
+Die **Msvm \_ SummaryInformation-Klasse** verfügt über die folgenden Membertypen:
 
 -   [Eigenschaften](#properties)
 
 ### <a name="properties"></a>Eigenschaften
 
-Die **MSVM \_ SummaryInformation** -Klasse verfügt über diese Eigenschaften.
+Die **Msvm \_ SummaryInformation-Klasse** verfügt über diese Eigenschaften.
 
 <dl> <dt>
 
-**Zugedgpu**
+**AllocatedGPU**
 </dt> <dd> <dl> <dt>
 
 Datentyp: **Zeichenfolge**
@@ -140,20 +140,20 @@ Datentyp: **Zeichenfolge**
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Der Bezeichner der physischen Grafikverarbeitungseinheit (GPU), die dieser virtuellen Maschine zugeordnet ist. Diese Eigenschaft gilt nur für virtuelle Maschinen, die remotefx verwenden.
+Der Bezeichner der physischen Grafikprozessor (GPU), die diesem virtuellen Computer zugeordnet ist. Diese Eigenschaft gilt nur für virtuelle Computer, die RemoteFX.
 
 </dd> <dt>
 
-**Applicationhealth**
+**ApplicationHealth**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt16**
+Datentyp: **uint16**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Der aktuelle Integritäts Status der Anwendung für die virtuelle Maschine. Diese Eigenschaft ist für Instanzen von **MSVM \_ SummaryInformation** , die eine Momentaufnahme eines virtuellen Computers darstellen, ungültig.
+Der aktuelle Integritätsstatus der Anwendung für den virtuellen Computer. Diese Eigenschaft ist für Instanzen von **Msvm \_ SummaryInformation** ungültig, die eine Momentaufnahme eines virtuellen Computers darstellen.
 
 <dt>
 
@@ -166,7 +166,7 @@ Der aktuelle Integritäts Status der Anwendung für die virtuelle Maschine. Dies
 
 <span id="Application_Critical"></span><span id="application_critical"></span><span id="APPLICATION_CRITICAL"></span>
 
-**Anwendungs kritisch** (32782)
+**Anwendungskritisch** (32782)
 
 
 </dt> <dd></dd> <dt>
@@ -180,23 +180,23 @@ Der aktuelle Integritäts Status der Anwendung für die virtuelle Maschine. Dies
 
 </dd> <dt>
 
-**Asynchronoustasks**
+**AsynchronousTasks**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **CIM \_ concretejob** -Array
+Datentyp: **CIM \_ ConcreteJob-Array**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**arrayType**](/windows/desktop/WmiSdk/standard-qualifiers) ("indiziert")
+Qualifizierer: [**ArrayType**](/windows/desktop/WmiSdk/standard-qualifiers) ("Indexed")
 </dt> </dl>
 
-Ein Array von [**MSVM-" \_ concretejob**](msvm-concretejob.md) "-Instanzen, die alle asynchronen Vorgänge im Zusammenhang mit dem derzeit ausgeführten virtuellen Computer darstellen. Diese Eigenschaft ist für Instanzen von **MSVM \_ SummaryInformation** , die eine Momentaufnahme eines virtuellen Computers darstellen, ungültig.
+Ein Array von [**Msvm \_ ConcreteJob-Instanzen,**](msvm-concretejob.md) die alle asynchronen Vorgänge im Zusammenhang mit dem virtuellen Computer darstellen, die gerade ausgeführt werden. Diese Eigenschaft ist für Instanzen von **Msvm \_ SummaryInformation** ungültig, die eine Momentaufnahme eines virtuellen Computers darstellen.
 
 </dd> <dt>
 
-**Availablememorybuffer**
+**AvailableMemoryBuffer**
 </dt> <dd> <dl> <dt>
 
 Datentyp: **sint32**
@@ -205,18 +205,18 @@ Datentyp: **sint32**
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Der Prozentsatz des verfügbaren Arbeitsspeicher Puffers für die virtuelle Maschine. Wenn dynamischer Arbeitsspeicher für eine virtuelle Maschine aktiviert ist, stellt diese Eigenschaft das Verhältnis des verfügbaren Arbeitsspeicher Puffers zum idealen Speicherpuffer für den virtuellen Computer dar. Die ideale Größe des Arbeitsspeicher Puffers wird mit der **targetmemorybuffer** -Eigenschaft der [**MSVM \_ memorysettingdata**](msvm-memorysettingdata.md) -Klasse konfiguriert.
+Der Prozentsatz des verfügbaren Arbeitsspeicherpuffers für den virtuellen Computer. Wenn dynamischer Arbeitsspeicher für einen virtuellen Computer aktiviert ist, stellt diese Eigenschaft das Verhältnis des verfügbaren Arbeitsspeicherpuffers zum idealen Arbeitsspeicherpuffer für den virtuellen Computer dar. Die ideale Arbeitsspeicherpuffergröße wird mithilfe der **TargetMemoryBuffer-Eigenschaft** der [**Msvm \_ MemorySettingData-Klasse**](msvm-memorysettingdata.md) konfiguriert.
 
-Diese Eigenschaft ist für Instanzen der **MSVM-Klasse " \_ SummaryInformation** " ungültig, die virtuelle Computer darstellt, für die der dynamische Arbeitsspeicher nicht aktiviert ist.
+Diese Eigenschaft ist nicht gültig für Instanzen der **Msvm \_ SummaryInformation-Klasse,** die virtuelle Computer darstellen, für die dynamischer Arbeitsspeicher nicht aktiviert ist.
 
-Diese Eigenschaft ist für Instanzen der **MSVM \_ SummaryInformation** -Klasse, die eine Momentaufnahme eines virtuellen Computers darstellen, ungültig.
+Diese Eigenschaft ist für Instanzen der **Msvm \_ SummaryInformation-Klasse** ungültig, die eine Momentaufnahme eines virtuellen Computers darstellen.
 
 </dd> <dt>
 
-**CreationTime**
+**Creationtime**
 </dt> <dd> <dl> <dt>
 
-**Datentyp: DateTime**
+Datentyp: **DateTime**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
@@ -235,35 +235,35 @@ Datentyp: **Zeichenfolge**
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Der Anzeige Name für den virtuellen Computer oder die Momentaufnahme.
+Der Anzeigename für den virtuellen Computer oder die Momentaufnahme.
 
 </dd> <dt>
 
 **EnabledState**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt16**
+Datentyp: **uint16**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Der aktuelle Zustand des virtuellen Computers oder der Momentaufnahme. Mögliche Werte finden Sie unter der **enabledstate** -Eigenschaft der [**MSVM \_ Computersystem**](msvm-computersystem.md) -Klasse.
+Der aktuelle Status des virtuellen Computers oder der Momentaufnahme. Mögliche Werte finden Sie in der **EnabledState-Eigenschaft** der [**Msvm \_ ComputerSystem-Klasse.**](msvm-computersystem.md)
 
 </dd> <dt>
 
-**Enhancedsessionmodestate**
+**EnhancedSessionModeState**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt16**
+Datentyp: **uint16**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Gibt an, ob Verbindungen im erweiterten Modus vom Host zugelassen werden und ob Sie für den virtuellen Computer verfügbar sind.
+Gibt an, ob Verbindungen im erweiterten Modus vom Host zugelassen werden und ob sie für den virtuellen Computer verfügbar sind, sofern zulässig.
 
-**Windows 8.1:** Dieser Wert wird bis Windows 8.1 und Windows Server 2012 R2 nicht unterstützt.
+**Windows 8.1:** Dieser Wert wird erst unterstützt, wenn Windows 8.1 und Windows Server 2012 R2.
 
 <dt>
 
@@ -283,14 +283,14 @@ Gibt an, ob Verbindungen im erweiterten Modus vom Host zugelassen werden und ob 
 
 <span id="Allowed_but_not_available"></span><span id="allowed_but_not_available"></span><span id="ALLOWED_BUT_NOT_AVAILABLE"></span>
 
-**Zulässig, aber nicht verfügbar** (6)
+**Zulässig, aber nicht verfügbar** (6 )
 
 
 </dt> <dd></dd> </dl>
 
 </dd> <dt>
 
-**Guestoperatingsystem**
+**GuestOperatingSystem**
 </dt> <dd> <dl> <dt>
 
 Datentyp: **Zeichenfolge**
@@ -299,33 +299,33 @@ Datentyp: **Zeichenfolge**
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Der Name des Gast Betriebssystems, falls verfügbar. Wenn diese Informationen nicht verfügbar sind, ist der Wert dieser Eigenschaft **null**. Diese Eigenschaft ist für Instanzen von **MSVM \_ SummaryInformation** , die eine Momentaufnahme eines virtuellen Computers darstellen, ungültig.
+Der Name des Gastbetriebssystems, falls verfügbar. Wenn diese Informationen nicht verfügbar sind, ist der Wert dieser Eigenschaft **NULL.** Diese Eigenschaft ist für Instanzen von **Msvm \_ SummaryInformation** ungültig, die eine Momentaufnahme eines virtuellen Computers darstellen.
 
 </dd> <dt>
 
 **HealthState**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt16**
+Datentyp: **uint16**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Der aktuelle Integritäts Status für den virtuellen Computer. Diese Eigenschaft ist für Instanzen von **MSVM \_ SummaryInformation** , die eine Momentaufnahme eines virtuellen Computers darstellen, ungültig.
+Der aktuelle Integritätsstatus für den virtuellen Computer. Diese Eigenschaft ist für Instanzen von **Msvm \_ SummaryInformation** ungültig, die eine Momentaufnahme eines virtuellen Computers darstellen.
 
 </dd> <dt>
 
 **Heartbeat**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt16**
+Datentyp: **uint16**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Der aktuelle Takt Status für den virtuellen Computer. Weitere Informationen finden Sie in der Dokumentation für die [**Statusbeschreibungen**](msvm-heartbeatcomponent.md) -Eigenschaft der **MSVM \_ heartbeatcomponent** -Klasse. Diese Eigenschaft ist für Instanzen von **MSVM \_ SummaryInformation** , die eine Momentaufnahme eines virtuellen Computers darstellen, ungültig.
+Der aktuelle Heartbeatstatus für den virtuellen Computer. Weitere Informationen finden Sie in der Dokumentation zur [**StatusDescriptions-Eigenschaft**](msvm-heartbeatcomponent.md) der **Msvm \_ HeartbeatComponent-Klasse.** Diese Eigenschaft ist für Instanzen von **Msvm \_ SummaryInformation** ungültig, die eine Momentaufnahme eines virtuellen Computers darstellen.
 
 <dl> <dt>
 
@@ -343,7 +343,7 @@ Der aktuelle Takt Status für den virtuellen Computer. Weitere Informationen fin
 
 </dd> <dt>
 
-**Hostcomputersystemname**
+**HostComputerSystemName**
 </dt> <dd> <dl> <dt>
 
 Datentyp: **Zeichenfolge**
@@ -352,10 +352,10 @@ Datentyp: **Zeichenfolge**
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Der Name des Computers, auf dem dieser virtuelle Computer gehostet wird.
+Der Name des Computers, der diesen virtuellen Computer hosten soll.
 
 > [!Note]  
-> In Windows 10 hinzugefügt.
+> Hinzugefügt in Windows 10.
 
  
 
@@ -370,32 +370,32 @@ Datentyp: **Zeichenfolge**
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**außer Kraft**](/windows/desktop/WmiSdk/standard-qualifiers) Setzung ("CIM \_ managedelta Element. InstanceId"), [**Schlüssel**](/windows/desktop/WmiSdk/key-qualifier)
+Qualifizierer: [**Außerkraftsetzung**](/windows/desktop/WmiSdk/standard-qualifiers) ("CIM \_ ManagedElement.InstanceID"), [**Schlüssel**](/windows/desktop/WmiSdk/key-qualifier)
 </dt> </dl>
 
-"InstanceId" ist eine optionale Eigenschaft, die verwendet werden kann, um eine Instanz dieser Klasse innerhalb des Gültigkeits Bereichs des instanziierten Namespace eindeutig und eindeutig zu identifizieren. Verschiedene Unterklassen dieser Klasse können diese Eigenschaft überschreiben, um Sie erforderlich zu machen, oder einen Schlüssel. Diese Unterklassen können auch die bevorzugten Algorithmen zum Sicherstellen der Eindeutigkeit ändern, die unten definiert sind.
+InstanceID ist eine optionale Eigenschaft, die verwendet werden kann, um eine Instanz dieser Klasse innerhalb des Bereichs des instanziierenden Namespace undurchsichtig und eindeutig zu identifizieren. Verschiedene Unterklassen dieser Klasse können diese Eigenschaft überschreiben, um sie erforderlich zu machen, oder einen Schlüssel. Solche Unterklassen können auch die bevorzugten Algorithmen ändern, um die Eindeutigkeit sicherzustellen, die unten definiert sind.
 
-Um die Eindeutigkeit innerhalb des Namespaces sicherzustellen, sollte der Wert von InstanceId mit dem folgenden "bevorzugten" Algorithmus erstellt werden:
+Um die Eindeutigkeit innerhalb des NameSpace sicherzustellen, sollte der Wert von InstanceID mit dem folgenden "bevorzugten" Algorithmus erstellt werden:
 
 <OrgID>:<LocalID>
 
-Dabei <OrgID> <LocalID> sind und durch einen Doppelpunkt (:) und wobei <OrgID> ein urheberrechtlich geschütztes, mit einem oder ein oder anderweitig eindeutiger Name enthalten muss, der der Geschäfts Entität entspricht, die die InstanceId erstellt oder definiert, oder die eine registrierte ID ist, die der Geschäfts Entität von einer anerkannten globalen Autorität zugewiesen ist. (Diese Anforderung ähnelt der <Schema Name> \_ <Class Name> Struktur von Schema Klassennamen.) Außerdem <OrgID> darf keine Doppelpunkte (:) enthalten, um die Eindeutigkeit sicherzustellen. Wenn dieser Algorithmus verwendet wird, muss der erste Doppelpunkt, der in InstanceId angezeigt wird, zwischen und angezeigt werden <OrgID> <LocalID> .
+Wobei und durch einen Doppelpunkt (:)) getrennt sind und wo einen urheberrechtlich geschützten, markengebundenen oder anderweitig eindeutigen Namen enthalten muss, der im Besitz der Geschäftseinheit ist, die die InstanceID erstellt oder definiert, oder die eine registrierte ID ist, die der Geschäftseinheit von einer anerkannten globalen Autorität zugewiesen <OrgID> <LocalID> <OrgID> wird. (Diese Anforderung ähnelt der <Schema Name> \_ <Class Name> Struktur von Schemaklassennamen.) Darüber hinaus darf zur Sicherstellung der <OrgID> Eindeutigkeit keinen Doppelpunkt (:). Bei Verwendung dieses Algorithmus muss der erste Doppelpunkt, der in InstanceID angezeigt wird, zwischen und <OrgID> angezeigt <LocalID> werden.
 
-<LocalID> wird von der Business-Entität gewählt und sollte nicht wieder verwendet werden, um verschiedene zugrunde liegende (reale) Elemente zu identifizieren. Wenn not NULL und der oben genannte "bevorzugte" Algorithmus nicht verwendet wird, muss die definierende Entität sicherstellen, dass die resultierende InstanceId nicht in allen instanceids wieder verwendet wird, die von diesem oder anderen Anbietern für den Namespace dieser Instanz erstellt werden.
+<LocalID> wird von der Geschäftsentität ausgewählt und sollte nicht wiederverwendet werden, um verschiedene zugrunde liegende (reale) Elemente zu identifizieren. Wenn nicht NULL festgelegt ist und der oben genannte "bevorzugte" Algorithmus nicht verwendet wird, muss die definierende Entität sicherstellen, dass die resultierende InstanceID nicht für instanceIDs wiederverwendet wird, die von diesem oder anderen Anbietern für den NameSpace dieser Instanz erzeugt werden.
 
-Wenn für von DMTF definierte Instanzen nicht auf NULL festgelegt ist, muss der "bevorzugte" Algorithmus verwendet werden, wobei <OrgID> auf CIM festgelegt ist.
+Wenn für DMTF-definierte Instanzen nicht auf NULL festgelegt ist, muss der "bevorzugte" Algorithmus mit dem auf <OrgID> CIM festgelegten verwendet werden.
 
 > [!Note]  
-> In Windows 10 hinzugefügt.
+> Hinzugefügt in Windows 10.
 
  
 
 </dd> <dt>
 
-**Integrationservicesversionstate**
+**IntegrationServicesVersionState**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt16**
+Datentyp: **uint16**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
@@ -414,21 +414,21 @@ Gibt an, ob die auf dem virtuellen Computer installierten Integrationsdienste au
 
 <span id="UpToDate"></span><span id="uptodate"></span><span id="UPTODATE"></span>
 
-**Update** (1)
+**UpToDate** (1)
 
 
 </dt> <dd></dd> <dt>
 
 <span id="Mismatch"></span><span id="mismatch"></span><span id="MISMATCH"></span>
 
-Nicht **überein** stimmende (2)
+**Konflikt** (2)
 
 
 </dt> <dd></dd> </dl>
 
 </dd> <dt>
 
-**Memoryavailable**
+**Arbeitsspeicher verfügbar**
 </dt> <dd> <dl> <dt>
 
 Datentyp: **sint32**
@@ -437,44 +437,44 @@ Datentyp: **sint32**
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Der Prozentsatz des aktuellen Arbeitsspeichers, der für den virtuellen Computer verfügbar ist. Wenn dynamischer Arbeitsspeicher für eine virtuelle Maschine aktiviert ist, stellt diese Eigenschaft das Verhältnis zwischen dem verfügbaren Arbeitsspeicher des virtuellen Computers und dem gesamten physischen Arbeitsspeicher dar, der dem virtuellen Computer zugewiesen ist. Wenn für eine virtuelle Maschine kein Arbeitsspeicher verfügbar ist, ist diese Eigenschaft negativ und enthält das Verhältnis des Arbeitsspeichers, der für die virtuelle Maschine benötigt wird, zum gesamten physischen Arbeitsspeicher, der der virtuellen Maschine zugewiesen ist.
+Der Prozentsatz des aktuellen Arbeitsspeichers, der für den virtuellen Computer verfügbar ist. Wenn dynamischer Arbeitsspeicher für einen virtuellen Computer aktiviert ist, stellt diese Eigenschaft das Verhältnis des verfügbaren Arbeitsspeichers des virtuellen Computers zum gesamten physischen Speicher dar, der dem virtuellen Computer zugewiesen ist. Wenn ein virtueller Computer über keinen verfügbaren Arbeitsspeicher verfügt, ist diese Eigenschaft negativ und enthält das Verhältnis des Arbeitsspeichers, der für den virtuellen Computer benötigt wird, zum gesamten physischen Arbeitsspeicher, der dem virtuellen Computer zugewiesen ist.
 
-Diese Eigenschaft ist für Instanzen der **MSVM-Klasse " \_ SummaryInformation** " ungültig, die virtuelle Computer darstellt, für die der dynamische Arbeitsspeicher nicht aktiviert ist.
+Diese Eigenschaft ist für Instanzen der **Msvm \_ SummaryInformation-Klasse** ungültig, die virtuelle Computer darstellen, für die kein dynamischer Arbeitsspeicher aktiviert ist.
 
-Diese Eigenschaft ist für Instanzen der **MSVM \_ SummaryInformation** -Klasse, die eine Momentaufnahme eines virtuellen Computers darstellen, ungültig.
+Diese Eigenschaft ist für Instanzen der **Msvm \_ SummaryInformation-Klasse** ungültig, die eine Momentaufnahme eines virtuellen Computers darstellen.
 
 </dd> <dt>
 
-**Memoryspansphysicalnumanodes**
+**MemorySpansPhysicalNumaNodes**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **boolescher** Wert
+Datentyp: **boolescher Wert**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Gibt an, ob der Arbeitsspeicher eines oder mehrerer der virtuellen NUMA-Knoten (nicht einheitlicher Speicherzugriff) der virtuellen Maschine mehrere physische NUMA-Knoten des hostingcomputersystems umfasst. Enthält **true** , wenn der Arbeitsspeicher mehrere physische NUMA-Knoten umfasst, andernfalls **false** .
+Gibt an, ob der Arbeitsspeicher eines oder mehrerer NUMA-Knoten (Virtual Nonuniform Memory Access) des virtuellen Computers mehrere physische NUMA-Knoten des Hostcomputersystems umfasst. Enthält **True,** wenn der Arbeitsspeicher mehrere physische NUMA-Knoten umfasst, **andernfalls FALSE.**
 
 </dd> <dt>
 
 **MemoryUsage**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt64**
+Datentyp: **uint64**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Die aktuelle Speicherauslastung (in Megabyte) der virtuellen Maschine. Diese Eigenschaft ist für Instanzen von **MSVM \_ SummaryInformation** , die eine Momentaufnahme eines virtuellen Computers darstellen, ungültig.
+Die aktuelle Speicherauslastung des virtuellen Computers in Megabyte. Diese Eigenschaft ist für Instanzen von **Msvm \_ SummaryInformation** ungültig, die eine Momentaufnahme eines virtuellen Computers darstellen.
 
 </dd> <dt>
 
 **Name**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
@@ -484,106 +484,106 @@ Der eindeutige Name für den virtuellen Computer oder die Momentaufnahme.
 
 </dd> <dt>
 
-**Hinweise**
+**Notizen**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Die Anmerkungen, die dem virtuellen Computer oder der Momentaufnahme zugeordnet sind.
+Die dem virtuellen Computer oder der Momentaufnahme zugeordneten Hinweise.
 
 </dd> <dt>
 
 **NumberOfProcessors**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt16**
+Datentyp: **uint16**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Die Gesamtanzahl der virtuellen Prozessoren, die dem virtuellen Computer oder der Momentaufnahme zugeordnet sind.
+Die Gesamtzahl der virtuellen Prozessoren, die dem virtuellen Computer oder der Momentaufnahme zugeordnet sind.
 
 </dd> <dt>
 
 **OperationalStatus**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt16** Array
+Datentyp: **uint16-Array**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**arrayType**](/windows/desktop/WmiSdk/standard-qualifiers) ("indiziert")
+Qualifizierer: [**ArrayType**](/windows/desktop/WmiSdk/standard-qualifiers) ("Indiziert")
 </dt> </dl>
 
-Der aktuelle Betriebsstatus der virtuellen Maschine. Mögliche Werte finden Sie unter der **OperationalStatus** -Eigenschaft der [**MSVM \_ Computersystem**](msvm-computersystem.md) -Klasse.
+Der aktuelle Betriebsstatus des virtuellen Computers. Mögliche Werte finden Sie in der **OperationalStatus-Eigenschaft** der [**Msvm \_ ComputerSystem-Klasse.**](msvm-computersystem.md)
 
 </dd> <dt>
 
-**Otherenabledstate**
+**OtherEnabledState**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Eine Zeichenfolge, die den aktivierten oder deaktivierten Status des Elements beschreibt, wenn die **enabledstate** -Eigenschaft auf 1 festgelegt ist. Diese Eigenschaft wird auf **null** festgelegt, wenn **enabledstate** ein anderer Wert als 1 ist.
+Eine Zeichenfolge, die den aktivierten oder deaktivierten Zustand des Elements beschreibt, wenn die **EnabledState-Eigenschaft** auf 1 festgelegt ist. Diese Eigenschaft wird auf **NULL** festgelegt, wenn **EnabledState** ein anderer Wert als 1 ist.
 
 </dd> <dt>
 
-**Processorload**
+**ProcessorLoad**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt16**
+Datentyp: **uint16**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Die aktuelle Prozessorauslastung der virtuellen Maschine (in Prozent). Diese Eigenschaft ist für Instanzen von **MSVM \_ SummaryInformation** , die eine Momentaufnahme eines virtuellen Computers darstellen, ungültig.
+Die aktuelle Prozessorauslastung des virtuellen Computers in Prozent. Diese Eigenschaft ist für Instanzen von **Msvm \_ SummaryInformation** ungültig, die eine Momentaufnahme eines virtuellen Computers darstellen.
 
 </dd> <dt>
 
-**Processorloadhistory**
+**ProcessorLoadHistory**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt16** Array
+Datentyp: **uint16-Array**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**arrayType**](/windows/desktop/WmiSdk/standard-qualifiers) ("indiziert")
+Qualifizierer: [**ArrayType**](/windows/desktop/WmiSdk/standard-qualifiers) ("Indiziert")
 </dt> </dl>
 
-Ein Array der vorherigen 100-Stichproben der Prozessorauslastung in Prozent für den virtuellen Computer. Diese Eigenschaft ist für Instanzen von **MSVM \_ SummaryInformation** , die eine Momentaufnahme eines virtuellen Computers darstellen, ungültig.
+Ein Array der vorherigen 100 Beispiele der Prozessornutzung in Prozent für den virtuellen Computer. Diese Eigenschaft ist für Instanzen von **Msvm \_ SummaryInformation** ungültig, die eine Momentaufnahme eines virtuellen Computers darstellen.
 
 </dd> <dt>
 
-**ReplicationHealth**
+**Replicationhealth**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt16**
+Datentyp: **uint16**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**veraltet**](/windows/desktop/WmiSdk/standard-wmi-qualifiers) ("**MSVM \_ SummaryInformation**.**Replicationhealthex**")
+Qualifizierer: [**Veraltet**](/windows/desktop/WmiSdk/standard-wmi-qualifiers) ("**Msvm \_ SummaryInformation**.**ReplicationHealthEx**")
 </dt> </dl>
 
-Die Replikations Integrität für den virtuellen Computer. Mögliche Werte finden Sie unter der **ReplicationHealth** -Eigenschaft der [**MSVM \_ Computersystem**](msvm-computersystem.md) -Klasse.
+Die Replikationszustand für den virtuellen Computer. Mögliche Werte finden Sie in der **ReplicationHealth-Eigenschaft** der [**Msvm \_ ComputerSystem-Klasse.**](msvm-computersystem.md)
 
 > [!Note]  
-> Diese Eigenschaft ist ab Windows 8.1 veraltet. Verwenden Sie stattdessen " **replicationhealthex**".
+> Diese Eigenschaft ist ab Windows 8.1 veraltet. Verwenden Sie stattdessen **ReplicationHealthEx.**
 
  
 
@@ -598,7 +598,7 @@ Die Replikations Integrität für den virtuellen Computer. Mögliche Werte finde
 
 <span id="Ok"></span><span id="ok"></span><span id="OK"></span>
 
-**OK** (1)
+**Ok** (1)
 
 
 </dt> <dd></dd> <dt>
@@ -619,19 +619,19 @@ Die Replikations Integrität für den virtuellen Computer. Mögliche Werte finde
 
 </dd> <dt>
 
-**Replicationhealthex**
+**ReplicationHealthEx**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt16** Array
+Datentyp: **uint16-Array**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**arrayType**](/windows/desktop/WmiSdk/standard-qualifiers) ("indiziert")
+Qualifizierer: [**ArrayType**](/windows/desktop/WmiSdk/standard-qualifiers) ("Indiziert")
 </dt> </dl>
 
-Das Array der Replikations Integritäts Werte für die verschiedenen Replikations Beziehungen der virtuellen Maschine. Mögliche Werte finden Sie unter der **ReplicationHealth** -Eigenschaft der [**MSVM \_ replicationrelationship**](msvm-replicationrelationship.md) -Klasse.
+Das Array von Replikationszustandswerten für die verschiedenen Replikationsbeziehungen des virtuellen Computers. Mögliche Werte finden Sie in der **ReplicationHealth-Eigenschaft** der [**Msvm \_ ReplicationRelationship-Klasse.**](msvm-replicationrelationship.md)
 
 <dt>
 
@@ -644,7 +644,7 @@ Das Array der Replikations Integritäts Werte für die verschiedenen Replikation
 
 <span id="Ok"></span><span id="ok"></span><span id="OK"></span>
 
-**OK** (1)
+**Ok** (1)
 
 
 </dt> <dd></dd> <dt>
@@ -668,19 +668,19 @@ Das Array der Replikations Integritäts Werte für die verschiedenen Replikation
 **ReplicationMode**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt16**
+Datentyp: **uint16**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Der Replikationstyp für die virtuelle Maschine. Mögliche Werte finden Sie unter der **replicationmode** -Eigenschaft der [**MSVM \_ Computersystem**](msvm-computersystem.md) -Klasse.
+Der Replikationstyp für den virtuellen Computer. Mögliche Werte finden Sie in der **ReplicationMode-Eigenschaft** der [**Msvm \_ ComputerSystem-Klasse.**](msvm-computersystem.md)
 
 <dt>
 
 <span id="None"></span><span id="none"></span><span id="NONE"></span>
 
-**Keine** (0)
+**None** (0)
 
 
 </dt> <dd></dd> <dt>
@@ -701,7 +701,7 @@ Der Replikationstyp für die virtuelle Maschine. Mögliche Werte finden Sie unte
 
 <span id="Test_Replica"></span><span id="test_replica"></span><span id="TEST_REPLICA"></span>
 
-**Test Replikat** (3)
+**Testreplikat** (3)
 
 
 </dt> <dd></dd> <dt>
@@ -718,37 +718,37 @@ Der Replikationstyp für die virtuelle Maschine. Mögliche Werte finden Sie unte
 **ReplicationProviderId**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichen** folgen Array
+Datentyp: **Zeichenfolgenarray**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**arrayType**](/windows/desktop/WmiSdk/standard-qualifiers) ("indiziert")
+Qualifizierer: [**ArrayType**](/windows/desktop/WmiSdk/standard-qualifiers) ("Indiziert")
 </dt> </dl>
 
-Für den primären oder erweiterten virtuellen Replikat Computer ist dies die primäre Replikations Anbieter-ID. Bei einem virtuellen Replikat Computer und bei aktivierter erweiterter Replikation ist dies die Anbieter-ID für die erweiterte Beziehung.
+Für den primären oder erweiterten virtuellen Replikatcomputer ist dies die ID des primären Replikationsanbieters. Bei einem virtuellen Replikatcomputer und bei aktivierter erweiterter Replikation ist dies die Anbieter-ID für die erweiterte Beziehung.
 
-**Windows 8.1:** Dieser Wert wird bis Windows 8.1 und Windows Server 2012 R2 nicht unterstützt.
+**Windows 8.1:** Dieser Wert wird erst Windows 8.1 und Windows Server 2012 R2 unterstützt.
 
 </dd> <dt>
 
 **ReplicationState**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt16**
+Datentyp: **uint16**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**veraltet**](/windows/desktop/WmiSdk/standard-wmi-qualifiers) ("**MSVM \_ SummaryInformation**.**Replicationstateex**")
+Qualifizierer: [**Veraltet**](/windows/desktop/WmiSdk/standard-wmi-qualifiers) ("**Msvm \_ SummaryInformation**.**ReplicationStateEx**")
 </dt> </dl>
 
-Der Replikations Status für den virtuellen Computer. Mögliche Werte finden Sie unter der **replicationstate** -Eigenschaft der [**MSVM \_ Computersystem**](msvm-computersystem.md) -Klasse.
+Der Replikationsstatus für den virtuellen Computer. Mögliche Werte finden Sie in der **ReplicationState-Eigenschaft** der [**Msvm \_ ComputerSystem-Klasse.**](msvm-computersystem.md)
 
 > [!Note]  
-> Diese Eigenschaft ist ab Windows 8.1 veraltet. Verwenden Sie stattdessen **replicationstateex**.
+> Diese Eigenschaft ist ab Windows 8.1 veraltet. Verwenden Sie stattdessen **ReplicationStateEx.**
 
  
 
@@ -763,14 +763,14 @@ Der Replikations Status für den virtuellen Computer. Mögliche Werte finden Sie
 
 <span id="Ready_for_replication"></span><span id="ready_for_replication"></span><span id="READY_FOR_REPLICATION"></span>
 
-**Bereit für Replikation** (1)
+**Bereit für die Replikation** (1)
 
 
 </dt> <dd></dd> <dt>
 
 <span id="Waiting_to_complete_initial_replication"></span><span id="waiting_to_complete_initial_replication"></span><span id="WAITING_TO_COMPLETE_INITIAL_REPLICATION"></span>
 
-**Warten auf Abschluss der ersten Replikation** (2)
+**Warten auf den Abschluss der ersten Replikation** (2)
 
 
 </dt> <dd></dd> <dt>
@@ -784,28 +784,28 @@ Der Replikations Status für den virtuellen Computer. Mögliche Werte finden Sie
 
 <span id="Synced_replication_complete"></span><span id="synced_replication_complete"></span><span id="SYNCED_REPLICATION_COMPLETE"></span>
 
-**Synchronisierungs Replikation beendet** (4)
+**Synchronisierte Replikation abgeschlossen** (4)
 
 
 </dt> <dd></dd> <dt>
 
 <span id="Recovered"></span><span id="recovered"></span><span id="RECOVERED"></span>
 
-**Wieder hergestellt** (5)
+**Wiederhergestellt** (5)
 
 
 </dt> <dd></dd> <dt>
 
 <span id="Committed"></span><span id="committed"></span><span id="COMMITTED"></span>
 
-Commit **ausgeführt (6** )
+**Commit** (6)
 
 
 </dt> <dd></dd> <dt>
 
 <span id="Suspended"></span><span id="suspended"></span><span id="SUSPENDED"></span>
 
-Angeh **alten (7** )
+**Angehalten** (7)
 
 
 </dt> <dd></dd> <dt>
@@ -833,33 +833,33 @@ Angeh **alten (7** )
 
 <span id="Resynchronization_suspended"></span><span id="resynchronization_suspended"></span><span id="RESYNCHRONIZATION_SUSPENDED"></span>
 
-**Neusynchronisierung** angehalten (11)
+**Erneute Synchronisierung angehalten** (11)
 
 
 </dt> <dd></dd> <dt>
 
 <span id="Failover_in_progress"></span><span id="failover_in_progress"></span><span id="FAILOVER_IN_PROGRESS"></span>
 
-**Failover** wird ausgeführt (12)
+**Failover wird ausgeführt** (12)
 
 
 </dt> <dd></dd> </dl>
 
 </dd> <dt>
 
-**Replicationstateex**
+**ReplicationStateEx**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt16** Array
+Datentyp: **uint16-Array**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**arrayType**](/windows/desktop/WmiSdk/standard-qualifiers) ("indiziert")
+Qualifizierer: [**ArrayType**](/windows/desktop/WmiSdk/standard-qualifiers) ("Indiziert")
 </dt> </dl>
 
-Das Array von Replikations Zustands Werten für die verschiedenen Replikations Beziehungen der virtuellen Maschine. Mögliche Werte finden Sie unter der **replicationstate** -Eigenschaft der [**MSVM \_ replicationrelationship**](msvm-replicationrelationship.md) -Klasse.
+Das Array von Replikationszustandswerten für die verschiedenen Replikationsbeziehungen des virtuellen Computers. Mögliche Werte finden Sie in der **ReplicationState-Eigenschaft** der [**Msvm \_ ReplicationRelationship-Klasse.**](msvm-replicationrelationship.md)
 
 <dt>
 
@@ -872,14 +872,14 @@ Das Array von Replikations Zustands Werten für die verschiedenen Replikations B
 
 <span id="Ready_for_replication"></span><span id="ready_for_replication"></span><span id="READY_FOR_REPLICATION"></span>
 
-<span id="Ready_for_replication"></span><span id="ready_for_replication"></span><span id="READY_FOR_REPLICATION"></span>**Bereit für Replikation** (1)
+<span id="Ready_for_replication"></span><span id="ready_for_replication"></span><span id="READY_FOR_REPLICATION"></span>**Bereit für die Replikation** (1)
 
 
 </dt> <dd></dd> <dt>
 
 <span id="Waiting_to_complete_initial_replication"></span><span id="waiting_to_complete_initial_replication"></span><span id="WAITING_TO_COMPLETE_INITIAL_REPLICATION"></span>
 
-<span id="Waiting_to_complete_initial_replication"></span><span id="waiting_to_complete_initial_replication"></span><span id="WAITING_TO_COMPLETE_INITIAL_REPLICATION"></span>**Warten auf Abschluss der ersten Replikation** (2)
+<span id="Waiting_to_complete_initial_replication"></span><span id="waiting_to_complete_initial_replication"></span><span id="WAITING_TO_COMPLETE_INITIAL_REPLICATION"></span>**Warten auf den Abschluss der ersten Replikation** (2)
 
 
 </dt> <dd></dd> <dt>
@@ -893,28 +893,28 @@ Das Array von Replikations Zustands Werten für die verschiedenen Replikations B
 
 <span id="Synced_replication_complete"></span><span id="synced_replication_complete"></span><span id="SYNCED_REPLICATION_COMPLETE"></span>
 
-<span id="Synced_replication_complete"></span><span id="synced_replication_complete"></span><span id="SYNCED_REPLICATION_COMPLETE"></span>**Synchronisierungs Replikation beendet** (4)
+<span id="Synced_replication_complete"></span><span id="synced_replication_complete"></span><span id="SYNCED_REPLICATION_COMPLETE"></span>**Synchronisierte Replikation abgeschlossen** (4)
 
 
 </dt> <dd></dd> <dt>
 
 <span id="Recovered"></span><span id="recovered"></span><span id="RECOVERED"></span>
 
-<span id="Recovered"></span><span id="recovered"></span><span id="RECOVERED"></span>**Wieder hergestellt** (5)
+<span id="Recovered"></span><span id="recovered"></span><span id="RECOVERED"></span>**Wiederhergestellt** (5)
 
 
 </dt> <dd></dd> <dt>
 
 <span id="Committed"></span><span id="committed"></span><span id="COMMITTED"></span>
 
-<span id="Committed"></span><span id="committed"></span><span id="COMMITTED"></span>Commit **ausgeführt (6** )
+<span id="Committed"></span><span id="committed"></span><span id="COMMITTED"></span>**Commit** (6)
 
 
 </dt> <dd></dd> <dt>
 
 <span id="Suspended"></span><span id="suspended"></span><span id="SUSPENDED"></span>
 
-<span id="Suspended"></span><span id="suspended"></span><span id="SUSPENDED"></span>Angeh **alten (7** )
+<span id="Suspended"></span><span id="suspended"></span><span id="SUSPENDED"></span>**Angehalten** (7)
 
 
 </dt> <dd></dd> <dt>
@@ -942,41 +942,41 @@ Das Array von Replikations Zustands Werten für die verschiedenen Replikations B
 
 <span id="Resynchronization_suspended"></span><span id="resynchronization_suspended"></span><span id="RESYNCHRONIZATION_SUSPENDED"></span>
 
-<span id="Resynchronization_suspended"></span><span id="resynchronization_suspended"></span><span id="RESYNCHRONIZATION_SUSPENDED"></span>**Neusynchronisierung** angehalten (11)
+<span id="Resynchronization_suspended"></span><span id="resynchronization_suspended"></span><span id="RESYNCHRONIZATION_SUSPENDED"></span>**Erneute Synchronisierung angehalten** (11)
 
 
 </dt> <dd></dd> <dt>
 
 <span id="Failover_in_progress"></span><span id="failover_in_progress"></span><span id="FAILOVER_IN_PROGRESS"></span>
 
-<span id="Failover_in_progress"></span><span id="failover_in_progress"></span><span id="FAILOVER_IN_PROGRESS"></span>**Failover** wird ausgeführt (12)
+<span id="Failover_in_progress"></span><span id="failover_in_progress"></span><span id="FAILOVER_IN_PROGRESS"></span>**Failover wird ausgeführt** (12)
 
 
 </dt> <dd></dd> <dt>
 
 <span id="Failback_in_progress"></span><span id="failback_in_progress"></span><span id="FAILBACK_IN_PROGRESS"></span>
 
-<span id="Failback_in_progress"></span><span id="failback_in_progress"></span><span id="FAILBACK_IN_PROGRESS"></span>**Failback** wird ausgeführt (13)
+<span id="Failback_in_progress"></span><span id="failback_in_progress"></span><span id="FAILBACK_IN_PROGRESS"></span>**Failback wird ausgeführt** (13)
 
 
 </dt> <dd></dd> <dt>
 
 <span id="Failback_complete"></span><span id="failback_complete"></span><span id="FAILBACK_COMPLETE"></span>
 
-<span id="Failback_complete"></span><span id="failback_complete"></span><span id="FAILBACK_COMPLETE"></span>**Failback ist beendet** (14)
+<span id="Failback_complete"></span><span id="failback_complete"></span><span id="FAILBACK_COMPLETE"></span>**Failback abgeschlossen** (14)
 
 
 </dt> <dd></dd> <dt>
 
 <span id="Disk_update_in_progress"></span><span id="disk_update_in_progress"></span><span id="DISK_UPDATE_IN_PROGRESS"></span>
 
-<span id="Disk_update_in_progress"></span><span id="disk_update_in_progress"></span><span id="DISK_UPDATE_IN_PROGRESS"></span>Datenträger **Update läuft** (15)
+<span id="Disk_update_in_progress"></span><span id="disk_update_in_progress"></span><span id="DISK_UPDATE_IN_PROGRESS"></span>**Datenträgerupdate wird ausgeführt** (15)
 
 
 </dt> <dd>
 
 > [!Note]  
-> In Windows 10, Version 1703 und Windows Server 2016 hinzugefügt.
+> In Windows 10 Version 1703 und Windows Server 2016 hinzugefügt.
 
  
 
@@ -984,13 +984,13 @@ Das Array von Replikations Zustands Werten für die verschiedenen Replikations B
 
 <span id="Disk_update_critical"></span><span id="disk_update_critical"></span><span id="DISK_UPDATE_CRITICAL"></span>
 
-<span id="Disk_update_critical"></span><span id="disk_update_critical"></span><span id="DISK_UPDATE_CRITICAL"></span>Datenträger **Update kritisch** (16)
+<span id="Disk_update_critical"></span><span id="disk_update_critical"></span><span id="DISK_UPDATE_CRITICAL"></span>**Datenträgerupdate kritisch** (16)
 
 
 </dt> <dd>
 
 > [!Note]  
-> In Windows 10, Version 1703 und Windows Server 2016 hinzugefügt.
+> In Windows 10 Version 1703 und Windows Server 2016 hinzugefügt.
 
  
 
@@ -1004,7 +1004,7 @@ Das Array von Replikations Zustands Werten für die verschiedenen Replikations B
 </dt> <dd>
 
 > [!Note]  
-> In Windows 10, Version 1703 und Windows Server 2016 hinzugefügt.
+> In Windows 10 Version 1703 und Windows Server 2016 hinzugefügt.
 
  
 
@@ -1012,13 +1012,13 @@ Das Array von Replikations Zustands Werten für die verschiedenen Replikations B
 
 <span id="Repurpose_replication_in_progress"></span><span id="repurpose_replication_in_progress"></span><span id="REPURPOSE_REPLICATION_IN_PROGRESS"></span>
 
-<span id="Repurpose_replication_in_progress"></span><span id="repurpose_replication_in_progress"></span><span id="REPURPOSE_REPLICATION_IN_PROGRESS"></span>**Repurpose Replication in Progress** (18)
+<span id="Repurpose_replication_in_progress"></span><span id="repurpose_replication_in_progress"></span><span id="REPURPOSE_REPLICATION_IN_PROGRESS"></span>**Repurpose replication in progress (18) (Replikation in Bearbeitung** (18))
 
 
 </dt> <dd>
 
 > [!Note]  
-> In Windows 10, Version 1703 und Windows Server 2016 hinzugefügt.
+> In Windows 10 Version 1703 und Windows Server 2016 hinzugefügt.
 
  
 
@@ -1026,13 +1026,13 @@ Das Array von Replikations Zustands Werten für die verschiedenen Replikations B
 
 <span id="Prepared_for_sync_replication"></span><span id="prepared_for_sync_replication"></span><span id="PREPARED_FOR_SYNC_REPLICATION"></span>
 
-<span id="Prepared_for_sync_replication"></span><span id="prepared_for_sync_replication"></span><span id="PREPARED_FOR_SYNC_REPLICATION"></span>**Vorbereitet für Synchronisierungs Replikation** (19)
+<span id="Prepared_for_sync_replication"></span><span id="prepared_for_sync_replication"></span><span id="PREPARED_FOR_SYNC_REPLICATION"></span>**Vorbereitet für die Synchronisierungsreplikation** (19)
 
 
 </dt> <dd>
 
 > [!Note]  
-> In Windows 10, Version 1703 und Windows Server 2016 hinzugefügt.
+> In Windows 10 Version 1703 und Windows Server 2016 hinzugefügt.
 
  
 
@@ -1040,13 +1040,13 @@ Das Array von Replikations Zustands Werten für die verschiedenen Replikations B
 
 <span id="Prepared_for_group_reverse_replication"></span><span id="prepared_for_group_reverse_replication"></span><span id="PREPARED_FOR_GROUP_REVERSE_REPLICATION"></span>
 
-<span id="Prepared_for_group_reverse_replication"></span><span id="prepared_for_group_reverse_replication"></span><span id="PREPARED_FOR_GROUP_REVERSE_REPLICATION"></span>**Vorbereitet für Gruppen umgekehrte Replikation** (20)
+<span id="Prepared_for_group_reverse_replication"></span><span id="prepared_for_group_reverse_replication"></span><span id="PREPARED_FOR_GROUP_REVERSE_REPLICATION"></span>**Vorbereitet für die umgekehrte Gruppenreplikation** (20)
 
 
 </dt> <dd>
 
 > [!Note]  
-> In Windows 10, Version 1703 und Windows Server 2016 hinzugefügt.
+> In Windows 10 Version 1703 und Windows Server 2016 hinzugefügt.
 
  
 
@@ -1054,13 +1054,13 @@ Das Array von Replikations Zustands Werten für die verschiedenen Replikations B
 
 <span id="Firedrill_in_progress"></span><span id="firedrill_in_progress"></span><span id="FIREDRILL_IN_PROGRESS"></span>
 
-<span id="Firedrill_in_progress"></span><span id="firedrill_in_progress"></span><span id="FIREDRILL_IN_PROGRESS"></span>**Firedrill läuft** (21)
+<span id="Firedrill_in_progress"></span><span id="firedrill_in_progress"></span><span id="FIREDRILL_IN_PROGRESS"></span>**Firedrill in Bearbeitung** (21)
 
 
 </dt> <dd>
 
 > [!Note]  
-> In Windows 10, Version 1703 und Windows Server 2016 hinzugefügt.
+> In Windows 10 Version 1703 und Windows Server 2016 hinzugefügt.
 
  
 
@@ -1071,16 +1071,16 @@ Das Array von Replikations Zustands Werten für die verschiedenen Replikations B
 **Geschützt**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **boolescher** Wert
+Datentyp: **boolescher Wert**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Gibt an, ob der Schutz für die virtuelle Maschine konfiguriert ist.
+Gibt an, ob die Abschirmung für den virtuellen Computer konfiguriert ist.
 
 > [!Note]  
-> In Windows 10, Version 1703 und Windows Server 2016 hinzugefügt.
+> In Windows 10 Version 1703 und Windows Server 2016 hinzugefügt.
 
  
 
@@ -1089,90 +1089,90 @@ Gibt an, ob der Schutz für die virtuelle Maschine konfiguriert ist.
 **Momentaufnahmen**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **CIM \_ virtualsystemsettingdata** -Array
+Datentyp: **CIM \_ VirtualSystemSettingData-Array**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**arrayType**](/windows/desktop/WmiSdk/standard-qualifiers) ("indiziert")
+Qualifizierer: [**ArrayType**](/windows/desktop/WmiSdk/standard-qualifiers) ("Indiziert")
 </dt> </dl>
 
-Ein Array von [**MSVM \_ virtualsystemsettingdata**](msvm-virtualsystemsettingdata.md) -Instanzen, die die Momentaufnahmen für den virtuellen Computer darstellen. Diese Eigenschaft ist für Instanzen von **MSVM \_ SummaryInformation** , die eine Momentaufnahme eines virtuellen Computers darstellen, ungültig.
+Ein Array von [**Msvm \_ VirtualSystemSettingData-Instanzen,**](msvm-virtualsystemsettingdata.md) die die Momentaufnahmen für den virtuellen Computer darstellen. Diese Eigenschaft ist für Instanzen von **Msvm \_ SummaryInformation,** die eine Momentaufnahme eines virtuellen Computers darstellen, ungültig.
 
 </dd> <dt>
 
-**Status Beschreibungen**
+**StatusDescriptions**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichen** folgen Array
+Datentyp: **Zeichenfolgenarray**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**arrayType**](/windows/desktop/WmiSdk/standard-qualifiers) ("indiziert")
+Qualifizierer: [**ArrayType**](/windows/desktop/WmiSdk/standard-qualifiers) ("Indiziert")
 </dt> </dl>
 
-Zeichen folgen, die die entsprechenden **OperationalStatus** -Array Werte beschreiben. Dies entspricht der Eigenschaft **Status Beschreibungen** der [**MSVM \_ Computersystem**](msvm-computersystem.md) -Klasse.
+Zeichenfolgen, die die entsprechenden **OperationalStatus-Arraywerte** beschreiben. Dies entspricht der **StatusDescriptions-Eigenschaft** der [**Msvm \_ ComputerSystem-Klasse.**](msvm-computersystem.md)
 
 </dd> <dt>
 
-**Austauschen von Dateien**
+**SwapFilesInUse**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **boolescher** Wert
+Datentyp: **boolescher Wert**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Gibt an, ob Paging auf zweiter Ebene aktiv ist. Enthält **true** , wenn Paging auf zweiter Ebene aktiv ist, andernfalls **false** .
+Gibt an, ob paging der zweiten Ebene aktiv ist. Enthält **True,** wenn paging der zweiten Ebene aktiv ist, **andernfalls False.**
 
 </dd> <dt>
 
-**Testreplicasystem**
+**TestReplicaSystem**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **CIM \_ Computersystem**
+Datentyp: **CIM \_ ComputerSystem**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Verweis auf eine [**CIM \_ Computersystem**](/windows/desktop/CIMWin32Prov/cim-computersystem) -Instanz, die den virtuellen Computer des virtuellen Computers für den virtuellen Computer darstellt. Diese Eigenschaft ist für Instanzen von **MSVM \_ SummaryInformation** , die eine Momentaufnahme eines virtuellen Computers darstellen, ungültig.
+Verweis auf eine [**CIM \_ ComputerSystem-Instanz,**](/windows/desktop/CIMWin32Prov/cim-computersystem) die den virtuellen Testreplikatcomputer für den virtuellen Computer darstellt. Diese Eigenschaft ist für Instanzen von **Msvm \_ SummaryInformation,** die eine Momentaufnahme eines virtuellen Computers darstellen, ungültig.
 
 </dd> <dt>
 
-**Thumbnailimage**
+**ThumbnailImage**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Uint8** Array
+Datentyp: **uint8-Array**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-**Qualifizierer: octetstring**, [**arrayType**](/windows/desktop/WmiSdk/standard-qualifiers) ("indiziert"), [**modelcorrespondence**](/windows/desktop/WmiSdk/standard-qualifiers) ("**MSVM \_ SummaryInformation**.**ThumbnailImageWidth**","**MSVM \_ SummaryInformation**.**Thumbnailimageheight**")
+Qualifizierer: **OctetString**, [**ArrayType**](/windows/desktop/WmiSdk/standard-qualifiers) ("Indexed"), [**ModelCorrespondence**](/windows/desktop/WmiSdk/standard-qualifiers) ("**Msvm \_ SummaryInformation**.**ThumbnailImageWidth**", "**Msvm \_ SummaryInformation**.**ThumbnailImageHeight**")
 </dt> </dl>
 
-Ein Array, das ein kleines Bild des Desktops für die Miniaturansicht des Desktops für den virtuellen Computer oder die Momentaufnahme im RGB565-Format enthält.
+Ein Array, das ein kleines Miniaturbild des Desktops für den virtuellen Computer oder eine Momentaufnahme im RGB565-Format enthält.
 
 </dd> <dt>
 
-**Thumbnailimageheight**
+**ThumbnailImageHeight**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt16**
+Datentyp: **uint16**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**modelkorrespondenz**](/windows/desktop/WmiSdk/standard-qualifiers) ("**MSVM \_ SummaryInformation**.**Thumbnailimage**")
+Qualifizierer: [**ModelCorrespondence**](/windows/desktop/WmiSdk/standard-qualifiers) ("**Msvm \_ SummaryInformation**.**ThumbnailImage**")
 </dt> </dl>
 
-Die Höhe des Bilds in der thumbnailimage-Eigenschaft in Pixel.
+Die Höhe des Bilds in Pixel in der ThumbnailImage-Eigenschaft.
 
 > [!Note]  
 > In Windows 10 hinzugefügt.
@@ -1184,16 +1184,16 @@ Die Höhe des Bilds in der thumbnailimage-Eigenschaft in Pixel.
 **ThumbnailImageWidth**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt16**
+Datentyp: **uint16**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**modelkorrespondenz**](/windows/desktop/WmiSdk/standard-qualifiers) ("**MSVM \_ SummaryInformation**.**Thumbnailimage**")
+Qualifizierer: [**ModelCorrespondence**](/windows/desktop/WmiSdk/standard-qualifiers) ("**Msvm \_ SummaryInformation**.**ThumbnailImage**")
 </dt> </dl>
 
-Die Breite des Bilds in der thumbnailimage-Eigenschaft in Pixel.
+Die Breite des Bilds in der ThumbnailImage-Eigenschaft in Pixel.
 
 > [!Note]  
 > In Windows 10 hinzugefügt.
@@ -1202,59 +1202,59 @@ Die Breite des Bilds in der thumbnailimage-Eigenschaft in Pixel.
 
 </dd> <dt>
 
-**Betriebszeit**
+**Verfügbarkeit**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt64**
+Datentyp: **uint64**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Die Zeitspanne seit dem letzten Starten des virtuellen Computers. Diese Eigenschaft ist für Instanzen von **MSVM \_ SummaryInformation** , die eine Momentaufnahme eines virtuellen Computers darstellen, ungültig.
+Die Zeitspanne seit dem letzten Start des virtuellen Computers. Diese Eigenschaft ist für Instanzen von **Msvm \_ SummaryInformation** ungültig, die eine Momentaufnahme eines virtuellen Computers darstellen.
 
 </dd> <dt>
 
 **Version**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Die Version des virtuellen Systems im Format "Major. Minor", z. b. "2,0".
+Die Version des virtuellen Systems im Format "major.minor", z.B. "2.0".
 
 > [!Note]  
-> In Windows 10 hinzugefügt.
+> Hinzugefügt in Windows 10.
 
  
 
 </dd> <dt>
 
-**Virtualswitchnames**
+**VirtualSwitchNames**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichen** folgen Array
+Datentyp: **Zeichenfolgenarray**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**arrayType**](/windows/desktop/WmiSdk/standard-qualifiers) ("indiziert")
+Qualifizierer: [**ArrayType**](/windows/desktop/WmiSdk/standard-qualifiers) ("Indexed")
 </dt> </dl>
 
-Zeichen folgen, die die anzeigen amen der virtuellen Switches angeben, mit denen der virtuelle Computer verbunden ist.
+Zeichenfolgen, die die Benutzerfreundlichen Namen der virtuellen Switches angeben, mit denen der virtuelle Computer verbunden ist.
 
-**Windows 8.1:** Dieser Wert wird bis Windows 8.1 und Windows Server 2012 R2 nicht unterstützt.
+**Windows 8.1:** Dieser Wert wird erst unterstützt, wenn Windows 8.1 und Windows Server 2012 R2.
 
 </dd> <dt>
 
 **VirtualSystemSubType**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
@@ -1262,29 +1262,29 @@ Zugriffstyp: Schreibgeschützt
 
 Der Untertyp des virtuellen Systems.
 
-**Windows 8.1:** Dieser Wert wird bis Windows 8.1 und Windows Server 2012 R2 nicht unterstützt.
+**Windows 8.1:** Dieser Wert wird erst unterstützt, wenn Windows 8.1 und Windows Server 2012 R2.
 
 <dt>
 
 <span id="Microsoft_Hyper-V_SubType_1"></span><span id="microsoft_hyper-v_subtype_1"></span><span id="MICROSOFT_HYPER-V_SUBTYPE_1"></span>
 
-**Microsoft: Hyper-V: Untertyp: 1** ()
+**Microsoft:Hyper-V:SubType:1** ()
 
 
 </dt> <dd></dd> <dt>
 
 <span id="Microsoft_Hyper-V_SubType_2"></span><span id="microsoft_hyper-v_subtype_2"></span><span id="MICROSOFT_HYPER-V_SUBTYPE_2"></span>
 
-**Microsoft: Hyper-V: Untertyp: 2** ()
+**Microsoft:Hyper-V:SubType:2** ()
 
 
 </dt> <dd></dd> </dl>
 
 </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Der Zugriff auf die **MSVM-Klasse " \_ SummaryInformation** " kann durch die UAC-Filterung eingeschränkt werden. Weitere Informationen finden Sie unter [Benutzerkontensteuerung und WMI](/windows/desktop/WmiSdk/user-account-control-and-wmi).
+Der Zugriff auf die **Msvm \_ SummaryInformation-Klasse** kann durch UAC-Filterung eingeschränkt werden. Weitere Informationen finden Sie unter [Benutzerkontensteuerung und WMI.](/windows/desktop/WmiSdk/user-account-control-and-wmi)
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -1292,10 +1292,10 @@ Der Zugriff auf die **MSVM-Klasse " \_ SummaryInformation** " kann durch die UAC
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows 8 \[ -Desktop-Apps\]<br/>                                                              |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2012 \[ -Desktop-Apps\]<br/>                                                    |
-| Namespace<br/>                | \\Stammvirtualisierung \\ v2<br/>                                                                     |
-| MOF<br/>                      | <dl> <dt>Windowsvirtualization. v2. MOF</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | \[Windows 8 Nur Desktop-Apps\]<br/>                                                              |
+| Unterstützte Mindestversion (Server)<br/> | \[Windows Server 2012 Nur Desktop-Apps\]<br/>                                                    |
+| Namespace<br/>                | Root \\ Virtualization \\ V2<br/>                                                                     |
+| MOF<br/>                      | <dl> <dt>WindowsVirtualization.V2.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Vmms.exe</dt> </dl>                     |
 
 
@@ -1304,10 +1304,10 @@ Der Zugriff auf die **MSVM-Klasse " \_ SummaryInformation** " kann durch die UAC
 
 <dl> <dt>
 
-[**MSVM \_ summaryinformationbase**](msvm-summaryinformationbase.md)
+[**Msvm \_ SummaryInformationBase**](msvm-summaryinformationbase.md)
 </dt> <dt>
 
-[Klassen des virtuellen Systems](virtual-system-classes.md)
+[Virtuelle Systemklassen](virtual-system-classes.md)
 </dt> </dl>
 
  

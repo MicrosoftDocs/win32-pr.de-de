@@ -1,5 +1,5 @@
 ---
-description: Die SourceListClearAll-Methode des Patch-Objekts löschen die vollständige Quellliste aller Quellen des angegebenen Typs für einen Patch. Akzeptiert Type als Parameter. Diese Methode ruft MsiSourceListClearAllEx auf.
+description: Die SourceListClearAll-Methode des Patch-Objekts löscht die vollständige Quellliste aller Quellen des angegebenen Typs für einen Patch. Akzeptiert Type als Parameter. Diese Methode ruft MsiSourceListClearAllEx auf.
 ms.assetid: 9458a3db-8eaa-4067-875f-8fac68bdf1f8
 title: Patch.SourceListClearAll-Methode
 ms.topic: reference
@@ -22,7 +22,7 @@ ms.locfileid: "118942300"
 ---
 # <a name="patchsourcelistclearall-method"></a>Patch.SourceListClearAll-Methode
 
-Die **SourceListClearAll-Methode** des [**Patch-Objekts**](patch-object.md) schließt die vollständige Quellliste aller Quellen des angegebenen Typs für einen Patch. Akzeptiert *Type* als Parameter. Diese Methode ruft [**MsiSourceListClearAllEx auf.**](/windows/desktop/api/Msi/nf-msi-msisourcelistclearallexa)
+Die **SourceListClearAll-Methode** des [**Patch-Objekts**](patch-object.md) löscht die vollständige Quellliste aller Quellen des angegebenen Typs für einen Patch. Akzeptiert *Type* als Parameter. Diese Methode ruft [**MsiSourceListClearAllEx**](/windows/desktop/api/Msi/nf-msi-msisourcelistclearallexa)auf.
 
 ## <a name="syntax"></a>Syntax
 
@@ -56,13 +56,13 @@ Diese Methode gibt keinen Wert zurück.
 
 | Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Version<br/> | Windows Installer 5.0 auf Windows Server 2012, Windows 8, Windows Server 2008 R2 oder Windows 7. Windows Installer 4.0 oder Windows Installer 4.5 auf Windows Server 2008 oder Windows Vista. Windows Installer 3.0 oder höher auf Windows Server 2003, Windows XP und Windows 2000<br/> |
+| Version<br/> | Windows Installationsprogramm 5.0 auf Windows Server 2012, Windows 8, Windows Server 2008 R2 oder Windows 7. Windows Installer 4.0 oder Windows Installer 4.5 auf Windows Server 2008 oder Windows Vista. Windows Installationsprogramm 3.0 oder höher auf Windows Server 2003, Windows XP und Windows 2000<br/> |
 | DLL<br/>     | <dl> <dt>Msi.dll</dt> </dl>                                                                                                                                                                                                   |
-| IID<br/>     | IID IPatch ist als \_ 000C10A1-0000-0000-C000-00000000046 definiert.<br/>                                                                                                                                                                                                            |
+| IID<br/>     | IID \_ IPatch ist als 000C10A1-0000-0000-C000-0000000000046 definiert.<br/>                                                                                                                                                                                                            |
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 

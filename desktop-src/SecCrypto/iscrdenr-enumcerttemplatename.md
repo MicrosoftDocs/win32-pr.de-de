@@ -1,7 +1,7 @@
 ---
-description: Listet die Namen der Zertifikat Vorlagen auf.
+description: Listet die Namen der Zertifikatvorlagen auf.
 ms.assetid: 4741eb0d-b8e0-468c-8a00-9ccacb52a9a7
-title: 'Iscrdenr:: enumcerttemplatename-Methode'
+title: ISCrdEnr::enumCertTemplateName-Methode
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -14,16 +14,16 @@ api_type:
 - COM
 api_location:
 - Scrdenrl.dll
-ms.openlocfilehash: a0a4850143cac48ef9b9b853f99153d4daeb4366
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: aab979e77e9e3e61b9d35125accbdf01934764d5a09daf161480646cdec28e3c
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106362687"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119005198"
 ---
-# <a name="iscrdenrenumcerttemplatename-method"></a>Iscrdenr:: enumcerttemplatename-Methode
+# <a name="iscrdenrenumcerttemplatename-method"></a>ISCrdEnr::enumCertTemplateName-Methode
 
-Die **enumcerttemplatename** -Methode listet die Namen der Zertifikat Vorlagen auf.
+Die **enumCertTemplateName-Methode** listet die Namen der Zertifikatvorlagen auf.
 
 ## <a name="syntax"></a>Syntax
 
@@ -54,24 +54,24 @@ SCrdEnr.enumCertTemplateName( _
 
 <dl> <dt>
 
-*dwIndex* \[ in\]
+*dwIndex* \[ In\]
 </dt> <dd>
 
-Der null basierte Index für die enumerationssequenz.
+Der nullbasierte Index für die Enumerationssequenz.
 
 </dd> <dt>
 
-*dwFlags* \[ in\]
+*dwFlags* \[ In\]
 </dt> <dd>
 
-Ein-Wert, der bestimmt, ob die aufgelistete Zertifikat Vorlage auf Benutzer-oder Computer Zertifikate angewendet wird. Wenn dieser Wert "SCard \_ ENROLL \_ User \_ CERT \_ Template" (definiert als 1) ist, gilt die Enumeration für Benutzerzertifikat Vorlagen. Wenn dieser Wert "SCard \_ ENROLL \_ Computer \_ CERT \_ Template" (definiert als 2) ist, gilt die Enumeration für Computer Zertifikat Vorlagen.
+Ein -Wert, der bestimmt, ob die aufzählte Zertifikatvorlage für Benutzer- oder Computerzertifikate gilt. Wenn dieser Wert SCARD \_ ENROLL \_ USER \_ CERT TEMPLATE \_ (definiert als 1) ist, gilt die -Enumeration für Benutzerzertifikatvorlagen. Wenn dieser Wert SCARD \_ ENROLL \_ MACHINE \_ CERT TEMPLATE \_ (definiert als 2) ist, gilt die -Enumeration für Computerzertifikatvorlagen.
 
 </dd> <dt>
 
-*pbstraucerttemplatename* \[ vorgenommen\]
+*pbstrCertTemplateName* \[ out\]
 </dt> <dd>
 
-Ein Zeiger auf eine Zeichenfolge, die den Namen der aufgelisteten Zertifikat Vorlage zurückgibt.
+Ein Zeiger auf eine Zeichenfolge, die den Namen der aufzählten Zertifikatvorlage zurückgibt.
 
 </dd> </dl>
 
@@ -79,13 +79,13 @@ Ein Zeiger auf eine Zeichenfolge, die den Namen der aufgelisteten Zertifikat Vor
 
 ### <a name="c"></a>C++
 
-Wenn die Methode erfolgreich ausgeführt wird, gibt die Methode S \_ OK zurück.
+Wenn die Methode erfolgreich ist, gibt die Methode S \_ OK zurück.
 
-Wenn die Methode fehlschlägt, wird ein **HRESULT** -Wert zurückgegeben, der den Fehler angibt. Eine Liste der allgemeinen Fehlercodes finden Sie unter [Allgemeine HRESULT-Werte](common-hresult-values.md).
+Wenn die Methode fehlschlägt, wird ein **HRESULT-Wert** zurückgegeben, der den Fehler angibt. Eine Liste der allgemeinen Fehlercodes finden Sie unter [Allgemeine HRESULT-Werte.](common-hresult-values.md)
 
 ### <a name="vb"></a>VB
 
-Eine Zeichenfolge, die den Namen der aufgelisteten Zertifikat Vorlage enthält.
+Eine Zeichenfolge, die den Namen der aufzählten Zertifikatvorlage enthält.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -94,26 +94,26 @@ Eine Zeichenfolge, die den Namen der aufgelisteten Zertifikat Vorlage enthält.
 | Anforderung | Wert |
 |-------------------------------------|-----------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Nicht unterstützt<br/>                                                               |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/>                                    |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                                    |
 | DLL<br/>                      | <dl> <dt>Scrdenrl.dll</dt> </dl> |
-| IID<br/>                      | IID \_ iscrdenr ist definiert als 753988a1-1357-436d-9cf5-f089bdd67d64<br/>             |
+| IID<br/>                      | IID \_ ISCrdEnr ist als 753988a1-1357-436d-9cf5-f089bdd67d64 definiert.<br/>             |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Iscrdenr**](iscrdenr.md)
+[**ISCrdEnr**](iscrdenr.md)
 </dt> <dt>
 
-[**Iscrdenr:: getcerttemplatecount**](iscrdenr-getcerttemplatecount.md)
+[**ISCrdEnr::getCertTemplateCount**](iscrdenr-getcerttemplatecount.md)
 </dt> <dt>
 
-[**Iscrdenr:: getcerttemplatename**](iscrdenr-getcerttemplatename.md)
+[**ISCrdEnr::getCertTemplateName**](iscrdenr-getcerttemplatename.md)
 </dt> <dt>
 
-[**Iscrdenr:: setcerttemplatename**](iscrdenr-setcerttemplatename.md)
+[**ISCrdEnr::setCertTemplateName**](iscrdenr-setcerttemplatename.md)
 </dt> </dl>
 
  

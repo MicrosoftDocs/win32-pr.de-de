@@ -18,7 +18,7 @@ ms.locfileid: "118937319"
 ---
 # <a name="matrix-transformations"></a>Matrixtransformationen
 
-Scheitelungen und Normals werden von den Matrizen modelview und projection transformiert, bevor sie zum Erstellen eines Bilds im Framepuffer verwendet werden. Verwenden Sie Funktionen wie [**glMatrixMode,**](glmatrixmode.md) [ * *glMultMatrix \** _](glmultmatrix.md), [_*glRotate, \**_](glrotate.md) [_*glTranslate \**_](gltranslate.md)und [_*glScale, \**_](glscale.md) um die gewünschten Transformationen zu erstellen. Oder geben Sie Matrizen direkt mit [_*glLoadMatrix \**_](glloadmatrix.md) und [_ *glLoadIdentity an.* *](glloadidentity.md) Verwenden [**Sie glPushMatrix**](glpushmatrix.md) und [**glPopMatrix,**](glpopmatrix.md) um Modellansichts- und Projektionsmatrizen auf ihren jeweiligen Stapeln zu speichern und wiederherzustellen.
+Scheitelungen und Normals werden von den Matrizen modelview und projection transformiert, bevor sie zum Erstellen eines Bilds im Framepuffer verwendet werden. Verwenden Sie Funktionen wie [**glMatrixMode,**](glmatrixmode.md) [ * *glMultMatrix \** _](glmultmatrix.md), [_*glRotate, \**_](glrotate.md) [_*glTranslate \**_](gltranslate.md)und [_*glScale, \**_](glscale.md) um die gewünschten Transformationen zu erstellen. Oder geben Sie Matrizen direkt mit [_*glLoadMatrix \* und*_](glloadmatrix.md) _ [*glLoadIdentity an.* *](glloadidentity.md) Verwenden [**Sie glPushMatrix**](glpushmatrix.md) und [**glPopMatrix,**](glpopmatrix.md) um Modellansichts- und Projektionsmatrizen auf ihren jeweiligen Stapeln zu speichern und wiederherzustellen.
 
  
 

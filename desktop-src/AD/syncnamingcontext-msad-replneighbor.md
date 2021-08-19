@@ -1,12 +1,12 @@
 ---
-title: Syncnamingcontext-Methode der MSAD_ReplNeighbor-Klasse
-description: Ruft die dsreplicasync-Funktion auf, die einen Ziel namens Kontext mit einer seiner Quellen synchronisiert.
+title: SyncNamingContext-Methode der MSAD_ReplNeighbor-Klasse
+description: Ruft die DsReplicaSync-Funktion auf, die einen Zielbenennungskontext mit einer ihrer Quellen synchronisiert.
 ms.assetid: 005053c4-8d9c-42f6-bae6-3ecdedd5ac2b
 ms.tgt_platform: multiple
 keywords:
-- Syncnamingcontext-Methode Active Directory
-- Syncnamingcontext-Methode Active Directory, MSAD_ReplNeighbor-Klasse
-- MSAD_ReplNeighbor-Klasse Active Directory, syncnamingcontext-Methode
+- SyncNamingContext-Methode Active Directory
+- SyncNamingContext-Methode Active Directory , MSAD_ReplNeighbor-Klasse
+- MSAD_ReplNeighbor Active Directory-Klasse, SyncNamingContext-Methode
 topic_type:
 - apiref
 api_name:
@@ -17,16 +17,16 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 691bd3e943f491ba93d867097ac0167c97be6108
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 2b96dd7363b5c2a48a6c25826d8c2752c181bc9125955b6c73d5532eb2665514
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104478285"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119024668"
 ---
-# <a name="syncnamingcontext-method-of-the-msad_replneighbor-class"></a>Syncnamingcontext-Methode der MSAD \_ ReplNeighbor-Klasse
+# <a name="syncnamingcontext-method-of-the-msad_replneighbor-class"></a>SyncNamingContext-Methode der MSAD \_ ReplNeighbor-Klasse
 
-Ruft die [**dsreplicasync**](/windows/desktop/api/Ntdsapi/nf-ntdsapi-dsreplicasynca) -Funktion auf, die einen Ziel namens Kontext mit einer seiner Quellen synchronisiert.
+Ruft die [**DsReplicaSync-Funktion**](/windows/desktop/api/Ntdsapi/nf-ntdsapi-dsreplicasynca) auf, die einen Zielbenennungskontext mit einer ihrer Quellen synchronisiert.
 
 ## <a name="syntax"></a>Syntax
 
@@ -43,124 +43,124 @@ void SyncNamingContext(
 
 <dl> <dt>
 
-*Optionen* \[ in\]
+*Optionen* \[ In\]
 </dt> <dd>
 
-Zusätzliche Daten, die bestimmen, wie die-Methode die Anforderung verarbeitet. Dieser Parameter kann eine Kombination der folgenden Werte sein.
+Zusätzliche Daten, die bestimmen, wie die Methode die Anforderung verarbeitet. Dieser Parameter kann eine Kombination der folgenden Werte sein.
 
 <dt>
 
 <span id="DS_REPSYNC_ADD_REFERENCE"></span><span id="ds_repsync_add_reference"></span>
 
-<span id="DS_REPSYNC_ADD_REFERENCE"></span><span id="ds_repsync_add_reference"></span>**DS \_ repsync \_ Verweis hinzufügen \_**
+<span id="DS_REPSYNC_ADD_REFERENCE"></span><span id="ds_repsync_add_reference"></span>**DS \_ REPSYNC \_ ADD \_ REFERENCE**
 
 
 </dt> <dd>
 
-Bewirkt, dass der Quellverzeichnis System-Agent (DSA) überprüft, ob das lokale DSA in der Liste Quell Replikate vorhanden ist. Wenn das lokale DSA nicht vorhanden ist, wird es hinzugefügt. Dadurch wird sichergestellt, dass die Quelle Änderungs Benachrichtigungen sendet.
+Bewirkt, dass der Quellverzeichnissystem-Agent (DSA) überprüft, ob der lokale DSA in der Liste der Quellreplikationen vorhanden ist. Wenn die lokale DSA nicht vorhanden ist, wird sie hinzugefügt. Dadurch wird sichergestellt, dass die Quelle Änderungsbenachrichtigungen sendet.
 
 </dd> <dt>
 
 <span id="DS_REPSYNC_ALL_SOURCES"></span><span id="ds_repsync_all_sources"></span>
 
-<span id="DS_REPSYNC_ALL_SOURCES"></span><span id="ds_repsync_all_sources"></span>**DS \_ repsync \_ alle \_ Quellen**
+<span id="DS_REPSYNC_ALL_SOURCES"></span><span id="ds_repsync_all_sources"></span>**DS \_ REPSYNC \_ ALL \_ SOURCES**
 
 
 </dt> <dd>
 
 Dieser Wert wird nicht unterstützt.
 
-**Windows Server 2008 R2, Windows Server 2008 und Windows Server 2003:** Synchronisiert von allen Quellen.
+**Windows Server 2008 R2, Windows Server 2008 und Windows Server 2003:** Synchronisiert aus allen Quellen.
 
 </dd> <dt>
 
 <span id="DS_REPSYNC_ASYNCHRONOUS_OPERATION"></span><span id="ds_repsync_asynchronous_operation"></span>
 
-<span id="DS_REPSYNC_ASYNCHRONOUS_OPERATION"></span><span id="ds_repsync_asynchronous_operation"></span>**\_asynchroner DS repsync- \_ \_ Vorgang**
+<span id="DS_REPSYNC_ASYNCHRONOUS_OPERATION"></span><span id="ds_repsync_asynchronous_operation"></span>**\_ \_ ASYNCHRONER DS-REPSYNC-VORGANG \_**
 
 
 </dt> <dd>
 
 Führt diesen Vorgang asynchron aus.
 
-**Windows Server 2008 R2, Windows Server 2008 und Windows Server 2003:** Erforderlich, wenn " **DS \_ repsync \_ All \_**"-Quellen verwendet werden.
+**Windows Server 2008 R2, Windows Server 2008 und Windows Server 2003:** Erforderlich, wenn **DS \_ REPSYNC \_ ALL \_ SOURCES** verwendet wird.
 
 </dd> <dt>
 
 <span id="DS_REPSYNC_FORCE"></span><span id="ds_repsync_force"></span>
 
-<span id="DS_REPSYNC_FORCE"></span><span id="ds_repsync_force"></span>**DS \_ repsync- \_ Force**
+<span id="DS_REPSYNC_FORCE"></span><span id="ds_repsync_force"></span>**DS \_ REPSYNC \_ FORCE**
 
 
 </dt> <dd>
 
-Wird synchronisiert, auch wenn der Link zurzeit deaktiviert ist.
+Wird auch dann synchronisiert, wenn der Link derzeit deaktiviert ist.
 
 </dd> <dt>
 
 <span id="DS_REPSYNC_FULL"></span><span id="ds_repsync_full"></span>
 
-<span id="DS_REPSYNC_FULL"></span><span id="ds_repsync_full"></span>**DS \_ repsync \_ voll**
+<span id="DS_REPSYNC_FULL"></span><span id="ds_repsync_full"></span>**DS \_ REPSYNC \_ FULL**
 
 
 </dt> <dd>
 
-Wird beginnend mit der ersten Update Sequenznummer (Update Sequence Number, US) synchronisiert.
+Synchronisiert ab der ersten Updatesequenznummer (USN).
 
 </dd> <dt>
 
 <span id="DS_REPSYNC_INTERSITE_MESSAGING"></span><span id="ds_repsync_intersite_messaging"></span>
 
-<span id="DS_REPSYNC_INTERSITE_MESSAGING"></span><span id="ds_repsync_intersite_messaging"></span>**DS \_ repsync- \_ standortübergreifende \_ Messaging**
+<span id="DS_REPSYNC_INTERSITE_MESSAGING"></span><span id="ds_repsync_intersite_messaging"></span>**DS \_ REPSYNC \_ INTERSITE \_ MESSAGING**
 
 
 </dt> <dd>
 
-Wird mithilfe eines ISM synchronisiert.
+Synchronisiert mithilfe eines ISM.
 
 </dd> <dt>
 
 <span id="DS_REPSYNC_NO_DISCARD"></span><span id="ds_repsync_no_discard"></span>
 
-<span id="DS_REPSYNC_NO_DISCARD"></span><span id="ds_repsync_no_discard"></span>**DS \_ repsync \_ nicht \_ verwerfen**
+<span id="DS_REPSYNC_NO_DISCARD"></span><span id="ds_repsync_no_discard"></span>**DS \_ REPSYNC \_ NO \_ DISCARD**
 
 
 </dt> <dd>
 
-Diese Synchronisierungs Anforderung wird von nicht verworfen, auch wenn eine ähnliche Synchronisierung aussteht.
+Diese Synchronisierungsanforderung wird auch dann nicht verworfen, wenn eine ähnliche Synchronisierung aussteht.
 
 </dd> <dt>
 
 <span id="DS_REPSYNC_PERIODIC"></span><span id="ds_repsync_periodic"></span>
 
-<span id="DS_REPSYNC_PERIODIC"></span><span id="ds_repsync_periodic"></span>**DS \_ repsync \_ periodisch**
+<span id="DS_REPSYNC_PERIODIC"></span><span id="ds_repsync_periodic"></span>**DS \_ REPSYNC \_ PERIODIC**
 
 
 </dt> <dd>
 
-Gibt an, dass dieser Vorgang eine regelmäßige Synchronisierungs Anforderung ist, die vom Administrator geplant wird.
+Gibt an, dass es sich bei diesem Vorgang um eine vom Administrator geplante regelmäßige Synchronisierungsanforderung handelt.
 
 </dd> <dt>
 
 <span id="DS_REPSYNC_URGENT"></span><span id="ds_repsync_urgent"></span>
 
-<span id="DS_REPSYNC_URGENT"></span><span id="ds_repsync_urgent"></span>**DS \_ repsync ( \_ dringlich)**
+<span id="DS_REPSYNC_URGENT"></span><span id="ds_repsync_urgent"></span>**DS \_ REPSYNC \_ DRINGEND**
 
 
 </dt> <dd>
 
-Gibt an, dass dieser Vorgang eine Benachrichtigung über ein Update ist, das als dringlich markiert ist.
+Gibt an, dass dieser Vorgang eine Benachrichtigung über ein Update ist, das als dringend markiert ist.
 
 </dd> <dt>
 
 <span id="DS_REPSYNC_WRITEABLE"></span><span id="ds_repsync_writeable"></span>
 
-<span id="DS_REPSYNC_WRITEABLE"></span><span id="ds_repsync_writeable"></span>**DS \_ repsync- \_ beschreibbares Element**
+<span id="DS_REPSYNC_WRITEABLE"></span><span id="ds_repsync_writeable"></span>**DS \_ REPSYNC \_ WRITEABLE**
 
 
 </dt> <dd>
 
-Gibt an, dass dieses Replikat geschrieben werden kann. Wenn dieses Flag nicht festgelegt ist, ist das Replikat schreibgeschützt.
+Gibt an, dass dieses Replikat beschreibbar ist. Wenn dieses Flag nicht festgelegt ist, ist das Replikat schreibgeschützt.
 
 </dd> </dl> </dd> </dl>
 
@@ -176,13 +176,13 @@ Diese Methode gibt keinen Wert zurück.
 |-------------------------------------|-----------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Nicht unterstützt<br/>                                                               |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2008<br/>                                                          |
-| Namespace<br/>                | \\Microsoftactivedirectory-Stammverzeichnis<br/>                                               |
-| MOF<br/>                      | <dl> <dt>ReplProv. MOF</dt> </dl> |
+| Namespace<br/>                | \\MicrosoftActiveDirectory-Stammverzeichnis<br/>                                               |
+| MOF<br/>                      | <dl> <dt>Replprov.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Replprov.dll</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 

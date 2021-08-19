@@ -1,9 +1,9 @@
 ---
-title: Ambientattribute. Left
-description: Das Left-Attribut gibt die linke Koordinate des Steuer Elements an oder ruft Sie ab.
+title: AmbientAttributes.left
+description: Das linke Attribut gibt die linke Koordinate des Steuerelements an oder ruft sie ab.
 ms.assetid: fb1856f2-e286-4ba8-9ae4-b6cd8b0967b1
 keywords:
-- Ambientattribute. Left Windows-Media Player
+- AmbientAttributes.left Windows Media Player
 topic_type:
 - apiref
 api_name:
@@ -12,16 +12,16 @@ api_type:
 - NA
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: f881de6733637c0776dd9626a7efc02b145ec25f
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 3624113fbc92e8114cdd4924fb0452f1091803557e5e32995450f8d2fae6e60a
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106369232"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119055088"
 ---
-# <a name="ambientattributesleft"></a>Ambientattribute. Left
+# <a name="ambientattributesleft"></a>AmbientAttributes.left
 
-Das **left** -Attribut gibt die linke Koordinate des Steuer Elements an oder ruft Sie ab.
+Das **linke** Attribut gibt die linke Koordinate des Steuerelements an oder ruft sie ab.
 
 ``` syntax
         elementID.left
@@ -29,7 +29,7 @@ Das **left** -Attribut gibt die linke Koordinate des Steuer Elements an oder ruf
 
 ## <a name="possible-values"></a>Mögliche Werte
 
-Bei diesem Attribut handelt es sich um eine Lese-/schreibzahl (**Long**), die den Abstand zwischen dem Steuerelement und dem linken Rand der übergeordneten **Ansicht** oder **unter Ansicht** darstellt.  Der Standardwert ist 0 (null). Negative Zahlen sind zulässig. in diesem Fall schneidet der linke Rahmen der **Sicht** oder der **unter Ansicht** das Steuerelement ab.
+Dieses Attribut ist eine Lese-/Schreibnummer (**long**), die den Abstand zwischen dem Steuerelement und dem linken Rand der übergeordneten **VIEW-** oder  **SUBVIEW-Ansicht** in Pixel darstellt. Der Standardwert ist 0 (null). Negative Zahlen sind zulässig. In diesem Fall wird das Steuerelement durch den linken Rahmen der **VIEW-** oder **SUBVIEW-Ansicht** eingegrenzt.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -37,7 +37,7 @@ Bei diesem Attribut handelt es sich um eine Lese-/schreibzahl (**Long**), die de
 
 | Anforderung | Wert |
 |--------------------|------------------------------------------------------|
-| Version<br/> | Windows Media Player, Version 7,0 oder höher<br/> |
+| Version<br/> | Windows Media Player Version 7.0 oder höher<br/> |
 
 
 

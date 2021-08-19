@@ -1,29 +1,29 @@
 ---
-description: Gibt die umschließungsdownmischstufe in Dezibel (DB) in einem Dolby Digital-Audiostream an. Diese Eigenschaft gilt für Dolby Digital-Audioencoder.
+description: Gibt die Surround Downmix-Ebene in Decibels (dB) in einem Dolby Digital-Audiostream an. Diese Eigenschaft gilt für Dolby Digital-Audioencoder.
 ms.assetid: 4633f91b-2023-4d35-ba10-34818f0f632a
-title: Avencddsurrounddownmixlevel-Eigenschaft (codecapi. h)
+title: AVEncDDSurroundDownMixLevel-Eigenschaft (Codecapi.h)
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 217c0ed72c3ad1015e18f0a735323066e039fc7b
-ms.sourcegitcommit: a47bd86f517de76374e4fff33cfeb613eb259a7e
+ms.openlocfilehash: 707f2c0af1c17625dac35ce4987f26c0026a91275b88ee20f73274ec2362c50f
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/06/2021
-ms.locfileid: "103958035"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120087610"
 ---
-# <a name="avencddsurrounddownmixlevel-property"></a>Avencddsurrounddownmixlevel (Eigenschaft)
+# <a name="avencddsurrounddownmixlevel-property"></a>AVEncDDSurroundDownMixLevel-Eigenschaft
 
-Gibt die umschließungsdownmischstufe in Dezibel (DB) in einem Dolby Digital-Audiostream an. Diese Eigenschaft gilt für Dolby Digital-Audioencoder.
+Gibt die Surround Downmix-Ebene in Decibels (dB) in einem Dolby Digital-Audiostream an. Diese Eigenschaft gilt für Dolby Digital-Audioencoder.
 
 Dies ist eine Eigenschaft mit Lese- und Schreibzugriff.
 
 ## <a name="data-type"></a>Datentyp
 
-**UInt32** (**VT \_ UI4**)
+**UINT32** (**VT \_ UI4**)
 
 ## <a name="property-guid"></a>Eigenschaften-GUID
 
-**Codecapi \_ avencddsurrounddownmixlevel**
+**CODECAPI \_ AVEncDDSurroundDownMixLevel**
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -31,9 +31,9 @@ Dies ist eine Eigenschaft mit Lese- und Schreibzugriff.
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[ Desktop Apps \| UWP-apps\]<br/>                     |
-| Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[ Desktop Apps \| UWP-apps\]<br/>                           |
-| Header<br/>                   | <dl> <dt>Codecapi. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[ Desktop-Apps \| UWP-Apps\]<br/>                     |
+| Unterstützte Mindestversion (Server)<br/> | Windows 2000 \[ Server-Desktop-Apps \| UWP-Apps\]<br/>                           |
+| Header<br/>                   | <dl> <dt>Codecapi.h</dt> </dl> |
 
 
 
@@ -41,10 +41,10 @@ Dies ist eine Eigenschaft mit Lese- und Schreibzugriff.
 
 <dl> <dt>
 
-[Eigenschaften der Codec-API](codec-api-properties.md)
+[Codec-API-Eigenschaften](codec-api-properties.md)
 </dt> <dt>
 
-[**Icodecapi-Schnittstelle**](/windows/desktop/api/Strmif/nn-strmif-icodecapi)
+[**ICodecAPI-Schnittstelle**](/windows/desktop/api/Strmif/nn-strmif-icodecapi)
 </dt> </dl>
 
  
