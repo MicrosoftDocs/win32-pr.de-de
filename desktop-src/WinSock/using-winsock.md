@@ -1,5 +1,5 @@
 ---
-description: In diesem Abschnitt werden Verfahren und Programmiertechniken beschrieben, die mit Winsock verwendet werden. Es umfasst grundlegende Winsock-Programmiertechniken wie Erste Schritte With Winsock sowie erweiterte Techniken, die für erfahrene Winsock-Entwickler nützlich sind.
+description: In diesem Abschnitt werden die Verfahren und Programmiertechniken beschrieben, die mit Winsock verwendet werden. Es umfasst grundlegende Winsock-Programmiertechniken wie Erste Schritte With Winsock sowie erweiterte Techniken, die für erfahrene Winsock-Entwickler nützlich sind.
 ms.assetid: 614ead82-b3fc-4023-8ecc-9f0212f0b194
 title: Verwenden von Winsock
 ms.topic: article
@@ -13,18 +13,18 @@ ms.locfileid: "118322033"
 ---
 # <a name="using-winsock"></a>Verwenden von Winsock
 
-In diesem Abschnitt werden Verfahren und Programmiertechniken beschrieben, die mit Winsock verwendet werden. Sie umfasst grundlegende Winsock-Programmiertechniken, z. [B. Erste Schritte Mit Winsock,](getting-started-with-winsock.md)sowie erweiterte Techniken, die für erfahrene Winsock-Entwickler nützlich sind.
+In diesem Abschnitt werden die Verfahren und Programmiertechniken beschrieben, die mit Winsock verwendet werden. Sie umfasst grundlegende Winsock-Programmiertechniken wie [Erste Schritte With Winsock](getting-started-with-winsock.md)sowie erweiterte Techniken, die für erfahrene Winsock-Entwickler nützlich sind.
 
 In der folgenden Liste werden die Themen in diesem Abschnitt beschrieben:
 
 -   [Erste Schritte mit Winsock](getting-started-with-winsock.md)
 -   [Sichere Winsock-Programmierung](secure-winsock-programming.md)
--   [Portieren von Socketanwendungen in Winsock](porting-socket-applications-to-winsock.md)
+-   [Portieren von Socketanwendungen zu Winsock](porting-socket-applications-to-winsock.md)
 -   [IPv6-Leitfaden für Windows Sockets-Anwendungen](ipv6-guide-for-windows-sockets-applications-2.md)
--   [Hochleistungsanwendungen für Windows Sockets](high-performance-windows-sockets-applications-2.md)
--   [Kategorisieren von mehrstufigen Dienstanbietern und Anwendungen](categorizing-layered-service-providers-and-applications.md)
+-   [Hochleistungsanwendungen Windows Sockets](high-performance-windows-sockets-applications-2.md)
+-   [Kategorisieren von mehrschichtigen Dienstanbietern und Anwendungen](categorizing-layered-service-providers-and-applications.md)
 -   [Multicastprogrammierung](multicast-programming.md)
--   [Zuverlässige Multicastprogrammierung (Reliable Multicast Programming, PGM)](reliable-multicast-programming--pgm-.md)
+-   [Zuverlässige Multicastprogrammierung (PGM)](reliable-multicast-programming--pgm-.md)
 -   [Winsock-Ablaufverfolgung](winsock-tracing.md)
 
 ## <a name="related-topics"></a>Zugehörige Themen

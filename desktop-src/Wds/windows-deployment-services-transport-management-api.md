@@ -1,22 +1,22 @@
 ---
-title: Transport Verwaltungs-API für Windows-Bereitstellungs Dienste
+title: Windows Deployment Services Transport Management-API
 ms.assetid: c62e77b0-c3d7-41c1-88be-1c45543f243a
-description: 'Weitere Informationen: Windows-Bereitstellungs Dienste-transportverwaltungs-API'
+description: Weitere Informationen finden Sie unter Windows Deployment Services Transport Management-API.
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: b2c115b122db062bacd68e707460e2a6862ead97
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 2a8a765a3412c40eeccce394e105bcf3f03f64b25bf6f8b083d0a9042c5f6fd8
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "104348438"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118330455"
 ---
-# <a name="windows-deployment-services-transport-management-api"></a>Transport Verwaltungs-API für Windows-Bereitstellungs Dienste
+# <a name="windows-deployment-services-transport-management-api"></a>Windows Deployment Services Transport Management-API
 
-Die Windows-Bereitstellungs Dienste (WDS)-Transport Verwaltung verwendet die folgenden Enumerationen und Schnittstellen:
+Windows Deployment Services (WDS) Transport Management verwendet die folgenden Enumerationen und Schnittstellen:
 
--   [WDS-transportverwaltungsenumerationen](wds-transport-management-enums.md)
--   [WDS-Transport Verwaltungs Schnittstellen](wds-transport-management-interfaces.md)
+-   [WDS-Transport Management-Enumerationen](wds-transport-management-enums.md)
+-   [WDS-Transport Management Schnittstellen](wds-transport-management-interfaces.md)
 
  
 

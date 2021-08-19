@@ -1,7 +1,7 @@
 ---
-description: 'CImageAllocator::m_pFilter Member: Die \_ m pFilter-Membervariable ist ein Zeiger auf den besitzenden Filter.'
+description: 'CImageAllocator::m_pFilter Member: Die m pFilter-Membervariable ist ein Zeiger \_ auf den besitzenden Filter.'
 ms.assetid: 57ba31bb-e047-4046-a58d-6ca39d6093f8
-title: CImageAllocator::m_pFilter-Member (Winutil.h)
+title: CImageAllocator::m_pFilter Member (Winutil.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -43,11 +43,11 @@ CBaseFilter *m_pFilter;
 | Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Header<br/>  | <dl> <dt>Winutil.h (include Streams.h)</dt> </dl>                                                                                   |
-| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Verkaufsbuilds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Einzelhandels-Builds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 

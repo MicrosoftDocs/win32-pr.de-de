@@ -17,16 +17,16 @@ In den folgenden Abschnitten wird beschrieben, wie Webanwendungen und Add-Ons f�
 
 
 
-| Thema                                                                                                                                   | BESCHREIBUNG                                                                                                                    |
+| Thema                                                                                                                                   | Beschreibung                                                                                                                    |
 |-----------------------------------------------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------|
-| [Beheben von Kompatibilitätsproblemen in Webanwendungen mithilfe von Kompatibilitätsansicht](remediating-web-applications-with-compatibility-view.md) | Beschreibt grundlegende Lösungsschritte und die Planung der zukünftigen Anwendungskompatibilität, während Sie probleme jetzt beheben. |
-| [Beheben ActiveX Kompatibilitätsprobleme bei der Installation von Standardbenutzern](remediating-activex-installation-for-standard-users.md)          | Enthält Vorschläge für die Adressierung ActiveX Installation.                                                                      |
-| [Rendering- und Layoutänderungen](rendering-and-layout-changes.md)                                                                        | Beschreibt Rendering- und Layoutänderungen in neueren Versionen von Windows Internet Explorer.                                         |
+| [Beheben von Kompatibilitätsproblemen in Webanwendungen mit Kompatibilitätsansicht](remediating-web-applications-with-compatibility-view.md) | Beschreibt die grundlegenden Schritte zur Entschärfung und die Planung der zukünftigen Anwendungskompatibilität, während Sie probleme jetzt beheben. |
+| [Beheben ActiveX Kompatibilitätsproblemen bei der Installation für Standardbenutzer](remediating-activex-installation-for-standard-users.md)          | Stellt Vorschläge für die Adressierung ActiveX-Installation zur Verfügung.                                                                      |
+| [Rendering- und Layoutänderungen](rendering-and-layout-changes.md)                                                                        | Beschreibt Rendering- und Layoutänderungen in neueren Versionen Windows Internet Explorer.                                         |
 | [Versionsvektoren](version-vectors.md)                                                                                                  | Beschreibt die Versionsvektoren für Internet Explorer Versionen.                                                                  |
 | [Benutzer-Agent-Zeichenfolge](user-agent-string.md)                                                                                              | Beschreibt die Benutzer-Agent-Zeichenfolge für Internet Explorer.                                                                         |
-| [DEP/NX-Schutz](dep-nx-protection.md)                                                                                              | Beschreibt die Datenausführungsverhinderung (Data Execution Prevention, DEP) oder No-Execute(NX).                                                                   |
+| [DEP/NX-Schutz](dep-nx-protection.md)                                                                                              | Beschreibt die Datenausführungsverhindung (Data Execution Prevention, DEP) oder No-Execute(NX).                                                                   |
 | [Kompatibilität](remediating-compatibility.md)                                                                                          | Beschreibt DPE/NX in Windows Internet Explorer 7.                                                                               |
-| [Ajax](ajax.md)                                                                                                                        | Stellt Überlegungen zur Kompatibilität für asynchrones JavaScript und XML (AJAX) bereit.                                              |
+| [Ajax](ajax.md)                                                                                                                        | Enthält Kompatibilitätsüberlegungen für asynchrone JavaScript- und XML-Dateien (AJAX).                                              |
 | [Geschützter Modus](protected-mode.md)                                                                                                    | Beschreibt Überlegungen zur Kompatibilität mit dem geschützten Modus.                                                                    |
 | [JavaScript Object Notation (JSON)](javascript-object-notation--json-.md)                                                              | Beschreibt Überlegungen zur Kompatibilität mit JSON.                                                                              |
 
@@ -35,7 +35,7 @@ In den folgenden Abschnitten wird beschrieben, wie Webanwendungen und Add-Ons f�
  
 
 > [!Note]  
-> Im ersten Abschnitt wird die Verwendung von Kompatibilitätsansicht beschrieben. Kompatibilitätsansicht können Ihnen helfen, Kompatibilitätsprobleme zu beheben, wenn Sie Webanwendungen zu Internet Explorer 8 migrieren oder einfach Zeit zum gründlichen Debuggen Ihrer Anwendung benötigen, während Sie sich auf die native Unterstützung von Internet Explorer 8 vorbereiten.
+> Im ersten Abschnitt wird die Verwendung von Kompatibilitätsansicht. Kompatibilitätsansicht kann Ihnen helfen, Kompatibilitätsprobleme zu beheben, wenn Sie Webanwendungen zu Internet Explorer 8 migrieren oder einfach Zeit benötigen, ihre Anwendung gründlich zu debuggen, während Sie sich auf die native Unterstützung von Internet Explorer 8 vorbereiten.
 
  
 

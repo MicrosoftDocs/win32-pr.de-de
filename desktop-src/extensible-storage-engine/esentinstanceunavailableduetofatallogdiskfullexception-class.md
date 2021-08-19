@@ -1,5 +1,5 @@
 ---
-description: 'Weitere Informationen finden Sie unter: EsentInstanceUnavailableDueToFatalLogDiskFullException-Klasse'
+description: 'Weitere Informationen zu: EsentInstanceUnavailableDueToFatalLogDiskFullException-Klasse'
 title: EsentInstanceUnavailableDueToFatalLogDiskFullException-Klasse
 TOCTitle: EsentInstanceUnavailableDueToFatalLogDiskFullException class
 ms:assetid: T:Microsoft.Isam.Esent.Interop.EsentInstanceUnavailableDueToFatalLogDiskFullException
@@ -68,7 +68,7 @@ public sealed class EsentInstanceUnavailableDueToFatalLogDiskFullException : Ese
 
 Alle öffentlichen statischen Elemente dieses Typs (Shared in Microsoft Visual Basic) sind threadsicher. Bei Instanzmembern ist die Threadsicherheit nicht gewährleistet.
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 #### <a name="reference"></a>Verweis
 

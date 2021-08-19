@@ -1,9 +1,9 @@
 ---
-title: Mpupdatecontrol-Funktion (mpclient. h)
-description: Ermöglicht das Steuern eines Signatur Aktualisierungs Vorgangs, der asynchron über mpupdatestart initiiert wurde.
+title: MpUpdateControl-Funktion (MpClient.h)
+description: Ermöglicht die Steuerung eines Signaturaktualisierungsvorgangs, der asynchron über MpUpdateStart initiiert wurde.
 ms.assetid: 2780E472-6E8D-4839-88EE-46E3448C6BF5
 keywords:
-- Mpupdatecontrol-Funktion Legacy Funktionen der Windows-Umgebung
+- Legacy-Windows-Umgebungsfeatures der MpUpdateControl-Funktion
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - DllExport
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 91ea28c6ace349fd04fb9241d7eddbe7c1e5fbbe
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 69926f26b470ba41226883bdb32fab13c5d776858595c256fe70e7f95e898c04
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104477655"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118476272"
 ---
-# <a name="mpupdatecontrol-function"></a>Mpupdatecontrol-Funktion
+# <a name="mpupdatecontrol-function"></a>MpUpdateControl-Funktion
 
-Ermöglicht das Steuern eines Signatur Aktualisierungs Vorgangs, der asynchron über [**mpupdatestart**](mpupdatestart.md)initiiert wurde. Zum Aufrufen dieser Funktion ist Administrator Berechtigung erforderlich, da Sie den Abbruch eines systemweiten Signatur Updates zulässt.
+Ermöglicht die Steuerung eines Signaturaktualisierungsvorgangs, der asynchron über [**MpUpdateStart**](mpupdatestart.md)initiiert wurde. Zum Aufrufen dieser Funktion sind Administratorrechte erforderlich, da sie den Abbruch eines systemweiten Signaturupdates ermöglicht.
 
 ## <a name="syntax"></a>Syntax
 
@@ -41,27 +41,27 @@ HRESULT WINAPI MpUpdateControl(
 
 <dl> <dt>
 
-*hupdatehandle* \[ in\]
+*hUpdateHandle* \[ In\]
 </dt> <dd>
 
-Typ: **mphandle**
+Typ: **MPHANDLE**
 
-Handle für einen asynchronen Signatur Aktualisierungs Vorgang. Dieses Handle wird von der [**mpscanstart**](mpscanstart.md) -Funktion zurückgegeben.
+Verarbeiten eines asynchronen Signaturaktualisierungsvorgangs. Dieses Handle wird von der [**MpScanStart-Funktion**](mpscanstart.md) zurückgegeben.
 
 </dd> <dt>
 
-*Updatecontrol* \[ in\]
+*UpdateControl* \[ In\]
 </dt> <dd>
 
-Typ: **MPControl**
+Typ: **MPCONTROL**
 
-Gibt die Option zum Aktualisieren der Signatur Aktualisierung an. Er muss den folgenden Wert aufweisen:
+Gibt die Signaturupdate-Steuerelementoption an. Es muss der folgende Wert sein:
 
 
 
 | Wert                                                                                                                                                               | Bedeutung                                          |
 |---------------------------------------------------------------------------------------------------------------------------------------------------------------------|--------------------------------------------------|
-| <span id="MPCONTROL_ABORT"></span><span id="mpcontrol_abort"></span><dl> <dt>**Mpcontrol- \_ Abbruch**</dt> </dl> | Brechen Sie den Signatur Aktualisierungs Vorgang ab.<br/> |
+| <span id="MPCONTROL_ABORT"></span><span id="mpcontrol_abort"></span><dl> <dt>**MPCONTROL \_ ABORT**</dt> </dl> | Abbrechen des Signaturaktualisierungsvorgangs.<br/> |
 
 
 
@@ -73,9 +73,9 @@ Gibt die Option zum Aktualisieren der Signatur Aktualisierung an. Er muss den fo
 
 Typ: **HRESULT**
 
-Wenn die Funktion erfolgreich ausgeführt wird, ist der Rückgabewert **S \_ OK**.
+Wenn die Funktion erfolgreich ausgeführt wird, lautet der Rückgabewert **S \_ OK.**
 
-Wenn die Funktion fehlschlägt, ist der Rückgabewert ein fehlerhafter **HRESULT** -Code. Der Aufrufer kann die [**mperrormessageformat**](mperrormessageformat.md) -Funktion verwenden, um eine generische Beschreibung der Fehlermeldung zu erhalten.
+Wenn die Funktion fehlschlägt, ist der Rückgabewert ein fehlerhafter **HRESULT-Code.** Der Aufrufer kann die [**MpErrorMessageFormat-Funktion**](mperrormessageformat.md) verwenden, um eine generische Beschreibung der Fehlermeldung abzurufen.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -83,21 +83,21 @@ Wenn die Funktion fehlschlägt, ist der Rückgabewert ein fehlerhafter **HRESULT
 
 | Anforderung | Wert |
 |-------------------------------------|-----------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows 8 \[ -Desktop-Apps\]<br/>                                              |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2012 \[ -Desktop-Apps\]<br/>                                    |
-| Header<br/>                   | <dl> <dt>Mpclient. h</dt> </dl>   |
+| Unterstützte Mindestversion (Client)<br/> | \[Windows 8 Nur Desktop-Apps\]<br/>                                              |
+| Unterstützte Mindestversion (Server)<br/> | \[Windows Server 2012 Nur Desktop-Apps\]<br/>                                    |
+| Header<br/>                   | <dl> <dt>MpClient.h</dt> </dl>   |
 | DLL<br/>                      | <dl> <dt>MpClient.dll</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Mperrormessageformat**](mperrormessageformat.md)
+[**MpErrorMessageFormat**](mperrormessageformat.md)
 </dt> <dt>
 
-[**Mpscanstart**](mpscanstart.md)
+[**MpScanStart**](mpscanstart.md)
 </dt> </dl>
 
  

@@ -1,11 +1,11 @@
 ---
-title: MS-IEEE-80211-Datentyp Attribut
-description: Der intern verwendete Datentyp für das msieee80211-Data-BLOB.
+title: ms-ieee-80211-Data-Type-Attribut
+description: Intern verwendeter Datentyp für msieee80211-Data BLOB.
 ms.assetid: 0718260b-2630-488b-a372-b43eff5d30f2
 ms.tgt_platform: multiple
 keywords:
-- "\"MS-IEEE-80211-Datentyp\"-Attribut AD-Schema"
-- AD-Schema des msieee80211-DataType-Attributs
+- ms-ieee-80211-Data-Type attribute AD Schema
+- MSIEEE80211-DataType-Attribut AD-Schema
 topic_type:
 - apiref
 api_name:
@@ -14,41 +14,41 @@ api_type:
 - Schema
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: f15324d25aba938e9a3f3879097b112285a94dd6
-ms.sourcegitcommit: b77ace27b0432e7cd3863191b11926be032fbe2f
+ms.openlocfilehash: 29d7120fa51a9d11fb6abb404d840704f7763b12cd189ca615d947d3e1c0f222
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "106344548"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118425044"
 ---
-# <a name="ms-ieee-80211-data-type-attribute"></a>MS-IEEE-80211-Datentyp Attribut
+# <a name="ms-ieee-80211-data-type-attribute"></a>ms-ieee-80211-Data-Type-Attribut
 
-Der intern verwendete Datentyp für das msieee80211-Data-BLOB.
+Intern verwendeter Datentyp für msieee80211-Data BLOB.
 
 
 
 | Eingabe | Wert |
 |-------------------|----------------------------------------------------------------------------------|
-| CN                | MS-IEEE-80211-Datentyp                                                          |
-| LDAP-Display-Name | msieee80211-DataType                                                             |
+| CN                | ms-ieee-80211-Data-Type                                                          |
+| Ldap-Anzeigename | msieee80211-DataType                                                             |
 | Size              | \-                                                                               |
-| Berechtigung aktualisieren  | Domänen Administrator                                                             |
-| Aktualisierungshäufigkeit  | Jedes Mal, wenn ein Domänen Administrator die Richtlinie für Drahtlos Netzwerke für eine Domäne oder Organisationseinheit ändert. |
+| Aktualisieren von Berechtigungen  | Domänenadministrator                                                             |
+| Updatehäufigkeit  | Jedes Mal, wenn ein Domänenadministrator die Drahtlosnetzwerkrichtlinie für eine Domäne oder Organisationseinheit ändert. |
 | Attribute-Id      | 1.2.840.113556.1.4.1822                                                          |
-| System-ID-GUID    | 6558b180-35da-4EFE-Beed-521fi8f 48cafb                                             |
+| System-Id-Guid    | 6558b180-35da-4efe-beed-521f8f48cafb                                             |
 | Syntax            | [**Enumeration**](s-enumeration.md)                                             |
 
 
 
 ## <a name="implementations"></a>Implementierungen
 
--   [**Windows Server 2003**](#windows-server-2003)
+-   [**Windows Server 2003**](#windows-server-2003)
 -   [**Windows Server 2003 R2**](#windows-server-2003-r2)
 -   [**Windows Server 2008**](#windows-server-2008)
 -   [**Windows Server 2008 R2**](#windows-server-2008-r2)
 -   [**Windows Server 2012**](#windows-server-2012)
 
-## <a name="windows-server-2003"></a>Windows Server 2003
+## <a name="windows-server-2003"></a>Windows Server 2003
 
 
 
@@ -57,15 +57,15 @@ Der intern verwendete Datentyp für das msieee80211-Data-BLOB.
 | Link-ID                | \-                                                              |
 | MAPI-Id                | \-                                                              |
 | System-Only            | False                                                           |
-| Ist-einwertig       | Richtig                                                            |
+| Is-Single-Valued       | True                                                            |
 | Ist indiziert             | False                                                           |
 | Im globalen Katalog      | False                                                           |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                    |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                    |
 | Range-Lower            | \-                                                              |
 | Range-Upper            | \-                                                              |
 | Search-Flags           | 0x00000000                                                      |
 | System-Flags           | 0x00000010                                                      |
-| In verwendete Klassen        | [**MS-IEEE-80211-Richtlinie**](c-msieee80211-policy.md)<br/> |
+| In verwendete Klassen        | [**ms-ieee-80211-Policy**](c-msieee80211-policy.md)<br/> |
 
 
 
@@ -78,15 +78,15 @@ Der intern verwendete Datentyp für das msieee80211-Data-BLOB.
 | Link-ID                | \-                                                              |
 | MAPI-Id                | \-                                                              |
 | System-Only            | False                                                           |
-| Ist-einwertig       | Richtig                                                            |
+| Is-Single-Valued       | True                                                            |
 | Ist indiziert             | False                                                           |
 | Im globalen Katalog      | False                                                           |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                    |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                    |
 | Range-Lower            | \-                                                              |
 | Range-Upper            | \-                                                              |
 | Search-Flags           | 0x00000000                                                      |
 | System-Flags           | 0x00000010                                                      |
-| In verwendete Klassen        | [**MS-IEEE-80211-Richtlinie**](c-msieee80211-policy.md)<br/> |
+| In verwendete Klassen        | [**ms-ieee-80211-Policy**](c-msieee80211-policy.md)<br/> |
 
 
 
@@ -99,15 +99,15 @@ Der intern verwendete Datentyp für das msieee80211-Data-BLOB.
 | Link-ID                | \-                                                              |
 | MAPI-Id                | \-                                                              |
 | System-Only            | False                                                           |
-| Ist-einwertig       | Richtig                                                            |
+| Is-Single-Valued       | True                                                            |
 | Ist indiziert             | False                                                           |
 | Im globalen Katalog      | False                                                           |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                    |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                    |
 | Range-Lower            | \-                                                              |
 | Range-Upper            | \-                                                              |
 | Search-Flags           | 0x00000000                                                      |
 | System-Flags           | 0x00000010                                                      |
-| In verwendete Klassen        | [**MS-IEEE-80211-Richtlinie**](c-msieee80211-policy.md)<br/> |
+| In verwendete Klassen        | [**ms-ieee-80211-Policy**](c-msieee80211-policy.md)<br/> |
 
 
 
@@ -120,15 +120,15 @@ Der intern verwendete Datentyp für das msieee80211-Data-BLOB.
 | Link-ID                | \-                                                              |
 | MAPI-Id                | \-                                                              |
 | System-Only            | False                                                           |
-| Ist-einwertig       | Richtig                                                            |
+| Ist einwertig       | True                                                            |
 | Ist indiziert             | False                                                           |
 | Im globalen Katalog      | False                                                           |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                    |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                    |
 | Range-Lower            | \-                                                              |
 | Range-Upper            | \-                                                              |
 | Search-Flags           | 0x00000000                                                      |
 | System-Flags           | 0x00000010                                                      |
-| In verwendete Klassen        | [**MS-IEEE-80211-Richtlinie**](c-msieee80211-policy.md)<br/> |
+| In verwendete Klassen        | [**ms-ieee-80211-Policy**](c-msieee80211-policy.md)<br/> |
 
 
 
@@ -141,15 +141,15 @@ Der intern verwendete Datentyp für das msieee80211-Data-BLOB.
 | Link-ID                | \-                                                              |
 | MAPI-Id                | \-                                                              |
 | System-Only            | False                                                           |
-| Ist-einwertig       | Richtig                                                            |
+| Ist einwertig       | True                                                            |
 | Ist indiziert             | False                                                           |
 | Im globalen Katalog      | False                                                           |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                    |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                    |
 | Range-Lower            | \-                                                              |
 | Range-Upper            | \-                                                              |
 | Search-Flags           | 0x00000000                                                      |
 | System-Flags           | 0x00000010                                                      |
-| In verwendete Klassen        | [**MS-IEEE-80211-Richtlinie**](c-msieee80211-policy.md)<br/> |
+| In verwendete Klassen        | [**ms-ieee-80211-Policy**](c-msieee80211-policy.md)<br/> |
 
 
 

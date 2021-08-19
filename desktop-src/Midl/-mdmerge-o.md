@@ -1,9 +1,9 @@
 ---
-title: /o-Schalter (mdmerge)
-description: Der/o-Schalter gibt das Ausgabeverzeichnis für zusammengesetzte Metadatendateien an.
+title: /o switch (MDMERGE)
+description: Der Schalter /o gibt das Ausgabeverzeichnis für zusammengesetzte Metadatendateien an.
 ms.assetid: 70C924A8-5877-462B-B66A-86B2CEF8B502
 keywords:
-- /o-Schalter-Mittel l
+- /o switch MIDL
 topic_type:
 - apiref
 api_name:
@@ -12,26 +12,26 @@ api_type:
 - NA
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 20a169082de88d45d7f1ba2e18c0217c9a225699
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: af560aafa435e45cdb413516862e0b1c6d5e49f507c21b00a6b6c165b2a67f26
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106365377"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117808865"
 ---
-# <a name="o-switch-mdmerge"></a>/o-Schalter (mdmerge)
+# <a name="o-switch-mdmerge"></a>/o switch (MDMERGE)
 
-Der **/o** -Schalter gibt das Ausgabeverzeichnis für zusammengesetzte Metadatendateien an.
+Der **Schalter /o** gibt das Ausgabeverzeichnis für zusammengesetzte Metadatendateien an.
 
 ``` syntax
 mdmerge /o output_directory
 ```
 
-## <a name="switch-options"></a>Optionen wechseln
+## <a name="switch-options"></a>Switch-Optionen
 
 <dl> <dt>
 
-*Ausgabe \_ Verzeichnis* 
+*\_Ausgabeverzeichnis* 
 </dt> <dd>
 
 Gibt das Verzeichnis an, das die zusammengeführten Metadatendateien enthält.
@@ -42,7 +42,7 @@ Gibt das Verzeichnis an, das die zusammengeführten Metadatendateien enthält.
 
 ## <a name="examples"></a>Beispiele
 
-**mdmerge/o Ausgabe \_ Verzeichnis**
+**mdmerge /o-Ausgabeverzeichnis \_**
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -59,7 +59,7 @@ Gibt das Verzeichnis an, das die zusammengeführten Metadatendateien enthält.
 
 <dl> <dt>
 
-[Allgemeine Syntax der Mittell-Befehlszeile](general-midl-command-line-syntax.md)
+[Allgemeine MIDL-Befehlszeilensyntax](general-midl-command-line-syntax.md)
 </dt> </dl>
 
  

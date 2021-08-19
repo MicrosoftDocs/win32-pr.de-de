@@ -1,23 +1,23 @@
 ---
-description: Die System Informationsfunktionen und-Meldungen beschreiben oder ändern die Systemkonfiguration, Einstellungen und Attribute.
+description: Die Systeminformationsfunktionen und -meldungen beschreiben oder ändern die Systemkonfiguration, Einstellungen und Attribute.
 ms.assetid: d00e1bb9-1c23-4552-8004-57cbac67044d
 title: Systeminformationen
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: fcbc3afb24806dc31739a9204cf920692d303b3a
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 244f5022df4b262e11b627a9f1cefd1703e98bba9099e8f2de94d88eb9627364
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106363249"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117763276"
 ---
 # <a name="system-information"></a>Systeminformationen
 
-Die System Informationsfunktionen und-Meldungen beschreiben oder ändern die Systemkonfiguration, Einstellungen und Attribute.
+Die Systeminformationsfunktionen und -meldungen beschreiben oder ändern die Systemkonfiguration, Einstellungen und Attribute.
 
--   [Informationen zu System Informationen](about-system-information.md)
--   [Verwenden von System Informationen](using-system-information.md)
--   [System Informations Referenz](system-information-reference.md)
+-   [Informationen zu Systeminformationen](about-system-information.md)
+-   [Verwenden von Systeminformationen](using-system-information.md)
+-   [Systeminformationen Verweis](system-information-reference.md)
 
  
 

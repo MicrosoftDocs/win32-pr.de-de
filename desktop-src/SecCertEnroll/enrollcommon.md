@@ -1,19 +1,19 @@
 ---
-description: Der Ordner "registrierungscommon" enthält die folgenden Hilfsfunktionen und Makros, die von den mit dem Zertifikatregistrierungs-SDK bereitgestellten Beispielen verwendet werden.
+description: Der Ordner enrollCommon enthält die folgenden Hilfsfunktionen und Makros, die von den Beispielen im Zertifikatregistrierungs-SDK verwendet werden.
 ms.assetid: a9b3532d-9640-4373-a6c6-7828cb6f55c7
-title: gemeinsame Anmeldung
+title: enrollCommon
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 384a1f3741fd8bd7762c60da524e2e639c442e41
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 1d087ce1aeced0ef68f5b33a06546897d09687ae5ccbd096f1bb34552d0a4a10
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104526999"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117780069"
 ---
-# <a name="enrollcommon"></a>gemeinsame Anmeldung
+# <a name="enrollcommon"></a>enrollCommon
 
-Der Ordner "registrierungscommon" enthält die folgenden Hilfsfunktionen und Makros, die von den mit dem Zertifikatregistrierungs-SDK bereitgestellten Beispielen verwendet werden. Sie wird standardmäßig im Ordner *% Program Files%* \\ Microsoft sdcs \\ Windows \\ v 7.0 \\ Samples \\ Security \\ X509 Certificate Registrierung VC registrierungscommon installiert \\ \\ .
+Der Ordner enrollCommon enthält die folgenden Hilfsfunktionen und Makros, die von den Beispielen im Zertifikatregistrierungs-SDK verwendet werden. Sie wird standardmäßig im Ordner *%ProgramFiles%* \\ Microsoft SDKs Windows \\ \\ v7.0 \\ Samples Security \\ \\ X509 Certificate Enrollment \\ VC \\ enrollCommon installiert.
 
 
 
@@ -25,17 +25,17 @@ Der Ordner "registrierungscommon" enthält die folgenden Hilfsfunktionen und Mak
 <thead>
 <tr class="header">
 <th>Funktion</th>
-<th>BESCHREIBUNG</th>
+<th>Beschreibung</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
 <td>_JumpIfError</td>
-<td>Ein Makro, das einen <strong>HRESULT</strong> -Wert, eine Bezeichnung und eine Fehler Zeichenfolge akzeptiert, druckt die Zeichenfolge und überträgt die Programmsteuerung an die erste Anweisung, die auf die Bezeichnung folgt.</td>
+<td>Makro, das einen <strong>HRESULT-Wert,</strong> eine Bezeichnung und eine Fehlerzeichenfolge akzeptiert, die Zeichenfolge ausgibt und die Programmsteuerung an die erste Anweisung nach der Bezeichnung überträgt.</td>
 </tr>
 <tr class="even">
 <td>_JumpError</td>
-<td>Identisch mit dem _JumpIfError-Makro.</td>
+<td>Identisch mit dem _JumpIfError Makro.</td>
 </tr>
 <tr class="odd">
 <td>_PrintIfError</td>
@@ -43,31 +43,31 @@ Der Ordner "registrierungscommon" enthält die folgenden Hilfsfunktionen und Mak
 </tr>
 <tr class="even">
 <td>_PrintError</td>
-<td>Ein Makro, das eine Fehlermeldung und einen <strong>HRESULT</strong> -Wert ausgibt.</td>
+<td>Makro, das eine Fehlermeldung und einen <strong>HRESULT-Wert</strong> ausgibt.</td>
 </tr>
 <tr class="odd">
-<td>convertwszumsz</td>
-<td>Konvertiert eine Zeichenfolge mit breit Zeichen in eine ASCII-Zeichenfolge mithilfe der <strong>WideCharToMultiByte</strong> -Funktion und des aktuellen ANSI-Code Page Bezeichners für das System. Diese Funktion wird von den Funktionen decconvertfromunicode und findoidfromtemplatename verwendet, die in der Datei "registricommon. cpp" definiert sind.</td>
+<td>convertWszToSz</td>
+<td>Konvertiert eine Breitzeichenfolge mithilfe der <strong>WideCharToMultiByte-Funktion</strong> und des aktuellen ANSI-Codepagebezeichners für das System in eine ASCII-Zeichenfolge. Diese Funktion wird von den funktionen decConvertFromUnicode und findOIDFromTemplateName verwendet, die in enrollCommon.cpp definiert sind.</td>
 </tr>
 <tr class="even">
-<td>converzztowsz</td>
-<td>Konvertiert eine ASCII-Zeichenfolge mithilfe der <strong>multibytedewidechar</strong> -Funktion und des aktuellen ANSI-Code Page Bezeichners für das System in eine Zeichenfolge mit breit Zeichen. Diese Funktion wird von der findcertbytemplate-Funktion verwendet, die in der Datei "registricommon. cpp" definiert ist.</td>
+<td>convertSzToWsz</td>
+<td>Konvertiert eine ASCII-Zeichenfolge mithilfe der <strong>MultiByteToWideChar-Funktion</strong> und des aktuellen ANSI-Codepagebezeichners für das System in eine Breitzeichenfolge. Diese Funktion wird von der findCertByTemplate-Funktion verwendet, die in enrollCommon.cpp definiert ist.</td>
 </tr>
 <tr class="odd">
-<td>converzzumbstr</td>
-<td>Konvertiert eine ASCII-Zeichenfolge mit der <strong>multibytetewidechar</strong> -Funktion in ein <strong>BSTR</strong> . Diese Funktion wird zurzeit nicht verwendet.</td>
+<td>convertSzToBstr</td>
+<td>Konvertiert eine ASCII-Zeichenfolge mithilfe der <strong>MultiByteToWideChar-Funktion in</strong> einen <strong>BSTR.</strong> Diese Funktion wird derzeit nicht verwendet.</td>
 </tr>
 <tr class="even">
-<td>convertwszumbstr</td>
-<td>Konvertiert eine Zeichenfolge mit breit Zeichen in ein <strong>BSTR</strong>. Diese Funktion wird vom InstallResponse-frompfx-Beispiel verwendet.</td>
+<td>convertWszToBstr</td>
+<td>Konvertiert eine Breitzeichenzeichenfolge in einen <strong>BSTR.</strong> Diese Funktion wird vom InstallResponseFromPFX-Beispiel verwendet.</td>
 </tr>
 <tr class="odd">
-<td>checkenrollstatus</td>
-<td>Überprüft den Status des Zertifikats Registrierungsprozesses mithilfe der <a href="/windows/desktop/api/CertEnroll/nn-certenroll-ix509enrollment"><strong>IX509Enrollment</strong></a> -und <a href="/windows/desktop/api/CertEnroll/nn-certenroll-ix509enrollmentstatus"><strong>IX509EnrollmentStatus</strong></a> -Schnittstellen. Diese Funktion wird von den Beispielen "anmelleobocmc", "enrollPKCS7", "enrollRenewalPKCS7", "registrisimplemachinecert" und "registrisimpleusercert" verwendet.</td>
+<td>checkEnrollStatus</td>
+<td>Überprüft den Status des Zertifikatregistrierungsprozesses mithilfe der <a href="/windows/desktop/api/CertEnroll/nn-certenroll-ix509enrollment"><strong>Schnittstellen IX509Enrollment</strong></a> und <a href="/windows/desktop/api/CertEnroll/nn-certenroll-ix509enrollmentstatus"><strong>IX509EnrollmentStatus.</strong></a> Diese Funktion wird von den Beispielen enrollEOBOCMC, enrollPKCS7, enrollRenewalPKCS7, enrollSimpleMachineCert und enrollSimpleUserCert verwendet.</td>
 </tr>
 <tr class="even">
-<td>findcertbykeyusage</td>
-<td>Listet den persönlichen Zertifikat Speicher des aktuellen Benutzers auf, um das erste Zertifikat zu finden, für das die beabsichtigte Verwendung des öffentlichen Schlüssels mit einem angegebenen Wert übereinstimmt. Der angegebene Wert kann eine bitweise Kombination der folgenden Flags sein:
+<td>findCertByKeyUsage</td>
+<td>Enumeriert den persönlichen Zertifikatspeicher des aktuellen Benutzers, um das erste Zertifikat zu finden, für das die beabsichtigte Verwendung des öffentlichen Schlüssels einem angegebenen Wert entspricht. Der angegebene Wert kann eine bitweise Kombination der folgenden Flags sein:
 <ul>
 <li>CERT_DATA_ENCIPHERMENT_KEY_USAGE</li>
 <li>CERT_DIGITAL_SIGNATURE_KEY_USAGE</li>
@@ -77,39 +77,39 @@ Der Ordner "registrierungscommon" enthält die folgenden Hilfsfunktionen und Mak
 <li>CERT_NON_REPUDIATION_KEY_USAGE</li>
 <li>CERT_OFFLINE_CRL_SIGN_KEY_USAGE</li>
 </ul>
-Diese Funktion wird durch das Beispiel "anmelfrompublickey" verwendet.<br/></td>
+Diese Funktion wird vom Beispiel enrollFromPublicKey verwendet.<br/></td>
 </tr>
 <tr class="odd">
-<td>findcertbyeku</td>
-<td>Listet den persönlichen Zertifikat Speicher des aktuellen Benutzers auf, um das erste Zertifikat zu finden, für das die EKU-Erweiterung (Enhanced Key Usage) mit der in der Eingabe angegebenen übereinstimmt. Weitere Informationen zur EKU-Erweiterung finden Sie unter der <a href="/windows/desktop/api/CertEnroll/nn-certenroll-ix509extensionenhancedkeyusage"><strong>IX509ExtensionEnhancedKeyUsage</strong></a> -Schnittstelle. Diese Funktion wird von dem Beispiel "Einschreibung-obocmc" verwendet.</td>
+<td>findCertByEKU</td>
+<td>Enumeriert den persönlichen Zertifikatspeicher des aktuellen Benutzers, um das erste Zertifikat zu finden, für das die Erweiterung erweiterte Schlüsselverwendung (Enhanced Key Usage, EKU) mit dem in der Eingabe angegebenen Zertifikat ab stimmt. Weitere Informationen zur EKU-Erweiterung finden Sie unter der <a href="/windows/desktop/api/CertEnroll/nn-certenroll-ix509extensionenhancedkeyusage"><strong>IX509ExtensionEnhancedKeyUsage-Schnittstelle.</strong></a> Diese Funktion wird vom beispiel enrollEOBOCMC verwendet.</td>
 </tr>
 <tr class="even">
-<td>findcertbytemplate</td>
-<td>Listet den persönlichen Zertifikat Speicher des aktuellen Benutzers auf, um das erste Zertifikat zu finden, für das die Vorlage mit dem angegebenen Namen bei der Eingabe übereinstimmt. Diese Funktion wird von den enrollPKCS7-und enrollRenewalPKCS7-Beispielen verwendet.</td>
+<td>findCertByTemplate</td>
+<td>Enumeriert den persönlichen Zertifikatspeicher des aktuellen Benutzers, um bei der Eingabe das erste Zertifikat zu finden, für das die Vorlage dem angegebenen entspricht. Diese Funktion wird von den Beispielen enrollPKCS7 und enrollRenewalPKCS7 verwendet.</td>
 </tr>
 <tr class="odd">
-<td>"registricertbytemplate"</td>
-<td>Initialisiert ein <a href="/windows/desktop/api/CertEnroll/nn-certenroll-ix509enrollment"><strong>IX509Enrollment</strong></a> -Objekt mithilfe einer Vorlage, versucht, die implizit erstellte Zertifikat Anforderung zu registrieren, und überwacht den Status des Registrierungsprozesses. Diese Funktion wird von den Beispielen "anmelleobocmc", "Einschreibung frompublickey", "enrollPKCS7" und "enrollRenewalPKCS7" verwendet.</td>
+<td>enrollCertByTemplate</td>
+<td>Initialisiert ein <a href="/windows/desktop/api/CertEnroll/nn-certenroll-ix509enrollment"><strong>IX509Enrollment-Objekt</strong></a> mithilfe einer Vorlage, versucht, die implizit erstellte Zertifikatanforderung zu registrieren, und überwacht den Status des Registrierungsprozesses. Diese Funktion wird von den Beispielen enrollEOBOCMC, enrollFromPublicKey, enrollPKCS7 und enrollRenewalPKCS7 verwendet.</td>
 </tr>
 <tr class="even">
-<td>verifycertcontext</td>
-<td>Überprüft die Konformität der Zertifikat Kette mit der angegebenen (Basis-) Richtlinie und optional mit einer angegebenen Erweiterung für erweiterte Schlüssel Verwendung (EKU). Weitere Informationen finden Sie in der <a href="/windows/desktop/api/wincrypt/nf-wincrypt-certverifycertificatechainpolicy"><strong>CertVerifyCertificateChainPolicy</strong></a> -Funktion und in den <a href="/windows/desktop/api/wincrypt/ns-wincrypt-cert_chain_policy_para"><strong>CERT_CHAIN_POLICY_PARA</strong></a> -und <a href="/windows/desktop/api/wincrypt/ns-wincrypt-cert_chain_para"><strong>CERT_CHAIN_PARA</strong></a> -Strukturen. Diese Funktion wird von den Beispielen "anmelleobocmc", "Einschreibung frompublickey", "enrollPKCS7" und "enrollRenewalPKCS7" verwendet.</td>
+<td>verifyCertContext</td>
+<td>Überprüft die Konformität der Zertifikatkette mit der angegebenen (Basisrichtlinie) und optional mit einer angegebenen Erweiterten Schlüsselverwendungserweiterung (Enhanced Key Usage, EKU). Weitere Informationen finden Sie unter der <a href="/windows/desktop/api/wincrypt/nf-wincrypt-certverifycertificatechainpolicy"><strong>CertVerifyCertificateChainPolicy-Funktion</strong></a> und den CERT_CHAIN_POLICY_PARA <a href="/windows/desktop/api/wincrypt/ns-wincrypt-cert_chain_policy_para"><strong>und</strong></a> <a href="/windows/desktop/api/wincrypt/ns-wincrypt-cert_chain_para"><strong>CERT_CHAIN_PARA</strong></a> Strukturen. Diese Funktion wird von den Beispielen enrollEOBOCMC, enrollFromPublicKey, enrollPKCS7 und enrollRenewalPKCS7 verwendet.</td>
 </tr>
 <tr class="odd">
-<td>decconvertfromunicode</td>
-<td>Konvertiert eine Zeichenfolge von Doppelbyte-Unicode-Zeichen in eine Zeichenfolge aus Einzel Byte-ANSI-Zeichen. Diese Funktion wird von der decodefilew-Funktion verwendet, die in "registricommon. cpp" definiert ist.</td>
+<td>decConvertFromUnicode</td>
+<td>Konvertiert eine Zeichenfolge aus Doppel-Byte-Unicode-Zeichen in eine Zeichenfolge mit ANSI-Einzel bytezeichen. Diese Funktion wird von der In enrollCommon.cpp definierten DecodeFileW-Funktion verwendet.</td>
 </tr>
 <tr class="even">
-<td>Decodefilew</td>
-<td>Decodiert ein codiertes Zertifikat oder eine Zertifikat Anforderungs Datei in ein Bytearray. Diese Funktion wird vom InstallResponse-frompfx-Beispiel verwendet.</td>
+<td>DecodeFileW</td>
+<td>Decodiert ein codiertes Zertifikat oder eine Zertifikatanforderungsdatei in ein Bytearray. Diese Funktion wird vom InstallResponseFromPFX-Beispiel verwendet.</td>
 </tr>
 <tr class="odd">
-<td>Encode-Filew</td>
-<td>Codiert ein Zertifikat oder eine Zertifikat Anforderung und speichert es in einer Datei. Diese Funktion wird von den Beispielen "samatecngcustomcmc", "anmelleobocmc" und "Einschreibung frompublickey" verwendet.</td>
+<td>EncodeToFileW</td>
+<td>Codiert ein Zertifikat oder eine Zertifikatanforderung und speichert es in einer Datei. Diese Funktion wird von den Beispielen createCNGCustomCMC, enrollEOBOCMC und enrollFromPublicKey verwendet.</td>
 </tr>
 <tr class="even">
-<td>findoidfromtemplatename</td>
-<td>Ruft den Objekt Bezeichner für eine durch den Namen angegebene Vorlage ab. Diese Funktion wird von der findcertbytemplate-Funktion verwendet, die in der Datei "registricommon. cpp" definiert ist.</td>
+<td>findOIDFromTemplateName</td>
+<td>Ruft den Objektbezeichner für eine vorlage ab, die durch den Namen angegeben wird. Diese Funktion wird von der findCertByTemplate-Funktion verwendet, die in enrollCommon.cpp definiert ist.</td>
 </tr>
 </tbody>
 </table>

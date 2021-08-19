@@ -1,77 +1,77 @@
 ---
-description: Mithilfe von MF Trace können Sie die Ablauf Verfolgungs Ergebnisse filtern, indem Sie eine Liste von Schlüsselwörtern angeben.
+description: Mithilfe von MFTrace können Sie die Ablaufverfolgungsergebnisse filtern, indem Sie eine Liste von Schlüsselwörtern angeben.
 ms.assetid: e7c382cb-94ac-4f90-a3dd-32f94c538396
-title: MF Trace-Schlüsselwörter
+title: MFTrace-Schlüsselwörter
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: d6d18a91aede8692209b9d5b7a2759c460e44043
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 4b2ab3d52d73e6881a4dac7c32dfb1c181fecaef6e9a833b25f744ace6c84f65
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104130500"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117871856"
 ---
-# <a name="mftrace-keywords"></a>MF Trace-Schlüsselwörter
+# <a name="mftrace-keywords"></a>MFTrace-Schlüsselwörter
 
-Mithilfe von [MF Trace](mftrace.md)können Sie die Ablauf Verfolgungs Ergebnisse filtern, indem Sie eine Liste von Schlüsselwörtern angeben. Verwenden Sie in der Befehlszeile das Befehlszeilenargument **-k** . Alternativ können Sie das- [**Schlüsselwort**](keyword.md) Element in der Konfigurationsdatei angeben. Weitere Informationen finden Sie unter [Verwenden von MF Trace](using-mftrace.md).
+Mithilfe [von MFTrace](mftrace.md)können Sie die Ablaufverfolgungsergebnisse filtern, indem Sie eine Liste von Schlüsselwörtern angeben. Verwenden Sie in der Befehlszeile das **Befehlszeilenargument -k.** Geben Sie alternativ das [**Schlüsselwortelement**](keyword.md) in der Konfigurationsdatei an. Weitere Informationen finden Sie unter [Verwenden von MFTrace](using-mftrace.md).
 
-MF-Trace unterstützt die folgenden Schlüsselwörter. Die meisten verweisen auf bestimmte Schnittstellen oder Bibliotheks Exporte.
+MFTrace unterstützt die folgenden Schlüsselwörter. Die meisten verweisen auf bestimmte Schnittstellen oder Bibliotheksexporte.
 
 -   All
--   Vorgegebene
--   Umleitungen
--   "Ifiltergraph"
--   "Igraphbuilder"
+-   "Standard"
+-   "Umwegen"
+-   "IFilterGraph"
+-   "IGraphBuilder"
 -   "IMediaControl"
--   "Imediaobject"
+-   "IMediaObject"
 -   "IMemInputPin"
--   "Imfaktivate"
--   "Imfattributes"
--   IMFByteStream
--   "IMF bytestreamhandler"
--   "IMF"
--   "IMF Media Event Generator"
--   "Imfmediasession"
--   "Imfmediasink"
--   "Imfmediasource"
--   "IMF Media Stream"
--   "Imfpmediaitem"
--   "Imfpmediaplayer"
--   "Imfpmediaplayercallback"
--   "IMF presentationclock"
--   "Imberqualityrat"
--   "IMFQualityAdvise2"
--   "IMF qualitymanager"
--   "Imfreadschreiteclassfactory"
--   "IMF Sample"
--   "IMF Schema Handler"
--   "Imbersink Writer"
--   IMFSourceReader
--   "IMF sourcereadercallback"
--   "IMF sourceresolver"
--   "IMF streamsink"
--   "Imftopoloader"
--   "Imftopology"
--   "Imftopologynode"
--   "IMF Transform"
--   "Iwmreader"
+-   "ACTIVate"
+-   "ATTRIBUTATTRIBUTE"
+-   "BYTEByteStream"
+-   "BYTEStreamHandler"
+-   "DEADClock"
+-   "VERERBMediaEventGenerator"
+-   "DURCHTEMEDIASession"
+-   "DURCHZ.MediaSink"
+-   "VERERBUNGMediaSource"
+-   "VERERBMediaStream"
+-   "IMFPMediaItem"
+-   "IMFPMediaPlayer"
+-   "IMFPMediaPlayerCallback"
+-   "DEADPresentationClock"
+-   "BEFIEQualityAdvise"
+-   "BEFIEQualityAdvise2"
+-   "VEREERTEQualityManager"
+-   "DURCHLESENLeseklasseFactory"
+-   "VERERBUNGSample"
+-   "VERSENKSchemeHandler"
+-   "BESinkWriter"
+-   "VERERBungsquelle"
+-   "VERWALTENQuelleReaderCallback"
+-   "VERERBungsquelle"
+-   "DURCHSTREAMSTREAMSink"
+-   "VERWENDtopoLoader"
+-   "TOPOLOGYTopology"
+-   "TOPOLOGYNode"
+-   "DURCHSICHTTransform"
+-   "IWMReader"
 -   "Kernel32Export"
--   "MF-Export"
--   "MF-Export"
--   "MF playexport"
--   "MF Public"
--   "Mfreadschreiteexport"
+-   "MFExport"
+-   "MFPlatExport"
+-   "MFPlayExport"
+-   "MFPublic"
+-   "MFReadWriteExport"
 -   "Ole32Export"
--   "wmvcoreexport"
+-   "wmvCoreExport"
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[MF-Ablauf Verfolgung](mftrace.md)
+[Mftrace](mftrace.md)
 </dt> <dt>
 
-[Verwenden von MF Trace](using-mftrace.md)
+[Verwenden von MFTrace](using-mftrace.md)
 </dt> </dl>
 
  

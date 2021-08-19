@@ -31,7 +31,7 @@ Das folgende Verfahren zeigt, wie Sie der Registrierung Hilfsklassenerweiterunge
 
     Ersetzen Sie *VendorName*, *Helper Class DLL* und *Helper Class Name* wie unten beschrieben durch benutzerdefinierte Werte.
 
-    | Wert               | type    | Bedeutung                                                                      |
+    | Wert               | Typ    | Bedeutung                                                                      |
     |---------------------|---------|------------------------------------------------------------------------------|
     | *VendorName*        | REG \_ SZ | Der Name des Herstellers.                                                      |
     | *Hilfsklassen-DLL*  | REG \_ SZ | Name der DLL ohne Erweiterung.                                          |
@@ -45,7 +45,7 @@ Das folgende Verfahren zeigt, wie Sie der Registrierung Hilfsklassenerweiterunge
 
     
 
-    | Wert         | type       | Bedeutung                                                                                                                                                                 |
+    | Wert         | Typ       | Bedeutung                                                                                                                                                                 |
     |---------------|------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
     | **Clsid**     | REG \_ SZ    | Eine Zeichenfolge, die die COM-Klassen-ID der Hilfsklasse enthält.                                                                                                            |
     | **Version**   | REG \_ SZ    | Eine Zeichenfolge, die die Haupt- und Nebenversionen der Hilfsklasse im Format <major> <minor> enthält.                                                        |
@@ -62,7 +62,7 @@ Das folgende Verfahren zeigt, wie Sie der Registrierung Hilfsklassenerweiterunge
 
     Sie müssen mindestens einen Wert (einen pro Attribut) des folgenden Typs enthalten.
 
-    | Wert             | type                             | Bedeutung                                                                    |
+    | Wert             | Typ                             | Bedeutung                                                                    |
     |-------------------|----------------------------------|----------------------------------------------------------------------------|
     | **AttributeName** | REG \_ SZ \| REG \_ DWORD \| REG \_ BINARY | Ein -Wert, der das Name-Wert-Paar für ein bestimmtes Attribut vervollständigt. |
 

@@ -1,65 +1,65 @@
 ---
-description: Mit der InstallValidate-Aktion wird überprüft, ob alle Volumes, denen die Kosten zugewiesen wurden, über ausreichend Speicherplatz für die Installation verfügen. Durch die InstallValidate-Aktion wird die Installation mit einem schwerwiegenden Fehler beendet, wenn auf einem Volume wenig Speicherplatz vorhanden ist.
+description: Die Aktion InstallValidate überprüft, ob alle Volumes, denen Kosten zugeordnet wurden, über ausreichend Speicherplatz für die Installation verfügen. Die Aktion InstallValidate beendet die Installation mit einem schwerwiegenden Fehler, wenn auf einem Volume nicht viel Speicherplatz verfügbar ist.
 ms.assetid: 1c55794d-1ecc-43bf-956f-96afc5f36964
 title: InstallValidate-Aktion
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: e650ce136ac3b1b62e41ce34f79f5d28540d1292
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 6dd8a5e2f69df5e588c2366f7cf9fff0fb3621889e9b725605a38acc14f39457
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "104217802"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117805638"
 ---
 # <a name="installvalidate-action"></a>InstallValidate-Aktion
 
-Mit der InstallValidate-Aktion wird überprüft, ob alle [*Volumes*](v-gly.md) , denen die [*Kosten*](c-gly.md) zugewiesen wurden, über ausreichend Speicherplatz für die Installation verfügen. Durch die InstallValidate-Aktion wird die Installation mit einem schwerwiegenden Fehler beendet, wenn auf einem Volume wenig Speicherplatz vorhanden ist.
+Die Aktion InstallValidate überprüft, [](v-gly.md) ob [](c-gly.md) alle Volumes, denen Kosten zugeordnet wurden, über ausreichend Speicherplatz für die Installation verfügen. Die Aktion InstallValidate beendet die Installation mit einem schwerwiegenden Fehler, wenn auf einem Volume nicht viel Speicherplatz verfügbar ist.
 
-Die InstallValidate-Aktion benachrichtigt den Benutzer auch, wenn eine oder mehrere Dateien, die überschrieben oder entfernt werden sollen, zurzeit von einem aktiven Prozess verwendet werden. Weitere Informationen finden Sie unter [System Neustarts](system-reboots.md).
+Die Aktion InstallValidate benachrichtigt den Benutzer auch, wenn eine oder mehrere zu überschreibende oder zu entfernende Dateien derzeit von einem aktiven Prozess verwendet werden. Weitere Informationen finden Sie unter [Systemneustarts.](system-reboots.md)
 
-## <a name="sequence-restrictions"></a>Sequenz Einschränkungen
+## <a name="sequence-restrictions"></a>Sequenzeinschränkungen
 
-Die Aktion " [costfinalize](costfinalize-action.md) " und alle Benutzeroberflächen-Dialogfeld Sequenzen, die es dem Benutzer ermöglichen, die Auswahl Zustände und/oder Verzeichnisse zu ändern, sollten vor der InstallValidate-Aktion sequenziert werden.
+Die [Aktion CostFinalize](costfinalize-action.md) und alle Benutzeroberflächendialogfeldsequenzen, die dem Benutzer das Ändern von Auswahlzuständen und/oder Verzeichnissen ermöglichen, sollten vor der InstallValidate-Aktion sequenziert werden.
 
-[Benutzerdefinierte Aktionen](custom-actions.md) , mit denen der Installationsstatus von Features oder Komponenten geändert wird, müssen vor der InstallValidate-Aktion sequenziert werden.
+[Benutzerdefinierte Aktionen,](custom-actions.md) die den Installationsstatus von Features oder Komponenten ändern, müssen vor der InstallValidate-Aktion sequenziert werden.
 
-## <a name="actiondata-messages"></a>Aktions Daten Meldungen
+## <a name="actiondata-messages"></a>ActionData-Meldungen
 
-Es sind keine Aktions Daten Meldungen vorhanden.
+Es sind keine ActionData-Meldungen enthalten.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-In der Regel sollte eine frühere UI-Dialogfeld Sequenz dieselbe Überprüfung wie die InstallValidate-Aktion durchführen, wenn der Benutzer versucht, das Kopieren von Dateien zu initiieren. In dieser Benutzeroberflächen-Dialogfeld Sequenz sollte das Dialogfeld nicht genügend **Speicherplatz** vorhanden sein, wenn die ausgewählten Volumes nicht über genügend Speicherplatz für die Installation verfügen. Die Dialogfelder für die Benutzeroberfläche sollten so erstellt werden, dass der Benutzer nicht mit der Installation fortfahren kann, wenn nicht genügend Speicherplatz vorhanden ist. Bei einer stillen Installation gibt es keine Benutzeroberfläche, und die InstallValidate-Aktion beendet die Installation, wenn nicht genügend Speicherplatz vorhanden ist. Die Ursache für die vorzeitige Beendigung wird in der Protokolldatei aufgezeichnet, wenn die Protokollierung aktiviert ist.
+In der Regel sollte eine frühere Benutzeroberflächendialogfeldsequenz die gleiche Überprüfung wie die InstallValidate-Aktion ausführen, wenn der Benutzer versucht, das Kopieren von Dateien zu initiieren. In dieser Benutzeroberflächendialogfeldsequenz sollte ein Dialogfeld **Nicht** genügend Speicherplatz angezeigt werden, wenn die ausgewählten Volumes nicht über genügend Speicherplatz für die Installation verfügen. Die Dialogfelder der Benutzeroberfläche sollten so geschrieben werden, dass der Benutzer nicht mit der Installation fortfahren kann, wenn nicht genügend Speicherplatz vorhanden ist. Bei einer stillen Installation gibt es keine Benutzeroberfläche, und die Aktion InstallValidate beendet die Installation, wenn nicht genügend Speicherplatz vorhanden ist. Die Ursache der vorzeitigen Beendigung wird in der Protokolldatei aufgezeichnet, wenn die Protokollierung aktiviert ist.
 
-Ein Eintrag wird einer internen FilesInUse-Tabelle hinzugefügt, wenn eine Datei überschrieben oder entfernt wird, während Sie für die Ausführung geöffnet ist oder von einem beliebigen Prozess während der Datei [*Kosten*](c-gly.md)geändert wird. Die FilesInUse-Tabelle enthält Spalten für den Namen und den vollständigen Pfad der Datei. Wenn die InstallValidate-Aktion ausgeführt wird, fragt das Installationsprogramm die FilesInUse-Tabelle nach Einträgen ab und bestimmt den Namen des Prozesses, der die Datei verwendet. Die InstallValidate-Aktion fügt der [ListBox](listbox-table.md) -Benutzerschnittstellen Tabelle für jeden eindeutigen, von dieser Abfrage identifizierten Prozess einen Datensatz hinzu. Der Datensatz enthält die folgenden Werte in den einzelnen Spalten:
+Ein Eintrag wird einer internen FilesInUse-Tabelle hinzugefügt, wenn eine Datei überschrieben oder entfernt wird, während sie während der Dateikosten von einem Prozess ausgeführt oder [*geändert werden kann.*](c-gly.md) Die Tabelle FilesInUse enthält Spalten für den Namen und den vollständigen Pfad der Datei. Wenn die InstallValidate-Aktion ausgeführt wird, fragt das Installationsprogramm die Tabelle FilesInUse nach Einträgen ab und bestimmt den Namen des Prozesses mithilfe der Datei. Mit der Aktion InstallValidate [](listbox-table.md) wird der ListBox-Benutzeroberflächentabelle für jeden eindeutigen Prozess, der von dieser Abfrage identifiziert wird, ein Datensatz hinzugefügt. Der Datensatz enthält die folgenden Werte in jeder Spalte:
 
-**Eigenschaft**: filinput useprocess
-
- 
-
-**Wert**: *Name des Prozesses*
+**Property**: FileInUseProcess
 
  
 
-**Text**: *Text, der in der Beschriftung des Hauptfensters des Prozesses enthalten* ist.
+**Wert:** *Name des Prozesses*
 
-Die Aktion InstallValidate zeigt dann das Dialogfeld **verwendete Dateien an** . In diesem Dialogfeld werden die Prozesse angezeigt, die heruntergefahren werden müssen, um zu verhindern, dass das System neu gestartet wird, um verwendete Dateien zu ersetzen.
+ 
 
-Die InstallValidate-Aktion fragt die [Dialog](dialog-table.md) Feld Tabelle nach einem erstellten Dialogfeld mit dem reservierten Namen [FilesInUse](filesinuse-dialog.md) -Dialogfeld ab und zeigt es an. Dieses Dialogfeld muss ein [ListBox](listbox-control.md) -Steuerelement enthalten, das an eine Eigenschaft namens filinput useprocess gebunden ist. Gemäß der Konvention weist dieses Dialogfeld eine Schaltfläche zum **Beenden**, **wiederholen** oder **ignorieren** auf, aber dies ist der Benutzeroberflächen Autor. Jede Schaltfläche muss an einen [EndDialog](enddialog-controlevent.md) -ControlEvent in der Tabelle [ControlEvent](controlevent-table.md) gebunden werden. Die InstallValidate-Aktion antwortet wie folgt auf den Wert, der von der [doaction](doaction-controlevent.md) -ControlEvent zurückgegeben wird, wie von einem dieser [EndDialog](enddialog-controlevent.md) -Argumente vorgegeben, das der Schaltfläche zugeordnet ist, die vom Benutzer übermittelt wird:
+**Text:** *Text, der in der Beschriftung des Hauptfensters des Prozesses enthalten ist*
 
-**Wiederholung**: alle Werte, die der [ListBox](listbox-table.md) -Tabelle hinzugefügt werden, werden gelöscht, und die gesamte Datei [*Kosten*](c-gly.md) wird wiederholt, und die Dateien, die noch verwendet werden, werden erneut überprüft. Wenn ein oder mehrere Prozesse weiterhin als Verwendung von Dateien identifiziert werden, die überschrieben oder gelöscht werden sollen, wird der Prozess wiederholt. Andernfalls gibt InstallValidate die Steuerung mit dem Status msidoaktionstatussuccess an das Installationsprogramm zurück.
+Die Aktion InstallValidate zeigt dann das Dialogfeld **Verwendete** Dateien an. In diesem Dialogfeld werden die Prozesse angezeigt, die heruntergefahren werden müssen, um zu vermeiden, dass das System neu gestartet werden muss, um die in Gebrauchenen Dateien zu ersetzen.
 
-**Exit**: mit der InstallValidate-Aktion wird die Steuerung sofort an das Installationsprogramm mit dem Status "msidoaction statususerexit" zurückgegeben. Dadurch wird die Installation beendet.
+Die Aktion InstallValidate fragt die [Tabelle Dialog](dialog-table.md) nach einem erstellten Dialogfeld mit dem reservierten Namen [FilesInUse](filesinuse-dialog.md) ab und zeigt es an. Dieses Dialogfeld muss ein [ListBox-Steuerelement](listbox-control.md) enthalten, das an eine Eigenschaft namens FileInUseProcess gebunden ist. Standardmäßig verfügt dieses Dialogfeld über die Schaltfläche  **Beenden,** **Wiederholen** oder Ignorieren, aber dies liegt beim Benutzeroberflächenautor. Jede Schaltfläche sollte an ein [EndDialog](enddialog-controlevent.md) ControlEvent in der [ControlEvent-Tabelle gebunden](controlevent-table.md) sein. Die InstallValidate-Aktion antwortet wie folgt auf den wert, der vom [DoAction](doaction-controlevent.md) ControlEvent zurückgegeben wird, wie von einem der [folgenden EndDialog-Argumente](enddialog-controlevent.md) bestimmt, die der vom Benutzer gedrückten Schaltfläche zugeordnet sind:
 
-**Jeder andere Rückgabewert**: die InstallValidate-Aktion gibt die Steuerung sofort mit dem Status "msidoaction StatusSuccess" an das Installationsprogramm zurück. Da in diesem Fall eine oder mehrere Dateien weiterhin verwendet werden, müssen die nachfolgenden [InstallFiles](installfiles-action.md) -und/oder [installadminpackage](installadminpackage-action.md) -Aktionen festlegen, dass die verwendeten Dateien beim Neustart des Systems ersetzt oder gelöscht werden.
+**Wiederholen:** Alle Werte, die der [ListBox-Tabelle](listbox-table.md) hinzugefügt [](c-gly.md) werden, werden deaktiviert, und die gesamte Dateikostenprozedur wird wiederholt, und es wird erneut nach Dateien geprüft, die noch verwendet werden. Wenn ein oder mehrere Prozesse weiterhin als zu überschreibende oder zu löschende Dateien identifiziert werden, wird der Prozess wiederholt. Andernfalls gibt InstallValidate die Steuerung an das Installationsprogramm mit dem Status msiDoActionStatusSuccess zurück.
 
-Wenn in der Datenbank keine [ListBox](listbox-table.md) -Tabelle vorhanden ist, wird InstallValidate ohne Fehler automatisch beendet.
+**Beenden:** Die Aktion InstallValidate gibt die Steuerung sofort an das Installationsprogramm mit dem Status msiDoActionStatusUserExit zurück. Dadurch wird die Installation beendet.
 
-Das Semikolon ist das Listen Trennzeichen für Transformationen, Quellen und Patches und sollte in diesen Dateinamen oder Pfaden nicht verwendet werden.
+**Jeder andere Rückgabewert:** Die InstallValidate-Aktion gibt die Steuerung sofort an das Installationsprogramm mit dem Status msiDoActionStatusSuccess zurück. Da in diesem Fall mindestens eine Datei noch verwendet wird, müssen die nachfolgenden [InstallFiles-](installfiles-action.md) und/oder [InstallAdminPackage-Aktionen](installadminpackage-action.md) planen, dass die in Gebrauch genommenen Dateien ersetzt oder gelöscht werden, wenn das System neu gestartet wird.
 
-Dateien, die in einem schreibgeschützten Speicherort als schreibgeschützt gekennzeichnet sind, werden vom Installer nie als verwendet.
+Wenn keine [ListBox-Tabelle](listbox-table.md) in der Datenbank vorhanden ist, wird InstallValidate ohne Fehler automatisch beendet.
 
-Ein standardmäßiges Dialogfeld " **nicht genügend Speicherplatz** " mit **Abbruch** -und **Wiederholungs** Schaltflächen wird dem Benutzer angezeigt, wenn die Benutzeroberflächen Ebene "Basic" ist.
+Das Semikolon ist das Listentrennzeichen für Transformationen, Quellen und Patches und sollte nicht in diesen Dateinamen oder Pfaden verwendet werden.
+
+Dateien, die an einem schreibgeschützten Speicherort als schreibgeschützt gekennzeichnet sind, werden vom Installationsprogramm nie als verwendet betrachtet.
+
+Wenn die **Benutzeroberflächenebene**  einfach ist, wird dem Benutzer ein Standarddialogfeld mit den Schaltflächen "Abbrechen" und "Wiederholen" angezeigt. 
 
  
 

@@ -1,7 +1,7 @@
 ---
-description: Enthält eine 1-Byte-hexbinär Datei, die verwendet wird, um zwischen NICs zu unterscheiden, die vom gleichen IHV erstellt werden.
+description: Enthält eine hexadezimalbinäre 1-Byte-Datei, die verwendet wird, um zwischen NICs zu unterscheiden, die von derselben IHV hergestellt werden.
 ms.assetid: fd6bae3d-27a8-4bff-9340-b444312b8216
-title: Type (ouiheader)-Element
+title: type (OUIHeader)-Element
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -12,18 +12,18 @@ api_name:
 api_type:
 - Schema
 api_location: ''
-ms.openlocfilehash: 12637e5a70409166e5a31aa0fc98f4df1b9f6945
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 234b30883df463d7c336ce7d270e574d41a5cabe9924c327a35ff1a31ee65632
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "103866028"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117797501"
 ---
-# <a name="type-ouiheader-element"></a>Type (ouiheader)-Element
+# <a name="type-ouiheader-element"></a>type (OUIHeader)-Element
 
-Das "Type (ouiheader)"-Element enthält eine 1-Byte-hexbinär Datei, die verwendet wird, um zwischen NICs zu unterscheiden, die von derselben IHV-Datei
+Das Element vom Typ (OUIHeader) enthält eine hexadezimale 1-Byte-Datei, die verwendet wird, um zwischen NICs zu unterscheiden, die von derselben IHV erstellt wurden.
 
-**Windows XP mit SP3 und Wireless LAN API für Windows XP mit SP2:** Dieses Element wird nicht unterstützt.
+**Windows XP mit SP3 und wlan-API für Windows XP mit SP2:** Dieses Element wird nicht unterstützt.
 
 ``` syntax
 <xs:element name="type">
@@ -39,7 +39,7 @@ Das "Type (ouiheader)"-Element enthält eine 1-Byte-hexbinär Datei, die verwend
 </xs:element>
 ```
 
-Das-Element wird durch das [**ouiheader**](wlan-profileschema-ouiheader-ihv-element.md) -Element definiert.
+Das -Element wird durch das [**OUIHeader-Element**](wlan-profileschema-ouiheader-ihv-element.md) definiert.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -47,8 +47,8 @@ Das-Element wird durch das [**ouiheader**](wlan-profileschema-ouiheader-ihv-elem
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>       |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/> |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ Vista-Desktop-Apps\]<br/>       |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/> |
 
 
 
@@ -56,16 +56,16 @@ Das-Element wird durch das [**ouiheader**](wlan-profileschema-ouiheader-ihv-elem
 
 <dl> <dt>
 
-**Definitions Kontext des Elements im Schema**
+**Definitionskontext des Elements im Schema**
 </dt> <dt>
 
-[**Ouiheader**](wlan-profileschema-ouiheader-ihv-element.md)
+[**OUIHeader**](wlan-profileschema-ouiheader-ihv-element.md)
 </dt> <dt>
 
-**Mögliches unmittelbar übergeordnetes Element in der Schema Instanz**
+**Mögliches unmittelbar übergeordnetes Element in der Schemainstanz**
 </dt> <dt>
 
-[**Ouiheader (IHV)**](wlan-profileschema-ouiheader-ihv-element.md)
+[**OUIHeader (IHV)**](wlan-profileschema-ouiheader-ihv-element.md)
 </dt> </dl>
 
  

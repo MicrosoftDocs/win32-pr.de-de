@@ -1,29 +1,29 @@
 ---
-description: Gibt die Zeitspanne (in Millisekunden) an, mit der Daten vor der Wiedergabe einer ASF-Datei (Advanced Systems Format) gepuffert werden.
+description: Gibt die Zeit in Millisekunden an, für die Daten gepuffert werden, bevor eine ASF-Datei (Advanced Systems Format) wiedergibt.
 ms.assetid: 6aebe1cf-bd45-4b02-a3c8-6599bb683d7c
-title: MF_PD_ASF_FILEPROPERTIES_PREROLL-Attribut (wmcontainer. h)
+title: MF_PD_ASF_FILEPROPERTIES_PREROLL -Attribut (Wmcontainer.h)
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 502ba715cc2802f9710d579e0c7afd6477b83454
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: ca6440853e2e3308d3d173350de17274bfbe88aa29c3b634ef7480d36d37fd67
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "104217029"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117692052"
 ---
-# <a name="mf_pd_asf_fileproperties_preroll-attribute"></a>Das \_ Attribut "MF PD \_ ASF \_ File Properties \_ Preroll"
+# <a name="mf_pd_asf_fileproperties_preroll-attribute"></a>MF \_ PD \_ ASF \_ FILEPROPERTIES \_ PREROLL-Attribut
 
-Gibt die Zeitspanne (in Millisekunden) an, mit der Daten vor der Wiedergabe einer ASF-Datei (Advanced Systems Format) gepuffert werden.
+Gibt die Zeit in Millisekunden an, für die Daten gepuffert werden, bevor eine ASF-Datei (Advanced Systems Format) wiedergibt.
 
 ## <a name="data-type"></a>Datentyp
 
 **UINT64**
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Dieses Attribut gilt für Präsentations Deskriptoren für den ASF-Inhalt.
+Dieses Attribut gilt für Präsentationsdeskriptoren für ASF-Inhalte.
 
-Die [**imfasf ContentInfo:: generatepresentationdescriptor**](/windows/desktop/api/wmcontainer/nf-wmcontainer-imfasfcontentinfo-generatepresentationdescriptor) -Methode generiert dieses Attribut aus den ASF-Metadaten.
+Die [**IMFASFContentInfo::GeneratePresentationDescriptor-Methode**](/windows/desktop/api/wmcontainer/nf-wmcontainer-imfasfcontentinfo-generatepresentationdescriptor) generiert dieses Attribut aus den ASF-Metadaten.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -31,9 +31,9 @@ Die [**imfasf ContentInfo:: generatepresentationdescriptor**](/windows/desktop/a
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                           |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/>                                     |
-| Header<br/>                   | <dl> <dt>Wmcontainer. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ Vista-Desktop-Apps\]<br/>                                           |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/>                                     |
+| Header<br/>                   | <dl> <dt>Wmcontainer.h</dt> </dl> |
 
 
 
@@ -41,25 +41,25 @@ Die [**imfasf ContentInfo:: generatepresentationdescriptor**](/windows/desktop/a
 
 <dl> <dt>
 
-[Alphabetische Liste der Media Foundation Attribute](alphabetical-list-of-media-foundation-attributes.md)
+[Alphabetische Liste Media Foundation Attribute](alphabetical-list-of-media-foundation-attributes.md)
 </dt> <dt>
 
-[**Imfattributes:: GetUINT64**](/windows/desktop/api/mfobjects/nf-mfobjects-imfattributes-getuint64)
+[**ATTRIBUTEs::GetUINT64**](/windows/desktop/api/mfobjects/nf-mfobjects-imfattributes-getuint64)
 </dt> <dt>
 
-[**Imfattributes:: SetUINT64**](/windows/desktop/api/mfobjects/nf-mfobjects-imfattributes-setuint64)
+[**ATTRIBUTEs::SetUINT64**](/windows/desktop/api/mfobjects/nf-mfobjects-imfattributes-setuint64)
 </dt> <dt>
 
-[**IMF presentationdescriptor**](/windows/desktop/api/mfidl/nn-mfidl-imfpresentationdescriptor)
+[**BESCHRIFTungDescriptor**](/windows/desktop/api/mfidl/nn-mfidl-imfpresentationdescriptor)
 </dt> <dt>
 
-[Präsentations deskriptorattribute](presentation-descriptor-attributes.md)
+[Präsentationsdeskriptorattribute](presentation-descriptor-attributes.md)
 </dt> <dt>
 
-[ASF-Header Objekt](asf-file-structure.md)
+[ASF-Headerobjekt](asf-file-structure.md)
 </dt> <dt>
 
-[Präsentations Deskriptoren](presentation-descriptors.md)
+[Präsentationsdeskriptoren](presentation-descriptors.md)
 </dt> </dl>
 
  

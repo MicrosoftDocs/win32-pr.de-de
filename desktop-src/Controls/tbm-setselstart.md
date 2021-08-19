@@ -1,9 +1,9 @@
 ---
-title: TBM_SETSELSTART Meldung (kommstrg. h)
-description: Legt die logische Startposition des aktuellen Auswahl Bereichs in einer TrackBar fest. Diese Meldung wird ignoriert, wenn die TrackBar nicht über den \_ enableselrange-Stil von TB verfügt.
+title: TBM_SETSELSTART Meldung (Commctrl.h)
+description: Legt die logische Anfangsposition des aktuellen Auswahlbereichs in einer Trackleiste fest. Diese Meldung wird ignoriert, wenn die Trackleiste nicht über das \_ TBS-FORMAT ENABLESELRANGE verfügt.
 ms.assetid: eec1019c-6dbe-48c4-9c9d-72d657e80b83
 keywords:
-- Windows-Steuerelemente für TBM_SETSELSTART Meldung
+- TBM_SETSELSTART Windows-Steuerelemente für Nachrichten
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 445cb97c73f8e6483b5d4dd76bc3ccf64322e579
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 4f8cfdc938da5c7f5904e79f55177fe6f8eccba10f37dfdadb613c581cc809fb
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104040087"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117829314"
 ---
-# <a name="tbm_setselstart-message"></a>TBM- \_ setselstart-Meldung
+# <a name="tbm_setselstart-message"></a>TBM \_ SETSELSTART-Nachricht
 
-Legt die logische Startposition des aktuellen Auswahl Bereichs in einer TrackBar fest. Diese Meldung wird ignoriert, wenn die TrackBar nicht über den [**\_ enableselrange**](trackbar-control-styles.md) -Stil von TB verfügt.
+Legt die logische Anfangsposition des aktuellen Auswahlbereichs in einer Trackleiste fest. Diese Meldung wird ignoriert, wenn die Trackleiste nicht über das [**\_ TBS-FORMAT ENABLESELRANGE**](trackbar-control-styles.md) verfügt.
 
 ## <a name="parameters"></a>Parameter
 
@@ -32,14 +32,14 @@ Legt die logische Startposition des aktuellen Auswahl Bereichs in einer TrackBar
 *wParam* 
 </dt> <dd>
 
-Flag neu zeichnen. Wenn dieser Parameter **true** ist, zeichnet die Nachricht die TrackBar neu, nachdem der Auswahlbereich festgelegt wurde. Wenn dieser Parameter auf **false** festgelegt ist, legt die Meldung den Auswahlbereich fest, aber die TrackBar wird nicht neu gezeichnet.
+Neu gezeichnetes Flag. Wenn dieser Parameter **TRUE** ist, zeichnet die Nachricht die Trackleiste neu, nachdem der Auswahlbereich festgelegt wurde. Wenn dieser Parameter **FALSE** ist, legt die Nachricht den Auswahlbereich fest, zeichnet die Trackleiste jedoch nicht neu.
 
 </dd> <dt>
 
 *lParam* 
 </dt> <dd>
 
-Anfangsposition des Auswahl Bereichs.
+Anfangsposition des Auswahlbereichs.
 
 </dd> </dl>
 
@@ -53,9 +53,9 @@ Kein Rückgabewert.
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                        |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/>                                  |
-| Header<br/>                   | <dl> <dt>Kommstrg. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur Vista-Desktop-Apps\]<br/>                                        |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                                  |
+| Header<br/>                   | <dl> <dt>Commctrl.h</dt> </dl> |
 
 
 
@@ -63,19 +63,19 @@ Kein Rückgabewert.
 
 <dl> <dt>
 
-**Verweis**
+**Referenz**
 </dt> <dt>
 
-[**TBM- \_ getselend**](tbm-getselend.md)
+[**TBM \_ GETSELEND**](tbm-getselend.md)
 </dt> <dt>
 
-[**TBM \_ getselstart**](tbm-getselstart.md)
+[**TBM \_ GETSELSTART**](tbm-getselstart.md)
 </dt> <dt>
 
-[**TBM- \_ Sekunden**](tbm-setsel.md)
+[**TBM \_ SETSEL**](tbm-setsel.md)
 </dt> <dt>
 
-[**TBM- \_ setselend**](tbm-setselend.md)
+[**TBM \_ SETSELEND**](tbm-setselend.md)
 </dt> </dl>
 
  

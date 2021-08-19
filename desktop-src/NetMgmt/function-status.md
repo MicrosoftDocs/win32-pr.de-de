@@ -13,7 +13,7 @@ ms.locfileid: "117797346"
 ---
 # <a name="function-status"></a>Funktionsstatus
 
-Die Netzwerkverwaltungsfunktionen geben bei Erfolg 0 (null) zurück. Ein Rückgabecode ungleich 0 (null) gibt einen Fehler an. Da die Netzwerkverwaltungsfunktionen RPC verwenden, enthalten die Fehlerdefinitionen RPC-Fehlercodes. Weitere Informationen finden Sie unter Fehlercodes für die [Netzwerkverwaltung.](network-management-error-codes.md)
+Die Netzwerkverwaltungsfunktionen geben bei Erfolg 0 (null) zurück. Ein Rückgabecode ungleich 0 (null) gibt einen Fehler an. Da die Netzwerkverwaltungsfunktionen RPC verwenden, enthalten die Fehlerdefinitionen RPC-Fehlercodes. Weitere Informationen finden Sie unter [Fehlercodes für die Netzwerkverwaltung.](network-management-error-codes.md)
 
  
 

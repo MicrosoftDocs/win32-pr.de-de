@@ -13,11 +13,11 @@ ms.locfileid: "118329625"
 ---
 # <a name="depnx-compatibility"></a>DEP/NX-Kompatibilität
 
-In der Standardeinstellung Windows Internet Explorer 7 DEP/NX aus Kompatibilitätsgründen deaktiviert. Mehrere beliebte Add-Ons sind nicht mit DEP/NX kompatibel und führen zu einem Fehler, wenn Windows Internet Explorer mit aktivierter DEP/NX geladen werden.
+In Der Standardeinstellung Windows Internet Explorer 7 ist DEP/NX aus Kompatibilitätsgründen deaktiviert. Mehrere beliebte Add-Ons sind nicht mit DEP/NX kompatibel und führen zu einem Fehler, Windows Internet Explorer mit aktivierter DEP/NX geladen werden.
 
-In der Regel werden diese Add-Ons mit einer älteren Version des ATL-Frameworks erstellt. ATL 7.1 und frühere Versionen wurden nicht mit dem DEP-Sicherheitsfeature entworfen. Glücklicherweise verfügen neue Versionen von Microsoft Windows Service Packs über neue DEP/NX-APIs, mit denen Sie DEP/NX verwenden und die Kompatibilität mit älteren ATL-Versionen beibehalten können. Diese neuen APIs ermöglichen es Internet Explorer, SICH für DEP/NX zu entscheiden, ohne dass Add-Ons, die mit älteren Versionen von ATL erstellt werden, fehlschlagen.
+In der Regel werden diese Add-Ons mit einer älteren Version des ATL-Frameworks erstellt. ATL 7.1 und frühere Versionen wurden nicht mit dem DEP-Sicherheitsfeature entworfen. Glücklicherweise verfügen neue Versionen von Microsoft Windows Service Packs über neue DEP/NX-APIs, mit denen Sie DEP/NX verwenden und die Kompatibilität mit älteren ATL-Versionen beibehalten können. Diese neuen APIs ermöglichen es Internet Explorer, DEP/NX zu aktivieren, ohne dass Add-Ons, die mit älteren Versionen von ATL erstellt werden, fehlschlagen.
 
-Wenn ein Add-On nicht DEP-/NX-kompatibel ist und kein veraltetes ATL verwendet, können Sie eine Gruppenrichtlinie-Option verwenden, um DEP/NX für Internet Explorer zu deaktivieren, bis eine aktualisierte Version des fehlerhaften Steuerelements bereitgestellt wird. Lokale Administratoren können DEP/NX steuern, indem sie Internet Explorer  als Administrator ausführen  und die Option Speicherschutz aktivieren im Bereich Erweitert von **Internetoptionen deaktivieren.**
+Wenn ein Add-On nicht DEP-/NX-kompatibel ist und kein veraltetes ATL verwendet, können Sie eine Gruppenrichtlinie-Option verwenden, um DEP/NX für Internet Explorer zu deaktivieren, bis eine aktualisierte Version des fehlerhaften Steuerelements bereitgestellt wird. Lokale Administratoren können DEP/NX steuern, indem sie Internet Explorer als  Administrator ausführen und  die Option Speicherschutz aktivieren im Bereich Erweitert von **Internetoptionen deaktivieren.**
 
 ## <a name="related-topics"></a>Zugehörige Themen
 

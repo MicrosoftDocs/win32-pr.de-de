@@ -1,7 +1,7 @@
 ---
 description: Gibt an, ob die angegebene Farbe eine grundlegende Farbe ist.
 ms.assetid: 9a06fadc-9b97-4f7d-9488-688b72d14bc5
-title: Ffundamentalimecolorstyle-Funktion
+title: FFundamentalIMEColorStyle-Funktion
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,14 +13,14 @@ api_type:
 - DllExport
 api_location:
 - Imeshare.dll
-ms.openlocfilehash: c7de1bf4ef84d159d673e1039ad6ea328153b216
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 8923da89872b5abbd7849b530bca2e13022247f3633444d0c000cffce017ecd2
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106361942"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117827481"
 ---
-# <a name="ffundamentalimecolorstyle-function"></a>Ffundamentalimecolorstyle-Funktion
+# <a name="ffundamentalimecolorstyle-function"></a>FFundamentalIMEColorStyle-Funktion
 
 Gibt an, ob die angegebene Farbe eine grundlegende Farbe ist.
 
@@ -39,20 +39,20 @@ BOOL __cdecl FFundamentalIMEColorStyle(
 
 <dl> <dt>
 
-*pcolorstyle* \[ in\]
+*pcolorstyle* \[ In\]
 </dt> <dd>
 
-Eine **imecolorsty** -Struktur, die von der [**pcolorstylebackfromimestyle**](pcolorstylebackfromimestyle.md) -Funktion oder der [**pcolorstyletextfromimestyle**](pcolorstyletextfromimestyle.md) -Funktion zur체ckgegeben wird.
+Eine **IMECOLORSTY-Struktur,** die von [**der PColorStyleBackFromIMEStyle-**](pcolorstylebackfromimestyle.md) oder [**PColorStyleTextFromIMEStyle-Funktion zur체ckgegeben**](pcolorstyletextfromimestyle.md) wird.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>R체ckgabewert
 
-Gibt **true** zur체ck, wenn die Farbe eine grundlegende Farbe ist.
+Gibt **TRUE zur체ck,** wenn die Farbe eine grundlegende Farbe ist.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Dieser Funktion ist keine Import Bibliothek oder Header Datei zugeordnet. Sie m체ssen ihn mithilfe der [**LoadLibrary**](/windows/win32/api/libloaderapi/nf-libloaderapi-loadlibrarya) -Funktion und der [**GetProcAddress**](/windows/win32/api/libloaderapi/nf-libloaderapi-getprocaddress) -Funktion aufrufen.
+Dieser Funktion ist keine Importbibliothek oder Headerdatei zugeordnet. Sie m체ssen sie mithilfe der [**Funktionen LoadLibrary**](/windows/win32/api/libloaderapi/nf-libloaderapi-loadlibrarya) und [**GetProcAddress**](/windows/win32/api/libloaderapi/nf-libloaderapi-getprocaddress) aufrufen.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -68,10 +68,10 @@ Dieser Funktion ist keine Import Bibliothek oder Header Datei zugeordnet. Sie m�
 
 <dl> <dt>
 
-[**Pcolorstylebackfromimestyle**](pcolorstylebackfromimestyle.md)
+[**PColorStyleBackFromIMEStyle**](pcolorstylebackfromimestyle.md)
 </dt> <dt>
 
-[**Pcolorstyletextfromimestyle**](pcolorstyletextfromimestyle.md)
+[**PColorStyleTextFromIMEStyle**](pcolorstyletextfromimestyle.md)
 </dt> </dl>
 
  

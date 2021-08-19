@@ -1,25 +1,25 @@
 ---
-description: Im Beispiel in diesem Thema werden die Funktionen RegOpenKeyEx, regenrekeyex und regdeletekey verwendet, um einen Registrierungsschlüssel mit unter Schlüsseln zu löschen.
+description: Im Beispiel in diesem Thema werden die Funktionen RegOpenKeyEx, RegEnumKeyEx und RegDeleteKey verwendet, um einen Registrierungsschlüssel mit Unterschlüsseln zu löschen.
 ms.assetid: 1cf6db95-85a4-4416-b17e-e14f45804503
-title: Löschen eines Schlüssels mit unter Schlüsseln
+title: Löschen eines Schlüssels mit Unterschlüsseln
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 490020ff5a7bc6ea44f83b729bcbad4491aaa62e
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: ee7c64421a83c6eeb1537a8a72b839eeea5d49d2f17846dc7d627c5127e6b7e9
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "104050627"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117764482"
 ---
-# <a name="deleting-a-key-with-subkeys"></a>Löschen eines Schlüssels mit unter Schlüsseln
+# <a name="deleting-a-key-with-subkeys"></a>Löschen eines Schlüssels mit Unterschlüsseln
 
-Im Beispiel in diesem Thema werden die Funktionen [**RegOpenKeyEx**](/windows/desktop/api/Winreg/nf-winreg-regopenkeyexa), [**regenrekeyex**](/windows/desktop/api/Winreg/nf-winreg-regenumkeyexa)und [**regdeletekey**](/windows/desktop/api/Winreg/nf-winreg-regdeletekeya) verwendet, um einen Registrierungsschlüssel mit unter Schlüsseln zu löschen.
+Im Beispiel in diesem Thema werden die Funktionen [**RegOpenKeyEx,**](/windows/desktop/api/Winreg/nf-winreg-regopenkeyexa) [**RegEnumKeyEx**](/windows/desktop/api/Winreg/nf-winreg-regenumkeyexa)und [**RegDeleteKey**](/windows/desktop/api/Winreg/nf-winreg-regdeletekeya) verwendet, um einen Registrierungsschlüssel mit Unterschlüsseln zu löschen.
 
-Um dieses Beispiel zu testen, erstellen Sie mithilfe Regedt32.exe den folgenden Registrierungsschlüssel, und fügen Sie dann einige Werte und Unterschlüssel hinzu:
+Um dieses Beispiel zu testen, erstellen Sie den folgenden Registrierungsschlüssel mithilfe von Regedt32.exe, und fügen Sie dann einige Werte und Unterschlüssel hinzu:
 
-**HKEY \_ Aktuelle \_ Benutzer** \\ **Software** \\ **TestDir**
+**HKEY \_ CURRENT \_ USER** \\ **Software** \\ **TestDir**
 
-Nachdem Sie den Code ausgeführt haben, können Sie die F5-Taste verwenden, um die Registrierungsdaten zu aktualisieren. Beachten Sie, dass die **TestDir** -Taste gelöscht wird.
+Verwenden Sie nach dem Ausführen des Codes die F5-Taste, um die Registrierungsdaten zu aktualisieren, und beachten Sie, dass der **TestDir-Schlüssel** gelöscht wird.
 
 
 ```C++

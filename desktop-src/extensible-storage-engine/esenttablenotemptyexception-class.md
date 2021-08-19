@@ -1,5 +1,5 @@
 ---
-description: 'Weitere Informationen finden Sie unter: EsentTableNotEmptyException-Klasse'
+description: 'Weitere Informationen zu: EsentTableNotEmptyException-Klasse'
 title: EsentTableNotEmptyException-Klasse
 TOCTitle: EsentTableNotEmptyException class
 ms:assetid: T:Microsoft.Isam.Esent.Interop.EsentTableNotEmptyException
@@ -68,7 +68,7 @@ public sealed class EsentTableNotEmptyException : EsentUsageException
 
 Alle öffentlichen statischen Elemente dieses Typs (Shared in Microsoft Visual Basic) sind threadsicher. Bei Instanzmembern ist die Threadsicherheit nicht gewährleistet.
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 #### <a name="reference"></a>Verweis
 

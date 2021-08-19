@@ -1,9 +1,9 @@
 ---
-title: Komplexer Typ valuemaptype
-description: Definiert eine Liste von Name-Wert-Zuordnungen zwischen ganzzahligen Werten und Zeichen folgen Werten.
+title: Komplexer ValueMapType-Typ
+description: Definiert eine Liste von Name-Wert-Zuordnungen zwischen ganzzahligen Werten und Zeichenfolgenwerten.
 ms.assetid: 754578bf-d3c6-4467-af39-af56d5a11dce
 keywords:
-- "\"Valuemaptype Complex Type Event Log\""
+- Komplexer ValueMapType-Typ EventLog
 topic_type:
 - apiref
 api_name:
@@ -13,16 +13,16 @@ api_type:
 ms.topic: reference
 ms.date: 05/31/2018
 api_location: ''
-ms.openlocfilehash: 28fde51466ba506802c8dbc5379f1628fd943fa8
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: c05452197fb71ca436fea4854346efa90f53ce6b3396e66af7e9b7ccb6615200
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "103739713"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118120388"
 ---
-# <a name="valuemaptype-complex-type"></a>Komplexer Typ valuemaptype
+# <a name="valuemaptype-complex-type"></a>Komplexer ValueMapType-Typ
 
-Definiert eine Liste von Name-Wert-Zuordnungen zwischen ganzzahligen Werten und Zeichen folgen Werten.
+Definiert eine Liste von Name-Wert-Zuordnungen zwischen ganzzahligen Werten und Zeichenfolgenwerten.
 
 ``` syntax
 <xs:complexType name="ValueMapType">
@@ -47,9 +47,9 @@ Definiert eine Liste von Name-Wert-Zuordnungen zwischen ganzzahligen Werten und 
 
 
 
-| Element                                                     | type                                                                           | BESCHREIBUNG                                                                 |
+| Element                                                     | type                                                                           | Beschreibung                                                                 |
 |-------------------------------------------------------------|--------------------------------------------------------------------------------|-----------------------------------------------------------------------------|
-| [**bilden**](eventmanifestschema-map-valuemaptype-element.md) | [**Valuemapvaluetype**](eventmanifestschema-valuemapvaluetype-complextype.md) | Definiert die Zuordnung zwischen einem ganzzahligen Wert und einem Zeichen folgen Wert.<br/> |
+| [**Karte**](eventmanifestschema-map-valuemaptype-element.md) | [**ValueMapValueType**](eventmanifestschema-valuemapvaluetype-complextype.md) | Definiert die Zuordnung zwischen einem ganzzahligen Wert und einem Zeichenfolgenwert.<br/> |
 
 
 
@@ -57,10 +57,10 @@ Definiert eine Liste von Name-Wert-Zuordnungen zwischen ganzzahligen Werten und 
 
 
 
-| Name   | type                                                              | BESCHREIBUNG                                                                                                                                                                                                                                                                                                         |
+| Name   | type                                                              | Beschreibung                                                                                                                                                                                                                                                                                                         |
 |--------|-------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | name   | Zeichenfolge                                                            | Der Name der Wertzuordnung. Verwenden Sie den Namen in einem Datenelement, um auf die Zuordnungen zu verweisen.<br/>                                                                                                                                                                                                                     |
-| Symbol | [**Csymboltype**](eventmanifestschema-csymboltype-simpletype.md) | Das Symbol, das verwendet werden soll, um auf die Zuordnungen in der Anwendung zu verweisen. Der [**Nachrichten Compiler (MC.exe)**](message-compiler--mc-exe-.md) verwendet das Symbol, um eine Konstante für die Zuordnung in der vom Compiler generierten Header Datei zu erstellen. Wenn Sie kein Symbol angeben, generiert der Compiler einen für Sie.<br/> |
+| Symbol | [**CSymbolType**](eventmanifestschema-csymboltype-simpletype.md) | Das Symbol, das verwendet werden soll, um auf die Zuordnungen in Ihrer Anwendung zu verweisen. Der [**Nachrichtencompiler (MC.exe)**](message-compiler--mc-exe-.md) verwendet das Symbol, um eine Konstante für die Zuordnung in der Headerdatei zu erstellen, die der Compiler generiert. Wenn Sie kein Symbol angeben, generiert der Compiler ein Symbol für Sie.<br/> |
 
 
 
@@ -70,8 +70,8 @@ Definiert eine Liste von Name-Wert-Zuordnungen zwischen ganzzahligen Werten und 
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>       |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/> |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur Vista-Desktop-Apps\]<br/>       |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/> |
 
 
 

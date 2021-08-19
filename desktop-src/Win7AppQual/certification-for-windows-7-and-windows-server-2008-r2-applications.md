@@ -26,7 +26,7 @@ Wir haben den Prozess zum Qualifizieren von Softwareanwendungen für das Logo "K
 
 ## <a name="process"></a>Prozess
 
-Wenn Softwareanwendungen zum Testen bereit sind, wechseln Sie zur Seite Microsoft Verbinden Windows 7 SoftwareLogo Program, und befolgen Sie die Anweisungen:
+Wenn Softwareanwendungen zum Testen bereit sind, wechseln Sie zur Seite Microsoft Verbinden Windows 7 Softwarelogo-Programm, und befolgen Sie die Anweisungen:
 
 1.  Beginnen Sie frühzeitig mit der Überprüfung der Anforderungen, und identifizieren Sie alle Codeänderungen, die erforderlich sind, um sie zu erfüllen.
 2.  Verwenden Sie das Alpha-Selbsttesttool für die Überprüfung Laden Sie das neueste Release des Toolkits herunter, und installieren Sie es. Beachten Sie die Anforderungen an die 64-Bit-Architektur und das Betriebssystem in der datei readme.txt. Führen Sie Ihre Anwendung über das Toolkit aus, wie in der Übersicht erläutert, um die Konformität der Anwendung mit den Anforderungen zu überprüfen.

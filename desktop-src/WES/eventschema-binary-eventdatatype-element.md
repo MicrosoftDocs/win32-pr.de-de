@@ -1,9 +1,9 @@
 ---
-title: Binary (eventdatatype)-Element
-description: Ein binäres Daten-BLOB für Ereignisse, die mithilfe der Ereignisprotokollierung geschrieben werden.
+title: Binary(EventDataType)-Element
+description: Ein binäres Datenblob für Ereignisse, die mithilfe der Ereignisprotokollierung geschrieben werden.
 ms.assetid: aec2557f-6d63-48e7-b4d7-584e99dfcce3
 keywords:
-- Ereignisprotokoll für das binäre Element
+- Binäres Element EventLog
 topic_type:
 - apiref
 api_name:
@@ -13,16 +13,16 @@ api_type:
 ms.topic: reference
 ms.date: 05/31/2018
 api_location: ''
-ms.openlocfilehash: cdfd00e2d25f3178ab44081f76725b3189f1010b
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 495310a46a314b944b29eeb2433b7c5581136c6923c5630d8f09486a95e47fdd
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104040118"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118120398"
 ---
-# <a name="binary-eventdatatype-element"></a>Binary (eventdatatype)-Element
+# <a name="binary-eventdatatype-element"></a>Binary(EventDataType)-Element
 
-Ein binäres Daten-BLOB für Ereignisse, die mithilfe der [Ereignisprotokollierung](/windows/desktop/EventLog/event-logging)geschrieben werden.
+Ein binäres Datenblob für Ereignisse, die mithilfe der [Ereignisprotokollierung geschrieben werden.](/windows/desktop/EventLog/event-logging)
 
 ``` syntax
 <xs:element name="Binary"
@@ -30,7 +30,7 @@ Ein binäres Daten-BLOB für Ereignisse, die mithilfe der [Ereignisprotokollieru
  />
 ```
 
-Das **Binary** -Element wird durch den komplexen [**eventdatatype**](eventschema-eventdatatype-complextype.md) -Typ definiert.
+Das **Binary-Element** wird durch den komplexen [**EventDataType-Typ**](eventschema-eventdatatype-complextype.md) definiert.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -38,19 +38,19 @@ Das **Binary** -Element wird durch den komplexen [**eventdatatype**](eventschema
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>       |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/> |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ Vista-Desktop-Apps\]<br/>       |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
 **Übergeordnetes Element**
 </dt> <dt>
 
-[**EVENTDATA (EventType)**](eventschema-eventdata-eventtype-element.md)
+[**EventData (EventType)**](eventschema-eventdata-eventtype-element.md)
 </dt> </dl>
 
  

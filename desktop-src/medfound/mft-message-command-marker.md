@@ -46,7 +46,7 @@ Asynchrone MFTs müssen wie beschrieben auf diese Meldung reagieren. Synchrone M
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 

@@ -1,36 +1,36 @@
 ---
-title: Debuggen von apps mithilfe der Debugebene
-description: Hier wird erläutert, wie Sie die debugschicht und einige der Probleme, die Sie mithilfe der debugschicht verhindern können, aktivieren.
+title: Verwenden der Debugebene zum Debuggen von Apps
+description: Hier erfahren Sie, wie Sie die Debugebene aktivieren, und einige der Probleme, die Sie mithilfe der Debugebene verhindern können.
 ms.assetid: 3C2B0A12-FB57-4400-BE39-05ED23F552C7
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: aaa3f4748da6893470e3bb6631c4228ec1ae3d48
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: 9c6ac5492b96c40b4395b2c501b764c646a8edbb06d3a6386a15cbb2534778d0
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "103708177"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117912734"
 ---
-# <a name="using-the-debug-layer-to-debug-apps"></a>Debuggen von apps mithilfe der Debugebene
+# <a name="using-the-debug-layer-to-debug-apps"></a>Verwenden der Debugebene zum Debuggen von Apps
 
-Es wird empfohlen, dass Sie die [Debugebene](overviews-direct3d-11-devices-layers.md) verwenden, um Ihre apps zu debuggen, um sicherzustellen, dass Sie Fehler und Warnungen bereinigen. Die Debug-Ebene hilft Ihnen beim Schreiben von Direct3D-Code. Außerdem kann sich die Produktivität erhöhen, wenn Sie die debugschicht verwenden, da Sie sofort die Ursache für Fehler beim Rendern oder sogar schwarze Bildschirme an ihrer Quelle sehen können. Die Debug-Ebene bietet Warnungen für viele Probleme. Beispielsweise bietet die Debug-Ebene Warnungen für diese Probleme:
+Es wird empfohlen, die [Debugebene](overviews-direct3d-11-devices-layers.md) zu verwenden, um Ihre Apps zu debuggen, um sicherzustellen, dass sie von Fehlern und Warnungen bereinigt werden. Die Debugebene unterstützt Sie beim Schreiben von Direct3D-Code. Darüber hinaus kann Ihre Produktivität bei Verwendung der Debugebene gesteigert werden, da Sie sofort die Ursachen für obskure Renderingfehler oder sogar schwarze Bildschirme an der Quelle sehen können. Die Debugebene stellt Warnungen für viele Probleme bereit. Beispielsweise stellt die Debugebene Warnungen für diese Probleme bereit:
 
--   Es wurde vergessen, eine Textur festzulegen, aber aus ihr in ihren Pixelshader zu lesen.
--   Ausgabe Tiefe, aber keinen tiefen Schablone-Status gebunden
--   Fehler beim Erstellen der Textur mit invalidArg.
+-   Vergessen, eine Textur festzulegen, aber aus ihr in Ihrem Pixel-Shader zu lesen
+-   Ausgabetiefe, aber keine Begrenzung des Tiefenschablonenzustands
+-   Fehler bei der Texturerstellung mit INVALIDARG
 
-Hier wird erläutert, wie Sie die [debugschicht](overviews-direct3d-11-devices-layers.md) und einige der Probleme, die Sie mithilfe der debugschicht verhindern können, aktivieren.
+Hier erfahren Sie, wie Sie die [Debugebene](overviews-direct3d-11-devices-layers.md) aktivieren, und einige der Probleme, die Sie mithilfe der Debugebene verhindern können.
 
--   [Aktivieren der Debug-Ebene](#enabling-the-debug-layer)
--   [Verhindern von Fehlern in Ihrer APP mit der Debug-Ebene](#preventing-errors-in-your-app-with-the-debug-layer)
-    -   [NULL-Zeiger nicht an die Karte übergeben](#dont-pass-null-pointers-to-map)
-    -   [Quellfeld in Quell-und Ziel Ressourcen einschränken](#confine-source-box-within-source-and-destination-resources)
-    -   [Verwerfen Sie "verwerfen" oder "verwerfen" nicht.](#dont-drop-discardresource-or-discardview)
+-   [Aktivieren der Debugebene](#enabling-the-debug-layer)
+-   [Verhindern von Fehlern in Ihrer App mit der Debugebene](#preventing-errors-in-your-app-with-the-debug-layer)
+    -   [Übergeben Sie keine NULL-Zeiger an Map.](#dont-pass-null-pointers-to-map)
+    -   [Beschränken des Felds "Quelle" in Quell- und Zielressourcen](#confine-source-box-within-source-and-destination-resources)
+    -   [DiscardResource oder DiscardView nicht löschen](#dont-drop-discardresource-or-discardview)
 -   [Zugehörige Themen](#related-topics)
 
-## <a name="enabling-the-debug-layer"></a>Aktivieren der Debug-Ebene
+## <a name="enabling-the-debug-layer"></a>Aktivieren der Debugebene
 
-Zum Aktivieren der [Debug-Ebene](overviews-direct3d-11-devices-layers.md)geben Sie [**das D3D11 \_ Create \_ Device \_ Debug**](/windows/desktop/api/D3D11/ne-d3d11-d3d11_create_device_flag) -Flag im *Flags* -Parameter an, wenn Sie die [**D3D11CreateDevice**](/windows/desktop/api/D3D11/nf-d3d11-d3d11createdevice) -Funktion aufrufen, um das renderinggerät zu erstellen. Dieser Beispielcode zeigt, wie Sie die Debugebene aktivieren, wenn sich das Microsoft Visual Studio Projekt in einem Debugbuild befindet:
+Um die [Debugebene](overviews-direct3d-11-devices-layers.md)zu aktivieren, geben Sie das [**D3D11 \_ CREATE DEVICE \_ \_ DEBUG-Flag**](/windows/desktop/api/D3D11/ne-d3d11-d3d11_create_device_flag) im *Flags-Parameter* an, wenn Sie die [**D3D11CreateDevice-Funktion**](/windows/desktop/api/D3D11/nf-d3d11-d3d11createdevice) aufrufen, um das Renderinggerät zu erstellen. Dieser Beispielcode zeigt, wie Sie die Debugebene aktivieren, wenn sich Ihr Microsoft Visual Studio-Projekt in einem Debugbuild befindet:
 
 
 ```C++
@@ -71,38 +71,38 @@ Zum Aktivieren der [Debug-Ebene](overviews-direct3d-11-devices-layers.md)geben S
 
 
 
-## <a name="preventing-errors-in-your-app-with-the-debug-layer"></a>Verhindern von Fehlern in Ihrer APP mit der Debug-Ebene
+## <a name="preventing-errors-in-your-app-with-the-debug-layer"></a>Verhindern von Fehlern in Ihrer App mit der Debugebene
 
-Wenn Sie die Direct3D 11-API missbrauchen oder ungültige Parameter übergeben, meldet die Debugausgabe der [debugschicht](overviews-direct3d-11-devices-layers.md) einen Fehler oder eine Warnung. Anschließend können Sie den Fehler beheben. Als nächstes betrachten wir einige Codierungs Probleme, die zu nicht definiertem Verhalten oder sogar zum Absturz des Betriebssystems führen können. Sie können diese Probleme mithilfe der debugschicht erfassen und verhindern.
+Wenn Sie die Direct3D 11-API missbrauchen oder ungültige Parameter übergeben, meldet die Debugausgabe der [Debugebene](overviews-direct3d-11-devices-layers.md) einen Fehler oder eine Warnung. Anschließend können Sie Ihren Fehler beheben. Als Nächstes betrachten wir einige Codierungsprobleme, die dazu führen können, dass nicht definiertes Verhalten oder sogar das Betriebssystem abstürzt. Sie können diese Probleme mithilfe der Debugebene abfangen und verhindern.
 
-### <a name="dont-pass-null-pointers-to-map"></a>NULL-Zeiger nicht an die Karte übergeben
+### <a name="dont-pass-null-pointers-to-map"></a>Übergeben Sie keine NULL-Zeiger an Map.
 
-Wenn Sie **null** an den *presource* -oder *pmappedresource* -Parameter der [**Verknüpfung id3d11devicecontext aus:: Map**](/windows/desktop/api/D3D11/nf-d3d11-id3d11devicecontext-map) -Methode übergeben, ist das Verhalten von **map** nicht definiert. Wenn Sie ein Gerät erstellt haben, das nur die [Kern Ebene](overviews-direct3d-11-devices-layers.md)unterstützt, **können** ungültige Parameter für die Zuordnung das Betriebssystemabstürzen. Wenn Sie ein Gerät erstellt haben, das die [debugschicht](overviews-direct3d-11-devices-layers.md)unterstützt, meldet die Debugausgabe einen Fehler in **diesem ungültigen** Zuordnungs Befehl.
+Wenn Sie **NULL** an den *pResource-* oder *pMappedResource-Parameter* der [**ID3D11DeviceContext::Map-Methode**](/windows/desktop/api/D3D11/nf-d3d11-id3d11devicecontext-map) übergeben, ist das Verhalten von **Map** nicht definiert. Wenn Sie ein Gerät erstellt haben, das nur die [Kernschicht](overviews-direct3d-11-devices-layers.md)unterstützt, **können** ungültige Map-Parameter das Betriebssystem abstürzen. Wenn Sie ein Gerät erstellt haben, das die [Debugebene](overviews-direct3d-11-devices-layers.md)unterstützt, meldet die Debugausgabe einen Fehler bei diesem ungültigen **Map-Aufruf.**
 
-### <a name="confine-source-box-within-source-and-destination-resources"></a>Quellfeld in Quell-und Ziel Ressourcen einschränken
+### <a name="confine-source-box-within-source-and-destination-resources"></a>Beschränken des Felds "Quelle" in Quell- und Zielressourcen
 
-Beim Abrufen der [**Verknüpfung id3d11devicecontext aus:: copysubresourceregion**](/windows/desktop/api/D3D11/nf-d3d11-id3d11devicecontext-copysubresourceregion) -Methode muss sich das Quellfeld in der Quell Ressource befinden. Durch die Ziel Offsets (x, y und z) kann das Quellfeld beim Schreiben in die Ziel Ressource versetzt werden, aber die Abmessungen des Quellfelds und der Offsets müssen sich innerhalb der Größe der Ressource befinden. Wenn Sie versuchen, eine Kopie außerhalb der Ziel Ressource zu kopieren oder ein Quellfeld anzugeben, das größer ist als die Quell Ressource, ist das Verhalten von **copysubresourceregion** nicht definiert. Wenn Sie ein Gerät erstellt haben, das die [debugschicht](overviews-direct3d-11-devices-layers.md)unterstützt, meldet die Debugausgabe einen Fehler für diesen ungültigen **copysubresourceregion** -Befehl. Ungültige Parameter für **copysubresourceregion** verursachen nicht definiertes Verhalten und können zu einem falschen Rendering, Clipping, ohne Kopie oder sogar zum Entfernen des renderinggeräts führen.
+Bei einem Aufruf der [**ID3D11DeviceContext::CopySubresourceRegion-Methode**](/windows/desktop/api/D3D11/nf-d3d11-id3d11devicecontext-copysubresourceregion) muss sich das Quellfeld innerhalb der Quellressource befinden. Mit den Zieloffsets (x, y und z) kann das Quellfeld beim Schreiben in die Zielressource versetzt werden. Die Dimensionen des Quellfelds und der Offsets müssen jedoch innerhalb der Größe der Ressource sein. Wenn Sie versuchen, außerhalb der Zielressource zu kopieren oder ein Quellfeld anzugeben, das größer als die Quellressource ist, ist das Verhalten von **CopySubresourceRegion** nicht definiert. Wenn Sie ein Gerät erstellt haben, das die [Debugebene](overviews-direct3d-11-devices-layers.md)unterstützt, meldet die Debugausgabe einen Fehler bei diesem ungültigen **CopySubresourceRegion-Aufruf.** Ungültige Parameter für **CopySubresourceRegion** verursachen nicht definiertes Verhalten und können zu falschem Rendering, Clipping, keiner Kopie oder sogar zum Entfernen des Renderinggeräts führen.
 
-### <a name="dont-drop-discardresource-or-discardview"></a>Verwerfen Sie "verwerfen" oder "verwerfen" nicht.
+### <a name="dont-drop-discardresource-or-discardview"></a>DiscardResource oder DiscardView nicht löschen
 
-Die Laufzeit löscht einen [**ID3D11DeviceContext1::D iscardresource**](/windows/desktop/api/D3D11_1/nf-d3d11_1-id3d11devicecontext1-discardresource) oder [**ID3D11DeviceContext1::D iscardview**](/windows/desktop/api/D3D11_1/nf-d3d11_1-id3d11devicecontext1-discardview) , es sei denn, Sie erstellen die Ressource ordnungsgemäß.
+Die Runtime löscht einen Aufruf von [**ID3D11DeviceContext1::D iscardResource**](/windows/desktop/api/D3D11_1/nf-d3d11_1-id3d11devicecontext1-discardresource) oder [**ID3D11DeviceContext1::D iscardView,**](/windows/desktop/api/D3D11_1/nf-d3d11_1-id3d11devicecontext1-discardview) es sei denn, Sie erstellen die Ressource ordnungsgemäß.
 
-Die Ressource, die Sie an [**ID3D11DeviceContext1::D iscardresource**](/windows/desktop/api/D3D11_1/nf-d3d11_1-id3d11devicecontext1-discardresource) übergeben, muss mithilfe von [**D3D11 \_ Usage \_ default**](/windows/desktop/api/D3D11/ne-d3d11-d3d11_usage) oder [**D3D11 \_ Usage \_**](/windows/desktop/api/D3D11/ne-d3d11-d3d11_usage)erstellt worden sein. andernfalls löscht die Laufzeit den Rückruf von " **verwerfen**".
+Die Ressource, die Sie an [**ID3D11DeviceContext1::D iscardResource**](/windows/desktop/api/D3D11_1/nf-d3d11_1-id3d11devicecontext1-discardresource) übergeben, muss mit [**D3D11 \_ USAGE \_ DEFAULT**](/windows/desktop/api/D3D11/ne-d3d11-d3d11_usage) oder [**D3D11 \_ USAGE \_ DYNAMIC**](/windows/desktop/api/D3D11/ne-d3d11-d3d11_usage)erstellt worden sein, andernfalls löscht die Laufzeit den Aufruf von **DiscardResource**.
 
-Die Ressource, die der Ansicht zugrunde liegt, die Sie an [**ID3D11DeviceContext1 übergeben::D iscardview**](/windows/desktop/api/D3D11_1/nf-d3d11_1-id3d11devicecontext1-discardview) muss mit der [**D3D11 \_ Usage \_ default**](/windows/desktop/api/D3D11/ne-d3d11-d3d11_usage) oder [**D3D11 \_ Usage \_ Dynamic**](/windows/desktop/api/D3D11/ne-d3d11-d3d11_usage)erstellt worden sein. andernfalls löscht die Laufzeit den Rückruf von " **verwerfen View**".
+Die Ressource, die der Ansicht zugrundeliegt, die Sie an [**ID3D11DeviceContext1::D iscardView**](/windows/desktop/api/D3D11_1/nf-d3d11_1-id3d11devicecontext1-discardview) übergeben, muss mit [**D3D11 \_ USAGE \_ DEFAULT**](/windows/desktop/api/D3D11/ne-d3d11-d3d11_usage) oder [**D3D11 \_ USAGE \_ DYNAMIC**](/windows/desktop/api/D3D11/ne-d3d11-d3d11_usage)erstellt worden sein, andernfalls löscht die Laufzeit den Aufruf von **DiscardView**.
 
-Wenn Sie ein Gerät erstellt haben, das die [debugschicht](overviews-direct3d-11-devices-layers.md)unterstützt, meldet die Debugausgabe einen Fehler bezüglich des gelöschten Aufrufes.
+Wenn Sie ein Gerät erstellt haben, das die [Debugebene](overviews-direct3d-11-devices-layers.md)unterstützt, meldet die Debugausgabe einen Fehler in Bezug auf den gelöschten Aufruf.
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[Software Ebenen](overviews-direct3d-11-devices-layers.md)
+[Softwareebenen](overviews-direct3d-11-devices-layers.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

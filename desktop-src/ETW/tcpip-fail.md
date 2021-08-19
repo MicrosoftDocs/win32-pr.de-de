@@ -118,7 +118,7 @@ Identifiziert das Protokoll. Es kann sich um einen der folgenden Werte handeln:
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 

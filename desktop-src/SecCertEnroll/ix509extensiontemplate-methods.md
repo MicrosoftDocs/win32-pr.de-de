@@ -1,24 +1,24 @@
 ---
-description: Die IX509ExtensionTemplate-Schnittstelle stellt die folgenden Methoden zur Verfügung.
+description: Die IX509ExtensionTemplate-Schnittstelle macht die folgenden Methoden verfügbar.
 ms.assetid: D49AAA7E-082D-4B73-BD69-C4B58255181F
 title: IX509ExtensionTemplate-Methoden
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 008e834443142707e6e348ab75afb7bdecbe07e8
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 68c4f98e36ea589bdfa90dae80e7b2d1d388c53d4d6290305522a01b53fc95e5
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106353999"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117775314"
 ---
 # <a name="ix509extensiontemplate-methods"></a>IX509ExtensionTemplate-Methoden
 
-Die [**IX509ExtensionTemplate**](/windows/desktop/api/CertEnroll/nn-certenroll-ix509extensiontemplate) -Schnittstelle stellt die folgenden Methoden zur Verfügung.
+Die [**IX509ExtensionTemplate-Schnittstelle**](/windows/desktop/api/CertEnroll/nn-certenroll-ix509extensiontemplate) macht die folgenden Methoden verfügbar.
 
 ## <a name="in-this-section"></a>In diesem Abschnitt
 
--   [**Initializedecode-Methode**](/windows/desktop/api/CertEnroll/nf-certenroll-ix509extensiontemplate-initializedecode)
--   [**Initializedecode-Methode**](/windows/desktop/api/CertEnroll/nf-certenroll-ix509extensiontemplate-initializeencode)
+-   [**InitializeDecode-Methode**](/windows/desktop/api/CertEnroll/nf-certenroll-ix509extensiontemplate-initializedecode)
+-   [**InitializeEncode-Methode**](/windows/desktop/api/CertEnroll/nf-certenroll-ix509extensiontemplate-initializeencode)
 
  
 

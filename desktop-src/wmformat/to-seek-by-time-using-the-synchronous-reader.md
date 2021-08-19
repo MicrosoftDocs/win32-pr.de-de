@@ -1,44 +1,44 @@
 ---
-title: So suchen Sie nach Zeit mithilfe des synchronen Readers
-description: So suchen Sie nach Zeit mithilfe des synchronen Readers
+title: So suchen Sie nach Zeit mit dem synchronen Reader
+description: So suchen Sie nach Zeit mit dem synchronen Reader
 ms.assetid: 143f72b0-9d71-4efa-b8d4-5cde53a2aa2a
 keywords:
-- Advanced Systems Format (ASF), Suche nach Zeit
-- ASF (Advanced Systems Format), Suche nach Zeit
+- Advanced Systems Format (ASF), suchen nach Zeit
+- ASF (Advanced Systems Format), Suchen nach Zeit
 - Advanced Systems Format (ASF), synchrone Reader
 - ASF (Advanced Systems Format), synchrone Reader
 - synchrone Leser, suchen nach Zeit
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: b4a43e914a6fc0d320860db61f4747cbee3033e9
-ms.sourcegitcommit: 48d1c892045445bcbd0f22bafa2fd3861ffaa6e7
+ms.openlocfilehash: f74fb0cb4f73e70821347b82a9e5a2544eb9759e733fb164077b2fc007163db3
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/19/2020
-ms.locfileid: "103723560"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118432633"
 ---
-# <a name="to-seek-by-time-using-the-synchronous-reader"></a>So suchen Sie nach Zeit mithilfe des synchronen Readers
+# <a name="to-seek-by-time-using-the-synchronous-reader"></a>So suchen Sie nach Zeit mit dem synchronen Reader
 
-Um mithilfe des synchronen Readers nach Daten zu suchen, geben Sie einen Bereich für die Wiedergabe an. Ein Bereich wird durch eine Start Präsentationszeit und eine Dauer, beide in 100-Nanosecond-Einheiten, definiert.
+Um mit dem synchronen Reader nach Daten zu suchen, geben Sie einen Bereich für die Wiedergabe an. Ein Bereich wird durch eine Startpräsentationszeit und eine Dauer in Einheiten von 100 Nanosekunden definiert.
 
-Führen Sie die folgenden Schritte aus, um mithilfe des synchronen Readers mithilfe des synchronen Readers Daten in einer ASF-Datei zu suchen.
+Führen Sie die folgenden Schritte aus, um Daten in einer ASF-Datei anhand der Präsentationszeit mithilfe des synchronen Readers zu suchen.
 
-1.  Geben Sie eine Startzeit und die Dauer für die Beispiel Übermittlung an, indem Sie [**iwmsyncreader:: abge**](/previous-versions/windows/desktop/api/Wmsdkidl/nf-wmsdkidl-iwmsyncreader-setrange)aufrufen. Diese Methode erfordert nicht, dass Sie eine Datenstrom Nummer angeben, da die Präsentations Zeiten der einzelnen Datenströme bereits synchronisiert sein sollten.
-2.  Beginnen Sie mit dem Abrufen von Beispielen mit Aufrufen von [**iwmsynkreader:: getnextsample**](/previous-versions/windows/desktop/api/Wmsdkidl/nf-wmsdkidl-iwmsyncreader-getnextsample). Fahren Sie wie gewohnt mit dem synchronen Reader fort.
+1.  Geben Sie eine Startzeit und Dauer für die Beispielübermittlung an, indem [**Sie IWMSyncReader::SetRange**](/previous-versions/windows/desktop/api/Wmsdkidl/nf-wmsdkidl-iwmsyncreader-setrange)aufrufen. Bei dieser Methode müssen Sie keine Streamnummer angeben, da die Präsentationszeiten der einzelnen Datenströme bereits synchronisiert werden sollten.
+2.  Beginnen Sie mit dem Abrufen von Beispielen mit Aufrufen von [**IWMSyncReader::GetNextSample**](/previous-versions/windows/desktop/api/Wmsdkidl/nf-wmsdkidl-iwmsyncreader-getnextsample). Fahren Sie wie gewohnt mit dem synchronen Reader fort.
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[**Iwmsynkreader-Schnittstelle**](/previous-versions/windows/desktop/api/wmsdkidl/nn-wmsdkidl-iwmsyncreader)
+[**IWMSyncReader-Schnittstelle**](/previous-versions/windows/desktop/api/wmsdkidl/nn-wmsdkidl-iwmsyncreader)
 </dt> <dt>
 
 [**Lesen von Dateien mit dem synchronen Reader**](reading-files-with-the-synchronous-reader.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

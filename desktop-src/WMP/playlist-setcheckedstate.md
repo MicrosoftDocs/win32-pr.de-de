@@ -35,7 +35,7 @@ Die **setCheckedState-Methode** gibt an, dass das indizierte Element in der Wied
 <span id="item"></span><span id="ITEM"></span>*Artikel*
 </dt> <dd>
 
-**Number** (**long**), die den Index des zu überprüfenden Wiedergabelistenelements angibt.
+**Zahl** (**long**), die den Index des zu überprüfenden Wiedergabelistenelements angibt.
 
 </dd> </dl>
 
@@ -45,7 +45,7 @@ Diese Methode gibt einen **booleschen zurück.**
 
 ## <a name="remarks"></a>Hinweise
 
-Sie können alle Elemente auf den aktivierten Zustand festlegen, indem Sie 1 im *Elementparameter* angeben.
+Sie können alle Elemente auf den überprüften Zustand festlegen, indem Sie im *Elementparameter* 1 angeben.
 
 Diese Methode wurde durch **setCheckedState2** ersetzt, das geschachtelte Wiedergabelisten unterstützt.
 
@@ -59,7 +59,7 @@ Diese Methode wurde durch **setCheckedState2** ersetzt, das geschachtelte Wieder
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 

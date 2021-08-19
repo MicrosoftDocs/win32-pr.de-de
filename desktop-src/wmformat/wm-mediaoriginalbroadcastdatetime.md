@@ -29,13 +29,13 @@ g \_ wszWMMediaOriginalBroadcastDateTime
 
 ## <a name="data-type"></a>Datentyp
 
-**\_ \_ WMT-TYPZEICHENFOLGE**
+**\_WMT-TYPZEICHENFOLGE \_**
 
 ## <a name="remarks"></a>Hinweise
 
 Dieses Attribut wird für Fernsehsendungen oder Radiosendungen verwendet.
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 

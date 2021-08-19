@@ -25,10 +25,10 @@ ms.locfileid: "118403523"
 ---
 # <a name="cbasefilterregister-method"></a>CBaseFilter.Register-Methode
 
-Die `Register` -Methode fügt den Filter zur Registrierung hinzu.
+Die `Register` -Methode fügt der Registrierung den Filter hinzu.
 
 > [!Note]  
-> Diese Methode ist veraltet. Neue Filter sollten mithilfe der [**Funktion AMovieDllRegisterServer2**](amoviedllregisterserver2.md) registriert werden. Weitere Informationen finden Sie unter [Registrieren von DirectShow-Filtern.](how-to-register-directshow-filters.md)
+> Diese Methode ist veraltet. Neue Filter sollten mit der [**AMovieDllRegisterServer2-Funktion registriert**](amoviedllregisterserver2.md) werden. Weitere Informationen finden Sie unter [Registrieren von DirectShow-Filtern.](how-to-register-directshow-filters.md)
 
  
 
@@ -67,7 +67,7 @@ Gibt einen der in der folgenden Tabelle aufgeführten **HRESULT-Werte** zurück.
 | Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Header<br/>  | <dl> <dt>Amfilter.h (include Streams.h)</dt> </dl>                                                                                  |
-| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Verkaufsbuilds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Einzelhandels-Builds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 

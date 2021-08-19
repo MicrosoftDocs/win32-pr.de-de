@@ -17,9 +17,9 @@ Sicherheitsanforderungen auf C2-Ebene geben an, dass Systemadministratoren in de
 
 Der Sicherheitsdeskriptor für ein sicherungsfähiges Objekt kann über eine [*Systemzugriffssteuerungsliste*](/windows/desktop/SecGloss/s-gly) (SACL) verfügen. Eine SACL enthält [*Zugriffssteuerungseinträge*](/windows/desktop/SecGloss/a-gly) (Access Control Entries, ACEs), die die Typen von Zugriffsversuchen angeben, die Überwachungsberichte generieren. Jeder ACE identifiziert einen Vertrauenshänder, einen Satz von Zugriffsrechten und einen Satz von Flags, die angeben, ob das System Überwachungsmeldungen für fehlgeschlagene Zugriffsversuche, erfolgreiche Zugriffsversuche oder beides generiert.
 
-Das System schreibt Überwachungsmeldungen in das Sicherheitsereignisprotokoll. Informationen zum Zugreifen auf die Datensätze in einem Sicherheitsereignisprotokoll finden Sie unter [Ereignisprotokollierung.](/windows/desktop/EventLog/event-logging)
+Das System schreibt Überwachungsmeldungen in das Sicherheitsereignisprotokoll. Informationen zum Zugriff auf die Datensätze in einem Sicherheitsereignisprotokoll finden Sie unter [Ereignisprotokollierung.](/windows/desktop/EventLog/event-logging)
 
-Zum Lesen oder Schreiben der SACL eines Objekts muss ein Thread zuerst die Berechtigung SE \_ SECURITY \_ NAME aktivieren. Weitere Informationen finden Sie unter [SACL Access Right](sacl-access-right.md).
+Um die SACL eines Objekts zu lesen oder zu schreiben, muss ein Thread zuerst die Berechtigung SE \_ SECURITY \_ NAME aktivieren. Weitere Informationen finden Sie unter [SACL Access Right](sacl-access-right.md).
 
 Die Windows-API bietet auch Unterstützung für Serveranwendungen zum Generieren von Überwachungsmeldungen, wenn ein Client versucht, auf ein privates Objekt zuzugreifen. Weitere Informationen finden Sie unter [Überwachen des Zugriffs auf private Objekte.](auditing-access-to-private-objects.md)
 

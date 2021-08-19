@@ -1,9 +1,9 @@
 ---
 title: appobject-Attribut
-description: Das Attribut \appobject\ identifiziert die Co-Klasse als Anwendungsobjekt, das einer vollständigen EXE-Anwendung zugeordnet ist.
+description: Das \appobject\-Attribut identifiziert die Co-Klasse als Anwendungsobjekt, das einer vollständigen EXE-Anwendung zugeordnet ist.
 ms.assetid: f4fcdf55-7431-4d66-8a46-f741c52fbe56
 keywords:
-- appobject-Attribut MIDL
+- APPOBJECT-Attribut MIDL
 topic_type:
 - apiref
 api_name:
@@ -42,36 +42,36 @@ coclass classname
 *uuid-number* 
 </dt> <dd>
 
-Gibt eine universell eindeutige ID für die [**Co-Klasse an.**](coclass.md)
+Gibt eine universell eindeutige ID für die [**Co-Klasse**](coclass.md)an.
 
 </dd> <dt>
 
 *coclass-attribute-list* 
 </dt> <dd>
 
-Gibt null oder mehr Attribute an, die für die [**coclass-Anweisung gelten.**](coclass.md) Zulässige **Co-Klasse-Attribute** sind [**\[ \] helpstring,**](helpstring.md) [**\[ helpcontext, \]**](helpcontext.md) [**\[ lizenziert, \]**](licensed.md) [**\[ version, \]**](version.md) [**\[ control \]**](control.md)und [**\[ hidden. \]**](hidden.md)
+Gibt null oder mehr Attribute an, die für die [**coclass-Anweisung**](coclass.md) gelten. Zulässige **Coklassenattribute** sind [**\[ \] helpstring,**](helpstring.md) [**\[ \] helpcontext,**](helpcontext.md) [**\[ lizenziert, \]**](licensed.md) [**\[ Version, \]**](version.md) [**\[ Steuerung \]**](control.md)und [**\[ ausgeblendet. \]**](hidden.md)
 
 </dd> <dt>
 
 *classname* 
 </dt> <dd>
 
-Gibt den Namen an, unter dem das Komponentenobjekt in der Typbibliothek bekannt ist.
+Gibt den Namen an, mit dem das Komponentenobjekt in der Typbibliothek bekannt ist.
 
 </dd> <dt>
 
-*Co-Klasse-Definition* 
+*Co-Klassendefinition* 
 </dt> <dd>
 
-Gibt Anweisungen an, aus denen sich die [**Co-Klasse-Definition**](coclass.md) zusammengibt.
+Gibt Anweisungen an, die die [**Co-Klassendefinition**](coclass.md) bilden.
 
 </dd> </dl>
 
 ## <a name="remarks"></a>Hinweise
 
-Das **\[ attribut \] appobject** gibt auch an, dass die Funktionen und Eigenschaften der [**Co-Klasse**](coclass.md) global in der aktuellen Typbibliothek verfügbar sind.
+Das **\[ attribut \] appobject** gibt auch an, dass die Funktionen und Eigenschaften der [**Co-Klasse**](coclass.md) in der aktuellen Typbibliothek global verfügbar sind.
 
-Die Typflagdarstellung für dieses Attribut ist TYPEFLAG \_ FAPPOBJECT.
+Die typeflag-Darstellung für dieses Attribut ist TYPEFLAG \_ FAPPOBJECT.
 
 ## <a name="examples"></a>Beispiele
 
@@ -113,7 +113,7 @@ coclass Hello
 [**Lizenziert**](licensed.md)
 </dt> <dt>
 
-[ODL-Dateibeispiel](/previous-versions/windows/desktop/automat/odl-file-example)
+[BEISPIEL FÜR ODL-Datei](/previous-versions/windows/desktop/automat/odl-file-example)
 </dt> <dt>
 
 [ODL-Dateisyntax](/previous-versions/windows/desktop/automat/odl-file-syntax)

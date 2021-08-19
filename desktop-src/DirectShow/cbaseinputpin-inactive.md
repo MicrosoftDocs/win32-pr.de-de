@@ -1,5 +1,5 @@
 ---
-description: 'CBaseInputPin.Inactive-Methode: Die Inactive-Methode benachrichtigt den Pin, dass der Filter nicht mehr aktiv ist.'
+description: 'CBaseInputPin.Inactive-Methode: Die inaktive Methode benachrichtigt den Pin, dass der Filter nicht mehr aktiv ist.'
 ms.assetid: e00e1562-54bb-4968-8a86-b29e1077d7a5
 title: CBaseInputPin.Inactive-Methode (Amfilter.h)
 ms.topic: reference
@@ -57,9 +57,9 @@ Gibt einen **HRESULT-Wert** zurück. Mögliche Werte sind die in der folgenden T
 
 ## <a name="remarks"></a>Hinweise
 
-Diese Methode überschreibt die [**CBasePin::Inactive-Methode.**](cbasepin-inactive.md) Sie ruft die [**IMemAllocator::D ecommit-Methode**](/windows/desktop/api/Strmif/nf-strmif-imemallocator-decommit) auf, um die Speicherbelegung zu decommitieren.
+Diese Methode überschreibt die [**CBasePin::Inactive-Methode.**](cbasepin-inactive.md) Sie ruft die [**IMemAllocator::D ecommit-Methode**](/windows/desktop/api/Strmif/nf-strmif-imemallocator-decommit) auf, um die Arbeitsspeicherzuweisung zu decommitieren.
 
-Wenn Sie diese Methode überschreiben, rufen Sie die Basisklassenmethode aus ihrer überschreibenden Methode auf.
+Wenn Sie diese Methode überschreiben, rufen Sie die Basisklassenmethode aus Ihrer überschreibenden Methode auf.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -68,7 +68,7 @@ Wenn Sie diese Methode überschreiben, rufen Sie die Basisklassenmethode aus ihr
 | Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Header<br/>  | <dl> <dt>Amfilter.h (include Streams.h)</dt> </dl>                                                                                  |
-| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Einzelhandels-Builds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Verkaufsbuilds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 

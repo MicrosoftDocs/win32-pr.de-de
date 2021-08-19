@@ -1,23 +1,23 @@
 ---
-description: Gibt die Anzahl von Durchläufen an, die der Encoder zum Codieren des Inhalts verwendet.
+description: Gibt die Anzahl der Durchläufe an, die der Encoder zum Codieren des Inhalts verwendet.
 ms.assetid: 71a21976-ed92-4cd6-946c-fa6268895531
-title: MFPKEY_PASSESUSED-Eigenschaft (wmcodecdsp. h)
+title: MFPKEY_PASSESUSED-Eigenschaft (Wmcodecdsp.h)
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: a6cb09949049db1910a419becec3423b0bb7c365
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 94ab020c4b683dc87ced3ffda8665b6b0e62b65cf81001c23c00b39f64ba146b
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "103864144"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117873048"
 ---
-# <a name="mfpkey_passesused-property"></a>Mfpkey \_ passesused-Eigenschaft
+# <a name="mfpkey_passesused-property"></a>MFPKEY \_ PASSESUSED-Eigenschaft
 
-Gibt die Anzahl von Durchläufen an, die der Encoder zum Codieren des Inhalts verwendet. Lese-/Schreibzugriff.
+Gibt die Anzahl der Durchläufe an, die der Encoder zum Codieren des Inhalts verwendet. Lese-/Schreibzugriff.
 
 ## <a name="constant-for-ipropertybag"></a>Konstante für IPropertyBag
 
-g \_ wszwmvcpassesused
+g \_ wszWMVCPassesUsed
 
 ## <a name="data-type"></a>Datentyp
 
@@ -27,9 +27,9 @@ VT \_ I4
 
 1
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Dieser Wert darf nicht den Wert von " [mfpkey \_ passesrecommended](mfpkey-passesrecommendedproperty.md)" überschreiten.
+Dieser Wert darf den Wert von [MFPKEY \_ PASSESRECOMMENDED nicht überschreiten.](mfpkey-passesrecommendedproperty.md)
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -37,9 +37,9 @@ Dieser Wert darf nicht den Wert von " [mfpkey \_ passesrecommended](mfpkey-passe
 
 | Anforderung | Wert |
 |-------------------------------------|-----------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows XP \[ -Desktop-Apps\]<br/>                                             |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/>                                    |
-| Header<br/>                   | <dl> <dt>Wmcodecdsp. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ XP-Desktop-Apps\]<br/>                                             |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                                    |
+| Header<br/>                   | <dl> <dt>Wmcodecdsp.h</dt> </dl> |
 
 
 
@@ -47,7 +47,7 @@ Dieser Wert darf nicht den Wert von " [mfpkey \_ passesrecommended](mfpkey-passe
 
 <dl> <dt>
 
-[Eigenschaften von Media Foundation](media-foundation-properties.md)
+[Media Foundation Eigenschaften](media-foundation-properties.md)
 </dt> </dl>
 
  

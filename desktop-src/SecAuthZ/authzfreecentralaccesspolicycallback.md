@@ -1,7 +1,7 @@
 ---
-description: Die authzfreecentralaccesspolicycallback-Funktion ist eine Anwendungs definierte Funktion, die von der authzgetcentralaccesspolicycallback-Funktion zugeordnete Arbeitsspeicher freigibt.
+description: Die Funktion "AuhzFreeCentralAccessPolicyCallback" ist eine anwendungsdefinierte Funktion, die den von der Funktion "SollhzGetCentralAccessPolicyCallback" zugewiesenen Arbeitsspeicher frei gibt.
 ms.assetid: F0859A67-4D20-4189-8F35-A78034E41E6A
-title: Authzfreecentralaccesspolicycallback-Rückruffunktion
+title: Rückruffunktion "HzFreeCentralAccessPolicyCallback"
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -12,16 +12,16 @@ api_name:
 api_type:
 - UserDefined
 api_location: ''
-ms.openlocfilehash: d2139c9fa106b6070a3c043d417bdbf23379084b
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: f51903708bd3993e2837d65107798b1ff546c5857eff3bbed028ed4d6dda47f4
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "104218834"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117783754"
 ---
-# <a name="authzfreecentralaccesspolicycallback-callback-function"></a>Authzfreecentralaccesspolicycallback-Rückruffunktion
+# <a name="authzfreecentralaccesspolicycallback-callback-function"></a>Rückruffunktion "HzFreeCentralAccessPolicyCallback"
 
-Die *authzfreecentralaccesspolicycallback* -Funktion ist eine Anwendungs definierte Funktion, die von der [*authzgetcentralaccesspolicycallback*](authzgetcentralaccesspolicycallback-.md) -Funktion zugeordnete Arbeitsspeicher freigibt. *Authzfreecentralaccesspolicycallback* ist ein Platzhalter für den Namen der Anwendungs definierten Funktion.
+Die *Funktion "AuhzFreeCentralAccessPolicyCallback"* ist eine anwendungsdefinierte Funktion, die den von der [*Funktion "SollhzGetCentralAccessPolicyCallback"*](authzgetcentralaccesspolicycallback-.md) zugewiesenen Arbeitsspeicher frei gibt. *HzFreeCentralAccessPolicyCallback* ist ein Platzhalter für den anwendungsdefinierten Funktionsnamen.
 
 ## <a name="syntax"></a>Syntax
 
@@ -38,27 +38,27 @@ BOOL CALLBACK AuthzFreeCentralAccessPolicyCallback(
 
 <dl> <dt>
 
-*pcentralaccesspolicy* \[ in\]
+*pCentralAccessPolicy* \[ In\]
 </dt> <dd>
 
-Ein Zeiger auf die zentrale Zugriffs Richtlinie, die freigegeben werden soll.
+Zeiger auf die zentrale Zugriffsrichtlinie, die frei werden soll.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Wenn die Funktion erfolgreich ausgeführt wird, gibt die Funktion **true** zurück.
+Wenn die Funktion erfolgreich ist, gibt die Funktion **TRUE zurück.**
 
-Wenn die Funktion die Auswertung nicht ausführen kann, wird **false** zurückgegeben. Verwenden Sie [**SetLastError**](/windows/desktop/api/errhandlingapi/nf-errhandlingapi-setlasterror) , um einen Fehler an die Access Check-Funktion zurückzugeben.
+Wenn die Funktion die Auswertung nicht ausführen kann, gibt sie **FALSE zurück.** Verwenden [**Sie SetLastError,**](/windows/desktop/api/errhandlingapi/nf-errhandlingapi-setlasterror) um einen Fehler an die Zugriffsüberprüfungsfunktion zurück zu geben.
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Authz- \_ Init- \_ Informationen**](/windows/desktop/api/Authz/ns-authz-authz_init_info)
+[**\_INIT-INFORMATIONEN ZUHZ \_**](/windows/desktop/api/Authz/ns-authz-authz_init_info)
 </dt> <dt>
 
-[*Authzgetcentralaccesspolicycallback*](authzgetcentralaccesspolicycallback-.md)
+[*HzGetCentralAccessPolicyCallback*](authzgetcentralaccesspolicycallback-.md)
 </dt> </dl>
 
  

@@ -1,5 +1,5 @@
 ---
-description: Diese Klasse ist die Ereignistypklasse für IPv4-TCP/IP-Verbindungs- und -Accept-Ereignisse. Die folgende Syntax wird durch einen MOF-Code vereinfacht.
+description: Diese Klasse ist die Ereignistypklasse für IPv4-TCP/IP-Verbindungs- und Accept-Ereignisse. Die folgende Syntax wird durch einen MOF-Code vereinfacht.
 ms.assetid: a9b33ceb-7d50-4cd7-8224-0b2cf895b3b4
 title: TcpIp_TypeGroup2-Klasse
 ms.topic: reference
@@ -36,7 +36,7 @@ ms.locfileid: "117814500"
 ---
 # <a name="tcpip_typegroup2-class"></a>TcpIp \_ TypeGroup2-Klasse
 
-Diese Klasse ist die Ereignistypklasse für IPv4-TCP/IP-Verbindungs- und -Accept-Ereignisse.
+Diese Klasse ist die Ereignistypklasse für IPv4-TCP/IP-Verbindungs- und Accept-Ereignisse.
 
 Die folgende Syntax wird durch einen MOF-Code vereinfacht.
 
@@ -66,7 +66,7 @@ class TcpIp_TypeGroup2 : TcpIp
 
 ## <a name="members"></a>Member
 
-Die **TcpIp \_ TypeGroup2-Klasse** verfügt über diese Typen von Membern:
+Die **TcpIp \_ TypeGroup2-Klasse** verfügt über die folgenden Membertypen:
 
 -   [Eigenschaften](#properties)
 
@@ -95,7 +95,7 @@ Ein eindeutiger Verbindungsbezeichner zum Korrelieren von Ereignissen, die zur g
 **daddr**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **object**
+Datentyp: **Objekt**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
@@ -111,7 +111,7 @@ Ziel-IP-Adresse.
 **dport**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **object**
+Datentyp: **Objekt**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
@@ -184,7 +184,7 @@ Zugriffstyp: Schreibgeschützt
 Qualifizierer: **WmiDataId(12)**
 </dt> </dl>
 
-TCP-Empfangsfensterskalierungsfaktor.
+Skalierungsfaktor für TCP-Empfangsfenster.
 
 </dd> <dt>
 
@@ -200,14 +200,14 @@ Zugriffstyp: Schreibgeschützt
 Qualifizierer: **WmiDataId(8)**
 </dt> </dl>
 
-Option "Selektive Bestätigung" (Selective Acknowledgment, SACK) im TCP-Header.
+Option "Selektive Bestätigung" (Selective Acknowledgment, TIVE) im TCP-Header.
 
 </dd> <dt>
 
 **saddr**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **object**
+Datentyp: **Objekt**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
@@ -271,7 +271,7 @@ Skalierungsfaktor für TCP-Sendefenster.
 **Sport**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **object**
+Datentyp: **Objekt**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
@@ -296,7 +296,7 @@ Zugriffstyp: Schreibgeschützt
 Qualifizierer: **WmiDataId(9)**
 </dt> </dl>
 
-Option "Zeitstempel" im TCP-Header.
+Zeitstempeloption im TCP-Header.
 
 </dd> <dt>
 
@@ -312,7 +312,7 @@ Zugriffstyp: Schreibgeschützt
 Qualifizierer: **WmiDataId(10)**
 </dt> </dl>
 
-Option "Fensterskala" im TCP-Header.
+Fensterskalierungsoption im TCP-Header.
 
 </dd> </dl>
 
@@ -322,12 +322,12 @@ Option "Fensterskala" im TCP-Header.
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur Vista-Desktop-Apps\]<br/>       |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ Vista-Desktop-Apps\]<br/>       |
 | Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/> |
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 

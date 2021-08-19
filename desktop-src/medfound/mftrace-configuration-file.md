@@ -1,28 +1,28 @@
 ---
-description: Das Tool MF Trace kann eine XML-Konfigurationsdatei lesen, die einen oder mehrere Ablauf Verfolgungs Anbieter angibt.
+description: Das MFTrace-Tool kann eine XML-Konfigurationsdatei lesen, die einen oder mehrere Ablaufverfolgungsanbieter angibt.
 ms.assetid: 70d11a55-041e-4eb5-96a9-238e7ecdd906
-title: MF-Ablauf Verfolgungs Konfigurationsdatei
+title: MFTrace-Konfigurationsdatei
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: b6598bcfdde16291fb744783b2f12be414ae997b
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 60969d52405b5aeeb768710d35751d9ea2cab40ca60a7d85a4da1bc1b0c65468
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106355630"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117871937"
 ---
-# <a name="mftrace-configuration-file"></a>MF-Ablauf Verfolgungs Konfigurationsdatei
+# <a name="mftrace-configuration-file"></a>MFTrace-Konfigurationsdatei
 
-Das Tool [MF Trace](mftrace.md) kann eine XML-Konfigurationsdatei lesen, die einen oder mehrere Ablauf Verfolgungs Anbieter angibt.
+Das [MFTrace-Tool](mftrace.md) kann eine XML-Konfigurationsdatei lesen, die einen oder mehrere Ablaufverfolgungsanbieter angibt.
 
-Das [**Providers**](providers.md) -Element ist das Stamm Element in der Konfigurationsdatei.
+Das [**providers-Element**](providers.md) ist das Stammelement in der Konfigurationsdatei.
 
 ## <a name="in-this-section"></a>In diesem Abschnitt
 
 -   [**Schlüsselwort**](keyword.md)
--   [**MF-Umleitungen**](mfdetours.md)
--   [**ab**](provider.md)
--   [**providers**](providers.md)
+-   [**mfdetours**](mfdetours.md)
+-   [**Anbieter**](provider.md)
+-   [**Anbieter**](providers.md)
 
 ## <a name="example"></a>Beispiel
 
@@ -46,7 +46,7 @@ Das [**Providers**](providers.md) -Element ist das Stamm Element in der Konfigur
 
 <dl> <dt>
 
-[MF-Ablauf Verfolgung](mftrace.md)
+[Mftrace](mftrace.md)
 </dt> </dl>
 
  

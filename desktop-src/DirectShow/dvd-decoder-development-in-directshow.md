@@ -13,19 +13,19 @@ ms.locfileid: "117820564"
 ---
 # <a name="dvd-decoder-development-in-directshow"></a>DVD-Decoderentwicklung in DirectShow
 
-Dieser Abschnitt enthält Zeiger auf die Referenzseiten für alle DirectShow-Eigenschaftensätze und -Schnittstellen, die entweder DVD-spezifisch oder bei der DVD-Decodierung häufig verwendet werden. Zusätzlich zu dem, was hier aufgeführt ist, müssen ein Decoder und seine Pins auch die generischen DirectShow-Filterschnittstellen unterstützen, wie unter [Schreiben von DirectShow-Filtern beschrieben.](writing-directshow-filters.md)
+Dieser Abschnitt enthält Zeiger auf die Verweisseiten für alle DirectShow-Eigenschaftssätze und Schnittstellen, die entweder DVD-spezifisch sind oder bei der DVD-Decodierung umfassend verwendet werden. Zusätzlich zu den hier aufgeführten Funktionen müssen ein Decoder und seine Pins auch die generischen DirectShow-Filterschnittstellen unterstützen, wie unter [Schreiben von DirectShow-Filtern](writing-directshow-filters.md)beschrieben.
 
 In diesem Abschnitt werden die folgenden Themen behandelt:
 
--   [Decoder-Volumesteuerung](decoder-volume-control.md)
--   [Unterstützung für ÄNDERUNG DES DVD-Windows](dvd-region-change-support-in-windows.md)
+-   [Decodervolumesteuerung](decoder-volume-control.md)
+-   [Unterstützung von DVD-Regionsänderungen in Windows](dvd-region-change-support-in-windows.md)
 
 Weitere Informationen:
 
--   [**DVD-Dvd : Eigenschaftensatz**](dvd-karaoke-property-set.md)
+-   [**DVD-Eigenschaftssatz "Dvd- UndOke"**](dvd-karaoke-property-set.md)
 -   [**DVD Copy Protection-Eigenschaftensatz**](dvd-copy-protection-property-set.md)
 -   [**DVD Subpicture-Eigenschaftensatz**](dvd-subpicture-property-set.md)
--   [Pin-Eigenschaftssatz](pin-property-set.md)
+-   [Pin-Eigenschaftensatz](pin-property-set.md)
 -   [**IKsPropertySet**](ikspropertyset.md)
 -   [**IVideoFrameStep**](/windows/desktop/api/Strmif/nn-strmif-ivideoframestep) (nur Hardwaredecoder)
 -   [**IVPConfig**](/previous-versions/windows/desktop/api/Vpconfig/nn-vpconfig-ivpconfig) (nur Hardwaredecoder)

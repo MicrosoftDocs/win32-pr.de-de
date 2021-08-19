@@ -1,41 +1,41 @@
 ---
-title: Framework-Konstanten
-description: Framework-Konstanten
+title: Frameworkkonst constants (Frameworkkonst constants
+description: Frameworkkonst constants (Frameworkkonst constants
 ms.assetid: 2ac66194-4bf2-4bbf-a70b-9387f8ca7183
 keywords:
-- Text Dienst Framework (TSF), Konstanten
-- TSF (Text Dienst Framework), Konstanten
-- Text Dienste, Konstanten
-- TSF-aktivierte Anwendungen, Konstanten
-- TSF-Referenz, Konstanten
+- Textdienstframework (TSF), Konstanten
+- TSF (Textdienstframework),konstanten
+- Textdienste,Konstanten
+- TSF-fähige Anwendungen,Konstanten
+- TSF-Referenz,Konstanten
 - Referenz für TSF, Konstanten
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 7d3769809658ed313490514ff9d2b3dd39eadbdd
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: 1a2be63f547ffc81175916afbc6945222bab51515144a9faf286900258fe1438
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "104100658"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117953405"
 ---
-# <a name="framework-constants"></a>Framework-Konstanten
+# <a name="framework-constants"></a>Frameworkkonst constants (Frameworkkonst constants
 
 Die TSF-Konstanten bestehen aus den folgenden Kategorien.
 
--   [Sonstige frameworkkonstanten](miscellaneous-framework-constants.md)
--   [Modus-biaswerte](mode-bias-values.md)
+-   [Sonstige Frameworkkonst constants](miscellaneous-framework-constants.md)
+-   [Mode Bias Values](mode-bias-values.md)
 -   [Vordefinierte Eigenschaften](predefined-properties.md)
--   [TF- \_ \* Konstanten](tf--constants.md)
--   [TF \_ es- \_ \* Konstanten](tf-es--constants.md)
--   [TF \_ IAS- \_ \* Konstanten](tf-ias--constants.md)
--   [TF- \_ mod- \_ \* Konstanten](tf-mod--constants.md)
--   [TF \_ SD- \_ \* Konstanten](tf-sd--constants.md)
--   [TF \_ SS- \_ \* Konstanten](tf-ss--constants.md)
--   [TF \_ tf- \_ \* Konstanten](tf-tf--constants.md)
+-   [\_ \* TF-Konstanten](tf--constants.md)
+-   [TF \_ \_ \* ES-Konstanten](tf-es--constants.md)
+-   [\_ \_ \* TF-IAS-Konstanten](tf-ias--constants.md)
+-   [TF \_ \_ \* MOD-Konstanten](tf-mod--constants.md)
+-   [TF \_ \_ \* SD-Konstanten](tf-sd--constants.md)
+-   [\_ \_ \* TF-SS-Konstanten](tf-ss--constants.md)
+-   [\_ \_ \* TF-TF-Konstanten](tf-tf--constants.md)
 
- 
+ 
 
- 
+ 
 
 
 

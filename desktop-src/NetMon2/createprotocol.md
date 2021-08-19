@@ -51,14 +51,14 @@ Der Name des Protokolls, das der Parser erkennt.
 *lpEntryPoints* \[ In\]
 </dt> <dd>
 
-Eine [ENTRYPOINTS-Struktur,](entrypoints.md) die die verbleibenden Parser-DLL-Einstiegspunkte enthält. Eine Liste der Exportfunktionen, auf die jeder Einstiegspunkt verweist, finden Sie unter Hinweise. Einstiegspunkte müssen in der Reihenfolge angegeben werden, in der die **ENTRYPOINTS-Struktur** angibt.
+Eine [ENTRYPOINTS-Struktur,](entrypoints.md) die die verbleibenden Parser-DLL-Einstiegspunkte enthält. Eine Liste der Exportfunktionen, auf die jeder Einstiegspunkt verweist, finden Sie unter Hinweise. Einstiegspunkte müssen in der Von der **ENTRYPOINTS-Struktur angegebenen** Reihenfolge bereitgestellt werden.
 
 </dd> <dt>
 
 *cbEntryPoints* \[ In\]
 </dt> <dd>
 
-Die Größe der **ENTRYPOINTS-Struktur.** Netzwerkmonitor stellt ein ENTRYPOINTS \_ SIZE-Makro bereit, mit dem Sie die Größe der Struktur angeben können.
+Die Größe der **ENTRYPOINTS-Struktur.** Netzwerkmonitor stellt ein ENTRYPOINTS SIZE-Makro zur Angabe der Größe \_ der Struktur zur Anwendung.
 
 </dd> </dl>
 
@@ -70,9 +70,9 @@ Wenn die Funktion nicht erfolgreich ist, ist der Rückgabewert **NULL.**
 
 ## <a name="remarks"></a>Hinweise
 
-Die Parser-DLL ruft **CreateProtocol** während der Implementierung von [DllMain auf.](dllmain-parser.md) Die **CreateProtocol-Funktion** wird aufgerufen, wenn das Betriebssystem die Parser-DLL zum ersten Mal lädt.
+Die Parser-DLL ruft **CreateProtocol während** der Implementierung von [DllMain auf.](dllmain-parser.md) Die **CreateProtocol-Funktion** wird aufgerufen, wenn das Betriebssystem die Parser-DLL zum ersten Mal lädt.
 
-Die Einstiegspunkte, auf die im *lpEntryPoints-Parameter* verwiesen wird, enthalten Zeiger auf die folgenden Exportfunktionen, die in der hier angegebenen Reihenfolge bereitgestellt werden müssen.
+Die Einstiegspunkte, auf die im *lpEntryPoints-Parameter* verwiesen wird, enthalten Zeiger auf die folgenden Exportfunktionen, die in der hier dargestellten Reihenfolge bereitgestellt werden müssen.
 
 -   [Registrieren](register-parser.md)
 -   [Registrierung aufheben](deregister.md)
@@ -84,8 +84,8 @@ Die Einstiegspunkte, auf die im *lpEntryPoints-Parameter* verwiesen wird, enthal
 
 | Für Informationen zu                                                                                 | Siehe                                                     |
 |----------------------------------------------------------------------------------------------------|---------------------------------------------------------|
-| Was Parser sind und wie sie mit Netzwerkmonitor arbeiten.                                          | [Parser](parsers.md)                                  |
-| Das Implementieren von **DllMain** enthält ein Beispiel für den Aufruf von **CreateProtocol** in **DllMain.** | [Implementieren von DllMain](implementing-dllmain-parser.md) |
+| Was Parser sind und wie sie mit Netzwerkmonitor.                                          | [Parser](parsers.md)                                  |
+| Die Implementierung von **DllMain enthält** ein Beispiel für den Aufruf **von CreateProtocol** in **DllMain.** | [Implementieren von DllMain](implementing-dllmain-parser.md) |
 
 
 
@@ -105,7 +105,7 @@ Die Einstiegspunkte, auf die im *lpEntryPoints-Parameter* verwiesen wird, enthal
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 

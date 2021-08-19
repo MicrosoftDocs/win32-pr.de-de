@@ -1,7 +1,7 @@
 - name: Herunterfahren des Systems
   href: system-shutdown.md
   items:
-    - name: Herunterfahren von Änderungen für Windows Vista
+    - name: Änderungen beim Herunterfahren für Windows Vista
       href: shutdown-changes-for-windows-vista.md
     - name: Informationen zum Herunterfahren des Systems
       href: about-system-shutdown.md
@@ -43,7 +43,7 @@
               href: /windows/desktop/api/Winreg/nf-winreg-initiatesystemshutdownexa
             - name: LockWorkStation
               href: /windows/desktop/api/Winuser/nf-winuser-lockworkstation
-            - name: ShutdownBlockReasonErstellung
+            - name: ShutdownBlockReasonCreate
               href: /windows/desktop/api/Winuser/nf-winuser-shutdownblockreasoncreate
             - name: ShutdownBlockReasonDestroy
               href: /windows/desktop/api/Winuser/nf-winuser-shutdownblockreasondestroy
@@ -56,5 +56,5 @@
               href: wm-endsession.md
             - name: WM_QUERYENDSESSION
               href: wm-queryendsession.md
-        - name: Grundcodes für das Herunterfahren des Systems
+        - name: Ursachencodes für das Herunterfahren des Systems
           href: system-shutdown-reason-codes.md

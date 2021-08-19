@@ -21,7 +21,7 @@ ms.locfileid: "118385236"
 ---
 # <a name="broadcast-attribute"></a>Broadcastattribut
 
-Die **\[ Schlüsselwortübertragung \]** gibt an, dass Remoteprozeduraufrufe an alle Server in einem lokalen Netzwerk gesendet werden.
+Das Schlüsselwort **\[ broadcast \]** gibt an, dass Remoteprozeduraufrufe an alle Server in einem lokalen Netzwerk gesendet werden.
 
 ``` syntax
 [
@@ -40,7 +40,7 @@ interface interface-name
 *interface-attribute-list* 
 </dt> <dd>
 
-Gibt eine Liste von null oder mehr IDL-Attributen an, die für die gesamte Schnittstelle gelten. Wenn zwei oder mehr Schnittstellenattribute vorhanden sind, müssen sie durch Kommas getrennt werden.
+Gibt eine Liste von null oder mehr IDL-Attributen an, die für die Schnittstelle als Ganzes gelten. Wenn mindestens zwei Schnittstellenattribute vorhanden sind, müssen sie durch Kommas getrennt werden.
 
 </dd> <dt>
 
@@ -81,13 +81,13 @@ Funktionsparameterliste.
 
 ## <a name="remarks"></a>Hinweise
 
-Das **\[ \] Broadcastschlüsselwort** gibt an, dass die Routine immer an alle Server im Netzwerk übertragen wird, anstatt an einen bestimmten Server übermittelt zu werden. Der Client empfängt die Ausgabe der ersten Antwort, die erfolgreich zurückgegeben wird, während nachfolgende Antworten verworfen werden.
+Das **\[ \] Broadcastschlüsselwort** gibt an, dass die Routine immer an alle Server im Netzwerk übertragen und nicht an einen bestimmten Server übermittelt wird. Der Client empfängt die Ausgabe der ersten Antwort, um erfolgreich zurückzukehren, während nachfolgende Antworten verworfen werden.
 
-Ein Vorgang mit dem **\[ \] Broadcastattribut** ist implizit ein [**\[ \] idempotenter**](idempotent.md) Vorgang. Das **\[ \] Broadcastattribut** gibt jedoch zusätzliche Eigenschaften an, über die Funktionen mit dem **\[ idempotenten \]** Attribut nicht verfügen. Insbesondere geben Funktionen, die das **\[ \] Broadcastattribut** verwenden, an, dass die Routine als Ergebnis eines Remoteprozeduraufrufs mehrmals aufgerufen werden kann. Gleichzeitig können sie an mehrere Server gesendet werden. Dies unterscheidet sich vom **\[ idempotenten \]** Attribut, das nur angibt, dass ein Aufruf wiederholt werden kann, wenn er nicht abgeschlossen ist.
+Ein Vorgang mit dem **\[ Broadcastattribut \]** ist implizit [**\[ ein idempotenter \]**](idempotent.md) Vorgang. Das **\[ Broadcastattribut \]** gibt jedoch zusätzliche Eigenschaften an, über die Funktionen mit dem **\[ idempotenten \]** Attribut nicht verfügen. Insbesondere geben Funktionen, die das **\[ \] Broadcastattribut** verwenden, an, dass die Routine als Ergebnis eines Remoteprozeduraufrufs mehrmals aufgerufen werden kann. Gleichzeitig können sie an mehrere Server gesendet werden. Dies ist anders als das **\[ idempotente \]** Attribut, das nur angibt, dass ein Aufruf wiederholt werden kann, wenn er nicht abgeschlossen ist.
 
-Wenn eine Remoteprozedur ihren Aufruf an alle Hosts in einem lokalen Netzwerk überträgt, muss sie entweder die [**ncadg \_ ip \_ udp-**](ncadg-ip-udp.md) oder die [**ncadg \_ ipx-Protokollsequenz**](ncadg-ipx.md) verwenden. Beachten Sie, dass die Größe eines **\[ \] Broadcastpakets** vom verwendeten Datagrammdienst bestimmt wird.
+Wenn eine Remoteprozedur ihren Aufruf an alle Hosts in einem lokalen Netzwerk überträgt, muss sie entweder [**die ncadg \_ ip \_ udp-**](ncadg-ip-udp.md) oder [**die ncadg \_ ipx-Protokollsequenz**](ncadg-ipx.md) verwenden. Beachten Sie, dass die Größe eines **\[ Broadcastpakets \]** durch den datagram-Dienst bestimmt wird, der verwendet wird.
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 

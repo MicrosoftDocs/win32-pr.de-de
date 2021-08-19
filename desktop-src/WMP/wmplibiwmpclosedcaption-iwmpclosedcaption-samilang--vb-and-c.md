@@ -1,11 +1,11 @@
 ---
-title: Iwmpclosedcaption samilang-Eigenschaft
-description: Die samilang-Eigenschaft ruft die für Untertitel angezeigte Sprache ab oder legt diese fest.
+title: IWMPClosedCaption-SAMILang-Eigenschaft
+description: Die SAMILang-Eigenschaft ruft die Sprache ab, die für Untertitel angezeigt wird, oder legt sie fest.
 ms.assetid: dcdd6bcd-b869-439f-b500-df26d3873b04
 keywords:
-- Samilang-Eigenschaften Fenster Media Player
-- Samilang-Eigenschaft, Windows Media Player, iwmpclosedcaption-Schnittstelle
-- Iwmpclosedcaption-Schnittstelle, Windows Media Player, samilang (Eigenschaft)
+- SAMILang-Windows Media Player
+- SAMILang-Eigenschaft Windows Media Player , IWMPClosedCaption-Schnittstelle
+- IWMPClosedCaption-Schnittstelle Windows Media Player , SAMILang-Eigenschaft
 topic_type:
 - apiref
 api_name:
@@ -16,16 +16,16 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: fe29defa3736795c88613ee7ab2ef11a914a3f80
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 98354d5e1e4f796442dd0347a4ed2796cafdf7297d3829af9b8839d48df00c3a
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106369249"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117930313"
 ---
-# <a name="iwmpclosedcaptionsamilang-property"></a>Iwmpclosedcaption:: samilang-Eigenschaft
+# <a name="iwmpclosedcaptionsamilang-property"></a>IWMPClosedCaption::SAMILang -Eigenschaft
 
-Die **samilang** -Eigenschaft ruft die für Untertitel angezeigte Sprache ab oder legt diese fest.
+Die **SAMILang-Eigenschaft** ruft die Sprache ab, die für Untertitel angezeigt wird, oder legt sie fest.
 
 ## <a name="syntax"></a>Syntax
 
@@ -46,11 +46,11 @@ Public Property SAMILang As System.String
 
 ## <a name="property-value"></a>Eigenschaftswert
 
-Der **System. String** -Wert, der dem Namen entspricht, der in der Sprach-ID einer Sami-Datei angegeben ist.
+Die **System.String,die** den im Sprachbezeichner einer SAMI-Datei angegebenen Namen angibt.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Eine Sami-Datei kann Text für eine oder mehrere Sprachen enthalten. Die Sprachen, die für Untertitel verfügbar sind, werden zwischen den Tags und in der Sami <STYLE> - </STYLE> Datei definiert. Eine Sprach-ID wird mit einer eindeutigen alphanumerischen Zeichenfolge angegeben, der ein Zeitraum (.) vorangestellt ist. Der für eine Sprache angegebene Name kann eine beliebige Zeichenfolge sein. Beispielsweise könnte Folgendes zum Definieren von US-Englisch verwendet werden:
+Eine SAMI-Datei kann Text für eine oder mehrere Sprachen enthalten. Die für Untertitel verfügbaren Sprachen werden zwischen den Tags <STYLE> und </STYLE> in der SAMI-Datei definiert. Ein Sprachbezeichner wird mit einer eindeutigen alphanumerischen Zeichenfolge angegeben, der ein -Zeitraum (.) voran steht. Der für eine Sprache angegebene Name kann eine beliebige Zeichenfolge sein. Beispielsweise kann folgendes verwendet werden, um Englisch (USA) zu definieren:
 
 
 ```
@@ -59,9 +59,9 @@ Eine Sami-Datei kann Text für eine oder mehrere Sprachen enthalten. Die Sprache
 
 
 
-Wenn keine Sami-Sprache angegeben ist, wird standardmäßig die erste in der Sami-Datei definierte Sprache verwendet.
+Wenn keine SAMI-Sprache angegeben ist, wird standardmäßig die erste sprache verwendet, die in der SAMI-Datei definiert ist.
 
-Die Zeichenfolge, die Sie mit **samilang** festlegen, muss mit dem **Name** -Attribut im sprachspezifizierer identisch sein.
+Die Zeichenfolge, die Sie mit **SAMILang** festlegen, muss mit dem **Name-Attribut** im Sprachspezifizierer übereinstimmen.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -82,10 +82,10 @@ Die Zeichenfolge, die Sie mit **samilang** festlegen, muss mit dem **Name** -Att
 [**Hinzufügen von Untertiteln zu digitalen Medien**](adding-closed-captions-to-digital-media.md)
 </dt> <dt>
 
-[**Iwmpclosedcaption-Schnittstelle (VB und c#)**](iwmpclosedcaption--vb-and-c.md)
+[**IWMPClosedCaption-Schnittstelle (VB und C#)**](iwmpclosedcaption--vb-and-c.md)
 </dt> <dt>
 
-[**IWMPClosedCaption2-Schnittstelle (VB und c#)**](iwmpclosedcaption2--vb-and-c.md)
+[**IWMPClosedCaption2-Schnittstelle (VB und C#)**](iwmpclosedcaption2--vb-and-c.md)
 </dt> </dl>
 
  

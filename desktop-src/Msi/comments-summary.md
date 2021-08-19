@@ -1,28 +1,28 @@
 ---
-description: Die Eigenschaft für die Kommentar Zusammenfassung überträgt den allgemeinen Zweck des Installationspakets, der Transformation oder des Patchpakets.
+description: Die Eigenschaft Kommentarezusammenfassung vermittelt den allgemeinen Zweck des Installations-, Transformations- oder Patchpakets.
 ms.assetid: e9034bfb-1b32-4851-ac23-4c3223760a04
-title: Kommentar Zusammenfassungs Eigenschaft
+title: Comments Summary-Eigenschaft
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 351023eddb057a47bf5cfc67b7ef869d905eb126
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 5fcd2ed313038edceb4febfa696d115462369ed74f60142b11d065b3a81b1a16
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106355913"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118145339"
 ---
-# <a name="comments-summary-property"></a>Kommentar Zusammenfassungs Eigenschaft
+# <a name="comments-summary-property"></a>Comments Summary-Eigenschaft
 
-Die Eigenschaft für die **Kommentar Zusammenfassung** überträgt den allgemeinen Zweck des Installationspakets, der Transformation oder des Patchpakets.
+Die **Eigenschaft Kommentarezusammenfassung** vermittelt den allgemeinen Zweck des Installations-, Transformations- oder Patchpakets.
 
-Ein Autor eines Installationspakets, einer Transformation oder eines Patchpakets sollte den Wert der Eigenschaft für die **Kommentar Zusammenfassung** auf einen der folgenden Werte festlegen:
+Ein Autor eines Installationspakets, einer Transformation oder eines Patchpakets sollte den Wert der **Comments Summary-Eigenschaft** auf einen der folgenden Werte festlegen:
 
-<dl> "Diese Installerdatenbank enthält die Logik und die Daten, die für die Installation <*Product*> erforderlich sind."  
-"Diese Transformation enthält die Logik und die Daten, die erforderlich sind, um <*Product*> zu installieren."  
-"Dieser Patch enthält die Logik und die Daten, die erforderlich sind, um <*Product*> zu installieren."  
+<dl> "Diese Installationsdatenbank enthält die Logik und die Daten, die für die Installation <*Produkt->* erforderlich sind."  
+"Diese Transformation enthält die Logik und die Daten, die zum Installieren <*Produkt->* erforderlich sind."  
+"Dieser Patch enthält die Logik und die Daten, die für die Installation <*Produkt->* erforderlich sind."  
 </dl>
 
-Dabei ist <*Product*> der Name des Produkts.
+dabei ist <*Produkt*> der Name des Produkts.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -30,7 +30,7 @@ Dabei ist <*Product*> der Name des Produkts.
 
 | Anforderung | Wert |
 |--------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Version<br/> | Windows Installer 5,0 unter Windows Server 2012, Windows 8, Windows Server 2008 R2 oder Windows 7. Windows Installer 4,0 oder Windows Installer 4,5 unter Windows Server 2008 oder Windows Vista. Windows Installer unter Windows Server 2003 oder Windows XP<br/> |
+| Version<br/> | Windows Installationsprogramm 5.0 auf Windows Server 2012, Windows 8, Windows Server 2008 R2 oder Windows 7. Windows Installer 4.0 oder Windows Installer 4.5 auf Windows Server 2008 oder Windows Vista. Windows Installationsprogramm auf Windows Server 2003 oder Windows XP<br/> |
 
 
 
@@ -38,7 +38,7 @@ Dabei ist <*Product*> der Name des Produkts.
 
 <dl> <dt>
 
-[Beschreibungen der Zusammenfassungs Eigenschaften](summary-property-descriptions.md)
+[Zusammenfassungseigenschaftenbeschreibungen](summary-property-descriptions.md)
 </dt> </dl>
 
  

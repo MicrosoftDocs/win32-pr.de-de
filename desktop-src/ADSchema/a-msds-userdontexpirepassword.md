@@ -4,8 +4,8 @@ description: Gibt an, ob das Kennwort für das Konto abläuft, auf das dieses At
 ms.assetid: bafbcb4a-ee45-4f88-8fb2-93840efd1289
 ms.tgt_platform: multiple
 keywords:
-- ms-DS-User-Dont-Expire-Password-Attribut AD-Schema
-- msDS-UserDontExpirePassword-Attribut AD-Schema
+- AD-Schema des ms-DS-User-Dont-Expire-Password-Attributs
+- AD-Schema des msDS-UserDontExpirePassword-Attributs
 topic_type:
 - apiref
 api_name:
@@ -23,7 +23,7 @@ ms.locfileid: "118425430"
 ---
 # <a name="ms-ds-user-dont-expire-password-attribute"></a>ms-DS-User-Dont-Expire-Password-Attribut
 
-Gibt an, ob das Kennwort für das Konto abläuft, auf das dieses Attribut verweist. TRUE, wenn das Kennwort nicht abläuft; Andernfalls False.
+Gibt an, ob das Kennwort für das Konto abläuft, auf das dieses Attribut verweist. TRUE, wenn das Kennwort nicht abläuft; andernfalls False.
 
 
 
@@ -35,8 +35,8 @@ Gibt an, ob das Kennwort für das Konto abläuft, auf das dieses Attribut verwei
 | Aktualisieren von Berechtigungen  | \-                                   |
 | Updatehäufigkeit  | \-                                   |
 | Attribute-Id      | 1.2.840.113556.1.4.1855              |
-| System-ID-GUID    | 8788193a-2925-43d9-a221-bb7fff397675 |
-| Syntax            | [**Boolean**](s-boolean.md)         |
+| System-Id-Guid    | 8788193a-2925-43d9-a221-bb7fff397675 |
+| Syntax            | [**Boolesch**](s-boolean.md)         |
 
 
 
@@ -53,7 +53,7 @@ Gibt an, ob das Kennwort für das Konto abläuft, auf das dieses Attribut verwei
 | Link-ID                | \-                                                                |
 | MAPI-Id                | \-                                                                |
 | System-Only            | False                                                             |
-| Ist einwertig       | True                                                              |
+| Is-Single-Valued       | True                                                              |
 | Ist indiziert             | False                                                             |
 | Im globalen Katalog      | False                                                             |
 | NT-Security-Descriptor | O:BAG:BAD:S:                                                      |

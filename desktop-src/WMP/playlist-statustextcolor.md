@@ -3,7 +3,7 @@ title: PLAYLIST.statusTextColor
 description: Das attribut statusTextColor gibt einen Wert an, der die Farbe des Statustexts angibt, oder ruft einen Wert ab.
 ms.assetid: b88d52d6-db0b-4c57-8085-c997bf3648a6
 keywords:
-- PLAYLIST.statusTextColor Windows Media Player
+- PLAYLIST.statusTextColor-Windows Media Player
 topic_type:
 - apiref
 api_name:
@@ -41,7 +41,7 @@ Dieses Attribut ist eine **Zeichenfolge** mit Lese-/Schreibzugriff, die eine Far
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 

@@ -1,23 +1,23 @@
 ---
-description: Gibt die Qualität an, mit der die minimale codierte Bandbreite zulässig ist.
+description: Gibt die Qualität an, mit der die codierte Mindestbandbreite zulässig ist.
 ms.assetid: 2f0f43a9-2424-4b73-a9aa-a06474676fb4
-title: MFPKEY_DYN_BANDTRUNC_QCEIL-Eigenschaft (wmcodecdsp. h)
+title: MFPKEY_DYN_BANDTRUNC_QCEIL-Eigenschaft (Wmcodecdsp.h)
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 1ff3e4f873c06af53290a784b5045e09eb24f7ef
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: da4beecc98edcfd2eb7ecfdcbf1ab9f9af21f278538f32e26991f0dd57a85299
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106362128"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117873527"
 ---
-# <a name="mfpkey_dyn_bandtrunc_qceil-property"></a>Mfpkey \_ dyn \_ bandtrunc- \_ qceil (Eigenschaft)
+# <a name="mfpkey_dyn_bandtrunc_qceil-property"></a>MFPKEY \_ DYN \_ BANDTRUNC \_ QCEIL-Eigenschaft
 
-Gibt die Qualität an, mit der die minimale codierte Bandbreite zulässig ist. Bei Qualitätswerten, die schlechter als oder gleich dem Wert dieser Eigenschaft sind, ist die minimale codierte Bandbreite zulässig.
+Gibt die Qualität an, mit der die codierte Mindestbandbreite zulässig ist. Bei schlechterer Qualität als oder gleich dem Wert dieser Eigenschaft ist die minimale codierte Bandbreite zulässig.
 
 ## <a name="constant-for-ipropertybag"></a>Konstante für IPropertyBag
 
-Nur mit [**IPropertyStore**](/windows/win32/api/propsys/nn-propsys-ipropertystore)verfügbar.
+Nur mit [**IPropertyStore verfügbar.**](/windows/win32/api/propsys/nn-propsys-ipropertystore)
 
 ## <a name="data-type"></a>Datentyp
 
@@ -30,7 +30,7 @@ Nur mit [**IPropertyStore**](/windows/win32/api/propsys/nn-propsys-ipropertystor
 | Anforderung | Wert |
 |-------------------|-----------------------------------------------------------------------------------------|
 | Client<br/> | Windows Vista oder Windows 7<br/>                                                   |
-| Header<br/> | <dl> <dt>Wmcodecdsp. h</dt> </dl> |
+| Header<br/> | <dl> <dt>Wmcodecdsp.h</dt> </dl> |
 
 
 
@@ -38,19 +38,19 @@ Nur mit [**IPropertyStore**](/windows/win32/api/propsys/nn-propsys-ipropertystor
 
 <dl> <dt>
 
-[**mfpkey \_ dyn \_ bandtrunc \_ bwceil**](mfpkey-dyn-bandtrunc-bwceilproperty.md)
+[**MFPKEY \_ DYN \_ BANDTRUNC \_ BWCEIL**](mfpkey-dyn-bandtrunc-bwceilproperty.md)
 </dt> <dt>
 
-[**mfpkey \_ dyn \_ bandtrunc \_ bwfloor**](mfpkey-dyn-bandtrunc-bwfloorproperty.md)
+[**MFPKEY \_ DYN \_ BANDTRUNC \_ BWFLOOR**](mfpkey-dyn-bandtrunc-bwfloorproperty.md)
 </dt> <dt>
 
-[**mfpkey \_ dyn \_ bandtrunc- \_ qfloor**](mfpkey-dyn-bandtrunc-qfloorproperty.md)
+[**MFPKEY \_ DYN \_ BANDTRUNC \_ QFLOOR**](mfpkey-dyn-bandtrunc-qfloorproperty.md)
 </dt> <dt>
 
-[**mfpkey \_ dyn- \_ bandtruntrunation**](mfpkey-dyn-bandtruncationproperty.md)
+[**MFPKEY \_ DYN \_ BANDTRUNCATION**](mfpkey-dyn-bandtruncationproperty.md)
 </dt> <dt>
 
-[Eigenschaften von Media Foundation](media-foundation-properties.md)
+[Media Foundation Eigenschaften](media-foundation-properties.md)
 </dt> </dl>
 
  

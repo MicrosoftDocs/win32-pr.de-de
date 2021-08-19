@@ -5,8 +5,8 @@ ms.assetid: 5544e706-89e9-46e8-8703-ad978e675bbf
 keywords:
 - Video für Windows (VFW), AVIFile-Makros
 - VFW (Video für Windows),AVIFile-Makros
-- AVIFile-Makros, Referenz
-- AVIFile-Referenz, Makros
+- AVIFile-Makros,Referenz
+- AVIFile-Referenz,Makros
 - Referenz für AVIFile,macros
 ms.topic: article
 ms.date: 05/31/2018
@@ -27,10 +27,10 @@ Die folgenden Makros werden mit AVIFile verwendet.
 -   [**AVIStreamFormatSize**](/windows/desktop/api/Vfw/nf-vfw-avistreamformatsize)
 -   [**AVIStreamIsKeyFrame**](/windows/desktop/api/Vfw/nf-vfw-avistreamiskeyframe)
 -   [**AVIStreamLengthTime**](/windows/desktop/api/Vfw/nf-vfw-avistreamlengthtime)
--   [**AVIStreamStreamRestKeyFrame**](/windows/desktop/api/Vfw/nf-vfw-avistreamnearestkeyframe)
--   [**AVIStreamStreamRestKeyFrameTime**](/windows/desktop/api/Vfw/nf-vfw-avistreamnearestkeyframetime)
--   [**AVIStreamStreamRestSample**](/windows/desktop/api/Vfw/nf-vfw-avistreamnearestsample)
--   [**AVIStreamStreamRestSampleTime**](/windows/desktop/api/Vfw/nf-vfw-avistreamnearestsampletime)
+-   [**AVIStreamStreamStreamrestKeyFrame**](/windows/desktop/api/Vfw/nf-vfw-avistreamnearestkeyframe)
+-   [**AVIStreamStreamStreamRestKeyFrameTime**](/windows/desktop/api/Vfw/nf-vfw-avistreamnearestkeyframetime)
+-   [**AVIStreamStreamStreamrestSample**](/windows/desktop/api/Vfw/nf-vfw-avistreamnearestsample)
+-   [**AVIStreamStreamStreamRestSampleTime**](/windows/desktop/api/Vfw/nf-vfw-avistreamnearestsampletime)
 -   [**AVIStreamNextKeyFrame**](/windows/desktop/api/Vfw/nf-vfw-avistreamnextkeyframe)
 -   [**AVIStreamNextKeyFrameTime**](/windows/desktop/api/Vfw/nf-vfw-avistreamnextkeyframetime)
 -   [**AVIStreamNextSample**](/windows/desktop/api/Vfw/nf-vfw-avistreamnextsample)

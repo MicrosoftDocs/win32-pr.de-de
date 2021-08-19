@@ -32,7 +32,7 @@ ms.locfileid: "118329463"
 **Häufigkeit** : Niedrig  
 
 
-## <a name="description"></a>BESCHREIBUNG
+## <a name="description"></a>Beschreibung
 
 Microsoft hat sich entschieden, die Entwicklung von Microsoft Agent-Technologien einzustellen. Ab Windows 7 wird der Microsoft-Agent in zukünftigen Versionen des Microsoft Windows Betriebssystems nicht mehr enthalten oder unterstützt. Wir empfehlen Entwicklern und Weiterverteilern von Microsoft-Agent-Anwendungen, ihre Aktivitäten im Hinblick auf diese Entscheidung zu bewerten.
 
@@ -44,7 +44,7 @@ Microsoft hat sich entschieden, die Entwicklung von Microsoft Agent-Technologien
     -   Die Zeichen Merlin, Genie, Peedy und Sollo
     -   Der Agent-Zeichen-Editor
     -   Alle zugehörigen Microsoft Agent-Software, -Tools und -Dokumentation
--   Windows 7 und höher unterstützen die Entwicklung von Microsoft Agent-Anwendungen oder -Zeichen nicht.
+-   Windows 7 und höher unterstützt die Entwicklung von Microsoft-Agent-Anwendungen oder -Zeichen nicht.
 
 ## <a name="mitigation"></a>Minderung
 

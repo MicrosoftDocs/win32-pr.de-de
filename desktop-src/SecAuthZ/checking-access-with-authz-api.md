@@ -1,37 +1,37 @@
 ---
-description: Anwendungen bestimmen, ob der Zugriff auf Sicherungs fähige Objekte durch Aufrufen der authzaccesscheck-Funktion gewährt werden soll.
+description: Anwendungen bestimmen, ob Zugriff auf sicherungsfähige Objekte gewährt werden soll, indem sie die Funktion "SollhzAccessCheck" aufrufen.
 ms.assetid: dad0a102-08ed-4cd2-bef5-87bc48fc7fc2
-title: Überprüfen des Zugriffs mit der Authz-API
+title: Überprüfen des Zugriffs mit Authz API
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: e129b690a7c1f701b5f669a8f0705c5a5e9a2eec
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 876c3b5305e33969f63932fdc9e1e4f6767c95a64b11272283420a377b39f795
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "103862851"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117783096"
 ---
-# <a name="checking-access-with-authz-api"></a>Überprüfen des Zugriffs mit der Authz-API
+# <a name="checking-access-with-authz-api"></a>Überprüfen des Zugriffs mit Authz API
 
-Anwendungen bestimmen, ob der Zugriff auf Sicherungs fähige Objekte durch Aufrufen der [**authzaccesscheck**](/windows/desktop/api/Authz/nf-authz-authzaccesscheck) -Funktion gewährt werden soll.
+Anwendungen bestimmen, ob Zugriff auf sicherungsfähige Objekte gewährt werden soll, indem sie die [**Funktion "BishzAccessCheck"**](/windows/desktop/api/Authz/nf-authz-authzaccesscheck) aufrufen.
 
-Die [**authzaccesscheck**](/windows/desktop/api/Authz/nf-authz-authzaccesscheck) -Funktion nimmt sowohl [**Authz- \_ zugriffsanforderungs \_**](/windows/desktop/api/Authz/ns-authz-authz_access_request) -als auch [**Sicherheits \_ deskriptorstrukturen**](/windows/desktop/api/Winnt/ns-winnt-security_descriptor) als Parameter an. Die **Authz- \_ Zugriffs \_ Anforderungs** Struktur gibt eine angeforderte Zugriffsebene an. Die **authzaccesscheck** -Funktion wertet den angeforderten Zugriff anhand der angegebenen **Sicherheits \_ Beschreibung** für einen angegebenen Client Kontext aus. Informationen dazu, wie ein Sicherheits Deskriptor den Zugriff auf ein Objekt steuert, finden Sie unter [Steuern des Zugriffs auf ein Objekt durch DACLs](how-dacls-control-access-to-an-object.md).
+Die [**FunktionSkripthzAccessCheck**](/windows/desktop/api/Authz/nf-authz-authzaccesscheck) verwendet [**sowohl DIE ACCESS \_ \_ REQUEST-**](/windows/desktop/api/Authz/ns-authz-authz_access_request) als auch die [**SECURITY \_ DESCRIPTOR-Struktur als**](/windows/desktop/api/Winnt/ns-winnt-security_descriptor) Parameter. Die **ACCESS \_ \_ REQUEST-Struktur von AUHZ** gibt eine angeforderte Zugriffsebene an. Die **FunktionSkripthzAccessCheck** wertet den angeforderten Zugriff für den angegebenen **SECURITY \_ DESCRIPTOR** für einen angegebenen Clientkontext aus. Informationen dazu, wie ein Sicherheitsdeskriptor den Zugriff auf ein Objekt steuert, finden Sie unter Steuern des Zugriffs auf [ein Objekt durch DACLs.](how-dacls-control-access-to-an-object.md)
 
-Attribut Variablen müssen in Form eines Ausdrucks vorliegen, wenn Sie mit logischen Operatoren verwendet werden. Andernfalls werden Sie als UNKNOWN ausgewertet.
+Attributvariablen müssen in Form eines Ausdrucks sein, wenn sie mit logischen Operatoren verwendet werden. andernfalls werden sie als unbekannt ausgewertet.
 
 ## <a name="callback-function"></a>Rückruffunktion
 
-Wenn die [*Zugriffs Steuerungs Liste*](/windows/desktop/SecGloss/d-gly) (DACL) der [**Sicherheits \_ Beschreibung**](/windows/desktop/api/Winnt/ns-winnt-security_descriptor) des zu überprüfenden Objekts alle Rückruf [*Zugriffs Steuerungs Einträge*](/windows/desktop/SecGloss/a-gly) (ACEs) enthält, ruft [**authzaccesscheck**](/windows/desktop/api/Authz/nf-authz-authzaccesscheck) die [**authzaccesscheckcallback**](authzaccesscheckcallback.md) -Funktion für jeden Rückruf-ACE auf, der in der DACL enthalten ist. Ein Rückruf-ACE ist eine beliebige ACE-Struktur, deren ACE-Typ das Wort "Callback" enthält. Die **authzaccesscheckcallback** -Funktion ist eine Anwendungs definierte Funktion, die registriert werden muss, wenn der Ressourcen-Manager durch Aufrufen der [**authzinitializeresourcemanager**](/windows/desktop/api/Authz/nf-authz-authzinitializeresourcemanager) -Funktion initialisiert wird.
+Wenn die DACL [*(Discretionary Access Control List)*](/windows/desktop/SecGloss/d-gly) des [**SECURITY \_ DESCRIPTOR**](/windows/desktop/api/Winnt/ns-winnt-security_descriptor) des zu überprüfenden Objekts Rückrufeinträge [*für*](/windows/desktop/SecGloss/a-gly) die Zugriffssteuerung (ACEs) enthält, [**ruftCheckhzAccessCheck**](/windows/desktop/api/Authz/nf-authz-authzaccesscheck) für jeden Rückruf-ACE, der in der DACL enthalten ist, die [**Funktion "CheckhzAccessCheckCallback"**](authzaccesscheckcallback.md) auf. Ein Rückruf-ACE ist eine beliebige ACE-Struktur, deren ACE-Typ das Wort "Rückruf" enthält. Die **Funktion "IntendhzAccessCheckCallback"** ist eine anwendungsdefinierte Funktion, die registriert werden muss, wenn der Ressourcen-Manager initialisiert wird, indem die [**Funktion "QshzInitializeResourceManager" aufgerufen**](/windows/desktop/api/Authz/nf-authz-authzinitializeresourcemanager) wird.
 
-Eine Rückruffunktion ermöglicht es einer Anwendung, Geschäftslogik zu definieren, die zur Laufzeit ausgewertet werden soll. Wenn die [**authzaccesscheckcallback**](authzaccesscheckcallback.md) -Funktion aufgerufen wird, wird der Rückruf-ACE, der den Aufruf ausgelöst hat, zur Auswertung an die Rückruffunktion übermittelt. Wenn die von der Anwendung definierte Logik als **true** ausgewertet wird, ist der Rückruf-ACE in der Zugriffs Überprüfung enthalten. Andernfalls wird sie ignoriert.
+Mit einer Rückruffunktion kann eine Anwendung geschäftslogik definieren, die zur Laufzeit ausgewertet werden soll. Beim Aufruf [**der Funktion "ProgrammhzAccessCheckCallback"**](authzaccesscheckcallback.md) wird der Rückruf-ACE, der den Aufruf verursacht hat, zur Auswertung an die Rückruffunktion übergeben. Wenn die anwendungsdefinierte Logik als **TRUE ausgewertet** wird, wird der Rückruf-ACE in die Zugriffsüberprüfung einbezogen. Andernfalls wird sie ignoriert.
 
-## <a name="caching-access-results"></a>Caching-Zugriffs Ergebnisse
+## <a name="caching-access-results"></a>Zwischenspeichern von Zugriffsergebnissen
 
-Die Ergebnisse einer Zugriffs Überprüfung können zwischengespeichert und in zukünftigen Aufrufen der [**authzcachedaccesscheck**](/windows/desktop/api/Authz/nf-authz-authzcachedaccesscheck) -Funktion verwendet werden. Weitere Informationen zum Zwischenspeichern von Zugriffs Überprüfungen, einschließlich eines Beispiels, finden Sie unter [Caching Access Checks](caching-access-checks.md).
+Die Ergebnisse einer Zugriffsüberprüfung können zwischengespeichert und in zukünftigen Aufrufen der [**Funktion "AuhzCachedAccessCheck" verwendet**](/windows/desktop/api/Authz/nf-authz-authzcachedaccesscheck) werden. Weitere Informationen zum Zwischenspeichern von Zugriffsüberprüfungen, einschließlich eines Beispiels, finden Sie unter [Zwischenspeichern von Zugriffsüberprüfungen.](caching-access-checks.md)
 
 ## <a name="example"></a>Beispiel
 
-Im folgenden Beispiel wird eine [**Sicherheits \_ Beschreibung**](/windows/desktop/api/Winnt/ns-winnt-security_descriptor) erstellt, die **Lese \_** Zugriff auf integrierte Administratoren ermöglicht. Diese Sicherheits Beschreibung wird verwendet, um den Zugriff für den Client zu überprüfen, der durch den Client Kontext angegeben wird, der im Beispiel unter [Initialisieren eines Client Kontexts](initializing-a-client-context.md)erstellt wurde.
+Im folgenden Beispiel wird ein [**SECURITY \_ DESCRIPTOR erstellt,**](/windows/desktop/api/Winnt/ns-winnt-security_descriptor) der **den READ \_ CONTROL-Zugriff** für integrierte Administratoren zulässt. Er verwendet diesen Sicherheitsdeskriptor, um den Zugriff auf den Client zu überprüfen, der durch den Clientkontext angegeben wird, der im Beispiel unter [Initialisieren eines Clientkontexts erstellt wurde.](initializing-a-client-context.md)
 
 
 ```C++
@@ -115,16 +115,16 @@ BOOL CheckAccess(AUTHZ_CLIENT_CONTEXT_HANDLE hClientContext)
 
 <dl> <dt>
 
-[Hinzufügen von SIDs zu einem Client Kontext](adding-sids-to-a-client-context.md)
+[Hinzufügen von SIDs zu einem Clientkontext](adding-sids-to-a-client-context.md)
 </dt> <dt>
 
-[Caching-Zugriffs Überprüfungen](caching-access-checks.md)
+[Zwischenspeichern von Zugriffsüberprüfungen](caching-access-checks.md)
 </dt> <dt>
 
-[Initialisieren eines Client Kontexts](initializing-a-client-context.md)
+[Initialisieren eines Clientkontexts](initializing-a-client-context.md)
 </dt> <dt>
 
-[Abfragen eines Client Kontexts](querying-a-client-context.md)
+[Abfragen eines Clientkontexts](querying-a-client-context.md)
 </dt> </dl>
 
  

@@ -35,7 +35,7 @@ Diese Eigenschaft ist eine schreibgeschützte **Zahl** (**long**).
 
 ## <a name="remarks"></a>Hinweise
 
-Um den Wert dieser Eigenschaft abzurufen, ist Lesezugriff auf die Bibliothek erforderlich. Weitere Informationen finden Sie unter [Bibliothekszugriff.](library-access.md)
+Zum Abrufen des Werts dieser Eigenschaft ist Lesezugriff auf die Bibliothek erforderlich. Weitere Informationen finden Sie unter [Bibliothekszugriff.](library-access.md)
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -48,7 +48,7 @@ Um den Wert dieser Eigenschaft abzurufen, ist Lesezugriff auf die Bibliothek erf
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 

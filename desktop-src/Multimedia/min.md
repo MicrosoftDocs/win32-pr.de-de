@@ -1,9 +1,9 @@
 ---
-title: min-Makro (minwindef. h)
-description: Das min-Makro vergleicht zwei Werte und gibt den kleineren Wert zurück. Der Datentyp kann ein beliebiger numerischer Datentyp sein, mit oder ohne Vorzeichen. Der Datentyp der Argumente und der Rückgabewert sind identisch.
+title: min-Makro (Minwindef.h)
+description: Das Min-Makro vergleicht zwei Werte und gibt den kleineren zurück. Der Datentyp kann ein beliebiger numerischer Datentyp sein, mit oder ohne Vorzeichen. Der Datentyp der Argumente und der Rückgabewert sind identisch.
 ms.assetid: c7d5094c-6f26-4799-95c8-804a8b48d39e
 keywords:
-- Min. Makro Windows Multimedia
+- min macro Windows Multimedia
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: b50680d5902ae2dc895f53f023c4b229b03c7e86
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 832adc4a4d326ca8e0689d1ca44ade2e0b77db770cabe6042e42c47e23a44f60
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "103743928"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117985672"
 ---
 # <a name="min-macro"></a>min-Makro
 
-Das **Min** -Makro vergleicht zwei Werte und gibt den kleineren Wert zurück. Der Datentyp kann ein beliebiger numerischer Datentyp sein, mit oder ohne Vorzeichen. Der Datentyp der Argumente und der Rückgabewert sind identisch.
+Das **Min-Makro** vergleicht zwei Werte und gibt den kleineren zurück. Der Datentyp kann ein beliebiger numerischer Datentyp sein, mit oder ohne Vorzeichen. Der Datentyp der Argumente und der Rückgabewert sind identisch.
 
 ## <a name="syntax"></a>Syntax
 
@@ -51,17 +51,17 @@ Gibt den ersten von zwei Werten an.
 *value2* 
 </dt> <dd>
 
-Gibt die zweite von zwei-Werten an.
+Gibt den zweiten von zwei Werten an.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Der Rückgabewert ist der kleinere der beiden angegebenen-Werte.
+Der Rückgabewert ist der kleinere der beiden angegebenen Werte.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Das **Min** -Makro wird wie folgt definiert:
+Das **min-Makro** ist wie folgt definiert:
 
 
 ```C++
@@ -78,7 +78,7 @@ Das **Min** -Makro wird wie folgt definiert:
 |-------------------------------------|----------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[nur Desktop-Apps\]<br/>                             |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                                   |
-| Header<br/>                   | <dl> <dt>Minwindef. h</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Minwindef.h</dt> </dl> |
 
 
 

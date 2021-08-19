@@ -90,7 +90,7 @@ Weitere Informationen finden Sie im Microsoft DirectX Video Acceleration Driver 
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 

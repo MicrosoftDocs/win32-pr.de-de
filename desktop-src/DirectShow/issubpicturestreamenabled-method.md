@@ -18,7 +18,7 @@ ms.locfileid: "117817047"
 
  
 
-Die `IsSubpictureStreamEnabled` -Methode ruft einen Wert ab, der angibt, ob der angegebene Unterbildstream im aktuellen Titel aktiviert ist.
+Die `IsSubpictureStreamEnabled` -Methode ruft einen Wert ab, der angibt, ob der angegebene Unterbilddatenstrom im aktuellen Titel aktiviert ist.
 
 ``` syntax
 [ bEnabled = ] MSWebDVD.IsSubpictureStreamEnabled(iStream)
@@ -35,10 +35,10 @@ Gibt den Unterbilddatenstrom als ganze Zahl an.
 
 
 
-| Wert   | BESCHREIBUNG              |
+| Wert   | Beschreibung              |
 |---------|--------------------------|
 | 0 bis 31 | Subpicture-Datenstrom        |
-| 63      | Muted Low-Bitrate-Stream |
+| 63      | Stummgeschalteter Datenstrom mit niedriger Bitrate |
 
 
 
@@ -48,11 +48,11 @@ Gibt den Unterbilddatenstrom als ganze Zahl an.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt einen booleschen Wert zurück, der angibt, ob der angegebene Audiostream im aktuellen Titel verfügbar ist. True bedeutet, dass es verfügbar ist.
+Gibt einen booleschen Wert zurück, der angibt, ob der angegebene Audiostream im aktuellen Titel verfügbar ist. True bedeutet, dass sie verfügbar ist.
 
 ## <a name="remarks"></a>Hinweise
 
-Obwohl ein Datenträger bis zu 32 Unterbildstreams enthalten kann, ist nicht unbedingt jeder Stream für jeden Titel verfügbar. Überprüfen Sie immer, ob ein Stream für einen Titel verfügbar ist, bevor Sie die [**CurrentSubpictureStream-Eigenschaft**](currentsubpicturestream-property.md) festlegen.
+Obwohl ein Datenträger bis zu 32 Datenströme enthalten kann, ist nicht unbedingt jeder Stream für jeden Titel verfügbar. Überprüfen Sie immer, ob ein Stream für einen Titel verfügbar ist, bevor Sie die [**CurrentSubpictureStream-Eigenschaft**](currentsubpicturestream-property.md) festlegen.
 
  
 

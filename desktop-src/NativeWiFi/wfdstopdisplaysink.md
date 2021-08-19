@@ -1,7 +1,7 @@
 ---
-description: Beendet den miracast-senkenmodus, deaktiviert die Auffindbarkeit und hebt die Registrierung des Rückrufs auf.
+description: Beendet den Miracast Senkenmodus, deaktiviert die Auffindbarkeit und deaktiviert die Registrierung des Rückrufs.
 ms.assetid: 38AE60CB-F601-4C03-A725-9B802341B84B
-title: WF-displaysink-Funktion (wsdsink. h)
+title: WFDDisplaySinkStop-Funktion (Wfdsink.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,16 +13,16 @@ api_type:
 - DllExport
 api_location:
 - wifidisplay.dll
-ms.openlocfilehash: d1ebaa9920ca7d38cff22cef6383b37065faa2ba
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: a5e2da91e29535c1e2fd9553a2b6ec2bb0008e61f33cd55ebcda2746b93eb657
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106347294"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117797930"
 ---
-# <a name="wfddisplaysinkstop-function"></a>Wsddisplaysink-Funktion
+# <a name="wfddisplaysinkstop-function"></a>WFDDisplaySinkStop-Funktion
 
-Beendet den miracast-senkenmodus, deaktiviert die Auffindbarkeit und hebt die Registrierung des Rückrufs auf. Ihre APP sollte diese einmal beim Herunterfahren anrufen.
+Beendet den Miracast Senkenmodus, deaktiviert die Auffindbarkeit und deaktiviert die Registrierung des Rückrufs. Ihre App sollte dies einmal beim Herunterfahren aufrufen.
 
 ## <a name="syntax"></a>Syntax
 
@@ -39,11 +39,11 @@ Diese Funktion besitzt keine Parameter.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Wenn die Funktion erfolgreich ausgeführt wird, ist der Rückgabewert Fehler \_ erfolgreich.
+Wenn die Funktion erfolgreich ausgeführt wird, lautet der Rückgabewert ERROR \_ SUCCESS.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Es wird erwartet, dass Ihre APP die Blockierung aller aktuell ausgeführten Rückrufe aufgehoben hat, bevor **wfdstopdisplaysink** aufgerufen wird.
+Es wird erwartet, dass Ihre App die Blockierung aller ausgeführten Rückrufe aufgehoben hat, bevor **WFDStopDisplaySink** aufgerufen wird.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -51,12 +51,12 @@ Es wird erwartet, dass Ihre APP die Blockierung aller aktuell ausgeführten Rüc
 
 | Anforderung | Wert |
 |-------------------------------------|--------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | \[Nur Desktop-Apps Windows 8.1\]<br/>                                               |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2012 R2 \[ -Desktop-Apps\]<br/>                                    |
-| Ende des Supports (Client)<br/>    | Windows 10<br/>                                                                      |
+| Unterstützte Mindestversion (Client)<br/> | \[Windows 8.1 Nur Desktop-Apps\]<br/>                                               |
+| Unterstützte Mindestversion (Server)<br/> | Windows Server 2012 Nur \[ R2-Desktop-Apps\]<br/>                                    |
+| Ende des Supports (Client)<br/>    | Windows 10<br/>                                                                      |
 | Ende des Supports (Server)<br/>    | Windows Server 2016<br/>                                                             |
-| Header<br/>                   | <dl> <dt>WF-Senke. h</dt> </dl>       |
-| Bibliothek<br/>                  | <dl> <dt>Wifdisplay. lib</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Wfdsink.h</dt> </dl>       |
+| Bibliothek<br/>                  | <dl> <dt>Wifidisplay.lib</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Wifidisplay.dll</dt> </dl> |
 
 

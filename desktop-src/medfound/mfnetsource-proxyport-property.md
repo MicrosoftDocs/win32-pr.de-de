@@ -49,7 +49,7 @@ Anwendungen können diese Eigenschaft verwenden, um den Proxylocator beim Erstel
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 

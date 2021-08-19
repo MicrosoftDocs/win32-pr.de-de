@@ -69,7 +69,7 @@ Eine Anwendung, die diese Nachricht verarbeitet, sollte einen der folgenden Wert
 
 
 
-| Rückgabecode/-wert                                                                                                                                  | BESCHREIBUNG                                                                                                                                                                              |
+| Rückgabecode/-wert                                                                                                                                  | Beschreibung                                                                                                                                                                              |
 |----------------------------------------------------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | <dl> <dt>**MNC \_ CLOSE**</dt> <dt>1</dt> </dl>   | Informiert das System darüber, dass das aktive Menü geschlossen werden soll.<br/>                                                                                                                      |
 | <dl> <dt>**MNC \_ EXECUTE**</dt> <dt>2</dt> </dl> | Informiert das System darüber, dass das im Wort mit niedriger Reihenfolge des Rückgabewerts angegebene Element ausgewählt werden soll. Das Besitzerfenster empfängt eine [**WM \_ COMMAND-Meldung.**](wm-command.md)<br/> |
@@ -98,7 +98,7 @@ Eine Anwendung sollte diese Meldung verarbeiten, wenn eine Zugriffstaste verwend
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 

@@ -1,6 +1,6 @@
 ---
 title: DsRestoreRegisterComplete-Funktion (Ntdsbcli.h)
-description: Wird aufgerufen, um einen Active Directory-Server nach Abschluss eines Wiederherstellungsvorgang zu entsperren.
+description: Wird aufgerufen, um einen Active Directory-Server nach Abschluss eines Wiederherstellungsvorgangs zu entsperren.
 ms.assetid: 781cd2ec-d2e2-4f3a-903d-feda4b871de5
 ms.tgt_platform: multiple
 keywords:
@@ -24,9 +24,9 @@ ms.locfileid: "118429928"
 ---
 # <a name="dsrestoreregistercomplete-function"></a>DsRestoreRegisterComplete-Funktion
 
-\[Diese Funktion ist für die Verwendung in den Im Abschnitt Anforderungen angegebenen Betriebssystemen verfügbar. Es kann in nachfolgenden Versionen geändert oder entfernt werden. Verwenden [Volumeschattenkopie-Dienst (VSS).](../vss/volume-shadow-copy-service-overview.md)\]
+\[Diese Funktion ist für die Verwendung in den Betriebssystemen verfügbar, die im Abschnitt Anforderungen angegeben sind. Es kann in nachfolgenden Versionen geändert oder entfernt werden. Verwenden Sie stattdessen [Volumeschattenkopie-Dienst (VSS).](../vss/volume-shadow-copy-service-overview.md)\]
 
-Die **DsRestoreRegisterComplete-Funktion** wird aufgerufen, um einen Active Directory-Server nach Abschluss eines Wiederherstellungsvorgang zu entsperren. Diese Funktion ist eine Entsprechung zur [**DsRestoreRegister-Funktion.**](dsrestoreregister.md)
+Die **DsRestoreRegisterComplete-Funktion** wird aufgerufen, um einen Active Directory-Server nach Abschluss eines Wiederherstellungsvorgangs zu entsperren. Diese Funktion ist eine Entsprechung zur [**DsRestoreRegister-Funktion.**](dsrestoreregister.md)
 
 ## <a name="syntax"></a>Syntax
 
@@ -47,33 +47,33 @@ HRESULT DsRestoreRegisterComplete(
 *hbc* \[ In\]
 </dt> <dd>
 
-Enthält das Mit der [**DsRestorePrepare-Funktion erhaltene Wiederherstellungskontexthand**](dsrestoreprepare.md) handle.
+Enthält das Mit der [**DsRestorePrepare-Funktion abgerufene**](dsrestoreprepare.md) Wiederherstellungskontexthandle.
 
 </dd> <dt>
 
 *hrRestoreState* \[ In\]
 </dt> <dd>
 
-Enthält den endgültigen Status des Wiederherstellungsvorgang. Dieser Parameter sollte **S \_ OK enthalten,** wenn der Wiederherstellungsvorgang erfolgreich war, andernfalls ein Fehlercode.
+Enthält den endgültigen Status des Wiederherstellungsvorgangs. Dieser Parameter sollte **S \_ OK** enthalten, wenn der Wiederherstellungsvorgang erfolgreich war, oder andernfalls einen Fehlercode.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt **S \_ OK zurück,** wenn die Funktion erfolgreich ist, andernfalls ein Win32- oder RPC-Fehlercode. In der folgenden Liste sind mögliche Fehlercodes aufgeführt.
+Gibt **S \_ OK** zurück, wenn die Funktion erfolgreich ist oder andernfalls ein Win32- oder RPC-Fehlercode vorliegt. In der folgenden Liste sind mögliche Fehlercodes aufgeführt.
 
 <dl> <dt>
 
 **FEHLERZUGRIFF \_ \_ VERWEIGERT**
 </dt> <dd>
 
-Der Aufrufer verfügt nicht über die richtigen Zugriffsberechtigungen zum Aufrufen dieser Funktion. Mit [**der DsSetAuthIdentity-Funktion**](dssetauthidentity.md) können die Anmeldeinformationen festgelegt werden, die für die Sicherungs- und Wiederherstellungsfunktionen verwendet werden sollen.
+Der Aufrufer verfügt nicht über die richtigen Zugriffsberechtigungen zum Aufrufen dieser Funktion. Die [**DsSetAuthIdentity-Funktion**](dssetauthidentity.md) kann verwendet werden, um die Anmeldeinformationen festzulegen, die für die Sicherungs- und Wiederherstellungsfunktionen verwendet werden sollen.
 
 </dd> </dl>
 
 ## <a name="remarks"></a>Hinweise
 
-Rufen Sie diese Funktion auf, bevor Sie den Domänencontroller neu starten, um den Status des Wiederherstellungsvorgang anzuzeigen. Wenn der Status nicht erfolgreich ist, wird der Verzeichnisdienst erst gestartet, wenn eine gültige Datenbank wiederhergestellt wurde. Diese Funktion schließt den Wiederherstellungsvorgang ab und ermöglicht Active Directory Domain Services starten.
+Bevor Sie den Domänencontroller neu starten, rufen Sie diese Funktion auf, um den Status des Wiederherstellungsvorgangs anzugeben. Wenn der Status nicht erfolgreich ist, wird der Verzeichnisdienst erst gestartet, nachdem eine gültige Datenbank wiederhergestellt wurde. Diese Funktion schließt den Wiederherstellungsvorgang ab und ermöglicht das Starten Active Directory Domain Services.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -91,7 +91,7 @@ Rufen Sie diese Funktion auf, bevor Sie den Domänencontroller neu starten, um d
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 

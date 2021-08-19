@@ -1,9 +1,9 @@
 ---
 title: async_uuid-Attribut
-description: Das Attribut "\ Async \_ UUID \ Interface" weist den Mittel l-Compiler an, sowohl synchrone als auch asynchrone Versionen einer COM-Schnittstelle zu definieren.
+description: Das \_ Schnittstellenattribut \async uuid\ weist den MIDL-Compiler an, sowohl synchrone als auch asynchrone Versionen einer COM-Schnittstelle zu definieren.
 ms.assetid: 1c20eaa1-78b5-4463-a8c1-d81e55d5c618
 keywords:
-- Async_uuid Attribut-Mittel l
+- async_uuid-Attribut MIDL
 topic_type:
 - apiref
 api_name:
@@ -12,16 +12,16 @@ api_type:
 - NA
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 39fd7b4d9d9bf7a595415e55de778a419d91051c
-ms.sourcegitcommit: ebd3ce6908ff865f1ef66f2fc96769be0aad82e1
+ms.openlocfilehash: 83a784cadf470fa312a82e473f3934dbda1a2b6dce20d2ae34c7074c309398cf
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/19/2020
-ms.locfileid: "104101534"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117808234"
 ---
-# <a name="async_uuid-attribute"></a>Async- \_ uuid-Attribut
+# <a name="async_uuid-attribute"></a>asynchrones \_ uuid-Attribut
 
-Das asynchrone **\[ \_ UUID \]** -Schnittstellen Attribut weist den Mittel l-Compiler an, sowohl synchrone als auch asynchrone Versionen einer COM-Schnittstelle zu definieren.
+Das **\[ asynchrone \_ \] uuid-Schnittstellenattribut** weist den MIDL-Compiler an, sowohl synchrone als auch asynchrone Versionen einer COM-Schnittstelle zu definieren.
 
 ``` syntax
 [ 
@@ -39,28 +39,28 @@ interface interface-name : base-interface
 
 <dl> <dt>
 
-*String-uuid1* 
+*string-uuid1* 
 </dt> <dd>
 
-Eine UUID-Zeichenfolge, die vom Hilfsprogramm uuidgen generiert wird und die synchrone Version der Schnittstelle identifiziert.
+Eine vom Hilfsprogramm Uuidgen generierte UUID-Zeichenfolge, die die synchrone Version der Schnittstelle identifiziert.
 
 </dd> <dt>
 
-*String-uuid2* 
+*string-uuid2* 
 </dt> <dd>
 
-Eine UUID-Zeichenfolge, die vom Hilfsprogramm uuidgen generiert wird und die asynchrone Version der Schnittstelle identifiziert.
+Eine vom Hilfsprogramm Uuidgen generierte UUID-Zeichenfolge, die die asynchrone Version der Schnittstelle identifiziert.
 
 </dd> <dt>
 
-*Interface-Attribute-List* 
+*interface-attribute-list* 
 </dt> <dd>
 
-Andere Attribute, die auf die Schnittstelle als Ganzes angewendet werden. Sie können das [**\[ Versions \]**](version.md) Attribut nicht in einer COM-Schnittstelle verwenden.
+Andere Attribute, die für die gesamte Schnittstelle gelten. Sie können das [**\[ \] Versionsattribut**](version.md) nicht in einer COM-Schnittstelle verwenden.
 
 </dd> <dt>
 
-*Schnittstellen Name* 
+*Schnittstellenname* 
 </dt> <dd>
 
 Der Name der Schnittstelle.
@@ -70,28 +70,28 @@ Der Name der Schnittstelle.
 *Basisschnittstelle* 
 </dt> <dd>
 
-Die Schnittstelle, von der diese Schnittstelle abgeleitet ist. Die Basisschnittstelle muss **IUnknown** oder eine asynchrone Schnittstelle sein, die entweder direkt oder indirekt von **IUnknown** abgeleitet ist.
+Die Schnittstelle, von der diese Schnittstelle abgeleitet wird. Die Basisschnittstelle muss **IUnknown** oder eine asynchrone Schnittstelle sein, die direkt oder indirekt von **IUnknown** abgeleitet wird.
 
 </dd> <dt>
 
-*Schnittstellen Definition* 
+*Schnittstellendefinition* 
 </dt> <dd>
 
-Gibt IDL-Anweisungen an, die die Definition der-Schnittstelle bilden.
+Gibt IDL-Anweisungen an, die die Definition der Schnittstelle bilden.
 
 </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die Verwendung dieses Attributs erfordert Windows 2000 oder höhere Versionen von Windows.
+Die Verwendung dieses Attributs erfordert Windows Version 2000 oder höher von Windows.
 
-Wenn Sie das asynchrone **\[ \_ UUID \]** -Attribut auf eine COM-Schnittstelle (d. h. eine Schnittstelle mit dem [**\[ Object \]**](object.md) -Attribut) anwenden, generiert der-compilercompiler zusätzlich zur herkömmlichen, synchronen Version eine asynchrone Definition der-Schnittstelle. Die asynchrone Schnittstelle hat dieselben Namen wie die synchrone Schnittstelle, jedoch mit einem Präfix "Async". Der Schnittstellen Bezeichner (IID) ist die UUID, die als Parameter für das asynchrone **\[ \_ UUID \]** -Attribut angegeben wird.
+Wenn Sie das **\[ async \_ \] uuid-Attribut** auf eine COM-Schnittstelle (d. h. eine Schnittstelle mit dem [**\[ \] -Objektattribut)**](object.md) anwenden, generiert der MIDL-Compiler zusätzlich zur herkömmlichen synchronen Version eine asynchrone Definition der Schnittstelle. Die asynchrone Schnittstelle hat die gleichen Namen wie die synchrone Schnittstelle, jedoch mit dem Präfix "Async". Der Schnittstellenbezeichner (INTERFACE Identifier, IID) ist die UUID, die als Parameter für das **\[ \_ async uuid-Attribut \]** angegeben wird.
 
-Bei der asynchronen-Schnittstelle teilt die Mittel l jede Methode in separate *Begin* -und *Finish* -Methoden auf. Die *Begin* -Methode verfügt über den synchronen Methodennamen mit dem \_ Präfix "BEGIN" und enthält alle [**\[ in \]**](in.md) -Parameter der synchronen Methode. Die " *Finish* "-Methode hat den Namen der synchronen Methode mit einem \_ Präfix "Finish" und enthält alle [**\[ out \]**](out-idl.md) -Parameter aus der synchronen Methode. Wenn die synchrone Methode über eine **\[ in- \] , out** -Parameter verfügt, werden Sie in die asynchronen *Begin* -und *Finish* -Methoden eingeschlossen.
+Für die asynchrone Schnittstelle teilt MIDL jede Methode in separate *Begin-* und *Finish-Methoden* auf. Die *begin-Methode* hat den Namen der synchronen Methode mit dem \_ Präfix "Begin" und schließt alle [**\[ in \]**](in.md) -Parameter aus der synchronen Methode ein. Die *finish-Methode* hat den Namen der synchronen Methode mit dem \_ Präfix "Finish" und enthält alle [**\[ \] out-Parameter**](out-idl.md) der synchronen Methode. Wenn die synchrone Methode über einen **\[ in verfügt, \]** werden out-Parameter in die asynchronen *Methoden begin* und *finish* eingeschlossen.
 
-Wenn eine asynchrone Schnittstellen Methode über den Befehl [**\[ \_ als \]**](call-as.md) Attribut verfügt, generiert die Mittel-l Deklarationen für die *Begin* -und die *Finish* -Methode. Beide Methoden müssen implementiert werden.
+Wenn eine asynchrone Schnittstellenmethode über den [**\[ Aufruf \_ als \]**](call-as.md) Attribut verfügt, generiert MIDL Deklarationen für die *Begin-* und *finish-Methoden.* Sie müssen beide Methoden implementieren.
 
-Jede asynchrone Schnittstelle ist ein Modifizierer in einer synchronen Schnittstelle und verfügt daher nicht über ein separates Vererbungs Diagramm. Dies bedeutet, dass Sie keine synchrone Schnittstelle von einer asynchronen Schnittstelle (außer **IUnknown**) definieren können. Und können keine synchronen Schnittstellen von asynchronen Schnittstellen erben. Der mittlerer l-Compiler gibt eine Fehlermeldung aus, wenn Sie eine der beiden Versuche ausführen.
+Jede asynchrone Schnittstelle ist ein Modifizierer für eine synchrone Schnittstelle und verfügt daher nicht über ein separates Vererbungsdiagramm. Dies bedeutet, dass Sie keine synchrone Schnittstelle über eine asynchrone Schnittstelle definieren können (außer **IUnknown**). Synchrone Schnittstellen können auch nicht von asynchronen Schnittstellen erben. Der MIDL-Compiler gibt eine Fehlermeldung aus, wenn Sie eine der beiden Versuche versuchen.
 
 ## <a name="examples"></a>Beispiele
 
@@ -115,30 +115,30 @@ interface IMyInterface : IUnknown
 [Definieren von COM-Schnittstellen](/windows/desktop/com/defining-com-interfaces)
 </dt> <dt>
 
-[Schnittstellen Definitionsdatei (IDL)](interface-definition-idl-file.md)
+[IDL-Datei (Interface Definition)](interface-definition-idl-file.md)
 </dt> <dt>
 
-[**aufzurufen \_ als**](call-as.md)
+[**aufrufen \_ als**](call-as.md)
 </dt> <dt>
 
-[**IID \_ ist**](iid-is.md)
+[**iid \_ ist**](iid-is.md)
 </dt> <dt>
 
 [**in**](in.md)
 </dt> <dt>
 
-[**nah**](local.md)
+[**lokal**](local.md)
 </dt> <dt>
 
 [**Objekt (object)**](object.md)
 </dt> <dt>
 
-[**vorgenommen**](out-idl.md)
+[**out**](out-idl.md)
 </dt> <dt>
 
-[**version**](version.md)
+[**Version**](version.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 

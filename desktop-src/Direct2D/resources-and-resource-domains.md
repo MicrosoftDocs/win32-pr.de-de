@@ -69,7 +69,7 @@ Im Folgenden finden Sie Beispiele für geräteabhängige Ressourcen:
 -   [**ID2D1RenderTarget und**](/windows/win32/api/d2d1/nn-d2d1-id2d1rendertarget) die Schnittstellen, die davon erben. Um ein Renderziel zu erstellen, verwenden Sie eine Factory oder ein anderes Renderziel.
 
 > [!Note]  
-> Ab Windows 8 gibt es neue Schnittstellen, die geräteabhängige Ressourcen erstellen. Ein [**ID2D1Device**](/windows/win32/api/d2d1_1/nn-d2d1_1-id2d1device) und ein [**ID2D1DeviceContext**](/windows/win32/api/d2d1_1/nn-d2d1_1-id2d1devicecontext) können eine Ressource gemeinsam nutzen, wenn der Gerätekontext und die Ressource aus demselben **ID2D1Device erstellt werden.**
+> Beginnend mit Windows 8 gibt es neue Schnittstellen, die geräteabhängige Ressourcen erstellen. Ein [**ID2D1Device**](/windows/win32/api/d2d1_1/nn-d2d1_1-id2d1device) und ein [**ID2D1DeviceContext**](/windows/win32/api/d2d1_1/nn-d2d1_1-id2d1devicecontext) können eine Ressource gemeinsam nutzen, wenn der Gerätekontext und die Ressource aus demselben **ID2D1Device erstellt werden.**
 
  
 

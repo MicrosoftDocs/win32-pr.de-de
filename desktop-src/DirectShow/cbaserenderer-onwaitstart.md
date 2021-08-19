@@ -61,7 +61,7 @@ Wenn Sie die Qualitätskontrolle implementieren, können Sie diese Methode zusam
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 
