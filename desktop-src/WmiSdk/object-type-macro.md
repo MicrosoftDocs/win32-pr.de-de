@@ -1,23 +1,23 @@
 ---
-description: Das Object-Type-Makro enthält obligatorische und optionale Klauseln, die die grundlegenden Merkmale eines MIB-Objekts beschreiben. Der SNMP-Anbieter konvertiert ein MIB in die entsprechenden Teile des ObjektType-Makros.
+description: Das OBJECT-TYPE-Makro enthält obligatorische und optionale Klauseln, die die grundlegenden Merkmale eines MIB-Objekts beschreiben. Der SNMP-Anbieter konvertiert einen MIB in die entsprechenden Teile des OBJECT-TYPE-Makros.
 ms.assetid: ad76a4fc-354e-4270-862c-062aa523bf7e
 ms.tgt_platform: multiple
-title: Object-Type-Makro
+title: OBJECT-TYPE-Makro
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: c605a414c402f2cf2d18be2d966db6408f23cdc9
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 0ef71bcdd915dfaa59ace008c28a5d63a323c2cd1d0f119b9d91e5a0720e192e
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104128077"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118818006"
 ---
-# <a name="object-type-macro"></a>Object-Type-Makro
+# <a name="object-type-macro"></a>OBJECT-TYPE-Makro
 
-Das Object-Type-Makro enthält obligatorische und optionale Klauseln, die die grundlegenden Merkmale eines MIB-Objekts beschreiben. Der SNMP-Anbieter konvertiert ein MIB in die entsprechenden Teile des ObjektType-Makros.
+Das OBJECT-TYPE-Makro enthält obligatorische und optionale Klauseln, die die grundlegenden Merkmale eines MIB-Objekts beschreiben. Der SNMP-Anbieter konvertiert einen MIB in die entsprechenden Teile des OBJECT-TYPE-Makros.
 
 > [!Note]  
-> Weitere Informationen zum Installieren des Anbieters finden Sie unter [Einrichten der WMI-SNMP-Umgebung](setting-up-the-wmi-snmp-environment.md).
+> Weitere Informationen zum Installieren des Anbieters finden Sie unter [Einrichten der WMI-SNMP-Umgebung.](setting-up-the-wmi-snmp-environment.md)
 
  
 
@@ -28,96 +28,96 @@ Das Object-Type-Makro enthält obligatorische und optionale Klauseln, die die gr
 <span id="MIB_object"></span><span id="mib_object"></span><span id="MIB_OBJECT"></span>MIB-Objekt
 </dt> <dd>
 
-Objekt, das den größten Teil der fraglichen Daten enthält.
+Objekt, das die meisten der in Frage gestellten Daten enthält.
 
 </dd> <dt>
 
-<span id="Object_descriptor"></span><span id="object_descriptor"></span><span id="OBJECT_DESCRIPTOR"></span>Objekt Deskriptor
+<span id="Object_descriptor"></span><span id="object_descriptor"></span><span id="OBJECT_DESCRIPTOR"></span>Objektdeskriptor
 </dt> <dd>
 
-Eindeutiger Name oder Objekt Deskriptor, der jedes MIB-Objekt identifiziert. Jeder MIB-Objekt Deskriptor ist exakt einem CIM-Eigenschaftsnamen zugeordnet. **Ifindex** beispielsweise wird in **ifindex** übersetzt.
+Eindeutiger Name oder Objektdeskriptor, der jedes MIB-Objekt identifiziert. Jeder MIB-Objektdeskriptor wird genau einem CIM-Eigenschaftennamen zuordnen. IfIndex **wird z. B.** in **ifIndex übersetzt.**
 
 </dd> <dt>
 
-<span id="SYNTAX_Clause"></span><span id="syntax_clause"></span><span id="SYNTAX_CLAUSE"></span>[Syntax Klausel](syntax-clause.md)
+<span id="SYNTAX_Clause"></span><span id="syntax_clause"></span><span id="SYNTAX_CLAUSE"></span>[SYNTAX-Klausel](syntax-clause.md)
 </dt> <dd>
 
 Definiert die Daten und den Typ eines MIB-Objekts.
 
 </dd> <dt>
 
-<span id="INDEX_clause"></span><span id="index_clause"></span><span id="INDEX_CLAUSE"></span>[Index-Klausel](index-clause.md)
+<span id="INDEX_clause"></span><span id="index_clause"></span><span id="INDEX_CLAUSE"></span>[INDEX-Klausel](index-clause.md)
 </dt> <dd>
 
 Definiert einen Schlüssel zum Auswählen einer eindeutigen Tabellenzeile.
 
 </dd> <dt>
 
-<span id="AUGMENTS_clause"></span><span id="augments_clause"></span><span id="AUGMENTS_CLAUSE"></span>Augments-Klausel
+<span id="AUGMENTS_clause"></span><span id="augments_clause"></span><span id="AUGMENTS_CLAUSE"></span>AUGMENTS-Klausel
 </dt> <dd>
 
-Gibt an, dass die von Ihnen festgelegten Tabellen Auflistung als Erweiterung einer anderen Tabellen Auflistung angesehen werden kann, und kann die Index Klausel in SNMPv2 ersetzen. Die Auflistungen, auf die durch die Erweiterungs Klausel verwiesen wird, können mit der anderen Tabellen Auflistung kombiniert werden, um eine Sammlung zu bilden. Die resultierende Auflistung gibt die in der letzten Tabellen Auflistung in der Kette angegebenen Primärschlüssel Eigenschaften frei.
+Gibt an, dass die von ihm angegebenen Tabellensammlungen als Erweiterung einer anderen Tabellensammlung betrachtet werden können und die INDEX-Klausel in SNMPv2 ersetzen kann. Die Auflistungen, auf die durch die AUGMENTS-Klausel verwiesen wird, können mit der anderen Tabellensammlung kombiniert werden, um eine Sammlung zu bilden. Die resultierende Auflistung verwendet die Primärschlüsseleigenschaften, die in der letzten Tabellensammlung in der Kette angegeben sind.
 
-In diesem Fall werden die zuvor für die Index-Klausel angegebenen Zustellungs Regeln auf die letzte Tabellen Auflistung in der Kette angewendet. Die Auflistung von-Objekten wird dann einer CIM-Klassendefinition zugeordnet.
+In diesem Fall werden die vorherigen Zuordnungsregeln, die für die INDEX-Klausel angegeben wurden, auf die letzte Tabellensammlung in der Kette angewendet. Die Auflistung von -Objekten wird dann einer CIM-Klassendefinition zuordnungen.
 
 </dd> <dt>
 
-<span id="OBJECT-IDENTIFIER_clause"></span><span id="object-identifier_clause"></span><span id="OBJECT-IDENTIFIER_CLAUSE"></span>Object-Identifier-Klausel
+<span id="OBJECT-IDENTIFIER_clause"></span><span id="object-identifier_clause"></span><span id="OBJECT-IDENTIFIER_CLAUSE"></span>OBJECT-IDENTIFIER-Klausel
 </dt> <dd>
 
-Enthält einen eindeutigen Objekt Bezeichner für ein MIB-Objekt. Dieser Objekt Bezeichner wird dem **Objekt \_ Bezeichner** des CIM-Eigenschaften Qualifizierers zugeordnet.
+Enthält einen eindeutigen Objektbezeichner für ein MIB-Objekt. Dieser Objektbezeichner wird dem CIM-Eigenschaftenqualifizierer-Objektbezeichner **\_ zu.**
 
 </dd> <dt>
 
-<span id="ACCESS_and_MAX-ACCESS_Clauses"></span><span id="access_and_max-access_clauses"></span><span id="ACCESS_AND_MAX-ACCESS_CLAUSES"></span>[Access-und Max-Access-Klauseln](access-and-max-access-clauses.md)
+<span id="ACCESS_and_MAX-ACCESS_Clauses"></span><span id="access_and_max-access_clauses"></span><span id="ACCESS_AND_MAX-ACCESS_CLAUSES"></span>[ACCESS- und MAX-ACCESS-Klauseln](access-and-max-access-clauses.md)
 </dt> <dd>
 
 Definieren Sie die Zugriffsrechte für das MIB-Objekt.
 
 </dd> <dt>
 
-<span id="DESCRIPTION_clause"></span><span id="description_clause"></span><span id="DESCRIPTION_CLAUSE"></span>Description-Klausel
+<span id="DESCRIPTION_clause"></span><span id="description_clause"></span><span id="DESCRIPTION_CLAUSE"></span>DESCRIPTION-Klausel
 </dt> <dd>
 
-Stellt eine Textbeschreibung des-Objekts bereit, das der CIM-Eigenschaften **qualifiziererbeschreibung** zugeordnet ist. Diese Klausel ist möglicherweise leer.
+Stellt eine Textbeschreibung des -Objekts zur Verfügung, das dem CIM-Eigenschaftenqualifizierer **Description zu ordnet.** Diese Klausel ist möglicherweise leer.
 
-Jede **Tabelle** und jedes **Eingabe** Objekt in einer SNMP-Tabellendefinition enthält auch eine Beschreibungs Klausel, die auch leer sein kann. Die Tabellen-und Eintrags Beschreibungs Klauseln werden verkettet, und das Ergebnis wird der **Beschreibung** der CIM-Klassen Qualifizierer zugeordnet.
+Jedes **TABLE-** **und ENTRY-Objekt** in einer SNMP-Tabellendefinition enthält auch eine DESCRIPTION-Klausel, die ebenfalls leer sein kann. Die TABLE- und ENTRY DESCRIPTION-Klauseln werden verkettet, und das Ergebnis wird dem CIM-Klassenqualifizierer **Description angezeigt.**
 
 </dd> <dt>
 
-<span id="STATUS_clause"></span><span id="status_clause"></span><span id="STATUS_CLAUSE"></span>Status-Klausel
+<span id="STATUS_clause"></span><span id="status_clause"></span><span id="STATUS_CLAUSE"></span>STATUS-Klausel
 </dt> <dd>
 
-Gibt an, ob das Objekt unterstützt werden muss. Wenn der Wert der Status-Klausel **veraltet** ist, verwirft der Anbieter das MIB-Objekt aus der Zuordnung. Andernfalls wird die Status-Klausel dem CIM-Eigenschaften **qualifiziererstatus** zugeordnet.
+Gibt an, ob das Objekt unterstützt werden muss. Wenn der Wert der STATUS-Klausel **veraltet ist,** verwirft der Anbieter das MIB-Objekt aus der Zuordnung. Andernfalls wird die STATUS-Klausel der CIM-Eigenschaft qualifizierer **Status zu.**
 
-Der bevorzugte **Wert für SNMPv1 ist entweder** **obligatorisch** oder **optional**, aber der Qualifizierer kann einen anderen Wert enthalten. Der bevorzugte **Wert für SNMPv2C ist entweder** **Current** oder **veraltet**, aber der Qualifizierer kann einen anderen Wert enthalten.
+Für SNMPv1 ist der bevorzugte  Wert von **Status** entweder obligatorisch oder **optional,** aber der Qualifizierer kann einen anderen Wert enthalten. Für SNMPv2C ist der bevorzugte Wert von **Status** entweder **aktuell** oder veraltet, aber der Qualifizierer kann einen anderen Wert enthalten.
 
 </dd> <dt>
 
-<span id="DEFVAL_clause"></span><span id="defval_clause"></span><span id="DEFVAL_CLAUSE"></span>Defval-Klausel
+<span id="DEFVAL_clause"></span><span id="defval_clause"></span><span id="DEFVAL_CLAUSE"></span>DEFVAL-Klausel
 </dt> <dd>
 
-Weist einer Variablen in einer logischen Tabellenzeile einen Standardwert zu und wird dem Zeichen folgen-CIM-Eigenschafts Qualifizierer **defval** zugeordnet.
+Weist einer Variablen in einer logischen Tabellenzeile einen Standardwert zu und wird der Zeichenfolge CIM-Eigenschaftenqualifizierer **Defval zugeordnet.**
 
 </dd> <dt>
 
-<span id="REFERENCE_clause"></span><span id="reference_clause"></span><span id="REFERENCE_CLAUSE"></span>Reference-Klausel
+<span id="REFERENCE_clause"></span><span id="reference_clause"></span><span id="REFERENCE_CLAUSE"></span>REFERENCE-Klausel
 </dt> <dd>
 
-Verweist auf ein anderes Dokument, das weitere Informationen zum-Objekt enthält. Diese Klausel wird dem CIM-Eigenschafts **qualifiziererverweis** zugeordnet, der vom Typ "String" ist.
+Verweist auf ein anderes Dokument, das weitere Informationen zum -Objekt enthält. Diese Klausel wird dem CIM-Eigenschaftenqualifizierer Reference (CIM-Eigenschaftsqualifiziererverweis) vom Typ string (Zeichenfolge) zu. 
 
 </dd> <dt>
 
-<span id="UNITS_clause"></span><span id="units_clause"></span><span id="UNITS_CLAUSE"></span>Units-Klausel
+<span id="UNITS_clause"></span><span id="units_clause"></span><span id="UNITS_CLAUSE"></span>UNITS-Klausel
 </dt> <dd>
 
-Stellt eine genaue Definition der Darstellung des-Objekts bereit. Diese Klausel ist den CIM-Eigenschaften **qualifizierereinheiten** zugeordnet, die den Typ "String" haben.
+Stellt eine genaue Definition dessen dar, was das -Objekt darstellt. Diese Klausel wird der CIM-Eigenschaft qualifizierer **Units (Einheiten)** vom Typ string (Zeichenfolge) zu.
 
 </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Das Object-Type-Makro beschreibt die Grundmerkmale eines einzelnen MIB-Objekts. Ein Satz von Objekttyp Makros kann als Gruppe verwandter Objekte betrachtet werden. Verwenden Sie in SNMPv2C das Objektgruppen Makro, um Sätze verwandter Objekte formal in eine Auflistung zu gruppieren. Es ist jedoch kein formaler Mechanismus zum Erstellen von Sammlungen in SNMPv1 vorhanden. Für den SNMP-Anbieter wird das Objektgruppen Makro ignoriert, Sie können jedoch Gruppierungs Beziehungen und fabrizieren von Auflistungen erfinden.
+Das OBJECT-TYPE-Makro beschreibt die grundlegenden Merkmale eines einzelnen MIB-Objekts. Ein Satz von OBJECT-TYPE-Makros kann als Gruppe verwandter Objekte betrachtet werden. Verwenden Sie in SNMPv2C das OBJECT-GROUP-Makro, um Sätze verwandter Objekte formell in einer Auflistung zu gruppieren. Es gibt jedoch keinen formalen Mechanismus zum Erstellen von Sammlungen in SNMPv1. Für den SNMP-Anbieter wird das OBJECT-GROUP-Makro ignoriert, aber Sie können Gruppierungsbeziehungen erstellen und Sammlungen erstellen.
 
  
 

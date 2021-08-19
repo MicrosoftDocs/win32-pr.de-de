@@ -18,7 +18,7 @@ ms.locfileid: "117821128"
 
  
 
-Die `DVDAdm.DisableScreenSaver` -Eigenschaft aktiviert oder deaktiviert den Systembildschirmschoner.
+Die -Eigenschaft aktiviert oder deaktiviert `DVDAdm.DisableScreenSaver` den Systembildschirmschoner.
 
 ``` syntax
 [ bDisabled = ] DVD.DVDAdm.DisableScreenSaver
@@ -30,9 +30,9 @@ Gibt einen booleschen Wert zurück, der angibt, ob die Bildschirmschonereinstell
 
 ## <a name="remarks"></a>Hinweise
 
-Diese Eigenschaft ist lese-/schreibgeschützt und hat den Standardwert true. Beim Anzeigen eines DVD-Video Datenträgers verwendet ein Benutzer in der Regel die Maus oder Tastatur nicht über einen längeren Zeitraum. Das STEUERELEMENT MSWebDVD ActiveX® deaktiviert daher standardmäßig den Systembildschirmschoner. Object
+Diese Eigenschaft ist mit dem Standardwert true gelesen/geschrieben. Beim Anzeigen DVD-Video Datenträgers verwendet ein Benutzer die Maus oder Tastatur in der Regel nicht für längere Zeit. Das MSWebDVD ActiveX®-Steuerelement deaktiviert daher standardmäßig den Systembildschirmschoner. Object
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 

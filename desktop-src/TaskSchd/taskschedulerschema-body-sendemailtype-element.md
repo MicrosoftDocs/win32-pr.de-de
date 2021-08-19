@@ -1,6 +1,6 @@
 ---
-title: Body (sendemailtype)-Element
-description: Enthält den Text im Textkörper der e-Mail-Nachricht.
+title: Body (sendEmailType)-Element
+description: Enthält den Text im Text der E-Mail.
 ms.assetid: fac6ddd5-6f73-427b-b213-ab946512c87a
 keywords:
 - Body-Element Taskplaner
@@ -13,16 +13,16 @@ api_type:
 ms.topic: reference
 ms.date: 05/31/2018
 api_location: ''
-ms.openlocfilehash: 4659f2ff03f69b6bba40d9cd16e9b68515cc8889
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: a924062b3a382bc8362bdfa45e1477b4e841222bdd1f5ac70fbb8adbc9b070b1
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "106339341"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118857963"
 ---
-# <a name="body-sendemailtype-element"></a>Body (sendemailtype)-Element
+# <a name="body-sendemailtype-element"></a>Body (sendEmailType)-Element
 
-Enthält den Text im Textkörper der e-Mail-Nachricht.
+Enthält den Text im Text der E-Mail.
 
 ``` syntax
 <xs:element name="Body"
@@ -30,23 +30,23 @@ Enthält den Text im Textkörper der e-Mail-Nachricht.
  />
 ```
 
-Das **Body** -Element wird durch den komplexen [**sendemailtype**](taskschedulerschema-sendemailtype-complextype.md) -Typ definiert.
+Das **Body-Element** wird vom komplexen [**sendEmailType-Typ**](taskschedulerschema-sendemailtype-complextype.md) definiert.
 
 ## <a name="parent-element"></a>Übergeordnetes Element
 
 
 
-| Element                                                                              | Abgeleitet von                                                           | BESCHREIBUNG                                                  |
+| Element                                                                              | Abgeleitet von                                                           | Beschreibung                                                  |
 |--------------------------------------------------------------------------------------|------------------------------------------------------------------------|--------------------------------------------------------------|
-| [**SendEmail (Aktionsgruppe)**](taskschedulerschema-sendemail-actiongroup-element.md) | [**sendemailtype**](taskschedulerschema-sendemailtype-complextype.md) | Stellt eine Aktion dar, die eine e-Mail-Nachricht sendet.<br/> |
+| [**SendEmail (actionGroup)**](taskschedulerschema-sendemail-actiongroup-element.md) | [**sendEMailType**](taskschedulerschema-sendemailtype-complextype.md) | Stellt eine Aktion dar, die eine E-Mail sendet.<br/> |
 
 
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Informationen zur C++-Entwicklung finden Sie unter [**Text-Eigenschaft von iemailaction**](/windows/desktop/api/taskschd/nf-taskschd-iemailaction-get_body).
+Informationen zur C++-Entwicklung finden Sie unter [**Body Property of IEmailAction**](/windows/desktop/api/taskschd/nf-taskschd-iemailaction-get_body).
 
-Informationen zur Skript Entwicklung finden Sie unter [**emailaction. Body**](emailaction-body.md).
+Informationen zur Skriptentwicklung finden Sie unter [**EmailAction.Body.**](emailaction-body.md)
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -54,8 +54,8 @@ Informationen zur Skript Entwicklung finden Sie unter [**emailaction. Body**](em
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>       |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/> |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur Vista-Desktop-Apps\]<br/>       |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/> |
 
 
 

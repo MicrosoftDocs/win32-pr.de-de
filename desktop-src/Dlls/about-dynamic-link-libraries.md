@@ -1,7 +1,7 @@
 ---
 description: Durch dynamisches Verknüpfen kann ein Modul nur die Informationen enthalten, die zum Suchen einer exportierten DLL-Funktion zur Ladezeit oder Zur Laufzeit erforderlich sind.
 ms.assetid: df2a8e4c-7ad0-46ea-9643-1528a9ea1503
-title: Informationen zu Dynamic-Link Bibliotheken
+title: Informationen zu Dynamic-Link-Bibliotheken
 ms.topic: article
 ms.date: 05/31/2018
 ms.openlocfilehash: a62e6a6a23315e915bd4a5a7fe6e2dcb54a9a2ebfbd66bf5d4ba7a2519a04576
@@ -11,7 +11,7 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 08/11/2021
 ms.locfileid: "117815909"
 ---
-# <a name="about-dynamic-link-libraries"></a>Informationen zu Dynamic-Link Bibliotheken
+# <a name="about-dynamic-link-libraries"></a>Informationen zu Dynamic-Link-Bibliotheken
 
 Durch dynamisches Verknüpfen kann ein Modul nur die Informationen enthalten, die zum Suchen einer exportierten DLL-Funktion zur Ladezeit oder Zur Laufzeit erforderlich sind. Dynamisches Verknüpfen unterscheidet sich von der vertrauteren statischen Verknüpfung, bei der der Linker den Code einer Bibliotheksfunktion in jedes Modul kopiert, das sie aufruft.
 

@@ -25,7 +25,7 @@ ms.locfileid: "117821935"
 ---
 # <a name="cvideotransformfilterabortplayback-method"></a>CVideoTransformFilter.AbortPlayback-Methode
 
-Die `AbortPlayback` -Methode wird verwendet, um einen Streamingfehler zu signalisieren. Es sendet ein [**EC \_ ERRORABORT-Ereignis**](ec-errorabort.md) an den Filter Graph Manager und sendet eine End-of-Stream-Benachrichtigung nachgeschaltet.
+Die `AbortPlayback` -Methode wird verwendet, um einen Streamingfehler zu signalisieren. Es sendet ein [**EC \_ ERRORABORT-Ereignis**](ec-errorabort.md) an den Filter-Graph-Manager und sendet eine End-of-Stream-Benachrichtigung nachgeschaltet.
 
 ## <a name="syntax"></a>Syntax
 
@@ -64,7 +64,7 @@ Gibt den Wert des *hr-Parameters* zurück.
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 

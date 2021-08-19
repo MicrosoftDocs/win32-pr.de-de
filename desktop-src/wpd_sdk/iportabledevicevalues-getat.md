@@ -1,5 +1,5 @@
 ---
-description: Die GetAt-Methode ruft mithilfe des angegebenen nullbasierten Indexes einen Wert aus der Auflistung ab.
+description: Die GetAt-Methode ruft einen Wert aus der Auflistung mithilfe des angegebenen nullbasierten Indexes ab.
 ms.assetid: d52675f0-55b4-43ef-bb1d-ff6aa8a70647
 title: IPortableDeviceValues::GetAt-Methode (PortableDeviceTypes.h)
 ms.topic: reference
@@ -23,7 +23,7 @@ ms.locfileid: "117843023"
 ---
 # <a name="iportabledevicevaluesgetat-method"></a>IPortableDeviceValues::GetAt-Methode
 
-Die **GetAt-Methode** ruft mithilfe des angegebenen nullbasierten Indexes einen Wert aus der Auflistung ab.
+Die **GetAt-Methode** ruft einen Wert aus der Auflistung mithilfe des angegebenen nullbasierten Indexes ab.
 
 ## <a name="syntax"></a>Syntax
 
@@ -52,14 +52,14 @@ Ein **DWORD,** das einen nullbasierten Index in der Auflistung angibt.
 *pKey* \[ in, out\]
 </dt> <dd>
 
-Ein **optionaler PROPERTYKEY-Zeiger,** der den Schlüssel des angegebenen Elements abruft.
+Ein optionaler **PROPERTYKEY-Zeiger,** der den Schlüssel des angegebenen Elements abruft.
 
 </dd> <dt>
 
 *pValue* \[ in, out\]
 </dt> <dd>
 
-Eine **optionale PROPVARIANT,** die den Wert des angegebenen Elements abruft. Der Aufrufer muss den Arbeitsspeicher durch Aufrufen von **PropVariantClear frei** geben, wenn er damit fertig ist.
+Ein optionales **PROPVARIANT,** das den Wert des angegebenen Elements abruft. Der Aufrufer muss den Arbeitsspeicher freigeben, indem **er PropVariantClear** aufruft, wenn dies abgeschlossen ist.
 
 </dd> </dl>
 
@@ -80,7 +80,7 @@ Die Methode gibt ein **HRESULT** zurück. Mögliches Werte (aber nicht die Einzi
 
 ## <a name="remarks"></a>Hinweise
 
-Wenn eine Eigenschaft einen Wert vom Typ VT UNKNOWN angibt, ist die Eigenschaft eines der \_ Windows Portable Devices ([**IPortableDeviceKeyCollection**](iportabledevicekeycollection.md), [**IPortableDeviceValuesCollection,**](iportabledevicevaluescollection.md) [**IPortableDeviceValues**](iportabledevicevalues.md) oder [**IPortableDevicePropVariantCollection**](iportabledevicepropvariantcollection.md)). Es können keine anderen Schnittstellen von portierbaren Windows zurückgegeben werden.
+Wenn eine Eigenschaft einen Wert vom Typ VT \_ UNKNOWN angibt, ist die Eigenschaft eines der Windows Portable Devices ([**IPortableDeviceKeyCollection**](iportabledevicekeycollection.md), [**IPortableDeviceValuesCollection**](iportabledevicevaluescollection.md), [**IPortableDeviceValues**](iportabledevicevalues.md) oder [**IPortableDevicePropVariantCollection**](iportabledevicepropvariantcollection.md)). Von Windows Portable Devices können keine anderen Schnittstellen zurückgegeben werden.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -93,7 +93,7 @@ Wenn eine Eigenschaft einen Wert vom Typ VT UNKNOWN angibt, ist die Eigenschaft 
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 

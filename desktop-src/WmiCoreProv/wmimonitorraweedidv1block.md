@@ -1,5 +1,5 @@
 ---
-description: Stellt die unformatierten Daten aus einer durch VESA erweiterten, erweiterten Display Identification Data (E-EDID)-Struktur dar.
+description: Stellt die Rohdaten aus einer E-EDID-Struktur (Enhanced Extended Display Identification Data) der Video Electronics Standard Association (VESA) dar.
 ms.assetid: a51b73bb-a5f7-4e01-9c88-780105e9952b
 title: WmiMonitorRawEEdidV1Block-Klasse
 ms.topic: reference
@@ -18,16 +18,16 @@ api_type:
 - DllExport
 api_location:
 - WmiProv.dll
-ms.openlocfilehash: 79566dccceb36281c9b3a94b19fed2ed5679dc8e
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 72b82f2c6eb967f39823d5b56174bb82e7503ee56f676ffb49b65822ec435936
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106359124"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118821145"
 ---
 # <a name="wmimonitorraweedidv1block-class"></a>WmiMonitorRawEEdidV1Block-Klasse
 
-Die **WmiMonitorRawEEdidV1Block** -WMI-Klasse stellt die unformatierten Daten aus einer durch VESA verbesserten, erweiterten Display Identification Data (E-EDID)-Struktur dar. Diese 128-Byte-Datenstruktur enthält Informationen, die die optimale Konfiguration für eine Anzeige beschreiben.
+Die WMI-Klasse **"WmiMonitorRawEEdidV1Block"** stellt die Rohdaten aus einer E-EDID-Struktur (Enhanced Extended Display Identification Data) der Video Electronics Standard Association (VESA) dar. Diese 128-Byte-Datenstruktur enthält Informationen, die die optimale Konfiguration für eine Anzeige beschreiben.
 
 ## <a name="syntax"></a>Syntax
 
@@ -44,20 +44,20 @@ class WmiMonitorRawEEdidV1Block : MSMonitorClass
 
 ## <a name="members"></a>Member
 
-Die **WmiMonitorRawEEdidV1Block** -Klasse verfügt über diese Typen von Membern:
+Die **WmiMonitorRawEEdidV1Block-Klasse** verfügt über diese Typen von Membern:
 
 -   [Eigenschaften](#properties)
 
 ### <a name="properties"></a>Eigenschaften
 
-Die **WmiMonitorRawEEdidV1Block** -Klasse verfügt über diese Eigenschaften.
+Die **WmiMonitorRawEEdidV1Block-Klasse** verfügt über diese Eigenschaften.
 
 <dl> <dt>
 
 **Aktiv**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **boolescher** Wert
+Datentyp: **boolescher Wert**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
@@ -70,33 +70,33 @@ Gibt den aktiven Monitor an.
 **Inhalt**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Uint8** Array
+Datentyp: **uint8-Array**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-128 Bytearray, das den Rohdaten Block Inhalt enthält.
+128 Bytearray, das den unformatierten Blockinhalt enthält.
 
 </dd> <dt>
 
 **Id**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Uint8**
+Datentyp: **uint8**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Die Identität des Datenblocks.
+Identität des Datenblocks.
 
 </dd> <dt>
 
 **InstanceName**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
@@ -105,20 +105,20 @@ Zugriffstyp: Schreibgeschützt
 Qualifizierer: **Schlüssel**
 </dt> </dl>
 
-Der Name der spezifischen Monitor Instanz.
+Name der spezifischen Überwachungsinstanz.
 
 </dd> <dt>
 
-**Type**
+**Typ**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Uint8**
+Datentyp: **uint8**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Der Typ des Datenblocks. In der folgenden Tabelle sind mögliche Werte aufgeführt, die zurückgegeben werden können.
+Typ des Datenblocks. In der folgenden Tabelle sind mögliche Werte aufgeführt, die zurückgegeben werden können.
 
 
 
@@ -126,8 +126,8 @@ Der Typ des Datenblocks. In der folgenden Tabelle sind mögliche Werte aufgefüh
 |---------------------------------------------------------------------------------------|----------------------------|
 | <dl> <dt>0 (0x0)</dt> </dl>    | Uninitialized<br/>   |
 | <dl> <dt>1 (0x1)</dt> </dl>    | EDID-Basisblock<br/> |
-| <dl> <dt>2 (0x2)</dt> </dl>    | EDID-Block Zuordnung<br/>  |
-| <dl> <dt>255 (0xFF)</dt> </dl> | Sonstiges<br/>           |
+| <dl> <dt>2 (0x2)</dt> </dl>    | EDID-Blockzuordnung<br/>  |
+| <dl> <dt>255 (0xFF)</dt> </dl> | Andere<br/>           |
 
 
 
@@ -143,8 +143,8 @@ Der Typ des Datenblocks. In der folgenden Tabelle sind mögliche Werte aufgefüh
 |-------------------------------------|----------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows Vista<br/>                                                               |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2008<br/>                                                         |
-| Namespace<br/>                | WMI-Stammdatei \\<br/>                                                                   |
-| MOF<br/>                      | <dl> <dt>WMI Core. MOF</dt> </dl> |
+| Namespace<br/>                | Root \\ wmi<br/>                                                                   |
+| MOF<br/>                      | <dl> <dt>WmiCore.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>WmiProv.dll</dt> </dl> |
 
 

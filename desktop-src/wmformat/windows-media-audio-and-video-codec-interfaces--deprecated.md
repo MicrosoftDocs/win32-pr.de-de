@@ -1,9 +1,9 @@
 ---
 title: Windows Medienaudio- und Videocodecschnittstellen
-description: Die aktuelle Dokumentation zu Windows Mediencodecs und digitalen Signalprozessoren finden Sie unter Windows Medienaudio- und Videocodec und DSP-APIs. | Windows Medienaudio- und Videocodecschnittstellen
+description: Die aktuelle Dokumentation zu Windows Mediencodecs und digitalen Signalprozessoren finden Sie unter Windows Media Audio and Video Codec and DSP APIs (Medienaudio- und Videocodec und DSP-APIs). | Windows Medienaudio- und Videocodecschnittstellen
 ms.assetid: 582e5df9-b727-4156-9fb1-43b52aed19c5
 keywords:
-- Windows Medienaudio- und Videocodec-Schnittstellenfenster Medienformat
+- Windows Medienaudio- und Videocodecschnittstellen im Windows-Medienformat
 topic_type:
 - apiref
 api_name:
@@ -21,7 +21,7 @@ ms.locfileid: "118431827"
 ---
 # <a name="windows-media-audio-and-video-codec-interfaces"></a>Windows Medienaudio- und Videocodecschnittstellen
 
-Die aktuelle Dokumentation zu Windows Mediencodecs und digitalen Signalprozessoren finden Sie unter [Windows Medienaudio- und Videocodec und DSP-APIs.](/previous-versions//dd464626(v=vs.85))
+Die aktuelle Dokumentation zu Windows Mediencodecs und digitalen Signalprozessoren finden Sie unter Windows Media Audio and Video Codec and DSP APIs (Medienaudio- und Videocodec und [DSP-APIs).](/previous-versions//dd464626(v=vs.85))
 
  
 

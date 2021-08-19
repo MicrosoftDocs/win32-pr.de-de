@@ -126,7 +126,7 @@ Diese Methode ruft die [**RegisterEnumTemplates-Methode**](id3dxfile--registeren
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 

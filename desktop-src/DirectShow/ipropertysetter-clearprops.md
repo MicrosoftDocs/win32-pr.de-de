@@ -1,5 +1,5 @@
 ---
-description: Die ClearProps-Methode entfernt alle Eigenschaftsdaten aus dem Eigenschaftens setter. Die Anwendung kann nach dem Aufruf dieser Funktion neue Eigenschaftsdaten festlegen.
+description: Die ClearProps-Methode löscht alle Eigenschaftendaten aus dem Eigenschaftensetter. Die Anwendung kann nach dem Aufruf dieser Funktion neue Eigenschaftsdaten festlegen.
 ms.assetid: f3c31864-ddc3-4f3c-a097-2bab9d7f6a2a
 title: IPropertySetter::ClearProps-Methode (Qedit.h)
 ms.topic: reference
@@ -24,13 +24,13 @@ ms.locfileid: "117818589"
 # <a name="ipropertysetterclearprops-method"></a>IPropertySetter::ClearProps-Methode
 
 > [!Note]  
-> \[Veraltet. Diese API wird möglicherweise aus zukünftigen Releases von Windows.\]
+> \[Veraltet. Diese API kann aus zukünftigen Releases von Windows entfernt werden.\]
 
  
 
-Die `ClearProps` -Methode entfernt alle Eigenschaftsdaten aus dem Eigenschaftens setter. Die Anwendung kann nach dem Aufruf dieser Funktion neue Eigenschaftsdaten festlegen.
+Die `ClearProps` -Methode löscht alle Eigenschaftsdaten aus dem Eigenschaftensetter. Die Anwendung kann nach dem Aufruf dieser Funktion neue Eigenschaftsdaten festlegen.
 
-Durch das Löschen der Eigenschaftsdaten werden die Eigenschaften des Objekts nicht auf die ursprünglichen Werte wiederhergestellt. Dadurch wird lediglich verhindert, dass DirectShow weitere Änderungen anwenden kann. Eigenschaftswerte werden zur Laufzeit angewendet, wenn das Projekt gerendert wird.
+Durch das Löschen der Eigenschaftendaten werden die Eigenschaften des Objekts nicht auf die ursprünglichen Werte wiederhergestellt. Sie verhindert einfach, dass DirectShow weitere Änderungen anwendet. Eigenschaftswerte werden zur Laufzeit angewendet, wenn das Projekt gerendert wird.
 
 ## <a name="syntax"></a>Syntax
 
@@ -47,17 +47,17 @@ Diese Methode hat keine Parameter.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Wenn diese Methode erfolgreich ist, wird **S \_ OK zurückgegeben.** Andernfalls wird ein **HRESULT-Fehlercode** zurückgegeben.
+Wenn diese Methode erfolgreich ist, wird **S \_ OK** zurückgegeben. Andernfalls wird ein **HRESULT-Fehlercode** zurückgegeben.
 
 ## <a name="remarks"></a>Hinweise
 
 > [!Note]  
-> Die Headerdatei Qedit.h ist nicht mit Direct3D-Headern nach Version 7 kompatibel.
+> Die Headerdatei Qedit.h ist nicht mit Direct3D-Headern kompatibel, die höher als Version 7 sind.
 
  
 
 > [!Note]  
-> Um Qedit.h zu erhalten, laden Sie das [Microsoft Windows SDK-Update für Windows Vista und .NET Framework 3.0 herunter.](https://msdn.microsoft.com/windowsvista/bb980924.aspx) Qedit.h ist im Microsoft Windows SDK für Windows 7 und .NET Framework 3.5 Service Pack 1 nicht verfügbar.
+> Laden Sie zum Abrufen von Qedit.h das [Microsoft Windows SDK-Update für Windows Vista und .NET Framework 3.0](https://msdn.microsoft.com/windowsvista/bb980924.aspx)herunter. Qedit.h ist im Microsoft Windows SDK für Windows 7 und .NET Framework 3.5 Service Pack 1 nicht verfügbar.
 
  
 
@@ -72,7 +72,7 @@ Wenn diese Methode erfolgreich ist, wird **S \_ OK zurückgegeben.** Andernfalls
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 

@@ -17,12 +17,12 @@ api_type:
 - DllExport
 api_location:
 - vmms.exe
-ms.openlocfilehash: f58c66199abeb5b3586f52e91828b8b194bdbbd1
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 81ec2826339e27d956750360b280fcafd7b55e6264a6bcab83ebc1cb41a1ddee
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106343355"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117812844"
 ---
 # <a name="cim_deviceconnection-class-hyper-v-management"></a>CIM_DeviceConnection-Klasse (Hyper-V-Verwaltung)
 
@@ -43,17 +43,17 @@ class CIM_DeviceConnection : CIM_Dependency
 
 ## <a name="members"></a>Member
 
-Die **CIM- \_ deviceconnetction** -Klasse verfügt über diese Typen von Membern:
+Die **CIM \_ DeviceConnection-Klasse** verfügt über diese Typen von Membern:
 
 -   [Eigenschaften](#properties)
 
 ### <a name="properties"></a>Eigenschaften
 
-Die **CIM- \_ deviceconnetction** -Klasse verfügt über diese Eigenschaften.
+Die **CIM \_ DeviceConnection-Klasse** verfügt über diese Eigenschaften.
 
 <dl> <dt>
 
-**Vorgänger**
+**Vorläufer**
 </dt> <dd> <dl> <dt>
 
 Datentyp: **CIM \_ LogicalDevice**
@@ -62,14 +62,14 @@ Datentyp: **CIM \_ LogicalDevice**
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**außer Kraft**](/windows/desktop/WmiSdk/standard-qualifiers) Setzung ("Vorgänger")
+Qualifizierer: [**Überschreiben**](/windows/desktop/WmiSdk/standard-qualifiers) ("Vorgänger")
 </dt> </dl>
 
 Ein Gerät
 
 </dd> <dt>
 
-**Dependent**
+**Abhängigen**
 </dt> <dd> <dl> <dt>
 
 Datentyp: **CIM \_ LogicalDevice**
@@ -78,42 +78,42 @@ Datentyp: **CIM \_ LogicalDevice**
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**außer Kraft**](/windows/desktop/WmiSdk/standard-qualifiers) Setzung ("abhängig")
+Qualifizierer: [**Überschreiben**](/windows/desktop/WmiSdk/standard-qualifiers) ("Abhängig")
 </dt> </dl>
 
 Ein zweites Gerät, das mit dem anderen Gerät verbunden ist.
 
 </dd> <dt>
 
-**Aushandateddatawidth**
+**NegotiatedDataWidth**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt32**
+Datentyp: **uint32**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**Einheiten**](/windows/desktop/WmiSdk/standard-qualifiers) ("Bits"), [**mappingstrings**](/windows/desktop/WmiSdk/standard-qualifiers) ("MIF". DMTF \| Bus Port Association \| 001,3 "), **Punit** (" Bit ")
+Qualifizierer: [**Einheiten**](/windows/desktop/WmiSdk/standard-qualifiers) ("Bits"), [**MappingStrings**](/windows/desktop/WmiSdk/standard-qualifiers) ("MIF. DMTF \| Bus Port Association \| 001.3"), **PUnit** ("bit")
 </dt> </dl>
 
-Wenn mehrere Bus-und Verbindungsdaten breiten möglich sind, wird von der aushandateddatawidth-Eigenschaft der Wert definiert, der zwischen den Geräten verwendet wird. Die Daten Breite wird in Bits angegeben. Wenn die Daten Breite nicht ausgehandelt wird oder diese Informationen für die Geräteverwaltung nicht verfügbar oder nicht wichtig sind, sollte die-Eigenschaft auf 0 (null) festgelegt werden.
+Wenn mehrere Bus- und Verbindungsdatenbreiten möglich sind, definiert die Eigenschaft NegotiatedDataWidth die Zwischenspeicherung zwischen den Geräten. Die Datenbreite wird in Bits angegeben. Wenn die Datenbreite nicht ausgehandelt wird oder diese Informationen für die Geräteverwaltung nicht verfügbar oder nicht wichtig sind, sollte die -Eigenschaft auf 0 festgelegt werden.
 
 </dd> <dt>
 
-**Aushandatedspeed**
+**NegotiatedSpeed**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt64**
+Datentyp: **uint64**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**Einheiten**](/windows/desktop/WmiSdk/standard-qualifiers) ("Bits pro Sekunde"), [**mappingstrings**](/windows/desktop/WmiSdk/standard-qualifiers) ("MIF". DMTF \| Bus Port Association \| 001,2 "), **Punit** (" Bit/Sekunde ")
+Qualifizierer: [**Einheiten**](/windows/desktop/WmiSdk/standard-qualifiers) ("Bits pro Sekunde"), [**MappingStrings**](/windows/desktop/WmiSdk/standard-qualifiers) ("MIF. DMTF \| Bus Port Association \| 001.2"), **PUnit** ("bit/second")
 </dt> </dl>
 
-Wenn mehrere Bus-und Verbindungsgeschwindigkeiten möglich sind, definiert diese Eigenschaft die verwendete Geschwindigkeit zwischen den Geräten in Bits pro Sekunde. Wenn Verbindungs-oder Busgeschwindigkeiten nicht ausgehandelt werden oder diese Informationen nicht verfügbar oder nicht für die Geräteverwaltung wichtig sind, sollte die-Eigenschaft auf "0" festgelegt werden.
+Wenn mehrere Bus- und Verbindungsgeschwindigkeiten möglich sind, definiert diese Eigenschaft die Geschwindigkeit, die zwischen den Geräten in Bits pro Sekunde verwendet wird. Wenn keine Verbindungs- oder Busgeschwindigkeiten ausgehandelt werden oder diese Informationen nicht verfügbar oder für die Geräteverwaltung nicht wichtig sind, sollte die -Eigenschaft auf "0" festgelegt werden.
 
 </dd> </dl>
 
@@ -125,8 +125,8 @@ Wenn mehrere Bus-und Verbindungsgeschwindigkeiten möglich sind, definiert diese
 |-------------------------------------|---------------------------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 8<br/>                                                                                    |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2012<br/>                                                                          |
-| Namespace<br/>                | \\Stammvirtualisierung \\ v2<br/>                                                                     |
-| MOF<br/>                      | <dl> <dt>Windowsvirtualization. v2. MOF</dt> </dl> |
+| Namespace<br/>                | \\Root-Virtualisierung \\ v2<br/>                                                                     |
+| MOF<br/>                      | <dl> <dt>WindowsVirtualization.V2.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Vmms.exe</dt> </dl>                     |
 
 
@@ -135,7 +135,7 @@ Wenn mehrere Bus-und Verbindungsgeschwindigkeiten möglich sind, definiert diese
 
 <dl> <dt>
 
-[**CIM- \_ Abhängigkeit**](cim-dependency.md)
+[**\_CIM-Abhängigkeit**](cim-dependency.md)
 </dt> </dl>
 
  

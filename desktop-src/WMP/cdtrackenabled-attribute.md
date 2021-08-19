@@ -45,7 +45,7 @@ Verwenden Sie die [Media.isReadOnlyItem-Methode,](media-isreadonlyitem.md) um zu
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 

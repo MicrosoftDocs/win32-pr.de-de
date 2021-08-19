@@ -1,7 +1,7 @@
 ---
 description: Definiert den Prioritätstyp, dem eine Animationsspur zugewiesen wird.
 ms.assetid: 7bd83e31-09c4-4376-a22d-ed8023b78e84
-title: D3DXPRIORITY_TYPE -Enumeration (D3dx9anim.h)
+title: D3DXPRIORITY_TYPE-Enumeration (D3dx9anim.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -51,14 +51,14 @@ Die Spur sollte mit allen Spuren mit niedriger Priorität kombiniert werden, bev
 <span id="D3DXPRIORITY_HIGH"></span><span id="d3dxpriority_high"></span>**D3DXPRIORITY \_ HIGH**
 </dt> <dd>
 
-Die Spur sollte mit allen Titeln mit hoher Priorität kombiniert werden, bevor die Mischung mit hoher Priorität mit der Mischung mit niedriger Priorität kombiniert wird.
+Die Spur sollte mit allen Spuren mit hoher Priorität kombiniert werden, bevor die Mischung mit hoher Priorität mit der Mischung mit niedriger Priorität kombiniert wird.
 
 </dd> <dt>
 
 <span id="D3DXPRIORITY_FORCE_DWORD"></span><span id="d3dxpriority_force_dword"></span>**D3DXPRIORITY \_ FORCE \_ DWORD**
 </dt> <dd>
 
-Erzwingt, dass diese Enumeration auf eine Größe von 32 Bits kompiliert wird. Ohne diesen Wert würden einige Compiler zulassen, dass diese Enumeration in eine andere Größe als 32 Bits kompiliert wird. Dieser Wert wird nicht verwendet.
+Erzwingt, dass diese Enumeration in eine Größe von 32 Bits kompiliert wird. Ohne diesen Wert würden einige Compiler zulassen, dass diese Enumeration in eine andere Größe als 32 Bits kompiliert wird. Dieser Wert wird nicht verwendet.
 
 </dd> </dl>
 
@@ -76,7 +76,7 @@ Spuren mit der gleichen Priorität werden kombiniert, und die beiden resultieren
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 

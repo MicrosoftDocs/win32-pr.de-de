@@ -1,19 +1,19 @@
 ---
-description: Definiert einen Satz von Animations Schlüsseln. Ein Matrix Schlüssel ist nützlich für Sätze von Animationsdaten, die als Transformations Matrizen dargestellt werden müssen.
+description: Definiert einen Satz von Animationsschlüsseln. Ein Matrixschlüssel ist nützlich für Gruppen von Animationsdaten, die als Transformationsmatrizen dargestellt werden müssen.
 ms.assetid: bf007541-7fea-423e-910b-fa5f45271608
-title: Animationkey
+title: AnimationKey
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 05728f124ae01962a1291547f8fe8b7fcebd175a
-ms.sourcegitcommit: c7add10d695482e1ceb72d62b8a4ebd84ea050f7
+ms.openlocfilehash: bad23a6cc519b0b0525cd0dac1b488184b3bf91e99359e252f44dca435ace529
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106345452"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118806405"
 ---
-# <a name="animationkey"></a>Animationkey
+# <a name="animationkey"></a>AnimationKey
 
-Definiert einen Satz von Animations Schlüsseln. Ein Matrix Schlüssel ist nützlich für Sätze von Animationsdaten, die als Transformations Matrizen dargestellt werden müssen.
+Definiert einen Satz von Animationsschlüsseln. Ein Matrixschlüssel ist nützlich für Gruppen von Animationsdaten, die als Transformationsmatrizen dargestellt werden müssen.
 
 ``` syntax
 template AnimationKey
@@ -27,9 +27,9 @@ template AnimationKey
 
 Hierbei gilt:
 
--   KeyType: gibt an, ob die Schlüssel Drehung, Skala, Position oder Matrix Schlüssel sind (mit den ganzen Zahlen 0, 1, 2 bzw. 3).
--   nkeys: Anzahl der Schlüssel.
--   Keys: ein Array von Schlüsseln. Weitere Informationen finden Sie unter [**timedfloatkeys**](timedfloatkeys.md).
+-   keyType: Gibt an, ob es sich bei den Schlüsseln um Drehungs-, Skalierungs-, Positions- oder Matrixschlüssel handelt (mit den ganzen Zahlen 0, 1, 2 oder 3).
+-   nKeys: Anzahl der Schlüssel.
+-   keys: Ein Array von Schlüsseln. Siehe [**TimedFloatKeys.**](timedfloatkeys.md)
 
 ## <a name="see-also"></a>Siehe auch
 

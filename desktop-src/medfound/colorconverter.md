@@ -23,7 +23,7 @@ CLSID \_ CColorConvertDMO
 
 -   [**IMediaObject**](/previous-versions/windows/desktop/api/mediaobj/nn-mediaobj-imediaobject)
 -   [**VERALTENRealTimeClient**](/windows/desktop/api/mfidl/nn-mfidl-imfrealtimeclient)
--   [**VORRÜBERSETZUNGTransform**](/windows/desktop/api/mftransform/nn-mftransform-imftransform)
+-   [**ÜBERTRANSFORM**](/windows/desktop/api/mftransform/nn-mftransform-imftransform)
 -   [**Ipropertystore**](/windows/win32/api/propsys/nn-propsys-ipropertystore)
 -   [IWMColorConvProps](/windows/desktop/api/wmcodecdsp/nn-wmcodecdsp-iwmcolorconvprops)
 
@@ -39,7 +39,7 @@ CLSID \_ CColorConvertDMO
 -   IYUV
 -   NV11
 -   NV12
--   UYVIG
+-   UYVY
 -   V216
 -   V410
 -   Y41P
@@ -48,7 +48,7 @@ CLSID \_ CColorConvertDMO
 -   YUY2
 -   YV12
 -   YVU9
--   YVKY
+-   YVYU
 
 ## <a name="output-formats"></a>Ausgabeformate
 
@@ -62,12 +62,12 @@ CLSID \_ CColorConvertDMO
 -   IYUV
 -   NV11
 -   NV12
--   UYVIG
+-   UYVY
 -   V216
 -   V410
 -   YUY2
 -   YV12
--   YVKY
+-   YVYU
 
 ## <a name="properties"></a>Eigenschaften
 
@@ -81,15 +81,15 @@ CLSID \_ CColorConvertDMO
 
 ## <a name="remarks"></a>Hinweise
 
-Der Farbkonverter-DSP wird als COM-Objekt implementiert, das als DirectXMedia-Objekt (DMO) oder als Media Foundation Transform (MFT) fungieren kann. Das -Objekt verfügt über einen einzelnen Klassenbezeichner (CLSID), unabhängig davon, ob es als DMO MFT fungiert. Informationen dazu, wann ein DSP als DMO oder MFT fungiert, finden Sie unter [Digital Signal Processors](windowsmediadigitalsignalprocessors.md).
+Der Farbkonverter-DSP wird als COM-Objekt implementiert, das als DirectXMedia-Objekt (DMO) oder als Media Foundation Transform (MFT) fungieren kann. Das Objekt verfügt über einen einzelnen Klassenbezeichner (CLSID), unabhängig davon, ob es als DMO oder MFT fungiert. Informationen dazu, wann ein DSP als DMO oder MFT fungiert, finden Sie unter [Digitale Signalprozessoren.](windowsmediadigitalsignalprocessors.md)
 
-Die GUIDs (Globally Unique Identifiers) für RGB-Medienuntertypen unterscheiden sich je nachdem, ob ein DSP als DMO oder MFT agiert. Die GUIDs für Nicht-RGB-Medienuntertypen sind identisch, unabhängig davon, ob ein DSP als DMO oder MFT agiert. Informationen zu den GUIDs, die Medienuntertypen darstellen, finden Sie unter [Video Subtype GUIDs](video-subtype-guids.md).
+Die GUIDs (Globally Unique Identifiers) für RGB-Medienuntertypen unterscheiden sich je nachdem, ob ein DSP als DMO oder MFT fungiert. Die GUIDs für Nicht-RGB-Medienuntertypen sind identisch, unabhängig davon, ob ein DSP als DMO oder MFT fungiert. Informationen zu den GUIDs, die Medienuntertypen darstellen, finden Sie unter [Video-Untertyp-GUIDs.](video-subtype-guids.md)
 
-Standardmäßig kopiert dieser DSP das gesamte Quellimage in den Ausgabepuffer. Optional können Sie Quell- und Zielrechtecke angeben. Der DSP kopiert den Teil des Quellbilds, der durch das Quellrechteck definiert ist, und schreibt ihn im Ausgabepuffer in das Zielrechteck. Der DSP führt keine Skalierung durch. Die Quell- und Zielrechtecke müssen die gleiche Größe haben. Die Quell- und Zielrechtecke dürfen die Grenzen des Videoframes nicht überschreiten.
+Standardmäßig kopiert dieser DSP das gesamte Quellimage in den Ausgabepuffer. Optional können Sie Quell- und Zielrechtecke angeben. Der DSP kopiert den durch das Quellrechteck definierten Teil des Quellbilds und schreibt ihn in das Zielrechteck im Ausgabepuffer. Der DSP führt keine Skalierung durch. Die Quell- und Zielrechtecke müssen die gleiche Größe haben. Die Quell- und Zielrechtecke dürfen die Grenzen des Videoframes nicht überschreiten.
 
-Alle Eigenschaften außer [**MFPKEY \_ COLORCONV \_ MODE**](mfpkey-colorconv-mode.md) müssen in einer Gruppe festgelegt werden. Wenn Sie eine dieser Eigenschaften festlegen, müssen Sie alle anderen Eigenschaften festlegen. Andernfalls sind die Quell- und Zielrechtecke möglicherweise ungültig. In diesem Fall geben sowohl die [**METHODEN FÜR DIE ENTFTransform::P rocessOutput-**](/windows/desktop/api/mftransform/nf-mftransform-imftransform-processoutput) als auch die [**IMediaObject::P rocessOutput-Methode**](/previous-versions/windows/desktop/api/mediaobj/nf-mediaobj-imediaobject-processoutput) **E \_ INVALIDARG zurück.**
+Alle Eigenschaften außer [**MFPKEY \_ COLORCONV \_ MODE**](mfpkey-colorconv-mode.md) müssen in einer Gruppe festgelegt werden. Wenn Sie eine dieser Eigenschaften festlegen, müssen Sie alle anderen Eigenschaften festlegen. Andernfalls sind die Quell- und Zielrechtecke möglicherweise ungültig. In diesem Fall geben sowohl die [**METHODEN RECTANGLETransform::P rocessOutput**](/windows/desktop/api/mftransform/nf-mftransform-imftransform-processoutput) als [**auch IMediaObject::P rocessOutput**](/previous-versions/windows/desktop/api/mediaobj/nf-mediaobj-imediaobject-processoutput) **E \_ INVALIDARG** zurück.
 
-Der Farbkonverter unterstützt nicht jede Kombination aus Eingabeformat und Ausgabeformat. In der Regel sollten Sie das Medienformat festlegen, das Sie kennen ( Eingabe oder Ausgabe), und dann die verfügbaren Formate im entgegengesetzten Stream aufzählen.
+Der Farbkonverter unterstützt nicht jede Kombination aus Eingabeformat und Ausgabeformat. In der Regel sollten Sie das medienformat festlegen, das Sie kennen, entweder Eingabe oder Ausgabe, und dann die verfügbaren Formate im entgegengesetzten Stream aufzählen.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -97,14 +97,14 @@ Der Farbkonverter unterstützt nicht jede Kombination aus Eingabeformat und Ausg
 
 | Anforderung | Wert |
 |-------------------------------------|-----------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ Vista-Desktop-Apps\]<br/>                                          |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur Vista-Desktop-Apps\]<br/>                                          |
 | Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/>                                    |
 | Header<br/>                   | <dl> <dt>Wmcodecdsp.h</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Colorcnv.dll</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 

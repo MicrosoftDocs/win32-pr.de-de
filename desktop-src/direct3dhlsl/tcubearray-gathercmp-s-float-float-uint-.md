@@ -1,6 +1,6 @@
 ---
 title: TextureCubeArray::GatherCmp(S,float,float,uint)-Funktion
-description: Für vier Texelwerte, die in einem bilinearen Filtervorgang verwendet werden, gibt den Vergleich mit einem Vergleichswert zusammen mit dem Kachelzuordnungsstatus zurück. | TextureCubeArray::GatherCmp(S,float,float,uint)-Funktion
+description: Für vier Texelwerte, die in einem bilinealen Filtervorgang verwendet werden, gibt ihren Vergleich mit einem Vergleichswert zusammen mit dem Kachelzuordnungsstatus zurück. | TextureCubeArray::GatherCmp(S,float,float,uint)-Funktion
 ms.assetid: 758CD159-58B6-42AE-92B3-5AA3C72FD0F1
 keywords:
 - GatherCmp-Funktion HLSL
@@ -22,7 +22,7 @@ ms.locfileid: "118506565"
 ---
 # <a name="texturecubearraygathercmpsfloatfloatuint-function"></a>TextureCubeArray::GatherCmp(S,float,float,uint)-Funktion
 
-Für vier Texelwerte, die in einem bilinearen Filtervorgang verwendet werden, gibt den Vergleich mit einem Vergleichswert zusammen mit dem Kachelzuordnungsstatus zurück.
+Für vier Texelwerte, die in einem bilinealen Filtervorgang verwendet werden, gibt ihren Vergleich mit einem Vergleichswert zusammen mit dem Kachelzuordnungsstatus zurück.
 
 ## <a name="syntax"></a>Syntax
 
@@ -65,7 +65,7 @@ Die Beispielkoordinaten (u,v).
 
 Typ: **float**
 
-Ein -Wert, der mit jedem Stichprobenwert verglichen werden soll.
+Ein -Wert, der jeweils mit jedem stichprobenentnahmen Wert verglichen werden soll.
 
 </dd> <dt>
 
@@ -74,7 +74,7 @@ Ein -Wert, der mit jedem Stichprobenwert verglichen werden soll.
 
 Typ: **uint**
 
-Der Status des Vorgangs. Sie können nicht direkt auf den Status zugreifen. Übergeben Sie stattdessen den Status an die systeminterne [**CheckAccessFullyMapped-Funktion.**](checkaccessfullymapped.md) **CheckAccessFullyMapped** gibt **TRUE** zurück, wenn alle Werte aus dem entsprechenden **Beispiel-,** **Gather-** oder **Load-Vorgang** auf zugeordnete Kacheln in einer [gekachelten Ressource](/windows/desktop/direct3d11/direct3d-11-2-features)zugegriffen haben. Wenn Werte aus einer nicht zugeordneten Kachel stammen, gibt **CheckAccessFullyMapped** **FALSE** zurück.
+Der Status des Vorgangs. Sie können nicht direkt auf den Status zugreifen. Übergeben Sie stattdessen den Status an die [**systeminterne CheckAccessFullyMapped-Funktion.**](checkaccessfullymapped.md) **CheckAccessFullyMapped** gibt **TRUE zurück,** wenn alle Werte aus dem entsprechenden **Beispiel-,** **Gather-** oder **Load-Vorgang** auf zugeordnete Kacheln in einer [gekachelten Ressource zugegriffen haben.](/windows/desktop/direct3d11/direct3d-11-2-features) Wenn Werte aus einer nicht zugeordneten Kachel übernommen wurden, gibt **CheckAccessFullyMapped** **FALSE zurück.**
 
 </dd> </dl>
 
@@ -92,7 +92,7 @@ Diese Funktion wird für die folgenden Shadertypen unterstützt:
 
 
 
-| Scheitelpunkt | Rumpf | Domain | Geometrie | Pixel | Compute |
+| Scheitelpunkt | Rumpf | Domäne | Geometrie | Pixel | Compute |
 |--------|------|--------|----------|-------|---------|
 | x      | x    | x      | x        | x     | x       |
 
@@ -100,7 +100,7 @@ Diese Funktion wird für die folgenden Shadertypen unterstützt:
 
  
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 

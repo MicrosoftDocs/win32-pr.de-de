@@ -13,7 +13,7 @@ ms.locfileid: "118523779"
 ---
 # <a name="direct3d-resources-direct3d-9"></a>Direct3D-Ressourcen (Direct3D 9)
 
-Ressourcen sind die Texturen und Puffer, die zum Rendern einer Szene verwendet werden. Anwendungen müssen Ressourcen erstellen, laden, kopieren und verwenden. Dieser Abschnitt bietet eine kurze Einführung in Ressourcen und die Schritte und Methoden, die von Anwendungen beim Arbeiten mit Ressourcen verwendet werden.
+Ressourcen sind die Texturen und Puffer, die zum Rendern einer Szene verwendet werden. Anwendungen müssen Ressourcen erstellen, laden, kopieren und verwenden. Dieser Abschnitt enthält eine kurze Einführung in Ressourcen und die Schritte und Methoden, die von Anwendungen beim Arbeiten mit Ressourcen verwendet werden.
 
 Alle Ressourcen, einschließlich der geometry-Ressourcen [**IDirect3DIndexBuffer9**](/windows/desktop/api) und [**IDirect3DVertexBuffer9,**](/windows/desktop/api)erben von der [**IDirect3DResource9-Schnittstelle.**](/windows/desktop/api) Die Texturressourcen [**IDirect3DCubeTexture9,**](/windows/desktop/api) [**IDirect3DTexture9**](/windows/desktop/api)und [**IDirect3DVolumeTexture9**](/windows/desktop/api)erben ebenfalls von der [**IDirect3DBaseTexture9-Schnittstelle.**](/windows/win32/api/d3d9helper/nn-d3d9helper-idirect3dbasetexture9)
 
@@ -27,7 +27,7 @@ Alle Ressourcen, einschließlich der geometry-Ressourcen [**IDirect3DIndexBuffer
 <!-- -->
 
 -   [Indexpuffer (Direct3D 9)](index-buffers.md)
--   [Scheitelpunktpuffer (Direct3D 9)](vertex-buffers.md)
+-   [Vertexpuffer (Direct3D 9)](vertex-buffers.md)
 
 ## <a name="related-topics"></a>Zugehörige Themen
 

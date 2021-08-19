@@ -13,24 +13,24 @@ ms.locfileid: "118743258"
 ---
 # <a name="creating-the-asf-file-sink"></a>Erstellen der ASF-Dateisenke
 
-Die ASF-Dateisenke ist eine Implementierung von [**DURCHFMediaSink Media Foundation**](/windows/desktop/api/mfidl/nn-mfidl-imfmediasink) die eine Anwendung zum Archivieren von ASF-Mediendaten in einer Datei verwenden kann. Informationen zum Objektmodell und zur allgemeinen Verwendung von ASF-Mediensenken finden Sie unter [ASF-Mediensenken.](asf-media-sinks.md)
+Die ASF-Dateisenke ist eine Implementierung von [**DURCHFMediaSink Media Foundation**](/windows/desktop/api/mfidl/nn-mfidl-imfmediasink) die eine Anwendung verwenden kann, um ASF-Mediendaten in einer Datei zu archivieren. Informationen zum Objektmodell und zur allgemeinen Verwendung von ASF-Mediensenken finden Sie unter [ASF-Mediensenken.](asf-media-sinks.md)
 
 Es gibt zwei Möglichkeiten, eine Instanz der ASF-Dateisenke zu erstellen. Sie können [**MFCreateASFMediaSink oder**](/windows/desktop/api/wmcontainer/nf-wmcontainer-mfcreateasfmediasink) [**MFCreateASFMediaSinkActivate aufrufen.**](/windows/desktop/api/wmcontainer/nf-wmcontainer-mfcreateasfmediasinkactivate)
 
 Wenn Sie [**MFCreateASFMediaSink**](/windows/desktop/api/wmcontainer/nf-wmcontainer-mfcreateasfmediasink)aufrufen, müssen Sie einen Bytestream für die Ausgabedatei angeben, in den die Senke den ASF-Inhalt während einer Codierungssitzung schreibt. Der angegebene Bytestream muss über suchbare und beschreibbare Funktionen verfügen. Andernfalls schlägt der **MFCreateASFMediaSink-Aufruf** mit dem Fehlercode E \_ FAIL fehl. Dieser Aufruf erstellt ein prozessinternes Dateisenkenobjekt und gibt einen Zeiger auf die [**BERMEDIASink-Schnittstelle**](/windows/desktop/api/mfidl/nn-mfidl-imfmediasink) der Dateisenke zurück.
 
-Wenn Sie [**MFCreateASFMediaSinkActivate**](/windows/desktop/api/wmcontainer/nf-wmcontainer-mfcreateasfmediasinkactivate)aufrufen, müssen Sie die URL der Ausgabedatei angeben, in die die Dateisenke Mediendaten schreibt. In diesem Fall erstellt die Dateisenke intern den Bytestream. Die Funktion gibt einen Zeiger auf die [**BERActivate-Schnittstelle**](/windows/desktop/api/mfobjects/nn-mfobjects-imfactivate) der Dateisenke zurück. To
+Wenn Sie [**MFCreateASFMediaSinkActivate**](/windows/desktop/api/wmcontainer/nf-wmcontainer-mfcreateasfmediasinkactivate)aufrufen, müssen Sie die URL der Ausgabedatei angeben, in die die Dateisenke Mediendaten schreibt. In diesem Fall erstellt die Dateisenke intern den Bytestream. Die Funktion gibt einen Zeiger auf die [**BERActivate-Schnittstelle**](/windows/desktop/api/mfobjects/nn-mfobjects-imfactivate) der Dateisenke zurück. Beschreibung
 
 Ziehen [**Sie MFCreateASFMediaSinkActivate**](/windows/desktop/api/wmcontainer/nf-wmcontainer-mfcreateasfmediasinkactivate) anstelle von [**MFCreateASFMediaSink**](/windows/desktop/api/wmcontainer/nf-wmcontainer-mfcreateasfmediasink)in Betracht, wenn Ihre Codierungstopologie wie folgt entworfen wurde:
 
 -   Die Codierungstopologie ist für den geschützten Medienpfad (PMP) und die Dateisenke wird out-of-process verwendet.
 -   Der Ausgabeknoten der Topologie wird mithilfe des zurückgegebenen Zeigers auf das Activate-Objekt der Dateisenke erstellt, und Ihre Anwendung verfolgt die Datenströme in der Dateisenke anhand von Datenstromnummern nach.
     > [!Note]  
-    > Sie können die Dateisenke aktivieren, indem Sie [**DENKActivate::ActivateObject aufrufen.**](/windows/desktop/api/mfobjects/nf-mfobjects-imfactivate-activateobject) Sie müssen das Objekt jedoch nicht explizierend aktivieren. Die Mediensitzung verfolgt das Aktivierungsobjekt und aktiviert die Dateisenke automatisch während der Codierungssitzung.
+    > Sie können die Dateisenke aktivieren, indem Sie [**DENKActivate::ActivateObject aufrufen.**](/windows/desktop/api/mfobjects/nf-mfobjects-imfactivate-activateobject) Sie müssen das Objekt jedoch nicht explizierend aktivieren. Die Mediensitzung verfolgt das Aktivierungsobjekt und aktiviert die Dateisenke während der Codierungssitzung automatisch.
 
      
 
--   Die Streaminformationen werden im ContentInfo-Objekt konfiguriert. Wird im nächsten Unterabschnitt nicht angezeigt.
+-   Die Streaminformationen werden im ContentInfo-Objekt konfiguriert. Im nächsten Unterabschnitt wird dies nicht angezeigt.
 
 Nach dem Erstellen der ASF-Dateisenke muss sie vor dem Erstellen der Topologie konfiguriert werden. Die Dateisenke muss die folgenden Informationen kennen, um die Ausgabedatei zu generieren.
 

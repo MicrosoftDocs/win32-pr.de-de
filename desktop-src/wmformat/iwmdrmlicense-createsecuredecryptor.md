@@ -1,6 +1,6 @@
 ---
 title: IWMDRMLicense CreateSecureDecryptor-Methode (Wmdrmsdk.h)
-description: Die CreateSecureDecryptor-Methode erstellt ein sicheres Entschlüsselungsobjekt. Die sichere Entschlüsselung unterscheidet sich von der normalen Entschlüsselungsmethode darin, dass sie den Inhalt entschlüsselt und dann gemäß den in den Parametern dieser Methode angegebenen Einstellungen erneut verschlüsselt.
+description: Die CreateSecureDecryptor-Methode erstellt ein sicheres Entschlüsselungsobjekt. Die sichere Entschlüsselung unterscheidet sich von der normalen Entschlüsselung, da sie den Inhalt entschlüsselt und dann gemäß den in den Parametern dieser Methode angegebenen Einstellungen erneut verschlüsselt.
 ms.assetid: f3fe8d47-ec7b-4ba5-b5ae-6262cb455ffc
 keywords:
 - CreateSecureDecryptor-Methode windows Media Format
@@ -25,7 +25,7 @@ ms.locfileid: "118433669"
 ---
 # <a name="iwmdrmlicensecreatesecuredecryptor-method"></a>IWMDRMLicense::CreateSecureDecryptor-Methode
 
-Die **CreateSecureDecryptor-Methode** erstellt ein sicheres Entschlüsselungsobjekt. Die sichere Entschlüsselung unterscheidet sich von der normalen Entschlüsselungsmethode darin, dass sie den Inhalt entschlüsselt und dann gemäß den in den Parametern dieser Methode angegebenen Einstellungen erneut verschlüsselt.
+Die **CreateSecureDecryptor-Methode** erstellt ein sicheres Entschlüsselungsobjekt. Die sichere Entschlüsselung unterscheidet sich von der normalen Entschlüsselung, da sie den Inhalt entschlüsselt und dann gemäß den in den Parametern dieser Methode angegebenen Einstellungen erneut verschlüsselt.
 
 ## <a name="syntax"></a>Syntax
 
@@ -135,7 +135,7 @@ Keine.
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 

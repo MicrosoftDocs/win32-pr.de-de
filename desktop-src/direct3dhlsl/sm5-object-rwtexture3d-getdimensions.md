@@ -43,7 +43,7 @@ void GetDimensions(
 
 Typ: **[ **UINT**](/windows/desktop/WinProg/windows-data-types)**
 
-Die Ressourcenbreite in Texeln.
+Die Ressourcenbreite in Texel.
 
 </dd> <dt>
 
@@ -52,7 +52,7 @@ Die Ressourcenbreite in Texeln.
 
 Typ: **[ **UINT**](/windows/desktop/WinProg/windows-data-types)**
 
-Die Ressourcenhöhe in Texeln.
+Die Ressourcenhöhe in Texel.
 
 </dd> <dt>
 
@@ -61,7 +61,7 @@ Die Ressourcenhöhe in Texeln.
 
 Typ: **[ **UINT**](/windows/desktop/WinProg/windows-data-types)**
 
-Die Ressourcentiefe in Texeln.
+Die Ressourcentiefe in Texel.
 
 </dd> </dl>
 
@@ -90,7 +90,7 @@ Diese Funktion wird für die folgenden Shadertypen unterstützt:
 
 
 
-| Scheitelpunkt | Rumpf | Domain | Geometrie | Pixel | Compute |
+| Scheitelpunkt | Rumpf | Domäne | Geometrie | Pixel | Compute |
 |--------|------|--------|----------|-------|---------|
 |        |      |        |          | x     | x       |
 
@@ -98,7 +98,7 @@ Diese Funktion wird für die folgenden Shadertypen unterstützt:
 
  
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 

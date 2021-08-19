@@ -1,6 +1,6 @@
 ---
 title: UI_PKEY_FontProperties_Italic
-description: Identifiziert die \_ italische Eigenschaft PKEY \_ FontProperties \_ der Benutzeroberfläche.
+description: Identifiziert die italische \_ Eigenschaft PKEY \_ FontProperties \_ der Benutzeroberfläche.
 ms.assetid: 53edd88e-ed7e-4385-9fd9-bfa90be348cd
 ms.topic: article
 ms.date: 05/31/2018
@@ -13,7 +13,7 @@ ms.locfileid: "118438535"
 ---
 # <a name="ui_pkey_fontproperties_italic"></a>UI \_ PKEY \_ FontProperties \_ Italic
 
-Identifiziert die \_ italische Eigenschaft PKEY \_ FontProperties \_ der Benutzeroberfläche.
+Identifiziert die italische \_ Eigenschaft PKEY \_ FontProperties \_ der Benutzeroberfläche.
 
 ```
 propertyDescription
@@ -27,13 +27,13 @@ propertyDescription
 
 ## <a name="remarks"></a>Hinweise
 
-Ui \_ PKEY \_ FontProperties \_ Italic wird von einer Anwendung verwendet, um den Zustand der **Italic-Schaltfläche** abzufragen.
+Ui PKEY FontProperties Italic wird von einer Anwendung verwendet, um den Zustand der \_ \_ \_ **italischen Schaltfläche abfragt.**
 
-Der Eigenschaftswert stammt aus der [**\_ FONTPROPERTIES-Enumeration der Benutzeroberfläche.**](/windows/desktop/api/uiribbon/ne-uiribbon-ui_fontproperties)
+Der -Eigenschaftswert ist aus der [**\_ FONTPROPERTIES-Enumeration der Benutzeroberfläche.**](/windows/desktop/api/uiribbon/ne-uiribbon-ui_fontproperties)
 
 Der Standardwert ist `UI_FONTPROPERTIES_NOTSET`.
 
-In der folgenden Tabelle werden die Eigenschaften und das Benutzeroberflächenergebnis beschrieben.
+In der folgenden Tabelle werden die Eigenschaften und das Ergebnis der Benutzeroberfläche beschrieben.
 
 
 
@@ -41,7 +41,7 @@ In der folgenden Tabelle werden die Eigenschaften und das Benutzeroberflächener
 |----------------------------------|-----------------------------------------------------------------------|
 | `UI_FONTPROPERTIES_NOTAVAILABLE` | **Die italische** Schaltfläche ist deaktiviert und kann nur von der Anwendung festgelegt werden. |
 | `UI_FONTPROPERTIES_NOTSET`       | **Die italische** Schaltfläche ist nicht ausgewählt.                                    |
-| `UI_FONTPROPERTIES_SET`          | **Die italische** Schaltfläche ist ausgewählt.                                        |
+| `UI_FONTPROPERTIES_SET`          | **Die Schaltfläche "Italic" (Italic)** ist ausgewählt.                                        |
 
 
 
@@ -51,13 +51,13 @@ In der folgenden Tabelle werden die Eigenschaften und das Benutzeroberflächener
 
 <dl> <dt>
 
-[Eigenschaften des Schriftartsteuerelements](windowsribbon-reference-properties-fontcontrol.md)
+[Eigenschaften des Schriftart-Steuerelements](windowsribbon-reference-properties-fontcontrol.md)
 </dt> <dt>
 
-[**UI \_ FONTPROPERTIES**](/windows/desktop/api/uiribbon/ne-uiribbon-ui_fontproperties)
+[**SCHRIFTARTEIGENSCHAFTEN \_ DER BENUTZEROBERFLÄCHE**](/windows/desktop/api/uiribbon/ne-uiribbon-ui_fontproperties)
 </dt> <dt>
 
-[Schriftartsteuerelement](windowsribbon-controls-fontcontrol.md)
+[Schriftart-Steuerelement](windowsribbon-controls-fontcontrol.md)
 </dt> </dl>
 
  

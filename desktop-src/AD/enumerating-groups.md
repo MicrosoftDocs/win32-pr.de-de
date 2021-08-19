@@ -4,7 +4,7 @@ description: Dieser Abschnitt enthält die folgenden Informationen.
 ms.assetid: 92e8a6e9-616a-4d95-a8c8-ed972530a560
 ms.tgt_platform: multiple
 keywords:
-- groups AD ,enumerating
+- groups AD , enumerating
 ms.topic: article
 ms.date: 05/31/2018
 ms.openlocfilehash: f3b83c8756bf98284b093207e0482583a458d772d4e289f01b956f33c92f9baf

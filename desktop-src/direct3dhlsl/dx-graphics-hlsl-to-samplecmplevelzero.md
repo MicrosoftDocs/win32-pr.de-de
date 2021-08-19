@@ -1,6 +1,6 @@
 ---
 title: SampleCmpLevelZero (DirectX HLSL-Texturobjekt)
-description: Probieren Sie eine Textur aus, und vergleicht das Ergebnis mit einem Vergleichswert. Diese Funktion ist mit dem Aufrufen von SampleCmp nur auf mipmap-Ebene 0 identisch.
+description: Samples a texture and compares the result to a comparison value. (Stichprobenentnahme für eine Textur und Vergleich des Ergebnisses mit einem Vergleichswert. Diese Funktion ist identisch mit dem Aufrufen von SampleCmp nur auf Mipmap-Ebene 0.
 ms.assetid: cecfc5e8-d293-4e0e-a3f4-b23f84843b7d
 ms.topic: reference
 ms.date: 05/31/2018
@@ -18,13 +18,13 @@ ms.locfileid: "118513024"
 ---
 # <a name="samplecmplevelzero-directx-hlsl-texture-object"></a>SampleCmpLevelZero (DirectX HLSL-Texturobjekt)
 
-Probieren Sie eine Textur aus, und vergleicht das Ergebnis mit einem Vergleichswert. Diese Funktion ist mit dem Aufrufen von [**SampleCmp**](dx-graphics-hlsl-to-samplecmp.md) nur auf mipmap-Ebene 0 identisch.
+Samples a texture and compares the result to a comparison value. (Stichprobenentnahme für eine Textur und Vergleich des Ergebnisses mit einem Vergleichswert. Diese Funktion ist identisch mit dem Aufrufen [**von SampleCmp**](dx-graphics-hlsl-to-samplecmp.md) nur auf Mipmap-Ebene 0.
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[Texturobjekt](dx-graphics-hlsl-to-type.md)
+[Texture-Object](dx-graphics-hlsl-to-type.md)
 </dt> </dl>
 
  

@@ -1,10 +1,10 @@
 ---
-title: Erste Schritte mit Skripterstellung für ADSI
+title: Erste Schritte mit Scripting for ADSI
 description: Skripterstellung ist nützlich für Systemadministratoren, die Batchskripts für häufig verwendete Aufgaben erstellen möchten.
 ms.assetid: ae479d6b-75cf-4659-8a91-c2cbdcf56091
 ms.tgt_platform: multiple
 keywords:
-- Erste Schritte mit Skripterstellung für ADSI ADSI
+- Erste Schritte mit Scripting für ADSI ADSI
 ms.topic: article
 ms.date: 05/31/2018
 ms.openlocfilehash: c1a83da0194fb03cdb31430f389dbfbf64327806b1b142be3b9c1c5813696548
@@ -14,15 +14,15 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 08/11/2021
 ms.locfileid: "117839953"
 ---
-# <a name="getting-started-with-scripting-for-adsi"></a>Erste Schritte mit Skripterstellung für ADSI
+# <a name="getting-started-with-scripting-for-adsi"></a>Erste Schritte mit Scripting for ADSI
 
 Skripterstellung ist nützlich für Systemadministratoren, die Batchskripts für häufig verwendete Aufgaben erstellen möchten.
 
-Um mit der Skripterstellung mit ADSI zu beginnen, benötigen Sie einen Computer, auf dem Windows ausgeführt wird oder der bei einer Domäne angemeldet ist, die Daten für Computerkonten im Verzeichnis enthält.
+Zum Starten der Skripterstellung mit ADSI müssen Sie über einen Computer verfügen, auf dem Windows ausgeführt wird, oder sie müssen bei einer Domäne angemeldet sein, die Daten für Computerkonten im Verzeichnis enthält.
 
 ## <a name="a-simple-scripting-sample-finding-names-and-locations-of-computer-accounts"></a>Ein einfaches Skriptbeispiel: Suchen von Namen und Speicherorten von Computerkonten
 
-Erstellen Sie eine neue Textdatei mithilfe eines Text-Editors. Im folgenden Codebeispiel wird veranschaulicht, wie Namen und Speicherorte von Computerkonten gesucht werden.
+Erstellen Sie eine neue Textdatei mithilfe eines Text-Editors. Das folgende Codebeispiel zeigt, wie Sie Namen und Speicherorte von Computerkonten suchen.
 
 
 ```VB
@@ -52,9 +52,9 @@ Loop
 
 
 
-Speichern Sie die Datei als First.vbs. Ändern Sie die Zeile, die mit "objCommand.CommandText" beginnt, um den Pfad zu Ihrer Domäne zu ändern. Geben Sie an der Eingabeaufforderung **cscript First.vbs** für eine Befehlszeile oder First.vbs für Windows Skripterstellung ein. Die Ergebnisse sollten an der Eingabeaufforderung zurückgegeben werden.
+Speichern Sie die Datei First.vbs. Ändern Sie die Zeile, die mit "objCommand.CommandText" beginnt, um den Pfad zu Ihrer Domäne zu ändern. Geben Sie an der Eingabeaufforderung **cscript First.vbs** befehlszeilen- oder First.vbs für Windows ein. Die Ergebnisse sollten in der Eingabeaufforderung zurückgegeben werden.
 
-Weitere Informationen zur Skripterstellung für ADSI finden Sie unter Skripterstellung für [Active Directory-Dienstschnittstellen.](adsi-scripting-tutorial.md)
+Weitere Informationen zur Skripterstellung für ADSI finden Sie unter [Active Directory Service Interfaces Scripting](adsi-scripting-tutorial.md).
 
  
 

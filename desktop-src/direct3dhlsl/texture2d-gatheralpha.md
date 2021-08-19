@@ -1,6 +1,6 @@
 ---
 title: Texture2D::Texture2D GatherAlpha-Methoden
-description: Probieren Sie eine Textur2D aus, und gibt die Alphakomponente zurück.
+description: Stichproben von Texture2D und Rückgabe der Alphakomponente.
 ms.assetid: b67727e4-a876-4ec8-b991-99ee710e4304
 keywords:
 - GatherAlpha-Methoden HLSL
@@ -21,18 +21,18 @@ ms.locfileid: "118787532"
 ---
 # <a name="texture2dgatheralpha-methods"></a>Texture2D::GatherAlpha-Methoden
 
-Probieren Sie eine [**Textur2D aus,**](sm5-object-texture2d.md) und gibt die Alphakomponente zurück.
+Stichproben von [**Texture2D und**](sm5-object-texture2d.md) Rückgabe der Alphakomponente.
 
 ### <a name="overload-list"></a>Überladeliste
 
 
 
-| Methode                                                                                                     | Beschreibung                                                                                                                                       |
+| Methode                                                                                                     | BESCHREIBUNG                                                                                                                                       |
 |:-----------------------------------------------------------------------------------------------------------|:--------------------------------------------------------------------------------------------------------------------------------------------------|
-| [**GatherAlpha(S,float,int)**](sm5-object-texture2d-gatheralpha.md)                                        | Gibt die Alphakomponenten der vier Texelwerte zurück, die in einem bilinearen Filtervorgang verwendet werden.<br/>                                 |
-| [**GatherAlpha(S,float,int,uint)**](t2d-gatheralpha-s-float-int-uint-.md)                                  | Gibt die Alphakomponenten der vier Texelwerte zurück, die in einem bilinearen Filtervorgang zusammen mit dem Kachelzuordnungsstatus verwendet werden.<br/> |
-| [**GatherAlpha(S,float,int2,int2,int2,int2)**](t2d-gatheralpha-s-float-int2-int2-int2-int2-.md)            | Gibt die Alphakomponenten der vier Texelwerte zurück, die in einem bilinearen Filtervorgang verwendet werden.<br/>                                 |
-| [**GatherAlpha(S,float,int2,int2,int2,int2,uint)**](t2d-gatheralpha-s-float-int2-int2-int2-int2-uint-.md)  | Gibt die Alphakomponenten der vier Texelwerte zurück, die in einem bilinearen Filtervorgang zusammen mit dem Kachelzuordnungsstatus verwendet werden.<br/> |
+| [**GatherAlpha(S,float,int)**](sm5-object-texture2d-gatheralpha.md)                                        | Gibt die Alphakomponenten der vier Texelwerte zurück, die in einem bilinealen Filtervorgang verwendet werden.<br/>                                 |
+| [**GatherAlpha(S,float,int,uint)**](t2d-gatheralpha-s-float-int-uint-.md)                                  | Gibt die Alphakomponenten der vier Texelwerte zurück, die in einem bilinealen Filtervorgang zusammen mit dem Kachelzuordnungsstatus verwendet werden.<br/> |
+| [**GatherAlpha(S,float,int2,int2,int2,int2)**](t2d-gatheralpha-s-float-int2-int2-int2-int2-.md)            | Gibt die Alphakomponenten der vier Texelwerte zurück, die in einem bilinealen Filtervorgang verwendet werden.<br/>                                 |
+| [**GatherAlpha(S,float,int2,int2,int2,int2,uint)**](t2d-gatheralpha-s-float-int2-int2-int2-int2-uint-.md)  | Gibt die Alphakomponenten der vier Texelwerte zurück, die in einem bilinealen Filtervorgang zusammen mit dem Kachelzuordnungsstatus verwendet werden.<br/> |
 
 
 

@@ -64,7 +64,7 @@ Die y-Komponente.
 
 </dd> <dt>
 
-**Z**
+**z**
 </dt> <dd>
 
 Typ: **[ **FLOAT**](../winprog/windows-data-types.md)**
@@ -82,13 +82,13 @@ Typ: **[ **FLOAT**](../winprog/windows-data-types.md)**
 
 </dd> <dd>
 
-Die w-Komponente.
+Die w--Komponente.
 
 </dd> </dl>
 
 ## <a name="remarks"></a>Hinweise
 
-Quaternionen fügen den \[ x-, y-, \] z-Werten, die einen Vektor definieren, ein viertes Element hinzu, was zu willkürlichen 4D-Vektoren führt. Im Folgenden wird jedoch veranschaulicht, wie sich jedes Element einer Einheiten quaternion auf eine Achsenwinkelrotation bezieht (wobei q eine Einheiten quaternion (x, y, z, w) darstellt, die Achse normalisiert wird und theta die gewünschte CCW-Drehung um die Achse darstellt):
+Quaternionen fügen den \[ x-, y-, z-Werten, die einen Vektor definieren, ein viertes Element hinzu, was zu \] beliebigen 4D-Vektoren führt. Im Folgenden wird jedoch veranschaulicht, wie sich jedes Element einer Einheiten quaternion auf eine Achsenwinkelrotation bezieht (wobei q eine Einheiten quaternion (x, y, z, w), die Achse normalisiert wird und theta die gewünschte CCW-Drehung um die Achse darstellt):
 
 
 ```
@@ -100,7 +100,7 @@ q.w = cos(theta/2)
 
 
 
-C++-Programmierer können die Vorteile der Operatorüberladung und Typcasting mit den [**D3DXQUATERNION-Erweiterungen**](d3dxquaternion-extensions.md)nutzen, die überladene Konstruktoren und Zuweisungs-, unäre und binäre Operatoren (einschließlich Gleichheitsoperatoren) implementieren.
+C++-Programmierer können die Operatorüberladung und Typumformung mit den [**D3DXQUATERNION-Erweiterungen**](d3dxquaternion-extensions.md)nutzen, die überladene Konstruktoren und Zuweisungs-, unäre und binäre Operatoren (einschließlich Gleichheitsoperatoren) implementieren.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -112,14 +112,14 @@ C++-Programmierer können die Vorteile der Operatorüberladung und Typcasting mi
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 
 [D3DX-Strukturen](dx9-graphics-reference-d3dx-structures.md)
 </dt> <dt>
 
-[Vektoren, Scheitelpunkte und Quaternionen (Direct3D 9)](vectors--vertices--and-quaternions.md)
+[Vektoren, Scheitelungen und Quaternionen (Direct3D 9)](vectors--vertices--and-quaternions.md)
 </dt> </dl>
 
  

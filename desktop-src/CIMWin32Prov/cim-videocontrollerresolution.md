@@ -33,16 +33,16 @@ ms.locfileid: "118420377"
 ---
 # <a name="cim_videocontrollerresolution-class"></a>CIM \_ VideoControllerResolution-Klasse
 
-Die **CIM \_ VideoControllerResolution-Klasse** stellt die verschiedenen Videomodi dar, die ein Videocontroller unterstützen kann. Videomodi werden durch die möglichen horizontalen und vertikalen Auflösungen, die Aktualisierungsrate, den Scanmodus und die Anzahl von Farbeinstellungen definiert, die von einem Controller unterstützt werden. Die tatsächlichen Auflösungen sind die Werte, die im [**CIM \_ VideoController-Objekt angegeben**](cim-videocontroller.md) sind.
+Die **CIM \_ VideoControllerResolution-Klasse** stellt die verschiedenen Videomodi dar, die ein Videocontroller unterstützen kann. Videomodi werden durch die möglichen horizontalen und vertikalen Auflösungen, die Aktualisierungsrate, den Scanmodus und die Anzahl der von einem Controller unterstützten Farbeinstellungen definiert. Die tatsächlich verwendeten Auflösungen sind die im [**CIM \_ VideoController-Objekt**](cim-videocontroller.md) angegebenen Werte.
 
-Hardware, die nicht mit dem Windows Display Driver Model (WDDM) kompatibel ist, gibt ungenaue Eigenschaftswerte für Instanzen dieser Klasse zurück.
+Hardware, die nicht mit Windows Display Driver Model (WDDM) kompatibel ist, gibt ungenaue Eigenschaftswerte für Instanzen dieser Klasse zurück.
 
 > [!IMPORTANT]
-> Die CIM-Klassen (Distributed Management Task Force) (DMTF) (Common Information Model) sind die übergeordneten Klassen, auf denen WMI-Klassen erstellt werden. WMI unterstützt derzeit nur die [CIM 2.x-Versionsschemas.](https://dmtf.org/standards/cim/schemas)
+> Die CIM-Klassen (Distributed Management Task Force) (DMTF (Distributed Management Task Force) (Common Information Model) sind die übergeordneten Klassen, auf denen WMI-Klassen erstellt werden. WMI unterstützt derzeit nur die [CIM 2.x-Versionsschemas.](https://dmtf.org/standards/cim/schemas)
 
  
 
-Die folgende Syntax wird durch Managed Object Format (MOF)-Code vereinfacht und enthält alle geerbten Eigenschaften. Eigenschaften werden in alphabetischer Reihenfolge und nicht in MOF-Reihenfolge aufgeführt.
+Die folgende Syntax wird aus Managed Object Format (MOF)-Code vereinfacht und enthält alle geerbten Eigenschaften. Eigenschaften werden in alphabetischer Reihenfolge und nicht in MOF-Reihenfolge aufgeführt.
 
 ## <a name="syntax"></a>Syntax
 
@@ -65,7 +65,7 @@ class CIM_VideoControllerResolution : CIM_Setting
 
 ## <a name="members"></a>Member
 
-Die **CIM \_ VideoControllerResolution-Klasse** verfügt über die folgenden Membertypen:
+Die **CIM \_ VideoControllerResolution-Klasse** verfügt über folgende Typen von Membern:
 
 -   [Eigenschaften](#properties)
 
@@ -89,7 +89,7 @@ Qualifizierer: [**MaxLen**](/windows/desktop/WmiSdk/standard-qualifiers) (64)
 
 Kurze Textbeschreibung des aktuellen Objekts.
 
-Diese Eigenschaft wird von der [**CIM-Einstellung \_ geerbt.**](cim-setting.md)
+Diese Eigenschaft wird von [**cim \_ setting**](cim-setting.md)geerbt.
 
 </dd> <dt>
 
@@ -104,7 +104,7 @@ Zugriffstyp: Schreibgeschützt
 
 Textbeschreibung des aktuellen -Objekts.
 
-Diese Eigenschaft wird von der [**CIM-Einstellung \_ geerbt.**](cim-setting.md)
+Diese Eigenschaft wird von [**cim \_ setting**](cim-setting.md)geerbt.
 
 </dd> <dt>
 
@@ -133,10 +133,10 @@ Datentyp: **uint32**
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**ModelCorrespondence**](/windows/desktop/WmiSdk/standard-qualifiers) ("[**CIM \_ VideoController**](cim-videocontroller.md).**MaxRefreshRate**"), [**MappingStrings**](/windows/desktop/WmiSdk/standard-qualifiers) ("MIF. DMTF \| Monitor Resolution \| 002.7"), [**Units**](/windows/desktop/WmiSdk/standard-qualifiers) ("hertz")
+Qualifizierer: [**ModelCorrespondence**](/windows/desktop/WmiSdk/standard-qualifiers) ("[**CIM \_ VideoController**](cim-videocontroller.md).**MaxRefreshRate**"), [**MappingStrings**](/windows/desktop/WmiSdk/standard-qualifiers) ("MIF. \|DMTF-Monitorauflösungen \| 002.7"), [**Einheiten**](/windows/desktop/WmiSdk/standard-qualifiers) ("hertz")
 </dt> </dl>
 
-Maximale Aktualisierungsrate, wenn ein Bereich von Raten mit den angegebenen Auflösungen in hertz unterstützt wird.
+Maximale Aktualisierungsrate, wenn ein Bereich von Raten mit den angegebenen Auflösungen in Hertz unterstützt wird.
 
 </dd> <dt>
 
@@ -149,7 +149,7 @@ Datentyp: **uint32**
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**ModelCorrespondence**](/windows/desktop/WmiSdk/standard-qualifiers) ("[**CIM \_ VideoController**](cim-videocontroller.md).**MinRefreshRate**"), [**MappingStrings**](/windows/desktop/WmiSdk/standard-qualifiers) ("MIF. DMTF \| Monitor Resolution \| 002.6"), [**Units**](/windows/desktop/WmiSdk/standard-qualifiers) ("hertz")
+Qualifizierer: [**ModelCorrespondence**](/windows/desktop/WmiSdk/standard-qualifiers) ("[**CIM \_ VideoController**](cim-videocontroller.md).**MinRefreshRate**"), [**MappingStrings**](/windows/desktop/WmiSdk/standard-qualifiers) ("MIF. \|DMTF-Monitorauflösungen \| 002.6"), [**Einheiten**](/windows/desktop/WmiSdk/standard-qualifiers) ("hertz")
 </dt> </dl>
 
 Minimale Aktualisierungsrate, wenn ein Bereich von Raten mit den angegebenen Auflösungen in Hertz unterstützt wird.
@@ -183,10 +183,10 @@ Datentyp: **uint32**
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**ModelCorrespondence**](/windows/desktop/WmiSdk/standard-qualifiers) ("[**CIM \_ VideoController**](cim-videocontroller.md).**CurrentRefreshRate**"), [**MappingStrings**](/windows/desktop/WmiSdk/standard-qualifiers) ("MIF. DMTF \| Monitor Resolution \| 002.4"), [**Units**](/windows/desktop/WmiSdk/standard-qualifiers) ("hertz")
+Qualifizierer: [**ModelCorrespondence**](/windows/desktop/WmiSdk/standard-qualifiers) ("[**CIM \_ VideoController**](cim-videocontroller.md).**CurrentRefreshRate**"), [**MappingStrings**](/windows/desktop/WmiSdk/standard-qualifiers) ("MIF. DMTF \| Monitor-Auflösungen \| 002.4"), [**Einheiten**](/windows/desktop/WmiSdk/standard-qualifiers) ("hertz")
 </dt> </dl>
 
-Aktualisierungsrate in Hertz. Wenn ein Tarifbereich unterstützt wird, verwenden Sie die **Eigenschaften MinRefreshRate** und **MaxRefreshRate,** und legen Sie diese Eigenschaft auf 0 fest.
+Aktualisierungsrate in Hertz. Wenn ein Tarifbereich unterstützt wird, verwenden Sie die Eigenschaften **MinRefreshRate** und **MaxRefreshRate,** und legen Sie diese Eigenschaft auf 0 fest.
 
 </dd> <dt>
 
@@ -208,7 +208,7 @@ Scanmodus, in dem der Controller ausgeführt wird.
 
 <span id="Other"></span><span id="other"></span><span id="OTHER"></span>
 
-<span id="Other"></span><span id="other"></span><span id="OTHER"></span>**Sonstige** (1)
+<span id="Other"></span><span id="other"></span><span id="OTHER"></span>**Andere** (1)
 
 
 </dt> <dd></dd> <dt>
@@ -229,7 +229,7 @@ Scanmodus, in dem der Controller ausgeführt wird.
 
 <span id="Non-Interlaced_Operation"></span><span id="non-interlaced_operation"></span><span id="NON-INTERLACED_OPERATION"></span>
 
-<span id="Non-Interlaced_Operation"></span><span id="non-interlaced_operation"></span><span id="NON-INTERLACED_OPERATION"></span>**Nicht verschachtelter Vorgang** (4)
+<span id="Non-Interlaced_Operation"></span><span id="non-interlaced_operation"></span><span id="NON-INTERLACED_OPERATION"></span>**Nicht geschachtelter Vorgang** (4)
 
 
 </dt> <dd>
@@ -283,9 +283,9 @@ Die vertikale Auflösung des Controllers in Pixel.
 
 WMI implementiert die **CIM \_ VideoControllerResolution-Klasse.** Die **CIM \_ VideoControllerResolution-Klasse** ist eine dynamische Klasse.
 
-Diese Dokumentation wird von den CIM-Klassenbeschreibungen abgeleitet, die von DMTF veröffentlicht wurden. Microsoft hat möglicherweise Änderungen vorgenommen, um kleinere Fehler zu beheben, die Dokumentationsstandards des Microsoft SDK zu erfüllen oder weitere Informationen zur Verfügung zu stellen.
+Diese Dokumentation wird von den CIM-Klassenbeschreibungen abgeleitet, die von dmtf veröffentlicht wurden. Möglicherweise hat Microsoft Änderungen vorgenommen, um kleinere Fehler zu korrigieren, den Dokumentationsstandards des Microsoft SDK zu entsprechen oder weitere Informationen bereitzustellen.
 
-Beachten Sie, dass diese Klasse eine Basisklasse ist. Wenn Sie versuchen, über WMI auf Ihren Videocontroller zu zugreifen, können Sie stattdessen [**Win32 \_ VideoController**](win32-videocontroller.md) verwenden.
+Beachten Sie, dass diese Klasse eine Basisklasse ist. Wenn Sie versuchen, über WMI auf Ihren Videocontroller zuzugreifen, können Sie stattdessen [**Win32 \_ VideoController**](win32-videocontroller.md) verwenden.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -301,7 +301,7 @@ Beachten Sie, dass diese Klasse eine Basisklasse ist. Wenn Sie versuchen, über 
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 

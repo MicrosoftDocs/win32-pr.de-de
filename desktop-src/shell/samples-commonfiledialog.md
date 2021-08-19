@@ -1,5 +1,5 @@
 ---
-description: Veranschaulicht das Erstellen eines benutzerdefinierten Dialogfelds zum Öffnen/Speichern von Dateien mithilfe verschiedener COMMON FILE DIALOG-APIs.
+description: Veranschaulicht das Erstellen eines benutzerdefinierten Dialogfelds zum Öffnen/Speichern von Dateien mithilfe verschiedener APIs für allgemeine Dateidialoge.
 title: Dialogfeld „Gemeinsame Dateien“ (Beispiel)
 ms.topic: article
 ms.date: 05/31/2018
@@ -18,7 +18,7 @@ ms.locfileid: "117858583"
 ---
 # <a name="common-file-dialog-sample"></a>Dialogfeld „Gemeinsame Dateien“ (Beispiel)
 
-Veranschaulicht das Erstellen eines benutzerdefinierten Dialogfelds zum Öffnen/Speichern von Dateien mithilfe verschiedener COMMON FILE DIALOG-APIs.
+Veranschaulicht das Erstellen eines benutzerdefinierten Dialogfelds zum Öffnen/Speichern von Dateien mithilfe verschiedener APIs für allgemeine Dateidialoge.
 
 Dieses Thema enthält folgende Abschnitte:
 
@@ -32,7 +32,7 @@ Dieses Thema enthält folgende Abschnitte:
 
 
 
-| Product (Produkt)                                | Mindestproduktversion |
+| Product (Produkt)                                | Mindestversion des Produkts |
 |----------------------------------------|-------------------------|
 | Windows                                | Windows Vista           |
 | Windows Software Development Kit (SDK) | 6.1                     |

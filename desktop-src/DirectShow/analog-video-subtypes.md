@@ -47,7 +47,7 @@ Die folgenden analogen Videountertypen sind jetzt veraltet. Verwenden Sie stattd
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 

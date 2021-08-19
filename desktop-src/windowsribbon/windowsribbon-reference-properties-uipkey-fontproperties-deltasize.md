@@ -27,13 +27,13 @@ propertyDescription
 
 ## <a name="remarks"></a>Hinweise
 
-Ui \_ PKEY \_ FontProperties \_ DeltaSize wird von einer Anwendung in Fällen verwendet, in denen es für die Anwendung nicht möglich ist, einen Wert für **Schriftgrad** anzugeben, z. B. wenn eine Ausführung von text heterogener Größe ausgewählt wird. Das **Steuerelement Schriftgrad** ist auf blank festgelegt, und die Ui \_ PKEY \_ FontProperties \_ DeltaSize wird verwendet, um Benutzerinteraktionen mit den Schaltflächen **Schriftvergrößerung** und **Schriftartverknleinerung** zu erfassen.
+Ui \_ PKEY \_ FontProperties \_ DeltaSize wird von einer Anwendung in Fällen verwendet, in denen es der Anwendung nicht möglich ist, einen Wert für Schriftgrad anzugeben, z. B. wenn eine Ausführung von heterogenem Text ausgewählt ist. Das **Steuerelement Schriftgrad** ist auf leer festgelegt, und UI PKEY FontProperties DeltaSize wird verwendet, um Benutzerinteraktion mit den Schaltflächen Schriftartvergrößerung und \_ \_ \_ **Schriftartverkleinerung zu** erfassen. 
 
-Ui \_ PKEY \_ FontProperties \_ DeltaSize ist in [ui \_ PKEY \_ FontProperties \_ ChangedProperties](windowsribbon-reference-properties-uipkey-fontproperties-changedproperties.md)enthalten.
+Ui \_ PKEY \_ FontProperties \_ DeltaSize ist in [UI \_ PKEY \_ FontProperties \_ ChangedProperties enthalten.](windowsribbon-reference-properties-uipkey-fontproperties-changedproperties.md)
 
-Der folgende Screenshot zeigt die Schaltflächen **Schriftgröße** und **Schrift verkleinern** des Menübands [**FontControl**](windowsribbon-element-fontcontrol.md).
+Der folgende Screenshot zeigt die Schaltflächen **Schriftartvergrößerung** und **Schriftverkleinerung** des Menübands [**FontControl.**](windowsribbon-element-fontcontrol.md)
 
-![Screenshot der Schaltflächen "Schrift vergrößern" und "Schrift verkleinern" auf dem fontcontrol.)](images/markup/fontcontrol-incdec.png)
+![Screenshot der Schaltflächen zum Verkleinern und Verkleinern von Schriftarten auf dem FontControl-Objekt.](images/markup/fontcontrol-incdec.png)
 
 Die folgende Tabelle enthält eine Beschreibung der Eigenschaftswerte.
 
@@ -41,8 +41,8 @@ Die folgende Tabelle enthält eine Beschreibung der Eigenschaftswerte.
 
 |     Wert                 |  BESCHREIBUNG                    |
 |---------------------------|---------------------------------|
-| `UI_FONTDELTASIZE_GROW`   | Schaltfläche **"Schriftart** vergrößern" geklickt.   |
-| `UI_FONTDELTASIZE_SHRINK` | Auf die Schaltfläche **Schriftart verkleinern** geklickt. |
+| `UI_FONTDELTASIZE_GROW`   | **Klicken Sie auf die Schaltfläche** Schriftart vergrößern.   |
+| `UI_FONTDELTASIZE_SHRINK` | **Klicken Sie auf die** Schaltfläche Schriftart verkleinern. |
 
 
 
@@ -52,13 +52,13 @@ Die folgende Tabelle enthält eine Beschreibung der Eigenschaftswerte.
 
 <dl> <dt>
 
-[Eigenschaften des Schriftartsteuerelements](windowsribbon-reference-properties-fontcontrol.md)
+[Eigenschaften des Schriftart-Steuerelements](windowsribbon-reference-properties-fontcontrol.md)
 </dt> <dt>
 
 [**UI \_ FONTDELTASIZE**](/windows/desktop/api/uiribbon/ne-uiribbon-ui_fontdeltasize)
 </dt> <dt>
 
-[Schriftartsteuerelement](windowsribbon-controls-fontcontrol.md)
+[Schriftart-Steuerelement](windowsribbon-controls-fontcontrol.md)
 </dt> </dl>
 
  

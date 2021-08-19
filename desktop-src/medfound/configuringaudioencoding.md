@@ -13,18 +13,18 @@ ms.locfileid: "117880365"
 ---
 # <a name="configuring-audio-encoding-microsoft-media-foundation"></a>Konfigurieren der Audiocodierung (Microsoft Media Foundation)
 
-Der Windows Media Audio Encoder listet alle unterstützten Ausgabetypen in ihrer vollständigen Form auf. Rufen Sie den gewünschten Typ ab, indem Sie **IMediaObject::GetOutputType** oder **EINENTransform::GetAvailableOutputType** aufrufen und dann den abgerufenen Typ unverändert als Ausgabetyp festlegen, indem **Sie IMediaObject::SetOutputType** oder **EINENTRANSFORM::SetOutputType** aufrufen.
+Der Windows Media Audio Encoder listet alle unterstützten Ausgabetypen in der vollständigen Form auf. Rufen Sie den typ ab, den Sie wünschen, indem Sie **IMediaObject::GetOutputType** oder **EINETRANSFORM::GetAvailableOutputType** aufrufen, und legen Sie dann den abgerufenen Typ unverändert als Ausgabetyp fest, indem **Sie IMediaObject::SetOutputType** oder **ENUMERATIONTransform::SetOutputType aufrufen.**
 
 Die vom Audioencoder unterstützten Ausgabemedientypen ändern sich, wenn Encodereigenschaften konfiguriert werden. Sie müssen alle Encodereigenschaften konfigurieren, die Sie verwenden möchten, bevor Sie den Ausgabetyp aufzählen.
 
-Der Zwei-Pass-Modus und der VBR-Modus werden von den Audioencodern unterstützt, sind jedoch anders konfiguriert als für Videos. Weitere Informationen finden Sie unter [Aufzählen von Audiotypen für bestimmte Codierungsmodi.](enumeratingaudiotypesforspecificencodingmodes.md)
+Die Modi "Two-Pass" und "VBR" werden von den Audioencodern unterstützt, sind jedoch anders konfiguriert als für Videos. Weitere Informationen finden Sie unter [Aufzählen von Audiotypen für bestimmte Codierungsmodi.](enumeratingaudiotypesforspecificencodingmodes.md)
 
-Die vom Audioencoder unterstützten Eingabetypen sind erst verfügbar, wenn Sie den Ausgabetyp festgelegt haben. Wenn Sie **IMediaObject::GetInputType** oder **EINENTRANSFORM::GetInputType** aufrufen, bevor Sie einen Ausgabetyp festlegen, gibt die Methode DMO \_ E NO MORE ITEMS \_ \_ \_ bzw. MFT \_ E NO MORE TYPES \_ \_ \_ zurück. Nachdem der Ausgabetyp festgelegt wurde, listet der Encoder die Eingabetypen auf, die er für den ausgewählten Ausgabetyp unterstützt.
+Die vom Audioencoder unterstützten Eingabetypen sind erst verfügbar, wenn Sie den Ausgabetyp festgelegt haben. Wenn Sie **IMediaObject::GetInputType** oder VOR dem Festlegen eines Ausgabetyps VOR DEM FESTLEGEN EINES **AUSGABETYPs aufrufen,** gibt die Methode DMO E NO MORE ITEMS bzw. \_ \_ \_ \_ MFT E NO MORE TYPES \_ \_ \_ \_ zurück. Nachdem der Ausgabetyp festgelegt wurde, enumeriert der Encoder die Eingabetypen, die er für den ausgewählten Ausgabetyp unterstützt.
 
-Vom Windows Media Audio-Encoder wird keine Audioresampling durchgeführt. Dies bedeutet, dass der Encoderausgabetyp und der Encodereingabetyp die gleiche Anzahl von Kanälen, Bits pro Stichprobe und Abtastrate aufweisen müssen. Weitere Informationen finden Sie unter [Suchen von Audioencoder-Ausgabetypen.](findingaudioencoderoutputtypes.md)
+Der Medienaudioencoder Windows keine Audio-Resamplings. Dies bedeutet, dass der Encoderausgabetyp und der Encodereingabetyp die gleiche Anzahl von Kanälen, Bits pro Stichprobe und Abtastrate haben müssen. Weitere Informationen finden Sie unter [Finding Audio Encoder Output Types](findingaudioencoderoutputtypes.md).
 
 > [!Note]  
->    Jeder vom Audioencoder aufzählte Ausgabetyp enthält eine **WAVEFORMATEX-Struktur** (auf die am **\_ MEDIA \_ TYPE.pbFormat** gezeigt wird) mit angefügten erweiterten Daten. Die Größe der erweiterten Daten wird durch **WAVEFORMATEX.cbSize** angegeben. Diese Daten müssen mit dem codierten Inhalt aufbewahrt werden, damit sie an den Decoder übermittelt werden können. Der Inhalt kann ohne die erweiterten Formatdaten nicht dekomprimiert werden.
+>    Jeder vom Audioencoder aufzählte Ausgabetyp enthält eine **WAVEFORMATEX-Struktur** (auf die **AM MEDIA \_ \_ TYPE.pbFormat** verweist), an die erweiterte Daten angefügt sind. Die Größe der erweiterten Daten wird durch **WAVEFORMATEX.cbSize angegeben.** Diese Daten müssen mit dem codierten Inhalt beibehalten werden, damit sie an den Decoder übermittelt werden können. Der Inhalt kann ohne die Daten im erweiterten Format nicht dekomprimiert werden.
 
  
 

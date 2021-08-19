@@ -13,9 +13,9 @@ ms.locfileid: "117881573"
 ---
 # <a name="mobile-broadband-profile-schema-v3"></a>Mobiles Breitbandprofilschema v3
 
-Das Windows 8Mobile Broadband Profile Schema v3 ist im Namespace `https://www.microsoft.com/networking/WWAN/profile/v3` verfügbar.
+Das Windows 8Schema für mobiles Breitbandprofil v3 ist im Namespace `https://www.microsoft.com/networking/WWAN/profile/v3` verfügbar.
 
--   [Elemente des Mobilen Breitbandprofilschemas v3](mobile-broadband-profile-schema-v3-elements.md)
+-   [Mobiles Breitbandprofilschema v3-Elemente](mobile-broadband-profile-schema-v3-elements.md)
 
 ``` syntax
 <xs:schema targetNamespace="https://www.microsoft.com/networking/WWAN/profile/v3" 

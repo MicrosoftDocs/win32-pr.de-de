@@ -1,5 +1,5 @@
 ---
-description: Die CCHeapFree-Funktion gibt den von der CCHeapAlloc-Funktion zugeordneten Arbeitsspeicher frei.
+description: Die CCHeapFree-Funktion gibt den von der CCHeapAlloc-Funktion belegten Arbeitsspeicher frei.
 ms.assetid: 4e1f3332-b0cb-4c21-8c36-59e14c9686cd
 title: CCHeapFree-Funktion (Netmon.h)
 ms.topic: reference
@@ -22,7 +22,7 @@ ms.locfileid: "117796340"
 ---
 # <a name="ccheapfree-function"></a>CCHeapFree-Funktion
 
-Die **CCHeapFree-Funktion** gibt den von der **CCHeapAlloc-Funktion zugeordneten Arbeitsspeicher** frei.
+Die **CCHeapFree-Funktion** gibt den von der **CCHeapAlloc-Funktion** belegten Arbeitsspeicher frei.
 
 ## <a name="syntax"></a>Syntax
 
@@ -42,15 +42,15 @@ BOOL WINAPI CCHeapFree(
 *lpMem* 
 </dt> <dd>
 
-Zeiger auf den Arbeitsspeicher, den diese Funktion frei gibt.
+Zeiger auf den Arbeitsspeicher, den diese Funktion freigibt.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Wenn die **CCHeapFree-Funktion** erfolgreich ist, ist der Rückgabewert **TRUE.**
+Wenn die **CCHeapFree-Funktion** erfolgreich ist, lautet der Rückgabewert **TRUE.**
 
-Wenn die Funktion nicht erfolgreich ist, ist der Rückgabewert **FALSE.**
+Wenn die Funktion nicht erfolgreich ist, lautet der Rückgabewert **FALSE.**
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -66,7 +66,7 @@ Wenn die Funktion nicht erfolgreich ist, ist der Rückgabewert **FALSE.**
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 

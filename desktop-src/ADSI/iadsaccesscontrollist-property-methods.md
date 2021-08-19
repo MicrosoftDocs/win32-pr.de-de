@@ -28,7 +28,7 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 08/11/2021
 ms.locfileid: "118428395"
 ---
-# <a name="iadsaccesscontrollist-property-methods"></a>IADsAccessControlList-Eigenschaftenmethoden
+# <a name="iadsaccesscontrollist-property-methods"></a>IADsAccessControlList-Eigenschaftsmethoden
 
 Die Eigenschaftenmethoden der [**IADsAccessControlList-Schnittstelle**](/windows/desktop/api/Iads/nn-iads-iadsaccesscontrollist) erhalten oder legen die in der folgenden Tabelle beschriebenen Eigenschaften fest. Weitere Informationen finden Sie unter [Schnittstelleneigenschaftsmethoden.](interface-property-methods.md)
 
@@ -67,7 +67,7 @@ HRESULT put_AceCount(
 **AclRevision**
 </dt> <dd> <dl>
 
-Die Revisionsebene einer Zugriffssteuerungsliste. Dieser Wert kann **ACL \_ REVISION oder** **ACL REVISION \_ \_ DS sein.** Verwenden **Sie ACL \_ REVISION \_ DS,** wenn die ACL einen objektspezifischen ACE enthält. Alle ACEs in einer ACL müssen auf derselben Revisionsebene sein.
+Die Revisionsebene einer Zugriffssteuerungsliste. Dieser Wert kann **ACL \_ REVISION oder** **ACL REVISION \_ \_ DS sein.** Verwenden **Sie ACL \_ REVISION \_ DS,** wenn die ACL einen objektspezifischen ACE enthält. Alle ACEs in einer ACL müssen auf der gleichen Revisionsebene sein.
 
 <dt>
 
@@ -211,7 +211,7 @@ HRESULT ShowACEInACL(LPWSTR guestPath,LPWSTR user,LPWSTR passwd)
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 

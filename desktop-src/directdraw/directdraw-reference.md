@@ -17,7 +17,7 @@ Dieser Abschnitt enthält Referenzinformationen zu den API-Elementen (Applicatio
 
 
 
-| Kategorie                                                                                                                                                                                                                                         | BESCHREIBUNG                                                                         |
+| Category                                                                                                                                                                                                                                         | Beschreibung                                                                         |
 |--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------|
 | <span id="DirectDraw_Interfaces"></span><span id="directdraw_interfaces"></span><span id="DIRECTDRAW_INTERFACES"></span>[DirectDraw-Schnittstellen](directdraw-interfaces.md)<br/>                                                            | Dieser Abschnitt enthält Referenzseiten für DirectDraw-Schnittstellen.<br/>         |
 | <span id="DirectDraw_Functions"></span><span id="directdraw_functions"></span><span id="DIRECTDRAW_FUNCTIONS"></span>[DirectDraw-Funktionen](directdraw-functions.md)<br/>                                                                 | Dieser Abschnitt enthält Referenzseiten für DirectDraw-Funktionen.<br/>          |

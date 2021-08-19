@@ -50,7 +50,7 @@ Stellt ein [Kombinationsfeld-Steuerelement](windowsribbon-controls-combobox.md) 
 <th>attribute</th>
 <th>type</th>
 <th>Erforderlich</th>
-<th>BESCHREIBUNG</th>
+<th>Beschreibung</th>
 </tr>
 </thead>
 <tbody>
@@ -102,7 +102,7 @@ Es gibt keine untergeordneten Elemente.
 <thead>
 <tr class="header">
 <th>Element</th>
-<th>BESCHREIBUNG</th>
+<th>Beschreibung</th>
 </tr>
 </thead>
 <tbody>

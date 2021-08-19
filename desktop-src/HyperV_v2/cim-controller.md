@@ -1,7 +1,7 @@
 ---
-description: Eine übergeordnete Klasse für verschiedene Steuerungs bezogene Geräte, die eine klassische Busschnittstelle bereitstellen.
+description: Eine Oberklasse für verschiedene steuerelementbezogene Geräte, die eine klassische Busmasterschnittstelle bereitstellen.
 ms.assetid: eaa8711b-11e9-4f69-b81e-49a3c8a99fa7
-title: CIM_Controller-Klasse (Hyper-V-Verwaltung)
+title: CIM_Controller -Klasse (Hyper-V-Verwaltung)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -17,16 +17,16 @@ api_type:
 - DllExport
 api_location:
 - vmms.exe
-ms.openlocfilehash: 139d9c9b8a9ac1b28253551f7d37510f4a1bd53b
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: b0637642de48b6605a9f56e6d7111482af59f5e0361816953f10b1f91e94ad90
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106368145"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117813107"
 ---
-# <a name="cim_controller-class-hyper-v-management"></a>CIM_Controller-Klasse (Hyper-V-Verwaltung)
+# <a name="cim_controller-class-hyper-v-management"></a>CIM_Controller -Klasse (Hyper-V-Verwaltung)
 
-Eine übergeordnete Klasse für verschiedene Steuerungs bezogene Geräte, die eine klassische Busschnittstelle bereitstellen. Die Controller Klasse ist eine Abstraktion für Geräte mit einem einzelnen Protokollstapel und ist vorhanden, um die Kommunikation (Daten, Steuerung und zurück Setzung) auf Downstreamgeräte zu steuern.
+Eine Oberklasse für verschiedene steuerelementbezogene Geräte, die eine klassische Busmasterschnittstelle bereitstellen. Die Controllerklasse ist eine Abstraktion für Geräte mit einem einzelnen Protokollstapel und vorhanden, um die Kommunikation (Daten, Steuerung und Zurücksetzung) mit nachgeschalteten Geräten zu steuern.
 
 ## <a name="syntax"></a>Syntax
 
@@ -43,33 +43,33 @@ class CIM_Controller : CIM_LogicalDevice
 
 ## <a name="members"></a>Member
 
-Die **CIM- \_ Controller** Klasse verfügt über diese Typen von Membern:
+Die **\_ CIM-Controllerklasse** verfügt über die folgenden Membertypen:
 
 -   [Eigenschaften](#properties)
 
 ### <a name="properties"></a>Eigenschaften
 
-Die **CIM- \_ Controller** Klasse verfügt über diese Eigenschaften.
+Die **\_ CIM-Controllerklasse** verfügt über diese Eigenschaften.
 
 <dl> <dt>
 
-**Maxnuma**
+**MaxNumberControlled**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt32**
+Datentyp: **uint32**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**mappingstrings**](/windows/desktop/WmiSdk/standard-qualifiers) ("MIF". DMTF \| Bus Port \| 004,9 ")
+Qualifizierer: [**MappingStrings**](/windows/desktop/WmiSdk/standard-qualifiers) ("MIF. \|DMTF-Busport \| 004.9")
 </dt> </dl>
 
-Die maximal unterstützte Anzahl von Geräten, die vom Controller verwaltet werden können. Der Wert "0" gibt an, dass die Zahl unbekannt oder unbegrenzt ist.
+Die maximale Anzahl unterstützter Geräte, die vom Controller verwaltet werden können. Der Wert "0" gibt an, dass die Zahl unbekannt oder unbegrenzt ist.
 
 </dd> <dt>
 
-**Protocoldescription**
+**ProtocolDescription**
 </dt> <dd> <dl> <dt>
 
 Datentyp: **Zeichenfolge**
@@ -78,26 +78,26 @@ Datentyp: **Zeichenfolge**
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**mappingstrings**](/windows/desktop/WmiSdk/standard-qualifiers) ("MIF". DMTF \| Bus Port \| 004,3 "), [**modelcorrespondence**](/windows/desktop/WmiSdk/standard-qualifiers) ("**CIM \_ Controller**".**Protocolsupported**")
+Qualifizierer: [**MappingStrings**](/windows/desktop/WmiSdk/standard-qualifiers) ("MIF. \|DMTF-Busport \| 004.3"), [**ModelCorrespondence**](/windows/desktop/WmiSdk/standard-qualifiers) ("**\_ CIM-Controller**.**ProtocolSupported**")
 </dt> </dl>
 
-Eine frei Form Zeichenfolge, die weitere Informationen im Zusammenhang mit dem vom Controller unterstützten Protokoll bereitstellt.
+Eine freiformbasierte Zeichenfolge, die weitere Informationen zu dem vom Controller unterstützten Protokoll enthält.
 
 </dd> <dt>
 
-**Protocolsupported**
+**ProtocolSupported**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt16**
+Datentyp: **uint16**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**mappingstrings**](/windows/desktop/WmiSdk/standard-qualifiers) ("MIF". DMTF \| Bus Port \| 004,2 "," MIF. DMTF-Datenträger \| \| 003,3 "), [**modelcorrespondence**](/windows/desktop/WmiSdk/standard-qualifiers) ("**CIM- \_ Controller**".**Protocoldescription**")
+Qualifizierer: [**MappingStrings**](/windows/desktop/WmiSdk/standard-qualifiers) ("MIF. DMTF \| Bus Port \| 004.2", "MIF. DMTF \| Disks \| 003.3"), [**ModelCorrespondence**](/windows/desktop/WmiSdk/standard-qualifiers) ("**CIM \_ Controller**.**ProtocolDescription**")
 </dt> </dl>
 
-Das Protokoll, das vom Controller für den Zugriff auf gesteuerte Geräte verwendet wird.
+Das Protokoll, das vom Controller für den Zugriff auf kontrollierte Geräte verwendet wird.
 
 <dt>
 
@@ -159,35 +159,35 @@ Das Protokoll, das vom Controller für den Zugriff auf gesteuerte Geräte verwen
 
 <span id="SCSI_Parallel_Interface"></span><span id="scsi_parallel_interface"></span><span id="SCSI_PARALLEL_INTERFACE"></span>
 
-**SCSI Parallel Interface** (9)
+**Parallele SCSI-Schnittstelle** (9)
 
 
 </dt> <dd></dd> <dt>
 
 <span id="SCSI_Fibre_Channel_Protocol"></span><span id="scsi_fibre_channel_protocol"></span><span id="SCSI_FIBRE_CHANNEL_PROTOCOL"></span>
 
-**SCSI-Fibre Channel Protokoll** (10)
+**SCSI Fibre Channel Protocol** (10)
 
 
 </dt> <dd></dd> <dt>
 
 <span id="SCSI_Serial_Bus_Protocol"></span><span id="scsi_serial_bus_protocol"></span><span id="SCSI_SERIAL_BUS_PROTOCOL"></span>
 
-**SCSI-serielle Busprotokoll** (11)
+**SCSI Serial Bus-Protokoll** (11)
 
 
 </dt> <dd></dd> <dt>
 
 <span id="SCSI_Serial_Bus_Protocol-2__1394_"></span><span id="scsi_serial_bus_protocol-2__1394_"></span><span id="SCSI_SERIAL_BUS_PROTOCOL-2__1394_"></span>
 
-**SCSI-serielle Busprotokoll-2 (1394)** (12)
+**SCSI Serial Bus Protocol-2 (1394)** (12)
 
 
 </dt> <dd></dd> <dt>
 
 <span id="SCSI_Serial_Storage_Architecture"></span><span id="scsi_serial_storage_architecture"></span><span id="SCSI_SERIAL_STORAGE_ARCHITECTURE"></span>
 
-**Architektur des SCSI-seriellen Speichers** (13)
+**Architektur des seriellen Storage SCSI** (13)
 
 
 </dt> <dd></dd> <dt>
@@ -208,14 +208,14 @@ Das Protokoll, das vom Controller für den Zugriff auf gesteuerte Geräte verwen
 
 <span id="Universal_Serial_Bus"></span><span id="universal_serial_bus"></span><span id="UNIVERSAL_SERIAL_BUS"></span>
 
-**Universeller seribus** (16)
+**Universal Serial Bus** (16)
 
 
 </dt> <dd></dd> <dt>
 
 <span id="Parallel_Protocol"></span><span id="parallel_protocol"></span><span id="PARALLEL_PROTOCOL"></span>
 
-**Paralleles Protokoll** (17)
+**Parallel Protocol** (17)
 
 
 </dt> <dd></dd> <dt>
@@ -243,21 +243,21 @@ Das Protokoll, das vom Controller für den Zugriff auf gesteuerte Geräte verwen
 
 <span id="Power"></span><span id="power"></span><span id="POWER"></span>
 
-**Stromversorgung** (21)
+**Power** (21)
 
 
 </dt> <dd></dd> <dt>
 
 <span id="HIPPI"></span><span id="hippi"></span>
 
-**HIPPI** (22)
+**HIPI** (22)
 
 
 </dt> <dd></dd> <dt>
 
 <span id="MultiBus"></span><span id="multibus"></span><span id="MULTIBUS"></span>
 
-**Multibus** (23)
+**MultiBus** (23)
 
 
 </dt> <dd></dd> <dt>
@@ -292,49 +292,49 @@ Das Protokoll, das vom Controller für den Zugriff auf gesteuerte Geräte verwen
 
 <span id="IEEE_802.3_10BASE5"></span><span id="ieee_802.3_10base5"></span>
 
-**IEEE 802,3 10BASE5** (28)
+**IEEE 802.3 10BASE5** (28)
 
 
 </dt> <dd></dd> <dt>
 
 <span id="IEEE_802.3_10BASE2"></span><span id="ieee_802.3_10base2"></span>
 
-**IEEE 802,3 10Base2** (29)
+**IEEE 802.3 10BASE2** (29)
 
 
 </dt> <dd></dd> <dt>
 
 <span id="IEEE_802.3_1BASE5"></span><span id="ieee_802.3_1base5"></span>
 
-**IEEE 802,3 1base5** (30)
+**IEEE 802.3 1BASE5** (30)
 
 
 </dt> <dd></dd> <dt>
 
 <span id="IEEE_802.3_10BROAD36"></span><span id="ieee_802.3_10broad36"></span>
 
-**IEEE 802,3 10Broad36** (31)
+**IEEE 802.3 10BROAD36** (31)
 
 
 </dt> <dd></dd> <dt>
 
 <span id="IEEE_802.3_100BASEVG"></span><span id="ieee_802.3_100basevg"></span>
 
-**IEEE 802,3 100BaseVG** (32)
+**IEEE 802.3 100BASEVG** (32)
 
 
 </dt> <dd></dd> <dt>
 
 <span id="IEEE_802.5_Token-Ring"></span><span id="ieee_802.5_token-ring"></span><span id="IEEE_802.5_TOKEN-RING"></span>
 
-**IEEE 802,5-TokenRing** (33)
+**IEEE 802.5 Token-Ring** (33)
 
 
 </dt> <dd></dd> <dt>
 
 <span id="ANSI_X3T9.5_FDDI"></span><span id="ansi_x3t9.5_fddi"></span>
 
-**ANSI x3t 9,5, f** (34)
+**ANSI X3T9.5 FDDI** (34)
 
 
 </dt> <dd></dd> <dt>
@@ -362,7 +362,7 @@ Das Protokoll, das vom Controller für den Zugriff auf gesteuerte Geräte verwen
 
 <span id="CMD"></span><span id="cmd"></span>
 
-**Cmd** (38)
+**CMD** (38)
 
 
 </dt> <dd></dd> <dt>
@@ -376,7 +376,7 @@ Das Protokoll, das vom Controller für den Zugriff auf gesteuerte Geräte verwen
 
 <span id="DSSI"></span><span id="dssi"></span>
 
-**Dssi** (40)
+**DSSI** (40)
 
 
 </dt> <dd></dd> <dt>
@@ -404,35 +404,35 @@ Das Protokoll, das vom Controller für den Zugriff auf gesteuerte Geräte verwen
 
 <span id="TWIRP__two-way_infrared_"></span><span id="twirp__two-way_infrared_"></span><span id="TWIRP__TWO-WAY_INFRARED_"></span>
 
-**TWIRP (** bidirektionale Infrarot) (44)
+**TWIRP (Two-Way-1-44)**
 
 
 </dt> <dd></dd> <dt>
 
 <span id="FIR__fast_infrared_"></span><span id="fir__fast_infrared_"></span><span id="FIR__FAST_INFRARED_"></span>
 
-**FIR (schnelles Infrarot)** (45)
+**FIR (schnelles Strahl)** (45)
 
 
 </dt> <dd></dd> <dt>
 
 <span id="SIR__serial_infrared_"></span><span id="sir__serial_infrared_"></span><span id="SIR__SERIAL_INFRARED_"></span>
 
-**Sir (serielle Infrarot)** (46)
+**CHARLES (serial serial serial)** (46)
 
 
 </dt> <dd></dd> <dt>
 
 <span id="IrBus"></span><span id="irbus"></span><span id="IRBUS"></span>
 
-" **Iran** " (47)
+**IrBus** (47)
 
 
 </dt> <dd></dd> <dt>
 
 <span id="Serial_ATA"></span><span id="serial_ata"></span><span id="SERIAL_ATA"></span>
 
-**Serielle ATA** (48)
+**Serielles ATA** (48)
 
 
 </dt> <dd></dd> </dl>
@@ -442,13 +442,13 @@ Das Protokoll, das vom Controller für den Zugriff auf gesteuerte Geräte verwen
 **TimeOfLastReset**
 </dt> <dd> <dl> <dt>
 
-**Datentyp: DateTime**
+Datentyp: **datetime**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Der Zeitpunkt, zu dem der Controller zuletzt zurückgesetzt wurde.
+Der zeitpunkt, zu dem der Controller zuletzt zurückgesetzt wurde.
 
 </dd> </dl>
 
@@ -461,7 +461,7 @@ Der Zeitpunkt, zu dem der Controller zuletzt zurückgesetzt wurde.
 | Unterstützte Mindestversion (Client)<br/> | Windows 8<br/>                                                                                    |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2012<br/>                                                                          |
 | Namespace<br/>                | \\Stammvirtualisierung \\ v2<br/>                                                                     |
-| MOF<br/>                      | <dl> <dt>Windowsvirtualization. v2. MOF</dt> </dl> |
+| MOF<br/>                      | <dl> <dt>WindowsVirtualization.V2.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Vmms.exe</dt> </dl>                     |
 
 

@@ -1,10 +1,10 @@
 ---
 title: IDWriteFontFace GetGdiCompatibleGlyphMetrics-Methode
-description: Ruft Glyphenmetriken in Schriftentwurfseinheiten mit den Rückgabewerten ab, die mit den von GDI erzeugten Werten kompatibel sind.
+description: Abrufen von Glyphenmetriken in Schriftentwurfseinheiten mit den Rückgabewerten, die mit dem von GDI erzeugten Wert kompatibel sind.
 ms.assetid: 7bda3916-6db3-4f56-b18c-288506c0b646
 keywords:
-- GetGdiCompatibleGlyphMetrics-Methode – Direkter Schreibvorgang
-- GetGdiCompatibleGlyphMetrics-Methode Direct Write , IDWriteFontFace-Schnittstelle
+- GetGdiCompatibleGlyphMetrics-Methode – Direkter Schreibzugriff
+- GetGdiCompatibleGlyphMetrics-Methode Direct Write, IDWriteFontFace-Schnittstelle
 - IDWriteFontFace-Schnittstelle Direct Write , GetGdiCompatibleGlyphMetrics-Methode
 topic_type:
 - apiref
@@ -25,7 +25,7 @@ ms.locfileid: "117816500"
 ---
 # <a name="idwritefontfacegetgdicompatibleglyphmetrics-method"></a>IDWriteFontFace::GetGdiCompatibleGlyphMetrics-Methode
 
-Ruft Glyphenmetriken in Schriftentwurfseinheiten mit den Rückgabewerten ab, die mit den von GDI erzeugten Werten kompatibel sind.
+Abrufen von Glyphenmetriken in Schriftentwurfseinheiten mit den Rückgabewerten, die mit dem von GDI erzeugten Wert kompatibel sind.
 
 ## <a name="syntax"></a>Syntax
 
@@ -54,7 +54,7 @@ virtual HRESULT GetGdiCompatibleGlyphMetrics(
 
 Typ: **FLOAT**
 
-Die ogical-Größe der Schriftart in DIP-Einheiten.
+Der ogische Schriftgrad der Schriftart in DIP-Einheiten.
 
 </dd> <dt>
 
@@ -72,7 +72,7 @@ Die Anzahl der physischen Pixel pro DIP.
 
 Typ: **const [**DWRITE \_ MATRIX**](/windows/win32/api/dwrite/ns-dwrite-dwrite_matrix) \***
 
-Eine optionale Transformation, die auf die Glyphen und ihre Positionen angewendet wird. Diese Transformation wird nach der Skalierung angewendet, die durch den Schriftgrad und *pixelsPerDip* angegeben wird.
+Eine optionale Transformation, die auf die Glyphen und ihre Positionen angewendet wird. Diese Transformation wird nach der Skalierung angewendet, die durch den Schriftgrad und *pixelsPerDip angegeben wird.*
 
 </dd> <dt>
 
@@ -81,7 +81,7 @@ Eine optionale Transformation, die auf die Glyphen und ihre Positionen angewende
 
 Typ: **BOOL**
 
-Wenn **false** festgelegt ist, sind die Metriken mit den Metriken von GDI-Aliastext identisch. Bei Festlegung auf **TRUE** sind die Metriken mit den Metriken von Text identisch, die von GDI mithilfe einer Schriftart gemessen werden, die mit **CLEARTYPE \_ NATURAL \_ QUALITY** erstellt wurde.
+Wenn false festgelegt **ist,** sind die Metriken mit den Metriken des GDI-Aliastexts identisch. Wenn diese Eigenschaft **auf TRUE** festgelegt ist, sind die Metriken identisch mit den Metriken von Text, der von GDI mithilfe einer Schriftart gemessen wird, die mit **CLEARTYPE NATURAL QUALITY erstellt \_ \_ wurde.**
 
 </dd> <dt>
 
@@ -90,7 +90,7 @@ Wenn **false** festgelegt ist, sind die Metriken mit den Metriken von GDI-Aliast
 
 Typ: **const UINT16 \***
 
-Ein Array von Glyphenindizes, für die die Metriken berechnet werden sollen.
+Ein Array von Glyphenindizes, für die die Metriken berechnet werden.
 
 </dd> <dt>
 
@@ -106,9 +106,9 @@ Die Anzahl der Elemente im *glyphIndices-Array.*
 *glyphMetrics* \[ out\]
 </dt> <dd>
 
-Typ: **[ **DWRITE-GLYPHENMETRIKEN \_ \_**](/windows/win32/api/dwrite/ns-dwrite-dwrite_glyph_metrics)\***
+Typ: **[ **METRIKEN \_ DES DWRITE-GLYPHEN \_**](/windows/win32/api/dwrite/ns-dwrite-dwrite_glyph_metrics)\***
 
-Ein Array von [**DWRITE-GLYPH \_ \_ METRICS-Strukturen,**](/windows/win32/api/dwrite/ns-dwrite-dwrite_glyph_metrics) die von dieser Funktion gefüllt werden. Die Metriken befinden sich in Schriftentwurfseinheiten.
+Ein Array von [**\_ DWRITE-GLYPH-METRIKstrukturen, \_**](/windows/win32/api/dwrite/ns-dwrite-dwrite_glyph_metrics) die von dieser Funktion gefüllt werden. Die Metriken befinden sich in Schriftentwurfseinheiten.
 
 </dd> <dt>
 
@@ -117,7 +117,7 @@ Ein Array von [**DWRITE-GLYPH \_ \_ METRICS-Strukturen,**](/windows/win32/api/dw
 
 Typ: **BOOL**
 
-Ein BOOL-Wert, der angibt, ob die Schriftart in einer seitlichen Ausführung verwendet wird. Dies kann sich auf die Glyphenmetriken auswirken, wenn die Schriftart über eine schräge Simulation verfügt, da sich die schräge Schrägungssimulation von der nicht seitlichen Schrägungssimulation unterscheidet.
+Ein BOOL-Wert, der angibt, ob die Schriftart in einer seitwärts ausgeführten Ausführung verwendet wird. Dies kann sich auf die Glyphenmetriken auswirken, wenn die Schriftart über eine schräge Simulation verfügt, da sich die schräge Simulation seitwärts von der nicht seitlichen schrägen Simulation unterscheidet.
 
 </dd> </dl>
 
@@ -125,7 +125,7 @@ Ein BOOL-Wert, der angibt, ob die Schriftart in einer seitlichen Ausführung ver
 
 Typ: **HRESULT**
 
-**Standard-HRESULT-Fehlercode.** Wenn sich einer der Eingabeglyphenindizes außerhalb des gültigen Glyphenindexbereichs für die aktuelle Schriftart befindet, wird **E \_ INVALIDARG** zurückgegeben.
+HRESULT-Standardfehlercode.  Wenn einer der Eingabe-Glyphenindizes außerhalb des gültigen Glyphenindexbereichs für das aktuelle Schriftartgesicht liegt, wird **E \_ INVALIDARG** zurückgegeben.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -138,7 +138,7 @@ Typ: **HRESULT**
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 

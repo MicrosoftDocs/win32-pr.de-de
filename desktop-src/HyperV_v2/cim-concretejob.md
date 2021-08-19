@@ -1,5 +1,5 @@
 ---
-description: Eine konkrete Version der CIM- \_ Auftrags Klasse. Diese Klasse stellt eine generische instanziier Bare Arbeitseinheit dar, die ausgeführt werden soll, z. b. einen Batch oder einen Druckauftrag.
+description: Eine konkrete Version der CIM \_ Job-Klasse. Diese Klasse stellt eine generische instanziierbare Arbeitseinheit dar, die ausgeführt werden soll, z. B. ein Batch oder ein Druckauftrag.
 ms.assetid: fad4d894-d1f5-428d-819f-74966dd9f410
 title: CIM_ConcreteJob-Klasse
 ms.topic: reference
@@ -18,16 +18,16 @@ api_type:
 - DllExport
 api_location:
 - vmms.exe
-ms.openlocfilehash: 949d7c85643919f784a82e7722c9d49a9d9d2e97
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: a62ab2392ce2c069aa88ebb465f7028368f30bd5432cf96559c7eebe6edb8bdd
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106356819"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117813161"
 ---
-# <a name="cim_concretejob-class"></a>CIM- \_ Klasse "concretejob"
+# <a name="cim_concretejob-class"></a>CIM \_ ConcreteJob-Klasse
 
-Eine konkrete Version der [**CIM- \_ Auftrags**](cim-job.md) Klasse. Diese Klasse stellt eine generische instanziier Bare Arbeitseinheit dar, die ausgeführt werden soll, z. b. einen Batch oder einen Druckauftrag.
+Eine konkrete Version der [**CIM \_ Job-Klasse.**](cim-job.md) Diese Klasse stellt eine generische instanziierbare Arbeitseinheit dar, die ausgeführt werden soll, z. B. ein Batch oder ein Druckauftrag.
 
 ## <a name="syntax"></a>Syntax
 
@@ -45,21 +45,21 @@ class CIM_ConcreteJob : CIM_Job
 
 ## <a name="members"></a>Member
 
-Die CIM-Klasse " **\_ concretejob** " verfügt über diese Typen von Membern:
+Die **CIM \_ ConcreteJob-Klasse** verfügt über folgende Typen von Membern:
 
 -   [Methoden](#methods)
 -   [Eigenschaften](#properties)
 
 ### <a name="methods"></a>Methoden
 
-Die CIM-Klasse " **\_ concretejob** " verfügt über diese Methoden.
+Die **CIM \_ ConcreteJob-Klasse** verfügt über diese Methoden.
 
 
 
-| Methode                                                           | BESCHREIBUNG                                                                          |
+| Methode                                                           | Beschreibung                                                                          |
 |:-----------------------------------------------------------------|:-------------------------------------------------------------------------------------|
-| [**GetError**](cim-concretejob-geterror.md)                     | Hiermit werden Fehlerinformationen für den Betriebsstatus eines konkreten Auftrags abgerufen.<br/> |
-| [**RequestStateChange**](cim-concretejob-requeststatechange.md) | Fordert die angegebene Zustandsänderung an einen konkreten Auftrag an.<br/>                    |
+| [**GetError**](cim-concretejob-geterror.md)                     | Ruft Fehlerinformationen für den Betriebsstatus eines konkreten Auftrags ab.<br/> |
+| [**RequestStateChange**](cim-concretejob-requeststatechange.md) | Fordert die angegebene Zustandsänderung in einen konkreten Auftrag an.<br/>                    |
 
 
 
@@ -67,35 +67,35 @@ Die CIM-Klasse " **\_ concretejob** " verfügt über diese Methoden.
 
 ### <a name="properties"></a>Eigenschaften
 
-Die CIM-Klasse " **\_ concretejob** " verfügt über diese Eigenschaften.
+Die **CIM \_ ConcreteJob-Klasse** verfügt über diese Eigenschaften.
 
 <dl> <dt>
 
 **InstanceID**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**Key**](/windows/desktop/WmiSdk/key-qualifier), [**override**](/windows/desktop/WmiSdk/standard-qualifiers) ("InstanceId")
+Qualifizierer: [**Schlüssel**](/windows/desktop/WmiSdk/key-qualifier), [**Außerkraftsetzung**](/windows/desktop/WmiSdk/standard-qualifiers) ("InstanceID")
 </dt> </dl>
 
-Eindeutig und verdeckt identifiziert eine Instanz dieser Klasse innerhalb des Gültigkeits Bereichs des enthaltenden Namespace.
+Identifiziert eine Instanz dieser Klasse innerhalb des Bereichs des enthaltenden Namespaces eindeutig und nicht transparent.
 
 > [!IMPORTANT]
 >
-> Um die Eindeutigkeit innerhalb des Namespaces sicherzustellen, sollte der Wert der **InstanceId-** Eigenschaft im folgenden Muster erstellt werden: *OrgId*:*localId*
+> Um die Eindeutigkeit innerhalb des Namespace sicherzustellen, sollte der Wert der **InstanceID-Eigenschaft** im folgenden Muster erstellt werden: *OrgID*:*LocalID*
 >
-> *OrgId* muss einen urheberrechtlich geschützten oder anderweitig eindeutigen Namen enthalten, der der Geschäfts Entität gehört, die die **InstanceId** definiert, oder eine registrierte ID ist, die von einer anerkannten globalen Autorität zugewiesen wird. Dieses Muster ähnelt der Struktur von Schema Klassennamen. Um die Eindeutigkeit sicherzustellen, muss der erste Doppelpunkt in **InstanceId** zwischen der *OrgId* und der *Lok-* ID liegen. Daher darf die *OrgId* keinen Doppelpunkt (': ') enthalten.
+> *OrgID* muss einen urheberrechtlich geschützten, markengeschützten oder anderweitig eindeutigen Namen enthalten, der sich im Besitz der Geschäftsentität befindet, die die **Instanz-ID** definiert, oder es muss sich um eine registrierte ID handeln, die von einer anerkannten globalen Autorität zugewiesen wird. Dieses Muster ähnelt der Struktur von Schemaklassennamen. Darüber hinaus muss der erste Doppelpunkt in **InstanceID** zwischen *orgID* und *LocalID* stehen, um eindeutig zu sein. Daher darf die *OrgID* keinen Doppelpunkt (":") enthalten.
 >
-> *LocalId* wird von der Geschäfts Entität ausgewählt und sollte nicht erneut verwendet werden, um verschiedene zugrunde liegende reale Elemente zu identifizieren.
+> *LocalID* wird von der Geschäftsentität ausgewählt und sollte nicht erneut verwendet werden, um verschiedene zugrunde liegende reale Elemente zu identifizieren.
 >
-> Wenn das obige Muster nicht verwendet wird, muss die definierende Entität sicherstellen, dass der resultierende **InstanceId** -Wert nicht für **InstanceId** -Eigenschaften wieder verwendet wird, die von diesem Anbieter oder von anderen Anbietern für diesen Namespace erstellt werden.
+> Wenn das obige Muster nicht verwendet wird, muss die definierende Entität sicherstellen, dass der resultierende **InstanceID-Wert** nicht für alle **InstanceID-Eigenschaften** wiederverwendet wird, die von diesem Anbieter oder anderen Anbietern für diesen Namespace erstellt werden.
 >
-> Für von DMTF (verteilte Management Task Force) definierte Instanzen muss das Muster verwendet werden, wenn die *OrgId* auf CIM festgelegt ist.
+> Für definierte DMTF-Instanzen (Distributed Management Task Force) muss das Muster mit der *OrgID* verwendet werden, die auf CIM festgelegt ist.
 
  
 
@@ -104,13 +104,13 @@ Eindeutig und verdeckt identifiziert eine Instanz dieser Klasse innerhalb des G�
 **JobState**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt16**
+Datentyp: **uint16**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Der Betriebsstatus des Auftrags und der Übergang zwischen diesen Zuständen.
+Der Betriebszustand des Auftrags und der Übergang zwischen diesen Zuständen.
 
 <dt>
 
@@ -121,24 +121,24 @@ Der Betriebsstatus des Auftrags und der Übergang zwischen diesen Zuständen.
 
 </dt> <dd>
 
-der Auftrag wurde nie gestartet.
+der Auftrag wurde noch nie gestartet.
 
 </dd> <dt>
 
 <span id="Starting"></span><span id="starting"></span><span id="STARTING"></span>
 
-<span id="Starting"></span><span id="starting"></span><span id="STARTING"></span>Wird **gestartet** (3)
+<span id="Starting"></span><span id="starting"></span><span id="STARTING"></span>**Ab** (3)
 
 
 </dt> <dd>
 
-Der Auftrag wechselt von den Zuständen "neu", "angehalten" oder "Dienst" in den Zustand "wird ausgeführt".
+Der Auftrag wechselt vom Status "Neu", "Angehalten" oder "Dienst" in den Status "Wird ausgeführt".
 
 </dd> <dt>
 
 <span id="Running"></span><span id="running"></span><span id="RUNNING"></span>
 
-<span id="Running"></span><span id="running"></span><span id="RUNNING"></span>Wird **ausgeführt** (4)
+<span id="Running"></span><span id="running"></span><span id="RUNNING"></span>**Wird ausgeführt** (4)
 
 
 </dt> <dd>
@@ -149,23 +149,23 @@ Der Auftrag wird ausgeführt.
 
 <span id="Suspended"></span><span id="suspended"></span><span id="SUSPENDED"></span>
 
-<span id="Suspended"></span><span id="suspended"></span><span id="SUSPENDED"></span>Angeh **alten (5** )
+<span id="Suspended"></span><span id="suspended"></span><span id="SUSPENDED"></span>**Angehalten** (5)
 
 
 </dt> <dd>
 
-Der Auftrag wurde angehalten, kann jedoch nahtlos neu gestartet werden.
+Der Auftrag wird beendet, kann aber nahtlos neu gestartet werden.
 
 </dd> <dt>
 
 <span id="Shutting_Down"></span><span id="shutting_down"></span><span id="SHUTTING_DOWN"></span>
 
-<span id="Shutting_Down"></span><span id="shutting_down"></span><span id="SHUTTING_DOWN"></span>**Herunter** fahren (6)
+<span id="Shutting_Down"></span><span id="shutting_down"></span><span id="SHUTTING_DOWN"></span>**Herunterfahren** (6)
 
 
 </dt> <dd>
 
-Der Auftrag wechselt in den Zustand "abgeschlossen", "beendet" oder "abgebrochen".
+Der Auftrag wechselt in den Zustand "Abgeschlossen", "Beendet" oder "Beendet".
 
 </dd> <dt>
 
@@ -187,18 +187,18 @@ Der Auftrag wurde normal abgeschlossen.
 
 </dt> <dd>
 
-Der Auftrag wurde mit dem Status "beenden" beendet Change Request. Der Auftrag und alle zugrunde liegenden Prozesse werden beendet und können (Dies ist Auftrags spezifisch) nur als neuer Auftrag neu gestartet werden.
+Der Auftrag wurde durch eine Beendigungsstatusänderungsanforderung beendet. Der Auftrag und alle zugrunde liegenden Prozesse werden beendet und können nur als neuer Auftrag neu gestartet werden (dies ist auftragsspezifisch).
 
 </dd> <dt>
 
 <span id="Killed"></span><span id="killed"></span><span id="KILLED"></span>
 
-<span id="Killed"></span><span id="killed"></span><span id="KILLED"></span>Abgeb **Rochen (9** )
+<span id="Killed"></span><span id="killed"></span><span id="KILLED"></span>**Killed** (9)
 
 
 </dt> <dd>
 
-Der Auftrag wurde mit dem Status "Kill" beendet Change Request. Die zugrunde liegenden Prozesse wurden möglicherweise noch ausgeführt, und die Bereinigung ist möglicherweise erforderlich, um Ressourcen freizugeben.
+Der Auftrag wurde durch eine Statusänderungsanforderung "Kill" beendet. Zugrunde liegende Prozesse wurden möglicherweise weiterhin ausgeführt, und möglicherweise ist eine Bereinigung erforderlich, um Ressourcen frei zu machen.
 
 </dd> <dt>
 
@@ -209,7 +209,7 @@ Der Auftrag wurde mit dem Status "Kill" beendet Change Request. Die zugrunde lie
 
 </dt> <dd>
 
-Der Auftrag befindet sich in einem nicht ordnungsgemäßen Zustand, der möglicherweise auf eine Fehlerbedingung hinweist. Der tatsächliche Status wird möglicherweise auch in auftragsspezifischen Objekten angezeigt.
+Der Auftrag befindet sich in einem ungewöhnlichen Zustand, der auf eine Fehlerbedingung hindeuten kann. Der tatsächliche Status wird möglicherweise über auftragsspezifische Objekte angezeigt.
 
 </dd> <dt>
 
@@ -220,7 +220,7 @@ Der Auftrag befindet sich in einem nicht ordnungsgemäßen Zustand, der möglich
 
 </dt> <dd>
 
-Der Auftrag befindet sich in einem herstellerspezifischen Zustand, der die Problem Ermittlung, Lösung oder beides unterstützt.
+Der Auftrag befindet sich in einem anbieterspezifischen Zustand, der die Problemermittlung, -lösung oder beides unterstützt.
 
 </dd> <dt>
 
@@ -231,20 +231,20 @@ Der Auftrag befindet sich in einem herstellerspezifischen Zustand, der die Probl
 
 </dt> <dd>
 
-Es wird darauf gewartet, dass ein Client eine Abfrage auflöst.
+Warten auf das Auflösen einer Abfrage durch einen Client.
 
 </dd> <dt>
 
 <span id="DMTF_Reserved"></span><span id="dmtf_reserved"></span><span id="DMTF_RESERVED"></span>
 
-<span id="DMTF_Reserved"></span><span id="dmtf_reserved"></span><span id="DMTF_RESERVED"></span>**DMTF reserviert** (13.. 32767)
+<span id="DMTF_Reserved"></span><span id="dmtf_reserved"></span><span id="DMTF_RESERVED"></span>**DMTF reserviert** (13..32767)
 
 
 </dt> <dd></dd> <dt>
 
 <span id="Vendor_Reserved"></span><span id="vendor_reserved"></span><span id="VENDOR_RESERVED"></span>
 
-<span id="Vendor_Reserved"></span><span id="vendor_reserved"></span><span id="VENDOR_RESERVED"></span>**Anbieter reserviert** (32768.65535)
+<span id="Vendor_Reserved"></span><span id="vendor_reserved"></span><span id="VENDOR_RESERVED"></span>**Reservierter Anbieter** (32768..65535)
 
 
 </dt> <dd></dd> </dl>
@@ -254,16 +254,16 @@ Es wird darauf gewartet, dass ein Client eine Abfrage auflöst.
 **Name**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**erforderlich**](/windows/desktop/WmiSdk/standard-qualifiers), [**außer Kraft**](/windows/desktop/WmiSdk/standard-qualifiers) Setzung ("Name")
+Qualifizierer: [**Erforderlich,**](/windows/desktop/WmiSdk/standard-qualifiers) [**Außerkraftsetzung**](/windows/desktop/WmiSdk/standard-qualifiers) ("Name")
 </dt> </dl>
 
-Der benutzerfreundliche Name der-Instanz. Außerdem kann der benutzerfreundliche Name als Eigenschaft für eine Suche oder Abfrage verwendet werden.
+Der benutzerfreundliche Name der Instanz. Darüber hinaus kann der benutzerfreundliche Name als Eigenschaft für eine Suche oder Abfrage verwendet werden.
 
 > [!Note]  
 > Der Name muss innerhalb des Namespace nicht eindeutig sein.
@@ -272,35 +272,35 @@ Der benutzerfreundliche Name der-Instanz. Außerdem kann der benutzerfreundliche
 
 </dd> <dt>
 
-**Timebeforeremoval**
+**TimeBeforeRemoval**
 </dt> <dd> <dl> <dt>
 
-**Datentyp: DateTime**
+Datentyp: **datetime**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
 </dt> <dt>
 
-Qualifizierer: [ **erforderlich**](/windows/desktop/WmiSdk/standard-qualifiers)
+Qualifizierer: [ **Erforderlich**](/windows/desktop/WmiSdk/standard-qualifiers)
 </dt> </dl>
 
 Gibt an, wie lange ein abgeschlossener Auftrag beibehalten wird. Der Standardwert ist "00000000000500.000000:000" (fünf Minuten).
 
 </dd> <dt>
 
-**Timeoflaststatechange**
+**TimeOfLastStateChange**
 </dt> <dd> <dl> <dt>
 
-**Datentyp: DateTime**
+Datentyp: **datetime**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Das Datum oder die Uhrzeit der letzten Änderung des Auftrags Zustands.
+Das Datum oder die Uhrzeit der letzten Änderung des Auftragszustands.
 
 > [!Note]  
-> Wenn der Status des Auftrags nicht geändert wurde und diese Eigenschaft aufgefüllt ist, muss Sie auf einen Wert von 0 (null) festgelegt werden.
+> Wenn sich der Status des Auftrags nicht geändert hat und diese Eigenschaft aufgefüllt wird, muss sie auf einen Intervallwert von 0 (null) festgelegt werden.
 
  
 
@@ -314,8 +314,8 @@ Das Datum oder die Uhrzeit der letzten Änderung des Auftrags Zustands.
 |-------------------------------------|---------------------------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 8<br/>                                                                                    |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2012<br/>                                                                          |
-| Namespace<br/>                | \\Stammvirtualisierung \\ v2<br/>                                                                     |
-| MOF<br/>                      | <dl> <dt>Windowsvirtualization. v2. MOF</dt> </dl> |
+| Namespace<br/>                | \\Root-Virtualisierung \\ v2<br/>                                                                     |
+| MOF<br/>                      | <dl> <dt>WindowsVirtualization.V2.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Vmms.exe</dt> </dl>                     |
 
 
@@ -324,7 +324,7 @@ Das Datum oder die Uhrzeit der letzten Änderung des Auftrags Zustands.
 
 <dl> <dt>
 
-[**CIM- \_ Auftrag**](cim-job.md)
+[**\_CIM-Auftrag**](cim-job.md)
 </dt> </dl>
 
  

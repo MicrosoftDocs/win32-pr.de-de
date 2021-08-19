@@ -1,6 +1,6 @@
 ---
-title: Meldungen zu Trackbar-Steuerelementen
-description: Meldungen zu Trackbar-Steuerelementen
+title: Trackbar-Steuerelementmeldungen
+description: Trackbar-Steuerelementmeldungen
 ms.assetid: 1640fc7c-5fe5-4b11-9517-2608b837eedf
 ms.topic: article
 ms.date: 05/31/2018
@@ -11,7 +11,7 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 08/11/2021
 ms.locfileid: "118414946"
 ---
-# <a name="trackbar-control-messages"></a>Meldungen zu Trackbar-Steuerelementen
+# <a name="trackbar-control-messages"></a>Trackbar-Steuerelementmeldungen
 
 ## <a name="in-this-section"></a>In diesem Abschnitt
 

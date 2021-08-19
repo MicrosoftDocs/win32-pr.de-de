@@ -19,7 +19,7 @@ Verwenden Sie die folgenden Attribute für die Fehlerbehandlung.
 
 
 
-| attribute                                                                | Verbrauch                                                                                                                                                                                                                                                                                                  |
+| attribute                                                                | Verwendung                                                                                                                                                                                                                                                                                                  |
 |--------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | [**\_ Comm-Statusfehlerstatus**](comm-status.md)[**\_**](fault-status.md) | Lassen Sie ihre Clientanwendung Ausnahmen ordnungsgemäß behandeln, indem Kommunikations- und Serverfehler als Parameterwerte an den Client zurückgegeben werden. Die Clientanwendung kann dann die RPC-Laufzeitfunktion [**DceErrorInqText**](/windows/desktop/api/rpcdce/nf-rpcdce-dceerrorinqtext) aufrufen, um eine Fehlermeldung an den Benutzer weiterzuleiten. |
 

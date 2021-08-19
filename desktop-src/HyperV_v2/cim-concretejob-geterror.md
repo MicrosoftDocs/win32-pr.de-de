@@ -1,7 +1,7 @@
 ---
 description: Ruft einen Fehler aufgrund eines fehlgeschlagenen Auftrags ab.
 ms.assetid: d499eb91-e1cc-4792-b32d-5a8875eebbb7
-title: GetError-Methode der CIM_ConcreteJob-Klasse
+title: GetError-Methode der CIM_ConcreteJob Klasse
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,16 +13,16 @@ api_type:
 - COM
 api_location:
 - vmms.exe
-ms.openlocfilehash: aa9ed87f2d484286d91d14c4183d2ce3b6f41cfa
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 0b43d433bf9d2a3967efcc4a2e927d3bf687ebfa5ac67d7c7e34c48c34832c26
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106345166"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117813266"
 ---
-# <a name="geterror-method-of-the-cim_concretejob-class"></a>GetError-Methode der CIM- \_ Klasse "concretejob"
+# <a name="geterror-method-of-the-cim_concretejob-class"></a>GetError-Methode der CIM \_ ConcreteJob-Klasse
 
-Ruft einen Fehler aufgrund eines fehlgeschlagenen Auftrags ab. Wenn der Auftrag ausgeführt wird oder ohne Fehler beendet wurde, gibt diese Methode keine [**CIM- \_ Fehler**](cim-error.md) Instanz zurück. Wenn der Auftrag jedoch aufgrund eines internen Problems fehlgeschlagen ist oder der Auftrag von einem Client beendet wurde, wird eine **CIM- \_ Fehler** Instanz zurückgegeben.
+Ruft einen Fehler aufgrund eines fehlgeschlagenen Auftrags ab. Wenn der Auftrag ausgeführt wird oder ohne Fehler beendet wurde, gibt diese Methode keine [**\_ CIM-Fehlerinstanz**](cim-error.md) zurück. Wenn der Auftrag jedoch aufgrund eines internen Problems fehlgeschlagen ist oder weil der Auftrag von einem Client beendet wurde, wird eine **\_ CIM-Fehlerinstanz** zurückgegeben.
 
 ## <a name="syntax"></a>Syntax
 
@@ -39,16 +39,16 @@ uint32 GetError(
 
 <dl> <dt>
 
-*Fehler* \[ vorgenommen\]
+*Fehler* \[ out\]
 </dt> <dd>
 
-Gibt eine [**CIM- \_ Fehler**](cim-error.md) Instanz zurück, wenn der **OperationalStatus** für den Auftrag nicht "OK" ist; andernfalls wird **null** zurückgegeben.
+Gibt eine [**\_ CIM-Fehlerinstanz**](cim-error.md) zurück, wenn **operationalStatus** für den Auftrag nicht "OK" ist. Andernfalls wird **NULL zurückgegeben.**
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt bei Erfolg 0 (null) zurück. Andernfalls wird ein Fehler zurückgegeben.
+Gibt bei Erfolg eine 0 zurück. andernfalls gibt einen Fehler zurück.
 
 <dl> <dt>
 
@@ -58,13 +58,13 @@ Gibt bei Erfolg 0 (null) zurück. Andernfalls wird ein Fehler zurückgegeben.
 **Nicht unterstützt** (1)
 </dt> <dt>
 
-**Nicht spezifizierter Fehler** (2)
+**Nicht angegebener Fehler** (2)
 </dt> <dt>
 
 **Timeout** (3)
 </dt> <dt>
 
-Fehler **(4** )
+**Fehler** (4)
 </dt> <dt>
 
 **Ungültiger Parameter** (5)
@@ -73,10 +73,10 @@ Fehler **(4** )
 **Zugriff verweigert** (6)
 </dt> <dt>
 
-**DMTF reserviert** (..)
+**DMTF Reserved** (..)
 </dt> <dt>
 
-**Hersteller spezifisch** (32768.65535)
+**Herstellerspezifisch** (32768..65535)
 </dt> </dl>
 
 ## <a name="requirements"></a>Anforderungen
@@ -88,7 +88,7 @@ Fehler **(4** )
 | Unterstützte Mindestversion (Client)<br/> | Windows 8.1<br/>                                                                                  |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2012 R2<br/>                                                                       |
 | Namespace<br/>                | \\Stammvirtualisierung \\ v2<br/>                                                                     |
-| MOF<br/>                      | <dl> <dt>Windowsvirtualization. v2. MOF</dt> </dl> |
+| MOF<br/>                      | <dl> <dt>WindowsVirtualization.V2.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Vmms.exe</dt> </dl>                     |
 
 
@@ -97,7 +97,7 @@ Fehler **(4** )
 
 <dl> <dt>
 
-[**CIM- \_ concretejob**](cim-concretejob.md)
+[**CIM \_ ConcreteJob**](cim-concretejob.md)
 </dt> </dl>
 
  

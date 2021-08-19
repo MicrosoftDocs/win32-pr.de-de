@@ -1,5 +1,5 @@
 ---
-description: 'Weitere Informationen finden Sie unter: EsentFatalException-Klasse'
+description: 'Weitere Informationen zu: EsentFatalException-Klasse'
 title: EsentFatalException-Klasse
 TOCTitle: EsentFatalException class
 ms:assetid: T:Microsoft.Isam.Esent.Interop.EsentFatalException
@@ -68,7 +68,7 @@ public abstract class EsentFatalException : EsentOperationException
 
 Alle öffentlichen statischen Elemente dieses Typs (Shared in Microsoft Visual Basic) sind threadsicher. Bei Instanzmembern ist die Threadsicherheit nicht gewährleistet.
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 #### <a name="reference"></a>Verweis
 

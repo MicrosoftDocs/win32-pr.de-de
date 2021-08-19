@@ -15,6 +15,6 @@ ms.locfileid: "118502490"
 
 Die **IDXCoreAdapterFactory-Schnittstelle** implementiert Methoden zum Generieren von DXCore-Adapterenumerationsobjekten und zum Abrufen ihrer Details. **IDXCoreAdapterFactory** erbt von der [IUnknown-Schnittstelle.](/windows/win32/api/unknwn/nn-unknwn-iunknown) Programmieranleitungen und Codebeispiele finden Sie unter [Using DXCore to enumerate adapters](../dxcore-enum-adapters.md)(Verwenden von DXCore zum Aufzählen von Adaptern).
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 [DXCore-Referenz](../dxcore-reference.md), [Verwenden von DXCore zum Aufzählen von Adaptern](../dxcore-enum-adapters.md)

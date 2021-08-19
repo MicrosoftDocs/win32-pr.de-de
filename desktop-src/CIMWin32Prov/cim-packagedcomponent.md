@@ -130,7 +130,7 @@ Diese Dokumentation wird von den CIM-Klassenbeschreibungen abgeleitet, die von D
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 

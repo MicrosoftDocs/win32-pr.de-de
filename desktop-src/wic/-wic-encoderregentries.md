@@ -14,7 +14,7 @@ ms.locfileid: "118711229"
 # <a name="encoder-specific-registry-entries"></a>Encoder-Specific Registrierungseinträge
 
 
-Zusätzlich zu den oben aufgeführten Einträgen für Encoder müssen Sie Ihren Encoder auch unter der Kategorie Windows Imaging Component (WIC)-Encoder registrieren, damit die Ermittlungs-Engine ihn finden kann. Hierzu erstellen Sie die folgenden Registrierungseinträge. Die erste GUID in den folgenden Einträgen ist der Kategoriebezeichner (CATID) für WICBitmapEncoders.
+Zusätzlich zu den oben aufgeführten Einträgen für den Encoder müssen Sie Ihren Encoder auch unter der Kategorie Windows Imaging Component (WIC)-Encoder registrieren, damit die Ermittlungs-Engine ihn finden kann. Hierzu erstellen Sie die folgenden Registrierungseinträge. Die erste GUID in den folgenden Einträgen ist der Kategoriebezeichner (CATID) für WICBitmapEncoders.
 
 ```
 HKEY_CLASSES_ROOT
@@ -26,9 +26,9 @@ HKEY_CLASSES_ROOT
                FriendlyName = {Name of Encoder}
 ```
 
-## <a name="registering-a-container-format-with-metadata-writers"></a>Registrieren eines Containerformats bei Metadatenschreibern
+## <a name="registering-a-container-format-with-metadata-writers"></a>Registrieren eines Containerformats bei Metadatenautoren
 
-Wenn Sie ein neues Containerformat für Ihren Codec erstellen, müssen Sie auch Registrierungseinträge erstellen, um Metadatenschreiber für die Metadatenblöcke in Ihren Images zu unterstützen. Die folgenden Einträge müssen unter dem Klassenbezeichner (CLSID) des Metadatenwriters für jedes Metadatenformat erstellt werden, das in Ihrem Containerformat unterstützt wird. Wenn Ihr Codec einen Tagged Image File Format(TIFF)-Container verwendet, sind diese Informationen bereits in der Registrierung enthalten, und Sie müssen diese Einträge nicht erstellen.
+Wenn Sie ein neues Containerformat für Ihren Codec erstellen, müssen Sie auch Registrierungseinträge erstellen, um Metadatenautoren für die Metadatenblöcke in Ihren Images zu unterstützen. Die folgenden Einträge müssen unter dem Klassenbezeichner (CLSID) des Metadatenwriters für jedes Metadatenformat erstellt werden, das in Ihrem Containerformat unterstützt wird. Wenn Ihr Codec einen TIFF-Container (Tagged Image File Format) verwendet, befinden sich diese Informationen bereits in der Registrierung, und Sie müssen diese Einträge nicht erstellen.
 
 ```
 HKEY_CLASSES_ROOT
@@ -41,7 +41,7 @@ HKEY_CLASSES_ROOT
                WriteOffset = Offset from beginning of header
 ```
 
-Wenn Sie ein Containerformat im TIFF- oder JPEG-Format verwenden, müssen Sie eine Zuordnung zwischen Ihrem Container und diesem Containerformat registrieren. Weitere Informationen finden Sie in der Einführung in [integration with Windows Fotogalerie and Windows Explorer](-wic-integrationregentries.md).
+Wenn Sie ein Containerformat im TIFF- oder JPEG-Format verwenden, müssen Sie eine Zuordnung zwischen Ihrem Container und diesem Containerformat registrieren. Weitere Informationen finden Sie in der Einführung in [Integration mit Windows Fotogalerie und Windows Explorer.](-wic-integrationregentries.md)
 
 ## <a name="related-topics"></a>Zugehörige Themen
 

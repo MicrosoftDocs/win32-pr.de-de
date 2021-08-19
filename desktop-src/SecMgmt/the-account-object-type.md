@@ -1,23 +1,23 @@
 ---
-description: Konto Objekte werden verwendet, um Berechtigungen anzugeben, oder System Zugriffsrechte, die für einen Benutzer oder Mitglieder von Gruppen oder lokalen Gruppen gewährt werden sollen.
+description: Kontoobjekte werden verwendet, um Berechtigungen oder Systemzugriffsrechte zu kennzeichnen, die einem Benutzer oder Mitgliedern von Gruppen oder lokalen Gruppen gewährt werden sollen.
 ms.assetid: 62f5af38-4862-40dd-8d88-4a0742c203d2
-title: Der Konto Objekttyp
+title: Der Kontoobjekttyp
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 18a33dcdd248c6ea16a39f036599930c5d564782
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 00cb5a3b18c8e28f7648978aca887dbce1a0edbcfe33a22ec4d949fe270a9300
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104343088"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118893207"
 ---
-# <a name="the-account-object-type"></a>Der Konto Objekttyp
+# <a name="the-account-object-type"></a>Der Kontoobjekttyp
 
-[**Konto**](account-object.md) Objekte werden verwendet, um [*Berechtigungen*](/windows/desktop/SecGloss/p-gly)anzugeben, oder System Zugriffsrechte, die für einen Benutzer oder Mitglieder von Gruppen oder lokalen Gruppen gewährt werden sollen.
+[**Kontoobjekte**](account-object.md) werden verwendet, um [*Berechtigungen*](/windows/desktop/SecGloss/p-gly)oder Systemzugriffsrechte zu kennzeichnen, die einem Benutzer oder Mitgliedern von Gruppen oder lokalen Gruppen gewährt werden sollen.
 
-[**Konto**](account-object.md) Objekte befinden sich im [**Richtlinien**](policy-object.md) Objekt. Möglicherweise gibt es keine oder mehrere dieser Objekte.
+[**Kontoobjekte**](account-object.md) befinden sich im [**Policy-Objekt.**](policy-object.md) Es kann 0 (null) oder mehr dieser Objekte geben.
 
-Das [**Account**](account-object.md) -Objekt weist keine Objekt spezifischen Datentypen auf.
+Das [**Account-Objekt**](account-object.md) weist keine objektspezifischen Datentypen auf.
 
  
 

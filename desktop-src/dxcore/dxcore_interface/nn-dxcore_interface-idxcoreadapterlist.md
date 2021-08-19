@@ -15,6 +15,6 @@ ms.locfileid: "118502435"
 
 Die **IDXCoreAdapterList-Schnittstelle** implementiert Methoden zum Abrufen von Adapterelementen aus einer generierten Liste sowie Details zur Liste. **IDXCoreAdapterList** erbt von der [IUnknown-Schnittstelle.](/windows/win32/api/unknwn/nn-unknwn-iunknown) Programmierleitfäden und Codebeispiele finden Sie unter [Verwenden von DXCore zum Aufzählen von Adaptern.](../dxcore-enum-adapters.md)
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 [DXCore-Referenz](../dxcore-reference.md), [Verwenden von DXCore zum Aufzählen von Adaptern](../dxcore-enum-adapters.md)
