@@ -1,19 +1,19 @@
 ---
-description: Der folgende Code ist die Datei "simples. c", bei der es sich um einen reinen IPv4-Windows-Sockets-Server handelt (eine IPv6-aktivierte Version der Datei "simples. c" finden Sie in Anhang B).
+description: Der folgende Code ist die Simples.c-Datei, bei der es sich um einen nur IPv4-Windows Sockets-Server handelt (eine IPv6-fähige Version der Datei Simples.c finden Sie in Anhang B).
 ms.assetid: 02e599e9-8652-4ca1-9355-b989dadedcdf
-title: Nur-IPv4-Server Code
+title: Nur IPv4-Servercode
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 822ad0775c512e5a00ec0695b2967d8c09fd9253
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: a7748b6513747f30f2b7cc93a120f47648269196dd1f19efdfcdd1112c777ee9
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106354475"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119051458"
 ---
-# <a name="ipv4-only-server-code"></a>Nur-IPv4-Server Code
+# <a name="ipv4-only-server-code"></a>Nur IPv4-Servercode
 
-Der folgende Code ist die Datei "simples. c", bei der es sich um einen reinen IPv4-Windows-Sockets-Server handelt (eine IPv6-aktivierte Version der Datei "simples. c" finden Sie in Anhang B). Dieser Code wird nur zu Vergleichszwecken bereitgestellt – verwenden Sie Anhang B, um ein Beispiel für das Schreiben eines IPv6-fähigen Servers zu erhalten.
+Der folgende Code ist die Simples.c-Datei, bei der es sich um einen nur IPv4-Windows Sockets-Server handelt (eine IPv6-fähige Version der Datei Simples.c finden Sie in Anhang B). Dieser Code dient nur zu Vergleichszwecken. Verwenden Sie Anhang B als Beispiel für das Schreiben eines IPv6-fähigen Servers.
 
 
 ```C++

@@ -13,7 +13,7 @@ ms.locfileid: "118976310"
 ---
 # <a name="iagentcommandsetenabled"></a>IAgentCommand::SetEnabled
 
-\[Microsoft Agent ist ab Version Windows 7 veraltet und in nachfolgenden Versionen von Windows.\]
+\[Der Microsoft-Agent ist ab Windows 7 veraltet und in nachfolgenden Versionen von Windows möglicherweise nicht mehr verfügbar.\]
 
 ``` syntax
 HRESULT SetEnabled(
@@ -21,7 +21,7 @@ HRESULT SetEnabled(
 );
 ```
 
-Legt die [**Enabled-Eigenschaft**](enabled-property.md) für einen [**Befehl fest.**](/windows/desktop/lwef/the-command-object)
+Legt die [**Enabled-Eigenschaft**](enabled-property.md) für einen [**Befehl**](/windows/desktop/lwef/the-command-object)fest.
 
 -   Gibt S \_ OK zurück, um anzugeben, dass der Vorgang erfolgreich war.
 
@@ -30,15 +30,15 @@ Legt die [**Enabled-Eigenschaft**](enabled-property.md) für einen [**Befehl fes
 <span id="bEnabled"></span><span id="benabled"></span><span id="BENABLED"></span>*bEnabled*
 </dt> <dd>
 
-Ein boolescher Wert, der den Wert der [**Einstellung Aktiviert**](enabled-property.md) eines Befehls [**fest legt.**](/windows/desktop/lwef/the-command-object) **True** aktiviert den **Befehl**; **False** deaktiviert sie. Ein **deaktivierter Befehl** kann nicht ausgewählt werden.
+Ein boolescher Wert, der den Wert der [**Einstellung Aktiviert**](enabled-property.md) eines [**Befehls**](/windows/desktop/lwef/the-command-object)festlegt. **True** aktiviert den **Befehl**; **False** deaktiviert sie. Ein **deaktivierter Befehl** kann nicht ausgewählt werden.
 
 </dd> </dl>
 
-Für [**einen Befehl**](/windows/desktop/lwef/the-command-object) muss die [**Enabled-Eigenschaft**](enabled-property.md) auf **True festgelegt sein,** um ausgewählt werden zu können. Außerdem muss die [**Caption-Eigenschaft**](caption-property.md) und die [**Visible-Eigenschaft**](visible-property.md) auf **True** festgelegt sein, damit sie im Popupmenü des Zeichens angezeigt wird. Damit der **Befehl im Fenster** Sprachbefehle **angezeigt** wird, müssen Sie dessen [**Voice-Eigenschaft**](voice-property.md)festlegen.
+Für einen [**Befehl**](/windows/desktop/lwef/the-command-object) muss die [**Enabled-Eigenschaft**](enabled-property.md) auf **True** festgelegt sein, damit er auswählbar ist. Außerdem muss die [**Caption-Eigenschaft**](caption-property.md) und die [**Visible-Eigenschaft**](visible-property.md) auf **True** festgelegt sein, damit sie im Popupmenü des Zeichens angezeigt wird. Damit der **Befehl** im **Fenster "Sprachbefehle"** angezeigt wird, müssen Sie dessen [**Voice-Eigenschaft**](voice-property.md)festlegen.
 
 ## <a name="see-also"></a>Weitere Informationen
 
-[**IAgentCommand::GetCaption**](iagentcommand--getcaption.md), [**IAgentCommand::SetVoice**](iagentcommand--setvoice.md), [**IAgentCommands::Add**](iagentcommands--add.md), [**IAgentCommands::Insert**](iagentcommands--insert.md)
+[**IAgentCommand::GetCaption**](iagentcommand--getcaption.md), [**IAgentCommand::SetVoice,**](iagentcommand--setvoice.md) [**IAgentCommands::Add**](iagentcommands--add.md), [**IAgentCommands::Insert**](iagentcommands--insert.md)
 
 
  

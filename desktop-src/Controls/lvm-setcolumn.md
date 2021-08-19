@@ -1,9 +1,9 @@
 ---
-title: LVM_SETCOLUMN (Commctrl.h)
+title: LVM_SETCOLUMN-Nachricht (Commctrl.h)
 description: Legt die Attribute einer Listenansichtsspalte fest. Sie können diese Nachricht explizit oder mithilfe des ListView \_ SetColumn-Makros senden.
 ms.assetid: 8ca1c269-fd86-4561-940d-b75f8ca2b731
 keywords:
-- LVM_SETCOLUMN von Windows Steuerelementen
+- LVM_SETCOLUMN Windows-Steuerelemente für Nachrichten
 topic_type:
 - apiref
 api_name:
@@ -41,13 +41,13 @@ Index der Spalte.
 *lParam* 
 </dt> <dd>
 
-Zeiger auf eine [**LVCOLUMN-Struktur,**](/windows/win32/api/commctrl/ns-commctrl-lvcolumna) die die neuen Spaltenattribute enthält. Das **Maskenmitglied** gibt an, welche Spaltenattribute festgelegt werden. Wenn der **Masken** member den LVCF TEXT-Wert angibt, ist der pszText-Member die Adresse einer auf NULL terminierten Zeichenfolge, und das \_ **cchTextMax-Element** wird ignoriert. 
+Zeiger auf eine [**LVCOLUMN-Struktur,**](/windows/win32/api/commctrl/ns-commctrl-lvcolumna) die die neuen Spaltenattribute enthält. Der **Maskenmember** gibt an, welche Spaltenattribute festgelegt werden sollen. Wenn der **Maskenmember** den LVCF \_ TEXT-Wert angibt, ist der **pszText-Member** die Adresse einer auf NULL endenden Zeichenfolge, und der **cchTextMax-Member** wird ignoriert.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt **TRUE zurück,** wenn erfolgreich, andernfalls **FALSE.**
+Gibt **TRUE** zurück, wenn erfolgreich, **andernfalls FALSE.**
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -55,7 +55,7 @@ Gibt **TRUE zurück,** wenn erfolgreich, andernfalls **FALSE.**
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ Vista-Desktop-Apps\]<br/>                                        |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur Vista-Desktop-Apps\]<br/>                                        |
 | Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                                  |
 | Header<br/>                   | <dl> <dt>Commctrl.h</dt> </dl> |
 | Unicode- und ANSI-Name<br/>   | **LVM \_ SETCOLUMNW** (Unicode) und **LVM \_ SETCOLUMNW** (ANSI)<br/>               |

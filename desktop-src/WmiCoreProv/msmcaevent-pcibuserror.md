@@ -304,13 +304,13 @@ Datentyp: **uint64**
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-PCI-Bus-Anfordererbezeichner zum Zeitpunkt des Ereignisses.
+PCI Bus Requestor Identifier zum Zeitpunkt des Ereignisses.
 
 Weitere Informationen zur Verwendung von **uint64-Werten** in Skripts finden Sie unter [Skripterstellung in WMI.](/previous-versions//aa393262(v=vs.85))
 
 </dd> <dt>
 
-**\_ \_ \_ PCI-BUS-ANTWORTER-ID**
+**\_ \_ PCI-BUS-ANTWORT-ID \_**
 </dt> <dd> <dl> <dt>
 
 Datentyp: **uint64**
@@ -319,7 +319,7 @@ Datentyp: **uint64**
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-PCI-Busantworterbezeichner zum Zeitpunkt des Ereignisses.
+PCI-Bus-Antwortbezeichner zum Zeitpunkt des Ereignisses.
 
 Weitere Informationen zur Verwendung von **uint64-Werten** in Skripts finden Sie unter [Skripterstellung in WMI.](/previous-versions//aa393262(v=vs.85))
 
@@ -328,13 +328,13 @@ Weitere Informationen zur Verwendung von **uint64-Werten** in Skripts finden Sie
 **RawRecord**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **uint8-Array**
+Datentyp: **uint8 array**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Bytearray, das den unformatierten Fehlerdatensatz enthält, der von der Systemabstraktionsschicht (SAL) Windows wird. Die Anzahl der Elemente im Array wird von der **Size-Eigenschaft** angegeben.
+Ein Bytearray, das den Unformatierungsfehlerdatensatz enthält, der Windows der Systemabstraktionsschicht (SAL) angezeigt wird. Die Anzahl der Elemente im Array wird von der **Size-Eigenschaft** angegeben.
 
 </dd> <dt>
 
@@ -347,7 +347,7 @@ Datentyp: **uint64**
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Datensatzbezeichner des Fehlerdatensatzes für diesen Fehler.
+Datensatzbezeichner des Fehlerdatensatz für diesen Fehler.
 
 Weitere Informationen zur Verwendung von **uint64-Werten** in Skripts finden Sie unter [Skripterstellung in WMI.](/previous-versions//aa393262(v=vs.85))
 
@@ -362,7 +362,7 @@ Datentyp: **uint32**
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Größe des unformatierten Fehlerdatensatzes.
+Größe des unformatten Fehlerdatensatz.
 
 </dd> <dt>
 
@@ -375,7 +375,7 @@ Datentyp: **uint32**
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Typ der Ereignisprotokollmeldung. Diese Nachrichten entsprechen den Ereignisprotokollmeldungscodes, die verwendet werden, um Ereignisprotokollmeldungen vom Windows Ereignisprotokoll-Consumeranbieter einzufügen, wenn er eines der Ereignisse empfängt.
+Typ der Ereignisprotokollmeldung. Diese Nachrichten entsprechen den Ereignisprotokoll-Meldungscodes, die zum Einfügen von Ereignisprotokollmeldungen durch den Windows-Ereignisprotokoll-Consumeranbieter verwendet werden, wenn er eines der Ereignisse empfängt.
 
 </dd> <dt>
 
@@ -394,17 +394,17 @@ Validierungsbits, die verwendet werden, um die Gültigkeit der nachfolgenden Fel
 
 | Werte                                                                                  | Bedeutung                                          |
 |-----------------------------------------------------------------------------------------|--------------------------------------------------|
-| <dl> <dt>1 (0x1)</dt> </dl>      | DER \_ \_ PCI-BUS-FEHLERSTATUS \_ ist gültig.<br/>     |
+| <dl> <dt>1 (0x1)</dt> </dl>      | DER PCI \_ \_ \_ BUS-FEHLERSTATUS ist gültig.<br/>     |
 | <dl> <dt>2 (0x2)</dt> </dl>      | PCI \_ BUS ERROR TYPE ist \_ \_ gültig.<br/>       |
-| <dl> <dt>4 (0x4)</dt> </dl>      | DIE \_ PCI-BUS-ID \_ ist gültig.<br/>                |
+| <dl> <dt>4 (0x4)</dt> </dl>      | Die \_ \_ PCI-BUS-ID ist gültig.<br/>                |
 | <dl> <dt>8 (0x8)</dt> </dl>      | PCI \_ BUS ADDRESS ist \_ gültig.<br/>           |
 | <dl> <dt>16 (0x10)</dt> </dl>    | PCI \_ BUS DATA ist \_ gültig.<br/>              |
 | <dl> <dt>32 (0x20)</dt> </dl>    | PCI \_ BUS \_ CMD ist gültig.<br/>               |
 | <dl> <dt>64 (0x40)</dt> </dl>    | Die PCI \_ BUS \_ \_ REQUESTOR-ID ist gültig.<br/>     |
-| <dl> <dt>128 (0x80)</dt> </dl>   | DIE PCI \_ BUS \_ \_ RESPONDER-ID ist gültig.<br/>     |
-| <dl> <dt>256 (0x100)</dt> </dl>  | DIE PCI \_ \_ BUS-ZIEL-ID \_ ist gültig.<br/>        |
-| <dl> <dt>512 (0x200)</dt> </dl>  | DIE \_ \_ PCI-BUS-OEM-ID \_ ist gültig.<br/>           |
-| <dl> <dt>1024 (0x400)</dt> </dl> | DIE \_ \_ PCI-BUS-OEM-DATENSTRUKTUR \_ \_ ist gültig.<br/> |
+| <dl> <dt>128 (0x80)</dt> </dl>   | Die PCI \_ \_ \_ BUS-ANTWORT-ID ist gültig.<br/>     |
+| <dl> <dt>256 (0x100)</dt> </dl>  | Die PCI \_ \_ \_ BUS-ZIEL-ID ist gültig.<br/>        |
+| <dl> <dt>512 (0x200)</dt> </dl>  | Die PCI \_ \_ BUS-OEM-ID \_ ist gültig.<br/>           |
+| <dl> <dt>1024 (0x400)</dt> </dl> | PCI \_ BUS OEM DATA \_ \_ \_ STRUCT ist gültig.<br/> |
 
 
 
@@ -416,7 +416,7 @@ Weitere Informationen zur Verwendung von **uint64-Werten** in Skripts finden Sie
 
 ## <a name="remarks"></a>Hinweise
 
-Die **MSMCAEvent \_ PCIBusError-Klasse** wird von [**WMIEvent**](wmievent.md)abgeleitet.
+Die **MSMCAEvent \_ PCIBusError-Klasse** wird von [**WMIEvent abgeleitet.**](wmievent.md)
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -432,7 +432,7 @@ Die **MSMCAEvent \_ PCIBusError-Klasse** wird von [**WMIEvent**](wmievent.md)abg
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 

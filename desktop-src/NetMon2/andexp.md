@@ -1,7 +1,7 @@
 ---
-description: Die Struktur "andexp" enthält ein Array von Muster Übereinstimmungen, mit denen Frame-Daten ausgewertet werden.
+description: Die ANDEXP-Struktur enthält ein Array von Muster übereinstimmungen, die zum Auswerten von Framedaten verwendet werden.
 ms.assetid: e5f4c030-eb2b-4cc9-9032-9ad4701b6503
-title: Andexp-Struktur (Netmon. h)
+title: ANDEXP-Struktur (Netmon.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,16 +13,16 @@ api_type:
 - HeaderDef
 api_location:
 - Netmon.h
-ms.openlocfilehash: 1d27d5bdd51a45b31f518271053f44b45917cdeb
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 7ee2ac65e10e0dc9be46ab103fe21abcc78dc403302b298f3eb2fc83000802cc
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "104346838"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117982952"
 ---
-# <a name="andexp-structure"></a>Andexp-Struktur
+# <a name="andexp-structure"></a>ANDEXP-Struktur
 
-Die Struktur " **andexp** " enthält ein Array von Muster Übereinstimmungen, mit denen Frame-Daten ausgewertet werden.
+Die **ANDEXP-Struktur** enthält ein Array von Muster übereinstimmungen, die zum Auswerten von Framedaten verwendet werden.
 
 ## <a name="syntax"></a>Syntax
 
@@ -40,27 +40,27 @@ typedef struct _ANDEXP {
 
 <dl> <dt>
 
-**npatternmatches**
+**nPatternMatches**
 </dt> <dd>
 
-Anzahl der Muster Übereinstimmungen.
+Anzahl der Muster übereinstimmungen.
 
 </dd> <dt>
 
-**Patternmatch**
+**PatternMatch**
 </dt> <dd>
 
-Array von Muster Übereinstimmungs Elementen. Beachten Sie, dass jede **andexp** -Struktur bis zu vier Muster Übereinstimmungs Elemente enthalten kann. Weitere Informationen zu diesem Member finden Sie unter [Erfassungs Filter](capture-filters.md).
+Array von Muster match-Elementen. Beachten Sie, dass jede **ANDEXP-Struktur** bis zu vier Muster-Match-Elemente enthalten kann. Weitere Informationen zu diesem Member finden Sie unter [Erfassungsfilter.](capture-filters.md)
 
 </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die Muster im Muster Array " **patternmatch** \[ Max \_ Patterns" \] werden als Peers in logischen OR-Anweisungen im Format verknüpft.
+Die Muster im **PatternMatch** \[ MAX \_ \] PATTERNS-Array werden als Peers in logischen OR-Anweisungen im Format verknüpft.
 
 (Muster 1 \| \| Muster 2 \| \| Muster 3).
 
-Weitere Informationen zum Implementieren dieser Struktur finden Sie unter [Erfassungs Filter](capture-filters.md) .
+Weitere Informationen zum Implementieren dieser Struktur finden Sie unter [Erfassungsfilter.](capture-filters.md)
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -70,7 +70,7 @@ Weitere Informationen zum Implementieren dieser Struktur finden Sie unter [Erfas
 |-------------------------------------|-------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[nur Desktop-Apps\]<br/>                          |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                                |
-| Header<br/>                   | <dl> <dt>Netmon. h</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Netmon.h</dt> </dl> |
 
 
 
@@ -78,7 +78,7 @@ Weitere Informationen zum Implementieren dieser Struktur finden Sie unter [Erfas
 
 <dl> <dt>
 
-[Patternmatch](patternmatch.md)
+[PATTERNMATCH](patternmatch.md)
 </dt> </dl>
 
  

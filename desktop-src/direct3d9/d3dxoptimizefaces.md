@@ -1,5 +1,5 @@
 ---
-description: Generiert eine optimierte Gesichtszuordnung für eine Dreiecksliste.
+description: Generiert eine optimierte Gesichtsumwandung für eine Dreiecksliste.
 ms.assetid: 428c2af8-43e7-4cf7-8b9b-04ba5cff82c8
 title: D3DXOptimizeFaces-Funktion (D3DX9Mesh.h)
 ms.topic: reference
@@ -23,7 +23,7 @@ ms.locfileid: "118525229"
 ---
 # <a name="d3dxoptimizefaces-function"></a>D3DXOptimizeFaces-Funktion
 
-Generiert eine optimierte Gesichtszuordnung für eine Dreiecksliste.
+Generiert eine optimierte Gesichtsumwandung für eine Dreiecksliste.
 
 ## <a name="syntax"></a>Syntax
 
@@ -49,7 +49,7 @@ HRESULT D3DXOptimizeFaces(
 
 Typ: **[ **LPCVOID**](../winprog/windows-data-types.md)**
 
-Zeiger auf Indizes der Dreiecksliste, die zum Sortieren von Scheitelpunkten verwendet werden sollen.
+Zeiger auf Dreieckslistenindizes, die zum Ordnen von Scheitelpunkten verwendet werden.
 
 </dd> <dt>
 
@@ -58,7 +58,7 @@ Zeiger auf Indizes der Dreiecksliste, die zum Sortieren von Scheitelpunkten verw
 
 Typ: **[ **UINT**](../winprog/windows-data-types.md)**
 
-Anzahl der Gesichter in der Dreiecksliste. Bei 16-Bit-Gitternetzen ist dies auf 2^16 bis 1 (65535) oder weniger Gesichter beschränkt.
+Anzahl der Gesichter in der Dreiecksliste. Bei 16-Bit-Gittern ist dies auf 2^16 bis 1 (65535) oder weniger Gesichter beschränkt.
 
 </dd> <dt>
 
@@ -67,16 +67,16 @@ Anzahl der Gesichter in der Dreiecksliste. Bei 16-Bit-Gitternetzen ist dies auf 
 
 Typ: **[ **UINT**](../winprog/windows-data-types.md)**
 
-Anzahl der Scheitelpunkte, auf die von der Dreiecksliste verwiesen wird.
+Anzahl der Scheitelzeichen, auf die von der Dreiecksliste verwiesen wird.
 
 </dd> <dt>
 
-*Indizes32Bit* \[ In\]
+*Indices32Bit* \[ In\]
 </dt> <dd>
 
 Typ: **[ **BOOL**](../winprog/windows-data-types.md)**
 
-Flag, das den Indextyp angibt: **TRUE,** wenn Indizes 32-Bit-Indizes sind (mehr als 65535 Indizes), **FALSE,** wenn Indizes 16-Bit-Indizes sind (65535 oder weniger Indizes).
+Flag, das den Indextyp angibt: **TRUE,** wenn Indizes 32-Bit sind (mehr als 65535 Indizes), **FALSE,** wenn Indizes 16-Bit sind (65535 oder weniger Indizes).
 
 </dd> <dt>
 
@@ -93,11 +93,11 @@ Zeiger auf das ursprüngliche Gitternetz, das geteilt wurde, um das aktuelle Ges
 
 Typ: **[ **HRESULT**](https://msdn.microsoft.com/library/Bb401631(v=MSDN.10).aspx)**
 
-Wenn die Funktion erfolgreich ausgeführt wird, lautet der Rückgabewert D3D \_ OK. Wenn die Funktion fehlschlägt, kann der Rückgabewert einer der folgenden Werte sein: D3DERR \_ INVALIDCALL, E \_ OUTOFMEMORY.
+Wenn die Funktion erfolgreich ist, ist der Rückgabewert D3D \_ OK. Wenn die Funktion fehlschlägt, kann der Rückgabewert einer der folgenden sein: D3DERR \_ INVALIDCALL, E \_ OUTOFMEMORY.
 
 ## <a name="remarks"></a>Hinweise
 
-Die Optimierungsprozedur dieser Funktion entspricht funktional dem Aufruf von [**ID3DXMesh::Optimize**](id3dxmesh--optimize.md) mit dem D3DXMESHOPT \_ DEVICEINDEPENDENT-Flag, aber diese Funktion macht die Verwendung von Scheitelpunktcaches effizienter.
+Die Optimierungsprozedur dieser Funktion entspricht funktional dem Aufruf von [**ID3DXMesh::Optimize**](id3dxmesh--optimize.md) mit dem D3DXMESHOPT DEVICEINDEPENDENT-Flag, aber diese Funktion nutzt \_ Vertexcaches effizienter.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -110,11 +110,11 @@ Die Optimierungsprozedur dieser Funktion entspricht funktional dem Aufruf von [*
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 
-[Meshfunktionen](dx9-graphics-reference-d3dx-functions-mesh.md)
+[Mesh-Funktionen](dx9-graphics-reference-d3dx-functions-mesh.md)
 </dt> </dl>
 
  

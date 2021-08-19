@@ -13,12 +13,12 @@ api_type:
 - HeaderDef
 api_location:
 - d3dx9math.h
-ms.openlocfilehash: 3df0c94dbd49cf38d9230a2c5392df8497c64761
-ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
+ms.openlocfilehash: 5fa7e7155cdcf5c5dc1996dee1dcf02d0190e4bb91b4c319231e2f03168722c6
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2021
-ms.locfileid: "108115718"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118095458"
 ---
 # <a name="d3dxplane-structure-d3dx9mathh"></a>D3DXPLANE-Struktur (D3dx9math.h)
 
@@ -49,7 +49,7 @@ Typ: **[ **FLOAT**](../winprog/windows-data-types.md)**
 
 </dd> <dd>
 
-Der Koeffizienten der Clippingebene in der allgemeinen Ebenengleichung. Siehe Hinweise.
+Der Koeffizient der Clippingebene in der allgemeinen Ebenengleichung. Siehe Hinweise.
 
 </dd> <dt>
 
@@ -86,23 +86,23 @@ Der d-Koeffizient der Clippingebene in der allgemeinen Ebenengleichung. Siehe Hi
 
 </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die Member der **D3DXPLANE-Struktur** haben die Form der allgemeinen Ebenengleichung. Sie passen in die allgemeine Ebenengleichung, sodass **ein** x + **b** y + **c** z + **d** w = 0 ist.
+Die Elemente der **D3DXPLANE-Struktur** haben die Form der allgemeinen Ebenengleichung. Sie passen in die allgemeine Ebenengleichung, sodass **ein** x + **b** y + **c** z + **d** w = 0 ist.
 
-C++-Programmierer können die Vorteile der Operatorüberladung und Typcasting mit den [**D3DXPLANE-Erweiterungen**](d3dxplane-extensions.md) nutzen, die überladene Konstruktoren und Zuweisungs-, unäre und binäre Operatoren (einschließlich Gleichheitsoperatoren) implementieren.
+C++-Programmierer können mit den [**D3DXPLANE-Erweiterungen**](d3dxplane-extensions.md) die Operatorüberladung und Typüberladung nutzen, die überladene Konstruktoren und Zuweisungs-, unäre und binäre Operatoren (einschließlich Gleichheitsoperatoren) implementieren.
 
 ## <a name="requirements"></a>Anforderungen
 
 
 
-| Anforderungen | Wert |
+| Anforderung | Wert |
 |-------------------|----------------------------------------------------------------------------------------|
 | Header<br/> | <dl> <dt>D3dx9math.h</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 

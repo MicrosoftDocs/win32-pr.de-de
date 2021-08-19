@@ -1,62 +1,62 @@
 ---
-title: Abrufen von Aufgaben Eigenschafts Beispielen
-description: Um die Eigenschaften einer Aufgabe abzurufen, rufen Sie itaskscheduler aktivieren auf, um die Schnittstelle des Task-Objekts abzurufen, und rufen Sie dann die entsprechende ITask-Methode auf, um die gewünschte Aufgaben Eigenschaft abzurufen.
+title: Beispiele für das Abrufen von Aufgabeneigenschaft
+description: Rufen Sie zum Abrufen der Eigenschaften einer Aufgabe ITaskScheduler Activate auf, um die Schnittstelle des Aufgabenobjekts abzurufen, und rufen Sie dann die entsprechende ITask-Methode auf, um die task-Eigenschaft abzurufen, an der Sie interessiert sind.
 ms.assetid: 9ec9d836-c735-4a32-96b1-3dbd0a31b22a
 keywords:
-- Abrufen von Task Eigenschaften Taskplaner
+- Abrufen von Aufgabeneigenschaften Taskplaner
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 7e2b42bc8044171834b6d99e97c41e3f5c7048ff
-ms.sourcegitcommit: 592c9bbd22ba69802dc353bcb5eb30699f9e9403
+ms.openlocfilehash: f0e46554c32d9d30941fd837b91e80e8e20d915b0f1c68a665fd72c8f1624c8f
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "104316047"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119002388"
 ---
-# <a name="retrieving-task-property-examples"></a>Abrufen von Aufgaben Eigenschafts Beispielen
+# <a name="retrieving-task-property-examples"></a>Beispiele für das Abrufen von Aufgabeneigenschaft
 
-Rufen Sie zum Abrufen der Eigenschaften einer Aufgabe [**itaskscheduler:: Aktivierungs**](/windows/desktop/api/Mstask/nf-mstask-itaskscheduler-activate) auf, um die Schnittstelle des Task-Objekts abzurufen, und rufen Sie dann die entsprechende [**ITask**](/windows/desktop/api/Mstask/nn-mstask-itask) -Methode auf, um die gewünschte Aufgaben Eigenschaft abzurufen. Die unten auf der Seite aufgeführten Codebeispiele zeigen, wie die verschiedenen Task Eigenschaften abgerufen werden.
+Rufen Sie zum Abrufen der Eigenschaften einer Aufgabe [**ITaskScheduler::Activate**](/windows/desktop/api/Mstask/nf-mstask-itaskscheduler-activate) auf, um die Schnittstelle des Aufgabenobjekts abzurufen, und rufen Sie dann die entsprechende [**ITask-Methode**](/windows/desktop/api/Mstask/nn-mstask-itask) auf, um die task-Eigenschaft abzurufen, an der Sie interessiert sind. Die am unteren Rand der Seite aufgeführten Codebeispiele zeigen, wie die verschiedenen Aufgabeneigenschaften abgerufen werden.
 
-Die unten auf der Seite aufgeführten Codebeispiele zeigen, wie die Eigenschaften abgerufen werden, die für Aufgaben Objekte eindeutig sind. Weitere Informationen zu anderen [*Arbeits Element*](w.md) Eigenschaften, die auch für Aufgaben gelten, finden Sie unter [Abrufen von Beispielen für Arbeitselemente](retrieving-work-item-property-examples.md).
+Die am unteren Rand der Seite aufgeführten Codebeispiele zeigen, wie die Eigenschaften abgerufen werden, die für Aufgabenobjekte eindeutig sind. Informationen zu [*anderen Arbeitselementeigenschaften,*](w.md) die auch für Aufgaben gelten, finden Sie unter [Abrufen von Arbeitselementbeispielen.](retrieving-work-item-property-examples.md)
 
 > [!Note]  
-> Im folgenden Codebeispiel werden alle Schnittstellen freigegeben, nachdem Sie nicht mehr benötigt werden.
+> Im folgenden Codebeispiel werden alle Schnittstellen freigegeben, nachdem sie nicht mehr benötigt werden.
 
- 
+ 
 
-Beachten Sie Folgendes: Wenn Sie eine Zeichen folgen Eigenschaft (z. b. den Anwendungsnamen, Parameter oder das Arbeitsverzeichnis) abrufen, müssen Sie " [CoTaskMemFree](/windows/win32/api/combaseapi/nf-combaseapi-cotaskmemfree) " aufrufen, um den für die zurückgegebenen Zeichenfolge zugeordneten Arbeitsspeicher freizugeben.
+Beachten Sie, dass Sie beim Abrufen einer Zeichenfolgeneigenschaft (z. B. Anwendungsname, Parameter oder Arbeitsverzeichnis) [CoTaskMemFree](/windows/win32/api/combaseapi/nf-combaseapi-cotaskmemfree) aufrufen müssen, um den für die zurückgegebene Zeichenfolge zugeordneten Arbeitsspeicher frei zu geben.
 
-Im folgenden Verfahren wird beschrieben, wie eine Task Eigenschaft abgerufen wird.
+Im folgenden Verfahren wird beschrieben, wie eine Taskeigenschaft abgerufen wird.
 
-**So rufen Sie eine Task Eigenschaft ab**
+**So rufen Sie eine Aufgabeneigenschaft ab**
 
-1.  Aufrufen von [**CoInitialize**](/windows/win32/api/objbase/nf-objbase-coinitialize) zum Initialisieren der com-Bibliothek und von [**cokreateinstance**](/windows/win32/api/combaseapi/nf-combaseapi-cocreateinstance) zum Abrufen eines Taskplaner Objekts. (In diesen Beispielen wird davon ausgegangen, dass der Taskplaner-Dienst ausgeführt wird.)
-2.  Wenden Sie [**itaskscheduler:: Aktivieren**](/windows/desktop/api/Mstask/nf-mstask-itaskscheduler-activate) an, um die [**ITask**](/windows/desktop/api/Mstask/nn-mstask-itask) -Schnittstelle des Task-Objekts abzurufen. (Beachten Sie, dass in diesem Beispiel die Aufgabe "Test Aufgabe" abgerufen wird.)
-3.  Rufen Sie die entsprechende [**ITask**](/windows/desktop/api/Mstask/nn-mstask-itask) -Methode auf, um die gewünschte Eigenschaft abzurufen.
-4.  Verarbeiten Sie die Eigenschaft nach Bedarf. (In diesen Beispielen wird die-Eigenschaft auf dem Bildschirm gedruckt.)
-5.  Wenn die zurückgegebene Eigenschaft eine Zeichenfolge ist, können Sie [CoTaskMemFree](/windows/win32/api/combaseapi/nf-combaseapi-cotaskmemfree) aufrufen, um den für die zurückgegebenen Zeichenfolge belegten Arbeitsspeicher freizugeben.
+1.  Rufen [**Sie CoInitialize auf,**](/windows/win32/api/objbase/nf-objbase-coinitialize) um die COM-Bibliothek zu initialisieren, und [**CoCreateInstance,**](/windows/win32/api/combaseapi/nf-combaseapi-cocreateinstance) um ein Taskplaner zu erhalten. (In diesen Beispielen wird davon ausgegangen, Taskplaner dienst ausgeführt wird.)
+2.  Rufen [**Sie ITaskScheduler::Activate auf,**](/windows/desktop/api/Mstask/nf-mstask-itaskscheduler-activate) um die [**ITask-Schnittstelle**](/windows/desktop/api/Mstask/nn-mstask-itask) des Aufgabenobjekts zu erhalten. (Beachten Sie, dass dieses Beispiel die Aufgabe "Testaufgabe" erhält.)
+3.  Rufen Sie die entsprechende [**ITask-Methode**](/windows/desktop/api/Mstask/nn-mstask-itask) auf, um die Eigenschaft abzurufen, an der Sie interessiert sind.
+4.  Verarbeiten Sie die Eigenschaft nach Bedarf. (In diesen Beispielen wird die -Eigenschaft auf dem Bildschirm gedruckt.)
+5.  Wenn die zurückgegebene Eigenschaft eine Zeichenfolge ist, rufen [Sie CoTaskMemFree](/windows/win32/api/combaseapi/nf-combaseapi-cotaskmemfree) auf, um den für die zurückgegebene Zeichenfolge zugeordneten Arbeitsspeicher frei zu geben.
 
 
 
 | Ein Codebeispiel für                                                                                                                           | Siehe                                                                                                                     |
 |-------------------------------------------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------|
-| Abrufen des Namens der Anwendung, die einer bestimmten Aufgabe zugeordnet ist                                                                             | [C/C++-Code Beispiel: Abrufen des Aufgaben Anwendungs namens](c-c-code-example-retrieving-the-task-application-name.md)   |
-| Abrufen der maximalen Zeitspanne, die der Task ausgeführt werden kann, und Anzeigen dieser Zahl auf dem Bildschirm                                                 | [C/C++-Code Beispiel: Abrufen der Aufgabe maxruntime](c-c-code-example-retrieving-the-task-maxruntime.md)               |
-| Abrufen der Parameter Zeichenfolge, die ausgeführt wird, wenn die Aufgabe ausgeführt wird und diese Zeichenfolge auf dem Bildschirm anzeigt                                  | [C/C++-Code Beispiel: Abrufen von Aufgaben Parametern](c-c-code-example-retrieving-task-parameters.md)                       |
-| Abrufen der [*Prioritätsstufe*](p.md) der Aufgabe                                                                    | [C/C++-Code Beispiel: Abrufen der Aufgaben Priorität](c-c-code-example-retrieving-task-priority.md)                           |
-| Abrufen des [*Arbeitsverzeichnisses*](w.md) einer Aufgabe und Anzeigen des Pfads zum Arbeitsverzeichnis auf dem Bildschirm | [C/C++-Code Beispiel: Abrufen des Aufgaben Arbeitsverzeichnisses](c-c-code-example-retrieving-the-task-working-directory.md) |
+| Abrufen des Namens der Anwendung, die einer bestimmten Aufgabe zugeordnet ist                                                                             | [C/C++-Codebeispiel: Abrufen des Taskanwendungsnamens](c-c-code-example-retrieving-the-task-application-name.md)   |
+| Abrufen der maximalen Zeitdauer, die der Task ausgeführt werden kann, und Anzeigen dieser Zahl auf dem Bildschirm                                                 | [C/C++-Codebeispiel: Abrufen der Aufgabe "MaxRunTime"](c-c-code-example-retrieving-the-task-maxruntime.md)               |
+| Abrufen der Parameterzeichenfolge, die ausgeführt wird, wenn der Task ausgeführt wird, und Anzeigen dieser Zeichenfolge auf dem Bildschirm                                  | [C/C++-Codebeispiel: Abrufen von Taskparametern](c-c-code-example-retrieving-task-parameters.md)                       |
+| Abrufen der [*Prioritätsebene*](p.md) der Aufgabe                                                                    | [C/C++-Codebeispiel: Abrufen der Aufgabenpriorität](c-c-code-example-retrieving-task-priority.md)                           |
+| Abrufen des [*Arbeitsverzeichnisses*](w.md) einer Aufgabe und Anzeigen des Pfads zum Arbeitsverzeichnis auf dem Bildschirm | [C/C++-Codebeispiel: Abrufen des Taskarbeitsverzeichnisses](c-c-code-example-retrieving-the-task-working-directory.md) |
 
 
 
- 
+ 
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[Taskplaner 1,0-Beispiele](task-scheduler-1-0-examples.md)
+[Taskplaner 1.0-Beispiele](task-scheduler-1-0-examples.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 

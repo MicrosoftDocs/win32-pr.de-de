@@ -1,12 +1,12 @@
 ---
-title: Setcolordepthpolicy-Methode der Win32_TSClientSetting-Klasse
-description: Die setcolordepthpolicy-Methode legt die ColorDepthPolicy-Eigenschaft für die-Klasse fest.
+title: SetColorDepthPolicy-Methode der Win32_TSClientSetting-Klasse
+description: Die SetColorDepthPolicy-Methode legt die ColorDepthPolicy-Eigenschaft für die -Klasse fest.
 ms.assetid: 7a8c2b51-5f7a-4188-aae0-0b2d47d043bd
 ms.tgt_platform: multiple
 keywords:
-- Setcolordepthpolicy-Methode Remotedesktopdienste
-- Setcolordepthpolicy-Methode Remotedesktopdienste, Win32_TSClientSetting-Klasse
-- Win32_TSClientSetting-Klasse Remotedesktopdienste, setcolordepthpolicy-Methode
+- SetColorDepthPolicy-Methode Remotedesktopdienste
+- SetColorDepthPolicy-Methode Remotedesktopdienste , Win32_TSClientSetting-Klasse
+- Win32_TSClientSetting-Klasse Remotedesktopdienste , SetColorDepthPolicy-Methode
 topic_type:
 - apiref
 api_name:
@@ -17,16 +17,16 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: f2d47280ce303e7eeba401e0eb34c7f7fa5a7bec
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 78ecb53500a65c997ace21865492a0a473c2799bd38a3876c4676aaea4120610
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104391851"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118999840"
 ---
-# <a name="setcolordepthpolicy-method-of-the-win32_tsclientsetting-class"></a>Setcolordepthpolicy-Methode der Win32- \_ Klasse tsclientsetting
+# <a name="setcolordepthpolicy-method-of-the-win32_tsclientsetting-class"></a>SetColorDepthPolicy-Methode der Win32 \_ TSClientSetting-Klasse
 
-Die **setcolordepthpolicy** -Methode legt die **ColorDepthPolicy** -Eigenschaft für die-Klasse fest.
+Die **SetColorDepthPolicy-Methode** legt die **ColorDepthPolicy-Eigenschaft** für die -Klasse fest.
 
 ## <a name="syntax"></a>Syntax
 
@@ -43,21 +43,21 @@ uint32 SetColorDepthPolicy(
 
 <dl> <dt>
 
-*ColorDepthPolicy* \[ in\]
+*ColorDepthPolicy* \[ In\]
 </dt> <dd>
 
-Flag zum Deaktivieren oder Aktivieren der **setcolordepthpolicy** -Eigenschaft, die angibt, ob die Einstellung für die maximale Farbe des Benutzers überschrieben werden soll.
+Flag zum Deaktivieren oder Aktivieren der **SetColorDepthPolicy-Eigenschaft,** die angibt, ob die Maximale Farbeinstellung des Benutzers überschrieben werden soll.
 
 <dt>
 
 <span id="0"></span>
 
-<span id="0"></span>**1,0**
+<span id="0"></span>**0**
 
 
 </dt> <dd>
 
-Aktivieren Sie die-Eigenschaft.
+Aktivieren Sie die -Eigenschaft.
 
 </dd> <dt>
 
@@ -68,17 +68,17 @@ Aktivieren Sie die-Eigenschaft.
 
 </dt> <dd>
 
-Deaktivieren Sie die-Eigenschaft.
+Deaktivieren Sie die -Eigenschaft.
 
 </dd> </dl> </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt bei Erfolg Erfolg zurück, andernfalls wird ein WMI-Fehlercode zurückgegeben. Eine Liste dieser Werte finden Sie unter [Remotedesktopdienste Fehler Codes des WMI-Anbieters](terminal-services-wmi-provider-error-codes.md) . Die-Methode gibt einen Fehler zurück, wenn die Einstellung Untergruppen Richtlinien Steuerung liegt.
+Gibt Erfolg bei Erfolg zurück, andernfalls einen WMI-Fehlercode. Eine Liste dieser Werte finden [Sie unter Remotedesktopdienste WMI-Anbieterfehlercodes.](terminal-services-wmi-provider-error-codes.md) Die -Methode gibt einen Fehler zurück, wenn die Einstellung der Gruppenrichtliniensteuerung unterliegt.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Managed Object Format-Dateien (MOF) enthalten die Definitionen für Windows-Verwaltungsinstrumentation (WMI)-Klassen. MOF-Dateien werden nicht als Teil des Microsoft Windows Software Development Kit (SDK) installiert. Sie werden auf dem Server installiert, wenn Sie die zugehörige Rolle mithilfe der Server-Manager hinzufügen. Weitere Informationen zu MOF-Dateien finden Sie unter [Managed Object Format (MOF)](/windows/desktop/WmiSdk/managed-object-format--mof-).
+Managed Object Format -Dateien (MOF) enthalten die Definitionen für Windows Management Instrumentation (WMI)-Klassen. MOF-Dateien werden nicht als Teil des Microsoft Windows Software Development Kit (SDK) installiert. Sie werden auf dem Server installiert, wenn Sie die zugeordnete Rolle mithilfe der Server-Manager hinzufügen. Weitere Informationen zu MOF-Dateien finden Sie unter [Managed Object Format (MOF).](/windows/desktop/WmiSdk/managed-object-format--mof-)
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -89,16 +89,16 @@ Managed Object Format-Dateien (MOF) enthalten die Definitionen für Windows-Verw
 | Unterstützte Mindestversion (Client)<br/> | Windows Vista<br/>                                                                |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2008<br/>                                                          |
 | Namespace<br/>                | Root \\ CIMv2 \\ TerminalServices<br/>                                                |
-| MOF<br/>                      | <dl> <dt>Tscsgwmi. MOF</dt> </dl> |
+| MOF<br/>                      | <dl> <dt>TSCfgWmi.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>TSCfgWmi.dll</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Win32- \_ tsclientsetting**](win32-tsclientsetting.md)
+[**Win32 \_ TSClientSetting**](win32-tsclientsetting.md)
 </dt> </dl>
 
  

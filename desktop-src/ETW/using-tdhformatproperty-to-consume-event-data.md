@@ -1,5 +1,5 @@
 ---
-description: Das folgende Beispiel zeigt, wie Ereignisdaten mithilfe der TdhFormatProperty-Funktion verwendet werden.
+description: Das folgende Beispiel zeigt, wie Ereignisdaten mithilfe der TdhFormatProperty-Funktion verarbeitet werden.
 ms.assetid: 5ebd500c-420e-4979-a03a-49b687464b0e
 title: Verwenden von TdhFormatProperty zum Verarbeiten von Ereignisdaten
 ms.topic: article

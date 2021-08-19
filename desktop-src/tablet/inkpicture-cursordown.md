@@ -1,5 +1,5 @@
 ---
-description: 'InkPicture.CursorDown-Ereignis: Tritt ein, wenn die Cursorspitze die digitalisierende Tablettoberfläche kontaktiert.'
+description: 'InkPicture.CursorDown-Ereignis: Tritt auf, wenn die Cursorspitze mit der digitalisierenden Tablet-Oberfläche in Kontakt tritt.'
 ms.assetid: 6d524400-1341-45da-86b2-098e34ed5a1c
 title: InkPicture.CursorDown-Ereignis (Msinkaut.h)
 ms.topic: reference
@@ -13,7 +13,7 @@ ms.locfileid: "118967079"
 ---
 # <a name="inkpicturecursordown-event"></a>InkPicture.CursorDown-Ereignis
 
-Tritt ein, wenn die Cursorspitze mit der digitalisierenden Tablettoberfläche in Kontakt tritt.
+Tritt ein, wenn die Cursorspitze die digitalisierende Tablet-Oberfläche kontaktiert.
 
 ## <a name="syntax"></a>Syntax
 
@@ -34,7 +34,7 @@ void CursorDown(
 *Cursor* \[ In\]
 </dt> <dd>
 
-Das [**IInkCursor-Objekt,**](/windows/desktop/api/msinkaut/nn-msinkaut-iinkcursor) das das **CursorDown-Ereignis** generiert hat.
+Das [**IInkCursor-Objekt,**](/windows/desktop/api/msinkaut/nn-msinkaut-iinkcursor) das das **CursorDown-Ereignis generiert** hat.
 
 </dd> <dt>
 
@@ -51,9 +51,9 @@ Dieses Ereignis gibt keinen Wert zurück.
 
 ## <a name="remarks"></a>Hinweise
 
-Diese Ereignismethoden werden in den Schnittstellen **\_ IInkCollectorEvents,** **\_ IInkOverlayEvents** und **\_ IInkPictureEvents** definiert. Die Schnittstellen **\_ IInkCollectorEvents,** **\_ IInkOverlayEvents** und **\_ IInkPictureEvents** implementieren die [**IDispatch-Schnittstelle**](/windows/win32/api/oaidl/nn-oaidl-idispatch) mit dem Bezeichner DISPID \_ ICECursorDown.
+Diese Ereignismethoden werden in den **\_ Schnittstellen IInkCollectorEvents,** **\_ IInkOverlayEvents** und **\_ IInkPictureEvents** definiert. Die **\_ Schnittstellen IInkCollectorEvents,** **\_ IInkOverlayEvents** und **\_ IInkPictureEvents** implementieren die [**IDispatch-Schnittstelle**](/windows/win32/api/oaidl/nn-oaidl-idispatch) mit dem Bezeichner DISPID \_ ICECursorDown.
 
-Verwenden Sie dieses Ereignis sorgfältig, da es negative Auswirkungen auf die Ink-Leistung haben kann, wenn zu viel Code in den Ereignishandlern ausgeführt wird. Um die Leistung von Ink-Echtzeit zu verbessern, blenden Sie den Mauscursor in den [**MouseDown-**](inkpicture-mousedown.md) und [**MouseUp-Ereignishandlern**](inkpicture-mouseup.md) aus oder ein.
+Verwenden Sie dieses Ereignis sorgfältig, da es sich negativ auf die Ink-Leistung auswirken kann, wenn in den Ereignishandlern zu viel Code ausgeführt wird. Um die Leistung von Ink in Echtzeit zu verbessern, blenden Sie den Mauszeiger in den [**MouseDown-**](inkpicture-mousedown.md) und [**MouseUp-Ereignishandlern**](inkpicture-mouseup.md) aus oder ein.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -68,7 +68,7 @@ Verwenden Sie dieses Ereignis sorgfältig, da es negative Auswirkungen auf die I
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 

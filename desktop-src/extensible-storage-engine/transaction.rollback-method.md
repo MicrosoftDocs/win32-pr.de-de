@@ -53,7 +53,7 @@ instance.Rollback()
 public void Rollback()
 ```
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 #### <a name="reference"></a>Verweis
 

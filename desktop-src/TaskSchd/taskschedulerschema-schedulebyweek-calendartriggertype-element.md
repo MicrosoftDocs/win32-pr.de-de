@@ -1,10 +1,10 @@
 ---
-title: Schedulebyweek (calendartriggertype)-Element
+title: ScheduleByWeek (calendarTriggerType)-Element
 description: Gibt einen wöchentlichen Zeitplan an.
 ms.assetid: d2c33e76-0564-4b3c-ab86-e7bca667fa4f
 keywords:
-- wöchentlicher auslöserTaskplaner, XML-Element
-- Schedulebyweek-Element Taskplaner
+- wöchentlicher Trigger Taskplaner , XML-Element
+- ScheduleByWeek-Element Taskplaner
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 ms.topic: reference
 ms.date: 05/31/2018
 api_location: ''
-ms.openlocfilehash: 2d5ab62a0c39c4c1d0102edcdb96d310e9315820
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: ddf37c6261ba28c4cb4f59c47ee8ebd8c09afc4e36c3d1aa218efe8caa81e8c2
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104392174"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119002278"
 ---
-# <a name="schedulebyweek-calendartriggertype-element"></a>Schedulebyweek (calendartriggertype)-Element
+# <a name="schedulebyweek-calendartriggertype-element"></a>ScheduleByWeek (calendarTriggerType)-Element
 
-Gibt einen wöchentlichen Zeitplan an. Der Task wird z. b. jede Woche um 8:00 Uhr an einem bestimmten Wochentag oder an einem bestimmten Wochentag in der Woche gestartet.
+Gibt einen wöchentlichen Zeitplan an. Die Aufgabe beginnt beispielsweise jede Woche um 8:00 Uhr an einem bestimmten Wochentag oder jede andere Woche an einem bestimmten Wochentag.
 
 ``` syntax
 <xs:element name="ScheduleByWeek"
@@ -31,7 +31,7 @@ Gibt einen wöchentlichen Zeitplan an. Der Task wird z. b. jede Woche um 8:00 Uh
  />
 ```
 
-Das **schedulebyweek** -Element wird durch den komplexen Typ [**calendartriggertype**](taskschedulerschema-calendartriggertype-complextype.md) definiert.
+Das **ScheduleByWeek-Element** wird durch den komplexen [**calendarTriggerType-Typ**](taskschedulerschema-calendartriggertype-complextype.md) definiert.
 
 ## <a name="parent-element"></a>Übergeordnetes Element
 
@@ -39,7 +39,7 @@ Das **schedulebyweek** -Element wird durch den komplexen Typ [**calendartriggert
 
 | Element                                                                             | Abgeleitet von                                                                       | BESCHREIBUNG                                                                                |
 |-------------------------------------------------------------------------------------|------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------|
-| [**Calendarausgelöst**](taskschedulerschema-calendartrigger-triggergroup-element.md) | [**calendartriggertype**](taskschedulerschema-calendartriggertype-complextype.md) | Gibt einen täglichen, wöchentlichen, monatlichen oder monatlichen Tag-of-the-Week-(Dow-)-auslöst an.<br/> |
+| [**CalendarTrigger**](taskschedulerschema-calendartrigger-triggergroup-element.md) | [**calendarTriggerType**](taskschedulerschema-calendartriggertype-complextype.md) | Gibt einen täglichen, wöchentlichen, monatlichen oder monatlichen DOW-Trigger (Day-of-the-Week) an.<br/> |
 
 
 
@@ -49,24 +49,24 @@ Das **schedulebyweek** -Element wird durch den komplexen Typ [**calendartriggert
 
 | Element                                                                               | type                                                                     | BESCHREIBUNG                                                          |
 |---------------------------------------------------------------------------------------|--------------------------------------------------------------------------|----------------------------------------------------------------------|
-| [**DaysOfWeek**](taskschedulerschema-daysofweek-weeklyscheduletype-element.md)       | [**daysofweektype**](taskschedulerschema-daysofweektype-complextype.md) | Gibt die Wochentage an, an denen der Task ausgeführt wird.<br/>    |
-| [**Weeksinterval**](taskschedulerschema-weeksinterval-weeklyscheduletype-element.md) | unsignedByte                                                             | Gibt das Intervall zwischen den Wochen im Zeitplan an.<br/> |
+| [**DaysOfWeek**](taskschedulerschema-daysofweek-weeklyscheduletype-element.md)       | [**daysOfWeekType**](taskschedulerschema-daysofweektype-complextype.md) | Gibt die Wochentage an, an denen der Task ausgeführt wird.<br/>    |
+| [**WeeksInterval**](taskschedulerschema-weeksinterval-weeklyscheduletype-element.md) | unsignedByte                                                             | Gibt das Intervall zwischen den Wochen im Zeitplan an.<br/> |
 
 
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die oben aufgeführten untergeordneten Elemente werden von den komplexen Elementtypen [**weeklyscheduletype**](taskschedulerschema-weeklyscheduletype-complextype.md) definiert.
+Die oben aufgeführten untergeordneten Elemente werden durch die komplexen Elementtypen [**weeklyScheduleType**](taskschedulerschema-weeklyscheduletype-complextype.md) definiert.
 
-Die Uhrzeit, zu der die Aufgabe gestartet wird, wird durch das [**StartBoundary**](taskschedulerschema-startboundary-triggerbasetype-element.md) -Element festgelegt.
+Die Tageszeit, zu der der Task gestartet wird, wird vom [**StartBoundary-Element**](taskschedulerschema-startboundary-triggerbasetype-element.md) festgelegt.
 
-Bei der Skripterstellung wird ein wöchentlicher-Auslösung mithilfe des [**Weekly-auslöserobjekts**](weeklytrigger.md) angegeben.
+Für die Skriptentwicklung wird ein wöchentlicher Trigger mit dem [**WeeklyTrigger-Objekt**](weeklytrigger.md) angegeben.
 
-Bei der C++-Entwicklung wird ein wöchentlicher-Auslösers mithilfe der [**iweekly-**](/windows/desktop/api/taskschd/nn-taskschd-iweeklytrigger) Schnittstelle angegeben.
+Für die C++-Entwicklung wird ein wöchentlicher Trigger mithilfe der [**IWeeklyTrigger-Schnittstelle**](/windows/desktop/api/taskschd/nn-taskschd-iweeklytrigger) angegeben.
 
 ## <a name="examples"></a>Beispiele
 
-Der folgende XML-Code definiert einen wöchentlichen Kalender--Auslösers, der jede Woche einen Task Montag bis Freitag (um 8:00 Uhr) startet.
+Der folgende XML-Code definiert einen wöchentlichen Kalendertrigger, der eine Aufgabe montags bis freitags (um 8:00 Uhr) jede Woche startet.
 
 
 ```XML
@@ -94,8 +94,8 @@ Der folgende XML-Code definiert einen wöchentlichen Kalender--Auslösers, der j
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>       |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/> |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur Vista-Desktop-Apps\]<br/>       |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/> |
 
 
 
@@ -103,7 +103,7 @@ Der folgende XML-Code definiert einen wöchentlichen Kalender--Auslösers, der j
 
 <dl> <dt>
 
-[Schema Elemente Taskplaner](task-scheduler-schema-elements.md)
+[Taskplaner Schemaelemente](task-scheduler-schema-elements.md)
 </dt> <dt>
 
 [Aufgabenplanung](task-scheduler-start-page.md)

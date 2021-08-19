@@ -1,29 +1,29 @@
 ---
-description: Die msipatchheaders-Tabelle enthält die binären patchheader-Datenströme, die für die patchvalidierung verwendet werden.
+description: Die MsiPatchHeaders-Tabelle enthält die binären Patchheaderstreams, die für die Patchvalidierung verwendet werden.
 ms.assetid: aefdd365-1681-43e4-8470-04a5d6efd993
-title: Msipatchheaders-Tabelle
+title: MsiPatchHeaders-Tabelle
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 9a3fa4e037a31f3e913f13ff9c96735ed6760dc4
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 1888a91da13923c4a9904c770df77cb24a5b8381c869a60895bb5ff49d23e6b1
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "104216359"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118944492"
 ---
-# <a name="msipatchheaders-table"></a>Msipatchheaders-Tabelle
+# <a name="msipatchheaders-table"></a>MsiPatchHeaders-Tabelle
 
-Die msipatchheaders-Tabelle enthält die binären patchheader-Datenströme, die für die patchvalidierung verwendet werden.
+Die MsiPatchHeaders-Tabelle enthält die binären Patchheaderstreams, die für die Patchvalidierung verwendet werden.
 
-Die msipatchheaders-Tabelle wird verwendet, wenn bei langen [Datei Tabellen](file-table.md) Schlüsseln ein Fehler beim Generieren des patchheader-Streams in der [patchtabelle](patch-table.md)auftritt. Dies kann an der in [OLE-Einschränkungen für Streams](ole-limitations-on-streams.md)beschriebenen Datenstrom-namens Einschränkung liegen. In diesem Fall kann die patchtabelle auf die msipatchheaders-Tabelle verweisen, um den Patch-Header Datenstrom zu erstellen.
+Die MsiPatchHeaders-Tabelle wird verwendet, wenn lange [Dateitabellenschlüssel](file-table.md) zu einem Fehler beim Generieren des Patchheaderstreams in der [Patchtabelle](patch-table.md)führen. Dies kann auf die Einschränkung des Streamnamens zurückzuführen sein, die unter [OLE-Einschränkungen für Streams](ole-limitations-on-streams.md)beschrieben ist. In diesem Fall kann die Patch-Tabelle auf die MsiPatchHeaders-Tabelle verweisen, um den Patchheaderstream zu erstellen.
 
-Die msipatchheaders-Tabelle weist die folgenden Spalten auf.
+Die MsiPatchHeaders-Tabelle enthält die folgenden Spalten.
 
 
 
-| Spalte    | Typ                         | Schlüssel | Nullwerte zulässig |
+| Spalte    | Typ                         | Key | Nullwerte zulässig |
 |-----------|------------------------------|-----|----------|
-| Streamref | [Bezeichner](identifier.md) | J   | N        |
+| StreamRef | [Identifier](identifier.md) | J   | N        |
 | Header    | [Binär (Binary)](binary.md)         | N   | N        |
 
 
@@ -34,25 +34,25 @@ Die msipatchheaders-Tabelle weist die folgenden Spalten auf.
 
 <dl> <dt>
 
-<span id="StreamRef"></span><span id="streamref"></span><span id="STREAMREF"></span>Streamref
+<span id="StreamRef"></span><span id="streamref"></span><span id="STREAMREF"></span>StreamRef
 </dt> <dd>
 
-Der Primärschlüssel für die Tabelle, die einen bestimmten patchheader eindeutig identifiziert.
+Der Primärschlüssel für die Tabelle, die einen bestimmten Patchheader eindeutig identifiziert.
 
 </dd> <dt>
 
 <span id="Header"></span><span id="header"></span><span id="HEADER"></span>Header
 </dt> <dd>
 
-Diese Spalte ist der binäre Stream-patchheader, der für die patchvalidierung verwendet wird.
+Diese Spalte ist der binäre Streampatchheader, der für die Patchvalidierung verwendet wird.
 
 </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Diese Tabelle wird von der [Aktion PATCHFILES](patchfiles-action.md)verarbeitet. Diese Tabelle wird normalerweise durch eine Transformation aus einem Patchpaket zum Installationspaket hinzugefügt. Sie wird in der Regel nicht direkt in ein Installationspaket verfasst.
+Diese Tabelle wird von der [PatchFiles-Aktion](patchfiles-action.md)verarbeitet. Diese Tabelle wird dem Installationspaket in der Regel durch eine Transformation aus einem Patchpaket hinzugefügt. Er wird in der Regel nicht direkt in einem Installationspaket erstellt.
 
-## <a name="validation"></a>Überprüfen
+## <a name="validation"></a>Überprüfung
 
 <dl>
 

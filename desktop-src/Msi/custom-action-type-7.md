@@ -17,7 +17,7 @@ Der benutzerdefinierte Aktionstyp 7 wird mit gleichzeitigen Installationen verwe
 
 Diese benutzerdefinierte Aktion installiert ein anderes Installationspaket, das innerhalb des ersten Pakets geschachtelt ist.
 
-## <a name="source"></a>`Source`
+## <a name="source"></a>Quelle
 
 Die Datenbank der gleichzeitigen Anwendung wird als Unterspeicher des Pakets gespeichert, und der Name des Unterspeichers wird im Feld Quelle der [CustomAction-Tabelle](customaction-table.md)festgelegt.
 
@@ -49,7 +49,7 @@ Optionsflags sind verfügbar, um die potenzielle Mehrfachausführung benutzerdef
 
 ## <a name="in-script-execution-options"></a>In-Script Ausführungsoptionen
 
-Diese Option wird von dieser benutzerdefinierten Aktion nicht verwendet.
+Diese option wird von dieser benutzerdefinierten Aktion nicht verwendet.
 
 ## <a name="return-values"></a>Rückgabewerte
 
@@ -57,7 +57,7 @@ Der Rückgabestatus von Benutzerabbruch, Fehler, Anhalten oder Erfolg einer glei
 
 Beachten Sie Folgendes: Wenn für eine gleichzeitige Installation **msidbCustomActionTypeContinue** festgelegt ist, wird eine Rückgabe von ERROR \_ INSTALL \_ USEREXIT, ERROR \_ INSTALL \_ REBOOT, ERROR INSTALL REBOOT \_ NOW oder ERROR SUCCESS REBOOT REQUIRED als FEHLER ERFOLGREICH \_ \_ \_ \_ \_ \_ behandelt. Dies bedeutet, dass die Anforderung für den Neustart ignoriert wird, wenn Sie **msidbCustomActionTypeContinue** festlegen und die gleichzeitige Installation einen Neustart erfordert. Darüber hinaus wird der Fehlercode aus der benutzerdefinierten Aktion für die gleichzeitige Installation ignoriert.
 
-Wenn **msidbCustomActionTypeContinue** nicht festgelegt ist, werden die folgenden Rückgabecodes plus ERROR \_ SUCCESS als erfolg behandelt und haben die folgende Bedeutung. Andere Rückgabecodes werden als Fehler behandelt.
+Wenn **msidbCustomActionTypeContinue** nicht festgelegt ist, werden die folgenden Rückgabecodes plus ERROR \_ SUCCESS als erfolg behandelt und weisen die folgenden Bedeutungen auf. Andere Rückgabecodes werden als Fehler behandelt.
 
 
 

@@ -19,7 +19,7 @@ Dieser Abschnitt enthält die folgenden Themen, die für Entwickler von Hardware
 -   [Informationen zur DirectX-Videobeschleunigung](about-directx-video-acceleration.md)
 -   [Zuordnen der DirectX-Videobeschleunigung zu IAMVideoAccelerator](mapping-directx-video-acceleration-to-iamvideoaccelerator.md)
 -   [DVD-Decoderentwicklung in DirectShow](dvd-decoder-development-in-directshow.md)
--   [Decodervolumesteuerung](decoder-volume-control.md)
+-   [Decoder-Volumesteuerung](decoder-volume-control.md)
 
 ## <a name="related-topics"></a>Zugehörige Themen
 

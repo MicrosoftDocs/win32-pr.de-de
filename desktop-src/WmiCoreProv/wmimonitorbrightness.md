@@ -1,7 +1,7 @@
 ---
-description: Stellt die Parameter für die Helligkeit eines Computermonitors dar.
+description: Stellt die Helligkeitsparameter eines Computermonitors dar.
 ms.assetid: 01fa3efc-2a1d-4405-989f-2c180842c6b9
-title: Wmimonitorbrightness-Klasse
+title: WmiMonitorBrightness-Klasse
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -18,16 +18,16 @@ api_type:
 - DllExport
 api_location:
 - WmiProv.dll
-ms.openlocfilehash: b8d16c8dc20291a03fb205441c8826c85125970c
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 10343b33e5bc1881440af9d13029913d470880289e71b4c7a33fb4748e56ef73
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106369803"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118821521"
 ---
-# <a name="wmimonitorbrightness-class"></a>Wmimonitorbrightness-Klasse
+# <a name="wmimonitorbrightness-class"></a>WmiMonitorBrightness-Klasse
 
-Die **wmimonitorbrightness** WMI-Klasse stellt die Parameter für die Helligkeit eines Computermonitors dar.
+Die **WMI-Klasse WmiMonitorBrightness** stellt die Helligkeitsparameter eines Computermonitors dar.
 
 ## <a name="syntax"></a>Syntax
 
@@ -44,39 +44,39 @@ class WmiMonitorBrightness : MSMonitorClass
 
 ## <a name="members"></a>Member
 
-Die **wmimonitorbrightness** -Klasse verfügt über diese Typen von Membern:
+Die **WmiMonitorBrightness-Klasse** verfügt über diese Typen von Membern:
 
 -   [Eigenschaften](#properties)
 
 ### <a name="properties"></a>Eigenschaften
 
-Die **wmimonitorbrightness** -Klasse verfügt über diese Eigenschaften.
+Die **WmiMonitorBrightness-Klasse** verfügt über diese Eigenschaften.
 
 <dl> <dt>
 
 **Aktiv**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **boolescher** Wert
+Datentyp: **boolescher Wert**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Gibt an, ob der Ziel Monitor aktiv ist.
+Gibt an, ob der Zielmonitor aktiv ist.
 
 </dd> <dt>
 
-**Currenthelligkeit**
+**CurrentBrightness**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Uint8**
+Datentyp: **uint8**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Aktuelle Helligkeit. Dieser Wert muss ein Wert sein, der von *Ebenen* übernommen wird.
+Aktuelle Helligkeit. Bei diesem Wert muss es sich um einen Wert aus *Ebenen* handelt.
 
 Beispiel: 100
 
@@ -91,35 +91,35 @@ Zugriffstyp: Schreibgeschützt
 Qualifizierer: Schlüssel
 </dt> </dl>
 
-Der Name der spezifischen Monitor Instanz.
+Name der spezifischen Überwachungsinstanz.
 
 </dd> <dt>
 
 **Level**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Uint8** Array
+Datentyp: **uint8-Array**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Ein Array, das die möglichen Helligkeits Ebenen enthält.
+Array, das die möglichen Helligkeitsstufen enthält.
 
-Beispiel: \[ 0, 1, 2,..., 100 \] .
+Beispiel: \[ 0, 1, 2, ..., 100 \] .
 
 </dd> <dt>
 
 **Ebenen**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt32**
+Datentyp: **uint32**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Die Gesamtanzahl der vom Monitor unterstützten Helligkeitsstufen, wie unter *Ebene* beschrieben.
+Die Gesamtanzahl von Helligkeitsstufen, die der Monitor unterstützt, wie unter *Ebene* beschrieben.
 
 Beispiel: 101
 
@@ -127,7 +127,7 @@ Beispiel: 101
 
 ## <a name="examples"></a>Beispiele
 
-Weitere Informationen und Codebeispiele zur Verwendung dieser Klasse in PowerShell finden Sie unter [Verwenden von PowerShell zum melden und Festlegen der Monitor Helligkeit](https://blogs.technet.com/b/heyscriptingguy/archive/2013/07/25/use-powershell-to-report-and-set-monitor-brightness.aspx).
+Weitere Informationen und Codebeispiele zur Verwendung dieser Klasse in PowerShell finden Sie unter [Verwenden von PowerShell zum Melden und Festlegen](https://blogs.technet.com/b/heyscriptingguy/archive/2013/07/25/use-powershell-to-report-and-set-monitor-brightness.aspx)der Helligkeit des Monitors.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -137,8 +137,8 @@ Weitere Informationen und Codebeispiele zur Verwendung dieser Klasse in PowerShe
 |-------------------------------------|----------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows Vista<br/>                                                               |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2008<br/>                                                         |
-| Namespace<br/>                | WMI-Stammdatei \\<br/>                                                                   |
-| MOF<br/>                      | <dl> <dt>WMI Core. MOF</dt> </dl> |
+| Namespace<br/>                | Root \\ wmi<br/>                                                                   |
+| MOF<br/>                      | <dl> <dt>WmiCore.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>WmiProv.dll</dt> </dl> |
 
 

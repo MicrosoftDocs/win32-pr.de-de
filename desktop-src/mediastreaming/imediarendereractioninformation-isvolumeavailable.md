@@ -1,11 +1,11 @@
 ---
 title: IMediaRendererActionInformation IsVolumeAvailable-Methode
-description: Ruft einen Wert ab, der angibt, ob die DMR die Audiovolumenebene anpassen kann.
+description: Ruft einen Wert ab, der angibt, ob die DMR die Audiolautstärke anpassen kann.
 ms.assetid: 6DFDC37A-3304-4CDB-9928-C113D2F64ED0
 keywords:
-- IsVolumeAvailable-Methode Medienstreaming-API
-- 'IsVolumeAvailable-Methode: Media Streaming-API, IMediaRendererActionInformation-Schnittstelle'
-- IMediaRendererActionInformation-Schnittstelle Media Streaming-API, IsVolumeAvailable-Methode
+- 'IsVolumeAvailable-Methode: Medienstreaming-API'
+- IsVolumeAvailable-Methode Medienstreaming-API , IMediaRendererActionInformation-Schnittstelle
+- IMediaRendererActionInformation-Schnittstelle Medienstreaming-API , IsVolumeAvailable-Methode
 topic_type:
 - apiref
 api_name:
@@ -24,7 +24,7 @@ ms.locfileid: "118972209"
 ---
 # <a name="imediarendereractioninformationisvolumeavailable-method"></a>IMediaRendererActionInformation::IsVolumeAvailable-Methode
 
-Ruft einen Wert ab, der angibt, ob die DMR die Audiovolumenebene anpassen kann.
+Ruft einen Wert ab, der angibt, ob die DMR die Audiolautstärke anpassen kann.
 
 ## <a name="syntax"></a>Syntax
 
@@ -41,10 +41,10 @@ HRESULT IsVolumeAvailable(
 
 <dl> <dt>
 
-*value* \[ out\]
+*wert* \[ out\]
 </dt> <dd>
 
-Ein boolescher Wert, der **True** ist, wenn die DMR  die Audiovolumenebene anpassen kann, ander denn, false.
+Ein boolescher Wert, der **True** ist, wenn die DMR die Audiolautstärke anpassen kann, und **FALSE,** wenn dies nicht der Fall ist.
 
 </dd> </dl>
 
@@ -62,7 +62,7 @@ Die Methode gibt ein **HRESULT** zurück. Mögliches Werte (aber nicht die Einzi
 
  
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 

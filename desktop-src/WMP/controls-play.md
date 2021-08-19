@@ -4,7 +4,7 @@ description: Die Wiedergabemethode bewirkt, dass das aktuelle Medienelement mit 
 ms.assetid: 2218a13b-6294-45f5-bb6f-c5a1e433e0c6
 keywords:
 - play-Methode Windows Media Player
-- play-Methode Windows Media Player , Controls-Klasse
+- Play-Methode Windows Media Player , Controls-Klasse
 - Steuert die Klasse Windows Media Player , play-Methode
 topic_type:
 - apiref
@@ -79,7 +79,7 @@ Im folgenden Beispiel wird ein HTML BUTTON-Element erstellt, das **play** verwen
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 

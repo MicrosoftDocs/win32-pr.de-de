@@ -1,34 +1,34 @@
 ---
-description: Um Steuerungsanforderungen an einen laufenden Dienst zu senden, verwendet ein Dienst Steuerungsprogramm die ControlService-Funktion.
+description: Um Steuerungsanforderungen an einen ausgeführten Dienst zu senden, verwendet ein Dienststeuerungsprogramm die ControlService-Funktion.
 ms.assetid: d6cdc876-8b74-460e-ad43-6455ddf428dd
-title: Dienst Steuerungsanforderungen
+title: Dienststeuerungsanforderungen
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 6cb5edf56137e2c98ea7db440a4db5e55df5e8f0
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 4320aad28f8a176fbf4aaa6b51539256a376a01b8edea034341cae7831ca4c40
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106346508"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117967569"
 ---
-# <a name="service-control-requests"></a>Dienst Steuerungsanforderungen
+# <a name="service-control-requests"></a>Dienststeuerungsanforderungen
 
-Um Steuerungsanforderungen an einen laufenden Dienst zu senden, verwendet ein Dienst Steuerungsprogramm die [**ControlService**](/windows/desktop/api/Winsvc/nf-winsvc-controlservice) -Funktion. Diese Funktion gibt einen Steuerelement Wert an, der an die [**handlerex**](/windows/desktop/api/WinSvc/nc-winsvc-lphandler_function_ex) -Funktion des angegebenen Dienstanbieter übermittelt wird. Bei diesem Steuerungs Wert kann es sich um einen benutzerdefinierten Code handeln, oder es kann sich um einen der Standard Codes handeln, die dem aufrufenden Programm das Ausführen der folgenden Aktionen ermöglichen:
+Um Steuerungsanforderungen an einen ausgeführten Dienst zu senden, verwendet ein Dienststeuerungsprogramm die [**ControlService-Funktion.**](/windows/desktop/api/Winsvc/nf-winsvc-controlservice) Diese Funktion gibt einen Steuerelementwert an, der an die [**HandlerEx-Funktion**](/windows/desktop/api/WinSvc/nc-winsvc-lphandler_function_ex) des angegebenen Diensts übergeben wird. Dieser Steuerelementwert kann ein benutzerdefinierter Code oder einer der Standardcodes sein, die es dem aufrufenden Programm ermöglichen, die folgenden Aktionen durchzuführen:
 
--   Beendet einen Dienst (Dienst \_ Steuerungs \_ Ende).
--   Hält einen Dienst an (Anhalten der Dienst \_ Steuerung \_ ).
--   Fortsetzen der Ausführung eines angehaltenen Dienstanbieter (Dienst \_ Steuerung \_ fortsetzen).
--   Abrufen aktualisierter Statusinformationen von einem Dienst ( \_ Dienststeuerungs- \_ Abfrage).
+-   Beenden eines Diensts (SERVICE \_ CONTROL \_ STOP).
+-   Anhalten eines Diensts (SERVICE \_ CONTROL \_ PAUSE).
+-   Setzen Sie die Ausführung eines angehaltenen Diensts fort (SERVICE \_ CONTROL \_ CONTINUE).
+-   Abrufen aktualisierter Statusinformationen von einem Dienst (SERVICE \_ CONTROL \_ INTERROGATE).
 
-Jeder Dienst gibt die Steuerungs Werte an, die er akzeptiert und verarbeitet. Wenn Sie bestimmen möchten, welche der Standard Steuerelement Werte von einem Dienst akzeptiert werden, verwenden Sie die Funktion [**QueryServiceStatus usex**](/windows/desktop/api/Winsvc/nf-winsvc-queryservicestatusex) , oder geben Sie den \_ Wert des Dienststeuerungs- \_ Abfrage Steuer Elements in einem Aufrufen der [**ControlService**](/windows/desktop/api/Winsvc/nf-winsvc-controlservice) -Funktion an. Der **dwcontrolsaccepted** -Member der [**Dienst \_ Status**](/windows/desktop/api/Winsvc/ns-winsvc-service_status) Struktur, die von diesen Funktionen zurückgegeben wird, gibt an, ob der Dienst beendet, angehalten oder fortgesetzt werden kann. Alle Dienste akzeptieren den \_ Wert der Dienststeuerungs- \_ Abfrage Steuerung.
+Jeder Dienst gibt die Steuerelementwerte an, die er akzeptiert und verarbeiten wird. Um zu bestimmen, welche standard-Steuerelementwerte von einem Dienst akzeptiert werden, verwenden Sie die [**QueryServiceStatusEx-Funktion,**](/windows/desktop/api/Winsvc/nf-winsvc-queryservicestatusex) oder geben Sie den SERVICE CONTROL INTERROGATE-Steuerelementwert in einem Aufruf der \_ \_ [**ControlService-Funktion**](/windows/desktop/api/Winsvc/nf-winsvc-controlservice) an. Der **dwControlsAccepted-Member** der [**SERVICE \_ STATUS-Struktur,**](/windows/desktop/api/Winsvc/ns-winsvc-service_status) der von diesen Funktionen zurückgegeben wird, gibt an, ob der Dienst beendet, angehalten oder fortgesetzt werden kann. Alle Dienste akzeptieren den SERVICE \_ CONTROL \_ INTERROGATE-Steuerungswert.
 
-Die Funktion [**queryservicestatusex**](/windows/desktop/api/Winsvc/nf-winsvc-queryservicestatusex) meldet den aktuellen Status für einen angegebenen Dienst, erhält aber keinen aktualisierten Status vom Dienst selbst. Durch die Verwendung des Dienstkontroll-Steuerelement-Steuerelement- \_ \_ Steuer Elements in einem Befehl von [**ControlService**](/windows/desktop/api/Winsvc/nf-winsvc-controlservice) wird sichergestellt, dass die zurückgegebenen Statusinformationen aktuell
+Die [**QueryServiceStatusEx-Funktion**](/windows/desktop/api/Winsvc/nf-winsvc-queryservicestatusex) meldet den aktuellen Status für einen angegebenen Dienst, aber vom Dienst selbst wird kein aktualisierter Status angezeigt. Die Verwendung des SERVICE \_ CONTROL \_ INTERROGATE-Steuerelementwerts in einem Aufruf von [**ControlService**](/windows/desktop/api/Winsvc/nf-winsvc-controlservice) stellt sicher, dass die zurückgegebenen Statusinformationen aktuell sind.
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[Steuern eines Dienstanbieter mit SC](controlling-a-service-using-sc.md)
+[Steuern eines Diensts mit sc](controlling-a-service-using-sc.md)
 </dt> </dl>
 
  

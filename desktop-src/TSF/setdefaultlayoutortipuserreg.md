@@ -1,9 +1,9 @@
 ---
-title: Setdefaultlayoutortipuserreg-Funktion
-description: Legt das angegebene Tastaturlayout oder einen Text Dienst als Standardeingabe Element der Benutzerregistrierung fest.
+title: SetDefaultLayoutOrTipUserReg-Funktion
+description: Legt das angegebene Tastaturlayout oder einen Textdienst als Standardeingabeelement der Benutzerregistrierung fest.
 ms.assetid: 23ac67bb-b9dc-4f88-8fa0-a1d0534cbb84
 keywords:
-- Setdefaultlayoutortipuserreg Function-Framework für Text Dienste
+- SetDefaultLayoutOrTipUserReg-Funktion Textdienstframework
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - DllExport
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 48333b42b673cb6284e4b97001fa5ee88e0b3867
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 340e21d8d7416d72361a0e505029500b9a7dde3e53d3388c9311ae3351345c3c
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104103018"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118875284"
 ---
-# <a name="setdefaultlayoutortipuserreg-function"></a>Setdefaultlayoutortipuserreg-Funktion
+# <a name="setdefaultlayoutortipuserreg-function"></a>SetDefaultLayoutOrTipUserReg-Funktion
 
-Legt das angegebene Tastaturlayout oder einen Text Dienst als Standardeingabe Element der Benutzerregistrierung fest.
+Legt das angegebene Tastaturlayout oder einen Textdienst als Standardeingabeelement der Benutzerregistrierung fest.
 
 ## <a name="syntax"></a>Syntax
 
@@ -44,41 +44,41 @@ BOOL CALLBACK SetDefaultLayoutOrTipUserReg(
 
 <dl> <dt>
 
-*pszuserreg* \[ in, optional\]
+*pszUserReg* \[ in, optional\]
 </dt> <dd>
 
-Der Registrierungs Pfad des Benutzers. Wenn dieser Parameter **null** ist, wird der aktuelle HKEY- \_ \_ Benutzer verwendet.
+Der Registrierungspfad des Benutzers. Wenn dieser Parameter **NULL** ist, wird HKEY \_ CURRENT USER \_ verwendet.
 
 </dd> <dt>
 
-*pszsystemreg* \[ in, optional\]
+*pszSystemReg* \[ in, optional\]
 </dt> <dd>
 
-Der Registrierungs Pfad des Systems. Wenn dieser Parameter **null** ist, wird HKEY \_ local \_ Machine \\ System verwendet.
+Der Registrierungspfad des Systems. Wenn dieser Parameter **NULL** ist, wird HKEY \_ LOCAL MACHINE System \_ \\ verwendet.
 
 </dd> <dt>
 
-*pszsoftwarerereg* \[ in, optional\]
+*pszSoftwareReg* \[ in, optional\]
 </dt> <dd>
 
-Der Registrierungs Pfad der Software. Wenn dieser Parameter **null** ist, wird die lokale HKEY- \_ \_ Computer \\ Software verwendet.
+Der Registrierungspfad der Software. Wenn dieser Parameter **NULL** ist, wird HKEY \_ LOCAL MACHINE Software \_ \\ verwendet.
 
 </dd> <dt>
 
-*PSZ* \[ in\]
+*psz* \[ In\]
 </dt> <dd>
 
-Eine Zeichenfolge, die die Liste der Tastaturlayout-oder Text Dienst profile darstellt.
+Eine Zeichenfolge, die die Tastaturlayoutliste oder die Profilliste der Textdienste darstellt.
 
 </dd> <dt>
 
-*dwFlags* \[ in\]
+*dwFlags* \[ In\]
 </dt> <dd>
 
 Ein Bitfeld, das die folgenden Flags angibt:
 
 > [!Note]  
-> Die folgenden Bezeichner sind nicht in einer öffentlichen Header Datei definiert. Sie müssen entweder den Hexadezimalwert verwenden oder die Bezeichner \# definieren. Wenn Sie z. b. "sdlot \_ noapplydecurrentsession" verwenden möchten, müssen Sie " \# sdlot \_ noapplydecurrentsession 0x00000001" in Ihren Code einschließen.
+> Die folgenden Bezeichner sind in einer öffentlichen Headerdatei nicht definiert. Sie müssen entweder den Hexadezimalwert verwenden oder \# die Bezeichner definieren. Um beispielsweise SDLOT \_ NOAPPLYTOCURRENTSESSION zu verwenden, müssen Sie \# SDLOT \_ NOAPPLYTOCURRENTSESSION 0x00000001 in Ihren Code einschließen.
 
  
 
@@ -86,8 +86,8 @@ Ein Bitfeld, das die folgenden Flags angibt:
 
 | Wert                                                                                                                                                                                                                                                                         | Bedeutung                                                                                                                                                                                                                      |
 |-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| <span id="SDLOT_NOAPPLYTOCURRENTSESSION"></span><span id="sdlot_noapplytocurrentsession"></span><dl> <dt>**Sdlot \_ Noapplydecurrentsession**</dt> <dt>0x00000001</dt> </dl> | Speichert die Einstellung in der Registrierung, aber die Lauf Zeit Tastatur Einstellung der aktuellen Sitzung wird nicht aktualisiert. Wenn der Alternative Registrierungs Pfad in **setdefaultlayoutor tipuserreg** festgelegt wird, sollte dieses Flag festgelegt werden.<br/> |
-| <span id="SDLOT_APPLYTOCURRENTTHREAD"></span><span id="sdlot_applytocurrentthread"></span><dl> <dt>**Sdlot \_ Applyycurrentthread**</dt> <dt>0x00000002</dt> </dl>          | Wendet die Einstellung direkt auf den aktuellen Thread an.<br/>                                                                                                                                                            |
+| <span id="SDLOT_NOAPPLYTOCURRENTSESSION"></span><span id="sdlot_noapplytocurrentsession"></span><dl> <dt>**SDLOT \_ NOAPPLYTOCURRENTSESSION-0x00000001**</dt> <dt></dt> </dl> | Speichert die Einstellung in der Registrierung, aktualisiert jedoch nicht die Laufzeittastatureinstellung der aktuellen Sitzung. Wenn der alternative Registrierungspfad in **SetDefaultLayoutOrTipUserReg** festgelegt ist, sollte dieses Flag festgelegt werden.<br/> |
+| <span id="SDLOT_APPLYTOCURRENTTHREAD"></span><span id="sdlot_applytocurrentthread"></span><dl> <dt>**SDLOT \_ APPLYTOCURRENTTHREAD-0x00000002**</dt> <dt></dt> </dl>          | Wendet die Einstellung sofort auf den aktuellen Thread an.<br/>                                                                                                                                                            |
 
 
 
@@ -101,24 +101,24 @@ Ein Bitfeld, das die folgenden Flags angibt:
 
 | Rückgabecode                                                                          | Beschreibung                               |
 |--------------------------------------------------------------------------------------|-------------------------------------------|
-| <dl> <dt>**Fall**</dt> </dl>  | Die Funktion war erfolgreich.<br/>   |
-| <dl> <dt>**Alarm**</dt> </dl> | Es ist ein unbekannter Fehler aufgetreten.<br/> |
+| <dl> <dt>**STIMMT**</dt> </dl>  | Die Funktion war erfolgreich.<br/>   |
+| <dl> <dt>**FALSE**</dt> </dl> | Es ist ein unbekannter Fehler aufgetreten.<br/> |
 
 
 
  
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Das Zeichen folgen Format der Layoutliste lautet:
+Das Zeichenfolgenformat der Layoutliste lautet:
 
-<langid 1>: <KLID 1>; \[ ...<LangID N>:<KLID N>
+<LangID 1>:<SOLLD 1>; \[ ...<LangID N>:<KLID N>
 
-Das Zeichen folgen Format der Text Dienst Profil Liste lautet:
+Das Zeichenfolgenformat der Textdienstprofilliste lautet:
 
-<langid 1>: {xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx} {xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx};
+<LangID 1>:{xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxxxx}{xxxxxxxx-xxxx-xxxx-xxxxxxxxxxxx};
 
-Im folgenden finden Sie ein Beispiel für einen Wert für den *PSZ* -Parameter:
+Im Folgenden wird ein Beispiel für einen Wert für den *psz-Parameter* angezeigt:
 
 
 ```
@@ -131,10 +131,10 @@ Im folgenden finden Sie ein Beispiel für einen Wert für den *PSZ* -Parameter:
 
 ## <a name="examples"></a>Beispiele
 
-Es ist keine Import Bibliothek verfügbar, die diese Funktion definiert. Daher ist es erforderlich, mithilfe von [**LoadLibrary**](/windows/desktop/api/libloaderapi/nf-libloaderapi-loadlibrarya) und [**GetProcAddress**](/windows/desktop/api/libloaderapi/nf-libloaderapi-getprocaddress)einen Zeiger auf diese Funktion zu erhalten. Im folgenden Beispiel wird veranschaulicht, wie ein Zeiger auf diese Funktion abgerufen wird.
+Es ist keine Importbibliothek verfügbar, die diese Funktion definiert. Daher ist es erforderlich, mit [**LoadLibrary**](/windows/desktop/api/libloaderapi/nf-libloaderapi-loadlibrarya) und [**GetProcAddress**](/windows/desktop/api/libloaderapi/nf-libloaderapi-getprocaddress)einen Zeiger auf diese Funktion abzurufen. Im folgenden Beispiel wird veranschaulicht, wie sie einen Zeiger auf diese Funktion abrufen.
 
 > [!Note]  
-> Die falsche Verwendung von [**LoadLibrary**](/windows/desktop/api/libloaderapi/nf-libloaderapi-loadlibrarya) kann die Sicherheit Ihrer Anwendung beeinträchtigen, indem die falsche DLL geladen wird. Informationen zum ordnungsgemäßen Laden von DLLs mit verschiedenen Versionen von Microsoft Windows finden Sie in der [Such Reihenfolge für die Dynamic Link Library](/windows/desktop/Dlls/dynamic-link-library-search-order) .
+> Die falsche Verwendung von [**LoadLibrary**](/windows/desktop/api/libloaderapi/nf-libloaderapi-loadlibrarya) kann die Sicherheit Ihrer Anwendung beeinträchtigen, indem die falsche DLL geladen wird. Informationen zum ordnungsgemäßen Laden von DLLs mit verschiedenen Versionen von Microsoft Windows finden Sie unter [Suchreihenfolge](/windows/desktop/Dlls/dynamic-link-library-search-order) der Dynamic Link Library.
 
  
 
@@ -176,8 +176,8 @@ else
 
 | Anforderung | Wert |
 |-------------------------------------|--------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                       |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/>                                 |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur Vista-Desktop-Apps\]<br/>                                       |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/>                                 |
 | DLL<br/>                      | <dl> <dt>Input.dll</dt> </dl> |
 
 

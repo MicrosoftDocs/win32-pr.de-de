@@ -16,16 +16,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 62d61f88bd7cb6a84a94a3d8a246e6045f88a305
-ms.sourcegitcommit: f848119a8faa29b27585f4df53f6e50ee9666684
+ms.openlocfilehash: ea804e1bd5ad35b5ad5d5ee98cf77f97d54e4e93f438e6e32ad7478e10d7b9ef
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/27/2021
-ms.locfileid: "110550045"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118985400"
 ---
 # <a name="lbselchstring-message"></a>LBSELCHSTRING-Meldung
 
-\[Ab Windows Vista wurden  **die** allgemeinen Dialogfelder Öffnen und Speichern unter durch den Allgemeinen [Elementdialog ersetzt.](../shell/common-file-dialog.md) Es wird empfohlen, anstelle dieser Dialogfelder aus der Common Dialog Box Library die API für den Allgemeinen Elementdialog zu verwenden.\]
+\[Ab Windows Vista wurden **die** allgemeinen  Dialogfelder Öffnen und Speichern unter durch den Allgemeinen [Elementdialog ersetzt.](../shell/common-file-dialog.md) Es wird empfohlen, anstelle dieser Dialogfelder aus der Common Dialog Box Library die API für den Allgemeinen Elementdialog zu verwenden.\]
 
 In einem  **Dialogfeld** Öffnen oder Speichern unter wird die bei **LBSELCHSTRING** registrierte Meldung an Ihre Hookprozedur gesendet, wenn sich die Auswahl in einem der Listenfelder oder Kombinationsfelder des Dialogfelds ändert.
 
@@ -50,7 +50,7 @@ Der Bezeichner des Listenfelds oder Kombinationsfelds, in dem die Auswahl geänd
 *lParam* 
 </dt> <dd>
 
-Das Wort in niedriger Reihenfolge gibt die Elementnummer der ausgewählten Zeichenfolge im Listenfeld oder Kombinationsfeld an. Das hochgeordnete Wort gibt den Typ der Auswahländerung an. Dieser Parameter kann einen der folgenden Werte annehmen.
+Das Wort in niedriger Reihenfolge gibt die Elementnummer der ausgewählten Zeichenfolge im Listenfeld oder Kombinationsfeld an. Das obere Wort gibt den Typ der Auswahländerung an. Dieser Parameter kann einen der folgenden Werte annehmen.
 
 
 
@@ -83,22 +83,22 @@ Die Hookprozedur muss die **LBSELCHSTRING-Konstante** in einem Aufruf der [**Reg
 |-------------------------------------|----------------------------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[nur Desktop-Apps\]<br/>                                               |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                                                     |
-| Header<br/>                   | <dl> <dt>Commdlg.h (windows.h einschließen)</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Commdlg.h (include Windows.h)</dt> </dl> |
 | Unicode- und ANSI-Name<br/>   | **LBSELCHSTRINGW** (Unicode) und **LBSELCHSTRINGA** (ANSI)<br/>                                    |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
 **Referenz**
 </dt> <dt>
 
-[**CDN \_ SELCHANGE**](cdn-selchange.md)
+[**\_CDN SELCHANGE**](cdn-selchange.md)
 </dt> <dt>
 
-[**CDN \_ TYPECHANGE**](cdn-typechange.md)
+[**\_CDN TYPECHANGE**](cdn-typechange.md)
 </dt> <dt>
 
 [**RegisterWindowMessage**](/windows/desktop/api/winuser/nf-winuser-registerwindowmessagea)

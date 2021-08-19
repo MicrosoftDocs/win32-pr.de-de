@@ -1,5 +1,5 @@
 ---
-description: Enthält Einstellungen, die während des Wartungs Vorgangs verwendet werden.
+description: Enthält Einstellungen, die bei Wartungsvorgängen verwendet werden.
 ms.assetid: 17dc3c97-232c-4ac4-988c-84c3061b4133
 title: Msvm_ServicingSettings-Klasse
 ms.topic: reference
@@ -14,18 +14,18 @@ api_type:
 - DllExport
 api_location:
 - vmms.exe
-ms.openlocfilehash: 16033583a012c71ef2150ff68dc06564e149de84
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 79a0a6a141dfd027c0d9c44e70274853d908ce6afa6cae34e9f059b0a42ffdfb
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104485270"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118950548"
 ---
-# <a name="msvm_servicingsettings-class"></a>MSVM \_ servicingsettings-Klasse
+# <a name="msvm_servicingsettings-class"></a>Msvm \_ ServicingSettings-Klasse
 
-Enthält Einstellungen, die während des Wartungs Vorgangs verwendet werden.
+Enthält Einstellungen, die bei Wartungsvorgängen verwendet werden.
 
-Die folgende Syntax wird Managed Object Format (MOF)-Code vereinfacht und enthält alle geerbten Eigenschaften.
+Die folgende Syntax ist Managed Object Format (MOF)-Code vereinfacht und enthält alle geerbten Eigenschaften.
 
 ## <a name="syntax"></a>Syntax
 
@@ -39,20 +39,20 @@ class Msvm_ServicingSettings
 
 ## <a name="members"></a>Member
 
-Die **MSVM \_ servicingsettings** -Klasse verfügt über diese Typen von Membern:
+Die **Msvm \_ ServicingSettings-Klasse** verfügt über diese Typen von Membern:
 
 -   [Eigenschaften](#properties)
 
 ### <a name="properties"></a>Eigenschaften
 
-Die **MSVM \_ servicingsettings** -Klasse verfügt über diese Eigenschaften.
+Die **Msvm \_ ServicingSettings-Klasse** verfügt über diese Eigenschaften.
 
 <dl> <dt>
 
 **Version**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
@@ -68,10 +68,10 @@ Enthält die Version der Klassendefinition.
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows 8 \[ -Desktop-Apps\]<br/>                                                              |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2012 \[ -Desktop-Apps\]<br/>                                                    |
-| Namespace<br/>                | \\Stammvirtualisierung \\ v2<br/>                                                                     |
-| MOF<br/>                      | <dl> <dt>Windowsvirtualization. v2. MOF</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | \[Windows 8 Nur Desktop-Apps\]<br/>                                                              |
+| Unterstützte Mindestversion (Server)<br/> | \[Windows Server 2012 Nur Desktop-Apps\]<br/>                                                    |
+| Namespace<br/>                | Root \\ Virtualization \\ V2<br/>                                                                     |
+| MOF<br/>                      | <dl> <dt>WindowsVirtualization.V2.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Vmms.exe</dt> </dl>                     |
 
 

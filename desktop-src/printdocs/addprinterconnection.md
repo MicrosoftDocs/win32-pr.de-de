@@ -1,7 +1,7 @@
 ---
-description: Die addprconnection-Funktion fügt dem angegebenen Drucker für den aktuellen Benutzer eine Verbindung hinzu.
+description: Die AddPrinterConnection-Funktion fügt dem angegebenen Drucker für den aktuellen Benutzer eine Verbindung hinzu.
 ms.assetid: 6decf89a-1411-4e7e-aa20-60e7068658c2
-title: AddPrinterConnection-Funktion (winspool. h)
+title: AddPrinterConnection-Funktion (Winspool.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -15,16 +15,16 @@ api_type:
 - DllExport
 api_location:
 - Winspool.drv
-ms.openlocfilehash: dae1f823f89b69526218ab4c027642fb54e3cea5
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 83c4d348266e0d596deccb03b39e98ec41f8f23837727520d55b9baff82fec4c
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "103866564"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117869032"
 ---
 # <a name="addprinterconnection-function"></a>AddPrinterConnection-Funktion
 
-Die **addprconnection** -Funktion fügt dem angegebenen Drucker für den aktuellen Benutzer eine Verbindung hinzu.
+Die **AddPrinterConnection-Funktion** fügt dem angegebenen Drucker für den aktuellen Benutzer eine Verbindung hinzu.
 
 ## <a name="syntax"></a>Syntax
 
@@ -41,10 +41,10 @@ BOOL AddPrinterConnection(
 
 <dl> <dt>
 
-*PName* \[ in\]
+*pName* \[ In\]
 </dt> <dd>
 
-Ein Zeiger auf eine NULL-terminierte Zeichenfolge, die den Namen eines Druckers angibt, mit dem der aktuelle Benutzer eine Verbindung herstellen möchte.
+Ein Zeiger auf eine auf NULL endende Zeichenfolge, die den Namen eines Druckers angibt, mit dem der aktuelle Benutzer eine Verbindung herstellen möchte.
 
 </dd> </dl>
 
@@ -54,16 +54,16 @@ Wenn die Funktion erfolgreich ausgeführt wird, ist der Rückgabewert ein Wert u
 
 Wenn die Funktion fehlerhaft ist, ist der Rückgabewert null.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
 > [!Note]  
-> Dies ist eine blockierende oder synchrone Funktion, die möglicherweise nicht sofort zurückgegeben wird. Wie schnell diese Funktion zurückgibt, hängt von Lauf Zeitfaktoren ab, wie z. b. Netzwerkstatus, Druckserver Konfiguration und Implementierungs Faktoren für Druckertreiber, die beim Schreiben einer Anwendung schwierig vorhergesagt werden können. Wenn diese Funktion von einem Thread aufgerufen wird, der die Interaktion mit der Benutzeroberfläche verwaltet, könnte die Anwendung scheinbar nicht mehr reagiert.
+> Dies ist eine blockierende oder synchrone Funktion und wird möglicherweise nicht sofort zurückgegeben. Wie schnell diese Funktion zurückgegeben wird, hängt von Laufzeitfaktoren wie Netzwerkstatus, Druckerserverkonfiguration und Implementierungsfaktoren für Druckertreiber ab, die beim Schreiben einer Anwendung schwer vorherzusagen sind. Das Aufrufen dieser Funktion über einen Thread, der die Interaktion mit der Benutzeroberfläche verwaltet, kann dazu bringen, dass die Anwendung scheinbar nicht reagiert.
 
  
 
-Wenn Windows eine Verbindung zu einem Drucker herstellt, müssen möglicherweise Druckertreiber Dateien auf den Server kopiert werden, an den der Drucker angefügt ist. Wenn der Benutzer nicht über die Berechtigung zum Kopieren von Dateien an den entsprechenden Speicherort verfügt, schlägt die **AddPrinterConnection** -Funktion fehl, und [**GetLastError**](/windows/desktop/api/errhandlingapi/nf-errhandlingapi-getlasterror) gibt den Fehler \_ Zugriff \_ verweigert zurück.
+Wenn Windows eine Verbindung mit einem Drucker herstellen, müssen möglicherweise Druckertreiberdateien auf den Server kopiert werden, an den der Drucker angefügt ist. Wenn der Benutzer nicht über die Berechtigung zum Kopieren von Dateien an den entsprechenden Speicherort verfügt, schlägt die **Funktion AddPrinterConnection** fehl, und [**GetLastError**](/windows/desktop/api/errhandlingapi/nf-errhandlingapi-getlasterror) gibt ERROR \_ ACCESS \_ DENIED zurück.
 
-Eine Druckerverbindung, die durch den Aufruf von **addprconnection** hergestellt wird, wird aufgelistet, wenn [**enumprinter**](enumprinters.md) aufgerufen wird, wobei *dwType* auf druckerenum-Verbindung festgelegt ist \_ \_ .
+Eine Druckerverbindung, die durch Aufrufen von **AddPrinterConnection** hergestellt wird, wird aufzählt, wenn [**EnumPrinters**](enumprinters.md) aufgerufen wird, wobei *dwType* auf PRINTER \_ ENUM CONNECTION festgelegt \_ ist.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -73,10 +73,10 @@ Eine Druckerverbindung, die durch den Aufruf von **addprconnection** hergestellt
 |-------------------------------------|-----------------------------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[nur Desktop-Apps\]<br/>                                                |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                                                      |
-| Header<br/>                   | <dl> <dt>Winspool. h (Include Windows. h)</dt> </dl> |
-| Bibliothek<br/>                  | <dl> <dt>Winspool. lib</dt> </dl>                   |
-| DLL<br/>                      | <dl> <dt>Winspool. drv</dt> </dl>                   |
-| Unicode- und ANSI-Name<br/>   | **Addprinterconnectionw** (Unicode) und **addprinterconnectiona** (ANSI)<br/>                       |
+| Header<br/>                   | <dl> <dt>Winspool.h (include Windows.h)</dt> </dl> |
+| Bibliothek<br/>                  | <dl> <dt>Winspool.lib</dt> </dl>                   |
+| DLL<br/>                      | <dl> <dt>Winspool.drv</dt> </dl>                   |
+| Unicode- und ANSI-Name<br/>   | **AddPrinterConnectionW** (Unicode) und **AddPrinterConnectionA** (ANSI)<br/>                       |
 
 
 
@@ -90,13 +90,13 @@ Eine Druckerverbindung, die durch den Aufruf von **addprconnection** hergestellt
 [Druckspooler-API-Funktionen](printing-and-print-spooler-functions.md)
 </dt> <dt>
 
-[**Connecttoprinterdlg**](connecttoprinterdlg.md)
+[**ConnectToPrinterDlg**](connecttoprinterdlg.md)
 </dt> <dt>
 
-[**Deleteprinterconnection**](deleteprinterconnection.md)
+[**DeletePrinterConnection**](deleteprinterconnection.md)
 </dt> <dt>
 
-[**Enumdrucker**](enumprinters.md)
+[**EnumPrinters**](enumprinters.md)
 </dt> </dl>
 
  

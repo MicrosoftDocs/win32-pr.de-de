@@ -46,7 +46,7 @@ HRESULT D3DXDeclaratorFromFVF(
 
 Typ: **[ **DWORD**](../winprog/windows-data-types.md)**
 
-Kombination aus [D3DFVF,](d3dfvf.md) die die FVF beschreibt, aus der das zurückgegebene Deklaratorarray generiert werden soll.
+Kombination von [D3DFVF,](d3dfvf.md) die die FVF beschreibt, aus der das zurückgegebene Deklaratorarray generiert werden soll.
 
 </dd> <dt>
 
@@ -55,7 +55,7 @@ Kombination aus [D3DFVF,](d3dfvf.md) die die FVF beschreibt, aus der das zurück
 
 Typ: **[ **D3DVERTEXELEMENT9**](d3dvertexelement9.md)**
 
-Ein Array von [**D3DVERTEXELEMENT9-Elementen,**](d3dvertexelement9.md) das das Scheitelpunktformat der Netzvertices beschreibt. Die Obergrenze dieses Deklaratorarrays ist [**MAX \_ FVF \_ DECL \_ SIZE**](./max-fvf-decl-size.md).
+Ein Array von [**D3DVERTEXELEMENT9-Elementen,**](d3dvertexelement9.md) die das Scheitelpunktformat der Gitternetzvertices beschreiben. Die Obergrenze dieses Deklaratorarrays ist [**MAX \_ FVF \_ DECL \_ SIZE.**](./max-fvf-decl-size.md)
 
 </dd> </dl>
 
@@ -63,7 +63,7 @@ Ein Array von [**D3DVERTEXELEMENT9-Elementen,**](d3dvertexelement9.md) das das S
 
 Typ: **[ **HRESULT**](https://msdn.microsoft.com/library/Bb401631(v=MSDN.10).aspx)**
 
-Wenn die Funktion erfolgreich ausgeführt wird, lautet der Rückgabewert D3D \_ OK. Wenn die Funktion fehlschlägt, kann der Rückgabewert einer der folgenden Sein: D3DXERR \_ INVALIDMESH.
+Wenn die Funktion erfolgreich ist, ist der Rückgabewert D3D \_ OK. Wenn die Funktion fehlschlägt, kann der Rückgabewert einer der folgenden sein: D3DXERR \_ INVALIDMESH.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -76,11 +76,11 @@ Wenn die Funktion erfolgreich ausgeführt wird, lautet der Rückgabewert D3D \_ 
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 
-[Meshfunktionen](dx9-graphics-reference-d3dx-functions-mesh.md)
+[Mesh-Funktionen](dx9-graphics-reference-d3dx-functions-mesh.md)
 </dt> <dt>
 
 [**D3DXFVFFromDeclarator**](d3dxfvffromdeclarator.md)

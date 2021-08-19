@@ -6,7 +6,7 @@ keywords:
 - Erstellen von Skins, Skindefinitionsdateien
 - Windows Media Player Skins, Skindefinitionsdateien
 - Skins, Skindefinitionsdateien
-- Dateien für Skins,Skindefinition
+- Dateien für Skins, Skindefinition
 - Skindefinitionsdateien, XML-Struktur
 - XML-Struktur für Skindefinitionsdateien
 ms.topic: article
@@ -20,7 +20,7 @@ ms.locfileid: "118995250"
 ---
 # <a name="skin-definition-file-xml-structure"></a>XML-Struktur der Skindefinitionsdatei
 
-Die Skindefinitionsdatei wird in XML geschrieben. Eines der wichtigen Features von XML ist, dass es vollständig strukturiert ist und einer Gliederung ähnelt. Der XML-Code ist einfach eine Reihe von Elementen wie **VIEW** und **BUTTONGROUP.** Sie beginnen mit den Elementen und definieren sie dann mit Attributen. Im restlichen Teil dieses Tutorials erhalten Sie Details zu den Attributen, aber hier ist die Gliederung der Elemente, die verwendet werden:
+Die Skindefinitionsdatei wird in XML geschrieben. Eines der wichtigen Features von XML ist, dass es vollständig strukturiert ist und einer Gliederung ähnelt. Der XML-Code besteht einfach aus einer Reihe von Elementen wie **VIEW** und **BUTTONGROUP.** Sie beginnen mit den Elementen und definieren sie dann mit Attributen. Im restlichen Teil dieses Tutorials erhalten Sie Details zu den Attributen. Hier finden Sie jedoch die Gliederung der elemente, die verwendet werden:
 
 
 ```C++
@@ -37,7 +37,7 @@ Die Skindefinitionsdatei wird in XML geschrieben. Eines der wichtigen Features v
 
 
 
-Wenn Sie die einfache Struktur der Elemente berücksichtigen, können Sie die Attribute verstehen, die jedes Element eindeutig machen. Details zu den einzelnen Elementen werden in den verbleibenden Themen dieses Abschnitts behandelt. Weitere Informationen zu Elementen und Attributen finden Sie in der [Skin-Programmierreferenz.](skin-programming-reference.md)
+Wenn Sie die einfache Struktur der Elemente berücksichtigen, können Sie die Attribute berücksichtigen, die jedes Element eindeutig machen. Details zu jedem Element werden in den verbleibenden Themen dieses Abschnitts behandelt. Weitere Informationen zu Elementen und Attributen finden Sie in der [Referenz zur Skinprogrammierung.](skin-programming-reference.md)
 
 ## <a name="related-topics"></a>Zugehörige Themen
 

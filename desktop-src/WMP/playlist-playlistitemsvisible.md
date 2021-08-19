@@ -56,7 +56,7 @@ Der Bereich Wiedergabelistenelemente enthält die Spaltenüberschriften, den Inh
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 

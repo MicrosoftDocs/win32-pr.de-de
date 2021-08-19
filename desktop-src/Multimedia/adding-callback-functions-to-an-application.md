@@ -15,12 +15,12 @@ ms.locfileid: "118941828"
 
 Eine Anwendung kann Rückruffunktionen im Erfassungsfenster registrieren, sodass sie die Anwendung unter den folgenden Umständen benachrichtigt:
 
--   Statusänderungen
+-   Der Status ändert sich.
 -   Fehler treten auf
--   Videoframe und Audiopuffer werden verfügbar
--   Die Anwendung sollte während der Streamingerfassung ergebnisse
+-   Videoframes und Audiopuffer werden verfügbar
+-   Die Anwendung sollte während der Streamingerfassung ergebnissen.
 
-Im folgenden Beispiel wird ein Erfassungsfenster erstellt und Status-, Fehler-, Videostream- und Framerückruffunktionen in der Nachrichtenverarbeitungsschleife einer Anwendung registriert. Sie enthält auch eine Beispiel-Anweisung zum Deaktivieren einer Rückruffunktion. Nachfolgende Beispiele zeigen einfache Status-, Fehler- und Framerückruffunktionen.
+Im folgenden Beispiel wird ein Erfassungsfenster erstellt und die Status-, Fehler-, Videostream- und Framerückruffunktionen in der Nachrichtenverarbeitungsschleife einer Anwendung registriert. Sie enthält auch eine Beispielanweisung zum Deaktivieren einer Rückruffunktion. Nachfolgende Beispiele zeigen einfache Status-, Fehler- und Framerückruffunktionen.
 
 
 ```C++
@@ -77,7 +77,7 @@ case WM_CLOSE:
 
 <dl> <dt>
 
-[Verwenden von Video Capture](using-video-capture.md)
+[Verwenden von Video capture](using-video-capture.md)
 </dt> </dl>
 
  

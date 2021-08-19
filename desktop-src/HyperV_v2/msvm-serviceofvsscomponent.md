@@ -97,7 +97,7 @@ Ein [**Msvm \_ VssService,**](msvm-vssservice.md) der den VSS IC-Dienst darstell
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 

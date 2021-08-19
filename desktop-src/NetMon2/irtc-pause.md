@@ -40,7 +40,7 @@ Diese Methode hat keine Parameter.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Wenn die Methode erfolgreich ist, lautet der Rückgabewert NMERR \_ SUCCESS.
+Wenn die Methode erfolgreich ist, ist der Rückgabewert NMERR \_ SUCCESS.
 
 Wenn die Methode nicht erfolgreich ist, ist der Rückgabewert einer der folgenden Fehlercodes:
 
@@ -48,10 +48,10 @@ Wenn die Methode nicht erfolgreich ist, ist der Rückgabewert einer der folgende
 
 | Rückgabecode                                                                                           | Beschreibung                                                                                                                   |
 |-------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------|
-| <dl> <dt>**NMERR \_ CAPTURE \_ PAUSED**</dt> </dl> | Die Erfassung ist bereits angehalten.<br/>                                                                                     |
-| <dl> <dt>**NMERR \_ NICHT \_ ERFASSEN**</dt> </dl>  | Das NPP erfasst keine Daten. Rufen Sie [IRTC::Start](irtc-start.md) auf, um die Erfassung zu starten.<br/>                            |
-| <dl> <dt>**NMERR \_ NICHT \_ VERBUNDEN**</dt> </dl>  | Das NPP ist nicht mit dem Netzwerk verbunden. Rufen Sie [IRTC::Verbinden](irtc-connect.md) auf, um die NPP mit dem Netzwerk zu verbinden.<br/> |
-| <dl> <dt>**NMERR \_ NOT \_ REALTIME**</dt> </dl>   | Das NPP ist mit dem Netzwerk verbunden, jedoch nicht mit der [IRTC::Verbinden-Methode.](irtc-connect.md)<br/>                     |
+| <dl> <dt>**NMERR \_ CAPTURE \_ PAUSED**</dt> </dl> | Die Erfassung wurde bereits angehalten.<br/>                                                                                     |
+| <dl> <dt>**NMERR NOT CAPTURING (NMERR \_ WIRD NICHT \_ ERFASST)**</dt> </dl>  | Der NPP erfasst keine Daten. Rufen Sie [IRTC::Start auf,](irtc-start.md) um die Erfassung zu starten.<br/>                            |
+| <dl> <dt>**NMERR \_ NICHT \_ VERBUNDEN**</dt> </dl>  | Der NPP ist nicht mit dem Netzwerk verbunden. Rufen [Sie IRTC::Verbinden](irtc-connect.md) auf, um das NPP mit dem Netzwerk zu verbinden.<br/> |
+| <dl> <dt>**NMERR \_ NOT \_ REALTIME**</dt> </dl>   | Der NPP ist mit dem Netzwerk verbunden, aber nicht mit der [IRTC::Verbinden-Methode.](irtc-connect.md)<br/>                     |
 
 
 
@@ -59,11 +59,11 @@ Wenn die Methode nicht erfolgreich ist, ist der Rückgabewert einer der folgende
 
 ## <a name="remarks"></a>Hinweise
 
-Während sich die Erfassung in einem angehaltenen Zustand befindet, werden neue Frames erst erfasst, wenn die [IRTC::Resume-Methode](irtc-resume.md) aufgerufen wird, um die Erfassung neu zu starten.
+Während sich die Erfassung im angehaltenen Zustand befindet, werden neue Frames erst erfasst, wenn die [IRTC::Resume-Methode](irtc-resume.md) aufgerufen wird, um die Erfassung neu zu starten.
 
-Wenn Sie die **Methoden IRTC::P ause** und **IRTC::Resume** verwenden, um die Erfassung zu steuern, fügen Netzwerkmonitor bei jeder Ausführung der Erfassung [*weiterhin Konversationsstatistiken*](c.md) hinzu.
+Wenn Sie die **Methoden IRTC::P ause** und **IRTC::Resume** verwenden, um die Erfassung [](c.md) zu steuern, fügt Netzwerkmonitor weiterhin Konversationsstatistiken hinzu, wenn die Erfassung ausgeführt wird.
 
-Um den Erfassungsaufruf neu zu starten, rufen [Sie IRTC::Resume auf.](irtc-resume.md) Um die Erfassung zu beenden, rufen Sie [IRTC::Stop](irtc-stop.md)auf.
+Rufen Sie [IRTC::Resume](irtc-resume.md)auf, um den Erfassungsaufruf neu zu starten. Rufen Sie [IRTC::Stop](irtc-stop.md)auf, um die Erfassung zu beenden.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -78,7 +78,7 @@ Um den Erfassungsaufruf neu zu starten, rufen [Sie IRTC::Resume auf.](irtc-resum
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 

@@ -79,7 +79,7 @@ Gibt S \_ OK zurück, wenn erfolgreich, oder E \_ INVALIDARG, wenn die angegeben
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 

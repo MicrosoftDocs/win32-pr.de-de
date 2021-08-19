@@ -113,7 +113,7 @@ Zugriffstyp: Lesen/Schreiben
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 

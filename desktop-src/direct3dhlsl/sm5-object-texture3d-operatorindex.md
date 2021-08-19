@@ -53,7 +53,7 @@ Eine schreibgeschützte Ressourcenvariable.
 
 ## <a name="remarks"></a>Hinweise
 
-Diese Methode greifen immer auf die erste MIP-Ebene zu. Verwenden Sie stattdessen den [**mip.operator, \[ \] \[ \]**](sm5-object-texture3d-mipsoperatorindex.md) um andere MIP-Ebenen anzugeben.
+Diese Methode greift immer auf die erste MIP-Ebene zu. Verwenden Sie stattdessen den [**\[ \] \[ \] mip.operator,**](sm5-object-texture3d-mipsoperatorindex.md) um andere MIP-Ebenen anzugeben.
 
 Diese Funktion wird für die folgenden Shadertypen unterstützt:
 
@@ -67,7 +67,7 @@ Diese Funktion wird für die folgenden Shadertypen unterstützt:
 
  
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 

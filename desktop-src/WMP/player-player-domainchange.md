@@ -84,7 +84,7 @@ Der Wert von Ereignisparametern wird von Windows Media Player angegeben und kann
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 

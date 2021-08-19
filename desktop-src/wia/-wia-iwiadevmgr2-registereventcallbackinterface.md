@@ -1,5 +1,5 @@
 ---
-description: Registriert eine ausgeführte Anwendung für Windows Image Acquisition (WIA) 2.0-Ereignisbenachrichtigung.
+description: Registriert eine ausgeführte Anwendung für Windows WIA 2.0-Ereignisbenachrichtigung (Image Acquisition).
 ms.assetid: 978dcd41-d63b-421d-b7e1-8e9368b36180
 title: IWiaDevMgr2::RegisterEventCallbackInterface-Methode (Wia.h)
 ms.topic: reference
@@ -22,7 +22,7 @@ ms.locfileid: "118965640"
 ---
 # <a name="iwiadevmgr2registereventcallbackinterface-method"></a>IWiaDevMgr2::RegisterEventCallbackInterface-Methode
 
-Registriert eine ausgeführte Anwendung für Windows Image Acquisition (WIA) 2.0-Ereignisbenachrichtigung.
+Registriert eine ausgeführte Anwendung für Windows WIA 2.0-Ereignisbenachrichtigung (Image Acquisition).
 
 ## <a name="syntax"></a>Syntax
 
@@ -57,7 +57,7 @@ Derzeit nicht verwendet. Sollte auf Null festgelegt werden.
 
 Typ: **BSTR**
 
-Gibt den eindeutigen Bezeichner eines WIA 2.0-Geräts an. Legen Sie diesen Parameter auf **NULL** fest, um sich für das Ereignis auf allen WIA 2.0-Geräten zu registrieren.
+Gibt den eindeutigen Bezeichner eines WIA 2.0-Geräts an. Legen Sie diesen Parameter auf **NULL fest,** um sich auf allen WIA 2.0-Geräten für das Ereignis zu registrieren.
 
 </dd> <dt>
 
@@ -66,7 +66,7 @@ Gibt den eindeutigen Bezeichner eines WIA 2.0-Geräts an. Legen Sie diesen Param
 
 Typ: **const \* GUID**
 
-Gibt einen Zeiger auf den Ereignisbezeichner an, für den die Anwendung registriert wird. Informationen zu [Standardereignisbezeichnern](-wia-wia-event-identifiers.md) finden Sie unter WIA-Ereignisbezeichner.
+Gibt einen Zeiger auf den Ereignisbezeichner an, für den die Anwendung registriert wird. Standardereignisbezeichner finden Sie unter [WIA-Ereignisbezeichner.](-wia-wia-event-identifiers.md)
 
 </dd> <dt>
 
@@ -75,7 +75,7 @@ Gibt einen Zeiger auf den Ereignisbezeichner an, für den die Anwendung registri
 
 Typ: **[ **IWiaEventCallback**](/windows/desktop/api/wia_xp/nn-wia_xp-iwiaeventcallback)\***
 
-Gibt einen Zeiger auf die [**IWiaEventCallback-Schnittstelle**](/windows/desktop/api/wia_xp/nn-wia_xp-iwiaeventcallback) an, die von WIA 2.0 zum Senden von Ereignisbenachrichtigungen verwendet wird.
+Gibt einen Zeiger auf die [**IWiaEventCallback-Schnittstelle**](/windows/desktop/api/wia_xp/nn-wia_xp-iwiaeventcallback) an, die wia 2.0 zum Senden von Ereignisbenachrichtigungen verwendet.
 
 </dd> <dt>
 
@@ -92,7 +92,7 @@ Empfängt die Adresse eines Zeigers auf die [IUnknown-Schnittstelle.](/windows/w
 
 Typ: **HRESULT**
 
-Gibt die standardmäßigen COM-Fehlercodes oder Folgendes zurück.
+Gibt die STANDARDMÄßIGEN COM-Fehlercodes oder die folgenden zurück.
 
 
 
@@ -107,16 +107,16 @@ Gibt die standardmäßigen COM-Fehlercodes oder Folgendes zurück.
 ## <a name="remarks"></a>Hinweise
 
 > [!WARNING]
-> Wenn Sie die Methoden [**IWiaDevMgr::RegisterEventCallbackInterface**](/windows/desktop/api/wia_xp/nf-wia_xp-iwiadevmgr-registereventcallbackinterface), **IWiaDevMgr2::RegisterEventCallbackInterface** und [**DeviceManager.RegisterEvent**](/previous-versions/windows/desktop/wiaaut/-wiaaut-idevicemanager-registerevent) aus dem gleichen Prozess nach dem Neustart des Still Image Service verwenden, kann dies zu einer Zugriffsverletzung führen, wenn die Funktionen vor dem Anhalten des Diensts verwendet wurden.
+> Die Verwendung der [**Methoden IWiaDevMgr::RegisterEventCallbackInterface,**](/windows/desktop/api/wia_xp/nf-wia_xp-iwiadevmgr-registereventcallbackinterface) **IWiaDevMgr2::RegisterEventCallbackInterface** und [**DeviceManager.RegisterEvent aus**](/previous-versions/windows/desktop/wiaaut/-wiaaut-idevicemanager-registerevent) demselben Prozess nach dem Neustart des Still Image Service kann zu einer Zugriffsverletzung führen, wenn die Funktionen vor dem Abbruch des Diensts verwendet wurden.
 
  
 
-Wenn WIA 2.0-Anwendungen mit der Ausführung beginnen, verwenden sie diese Methode, um sich für den Empfang von Hardwaregeräteereignissen zu registrieren. Dadurch wird verhindert, dass die Anwendung neu gestartet wird, wenn ein anderes Ereignis auftritt, für das sie registriert ist. Sobald eine Anwendung **IWiaDevMgr2::RegisterEventCallbackInterface** aufruft, um sich selbst zu registrieren, um WIA 2.0-Ereignisse von einem Gerät zu empfangen, werden die registrierten Ereignisse von WIA 2.0 an das Programm weitergeleitet.
+Wenn WIA 2.0-Anwendungen mit der Ausführung beginnen, verwenden sie diese Methode, um sich für den Empfang von Hardwaregeräteereignissen zu registrieren. Dadurch wird verhindert, dass die Anwendung neu gestartet wird, wenn ein anderes Ereignis auftritt, für das sie registriert ist. Sobald eine Anwendung **IWiaDevMgr2::RegisterEventCallbackInterface** aufruft, um sich selbst für den Empfang von WIA 2.0-Ereignissen von einem Gerät zu registrieren, werden die registrierten Ereignisse von WIA 2.0 an das Programm geroutet.
 
-Anwendungen müssen die [IUnknown::Release-Methode](/windows/win32/api/unknwn/nf-unknwn-iunknown-release) für die Schnittstellenzeiger aufrufen, die sie über den *pEventObject-Parameter* empfangen.
+Anwendungen müssen die [IUnknown::Release-Methode für](/windows/win32/api/unknwn/nf-unknwn-iunknown-release) die Schnittstellenze0er aufrufen, die sie über den *pEventObject-Parameter* empfangen.
 
 > [!Note]  
-> In einer Multithreadanwendung kann der Ereignisbenachrichtigungsrückruf in einem anderen Thread als dem, der den Rückruf registriert hat, eintreten.
+> In einer Multithreadanwendung kann der Ereignisbenachrichtigungsrückruf in einem anderen Thread als dem kommen, der den Rückruf registriert hat.
 
  
 
@@ -126,7 +126,7 @@ Anwendungen müssen die [IUnknown::Release-Methode](/windows/win32/api/unknwn/nf
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur Vista-Desktop-Apps\]<br/>                                     |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ Vista-Desktop-Apps\]<br/>                                     |
 | Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/>                               |
 | Header<br/>                   | <dl> <dt>Wia.h</dt> </dl>   |
 | Idl<br/>                      | <dl> <dt>Wia.idl</dt> </dl> |

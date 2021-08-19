@@ -1,7 +1,7 @@
 ---
-description: 'Die canseekforward-Methode bestimmt, ob für den Datenstrom ein Seeding durchgeführt werden kann. Diese Methode implementiert die imediaposition:: canseekforward-Methode.'
+description: Die CanSeekForward-Methode bestimmt, ob der Stream vorwärts durchsuchen werden kann. Diese Methode implementiert die IMediaPosition::CanSeekForward-Methode.
 ms.assetid: ccb2db8d-b52e-4e3d-b49b-9689197a974a
-title: Cpospassthru. canseekforward-Methode (ctlutil. h)
+title: CPosPassThru.CanSeekForward-Methode (Ctlutil.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,16 +16,16 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: 701bfdff1d3a3a37dc0e3935aa82bfca2e01cfcb
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: f07491a94522280357c85d773d28ea4732f2f85879b55cf5d1b5a99ec72d23f9
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106360887"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119073564"
 ---
-# <a name="cpospassthrucanseekforward-method"></a>Cpospassthru. canseekforward-Methode
+# <a name="cpospassthrucanseekforward-method"></a>CPosPassThru.CanSeekForward-Methode
 
-Die- `CanSeekForward` Methode bestimmt, ob für den Datenstrom ein Seeding durchgeführt werden kann. Diese Methode implementiert die [**imediaposition:: canseekforward**](/windows/desktop/api/Control/nf-control-imediaposition-canseekforward) -Methode.
+Die `CanSeekForward` -Methode bestimmt, ob der Stream vorwärts durchsuchen werden kann. Diese Methode implementiert die [**IMediaPosition::CanSeekForward-Methode.**](/windows/desktop/api/Control/nf-control-imediaposition-canseekforward)
 
 ## <a name="syntax"></a>Syntax
 
@@ -42,16 +42,16 @@ HRESULT CanSeekForward(
 
 <dl> <dt>
 
-*pcanseekforward* 
+*pCanSeekForward* 
 </dt> <dd>
 
-Ein Zeiger auf eine Variable, die den Wert oatrue empfängt, wenn der Filter eine Suche durchsuchen oder andernfalls oafalse.
+Zeiger auf eine Variable, die den Wert OATRUE empfängt, wenn der Filter vorwärts suchen kann, andernfalls OAFALSE.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt den **HRESULT** -Wert aus der verbundenen PIN zurück.
+Gibt den **HRESULT-Wert** vom verbundenen Pin zurück.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -59,8 +59,8 @@ Gibt den **HRESULT** -Wert aus der verbundenen PIN zurück.
 
 | Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Ctlutil. h (Include Streams. h)</dt> </dl>                                                                                   |
-| Bibliothek<br/> | <dl> " <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Ctlutil.h (include Streams.h)</dt> </dl>                                                                                   |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Einzelhandels-Builds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
@@ -68,7 +68,7 @@ Gibt den **HRESULT** -Wert aus der verbundenen PIN zurück.
 
 <dl> <dt>
 
-[**Cpospassthru-Klasse**](cpospassthru.md)
+[**CPosPassThru-Klasse**](cpospassthru.md)
 </dt> </dl>
 
  

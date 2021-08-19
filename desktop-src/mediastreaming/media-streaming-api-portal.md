@@ -15,7 +15,7 @@ ms.locfileid: "118972169"
 
 ## <a name="purpose"></a>Zweck
 
-Die Medienstreaming-API modelliert die Geräte Digital Media Renderer (DMR) und Digital Media Server (DMS), wie in den DLNA-Richtlinien für die einfache programmgesteuerte Verwendung definiert, sodass Entwickler Anwendungen mit Digital Media Controller (DMC), Digital Media Player (DMP) und Push Controller (+PU+) erstellen können, wie in den DLNA-Richtlinien definiert.
+Die Media Streaming-API modelliert die Geräte Digital Media Renderer (DMR) und Digital Media Server (DMS), wie in den DLNA-Richtlinien für eine einfache programmgesteuerte Verwendung definiert, sodass Entwickler Anwendungen mit den Funktionen Digital Media Controller (DMC), Digital Media Player (DMP) und Push Controller (+PU+) gemäß den DLNA-Richtlinien erstellen können.
 
 ## <a name="in-this-section"></a>In diesem Abschnitt
 
@@ -23,12 +23,12 @@ Die Medienstreaming-API modelliert die Geräte Digital Media Renderer (DMR) und 
 
 | Thema                                       | BESCHREIBUNG                                                                         |
 |---------------------------------------------|-------------------------------------------------------------------------------------|
-| [Klassen](classes.md)<br/>           | Die Medienstreaming-API stellt die folgenden Klassen bereit. <br/>                 |
+| [Klassen](classes.md)<br/>           | Die Media Streaming-API stellt die folgenden Klassen bereit. <br/>                 |
 | [Delegaten](delegates.md)<br/>       | Die Media Streaming-API stellt die folgenden Ereignishandlerfunktionen bereit. <br/> |
-| [Enumerationen](enumerations.md)<br/> | Die Medienstreaming-API stellt die folgenden Enumerationen bereit. <br/>            |
-| [Ereignisse](events.md)<br/>             | Die Medienstreaming-API generiert die folgenden Ereignisse.<br/>                  |
+| [Enumerationen](enumerations.md)<br/> | Die Media Streaming-API stellt die folgenden Enumerationen bereit. <br/>            |
+| [Ereignisse](events.md)<br/>             | Die Media Streaming-API generiert die folgenden Ereignisse.<br/>                  |
 | [Schnittstellen](interfaces.md)<br/>     | Die Media Streaming-API stellt die folgenden Schnittstellen bereit.<br/>               |
-| [Strukturen](structures.md)<br/>     | Die Medienstreaming-API stellt die folgenden Strukturen bereit.<br/>               |
+| [Strukturen](structures.md)<br/>     | Die Media Streaming-API stellt die folgenden Strukturen bereit.<br/>               |
 
 
 
@@ -36,7 +36,7 @@ Die Medienstreaming-API modelliert die Geräte Digital Media Renderer (DMR) und 
 
 ## <a name="developer-audience"></a>Entwicklergruppe
 
-Die Medienstreaming-API ist für die Verwendung durch C++-Entwickler konzipiert, die digitale Medienanwendungen erstellen, die mit DLNA-Geräten interagieren.
+Die Media Streaming-API ist für die Verwendung durch C++-Entwickler konzipiert, die digitale Medienanwendungen erstellen, die mit DLNA-Geräten interagieren.
 
  
 

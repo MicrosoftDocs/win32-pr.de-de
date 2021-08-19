@@ -43,7 +43,7 @@ void GetDimensions(
 
 Typ: **[ **UINT**](/windows/desktop/WinProg/windows-data-types)**
 
-Die Ressourcenbreite in Texel.
+Die Ressourcenbreite in Texeln.
 
 </dd> <dt>
 
@@ -52,7 +52,7 @@ Die Ressourcenbreite in Texel.
 
 Typ: **[ **UINT**](/windows/desktop/WinProg/windows-data-types)**
 
-Die Ressourcenhöhe in Texel.
+Die Ressourcenhöhe in Texeln.
 
 </dd> <dt>
 
@@ -61,7 +61,7 @@ Die Ressourcenhöhe in Texel.
 
 Typ: **[ **UINT**](/windows/desktop/WinProg/windows-data-types)**
 
-Die Anzahl der Beispielspeicherorte.
+Die Anzahl der Beispielstandorte.
 
 </dd> </dl>
 
@@ -94,7 +94,7 @@ Diese Funktion wird für die folgenden Shadertypen unterstützt:
 
  
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 

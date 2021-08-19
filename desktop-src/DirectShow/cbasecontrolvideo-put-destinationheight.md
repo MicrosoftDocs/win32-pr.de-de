@@ -82,7 +82,7 @@ Eine Anwendung kann die Quell- und Zielrechtecke für das Video über die [**IBa
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 

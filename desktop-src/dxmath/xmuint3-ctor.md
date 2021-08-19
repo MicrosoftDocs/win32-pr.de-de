@@ -1,5 +1,5 @@
 ---
-description: Konstruktoren, die von XMUINT3 verfügbar gemacht werden.
+description: Von XMUINT3 verfügbar gemachte Konstruktoren.
 ms.assetid: f3737cb1-36a0-4dbc-94d5-237e7395670e
 title: XMUINT3-Konstruktoren (Directxmath.h)
 ms.date: 07/02/2019
@@ -49,7 +49,7 @@ Dieser Konstruktor ist nur unter C++ verfügbar.
 </tr>
 <tr class="even">
 <td style="text-align: left;">[<strong>XMUINT3 (const uint32_t*)</strong>] (/windows/win32/api/directxmath/nf-directxmath-xmuint3-xmuint3(constuint32_t))</td>
-<td style="text-align: left;">Initialisiert eine neue Instanz von aus <code>XMUINT3</code> einem Arrayargument mit <code>uint32_t</code> drei Element.<br/> Dieser Konstruktor initialisiert eine neue Instanz von [<strong>XMUINT3</strong>](/windows/win32/api/directxmath/ns-directxmath-xmuint3) aus einem Arrayargument mit drei <code>uint32_t</code> Element.<br/>
+<td style="text-align: left;">Initialisiert eine neue Instanz von <code>XMUINT3</code> aus einem Arrayargument mit drei <code>uint32_t</code> Elementen.<br/> Dieser Konstruktor initialisiert eine neue Instanz von [<strong>XMUINT3</strong>](/windows/win32/api/directxmath/ns-directxmath-xmuint3) aus einem Arrayargument mit drei <code>uint32_t</code> Elementen.<br/>
 <blockquote>
 [!Note]<br />
 Dieser Konstruktor ist nur unter C++ verfügbar.
@@ -80,7 +80,7 @@ Dieser Konstruktor ist nur unter C++ verfügbar.
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 

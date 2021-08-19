@@ -1,19 +1,19 @@
 ---
-description: Die get \_ localparticipanttypeer-Methode ruft Teilnehmer Informationen ab, wie z. b. den e-Mail-Namen oder den geografischen Standort.
+description: Die get \_ LocalParticipantTypedInfo-Methode ruft Teilnehmerinformationen ab, z. B. E-Mail-Name oder geografischer Standort.
 ms.assetid: 46bb70a7-7dc9-463d-8416-737122412750
-title: 'Itlocalteilnehmer:: get_LocalParticipantTypedInfo-Methode (confpriv. h)'
+title: ITLocalParticipant::get_LocalParticipantTypedInfo-Methode (Confpriv.h)
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: caabaf503963c09898c06659884fd3ac3858e704
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: e41afb4c55ba769e341b81e5ec1ca721745509ba8bf2bdfd88ae22ebc48bb535
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106355979"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119003368"
 ---
-# <a name="itlocalparticipantget_localparticipanttypedinfo-method"></a>Itlocalteilnehmer:: get \_ localparticipanttypdinfo-Methode
+# <a name="itlocalparticipantget_localparticipanttypedinfo-method"></a>ITLocalParticipant::get \_ LocalParticipantTypedInfo-Methode
 
-Die **get \_ localparticipanttypeer** -Methode ruft Teilnehmer Informationen ab, wie z. b. den e-Mail-Namen oder den geografischen Standort.
+Die **get \_ LocalParticipantTypedInfo-Methode** ruft Teilnehmerinformationen ab, z. B. E-Mail-Name oder geografischer Standort.
 
 ## <a name="syntax"></a>Syntax
 
@@ -31,27 +31,27 @@ HRESULT get_LocalParticipantTypedInfo(
 
 <dl> <dt>
 
-*InfoType* \[ in\]
+*InfoType* \[ In\]
 </dt> <dd>
 
-[**Teilnehmer \_ Der typisierte \_ Info**](participant-typed-info.md) Bezeichner vom Typ der erforderlichen Informationen.
+[**TEILNEHMER \_ TYPED \_ INFO-Bezeichner**](participant-typed-info.md) des erforderlichen Informationstyps.
 
 </dd> <dt>
 
-*ppinfo* \[ vorgenommen\]
+*ppInfo* \[ out\]
 </dt> <dd>
 
-Zeiger auf einen **BSTR** -Wert, der die erforderlichen Informationen nach der erfolgreichen Rückgabe der Methode enthält.
+Zeiger auf einen **BSTR,** der die erforderlichen Informationen nach einer erfolgreichen Rückgabe der Methode enthält.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Wenn diese Methode erfolgreich ausgeführt wird, gibt Sie **S \_ OK** zurück. Andernfalls wird ein **HRESULT** -Fehlercode zurückgegeben.
+Wenn diese Methode erfolgreich ist, wird **S \_ OK zurückgegeben.** Andernfalls wird ein **HRESULT-Fehlercode** zurückgegeben.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die Anwendung muss [SysFreeString](/windows/win32/api/oleauto/nf-oleauto-sysfreestring) verwenden, um den für den *ppinfo* -Parameter zugewiesenen Arbeitsspeicher freizugeben.
+Die Anwendung muss [SysFreeString verwenden,](/windows/win32/api/oleauto/nf-oleauto-sysfreestring) um den für den *ppInfo-Parameter* zugeordneten Arbeitsspeicher frei zu geben.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -59,21 +59,21 @@ Die Anwendung muss [SysFreeString](/windows/win32/api/oleauto/nf-oleauto-sysfree
 
 | Anforderung | Wert |
 |-------------------------|---------------------------------------------------------------------------------------|
-| TAPI-Version<br/> | Erfordert TAPI 3,0 oder höher<br/>                                                 |
-| Header<br/>       | <dl> <dt>"Confpriv. h"</dt> </dl> |
-| Bibliothek<br/>      | <dl> <dt>UUID. lib</dt> </dl>   |
+| TAPI-Version<br/> | Erfordert TAPI 3.0 oder höher<br/>                                                 |
+| Header<br/>       | <dl> <dt>Confpriv.h</dt> </dl> |
+| Bibliothek<br/>      | <dl> <dt>Uuid.lib</dt> </dl>   |
 | DLL<br/>          | <dl> <dt>Tapi3.dll</dt> </dl>  |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Itlocalteilnehmer**](itlocalparticipant.md)
+[**ITLocalParticipant**](itlocalparticipant.md)
 </dt> <dt>
 
-[**\_typisierte Teilnehmer \_ Informationen**](participant-typed-info.md)
+[**VOM \_ TEILNEHMER TYPIERTE \_ INFORMATIONEN**](participant-typed-info.md)
 </dt> </dl>
 
  

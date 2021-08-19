@@ -1,7 +1,7 @@
 ---
 description: Ruft einen Wert ab, der angibt, ob der angegebene MIME-Typ von der Medienquelle unterstützt wird.
 ms.assetid: 894ef7d2-d008-42e1-8a61-26f35a8877be
-title: ANDROMediaSourceExtension::IsTypeSupported-Methode
+title: MÜSSENMediaSourceExtension::IsTypeSupported-Methode
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -20,7 +20,7 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 08/11/2021
 ms.locfileid: "118974339"
 ---
-# <a name="imfmediasourceextensionistypesupported-method"></a>ANDROMediaSourceExtension::IsTypeSupported-Methode
+# <a name="imfmediasourceextensionistypesupported-method"></a>MÜSSENMediaSourceExtension::IsTypeSupported-Methode
 
 Ruft einen Wert ab, der angibt, ob der angegebene MIME-Typ von der Medienquelle unterstützt wird.
 
@@ -39,7 +39,7 @@ BOOL IsTypeSupported(
 
 <dl> <dt>
 
-*Type (Typ)* \[ In\]
+*type* \[ In\]
 </dt> <dd>
 
 Der Medientyp, auf den die Unterstützung überprüft werden soll.
@@ -48,7 +48,7 @@ Der Medientyp, auf den die Unterstützung überprüft werden soll.
 
 ## <a name="return-value"></a>Rückgabewert
 
-**TRUE,** wenn der Medientyp unterstützt wird. andernfalls **FALSE.**
+**TRUE,** wenn der Medientyp unterstützt wird; andernfalls **FALSE.**
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -62,11 +62,11 @@ Der Medientyp, auf den die Unterstützung überprüft werden soll.
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 
-[**ANDROMediaSourceExtension**](/windows/desktop/api/mfmediaengine/nn-mfmediaengine-imfmediasourceextension)
+[**DURCHSCHN.MediaSourceExtension**](/windows/desktop/api/mfmediaengine/nn-mfmediaengine-imfmediasourceextension)
 </dt> </dl>
 
  

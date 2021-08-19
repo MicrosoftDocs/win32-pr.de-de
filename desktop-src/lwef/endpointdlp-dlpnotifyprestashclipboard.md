@@ -1,5 +1,5 @@
 ---
-description: Stellt dem System Informationen zu einem Dokument bereit, bevor ein Stash-Zwischenablagevorgang initiiert wird.
+description: Stellt dem System Informationen zu einem Dokument zur Verfügung, bevor ein Stash-Zwischenablagevorgang initiiert wird.
 title: DlpNotifyPreStashClipboard-Funktion (endpointdlp.h)
 ms.topic: reference
 ms.date: 03/18/2021

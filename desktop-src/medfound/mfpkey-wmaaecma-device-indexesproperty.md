@@ -1,5 +1,5 @@
 ---
-description: Gibt an, welche Audiogeräte der Voice Capture-DSP zum Erfassen und Rendern von Audio verwendet.
+description: Gibt an, welche Audiogeräte der Voice Capture-DSP zum Erfassen und Rendern von Audiodaten verwendet.
 ms.assetid: 42b6b82b-ac64-4a07-956c-473dd57a128d
 title: MFPKEY_WMAAECMA_DEVICE_INDEXES-Eigenschaft (Wmcodecdsp.h)
 ms.topic: reference
@@ -13,7 +13,7 @@ ms.locfileid: "117872991"
 ---
 # <a name="mfpkey_wmaaecma_device_indexes-property"></a>MFPKEY \_ WMAAECMA \_ DEVICE \_ INDEXES-Eigenschaft
 
-Gibt an, welche Audiogeräte der Voice Capture-DSP zum Erfassen und Rendern von Audio verwendet.
+Gibt an, welche Audiogeräte der Voice Capture-DSP zum Erfassen und Rendern von Audiodaten verwendet.
 
 ## <a name="constant-for-ipropertybag"></a>Konstante für IPropertyBag
 
@@ -72,7 +72,7 @@ varDeviceIndexes.lVal = (unsigned long)(iSpeakerIndex << 16) +
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 

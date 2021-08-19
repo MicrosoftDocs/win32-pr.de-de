@@ -1,51 +1,51 @@
 ---
-description: Verwenden Sie Makecert-Befehle zum Erstellen von Test Zertifikaten mithilfe der Optionen, die in Internet Explorer Version 4,0 oder höher verfügbar sind.
+description: Verwenden Sie MakeCert-Befehle, um Testzertifikate mithilfe von Optionen zu erstellen, Internet Explorer Version 4.0 oder höher verfügbar sind.
 ms.assetid: 5dbcc8d0-ffd1-4418-adf6-a9805280ee6d
-title: Verwenden von Makecert
+title: Verwenden von MakeCert
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 068b10d5ce50141ff657379f9c5106cf2733d969
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 321eccfc26e3fc5bf13a541e1aab6a41b3f5d0930beed03f6033211bf63ac689
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "103753448"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117971550"
 ---
-# <a name="using-makecert"></a>Verwenden von Makecert
+# <a name="using-makecert"></a>Verwenden von MakeCert
 
-In den folgenden Beispielen werden [Makecert](makecert.md) -Befehle zum Erstellen von Test Zertifikaten mithilfe der Optionen verwendet, die in Internet Explorer Version 4,0 oder höher verfügbar sind.
+In den folgenden Beispielen werden [MakeCert-Befehle](makecert.md) verwendet, um Testzertifikate mithilfe von Optionen zu erstellen, Internet Explorer Version 4.0 oder höher verfügbar sind.
 
--   Erstellen Sie ein Zertifikat, das vom Standardtest Stamm ausgestellt wird. Speichern Sie das Zertifikat in einer Datei.
+-   Stellen Sie ein Zertifikat aus, das vom Standardteststamm ausgestellt wird. Speichern Sie das Zertifikat in einer Datei.
 
-    **Makecert** *mynew. CER*
+    **MakeCert** *MyNew.cer*
 
--   Erstellen Sie ein Zertifikat, das vom Standardtest Stamm ausgestellt wird. Speichern Sie Sie in einem Zertifikat Speicher.
+-   Stellen Sie ein Zertifikat aus, das vom Standardteststamm ausgestellt wird. Speichern Sie sie in einem Zertifikatspeicher.
 
-    **Makecert-SS** *mynewstore*
+    **MakeCert -ss** *MyNewStore*
 
--   Erstellen Sie ein Zertifikat, das vom Standardtest Stamm ausgestellt wird. Erstellen Sie einen Schlüssel Container, und speichern Sie das Zertifikat in einem Geschäft und in einer Datei.
+-   Stellen Sie ein Zertifikat aus, das vom Standardteststamm ausgestellt wird. Erstellen Sie einen Schlüsselcontainer, und speichern Sie das Zertifikat sowohl in einem Speicher als auch in einer Datei.
 
-    **Makecert-SK** *mynewkey* **-SS** *mynewstore* *mynew. CER*
+    **MakeCert -sk** *MyNewKey* **-ss** *MyNewStore* *MyNew.cer*
 
--   Erstellen Sie ein Zertifikat, das vom Standardtest Stamm ausgestellt wird. Erstellen Sie eine Datei mit einem privaten Schlüssel, und speichern Sie das Zertifikat sowohl in einem Speicher als auch in einer Datei.
+-   Stellen Sie ein Zertifikat aus, das vom Standardteststamm ausgestellt wird. Erstellen Sie eine Datei mit einem privaten Schlüssel, und speichern Sie das Zertifikat sowohl in einem Speicher als auch in einer Datei.
 
-    **Makecert-SV** *mykeyfile* **-SS** *mynewstore* *mynew. CER*
+    **MakeCert -sv** *MyKeyFile* **-ss** *MyNewStore* *MyNew.cer*
 
--   Erstellen Sie ein Zertifikat, das vom Standardtest Stamm ausgestellt wird. Erstellen Sie einen Schlüssel Container, speichern Sie das Zertifikat in einem Geschäft und in einer Datei, und machen Sie den privaten Schlüssel exportierbar.
+-   Stellen Sie ein Zertifikat aus, das vom Standardteststamm ausgestellt wird. Erstellen Sie einen Schlüsselcontainer, speichern Sie das Zertifikat sowohl in einem Speicher als auch in einer Datei, und machen Sie den privaten Schlüssel exportierbar.
 
-    **Makecert-SK** *mynewkey* **-SS** *mynewstore* *mynew. CER* **-PE**
+    **MakeCert -sk** *MyNewKey* **-ss** *MyNewStore* *MyNew.cer* **-pe**
 
--   Erstellen Sie ein Zertifikat mit dem Standardtest Stamm. Speichern Sie das Zertifikat in einem Speicher. Erstellen Sie dann ein anderes Zertifikat, das vom neu erstellten Zertifikat ausgestellt wird. Speichern Sie das zweite Zertifikat in einem anderen Speicher.
+-   Stellen Sie ein Zertifikat mithilfe des Standardteststamms sicher. Speichern Sie das Zertifikat in einem Speicher. Erstellen Sie dann ein weiteres Zertifikat, das vom neu erstellten Zertifikat ausgestellt wird. Speichern Sie das zweite Zertifikat in einem anderen Speicher.
 
-    **Makecert-SK** *mynewkey* **-SS** *mynewstore* **Makecert-ist** *mynewstore* **-SS** *anotherstore*
+    **MakeCert -sk** *MyNewKey* **-ss** *MyNewStore* **MakeCert -is** *MyNewStore* **-ss** *AnotherStore*
 
--   Erstellen Sie ein Zertifikat mit dem Standardtest Stamm. Speichern Sie das Zertifikat im eigenen Speicher. Erstellen Sie dann mithilfe des neu erstellten Zertifikats ein weiteres Zertifikat. Wenn im eigenen Speicher mehr als ein Zertifikat vorhanden ist, muss das Zertifikat mithilfe seines allgemeinen Namens identifiziert werden.
+-   Stellen Sie ein Zertifikat mithilfe des Standardteststamms sicher. Speichern Sie das Zertifikat im My-Speicher. Erstellen Sie dann mithilfe des neu erstellten Zertifikats ein weiteres Zertifikat. Wenn im MY-Speicher mehrere Zertifikate gespeichert sind, muss das Zertifikat anhand seines allgemeinen Namens identifiziert werden.
 
-    **Makecert-SK** *mynewkey* **-n "CN = xxzzyy"-SS My Makecert-is my-in "xxzzyy"-SS** *anotherstore*
+    **MakeCert -sk** *MyNewKey* **-n "CN=XXZZYY" -ss my MakeCert -is my -in "XXZZYY" -ss** *AnotherStore*
 
--   Erstellen Sie ein Zertifikat mit dem Standardtest Stamm. Speichern Sie das Zertifikat im eigenen Speicher und in einer Datei. Erstellen Sie dann mit dem neu erstellten *mynew* -Zertifikat ein anderes Zertifikat. Wenn im eigenen Speicher mehr als ein Zertifikat vorhanden ist, identifizieren Sie das erste Zertifikat mit dem Namen der Zertifikat Datei eindeutig.
+-   Stellen Sie ein Zertifikat mithilfe des Standardteststamms sicher. Speichern Sie das Zertifikat im MY-Speicher und in einer Datei. Erstellen Sie dann mithilfe des neu erstellten Zertifikats *MyNew ein weiteres* Zertifikat. Wenn sich mehr als ein Zertifikat im MY-Speicher befindet, identifizieren Sie das erste Zertifikat eindeutig mithilfe des Zertifikatdateinamens.
 
-    **Makecert-SK** *mynewkey* **-n "CN = xxzzyy"-SS My** *mynew. CER* **Makecert-ist My-IC** *mynew. CER* **-SS** *anotherstore*
+    **MakeCert -sk** *MyNewKey* **-n "CN=XXZZYY" -ss my** *MyNew.cer* **MakeCert -is my -ic** *MyNew.cer* **-ss** *AnotherStore*
 
  
 

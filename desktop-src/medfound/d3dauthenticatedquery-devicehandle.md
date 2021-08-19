@@ -52,7 +52,7 @@ Diese Abfrage ist für alle Kanaltypen gültig.
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 

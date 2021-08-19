@@ -1,40 +1,40 @@
 ---
-description: Dieser Abschnitt enthält die Verweise auf Geräte Nachrichten der TAPI-Linie.
+description: Dieser Abschnitt enthält die Verweise für die TAPI-Zeilengerätenachrichten.
 ms.assetid: dc11134e-6c20-426e-834e-508bf855e5da
-title: Zeilen Geräte Meldungen
+title: Zeilengerätenachrichten
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 10f49bd411ee0fb15d33219dce4fbf6833e308ca
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 27dadfe2fba4d01778ede5419d2faac98e81bebd760d6fd50edd7d565fe5f4b0
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104130052"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119003188"
 ---
-# <a name="line-device-messages"></a>Zeilen Geräte Meldungen
+# <a name="line-device-messages"></a>Zeilengerätenachrichten
 
-Dieser Abschnitt enthält die Referenz für die folgenden Zeilen-Geräte Nachrichten:
+Dieser Abschnitt enthält die Referenz für die folgenden Zeilengerätenachrichten:
 
--   [**Zeile \_ addressstate**](line-addressstate.md)
--   [**Zeile \_ appnewcall**](line-appnewcall.md)
--   [**Zeile \_ appnewcallhub**](line-appnewcallhub.md)
--   [**\_liniencallinfo**](line-callinfo.md)
--   [**\_liniencallhubclose**](line-callhubclose.md)
--   [**\_liniencallstate**](line-callstate.md)
--   [**Zeilen \_ Schließen**](line-close.md)
--   [**Zeilen \_ Erstellung**](line-create.md)
--   [**Linien- \_ DevSpecific**](line-devspecific.md)
--   [**LINE \_ devspecificex**](line-devspecificex.md)
--   [**LINE \_ devspecificfeature**](line-devspecificfeature.md)
--   [**Zeilen \_ gatherziffern**](line-gatherdigits.md)
--   [**Zeilen \_ Generierung**](line-generate.md)
--   [**\_linienlinedevstate**](line-linedevstate.md)
--   [**Zeilen \_ monitorziffern**](line-monitordigits.md)
--   [**Zeilen- \_ monitormedia**](line-monitormedia.md)
--   [**\_linienmonitortone**](line-monitortone.md)
--   [**Zeile \_ Entfernen**](line-remove.md)
--   [**Zeilen \_ Antwort**](line-reply.md)
--   [**Zeilen \_ Anforderung**](line-request.md)
+-   [**LINE \_ ADDRESSSTATE**](line-addressstate.md)
+-   [**LINE \_ APPNEWCALL**](line-appnewcall.md)
+-   [**LINE \_ APPNEWCALLHUB**](line-appnewcallhub.md)
+-   [**LINE \_ CALLINFO**](line-callinfo.md)
+-   [**LINE \_ CALLHUBCLOSE**](line-callhubclose.md)
+-   [**LINE \_ CALLSTATE**](line-callstate.md)
+-   [**LINE \_ CLOSE**](line-close.md)
+-   [**LINE \_ CREATE**](line-create.md)
+-   [**LINE \_ DEVSPECIFIC**](line-devspecific.md)
+-   [**LINE \_ DEVSPECIFICEX**](line-devspecificex.md)
+-   [**LINE \_ DEVSPECIFICFEATURE**](line-devspecificfeature.md)
+-   [**LINE \_ GATHERDIGITS**](line-gatherdigits.md)
+-   [**LINE \_ GENERATE**](line-generate.md)
+-   [**LINE \_ LINEDEVSTATE**](line-linedevstate.md)
+-   [**LINE \_ MONITORDIGITS**](line-monitordigits.md)
+-   [**LINE \_ MONITORMEDIA**](line-monitormedia.md)
+-   [**LINE \_ MONITORTONE**](line-monitortone.md)
+-   [**LINE \_ REMOVE**](line-remove.md)
+-   [**LINE \_ REPLY**](line-reply.md)
+-   [**LINE \_ REQUEST**](line-request.md)
 
  
 

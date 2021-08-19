@@ -26,7 +26,7 @@ ms.locfileid: "118950299"
 
 Ordnet ein virtuelles System einer Momentaufnahme zu, die vom virtuellen System erfasst wurde.
 
-Die folgende Syntax wird Managed Object Format (MOF)-Code vereinfacht und enthält alle geerbten Eigenschaften.
+Die folgende Syntax ist Managed Object Format (MOF)-Code vereinfacht und enthält alle geerbten Eigenschaften.
 
 ## <a name="syntax"></a>Syntax
 
@@ -41,7 +41,7 @@ class Msvm_SnapshotOfVirtualSystem : CIM_SnapshotOfVirtualSystem
 
 ## <a name="members"></a>Member
 
-Die **Msvm \_ SnapshotOfVirtualSystem-Klasse** verfügt über die folgenden Membertypen:
+Die **Msvm \_ SnapshotOfVirtualSystem-Klasse** verfügt über diese Typen von Membern:
 
 -   [Eigenschaften](#properties)
 
@@ -60,7 +60,7 @@ Datentyp: **[ **Msvm \_ ComputerSystem**](msvm-computersystem.md)**
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Ein Verweis auf eine Instanz der [**Msvm \_ ComputerSystem-Klasse,**](msvm-computersystem.md) die das virtuelle System darstellt. Diese Eigenschaft wird von der [**\_ CIM-Abhängigkeit abgeleitet.**](/windows/desktop/CIMWin32Prov/cim-dependency)
+Ein Verweis auf eine Instanz der [**Msvm \_ ComputerSystem-Klasse,**](msvm-computersystem.md) die das virtuelle System darstellt. Diese Eigenschaft wird von [**\_ CIM-Abhängigkeit**](/windows/desktop/CIMWin32Prov/cim-dependency)abgeleitet.
 
 </dd> <dt>
 
@@ -73,7 +73,7 @@ Datentyp: **[ **Msvm \_ VirtualSystemSettingData**](msvm-virtualsystemsettingdat
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Ein Verweis auf eine Instanz der [**Msvm \_ VirtualSystemSettingData-Klasse,**](msvm-virtualsystemsettingdata.md) die die Momentaufnahme darstellt. Diese Eigenschaft wird von der [**\_ CIM-Abhängigkeit abgeleitet.**](/windows/desktop/CIMWin32Prov/cim-dependency)
+Ein Verweis auf eine Instanz der [**Msvm \_ VirtualSystemSettingData-Klasse,**](msvm-virtualsystemsettingdata.md) die die Momentaufnahme darstellt. Diese Eigenschaft wird von [**\_ CIM-Abhängigkeit**](/windows/desktop/CIMWin32Prov/cim-dependency)abgeleitet.
 
 </dd> </dl>
 
@@ -91,7 +91,7 @@ Ein Verweis auf eine Instanz der [**Msvm \_ VirtualSystemSettingData-Klasse,**](
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 

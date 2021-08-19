@@ -20,7 +20,7 @@ ms.locfileid: "118997110"
 ---
 # <a name="download-manager"></a>Download-Manager
 
-Der Microsoft Windows Media Player-Download-Manager ermöglicht es Den Typ 2 Onlineshops, den Prozess des Herunterladens von Inhalten aus einem Windows Media Player Aufgabenbereich des Onlineshops zu steuern. Ein Aufgabenbereich eines Onlineshops hostet eine Webseite, die angezeigt wird, wenn sich der Benutzer für die Verwendung eines Onlineshops entscheidet.
+Der Microsoft Windows Media Player-Download-Manager ermöglicht es Den Typ 2 Onlineshops, den Prozess des Herunterladens von Inhalten aus einem Windows Media Player-Aufgabenbereich des Onlineshops zu steuern. Ein Aufgabenbereich eines Onlineshops hostet eine Webseite, die angezeigt wird, wenn sich der Benutzer für die Verwendung eines Onlineshops entscheidet.
 
 Diese Einführung in den Download-Manager enthält die folgenden Abschnitte.
 

@@ -65,28 +65,28 @@ Ein Handle für das [**InkDivider-Objekt.**](inkdivider-class.md)
 *aWordStrokeIds* \[ out\]
 </dt> <dd>
 
-Ein Array von Bezeichnern, die dem Wort zugeordnet sind, das an die [**InkDivider-Klasse**](inkdivider-class.md) übergeben wird.
+Ein Array von Bezeichnern, die dem Wort zugeordnet sind, das an die [**InkDivider-Klasse übergeben**](inkdivider-class.md) wird.
 
 </dd> <dt>
 
 *aLineStrokeIds* \[ out\]
 </dt> <dd>
 
-Ein Array von [**ID-Eigenschaften**](/windows/desktop/api/msinkaut/nf-msinkaut-iinkstrokedisp-get_id) für die [**IInkStrokeDisp-Objekte,**](/windows/desktop/api/msinkaut/nn-msinkaut-iinkstrokedisp) die der Zeile zugeordnet sind, die an die [**InkDivider-Klasse**](inkdivider-class.md) übergeben wird.
+Ein Array von [**ID-Eigenschaften**](/windows/desktop/api/msinkaut/nf-msinkaut-iinkstrokedisp-get_id) für [**die IInkStrokeDisp-Objekte,**](/windows/desktop/api/msinkaut/nn-msinkaut-iinkstrokedisp) die der Zeile zugeordnet sind, die an die [**InkDivider-Klasse übergeben**](inkdivider-class.md) wird.
 
 </dd> <dt>
 
 *aParagraphStrokeIds* \[ out\]
 </dt> <dd>
 
-Ein Array der [**ID-Eigenschaften**](/windows/desktop/api/msinkaut/nf-msinkaut-iinkstrokedisp-get_id) für die [**IInkStrokeDisp-Objekte,**](/windows/desktop/api/msinkaut/nn-msinkaut-iinkstrokedisp) die dem Absatz aus der [**InkDivider-Klasse**](inkdivider-class.md) zugeordnet sind.
+Ein Array der [**ID-Eigenschaften**](/windows/desktop/api/msinkaut/nf-msinkaut-iinkstrokedisp-get_id) für die [**IInkStrokeDisp-Objekte,**](/windows/desktop/api/msinkaut/nn-msinkaut-iinkstrokedisp) die dem Absatz aus der [**InkDivider-Klasse zugeordnet**](inkdivider-class.md) sind.
 
 </dd> <dt>
 
 *aDrawingStrokeIds* \[ out\]
 </dt> <dd>
 
-Ein Array von [**ID-Eigenschaften**](/windows/desktop/api/msinkaut/nf-msinkaut-iinkstrokedisp-get_id) für die [**IInkStrokeDisp-Objekte,**](/windows/desktop/api/msinkaut/nn-msinkaut-iinkstrokedisp) die der Zeichnung aus der [**InkDivider-Klasse**](inkdivider-class.md) zugeordnet sind.
+Ein Array von [**ID-Eigenschaften**](/windows/desktop/api/msinkaut/nf-msinkaut-iinkstrokedisp-get_id) für [**die IInkStrokeDisp-Objekte,**](/windows/desktop/api/msinkaut/nn-msinkaut-iinkstrokedisp) die der Zeichnung aus der [**InkDivider-Klasse zugeordnet**](inkdivider-class.md) sind.
 
 </dd> <dt>
 
@@ -114,7 +114,7 @@ Ein Array von Absätzen, die von der Ink-Analyse zurückgegeben werden.
 *aWordRotationCenterX* \[ out\]
 </dt> <dd>
 
-Ein Array der Mittelpunkte der Wörter entlang der X-Achse aus der Ink-Analyse.
+Ein Array der Mittelpunkte der Wörter entlang der X-Achse der Ink-Analyse.
 
 </dd> <dt>
 
@@ -128,14 +128,14 @@ Ein Array der Mittelpunkte der Wörter entlang der y-Achse aus der Ink-Analyse.
 *aWordAngle* \[ out\]
 </dt> <dd>
 
-Ein Array mit den Winkeln, um die die Wörter gedreht werden sollen, um optimale Analyseergebnisse zu erzielen.
+Ein Array mit den Winkeln, um die die Wörter gedreht werden, um optimale Analyseergebnisse zu erzielen.
 
 </dd> <dt>
 
 *aLineRotationCenterX* \[ out\]
 </dt> <dd>
 
-Ein Array, das die Mittelpunkte der Linien entlang der x-Achse enthält.
+Ein Array, das die Mittelpunkte der Linien entlang der X-Achse enthält.
 
 </dd> <dt>
 
@@ -149,7 +149,7 @@ Ein Array, das die Mittelpunkte der Linien entlang der y-Achse enthält.
 *aLineAngle* \[ out\]
 </dt> <dd>
 
-Ein Array mit den Winkeln, um die die Linien gedreht werden sollen, um optimale Analyseergebnisse zu erzielen.
+Ein Array mit den Winkeln, um die die Linien gedreht werden, um optimale Analyseergebnisse zu erzielen.
 
 </dd> </dl>
 
@@ -163,7 +163,7 @@ Diese Funktion kann einen dieser Werte zurückgeben.
 |-----------------------------------------------------------------------------------------------|-------------------------------------------------------------------|
 | <dl> <dt>**S \_ OK**</dt> </dl>          | Die Funktion wurde erfolgreich ausgeführt.<br/>                                |
 | <dl> <dt>**E \_ INVALIDARG**</dt> </dl>  | Der *hDivider-Parameter* ist ungültig.<br/>                   |
-| <dl> <dt>**E \_ OUTOFMEMORY**</dt> </dl> | Es konnte nicht genügend Arbeitsspeicher zum Speichern der Ergebnisse belegt werden.<br/> |
+| <dl> <dt>**E \_ OUTOFMEMORY**</dt> </dl> | Es konnte nicht genügend Arbeitsspeicher zum Speichern der Ergebnisse reserviert werden.<br/> |
 
 
 
@@ -171,7 +171,7 @@ Diese Funktion kann einen dieser Werte zurückgeben.
 
 ## <a name="remarks"></a>Hinweise
 
-Um Speicherverluste zu vermeiden, müssen Sie die Ressourcen für *pastrWords,* *pastrLines* und *pastrParagraphs* freigeben.
+Um Speicherverlusten zu vermeiden, müssen Sie die Ressourcen für *pastrWords,* *pastrLines* und *pastrParagraphs frei geben.*
 
 ## <a name="requirements"></a>Anforderungen
 

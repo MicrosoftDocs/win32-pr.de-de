@@ -40,7 +40,7 @@ Das **Enumeratorobjekt** verfügt über diese Methoden.
 
 
 
-| Methode                                  | BESCHREIBUNG                                                                                   |
+| Methode                                  | Beschreibung                                                                                   |
 |:----------------------------------------|:----------------------------------------------------------------------------------------------|
 | [**Readitem**](enumerator-readitem.md) | Ruft ein Element aus der Ressource ab und gibt eine XML-Darstellung des Elements zurück.<br/> |
 
@@ -54,7 +54,7 @@ Das **Enumeratorobjekt** verfügt über diese Eigenschaften.
 
 
 
-| Eigenschaft                                                     | BESCHREIBUNG                                                                                    |
+| Eigenschaft                                                     | Beschreibung                                                                                    |
 |:-------------------------------------------------------------|:-----------------------------------------------------------------------------------------------|
 | [**AtEndOfStream**](enumerator-atendofstream.md)<br/> | Ruft einen booleschen Wert ab, der angibt, ob mehr Elemente in der Auflistung vorhanden sind.<br/> |
 | [**Fehler**](enumerator-error.md)<br/>                 | Ruft eine XML-Darstellung zusätzlicher Fehlerinformationen ab.<br/>                         |
@@ -71,7 +71,7 @@ Das **Enumeratorobjekt** entspricht der [**IWSManEnumerator-Schnittstelle.**](/w
 
 ## <a name="examples"></a>Beispiele
 
-Im folgenden VBScript-Codebeispiel werden alle Datenträger auf einem Remotecomputer aufgeführt, die durch den vollqualifizierten Domänennamen (servername.domain.com) angegeben werden. Die DisplayOutput-Unterroutine formatiert die Datenausgabe auf die gleiche Weise wie das Tool WinRM.cmd.
+Im folgenden VBScript-Codebeispiel werden alle Datenträger auf einem Remotecomputer aufgeführt, der durch den vollqualifizierten Domänennamen (servername.domain.com) angegeben wird. Die DisplayOutput-Unterroutine formatiert die Datenausgabe auf die gleiche Weise wie das Tool WinRM.cmd.
 
 
 ```VB
@@ -127,7 +127,7 @@ End Sub
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 

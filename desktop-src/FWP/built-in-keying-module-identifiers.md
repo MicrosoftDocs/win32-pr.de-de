@@ -1,6 +1,6 @@
 ---
-title: Integrierte Modul Bezeichner für die Schlüssel Erstellung ("f")
-description: Die Bezeichner für die Schlüssel, die in die Windows-Filter Plattform (WFP) integriert sind, werden jeweils durch eine GUID dargestellt.
+title: Integrierte Schlüsselmodulbezeichner (Fwpmu.h)
+description: Die Bezeichner für die Schlüsselierungsmodule, die in die Windows Filtering Platform (WFP) integriert sind, werden jeweils durch eine GUID dargestellt.
 ms.assetid: ba3aaf0f-5524-4d61-bb74-e4714b11b2a9
 topic_type:
 - apiref
@@ -14,47 +14,47 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: dc9e6feb726a62de02130d64cef27cd9078395b3
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 0b978832d65ab930f172c205144ba352f028c486d4d04c6f680ee963c6cf2ae2
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "103957137"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118951339"
 ---
-# <a name="built-in-keying-module-identifiers"></a>Integrierte Schlüssel für das Erstellen von Schlüssel Bezeichner
+# <a name="built-in-keying-module-identifiers"></a>Integrierte Schlüsselmodulbezeichner
 
-Die Bezeichner für die Schlüssel, die in die Windows-Filter Plattform (WFP) integriert sind, werden jeweils durch eine GUID dargestellt.
+Die Bezeichner für die Schlüsselierungsmodule, die in die Windows Filtering Platform (WFP) integriert sind, werden jeweils durch eine GUID dargestellt.
 
 Diese Bezeichner werden wie folgt definiert.
 
 <dl> <dt>
 
-<span id="FWPM_KEYING_MODULE_IKE"></span><span id="fwpm_keying_module_ike"></span>**WKE-Modul für die Schlüssel Erstellung \_ \_ \_**
+<span id="FWPM_KEYING_MODULE_IKE"></span><span id="fwpm_keying_module_ike"></span>**IKE DES \_ FWPM-SCHLÜSSELMODULS \_ \_**
 </dt> <dd> <dl> <dt>
 
 
 
-Internetschlüsselaustausch (IKE)-Schlüssel-Modul.
+IKE-Exchange (Internet Key Exchange).
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="FWPM_KEYING_MODULE_IKEV2"></span><span id="fwpm_keying_module_ikev2"></span>**Swpm-Schlüssel \_ \_ Modul \_ IKEV2**
+<span id="FWPM_KEYING_MODULE_IKEV2"></span><span id="fwpm_keying_module_ikev2"></span>**\_FWPM-SCHLÜSSELMODUL \_ \_ IKEV2**
 </dt> <dd> <dl> <dt>
 
 
 
-Internetschlüsselaustausch Version 2 (IKEv2)-Schlüssel-Modul.
+Schlüsselmodul Exchange IKEv2 (Internet Key Exchange Version 2).
 
 > [!Note]  
-> Nur unter Windows Server 2008 R2 und Windows 7 verfügbar.
+> Nur auf Windows Server 2008 R2 und Windows 7 verfügbar.
 
  
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="FWPM_KEYING_MODULE_AUTHIP"></span><span id="fwpm_keying_module_authip"></span>**das Schlüssel \_ \_ -/verschlüsselermodulmodul \_ AuthIP**
+<span id="FWPM_KEYING_MODULE_AUTHIP"></span><span id="fwpm_keying_module_authip"></span>**AUTHIP DES \_ FWPM-SCHLÜSSELMODULS \_ \_**
 </dt> <dd> <dl> <dt>
 
 
@@ -70,9 +70,9 @@ AuthIP-Schlüsselmodul.
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                     |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/>                               |
-| Header<br/>                   | <dl> <dt>"F"</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ Vista-Desktop-Apps\]<br/>                                     |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/>                               |
+| Header<br/>                   | <dl> <dt>Fwpmu.h</dt> </dl> |
 
 
 

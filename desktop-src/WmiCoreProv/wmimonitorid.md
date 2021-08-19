@@ -1,7 +1,7 @@
 ---
-description: Stellt die identifizierenden Informationen zu einem Videomonitor dar, z. b. Herstellername, Jahr der Fertigung oder Seriennummer.
+description: Stellt die identifizierenden Informationen zu einem Videomonitor dar, z. B. Herstellername, Herstellungsjahr oder Seriennummer.
 ms.assetid: 85c8c4b1-20e2-4c0b-9209-a3724509a2f0
-title: Wmimonitorid-Klasse
+title: WmiMonitorID-Klasse
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -24,16 +24,16 @@ api_type:
 api_location:
 - WmiProv.dll
 ms.custom: project-verbatim
-ms.openlocfilehash: 485b42a86ca67d15ec00be13992c17b31ed51608
-ms.sourcegitcommit: af120ad5c30da2fc5eb717ca2a1c4c45878efd71
+ms.openlocfilehash: 552e66a4e3a0c6f120bcc95123e3a2674fc579457de16c9ef8cd1e80161f175e
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/20/2021
-ms.locfileid: "106367508"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119051148"
 ---
-# <a name="wmimonitorid-class"></a>Wmimonitorid-Klasse
+# <a name="wmimonitorid-class"></a>WmiMonitorID-Klasse
 
-Die **wmimonitorid-** WMI-Klasse stellt die identifizierenden Informationen zu einem Videomonitor dar, z. b. Herstellername, Jahr der Fertigung oder Seriennummer. Die Daten in dieser Klasse entsprechen den Daten im Anbieter-/Produktions-Identifikations-Block der Videoeingabe Definition des standardmäßigen Enhanced Display Identification Data (E-EDID)-Standards von Video Electronics Standard Association (VESA).
+Die **WMI-Klasse WmiMonitorID** stellt die identifizierenden Informationen zu einem Videomonitor dar, z. B. Herstellername, Herstellungsjahr oder Seriennummer. Die Daten in dieser Klasse entsprechen den Daten im Block Vendor/Product Identification der Videoeingabedefinition des VESA-Standards (Video Electronics Standard Association) Enhanced Extended Display Identification Data (E-EDID).
 
 ## <a name="syntax"></a>Syntax
 
@@ -55,20 +55,20 @@ class WmiMonitorID : MSMonitorClass
 
 ## <a name="members"></a>Member
 
-Die **wmimonitorid-** Klasse verfügt über diese Typen von Membern:
+Die **WmiMonitorID-Klasse** verfügt über folgende Typen von Membern:
 
 -   [Eigenschaften](#properties)
 
 ### <a name="properties"></a>Eigenschaften
 
-Die **wmimonitorid-** Klasse verfügt über diese Eigenschaften.
+Die **WmiMonitorID-Klasse** verfügt über diese Eigenschaften.
 
 <dl> <dt>
 
 **Aktiv**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **boolescher** Wert
+Datentyp: **boolescher Wert**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
@@ -81,7 +81,7 @@ Gibt den aktiven Monitor an.
 **InstanceName**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
@@ -90,14 +90,14 @@ Zugriffstyp: Schreibgeschützt
 Qualifizierer: **Schlüssel**
 </dt> </dl>
 
-Der Name der spezifischen Monitor Instanz.
+Name der spezifischen Überwachungsinstanz.
 
 </dd> <dt>
 
 **ManufacturerName**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt16** Array
+Datentyp: **uint16-Array**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
@@ -107,36 +107,36 @@ Name des Herstellers.
 
 </dd> <dt>
 
-**Manufacturernamelength**
+**ManufacturerNameLength**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt16**
+Datentyp: **uint16**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Die Länge des Hersteller namens in der **ManufacturerName** -Eigenschaft.
+Länge des Herstellernamens in der **ManufacturerName-Eigenschaft.**
 
 </dd> <dt>
 
-**Productcodeid**
+**ProductCodeID**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt16** Array
+Datentyp: **uint16-Array**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Vom Hersteller zugewiesene Produktcode-ID.
+Vom Anbieter zugewiesene Produktcode-ID.
 
 </dd> <dt>
 
-**Serialzahlkennung**
+**SerialNumberID**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt16** Array
+Datentyp: **uint16-Array**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
@@ -149,62 +149,62 @@ Seriennummer.
 UserFriendlyName
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt16** Array
+Datentyp: **uint16-Array**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Der Anzeige Name des Monitors. Die Größe des Namens entspricht der Länge, die von der userfriendlynamelength-Eigenschaft angegeben wird.
+Der Anzeigename des Monitors. Die Größe des Namens entspricht der Länge, die von der UserFriendlyNameLength-Eigenschaft angegeben wird.
 
 </dd> <dt>
 
-Userfriendlynamelength
+UserFriendlyNameLength
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt16**
+Datentyp: **uint16**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Anzahl der Zeichen im Namen in der userfriendlyname-Eigenschaft.
+Anzahl der Zeichen im Namen, die sich in der UserFriendlyName-Eigenschaft befinden.
 
 </dd> <dt>
 
-**Weekof-Hersteller**
+**WeekOfManufacture**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Uint8**
+Datentyp: **uint8**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Woche der Fertigung nach Wochen Nummer. Der Bereich liegt zwischen 1 und 53. NULL (0) ist nicht definiert.
+Herstellungswoche nach Wochennummer. Der Bereich liegt zwischen 1 und 53. Null (0) ist nicht definiert.
 
 </dd> <dt>
 
-**Yearomamanufacturing**
+**YearOfManufacture**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt16**
+Datentyp: **uint16**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Jahr der Fertigung.
+Herstellungsjahr.
 
 </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Eine Erläuterung dazu, wie die Arrays übersetzt werden, in denen die Seriennummern-IDs gespeichert sind, finden Sie im Artikel [Bericht über Monitor Informationen mit Configuration Manager](/archive/blogs/kmongwa/reporting-monitor-information-with-configuration-manager) .
+Eine Erläuterung zum Übersetzen der Arrays, in denen Seriennummern-IDs gespeichert werden, finden Sie im Blogartikel [Berichterstellungsmonitorinformationen mit Konfigurations-Manager.](/archive/blogs/kmongwa/reporting-monitor-information-with-configuration-manager)
 
 ## <a name="examples"></a>Beispiele
 
-Das folgende PowerShell-Beispiel ruft die Seriennummer mehrerer Monitore ab.
+Im folgenden PowerShell-Beispiel wird die Seriennummer mehrerer Monitore abgerufen.
 
 
 ```PowerShell
@@ -213,7 +213,7 @@ gwmi WmiMonitorID -Namespace root\wmi | ForEach-Object {($_.UserFriendlyName -ne
 
 
 
-Der folgende VBScript-Code ruft außerdem Monitor-ID-Informationen von einem System ab.
+Der folgende VBScript-Code ruft auch Überwachungs-ID-Informationen von einem System ab.
 
 
 ```VB
@@ -245,8 +245,8 @@ Next
 |-------------------------------------|----------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows Vista<br/>                                                               |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2008<br/>                                                         |
-| Namespace<br/>                | WMI-Stammdatei \\<br/>                                                                   |
-| MOF<br/>                      | <dl> <dt>WMI Core. MOF</dt> </dl> |
+| Namespace<br/>                | Root \\ wmi<br/>                                                                   |
+| MOF<br/>                      | <dl> <dt>WmiCore.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>WmiProv.dll</dt> </dl> |
 
 

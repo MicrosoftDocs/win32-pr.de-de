@@ -21,7 +21,7 @@ ms.locfileid: "119027098"
 ---
 # <a name="wmconductor"></a>WM/Enumer
 
-Das **WM-Attribut bzw. das Attribut "Attribute"** enthält den Namen des Attributs.
+Das **WM-/Wiesn-Attribut** enthält den Namen des 100-Prozent-Attributs.
 
 ## <a name="global-constant"></a>Globale Konstante
 
@@ -31,7 +31,7 @@ g \_ wszWMConductor
 
 **\_ \_ WMT-TYPZEICHENFOLGE**
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 

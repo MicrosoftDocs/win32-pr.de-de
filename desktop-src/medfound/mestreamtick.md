@@ -42,7 +42,7 @@ Wenn eine Medienquelle über mehrere Datenströme verfügt und in mehr als einem
 
 Das MEStreamTick-Ereignis schließt keine [**NSBMediaStream::RequestSample-Anforderung**](/windows/desktop/api/mfidl/nf-mfidl-imfmediastream-requestsample) ab. Die Medienquelle muss weiterhin ein [MEMediaSample-Ereignis](memediasample.md) für jeden Aufruf von **RequestSample senden.**
 
-Mediensenken können dieses Ereignis nicht direkt nutzen. Um eine Lücke im Stream zu einer Mediensenke zu signalisieren, rufen [**Sie DENTSTREAMSink::P laceMarker**](/windows/desktop/api/mfidl/nf-mfidl-imfstreamsink-placemarker) mit einem **MFSTREAMSINK \_ MARKER \_ TICK-Marker** auf. Die Media Foundation-Pipeline konvertiert MEStreamTick-Ereignisse bei Bedarf in **MFSTREAMSINK \_ MARKER \_ TICK-Marker.**
+Mediensenken können dieses Ereignis nicht direkt nutzen. Um eine Lücke im Stream zu einer Mediensenke zu signalisieren, rufen Sie [**DENTSTREAMSink::P laceMarker**](/windows/desktop/api/mfidl/nf-mfidl-imfstreamsink-placemarker) mit einem **MFSTREAMSINK \_ MARKER \_ TICK-Marker** auf. Die Media Foundation-Pipeline konvertiert MEStreamTick-Ereignisse bei Bedarf in **MFSTREAMSINK \_ MARKER \_ TICK-Marker.**
 
 Legen Sie das [**MFSampleExtension \_ Discontinuity-Attribut**](mfsampleextension-discontinuity-attribute.md) nicht für das nächste Medienbeispiel nach einem MEStreamTick-Ereignis fest. Das **MFSampleExtension \_ Discontinuity-Attribut** impliziert, dass der Zeitstempel gegenüber vorherigen Zeitstempeln diskontinuierlich ist, während MEStreamTick impliziert, dass Zeitstempel fortlaufend sind, aber einige Daten fehlen.
 
@@ -63,7 +63,7 @@ Legen Sie das [**MFSampleExtension \_ Discontinuity-Attribut**](mfsampleextensio
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 

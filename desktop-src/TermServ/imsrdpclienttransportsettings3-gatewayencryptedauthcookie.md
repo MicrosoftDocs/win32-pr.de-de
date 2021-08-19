@@ -1,12 +1,12 @@
 ---
-title: IMsRdpClientTransportSettings3 gatewayverschlüsseltedauthcookie (Eigenschaft)
-description: Das verschlüsselte Authentifizierungs Cookie.
+title: IMsRdpClientTransportSettings3 GatewayEncryptedAuthCookie-Eigenschaft
+description: Das verschlüsselte Authentifizierungscookie.
 ms.assetid: c9ab6667-327c-44f8-a10e-b048ea91980c
 ms.tgt_platform: multiple
 keywords:
-- Gatewayverschlüsseltedauthcookie-Eigenschaft Remotedesktopdienste
-- Gatewayverschlüsseltedauthcookie-Eigenschaft Remotedesktopdienste, IMsRdpClientTransportSettings3-Schnittstelle
-- IMsRdpClientTransportSettings3 Interface Remotedesktopdienste, gatewayverschlüsseltedauthcookie (Eigenschaft)
+- GatewayEncryptedAuthCookie-Eigenschaft Remotedesktopdienste
+- GatewayEncryptedAuthCookie-Eigenschaft Remotedesktopdienste , IMsRdpClientTransportSettings3-Schnittstelle
+- IMsRdpClientTransportSettings3-Schnittstelle Remotedesktopdienste , GatewayEncryptedAuthCookie-Eigenschaft
 topic_type:
 - apiref
 api_name:
@@ -19,16 +19,16 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: f3949d36f25f2029d7b134943b4e57d8a13db798
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 6c05a83d3b6891bfb8173a45935dcd73ad9ad65db5643d093306eda6e5d1cb20
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104340687"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119000880"
 ---
-# <a name="imsrdpclienttransportsettings3gatewayencryptedauthcookie-property"></a>IMsRdpClientTransportSettings3:: gatewayverschlüsseltedauthcookie (Eigenschaft)
+# <a name="imsrdpclienttransportsettings3gatewayencryptedauthcookie-property"></a>IMsRdpClientTransportSettings3::GatewayEncryptedAuthCookie-Eigenschaft
 
-Das verschlüsselte Authentifizierungs Cookie. Die Größe der Eigenschaft wird durch die [**gatewayverschlüsseltedauthcookiesize**](imsrdpclienttransportsettings3-gatewayencryptedauthcookiesize.md) -Eigenschaft angegeben.
+Das verschlüsselte Authentifizierungscookie. Die Größe der Eigenschaft wird von der [**GatewayEncryptedAuthCookieSize-Eigenschaft**](imsrdpclienttransportsettings3-gatewayencryptedauthcookiesize.md) angegeben.
 
 Dies ist eine Eigenschaft mit Lese- und Schreibzugriff.
 
@@ -49,7 +49,7 @@ HRESULT get_GatewayEncryptedAuthCookie(
 
 ## <a name="property-value"></a>Eigenschaftswert
 
-Das neue verschlüsselte Authentifizierungs Cookie.
+Das neue verschlüsselte Authentifizierungscookie.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -64,11 +64,11 @@ Das neue verschlüsselte Authentifizierungs Cookie.
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Gatewayverschlüsseltedauthcookiesize**](imsrdpclienttransportsettings3-gatewayencryptedauthcookiesize.md)
+[**GatewayEncryptedAuthCookieSize**](imsrdpclienttransportsettings3-gatewayencryptedauthcookiesize.md)
 </dt> <dt>
 
 [**IMsRdpClientTransportSettings3**](imsrdpclienttransportsettings3.md)

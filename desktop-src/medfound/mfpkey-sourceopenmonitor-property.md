@@ -1,5 +1,5 @@
 ---
-description: Enthält einen Zeiger auf die BENUTZEROBERFLÄCHENMONITOR-Schnittstelle der Anwendungen.
+description: Enthält einen Zeiger auf die BENUTZEROBERFLÄCHENQUELLEOpenMonitor-Schnittstelle der Anwendungen.
 ms.assetid: 5b94ae87-91fc-49d6-9355-83327cfdb3f3
 title: MFPKEY_SourceOpenMonitor -Eigenschaft (Mfidl.h)
 ms.topic: reference
@@ -47,7 +47,7 @@ Anwendungen können diese Eigenschaft an den Quellre resolver übergeben, um Ere
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 

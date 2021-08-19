@@ -15,7 +15,7 @@ ms.locfileid: "117869062"
 
 ### <a name="activity-reporting-logging"></a>Aktivitätsberichterstattung (Protokollierung)
 
-Die WpcEvent.h-Headerdatei enthält Definitionen der Felder für jeden vordefinierten Aktivitätsereignistyp und den benutzerdefinierten Typ. Dieser Beispielcode zeigt die Schritte zum Protokollieren eines Chat-Konversationseinladungsereignis mithilfe der ETW-Veröffentlichungs-API:
+Die Headerdatei WpcEvent.h enthält Definitionen der Felder für jeden vordefinierten Aktivitätsereignistyp und den benutzerdefinierten Typ. Dieser Beispielcode zeigt die Schritte zum Protokollieren eines Einladungsereignisses für Chatnachrichten mithilfe der ETW-Veröffentlichungs-API:
 
 
 ```C++
@@ -88,27 +88,27 @@ void main()
 
 ### <a name="custom-logging"></a>Benutzerdefinierte Protokollierung
 
-Damit eine Anwendung die Ereignisse erweitert, die außerhalb der vordefinierten Ereignisse oder des benutzerdefinierten Typs protokolliert werden, müssen Sie einen Anbieter für diesen im Anwendungsmanifest definieren. Der WPC-Standardkanal kann dann importiert werden, und anwendungsdefinierte Ereignisse können dann protokolliert werden.
+Damit eine Anwendung die außerhalb des Satzes vordefinierter Ereignisse oder eines benutzerdefinierten Typs protokollierten Ereignisse erweitern kann, müssen Sie einen Anbieter für diese im Anwendungsmanifest definieren. Der WPC-Standardkanal kann dann importiert und anwendungsdefinierte Ereignisse protokolliert werden.
 
 ### <a name="logging-rights"></a>Protokollierungsrechte
 
-Der WPC-Protokollierungskanal wird über die [*Zugriffssteuerungsliste*](/windows/desktop/SecGloss/a-gly) (Access Control List, ACL) gesteuert, um nur Administratoren Vollzugriff zu bieten. Konten ohne Administratorrechte schreiben möglicherweise in den Kanal, haben aber keinen Lese- oder Löschzugriff. Der Zugriff auf den Kanal wird über die ETW-API ermöglicht.
+Der WPC-Protokollierungskanal wird über [*die Zugriffssteuerungsliste (Access Control List,*](/windows/desktop/SecGloss/a-gly) ACL) gesteuert, um nur Administratoren Vollzugriff zu gewähren. Konten ohne Administratorrechte können in den Kanal schreiben, haben aber keinen Lese- oder Löschzugriff. Der Zugriff auf den Kanal erfolgt über die ETW-API.
 
-### <a name="parental-controls-logging-provider-details"></a>Details des Protokollierungsanbieters für Die Jugendschutzkontrollen
+### <a name="parental-controls-logging-provider-details"></a>Details des Anbieters für die Protokollierung von Jugendschutzfunktionen
 
 Der WPC-Anbieter heißt Microsoft.com/Windows/ParentalControls mit GUID {01090065-B467-4503-9B28-533766761087}. Der lokale Standardprotokollierungskanal ist Microsoft.com/Windows/ParentalControls/LocalEvents.
 
-Protokolldateien werden im Windows \\ System32 \\ \\ Wpc-Protokollordner gespeichert.
+Protokolldateien werden im Ordner Windows \\ System32 \\ Wpc \\ Logs gespeichert.
 
-### <a name="notification-of-impending-time-limits-logout"></a>Benachrichtigung über bevorstehende Abmeldung von Zeitlimits
+### <a name="notification-of-impending-time-limits-logout"></a>Benachrichtigung über bevorstehende Zeitlimits: Abmeldung
 
-Das System für die Jugendkontrolle gibt ein Warnereignis nach 15 Minuten und erneut um 1 Minute vor der Abmelde eines kontrollierten Benutzers basierend auf Zeitbeschränkungen aus. Anwendungen können diese Ereignisse abonnieren, insbesondere wenn sie im DirectX-Vollbildmodus ausgeführt werden, in dem Windows Standardbenachrichtigungen nicht angezeigt werden. Beispielcode wird bereitgestellt, der zeigt, wie die Ereignisse abonniert, eine Rückruffunktion registriert und die Ereignisse empfangen werden.
+Das Jugendschutzsystem löst ein Warnungsereignis nach 15 Minuten und erneut um 1 Minute vor der Abmeldung eines kontrollierten Benutzers basierend auf Zeiteinschränkungen aus. Anwendungen können diese Ereignisse abonnieren, insbesondere wenn sie im DirectX-Vollbildmodus ausgeführt werden, in dem Windows Standardbenachrichtigungen nicht angezeigt werden. Beispielcode wird bereitgestellt, der zeigt, wie die Ereignisse abonniert, eine Rückruffunktion registriert und die Ereignisse empfangen werden.
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[Übersicht über Erweiterbarkeitsfunktionen für Jugendschutz](parental-controls-extensibility-features-overview.md)
+[Übersicht über die Erweiterbarkeitsfunktionen für Jugendschutzelemente](parental-controls-extensibility-features-overview.md)
 </dt> <dt>
 
 [**\_ \_ EREIGNISDATENDESKRIPTOR**](/windows/desktop/api/evntprov/ns-evntprov-event_data_descriptor)

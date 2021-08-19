@@ -1,9 +1,9 @@
 ---
-title: MM_MIM_ERROR (Mmsystem.h)
-description: Die MM \_ MIM \_ ERROR-Meldung wird an ein Fenster gesendet, wenn eine ungültige FEHLERMELDUNG empfangen wird.
+title: MM_MIM_ERROR Nachricht (Mmsystem.h)
+description: Die MM \_ MIM \_ ERROR-Nachricht wird an ein Fenster gesendet, wenn eine ungültige FEHLERMELDUNG empfangen wird.
 ms.assetid: 03760bfc-a4ef-48cd-97a9-1b93b56fc641
 keywords:
-- MM_MIM_ERROR von Windows Multimedia
+- MM_MIM_ERROR nachricht Windows Multimedia
 topic_type:
 - apiref
 api_name:
@@ -41,14 +41,14 @@ lParam = (LPARAM) (DWORD) lMidiMessage
 <span id="hInput"></span><span id="hinput"></span><span id="HINPUT"></span>*hInput*
 </dt> <dd>
 
-Handle für das EINGABE-Eingabegerät, das die ungültige Nachricht empfangen hat.
+Handle für das INPUT-Eingabegerät, das die ungültige Nachricht empfangen hat.
 
 </dd> <dt>
 
 <span id="lMidiMessage"></span><span id="lmidimessage"></span><span id="LMIDIMESSAGE"></span>*lMidiMessage*
 </dt> <dd>
 
-Ungültige FEHLERMELDUNG. Die Nachricht wird in einen **DWORD-Wert** mit dem ersten Byte der Nachricht im niedrigen Byte gepackt.
+Ungültige FEHLERMELDUNG. Die Nachricht wird in einen **DWORD-Wert** mit dem ersten Byte der Nachricht im Low-Order-Byte gepackt.
 
 </dd> </dl>
 
@@ -68,14 +68,14 @@ Diese Meldung gibt keinen Wert zurück.
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 
-[Instrument Digital Interface (KEYBOARD)](musical-instrument-digital-interface--midi.md)
+[Music Instrument Digital Interface (INSTRUMENTS)](musical-instrument-digital-interface--midi.md)
 </dt> <dt>
 
-[MESSAGES-Meldungen](midi-messages.md)
+[MELDUNGSMELDUNGEN](midi-messages.md)
 </dt> </dl>
 
  

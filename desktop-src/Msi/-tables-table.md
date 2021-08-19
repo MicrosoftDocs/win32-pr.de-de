@@ -1,5 +1,5 @@
 ---
-description: Die \_ Tabelle Tabellen ist eine schreibgeschützte Systemtabelle, die alle Tabellen in der Datenbank auflistet. Fragen Sie diese Tabelle ab, um herauszufinden, ob eine Tabelle vorhanden ist.
+description: Die \_ Tabelle Tables ist eine schreibgeschützte Systemtabelle, die alle Tabellen in der Datenbank auflistet. Fragen Sie diese Tabelle ab, um herauszufinden, ob eine Tabelle vorhanden ist.
 ms.assetid: d064855b-8c10-476e-9570-cc3ab48ae998
 title: _Tables Tabelle
 ms.topic: article
@@ -13,9 +13,9 @@ ms.locfileid: "119013318"
 ---
 # <a name="_tables-table"></a>\_Tabellentabelle
 
-Die \_ Tabelle Tabellen ist eine schreibgeschützte Systemtabelle, die alle Tabellen in der Datenbank auflistet. Fragen Sie diese Tabelle ab, um herauszufinden, ob eine Tabelle vorhanden ist.
+Die \_ Tabelle Tables ist eine schreibgeschützte Systemtabelle, die alle Tabellen in der Datenbank auflistet. Fragen Sie diese Tabelle ab, um herauszufinden, ob eine Tabelle vorhanden ist.
 
-Die \_ Tabelle Tabellen enthält die folgende Spalte.
+Die \_ Tabellentabelle enthält die folgende Spalte.
 
 
 
@@ -40,7 +40,7 @@ Name einer der Tabellen.
 
 ## <a name="remarks"></a>Hinweise
 
-Da die \_ Tabelle Tabellen eine Systemtabelle ist, die nicht durch SQL Abfragen geändert werden kann, können Sie die Primärschlüssel nicht mit der [**MsiDatabaseGetPrimaryKeys-Funktion**](/windows/desktop/api/Msiquery/nf-msiquery-msidatabasegetprimarykeysa) oder der [**PrimaryKeys-Eigenschaft**](database-primarykeys.md)abrufen.
+Da es sich bei der Tabelle Tables um eine Systemtabelle handelt, die nicht über SQL-Abfragen geändert werden kann, können Sie die Primärschlüssel nicht mit der \_ [**MsiDatabaseGetPrimaryKeys-Funktion**](/windows/desktop/api/Msiquery/nf-msiquery-msidatabasegetprimarykeysa) oder der [**PrimaryKeys-Eigenschaft abrufen.**](database-primarykeys.md)
 
  
 

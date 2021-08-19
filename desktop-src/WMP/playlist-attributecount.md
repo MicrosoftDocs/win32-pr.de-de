@@ -1,9 +1,9 @@
 ---
-title: Wiedergabeliste. AttributeCount
-description: Die AttributeCount-Eigenschaft ruft die Anzahl der Attribute ab, die der Wiedergabeliste zugeordnet sind.
+title: Playlist.attributeCount
+description: Die attributeCount-Eigenschaft ruft die Anzahl der Attribute ab, die der Wiedergabeliste zugeordnet sind.
 ms.assetid: 92063131-0118-4458-9122-0539628a9821
 keywords:
-- Wiedergabeliste. AttributeCount Windows Media Player
+- Playlist.attributeCount-Windows Media Player
 topic_type:
 - apiref
 api_name:
@@ -14,36 +14,36 @@ api_type:
 - DllExport
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 8e42d72e029f232bb6dabc074b412406a1bb64c7
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 63616096dbfc3989a93d3dc8010dd0ed1f256ccd9e9bf2cc7b3c825c88a63d0a
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106368594"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119054298"
 ---
-# <a name="playlistattributecount"></a>Wiedergabeliste. AttributeCount
+# <a name="playlistattributecount"></a>Playlist.attributeCount
 
-Die **AttributeCount** -Eigenschaft ruft die Anzahl der Attribute ab, die der Wiedergabeliste zugeordnet sind.
+Die **attributeCount-Eigenschaft** ruft die Anzahl der Attribute ab, die der Wiedergabeliste zugeordnet sind.
 
 ## <a name="syntax"></a>Syntax
 
-*Player*. *currentwiedergabe*. **AttributeCount**
+*Player*. *currentPlaylist*. **attributeCount**
 
 ## <a name="possible-values"></a>Mögliche Werte
 
-Diese Eigenschaft ist eine schreibgeschützte **Zahl** (**Long**).
+Diese Eigenschaft ist eine schreibgeschützte **Zahl** (**long**).
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Da Wiedergabelisten aus vielen verschiedenen Quellen stammen können, können Sie mehrere verschiedene Gruppen von Eigenschaften haben. Diese Methode ruft die Gesamtzahl der verfügbaren Eigenschaften ab, sodass die anderen Methoden des **Wiedergabe** Listen Objekts darauf zugreifen können.
+Da Wiedergabelisten aus vielen verschiedenen Quellen stammen können, können sie über mehrere unterschiedliche Eigenschaftensätze verfügen. Diese Methode ruft die Gesamtzahl der verfügbaren Eigenschaften ab, sodass die anderen Methoden des **Playlist-Objekts** darauf zugreifen können.
 
-Zum Abrufen des Werts dieser Eigenschaft ist Lesezugriff auf die Bibliothek erforderlich. Weitere Informationen finden Sie unter [Bibliotheks Zugriff](library-access.md).
+Um den Wert dieser Eigenschaft abzurufen, ist Lesezugriff auf die Bibliothek erforderlich. Weitere Informationen finden Sie unter [Bibliothekszugriff.](library-access.md)
 
-Informationen zu den Attributen, die von Windows Media Player unterstützt werden, finden Sie in der [Referenz](attribute-reference.md)zu Windows Media Player-Attributen.
+Informationen zu den attributen, die von Windows Media Player unterstützt werden, finden Sie in der Windows Media Player [Attributreferenz.](attribute-reference.md)
 
 ## <a name="examples"></a>Beispiele
 
-Im folgenden JScript-Beispiel wird veranschaulicht, wie verschiedene Eigenschaften und Methoden der **Wiedergabeliste** und der **Medien** Objekte verwendet werden.
+Im folgenden JScript Beispiel wird veranschaulicht, wie verschiedene Eigenschaften und Methoden der **Wiedergabelisten-** und **Medienobjekte** verwendet werden.
 
 
 ```JScript
@@ -85,7 +85,7 @@ function onLoad() {
 
 | Anforderung | Wert |
 |--------------------|------------------------------------------------------------------------------------|
-| Version<br/> | Windows Media Player Version 7,0 oder höher.<br/>                              |
+| Version<br/> | Windows Media Player Version 7.0 oder höher.<br/>                              |
 | DLL<br/>     | <dl> <dt>Wmp.dll</dt> </dl> |
 
 
@@ -94,22 +94,22 @@ function onLoad() {
 
 <dl> <dt>
 
-[**Wiedergabelisten Objekt**](playlist-object.md)
+[**Wiedergabelistenobjekt**](playlist-object.md)
 </dt> <dt>
 
-[**Wiedergabeliste. AttributeName**](playlist-attributename.md)
+[**Playlist.attributeName**](playlist-attributename.md)
 </dt> <dt>
 
-[**Wiedergabeliste. getiteminfo**](playlist-getiteminfo.md)
+[**Playlist.getItemInfo**](playlist-getiteminfo.md)
 </dt> <dt>
 
-[**Wiedergabeliste. Einstellungs Element**](playlist-setiteminfo.md)
+[**Playlist.setItemInfo**](playlist-setiteminfo.md)
 </dt> <dt>
 
-[**Settings. mediaaccessrights**](settings-mediaaccessrights.md)
+[**Einstellungen.mediaAccessRights**](settings-mediaaccessrights.md)
 </dt> <dt>
 
-[**Settings. requestmediaaccessrights**](settings-requestmediaaccessrights.md)
+[**Einstellungen.requestMediaAccessRights**](settings-requestmediaaccessrights.md)
 </dt> </dl>
 
  

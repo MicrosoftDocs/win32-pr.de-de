@@ -22,7 +22,7 @@ ms.locfileid: "119017738"
 ---
 # <a name="ntgdid3dcontextcreate-function"></a>NtGdiD3DContextCreate-Funktion
 
-\[Diese Funktion kann bei jeder Betriebssystemrevision geändert werden. Verwenden Sie stattdessen Microsoft DirectDraw und Microsoft Direct3DAPIs. diese APIs isolieren Anwendungen vor solchen Betriebssystemänderungen und verbergen viele andere Schwierigkeiten bei der direkten Interaktion mit Anzeigetreibern.\]
+\[Diese Funktion kann bei jeder Betriebssystemrevision geändert werden. Verwenden Sie stattdessen Microsoft DirectDraw und Microsoft Direct3DAPIs. Diese APIs isolieren Anwendungen vor solchen Betriebssystemänderungen und verbergen viele andere Schwierigkeiten bei der direkten Interaktion mit Anzeigetreibern.\]
 
 Erstellt einen Kontext.
 
@@ -51,17 +51,17 @@ Handle für ein DirectDraw-Objekt im Kernelmodus, das zuvor mit [**NtGdiDdCreate
 
 </dd> <dt>
 
-*hColor* \[ In\]
+*hSurfColor* \[ In\]
 </dt> <dd>
 
 Handle für eine [**DD \_ SURFACE \_ LOCAL-Struktur,**](/windows/win32/api/ddrawint/ns-ddrawint-dd_surface_local) die die DirectDraw-Oberfläche beschreibt, die als Renderingziel verwendet werden soll.
 
 </dd> <dt>
 
-*hUlaZ* \[ In\]
+*hSurfZ* \[ In\]
 </dt> <dd>
 
-Handle für eine [**DD \_ SURFACE \_ LOCAL-Struktur,**](/windows/win32/api/ddrawint/ns-ddrawint-dd_surface_local) die die DirectDraw-Oberfläche beschreibt, die als Tiefenpuffer verwendet werden soll. Wenn dieser Member **NULL** ist, muss keine Tiefenpufferung ausgeführt werden.
+Handle für eine [**DD \_ SURFACE \_ LOCAL-Struktur,**](/windows/win32/api/ddrawint/ns-ddrawint-dd_surface_local) die die DirectDraw-Oberfläche beschreibt, die als Tiefenpuffer verwendet werden soll. Wenn dieser Member **NULL ist,** ist keine Tiefenpufferung durchzuführen.
 
 </dd> <dt>
 
@@ -80,7 +80,7 @@ Zeiger auf eine [**D3DNTHAL \_ CONTEXTCREATEDATA-Struktur,**](/windows-hardware/
 
 | Rückgabecode                                                                                              | Beschreibung                                                                                                                                                                                                                                                                                                                                                                |
 |----------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| <dl> <dt>**BEHANDELTER \_ DDHAL-TREIBER \_**</dt> </dl>    | Der Treiber hat den Vorgang ausgeführt und einen gültigen Rückgabecode für diesen Vorgang zurückgegeben. Wenn dieser Code DD \_ OK ist, wird DirectDraw oder Direct3D mit der Funktion fortgesetzt. Andernfalls gibt DirectDraw oder Direct3D den vom Treiber bereitgestellten Fehlercode zurück und bricht die Funktion ab.<br/>                                                                                 |
+| <dl> <dt>**\_DDHAL-TREIBER \_ BEHANDELT**</dt> </dl>    | Der Treiber hat den Vorgang ausgeführt und einen gültigen Rückgabecode für diesen Vorgang zurückgegeben. Wenn dieser Code DD \_ OK ist, wird DirectDraw oder Direct3D mit der Funktion fortgesetzt. Andernfalls gibt DirectDraw oder Direct3D den vom Treiber bereitgestellten Fehlercode zurück und bricht die Funktion ab.<br/>                                                                                 |
 | <dl> <dt>**\_DDHAL-TREIBER \_ NICHT BEHANDELT**</dt> </dl> | Der Treiber hat keinen Kommentar zum angeforderten Vorgang. Wenn der Treiber einen bestimmten Rückruf implementiert haben muss, meldet DirectDraw oder Direct3D eine Fehlerbedingung. Andernfalls verarbeitet DirectDraw oder Direct3D den Vorgang so, als ob der Treiberrückruf nicht durch Ausführen der geräteunabhängigen DirectDraw- oder Direct3D-Implementierung definiert worden wäre.<br/> |
 
 
@@ -99,11 +99,11 @@ Zeiger auf eine [**D3DNTHAL \_ CONTEXTCREATEDATA-Struktur,**](/windows-hardware/
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 
-[Grafik– Clientunterstützung auf niedriger Ebene](-dxgkernel-low-level-client-support.md)
+[Clientunterstützung auf niedriger Grafikebene](-dxgkernel-low-level-client-support.md)
 </dt> </dl>
 
  

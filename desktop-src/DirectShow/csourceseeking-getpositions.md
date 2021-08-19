@@ -1,7 +1,7 @@
 ---
-description: 'Die getpositions-Methode ruft die aktuelle Position und die Position des Stopps ab. Diese Methode implementiert die imediaseeking:: getpositions-Methode.'
+description: Die GetPositions-Methode ruft die aktuelle Position und die Stoppposition ab. Diese Methode implementiert die IMediaSeeking::GetPositions-Methode.
 ms.assetid: f577b052-669b-457d-beab-94f574fef08d
-title: Csourceseeking. getpositions-Methode (ctlutil. h)
+title: CSourceSeeking.GetPositions-Methode (Ctlutil.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,16 +16,16 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: 8d95013b12d1ee41867ac73920ca1f9b1ca0bdca
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 4b6f52d8d8b30a28d942d4395a465b9c7c49d0a23020ad212c81eb170d20ca0f
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106366752"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119073335"
 ---
-# <a name="csourceseekinggetpositions-method"></a>Csourceseeking. getpositions-Methode
+# <a name="csourceseekinggetpositions-method"></a>CSourceSeeking.GetPositions-Methode
 
-Die `GetPositions` -Methode ruft die aktuelle Position und die Position des Stopps ab. Diese Methode implementiert die [**imediaseeking:: getpositions**](/windows/desktop/api/Strmif/nf-strmif-imediaseeking-getpositions) -Methode.
+Die `GetPositions` -Methode ruft die aktuelle Position und die Stoppposition ab. Diese Methode implementiert die [**IMediaSeeking::GetPositions-Methode.**](/windows/desktop/api/Strmif/nf-strmif-imediaseeking-getpositions)
 
 ## <a name="syntax"></a>Syntax
 
@@ -43,17 +43,17 @@ HRESULT GetPositions(
 
 <dl> <dt>
 
-*pcurrent* 
+*pCurrent* 
 </dt> <dd>
 
-Ein Zeiger auf eine Variable, die die Startposition empfängt.
+Zeiger auf eine Variable, die die Startposition empfängt.
 
 </dd> <dt>
 
-*pstopps* 
+*Pstop* 
 </dt> <dd>
 
-Ein Zeiger auf eine Variable, die die Position des Stopps empfängt.
+Zeiger auf eine Variable, die die Stoppposition empfängt.
 
 </dd> </dl>
 
@@ -61,9 +61,9 @@ Ein Zeiger auf eine Variable, die die Position des Stopps empfängt.
 
 Gibt S \_ OK zurück.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Für den *pcurrent* -Parameter gibt diese Methode den Wert der [**csourceseeking:: m \_ rtstart**](csourceseeking-m-rtstart.md) -Member-Variable zurück, die die letzte Suchzeit und nicht die aktuelle streamingposition darstellt. Wenn eine Anwendung jedoch **imediaseeking:: getpositions** über den Filter Graph-Manager aufruft, werden die Werte in der Regel von einem rendererfilter und keinem Quell Filter abgeleitet.
+Für den *pCurrent-Parameter* gibt diese Methode den Wert der [**CSourceSeeking::m rtStart-Membervariablen \_**](csourceseeking-m-rtstart.md) zurück, die die letzte Suchzeit und nicht die aktuelle Streamingposition darstellt. Wenn eine Anwendung jedoch **IMediaSeeking::GetPositions** über den Filterdiagramm-Manager aufruft, stammen die Werte in der Regel aus einem Rendererfilter und nicht aus einem Quellfilter.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -71,8 +71,8 @@ Für den *pcurrent* -Parameter gibt diese Methode den Wert der [**csourceseeking
 
 | Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Ctlutil. h (Include Streams. h)</dt> </dl>                                                                                   |
-| Bibliothek<br/> | <dl> " <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Ctlutil.h (include Streams.h)</dt> </dl>                                                                                   |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Einzelhandels-Builds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
@@ -80,7 +80,7 @@ Für den *pcurrent* -Parameter gibt diese Methode den Wert der [**csourceseeking
 
 <dl> <dt>
 
-[**Csourceseeking-Klasse**](csourceseeking.md)
+[**CSourceSeeking-Klasse**](csourceseeking.md)
 </dt> </dl>
 
  

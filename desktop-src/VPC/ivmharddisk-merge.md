@@ -1,11 +1,11 @@
 ---
 title: IVMHardDisk Merge-Methode (VPCCOMInterfaces.h)
-description: Führt eine unterschiedliche virtuelle Festplatte mit dem übergeordneten Datenträgerimage zusammen.
+description: Führt eine differenzierende virtuelle Festplatte mit dem übergeordneten Datenträgerimage zusammen.
 ms.assetid: e2aca4d3-79c1-416a-b135-f4680c03d200
 keywords:
 - Mergemethode Virtueller PC
-- Mergemethode Virtual PC, IVMHardDisk-Schnittstelle
-- IVMHardDisk-Schnittstelle Virtueller PC, Mergemethode
+- Mergemethode Virtual PC , IVMHardDisk-Schnittstelle
+- IVMHardDisk-Schnittstelle Virtueller PC, Merge-Methode
 topic_type:
 - apiref
 api_name:
@@ -25,9 +25,9 @@ ms.locfileid: "118998940"
 ---
 # <a name="ivmharddiskmerge-method"></a>IVMHardDisk::Merge-Methode
 
-\[Windows Der virtuelle PC ist ab diesem Zeitraum nicht mehr Windows 8. Verwenden Sie stattdessen den [Hyper-V-WMI-Anbieter (V2).](/windows/desktop/HyperV_v2/windows-virtualization-portal)\]
+\[Windows Der virtuelle PC ist ab Windows 8 nicht mehr für die Verwendung verfügbar. Verwenden Sie stattdessen den [Hyper-V-WMI-Anbieter (V2).](/windows/desktop/HyperV_v2/windows-virtualization-portal)\]
 
-Führt eine unterschiedliche virtuelle Festplatte mit dem übergeordneten Datenträgerimage zusammen.
+Führt eine differenzierende virtuelle Festplatte mit dem übergeordneten Datenträgerimage zusammen.
 
 ## <a name="syntax"></a>Syntax
 
@@ -47,7 +47,7 @@ HRESULT Merge(
 *mergeTask* \[ out, retval\]
 </dt> <dd>
 
-Ein [**IVMTask-Objekt,**](ivmtask.md) das zum Nachverfolgen des Abschlusses des Zusammenführungsprozesses verwendet wird.
+Ein [**IVMTask-Objekt,**](ivmtask.md) mit dem der Abschluss des Zusammenführungsprozesses nachverfolgt wird.
 
 </dd> </dl>
 
@@ -60,12 +60,12 @@ Diese Methode kann einen dieser Werte zurückgeben.
 | Rückgabecode/-wert                                                                                                                                                                              | BESCHREIBUNG                                                                                                                                                                                                                       |
 |------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | <dl> <dt>**S \_ OK**</dt> <dt>0</dt> </dl>                                                    | Der Vorgang wurde durchgeführt.<br/>                                                                                                                                                                                          |
-| <dl> <dt>**E \_ ZEIGER 0X80004003**</dt> <dt></dt> </dl>                                      | Der Parameter ist **NULL.**<br/>                                                                                                                                                                                             |
-| <dl> <dt>**HRESULT \_ FROM \_ \_ WIN32(FEHLERFREIGABEVERLETZUNG) \_**</dt> <dt>0X80070020</dt> </dl> | Das image der virtuellen Festplatte, auf das dieses [**IVMHardDisk-Objekt**](ivmharddisk.md) verweist, wird verwendet, oder das übergeordnete Image dieses virtuellen Festplattenimages wird verwendet. Oder diese Festplattenabbilder können Teil eines gespeicherten Zustands sein.<br/> |
-| <dl> <dt>**VM \_ E \_ FALSCHER \_ \_ \_ HD-IMAGETYP**</dt> <dt>0XA004067B</dt> </dl>                   | Das Image der virtuellen Festplatte, auf das dieses [**IVMHardDisk-Objekt**](ivmharddisk.md) verweist, muss ein sich unterscheidende Datenträgerimage sein.<br/>                                                                                            |
-| <dl> <dt>**VM \_ E \_ FILE READ ONLY \_ \_ 0xA004067A**</dt> <dt></dt> </dl>                         | Das übergeordnete Image der virtuellen Festplatte, auf das dieses [**IVMHardDisk-Objekt**](ivmharddisk.md) verweist, ist als schreibgeschützt gekennzeichnet.<br/>                                                                                             |
-| <dl> <dt>**VM \_ DER \_ ÜBERGEORDNETE PFAD WURDE \_ \_ \_ NICHT**</dt> <dt>0XA0040677</dt> </dl>                 | Das übergeordnete Element der virtuellen Festplatte, auf die von diesem [**IVMHardDisk-Objekt**](ivmharddisk.md) verwiesen wird, ist nicht vorhanden.<br/>                                                                                                       |
-| <dl> <dt>**VM \_ \_ \_ E-APP WIRD \_ HERUNTERGEFAHREN**</dt> <dt>0XA0040209</dt> </dl>                      | Das Image der virtuellen Festplatte kann nicht zusammengeführt werden, da die Anwendung heruntergefahren wird.<br/>                                                                                                                                 |
+| <dl> <dt>**E \_ POINTER**</dt> <dt>0x80004003</dt> </dl>                                      | Der Parameter ist **NULL.**<br/>                                                                                                                                                                                             |
+| <dl> <dt>**HRESULT \_ FROM \_ WIN32(ERROR \_ SHARING \_ VIOLATION)**</dt> <dt>0x80070020</dt> </dl> | Das virtuelle Festplattenimage, auf das dieses [**IVMHardDisk-Objekt**](ivmharddisk.md) verweist, wird verwendet, oder das übergeordnete Image dieses virtuellen Festplattenimages wird verwendet. Oder diese Festplattenimages können Teil eines gespeicherten Zustands sein.<br/> |
+| <dl> <dt>**VM \_ E \_ WRONG HD IMAGE \_ \_ \_ TYPE**</dt> <dt>0xA004067B</dt> </dl>                   | Das virtuelle Festplattenimage, auf das dieses [**IVMHardDisk-Objekt**](ivmharddisk.md) verweist, muss ein differenzierendes Datenträgerimage sein.<br/>                                                                                            |
+| <dl> <dt>**VM \_ E \_ FILE \_ READ \_ ONLY**</dt> <dt>0xA004067A</dt> </dl>                         | Das übergeordnete Image der virtuellen Festplatte, auf das dieses [**IVMHardDisk-Objekt**](ivmharddisk.md) verweist, ist als schreibgeschützt markiert.<br/>                                                                                             |
+| <dl> <dt>**VM \_ \_E \_ ÜBERGEORDNETER PFAD \_ NICHT \_ GEFUNDEN**</dt> <dt>0xA0040677</dt> </dl>                 | Das übergeordnete Element der virtuellen Festplatte, auf die dieses [**IVMHardDisk-Objekt**](ivmharddisk.md) verweist, ist nicht vorhanden.<br/>                                                                                                       |
+| <dl> <dt>**VM \_ HERUNTERFAHREN \_ \_ DER \_ E-APP**</dt> <dt>0xA0040209</dt> </dl>                      | Das image der virtuellen Festplatte kann nicht zusammengeführt werden, da die Anwendung heruntergefahren wird.<br/>                                                                                                                                 |
 | <dl> <dt>**DISP \_ E \_ EXCEPTION**</dt> <dt>0x80020009</dt> </dl>                              | Ein unerwarteter Fehler ist aufgetreten.<br/>                                                                                                                                                                                      |
 
 
@@ -78,7 +78,7 @@ Diese Methode kann einen dieser Werte zurückgeben.
 
 | Anforderung | Wert |
 |-------------------------------------|-----------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Windows 7 \[ Desktop-Apps\]<br/>                                                    |
+| Unterstützte Mindestversion (Client)<br/> | nur Windows 7 \[ Desktop-Apps\]<br/>                                                    |
 | Unterstützte Mindestversion (Server)<br/> | Nicht unterstützt<br/>                                                                     |
 | Ende des Supports (Client)<br/>    | Windows 7<br/>                                                                          |
 | Product (Produkt)<br/>                  | Windows Virtual PC<br/>                                                                 |
@@ -87,7 +87,7 @@ Diese Methode kann einen dieser Werte zurückgeben.
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 

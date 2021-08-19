@@ -1,29 +1,29 @@
 ---
-description: PIN wird wieder hergestellt
+description: Erneutes Verbinden von Pins
 ms.assetid: 34b3e4de-e4eb-48c5-aaef-fc99b63e8691
-title: PIN wird wieder hergestellt
+title: Erneutes Verbinden von Pins
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: f9fc71b4d5a62ee066edaa5f97b4cc3332b2231d
-ms.sourcegitcommit: a47bd86f517de76374e4fff33cfeb613eb259a7e
+ms.openlocfilehash: 3d8bb214307a5c17639d98ae07284abddca4d5beb11b966150d8b7ec46013853
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/06/2021
-ms.locfileid: "104521320"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119072774"
 ---
-# <a name="reconnecting-pins"></a>PIN wird wieder hergestellt
+# <a name="reconnecting-pins"></a>Erneutes Verbinden von Pins
 
-Während einer PIN-Verbindung kann ein Filter die Verbindung trennen und eine der anderen Pins wiederherstellen, wie im folgenden dargestellt:
+Während einer Pinverbindung kann ein Filter wie folgt eine Verbindung mit einem der anderen Pins trennen und erneut herstellen:
 
-1.  Der Filter ruft [**IPin:: queryaccept**](/windows/desktop/api/Strmif/nf-strmif-ipin-queryaccept) in der PIN des anderen Filters auf und gibt den neuen Medientyp an.
-2.  Wenn **queryaccept** S OK zurückgibt \_ , ruft der Filter [**IFilterGraph2:: reconnectex**](/windows/desktop/api/Strmif/nf-strmif-ifiltergraph2-reconnectex) auf, um die Pins erneut zu verbinden.
+1.  Der Filter ruft [**IPin::QueryAccept**](/windows/desktop/api/Strmif/nf-strmif-ipin-queryaccept) am Pin des anderen Filters auf und gibt den neuen Medientyp an.
+2.  Wenn **QueryAccept** S \_ OK zurückgibt, ruft der Filter [**IFilterGraph2::ReconnectEx**](/windows/desktop/api/Strmif/nf-strmif-ifiltergraph2-reconnectex) auf, um die Pins erneut zu verbinden.
 
-Im folgenden finden Sie einige Beispiele für den Fall, dass ein Filter möglicherweise die Verbindung von Pins wiederherstellt:
+Im Folgenden sind einige Beispiele dafür aufgeführt, wann ein Filter möglicherweise erneut eine Verbindung mit Pins herstellen muss:
 
--   **Tee-Filter.** Ein *Tee-Filter* teilt einen Eingabedaten Strom in mehrere Ausgaben auf, ohne die Daten im Stream zu ändern. Ein Tee-Filter kann eine Reihe von Medientypen akzeptieren, die Typen müssen jedoch über alle Pin-Verbindungen hinweg abgeglichen werden. Wenn die Eingabe-PIN eine Verbindung herstellt, muss der Filter daher möglicherweise vorhandene Verbindungen auf den Ausgabe Pins erneut aushandeln (und umgekehrt). Ein Beispiel finden Sie im Beispiel für den [inftee-Filter](inftee-filter-sample.md).
--   **Übersetzte Filter.** Ein *transdirekter* Filter ändert die Eingabedaten im ursprünglichen Puffer, anstatt die Daten in einen separaten Ausgabepuffer zu kopieren. Bei einem direkten Filter muss die gleiche Zuweisung für die Upstream-und downstreamverbindungen verwendet werden. Die erste PIN für Connect (Eingabe oder Ausgabe) aushandiert eine Zuweisung auf die übliche Weise. Wenn die andere Pin eine Verbindung herstellt, ist die erste Zuweisung jedoch möglicherweise nicht akzeptabel. In diesem Fall wählt die zweite Pin eine andere Zuweisung aus, und die erste Pin stellt erneut eine Verbindung mit der neuen Zuweisung her. Eine Beispiel Implementierung finden Sie unter der [**ctransinplacefilter**](ctransinplacefilter.md) -Klasse.
+-   **Teefilter.** Ein *Teefilter* teilt einen Eingabestream in mehrere Ausgaben auf, ohne die Daten im Datenstrom zu ändern. Ein Teefilter kann einen Bereich von Medientypen akzeptieren, aber die Typen müssen über alle Stecknadelverbindungen hinweg übereinstimmen. Wenn der Eingabepin eine Verbindung herstellt, muss der Filter daher ggf. alle vorhandenen Verbindungen auf den Ausgabepins neu aushandeln und umgekehrt. Ein Beispiel finden Sie im [InfTee-Filterbeispiel.](inftee-filter-sample.md)
+-   **Trans-in-Place-Filter.** Ein *trans-in-place-Filter* ändert die Eingabedaten im ursprünglichen Puffer, anstatt die Daten in einen separaten Ausgabepuffer zu kopieren. Ein trans-in-place-Filter muss den gleichen Allocator sowohl für die Upstream- als auch für die Downstreamverbindung verwenden. Der erste Stecknadel, mit dem eine Verbindung hergestellt werden soll (Eingabe oder Ausgabe), handelt eine Zuweisung wie gewohnt aus. Wenn der andere Pin eine Verbindung herstellt, ist die erste Zuweisung jedoch möglicherweise nicht akzeptabel. In diesem Fall wählt der zweite Stecknadel eine andere Zuweisung aus, und der erste Stecknadel stellt die Verbindung mithilfe der neuen Zuweisung wieder her. Eine Beispielimplementierungen finden Sie in der [**CTransInPlaceFilter-Klasse.**](ctransinplacefilter.md)
 
-In der **reconnectex** -Methode trennt der Filter Graph-Manager asynchron die Verbindung mit den Pins und verbindet diese erneut. Der Filter darf nicht versuchen, die Verbindung erneut herzustellen, es sei denn, **queryaccept** gibt S \_ OK zurück. Andernfalls wird die PIN getrennt, was zu Diagramm Fehlern führt. Außerdem sollte der Filter die erneute Verbindung innerhalb der [**IPin:: Connect**](/windows/desktop/api/Strmif/nf-strmif-ipin-connect) -Methode im gleichen Thread anfordern. Wenn die **Connect** -Methode in einem Thread zurückgibt, während ein anderer Thread die Anforderung zur erneuten Verbindungs Herstellung ausführt, führt der Filter-Graph-Manager möglicherweise das Diagramm aus, bevor die Verbindung wieder hergestellt wird, was zu Diagramm Fehlern führt.
+In der **ReconnectEx-Methode** trennt der Filter Graph Manager die Verbindung mit den Pins asynchron und verbindet sie erneut. Der Filter darf nicht versuchen, die Verbindung wiederherzustellen, es sei **denn, QueryAccept** gibt S \_ OK zurück. Andernfalls wird die Verbindung mit der Stecknadel getrennt, was zu Graphfehlern führt. Außerdem sollte der Filter die erneute Verbindung innerhalb der [**IPin::Verbinden-Methode**](/windows/desktop/api/Strmif/nf-strmif-ipin-connect) im selben Thread anfordern. Wenn die **Verbinden-Methode** für einen Thread zurückgegeben wird, während ein anderer Thread die Anforderung zur erneuten Verbindung sendet, führt der Filter Graph Manager das Diagramm möglicherweise aus, bevor die Verbindung wiederhergestellt wird. Dies führt zu Graphfehlern.
 
  
 

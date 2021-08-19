@@ -1,9 +1,9 @@
 ---
 title: DLNASourceURI-Attribut
-description: Das DLNASourceURI-Attribut ist der universelle Ressourcenbezeichner (URI) des Elements.
+description: Das DLNASourceURI-Attribut ist der URI (Universal Resource Identifier) des Elements.
 ms.assetid: 323c897b-9b76-44f7-9313-c51595589583
 keywords:
-- DLNASourceURI-Windows Media Player
+- DLNASourceURI-Attribut Windows Media Player
 topic_type:
 - apiref
 api_name:
@@ -21,7 +21,7 @@ ms.locfileid: "118997170"
 ---
 # <a name="dlnasourceuri-attribute"></a>DLNASourceURI-Attribut
 
-Das **DLNASourceURI-Attribut** ist der universelle Ressourcenbezeichner (URI) des Elements.
+Das **DLNASourceURI-Attribut** ist der URI (Universal Resource Identifier) des Elements.
 
 ## <a name="applies-to"></a>Gilt für
 
@@ -35,11 +35,11 @@ Das **DLNASourceURI-Attribut** ist der universelle Ressourcenbezeichner (URI) de
 
 Wenn sich das Element in der lokalen Bibliothek des aktuellen Benutzers befindet, sind dieses Attribut, das [**SourceURL-Attribut**](sourceurl-attribute.md) und der von [**IWMPMedia::get \_ sourceURL**](/previous-versions/windows/desktop/api/wmp/nf-wmp-iwmpmedia-get_sourceurl) zurückgegebene Wert identisch.
 
-Wenn sich das Element nicht in der lokalen Bibliothek des aktuellen Benutzers befindet, sondern zu einer Remotebibliothek gehört, ist dieses Attribut ein Bezeichner des Formulars dlna-playsingle://*xxx*.
+Wenn sich das Element nicht in der lokalen Bibliothek des aktuellen Benutzers befindet, sondern zu einer Remotebibliothek gehört, ist dieses Attribut ein Bezeichner im Format dlna-playsingle://*xxx*.
 
-Sie können einen dlna-playsingle-URI an die [**IWMPCore3::newMedia-Methode**](/previous-versions/windows/desktop/api/wmp/nf-wmp-iwmpcore3-newmedia) übergeben, um eine [**IWMPMedia-Schnittstelle**](/previous-versions/windows/desktop/api/wmp/nn-wmp-iwmpmedia) zu erhalten, mit der Sie die Metadaten des Medienelements anzeigen und möglicherweise die Sternbewertung des Medienelements bearbeiten können. Beachten Sie jedoch, dass der dlna-playsingle-URI für einen Inhaltsverzeichnisdienst (CDS) verwendet werden muss, Windows Media Player bereits gefunden wurde. Die **newMedia-Methode** initiiert keine UPnP-Ermittlung und sucht nicht nach dem CDS.
+Sie können einen dlna-playsingle-URI an die [**IWMPCore3::newMedia-Methode**](/previous-versions/windows/desktop/api/wmp/nf-wmp-iwmpcore3-newmedia) übergeben, um eine [**IWMPMedia-Schnittstelle**](/previous-versions/windows/desktop/api/wmp/nn-wmp-iwmpmedia) abzurufen, mit der Sie die Metadaten des Medienelements anzeigen und möglicherweise die Sternbewertung des Medienelements bearbeiten können. Beachten Sie jedoch, dass der dlna-playsingle-URI für einen Inhaltsverzeichnisdienst (Content Directory Service, CDS) sein muss, der Windows Media Player bereits ermittelt hat. Die **newMedia-Methode** initiiert keine UPnP-Ermittlung und sucht nicht nach dem CDS.
 
-Sie können die Sternbewertung eines Medienelements in einer Remotebibliothek nur bearbeiten, wenn die Remotebibliothek den Bearbeitungsvorgang unterstützt. Remotebibliotheken, die auf einem Computer mit Windows 7 gehostet werden, unterstützen den Bearbeitungsvorgang. Remotebibliotheken, die auf einem Computer gehostet werden, auf dem ein Windows betriebssystem vor Windows 7 ausgeführt wird, unterstützen den Bearbeitungsvorgang nicht.
+Sie können die Sternbewertung eines Medienelements in einer Remotebibliothek nur bearbeiten, wenn die Remotebibliothek den Bearbeitungsvorgang unterstützt. Remotebibliotheken, die auf einem Computer mit Windows 7 gehostet werden, unterstützen den Bearbeitungsvorgang. Remotebibliotheken, die auf einem Computer gehostet werden, auf dem ein Windows Betriebssystem vor Windows 7 ausgeführt wird, unterstützen den Bearbeitungsvorgang nicht.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -51,11 +51,11 @@ Sie können die Sternbewertung eines Medienelements in einer Remotebibliothek nu
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 
-[**Attributreferenz**](attribute-reference.md)
+[**Attributverweis**](attribute-reference.md)
 </dt> </dl>
 
  

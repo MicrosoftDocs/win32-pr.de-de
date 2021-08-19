@@ -49,7 +49,7 @@ HRESULT D3DXCreateAnimationController(
 
 Typ: **[ **UINT**](../winprog/windows-data-types.md)**
 
-Maximale Anzahl von Animationsausgaben, die der Controller unterstützen kann.
+Maximale Anzahl von Animationsausgabe, die der Controller unterstützen kann.
 
 </dd> <dt>
 
@@ -85,7 +85,7 @@ Maximale Anzahl ausstehender Ereignisse, die der Controller unterstützt.
 
 Typ: **[ **LPD3DXANIMATIONCONTROLLER**](id3dxanimationcontroller.md)\***
 
-Zeiger auf das erstellte Animationscontrollerobjekt. Siehe [**ID3DXAnimationController.**](id3dxanimationcontroller.md)
+Zeiger auf das erstellte Animationscontrollerobjekt. Siehe [**ID3DXAnimationController**](id3dxanimationcontroller.md).
 
 </dd> </dl>
 
@@ -93,11 +93,11 @@ Zeiger auf das erstellte Animationscontrollerobjekt. Siehe [**ID3DXAnimationCont
 
 Typ: **[ **HRESULT**](https://msdn.microsoft.com/library/Bb401631(v=MSDN.10).aspx)**
 
-Wenn die Funktion erfolgreich ausgeführt wird, lautet der Rückgabewert D3D \_ OK. Wenn die Funktion fehlschlägt, kann der Rückgabewert einer der folgenden Werte sein: D3DERR \_ INVALIDCALL, E \_ OUTOFMEMORY.
+Wenn die Funktion erfolgreich ist, ist der Rückgabewert D3D \_ OK. Wenn die Funktion fehlschlägt, kann der Rückgabewert einer der folgenden Werte sein: D3DERR \_ INVALIDCALL, E \_ OUTOFMEMORY.
 
 ## <a name="remarks"></a>Hinweise
 
-Ein Animationscontroller steuert einen Animationsmixer. Der Controller fügt Methoden hinzu, um Überblendungsparameter im Laufe der Zeit zu ändern, um reibungslose Übergänge zu ermöglichen.
+Ein Animationscontroller steuert einen Animationsmixer. Der Controller fügt Methoden zum Ändern von Blendingparametern im Laufe der Zeit hinzu, um reibungslose Übergänge zu ermöglichen.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -110,7 +110,7 @@ Ein Animationscontroller steuert einen Animationsmixer. Der Controller fügt Met
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 
