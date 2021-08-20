@@ -15,7 +15,7 @@ ms.locfileid: "117786729"
 
 Die MSV1 \_ 0 \_ GETUSERINFO \_ REQUEST-Struktur ist veraltet.
 
-Informationen zum Arbeitsstationsbenutzer finden Sie in der [**NetWkstaUserGetInfo-Funktion.**](/windows/win32/api/lmwksta/nf-lmwksta-netwkstausergetinfo)
+Informationen zum Abrufen von Informationen zum Arbeitsstationsbenutzer finden Sie in der [**NetWkstaUserGetInfo-Funktion.**](/windows/win32/api/lmwksta/nf-lmwksta-netwkstausergetinfo)
 
  
 

@@ -1,9 +1,9 @@
 ---
-title: Vordefinierte Text Attribute ("tsatyd. h")
-description: Die folgenden Werte identifizieren Text Attribute, die mit der ITF Context getappproperty-Methode abgerufen werden. Das Datenformat und der Inhalt der einzelnen Eigenschaftentypen sind eingeschlossen.
+title: Vordefinierte Textattribute (TsAttrid.h)
+description: Die folgenden Werte identifizieren Textattribute, die mit der ITfContext GetAppProperty-Methode erhalten wurden. Das Datenformat und der Inhalt der einzelnen Eigenschaftentypen sind enthalten.
 ms.assetid: af73edb8-b706-40e4-a093-4ac22d33ecdc
 keywords:
-- Vordefinierte Text Attribute Text Dienste-Framework
+- Vordefinierte Textattribute Textdienstframework
 topic_type:
 - apiref
 api_name:
@@ -14,50 +14,50 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 6cb214f6c555b589c52e9916325e38b46b0bfb88
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 3b4518e754b5ddca5a8fe19ed35434d9150a76061edc08966447dbe2de9b5a53
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104105381"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117951838"
 ---
-# <a name="predefined-text-attributes"></a>Vordefinierte Text Attribute
+# <a name="predefined-text-attributes"></a>Vordefinierte Textattribute
 
-Die folgenden Werte identifizieren Text Attribute, die mit der [**ITF context:: getappproperty**](/windows/desktop/api/msctf/nf-msctf-itfcontext-getappproperty) -Methode abgerufen werden. Das Datenformat und der Inhalt der einzelnen Eigenschaftentypen sind eingeschlossen.
+Die folgenden Werte identifizieren Textattribute, die mit der [**ITfContext::GetAppProperty-Methode erhalten**](/windows/desktop/api/msctf/nf-msctf-itfcontext-getappproperty) wurden. Das Datenformat und der Inhalt der einzelnen Eigenschaftentypen sind enthalten.
 
 ## <a name="properties"></a>Eigenschaften
 
 
 
-| Eigenschaft                                     | BESCHREIBUNG                                                                                                                                              |
+| Eigenschaft                                     | Beschreibung                                                                                                                                              |
 |----------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------|
-| - \_ Text                               | Nicht verwendet.                                                                                                                                                |
-| Text Ausrichtung für den Tsat- \_ Text \_                    | Nicht verwendet.                                                                                                                                                |
-| \_Text \_ Ausrichtungs \_ Zentrier Text            | Enthält einen Wert ungleich 0 (null), wenn der Text zentriert ist oder andernfalls NULL.                                                                                      |
-| \_Text Ausrichtung für die Text \_ Ausrichtung \_           | Enthält einen Wert ungleich 0 (null), wenn der Text gerechtfertigt ist, andernfalls NULL.                                                                                     |
-| Die Text Ausrichtung für den Tsat- \_ Text \_ \_ Links              | Enthält einen Wert ungleich 0 (null), wenn der Text linksbündig ausgerichtet oder andernfalls NULL ist.                                                                                  |
-| \_Text \_ Ausrichtung nach \_ Rechts             | Enthält einen Wert ungleich 0 (null), wenn der Text rechtsbündig ausgerichtet ist, andernfalls NULL.                                                                                 |
-| "- \_ TextBlock \_ "               | Enthält einen Wert ungleich 0 (null), wenn der Text ein eingebettetes Objekt ist, andernfalls NULL.                                                                            |
-| \_TextText- \_ Bindestrich                  | Enthält einen Wert ungleich 0 (null), wenn der Text mittels Bindestrich ist, andernfalls NULL.                                                                                    |
-| Sprache für den \_ Sprache-Text \_                     | Enthält den **LangID** -sprach Bezeichner des Texts.                                                                                                 |
-| \_Text Verknüpfung "tsatder d" \_                         | Enthält einen Zeiger auf ein Link Objekt. Der Aufrufer muss die QueryInterface-Methode verwenden, um die gewünschte Schnittstelle zu erhalten, z. b. **iuniforresourcelocator**. |
-| Text Ausrichtung für den Tsat- \_ Text \_                  | Gibt den Winkel in Zehntel Grad zwischen der Text Basislinie und der x-Achse des Geräts an.                                                          |
-| Der Wert für die Spalte "Tsat" \_ \_                         | Nicht verwendet.                                                                                                                                                |
-| Der Tsat- \_ Text-Text \_ para \_ firstlineingedent        | Enthält die Anzahl der Punkte, an denen die erste Zeile eines Absatzes eingezogen ist.                                                                            |
-| \_Virus Text Text \_ para Richtung \_             | Enthält die Anzahl der Punkte, an denen der Absatz von Links eingerückt wird.                                                                              |
-| -Text- \_ para-Text \_ \_            | Nicht verwendet.                                                                                                                                                |
-| Der Wert von "- \_ Text" \_ \_ \_   | Enthält die Mindestanzahl von Zeilen für den Zeilenabstand des Absatzes.                                                                              |
-| Wert für " \_ \_ \_ tsatzweid" für " \_ Double"    | Enthält einen Wert ungleich 0 (null), wenn der Absatz einen doppelten Abstand hat, andernfalls NULL.                                                                            |
-| Der Wert für die Text-ID "". \_ \_ \_ \_   | Enthält die genaue Anzahl von Zeilen für den Zeilenabstand des Absatzes.                                                                                |
-| Der Wert von "-Text" für "". \_ \_ \_ \_  | Enthält die Anzahl der Zeilen für den Abstand mehrerer Zeilen des Absatzes.                                                                             |
-| Der- \_ Text-Text-Text \_ para \_ linespacingoneptfive \_ | Enthält einen Wert ungleich 0 (null), wenn der Absatz ein und eine halbe Zeilen Grenze ist, andernfalls NULL.                                                             |
-| "Tsatzd" \_ Text \_ para \_ linespacingsingle \_    | Enthält einen Wert ungleich 0 (null), wenn der Absatz einzelner Abstand ist, andernfalls NULL.                                                                            |
-| "Tsatzd"- \_ Text \_ para \_ RightIndent            | Enthält die Anzahl der Punkte, an denen der Absatz von rechts eingerückt wird.                                                                             |
-| Der '- \_ Text '-Text ' \_ para \_ SpaceAfter '             | Enthält die Anzahl der Abstands Punkte nach dem Absatz.                                                                                            |
-| Der Tsat- \_ Text-Text \_ para \_ SpaceBefore            | Enthält die Anzahl der Abstands Punkte vor dem Absatz.                                                                                           |
-| Der '- \_ Text '-Text ' \_                     | Enthält 0 (null), wenn der Text schreibgeschützt ist oder andernfalls ungleich 0 (null).                                                                                             |
-| Der Tsat- \_ Text " \_ RightToLeft"                  | Enthält 0 (null), wenn der Text von rechts nach links gelesen oder andernfalls ungleich 0 (null) ist.                                                                                 |
-| \_Text verticalwriting in der-Textdatei \_              | Gibt an, ob der Text vertikal oder horizontal ist. Enthält 0 (null), wenn der Text horizontal oder nicht NULL ist, wenn der Text vertikal ist.                             |
+| TSATTRID-Text \_                               | Wird nicht verwendet.                                                                                                                                                |
+| \_TSATTRID-Textausrichtung \_                    | Wird nicht verwendet.                                                                                                                                                |
+| TSATTRID \_ Text \_ Alignment \_ Center            | Enthält einen Wert ungleich 0 (null), wenn der Text zentriert ist, andernfalls 0 (null).                                                                                      |
+| TSATTRID \_ Text \_ Alignment \_ Justify           | Enthält einen Wert ungleich 0 (null), wenn der Text gerechtfertigt ist, andernfalls 0 (null).                                                                                     |
+| TSATTRID– \_ \_ Textausrichtung \_ links              | Enthält einen Wert ungleich 0 (null), wenn der Text linksbündig ausgerichtet ist, andernfalls 0 (null).                                                                                  |
+| TSATTRID– \_ \_ Textausrichtung \_ rechts             | Enthält einen Wert ungleich 0 (null), wenn der Text rechtsbündig ausgerichtet ist, andernfalls 0 (null).                                                                                 |
+| TSATTRID \_ Text \_ EmbeddedObject               | Enthält einen Wert ungleich 0 (null), wenn der Text ein eingebettetes Objekt oder andernfalls 0 (null) ist.                                                                            |
+| \_ \_ TSATTRID-Text-Bindestriche                  | Enthält einen Wert ungleich 0 (null), wenn der Text bindestrichiert ist, andernfalls 0 (null).                                                                                    |
+| \_TSATTRID-Textsprache \_                     | Enthält den **LANGID-Sprachbezeichner** des Texts.                                                                                                 |
+| \_TSATTRID-Textlink \_                         | Enthält einen Zeiger auf ein Linkobjekt. Der Aufrufer muss die QueryInterface-Methode verwenden, um die gewünschte Schnittstelle wie **IUniformResourceLocator zu erhalten.** |
+| \_TSATTRID-Textausrichtung \_                  | Gibt den Winkel zwischen der Textbasislinie und der x-Achse des Geräts in Zehntel grad an.                                                          |
+| TSATTRID \_ Text \_ Para                         | Wird nicht verwendet.                                                                                                                                                |
+| TSATTRID \_ Text \_ Para \_ FirstLineIndent        | Enthält die Anzahl der Punkte, um die die erste Zeile eines Absatzes eingerückt ist.                                                                            |
+| TSATTRID \_ Text \_ Para \_ LeftIndent             | Enthält die Anzahl der Punkte, um die der Absatz von links eingerückt wird.                                                                              |
+| TSATTRID \_ Text \_ Para \_ LineSpacing            | Wird nicht verwendet.                                                                                                                                                |
+| TSATTRID \_ Text \_ Para \_ LineSpacing \_ AtLeast   | Enthält die Mindestanzahl von Zeilen für den Zeilenabstand des Absatzes.                                                                              |
+| TSATTRID \_ Text \_ Para \_ LineSpacing \_ Double    | Enthält einen Wert ungleich 0 (null), wenn der Absatz doppelt oder andernfalls 0 (null) ist.                                                                            |
+| TSATTRID \_ Text \_ Para \_ LineSpacing \_ Exactly   | Enthält die genaue Anzahl von Zeilen für den Zeilenabstand des Absatzes.                                                                                |
+| TSATTRID \_ Text \_ Para \_ LineSpacing \_ Multiple  | Enthält die Anzahl der Zeilen für den Abstand zwischen mehreren Zeilen des Absatzes.                                                                             |
+| TSATTRID \_ Text \_ Para \_ LineSpacing \_ OnePtFive | Enthält einen Wert ungleich 0 (null), wenn der Absatz eine und eine halbe Zeile leerzeichend oder andernfalls 0 (null) ist.                                                             |
+| TSATTRID \_ Text \_ Para \_ LineSpacing \_ Single    | Enthält einen Wert ungleich 0 (null), wenn der Absatz ein einzelnes Leerzeichen oder andernfalls 0 (null) ist.                                                                            |
+| TSATTRID \_ Text \_ Para \_ RightIndent            | Enthält die Anzahl der Punkte, um die der Absatz von rechts eingerückt wird.                                                                             |
+| TSATTRID \_ Text \_ Para \_ SpaceAfter             | Enthält die Anzahl der Abstandspunkte nach dem Absatz.                                                                                            |
+| TSATTRID \_ Text \_ Para \_ SpaceBefore            | Enthält die Anzahl der Abstandspunkte vor dem Absatz.                                                                                           |
+| TSATTRID \_ Text \_ ReadOnly                     | Enthält 0 (null), wenn der Text schreibgeschützt ist oder andernfalls ungleich 0 (null) ist.                                                                                             |
+| TSATTRID \_ Text \_ RightToLeft                  | Enthält 0 (null), wenn der Text von rechts nach links gelesen wird oder andernfalls ungleich 0 (null) ist.                                                                                 |
+| TSATTRID \_ Text \_ VerticalWriting              | Gibt an, ob der Text vertikal oder horizontal ist. Enthält 0 (null), wenn der Text horizontal oder ungleich 0 (null) ist, wenn der Text vertikal ist.                             |
 
 
 
@@ -71,8 +71,8 @@ Die folgenden Werte identifizieren Text Attribute, die mit der [**ITF context:: 
 |-------------------------------------|---------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[nur Desktop-Apps\]<br/>                            |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                                  |
-| Verteilbare Komponente<br/>          | TSF 1,0 unter Windows 2000 Professional<br/>                                       |
-| Header<br/>                   | <dl> <dt>"Tsatphd. h"</dt> </dl> |
+| Verteilbare Komponente<br/>          | TSF 1.0 auf Windows 2000 Professional<br/>                                       |
+| Header<br/>                   | <dl> <dt>TsAttrid.h</dt> </dl> |
 
 
 

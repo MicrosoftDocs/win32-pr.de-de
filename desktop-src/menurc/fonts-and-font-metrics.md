@@ -1,63 +1,63 @@
 ---
-title: Schriftarten und textmetriken
-description: In diesem Thema werden die von Windows bereitgestellten Gliederungs Schriftarten, Schriftart Metrikwerte, die sich Zwischenversionen von Windows ändern können, und Anleitungen zur Verwendung von Schriftart Metriken in Ihren Desktop-Apps erläutert.
+title: Schriftarten und Textmetriken
+description: In diesem Thema werden die von Windows bereitgestellten Konturschriftarten, Schriftartmetrikwerte, die sich zwischen Versionen von Windows ändern können, und Anleitungen zur Verwendung von Schriftartmetriken in Ihren Desktop-Apps erläutert.
 ms.assetid: B195154D-0168-4C5E-9CFB-AE7EF63D5F42
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: da27d4eb5f34f5a88e4a0e3e866f9a14784c3895
-ms.sourcegitcommit: ebd3ce6908ff865f1ef66f2fc96769be0aad82e1
+ms.openlocfilehash: 5199459c7a6afd311b120bd186df000e0fd32eef828ae986caf6da8573afe8bb
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/19/2020
-ms.locfileid: "103948731"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117687853"
 ---
-# <a name="fonts-and-text-metrics"></a>Schriftarten und textmetriken
+# <a name="fonts-and-text-metrics"></a>Schriftarten und Textmetriken
 
-In diesem Thema werden die von Windows bereitgestellten Gliederungs Schriftarten, Schriftart Metrikwerte, die sich Zwischenversionen von Windows ändern können, und Anleitungen zur Verwendung von Schriftart Metriken in Ihren Desktop-Apps erläutert.
+In diesem Thema werden die von Windows bereitgestellten Konturschriftarten, Schriftartmetrikwerte, die sich zwischen Versionen von Windows ändern können, und Anleitungen zur Verwendung von Schriftartmetriken in Ihren Desktop-Apps erläutert.
 
--   Informationen zu den Schriftart Metriken in DirectWrite finden Sie unter [textmetriken](/windows/desktop/DirectWrite/text-metrics).
--   Ausführliche Informationen zur Verwaltung von Text in Apps mithilfe von GDI finden Sie in den Themen zu [Schriftarten und Text](/windows/desktop/gdi/fonts-and-text).
+-   Spezifische Informationen zu Schriftartmetriken in DirectWrite sie unter [Textmetriken](/windows/desktop/DirectWrite/text-metrics).
+-   Weitere Informationen zum Verwalten von Text in Apps mithilfe von GDI finden Sie in den Themen unter [Schriftarten und Text](/windows/desktop/gdi/fonts-and-text).
 
-Ausführlichere Informationen zur Schriftart Verwendung und Typspezifikationen finden Sie auf der [Microsoft Typografie-Website](https://www.microsoft.com/typography/default.mspx).
+Ausführlichere Informationen zur Verwendung von Schriftarten und Typspezifikationen finden Sie auf der [Microsoft-Website für Typografie.](https://www.microsoft.com/typography/default.mspx)
 
 ## <a name="available-fonts"></a>Verfügbare Schriftarten
 
-Die mit Windows bereitgestellten Gliederungs Schriftarten werden als OpenType-Schriftarten mit TrueType-gliedern ausgeliefert (Windows unterstützt auch OpenType-Schriftarten im CFF-Format). Listen aller von Windows bereitgestellten Schriftarten finden Sie unter [Microsoft Typografie: Schriftarten nach Produkt oder Familie](https://www.microsoft.com/typography/fonts/default.aspx). Alle Windows-Gliederungs Schriftarten entsprechen der aktuellen Version der [OpenType-Spezifikation](https://www.microsoft.com/typography/otspec/).
+Die mit Windows bereitgestellten Konturschriftarten werden als OpenType-Schriftarten mit TrueType-Konturen bereitgestellt (Windows unterstützt auch OpenType-Schriftarten im CFF-Format). Listen aller schriftarten, die von Windows bereitgestellt werden, finden Sie unter [Microsoft-Typografie: Schriftarten nach Produkt oder Familie](https://www.microsoft.com/typography/fonts/default.aspx). Alle Windows umrissenen Schriftarten entsprechen der neuesten Version der [OpenType-Spezifikation.](https://www.microsoft.com/typography/otspec/)
 
-Eine Liste aller aktuellen und der Legacy-Benutzeroberflächen-Schriftarten finden Sie unten unter [Gesperrte Schriftart Metriken](#locked-font-metrics) .
+Eine Liste aller aktuellen und älteren Benutzeroberflächenschriftarten finden Sie weiter unten unter [Metriken für gesperrte](#locked-font-metrics) Schriftarten.
 
-## <a name="font-modifications"></a>Schriftart Änderungen
+## <a name="font-modifications"></a>Schriftartänderungen
 
-Um die Abwärtskompatibilität zu gewährleisten, werden Schriftarten selten aus Windows entfernt. Schriftarten werden jedoch häufig geändert. Zu den Änderungen gehören das Hinzufügen von Zeichen, das Neuzeichnen vorhandener Zeichen, das Ändern von Hinweisen oder das Hinzufügen oder Ändern der Unterstützung für erweiterte OpenType-Features und komplexe Skript
+Um Abwärtskompatibilität zu gewährleisten, werden Schriftarten selten aus der Windows. Schriftarten werden jedoch häufig geändert. Änderungen können das Hinzufügen von Zeichen, das Neudrawing vorhandener Zeichen, das Ändern von Hinweisen oder das Hinzufügen oder Ändern der Unterstützung für erweiterte OpenType-Features und die komplexe Skriptgestaltung umfassen.
 
-### <a name="locked-font-metrics"></a>Gesperrte Schriftart Metriken
+### <a name="locked-font-metrics"></a>Gesperrte Schriftartmetriken
 
-Beachten Sie, dass einige der in Microsoft-Apps verwendeten UI-Schriftarten und Standard Schriftarten zugeordneten Werte gesperrt sind. UI-Schriftarten werden zum Rendering von Benutzeroberflächen Elementen wie Beschriftungen, Dialogfeldern und Menüs verwendet. An diesen Schriftarten werden nur sehr wenige Änderungen vorgenommen, wenn Sie eine hohe Sichtbarkeit und häufige Verwendung haben. Da die gemeldeten Werte, die diesen Schriftarten zugeordnet sind, jedoch gesperrt sind, gibt es möglicherweise Abweichungen zwischen gemeldeten und tatsächlichen Schriftart Werten.
+Beachten Sie, dass einige Werte, die ui-Schriftarten und Standardschriftarten zugeordnet sind, die in Microsoft-Apps verwendet werden, gesperrt sind. Benutzeroberflächenschriftarten werden verwendet, um Benutzeroberflächenelemente wie Beschriftungen, Dialogfelder und Menüs zu rendern. Aufgrund ihrer hohen Sichtbarkeit und häufigen Verwendung werden nur sehr wenige Änderungen an diesen Schriftarten vorgenommen. Da jedoch die gemeldeten Werte, die diesen Schriftarten zugeordnet sind, gesperrt sind, können Abweichungen zwischen gemeldeten und tatsächlichen Schriftartwerten bestehen.
 
-Die folgenden gemeldeten Werte sind für die Benutzeroberfläche und die Standard Schriftarten gesperrt und werden möglicherweise nicht korrekt berichtet:
+Die folgenden gemeldeten Werte sind für Benutzeroberflächen- und Standardschriftarten gesperrt und können ungenau gemeldet werden:
 
--   Diese Werte aus der Tabelle " [OS/2](https://www.microsoft.com/typography/otspec/os2.htm)" der Schriftart:
-    -   xavgcharwidth
-    -   stypolinegap
-    -   stypoascender
-    -   stypodescender
-    -   Windows-upgraden
-    -   Verwendung von ""
--   Der im Header der Schriftart festgelegte [unitsperem](https://www.microsoft.com/typography/otspec/head.htm) -Wert.
--   Werte aus der [Tabelle für vertikale Geräte Metriken (VDMX)](https://www.microsoft.com/typography/otspec/vdmx.htm)
--   Die voraus Breite für einzelne Symbole
+-   Diese Werte aus der [OS/2-Tabelle](https://www.microsoft.com/typography/otspec/os2.htm)der Schriftart:
+    -   xAvgCharWidth
+    -   sTypoLineGap
+    -   sTypoAscender
+    -   sTypoDescender
+    -   usWinAscent
+    -   usWinDescent
+-   Der im Header der Schriftart festgelegte [unitsPerEm-Wert.](https://www.microsoft.com/typography/otspec/head.htm)
+-   Werte aus der [Metriktabelle für vertikale Geräte (VERTICALX)](https://www.microsoft.com/typography/otspec/vdmx.htm)
+-   Die Vorbreiten für einzelne Glyphen
 
-Im folgenden finden Sie eine Liste der Benutzeroberflächen Schriftarten, die mit Windows 8.1 ausgeliefert werden (von gesperrten Werten betroffen):
+Im Folgenden finden Sie eine Liste der im Lieferumfang von Windows 8.1 -Schriftarten (von gesperrten Werten betroffen):
 
-| Skriptname                   | Benutzeroberflächen Schriftart               |
+| Skriptname                   | Schriftart der Benutzeroberfläche               |
 |-------------------------------|-----------------------|
 | Arabisch                        | Segoe UI              |
 | Armenisch                      | Segoe UI              |
-| Bangla (ehemals Bengalisch)     | Nirmala UI            |
+| Pausla (vormalsMals ):     | Nirmala UI            |
 | Bopomofo                      | Microsoft JhengHei UI |
 | Braille                       | Segoe UI Symbol       |
 | Buginesisch                      | Leelawadee UI         |
-| Kanadische Aborigines-Silben | Gadugi                |
+| Kanadierische Aboriginal-Silben | Gadugi                |
 | Cherokee                      | Gadugi                |
 | Koptisch                        | Segoe UI Symbol       |
 | Chinesisch (vereinfacht)          | Microsoft YaHei UI    |
@@ -67,15 +67,15 @@ Im folgenden finden Sie eine Liste der Benutzeroberflächen Schriftarten, die mi
 | Deseret                       | Segoe UI Symbol       |
 | Ethiopic                      | Ebrima                |
 | Georgisch                      | Segoe UI              |
-| Glagolitisch                    | Segoe UI Symbol       |
-| Go                        | Segoe UI Symbol       |
+| Glagolitic                    | Segoe UI Symbol       |
+| Gothic                        | Segoe UI Symbol       |
 | Griechisch                         | Segoe UI              |
 | Gujarati                      | Nirmala UI            |
 | Gurmukhi                      | Nirmala UI            |
 | Hebräisch                        | Segoe UI              |
-| Alte kursiv Formatierung                    | Segoe UI Symbol       |
-| Javanisch                      | Javanese-Text         |
-| Japanisch                      | Meiryo-Benutzeroberfläche             |
+| Altes italisch                    | Segoe UI Symbol       |
+| Javanisch                      | Javanischer Text         |
+| Japanisch                      | Benutzeroberfläche von Überschreibbenutzeroberfläche             |
 | Kannada                       | Mirmala-Benutzeroberfläche            |
 | Khmer                         | Leelawadee UI         |
 | Koreanisch                        | Malgun Gothic         |
@@ -84,19 +84,19 @@ Im folgenden finden Sie eine Liste der Benutzeroberflächen Schriftarten, die mi
 | Malayalam                     | Nirmala UI            |
 | Mongolisch                     | Mongolisches Baiti       |
 | Myanmar                       | Myanmar Text          |
-| N ' Ko                          | Ebrima                |
-| Ogam                         | Segoe UI Symbol       |
+| N'Ko                          | Ebrima                |
+| Ogham                         | Segoe UI Symbol       |
 | Ol Chiki                      | Nirmala UI            |
-| Altes Turkisch                    | Segoe UI Symbol       |
-| Odia (früher Oriya)         | Nirmala UI            |
+| Old OldIc                    | Segoe UI Symbol       |
+| Odia (ehemals Orya)         | Nirmala UI            |
 | Osmanya                       | Ebrima                |
-| Phags-pa                      | Microsoft PhagsPa     |
-| Runisch                         | Segoe UI Symbol       |
-| Sora sompg                  | Nirmala UI            |
+| Paws-pa                      | Microsoft PhagsPa     |
+| Runic                         | Segoe UI Symbol       |
+| Sora Sompeng                  | Nirmala UI            |
 | Singhalesisch                       | Nirmala UI            |
 | Syrisch                        | Estrangelo Edessa     |
-| Tai-Le                        | Microsoft Tai Le      |
-| Neue Tai-Lue                   | Microsoft Neu-Tai-Lue |
+| Lette Le                        | Microsoft Tai Le      |
+| Neue Lue -Lue                   | Microsoft Neu-Tai-Lue |
 | Tamilisch                         | Nirmala UI            |
 | Telugu                        | Nirmala UI            |
 | Tifinagh                      | Ebrima                |
@@ -108,37 +108,37 @@ Im folgenden finden Sie eine Liste der Benutzeroberflächen Schriftarten, die mi
 
 
 
- 
+ 
 
-Im folgenden finden Sie eine Liste der Legacy-Benutzeroberflächen Schriftarten, die ebenfalls von gesperrten Werten betroffen sind:
+Im Folgenden finden Sie eine Liste der älteren Schriftarten der Benutzeroberfläche, die auch von gesperrten Werten betroffen sind:
 
-| Skript Name (Legacy)          | Benutzeroberflächen Schriftart (Legacy)               |
+| Skriptname (Legacy)          | Schriftart der Benutzeroberfläche (Legacy)               |
 |-------------------------------|--------------------------------|
-| Bangla (ehemals Bengalisch)     | Vrinda                         |
-| Kanadische Aborigines-Silben | Euphemia                       |
+| Pausla (vormalsMals ):     | Vrinda                         |
+| Kanadierische Aboriginal-Silben | Euphemia                       |
 | Cherokee                      | Plantagenet                    |
-| Chinesisch (vereinfacht)          | Microsoft YaHei und Simsun     |
-| Chinesisch (traditionell)         | Mingliu und Microsoft jhenghei |
+| Chinesisch (vereinfacht)          | Microsoft YaSim und SimSun     |
+| Chinesisch (traditionell)         | MingLiU und Microsoft JhengRat |
 | Devanagari                    | Mangal                         |
 | Europäische Sprachen            | Tahoma                         |
-| Gujarati                      | Strauch                         |
+| Gujarati                      | Shruti                         |
 | Gurmukhi                      | Raavi                          |
-| Japanisch                      | Meiryo und MS Gothic UI        |
+| Japanisch                      | Benutzeroberfläche von Über- und Ms. Ui        |
 | Kannada                       | Tunga                          |
 | Khmer                         | Khmer                          |
 | Koreanisch                        | Gulim                          |
-| Laotisch                           | Laos-Benutzeroberfläche                         |
+| Laotisch                           | Lao-Benutzeroberfläche                         |
 | Malayalam                     | Kartika                        |
-| Mittlere Osten (Sprachen)      | Tahoma                         |
-| Odia (früher Oriya)         | Kalinga                        |
-| Singhalesisch                     | Iskoola Pota                   |
-| Tamilisch                         | Latha und Vijaya               |
-| Telugu                        | Gautami                        |
+| Sprachen des mittleren Ostens      | Tahoma                         |
+| Odia (ehemals Orya)         | Kalinga                        |
+| Singhalesen                     | Iskoola Tomba                   |
+| Tamilisch                         | Latte und Vijaya               |
+| Telugu                        | Gatami                        |
 | Thailändisch                          | Leelawadee und Tahoma          |
 
 
 
- 
+ 
 
 Diese Schriftarten werden in Microsoft-Apps als Standardwerte verwendet und sind auch von gesperrten Werten betroffen:
 
@@ -151,25 +151,25 @@ Diese Schriftarten werden in Microsoft-Apps als Standardwerte verwendet und sind
 -   Times New Roman
 -   Verdana
 
-### <a name="dynamic-font-metrics"></a>Dynamische Schriftart Metriken
+### <a name="dynamic-font-metrics"></a>Dynamische Schriftartmetriken
 
-Abgesehen von den oben aufgeführten gesperrten Metriken werden die Schriftart Werte genau gemeldet. Wenn eine Schriftart in einer neuen Version von Windows geändert wird, unterscheiden sich die dynamischen Schriftart Werte zwischen den neuen und alten. Wenn z. b. einer Schriftart ein Symbol hinzugefügt wird, können sich die Werte im Header der Schriftart ändern. Das Clipping könnte dazu führen, dass diese Werte (z. b. xmin, xmax, ymin und ymax) gesperrt sind und die Mindest-und Maximalwerte für Symbole in der Schriftart melden.
+Ab gegensatz zu den oben aufgeführten gesperrten Metriken werden Schriftartwerte genau gemeldet. Wenn eine Schriftart in einer neuen Version von geändert Windows, unterscheiden sich dynamische Schriftartwerte zwischen der neuen und der alten. Wenn z. B. einer Schriftart ein Glyph hinzugefügt wird, können sich die Werte im Header der Schriftart ändern. Clipping kann dazu führen, dass diese Werte (einschließlich xMin, xMax, yMin und yMax und das minimale und maximale Begrenzungsfeld für Glyphen in der Schriftart) gesperrt sind und keine true-Werte melden.
 
 > [!IMPORTANT]
-> Wenn Sie in Ihrer APP dynamische Schriftart Werte verwenden (z. b. in [**TextMetric**](/windows/win32/api/wingdi/ns-wingdi-textmetrica)), ändern sich diese Werte, wenn die Schriftarten in zukünftigen Versionen von Windows geändert werden. Verwenden Sie diese tatsächlichen Werte nicht in Situationen, in denen Text statisch bleiben muss.
+> Wenn Sie dynamische Schriftartwerte in Ihrer App verwenden (z. B. werte in [**TEXTMETRIC),**](/windows/win32/api/wingdi/ns-wingdi-textmetrica)ändern sich diese Werte, wenn Schriftarten in zukünftigen Versionen von Windows geändert werden. Verwenden Sie diese tatsächlichen Werte nicht in Situationen, in denen Text statisch bleiben muss.
 
- 
+ 
 
-## <a name="guidelines-for-using-font-metrics"></a>Richtlinien zum Verwenden von Schriftart Metriken
+## <a name="guidelines-for-using-font-metrics"></a>Richtlinien für die Verwendung von Schriftartmetriken
 
--   Computebildschirm-Metriken und Schriftart Metriken (z. b. durchschnittliche Breite) beim Starten einer APP, und verwenden diese Werte, um Ihre APP zu entwerfen. Dadurch wird ein konsistentes Rendering bereitgestellt, und Ihr Layout antwortet auf Änderungen in Schriftarten oder auf den Schriftart Fall Back. Eine Übersicht über die Schriftart-Fall Back und die Schriftart Verknüpfung finden Sie unter [Globalisierung Schritt für Schritt: Schriftarten](https://msdn.microsoft.com/goglobal/bb688134.aspx). Weitere Informationen finden [Sie unter Verwenden von Schriftart fallback](/windows/desktop/Intl/using-font-fallback) für uniscrispezifische Informationen.
-    -   Um eine Basis Metrik zu berechnen, müssen Sie repräsentativen Text für Ihre beabsichtigte Sprache/Ihr Skript Rendering.
-    -   Legen Sie für Steuerelemente, die nur eine einzelne Zeile mit nicht umschließtem Text enthalten, diese an die vollständige Breite des nicht gekürzten Texts an.
-    -   Bei Steuerelementen mit mehreren Zeilen wird die Gesamtlänge, dividiert durch die Zeichen Länge, angezeigt, und Sie haben eine solide Breite, mit der Sie arbeiten können. Beachten Sie, dass dies für komplexe Skripts, bei denen ein einzelnes ' Zeichen ' für den Reader mehrere Code Punkte sein kann, kniffliger ist.
--   Verwenden Sie stypoascender, stypodescender und unitsperem (aus der [Tabelle OS/2](https://www.microsoft.com/typography/otspec/os2.htm)), um den vertikalen Abstand zu berechnen. "stypoascender" wird verwendet, um den optimalen Offset von der obersten Position eines Textframes bis zur ersten Baseline zu bestimmen, und "stypodescender" bestimmt den optimalen Offset vom unteren Rand eines Textframes bis zur letzten Baseline.
--   Wenn Sie DirectWrite verwenden, erstellen Sie ein Layout mit [**idschreitetextlayout**](/windows/desktop/api/dwrite/nn-dwrite-idwritetextlayout). **Idwrite tetextlayout** stellt **den** Vorgänger-  +    +  **linegap** im natürlichen Layout bereit. Sie können auf diese spezifischen Werte mit [**dwrite- \_ Schriftart \_ Metriken**](/windows/desktop/api/dwrite/ns-dwrite-dwrite_font_metrics)zugreifen. Informationen zu dieser Schnittstelle finden Sie unter [Text Formatierung und Layout](/windows/desktop/DirectWrite/text-formatting-and-layout).
--   Wenn Sie GDI verwenden, Rendern Sie den Bildschirm aus, und überprüfen Sie dann das Layout (z. b. die Zeilenlänge oder die Zeichen pro Zeile), und berechnen Sie die endgültigen Layoutparameter, die beim tatsächlichen Rendering verwendet werden.
--   Erstellen Sie keine Layouts statisch basierend auf bestimmten Werten für bestimmte Versionen von Schriftarten. Die tatsächlichen Werte können sich von Release zu Release ändern.
+-   Berechnen Sie Bildschirmmetriken und Schriftartmetriken (z. B. durchschnittliche Breite), wenn eine App gestartet wird, und verwenden Sie diese Werte, um Ihre App zu gestalten. Dadurch wird ein konsistent genaues Rendering ermöglicht, und Ihr Layout reagiert auf Änderungen in Schriftarten oder bietet Platz für Schriftartfallbacks. Eine Übersicht über das Fallback von Schriftarten und die Verknüpfung von Schriftarten finden Sie unter [Globalisierung Schritt für Schritt: Schriftarten](https://msdn.microsoft.com/goglobal/bb688134.aspx). Informationen zu Uniscribe-spezifischen Informationen finden Sie unter [Verwenden des Schriftartfallbacks.](/windows/desktop/Intl/using-font-fallback)
+    -   Um eine Basismetrik zu berechnen, rendern Sie repräsentativen Text für Ihre gewünschte Sprache/Ihr Skript.
+    -   Legen Sie steuerelemente, die nur eine einzelne Zeile mit entpackten Text enthalten, so an, dass sie der vollständigen Breite des nicht gepackten Texts entsprechen.
+    -   Für Steuerelemente mit mehreren Zeilen erhalten Sie die Gesamtlänge, dividieren Sie durch die Zeichenlänge, und Sie haben eine durchgezogene Breite, mit der Sie arbeiten können. Beachten Sie, dass dies für komplexe Skripts schwieriger ist, bei denen ein einzelnes "Zeichen" für den Reader mehrere Codepunkte sein kann.
+-   Verwenden Sie sTypoAscender, sTypoDescender und unitsPerEm (aus der [Tabelle OS/2),](https://www.microsoft.com/typography/otspec/os2.htm)um den vertikalen Abstand zu berechnen. sTypoAscender wird verwendet, um den optimalen Offset vom oberen Rand eines Textrahmens zur ersten Baseline zu bestimmen, und sTypoDescender bestimmt den optimalen Offset vom unteren Rand eines Textrahmens zur letzten Baseline.
+-   Wenn Sie DirectWrite verwenden, erstellen Sie ein Layout mit [**IDWriteTextLayout.**](/windows/desktop/api/dwrite/nn-dwrite-idwritetextlayout) **IDWriteTextLayout** stellt **ascender**  +  **descender**  +  **lineGap** im natürlichen Layout bereit. Sie können mit [**DWRITE \_ FONT \_ METRICS**](/windows/desktop/api/dwrite/ns-dwrite-dwrite_font_metrics)auf diese spezifischen Werte zugreifen. Informationen zu dieser Schnittstelle finden Sie unter [Textformatierung und Layout.](/windows/desktop/DirectWrite/text-formatting-and-layout)
+-   Wenn Sie GDI verwenden, rendern Sie den Bildschirm, überprüfen Sie das Layout (z. B. die Zeilenlänge oder Zeichen pro Zeile), und berechnen Sie die endgültigen Layoutparameter, die beim tatsächlichen Rendering verwendet werden.
+-   Erstellen Sie Layouts nicht statisch basierend auf bestimmten Werten für bestimmte Versionen von Schriftarten. Die tatsächlichen Werte können sich von Release zu Release ändern.
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
@@ -178,28 +178,28 @@ Abgesehen von den oben aufgeführten gesperrten Metriken werden die Schriftart W
 **Referenz**
 </dt> <dt>
 
-[**Idschreitetextlayout**](/windows/desktop/api/dwrite/nn-dwrite-idwritetextlayout)
+[**Idwritetextlayout**](/windows/desktop/api/dwrite/nn-dwrite-idwritetextlayout)
 </dt> <dt>
 
-[**\_Schriftart Metriken für dwrite \_**](/windows/desktop/api/dwrite/ns-dwrite-dwrite_font_metrics)
+[**\_DWRITE-SCHRIFTARTMETRIKEN \_**](/windows/desktop/api/dwrite/ns-dwrite-dwrite_font_metrics)
 </dt> <dt>
 
-[**Textmetrik**](/windows/win32/api/wingdi/ns-wingdi-textmetrica)
+[**TEXTMETRIC**](/windows/win32/api/wingdi/ns-wingdi-textmetrica)
 </dt> <dt>
 
-[unitsperem](https://www.microsoft.com/typography/otspec/head.htm)
+[unitsPerEm](https://www.microsoft.com/typography/otspec/head.htm)
 </dt> <dt>
 
-[OS/2-Tabelle](https://www.microsoft.com/typography/otspec/os2.htm)
+[Os/2-Tabelle](https://www.microsoft.com/typography/otspec/os2.htm)
 </dt> <dt>
 
-[Tabelle für vertikale Geräte Metriken (VDMX)](https://www.microsoft.com/typography/otspec/vdmx.htm)
+[Tabelle mit vertikalen Gerätemetriken (VDMX)](https://www.microsoft.com/typography/otspec/vdmx.htm)
 </dt> <dt>
 
 [Microsoft-Typografie: Schriftarten nach Produkt oder Familie](https://www.microsoft.com/typography/fonts/default.aspx)
 </dt> <dt>
 
-**Licher**
+**Konzeptionellen**
 </dt> <dt>
 
 [Textmetriken (DirectWrite)](/windows/desktop/DirectWrite/text-metrics)
@@ -211,6 +211,6 @@ Abgesehen von den oben aufgeführten gesperrten Metriken werden die Schriftart W
 [Microsoft Typografie](https://www.microsoft.com/typography/default.mspx)
 </dt> </dl>
 
- 
+ 
 
- 
+ 

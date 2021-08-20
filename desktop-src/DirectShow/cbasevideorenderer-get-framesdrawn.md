@@ -1,7 +1,7 @@
 ---
-description: Die get \_ FramesDrawn-Methode ruft die m \_ cFramesDrawn-Membervariable ab und gibt die Anzahl der Frames an, die seit dem Streaming gezeichnet wurden.
+description: Die get \_ FramesDrawn-Methode ruft die Membervariable m cFramesDrawn ab und gibt die Anzahl der Frames an, die seit dem Streaming \_ gezeichnet wurden.
 ms.assetid: 486b5541-2952-47ce-944e-4efb8e5af9dd
-title: CBaseVideoRenderer.get_FramesDrawn-Methode (Renbase.h)
+title: CBaseVideoRenderer.get_FramesDrawn -Methode (Renbase.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -25,7 +25,7 @@ ms.locfileid: "117822583"
 ---
 # <a name="cbasevideorendererget_framesdrawn-method"></a>CBaseVideoRenderer.get \_ FramesDrawn-Methode
 
-Die `get_FramesDrawn` -Methode ruft die **m \_ cFramesDrawn-Membervariable ab** und gibt die Anzahl der Frames an, die seit dem Streaming gezeichnet wurden.
+Die `get_FramesDrawn` -Methode ruft die **m \_ cFramesDrawn-Membervariable** ab und gibt die Anzahl der Frames an, die seit dem Streaming gezeichnet wurden.
 
 ## <a name="syntax"></a>Syntax
 
@@ -64,11 +64,11 @@ Diese Memberfunktion implementiert die [**IQualProp::get \_ FramesDrawn-Methode.
 | Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Header<br/>  | <dl> <dt>Renbase.h (include Streams.h)</dt> </dl>                                                                                   |
-| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Verkaufsbuilds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Einzelhandels-Builds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 

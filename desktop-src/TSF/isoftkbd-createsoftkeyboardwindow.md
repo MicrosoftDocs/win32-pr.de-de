@@ -1,11 +1,11 @@
 ---
-title: ISOFT kbd-Methode von "samatesoftkeyboardwindow" ("Soft-BDC. h")
-description: Mit der isoftkbd-Methode "kreatesoftkeyboardwindow" wird ein vorläufiges Tastatur Fenster erstellt.
+title: ISoftKbd CreateSoftKeyboardWindow-Methode (Softkbdc.h)
+description: Die ISoftKbd CreateSoftKeyboardWindow-Methode erstellt ein softes Tastaturfenster.
 ms.assetid: e9aa9d88-d0bb-407f-9b53-98c8747be5d3
 keywords:
-- "\"Kreatesoftkeyboardwindow\"-Methode, Text Dienste-Framework"
-- Kreatesoftkeyboardwindow-Methode Text Dienste-Framework, iSOFT kbd-Schnittstelle
-- ISOFT kbd Interface Text Services-Framework, Methode "kreatesoftkeyboardwindow"
+- CreateSoftKeyboardWindow-Methode Textdienstframework
+- CreateSoftKeyboardWindow-Methode Textdienstframework , ISoftKbd-Schnittstelle
+- ISoftKbd-Schnittstelle Textdienstframework , CreateSoftKeyboardWindow-Methode
 topic_type:
 - apiref
 api_name:
@@ -16,16 +16,16 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 8e0ed6f9f91f335945d40dd0b995226a400965ab
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 7953ce70385585349ee905f83e999fb2fc4d71402d2baada413452c729032cc1
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104518407"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117952729"
 ---
-# <a name="isoftkbdcreatesoftkeyboardwindow-method"></a>ISOFT kbd:: kreatesoftkeyboardwindow-Methode
+# <a name="isoftkbdcreatesoftkeyboardwindow-method"></a>ISoftKbd::CreateSoftKeyboardWindow-Methode
 
-Die **isoftkbd:: kreatesoftkeyboardwindow** -Methode erstellt ein weiches Tastatur Fenster.
+Die **ISoftKbd::CreateSoftKeyboardWindow-Methode** erstellt ein softes Tastaturfenster.
 
 ## <a name="syntax"></a>Syntax
 
@@ -47,45 +47,45 @@ HRESULT CreateSoftKeyboardWindow(
 
 <dl> <dt>
 
-*howner* \[ in\]
+*hOwner* \[ In\]
 </dt> <dd>
 
-Handle des Fensters, das die weiche Tastatur enthalten soll.
+Handle des Fensters, das die Softtastatur enthalten soll.
 
 </dd> <dt>
 
-*TitleBar- \_ Typ* \[ in\]
+Geben Sie in *die Titelleiste \_ ein.* \[\]
 </dt> <dd>
 
-Der Typ der Titelleiste für das weiche Tastatur Fenster. Mögliche Typen werden durch die [**TitleBar- \_ Typenumeration**](titlebar-type.md) definiert.
+Typ der Titelleiste für das Softtastaturfenster. Mögliche Typen werden durch die [**TITLEBAR \_ TYPE-Enumeration**](titlebar-type.md) definiert.
 
 </dd> <dt>
 
-*xPos* \[ in\]
+*xPos* \[ In\]
 </dt> <dd>
 
-Die x-Position der oberen linken Ecke des Soft Tastatur Fensters.
+Die x-Position der oberen linken Ecke des soft-Tastaturfensters.
 
 </dd> <dt>
 
-*yPos* \[ in\]
+*yPos* \[ In\]
 </dt> <dd>
 
-Die y-Position der oberen linken Ecke des Soft Tastatur Fensters.
+Die y-Position der oberen linken Ecke des soft-Tastaturfensters.
 
 </dd> <dt>
 
-*Breite* \[ in\]
+*Breite* \[ In\]
 </dt> <dd>
 
-Die Breite des Soft Tastatur Fensters.
+Die Breite des soften Tastaturfensters.
 
 </dd> <dt>
 
-*Höhe* \[ in\]
+*Höhe* \[ In\]
 </dt> <dd>
 
-Die Höhe des Soft Tastatur Fensters.
+Die Höhe des soft-Tastaturfensters.
 
 </dd> </dl>
 
@@ -95,10 +95,10 @@ Diese Methode kann einen dieser Werte zurückgeben.
 
 
 
-| Wert                                                                                        | BESCHREIBUNG                                    |
+| Wert                                                                                        | Beschreibung                                    |
 |----------------------------------------------------------------------------------------------|------------------------------------------------|
 | <dl> <dt>**S \_ OK**</dt> </dl>         | Die Methode war erfolgreich.<br/>          |
-| <dl> <dt>**E \_ invalidArg**</dt> </dl> | Mindestens ein Parameter ist ungültig.<br/> |
+| <dl> <dt>**E \_ INVALIDARG**</dt> </dl> | Mindestens ein Parameter ist ungültig.<br/> |
 
 
 
@@ -112,9 +112,9 @@ Diese Methode kann einen dieser Werte zurückgeben.
 |-------------------------------------|----------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[nur Desktop-Apps\]<br/>                             |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                                   |
-| Verteilbare Komponente<br/>          | TSF 1,0 unter Windows 2000 Professional<br/>                                        |
-| Header<br/>                   | <dl> <dt>Software-Domänen Controller. h</dt> </dl>  |
-| IDL<br/>                      | <dl> <dt>Software. idl</dt> </dl> |
+| Verteilbare Komponente<br/>          | TSF 1.0 on Windows 2000 Professional<br/>                                        |
+| Header<br/>                   | <dl> <dt>Softkbdc.h</dt> </dl>  |
+| Idl<br/>                      | <dl> <dt>Softkbd.idl</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Softkbd.dll</dt> </dl> |
 
 
@@ -123,19 +123,19 @@ Diese Methode kann einen dieser Werte zurückgeben.
 
 <dl> <dt>
 
-[**Iweichkbd**](isoftkbd.md)
+[**ISoftKbd**](isoftkbd.md)
 </dt> <dt>
 
-[**ISOFT kbd:: kreatesoftkeyboardlayoutfromresource**](isoftkbd-createsoftkeyboardlayoutfromresource.md)
+[**ISoftKbd::CreateSoftKeyboardLayoutFromResource**](isoftkbd-createsoftkeyboardlayoutfromresource.md)
 </dt> <dt>
 
-[**ISOFT kbd::D estroysoft keyboardwindow**](isoftkbd-destroysoftkeyboardwindow.md)
+[**ISoftKbd::D estsoftKeyboardWindow**](isoftkbd-destroysoftkeyboardwindow.md)
 </dt> <dt>
 
-[**Iweichkbd:: ShowSoft Keyboard**](isoftkbd-showsoftkeyboard.md)
+[**ISoftKbd::ShowSoftKeyboard**](isoftkbd-showsoftkeyboard.md)
 </dt> <dt>
 
-[**TitleBar- \_ Typ**](titlebar-type.md)
+[**\_TITLEBAR-TYP**](titlebar-type.md)
 </dt> </dl>
 
  

@@ -1,29 +1,29 @@
 ---
-description: Gibt den Status eines Versuchs zum Auflösen einer Topologie an.
+description: Gibt den Status eines Versuchten an, eine Topologie aufzulösen.
 ms.assetid: 7c2410ce-e70b-4303-9dbc-caff4a355d6b
-title: MF_TOPOLOGY_RESOLUTION_STATUS-Attribut (mfapi. h)
+title: MF_TOPOLOGY_RESOLUTION_STATUS -Attribut (Mfapi.h)
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: ddb98db0de67e228606d9f37216d1ea13cbc2f87
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: a62645b17efadb8216ba078b966bc2f7f47debae60103fa6665daaeaebc13306
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "103863579"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117691232"
 ---
-# <a name="mf_topology_resolution_status-attribute"></a>Status Attribut der MF- \_ topologieauflösung \_ \_
+# <a name="mf_topology_resolution_status-attribute"></a>STATUS-Attribut \_ der MF-TOPOLOGIEAUFLÖSUNG \_ \_
 
-Gibt den Status eines Versuchs zum Auflösen einer Topologie an.
+Gibt den Status eines Versuchten an, eine Topologie aufzulösen.
 
 ## <a name="data-type"></a>Datentyp
 
 **UINT32**
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Das topologielader oder die Medien Sitzung kann dieses Attribut in einer Topologie festlegen. Der Wert dieses Attributs ist ein bitweises **or** von Flags aus der-Enumeration der [**MF- \_ topologiestatusflags \_ \_ \_**](/windows/desktop/api/mfidl/ne-mfidl-mf_topology_resolution_status_flags) -Enumeration.
+Das Topologielader oder die Mediensitzung kann dieses Attribut für eine Topologie festlegen. Der Wert dieses Attributs ist ein bitweises **OR** von Flags aus der [**MF \_ TOPOLOGY \_ RESOLUTION STATUS \_ \_ FLAGS-Enumeration.**](/windows/desktop/api/mfidl/ne-mfidl-mf_topology_resolution_status_flags)
 
-Die GUID-Konstante für dieses Attribut wird aus "mfuuid. lib" exportiert.
+Die GUID-Konstante für dieses Attribut wird aus mfuuid.lib exportiert.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -31,9 +31,9 @@ Die GUID-Konstante für dieses Attribut wird aus "mfuuid. lib" exportiert.
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                     |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/>                               |
-| Header<br/>                   | <dl> <dt>Mfapi. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ Vista-Desktop-Apps\]<br/>                                     |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/>                               |
+| Header<br/>                   | <dl> <dt>Mfapi.h</dt> </dl> |
 
 
 
@@ -41,16 +41,16 @@ Die GUID-Konstante für dieses Attribut wird aus "mfuuid. lib" exportiert.
 
 <dl> <dt>
 
-[Alphabetische Liste der Media Foundation Attribute](alphabetical-list-of-media-foundation-attributes.md)
+[Alphabetische Liste Media Foundation Attribute](alphabetical-list-of-media-foundation-attributes.md)
 </dt> <dt>
 
-[**Imfattributes:: GetUINT32**](/windows/desktop/api/mfobjects/nf-mfobjects-imfattributes-getuint32)
+[**ATTRIBUTEs::GetUINT32**](/windows/desktop/api/mfobjects/nf-mfobjects-imfattributes-getuint32)
 </dt> <dt>
 
-[**Imfattributes:: SetUINT32**](/windows/desktop/api/mfobjects/nf-mfobjects-imfattributes-setuint32)
+[**ATTRIBUTEs::SetUINT32**](/windows/desktop/api/mfobjects/nf-mfobjects-imfattributes-setuint32)
 </dt> <dt>
 
-[**Imftopology**](/windows/desktop/api/mfidl/nn-mfidl-imftopology)
+[**TOPOLOGYTopology**](/windows/desktop/api/mfidl/nn-mfidl-imftopology)
 </dt> <dt>
 
 [Topologieattribute](topology-attributes.md)

@@ -4,12 +4,12 @@ ms.assetid: c799a962-da79-46df-a37f-4016c8c1701e
 title: MFT_MESSAGE_COMMAND_FLUSH (Mftransform.h)
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: f34959303a2835e67202256341b0f5998b63d16b
-ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
+ms.openlocfilehash: 35363e376c9c6bd5de6ee9dcef9eac86901232f964eb11773fcd76bbf6280282
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2021
-ms.locfileid: "108092738"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117689038"
 ---
 # <a name="mft_message_command_flush"></a>MFT \_ MESSAGE \_ COMMAND \_ FLUSH
 
@@ -19,7 +19,7 @@ Fordert eine Media Foundation-Transformation (MFT) an, um alle gespeicherten Dat
 
 Keine.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
 Um diese Nachricht zu senden, rufen Sie [**ÜBERTRANSFORM::P rocessMessage auf.**](/windows/desktop/api/mftransform/nf-mftransform-imftransform-processmessage)
 
@@ -27,7 +27,7 @@ Nachdem diese Nachricht gesendet wurde, kann der MFT neue Eingabebeispiele akzep
 
 ### <a name="implementation"></a>Implementierung
 
-Alle MFTs müssen diese Nachricht implementieren. Wenn diese Nachricht empfangen wird, sollte der MFT alle Medienbeispiele verwerfen, die er enthält.
+Alle MFTs müssen diese Meldung implementieren. Wenn diese Meldung empfangen wird, sollte der MFT alle Medienbeispiele verwerfen, die er enthält.
 
 [Asynchrone MFTs:](asynchronous-mfts.md)Der MFT sendet kein weiteres [METransformNeedInput-Ereignis,](metransformneedinput.md) bis er eine [**MFT \_ MESSAGE NOTIFY START OF \_ \_ \_ \_ STREAM-Nachricht**](mft-message-notify-start-of-stream.md) vom Client empfängt.
 
@@ -35,15 +35,15 @@ Alle MFTs müssen diese Nachricht implementieren. Wenn diese Nachricht empfangen
 
 
 
-| Anforderungen | Wert |
+| Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows \[ Vista-Desktop-Apps\]<br/>                                           |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server \[ 2008-Desktop-Apps\]<br/>                                     |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur Vista-Desktop-Apps\]<br/>                                           |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/>                                     |
 | Header<br/>                   | <dl> <dt>Mftransform.h</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 

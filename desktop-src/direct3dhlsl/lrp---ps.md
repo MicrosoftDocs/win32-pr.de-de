@@ -1,6 +1,6 @@
 ---
-title: LRP-PS
-description: Interpoliert linear zwischen dem zweiten und dritten Quell Register durch einen im ersten Quell Register angegebenen Anteil. | LRP-PS
+title: lrp – ps
+description: Interpoliert linear zwischen dem zweiten und dritten Quellregister um einen Im ersten Quellregister angegebenen Anteil. | lrp – ps
 ms.assetid: b360f28e-cb2a-4403-a020-180524df6549
 ms.topic: reference
 ms.date: 05/31/2018
@@ -9,22 +9,22 @@ topic_type:
 api_name: ''
 api_type: ''
 api_location: ''
-ms.openlocfilehash: aec1ac23cc6c86f768d435e4c8169117c1bbe899
-ms.sourcegitcommit: 92e74c99f8f4d097676959d0c317f533c2400a80
+ms.openlocfilehash: 716cbdd5492f768885b8dd91dca5a17f72c4ba50897274c2d6e11f340f563394
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/09/2021
-ms.locfileid: "104050816"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117906870"
 ---
-# <a name="lrp---ps"></a>LRP-PS
+# <a name="lrp---ps"></a>lrp – ps
 
-Interpoliert linear zwischen dem zweiten und dritten Quell Register durch einen im ersten Quell Register angegebenen Anteil.
+Interpoliert linear zwischen dem zweiten und dritten Quellregister um einen Im ersten Quellregister angegebenen Anteil.
 
 ## <a name="syntax"></a>Syntax
 
 
 
-| LRP DST, src0, Quelle1, Quelle2 |
+| lrp dst, src0, src1, src2 |
 |---------------------------|
 
 
@@ -33,24 +33,24 @@ Interpoliert linear zwischen dem zweiten und dritten Quell Register durch einen 
 
 where
 
--   DST ist das Ziel Register.
--   src0 ist ein Quell Register.
--   Quelle1 ist ein Quell Register.
--   Quelle2 ist ein Quell Register.
+-   dst ist das Zielregister.
+-   src0 ist ein Quellregister.
+-   src1 ist ein Quellregister.
+-   src2 ist ein Quellregister.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
 
 
-| Pixel-Shader-Versionen | 1\_1 | 1\_2 | 1 \_ 3 | 1\_4 | 2 \_ 0 | 2 \_ x | 2 \_ SW | 3 \_ 0 | 3 \_ SW |
+| Pixel-Shaderversionen | 1\_1 | 1\_2 | 1 \_ 3 | 1\_4 | 2 \_ 0 | 2 \_ x | 2 \_ sw | 3 \_ 0 | 3 \_ sw |
 |-----------------------|------|------|------|------|------|------|-------|------|-------|
-| startet                   | x    | x    | x    | x    | x    | x    | x     | x    | x     |
+| Lrp                   | x    | x    | x    | x    | x    | x    | x     | x    | x     |
 
 
 
  
 
-Diese Anweisung führt die lineare interpolung basierend auf der folgenden Formel aus.
+Diese Anweisung führt die lineare Interpolation basierend auf der folgenden Formel aus.
 
 
 ```
@@ -66,7 +66,7 @@ dest = src2 + src0 * (src1 - src2)
 
 <dl> <dt>
 
-[Pixelshaderanweisungen](dx9-graphics-reference-asm-ps-instructions.md)
+[Anweisungen für Pixel-Shader](dx9-graphics-reference-asm-ps-instructions.md)
 </dt> </dl>
 
  

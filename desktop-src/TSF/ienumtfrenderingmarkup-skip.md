@@ -1,11 +1,11 @@
 ---
-title: Ienumtfrenderingmarkup Skip-Methode
-description: Die ienumtfrenderingmarkup Skip-Methode ruft die angegebene Anzahl von Elementen in der Enumerationsfolge von der aktuellen Position ab.
+title: IEnumTfRenderingMarkup-Skip-Methode
+description: Die Methode IEnumTfRenderingMarkup Skip ruft von der aktuellen Position die angegebene Anzahl von Elementen in der Enumerationssequenz ab.
 ms.assetid: d328dfe3-36ab-4daf-8809-ad6686ca5dae
 keywords:
-- Skip-Methode, Text Dienste-Framework
-- Skip-Methode (Text Dienste-Framework), ienumtfrenderingmarkup-Schnittstelle
-- Ienumtfrenderingmarkup Interface Text Services-Framework, Skip-Methode
+- Skip-Methode Textdienstframework
+- Überspringen der Methode Textdienstframework , IEnumTfRenderingMarkup-Schnittstelle
+- IEnumTfRenderingMarkup-Schnittstelle Textdienstframework , Skip-Methode
 topic_type:
 - apiref
 api_name:
@@ -15,16 +15,16 @@ api_type:
 ms.topic: reference
 ms.date: 05/31/2018
 api_location: ''
-ms.openlocfilehash: 3542893c739e6cfa2933d95bfed31f16957a0841
-ms.sourcegitcommit: 57758ecb246c84d65e6e0e4bd5570d9176fa39cd
+ms.openlocfilehash: 5e0dddd637abdfd193586277d088a2ee3d03f883eb1f949d9f9d16c4cbc60ac3
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "103718173"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117953201"
 ---
-# <a name="ienumtfrenderingmarkupskip-method"></a>Ienumtfrenderingmarkup:: Skip-Methode
+# <a name="ienumtfrenderingmarkupskip-method"></a>IEnumTfRenderingMarkup::Skip-Methode
 
-Die **ienumtfrenderingmarkup:: Skip** -Methode ruft die angegebene Anzahl von Elementen in der Enumerationsfolge von der aktuellen Position ab.
+Die **IEnumTfRenderingMarkup::Skip-Methode** ruft von der aktuellen Position die angegebene Anzahl von Elementen in der Enumerationssequenz ab.
 
 ## <a name="syntax"></a>Syntax
 
@@ -41,10 +41,10 @@ HRESULT Skip(
 
 <dl> <dt>
 
-*ulcount* \[ in\]
+*ulCount* \[ In\]
 </dt> <dd>
 
-\[in \] gibt die Anzahl der zu über springenden Elemente an.
+\[in \] Gibt die Anzahl der zu überspringenden Elemente an.
 
 </dd> </dl>
 
@@ -54,19 +54,19 @@ Diese Methode kann einen dieser Werte zurückgeben.
 
 
 
-| Wert                                                                                   | BESCHREIBUNG                                                                                                        |
+| Wert                                                                                   | Beschreibung                                                                                                        |
 |-----------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------|
 | <dl> <dt>**S \_ OK**</dt> </dl>    | Die Methode war erfolgreich.<br/>                                                                              |
-| <dl> <dt>**S \_ false**</dt> </dl> | Die Methode hat das Ende der Enumeration erreicht, bevor die angegebene Anzahl von Elementen übersprungen werden konnte.<br/> |
+| <dl> <dt>**S \_ FALSE**</dt> </dl> | Die -Methode hat das Ende der -Enumeration erreicht, bevor die angegebene Anzahl von Elementen übersprungen werden konnte.<br/> |
 
 
 
  
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
 > [!Note]  
-> Diese Methode befindet sich derzeit nicht in den öffentlichen Header Dateien. Um diese API verwenden zu können, müssen Sie den [Prototyp](prototypes.md)als Mittelpunkt kompilieren.
+> Diese Methode befindet sich derzeit nicht in den öffentlichen Headerdateien. Um diese API verwenden zu können, müssen Sie midl-kompilieren, um den [Prototyp](prototypes.md)zu kompilieren.
 
  
 

@@ -1,11 +1,11 @@
 ---
-title: Inapsystemhealthvalidationrequest getsohresponse-Methode (napsystemhealthvalidator. h)
-description: Ruft die sohresponse ab.
+title: INapSystemHealthValidationRequest GetSoHResponse-Methode (NapSystemHealthValidator.h)
+description: Ruft die SoHResponse ab.
 ms.assetid: 7db9d134-5cd4-4a6c-8576-843b9a920864
 keywords:
-- Getsohresponse-Methode NAP
-- Getsohresponse-Methode NAP, inapsystemhealthvalidationrequest-Schnittstelle
-- Inapsystemhealthvalidationrequest-Schnittstelle NAP, getsohresponse-Methode
+- GetSoHResponse-Methode NAP
+- GetSoHResponse-Methode NAP, INapSystemHealthValidationRequest-Schnittstelle
+- INapSystemHealthValidationRequest-Schnittstelle NAP , GetSoHResponse-Methode
 topic_type:
 - apiref
 api_name:
@@ -16,21 +16,21 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: cc10174edc2bcb9df8e61c98305e42633d2b984b
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 7da93f53f3dcc9f4e566703d4d2f63415bb7feb9b0c00d5086fe598ab442e1d4
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "106344714"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117799057"
 ---
-# <a name="inapsystemhealthvalidationrequestgetsohresponse-method"></a>Inapsystemhealthvalidationrequest:: getsohresponse-Methode
+# <a name="inapsystemhealthvalidationrequestgetsohresponse-method"></a>INapSystemHealthValidationRequest::GetSoHResponse-Methode
 
 > [!Note]  
-> Die Netzwerk Zugriffsschutz-Plattform ist ab Windows 10 nicht verfügbar.
+> Die Netzwerkzugriffsschutz-Plattform ist ab Windows 10 nicht verfügbar.
 
  
 
-Die **inapsystemhealthvalidationrequest:: getsohresponse** -Methode ruft die [**sohresponse**](/windows/win32/api/naptypes/ns-naptypes-soh)ab.
+Die **INapSystemHealthValidationRequest::GetSoHResponse-Methode** ruft die [**SoHResponse**](/windows/win32/api/naptypes/ns-naptypes-soh)ab.
 
 ## <a name="syntax"></a>Syntax
 
@@ -47,24 +47,24 @@ HRESULT GetSoHResponse(
 
 <dl> <dt>
 
-*sohresponse* \[ vorgenommen\]
+*sohResponse* \[ out\]
 </dt> <dd>
 
-Ein Zeiger auf einen Zeiger auf die empfangene [**sohresponse**](/windows/win32/api/naptypes/ns-naptypes-soh).
+Ein Zeiger auf einen Zeiger auf den empfangenen [**SoHResponse**](/windows/win32/api/naptypes/ns-naptypes-soh).
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Es können auch andere com-spezifische Fehlercodes zurückgegeben werden.
+Andere COM-spezifische Fehlercodes können ebenfalls zurückgegeben werden.
 
 
 
 | Rückgabecode                                                                                     | Beschreibung                                                        |
 |-------------------------------------------------------------------------------------------------|--------------------------------------------------------------------|
 | <dl> <dt>**S \_ OK**</dt> </dl>           | Vorgang erfolgreich.<br/>                                    |
-| <dl> <dt>**E \_ Access verweigert**</dt> </dl> | Berechtigungs Fehler, Zugriff verweigert.<br/>                       |
-| <dl> <dt>**E \_ Outo-Memory**</dt> </dl>  | System Ressourcen Limit, der Vorgang konnte nicht durchgeführt werden.<br/> |
+| <dl> <dt>**E \_ ACCESSDENIED**</dt> </dl> | Berechtigungsfehler, Zugriff verweigert.<br/>                       |
+| <dl> <dt>**E \_ OUTOFMEMORY**</dt> </dl>  | Systemressourcenlimit, konnte den Vorgang nicht ausführen.<br/> |
 
 
 
@@ -77,9 +77,9 @@ Es können auch andere com-spezifische Fehlercodes zurückgegeben werden.
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Nicht unterstützt<br/>                                                                               |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/>                                                    |
-| Header<br/>                   | <dl> <dt>Napsystemhealthvalidator. h</dt> </dl>   |
-| IDL<br/>                      | <dl> <dt>Napsystemhealthvalidator. idl</dt> </dl> |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/>                                                    |
+| Header<br/>                   | <dl> <dt>NapSystemHealthValidator.h</dt> </dl>   |
+| Idl<br/>                      | <dl> <dt>NapSystemHealthValidator.idl</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Qshvhost.dll</dt> </dl>                 |
 
 
@@ -88,7 +88,7 @@ Es können auch andere com-spezifische Fehlercodes zurückgegeben werden.
 
 <dl> <dt>
 
-[**Inapsystemhealthvalidationrequest**](inapsystemhealthvalidationrequest.md)
+[**INapSystemHealthValidationRequest**](inapsystemhealthvalidationrequest.md)
 </dt> </dl>
 
  

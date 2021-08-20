@@ -4,12 +4,12 @@ description: Ressourcenreferenz (Menüs und andere Ressourcen)
 ms.assetid: 977021bf-fd1a-44d9-bfa1-6a727661fde7
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 8fbfa4640c18df1a07a4618753911b1dad668855
-ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
+ms.openlocfilehash: 0a4ab0bf8c4733a63b52ab5a66bd5a65ddf26ae9cde12d915dcbec8b7bbc8f7c
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2021
-ms.locfileid: "108117468"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117869737"
 ---
 # <a name="resource-reference-menus-and-other-resources"></a>Ressourcenreferenz (Menüs und andere Ressourcen)
 

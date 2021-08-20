@@ -1,9 +1,9 @@
 ---
-title: Setdefaultlayoutortip-Funktion
-description: Legt das angegebene Tastaturlayout oder einen Text Dienst als Standardeingabe Element des aktuellen Benutzers fest.
+title: SetDefaultLayoutOrTip-Funktion
+description: Legt das angegebene Tastaturlayout oder einen Textdienst als Standardeingabeelement des aktuellen Benutzers fest.
 ms.assetid: e602065c-776b-47ba-b050-4325197e03de
 keywords:
-- Setdefaultlayoutortip-Funktion Text Dienst-Framework
+- SetDefaultLayoutOrTip-Funktion Textdienstframework
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - DllExport
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: fbdb2f2174c4a6d5ec37d5880d4a8b6feef236be
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: e965d3194c0bb1327cec640ef9000ad8db8761968a040935afcb4e8d4f050398
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104103194"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117951433"
 ---
-# <a name="setdefaultlayoutortip-function"></a>Setdefaultlayoutortip-Funktion
+# <a name="setdefaultlayoutortip-function"></a>SetDefaultLayoutOrTip-Funktion
 
-Legt das angegebene Tastaturlayout oder einen Text Dienst als Standardeingabe Element des aktuellen Benutzers fest.
+Legt das angegebene Tastaturlayout oder einen Textdienst als Standardeingabeelement des aktuellen Benutzers fest.
 
 ## <a name="syntax"></a>Syntax
 
@@ -41,20 +41,20 @@ BOOL CALLBACK SetDefaultLayoutOrTip(
 
 <dl> <dt>
 
-*PSZ* \[ in\]
+*psz* \[ In\]
 </dt> <dd>
 
-Eine Zeichenfolge, die eine Liste von Tastaturlayouts oder Text Dienst Profilen darstellt.
+Eine Zeichenfolge, die eine Tastaturlayoutliste oder eine Textdienstprofilliste darstellt.
 
 </dd> <dt>
 
-*dwFlags* \[ in\]
+*dwFlags* \[ In\]
 </dt> <dd>
 
 Ein Bitfeld, das die folgenden Flags angibt.
 
 > [!Note]  
-> Die folgenden Bezeichner sind nicht in einer öffentlichen Header Datei definiert. Sie müssen entweder den Hexadezimalwert verwenden oder die Bezeichner \# definieren. Wenn Sie z. b. "sdlot \_ noapplydecurrentsession" verwenden möchten, müssen Sie " \# sdlot \_ noapplydecurrentsession 0x00000001" in Ihren Code einschließen.
+> Die folgenden Bezeichner sind in einer öffentlichen Headerdatei nicht definiert. Sie müssen entweder den Hexadezimalwert verwenden oder \# die Bezeichner definieren. Um z. B. SDLOT \_ NOAPPLYTOCURRENTSESSION zu verwenden, müssen Sie \# SDLOT \_ NOAPPLYTOCURRENTSESSION 0x00000001 in Ihren Code einschließen.
 
  
 
@@ -62,8 +62,8 @@ Ein Bitfeld, das die folgenden Flags angibt.
 
 | Wert                                                                                                                                                                                                                                                                         | Bedeutung                                                                                                                                                                                                                                                          |
 |-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| <span id="SDLOT_NOAPPLYTOCURRENTSESSION"></span><span id="sdlot_noapplytocurrentsession"></span><dl> <dt>**Sdlot \_ Noapplydecurrentsession**</dt> <dt>0x00000001</dt> </dl> | Speichert die Einstellung in der Registrierung, aber die Lauf Zeit Tastatur Einstellung der aktuellen Sitzung wird nicht aktualisiert. Wenn der Alternative Registrierungs Pfad in [**setdefaultlayoutor tipuserreg**](/windows/desktop/TSF/setdefaultlayoutortipuserreg)festgelegt wird, sollte dieses Flag festgelegt werden.<br/> |
-| <span id="SDLOT_APPLYTOCURRENTTHREAD"></span><span id="sdlot_applytocurrentthread"></span><dl> <dt>**Sdlot \_ Applyycurrentthread**</dt> <dt>0x00000002</dt> </dl>          | Wendet die Einstellung direkt auf den aktuellen Thread an.<br/>                                                                                                                                                                                                |
+| <span id="SDLOT_NOAPPLYTOCURRENTSESSION"></span><span id="sdlot_noapplytocurrentsession"></span><dl> <dt>**SDLOT \_ NOAPPLYTOCURRENTSESSION-0x00000001**</dt> <dt></dt> </dl> | Speichert die Einstellung in der Registrierung, aktualisiert jedoch nicht die Laufzeittastatureinstellung der aktuellen Sitzung. Wenn der alternative Registrierungspfad in [**SetDefaultLayoutOrTipUserReg**](/windows/desktop/TSF/setdefaultlayoutortipuserreg)festgelegt ist, sollte dieses Flag festgelegt werden.<br/> |
+| <span id="SDLOT_APPLYTOCURRENTTHREAD"></span><span id="sdlot_applytocurrentthread"></span><dl> <dt>**SDLOT \_ APPLYTOCURRENTTHREAD-0x00000002**</dt> <dt></dt> </dl>          | Wendet die Einstellung sofort auf den aktuellen Thread an.<br/>                                                                                                                                                                                                |
 
 
 
@@ -77,24 +77,24 @@ Ein Bitfeld, das die folgenden Flags angibt.
 
 | Rückgabecode                                                                          | Beschreibung                               |
 |--------------------------------------------------------------------------------------|-------------------------------------------|
-| <dl> <dt>**Fall**</dt> </dl>  | Die Funktion war erfolgreich.<br/>   |
-| <dl> <dt>**Alarm**</dt> </dl> | Es ist ein unbekannter Fehler aufgetreten.<br/> |
+| <dl> <dt>**STIMMT**</dt> </dl>  | Die Funktion war erfolgreich.<br/>   |
+| <dl> <dt>**FALSE**</dt> </dl> | Es ist ein unbekannter Fehler aufgetreten.<br/> |
 
 
 
  
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Das Zeichen folgen Format der Layoutliste lautet:
+Das Zeichenfolgenformat der Layoutliste lautet:
 
-<langid 1>: <KLID 1>; \[ ...<LangID N>:<KLID N>
+<LangID 1>:<SOLLD 1>; \[ ...<LangID N>:<KLID N>
 
-Das Zeichen folgen Format der Text Dienst Profil Liste lautet:
+Das Zeichenfolgenformat der Textdienstprofilliste lautet:
 
-<langid 1>: {xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx} {xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx};
+<LangID 1>:{xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxxxx}{xxxxxxxx-xxxx-xxxx-xxxxxxxxxxxx};
 
-Im folgenden finden Sie ein Beispiel für einen Wert für den *PSZ* -Parameter:
+Im Folgenden wird ein Beispiel für einen Wert für den *psz-Parameter* angezeigt:
 
 
 ```C++
@@ -107,10 +107,10 @@ Im folgenden finden Sie ein Beispiel für einen Wert für den *PSZ* -Parameter:
 
 ## <a name="examples"></a>Beispiele
 
-Es ist keine Import Bibliothek verfügbar, die diese Funktion definiert. Daher ist es erforderlich, mithilfe von [**LoadLibrary**](/windows/desktop/api/libloaderapi/nf-libloaderapi-loadlibrarya) und [**GetProcAddress**](/windows/desktop/api/libloaderapi/nf-libloaderapi-getprocaddress)einen Zeiger auf diese Funktion zu erhalten. Im folgenden Beispiel wird veranschaulicht, wie ein Zeiger auf diese Funktion abgerufen wird.
+Es ist keine Importbibliothek verfügbar, die diese Funktion definiert. Daher ist es erforderlich, mit [**LoadLibrary**](/windows/desktop/api/libloaderapi/nf-libloaderapi-loadlibrarya) und [**GetProcAddress**](/windows/desktop/api/libloaderapi/nf-libloaderapi-getprocaddress)einen Zeiger auf diese Funktion abzurufen. Im folgenden Beispiel wird veranschaulicht, wie sie einen Zeiger auf diese Funktion abrufen.
 
 > [!Note]  
-> Die falsche Verwendung von [**LoadLibrary**](/windows/desktop/api/libloaderapi/nf-libloaderapi-loadlibrarya) kann die Sicherheit Ihrer Anwendung beeinträchtigen, indem die falsche DLL geladen wird. Informationen zum ordnungsgemäßen Laden von DLLs mit verschiedenen Versionen von Microsoft Windows finden Sie in der [Such Reihenfolge für die Dynamic Link Library](/windows/desktop/Dlls/dynamic-link-library-search-order) .
+> Die falsche Verwendung von [**LoadLibrary**](/windows/desktop/api/libloaderapi/nf-libloaderapi-loadlibrarya) kann die Sicherheit Ihrer Anwendung beeinträchtigen, indem die falsche DLL geladen wird. Informationen zum ordnungsgemäßen Laden von DLLs mit verschiedenen Versionen von Microsoft Windows finden Sie unter [Suchreihenfolge](/windows/desktop/Dlls/dynamic-link-library-search-order) der Dynamic Link Library.
 
  
 
@@ -148,8 +148,8 @@ else
 
 | Anforderung | Wert |
 |-------------------------------------|--------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                       |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/>                                 |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur Vista-Desktop-Apps\]<br/>                                       |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/>                                 |
 | DLL<br/>                      | <dl> <dt>Input.dll</dt> </dl> |
 
 

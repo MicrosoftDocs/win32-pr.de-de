@@ -1,21 +1,21 @@
 ---
-description: Zum Zeichnen von Linien und Rechtecke benötigen Sie ein Grafik Objekt und ein Pen-Objekt. Das Grafik Objekt stellt die DrawLine-Methode bereit, und das Pen-Objekt speichert Features der Linie, z. b. Farbe und Breite.
+description: Um Linien und Rechtecke zu zeichnen, benötigen Sie ein Graphics-Objekt und ein Pen-Objekt. Das Graphics-Objekt stellt die DrawLine-Methode zur, und das Pen-Objekt speichert Features der Linie, z. B. Farbe und Breite.
 ms.assetid: f2e4144f-f2f1-49db-bfdf-ffce3023b4cb
 title: Verwenden eines Stifts zum Zeichnen von Linien und Rechtecken
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 9b335caf7e2ecbad6bc49965ff757809c3b1179c
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: da700d61a5c8c1ce605678ea09aa540706d569361cebba8f5a93110ccdc304bc
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "103959444"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117884860"
 ---
 # <a name="using-a-pen-to-draw-lines-and-rectangles"></a>Verwenden eines Stifts zum Zeichnen von Linien und Rechtecken
 
-Zum Zeichnen von Linien und Rechtecke benötigen Sie ein [**Grafik**](/windows/win32/api/gdiplusgraphics/nl-gdiplusgraphics-graphics) Objekt und ein [**Pen**](/windows/win32/api/gdipluspen/nl-gdipluspen-pen) -Objekt. Das **Grafik** Objekt stellt die [DrawLine](/windows/win32/api/gdiplusgraphics/nf-gdiplusgraphics-graphics-drawline(inconstpen_inint_inint_inint_inint)) -Methode bereit, und das **Pen** -Objekt speichert Features der Linie, z. b. Farbe und Breite.
+Um Linien und Rechtecke zu zeichnen, benötigen Sie ein [**Graphics-Objekt**](/windows/win32/api/gdiplusgraphics/nl-gdiplusgraphics-graphics) und ein [**Pen-Objekt.**](/windows/win32/api/gdipluspen/nl-gdipluspen-pen) Das **Graphics-Objekt** stellt die [DrawLine-Methode](/windows/win32/api/gdiplusgraphics/nf-gdiplusgraphics-graphics-drawline(inconstpen_inint_inint_inint_inint)) zur, und das **Pen-Objekt** speichert Features der Linie, z. B. Farbe und Breite.
 
-Im folgenden Beispiel wird eine Zeile von (20, 10) nach (300, 100) gezeichnet. Angenommen, **Grafik** ist ein vorhandenes [**Grafik**](/windows/win32/api/gdiplusgraphics/nl-gdiplusgraphics-graphics) Objekt.
+Im folgenden Beispiel wird eine Linie von (20, 10) bis (300, 100) ge zeichnet. Angenommen, **Grafiken** sind ein vorhandenes [**Grafikobjekt.**](/windows/win32/api/gdiplusgraphics/nl-gdiplusgraphics-graphics)
 
 
 ```
@@ -25,9 +25,9 @@ graphics.DrawLine(&pen, 20, 10, 300, 100);
 
 
 
-Die erste Code Anweisung verwendet den [**Stift**](/windows/win32/api/gdipluspen/nl-gdipluspen-pen) -Klassenkonstruktor, um einen schwarzen Stift zu erstellen. Das einzige Argument, das an den **Stift** -Konstruktor übergeben wird, ist ein [**Color**](/windows/win32/api/gdipluscolor/nl-gdipluscolor-color) -Objekt. Die Werte, die verwendet werden, um das **Color** -Objekt – (255, 0, 0, 0) – zu erstellen, entsprechen den Alpha-, rot-, grün-und blauen Komponenten der Farbe. Diese Werte definieren einen nicht transparenten schwarzen Stift.
+Die erste Code-Anweisung verwendet den [**Konstruktor der Pen-Klasse,**](/windows/win32/api/gdipluspen/nl-gdipluspen-pen) um einen schwarzen Stift zu erstellen. Das einzige Argument, das an den **Stiftkonstruktor übergeben** wird, ist ein [**Color-Objekt.**](/windows/win32/api/gdipluscolor/nl-gdipluscolor-color) Die Zum Erstellen des **Color-Objekts** verwendeten Werte (255, 0, 0, 0) entsprechen den Alpha-, Rot-, Grün- und Blaukomponenten der Farbe. Diese Werte definieren einen nicht transparenten schwarzen Stift.
 
-Im folgenden Beispiel wird ein Rechteck mit der linken oberen Ecke bei (10, 10) gezeichnet. Das Rechteck hat eine Breite von 100 und eine Höhe von 50. Das zweite Argument, das an den [**Stift**](/windows/win32/api/gdipluspen/nl-gdipluspen-pen) -Konstruktor übergeben wird, gibt an, dass die Stift Breite 5 Pixel beträgt.
+Im folgenden Beispiel wird ein Rechteck mit seiner oberen linken Ecke bei (10, 10) ge zeichnet. Das Rechteck hat eine Breite von 100 und eine Höhe von 50. Das zweite Argument, das an den [**Stiftkonstruktor übergeben**](/windows/win32/api/gdipluspen/nl-gdipluspen-pen) wird, gibt an, dass die Stiftbreite 5 Pixel beträgt.
 
 
 ```
@@ -37,11 +37,11 @@ stat = graphics.DrawRectangle(&blackPen, 10, 10, 100, 50);
 
 
 
-Wenn das Rechteck gezeichnet wird, wird der Stift auf die Begrenzung des Rechtecks zentriert. Da die Stift Breite 5 beträgt, werden die Seiten des Rechtecks 5 Pixel breit gezeichnet, sodass 1 Pixel an der Grenze selbst gezeichnet wird, 2 Pixel im inneren gezeichnet werden und 2 Pixel auf der Außenseite gezeichnet werden. Weitere Informationen zur Ausrichtung von Pen finden Sie unter [Festlegen der Stift Breite und-Ausrichtung](-gdiplus-setting-pen-width-and-alignment-use.md).
+Wenn das Rechteck gezeichnet wird, wird der Stift auf der Begrenzung des Rechtecks zentriert. Da die Stiftbreite 5 beträgt, werden die Seiten des Rechtecks 5 Pixel breit gezeichnet, damit 1 Pixel an der Grenze selbst, 2 Pixel im Inneren und 2 Pixel außen gezeichnet werden. Weitere Informationen zur Stiftausrichtung finden Sie unter [Festlegen der Stiftbreite und Ausrichtung.](-gdiplus-setting-pen-width-and-alignment-use.md)
 
-Die folgende Abbildung zeigt das resultierende Rechteck. Die gepunkteten Linien zeigen an, wo das Rechteck gezeichnet worden wäre, wenn die Stift Breite ein Pixel gewesen wäre. Die erweiterte Ansicht der oberen linken Ecke des Rechtecks zeigt, dass die dicken schwarzen Linien auf diese gepunkteten Linien zentriert sind.
+Die folgende Abbildung zeigt das resultierende Rechteck. Die gepunkteten Linien zeigen, wo das Rechteck gezeichnet worden wäre, wenn die Stiftbreite ein Pixel gewesen wäre. Die vergrößerte Ansicht der oberen linken Ecke des Rechtecks zeigt, dass die dichten schwarzen Linien auf diesen gepunkteten Linien zentriert sind.
 
-![Abbildung eines Rechtecks, das mit einer dicken schwarzen Linie gezeichnet wird, die eine dünne, graue, gestrichelte Linie umgibt](images/pens1.png)
+![Abbildung eines Rechtecks, das mit einer dichten schwarzen Linie gezeichnet wird, die eine dünne, graue, gestrichelte Linie umgibt](images/pens1.png)
 
  
 

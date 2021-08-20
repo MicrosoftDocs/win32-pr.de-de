@@ -1,64 +1,64 @@
 ---
-title: Domänen Controller-und Replikations Verwaltungsstrukturen
-description: Die Domänen Controller-und Replikations Verwaltungsfunktionen verwenden die folgenden Strukturen.
+title: Domänencontroller- und Replikationsverwaltungsstrukturen
+description: Die Domänencontroller- und Replikationsverwaltungsfunktionen verwenden die folgenden Strukturen.
 ms.assetid: 42b20d3b-1799-4f5f-b74e-fe9284dd8ac3
 ms.tgt_platform: multiple
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 4afe084e4285f4851457f9a519e747952e3bbd67
-ms.sourcegitcommit: 803f3ccd65bdefe36bd851b9c6e7280be9489016
+ms.openlocfilehash: cb4e7ddd37001b3b349159a21137fc1ae7b488c3a4997ac5f406677e3d421969
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "103858152"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118018252"
 ---
-# <a name="domain-controller-and-replication-management-structures"></a>Domänen Controller-und Replikations Verwaltungsstrukturen
+# <a name="domain-controller-and-replication-management-structures"></a>Domänencontroller- und Replikationsverwaltungsstrukturen
 
-Die Domänen Controller-und Replikations Verwaltungsfunktionen verwenden die folgenden Strukturen:
+Die Domänencontroller- und Replikationsverwaltungsfunktionen verwenden die folgenden Strukturen:
 
--   [**DS- \_ Domänen \_ Controller \_ Informationen \_ 1**](/windows/desktop/api/Ntdsapi/ns-ntdsapi-ds_domain_controller_info_1a)
--   [**Informationen zum DS- \_ Domänen \_ Controller \_ \_ 2**](/windows/desktop/api/Ntdsapi/ns-ntdsapi-ds_domain_controller_info_2a)
--   [**Informationen zum DS- \_ Domänen \_ Controller \_ \_ 3**](/windows/desktop/api/Ntdsapi/ns-ntdsapi-ds_domain_controller_info_3a)
--   [**Ergebnis des DS- \_ namens \_**](/windows/desktop/api/Ntdsapi/ns-ntdsapi-ds_name_resulta)
--   [**\_ \_ Ergebnis \_ Element des DS-namens**](/windows/desktop/api/Ntdsapi/ns-ntdsapi-ds_name_result_itema)
--   [**DS \_ repl \_ attr- \_ Metadaten \_**](/windows/desktop/api/Ntdsapi/ns-ntdsapi-ds_repl_attr_meta_data)
--   [**DS \_ repl \_ attr \_ Meta \_ Data \_ 2**](/windows/desktop/api/Ntdsapi/ns-ntdsapi-ds_repl_attr_meta_data_2)
--   [**DS \_ repl \_ attr \_ Meta \_ Data \_ BLOB**](/windows/desktop/api/Ntdsapi/ns-ntdsapi-ds_repl_attr_meta_data_blob)
--   [**DS- \_ repl- \_ Wert- \_ \_ \_ metadatendaten**](/windows/desktop/api/Ntdsapi/ns-ntdsapi-ds_repl_attr_value_meta_data)
--   [**DS \_ repl \_ attr \_ Wert \_ Meta \_ Data \_ 2**](/windows/desktop/api/Ntdsapi/ns-ntdsapi-ds_repl_attr_value_meta_data_2)
--   [**DS \_ repl \_ attr \_ Wert \_ Meta \_ Data \_ ext**](/windows/desktop/api/Ntdsapi/ns-ntdsapi-ds_repl_attr_value_meta_data_ext)
--   [**DS- \_ repl- \_ Cursor**](/windows/desktop/api/Ntdsapi/ns-ntdsapi-ds_repl_cursor)
--   [**DS \_ repl- \_ Cursor \_ 2**](/windows/desktop/api/Ntdsapi/ns-ntdsapi-ds_repl_cursor_2)
--   [**DS \_ repl- \_ Cursor \_ 3**](/windows/desktop/api/Ntdsapi/ns-ntdsapi-ds_repl_cursor_3w)
--   [**DS \_ repl- \_ Cursor- \_ BLOB**](/windows/desktop/api/Ntdsapi/ns-ntdsapi-ds_repl_cursor_blob)
--   [**DS- \_ repl- \_ Cursor**](/windows/desktop/api/Ntdsapi/ns-ntdsapi-ds_repl_cursors)
--   [**DS \_ repl- \_ Cursor \_ 2**](/windows/desktop/api/Ntdsapi/ns-ntdsapi-ds_repl_cursors_2)
--   [**DS \_ repl- \_ Cursor \_ 3**](/windows/desktop/api/Ntdsapi/ns-ntdsapi-ds_repl_cursors_3w)
--   [**DS \_ repl- \_ KCC \_ DSA- \_ Fehler**](/windows/desktop/api/Ntdsapi/ns-ntdsapi-ds_repl_kcc_dsa_failurew)
--   [**DS \_ repl- \_ KCC \_ DSA- \_ Fehler**](/windows/desktop/api/Ntdsapi/ns-ntdsapi-ds_repl_kcc_dsa_failuresw)
--   [**DS \_ repl- \_ KCC \_ DSA \_ failurew \_ BLOB**](/windows/desktop/api/Ntdsapi/ns-ntdsapi-ds_repl_kcc_dsa_failurew_blob)
--   [**DS \_ repl- \_ Nachbar**](/windows/desktop/api/Ntdsapi/ns-ntdsapi-ds_repl_neighborw)
--   [**DS \_ repl- \_ Nachbarn**](/windows/desktop/api/Ntdsapi/ns-ntdsapi-ds_repl_neighborsw)
--   [**DS \_ repl \_ nachbarw- \_ BLOB**](/windows/desktop/api/Ntdsapi/ns-ntdsapi-ds_repl_neighborw_blob)
--   [**DS \_ repl \_ obj- \_ Metadaten \_**](/windows/desktop/api/Ntdsapi/ns-ntdsapi-ds_repl_obj_meta_data)
--   [**DS \_ repl \_ obj \_ Meta \_ Data \_ 2**](/windows/desktop/api/Ntdsapi/ns-ntdsapi-ds_repl_obj_meta_data_2)
--   [**DS- \_ repl- \_ op**](/windows/desktop/api/Ntdsapi/ns-ntdsapi-ds_repl_opw)
--   [**DS \_ repl- \_ OPW- \_ BLOB**](/windows/desktop/api/Ntdsapi/ns-ntdsapi-ds_repl_opw_blob)
--   [**DS \_ repl \_ ausstehende \_ Ops**](/windows/desktop/api/Ntdsapi/ns-ntdsapi-ds_repl_pending_opsw)
--   [**DS \_ repl- \_ Warteschlange \_ statisticsw**](/windows/desktop/api/Ntdsapi/ns-ntdsapi-ds_repl_queue_statisticsw)
--   [**DS \_ repl- \_ Warteschlange \_ statisticsw \_ BLOB**](/previous-versions/windows/desktop/legacy/ms676274(v=vs.85))
--   [**DS- \_ repl- \_ \_ wertmetadatendaten \_**](/windows/desktop/api/Ntdsapi/ns-ntdsapi-ds_repl_value_meta_data)
--   [**DS \_ repl- \_ Wert \_ Meta \_ Data \_ 2**](/windows/desktop/api/Ntdsapi/ns-ntdsapi-ds_repl_value_meta_data_2)
--   [**DS \_ repl- \_ Wert \_ Meta \_ Data \_ ext**](/windows/desktop/api/Ntdsapi/ns-ntdsapi-ds_repl_value_meta_data_ext)
--   [**DS \_ repl- \_ Wert \_ Meta \_ Data \_ BLOB**](/windows/desktop/api/Ntdsapi/ns-ntdsapi-ds_repl_value_meta_data_blob)
--   [**DS \_ repl- \_ Wert \_ Meta \_ Data \_ BLOB \_ ext**](/windows/desktop/api/Ntdsapi/ns-ntdsapi-ds_repl_value_meta_data_blob_ext)
--   [**DS \_ repsyncallcenter \_ errinfo**](/windows/desktop/api/Ntdsapi/ns-ntdsapi-ds_repsyncall_errinfoa)
--   [**DS \_ repsyncallsync \_**](/windows/desktop/api/Ntdsapi/ns-ntdsapi-ds_repsyncall_synca)
--   [**DS \_ repsynupdate- \_ Update**](/windows/desktop/api/Ntdsapi/ns-ntdsapi-ds_repsyncall_updatea)
--   [**Zuordnung der DS- \_ Schema- \_ GUID \_**](/windows/desktop/api/Ntdsapi/ns-ntdsapi-ds_schema_guid_mapa)
--   [**Informationen zu DS- \_ Standort \_ Kosten \_**](/windows/desktop/api/Ntdsapi/ns-ntdsapi-ds_site_cost_info)
--   [**Vereinbaren**](/windows/desktop/api/Schedule/ns-schedule-schedule)
--   [**Schedule- \_ Header**](/windows/desktop/api/Schedule/ns-schedule-schedule_header)
+-   [**\_ \_ DS-DOMÄNENCONTROLLERINFORMATIONEN \_ \_ 1**](/windows/desktop/api/Ntdsapi/ns-ntdsapi-ds_domain_controller_info_1a)
+-   [**\_DS-DOMÄNENCONTROLLERINFORMATIONEN \_ \_ \_ 2**](/windows/desktop/api/Ntdsapi/ns-ntdsapi-ds_domain_controller_info_2a)
+-   [**\_DS-DOMÄNENCONTROLLERINFORMATIONEN \_ \_ \_ 3**](/windows/desktop/api/Ntdsapi/ns-ntdsapi-ds_domain_controller_info_3a)
+-   [**ERGEBNIS DES \_ \_ DS-NAMENS**](/windows/desktop/api/Ntdsapi/ns-ntdsapi-ds_name_resulta)
+-   [**ERGEBNISELEMENT \_ FÜR DS-NAMEN \_ \_**](/windows/desktop/api/Ntdsapi/ns-ntdsapi-ds_name_result_itema)
+-   [**DS \_ REPL \_ \_ ATTR-METADATEN \_**](/windows/desktop/api/Ntdsapi/ns-ntdsapi-ds_repl_attr_meta_data)
+-   [**DS \_ REPL \_ ATTR \_ META DATA \_ \_ 2**](/windows/desktop/api/Ntdsapi/ns-ntdsapi-ds_repl_attr_meta_data_2)
+-   [**DS \_ REPL \_ ATTR \_ META \_ DATA \_ BLOB**](/windows/desktop/api/Ntdsapi/ns-ntdsapi-ds_repl_attr_meta_data_blob)
+-   [**DS \_ REPL \_ \_ ATTR-WERTMETADATEN \_ \_**](/windows/desktop/api/Ntdsapi/ns-ntdsapi-ds_repl_attr_value_meta_data)
+-   [**DS \_ REPL \_ ATTR \_ VALUE META \_ \_ DATA \_ 2**](/windows/desktop/api/Ntdsapi/ns-ntdsapi-ds_repl_attr_value_meta_data_2)
+-   [**DS \_ REPL \_ ATTR \_ VALUE \_ META \_ DATA \_ EXT**](/windows/desktop/api/Ntdsapi/ns-ntdsapi-ds_repl_attr_value_meta_data_ext)
+-   [**\_DS-REPL-CURSOR \_**](/windows/desktop/api/Ntdsapi/ns-ntdsapi-ds_repl_cursor)
+-   [**DS \_ REPL \_ CURSOR \_ 2**](/windows/desktop/api/Ntdsapi/ns-ntdsapi-ds_repl_cursor_2)
+-   [**DS \_ REPL \_ CURSOR \_ 3**](/windows/desktop/api/Ntdsapi/ns-ntdsapi-ds_repl_cursor_3w)
+-   [**\_DS-REPL-CURSORBLOB \_ \_**](/windows/desktop/api/Ntdsapi/ns-ntdsapi-ds_repl_cursor_blob)
+-   [**\_DS-REPL-CURSOR \_**](/windows/desktop/api/Ntdsapi/ns-ntdsapi-ds_repl_cursors)
+-   [**\_DS-REPL-CURSOR \_ \_ 2**](/windows/desktop/api/Ntdsapi/ns-ntdsapi-ds_repl_cursors_2)
+-   [**\_DS-REPL-CURSOR \_ \_ 3**](/windows/desktop/api/Ntdsapi/ns-ntdsapi-ds_repl_cursors_3w)
+-   [**DS \_ REPL \_ KCC \_ DSA \_ FAILURE**](/windows/desktop/api/Ntdsapi/ns-ntdsapi-ds_repl_kcc_dsa_failurew)
+-   [**DS \_ REPL \_ KCC \_ DSA \_ FAILURES**](/windows/desktop/api/Ntdsapi/ns-ntdsapi-ds_repl_kcc_dsa_failuresw)
+-   [**DS \_ REPL \_ KCC \_ DSA \_ FAILUREW \_ BLOB**](/windows/desktop/api/Ntdsapi/ns-ntdsapi-ds_repl_kcc_dsa_failurew_blob)
+-   [**DS \_ REPL \_ NEIGHBOR**](/windows/desktop/api/Ntdsapi/ns-ntdsapi-ds_repl_neighborw)
+-   [**DS \_ REPL \_ NEIGHBORS**](/windows/desktop/api/Ntdsapi/ns-ntdsapi-ds_repl_neighborsw)
+-   [**DS \_ REPL \_ NEIGHBORW \_ BLOB**](/windows/desktop/api/Ntdsapi/ns-ntdsapi-ds_repl_neighborw_blob)
+-   [**DS \_ REPL \_ OBJ \_ META \_ DATA**](/windows/desktop/api/Ntdsapi/ns-ntdsapi-ds_repl_obj_meta_data)
+-   [**DS \_ REPL \_ OBJ \_ META DATA \_ \_ 2**](/windows/desktop/api/Ntdsapi/ns-ntdsapi-ds_repl_obj_meta_data_2)
+-   [**\_DS-REPL-OP \_**](/windows/desktop/api/Ntdsapi/ns-ntdsapi-ds_repl_opw)
+-   [**DS \_ REPL \_ OPW \_ BLOB**](/windows/desktop/api/Ntdsapi/ns-ntdsapi-ds_repl_opw_blob)
+-   [**AUSSTEHENDE \_ \_ DS-REPL-OPS \_**](/windows/desktop/api/Ntdsapi/ns-ntdsapi-ds_repl_pending_opsw)
+-   [**DS \_ \_ REPL-WARTESCHLANGENSTATISTIKW \_**](/windows/desktop/api/Ntdsapi/ns-ntdsapi-ds_repl_queue_statisticsw)
+-   [**DS \_ \_ REPL-WARTESCHLANGENSTATISTIKW \_ \_ BLOB**](/previous-versions/windows/desktop/legacy/ms676274(v=vs.85))
+-   [**\_ \_ DS-REPL-WERTMETADATEN \_ \_**](/windows/desktop/api/Ntdsapi/ns-ntdsapi-ds_repl_value_meta_data)
+-   [**\_ \_ DS-REPL-WERTMETADATEN \_ \_ \_ 2**](/windows/desktop/api/Ntdsapi/ns-ntdsapi-ds_repl_value_meta_data_2)
+-   [**DS \_ REPL \_ VALUE \_ META \_ DATA \_ EXT**](/windows/desktop/api/Ntdsapi/ns-ntdsapi-ds_repl_value_meta_data_ext)
+-   [**DS \_ REPL \_ VALUE \_ META \_ DATA \_ BLOB**](/windows/desktop/api/Ntdsapi/ns-ntdsapi-ds_repl_value_meta_data_blob)
+-   [**DS \_ REPL \_ VALUE \_ META \_ DATA \_ BLOB \_ EXT**](/windows/desktop/api/Ntdsapi/ns-ntdsapi-ds_repl_value_meta_data_blob_ext)
+-   [**DS \_ REPSYNCALL \_ ERRINFO**](/windows/desktop/api/Ntdsapi/ns-ntdsapi-ds_repsyncall_errinfoa)
+-   [**DS \_ REPSYNCALL \_ SYNC**](/windows/desktop/api/Ntdsapi/ns-ntdsapi-ds_repsyncall_synca)
+-   [**DS \_ REPSYNCALL \_ UPDATE**](/windows/desktop/api/Ntdsapi/ns-ntdsapi-ds_repsyncall_updatea)
+-   [**\_ \_ DS-SCHEMA-GUID-ZUORDNUNG \_**](/windows/desktop/api/Ntdsapi/ns-ntdsapi-ds_schema_guid_mapa)
+-   [**\_ \_ DS-STANDORTKOSTENINFORMATIONEN \_**](/windows/desktop/api/Ntdsapi/ns-ntdsapi-ds_site_cost_info)
+-   [**Zeitplan**](/windows/desktop/api/Schedule/ns-schedule-schedule)
+-   [**SCHEDULE \_ HEADER**](/windows/desktop/api/Schedule/ns-schedule-schedule_header)
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
@@ -67,6 +67,6 @@ Die Domänen Controller-und Replikations Verwaltungsfunktionen verwenden die fol
 [Strukturen in Active Directory Domain Services](structures-in-active-directory-domain-services.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 

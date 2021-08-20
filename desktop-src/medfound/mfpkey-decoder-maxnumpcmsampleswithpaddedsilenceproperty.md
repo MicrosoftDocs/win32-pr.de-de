@@ -1,19 +1,19 @@
 ---
-description: Gibt die maximale Anzahl zusätzlicher PCM-Beispiele an, die nach dem Decodieren einer Datei am Ende von zurückgegeben werden können.
+description: Gibt die maximale Anzahl zusätzlicher PCM-Beispiele an, die nach dem Decodieren einer Datei am Ende zurückgegeben werden können.
 ms.assetid: 82b3676c-7653-421c-aac7-7f20a642779f
-title: MFPKEY_Decoder_MaxNumPCMSamplesWithPaddedSilence-Eigenschaft (wmcodecdsp. h)
+title: MFPKEY_Decoder_MaxNumPCMSamplesWithPaddedSilence-Eigenschaft (Wmcodecdsp.h)
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 4b1f97b55c2eedd8cc7d6d524379569073fa35d9
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: e1722c4c8457035f082b069f46f1758d7caf4a4f3b8f500ebd4462e334778e79
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106343834"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117690358"
 ---
-# <a name="mfpkey_decoder_maxnumpcmsampleswithpaddedsilence-property"></a>Mfpkey- \_ Decoder \_ MaxNumPCMSamplesWithPaddedSilence Eigenschaft
+# <a name="mfpkey_decoder_maxnumpcmsampleswithpaddedsilence-property"></a>\_MFPKEY-Decoder: \_ MaxNumPCMSamplesWithPaddedSilence-Eigenschaft
 
-Gibt die maximale Anzahl zusätzlicher PCM-Beispiele an, die nach dem Decodieren einer Datei am Ende von zurückgegeben werden können.
+Gibt die maximale Anzahl zusätzlicher PCM-Beispiele an, die nach dem Decodieren einer Datei am Ende zurückgegeben werden können.
 
 ## <a name="constant-for-ipropertybag"></a>Konstante für IPropertyBag
 
@@ -27,11 +27,11 @@ VT \_ I4
 
 2048
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Diese Eigenschaft kann verwendet werden, um künstliche Stille zu schätzen, die zwischen den Liedern eingefügt wird, wenn Sie dem Decoder nacheinander zugeführt werden.
+Diese Eigenschaft kann verwendet werden, um künstliche Stille zu schätzen, die zwischen Titeln eingefügt wird, während sie nacheinander an den Decoder gespeist werden.
 
-Für die Windows Media Audio 10 Professional-und Windows Media Audio 9-Decoders ohne Verlust ist diese Eigenschaft stets gleich 0 (null).
+Für die Windows Media Audio 10-Professional und Windows Media Audio 9 Lossless-Decoder ist diese Eigenschaft immer gleich 0.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -39,9 +39,9 @@ Für die Windows Media Audio 10 Professional-und Windows Media Audio 9-Decoders 
 
 | Anforderung | Wert |
 |-------------------------------------|-----------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows XP \[ -Desktop-Apps\]<br/>                                             |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/>                                    |
-| Header<br/>                   | <dl> <dt>Wmcodecdsp. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur XP-Desktop-Apps\]<br/>                                             |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                                    |
+| Header<br/>                   | <dl> <dt>Wmcodecdsp.h</dt> </dl> |
 
 
 
@@ -49,7 +49,7 @@ Für die Windows Media Audio 10 Professional-und Windows Media Audio 9-Decoders 
 
 <dl> <dt>
 
-[Eigenschaften von Media Foundation](media-foundation-properties.md)
+[Media Foundation-Eigenschaften](media-foundation-properties.md)
 </dt> </dl>
 
  

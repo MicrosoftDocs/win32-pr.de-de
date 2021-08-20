@@ -1,7 +1,7 @@
 ---
-description: Enthält Eingabedaten für eine D3DAUTHENTICATEDQUERY- \_ verschlüsselungszugangs-accessibleguid-Abfrage.
+description: Enthält Eingabedaten für eine D3DAUTHENTICATEDQUERY \_ ENCRYPTIONWHENACCESSIBLEGUID-Abfrage.
 ms.assetid: 0e24e393-3f63-4c6f-aca1-f73ced3490ba
-title: D3DAUTHENTICATEDCHANNEL_QUERYEVICTIONENCRYPTIONGUID_INPUT-Struktur (D3d9types. h)
+title: D3DAUTHENTICATEDCHANNEL_QUERYEVICTIONENCRYPTIONGUID_INPUT -Struktur (D3d9types.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,18 +13,18 @@ api_type:
 - HeaderDef
 api_location:
 - d3d9types.h
-ms.openlocfilehash: 1c4500d27577883f46d00580dcc7e306b4008cf3
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: d1fed28e4ff36fbd7798870d7fcdfff4d3a90d77d4d43b859ae2f6f754af4e2f
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104393286"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117880149"
 ---
-# <a name="d3dauthenticatedchannel_queryevictionencryptionguid_input-structure"></a>D3DAUTHENTICATEDCHANNEL \_ queryevictionverschlüsseltionguid- \_ Eingabe Struktur
+# <a name="d3dauthenticatedchannel_queryevictionencryptionguid_input-structure"></a>D3DAUTHENTICATEDCHANNEL \_ QUERYEVICTIONENCRYPTIONGUID \_ INPUT-Struktur
 
-Enthält Eingabedaten für eine [**D3DAUTHENTICATEDQUERY- \_ verschlüsselungszugangs-accessibleguid**](d3dauthenticatedquery-encryptionwhenaccessibleguid.md) -Abfrage.
+Enthält Eingabedaten für eine [**D3DAUTHENTICATEDQUERY \_ ENCRYPTIONWHENACCESSIBLEGUID-Abfrage.**](d3dauthenticatedquery-encryptionwhenaccessibleguid.md)
 
-Um diese Abfrage zu senden, nennen Sie [**IDirect3DAuthenticatedChannel9:: Query**](/windows/desktop/api/d3d9/nf-d3d9-idirect3dauthenticatedchannel9-query).
+Rufen Sie zum Senden dieser Abfrage [**IDirect3DAuthenticatedChannel9::Query auf.**](/windows/desktop/api/d3d9/nf-d3d9-idirect3dauthenticatedchannel9-query)
 
 ## <a name="syntax"></a>Syntax
 
@@ -45,11 +45,11 @@ typedef struct _D3DAUTHENTICATEDCHANNEL_QUERYEVICTIONENCRYPTIONGUID_INPUT {
 **Input** (Eingabe)
 </dt> <dd>
 
-Eine [**D3DAUTHENTICATEDCHANNEL- \_ Abfrage \_ Eingabe**](d3dauthenticatedchannel-query-input.md) Struktur, die die GUID für die Abfrage und andere Daten enthält.
+Eine [**D3DAUTHENTICATEDCHANNEL \_ QUERY \_ INPUT-Struktur,**](d3dauthenticatedchannel-query-input.md) die die GUID für die Abfrage und andere Daten enthält.
 
 </dd> <dt>
 
-**Verschlüsselungsguidindex**
+**EncryptionGuidIndex**
 </dt> <dd>
 
 Der Index der Verschlüsselungs-GUID.
@@ -62,9 +62,9 @@ Der Index der Verschlüsselungs-GUID.
 
 | Anforderung | Wert |
 |-------------------------------------|----------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows 7 \[ -Desktop-Apps\]<br/>                                             |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 R2 \[ -Desktop-Apps\]<br/>                                |
-| Header<br/>                   | <dl> <dt>D3d9types. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows 7 \[ Desktop-Apps\]<br/>                                             |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server 2008 \[ R2-Desktop-Apps\]<br/>                                |
+| Header<br/>                   | <dl> <dt>D3d9types.h</dt> </dl> |
 
 
 
@@ -72,10 +72,10 @@ Der Index der Verschlüsselungs-GUID.
 
 <dl> <dt>
 
-[Direct3D-Video Strukturen](direct3d-video-structures.md)
+[Direct3D-Videostrukturen](direct3d-video-structures.md)
 </dt> <dt>
 
-[**IDirect3DAuthenticatedChannel9:: Query**](/windows/desktop/api/d3d9/nf-d3d9-idirect3dauthenticatedchannel9-query)
+[**IDirect3DAuthenticatedChannel9::Query**](/windows/desktop/api/d3d9/nf-d3d9-idirect3dauthenticatedchannel9-query)
 </dt> </dl>
 
  

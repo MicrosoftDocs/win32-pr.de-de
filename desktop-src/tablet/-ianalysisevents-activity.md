@@ -1,7 +1,7 @@
 ---
-description: 'Tritt auf, wenn die iinkanalyzer:: Analysis-Methode oder die iinkanalyzer:: BackgroundAnalyze-Methode aufgerufen wird.'
+description: Tritt auf, wenn die IInkAnalyzer::Analyze-Methode oder die IInkAnalyzer::BackgroundAnalyze-Methode aufgerufen wird.
 ms.assetid: 339b41c6-f388-4b81-b2bc-3705b39d9cc9
-title: '_IAnalysisEvents:: Activity-Ereignis (iacom. h)'
+title: _IAnalysisEvents::Activity-Ereignis (IACom.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,16 +13,16 @@ api_type:
 - COM
 api_location:
 - IACom.dll
-ms.openlocfilehash: f235d3414b0d514f32b4ebd197c04a8721968a2a
-ms.sourcegitcommit: de72a1294df274b0a71dc0fdc42d757e5f6df0f3
+ms.openlocfilehash: bc0a0fd1ad5434116dc7333899329384eae4b9c6dbf7c386e1e2e048f8431d21
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/05/2021
-ms.locfileid: "104351818"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118047360"
 ---
-# <a name="_ianalysiseventsactivity-event"></a>\_Ianalysil Vents:: Activity-Ereignis
+# <a name="_ianalysiseventsactivity-event"></a>\_IAnalysisEvents::Activity-Ereignis
 
-Tritt auf, wenn die [**iinkanalyzer:: Analysis**](iinkanalyzer-analyze.md) -Methode oder die [**iinkanalyzer:: BackgroundAnalyze**](iinkanalyzer-backgroundanalyze.md) -Methode aufgerufen wird.
+Tritt auf, wenn die [**IInkAnalyzer::Analyze-Methode**](iinkanalyzer-analyze.md) oder [**die IInkAnalyzer::BackgroundAnalyze-Methode**](iinkanalyzer-backgroundanalyze.md) aufgerufen wird.
 
 ## <a name="syntax"></a>Syntax
 
@@ -35,31 +35,31 @@ HRESULT Activity();
 
 ## <a name="parameters"></a>Parameter
 
-Dieses Ereignis weist keine Parameter auf.
+Dieses Ereignis verfügt über keine Parameter.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Eine Beschreibung der Rückgabewerte finden Sie unter [Klassen und Schnittstellen-Ink-Analyse](classes-and-interfaces---ink-analysis.md).
+Eine Beschreibung der Rückgabewerte finden Sie unter [Klassen und Schnittstellen – Ink-Analyse](classes-and-interfaces---ink-analysis.md).
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Dieses Ereignis zeigt an, dass [**iinkanalyzer**](iinkanalyzer.md) eine Handschrift Analyse ausführt. Dieses Ereignis weist nicht auf den Fortschritt des frei Hand Analyse Vorgangs hin.
+Dieses Ereignis gibt an, dass [**der IInkAnalyzer**](iinkanalyzer.md) eine Ink-Analyse vorgibt. Dieses Ereignis gibt nicht den Fortschritt des Ink-Analyse-Vorgangs an.
 
-Implementieren Sie einen **\_ ianalysilvents:: Activity** -Ereignishandler, um einen der folgenden Schritte durchführen zu können:
+Implementieren Sie einen **\_ IAnalysisEvents::Activity-Ereignishandler,** um eine der folgenden Aufgaben zu erstellen:
 
--   Geben Sie dem Benutzer an, dass die Handschrift Analyse durchgeführt wird.
--   Benutzereingaben während synchroner Analyse verarbeiten.
--   Empfangen von Benachrichtigungen über Systemanforderungen, z. b. das Neuzeichnen des Anwendungsfensters während der frei Hand Analyse.
+-   Geben Sie dem Benutzer an, dass die Ink-Analyse durchgeführt wird.
+-   Verarbeiten von Benutzereingaben während der synchronen Analyse.
+-   Empfangen von Benachrichtigungen über Systemanforderungen, z. B. das Neupaintieren des Anwendungsfensters, während der Ink-Analyse.
 
-Der [**iinkanalyzer**](iinkanalyzer.md) löst dieses Ereignis häufig während der Layoutanalysephase und der Erstellungsphase für die Erstellung und Zeichnung der frei Hand Analyse aus. Der **iinkanalyzer** löst dieses Ereignis während der Handschrift Erkennungs Phase vor und nach dem Zugriff auf eine frei Handerkennung aus.
+Der [**IInkAnalyzer**](iinkanalyzer.md) löst dieses Ereignis häufig während der Layoutanalysephase und der Schreib- und Zeichnungklassifizierungsphase der Ink-Analyse aus. Der **IInkAnalyzer löst** dieses Ereignis während der Handschrifterkennungsphase vor und nach dem Zugriff auf eine Ink-Erkennung aus.
 
-Die Anzahl der Aktivitäts Ereignisse, die von [**iinkanalyzer**](iinkanalyzer.md) generiert werden, ist betroffen von:
+Die Anzahl der Aktivitätsereignisse, die [**von IInkAnalyzer**](iinkanalyzer.md) generiert werden, ist von folgenden Faktoren betroffen:
 
--   Die frei Handerkennung, die der [**iinkanalyzer**](iinkanalyzer.md) für die frei Handerkennung anwendet.
--   Die Anzahl und Länge der Striche, die von [**iinkanalyzer**](iinkanalyzer.md) analysiert werden.
--   Die Anzahl der Striche, die als Schreibvorgänge klassifiziert werden.
+-   Die Ink-Erkennung, die der [**IInkAnalyzer**](iinkanalyzer.md) auf die Ink-Erkennung angewendet.
+-   Die Anzahl und Länge der Striche, die der [**IInkAnalyzer**](iinkanalyzer.md) analysiert.
+-   Die Anzahl der Striche, die als Schreiben klassifiziert sind.
 
-Weitere Informationen zum Synchronisieren von Anwendungsdaten mit [**iinkanalyzer**](iinkanalyzer.md)finden Sie unter [Daten Proxy mit Ink-Analyse](data-proxy-with-ink-analysis.md).
+Weitere Informationen zum Synchronisieren Ihrer Anwendungsdaten mit [**IInkAnalyzer**](iinkanalyzer.md)finden Sie unter [Datenproxy mit Ink-Analyse.](data-proxy-with-ink-analysis.md)
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -67,9 +67,9 @@ Weitere Informationen zum Synchronisieren von Anwendungsdaten mit [**iinkanalyze
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows XP Tablet PC Edition \[ Desktop-Apps\]<br/>                                                 |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur Desktop-Apps der XP Tablet PC Edition \[\]<br/>                                                 |
 | Unterstützte Mindestversion (Server)<br/> | Nicht unterstützt<br/>                                                                                     |
-| Header<br/>                   | <dl> <dt>Iacom. h (erfordert auch iacom \_ i. c)</dt> </dl> |
+| Header<br/>                   | <dl> <dt>IACom.h (erfordert auch IACom \_ i.c)</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>IACom.dll</dt> </dl>                          |
 
 
@@ -78,25 +78,25 @@ Weitere Informationen zum Synchronisieren von Anwendungsdaten mit [**iinkanalyze
 
 <dl> <dt>
 
-[**\_Ianalysil Vents**](-ianalysisevents.md)
+[**\_IAnalysisEvents**](-ianalysisevents.md)
 </dt> <dt>
 
-[**\_Ianalysisproxyevents**](-ianalysisproxyevents.md)
+[**\_IAnalysisProxyEvents**](-ianalysisproxyevents.md)
 </dt> <dt>
 
-[**Iinkanalyzer**](iinkanalyzer.md)
+[**IInkAnalyzer**](iinkanalyzer.md)
 </dt> <dt>
 
-[**Iinkanalysiserkenzer**](iinkanalysisrecognizer.md)
+[**IInkAnalysisRecognizer**](iinkanalysisrecognizer.md)
 </dt> <dt>
 
-[**Iinkanalyzer:: analysierungsmethode**](iinkanalyzer-analyze.md)
+[**IInkAnalyzer::Analyze-Methode**](iinkanalyzer-analyze.md)
 </dt> <dt>
 
-[**Iinkanalyzer:: BackgroundAnalyze-Methode**](iinkanalyzer-backgroundanalyze.md)
+[**IInkAnalyzer::BackgroundAnalyze-Methode**](iinkanalyzer-backgroundanalyze.md)
 </dt> <dt>
 
-[Ink-Analyse Referenz](ink-analysis-reference.md)
+[Referenz zur Ink-Analyse](ink-analysis-reference.md)
 </dt> </dl>
 
  

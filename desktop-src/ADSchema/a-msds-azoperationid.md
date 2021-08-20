@@ -1,11 +1,11 @@
 ---
-title: ms-DS-AZ-Operation-ID-Attribut
+title: ms-DS-Az-Operation-ID-Attribut
 description: Eine anwendungsspezifische ID, die den Vorgang für die Anwendung eindeutig macht.
 ms.assetid: 0d0fc8ce-7044-481a-8df2-489e33264412
 ms.tgt_platform: multiple
 keywords:
-- "\"ms-DS-AZ-Operation-ID\"-Attribut AD-Schema"
-- AD-Schema des msDS-azoperationid-Attributs
+- MS-DS-Az-Operation-ID-Attribut AD-Schema
+- MSDS-AzOperationID-Attribut-AD-Schema
 topic_type:
 - apiref
 api_name:
@@ -14,14 +14,14 @@ api_type:
 - Schema
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 58cc05338fa3960185a795422c62256a63e6f1ca
-ms.sourcegitcommit: b77ace27b0432e7cd3863191b11926be032fbe2f
+ms.openlocfilehash: 51a5f5b58ae1a5861f9d4434992b43014b6762ff181e848ed701cd346c31bc4b
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "104213775"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118015011"
 ---
-# <a name="ms-ds-az-operation-id-attribute"></a>ms-DS-AZ-Operation-ID-Attribut
+# <a name="ms-ds-az-operation-id-attribute"></a>ms-DS-Az-Operation-ID-Attribut
 
 Eine anwendungsspezifische ID, die den Vorgang für die Anwendung eindeutig macht.
 
@@ -29,11 +29,11 @@ Eine anwendungsspezifische ID, die den Vorgang für die Anwendung eindeutig mach
 
 | Eingabe | Wert |
 |-------------------|-----------------------------------------|
-| CN                | ms-DS-AZ-Operation-ID                   |
-| LDAP-Display-Name | MSDS-azoperationid                      |
+| CN                | ms-DS-Az-Operation-ID                   |
+| Ldap-Anzeigename | msDS-AzOperationID                      |
 | Size              | \-                                      |
-| Berechtigung aktualisieren  | Azrollen-Administrator                           |
-| Aktualisierungshäufigkeit  | Während der Initialisierung oder Richtlinien Änderung. |
+| Aktualisieren von Berechtigungen  | AzRoles admin                           |
+| Updatehäufigkeit  | Während der Initialisierung oder Richtlinienänderung. |
 | Attribute-Id      | 1.2.840.113556.1.4.1800                 |
 | System-ID-GUID    | a5f3b553-5d76-4cbe-ba3f-4312152cab18    |
 | Syntax            | [**Enumeration**](s-enumeration.md)    |
@@ -42,13 +42,13 @@ Eine anwendungsspezifische ID, die den Vorgang für die Anwendung eindeutig mach
 
 ## <a name="implementations"></a>Implementierungen
 
--   [**Windows Server 2003**](#windows-server-2003)
+-   [**Windows Server 2003**](#windows-server-2003)
 -   [**Windows Server 2003 R2**](#windows-server-2003-r2)
 -   [**Windows Server 2008**](#windows-server-2008)
 -   [**Windows Server 2008 R2**](#windows-server-2008-r2)
 -   [**Windows Server 2012**](#windows-server-2012)
 
-## <a name="windows-server-2003"></a>Windows Server 2003
+## <a name="windows-server-2003"></a>Windows Server 2003
 
 
 
@@ -56,11 +56,11 @@ Eine anwendungsspezifische ID, die den Vorgang für die Anwendung eindeutig mach
 |------------------------|--------------|
 | Link-ID                | \-           |
 | MAPI-Id                | \-           |
-| System-Only            | False        |
-| Ist-einwertig       | Richtig         |
-| Ist indiziert             | False        |
-| Im globalen Katalog      | False        |
-| NT-Security-Descriptor | o:Bag: schlecht: S: |
+| System-Only            | Falsch        |
+| Ist einwertig       | True         |
+| Ist indiziert             | Falsch        |
+| Im globalen Katalog      | Falsch        |
+| NT-Security-Descriptor | O:BAG:BAD:S: |
 | Range-Lower            | \-           |
 | Range-Upper            | \-           |
 | Search-Flags           | 0x00000000   |
@@ -77,11 +77,11 @@ Eine anwendungsspezifische ID, die den Vorgang für die Anwendung eindeutig mach
 |------------------------|--------------|
 | Link-ID                | \-           |
 | MAPI-Id                | \-           |
-| System-Only            | False        |
-| Ist-einwertig       | Richtig         |
-| Ist indiziert             | False        |
-| Im globalen Katalog      | False        |
-| NT-Security-Descriptor | o:Bag: schlecht: S: |
+| System-Only            | Falsch        |
+| Ist einwertig       | True         |
+| Ist indiziert             | Falsch        |
+| Im globalen Katalog      | Falsch        |
+| NT-Security-Descriptor | O:BAG:BAD:S: |
 | Range-Lower            | \-           |
 | Range-Upper            | \-           |
 | Search-Flags           | 0x00000000   |
@@ -98,11 +98,11 @@ Eine anwendungsspezifische ID, die den Vorgang für die Anwendung eindeutig mach
 |------------------------|--------------|
 | Link-ID                | \-           |
 | MAPI-Id                | \-           |
-| System-Only            | False        |
-| Ist-einwertig       | Richtig         |
-| Ist indiziert             | False        |
-| Im globalen Katalog      | False        |
-| NT-Security-Descriptor | o:Bag: schlecht: S: |
+| System-Only            | Falsch        |
+| Ist einwertig       | True         |
+| Ist indiziert             | Falsch        |
+| Im globalen Katalog      | Falsch        |
+| NT-Security-Descriptor | O:BAG:BAD:S: |
 | Range-Lower            | \-           |
 | Range-Upper            | \-           |
 | Search-Flags           | 0x00000000   |
@@ -119,11 +119,11 @@ Eine anwendungsspezifische ID, die den Vorgang für die Anwendung eindeutig mach
 |------------------------|--------------|
 | Link-ID                | \-           |
 | MAPI-Id                | \-           |
-| System-Only            | False        |
-| Ist-einwertig       | Richtig         |
-| Ist indiziert             | False        |
-| Im globalen Katalog      | False        |
-| NT-Security-Descriptor | o:Bag: schlecht: S: |
+| System-Only            | Falsch        |
+| Ist einwertig       | Richtig         |
+| Ist indiziert             | Falsch        |
+| Im globalen Katalog      | Falsch        |
+| NT-Security-Descriptor | O:BAG:BAD:S: |
 | Range-Lower            | \-           |
 | Range-Upper            | \-           |
 | Search-Flags           | 0x00000000   |
@@ -140,11 +140,11 @@ Eine anwendungsspezifische ID, die den Vorgang für die Anwendung eindeutig mach
 |------------------------|--------------|
 | Link-ID                | \-           |
 | MAPI-Id                | \-           |
-| System-Only            | False        |
-| Ist-einwertig       | Richtig         |
-| Ist indiziert             | False        |
-| Im globalen Katalog      | False        |
-| NT-Security-Descriptor | o:Bag: schlecht: S: |
+| System-Only            | Falsch        |
+| Ist einwertig       | True         |
+| Ist indiziert             | Falsch        |
+| Im globalen Katalog      | Falsch        |
+| NT-Security-Descriptor | O:BAG:BAD:S: |
 | Range-Lower            | \-           |
 | Range-Upper            | \-           |
 | Search-Flags           | 0x00000000   |

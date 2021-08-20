@@ -1,6 +1,6 @@
 ---
-title: Beispiel für Zeit Auslösung (Skripterstellung)
-description: In diesem Skript Beispiel wird gezeigt, wie eine Aufgabe erstellt wird, die den Editor zu einem bestimmten Zeitpunkt ausführt.
+title: Beispiel für Zeittrigger (Skripterstellung)
+description: In diesem Skriptbeispiel wird gezeigt, wie Sie eine Aufgabe erstellen, Editor zu einem bestimmten Zeitpunkt ausgeführt wird.
 ms.assetid: 8511ffcd-166f-4c63-9cd2-ead53dde9ed8
 ms.topic: article
 ms.date: 05/31/2018
@@ -9,29 +9,29 @@ topic_type:
 api_name: ''
 api_type: ''
 api_location: ''
-ms.openlocfilehash: 77cbf9eab12f5ca027fbb6c48ade37a9f57d9beb
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: 7b448bf0aaa2c5670fb79ca10755a68bda77fd8d5b6e1c33d3fa292122bd5dcc
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "106339397"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117942592"
 ---
-# <a name="time-trigger-example-scripting"></a>Beispiel für Zeit Auslösung (Skripterstellung)
+# <a name="time-trigger-example-scripting"></a>Beispiel für Zeittrigger (Skripterstellung)
 
-In diesem Skript Beispiel wird gezeigt, wie eine Aufgabe erstellt wird, die den Editor zu einem bestimmten Zeitpunkt ausführt. Der Task enthält einen zeitbasierten-Triggerwert, der eine Start Grenze zum Aktivieren des Tasks, eine ausführbare Aktion, die den Editor ausführt, und eine endbegrenzung zum Deaktivieren der Aufgabe angibt.
+In diesem Skriptbeispiel wird gezeigt, wie Sie eine Aufgabe erstellen, Editor zu einem bestimmten Zeitpunkt ausgeführt wird. Die Aufgabe enthält einen zeitbasierten Trigger, der eine Startgrenze zum Aktivieren der Aufgabe, eine ausführbare Aktion, die Editor ausgeführt wird, und eine Endgrenze angibt, die die Aufgabe deaktiviert.
 
-Im folgenden Verfahren wird beschrieben, wie eine Aufgabe zum Starten einer ausführbaren Datei zu einem bestimmten Zeitpunkt geplant wird.
+Im folgenden Verfahren wird beschrieben, wie Sie einen Task so planen, dass eine ausführbare Datei zu einem bestimmten Zeitpunkt gestartet wird.
 
-**So planen Sie den Start von Notepad zu einem bestimmten Zeitpunkt**
+**So planen Editor, dass der Start zu einem bestimmten Zeitpunkt beginnt**
 
-1.  Erstellen Sie ein [**TaskService**](taskservice.md) -Objekt. Mit diesem Objekt können Sie die Aufgabe in einem angegebenen Ordner erstellen.
-2.  Rufen Sie einen Aufgaben Ordner ab, und erstellen Sie eine Aufgabe. Verwenden Sie die [**TaskService. GetFolder**](taskservice-getfolder.md) -Methode, um den Ordner zu erhalten, in dem die Aufgabe gespeichert ist, und die [**TaskService. newtask**](taskservice-newtask.md) -Methode zum Erstellen des [**Task Definition**](taskdefinition.md) -Objekts, das die Aufgabe darstellt.
-3.  Definieren von Informationen über den Task mithilfe des [**Taskdefinition**](taskdefinition.md) -Objekts. Verwenden Sie die [**Task Definition. Settings**](taskdefinition-settings.md) -Eigenschaft, um die Einstellungen zu definieren, die bestimmen, wie der Taskplaner Dienst den Task ausführt, und die [**Taskdefinition. RegistrationInfo**](taskdefinition-registrationinfo.md) -Eigenschaft, um die Informationen zu definieren, die die Aufgabe beschreiben.
-4.  Erstellen Sie einen zeitbasierten Trigger mithilfe der [**Task Definition.**](taskdefinition-triggers.md) Triggers-Eigenschaft. Diese Eigenschaft ermöglicht den Zugriff auf das [**TriggerCollection**](triggercollection.md) -Objekt. Verwenden Sie die [**TriggerCollection. Create**](triggercollection-create.md) -Methode (gibt den Typ des zu erstellenden Auslösers an), um einen zeitbasierten Trigger zu erstellen. Beim Erstellen des Auslösers legen Sie die Start-und die Endgrenze des Auslösers zum Aktivieren und Deaktivieren des-Auslösers fest. Die Start Grenze gibt an, wann die Aktion der Aufgabe ausgeführt wird.
-5.  Erstellen Sie eine Aktion für die Ausführung der Aufgabe, indem Sie die [**Task Definition. Actions**](taskdefinition-actions.md) -Eigenschaft verwenden. Diese Eigenschaft ermöglicht den Zugriff auf das Objekt " [**Aktions Sammlung**](actioncollection.md) ". Verwenden Sie die [**Action Collection. Create**](actioncollection-create.md) -Methode, um den Typ der Aktion anzugeben, die Sie erstellen möchten. In diesem Beispiel wird ein [**execaction**](execaction.md) -Objekt verwendet, das eine Aktion darstellt, die einen Befehlszeilen Vorgang ausführt.
-6.  Registrieren Sie die Aufgabe mit der [**Task Folder. RegisterTaskDefinition**](taskfolder-registertaskdefinition.md) -Methode. In diesem Beispiel startet der Task Notepad zum aktuellen Zeitpunkt plus 30 Sekunden.
+1.  Erstellen Sie ein [**TaskService-Objekt.**](taskservice.md) Mit diesem Objekt können Sie die Aufgabe in einem angegebenen Ordner erstellen.
+2.  Erstellen Sie einen Taskordner, und erstellen Sie einen Task. Verwenden Sie [**die TaskService.GetFolder-Methode,**](taskservice-getfolder.md) um den Ordner zu erhalten, in dem die Aufgabe gespeichert ist, und die [**TaskService.NewTask-Methode,**](taskservice-newtask.md) um das [**TaskDefinition-Objekt**](taskdefinition.md) zu erstellen, das die Aufgabe darstellt.
+3.  Definieren Sie Informationen zum Task mithilfe des [**TaskDefinition-Objekts.**](taskdefinition.md) Verwenden Sie [**die TaskDefinition.Einstellungen-Eigenschaft,**](taskdefinition-settings.md) um die Einstellungen zu definieren, die bestimmen, wie der Taskplaner-Dienst die Aufgabe ausführt, und die [**TaskDefinition.RegistrationInfo-Eigenschaft,**](taskdefinition-registrationinfo.md) um die Informationen zu definieren, die den Task beschreiben.
+4.  Erstellen Sie mithilfe der [**TaskDefinition.Triggers-Eigenschaft einen zeitbasierten**](taskdefinition-triggers.md) Trigger. Diese Eigenschaft ermöglicht den Zugriff auf das [**TriggerCollection-Objekt.**](triggercollection.md) Verwenden Sie [**die TriggerCollection.Create-Methode**](triggercollection-create.md) (unter Angabe des Triggertyps, den Sie erstellen möchten), um einen zeitbasierten Trigger zu erstellen. Legen Sie beim Erstellen des Triggers die Start- und Endgrenze des Triggers fest, um den Trigger zu aktivieren und zu deaktivieren. Die Startgrenze gibt an, wann die Aktion des Task ausgeführt wird.
+5.  Erstellen Sie mithilfe der [**TaskDefinition.Actions-Eigenschaft**](taskdefinition-actions.md) eine Aktion für die Auszuführende Aufgabe. Diese Eigenschaft ermöglicht den Zugriff auf das [**ActionCollection-Objekt.**](actioncollection.md) Verwenden Sie die [**ActionCollection.Create-Methode,**](actioncollection-create.md) um den Typ der Aktion anzugeben, die Sie erstellen möchten. In diesem Beispiel wird ein [**ExecAction-Objekt**](execaction.md) verwendet, das eine Aktion darstellt, die einen Befehlszeilenvorgang ausgeführt.
+6.  Registrieren Sie die Aufgabe mithilfe der [**TaskFolder.RegisterTaskDefinition-Methode.**](taskfolder-registertaskdefinition.md) In diesem Beispiel wird der Task Editor der aktuellen Zeit plus 30 Sekunden gestartet.
 
-Im folgenden VBScript-Beispiel wird veranschaulicht, wie Sie einen Task zum Ausführen von Notepad 30 Sekunden nach dem Registrieren der Aufgabe planen.
+Das folgende VBScript-Beispiel zeigt, wie sie eine Aufgabe 30 Sekunden Editor, nachdem der Task registriert wurde, ausgeführt wird.
 
 
 ```VB
@@ -166,12 +166,12 @@ End Function
 
 <dl> <dt>
 
-[Verwenden des Taskplaner](using-the-task-scheduler.md)
+[Verwenden der Taskplaner](using-the-task-scheduler.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

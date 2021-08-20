@@ -1,6 +1,6 @@
 ---
-description: 'Weitere Informationen zu: jetclosefile-Funktion'
-title: Jetclosefile-Funktion
+description: 'Weitere Informationen zu: JetCloseFile-Funktion'
+title: JetCloseFile-Funktion
 TOCTitle: JetCloseFile Function
 ms:assetid: e8930915-8102-44b0-ae42-abedbd3e0512
 ms:mtpsurl: https://msdn.microsoft.com/library/Gg294127(v=EXCHG.10)
@@ -18,21 +18,21 @@ api_type:
 api_location:
 - ESENT.DLL
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: 29fc2c76bf8528956d3e3331b3c2f23bf52f929f
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: b22f1454cad9962d429a497acb2b91f92d44b3e9a43c36ddb74cde06a54782c3
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104393381"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118072893"
 ---
-# <a name="jetclosefile-function"></a>Jetclosefile-Funktion
+# <a name="jetclosefile-function"></a>JetCloseFile-Funktion
 
 
 _**Gilt für:** Windows | Windows Server_
 
-## <a name="jetclosefile-function"></a>Jetclosefile-Funktion
+## <a name="jetclosefile-function"></a>JetCloseFile-Funktion
 
-Die **jetclosefile** -Funktion schließt eine Datei, die mit [jetopenfile](./jetopenfile-function.md) geöffnet wurde, nachdem die Daten aus dieser Datei mit [jetreadfile](./jetreadfile-function.md)extrahiert wurden.
+Die **JetCloseFile-Funktion** schließt eine Datei, die mit [JetOpenFile](./jetopenfile-function.md) geöffnet wurde, nachdem die Daten aus dieser Datei mit [JetReadFile](./jetreadfile-function.md)extrahiert wurden.
 
 ```cpp
     JET_ERR JET_API JetCloseFile(
@@ -42,13 +42,13 @@ Die **jetclosefile** -Funktion schließt eine Datei, die mit [jetopenfile](./jet
 
 ### <a name="parameters"></a>Parameter
 
-*hffile*
+*hfFile*
 
 Das Handle der zu lesenden Datei.
 
 ### <a name="return-value"></a>Rückgabewert
 
-Diese Funktion gibt den [JET_ERR](./jet-err.md) Datentyp mit einem der folgenden Rückgabecodes zurück. Weitere Informationen zu den möglichen ESE-Fehlern finden Sie unter [Extensible Storage Engine Errors](./extensible-storage-engine-errors.md) und [Error Handling Parameters](./error-handling-parameters.md).
+Diese Funktion gibt den [JET_ERR](./jet-err.md) Datentyp mit einem der folgenden Rückgabecodes zurück. Weitere Informationen zu den möglichen ESE-Fehlern finden Sie unter [Extensible Storage Engine Errors](./extensible-storage-engine-errors.md) and [Error Handling Parameters](./error-handling-parameters.md).
 
 <table>
 <colgroup>
@@ -68,52 +68,52 @@ Diese Funktion gibt den [JET_ERR](./jet-err.md) Datentyp mit einem der folgenden
 </tr>
 <tr class="even">
 <td><p>JET_errClientRequestToStopJetService</p></td>
-<td><p>Der Vorgang kann nicht ausgeführt werden, da alle Aktivitäten auf der Instanz, die der Sitzung zugeordnet ist, aufgrund eines Aufrufens von <a href="gg269240(v=exchg.10).md">jetstopservice</a>beendet wurden.</p></td>
+<td><p>Es ist nicht möglich, den Vorgang abzuschließen, da alle Aktivitäten auf der Instanz, die der Sitzung zugeordnet ist, als Ergebnis eines Aufrufs von <a href="gg269240(v=exchg.10).md">JetStopService</a>aufgetreten sind.</p></td>
 </tr>
 <tr class="odd">
 <td><p>JET_errInstanceUnavailable</p></td>
-<td><p>Der Vorgang kann nicht ausgeführt werden, da bei der der Sitzung zugeordneten Instanz ein schwerwiegender Fehler aufgetreten ist, der erfordert, dass der Zugriff auf alle Daten widerrufen wird, um die Integrität der Daten zu schützen.</p>
-<p>Dieser Fehler wird nur von Windows XP und höheren Versionen zurückgegeben.</p></td>
+<td><p>Es ist nicht möglich, den Vorgang abzuschließen, da für die instanz, die der Sitzung zugeordnet ist, ein schwerwiegender Fehler aufgetreten ist, der erfordert, dass der Zugriff auf alle Daten widerrufen wird, um die Integrität dieser Daten zu schützen.</p>
+<p>Dieser Fehler wird nur von Windows XP und späteren Versionen zurückgegeben.</p></td>
 </tr>
 <tr class="even">
 <td><p>JET_errInvalidParameter</p></td>
-<td><p>Einer der angegebenen Parameter enthielt einen unerwarteten Wert oder enthielt einen Wert, der nicht sinnvoll war, wenn er mit dem Wert eines anderen Parameters kombiniert wurde. Dies kann bei <strong>jetclosefile</strong> vorkommen, wenn Folgendes geschieht:</p>
+<td><p>Einer der bereitgestellten Parameter enthielt einen unerwarteten Wert oder einen Wert, der in Kombination mit dem Wert eines anderen Parameters nicht sinnvoll war. Dies kann für <strong>JetCloseFile</strong> auftreten, wenn:</p>
 <ul>
-<li><p>Das angegebene Instanzhandle ist ungültig (Windows XP und spätere Releases),</p></li>
-<li><p>Das angegebene Datei Handle ist ungültig.</p></li>
+<li><p>Das angegebene Instanzhandle ist ungültig (Windows XP und höhere Versionen).</p></li>
+<li><p>Das angegebene Dateihandle ist ungültig.</p></li>
 </ul></td>
 </tr>
 <tr class="odd">
 <td><p>JET_errNoBackup</p></td>
-<td><p>Der Vorgang ist fehlgeschlagen, da keine externe Sicherung durchgeführt wird.</p></td>
+<td><p>Fehler beim Vorgang, weil keine externe Sicherung ausgeführt wird.</p></td>
 </tr>
 <tr class="even">
 <td><p>JET_errNotInitialized</p></td>
-<td><p>Der Vorgang kann nicht abgeschlossen werden, da die Instanz, die der Sitzung zugeordnet ist, noch nicht initialisiert wurde.</p></td>
+<td><p>Es ist nicht möglich, den Vorgang abzuschließen, da die der Sitzung zugeordnete Instanz noch nicht initialisiert wurde.</p></td>
 </tr>
 <tr class="odd">
 <td><p>JET_errRestoreInProgress</p></td>
-<td><p>Der Vorgang kann nicht abgeschlossen werden, da für die-Instanz, die der Sitzung zugeordnet ist, ein Wiederherstellungs Vorgang ausgeführt wird.</p></td>
+<td><p>Es ist nicht möglich, den Vorgang abzuschließen, da ein Wiederherstellungsvorgang für die Instanz ausgeführt wird, die der Sitzung zugeordnet ist.</p></td>
 </tr>
 <tr class="even">
 <td><p>JET_errRunningInMultiInstanceMode</p></td>
-<td><p>Der Vorgang ist fehlgeschlagen, weil versucht wurde, die Engine im Legacy Modus (Windows 2000-Kompatibilitätsmodus) zu verwenden, in dem nur eine Instanz unterstützt wird, wenn tatsächlich mehrere Instanzen bereits vorhanden sind.</p></td>
+<td><p>Der Vorgang ist fehlgeschlagen, weil versucht wurde, die Engine im Legacymodus (Windows 2000-Kompatibilitätsmodus) zu verwenden, wobei nur eine Instanz unterstützt wird, wenn tatsächlich bereits mehrere Instanzen vorhanden sind.</p></td>
 </tr>
 <tr class="odd">
 <td><p>JET_errTermInProgress</p></td>
-<td><p>Der Vorgang kann nicht ausgeführt werden, da die Instanz, die der Sitzung zugeordnet ist, heruntergefahren wird.</p></td>
+<td><p>Es ist nicht möglich, den Vorgang abzuschließen, da die der Sitzung zugeordnete Instanz heruntergefahren wird.</p></td>
 </tr>
 </tbody>
 </table>
 
 
-Bei Erfolg wird das Datei Handle geschlossen. Wenn eine Datenbankdatei geschlossen wurde, wird die zugehörige datenbankpatchdatei (falls vorhanden) zerstört.
+Bei Erfolg wird das Dateihandle geschlossen. Wenn eine Datenbankdatei geschlossen wurde, wird die zugeordnete Datenbankpatchdatei (falls vorhanden) zerstört.
 
 Bei einem Fehler erfolgt keine Änderung.
 
-#### <a name="remarks"></a>Bemerkungen
+#### <a name="remarks"></a>Hinweise
 
-Die Datenbank-Engine unterstützt zurzeit nur eine geöffnete Datei durch [jetopenfile](./jetopenfile-function.md) . Wenn ein Datei Handle mit [jetopenfile](./jetopenfile-function.md) geöffnet wird, muss es mithilfe von **jetclosefile** geschlossen werden, bevor eine andere Datei geöffnet werden kann.
+Die Datenbank-Engine unterstützt derzeit nur jeweils eine geöffnete Datei über [JetOpenFile.](./jetopenfile-function.md) Wenn ein Dateihandle mit [JetOpenFile](./jetopenfile-function.md) geöffnet wird, muss es mitHilfe von **JetCloseFile** geschlossen werden, bevor eine andere Datei geöffnet werden kann.
 
 #### <a name="requirements"></a>Anforderungen
 
@@ -133,14 +133,14 @@ Die Datenbank-Engine unterstützt zurzeit nur eine geöffnete Datei durch [jetop
 </tr>
 <tr class="odd">
 <td><p><strong>Header</strong></p></td>
-<td><p>In "ESENT. h" deklariert.</p></td>
+<td><p>Deklariert in Esent.h.</p></td>
 </tr>
 <tr class="even">
 <td><p><strong>Bibliothek</strong></p></td>
-<td><p>Verwenden Sie ESENT. lib.</p></td>
+<td><p>Verwenden Sie ESENT.lib.</p></td>
 </tr>
 <tr class="odd">
-<td><p><strong>DLL</strong></p></td>
+<td><p><strong>Dll</strong></p></td>
 <td><p>Erfordert ESENT.dll.</p></td>
 </tr>
 </tbody>
@@ -152,6 +152,6 @@ Die Datenbank-Engine unterstützt zurzeit nur eine geöffnete Datei durch [jetop
 [JET_ERR](./jet-err.md)  
 [JET_INSTANCE](./jet-instance.md)  
 [JET_HANDLE](./jet-handle.md)  
-[Jetopumfile](./jetopenfile-function.md)  
-[Jetreadfile](./jetreadfile-function.md)  
-[Jetstopservice](./jetstopservice-function.md)
+[JetOpenFile](./jetopenfile-function.md)  
+[JetReadFile](./jetreadfile-function.md)  
+[JetStopService](./jetstopservice-function.md)

@@ -13,16 +13,16 @@ api_type:
 - COM
 api_location:
 - Shell32.dll
-ms.openlocfilehash: 95ef542f91235b3b068e1b1b54768b4dd453d9b3
-ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
+ms.openlocfilehash: 5acd73f2009894a1e6fef302a0b50937ab0e6892b1b77d3d0c11885871f1da43
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2021
-ms.locfileid: "108083468"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118047607"
 ---
-# <a name="shellfolderviewapplication-property"></a>ShellFolderView.Application-Eigenschaft
+# <a name="shellfolderviewapplication-property"></a>ShellFolderView.Application (Eigenschaft)
 
-Enthält das Application-Objekt des Objekts.
+Enthält das Application-Objekt des -Objekts.
 
 Diese Eigenschaft ist schreibgeschützt.
 
@@ -37,19 +37,19 @@ objApplication = ShellFolderView.Application
 
 ## <a name="property-value"></a>Eigenschaftswert
 
-Eine Variable vom Typ [**IDispatch,**](/windows/win32/api/oaidl/nn-oaidl-idispatch) die das Application-Objekt empfängt.
+Eine Variable vom Typ [**IDispatch,**](/windows/win32/api/oaidl/nn-oaidl-idispatch) die das Anwendungsobjekt empfängt.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
 Die **Application-Eigenschaft** gibt das Automatisierungsobjekt zurück, das von der Anwendung unterstützt wird, die das WebBrowser-Steuerelement enthält, wenn auf dieses Objekt zugegriffen werden kann. Andernfalls gibt diese Eigenschaft das Automatisierungsobjekt des WebBrowser-Steuerelements zurück.
 
-Verwenden Sie diese Eigenschaft mit den Befehlen **Set** und **CreateObject** oder mit dem **Befehl GetObject,** um eine Instanz der Windows Internet Explorer-Anwendung zu erstellen und zu bearbeiten.
+Verwenden Sie diese Eigenschaft mit den **Befehlen Set** und **CreateObject** oder mit dem **GetObject-Befehl,** um eine Instanz der Windows Internet Explorer zu erstellen und zu bearbeiten.
 
 ## <a name="requirements"></a>Anforderungen
 
 
 
-| Anforderungen | Wert |
+| Anforderung | Wert |
 |-------------------------------------|----------------------------------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional, nur Windows \[ XP-Desktop-Apps\]<br/>                                         |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                                                           |

@@ -1,9 +1,9 @@
 ---
-title: Mpbedrohlich Query-Funktion (mpclient. h)
-description: Wird verwendet, um statische (z. b. Schweregrad und Kategorie) oder lokalisierte Informationen zu einer bestimmten Bedrohung (z. b. Kategorien Beschreibung und Ratschläge) abzufragen.
+title: MpThreatQuery-Funktion (MpClient.h)
+description: Wird verwendet, um statische (z. B. Schweregrad und Kategorie) oder lokalisierte Informationen (z. B. Kategoriebeschreibung und Ratschläge) zu einer bestimmten Bedrohung abfragt.
 ms.assetid: A06854B2-8444-46A4-A53F-FD5FEAFF47B7
 keywords:
-- Mpbedrohlich Query-Funktion Legacy-Windows-Umgebungs Features
+- MpThreatQuery-Funktion legacy Windows Environment Features
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - DllExport
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 21d38a3734f9d98f3bd61143d4fe58bd606c7508
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 168f1ef4176db691576f31726eb8c8caab055df9a584b41c3195f7b5b4afeee3
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "106338721"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117883014"
 ---
-# <a name="mpthreatquery-function"></a>Mpbedrohlich Query-Funktion
+# <a name="mpthreatquery-function"></a>MpThreatQuery-Funktion
 
-Wird verwendet, um statische (z. b. Schweregrad und Kategorie) oder lokalisierte Informationen zu einer bestimmten Bedrohung (z. b. Kategorien Beschreibung und Ratschläge) abzufragen.
+Wird verwendet, um statische (z. B. Schweregrad und Kategorie) oder lokalisierte Informationen (z. B. Kategoriebeschreibung und Ratschläge) zu einer bestimmten Bedrohung abfragt.
 
 ## <a name="syntax"></a>Syntax
 
@@ -43,39 +43,39 @@ HRESULT WINAPI MpThreatQuery(
 
 <dl> <dt>
 
-*hmphandle* \[ in\]
+*hMpHandle* \[ In\]
 </dt> <dd>
 
-Typ: **mphandle**
+Typ: **MPHANDLE**
 
-Handle für die Malware Protection Manager-Schnittstelle. Dieses Handle wird von der [**mpmanageropen**](mpmanageropen.md) -Funktion zurückgegeben.
+Handle für die Benutzeroberfläche des Schadsoftwareschutz-Managers. Dieses Handle wird von der [**MpManagerOpen-Funktion**](mpmanageropen.md) zurückgegeben.
 
 </dd> <dt>
 
-*Threatid* \[ in\]
+*ThreatID* \[ In\]
 </dt> <dd>
 
-Typ: **mpthreat- \_ ID**
+Typ: **MPTHREAT-ID \_**
 
-Der Bedrohungs Bezeichner, für den Informationen angefordert werden.
+Bedrohungs-ID, für die Informationen angefordert werden.
 
 </dd> <dt>
 
-*ppbedrohlich Info* \[ vorgenommen\]
+*ppThreatInfo* \[ out\]
 </dt> <dd>
 
-Typ: **pmpthreat \_ Info \** _
+Typ: **PMPTHREAT \_ \* INFO**
 
-Gibt einen Zeiger auf eine Bedrohungs Informationsstruktur zurück, [_ *mpthreat \_ Info* *](mpthreat-info.md). Die Struktur enthält Informationen wie die Bedrohungs-ID, den Namen und den Schweregrad.
+Gibt einen Zeiger auf eine Bedrohungsinformationsstruktur zurück, [**MPTHREAT \_ INFO.**](mpthreat-info.md) Die Struktur enthält Informationen wie Bedrohungs-ID, Name und Schweregrad.
 
 </dd> <dt>
 
-*ppbedrohlich localizedinfo* \[ Out, optional\]
+*ppThreatLocalizedInfo* \[ out, optional\]
 </dt> <dd>
 
-Geben Sie Folgendes ein: **pmpthreat \_ lokalisierte \_ \* Info* _
+Typ: **PMPTHREAT \_ LOCALIZED \_ INFO \***
 
-Gibt einen Zeiger auf eine-Struktur zurück, die lokalisierte Informationen über die Bedrohung enthält. Sie können _ *null** übergeben, wenn Sie nicht an lokalisierten Informationen über die Bedrohung interessiert sind. Siehe " [**mpthreat \_ lokalisierte \_ Informationen**](mpthreat-localized-info.md)".
+Gibt einen Zeiger auf eine -Struktur zurück, die lokalisierte Informationen zur Bedrohung enthält. Sie können NULL **übergeben,** wenn Sie nicht an lokalisierten Informationen zur Bedrohung interessiert sind. Siehe [**MPTHREAT \_ LOCALIZED \_ INFO**](mpthreat-localized-info.md).
 
 </dd> </dl>
 
@@ -83,9 +83,9 @@ Gibt einen Zeiger auf eine-Struktur zurück, die lokalisierte Informationen übe
 
 Typ: **HRESULT**
 
-Wenn die Funktion erfolgreich ausgeführt wird, ist der Rückgabewert **S \_ OK**.
+Wenn die Funktion erfolgreich ist, ist der Rückgabewert **S \_ OK.**
 
-Wenn die Funktion fehlschlägt, ist der Rückgabewert ein fehlerhafter **HRESULT** -Code. Der Aufrufer kann die [**mperrormessageformat**](mperrormessageformat.md) -Funktion verwenden, um eine generische Beschreibung der Fehlermeldung zu erhalten.
+Wenn die Funktion fehlschlägt, ist der Rückgabewert ein fehlerhafter **HRESULT-Code.** Der Aufrufer kann die [**MpErrorMessageFormat-Funktion**](mperrormessageformat.md) verwenden, um eine generische Beschreibung der Fehlermeldung zu erhalten.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -93,9 +93,9 @@ Wenn die Funktion fehlschlägt, ist der Rückgabewert ein fehlerhafter **HRESULT
 
 | Anforderung | Wert |
 |-------------------------------------|-----------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows 8 \[ -Desktop-Apps\]<br/>                                              |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2012 \[ -Desktop-Apps\]<br/>                                    |
-| Header<br/>                   | <dl> <dt>Mpclient. h</dt> </dl>   |
+| Unterstützte Mindestversion (Client)<br/> | \[Windows 8 Nur Desktop-Apps\]<br/>                                              |
+| Unterstützte Mindestversion (Server)<br/> | \[Windows Server 2012 Nur Desktop-Apps\]<br/>                                    |
+| Header<br/>                   | <dl> <dt>MpClient.h</dt> </dl>   |
 | DLL<br/>                      | <dl> <dt>MpClient.dll</dt> </dl> |
 
 
@@ -104,16 +104,16 @@ Wenn die Funktion fehlschlägt, ist der Rückgabewert ein fehlerhafter **HRESULT
 
 <dl> <dt>
 
-[**Mperrormessageformat**](mperrormessageformat.md)
+[**MpErrorMessageFormat**](mperrormessageformat.md)
 </dt> <dt>
 
-[**Mpmanageropen**](mpmanageropen.md)
+[**MpManagerOpen**](mpmanageropen.md)
 </dt> <dt>
 
-[**mpthreat- \_ Informationen**](mpthreat-info.md)
+[**\_MPTHREAT-INFORMATIONEN**](mpthreat-info.md)
 </dt> <dt>
 
-[**lokalisierte mpthreat- \_ \_ Informationen**](mpthreat-localized-info.md)
+[**LOKALISIERTE \_ MPTHREAT-INFORMATIONEN \_**](mpthreat-localized-info.md)
 </dt> </dl>
 
  

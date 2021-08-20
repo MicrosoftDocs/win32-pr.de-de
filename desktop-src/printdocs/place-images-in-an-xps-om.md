@@ -1,29 +1,29 @@
 ---
-description: Beschreibt das Platzieren von Bildern in einem XPS-om.
+description: Beschreibt das Platzieren von Bildern in einem XPS OM.
 ms.assetid: 4c7e3630-7331-47d7-91cc-da3cc2b7f8c9
-title: Platzieren von Bildern in einem XPS-OM
+title: Platzieren von Bildern in einem XPS OM
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 5f72b5d1b1380cd870f9ff6b7a1cd15763e5b46c
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: b875a443a84f03339d1972b4db98db0e7b198309f1b53ad1fca2878bec69680d
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106360789"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117867982"
 ---
-# <a name="place-images-in-an-xps-om"></a>Platzieren von Bildern in einem XPS-OM
+# <a name="place-images-in-an-xps-om"></a>Platzieren von Bildern in einem XPS OM
 
-Beschreibt das Platzieren von Bildern in einem XPS-om.
+Beschreibt das Platzieren von Bildern in einem XPS OM.
 
-Um Bilder in einem XPS-OM zu platzieren, erstellen Sie ein Pfad Objekt, das die Position und Gliederung eines Bilds definiert, und verwenden Sie dann einen Bild Pinsel, um den Pfad auszufüllen. Fügen Sie das erstellte Pfad Objekt der Liste von visuellen Objekten der Seite oder der Canvas hinzu, sodass es mit dem anderen visuellen Inhalt gerendert werden kann.
+Um Bilder in einem XPS OM zu platzieren, erstellen Sie ein Pfadobjekt, das den Speicherort und die Kontur eines Bilds definiert, und verwenden Sie dann einen Bildpinsel, um den Pfad zu füllen. Fügen Sie das erstellte Pfadobjekt der Liste der visuellen Objekte der Seite oder canvas hinzu, damit es mit dem anderen visuellen Inhalt gerendert werden kann.
 
-Bevor Sie diese Codebeispiele in Ihrem Programm verwenden, lesen Sie den Haftungsausschluss in [Allgemeine XPS-Dokument Programmieraufgaben](common-xps-document-tasks.md).
+Bevor Sie diese Codebeispiele in Ihrem Programm verwenden, lesen Sie den Haftungsausschluss unter [Allgemeine XPS-Dokumentprogrammieraufgaben](common-xps-document-tasks.md).
 
 ## <a name="code-example"></a>Codebeispiel
 
-### <a name="create-image-resource"></a>Image Ressource erstellen
+### <a name="create-image-resource"></a>Erstellen einer Imageressource
 
-Wenn das Quell Image im XPS-om nicht als Bildressource verfügbar ist, erstellen Sie zunächst die Image-Ressource:
+Wenn das Quellimage im XPS OM nicht als Imageressource verfügbar ist, erstellen Sie zuerst die Imageressource:
 
 
 ```C++
@@ -53,9 +53,9 @@ Wenn das Quell Image im XPS-om nicht als Bildressource verfügbar ist, erstellen
 
 
 
-### <a name="place-image-into-visual-collection"></a>Bild in visueller Auflistung platzieren
+### <a name="place-image-into-visual-collection"></a>Platzieren eines Bilds in der visuellen Sammlung
 
-Wenn das Quell Image im XPS-OM als Bildressource verfügbar ist, kann es verwendet werden, um ein Bild Pinsel Objekt zu erstellen und dem Pfad, der die Bildposition und-Größe auf der Seite beschreibt, als Füll Pinsel hinzuzufügen.
+Wenn das Quellbild im XPS OM als Bildressource verfügbar ist, kann es zum Erstellen eines Bildpinselobjekts verwendet und als Füllpinsel dem Pfad hinzugefügt werden, der die Bildposition und -größe auf der Seite beschreibt.
 
 
 ```C++
@@ -128,9 +128,9 @@ Wenn das Quell Image im XPS-OM als Bildressource verfügbar ist, kann es verwend
 
 
 
-### <a name="create-path-object-for-image"></a>Pfad Objekt für Image erstellen
+### <a name="create-path-object-for-image"></a>Erstellen eines Pfadobjekts für das Bild
 
-Die folgende Methode akzeptiert eine **XPS- \_ Rect** -Struktur und erstellt einen rechteckigen Pfad.
+Die folgende Methode akzeptiert eine **XPS \_ RECT-Struktur** und erstellt einen rechteckigen Pfad.
 
 
 ```C++
@@ -200,61 +200,61 @@ CreateRectanglePath(
 **Next Steps**
 </dt> <dt>
 
-[Navigieren im XPS-OM](navigate-the-xps-om.md)
+[Navigieren im XPS OM](navigate-the-xps-om.md)
 </dt> <dt>
 
-[Schreiben von Text in ein XPS-OM](write-text-to-an-xps-om.md)
+[Schreiben von Text in ein XPS OM](write-text-to-an-xps-om.md)
 </dt> <dt>
 
-[Zeichnen von Grafiken in einem XPS-OM](draw-graphics-in-an-xps-om.md)
+[Zeichnen von Grafiken in einem XPS OM](draw-graphics-in-an-xps-om.md)
 </dt> <dt>
 
-[Schreiben eines XPS-om in ein XPS-Dokument](write-an-xps-om-to-an-xps-document.md)
+[Schreiben eines XPS OM in ein XPS-Dokument](write-an-xps-om-to-an-xps-document.md)
 </dt> <dt>
 
-[Drucken eines XPS-OM](print-an-xps-om.md)
+[Drucken eines XPS OM](print-an-xps-om.md)
 </dt> <dt>
 
 **Auf dieser Seite verwendet**
 </dt> <dt>
 
-[**Iopcparamei**](/previous-versions/windows/desktop/api/msopc/nn-msopc-iopcparturi)
+[**IOpcPartUri**](/previous-versions/windows/desktop/api/msopc/nn-msopc-iopcparturi)
 </dt> <dt>
 
-[**Ixpsomimagebrush**](/windows/desktop/api/xpsobjectmodel/nn-xpsobjectmodel-ixpsomimagebrush)
+[**IXpsOMImageBrush**](/windows/desktop/api/xpsobjectmodel/nn-xpsobjectmodel-ixpsomimagebrush)
 </dt> <dt>
 
-[**Ixpsomimageresource**](/windows/desktop/api/xpsobjectmodel/nn-xpsobjectmodel-ixpsomimageresource)
+[**IXpsOMImageResource**](/windows/desktop/api/xpsobjectmodel/nn-xpsobjectmodel-ixpsomimageresource)
 </dt> <dt>
 
-[**Ixpsomgeometry**](/windows/desktop/api/xpsobjectmodel/nn-xpsobjectmodel-ixpsomgeometry)
+[**IXpsOMGeometry**](/windows/desktop/api/xpsobjectmodel/nn-xpsobjectmodel-ixpsomgeometry)
 </dt> <dt>
 
-[**Ixpsomgeometryfigure**](/windows/desktop/api/xpsobjectmodel/nn-xpsobjectmodel-ixpsomgeometryfigure)
+[**IXpsOMGeometryFigure**](/windows/desktop/api/xpsobjectmodel/nn-xpsobjectmodel-ixpsomgeometryfigure)
 </dt> <dt>
 
-[**Ixpsomgeometryfigurückruf**](/windows/desktop/api/xpsobjectmodel/nn-xpsobjectmodel-ixpsomgeometryfigurecollection)
+[**IXpsOMGeometryFigureCollection**](/windows/desktop/api/xpsobjectmodel/nn-xpsobjectmodel-ixpsomgeometryfigurecollection)
 </dt> <dt>
 
-[**Ixpsomobjectfactory**](/windows/desktop/api/xpsobjectmodel/nn-xpsobjectmodel-ixpsomobjectfactory)
+[**IXpsOMObjectFactory**](/windows/desktop/api/xpsobjectmodel/nn-xpsobjectmodel-ixpsomobjectfactory)
 </dt> <dt>
 
-[**Ixpsompackage**](/windows/desktop/api/xpsobjectmodel/nn-xpsobjectmodel-ixpsompackage)
+[**IXpsOMPackage**](/windows/desktop/api/xpsobjectmodel/nn-xpsobjectmodel-ixpsompackage)
 </dt> <dt>
 
-[**Ixpsompath**](/windows/desktop/api/xpsobjectmodel/nn-xpsobjectmodel-ixpsompath)
+[**IXpsOMPath**](/windows/desktop/api/xpsobjectmodel/nn-xpsobjectmodel-ixpsompath)
 </dt> <dt>
 
-[**Ixpsomvisualcollection**](/windows/desktop/api/xpsobjectmodel/nn-xpsobjectmodel-ixpsomvisualcollection)
+[**IXpsOMVisualCollection**](/windows/desktop/api/xpsobjectmodel/nn-xpsobjectmodel-ixpsomvisualcollection)
 </dt> <dt>
 
 **Weitere Informationen**
 </dt> <dt>
 
-[Initialisieren eines XPS-OMS](xps-object-model-initialization.md)
+[Initialisieren eines XPS OM](xps-object-model-initialization.md)
 </dt> <dt>
 
-[XPS-Dokument-API-Referenz](xps-programming-reference.md)
+[REFERENZ ZUR XPS-Dokument-API](xps-programming-reference.md)
 </dt> <dt>
 
 [XML Paper Specification](https://www.ecma-international.org/activities/XML%20Paper%20Specification/XPS%20Standard%20WD%201.6.pdf)

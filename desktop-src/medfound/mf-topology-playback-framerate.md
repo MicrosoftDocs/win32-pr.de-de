@@ -1,17 +1,17 @@
 ---
 description: Gibt die Aktualisierungsrate des Monitors an.
 ms.assetid: deeb780c-2dc2-4a9a-926a-23b9ae3bedd5
-title: MF_TOPOLOGY_PLAYBACK_FRAMERATE-Attribut (mspdl. h)
+title: MF_TOPOLOGY_PLAYBACK_FRAMERATE-Attribut (Mfidl.h)
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 620d7ff7dbc893065ebb378557f0731cd8826582
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 5ada0743900629308b1f622881d545bfbc1648b1811b36ff1640e2df5b9b83b7
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104215137"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117875657"
 ---
-# <a name="mf_topology_playback_framerate-attribute"></a>MF- \_ \_ topologiewiedergabe \_ Framerate-Attribut
+# <a name="mf_topology_playback_framerate-attribute"></a>MF \_ TOPOLOGY \_ PLAYBACK \_ FRAMERATE-Attribut
 
 Gibt die Aktualisierungsrate des Monitors an.
 
@@ -21,21 +21,21 @@ Gibt die Aktualisierungsrate des Monitors an.
 
 ## <a name="getset"></a>Abrufen/Festlegen
 
-Um dieses Attribut abzurufen, nennen Sie [**mfgetattributeratio**](/windows/desktop/api/mfapi/nf-mfapi-mfgetattributeratio).
+Rufen Sie [**MFGetAttributeRatio**](/windows/desktop/api/mfapi/nf-mfapi-mfgetattributeratio)auf, um dieses Attribut abzurufen.
 
-Um dieses Attribut festzulegen, nennen Sie [**mfsetattributeratio**](/windows/desktop/api/mfapi/nf-mfapi-mfsetattributeratio).
+Um dieses Attribut festzulegen, rufen Sie [**MFSetAttributeRatio**](/windows/desktop/api/mfapi/nf-mfapi-mfsetattributeratio)auf.
 
 ## <a name="applies-to"></a>Gilt für:
 
-[**Imftopology**](/windows/desktop/api/mfidl/nn-mfidl-imftopology)
+[**TOPOLOGIE**](/windows/desktop/api/mfidl/nn-mfidl-imftopology)
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Das topologielader verwendet dieses Attribut, um die Pipeline vor dem Start der Wiedergabe zu optimieren. Wenn Sie dieses Attribut festlegen, legen Sie auch das Attribut für die [ \_ \_ statische \_ Wiedergabe \_ der MF-Topologie](mf-topology-static-playback-optimizations.md) auf **true** fest.
+Das Topologieladeprogramm verwendet dieses Attribut, um die Pipeline zu optimieren, bevor die Wiedergabe gestartet wird. Wenn Sie dieses Attribut festlegen, legen Sie auch das [MF \_ TOPOLOGY \_ STATIC PLAYBACK \_ \_ OPTIMIZATIONS-Attribut](mf-topology-static-playback-optimizations.md) auf **TRUE** fest.
 
-Die Framerate wird als Verhältnis ausgedrückt. Die oberen 32 Bits des Attribut Werts enthalten den Zähler, und die unteren 32 Bits enthalten den Nenner.
+Die Bildfrequenz wird als Verhältnis ausgedrückt. Die oberen 32 Bits des Attributwerts enthalten den Zähler, und die unteren 32 Bits enthalten den Nenner.
 
-Die GUID-Konstante für dieses Attribut wird aus "mfuuid. lib" exportiert.
+Die GUID-Konstante für dieses Attribut wird aus mfuuid.lib exportiert.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -43,9 +43,9 @@ Die GUID-Konstante für dieses Attribut wird aus "mfuuid. lib" exportiert.
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows 7 \[ -Desktop-Apps\]<br/>                                         |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 R2 \[ -Desktop-Apps\]<br/>                            |
-| Header<br/>                   | <dl> <dt>Mspdl. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | nur Windows 7 \[ Desktop-Apps\]<br/>                                         |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server 2008 \[ R2-Desktop-Apps\]<br/>                            |
+| Header<br/>                   | <dl> <dt>Mfidl.h</dt> </dl> |
 
 
 
@@ -59,7 +59,7 @@ Die GUID-Konstante für dieses Attribut wird aus "mfuuid. lib" exportiert.
 [Topologieattribute](topology-attributes.md)
 </dt> <dt>
 
-[Video Qualitäts Verwaltung](video-quality-management.md)
+[Videoqualitätsverwaltung](video-quality-management.md)
 </dt> </dl>
 
  

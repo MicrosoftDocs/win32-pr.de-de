@@ -1,27 +1,27 @@
 ---
-title: Ty
-description: Ty
+title: Prototypen
+description: Prototypen
 ms.assetid: 2b31c01b-d52b-4df5-9cb0-a35286febd3a
 keywords:
-- Text Dienst Framework (TSF), Prototypen
-- TSF (Text Dienst Framework), Prototypen
-- TSF-Referenz, Prototypen
-- Referenz für TSF, Prototypen
-- Text Dienste, Prototypen
-- TSF-fähige Anwendungen, Prototypen
+- Textdienstframework (TSF), Prototypen
+- TSF (Textdienstframework),Prototypes
+- TSF-Referenz,Prototypen
+- Referenz zu TSF,Prototypen
+- Textdienste,Prototypen
+- TSF-fähige Anwendungen,Prototypen
 - Prototypen
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 6212461b45d65b73caa77cf21b7591a77ef2a199
-ms.sourcegitcommit: 592c9bbd22ba69802dc353bcb5eb30699f9e9403
+ms.openlocfilehash: 417ea7a87e989cd66ae98ecaeae552699a7cead592278a3f156638dac769b02b
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "104390408"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117951649"
 ---
-# <a name="prototypes"></a>Ty
+# <a name="prototypes"></a>Prototypen
 
-[ITF contextrenderingmarkup](/windows/desktop/TSF/itfcontextrenderingmarkup), [ienumtfrenderingmarkup](/windows/desktop/TSF/ienumtfrenderingmarkup)und [tf \_ renderingmarkup](/windows/desktop/TSF/tf-renderingmarkup) , das in diesem Verweis beschrieben wird, sind nicht in IDL-oder Header Dateien definiert. Die folgenden Prototypen müssen vom Mittel l-Compiler zum erhalten der Header Datei erfüllt werden.
+[ITfContextRenderingMarkup,](/windows/desktop/TSF/itfcontextrenderingmarkup) [IEnumTfRenderingMarkup](/windows/desktop/TSF/ienumtfrenderingmarkup)und [TF \_ RENDERINGMARKUP,](/windows/desktop/TSF/tf-renderingmarkup) die in diesem Verweis beschrieben werden, sind in IDL- oder Headerdateien nicht definiert. Die folgenden Prototypen müssen vom MIDL-Compiler kompiliert werden, um die Headerdatei zu erhalten.
 
 
 ```C++
@@ -80,6 +80,6 @@ interface ITfContextRenderingMarkup : IUnknown
 
 
 
- 
+ 
 
- 
+ 

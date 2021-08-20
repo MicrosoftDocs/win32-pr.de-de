@@ -1,9 +1,9 @@
 ---
-title: /Prefix-Schalter
-description: Der/prefix-Schalter leitet den mittelmäßigen Compiler zum Hinzufügen von Präfix Zeichenfolgen zu den Namen der Client-und/oder serverstubroutinen.
+title: /prefix-Schalter
+description: Der Schalter /prefix leitet den MIDL-Compiler an, den Namen der Client- und/oder Serverstubroutine Präfixzeichenfolgen hinzuzufügen.
 ms.assetid: 5530e972-08bf-4cca-9bb4-9631db824bdb
 keywords:
-- /Prefix-Schalter-Mittel l
+- /prefix switch MIDL
 topic_type:
 - apiref
 api_name:
@@ -12,22 +12,22 @@ api_type:
 - NA
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 79885a57f257fe2648a27fd67a014421b2c1c13a
-ms.sourcegitcommit: 57758ecb246c84d65e6e0e4bd5570d9176fa39cd
+ms.openlocfilehash: 366417b66838a6c55a207effbf6e8e5913cd2206b5288cf1790343789330b9ce
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "104516353"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117808818"
 ---
-# <a name="prefix-switch"></a>/Prefix-Schalter
+# <a name="prefix-switch"></a>/prefix-Schalter
 
-Der **/prefix** -Schalter leitet den mittelmäßigen Compiler zum Hinzufügen von Präfix Zeichenfolgen zu den Namen der Client-und/oder serverstubroutinen. Dies kann verwendet werden, um zuzulassen, dass ein einzelnes Programm sowohl ein Client als auch ein Server derselben Schnittstelle ist, ohne dass die Namen von Client-und serverseitigen Routinen miteinander in Konflikt stehen.
+Der **Schalter /prefix** leitet den MIDL-Compiler an, den Namen der Client- und/oder Serverstubroutine Präfixzeichenfolgen hinzuzufügen. Dies kann verwendet werden, damit ein einzelnes Programm sowohl ein Client als auch ein Server mit derselben Schnittstelle sein kann, ohne dass die client- und serverseitigen Routinenamen miteinander in Konflikt stehen.
 
 ``` syntax
 midl /prefix { client | cstub | server | sstub | switch | all }
 ```
 
-## <a name="switch-options"></a>Optionen wechseln
+## <a name="switch-options"></a>Switch-Optionen
 
 <dl> <dt>
 
@@ -38,96 +38,96 @@ midl /prefix { client | cstub | server | sstub | switch | all }
 
 <span id="client"></span><span id="CLIENT"></span>
 
-<span id="client"></span><span id="CLIENT"></span>Client * * * *
+<span id="client"></span><span id="CLIENT"></span>client**
 
 
 </dt> <dd>
 
-Wirkt sich nur auf die Namen der Clientstub-Routine aus.
+Wirkt sich nur auf die Namen der Clientstubroutinen aus.
 
 </dd> <dt>
 
 <span id="cstub"></span><span id="CSTUB"></span>
 
-<span id="cstub"></span><span id="CSTUB"></span>cstub * * * *
+<span id="cstub"></span><span id="CSTUB"></span>cstub**
 
 
 </dt> <dd>
 
-Identisch mit dem *Client*. Wirkt sich nur auf die Namen der Clientstub-Routine aus.
+Identisch mit *client*. Wirkt sich nur auf die Namen der Clientstubroutinen aus.
 
 </dd> <dt>
 
 <span id="server"></span><span id="SERVER"></span>
 
-<span id="server"></span><span id="SERVER"></span>Server * * * *
+<span id="server"></span><span id="SERVER"></span>server**
 
 
 </dt> <dd>
 
-Wirkt sich nur auf die Routine Namen aus, die von der Server-stubroutine aufgerufen werden.
+Wirkt sich nur auf die Routinenamen aus, die von der Serverstubroutine aufgerufen werden.
 
 </dd> <dt>
 
 <span id="sstub"></span><span id="SSTUB"></span>
 
-<span id="sstub"></span><span id="SSTUB"></span>sstub * * * *
+<span id="sstub"></span><span id="SSTUB"></span>sstub**
 
 
 </dt> <dd>
 
-Identisch mit dem *Server*. Wirkt sich nur auf die Routine Namen aus, die von der Server-stubroutine aufgerufen werden.
+Identisch mit *Server*. Wirkt sich nur auf die Routinenamen aus, die von der Serverstubroutine aufgerufen werden.
 
 </dd> <dt>
 
 <span id="switch"></span><span id="SWITCH"></span>
 
-<span id="switch"></span><span id="SWITCH"></span>Switch * * * *
+<span id="switch"></span><span id="SWITCH"></span>switch**
 
 
 </dt> <dd>
 
-Hat Auswirkungen auf einen zusätzlichen Prototyp, der der Header Datei hinzugefügt wurde.
+Wirkt sich auf einen zusätzlichen Prototyp aus, der der Headerdatei hinzugefügt wurde.
 
 </dd> <dt>
 
 <span id="all"></span><span id="ALL"></span>
 
-<span id="all"></span><span id="ALL"></span>Alle * * * *
+<span id="all"></span><span id="ALL"></span>all**
 
 
 </dt> <dd>
 
-Wirkt sich auf die Namen von Client-und Server-Stub-Routine aus
+Wirkt sich sowohl auf die Namen der Client- als auch der Serverstubroutine aus.
 
 </dd> </dl> </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Wenn sich das Präfix für die Client seitigen Routinen vom Präfix für die serverseitigen Routinen unterscheidet, enthält die generierte Header Datei sowohl Client seitige Routine Prototypen als auch serverseitige Routine Prototypen.
+Wenn sich das Präfix für die clientseitigen Routinen vom Präfix für die serverseitigen Routinen abwechselt, enthält die generierte Headerdatei sowohl clientseitige Routineprototypen als auch serverseitige Routineprototypen.
 
-Der **/prefix** -Schalter ist nützlich, wenn eine einzelne Header Datei mit stubläufen aus mehreren Ausführungen des Mittelwert Compilers verwendet wird. Dies erzwingt zusätzliche Routine Prototypen in der Header Datei.
+Der **Schalter /prefix** ist nützlich, wenn eine einzelne Headerdatei mit Stubs aus mehreren Durchläufen des MIDL-Compilers verwendet wird. Dadurch werden zusätzliche Routineprototypen in der Headerdatei erzwingt.
 
-In allen Fällen überschreiben die Client-, Server-und switchpräfixe ein all-Präfix.
+In jedem Fall überschreiben client-, server- und switch-Präfixe alle Präfixe.
 
 ## <a name="examples"></a>Beispiele
 
-**Mittel l/Prefix Client "c \_ " Server "s \_ "**
+**midl /prefix client "c \_ " server "s \_ "**
 
-**Mittel l/Prefix alle "moo \_ "**
+**midl /prefix all \_ "moo"**
 
-**Mittel l/Prefix Client "Bark \_ "**
+**midl /prefix client \_ "suffix"**
 
 ## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 
-[Allgemeine Syntax der Mittell-Befehlszeile](general-midl-command-line-syntax.md)
+[Allgemeine MIDL-Befehlszeilensyntax](general-midl-command-line-syntax.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

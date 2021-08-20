@@ -59,7 +59,7 @@ Zeiger auf die andere Schnittstelle.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt **TRUE zurück,** wenn sich beide Schnittstellen im selben Objekt befinden, andernfalls **FALSE.**
+Gibt **TRUE** zurück, wenn sich die Schnittstellen auf demselben Objekt befinden, oder **andernfalls FALSE.**
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -68,11 +68,11 @@ Gibt **TRUE zurück,** wenn sich beide Schnittstellen im selben Objekt befinden,
 | Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Header<br/>  | <dl> <dt>Wxutil.h (include Streams.h)</dt> </dl>                                                                                    |
-| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Einzelhandels-Builds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Verkaufsbuilds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 

@@ -1,7 +1,7 @@
 ---
-description: Ruft eine Liste von nicht komprimierten Pixel Formaten ab, die mithilfe eines angegebenen DirectX-Video Beschleunigung-Profils (DXVA) gerendert werden können.
+description: Ruft eine Liste der nicht komprimierten Pixelformate ab, die mit einem angegebenen DXVA-Profil (DirectX Video Acceleration) gerendert werden können.
 ms.assetid: 7c69ea5f-6054-4430-95b5-820db6854fc0
-title: 'IDirect3DVideoDevice9:: getuncompresseddxvaformats-Methode (DXVA. h)'
+title: IDirect3DVideoDevice9::GetUncompressedDXVAFormats-Methode (Dxva.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,16 +13,16 @@ api_type:
 - COM
 api_location:
 - dxva.h
-ms.openlocfilehash: 94784ac5fe164d571a8a02e4170990f8ce06a4a1
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 3d7f27060d0c9e43f1852c86697826986c0c095c14a19fbfafa53978e96cbe79
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104345078"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117878797"
 ---
-# <a name="idirect3dvideodevice9getuncompresseddxvaformats-method"></a>IDirect3DVideoDevice9:: getuncompresseddxvaformats-Methode
+# <a name="idirect3dvideodevice9getuncompresseddxvaformats-method"></a>IDirect3DVideoDevice9::GetUncompressedDXVAFormats-Methode
 
-Ruft eine Liste von nicht komprimierten Pixel Formaten ab, die mithilfe eines angegebenen DirectX-Video Beschleunigung-Profils (DXVA) gerendert werden können.
+Ruft eine Liste der nicht komprimierten Pixelformate ab, die mit einem angegebenen DXVA-Profil (DirectX Video Acceleration) gerendert werden können.
 
 ## <a name="syntax"></a>Syntax
 
@@ -41,38 +41,38 @@ HRESULT GetUncompressedDXVAFormats(
 
 <dl> <dt>
 
-*pguid* 
+*pGuid* 
 </dt> <dd>
 
-Zeiger auf eine GUID, die das DXVA-Profil angibt. Um eine Liste der unterstützten Profile abzurufen, nennen Sie [**IDirect3DVideoDevice9:: getdxvage IDs**](idirect3dvideodevice9-getdxvaguids.md).
+Zeiger auf eine GUID, die das DXVA-Profil angibt. Rufen Sie [**IDirect3DVideoDevice9::GetDXVAGuids**](idirect3dvideodevice9-getdxvaguids.md)auf, um eine Liste der unterstützten Profile abzurufen.
 
 </dd> <dt>
 
-*pnumformats* 
+*pNumFormats* 
 </dt> <dd>
 
-Gibt bei Eingabe die Anzahl der Elemente im Array " *pformats* " an. Wenn *pformats* **null** ist, muss der Wert von `*pNumFormats` 0 (null) sein.
+Gibt bei eingabe die Anzahl der Elemente im *pFormats-Array an.* Wenn *pFormats* **NULL** ist, muss der Wert von `*pNumFormats` 0 (null) sein.
 
-Bei der Ausgabe empfängt *pnumformats* , wenn *pformats* **null** ist, die Anzahl der unterstützten Pixel Formate. Andernfalls empfängt *pnumformats* die tatsächliche Anzahl der Pixel Formate, die in das Array " *pformats* " kopiert werden.
+Wenn *pFormats* bei der Ausgabe **NULL** ist, empfängt *pNumFormats* die Anzahl der unterstützten Pixelformate. Andernfalls empfängt *pNumFormats* die tatsächliche Anzahl von Pixelformaten, die in das *pFormats-Array* kopiert wurden.
 
 </dd> <dt>
 
-*pformats* 
+*pFormats* 
 </dt> <dd>
 
-Adresse eines Arrays von **D3DFORMAT** -Werten oder **null**. Wenn der Wert nicht **null** ist, empfängt das Array eine Liste von Pixel Formaten.
+Adresse eines Arrays von **D3DFORMAT-Werten** oder **NULL.** Wenn der Wert ungleich **NULL** ist, empfängt das Array eine Liste von Pixelformaten.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Wenn diese Methode erfolgreich ausgeführt wird, gibt Sie **S \_ OK** zurück. Andernfalls wird ein **HRESULT** -Fehlercode zurückgegeben.
+Wenn diese Methode erfolgreich ist, wird **S \_ OK** zurückgegeben. Andernfalls wird ein **HRESULT-Fehlercode** zurückgegeben.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Ruft diese Methode zweimal auf. Legen Sie für den ersten-Befehl *pformats* auf **null** fest. Der *pnumformats* -Parameter empfängt die Anzahl von Formaten. Weisen Sie ein **D3DFORMAT** -Array mit der erforderlichen Größe zu, und verwenden Sie die-Methode erneut. Legen Sie dieses Mal *pformats* auf die Adresse des Arrays fest. Die-Methode füllt das Array mit der Liste der Pixel Formate aus.
+Rufen Sie diese Methode zweimal auf. Legen Sie beim ersten Aufruf *pFormats* auf **NULL** fest. Der *Parameter pNumFormats* empfängt die Anzahl der Formate. Ordnen Sie ein **D3DFORMAT-Array** mit der erforderlichen Größe zu, und rufen Sie die -Methode erneut auf. Legen Sie dieses Mal *pFormats* auf die Adresse des Arrays fest. Die -Methode füllt das Array mit der Liste der Pixelformate auf.
 
-Der Treiber sollte die Formate in absteigender Reihenfolge der bevorzugte Reihenfolge zurückgeben, wobei das am meisten bevorzugte Format zuerst aufgeführt wird.
+Der Treiber sollte die Formate in absteigender Reihenfolge zurückgeben, wobei zuerst das bevorzugte Format aufgeführt wird.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -80,9 +80,9 @@ Der Treiber sollte die Formate in absteigender Reihenfolge der bevorzugte Reihen
 
 | Anforderung | Wert |
 |-------------------------------------|-----------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                    |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/>                              |
-| Header<br/>                   | <dl> <dt>DXVA. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur Vista-Desktop-Apps\]<br/>                                    |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/>                              |
+| Header<br/>                   | <dl> <dt>Dxva.h</dt> </dl> |
 
 
 

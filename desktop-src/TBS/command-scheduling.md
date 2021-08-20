@@ -1,37 +1,37 @@
 ---
-title: Befehls Planung
+title: Befehlsplanung
 description: Jedem Befehl ist eine Priorität zugeordnet.
 ms.assetid: 63f6ba9d-0b87-403b-916b-aa8550f98a11
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 06512f0748aa88f6b32de3291e2ed1c262212ba2
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: 221702ee9dcebb8da454637f53cc29de1607d03088e24eb4a9a250d4e3ce2512
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "106341455"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117954438"
 ---
-# <a name="command-scheduling"></a>Befehls Planung
+# <a name="command-scheduling"></a>Befehlsplanung
 
-## <a name="command-scheduling"></a>Befehls Planung
+## <a name="command-scheduling"></a>Befehlsplanung
 
-Befehle können jederzeit aus mehreren Kontexten an die TSB übermittelt werden. Ein physisches TPM kann jedoch nur jeweils einen Befehl verarbeiten, und einige Befehle können für einen längeren Zeitraum ausgeführt werden. Wenn mehrere Befehle ausstehend sind, entscheidet der TSB, welcher Befehl an das TPM gesendet werden soll. Wenn ein Befehl übermittelt wird, ist jedem Befehl eine Priorität zugeordnet. Die TSB verwendet diese Prioritäten, um zu bestimmen, welcher ausstehende Befehl gesendet werden soll, wenn das TPM kostenlos ist. Die vier Prioritätsstufen sind niedrig, normal, hoch und System. Anwendungen sollten niedrige, normale oder hohe Priorität verwenden. Obwohl Befehle mit hoher Priorität üblicherweise vor Befehlen mit niedriger Priorität ausgeführt werden, hat der TSB-Befehls Planer eine Alterungs Richtlinie, die den Befehlen, die für einen längeren Zeitraum blockiert wurden, eine sehr hohe Priorität bietet.
+Befehle können jederzeit aus mehreren Kontexten an den TBS übermittelt werden. Ein physisches TPM kann jedoch nur einen Befehl nach dem anderen verarbeiten, und einige Befehle können für einen längeren Zeitraum ausgeführt werden. Wenn mehrere Befehle ausstehen, entscheidet tbs, welcher Befehl an das TPM gesendet werden soll. Wenn ein Befehl übermittelt wird, ist jedem Befehl eine Priorität zugeordnet. Der TBS verwendet diese Prioritäten, um zu bestimmen, welcher ausstehende Befehl übermittelt werden soll, wenn das TPM frei ist. Die vier Prioritätsebenen sind niedrig, normal, hoch und System. Anwendungen sollten eine niedrige, normale oder hohe Priorität verwenden. Obwohl Befehle mit hoher Priorität in der Regel vor Befehlen mit niedriger Priorität ausgeführt werden, verfügt der TBS-Befehlsplaner über eine veraltete Richtlinie, die schließlich Befehlen, die für längere Zeit blockiert wurden, eine sehr hohe Priorität einräumen.
 
-## <a name="context-management"></a>Kontext Verwaltung
+## <a name="context-management"></a>Kontextverwaltung
 
-Wenn ein TPM \_ savecontext-oder TPM2 contextsave-Befehl mit einem virtuellen Handle an eine von TSB verwaltete Ressource übermittelt wird, führt der TSB den entsprechenden Befehl für die physische Ressource aus und gibt das Ergebnis an den Aufrufer zurück, wenn die Ressource physisch im TPM vorhanden ist. Wenn die Ressource nicht physisch im TPM vorhanden ist, bewirkt die Vorverarbeitung des TPM \_ savecontext-oder TPM2 \_ contextsave-Befehls, dass die Ressource erneut geladen wird. an diesem Punkt wird der Kontext gespeichert und an den Aufrufer zurückgegeben. Wenn die zu speichernde Ressource einen Typ hat, der nach dem Speichern normalerweise automatisch vom TPM geleert wird, wird die virtuelle Ressource von TSB bei Abschluss dieses Befehls ungültig. Wenn ein TPM- \_ loadcontext-oder TPM2 \_ contextload-Befehl an die TSB übermittelt wird, führt die TSB den Befehl sofort aus. Wenn der Befehl erfolgreich abgeschlossen wird, virtualisiert die TSB das Ressourcen Handle und übergibt den resultierenden TPM-Bytestream an den Aufrufer. Wenn ein TPM- \_ Befehl flushspecific oder TPM2 \_ flushcontext mit einem virtuellen Handle an eine von TSB verwaltete Ressource gesendet wird, führt die TSB einen TPM- \_ flushspecific-oder TPM2 \_ flushcontext-Befehl aus, um die Ressource aus dem TPM zu entfernen, wenn Sie physisch vorhanden ist. In diesem Fall macht die TSB die virtuelle Ressource ungültig und gibt das Ergebnis des Flush-Befehls an den Aufrufer zurück. Wenn die Ressource nicht physisch im TPM vorhanden ist, wird die Ressource, die dem virtuellen Handle entspricht, durch die Vorverarbeitung des TPM- \_ flushspecific-oder TPM2 \_ flushcontext-Befehls geladen. Sie wird dann geleert, wenn der Befehl tatsächlich verarbeitet wird. TSB bietet keine Unterstützung für das TPM \_ keycontrolowner-Bit oder die keephandle-Funktionalität des TPM \_ loadcontext-Vorgangs, sodass eine Ressource nicht das gleiche Handle erhält, das Sie vor dem Speichern des Kontexts besaß.
+Wenn ein TPM \_ SaveContext- oder TPM2 ContextSave-Befehl mit einem virtuellen Handle an eine Ressource übermittelt wird, die vom TBS verwalten wird, führt TBS den entsprechenden Befehl für die physische Ressource aus und gibt das Ergebnis an den Aufrufer zurück, wenn die Ressource physisch im TPM vorhanden ist. Wenn die Ressource nicht physisch im TPM vorhanden ist, bewirkt die Vorverarbeitung des BEFEHLs TPM SaveContext oder \_ TPM2 ContextSave, dass die Ressource erneut geladen wird. An diesem Punkt wird der Kontext gespeichert und an den \_ Aufrufer zurückgegeben. Wenn es sich bei der zu speichernden Ressource um einen Typ handelt, der normalerweise nach dem Speichern automatisch aus dem TPM geleert wird, macht TBS die virtuelle Ressource nach Abschluss dieses Befehls ungültig. Wenn ein TPM \_ LoadContext- oder TPM2 ContextLoad-Befehl an den TBS übermittelt wird, führt \_ TBS den Befehl sofort aus. Wenn der Befehl erfolgreich abgeschlossen wird, virtualisiert TBS das Ressourcenhand handle und übergibt den resultierenden TPM-Bytestream an den Aufrufer. Wenn ein TPM FlushSpecific- oder TPM2 FlushContext-Befehl mit einem virtuellen Handle an eine Ressource übermittelt wird, die der TBS verwalten soll, führt der TBS einen \_ \_ TPM \_ FlushSpecific- oder TPM2 FlushContext-Befehl aus, um die Ressource aus dem TPM zu löschen, wenn sie physisch vorhanden \_ ist. In diesem Fall macht TBS die virtuelle Ressource ungültig und gibt das Ergebnis des Flush-Befehls an den Aufrufer zurück. Wenn die Ressource nicht physisch im TPM vorhanden ist, wird die Ressource, die dem virtuellen Handle entspricht, bei der Vorverarbeitung des Tpm \_ FlushSpecific- oder TPM2 FlushContext-Befehls geladen. Sie wird jedoch geleert, wenn der Befehl tatsächlich verarbeitet \_ wird. Der TBS unterstützt das TPM KeyControlOwner-Bit oder die \_ keepHandle-Funktionalität des TPM LoadContext-Vorgangs nicht, sodass eine Ressource nicht das gleiche Handle wie vor dem Speichern des Kontexts erhalten \_ hat.
 
 ## <a name="other-commands"></a>Andere Befehle
 
-Befehle, die in dieser Dokumentation nicht erwähnt werden, werden verarbeitet, indem die virtuellen Schlüssel Handles durch physische Schlüssel Handles (falls erforderlich) ersetzt und an das TPM übermittelt werden. Dies erfolgt nach dem Ausführen der entsprechenden Vorgänge, um sicherzustellen, dass die verwendeten Ressourcen physisch auf dem TPM vorhanden sind. Es wird keine zusätzliche besondere Verarbeitung durchgeführt. Die TSB versucht nicht, die Genauigkeit der Virtualisierung zu verbessern, indem die vom TPM zurückgegebenen Daten als Teil einer TPM \_ getcapability-oder TPM2 \_ getcapability-Abfrage geändert werden. Die TSB unterstützt auch die physischen TCG-Anwesenheits Befehle. Die TSB fungiert als Passthrough für Befehle für physische Präsenz. Es wird keine spezielle Verarbeitung durch die TSB selbst ausgeführt.
+Befehle, die in dieser Dokumentation nicht erwähnt werden, werden verarbeitet, indem virtuelle Schlüsselhandles durch physische Schlüsselhandles (falls erforderlich) ersetzt und an das TPM übermitteln werden. Dies erfolgt nach dem Ausführen der entsprechenden Vorgänge, um sicherzustellen, dass die verwendeten Ressourcen physisch auf dem TPM vorhanden sind. Es wird keine zusätzliche spezielle Verarbeitung ausgeführt. TbS versucht nicht, die Genauigkeit der Virtualisierung zu verbessern, indem die vom TPM im Rahmen einer TPM \_ GetCapabilities- oder TPM2 GetCapability-Abfrage zurückgegebenen Daten \_ geändert werden. TbS unterstützt auch TCG Physical Presence-Befehle. TbS fungiert als Pass-Through für Physische Anwesenheitsbefehle. Vom TBS selbst wird keine spezielle Verarbeitung ausgeführt.
 
-## <a name="cleanup"></a>Cleanup
+## <a name="cleanup"></a>Bereinigen
 
-Wenn ein Kontext beendet wird, werden alle zugeordneten physischen und virtuellen Ressourcen bereinigt, sodass keine Systemressourcen mehr beansprucht werden.
+Wenn ein Kontext beendet wird, werden alle ihm zugeordneten physischen und virtuellen Ressourcen bereinigt, damit sie keine Systemressourcen mehr verbrauchen.
 
- 
+ 
 
- 
+ 
 
 
 

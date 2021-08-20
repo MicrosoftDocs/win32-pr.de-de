@@ -1,11 +1,11 @@
 ---
-title: Ivmserialport connectimmediately-Eigenschaft (vpccominterfaces. h)
-description: Bestimmt, ob der serielle Anschluss geöffnet werden soll, ohne darauf zu warten, dass ein Modem Befehl empfangen wird.
+title: IVMSerialPort ConnectImmediately-Eigenschaft (VPCCOMInterfaces.h)
+description: Bestimmt, ob der serielle Anschluss geöffnet werden soll, ohne darauf zu warten, dass ein Modembefehl empfangen wird.
 ms.assetid: 5ac22906-0fe2-477d-98af-7c05ce274cc5
 keywords:
-- Connectimmediately-Eigenschaft virtueller PC
-- Connectimmediately-Eigenschaft Virtual PC, ivmserialport-Schnittstelle
-- Ivmserialport Interface Virtual PC, connectimmediately (Eigenschaft)
+- ConnectImmediately-Eigenschaft Virtueller PC
+- ConnectImmediately-Eigenschaft Virtueller PC, IVMSerialPort-Schnittstelle
+- IVMSerialPort-Schnittstelle Virtueller PC, ConnectImmediately-Eigenschaft
 topic_type:
 - apiref
 api_name:
@@ -17,18 +17,18 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 4ff7661b9cf3b118427b1ecb2b6f450913e35e35
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 6a2a052f946039e8ae7a5e1c2905e90596da7d537cbc06d0789adb0f01760bde
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "103741744"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117753005"
 ---
-# <a name="ivmserialportconnectimmediately-property"></a>Ivmserialport:: connectimmediately (Eigenschaft)
+# <a name="ivmserialportconnectimmediately-property"></a>IVMSerialPort::ConnectImmediately-Eigenschaft
 
-\[Windows Virtual PC ist nicht mehr für die Verwendung ab Windows 8 verfügbar. Verwenden Sie stattdessen den [Hyper-V-WMI-Anbieter (v2)](/windows/desktop/HyperV_v2/windows-virtualization-portal).\]
+\[Windows Der virtuelle PC ist ab diesem Zeitraum nicht mehr Windows 8. Verwenden Sie stattdessen den [Hyper-V-WMI-Anbieter (V2).](/windows/desktop/HyperV_v2/windows-virtualization-portal)\]
 
-Bestimmt, ob der serielle Anschluss geöffnet werden soll, ohne darauf zu warten, dass ein Modem Befehl empfangen wird.
+Bestimmt, ob der serielle Anschluss geöffnet werden soll, ohne darauf zu warten, dass ein Modembefehl empfangen wird.
 
 Diese Eigenschaft ist schreibgeschützt.
 
@@ -45,7 +45,7 @@ HRESULT get_ConnectImmediately(
 
 ## <a name="property-value"></a>Eigenschaftswert
 
-**Variant \_ TRUE** , wenn der serielle Anschluss geöffnet werden soll, ohne darauf zu warten, dass ein Modem Befehl empfangen wird. **Variant \_ Andernfalls false** .
+**VARIANT \_ TRUE,** wenn der serielle Anschluss geöffnet werden soll, ohne darauf zu warten, dass ein Modembefehl empfangen wird. **VARIANT \_ Andernfalls FALSE.**
 
 ## <a name="error-codes"></a>Fehlercodes
 
@@ -54,15 +54,15 @@ HRESULT get_ConnectImmediately(
 | Name/Wert                                                                                                                                                    | Bedeutung                                                             |
 |---------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------|
 | <dl> <dt>S \_ OK</dt> <dt>0</dt> </dl>                       | Der Vorgang wurde durchgeführt.<br/>                            |
-| <dl> <dt>E \_ Zeiger</dt> <dt>0x80004003</dt> </dl>         | Der-Parameter ist **null**.<br/>                               |
-| <dl> <dt>VM \_ E \_ VM \_ unbekannt</dt> <dt>0xa0040207</dt> </dl> | Die Konfiguration für diesen virtuellen Computer ist ungültig.<br/> |
-| <dl> <dt>DISP \_ E- \_ Ausnahme</dt> <dt>0x80020009</dt> </dl> | Ein unerwarteter Fehler ist aufgetreten.<br/>                        |
+| <dl> <dt>E \_ ZEIGER 0X80004003</dt> <dt></dt> </dl>         | Der Parameter ist **NULL.**<br/>                               |
+| <dl> <dt>VM \_ E \_ VM \_ UNKNOWN</dt> <dt>0xA0040207</dt> </dl> | Die Konfiguration für diesen virtuellen Computer ist ungültig.<br/> |
+| <dl> <dt>DISP \_ E \_ EXCEPTION</dt> <dt>0x80020009</dt> </dl> | Ein unerwarteter Fehler ist aufgetreten.<br/>                        |
 
 
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Diese Eigenschaft ist nur gültig, wenn die [**Porttyp**](ivmserialport-type.md) -Eigenschaft **vmserialport \_ hostport** ist.
+Diese Eigenschaft ist nur gültig, wenn die [**Type-Eigenschaft**](ivmserialport-type.md) des Ports **vmSerialPort \_ HostPort ist.**
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -70,12 +70,12 @@ Diese Eigenschaft ist nur gültig, wenn die [**Porttyp**](ivmserialport-type.md)
 
 | Anforderung | Wert |
 |-------------------------------------|-----------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows 7 \[ -Desktop-Apps\]<br/>                                                    |
+| Unterstützte Mindestversion (Client)<br/> | Windows 7 \[ Desktop-Apps\]<br/>                                                    |
 | Unterstützte Mindestversion (Server)<br/> | Nicht unterstützt<br/>                                                                     |
 | Ende des Supports (Client)<br/>    | Windows 7<br/>                                                                          |
 | Produkt<br/>                  | Windows Virtual PC<br/>                                                                 |
-| Header<br/>                   | <dl> <dt>Vpccominterfaces. h</dt> </dl> |
-| IID<br/>                      | IID \_ ivmserialport ist als 2ce4460d-1d3f-4458-bf8b-44084b816815 definiert.<br/>              |
+| Header<br/>                   | <dl> <dt>VPCCOMInterfaces.h</dt> </dl> |
+| IID<br/>                      | IID \_ IVMSerialPort ist als 2ce4460d-1d3f-4458-bf8b-44084b816815 definiert.<br/>              |
 
 
 
@@ -83,7 +83,7 @@ Diese Eigenschaft ist nur gültig, wenn die [**Porttyp**](ivmserialport-type.md)
 
 <dl> <dt>
 
-[**Ivmserialport**](ivmserialport.md)
+[**IVMSerialPort**](ivmserialport.md)
 </dt> </dl>
 
  

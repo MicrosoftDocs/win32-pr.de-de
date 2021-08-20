@@ -109,7 +109,7 @@ Eine Zeichenfolge, die die vom ACE gesteuerten [Zugriffsrechte](access-rights-an
 | Zugriffsberechtigungszeichenfolge | Konstante in "Sddl.h" | Zugriffsrechtwert |
 |----------------------|--------------------|--------------------|
 | "RC"                 | \_ \_ SDDL-LESESTEUERELEMENT | \_READ-STEUERELEMENT      |
-| "SD"                 | SDDL \_ STANDARD \_ DELETE | Delete          |
+| "SD"                 | SDDL \_ STANDARD \_ DELETE | DELETE          |
 | "WD"                 | SDDL \_ WRITE \_ DAC | \_SCHREIB-DAC            |
 | "WO"                 | SDDL \_ WRITE \_ OWNER | WRITE \_ OWNER        |
 
@@ -207,7 +207,7 @@ Das \# ""-Zeichen ist synonym mit "0" in Ressourcenattributen. Beispiel: D:AI(XA
 | "TS"                                    | SDDL \_ WSTRING      | Breite Zeichenfolge      |
 | "TD"                                    | \_SDDL-SID          | SID              |
 | "TX"                                    | \_SDDL-BLOB         | Oktettzeichenfolge     |
-| "TB"                                    | SDDL \_ BOOLEAN      | Boolean          |
+| "TB"                                    | SDDL \_ BOOLEAN      | Boolesch          |
 
 
 

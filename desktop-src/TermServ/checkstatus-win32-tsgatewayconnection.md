@@ -1,12 +1,12 @@
 ---
 title: CheckStatus-Methode der Win32_TSGatewayConnection-Klasse
-description: Hiermit wird der Status einer Remotedesktop Gateway-Server Verbindung (RD-Gateway) zu einem anderen Computer überprüft und ermittelt, ob der Bereitstellungs Zielcomputer für den Lastenausgleich konfiguriert ist.
+description: Überprüft den Status einer Remotedesktop Gateway-Serververbindung (RD-Gateway) mit einem anderen Computer und bestimmt, ob der Zielcomputer für den Lastenausgleich konfiguriert ist.
 ms.assetid: e8ee3d40-76eb-401f-b255-bccd7ba8c058
 ms.tgt_platform: multiple
 keywords:
 - CheckStatus-Methode Remotedesktopdienste
-- CheckStatus-Methode Remotedesktopdienste, Win32_TSGatewayConnection-Klasse
-- Win32_TSGatewayConnection-Klasse Remotedesktopdienste, checkStatus-Methode
+- CheckStatus-Methode Remotedesktopdienste , Win32_TSGatewayConnection-Klasse
+- Win32_TSGatewayConnection-Klasse Remotedesktopdienste , CheckStatus-Methode
 topic_type:
 - apiref
 api_name:
@@ -17,16 +17,16 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: babb083af5c0581abe27d442a466c3d6114b957a
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: c1056bbbd072a22310aa1c01cc92064819f13577018ed24c46e747f9a86b3566
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "106339545"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117942167"
 ---
-# <a name="checkstatus-method-of-the-win32_tsgatewayconnection-class"></a>CheckStatus-Methode der Win32- \_ Klasse "tgatewayconnection"
+# <a name="checkstatus-method-of-the-win32_tsgatewayconnection-class"></a>CheckStatus-Methode der Win32 \_ TSGatewayConnection-Klasse
 
-Hiermit wird der Status einer Remotedesktop Gateway-Server Verbindung (RD-Gateway) zu einem anderen Computer überprüft und ermittelt, ob der Bereitstellungs Zielcomputer für den Lastenausgleich konfiguriert ist.
+Überprüft den Status einer Remotedesktop Gateway-Serververbindung (RD-Gateway) mit einem anderen Computer und bestimmt, ob der Zielcomputer für den Lastenausgleich konfiguriert ist.
 
 ## <a name="syntax"></a>Syntax
 
@@ -44,17 +44,17 @@ uint32 CheckStatus(
 
 <dl> <dt>
 
-*Servername* \[ in\]
+*ServerName* \[ In\]
 </dt> <dd>
 
-Der Name des Quell RD-Gateway Servers, von dem die Verbindung geprüft wird.
+Der Name des RD-Quellgatewayservers, von dem aus die Verbindung überprüft wird.
 
 </dd> <dt>
 
-*EndpointName* \[ in\]
+*EndPointName* \[ In\]
 </dt> <dd>
 
-Der Name des Zielservers (der Endpunkt), auf den der Zugriff vom Quell Server aus geprüft wird.
+Der Name des Zielservers (endpunkt), auf den der Zugriff vom Quellserver aus überprüft wird.
 
 </dd> </dl>
 
@@ -69,7 +69,7 @@ Diese Methode gibt die folgenden möglichen Rückgabewerte zurück.
 
 0
 
-Der Verbindungsstatus lautet "OK". Der Endpunkt ist erreichbar und für den Lastenausgleich konfiguriert.
+Der Verbindungsstatus ist OK. Der Endpunkt ist erreichbar und für den Lastenausgleich konfiguriert.
 
 </dd> <dt>
 
@@ -96,13 +96,13 @@ Der Endpunkt ist entweder nicht erreichbar oder nicht für den Lastenausgleich k
 
 0x80075c32
 
-Status Fehler. Der Endpunkt ist erreichbar, aber der RPC/HTTP-Lasten Ausgleichs Dienst (rpchttplsb) wurde auf dem Bereitstellungs Zielcomputer nicht gestartet.
+Ein Statusfehler ist aufgetreten. Der Endpunkt ist erreichbar, aber der RPC/HTTP-Lastenausgleichsdienstdienst (RPCHTTPLBS) wird auf dem Zielcomputer nicht gestartet.
 
 </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Managed Object Format-Dateien (MOF) enthalten die Definitionen für Windows-Verwaltungsinstrumentation (WMI)-Klassen. MOF-Dateien werden nicht als Teil des Microsoft Windows Software Development Kit (SDK) installiert. Sie werden auf dem Server installiert, wenn Sie die zugehörige Rolle mithilfe der Server-Manager hinzufügen. Weitere Informationen zu MOF-Dateien finden Sie unter [Managed Object Format (MOF)](/windows/desktop/WmiSdk/managed-object-format--mof-).
+Managed Object Format -Dateien (MOF) enthalten die Definitionen für WMI-Klassen (Windows Management Instrumentation). MOF-Dateien werden nicht als Teil des Microsoft Windows Software Development Kit (SDK) installiert. Sie werden auf dem Server installiert, wenn Sie die zugeordnete Rolle mithilfe der Server-Manager hinzufügen. Weitere Informationen zu MOF-Dateien finden Sie unter [Managed Object Format (MOF).](/windows/desktop/WmiSdk/managed-object-format--mof-)
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -113,7 +113,7 @@ Managed Object Format-Dateien (MOF) enthalten die Definitionen für Windows-Verw
 | Unterstützte Mindestversion (Client)<br/> | Nicht unterstützt<br/>                                                                |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2008<br/>                                                           |
 | Namespace<br/>                | Root \\ CIMv2 \\ TerminalServices<br/>                                                 |
-| MOF<br/>                      | <dl> <dt>"T-Gateway. mof"</dt> </dl> |
+| MOF<br/>                      | <dl> <dt>TSGateway.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>AagWmi.dll</dt> </dl>    |
 
 
@@ -122,7 +122,7 @@ Managed Object Format-Dateien (MOF) enthalten die Definitionen für Windows-Verw
 
 <dl> <dt>
 
-[**Win32-"- \_ gatewayconnection"**](win32-tsgatewayconnection.md)
+[**Win32 \_ TSGatewayConnection**](win32-tsgatewayconnection.md)
 </dt> </dl>
 
  

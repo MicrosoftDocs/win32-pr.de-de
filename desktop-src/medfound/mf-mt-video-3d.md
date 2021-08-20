@@ -35,11 +35,11 @@ Dieses Attribut gilt für Videomedientypen. Wenn dieses Attribut **TRUE ist,** e
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 
-[Alphabetische Liste Media Foundation Attributen](alphabetical-list-of-media-foundation-attributes.md)
+[Alphabetische Liste Media Foundation Attribute](alphabetical-list-of-media-foundation-attributes.md)
 </dt> </dl>
 
  

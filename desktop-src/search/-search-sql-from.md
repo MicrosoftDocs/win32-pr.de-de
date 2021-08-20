@@ -22,9 +22,9 @@ FROM [<ComputerName>.]SystemIndex
 
 
 
-Derzeit unterstützt Windows Search nur einen Katalog, SystemIndex. Wenn Sie den lokalen Katalog eines Remotecomputers abfragen möchten, fügen Sie den Computernamen vor dem Katalog und einen UNIVERSAL NAMING CONVENTION-Pfad (UNC) auf dem Remotecomputer in die SCOPE- oder DIRECTORY-Klausel ein.
+Derzeit unterstützt Windows Search nur einen Katalog, SystemIndex. Um den lokalen Katalog eines Remotecomputers abzufragen, fügen Sie den Computernamen vor dem Katalog und einen UNC-Pfad (Universal Naming Convention) auf dem Remotecomputer in die SCOPE- oder DIRECTORY-Klausel ein.
 
-Sie geben einen Bereich als Einschränkung in der WHERE-Klausel an, wie im Thema [SCOPE and DIRECTORY Predicates (SCOPE- und DIRECTORY-Prädikate)](-search-sql-folderdepth.md) beschrieben.
+Sie geben einen Bereich als Einschränkung in der WHERE-Klausel an, wie im Thema [SCOPE- und DIRECTORY-Prädikate](-search-sql-folderdepth.md) beschrieben.
 
 ## <a name="examples"></a>Beispiele
 
@@ -42,7 +42,7 @@ FROM server.SystemIndex WHERE SCOPE='file://server/users' AND CONTAINS('Microsof
 
 
 
-Im zweiten der obigen Beispiele ist die Abfrage auf einen Remotecomputer namens "zarascomputer" abgezielt. Beachten Sie, dass dieser Computername sowohl in den FROM- als auch in der SCOPE-Klausel angezeigt wird. Im dritten Beispiel ist die Abfrage auf einen Freigabenamen "users" auf einem Server namens "server" (wobei der UNC-Pfad \\ \\ Serverbenutzer sein \\ würde) als Ziel festgelegt.
+Im zweiten der vorherigen Beispiele ist die Abfrage auf einen Remotecomputer mit dem Namen "zarascomputer" ausgerichtet. Beachten Sie, dass dieser Computername sowohl in der FROM- als auch in der SCOPE-Klausel angezeigt wird. Im dritten Beispiel ist die Abfrage auf einen Freigabenamen "users" auf einem Server mit dem Namen "server" ausgerichtet (wobei der UNC-Pfad \\ \\ \\ Serverbenutzer wäre).
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
@@ -51,7 +51,7 @@ Im zweiten der obigen Beispiele ist die Abfrage auf einen Remotecomputer namens 
 **Referenz**
 </dt> <dt>
 
-[Übersicht über die Suchsyntax SQL Suchfunktion](-search-sql-ovwofsearchquery.md)
+[Übersicht über die Syntax für SQL Suchen](-search-sql-ovwofsearchquery.md)
 </dt> <dt>
 
 [SELECT-Anweisung](-search-sql-select.md)

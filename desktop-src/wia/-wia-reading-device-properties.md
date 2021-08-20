@@ -1,25 +1,25 @@
 ---
-description: Anwendungen verwenden die iwiapropertystorage-Schnittstelle eines Geräts, um Geräteeigenschaften zu lesen und zu schreiben. Iwiapropertystorage erbt alle Methoden der IPropertyStorage-Schnittstelle der Component Object Model (com).
+description: Anwendungen verwenden die IWiaPropertyStorage-Schnittstelle eines Geräts, um Geräteeigenschaften zu lesen und zu schreiben. IWiaPropertyStorage erbt alle Methoden der Component Object Model-Schnittstelle (COM) IPropertyStorage.
 ms.assetid: 65ca9e71-9a0f-495f-b78c-3b1a8d66ee33
 title: Lesen von Geräteeigenschaften
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 235ba701ed3356e09070709f3c99f2826c69c8c5
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: bf102fb2ade1a13b648e13f56f7f999dd35c41f721ac20d72914219c98311505
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "103958965"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117669260"
 ---
 # <a name="reading-device-properties"></a>Lesen von Geräteeigenschaften
 
-Anwendungen verwenden die [**iwiapropertystorage**](/windows/desktop/api/wia_xp/nn-wia_xp-iwiapropertystorage) -Schnittstelle eines Geräts, um Geräteeigenschaften zu lesen und zu schreiben. **Iwiapropertystorage** erbt alle Methoden der [IPropertyStorage](/windows/win32/api/propidlbase/nn-propidlbase-ipropertystorage)-Schnittstelle der Component Object Model (com).
+Anwendungen verwenden die [**IWiaPropertyStorage-Schnittstelle**](/windows/desktop/api/wia_xp/nn-wia_xp-iwiapropertystorage) eines Geräts, um Geräteeigenschaften zu lesen und zu schreiben. **IWiaPropertyStorage** erbt alle Methoden der Component Object Model-Schnittstelle (COM) [IPropertyStorage](/windows/win32/api/propidlbase/nn-propidlbase-ipropertystorage).
 
-Zu den Geräteeigenschaften zählen Informationen zu einem Gerät, das die Funktionen und Einstellungen des Geräts beschreibt. Eine Liste dieser Eigenschaften finden Sie unter [Geräteeigenschaften](-wia-device-properties.md).
+Geräteeigenschaften enthalten Informationen zu einem Gerät, die die Funktionen und Einstellungen des Geräts beschreiben. Eine Liste dieser Eigenschaften finden Sie unter [Geräteeigenschaften.](-wia-device-properties.md)
 
-Unter den Geräteeigenschaften, die mit [**iwiapropertystorage**](/windows/desktop/api/wia_xp/nn-wia_xp-iwiapropertystorage) gelesen werden, handelt es sich um die Geräte-ID, die dann verwendet wird, um ein Windows-Abbild Erfassungsgerät (WIA) zu erstellen. Weitere Informationen finden Sie unter [**iwiadevmgr:: kreatedevice**](/windows/desktop/api/wia_xp/nf-wia_xp-iwiadevmgr-createdevice) (oder [**IWiaDevMgr2:: kreatedevice**](-wia-iwiadevmgr2-createdevice.md)).
+Zu den Geräteeigenschaften, die mithilfe von [**IWiaPropertyStorage**](/windows/desktop/api/wia_xp/nn-wia_xp-iwiapropertystorage) gelesen werden, gehört die Geräte-ID, die dann zum Erstellen eines WIA-Geräts (Windows Image Acquisition) verwendet wird. Weitere Informationen finden Sie unter [**IWiaDevMgr::CreateDevice**](/windows/desktop/api/wia_xp/nf-wia_xp-iwiadevmgr-createdevice) (oder [**IWiaDevMgr2::CreateDevice**](-wia-iwiadevmgr2-createdevice.md)).
 
-Im folgenden Beispiel werden die Geräte-ID, der Gerätename und die Geräte Beschreibung aus dem Array mit den Geräteeigenschaften gelesen, und diese Eigenschaften werden in der Konsole ausgegeben.
+Im folgenden Beispiel werden die Geräte-ID, der Gerätename und die Gerätebeschreibung aus dem Array der Geräteeigenschaften gelesen und in der Konsole ausgegeben.
 
 
 ```
@@ -124,11 +124,11 @@ Im folgenden Beispiel werden die Geräte-ID, der Gerätename und die Geräte Bes
 
 
 
-In diesem Beispiel richtet die Anwendung [PROPVARIANT](/windows/win32/api/propidlbase/ns-propidlbase-propvariant) -Arrays (**PROPSPEC** bzw. **propvar**) zum Speichern von Eigenschafts Informationen ein. Diese Arrays werden im Aufrufen der [IPropertyStorage:: Read Multiple](/windows/win32/api/propidlbase/nf-propidlbase-ipropertystorage-readmultiple) -Methode des [**iwiapropertystorage**](/windows/desktop/api/wia_xp/nn-wia_xp-iwiapropertystorage) -Zeigers **piwiapropstg** als Parameter übergeben. Jedes Element des **PROPSPEC** -Arrays enthält den Typ und den Namen einer Geräte Eigenschaft. Bei der Rückgabe enthält jedes Element des **propvar** den Wert der Geräte Eigenschaft, die durch das entsprechende Element des **PROPSPEC** -Arrays dargestellt wird.
+In diesem Beispiel richtet die Anwendung [PROPVARIANT-Arrays](/windows/win32/api/propidlbase/ns-propidlbase-propvariant) (**PropSpec** bzw. **PropVar)** ein, um Eigenschaftsinformationen zu speichern. Diese Arrays werden als Parameter im Aufruf der [IPropertyStorage::ReadMultiple-Methode](/windows/win32/api/propidlbase/nf-propidlbase-ipropertystorage-readmultiple) des [**IWiaPropertyStorage-Zeigers**](/windows/desktop/api/wia_xp/nn-wia_xp-iwiapropertystorage) **pIWiaPropStg übergeben.** Jedes Element des **PropSpec-Arrays** enthält den Typ und Namen einer Geräteeigenschaft. Bei der Rückgabe enthält jedes Element von **PropVar** den Wert der Geräteeigenschaft, die durch das entsprechende Element des **PropSpec-Arrays dargestellt** wird.
 
-Die Anwendung ruft dann die [IPropertyStorage:: Read Multiple](/windows/win32/api/propidlbase/nf-propidlbase-ipropertystorage-readmultiple) -Eigenschaft des [**iwiapropertystorage**](/windows/desktop/api/wia_xp/nn-wia_xp-iwiapropertystorage) -Zeigers **pwiapropertystorage** auf, um die Eigenschafts Informationen abzurufen.
+Die Anwendung ruft dann die [IPropertyStorage::ReadMultiple-Eigenschaft](/windows/win32/api/propidlbase/nf-propidlbase-ipropertystorage-readmultiple) des [**IWiaPropertyStorage-Zeigers**](/windows/desktop/api/wia_xp/nn-wia_xp-iwiapropertystorage) **pWiaPropertyStorage** auf, um die Eigenschafteninformationen abzurufen.
 
-Das Verfahren zum Lesen und Festlegen von Geräteeigenschaften ist das gleiche wie bei Element Eigenschaften, der einzige Unterschied ist der Typ des WIA-Elements, für das die entsprechenden Methoden aufgerufen werden. Eine Liste der Element Eigenschaften finden Sie unter [Element Eigenschaften](-wia-item-properties.md).
+Das Verfahren zum Lesen und Festlegen von Geräteeigenschaften ist dasselbe wie bei Elementeigenschaften. Der einzige Unterschied besteht im Typ des WIA-Elements, für das Sie die entsprechenden Methoden aufrufen. Eine Liste der Elementeigenschaften finden Sie unter [Elementeigenschaften](-wia-item-properties.md).
 
  
 

@@ -1,9 +1,9 @@
 ---
-title: Installlayoutortipuserreg-Funktion
-description: Aktiviert die angegebenen Tastaturlayouts oder Text Dienste für den angegebenen Benutzer.
+title: InstallLayoutOrTipUserReg-Funktion
+description: Aktiviert die angegebenen Tastaturlayouts oder Textdienste für den angegebenen Benutzer.
 ms.assetid: f9b7a77e-5e82-41a6-8deb-be13bb96e85f
 keywords:
-- Installlayoutortipuserreg-Funktion Text Dienst-Framework
+- InstallLayoutOrTipUserReg-Funktion Textdienstframework
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - DllExport
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: b0484aeb16990467edd6e9f56a8a0cb6ca27b9ff
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: c8af476cc18d788c0fe732e45ddfdc9f22748e595058d6f7feb1660f61963bf0
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "103741625"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117952922"
 ---
-# <a name="installlayoutortipuserreg-function"></a>Installlayoutortipuserreg-Funktion
+# <a name="installlayoutortipuserreg-function"></a>InstallLayoutOrTipUserReg-Funktion
 
-Aktiviert die angegebenen Tastaturlayouts oder Text Dienste für den angegebenen Benutzer.
+Aktiviert die angegebenen Tastaturlayouts oder Textdienste für den angegebenen Benutzer.
 
 ## <a name="syntax"></a>Syntax
 
@@ -44,41 +44,41 @@ BOOL CALLBACK InstallLayoutOrTipUserReg(
 
 <dl> <dt>
 
-*pszuserreg* \[ in, optional\]
+*pszUserReg* \[ in, optional\]
 </dt> <dd>
 
-Der Registrierungs Pfad des Benutzers. Wenn dieser Parameter **null** ist, wird der aktuelle HKEY- \_ \_ Benutzer verwendet.
+Der Registrierungspfad des Benutzers. Wenn dieser Parameter **NULL** ist, wird HKEY \_ CURRENT USER \_ verwendet.
 
 </dd> <dt>
 
-*pszsystemreg* \[ in, optional\]
+*pszSystemReg* \[ in, optional\]
 </dt> <dd>
 
-Der Registrierungs Pfad des Systems. Wenn dieser Parameter **null** ist, wird HKEY \_ local \_ Machine \\ System verwendet.
+Der Registrierungspfad des Systems. Wenn dieser Parameter **NULL** ist, wird HKEY \_ LOCAL MACHINE System \_ \\ verwendet.
 
 </dd> <dt>
 
-*pszsoftwarerereg* \[ in, optional\]
+*pszSoftwareReg* \[ in, optional\]
 </dt> <dd>
 
-Der Registrierungs Pfad der Software. Wenn dieser Parameter **null** ist, wird die lokale HKEY- \_ \_ Computer \\ Software verwendet.
+Der Registrierungspfad der Software. Wenn dieser Parameter **NULL** ist, wird HKEY \_ LOCAL MACHINE Software \_ \\ verwendet.
 
 </dd> <dt>
 
-*PSZ* \[ in\]
+*psz* \[ In\]
 </dt> <dd>
 
-Eine Zeichenfolge, die die Liste der Tastaturlayout-oder Text Dienst profile darstellt.
+Eine Zeichenfolge, die die Tastaturlayoutliste oder die Profilliste der Textdienste darstellt.
 
 </dd> <dt>
 
-*dwFlags* \[ in\]
+*dwFlags* \[ In\]
 </dt> <dd>
 
 Ein Bitfeld, das die folgenden Flags angibt.
 
 > [!Note]  
-> Die folgenden Bezeichner sind nicht in einer öffentlichen Header Datei definiert. Sie müssen entweder den Hexadezimalwert verwenden oder die Bezeichner \# definieren. Wenn Sie z. b. " **Ilot \_ Uninstall** " verwenden möchten, müssen Sie `#define ILOT_UNINSTALL 0x00000001` in Ihren Code einschließen.
+> Die folgenden Bezeichner sind in einer öffentlichen Headerdatei nicht definiert. Sie müssen entweder den Hexadezimalwert verwenden oder \# die Bezeichner definieren. Um beispielsweise **ILOT \_ UNINSTALL** verwenden zu können, müssen Sie `#define ILOT_UNINSTALL 0x00000001` in Ihren Code einschließen.
 
  
 
@@ -86,11 +86,11 @@ Ein Bitfeld, das die folgenden Flags angibt.
 
 | Wert                                                                                                                                                                                                                                                                      | Bedeutung                                                                    |
 |----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------|
-| <span id="ILOT_UNINSTALL"></span><span id="ilot_uninstall"></span><dl> <dt>**Ilot \_**</dt> <dt>0x00000001</dt> deinstallieren </dl>                                           | Identisch mit " **Ilot \_ deaktiviert**".<br/>                                     |
-| <span id="ILOT_DEFPROFILE"></span><span id="ilot_defprofile"></span><dl> <dt>**Ilot \_ Defprofile**</dt> <dt>0x00000002</dt> </dl>                                        | Legt das angegebene Layout oder den Tipp als Standardelement fest.<br/>             |
-| <span id="ILOT_NOAPPLYTOCURRENTSESSION"></span><span id="ilot_noapplytocurrentsession"></span><dl> <dt>**Ilot \_ Noapplydecurrentsession**</dt> <dt>0x00000020</dt> </dl> | Die Einstellung wird gespeichert, aber nicht auf die aktuelle Sitzung angewendet.<br/> |
-| <span id="ILOT_CLEANINSTALL"></span><span id="ilot_cleaninstall"></span><dl> <dt>**Ilot \_ Cleaninstall**</dt> <dt>0x00000040</dt> </dl>                                  | Deaktiviert alle aktuellen Tastaturlayouts und Text Dienste.<br/> |
-| <span id="ILOT_DISABLED"></span><span id="ilot_disabled"></span><dl> <dt>**Ilot \_**</dt> <dt>0x00000080</dt> deaktiviert </dl>                                              | Deaktiviert das angegebene Tastaturlayout und den angegebenen Text Dienst.<br/>        |
+| <span id="ILOT_UNINSTALL"></span><span id="ilot_uninstall"></span><dl> <dt>**ILOT \_ DEINSTALLIEREN**</dt> <dt>0x00000001</dt> </dl>                                           | Identisch mit **ILOT \_ DISABLED**.<br/>                                     |
+| <span id="ILOT_DEFPROFILE"></span><span id="ilot_defprofile"></span><dl> <dt>**ILOT \_ DEFPROFILE**</dt> <dt>0x00000002</dt> </dl>                                        | Legt das angegebene Layout oder den angegebenen Tipp als Standardelement fest.<br/>             |
+| <span id="ILOT_NOAPPLYTOCURRENTSESSION"></span><span id="ilot_noapplytocurrentsession"></span><dl> <dt>**ILOT \_ NOAPPLYTOCURRENTSESSION-0x00000020**</dt> <dt></dt> </dl> | Die Einstellung wird gespeichert, aber nicht auf die aktuelle Sitzung angewendet.<br/> |
+| <span id="ILOT_CLEANINSTALL"></span><span id="ilot_cleaninstall"></span><dl> <dt>**ILOT \_ CLEANINSTALL**</dt> <dt>0x00000040</dt> </dl>                                  | Deaktiviert alle aktuellen Tastaturlayouts und Textdienste.<br/> |
+| <span id="ILOT_DISABLED"></span><span id="ilot_disabled"></span><dl> <dt>**ILOT \_ DISABLED**</dt> <dt>0x00000080</dt> </dl>                                              | Deaktiviert das angegebene Tastaturlayout und den Textdienst.<br/>        |
 
 
 
@@ -104,24 +104,24 @@ Ein Bitfeld, das die folgenden Flags angibt.
 
 | Rückgabecode                                                                         | Beschreibung                               |
 |-------------------------------------------------------------------------------------|-------------------------------------------|
-| <dl> <dt>**Fall**</dt> </dl> | Die Funktion war erfolgreich.<br/>   |
-| <dl> <dt>**-Sicherung**</dt> </dl> | Es ist ein unbekannter Fehler aufgetreten.<br/> |
+| <dl> <dt>**STIMMT**</dt> </dl> | Die Funktion war erfolgreich.<br/>   |
+| <dl> <dt>**FASE**</dt> </dl> | Es ist ein unbekannter Fehler aufgetreten.<br/> |
 
 
 
  
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Das Zeichen folgen Format der Layoutliste lautet:
+Das Zeichenfolgenformat der Layoutliste lautet:
 
-<langid 1>: <KLID 1>; \[ ...<LangID N>:<KLID N>
+<LangID 1>:<SOLLD 1>; \[ ...<LangID N>:<KLID N>
 
-Das Zeichen folgen Format der Text Dienst Profil Liste lautet:
+Das Zeichenfolgenformat der Textdienstprofilliste lautet:
 
-<langid 1>: {xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx} {xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx};
+<LangID 1>:{xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxxxx}{xxxxxxxx-xxxx-xxxx-xxxxxxxxxxxx};
 
-Im folgenden finden Sie ein Beispiel für einen Wert für den *PSZ* -Parameter:
+Im Folgenden wird ein Beispiel für einen Wert für den *psz-Parameter* angezeigt:
 
 
 ```C++
@@ -134,10 +134,10 @@ Im folgenden finden Sie ein Beispiel für einen Wert für den *PSZ* -Parameter:
 
 ## <a name="examples"></a>Beispiele
 
-Es ist keine Import Bibliothek verfügbar, die diese Funktion definiert. Daher ist es erforderlich, mithilfe von [**LoadLibrary**](/windows/desktop/api/libloaderapi/nf-libloaderapi-loadlibrarya) und [**GetProcAddress**](/windows/desktop/api/libloaderapi/nf-libloaderapi-getprocaddress)einen Zeiger auf diese Funktion zu erhalten. Im folgenden Beispiel wird veranschaulicht, wie ein Zeiger auf diese Funktion abgerufen wird.
+Es ist keine Importbibliothek verfügbar, die diese Funktion definiert. Daher ist es erforderlich, mit [**LoadLibrary**](/windows/desktop/api/libloaderapi/nf-libloaderapi-loadlibrarya) und [**GetProcAddress**](/windows/desktop/api/libloaderapi/nf-libloaderapi-getprocaddress)einen Zeiger auf diese Funktion abzurufen. Im folgenden Beispiel wird veranschaulicht, wie sie einen Zeiger auf diese Funktion abrufen.
 
 > [!Note]  
-> Die falsche Verwendung von [**LoadLibrary**](/windows/desktop/api/libloaderapi/nf-libloaderapi-loadlibrarya) kann die Sicherheit Ihrer Anwendung beeinträchtigen, indem die falsche DLL geladen wird. Informationen zum ordnungsgemäßen Laden von DLLs mit verschiedenen Versionen von Microsoft Windows finden Sie in der [Such Reihenfolge für die Dynamic Link Library](/windows/desktop/Dlls/dynamic-link-library-search-order) .
+> Die falsche Verwendung von [**LoadLibrary**](/windows/desktop/api/libloaderapi/nf-libloaderapi-loadlibrarya) kann die Sicherheit Ihrer Anwendung beeinträchtigen, indem die falsche DLL geladen wird. Informationen zum ordnungsgemäßen Laden von DLLs mit verschiedenen Versionen von Microsoft Windows finden Sie unter [Suchreihenfolge](/windows/desktop/Dlls/dynamic-link-library-search-order) der Dynamic Link Library.
 
  
 
@@ -181,8 +181,8 @@ else
 
 | Anforderung | Wert |
 |-------------------------------------|--------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                       |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/>                                 |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur Vista-Desktop-Apps\]<br/>                                       |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/>                                 |
 | DLL<br/>                      | <dl> <dt>Input.dll</dt> </dl> |
 
 

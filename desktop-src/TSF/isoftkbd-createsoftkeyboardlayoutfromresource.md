@@ -1,11 +1,11 @@
 ---
-title: ISOFT kbd-Methode für die Methode "deesoftkeyboardlayoutfromresource" ("Soft-BDC. h")
-description: Die Methode isoftkbd kreatesoftkeybboardlayoutfromresource erstellt ein weiches Tastaturlayout aus der angegebenen Ressource.
+title: ISoftKbd CreateSoftKeyboardLayoutFromResource-Methode (Softkbdc.h)
+description: Die ISoftKbd CreateSoftKeybboardLayoutFromResource-Methode erstellt ein weiches Tastaturlayout aus der angegebenen Ressource.
 ms.assetid: c1b2f8bd-8065-426d-9c23-67fa46a33dc8
 keywords:
-- Kreatesoftkeyboardlayoutfromresource-Methode Text Dienst-Framework
-- Kreatesoftkeyboardlayoutfromresource-Methode Text Dienst Framework, iSOFT kbd-Schnittstelle
-- ISOFT kbd Interface Text Services Framework, Methode "kreatesoftkeyboardlayoutfromresource"
+- CreateSoftKeyboardLayoutFromResource-Textdienstframework
+- CreateSoftKeyboardLayoutFromResource-Methode Textdienstframework , ISoftKbd-Schnittstelle
+- ISoftKbd-Schnittstelle Textdienstframework , CreateSoftKeyboardLayoutFromResource-Methode
 topic_type:
 - apiref
 api_name:
@@ -16,16 +16,16 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 1f454b5d8f3366517d91170d6a92d6a9dbed5764
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 9bc76d54bc01f453559107576370bf1b1b4e1615c232cbb07599d6dafe56e8b3
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "106342641"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117952895"
 ---
-# <a name="isoftkbdcreatesoftkeyboardlayoutfromresource-method"></a>ISOFT kbd:: kreatesoftkeyboardlayoutfromresource-Methode
+# <a name="isoftkbdcreatesoftkeyboardlayoutfromresource-method"></a>ISoftKbd::CreateSoftKeyboardLayoutFromResource-Methode
 
-Die **isoftkbd:: deesoftkeybboardlayoutfromresource** -Methode erstellt ein weiches Tastaturlayout aus der angegebenen Ressource.
+Die **ISoftKbd::CreateSoftKeybboardLayoutFromResource-Methode** erstellt ein weiches Tastaturlayout aus der angegebenen Ressource.
 
 ## <a name="syntax"></a>Syntax
 
@@ -45,31 +45,31 @@ HRESULT CreateSoftKeyboardLayoutFromResource(
 
 <dl> <dt>
 
-*lpszresfile* \[ in\]
+*lpszResFile* \[ In\]
 </dt> <dd>
 
-Zeiger auf eine mit NULL endenden Zeichenfolge, die den Namen der Ressourcen Datei angibt.
+Zeiger auf eine mit 0 (null) beendete Zeichenfolge, die den Namen der Ressourcendatei angibt.
 
 </dd> <dt>
 
-*lpszrestype* \[ in\]
+*lpszResType* \[ In\]
 </dt> <dd>
 
-Zeiger auf eine mit NULL endenden Zeichenfolge, die den Typ der Ressource angibt.
+Zeiger auf eine mit 0 (null) beendete Zeichenfolge, die den Typ der Ressource angibt.
 
 </dd> <dt>
 
-*lpszxmlresstring* \[ in\]
+*lpszXMLResString* \[ In\]
 </dt> <dd>
 
-Zeiger auf eine mit NULL endenden Zeichenfolge, die die Ressource identifiziert.
+Zeiger auf eine auf 0 (null) beendete Zeichenfolge, die die Ressource identifiziert.
 
 </dd> <dt>
 
-*lpdwlayoutcookie* \[ vorgenommen\]
+*lpdwLayoutCookie* \[ out\]
 </dt> <dd>
 
-Ein Zeiger auf den Puffer, in dem diese Methode ein weiches Tastaturlayout-Cookie abruft.
+Zeiger auf den Puffer, in dem diese Methode ein Softtastaturlayoutcookie abruft.
 
 </dd> </dl>
 
@@ -79,10 +79,10 @@ Diese Methode kann einen dieser Werte zurückgeben.
 
 
 
-| Wert                                                                                        | BESCHREIBUNG                                    |
+| Wert                                                                                        | Beschreibung                                    |
 |----------------------------------------------------------------------------------------------|------------------------------------------------|
 | <dl> <dt>**S \_ OK**</dt> </dl>         | Die Methode war erfolgreich.<br/>          |
-| <dl> <dt>**E \_ invalidArg**</dt> </dl> | Mindestens ein Parameter ist ungültig.<br/> |
+| <dl> <dt>**E \_ INVALIDARG**</dt> </dl> | Mindestens ein Parameter ist ungültig.<br/> |
 
 
 
@@ -96,9 +96,9 @@ Diese Methode kann einen dieser Werte zurückgeben.
 |-------------------------------------|----------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[nur Desktop-Apps\]<br/>                             |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                                   |
-| Verteilbare Komponente<br/>          | TSF 1,0 unter Windows 2000 Professional<br/>                                        |
-| Header<br/>                   | <dl> <dt>Software-Domänen Controller. h</dt> </dl>  |
-| IDL<br/>                      | <dl> <dt>Software. idl</dt> </dl> |
+| Verteilbare Komponente<br/>          | TSF 1.0 auf Windows 2000 Professional<br/>                                        |
+| Header<br/>                   | <dl> <dt>Softkbdc.h</dt> </dl>  |
+| Idl<br/>                      | <dl> <dt>Softkbd.idl</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Softkbd.dll</dt> </dl> |
 
 
@@ -107,13 +107,13 @@ Diese Methode kann einen dieser Werte zurückgeben.
 
 <dl> <dt>
 
-[**Iweichkbd**](isoftkbd.md)
+[**ISoftKbd**](isoftkbd.md)
 </dt> <dt>
 
-[**Iweichkbd:: erkreatesoftkeyboardlayoutfromxmlfile**](isoftkbd-createsoftkeyboardlayoutfromxmlfile.md)
+[**ISoftKbd::CreateSoftKeyboardLayoutFromXMLFile**](isoftkbd-createsoftkeyboardlayoutfromxmlfile.md)
 </dt> <dt>
 
-[**Iweichkbd:: ShowSoft Keyboard**](isoftkbd-showsoftkeyboard.md)
+[**ISoftKbd::ShowSoftKeyboard**](isoftkbd-showsoftkeyboard.md)
 </dt> </dl>
 
  

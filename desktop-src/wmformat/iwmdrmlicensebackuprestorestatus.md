@@ -1,10 +1,10 @@
 ---
-title: Iwmdrmlicentbackuprestorestatus-Schnittstelle
-description: Die iwmdrmlicenlbackuprestorestatus-Schnittstelle bietet eine Methode zum Abrufen detaillierter Statusinformationen zu einer Lizenz Sicherung oder eines Wiederherstellungs Vorgangs. Diese Schnittstelle wird mit während der Sicherungs-und Wiederherstellungs Vorgängen generierten Status Ereignissen bereitgestellt.
+title: IWMDRMLicenseBackupRestoreStatus-Schnittstelle
+description: Die IWMDRMLicenseBackupRestoreStatus-Schnittstelle stellt eine Methode zum Abrufen detaillierter Statusinformationen zu einer Lizenzsicherung oder einem Wiederherstellungsvorgang bereit. Diese Schnittstelle wird mit Statusereignissen bereitgestellt, die während lizenzsicherungs- und wiederherstellungsvorgängen generiert werden.
 ms.assetid: fbcd059f-13d9-4edb-8946-b55c9da6dca4
 keywords:
-- Iwmdrmlicenabbackuprestorestatus-Schnittstelle Windows Media-Format
-- Iwmdrmlicenabbackuprestorestatus-Schnittstelle Windows Media-Format, beschrieben
+- IWMDRMLicenseBackupRestoreStatus-Schnittstelle windows Medienformat
+- IWMDRMLicenseBackupRestoreStatus-Schnittstelle windows Media Format , beschrieben
 topic_type:
 - apiref
 api_name:
@@ -14,36 +14,36 @@ api_type:
 ms.topic: reference
 ms.date: 05/31/2018
 api_location: ''
-ms.openlocfilehash: a9db5d95daab78a506a3cc994fb9dd22153d0907
-ms.sourcegitcommit: 592c9bbd22ba69802dc353bcb5eb30699f9e9403
+ms.openlocfilehash: 26583a2911545cd256598025806d238c2f98f84434b4f23d9f13f952bfd15927
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "104315993"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117847039"
 ---
-# <a name="iwmdrmlicensebackuprestorestatus-interface"></a>Iwmdrmlicentbackuprestorestatus-Schnittstelle
+# <a name="iwmdrmlicensebackuprestorestatus-interface"></a>IWMDRMLicenseBackupRestoreStatus-Schnittstelle
 
-Die **iwmdrmlicenlbackuprestorestatus** -Schnittstelle bietet eine Methode zum Abrufen detaillierter Statusinformationen zu einer Lizenz Sicherung oder eines Wiederherstellungs Vorgangs.
+Die **IWMDRMLicenseBackupRestoreStatus-Schnittstelle** stellt eine Methode zum Abrufen detaillierter Statusinformationen zu einer Lizenzsicherung oder einem Wiederherstellungsvorgang bereit.
 
-Diese Schnittstelle wird mit während der Sicherungs-und Wiederherstellungs Vorgängen generierten Status Ereignissen bereitgestellt. Während der Lizenz Sicherung werden mehrere **mewmdrmlicenlbackupprogress** -Ereignisse generiert, von denen jede über eine zugehörige Instanz dieser Schnittstelle verfügt. Das gleiche gilt für **mewmdrmlicenserestoreprogress** -Ereignisse, die während der Wiederherstellung der Lizenz generiert werden.
+Diese Schnittstelle wird mit Statusereignissen bereitgestellt, die während lizenzsicherungs- und wiederherstellungsvorgängen generiert werden. Während der Lizenzsicherung werden mehrere **MEWMDRMLicenseBackupProgress-Ereignisse** generiert, von denen jedes über eine zugehörige Instanz dieser Schnittstelle verfügt. Dasselbe gilt für **MEWMDRMLicenseRestoreProgress-Ereignisse,** die während der Lizenzwiederherstellung generiert werden.
 
-Wenn Sie einen Zeiger auf eine Instanz der **iwmdrmlicencbackuprestorestatus** -Schnittstelle abrufen möchten, müssen Sie zuerst die **imfmediaevent:: GetValue** -Methode des Progress-Ereignisses aufrufen. Der Wert, den Sie aus dem Ereignis abrufen, ist ein Zeiger auf die **IUnknown** -Schnittstelle des Objekts, das die **iwmdrmlicensebackuprestorestatus** -Schnittstelle implementiert.
+Um einen Zeiger auf eine Instanz der **IWMDRMLicenseBackupRestoreStatus-Schnittstelle** abzurufen, müssen Sie zunächst die **METHODE "POINTERMediaEvent::GetValue"** des Statusereignisses aufrufen. Der Wert, den Sie aus dem Ereignis abrufen, ist ein Zeiger auf die **IUnknown-Schnittstelle** des Objekts, das die **IWMDRMLicenseBackupRestoreStatus-Schnittstelle** implementiert.
 
 ## <a name="members"></a>Member
 
-Die **iwmdrmlicen* backuprestorestatus** -Schnittstelle erbt von der [**IUnknown**](/windows/desktop/api/unknwn/nn-unknwn-iunknown) -Schnittstelle. **Iwmdrmlicentarbackuprestorestatus** verfügt auch über die folgenden Typen von Membern:
+Die **IWMDRMLicenseBackupRestoreStatus-Schnittstelle** erbt von der [**IUnknown-Schnittstelle.**](/windows/desktop/api/unknwn/nn-unknwn-iunknown) **IWMDRMLicenseBackupRestoreStatus** verfügt auch über diese Typen von Membern:
 
 -   [Methoden](#methods)
 
 ### <a name="methods"></a>Methoden
 
-Die **iwmdrmlicentbackuprestorestatus** -Schnittstelle verfügt über diese Methoden.
+Die **IWMDRMLicenseBackupRestoreStatus-Schnittstelle** verfügt über diese Methoden.
 
 
 
-| Methode                                                          | BESCHREIBUNG                                                                                   |
+| Methode                                                          | Beschreibung                                                                                   |
 |:----------------------------------------------------------------|:----------------------------------------------------------------------------------------------|
-| [**GetStatus**](iwmdrmlicensebackuprestorestatus-getstatus.md) | Ruft detaillierte Statusinformationen zu einer Lizenz Sicherung oder einem Wiederherstellungs Vorgang ab.<br/> |
+| [**GetStatus**](iwmdrmlicensebackuprestorestatus-getstatus.md) | Ruft detaillierte Statusinformationen zu einer Lizenzsicherung oder einem Wiederherstellungsvorgang ab.<br/> |
 
 
 

@@ -4,41 +4,41 @@ description: Vordefinierte Kategoriewerte
 ms.assetid: 04c0632d-ac64-4081-ba95-c11feb3f40dd
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: d0d45ce9d89ad5c0ff67c9543e10f0837a15bc64
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: a14cfbe541c857adf04c109a9186e64256a6465bdb695ff594db5136b0e7cebd
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "103708351"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117951936"
 ---
 # <a name="predefined-category-values"></a>Vordefinierte Kategoriewerte
 
 ## <a name="requirements"></a>Anforderungen
 
-Verteil **Bare Komponente:** Erfordert TSF 1,0 unter Windows 2000.
+**Verteilbar:** Erfordert TSF 1.0 für Windows 2000.
 
- 
+ 
 
-**Header:** Deklariert in msctf. idl und msctf. h.
+**Header:** Wird in Msctf.idl und Msctf.h deklariert.
 
- 
+ 
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[**ITF categorymgr:: enumitemsincategory**](/windows/desktop/api/Msctf/nf-msctf-itfcategorymgr-enumitemsincategory)
+[**ITfCategoryMgr::EnumItemsInCategory**](/windows/desktop/api/Msctf/nf-msctf-itfcategorymgr-enumitemsincategory)
 </dt> <dt>
 
-[**ITF categorymgr:: registercategory**](/windows/desktop/api/Msctf/nf-msctf-itfcategorymgr-registercategory)
+[**ITfCategoryMgr::RegisterCategory**](/windows/desktop/api/Msctf/nf-msctf-itfcategorymgr-registercategory)
 </dt> <dt>
 
-[**Itfinputprocessorprofiles:: getdefaultlanguageprofile**](/windows/desktop/api/Msctf/nf-msctf-itfinputprocessorprofiles-getdefaultlanguageprofile)
+[**ITfInputProcessorProfiles::GetDefaultLanguageProfile**](/windows/desktop/api/Msctf/nf-msctf-itfinputprocessorprofiles-getdefaultlanguageprofile)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

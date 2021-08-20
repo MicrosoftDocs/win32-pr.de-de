@@ -1,5 +1,5 @@
 ---
-description: Stellt eine Beziehung zwischen einem Controller und einem vom Controller verwalteten logischen Gerät dar.
+description: Stellt eine Beziehung zwischen einem Controller und einem logischen Gerät dar, das vom Controller verwaltet wird.
 ms.assetid: 5a938fa4-3b91-42ad-beee-12ed0ce6df9a
 title: CIM_ControlledBy-Klasse (Hyper-V-Verwaltung)
 ms.topic: reference
@@ -22,16 +22,16 @@ api_type:
 - DllExport
 api_location:
 - vmms.exe
-ms.openlocfilehash: 7b035a93c47f9c33d981614ba6fc46b35f916e7d
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: e6db572177aca7208b9d087fa5eeceab699cf1e1014f736f7150607af8e2805b
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "103863127"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117813151"
 ---
 # <a name="cim_controlledby-class-hyper-v-management"></a>CIM_ControlledBy-Klasse (Hyper-V-Verwaltung)
 
-Stellt eine Beziehung zwischen einem Controller und einem vom Controller verwalteten logischen Gerät dar.
+Stellt eine Beziehung zwischen einem Controller und einem logischen Gerät dar, das vom Controller verwaltet wird.
 
 ## <a name="syntax"></a>Syntax
 
@@ -53,39 +53,39 @@ class CIM_ControlledBy : CIM_DeviceConnection
 
 ## <a name="members"></a>Member
 
-Die **CIM \_ controlledby** -Klasse verfügt über diese Typen von Membern:
+Die **CIM \_ ControlledBy-Klasse** verfügt über diese Typen von Membern:
 
 -   [Eigenschaften](#properties)
 
 ### <a name="properties"></a>Eigenschaften
 
-Die **CIM \_ controlledby** -Klasse verfügt über diese Eigenschaften.
+Die **CIM \_ ControlledBy-Klasse** verfügt über diese Eigenschaften.
 
 <dl> <dt>
 
 **AccessMode**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt16**
+Datentyp: **uint16**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Diese Eigenschaft beschreibt den Zugriff auf das Gerät über den Controller.
+Diese Eigenschaft, die den Zugriff auf das Gerät über den Controller beschreibt.
 
 <dt>
 
 <span id="ReadWrite"></span><span id="readwrite"></span><span id="READWRITE"></span>
 
-**Lesen** (2)
+**ReadWrite** (2)
 
 
 </dt> <dd></dd> <dt>
 
 <span id="ReadOnly"></span><span id="readonly"></span><span id="READONLY"></span>
 
-Schreib **geschützt (3** )
+**ReadOnly** (3)
 
 
 </dt> <dd></dd> <dt>
@@ -99,23 +99,23 @@ Schreib **geschützt (3** )
 
 </dd> <dt>
 
-**Accesspriority**
+**AccessPriority**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt16**
+Datentyp: **uint16**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Die Priorität für den Zugriff des Geräts über den Controller. Ein niedrigerer Wert weist auf eine höhere Priorität hin.
+Die Priorität für den Zugriff auf das Gerät über den Controller. Ein niedrigerer Wert gibt eine höhere Priorität an.
 
 </dd> <dt>
 
-**Accessstate**
+**AccessState**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt16**
+Datentyp: **uint16**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
@@ -148,23 +148,23 @@ Gibt an, ob der Controller das Gerät aktiv verwaltet.
 
 </dd> <dt>
 
-**Vorgänger**
+**Vorläufer**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **CIM- \_ Controller**
+Datentyp: **\_ CIM-Controller**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**außer Kraft**](/windows/desktop/WmiSdk/standard-qualifiers) Setzung ("Vorgänger")
+Qualifizierer: [**Überschreiben**](/windows/desktop/WmiSdk/standard-qualifiers) ("Vorgänger")
 </dt> </dl>
 
 Der Controller.
 
 </dd> <dt>
 
-**Dependent**
+**Abhängigen**
 </dt> <dd> <dl> <dt>
 
 Datentyp: **CIM \_ LogicalDevice**
@@ -173,17 +173,17 @@ Datentyp: **CIM \_ LogicalDevice**
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**außer Kraft**](/windows/desktop/WmiSdk/standard-qualifiers) Setzung ("abhängig")
+Qualifizierer: [**Überschreiben**](/windows/desktop/WmiSdk/standard-qualifiers) ("Abhängig")
 </dt> </dl>
 
 Die logischen Geräte.
 
 </dd> <dt>
 
-**Devicengegen ber**
+**DeviceNumber**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
@@ -193,48 +193,48 @@ Die Adresse des zugeordneten Geräts im Kontext des Controllers.
 
 </dd> <dt>
 
-**Anzahlersätze**
+**NumberOfHardResets**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt32**
+Datentyp: **uint32**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: **Counter**
+Qualifizierer: **Leistungsindikator**
 </dt> </dl>
 
-Die Anzahl von Festplatten, die vom Controller ausgegeben werden. Bei einer festen zurück setzung wird ein Gerät an den Initialisierungs-oder Startzustand zurückgegeben, in dem alle Informationen zum internen Gerätestatus und Daten verloren gehen.
+Die Anzahl der vom Controller ausgegebenen hard resets. Durch eine harte Zurücksetzung wird ein Gerät in den Initialisierungs- oder Startzustand zurückgesetzt, nach dem alle informationen und Daten zum internen Gerätezustand verloren gehen.
 
 </dd> <dt>
 
-**Anzahlermengen**
+**NumberOfSoftResets**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt32**
+Datentyp: **uint32**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: **Counter**
+Qualifizierer: **Leistungsindikator**
 </dt> </dl>
 
-Die Anzahl der vom Controller ausgestellten Soft-zurück Stellungen. Eine weiche zurück Setzung löscht den Gerätezustand oder die Daten nicht.
+Die Anzahl der vom Controller ausgestellten soft resets. Bei einem soft reset wird der Gerätezustand oder die Daten nicht gelöscht.
 
 </dd> <dt>
 
-**Timeofdevicereset**
+**TimeOfDeviceReset**
 </dt> <dd> <dl> <dt>
 
-**Datentyp: DateTime**
+Datentyp: **datetime**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Der Zeitpunkt, zu dem das Downstream-Gerät zuletzt vom Controller zurückgesetzt wurde.
+Der Zeitpunkt, zu dem das nachgeschaltete Gerät zuletzt vom Controller zurückgesetzt wurde.
 
 </dd> </dl>
 
@@ -246,8 +246,8 @@ Der Zeitpunkt, zu dem das Downstream-Gerät zuletzt vom Controller zurückgesetz
 |-------------------------------------|---------------------------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 8<br/>                                                                                    |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2012<br/>                                                                          |
-| Namespace<br/>                | \\Stammvirtualisierung \\ v2<br/>                                                                     |
-| MOF<br/>                      | <dl> <dt>Windowsvirtualization. v2. MOF</dt> </dl> |
+| Namespace<br/>                | \\Root-Virtualisierung \\ v2<br/>                                                                     |
+| MOF<br/>                      | <dl> <dt>WindowsVirtualization.V2.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Vmms.exe</dt> </dl>                     |
 
 
@@ -256,7 +256,7 @@ Der Zeitpunkt, zu dem das Downstream-Gerät zuletzt vom Controller zurückgesetz
 
 <dl> <dt>
 
-[**CIM-Geräte \_ Steuerung**](cim-deviceconnection.md)
+[**CIM \_ DeviceConnection**](cim-deviceconnection.md)
 </dt> </dl>
 
  

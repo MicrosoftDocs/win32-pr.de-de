@@ -1,39 +1,39 @@
 ---
-title: Steuern des Objekt Zugriffs in Active Directory Domain Services
-description: Jedes Active Directory Directory-Dienst Objekt wird durch Windows 2000-Sicherheit geschützt.
+title: Steuern des Objektzugriffs in Active Directory Domain Services
+description: Jedes Active Directory-Verzeichnisdienstobjekt wird durch Windows 2000-Sicherheit geschützt.
 ms.assetid: 0821069d-76bd-49cb-a617-8446d26e61d9
 ms.tgt_platform: multiple
 keywords:
-- Active Directory Domain Services, Verwendung, Sicherheit
+- Active Directory Domain Services,using,security
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 6cac744ef63fa95c45d5af535f5155378d479fdb
-ms.sourcegitcommit: 460af18ea55f4b12d47d5b8d4b883896e21adf00
+ms.openlocfilehash: 094551d12a8f1bf7f0c8a10f513b79ec4c9421e4dce9d2d9e08c223515231cbb
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/04/2019
-ms.locfileid: "104038408"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118021511"
 ---
-# <a name="controlling-object-access-in-active-directory-domain-services"></a>Steuern des Objekt Zugriffs in Active Directory Domain Services
+# <a name="controlling-object-access-in-active-directory-domain-services"></a>Steuern des Objektzugriffs in Active Directory Domain Services
 
-Jedes Active Directory Directory-Dienst Objekt wird durch Windows 2000-Sicherheit geschützt. Dieser Sicherheitsschutz steuert die Vorgänge, die von den einzelnen Sicherheits Prinzipalen im Verzeichnis durchgeführt werden können. In den folgenden Abschnitten wird beschrieben, wie eine Verzeichnis aktivierte Anwendung die Zugriffs Steuerungsfunktionen in Active Directory verwenden kann.
+Jedes Active Directory-Verzeichnisdienstobjekt wird durch Windows 2000-Sicherheit geschützt. Dieser Sicherheitsschutz steuert die Vorgänge, die jeder Sicherheitsprinzipal im Verzeichnis ausführen kann. In den folgenden Abschnitten wird beschrieben, wie eine verzeichnisfähige Anwendung die Zugriffssteuerungsfunktionen in Active Directory verwenden kann.
 
--   [Funktionsweise von Access Control in Active Directory Domain Services](how-access-control-works-in-active-directory-domain-services.md)
--   [Wie sich die Zugriffs Steuerung auf Lesevorgänge, Schreibvorgänge, Objekt Erstellung und-Löschung auswirkt.](how-security-affects-operations-in-active-directory-domain-services.md)
--   [Verwenden der IADs-und IDirectoryObject-Schnittstellen zum Arbeiten mit der Sicherheits Beschreibung eines Objekts](apis-for-working-with-security-descriptors.md)
+-   [Funktionsweise Access Control in Active Directory Domain Services](how-access-control-works-in-active-directory-domain-services.md)
+-   [Auswirkungen der Zugriffssteuerung auf Lesevorgänge, Schreibvorgänge, Objekterstellung und -löschung.](how-security-affects-operations-in-active-directory-domain-services.md)
+-   [Verwenden der Schnittstellen IADs und IDirectoryObject zum Arbeiten mit dem Sicherheitsdeskriptor eines Objekts](apis-for-working-with-security-descriptors.md)
 -   [Ändern der Zugriffsberechtigungen für ein Objekt](setting-access-rights-on-an-object.md)
--   [Festlegen von Sicherheits Deskriptoren für neue Verzeichnisobjekte](how-security-descriptors-are-set-on-new-directory-objects.md)
--   [Erstellen einer Sicherheits Beschreibung für ein neues Verzeichnis Objekt](creating-a-security-descriptor-for-a-new-directory-object.md)
--   [Verwenden der Vererbung von Zugriffsberechtigungen, um den administrativen Zugriff auf eine gesamte Unterstruktur des Verzeichnisses zu ermöglichen](inheritance-and-delegation-of-administration.md)
--   [Erstellen, ändern und Lesen der Standard Sicherheits Beschreibung für eine Objektklasse](default-security-descriptor.md)
--   [Erstellen, festlegen und Überprüfen von Zugriffsrechten für Vorgänge, die über diejenigen hinausgehen, die von den vordefinierten rechten abgedeckt werden](control-access-rights.md)
--   [Verwenden von dsaddsidhistory](using-dsaddsidhistory.md)
--   [Steuern der Objekt Sichtbarkeit](controlling-object-visibility.md)
--   [Null-DACLs und leere DACLs](null-dacls-and-empty-dacls.md)
+-   [Festlegen von Sicherheitsdeskriptoren für neue Verzeichnisobjekte](how-security-descriptors-are-set-on-new-directory-objects.md)
+-   [Erstellen eines Sicherheitsdeskriptors für ein neues Verzeichnisobjekt](creating-a-security-descriptor-for-a-new-directory-object.md)
+-   [Verwenden der Vererbung von Zugriffsberechtigungen zum Aktivieren des Administratorzugriffs auf eine gesamte Unterstruktur des Verzeichnisses](inheritance-and-delegation-of-administration.md)
+-   [Erstellen, Ändern und Lesen der Standardsicherheitsbeschreibung für eine Objektklasse](default-security-descriptor.md)
+-   [Erstellen, Festlegen und Überprüfen von Zugriffssteuerungsrechten für Vorgänge, die über die durch die vordefinierten Rechte abgedeckten Vorgänge hinausgehen](control-access-rights.md)
+-   [Verwenden von DsAddSidHistory](using-dsaddsidhistory.md)
+-   [Steuern der Objektsichtbarkeit](controlling-object-visibility.md)
+-   [NULL-DACLs und leere DACLs](null-dacls-and-empty-dacls.md)
 
- 
+ 
 
- 
+ 
 
 
 

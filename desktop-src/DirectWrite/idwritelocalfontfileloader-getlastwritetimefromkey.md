@@ -1,11 +1,11 @@
 ---
-title: Idwrite telocalfontfileloader getlastschreitetimefromkey-Methode
-description: Ruft den Zeitpunkt des letzten Schreibzugriffs auf die Datei aus dem Verweis Schlüssel der Schriftart Datei ab.
+title: IDWriteLocalFontFileLoader GetLastWriteTimeFromKey-Methode
+description: Erhält den Zeitpunkt des letzten Schreibzugriffs der Datei aus dem Verweisschlüssel der Schriftartdatei.
 ms.assetid: ce7f5321-8ad8-4412-a54c-7102790e99c0
 keywords:
-- Getlastwrite tetimefromkey-Methode direkt schreiben
-- Getlastwrite tetimefromkey-Methode Direct Write, idwrite telocalfontfileloader-Schnittstelle
-- Idwrite telocalfontfileloader-Schnittstelle Direct Write, getlastschreitetimefromkey-Methode
+- GetLastWriteTimeFromKey-Methode Direct Write
+- GetLastWriteTimeFromKey-Methode Direct Write, IDWriteLocalFontFileLoader-Schnittstelle
+- IDWriteLocalFontFileLoader-Schnittstelle Direct Write , GetLastWriteTimeFromKey-Methode
 topic_type:
 - apiref
 api_name:
@@ -16,16 +16,16 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: ea9817917a59761278a961a6fcafcdeaea5fda32
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: a2fb3d79475a943c3a635b347cfd6dbe41e8b3a8903022bae9089e1d6a9847c8
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106365678"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117816314"
 ---
-# <a name="idwritelocalfontfileloadergetlastwritetimefromkey-method"></a>Idwrite telocalfontfileloader:: getlastschreitetimefromkey-Methode
+# <a name="idwritelocalfontfileloadergetlastwritetimefromkey-method"></a>IDWriteLocalFontFileLoader::GetLastWriteTimeFromKey-Methode
 
-Ruft den Zeitpunkt des letzten Schreibzugriffs auf die Datei aus dem Verweis Schlüssel der Schriftart Datei ab.
+Erhält den Zeitpunkt des letzten Schreibzugriffs der Datei aus dem Verweisschlüssel der Schriftartdatei.
 
 ## <a name="syntax"></a>Syntax
 
@@ -44,30 +44,30 @@ virtual HRESULT GetLastWriteTimeFromKey(
 
 <dl> <dt>
 
-*fontfilereferencekey* \[ in\]
+*fontFileReferenceKey* \[ In\]
 </dt> <dd>
 
-Typ: Konstante **void \***
+Typ: **const \* void**
 
-Der Verweis Schlüssel der Schriftart Datei, der die lokale Schriftart Datei innerhalb des Gültigkeits Bereichs des verwendeten Schriftart Lade Moduls eindeutig identifiziert.
+Der Verweisschlüssel der Schriftartdatei, der die lokale Schriftartdatei innerhalb des Bereichs des verwendeten Schriftartladeers eindeutig identifiziert.
 
 </dd> <dt>
 
-*fontfilereferencekeysize* 
+*fontFileReferenceKeySize* 
 </dt> <dd>
 
-Typ: **UInt32**
+Typ: **UINT32**
 
-Die Größe des Verweis Schlüssels der Schriftart Datei in Bytes.
+Die Größe des Schriftartdateiverweisschlüssels in Bytes.
 
 </dd> <dt>
 
-*lastschreibzeit* \[ vorgenommen\]
+*lastWriteTime* \[ out\]
 </dt> <dd>
 
 Typ: **FILETIME \***
 
-Der Zeitpunkt der letzten Änderung der Schriftart Datei.
+Der Zeitpunkt der letzten Änderung der Schriftartdatei.
 
 </dd> </dl>
 
@@ -75,7 +75,7 @@ Der Zeitpunkt der letzten Änderung der Schriftart Datei.
 
 Typ: **HRESULT**
 
-Wenn diese Methode erfolgreich ausgeführt wird, gibt Sie **S \_ OK** zurück. Andernfalls wird ein **HRESULT** -Fehlercode zurückgegeben.
+Wenn diese Methode erfolgreich ist, wird **S \_ OK zurückgegeben.** Andernfalls wird ein **HRESULT-Fehlercode** zurückgegeben.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -83,7 +83,7 @@ Wenn diese Methode erfolgreich ausgeführt wird, gibt Sie **S \_ OK** zurück. A
 
 | Anforderung | Wert |
 |--------------------|---------------------------------------------------------------------------------------|
-| Bibliothek<br/> | <dl> <dt>Dwrite. lib</dt> </dl> |
+| Bibliothek<br/> | <dl> <dt>Dwrite.lib</dt> </dl> |
 | DLL<br/>     | <dl> <dt>Dwrite.dll</dt> </dl> |
 
 
@@ -92,7 +92,7 @@ Wenn diese Methode erfolgreich ausgeführt wird, gibt Sie **S \_ OK** zurück. A
 
 <dl> <dt>
 
-[**Idschreitelocalfontfileloader**](idwritelocalfontfileloader.md)
+[**IDWriteLocalFontFileLoader**](idwritelocalfontfileloader.md)
 </dt> </dl>
 
  

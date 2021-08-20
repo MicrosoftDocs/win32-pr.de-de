@@ -1,19 +1,19 @@
 ---
-title: Iagentballoon setfontname
-description: Iagentballoon setfontname
+title: IAgentBalloon SetFontName
+description: IAgentBalloon SetFontName
 ms.assetid: 6babf5f6-2abd-46c2-ade0-899a8e4488bd
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 7f983064c5df8cde8322658bbd0c713bbf238ecf
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: 1091fd0b0e5834ca687a6c9e66d59bdb186dcdfd9122e3200dce10db64e068a0
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "104037547"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117693315"
 ---
-# <a name="iagentballoonsetfontname"></a>Iagentballoon:: setfontname
+# <a name="iagentballoonsetfontname"></a>IAgentBalloon::SetFontName
 
-\[Der Microsoft-Agent ist ab Windows 7 veraltet und in nachfolgenden Versionen von Windows möglicherweise nicht verfügbar.\]
+\[Der Microsoft-Agent ist ab Windows 7 veraltet und in nachfolgenden Versionen von Windows möglicherweise nicht mehr verfügbar.\]
 
 ``` syntax
 HRESULT SetFontName(
@@ -22,29 +22,29 @@ HRESULT SetFontName(
                    
 ```
 
-Legt die in der Wort Sprechblase angezeigte Schriftart fest.
+Legt die im Wortsprechblasen angezeigte Schriftart fest.
 
 -   Gibt S \_ OK zurück, um anzugeben, dass der Vorgang erfolgreich war.
 
 <dl> <dt>
 
-<span id="bszFontName"></span><span id="bszfontname"></span><span id="BSZFONTNAME"></span>*bszfontname*
+<span id="bszFontName"></span><span id="bszfontname"></span><span id="BSZFONTNAME"></span>*bszFontName*
 </dt> <dd>
 
-Ein BSTR, das die in der Wort Sprechblase angezeigte Schriftart festlegt.
+Ein BSTR, der die im Wortsprechblasen angezeigte Schriftart festlegt.
 
 </dd> </dl>
 
-Die in der Wort Sprechblase eines Zeichens verwendete Standard Schriftart wird im Microsoft-Agent-Zeichen-Editor definiert. Sie können es mit **iagentballoon:: setfontname** ändern. Der Benutzer kann jedoch die Schriftart Einstellung für alle Zeichen mithilfe des Eigenschaften Blatts Microsoft-Agent überschreiben.
+Die Standardschriftart, die im Wortsprechblasen eines Zeichens verwendet wird, wird im Microsoft-Agent-Zeichen-Editor definiert. Sie können sie mit **IAgentBalloon::SetFontName** ändern. Allerdings kann der Benutzer die Schriftarteinstellung für alle Zeichen über das Eigenschaftenblatt des Microsoft-Agents überschreiben.
 
 ## <a name="see-also"></a>Weitere Informationen
 
-[**Iagentballoon:: getVisible**](iagentballoon--getvisible.md)
+[**IAgentBalloon::GetVisible**](iagentballoon--getvisible.md)
 
 
- 
+ 
 
- 
+ 
 
 
 
