@@ -1,9 +1,9 @@
 ---
-title: TB_SETCOLORSCHEME (Commctrl.h)
+title: TB_SETCOLORSCHEME Meldung (Commctrl.h)
 description: Legt die Farbschemainformationen für das Symbolleisten-Steuerelement fest.
 ms.assetid: 96cf6464-b760-46af-910f-984e41dbfca5
 keywords:
-- TB_SETCOLORSCHEME von Windows Steuerelementen
+- TB_SETCOLORSCHEME Windows-Steuerelementen
 topic_type:
 - apiref
 api_name:
@@ -41,11 +41,11 @@ Zeiger auf eine [**COLORSCHEME-Struktur,**](/windows/win32/api/commctrl/ns-commc
 
 ## <a name="return-value"></a>Rückgabewert
 
-Der Rückgabewert für diese Meldung wird nicht verwendet.
+Der Rückgabewert für diese Nachricht wird nicht verwendet.
 
 ## <a name="remarks"></a>Hinweise
 
-Das Symbolleisten-Steuerelement verwendet die Farbschemainformationen beim Zeichnen der 3D-Elemente im Steuerelement.
+Das Symbolleisten-Steuerelement verwendet die Farbschemainformationen, wenn die 3D-Elemente im Steuerelement gezeichnet werden.
 
 Wenn visuelle Stile aktiviert sind, hat diese Meldung keine Auswirkungen.
 
@@ -55,13 +55,13 @@ Wenn visuelle Stile aktiviert sind, hat diese Meldung keine Auswirkungen.
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ Vista-Desktop-Apps\]<br/>                                        |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur Vista-Desktop-Apps\]<br/>                                        |
 | Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                                  |
 | Header<br/>                   | <dl> <dt>Commctrl.h</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 

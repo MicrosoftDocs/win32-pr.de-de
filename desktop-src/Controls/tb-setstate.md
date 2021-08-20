@@ -1,9 +1,9 @@
 ---
-title: TB_SETSTATE (Commctrl.h)
+title: TB_SETSTATE Meldung (Commctrl.h)
 description: Legt den Zustand für die angegebene Schaltfläche in einer Symbolleiste fest.
 ms.assetid: 68633b58-8d21-4931-b01f-32a66bda37b1
 keywords:
-- TB_SETSTATE meldungssteuerelemente Windows
+- TB_SETSTATE Windows-Steuerelemente für Nachrichten
 topic_type:
 - apiref
 api_name:
@@ -39,13 +39,13 @@ Befehlsbezeichner der Schaltfläche.
 *lParam* 
 </dt> <dd>
 
-Das [**LOWORD ist**](/previous-versions/windows/desktop/legacy/ms632659(v=vs.85)) eine Kombination von Werten, die unter Symbolleisten-Schaltflächenzustände [aufgeführt sind.](toolbar-button-states.md) Das [**HIWORD muss**](/previous-versions/windows/desktop/legacy/ms632657(v=vs.85)) 0 (null) sein.
+[**LOWORD**](/previous-versions/windows/desktop/legacy/ms632659(v=vs.85)) ist eine Kombination von Werten, die unter [Symbolleistenschaltflächenzustände](toolbar-button-states.md)aufgeführt sind. [**Hiword**](/previous-versions/windows/desktop/legacy/ms632657(v=vs.85)) muss 0 (null) sein.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt **TRUE zurück,** wenn erfolgreich, andernfalls **FALSE.**
+Gibt **TRUE** zurück, wenn erfolgreich, **andernfalls FALSE.**
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -53,7 +53,7 @@ Gibt **TRUE zurück,** wenn erfolgreich, andernfalls **FALSE.**
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ Vista-Desktop-Apps\]<br/>                                        |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur Vista-Desktop-Apps\]<br/>                                        |
 | Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                                  |
 | Header<br/>                   | <dl> <dt>Commctrl.h</dt> </dl> |
 

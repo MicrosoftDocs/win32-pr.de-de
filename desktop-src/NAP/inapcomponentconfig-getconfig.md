@@ -1,11 +1,11 @@
 ---
-title: Inapcomponentconfig GetConfig-Methode (napcommon. h)
-description: Ruft die Konfiguration der System Integritätsprüfung (SHV) ab.
+title: INapComponentConfig-GetConfig-Methode (NapCommon.h)
+description: Ruft die ShV-Komponentenkonfiguration (System Health Validator) ab.
 ms.assetid: 57a1d3a7-05c0-4e0f-91b8-b3cf8982d04f
 keywords:
 - GetConfig-Methode NAP
-- GetConfig-Methode NAP, inapcomponentconfig-Schnittstelle
-- Inapcomponentconfig-Schnittstelle NAP, GetConfig-Methode
+- GetConfig-Methode NAP, INapComponentConfig-Schnittstelle
+- INapComponentConfig-Schnittstelle NAP, GetConfig-Methode
 topic_type:
 - apiref
 api_name:
@@ -16,21 +16,21 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: e3e07465d768c8902166150e53d4200e775e2597
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: d8dc5495df10e3a5ff3907941644c5558aea35d29b52c8773fb56314c4a8620c
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104478444"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118134498"
 ---
-# <a name="inapcomponentconfiggetconfig-method"></a>Inapcomponentconfig:: GetConfig-Methode
+# <a name="inapcomponentconfiggetconfig-method"></a>INapComponentConfig::GetConfig-Methode
 
 > [!Note]  
-> Die Netzwerk Zugriffsschutz-Plattform ist ab Windows 10 nicht verfügbar.
+> Die Netzwerkzugriffsschutz-Plattform ist ab Windows 10 nicht verfügbar.
 
  
 
-Die **GetConfig** -Methode ruft die Konfiguration der Systemintegritätsprüfungs-Komponente (SHV) ab.
+Die **GetConfig-Methode** ruft die ShV-Komponentenkonfiguration (System Health Validator) ab.
 
 ## <a name="syntax"></a>Syntax
 
@@ -48,20 +48,20 @@ HRESULT GetConfig(
 
 <dl> <dt>
 
-*BCOUNT* \[ vorgenommen\]
+*bCount* \[ out\]
 </dt> <dd>
 
-Die Größe des *Daten* konfigurationsblobs in Byte.
+Die Größe des Datenkonfigurationsblobs in Bytes. 
 
 </dd> <dt>
 
-*Daten* \[ vorgenommen\]
+*Daten* \[ out\]
 </dt> <dd>
 
 Ein Zeiger auf die Adresse der Konfigurationsdaten der SHV-Komponente.
 
 > [!Note]  
-> Konfigurationsdaten, die mithilfe der **GetConfig** -Methode von einem x86-Computer exportiert werden, können mithilfe der [**setconfig**](inapcomponentconfig-setconfig.md) -Methode auf einen x64-Computer importiert werden und umgekehrt. Daher müssen Konfigurationsdaten in einem Architektur agnostischen Format wie XML vorliegen. Durch die Verwendung von XML anstelle eines Bytestreams wird die Verwendung von Konfigurationsdaten auf verschiedenen Architekturen vereinfacht. Die XML-Elemente, die in den Konfigurationsdaten verwendet werden, werden durch den Implementierer bestimmt.
+> Konfigurationsdaten, die mithilfe der **GetConfig-Methode** von einem x86-Computer exportiert werden, können mithilfe der [**SetConfig-Methode**](inapcomponentconfig-setconfig.md) auf einen x64-Computer importiert werden und umgekehrt. Daher müssen Konfigurationsdaten in einem architekturunabhängigen Format wie XML vorliegen. Die Verwendung von XML anstelle eines Bytestreams erleichtert die Verwendung von Konfigurationsdaten in verschiedenen Architekturen. Die in den Konfigurationsdaten verwendeten XML-Elemente werden vom Implementierer bestimmt.
 
  
 
@@ -76,16 +76,16 @@ Gibt basierend auf dem Ergebnis dieses Vorgangs einen der folgenden Fehlercodes 
 | Rückgabecode                                                                                     | Beschreibung                                                        |
 |-------------------------------------------------------------------------------------------------|--------------------------------------------------------------------|
 | <dl> <dt>**S \_ OK**</dt> </dl>           | Der Vorgang ist erfolgreich.<br/>                            |
-| <dl> <dt>**E \_ Access verweigert**</dt> </dl> | Berechtigungs Fehler, Zugriff verweigert.<br/>                       |
-| <dl> <dt>**E \_ Outo-Memory**</dt> </dl>  | System Ressourcen Limit, der Vorgang konnte nicht durchgeführt werden.<br/> |
+| <dl> <dt>**E \_ ACCESSDENIED**</dt> </dl> | Berechtigungsfehler, Zugriff verweigert.<br/>                       |
+| <dl> <dt>**E \_ OUTOFMEMORY**</dt> </dl>  | Systemressourcenlimit, konnte den Vorgang nicht ausführen.<br/> |
 
 
 
  
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Der Data-Parameter muss vom aufgerufenen (komponentenimplementierer) mithilfe von **cotaskmemzuzugeordneten** zugewiesen und durch den Aufrufer mithilfe von " **CoTaskMemFree**" freigegeben werden.
+Der Datenparameter muss vom Aufgerufenen (Komponenten implementor) mithilfe von **CoTaskMemAlloc** zugeordnet und vom Aufrufer mit **coTaskMemFree** freigegeben werden.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -94,9 +94,9 @@ Der Data-Parameter muss vom aufgerufenen (komponentenimplementierer) mithilfe vo
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Nicht unterstützt<br/>                                                                |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/>                                     |
-| Header<br/>                   | <dl> <dt>Napcommon. h</dt> </dl>   |
-| IDL<br/>                      | <dl> <dt>Napcommon. idl</dt> </dl> |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/>                                     |
+| Header<br/>                   | <dl> <dt>NapCommon.h</dt> </dl>   |
+| Idl<br/>                      | <dl> <dt>NapCommon.idl</dt> </dl> |
 
 
 
@@ -104,10 +104,10 @@ Der Data-Parameter muss vom aufgerufenen (komponentenimplementierer) mithilfe vo
 
 <dl> <dt>
 
-[**Inapcomponentconfig**](inapcomponentconfig.md)
+[**INapComponentConfig**](inapcomponentconfig.md)
 </dt> <dt>
 
-[**Inapcomponentconfig:: setconfig**](inapcomponentconfig-setconfig.md)
+[**INapComponentConfig::SetConfig**](inapcomponentconfig-setconfig.md)
 </dt> </dl>
 
  

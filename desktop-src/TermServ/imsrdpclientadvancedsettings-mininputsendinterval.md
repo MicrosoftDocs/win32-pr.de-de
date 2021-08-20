@@ -1,10 +1,10 @@
 ---
-title: IMsRdpClientAdvancedSettings minInputSendInterval (Eigenschaft)
-description: Gibt das minimale Intervall zwischen dem Senden von Mausereignissen in Millisekunden an.
+title: IMsRdpClientAdvancedSettings minInputSendInterval-Eigenschaft
+description: Gibt das minimale Intervall in Millisekunden zwischen dem Senden von Mausereignissen an.
 ms.assetid: d186c05f-0b45-47bd-8a8e-e1f9baf2bd75
 ms.tgt_platform: multiple
 keywords:
-- minInputSendInterval-Remotedesktopdienste
+- minInputSendInterval-Eigenschaft Remotedesktopdienste
 - minInputSendInterval-Eigenschaft Remotedesktopdienste , IMsRdpClientAdvancedSettings-Schnittstelle
 - IMsRdpClientAdvancedSettings-Schnittstelle Remotedesktopdienste , minInputSendInterval-Eigenschaft
 - minInputSendInterval-Eigenschaft Remotedesktopdienste , IMsRdpClientAdvancedSettings2-Schnittstelle
@@ -14,13 +14,13 @@ keywords:
 - minInputSendInterval-Eigenschaft Remotedesktopdienste , IMsRdpClientAdvancedSettings4-Schnittstelle
 - IMsRdpClientAdvancedSettings4-Schnittstelle Remotedesktopdienste , minInputSendInterval-Eigenschaft
 - minInputSendInterval-Eigenschaft Remotedesktopdienste , IMsRdpClientAdvancedSettings5-Schnittstelle
-- IMsRdpClientAdvancedSettings5-Schnittstelle Remotedesktopdienste , minInputSendInterval -Eigenschaft
+- IMsRdpClientAdvancedSettings5-Schnittstelle Remotedesktopdienste , minInputSendInterval-Eigenschaft
 - minInputSendInterval-Eigenschaft Remotedesktopdienste , IMsRdpClientAdvancedSettings6-Schnittstelle
 - IMsRdpClientAdvancedSettings6-Schnittstelle Remotedesktopdienste , minInputSendInterval-Eigenschaft
 - minInputSendInterval-Eigenschaft Remotedesktopdienste , IMsRdpClientAdvancedSettings7-Schnittstelle
 - IMsRdpClientAdvancedSettings7-Schnittstelle Remotedesktopdienste , minInputSendInterval-Eigenschaft
 - minInputSendInterval-Eigenschaft Remotedesktopdienste , IMsRdpClientAdvancedSettings8-Schnittstelle
-- IMsRdpClientAdvancedSettings8-Schnittstelle Remotedesktopdienste , minInputSendInterval (Eigenschaft)
+- IMsRdpClientAdvancedSettings8-Schnittstelle Remotedesktopdienste , minInputSendInterval-Eigenschaft
 topic_type:
 - apiref
 api_name:
@@ -61,9 +61,9 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 08/11/2021
 ms.locfileid: "118352965"
 ---
-# <a name="imsrdpclientadvancedsettingsmininputsendinterval-property"></a>IMsRdpClientAdvancedSettings::minInputSendInterval (Eigenschaft)
+# <a name="imsrdpclientadvancedsettingsmininputsendinterval-property"></a>IMsRdpClientAdvancedSettings::minInputSendInterval-Eigenschaft
 
-Gibt das minimale Intervall zwischen dem Senden von Mausereignissen in Millisekunden an.
+Gibt das minimale Intervall in Millisekunden zwischen dem Senden von Mausereignissen an.
 
 Dies ist eine Eigenschaft mit Lese- und Schreibzugriff.
 
@@ -88,11 +88,11 @@ Das neue Intervall in Millisekunden. Der Standardwert ist 100.
 
 ## <a name="error-codes"></a>Fehlercodes
 
-Gibt **S \_ OK zurück,** wenn erfolgreich.
+Gibt bei Erfolg **S \_ OK** zurück.
 
 ## <a name="remarks"></a>Hinweise
 
-Weitere Informationen zu Remotedesktop-Webverbindung finden Sie unter [Requirements for Remotedesktop-Webverbindung](requirements-for-remote-desktop-web-connection.md).
+Weitere Informationen zu Remotedesktop-Webverbindung finden Sie unter [Anforderungen für Remotedesktop-Webverbindung](requirements-for-remote-desktop-web-connection.md).
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -108,7 +108,7 @@ Weitere Informationen zu Remotedesktop-Webverbindung finden Sie unter [Requireme
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 

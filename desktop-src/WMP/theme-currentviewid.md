@@ -1,9 +1,9 @@
 ---
-title: Design. currentViewID
-description: Das currentViewID-Attribut gibt die aktuell angezeigte Ansicht an oder ruft Sie ab.
+title: THEME.currentViewID
+description: Das currentViewID-Attribut gibt die aktuell angezeigte VIEW-Eigenschaft an oder ruft sie ab.
 ms.assetid: 94f23da9-cfda-4dc4-9804-b7daff5ebb8f
 keywords:
-- Design. currentViewID Windows Media Player
+- THEME.currentViewID Windows Media Player
 topic_type:
 - apiref
 api_name:
@@ -12,16 +12,16 @@ api_type:
 - NA
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 1c0c1b52ffdc35abf846987ed459565904938d4e
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 21bf3027b0249286689862e53fc2d616d1d33b19eca562c886e981bffb7f0267
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106372408"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118117811"
 ---
-# <a name="themecurrentviewid"></a>Design. currentViewID
+# <a name="themecurrentviewid"></a>THEME.currentViewID
 
-Das **currentViewID** -Attribut gibt die aktuell angezeigte **Ansicht** an oder ruft Sie ab.
+Das **currentViewID-Attribut** gibt die aktuell angezeigte **VIEW-Eigenschaft** an oder ruft sie ab.
 
 ``` syntax
 theme.currentViewID
@@ -29,11 +29,11 @@ theme.currentViewID
 
 ## <a name="possible-values"></a>Mögliche Werte
 
-Dieses Attribut ist eine Lese-/schreibzeichenfolge, die die **ID** der aktuellen **Ansicht** angibt.  Er besitzt keinen Standardwert.
+Dieses Attribut ist eine **Zeichenfolge** mit Lese-/Schreibzugriff, die die **ID** der aktuellen **VIEW angibt.** Er besitzt keinen Standardwert.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Durch Angeben von **currentViewID** wird die vorhandene **CurrentView** (auf die durch das **View** Global-Attribut verwiesen wird) automatisch geschlossen, und die angegebene **Ansicht** wird geöffnet.
+Wenn **Sie currentViewID** angeben, wird die vorhandene **currentView** (auf die durch das globale **View-Attribut** verwiesen wird) automatisch geschlossen, und die angegebene **VIEW** wird geöffnet.
 
 ## <a name="examples"></a>Beispiele
 
@@ -62,7 +62,7 @@ Durch Angeben von **currentViewID** wird die vorhandene **CurrentView** (auf die
 
 | Anforderung | Wert |
 |--------------------|------------------------------------------------------|
-| Version<br/> | Windows Media Player, Version 7,0 oder höher<br/> |
+| Version<br/> | Windows Media Player Version 7.0 oder höher<br/> |
 
 
 
@@ -70,7 +70,7 @@ Durch Angeben von **currentViewID** wird die vorhandene **CurrentView** (auf die
 
 <dl> <dt>
 
-[**Design-Element**](theme-element.md)
+[**THEME-Element**](theme-element.md)
 </dt> </dl>
 
  

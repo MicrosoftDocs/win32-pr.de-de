@@ -4,9 +4,9 @@ description: EnableRequestSOH ist nicht mehr verfügbar.
 ms.assetid: 4feb7530-cced-4ead-a1fb-679b81442bb3
 ms.tgt_platform: multiple
 keywords:
-- EnableRequestSOH-Remotedesktopdienste
+- EnableRequestSOH-Methode Remotedesktopdienste
 - EnableRequestSOH-Methode Remotedesktopdienste , Win32_TSGatewayServerSettings-Klasse
-- Win32_TSGatewayServerSettings klasse Remotedesktopdienste , EnableRequestSOH-Methode
+- Win32_TSGatewayServerSettings-Klasse Remotedesktopdienste , EnableRequestSOH-Methode
 topic_type:
 - apiref
 api_name:
@@ -26,9 +26,9 @@ ms.locfileid: "118349154"
 ---
 # <a name="enablerequestsoh-method-of-the-win32_tsgatewayserversettings-class"></a>EnableRequestSOH-Methode der Win32 \_ TSGatewayServerSettings-Klasse
 
-\[Die **EnableRequestSOH-Methode** ist ab diesem Windows Server 2016.\]
+\[Die **EnableRequestSOH-Methode** ist ab Windows Server 2016 nicht mehr verfügbar.\]
 
-Aktiviert oder deaktiviert Anforderungen für eine Integritätsanforderung (Statement of Health, SoH).
+Aktiviert oder deaktiviert Anforderungen für eine Integritätsaufforderung (Statement of Health, SoH).
 
 ## <a name="syntax"></a>Syntax
 
@@ -48,19 +48,19 @@ uint32 EnableRequestSOH(
 *RequestSOH* \[ In\]
 </dt> <dd>
 
-Geben **Sie TRUE** an, um das Feature zu aktivieren, oder **FALSE,** um das Feature zu deaktivieren.
+Geben Sie **TRUE** an, um das Feature zu aktivieren, oder **FALSE,** um das Feature zu deaktivieren.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Wenn die Methode erfolgreich ist, gibt sie 0 (null) zurück. Wenn die Methode nicht erfolgreich ist, wird ein Wert ungleich 0 (null) zurückgegeben. Eine Liste der Fehlercodes finden Sie unter Remotedesktopdienste [WMI-Anbieterfehlercodes](terminal-services-wmi-provider-error-codes.md).
+Wenn die Methode erfolgreich ist, gibt sie 0 (null) zurück. Wenn die Methode nicht erfolgreich ist, wird ein Wert ungleich 0 (null) zurückgegeben. Eine Liste der Fehlercodes finden Sie unter [Remotedesktopdienste WMI-Anbieterfehlercodes.](terminal-services-wmi-provider-error-codes.md)
 
 ## <a name="remarks"></a>Hinweise
 
-Sie müssen Mitglied der Gruppe Administratoren sein, um diese Methode aufrufen zu können.
+Sie müssen Mitglied der Gruppe Administratoren sein, um diese Methode aufzurufen.
 
-Managed Object Format -Dateien (MOF) enthalten die Definitionen für Windows WMI-Klassen (Management Instrumentation). MOF-Dateien werden nicht als Teil des Microsoft Windows Software Development Kit (SDK) installiert. Sie werden auf dem Server installiert, wenn Sie die zugeordnete Rolle mithilfe der Server-Manager. Weitere Informationen zu MOF-Dateien finden Sie unter [Managed Object Format (MOF).](/windows/desktop/WmiSdk/managed-object-format--mof-)
+Managed Object Format -Dateien (MOF) enthalten die Definitionen für Windows Management Instrumentation (WMI)-Klassen. MOF-Dateien werden nicht als Teil des Microsoft Windows Software Development Kit (SDK) installiert. Sie werden auf dem Server installiert, wenn Sie die zugeordnete Rolle mithilfe der Server-Manager hinzufügen. Weitere Informationen zu MOF-Dateien finden Sie unter [Managed Object Format (MOF).](/windows/desktop/WmiSdk/managed-object-format--mof-)
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -71,13 +71,13 @@ Managed Object Format -Dateien (MOF) enthalten die Definitionen für Windows WMI
 | Unterstützte Mindestversion (Client)<br/> | Nicht unterstützt<br/>                                                                |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2008<br/>                                                           |
 | Ende des Supports (Server)<br/>    | Windows Server 2012 R2<br/>                                                        |
-| Namespace<br/>                | \\ \\ CiMv2-Stammterminaldienste<br/>                                                 |
+| Namespace<br/>                | Root \\ CIMv2 \\ TerminalServices<br/>                                                 |
 | MOF<br/>                      | <dl> <dt>TSGateway.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>AagWmi.dll</dt> </dl>    |
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 

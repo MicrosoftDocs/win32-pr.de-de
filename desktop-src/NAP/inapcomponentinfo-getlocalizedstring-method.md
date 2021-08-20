@@ -1,11 +1,11 @@
 ---
-title: Inapcomponentinfo GetLocalizedString-Methode (napcommon. h)
-description: Wird vom NAP-System verwendet, um lokalisierte Zeichen folgen zu erhalten.
+title: INapComponentInfo GetLocalizedString-Methode (NapCommon.h)
+description: Wird vom NAP-System verwendet, um lokalisierte Zeichenfolgen abzurufen.
 ms.assetid: ad5be180-6329-4c91-b4d1-871a4d83c323
 keywords:
-- GetLocalizedString-Methode NAP
-- GetLocalizedString-Methode NAP, inapcomponentinfo-Schnittstelle
-- Inapcomponentinfo-Schnittstelle NAP, GetLocalizedString-Methode
+- NAP-Methode "GetLocalizedString"
+- GetLocalizedString-Methode NAP, INapComponentInfo-Schnittstelle
+- INapComponentInfo-Schnittstelle NAP , GetLocalizedString-Methode
 topic_type:
 - apiref
 api_name:
@@ -16,21 +16,21 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 781e4e8c93f58039c72a98f40a529243e5722d23
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: e7be55595bf6c5af6e435d9c53c9b473a721005699da494319ba55eaa828da2d
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "103957232"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118134363"
 ---
-# <a name="inapcomponentinfogetlocalizedstring-method"></a>Inapcomponentinfo:: GetLocalizedString-Methode
+# <a name="inapcomponentinfogetlocalizedstring-method"></a>INapComponentInfo::GetLocalizedString-Methode
 
 > [!Note]  
-> Die Netzwerk Zugriffsschutz-Plattform ist ab Windows 10 nicht verfügbar.
+> Die Netzwerkzugriffsschutz-Plattform ist ab Windows 10 nicht verfügbar.
 
  
 
-Die **inapcomponentinfo:: GetLocalizedString** -Rückruf Methode wird vom NAP-System verwendet, um lokalisierte Zeichen folgen zu erhalten.
+Die **Rückrufmethode INapComponentInfo::GetLocalizedString** wird vom NAP-System verwendet, um lokalisierte Zeichenfolgen abzurufen.
 
 ## <a name="syntax"></a>Syntax
 
@@ -48,39 +48,39 @@ HRESULT GetLocalizedString(
 
 <dl> <dt>
 
-*msgid* \[ in\]
+*msgId* \[ In\]
 </dt> <dd>
 
-Eine [**MessageId**](nap-datatypes.md) , die die Ressourcen-ID der zu lokalisieren Zeichenfolge enthält.
+Eine [**MessageId,**](nap-datatypes.md) die die Ressourcen-ID der zu lokalisierenden Zeichenfolge enthält.
 
 </dd> <dt>
 
-*Zeichenfolge* \[ vorgenommen\]
+*Zeichenfolge* \[ out\]
 </dt> <dd>
 
-Ein Zeiger auf einen Zeiger auf eine [**zählzeichenfolge**](/windows/win32/api/naptypes/ns-naptypes-countedstring) , die die lokalisierte Version der Nachricht enthält.
+Ein Zeiger auf einen Zeiger auf eine [**CountedString,**](/windows/win32/api/naptypes/ns-naptypes-countedstring) die die lokalisierte Version der Nachricht enthält.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt einen dieser Fehlercodes basierend auf dem Ergebnis dieses Vorgangs zurück.
+Gibt basierend auf dem Ergebnis dieses Vorgangs einen dieser Fehlercodes zurück.
 
 
 
 | Rückgabecode                                                                                     | Beschreibung                                                        |
 |-------------------------------------------------------------------------------------------------|--------------------------------------------------------------------|
 | <dl> <dt>**S \_ OK**</dt> </dl>           | Der Vorgang ist erfolgreich.<br/>                            |
-| <dl> <dt>**E \_ Access verweigert**</dt> </dl> | Berechtigungs Fehler, Zugriff verweigert.<br/>                       |
-| <dl> <dt>**E \_ Outo-Memory**</dt> </dl>  | System Ressourcen Limit, der Vorgang konnte nicht durchgeführt werden.<br/> |
+| <dl> <dt>**E \_ ACCESSDENIED**</dt> </dl> | Berechtigungsfehler, Zugriff verweigert.<br/>                       |
+| <dl> <dt>**E \_ OUTOFMEMORY**</dt> </dl>  | Systemressourcenlimit, konnte den Vorgang nicht ausführen.<br/> |
 
 
 
  
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Zeichen folgen sollten entsprechend der Sprach-ID des aufrufenden Threads lokalisiert werden.
+Zeichenfolgen sollten entsprechend der Sprach-ID des aufrufenden Threads lokalisiert werden.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -88,10 +88,10 @@ Zeichen folgen sollten entsprechend der Sprach-ID des aufrufenden Threads lokali
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                           |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/>                                     |
-| Header<br/>                   | <dl> <dt>Napcommon. h</dt> </dl>   |
-| IDL<br/>                      | <dl> <dt>Napcommon. idl</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur Vista-Desktop-Apps\]<br/>                                           |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/>                                     |
+| Header<br/>                   | <dl> <dt>NapCommon.h</dt> </dl>   |
+| Idl<br/>                      | <dl> <dt>NapCommon.idl</dt> </dl> |
 
 
 
@@ -102,7 +102,7 @@ Zeichen folgen sollten entsprechend der Sprach-ID des aufrufenden Threads lokali
 
 </dt> <dt>
 
-[**Inapcomponentinfo**](inapcomponentinfo.md)
+[**INapComponentInfo**](inapcomponentinfo.md)
 </dt> </dl>
 
  

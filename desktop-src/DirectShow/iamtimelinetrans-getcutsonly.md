@@ -1,7 +1,7 @@
 ---
-description: Die getcutsonly-Methode bestimmt, ob der Übergang als Ausschneiden gerendert wird. Wenn dies der Fall ist, tritt der Übergang sofort am Ausschneide Punkt auf.
+description: Die GetCutsOnly-Methode bestimmt, ob der Übergang als Schnitt gerendert wird. Wenn dies der Fall ist, erfolgt der Übergang sofort am Schnittpunkt.
 ms.assetid: d7959816-1152-4bc4-b3f8-bed69b450530
-title: 'Iamtimelinetrans:: getcutsonly-Methode (qedit. h)'
+title: IAMTimelineTrans::GetCutsOnly-Methode (Qedit.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -14,21 +14,21 @@ api_type:
 api_location:
 - strmiids.lib
 - strmiids.dll
-ms.openlocfilehash: d3bbec55ddfe77c053135054fde9b64efce516a3
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 7007db4699dc3f1772ad727c2e40daa15946d07d564b92b5b1517899ff6e1f20
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106367189"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118154784"
 ---
-# <a name="iamtimelinetransgetcutsonly-method"></a>Iamtimelinetrans:: getcutsonly-Methode
+# <a name="iamtimelinetransgetcutsonly-method"></a>IAMTimelineTrans::GetCutsOnly-Methode
 
 > [!Note]  
-> \[Veraltet. Diese API kann aus zukünftigen Versionen von Windows entfernt werden.\]
+> \[Veraltet. Diese API kann aus zukünftigen Releases von Windows entfernt werden.\]
 
  
 
-Die- `GetCutsOnly` Methode bestimmt, ob der Übergang als Ausschneiden gerendert wird. Wenn dies der Fall ist, tritt der Übergang sofort am Ausschneide Punkt auf.
+Die `GetCutsOnly` -Methode bestimmt, ob der Übergang als Schnitt gerendert wird. Wenn dies der Fall ist, erfolgt der Übergang sofort am Schnittpunkt.
 
 ## <a name="syntax"></a>Syntax
 
@@ -48,23 +48,23 @@ HRESULT GetCutsOnly(
 *pVal* 
 </dt> <dd>
 
-Empfängt einen booleschen Wert, der angibt, ob der Übergang als Ausschneiden gerendert wird. **True** gibt an, dass der Übergang eine sofortige Ausschneide ist. Wenn der Wert **false** ist, tritt der Übergang über die normale Dauer auf.
+Empfängt einen booleschen Wert, der angibt, ob der Übergang als Schnitt gerendert wird. True gibt an, dass der Übergang ein sofortiger Schnitt ist. **False** gibt an, dass der Übergang über die normale Dauer erfolgt.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Wenn diese Methode erfolgreich ausgeführt wird, gibt Sie **S \_ OK** zurück. Andernfalls wird ein **HRESULT** -Fehlercode zurückgegeben.
+Wenn diese Methode erfolgreich ist, wird **S \_ OK** zurückgegeben. Andernfalls wird ein **HRESULT-Fehlercode** zurückgegeben.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
 > [!Note]  
-> Die Header Datei "qedit. h" ist nicht mit Direct3D-Headern nach Version 7 kompatibel.
+> Die Headerdatei Qedit.h ist nicht mit Direct3D-Headern kompatibel, die höher als Version 7 sind.
 
  
 
 > [!Note]  
-> Zum Abrufen von "qedit. h" Laden Sie das [Microsoft Windows SDK Update für Windows Vista und .NET Framework 3,0](https://msdn.microsoft.com/windowsvista/bb980924.aspx)herunter. "Qedit. h" ist im Microsoft Windows SDK für Windows 7 und .NET Framework 3,5 Service Pack 1 nicht verfügbar.
+> Laden Sie zum Abrufen von Qedit.h das [Microsoft Windows SDK-Update für Windows Vista und .NET Framework 3.0](https://msdn.microsoft.com/windowsvista/bb980924.aspx)herunter. Qedit.h ist im Microsoft Windows SDK für Windows 7 und .NET Framework 3.5 Service Pack 1 nicht verfügbar.
 
  
 
@@ -74,8 +74,8 @@ Wenn diese Methode erfolgreich ausgeführt wird, gibt Sie **S \_ OK** zurück. A
 
 | Anforderung | Wert |
 |--------------------|-----------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>"Qedit. h"</dt> </dl>      |
-| Bibliothek<br/> | <dl> <dt>"" "" ". Lib"</dt> </dl> |
+| Header<br/>  | <dl> <dt>Qedit.h</dt> </dl>      |
+| Bibliothek<br/> | <dl> <dt>Strmiids.lib</dt> </dl> |
 
 
 
@@ -83,19 +83,19 @@ Wenn diese Methode erfolgreich ausgeführt wird, gibt Sie **S \_ OK** zurück. A
 
 <dl> <dt>
 
-[**Iamtimelinetrans-Schnittstelle**](iamtimelinetrans.md)
+[**IAMTimelineTrans-Schnittstelle**](iamtimelinetrans.md)
 </dt> <dt>
 
-[**Iamtimelinetrans:: setcutsonly**](iamtimelinetrans-setcutsonly.md)
+[**IAMTimelineTrans::SetCutsOnly**](iamtimelinetrans-setcutsonly.md)
 </dt> <dt>
 
-[**Iamtimelinetrans:: getcutpoint**](iamtimelinetrans-getcutpoint.md)
+[**IAMTimelineTrans::GetCutPoint**](iamtimelinetrans-getcutpoint.md)
 </dt> <dt>
 
-[**Iamtimeline:: transitionsenabled**](iamtimeline-transitionsenabled.md)
+[**IAMTimeline::TransitionsEnabled**](iamtimeline-transitionsenabled.md)
 </dt> <dt>
 
-[Fehler-und Erfolgs Codes](error-and-success-codes.md)
+[Fehler- und Erfolgscodes](error-and-success-codes.md)
 </dt> </dl>
 
  

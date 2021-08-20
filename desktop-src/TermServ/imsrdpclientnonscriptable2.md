@@ -39,7 +39,7 @@ Die **IMsRdpClientNonScriptable2-Schnittstelle** verfügt über diese Eigenschaf
 
 
 
-| Eigenschaft                                                                                   | Zugriffstyp           | BESCHREIBUNG                                                                                                                                                                                                  |
+| Eigenschaft                                                                                   | Zugriffstyp           | Beschreibung                                                                                                                                                                                                  |
 |:-------------------------------------------------------------------------------------------|:----------------------|:-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | [**UIParentWindowHandle**](imsrdpclientnonscriptable2-uiparentwindowhandle.md)<br/> | Lesen/Schreiben<br/> | Das Fensterhand handle, das als übergeordnetes Fenster für das Steuerelement verwendet werden soll. Dadurch können alle fenster, die vom -Steuerelement angezeigt werden, in Bezug auf alle fenster, die von der übergeordneten Anwendung angezeigt werden, ordnungsgemäß modal sein.<br/> |
 
@@ -55,7 +55,7 @@ Diese Schnittstelle wurde durch die folgenden Schnittstellen erweitert, und jede
 -   [**IMsRdpClientNonScriptable4**](imsrdpclientnonscriptable4.md)
 -   [**IMsRdpClientNonScriptable5**](imsrdpclientnonscriptable5.md)
 
-Weitere Informationen zu Remotedesktop-Webverbindung finden Sie unter [Requirements for Remotedesktop-Webverbindung](requirements-for-remote-desktop-web-connection.md).
+Weitere Informationen zu Remotedesktop-Webverbindung finden Sie unter [Anforderungen für Remotedesktop-Webverbindung](requirements-for-remote-desktop-web-connection.md).
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -72,7 +72,7 @@ Weitere Informationen zu Remotedesktop-Webverbindung finden Sie unter [Requireme
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 

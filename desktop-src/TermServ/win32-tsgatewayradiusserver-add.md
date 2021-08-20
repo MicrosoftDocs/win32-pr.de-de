@@ -1,12 +1,12 @@
 ---
-title: Add-Methode der Win32_TSGatewayRADIUSServer-Klasse
-description: Fügt einen neuen Remote Authentication Dial-in User Service Server (RADIUS) hinzu.
+title: Hinzufügen der Methode der Win32_TSGatewayRADIUSServer-Klasse
+description: Fügt einen neuen RADIUS-Server (Remote Authentication Dial-In User Service) hinzu.
 ms.assetid: 78f74bb6-8f70-4bc1-8e4d-1670a3ae3f31
 ms.tgt_platform: multiple
 keywords:
-- Methoden Remotedesktopdienste hinzufügen
-- Methoden Remotedesktopdienste hinzufügen, Win32_TSGatewayRADIUSServer Schnittstelle
-- Win32_TSGatewayRADIUSServer Schnittstellen Remotedesktopdienste, Methode hinzufügen
+- Hinzufügen von Methoden Remotedesktopdienste
+- Hinzufügen einer Methode Remotedesktopdienste , Win32_TSGatewayRADIUSServer-Schnittstelle
+- Win32_TSGatewayRADIUSServer Schnittstelle Remotedesktopdienste , Methode hinzufügen
 topic_type:
 - apiref
 api_name:
@@ -17,16 +17,16 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 6869c55a6704944c34c68af065875cad92e8385c
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 433c978378d0ebb4603e96292fa08456d0988a3ede795de070aef89452850d8a
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "106346121"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118126736"
 ---
-# <a name="add-method-of-the-win32_tsgatewayradiusserver-class"></a>Add-Methode der Win32-Klasse "t- \_ gatewayradiusserver"
+# <a name="add-method-of-the-win32_tsgatewayradiusserver-class"></a>Hinzufügen der Methode der Win32 \_ TSGatewayRADIUSServer-Klasse
 
-Fügt einen neuen Remote Authentication Dial-in User Service Server (RADIUS) hinzu.
+Fügt einen neuen RADIUS-Server (Remote Authentication Dial-In User Service) hinzu.
 
 ## <a name="syntax"></a>Syntax
 
@@ -44,29 +44,29 @@ uint32 Add(
 
 <dl> <dt>
 
-*Name* \[ in\]
+*Name* \[ In\]
 </dt> <dd>
 
-Name des RADIUS-Servers.
+RADIUS-Servername.
 
 </dd> <dt>
 
-*Sharedsecret* \[ in\]
+*SharedSecret* \[ In\]
 </dt> <dd>
 
-Gemeinsamer geheimer Schlüssel für den RADIUS-Server.
+Gemeinsames Geheimnis für den RADIUS-Server.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Wenn die Methode erfolgreich ist, gibt Sie 0 (null) zurück. Wenn die Methode nicht erfolgreich ist, wird ein Wert ungleich 0 (null) zurückgegeben. Eine Liste der Fehlercodes finden Sie unter [Remotedesktopdienste Fehlercodes des WMI-Anbieters](terminal-services-wmi-provider-error-codes.md).
+Wenn die Methode erfolgreich ist, gibt sie 0 (null) zurück. Wenn die Methode nicht erfolgreich ist, wird ein Wert ungleich 0 (null) zurückgegeben. Eine Liste der Fehlercodes finden Sie unter [Remotedesktopdienste WMI-Anbieterfehlercodes.](terminal-services-wmi-provider-error-codes.md)
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Sie müssen Mitglied der Gruppe "Administratoren" sein, um diese Methode aufzurufen.
+Sie müssen Mitglied der Gruppe Administratoren sein, um diese Methode aufzurufen.
 
-Managed Object Format-Dateien (MOF) enthalten die Definitionen für Windows-Verwaltungsinstrumentation (WMI)-Klassen. MOF-Dateien werden nicht als Teil des Microsoft Windows Software Development Kit (SDK) installiert. Sie werden auf dem Server installiert, wenn Sie die zugehörige Rolle mithilfe der Server-Manager hinzufügen. Weitere Informationen zu MOF-Dateien finden Sie unter [Managed Object Format (MOF)](/windows/desktop/WmiSdk/managed-object-format--mof-).
+Managed Object Format -Dateien (MOF) enthalten die Definitionen für WMI-Klassen (Windows Management Instrumentation). MOF-Dateien werden nicht als Teil des Microsoft Windows Software Development Kit (SDK) installiert. Sie werden auf dem Server installiert, wenn Sie die zugeordnete Rolle mithilfe der Server-Manager hinzufügen. Weitere Informationen zu MOF-Dateien finden Sie unter [Managed Object Format (MOF).](/windows/desktop/WmiSdk/managed-object-format--mof-)
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -77,7 +77,7 @@ Managed Object Format-Dateien (MOF) enthalten die Definitionen für Windows-Verw
 | Unterstützte Mindestversion (Client)<br/> | Nicht unterstützt<br/>                                                                |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2008<br/>                                                           |
 | Namespace<br/>                | Root \\ CIMv2 \\ TerminalServices<br/>                                                 |
-| MOF<br/>                      | <dl> <dt>"T-Gateway. mof"</dt> </dl> |
+| MOF<br/>                      | <dl> <dt>TSGateway.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>AagWmi.dll</dt> </dl>    |
 
 
@@ -86,7 +86,7 @@ Managed Object Format-Dateien (MOF) enthalten die Definitionen für Windows-Verw
 
 <dl> <dt>
 
-[**Win32-"t- \_ gatewayradiusserver"**](win32-tsgatewayradiusserver.md)
+[**Win32 \_ TSGatewayRADIUSServer**](win32-tsgatewayradiusserver.md)
 </dt> </dl>
 
  

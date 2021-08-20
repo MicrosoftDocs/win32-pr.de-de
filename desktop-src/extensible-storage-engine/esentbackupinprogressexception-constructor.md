@@ -1,6 +1,6 @@
 ---
-description: 'Weitere Informationen finden Sie unter: esentbackupinprogressexception-Konstruktor'
-title: Esentbackupinprogressexception-Konstruktor
+description: 'Weitere Informationen finden Sie unter: EsentBackupInProgressException-Konstruktor'
+title: EsentBackupInProgressException-Konstruktor
 TOCTitle: 'EsentBackupInProgressException constructor '
 ms:assetid: M:Microsoft.Isam.Esent.Interop.EsentBackupInProgressException.#ctor
 ms:mtpsurl: https://msdn.microsoft.com/library/microsoft.isam.esent.interop.esentbackupinprogressexception.esentbackupinprogressexception(v=EXCHG.10)
@@ -24,19 +24,19 @@ api_type:
 api_location:
 - Microsoft.Isam.Esent.Interop.dll
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: b2a91c34ddc2fee3ea8bb9eecb3ad5b67c8a2af2
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 392f02d64377ff6776f3b01188b5df91ec0c9c723579e438c62314a2d4fc7500
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "104042737"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118083211"
 ---
-# <a name="esentbackupinprogressexception-constructor"></a>Esentbackupinprogressexception-Konstruktor
+# <a name="esentbackupinprogressexception-constructor"></a>EsentBackupInProgressException-Konstruktor
 
-Initialisiert eine neue Instanz der esentbackupinprogressexception-Klasse.
+Initialisiert eine neue Instanz der EsentBackupInProgressException-Klasse.
 
-**Namespace:**  [Microsoft. ISAM. ESENT. Interop](./microsoft.isam.esent.interop-namespace.md)  
-**Assembly:**  Microsoft. ISAM. ESENT. Interop (in Microsoft.Isam.Esent.Interop.dll)
+**Namespace:**  [Microsoft.Isam.Esent.Interop](./microsoft.isam.esent.interop-namespace.md)  
+**Assembly:**  Microsoft.Isam.Esent.Interop (in Microsoft.Isam.Esent.Interop.dll)
 
 ## <a name="syntax"></a>Syntax
 
@@ -54,10 +54,10 @@ public EsentBackupInProgressException()
 
 ## <a name="see-also"></a>Siehe auch
 
-#### <a name="reference"></a>Referenz
+#### <a name="reference"></a>Verweis
 
-[Esentbackupinprogressexception-Klasse](./esentbackupinprogressexception-class.md)
+[EsentBackupInProgressException-Klasse](./esentbackupinprogressexception-class.md)
 
-[Esentbackupinprogressexception-Elemente](./esentbackupinprogressexception-members.md)
+[EsentBackupInProgressException-Member](./esentbackupinprogressexception-members.md)
 
-[Microsoft. ISAM. ESENT. Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)
+[Microsoft.Isam.Esent.Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)

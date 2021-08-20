@@ -1,6 +1,6 @@
 ---
-description: 'Weitere Informationen zu: Debug-Bit-Enumeration'
-title: Debug-Enumeration
+description: Weitere Informationen finden Sie unter DefragGrbit-Enumeration.
+title: DefragGrbit-Enumeration
 TOCTitle: DefragGrbit enumeration
 ms:assetid: T:Microsoft.Isam.Esent.Interop.DefragGrbit
 ms:mtpsurl: https://msdn.microsoft.com/library/microsoft.isam.esent.interop.defraggrbit(v=EXCHG.10)
@@ -30,21 +30,21 @@ api_type:
 api_location:
 - Microsoft.Isam.Esent.Interop.dll
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: e5da047fbdad20ac40d780dc5b0bba9e986e7672
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: faf2187a47f7a3cd519d69c8cf45f377a4e0f0941d4e9a83bd50653cc4236504
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106350986"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118083437"
 ---
-# <a name="defraggrbit-enumeration"></a>Debug-Enumeration
+# <a name="defraggrbit-enumeration"></a>DefragGrbit-Enumeration
 
-Optionen für [jetdefragment (JET_SESID, JET_DBID, String, Int32, Int32, defraggrbit)](./api.jetdefragment-method.md).
+Optionen für [JetDefragment(JET_SESID, JET_DBID, String, Int32, Int32, DefragGrbit)](./api.jetdefragment-method.md).
 
 Diese Enumeration enthält ein [FlagsAttribute](/dotnet/api/system.flagsattribute)-Attribut, das eine bitweise Kombination der Memberwerte zulässt.
 
-**Namespace:**  [Microsoft. ISAM. ESENT. Interop](./microsoft.isam.esent.interop-namespace.md)  
-**Assembly:**  Microsoft. ISAM. ESENT. Interop (in Microsoft.Isam.Esent.Interop.dll)
+**Namespace:**  [Microsoft.Isam.Esent.Interop](./microsoft.isam.esent.interop-namespace.md)  
+**Assembly:**  Microsoft.Isam.Esent.Interop (in Microsoft.Isam.Esent.Interop.dll)
 
 ## <a name="syntax"></a>Syntax
 
@@ -74,18 +74,18 @@ public enum DefragGrbit
 <tbody>
 <tr class="odd">
 <td></td>
-<td>Availspacetreesonly</td>
-<td>Zerlegt den verfügbaren Platz Anteil der ESE-Daten Bank Speicher Belegung. Der Daten Bankbereich ist in zwei Typen unterteilt: eigener Speicherplatz und verfügbarer Speicherplatz. Der Speicherplatz ist einer Tabelle oder einem Index zugeordnet, während der verfügbare Speicherplatz für die Verwendung innerhalb der Tabelle bzw. des Indexes bereit ist. Der verfügbare Speicherplatz ist weitaus dynamischer als das Verhalten und erfordert eine Inline Defragmentierung, die nicht dem Besitz des eigenen Speicherplatzes oder der Tabellen-oder Indexdaten entspricht.</td>
+<td>AvailSpaceTreesOnly</td>
+<td>Defragmentiert den verfügbaren Speicherplatzteil der ESE-Datenbank-Speicherplatzzuordnung. Der Datenbankspeicherplatz ist in zwei Typen unterteilt: eigener Speicherplatz und verfügbarer Speicherplatz. Der eigene Speicherplatz wird einer Tabelle oder einem Index zugeordnet, während der verfügbare Speicherplatz für die Verwendung innerhalb der Tabelle bzw. des Indexes bereit ist. Der verfügbare Speicherplatz ist im Verhalten viel dynamischer und erfordert eine größere Onlinedefragmentierung als speicherplatz- oder tabellen- oder indexeigene Daten.</td>
 </tr>
 <tr class="even">
 <td></td>
-<td>Batchstart</td>
-<td>Startet eine neue defragmentierungsaufgabe.</td>
+<td>BatchStart</td>
+<td>Startet eine neue Defragmentierungsaufgabe.</td>
 </tr>
 <tr class="odd">
 <td></td>
-<td>Batchstoppt</td>
-<td>Beendet eine defragmentierungsaufgabe.</td>
+<td>BatchStop</td>
+<td>Beendet eine Defragmentierungsaufgabe.</td>
 </tr>
 </tbody>
 </table>
@@ -93,6 +93,6 @@ public enum DefragGrbit
 
 ## <a name="see-also"></a>Siehe auch
 
-#### <a name="reference"></a>Referenz
+#### <a name="reference"></a>Verweis
 
-[Microsoft. ISAM. ESENT. Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)
+[Microsoft.Isam.Esent.Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)

@@ -1,5 +1,5 @@
 ---
-description: Das Clipping umfasst das Einschränken des Zeichnens auf einen bestimmten Bereich. Die folgende Abbildung zeigt die Zeichenfolge &\# 0034; Hello&\# 0034; auf einen heart-förmigen Bereich abgeschnitten.
+description: Clipping umfasst das Einschränken des Zeichnens auf einen bestimmten Bereich. Die folgende Abbildung zeigt die Zeichenfolge &\# 0034; Hello&\# 0034; auf einen heartförmigen Bereich abgeschnitten.
 ms.assetid: 58cc052d-31af-4410-81b9-defbad08a1dc
 title: Clipping (GDI+)
 ms.topic: article
@@ -13,15 +13,15 @@ ms.locfileid: "118067634"
 ---
 # <a name="clipping-gdi"></a>Clipping (GDI+)
 
-Das Clipping umfasst das Einschränken des Zeichnens auf einen bestimmten Bereich. Die folgende Abbildung zeigt die Zeichenfolge "Hello", die in einen heartförmigen Bereich abgeschnitten ist.
+Clipping umfasst das Einschränken des Zeichnens auf einen bestimmten Bereich. Die folgende Abbildung zeigt die Zeichenfolge "Hello", die auf einen heartförmigen Bereich abgeschnitten ist.
 
-![Abbildung, die Teile der Zeichenfolge "hello" in einem roten Heart zeigt](images/aboutgdip02-art30.png)
+![Abbildung mit Teilen der Zeichenfolge "hello" in einem roten Heart](images/aboutgdip02-art30.png)
 
-Bereiche können aus Pfaden erstellt werden, und Pfade können die Konturen von Zeichenfolgen enthalten, sodass Sie umrissenen Text zum Ausschneiden verwenden können. Die folgende Abbildung zeigt eine Reihe konzentrierter Ellipsen, die am Inneren einer Textzeichenfolge abgeschnitten sind.
+Bereiche können aus Pfaden erstellt werden, und Pfade können die Konturen von Zeichenfolgen enthalten, sodass Sie umrissenen Text zum Ausschneiden verwenden können. Die folgende Abbildung zeigt eine Reihe von verketteten Ellipsen, die am Inneren einer Textzeichenfolge abgeschnitten sind.
 
-![Abbildung, die die Zeichenfolge "hello" zeigt, die durch ein Muster konzentrierter Kreise gefüllt ist](images/aboutgdip02-art31.png)
+![Abbildung der Zeichenfolge "hello", die durch ein Muster von konzentrischen Kreisen gefüllt ist](images/aboutgdip02-art31.png)
 
-Erstellen Sie zum Zeichnen [](/windows/win32/api/gdiplusgraphics/nl-gdiplusgraphics-graphics) mit Clipping ein Graphics-Objekt, rufen Sie dessen [SetClip-Methode](/windows/win32/api/gdiplusgraphics/nf-gdiplusgraphics-graphics-setclip(inconstregion_incombinemode)) auf, und rufen Sie dann die Zeichnungsmethoden desselben **Graphics-Objekts** auf. Im folgenden Beispiel wird eine Linie ge zeichnet, die in einen rechteckigen Bereich abgeschnitten wird.
+Erstellen Sie zum Zeichnen mit Clipping ein [**Graphics-Objekt,**](/windows/win32/api/gdiplusgraphics/nl-gdiplusgraphics-graphics) rufen Sie dessen [SetClip-Methode](/windows/win32/api/gdiplusgraphics/nf-gdiplusgraphics-graphics-setclip(inconstregion_incombinemode)) auf, und rufen Sie dann die Zeichnungsmethoden desselben **Grafikobjekts** auf. Im folgenden Beispiel wird eine Linie gezogen, die auf einen rechteckigen Bereich abgeschnitten wird.
 
 
 ```

@@ -1,5 +1,5 @@
 ---
-description: Registriert eine Anwendung als Client von ctl3d.
+description: Registriert eine Anwendung als Client von CTL3D.
 ms.assetid: 38a4a04a-6322-4eb8-b272-ae9b90f84e0f
 title: Ctl3dRegister-Funktion
 ms.topic: reference
@@ -13,16 +13,16 @@ api_type:
 - DllExport
 api_location:
 - Ctl3d32.dll
-ms.openlocfilehash: 4b855c162d9d5f1c43a15d1ebd7219da6f847f37
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 9f58236891b8a673102905e0ef0c108ac9da6e6192788abea9c6e79baf8acfcc
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106361652"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118162158"
 ---
 # <a name="ctl3dregister-function"></a>Ctl3dRegister-Funktion
 
-Registriert eine Anwendung als Client von ctl3d.
+Registriert eine Anwendung als Client von CTL3D.
 
 ## <a name="syntax"></a>Syntax
 
@@ -39,7 +39,7 @@ BOOL Ctl3dRegister(
 
 <dl> <dt>
 
-*hinstapp* 
+*hinstApp* 
 </dt> <dd>
 
 Ein Handle für die Anwendung, die als Client registriert werden soll.
@@ -48,15 +48,15 @@ Ein Handle für die Anwendung, die als Client registriert werden soll.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt **true** zurück, wenn 3D-Effekte aktiv sind. Andernfalls wird **false** zurückgegeben.
+Gibt **TRUE** zurück, wenn 3D-Effekte aktiv sind. Andernfalls wird **FALSE** zurückgegeben.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Eine Anwendung, die ctl3d verwendet, sollte diese Funktion in WinMain aufruft.
+Eine Anwendung, die CTL3D verwendet, sollte diese Funktion in WinMain aufrufen.
 
-3D-Effekte sind auf Systemen mit einer geringeren Auflösung als VGA nicht verfügbar.
+3D-Effekte sind auf Systemen mit einer geringeren VGA-Auflösung nicht verfügbar.
 
-Dieser Funktion ist keine Import Bibliothek oder Header Datei zugeordnet. Sie müssen ihn mithilfe der [**LoadLibrary**](/windows/win32/api/libloaderapi/nf-libloaderapi-loadlibrarya) -Funktion und der [**GetProcAddress**](/windows/win32/api/libloaderapi/nf-libloaderapi-getprocaddress) -Funktion aufrufen.
+Dieser Funktion ist keine Importbibliothek oder Headerdatei zugeordnet. Sie müssen sie mithilfe der [**Funktionen LoadLibrary**](/windows/win32/api/libloaderapi/nf-libloaderapi-loadlibrarya) und [**GetProcAddress**](/windows/win32/api/libloaderapi/nf-libloaderapi-getprocaddress) aufrufen.
 
 ## <a name="requirements"></a>Anforderungen
 

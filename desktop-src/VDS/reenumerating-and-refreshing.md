@@ -1,41 +1,41 @@
 ---
-description: Erneute Aufzählung und Aktualisierung
+description: Aufzählen und Aktualisieren
 ms.assetid: 67d34946-47df-43e2-8ca7-628d0671b869
-title: Erneute Aufzählung und Aktualisierung
+title: Aufzählen und Aktualisieren
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: f4a6302c817390ea2eb6bda3d5da0302c4bfefbc
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 42f19d28d44234b773988f3038666212caf447fb45dee39435b0d99169f92212
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106358955"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118125920"
 ---
-# <a name="reenumerating-and-refreshing"></a>Erneute Aufzählung und Aktualisierung
+# <a name="reenumerating-and-refreshing"></a>Aufzählen und Aktualisieren
 
-\[Ab Windows 8 und Windows Server 2012 wird die COM-Schnittstelle des [virtuellen Festplatten Dienstanbieter](virtual-disk-service-portal.md) durch die [Windows-Speicherverwaltungs-API](/previous-versions/windows/desktop/stormgmt/windows-storage-management-api-portal)ersetzt.\]
+\[Ab Windows 8 und Windows Server 2012 wird die COM-Schnittstelle des [Virtual Disk Service](virtual-disk-service-portal.md) durch die Windows Storage Verwaltungs-API. [](/previous-versions/windows/desktop/stormgmt/windows-storage-management-api-portal)\]
 
-Der Vorgang reenumeration ermittelt neu verbundene und neu getrennte Geräte. Der Aktualisierungs Vorgang aktualisiert die Konfigurationsinformationen vorhandener Geräte.
+Beim Reenumerationsvorgang werden neu verbundene und neu getrennte Geräte gefunden. Der Aktualisierungsvorgang aktualisiert die Konfigurationsinformationen vorhandener Geräte.
 
-**So können Sie Softwareanbieter Objekte erneut aufzählen**
+**So aufzählen Sie Softwareanbieterobjekte erneut**
 
--   Aufrufen der [**ivdsservice:: REENUMERATE**](/windows/desktop/api/Vds/nf-vds-ivdsservice-reenumerate) -Methode. Diese Methode ermittelt alle neu verbundenen und nicht verbundenen Datenträger und CD-ROM-Laufwerke und stellt sicher, dass alle Datenträger über den richtigen Besitzer verfügen. VDS besitzt unformatierte Datenträger oder Datenträger mit Fehlern. der Basic-Anbieter besitzt Basis Datenträger. und der dynamische Anbieter besitzt dynamische Datenträger. Dieser Vorgang kann das Scannen interner subsystembusse und das warten auf Timeouts einschließen.
+-   Rufen Sie [**die IVdsService::Reenumerate-Methode**](/windows/desktop/api/Vds/nf-vds-ivdsservice-reenumerate) auf. Diese Methode entdeckt alle neu verbundenen und getrennten Datenträger und CD-ROM-Laufwerke und stellt sicher, dass alle Datenträger über den richtigen Besitzer verfügen. VDS besitzt Unformatiert-Datenträger oder Datenträger mit Fehlern. Der Basic-Anbieter besitzt Basisdatenträger. und der dynamische Anbieter besitzt dynamische Datenträger. Dieser Vorgang kann das Scannen interner Subsystem-Buslinien und das Warten auf Time outs umfassen.
 
-**So können Sie Softwareanbieter Objekte erneut auflisten und aktualisieren**
+**So aufzählen und aktualisieren Sie Softwareanbieterobjekte**
 
--   Aufrufen der [**ivdsservice:: REENUMERATE**](/windows/desktop/api/Vds/nf-vds-ivdsservice-reenumerate) -Methode und anschließendes Aufrufen der [**ivdsservice:: Refresh**](/windows/desktop/api/Vds/nf-vds-ivdsservice-refresh) -Methode. Durch diese Kombination von Methoden werden nicht nur neu verbundene und nicht verbundene Datenträger und CD-ROM-Laufwerke ermittelt, sondern alle Datenträger-, Volume-und Plex-Informationen im VDS-Cache für Datenträger, die nicht vor kurzem verbunden oder getrennt wurden. Aufrufen von " **Aktualisieren** ", um die Eigenschafts Informationen vorhandener Objekte im Cache zu aktualisieren. Dieser Vorgang kann das Scannen interner subsystembusse und das warten auf Timeouts einschließen. Beachten Sie, dass VDS den Cache automatisch aktualisiert, sobald eine Änderung auftritt, die eine Benachrichtigung auslöst. Außerdem kann das Aufrufen einer **Aktualisierung** als Antwort auf eine VDS-Benachrichtigung dazu führen, dass eine Endlosschleife von Benachrichtigungen gesendet wird. Aus diesen Gründen sollte die **Aktualisierung** nur aufgerufen werden, wenn angezeigt wird, dass der Cache nicht ordnungsgemäß aktualisiert wird.
+-   Rufen Sie [**die IVdsService::Reenumerate-Methode**](/windows/desktop/api/Vds/nf-vds-ivdsservice-reenumerate) auf, und rufen Sie dann die [**IVdsService::Refresh-Methode**](/windows/desktop/api/Vds/nf-vds-ivdsservice-refresh) auf. Zusätzlich zur Suche nach neu verbundenen und getrennten Datenträgern und CD-ROM-Laufwerken aktualisiert diese Kombination von Methoden alle Datenträger-, Volume- und Plexinformationen im VDS-Cache für Datenträger, die nicht kürzlich verbunden oder getrennt wurden. Rufen **Sie Refresh** allein auf, um die Eigenschafteninformationen vorhandener Objekte im Cache zu aktualisieren. Dieser Vorgang kann das Scannen interner Subsystem-Buslinien und das Warten auf Time outs umfassen. Beachten Sie, dass VDS den Cache automatisch aktualisiert, wenn eine Änderung auftritt, die eine Benachrichtigung auslöst. Außerdem kann das Aufrufen **von Refresh** als Reaktion auf eine VDS-Benachrichtigung dazu führen, dass eine Endlosschleife von Benachrichtigungen gesendet wird. Aus diesen Gründen **sollte Die Aktualisierung** nur aufgerufen werden, wenn der Cache anscheinend nicht ordnungsgemäß aktualisiert wird.
 
-**So können Sie Hardware Subsysteme erneut aufzählen**
+**So aufzählen Sie Hardwaresubsysteme erneut**
 
--   Aufrufen der [**ivdshwprovider:: REENUMERATE**](/windows/desktop/api/Vds/nf-vds-ivdshwprovider-reenumerate) -Methode. Je nach Anbieter kann dieser Vorgang das Senden von Netzwerk Paketen und das warten auf Timeouts, das neudurch führen von SCSI-Bussen und das warten auf Timeouts usw. umfassen.
+-   Rufen Sie [**die IVdsHwProvider::Reenumerate-Methode**](/windows/desktop/api/Vds/nf-vds-ivdshwprovider-reenumerate) auf. Je nach Anbieter kann dieser Vorgang das Senden von Netzwerkpaketen und das Warten auf Time outs, das erneute Einscannen von SCSI-Bus und das Warten auf Time outs und so weiter umfassen.
 
-**So können Sie Hardware Subsystem-Objekte erneut aufzählen**
+**So aufzählen Sie Hardwaresubsystemobjekte erneut**
 
--   Nennen Sie die [**ivdssubsystem:: REENUMERATE**](/windows/desktop/api/Vds/nf-vds-ivdssubsystem-reenumerate) -Methode, um die Objekte (in der Regel Laufwerke) im-Subsystem zu inventarisieren. Abhängig vom Subsystem kann dieser Vorgang das Scannen interner subsystembusse und das warten auf Timeouts einschließen.
+-   Rufen Sie [**die IVdsSubSystem::Reenumerate-Methode**](/windows/desktop/api/Vds/nf-vds-ivdssubsystem-reenumerate) auf, um die Objekte (in der Regel Laufwerke) im Subsystem zu inventarieren. Je nach Subsystem kann dieser Vorgang das Scannen interner Subsystem-Buslinien und das Warten auf Time outs umfassen.
 
-**So aktualisieren Sie Hardware Subsysteme und Subsystem-Objekte**
+**So aktualisieren Sie Hardwaresubsysteme und Subsystemobjekte**
 
--   Aufrufen der [**ivdshwprovider:: Refresh**](/windows/desktop/api/Vds/nf-vds-ivdshwprovider-refresh) -Methode, um den VDS-Cache mit Informationen zu vorhandenen Subsystemen zu aktualisieren, die von VDS-Hardwareanbietern verwaltet werden. Beachten Sie, dass VDS den Cache automatisch aktualisiert, sobald eine Änderung auftritt, die eine Benachrichtigung auslöst. Außerdem kann das Aufrufen einer [**Aktualisierung**](/windows/desktop/api/Vds/nf-vds-ivdsservice-refresh) als Antwort auf eine VDS-Benachrichtigung dazu führen, dass eine Endlosschleife von Benachrichtigungen gesendet wird. Aus diesen Gründen sollte die **Aktualisierung** nur aufgerufen werden, wenn angezeigt wird, dass der Cache nicht ordnungsgemäß aktualisiert wird.
+-   Rufen Sie [**die IVdsHwProvider::Refresh-Methode**](/windows/desktop/api/Vds/nf-vds-ivdshwprovider-refresh) auf, um den VDS-Cache mit Informationen zu vorhandenen Subsystemen zu aktualisieren, die von VDS-Hardwareanbietern verwaltet werden. Beachten Sie, dass VDS den Cache automatisch aktualisiert, wenn eine Änderung auftritt, die eine Benachrichtigung auslöst. Außerdem kann das Aufrufen [**von Refresh**](/windows/desktop/api/Vds/nf-vds-ivdsservice-refresh) als Reaktion auf eine VDS-Benachrichtigung dazu führen, dass eine Endlosschleife von Benachrichtigungen gesendet wird. Aus diesen Gründen **sollte Die Aktualisierung** nur aufgerufen werden, wenn der Cache anscheinend nicht ordnungsgemäß aktualisiert wird.
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
@@ -44,19 +44,19 @@ Der Vorgang reenumeration ermittelt neu verbundene und neu getrennte Geräte. De
 [Verwenden von VDS](using-vds.md)
 </dt> <dt>
 
-[**Ivdsservice:: REENUMERATE**](/windows/desktop/api/Vds/nf-vds-ivdsservice-reenumerate)
+[**IVdsService::Reenumerate**](/windows/desktop/api/Vds/nf-vds-ivdsservice-reenumerate)
 </dt> <dt>
 
-[**Ivdsservice:: Refresh**](/windows/desktop/api/Vds/nf-vds-ivdsservice-refresh)
+[**IVdsService::Refresh**](/windows/desktop/api/Vds/nf-vds-ivdsservice-refresh)
 </dt> <dt>
 
-[**Ivdshwprovider:: REENUMERATE**](/windows/desktop/api/Vds/nf-vds-ivdshwprovider-reenumerate)
+[**IVdsHwProvider::Reenumerate**](/windows/desktop/api/Vds/nf-vds-ivdshwprovider-reenumerate)
 </dt> <dt>
 
-[**Ivdssubsystem:: REENUMERATE**](/windows/desktop/api/Vds/nf-vds-ivdssubsystem-reenumerate)
+[**IVdsSubSystem::Reenumerate**](/windows/desktop/api/Vds/nf-vds-ivdssubsystem-reenumerate)
 </dt> <dt>
 
-[**Ivdshwprovider:: Refresh**](/windows/desktop/api/Vds/nf-vds-ivdshwprovider-refresh)
+[**IVdsHwProvider::Refresh**](/windows/desktop/api/Vds/nf-vds-ivdshwprovider-refresh)
 </dt> </dl>
 
  

@@ -1,11 +1,11 @@
 ---
-title: IMsRdpClientAdvancedSettings maxEventCount-Eigenschaft
-description: Diese Eigenschaft wird nicht unterstützt. | IMsRdpClientAdvancedSettings maxEventCount-Eigenschaft
+title: IMsRdpClientAdvancedSettings maxEventCount (Eigenschaft)
+description: Diese Eigenschaft wird nicht unterstützt. | IMsRdpClientAdvancedSettings maxEventCount (Eigenschaft)
 ms.assetid: d7b5951d-8cc3-48b4-af1b-1f547afbc6ae
 ms.tgt_platform: multiple
 keywords:
-- maxEventCount-Eigenschaft Remotedesktopdienste
-- maxEventCount-Eigenschaft Remotedesktopdienste , IMsRdpClientAdvancedSettings-Schnittstelle
+- maxEventCount-Remotedesktopdienste
+- maxEventCount-Remotedesktopdienste , IMsRdpClientAdvancedSettings-Schnittstelle
 - IMsRdpClientAdvancedSettings-Schnittstelle Remotedesktopdienste , maxEventCount-Eigenschaft
 - maxEventCount-Eigenschaft Remotedesktopdienste , IMsRdpClientAdvancedSettings2-Schnittstelle
 - IMsRdpClientAdvancedSettings2-Schnittstelle Remotedesktopdienste , maxEventCount-Eigenschaft
@@ -17,7 +17,7 @@ keywords:
 - IMsRdpClientAdvancedSettings5-Schnittstelle Remotedesktopdienste , maxEventCount-Eigenschaft
 - maxEventCount-Eigenschaft Remotedesktopdienste , IMsRdpClientAdvancedSettings6-Schnittstelle
 - IMsRdpClientAdvancedSettings6-Schnittstelle Remotedesktopdienste , maxEventCount-Eigenschaft
-- maxEventCount-Eigenschaft Remotedesktopdienste , IMsRdpClientAdvancedSettings7-Schnittstelle
+- maxEventCount-Remotedesktopdienste , IMsRdpClientAdvancedSettings7-Schnittstelle
 - IMsRdpClientAdvancedSettings7-Schnittstelle Remotedesktopdienste , maxEventCount-Eigenschaft
 - maxEventCount-Eigenschaft Remotedesktopdienste , IMsRdpClientAdvancedSettings8-Schnittstelle
 - IMsRdpClientAdvancedSettings8-Schnittstelle Remotedesktopdienste , maxEventCount-Eigenschaft
@@ -61,7 +61,7 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 08/11/2021
 ms.locfileid: "118353029"
 ---
-# <a name="imsrdpclientadvancedsettingsmaxeventcount-property"></a>IMsRdpClientAdvancedSettings::maxEventCount-Eigenschaft
+# <a name="imsrdpclientadvancedsettingsmaxeventcount-property"></a>IMsRdpClientAdvancedSettings::maxEventCount (Eigenschaft)
 
 Diese Eigenschaft wird nicht unterstützt.
 
@@ -110,7 +110,7 @@ Weitere Informationen zu Remotedesktop-Webverbindung finden Sie unter [Anforderu
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 

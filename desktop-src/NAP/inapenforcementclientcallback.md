@@ -1,10 +1,10 @@
 ---
-title: Inapenforcementclientcallback-Schnittstelle (napforcementclient. h)
-description: Erzwingungs Clients müssen implementieren, damit der NAPAgent mit Ihnen kommunizieren kann.
+title: INapEnforcementClientCallback-Schnittstelle (NapEnforcementClient.h)
+description: Erzwingungsclients müssen implementieren, damit NapAgent mit ihnen kommunizieren kann.
 ms.assetid: d7d63c5b-7952-4f04-9d3d-3f13b0b52d97
 keywords:
-- Inapenforcementclientcallback-Schnittstelle NAP
-- Inapenforcementclientcallback-Schnittstelle NAP, beschrieben
+- INapEnforcementClientCallback-Schnittstelle NAP
+- INapEnforcementClientCallback-Schnittstelle NAP , beschrieben
 topic_type:
 - apiref
 api_name:
@@ -15,38 +15,38 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: d1d5c7e066115a6d51879775d9b8cfab3cbe4888
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 7a48c595918d28d912725353eb856de8f0af4541a68dabcb6f5a7cb0bb944496
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "106342486"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118134039"
 ---
-# <a name="inapenforcementclientcallback-interface"></a>Inapenforcementclientcallback-Schnittstelle
+# <a name="inapenforcementclientcallback-interface"></a>INapEnforcementClientCallback-Schnittstelle
 
 > [!Note]  
-> Die Netzwerk Zugriffsschutz-Plattform ist ab Windows 10 nicht verfügbar.
+> Die Netzwerkzugriffsschutz-Plattform ist ab Windows 10 nicht verfügbar.
 
  
 
-Die **inapenforcementclientcallback** -Schnittstelle stellt Rückruf Methoden bereit, die von Erzwingungs Clients implementiert werden müssen, damit der NAPAgent mit Ihnen kommunizieren kann.
+Die **INapEnforcementClientCallback-Schnittstelle** stellt Rückrufmethoden bereit, die Erzwingungsclients implementieren müssen, damit NapAgent mit ihnen kommunizieren kann.
 
 ## <a name="members"></a>Member
 
-Die **inapenforcementclientcallback** -Schnittstelle erbt von der [**IUnknown**](/windows/desktop/api/unknwn/nn-unknwn-iunknown) -Schnittstelle. **Inapenforcementclientcallback** verfügt auch über diese Typen von Membern:
+Die **INapEnforcementClientCallback-Schnittstelle** erbt von der [**IUnknown-Schnittstelle.**](/windows/desktop/api/unknwn/nn-unknwn-iunknown) **INapEnforcementClientCallback** verfügt auch über diese Typen von Membern:
 
 -   [Methoden](#methods)
 
 ### <a name="methods"></a>Methoden
 
-Die **inapenforcementclientcallback** -Schnittstelle verfügt über diese Methoden.
+Die **INapEnforcementClientCallback-Schnittstelle** verfügt über diese Methoden.
 
 
 
-| Methode                                                                                                         | BESCHREIBUNG                                                                      |
+| Methode                                                                                                         | Beschreibung                                                                      |
 |:---------------------------------------------------------------------------------------------------------------|:---------------------------------------------------------------------------------|
-| [**Inapenforcementclientcallback:: GetConnections**](inapenforcementclientcallback-getconnections-method.md)   | Wird vom NAPAgent zum Abrufen von Verbindungen verwendet.<br/>                         |
-| [**Inapenforcementclientcallback:: notifysohchange**](inapenforcementclientcallback-notifysohchange-method.md) | Wird vom NAPAgent verwendet, um den Erzwingungs Client über SoH-Änderungen zu informieren.<br/> |
+| [**INapEnforcementClientCallback::GetConnections**](inapenforcementclientcallback-getconnections-method.md)   | Wird vom NapAgent zum Abrufen von Verbindungen verwendet.<br/>                         |
+| [**INapEnforcementClientCallback::NotifySoHChange**](inapenforcementclientcallback-notifysohchange-method.md) | Wird vom NapAgent verwendet, um den Erzwingungsclient über SoH-Änderungen zu informieren.<br/> |
 
 
 
@@ -58,10 +58,10 @@ Die **inapenforcementclientcallback** -Schnittstelle verfügt über diese Method
 
 | Anforderung | Wert |
 |-------------------------------------|-----------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                                      |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/>                                                |
-| Header<br/>                   | <dl> <dt>Napforcementclient. h</dt> </dl>   |
-| IDL<br/>                      | <dl> <dt>Napforcementclient. idl</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur Vista-Desktop-Apps\]<br/>                                                      |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/>                                                |
+| Header<br/>                   | <dl> <dt>NapEnforcementClient.h</dt> </dl>   |
+| Idl<br/>                      | <dl> <dt>NapEnforcementClient.idl</dt> </dl> |
 
 
 

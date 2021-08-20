@@ -1,7 +1,7 @@
 ---
-description: Ermöglicht den Zugriff auf Arbeitsspeicher, der für tablettthreads freigegeben
+description: Ermöglicht den Zugriff auf Den Arbeitsspeicher, der von Tabletthreads gemeinsam genutzt wird.
 ms.assetid: 047ff598-7d20-49d7-bdd3-498fe5c778c6
-title: 'Itabletcontextp:: geesharedmemorycommunications-Methode'
+title: ITabletContextP::UseSharedMemoryCommunications-Methode
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -14,16 +14,16 @@ api_type:
 api_location:
 - Wisptis.exe
 - Wisptis.exe.dll
-ms.openlocfilehash: d7880e1d0377d9d0140a0c82509abd31182c724e
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: e8ee871cf24c4a853b01d9f4d351caeabbff9edcfe4ce7d8c8221eb0ace0472a
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106353989"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118041894"
 ---
-# <a name="itabletcontextpusesharedmemorycommunications-method"></a>Itabletcontextp:: geesharedmemorycommunications-Methode
+# <a name="itabletcontextpusesharedmemorycommunications-method"></a>ITabletContextP::UseSharedMemoryCommunications-Methode
 
-Ermöglicht den Zugriff auf Arbeitsspeicher, der für tablettthreads freigegeben
+Ermöglicht den Zugriff auf Den Arbeitsspeicher, der von Tabletthreads gemeinsam genutzt wird.
 
 ## <a name="syntax"></a>Syntax
 
@@ -44,38 +44,38 @@ HRESULT UseSharedMemoryCommunications(
 
 <dl> <dt>
 
-*PID* \[ in\]
+*pid* \[ In\]
 </dt> <dd>
 
 Prozess-ID.
 
 </dd> <dt>
 
-*pheventmoredata* \[ vorgenommen\]
+*phEventMoreData* \[ out\]
 </dt> <dd>
 
-Ereignis handle, das signalisiert, wann neue Daten zur Verarbeitung verfügbar sind.
+Ereignishand handle, das signalisiert, wenn neue Daten für die Verarbeitung verfügbar sind.
 
 </dd> <dt>
 
-*pheventclientready* \[ vorgenommen\]
+*phEventClientReady* \[ out\]
 </dt> <dd>
 
-Zurück gegebenes Ereignis handle, mit dem signalisiert wird, dass der Client für den Empfang von Daten bereit ist. Wird signalisiert, nachdem neue Daten verarbeitet wurden.
+Gibt ein Ereignishand handle zurück, das verwendet wird, um zu signalisieren, dass der Client zum Empfangen von Daten bereit ist. Signalisiert nach der Verarbeitung neuer Daten.
 
 </dd> <dt>
 
-*phmutexaccess* \[ vorgenommen\]
+*phMutexAccess* \[ out\]
 </dt> <dd>
 
-Der Mutex, der Zugriff auf den gemeinsamen Speicher gewährt.
+Der Mutex, der Zugriff auf freigegebenen Speicher gewährt.
 
 </dd> <dt>
 
-*phfilemapping* \[ vorgenommen\]
+*phFileMapping* \[ out\]
 </dt> <dd>
 
-Zeiger auf den freigegebenen Speicherblock.
+Zeiger auf den Freigegebenen Speicherblock.
 
 </dd> </dl>
 
@@ -88,28 +88,28 @@ Diese Methode kann einen dieser Werte zurückgeben.
 | Rückgabecode                                                                            | Beschreibung                               |
 |----------------------------------------------------------------------------------------|-------------------------------------------|
 | <dl> <dt>**S \_ OK**</dt> </dl>   | Erfolg.<br/>                       |
-| <dl> <dt>**E \_ fehlschlagen**</dt> </dl> | Es ist ein unbekannter Fehler aufgetreten.<br/> |
+| <dl> <dt>**E \_ FAIL**</dt> </dl> | Es ist ein unbekannter Fehler aufgetreten.<br/> |
 
 
 
  
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die Methode " **toharedmemorycommunications** " wird als Teil des Tablet PC Shared Memory-Protokolls verwendet. Da der wisptis-Dienst über eine hohe Integritäts Ebene (High Integrity Level, IL) verfügt, kann er Daten, die im freigegebenen Speicher gespeichert sind, speichern und darauf zugreifen.
+Die **UseSharedMemoryCommunications-Methode** wird als Teil des Freigegebenen Speicherprotokolls des Tablet-PCs verwendet. Da der Wispprivileg-Dienst über eine hohe Integritätsebene (High Integrity Level, IL) verfügt, kann er daten speichern und darauf zugreifen, die im freigegebenen Speicher gespeichert sind, ohne seine Berechtigungen erhöhen zu müssen.
 
-Die [**SharedMemory- \_ Header**](sharedmemory-header.md) Struktur wird aus den Daten, auf die die Datei Zuordnung verweist, umgewandelt, und die unformatierten Paketdaten folgen dem **SharedMemory- \_ Header**. Rohdaten von Paketen können aus dem freigegebenen Speicher gelesen werden, wenn das Ereignis, auf das *pdweventclientready* verweist, ausgelöst wird.
+Die [**SHAREDMEMORY \_ HEADER-Struktur**](sharedmemory-header.md) wird aus den Daten, auf die von der Dateizuordnung verwiesen wird, und die Rohdaten des Pakets folgen **dem SHAREDMEMORY-HEADER \_**. Unformatierte Paketdaten können aus dem freigegebenen Speicher gelesen werden, wenn das Ereignis ausgelöst wird, auf das *pdwEventClientReady* verweist.
 
-In der folgenden Liste wird die Abfolge von Ereignissen zum Zugreifen auf und Verwenden von frei gegebenem Speicher beschrieben.
+In der folgenden Liste wird die Abfolge von Ereignissen für den Zugriff auf und die Verwendung von freigegebenen Speicher beschrieben.
 
--   Der Client legt das clientready-Ereignis fest.
+-   Der Client legt das clientReady-Ereignis fest.
 -   Der Client wartet auf das MoreData-Ereignis.
--   Der Client erhält den Mutex.
--   Der Client liest Paketdaten aus dem Abschnitt des gemeinsam genutzten Speichers nach dem Header und den Seriennummern nach den Paketen.
--   Der Client verarbeitet Daten abhängig vom Wert von **dwevent**.
--   Der Client schreibt-1 (0xFFFFFFFF) in **dwevent**.
+-   Der Client übernimmt den Mutex.
+-   Der Client liest Paketdaten aus dem Abschnitt des freigegebenen Speichers nach dem Header und den Seriennummern nach den Paketen.
+-   Der Client verarbeitet Daten abhängig vom Wert von **dwEvent**.
+-   Der Client schreibt -1 (0xFFFFFFFF) in **dwEvent**.
 -   Der Client gibt den Mutex frei.
--   Der Client legt das clientready-Ereignis fest.
+-   Der Client legt das clientReady-Ereignis fest.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -117,7 +117,7 @@ In der folgenden Liste wird die Abfolge von Ereignissen zum Zugreifen auf und Ve
 
 | Anforderung | Wert |
 |-------------------------------------|----------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows XP Tablet PC Edition \[ Desktop-Apps\]<br/>                          |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur Desktop-Apps der XP Tablet PC Edition \[\]<br/>                          |
 | Unterstützte Mindestversion (Server)<br/> | Nicht unterstützt<br/>                                                              |
 | Bibliothek<br/>                  | <dl> <dt>Wisptis.exe</dt> </dl> |
 
@@ -127,10 +127,10 @@ In der folgenden Liste wird die Abfolge von Ereignissen zum Zugreifen auf und Ve
 
 <dl> <dt>
 
-[**Itabletcontextp-Schnittstelle**](itabletcontextp.md)
+[**ITabletContextP-Schnittstelle**](itabletcontextp.md)
 </dt> <dt>
 
-[**Usenamedsharedmemorycommunications**](itabletcontextp-usenamedsharedmemorycommunications.md)
+[**UseNamedSharedMemoryCommunications**](itabletcontextp-usenamedsharedmemorycommunications.md)
 </dt> </dl>
 
  

@@ -1,10 +1,10 @@
 ---
 title: MDM_Policy_Config01_Games02-Klasse
-description: Die MDM- \_ Richtlinie \_ Config01 \_ Games02-Klasse konfiguriert die erweiterten Gaming-Dienste.
+description: Die MDM \_ Policy \_ Config01 \_ Games02-Klasse konfiguriert die erweiterten Spieledienste.
 ms.assetid: 567cf1b0-9795-44d5-a002-a1c03a5bf45f
 keywords:
 - MDM_Policy_Config01_Games02-Klasse
-- MDM_Policy_Config01_Games02-Klasse, beschrieben
+- MDM_Policy_Config01_Games02-Klasse beschrieben
 topic_type:
 - apiref
 api_name:
@@ -17,18 +17,18 @@ api_type:
 - DllExport
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 61f1ea989133bfdbe9d63dbaacff899dd7464965
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 795b75c639817a17608bd7982be8b5c438dcc57c45bdb28e8a88bfddc236bfde
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104040914"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118165283"
 ---
-# <a name="mdm_policy_config01_games02-class"></a>MDM- \_ Richtlinie \_ Config01 \_ Games02-Klasse
+# <a name="mdm_policy_config01_games02-class"></a>MDM \_ Policy \_ Config01 \_ Games02-Klasse
 
 \[Einige Informationen beziehen sich auf Vorabversionen, die vor der kommerziellen Freigabe grundlegend geändert werden können. Microsoft übernimmt keine Garantie, weder ausdrücklich noch stillschweigend, für die hier bereitgestellten Informationen.\]
 
-Die MDM- \_ Richtlinie \_ Config01 \_ Games02-Klasse konfiguriert die erweiterten Gaming-Dienste.
+Die MDM \_ Policy \_ Config01 \_ Games02-Klasse konfiguriert die erweiterten Spieledienste.
 
 Die folgende Syntax enthält vereinfachten MOF-Code und schließt alle geerbten Eigenschaften ein.
 
@@ -46,17 +46,17 @@ class MDM_Policy_Config01_Games02
 
 ## <a name="members"></a>Member
 
-Die **MDM- \_ Richtlinie \_ Config01 \_ Games02** -Klasse verfügt über diese Typen von Membern:
+Die **MDM \_ Policy \_ Config01 \_ Games02-Klasse** verfügt über folgende Membertypen:
 
 -   [Eigenschaften](#properties)
 
 ### <a name="properties"></a>Eigenschaften
 
-Die **MDM- \_ Richtlinie \_ Config01 \_ Games02** -Klasse verfügt über diese Eigenschaften.
+Die **MDM \_ Policy \_ Config01 \_ Games02-Klasse** verfügt über diese Eigenschaften.
 
 <dl> <dt>
 
-[Allowadvancedgamingservices](/windows/client-management/mdm/policy-csp-games#games-allowadvancedgamingservices)
+[AllowAdvancedGamingServices](/windows/client-management/mdm/policy-csp-games#games-allowadvancedgamingservices)
 </dt> <dd> <dl> <dt>
 
 Datentyp: **sint32**
@@ -70,27 +70,27 @@ Zugriffstyp: Lesen/Schreiben
 **InstanceID**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [ **Schlüssel**](/windows/desktop/WmiSdk/key-qualifier)
+Qualifizierer: [ **key**](/windows/desktop/WmiSdk/key-qualifier)
 </dt> </dl>
 
 </dd> <dt>
 
-**ParentID**
+**Parentid**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [ **Schlüssel**](/windows/desktop/WmiSdk/key-qualifier)
+Qualifizierer: [ **key**](/windows/desktop/WmiSdk/key-qualifier)
 </dt> </dl>
 
 </dd> </dl>
@@ -101,10 +101,10 @@ Qualifizierer: [ **Schlüssel**](/windows/desktop/WmiSdk/key-qualifier)
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows 10 \[ -Desktop-Apps\]<br/>                                                    |
+| Unterstützte Mindestversion (Client)<br/> | \[Windows 10 Nur Desktop-Apps\]<br/>                                                    |
 | Unterstützte Mindestversion (Server)<br/> | Nicht unterstützt<br/>                                                                      |
-| Namespace<br/>                | Root \\ CIMV2 \\ MDM- \\ dmmap<br/>                                                             |
-| MOF<br/>                      | <dl> <dt>Dmwmibridgeprov. MOF</dt> </dl> |
+| Namespace<br/>                | Root \\ cimv2 \\ mdm \\ dmmap<br/>                                                             |
+| MOF<br/>                      | <dl> <dt>DMWmiBridgeProv.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>DMWmiBridgeProv.dll</dt> </dl> |
 
 

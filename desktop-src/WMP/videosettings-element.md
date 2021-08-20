@@ -1,70 +1,70 @@
 ---
-title: Videosettings-Element
-description: Videosettings-Element
+title: VIDEOSETTINGS-Element
+description: VIDEOSETTINGS-Element
 ms.assetid: 2d147bd2-0010-41ab-8073-a4dc2979be1e
 keywords:
-- Windows Media Player Skins, Video settings-Element
-- Skins, Video settings-Element
-- Videosettings-Element
-- Verweis für Skins, Video settings-Element
-- Elemente, videosettings
+- Windows Media Player Skins, VIDEOSETTINGS-Element
+- skins,VIDEOSETTINGS-Element
+- VIDEOSETTINGS-Element
+- Referenz für Skins, VIDEOSETTINGS-Element
+- elements,VIDEOSETTINGS
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 61dd56c0103b5a4f6f95e913e967526ef1d46b78
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: 43096cbe0ee196581a3ad3ed0632342f3fadf2faddf4e203641244687cd660fe
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "103711982"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118116856"
 ---
-# <a name="videosettings-element"></a>Videosettings-Element
+# <a name="videosettings-element"></a>VIDEOSETTINGS-Element
 
-Das **videosettings** -Element bietet eine Möglichkeit, verschiedene Videoeinstellungen mithilfe der hier aufgeführten Attribute und Methoden zu ändern.
+Das **VIDEOSETTINGS-Element** bietet eine Möglichkeit, verschiedene Videoeinstellungen mithilfe der hier aufgeführten Attribute und Methoden zu ändern.
 
-Das **Video Settings** -Element unterstützt die folgenden Attribute.
+Das **VIDEOSETTINGS-Element** unterstützt die folgenden Attribute.
 
 
 
-| Attribut                                  | BESCHREIBUNG                                                 |
+| attribute                                  | Beschreibung                                                 |
 |--------------------------------------------|-------------------------------------------------------------|
-| [Leucht](videosettings-brightness.md) | Gibt die Helligkeitseinstellung des Videos an oder ruft diese ab. |
-| [Kontraste](videosettings-contrast.md)     | Gibt die Kontrasteinstellung des Videos an oder ruft diese ab.   |
-| [Hue](videosettings-hue.md)               | Gibt die Hue-Einstellung des Videos an oder ruft diese ab.        |
-| [Sattel](videosettings-saturation.md) | Gibt die Sättigungs Einstellung des Videos an oder ruft diese ab. |
+| [Helligkeit](videosettings-brightness.md) | Gibt die Helligkeitseinstellung des Videos an oder ruft sie ab. |
+| [Kontrast](videosettings-contrast.md)     | Gibt die Kontrasteinstellung des Videos an oder ruft sie ab.   |
+| [Farbton](videosettings-hue.md)               | Gibt die Farbtoneinstellung des Videos an oder ruft sie ab.        |
+| [Sättigung](videosettings-saturation.md) | Gibt die Sättigungseinstellung des Videos an oder ruft sie ab. |
 
 
 
- 
+ 
 
-Das **videosettings** -Element unterstützt die folgende Methode.
+Das **VIDEOSETTINGS-Element** unterstützt die folgende Methode.
 
 
 
-| Methode                           | BESCHREIBUNG                                    |
+| Methode                           | Beschreibung                                    |
 |----------------------------------|------------------------------------------------|
 | [reset](videosettings-reset.md) | Setzt alle Attribute auf ihre Standardwerte zurück. |
 
 
 
- 
+ 
 
-Das **videosettings** -Element kann die [Attribut- \_ OnChange](attribute-onchange.md) -Ereignishandler implementieren.
+Das **VIDEOSETTINGS-Element** kann die [ \_ Onchange-Ereignishandler](attribute-onchange.md) des Attributs implementieren.
 
 > [!Note]  
-> Für dieses Element ist Windows Media Player für Windows XP oder höher erforderlich.
+> Dieses Element erfordert Windows Media Player für Windows XP oder höher.
 
- 
+ 
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[**Referenz zur Skin-Programmierung**](skin-programming-reference.md)
+[**Referenz zur Skinprogrammierung**](skin-programming-reference.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

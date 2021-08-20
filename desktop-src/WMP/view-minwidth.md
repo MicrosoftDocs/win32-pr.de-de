@@ -1,9 +1,9 @@
 ---
-title: View. MinWidth
-description: Das MinWidth-Attribut gibt die minimale Breite in Pixel der Ansicht an, wenn die Größe geändert wird, oder ruft Sie ab.
+title: VIEW.minWidth
+description: Das minWidth-Attribut gibt beim Ändern der Größe die Mindestbreite in Pixel der VIEW-Ansicht an oder ruft sie ab.
 ms.assetid: 7372983e-e210-4f1f-9bf2-802a7426cdfa
 keywords:
-- View. MinWidth-Fenster Media Player
+- VIEW.minWidth-Windows Media Player
 topic_type:
 - apiref
 api_name:
@@ -12,16 +12,16 @@ api_type:
 - NA
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: c357dbd5d05e4630f69c010e6f37ce9a4648dc01
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: dd6bc59ec96568f0bdd3fc0f4f18f0f242d984f734d12ef3d0f494c0c2442e11
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106365714"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118116714"
 ---
-# <a name="viewminwidth"></a>View. MinWidth
+# <a name="viewminwidth"></a>VIEW.minWidth
 
-Das **MinWidth** -Attribut gibt die minimale Breite in Pixel der **Ansicht** an, wenn die Größe geändert wird, oder ruft Sie ab.
+Das **minWidth-Attribut** gibt beim Ändern der Größe die Mindestbreite in Pixel der **VIEW-Ansicht** an oder ruft sie ab.
 
 ``` syntax
         elementID.minWidth
@@ -29,7 +29,7 @@ Das **MinWidth** -Attribut gibt die minimale Breite in Pixel der **Ansicht** an,
 
 ## <a name="possible-values"></a>Mögliche Werte
 
-Dieses Attribut ist eine Lese-/schreibzahl (**Long**) mit einem Wert von 0 (null) oder größer.  Der Standardwert ist 0 (null), was bedeutet, dass die minimale Breite der **Ansicht** nicht eingeschränkt wird.
+Dieses Attribut ist eine  Lese-/Schreibnummer **(long**) mit einem Wert von 0 (null) oder größer. Er weist den Standardwert 0 (null) auf, d. h., es gibt keine Einschränkung für die Mindestbreite von **VIEW**.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -37,7 +37,7 @@ Dieses Attribut ist eine Lese-/schreibzahl (**Long**) mit einem Wert von 0 (null
 
 | Anforderung | Wert |
 |--------------------|------------------------------------------------------|
-| Version<br/> | Windows Media Player, Version 7,0 oder höher<br/> |
+| Version<br/> | Windows Media Player Version 7.0 oder höher<br/> |
 
 
 
@@ -45,10 +45,10 @@ Dieses Attribut ist eine Lese-/schreibzahl (**Long**) mit einem Wert von 0 (null
 
 <dl> <dt>
 
-[**View-Element**](view-element.md)
+[**VIEW-Element**](view-element.md)
 </dt> <dt>
 
-[**View. MaxWidth**](view-maxwidth.md)
+[**VIEW.maxWidth**](view-maxwidth.md)
 </dt> </dl>
 
  

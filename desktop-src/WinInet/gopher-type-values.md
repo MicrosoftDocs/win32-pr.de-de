@@ -1,6 +1,6 @@
 ---
-title: Gopher-Typwerte (WinInet. h)
-description: In der folgenden Liste sind die möglichen Gopher-Typwerte enthalten.
+title: Gopher-Typwerte (Wininet.h)
+description: Die folgende Liste enthält die möglichen Gopher-Typwerte.
 ms.assetid: e77a0328-d811-4c01-831a-0ead888a4988
 topic_type:
 - apiref
@@ -35,22 +35,22 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 67402dd88211ae46c081c0b9e85e7a12b5379bb8
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 36dd8a6b673ccdde6ff283d5b0ae58eb38540aeed12cc3ff095a2df2fe8a0b52
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104392224"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118113883"
 ---
 # <a name="gopher-type-values"></a>Gopher-Typwerte
 
-\[Diese gopyour Type-Typen sind für die Verwendung in den Betriebssystemen verfügbar, die nur im Anforderungs Abschnitt angegeben sind.\]
+\[Diese Gopher-Typen sind nur für die Verwendung in den Betriebssystemen verfügbar, die im Abschnitt Anforderungen angegeben sind.\]
 
-In der folgenden Liste sind die möglichen Gopher-Typwerte enthalten.
+Die folgende Liste enthält die möglichen Gopher-Typwerte.
 
 <dl> <dt>
 
-<span id="GOPHER_TYPE_ASK"></span><span id="gopher_type_ask"></span>**Gopher \_ - \_ Typfrage**
+<span id="GOPHER_TYPE_ASK"></span><span id="gopher_type_ask"></span>**GOPHER \_ TYPE \_ ASK**
 </dt> <dd> <dl> <dt>
 
 0x40000000
@@ -58,12 +58,12 @@ In der folgenden Liste sind die möglichen Gopher-Typwerte enthalten.
 
 
 
-Frage + Element.
+Ask+-Element.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="GOPHER_TYPE_BINARY"></span><span id="gopher_type_binary"></span>**Gopher \_ - \_ typbinär Datei**
+<span id="GOPHER_TYPE_BINARY"></span><span id="gopher_type_binary"></span>**\_GOPHER-TYP \_ BINARY**
 </dt> <dd> <dl> <dt>
 
 0x00000200
@@ -76,7 +76,7 @@ Binärdatei.
 
 </dt> </dl> </dd> <dt>
 
-<span id="GOPHER_TYPE_BITMAP"></span><span id="gopher_type_bitmap"></span>**Gopher \_ - \_ Bitmap**
+<span id="GOPHER_TYPE_BITMAP"></span><span id="gopher_type_bitmap"></span>**\_GOPHER-TYPBITMAP \_**
 </dt> <dd> <dl> <dt>
 
 0x00004000
@@ -89,7 +89,7 @@ Bitmapdatei.
 
 </dt> </dl> </dd> <dt>
 
-<span id="GOPHER_TYPE_CALENDAR"></span><span id="gopher_type_calendar"></span>**Gopher \_ - \_ typkalender**
+<span id="GOPHER_TYPE_CALENDAR"></span><span id="gopher_type_calendar"></span>**\_GOPHER-TYP \_ CALENDAR**
 </dt> <dd> <dl> <dt>
 
 0x00080000
@@ -102,7 +102,7 @@ Kalenderdatei.
 
 </dt> </dl> </dd> <dt>
 
-<span id="GOPHER_TYPE_CSO"></span><span id="gopher_type_cso"></span>**Gopher- \_ Typ \_ CSO**
+<span id="GOPHER_TYPE_CSO"></span><span id="gopher_type_cso"></span>**GOPHER \_ TYPE \_ CSO**
 </dt> <dd> <dl> <dt>
 
 0x00000004
@@ -110,12 +110,12 @@ Kalenderdatei.
 
 
 
-CSO-Telefonbuch Server.
+CSO-Telefonbuchserver.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="GOPHER_TYPE_DIRECTORY"></span><span id="gopher_type_directory"></span>**Gopher \_ - \_ typverzeichnis**
+<span id="GOPHER_TYPE_DIRECTORY"></span><span id="gopher_type_directory"></span>**GOPHER \_ TYPE \_ DIRECTORY**
 </dt> <dd> <dl> <dt>
 
 0x00000002
@@ -128,7 +128,7 @@ Verzeichnis mit zusätzlichen Gopher-Elementen.
 
 </dt> </dl> </dd> <dt>
 
-<span id="GOPHER_TYPE_DOS_ARCHIVE"></span><span id="gopher_type_dos_archive"></span>**Gopher \_ Type \_ DOS \_ Archive**
+<span id="GOPHER_TYPE_DOS_ARCHIVE"></span><span id="gopher_type_dos_archive"></span>**GOPHER \_ TYPE \_ DOS \_ ARCHIVE**
 </dt> <dd> <dl> <dt>
 
 0x00000020
@@ -141,7 +141,7 @@ MS-DOS-Archivdatei.
 
 </dt> </dl> </dd> <dt>
 
-<span id="GOPHER_TYPE_ERROR"></span><span id="gopher_type_error"></span>**Gopher \_ - \_ Typfehler**
+<span id="GOPHER_TYPE_ERROR"></span><span id="gopher_type_error"></span>**\_GOPHER-TYPFEHLER \_**
 </dt> <dd> <dl> <dt>
 
 0x00000008
@@ -149,12 +149,12 @@ MS-DOS-Archivdatei.
 
 
 
-Indikator eines Fehler Zustands.
+Indikator für eine Fehlerbedingung.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="GOPHER_TYPE_GIF"></span><span id="gopher_type_gif"></span>**Gopher- \_ Typ \_ GIF**
+<span id="GOPHER_TYPE_GIF"></span><span id="gopher_type_gif"></span>**\_GOPHER-TYP \_ GIF**
 </dt> <dd> <dl> <dt>
 
 0x00001000
@@ -167,7 +167,7 @@ GIF-Grafikdatei.
 
 </dt> </dl> </dd> <dt>
 
-<span id="GOPHER_TYPE_GOPHER_PLUS"></span><span id="gopher_type_gopher_plus"></span>**Gopher \_ Type \_ Gopher \_ Plus**
+<span id="GOPHER_TYPE_GOPHER_PLUS"></span><span id="gopher_type_gopher_plus"></span>**\_GOPHER-TYP \_ GOPHER \_ PLUS**
 </dt> <dd> <dl> <dt>
 
 0x80000000
@@ -175,12 +175,12 @@ GIF-Grafikdatei.
 
 
 
-Gopher + Element.
+Gopher+-Element.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="GOPHER_TYPE_HTML"></span><span id="gopher_type_html"></span>**Gopher \_ - \_ HTML-Typ**
+<span id="GOPHER_TYPE_HTML"></span><span id="gopher_type_html"></span>**\_GOPHER-TYP \_ HTML**
 </dt> <dd> <dl> <dt>
 
 0x00020000
@@ -193,7 +193,7 @@ HTML-Dokument.
 
 </dt> </dl> </dd> <dt>
 
-<span id="GOPHER_TYPE_IMAGE"></span><span id="gopher_type_image"></span>**Gopher \_ - \_ typbild**
+<span id="GOPHER_TYPE_IMAGE"></span><span id="gopher_type_image"></span>**\_ \_ GOPHER-TYPBILD**
 </dt> <dd> <dl> <dt>
 
 0x00002000
@@ -206,7 +206,7 @@ Bilddatei.
 
 </dt> </dl> </dd> <dt>
 
-<span id="GOPHER_TYPE_INDEX_SERVER"></span><span id="gopher_type_index_server"></span>**Gopher \_ - \_ Typindex \_ Server**
+<span id="GOPHER_TYPE_INDEX_SERVER"></span><span id="gopher_type_index_server"></span>**\_GOPHER-TYPINDEXSERVER \_ \_**
 </dt> <dd> <dl> <dt>
 
 0x00000080
@@ -214,12 +214,12 @@ Bilddatei.
 
 
 
-Index Server.
+Indexserver.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="GOPHER_TYPE_INLINE"></span><span id="gopher_type_inline"></span>**Gopher- \_ Typ \_ Inline**
+<span id="GOPHER_TYPE_INLINE"></span><span id="gopher_type_inline"></span>**\_GOPHER-TYP \_ INLINE**
 </dt> <dd> <dl> <dt>
 
 0x00100000
@@ -227,12 +227,12 @@ Index Server.
 
 
 
-Inline Datei.
+Inlinedatei.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="GOPHER_TYPE_MAC_BINHEX"></span><span id="gopher_type_mac_binhex"></span>**Gopher- \_ Typ \_ Mac \_ BinHex**
+<span id="GOPHER_TYPE_MAC_BINHEX"></span><span id="gopher_type_mac_binhex"></span>**\_GOPHER-TYP \_ MAC \_ BINHEX**
 </dt> <dd> <dl> <dt>
 
 0x00000010
@@ -240,12 +240,12 @@ Inline Datei.
 
 
 
-Macintosh-Datei im BinHex-Format.
+Macintosh-Datei im BINHEX-Format.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="GOPHER_TYPE_MOVIE"></span><span id="gopher_type_movie"></span>**Gopher \_ Type \_ Movie**
+<span id="GOPHER_TYPE_MOVIE"></span><span id="gopher_type_movie"></span>**GOPHER \_ TYPE \_ MOVIE**
 </dt> <dd> <dl> <dt>
 
 0x00008000
@@ -253,12 +253,12 @@ Macintosh-Datei im BinHex-Format.
 
 
 
-Movie-Datei.
+Filmdatei.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="GOPHER_TYPE_PDF"></span><span id="gopher_type_pdf"></span>**Gopher \_ Type \_ PDF**
+<span id="GOPHER_TYPE_PDF"></span><span id="gopher_type_pdf"></span>**\_PDF-DATEI VOM TYP GOPHER \_**
 </dt> <dd> <dl> <dt>
 
 0x00040000
@@ -271,7 +271,7 @@ PDF-Datei.
 
 </dt> </dl> </dd> <dt>
 
-<span id="GOPHER_TYPE_REDUNDANT"></span><span id="gopher_type_redundant"></span>**Gopher- \_ Typ \_ redundant**
+<span id="GOPHER_TYPE_REDUNDANT"></span><span id="gopher_type_redundant"></span>**REDUNDANTER \_ GOPHER-TYP \_**
 </dt> <dd> <dl> <dt>
 
 0x00000400
@@ -279,12 +279,12 @@ PDF-Datei.
 
 
 
-Indikator für einen duplizierten Server. Die in enthaltenen Informationen sind ein Duplikat des primären Servers. Der primäre Server ist als der letzte Verzeichniseintrag definiert, der nicht über einen Typ vom Typ "gopher" verfügt \_ \_ .
+Indikator für einen duplizierten Server. Die in enthaltenen Informationen sind ein Duplikat des primären Servers. Der primäre Server ist als der letzte Verzeichniseintrag definiert, der keinen REDUNDANTen GOPHER \_ \_ TYPE-Typ hatte.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="GOPHER_TYPE_SOUND"></span><span id="gopher_type_sound"></span>**Gopher \_ - \_ typsound**
+<span id="GOPHER_TYPE_SOUND"></span><span id="gopher_type_sound"></span>**GOPHER \_ TYPE \_ SOUND**
 </dt> <dd> <dl> <dt>
 
 0x00010000
@@ -292,12 +292,12 @@ Indikator für einen duplizierten Server. Die in enthaltenen Informationen sind 
 
 
 
-Audiodatei.
+Sounddatei.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="GOPHER_TYPE_TELNET"></span><span id="gopher_type_telnet"></span>**Gopher- \_ Typ \_ Telnet**
+<span id="GOPHER_TYPE_TELNET"></span><span id="gopher_type_telnet"></span>**\_GOPHER-TYP \_ TELNET**
 </dt> <dd> <dl> <dt>
 
 0x00000100
@@ -310,7 +310,7 @@ Telnet-Server.
 
 </dt> </dl> </dd> <dt>
 
-<span id="GOPHER_TYPE_TEXT_FILE"></span><span id="gopher_type_text_file"></span>**Gopher \_ - \_ \_ typtextdatei**
+<span id="GOPHER_TYPE_TEXT_FILE"></span><span id="gopher_type_text_file"></span>**\_ \_ GOPHER-TYPTEXTDATEI \_**
 </dt> <dd> <dl> <dt>
 
 0x00000001
@@ -323,7 +323,7 @@ ASCII-Textdatei.
 
 </dt> </dl> </dd> <dt>
 
-<span id="GOPHER_TYPE_TN3270"></span><span id="gopher_type_tn3270"></span>**Gopher- \_ Typ \_ TN3270**
+<span id="GOPHER_TYPE_TN3270"></span><span id="gopher_type_tn3270"></span>**\_GOPHER-TYP \_ TN3270**
 </dt> <dd> <dl> <dt>
 
 0x00000800
@@ -336,7 +336,7 @@ TN3270-Server.
 
 </dt> </dl> </dd> <dt>
 
-<span id="GOPHER_TYPE_UNIX_UUENCODED"></span><span id="gopher_type_unix_uuencoded"></span>**Gopher \_ Type \_ UNIX \_ uucodiert**
+<span id="GOPHER_TYPE_UNIX_UUENCODED"></span><span id="gopher_type_unix_uuencoded"></span>**\_GOPHER-TYP \_ UNIX \_ UUENCODED**
 </dt> <dd> <dl> <dt>
 
 0x00000040
@@ -344,12 +344,12 @@ TN3270-Server.
 
 
 
-Uucodierte Datei.
+UUENCODED-Datei.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="GOPHER_TYPE_UNKNOWN"></span><span id="gopher_type_unknown"></span>**Unbekannter Gopher- \_ Typ. \_**
+<span id="GOPHER_TYPE_UNKNOWN"></span><span id="gopher_type_unknown"></span>**\_GOPHER-TYP \_ UNBEKANNT**
 </dt> <dd> <dl> <dt>
 
 0x20000000
@@ -362,10 +362,10 @@ Der Elementtyp ist unbekannt.
 
 </dt> </dl> </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
 > [!Note]  
-> WinInet unterstützt keine Server Implementierungen. Außerdem sollte Sie nicht von einem Dienst verwendet werden. Verwenden Sie für Server Implementierungen oder-Dienste [Microsoft Windows HTTP-Dienste (WinHTTP)](/windows/desktop/WinHttp/winhttp-start-page).
+> WinINet unterstützt keine Serverimplementierungen. Darüber hinaus sollte sie nicht von einem Dienst verwendet werden. Verwenden Sie für Serverimplementierungen oder -dienste [Microsoft Windows HTTP-Dienste (WinHTTP).](/windows/desktop/WinHttp/winhttp-start-page)
 
  
 
@@ -379,7 +379,7 @@ Der Elementtyp ist unbekannt.
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                                 |
 | Ende des Supports (Client)<br/>    | Windows XP<br/>                                                                |
 | Ende des Supports (Server)<br/>    | Windows Server 2003 R2<br/>                                                    |
-| Header<br/>                   | <dl> <dt>Wininet. h</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Wininet.h</dt> </dl> |
 
 
 

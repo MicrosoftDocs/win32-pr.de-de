@@ -1,51 +1,51 @@
 ---
-title: Joystick Benachrichtigungs Meldungen
-description: Joystick Benachrichtigungs Meldungen
+title: Benachrichtigungsmeldungen
+description: Benachrichtigungsmeldungen
 ms.assetid: 9e8ccc1b-85a9-44bf-b561-6ad4c10cddd1
 keywords:
-- Joysticks, Benachrichtigungen
-- Joysticks, Meldungen
-- Joysticks, Position
-- Joysticks, Schaltflächen
-- MM_JOY1 Meldungen
-- MM_JOY2 Meldungen
+- -Benachrichtigungen
+- -Nachrichten
+- -, Position
+- -Schaltflächen
+- MM_JOY1 Nachrichten
+- MM_JOY2 Nachrichten
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 698f999dab49ea6684e9184f6ed5c46286518b97
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: 27113adeb6f9fd4444f8fc30431df0eab686db667fa2674e81d7f5d4e568be64
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "106338173"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118140340"
 ---
-# <a name="joystick-notification-messages"></a>Joystick Benachrichtigungs Meldungen
+# <a name="joystick-notification-messages"></a>Benachrichtigungsmeldungen
 
-Joystick Nachrichten benachrichtigen Ihre Anwendung, dass sich die Position eines Joysticks geändert hat oder eine der Schaltflächen den Status geändert hat. Nachrichten, die mit mm \_ JOY1 beginnen, werden an die Funktion gesendet, wenn Ihre Anwendung mithilfe des Bezeichners JOYSTICKID1 Eingaben aus dem Joystick anfordert, und mm \_ JOY2-Nachrichten werden gesendet, wenn Ihre Anwendung Eingaben vom Joystick mithilfe des Bezeichners JOYSTICKID2 anfordert.
+Mit Benachrichtigungen wird Ihre Anwendung darüber informiert, dass sich die Position eines Bzw. einer seiner Schaltflächen geändert hat. Nachrichten, die mit MM MM MM1 beginnen, werden an die Funktion gesendet, wenn Ihre Anwendung Eingaben vom Zierer unter Verwendung des BezeichnersIDENTID1 anfing, und MM-NACHRICHTEN VOM2-Nachrichten werden gesendet, wenn Ihre Anwendung eingaben von der -Kennung mithilfe des \_ Bezeichners \_ 2 anfing.
 
-In den Nachrichten in der folgenden Tabelle wird der Status der Joystick Schaltflächen identifiziert:
+Die Meldungen in der folgenden Tabelle geben den Status der Schaltflächen an:
 
 
 
 | `Message`                                         | BESCHREIBUNG                                                     |
 |-------------------------------------------------|-----------------------------------------------------------------|
-| [**MM \_ JOY1BUTTONDOWN**](mm-joy1buttondown.md) | Eine Schaltfläche auf dem Joystick JOYSTICKID1 wurde gedrückt.              |
-| [**MM \_ JOY1BUTTONUP**](mm-joy1buttonup.md)     | Eine Schaltfläche auf dem Joystick JOYSTICKID1 wurde freigegeben.             |
-| [**MM \_ JOY1MOVE**](mm-joy1move.md)             | Joystick JOYSTICKID1 geänderte Position in der x-oder y-Richtung. |
-| [**MM \_ JOY1ZMOVE**](mm-joy1zmove.md)           | Joystick JOYSTICKID1 geänderte Position in z-Richtung.       |
-| [**MM \_ JOY2BUTTONDOWN**](mm-joy2buttondown.md) | Eine Schaltfläche auf dem Joystick JOYSTICKID2 wurde gedrückt.              |
-| [**MM \_ JOY2BUTTONUP**](mm-joy2buttonup.md)     | Eine Schaltfläche auf dem Joystick JOYSTICKID2 wurde freigegeben.             |
-| [**MM \_ JOY2MOVE**](mm-joy2move.md)             | Joystick JOYSTICKID2 geänderte Position in der x-oder y-Richtung  |
-| [**MM \_ JOY2ZMOVE**](mm-joy2zmove.md)           | Joystick JOYSTICKID2 geänderte Position in z-Richtung.       |
+| [**MM \_ MM MM1BUTTONDOWN**](mm-joy1buttondown.md) | Es wurde eine Schaltfläche auf dem Computer MITID1 gedrückt.              |
+| [**MM \_ MM MM1BUTTONUP**](mm-joy1buttonup.md)     | Eine Schaltfläche auf dem Computer "besendid1" wurde veröffentlicht.             |
+| [**MM \_ MM MM1MOVE**](mm-joy1move.md)             | Die Position von "Positionsänderung" in x- oder y-Richtung wurde geändert. |
+| [**MM \_ MM MM1ZMOVE**](mm-joy1zmove.md)           | Die Position von "Positionsänderung" in der Z-Richtung wurde geändert.       |
+| [**MM \_ MM MM2BUTTONDOWN**](mm-joy2buttondown.md) | Es wurde eine Schaltfläche auf dem Computer MITID2 gedrückt.              |
+| [**MM \_ MM MM2BUTTONUP**](mm-joy2buttonup.md)     | Es wurde eine Schaltfläche auf der NSDID2 veröffentlicht.             |
+| [**MM \_ MM MM2MOVE**](mm-joy2move.md)             | Die Position von " x" oder "y" wurde geändert.  |
+| [**MM \_ MM MM2ZMOVE**](mm-joy2zmove.md)           | Die Position von Positionswechseln in Z-Richtung wurde durch Denkrichtung des 50-0-00-00-16-00       |
 
 
 
- 
+ 
 
-Alle Nachrichten melden nicht vorhandene Schaltflächen als freigegeben.
+Alle Meldungen melden nicht vorhandene Schaltflächen als freigegeben.
 
- 
+ 
 
- 
+ 
 
 
 

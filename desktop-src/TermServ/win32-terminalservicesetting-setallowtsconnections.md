@@ -1,12 +1,12 @@
 ---
-title: Die Methode "-Methode" der Win32_TerminalServiceSetting-Klasse
-description: Mit der Methode "*" können neue Remote Desktop Verbindungen zugelassen oder verweigert werden. Mit dieser Methode wird die allowtconnections-Eigenschaft für die-Klasse entsprechend geändert.
+title: SetAllowTSConnections-Methode der Win32_TerminalServiceSetting-Klasse
+description: Die SetAllowTSConnections-Methode ermöglicht oder verweigert neue Remotedesktopverbindungen. Diese Methode ändert die AllowTSConnections-Eigenschaft für die -Klasse entsprechend.
 ms.assetid: 6cbaea62-ced0-4788-99fb-5b36816b80a1
 ms.tgt_platform: multiple
 keywords:
-- Remotedesktopdienste der Methode "
-- Methode Remotedesktopdienste der Methode "Win32_TerminalServiceSetting"
-- Win32_TerminalServiceSetting-Klasse Remotedesktopdienste, Methode "*"
+- SetAllowTSConnections-Methode Remotedesktopdienste
+- SetAllowTSConnections-Methode Remotedesktopdienste , Win32_TerminalServiceSetting-Klasse
+- Win32_TerminalServiceSetting Klasse Remotedesktopdienste , SetAllowTSConnections-Methode
 topic_type:
 - apiref
 api_name:
@@ -17,16 +17,16 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: e800f1a47567f16d916563d4d1e62c767016329a
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 63f8e9be06a19599f578089fa979d7fd93a7bf457fcadf033ed0ab56fea4947f
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104478834"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118127026"
 ---
-# <a name="setallowtsconnections-method-of-the-win32_terminalservicesetting-class"></a>Die Methode "Setup-lowtconnections" der Win32- \_ Klasse "terminalservicesetts"
+# <a name="setallowtsconnections-method-of-the-win32_terminalservicesetting-class"></a>SetAllowTSConnections-Methode der Win32 \_ TerminalServiceSetting-Klasse
 
-Mit **der Methode** "*" können neue Remote Desktop Verbindungen zugelassen oder verweigert werden. Mit dieser Methode wird die **allowtconnections** -Eigenschaft für die-Klasse entsprechend geändert.
+Die **SetAllowTSConnections-Methode** ermöglicht oder verweigert neue Remotedesktopverbindungen. Diese Methode ändert die **AllowTSConnections-Eigenschaft** für die -Klasse entsprechend.
 
 ## <a name="syntax"></a>Syntax
 
@@ -44,21 +44,21 @@ uint32 SetAllowTSConnections(
 
 <dl> <dt>
 
-*Allow-connections* \[ in\]
+*AllowTSConnections* \[ In\]
 </dt> <dd>
 
-Gibt an, ob neue Remote Desktop Verbindungen zulässig sind. Dabei muss es sich um einen der folgenden Werte handeln:
+Gibt an, ob neue Remotedesktopverbindungen zulässig sind. Dies muss einer der folgenden Werte sein.
 
 <dt>
 
 <span id="0"></span>
 
-<span id="0"></span>**1,0**
+<span id="0"></span>**0**
 
 
 </dt> <dd>
 
-Neue Verbindungen sind nicht zulässig. Wenn der *modifyfirewallexception* -Parameter 1 ist, wird die Remotedesktop Firewallausnahme deaktiviert.
+Neue Verbindungen sind nicht zulässig. Wenn der *ModifyFirewallException-Parameter* 1 ist, ist die Remotedesktop Firewallausnahme deaktiviert.
 
 </dd> <dt>
 
@@ -69,25 +69,25 @@ Neue Verbindungen sind nicht zulässig. Wenn der *modifyfirewallexception* -Para
 
 </dt> <dd>
 
-Neue Verbindungen sind zulässig. Wenn der *modifyfirewallexception* -Parameter 1 ist, wird die Remotedesktop Firewallausnahme aktiviert.
+Neue Verbindungen sind zulässig. Wenn der *ModifyFirewallException-Parameter* 1 ist, wird die Remotedesktop Firewallausnahme aktiviert.
 
 </dd> </dl> </dd> <dt>
 
-*Modifyfirewallexception* \[ in\]
+*ModifyFirewallException* \[ In\]
 </dt> <dd>
 
-Gibt an, ob die firewallausnahmeeinstellung für Remotedesktop in den durch den *allowzconnections* -Parameter angegebenen Zustand geändert wird. Dabei muss es sich um einen der folgenden Werte handeln:
+Gibt an, ob die Firewallausnahmeeinstellung für Remotedesktop in den vom *AllowTSConnections-Parameter* angegebenen Zustand geändert wird. Dies muss einer der folgenden Werte sein.
 
 <dt>
 
 <span id="0"></span>
 
-<span id="0"></span>**1,0**
+<span id="0"></span>**0**
 
 
 </dt> <dd>
 
-Ändern Sie die Einstellung für die Firewallausnahme nicht.
+Ändern Sie die Firewallausnahmeeinstellung nicht.
 
 </dd> <dt>
 
@@ -98,17 +98,17 @@ Gibt an, ob die firewallausnahmeeinstellung für Remotedesktop in den durch den 
 
 </dt> <dd>
 
-Ändern Sie die Einstellung für die Firewallausnahme.
+Ändern Sie die Firewallausnahmeeinstellung.
 
 </dd> </dl> </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt bei Erfolg Erfolg zurück. Andernfalls wird ein WMI-Fehlercode zurückgegeben. Eine Liste dieser Werte finden Sie unter [Remotedesktopdienste Fehler Codes des WMI-Anbieters](terminal-services-wmi-provider-error-codes.md) . Die-Methode gibt einen Fehler zurück, wenn die Einstellung Untergruppen Richtlinien Steuerung liegt.
+Gibt Erfolg bei Erfolg zurück. andernfalls wird ein WMI-Fehlercode zurückgegeben. Eine Liste dieser Werte finden Sie unter [Remotedesktopdienste WMI-Anbieterfehlercodes.](terminal-services-wmi-provider-error-codes.md) Die -Methode gibt einen Fehler zurück, wenn die Einstellung der Gruppenrichtliniensteuerung unterliegt.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Managed Object Format-Dateien (MOF) enthalten die Definitionen für Windows-Verwaltungsinstrumentation (WMI)-Klassen. MOF-Dateien werden nicht als Teil des Microsoft Windows Software Development Kit (SDK) installiert. Sie werden auf dem Server installiert, wenn Sie die zugehörige Rolle mithilfe der Server-Manager hinzufügen. Weitere Informationen zu MOF-Dateien finden Sie unter [Managed Object Format (MOF)](/windows/desktop/WmiSdk/managed-object-format--mof-).
+Managed Object Format -Dateien (MOF) enthalten die Definitionen für Windows Management Instrumentation (WMI)-Klassen. MOF-Dateien werden nicht als Teil des Microsoft Windows Software Development Kit (SDK) installiert. Sie werden auf dem Server installiert, wenn Sie die zugeordnete Rolle mithilfe der Server-Manager hinzufügen. Weitere Informationen zu MOF-Dateien finden Sie unter [Managed Object Format (MOF).](/windows/desktop/WmiSdk/managed-object-format--mof-)
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -119,7 +119,7 @@ Managed Object Format-Dateien (MOF) enthalten die Definitionen für Windows-Verw
 | Unterstützte Mindestversion (Client)<br/> | Windows Vista<br/>                                                                |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2008<br/>                                                          |
 | Namespace<br/>                | Root \\ CIMv2 \\ TerminalServices<br/>                                                |
-| MOF<br/>                      | <dl> <dt>Tscsgwmi. MOF</dt> </dl> |
+| MOF<br/>                      | <dl> <dt>TSCfgWmi.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>TSCfgWmi.dll</dt> </dl> |
 
 
@@ -128,7 +128,7 @@ Managed Object Format-Dateien (MOF) enthalten die Definitionen für Windows-Verw
 
 <dl> <dt>
 
-[**Win32 \_ terminalservicesetts**](win32-terminalservicesetting.md)
+[**Win32 \_ TerminalServiceSetting**](win32-terminalservicesetting.md)
 </dt> </dl>
 
  

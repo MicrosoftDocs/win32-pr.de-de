@@ -49,16 +49,16 @@ api_type:
 - DllExport
 api_location:
 - vmms.exe
-ms.openlocfilehash: 5606e18fd1327f17feaac07570e5bf8c0c8eb59d
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: beeecdebe03a443c1da95a75598bc83b9c7e2f0952cd85ceaad1866e2200ef7d
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106344043"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118146233"
 ---
-# <a name="msvm_vlanendpoint-class"></a>MSVM \_ vlanendpoint-Klasse
+# <a name="msvm_vlanendpoint-class"></a>Msvm \_ VLANEndpoint-Klasse
 
-Stellt den VLAN-Endpunkt eines Switchports dar. Die Konfiguration dieses Endpunkts ändert die Art und Weise, in der der Switchport VLAN-Pakete über den Switch sendet.
+Stellt den VLAN-Endpunkt eines Switchports dar. Die Konfiguration dieses Endpunkts ändert die Art und Weise, wie der Switchport VLAN-Pakete über den Switch sendet.
 
 Die folgende Syntax wird Managed Object Format (MOF)-Code vereinfacht und enthält alle geerbten Eigenschaften.
 
@@ -109,20 +109,20 @@ class Msvm_VLANEndpoint : CIM_VLANEndpoint
 
 ## <a name="members"></a>Member
 
-Die **MSVM \_ vlanendpoint** -Klasse verfügt über diese Typen von Membern:
+Die **Msvm \_ VLANEndpoint-Klasse** verfügt über die folgenden Membertypen:
 
 -   [Methoden](#methods)
 -   [Eigenschaften](#properties)
 
 ### <a name="methods"></a>Methoden
 
-Die **MSVM \_ vlanendpoint** -Klasse verfügt über diese Methoden.
+Die **Msvm \_ VLANEndpoint-Klasse** verfügt über diese Methoden.
 
 
 
-| Methode                                                             | BESCHREIBUNG                         |
+| Methode                                                             | Beschreibung                         |
 |:-------------------------------------------------------------------|:------------------------------------|
-| [**RequestStateChange**](msvm-vlanendpoint-requeststatechange.md) | Fordert eine Statusänderung an.<br/> |
+| [**RequestStateChange**](msvm-vlanendpoint-requeststatechange.md) | Fordert eine Zustandsänderung an.<br/> |
 
 
 
@@ -130,22 +130,22 @@ Die **MSVM \_ vlanendpoint** -Klasse verfügt über diese Methoden.
 
 ### <a name="properties"></a>Eigenschaften
 
-Die **MSVM \_ vlanendpoint** -Klasse verfügt über diese Eigenschaften.
+Die **Msvm \_ VLANEndpoint-Klasse** verfügt über diese Eigenschaften.
 
 <dl> <dt>
 
-**Availablerequestedstates**
+**AvailableRequestedStates**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt16** Array
+Datentyp: **uint16 array**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Gibt die möglichen Werte für den *requestedstate* -Parameter der [**requestStateChange**](/previous-versions/windows/desktop/iscsitarg/requeststatechange-cim-enabledlogicalelement) -Methode an, die zum Initiieren einer Zustandsänderung verwendet wird. Bei den aufgelisteten Werten handelt es sich um eine Teilmenge der Werte in der **requestedstaatsupported** -Eigenschaft der zugeordneten Instanz von **CIM \_ enabledlogicalelementfunctions**, bei der die ausgewählten Werte eine Funktion des aktuellen Zustands des [**CIM- \_ enabledlogicalelement**](/previous-versions//cc136818(v=vs.85))sind. Diese Eigenschaft darf nicht **null** sein, wenn eine Implementierung den Satz möglicher Werte als Funktion des aktuellen Zustands ankündigen kann. Diese Eigenschaft ist **null** , wenn eine Implementierung den Satz möglicher Werte nicht als Funktion des aktuellen Zustands bestimmen kann.
+Gibt die möglichen Werte für den *RequestedState-Parameter* der [**RequestStateChange-Methode**](/previous-versions/windows/desktop/iscsitarg/requeststatechange-cim-enabledlogicalelement) an, die zum Initiieren einer Zustandsänderung verwendet wird. Die aufgeführten Werte sind eine Teilmenge der Werte, die in der **RequestedStatesSupported-Eigenschaft** der zugeordneten Instanz von **CIM \_ EnabledLogicalElementCapabilities** enthalten sind, wobei die ausgewählten Werte eine Funktion des aktuellen Zustands von [**CIM \_ EnabledLogicalElement**](/previous-versions//cc136818(v=vs.85))sind. Diese Eigenschaft kann nicht NULL sein, wenn eine Implementierung den Satz möglicher Werte als Funktion des aktuellen Zustands anknullen kann. Diese Eigenschaft ist **NULL,** wenn eine Implementierung den Satz möglicher Werte nicht als Funktion des aktuellen Zustands bestimmen kann.
 
-Diese Eigenschaft wird von [**CIM \_ enabledlogicalelement**](/previous-versions//cc136818(v=vs.85))geerbt.
+Diese Eigenschaft wird von [**CIM \_ EnabledLogicalElement geerbt.**](/previous-versions//cc136818(v=vs.85))
 
 <dl> <dt>
 
@@ -155,7 +155,7 @@ Diese Eigenschaft wird von [**CIM \_ enabledlogicalelement**](/previous-versions
 <span id="Disabled"></span><span id="disabled"></span><span id="DISABLED"></span>**Deaktiviert** (3)
 </dt> <dt>
 
-<span id="Shut_Down"></span><span id="shut_down"></span><span id="SHUT_DOWN"></span>**Herunter** fahren (4)
+<span id="Shut_Down"></span><span id="shut_down"></span><span id="SHUT_DOWN"></span>**Herunterfahren** (4)
 </dt> <dt>
 
 <span id="Offline"></span><span id="offline"></span><span id="OFFLINE"></span>**Offline** (6)
@@ -164,10 +164,10 @@ Diese Eigenschaft wird von [**CIM \_ enabledlogicalelement**](/previous-versions
 <span id="Test"></span><span id="test"></span><span id="TEST"></span>**Test** (7)
 </dt> <dt>
 
-<span id="Defer"></span><span id="defer"></span><span id="DEFER"></span>Zurück **stellen (8** )
+<span id="Defer"></span><span id="defer"></span><span id="DEFER"></span>**Zurückern** (8)
 </dt> <dt>
 
-<span id="Quiesce"></span><span id="quiesce"></span><span id="QUIESCE"></span>Still **legung (9** )
+<span id="Quiesce"></span><span id="quiesce"></span><span id="QUIESCE"></span>**Ruhe** (9)
 </dt> <dt>
 
 <span id="Reboot"></span><span id="reboot"></span><span id="REBOOT"></span>**Neustart** (10)
@@ -176,7 +176,7 @@ Diese Eigenschaft wird von [**CIM \_ enabledlogicalelement**](/previous-versions
 <span id="Reset"></span><span id="reset"></span><span id="RESET"></span>**Zurücksetzen** (11)
 </dt> <dt>
 
-<span id="DMTF_Reserved_"></span><span id="dmtf_reserved_"></span><span id="DMTF_RESERVED_"></span>**DMTF reserviert** (.. )
+<span id="DMTF_Reserved_"></span><span id="dmtf_reserved_"></span><span id="DMTF_RESERVED_"></span>**DMTF Reserved** (.. )
 </dt> </dl>
 
 </dd> <dt>
@@ -190,24 +190,24 @@ Datentyp: **Zeichenfolge**
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Eine kurze Beschreibung des-Objekts. Diese Eigenschaft wird von [**CIM \_ managedelta Element**](/previous-versions/windows/desktop/iscsitarg/cim-managedelement)geerbt und ist immer auf "VLAN-Endpunkt" festgelegt.
+Eine kurze Beschreibung des -Objekts. Diese Eigenschaft wird von [**CIM \_ ManagedElement geerbt**](/previous-versions/windows/desktop/iscsitarg/cim-managedelement)und immer auf "VLAN-Endpunkt" festgelegt.
 
 </dd> <dt>
 
-**Communicationstatus**
+**CommunicationStatus**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt16**
+Datentyp: **uint16**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Gibt die Fähigkeit der Instrumentierung an, mit dem zugrunde liegenden verwalteten Element zu kommunizieren. Ein **null** -Wert gibt an, dass diese Eigenschaft nicht implementiert ist. Diese Eigenschaft wird von [**CIM \_ ManagedSystemElement**](/windows/desktop/CIMWin32Prov/cim-managedsystemelement)geerbt.
+Gibt die Fähigkeit der Instrumentierung an, mit dem zugrunde liegenden verwalteten Element zu kommunizieren. Ein **NULL-Wert** gibt an, dass diese Eigenschaft nicht implementiert ist. Diese Eigenschaft wird von [**CIM \_ ManagedSystemElement geerbt.**](/windows/desktop/CIMWin32Prov/cim-managedsystemelement)
 
 </dd> <dt>
 
-**"Name der Klassenname"**
+**CreationClassName**
 </dt> <dd> <dl> <dt>
 
 Datentyp: **Zeichenfolge**
@@ -216,46 +216,46 @@ Datentyp: **Zeichenfolge**
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Der Name der Klasse oder der Unterklasse, die bei der Erstellung einer-Instanz verwendet wird. Diese Eigenschaft wird von [**CIM \_ serviceaccesspoint**](/windows/desktop/CIMWin32Prov/cim-serviceaccesspoint)geerbt und ist immer auf "MSVM \_ vlanendpoint" festgelegt.
+Der Name der Klasse oder Unterklasse, die bei der Erstellung einer -Instanz verwendet wird. Diese Eigenschaft wird von [**CIM \_ ServiceAccessPoint geerbt**](/windows/desktop/CIMWin32Prov/cim-serviceaccesspoint)und immer auf "Msvm \_ VLANEndpoint" festgelegt.
 
 </dd> <dt>
 
 **Beschreibung**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Eine Beschreibung des -Objekts. Diese Eigenschaft wird vom [**CIM \_ managedelta-Element**](/previous-versions/windows/desktop/iscsitarg/cim-managedelement)geerbt und ist immer auf "Microsoft VLAN Endpoint" festgelegt.
+Eine Beschreibung des -Objekts. Diese Eigenschaft wird von [**CIM \_ ManagedElement geerbt**](/previous-versions/windows/desktop/iscsitarg/cim-managedelement)und immer auf "Microsoft VLAN Endpoint" festgelegt.
 
 </dd> <dt>
 
-**"Desiredendpointmode"**
+**DesiredEndpointMode**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt16**
+Datentyp: **uint16**
 </dt> <dt>
 
-Zugriffstyp: schreibgeschützt
+Zugriffstyp: Nur Schreibzugriff
 </dt> </dl>
 
-Der gewünschte VLAN-Modus, der zur Verwendung angefordert wird. Der aktuelle Modus wird von der **operationalendpointmode** -Eigenschaft angegeben. Diese Eigenschaft wird von [**CIM \_ vlanendpoint**](/previous-versions/windows/desktop/clushyperv/cim-vlanendpoint)geerbt.
+Der gewünschte VLAN-Modus, der zur Verwendung angefordert wird. Der aktuelle Modus wird durch die **OperationalEndpointMode-Eigenschaft** angegeben. Diese Eigenschaft wird von [**CIM \_ VLANEndpoint geerbt.**](/previous-versions/windows/desktop/clushyperv/cim-vlanendpoint)
 
 
 
 | Wert                                                                                                                                                                                                                                                                     | Bedeutung                                                                                                                                                                                                                                                                          |
 |---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| <span id="DMTF_Reserved"></span><span id="dmtf_reserved"></span><span id="DMTF_RESERVED"></span><dl> <dt>**DMTF reserviert**</dt> <dt>0</dt> </dl>                       |                                                                                                                                                                                                                                                                                  |
-| <span id="Other"></span><span id="other"></span><span id="OTHER"></span><dl> <dt>**Sonstige**</dt> <dt>1</dt> </dl>                                                       |                                                                                                                                                                                                                                                                                  |
-| <span id="Access"></span><span id="access"></span><span id="ACCESS"></span><dl> <dt>**Zugriff**</dt> <dt>2</dt> </dl>                                                   | Versetzt den Endpunkt/Switchport in den permanenten nicht Trunking-Modus und aushandgt, um den Link in einen nicht trunk-Link zu konvertieren. Der Endpunkt wird zu einer nicht trunk-Schnittstelle.<br/>                                                                                                     |
-| <span id="Dynamic_Auto"></span><span id="dynamic_auto"></span><span id="DYNAMIC_AUTO"></span><dl> <dt>**Dynamisches Auto**</dt> <dt>3</dt> </dl>                           | Macht den Endpunkt in der Lage, den Link in einen trunk Link zu konvertieren. Der Endpunkt wird zu einer trunk Schnittstelle, wenn die benachbarte Schnittstelle auf den trunk Modus oder den gewünschten Modus festgelegt ist.<br/>                                                                                                   |
-| <span id="Dynamic_Desirable"></span><span id="dynamic_desirable"></span><span id="DYNAMIC_DESIRABLE"></span><dl> <dt>**Dynamisch erwünscht**</dt> <dt>4</dt> </dl>       | Bewirkt, dass der Endpunkt aktiv versucht, den Link in einen trunk Link zu konvertieren. Der Endpunkt wird zu einer trunk Schnittstelle, wenn die benachbarte Schnittstelle auf den trunk-, wünschenswert-oder Auto-Modus festgelegt ist. Der standardmäßige switchportmodus für alle Ethernet-Schnittstellen ist dynamisch erwünscht.<br/> |
-| <span id="Trunk"></span><span id="trunk"></span><span id="TRUNK"></span><dl> <dt>**Trunk**</dt> <dt>5</dt> </dl>                                                       | Versetzt den Endpunkt in den permanenten trunkingmodus und aushandgt, um den Link in einen trunk Link zu konvertieren. Der Endpunkt wird zu einer trunk Schnittstelle, auch wenn die benachbarte Schnittstelle keine trunk Schnittstelle ist.<br/>                                                               |
-| <span id="Dot1Q_Tunnel"></span><span id="dot1q_tunnel"></span><span id="DOT1Q_TUNNEL"></span><dl> <dt>**Dot1Q Tunnel**</dt> <dt>6</dt> </dl>                           | Konfiguriert die Schnittstelle als Tunnelendpunkt/-Port (nicht abgeschnitten), der in einer asymmetrischen Verknüpfung mit einem 802.1 q-trunk-Port verbunden werden soll. 802.1 q-Tunnelung wird verwendet, um die Kunden-VLAN-Integrität über ein Dienstanbieter Netzwerk hinweg aufrechtzuerhalten.<br/>                                     |
-| <span id="DMTF_Reserved"></span><span id="dmtf_reserved"></span><span id="DMTF_RESERVED"></span><dl> <dt>**DMTF reserviert**</dt> <dt>7 32767</dt> </dl>                 |                                                                                                                                                                                                                                                                                  |
+| <span id="DMTF_Reserved"></span><span id="dmtf_reserved"></span><span id="DMTF_RESERVED"></span><dl> <dt>**DMTF Reserved**</dt> <dt>0</dt> </dl>                       |                                                                                                                                                                                                                                                                                  |
+| <span id="Other"></span><span id="other"></span><span id="OTHER"></span><dl> <dt>**Andere**</dt> <dt>1</dt> </dl>                                                       |                                                                                                                                                                                                                                                                                  |
+| <span id="Access"></span><span id="access"></span><span id="ACCESS"></span><dl> <dt>**Zugriff**</dt> <dt>2</dt> </dl>                                                   | Versetzt den Endpunkt-/Switchport in den permanenten Nichttrunkmodus und handelt aus, um den Link in einen Nicht-Trunklink zu konvertieren. Der Endpunkt wird zu einer Nicht-Trunkschnittstelle.<br/>                                                                                                     |
+| <span id="Dynamic_Auto"></span><span id="dynamic_auto"></span><span id="DYNAMIC_AUTO"></span><dl> <dt>**Dynamic Auto**</dt> <dt>3</dt> </dl>                           | Ermöglicht es dem Endpunkt, den Link in einen Trunklink zu konvertieren. Der Endpunkt wird zu einer Trunkschnittstelle, wenn die benachbarte Schnittstelle auf trunk oder den gewünschten Modus festgelegt ist.<br/>                                                                                                   |
+| <span id="Dynamic_Desirable"></span><span id="dynamic_desirable"></span><span id="DYNAMIC_DESIRABLE"></span><dl> <dt>**Dynamisch wünschenswert**</dt> <dt>4</dt> </dl>       | Lässt den Endpunkt aktiv versuchen, den Link in einen Trunklink zu konvertieren. Der Endpunkt wird zu einer Trunkschnittstelle, wenn die benachbarte Schnittstelle auf trunk,desirable oder auto mode festgelegt ist. Der Standardmäßige Switch-Port-Modus für alle Ethernet-Schnittstellen ist dynamisch wünschenswert.<br/> |
+| <span id="Trunk"></span><span id="trunk"></span><span id="TRUNK"></span><dl> <dt>**Trunk**</dt> <dt>5</dt> </dl>                                                       | Versetzt den Endpunkt in den permanenten Trunkingmodus und handelt aus, um den Link in einen Trunklink zu konvertieren. Der Endpunkt wird selbst dann zu einer Trunkschnittstelle, wenn es sich bei der benachbarten Schnittstelle nicht um eine Trunkschnittstelle handelt.<br/>                                                               |
+| <span id="Dot1Q_Tunnel"></span><span id="dot1q_tunnel"></span><span id="DOT1Q_TUNNEL"></span><dl> <dt>**Dot1Q Tunnel**</dt> <dt>6</dt> </dl>                           | Konfiguriert die Schnittstelle als Tunnelendpunkt/-port (nichttrunkierend), der bzw. der in einer asymmetrischen Verbindung mit einem 802.1Q-Trunkport verbunden werden soll. 802.1Q-Tunneling wird verwendet, um die VLAN-Integrität von Kunden in einem Dienstanbieternetzwerk zu gewährleisten.<br/>                                     |
+| <span id="DMTF_Reserved"></span><span id="dmtf_reserved"></span><span id="DMTF_RESERVED"></span><dl> <dt>**DMTF Reserved**</dt> <dt>7 32767</dt> </dl>                 |                                                                                                                                                                                                                                                                                  |
 | <span id="Vendor_Reserved_"></span><span id="vendor_reserved_"></span><span id="VENDOR_RESERVED_"></span><dl> <dt> **Anbieter reserviert**</dt> <dt>32768 65535</dt> </dl> |                                                                                                                                                                                                                                                                                  |
 
 
@@ -264,20 +264,20 @@ Der gewünschte VLAN-Modus, der zur Verwendung angefordert wird. Der aktuelle Mo
 
 </dd> <dt>
 
-**Desiredvlantrunkenkapselung**
+**DesiredVLANTrunkEncapsulation**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt16**
+Datentyp: **uint16**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Der Typ der für die Verwendung angeforderten VLAN-Kapselung. Die derzeit verwendete Kapselung wird von der **operationalvlantrunkenkapselungs** -Eigenschaft angegeben. Diese Eigenschaft ist nur anwendbar, wenn der Endpunkt in einem trunkingmodus betrieben wird (Weitere Informationen finden Sie unter der **operationalendpointmode** -Eigenschaft). Diese Eigenschaft ist entweder 2 (nicht zutreffend) (d. h. der Endpunkt wird nie in einem Trunking-Modus abgelegt), ein bestimmter Typ (802.1 q oder Cisco ISL) oder 5 (aushandeln) (das Ergebnis der Aushandlung zwischen dieser Schnittstelle und Ihrem Nachbarn). Der Wert 5 (aushandeln) ist nicht zulässig, wenn der Endpunkt keine Aushandlung unterstützt. Diese Funktion ist von Hardware und Hersteller abhängig. Diese Eigenschaft wird von [**CIM \_ vlanendpoint**](/previous-versions/windows/desktop/clushyperv/cim-vlanendpoint)geerbt.
+Der Typ der VLAN-Kapselung, die zur Verwendung angefordert wird. Die derzeit verwendete Kapselung wird von der **OperationalVLANTrunkEncapsulation-Eigenschaft** angegeben. Diese Eigenschaft ist nur anwendbar, wenn der Endpunkt in einem Trunkingmodus ausgeführt wird (weitere Details finden Sie in der **OperationalEndpointMode-Eigenschaft).** Diese Eigenschaft ist entweder 2 (Nicht zutreffend) (d. h. der Endpunkt wird nie in einem Trunkingmodus platziert), ein bestimmter Typ (802.1Q oder Cisco ISL) oder 5 (Aushandlung) (d. h. das Ergebnis der Aushandlung zwischen dieser Schnittstelle und ihrem Nachbarn). Der Wert 5 (Negotiate) ist nicht zulässig, wenn der Endpunkt keine Aushandlung unterstützt. Diese Funktion ist hardware- und herstellerabhängig. Diese Eigenschaft wird von [**CIM \_ VLANEndpoint geerbt.**](/previous-versions/windows/desktop/clushyperv/cim-vlanendpoint)
 
 <dl> <dt>
 
-<span id="DMTF_Reserved"></span><span id="dmtf_reserved"></span><span id="DMTF_RESERVED"></span>**DMTF reserviert** (0)
+<span id="DMTF_Reserved"></span><span id="dmtf_reserved"></span><span id="DMTF_RESERVED"></span>**DMTF Reserved** (0)
 </dt> <dt>
 
 <span id="Other"></span><span id="other"></span><span id="OTHER"></span>**Sonstige** (1)
@@ -286,7 +286,7 @@ Der Typ der für die Verwendung angeforderten VLAN-Kapselung. Die derzeit verwen
 <span id="Not_Applicable"></span><span id="not_applicable"></span><span id="NOT_APPLICABLE"></span>**Nicht zutreffend** (2)
 </dt> <dt>
 
-<span id="802.1Q"></span><span id="802.1q"></span>**802.1 q** (3)
+<span id="802.1Q"></span><span id="802.1q"></span>**802.1Q** (3)
 </dt> <dt>
 
 <span id="Cisco_ISL"></span><span id="cisco_isl"></span><span id="CISCO_ISL"></span>**Cisco ISL** (4)
@@ -298,7 +298,7 @@ Der Typ der für die Verwendung angeforderten VLAN-Kapselung. Die derzeit verwen
 <span id="DMTF_Reserved"></span><span id="dmtf_reserved"></span><span id="DMTF_RESERVED"></span>**DMTF reserviert** (6 32767)
 </dt> <dt>
 
-<span id="Vendor_Reserved_"></span><span id="vendor_reserved_"></span><span id="VENDOR_RESERVED_"></span>**Anbieter reserviert** (32768 65535)
+<span id="Vendor_Reserved_"></span><span id="vendor_reserved_"></span><span id="VENDOR_RESERVED_"></span>**Reservierter Anbieter** (32768 65535)
 </dt> </dl>
 
 </dd> <dt>
@@ -306,13 +306,13 @@ Der Typ der für die Verwendung angeforderten VLAN-Kapselung. Die derzeit verwen
 **DetailedStatus**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt16**
+Datentyp: **uint16**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Ergänzt die **primarystatus** -Eigenschaft mit zusätzlichen Status Details. Ein **null** -Wert gibt an, dass diese Eigenschaft nicht implementiert ist. Diese Eigenschaft wird von [**CIM \_ ManagedSystemElement**](/windows/desktop/CIMWin32Prov/cim-managedsystemelement)geerbt.
+Ergänzt die **PrimaryStatus-Eigenschaft** durch zusätzliche Statusdetails. Ein **NULL-Wert** gibt an, dass diese Eigenschaft nicht implementiert ist. Diese Eigenschaft wird von [**CIM \_ ManagedSystemElement**](/windows/desktop/CIMWin32Prov/cim-managedsystemelement)geerbt.
 
 </dd> <dt>
 
@@ -325,46 +325,46 @@ Datentyp: **Zeichenfolge**
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Ein Anzeige Name für das-Objekt. Diese Eigenschaft wird von [**CIM \_ managedelta**](/previous-versions/windows/desktop/iscsitarg/cim-managedelement)geerbt.
+Ein Anzeigename für das Objekt. Diese Eigenschaft wird von [**CIM \_ ManagedElement**](/previous-versions/windows/desktop/iscsitarg/cim-managedelement)geerbt.
 
 </dd> <dt>
 
-**Enableddefault**
+**EnabledDefault**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt16**
+Datentyp: **uint16**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Die Standard-oder Startkonfiguration eines Administrators für den aktivierten Zustand eines Elements. Diese Eigenschaft wird von [**CIM \_ enabledlogicalelement**](/previous-versions//cc136818(v=vs.85)) geerbt und ist immer auf 2 (aktiviert) festgelegt.
+Die Standard- oder Startkonfiguration eines Administrators für den aktivierten Zustand eines Elements. Diese Eigenschaft wird von [**CIM \_ EnabledLogicalElement**](/previous-versions//cc136818(v=vs.85)) geerbt und immer auf 2 (Aktiviert) festgelegt.
 
 </dd> <dt>
 
 **EnabledState**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt16**
+Datentyp: **uint16**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Der aktivierte und deaktivierte Status dieses Elements. Diese Eigenschaft wird von [**CIM \_ ManagedSystemElement**](/windows/desktop/CIMWin32Prov/cim-managedsystemelement)geerbt und ist immer auf 5 festgelegt (nicht zutreffend).
+Der aktivierte und deaktivierte Status dieses Elements. Diese Eigenschaft wird von [**CIM \_ ManagedSystemElement**](/windows/desktop/CIMWin32Prov/cim-managedsystemelement)geerbt und immer auf 5 (Nicht zutreffend) festgelegt.
 
 </dd> <dt>
 
-**Gvrpstatus**
+**GVRPStatus**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt16**
+Datentyp: **uint16**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Gibt an, ob das Garp-VLAN-Registrierungs Protokoll (GVRP) auf dem trunk Endpunkt/-Port aktiviert oder deaktiviert ist. Diese Eigenschaft ist 2 (nicht zutreffend), es sei denn, GVRP wird vom Endpunkt unterstützt. Diese Eigenschaft ist nur anwendbar, wenn der Endpunkt im trunkingmodus ausgeführt wird (Weitere Informationen finden Sie unter der **operationalendpointmode** -Eigenschaft). Diese Eigenschaft wird von [**CIM \_ vlanendpoint**](/previous-versions/windows/desktop/clushyperv/cim-vlanendpoint)geerbt.
+Gibt an, ob DAS GARP VLAN Registration Protocol (GVRP) am Trunkendpunkt/Port aktiviert oder deaktiviert ist. Diese Eigenschaft ist 2 (Nicht zutreffend), es sei denn, GVRP wird vom Endpunkt unterstützt. Diese Eigenschaft gilt nur, wenn der Endpunkt im Trunkingmodus ausgeführt wird (weitere Informationen finden Sie in der **OperationalEndpointMode-Eigenschaft).** Diese Eigenschaft wird von [**CIM \_ VLANEndpoint**](/previous-versions/windows/desktop/clushyperv/cim-vlanendpoint)geerbt.
 
 <dl> <dt>
 
@@ -377,7 +377,7 @@ Gibt an, ob das Garp-VLAN-Registrierungs Protokoll (GVRP) auf dem trunk Endpunkt
 <span id="Enabled"></span><span id="enabled"></span><span id="ENABLED"></span>**Aktiviert** (3)
 </dt> <dt>
 
-<span id="Disabled_"></span><span id="disabled_"></span><span id="DISABLED_"></span>**Deaktiviert** (4)
+<span id="Disabled_"></span><span id="disabled_"></span><span id="DISABLED_"></span>**Deaktiviert** (4 )
 </dt> </dl>
 
 </dd> <dt>
@@ -385,33 +385,33 @@ Gibt an, ob das Garp-VLAN-Registrierungs Protokoll (GVRP) auf dem trunk Endpunkt
 **HealthState**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt16**
+Datentyp: **uint16**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Der aktuelle Zustand des Elements. Diese Eigenschaft drückt die Integrität dieses Elements aus, aber nicht notwendigerweise die seiner unter Komponenten. Mögliche Werte sind 0 bis 30, wobei 5 bedeutet, dass das Element vollständig fehlerfrei ist und 30 bedeutet, dass das Element vollständig nicht funktionsfähig ist. Diese Eigenschaft wird von [**CIM \_ ManagedSystemElement**](/windows/desktop/CIMWin32Prov/cim-managedsystemelement)geerbt und ist immer auf 5 (OK) festgelegt.
+Die aktuelle Integrität des Elements. Diese Eigenschaft drückt die Integrität dieses Elements aus, jedoch nicht notwendigerweise die Integrität seiner Unterkomponenten. Die möglichen Werte sind 0 bis 30, wobei 5 bedeutet, dass das Element vollständig fehlerfrei ist und 30 bedeutet, dass das Element vollständig nicht funktionslos ist. Diese Eigenschaft wird von [**CIM \_ ManagedSystemElement**](/windows/desktop/CIMWin32Prov/cim-managedsystemelement)geerbt und immer auf 5 (OK) festgelegt.
 
 </dd> <dt>
 
 **InstallDate**
 </dt> <dd> <dl> <dt>
 
-**Datentyp: DateTime**
+Datentyp: **datetime**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Das Datum und die Uhrzeit der Installation des-Objekts. Diese Eigenschaft wird von [**CIM \_ ManagedSystemElement**](/windows/desktop/CIMWin32Prov/cim-managedsystemelement)geerbt und wird nicht verwendet.
+Das Datum und die Uhrzeit der Installation des Objekts. Diese Eigenschaft wird von [**CIM \_ ManagedSystemElement**](/windows/desktop/CIMWin32Prov/cim-managedsystemelement)geerbt und nicht verwendet.
 
 </dd> <dt>
 
 **InstanceID**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
@@ -420,20 +420,20 @@ Zugriffstyp: Schreibgeschützt
 Qualifizierer: **Schlüssel**
 </dt> </dl>
 
-Identifiziert eine Instanz dieser Klasse eindeutig. Diese Eigenschaft wird von [**CIM \_ managedelta**](/previous-versions/windows/desktop/iscsitarg/cim-managedelement)geerbt.
+Identifiziert eine Instanz dieser Klasse eindeutig. Diese Eigenschaft wird von [**CIM \_ ManagedElement**](/previous-versions/windows/desktop/iscsitarg/cim-managedelement)geerbt.
 
 </dd> <dt>
 
 **Name**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Die Bezeichnung, mit der das-Objekt bekannt ist. Diese Eigenschaft wird von [**CIM \_ ManagedSystemElement**](/windows/desktop/CIMWin32Prov/cim-managedsystemelement)geerbt.
+Die Bezeichnung, mit der das Objekt bekannt ist. Diese Eigenschaft wird von [**CIM \_ ManagedSystemElement**](/windows/desktop/CIMWin32Prov/cim-managedsystemelement)geerbt.
 
 </dd> <dt>
 
@@ -446,47 +446,47 @@ Datentyp: **Zeichenfolge**
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Die Benennungs-Heuristik, die ausgewählt wird, um sicherzustellen, dass der Wert der **Name** -Eigenschaft eindeutig ist. Diese Eigenschaft wird von [**CIM \_ protocolendpoint**](/previous-versions/windows/desktop/iscsitarg/cim-protocolendpoint) geerbt und wird nicht verwendet.
+Die Namensheuristik, die ausgewählt wird, um sicherzustellen, dass der Wert der **Name-Eigenschaft** eindeutig ist. Diese Eigenschaft wird von [**CIM \_ ProtocolEndpoint**](/previous-versions/windows/desktop/iscsitarg/cim-protocolendpoint) geerbt und nicht verwendet.
 
 </dd> <dt>
 
-**Operatingstatus**
+**OperatingStatus**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt16**
+Datentyp: **uint16**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Stellt aktuelle Statusinformationen für den Betriebszustand des-Elements bereit und kann verwendet werden, um weitere Details in Bezug auf den Wert der **enabledstate** -Eigenschaft bereitzustellen. Ein **null** -Wert gibt an, dass diese Eigenschaft nicht implementiert ist. Diese Eigenschaft wird von [**CIM \_ ManagedSystemElement**](/windows/desktop/CIMWin32Prov/cim-managedsystemelement)geerbt.
+Stellt aktuelle Statusinformationen für die Betriebsbedingung des Elements bereit und kann zum Bereitstellen weiterer Details in Bezug auf den Wert der **EnabledState-Eigenschaft** verwendet werden. Ein **NULL-Wert** gibt an, dass diese Eigenschaft nicht implementiert ist. Diese Eigenschaft wird von [**CIM \_ ManagedSystemElement**](/windows/desktop/CIMWin32Prov/cim-managedsystemelement)geerbt.
 
 </dd> <dt>
 
-**Operationalendpointmode**
+**OperationalEndpointMode**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt16**
+Datentyp: **uint16**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Der Konfigurations Modus für den VLAN-Endpunkt. Diese Eigenschaft wird von [**CIM \_ vlanendpoint**](/previous-versions/windows/desktop/clushyperv/cim-vlanendpoint)geerbt.
+Der Konfigurationsmodus für den VLAN-Endpunkt. Diese Eigenschaft wird von [**CIM \_ VLANEndpoint**](/previous-versions/windows/desktop/clushyperv/cim-vlanendpoint)geerbt.
 
 
 
 | Wert                                                                                                                                                                                                                                                                     | Bedeutung                                                                                                                                                                                                                                                             |
 |---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| <span id="DMTF_Reserved"></span><span id="dmtf_reserved"></span><span id="DMTF_RESERVED"></span><dl> <dt>**DMTF reserviert**</dt> <dt>0</dt> </dl>                       |                                                                                                                                                                                                                                                                     |
-| <span id="Other"></span><span id="other"></span><span id="OTHER"></span><dl> <dt>**Sonstige**</dt> <dt>1</dt> </dl>                                                       | Der Endpunkt ist nicht VLAN-fähig.<br/>                                                                                                                                                                                                                          |
-| <span id="Access"></span><span id="access"></span><span id="ACCESS"></span><dl> <dt>**Zugriff**</dt> <dt>2</dt> </dl>                                                   | Versetzt den Endpunkt in den permanenten nicht Trunking-Modus und aushandgt, um den Link in einen nicht trunk-Link zu konvertieren. Der Endpunkt wird zu einer nicht trunk-Schnittstelle.<br/>                                                                                                    |
-| <span id="Dynamic_Auto"></span><span id="dynamic_auto"></span><span id="DYNAMIC_AUTO"></span><dl> <dt>**Dynamisches Auto**</dt> <dt>3</dt> </dl>                           | Macht den Endpunkt in der Lage, den Link in einen trunk Link zu konvertieren. Der Endpunkt wird zu einer trunk Schnittstelle, wenn die benachbarte Schnittstelle auf den trunk Modus oder den gewünschten Modus festgelegt ist.<br/>                                                                                      |
-| <span id="Dynamic_Desirable"></span><span id="dynamic_desirable"></span><span id="DYNAMIC_DESIRABLE"></span><dl> <dt>**Dynamisch erwünscht**</dt> <dt>4</dt> </dl>       | Bewirkt, dass der Endpunkt aktiv versucht, den Link in einen trunk Link zu konvertieren. Der Endpunkt wird zu einer trunk Schnittstelle, wenn die benachbarte Schnittstelle auf den trunk-, wünschenswert-oder Auto-Modus festgelegt ist. Dies ist der standardswitchportmodus für alle Ethernet-Schnittstellen.<br/> |
-| <span id="Trunk"></span><span id="trunk"></span><span id="TRUNK"></span><dl> <dt>**Trunk**</dt> <dt>5</dt> </dl>                                                       | Versetzt den Endpunkt in den permanenten trunkingmodus und aushandgt, um den Link in einen trunk Link zu konvertieren. Der Endpunkt wird zu einer trunk Schnittstelle, auch wenn die benachbarte Schnittstelle keine trunk Schnittstelle ist.<br/>                                                  |
-| <span id="Dot1Q_Tunnel"></span><span id="dot1q_tunnel"></span><span id="DOT1Q_TUNNEL"></span><dl> <dt>**Dot1Q Tunnel**</dt> <dt>6</dt> </dl>                           | Konfiguriert die Schnittstelle als Tunnelendpunkt/-Port (nicht abgeschnitten), der in einer asymmetrischen Verknüpfung mit einem 802.1 q-trunk-Port verbunden werden soll. 802.1 q-Tunnelung wird verwendet, um die Kunden-VLAN-Integrität über ein Dienstanbieter Netzwerk hinweg aufrechtzuerhalten.<br/>                        |
-| <span id="DMTF_Reserved"></span><span id="dmtf_reserved"></span><span id="DMTF_RESERVED"></span><dl> <dt>**DMTF reserviert**</dt> <dt>7 32767</dt> </dl>                 |                                                                                                                                                                                                                                                                     |
-| <span id="Vendor_Reserved_"></span><span id="vendor_reserved_"></span><span id="VENDOR_RESERVED_"></span><dl> <dt> **Anbieter reserviert**</dt> <dt>32768 65535</dt> </dl> |                                                                                                                                                                                                                                                                     |
+| <span id="DMTF_Reserved"></span><span id="dmtf_reserved"></span><span id="DMTF_RESERVED"></span><dl> <dt>**RESERVIERTE DMTF**</dt> <dt>0</dt> </dl>                       |                                                                                                                                                                                                                                                                     |
+| <span id="Other"></span><span id="other"></span><span id="OTHER"></span><dl> <dt>**Andere**</dt> <dt>1</dt> </dl>                                                       | Der Endpunkt ist nicht VLAN-fähigen.<br/>                                                                                                                                                                                                                          |
+| <span id="Access"></span><span id="access"></span><span id="ACCESS"></span><dl> <dt>**Zugriff**</dt> <dt>2</dt> </dl>                                                   | Versetzt den Endpunkt in den permanenten nichttrunkenden Modus und handelt aus, um den Link in einen Nicht-Blocklink zu konvertieren. Der Endpunkt wird zu einer nontrunk-Schnittstelle.<br/>                                                                                                    |
+| <span id="Dynamic_Auto"></span><span id="dynamic_auto"></span><span id="DYNAMIC_AUTO"></span><dl> <dt>**Dynamic Auto**</dt> <dt>3</dt> </dl>                           | Ermöglicht es dem Endpunkt, den Link in einen Trunklink zu konvertieren. Der Endpunkt wird zu einer Trunkschnittstelle, wenn die benachbarte Schnittstelle auf trunk oder den gewünschten Modus festgelegt ist.<br/>                                                                                      |
+| <span id="Dynamic_Desirable"></span><span id="dynamic_desirable"></span><span id="DYNAMIC_DESIRABLE"></span><dl> <dt>**Dynamisch wünschenswert**</dt> <dt>4</dt> </dl>       | Bewirkt, dass der Endpunkt aktiv versucht, den Link in einen Trunklink zu konvertieren. Der Endpunkt wird zu einer Trunkschnittstelle, wenn die benachbarte Schnittstelle auf trunk, desirable oder auto festgelegt ist. Dies ist der Standardmodus für Switchports für alle Ethernet-Schnittstellen.<br/> |
+| <span id="Trunk"></span><span id="trunk"></span><span id="TRUNK"></span><dl> <dt>**Trunk**</dt> <dt>5</dt> </dl>                                                       | Versetzt den Endpunkt in den permanenten Trunkingmodus und handelt aus, um den Link in einen Trunklink zu konvertieren. Der Endpunkt wird auch dann zu einer Trunkschnittstelle, wenn die benachbarte Schnittstelle keine Trunkschnittstelle ist.<br/>                                                  |
+| <span id="Dot1Q_Tunnel"></span><span id="dot1q_tunnel"></span><span id="DOT1Q_TUNNEL"></span><dl> <dt>**Dot1Q Tunnel**</dt> <dt>6</dt> </dl>                           | Konfiguriert die Schnittstelle als Tunnelendpunkt bzw. -port, der in einer asymmetrischen Verbindung mit einem 802.1Q-Trunkport verbunden werden soll. 802.1Q-Tunneling wird verwendet, um die VLAN-Integrität von Kunden über ein Dienstanbieternetzwerk hinweg beizubehalten.<br/>                        |
+| <span id="DMTF_Reserved"></span><span id="dmtf_reserved"></span><span id="DMTF_RESERVED"></span><dl> <dt>**DMTF Reserved**</dt> <dt>7 32767</dt> </dl>                 |                                                                                                                                                                                                                                                                     |
+| <span id="Vendor_Reserved_"></span><span id="vendor_reserved_"></span><span id="VENDOR_RESERVED_"></span><dl> <dt> **Reservierter Anbieter**</dt> <dt>32768 65535</dt> </dl> |                                                                                                                                                                                                                                                                     |
 
 
 
@@ -497,56 +497,56 @@ Der Konfigurations Modus für den VLAN-Endpunkt. Diese Eigenschaft wird von [**C
 **OperationalStatus**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt16** Array
+Datentyp: **uint16-Array**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Die aktuellen Status des-Objekts. Diese Eigenschaft wird von [**CIM \_ ManagedSystemElement**](/windows/desktop/CIMWin32Prov/cim-managedsystemelement)geerbt, und jedes Array Element ist immer auf 2 (OK) festgelegt.
+Die aktuellen Status des -Objekts. Diese Eigenschaft wird von [**CIM \_ ManagedSystemElement**](/windows/desktop/CIMWin32Prov/cim-managedsystemelement)geerbt, und jedes Arrayelement ist immer auf 2 (OK) festgelegt.
 
 </dd> <dt>
 
-**Operationalvlantrunkenkapselung**
+**OperationalVLANTrunkEncapsulation**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt16**
+Datentyp: **uint16**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Der Typ der VLAN-Kapselung, die auf einem Trunk Endpunkt/-Port verwendet wird. Diese Eigenschaft ist entweder 2 (nicht zutreffend) (d. h. der Endpunkt wird nicht im trunkingmodus betrieben), ein bestimmter Typ (3-802.1 q oder 4-Cisco ISL), 5 (aushandeln) (das heißt, die Endpunkte aushandeln den Kapselungstyp). Diese Eigenschaft ist nur anwendbar, wenn der Endpunkt in einem trunkingmodus betrieben wird (Weitere Informationen finden Sie unter der **operationalendpointmode** -Eigenschaft). Diese Eigenschaft wird von [**CIM \_ vlanendpoint**](/previous-versions/windows/desktop/clushyperv/cim-vlanendpoint)geerbt.
+Der Typ der VLAN-Kapselung, die auf einem Trunkendpunkt/-port verwendet wird. Diese Eigenschaft ist entweder 2 (Nicht zutreffend) (d.h. der Endpunkt wird nicht im Trunkingmodus ausgeführt), ein bestimmter Typ (3 - 802.1Q oder 4 - Cisco ISL), 5 (Negotiate) (d. h. die Endpunkte aushandeln den Kapselungstyp). Diese Eigenschaft ist nur anwendbar, wenn der Endpunkt in einem Trunkingmodus ausgeführt wird (weitere Informationen finden Sie in der **OperationalEndpointMode-Eigenschaft).** Diese Eigenschaft wird von [**CIM \_ VLANEndpoint**](/previous-versions/windows/desktop/clushyperv/cim-vlanendpoint)geerbt.
 
 <dl> <dt>
 
 <span id="Unknown"></span><span id="unknown"></span><span id="UNKNOWN"></span>**Unbekannt** (0)
 </dt> <dt>
 
-<span id="Other"></span><span id="other"></span><span id="OTHER"></span>**Sonstige** (1)
+<span id="Other"></span><span id="other"></span><span id="OTHER"></span>**Andere** (1)
 </dt> <dt>
 
 <span id="Not_Applicable"></span><span id="not_applicable"></span><span id="NOT_APPLICABLE"></span>**Nicht zutreffend** (2)
 </dt> <dt>
 
-<span id="802.1Q"></span><span id="802.1q"></span>**802.1 q** (3)
+<span id="802.1Q"></span><span id="802.1q"></span>**802.1Q** (3)
 </dt> <dt>
 
 <span id="Cisco_ISL"></span><span id="cisco_isl"></span><span id="CISCO_ISL"></span>**Cisco ISL** (4)
 </dt> <dt>
 
-<span id="Negotiating"></span><span id="negotiating"></span><span id="NEGOTIATING"></span>**Aushandlung** (5)
+<span id="Negotiating"></span><span id="negotiating"></span><span id="NEGOTIATING"></span>**Aushandeln** (5)
 </dt> <dt>
 
 <span id="DMTF_Reserved"></span><span id="dmtf_reserved"></span><span id="DMTF_RESERVED"></span>**DMTF reserviert** (6 32767)
 </dt> <dt>
 
-<span id="Vendor_Reserved_"></span><span id="vendor_reserved_"></span><span id="VENDOR_RESERVED_"></span>**Anbieter reserviert** (32768 65535)
+<span id="Vendor_Reserved_"></span><span id="vendor_reserved_"></span><span id="VENDOR_RESERVED_"></span>**Reservierter Anbieter** (32768 65535)
 </dt> </dl>
 
 </dd> <dt>
 
-**Otherenabledstate**
+**OtherEnabledState**
 </dt> <dd> <dl> <dt>
 
 Datentyp: **Zeichenfolge**
@@ -555,33 +555,33 @@ Datentyp: **Zeichenfolge**
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Eine Zeichenfolge, die den aktivierten oder deaktivierten Status des Elements beschreibt, wenn die **enabledstate** -Eigenschaft auf 1 ("Other") festgelegt ist. Diese Eigenschaft muss auf **null** festgelegt werden, wenn **enabledstate** ein anderer Wert als 1 ist. Diese Eigenschaft wird von [**CIM \_ enabledlogicalelement**](/previous-versions//cc136818(v=vs.85))geerbt und ist immer auf **null** festgelegt.
+Eine Zeichenfolge, die den aktivierten oder deaktivierten Zustand des Elements beschreibt, wenn die **EnabledState-Eigenschaft** auf 1 ("Other") festgelegt ist. Diese Eigenschaft muss auf **NULL** festgelegt werden, wenn **EnabledState** ein anderer Wert als 1 ist. Diese Eigenschaft wird von [**CIM \_ EnabledLogicalElement**](/previous-versions//cc136818(v=vs.85))geerbt und immer auf **NULL** festgelegt.
 
 </dd> <dt>
 
-**Otherendpointmode**
+**OtherEndpointMode**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Der Typ des VLAN-Endpunkt Modells, das von diesem VLAN-Endpunkt unterstützt wird, wenn der Wert der **operationalendpointmode** -Eigenschaft auf 1 (sonstige) festgelegt ist. Diese Eigenschaft sollte auf **null** festgelegt werden, wenn die **operationalendpointmode** -Eigenschaft einen anderen Wert als 1 hat. Diese Eigenschaft wird von [**CIM \_ vlanendpoint**](/previous-versions/windows/desktop/clushyperv/cim-vlanendpoint)geerbt.
+Der Typ des VLAN-Endpunktmodells, der von diesem VLAN-Endpunkt unterstützt wird, wenn der Wert der **OperationalEndpointMode-Eigenschaft** auf 1 (Sonstige) festgelegt ist. Diese Eigenschaft sollte auf **NULL** festgelegt werden, wenn die **OperationalEndpointMode-Eigenschaft** ein anderer Wert als 1 ist. Diese Eigenschaft wird von [**CIM \_ VLANEndpoint**](/previous-versions/windows/desktop/clushyperv/cim-vlanendpoint)geerbt.
 
 </dd> <dt>
 
-**Othertrunkenkapselung**
+**OtherTrunkEncapsulation**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Der Typ der VLAN-Kapselung, die von diesem VLAN-Endpunkt unterstützt wird, wenn der Wert der Eigenschaft **operationalvlantrunkenkapselung** auf 1 (sonstige) festgelegt ist. Diese Eigenschaft sollte auf **null** festgelegt werden, wenn die gewünschte Kapselungs Eigenschaft einen anderen Wert als 1 hat. Diese Eigenschaft wird von [**CIM \_ vlanendpoint**](/previous-versions/windows/desktop/clushyperv/cim-vlanendpoint)geerbt.
+Der Typ der VLAN-Kapselung, der von diesem VLAN-Endpunkt unterstützt wird, wenn der Wert der **OperationalVLANTrunkEncapsulation-Eigenschaft** auf 1 (Sonstige) festgelegt ist. Diese Eigenschaft sollte auf **NULL** festgelegt werden, wenn die gewünschte Kapselungseigenschaft ein anderer Wert als 1 ist. Diese Eigenschaft wird von [**CIM \_ VLANEndpoint**](/previous-versions/windows/desktop/clushyperv/cim-vlanendpoint)geerbt.
 
 </dd> <dt>
 
@@ -594,59 +594,59 @@ Datentyp: **Zeichenfolge**
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Der Typ des Protokoll Endpunkts, wenn die **Type** -Eigenschaft dieser Klasse (oder eine ihrer Unterklassen) auf 1 (sonstige) festgelegt ist. Diese Eigenschaft wird von [**CIM \_ protocolendpoint**](/previous-versions/windows/desktop/iscsitarg/cim-protocolendpoint)geerbt und ist immer auf "Virtuelles Ethernet" festgelegt.
+Der Typ des Protokollendpunkts, wenn die **Type-Eigenschaft** dieser Klasse (oder einer ihrer Unterklassen) auf 1 (Sonstige) festgelegt ist. Diese Eigenschaft wird von [**CIM \_ ProtocolEndpoint**](/previous-versions/windows/desktop/iscsitarg/cim-protocolendpoint)geerbt und immer auf "Virtual Ethernet" festgelegt.
 
 </dd> <dt>
 
-**Primarystatus**
+**PrimaryStatus**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt16**
+Datentyp: **uint16**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Stellt Statusinformationen auf hoher Ebene bereit. Diese Eigenschaft sollte in Verbindung mit der **detailedstatus** -Eigenschaft verwendet werden, um allgemeine und ausführliche Integritäts Statusinformationen für das-Element und seine unter Komponenten bereitzustellen. Ein **null** -Wert gibt an, dass diese Eigenschaft nicht implementiert ist. Diese Eigenschaft wird von [**CIM \_ ManagedSystemElement**](/windows/desktop/CIMWin32Prov/cim-managedsystemelement)geerbt.
+Stellt statusinformationen auf hoher Ebene bereit. Diese Eigenschaft sollte in Verbindung mit der **DetailedStatus-Eigenschaft** verwendet werden, um detaillierte und detaillierte Integritätsstatusinformationen für das Element und seine Unterkomponenten bereitzustellen. Ein **NULL-Wert** gibt an, dass diese Eigenschaft nicht implementiert ist. Diese Eigenschaft wird von [**CIM \_ ManagedSystemElement**](/windows/desktop/CIMWin32Prov/cim-managedsystemelement)geerbt.
 
 </dd> <dt>
 
-**Protocoliftype**
+**ProtocolIFType**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt16**
+Datentyp: **uint16**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Der [IANA iftype-MIB](https://www.iana.org/assignments/ianaiftype-mib). Diese Eigenschaft wird von [**CIM \_ protocolendpoint**](/previous-versions/windows/desktop/iscsitarg/cim-protocolendpoint)geerbt und ist immer auf 1 (sonstige) festgelegt.
+Die [IANA ifType MIB](https://www.iana.org/assignments/ianaiftype-mib). Diese Eigenschaft wird von [**CIM \_ ProtocolEndpoint**](/previous-versions/windows/desktop/iscsitarg/cim-protocolendpoint)geerbt und immer auf 1 (Sonstige) festgelegt.
 
 </dd> <dt>
 
-**ProtocolType**
+**Protocoltype**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt16**
+Datentyp: **uint16**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Diese Eigenschaft wird von [**CIM \_ protocolendpoint**](/previous-versions/windows/desktop/iscsitarg/cim-protocolendpoint) geerbt und wird nicht verwendet.
+Diese Eigenschaft wird von [**CIM \_ ProtocolEndpoint**](/previous-versions/windows/desktop/iscsitarg/cim-protocolendpoint) geerbt und nicht verwendet.
 
 </dd> <dt>
 
 **RequestedState**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt16**
+Datentyp: **uint16**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Der zuletzt angeforderte oder gewünschte Status für den Verwaltungsdienst. Diese Eigenschaft wird von [**CIM \_ enabledlogicalelement**](/previous-versions//cc136818(v=vs.85))geerbt und ist immer auf 12 (nicht zutreffend) festgelegt.
+Der zuletzt angeforderte oder gewünschte Zustand für den Verwaltungsdienst. Diese Eigenschaft wird von [**CIM \_ EnabledLogicalElement**](/previous-versions//cc136818(v=vs.85))geerbt und immer auf 12 (Nicht zutreffend) festgelegt.
 
 
 
@@ -663,7 +663,7 @@ Der zuletzt angeforderte oder gewünschte Status für den Verwaltungsdienst. Die
 **Status**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
@@ -671,120 +671,120 @@ Zugriffstyp: Schreibgeschützt
 
 Beschreibt den Status des Elements. Diese Eigenschaft wird von [**CIM \_ ManagedSystemElement**](/windows/desktop/CIMWin32Prov/cim-managedsystemelement)geerbt.
 
-Okay
+"OK"
 
-Zeit
+"Fehler"
 
-Zerstört
+"Heruntergestuft"
 
-Unbekannter
+"Unbekannt"
 
-"Pred Fail"
+"Pred Fail" (Fehler vor dem Fehler)
 
-Fahren
+"Starting" (Wird gestartet)
 
-Hindern
+"Wird beendet"
 
-Leistungs
+"Dienst"
 
-Gestresst
+"100"
 
-"Nicht wiederherstellen"
+"NonRecover"
 
 "Kein Kontakt"
 
-"Verlorene comm"
+"Lost Comm"
 
 </dd> <dt>
 
-**Status Beschreibungen**
+**StatusDescriptions**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichen** folgen Array
+Datentyp: **Zeichenfolgenarray**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Zeichen folgen, die die verschiedenen **OperationalStatus** -Array Werte beschreiben. Diese Eigenschaft wird von [**CIM \_ ManagedSystemElement**](/windows/desktop/CIMWin32Prov/cim-managedsystemelement)geerbt, und jedes Array Element ist immer auf "OK" festgelegt.
+Zeichenfolgen, die die verschiedenen **OperationalStatus-Arraywerte** beschreiben. Diese Eigenschaft wird von [**CIM \_ ManagedSystemElement**](/windows/desktop/CIMWin32Prov/cim-managedsystemelement)geerbt, und jedes Arrayelement ist immer auf "OK" festgelegt.
 
 </dd> <dt>
 
-**Supportedendpointmodes**
+**SupportedEndpointModes**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt16** Array
+Datentyp: **uint16-Array**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**arrayType**](/windows/desktop/WmiSdk/standard-qualifiers) ("indiziert")
+Qualifizierer: [**ArrayType**](/windows/desktop/WmiSdk/standard-qualifiers) ("Indexed")
 </dt> </dl>
 
-Die von diesem Port unterstützten Endpunkt Modi.
+Die von diesem Port unterstützten Endpunktmodi.
 
 </dd> <dt>
 
-**Systemkreationclassname**
+**SystemCreationClassName**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Der Name der Erstellungs Klasse des Bereichs Systems. Diese Eigenschaft wird von [**CIM \_ serviceaccesspoint**](/windows/desktop/CIMWin32Prov/cim-serviceaccesspoint)geerbt und ist immer auf "MSVM \_ virtualswitch" festgelegt.
+Der Name der Erstellungsklasse des Bereichssystems. Diese Eigenschaft wird von [**CIM \_ ServiceAccessPoint**](/windows/desktop/CIMWin32Prov/cim-serviceaccesspoint)geerbt und immer auf "Msvm \_ VirtualSwitch" festgelegt.
 
 </dd> <dt>
 
 **Systemname**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Der Systemname des Bereichs Systems. Diese Eigenschaft wird von [**CIM \_ serviceaccesspoint**](/windows/desktop/CIMWin32Prov/cim-serviceaccesspoint)geerbt.
+Der Systemname des Bereichssystems. Diese Eigenschaft wird von [**CIM \_ ServiceAccessPoint**](/windows/desktop/CIMWin32Prov/cim-serviceaccesspoint)geerbt.
 
 </dd> <dt>
 
-**Timeoflaststatechange**
+**TimeOfLastStateChange**
 </dt> <dd> <dl> <dt>
 
-**Datentyp: DateTime**
+Datentyp: **datetime**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Das Datum und die Uhrzeit der letzten Änderung des aktivierten Zustands des Elements. Diese Eigenschaft wird von [**CIM \_ enabledlogicalelement**](/previous-versions//cc136818(v=vs.85))geerbt, wird jedoch nicht unterstützt.
+Das Datum und die Uhrzeit der letzten Änderung des aktivierten Zustands des Elements. Diese Eigenschaft wird von [**CIM \_ EnabledLogicalElement**](/previous-versions//cc136818(v=vs.85))geerbt, aber nicht unterstützt.
 
 </dd> <dt>
 
-**Transitioningumstate**
+**TransitioningToState**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt16**
+Datentyp: **uint16**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Gibt den Ziel Status an, in den die-Instanz übergeht. Diese Eigenschaft wird von [**CIM \_ enabledlogicalelement**](/previous-versions//cc136818(v=vs.85))geerbt, aber nicht verwendet.
+Gibt den Zielzustand an, in den die Instanz übergehen soll. Diese Eigenschaft wird von [**CIM \_ EnabledLogicalElement**](/previous-versions//cc136818(v=vs.85))geerbt, aber nicht verwendet.
 
 </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Der Zugriff auf die **MSVM \_ vlanendpoint** -Klasse kann durch die UAC-Filterung eingeschränkt werden. Weitere Informationen finden Sie unter [Benutzerkontensteuerung und WMI](/windows/desktop/WmiSdk/user-account-control-and-wmi).
+Der Zugriff auf die **Msvm \_ VLANEndpoint-Klasse** kann durch die UAC-Filterung eingeschränkt werden. Weitere Informationen finden Sie unter [Benutzerkontensteuerung und WMI.](/windows/desktop/WmiSdk/user-account-control-and-wmi)
 
 ## <a name="examples"></a>Beispiele
 
-Weitere Informationen finden Sie unter [Abfragen von Netzwerk Objekten](querying-networking-objects.md).
+Weitere Informationen finden Sie unter [Abfragen von Netzwerkobjekten.](querying-networking-objects.md)
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -792,10 +792,10 @@ Weitere Informationen finden Sie unter [Abfragen von Netzwerk Objekten](querying
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows 8 \[ -Desktop-Apps\]<br/>                                                              |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2012 \[ -Desktop-Apps\]<br/>                                                    |
-| Namespace<br/>                | \\Stammvirtualisierung \\ v2<br/>                                                                     |
-| MOF<br/>                      | <dl> <dt>Windowsvirtualization. v2. MOF</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | \[Windows 8 Nur Desktop-Apps\]<br/>                                                              |
+| Unterstützte Mindestversion (Server)<br/> | \[Windows Server 2012 Nur Desktop-Apps\]<br/>                                                    |
+| Namespace<br/>                | Root \\ Virtualization \\ V2<br/>                                                                     |
+| MOF<br/>                      | <dl> <dt>WindowsVirtualization.V2.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Vmms.exe</dt> </dl>                     |
 
 
@@ -804,10 +804,10 @@ Weitere Informationen finden Sie unter [Abfragen von Netzwerk Objekten](querying
 
 <dl> <dt>
 
-[**CIM- \_ vlanendpoint**](cim-vlanendpoint.md)
+[**CIM \_ VLANEndpoint**](cim-vlanendpoint.md)
 </dt> <dt>
 
-[**CIM- \_ vlanendpoint**](/previous-versions/windows/desktop/clushyperv/cim-vlanendpoint)
+[**CIM \_ VLANEndpoint**](/previous-versions/windows/desktop/clushyperv/cim-vlanendpoint)
 </dt> </dl>
 
  

@@ -1,11 +1,11 @@
 ---
-title: Die Methode "kreateinzustancefrompropertydata" der MicrosoftDNS_AAAAType-Klasse
-description: Die Methode "kreatinstancefrompropertydata" instanziiert einen Ressourcen Eintrag der IPv6-Adresse (AAAA).
+title: CreateInstanceFromPropertyData-Methode der MicrosoftDNS_AAAAType-Klasse
+description: Die CreateInstanceFromPropertyData-Methode instanziiert einen IPv6-Adressressourceneintrag (AAAA).
 ms.assetid: 3f2774d8-1eb6-4300-95e2-f918fc6612e0
 keywords:
-- Methode "samateinzustancefrompropertydata" (DNS)
-- Methode "-DNS", "MicrosoftDNS_AAAAType
-- DNS-MicrosoftDNS_AAAAType Klasse, Methode "Methode"
+- CreateInstanceFromPropertyData-Methode DNS
+- CreateInstanceFromPropertyData-Methode DNS, MicrosoftDNS_AAAAType-Klasse
+- MicrosoftDNS_AAAAType-Klasse DNS , CreateInstanceFromPropertyData-Methode
 topic_type:
 - apiref
 api_name:
@@ -16,16 +16,16 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 7e9232506b52795521300e827701f685e351d8ec
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 0df2c76b9289cb710de4e82e3cbc3dfc0b482ea63448b90a02fa37b7965fd931
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104517783"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118163768"
 ---
-# <a name="createinstancefrompropertydata-method-of-the-microsoftdns_aaaatype-class"></a>Methode "kreateinzustancefrompropertydata" der Klasse "MicrosoftDNS \_ aaaatype"
+# <a name="createinstancefrompropertydata-method-of-the-microsoftdns_aaaatype-class"></a>CreateInstanceFromPropertyData-Methode der MicrosoftDNS \_ AAAAType-Klasse
 
-Die Methode " **kreatinstancefrompropertydata** " instanziiert einen Ressourcen Eintrag der IPv6-Adresse (AAAA).
+Die **CreateInstanceFromPropertyData-Methode** instanziiert einen IPv6-Adressressourceneintrag (AAAA).
 
 ## <a name="syntax"></a>Syntax
 
@@ -48,31 +48,31 @@ void CreateInstanceFromPropertyData(
 
 <dl> <dt>
 
-*Dnsservername* \[ in\]
+*DnsServerName* \[ In\]
 </dt> <dd>
 
-Der voll qualifizierte Name oder die IP-Adresse des DNS-Servers, der diesen RR enthält.
+FQDN oder IP-Adresse des DNS-Servers, der diese RR enthält.
 
 </dd> <dt>
 
-*Containername* \[ in\]
+*ContainerName* \[ In\]
 </dt> <dd>
 
-Der Name des Containers für die Zone, den Cache oder die roothints-Instanz, die diese RR enthält.
+Der Name des Containers für die Zone-, Cache- oder RootHints-Instanz, die diese RR enthält.
 
 </dd> <dt>
 
-Besitzer *Name* \[ in\]
+*OwnerName* \[ In\]
 </dt> <dd>
 
-Der Besitzer Name für die RR.
+Besitzername für die RR.
 
 </dd> <dt>
 
-*Recordclass* \[ in, optional\]
+*RecordClass* \[ in, optional\]
 </dt> <dd>
 
-Die Klasse von RR. Der Standardwert ist 1. Die folgenden Werte sind gültig.
+Klasse der RR. Der Standardwert ist 1. Die folgenden Werte sind gültig.
 
 
 
@@ -80,7 +80,7 @@ Die Klasse von RR. Der Standardwert ist 1. Die folgenden Werte sind gültig.
 |------------------------------------------------------------------------------------------------------|--------------------------|
 | <span id="1"></span><dl> <dt>**1**</dt> </dl> | IN (Internet)<br/> |
 | <span id="2"></span><dl> <dt>**2**</dt> </dl> | CS (CSNET)<br/>    |
-| <span id="3"></span><dl> <dt>**3**</dt> </dl> | CH (Chaos)<br/>    |
+| <span id="3"></span><dl> <dt>**3**</dt> </dl> | CH (CHAOS)<br/>    |
 | <span id="4"></span><dl> <dt>**4**</dt> </dl> | HS (Hesiod)<br/>   |
 
 
@@ -89,24 +89,24 @@ Die Klasse von RR. Der Standardwert ist 1. Die folgenden Werte sind gültig.
 
 </dd> <dt>
 
-Gültigkeitsdauer  \[ in, optional\]
+*Gültigkeitsdauer* \[ in, optional\]
 </dt> <dd>
 
-Zeit (in Sekunden), die der RR von einem DNS-Resolver zwischengespeichert werden kann.
+Zeit in Sekunden, in der die RR von einem DNS-Resolver zwischengespeichert werden kann.
 
 </dd> <dt>
 
-*IPv6Address* \[ in\]
+*IPv6Address* \[ In\]
 </dt> <dd>
 
 IPv6-Adresse für den Host.
 
 </dd> <dt>
 
-*RR* \[ Out, Ref\]
+*RR* \[ out, ref\]
 </dt> <dd>
 
-Verweis auf das neue-Objekt.
+Verweis auf das neue Objekt.
 
 </dd> </dl>
 
@@ -122,8 +122,8 @@ Diese Methode gibt keinen Wert zurück.
 |-------------------------------------|----------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Nicht unterstützt<br/>                                                              |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                                   |
-| Namespace<br/>                | \\MicrosoftDNS-Stamm<br/>                                                          |
-| MOF<br/>                      | <dl> <dt>Dnsprov. MOF</dt> </dl> |
+| Namespace<br/>                | \\Stamm-MicrosoftDNS<br/>                                                          |
+| MOF<br/>                      | <dl> <dt>Dnsprov.mof</dt> </dl> |
 
 
 
@@ -131,13 +131,13 @@ Diese Methode gibt keinen Wert zurück.
 
 <dl> <dt>
 
-[**MicrosoftDNS \_ aaaatype**](microsoftdns-aaaatype.md)
+[**MicrosoftDNS \_ AAAAType**](microsoftdns-aaaatype.md)
 </dt> <dt>
 
-[**Modify-Methode der MicrosoftDNS \_ aaaatype-Klasse**](microsoftdns-aaaatype-modify.md)
+[**Modify-Methode der MicrosoftDNS \_ AAAAType-Klasse**](microsoftdns-aaaatype-modify.md)
 </dt> <dt>
 
-[**MicrosoftDNS \_ resourcerecord**](microsoftdns-resourcerecord.md)
+[**\_MicrosoftDNS-RessourceRecord**](microsoftdns-resourcerecord.md)
 </dt> </dl>
 
  

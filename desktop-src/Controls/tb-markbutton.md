@@ -1,9 +1,9 @@
 ---
-title: TB_MARKBUTTON Meldung (kommstrg. h)
-description: Legt den Hervorhebungs Zustand einer angegebenen Schaltfläche in einem Symbolleisten-Steuerelement fest.
+title: TB_MARKBUTTON (Commctrl.h)
+description: Legt den Hervorhebungszustand einer angegebenen Schaltfläche in einem Symbolleisten-Steuerelement fest.
 ms.assetid: cba0e2d2-40a7-4e20-a1ef-d5f5444c96d9
 keywords:
-- Windows-Steuerelemente für TB_MARKBUTTON Meldung
+- TB_MARKBUTTON meldungssteuerelemente Windows
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 9d42983f5fb0ef6e62716cefa2fa8db4fca87fa4
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 1af7ba20ed9ce3d1b289c0c28db8fc40c476dd99f4ffb1af1af28692c44cab1e
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104040842"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118168026"
 ---
-# <a name="tb_markbutton-message"></a>TB- \_ markbutton-Meldung
+# <a name="tb_markbutton-message"></a>TB \_ MARKBUTTON-Nachricht
 
-Legt den Hervorhebungs Zustand einer angegebenen Schaltfläche in einem Symbolleisten-Steuerelement fest.
+Legt den Hervorhebungszustand einer angegebenen Schaltfläche in einem Symbolleisten-Steuerelement fest.
 
 ## <a name="parameters"></a>Parameter
 
@@ -32,22 +32,22 @@ Legt den Hervorhebungs Zustand einer angegebenen Schaltfläche in einem Symbolle
 *wParam* 
 </dt> <dd>
 
-Befehls Bezeichner für eine Symbolleisten-Schaltfläche.
+Befehlsbezeichner für eine Symbolleistenschaltfläche.
 
 </dd> <dt>
 
 *lParam* 
 </dt> <dd>
 
-Das [**LoWord**](/previous-versions/windows/desktop/legacy/ms632659(v=vs.85)) ist ein **boolescher** Wert, der den neuen Hervorhebungs Zustand angibt. **True** gibt an, dass die Schaltfläche hervorgehoben ist. Wenn der Wert **false** ist, wird die Schaltfläche auf den Standardzustand festgelegt.
+LoWORD [**ist**](/previous-versions/windows/desktop/legacy/ms632659(v=vs.85)) eine **BOOL,** die den neuen Hervorhebungszustand angibt. True **gibt an,** dass die Schaltfläche hervorgehoben ist. False **gibt an,** dass die Schaltfläche auf ihren Standardzustand festgelegt ist.
 
-Das [**HIWORD**](/previous-versions/windows/desktop/legacy/ms632657(v=vs.85)) muss NULL sein.
+Das [**HIWORD muss**](/previous-versions/windows/desktop/legacy/ms632657(v=vs.85)) 0 (null) sein.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt bei Erfolg einen Wert ungleich 0 (null) zurück, andernfalls NULL.
+Gibt bei Erfolg einen Wert ungleich 0 (null) oder andernfalls 0 (null) zurück.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -55,9 +55,9 @@ Gibt bei Erfolg einen Wert ungleich 0 (null) zurück, andernfalls NULL.
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                        |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/>                                  |
-| Header<br/>                   | <dl> <dt>Kommstrg. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ Vista-Desktop-Apps\]<br/>                                        |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                                  |
+| Header<br/>                   | <dl> <dt>Commctrl.h</dt> </dl> |
 
 
 

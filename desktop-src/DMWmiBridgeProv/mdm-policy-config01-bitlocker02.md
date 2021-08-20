@@ -1,6 +1,6 @@
 ---
 title: MDM_Policy_Config01_BitLocker02-Klasse
-description: Die MDM \_ Policy \_ Config01 \_ BitLocker02-Klasse stellt die verfügbaren BitLocker-Richtlinien dar.
+description: Die MDM \_ Policy \_ Config01 \_ Bitlocker02-Klasse stellt die verfügbaren BitLocker-Richtlinien dar.
 ms.assetid: 885df93f-41f5-4cf7-8bce-9b253b190e17
 keywords:
 - MDM_Policy_Config01_BitLocker02-Klasse
@@ -28,7 +28,7 @@ ms.locfileid: "118165401"
 
 \[Einige Informationen beziehen sich auf Vorabversionen, die vor der kommerziellen Freigabe grundlegend geändert werden können. Microsoft übernimmt keine Garantie, weder ausdrücklich noch stillschweigend, für die hier bereitgestellten Informationen.\]
 
-Die **MDM \_ Policy \_ Config01 \_ BitLocker02-Klasse** stellt die verfügbaren BitLocker-Richtlinien dar.
+Die **MDM \_ Policy \_ Config01 \_ Bitlocker02-Klasse** stellt die verfügbaren BitLocker-Richtlinien dar.
 
 Die folgende Syntax enthält vereinfachten MOF-Code und schließt alle geerbten Eigenschaften ein.
 
@@ -46,7 +46,7 @@ class MDM_Policy_Config01_BitLocker02
 
 ## <a name="members"></a>Member
 
-Die **MDM \_ Policy \_ Config01 \_ BitLocker02-Klasse** verfügt über die folgenden Membertypen:
+Die **MDM \_ Policy \_ Config01 \_ BitLocker02-Klasse** verfügt über diese Typen von Membern:
 
 -   [Eigenschaften](#properties)
 
@@ -76,10 +76,10 @@ Datentyp: **string**
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [ **Schlüssel**](/windows/desktop/WmiSdk/key-qualifier)
+Qualifizierer: [ **key**](/windows/desktop/WmiSdk/key-qualifier)
 </dt> </dl>
 
-Identifiziert den Namen des übergeordneten Knotens. Für diese Klasse ist die Zeichenfolge "BitLocker".
+Identifiziert den Namen des übergeordneten Knotens. Für diese Klasse lautet die Zeichenfolge "BitLocker".
 
 </dd> <dt>
 
@@ -92,10 +92,10 @@ Datentyp: **string**
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [ **Schlüssel**](/windows/desktop/WmiSdk/key-qualifier)
+Qualifizierer: [ **key**](/windows/desktop/WmiSdk/key-qualifier)
 </dt> </dl>
 
-Beschreibt den vollständigen Pfad zum übergeordneten Knoten. Für diese Klasse ist die Zeichenfolge "./Vendor/MSFT/Policy/Config".
+Beschreibt den vollständigen Pfad zum übergeordneten Knoten. Für diese Klasse lautet die Zeichenfolge "./Vendor/MSFT/Policy/Config".
 
 </dd> </dl>
 
@@ -113,7 +113,7 @@ Beschreibt den vollständigen Pfad zum übergeordneten Knoten. Für diese Klasse
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 

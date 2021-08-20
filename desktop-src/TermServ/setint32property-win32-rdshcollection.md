@@ -1,12 +1,12 @@
 ---
 title: SetInt32Property-Methode der Win32_RDSHCollection-Klasse
-description: Aktualisiert einen ganzzahligen Eigenschafts Wert eines Win32- \_ rdshcollection-Objekts.
+description: Aktualisiert einen ganzzahligen Eigenschaftswert eines Win32 \_ RDSHCollection-Objekts.
 ms.assetid: 2a9a5d83-d147-43b3-b57c-6c744da0923d
 ms.tgt_platform: multiple
 keywords:
 - SetInt32Property-Methode Remotedesktopdienste
-- SetInt32Property-Methode Remotedesktopdienste, Win32_RDSHCollection-Klasse
-- Win32_RDSHCollection-Klasse Remotedesktopdienste, SetInt32Property-Methode
+- SetInt32Property-Methode Remotedesktopdienste , Win32_RDSHCollection-Klasse
+- Win32_RDSHCollection-Klasse Remotedesktopdienste , SetInt32Property-Methode
 topic_type:
 - apiref
 api_name:
@@ -17,16 +17,16 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 136bb8ccf34004f747829fb43ee8080ccd1d3132
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: d19af81a807d6a2eb27693b88428df925644675093d3fbb80cb809a6011fb22b
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "106342656"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118127455"
 ---
-# <a name="setint32property-method-of-the-win32_rdshcollection-class"></a>SetInt32Property-Methode der Win32 \_ rdshcollection-Klasse
+# <a name="setint32property-method-of-the-win32_rdshcollection-class"></a>SetInt32Property-Methode der Win32 \_ RDSHCollection-Klasse
 
-Aktualisiert einen ganzzahligen Eigenschafts Wert eines [**Win32- \_ rdshcollection**](win32-rdshcollection.md) -Objekts.
+Aktualisiert einen ganzzahligen Eigenschaftswert eines [**Win32 \_ RDSHCollection-Objekts.**](win32-rdshcollection.md)
 
 ## <a name="syntax"></a>Syntax
 
@@ -44,14 +44,14 @@ uint32 SetInt32Property(
 
 <dl> <dt>
 
-*Schlüssel* \[ in\]
+*Schlüssel* \[ In\]
 </dt> <dd>
 
-Der Schlüssel, der die zu Aktualisier enswerte Eigenschaft identifiziert.
+Der Schlüssel, der die zu aktualisierende Eigenschaft identifiziert.
 
 </dd> <dt>
 
-*Wert* \[ in\]
+*Wert* \[ In\]
 </dt> <dd>
 
 Der neue Eigenschaftswert.
@@ -60,7 +60,7 @@ Der neue Eigenschaftswert.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt bei Erfolg 0 zurück, andernfalls wird ein WMI-Fehlercode zurückgegeben.
+Gibt bei Erfolg 0 zurück, andernfalls einen WMI-Fehlercode.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -70,8 +70,8 @@ Gibt bei Erfolg 0 zurück, andernfalls wird ein WMI-Fehlercode zurückgegeben.
 |-------------------------------------|---------------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Nicht unterstützt<br/>                                                                   |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2012<br/>                                                              |
-| Namespace<br/>                | Root \\ CIMv2 \\ RDMs<br/>                                                                |
-| MOF<br/>                      | <dl> <dt>Rdmanagement. MOF</dt> </dl> |
+| Namespace<br/>                | \\Stamm-CIMv2 \\ rdms<br/>                                                                |
+| MOF<br/>                      | <dl> <dt>RDManagement.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>RDMS.dll</dt> </dl>         |
 
 
@@ -80,7 +80,7 @@ Gibt bei Erfolg 0 zurück, andernfalls wird ein WMI-Fehlercode zurückgegeben.
 
 <dl> <dt>
 
-[**Win32- \_ rdshcollection**](win32-rdshcollection.md)
+[**Win32 \_ RDSHCollection**](win32-rdshcollection.md)
 </dt> </dl>
 
  

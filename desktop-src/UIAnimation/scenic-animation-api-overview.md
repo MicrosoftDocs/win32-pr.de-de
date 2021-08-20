@@ -93,7 +93,7 @@ Die Windows Animation-API ist eine COM-basierte Singlethread-API, die Entwickler
 
 Die vollständige API-Referenz finden Sie unter [Windows Animationsreferenz.](windows-animation-reference.md) Beispielcode finden Sie unter [Windows Animation Tasks](using-windows-animation.md) and Windows Animation [Samples](windows-animation-samples.md).
 
-## <a name="configurations"></a>Configurations
+## <a name="configurations"></a>Konfigurationen
 
 Anwendungen müssen die aktuelle Zeit abrufen, bevor sie eine neue Animation planen. Im Folgenden sind die Zeitsteuerungsmechanismen angegeben, die von Windows Animation unterstützt werden:
 

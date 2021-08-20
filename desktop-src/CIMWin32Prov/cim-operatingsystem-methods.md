@@ -12,12 +12,12 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 08/11/2021
 ms.locfileid: "118422181"
 ---
-# <a name="cim_operatingsystem-methods"></a>\_CIM-Betriebssystemmethoden
+# <a name="cim_operatingsystem-methods"></a>CIM \_ OperatingSystem-Methoden
 
 Die [**CIM \_ OperatingSystem-Klasse**](cim-operatingsystem.md) macht die folgenden Methoden verfügbar.
 
 > [!IMPORTANT]
-> Die CIM-Klassen (Distributed Management Task Force) (DMTF) (Common Information Model) sind die übergeordneten Klassen, auf denen WMI-Klassen erstellt werden. WMI unterstützt derzeit nur die [CIM 2.x-Versionsschemas.](https://dmtf.org/standards/cim/schemas)
+> Die CIM-Klassen (Distributed Management Task Force) (DMTF (Distributed Management Task Force) (Common Information Model) sind die übergeordneten Klassen, auf denen WMI-Klassen erstellt werden. WMI unterstützt derzeit nur die [CIM 2.x-Versionsschemas.](https://dmtf.org/standards/cim/schemas)
 
  
 

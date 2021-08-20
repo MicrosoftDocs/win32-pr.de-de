@@ -29,7 +29,7 @@ Die Teredo-Schnittstelle wird in erster Linie von Windows Vista und Windows Serv
 
 
 
-| Thema                                       | BESCHREIBUNG                                                                                |
+| Thema                                       | Beschreibung                                                                                |
 |---------------------------------------------|--------------------------------------------------------------------------------------------|
 | [Informationen zu Teredo](about-teredo.md)<br/> | Informationen zur Teredo-Schnittstelle.<br/>                                         |
 | [Verwenden von Teredo](using-teredo.md)<br/> | Informationen zur Implementierung und allgemeinen Verwendung der Teredo-Schnittstelle.<br/> |

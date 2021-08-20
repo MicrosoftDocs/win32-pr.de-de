@@ -23,9 +23,9 @@ Enthält UPnP-bezogene Begriffe, die mit dem Buchstaben N beginnen.
 <span id="upnp.n_1_gly"></span><span id="UPNP.N_1_GLY"></span>**Nicht ausgeführtes Gerät**
 </dt> <dd>
 
-Ein nicht ausgeführtes Gerät ist ein Gerät, für das Code nur geladen wird, wenn eine Anforderung für dieses Gerät empfangen wird. Dies sind häufig Geräte, für die Dienstbeschreibungen vor der Registrierung bekannt sind.
+Ein nicht ausgeführtes Gerät ist ein Gerät, für das Code nur geladen wird, wenn eine Anforderung für dieses Gerät empfangen wird. Dies sind häufig Geräte, deren Dienstbeschreibungen vor der Registrierung bekannt sind.
 
-Ein typisches Beispiel für nicht ausgeführte Geräte ist ein soft-Gerät wie ein Media Player-Gerät.
+Ein typisches Beispiel für nicht ausgeführte Geräte ist ein weiches Gerät, z. B. ein Media Player-Gerät.
 
 </dd> </dl>
 

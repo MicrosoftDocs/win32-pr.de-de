@@ -1,7 +1,7 @@
 ---
-description: Die splicewithnext-Methode verbindet das Quell Objekt mit einem anderen Quell Objekt.
+description: Die SpliceWithNext-Methode verbindet das Quellobjekt mit einem anderen Quellobjekt.
 ms.assetid: 65b23466-404c-4eef-943e-8b40186f2b96
-title: 'Iamtimelinesrc:: splicewithnext-Methode (qedit. h)'
+title: IAMTimelineSrc::SpliceWithNext-Methode (Qedit.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -14,21 +14,21 @@ api_type:
 api_location:
 - strmiids.lib
 - strmiids.dll
-ms.openlocfilehash: 4c17812ab5d451be639def0d07fe773d4b676570
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 1ffde9c7bb0416f2b296f7a7c347a058734430be33ef4ecde59e7e39cd6e845f
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106369962"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118154831"
 ---
-# <a name="iamtimelinesrcsplicewithnext-method"></a>Iamtimelinesrc:: splicewithnext-Methode
+# <a name="iamtimelinesrcsplicewithnext-method"></a>IAMTimelineSrc::SpliceWithNext-Methode
 
 > [!Note]  
-> \[Veraltet. Diese API kann aus zukünftigen Versionen von Windows entfernt werden.\]
+> \[Veraltet. Diese API kann aus zukünftigen Releases von Windows entfernt werden.\]
 
  
 
-Die- `SpliceWithNext` Methode verbindet das Quell Objekt mit einem anderen Quell Objekt.
+Die `SpliceWithNext` -Methode verbindet das Quellobjekt mit einem anderen Quellobjekt.
 
 ## <a name="syntax"></a>Syntax
 
@@ -48,44 +48,44 @@ HRESULT SpliceWithNext(
 *pNext* 
 </dt> <dd>
 
-Ein Zeiger auf die [**iamtimelineobj**](iamtimelineobj.md) -Schnittstelle des Quell Objekts, das mit der aktuellen Quelle verknüpft werden soll.
+Zeiger auf die [**IAMTimelineObj-Schnittstelle**](iamtimelineobj.md) des Quellobjekts, das mit der aktuellen Quelle verknüpft werden soll.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt einen **HRESULT** -Wert zurück. Folgende Rückgabewerte sind möglich:
+Gibt einen **HRESULT-Wert** zurück. Mögliche Rückgabewerte sind:
 
 
 
 | Rückgabecode                                                                                   | Beschreibung                                                              |
 |-----------------------------------------------------------------------------------------------|--------------------------------------------------------------------------|
 | <dl> <dt>**S \_ OK**</dt> </dl>          | Erfolg.<br/>                                                      |
-| <dl> <dt>**E \_ invalidArg**</dt> </dl>  | Ungültiges Argument.<br/>                                             |
-| <dl> <dt>**E \_ nointerface**</dt> </dl> | Das durch den *pNext* -Parameter angegebene Objekt ist kein Quell Objekt.<br/> |
-| <dl> <dt>**E- \_ Zeiger**</dt> </dl>     | **Null** -Zeigerargument.<br/>                                    |
+| <dl> <dt>**E \_ INVALIDARG**</dt> </dl>  | Ungültiges Argument.<br/>                                             |
+| <dl> <dt>**E \_ NOINTERFACE**</dt> </dl> | Das durch *den pNext-Parameter* angegebene Objekt ist kein Quellobjekt.<br/> |
+| <dl> <dt>**E \_ POINTER**</dt> </dl>     | **NULL-Zeigerargument.**<br/>                                    |
 
 
 
  
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Wie momentan implementiert, verwirft diese Methode alle Auswirkungen auf *pNext*.
+Wie derzeit implementiert, verwirft diese Methode alle Auswirkungen auf *pNext*.
 
-Damit diese Methode erfolgreich ausgeführt werden kann, muss *pNext* ein Übereinstimmungs Rahmen des aktuellen Quell Objekts sein, das wie folgt definiert wird:
+Damit diese Methode erfolgreich ist, muss *pNext* ein Übereinstimmungsrahmen des aktuellen Quellobjekts sein, das wie folgt definiert ist:
 
--   Die gleiche Quelldatei muss gemeinsam genutzt werden.
--   Die Start Zeit des Mediums muss der Medien Endzeit der aktuellen Quelle entsprechen.
--   Die Wiedergabe Rate muss identisch sein. Die Wiedergabe Rate ist die Medien Dauer dividiert durch die Zeitachsen Dauer.
+-   Sie muss dieselbe Quelldatei gemeinsam nutzen.
+-   Die Startzeit des Mediums muss der Medienstoppzeit der aktuellen Quelle entsprechen.
+-   Die Wiedergaberate muss identisch sein. Die Wiedergaberate ist die Mediendauer geteilt durch die Dauer der Zeitachse.
 
 > [!Note]  
-> Die Header Datei "qedit. h" ist nicht mit Direct3D-Headern nach Version 7 kompatibel.
+> Die Headerdatei Qedit.h ist nicht mit Direct3D-Headern kompatibel, die höher als Version 7 sind.
 
  
 
 > [!Note]  
-> Zum Abrufen von "qedit. h" Laden Sie das [Microsoft Windows SDK Update für Windows Vista und .NET Framework 3,0](https://msdn.microsoft.com/windowsvista/bb980924.aspx)herunter. "Qedit. h" ist im Microsoft Windows SDK für Windows 7 und .NET Framework 3,5 Service Pack 1 nicht verfügbar.
+> Laden Sie zum Abrufen von Qedit.h das [Microsoft Windows SDK-Update für Windows Vista und .NET Framework 3.0](https://msdn.microsoft.com/windowsvista/bb980924.aspx)herunter. Qedit.h ist im Microsoft Windows SDK für Windows 7 und .NET Framework 3.5 Service Pack 1 nicht verfügbar.
 
  
 
@@ -95,8 +95,8 @@ Damit diese Methode erfolgreich ausgeführt werden kann, muss *pNext* ein Übere
 
 | Anforderung | Wert |
 |--------------------|-----------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>"Qedit. h"</dt> </dl>      |
-| Bibliothek<br/> | <dl> <dt>"" "" ". Lib"</dt> </dl> |
+| Header<br/>  | <dl> <dt>Qedit.h</dt> </dl>      |
+| Bibliothek<br/> | <dl> <dt>Strmiids.lib</dt> </dl> |
 
 
 
@@ -104,10 +104,10 @@ Damit diese Methode erfolgreich ausgeführt werden kann, muss *pNext* ein Übere
 
 <dl> <dt>
 
-[**Iamtimelinesrc-Schnittstelle**](iamtimelinesrc.md)
+[**IAMTimelineSrc-Schnittstelle**](iamtimelinesrc.md)
 </dt> <dt>
 
-[Fehler-und Erfolgs Codes](error-and-success-codes.md)
+[Fehler- und Erfolgscodes](error-and-success-codes.md)
 </dt> </dl>
 
  

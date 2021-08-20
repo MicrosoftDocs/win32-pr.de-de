@@ -1,5 +1,5 @@
 ---
-description: 'Weitere Informationen: ColumnInfo-Eigenschaften'
+description: Weitere Informationen finden Sie unter ColumnInfo-Eigenschaften.
 title: ColumnInfo-Eigenschaften
 TOCTitle: ColumnInfo properties
 ms:assetid: Properties.T:Microsoft.Isam.Esent.Interop.ColumnInfo
@@ -7,19 +7,19 @@ ms:mtpsurl: https://msdn.microsoft.com/library/microsoft.isam.esent.interop.colu
 ms:contentKeyID: 55100928
 ms.date: 07/30/2014
 ms.topic: article
-ms.openlocfilehash: c868aed7b5ad5dfe23fd6d67437f7b088c4cf99d
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 2598cc4e316a1b8a6e64d66c79b09722a914dc92f642dd6bb60d842ec7fc5ef4
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104214932"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118084058"
 ---
 # <a name="columninfo-properties"></a>ColumnInfo-Eigenschaften
 
-Geschützte Member einschließen  
-Geerbte Member einschließen  
+Geschützte Member enthalten  
+Geerbte Member enthalten  
 
-Der [ColumnInfo](./columninfo-class.md) -Typ macht die folgenden Member verfügbar.
+Der [ColumnInfo-Typ](./columninfo-class.md) macht die folgenden Member verfügbar.
 
 ## <a name="properties"></a>Eigenschaften
 
@@ -28,34 +28,34 @@ Der [ColumnInfo](./columninfo-class.md) -Typ macht die folgenden Member verfügb
 <tr class="header">
 <th> </th>
 <th>Name</th>
-<th>BESCHREIBUNG</th>
+<th>Beschreibung</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
 <td><img src="../images/dn292128.pubproperty(exchg.10).gif" title="Öffentliche Eigenschaft" alt="Public property" /></td>
-<td><a href="dn334182(v=exchg.10).md">Colyp</a></td>
+<td><a href="dn334182(v=exchg.10).md">Coltyp</a></td>
 <td>Ruft den Typ der Spalte ab.</td>
 </tr>
 <tr class="even">
 <td><img src="../images/dn292128.pubproperty(exchg.10).gif" title="Öffentliche Eigenschaft" alt="Public property" /></td>
-<td><a href="dn334134(v=exchg.10).md">ColumnID</a></td>
+<td><a href="dn334134(v=exchg.10).md">Columnid</a></td>
 <td>Ruft die ID der Spalte ab.</td>
 </tr>
 <tr class="odd">
 <td><img src="../images/dn292128.pubproperty(exchg.10).gif" title="Öffentliche Eigenschaft" alt="Public property" /></td>
-<td><a href="dn334185(v=exchg.10).md">Erfolgen</a></td>
+<td><a href="dn334185(v=exchg.10).md">Cp</a></td>
 <td>Ruft die Codepage der Spalte ab.</td>
 </tr>
 <tr class="even">
 <td><img src="../images/dn292128.pubproperty(exchg.10).gif" title="Öffentliche Eigenschaft" alt="Public property" /></td>
-<td><a href="dn334137(v=exchg.10).md">DefaultValue</a></td>
+<td><a href="dn334137(v=exchg.10).md">Defaultvalue</a></td>
 <td>Ruft den Standardwert der Spalte ab.</td>
 </tr>
 <tr class="odd">
 <td><img src="../images/dn292128.pubproperty(exchg.10).gif" title="Öffentliche Eigenschaft" alt="Public property" /></td>
 <td><a href="dn334189(v=exchg.10).md">Grbit</a></td>
-<td>Ruft die Spalten Optionen ab.</td>
+<td>Ruft die Spaltenoptionen ab.</td>
 </tr>
 <tr class="even">
 <td><img src="../images/dn292128.pubproperty(exchg.10).gif" title="Öffentliche Eigenschaft" alt="Public property" /></td>
@@ -75,8 +75,8 @@ Oben
 
 ## <a name="see-also"></a>Siehe auch
 
-#### <a name="reference"></a>Referenz
+#### <a name="reference"></a>Verweis
 
 [ColumnInfo-Klasse](./columninfo-class.md)
 
-[Microsoft. ISAM. ESENT. Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)
+[Microsoft.Isam.Esent.Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)

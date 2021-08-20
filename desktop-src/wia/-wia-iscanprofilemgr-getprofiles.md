@@ -1,7 +1,7 @@
 ---
-description: Ruft alle Überprüfungs Profile ab, die für den Benutzer im System verfügbar sind, unter dem Ihre Anwendung ausgeführt wird.
+description: Ruft alle Überprüfungsprofile ab, die für den Benutzer in dem System verfügbar sind, unter dem Ihre Anwendung ausgeführt wird.
 ms.assetid: 9787079e-283c-4f6d-b97c-cfc1349ada30
-title: 'Iscanprofilemgr:: getprofiles-Methode (scanprofilemgr. h)'
+title: IScanProfileMgr::GetProfiles-Methode (Scanprofilemgr.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,16 +13,16 @@ api_type:
 - COM
 api_location:
 - Scanprofilemgr.h
-ms.openlocfilehash: 13949fe08dd547ecb5319e18ecc84139ccd310bf
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 3f736c126d1f12282662f0d30c64e9ec99ae8324d3492e0560130c39ee38dc82
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "103756643"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118035545"
 ---
-# <a name="iscanprofilemgrgetprofiles-method"></a>Iscanprofilemgr:: getprofiles-Methode
+# <a name="iscanprofilemgrgetprofiles-method"></a>IScanProfileMgr::GetProfiles-Methode
 
-Ruft alle Überprüfungs Profile ab, die für den Benutzer im System verfügbar sind, unter dem Ihre Anwendung ausgeführt wird.
+Ruft alle Überprüfungsprofile ab, die für den Benutzer in dem System verfügbar sind, unter dem Ihre Anwendung ausgeführt wird.
 
 ## <a name="syntax"></a>Syntax
 
@@ -40,19 +40,19 @@ HRESULT GetProfiles(
 
 <dl> <dt>
 
-*pulnumprofiles* \[ in, out\]
+*pulNumProfiles* \[ in, out\]
 </dt> <dd>
 
-Typ: **ulong \** _
+Typ: **ULONG \***
 
-Bei Übergabe ein Zeiger auf die maximale Anzahl von Profilen, die zurückgegeben werden sollen. Bei der Rückgabe ein Zeiger auf die Anzahl der zurückgegebenen Profile.
+Wenn übergeben, ein Zeiger auf die maximale Anzahl von Profilen, die zurückgegeben werden sollen. Wenn zurückgegeben, ein Zeiger auf die Anzahl der zurückgegebenen Profile.
 
 </dd> <dt>
 
-_ppScanProfile * \[ out\]
+*ppScanProfile* \[ out\]
 </dt> <dd>
 
-Typ: **[ **iscanprofile**](-wia-iscanprofile.md)\*\***
+Typ: **[ **IScanProfile**](-wia-iscanprofile.md)\*\***
 
 Die Adresse eines Arrays von Zeigern auf Profile.
 
@@ -62,11 +62,11 @@ Die Adresse eines Arrays von Zeigern auf Profile.
 
 Typ: **HRESULT**
 
-Wenn diese Methode erfolgreich ausgeführt wird, gibt Sie **S \_ OK** zurück. Andernfalls wird ein **HRESULT** -Fehlercode zurückgegeben.
+Wenn diese Methode erfolgreich ist, wird **S \_ OK** zurückgegeben. Andernfalls wird ein **HRESULT-Fehlercode** zurückgegeben.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Wenn die Gesamtzahl der für den Benutzer verfügbaren Profile kleiner ist als der an *pulnumprofiles* weiter gegebene Wert, gibt *pulnumprofiles* diese Summe zurück. Andernfalls wird derselbe Wert zurückgegeben, der an ihn übermittelt wurde.
+Wenn die Gesamtzahl der für den Benutzer verfügbaren Profile kleiner ist als der Wert, der an *pulNumProfiles* übergeben wird, gibt *pulNumProfiles* diese Summe zurück. Andernfalls wird der gleiche Wert zurückgegeben, der an ihn übergeben wurde.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -74,10 +74,10 @@ Wenn die Gesamtzahl der für den Benutzer verfügbaren Profile kleiner ist als d
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                              |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/>                                        |
-| Header<br/>                   | <dl> <dt>Scanprofilemgr. h</dt> </dl> |
-| IDL<br/>                      | <dl> <dt>Scanprofiles. idl</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur Vista-Desktop-Apps\]<br/>                                              |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/>                                        |
+| Header<br/>                   | <dl> <dt>Scanprofilemgr.h</dt> </dl> |
+| Idl<br/>                      | <dl> <dt>Scanprofiles.idl</dt> </dl> |
 
 
 
@@ -85,10 +85,10 @@ Wenn die Gesamtzahl der für den Benutzer verfügbaren Profile kleiner ist als d
 
 <dl> <dt>
 
-[**Iscanprofilemgr**](-wia-iscanprofilemgr.md)
+[**IScanProfileMgr**](-wia-iscanprofilemgr.md)
 </dt> <dt>
 
-[Profil Schema überprüfen](-wia-scan-profile-schema.md)
+[Scanprofilschema](-wia-scan-profile-schema.md)
 </dt> </dl>
 
  

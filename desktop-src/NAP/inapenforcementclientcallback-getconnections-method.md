@@ -1,11 +1,11 @@
 ---
 title: INapEnforcementClientCallback GetConnections-Methode (NapEnforcementClient.h)
-description: Wird vom NapAgent aufgerufen und vom Erzwingungsclient implementiert, um eine Reihe von Verbindungen zurück zu geben.
+description: Wird vom NapAgent aufgerufen und vom Erzwingungsclient implementiert, um einen Satz von Verbindungen zurückzugeben.
 ms.assetid: 8f697217-5799-48e4-9f0b-715f516e48d9
 keywords:
 - GetConnections-Methode NAP
 - GetConnections-Methode NAP, INapEnforcementClientCallback-Schnittstelle
-- INapEnforcementClientCallback-Schnittstelle NAP, GetConnections-Methode
+- INapEnforcementClientCallback-Schnittstelle NAP , GetConnections-Methode
 topic_type:
 - apiref
 api_name:
@@ -26,11 +26,11 @@ ms.locfileid: "118134029"
 # <a name="inapenforcementclientcallbackgetconnections-method"></a>INapEnforcementClientCallback::GetConnections-Methode
 
 > [!Note]  
-> Die Netzwerkzugriffsschutz-Plattform ist ab dem Windows 10
+> Die Netzwerkzugriffsschutz-Plattform ist ab Windows 10 nicht verfügbar.
 
  
 
-Die **INapEnforcementClientCallback::GetConnections-Rückrufmethode** wird vom NapAgent aufgerufen und vom Erzwingungsclient implementiert, um eine Reihe von Verbindungen zurück zu geben.
+Die **Rückrufmethode INapEnforcementClientCallback::GetConnections** wird vom NapAgent aufgerufen und vom Erzwingungsclient implementiert, um eine Reihe von Verbindungen zurückzugeben.
 
 ## <a name="syntax"></a>Syntax
 
@@ -50,7 +50,7 @@ HRESULT GetConnections(
 *Verbindungen* \[ out\]
 </dt> <dd>
 
-Ein Zeiger auf den aktuellen Satz verwalteter [**Verbindungen.**](connections-struct.md)
+Ein Zeiger auf den aktuellen Satz von [**verwalteten Verbindungen.**](connections-struct.md)
 
 </dd> </dl>
 
@@ -63,7 +63,7 @@ Diese Rückrufmethode muss einen der folgenden Fehlercodes zurückgeben.
 | Rückgabecode                                                                                                | Beschreibung                                                                                                                                                                                                           |
 |------------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | <dl> <dt>**S \_ OK**</dt> </dl>                       | Gibt diesen Wert zurück, wenn der Vorgang erfolgreich war.<br/>                                                                                                                                                              |
-| <dl> <dt>**\_ \_ RPC-S-SERVER \_ NICHT VERFÜGBAR**</dt> </dl> | Die Rückgabe dieses Werts bewirkt, dass der Erzwinger aus der Bound-SHA-Liste entfernt und der entsprechende NapAgent-Cacheeintrag geleert wird. Der fehlerhafte SHA kann sich dann mit dem NapAgent erneut initialisieren.<br/> |
+| <dl> <dt>**\_ \_ RPC-S-SERVER \_ NICHT VERFÜGBAR**</dt> </dl> | Die Rückgabe dieses Werts bewirkt, dass der Enforcer aus der Bound-SHA-Liste entfernt und der entsprechende NapAgent-Cacheeintrag geleert wird. Der fehlerhafte SHA kann sich dann mit dem NapAgent erneut initialisieren.<br/> |
 
 
 
@@ -75,14 +75,14 @@ Diese Rückrufmethode muss einen der folgenden Fehlercodes zurückgeben.
 
 | Anforderung | Wert |
 |-------------------------------------|-----------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ Vista-Desktop-Apps\]<br/>                                                      |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur Vista-Desktop-Apps\]<br/>                                                      |
 | Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/>                                                |
 | Header<br/>                   | <dl> <dt>NapEnforcementClient.h</dt> </dl>   |
 | Idl<br/>                      | <dl> <dt>NapEnforcementClient.idl</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 

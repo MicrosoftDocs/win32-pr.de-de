@@ -1,19 +1,19 @@
 ---
-description: Tritt auf, wenn Daten aus der Antwort verfügbar sind.
+description: Tritt ein, wenn Daten aus der Antwort verfügbar sind.
 ms.assetid: 62d02e3b-466a-4d3d-994b-0a1ae12049e1
-title: 'Iwinhttprequestevents:: onresponabdataavailable-Ereignis'
+title: IWinHttpRequestEvents::OnResponseDataAvailable-Ereignis
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 41cb2fbc680b1f6739a66bb68565188c8a5d78b4
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 12b55f87584164a47b47920caf961f02f0bd9cc6596c4c90f76f381027af545e
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106351759"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118114244"
 ---
-# <a name="iwinhttprequesteventsonresponsedataavailable-event"></a>Iwinhttprequestevents:: onresponabdataavailable-Ereignis
+# <a name="iwinhttprequesteventsonresponsedataavailable-event"></a>IWinHttpRequestEvents::OnResponseDataAvailable-Ereignis
 
-Das **onresponondataavailable** -Ereignis tritt auf, wenn Daten aus der Antwort verfügbar sind.
+Das **OnResponseDataAvailable-Ereignis** tritt auf, wenn Daten aus der Antwort verfügbar sind.
 
 ## <a name="syntax"></a>Syntax
 
@@ -30,10 +30,10 @@ void OnResponseDataAvailable(
 
 <dl> <dt>
 
-*Daten* \[ in\]
+*Daten* \[ In\]
 </dt> <dd>
 
-Ein NULL basiertes Bytearray, das die von Microsoft Windows HTTP-Diensten (WinHTTP) empfangenen Antwortdaten bis zu dem Punkt empfängt, an dem dieses Ereignis auftritt. Dies ist eine **Variante** vom Typ VT \_ array \| VT \_ UI1.
+Ein nullbasiertes Bytearray, das die von Microsoft Windows HTTP Services (WinHTTP) empfangenen Antwortdaten bis zu dem Punkt empfängt, an dem dieses Ereignis auftritt. Dies ist eine **VARIANT** vom Typ VT \_ ARRAY \| VT \_ UI1.
 
 </dd> </dl>
 
@@ -41,12 +41,12 @@ Ein NULL basiertes Bytearray, das die von Microsoft Windows HTTP-Diensten (WinHT
 
 Dieses Ereignis gibt keinen Wert zurück.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Da Daten in Bytes vorliegen, müssen Sie in breit Zeichen konvertiert werden, wenn Sie in eine Zeichenfolge mit breit Zeichen (Unicode) eingefügt werden.
+Da Daten in Bytes sind, müssen sie in Breitzeichen konvertiert werden, wenn sie in einer Unicode-Zeichenfolge (Breitzeichen) platziert werden.
 
 > [!Note]  
-> Informationen zu Windows XP und Windows 2000 finden Sie im Abschnitt [Lauf Zeitanforderungen](winhttp-start-page.md) auf der WinHTTP-Start Seite.
+> Informationen zu Windows XP und Windows 2000 finden Sie im Abschnitt [Laufzeitanforderungen](winhttp-start-page.md) der WinHTTP-Startseite.
 
  
 
@@ -56,10 +56,10 @@ Da Daten in Bytes vorliegen, müssen Sie in breit Zeichen konvertiert werden, we
 
 | Anforderung | Wert |
 |-------------------------------------|--------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Windows XP, Windows 2000 Professional mit SP3 \[ Desktop-Apps\]<br/>            |
-| Unterstützte Mindestversion (Server)<br/> | Windows Server 2003, Windows 2000-Server mit \[ nur SP3-Desktop-Apps\]<br/>         |
-| Verteilbare Komponente<br/>          | WinHTTP 5,0 und Internet Explorer 5,01 oder höher unter Windows XP und Windows 2000.<br/> |
-| IDL<br/>                      | <dl> <dt>HttpRequest. idl</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows XP, Windows 2000 Professional nur mit \[ SP3-Desktop-Apps\]<br/>            |
+| Unterstützte Mindestversion (Server)<br/> | Windows Server 2003, Windows 2000 Server nur mit \[ SP3-Desktop-Apps\]<br/>         |
+| Verteilbare Komponente<br/>          | WinHTTP 5.0 und Internet Explorer 5.01 oder höher auf Windows XP und Windows 2000.<br/> |
+| Idl<br/>                      | <dl> <dt>HttpRequest.idl</dt> </dl> |
 
 
 
@@ -67,7 +67,7 @@ Da Daten in Bytes vorliegen, müssen Sie in breit Zeichen konvertiert werden, we
 
 <dl> <dt>
 
-[**Iwinhttprequestevents**](iwinhttprequestevents-interface.md)
+[**IWinHttpRequestEvents**](iwinhttprequestevents-interface.md)
 </dt> <dt>
 
 [**WinHttpRequest**](winhttprequest.md)

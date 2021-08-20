@@ -1,21 +1,21 @@
 ---
-description: Im folgenden finden Sie den gesamten Quellcode für die grundlegende Winsock-TCP/IP-Server Anwendung.
+description: Im Folgenden ist der vollständige Quellcode für die grundlegende Winsock-TCP/IP-Serveranwendung zu lesen.
 ms.assetid: 949dddec-840e-4f5a-9ab8-e1962a10b599
-title: Vervollständigen des Winsock-Server Codes
+title: Abschließen des Winsock-Servercodes
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 4f1521bc8cdfc47ad64aff38a696cc01a867404a
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: bdfa5714369f7b9565502ee086eae2ce83db47100402571dad6c5a308de86d0e
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106350435"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118112533"
 ---
-# <a name="complete-winsock-server-code"></a>Vervollständigen des Winsock-Server Codes
+# <a name="complete-winsock-server-code"></a>Abschließen des Winsock-Servercodes
 
-Im folgenden finden Sie den gesamten Quellcode für die grundlegende Winsock-TCP/IP-Server Anwendung.
+Im Folgenden ist der vollständige Quellcode für die grundlegende Winsock-TCP/IP-Serveranwendung zu lesen.
 
-## <a name="winsock-server-source-code"></a>Winsock-Server Quellcode
+## <a name="winsock-server-source-code"></a>Winsock-Serverquellcode
 
 
 ```C++
@@ -164,13 +164,13 @@ int __cdecl main(void)
 
 <dl> <dt>
 
-[Einstieg in Winsock](getting-started-with-winsock.md)
+[Erste Schritte mit Winsock](getting-started-with-winsock.md)
 </dt> <dt>
 
-[Ausführen des WinSock-Client-und Server Code Beispiels](finished-server-and-client-code.md)
+[Ausführen des Winsock-Client- und Servercodebeispiels](finished-server-and-client-code.md)
 </dt> <dt>
 
-[Vervollständigen des WinSock-Client Codes](complete-client-code.md)
+[Abschließen des Winsock-Clientcodes](complete-client-code.md)
 </dt> </dl>
 
  

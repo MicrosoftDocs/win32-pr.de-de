@@ -1,11 +1,11 @@
 ---
 title: Win32_TSDiscoveredLicenseServer-Klasse
-description: Enthält Details zum ermittelten Remotedesktop-Lizenzserver.
+description: Stellt Details zum ermittelten Remotedesktop Lizenzserver bereit.
 ms.assetid: 88523f30-26ad-4f78-a214-f54b7bc1c676
 ms.tgt_platform: multiple
 keywords:
-- Win32_TSDiscoveredLicenseServer-Klasse Remotedesktopdienste
-- Win32_TSDiscoveredLicenseServer Klasse Remotedesktopdienste, beschrieben
+- Win32_TSDiscoveredLicenseServer-Klassen-Remotedesktopdienste
+- Win32_TSDiscoveredLicenseServer -Klasse Remotedesktopdienste beschrieben
 topic_type:
 - apiref
 api_name:
@@ -21,16 +21,16 @@ api_type:
 - DllExport
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: d633031df533068f2cf5da65f2f6820a93c78513
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 8ea5698083f0a639b0cd955126418f5024906d4f140dc22c54aacf1460f24c0e
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104478825"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118126998"
 ---
-# <a name="win32_tsdiscoveredlicenseserver-class"></a>Win32-Klasse "-Klasse (Klasse)" \_
+# <a name="win32_tsdiscoveredlicenseserver-class"></a>Win32 \_ TSDiscoveredLicenseServer-Klasse
 
-Enthält Details zum ermittelten Remotedesktop-Lizenzserver.
+Stellt Details zum ermittelten Remotedesktop Lizenzserver bereit.
 
 ## <a name="syntax"></a>Syntax
 
@@ -48,101 +48,101 @@ class Win32_TSDiscoveredLicenseServer
 
 ## <a name="members"></a>Member
 
-Die Win32-Klasse " **\_ zdiscoveredlicenseserver** " verfügt über diese Typen von Membern:
+Die **Win32 \_ TSDiscoveredLicenseServer-Klasse** verfügt über folgende Membertypen:
 
 -   [Eigenschaften](#properties)
 
 ### <a name="properties"></a>Eigenschaften
 
-Die **Win32 \_** -Klasse "TS-Klasse" hat diese Eigenschaften.
+Die **Win32 \_ TSDiscoveredLicenseServer-Klasse** verfügt über diese Eigenschaften.
 
 <dl> <dt>
 
-**Howentdeckt**
+**HowDiscovered**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt32**
+Datentyp: **uint32**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [ **veraltet**](/windows/desktop/WmiSdk/standard-wmi-qualifiers)
+Qualifizierer: [ **VERALTET**](/windows/desktop/WmiSdk/standard-wmi-qualifiers)
 </dt> </dl>
 
 Diese Eigenschaft wird nicht mehr unterstützt.
 
-**Windows Server 2008:** Die Remotedesktop-Lizenzserver-Ermittlungsmethode.
+**Windows Server 2008:** Die Remotedesktop Lizenzserver-Ermittlungsmethode.
 
 <dt>
 
 <span id="GroupPolicyConfigured"></span><span id="grouppolicyconfigured"></span><span id="GROUPPOLICYCONFIGURED"></span>
 
-<span id="GroupPolicyConfigured"></span><span id="grouppolicyconfigured"></span><span id="GROUPPOLICYCONFIGURED"></span>**Grouppolicykonfigurierte** (0)
+<span id="GroupPolicyConfigured"></span><span id="grouppolicyconfigured"></span><span id="GROUPPOLICYCONFIGURED"></span>**GroupPolicyConfigured** (0)
 
 
 </dt> <dd>
 
-Der Lizenzserver wurde mithilfe der Gruppenrichtlinie ermittelt.
+Der Lizenzserver wurde mithilfe von Gruppenrichtlinien ermittelt.
 
 </dd> <dt>
 
 <span id="RegistryConfigured"></span><span id="registryconfigured"></span><span id="REGISTRYCONFIGURED"></span>
 
-<span id="RegistryConfigured"></span><span id="registryconfigured"></span><span id="REGISTRYCONFIGURED"></span>**Registrykonfigurierte** (1)
+<span id="RegistryConfigured"></span><span id="registryconfigured"></span><span id="REGISTRYCONFIGURED"></span>**RegistryConfigured** (1)
 
 
 </dt> <dd>
 
-Der Lizenzserver wurde mithilfe einer Registrierungs Einstellung ermittelt.
+Der Lizenzserver wurde mithilfe einer Registrierungseinstellung ermittelt.
 
 </dd> <dt>
 
 <span id="WorkgroupDiscovery"></span><span id="workgroupdiscovery"></span><span id="WORKGROUPDISCOVERY"></span>
 
-<span id="WorkgroupDiscovery"></span><span id="workgroupdiscovery"></span><span id="WORKGROUPDISCOVERY"></span>**Workgroupdiscovery** (2)
+<span id="WorkgroupDiscovery"></span><span id="workgroupdiscovery"></span><span id="WORKGROUPDISCOVERY"></span>**WorkgroupDiscovery** (2)
 
 
 </dt> <dd>
 
-Der Lizenzserver wurde mithilfe des Arbeitsgruppen-Ermittlungs Bereichs erkannt.
+Der Lizenzserver wurde mithilfe des Ermittlungsbereichs der Arbeitsgruppe ermittelt.
 
 </dd> <dt>
 
 <span id="DomainDiscovery"></span><span id="domaindiscovery"></span><span id="DOMAINDISCOVERY"></span>
 
-<span id="DomainDiscovery"></span><span id="domaindiscovery"></span><span id="DOMAINDISCOVERY"></span>**Domaindiscovery** (3)
+<span id="DomainDiscovery"></span><span id="domaindiscovery"></span><span id="DOMAINDISCOVERY"></span>**DomainDiscovery** (3)
 
 
 </dt> <dd>
 
-Der Lizenzserver wurde mit dem Domänen Ermittlungs Bereich ermittelt.
+Der Lizenzserver wurde mithilfe des Domänenermittlungsbereichs ermittelt.
 
 </dd> <dt>
 
 <span id="EnterpriseDiscovery"></span><span id="enterprisediscovery"></span><span id="ENTERPRISEDISCOVERY"></span>
 
-<span id="EnterpriseDiscovery"></span><span id="enterprisediscovery"></span><span id="ENTERPRISEDISCOVERY"></span>**Enterpriseediscovery** (4)
+<span id="EnterpriseDiscovery"></span><span id="enterprisediscovery"></span><span id="ENTERPRISEDISCOVERY"></span>**EnterpriseDiscovery** (4)
 
 
 </dt> <dd>
 
-Der Lizenzserver wurde mithilfe des Bereichs der Gesamtstruktur Ermittlung ermittelt.
+Der Lizenzserver wurde mithilfe des Gesamtstrukturermittlungsbereichs ermittelt.
 
 </dd> </dl>
 
 </dd> <dt>
 
-**Isadminonls**
+**IsAdminOnLS**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt32**
+Datentyp: **uint32**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Gibt an, ob das Konto, das zum Ausführen des Skripts oder der exe-Datei verwendet wird, das die **Win32 \_ tsdiscoveredlicenseserver** -Klasse verwendet, über Administrator Zugriff auf den Lizenzserver verfügt.
+Gibt an, ob das Konto, das zum Ausführen des Skripts oder .exe Datei verwendet wird, die die **Win32 \_ TSDiscoveredLicenseServer-Klasse** verwendet, Administratorzugriff auf den Lizenzserver hat.
 
 <dt>
 
@@ -153,7 +153,7 @@ Gibt an, ob das Konto, das zum Ausführen des Skripts oder der exe-Datei verwend
 
 </dt> <dd>
 
-Das verwendete Konto hat keinen Administrator Zugriff auf den Lizenzserver.
+Das verwendete Konto hat keinen Administratorzugriff auf den Lizenzserver.
 
 </dd> <dt>
 
@@ -164,33 +164,33 @@ Das verwendete Konto hat keinen Administrator Zugriff auf den Lizenzserver.
 
 </dt> <dd>
 
-Das verwendete Konto hat Administrator Zugriff auf den Lizenzserver.
+Das verwendete Konto hat Administratorzugriff auf den Lizenzserver.
 
 </dd> <dt>
 
 <span id="Dont_know"></span><span id="dont_know"></span><span id="DONT_KNOW"></span>
 
-<span id="Dont_know"></span><span id="dont_know"></span><span id="DONT_KNOW"></span>Nicht **bekannt** (2)
+<span id="Dont_know"></span><span id="dont_know"></span><span id="DONT_KNOW"></span>**Nicht bekannt** (2)
 
 
 </dt> <dd>
 
-Es kann nicht bestimmt werden, ob das verwendete Konto über Administrator Zugriff auf den Lizenzserver verfügt.
+Es kann nicht ermittelt werden, ob das verwendete Konto Administratorzugriff auf den Lizenzserver hat.
 
 </dd> </dl>
 
 </dd> <dt>
 
-**Islsavailable**
+**IsLSAvailable**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt32**
+Datentyp: **uint32**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Gibt an, ob der Lizenzserver verfügbar ist (ob eine RPC-Verbindung des Remote Prozedur Aufrufs \[ \] zum Server hergestellt werden kann).
+Gibt an, ob der Lizenzserver verfügbar ist (ob eine \[ Remoteprozeduraufruf-RPC-Verbindung \] mit dem Server hergestellt werden kann).
 
 <dt>
 
@@ -218,16 +218,16 @@ Der Lizenzserver ist verfügbar.
 
 </dd> <dt>
 
-**Issuingcals**
+**AusstellendeCALs**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt32**
+Datentyp: **uint32**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Gibt an, ob der Lizenzserver Remotedesktopdienste Client Zugriffs Lizenzen (RDS-CALs) für den RD-Sitzungshost Server ausgeben darf.
+Gibt an, ob der Lizenzserver Remotedesktopdienste Clientzugriffslizenzen (RDS CALs) an den RD-Sitzungshost Server ausstellen darf.
 
 <dt>
 
@@ -238,7 +238,7 @@ Gibt an, ob der Lizenzserver Remotedesktopdienste Client Zugriffs Lizenzen (RDS-
 
 </dt> <dd>
 
-Der Lizenzserver darf keine RDS-CALs für den RD-Sitzungshost Server ausgeben.
+Der Lizenzserver darf keine RDS-CALs für den RD-Sitzungshost Server ausstellen.
 
 </dd> <dt>
 
@@ -249,42 +249,42 @@ Der Lizenzserver darf keine RDS-CALs für den RD-Sitzungshost Server ausgeben.
 
 </dt> <dd>
 
-Der Lizenzserver kann RDS-CALs für den RD-Sitzungshost Server ausgeben.
+Der Lizenzserver kann RDS-CALs an den RD-Sitzungshost Server ausstellen.
 
 </dd> <dt>
 
 <span id="Dont_know"></span><span id="dont_know"></span><span id="DONT_KNOW"></span>
 
-<span id="Dont_know"></span><span id="dont_know"></span><span id="DONT_KNOW"></span>Nicht **bekannt** (2)
+<span id="Dont_know"></span><span id="dont_know"></span><span id="DONT_KNOW"></span>**Nicht bekannt** (2)
 
 
 </dt> <dd>
 
-Es kann nicht bestimmt werden, ob der Lizenzserver RDS-CALs für den RD-Sitzungshost Server ausgeben darf.
+Es kann nicht bestimmt werden, ob der Lizenzserver RDS-CALs an den RD-Sitzungshost Server ausstellen darf.
 
 </dd> </dl>
 
 </dd> <dt>
 
-**Licenseserver**
+**LicenseServer**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [ **Schlüssel**](/windows/desktop/WmiSdk/key-qualifier)
+Qualifizierer: [ **key**](/windows/desktop/WmiSdk/key-qualifier)
 </dt> </dl>
 
-Der Name des ermittelten Remotedesktop Lizenzservers.
+Name des ermittelten Remotedesktop Lizenzservers.
 
 </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Zum Herstellen einer Verbindung mit dem \\ root \\ CIMV2 \\ TerminalServices-Namespace muss die Authentifizierungs Ebene den Datenschutz für das Paket enthalten. Bei C/C++-aufrufen handelt es sich hierbei um eine Authentifizierungs Ebene der **RPC- \_ c- \_ authn- \_ Ebene \_ Pkt \_ Privacy**. Bei Visual Basic-und Skript aufrufen handelt es sich hierbei um eine Authentifizierungs Ebene von **wbemauthenticationlevelpzprivacy** oder "PKTPRIVACY" mit einem Wert von 6. Im folgenden Visual Basic Scripting Edition (VBScript)-Beispiel wird gezeigt, wie eine Verbindung mit einem Remote Computer mit Paket Datenschutz hergestellt wird.
+Um eine Verbindung mit dem \\ \\ CIMV2 \\ TerminalServices-Stammnamespace herzustellen, muss die Authentifizierungsebene Paketdatenschutz enthalten. Bei C/C++-Aufrufen ist dies eine Authentifizierungsebene von **RPC \_ C \_ AUTHN \_ LEVEL \_ PKT \_ PRIVACY**. Bei Visual Basic- und Skriptaufrufen ist dies die Authentifizierungsebene **WbemAuthenticationLevelPktPrivacy** oder "pktPrivacy" mit dem Wert 6. Das folgende Beispiel Visual Basic Scripting Edition (VBScript) zeigt, wie Sie eine Verbindung mit einem Remotecomputer mit Paketschutz herstellen.
 
 
 ```VB
@@ -295,7 +295,7 @@ Set objServices = GetObject( _
 
 
 
-Managed Object Format-Dateien (MOF) enthalten die Definitionen für Windows-Verwaltungsinstrumentation (WMI)-Klassen. MOF-Dateien werden nicht als Teil des Microsoft Windows Software Development Kit (SDK) installiert. Sie werden auf dem Server installiert, wenn Sie die zugehörige Rolle mithilfe der Server-Manager hinzufügen. Weitere Informationen zu MOF-Dateien finden Sie unter [Managed Object Format (MOF)](/windows/desktop/WmiSdk/managed-object-format--mof-).
+Managed Object Format -Dateien (MOF) enthalten die Definitionen für Windows Management Instrumentation (WMI)-Klassen. MOF-Dateien werden nicht als Teil des Microsoft Windows Software Development Kit (SDK) installiert. Sie werden auf dem Server installiert, wenn Sie die zugeordnete Rolle mithilfe der Server-Manager hinzufügen. Weitere Informationen zu MOF-Dateien finden Sie unter [Managed Object Format (MOF).](/windows/desktop/WmiSdk/managed-object-format--mof-)
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -306,7 +306,7 @@ Managed Object Format-Dateien (MOF) enthalten die Definitionen für Windows-Verw
 | Unterstützte Mindestversion (Client)<br/> | Nicht unterstützt<br/>                                                               |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2008<br/>                                                          |
 | Namespace<br/>                | Root \\ CIMv2 \\ TerminalServices<br/>                                                |
-| MOF<br/>                      | <dl> <dt>Tscsgwmi. MOF</dt> </dl> |
+| MOF<br/>                      | <dl> <dt>TSCfgWmi.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>TSCfgWmi.dll</dt> </dl> |
 
 

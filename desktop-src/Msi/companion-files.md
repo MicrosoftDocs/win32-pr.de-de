@@ -1,38 +1,38 @@
 ---
-description: Der Installationsstatus einer Begleit Datei hängt nicht von den eigenen Datei Versionsinformationen, sondern von der Versionsverwaltung des zugehörigen übergeordneten Elements ab.
+description: Der Installationsstatus einer Begleitdatei hängt nicht von ihren eigenen Versionsinformationen zur Dateiversion ab, sondern von der Versionierung des übergeordneten Begleitdatei.
 ms.assetid: 3c1e3507-8ed9-4ce8-8d38-6c8248a9e883
-title: Begleit Dateien
+title: Begleitdateien
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: c927c377c7111e89c6f97b385610da9e09f8bdd3
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: f7d35aa89e216df4e17c84fb15c9c1f19908a74e9c1d14113da4df2128cdfb87
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "103960269"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118145099"
 ---
-# <a name="companion-files"></a>Begleit Dateien
+# <a name="companion-files"></a>Begleitdateien
 
-Der Installationsstatus einer Begleit Datei hängt nicht von den eigenen Datei Versionsinformationen, sondern von der Versionsverwaltung des zugehörigen übergeordneten Elements ab. Sehen Sie sich die Regeln für die [Datei Versions](file-versioning-rules.md)Verwaltung an. Um eine Begleit Datei anzugeben, muss der Primärschlüssel des übergeordneten Elements in der [Dateitabelle](file-table.md) in der Versions Spalte des Datensatzes für den begleitenden erstellt werden.
+Der Installationsstatus einer Begleitdatei hängt nicht von ihren eigenen Versionsinformationen zur Dateiversion ab, sondern von der Versionierung des übergeordneten Begleitdatei. Weitere Informationen finden [Sie unter Regeln für die Dateiversionsversion.](file-versioning-rules.md) Um eine Begleitdatei anzugeben, muss der Primärschlüssel des übergeordneten Begleitschlüssels in der Tabelle Datei in der Spalte Version des Datensatzes für den Begleitdatensatz verfasst werden. [](file-table.md)
 
-Im folgenden Beispiel ist fileA das übergeordnete Element, und fileB ist die Begleit Datei.
+Im folgenden Beispiel ist FileA das übergeordnete Element und FileB die Begleitdatei.
 
 [Dateitabelle](file-table.md) (partiell)
 
 
 
-| File  | Version |
+| Datei  | Version |
 |-------|---------|
-| Mit der | 1.0.0.0 |
-| FileB | Mit der   |
+| Filea | 1.0.0.0 |
+| Fileb | Filea   |
 
 
 
  
 
-In diesem Beispiel hängt der Installationsstatus von fileB von den Regeln für die [Datei Versions](file-versioning-rules.md) Verwaltung und den Versionsinformationen für fileA ab. Wenn das Installationsprogramm feststellt, dass die Version von fileA im Paket über eine ältere Version von fileA installiert werden soll, die bereits auf dem Computer des Benutzers vorhanden ist, wird fileB unabhängig von der Version der installierten fileB aus dem Paket installiert.
+In diesem Beispiel hängt der Installationsstatus [](file-versioning-rules.md) von FileB von den Dateiversionsregeln und den Versionsinformationen für FileA ab. Wenn das Installationsprogramm feststellt, dass die Version von FileA im Paket über eine ältere Version von FileA installiert werden soll, die bereits auf dem Computer des Benutzers vorhanden ist, installiert es auch FileB aus dem Paket, unabhängig von der Version der installierten FileB.
 
-Beachten Sie, dass es sich bei einer Datei, die den Schlüssel Pfad für Ihre Komponente ist, nicht um eine Begleit Datei handeln darf. Dies würde dazu führen, dass die versionierungslogik der Schlüssel Pfad Datei von der begleitenden übergeordneten Datei bestimmt wird.
+Beachten Sie, dass eine Datei, die der Schlüsselpfad für die Komponente ist, keine Begleitdatei sein darf. Dies würde dazu führen, dass die Versionslogik der Schlüsselpfaddatei von der übergeordneten Begleitdatei bestimmt wird.
 
  
 

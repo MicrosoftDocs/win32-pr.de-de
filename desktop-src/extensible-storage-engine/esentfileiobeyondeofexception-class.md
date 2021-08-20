@@ -1,6 +1,6 @@
 ---
-description: 'Weitere Informationen finden Sie unter: esentfleiobeyondeofexception-Klasse'
-title: Esentspleiobeyondeofexception-Klasse
+description: 'Weitere Informationen finden Sie unter: EsentFileIOBeyondEOFException-Klasse'
+title: EsentFileIOBeyondEOFException-Klasse
 TOCTitle: EsentFileIOBeyondEOFException class
 ms:assetid: T:Microsoft.Isam.Esent.Interop.EsentFileIOBeyondEOFException
 ms:mtpsurl: https://msdn.microsoft.com/library/microsoft.isam.esent.interop.esentfileiobeyondeofexception(v=EXCHG.10)
@@ -24,29 +24,29 @@ api_type:
 api_location:
 - Microsoft.Isam.Esent.Interop.dll
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: 67d7fa0730a265ddb0ed0f37cc6db250325b5a4d
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: a54292a0074f4c9368819d867b9d3e7639153609d5eb2e257fc19b7c39a85d2b
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106351091"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118081881"
 ---
-# <a name="esentfileiobeyondeofexception-class"></a>Esentspleiobeyondeofexception-Klasse
+# <a name="esentfileiobeyondeofexception-class"></a>EsentFileIOBeyondEOFException-Klasse
 
-Basisklasse für JET_err. "Fleiobeyonde of"-Ausnahmen.
+Basisklasse für JET_err. FileIOBeyondEOF-Ausnahmen.
 
 ## <a name="inheritance-hierarchy"></a>Vererbungshierarchie
 
 [System.Object](/dotnet/api/system.object)  
   [System.Exception](/dotnet/api/system.exception)  
-    [Microsoft. ISAM. ESENT. esentexception](./esentexception-class.md)  
-      [Microsoft. ISAM. ESENT. Interop. esenterrorexception](./esenterrorexception-class.md)  
-        [Microsoft. ISAM. ESENT. Interop. esentdataexception](./esentdataexception-class.md)  
-          [Microsoft. ISAM. ESENT. Interop. esentverdertionexception](./esentcorruptionexception-class.md)  
-            Microsoft. ISAM. ESENT. Interop. esentfileiobeyonentofexception  
+    [Microsoft.Isam.Esent.EsentException](./esentexception-class.md)  
+      [Microsoft.Isam.Esent.Interop.EsentErrorException](./esenterrorexception-class.md)  
+        [Microsoft.Isam.Esent.Interop.EsentDataException](./esentdataexception-class.md)  
+          [Microsoft.Isam.Esent.Interop.EsentCorruptionException](./esentcorruptionexception-class.md)  
+            Microsoft.Isam.Esent.Interop.EsentFileIOBeyondEOFException  
 
-**Namespace:**  [Microsoft. ISAM. ESENT. Interop](./microsoft.isam.esent.interop-namespace.md)  
-**Assembly:**  Microsoft. ISAM. ESENT. Interop (in Microsoft.Isam.Esent.Interop.dll)
+**Namespace:**  [Microsoft.Isam.Esent.Interop](./microsoft.isam.esent.interop-namespace.md)  
+**Assembly:**  Microsoft.Isam.Esent.Interop (in Microsoft.Isam.Esent.Interop.dll)
 
 ## <a name="syntax"></a>Syntax
 
@@ -70,8 +70,8 @@ Alle öffentlichen statischen Elemente dieses Typs (Shared in Microsoft Visual�
 
 ## <a name="see-also"></a>Siehe auch
 
-#### <a name="reference"></a>Referenz
+#### <a name="reference"></a>Verweis
 
-[Esentmeder Exception-Member](./esentfileiobeyondeofexception-members.md)
+[EsentFileIOBeyondEOFException-Member](./esentfileiobeyondeofexception-members.md)
 
-[Microsoft. ISAM. ESENT. Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)
+[Microsoft.Isam.Esent.Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)

@@ -1,5 +1,5 @@
 ---
-description: Die Extract-Funktion extrahiert Dateien aus einer CAB-Datei.
+description: Die Extract-Funktion extrahiert Dateien aus einem Schränk.
 ms.assetid: c6a79d81-7adf-4b8e-a1ef-fec868f7fdbf
 title: Extract-Funktion
 ms.topic: reference
@@ -13,18 +13,18 @@ api_type:
 - DllExport
 api_location:
 - Cabinet.dll
-ms.openlocfilehash: 2e1096cdb7909f49fbcac7c32891210b25637c90
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: cbcb53aae008423ac56bb489d43f6fd78016a9b1f716be21390a6dfc1de00404
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106359658"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118162064"
 ---
 # <a name="extract-function"></a>Extract-Funktion
 
-\[Diese Funktion wird nicht mehr unterstützt, sodass Ihr Verhalten nicht garantiert werden kann.\]
+\[Diese Funktion wird nicht mehr unterstützt, sodass ihr Verhalten nicht garantiert werden kann.\]
 
-Die **extract** -Funktion extrahiert Dateien aus einer CAB-Datei.
+Die **Extract-Funktion** extrahiert Dateien aus einem Schränk.
 
 ## <a name="syntax"></a>Syntax
 
@@ -42,27 +42,27 @@ HRESULT Extract(
 
 <dl> <dt>
 
-*Psel* 
+*ps* 
 </dt> <dd>
 
-Ein Zeiger auf eine [**Sitzungs**](session.md) Struktur, die Informationen über die aktuelle Sitzung enthält.
+Zeiger auf eine [**SESSION-Struktur,**](session.md) die Informationen über die aktuelle Sitzung enthält.
 
 </dd> <dt>
 
-*lpcabname* 
+*lpCabName* 
 </dt> <dd>
 
-Ein Zeiger auf den Namen der CAB-Datei, aus der Dateien extrahiert werden sollen.
+Zeiger auf den Namen des Schränks, aus dem Dateien extrahiert werden sollen.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Wenn die Funktion erfolgreich ausgeführt wird, gibt Sie **S \_ OK** zurück; andernfalls wird ein Fehlercode zurückgegeben.
+Wenn die Funktion erfolgreich ausgeführt wird, wird **S \_ OK** zurückgegeben. Andernfalls wird ein Fehlercode zurückgegeben.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Dieser Funktion ist keine Import Bibliothek oder Header Datei zugeordnet. Sie müssen ihn mithilfe der [**LoadLibrary**](/windows/win32/api/libloaderapi/nf-libloaderapi-loadlibrarya) -Funktion und der [**GetProcAddress**](/windows/win32/api/libloaderapi/nf-libloaderapi-getprocaddress) -Funktion aufrufen.
+Dieser Funktion ist keine Importbibliothek oder Headerdatei zugeordnet. Sie müssen sie mithilfe der [**Funktionen LoadLibrary**](/windows/win32/api/libloaderapi/nf-libloaderapi-loadlibrarya) und [**GetProcAddress**](/windows/win32/api/libloaderapi/nf-libloaderapi-getprocaddress) aufrufen.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -78,10 +78,10 @@ Dieser Funktion ist keine Import Bibliothek oder Header Datei zugeordnet. Sie m�
 
 <dl> <dt>
 
-[**Deleteextractedfiles**](deleteextractedfiles.md)
+[**DeleteExtractedFiles**](deleteextractedfiles.md)
 </dt> <dt>
 
-[**ERF**](/windows/win32/api/fdi_fci_types/ns-fdi_fci_types-erf)
+[**Erf**](/windows/win32/api/fdi_fci_types/ns-fdi_fci_types-erf)
 </dt> <dt>
 
 [**Sitzung**](session.md)

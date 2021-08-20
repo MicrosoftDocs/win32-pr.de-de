@@ -1,11 +1,11 @@
 ---
 title: Port-Name-Attribut
-description: Liste der Portnamen. Beispielsweise für Druckerports oder comm-Ports.
+description: Liste der Portnamen. Beispielsweise für Druckeranschlüsse oder Kommaports.
 ms.assetid: 978e5de5-fc72-4b9c-ae15-4f2253d8081a
 ms.tgt_platform: multiple
 keywords:
-- AD-Schema für Port-Name-Attribut
-- Portname-Attribut AD-Schema
+- Port-Name AD-Schema
+- portName-Attribut AD-Schema
 topic_type:
 - apiref
 api_name:
@@ -14,28 +14,28 @@ api_type:
 - Schema
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 9cb873e2c16b31b3d72961873dcd438d84d9db9c
-ms.sourcegitcommit: b77ace27b0432e7cd3863191b11926be032fbe2f
+ms.openlocfilehash: 235d4deaf816e0e2a243cc34b68568976591cfecf58cdcfa89bf0d2d0065deb9
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "104480263"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118012336"
 ---
 # <a name="port-name-attribute"></a>Port-Name-Attribut
 
-Liste der Portnamen. Beispielsweise für Druckerports oder comm-Ports.
+Liste der Portnamen. Beispielsweise für Druckeranschlüsse oder Kommaports.
 
 
 
 | Eingabe | Wert |
 |-------------------|---------------------------------------------|
 | CN                | Port-Name                                   |
-| LDAP-Display-Name | portName                                    |
+| Ldap-Anzeigename | portName                                    |
 | Size              | \-                                          |
-| Berechtigung aktualisieren  | \-                                          |
-| Aktualisierungshäufigkeit  | \-                                          |
+| Aktualisieren von Berechtigungen  | \-                                          |
+| Updatehäufigkeit  | \-                                          |
 | Attribute-Id      | 1.2.840.113556.1.4.228                      |
-| System-ID-GUID    | 281416c4-1968-11D0-a28f -00aa003049e2        |
+| System-Id-Guid    | 281416c4-1968-11d0-a28f-00aa003049e2        |
 | Syntax            | [**String(Unicode)**](s-string-unicode.md) |
 
 
@@ -43,7 +43,7 @@ Liste der Portnamen. Beispielsweise für Druckerports oder comm-Ports.
 ## <a name="implementations"></a>Implementierungen
 
 -   [**Windows 2000 Server**](#windows-2000-server)
--   [**Windows Server 2003**](#windows-server-2003)
+-   [**Windows Server 2003**](#windows-server-2003)
 -   [**Windows Server 2003 R2**](#windows-server-2003-r2)
 -   [**Windows Server 2008**](#windows-server-2008)
 -   [**Windows Server 2008 R2**](#windows-server-2008-r2)
@@ -57,20 +57,20 @@ Liste der Portnamen. Beispielsweise für Druckerports oder comm-Ports.
 |------------------------|------------------------------------------------|
 | Link-ID                | \-                                             |
 | MAPI-Id                | \-                                             |
-| System-Only            | False                                          |
-| Ist-einwertig       | False                                          |
-| Ist indiziert             | False                                          |
-| Im globalen Katalog      | False                                          |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                   |
+| System-Only            | Falsch                                          |
+| Is-Single-Valued       | Falsch                                          |
+| Ist indiziert             | Falsch                                          |
+| Im globalen Katalog      | Falsch                                          |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                   |
 | Range-Lower            | \-                                             |
 | Range-Upper            | \-                                             |
 | Search-Flags           | 0x00000000                                     |
 | System-Flags           | 0x00000010                                     |
-| In verwendete Klassen        | [**Druck Warteschlange**](c-printqueue.md)<br/> |
+| In verwendete Klassen        | [**Druckwarteschlange**](c-printqueue.md)<br/> |
 
 
 
-## <a name="windows-server-2003"></a>Windows Server 2003
+## <a name="windows-server-2003"></a>Windows Server 2003
 
 
 
@@ -78,16 +78,16 @@ Liste der Portnamen. Beispielsweise für Druckerports oder comm-Ports.
 |------------------------|------------------------------------------------|
 | Link-ID                | \-                                             |
 | MAPI-Id                | \-                                             |
-| System-Only            | False                                          |
-| Ist-einwertig       | False                                          |
-| Ist indiziert             | False                                          |
-| Im globalen Katalog      | False                                          |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                   |
+| System-Only            | Falsch                                          |
+| Is-Single-Valued       | Falsch                                          |
+| Ist indiziert             | Falsch                                          |
+| Im globalen Katalog      | Falsch                                          |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                   |
 | Range-Lower            | \-                                             |
 | Range-Upper            | \-                                             |
 | Search-Flags           | 0x00000000                                     |
 | System-Flags           | 0x00000010                                     |
-| In verwendete Klassen        | [**Druck Warteschlange**](c-printqueue.md)<br/> |
+| In verwendete Klassen        | [**Druckwarteschlange**](c-printqueue.md)<br/> |
 
 
 
@@ -99,16 +99,16 @@ Liste der Portnamen. Beispielsweise für Druckerports oder comm-Ports.
 |------------------------|------------------------------------------------|
 | Link-ID                | \-                                             |
 | MAPI-Id                | \-                                             |
-| System-Only            | False                                          |
-| Ist-einwertig       | False                                          |
-| Ist indiziert             | False                                          |
-| Im globalen Katalog      | False                                          |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                   |
+| System-Only            | Falsch                                          |
+| Is-Single-Valued       | Falsch                                          |
+| Ist indiziert             | Falsch                                          |
+| Im globalen Katalog      | Falsch                                          |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                   |
 | Range-Lower            | \-                                             |
 | Range-Upper            | \-                                             |
 | Search-Flags           | 0x00000000                                     |
 | System-Flags           | 0x00000010                                     |
-| In verwendete Klassen        | [**Druck Warteschlange**](c-printqueue.md)<br/> |
+| In verwendete Klassen        | [**Druckwarteschlange**](c-printqueue.md)<br/> |
 
 
 
@@ -120,16 +120,16 @@ Liste der Portnamen. Beispielsweise für Druckerports oder comm-Ports.
 |------------------------|------------------------------------------------|
 | Link-ID                | \-                                             |
 | MAPI-Id                | \-                                             |
-| System-Only            | False                                          |
-| Ist-einwertig       | False                                          |
-| Ist indiziert             | False                                          |
-| Im globalen Katalog      | False                                          |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                   |
+| System-Only            | Falsch                                          |
+| Ist einwertig       | Falsch                                          |
+| Ist indiziert             | Falsch                                          |
+| Im globalen Katalog      | Falsch                                          |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                   |
 | Range-Lower            | \-                                             |
 | Range-Upper            | \-                                             |
 | Search-Flags           | 0x00000000                                     |
 | System-Flags           | 0x00000010                                     |
-| In verwendete Klassen        | [**Druck Warteschlange**](c-printqueue.md)<br/> |
+| In verwendete Klassen        | [**Druckwarteschlange**](c-printqueue.md)<br/> |
 
 
 
@@ -141,16 +141,16 @@ Liste der Portnamen. Beispielsweise für Druckerports oder comm-Ports.
 |------------------------|------------------------------------------------|
 | Link-ID                | \-                                             |
 | MAPI-Id                | \-                                             |
-| System-Only            | False                                          |
-| Ist-einwertig       | False                                          |
-| Ist indiziert             | False                                          |
-| Im globalen Katalog      | False                                          |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                   |
+| System-Only            | Falsch                                          |
+| Ist einwertig       | Falsch                                          |
+| Ist indiziert             | Falsch                                          |
+| Im globalen Katalog      | Falsch                                          |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                   |
 | Range-Lower            | \-                                             |
 | Range-Upper            | \-                                             |
 | Search-Flags           | 0x00000000                                     |
 | System-Flags           | 0x00000010                                     |
-| In verwendete Klassen        | [**Druck Warteschlange**](c-printqueue.md)<br/> |
+| In verwendete Klassen        | [**Druckwarteschlange**](c-printqueue.md)<br/> |
 
 
 
@@ -162,16 +162,16 @@ Liste der Portnamen. Beispielsweise für Druckerports oder comm-Ports.
 |------------------------|------------------------------------------------|
 | Link-ID                | \-                                             |
 | MAPI-Id                | \-                                             |
-| System-Only            | False                                          |
-| Ist-einwertig       | False                                          |
-| Ist indiziert             | False                                          |
-| Im globalen Katalog      | False                                          |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                   |
+| System-Only            | Falsch                                          |
+| Ist einwertig       | Falsch                                          |
+| Ist indiziert             | Falsch                                          |
+| Im globalen Katalog      | Falsch                                          |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                   |
 | Range-Lower            | \-                                             |
 | Range-Upper            | \-                                             |
 | Search-Flags           | 0x00000000                                     |
 | System-Flags           | 0x00000010                                     |
-| In verwendete Klassen        | [**Druck Warteschlange**](c-printqueue.md)<br/> |
+| In verwendete Klassen        | [**Druckwarteschlange**](c-printqueue.md)<br/> |
 
 
 

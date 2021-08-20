@@ -1,21 +1,21 @@
 ---
-description: Mithilfe von Kategorien können Sie Ereignisse organisieren, damit Sie von Ereignisanzeige gefiltert werden können. Jede Ereignis Quelle kann eigene nummerierte Kategorien und die Text Zeichenfolgen definieren, denen Sie zugeordnet sind.
+description: Kategorien helfen Ihnen beim Organisieren von Ereignissen, damit Ereignisanzeige sie filtern können. Jede Ereignisquelle kann eigene nummerierte Kategorien und die Textzeichenfolgen definieren, denen sie zugeordnet sind.
 ms.assetid: ddba8066-b6b9-42a6-b49f-cbae8f97ef6d
 title: Ereigniskategorien
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: efd84a095754bd51499edf5a21ebea0ade042d75
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 0d68895c1043e12ab8e53e3d6db8cd385d17ccc0175c5610a487682fc1c92c8f
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106347827"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118151641"
 ---
 # <a name="event-categories"></a>Ereigniskategorien
 
-Mithilfe von Kategorien können Sie Ereignisse organisieren, damit Sie von Ereignisanzeige gefiltert werden können. Jede [Ereignis Quelle](event-sources.md) kann eigene nummerierte Kategorien und die Text Zeichenfolgen definieren, denen Sie zugeordnet sind.
+Kategorien helfen Ihnen beim Organisieren von Ereignissen, damit Ereignisanzeige sie filtern können. Jede [Ereignisquelle](event-sources.md) kann eigene nummerierte Kategorien und die Textzeichenfolgen definieren, denen sie zugeordnet sind.
 
-Die Kategorien müssen nacheinander nummeriert werden, beginnend mit der Zahl 1. Die Kategorien selbst werden in einer Nachrichtendatei definiert. Verwenden Sie z. b. die folgende Syntax, um drei Ereignis Kategorien zu deklarieren. In Ereignisanzeige werden die Ereignisse, in denen diese Kategorien verwendet werden, Kategorie 1, Kategorie 2 oder Kategorie 3 in der Spalte **Category** angezeigt.
+Die Kategorien müssen nacheinander nummeriert werden, beginnend mit der Zahl 1. Die Kategorien selbst werden in einer Nachrichtendatei definiert. Verwenden Sie beispielsweise die folgende Syntax, um drei Ereigniskategorien zu deklarieren. In Ereignisanzeige werden die Ereignisse, die diese Kategorien verwenden, in der Spalte **Kategorie** 1, Kategorie 2 oder Kategorie 3 angezeigt.
 
 ``` syntax
 MessageId=0x1
@@ -37,9 +37,9 @@ Category 3
 .
 ```
 
-Kategorien können in einer separaten Nachrichtendatei oder in einer Datei gespeichert werden, die Nachrichten anderer Typen enthält. Wenn Sie eine einzelne Nachrichtendatei erstellen, achten Sie darauf, dass es sich bei den Kategorien um die ersten Nachrichten in der Datei handelt. Weitere Informationen zum Erstellen und Verwenden von Nachrichten Dateien finden Sie unter [Nachrichten Dateien](message-files.md).
+Kategorien können in einer separaten Nachrichtendatei oder in einer Datei gespeichert werden, die Nachrichten anderer Typen enthält. Wenn Sie eine einzelne Nachrichtendatei erstellen, stellen Sie sicher, dass die Kategorien die ersten Nachrichten in der Datei sind. Weitere Informationen zum Erstellen und Verwenden von Nachrichtendateien finden Sie unter [Nachrichtendateien.](message-files.md)
 
-Die Gesamtanzahl der Kategorien wird im **CategoryCount** -Wert für die Ereignis Quelle gespeichert.
+Die Gesamtzahl der Kategorien wird im **CategoryCount-Wert** für die Ereignisquelle gespeichert.
 
  
 

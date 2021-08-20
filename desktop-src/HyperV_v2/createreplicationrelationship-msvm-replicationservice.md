@@ -1,7 +1,7 @@
 ---
-description: Erstellt eine neue Replikations Beziehung für eine virtuelle Maschine. Wenn ein Client diese Methode für einen virtuellen Replikat Computer aufruft, wird die Replikations Beziehung auf den angegebenen Anbieter ausgeweitet.
+description: Erstellt eine neue Replikationsbeziehung für einen virtuellen Computer. Wenn ein Client diese Methode für einen virtuellen Replikatcomputer aufruft, wird die Replikationsbeziehung auf den angegebenen Anbieter erweitert.
 ms.assetid: 44d3b5aa-46c2-4fe9-9a1d-6ee699d3640d
-title: Methode "samatereplicationrelationship" der Msvm_ReplicationService-Klasse
+title: CreateReplicationRelationship-Methode der Msvm_ReplicationService Klasse
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,16 +13,16 @@ api_type:
 - COM
 api_location:
 - vmms.exe
-ms.openlocfilehash: c44628aef9aa278170a1292a74621419bb6256b7
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: d9b61c2339a426314d5c62fe5481b51ba3960c2650ccbdc40b9b9ebd4761cfc4
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106348112"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118150083"
 ---
-# <a name="createreplicationrelationship-method-of-the-msvm_replicationservice-class"></a>Methode "kreatereplicationrelationship" der MSVM- \_ replicationservice-Klasse
+# <a name="createreplicationrelationship-method-of-the-msvm_replicationservice-class"></a>CreateReplicationRelationship-Methode der Msvm \_ ReplicationService-Klasse
 
-Erstellt eine neue Replikations Beziehung für eine virtuelle Maschine. Wenn ein Client diese Methode für einen virtuellen Replikat Computer aufruft, wird die Replikations Beziehung auf den angegebenen Anbieter ausgeweitet.
+Erstellt eine neue Replikationsbeziehung für einen virtuellen Computer. Wenn ein Client diese Methode für einen virtuellen Replikatcomputer aufruft, wird die Replikationsbeziehung auf den angegebenen Anbieter erweitert.
 
 ## <a name="syntax"></a>Syntax
 
@@ -41,24 +41,24 @@ uint32 CreateReplicationRelationship(
 
 <dl> <dt>
 
-*Computersystem* \[ in\]
+*ComputerSystem* \[ In\]
 </dt> <dd>
 
-Ein Verweis auf eine [**CIM \_ Computersystem**](/windows/desktop/CIMWin32Prov/cim-computersystem) -Instanz, die den virtuellen Computer darstellt, für den die Replikation aktiviert werden soll.
+Ein Verweis auf eine [**\_ CIM-ComputerSysteminstanz,**](/windows/desktop/CIMWin32Prov/cim-computersystem) die den virtuellen Computer darstellt, für den die Replikation aktiviert werden soll.
 
 </dd> <dt>
 
-*Replicationsettingdata* \[ in\]
+*ReplicationSettingData* \[ In\]
 </dt> <dd>
 
-Eine Zeichen folgen Darstellung einer Instanz der [**MSVM \_ replicationsettingdata**](msvm-replicationsettingdata.md) -Klasse, die die Replikationseinstellungen für die neue Replikations Beziehung definiert, die für den virtuellen Computer erstellt werden soll.
+Eine Zeichenfolgendarstellung einer Instanz der [**Msvm \_ ReplicationSettingData-Klasse,**](msvm-replicationsettingdata.md) die die Replikationseinstellungen für die neue Replikationsbeziehung definiert, die für den virtuellen Computer erstellt werden soll.
 
 </dd> <dt>
 
-*Auftrag* \[ vorgenommen\]
+*Auftrag* \[ out\]
 </dt> <dd>
 
-Wenn der Vorgang asynchron ausgeführt wird, gibt diese Methode 4096 zurück, und dieser Parameter enthält einen Verweis auf ein Objekt, das von [**CIM \_ concretejob**](/previous-versions//cc136808(v=vs.85))abgeleitet wird.
+Wenn der Vorgang asynchron ausgeführt wird, gibt diese Methode 4096 zurück, und dieser Parameter enthält einen Verweis auf ein Objekt, das von [**CIM \_ ConcreteJob abgeleitet wurde.**](/previous-versions//cc136808(v=vs.85))
 
 </dd> </dl>
 
@@ -71,10 +71,10 @@ Diese Methode gibt einen der folgenden Werte zurück.
 **Abgeschlossen ohne Fehler** (0)
 </dt> <dt>
 
-Über **prüfte Methoden Parameter-Auftrag gestartet** (4096)
+**Überprüfte Methodenparameter – Auftrag gestartet** (4096)
 </dt> <dt>
 
-Fehler **(32768** )
+**Fehler** (32768)
 </dt> <dt>
 
 **Zugriff verweigert** (32769)
@@ -83,61 +83,61 @@ Fehler **(32768** )
 **Nicht unterstützt** (32770)
 </dt> <dt>
 
-Der **Status ist "Unknown** " (32771).
+**Status ist unbekannt** (32771)
 </dt> <dt>
 
 **Timeout** (32772)
 </dt> <dt>
 
-**Ungültiger Parameter** (32773)
+**Ungültiger** Parameter (32773)
 </dt> <dt>
 
 **System wird verwendet** (32774)
 </dt> <dt>
 
-**Ungültiger Status für diesen Vorgang** (32775).
+**Ungültiger Zustand für diesen Vorgang** (32775)
 </dt> <dt>
 
-**Falscher Datentyp** (32776).
+**Falscher Datentyp** (32776)
 </dt> <dt>
 
-Das **System ist nicht verfügbar** (32777).
+**System ist nicht verfügbar** (32777)
 </dt> <dt>
 
-**Nicht** genügend Arbeitsspeicher (32778)
+**Nicht genügend Arbeitsspeicher** (32778)
 </dt> <dt>
 
-Die **Datei wurde nicht gefunden** (32779).
+**Datei nicht gefunden** (32779)
 </dt> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-" **Miatereplicationrelationship** " nimmt eine [**MSVM- \_ replicationsettingdata**](msvm-replicationsettingdata.md) -Instanz (frsd) als Eingabe an. Die zugehörige frsd-Datei für die virtuelle Maschine als Host-zu-Host-Anbieter ist die Standardauswahl. Die Eingabe-frsd wird auf gültige Einstellungen für jede Eigenschaft für den Standardanbieter überprüft. In dieser Tabelle werden die Validierungs Unterschiede in Bezug auf den externen Anbieter zusammengefasst.
+**CreateReplicationRelationship verwendet** eine [**Msvm \_ ReplicationSettingData-Instanz**](msvm-replicationsettingdata.md) (FRSD) als Eingabe. Die zugeordnete FRSD für den virtuellen Computer als Host-zu-Host-Anbieter ist die Standardauswahl. Die FRSD-Eingabe wird auf gültige Einstellungen für jede Eigenschaft für den Standardanbieter überprüft. In dieser Tabelle werden die Validierungsunterschiede in Bezug auf den externen Anbieter zusammengefasst.
 
 
 
 | Eigenschaft                                             | Externe Anbieter                                 |
 |------------------------------------------------------|----------------------------------------------------|
-| Replicationprovider                                  | Identisch mit Standardanbieter                           |
+| ReplicationProvider                                  | Identisch mit dem Standardanbieter                           |
 | AuthenticationType                                   | Wird ignoriert.                                            |
 | CertificateThumbPrint                                | Wird ignoriert.                                            |
-| Rootcertifi-ethumschlag-Print (RO)                       | Wird ignoriert.                                            |
-| Compressionaktiviert                                   | Identisch mit Standardanbieter                           |
-| Bypassproxyserver                                    | Identisch mit Standardanbieter                           |
-| Wiederherstellungsconnectionpoint                              | Ignoriert \* (kann sich ändern, wenn der Anbieter eine Anforderung hat) |
-| Wiederherstellunghostsystem (RO)                              | Wird ignoriert.                                            |
-| Primaryconnectionpoint (RO)                          | Identisch mit Standardanbieter                           |
-| Primaryhostsystem (RO)                               | Identisch mit Standardanbieter                           |
-| Wiederherstellserverportnummer                             | Ignoriert \* (kann sich ändern, wenn der Anbieter eine Anforderung hat) |
-| Replicatehostkvpitems                                | Wird ignoriert.                                            |
-| Applicationkonsistentsnapshotinterval                | Identisch mit Standardanbieter                           |
-| Parameter recoveryhistory einen                                      | Identisch mit Standardanbieter                           |
-| Includdisks\[\]                                    | Identisch mit Standardanbieter                           |
-| Autoresynchronizeaktivierte                             | Identisch mit Standardanbieter                           |
-| Autoresynchronizeingetervalstart                       | Identisch mit Standardanbieter                           |
-| Autoresynchronizzutervalend                         | Identisch mit Standardanbieter                           |
-| Enableschreiteorderkonservierungs ationacrossdisks (veraltet) | Identisch mit Standardanbieter                           |
-| ReplicationInterval                                  | Identisch mit Standardanbieter                           |
+| RootCertificateThumbPrint (RO)                       | Wird ignoriert.                                            |
+| CompressionEnabled                                   | Identisch mit dem Standardanbieter                           |
+| BypassProxyServer                                    | Identisch mit dem Standardanbieter                           |
+| RecoveryConnectionPoint                              | Ignoriert \* (kann sich ändern, wenn der Anbieter eine Anforderung hat) |
+| RecoveryHostSystem (RO)                              | Wird ignoriert.                                            |
+| PrimaryConnectionPoint (RO)                          | Identisch mit dem Standardanbieter                           |
+| PrimaryHostSystem (RO)                               | Identisch mit dem Standardanbieter                           |
+| RecoveryServerPortNumber                             | Ignoriert \* (kann sich ändern, wenn der Anbieter eine Anforderung hat) |
+| ReplicateHostKvpItems                                | Wird ignoriert.                                            |
+| ApplicationConsistentSnapshotInterval                | Identisch mit dem Standardanbieter                           |
+| RecoveryHistory                                      | Identisch mit dem Standardanbieter                           |
+| IncludedDisks\[\]                                    | Identisch mit dem Standardanbieter                           |
+| AutoResynchronizeEnabled                             | Identisch mit dem Standardanbieter                           |
+| AutoResynchronizeIntervalStart                       | Identisch mit dem Standardanbieter                           |
+| AutoResynchronizeIntervalEnd                         | Identisch mit dem Standardanbieter                           |
+| EnableWriteOrderPreservationAcrossDisks (veraltet) | Identisch mit dem Standardanbieter                           |
+| ReplicationInterval                                  | Identisch mit dem Standardanbieter                           |
 
 
 
@@ -149,10 +149,10 @@ Die **Datei wurde nicht gefunden** (32779).
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows 8 \[ -Desktop-Apps\]<br/>                                                              |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2012 \[ -Desktop-Apps\]<br/>                                                    |
-| Namespace<br/>                | \\Stammvirtualisierung \\ v2<br/>                                                                     |
-| MOF<br/>                      | <dl> <dt>Windowsvirtualization. v2. MOF</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | \[Windows 8 Nur Desktop-Apps\]<br/>                                                              |
+| Unterstützte Mindestversion (Server)<br/> | \[Windows Server 2012 Nur Desktop-Apps\]<br/>                                                    |
+| Namespace<br/>                | Root \\ Virtualization \\ V2<br/>                                                                     |
+| MOF<br/>                      | <dl> <dt>WindowsVirtualization.V2.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Vmms.exe</dt> </dl>                     |
 
 
@@ -161,10 +161,10 @@ Die **Datei wurde nicht gefunden** (32779).
 
 <dl> <dt>
 
-[**MSVM \_ replicationservice**](msvm-replicationservice.md)
+[**Msvm \_ ReplicationService**](msvm-replicationservice.md)
 </dt> <dt>
 
-[**Removereplicationrelationshipex**](removereplicationrelationshipex-msvm-replicationservice.md)
+[**RemoveReplicationRelationshipEx**](removereplicationrelationshipex-msvm-replicationservice.md)
 </dt> </dl>
 
  

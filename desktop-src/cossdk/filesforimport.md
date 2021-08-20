@@ -25,7 +25,7 @@ Ruft Informationen für importierte Anwendungen ab.
 
 Diese Auflistung unterstützt die [**Add-**](/windows/desktop/api/ComAdmin/nf-comadmin-icatalogcollection-add) und [**Remove-Methoden**](/windows/desktop/api/ComAdmin/nf-comadmin-icatalogcollection-remove) des [**COMAdminCatalogCollection-Objekts.**](comadmincatalogcollection.md)
 
-## <a name="members"></a>Member
+## <a name="members"></a>Members
 
 Die **FilesForImport-Auflistung** erbt von der [**IUnknown-Schnittstelle,**](/windows/desktop/api/unknwn/nn-unknwn-iunknown) verfügt aber nicht über zusätzliche Member.
 
@@ -62,10 +62,10 @@ Die folgenden Eigenschaften werden vom [**COMAdminCatalogObject-Objekt**](comadm
 
 | Eingabe | Wert |
 |----------------|------------------------------------------------------------------------------|
-| BESCHREIBUNG    | Der Name der MSI-Datei, die die Anwendung enthält, die importiert werden kann. |
+| Beschreibung    | Der Name der MSI-Datei, die die Anwendung enthält, die importiert werden kann. |
 | Zugriff         | ReadOnly                                                                     |
 | type           | String                                                                       |
-| Standard        | Nicht zutreffend                                                                          |
+| Standard        | –                                                                          |
 | Mindestsystem | Windows XP                                                                   |
 
 
@@ -78,7 +78,7 @@ Die folgenden Eigenschaften werden vom [**COMAdminCatalogObject-Objekt**](comadm
 
 | Eingabe | Wert |
 |----------------|------------------------------|
-| BESCHREIBUNG    | Der Namen der Anwendung. |
+| Beschreibung    | Der Namen der Anwendung. |
 | Zugriff         | ReadOnly                     |
 | type           | String                       |
 | Standard        | ""                           |
@@ -88,13 +88,13 @@ Die folgenden Eigenschaften werden vom [**COMAdminCatalogObject-Objekt**](comadm
 
  
 
-### <a name="description"></a>BESCHREIBUNG
+### <a name="description"></a>Beschreibung
 
 
 
 | Eingabe | Wert |
 |----------------|-----------------------------------|
-| BESCHREIBUNG    | Eine Beschreibung der Anwendung. |
+| Beschreibung    | Eine Beschreibung der Anwendung. |
 | Zugriff         | ReadOnly                          |
 | type           | String                            |
 | Standard        | ""                                |
@@ -110,7 +110,7 @@ Die folgenden Eigenschaften werden vom [**COMAdminCatalogObject-Objekt**](comadm
 
 | Eingabe | Wert |
 |----------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| BESCHREIBUNG    | Der Name der DLL oder EXE-Datei, die die Anwendung enthält. Diese Eigenschaft wird zurückgegeben, wenn die [**Key-**](/windows/desktop/api/ComAdmin/nf-comadmin-icatalogobject-get_key) oder [**Name-Eigenschaftsmethode**](/windows/desktop/api/ComAdmin/nf-comadmin-icatalogobject-get_name) für ein Objekt dieser Auflistung aufgerufen wird. |
+| Beschreibung    | Der Name der DLL oder EXE-Datei, die die Anwendung enthält. Diese Eigenschaft wird zurückgegeben, wenn die [**Key-**](/windows/desktop/api/ComAdmin/nf-comadmin-icatalogobject-get_key) oder [**Name-Eigenschaftsmethode**](/windows/desktop/api/ComAdmin/nf-comadmin-icatalogobject-get_name) für ein Objekt dieser Auflistung aufgerufen wird. |
 | Zugriff         | ReadOnly                                                                                                                                                                                                                              |
 | type           | String                                                                                                                                                                                                                                |
 | Standard        | ""                                                                                                                                                                                                                                    |
@@ -126,7 +126,7 @@ Die folgenden Eigenschaften werden vom [**COMAdminCatalogObject-Objekt**](comadm
 
 | Eingabe | Wert |
 |----------------|--------------------------------------------------|
-| BESCHREIBUNG    | Gibt an, ob die Anwendung über Benutzer verfügt. |
+| Beschreibung    | Gibt an, ob die Anwendung über Benutzer verfügt. |
 | Zugriff         | ReadOnly                                         |
 | type           | Bool                                             |
 | Standard        | Falsch                                            |
@@ -142,7 +142,7 @@ Die folgenden Eigenschaften werden vom [**COMAdminCatalogObject-Objekt**](comadm
 
 | Eingabe | Wert |
 |----------------|-----------------------------------------------|
-| BESCHREIBUNG    | Gibt an, ob die Anwendung ein Proxy ist. |
+| Beschreibung    | Gibt an, ob die Anwendung ein Proxy ist. |
 | Zugriff         | ReadOnly                                      |
 | type           | Bool                                          |
 | Standard        | Falsch                                         |
@@ -158,7 +158,7 @@ Die folgenden Eigenschaften werden vom [**COMAdminCatalogObject-Objekt**](comadm
 
 | Eingabe | Wert |
 |----------------|-------------------------------------------------|
-| BESCHREIBUNG    | Gibt an, ob die Anwendung ein Dienst ist. |
+| Beschreibung    | Gibt an, ob die Anwendung ein Dienst ist. |
 | Zugriff         | ReadOnly                                        |
 | type           | Bool                                            |
 | Standard        | Falsch                                           |
@@ -174,7 +174,7 @@ Die folgenden Eigenschaften werden vom [**COMAdminCatalogObject-Objekt**](comadm
 
 | Eingabe | Wert |
 |----------------|-----------------------------------------------|
-| BESCHREIBUNG    | Eine Beschreibung der Partition der Anwendung. |
+| Beschreibung    | Eine Beschreibung der Partition der Anwendung. |
 | Zugriff         | ReadOnly                                      |
 | type           | String                                        |
 | Standard        | ""                                            |
@@ -190,7 +190,7 @@ Die folgenden Eigenschaften werden vom [**COMAdminCatalogObject-Objekt**](comadm
 
 | Eingabe | Wert |
 |----------------|------------------------------------------|
-| BESCHREIBUNG    | Die GUID der Anwendungspartition. |
+| Beschreibung    | Die GUID der Anwendungspartition. |
 | Zugriff         | ReadOnly                                 |
 | type           | String                                   |
 | Standard        | ""                                       |
@@ -206,7 +206,7 @@ Die folgenden Eigenschaften werden vom [**COMAdminCatalogObject-Objekt**](comadm
 
 | Eingabe | Wert |
 |----------------|------------------------------------------|
-| BESCHREIBUNG    | Der Name der Partition der Anwendung. |
+| Beschreibung    | Der Name der Partition der Anwendung. |
 | Zugriff         | ReadOnly                                 |
 | type           | String                                   |
 | Standard        | ""                                       |

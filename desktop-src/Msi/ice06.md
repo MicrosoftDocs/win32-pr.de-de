@@ -1,66 +1,66 @@
 ---
-description: ICE06 prüft jede Tabelle, um zu überprüfen, ob alle in der \_ Validierungs Tabelle aufgeführten Spalten in der Tabelle vorhanden sind. Wenn keine Tabelle vorhanden ist, werden alle \_ Validierungs Einträge für diese Tabelle ignoriert.
+description: ICE06 überprüft jede Tabelle, um zu überprüfen, ob alle in der Tabelle Überprüfung aufgeführten Spalten \_ in der Tabelle vorhanden sind. Wenn keine Tabelle vorhanden ist, werden alle \_ Validierungseinträge für diese Tabelle ignoriert.
 ms.assetid: 0c3f21ae-49ea-4cfe-b465-6fdc2b19cbb9
 title: ICE06
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 7e9442d9b2c4089b88299106de875074bd7b0625
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: febccd205b78e90d3dac49f88d0750f803c8cd575b6b76b46cab79a684deea90
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "103960044"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118142568"
 ---
 # <a name="ice06"></a>ICE06
 
-ICE06 prüft jede Tabelle, um zu überprüfen, ob alle in der [ \_ Validierungs Tabelle](-validation-table.md) aufgeführten Spalten in der Tabelle vorhanden sind. Wenn keine Tabelle vorhanden ist, werden alle \_ Validierungs Einträge für diese Tabelle ignoriert.
+ICE06 überprüft jede Tabelle, um zu überprüfen, ob alle in der [ \_ Tabelle Überprüfung](-validation-table.md) aufgeführten Spalten in der Tabelle vorhanden sind. Wenn keine Tabelle vorhanden ist, werden alle \_ Validierungseinträge für diese Tabelle ignoriert.
 
-Der Zweck von ICE06 besteht darin, Instanzen zu erkennen, in denen ein Autor versucht, eine neue \_ Validierungs Tabelle zu verwenden, die eine Schema Änderung mit einer alten Datenbank widerspiegelt, die noch nicht aktualisiert wurde. ICE06 erkennt auch den umgekehrten Fall einer alten \_ Validierungs Tabelle, die mit einer geänderten Datenbank verwendet wird.
+Der Zweck von ICE06 besteht darin, Instanzen zu erkennen, in denen ein Autor versucht, eine neue \_ Validierungstabelle zu verwenden, die eine Schemaänderung mit einer alten Datenbank widerspiegelt, die nicht aktualisiert wurde. ICE06 erkennt auch den umgekehrten Fall einer alten \_ Validierungstabelle, die mit einer geänderten Datenbank verwendet wird.
 
-Beachten Sie, dass die von [ICE03](ice03.md) durchgeführte interne Validierung die Instanz einer Tabellenspalte abfängt, die in der \_ im Columns-Katalog aufgelisteten Überprüfungs Tabelle nicht definiert ist. Durch die Verwendung von "ICE03" und "ICE06" wird sichergestellt, dass jede Spalte in der Datenbank getestet wird.
+Beachten Sie, dass die von [ICE03](ice03.md) durchgeführte interne Validierung die Instanz einer Tabellenspalte abfängt, die nicht in der \_ Validierungstabelle definiert ist, die im Spaltenkatalog aufgeführt ist. Die Verwendung von ICE03 und ICE06 stellt daher sicher, dass jede Spalte in der Datenbank getestet wird.
 
 ## <a name="result"></a>Ergebnis
 
-ICE06 gibt einen Fehler aus, wenn eine Tabellenspalte in der \_ Validierungs Tabelle definiert ist, die nicht in der \_ Spalten Tabelle aufgeführt ist.
+ICE06 gibt einen Fehler aus, wenn in der Tabelle Validierung eine Tabellenspalte definiert \_ ist, die nicht in der Tabelle Spalten aufgeführt \_ ist.
 
 ## <a name="example"></a>Beispiel
 
-Im folgenden Beispiel wird die Nachricht von ICE06 gepostet.
+Im folgenden Beispiel sendet ICE06 die Nachricht.
 
-Column: Version der Tabelle: ModuleSignature ist nicht in der Datenbank definiert.
+Spalte: Version der Tabelle: ModuleSignature ist in der Datenbank nicht definiert.
 
-[ \_ Validierungs Tabelle](-validation-table.md) (partiell)
+[ \_ Validierungstabelle](-validation-table.md) (partiell)
 
 
 
 | Tabelle           | Spalte   |
 |-----------------|----------|
-| ModuleSignature | ModuleID |
-| ModuleSignature | Version  |
+| Modulesignature | ModuleID |
+| Modulesignature | Version  |
 
 
 
  
 
-[ \_ Columns-Tabelle](-columns-table.md) (partiell)
+[ \_ Spaltentabelle](-columns-table.md) (teilweise)
 
 
 
 | Tabelle           | number | name     |
 |-----------------|--------|----------|
-| ModuleSignature | 1      | ModuleID |
+| Modulesignature | 1      | ModuleID |
 
 
 
  
 
-Die Spalte Version der Tabelle ModuleSignature ist nicht in der Datenbank oder in der \_ Tabelle Columns aufgeführt.
+Die Spalte Version der Tabelle ModuleSignature ist nicht in der Datenbank enthalten oder in der \_ Tabelle Spalten aufgeführt.
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[Ice-Referenz](ice-reference.md)
+[ICE-Referenz](ice-reference.md)
 </dt> </dl>
 
  

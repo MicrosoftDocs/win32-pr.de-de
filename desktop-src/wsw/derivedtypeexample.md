@@ -1,29 +1,29 @@
 ---
-title: Derivedtypeexample
-description: In diesem Beispiel werden abgeleitete Typen mithilfe der von wsutil generierten C++-Hilfsfunktionen geschrieben und gelesen. \_ \_ \_ \_ Weitere Informationen zu abgeleiteten Typbeschreibungen finden Sie unter Attribut Feld Zuordnung von WS Type.
+title: DerivedTypeExample
+description: In diesem Beispiel werden abgeleitete Typen mit von Wsutil generierten C++-Hilfsfunktionen geschrieben und gelesen. Weitere Informationen \_ \_ \_ zu Beschreibungen abgeleiteter Typen finden Sie unter WS TYPE ATTRIBUTE FIELD \_ MAPPING.
 ms.assetid: 279663c0-8797-4f87-aaec-8cb8d4046a05
 keywords:
-- "\"Derivedtypeexample\" (Native Webdienste)"
-- Wwsapi
+- DerivedTypeExample Native-Web-Services
+- WWSAPI
 - WWS
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 049f008b65be7404c9fdfe57ae98084c8b69167b
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: e4dbb9bc95a54dfc6315279c3ed9221122d35091d4b06c0bf815c67cb9377bf1
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "106340821"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118026223"
 ---
-# <a name="derivedtypeexample"></a>Derivedtypeexample
+# <a name="derivedtypeexample"></a>DerivedTypeExample
 
-In diesem Beispiel werden abgeleitete Typen mithilfe der von wsutil generierten C++-Hilfsfunktionen geschrieben und gelesen. Weitere Informationen zu abgeleiteten Typbeschreibungen finden Sie unter [**\_ \_ Attribut \_ Feld \_ Zuordnung von WS Type**](/windows/desktop/api/WebServices/ne-webservices-ws_field_mapping) .
+In diesem Beispiel werden abgeleitete Typen mit von Wsutil generierten C++-Hilfsfunktionen geschrieben und gelesen. Weitere Informationen zu Beschreibungen abgeleiteter Typen finden Sie unter [**WS \_ TYPE ATTRIBUTE \_ FIELD \_ \_ MAPPING.**](/windows/desktop/api/WebServices/ne-webservices-ws_field_mapping)
 
--   [DerivedType. cpp](#derivedtypecpp)
--   [DerivedType. xsd](#derivedtypexsd)
+-   [DerivedType.cpp](#derivedtypecpp)
+-   [DerivedType.xsd](#derivedtypexsd)
 -   [Zugehörige Themen](#related-topics)
 
-## <a name="derivedtypecpp"></a>DerivedType. cpp
+## <a name="derivedtypecpp"></a>DerivedType.cpp
 
 
 ```C++
@@ -372,7 +372,7 @@ Exit:
 
 
 
-## <a name="derivedtypexsd"></a>DerivedType. xsd
+## <a name="derivedtypexsd"></a>DerivedType.xsd
 
 ``` syntax
 <?xml version="1.0" encoding="utf-8"?>
@@ -405,12 +405,12 @@ Exit:
 
 <dl> <dt>
 
-[**\_ \_ Attribut \_ Feld \_ Zuordnung von "WS Type"**](/windows/desktop/api/WebServices/ne-webservices-ws_field_mapping)
+[**FELDZUORDNUNG DES \_ WS-TYPATTRIBUTS \_ \_ \_**](/windows/desktop/api/WebServices/ne-webservices-ws_field_mapping)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

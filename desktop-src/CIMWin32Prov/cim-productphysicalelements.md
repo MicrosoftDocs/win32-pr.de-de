@@ -1,5 +1,5 @@
 ---
-description: Die \_ CIM-Klasse ProductPhysicalElements stellt die physischen Elemente dar, aus denen sich ein Produkt zusammen setzt.
+description: Die CIM \_ ProductPhysicalElements-Klasse stellt die physischen Elemente dar, aus denen ein Produkt erstellt wird.
 ms.assetid: cf23098a-f61e-4778-883e-1a5138af3da0
 ms.tgt_platform: multiple
 title: CIM_ProductPhysicalElements-Klasse
@@ -25,14 +25,14 @@ ms.locfileid: "118421641"
 ---
 # <a name="cim_productphysicalelements-class"></a>CIM \_ ProductPhysicalElements-Klasse
 
-Die **\_ CIM-Klasse ProductPhysicalElements** stellt die physischen Elemente dar, aus denen sich ein Produkt zusammen setzt.
+Die **CIM \_ ProductPhysicalElements-Klasse** stellt die physischen Elemente dar, aus denen ein Produkt erstellt wird.
 
 > [!IMPORTANT]
-> Die CIM-Klassen (Distributed Management Task Force) (DMTF (Distributed Management Task Force) (Common Information Model) sind die übergeordneten Klassen, auf denen WMI-Klassen erstellt werden. WMI unterstützt derzeit nur die [CIM 2.x-Versionsschemas.](https://dmtf.org/standards/cim/schemas)
+> Die CIM-Klassen (Distributed Management Task Force) (DMTF) (Common Information Model) sind die übergeordneten Klassen, auf denen WMI-Klassen erstellt werden. WMI unterstützt derzeit nur die [CIM 2.x-Versionsschemas.](https://dmtf.org/standards/cim/schemas)
 
  
 
-Die folgende Syntax wird aus Managed Object Format (MOF)-Code vereinfacht und enthält alle geerbten Eigenschaften. Eigenschaften werden in alphabetischer Reihenfolge und nicht in MOF-Reihenfolge aufgeführt.
+Die folgende Syntax wird durch Managed Object Format (MOF)-Code vereinfacht und enthält alle geerbten Eigenschaften. Eigenschaften werden in alphabetischer Reihenfolge und nicht in MOF-Reihenfolge aufgeführt.
 
 ## <a name="syntax"></a>Syntax
 
@@ -47,13 +47,13 @@ class CIM_ProductPhysicalElements
 
 ## <a name="members"></a>Member
 
-Die **CIM \_ ProductPhysicalElements-Klasse** verfügt über diese Typen von Membern:
+Die **CIM \_ ProductPhysicalElements-Klasse** verfügt über die folgenden Membertypen:
 
 -   [Eigenschaften](#properties)
 
 ### <a name="properties"></a>Eigenschaften
 
-Die **\_ CIM-Klasse ProductPhysicalElements** verfügt über diese Eigenschaften.
+Die **CIM \_ ProductPhysicalElements-Klasse** verfügt über diese Eigenschaften.
 
 <dl> <dt>
 
@@ -79,7 +79,7 @@ Datentyp: **\_ CIM-Produkt**
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**Aggregieren,**](/windows/desktop/WmiSdk/standard-qualifiers) [**Max.**](/windows/desktop/WmiSdk/standard-qualifiers) (1)
+Qualifizierer: [**Aggregate**](/windows/desktop/WmiSdk/standard-qualifiers), [**Max**](/windows/desktop/WmiSdk/standard-qualifiers) (1)
 </dt> </dl>
 
 Verweis auf das Produkt.
@@ -90,7 +90,7 @@ Verweis auf das Produkt.
 
 WMI implementiert diese Klasse nicht.
 
-Diese Dokumentation wird von den CIM-Klassenbeschreibungen abgeleitet, die von dmtf veröffentlicht wurden. Möglicherweise hat Microsoft Änderungen vorgenommen, um kleinere Fehler zu korrigieren, den Dokumentationsstandards des Microsoft SDK zu entsprechen oder weitere Informationen bereitzustellen.
+Diese Dokumentation wird von den CIM-Klassenbeschreibungen abgeleitet, die von DMTF veröffentlicht wurden. Microsoft hat möglicherweise Änderungen vorgenommen, um kleinere Fehler zu beheben, die Dokumentationsstandards des Microsoft SDK zu erfüllen oder weitere Informationen zur Verfügung zu stellen.
 
 ## <a name="requirements"></a>Anforderungen
 

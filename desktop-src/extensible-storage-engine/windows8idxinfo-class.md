@@ -1,6 +1,6 @@
 ---
-description: 'Weitere Informationen finden Sie unter: Windows8IdxInfo-Klasse'
-title: Windows8IdxInfo-Klasse (Microsoft. ISAM. ESENT. Interop. Windows8)
+description: 'Weitere Informationen zu: Windows8IdxInfo-Klasse'
+title: Windows8IdxInfo-Klasse (Microsoft.Isam.Esent.Interop.Windows8)
 TOCTitle: Windows8IdxInfo class
 ms:assetid: T:Microsoft.Isam.Esent.Interop.Windows8.Windows8IdxInfo
 ms:mtpsurl: https://msdn.microsoft.com/library/microsoft.isam.esent.interop.windows8.windows8idxinfo(v=EXCHG.10)
@@ -24,24 +24,24 @@ api_type:
 api_location:
 - Microsoft.Isam.Esent.Interop.dll
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: 9c258cf0eae196d727f141b52434d1d3fc87d922
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 728994aa0b0bc7030526a4a59d258c62d7652a06946933b8f439352f63531300
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106348847"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118069100"
 ---
 # <a name="windows8idxinfo-class"></a>Windows8IdxInfo-Klasse
 
-Spalten Informationsebenen, die zur Windows 8-Version von ESENT hinzugefügt wurden.
+Spalteninformationsebenen, die der Windows 8 Version von ESENT hinzugefügt wurden.
 
 ## <a name="inheritance-hierarchy"></a>Vererbungshierarchie
 
 [System.Object](/dotnet/api/system.object)  
-  Microsoft. ISAM. ESENT. Interop. Windows8. Windows8IdxInfo  
+  Microsoft.Isam.Esent.Interop.Windows8.Windows8IdxInfo  
 
-**Namespace:**  [Microsoft. ISAM. ESENT. Interop. Windows8](./microsoft.isam.esent.interop.windows8-namespace.md)  
-**Assembly:**  Microsoft. ISAM. ESENT. Interop (in Microsoft.Isam.Esent.Interop.dll)
+**Namespace:**  [Microsoft.Isam.Esent.Interop.Windows8](./microsoft.isam.esent.interop.windows8-namespace.md)  
+**Assembly:**  Microsoft.Isam.Esent.Interop (in Microsoft.Isam.Esent.Interop.dll)
 
 ## <a name="syntax"></a>Syntax
 
@@ -62,6 +62,6 @@ Alle öffentlichen statischen Elemente dieses Typs (Shared in Microsoft Visual�
 
 ## <a name="see-also"></a>Siehe auch
 
-#### <a name="reference"></a>Referenz
+#### <a name="reference"></a>Verweis
 
-[Microsoft. ISAM. ESENT. Interop. Windows8-Namespace](./microsoft.isam.esent.interop.windows8-namespace.md)
+[Microsoft.Isam.Esent.Interop.Windows8-Namespace](./microsoft.isam.esent.interop.windows8-namespace.md)
