@@ -1,9 +1,9 @@
 ---
-title: WM_CAP_DLG_VIDEOCOMPRESSION (Vfw.h)
-description: In der MELDUNG \_ WM CAP \_ DLG VIDEOCOMPRESSION wird ein Dialogfeld angezeigt, in dem der Benutzer eine Während des Erfassungsprozesses zu \_ verwendende Gruppe auswählen kann.
+title: WM_CAP_DLG_VIDEOCOMPRESSION Nachricht (Vfw.h)
+description: Die \_ WM CAP \_ DLG \_ VIDEOCOMPRESSION-Meldung zeigt ein Dialogfeld an, in dem der Benutzer eine Während des Erfassungsprozesses zu verwendende Komprimierung auswählen kann.
 ms.assetid: 526e4b5d-49a4-4bb5-92d6-cdd567636354
 keywords:
-- WM_CAP_DLG_VIDEOCOMPRESSION-Nachricht Windows Multimedia
+- WM_CAP_DLG_VIDEOCOMPRESSION nachricht Windows Multimedia
 topic_type:
 - apiref
 api_name:
@@ -23,7 +23,7 @@ ms.locfileid: "118135443"
 ---
 # <a name="wm_cap_dlg_videocompression-message"></a>WM \_ CAP \_ DLG \_ VIDEOCOMPRESSION-Meldung
 
-In **der MELDUNG WM CAP \_ \_ DLG \_ VIDEOCOMPRESSION** wird ein Dialogfeld angezeigt, in dem der Benutzer während des Erfassungsprozesses einen Kasten auswählen kann, der verwendet werden soll. Die Liste der verfügbaren Produkte kann je nach video-Format variieren, das im Dialogfeld Videoformat des Erfassungstreibers ausgewählt ist. Sie können diese Nachricht explizit oder mithilfe des [**Makros capDlgVideoCompression**](/windows/desktop/api/Vfw/nf-vfw-capdlgvideocompression) senden.
+Die **WM \_ CAP \_ DLG \_ VIDEOCOMPRESSION-Meldung** zeigt ein Dialogfeld an, in dem der Benutzer eine Während des Erfassungsprozesses zu verwendende Komprimierung auswählen kann. Die Liste der verfügbaren Zuschauer kann je nach dem Videoformat variieren, das im Dialogfeld Videoformat des Aufzeichnungstreibers ausgewählt ist. Sie können diese Nachricht explizit oder mithilfe des [**Makros capDlgVideoCompression**](/windows/desktop/api/Vfw/nf-vfw-capdlgvideocompression) senden.
 
 
 ```C++
@@ -36,11 +36,11 @@ lParam = 0L;
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt **TRUE zurück,** wenn erfolgreich, **andernfalls FALSE.**
+Gibt **TRUE** zurück, wenn erfolgreich, **andernfalls FALSE.**
 
 ## <a name="remarks"></a>Hinweise
 
-Verwenden Sie diese Nachricht mit Erfassungstreibern, die Frames nur im \_ BI-RGB-Format bereitstellen. Diese Meldung ist besonders nützlich beim Schritterfassungsvorgang, um Erfassung und Komprimierung in einem einzelnen Vorgang zu kombinieren. Das Komprimieren von Frames mit einer Software, die im Rahmen eines Echtzeiterfassungs-Vorgangs verwendet wird, ist höchstwahrscheinlich zu zeitaufwändig.
+Verwenden Sie diese Meldung mit Erfassungstreibern, die Frames nur im BI \_ RGB-Format bereitstellen. Diese Meldung ist besonders nützlich beim Schritterfassungsvorgang, um Erfassung und Komprimierung in einem einzigen Vorgang zu kombinieren. Das Komprimieren von Frames mit einer Softwareeinbindung im Rahmen eines Echtzeiterfassungsvorgangs ist wahrscheinlich zu zeitaufwändig für die Ausführung.
 
 Die Komprimierung wirkt sich nicht auf die Frames aus, die in die Zwischenablage kopiert werden.
 
@@ -56,14 +56,14 @@ Die Komprimierung wirkt sich nicht auf die Frames aus, die in die Zwischenablage
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 
 [Videoaufnahme](video-capture.md)
 </dt> <dt>
 
-[Videoaufnahmenachrichten](video-capture-messages.md)
+[Video Capture Messages](video-capture-messages.md)
 </dt> </dl>
 
  

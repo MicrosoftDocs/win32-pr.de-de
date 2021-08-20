@@ -1,37 +1,37 @@
 ---
-title: Multimedia-Audiodatei
-description: Multimedia-Audiodatei
+title: Multimediaaudio
+description: Multimediaaudio
 ms.assetid: 29c3e8f9-2561-4157-ad62-5c8f954d1417
 keywords:
-- Windows-Multimedia, Audiodatei
-- Multimedia, Audiodatei
-- Multimedia-Audioinformationen, Informationen zu
-- Audioinformationen, Informationen
+- Windows multimedia,audio
+- Multimedia, Audio
+- Multimediaaudio, Informationen
+- Audio, Informationen
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: e34c23fc0c3b2d6a2bddf00d518dcf99d7faf684
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: 3fa906cacb9ce554ee2c391976ecb89b0a10e6bbeacb0d4f00c064410515cb01
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "104310276"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118137117"
 ---
-# <a name="multimedia-audio"></a>Multimedia-Audiodatei
+# <a name="multimedia-audio"></a>Multimediaaudio
 
-Windows stellt Funktionen bereit, mit denen eine Anwendung Audiodienste hinzufügen kann. Die Multimedia-Audiofunktionen wurden in 16-Bit-Fenstern eingeführt. Viele ihrer Features wurden durch Features in DirectX abgelöst. Weitere Informationen finden Sie in der DirectX-Dokumentation.
+Windows stellt Funktionen zur Verfügung, mit denen eine Anwendung Audiodienste hinzufügen kann. Die Multimedia-Audiofunktionen wurden in 16-Bit-Windows. Viele ihrer Features wurden durch Features in DirectX ersetzt. Weitere Informationen finden Sie in der DirectX-Dokumentation.
 
 Die folgenden Themen werden in der Multimedia-Audiodokumentation erläutert.
 
 -   [Audiokomprimierungs-Manager](audio-compression-manager.md)
 -   [Audiomixer](audio-mixers.md)
--   [Digital Instrumentation Digital Interface (MIDI)](musical-instrument-digital-interface--midi.md)
--   [Waveform-Audiodatei](waveform-audio.md)
+-   [Instrument Digital Interface (KEYBOARD)](musical-instrument-digital-interface--midi.md)
+-   [Waveform-Audio](waveform-audio.md)
 
-Audiodaten können auch über die Medien Steuerungs Schnittstelle abgespielt werden. Weitere Informationen finden Sie unter [MCI](mci.md).
+Audio kann auch mithilfe der Media Control Interface abgespielt werden. Weitere Informationen finden Sie unter [MCI](mci.md).
 
- 
+ 
 
- 
+ 
 
 
 

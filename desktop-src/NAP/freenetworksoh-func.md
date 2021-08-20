@@ -1,9 +1,9 @@
 ---
-title: Freenetworksoh-Funktion (naputil. h)
-description: Gibt eine networksoh-Datenstruktur frei.
+title: FreeNetworkSoH-Funktion (NapUtil.h)
+description: Gibt eine NetworkSoH-Datenstruktur frei.
 ms.assetid: a27d54a0-8b9c-4bf7-909c-1de5db55f429
 keywords:
-- Freenetworksoh-Funktion NAP
+- FreeNetworkSoH-Funktion NAP
 topic_type:
 - apiref
 api_name:
@@ -14,21 +14,21 @@ api_type:
 - DllExport
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: e9ea2b72011332939aa0c814203d0004949c8341
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: f0c2d3db800860295e0fa6173422ffeec0ca144550cc3ddfdf8a1ea391b6c6eb
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104478453"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118134751"
 ---
-# <a name="freenetworksoh-function"></a>Freenetworksoh-Funktion
+# <a name="freenetworksoh-function"></a>FreeNetworkSoH-Funktion
 
 > [!Note]  
-> Die Netzwerk Zugriffsschutz-Plattform ist ab Windows 10 nicht verfügbar.
+> Die Netzwerkzugriffsschutz-Plattform ist ab dem Windows 10
 
  
 
-Die **freenetworksoh** -Funktion gibt eine [**networksoh**](/windows/win32/api/naptypes/ns-naptypes-networksoh) -Datenstruktur frei.
+Die **FreeNetworkSoH-Funktion** gibt eine [**NetworkSoH-Datenstruktur**](/windows/win32/api/naptypes/ns-naptypes-networksoh) frei.
 
 ## <a name="syntax"></a>Syntax
 
@@ -45,22 +45,22 @@ NAPAPI VOID WINAPI FreeNetworkSoH(
 
 <dl> <dt>
 
-*Network SoH* \[ in\]
+*networkSoh* \[ In\]
 </dt> <dd>
 
-Ein Zeiger auf die Datenstruktur von [**networksoh**](/windows/win32/api/naptypes/ns-naptypes-networksoh) , die freigegeben werden soll.
+Ein Zeiger auf die frei zu machende [**NetworkSoH-Datenstruktur.**](/windows/win32/api/naptypes/ns-naptypes-networksoh)
 
 </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Alle vom NAP-System unterstützten com-Schnittstellen verwenden Standard-com-Speicher Verwaltungsregeln und die com-Speicher Belegungs Funktion (**cotaskmembelegc** und **CoTaskMemFree**):
+Alle vom NAP-System unterstützten COM-Schnittstellen verwenden standardmäßige COM-Speicherverwaltungsregeln und die COM-Speicherzuweisungen (**CoTaskMemAlloc** und **CoTaskMemFree**):
 
--   **In** -Parameter werden vom Aufrufer zugeordnet und freigegeben.
--   Out-Parameter werden vom **aufgerufenen** zugeordnet und vom Aufrufer mithilfe von **cotaskmem** freigegeben.
--   **In/out-** Parameter werden vom Aufrufer zugeordnet, vom aufgerufenen freigegeben und neu zugeordnet und schließlich mit **cotaskmem** vom Aufrufer freigegeben.
+-   **In** werden Parameter vom Aufrufer zugeordnet und frei.
+-   **Out-Parameter** werden vom Aufrufer zugeordnet und vom Aufrufer mithilfe von **CoTaskMem frei.**
+-   **Ein-/Aus-Parameter** werden vom Aufrufer zugeordnet, vom Aufrufer frei und neu zugeordnet und schließlich vom Aufrufer mithilfe von **CoTaskMem frei.**
 
-Alle NAP-Funktionen zum Freigeben von Speicher freigeben auch alle eingebetteten Zeiger.
+Alle NAP-Funktionen zum Freien von Arbeitsspeicher geben auch alle eingebetteten Zeiger frei.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -68,9 +68,9 @@ Alle NAP-Funktionen zum Freigeben von Speicher freigeben auch alle eingebetteten
 
 | Anforderung | Wert |
 |-------------------------------------|--------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                       |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/>                                 |
-| Header<br/>                   | <dl> <dt>Naputil. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ Vista-Desktop-Apps\]<br/>                                       |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/>                                 |
+| Header<br/>                   | <dl> <dt>NapUtil.h</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Qutil.dll</dt> </dl> |
 
 

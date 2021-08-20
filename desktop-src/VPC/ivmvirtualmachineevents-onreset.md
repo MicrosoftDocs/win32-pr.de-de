@@ -1,11 +1,11 @@
 ---
-title: Ivmvirtualmachineevents onreset-Methode (vpccominterfaces. h)
+title: IVMVirtualMachineEvents OnReset-Methode (VPCCOMInterfaces.h)
 description: Empfängt eine Benachrichtigung, dass ein virtueller Computer zurückgesetzt wurde.
 ms.assetid: 10a66aea-9a8f-4663-8eb6-cc35f361e43f
 keywords:
-- Onreset-Methode Virtual PC
-- Onreset-Methode Virtual PC, ivmvirtualmachineevents-Schnittstelle
-- Ivmvirtualmachineevents Interface Virtual PC, onreset-Methode
+- OnReset-Methode Virtueller PC
+- OnReset-Methode Virtueller PC, IVMVirtualMachineEvents-Schnittstelle
+- IVMVirtualMachineEvents-Schnittstelle Virtueller PC, OnReset-Methode
 topic_type:
 - apiref
 api_name:
@@ -16,16 +16,16 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 6345d0e925777fbecf42247b3e3064b9f993c7c9
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 4101885469de59a7cd2740dc07db44101ce130df037540306f4afdab78c80fd5
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "103949377"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118122903"
 ---
-# <a name="ivmvirtualmachineeventsonreset-method"></a>Ivmvirtualmachineevents:: onreset-Methode
+# <a name="ivmvirtualmachineeventsonreset-method"></a>IVMVirtualMachineEvents::OnReset-Methode
 
-\[Windows Virtual PC ist nicht mehr für die Verwendung ab Windows 8 verfügbar. Verwenden Sie stattdessen den [Hyper-V-WMI-Anbieter (v2)](/windows/desktop/HyperV_v2/windows-virtualization-portal).\]
+\[Windows Der virtuelle PC ist ab Windows 8 nicht mehr für die Verwendung verfügbar. Verwenden Sie stattdessen den [Hyper-V-WMI-Anbieter (V2).](/windows/desktop/HyperV_v2/windows-virtualization-portal)\]
 
 Empfängt eine Benachrichtigung, dass ein virtueller Computer zurückgesetzt wurde.
 
@@ -44,11 +44,11 @@ Diese Methode hat keine Parameter.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Wenn diese Methode erfolgreich ausgeführt wird, gibt Sie **S \_ OK** zurück. Andernfalls wird ein **HRESULT** -Fehlercode zurückgegeben.
+Wenn diese Methode erfolgreich ist, wird **S \_ OK** zurückgegeben. Andernfalls wird ein **HRESULT-Fehlercode** zurückgegeben.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Diese Methode wird aufgerufen, wenn der virtuelle Computer zurückgesetzt wurde. Das Client Programm muss diese Schnittstellen Methode implementieren, um Benachrichtigungen über das vmvirtualmachineevent Reset-Ereignis zu erhalten, das \_ von [**ivmvirtualmachine**](ivmvirtualmachine.md)stammt.
+Diese Methode wird aufgerufen, wenn der virtuelle Computer zurückgesetzt wurde. Das Clientprogramm muss diese Schnittstellenmethode implementieren, um Benachrichtigungen über das Ereignis vmVirtualMachineEvent Reset zu erhalten, das \_ von [**IVMVirtualMachine**](ivmvirtualmachine.md)stammt.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -56,12 +56,12 @@ Diese Methode wird aufgerufen, wenn der virtuelle Computer zurückgesetzt wurde.
 
 | Anforderung | Wert |
 |-------------------------------------|-----------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows 7 \[ -Desktop-Apps\]<br/>                                                    |
+| Unterstützte Mindestversion (Client)<br/> | nur Windows 7 \[ Desktop-Apps\]<br/>                                                    |
 | Unterstützte Mindestversion (Server)<br/> | Nicht unterstützt<br/>                                                                     |
 | Ende des Supports (Client)<br/>    | Windows 7<br/>                                                                          |
 | Produkt<br/>                  | Windows Virtual PC<br/>                                                                 |
-| Header<br/>                   | <dl> <dt>Vpccominterfaces. h</dt> </dl> |
-| IID<br/>                      | Diid \_ ivmvirtualmachineevents ist als 9d84f560-bb67-4961-BD12-a4da780c67e4 definiert.<br/>   |
+| Header<br/>                   | <dl> <dt>VPCCOMInterfaces.h</dt> </dl> |
+| IID<br/>                      | DIID \_ IVMVirtualMachineEvents ist als 9d84f560-bb67-4961-bd12-a4da780c67e4 definiert.<br/>   |
 
 
 
@@ -69,7 +69,7 @@ Diese Methode wird aufgerufen, wenn der virtuelle Computer zurückgesetzt wurde.
 
 <dl> <dt>
 
-[**Ivmvirtualmachineevents**](ivmvirtualmachineevents.md)
+[**IVMVirtualMachineEvents**](ivmvirtualmachineevents.md)
 </dt> </dl>
 
  

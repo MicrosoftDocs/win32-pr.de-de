@@ -39,7 +39,7 @@ Definiert das untergeordnete Element für das [**Principals-Element.**](tasksche
 
 
 
-| Element                                                                  | type                                                                   | BESCHREIBUNG                                                    |
+| Element                                                                  | Typ                                                                   | Beschreibung                                                    |
 |--------------------------------------------------------------------------|------------------------------------------------------------------------|----------------------------------------------------------------|
 | [**Prinzipal**](taskschedulerschema-principal-principaltype-element.md) | [**principalType**](taskschedulerschema-principaltype-complextype.md) | Gibt die Sicherheitsanmeldeinformationen für einen Prinzipal an.<br/> |
 

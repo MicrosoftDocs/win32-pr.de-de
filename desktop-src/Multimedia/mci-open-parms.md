@@ -1,9 +1,9 @@
 ---
-title: MCI_OPEN_PARMS-Struktur (mciapi. h)
-description: Die geöffnete MCI- \_ \_ Struktur enthält Informationen für den MCI- \_ Befehl "Öffnen".
+title: MCI_OPEN_PARMS -Struktur (Mciapi.h)
+description: Die MCI \_ OPEN \_ PARMS-Struktur enthält Informationen für den MCI \_ OPEN-Befehl.
 ms.assetid: d22cefeb-3d49-47cf-a946-f73c77ae43fd
 keywords:
-- MCI_OPEN_PARMS Struktur Windows Multimedia
+- MCI_OPEN_PARMS-Struktur Windows Multimedia
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 658f97a9b2677347c9818265c1f05c2115c95fdd
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: f80d01f41db904cea583f83aa446e718d1067e99e4d8bac3a3c6791ef5696f83
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104103442"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118138305"
 ---
-# <a name="mci_open_parms-structure"></a>MCI \_ - \_ Struktur mit offenen Parametern
+# <a name="mci_open_parms-structure"></a>MCI \_ OPEN \_ PARMS-Struktur
 
-Die **\_ geöffnete \_ MCI** -Struktur enthält Informationen für den MCI-Befehl " [**\_ Öffnen**](mci-open.md) ".
+Die **MCI \_ OPEN \_ PARMS-Struktur** enthält Informationen für den [**MCI \_ OPEN-Befehl.**](mci-open.md)
 
 ## <a name="syntax"></a>Syntax
 
@@ -44,44 +44,44 @@ typedef struct {
 
 <dl> <dt>
 
-**dwcallback**
+**dwCallback**
 </dt> <dd>
 
-Das nieder wertige Wort gibt ein Fenster Handle an, das für das MCI-Benachrichtigungs Kennzeichen verwendet wird \_ .
+Das Wort in niedriger Reihenfolge gibt ein Fensterhand handle an, das für das MCI \_ NOTIFY-Flag verwendet wird.
 
 </dd> <dt>
 
-**WDE viceid**
+**wDeviceID**
 </dt> <dd>
 
-An die Anwendung zurückgegebener Bezeichner.
+Bezeichner, der an die Anwendung zurückgegeben wird.
 
 </dd> <dt>
 
-**lpstraude vicetype**
+**lpstrDeviceType**
 </dt> <dd>
 
-Der Name oder Konstantenbezeichner des Gerätetyps. (Der Name des Geräts wird in der Regel aus der Registrierung oder SYSTEM.INI Datei abgerufen.) Wenn dieser Member eine Konstante ist, kann er einer der Werte sein, die in den [MCI-Gerätetypen](mci-device-types.md)aufgeführt sind.
+Name oder konstanter Bezeichner des Gerätetyps. (Der Name des Geräts wird in der Regel aus der Registrierung oder SYSTEM.INI erhalten.) Wenn es sich bei diesem Member um eine Konstante handelt, kann es sich um einen der unter [MCI-Gerätetypen aufgeführten Werte handelt.](mci-device-types.md)
 
 </dd> <dt>
 
-**lpstrelementname**
+**lpstrElementName**
 </dt> <dd>
 
 Device-Element (häufig ein Pfad).
 
 </dd> <dt>
 
-**lpstraualias**
+**lpstrAlias**
 </dt> <dd>
 
 Optionaler Gerätealias.
 
 </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Wenn Sie den Membern dieser Strukturdaten zuweisen, legen Sie die entsprechenden Flags im *fdwcommand* -Parameter der [**mciSendCommand**](/previous-versions//dd757160(v=vs.85)) -Funktion fest, um die Elemente zu überprüfen.
+Legen Sie beim Zuweisen von Daten zu den Membern dieser Struktur die entsprechenden Flags im *fdwCommand-Parameter* der [**mciSendCommand-Funktion**](/previous-versions//dd757160(v=vs.85)) fest, um die Member zu überprüfen.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -91,7 +91,7 @@ Wenn Sie den Membern dieser Strukturdaten zuweisen, legen Sie die entsprechenden
 |-------------------------------------|-------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[nur Desktop-Apps\]<br/>                          |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                                |
-| Header<br/>                   | <dl> <dt>Mciapi. h</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Mciapi.h</dt> </dl> |
 
 
 
@@ -99,13 +99,13 @@ Wenn Sie den Membern dieser Strukturdaten zuweisen, legen Sie die entsprechenden
 
 <dl> <dt>
 
-[**MCI**](mci.md)
+[**Mci**](mci.md)
 </dt> <dt>
 
 [**MCI-Strukturen**](mci-structures.md)
 </dt> <dt>
 
-[**MCI \_ geöffnet**](mci-open.md)
+[**MCI \_ OPEN**](mci-open.md)
 </dt> <dt>
 
 [**mciSendCommand**](/previous-versions//dd757160(v=vs.85))

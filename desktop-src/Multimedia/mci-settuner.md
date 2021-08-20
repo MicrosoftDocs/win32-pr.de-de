@@ -1,9 +1,9 @@
 ---
-title: MCI_SETTUNER Befehl (MMSYSTEM. h)
-description: Der MCI \_ settuner-Befehl legt den aktuellen Channel auf dem Tuner fest. VCR-Geräte erkennen diesen Befehl.
+title: MCI_SETTUNER Befehl (Mmsystem.h)
+description: Der Befehl MCI \_ SETTUNER legt den aktuellen Kanal auf dem Tuner fest. VCR-Geräte erkennen diesen Befehl.
 ms.assetid: d9f4d6b8-ba73-40ec-a2f9-76adab0fd6f4
 keywords:
-- MCI_SETTUNER Befehl Windows-Multimedia
+- MCI_SETTUNER Befehl Windows Multimedia
 topic_type:
 - apiref
 api_name:
@@ -14,18 +14,18 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: d5774a927e1f41cf5d3bf42d6e93e532e0c2961a
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: dc0e4d812a89c8b7ca5a8e65b322e19dcb4f7d4e7e2ef8c49745ebb16e22af65
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104040985"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118138106"
 ---
-# <a name="mci_settuner-command"></a>MCI \_ settuner-Befehl
+# <a name="mci_settuner-command"></a>MCI \_ SETTUNER-Befehl
 
-Der MCI \_ settuner-Befehl legt den aktuellen Channel auf dem Tuner fest. VCR-Geräte erkennen diesen Befehl.
+Der Befehl MCI \_ SETTUNER legt den aktuellen Kanal auf dem Tuner fest. VCR-Geräte erkennen diesen Befehl.
 
-Um diesen Befehl zu senden, wenden Sie die [**mciSendCommand**](/previous-versions//dd757160(v=vs.85)) -Funktion mit den folgenden Parametern an.
+Rufen Sie zum Senden dieses Befehls die [**mciSendCommand-Funktion**](/previous-versions//dd757160(v=vs.85)) mit den folgenden Parametern auf.
 
 
 ```C++
@@ -43,76 +43,76 @@ MCIERROR mciSendCommand(
 
 <dl> <dt>
 
-<span id="wDeviceID"></span><span id="wdeviceid"></span><span id="WDEVICEID"></span>*WDE viceid*
+<span id="wDeviceID"></span><span id="wdeviceid"></span><span id="WDEVICEID"></span>*wDeviceID*
 </dt> <dd>
 
-Geräte Bezeichner des MCI-Geräts, das die Befehls Meldung empfangen soll.
+Gerätebezeichner des MCI-Geräts, das die Befehlsmeldung empfangen soll.
 
 </dd> <dt>
 
-<span id="dwFlags"></span><span id="dwflags"></span><span id="DWFLAGS"></span>*dwFlags*
+<span id="dwFlags"></span><span id="dwflags"></span><span id="DWFLAGS"></span>*Dwflags*
 </dt> <dd>
 
-MCI- \_ Benachrichtigung, MCI- \_ Wartezeit oder MCI- \_ Test. Weitere Informationen zu diesen Flags finden Sie [unter Wait-, notify-und testflags](the-wait-notify-and-test-flags.md).
+MCI \_ NOTIFY, MCI \_ WAIT oder MCI \_ TEST. Informationen zu diesen Flags finden Sie unter [Die Warte-, Benachrichtigungs- und Testflags.](the-wait-notify-and-test-flags.md)
 
 </dd> <dt>
 
-<span id="lpSetTuner"></span><span id="lpsettuner"></span><span id="LPSETTUNER"></span>*lpsettuner*
+<span id="lpSetTuner"></span><span id="lpsettuner"></span><span id="LPSETTUNER"></span>*lpSetTuner*
 </dt> <dd>
 
-Zeiger auf eine [**MCI \_ VCR \_ settuner \_**](mci-vcr-settuner-parms.md) -Struktur.
+Zeiger auf eine [**MCI \_ VCR \_ SETTUNER \_ PARMS-Struktur.**](mci-vcr-settuner-parms.md)
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt 0 (null) zurück, wenn erfolgreich, andernfalls einen Fehler.
+Gibt 0 (null) zurück, wenn der Fehler erfolgreich war, oder andernfalls ein Fehler.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
 Die folgenden zusätzlichen Flags gelten für VCR-Geräte:
 
 <dl> <dt>
 
-<span id="MCI_VCR_SETTUNER_CHANNEL"></span><span id="mci_vcr_settuner_channel"></span>MCI \_ VCR \_ settuner- \_ Kanal
+<span id="MCI_VCR_SETTUNER_CHANNEL"></span><span id="mci_vcr_settuner_channel"></span>MCI \_ VCR \_ SETTUNER-KANAL \_
 </dt> <dd>
 
-Der **dwchannel** -Member der-Struktur, die von *lpsettuner* identifiziert wird, enthält die neue Kanalnummer.
+Der **dwChannel-Member** der von *lpSetTuner* identifizierten Struktur enthält die neue Kanalnummer.
 
 </dd> <dt>
 
-<span id="MCI_VCR_SETTUNER_CHANNEL_DOWN"></span><span id="mci_vcr_settuner_channel_down"></span>MCI \_ VCR \_ settuner- \_ Kanal \_ nach unten
+<span id="MCI_VCR_SETTUNER_CHANNEL_DOWN"></span><span id="mci_vcr_settuner_channel_down"></span>MCI \_ VCR \_ SETTUNER \_ CHANNEL \_ DOWN
 </dt> <dd>
 
-Verringert den tunkanchannel.
+Dekrementt den Tunerkanal.
 
 </dd> <dt>
 
-<span id="MCI_VCR_SETTUNER_CHANNEL_SEEK_DOWN"></span><span id="mci_vcr_settuner_channel_seek_down"></span>MCI \_ VCR \_ settuner- \_ Channel- \_ Suche \_ nach unten
+<span id="MCI_VCR_SETTUNER_CHANNEL_SEEK_DOWN"></span><span id="mci_vcr_settuner_channel_seek_down"></span>MCI \_ VCR \_ SETTUNER \_ CHANNEL \_ SEEK \_ DOWN
 </dt> <dd>
 
-Sucht nach einem gültigen Kanal in umgekehrter Richtung.
+Sucht in umgekehrter Richtung nach einem gültigen Kanal.
 
 </dd> <dt>
 
-<span id="MCI_VCR_SETTUNER_CHANNEL_SEEK_UP"></span><span id="mci_vcr_settuner_channel_seek_up"></span>MCI \_ VCR \_ settuner- \_ Kanal \_ Suche \_
+<span id="MCI_VCR_SETTUNER_CHANNEL_SEEK_UP"></span><span id="mci_vcr_settuner_channel_seek_up"></span>MCI \_ VCR \_ SETTUNER \_ CHANNEL \_ SEEK \_ UP
 </dt> <dd>
 
-Sucht in Vorwärtsrichtung nach einem gültigen Kanal.
+Sucht nach einem gültigen Kanal in Vorwärtsrichtung.
 
 </dd> <dt>
 
-<span id="MCI_VCR_SETTUNER_CHANNEL_UP"></span><span id="mci_vcr_settuner_channel_up"></span>MCI \_ VCR \_ settuner- \_ Kanal \_ aufwärts
+<span id="MCI_VCR_SETTUNER_CHANNEL_UP"></span><span id="mci_vcr_settuner_channel_up"></span>MCI \_ VCR \_ SETTUNER \_ CHANNEL \_ UP
 </dt> <dd>
 
-Inkremente den tunkanchannel.
+Erhöht den Tunerkanal.
 
 </dd> <dt>
 
-<span id="MCI_VCR_SETTUNER_NUMBER"></span><span id="mci_vcr_settuner_number"></span>MCI \_ VCR- \_ settuner- \_ Nummer
+<span id="MCI_VCR_SETTUNER_NUMBER"></span><span id="mci_vcr_settuner_number"></span>MCI \_ VCR \_ SETTUNER \_ NUMBER
 </dt> <dd>
 
-Der **dwnumber** -Member der Struktur, die von *lpsettuner* identifiziert wird, gibt an, welcher logische Tuner mit diesem Befehl beeinflusst werden soll.
+Der **dwNumber-Member** der von *lpSetTuner* identifizierten Struktur gibt an, welcher logische Tuner mit diesem Befehl beeinflusst werden soll.
 
 </dd> </dl>
 
@@ -124,7 +124,7 @@ Der **dwnumber** -Member der Struktur, die von *lpsettuner* identifiziert wird, 
 |-------------------------------------|-----------------------------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[nur Desktop-Apps\]<br/>                                                |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                                                      |
-| Header<br/>                   | <dl> <dt>MMSYSTEM. h (Include Windows. h)</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Mmsystem.h (include Windows.h)</dt> </dl> |
 
 
 
@@ -132,7 +132,7 @@ Der **dwnumber** -Member der Struktur, die von *lpsettuner* identifiziert wird, 
 
 <dl> <dt>
 
-[MCI](mci.md)
+[Mci](mci.md)
 </dt> <dt>
 
 [MCI-Befehle](mci-commands.md)

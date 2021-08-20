@@ -1,19 +1,19 @@
 ---
 description: Viele Funktionen geben eine potenziell große Datenmenge an eine Adresse zurück, die von der Anwendung als einer der Parameter bereitgestellt wird.
 ms.assetid: ef99edef-39b2-4d78-9c01-13720215d47f
-title: Abrufen von Daten mit unbekannter Länge
+title: Abrufen von Daten unbekannter Länge
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: bd30620018f3c4871bd27299c3dd21ae42936c51
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: d9a71a30e935dd20bee6cce8f6dbc00a3b61478a90f4ea2139d7daaddc6894da
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "103863863"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117975014"
 ---
-# <a name="retrieving-data-of-unknown-length"></a>Abrufen von Daten mit unbekannter Länge
+# <a name="retrieving-data-of-unknown-length"></a>Abrufen von Daten unbekannter Länge
 
-Viele Funktionen geben eine potenziell große Datenmenge an eine Adresse zurück, die von der Anwendung als einer der Parameter bereitgestellt wird. In all diesen Fällen wird der Vorgang in einer ähnlichen, nicht identischen Weise ausgeführt. Der-Parameter, der auf den Speicherort der zurückgegebenen Daten zeigt, verwendet die Notation-Konvention, bei der PB oder PV die ersten beiden Zeichen des Parameter namens sind. Ein anderer Parameter verfügt über eine Platine als die ersten drei Zeichen des Parameter namens. Dieser Parameter stellt die Größe (in Bytes) der Daten dar, die an den PB-oder PV-Speicherort zurückgegeben werden. Sehen Sie sich beispielsweise die folgende Funktionsspezifikation an:
+Viele Funktionen geben eine potenziell große Datenmenge an eine Adresse zurück, die von der Anwendung als einer der Parameter bereitgestellt wird. In all diesen Fällen wird der Vorgang auf ähnliche, wenn nicht identische Weise ausgeführt. Der Parameter, der auf die Position der zurückgegebenen Daten zeigt, verwendet die Notationskonvention, wobei pb oder pv die ersten beiden Zeichen des Parameternamens sind. Ein anderer Parameter hat die ersten drei Zeichen des Parameternamens. Dieser Parameter stellt die Größe der Daten in Bytes dar, die an die PB- oder PV-Position zurückgegeben werden. Betrachten Sie beispielsweise die folgende Funktionsspezifikation:
 
 ``` syntax
 #include <windows.h>
@@ -26,23 +26,23 @@ BOOL WINAPI SomeFunction(
 );
 ```
 
-In diesem Beispiel ist *pbData* ein Zeiger auf den Speicherort, an den die Daten zurückgegeben werden, und *pcbData* ist die Größe (in Bytes) der zurückgegebenen Daten.
+In diesem Beispiel ist *pbData* ein Zeiger auf den Speicherort, an dem die Daten zurückgegeben werden, und *"data"* ist die Größe der zurückgegebenen Daten in Bytes.
 
 > [!Note]  
-> Der Parameter "Companion" für den "PCB"-Parameter kann manchmal ein etwas anderes Präfix enthalten, z. b. p oder PV. Für Begleit Parameter, die die Kombination von Präfixen Pwsz und pcch verwenden, entspricht der pcch-Parameter außerdem der Anzahl der zurückgegebenen Daten (in Zeichen ([*Unicode*](../secgloss/u-gly.md) oder [*ASCII*](../secgloss/a-gly.md), sofern zutreffend).
+> Der Begleitparameter zum Parameter "parameters" kann manchmal ein etwas anderes Präfix aufweisen, z. B. p oder pv. Bei Begleitparametern, die die Kombination der Präfixe pwsz und pcch verwenden, ist der pcch-Parameter außerdem die Anzahl der zurückgegebenen Daten in Zeichen [*(Unicode*](../secgloss/u-gly.md) oder [*ASCII,*](../secgloss/a-gly.md)sofern zutreffend).
 
  
 
-Wenn der durch den *pbData* -Parameter angegebene Puffer nicht groß genug ist, um die zurückgegebenen Daten aufzunehmen, legt die Funktion den Fehler \_ weiteren \_ Datencode fest (der durch Aufrufen der [**GetLastError**](/windows/win32/api/errhandlingapi/nf-errhandlingapi-getlasterror) -Funktion angezeigt werden kann) und speichert die erforderliche Puffergröße in Bytes in der Variablen, auf die von *pcbData* verwiesen wird.
+Wenn der durch den *pbData-Parameter* angegebene Puffer nicht groß genug ist, um die zurückgegebenen Daten zu speichern, legt die Funktion den ERROR \_ MORE \_ DATA-Code fest (der durch Aufrufen der [**GetLastError-Funktion**](/windows/win32/api/errhandlingapi/nf-errhandlingapi-getlasterror) sichtbar ist) und speichert die erforderliche Puffergröße in Bytes in der Variablen, auf die *von %%amp;gt;* verweist.
 
-Wenn **null** für *pbData* und *pcbData* nicht **null** ist, wird kein Fehler zurückgegeben, und die Funktion gibt die Größe (in Bytes) des benötigten Speicherpuffers in der Variablen zurück, auf die von *pcbData* verwiesen wird. Dadurch kann eine Anwendung die Größe von und die beste Zuordnungs Methode zum Zuordnen eines Puffers für die zurückgegebenen Daten bestimmen.
+Wenn **NULL** eine Eingabe für *pbData* ist und *"inputsData"* nicht **NULL** ist, wird kein Fehler zurückgegeben, und die Funktion gibt die Größe des benötigten Speicherpuffers in Bytes in der Variablen zurück, auf die *von "data"* verwiesen wird. Dadurch kann eine Anwendung die Größe und die beste Möglichkeit zum Zuordnen eines Puffers für die zurückgegebenen Daten bestimmen.
 
 > [!Note]  
-> Wenn **null** für *pbData verwendet* wird, um die erforderliche Größe zu ermitteln, um sicherzustellen, dass die zurückgegebenen Daten in den angegebenen Puffer passen, kann der zweite aufrufungs Vorgang, der den Puffer mit den gewünschten Daten füllt, nicht den gesamten Puffer verwenden. Nach dem zweiten-Befehl ist die tatsächliche Größe der zurückgegebenen Daten in *pcbData* enthalten. Verwenden Sie diese Größe, wenn Sie die Daten verarbeiten.
+> Wenn **NULL** für *pbData* eingegeben wird, um die Größe zu bestimmen, die erforderlich ist, um sicherzustellen, dass die zurückgegebenen Daten in den angegebenen Puffer passen, verwendet der zweite Aufruf der Funktion, die den Puffer mit den gewünschten Daten auffüllt, möglicherweise nicht den gesamten Puffer. Nach dem zweiten Aufruf ist die tatsächliche Größe der zurückgegebenen Daten in *"pwData"* enthalten. Verwenden Sie diese Größe bei der Verarbeitung der Daten.
 
  
 
-Das folgende Beispiel zeigt, wie Eingabe-und Ausgabeparameter zu diesem Zweck implementiert werden können.
+Das folgende Beispiel zeigt, wie Eingabe- und Ausgabeparameter für diesen Zweck implementiert werden können.
 
 
 ```C++

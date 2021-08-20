@@ -4,12 +4,12 @@ ms.assetid: 7f339ee8-01e6-4bbb-8563-020ff0e02499
 title: Festlegen von DXVA-HD-Zuzuständen
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 91766e3eb10399d908ab361e13db4b94fe07b653
-ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
+ms.openlocfilehash: 293057c5452eec45b8377b5cddbe8fe959214f5f11f445171ecf22ba752242c5
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2021
-ms.locfileid: "108092698"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118057816"
 ---
 # <a name="setting-dxva-hd-states"></a>Festlegen von DXVA-HD-Zuzuständen
 
@@ -29,16 +29,16 @@ Die folgenden Streamzustände werden definiert.
 
 
 
-| Streamzustand                                   | BESCHREIBUNG                                                                                                     |
+| Streamzustand                                   | Beschreibung                                                                                                     |
 |------------------------------------------------|-----------------------------------------------------------------------------------------------------------------|
 | **DXVAHD \_ STREAM \_ STATE \_ D3DFORMAT**           | Eingabevideoformat.                                                                                             |
 | **DXVAHD \_ STREAM \_ STATE \_ FRAME \_ FORMAT**       | Interlacing.                                                                                                    |
 | **DXVAHD \_ STREAM \_ STATE \_ INPUT \_ COLOR \_ SPACE** | Eingabefarbraum. Dieser Zustand gibt den RGB-Farbbereich und die YCbCr-Übertragungsmatrix für den Eingabestream an. |
-| **DXVAHD \_ STREAM \_ STATE \_ OUTPUT \_ RATE**        | Ausgabebildrate. Dieser Zustand steuert die Frameratenkonvertierung.                                                   |
+| **DXVAHD \_ STREAM \_ STATE \_ OUTPUT \_ RATE**        | Ausgabebildrate. Dieser Zustand steuert die Konvertierung der Framerate.                                                   |
 | **DXVAHD \_ STREAM \_ STATE \_ SOURCE \_ RECT**        | Quellrechteck.                                                                                               |
 | **DXVAHD \_ STREAM \_ STATE \_ DESTINATION \_ RECT**   | Zielrechteck.                                                                                          |
 | **DXVAHD \_ STREAM \_ STATE \_ ALPHA**               | Planares Alpha.                                                                                                   |
-| **\_DXVAHD-STREAMSTATUSPALETTE \_ \_**             | Farbpalette. Dieser Zustand gilt nur für palettierte Eingabeformate.                                             |
+| **DXVAHD \_ STREAM \_ STATE \_ PALETTE**             | Farbpalette. Dieser Status gilt nur für palettierte Eingabeformate.                                             |
 | **DXVAHD \_ STREAM \_ STATE \_ LUMA \_ KEY**           | Luma-Taste.                                                                                                       |
 | **DXVAHD \_ STREAM \_ STATE \_ ASPECT \_ RATIO**       | Pixel-Seitenverhältnis.                                                                                             |
 | **DXVAHD \_ STREAM \_ STATE \_ FILTER \_ Xxxx**        | Bildfiltereinstellungen. Der Treiber kann Helligkeit, Kontrast und andere Bildfilter unterstützen.                    |
@@ -51,7 +51,7 @@ Die folgenden Blitzustände sind definiert:
 
 
 
-| Blitzustand                                   | BESCHREIBUNG                                                                  |
+| Blitzustand                                   | Beschreibung                                                                  |
 |----------------------------------------------|------------------------------------------------------------------------------|
 | **DXVAHD \_ BLT \_ STATE \_ TARGET \_ RECT**         | Zielrechteck.                                                            |
 | **DXVAHD \_ BLT \_ STATE \_ BACKGROUND \_ COLOR**    | Hintergrundfarbe.                                                            |

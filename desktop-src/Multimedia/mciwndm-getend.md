@@ -1,9 +1,9 @@
 ---
-title: MCIWNDM_GETEND Meldung (VFW. h)
-description: Die mciwndm \_ GetEnd-Nachricht Ruft den Speicherort ab, an dem das Ende des Inhalts eines MCI-Geräts oder einer MCI-Datei gespeichert ist. Sie können diese Nachricht explizit oder mithilfe des Makros mciwndgetend senden.
+title: MCIWNDM_GETEND (Vfw.h)
+description: Die MCIWNDM GETEND-Nachricht ruft den Speicherort des Endes des Inhalts eines MCI-Geräts oder einer \_ MCI-Datei ab. Sie können diese Nachricht explizit oder mithilfe des MCIWndGetEnd-Makros senden.
 ms.assetid: 3fa45928-af63-4f87-835d-f409011a797e
 keywords:
-- MCIWNDM_GETEND-Nachricht (Multimedia)
+- MCIWNDM_GETEND-Nachricht Windows Multimedia
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 00d18057619e31fa9b22d7f6354527c394c02798
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 880b1a464d671ca57e1955d4131776a999d1fb6bd8f17ad5d08139abc64a757b
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "103859220"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118137731"
 ---
-# <a name="mciwndm_getend-message"></a>Mciwndm \_ GetEnd-Nachricht
+# <a name="mciwndm_getend-message"></a>MCIWNDM \_ GETEND-Nachricht
 
-Die **mciwndm \_ GetEnd** -Nachricht Ruft den Speicherort ab, an dem das Ende des Inhalts eines MCI-Geräts oder einer MCI-Datei gespeichert ist. Sie können diese Nachricht explizit oder mithilfe des Makros [**mciwndgetend**](/windows/desktop/api/Vfw/nf-vfw-mciwndgetend) senden.
+Die **MCIWNDM \_ GETEND-Nachricht** ruft den Speicherort des Endes des Inhalts eines MCI-Geräts oder einer MCI-Datei ab. Sie können diese Nachricht explizit oder mithilfe des [**MCIWndGetEnd-Makros**](/windows/desktop/api/Vfw/nf-vfw-mciwndgetend) senden.
 
 
 ```C++
@@ -36,7 +36,7 @@ lParam = 0;
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt den Speicherort im aktuellen Zeitformat zurück.
+Gibt die Position im aktuellen Zeitformat zurück.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -46,7 +46,7 @@ Gibt den Speicherort im aktuellen Zeitformat zurück.
 |-------------------------------------|----------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[nur Desktop-Apps\]<br/>                       |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                             |
-| Header<br/>                   | <dl> <dt>VFW. h</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Vfw.h</dt> </dl> |
 
 
 
@@ -54,7 +54,7 @@ Gibt den Speicherort im aktuellen Zeitformat zurück.
 
 <dl> <dt>
 
-[**Mciwndgetend**](/windows/desktop/api/Vfw/nf-vfw-mciwndgetend)
+[**MCIWndGetEnd**](/windows/desktop/api/Vfw/nf-vfw-mciwndgetend)
 </dt> </dl>
 
  

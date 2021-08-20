@@ -1,9 +1,9 @@
 ---
-title: MCI_PASTE Befehl (MMSYSTEM. h)
-description: Der MCI- \_ Befehl zum Einfügen fügt Daten aus der Zwischenablage in eine Datei ein. Dieser Befehl wird von Digital-Video-Geräten erkannt.
+title: MCI_PASTE Befehl (Mmsystem.h)
+description: Mit dem \_ MCI-Befehl EINFÜGEN werden Daten aus der Zwischenablage in eine Datei eingefügt. Digitalvideogeräte erkennen diesen Befehl.
 ms.assetid: cad5799a-08ef-4e34-803a-415b937d8fbd
 keywords:
-- MCI_PASTE Befehl Windows-Multimedia
+- MCI_PASTE-Befehl Windows Multimedia
 topic_type:
 - apiref
 api_name:
@@ -14,18 +14,18 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: b15ff0ae3d14c1df63fbd9ab0c93a85446bdf066
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 3bdc7b27838236b09952a009f1cb8c7d60091afb6634bbd74fad213f013f6e2a
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "103739825"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118138231"
 ---
-# <a name="mci_paste-command"></a>MCI- \_ Befehl "Einfügen"
+# <a name="mci_paste-command"></a>MCI \_ PASTE-Befehl
 
-Der MCI- \_ Befehl zum Einfügen fügt Daten aus der Zwischenablage in eine Datei ein. Dieser Befehl wird von Digital-Video-Geräten erkannt.
+Mit dem \_ MCI-Befehl EINFÜGEN werden Daten aus der Zwischenablage in eine Datei eingefügt. Digitalvideogeräte erkennen diesen Befehl.
 
-Um diesen Befehl zu senden, wenden Sie die [**mciSendCommand**](/previous-versions//dd757160(v=vs.85)) -Funktion mit den folgenden Parametern an.
+Um diesen Befehl zu senden, rufen Sie die [**mciSendCommand-Funktion**](/previous-versions//dd757160(v=vs.85)) mit den folgenden Parametern auf.
 
 
 ```C++
@@ -43,76 +43,76 @@ MCIERROR mciSendCommand(
 
 <dl> <dt>
 
-<span id="wDeviceID"></span><span id="wdeviceid"></span><span id="WDEVICEID"></span>*WDE viceid*
+<span id="wDeviceID"></span><span id="wdeviceid"></span><span id="WDEVICEID"></span>*wDeviceID*
 </dt> <dd>
 
-Geräte Bezeichner des MCI-Geräts, das die Befehls Meldung empfangen soll.
+Gerätebezeichner des MCI-Geräts, das die Befehlsnachricht empfangen soll.
 
 </dd> <dt>
 
-<span id="dwFlags"></span><span id="dwflags"></span><span id="DWFLAGS"></span>*dwFlags*
+<span id="dwFlags"></span><span id="dwflags"></span><span id="DWFLAGS"></span>*Dwflags*
 </dt> <dd>
 
-MCI- \_ Benachrichtigung, MCI- \_ Wartezeit oder MCI- \_ Test. Weitere Informationen zu diesen Flags finden Sie [unter Wait-, notify-und testflags](the-wait-notify-and-test-flags.md).
+MCI \_ NOTIFY, MCI \_ WAIT oder MCI \_ TEST. Informationen zu diesen Flags finden Sie unter [Die Warte-, Benachrichtigungs- und Testflags](the-wait-notify-and-test-flags.md).
 
 </dd> <dt>
 
-<span id="lpPaste"></span><span id="lppaste"></span><span id="LPPASTE"></span>*lppaste*
+<span id="lpPaste"></span><span id="lppaste"></span><span id="LPPASTE"></span>*lpPaste*
 </dt> <dd>
 
-Zeiger auf eine [**MCI \_ DGV \_ \_**](/windows/desktop/api/Digitalv/ns-digitalv-mci_dgv_paste_parms) -Struktur zum Einfügen von Parametern.
+Zeiger auf eine [**MCI \_ DGV \_ PASTE \_ PARMS-Struktur.**](/windows/desktop/api/Digitalv/ns-digitalv-mci_dgv_paste_parms)
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt 0 (null) zurück, wenn erfolgreich, andernfalls einen Fehler.
+Gibt 0 (null) zurück, wenn erfolgreich, andernfalls ein Fehler.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die folgenden zusätzlichen Flags gelten für Digital-Video-Geräte:
+Die folgenden zusätzlichen Flags gelten für Digitalvideogeräte:
 
 <dl> <dt>
 
-<span id="MCI_DGV_PASTE_AT"></span><span id="mci_dgv_paste_at"></span>MCI \_ DGV \_ Einfügen \_ bei
+<span id="MCI_DGV_PASTE_AT"></span><span id="mci_dgv_paste_at"></span>MCI \_ DGV \_ PASTE \_ AT
 </dt> <dd>
 
-In den **RC** -Member der durch *lppaste* identifizierten Struktur ist ein Rechteck enthalten. Die ersten beiden Werte des Rechtecks geben den Punkt im Frame an, an dem die Zwischenablage Informationen platziert werden sollen. Wenn die Höhe und Breite des Rechtecks ungleich NULL sind, werden die Inhalte der Zwischenablage auf diese Dimensionen skaliert, wenn Sie im Frame eingefügt werden. Wenn das-Flag weggelassen wird, wird der MCI-Wert \_ standardmäßig in das gesamte Frame Rechteck eingefügt.
+Ein Rechteck ist im **rc-Member** der -Struktur enthalten, die durch *lpPaste identifiziert wird.* Die ersten beiden Werte des Rechtecks geben den Punkt innerhalb des Frames an, um die Zwischenablageinformationen zu platzieren. Wenn Höhe und Breite des Rechtecks ungleich 0 (null) sind, wird der Inhalt der Zwischenablage auf diese Dimensionen skaliert, wenn sie in den Rahmen eingefügt werden. Wenn das Flag weggelassen wird, wird MCI \_ PASTE standardmäßig auf das gesamte Framerechteck festgelegt.
 
 </dd> <dt>
 
-<span id="MCI_DGV_PASTE_AUDIO_STREAM"></span><span id="mci_dgv_paste_audio_stream"></span>MCI \_ DGV \_ \_ - \_ Audiodatenstrom einfügen
+<span id="MCI_DGV_PASTE_AUDIO_STREAM"></span><span id="mci_dgv_paste_audio_stream"></span>MCI \_ DGV \_ PASTE \_ AUDIO \_ STREAM
 </dt> <dd>
 
-Im **dwaudiostream** -Member der durch *lppaste* identifizierten Struktur ist eine audiostreamnummer enthalten. Wenn nur ein Audiostream in der Zwischenablage vorhanden ist, werden die Audiodaten in den vorgesehenen Stream eingefügt. Wenn mehr als ein Audiostream in der Zwischenablage vorhanden ist, gibt der Stream die Startnummer für die Datenstrom Sequenzen an. Wenn Sie dieses Flag verwenden und Video einfügen möchten, müssen Sie auch das Flag MCI \_ DGV- \_ Videodaten \_ Strom einfügen verwenden \_ . (Wenn keines der Flags angegeben ist, werden alle Audio-und Videostreams beginnend mit dem ersten Audiostream und Videostream eingefügt. Jeder eingefügte Stream behält seine ursprüngliche Datenstrom Nummer bei.)
+Eine Audiostreamnummer ist im **dwAudioStream-Member** der -Struktur enthalten, die durch *lpPaste identifiziert wird.* Wenn nur ein Audiostream in der Zwischenablage vorhanden ist, werden die Audiodaten in den angegebenen Stream eingefügt. Wenn mehr als ein Audiostream in der Zwischenablage vorhanden ist, gibt der Stream die Startnummer für die Streamsequenzen an. Wenn Sie dieses Flag verwenden und auch Video einfügen möchten, müssen Sie auch das MCI \_ DGV \_ PASTE VIDEO \_ \_ STREAM-Flag verwenden. (Wenn keines der Flags angegeben ist, werden alle Audio- und Videostreams beginnend mit dem ersten Audio- und Videostream ein- und ausdingt. Jeder einfingierte Stream behält seine ursprüngliche Streamnummer bei.)
 
 </dd> <dt>
 
-<span id="MCI_DGV_PASTE_INSERT"></span><span id="mci_dgv_paste_insert"></span>Einfügen von MCI \_ DGV \_ Einfügen \_
+<span id="MCI_DGV_PASTE_INSERT"></span><span id="mci_dgv_paste_insert"></span>MCI \_ DGV \_ PASTE \_ INSERT
 </dt> <dd>
 
-Zwischenablage Daten sollten in den vorhandenen Arbeitsbereich an der Position eingefügt werden, die durch das zu flagende MCI angegeben wird \_ . Alle vorhandenen Daten nach der Einfügemarke werden in den Arbeitsbereich verschoben, um Platz zu schaffen. Dies ist die Standardoption.
+Zwischenablagedaten sollten an der durch das MCI TO-Flag angegebenen Position in den vorhandenen \_ Arbeitsbereich eingefügt werden. Alle vorhandenen Daten nach der Einfügemarke werden in den Arbeitsbereich verschoben, um Platz zu machen. Dies ist die Standardoption.
 
 </dd> <dt>
 
-<span id="MCI_DGV_PASTE_OVERWRITE"></span><span id="mci_dgv_paste_overwrite"></span>MCI- \_ DGV- \_ Einfüge \_ Überschreibung
+<span id="MCI_DGV_PASTE_OVERWRITE"></span><span id="mci_dgv_paste_overwrite"></span>MCI \_ DGV \_ PASTE \_ OVERWRITE
 </dt> <dd>
 
-Zwischenablage Daten sollten die bereits im Arbeitsbereich vorhandenen Daten ersetzen. Die Arbeitsbereichs Daten werden nach der Einfügemarke ersetzt.
+Zwischenablagedaten sollten daten ersetzen, die bereits im Arbeitsbereich vorhanden sind. Die ersetzten Arbeitsbereichsdaten folgen der Einfügemarke.
 
 </dd> <dt>
 
-<span id="MCI_DGV_PASTE_VIDEO_STREAM"></span><span id="mci_dgv_paste_video_stream"></span>MCI \_ DGV \_ - \_ Video Daten \_ Strom einfügen
+<span id="MCI_DGV_PASTE_VIDEO_STREAM"></span><span id="mci_dgv_paste_video_stream"></span>MCI \_ DGV \_ PASTE \_ VIDEO \_ STREAM
 </dt> <dd>
 
-Im **dwvideostream** -Member der durch *lppaste* identifizierten Struktur ist eine Video Strom Nummer enthalten. Wenn nur ein Videostream in der Zwischenablage vorhanden ist, werden die Videodaten in den vorgesehenen Stream eingefügt. Wenn mehr als ein Videostream in der Zwischenablage vorhanden ist, gibt der Stream die Startnummer für die Datenstrom Sequenzen an. Wenn Sie dieses Flag verwenden und auch Audiodaten einfügen möchten, müssen Sie auch das Flag MCI \_ DGV \_ \_ -Audiodatenstrom einfügen verwenden \_ . (Wenn keines der Flags angegeben ist, werden alle Audio-und Videostreams beginnend mit dem ersten Audiostream und Videostream eingefügt. Jeder eingefügte Stream behält seine ursprüngliche Datenstrom Nummer bei.)
+Eine Videostreamnummer ist im **dwVideoStream-Member** der struktur enthalten, die durch *lpPaste identifiziert wird.* Wenn nur ein Videostream in der Zwischenablage vorhanden ist, werden die Videodaten in den angegebenen Stream eingefügt. Wenn mehr als ein Videostream in der Zwischenablage vorhanden ist, gibt der Stream die Startnummer für die Streamsequenzen an. Wenn Sie dieses Flag verwenden und auch Audio einfügen möchten, müssen Sie auch das MCI \_ DGV \_ PASTE AUDIO \_ \_ STREAM-Flag verwenden. (Wenn keines der Flags angegeben ist, werden alle Audio- und Videostreams beginnend mit dem ersten Audio- und Videostream ein- und ausdingt. Jeder einfingierte Stream behält seine ursprüngliche Streamnummer bei.)
 
 </dd> <dt>
 
-<span id="MCI_TO"></span><span id="mci_to"></span>MCI \_ zu
+<span id="MCI_TO"></span><span id="mci_to"></span>MCI \_ TO
 </dt> <dd>
 
-Ein Positionswert ist im **dwto** -Member der durch *lppaste* identifizierten Struktur enthalten. Der Positionswert gibt die Position an, an der mit dem Einfügen von Daten in den Arbeitsbereich begonnen wird. Wenn dieses Flag weggelassen wird, wird die Position standardmäßig auf die aktuelle Position eingestellt.
+Ein Positionswert ist im **dwTo-Member** der -Struktur enthalten, die durch *lpPaste identifiziert wird.* Der Positionswert gibt die Position an, an der mit dem Einfingen von Daten in den Arbeitsbereich begonnen werden soll. Wenn dieses Flag weggelassen wird, wird die Position standardmäßig auf die aktuelle Position festgelegt.
 
 </dd> </dl>
 
@@ -124,7 +124,7 @@ Ein Positionswert ist im **dwto** -Member der durch *lppaste* identifizierten St
 |-------------------------------------|-----------------------------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[nur Desktop-Apps\]<br/>                                                |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                                                      |
-| Header<br/>                   | <dl> <dt>MMSYSTEM. h (Include Windows. h)</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Mmsystem.h (include Windows.h)</dt> </dl> |
 
 
 
@@ -132,7 +132,7 @@ Ein Positionswert ist im **dwto** -Member der durch *lppaste* identifizierten St
 
 <dl> <dt>
 
-[MCI](mci.md)
+[Mci](mci.md)
 </dt> <dt>
 
 [MCI-Befehle](mci-commands.md)

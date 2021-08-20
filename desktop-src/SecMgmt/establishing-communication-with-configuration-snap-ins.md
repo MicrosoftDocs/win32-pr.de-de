@@ -1,25 +1,25 @@
 ---
-description: Nachdem die Erweiterungs-Snap-in-Erweiterung dem Knoten Dienste hinzugefügt wurde, sollte Sie die Kommunikation mit dem Snap-in für die Sicherheitskonfiguration herstellen.
+description: Nachdem sich ihre Snap-In-Erweiterung für Anlagen dem Knoten Dienste hinzugefügt hat, sollte sie eine Kommunikation mit dem Sicherheitskonfigurations-Snap-In herstellen.
 ms.assetid: 68a0e5a7-938f-45b7-90a3-8f35e5e6bbfb
 title: Einrichten der Kommunikation mit Konfigurations-Snap-Ins
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 72fe9bcb80687fa50120d20594a81ea40b21c292
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: cf186936f0b0ad21dc871a91e78dd0bbead04a0683450992e5e3b7dd7c516abc
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106363254"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117969398"
 ---
 # <a name="establishing-communication-with-configuration-snap-ins"></a>Einrichten der Kommunikation mit Konfigurations-Snap-Ins
 
-Nachdem die Erweiterungs-Snap-in-Erweiterung dem Knoten Dienste hinzugefügt wurde, sollte Sie die Kommunikation mit dem Snap-in für die Sicherheitskonfiguration herstellen. Dies ist erforderlich, da die Erweiterungs-Snap-in-Erweiterung sowohl Ihre Daten als auch alle vom Benutzer vorgenommenen Änderungen über das Sicherheitskonfigurations-Snap-in abruft. Dies kann wie im folgenden Verfahren beschrieben erfolgen.
+Nachdem sich ihre Snap-In-Erweiterung für Anlagen dem Knoten Dienste hinzugefügt hat, sollte sie eine Kommunikation mit dem Sicherheitskonfigurations-Snap-In herstellen. Dies ist erforderlich, da die Snap-In-Erweiterung für Anlagen seine Daten sowie alle vom Benutzer vorgenommenen Änderungen aus dem Sicherheitskonfigurations-Snap-In erhält. Dies kann wie im folgenden Verfahren beschrieben erfolgen.
 
-**So richten Sie die Kommunikation mit den Snap-Ins für die Sicherheitskonfiguration ein**
+**So richten Sie die Kommunikation mit den Sicherheitskonfigurations-Snap-Ins ein**
 
-1.  Rufen Sie den Konfigurations Dateinamen mit dem CCF \_ scesvc- \_ Zwischenablage Format ab, das den Konfigurations Dateinamen als **pwstr** zurückgibt.
+1.  Abrufen des Konfigurationsdateinamens mithilfe des CCF SCESVC ATTACHMENT-Zwischenablageformats, das den Konfigurationsdateinamen \_ \_ als **PWSTR zurückgibt.**
 
-    Wenn die Anlage unter einem Knotentyp Knoten eingefügt wird, muss die anlagewissen, welche Konfiguration Sie ist. (Er kommuniziert diese Informationen an die Sicherheitskonfigurations-Snap-Ins während der Schnittstellen Initialisierung.) Verwenden Sie in diesem Fall den folgenden Code.
+    Wenn die Anlage unter einem Konfigurationstypknoten eingefügt wird, muss die Anlage wissen, um welche Konfiguration es sich handelt. (Diese Informationen werden während der Schnittstellenin initialisierung an die Sicherheitskonfigurations-Snap-Ins übermittelt.) Verwenden Sie in diesem Fall den folgenden Code.
 
     ```C++
     PWSTR * TemplateName = ExtractTemplateFromDataObject(lpDataObject);
@@ -27,7 +27,7 @@ Nachdem die Erweiterungs-Snap-in-Erweiterung dem Knoten Dienste hinzugefügt wur
 
     
 
-2.  Richten Sie den Kontext mit den Snap-Ins für die Sicherheitskonfiguration ein. Nachdem der Konfigurations Name bekannt ist oder der Dienst Knoten ein Analyse Knoten ist, muss die Erweiterungs-Snap-in-Erweiterung [**iscesvasetachmentdata:: Initialize**](/windows/desktop/api/Scesvc/nf-scesvc-iscesvcattachmentdata-initialize) anrufen, um den Kontext einzurichten, wie im folgenden Beispiel gezeigt.
+2.  Richten Sie den Kontext mit den Sicherheitskonfigurations-Snap-Ins ein. Nachdem der Konfigurationsname bekannt ist oder der Dienstknoten ein Analyseknoten ist, muss die Snap-In-Erweiterung für Anlagen [**ISceSvcAttachmentData::Initialize**](/windows/desktop/api/Scesvc/nf-scesvc-iscesvcattachmentdata-initialize) aufrufen, um den Kontext wie im folgenden Beispiel zu konfigurieren.
 
     ```C++
     LPSCESVCATTACHMENTPERSISTINFO pSceInfo;
@@ -48,7 +48,7 @@ Nachdem die Erweiterungs-Snap-in-Erweiterung dem Knoten Dienste hinzugefügt wur
     
 
 > [!Note]  
-> Wenn Sie das von [**iscesvcalltachmentdata:: Initialize**](/windows/desktop/api/Scesvc/nf-scesvc-iscesvcattachmentdata-initialize)zurückgegebene Handle nicht mehr verwenden, schließen Sie das Handle, indem Sie die [**iscesvcalltachmentdata:: CloseHandle**](/windows/desktop/api/Scesvc/nf-scesvc-iscesvcattachmentdata-closehandle) -Funktion aufrufen. Dies erfolgt in der Regel, wenn der Benutzer die MMC-Konsole schließt.
+> Wenn Sie das von [**ISceSvcAttachmentData::Initialize**](/windows/desktop/api/Scesvc/nf-scesvc-iscesvcattachmentdata-initialize)zurückgegebene Handle nicht mehr verwenden, schließen Sie das Handle, indem Sie die [**ISceSvcAttachmentData::CloseHandle-Funktion**](/windows/desktop/api/Scesvc/nf-scesvc-iscesvcattachmentdata-closehandle) aufrufen. Dies erfolgt in der Regel, wenn der Benutzer die MMC-Konsole schließt.
 
  
 

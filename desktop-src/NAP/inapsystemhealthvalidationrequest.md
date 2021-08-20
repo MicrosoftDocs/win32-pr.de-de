@@ -1,10 +1,10 @@
 ---
-title: Inapsystemhealthvalidationrequest-Schnittstelle (napsystemhealthvalidator. h)
-description: Werden zur Unterstützung von Systemintegritäts-Validierungs Steuerelementen verwendet, die vom Anwendungsentwickler definiert werden.
+title: INapSystemHealthValidationRequest-Schnittstelle (NapSystemHealthValidator.h)
+description: Werden zur Unterstützung von Systemzustands-Validierungs-Validierungstools verwendet, die vom Anwendungsentwickler definiert werden.
 ms.assetid: faa91ff5-49f5-4aec-81d7-02ec59274f23
 keywords:
-- Inapsystemhealthvalidationrequest-Schnittstelle NAP
-- Inapsystemhealthvalidationrequest-Schnittstelle NAP, beschrieben
+- INapSystemHealthValidationRequest-Schnittstelle NAP
+- INapSystemHealthValidationRequest-Schnittstelle NAP , beschrieben
 topic_type:
 - apiref
 api_name:
@@ -15,21 +15,21 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: cf09f93e00401251a3d0e2296323edeb84ad6007
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 2e7b6b2fdc0da8757ddd29b963445c0b984c45d19955c093270cf397fcac14b0
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "103743536"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118133475"
 ---
-# <a name="inapsystemhealthvalidationrequest-interface"></a>Inapsystemhealthvalidationrequest-Schnittstelle
+# <a name="inapsystemhealthvalidationrequest-interface"></a>INapSystemHealthValidationRequest-Schnittstelle
 
 > [!Note]  
-> Die Netzwerk Zugriffsschutz-Plattform ist ab Windows 10 nicht verfügbar.
+> Die Netzwerkzugriffsschutz-Plattform ist ab dem Windows 10
 
  
 
-Die **inapsystemhealthvalidationrequest** -Schnittstelle stellt Methoden bereit, die zur Unterstützung von Systemintegritäts-Validierungs Steuerelementen verwendet werden, die vom Anwendungsentwickler definiert werden.
+Die **INapSystemHealthValidationRequest-Schnittstelle** stellt Methoden bereit, die zur Unterstützung von Systemzustandsvalidierungs-Validierungszeichen verwendet werden, die vom Anwendungsentwickler definiert werden.
 
 > [!Note]  
 > [**INapSystemHealthValidationRequest2**](inapsystemhealthvalidationrequest2.md) erbt alle Methoden dieser Schnittstelle und sollte stattdessen verwendet werden.
@@ -38,26 +38,26 @@ Die **inapsystemhealthvalidationrequest** -Schnittstelle stellt Methoden bereit,
 
 ## <a name="members"></a>Member
 
-Die **inapsystemhealthvalidationrequest** -Schnittstelle erbt von der [**IUnknown**](/windows/desktop/api/unknwn/nn-unknwn-iunknown) -Schnittstelle. **Inapsystemhealthvalidationrequest** verfügt auch über die folgenden Typen von Membern:
+Die **INapSystemHealthValidationRequest-Schnittstelle** erbt von der [**IUnknown-Schnittstelle.**](/windows/desktop/api/unknwn/nn-unknwn-iunknown) **INapSystemHealthValidationRequest** verfügt auch über diese Membertypen:
 
 -   [Methoden](#methods)
 
 ### <a name="methods"></a>Methoden
 
-Die **inapsystemhealthvalidationrequest** -Schnittstelle verfügt über diese Methoden.
+Die **INapSystemHealthValidationRequest-Schnittstelle** verfügt über diese Methoden.
 
 
 
-| Methode                                                                                                                               | BESCHREIBUNG                                                                                                           |
+| Methode                                                                                                                               | Beschreibung                                                                                                           |
 |:-------------------------------------------------------------------------------------------------------------------------------------|:----------------------------------------------------------------------------------------------------------------------|
-| [**Inapsystemhealthvalidationrequest:: getcorrelationid**](inapsystemhealthvalidationrequest-getcorrelationid-method.md)             | Wird von Validierungs Steuerelemente verwendet, um die Korrelations-ID abzurufen. Das Validierungs Steuerelement muss diese Informationen dann protokollieren.<br/>           |
-| [**Inapsystemhealthvalidationrequest:: GetMachineName**](inapsystemhealthvalidationrequest-getmachinename-method.md)                 | Wird von Validierungs Steuerelemente verwendet, um den Computernamen abzurufen. Das Validierungs Steuerelement muss diese Informationen dann protokollieren.<br/>             |
-| [**Inapsystemhealthvalidationrequest:: getprivatedata**](inapsystemhealthvalidationrequest-getprivatedata-method.md)                 | Ermöglicht dem napserver das Abrufen von Zustandsinformationen.<br/>                                                        |
-| [**Inapsystemhealthvalidationrequest:: getsohrequest**](inapsystemhealthvalidationrequest-getsohrequest-method.md)                   | Ermöglicht Validierungs Steuerelementen das Abrufen und Validieren der sohrequest-Informationen.<br/>                                     |
-| [**Inapsystemhealthvalidationrequest:: getsohresponse**](inapsystemhealthvalidationrequest-getsohresponse-method.md)                 | Ruft das sohresponse-Objekt ab.<br/>                                                                               |
-| [**Inapsystemhealthvalidationrequest:: getstringcorrelationid**](inapsystemhealthvalidationrequest-getstringcorrelationid-method.md) | Wird von Validierungs Steuerelemente zum Abrufen eines eindeutigen Exchange-Bezeichners verwendet. Das Validierungs Steuerelement muss diese Informationen dann protokollieren.<br/> |
-| [**Inapsystemhealthvalidationrequest:: setprivatedata**](inapsystemhealthvalidationrequest-setprivatedata-method.md)                 | Ermöglicht dem napserver das Speichern von Zustandsinformationen.<br/>                                                           |
-| [**Inapsystemhealthvalidationrequest:: setsohresponse**](inapsystemhealthvalidationrequest-setsohresponse-method.md)                 | Ermöglicht Validierungs Steuerelementen das Festlegen der sohresponse.<br/>                                                                  |
+| [**INapSystemHealthValidationRequest::GetCorrelationId**](inapsystemhealthvalidationrequest-getcorrelationid-method.md)             | Wird von Validierungsatoren verwendet, um die Korrelations-ID abzurufen. Das Validierungsgerät muss diese Informationen dann protokollieren.<br/>           |
+| [**INapSystemHealthValidationRequest::GetMachineName**](inapsystemhealthvalidationrequest-getmachinename-method.md)                 | Wird von Validierungsatoren zum Abrufen des Computernamens verwendet. Das Validierungsgerät muss diese Informationen dann protokollieren.<br/>             |
+| [**INapSystemHealthValidationRequest::GetPrivateData**](inapsystemhealthvalidationrequest-getprivatedata-method.md)                 | Ermöglicht dem NapServer das Abrufen von Zustandsinformationen.<br/>                                                        |
+| [**INapSystemHealthValidationRequest::GetSoHRequest**](inapsystemhealthvalidationrequest-getsohrequest-method.md)                   | Ermöglicht Validatoren das Abrufen und Überprüfen der SoHRequest-Informationen.<br/>                                     |
+| [**INapSystemHealthValidationRequest::GetSoHResponse**](inapsystemhealthvalidationrequest-getsohresponse-method.md)                 | Ruft das SoHResponse-Objekt ab.<br/>                                                                               |
+| [**INapSystemHealthValidationRequest::GetStringCorrelationId**](inapsystemhealthvalidationrequest-getstringcorrelationid-method.md) | Wird von Validierungszeichen verwendet, um einen eindeutigen Austauschbezeichner abzurufen. Das Validierungsgerät muss diese Informationen dann protokollieren.<br/> |
+| [**INapSystemHealthValidationRequest::SetPrivateData**](inapsystemhealthvalidationrequest-setprivatedata-method.md)                 | Ermöglicht dem NapServer das Speichern von Zustandsinformationen.<br/>                                                           |
+| [**INapSystemHealthValidationRequest::SetSoHResponse**](inapsystemhealthvalidationrequest-setsohresponse-method.md)                 | Ermöglicht Validierungsatoren das Festlegen von SoHResponse.<br/>                                                                  |
 
 
 
@@ -70,9 +70,9 @@ Die **inapsystemhealthvalidationrequest** -Schnittstelle verfügt über diese Me
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Nicht unterstützt<br/>                                                                               |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/>                                                    |
-| Header<br/>                   | <dl> <dt>Napsystemhealthvalidator. h</dt> </dl>   |
-| IDL<br/>                      | <dl> <dt>Napsystemhealthvalidator. idl</dt> </dl> |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/>                                                    |
+| Header<br/>                   | <dl> <dt>NapSystemHealthValidator.h</dt> </dl>   |
+| Idl<br/>                      | <dl> <dt>NapSystemHealthValidator.idl</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Qshvhost.dll</dt> </dl>                 |
 
 

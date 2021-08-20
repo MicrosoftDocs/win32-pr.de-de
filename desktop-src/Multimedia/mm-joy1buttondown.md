@@ -1,9 +1,9 @@
 ---
-title: MM_JOY1BUTTONDOWN Meldung (MMSYSTEM. h)
-description: Die \_ Meldung mm JOY1BUTTONDOWN benachrichtigt das Fenster, das den Joystick JOYSTICKID1 aufgezeichnet hat, dass eine Schaltfläche gedrückt wurde.
+title: MM_JOY1BUTTONDOWN (Mmsystem.h)
+description: Die MELDUNG MM MM1BUTTONDOWN benachrichtigt das Fenster, in dem die BER-ID1 erfasst wurde, dass eine \_ Schaltfläche gedrückt wurde.
 ms.assetid: 764f4bb4-134d-46b8-badb-3fb06af31e13
 keywords:
-- MM_JOY1BUTTONDOWN-Nachricht (Multimedia)
+- MM_JOY1BUTTONDOWN von Windows Multimedia
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: cefb70e5dd47fc14b39dcdeb59043b6827e7b89b
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 2d2399eca0de21014b97c9156e6a16349fc5b0b5407b64b022eb077fd59d0609
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104475504"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118137191"
 ---
-# <a name="mm_joy1buttondown-message"></a>MM \_ JOY1BUTTONDOWN Meldung
+# <a name="mm_joy1buttondown-message"></a>MM \_ MM MM1BUTTONDOWN-Meldung
 
-Die Meldung **mm \_ JOY1BUTTONDOWN** benachrichtigt das Fenster, das den Joystick JOYSTICKID1 aufgezeichnet hat, dass eine Schaltfläche gedrückt wurde.
+Die **MELDUNG \_ MM MM1BUTTONDOWN** benachrichtigt das Fenster, in dem die BER-ID1 erfasst wurde, dass eine Schaltfläche gedrückt wurde.
 
 
 ```C++
@@ -39,34 +39,34 @@ yPos = HIWORD(lParam);
 
 <dl> <dt>
 
-<span id="fwButtons"></span><span id="fwbuttons"></span><span id="FWBUTTONS"></span>*Schaltflächen*
+<span id="fwButtons"></span><span id="fwbuttons"></span><span id="FWBUTTONS"></span>*fwButtons*
 </dt> <dd>
 
-Gibt die Schaltfläche an, die den Zustand geändert hat, und die gedrückten Schaltflächen. Folgende Werte sind möglich:
+Identifiziert die Schaltfläche, die den Zustand geändert hat, und die schaltflächen, die gedrückt werden. Folgende Werte sind möglich:
 
 
 
 | Anforderung | Wert |
 |-----------------|-------------------------------------------|
-| Freude \_ BUTTON1CHG | Der erste Joystick Schaltfläche hat den Zustand geändert.  |
-| Freude \_ BUTTON2CHG | Die zweite Schaltfläche "Joystick" hat den Zustand geändert. |
-| Freude \_ BUTTON3CHG | Die dritte Schaltfläche "Joystick" hat den Zustand geändert.  |
-| Freude \_ BUTTON4CHG | Der vierte Joystick Schaltfläche hat den Zustand geändert. |
+| SCHALTFLÄCHE \_ "BUTTON1CHG" | Die erste Schaltfläche hat den Zustand geändert.  |
+| SCHALTFLÄCHE \_ "BUTTON2CHG" | Die zweite Schaltfläche hat den Zustand geändert. |
+| SCHALTFLÄCHE \_ "BUTTON3CHG" | Die dritte Schaltfläche hat den Zustand geändert.  |
+| JOY \_ BUTTON4CHG | Die vierte Schaltfläche hat den Zustand geändert. |
 
 
 
  
 
-und eine oder mehrere der folgenden Aktionen:
+und mindestens eines der folgenden:
 
 
 
 | Anforderung | Wert |
 |--------------|------------------------------------|
-| Freude \_ Button1 | Die erste Joystick Schaltfläche wird gedrückt.  |
-| Freude \_ Button2 | Die zweite Joystick Schaltfläche wird gedrückt. |
-| Freude \_ BUTTON3 | Die dritte Joystick Schaltfläche wird gedrückt.  |
-| Freude \_ BUTTON4 | Fourth Joystick Schaltfläche wird gedrückt. |
+| SCHALTFLÄCHE \_ "SCHALTFLÄCHE 1" | Die erste Schaltfläche wird gedrückt.  |
+| SCHALTFLÄCHE \_ "SCHALTFLÄCHE 2" | Die zweite Schaltfläche wird gedrückt. |
+| SCHALTFLÄCHE \_ "SCHALTFLÄCHE 3" | Die dritte Schaltfläche wird gedrückt.  |
+| SCHALTFLÄCHE \_ "SCHALTFLÄCHE 4" | Die vierte Schaltfläche wird gedrückt. |
 
 
 
@@ -74,17 +74,17 @@ und eine oder mehrere der folgenden Aktionen:
 
 </dd> <dt>
 
-<span id="xPos"></span><span id="xpos"></span><span id="XPOS"></span>*XPos*
+<span id="xPos"></span><span id="xpos"></span><span id="XPOS"></span>*xPos*
 </dt> <dd>
 
-Die x-Koordinate des Joysticks in Relation zur oberen linken Ecke des Client Bereichs.
+Die x-Koordinate der -Koordinate relativ zur oberen linken Ecke des Clientbereichs.
 
 </dd> <dt>
 
-<span id="yPos"></span><span id="ypos"></span><span id="YPOS"></span>*YPos*
+<span id="yPos"></span><span id="ypos"></span><span id="YPOS"></span>*yPos*
 </dt> <dd>
 
-Die y-Koordinate des Joysticks in Relation zur oberen linken Ecke des Client Bereichs.
+Die y-Koordinate des -Bereichs relativ zur oberen linken Ecke des Clientbereichs.
 
 </dd> </dl>
 
@@ -96,7 +96,7 @@ Die y-Koordinate des Joysticks in Relation zur oberen linken Ecke des Client Ber
 |-------------------------------------|-----------------------------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[nur Desktop-Apps\]<br/>                                                |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                                                      |
-| Header<br/>                   | <dl> <dt>MMSYSTEM. h (Include Windows. h)</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Mmsystem.h (include Windows.h)</dt> </dl> |
 
 
 
@@ -104,10 +104,10 @@ Die y-Koordinate des Joysticks in Relation zur oberen linken Ecke des Client Ber
 
 <dl> <dt>
 
-[Joystick](joysticks.md)
+[Joysticks](joysticks.md)
 </dt> <dt>
 
-[Multimedia-Joystick Nachrichten](multimedia-joystick-messages.md)
+[Multimediameldungen](multimedia-joystick-messages.md)
 </dt> </dl>
 
  

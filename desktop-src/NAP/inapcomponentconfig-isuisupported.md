@@ -1,11 +1,11 @@
 ---
-title: Inapcomponentconfig isuisupported-Methode (napcommon. h)
-description: Gibt an, ob die Komponente eine angepasste Benutzeroberfläche unterstützt.
+title: INapComponentConfig IsUISupported-Methode (NapCommon.h)
+description: Gibt an, ob die Komponente eine benutzerdefinierte Benutzeroberfläche unterstützt.
 ms.assetid: 044f8014-f041-4e9c-922a-2691b799ba84
 keywords:
-- Isuisupported-Methode NAP
-- Isuisupported-Methode, NAP, inapcomponentconfig-Schnittstelle
-- Inapcomponentconfig-Schnittstelle NAP, isuisupported-Methode
+- IsUISupported-Methode NAP
+- IsUISupported-Methode NAP, INapComponentConfig-Schnittstelle
+- INapComponentConfig-Schnittstelle NAP , IsUISupported-Methode
 topic_type:
 - apiref
 api_name:
@@ -16,21 +16,21 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: ab7d3f6b87ba5e483b466e6746f0f63d039cb205
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 5e343b037e4f77b4c1e342ffa78278854b11d714e09e9e57188d83fc9f93a180
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "106337324"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118134488"
 ---
-# <a name="inapcomponentconfigisuisupported-method"></a>Inapcomponentconfig:: isuisupported-Methode
+# <a name="inapcomponentconfigisuisupported-method"></a>INapComponentConfig::IsUISupported-Methode
 
 > [!Note]  
-> Die Netzwerk Zugriffsschutz-Plattform ist ab Windows 10 nicht verfügbar.
+> Die Netzwerkzugriffsschutz-Plattform ist ab Windows 10 nicht verfügbar.
 
  
 
-Die **isuisupported** -Methode gibt an, ob die Komponente eine angepasste Benutzeroberfläche unterstützt.
+Die **IsUISupported-Methode** gibt an, ob die Komponente eine benutzerdefinierte Benutzeroberfläche unterstützt.
 
 ## <a name="syntax"></a>Syntax
 
@@ -47,10 +47,10 @@ HRESULT IsUISupported(
 
 <dl> <dt>
 
-*IsSupported* \[ vorgenommen\]
+*isSupported* \[ out\]
 </dt> <dd>
 
-Ein Zeiger auf einen booleschen Wert, der auf **true** festgelegt ist, wenn die Komponente eine angepasste Benutzeroberfläche unterstützt, andernfalls **false** .
+Ein Zeiger auf eine BOOL, die auf **TRUE** festgelegt ist, wenn die Komponente eine angepasste Benutzeroberfläche unterstützt, andernfalls **FALSE.**
 
 </dd> </dl>
 
@@ -63,16 +63,16 @@ Gibt basierend auf dem Ergebnis dieses Vorgangs einen der folgenden Fehlercodes 
 | Rückgabecode                                                                                     | Beschreibung                                                        |
 |-------------------------------------------------------------------------------------------------|--------------------------------------------------------------------|
 | <dl> <dt>**S \_ OK**</dt> </dl>           | Der Vorgang ist erfolgreich.<br/>                            |
-| <dl> <dt>**E \_ Access verweigert**</dt> </dl> | Berechtigungs Fehler, Zugriff verweigert.<br/>                       |
-| <dl> <dt>**E \_ Outo-Memory**</dt> </dl>  | System Ressourcen Limit, der Vorgang konnte nicht durchgeführt werden.<br/> |
+| <dl> <dt>**E \_ ACCESSDENIED**</dt> </dl> | Berechtigungsfehler, Zugriff verweigert.<br/>                       |
+| <dl> <dt>**E \_ OUTOFMEMORY**</dt> </dl>  | Systemressourcenlimit, konnte den Vorgang nicht ausführen.<br/> |
 
 
 
  
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die angepasste Benutzeroberfläche einer Komponente sollte mithilfe von [**inapcomponentconfig:: invokeui**](inapcomponentconfig-invokeui.md)gestartet werden.
+Die benutzerdefinierte Benutzeroberfläche einer Komponente sollte mit [**INapComponentConfig::InvokeUI**](inapcomponentconfig-invokeui.md)gestartet werden.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -81,9 +81,9 @@ Die angepasste Benutzeroberfläche einer Komponente sollte mithilfe von [**inapc
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Nicht unterstützt<br/>                                                                |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/>                                     |
-| Header<br/>                   | <dl> <dt>Napcommon. h</dt> </dl>   |
-| IDL<br/>                      | <dl> <dt>Napcommon. idl</dt> </dl> |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/>                                     |
+| Header<br/>                   | <dl> <dt>NapCommon.h</dt> </dl>   |
+| Idl<br/>                      | <dl> <dt>NapCommon.idl</dt> </dl> |
 
 
 
@@ -91,10 +91,10 @@ Die angepasste Benutzeroberfläche einer Komponente sollte mithilfe von [**inapc
 
 <dl> <dt>
 
-[**Inapcomponentconfig**](inapcomponentconfig.md)
+[**INapComponentConfig**](inapcomponentconfig.md)
 </dt> <dt>
 
-[**Inapcomponentconfig:: invokeui**](inapcomponentconfig-invokeui.md)
+[**INapComponentConfig::InvokeUI**](inapcomponentconfig-invokeui.md)
 </dt> </dl>
 
  

@@ -1,15 +1,15 @@
 ---
 title: Verwenden von Netsh zum Verwalten von Ablaufverfolgungen
-description: In Windows 7 können netsh.exe über eine Eingabeaufforderung verwendet werden, um Netzwerkablaufverfolgungen zu aktivieren und zu konfigurieren. In diesem Abschnitt werden einige der netsh.exe Befehle beschrieben, die bei der Behandlung von Ablaufverfolgungsproblemen hilfreich sein können, einschließlich der neuen Netsh-Ablaufverfolgungsfunktionen.
+description: In Windows 7 können netsh.exe über eine Eingabeaufforderung verwendet werden, um Netzwerkablaufverfolgungen zu aktivieren und zu konfigurieren. In diesem Abschnitt werden einige der netsh.exe Befehle beschrieben, die bei der Behandlung von Ablaufverfolgungsproblemen helfen können, einschließlich der neuen Netsh-Ablaufverfolgungsfunktionen.
 ms.assetid: f0f0fc7b-7cfa-43c7-89a3-3b80050875f8
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 0c1cf869f60b69e227e78e19e8e05d3765ddb67d
-ms.sourcegitcommit: b32433cc0394159c7263809ae67615ab5792d40d
+ms.openlocfilehash: 07c4be1c89c496245cb67bec4aef8614f5efef5db003e6c79cef2e54314c3071
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/30/2021
-ms.locfileid: "113119025"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118133253"
 ---
 # <a name="using-netsh-to-manage-traces"></a>Verwenden von Netsh zum Verwalten von Ablaufverfolgungen
 
@@ -55,10 +55,10 @@ In diesem Beispiel ist die Ebene auf 5 festgelegt, was bedeutet, dass die maxima
 
 
 
-| Level      | Einstellung              | Beschreibung                                                                           |
+| Ebene      | Einstellung              | Beschreibung                                                                           |
 |-------|---------------|----------------------------------------------------------------------------|
 | 1     | Kritisch      | Nur kritische Ereignisse werden angezeigt.                                        |
-| 2     | Errors        | Kritische Ereignisse und Fehler werden angezeigt.                                  |
+| 2     | Fehler        | Kritische Ereignisse und Fehler werden angezeigt.                                  |
 | 3     | Warnungen      | Kritische Ereignisse, Fehler und Warnungen werden angezeigt.                       |
 | 4     | Informational | Kritische Ereignisse, Fehler, Warnungen und Informationsereignisse werden angezeigt. |
 | 5     | Ausführlich       | Alle Ereignisse werden angezeigt.                                                  |

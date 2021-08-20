@@ -1,39 +1,39 @@
 ---
-title: Hersteller-und Produkt Bezeichner
-description: Hersteller-und Produkt Bezeichner
+title: Hersteller- und Produktbezeichner
+description: Hersteller- und Produktbezeichner
 ms.assetid: ab68ffd2-208f-445b-9f5c-37159edb4d4b
 keywords:
-- Windows-Multimedia, Hersteller Bezeichner
-- Multimedia, Hersteller Bezeichner
-- Windows-Multimedia, Produkt Bezeichner
-- Multimedia, Produkt Bezeichner
-- Hersteller Bezeichner
-- Produkt Bezeichner
-- Multimedia-Hersteller Bezeichner
-- Multimedia-Produkt Bezeichner
-- Multimedia-Unternehmen
+- Windows Multimedia,Herstellerbezeichner
+- Multimedia,Herstellerbezeichner
+- Windows Multimedia,Produktbezeichner
+- Multimedia,Produktbezeichner
+- Herstellerbezeichner
+- Produktbezeichner
+- Multimedia-Herstellerbezeichner
+- Multimedia-Produktbezeichner
+- Multimediaunternehmen
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: e559905ecd3e8db5bb791a32ea1d208bdf0d0c39
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: 88222f35d7e865dba201ca5dc5edf229390f5611f9d6e814394e921402f8f8c9
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "103855868"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118138825"
 ---
-# <a name="manufacturer-and-product-identifiers"></a>Hersteller-und Produkt Bezeichner
+# <a name="manufacturer-and-product-identifiers"></a>Hersteller- und Produktbezeichner
 
-Dieser Anhang dokumentiert die Hersteller-und Produkt-IDs, die für Multimedia-Anwendungen definiert wurden. Diese Bezeichner werden verwendet, wenn eine Anwendung eine Abfrage über die auf einem Computer installierten Geräte ausgibt. Um diese Bezeichner in Ihrer Anwendung zu verwenden, schließen Sie den mmreg ein. H-Datei.
+In diesem Anhang werden die für Multimediaanwendungen definierten Hersteller- und Produktbezeichner dokumentiert. Diese Bezeichner werden verwendet, wenn eine Anwendung eine Abfrage zu den installierten Geräten auf einem Computer aus gibt. Um diese Bezeichner in Ihrer Anwendung zu verwenden, schließen Sie mmreg ein. H-Datei.
 
--   [Hersteller Bezeichner](manufacturer-identifiers.md)
--   [Produkt Bezeichner der Microsoft Corporation](microsoft-corporation-product-identifiers.md)
--   [Treiber von Microsoft Windows Sound System](microsoft-windows-sound-system-drivers.md)
--   [Produkt Bezeichner](product-identifiers.md)
+-   [Herstellerbezeichner](manufacturer-identifiers.md)
+-   [Microsoft Corporation Produktbezeichner](microsoft-corporation-product-identifiers.md)
+-   [Microsoft Windows Soundsystemtreiber](microsoft-windows-sound-system-drivers.md)
+-   [Produktbezeichner](product-identifiers.md)
 
 > [!Note]  
-> Microsoft verwaltet keine zentrale Registrierung mehr für Produkt Bezeichner.
+> Microsoft verwaltet keine zentrale Registrierung für Produktbezeichner mehr.
 
- 
+ 
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
@@ -42,9 +42,9 @@ Dieser Anhang dokumentiert die Hersteller-und Produkt-IDs, die für Multimedia-A
 [Multimedia-Anhang](multimedia-appendix.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

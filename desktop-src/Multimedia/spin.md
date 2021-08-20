@@ -1,9 +1,9 @@
 ---
-title: Dreh Befehl
-description: Der Spin-Befehl beginnt mit dem Drehen einer CD oder hält das Drehen der CD an. Videodisk-Geräte erkennen diesen Befehl.
+title: spin-Befehl
+description: Der Spin-Befehl startet das Drehen eines Datenträgers oder beendet das Drehen des Datenträgers. Videodisc-Geräte erkennen diesen Befehl.
 ms.assetid: 1fdf4d09-fafd-4245-ad92-397114d0f473
 keywords:
-- Dreh Befehl Windows Multimedia
+- spin-Befehl Windows Multimedia
 topic_type:
 - apiref
 api_name:
@@ -12,18 +12,18 @@ api_type:
 - NA
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 4c25e25f5a44ad6e6c9562d05653ab25cb2950b8
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: c4b643d1f641f7f7faf2711bc2fa8ec43efe7ca1e60a2fb178191870c5ce2354
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "106340595"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118136452"
 ---
-# <a name="spin-command"></a>Dreh Befehl
+# <a name="spin-command"></a>spin-Befehl
 
-Der Spin-Befehl beginnt mit dem Drehen einer CD oder hält das Drehen der CD an. Videodisk-Geräte erkennen diesen Befehl.
+Der Spin-Befehl startet das Drehen eines Datenträgers oder beendet das Drehen des Datenträgers. Videodisc-Geräte erkennen diesen Befehl.
 
-Um diesen Befehl zu senden, wenden Sie die [**mciSendString**](/previous-versions//dd757161(v=vs.85)) -Funktion mit dem festgelegten *lpszcommand* -Parameter wie folgt an.
+Um diesen Befehl zu senden, rufen Sie die [**mciSendString-Funktion**](/previous-versions//dd757161(v=vs.85)) mit dem *lpszCommand-Parameter* auf, der wie folgt festgelegt ist.
 
 ``` syntax
 _stprintf_s(
@@ -39,14 +39,14 @@ _stprintf_s(
 
 <dl> <dt>
 
-<span id="lpszDeviceID"></span><span id="lpszdeviceid"></span><span id="LPSZDEVICEID"></span>*lpszde viceid*
+<span id="lpszDeviceID"></span><span id="lpszdeviceid"></span><span id="LPSZDEVICEID"></span>*lpszDeviceID*
 </dt> <dd>
 
-Der Bezeichner eines MCI-Geräts. Dieser Bezeichner oder Alias wird zugewiesen, wenn das Gerät geöffnet wird.
+Bezeichner eines MCI-Geräts. Dieser Bezeichner oder Alias wird zugewiesen, wenn das Gerät geöffnet wird.
 
 </dd> <dt>
 
-<span id="lpszUpDown"></span><span id="lpszupdown"></span><span id="LPSZUPDOWN"></span>*lpszupdown*
+<span id="lpszUpDown"></span><span id="lpszupdown"></span><span id="LPSZUPDOWN"></span>*lpszUpDown*
 </dt> <dd>
 
 Eines der folgenden Flags.
@@ -55,8 +55,8 @@ Eines der folgenden Flags.
 
 | Wert | Bedeutung                       |
 |-------|-------------------------------|
-| fahren  | Hält das Drehen der Festplatte an. |
-| up    | Startet das Drehen der CD.     |
+| fahren  | Beendet das Drehen des Datenträgers. |
+| up    | Startet das Drehen des Datenträgers.     |
 
 
 
@@ -64,20 +64,20 @@ Eines der folgenden Flags.
 
 </dd> <dt>
 
-<span id="lpszFlags"></span><span id="lpszflags"></span><span id="LPSZFLAGS"></span>*lpszflags*
+<span id="lpszFlags"></span><span id="lpszflags"></span><span id="LPSZFLAGS"></span>*lpszFlags*
 </dt> <dd>
 
-Kann "wait", "notify" oder beides sein. Weitere Informationen zu diesen Flags finden Sie [unter warte-, Benachrichtigungs-und testflags](the-wait-notify-and-test-flags.md).
+Kann "wait", "notify" oder beides sein. Weitere Informationen zu diesen Flags finden Sie unter [Die Warte-, Benachrichtigungs- und Testflags](the-wait-notify-and-test-flags.md).
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt 0 (null) zurück, wenn erfolgreich, andernfalls einen Fehler.
+Gibt 0 (null) zurück, wenn erfolgreich, andernfalls ein Fehler.
 
 ## <a name="examples"></a>Beispiele
 
-Der folgende Befehl beginnt mit dem Drehen eines Videodisk-Geräts.
+Der folgende Befehl startet das Drehen eines videodisc-Geräts.
 
 ``` syntax
 spin videodisc up
@@ -98,10 +98,10 @@ spin videodisc up
 
 <dl> <dt>
 
-[MCI](mci.md)
+[Mci](mci.md)
 </dt> <dt>
 
-[MCI-Befehls Zeichenfolgen](mci-command-strings.md)
+[MCI-Befehlszeichenfolgen](mci-command-strings.md)
 </dt> </dl>
 
  

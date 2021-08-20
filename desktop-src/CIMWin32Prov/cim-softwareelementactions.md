@@ -1,5 +1,5 @@
 ---
-description: Die CIM \_ SoftwareElementActions-Zuordnung identifiziert die Aktionen für ein Softwareelement.
+description: Die \_ CIM SoftwareElementActions-Zuordnung identifiziert die Aktionen für ein Softwareelement.
 ms.assetid: 2f8a584c-dff0-48f8-bc5f-2b833b5c0b18
 ms.tgt_platform: multiple
 title: CIM_SoftwareElementActions-Klasse
@@ -28,11 +28,11 @@ ms.locfileid: "118421291"
 Die **CIM \_ SoftwareElementActions-Zuordnung** identifiziert die Aktionen für ein Softwareelement.
 
 > [!IMPORTANT]
-> Die CIM-Klassen (Distributed Management Task Force) (DMTF) (Common Information Model) sind die übergeordneten Klassen, auf denen WMI-Klassen erstellt werden. WMI unterstützt derzeit nur die [CIM 2.x-Versionsschemas.](https://dmtf.org/standards/cim/schemas)
+> Die CIM-Klassen (Distributed Management Task Force) (DMTF (Distributed Management Task Force) (Common Information Model) sind die übergeordneten Klassen, auf denen WMI-Klassen erstellt werden. WMI unterstützt derzeit nur die [CIM 2.x-Versionsschemas.](https://dmtf.org/standards/cim/schemas)
 
  
 
-Die folgende Syntax wird durch Managed Object Format (MOF)-Code vereinfacht und enthält alle geerbten Eigenschaften. Eigenschaften werden in alphabetischer Reihenfolge und nicht in MOF-Reihenfolge aufgeführt.
+Die folgende Syntax wird aus Managed Object Format (MOF)-Code vereinfacht und enthält alle geerbten Eigenschaften. Eigenschaften werden in alphabetischer Reihenfolge und nicht in MOF-Reihenfolge aufgeführt.
 
 ## <a name="syntax"></a>Syntax
 
@@ -47,7 +47,7 @@ class CIM_SoftwareElementActions
 
 ## <a name="members"></a>Member
 
-Die **CIM \_ SoftwareElementActions-Klasse** verfügt über die folgenden Membertypen:
+Die **CIM \_ SoftwareElementActions-Klasse** verfügt über diese Typen von Membern:
 
 -   [Eigenschaften](#properties)
 
@@ -69,7 +69,7 @@ Zugriffstyp: Schreibgeschützt
 Qualifizierer: [**Min**](/windows/desktop/WmiSdk/standard-qualifiers) (0), [**Max**](/windows/desktop/WmiSdk/standard-qualifiers) (FALSE), [**Weak**](/windows/desktop/WmiSdk/standard-qualifiers)
 </dt> </dl>
 
-Verweis auf eine [**\_ CIM-Aktionsinstanz.**](cim-action.md)
+Verweis auf eine [**CIM \_ Action-Instanz.**](cim-action.md)
 
 </dd> <dt>
 
@@ -82,7 +82,7 @@ Datentyp: **CIM \_ SoftwareElement**
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**Min(**](/windows/desktop/WmiSdk/standard-qualifiers) 1), [**Max**](/windows/desktop/WmiSdk/standard-qualifiers) (1), [**Aggregate**](/windows/desktop/WmiSdk/standard-qualifiers)
+Qualifizierer: [**Min.**](/windows/desktop/WmiSdk/standard-qualifiers) (1), [**Max.**](/windows/desktop/WmiSdk/standard-qualifiers) (1), [**Aggregieren**](/windows/desktop/WmiSdk/standard-qualifiers)
 </dt> </dl>
 
 Verweis auf eine [**CIM \_ SoftwareElement-Instanz.**](cim-softwareelement.md)
@@ -91,9 +91,9 @@ Verweis auf eine [**CIM \_ SoftwareElement-Instanz.**](cim-softwareelement.md)
 
 ## <a name="remarks"></a>Hinweise
 
-WMI implementiert diese Klasse nicht. Informationen zu WMI-Klassen, die **von CIM \_ SoftwareElementActions abgeleitet wurden,** finden Sie unter [Win32-Klassen](win32-provider.md).
+WMI implementiert diese Klasse nicht. Informationen zu WMI-Klassen, die von **CIM \_ SoftwareElementActions** abgeleitet werden, finden Sie unter [Win32-Klassen.](win32-provider.md)
 
-Diese Dokumentation wird von den CIM-Klassenbeschreibungen abgeleitet, die von DMTF veröffentlicht wurden. Microsoft hat möglicherweise Änderungen vorgenommen, um kleinere Fehler zu beheben, die Dokumentationsstandards des Microsoft SDK zu erfüllen oder weitere Informationen zur Verfügung zu stellen.
+Diese Dokumentation wird von den CIM-Klassenbeschreibungen abgeleitet, die von dmtf veröffentlicht wurden. Möglicherweise hat Microsoft Änderungen vorgenommen, um kleinere Fehler zu korrigieren, den Dokumentationsstandards des Microsoft SDK zu entsprechen oder weitere Informationen bereitzustellen.
 
 ## <a name="requirements"></a>Anforderungen
 

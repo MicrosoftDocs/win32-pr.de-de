@@ -1,9 +1,9 @@
 ---
-title: MCI_MAKE_TMSF-Makro (mciapi. h)
-description: Das MCI \_ make \_ TMSF-Makro erstellt einen Uhrzeitwert im TMAs-Format (gepackt/Minutes/seconds/seconds/Frames) aus den angegebenen Pfaden, Minuten, Sekunden und Rahmen Werten.
+title: MCI_MAKE_TMSF-Makro (Mciapi.h)
+description: Das MCI MAKE TMSF-Makro erstellt einen Zeitwert im \_ TMSF-Format (Gepackte Spuren/Minuten/Sekunden/Frames) aus den angegebenen Werten für Spuren, Minuten, Sekunden und \_ Frames.
 ms.assetid: ff2d6938-0ff7-46d5-92be-42b4b6f35524
 keywords:
-- MCI_MAKE_TMSF Makro Windows Multimedia
+- MCI_MAKE_TMSF-Makros Windows Multimedia
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: f06cd6a400f742b49dc29063e8473465ad7e32dc
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: ec038e0eb1e46c46162c9a2139f03881689db5fe1ee5993a8e135e5d92d67984
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "106338799"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118138403"
 ---
-# <a name="mci_make_tmsf-macro"></a>MCI \_ make \_ TMSF-Makro
+# <a name="mci_make_tmsf-macro"></a>MCI \_ MAKE \_ TMSF-Makro
 
-Das **MCI \_ make \_ TMSF** -Makro erstellt einen Uhrzeitwert im TMAs-Format (gepackt/Minutes/seconds/seconds/Frames) aus den angegebenen Pfaden, Minuten, Sekunden und Rahmen Werten.
+Das **MCI \_ MAKE \_ TMSF-Makro** erstellt einen Zeitwert im TMSF-Format (Gepackte Spuren/Minuten/Sekunden/Frames) aus den angegebenen Werten für Spuren, Minuten, Sekunden und Frames.
 
 ## <a name="syntax"></a>Syntax
 
@@ -43,7 +43,7 @@ DWORD MCI_MAKE_TMSF(
 
 <dl> <dt>
 
-*spürt* 
+*Tracks* 
 </dt> <dd>
 
 Anzahl der Spuren.
@@ -64,22 +64,22 @@ Anzahl der Sekunden.
 
 </dd> <dt>
 
-*SSE* 
+*Frames* 
 </dt> <dd>
 
-Anzahl der Frames.
+Anzahl von Frames.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt die Zeit im gepackten TMSF-Format zurück.
+Gibt die Uhrzeit im gepackten TMSF-Format zurück.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die Zeit im TMSF-Format wird als **DWORD** -Wert mit dem niedrigsten signifikanten Byte, das die Nachverfolgung enthält, dem nächst bedeutsamen Byte mit den Minuten, dem nächstniedrigsten Byte mit den Sekunden und dem signifikantesten Byte mit Frames ausgedrückt.
+Die Zeit im TMSF-Format wird als **DWORD-Wert** mit dem am wenigsten signifikanten Byte mit Spuren, dem nächsten am wenigsten signifikanten Byte mit Minuten, dem nächsten am wenigsten signifikanten Byte mit Sekunden und dem wichtigsten Byte mit Frames ausgedrückt.
 
-Das **MCI \_ make \_ TMSF** -Makro wird wie folgt definiert:
+Das **MCI \_ MAKE \_ TMSF-Makro** ist wie folgt definiert:
 
 
 ```C++
@@ -99,7 +99,7 @@ Das **MCI \_ make \_ TMSF** -Makro wird wie folgt definiert:
 |-------------------------------------|-------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[nur Desktop-Apps\]<br/>                          |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                                |
-| Header<br/>                   | <dl> <dt>Mciapi. h</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Mciapi.h</dt> </dl> |
 
 
 
@@ -107,7 +107,7 @@ Das **MCI \_ make \_ TMSF** -Makro wird wie folgt definiert:
 
 <dl> <dt>
 
-[MCI](mci.md)
+[Mci](mci.md)
 </dt> <dt>
 
 [MCI-Makros](mci-macros.md)

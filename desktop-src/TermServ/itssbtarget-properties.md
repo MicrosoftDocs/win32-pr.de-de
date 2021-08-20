@@ -1,38 +1,38 @@
 ---
-title: Eigenschaften von itssbtarget
-description: Die itssbtarget-Schnittstelle macht die folgenden Eigenschaften verfügbar.
+title: ITsSbTarget-Eigenschaften
+description: Die ITsSbTarget-Schnittstelle macht die folgenden Eigenschaften verfügbar.
 ms.assetid: EDD11382-D3B2-49FB-ABB3-B465A89F9E89
 ms.tgt_platform: multiple
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: cf3842cd099e599a02b82014b94e0cc5c879c443
-ms.sourcegitcommit: 57758ecb246c84d65e6e0e4bd5570d9176fa39cd
+ms.openlocfilehash: 37ba26bb8f17b89826460240cb86a637fd713f0376f6eb28e04b6574f09c6e24
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "106340665"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118128099"
 ---
-# <a name="itssbtarget-properties"></a>Eigenschaften von itssbtarget
+# <a name="itssbtarget-properties"></a>ITsSbTarget-Eigenschaften
 
-Die [**itssbtarget**](/windows/desktop/api/sbtsv/nn-sbtsv-itssbtarget) -Schnittstelle macht die folgenden Eigenschaften verfügbar.
+Die [**ITsSbTarget-Schnittstelle**](/windows/desktop/api/sbtsv/nn-sbtsv-itssbtarget) macht die folgenden Eigenschaften verfügbar.
 
 ## <a name="in-this-section"></a>In diesem Abschnitt
 
--   [**Umgebungs Name (Eigenschaft)**](/windows/desktop/api/sbtsv/nf-sbtsv-itssbtarget-get_environmentname)
--   [**Farmname (Eigenschaft)**](itssbtarget-farmname.md)
--   [**IPADRESSEN (Eigenschaft)**](itssbtarget-ipaddresses.md)
--   [**Numpdingconnections (Eigenschaft)**](/windows/desktop/api/sbtsv/nf-sbtsv-itssbtarget-get_numpendingconnections)
--   [**Numsessions (Eigenschaft)**](/windows/desktop/api/sbtsv/nf-sbtsv-itssbtarget-get_numsessions)
--   [**Targetf qdn (Eigenschaft)**](/windows/desktop/api/sbtsv/nf-sbtsv-itssbtarget-get_targetfqdn)
--   [**Targetload (Eigenschaft)**](itssbtarget-targetload.md)
+-   [**EnvironmentName-Eigenschaft**](/windows/desktop/api/sbtsv/nf-sbtsv-itssbtarget-get_environmentname)
+-   [**FarmName-Eigenschaft**](itssbtarget-farmname.md)
+-   [**IpAddresses-Eigenschaft**](itssbtarget-ipaddresses.md)
+-   [**NumPendingConnections-Eigenschaft**](/windows/desktop/api/sbtsv/nf-sbtsv-itssbtarget-get_numpendingconnections)
+-   [**NumSessions-Eigenschaft**](/windows/desktop/api/sbtsv/nf-sbtsv-itssbtarget-get_numsessions)
+-   [**TargetFQDN-Eigenschaft**](/windows/desktop/api/sbtsv/nf-sbtsv-itssbtarget-get_targetfqdn)
+-   [**TargetLoad-Eigenschaft**](itssbtarget-targetload.md)
 -   [**TargetName-Eigenschaft**](itssbtarget-targetname.md)
--   [**Targetnetbios (Eigenschaft)**](/windows/desktop/api/sbtsv/nf-sbtsv-itssbtarget-get_targetnetbios)
--   [**Targetpropertyset (Eigenschaft)**](/windows/desktop/api/sbtsv/nf-sbtsv-itssbtarget-get_targetpropertyset)
--   [**TargetState (Eigenschaft)**](/windows/desktop/api/sbtsv/nf-sbtsv-itssbtarget-get_targetstate)
+-   [**TargetNetbios-Eigenschaft**](/windows/desktop/api/sbtsv/nf-sbtsv-itssbtarget-get_targetnetbios)
+-   [**TargetPropertySet-Eigenschaft**](/windows/desktop/api/sbtsv/nf-sbtsv-itssbtarget-get_targetpropertyset)
+-   [**TargetState-Eigenschaft**](/windows/desktop/api/sbtsv/nf-sbtsv-itssbtarget-get_targetstate)
 
- 
+ 
 
- 
+ 
 
 
 

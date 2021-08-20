@@ -1,5 +1,5 @@
 ---
-title: ScheduleByDay -Element (calendarTriggerType)
+title: ScheduleByDay (calendarTriggerType)-Element
 description: Gibt einen täglichen Zeitplan an.
 ms.assetid: 5a6097ce-a855-4b08-84c5-71f06343805e
 keywords:
@@ -21,7 +21,7 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 08/11/2021
 ms.locfileid: "118131582"
 ---
-# <a name="schedulebyday-calendartriggertype-element"></a>ScheduleByDay -Element (calendarTriggerType)
+# <a name="schedulebyday-calendartriggertype-element"></a>ScheduleByDay (calendarTriggerType)-Element
 
 Gibt einen täglichen Zeitplan an. Die Aufgabe beginnt beispielsweise täglich um 8:00 Uhr, jeden zweiten Tag, jeden dritten Tag usw.
 
@@ -37,7 +37,7 @@ Das **ScheduleByDay-Element** wird durch den komplexen [**calendarTriggerType-Ty
 
 
 
-| Element                                                                             | Abgeleitet von                                                                       | BESCHREIBUNG                                                                                |
+| Element                                                                             | Abgeleitet von                                                                       | Beschreibung                                                                                |
 |-------------------------------------------------------------------------------------|------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------|
 | [**CalendarTrigger**](taskschedulerschema-calendartrigger-triggergroup-element.md) | [**calendarTriggerType**](taskschedulerschema-calendartriggertype-complextype.md) | Gibt einen täglichen, wöchentlichen, monatlichen oder monatlichen DOW-Trigger (Day-of-the-Week) an.<br/> |
 
@@ -47,7 +47,7 @@ Das **ScheduleByDay-Element** wird durch den komplexen [**calendarTriggerType-Ty
 
 
 
-| Element                                                                            | type             | BESCHREIBUNG                                                         |
+| Element                                                                            | Typ             | Beschreibung                                                         |
 |------------------------------------------------------------------------------------|------------------|---------------------------------------------------------------------|
 | [**DaysInterval**](taskschedulerschema-daysinterval-dailyscheduletype-element.md) | **unsignedByte** | Gibt das Intervall zwischen den Tagen im Zeitplan an.<br/> |
 
@@ -93,7 +93,7 @@ Ein vollständiges Beispiel für den XML-Code für eine Aufgabe, die einen tägl
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 
